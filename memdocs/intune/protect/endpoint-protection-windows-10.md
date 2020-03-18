@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/03/2020
+ms.date: 03/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d364c77266e51b3dcbc19c237e93f17e6f8d1aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
-ms.translationtype: HT
+ms.openlocfilehash: 7817a747a01a137fd29ee8aae117cd604da233a5
+ms.sourcegitcommit: 4815f07c8c0399c077b71721c6e6b61047c75ae6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329350"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79437108"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Intune kullanarak cihazları korumak için Windows 10 (ve üzeri) ayarları
 
@@ -895,7 +895,7 @@ Komut dosyası tehditlerini önlemeye yardımcı olmak için aşağıdakileri en
   - **Engelle** -USB 'den çalıştırılan güvenilmeyen ve imzasız işlem engelle.  
   - **Yalnızca denetim**  
   
-- **Bir yaygınlık, yaş veya güvenilenler listesi kriterine uymayan yürütülebilir dosyalar**  
+- **Yaygınlık, Yaş veya güvenilen liste ölçütlerine uymayan yürütülebilir dosyalar**  
   **Varsayılan**: yapılandırılmadı  
   Kural: [bir Preter, Age veya güvenilir liste ölçütüne uymadıkları takdirde yürütülebilir dosyaların çalıştırılmasını engelleyin](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
 
@@ -1649,240 +1649,6 @@ Windows 10 cihazlarında yerel güvenlik ayarlarını yapılandırmak için bu s
   - **El ile**
   - **Otomatik**
   - **Devre dışı**
-
-## <a name="user-rights"></a>Kullanıcı hakları
-
-- **Kimlik bilgisi yöneticisine güvenilir arayan olarak erişin**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/AccessCredentialManagerAsTrustedCaller](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accesscredentialmanagerastrustedcaller)
-
-  Bu kullanıcı hakkı, yedekleme ve geri yükleme işlemleri sırasında Credential Manager tarafından kullanılır. Bu ayrıcalık diğer varlıklara verildiyse kullanıcıların kayıtlı kimlik bilgileri tehlikeye girebilir.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Yerel oturum açmaya izin ver**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/AllowLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-allowlocallogon)
-
-  Bu kullanıcı hakkı, hangi kullanıcıların bilgisayarda oturum açabilyeceğini belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Ağdan erişime izin ver**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/AccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accessfromnetwork)
-
-  Bu kullanıcı hakkı, hangi kullanıcıların ve grupların bilgisayara ağ üzerinden bağlanmasına izin verileceğini belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **İşletim sisteminin bir parçası olarak davran**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/ActAsPartOfTheOperatingSystem](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-actaspartoftheoperatingsystem)
-
-  İşletim sisteminin bir parçası olarak davran
-  - **Yapılandırılmadı**
-  - **İzin ver**  
-
-- **Dosyaları ve dizinleri yedekleme**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/Backupfilesanddizinler](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-backupfilesanddirectories)
-
-  Bu kullanıcı hakkı, dosyaları ve dizinleri yedeklerken hangi kullanıcıların dosya, dizin, kayıt defteri ve diğer kalıcı nesne izinlerini atlayabileceğini belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Sistem saatini değiştirme**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/Changessystemtime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-changesystemtime)
-
-  Bu kullanıcı hakkı, hangi kullanıcıların ve grupların bilgisayarın dahili saatindeki tarih ve saati değiştirebileceklerini belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Genel nesneler oluştur**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/CreateGlobalObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createglobalobjects)
-
-  Bu güvenlik ayarı, kullanıcıların tüm oturumlarda kullanılabilir olan genel nesneler oluşturup oluşturamayacağını belirler. Genel nesneler oluşturabileceğiniz kullanıcılar, uygulama hatasına veya veri bozulmasına neden olabilecek diğer kullanıcıların oturumları altında çalışan süreçler etkileyebilir.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Disk belleği dosyası oluşturma**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/CreatePageFile](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpagefile)
-
-  Bu kullanıcı hakkı, bir sayfa dosyasının boyutunu oluşturmak ve değiştirmek için dahili API 'yi çağırabilen kullanıcıları ve grupları belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Kalıcı paylaşılan nesneler oluşturma**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/CreatePermanentSharedObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpermanentsharedobjects)
-
-  Bu kullanıcı hakkı, nesne Yöneticisi 'ni kullanarak bir dizin nesnesi oluşturmak için işlem tarafından hangi hesapların kullanılabileceğini belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Sembolik bağlantılar oluştur**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/Createsemboliclinks](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createsymboliclinks)
-
-  Bu kullanıcı hakkı, kullanıcının oturum açtığı bilgisayardan sembolik bir bağlantı oluşturup oluşturamayacağını belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Belirteç oluşturma**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/CreateToken](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createtoken)
-
-  Bu kullanıcı hakkı, işlem tarafından, bir erişim belirteci oluşturmak için bir iç API kullandığında herhangi bir yerel kaynağa erişim sağlamak için kullanılabilecek bir belirteç oluşturmak üzere işlemler tarafından hangi kullanıcıların/grupların kullanılabileceğini belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Hata ayıklama programları**  
-  **Varsayılan**: yapılandırılmadı  
-    CSP: [Userrights/DebugPrograms](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-debugprograms)
-
-  Bu kullanıcı hakkı, hangi kullanıcıların herhangi bir işleme veya çekirdeğe bir hata ayıklayıcı ekleyebileceğini belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Ağdan erişimi Reddet**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/DenyAccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyaccessfromnetwork)
-
-  Bu kullanıcı hakkı, hangi kullanıcıların bir bilgisayara ağ üzerinden erişmesini engellediğini belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Hizmet olarak oturum açma iznini reddetme**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/DenyLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denylocallogon)
-
-  Bu güvenlik ayarı, hangi hizmet hesaplarının bir işlemi hizmet olarak kaydetmesinin engellendiğini belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Uzak Masaüstü Hizmetleri aracılığıyla oturum açmaya izin verme**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/DenyRemoteDesktopServicesLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyremotedesktopserviceslogon)
-
-  Bu kullanıcı hakkı, hangi kullanıcıların ve grupların Uzak Masaüstü Hizmetleri istemci olarak oturum açmasını yasakladığını belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Temsilciyi etkinleştir**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/Enabletemsili](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-enabledelegation)
-
- Bu kullanıcı hakkı, bir kullanıcı veya bilgisayar nesnesi üzerinde, hangi kullanıcıların temsilciliğini güvenilir ayarını ayarlayabileceğini belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Güvenlik denetimleri oluşturma**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/GenerateSecurityAudits](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-generatesecurityaudits)
-
-  Bu kullanıcı hakkı, güvenlik günlüğüne giriş eklemek için bir işlem tarafından hangi hesapların kullanılabileceğini belirler. Güvenlik günlüğü yetkisiz sistem erişimini izlemek için kullanılır.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **İstemcinin kimliğine bürün**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/ImpersonateClient](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-impersonateclient)
-
-  Bu kullanıcı hakkını bir kullanıcıya atamak, bu kullanıcı adına çalışan programların istemcinin kimliğine bürünmesini sağlar. Bu tür bir kimliğe bürünme için bu kullanıcı hakkının gerekli olması, yetkisiz bir kullanıcının bir istemciyi oluşturdukları bir hizmete bağlanmasını ve daha sonra bu istemciyi taklit etmesini engeller ve bu da yetkisiz kullanıcının izinlerini yükseltebilir Yönetim veya sistem düzeyleri.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Zamanlama önceliğini artır**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/IncreaseSchedulingPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-increaseschedulingpriority)
-
-  Bu kullanıcı hakkı, diğer işleme atanan yürütme önceliğini artırmak için, başka bir işleme yazma özelliği olan bir işlemi hangi hesapların kullanabileceğinizi belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Cihaz sürücülerini yükleme ve kaldırma**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/LoadUnloadDeviceDrivers](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-loadunloaddevicedrivers)
-
-  Bu kullanıcı hakkı, hangi kullanıcıların cihaz sürücülerini veya diğer kodu çekirdek moduna dinamik olarak yükleyip kaldırabileceğini belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Bellekteki sayfaları kilitleme**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/LockMemory](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-lockmemory)
-
-  Bu kullanıcı hakkı, verilerin fiziksel bellekte tutulması için bir işlemi hangi hesapların kullanabileceğinizi belirler. bu durum, sistemin diskteki sanal bellek üzerinde veri sayfalaması yapılmasını önler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Denetim ve güvenlik günlüğünü yönetme**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/ManageAuditingAndSecurityLog](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-manageauditingandsecuritylog)
-
-  Bu kullanıcı hakkı, dosyalar, Active Directory nesneleri ve kayıt defteri anahtarları gibi ayrı kaynaklar için hangi kullanıcıların nesne erişim denetimi seçeneklerini belirtbileceklerini belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Toplu bakım görevlerini gerçekleştirme**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/ManageVolume](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-managevolume)
-
-  Bu kullanıcı hakkı, hangi kullanıcıların ve grupların bir birimde, uzaktan birleştirme gibi bakım görevlerini çalıştırabileceğini belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Üretici yazılımı ortam değerlerini değiştirme**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/ModifyFirmwareEnvironment](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyfirmwareenvironment)
-
-  Bu kullanıcı hakkı, Bellenim ortamı değerlerini kimin değiştirebileceğini belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Nesne etiketini değiştirme**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/ModifyObjectLabel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyobjectlabel)
-
-  Bu kullanıcı hakkı; dosyalar, kayıt defteri anahtarları veya diğer kullanıcılara ait süreçler gibi nesnelerin bütünlük etiketini hangi kullanıcı hesaplarının değiştirebileceklerini belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Tek işlem profili**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/ProfileSingleProcess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-profilesingleprocess)
-
-  Bu kullanıcı hakkı, sistem işlemlerinin performansını izlemek için hangi kullanıcıların performans izleme araçlarını kullanabileceğinizi belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-
-- **Uzaktan kapatmalar**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/Remotekapatması](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-remoteshutdown)
-
-  Bu kullanıcı hakkı, hangi kullanıcıların bir bilgisayarı ağdaki uzak bir konumdan kapatmasına izin verileceğini belirler. Bu kullanıcı hakkının kötüye kullanılması hizmet reddine neden olabilir.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-  
-- **Dosyaları ve dizinleri geri yükleme**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/Restorefilesanddizinler](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-restorefilesanddirectories)
-  
-  Bu kullanıcı hakkı, yedeklenen dosya ve dizinleri geri yüklerken hangi kullanıcıların dosya, dizin, kayıt defteri ve diğer kalıcı nesne izinlerini atlayabileceğini belirler ve hangi kullanıcıların geçerli güvenlik sorumlusunu bir nesnenin sahibi olarak ayarlayabileceğini belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
-  
-- **Dosyaların veya nesnelerin sahipliğini al**  
-  **Varsayılan**: yapılandırılmadı  
-  CSP: [Userrights/Takesahiplik](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-takeownership)
-
-  Bu kullanıcı hakkı, sistemdeki Active Directory nesneler, dosyalar ve klasörler, yazıcılar, kayıt defteri anahtarları, süreçler ve iş parçacıkları dahil tüm güvenli kılınabilir nesnelerin sahipliğini alabileceğini belirler.
-  - **Yapılandırılmadı**
-  - **İzin ver**
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
