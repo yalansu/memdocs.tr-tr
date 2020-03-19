@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72e8f8a19ef27eee039090f146c46488ed1e1205
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 55660497751f1961c9c579ba1d800900189db782
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328862"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526470"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Microsoft Intune 'daki SCEP sertifika profilleri için cihazdan NDES sunucu iletişimi sorunlarını giderme
 
@@ -242,6 +242,19 @@ SCEP uygulama havuzu başlatılmazsa, sunucusundaki uygulama olay günlüğünü
   **Çözüm**: **anonim kimlik doğrulamasını** etkinleştirin ve **Windows kimlik doğrulamasını**devre dışı bırakın ve ardından NDES sunucusunu yeniden başlatın.
 
   ![IIS izinleri](../protect/media/troubleshoot-scep-certificate-device-to-ndes/iis-permissions.png)
+
+- **Neden 4**: NDESPolicy modül sertifikasının süresi doldu.
+
+  CAPı2 günlüğü (bkz. 2 ' nin çözümüne neden olur), ' HKEY_LOCAL_MACHINE \Software\microsoft\cryptography\mscep\modules\ndespolicy\ndesccertparmak izi ' tarafından başvurulan sertifikayla ilgili hataları sertifikanın geçerlilik süresi dışında gösteriyor.
+
+  **Çözüm**: başvuruyu geçerli bir sertifikanın parmak izine göre güncelleştirin.
+  1. Bir değiştirme sertifikası tanımla:
+     - Mevcut Sertifikayı Yenile
+     - Benzer özellikleri (konu, EKU, anahtar türü ve uzunluğu vb.) içeren farklı bir sertifika seçin
+     - Yeni bir sertifika Kaydet
+  2. Geçerli değerleri yedeklemek için `NDESPolicy` kayıt defteri anahtarını dışarı aktarın.
+  3. `NDESCertThumbprint` kayıt defteri değerinin verisini yeni sertifikanın parmak iziyle değiştirin, tüm boşlukları kaldırarak ve metni küçük harfe dönüştürerek.
+  4. NDES IIS uygulama havuzlarını yeniden başlatın veya yükseltilmiş bir komut isteminden `iisreset` yürütün.
 
 #### <a name="gatewaytimeout"></a>GatewayTimeout
 

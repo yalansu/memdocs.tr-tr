@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cdd92948aed51eb37b4774d2521a1d28cd8245f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327026"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526283"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune Windows cihaz kaydı sorunlarını giderme
 
@@ -321,6 +321,8 @@ Hata 0x80070774: bir sorun oluştu. Doğru oturum açma bilgilerini kullandığ�
 Bu sorun, genellikle cihaz ilk oturum açma ekranında zaman aşımına uğrarsa karma bir Azure AD Autopilot senaryosunda cihaz yeniden başlatılmadan önce oluşur. Bağlantı sorunları nedeniyle etki alanı denetleyicisinin bulunamadığını veya başarıyla ulaşılamadığını gösterir. Ya da cihazın etki alanına katılamıyorum bir durum girmiş.
 
 **Neden:** En yaygın neden, hibrit Azure AD JOIN 'in kullanıldığı ve Kullanıcı ata özelliğinin Autopilot profilinde yapılandırıldığı bir nedendir. Kullanıcı ata özelliğinin kullanılması, cihazın şirket içi etki alanınıza katılabileceği bir duruma koyduğu ilk oturum açma ekranı sırasında cihazda bir Azure AD katılımı gerçekleştirir. Bu nedenle, Kullanıcı ata özelliği yalnızca standart Azure AD JOIN Autopilot senaryolarında kullanılmalıdır.  Özellik, karma Azure AD JOIN senaryolarında kullanılmamalıdır.
+
+Bu hatanın olası bir nedeni, Autopilot nesnesinin ilişkili AzureAD cihazının silindiği bir hatadır. Bu sorunu çözmek için Autopilot nesnesini silin ve yeni bir tane oluşturmak için karmayı yeniden içeri aktarın.
 
 #### <a name="resolution"></a>Çözüm
 
