@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f12ea7e320e3334d1925c8ab04905cd84ed56c82
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c57a201d71d3a8278499636c6ca794b437e11e9a
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326118"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083798"
 ---
 # <a name="app-protection-policies-overview"></a>Uygulama koruma ilkelerine genel bakış
 
@@ -205,6 +205,9 @@ Varsayılan olarak kiracı başına yalnızca bir **Genel** ilke olabilir. Ancak
 İş veya "Kurumsal" bağlam örneği için iş hesabını kullanarak OneDrive uygulamasını Başlatan bir kullanıcıyı göz önünde bulundurun. Bu kullanıcı iş bağlamında dosyaları kişisel depolama alanına taşıyamaz. Daha sonra OneDrive'ı kendi kişisel hesabıyla kullandığında, kişisel OneDrive'ından kısıtlamasız olarak veri kopyalayabilir ve taşıyabilir.
 
 Outlook 'ta "kişisel" ve "Kurumsal" e-postaların birleştirilmiş bir e-posta görünümü vardır. Bu durumda, Outlook uygulaması başlatma sırasında Intune PIN 'ı ister.
+
+  >[!NOTE]
+  > Edge "Kurumsal" bağlamda olsa da Kullanıcı, OneDrive "Kurumsal" bağlam dosyalarını kasıtlı olarak bilinmeyen bir kişisel bulut depolama konumuna taşıyabilir. Bunu önlemek için bkz. [Microsoft Edge için izin verilen veya engellenen siteler listesini belirtme](../apps/manage-microsoft-edge.md#specify-allowed-or-blocked-sites-list-for-microsoft-edge) ve kenar için izin verilen/engellenen site listesini yapılandırma.
 
 Intune 'da çoklu kimlik hakkında daha fazla bilgi için bkz. [mam and Multi-Identity](apps-supported-intune-apps.md).
 

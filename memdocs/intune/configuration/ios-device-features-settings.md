@@ -1,11 +1,11 @@
 ---
 title: iOS/ıpados cihaz özelliği ayarları Microsoft Intune-Azure | Microsoft Docs
-description: İOS ve ıpados cihazlarını AirPrint için yapılandırma, giriş ekranı düzeni, uygulama bildirimleri, paylaşılan cihaz, çoklu oturum açma ve Microsoft Intune içindeki Web içeriği filtresi ayarları için tüm ayarları görüntüleyin. Bu ayarları, kuruluşunuzda bu Apple özelliklerini kullanmak üzere iOS/ıpados cihazlarını yapılandırmak için bir cihaz yapılandırma profilinde kullanın.
+description: İOS ve ıpados cihazlarını AirPrint, giriş ekranı düzeni, uygulama bildirimleri, paylaşılan cihazlar, çoklu oturum açma ve Microsoft Intune Web içeriği filtresi ayarları için yapılandırma için tüm ayarları görüntüleyin. Bu ayarları, kuruluşunuzda bu Apple özelliklerini kullanmak üzere iOS/ıpados cihazlarını yapılandırmak için bir cihaz yapılandırma profilinde kullanın.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 351c6ade59d98ce620b939c5ff6238e650390a5f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fafca25fb0e374d281f8ef593cb5fa7f35d82979
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332094"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086956"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune 'da ortak iOS/ıpados özelliklerini kullanmak için iOS ve ıpados cihaz ayarları
 
-Intune, iOS/ıpados kullanıcılarının cihazlarında farklı Apple özellikleri kullanmasına izin veren bazı yerleşik ayarlar içerir. Örneğin, Yöneticiler iOS/ıpados kullanıcılarının AirPrint yazıcılarını nasıl kullandığını denetleyebilir, giriş ekranındaki yerleştirme ve sayfalara uygulama ve klasör ekleme, uygulama bildirimlerini gösterme, kilit ekranında varlık etiketi ayrıntılarını gösterme, çoklu oturum açma kimlik doğrulaması kullanma ve sertifikalarla kullanıcıların kimliğini doğrulama işlemlerinin nasıl yapılacağını denetleyebilir.
+Intune, iOS/ıpados kullanıcılarının cihazlarında farklı Apple özellikleri kullanmasına izin veren bazı yerleşik ayarlar içerir. Örneğin, AirPrint yazıcılarını denetleyebilir, yerleştirme ve giriş ekranı sayfalarına uygulamalar ve klasörler ekleyebilir, uygulama bildirimlerini gösterebilir, kilit ekranında varlık etiketi ayrıntılarını gösterebilir, çoklu oturum açma kimlik doğrulaması kullanabilir ve sertifika kimlik doğrulaması kullanabilirsiniz.
 
 Bu özellikleri, mobil cihaz yönetimi (MDM) çözümünüzün bir parçası olarak iOS/ıpados cihazlarını denetlemek için kullanın.
 
@@ -48,7 +48,7 @@ Bu makale, bu ayarları listeler ve her ayarın ne yaptığını açıklar. Bu �
 - **IP adresi**: yazıcının IPv4 veya IPv6 adresini girin. Yazıcıları tanımlamak için ana bilgisayar adları kullanırsanız, terminaldeki yazıcıya ping ekleyerek IP adresini alabilirsiniz. IP adresini ve yolu al (Bu makalede) daha fazla ayrıntı sağlar.
 - **Yol**: yol, genellikle ağınızdaki yazıcılar için `ipp/print`. IP adresini ve yolu al (Bu makalede) daha fazla ayrıntı sağlar.
 - **Bağlantı noktası**: AirPrint hedefinin dinleme bağlantı noktasını girin. Bu özelliği boş bırakırsanız AirPrint varsayılan bağlantı noktasını kullanır. İOS 11.0 + ve ıpados 13.0 + ' da kullanılabilir.
-- **TLS**: Aktarım katmanı GÜVENLIĞI (TLS) Ile AirPrint bağlantılarını güvenli hale getirmek için **Etkinleştir** ' i seçin. İOS 11.0 + ve ıpados 13.0 + ' da kullanılabilir.
+- **TLS**: **Enable** , Aktarım Katmanı Güvenliği (TLS) ile AirPrint bağlantılarının güvenliğini sağlar. İOS 11.0 + ve ıpados 13.0 + ' da kullanılabilir.
 
 AirPrint sunucuları eklemek için şunları yapabilirsiniz:
 
@@ -81,7 +81,7 @@ Bu özellik şu platformlarda geçerlidir:
 
 ### <a name="dock"></a>Dock
 
-İOS/ıpados ekranının Dock 'a en fazla altı öğe veya klasör eklemek için **yerleştirme** ayarlarını kullanın. Birçok cihaz daha az öğeyi destekler. Örneğin, iPhone cihazları en fazla dört öğeyi destekler. Bu durumda, cihazda yalnızca eklediğiniz ilk dört öğe gösterilir.
+Ekrandaki Dock 'a en fazla altı öğe veya klasör eklemek için **yerleştirme** ayarlarını kullanın. Birçok cihaz daha az öğeyi destekler. Örneğin, iPhone cihazları en fazla dört öğeyi destekler. Bu durumda, cihazda yalnızca eklediğiniz ilk dört öğe gösterilir.
 
 Cihaz yuvası için en fazla **altı** öğe (birleştirilmiş uygulamalar ve klasörler) ekleyebilirsiniz.
 
@@ -283,8 +283,32 @@ Bu özellik şu platformlarda geçerlidir:
 - **SSO uygulama uzantısı türü**: SSO uygulama uzantısının türünü seçin. Seçenekleriniz şunlardır:
 
   - **Yapılandırılmadı**: uygulama uzantıları kullanılmıyor. Bir uygulama uzantısını devre dışı bırakmak için, SSO uygulama uzantısı türü ' ni **Yapılandırılmadı**' ya geçirebilirsiniz.
-  - **Yeniden yönlendir**: Modern kimlik doğrulama akışlarıyla SSO gerçekleştirmek için genel, özelleştirilebilir bir yeniden yönlendirme uygulama uzantısı kullanın. Kuruluşunuzun uygulama uzantısının uzantı KIMLIĞINI öğrendiğinizden emin olun.
-  - **Kimlik bilgisi**: sınama ve yanıt kimlik doğrulama akışlarıyla SSO gerçekleştirmek için genel, özelleştirilebilir bir kimlik bilgisi uygulama uzantısı kullanın. Kuruluşunuzun uygulama uzantısının uzantı KIMLIĞINI öğrendiğinizden emin olun.
+  - **Yeniden yönlendir**: SSO 'yu modern kimlik doğrulama akışlarıyla kullanmak için genel, özelleştirilebilir bir yeniden yönlendirme uygulama uzantısı kullanın. Kuruluşunuzun uygulama uzantısının uzantı KIMLIĞINI öğrendiğinizden emin olun.
+
+    İOS/ıpados 13.0 + cihazlarında, bu yeniden yönlendirme SSO uygulaması uzantı türünü kullanarak **MICROSOFT Azure AD SSO uygulama uzantısını** yapılandırabilirsiniz. Microsoft Azure AD uzantısı, kimlik doğrulaması için Azure AD kullanan Microsoft uygulamaları ve kuruluş uygulamaları arasında çoklu oturum açma imkanı sunar. Azure AD uzantısı, güvenlik ve son kullanıcı deneyimi iyileştirmeleri sunan gelişmiş bir kimlik doğrulama Aracısı işlevi görür. Daha önce Microsoft Authenticator uygulamayla aracılı kimlik doğrulamasını kullanan tüm uygulamalar SSO uzantısına sahip SSO almaya devam eder. Azure AD SSO uzantısı henüz tarayıcı SSO 'SU desteklemiyor. SSO ve iOS/ıpados kimlik doğrulama Aracısı hakkında daha fazla bilgi için bkz. [macOS ve iOS/ıpados ÜZERINDE SSO 'Yu yapılandırma](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
+
+    **İOS Microsoft Azure AD uzantısını yapılandırmak için:**
+
+    1. **SSO uygulama uzantısı türünü** **yeniden yönlendirme**olarak ayarlayın.
+    2. **UZANTı kimliğini** `com.microsoft.azureauthenticator.ssoextension`olarak ayarlayın.
+    3. **Takım kimliğini** `SGGM6D27TK`olarak ayarlayın.
+    4. **URL 'ler** ayarında, aşağıdaki URL 'leri girin:
+
+        - `https://login.microsoftonline.com`
+        - `https://login.windows.net`
+        - `https://login.microsoft.com`
+        - `https://sts.windows.net`
+        - `https://login.partner.microsoftonline.cn`
+        - `https://login.chinacloudapi.cn`
+        - `https://login.microsoftonline.de`
+        - `https://login.microsoftonline.us`
+        - `https://login.usgovcloudapi.net`
+        - `https://login-us.microsoftonline.com`
+
+    > [!IMPORTANT]
+    > İOS/ıpados Microsoft Azure AD uzantısıyla SSO sağlamak için önce cihaza iOS/ıpados Microsoft Authenticator uygulamasını yüklemeniz gerekir. Authenticator Azure AD uzantısını cihaza gönderir ve MDM SSO uygulama uzantısı ayarları Azure AD uzantısını etkinleştirir. Bir kimlik doğrulayıcı ve SSO uygulama uzantısı profili cihaza yüklendikten sonra, kullanıcıların oturum açması ve oturum kurması için kimlik bilgilerini girmesi gerekir. Bu oturum daha sonra kullanıcıların kimlik doğrulamasını yapmasına gerek kalmadan farklı uygulamalar arasında kullanılır.
+
+  - **Kimlik bilgisi**: sınama ve yanıt kimlik doğrulama akışlarıyla SSO 'yu kullanmak için genel, özelleştirilebilir bir kimlik bilgisi uygulama uzantısı kullanın. Kuruluşunuzun uygulama uzantısının uzantı KIMLIĞINI öğrendiğinizden emin olun.
   - **Kerberos**: iOS 13.0 + ve ıpados 13.0 + ' da bulunan Apple 'ın yerleşik Kerberos uzantısını kullanın. Bu seçenek, **kimlik bilgisi** uygulama uzantısının Kerberos 'a özgü bir sürümüdür.
 
   > [!TIP]
@@ -303,7 +327,7 @@ Bu özellik şu platformlarda geçerlidir:
   - Çoklu oturum açma uygulama uzantılarınızın Intune profillerindeki tüm etki alanları benzersiz olmalıdır. Farklı türlerde SSO uygulama uzantıları kullanıyor olsanız bile, bir etki alanını hiçbir oturum açma uygulama uzantısı profilinde tekrarlayamıyorum.
   - Bu etki alanları büyük/küçük harfe duyarlı değildir.
 
-- **URL 'ler** (yalnızca yeniden yönlendir): kimlik SAĞLAYıCıLARıNıZıN URL öneklerini girin adına yeniden yönlendirme uygulama uzantısı SSO 'yu gerçekleştirir. Bir Kullanıcı bu URL 'lere yeniden yönlendirildiğinde, SSO uygulama uzantısı, SSO 'yu ve bu URL 'yi istemez.
+- **URL 'ler** (yalnızca yeniden yönlendir): kimlik SAĞLAYıCıLARıNıZıN URL öneklerini girin adına yeniden yönlendirme uygulama uzantısı SSO kullanır. Kullanıcılar bu URL 'lere yeniden yönlendirildiğinde, SSO uygulama uzantısı SSO 'yu müdahale eder ve sorar.
 
   - Intune çoklu oturum açma uygulama uzantısı profillerindeki tüm URL 'Lerin benzersiz olması gerekir. Farklı türlerde SSO uygulama uzantıları kullanıyor olsanız bile, hiçbir SSO uygulama uzantısı profilinde bir etki alanını tekrarlayabilirsiniz.
   - URL 'Lerin http://veya https://ile başlaması gerekir.
@@ -320,7 +344,7 @@ Bu özellik şu platformlarda geçerlidir:
 
   - **Ekle**: yapılandırma anahtarlarınızı eklemek için seçin.
 
-- **Anahtarlık kullanımı** (yalnızca Kerberos): parolaların anahtarlıkta kaydedilmesini ve saklanmasını engellemek için **Engelle** ' yi seçin. Engellenirse, kullanıcıdan parolasını kaydetmesi istenmez ve Kerberos biletinin süresi dolmuşsa parolayı yeniden girmesi gerekir. **Yapılandırılmadı** (varsayılan), parolaların anahtarlıkta kaydedilmesine ve depolanmasına izin verir. Anahtarın süresi dolarsa kullanıcılardan parolasını yeniden girmesi istenmez.
+- **Anahtarlık kullanımı** (yalnızca Kerberos): parolaların anahtarlıkta kaydedilmesini ve saklanmasını engellemek için **Engelle** ' yi seçin. Engellenirse, kullanıcılardan parolasını kaydetmesi istenmez ve Kerberos anahtarının süresi dolarsa parolayı yeniden girmesi gerekir. **Yapılandırılmadı** (varsayılan), parolaların anahtarlıkta kaydedilmesine ve depolanmasına izin verir. Anahtarın süresi dolarsa kullanıcılardan parolasını yeniden girmesi istenmez.
 - **Yüz kimliği, Touch ID veya geçiş kodu** (yalnızca Kerberos): Kerberos biletini yenilemek için kimlik bilgisi gerektiğinde KULLANıCıLARıN yüz kimliğini, Touch ID 'sini veya cihaz geçiş kodunu girmesini **zorunlu** kılar. **Yapılandırılmadı** (varsayılan), Kerberos biletini yenilemek için kullanıcıların biyometri veya cihaz geçiş kodu kullanmalarını gerektirmez. **Anahtarlık kullanımı** engellenirse, bu ayar uygulanmaz.
 - **Varsayılan bölge** (yalnızca Kerberos): Girdiğiniz **bölge** değerini varsayılan bölge olarak ayarlamak Için **Etkinleştir** ' i seçin. **Yapılandırılmadı** (varsayılan) varsayılan bir bölge yapmaz.
 

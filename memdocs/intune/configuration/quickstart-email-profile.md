@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/20/2020
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a6345afe4258ff7141228a7284932f083791c70
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6bc170c5260dc099d0a2b4109ed119572e0dbaff
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332218"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086883"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-iosipados"></a>Hızlı başlangıç: iOS/ıpados için bir e-posta cihaz profili oluşturma
 
@@ -37,39 +37,47 @@ Intune aboneliğiniz yoksa [ücretsiz deneme hesabı için kaydolun](../fundamen
 
 ## <a name="create-an-iosipados-email-profile"></a>İOS/ıpados e-posta profili oluşturma
 
-1. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-   ![Intune 'da iOS/ıpados için bir e-posta profili oluşturma](./media/quickstart-email-profile/ios-create-profile.png)
+2. **Profil oluşturma** > **cihaz** > **yapılandırma profilleri** ' ne gidin ve bu seçeneği belirleyin.
+   Intune 'da iOS/ıpados için bir e-posta profili oluşturma ![](./media/quickstart-email-profile/ios-create-profile.png)
 
-2. **Ad**'ın altına yeni profil için açıklayıcı bir ad girin. Bu örnekte **iOS iş e-postası iste** girin.
-3. Aşağıdaki profil bilgilerini girin:
-    - **Açıklama**için, **iş e-postasını kullanmak üzere IOS/ıpados cihazları gerektir**yazın.
-    - **Platform**için **IOS/ıpados**' ı seçin.
-    - **Profil türü** için **E-posta**'yı seçin.
+3. Aşağıdaki özellikleri girin:
+   - **Platform**: **IOS/ıpados** seçin
+   - **Profil**: **e-posta** Seç
+  
+4. **Oluştur**’u seçin.
+
+5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
+   - **Ad**: Yeni profil için açıklayıcı bir ad girin. Bu örnekte **iOS iş e-postası iste** girin.
+   - **Açıklama**: **IOS/ıpados cihazlarının iş e-postasını kullanmasını gerektir** yazın
+
 
         ![Intune 'da iOS/ıpados cihazları ile kullanmak için bir e-posta profili oluşturma](./media/quickstart-email-profile/ios-email-profile-name.png)
 
-4. **Ayarlar**'ı seçin ve aşağıdaki ayarları girin (diğer ayarlarda varsayılanları bırakın):
+6. **İleri**'yi seçin.
+
+7. **Yapılandırma ayarları**' nda, aşağıdaki ayarları girin (diğer ayarlar için varsayılan değerleri bırakın):
    - **E-posta sunucusu**: Bu hızlı başlangıç için **outlook.office365.com** girin. Bu ayar, iOS/ıpados posta uygulamasının e-postaya bağlanmak için kullanacağı e-posta sunucusunun Exchange konumunu (URL) belirtir.
    - **Hesap adı**: girin **şirket e-posta**.
    - **AAD'den kullanıcı adı özniteliği**: Bu ad, Intune'un Azure Active Directory'den (Azure AD) aldığı özniteliktir. Intune, bu profilin kullanıcı adını bu adı kullanarak dinamik olarak oluşturur. Bu hızlı başlangıçta, **Kullanıcı asıl adının** profile (örneğin, user1@contoso.com) Kullanıcı adı olarak kullanılmasını istediğinizi varsayacağız.
    - **AAD'den e-posta adresi özniteliği**: Bu ayar Exchange'de oturum açmak için kullanılacak Azure AD e-posta adresidir. Bu hızlı başlangıçta **Kullanıcı Asıl Adı**'nı seçin.
    - **Kimlik doğrulama yöntemi**: Bu hızlı başlangıçta **Kullanıcı adı ve parola**'yı seçin. (Intune için zaten bir sertifika ayarladıysanız, **sertifika** da seçebilirsiniz.)
 
-        ![İOS/ıpados kullanımı için bir e-posta profili oluşturma](./media/quickstart-email-profile/ios-email-profile.png)
+8. **İleri**'yi seçin.
 
-5. **Oluştur** > **Tamam ' ı** seçin. Yeni profil, panonun iOS/ıpados cihazlarına ve iOS/ıpados kullanıcılarına nasıl atandığını izleyebilmeniz için, pano görüntülenirken profiller listesinde görüntülenir.
-6. **Atamalar**’ı seçin.
-7. **Dahil et** sekmesini, ardından **Tüm Kullanıcılar ve Tüm Cihazlar**'ı seçin. 
-8. **Kaydet**’i seçin.
+9. **Kapsam etiketleri** içinde (isteğe bağlı) **Ileri**' yi seçin. Bu profil için kapsam etiketi kullanmayacağız.
+
+10. **Atamalar**' da, **ata** için açılan eklentiyi kullanın ve **tüm kullanıcılar ve tüm cihazlar '** ı seçin.  Ardından **İleri**'yi seçin.
+
+11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. 
 
 ## <a name="clean-up-resources"></a>Kaynakları temizleme
 
 Ek öğreticiler veya test için oluşturduğunuz profili kullanmayı düşünmüyorsanız, şimdi silebilirsiniz.
 
-1. Intune'da **Cihaz yapılandırması**'nı, ardından **Profiller**'i seçin.
-2. Oluşturduğunuz test profilini, **iOS/ıpados için iş e-postası gerektir**' i seçin.
-3. Profilin yanındaki üç nokta simgesini ( **...** ) ve ardından **Sil**'i seçin.
+1. Intune 'da **cihaz yapılandırma** > **cihazlar** ' ı seçin.
+2. Oluşturduğunuz test profilini ve **iOS/ıpados iş e-postası gerektir**' i seçin ve **Sil**' i seçin. 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

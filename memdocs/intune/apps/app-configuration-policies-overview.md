@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f7d58d2766444be924bd525b5aff20e17a302d56
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8e5abdfe69d5553be420d96da60f34df93a6b2f4
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326382"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083662"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Microsoft Intune için uygulama yapılandırma ilkeleri
 
@@ -93,7 +93,7 @@ Aşağıdaki üç yöntemi kullanarak uygulama yapılandırma ilkesini doğrulay
 
 ### <a name="iosipados-configuration-on-unmanaged-devices"></a>yönetilmeyen cihazlarda iOS/ıpados yapılandırması
 
-Yönetilen uygulama yapılandırması için, yönetilmeyen cihazlarda **Intune tanılama günlüğü** ile IOS/ıpados yapılandırmasını doğrulayabilirsiniz. Aşağıdaki adımlara ek olarak, Microsoft Edge kullanarak yönetilen uygulama günlüklerine erişebilirsiniz. Daha fazla bilgi için bkz. [yönetilen uygulama günlüklerine erişmek Için iOS 'Ta Microsoft Edge 'ı kullanma/ıpados](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
+Yönetilen uygulama yapılandırması için, yönetilmeyen cihazlarda **Intune tanılama günlüğü** ile IOS/ıpados yapılandırmasını doğrulayabilirsiniz. Aşağıdaki adımlara ek olarak, Microsoft Edge kullanarak yönetilen uygulama günlüklerine erişebilirsiniz. Daha fazla bilgi için bkz. [yönetilen uygulama günlüklerine erişmek Için iOS 'Ta Microsoft Edge 'ı kullanma/ıpados](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
 
 1. Cihazda zaten yüklü değilse, **Microsoft Edge** 'ı App Store 'dan indirip yükleyin. Daha fazla bilgi için bkz. [Microsoft Intune korumalı uygulamalar](apps-supported-intune-apps.md).
 2. **Microsoft Edge** 'i başlatın ve gezinti çubuğundan > **ıntunehelp** **hakkında** ' yı seçin.

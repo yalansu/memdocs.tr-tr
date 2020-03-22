@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 335841a8642429e36c277673fd8a238d486366c9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f685f1f3d009d7ba7a1dc061ec3025b2f8c96b5f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328874"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084645"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>JAMF Pro ile Microsoft Intune tümleştirme sorunlarını giderme
 
@@ -89,8 +89,8 @@ Intune ve JAMF Pro tümleştirmesini yapılandırdıktan ve koşullu erişim ilk
 Örneğin, aşağıdaki örneğe benzer bir metin istemi Microsoft ekipleri açılırken görünür:
 
 ``` 
-  Microsoft Teams wants to sign using key “Microsoft Workplace Join Key” in your keychain.  
-  To allow this, enter the “login” keychain password 
+  Microsoft Teams wants to sign using key "Microsoft Workplace Join Key" in your keychain.  
+  To allow this, enter the "login" keychain password 
 ```
 
 **Neden**: Bu Istemler, Azure ad kaydı gerektiren her ilgili uygulama Için JAMF Pro tarafından oluşturulmuştur. 
@@ -156,7 +156,7 @@ Cihazın kaydetmek ve kaydetmek için kullandığı hizmeti öğrenmek için cih
 
 **Çözünürlüğüne**  
 Kayıt kaynağını Intune 'dan JAMF 'ye değiştirmek için:
-1. [MacOS cihazının Intune kaydını](https://docs.microsoft.com/user-help/unenroll-your-device-from-intune-macos)silme. Intune 'dan tamamen kaldırılmamış cihazların daha karmaşıklıkları önlemek için, bu nedenler listesinde 6 ' ya [*neden*](#cause-6) oldu konusuna bakın.  
+1. [MacOS cihazının Intune kaydını](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos)silme. Intune 'dan tamamen kaldırılmamış cihazların daha karmaşıklıkları önlemek için, bu nedenler listesinde 6 ' ya [*neden*](#cause-6) oldu konusuna bakın.  
 
 2. Cihazda, Şirket Portalı uygulamasını açmak için JAMF Self Service kullanın ve ardından cihazı Intune 'a kaydedin. Bu görev, [macOS için şirket portalı uygulamasını dağıtmak Için JAMF](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro)kullanmanızı ve [Kullanıcı cihazını Azure AD 'ye kaydeden JAMF Pro 'da bir ilke oluşturulmasını](conditional-access-assign-jamf.md#create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory)gerektirir.  
 
@@ -186,7 +186,7 @@ JAMF Pro sunucusu, Intune 'un tümleştirme devre dışı bırakıldığını bi
 JAMF Pro içinde Intune tümleştirmesini yeniden etkinleştirin. Bkz. [JAMF Pro 'da Microsoft Intune tümleştirmesini yapılandırma](conditional-access-integrate-jamf.md#enable-intune-to-integrate-with-jamf-pro).
 
 
-#### <a name="cause-6"></a>Neden 6  
+#### <a name="cause-6"></a><a name="cause-6"></a>Neden 6  
 
 **Cihaz daha önce Intune 'a kaydoldu veya Kullanıcı cihazı birden çok kez kaydetmeyi denedi**
 
@@ -242,9 +242,9 @@ Bir cihazın JAMF 'den kaydı kaldırılırsa ancak Intune 'dan doğru şekilde 
 Kayıt sırasında, macOS cihazının kullanıcısı anahtar anahtarlarından bir anahtara JamfAAD erişimine izin vermek için aşağıdaki istemi alır: 
 
 ```
-   JamfAAD wants to access key “Microsoft Workplace Join Key" in your keychain. 
+   JamfAAD wants to access key "Microsoft Workplace Join Key" in your keychain. 
     
-   To allow this, enter the “login” keychain password
+   To allow this, enter the "login" keychain password
 ```
 
 **Çözünürlüğüne**  

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48f890888d9bdb9d1df67596fb9125534e90a4d2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c0f1552d2edc6bfa5f6bdb255f156bcfb77a4990
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328726"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084087"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Intune 'da iOS, ıpados veya macOS cihaz özelliği ayarları ekleme
 
@@ -149,12 +149,12 @@ Uygulama alanı:
 
 ## <a name="single-sign-on-app-extension"></a>Çoklu oturum açma uygulama uzantısı
 
-Bu ayarlar iOS, ıpados ve macOS cihazlarınız için çoklu oturum açma (SSO) sağlayan bir uygulama uzantısı yapılandırır. Çoğu Iş kolu (LOB) uygulamaları ve kuruluş web siteleri, bazı düzeyde güvenli Kullanıcı kimlik doğrulaması gerektirir. Çoğu durumda, kimlik doğrulama kullanıcıların aynı kimlik bilgilerini tekrar tekrar girmesini gerektirir. SSO, kullanıcılara kimlik bilgilerini bir kez girdikten sonra uygulamalara ve Web sitelerine erişim sağlar. Oturum açtıktan sonra kullanıcılar uygulamalara ve Web sitelerine otomatik olarak erişebilir veya erişim kazanmak için yüz KIMLIĞI, Touch ID veya Apple geçiş kodunu kullanabilir.
+Bu ayarlar iOS, ıpados ve macOS cihazlarınız için çoklu oturum açma (SSO) sağlayan bir uygulama uzantısı yapılandırır. Çoğu Iş kolu (LOB) uygulamaları ve kuruluş web siteleri, bazı düzeyde güvenli Kullanıcı kimlik doğrulaması gerektirir. Çoğu durumda, kimlik doğrulama kullanıcıların aynı kimlik bilgilerini tekrar tekrar girmesini gerektirir. SSO, kullanıcılara kimlik bilgilerini bir kez girdikten sonra uygulamalara ve Web sitelerine erişim sağlar. SSO Ayrıca kullanıcılar için daha iyi bir kimlik doğrulama deneyimi sağlar ve kimlik bilgileri için yinelenen istem sayısını azaltır.
 
-Intune 'da, kuruluşunuz, kimlik sağlayıcınız veya Apple tarafından oluşturulan bir SSO AP uzantısını yapılandırmak için bu ayarları kullanın. SSO uygulama uzantısı kullanıcılarınız için kimlik doğrulamasını işler. Bu ayarlar, yeniden yönlendirme türü ve kimlik bilgisi türü SSO uygulama uzantılarını yapılandırır.
+Intune 'da, kuruluşunuz tarafından oluşturulan bir SSO uygulama uzantısını yapılandırmak için bu ayarları kullanın, kimlik sağlayıcınız, Microsoft veya Apple. SSO uygulama uzantısı kullanıcılarınız için kimlik doğrulamasını işler. Bu ayarlar, yeniden yönlendirme türü ve kimlik bilgisi türü SSO uygulama uzantılarını yapılandırır.
 
-- Yeniden yönlendirme türü, OAuth ve SAML2 gibi modern kimlik doğrulama protokolleri için tasarlanmıştır.
-- Kimlik bilgisi türü, sınama ve yanıt kimlik doğrulama akışları için tasarlanmıştır. Apple tarafından sunulan Kerberos 'a özgü kimlik bilgisi uzantısı ve genel kimlik bilgisi uzantısı arasında seçim yapabilirsiniz.
+- Yeniden yönlendirme türü, OAuth ve SAML2 gibi modern kimlik doğrulama protokolleri için tasarlanmıştır. Microsoft, çoklu oturum açma uygulama uzantısı ayarları ile etkinleştirilebilen bir iOS/ıpados Azure AD yeniden yönlendirme türü SSO uygulaması uzantısına sahiptir.
+- Kimlik bilgisi türü, sınama ve yanıt kimlik doğrulama akışları için tasarlanmıştır. Apple veya bir genel kimlik bilgisi Uzantısı ile sunulan, Kerberos 'a özgü bir kimlik bilgisi uzantısı arasından seçim yapabilirsiniz.
 
 Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [iOS/ıpados SSO uygulama uzantısı](ios-device-features-settings.md#single-sign-on-app-extension) ve [MacOS SSO uygulama uzantısı](macos-device-features-settings.md#single-sign-on-app-extension).
 
@@ -194,7 +194,7 @@ Uygulama alanı:
 
 ## <a name="web-content-filter"></a>Web içeriği filtresi
 
-Bu ayarlar Apple 'ın yerleşik otomatik filtre algoritmasını, Web sayfalarını değerlendirmek ve yetişkinlere yönelik içeriği ve yetişkinlere yönelik dili engellemek için kullanabilir. Ayrıca, izin verilen Web bağlantıları ve kısıtlanmış Web bağlantıları listesini de oluşturabilirsiniz. Örneğin, yalnızca `contoso` Web sitelerinin açmasına izin verebilirsiniz.
+Bu ayarlar Apple 'ın yerleşik otomatik filtre algoritmasını, Web sayfalarını değerlendirmek ve yetişkinlere yönelik içeriği ve yetişkinlere yönelik dili engellemek için kullanır. Ayrıca, izin verilen Web bağlantıları ve kısıtlanmış Web bağlantıları listesini de oluşturabilirsiniz. Örneğin, yalnızca `contoso` Web sitelerinin açmasına izin verebilirsiniz.
 
 Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [iOS/ıpados 'Ta Web içeriği filtresi](ios-device-features-settings.md#web-content-filter).
 

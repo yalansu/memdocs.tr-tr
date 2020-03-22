@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7eb597aec20e8010d8694475d2af5d8033a809f0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9c8c78106125b45f52b45cb5fc6494b8e13b7a15
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329574"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084945"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Intune ile koşullu erişim kullanmanın yaygın yolları nelerdir?
 
@@ -83,7 +83,7 @@ Bilgisayarlar için koşullu erişim, mobil cihazlarda bulunanlara benzer yetene
 
 #### <a name="corporate-owned"></a>Şirkete ait olanlar
 
-- **Şirket ıçı ad etki alanına katılmış:** Bu seçenek genellikle bilgisayarlarını zaten AD Grup ilkeleri veya Configuration Manager ile yönetme konusunda makul ölçüde rahat olan kuruluşlar tarafından kullanılır.
+- **Karma Azure AD 'ye katılmış:** Bu seçenek genellikle bilgisayarlarını zaten AD Grup ilkeleri veya Configuration Manager ile yönetme konusunda makul ölçüde rahat olan kuruluşlar tarafından kullanılır.
 
 - **Azure AD etki alanına katılmış ve Intune yönetimi:** Bu senaryo, bulutu ilk kez yapmak isteyen kuruluşlar içindir (yani, birincil olarak bulut hizmetleri 'ni kullanarak, şirket içi bir altyapının kullanımını azaltmaya yönelik bir hedefle birlikte) veya salt bulut (Şirket içi altyapı olmadan). Azure AD JOIN, karma bir ortamda çalışarak hem buluta hem de şirket içi uygulamalara ve kaynaklara erişimi etkinleştirir. Cihaz Azure AD 'ye katılır ve şirket kaynaklarına erişirken koşullu erişim ölçütü olarak kullanılabilecek Intune 'a kaydedilir.
 

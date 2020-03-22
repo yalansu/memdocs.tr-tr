@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65f2fa658069b9ff9ac99026adbb8b56d955727b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 627fb13554f8f379f75f08c27d18cdd0b1106028
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329154"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084836"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Intune ile Mobile Threat Defense (MTD) uygulamaları ekleme ve atama
 
@@ -34,7 +34,7 @@ Mobil tehdit savunma (MTD) uygulamalarını eklemek ve dağıtmak için Intune '
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Intune 'da aşağıdaki adımları izleyin. Şu işlemlerin nasıl yapıldığını bildiğinizden emin olun:
+Intune 'da aşağıdaki adımları izleyin. İşlemini öğrendiğinizden emin olun:
 
 - [Intune’a uygulama ekleme](../apps/apps-add.md).
 - [Intune’a iOS uygulama yapılandırma ilkesi ekleme](../apps/app-configuration-policies-use-ios.md).
@@ -224,7 +224,7 @@ Better Mobile iOS uygulama yapılandırma ilkesini eklemek için [iOS için Micr
 
 ### <a name="sophos-mobile-app-configuration-policy"></a>Sophos mobil uygulama yapılandırma ilkesi
 
-İOS uygulama yapılandırma ilkesini [iOS uygulama yapılandırma ilkesi kullanma](../apps/app-configuration-policies-use-ios.md) makalesinde açıklandığı gibi oluşturun.
+İOS uygulama yapılandırma ilkesini [iOS uygulama yapılandırma ilkesi kullanma](../apps/app-configuration-policies-use-ios.md) makalesinde açıklandığı gibi oluşturun. Daha fazla bilgi için, Sophos Bilgi Bankası 'ndaki [mobil iOS Için kullanılabilir yönetilen ayarlar Için Sophos KESMENOKTASI X](https://community.sophos.com/kb/133963) bölümüne bakın.
 
 ### <a name="wandera-app-configuration-policy"></a>Wandera uygulama yapılandırma ilkesi
 

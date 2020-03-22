@@ -1,12 +1,12 @@
 ---
 title: Microsoft Intune'da e-posta ayarlarını yapılandırma - Azure | Microsoft Docs
 titleSuffix: ''
-description: Microsoft Intune ' de bir e-posta profili oluşturun ve bu profili Android Enterprise, iOS, ıpados ve Windows cihazlarına dağıtın. Yönettiğiniz cihazlarda şirket e-postasına bağlanmak için bir e-posta sunucusu ve kimlik doğrulama yönteminin de dahil olduğu yaygın e-posta ayarlarını yapılandırmak için e-posta profilini kullanın.
+description: Microsoft Intune ' de bir e-posta profili oluşturun ve bu profili Android Cihaz Yöneticisi, Android Enterprise, iOS, ıpados ve Windows cihazlarına dağıtın. Yönettiğiniz cihazlarda şirket e-postasına bağlanmak için bir e-posta sunucusu ve kimlik doğrulama yöntemleri dahil olmak üzere genel e-posta ayarlarını yapılandırmak için e-posta profilleri
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3921da0032fdc0b28ff21812b99029d22fbbb27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fdf722acf463bf576b222e5f13da2dcaff64504e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333066"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086977"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Intune kullanarak cihazlara e-posta ayarları ekleme
 
@@ -29,7 +29,7 @@ Microsoft Intune, kuruluşunuzdaki cihazlara dağıtabileceğiniz farklı e-post
 
 Aşağıdaki cihazlarda yerleşik e-posta ayarlarını yapılandırmak için e-posta profillerini kullanabilirsiniz:
 
-- Android Samsung KNOX Standard 4,0 ve üzeri
+- Samsung KNOX Standard 4,0 ve üzeri üzerinde Android Cihaz Yöneticisi
 - Android Kurumsal
 - iOS 8,0 ve üzeri
 - ıpados 13,0 ve üzeri
@@ -38,35 +38,48 @@ Aşağıdaki cihazlarda yerleşik e-posta ayarlarını yapılandırmak için e-p
 
 Bu makalede, Microsoft Intune’da e-posta profili oluşturma işlemi gösterilir. Ayrıca daha özel ayarlar için farklı platformlara bağlantılar içerir.
 
-## <a name="create-a-device-profile"></a>Bir cihaz profili oluşturma
+## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
 3. Aşağıdaki özellikleri girin:
 
-    - **Ad**: ilke için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir ilke adı **tüm Windows cihazları Için e-posta ayarları**olur.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
-    - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:
+    - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:  
 
-        - **Android** (yalnızca Samsung Android Knox Standard)
-        - **Android kurumsal**
+        - **Android Cihaz Yöneticisi** (yalnızca Samsung Android Knox Standard)
+        - **Android Kurumsal**
         - **iOS/ıpados**
-        - **Windows Phone 8.1**
         - **Windows 10 ve üzeri**
+        - **Windows Phone 8.1**
 
-    - **Profil türü**: **e-posta**' yı seçin.
+    - **Profil**: **e-posta**' yı seçin.
 
-4. Seçtiğiniz platforma bağlı olarak, yapılandırabileceğiniz ayarlar farklılık gösterir. Ayrıntılı ayarlar için platformunuzu seçin:
+4. **Oluştur**’u seçin.
+5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
-    - [Android Samsung KNOX Standard ayarları](email-settings-android.md)
-    - [Android kurumsal ayarları](email-settings-android-enterprise.md)
-    - [iOS/ıpados ayarları](email-settings-ios.md)
-    - [Windows Phone 8.1 ayarları](email-settings-windows-phone-8-1.md)
-    - [Windows 10 ayarları](email-settings-windows-10.md)
+    - **Ad**: ilke için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir ilke adı **Windows 10: tüm Windows 10 cihazları Için e-posta ayarları**.
+    - **Açıklama**: ilke için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
 
-5. İşiniz bittiğinde **Tamam** > **Oluştur**’u seçerek değişikliklerinizi kaydedin.
+6. **İleri**'yi seçin.
 
-Ayarlarınızı girdikten ve profili oluşturduktan sonra profiliniz profil listesinde gösterilir. Daha sonra [bu profili bazı gruplara atayın](device-profile-assign.md).
+7. **Yapılandırma ayarları**' nda, seçtiğiniz platforma bağlı olarak, yapılandırabileceğiniz ayarlar farklıdır. Ayrıntılı ayarlar için platformunuzu seçin:
+
+    - [Android Cihaz Yöneticisi (Samsung KNOX Standard)](email-settings-android.md)
+    - [Android Kurumsal](email-settings-android-enterprise.md)
+    - [iOS/ıpados](email-settings-ios.md)
+    - [Windows 10](email-settings-windows-10.md)
+    - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
+
+8. **İleri**'yi seçin.
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili `US-NC IT Team` veya `JohnGlenn_ITDepartment`gıbı belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+
+    **İleri**'yi seçin.
+
+10. **Atamalar**' da, profilinizi alacak kullanıcıları veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
+
+    **İleri**'yi seçin.
+
+11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
 
 ## <a name="remove-an-email-profile"></a>E-posta profilini kaldırma
 
@@ -104,4 +117,4 @@ Kullanıcı zaten bir e-posta hesabı yapılandırılmışsa e-posta profili pla
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Profil oluşturulduğunda henüz herhangi bir işlem gerçekleştirmez. Daha sonra, [profili atayın](device-profile-assign.md).
+Profil oluşturulduğunda henüz herhangi bir işlem gerçekleştirmez. Ardından [profili atayın](device-profile-assign.md) ve [durumunu izleyin](device-profile-monitor.md).

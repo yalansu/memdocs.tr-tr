@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 889c7ef6d45a51a4aed86bf1a76842feb6f6251a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b5df63a14f27b657c585eb43e09b02368d969939
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324410"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084409"
 ---
 # <a name="install-mobile-threat-defense"></a>Mobil tehdit savunması 'nı yükler   
 
@@ -79,9 +79,9 @@ Cihaz kaydı hakkında daha fazla bilgi için bkz. [kuruluşunuzun ağına kişi
 Yükleme başarısız olursa BT destek sorumlunuza başvurun. Kuruluşunuzun iletişim bilgilerini bulmak için [Şirket portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) gidin.  
 
 Uygulama günlüklerinizi, yükleme hakkında daha fazla bağlam sağlamak için BT destek sorumlunuza da gönderebilirsiniz.  
-* Android kullanıcıları: Şirket Portalı [günlüklerinizi karşıya yükleyin ve e-posta ile gönderin](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android) .   
+* Android kullanıcıları: Şirket Portalı [günlüklerinizi karşıya yükleyin ve e-posta ile gönderin](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) .   
 
-* iOS cihaz kullanıcıları: iOS için Microsoft Edge 'ten [günlüklerinizi alın ve gönderin](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-on-ios-to-access-managed-app-logs) .  
+* iOS cihaz kullanıcıları: iOS için Microsoft Edge 'ten [günlüklerinizi alın ve gönderin](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) .  
 
 ## <a name="resolve-a-threat"></a>Tehdidi çözümleyin  
 Bir tehdit kuruluşunuzun tanımlı tehdit düzeyini aşarsa, kuruluşunuzun şunları yapmanız gerekir:  

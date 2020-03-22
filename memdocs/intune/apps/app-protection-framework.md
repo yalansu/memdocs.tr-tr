@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cfb0012dfc2cedb72c64a54c16b567dffff84c9e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cd6956a9bdb19f25e39dd8cfb8e7e685d60f7b8c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326314"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083548"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Uygulama koruma ilkelerini kullanan veri koruma çerçevesi 
 
@@ -55,7 +55,7 @@ Yukarıdaki tabloda gösterildiği gibi, ilke ayarlarının etkilerini anlamak i
 
 Bir UYGULAMADAKI değişiklikleri test ederken, [Teslimat zamanlamasıyla](app-protection-policy-delivery.md)haberdar olun. Belirli bir kullanıcı için uygulama tesliminin durumu izlenebilir. Daha fazla bilgi için bkz. [Uygulama koruma ilkelerini izleme](app-protection-policies-monitor.md).
 
-Her bir uygulama için ayrı uygulama ayarları, uç ve ilgili URL 'YI kullanarak cihazlarda doğrulanabilir *: ıntunehelp*. Daha fazla bilgi için bkz. [Microsoft Edge 'i Microsoft Intune kullanarak](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs) [istemci uygulama koruma günlüklerini gözden geçirme](app-protection-policy-settings-log.md) ve Web erişimini yönetme.
+Her bir uygulama için ayrı uygulama ayarları, uç ve ilgili URL 'YI kullanarak cihazlarda doğrulanabilir *: ıntunehelp*. Daha fazla bilgi için bkz. [Microsoft Edge 'i Microsoft Intune kullanarak](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs) [istemci uygulama koruma günlüklerini gözden geçirme](app-protection-policy-settings-log.md) ve Web erişimini yönetme.
 
 ## <a name="app-data-protection-framework-settings"></a>UYGULAMA veri koruma çerçevesi ayarları
 

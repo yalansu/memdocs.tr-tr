@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2f0d78fa929a7ed7ca33f7688027fb55c083280
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ed0194f0ace1ed1e962a8b993a4e93f7ef487bdc
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329662"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084921"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Cihazları Intune ile uyumlu veya uyumsuz olarak işaretlemek için Windows 10 ve üzeri ayarları
 
@@ -177,7 +177,7 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
   [Güvenlik Duvarı CSP 'si](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
 
   > [!NOTE]
-  > Yeniden başlatmanın ardından cihaz hemen eşitleniyorsa veya uykudan uyandırmaya hemen eşitlendikten sonra, bu ayar bir **hata**olarak rapor verebilir. Bu senaryo genel cihaz uyumluluk durumunu etkilemeyebilir. Uyumluluk durumunu yeniden değerlendirmek için cihazı el ile [eşitleyin](https://docs.microsoft.com/user-help/sync-your-device-manually-windows).
+  > Yeniden başlatmanın ardından cihaz hemen eşitleniyorsa veya uykudan uyandırmaya hemen eşitlendikten sonra, bu ayar bir **hata**olarak rapor verebilir. Bu senaryo genel cihaz uyumluluk durumunu etkilemeyebilir. Uyumluluk durumunu yeniden değerlendirmek için cihazı el ile [eşitleyin](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows).
 
 - **Güvenilir Platform Modülü (TPM)** :  
   - **Yapılandırılmadı** (*varsayılan*)-ıNTUNE, cihazı bir TPM yonga sürümü için denetlemez.

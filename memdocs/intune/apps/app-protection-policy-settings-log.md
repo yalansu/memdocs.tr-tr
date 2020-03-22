@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 03/17/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe508dac691f922ec638709e04d6d4dd9f47f078
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f58c20731395c95e532e28165553743fdef701e9
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326130"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083569"
 ---
 # <a name="review-client-app-protection-logs"></a>İstemci uygulama koruma günlüklerini gözden geçirme
 
 Uygulama koruma günlüklerinde inceleyebileceğiniz ayarlar hakkında bilgi edinin. Mobil istemcide Intune tanılamayı etkinleştirerek günlüklere erişin. 
 
 Günlükleri etkinleştirme ve toplama işlemi platforma göre farklılık gösterir:
-- **iOS/ıpados cihazları** -günlükleri toplamak için IOS Için Microsoft Edge/ıpados kullanın. Ayrıntılar için bkz. [Microsoft Edge 'i Microsoft Intune kullanarak Web erişimini yönetme](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs). 
+- **iOS/ıpados cihazları** -günlükleri toplamak için IOS Için Microsoft Edge/ıpados kullanın. Ayrıntılar için bkz. [Microsoft Edge 'i Microsoft Intune kullanarak Web erişimini yönetme](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
 - **Windows 10 cihazları** - *mdmdiag* ve olay günlüklerini kullanın. Windows istemci yönetimi içeriğinde [Windows 10 ' da MDM başarısızlıklarını tanılama](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) ve blog [sorunlarını giderme Windows 10 Intune ilke hatalarıyla ilgili](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/)bilgi için bkz.
-- **Android cihazlar** -Android cihazlarda uygulama koruma IlkesI (uygulama) için tanılama verisi yok.
+- **Android cihazlar** -günlükleri toplamak için Android Için Microsoft Edge kullanın. Ayrıntılar için bkz. [Microsoft Edge 'i Microsoft Intune kullanarak Web erişimini yönetme](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
 
 Aşağıdaki tabloda, uygulama koruma ilkesi ayarı adı ve günlükte kaydedilen desteklenen değerler listelenmiştir. Ayrıca, her ayar Microsoft Endpoint Manager portalında bulunan ilke ayarını tanımlar. Her bir ayar hakkında ayrıntılı bilgi için bkz. [iOS/ıpados uygulama koruma ilkesi ayarları](app-protection-policy-settings-ios.md).
 

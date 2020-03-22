@@ -1,12 +1,11 @@
 ---
-title: Android için özel uygulama başına VPN profili
-titleSuffix: Microsoft Intune
-description: Microsoft Intune tarafından yönetilen Android cihazları için uygulama başına VPN profili oluşturmayı öğrenin.
+title: Microsoft Intune-Azure 'da Android için özel uygulama başına VPN profili | Microsoft Docs
+description: Microsoft Intune tarafından yönetilen Android Cihaz Yöneticisi cihazları için uygulama başına VPN profili oluşturmayı öğrenin.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbcf60d3707097a323a05bf36d2cfe3902d5214
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d58ab666929e1e28cab4e19f2e2cec668f428452
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325610"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083881"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Microsoft Intune özel profili kullanarak Android cihazları için uygulama başına VPN profili oluşturma
 
@@ -32,7 +31,7 @@ Intune tarafından yönetilen Android 5.0 ve üzeri cihazlar için uygulama baş
 > [!NOTE]
 > Android kurumsal cihazlarda uygulama başına VPN kullanmak için de bu adımları kullanabilirsiniz. Ancak, VPN istemci uygulamanız için bir [uygulama yapılandırma ilkesi](../apps/app-configuration-policies-use-android.md) kullanmanız önerilir.
 
-İlkeyi Android cihazınıza veya kullanıcı gruplarına atadıktan sonra kullanıcılar, Pulse Secure veya Citrix VPN istemcisini başlatmalıdır. VPN istemcisi bundan sonra yalnızca belirtilen uygulamalardan gelen trafiğin VPN bağlantısını kullanmasına izin verir.
+İlkeyi Android cihazınıza veya kullanıcı gruplarına atadıktan sonra kullanıcılar, Pulse Secure veya Citrix VPN istemcisini başlatmalıdır. Ardından, VPN istemcisi yalnızca belirtilen uygulamalardan gelen trafiğin açık VPN bağlantısını kullanmasına izin verir.
 
 > [!NOTE]
 >
@@ -44,14 +43,23 @@ Intune tarafından yönetilen Android 5.0 ve üzeri cihazlar için uygulama baş
 2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
 3. Aşağıdaki özellikleri girin:
 
-    - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, **tüm şirket Için Android uygulama BAŞıNA VPN profilidir**.
+    - **Platform**: **Android Cihaz Yöneticisi**' ni seçin.
+    - **Profil**: **VPN**' yi seçin.
+
+4. **Oluştur**’u seçin.
+5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
+
+    - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, **tüm şirket Için Android Cihaz Yöneticisi uygulama BAŞıNA VPN profili**olur.
     - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
-    - **Platform**: **Android**' i seçin.
-    - **Profil türü**: **VPN**' yi seçin.
 
-4. **Ayarlar** > **Yapılandır**’ı seçin. Ardından VPN profilini yapılandırın. Daha fazla bilgi için bkz. Android cihazları için [VPN ayarlarını](vpn-settings-configure.md) ve [Intune VPN ayarlarını](vpn-settings-android.md)yapılandırma.
+6. **İleri**'yi seçin.
+7. **Yapılandırma ayarları**' nda, profilde istediğiniz ayarları yapılandırın:
 
-VPN profilini oluştururken, belirttiğiniz **Bağlantı Adı** değerini bir yere not edin. Bu ad sonraki adımda gerekli olacaktır. Örneğin, **UygulamaVpnProfilim**.
+    - [Android Cihaz Yöneticisi cihazları Için VPN ayarları](vpn-settings-android.md).
+
+    VPN profilini oluştururken girdiğiniz **bağlantı adı** değerini bir yere göz atın. Bu ad bir sonraki adımda gereklidir. Bu örnekte, bağlantı adı **Myappvpnprofile**' dir.
+
+8. **İleri**' yi seçin ve profilinizi oluşturmaya devam edin. Daha fazla bilgi için bkz. [VPN profili oluşturma](vpn-settings-configure.md#create-the-profile).
 
 ## <a name="step-2-create-a-custom-configuration-policy"></a>2\. Adım: Özel yapılandırma ilkesi oluşturma
 
@@ -61,7 +69,7 @@ VPN profilini oluştururken, belirttiğiniz **Bağlantı Adı** değerini bir ye
 
     - **Ad**: özel profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, **tüm şirket Için özel OMA-URI ANDROID VPN profilidir**.
     - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
-    - **Platform**: **Android**' i seçin.
+    - **Platform**: **Android Cihaz Yöneticisi**' ni seçin.
     - **Profil türü**: **özel**' i seçin.
 
 4. **Ayarlar** > **Yapılandır**’ı seçin.
@@ -72,7 +80,8 @@ VPN profilini oluştururken, belirttiğiniz **Bağlantı Adı** değerini bir ye
     - **Veri türü**: **dize**girin.
     - **Değer**: profille ilişkilendirilecek paketlerin noktalı virgülle ayrılmış bir listesini girin. Örneğin, Excel 'In ve Google Chrome tarayıcısının VPN bağlantısını kullanmasını istiyorsanız, `com.microsoft.office.excel;com.android.chrome`girin.
 
-![Örnek Android uygulama başına VPN özel ilkesi](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
+    > [!div class="mx-imgBorder"]
+    >![örnek Android Cihaz Yöneticisi uygulama başına VPN özel ilkesi](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
 
 ### <a name="set-your-app-list-to-blacklist-or-whitelist-optional"></a>Uygulama listenizi kara liste veya beyaz liste olarak ayarlama (isteğe bağlı)
 
@@ -87,3 +96,8 @@ VPN bağlantısını *kullanamaz* uygulamaların bir listesini girmek için **ka
 ## <a name="step-3-assign-both-policies"></a>3\. Adım: Her iki ilkeyi de atama
 
 Gerekli kullanıcılara veya cihazlara [her iki cihaz profilini de atayın](device-profile-assign.md) .
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+- Tüm Android Cihaz Yöneticisi VPN ayarlarının listesi için bkz. [VPN 'yi yapılandırmak Için Android cihaz ayarları](vpn-settings-android.md).
+- VPN ayarları ve Intune hakkında daha fazla bilgi için bkz. [MICROSOFT INTUNE VPN ayarlarını yapılandırma](vpn-settings-configure.md).

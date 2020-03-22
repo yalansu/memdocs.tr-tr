@@ -5,28 +5,28 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: karthib
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ade4842564188c457af94a22fe49d3d18d791ebb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332338"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087094"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune'daki cihaz profillerini kullanarak cihazlarınıza özellik ve ayar uygulama
 
-Microsoft Intune, kuruluşunuzdaki farklı cihazlarda etkinleştirebileceğiniz veya devre dışı bırakabileceğiniz ayarları ve özellikleri içerir. Bu ayarlar ve özellikler "yapılandırma profillerine" eklenir. Farklı cihazlar ve iOS/ıpados, Android ve Windows dahil farklı platformlar için profiller oluşturabilirsiniz. Ardından Intune'u kullanarak bu profilleri cihazlara "atayabilirsiniz".
+Microsoft Intune, kuruluşunuzdaki farklı cihazlarda etkinleştirebileceğiniz veya devre dışı bırakabileceğiniz ayarları ve özellikleri içerir. Bu ayarlar ve özellikler "yapılandırma profillerine" eklenir. Farklı cihazlar ve iOS/ıpados, Android Cihaz Yöneticisi, Android Enterprise ve Windows dahil farklı platformlar için profiller oluşturabilirsiniz. Ardından Intune'u kullanarak bu profilleri cihazlara "atayabilirsiniz".
 
 Mobil cihaz yönetimi (MDM) çözümünüzün bir parçası olarak bu yapılandırma profillerini kullanarak farklı görevler gerçekleştirebilirsiniz. Bazı profil örnekleri şunlardır:
 
@@ -55,7 +55,7 @@ Bu özellik şunları destekler:
 
 Bu özellik şunları destekler: 
 
-- Android
+- Android Cihaz Yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
 - Mac OS
@@ -69,7 +69,7 @@ Bu özellik şunları destekler:
 
 Bu özellik şunları destekler:
 
-- Android
+- Android Cihaz Yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
 - Mac OS
@@ -108,8 +108,8 @@ Bu özellik şunları destekler:
 
 Bu özellik şunları destekler:
 
-- Android
-- Android kurumsal
+- Android Cihaz Yöneticisi
+- Android Kurumsal
 - iOS/iPadOS
 - Mac OS
 - Windows 10 ve üzeri
@@ -143,7 +143,7 @@ Bu özellik şunları destekler:
 
 Bu özellik şunları destekler: 
 
-- Android
+- Android Cihaz Yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
 - WVPN profillerinidows Phone 8.1
@@ -241,7 +241,7 @@ Sanal özel ağlar (VPN’ler), kullanıcılara şirket ağınıza güvenli uzak
 
 Bu özellik şunları destekler: 
 
-- Android
+- Android Cihaz Yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
 - Mac OS
@@ -255,7 +255,7 @@ Bu özellik şunları destekler:
 
 Bu özellik şunları destekler: 
 
-- Android
+- Android Cihaz Yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
 - Mac OS
@@ -276,7 +276,7 @@ Bu özellik şunları destekler:
 
 Bu özellik şunları destekler:
 
-- Android (Mobility Uzantıları)
+- Android Cihaz Yöneticisi (Mobility uzantıları)
 
 ## <a name="manage-and-troubleshoot"></a>Yönetme ve sorun giderme
 

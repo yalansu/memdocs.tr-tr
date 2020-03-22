@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune-Azure 'da VPN ayarlarını iOS/ıpados cihazlarına yapılandırma | Microsoft Docs
-description: Bağlantı ayrıntıları, kimlik doğrulama yöntemleri ve temel ayarlarda bölünmüş tünel dahil olmak üzere, sanal özel ağ (VPN) yapılandırma ayarlarını kullanarak bir VPN yapılandırma profili ekleyin veya oluşturun; tanımlayıcı ile özel VPN ayarları ve anahtar ve değer çiftleri; Safari URL 'Leri ve SSID veya DNS arama etki alanları ile isteğe bağlı VPN 'Leri içeren uygulama başına VPN ayarları; ve iOS/ıpados çalıştıran cihazlarda Microsoft Intune bir yapılandırma betiği, IP veya FQDN adresi ve TCP bağlantı noktası dahil edilecek proxy ayarları.
+description: Sanal özel ağ (VPN) yapılandırma ayarlarını kullanarak iOS/ıpados cihazlarına bir VPN yapılandırma profili ekleyin veya oluşturun. Bağlantı ayrıntılarını, kimlik doğrulama yöntemlerini, bölünmüş tüneli, özel VPN ayarlarını tanımlayıcı, anahtar ve değer çiftleri, Safari URL 'Leri içeren uygulama başına VPN ayarlarını ve SSID veya DNS arama etki alanları ile isteğe bağlı VPN 'Leri, dahil edilecek proxy ayarlarını yapılandırın Microsoft Intune bir yapılandırma betiği, IP veya FQDN adresi ve TCP bağlantı noktası.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80ff24193c607003889c2246bb9199db795f1623
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 74e889419dcaaa75c2a31fe16931dddd84d1a967
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331902"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086530"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune 'de iOS ve ıpados cihazlarına VPN ayarları ekleme
 
@@ -82,10 +82,10 @@ Aşağıdaki listede gösterilen ayarlar, seçtiğiniz VPN bağlantı türüne g
 
 - **Ağ erişim denetimini etkinleştir (NAC)** (Cisco AnyConnect, Citrix SSO, F5 Access): **kabul ediyorum**' u SEÇTIĞINIZDE, cihaz kimliği VPN profiline dahildir. Bu KIMLIK, ağ erişimine izin vermek veya erişimi engellemek için VPN kimlik doğrulaması için kullanılabilir.
 
-    **Ise Ile Cisco AnyConnect kullanırken**şunları yaptığınızdan emin olun:
+  **Ise Ile Cisco AnyConnect kullanırken**şunları yaptığınızdan emin olun:
 
-    - Daha önce yapmadıysanız, [Cisco kimlik hizmetleri altyapısı yönetici KıLAVUZUNDA](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html) **MDM sunucusu olarak Microsoft Intune yapılandırma** altında açıklandığı gibi NAC Için Ise 'yi Intune ile tümleştirin.
-    - VPN profilinde NAC 'yi etkinleştirin.
+  - Henüz yapmadıysanız, [Cisco kimlik hizmetleri altyapısı yönetici KıLAVUZUNDA](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html) **MDM sunucusu olarak Microsoft Intune yapılandırma** bölümünde açıklandığı gibi NAC Için Ise 'yi Intune ile tümleştirin.
+  - VPN profilinde NAC 'yi etkinleştirin.
 
   **CITRIX SSO 'Yu ağ geçidiyle kullanırken**şunları yaptığınızdan emin olun:
 
@@ -107,6 +107,34 @@ Aşağıdaki listede gösterilen ayarlar, seçtiğiniz VPN bağlantı türüne g
 ## <a name="ikev2-settings"></a>Ikev2 ayarları
 
 Bu ayarlar, > **Ikev2** **bağlantı türünü** seçtiğinizde geçerlidir.
+
+- **Her zaman-on VPN**: **Enable** VPN ISTEMCISINI otomatik olarak bağlanıp VPN 'ye yeniden bağlanacak şekilde ayarlar. Her Zaman Açık VPN bağlantıları; kullanıcı cihazı kilitlediğinde, cihaz yeniden başlatıldığında veya kablosuz ağ değiştiğinde bağlı durumda kalır veya hemen bağlanır. **Devre dışı** (varsayılan) olarak ayarlandığında, tüm VPN istemcileri için her zaman VPN devre dışı bırakılır. Etkinleştirildiğinde, şunları da yapılandırın:
+
+  - **Ağ arabirimi**: tüm Ikev2 ayarları yalnızca seçtiğiniz ağ arabirimine uygulanır. Seçenekleriniz şunlardır:
+    - **Wi-Fi ve hücresel** (varsayılan): Ikev2 ayarları, cihazdaki Wi-Fi ve hücresel arabirimler için geçerlidir.
+    - **Hücresel**: Ikev2 ayarları yalnızca cihazdaki hücresel arabirim için geçerlidir. Wi-Fi arabirimi devre dışı bırakılmış veya kaldırılmış cihazlara dağıtım yapıyorsanız bu seçeneği belirleyin.
+    - **Wi-Fi**: Ikev2 ayarları yalnızca cihazdaki Wi-Fi arabirimine uygulanır.
+  - **VPN yapılandırmasını devre dışı bırakmak Için Kullanıcı**: **Etkinleştir** ayarı, kullanıcıların her zaman VPN 'yi kapatmasına izin verir. **Devre dışı bırak** (varsayılan), kullanıcıların bunu kapatmasını engeller. Bu ayar için varsayılan değer en güvenli seçenektir.
+  - **Sesli mesaj**: her zaman VPN etkinleştirildiğinde sesli posta trafiğiyle ne olacağını seçin. Seçenekleriniz şunlardır:
+    - **Ağ TRAFIĞINI VPN üzerinden zorla** (varsayılan): Bu ayar en güvenli seçenektir.
+    - **Ağ trafiğinin VPN dışına geçmesine izin ver**
+    - **Ağ trafiğini bırak**
+  - **AirPrint**: her zaman VPN etkinleştirildiğinde AirPrint trafiğiyle ne olacağını seçin. Seçenekleriniz şunlardır:
+    - **Ağ TRAFIĞINI VPN üzerinden zorla** (varsayılan): Bu ayar en güvenli seçenektir.
+    - **Ağ trafiğinin VPN dışına geçmesine izin ver**
+    - **Ağ trafiğini bırak**
+  - **Hücresel hizmetler**: iOS 13.0 + ' da, her zaman VPN etkinleştirildiğinde hücresel trafiğe ne olacağını seçin. Seçenekleriniz şunlardır:
+    - **Ağ TRAFIĞINI VPN üzerinden zorla** (varsayılan): Bu ayar en güvenli seçenektir.
+    - **Ağ trafiğinin VPN dışına geçmesine izin ver**
+    - **Ağ trafiğini bırak**
+  - **Yerel olmayan açıklamalı ağ uygulamalarından gelen TRAFIĞIN VPN dışında geçmesine Izin ver**: bir captive ağı, genellikle restoranlar ve oteller Içinde bulunan Wi-Fi etkin noktalarına başvurur. Seçenekleriniz şunlardır:
+    - **Hayır**: VPN tüneli üzerinden tüm captive ağ (CN) uygulama trafiğini zorlar.
+    - **Evet, tüm uygulamalar**: tüm CN uygulama trafiğinin VPN 'i atlamasına izin verir.
+    - **Evet, belirli uygulamalar**: trafiği VPN 'yi ATLAYABILECEĞI CN uygulamalarının bir listesini **ekleyin** . CN uygulamasının paket tanımlayıcılarını girin. Örneğin, şunu girin: `com.contoso.app.id.package`.
+
+  - **Captive Web sayfası uygulamasından dış VPN 'den geçiş yapmak Için trafik**: captive Web sayfası, captive oturum açma 'yı işleyen yerleşik bir web tarayıcısıdır. **Etkinleştir** ayarı, tarayıcı uygulama trafiğinin VPN 'i atlamasına izin verir. **Devre dışı bırak** (varsayılan) Web sayfası trafiğini her zaman açık VPN 'yi kullanacak şekilde zorlar. Varsayılan değer en güvenli seçenektir.
+  - **Ağ adresi çevirisi (NAT) canlı tutma aralığı (saniye)** : VPN 'ye bağlı kalmak için, cihaz ağ paketlerini etkin kalacak şekilde gönderir. Bu paketlerin ne sıklıkta gönderileceğini, 20-1440 adresinden saniye cinsinden bir değer girin. Örneğin, ağ paketlerini her 60 saniyede bir VPN 'ye göndermek için `60` değerini girin. Varsayılan olarak, bu değer `110` saniye olarak ayarlanır.
+  - **Cihaz uykuda olduğunda NAT KeepAlive 'ı donanıma devretmek**: bir cihaz uykuda olduğunda, cihazın VPN 'ye bağlı KALMASı için NAT 'ın sürekli canlı tutma paketleri göndermesini **sağlar** . **Devre dışı bırak ayarı** bu özelliği kapatır.
 
 - **Uzak tanımlayıcı**: Ikev2 sunucusunun ağ IP ADRESINI, FQDN 'Sini, userfqdn 'SINI veya ASN1DN girin. Örneğin `10.0.0.3` veya `vpn.contoso.com` girin. Genellikle [**bağlantı adı**](#base-vpn-settings) ile aynı değeri girersiniz (Bu makalede). Ancak, Ikev2 Sunucu ayarlarınıza göre değişir.
 
@@ -193,8 +221,8 @@ Bu ayarlar, > **Ikev2** **bağlantı türünü** seçtiğinizde geçerlidir.
   - **SSID’ler veya DNS arama etki alanları**: Bu koşulun kablosuz ağ **SSID’lerini** mi yoksa **DNS arama etki alanlarını** mı kullanacağını seçin. Bir veya birden çok SSID veya arama etki alanı yapılandırmak için **Ekle**’yi seçin.
   - **URL dizesi araştırması**: İsteğe bağlıdır. Kuralın test olarak kullanacağı bir URL girin. Cihaz bu URL 'ye yeniden yönlendirmesiz erişirse VPN bağlantısı başlatılır. Cihaz hedef URL’ye bağlanır. Kullanıcı, URL dize araştırma sitesini görmez.
 
-    Örneğin, URL dize araştırması, VPN 'i bağlamadan önce cihaz uyumluluğunu denetleyen bir denetim Web sunucusu URL 'sidir. Ya da URL, VPN aracılığıyla cihazı hedef URL 'ye bağlamadan önce VPN 'in bir siteye bağlanma yeteneğini sınar.
-.
+    Örneğin, URL dize araştırması, VPN 'i bağlamadan önce cihaz uyumluluğunu denetleyen bir denetim Web sunucusu URL 'sidir. Ya da URL, VPN aracılığıyla hedef URL 'ye bağlanmadan önce VPN 'in bir siteye bağlanma yeteneğini sınar.
+
   - **Etki alanı eylemi**: Aşağıdaki öğelerden birini seçin:
     - Gerekirse bağlan
     - Hiçbir zaman bağlanma

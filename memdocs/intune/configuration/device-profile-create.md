@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b706ea076ebcc239904a9ae918389ccafa287ec
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 462f9ca9618d16c0291792f86d00c46f641c6cc8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325594"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084055"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Microsoft Intune’da cihaz profili oluşturma
 
@@ -52,7 +52,7 @@ Bu makalede:
    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
    - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:  
 
-       - **Android**
+       - **Android Cihaz Yöneticisi**
        - **Android kurumsal**
        - **iOS/ıpados**
        - **macOS**
@@ -68,12 +68,14 @@ Bu makalede:
        - [Teslim iyileştirme](delivery-optimization-windows.md)
        - [Cihaz özellikleri](device-features-configure.md)
        - [Cihaz kısıtlamaları](device-restrictions-configure.md)
+       - [Etki alanına ekleme](domain-join-configure.md)
        - [Sürüm yükseltme ve mod değiştirme](edition-upgrade-configure-windows-10.md)
        - [Eğitim](education-settings-configure.md)
        - [E-posta](email-settings-configure.md)
        - [Uç nokta koruması](../protect/endpoint-protection-configure.md)
        - [Kimlik koruması](../protect/identity-protection-configure.md)  
        - [Bilgi noktası](kiosk-settings.md)
+       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
        - [PKCS sertifikası](../protect/certficates-pfx-configure.md)
        - [PKCS içeri aktarılan sertifika](../protect/certificates-imported-pfx-configure.md)
        - [Tercih dosyası](preference-file-settings-macos.md)
@@ -82,12 +84,12 @@ Bu makalede:
        - [Güncelleştirme ilkeleri](../protect/software-updates-ios.md)
        - [VPN](vpn-settings-configure.md)
        - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
        - [Windows Bilgi Koruması](../protect/windows-information-protection-configure.md)
 
      Örneğin, platform için **iOS/ıpados** ' ı seçerseniz, profil türü seçenekleriniz aşağıdaki profile benzer şekilde görünür:
 
-     ![Intune 'da iOS/ıpados profili oluşturma](./media/device-profile-create/create-device-profile.png)
+     > [!div class="mx-imgBorder"]
+     > Intune 'da iOS/ıpados profili oluşturma ![](./media/device-profile-create/create-device-profile.png)
 
 4. Bitirdiğinizde, yaptığınız değişiklikleri kaydetmek için **Tamam** > **Oluştur**'u seçin. Profil oluşturulur ve listede gösterilir.
 
@@ -138,7 +140,8 @@ Profili gruplara atadığınızda, uygulanabilirlik kuralları bir filtre işlev
 
 1. **Uygulanabilirlik kuralları**' nı seçin. **Kural**, **özellik**ve **işletim sistemi sürümünü**seçebilirsiniz:
 
-    ![Microsoft Intune cihaz yapılandırma profiline uygulanabilirlik kuralı ekleme](./media/device-profile-create/applicability-rules.png)
+    > [!div class="mx-imgBorder"]
+    > Microsoft Intune](./media/device-profile-create/applicability-rules.png) cihaz yapılandırma profiline uygulanabilirlik kuralı ekleme ![
 
 2. **Kuralda**, kullanıcıları veya grupları dahil etmek veya dışlamak istediğinizi seçin. Seçenekleriniz şunlardır:
 
@@ -184,7 +187,8 @@ Profiller oluştururken aşağıdaki önerileri göz önünde bulundurun:
 
   Aşağıdaki görüntüde kullanıcılara uygulanabilecek ve/veya cihazlara uygulanabilecek bir ayarın örneği gösterilmektedir:
 
-  ![Kullanıcı ve cihazlar için geçerli olan Intune yönetici şablonu](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  > [!div class="mx-imgBorder"]
+  > Kullanıcı ve cihazlara uygulanan ![Intune yönetici şablonu](./media/device-profile-create/setting-applies-to-user-and-device.png)
 
 - Her kısıtlayıcı ilke oluşturduğunuzda, bu değişikliği kullanıcılarınıza iletişim kurun. Örneğin, geçiş kodu gereksinimini 4 karakterden 6 karaktere değiştiriyorsanız, ilke atamadan önce kullanıcılarınızın bunu bilmesini sağlayın.
 

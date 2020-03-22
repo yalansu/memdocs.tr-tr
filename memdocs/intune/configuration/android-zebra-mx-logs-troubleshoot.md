@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8c7c60b4d9d1831aaabb9886345865234ce6351
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 607e2303cbec9ec7fc069db602d51684b71e6575
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333182"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083840"
 ---
 # <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Microsoft Intune Android Zeköşeli cihazlarda sorun giderme ve olası sorunları görme
 
@@ -57,7 +57,7 @@ Profil zaten Intune ile dağıtıldıktan sonra günlükleri almak için cihazı
 Cihazda Günlükler `/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files` kaydedilir
 
 ### <a name="get-logs-from-email"></a>E-postadaki günlükleri al
-Profil Intune ile zaten dağıtıldıktan sonra günlükleri almak için, son kullanıcılar cihazdaki bir e-posta uygulaması kullanarak günlüklere e-posta gönderebilir. Zeköşeli cihazda Şirket Portalı uygulamasını açın ve [günlükleri gönderin](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android). Günlükleri Gönder özelliğinin kullanılması, Microsoft desteği 'ne başvurduğunuzda başvurduğunuzda kullanabileceğiniz bir Powerasansör olay KIMLIĞI de oluşturur.
+Profil Intune ile zaten dağıtıldıktan sonra günlükleri almak için, son kullanıcılar cihazdaki bir e-posta uygulaması kullanarak günlüklere e-posta gönderebilir. Zeköşeli cihazda Şirket Portalı uygulamasını açın ve [günlükleri gönderin](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android). Günlükleri Gönder özelliğinin kullanılması, Microsoft desteği 'ne başvurduğunuzda başvurduğunuzda kullanabileceğiniz bir Powerasansör olay KIMLIĞI de oluşturur.
 
 ## <a name="read-the-logs"></a>Günlükleri okuyun
 

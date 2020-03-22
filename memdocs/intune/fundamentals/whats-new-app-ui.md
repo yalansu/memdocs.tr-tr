@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 03/05/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 767d3671d796299d802fe950d443a152d8e2d645
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ba2b8e407b4c81f74df7c86e7101461b30a0d8e0
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330090"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087119"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune son kullanıcı uygulamaları arabirimlerinde yapılan güncelleştirmeler
 
@@ -32,10 +32,19 @@ Microsoft Intune uygulamalarına yönelik en son güncelleştirmeler hakkında b
 * Öğrenci ve çalışanları uygulama ve kayıt değişikliklerine karşı uyarır.
 * Kuruluşunuzun belgelerini veya yardım masası yordamlarını güncelleştirin.  
 
-Bir çalışan ya da öğrenciyseniz, Şirket Portalı yardım belgelerinin ekran görüntülerini ve bağlantılarını kontrol ettiğinizden emin olun. Şirket Portalı uygulamasının nasıl kullanılacağı hakkında daha fazla bilgi için, [Şirket portalı Kullanıcı Yardım belgelerine](https://docs.microsoft.com/user-help/)bakın.  
+Bir çalışan ya da öğrenciyseniz, Şirket Portalı yardım belgelerinin ekran görüntülerini ve bağlantılarını kontrol ettiğinizden emin olun. Şirket Portalı uygulamasının nasıl kullanılacağı hakkında daha fazla bilgi için, [Şirket portalı Kullanıcı Yardım belgelerine](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done)bakın.  
 
-<!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/whats-new-app-ui/account-move-rom-iwp-user-1712.png)--->
 
+
+## <a name="week-of-march-2-2020"></a>2 Mart 2020 haftası   
+### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Android için Şirket Portalı 'de geliştirilmiş oturum açma deneyimi   
+Daha modern, basit ve kullanıcılar için temiz bir deneyim sunmak amacıyla Android için Şirket Portalı uygulamasındaki çeşitli oturum açma ekranlarının yerleşimini güncelleştirdik. Android kayıt yönergelerine ilişkin tüm Şirket Portalı görmek için [Android cihazınızı kaydetme](../user-help/enroll-device-android-company-portal.md) veya [Android iş profiline kaydolma](../user-help/enroll-device-android-work-profile.md)bölümüne gidin.   
+
+
+|Güncellendi|Önceki|   
+|---|---|   
+|![Yeni Şirket Portalı oturum açma ekranının örnek görüntüsü, oturum aç düğmesi.](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![Daha önceki Şirket Portalı oturum açma sayfasında, busier tasarımını gösteren örnek resim.](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
+|![Yeni oturum açma ilerleme ekranının örnek görüntüsü, tek bir ilerleme çubuğu gösteriliyor.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Bir busier tasarımını gösteren, önceki oturum açma ilerleme ekranının örnek görüntüsü.](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|  
 ## <a name="week-of-february-3-2020"></a>3 Şubat 2020 haftası
 
 ### <a name="screen-removed-from-company-portal-android-work-profile-enrollment---6103987---"></a>Şirket Portalı, Android iş profili kaydından kaldırılan ekran <!--6103987 -->
@@ -142,7 +151,7 @@ Uygulama menüsünün örnek ekran görüntüsü:
 * Yönetim profilini cihazlarına yüklemek için Ayarlar uygulamasını açın.  
 * Kaydı tamamlamaya yönelik Şirket Portalı uygulamasına geri dönün.  
 
-Güncelleştirilmiş kayıt adımları ve ekranları için bkz. [iOS cihazını Intune 'A kaydetme](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios).  
+Güncelleştirilmiş kayıt adımları ve ekranları için bkz. [iOS cihazını Intune 'A kaydetme](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios).  
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>iOS için Şirket Portalı uygulamasında kullanıcı deneyimi güncelleştirmesi <!-- 2536024 -->
 İOS cihazları için Şirket Portalı uygulamasının ana sayfası yeniden tasarlanmıştır. Bu değişiklik ile, giriş sayfası iOS Kullanıcı arabirimi desenlerini daha iyi izler ve ayrıca uygulamalar ve e-kitaplar için geliştirilmiş bulunabilirliği sağlar.  
@@ -166,7 +175,7 @@ Microsoft Intune yöneticisi olarak, iOS Şirket Portalı uygulamasındaki kulla
 ## <a name="week-of-august-27-2018"></a>27 Ağustos 2018 Haftası  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Şirket Portalı web sitesi için yeni kullanıcı deneyimi güncelleştirmesi <!--2000968 -->  
-Müşterilerin geri bildirimlerine göre Şirket Portalı Web sitesine yeni özellikler ekledik. Cihazlarınızın mevcut işlevselliğinde ve kullanılabilirliğinde önemli gelişmeler göreceksiniz. Sitenin cihaz ayrıntıları, geri bildirim ve destek ve cihaza genel bakış gibi belirli alanlarında, artık yeni, modern ve hızlı yanıt veren bir tasarıma sahiptir. [Intune Şirket Portalı belgeleri](https://docs.microsoft.com/user-help/using-the-intune-company-portal-website) de bu değişiklikleri yansıtacak şekilde güncelleştirildi.   
+Müşterilerin geri bildirimlerine göre Şirket Portalı Web sitesine yeni özellikler ekledik. Cihazlarınızın mevcut işlevselliğinde ve kullanılabilirliğinde önemli gelişmeler göreceksiniz. Sitenin cihaz ayrıntıları, geri bildirim ve destek ve cihaza genel bakış gibi belirli alanlarında, artık yeni, modern ve hızlı yanıt veren bir tasarıma sahiptir. [Intune Şirket Portalı belgeleri](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website) de bu değişiklikleri yansıtacak şekilde güncelleştirildi.   
 
 Karşılaşacağınız güncelleştirmeler şunlardır:  
 

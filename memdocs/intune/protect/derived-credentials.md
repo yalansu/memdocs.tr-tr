@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3724e425ab284d63dbe1e64dcd236509744abe10
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 50d32a76e638d88adc7a72d103c84e73544079cb
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329406"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084899"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Microsoft Intune ' de türetilmiş kimlik bilgilerini kullan
 
@@ -106,7 +106,7 @@ Desteklenen her iş ortağı için önemli konular aşağıda verilmiştir.  Int
 
 #### <a name="disa-purebred"></a>DıŞA purebred
 
-[Dışa Popurebred için Kullanıcı iş akışını](https://docs.microsoft.com/user-help/enroll-ios-device-disa-purebred)gözden geçirin. Bu iş akışı için temel gereksinimler şunlardır:
+[Dışa Popurebred için Kullanıcı iş akışını](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-disa-purebred)gözden geçirin. Bu iş akışı için temel gereksinimler şunlardır:
 
 - Kullanıcıların, verenin kimliğini doğrulamak için akıllı kartlarını kullanabilecekleri bir bilgisayar veya bilgi noktası erişimine ihtiyacı vardır.
 
@@ -122,7 +122,7 @@ DıŞA ınpurebred uygulamasını alma ve yapılandırma hakkında bilgi için b
 
 #### <a name="entrust-datacard"></a>Entrust Datacard
 
-[Entrust Datacard için Kullanıcı iş akışını](https://docs.microsoft.com/user-help/enroll-ios-device-entrust-datacard)gözden geçirin. Bu iş akışı için temel gereksinimler şunlardır:
+[Entrust Datacard için Kullanıcı iş akışını](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-entrust-datacard)gözden geçirin. Bu iş akışı için temel gereksinimler şunlardır:
 
 - Kullanıcıların, verenin kimliğini doğrulamak için akıllı kartlarını kullanabilecekleri bir bilgisayar veya bilgi noktası erişimine ihtiyacı vardır.
 
@@ -132,7 +132,7 @@ DıŞA ınpurebred uygulamasını alma ve yapılandırma hakkında bilgi için b
 
 #### <a name="intercede"></a>Intercede
 
-[Intercede için Kullanıcı iş akışını](https://docs.microsoft.com/user-help/enroll-ios-device-intercede)gözden geçirin. Bu iş akışı için temel gereksinimler şunlardır:
+[Intercede için Kullanıcı iş akışını](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-intercede)gözden geçirin. Bu iş akışı için temel gereksinimler şunlardır:
 
 - Kullanıcıların, verenin kimliğini doğrulamak için akıllı kartlarını kullanabilecekleri bir bilgisayar veya bilgi noktası erişimine ihtiyacı vardır.
 
@@ -221,17 +221,34 @@ Aşağıdaki profil türleri ve amaçları için **türetilmiş kimlik bilgileri
 Web siteleri ve uygulamalarına sertifika tabanlı kimlik doğrulaması için türetilmiş kimlik bilgilerini kullanın. Uygulama kimlik doğrulaması için türetilmiş bir kimlik bilgisi teslim etmek için:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
+
 2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
-3. Aşağıdaki ayarları girin:
 
-    - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, **iOS/ıpados cihazları profili Için türetilmiş kimlik bilgileridir**.
-    - **Açıklama**: Ayara genel bir bakış sağlayan ve diğer önemli ayrıntıları veren bir açıklama girin.
-    - **Platform**: **IOS/ıpados**' ı seçin.
-    - **Profil türü**: **türetilmiş kimlik bilgilerini**seçin.
+3. Aşağıdaki özellikleri girin:
+   - **Platform**: Bu profili alacak cihazların platformunu seçin.
+   - **Profil**: **türetilmiş kimlik bilgisini** seçin
 
-4. Değişikliklerinizi kaydetmek için **Tamam**’ı seçin.
-5. İşiniz bittiğinde, Intune profilini oluşturmak için **tamam** > **Oluştur** ' u seçin. Bu tamamlandığında, profiliniz **cihazlar-yapılandırma profilleri** listesinde gösterilir.
-6. Yeni profilinizi > **atamaları**' nı seçin. İlkeyi alması gereken grupları seçin.
+4. **Oluştur**’u seçin.
+
+5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
+
+   - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, **iOS/ıpados cihazları profili Için türetilmiş kimlik bilgileridir**.
+   - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+
+6. **İleri**'yi seçin.
+
+7. **Yapılandırma ayarları**' nda, **uygulama kimlik doğrulaması için türetilmiş kimlik bilgilerini** **Evet**olarak ayarlayın ve ardından **İleri**' yi seçin.
+
+8. **Kapsam etiketleri** ' nde (isteğe bağlı), profili `US-NC IT Team` veya `JohnGlenn_ITDepartment`gıbı belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+
+   **İleri**'yi seçin.
+
+9. **Atamalar**' da, profilinizi alacak Kullanıcı veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](../configuration/device-profile-assign.md).
+
+    **İleri**'yi seçin.
+
+10. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. Oluştur ' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
+
  
 Kullanıcılar, türetilmiş kimlik bilgileri verenini ayarlarken belirttiğiniz ayarlara bağlı olarak uygulamayı veya e-posta bildirimini alır. Bildirim, kullanıcıdan türetilmiş kimlik bilgileri ilkelerinin işlenebilmesi için Şirket Portalı başlatması konusunda bilgilendirir.
 

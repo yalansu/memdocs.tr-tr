@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e72993141de963d78d6aeaf512af0165d747c9e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fcd6a49c0960bc38215123536e520bc89bcaeca1
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325982"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083460"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Microsoft Intune ile Windows 10 cihazlarına Office 365 uygulamaları ekleme
 
@@ -234,4 +234,4 @@ Karşınıza çıkabilecek yaygın hata kodları ve anlamları, aşağıdaki tab
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- Uygulama paketini ek gruplara atamak için bkz. [uygulamaları gruplara atama](/intune-azure/manage-apps/deploy-apps).
+- Uygulama paketini ek gruplara atamak için bkz. [uygulamaları gruplara atama](/mem/intune/apps/apps-deploy).

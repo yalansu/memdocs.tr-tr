@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 03/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d3fbfa5ebd8e9ba54d5725cd650cba9c31b3537
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9b8ffa656aa468b50569518aaff503fec1d21027
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331850"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086233"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune Veri Ambarı Koleksiyonları
 
@@ -222,6 +222,7 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 | DeviceRegistrationState    | Bu cihazın istemci kayıt durumu özniteliğinin anahtarı.                                                                                                                      |
 | OwnerTypeKey               | Cihaz için sahip türü özniteliğinin anahtarı: şirket, kişisel veya bilinmeyen.                                                                                                    |
 | EnrolledDateTime           | Bu cihazın kaydedildiği tarih ve saat.                                                                                                                                         |
+| EthernetMacAddress           | Bu cihazın benzersiz ağ tanımlayıcısı.                                                                                                                                        |
 | LastSyncDateTime           | Cihazın bilinen son Intune iadesi.                                                                                                                                              |
 | ManagementAgentKey         | Bu cihazla ilişkili yönetim aracısının anahtarı.                                                                                                                             |
 | ManagementStateKey         | Cihazla ilişkili yönetim durumunun anahtarı, bir uzak eylemin en son durumunu veya cihazda jailbreak yapılıp yapılmamış ya da kök erişim izni verilip verilmemiş olduğunu gösterir.                                                |
@@ -242,14 +243,17 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 | AndroidSecurityPatchLevel  | Android güvenlik düzeltme eki düzeyi                                                                                                                                                           |
 | MEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | Cihaz denetimli durumu                                                                                                                                                               |
-| FreeStorageSpaceInBytes    | Bayt Cinsinden Boş Depolama Alanı.                                                                                                                                                                 |
-| TotalStorageSpaceInBytes   | Bayt Cinsinden Toplam Depolama Alanı.                                                                                                                                                                |
+| FreeStorageSpaceInBytes    | Bayt cinsinden boş depolama alanı.                                                                                                                                                                 |
+| TotalStorageSpaceInBytes   | Toplam depolama kapasitesi (bayt cinsinden).                                                                                                                                                                |
 | EncryptionState            | Cihazdaki şifreleme durumu.                                                                                                                                                      |
 | SubscriberCarrier          | Cihazın abone taşıyıcısı                                                                                                                                                       |
 | PhoneNumber                | Cihazın telefon numarası                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | Cihazın hücresel teknolojisi                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
+| Model                      | Cihaz modeli.                                                                                                                                                                      |
+| Office365Version           | Cihaza yüklü Office 365 sürümü.                                                                                                                             |
+| Physicalmemorybytes      | Bayt cinsinden fiziksel bellek.                                                                                                                                                          |
 
 
 ## <a name="devicetypes"></a>deviceTypes

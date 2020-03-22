@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bdb45edb1bcd518b4e55da40f179fb87cefb07c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7a49c71705755f82dcf33c63971ed6f11ffc849f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329814"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084982"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Intune ile içeri aktarılan PKCS sertifikalarını yapılandırma ve kullanma
 
@@ -45,8 +45,8 @@ Intune, aşağıdaki platformlar için PFX sertifikalarının içeri aktarımın
 - Android-Cihaz Yöneticisi
 - Android kurumsal-tam yönetilen
 - Android kurumsal Iş profili
-- iOS
-- Mac
+- iOS/iPadOS
+- Mac OS
 - Windows 10
 
 ## <a name="requirements"></a>Gereksinimler
@@ -213,28 +213,53 @@ Sertifikaları Intune’da içeri aktardıktan sonra bir **PKCS içeri aktarılm
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Profil oluşturma** > **yapılandırma profili** > **cihazları** seçin.
+2. **Profil oluşturma** > **cihaz** > **yapılandırma profilleri** ' ne gidin ve bu seçeneği belirleyin.
 
 3. Aşağıdaki özellikleri girin:
+   - **Platform**: cihazlarınızın platformunu seçin.
+   - **Profil**: **PKCS içeri aktarılan sertifikası** seçin
 
-   - Profil için **Ad**
-   - İsteğe bağlı olarak bir açıklama ayarlayın
-   - Profili dağıtmak için **Platform**
-   - **Profil Türü**’nü **PKCS içeri aktarılan sertifikası** olarak ayarlayın
+4. **Oluştur**’u seçin.
 
-4. **Ayarlar**' ı seçin ve aşağıdaki özellikleri girin:
+5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
+   - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, *tüm şirket Için PKCS içeri aktarılmış sertifika profilidir*.
+   - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+
+6. **İleri**'yi seçin.
+
+7. **Yapılandırma ayarları**' nda, aşağıdaki özellikleri girin:
 
    - **Amaçlanan amaç**: Bu profil için içeri aktarılan sertifikaların amaçlanan amacını belirtin. Yöneticiler, sertifikaları farklı amaçlanan amaçlarla (S/MIME imzalama veya S/MIME Şifrelemesi gibi) içeri aktarabilir. Sertifika profilinde seçilen kullanım amacı, sertifika profilini doğru içeri aktarılmış sertifikalarla eşleştirir. Amaçlanan amaç, içeri aktarılan sertifikaları gruplamak için bir etikettir ve bu etiketle içeri aktarılan sertifikaların amaçlanan amacı karşıladığını garanti etmez.  
-   - **Sertifika geçerlilik süresi**: geçerlilik süresi sertifika şablonunda değiştirilmediği takdirde, bu seçenek varsayılan olarak bir yıl olur.
+
+   <!-- Not in new UI:
+   - **Certificate validity period**: Unless the validity period was changed in the certificate template, this option defaults to one year.
+   -->
    - **Anahtar depolama sağlayıcısı (KSP)** : Windows için, cihazdaki anahtarları nereye depolayacağınızı seçin.
 
-5. Profilinizi kaydetmek için **Tamam** > **Oluştur**’u seçin.
+8. **İleri**'yi seçin.
+
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili `US-NC IT Team` veya `JohnGlenn_ITDepartment`gıbı belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+
+   **İleri**'yi seçin.
+
+10. **Atamalar**' da, profilinizi alacak Kullanıcı veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](../configuration/device-profile-assign.md).
+
+    **İleri**'yi seçin.
+
+11. (*Yalnızca Windows 10 Için geçerlidir*) **Uygulanabilirlik kuralları**' nda, bu profilin atanmasını iyileştirmek için uygulanabilirlik kurallarını belirtin. Profili, bir cihazın işletim sistemi sürümüne veya sürümüne göre atamayı veya atamayı seçebilirsiniz.
+
+    Daha fazla bilgi için *Microsoft Intune bir cihaz profili oluşturma*içindeki [uygulanabilirlik kuralları](../configuration/device-profile-create.md#applicability-rules) bölümüne bakın.
+
+    **İleri**'yi seçin.
+
+12. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. Oluştur ' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
 
 ## <a name="support-for-third-party-partners"></a>Üçüncü taraf iş ortakları için destek
 
 Aşağıdaki iş ortakları, PFX sertifikalarını Intune 'a aktarmak için kullanabileceğiniz desteklenen yöntemleri veya araçları sağlar.
 
 ### <a name="digicert"></a>DigiCert
+
 DigiCert PKI platform hizmetini kullanıyorsanız, PFX sertifikalarını Intune 'a aktarmak için, **Intune S/MIME sertifikaları Için DigiCert Içeri aktarma aracını** kullanabilirsiniz. Bu aracın kullanımı, bu makalenin önceki kısımlarında açıklandığı şekilde [PFX sertifikalarını Intune 'A aktarma](#import-pfx-certificates-to-intune) bölümündeki yönergeleri izlemeye yönelik gereksinimi değiştirir.
 
 Aracı edinme dahil, DigiCert Içeri aktarma aracı hakkında daha fazla bilgi için bkz. DigiCert Bilgi Bankası 'nda https://knowledge.digicert.com/tutorials/microsoft-intune.html.

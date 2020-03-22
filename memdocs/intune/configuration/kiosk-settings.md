@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f8d7a2f8944535cb16f6cd01c117799a3c92904
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c3821017b0fe15df8a0329000aa74272e4d9477e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326650"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086896"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Intune kullanarak adanmış bir bilgi noktası olarak çalışacak Windows 10 ve Windows holographic for Business cihaz ayarları
 
@@ -54,7 +54,7 @@ Bu makalede bir cihaz yapılandırma profili oluşturma konusu gösterilmektedir
     - **Tekli uygulama, tam ekran bilgi noktası**: Cihaz tek kullanıcı hesabı olarak çalışır ve tek bir Mağaza uygulamasına kilitlenir. Dolayısıyla kullanıcı oturum açtığında belirli bir uygulama başlar. Bu mod ayrıca kullanıcının yeni uygulamalar açmasını veya çalışan uygulamayı değiştirmesini önler.
     - **Çoklu uygulama bilgi noktası**: Cihaz, Uygulama Kullanıcı Modeli Kimliği (AUMID) kullanarak birden fazla Store, Win32 veya Windows uygulaması çalıştırır. Cihazda yalnızca eklediğiniz uygulamalar kullanılabilir.
 
-        Çok uygulamalı bilgi noktasının veya sabit amaçlı cihazın yararı, yalnızca ihtiyaç duyulan uygulamalara erişim sağlayarak kullanıcılara anlaşılması kolay bir deneyim sunmasıdır. Bir de ihtiyaçları olmayan uygulamaları görünümden kaldırmasıdır.
+        Çok uygulamalı bilgi noktasının veya sabit amaçlı cihazın yararı, yalnızca ihtiyaç duyulan uygulamalara erişim sağlayarak kullanıcılara anlaşılması kolay bir deneyim sunmasıdır. Ayrıca, Ayrıca, kullanıcıların ihtiyaç duydukları uygulamaları görüntüleyebilecekleri şekilde kaldırabilirsiniz.
 
     Tüm ayarların bir listesi ve ne yapacaklarınız için, bkz.:
       - [Windows 10 bilgi noktası ayarları](kiosk-settings-windows.md)
@@ -69,7 +69,7 @@ Profil oluşturulur ve profiller listesinde gösterilir. Sonra, profili [atayın
 [Profili atama](device-profile-assign.md) ve [durumunu izleme](device-profile-monitor.md).
 
 Aşağıdaki platformları çalıştıran cihazlar için bilgi noktası profilleri oluşturabilirsiniz:
-- [Android](device-restrictions-android.md#kiosk)
+- [Android Cihaz Yöneticisi](device-restrictions-android.md#kiosk)
 - [Android Kurumsal](device-restrictions-android-for-work.md#dedicated-device-settings)
 - [Windows 10 ve üzeri](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

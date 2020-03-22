@@ -1,12 +1,12 @@
 ---
-title: Yönetilen Google Play uygulamalarını Android Kurumsal cihazlarına atama
+title: Android kurumsal cihazlara yönetilen Google Play uygulamaları ekleme ve atama
 titleSuffix: Microsoft Intune
 description: Yönetilen Google Play mağazasından Android Kurumsal cihazlarına uygulama eşitlemeyi ve atamayı öğrenin.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dec2b1ace9b9b8a5c27ef468969a52f05e1bdcca
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 61509f65ba43d779c1dd2006ae9ed5e0da9ba84d
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326054"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083406"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Intune ile Yönetilen Google Play uygulamalarını Android Kurumsal cihazlarına ekleme
 
@@ -183,7 +183,7 @@ Mağazadan bir uygulamayı onayladıysanız ve **uygulamalar** iş yükünde gö
 
 ## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices"></a>Yönetilen Google Play uygulamasını Android Kurumsal iş profili cihazlarına atama
 
-Uygulama, **uygulamalar** iş yükü bölmesinin **uygulama lisansları** düğümünde görüntülendiğinde, uygulamayı kullanıcı gruplarına atayarak [bunu başka bir uygulamayı atadığınız gibi atayabilirsiniz](/intune-azure/manage-apps/deploy-apps) .
+Uygulama, **uygulamalar** iş yükü bölmesinin **uygulama lisansları** düğümünde görüntülendiğinde, uygulamayı kullanıcı gruplarına atayarak [bunu başka bir uygulamayı atadığınız gibi atayabilirsiniz](/mem/intune/apps/apps-deploy) .
 
 Uygulamayı atadıktan sonra, hedeflediğiniz kullanıcıların cihazlarına yüklenir (veya yükleme için kullanılabilir). Cihazın kullanıcısından yüklemeyi onaylaması istenmez. Android Kurulsal iş profili cihazları hakkında daha fazla bilgi için bkz. [Android Kurumsal iş profili cihazlarının kaydını ayarlama](../enrollment/android-work-profile-enroll.md). 
 

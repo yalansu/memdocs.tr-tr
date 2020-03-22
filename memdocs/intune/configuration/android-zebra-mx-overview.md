@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eaaa9095becbcac7840d5babc2a099e7ec84af03
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dbb8e5644390c589756af5a69f2fdd5a829866a1
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332382"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084017"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Microsoft Intune'da Zebra Mobility Uzantılarını içeren Zebra cihazlarını kullanma ve yönetme
-
-
 
 Intune uygulamaları yönetme ve cihaz ayarlarını yapılandırma gibi çok zengin özellikler içerir. Bu yerleşik özellikler ve ayarlar, Zeköşeli teknolojiler tarafından üretilen Android cihazlarını, "Zekare cihazları" olarak da bilinen bir şekilde yönetir.
 
@@ -36,7 +34,9 @@ Bu makalede Microsoft Intune'da Zebra cihazlarında Zebra Mobility Uzantıların
 
 Bu özellik şu platformlarda geçerlidir:
 
-- Android
+- Android Cihaz Yöneticisi
+
+Android kurumsal cihazlarda, [Oemconfig](android-oem-configuration-overview.md)' i kullanın.
 
 Şirketiniz Zebra cihazlarını perakende işlemlerinde, fabrika katında ve daha birçok alanda kullanabilir. Örneğin perakendeci olduğunuzu ve ortamınızda satış elemanları tarafından kullanılan binlerce Zebra mobil cihazı bulunduğunu düşünün. Intune mobil cihaz yönetimi (MDM) çözümünüz kapsamında bu cihazların yönetimine yardımcı olabilir.
 
@@ -139,14 +139,14 @@ Intune'da cihaz yapılandırma profili oluşturun:
 
     - **Ad**: Yeni profil için açıklayıcı bir ad girin.
     - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
-    - **Platform**: **Android**' i seçin.
+    - **Platform**: **Android Cihaz Yöneticisi**' ni seçin.
     - **Profil türü**: **MX profili seçin (yalnızca zeköşeli)** .
 
 4. **.xml biçiminde MX profili** alanında [StageNow'dan dışarı aktardığınız](#step-4-create-a-device-management-profile-in-stagenow) XML profil dosyasını ekleyin (bu makalede).
 5. Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur**’u seçin. İlke oluşturulur ve listede gösterilir.
 
     > [!TIP]
-    > Güvenlik nedeniyle, profil XML metnini kaydettikten sonra görmezsiniz. Metin şifrelenir ve siz yalnızca yıldız işaretleri (`****`) görürsünüz. MX profillerini Intune'a eklemeden önce, başvurabilmek için bu profillerin kopyalarını kaydetmeniz önerilir.
+    > Güvenlik nedenleriyle, kaydettikten sonra profil XML metnini görmezsiniz. Metin şifrelenir ve siz yalnızca yıldız işaretleri (`****`) görürsünüz. MX profillerini Intune'a eklemeden önce, başvurabilmek için bu profillerin kopyalarını kaydetmeniz önerilir.
 
 Profil oluşturulur ancak henüz herhangi bir işlem gerçekleştirmez. Ardından [profili atayın](device-profile-assign.md) ve [durumunu izleyin](device-profile-monitor.md).
 

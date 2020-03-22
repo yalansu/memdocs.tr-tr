@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 842b262c2ae19a7a026d87600df5ffb0e80cf9b8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 969dbcbe3fe1b1a155769bec6403b889b3d326bc
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331526"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086096"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>İOS/ıpados ve ıpados Kullanıcı kaydını ayarlama (Önizleme)
 
@@ -59,7 +59,7 @@ Kayıt profili, kayıt sırasında bir cihaz grubuna uygulanan ayarları tanıml
 
     - **Cihaz kaydı**: Bu profildeki tüm kullanıcılar cihaz kaydını kullanacaktır.
     - **Kullanıcı kaydı**: Bu profildeki tüm kullanıcılar Kullanıcı kaydını kullanacaktır.
-    - **Kullanıcı seçimine göre belirlenir**: Bu gruptaki tüm kullanıcılara hangi kayıt türünün kullanılacağı tercih edilir. Kullanıcılar cihazlarını kaydettiğinde, bu cihazdan ve **(Şirket) bu cihazın sahibi** **olduğumu** arasında seçim yapmak için bir seçenek görür. İkincisini seçtiyse cihaz, cihaz kaydı kullanılarak kaydedilir. Kullanıcı **Bu cihaza sahip olduğumu**seçerse, tüm cihazı güvenli hale getirmek veya yalnızca iş ile ilgili uygulamaları ve verileri güvenli hale getirmek için başka bir seçenek alırlar. Son kullanıcının, cihazında hangi kayıt türünün uygulandığını belirler. Bu Kullanıcı seçeneği, Intune 'daki cihaz sahipliği özniteliğinde de yansıtılır. Kullanıcı deneyimi hakkında daha fazla bilgi edinmek için bkz. [şirket kaynaklarınıza iOS/ıpados cihaz erişimini ayarlama](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios).
+    - **Kullanıcı seçimine göre belirlenir**: Bu gruptaki tüm kullanıcılara hangi kayıt türünün kullanılacağı tercih edilir. Kullanıcılar cihazlarını kaydettiğinde, bu cihazdan ve **(Şirket) bu cihazın sahibi** **olduğumu** arasında seçim yapmak için bir seçenek görür. İkincisini seçtiyse cihaz, cihaz kaydı kullanılarak kaydedilir. Kullanıcı **Bu cihaza sahip olduğumu**seçerse, tüm cihazı güvenli hale getirmek veya yalnızca iş ile ilgili uygulamaları ve verileri güvenli hale getirmek için başka bir seçenek alırlar. Son kullanıcının, cihazında hangi kayıt türünün uygulandığını belirler. Bu Kullanıcı seçeneği, Intune 'daki cihaz sahipliği özniteliğinde de yansıtılır. Kullanıcı deneyimi hakkında daha fazla bilgi edinmek için bkz. [şirket kaynaklarınıza iOS/ıpados cihaz erişimini ayarlama](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
     
 5. **İleri**'yi seçin.
 

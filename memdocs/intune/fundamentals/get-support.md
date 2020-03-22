@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
-ms.reviewer: srik
+ms.reviewer: crisk
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b746317ef15065af246cfd977f6e9d745ef4dea7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cf732907b9123dfe8cbd72970556ecfbb5380733
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332586"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086058"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Microsoft Intune için destek alma
 
@@ -35,7 +35,6 @@ Intune yöneticisi olarak, Azure portalında Intune için bir çevrimiçi destek
 > Intune ile birlikte çalışan üçüncü taraf ürünlerle ilgili (Saaswedo, Cisco veya Lookout gibi) teknik destek için önce ürün sağlayıcısıyla görüşün. Intune destekte bir talep açmadan önce diğer ürünü doğru yapılandırdığınızdan emin olun.
 >
 > Microsoft Intune ile ilgili sorunları giderme hakkında daha fazla bilgi için Intune belgelerindeki [Sorun giderme bölümü](help-desk-operators.md)'ne bakın.
-
 
 ## <a name="help-and-support-experience"></a>Yardım ve destek deneyimi
 
@@ -52,10 +51,9 @@ Intune için yeni oluşturulmuş bir kiracı kullandığınızda, *Yardım ve de
 
 - *Bilinmeyen bir sorunla karşılaştık. Lütfen sayfayı yenileyin, ancak sorun devam ederse lütfen [M365 Yönetim Merkezi](https://admin.microsoft.com) aracılığıyla bir Case oluşturun ve GIRILEN oturum kimliğine başvurun.*
 
-Hata ayrıntıları bir *oturum kimliği*, *uzantı* ayrıntıları ve daha fazlasını içerir. 
- 
-Bu sorun, yeni kiracı hesabınızı https://admin.microsoft.com'de **M365 Yönetim Merkezi** veya https://portal.office.com**Office 365 Portalı** aracılığıyla henüz doğrulamadığınızda meydana gelir. Bu sorunu çözmek için, iletideki *M365 yönetim merkezine* yönelik bağlantıyı seçin veya https://portal.office.comziyaret edin ve oturum açın. Her iki sitede da aşağıdaki kimlik doğrulaması, Intune için *Yardım ve destek* erişilebilir hale gelir.
+Hata ayrıntıları bir *oturum kimliği*, *uzantı* ayrıntıları ve daha fazlasını içerir.
 
+Bu sorun, yeni kiracı hesabınızı https://admin.microsoft.com'de **M365 Yönetim Merkezi** veya https://portal.office.com**Office 365 Portalı** aracılığıyla doğrulamadıysanız oluşur. Bu sorunu çözmek için, iletideki *M365 yönetim merkezine* yönelik bağlantıyı seçin veya https://portal.office.comziyaret edin ve oturum açın. Her iki sitede da aşağıdaki kimlik doğrulaması, Intune için *Yardım ve destek* erişilebilir hale gelir.
 
 **Yardım ve desteğe erişin**:
 
@@ -67,18 +65,28 @@ Bu sorun, yeni kiracı hesabınızı https://admin.microsoft.com'de **M365 Yöne
   > Intune örneğiniz, Azure Kamu gibi bir sogeign bulutu olarak da bilinen kamu için özel bulutta barındırılıyorsa, bu makalede daha sonra [kamu için özel bulut Için Intune desteği](#intune-support-for-private-cloud-for-government)bölümüne bakın. Intune *Yardım ve destek* deneyimi, bir sonraki yıla kadar kamu için özel bulutta kullanılamaz.
 
 - **Microsoft Endpoint Manager yönetim merkezinden**
-  - Intune için bir özellik alanı seçtikten sonra **Yardım ve destek**seçeneğini belirleyin.
-  - Microsoft Endpoint Manager Yönetim Merkezi 'ndeki herhangi bir düğümden öğesini **seçin.** simgesine tıklayın ve sonra da yardım almak istediğiniz hizmeti seçmek için açılan listesini kullanın. **?** Microsoft Endpoint Manager Yönetim Merkezi 'ndeki simge birden çok hizmeti destekler ve yardım almak istediğiniz belirli hizmeti seçmeniz gerekir.  
 
-    ![Hizmetinizi seçin](./media/get-support/select-a-service.png)
+  - Microsoft Endpoint Manager Yönetim Merkezi 'ndeki herhangi bir düğümden öğesini **seçin.** simgesine tıklayın ve sonra da yardım almak istediğiniz yönetim türünü seçmek için açılan listesini kullanın. Microsoft Endpoint Manager Yönetim Merkezi aşağıdaki yönetim türlerini destekler ve Intune gibi yardım almak istediğinizi seçmeniz gerekir:
 
-    Bir hizmet seçtikten sonra, belirli bir sorun için [çözüm bulma](#find-solutions) ayrıntılarını belirtebileceğiniz bu hizmetin *Yardım ve destek* sayfasını görürsünüz.
+    - Yöneticiyi yapılandırma (Masaüstü analizlerini içerir)
+    - Intune
+    - Ortak yönetim  
 
-    Aramanızın sonuçları hizmetinize ilişkin beklentileri eşleşme gibi görünmüyor, doğru hizmetin seçili olduğundan emin olun. Hizmet seçimi, *Yardım ve destekten*hemen sonra görünür.  Doğru hizmet seçilmediyse, hizmet seçimi açılır kutusuna dönmek için *Hizmet Seç* ' e tıklayın.
+    > [!div class="mx-imgBorder"]
+    > ![yönetim türünü seçin](./media/get-support/select-management-type.png)
 
-    ![Hizmetinizi onaylayın](./media/get-support/confirm-your-service-selection.png)
+    Bir yönetim türü seçtikten sonra, *Yardım ve destek* sayfası açılır ve burada belirli bir sorunun [çözümlerini bulmak](#find-solutions) için ayrıntıları belirtebilirsiniz. Ayrıntılar, seçtiğiniz yönetim türüne göre filtrelenir.
 
-###  <a name="the-support-experience"></a>Destek deneyimi
+     Doğru yönetim türü seçilmemişse **(1)** , Yönetim türü seçimi açılır öğesine dönmek için *Yönetim türü seç* **(2)** seçeneğine tıklayın:
+
+    > [!div class="mx-imgBorder"]
+    > ![](./media/get-support/confirm-management-selection.png) yönetim türünü onaylayın
+
+  - Yardım ve destek ' i **sorun giderme +** destek > **Yardım ve destek**' i açarsanız, yardım ve *destek*' in altında listelendiğini seçtiğiniz yönetim türünü görmezsiniz.
+
+  - *Cihazlar*, *uygulamalar*veya *Kullanıcılar*gibi başka bir düğüme göz katıyorsanız, *Yardım ve destek*' i seçerseniz, bir yönetim türü seçme veya tür *Yardım ve destek*altında görüntüleme şansınız olmayacaktır. Bu durumda, *Intune* kabul edilir. İçeriğin Intune olmasını istemiyorsanız, şunu kullanın **?** seçeneğini belirlerseniz, farklı bir yönetim türü seçebilirsiniz.
+
+### <a name="the-support-experience"></a>Destek deneyimi
 
   Yardım ve destek ' i açtığınızda, portalda **Yardım gerekiyor mu?** penceresi görüntülenir:
 
@@ -144,8 +152,7 @@ Bir olayın ayrıntılarını görüntülemeyi tamamladıktan sonra, yardım ist
 Aboneliğiniz kamu için özel bir bulutta olmadığı takdirde, Intune ile ilgili yardım almak için artık Azure *Yardım + Destek* deneyimini kullanamazsınız.
 Intune örneğiniz kamu için özel bir bulutta çalıştırılmazsa, Azure *Yardım + Destek* aracılığıyla gezinmek, destek olayları oluşturmak ve bunları yönetmek Için sizi Intune *Yardım ve destek* deneyimine yönlendirir:
 
-Sol gezinti bölmesi **Yardım + Destek**' i kullandığınızda veya **?** *Yardım* bölmesini açma ve sonra **Yardım + Destek**seçeneklerini seçme seçeneği için Azure *Yardım + Destek* sayfasını açarsınız. 
-
+Sol gezinti bölmesi **Yardım + Destek**' i kullandığınızda veya **?** *Yardım* bölmesini açma ve sonra **Yardım + Destek**seçeneklerini seçme seçeneği için Azure *Yardım + Destek* sayfasını açarsınız.
 
 Bu sayfadan **+ Yeni destek isteği** ' ni seçerek *Yardım + destek + yeni destek Isteği* sayfasının *temel bilgiler* sekmesini açın.
 
@@ -159,7 +166,6 @@ Bu sayfada:
   Daha sonra sizi [Intune yardım ve destek sayfasına](https://aka.ms/intunehelpsupport)yönlendiren bir bağlantı sunulur.
   
   ![Yeni destek isteği](./media/get-support/new-request.png)
-
 
 ## <a name="intune-support-for-private-cloud-for-government"></a>Kamu için özel bulut için Intune desteği
 

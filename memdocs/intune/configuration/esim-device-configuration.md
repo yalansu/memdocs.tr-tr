@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f12282acebaa90d3afe868bb28743444d01001d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326682"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087002"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Intune - Genel önizleme’de eSIM hücresel profilleri yapılandırma
 
 eSIM, katıştırılmış bir SIM yongasıdır ve [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro) gibi eSIM özellikli bir cihazdaki hücresel veri bağlantısı üzerinden İnternete bağlanmanızı sağlar. eSIM ile mobil operatörünüzden SIM kart almanız gerekmez. Genel gezgin olarak mobil operatörler ve veri planları arasında geçiş yaparak sürekli bağlantı sağlayabilirsiniz.
 
 Örneğin işiniz için bir mobil İnternet tarifeniz ve farklı bir cep telefonu operatöründe kişisel kullanım için başka bir mobil İnternet tarifeniz olduğunu varsayalım. Seyahat ederken o alandaki cep telefonu operatörlerini ve mobil İnternet tarifelerini bulup İnternete erişebilirsiniz.
+
+Bu özellik şu platformlarda geçerlidir:
+
+- Windows 10 ve üzeri
 
 Intune’da cep telefonu operatörünüz tarafından sağlanan tek kullanımlık etkinleştirme kodlarını içeri aktarabilirsiniz. eSIM modülünde hücresel mobil İnternet tarifeleri yapılandırmak için etkinleştirme kodlarını eSIM özellikli cihazlarınıza dağıtın. Intune etkinleştirme kodunu yüklediğinde eSIM donanım modülü cep telefonu operatörüyle iletişim kurmak için etkinleştirme kodundaki verileri kullanır. İşlem tamamlandığında eSIM profili cihaza indirilir ve hücresel etkinleştirme için yapılandırılır.
 

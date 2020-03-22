@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: cba46d5b4b203cdbb67fb5f6b6b116a21ebacb32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b6303d7d98e718c2a4f54b199bf90a3bd0684bf8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325278"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084757"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Microsoft Intune’da SCEP ve PKCS sertifikalarını kaldırma
 
@@ -91,7 +91,6 @@ PKCS sertifikaları cihazda *kalır* (sertifikalar iptal edilmez veya kaldırıl
 - Yönetici, kullanıcıyı veya grubu Azure AD 'den kaldırır.
 - Bir yönetici, PKCS profilini değiştirir veya güncelleştirir.
 - Bir sertifika profili grup atamasından kaldırılır.
-
 
 ## <a name="ios-devices"></a>iOS aygıtları:
 
@@ -190,8 +189,8 @@ Bir PKCS sertifikası şu durumlarda iptal edilir *ve* kaldırılır:
 - Yönetici [devre dışı bırakma](../remote-actions/devices-wipe.md#retire) eylemini çalıştırır.
 
 PKCS sertifikaları cihazda *kalır* (sertifikalar iptal edilmez veya kaldırılmaz):
-- Bir Kullanıcı Intune lisansını kaybeder.
 
+- Bir Kullanıcı Intune lisansını kaybeder.
 - Bir yönetici, Intune lisansını çizer.
 - Yönetici, kullanıcıyı veya grubu Azure AD 'den kaldırır.
 - Bir yönetici, PKCS profilini değiştirir veya güncelleştirir.
@@ -228,7 +227,23 @@ SCEP sertifikaları cihazda *kalır* (sertifikalar iptal edilmez veya kaldırıl
 
 ### <a name="pkcs-certificates"></a>PKCS sertifikaları
 
-PKCS sertifikaları macOS 'ta desteklenmez.
+Bir PKCS sertifikası şu durumlarda iptal edilir *ve* kaldırılır:
+
+- Bir kullanıcı kaydı geri alır.
+- Yönetici [devre dışı bırakma](../remote-actions/devices-wipe.md#retire) eylemini çalıştırır.
+
+Şu durumlarda bir kök sertifika kaldırılır:
+
+- Bir kullanıcı kaydı geri alır.
+- Yönetici [devre dışı bırakma](../remote-actions/devices-wipe.md#retire) eylemini çalıştırır.
+
+PKCS sertifikaları cihazda kalır (sertifikalar iptal edilmez veya kaldırılmaz):
+
+- Bir Kullanıcı Intune lisansını kaybeder.
+- Bir yönetici, Intune lisansını çizer.
+- Bir sertifika profili grup atamasından kaldırılır. (Profil kaldırılır.)
+- Yönetici, kullanıcıyı veya grubu Azure AD 'den kaldırır.
+- Bir yönetici, PKCS profilini değiştirir veya güncelleştirir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

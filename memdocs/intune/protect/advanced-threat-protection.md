@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 398737a89c302031cfbed87709d031077f90fb6a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: edc3bb23097a26753a9e54b0b520e6fc22be3a69
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329998"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085206"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Intune 'da koşullu erişimle Microsoft Defender ATP için uyumluluğu zorlama
 
@@ -43,7 +43,7 @@ Aşağıdaki örnek, kuruluşunuzun korunmasına yardımcı olmak için bu çöz
 Birisinin kuruluşunuzdaki bir kullanıcıya katıştırılmış kötü amaçlı kod içeren bir sözcük eki gönderdiği bir olay düşünün.
 
 - Kullanıcı eki açar ve içeriği etkinleştirir.
-- Bir yükseltilmiş ayrıcalık saldırısı başlar ve uzak makinedeki saldırgan, kurbanın cihazında yönetici haklarına sahip olur.
+- Yükseltilmiş bir ayrıcalık saldırısı başlar ve uzak bir makineden bir saldırganın, kurban cihazında yönetici hakları vardır.
 - Daha sonra saldırgan, kullanıcının diğer cihazlarına uzaktan erişir. Bu güvenlik ihlali tüm kuruluşu etkileyebilir.
 
 Microsoft Defender ATP, bu senaryo gibi güvenlik olaylarının çözümlenmesine yardımcı olabilir.
@@ -136,24 +136,26 @@ Microsoft Defender ATP bağlantısı kurduktan sonra Intune, Microsoft Defender 
 
 Uyumluluk ilkesi, bir cihaz için kabul edilebilir olarak düşünebileceğiniz risk düzeyini belirler.
 
-### <a name="create-the-compliance-policy"></a>Uyumluluk ilkesini oluşturma
+Uyumluluk ilkesi oluşturma konusunda bilgi sahibi değilseniz, *Microsoft Intune ' de uyumluluk ilkesi oluşturma bölümünde* [ilke oluşturma](../protect/create-compliance-policy.md#create-the-policy) yordamına başvurun. Aşağıdaki bilgiler, bir uyumluluk ilkesinin parçası olarak Defender ATP yapılandırmasına özgüdür.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Ilke oluştur** > **cihaz** > **uyumluluk ilkeleri** ' ni seçin.
-3. Bir **Ad** ve **Açıklama** girin.
-4. **Platform** olarak **Windows 10 ve üzerini** seçin.
-5. **Ayarlar**altında **Microsoft Defender ATP**' yi seçin.
-6. **Cihazın makine risk puanı altında veya altında olmasını gerektir** ' i tercih ettiğiniz düzeye ayarlayın.
+
+2. **Ilke oluştur** > **cihaz** > **uyumluluk ilkeleri** > **ilkeleri** ' ni seçin.
+
+3. **Platform** için *Windows 10 ve üzeri*' i seçin ve ardından **Oluştur** ' u seçerek **ilke yapılandırma oluştur** penceresini açın.
+
+4. **Temel bilgiler** sekmesinde, daha sonra tanımanıza yardımcı olacak bir **ad** belirtin. Bir **Açıklama**belirtmeyi de tercih edebilirsiniz.
+  
+5. **Uyumluluk ayarları** sekmesinde, **Microsoft Defender ATP** grubunu genişletin ve cihazın tercih edilen düzeyinize **veya makine risk puanı altında olmasını gerektir** seçeneğini belirleyin.
 
    Tehdit düzeyi sınıflandırmaları, [Microsoft Defender ATP tarafından belirlenir](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 
-   - **Temiz**: En güvenli düzeydir. Cihazda mevcut tehditler bulunamaz ve şirket kaynaklarına erişmeye devam edin. Herhangi bir tehdit bulunursa cihaz uyumsuz olarak değerlendirilir. (Microsoft Defender ATP kullanıcıları değeri *güvenlidir*.)
+   - **Temiz**: En güvenli düzeydir. Cihazda mevcut tehditler bulunamaz ve şirket kaynaklarına erişmeye devam edin. Herhangi bir tehdit bulunursa cihaz uyumsuz olarak değerlendirilir. (Microsoft Defender ATP, *güvenli*değeri kullanır.)
    - **Düşük**: Cihaz, yalnızca düşük düzeydeki tehditler varsa uyumludur. Orta veya yüksek tehdit düzeylerine sahip cihazlar uyumlu değildir.
    - **Orta**: Cihazda bulunan tehditler düşük veya orta düzeydeyse cihaz uyumludur. Yüksek düzeyde tehditler algılanırsa cihaz uyumsuz olarak değerlendirilir.
    - **Yüksek**: Bu düzey en az güvenlidir ve tüm tehdit düzeylerine izin verir. Yüksek, orta veya düşük tehdit düzeylerine sahip cihazlar uyumlu kabul edilir.
 
-7. **Tamam**’ı ve **Oluştur**’u seçerek değişikliklerinizi kaydedin (ve ilkeyi oluşturun).
-8. [Cihaz Uyumluluk ilkesini](create-compliance-policy.md#assign-the-policy) uygulanabilir gruplara atayın.
+6. İlkenin geçerli gruplara atanması dahil olmak üzere ilkenin yapılandırmasını doldurun.
 
 ## <a name="create-a-conditional-access-policy"></a>Koşullu erişim ilkesi oluşturma
 

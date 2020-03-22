@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8cd8deb04dc939ed3dc742c9066c6dbfd4f51f3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ef2c4593ad9809614b7e0d497745065fef12df69
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332934"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086383"
 ---
 # <a name="import-wi-fi-settings-for-windows-devices-in-intune"></a>Intune’da Windows cihazları için Wi-Fi ayarlarını içeri aktarma
 
@@ -31,6 +31,16 @@ Uygulama alanı:
 - Windows 10 ve üzeri
 - Windows 10 masaüstü veya mobil
 - Windows 10 Holographic for Business
+
+## <a name="before-you-begin"></a>Başlamadan önce
+
+[Cihaz profili oluşturma](wi-fi-settings-configure.md). Profil adı, Wi-Fi profili xml dosyasındaki Name özniteliğiyle aynı **olmalıdır** . Yoksa işlem başarısız olur.
+
+## <a name="import-the-wi-fi-settings-into-intune"></a>Wi-Fi ayarlarını Intune'da içeri aktarma
+
+- **Bağlantı adı**: Wi-Fi bağlantısı için bir ad girin. Bu ad, kullanılabilir Wi-Fi ağlarına gözatarken kullanıcılara gösterilir.
+- **PROFIL XML**'i: tarayıcı düğmesini seçin ve içeri aktarmak istediğiniz Wi-Fi profili AYARLARıNı içeren XML dosyasını seçin.
+- **Dosya içeriği**: Seçtiğiniz yapılandırma profili için XML kodunu görüntüler.
 
 ## <a name="export-wi-fi-settings-from-a-windows-device"></a>Windows cihazından Wi-Fi ayarlarını dışarı aktarma
 
@@ -43,30 +53,10 @@ Gerekli WiFi profilinin zaten yüklü olduğu bir Windows bilgisayarda aşağıd
 3. `netsh wlan show profiles` komutunu çalıştırın. Dışarı aktarmak istediğiniz profilin adını aklınızda edin. Bu örnekte profil adı **WiFiName** şeklindedir.
 4. `netsh wlan export profile name="ProfileName" folder=c:\Wifi` komutunu çalıştırın. Bu komut, hedef klasörünüzde **Wi-Fi-WiFiName.xml** adlı bir Wi-Fi profil dosyası oluşturur.
 
-## <a name="import-the-wi-fi-settings-into-intune"></a>Wi-Fi ayarlarını Intune'da içeri aktarma
-
-1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
-3. Aşağıdaki ayarları girin:
-
-    - **Ad**: profil için açıklayıcı bir ad girin. Adın Wi-Fi profili xml’indeki ad özniteliği ile aynı olması **gereklidir**. Yoksa işlem başarısız olur.
-    - **Açıklama**: Ayara genel bir bakış sağlayan ve diğer önemli ayrıntıları veren bir açıklama girin.
-    - **Platform**: **Windows 8.1 ve üstünü**seçin.
-    - **Profil türü**: **Wi-Fi içeri aktarma**' yı seçin.
-
-    > [!IMPORTANT]
-    > - Önceden paylaşılan anahtar içeren bir Wi-Fi profilini dışarı aktarıyorsanız komuta **eklemeniz**gereklidir`key=clear`. Örneğin şunu girin: `netsh wlan export profile name="ProfileName" key=clear folder=c:\Wifi`
-    > - Windows 10 ile önceden paylaşılan bir anahtar kullanılması, Intune 'da bir düzeltme hatasına neden olur. Bu durumda, Wi-Fi profili cihaza düzgün bir şekilde atanır ve profil beklendiği gibi çalışır.
-    > - Önceden paylaşılan anahtar içeren bir Wi-Fi profilini dışarı aktarıyorsanız dosyanın korumalı olduğundan emin olun. Anahtar düz metin biçimindedir, yani anahtarı korumak sizin sorumluluğunuzdadır.
-
-4. Aşağıdaki ayarları girin:
-
-    - **Bağlantı adı**: Wi-Fi bağlantısı için bir ad girin. Bu ad, kullanılabilir Wi-Fi ağlarına gözatarken kullanıcılara gösterilir.
-    - **PROFIL XML**'i: tarayıcı düğmesini seçin ve içeri aktarmak istediğiniz Wi-Fi profili AYARLARıNı içeren XML dosyasını seçin.
-    - **Dosya içeriği**: Seçtiğiniz yapılandırma profili için XML kodunu görüntüler.
-
-5. Değişikliklerinizi kaydetmek için **Tamam**’ı seçin.
-6. İşiniz bittiğinde, Intune profilini oluşturmak için **tamam** > **Oluştur** ' u seçin. Bu tamamlandığında, profiliniz **cihazlar-yapılandırma profilleri** listesinde gösterilir.
+> [!IMPORTANT]
+> - Önceden paylaşılan anahtar içeren bir Wi-Fi profilini dışarı aktarıyorsanız komuta **eklemeniz**gereklidir`key=clear`. Örneğin şunu girin: `netsh wlan export profile name="ProfileName" key=clear folder=c:\Wifi`
+> - Windows 10 ile önceden paylaşılan bir anahtar kullanılması, Intune 'da bir düzeltme hatasına neden olur. Bu durumda, Wi-Fi profili cihaza düzgün bir şekilde atanır ve profil beklendiği gibi çalışır.
+> - Önceden paylaşılan anahtar içeren bir Wi-Fi profilini dışarı aktarıyorsanız dosyanın korumalı olduğundan emin olun. Anahtar düz metin biçimindedir, yani anahtarı korumak sizin sorumluluğunuzdadır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcaa3d4dc27f1791db77b70513968eeda51c668d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: df05c4b1a7a5ee3f30d33e40620a8a116f508333
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332962"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086491"
 ---
 # <a name="add-vpn-settings-on-windows-phone-81-devices-in-microsoft-intune"></a>Microsoft Intune Windows Phone 8,1 cihazlarına VPN ayarları ekleme
-
-
 
 Bu makale, Windows Phone 8.1 çalıştıran cihazlarda VPN bağlantılarını yapılandırmak için kullanabileceğiniz Intune ayarları hakkında bilgi sağlar. 
 
@@ -32,6 +30,10 @@ Seçtiğiniz ayarlara bağlı olarak, aşağıdaki listede yer alan değerlerden
 
 >[!IMPORTANT]
 >Windows Phone 8,1 VPN profilleri Windows 10 cihazlarına da uygulanır.
+
+## <a name="before-you-begin"></a>Başlamadan önce
+
+[BIR VPN cihaz yapılandırma profili oluşturun](vpn-settings-configure.md).
 
 ## <a name="base-vpn-settings"></a>Temel VPN ayarları
 
@@ -51,7 +53,7 @@ Seçtiğiniz ayarlara bağlı olarak, aşağıdaki listede yer alan değerlerden
 - **Şirket Wi-Fi AĞıNDA VPN 'ı atlama**: cihaz şirket Wi-Fi AĞıNA bağlıyken VPN bağlantılarının kullanılmayacağını belirtmek için bu seçeneği etkinleştirin.
 - **Ana Wi-Fi AĞıNDA VPN 'ı atlama**: cihaz bir ev Wi-Fi AĞıNA bağlıyken VPN bağlantısının kullanılmayacağını belirtmek için bu seçeneği etkinleştirin.
 
-- **Bağlantı türü**: Aşağıdaki satıcı listesinden VPN bağlantı türünü seçin:
+- **Bağlantı türü**: VPN bağlantısının türünü seçin. Seçenekleriniz şunlardır:
   - **Check Point Capsule VPN**
   - **SonicWall Mobile Connect**
   - **F5 Edge Client**
@@ -91,7 +93,7 @@ Seçtiğiniz ayarlara bağlı olarak, aşağıdaki listede yer alan değerlerden
 
   Özel XML komutları yazma hakkında daha fazla bilgi için üreticinin VPN belgelerine bakın.
 
-- **Bölünmüş tünel**: cihazların trafiğe bağlı olarak hangi bağlantının kullanılacağına karar vermesine olanak sağlayan bu seçeneği **etkinleştirin** veya **devre dışı bırakın** . Örneğin, oteldeki bir kullanıcı çalışma dosyalarına erişmek için VPN bağlantısını, web’e göz atmak için ise otelin standart ağını kullanır.
+- **Bölünmüş tünel**: **Etkinleştir** , cihazların trafiğe bağlı olarak hangi bağlantının kullanılacağına karar vermesine olanak tanır. Örneğin, oteldeki bir kullanıcı çalışma dosyalarına erişmek için VPN bağlantısını, web’e göz atmak için ise otelin standart ağını kullanır. VPN bağlantısı etkinken tüm trafiğin VPN tüneli kullanmasını istiyorsanız, **devre dışı bırak**' a ayarlayın.
 
 ## <a name="proxy-settings"></a>Proxy ayarları
 

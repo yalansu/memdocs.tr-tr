@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a967ff72c7751ebf1cfb74489fbe7bf73563077
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1e088af5687b5708754869614a431e80f9497b3c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331922"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086820"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>Intune 'da iOS/ıpados cihazları için uygulama başına sanal özel ağ (VPN) ayarlama
 
@@ -51,7 +51,7 @@ Zscaler özel erişimi (ZPA) kimlik doğrulaması için Azure Active Directory (
 > [!IMPORTANT]
 > VPN satıcınız, belirli donanım veya lisanslama gibi uygulama başına VPN için başka gereksinimlere sahip olabilir. Satıcının belgelerini gözden geçirmeyi unutmayın ve Intune'da uygulama başına VPN'yi ayarlamadan önce önkoşulları yerine getirin.
 
-VPN sunucusu, kimliğini doğrulamak amacıyla cihaz bir istem yapmadan kabul edilmesi gereken sertifikayı sunar. Sertifikanın otomatik onayını onaylamak için, sertifika yetkilisi (CA) tarafından verilen VPN sunucusu kök sertifikasını içeren bir güvenilen sertifika profili oluşturun. 
+VPN sunucusu, kimliğini doğrulamak amacıyla cihaz bir istem yapmadan kabul edilmesi gereken sertifikayı sunar. Sertifikanın otomatik onayını onaylamak için, sertifika yetkilisi (CA) tarafından verilen VPN sunucusu kök sertifikasını içeren bir güvenilen sertifika profili oluşturun.
 
 ### <a name="export-the-certificate-and-add-the-ca"></a>Sertifikayı dışarı aktarın ve CA 'yı ekleyin
 
@@ -73,14 +73,22 @@ CA tarafından verilen VPN sunucusu kök sertifikasını Intune’da oluşturula
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
 3. Aşağıdaki özellikleri girin:
-    - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, **tüm şirket Için iOS/ıpados güvenilen SERTIFIKA VPN profilidir**.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+
     - **Platform**: **IOS/ıpados**' ı seçin.
     - **Profil türü**: **Güvenilen sertifika**' yı seçin.
-4. Klasör simgesini seçin ve VPN yönetim konsolundan verdiğiniz VPN sertifikanıza (. cer dosyası) gidin. 
-5. **Oluştur** > **Tamam ' ı** seçin.
 
-    ![Microsoft Intune 'de iOS/ıpados cihazları için bir güvenilen sertifika profili oluşturma](./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png)
+4. **Oluştur**’u seçin.
+5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
+
+    - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, **tüm şirket Için iOS/ıpados güvenilen SERTIFIKA VPN profilidir**.
+    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+
+6. **İleri**'yi seçin.
+7. **Yapılandırma ayarları**' nda, klasör simgesini SEÇIN ve VPN yönetim KONSOLUNDAN verdiğiniz VPN sertifikanıza (. cer dosyası) gidin.
+8. **İleri**' yi seçin ve profilinizi oluşturmaya devam edin. Daha fazla bilgi için bkz. [VPN profili oluşturma](vpn-settings-configure.md#create-the-profile).
+
+    > [!div class="mx-imgBorder"]
+    > Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png) iOS/ıpados cihazları için bir güvenilen sertifika profili oluşturma ![
 
 ## <a name="create-a-scep-or-pkcs-certificate-profile"></a>SCEP veya PKCS sertifika profili oluşturma
 
@@ -91,48 +99,61 @@ Güvenilen kök sertifika profili, cihazın VPN sunucusuna otomatik olarak güve
 - [Altyapıyı Intune ile SCEP destekleyecek şekilde yapılandırma](../protect/certificates-scep-configure.md)
 - [Intune ile PKCS sertifikalarını yapılandırma ve yönetme](../protect/certficates-pfx-configure.md)
 
-Sertifikayı istemci kimlik doğrulaması için yapılandırmayı unutmayın. Bu ayarı doğrudan SCEP sertifika profillerinde (**genişletilmiş anahtar kullanımı** listesi > **istemci kimlik doğrulaması**) ayarlayabilirsiniz. PKCS için, sertifika yetkilisinde (CA) sertifika şablonunda istemci kimlik doğrulamasını ayarlayın.
+Sertifikayı istemci kimlik doğrulaması için yapılandırmayı unutmayın. İstemci kimlik doğrulamasını doğrudan SCEP sertifika profillerinde (**genişletilmiş anahtar kullanımı** listesi > **istemci kimlik doğrulaması**) ayarlayabilirsiniz. PKCS için, sertifika yetkilisinde (CA) sertifika şablonunda istemci kimlik doğrulamasını ayarlayın.
 
-![Konu adı biçimi, anahtar kullanımı, genişletilmiş anahtar kullanımı ve daha fazlası dahil Microsoft Intune bir SCEP sertifikası profili oluşturun](./media/vpn-setting-configure-per-app/vpn-per-app-create-scep-cert.png)
+> [!div class="mx-imgBorder"]
+> ![, konu adı biçimi, anahtar kullanımı, genişletilmiş anahtar kullanımı ve daha fazlası dahil olmak üzere Microsoft Intune bir SCEP sertifikası profili oluşturun](./media/vpn-setting-configure-per-app/vpn-per-app-create-scep-cert.png)
 
 ## <a name="create-a-per-app-vpn-profile"></a>Uygulama başına VPN profili oluşturma
 
-VPN profili, uygulama başına VPN özelliğinin iOS/ıpados uygulaması tarafından kullanımını etkinleştirmek için istemci kimlik bilgileri, VPN ile bağlantı bilgileri ve uygulama başına VPN bayrağını içeren SCEP veya PKCS sertifikasını içerir.
+VPN profili, istemci kimlik bilgileri, VPN bağlantı bilgileri ve iOS/ıpados uygulamasının kullandığı uygulama başına VPN bayrağını sağlayan SCEP veya PKCS sertifikasını içerir.
 
 1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nde, **cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
-2. Aşağıdaki özellikleri girin:
-    - **Ad**: özel profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, **tüm şirket Için iOS/ıpados BAŞıNA VPN profilidir**.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+3. Aşağıdaki özellikleri girin:
+
     - **Platform**: **IOS/ıpados**' ı seçin.
     - **Profil türü**: **VPN**' yi seçin.
-3. **Bağlantı türü**' nde VPN istemci uygulamanızı seçin.
-4. **Temel VPN**’i seçin. [iOS/ıpados VPN ayarları](vpn-settings-ios.md) , tüm ayarları listeler ve tanımlar. Uygulama başına VPN kullanırken, aşağıdaki özellikleri listelenmiş şekilde ayarladığınızdan emin olun:
 
-    - **Kimlik doğrulama yöntemi**: **Sertifikalar**' ı seçin. 
-    - **Kimlik doğrulama sertifikası**: **Tamam**> mevcut bir SCEP veya PKCS sertifikası seçin.
-    - **Bölünmüş tünel**: VPN bağlantısı etkin olduğunda tüm trafiğin VPN tüneli kullanmasını zorlamak Için **devre dışı bırak** ' ı seçin. 
+4. **Oluştur**’u seçin.
+5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
-      ![Uygulama başına VPN profilinde, Microsoft Intune bir bağlantı, IP adresi veya FQDN, kimlik doğrulama yöntemi ve bölünmüş tünel girin](./media/vpn-setting-configure-per-app/vpn-per-app-create-vpn-profile.png)
+    - **Ad**: özel profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, **tüm şirket Için iOS/ıpados BAŞıNA VPN profilidir**.
+    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+
+6. **Yapılandırma ayarları**' nda, aşağıdaki ayarları yapılandırın:
+
+    - **Bağlantı türü**: VPN istemci uygulamanızı seçin.
+    - **Taban VPN**: ayarlarınızı yapılandırın. [iOS/ıpados VPN ayarları](vpn-settings-ios.md) , tüm ayarları listeler ve tanımlar. Uygulama başına VPN kullanırken, aşağıdaki özellikleri listelenmiş şekilde ayarladığınızdan emin olun:
+
+      - **Kimlik doğrulama yöntemi**: **Sertifikalar**' ı seçin. 
+      - **Kimlik doğrulama sertifikası**: **Tamam**> mevcut bir SCEP veya PKCS sertifikası seçin.
+      - **Bölünmüş tünel**: VPN bağlantısı etkin olduğunda tüm trafiğin VPN tüneli kullanmasını zorlamak Için **devre dışı bırak** ' ı seçin. 
+
+      > [!div class="mx-imgBorder"]
+      > Uygulama başına VPN profilinde ![, Microsoft Intune bir bağlantı, IP adresi veya FQDN, kimlik doğrulama yöntemi ve bölünmüş tünel girin](./media/vpn-setting-configure-per-app/vpn-per-app-create-vpn-profile.png)
 
     Diğer ayarlar hakkında daha fazla bilgi için bkz. [iOS/ıpados VPN ayarları](vpn-settings-ios.md).
 
-5. Otomatik **vpn > ** **uygulama başına VPN** > **türünü** seçin
+    - **Otomatik vpn > ** **uygulama başına VPN** > otomatik VPN **türü**
 
-    ![Intune 'da iOS/ıpados cihazlarında uygulama başına VPN 'ye otomatik VPN ayarla](./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png)
+      > [!div class="mx-imgBorder"]
+      > Intune 'Da ![iOS/ıpados cihazlarında uygulama başına VPN 'ye otomatik VPN ayarlayın](./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png)
 
-6.  > **Tamam** ' **ı seçin** > **Oluştur**' a tıklayın.
+7. **İleri**' yi seçin ve profilinizi oluşturmaya devam edin. Daha fazla bilgi için bkz. [VPN profili oluşturma](vpn-settings-configure.md#create-the-profile).
 
 ## <a name="associate-an-app-with-the-vpn-profile"></a>Bir uygulamayı VPN profiliyle ilişkilendirme
 
 VPN profilinizi ekledikten sonra, uygulamayı ve Azure AD grubunu bu profil ile ilişkilendirin.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **uygulamalar** > **tüm uygulamalar**' ı seçin.
-2. Listeden bir uygulama seçin > **atamaları** > **Grup Ekle**' ye tıklayın.
+2. Listeden bir uygulama seçin > **özellikler** > **atamalar** > **Grup Ekle**' ye tıklayın.
 3. **Atama türü**' nde, **gerekli** veya **Kayıtlı cihazlar için kullanılabilir**' ı seçin.
 4. **Dahil edilen grupları** seçin > **dahil edilecek grupları** seçin > [oluşturduğunuz](#create-a-group-for-your-vpn-users) grubu seçin (Bu makalede) > **seçin**.
 5. **VPN**'lerde, [oluşturduğunuz](#create-a-per-app-vpn-profile) uygulama başına VPN profilini seçin (Bu makalede).
 
-    ![Microsoft Intune içindeki uygulama başına VPN profiline bir uygulama atama](./media/vpn-setting-configure-per-app/vpn-per-app-app-to-vpn.png)
+    > [!div class="mx-imgBorder"]
+    > ![Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-app-to-vpn.png) uygulama başına VPN profiline uygulama atama
 
 6. **Kaydet** > **Tamam ' ı** seçin.
 

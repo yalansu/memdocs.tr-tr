@@ -1,135 +1,121 @@
 ---
-title: Şirket Portalı uygulamasını yapılandırma
+title: Intune Şirket Portalı uygulamaları, Şirket Portalı Web sitesini ve Intune uygulamasını özelleştirme
 titleSuffix: Microsoft Intune
-description: Intune Şirket Portalı uygulamasına şirkete özgü markalamayı nasıl uygulayabileceğinizi öğrenin.
+description: Intune Şirket Portalı uygulamalar, Şirket Portalı Web sitesi ve Intune uygulamasına şirkete özgü markalamayı nasıl uygulayabileceğinizi öğrenin.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
-ms.reviewer: mghadial
+ms.reviewer: esthermsft
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36d26eb7f644731082407e816358b74c515333cb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c1ec6d4ebe860a1c20ad1a11bd7e63086858a82c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325658"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084264"
 ---
-# <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Microsoft Intune Şirket Portalı uygulamasını yapılandırma
+# <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune Şirket Portalı uygulamaları, Şirket Portalı Web sitesini ve Intune uygulamasını özelleştirme
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+Android üzerinde Şirket Portalı uygulamalar, Şirket Portalı Web sitesi ve Intune uygulaması, kullanıcıların şirket verilerine erişebileceği ve ortak görevleri yapabilecekleri bir uygulamadır. Ortak görev, cihaz kaydetme, uygulama yükleme ve bilgi bulma (BT departmanınızdan yardım gibi) içerebilir. Ayrıca, kullanıcıların şirket kaynaklarına güvenli bir şekilde erişmesini sağlar. Son Kullanıcı deneyimi, giriş, uygulamalar, uygulama ayrıntıları, cihazlar ve cihaz ayrıntıları gibi çeşitli farklı sayfalar sağlar. Şirket Portalı içindeki uygulamaları hızlıca bulmak için uygulamalar sayfasındaki uygulamaları filtreleyebilirsiniz.
 
-Microsoft Intune şirket portalı, kullanıcıların şirket verilerine eriştiği ve cihaz kaydetmek, uygulama yüklemek ve BT departmanınızdan yardım için bilgi bulmak gibi genel görevleri gerçekleştirebilecekleri yerdir. Ayrıca, Şirket portalı uygulaması kullanıcının şirket kaynaklarına güvenli bir şekilde erişmesini sağlar. Şirket portalı uygulaması, giriş, uygulamalar, uygulama ayrıntıları, cihazlar ve cihaz ayrıntıları gibi çeşitli farklı sayfalar sağlar. Şirket Portalı içindeki uygulamaları hızlıca bulmak için uygulamalar sayfasındaki uygulamaları filtreleyebilirsiniz.
+## <a name="customizing-the-user-experience"></a>Kullanıcı deneyimini özelleştirme
 
-> [!IMPORTANT]
-> Google 'ın Firebase bulut mesajlaşma 'yı (FCM) desteklemek için Android Şirket Portalı uygulamanızı en son sürüme güncelleştirmeniz gerekir.  
+Son Kullanıcı deneyimini özelleştirerek, son kullanıcılarınız için tanıdık ve yararlı bir deneyim sağlamaya yardımcı olursunuz. Bunu yapmak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' ne gidin, **Kiracı Yönetimi** > **Özelleştirme**' yi seçin ve gerekli ayarları yapılandırın. Bu ayarlar, Android 'de Şirket Portalı uygulamalar, Şirket Portalı Web sitesi ve Intune uygulaması için de geçerlidir.
 
-> [!Tip]
-> Şirket Portalı’nı özelleştirdiğinizde, yapılandırmalar hem Şirket Portalı web sitesi hem de Şirket Portalı uygulamaları için geçerli olur. Şirket Portalı'na erişmek isteyen kullanıcılara Intune lisansı atanmış olmalıdır.
+## <a name="branding"></a>Markalama
 
-Şirket Portalı’nı özelleştirerek, son kullanıcılarınız için tanıdık ve yararlı bir deneyim sağlanmasına yardımcı olabilirsiniz. Bunu yapmak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' ne gidin, **Kiracı Yönetimi** > **marka ve özelleştirme**' yı seçin ve gerekli ayarları yapılandırın.
+Aşağıdaki tabloda son kullanıcı deneyimi için marka özelleştirme ayrıntıları verilmiştir:
 
-Bir Kullanıcı Şirket Portalı bir iOS/ıpados uygulaması yüklerken bir istem alır. Bu durum, iOS/ıpados uygulamasının bir toplu satın alma programı (VPP) ile bağlantılı veya iş kolu (LOB) uygulamasına bağlı olan App Store 'a bağlanması durumunda meydana gelir. İstem, kullanıcıların eylemi kabul etmesine veya uygulamanın yönetimine izin veriyor. İstem şirketinizin adını gösterir veya şirketinizin adı kullanılamadığında **Şirket portalı** görüntülenir. 
-
-> [!Note]
-> Azure Kamu kullanıyorsanız, bir sorunla ilgili yardım alma sürecini başlattığında bunu nasıl paylaşacağına karar vermesi için son kullanıcıya uygulama günlükleri sunulur. Ancak Azure Kamu kullanmıyorsa, kullanıcı bir sorunla ilgili yardım alma sürecini başlattığında Windows 10 için Şirket Portalı uygulama günlüklerini doğrudan Microsoft'a gönderir. Uygulama günlüklerini Microsoft'a göndermek sorunları gidermeyi ve çözmeyi kolaylaştıracaktır. 
-
-## <a name="company-information-and-privacy-statement"></a>Şirket bilgileri ve gizlilik bildirimi
-Şirket adı, Şirket Portalı’nın başlığı olarak görüntülenir. Gizlilik bildirimini, kullanıcı gizlilik bağlantısına tıkladığında görüntülenir.
-
-| Alan adı | Uzunluk üst sınırı | Daha fazla bilgi |
+| Alan adı | Daha fazla bilgi |
 |---|---|---|
-|**Şirket adı**| 40 | Bu ad Şirket Portalı'nın başlığı olarak görüntülenir ve Intune kullanıcı deneyiminin her yerinde metin olarak gösterilir. |
-| **Gizlilik bildirimi URL'si** |     79     | Kullanıcılar Şirket Portalı’nda gizlilik bağlantılarına tıkladığında görüntülenecek kendi şirket gizlilik bildiriminizi belirtebilirsiniz. `<https://www.contoso.com>` biçiminde geçerli bir URL girmeniz gerekir. |
+| **Kuruluş adı** | Bu ad, son kullanıcı deneyiminde mesajlaşma boyunca görüntülenir. Üst **bilgide göster** ayarı kullanılarak, üstbilgilere görüntülenecek şekilde ayarlanabilir. Maksimum Uzunluk 40 karakterdir. |
+| **Renk** | Beş standart renkten seçmek için **Standart** ' ı seçin. Onaltılık kod değerine göre belirli bir rengi seçmek için **özel** ' i seçin. |
+| **Tema rengi** | Son Kullanıcı deneyimine göre göstermek için tema rengini ayarlayın. Metin rengini otomatik olarak siyah veya beyaz olarak ayarlayacağız, bu sayede seçtiğiniz tema renginizdeki en üstünde görünür. |
+| **Üst bilgide göster** | Son Kullanıcı deneyimlerinde bulunan üstbilginin **Şirket logosu ve adı**, **yalnızca şirket logosu**veya **yalnızca şirket adı**' nı görüntüleyip görüntülememeyeceğini seçin. Aşağıdaki önizleme kutuları, adı değil yalnızca logoları gösterir.  |
+| **Tema rengi arka planı için logoyu karşıya yükle** | Seçtiğiniz Tema renginiz üzerinde göstermek istediğiniz logoyu karşıya yükleyin. En iyi görünüm için saydam bir arka plana sahip bir logo yükleyin. Bunun, ayarın altındaki Önizleme kutusunda nasıl görüneceğini görebilirsiniz.<p>Maksimum görüntü boyutu: 400 x 400 piksel<br>En büyük dosya boyutu: 750KB<br>Dosya türü: PNG, JPG veya JPEG |
+| **Beyaz veya hafif arka plan için logoyu karşıya yükle** | Beyaz veya hafif renkli arka planların üzerine göstermek istediğiniz logoyu karşıya yükleyin. En iyi görünüm için saydam bir arka plana sahip bir logo yükleyin. Bunun, ayarın altındaki Önizleme kutusunda beyaz bir arka plana nasıl görüneceğini görebilirsiniz.<p>Maksimum görüntü boyutu: 400 x 400 piksel<br>En büyük dosya boyutu: 750 KB<br>Dosya türü: PNG, JPG veya JPEG |
+| **Marka görüntüsünü karşıya yükle** | Kuruluşunuzun markasını yansıtan bir görüntü yükleyin.<p><ul><li>Önerilen Görüntü genişliği: 1125 piksel 'den büyük (en az 650 piksel olması gerekir)</li><li>En büyük görüntü boyutu: 1,3 MB</li><li>Dosya türü: PNG, JPG veya JPEG</li><li>Şu konumlarda görüntülenir:</li><ul><li>iOS/ıpados Şirket Portalı: kullanıcının profil sayfasında arka plan resmi.</li><li>Şirket Portalı Web sitesi: kullanıcının profil sayfasında arka plan resmi.</li><li>Android Intune uygulaması: çekmecede, kullanıcının profil sayfasında bir arka plan görüntüsü olarak.</li></ul></ul> |
+
+> [!NOTE]
+> Bir Kullanıcı Şirket Portalı bir iOS/ıpados uygulaması yüklerken bir istem alır. Bu durum, iOS/ıpados uygulamasının bir toplu satın alma programı (VPP) ile bağlantılı veya iş kolu (LOB) uygulamasına bağlı olan App Store 'a bağlanması durumunda meydana gelir. İstem, kullanıcıların eylemi kabul etmesine veya uygulamanın yönetimine izin veriyor. İstem şirketinizin adını gösterir veya şirketinizin adı kullanılamadığında **Şirket portalı** görüntülenir.
+
+### <a name="brand-image-best-practices"></a>Marka resmi en iyi uygulamaları
+
+Doğru marka resmi, kuruluşunuzun markasının sağlam bir şekilde bir fikir sunarak kullanıcının güvenini geliştirebilir. Görüntü konumları için görüntüyü alma, seçme ve iyileştirmeyle ilgili düşünmek isteyebileceğiniz bazı ipuçları aşağıda verilmiştir.
+
+- Pazarlama veya sanat departmanınıza ulaşın. Bu departmanların elinde zaten onaylanmış birkaç marka imajı olabilir. Departmanlar ayrıca görüntüleri ihtiyaca göre iyileştirme konusunda size yardım edebilir.
+- Yatay ve dikey kompozisyonları değerlendirin. İmajın odak noktasını çevreleyen arka planın yeterli olmasına dikkat edin. İmaj cihaz boyutuna, hizalamasına ve platformuna göre farklı şekillerde kırpılabilir.
+- Sıradan, hazır bir imaj seçmekten kaçının. Görüntü, kuruluşunuzun markasını ve kullanıcılara tanıdık olduğunu yansıtmalıdır. Elinizde bir imaj yoksa, kullanıcılarınıza hiçbir şey ifade etmeyen sıradan bir görüntü kullanmak yerine hiçbir şey kullanmamak daha iyi olacaktır.
+- Gereksiz meta verileri kaldırın. İmaj dosyası; kamera profili, coğrafi konum, başlık, açıklama gibi meta veriler içerebilir. Kaliteyi korumak ve dosya boyutu sınırını aşmamak için bir görüntü iyileştirme aracını kullanarak bu bilgileri kaldırın.
+
+### <a name="brand-image-examples"></a>Marka imajı örnekleri
+
+Aşağıdaki görüntüde bir iPhone 'daki marka görüntüsüne bir örnek gösterilmektedir:
+
+<img alt="Screenshot of example iPhone branding image" src="./media/company-portal-app/company-portal-app-01.png" width="250">
+
+Aşağıda, Android için Intune uygulamasındaki marka görüntüsünün bir örneği gösterilmektedir:
+
+<img alt="Screenshot of example #1 for Intune app for Android branding image" src="./media/company-portal-app/company-portal-app-02.png" width="250">
+
+<img alt="Screenshot of example #2 for Intune app for Android branding image" src="./media/company-portal-app/company-portal-app-03.png" width="250">
+
+## <a name="support-information"></a>Destek bilgileri
+
+Çalışanların sorularla iletişime geçebilmesi için kuruluşunuzun destek bilgilerini girin. Bu destek bilgileri, destek, **yardım & destek**ve son kullanıcı deneyimi genelinde Yardım **masası** **sayfaları üzerinde görüntülenir**.
+
+| Alan adı | Maksimum uzunluk | Daha fazla bilgi |
+|------------------------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Kişi adı | 40 | Bu ad, kullanıcıların destek ekibiyle iletişime geçebilecekleri kişidir. |
+| Telefon numarası | 20 | Bu sayı, kullanıcıların destek için çağrı yapmasına olanak sağlar. |
+| E-posta adresi | 40 | Bu e-posta adresi, kullanıcıların destek için e-posta gönderebilecekleri yerdir. `alias@domainname.com` biçiminde geçerli bir e-posta adresi girmeniz gerekir. |
+| Web sitesinin adı | 40 | Bu, destek web sitesinin URL 'SI için bazı konumlarda görüntülenen kolay addır. Bir destek web sitesi URL 'SI belirtirseniz ve kolay bir ad yoksa, URL 'nin kendisi Son Kullanıcı deneyimlerinde görüntülenir.  |
+| Web sitesi URL 'SI | 150 | Kullanıcıların kullanması gereken destek web sitesi. URL `https://www.contoso.com`biçiminde olmalıdır.  |
+| Ek bilgiler | 120 | Kullanıcılara daha fazla destekle ilgili tüm iletileri ekleyin. |
+
+## <a name="configuration"></a>Yapılandırma
+
+Aşağıdaki tabloda ek yapılandırma ayrıntıları verilmiştir:
+
+| Alan adı | Maksimum uzunluk | Daha fazla bilgi |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Gizlilik bildirimi URL 'SI | 79 | Kullanıcılar gizlilik bağlantılarına tıkladığı zaman görüntülenecek şekilde kuruluşunuzun gizlilik bildirimini ayarlayın. `https://www.contoso.com` biçiminde geçerli bir URL girmeniz gerekir. |
+| İOS/ıpados için Şirket Portalı gizlilik iletisi | 520 | Kuruluşunuzun yönetilen iOS/ıpados cihazlarında görebileceği veya göremediği öğeleri listelemek için varsayılanı tutun veya özel bir ileti ayarlayın. Marku kullanarak madde işaretleri, kalın, italik ve bağlantılar ekleyebilirsiniz. |
+| Cihaz kaydı | YOK | Kullanıcıların mobil cihaz yönetimine kaydolmasını ve nasıl sorulup sorulmayacağını belirtin. Ayrıntılar aşağıda verilmiştir. |
+
+### <a name="device-enrollment-setting-options"></a>Cihaz kayıt ayarı seçenekleri
+
+> [!NOTE]
+> Cihaz kayıt ayarı için destek, son kullanıcıların bu Şirket Portalı sürümlerine sahip olmasını gerektirir:
+> - İOS/ıpados üzerinde Şirket Portalı: sürüm 4,4 veya üzeri
+> - Android üzerinde Şirket Portalı: sürüm 5.0.4715.0 veya üzeri 
+
+|    Cihaz kayıt seçenekleri    |    Açıklama    |    Denetim listesi istemleri    |    Bildirim    |    Cihaz ayrıntıları durumu    |    Uygulama ayrıntıları durumu (kayıt gerektiren bir uygulama)    |
+|-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
+|    Kullanılabilir, istemlerle    |    Tüm olası konumlara kaydolmak için istemlerle ilgili varsayılan deneyim.    |    Evet    |    Evet    |    Evet    |    Evet    |
+|    Kullanılabilir, istem yok    |    Kullanıcı, geçerli cihazlarından veya kayıt gerektiren uygulamalardan cihaz ayrıntıları ' nda durum aracılığıyla kaydedebilir.    |    Hayır    |    Hayır    |    Evet    |    Evet    |
+|    Kullanılamıyor    |    Kullanıcıların kaydolmasına yol yoktur.    |    Hayır    |    Hayır    |    Hayır    |    Hayır<sup>(1)</sup>    |
+
+<sup>(1)</sup> **bilinen sorun:** uygulamaları yüklemek için kayıt gerektirecek şekilde ayarlarsanız ve ayrıca cihaz kaydını "kullanılamaz" olarak ayarlarsanız, Android 'deki Şirket portalı uygulaması, kullanıcıların kaydolmasına kılavuzluk eder. Bu, kısa süre içinde kaldırılacak.
+
+> [!NOTE]
+> Azure Kamu kullanıyorsanız, bir sorunla ilgili yardım alma sürecini başlattığında bunu nasıl paylaşacağına karar vermesi için son kullanıcıya uygulama günlükleri sunulur. Ancak, Azure Kamu 'yu kullanmıyorsanız, Kullanıcı bir sorunla ilgili yardım almak için işlemi başlattığında Şirket Portalı uygulama günlüklerini doğrudan Microsoft 'a gönderir. Uygulama günlüklerini Microsoft'a göndermek sorunları gidermeyi ve çözmeyi kolaylaştıracaktır.
 
 > [!NOTE]
 > Microsoft ve Apple ilkesiyle tutarlı olan her nedenden dolayı hizmetimiz tarafından toplanan herhangi bir veriyi üçüncü taraflardan satmayacağız.
 
-## <a name="support-information"></a>Destek bilgileri
-Çalışanınıza Intune'la ilgili sorularında bir başvuru noktası sağlamak için şirketinizin destek bilgilerini girin.
-
-|Alan adı|Uzunluk üst sınırı|Daha fazla bilgi|
-|---|---|---|
-|**Kişi adı** | 40 | Bu ad, **Yardım ve destek** sayfasında görüntülenir. |
-|**Telefon numarası** | 20 | Bu iletişim numarası, çalışanların destek için sizinle iletişim kurmasını sağlamak üzere **Yardım ve destek** sayfasında görüntülenir. |
-|**E-posta adresi**| 40 | Bu iletişim adresi **Yardım ve destek** sayfasında görüntülenir. `alias@domainname.com` biçiminde geçerli bir e-posta adresi girmeniz gerekir. |
-|**Web sitesinin adı**| 40 | Bu ad destek web sitesi URL'si için görüntülenen kolay addır. Bir destek web sitesi URL 'SI belirtirseniz ve kolay ad yoksa, Şirket Portalı **Yardım ve destek** sayfasında BT Web sitesine gidin görüntülenir. |
-|**Web sitesi URL'si**| 150 | Kullanıcılarınızın kullanmasını istediğiniz bir destek web siteniz varsa, URL'sini burada belirtin. URL, `https://www.contoso.com` biçiminde olmalıdır. Bir URL belirtmezseniz, Şirket Portalı **Yardım ve destek** sayfasında destek web sitesi için hiçbir şey gösterilmez. |
-| **Ek bilgiler**| 120 | **Yardım ve destek** sayfasında gösterilir. |
-
-
-## <a name="company-identity-branding-customization"></a>Şirket kimliği marka özelleştirme
-Şirket Portalınızı şirket logonuz, şirket adınız, tema renginiz ve arka planınızla özelleştirebilirsiniz.
-
-### <a name="theme-color-and-logo-in-the-company-portal"></a>Şirket Portalı’nda tema rengi ve logo
-Şirket Portalı’na bir tema rengi uygulayın. Standart renklerden birini seçin veya özel renk için alt basamaklı onaltılık kodu girin.
-
-|Alan adı|Daha fazla bilgi|
-|---|---|
-|**Standart renklerden birini seçin veya altı basamaklı onaltılık kod girin**| Bir renk seçmek için **Standart**’ı seçin. Onaltılık kod değerine göre belirli bir renk belirtmek için **Özel**’i seçin.|
-|**Tema rengi seçin**| Şirket Portalı’na uygulamak için bir tema rengi seçin. Standart renk seçebilir veya belirli bir onaltılık kodu girebilirsiniz. |
-|**Görüntüleme**| Hangisinin görüntüleneceğini seçin: **Şirket logosu ve adı**, **Yalnızca şirket logosu** veya **Yalnızca şirket adı**. |
-|**Şirket logonuzu karşıya yükleyin**|Size ait Şirket Portalı’nda görüntülenmek üzere şirket logonuzu yükleyebilirsiniz. En yüksek kontrast düzeyini sağlamak için metin renginin otomatik olarak seçildiğini unutmayın. En iyi görünümü elde etmek için saydam bir arka plana sahip bir logo yükleyin.<p><ul><li>En büyük görüntü boyutu: 400 piksel x 400 piksel</li><li>En büyük dosya boyutu: 750 KB</li><li>Dosya türü: PNG, JPG veya JPEG</li></ul>|
-
-Logo yüklendikten sonra önizleme alanında tema rengiyle logo görüntülenir. Şirketinizin adını görüntülemeyi seçerseniz bu ad, Şirket Portalı’nda siyah veya beyaz renkte görüntülenir. Tema renginizle en yüksek kontrastı sağlayan renk otomatik olarak seçilir. Ekrandaki önizleme alanında şirketinizin adı gösterilmeyecektir. 
-
-### <a name="logo-to-use-on-white-or-light-backgrounds"></a>Beyaz veya açık renk arka planda kullanılacak logo
-Beyaz veya açık renk arka planlarda en iyi görünecek logoyu seçin.
-
-|Alan adı|Daha fazla bilgi|
-|---|---|
-|**Logonuzu karşıya yükleyin**| Bu seçeneğin kullanılabilmesi için şirket logosunu göstermeyi seçmiş olmalısınız. En iyi görünümü elde etmek için saydam bir arka plana sahip bir logo yükleyin.<p><ul><li>En büyük görüntü boyutu: 400 piksel x 400 piksel</li><li>En büyük dosya boyutu: 750 KB</li><li>Dosya türü: PNG, JPG veya JPEG</li></ul>|
-
-### <a name="brand-image-for-company-portal"></a>Şirket Portalı için marka imajı
-
-Şirket markanızı yansıtan bir marka imajı kullanın. Değişikliklerinizi kaydettikten sonra, yapılandırımlarınızın nasıl görüneceğine bakmak için bölmenin en üstündeki Intune web portalında **ayarlarınızı önizleyin** ' i seçebilirsiniz. Yalnızca bir iOS/ıpados cihazında bulunan marka görüntüsünü, Intune Web Portalı ' nı görüntüleyebileceğinizi unutmayın. 
-
-|Alan adı|Daha fazla bilgi|
-|---|---|
-|**Marka imajınızı karşıya yükleyin**| Bu seçenek, marka imajı görüntülemenizi sağlar. İOS/ıpados Şirket Portalı, kullanıcının profil sayfasında bir arka plan görüntüsü olarak gösterilir.<p><ul><li>Önerilen Görüntü genişliği: 1125mb 'den büyük (en az 650 piksel olması gerekir)</li><li>En yüksek görüntü boyutu: 1,3 MB</li><li>Dosya türü: PNG, JPG veya JPEG</li></ul>|
-
-Doğru marka görüntüsü, şirketinizin markasının sağlam bir şekilde bir fikir sunarak Şirket Portalı kullanıcının güvenini geliştirebilir. Aşağıda, Şirket Portalı için imaj elde etme, seçme ve iyileştirme hakkında bazı ipuçları bulabilirsiniz. 
-
-- Pazarlama veya sanat departmanınıza ulaşın. Bu departmanların elinde zaten onaylanmış birkaç marka imajı olabilir. Departmanlar ayrıca görüntüleri ihtiyaca göre iyileştirme konusunda size yardım edebilir. 
-
-- Yatay ve dikey kompozisyonları değerlendirin. İmajın odak noktasını çevreleyen arka planın yeterli olmasına dikkat edin. İmaj cihaz boyutuna, hizalamasına ve platformuna göre farklı şekillerde kırpılabilir. 
-
-- Sıradan, hazır bir imaj seçmekten kaçının. Görüntü, şirketinizin markasını ve kullanıcılara tanıdık olduğunu yansıtmalıdır. Bir tane yoksa, bir tane kullanmaktan, kullanıcılarınız için bir anlamı olmayan bir genel kullanım kullanmaktan daha iyidir. 
-
-- Gereksiz meta verileri kaldırın. İmaj dosyası; kamera profili, coğrafi konum, başlık, açıklama gibi meta veriler içerebilir. Kaliteyi korumak ve dosya boyutu sınırını aşmamak için bir görüntü iyileştirme aracını kullanarak bu bilgileri kaldırın. 
-
-Intune 'da marka resmi eklendikten veya değiştirildikten sonra, Son Kullanıcı iOS/ıpados cihazlarındaki değişikliği, Şirket Portalı başlangıç sırasında değişiklik yapana kadar görmeyebilir ve ardından marka görüntüsünü görüntülemek için yeniden başlatılmıştır. 
-
-### <a name="brand-image-examples"></a>Marka imajı örnekleri
-
-Aşağıdaki görüntüde örnek bir iPad marka imajı gösterilmektedir:
-
-![Örnek iPhone marka imajının ekran görüntüsü](./media/company-portal-app/company-portal-app-03.png)
-
-Aşağıdaki görüntüde örnek bir iPhone marka imajı gösterilmektedir:
-
-![Örnek iPad marka imajının ekran görüntüsü](./media/company-portal-app/company-portal-app-02.png)
-
-## <a name="privacy-statement-customization"></a>Gizlilik bildirimi özelleştirmesi
-
-Kuruluşunuzda yönetilen iOS/ıpados cihazlarında görüntülenen gizlilik bildirimini özelleştirebilirsiniz. Bu ileti, kuruluşunuzun yönetilen iOS/ıpados cihazlarını göremediği veya üzerinde yapacakları öğeleri listeler.
-
-**Şirket portalı özelleştirme** > **cihaz yönetimi ve gizlilik iletisi**altında şunları yapabilirsiniz:
-
-- Listenin gösterildiği gibi kullanılması için **Varsayılanı** kabul edin veya
-- Kuruluşunuzun yönetilen iOS/ıpados cihazlarını göremediği veya bu cihazlarda yapacakları öğelerin listesini özelleştirmek için **özel** ' i seçin. [Marku](https://daringfireball.net/projects/markdown/) kullanarak madde işaretleri, kalın, italik ve bağlantılar ekleyebilirsiniz.
-
-## <a name="company-portal-derived-credentials-for-ios-devices"></a>İOS cihazları için türetilmiş kimlik bilgilerini Şirket Portalı
+## <a name="company-portal-derived-credentials-for-iosipados-devices"></a>İOS/ıpados cihazları için türetilmiş kimlik bilgilerini Şirket Portalı
 
 Intune, kişisel kimlik doğrulama (PıV) ve ortak erişim kartı (CAC) ile birlikte gelen kimlik bilgilerini, DıŞA geçmiş kimlik bilgisi sağlayıcıları, Entrust Datacard ve ıntercede ile iş ortaklığı için destekler. Son kullanıcılar, Şirket Portalı uygulamasındaki kimliklerini doğrulamak için iOS/ıpados cihazının kayıt sonrası ek adımlara geçer. Türetilmiş kimlik bilgileri, önce kiracınız için bir kimlik bilgisi sağlayıcısı ayarlayıp, ardından kullanıcılara veya cihazlara türetilmiş kimlik bilgilerini kullanan bir profili hedefleyerek kullanıcılara etkinleştirilir.
 
@@ -138,9 +124,9 @@ Intune, kişisel kimlik doğrulama (PıV) ve ortak erişim kartı (CAC) ile birl
 
 İOS/ıpados cihazlarının türetilmiş kimlik bilgileri hakkında daha fazla bilgi için bkz. [Microsoft Intune türetilmiş kimlik bilgilerini kullanma](../protect/derived-credentials.md).
 
-## <a name="dark-mode-for-ios-company-portal"></a>İOS Şirket Portalı için koyu mod
+## <a name="dark-mode-for-iosipados-company-portal"></a>İOS/ıpados Şirket Portalı için koyu mod
 
-İOS Şirket Portalı için koyu mod kullanılabilir. Kullanıcılar şirket uygulamalarını indirebilir, cihazlarını yönetebilir ve cihaz ayarlarına bağlı olarak tercih ettikleri renk düzeninde BT desteği alabilir. İOS Şirket Portalı, son kullanıcının cihaz ayarlarını koyu veya hafif modda otomatik olarak eşleştirecektir.
+İOS/ıpados Şirket Portalı için koyu mod kullanılabilir. Kullanıcılar uygulamaları indirebilir, cihazlarını yönetebilir ve cihaz ayarlarına bağlı olarak tercih ettikleri renk düzeninde BT desteği alabilir. İOS/ıpados Şirket Portalı, son kullanıcının cihaz ayarlarını koyu veya hafif modda otomatik olarak eşleştirecektir.
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Windows Şirket Portalı klavye kısayolları
 
@@ -168,13 +154,14 @@ Windows Şirket Portalı uygulamasında aşağıdaki kısayollar kullanılabilir
 
 Son kullanıcılar, Windows Şirket Portalı uygulamasında kullanılabilen kısayolları da görebilir.
 
-![Windows Şirket Portalı'nda kullanılabilen kısayolların ekran görüntüsü](./media/company-portal-app/company-portal-app-01.png)
+![Windows Şirket Portalı'nda kullanılabilen kısayolların ekran görüntüsü](./media/company-portal-app/company-portal-app-04.png)
 
 ## <a name="user-self-service-device-actions-from-the-company-portal"></a>Şirket Portalı Kullanıcı self servis cihaz eylemleri
 
-Kullanıcılar, Şirket Portalı uygulaması veya Web sitesi aracılığıyla yerel veya uzak cihazlarında eylemler gerçekleştirebilir. Bir kullanıcının gerçekleştirebileceği eylemler cihaz platformu ve yapılandırmasına göre farklılık gösterir. Her durumda, uzak cihaz eylemleri yalnızca cihazın birincil kullanıcısı tarafından gerçekleştirilebilir.
+Kullanıcılar, Android 'deki Şirket Portalı uygulaması veya Web sitesi ya da Intune uygulaması aracılığıyla yerel veya uzak cihazlarında eylemler gerçekleştirebilir. Bir kullanıcının gerçekleştirebileceği eylemler cihaz platformu ve yapılandırmasına göre farklılık gösterir. Her durumda, uzak cihaz eylemleri yalnızca cihazın birincil kullanıcısı tarafından gerçekleştirilebilir.
+
 - **Devre dışı bırak** – cihazı Intune yönetiminden kaldırır. Şirket portalı uygulamasında ve Web sitesinde bu, **Kaldır**olarak gösterilir.
-- **Silme** – bu eylem bir cihaz sıfırlamayı başlatır. Şirket portalı Web sitesinde bu, **sıfırlama**veya iOS şirket portalı uygulamasında **Fabrika Sıfırlaması** olarak gösterilir.
+- **Silme** – bu eylem bir cihaz sıfırlamayı başlatır. Şirket portalı Web sitesinde bu, **Sıfırla**veya IOS/ıpados Şirket portalı uygulamasında **Fabrika Sıfırlaması** olarak gösterilir.
 - **Yeniden Adlandır** – bu eylem, kullanıcının şirket portalı görebileceği cihaz adını değiştirir. Yerel cihaz adını değiştirmez, yalnızca Şirket Portalı listelemez.
 - **Eşitleme** – bu eylem, Intune hizmeti ile bir cihaz iade işlemini başlatır. Bu, Şirket Portalı **denetim durumunu** gösterir.
 - **Uzaktan kilitleme** – bu, cihazın kilidini açmak için PIN gerektiren cihazı kilitler.
@@ -199,10 +186,10 @@ Bazı platformlar ve Konfigürasyonlar self servis cihaz eylemlerine izin vermez
 <sup>(2)</sup> MacOS Için **anahtar kurtarma** yalnızca Web portalı aracılığıyla kullanılabilir.<br>
 <sup>(3)</sup> bir cihaz kayıt yöneticisi kaydı kullanılıyorsa tüm uzak eylemler devre dışı bırakılır.<br>
 <sup>(4)</sup> **yeniden adlandırma** yalnızca cihaz adını cihazda değil şirket portalı uygulamasında veya Web portalında değiştirir.<br>
-<sup>(5)</sup> Kullanıcı kayıtlı iOS cihazlarında **silme** kullanılamıyor.<br>
+<sup>(5)</sup> Kullanıcı kayıtlı IOS/ıpados cihazlarında **silme** işlemi kullanılamıyor.<br>
 <sup>(6)</sup> bazı Android ve Android kurumsal yapılandırmalarında, **geçiş kodu sıfırlama** işlemi desteklenmez. Daha fazla bilgi için bkz. [Intune 'da cihaz geçiş kodunu sıfırlama veya kaldırma](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> **devre dışı bırakma** ve **Temizleme** , ANDROID kurumsal cihaz sahibi senaryolarında (Cope, Cobo, cosu) kullanılamaz.<br> 
-<sup>(8)</sup> Kullanıcı tarafından kaydedilen IOS cihazlarında **geçiş kodunu sıfırlama** işlemi desteklenmez.
+<sup>(8)</sup> Kullanıcı kayıtlı IOS/ıpados cihazlarında **geçiş kodu sıfırlama** işlemi desteklenmez.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

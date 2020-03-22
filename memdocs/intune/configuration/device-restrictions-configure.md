@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune-Azure 'da ilke kullanarak cihaz özelliklerini kısıtlama | Microsoft Docs
-description: Android, macOS, iOS, ıpados, Windows Phone ve Windows 10 cihazlarında özellikleri kısıtlamak için bir cihaz profili ekleyin Microsoft Intune
+description: Android Cihaz Yöneticisi, Android kurumsal, macOS, iOS, Idos, Windows Phone ve Windows 10 cihazlarındaki özellikleri Microsoft Intune kısıtlamak için bir cihaz profili ekleyin.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28cf0b8bffc06a0b5a56165c1e9eeab780c453c7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7f1e421a344122dbd4cf59a49ea56ef0ba2bb125
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332322"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087080"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Microsoft Intune’da cihaz kısıtlama ayarlarını yapılandırma
-
-
 
 Intune, yöneticilerin Android, iOS/ıpados, macOS ve Windows cihazlarını denetlemesine yardımcı olan cihaz kısıtlama ilkeleri içerir. Bu kısıtlamalar, kuruluşunuzun kaynaklarını korumak için çok çeşitli ayarları ve özellikleri denetlemenize olanak tanır. Örneğin, yöneticiler şunları yapabilir:
 
@@ -48,7 +46,7 @@ Bu makalede bir cihaz kısıtlama profili oluşturma yöntemi gösterilmektedir.
     - **Açıklama**: ilke için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
     - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:  
 
-        - **Android**
+        - **Android Cihaz Yöneticisi**
         - **Android kurumsal**
         - **iOS/ıpados**
         - **macOS**
@@ -62,7 +60,7 @@ Bu makalede bir cihaz kısıtlama profili oluşturma yöntemi gösterilmektedir.
 
 4. Seçtiğiniz platforma bağlı olarak, yapılandırabileceğiniz ayarlar farklılık gösterir. Ayrıntılı ayarlar için platformunuzu seçin:
 
-    - [Android ayarları](device-restrictions-android.md)
+    - [Android Cihaz Yöneticisi ayarları](device-restrictions-android.md)
     - [Android kurumsal ayarları](device-restrictions-android-for-work.md)
     - [iOS/ıpados ayarları](device-restrictions-ios.md)
     - [macOS ayarları](device-restrictions-macos.md)

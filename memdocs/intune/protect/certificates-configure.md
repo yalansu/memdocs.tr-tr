@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 700e255c55db1f216d605f5c54aa0c474e7f48b5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2ab229e0ef0d2cdefe41f991efc8c45c988979db
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329834"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085027"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Microsoft Intune kimlik doğrulaması için sertifikaları kullanma
 
@@ -107,31 +107,47 @@ Desteklemek istediğiniz her cihaz platformu için, SCEP, PKCS ve PKCS içeri ak
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Profil oluşturma** > **cihaz** > **yapılandırma profilleri** ' ne gidin ve bu seçeneği belirleyin.
 
-   ![Intune 'a gidin ve güvenilen bir sertifika için yeni bir profil oluşturun](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
+   ![Intune 'a gidin ve güvenilen bir sertifika için yeni bir profil oluşturun](./media/certificates-configure/certificates-configure-profile-new.png)
 
 3. Aşağıdaki özellikleri girin:
+   - **Platform**: Bu profili alacak cihazların platformunu seçin.
+   - **Profil**: **Güvenilen sertifika** seçin
+  
+4. **Oluştur**’u seçin.
 
-   - Profil için **Ad**
-   - İsteğe bağlı olarak bir **Açıklama** ayarlayın
-   - Profili dağıtmak için **Platform**
-   - **Profil türü**’nü **Güvenilen sertifika** olarak ayarlayın
+5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
+   - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı *şirketin tamamına yönelik güvenilen sertifika profilidir*.
+   - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
 
-4. **Ayarlar**' ı seçin ve ardından bu sertifika profiliyle birlikte kullanmak üzere verdiğiniz GÜVENILEN kök CA sertifikası. cer dosyasına gidin ve ardından **Tamam**' ı seçin.
+6. **İleri**'yi seçin.
 
-5. Yalnızca Windows 8.1 ve Windows 10 cihazları için, güvenilen sertifika için **Hedef Depo** olarak şunlardan birini seçin:
+7. **Yapılandırma ayarları**' nda, önceden verdiğiniz GÜVENILEN kök CA sertifikası için. cer dosyasını belirtin. 
+
+   Yalnızca Windows 8.1 ve Windows 10 cihazları için, güvenilen sertifika için **Hedef Depo** olarak şunlardan birini seçin:
 
    - **Bilgisayar sertifika deposu - Kök**
    - **Bilgisayar sertifika deposu - Ara**
    - **Kullanıcı sertifika deposu - Ara**
 
-6. Bitirdiğinizde **Tamam**’ı seçin, **Profil Oluştur** bölmesine gidin ve **Oluştur**’u seçin.
+   ![Bir profil oluşturun ve güvenilen bir sertifikayı karşıya yükleyin](./media/certificates-configure/certificates-configure-profile-fill.png)
 
-Profil, *cihazlar-yapılandırma profilleri* penceresindeki profiller listesinde, **Güvenilen sertifika**profil türü ile görüntülenir. Bu profili SCEP veya PKCS sertifikaları kullanacak cihazlara atadığınızdan emin olun. Profili gruplara atamak için bkz. [cihaz profilleri atama](../configuration/device-profile-assign.md).
+8. **İleri**'yi seçin.
 
-> [!NOTE]
-> Android cihazlarda, üçüncü tarafın güvenilen bir sertifika yüklediği bir ileti görüntülenebilir.
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili `US-NC IT Team` veya `JohnGlenn_ITDepartment`gıbı belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+
+   **İleri**'yi seçin.
+
+10. **Atamalar**' da, profilinizi alacak Kullanıcı veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](../configuration/device-profile-assign.md).
+
+    **İleri**'yi seçin.
+
+11. (*Yalnızca Windows 10 Için geçerlidir*) **Uygulanabilirlik kuralları**' nda, bu profilin atanmasını iyileştirmek için uygulanabilirlik kurallarını belirtin. Profili, bir cihazın işletim sistemi sürümüne veya sürümüne göre atamayı veya atamayı seçebilirsiniz.
+
+  Daha fazla bilgi için *Microsoft Intune bir cihaz profili oluşturma*içindeki [uygulanabilirlik kuralları](../configuration/device-profile-create.md#applicability-rules) bölümüne bakın.
+
+12. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. Oluştur ' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

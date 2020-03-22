@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4d5fe8ed78aa5537552ecf3db12eabd2bb6fbde
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331542"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086123"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Intune 'da iOS/ıpados cihazlarını kaydetme
 
@@ -46,7 +46,7 @@ Kullanıcıların kendi cihazlarını Intune yönetimine kaydetmesine izin vereb
 - Cihaz kaydı, tipik KCG kaydı olarak düşünebilir. Yöneticilere çok çeşitli yönetim seçenekleri sağlar.
 - Kullanıcı kaydı, yöneticilere cihaz yönetimi seçeneklerinin bir alt kümesini sağlayan daha kolay bir kayıt işlemidir. Bu özellik şu anda önizleme sürümündedir. 
 
-Önkoşulları ve atanan kullanıcı lisanslarını tamamladıktan sonra, kullanıcılar Intune Şirket Portalı uygulamayı App Store 'dan indirebilir ve uygulamadaki kayıt talimatlarını takip edebilir. İOS/ıpados cihazlarında Şirket Portalı gizlilik bildirimini [Gizlilik bildirimi özelleştirmesi](../apps/company-portal-app.md#privacy-statement-customization)bölümünde açıklandığı gibi özelleştirebilirsiniz.
+Önkoşulları ve atanan kullanıcı lisanslarını tamamladıktan sonra, kullanıcılar Intune Şirket Portalı uygulamayı App Store 'dan indirebilir ve uygulamadaki kayıt talimatlarını takip edebilir. İOS/ıpados cihazlarında Şirket Portalı gizlilik bildirimini, [Intune şirket portalı uygulamalarını, Şirket portalı Web sitesini ve Intune uygulamasını nasıl özelleştireceğinizi](../apps/company-portal-app.md#configuration)anlatıldığı gibi özelleştirebilirsiniz.
 
 ## <a name="company-owned-iosipados-devices"></a>Şirkete ait iOS/ıpados cihazları
 

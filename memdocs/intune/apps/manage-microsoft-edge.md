@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/02/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cf77349508144498b847236598abda6bced52b0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9c04423f79855f4c28121dad11fa21ccb05216de
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332138"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084165"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Microsoft Intune ile Microsoft Edge kullanarak Web erişimini yönetme
 
@@ -53,9 +53,15 @@ Bu ayarları şunlara uygulayabilirsiniz:
 
 Microsoft Edge, Intune ilkesi ile hedeflenmediğinde, kullanıcılar, Office uygulamaları gibi diğer Intune tarafından yönetilen uygulamalardan verilere erişmek için bunu kullanamaz. 
 
+   >[!NOTE]
+   > Görüntü indirmeyi önleyen farklı kaydet ilkesi uygulandığında, Microsoft Edge için uzun basışlar devre dışı bırakılır.
+
 ## <a name="conditional-access-for-microsoft-edge"></a>Microsoft Edge için koşullu erişim
 
 Kullanıcılarınıza yalnızca Microsoft Edge aracılığıyla şirket içeriğine erişmek üzere yönlendirmek için Azure AD koşullu erişimi kullanabilirsiniz. Bu, mobil tarayıcı erişimini Azure AD ile bağlantılı Web uygulamalarına İlkeyle korunan Microsoft Edge 'e kısıtlar. Bu, Safari veya Chrome gibi korumasız tüm tarayıcılardan erişimi engeller. Exchange Online ve SharePoint Online gibi Azure kaynaklarına koşullu erişim, Microsoft 365 Yönetim Merkezi ve hatta [azure ad uygulama ara sunucusu](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)aracılığıyla dış kullanıcılara kullanıma sunulacak şirket içi siteler uygulayabilirsiniz.
+
+> [!NOTE]
+> İOS cihazlarında yeni web klipleri (sabitlenmiş Web uygulamaları), korumalı bir tarayıcıda açılması gerektiğinde Intune Managed Browser yerine Microsoft Edge 'de açılır. Daha eski iOS web klipleri için, bu web kliplerini, Managed Browser bunun yerine Microsoft Edge 'de açıldıklarından emin olmak için yeniden hedeflemeniz gerekir.
 
 Azure AD bağlantılı web uygulamalarının iOS ve Android 'de Microsoft Edge 'i kullanacak şekilde kısıtlamak için:
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
@@ -195,7 +201,7 @@ Benzer şekilde, bir giriş sayfası kısayolunu yapılandırmak için, Microsof
 Bu ayarlar, Microsoft Edge 'in yeni sekme sayfasını, sayfanın arka planı olarak kuruluşunuzun logosunu ve marka rengini görüntüleyecek şekilde özelleştirmenize olanak tanır.
 
 Kuruluşunuzun logosunu ve rengini karşıya yüklemek için, önce aşağıdaki adımları uygulayın:
-- Azure portal içinde, [Microsoft Endpoint Manager yönetim merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) -> **Kiracı Yönetimi** -> **marka ve özelleştirme** -> **Şirket kimliği markalaması**' na gidin.
+- Azure portal içinde, [Microsoft Endpoint Manager yönetim merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) -> **kiracı yönetimi** -> **Özelleştirme** -> **Şirket kimliği markalaması**' na gidin.
 - Markanızı ayarlamak için "görüntü" altında "yalnızca şirket logosu" seçeneğini belirleyin. Saydam arka plan logoları önerilir. 
 - Markaınızın arka plan rengini ayarlamak için "ekran" bölümünde "Tema rengi" seçeneğini belirleyin. Microsoft Edge, yeni sekme sayfasında rengin daha açık bir gölge kopyasını uygular ve bu da sayfanın yüksek okunabilirlik olmasını sağlar. 
 
@@ -212,7 +218,7 @@ Microsoft Edge Mobile içindeki yeni sekme sayfası deneyimini, kuruluşunuzla i
 
 |    Anahtar    |    Değer    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. IndustryNews    |    **Doğru** , Microsoft Edge mobil yeni sekme sayfasında sektör haberlerini gösterir.<p>**False** (varsayılan), sektör haberlerini yeni sekme sayfasından gizler.    |
+|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. IndustryNews    |    **doğru** , Microsoft Edge mobil yeni sekme sayfasında sektör haberlerini gösterir.<p>**False** (varsayılan), sektör haberlerini yeni sekme sayfasından gizler.    |
 
 ## <a name="configure-managed-bookmarks-for-microsoft-edge"></a>Microsoft Edge için yönetilen yer imlerini yapılandırma
 
@@ -238,7 +244,7 @@ Varsayılan olarak, kullanıcılarınız Microsoft Edge yer işaretleri içindek
 
 |    Anahtar    |    Değer    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com. Microsoft. Intune. mam. managedbrowser. Uygulamaps    |    **Doğru** , Microsoft Edge yer Işaretlerinin Içindeki uygps 'leri gösterir.<p>**False** , Microsoft Edge Içindeki uygulamaps 'leri gizler.    |
+|    com. Microsoft. Intune. mam. managedbrowser. Uygulamaps    |    **doğru** , Microsoft Edge yer Işaretlerinin Içindeki uygps 'leri gösterir.<p>**False** , Microsoft Edge Içindeki uygulamaps 'leri gizler.    |
     
 ## <a name="use-https-protocol-as-default"></a>HTTPS protokolünü varsayılan olarak kullan
 
@@ -246,7 +252,7 @@ Kullanıcı bir tane belirtmezse, HTTPS protokolünü kullanmak için Microsoft 
 
 |    Anahtar    |    Değer    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.defaultHTTPS`     |     **Doğru** varsayılan protokolü HTTPS kullanacak şekilde ayarlar     |
+|    `com.microsoft.intune.mam.managedbrowser.defaultHTTPS`     |     **doğru** varsayılan protokolü HTTPS kullanacak şekilde ayarlar     |
 
 
 ## <a name="specify-allowed-or-blocked-sites-list-for-microsoft-edge"></a>Microsoft Edge için izin verilen veya engellenen siteler listesini belirtin
@@ -257,6 +263,15 @@ Microsoft Edge için izin verilen veya engellenen bir site listesini yapılandı
 |    Anahtar    |    Değer    |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Aşağıdakilerden birini seçin:<p>1. izin verilen URL 'Leri belirtin (yalnızca bu URL 'Lere izin verilir; başka sitelere erişilemez):<br>`com.microsoft.intune.mam.managedbrowser.AllowListURLs`<p>2. Engellenen URL 'Leri belirtin (diğer tüm sitelere erişilebilir):<br>`com.microsoft.intune.mam.managedbrowser.BlockListURLs`    |    Bir anahtara karşılık gelen değer bir URL listesidir. İzin vermek veya engellemek istediğiniz tüm URL 'Leri, kanal `|` karakteriyle ayırarak tek bir değer olarak girersiniz.<br>**Örnekler**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`  |
+
+Tanımlı izin verilenler listesi veya engellenenler listesi ayarlarından bağımsız olarak aşağıdaki sitelere her zaman izin verilir:
+- `https://*.microsoft.com/*`
+- `http://*.microsoft.com/*`
+- `https://microsoft.com/*`
+- `http://microsoft.com/*`
+- `https://*.windowsazure.com/*`
+- `https://*.microsoftonline.com/*`
+- `https://*.microsoftonline-p.com/*`
 
 ### <a name="url-formats-for-allowed-and-blocked-site-list"></a>İzin verilen ve engellenen site listesi için URL biçimleri 
 İzin verilen/Engellenen siteler listelerinizi oluşturmak için çeşitli URL biçimleri kullanabilirsiniz. Bu izin verilen desenler aşağıdaki tabloda ayrıntılı olarak verilmiştir. Başlamadan önce bazı notlar: 
@@ -301,19 +316,7 @@ Bu yazılım geçişlerine izin verilip verilmeyeceğini yapılandırmak için a
 
 |    Anahtar    |    Değer    |
 |-------------------------------------------------------------------|-------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **True** (varsayılan), Microsoft Edge 'in engellenen siteleri açmak için kullanıcıları Kişisel bağlamlarına geçişine olanak sağlar.<p>**False** , Microsoft Edge 'in kullanıcıları geçişini engeller. Kullanıcılara erişmeye çalıştıkları sitenin engellendiğini bildiren bir ileti gösterilir.    |
-
-## <a name="disable-inprivate-and-microsoft-accounts-msa-to-restrict-personal-browsing"></a>Kişisel taramayı kısıtlamak için InPrivate ve Microsoft hesaplarını (MSA) devre dışı bırakın
-Microsoft Edge kullanan son derece düzenlenen sektörlerdeki bazı müşteriler, kullanıcıların yalnızca AAD bağlamlarında gezinmelerini sağlamak isteyebilir. Microsoft hesaplarını veya InPrivate taramayı devre dışı bırakmak için aşağıdaki uygulama yapılandırma ayarlarını kullanabilirsiniz.
-
-|    Anahtar    |    Değer    |
-|-------------------------------------------------------------------|-------------------------------------------------------|
-|     `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **InPrivate** , InPrivate tarayıcıyı devre dışı bırakacak. <br> **MSA** , kullanıcıların Microsoft Edge 'e kişisel MSA hesapları ekleme yeteneğini devre dışı bırakır.<br> Hem InPrivate hem de MSA hesaplarını devre dışı bırakmak için `inprivate| msa` kullanın    |  
-
-
-Uygulama koruma Ilkelerini dağıtmadığınız takdirde, kullanıcıların Microsoft hesaplarını kullanmasını kısıtlayabilir ve yalnızca kayıtlı cihazlarda iş veya okul hesabından göz atmaya izin verebilirsiniz. Microsoft Edge için yalnızca kuruluş hesabı modunu yapılandırma anahtarları hakkında daha fazla bilgi edinebilirsiniz:
-- [Android org-yalnızca hesap](https://docs.microsoft.com/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps)
-- [iOS org-yalnızca hesaplar](https://docs.microsoft.com/intune/apps/app-configuration-policies-use-ios#allow-only-configured-organization-accounts-in-multi-identity-apps)
+|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **true** (varsayılan), Microsoft Edge 'in engellenen siteleri açmak için kullanıcıları Kişisel bağlamlarına geçişine olanak sağlar.<p>**False** , Microsoft Edge 'in kullanıcıları geçişini engeller. Kullanıcılara erişmeye çalıştıkları sitenin engellendiğini bildiren bir ileti gösterilir.    |
 
 ## <a name="open-restricted-links-directly-in-inprivate-tab-pages"></a>Kısıtlanmış bağlantıları doğrudan InPrivate sekme sayfalarında aç
 
@@ -321,7 +324,7 @@ Sınırlı bağlantıların, kullanıcılara daha sorunsuz bir gözatma deneyimi
 
 |    Anahtar    |    Değer    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked`    |    **Doğru** , kullanıcının kişisel hesabına anahtar yapmasını istemeden siteler doğrudan bir InPrivate sekmesinde otomatik olarak açılır. <p> **False** (varsayılan), siteyi Microsoft Edge içinde engeller ve kullanıcının, kendi kişisel hesabına görüntülemesi istenir.    |
+|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked`    |    **doğru** , kullanıcının kişisel hesabına anahtar yapmasını istemeden siteler doğrudan bir InPrivate sekmesinde otomatik olarak açılır. <p> **False** (varsayılan), siteyi Microsoft Edge içinde engeller ve kullanıcının, kendi kişisel hesabına görüntülemesi istenir.    |
 
 
 ## <a name="disable-microsoft-edge-features-to-customize-the-end-user-experience-for-your-organizations-needs"></a>Kuruluşunuzun ihtiyaçlarına göre son kullanıcı deneyimini özelleştirmek için Microsoft Edge özelliklerini devre dışı bırakın
@@ -350,32 +353,63 @@ Varsayılan olarak, iOS 'ta Microsoft Edge, kullanıcılarınızın parolaların
 |-----------------------|-----------------------|
 |    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **parola** , son kullanıcının parolalarının kaydedilmesini sağlayan istemleri devre dışı bırakacak.    |
 
-### <a name="disable-inprivate-browsing-and-microsoft-accounts-to-restrict-browsing-to-work-only-contexts"></a>Yalnızca iş bağlamlarına göz atmayı kısıtlamak için InPrivate Gözatma ve Microsoft hesaplarını devre dışı bırakın
+### <a name="disable-users-from-adding-extensions-to-microsoft-edge"></a>Kullanıcıların Microsoft Edge 'e uzantı eklemelerini devre dışı bırak 
 
-Kuruluşunuz yüksek düzeyde düzenlenmiş bir sektörde çalışır veya kullanıcıların Microsoft Edge ile iş kaynaklarına erişmesine izin vermek için uygulama başına VPN kullanıyorsa, Microsoft Edge 'in kullanımını yalnızca MAM korumalı bir bağlam olarak seçebilirsiniz. Bu işlevsellik yalnızca MDM 'ye kayıtlı cihazlar için verilmiştir.
+Kullanıcıların tüm uzantı uygulamalarını yüklemesini engellemek için, Microsoft Edge içindeki uzantı çerçevesini devre dışı bırakabilirsiniz. Bunu yapmak için aşağıdaki ayarı yapılandırın:
 
 |    Anahtar    |    Değer    |
 |-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **InPrivate** , InPrivate taramayı devre dışı bırakır. <br> **MSA** , kullanıcıların Microsoft Edge uygulamalarına kendi kişisel Microsoft HESAPLARıNı (MSA) eklemesini engeller. <br> Birden çok özelliği devre dışı bırakmak için değerleri `|`ayırın. Örneğin, `inprivate|msa` hem InPrivate hem de kişisel hesapların engellenmesini engeller.   |
+|    `com.microsoft.intune.mam.managedbrowser.disableExtensionFramework`    |    **true** , uzantı çerçevesini devre dışı bırakacak    |
+
+### <a name="disable-inprivate-browsing-and-microsoft-accounts-to-restrict-browsing-to-work-only-contexts"></a>Yalnızca iş bağlamlarına göz atmayı kısıtlamak için InPrivate Gözatma ve Microsoft hesaplarını devre dışı bırakın
+
+Kuruluşunuz yüksek düzeyde düzenlenmiş bir sektörde çalışır veya kullanıcıların Microsoft Edge ile iş kaynaklarına erişmesine izin vermek için uygulama başına VPN kullanıyorsa, iş dışı bir bağlam olarak kabul edilen Microsoft Edge içindeki InPrivate taramayı devre dışı bırakmayı seçebilirsiniz. 
+
+|    Anahtar    |    Değer    |
+|-----------|-------------|
+|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **InPrivate** , InPrivate taramayı devre dışı bırakır.   |
 
 ### <a name="restrict-microsoft-edge-use-to-allowed-accounts-only"></a>Microsoft Edge kullanımını izin verilen-yalnızca hesaplar olarak kısıtla
 
 InPrivate ve MSA taramayı engellemeye ek olarak, yalnızca Kullanıcı AAD hesabıyla oturum açtığında Microsoft Edge kullanımına izin verebilirsiniz. Bu özellik yalnızca MDM 'ye kayıtlı kullanıcılar için kullanılabilir. Bu ayarı yapılandırma hakkında daha fazla bilgi edinebilirsiniz:
 
-- [Android ayarı](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
-- [iOS ayarı](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
+>[!NOTE]
+> `com.microsoft.intune.mam.managedbrowser.disableFeatures`, aynı anda birden çok özelliği devre dışı bırakmak için kullanılabilir. Örneğin, hem InPrivate hem de parolayı devre dışı bırakmak için `inprivate| password`kullanın.
 
-## <a name="use-microsoft-edge-on-ios-to-access-managed-app-logs"></a>İOS üzerinde Microsoft Edge kullanarak yönetilen uygulama günlüklerine erişin
+## <a name="configure-microsoft-edge-as-a-kiosk-app-on-android-devices"></a>Android cihazlarda Microsoft Edge 'i bilgi noktası uygulaması olarak yapılandırma
 
-İOS cihazlarında Microsoft Edge yüklü olan kullanıcılar, Microsoft tarafından yayımlanan tüm uygulamaların yönetim durumunu görüntüleyebilir. Yönetilen iOS uygulamalarında sorun gidermek için günlükleri gönderebilirler. Şöyle yapılır:
+### <a name="enable-microsoft-edge-as-a-kiosk-app"></a>Bilgi noktası uygulaması olarak Microsoft Edge 'i etkinleştirin
+Microsoft Edge 'i bir bilgi noktası uygulaması olarak etkinleştirmek için önce bu üst ayarı yapılandırın:
 
-1. İOS cihazınızda Microsoft Edge 'i açın.
+|    Anahtar    |    Değer    |
+|-----------|-------------|
+|    `com.microsoft.intune.mam.managedbrowser.enableKioskMode`    |    **true** , Microsoft Edge Için bilgi noktası yapılandırmasını sunar    |
+
+### <a name="show-address-bar-in-kiosk-mode"></a>Adres çubuğunu bilgi noktası modunda göster
+Bilgi noktası modundayken Microsoft Edge içinde adres çubuğunu göstermek için aşağıdaki ayarı yapılandırın:
+
+|    Anahtar    |    Değer    |
+|-----------|-------------|
+|    `com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode`    |    **doğru** adres çubuğunu gösterir. <br> **false** (varsayılan) adres çubuğunu gizler.    |
+
+### <a name="show-bottom-action-bar-in-kiosk-mode"></a>Alt eylem çubuğunu bilgi noktası modunda göster
+|    Anahtar    |    Değer    |
+|-----------|-------------|
+|    `com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode`    |    **doğru** , Microsoft Edge içindeki alt eylem çubuğunu gösterir. <br> **false** (varsayılan) alt çubuğu gizler.    |
+
+
+## <a name="use-microsoft-edge-to-access-managed-app-logs"></a>Microsoft Edge kullanarak yönetilen uygulama günlüklerine erişin
+
+
+Microsoft Edge 'i iOS veya Android cihazında yüklü olan kullanıcılar, Microsoft tarafından yayımlanan tüm uygulamaların yönetim durumunu görüntüleyebilir. Aşağıdaki adımları kullanarak, yönetilen iOS veya Android uygulamalarında sorun gidermeye yönelik Günlükler gönderebilirler:
+
+1. Cihazınızda Microsoft Edge 'i açın.
 2. Adres kutusuna `about:intunehelp` yazın.
 3. Microsoft Edge, sorun giderme modunu başlatır.
 
 Uygulama günlüklerinde saklanan ayarların bir listesi için, bkz. [Yönetilen Tarayıcı’da uygulama koruma günlüklerini inceleyin](app-protection-policy-settings-log.md).
 
-Android cihazlarda günlükleri görüntüleme hakkında bilgi için bkz. [e-posta ile GÜNLÜKLERI BT yöneticinize gönderme](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android).
+Android cihazlarda günlükleri görüntüleme hakkında bilgi için bkz. [e-posta ile GÜNLÜKLERI BT yöneticinize gönderme](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android).
 
 ## <a name="security-and-privacy-for-microsoft-edge"></a>Microsoft Edge için güvenlik ve Gizlilik
 
@@ -386,6 +420,15 @@ Microsoft Edge için ek güvenlik ve gizlilik konuları aşağıda verilmiştir:
 - Microsoft Edge, sitelere yalnızca doğrudan erişildiğinde erişimi engelleyebilir. Kullanıcılar, siteye erişmek için ara hizmetler (örneğin bir çeviri hizmeti) kullandıklarında erişimi engellemez.
 - Kimlik doğrulamasına izin vermek ve Intune belgelerine erişmek için * **. Microsoft.com** , izin verilenler veya engellenenler listesi ayarlarından muaf tutulur. Her zaman izin verilir.
 - Kullanıcılar, veri toplamayı kapatabilir. Microsoft, ürün ve hizmetlerini geliştirmek için Managed Browser’ın performansı ve kullanımı hakkında otomatik olarak anonim bilgiler toplar. Kullanıcılar cihazlarındaki **Kullanım Verileri** ayarını kullanarak veri toplamayı kapatabilir. Bu verilerin toplanması üzerinde denetiminiz yoktur. İOS cihazlarda, kullanıcıların ziyaret ettiği veya güvenilmeyen bir sertifikaya sahip olan Web siteleri açılamaz.
+
+## <a name="restrict-microsoft-edge-use-to-a-work-or-school-account"></a>Microsoft Edge kullanımını bir iş veya okul hesabıyla sınırlayın
+
+En büyük ve yüksek oranda düzenlenen müşterilerinin veri güvenliği ve uyumluluk ilkeleri, Microsoft 365 değerine göre önemli bir değerdir. Bazı şirketlerin kurumsal ortamlarında tüm iletişim bilgilerini yakalama gereksinimi vardır ve ayrıca cihazların yalnızca kurumsal iletişimler için kullanıldığından emin olun. Bu gereksinimleri desteklemek için iOS ve Android 'de kayıtlı cihazlarda Android için Edge, yalnızca tek bir şirket hesabının iOS ve Android için uç kapsamında sağlanmasını sağlayacak şekilde yapılandırılabilir.
+
+Aşağıdaki kuruluş izin verilen hesaplar modu ayarını yapılandırma hakkında daha fazla bilgi edinebilirsiniz:
+
+- [Android ayarı](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
+- [iOS ayarı](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

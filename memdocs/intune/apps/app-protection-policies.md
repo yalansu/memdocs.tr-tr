@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f475f6f204225e00424e08afb8c69e20e21e815
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 94916362fd9c2fd8dfdfdc3f586940d108cdabae
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326230"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083693"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Uygulama koruma ilkelerini oluşturma ve atama
 
@@ -123,7 +123,7 @@ Değişikliklerin etkisini hemen görmek için, son kullanıcının uygulama otu
     
     | Değer/seçenek | Açıklama |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Tüm cihaz türlerindeki uygulamalar için hedef | İlkenizi herhangi bir yönetim durumundaki cihazlarda uygulamalara hedeflemek için bu seçeneği kullanın. Belirli cihaz türlerindeki uygulamaları hedeflemek için **Hayır** ' ı seçin. Bilgi için bkz. [cihaz yönetim durumuna bağlı olarak hedef uygulama koruma ilkeleri](#target-app-protection-policies-based-on-device-management-state) |
+    | Tüm cihaz türlerindeki uygulamalar için hedef | İlkenizi herhangi bir yönetim durumundaki cihazlarda uygulamalara hedeflemek için bu seçeneği kullanın. Belirli cihaz türlerindeki uygulamaları hedeflemek için **Hayır** ' ı seçin. Bu ayar için ek uygulama yapılandırması gerekli olabilir. Daha fazla bilgi için bkz. [Cihaz yönetim durumuna bağlı olarak uygulama koruma ilkeleri hedefleme](#target-app-protection-policies-based-on-device-management-state). |
     |     Cihaz türleri | Bu ilkenin MDM yönetilen cihazlara veya yönetilmeyen cihazlara uygulanıp uygulanmayacağını belirtmek için bu seçeneği kullanın. İOS/ıpados uygulama ilkeleri için **yönetilmeyen** ve **yönetilen** cihazlar arasından seçim yapın. Android uygulama ilkeleri için **yönetilmeyen**, **Android Cihaz Yöneticisi**ve **Android kurumsal**' i seçin.  |
     | Genel uygulamalar | Hedeflenecek uygulamaları seçmek için **ortak uygulamaları seç** ' e tıklayın. |
     | Özel uygulamalar | Bir paket KIMLIĞINE göre hedeflemek üzere özel uygulamalar seçmek için **özel uygulamalar Seç** ' e tıklayın. |
@@ -178,10 +178,9 @@ Bu ilkeleri oluşturmak için Intune konsolundaki **uygulamalar** > **Uygulama k
 - **Android Cihaz Yöneticisi**: Android CIHAZ yönetim API 'sini kullanan Intune tarafından yönetilen cihazlar.
 - **Android Enterprise**: Android kurumsal iş profilleri veya Android kurumsal tam cihaz yönetimi kullanan Intune tarafından yönetilen cihazlar.
 
-> [!NOTE]
-> Android cihazlar, hangi cihaz türünün seçildiğine bakılmaksızın Intune Şirket Portalı uygulamasını yüklemek isteyip istecektir. Örneğin, ' Android Enterprise ' seçeneğini belirlerseniz, yönetilmeyen Android cihazlara sahip olan kullanıcılara yine de sorulur.
+Android 'de, Android cihazlar hangi cihaz türünün seçildiğine bakılmaksızın Intune Şirket Portalı uygulamasını yüklemeyi ister. Örneğin, ' Android Enterprise ' seçeneğini belirlerseniz, yönetilmeyen Android cihazlara sahip olan kullanıcılara yine de sorulur.
 
-İOS/ıpados için, Intune kayıtlı cihazlarındaki uygulamalara Uygulama koruma ilkesi (uygulama) ayarlarını hedeflemek üzere ek uygulama yapılandırma ayarları gereklidir:
+İOS/ıpados için, ' cihaz türü ' seçiminin ' yönetilmeyen ' cihazlara zorlanması için ek uygulama yapılandırma ayarları gereklidir. Bu yapılandırma, belirli bir uygulamanın yönetildiği ve uygulama ayarlarının uygulanmayacak APP Service ile iletişim kurar:
 
 - MDM ile yönetilen tüm uygulamalarda **IntuneMAMUPN** yapılandırılmalıdır. Daha fazla bilgi için bkz. [Microsoft Intune Içindeki iOS/ıpados uygulamaları arasında veri aktarımını yönetme](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - **Intunemamdeviceıd** , tüm üçüncü taraf ve Iş kolu MDM ile yönetilen uygulamalar için yapılandırılmalıdır. **IntuneMAMDeviceID**, cihaz kimliği belirtecinde yapılandırılmalıdır. Örneğin, `key=IntuneMAMDeviceID, value={{deviceID}}`. Daha fazla bilgi için bkz. [yönetilen iOS/ıpados cihazları için uygulama yapılandırma Ilkeleri ekleme](app-configuration-policies-use-ios.md).
