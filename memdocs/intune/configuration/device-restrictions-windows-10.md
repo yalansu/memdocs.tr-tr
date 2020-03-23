@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb7bce7be4742b97c2c540147d6be158a90c3660
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: de11883a852bab3b0e47153c96ad718699dcfcec
+ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526419"
+ms.lasthandoff: 03/22/2020
+ms.locfileid: "80117331"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Windows 10 (ve üzeri) cihaz ayarları
 
@@ -595,7 +595,7 @@ Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [arama ILKESI CSP](h
   - **Orta**: yetişkinlere yönelik içeriğe göre orta filtreleme. Geçerli arama sonuçları filtrelenmez.
 - **Aramada Web sonuçlarını görüntüle**: **blok**olarak ayarlandığında kullanıcılar arama yapamıyor ve web sonuçları aramada gösterilmez. **Yapılandırılmadı** (varsayılan), kullanıcıların Web 'de arama yapmasına izin verir ve sonuçlar cihazda gösterilir.
 
-## <a name="start"></a>Başlangıç
+## <a name="start"></a>Başlat
 
 Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [Başlangıç ILKESI CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start)'sini kullanır.  
 
@@ -898,6 +898,10 @@ Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [Defender Ilke CSP](
   [Defender/ThreatSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### <a name="microsoft-defender-antivirus-exclusions"></a>Microsoft Defender virüsten koruma dışlamaları
+Dışlama listelerini değiştirerek bazı dosyaları Windows Defender virüsten koruma taramalarından dışlayabilirsiniz. **Genellikle, dışlamaları uygulamanız gerekmez**. Windows Defender virüsten koruma, bilinen işletim sistemi davranışlarına ve kurumsal yönetim, veritabanı yönetimi ve diğer kurumsal senaryolar ve durumlarda kullanılanlar gibi tipik yönetim dosyalarına dayalı bir dizi otomatik dışlamaları içerir.
+
+> [!WARNING]
+> **Dışlamaları tanımlama, Windows Defender virüsten koruma tarafından sunulan korumayı düşürür**. Dışlamaları uygulamayla ilişkili riskleri her zaman değerlendirin ve yalnızca sizin emin olduğunuz dosyaları dışlayamazsınız.
 
 - **Taramaların ve gerçek zamanlı korumanın dışında tutulacak dosya ve klasörler**: dışlamalar listesine **C:\path** veya **%ProgramFiles%\yol\filename.exe** gibi bir veya daha fazla dosya ve klasör ekler. Bu dosya ve klasörler gerçek zamanlı veya zamanlanmış hiçbir taramaya katılmaz.
 - **Taramaların ve gerçek zamanlı korumanın dışında tutulacak dosya uzantıları**: dışlamalar listesine **jpg** veya **txt** gibi bir veya daha fazla dosya uzantısı ekleyin. Bu uzantılara sahip tüm dosyalar gerçek zamanlı veya zamanlanmış taramalara dahil değildir.

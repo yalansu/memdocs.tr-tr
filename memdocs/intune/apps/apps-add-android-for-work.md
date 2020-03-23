@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61509f65ba43d779c1dd2006ae9ed5e0da9ba84d
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: b6dab926a59e69f5afb6c2f40ea7e315afed49f8
+ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083406"
+ms.lasthandoff: 03/22/2020
+ms.locfileid: "80117287"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Intune ile Yönetilen Google Play uygulamalarını Android Kurumsal cihazlarına ekleme
 
@@ -33,7 +33,7 @@ Intune kiracınızı yönetilen Google Play bağlama sırasında Android kurumsa
 
 - **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** -Android kurumsal tam olarak yönetilen senaryolar için kullanılır. Bu uygulama, cihaz kayıt işlemi sırasında tam olarak yönetilen cihazlara otomatik olarak yüklenir.
 - **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** -iki öğeli doğrulama kullanırsanız hesaplarınızda oturum açmanıza yardımcı olur. Bu uygulama, cihaz kayıt işlemi sırasında tam olarak yönetilen cihazlara otomatik olarak yüklenir.
-- **[Intune şirket portalı](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** -uygulama koruma ILKELERI (uygulama) ve Android kurumsal iş profili senaryoları için kullanılır.
+- **[Intune şirket portalı](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** -uygulama koruma ILKELERI (uygulama) ve Android kurumsal iş profili senaryoları için kullanılır. Bu uygulama, cihaz kayıt işlemi sırasında tam olarak yönetilen cihazlara otomatik olarak yüklenir.
 - **[Yönetilen giriş ekranı](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** -Android kurumsal adanmış çok uygulama bilgi noktası senaryolarında kullanılır. BT yöneticileri, bu uygulamayı birden çok uygulama bilgi noktası senaryolarında kullanılacak adanmış cihazlara yüklemek için bir atama oluşturması gerekir.
 
 >[!NOTE]
@@ -197,7 +197,7 @@ Uygulamayı atadıktan sonra, hedeflediğiniz kullanıcıların cihazlarına yü
 Varsayılan olarak, Android Kurumsal tam olarak yönetilen cihazı çalışanların kuruluş tarafından onaylanmamış uygulamaları yüklemesine izin vermez. Ayrıca çalışanlar yüklü uygulamalardan hiçbirini ilkeye aykırı olarak kaldıramaz. Kullanıcıların yalnızca Yönetilen Google Play mağazasındaki onaylanmış uygulamalara erişmek yerine tüm Google Play mağazasına erişip uygulama yüklemesine izin vermek isterseniz, **Google Play Store'daki tüm uygulamalara izin ver** ayarını **İzin Ver** olarak belirleyebilirsiniz. Bu ayarla kullanıcı şirket hesabını kullanarak Google Play Store'daki tüm uygulamalara erişebilir ama satın alımlar sınırlanmış olabilir. Kullanıcıların cihaza yeni hesaplar eklemesine izin vererek sınırlı satın alma kısıtlamasını kaldırabilirsiniz. Bunu yaptığınızda son kullanıcılar kişisel hesaplarını kullanarak Google Play Store'dan uygulama satın alabilir, ayrıca uygulama için satın alımlar yapabilir. Daha fazla bilgi için bkz. [Intune kullanarak özelliklere izin vermek veya bunları kısıtlamak için Android Kurumsal cihaz ayarları](../configuration/device-restrictions-android-for-work.md). 
 
 > [!NOTE]
-> Tam olarak yönetilen cihazların eklenmesi sırasında Microsoft Intune uygulamasıyla Microsoft Authenticator uygulaması bu cihazlara gerekli uygulamalar olarak yüklenecektir. Bu uygulamaların otomatik olarak yüklenmesi, koşullu erişim desteği sağlar ve Microsoft Intune uygulama kullanıcıları uyumluluk sorunlarını görüp çözümleyebilir. 
+> Microsoft Intune uygulaması, Microsoft Authenticator uygulaması ve Şirket Portalı uygulaması, ekleme sırasında tüm tamamen yönetilen cihazlara gerekli uygulamalar olarak yüklenir. Bu uygulamaların otomatik olarak yüklenmesi, koşullu erişim desteği sağlar ve Microsoft Intune uygulama kullanıcıları uyumluluk sorunlarını görüp çözümleyebilir. 
 
 ## <a name="manage-android-enterprise-app-permissions"></a>Android Kurumsal uygulama izinlerini yönetme
 Android Kurumsal, uygulamaları Intune ile eşitlemeden ve kullanıcılarınıza atamadan önce, yönetilen Google Play web konsolunda onaylamanızı gerektirir. Android Kurumsal bu uygulamaları sessizce ve otomatik olarak kullanıcıların cihazlarına göndermenize izin verdiğinden, uygulama izinlerini tüm kullanıcılarınız adına kabul etmeniz gerekir. Kullanıcılar uygulamayı yüklediklerinde herhangi bir uygulama izni görmeyeceğinden, sizin bu izinleri anlamanız önemlidir.

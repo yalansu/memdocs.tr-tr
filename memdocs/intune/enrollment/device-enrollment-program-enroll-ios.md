@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d40c4f352d3e7b94ef6e6c2f16a28d188c4e9ad1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dec3087ea4dab1e79cf85d43bdea0d18b13f17ff
+ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325418"
+ms.lasthandoff: 03/22/2020
+ms.locfileid: "80117341"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>iOS/iPadOS cihazlarını Apple’ın Aygıt Kayıt Programı ile otomatik olarak kaydetme
 
@@ -110,7 +110,7 @@ Bir belirteç oluşturmak için Apple Business Manager veya Apple Okul Yönetici
 
    Apple portalında, cihazların listesini ve MDM sunucu atamasını görmek için **dağıtım programları** &gt; **aygıt kayıt programı** &gt; **atama geçmişini görüntüle** ' ye gidin.
 
-### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Adım 3: Bu belirteci oluşturmak için kullanılan Apple kimliğini kaydedin.
+### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>3\. Adım Bu belirteci oluşturmak için kullanılan Apple kimliğini kaydedin.
 
 [Microsoft Uç Nokta Yöneticisi Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), daha sonra başvurmak üzere Apple kimliğini sağlayın.
 
@@ -278,6 +278,10 @@ Apple ve Intune arasında eşitlemeyi ve yönetimi etkinleştirdiniz ve DEP ciha
 Bkz. [aygıt kayıt programı iOS/ıpados cihazınızı Intune 'A kaydetme](../user-help/enroll-your-device-dep-ios.md).
 
 ## <a name="renew-a-dep-token"></a>DEP belirtecini yenileme  
+
+> [!NOTE]
+> DEP belirtecinizi yıllık olarak yenilemeye ek olarak, Apple Business Manager 'da belirteç kuran kullanıcı için yönetilen Apple KIMLIĞI parolası değiştiğinde veya bu kullanıcı sizi terk ettiğinde Intune ve Apple Business Manager 'daki kayıt programı belirtecinizi yenilemeniz gerekir. Apple Business Manager kuruluşu.
+
 1. deploy.apple.com adresine gidin.  
 2. **Sunucuları Yönet** altında yenilemek istediğiniz belirteç dosyasıyla ilişkili MDM sunucunuzu seçin.
 3. **Yeni Belirteç Oluştur**’u seçin.
