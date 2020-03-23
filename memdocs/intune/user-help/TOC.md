@@ -16,6 +16,7 @@
 #### [Android cihazınızı kaydetme](enroll-device-android-company-portal.md)  
 #### [Android iş profili ile kaydolma](enroll-device-android-work-profile.md)
 #### [Microsoft Intune uygulaması ile kaydolma](enroll-device-android-microsoft-intune-app.md)
+### [Yeni cihaz yönetimi kurulumuna taşıma](move-to-new-device-management-setup.md)
 ### [Cihazınızdaki yönetilen uygulamaları kullanma](use-managed-apps-on-your-device-android.md)
 ### [Cihazınızı şifreleme](encrypt-your-device-android.md)
 ### [PIN veya parolanızı ayarlama](set-your-pin-or-password-android.md)

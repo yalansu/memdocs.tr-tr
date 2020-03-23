@@ -49,7 +49,9 @@
           href: device-rename.md
         - name: Bildirim gönderme
           href: custom-notifications.md
-        - name: Uzaktan denetimli mobil cihazlar
+        - name: Mobil cihazlara uzaktan yardım etme
+          href: remote-assist-mobile-devices.md
+        - name: Uzaktan yönetim için TeamViewer kullanma
           href: teamviewer-support.md
         - name: Cihazı eşitleme
           href: device-sync.md

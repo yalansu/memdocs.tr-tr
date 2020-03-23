@@ -265,6 +265,12 @@
               href: security-baseline-settings-defender-atp.md
             - name: Microsoft Edge temel ayarları
               href: security-baseline-settings-edge.md
+        - name: Virüsten koruma ilke ayarları
+          items:
+            - name: macOS Defender Virüsten Koruma ayarları
+              href: antivirus-microsoft-defender-settings-macos.md
+            - name: Windows 10 Microsoft Defender Virüsten Koruma ayarları
+              href: antivirus-microsoft-defender-settings-windows.md
         - name: Windows Update ayarları
           href: windows-update-settings.md
         - name: Uyumluluk ilkesi ayarları - Android
