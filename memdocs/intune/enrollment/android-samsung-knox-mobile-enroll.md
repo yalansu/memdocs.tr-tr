@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d7ec41361571647cc417dc34ad29522d50477eb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b530e4590d50190160695049e2b72f03a0384131
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325474"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233585"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Android cihazları Samsung’un Knox Mobil Kayıt özelliğini kullanarak otomatik kaydetme
 
@@ -61,7 +61,7 @@ KME kullanarak Intune’a kaydolmak için önce şu adımları izleyerek şirket
 - Bir Android MDM profili oluşturmak için Knox portalında profil türü olarak **Cihaz Yöneticisi** ' ni seçin. 
 - Bir Android kurumsal MDM profili oluşturmak için Knox portalında profil türü olarak **cihaz sahibi** ' yı seçin.  
 
-### <a name="for-android"></a>Android için
+### <a name="for-android-enterprise"></a>Android Kurumsal için
 
 | MDM Profil Alanları| Gerekli mi? | Değerler | 
 |-------------------|-----------|-------| 
@@ -78,7 +78,7 @@ KME kullanarak Intune’a kaydolmak için önce şu adımları izleyerek şirket
 
 Bu alan \* Knox portalında profil oluşturmayı tamamlamaya yönelik gerekli değildir. Ancak, Intune 'un cihazı Intune 'A başarıyla kaydedebilmesi için bu alanın doldurulması gerekir.
 
-### <a name="for-android-enterprise"></a>Android Kurumsal için
+### <a name="for-android"></a>Android için
 
 Adım adım yönergeler için, [Samsung 'In profil oluşturma](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm) yönergelerine bakın.
 

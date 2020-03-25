@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8a90ae235dc12bd9a52622c4f10458fa107683b
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 1f4d51cbd5c8bc6c82822d5e26191c01d2e1bb1d
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085849"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220158"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Windows cihazları için kaydı ayarlama
 
@@ -111,7 +111,7 @@ Kullanıcılara Windows cihazlarını nasıl kaydedeceklerini ve cihazları yön
 > [!NOTE]
 > Windows'un belirli sürümlerinde, son kullanıcıların atadığınız Windows uygulamalarını görüntüleyebilmesi için Şirket Portalı web sitesinde Microsoft Edge üzerinden erişmesi gerekir. Google Chrome, Mozilla Firefox ve Internet Explorer gibi diğer tarayıcılar bu filtreleme türünü desteklemez.
 
-Son kullanıcı kayıt talimatları için bkz. [Windows cihazınızı Intune'a kaydetme](https://docs.microsoft.com/mem/intune/user-help/windows-enrollment-company-portal). Ayrıca kullanıcılara [BT yöneticim cihazımda neleri görebilir?](https://docs.microsoft.com/mem/intune/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) sayfasındaki bilgilere göz atmalarını da söyleyebilirsiniz.
+Son kullanıcı kayıt talimatları için bkz. [Windows cihazınızı Intune'a kaydetme](../user-help/windows-enrollment-company-portal.md). Ayrıca kullanıcılara [BT yöneticim cihazımda neleri görebilir?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) sayfasındaki bilgilere göz atmalarını da söyleyebilirsiniz.
 
 >[!IMPORTANT]
 > Otomatik MDM kaydını etkinleştirmediyseniz ancak Azure AD’ye katılmış Windows 10 cihazlarınız varsa, kayıt sonrasında Intune konsolunda iki kayıt görünecektir. Azure AD’ye katılmış cihazların, aynı hesabı kullanarak **Hesaplar** > **İş veya okula erişim** ve **Bağlan**’a gitmesini sağlayarak bunu önleyebilirsiniz. 

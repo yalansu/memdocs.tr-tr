@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b01f9444cf70c447c916d3d0a550a8cf46efc28a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5cb4631b31d33e53b6ef172f142735d24a5c3cb6
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330662"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220175"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Microsoft Intune ile rol tabanlı erişim denetimi (RBAC)
 
@@ -72,10 +72,6 @@ Daha fazla yapılandırma olmadan, gruplara yerleşik roller atayabilirsiniz. Ye
 
 > [!TIP]
 > Intune, Azure AD RBAC ile denetlenen üç Azure AD uzantısını da gösterir: **Kullanıcılar**, **gruplar**ve **koşullu erişim**. Bunlara ek olarak, **Kullanıcı Hesabı Yöneticisi** yalnızca AAD kullanıcısı/grubu etkinliklerini gerçekleştirir ve Intune'daki tüm etkinlikleri gerçekleştirme izinlerinin tümüne sahip değildir. Daha fazla bilgi için bkz. [Azure AD Ile RBAC](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
-### <a name="roles-created-in-the-intune-classic-portal"></a>Klasik Intune portalında oluşturulan roller
-Yalnızca “Tam” izinlere sahip Intune **Hizmet Yöneticileri** kullanıcıları, klasik Intune portalından Azure portalında Intune’a geçirilir. Intune **hizmet yöneticileri** kullanıcılarını, Azure Portal Intune rollerine "salt okunurdur" veya "yardım masası" erişimiyle yeniden atamanız ve klasik portaldan kaldırmanız gerekir.
-> [!IMPORTANT]
-> Yöneticilerinizin Intune kullanarak bilgisayarları yönetmek için hala erişime ihtiyacı varsa, klasik portalda Intune Hizmet Yöneticisi erişimini saklamanız gerekebilir.
 
 ## <a name="role-assignments"></a>Rol atamaları
 Rol ataması şunları tanımlar:

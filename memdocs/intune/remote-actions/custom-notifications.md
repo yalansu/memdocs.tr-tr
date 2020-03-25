@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bcfe4adead40e8a38d7f84af52406af320a394
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4b79c7a9cdc740984e1ace90b37bdea8dbdc70de
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325066"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220260"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Intune 'da özel bildirimler gönderme
 
@@ -73,7 +73,6 @@ Android cihazda Şirket Portalı uygulaması açıksa, bildirim aşağıdaki ekr
 - Bir ileti oluşturmak için, önceki *izinler* bölümünde açıklandığı gibi doğru izni Içeren bir Intune rolü atanmış bir hesap kullanın. Bir kullanıcıya izin atamak için bkz. [rol atamaları](../fundamentals/role-based-access-control.md#role-assignments).
 - Özel bildirimler 50 karakterlik başlıklar ve 500 karakterlik iletilerle sınırlıdır.  
 - Intune, daha önce gönderilen özel bildirimlerin metnini kaydetmez. Bir iletiyi yeniden göndermek için bu iletiyi yeniden oluşturmanız gerekir.  
-- Yalnızca Grup için saat başına en fazla 25 ileti gönderebilirsiniz. Bu kısıtlama kiracı düzeyindedir. Bu sınırlama, ayrı cihazlara bildirim gönderilirken uygulanmaz.
 - Yalnızca Grup için saat başına en fazla 25 ileti gönderebilirsiniz. Bu kısıtlama kiracı düzeyindedir. Bu sınırlama, kişilere bildirim gönderilirken uygulanmaz.
 - Ayrı cihazlara ileti gönderirken aynı cihaza yalnızca saat başına en fazla 10 ileti gönderebilirsiniz.
 - Kullanıcılara, gruplar halinde bildirim gönderebilirsiniz. Gruplara bildirim gönderilirken, her bildirim doğrudan 25 gruba kadar hedefleyebilir. İç içe gruplar bu toplama göre sayılmaz. Bir gruba bildirim gönderilirken iletiler yalnızca gruptaki kullanıcıları hedefleyebilir ve kullanıcının kaydol, her iOS/ıpados veya Android cihazına gönderilir. Bildirim hedeflenirken gruptaki cihazlar göz ardı edilir.

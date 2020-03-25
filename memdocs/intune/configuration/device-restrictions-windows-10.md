@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/10/2020
+ms.date: 03/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de11883a852bab3b0e47153c96ad718699dcfcec
-ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
+ms.openlocfilehash: 71e8b874e50fc1300124d748dfb70963acae089b
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2020
-ms.locfileid: "80117331"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220107"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Windows 10 (ve üzeri) cihaz ayarları
 
@@ -595,7 +595,7 @@ Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [arama ILKESI CSP](h
   - **Orta**: yetişkinlere yönelik içeriğe göre orta filtreleme. Geçerli arama sonuçları filtrelenmez.
 - **Aramada Web sonuçlarını görüntüle**: **blok**olarak ayarlandığında kullanıcılar arama yapamıyor ve web sonuçları aramada gösterilmez. **Yapılandırılmadı** (varsayılan), kullanıcıların Web 'de arama yapmasına izin verir ve sonuçlar cihazda gösterilir.
 
-## <a name="start"></a>Başlat
+## <a name="start"></a>Başlangıç
 
 Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [Başlangıç ILKESI CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start)'sini kullanır.  
 
@@ -898,10 +898,11 @@ Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [Defender Ilke CSP](
   [Defender/ThreatSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### <a name="microsoft-defender-antivirus-exclusions"></a>Microsoft Defender virüsten koruma dışlamaları
-Dışlama listelerini değiştirerek bazı dosyaları Windows Defender virüsten koruma taramalarından dışlayabilirsiniz. **Genellikle, dışlamaları uygulamanız gerekmez**. Windows Defender virüsten koruma, bilinen işletim sistemi davranışlarına ve kurumsal yönetim, veritabanı yönetimi ve diğer kurumsal senaryolar ve durumlarda kullanılanlar gibi tipik yönetim dosyalarına dayalı bir dizi otomatik dışlamaları içerir.
+
+Dışlama listelerini değiştirerek, belirli dosyaları Microsoft Defender virüsten koruma taramalarından dışlayabilirsiniz. **Genellikle, dışlamaları uygulamanız gerekmez**. Microsoft Defender virüsten koruma, şirket yönetimi, veritabanı yönetimi ve diğer kurumsal senaryolar ve durumlar gibi bilinen işletim sistemi davranışlarına ve tipik yönetim dosyalarına dayalı olarak çeşitli otomatik dışlamaları içerir.
 
 > [!WARNING]
-> **Dışlamaları tanımlama, Windows Defender virüsten koruma tarafından sunulan korumayı düşürür**. Dışlamaları uygulamayla ilişkili riskleri her zaman değerlendirin ve yalnızca sizin emin olduğunuz dosyaları dışlayamazsınız.
+> **Dışlamaları tanımlama, Microsoft Defender virüsten koruma tarafından sunulan korumayı düşürür**. Dışlamaları uygulamayla ilişkili riskleri her zaman değerlendirin. Yalnızca kötü amaçlı olmayan bildiğiniz dosyaları hariç tutun.
 
 - **Taramaların ve gerçek zamanlı korumanın dışında tutulacak dosya ve klasörler**: dışlamalar listesine **C:\path** veya **%ProgramFiles%\yol\filename.exe** gibi bir veya daha fazla dosya ve klasör ekler. Bu dosya ve klasörler gerçek zamanlı veya zamanlanmış hiçbir taramaya katılmaz.
 - **Taramaların ve gerçek zamanlı korumanın dışında tutulacak dosya uzantıları**: dışlamalar listesine **jpg** veya **txt** gibi bir veya daha fazla dosya uzantısı ekleyin. Bu uzantılara sahip tüm dosyalar gerçek zamanlı veya zamanlanmış taramalara dahil değildir.

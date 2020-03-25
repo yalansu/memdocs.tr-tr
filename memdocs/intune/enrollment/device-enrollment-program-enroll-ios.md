@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dec3087ea4dab1e79cf85d43bdea0d18b13f17ff
-ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
+ms.openlocfilehash: af4dce0d2bb7ef150d5332a9c58357513425cf50
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2020
-ms.locfileid: "80117341"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220209"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>iOS/iPadOS cihazlarını Apple’ın Aygıt Kayıt Programı ile otomatik olarak kaydetme
 
@@ -110,7 +110,7 @@ Bir belirteç oluşturmak için Apple Business Manager veya Apple Okul Yönetici
 
    Apple portalında, cihazların listesini ve MDM sunucu atamasını görmek için **dağıtım programları** &gt; **aygıt kayıt programı** &gt; **atama geçmişini görüntüle** ' ye gidin.
 
-### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>3\. Adım Bu belirteci oluşturmak için kullanılan Apple kimliğini kaydedin.
+### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Adım 3: Bu belirteci oluşturmak için kullanılan Apple kimliğini kaydedin.
 
 [Microsoft Uç Nokta Yöneticisi Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), daha sonra başvurmak üzere Apple kimliğini sağlayın.
 
@@ -194,6 +194,9 @@ Belirtecinizi yüklediğinize göre, DEP cihazları için kayıt profili oluştu
 10. Bu profili kullanan cihazlarda kilitli kayıt isteyip istemediğinizi seçin. **Kilitli kayıt** , yönetim profilinin **Ayarlar** menüsünden kaldırılmasına Izin veren iOS/ıpados ayarlarını devre dışı bırakır. Cihazı kaydettikten sonra cihazı silmeden bu ayarı değiştiremezsiniz. Bu cihazlarda **Denetimli** Yönetim Modu *Evet* olarak ayarlı olmalıdır. 
 
 11. Bu profili kullanan cihazların **Bilgisayarlarla eşitleme** imkanının olup olmayacağını seçin. **Sertifikaya göre Apple Configurator’a izin ver**’i seçerseniz, **Apple Configurator Sertifikaları**’nın altında bir sertifika seçmeniz gerekir.
+
+     > [!NOTE]
+     > **Bilgisayarlarla eşitleme** , **Tümünü Reddet**olarak ayarlandıysa, bağlantı noktası iOS ve ıpados cihazlarında sınırlı olur. Bağlantı noktası yalnızca dolduruluyor ve başka hiçbir şey için kullanılabilir. Bağlantı noktasının iTunes veya Apple Configurator 'ı kullanmasını engellenecektir.
 
 12. Önceki adımda **Sertifikaya göre Apple Configurator’a izin ver**’i seçtiyseniz içeri aktaracak bir Apple Configurator Sertifikası seçin.
 

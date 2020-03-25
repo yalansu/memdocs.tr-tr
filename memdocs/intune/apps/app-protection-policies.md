@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94916362fd9c2fd8dfdfdc3f586940d108cdabae
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 4b8de67a77b2122c5db4dddbb82a4966c20e1936
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083693"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233502"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Uygulama koruma ilkelerini oluşturma ve atama
 
@@ -58,7 +58,7 @@ Kuruluşunuzun iş kolu (LOB) uygulamalarını uygulama koruma ilkelerine hazır
 
     **Platform** değeri, yukarıdaki seçeneğe göre ayarlanır.
 
-    ![İlke oluştur bölmesinin temel bilgiler sayfasının ekran görüntüsü](/media/app-protection-policies/app-protection-add-policies-01.png)
+    ![İlke oluştur bölmesinin temel bilgiler sayfasının ekran görüntüsü](./media/app-protection-policies/app-protection-add-policies-01.png)
 
 5. **İleri** ' ye tıklayarak **uygulamalar** sayfasını görüntüleyin.<br>
     **Uygulamalar** sayfası, bu ilkeyi farklı cihazlardaki uygulamalara nasıl uygulamak istediğinizi seçmenizi sağlar. En az bir uygulama eklemeniz gerekir.<p>

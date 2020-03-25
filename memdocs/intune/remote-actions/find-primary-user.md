@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16b0a07837eee0f44a1f66fe9751e578b5475734
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 06d5e2163303b9766d41bcb0bd7581dc41bf6980
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526402"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219835"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Intune cihazının birincil kullanıcısını bulma
 
@@ -43,8 +43,11 @@ Bir cihazın birincil kullanıcısı, Azure AD 'ye katılmış veya hibrit Azure
 3. Yeni bir kullanıcı seçin ve **Seç**' i seçin.
 
 Birincil Kullanıcı güncelleştirildikten sonra Intune ve Azure AD cihaz Blade ' de de güncelleştirilir.
-
-Birincil Kullanıcı, ortak yönetilen Windows 10 cihazlarında değiştirilemez.
+>[!NOTE]
+>1. Endpoint Manager ve Azure AD arasında birincil Kullanıcı güncelleştirmelerinin yansıtılması 10 dakika kadar sürebilir.
+>2. Birincil Kullanıcı şu anda ortak yönetilen Windows 10 cihazlarında değiştirilemez. 
+>3. Cihazın birincil kullanıcısını değiştirmek, "Administrators" yerel grubundan Kullanıcı ekleme veya kaldırma gibi yerel grup üyeliğinde değişiklik yapmaz
+>4. Birincil Kullanıcı değiştirildiğinde "Kullanıcı tarafından kaydedildi" kullanıcısı değişmez. 
 
 
 ## <a name="what-is-the-primary-user"></a>Birincil Kullanıcı nedir?

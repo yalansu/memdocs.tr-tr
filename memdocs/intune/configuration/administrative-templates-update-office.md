@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/17/2019
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 235fabd5f184117e680c44b87e5eab4334596e1c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: fcf2139019b1f4d764b55ee31f5961711a71834c
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083888"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219886"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Microsoft Intune Yönetim Şablonları ile Office 365 güncelleştirmek için kanalı güncelleştirme ve hedef sürüm ayarlarını kullanın
 
@@ -39,13 +39,15 @@ Uygulama alanı:
 
 Office uygulamalarınız için [Office365 ProPlus otomatik güncelleştirmelerini](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus) etkinleştirdiğinizden emin olun. Bunu Grup İlkesi veya Intune Office 2016 ADMX şablonu kullanarak yapabilirsiniz:
 
-![Intune yönetim şablonunda, Office için otomatik güncelleştirmeleri etkinleştir ayarını ayarlayın](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
+> [!div class="mx-imgBorder"]
+> Intune yönetim şablonunda ![, Office için otomatik güncelleştirmeleri etkinleştir ayarını ayarlayın](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
 
 ## <a name="set-the-update-channel-in-the-intune-administrative-template"></a>Intune yönetim şablonunda güncelleştirme kanalını ayarlama
 
-1. [Intune yönetim şablonunuzda](administrative-templates-windows.md#create-a-template), **kanalı Güncelleştir** ayarına gidin ve istediğiniz kanalı girin. Örneğin `Semi-Annual Channel`seçin:
+1. [Intune yönetim şablonunuzda](administrative-templates-windows.md#create-the-template), **kanalı Güncelleştir** ayarına gidin ve istediğiniz kanalı girin. Örneğin `Semi-Annual Channel`seçin:
 
-    ![Intune yönetim şablonunda, Office için güncelleştirme kanalı ayarını ayarlayın](./media/administrative-templates-update-office/admx-enable-update-channel-setting.png)
+    > [!div class="mx-imgBorder"]
+    > Intune yönetim şablonunda ![, Office için güncelleştirme kanalı ayarını ayarlayın](./media/administrative-templates-update-office/admx-enable-update-channel-setting.png)
 
     > [!NOTE]
     > Daha sık güncelleştirmeniz önerilir. Yarı yıllık yalnızca örnek olarak kullanılır.
@@ -72,7 +74,8 @@ Office uygulamalarınız için [Office365 ProPlus otomatik güncelleştirmelerin
 
     Aşağıdaki örneğe bakarak `<enabled /><data id="L_UpdateBranchID" value="Deferred" />`şuna benzer bir değer `L_UpdateBranch` görürsünüz. Bu değer, yarı yıllık kanal olarak ayarlanan anlamına gelir:
 
-    ![Yönetim şablonu L_Updatebranch kayıt defteri anahtarı örneği](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
+    > [!div class="mx-imgBorder"]
+    > ![yönetim şablonu L_Updatebranch kayıt defteri anahtarı örneği](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
     > [Office 365 ProPlus](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) 'ı, değerleri Configuration Manager listeler ve bunların ne anlama geldiğini yönetin. Kayıt defteri değerleri, seçilen dağıtım kanalını temel alır:
@@ -99,7 +102,8 @@ Bu noktada, Intune ilkesi cihaza başarıyla uygulandı.
 
     Aşağıdaki örneğe **bakarak, `UpdateChannel`** `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`olarak ayarlandığını görürsünüz:
 
-    ![Yönetim şablonu Office UpdateChannel kayıt defteri anahtarı örneği](./media/administrative-templates-update-office/admx-update-channel-office-registry-key.png)
+    > [!div class="mx-imgBorder"]
+    > ![yönetim şablonu Office UpdateChannel kayıt defteri anahtarı örneği](./media/administrative-templates-update-office/admx-update-channel-office-registry-key.png)
 
     Bu örnek, kısmen **yıllık**değil, hala **aylık**olarak ayarlandığı için ilkenin henüz uygulanmadığı anlamına gelir.
 
@@ -120,7 +124,8 @@ Bu kayıt defteri anahtarı, **Görev Zamanlayıcı** > **Office otomatik günce
     2. **Görev Zamanlayıcı kitaplığı** > **Microsoft** > **Office**' i genişletin.
     3. **Office otomatik güncelleştirmeler 2,0** > **Çalıştır**' ı seçin:
 
-        ![Görev zamanlamasını açın ve Office otomatik güncelleştirmelerini çalıştırın](./media/administrative-templates-update-office/admx-task-scheduler-office-automatic-updates.png)
+        > [!div class="mx-imgBorder"]
+        > ![görev zamanlamasını açın ve Office otomatik güncelleştirmelerini çalıştırın](./media/administrative-templates-update-office/admx-task-scheduler-office-automatic-updates.png)
 
         Görevin bitmesini bekleyin, bu işlem birkaç dakika sürebilir.
 
@@ -138,11 +143,12 @@ Daha fazlasını yapmak istiyorsanız, Office 'i en son sürüm güncelleştirme
 
 1. Office sürümünün tercih ettiğiniz güncelleştirme kanalını desteklediğini onaylayın. [Office 365 ProPlus Için güncelleştirme geçmişi](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date) , farklı güncelleştirme kanallarını destekleyen yapı numaralarını listeler.
 
-2. [Intune yönetim şablonunuzda](administrative-templates-windows.md#create-a-template), **hedef sürüm** ayarına gidin ve istediğiniz sürümü girin.
+2. [Intune yönetim şablonunuzda](administrative-templates-windows.md#create-the-template), **hedef sürüm** ayarına gidin ve istediğiniz sürümü girin.
 
     **Hedef sürüm** ayarınız aşağıdaki ayara benzer şekilde görünür:
 
-    ![Intune yönetim şablonunda, Office için hedef sürüm ayarını ayarlayın](./media/administrative-templates-update-office/admx-enable-target-version-setting.png)
+    > [!div class="mx-imgBorder"]
+    > Intune yönetim şablonunda ![, Office](./media/administrative-templates-update-office/admx-enable-target-version-setting.png) için hedef sürüm ayarını ayarlayın
 
 > [!IMPORTANT]
 >
@@ -167,7 +173,8 @@ Daha fazlasını yapmak istiyorsanız, Office 'i en son sürüm güncelleştirme
       1. Cihazda `C:\Program Files (x86)\Microsoft Office\Updates\Detection\Version`' a gidin.
       2. `VersionDescriptor.xml` dosyasını açın ve `<Version>` bölümüne gidin. Kullanılabilir sürüm, Intune ilkesinde girdiğiniz sürümle aynı olmalıdır, örneğin:
 
-          ![Sürüm tanımlayıcısı Office XML dosyasındaki sürüm bölümünü denetleyin](./media/administrative-templates-update-office/office-version-descriptor-xml-example.png)
+          > [!div class="mx-imgBorder"]
+          > ![sürüm tanımlayıcısı Office XML dosyasındaki sürüm bölümünü denetleyin](./media/administrative-templates-update-office/office-version-descriptor-xml-example.png)
 
 4. Güncelleştirme yüklendikten sonra Office uygulaması yeni sürümü (örneğin, **Hesap** menüsünde) göstermelidir
 

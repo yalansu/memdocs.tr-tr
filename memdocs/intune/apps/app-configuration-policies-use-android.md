@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d16d85beea637cf1e756e5068c0ed8d0106b2902
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 691da0c74ceddb34a48bfdf01e19dadaed444e45
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083621"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233465"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Yönetilen Android Kurumsal cihazları için uygulama yapılandırma ilkeleri ekleme
 
@@ -103,15 +103,18 @@ Yapılandırma değeri olarak değişken seçerseniz şunlar arasından seçim y
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Çok kimlikli uygulamalarda yalnızca yapılandırılmış kuruluş hesaplarına izin verme 
 
-Android cihazlarda aşağıdaki anahtar/değer çiftlerini kullanın:
+Microsoft Intune Yöneticisi olarak, yönetilen cihazlarda hangi kullanıcı hesaplarının Microsoft uygulamalarına ekleneceğini denetleyebilirsiniz. Erişimi yalnızca izin verilen kullanıcı hesaplarıyla sınırlayabilecek ve kayıtlı cihazlarda kişisel hesapları engelleyebilirsiniz. Android cihazlarda aşağıdaki anahtar/değer çiftlerini kullanın:
 
 | **Anahtar** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|
 | **Değerler** | <ul><li>Bir veya daha fazla <code>;</code> ile sınırlandırılmış UPN.</li><li>Yalnızca bu anahtar ile tanımlanan yönetilen kullanıcı hesaplarına izin verilir.</li><li> Intune'a kayıtlı cihazlar için <code>{{userprincipalname}}</code> belirteci kayıtlı kullanıcı hesabını temsil etmek için kullanılabilir.</li></ul> |
 
    > [!NOTE]
-   > Yalnızca birden çok kimliği olan yapılandırılmış kuruluş hesaplarına izin verirken Android 2.2.222 ve üzeri, Office, Word, Excel, Android for Android 16.0.9327.1000 ve üzeri ya da OneDrive for Android 5,28 ve üzeri için Outlook 'U kullanmanız gerekir.<p></p>
-   > Microsoft Intune Yöneticisi olarak, yönetilen cihazlarda Microsoft Office uygulamalarına hangi kullanıcı hesaplarının ekleneceğini denetleyebilirsiniz. Erişimi yalnızca izin verilen kullanıcı hesaplarıyla sınırlayabilecek ve kayıtlı cihazlarda kişisel hesapları engelleyebilirsiniz. Destekleyen uygulamalar, uygulama yapılandırmasını işler ve onaylanmamış hesapları kaldırıp engeller.<p></p>
+   > Aşağıdaki uygulamalar, yukarıdaki uygulama yapılandırmasını işler ve yalnızca kuruluş hesaplarına izin verir:
+   > - Android için Edge (42.0.4.4048 ve üzeri)
+   > - Office, Word, Excel, Android için PowerPoint (16.0.9327.1000 ve üzeri)
+   > - Android için OneDrive (5,28 ve üzeri)
+   > - Android için Outlook (2.2.222 ve üzeri)
 
 ## <a name="enter-json-data"></a>JSON verilerini girin
 

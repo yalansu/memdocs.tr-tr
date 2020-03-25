@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c567cdeb6cd4e91d40068ba642be4f3838e41d3f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c8fce5e8d7a92922d6061c33655bc4e83b3a1a95
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330106"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233486"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune, cihazlarınız için MDM ve MAM sağlayıcısıdır
 
@@ -107,7 +107,7 @@ Intune, [kamu](https://docs.microsoft.com/enterprise-mobility-security/solutions
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Intune 'un çözmesine yardımcı olduğu yaygın iş sorunlarından](https://docs.microsoft.com/intune/common-scenarios)bazılarını okuyun.
+- [Intune 'un çözmesine yardımcı olduğu yaygın iş sorunlarından](common-scenarios.md)bazılarını okuyun.
 - [Intune 'un 30 günlük deneme sürümü](free-trial-sign-up.md)ile başlayın.
 - [Intune 'a geçişinizi](migration-guide.md)planlayın.
 - Ücretsiz deneme sürümünüzü veya aboneliğinizi kullanarak, [hızlı başlangıç: iOS için bir e-posta cihaz profili oluşturun](../configuration/quickstart-email-profile.md).

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3712fbf575c8afc049c43f59a561c2651a9130e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 5d8ff51b8b20c5f6505cb341f666ce043b086b3b
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085231"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220192"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune yenilikler nelerdir?
 
@@ -66,7 +66,7 @@ MacOS ve iOS Şirket Portalı profil bölmesi, oturum kapatma düğmesini içere
 #### <a name="retarget-web-clips-to-microsoft-edge-on-ios-devices---5455276-----"></a>Web kliplerini iOS cihazlarında Microsoft Edge 'e yeniden hedefle<!-- 5455276   -->
 Korunan bir tarayıcıda açılması gereken iOS cihazlarında yeni dağıtılan web klipleri (sabitlenmiş Web uygulamaları) Intune Managed Browser yerine Microsoft Edge 'de açılır. Managed Browser yerine Microsoft Edge 'de açıldıklarından emin olmak için önceden mevcut web kliplerini yeniden hedeflemeniz gerekir. Daha fazla bilgi için bkz. [Microsoft Edge kullanarak Web erişimini yönetme Microsoft Intune](../apps/manage-microsoft-edge.md) ve [Microsoft Intune Web uygulamaları ekleme](../apps/web-app.md).
 
-#### <a name="use-the-intune-diagnostic-tool-with-microsoft-edge-for-android---473544----"></a>Android için Microsoft Edge ile Intune Tanılama aracını kullanma<!-- 473544  -->
+#### <a name="use-the-intune-diagnostic-tool-with-microsoft-edge-for-android---4735244----"></a>Android için Microsoft Edge ile Intune Tanılama aracını kullanma<!-- 4735244  -->
 Android için Microsoft Edge artık Intune Tanılama aracı ile tümleşiktir. İOS için Microsoft Edge deneyiminden benzer şekilde, cihazdaki Microsoft Edge 'in URL çubuğuna "about: ıntunehelp" girilmesi, Intune Tanılama aracını başlatacak. Bu araç ayrıntılı Günlükler sağlar. Kullanıcılar bu günlükleri kendi BT departmanlarına toplayıp göndermek veya belirli uygulamalar için MAM günlüklerini görüntülemek için Kılavuzlu olabilir.
 
 #### <a name="updates-to-intune-branding-and-customization---5236032----"></a>Intune marka ve özelleştirme güncelleştirmeleri<!-- 5236032  -->
@@ -89,6 +89,12 @@ Bu değişiklikler, Intune hizmet arka ucu dağıttığı için Mart ayının he
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Cihaz yapılandırması
 
+#### <a name="new-user-experience-when-creating-administrative-templates-on-windows-devices--5096036---"></a>Windows cihazlarında Yönetim Şablonları oluştururken yeni kullanıcı deneyimi<!--5096036 -->
+Müşteri geri bildirimlerine göre ve yeni Azure tam ekran deneyimine geçtiğimiz için, Yönetim Şablonları profili deneyimini bir klasör görünümüyle yeniden oluşturduk. Herhangi bir ayarlarda veya mevcut profillerde değişiklik yapmadık. Bu nedenle, mevcut profilleriniz aynı kalır ve yeni görünümde kullanılabilir. **Tüm ayarlar ' ı**seçip ara ' yı kullanarak tüm ayarlar seçeneklerinde gezinmeye devam edebilirsiniz. Ağaç görünümü bilgisayar ve Kullanıcı yapılandırmalarına göre bölünür. Windows, Office ve Edge ayarlarını ilişkili klasörlerinde bulacaksınız.  
+
+Uygulama alanı:
+- Windows 10 ve üzeri
+
 #### <a name="vpn-profiles-with-ikev2-vpn-connections-can-use-always-on-with-iosipados-devices---1947932-----"></a>IKEv2 VPN bağlantılarına sahip VPN profilleri, her zaman iOS/ıpados cihazlarıyla birlikte kullanılabilir<!-- 1947932   -->
 İOS/ıpados cihazlarında, Ikev2 bağlantısı kullanan bir VPN profili oluşturabilirsiniz (**cihaz** > **yapılandırma profilleri** > profil **oluşturma** > **iOS/ıpados** , profil türü için > **VPN** ). Şimdi, Ikev2 ile her zaman açık yapılandırma yapabilirsiniz. Yapılandırıldığında, IKEv2 VPN profilleri otomatik olarak bağlanır ve VPN 'ye bağlı (veya hızlı bir şekilde yeniden bağlantı) kalır. Ağlar arasında hareket etmekle veya cihazları yeniden başlatırken bile bağlı kalır.
 
@@ -104,10 +110,10 @@ Android kurumsal cihazlarda, OEMConfig **profilleri oluşturun ve** güncelleşt
 
 OEMConfig profilleri hakkında daha fazla bilgi için bkz. [Microsoft Intune 'de oemconfig Ile Android Kurumsal cihazları kullanma ve yönetme](../configuration/android-oem-configuration-overview.md).
 
-Bu özellik şu platformlarda geçerlidir:
+Uygulama alanı:
 - Android Kurumsal
 
-#### <a name="configure-the-iosipados-microsoft-azure-ad-sso-app-extension---567534-----"></a>İOS/ıpados Microsoft Azure AD SSO uygulama uzantısını yapılandırma<!-- 567534   -->
+#### <a name="configure-the-iosipados-microsoft-azure-ad-sso-app-extension---5672534-----"></a>İOS/ıpados Microsoft Azure AD SSO uygulama uzantısını yapılandırma<!-- 5672534   -->
 Microsoft Azure AD ekibi, iOS/ıpados 13.0 + kullanıcılarına tek bir oturum açma ile Microsoft uygulamalarına ve Web sitelerine erişim elde etmesine izin vermek için bir yeniden yönlendirme çoklu oturum açma (SSO) uygulama uzantısı oluşturdu. Daha önce Microsoft Authenticator uygulama ile aracılı kimlik doğrulaması yapmış olan tüm uygulamalar, yeni SSO uzantısıyla SSO almaya devam edecektir. Azure AD SSO uygulama uzantısı sürümü sayesinde, SSO uzantısını yeniden yönlendirme **SSO uygulama uzantısı**türü (**cihazlar** > **yapılandırma profilleri** > profil **oluşturma** > **iOS/IPA> > DOS** ) ile yapılandırabilirsiniz. **Device features**
 
 Uygulama alanı:
@@ -138,7 +144,7 @@ Uyumsuz cihazlara ekleyebileceğiniz uyumlu olmayan cihazlar için, [uyumsuz cih
 
 Yeni kurumsal seçenekler, iOS için temel bir Wi-Fi profili için kullanılabilir olanlar gibidir.
 
-#### <a name="new-user-experience-for-certificate-profiles---5615208-----"></a>Sertifika profilleri için yeni kullanıcı deneyimi<!-- 5615208   -->
+#### <a name="new-user-experience-for-certificate-email-vpn-and-wi-fi-vpn-profiles---5615208-----"></a>Sertifika, e-posta, VPN ve Wi-Fi, VPN profilleri için yeni kullanıcı deneyimi<!-- 5615208   -->
 Aşağıdaki profil türlerini oluşturmak ve değiştirmek için uç nokta yönetimi Yönetim Merkezi 'ndeki (**cihazlar** > **yapılandırma profilleri** > **profil oluşturma**) [Kullanıcı deneyimini](../configuration/device-profile-create.md) güncelleştirdik. Yeni deneyim, daha önce olduğu gibi aynı ayarları sunar, ancak çok yatay kaydırma gerektirmeyen sihirbaza benzer bir deneyim kullanır. Mevcut konfigürasyonları yeni deneyimle değiştirmeniz gerekmez.
 
 - Türetilmiş kimlik bilgileri
