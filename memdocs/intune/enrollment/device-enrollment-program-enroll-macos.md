@@ -18,16 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 427907b3b24556be15958707bf55f4dc9b190d94
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0bfd781740459821c6f0d65b3f5f1e12e0fc6b08
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332938"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256751"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>MacOS cihazlarını Apple Business Manager veya Apple Okul Yöneticisi ile otomatik olarak kaydetme
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+> [!IMPORTANT]
+> Apple, Apple Aygıt Kayıt Programı (DEP) ile Apple otomatik cihaz kaydı (ADE) arasında son zamanlarda değiştirilmiştir. Intune, Intune kullanıcı arabirimini bunu yansıtacak şekilde güncelleştirme sürecinden oluşur. Bu değişiklikler tamamlanana kadar, Intune portalında *aygıt kayıt programı* görmeye devam edersiniz. Gösterildiği her yerde, artık otomatik cihaz kaydını kullanır.
 
 Apple [Apple Business Manager](https://business.apple.com/) veya [Apple Okul Yöneticisi](https://school.apple.com/)aracılığıyla satın alınan MacOS cihazları için Intune kaydını ayarlayabilirsiniz. Bu kayıtlardan birini kullanarak cihazlara hiç dokunmadan çok sayıda cihazı ayarlayabilirsiniz. macOS cihazlarını doğrudan kullanıcılara gönderebilirsiniz. Kullanıcı cihazı açtığında, önceden yapılandırılmış ayarları ile Kurulum Yardımcısı çalıştırılır ve cihaz Intune yönetimine kaydedilir.
 
@@ -50,9 +51,9 @@ Apple Business Manager kaydı veya Apple Okul Yöneticisi, [cihaz kayıt yöneti
 - [MDM Yetkilisi](../fundamentals/mdm-authority-set.md)
 - [Apple MDM Anında İletme sertifikası](../enrollment/apple-mdm-push-certificate-get.md)
 
-## <a name="get-an-apple-dep-token"></a>Bir Apple DEP belirteci alma
+## <a name="get-an-apple-ade-token"></a>Apple ADE belirteci al
 
-macOS cihazlarını DEP veya Apple School Manager ile kaydedebilmeniz için bir Apple DEP belirteci dosyasına (.p7m) ihtiyacınız vardır. Bu belirteç, Intune'un kuruluşunuza ait olan cihazlar hakkındaki bilgileri eşitlemesini sağlar. Ayrıca Intune'un kayıt profillerini Apple’a yüklemesini ve bu profilleri cihazlara atamasını da sağlar.
+MacOS cihazlarını ADE veya Apple Okul Yöneticisi ile kaydedebilmek için Apple 'dan bir belirteç (. p7m) dosyası gerekir. Bu belirteç, Intune'un kuruluşunuza ait olan cihazlar hakkındaki bilgileri eşitlemesini sağlar. Ayrıca Intune'un kayıt profillerini Apple’a yüklemesini ve bu profilleri cihazlara atamasını da sağlar.
 
 Belirteci oluşturmak için Apple portalını kullanabilirsiniz. Cihazları yönetim için Intune’a atamak için de Apple portalını kullanabilirsiniz.
 
@@ -115,7 +116,7 @@ Belirtecinizi yüklediğinize göre, cihazlar için kayıt profili oluşturabili
 4. **Platform** olarak **macOS** seçin.
 
 5. **Kullanıcı Benzeşimi** için bu profile sahip cihazların atanan kullanıcıyla mı yoksa atanan kullanıcı olmadan mı kaydedilmesi gerektiğini seçin.
-    - **Kullanıcı Benzeşimi ile kaydet** - Uygulamaları yükleme gibi hizmetler için Şirket Portalı uygulamasını kullanmak isteyen kullanıcılara ait cihazlar için bu seçeneği belirtin. ADFS kullanılıyorsa kullanıcı benzeşimi, [WS-Trust 1.3 Kullanıcı adı/Karma uç noktası](https://technet.microsoft.com/library/adfs2-help-endpoints) gerektirir. [Daha fazla bilgi](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint). Kullanıcı benzeşimi olan macOS DEP cihazlarında çok faktörlü kimlik doğrulaması desteklenmez.
+    - **Kullanıcı Benzeşimi ile kaydet** - Uygulamaları yükleme gibi hizmetler için Şirket Portalı uygulamasını kullanmak isteyen kullanıcılara ait cihazlar için bu seçeneği belirtin. ADFS kullanılıyorsa kullanıcı benzeşimi, [WS-Trust 1.3 Kullanıcı adı/Karma uç noktası](https://technet.microsoft.com/library/adfs2-help-endpoints) gerektirir. [Daha fazla bilgi edinin](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint). Çok faktörlü kimlik doğrulaması, Kullanıcı benzeşimi olan macOS ADE cihazları için desteklenmez.
 
     - **Kullanıcı Benzeşimi Olmadan Kaydetme** - Tek bir kullanıcıyla bağlantılı olmayan cihazlar için bu seçeneği seçin. Yerel kullanıcı verilerine erişmeden görevleri yerine getiren cihazlar için bunu kullanın. Şirket Portalı uygulaması gibi uygulamalar çalışmaz.
 
@@ -168,7 +169,7 @@ Artık Intune’a cihazlarınızı yönetme izni verildiğine göre, yönetilen 
 1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **macos** > **MacOS kaydı** > **kayıt programı belirteçleri** ' ni seçin > > **cihazlarda** bir belirteç seçin > cihazlar **.** Kayıt programı cihazları düğümünün seçili ve eşitleme bağlantısının seçildiği ![ekran görüntüsü.](./media/device-enrollment-program-enroll-macos/image06.png)
 
    Intune, Apple’ın kabul edilebilir kayıt programı trafiği şartlarına uymak için aşağıdaki kısıtlamaları getirir:
-   - Tam eşitleme en sık yedi günde bir çalıştırılabilir. Tam eşitleme sırasında Intune, Intune’a bağlı Apple MDM sunucusuna atanan seri numaraların tam güncelleştirilmiş bir listesini alır. Bir Kayıt Programı cihazı, cihaz ataması DEP portalında Apple MDM sunucusundan kaldırılmadan Intune portalından silinirse, tam eşitleme çalıştırılana kadar Intune’a tekrar içeri aktarılmaz.   
+   - Tam eşitleme en sık yedi günde bir çalıştırılabilir. Tam eşitleme sırasında Intune, Intune’a bağlı Apple MDM sunucusuna atanan seri numaraların tam güncelleştirilmiş bir listesini alır. Bir kayıt programı cihazının Apple portalında Apple MDM sunucusundan atanmamış olması gerekmeden, Intune portalından silindikten sonra, tam eşitleme çalıştırılıncaya kadar Intune 'a yeniden içeri aktarılmaz.   
    - Eşitleme 24 saatte bir otomatik olarak çalıştırılır. **Eşitle** düğmesine basarak da eşitleyebilirsiniz (en fazla 15 dakikada bir kez). Tüm eşitleme isteklerinin tamamlanması için 15 dakika verilir. Eşitleme tamamlanana kadar **Eşitle** düğmesi devre dışı kalır. Bu eşitleme, mevcut aygıt durumunu yeniler ve Apple MDM sunucusuna atanan yeni cihazları içeri aktarır.
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>Cihazlara kayıt profili atama
@@ -190,7 +191,7 @@ Belirli bir belirteçle kaydolan tüm cihazlara uygulanacak olan varsayılan mac
 
 Apple ve Intune arasında eşitlemeyi ve yönetimi etkinleştirdiniz ve cihazlarınızın kaydolmasına izin vermek için bir profil atadınız. Artık cihazları kullanıcılara dağıtabilirsiniz. Kullanıcı benzeşimli cihazlar, her kullanıcıya bir Intune lisansı atanmasını gerektirir. Kullanıcı benzeşimi olmayan cihazlar, cihaz lisansı gerektirir. Etkinleştirilmiş bir cihaz, silinene kadar bir kayıt profili uygulayamaz.
 
-## <a name="renew-a-dep-token"></a>DEP belirtecini yenileme
+## <a name="renew-an-ade-token"></a>Bir ADE belirtecini yenileme
 
 1. deploy.apple.com adresine gidin.  
 2. **Sunucuları Yönet** altında yenilemek istediğiniz belirteç dosyasıyla ilişkili MDM sunucunuzu seçin.

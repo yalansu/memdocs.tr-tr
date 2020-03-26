@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1598be8f5f54f1f509194aed0232730bd821624b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: efd9b064e4ca6c3c375be227af7414544f4692a9
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330874"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80275008"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Yönetim nesnelerinin koleksiyonlarını gruplamak için ilke kümelerini kullanma
 
@@ -63,7 +63,7 @@ Bir ilke kümesi oluşturduğunuzda, tek bir atama birimi oluşturur ve farklı 
     - **İlke kümesi adı** -Bu ilke kümesi için bir ad sağlayın.
     - **Açıklama** -isteğe bağlı olarak, ilke kümesi için bir açıklama sağlayın.
    <p>
-   <img alt="Create policy set - Basics" src="/media/policy-sets/policy-sets-01.png">
+      <img alt="Create policy set - Basics" src="./media/policy-sets/policy-sets-01.png">
 
 4. **İleri**' ye tıklayın.<br>
    **Uygulama yönetimi** sayfasında isteğe bağlı olarak, ilke kümesine uygulamalar, [uygulama yapılandırma ilkeleri](../apps/app-configuration-policies-overview.md)ve [Uygulama koruma ilkeleri](../apps/app-protection-policy.md) [ekleyebilirsiniz](../apps/apps-add.md). Uygulama yönetimi hakkında bilgi için bkz. [uygulama yönetimi Microsoft Intune nedir?](../apps/app-management.md).

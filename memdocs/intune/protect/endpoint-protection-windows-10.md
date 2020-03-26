@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7817a747a01a137fd29ee8aae117cd604da233a5
-ms.sourcegitcommit: 4815f07c8c0399c077b71721c6e6b61047c75ae6
+ms.openlocfilehash: aaec456a5ff9864fedf5e95f317bc484ddfc4d82
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79437108"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80275076"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Intune kullanarak cihazları korumak için Windows 10 (ve üzeri) ayarları
 
@@ -798,7 +798,7 @@ Saldırı yüzeyi azaltma kuralları, bir kötü amaçlı yazılımın kötü am
 
 - **Windows yerel güvenlik yetkilisi alt sisteminden kimlik bilgisi çalma eylemlerine bayrak ekleme**  
   **Varsayılan**: yapılandırılmadı  
-  Kural: [Windows yerel güvenlik yetkilisi alt sisteminden kimlik bilgisi çalmasını engelle (Lsass. exe)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem-lsassexe)
+  Kural: [Windows yerel güvenlik yetkilisi alt sisteminden kimlik bilgisi çalmasını engelle (Lsass. exe)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
   Genellikle, kötü amaçlı yazılım bulaşarak zararlı yazılımlara karşı kullanılan eylemleri ve uygulamaları önlemeye yardımcı olun.  
 

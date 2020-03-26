@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: d57c852784d882a0e608d1ada3730b20a3f2172a
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80087094"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274379"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune'daki cihaz profillerini kullanarak cihazlarınıza özellik ve ayar uygulama
 
@@ -133,7 +133,7 @@ Bu özellik şunları destekler:
 
 ## <a name="education"></a>Eğitim
 
-[Eğitim ayarları - Windows 10](education-settings-configure.md), [Windows Sınav Zamanı uygulamasının](https://education.microsoft.com/gettrained/win10takeatest) seçeneklerini yapılandırır. Bu seçenekleri yapılandırdığınızda, sınav tamamlanana kadar cihazda başka uygulama çalıştırılamaz.
+[Eğitim ayarları - Windows 10](education-settings-configure.md), [Windows Sınav Zamanı uygulamasının](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) seçeneklerini yapılandırır. Bu seçenekleri yapılandırdığınızda, sınav tamamlanana kadar cihazda başka uygulama çalıştırılamaz.
 
 [Eğitim ayarları-iOS/ıpados](../fundamentals/education-settings-configure-ios-shared.md) , ders içindeki öğrenci cihazlarını öğrenmeye ve denetlemeye kılavuzluk etmek için IOS/ıpados derslik uygulamasını kullanır. iPad cihazlarını, çok sayıda öğrencinin aynı cihazı paylaşmasını sağlamak için yapılandırabilirsiniz.
 

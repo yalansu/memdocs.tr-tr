@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 128b63f2b7b789fdd6a11fb196c4d92b14a88cf0
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526283"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274838"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune Windows cihaz kaydı sorunlarını giderme
 
@@ -41,7 +41,7 @@ Sorunla ilgili olarak aşağıdaki bilgileri toplayın:
 - Kaç Kullanıcı etkilendi? Tüm kullanıcılar mı etkilendi?
 - Kaç cihaz etkilendi? Tüm cihazlar etkileniyor mu ya da yalnızca bir şey var mı?
 - MDM yetkilisi nedir?
-- Kayıt nasıl gerçekleştirilir? Kayıt profilleriyle "kendi cihazını getir" (BYOD) veya Apple Aygıt Kayıt Programı (DEP) mi?
+- Kayıt nasıl gerçekleştirilir? Kayıt profilleriyle "kendi cihazını getir" (BYOD) veya Apple otomatik cihaz kaydı (ADE) midir?
 
 ## <a name="error-messages"></a>Hata iletileri
 
@@ -141,7 +141,7 @@ Kullanıcıya geçerli bir Intune lisansı atayın ve ardından cihazı kaydedin
 Bu sorunu onarmak için aşağıdaki yöntemlerden birini kullanın: 
  
 ##### <a name="assign-a-valid-license-to-the-user"></a>Kullanıcıya geçerli bir lisans ata
-[Microsoft 365 yönetim merkezine](https://portal.office.com/adminportal/home)gidin ve ardından kullanıcıya bir Intune veya Office 365 lisansı atayın.
+[Microsoft 365 yönetim merkezine](https://admin.microsoft.com)gidin ve ardından kullanıcıya bir Intune veya Office 365 lisansı atayın.
 
 ##### <a name="correct-the-mdm-terms-of-use-url"></a>MDM kullanım koşulları URL 'sini düzeltin
   1. [Azure Portal](https://portal.azure.com/)oturum açın ve **Azure Active Directory**' ı seçin.    
@@ -202,7 +202,7 @@ Hata: "bir sorun oluştu. Kuruluşunuz bu Windows sürümünü desteklemiyor.  (
 Tek başına bir Intune ortamında bu sorunu onarmak için aşağıdaki adımları izleyin: 
  
 1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **kayıt kısıtlamaları** ' nı seçer > bir cihaz türü kısıtlaması seçin.    
-2.  > **Özellikler** ( **Platform ayarları**' nın yanında) **Windows (MDM)** > **izin ver** ' i seçin.    
+2.  > **Özellikler** ( **Edit** **Platform ayarları**' nın yanında) **Windows (MDM)** > **izin ver** ' i seçin.    
 3. **Gözden geçir + kaydet**' e tıklayın.    
 
 ### <a name="a-setup-failure-has-occurred-during-bulk-enrollment"></a>Toplu kayıt sırasında bir kurulum hatası oluştu.
@@ -367,7 +367,7 @@ Bu sorun genellikle Windows Autopilot cihazlarının oluşturulduğu kuruluş bi
 4. **Nesne türleri** bölmesinde, **Tamam**> **bilgisayarlar** onay kutusunu seçin.
 5. **Kullanıcıları**, **bilgisayarları**veya **grupları** seçin bölmesinde **Seçilecek nesne adlarını girin** kutusuna bağlayıcının yüklendiği bilgisayarın adını girin.
 6. Girişi doğrulamak için **adları denetle** ' yi seçin > **Tamam** > **İleri**' ye tıklayın.
-7.  > **devretmek için özel bir görev oluştur** ' u seçin.
+7.  > **devretmek için özel bir görev oluştur** ' u seçin. **Next**
 8. Klasör onay kutusunda **yalnızca şu nesneleri** seçin ve ardından **bilgisayar nesnelerini**seçin, **Bu klasörde seçili nesneleri oluşturun**ve **Seçili nesneleri bu klasörde silin** onay kutularını işaretleyin.
 9. **İleri**'yi seçin.
 10. **İzinler**altında **tam denetim** onay kutusunu seçin. Bu eylem diğer tüm seçenekleri seçer.

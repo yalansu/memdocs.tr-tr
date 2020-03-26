@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d201bb3b15c0debb724f974d519a77994aae8e7f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f126e2d14623d7dd2a80416c474cc3ad1e460dc1
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331622"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256853"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Apple School Manager ile iOS/iPadOS cihaz kaydını ayarlama
 
@@ -31,7 +31,7 @@ ms.locfileid: "79331622"
 
 Intune 'u [Apple Okul Yöneticisi](https://school.apple.com/) programı aracılığıyla satın alınan IOS/ıpados cihazlarını kaydedecek şekilde ayarlayabilirsiniz. Apple Okul Yöneticisi ile Intune 'u kullanarak, çok sayıda iOS/ıpados cihazını bunlara dokunmadan kaydedebilirsiniz. Bir öğrenci veya öğretmen cihazı açtığında, önceden yapılandırılmış ayarları ile Kurulum Yardımcısı çalıştırılır ve cihaz yönetime kaydedilir.
 
-Apple School Manager kaydını etkinleştirmek için Intune ve Apple School Manager portallarını kullanmanız gerekir. Cihazlarınızı, Intune ile yönetilmek üzere atayabilmeniz için seri numaraları listesi veya sipariş numarası gereklidir. Kayıt sırasında cihazlara uygulanan ayarları içeren DEP kayıt profilleri oluşturun.
+Apple School Manager kaydını etkinleştirmek için Intune ve Apple School Manager portallarını kullanmanız gerekir. Cihazlarınızı, Intune ile yönetilmek üzere atayabilmeniz için seri numaraları listesi veya sipariş numarası gereklidir. Kayıt sırasında cihazlara uygulanan ayarları içeren otomatik cihaz kaydı (ADE) kayıt profilleri oluşturursunuz.
 
 Apple School Manager kaydı [Apple Aygıt Kayıt Programı](device-enrollment-program-enroll-ios.md) veya [cihaz kaydı yöneticisi](device-enrollment-manager-enroll.md) ile birlikte kullanılamaz.
 
@@ -106,7 +106,7 @@ Belirtecinizi yüklediğinize göre, Apple School cihazları için kayıt profil
     > Apple Kurulum Yardımcısı ile kimliği doğrularken bunlar desteklenmez.
 
 6. **Cihaz Yönetim Ayarları**’nı ve bu profili kullanan cihazların denetlenmesini isteyip istemediğinizi seçin.
-    **Denetimli** cihazlar, varsayılan olarak size daha fazla yönetim seçeneği verir ve Etkinleştirme Kilidi’ni devre dışı bırakır. Microsoft, özellikle çok sayıda iOS/ıpados cihazı dağıtan kuruluşlar için denetimli modu etkinleştirme mekanizması olarak DEP kullanılmasını önerir.
+    **Denetimli** cihazlar, varsayılan olarak size daha fazla yönetim seçeneği verir ve Etkinleştirme Kilidi’ni devre dışı bırakır. Microsoft, özellikle çok sayıda iOS/ıpados cihazı dağıtan kuruluşlar için denetimli modu etkinleştirme mekanizması olarak ADE kullanılmasını önerir.
 
     Kullanıcılara cihazlarının denetimli olduğu iki yolla bildirilir:
 

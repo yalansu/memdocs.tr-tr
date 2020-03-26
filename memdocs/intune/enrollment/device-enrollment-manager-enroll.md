@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14bc0be97a2e74c4666603feb2a4832c6a1e2011
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 18dc9cc7ca626e2dd5a0c13ffda27d1c0c8cfd37
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325442"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256690"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Bir cihaz kayıt yöneticisi hesabı kullanarak cihazları ıntune'a kaydetme
 
@@ -37,7 +37,7 @@ DEM kullanıcı hesapları ve bir DEM kullanıcı hesabıyla kaydedilen cihazlar
 - Silme işlemi Şirket Portalı’ndan yapılamaz. DEM kullanıcı hesabı tarafından kaydedilen bir cihazı silme işlemi, Azure portalında Intune’dan yapılamaz.
 - Şirket Portalı uygulamasında veya web sitesinde yalnızca yerel cihaz görünür.
 - DEM Kullanıcı hesapları, uygulama yönetimi için Kullanıcı başına Apple KIMLIĞI gereksinimlerinden dolayı Apple VPP Kullanıcı lisanslarıyla Apple Volume Purchase Program (VPP) uygulamalarını kullanamaz.
-- DEM hesapları, cihazları Apple Aygıt Kayıt Programı (DEP) aracılığıyla kaydederken kullanılamaz.
+- DEM hesapları, Apple 'ın otomatik cihaz kaydı (ADE) aracılığıyla cihazları kaydederken kullanılamaz.
 - Cihazlar, Apple VPP cihaz lisansına sahipse VPP uygulamalarını yükleyebilir.
 - Cihazların Windows 10 1803 + hariç olmak üzere koşullu erişim engellenir
 - DEM hesaplarına kaydedilen her cihazın Intune tarafından yönetilmek üzere düzgün şekilde lisanslanması gerekir. Lisans, bir Intune kullanıcı lisansı veya bir Intune cihaz lisansı olabilir.

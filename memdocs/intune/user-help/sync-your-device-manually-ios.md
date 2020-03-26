@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 67ea2757e066b70154baea9f87a95a12dd2fe632
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 631f62d6dfa677bbfc805488ec2d66c7dc2e8afe
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327822"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274957"
 ---
 # <a name="sync-your-ios-device-manually"></a>iOS cihazınızı el ile eşitleme
 
@@ -34,13 +34,13 @@ Bazen bir uygulamanın Şirket Portalı’ndan indirme işlemini gerçekleştirm
 
 2. **Cihazlar**’a dokunun. Birden fazla cihazınız varsa bir cihaz listesi görürsünüz. Kullanmakta olduğunuz cihazı seçin. Yalnızca bir cihazınız varsa doğrudan o cihazın ayrıntıları ekranına gidersiniz.
 
-    ![Cihazlar ekranının iki cihazı gösteren ekran görüntüsü. En üstteki cihazda “Bu, kullanmakta olduğunuz iPhone 6 Plus cihazı.” yazan bir metin vardır.](/user-help/media/ios_sync_1_CP_after_1804.png)
+    ![Cihazlar ekranının iki cihazı gösteren ekran görüntüsü. En üstteki cihazda “Bu, kullanmakta olduğunuz iPhone 6 Plus cihazı.” yazan bir metin vardır.](./media/ios_sync_1_CP_after_1804.png)
 
 3. **Ayarları Denetle**’ye dokunarak cihazınızı eşitleyin. Eşitleme bitinceye kadar ekranda bir yükleme çubuğu görünür.
 
-    ![Cihaz ayrıntılarının cihazın son iade etme saatini ve Ayarları Denetle bağlantısını gösteren ekran görüntüsü.](/user-help/media/ios_sync_2_CP_after_1804.png)  
+    ![Cihaz ayrıntılarının cihazın son iade etme saatini ve Ayarları Denetle bağlantısını gösteren ekran görüntüsü.](./media/ios_sync_2_CP_after_1804.png)  
 
-   ![Cihaz ayrıntılarında Ayarları Denetle’ye tıklandıktan sonra çıkan yükleme çubuğunu gösteren ekran görüntüsü.](/user-help/media/ios_sync_3_CP-after_1804.png)
+   ![Cihaz ayrıntılarında Ayarları Denetle’ye tıklandıktan sonra çıkan yükleme çubuğunu gösteren ekran görüntüsü.](./media/ios_sync_3_CP-after_1804.png)
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.
 

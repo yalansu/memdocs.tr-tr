@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b66777e9c108ab4a6b84e4d4fa0942532685912f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 7126d3d3a8567a2567afc116037d67ffa1a6c8b2
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80115228"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274703"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Android cihazlarını cihaz yöneticisinden iş profili yönetimine taşıma
 
@@ -40,7 +40,7 @@ Kullanıcılar bu nedenle uyumsuz olduklarını görtiklerinde, **Çözümle**' 
 - [Intune kiracı Hesabınızı Android Kurumsal hesabınıza bağlayarak](connect-intune-android-enterprise.md)Android iş profili yönetimini ayarlayın.
 - Android iş profiline taşınan Kullanıcı grubu için [Android kurumsal iş profili kaydını ayarlayın](android-work-profile-enroll.md) .
 - Kullanıcı cihaz limitlerinizi artırmayı göz önünde bulundurun. Cihazların cihaz yöneticisi yönetiminden kaydı kaldırıldığında, cihaz kayıtları hemen kaldırılmayabilir. Bu süre boyunca Cushion sağlamak için, kullanıcıların iş profili yönetimine kaydolabilmesi için cihaz sınırı kapasitesini artırmanız gerekebilir.
-  - Kullanıcı başına en fazla cihaz sayısı için [Azure Active Directory cihaz ayarlarını yapılandırın](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings) .
+  - Kullanıcı başına en fazla cihaz sayısı için [Azure Active Directory cihaz ayarlarını yapılandırın](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) .
   - Cihaz sınırını ayarlayarak [Intune cihaz sınır kısıtlamalarını](enrollment-restrictions-set.md#create-a-device-limit-restriction) ayarlayın. 
 
 ## <a name="create-device-compliance-policy"></a>Cihaz uyumluluk ilkesi oluştur
@@ -71,6 +71,7 @@ Kullanıcılar bu nedenle uyumsuz olduklarını görtiklerinde, **Çözümle**' 
     > [!NOTE]
     > - Tabii ki, kullanıcılarla iletişiminizdeki bağlantılar için Kullanıcı dostu hiper metin kullanabilirsiniz. Ancak, bu şekilde değiştirildiyse bağlantılar çalışamadığı için URL-kısa kullanım belirteçleri kullanmayın.
     > - Android Şirket Portalı açıksa ve arka planda, Kullanıcı bağlantıya dokunduğunda bunun yerine açıldıkları son sayfaya gidebilirler.
+    > - Kullanıcılar bir Android cihazında bağlantıya dokunmalıdır. Bunun yerine bir tarayıcıya yapıştırdıysanız, Android Şirket Portalı başlatılmaz. 
 
     **İleri**’yi seçin.
 
@@ -80,7 +81,7 @@ Kullanıcılar bu nedenle uyumsuz olduklarını görtiklerinde, **Çözümle**' 
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-[Yeni cihaz yönetimi kurulumuna geçmek için Son Kullanıcı akışı](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md) , kullanıcıların Cihaz Yöneticisi yönetiminden kaydını kaldırarak ve iş profili yönetimine göre kurulumunu yaparken kullanıcılara kılavuzluk eder. Kullanıcıların Android Şirket Portalı Version 5.0.4720.0 veya üzeri bir sürümü olan [Android Cihaz Yöneticisi 'ne kayıtlı cihazları](android-enroll-device-administrator.md) olmalıdır.
+[Yeni cihaz yönetimi kurulumuna geçmek için Son Kullanıcı akışı](../user-help/move-to-new-device-management-setup.md) , kullanıcıların Cihaz Yöneticisi yönetiminden kaydını kaldırarak ve iş profili yönetimine göre kurulumunu yaparken kullanıcılara kılavuzluk eder. Kullanıcıların Android Şirket Portalı Version 5.0.4720.0 veya üzeri bir sürümü olan [Android Cihaz Yöneticisi 'ne kayıtlı cihazları](android-enroll-device-administrator.md) olmalıdır.
 
 ### <a name="user-sees-an-error-after-tapping-resolve"></a>Kullanıcı Çözümle ' ye dokunduktan sonra bir hata görür
 Kullanıcılar **Çözümle** düğmesine dokunduktan sonra bir hata görüyor, bunun nedeni aşağıdakilerden biri olabilir:
@@ -103,8 +104,5 @@ Kullanıcılar, Android Şirket Portalı **cihaz ayarlarını Güncelleştir SAY
 - Android cihaz Android 6 veya daha önceki bir sürümünü kullanır. 
 
 ## <a name="next-steps"></a>Sonraki adımlar
-[Son Kullanıcı akışına bakın](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md)
-
-[Android iş profili cihazlarını Intune ile yönetme](android-enterprise-overview.md)
-
-
+[Intune Ile Android iş profili cihazlarını yönetme](android-enterprise-overview.md)
+[Son Kullanıcı akışına bakın](../user-help/move-to-new-device-management-setup.md)

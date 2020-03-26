@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e7d7f35d6d6b11875c722d4969f5776040ca0dfc
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086123"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256462"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Intune 'da iOS/ıpados cihazlarını kaydetme
 
@@ -52,23 +52,23 @@ Kullanıcıların kendi cihazlarını Intune yönetimine kaydetmesine izin vereb
 
 Intune, kullanıcıları için cihaz satın alan kuruluşlar için aşağıdaki iOS/ıpados şirkete ait cihaz kayıt yöntemlerini destekler:
 
-- Apple’ın Aygıt Kayıt Programı (DEP)
+- Apple 'ın otomatik cihaz kaydı (ADE)
 - Apple School Manager
 - Apple Configurator Kurulum Yardımcısı kaydı
 - Apple Configurator ile doğrudan kayıt
 
 Ayrıca, şirkete ait iOS/ıpados cihazlarını bir [Cihaz Kayıt Yöneticisi](device-enrollment-manager-enroll.md) hesabıyla kaydedebilirsiniz.
 
-## <a name="device-enrollment-program"></a>Cihaz Kaydı Programı
+## <a name="automated-device-enrollment"></a>Otomatik Cihaz Kaydı
 
-Kuruluşlar, Apple 'ın Aygıt Kayıt Programı (DEP) aracılığıyla iOS/ıpados cihazları satın alabilir. DEP, cihazları yönetime getirmek için bir kayıt profilini "hava üzerinden" dağıtmanızı sağlar. Daha fazla bilgi için bkz. [aygıt kayıt programı](device-enrollment-program-enroll-ios.md).
+Kuruluşlar, Apple 'ın otomatik cihaz kaydı (ADE) aracılığıyla iOS/ıpados cihazları satın alabilir. ADE, cihazları yönetime getirmek için bir kayıt profilini "hava üzerinden" dağıtmanızı sağlar. Daha fazla bilgi için bkz. [aygıt kayıt programı](device-enrollment-program-enroll-ios.md).
 
 ## <a name="user-enrollment"></a>Kullanıcı kaydı
 Kullanıcı kaydı, yöneticilere diğer kayıt yöntemleriyle karşılaştırıldığında yönetim seçeneklerinin bir alt kümesini sağlar. Daha fazla bilgi için, bkz. [Kullanıcı kaydı desteklenen eylemler, parolalar ve diğer seçenekler](ios-user-enrollment-supported-actions.md) ve [IOS/ıpados ve ıpados Kullanıcı kaydını ayarlama](ios-user-enrollment.md).
 
 ## <a name="apple-school-manager"></a>Apple School Manager
 
-Apple School Manager, okullar için oluşturulmuş bir cihaz satın alma ve kayıt programıdır. DEP’te olduğu gibi cihazları yönetime kaydetmek için bir profil dağıtabilirsiniz. [Apple School Manager](apple-school-manager-set-up-ios.md) hakkında daha fazla bilgi edinin.
+Apple School Manager, okullar için oluşturulmuş bir cihaz satın alma ve kayıt programıdır. ADE gibi, yönetime cihaz kaydetmek için bir profil dağıtabilirsiniz. [Apple School Manager](apple-school-manager-set-up-ios.md) hakkında daha fazla bilgi edinin.
 
 ## <a name="apple-configurator"></a>Apple Configurator
 
@@ -79,7 +79,7 @@ Bir Mac bilgisayarda çalışan Apple Configurator ile iOS/ıpados cihazlarını
 
 [Apple Configurator kaydı](apple-configurator-enroll-ios.md) hakkında daha fazla bilgi edinin.
 
-## <a name="use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices"></a>DEP veya Apple Configurator ile kaydedilmiş cihazlarda Şirket Portalı’nı kullanma
+## <a name="use-the-company-portal-on-ade-enrolled-or-apple-configurator-enrolled-devices"></a>ADE kaydı yapılan veya Apple Configurator ile kaydedilen cihazlarda Şirket Portalı kullanın
 
 Kullanıcı benzeşimi ile yapılandırılmış cihazlar, uygulama indirmek ve cihaz yönetmek için Şirket Portalı’nı yükleyip çalıştırabilir. Kullanıcılar, cihazlarını aldıktan sonra Kurulum Yardımcısı’nı tamamlamak ve Şirket Portalı uygulamasını yüklemek için bir dizi ek adımı tamamlamalıdır.
 

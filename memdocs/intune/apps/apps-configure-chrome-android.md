@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed8acbcbe550ffd0a3a3f94e07d5752489ae8be6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: deca7632c590d63c31f32375bc3f72047ae30807
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325894"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274634"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Intune kullanarak Android cihazları için Google Chrome 'U yapılandırma 
 
@@ -40,7 +40,7 @@ Android cihazları için Google Chrome 'u yapılandırmak için bir Intune uygul
 2. **Tüm uygulamalar** > **uygulamalar** **' ı seçin** > ardından **yönetilen Google Play** uygulamasını ekleyin.
 3. Yönetilen Google Play gidin, **Google Chrome** ile arama yapın ve onaylayın.
 
-    ![Google Chrome 'ı arama ve onaylama](/media/apps-configure-chrome-android/search.png)
+    ![Google Chrome 'ı arama ve onaylama](./media/apps-configure-chrome-android/search.png)
 
 4. Google Chrome 'ı gerekli uygulama türü olarak bir kullanıcı grubuna atayın. Cihaz Intune 'a kaydedildiğinde Google Chrome otomatik olarak dağıtılacaktır.
 
@@ -55,15 +55,15 @@ Intune 'a yönetilen Google Play uygulaması ekleme hakkında daha fazla bilgi i
     - **Cihaz kayıt türü** -Bu ayar, **yönetilen cihazlar**olarak ayarlanır.
     - **Platform** - **Android**' i seçin.
 
-    ![Google Chrome yapılandırma ilkesi Ekle](/media/apps-configure-chrome-android/add-policy.png)
+    ![Google Chrome yapılandırma ilkesi Ekle](./media/apps-configure-chrome-android/add-policy.png)
 
 3. İlişkili **uygulama** bölmesini göstermek için **ilişkili uygulama** ' ya tıklayın. **Google Chrome**bulun ve seçin. Bu liste [, Intune ile onaylanmış ve eşitlenmiş yönetilen Google Play uygulamalarını](apps-add-android-for-work.md)içerir.
 
-    ![Ilişkili uygulama altında Google Chrome seçin](/media/apps-configure-chrome-android/associated-app.png)
+    ![Ilişkili uygulama altında Google Chrome seçin](./media/apps-configure-chrome-android/associated-app.png)
 
 4. Yapılandırma **ayarları**' na tıklayın, **yapılandırma tasarımcısını kullan**' ı seçin ve ardından **Ekle** ' ye tıklayarak yapılandırma anahtarlarını seçin.
 
-    ![Yapılandırma tasarımcısını kullan Ekle](/media/apps-configure-chrome-android/configuration.png)
+    ![Yapılandırma tasarımcısını kullan Ekle](./media/apps-configure-chrome-android/configuration.png)
 
     Ortak ayarların örneği aşağıda verilmiştir:
     - **URL listesine erişimi engelleyin**: `["*"]`
@@ -73,7 +73,7 @@ Intune 'a yönetilen Google Play uygulaması ekleme hakkında daha fazla bilgi i
 
     Yapılandırma ayarları, yapılandırma Tasarımcısı kullanılarak eklendikten sonra bir tabloda listelenecektir. 
 
-    ![Ortak ayarlar](/media/apps-configure-chrome-android/common-settings.png)
+    ![Ortak ayarlar](./media/apps-configure-chrome-android/common-settings.png)
 
     Yukarıdaki ayarlar, `baidu.com`, `yahoo.com`, `chromium.org`ve `chrome://`hariç tüm URL 'Lere erişimi engeller ve yer işaretleri oluşturur.
 
@@ -84,31 +84,31 @@ Intune 'a yönetilen Google Play uygulaması ekleme hakkında daha fazla bilgi i
 
 Android cihazı Android Enterprise 'a kaydedildikten sonra, Portföy simgesiyle yönetilen Google Chrome uygulaması otomatik olarak dağıtılacaktır.
 
-   <img alt="Managed Google Chrome with the portfolio icon" src="/media/apps-configure-chrome-android/chrome-icon.png" width="350">
+   <img alt="Managed Google Chrome with the portfolio icon" src="./media/apps-configure-chrome-android/chrome-icon.png" width="350">
 
 Google Chrome 'ı başlatın ve uygulanan ayarları görürsünüz.
 
    Leriniz<br>
-   <img alt="Bookmarks" src="/media/apps-configure-chrome-android/bookmarks.png" width="350">
+   <img alt="Bookmarks" src="./media/apps-configure-chrome-android/bookmarks.png" width="350">
 
    Engellenen URL:<br>
-   <img alt="Blocked URL" src="/media/apps-configure-chrome-android/blocked-url.png" width="350">
+   <img alt="Blocked URL" src="./media/apps-configure-chrome-android/blocked-url.png" width="350">
 
    URL 'ye izin ver:<br>
-   <img alt="Allow URL" src="/media/apps-configure-chrome-android/allowed-url.png" width="350">
+   <img alt="Allow URL" src="./media/apps-configure-chrome-android/allowed-url.png" width="350">
 
    Inbilito sekmesi:<br>
-   <img alt="Incognito tab" src="/media/apps-configure-chrome-android/incognito-tab.png" width="350">
+   <img alt="Incognito tab" src="./media/apps-configure-chrome-android/incognito-tab.png" width="350">
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
 1. İlke dağıtım durumunu izlemek için Intune portalını denetleyin.
 
-    ![İlke dağıtım durumunu izleme](/media/apps-configure-chrome-android/monitor-status.png)
+    ![İlke dağıtım durumunu izleme](./media/apps-configure-chrome-android/monitor-status.png)
 
 2. Google Chrome 'ı başlatın ve **Chrome://Policy**ziyaret edin. Ayarların başarıyla uygulandığını doğrulayabiliriz.
 
-    ![Ayarların başarıyla uygulandığını doğrulayın](/media/apps-configure-chrome-android/confirm.png)
+    ![Ayarların başarıyla uygulandığını doğrulayın](./media/apps-configure-chrome-android/confirm.png)
 
 ## <a name="additional-information"></a>Ek bilgiler
 

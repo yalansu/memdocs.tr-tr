@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad456ef7cc88ccb24079010479bd8f27292eb73d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7e4d3e150e8e4ed890de4717c6093104e2b49d1f
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332766"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274889"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune 'de iOS/ıpados cihaz kaydı sorunlarını giderme
 
@@ -41,7 +41,7 @@ Sorunla ilgili olarak aşağıdaki bilgileri toplayın:
 - Kaç Kullanıcı etkilendi? Tüm kullanıcılar mı etkilendi?
 - Kaç cihaz etkilendi? Tüm cihazlar etkileniyor mu ya da yalnızca bir şey var mı?
 - MDM yetkilisi nedir?
-- Kayıt nasıl gerçekleştirilir? Kayıt profilleriyle "kendi cihazını getir" (BYOD) veya Apple Aygıt Kayıt Programı (DEP) mi?
+- Kayıt nasıl gerçekleştirilir? Kayıt profilleriyle "kendi cihazını getir" (BYOD) veya Apple otomatik cihaz kaydı (ADE) midir?
 
 ## <a name="error-messages"></a>Hata iletileri
 
@@ -106,7 +106,7 @@ Birden fazla doğrulanan etki alanı varsa, her etki alanı için bir CNAME kayd
 **Neden:** Cihazı kaydetmeye çalışan kullanıcının Microsoft Intune lisansı yok.
 
 #### <a name="resolution"></a>Çözüm
-1. [Office 365 yönetim merkezine](https://portal.office.com/adminportal/home#/homepage)gidin ve ardından **etkin kullanıcılar > Kullanıcılar**' ı seçin.
+1. [Office 365 yönetim merkezine](https://admin.microsoft.com)gidin ve ardından **etkin kullanıcılar > Kullanıcılar**' ı seçin.
 2. Intune kullanıcı lisansı atamak istediğiniz kullanıcı hesabını seçin ve ardından **düzenle > ürün lisansları**' nı seçin.
 3. Bu kullanıcıya atamak istediğiniz lisansın konumunu **Açık** konumuna geçirin ve ardından **Kaydet**' i seçin.
 4. Cihazı yeniden kaydedin.
@@ -157,7 +157,7 @@ Birden fazla doğrulanan etki alanı varsa, her etki alanı için bir CNAME kayd
 **Neden:** Cihazı kaydetmeye çalışan kullanıcının geçerli bir Intune lisansı yok.
 
 #### <a name="resolution"></a>Çözüm
-1. [Microsoft 365 yönetim merkezine](https://portal.office.com/adminportal/home#/homepage)gidin ve ardından **Kullanıcılar** > **etkin kullanıcılar**' ı seçin.
+1. [Microsoft 365 yönetim merkezine](https://admin.microsoft.com)gidin ve ardından **Kullanıcılar** > **etkin kullanıcılar**' ı seçin.
 2. Etkilenen Kullanıcı hesabını > **ürün lisansları** > **Düzenle**' yi seçin.
 3. Bu kullanıcıya geçerli bir Intune lisansının atandığını doğrulayın.
 4. Cihazı yeniden kaydedin.
@@ -166,7 +166,7 @@ Birden fazla doğrulanan etki alanı varsa, her etki alanı için bir CNAME kayd
 
 **Neden:** Cihazı kaydetmeye çalışan kullanıcının geçerli bir Intune lisansı yok.
 
-1. [Microsoft 365 yönetim merkezine](https://portal.office.com/adminportal/home#/homepage)gidin ve ardından **Kullanıcılar** > **etkin kullanıcılar**' ı seçin.
+1. [Microsoft 365 yönetim merkezine](https://admin.microsoft.com)gidin ve ardından **Kullanıcılar** > **etkin kullanıcılar**' ı seçin.
 2. Etkilenen Kullanıcı hesabını seçin ve ardından **ürün lisansları** > **Düzenle**' yi seçin.
 3. Bu kullanıcıya geçerli bir Intune lisansının atandığını doğrulayın.
 4. Cihazı yeniden kaydedin.
@@ -203,7 +203,7 @@ APNs sertifikasını yenileyin ve sonra cihazı yeniden kaydedin.
 
 ### <a name="xpc_type_error-connection-invalid"></a>XPC_TYPE_ERROR bağlantı geçersiz
 
-Kayıt profili atanan DEP ile yönetilen bir cihazı açtığınızda, kayıt başarısız olur ve aşağıdaki hata iletisini alırsınız:
+Kayıt profili atanan bir ADE ile yönetilen Cihazı açtığınızda, kayıt başarısız olur ve aşağıdaki hata iletisini alırsınız:
 
 ```
 asciidoc
@@ -213,7 +213,7 @@ iPhone com.apple.accessibility.AccessibilityUIServer(MobileAsset)[288] <Notice>:
 iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" }
 ```
 
-**Neden:** Cihaz ve Apple DEP hizmeti arasında bir bağlantı sorunu var.
+**Neden:** Cihaz ve Apple ADE hizmeti arasında bir bağlantı sorunu var.
 
 #### <a name="resolution"></a>Çözüm
 Bağlantı sorununu giderip cihazı kaydetmek için farklı bir ağ bağlantısı kullanın. Sorun devam ederse Apple ile iletişim kurmanız da gerekebilir.
@@ -221,20 +221,20 @@ Bağlantı sorununu giderip cihazı kaydetmek için farklı bir ağ bağlantıs�
 
 ## <a name="other-issues"></a>Diğer sorunlar
 
-### <a name="dep-enrollment-doesnt-start"></a>DEP kaydı başlamıyor
-Kayıt profili atanan DEP ile yönetilen bir cihazı açtığınızda, Intune kayıt işlemi başlatılmaz.
+### <a name="ade-enrollment-doesnt-start"></a>ADE kaydı başlamıyor
+Kayıt profili atanan bir ADE tarafından yönetilen Cihazı açtığınızda, Intune kayıt işlemi başlatılmaz.
 
-**Neden:** Kayıt profili, DEP belirteci Intune 'a yüklenmeden önce oluşturulur.
+**Neden:** Kayıt profili, ADE belirteci Intune 'a yüklenmeden önce oluşturulur.
 
 #### <a name="resolution"></a>Çözüm
 
 1. Kayıt profilini düzenleyin. Profilde herhangi bir değişiklik yapabilirsiniz. Amaç, profilin değiştirilme saatini güncelleştirmedir.
-2. DEP ile yönetilen cihazları eşitleme: [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, > **iOS** > iOS **kaydı** > **kayıt programı belirteçleri** ' ni seçin > bir belirteç > **Şimdi Eşitle**' yi seçin. Apple'a bir eşitleme isteği gönderilir.
+2. ADE ile yönetilen cihazları eşitleme: [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, > **iOS** > iOS **kaydı** > **kayıt programı belirteçleri** ' ni seçin > bir belirteç > **Şimdi Eşitle**' yi seçin. **Devices** Apple'a bir eşitleme isteği gönderilir.
 
-### <a name="dep-enrollment-stuck-at-user-login"></a>DEP kaydı kullanıcı oturum açma sırasında takıldı
-Kayıt profili atanan DEP ile yönetilen bir cihazı açtığınızda, kimlik bilgilerini girdikten sonra ilk kurulum açılır.
+### <a name="ade-enrollment-stuck-at-user-login"></a>Kullanıcı oturum açmada ADE kaydı takıldı
+Kayıt profili atanan bir ADE ile yönetilen bir cihazı açtığınızda, kimlik bilgilerini girdikten sonra ilk kurulum açılır.
 
-**Neden:** Multi-Factor Authentication (MFA) etkin. Şu anda MFA, DEP cihazlarında kayıt sırasında çalışmaz.
+**Neden:** Multi-Factor Authentication (MFA) etkin. Şu anda MFA, ADE cihazlarındaki kayıt sırasında çalışmaz.
 
 #### <a name="resolution"></a>Çözüm
 MFA 'yı devre dışı bırakın ve ardından cihazı yeniden kaydedin.

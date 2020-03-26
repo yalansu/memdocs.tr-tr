@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75b988572a5c22e49547a7ba1521cfc3485f4f03
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 98cff5540c6eaf571cc6b542a92dffb433820f4c
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326286"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274396"
 ---
-# <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Windows 10 için uygulama koruma ilkeleri yapılandırmaya hazırlanma 
+# <a name="get-ready-for-windows-information-protection-in-windows-10"></a>Windows 10 ' da Windows Information Protection hazırlanın 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -56,4 +56,4 @@ Azure AD’de MAM sağlayıcısını ayarlayarak Windows 10 için mobil uygulama
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[WIP uygulama koruma ilkesi oluşturma](windows-information-protection-policy-create.md)
+[WıP ilkesi oluşturma](windows-information-protection-policy-create.md)

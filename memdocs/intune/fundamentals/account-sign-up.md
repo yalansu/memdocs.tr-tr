@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad73f89ff4dccd3151bd3123cd4bb54483aaae30
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ce6e6fd9c1a26762a0eb3081fde09ad9b05530a2
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332738"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274855"
 ---
 # <a name="sign-up-or-sign-in-to-microsoft-intune"></a>Microsoft Intune’a kaydolma veya Intune’da oturum açma
 
@@ -62,7 +62,7 @@ Farklı izinlere sahip kullanıcılar için hizmeti yönetmek üzere erişim ver
 
 ### <a name="intune-admin-portal-url"></a>Intune yönetim portalı URL 'SI
 
-Microsoft 365 Yönetim Merkezi: https://devicemanagement.microsoft.com
+Microsoft Uç Nokta Yöneticisi Yönetim Merkezi: https://devicemanagement.microsoft.com
 
 Intune Azure portal: https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade
 
@@ -74,7 +74,7 @@ Klasik Intune Portalı: https://manage.microsoft.com klasik Intune portalı, yal
 
 Microsoft 365 İş: https://portal.microsoft.com/adminportal
 
-Office 365 mobil cihaz yönetimi: https://portal.office.com/adminportal/home#/MifoDevices
+Office 365 mobil cihaz yönetimi: https://admin.microsoft.com/adminportal/home#/MifoDevices
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

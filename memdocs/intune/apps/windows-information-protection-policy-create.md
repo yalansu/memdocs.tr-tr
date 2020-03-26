@@ -1,12 +1,12 @@
 ---
 title: Windows Information Protection (WıP) uygulama koruma ilkesi
 titleSuffix: Microsoft Intune
-description: Microsoft Intune ile Windows Bilgi Koruması (WIP) uygulama koruma ilkesi oluşturma ve dağıtma
+description: Microsoft Intune ile Windows Information Protection (WıP) ilkesi oluşturma ve dağıtma
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ea664594744facd36f3f92900a1e80c48053904
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 88e26a023b745e96926b9611d7bcab41faac261c
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327358"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274736"
 ---
-# <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Intune ile Windows Information Protection (WIP) uygulama koruma ilkesi oluşturma ve dağıtma
+# <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>Intune ile Windows Information Protection (WıP) ilkesi oluşturma ve dağıtma
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Uygulamaları cihaz kaydı olmaksızın korumak için Windows 10 uygulamaları ile uygulama koruma ilkeleri kullanabilirsiniz.
+Windows 10 uygulamalarıyla Windows Information Protection (WıP) ilkelerini, cihaz kaydı olmadan uygulamaları korumak için kullanabilirsiniz.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -49,10 +49,10 @@ Bir WIP ilkesi eklerken kullanılan birkaç kavramı anlamanız gerekir:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bir WIP uygulama koruma ilkesi oluşturabilmeniz için önce MAM sağlayıcısını yapılandırmanız gerekir. [MAM sağlayıcınızı Intune ile yapılandırma](app-protection-policies-configure-windows-10.md) hakkında daha fazla bilgi edinin.  
+WıP ilkesi oluşturabilmeniz için önce MAM sağlayıcısını yapılandırmanız gerekir. [MAM sağlayıcınızı Intune ile yapılandırma](app-protection-policies-configure-windows-10.md) hakkında daha fazla bilgi edinin.  
 
 > [!IMPORTANT]
-> WIP birden çok kimliği desteklemez; aynı anda yalnızca bir yönetilen kimlik olabilir.
+> WIP birden çok kimliği desteklemez; aynı anda yalnızca bir yönetilen kimlik olabilir. WıP 'in özellikleri ve sınırlamaları hakkında daha fazla bilgi için bkz. [Windows Information Protection (WIP) kullanarak kurumsal verilerinizi koruma](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 Ayrıca aşağıdaki lisans ve güncelleştirmeye de sahip olmanız gerekir:
 
@@ -63,7 +63,7 @@ Ayrıca aşağıdaki lisans ve güncelleştirmeye de sahip olmanız gerekir:
 
 
 
-## <a name="to-add-a-wip-app-protection-policy"></a>WIP uygulama koruma ilkesi ekleme
+## <a name="to-add-a-wip-policy"></a>Bir WIP ilkesi eklemek için
 
 Kuruluşunuzda Intune'u kurduktan sonra WIP’ye özel bir ilke oluşturabilirsiniz.
 
@@ -76,7 +76,7 @@ Kuruluşunuzda Intune'u kurduktan sonra WIP’ye özel bir ilke oluşturabilirsi
 3. Aşağıdaki değerleri ekleyin:
     - **Adı:** Yeni ilkeniz için bir ad yazın (gereklidir).
     - **Açıklama:** (İsteğe bağlı) Bir açıklama yazın.
-    - **Platform:** Uygulama koruma ilkeniz için desteklenen platform olarak **Windows 10**’u seçin.
+    - **Platform:** WıP ilkeniz için desteklenen platform olarak **Windows 10** ' ı seçin.
     - **Kayıt durumu:** İlkeniz için kayıt durumu olarak **Kayıt olmadan**’ı seçin.
 4. **Oluştur**’u seçin. İlke oluşturulur ve **Uygulama koruma ilkeleri** bölmesindeki tabloda görüntülenir.
 
