@@ -5,7 +5,7 @@
   items:
     - name: Cihaz kaydına genel bakış
       href: device-enrollment.md
-      displayName: COD; BYOD; DEM; DEP; USB-SA; USB-Direct; co-management; GPO
+      displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
     - name: Kayıtlı cihaz yönetimi özellikleri
       href: device-management-capabilities.md
     - name: Kayıt seçenekleri
@@ -20,7 +20,7 @@
   items:
     - name: Cihaz kaydetmek için Windows Autopilot kullanma
       href: tutorial-use-autopilot-enroll-devices.md
-    - name: iOS/iPadOS cihazlarını kaydetmek için DEP kullanma
+    - name: iOS/iPadOS cihazlarını kaydetmek için ADE kullanma
       href: tutorial-use-device-enrollment-program-enroll-ios.md
 - name: Kavramlar
   items:
