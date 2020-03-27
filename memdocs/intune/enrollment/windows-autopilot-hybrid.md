@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84d14943a37cf29a224c94364317d899b65ffef0
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 81e5dc772ca85bf124af3da33a263b683ea0885b
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526335"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326975"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Intune ve Windows Autopilot kullanarak karma Azure AD 'ye katılmış cihazları dağıtma
 Karma Azure Active Directory (Azure AD) ile birleştirilmiş cihazları ayarlamak için Intune ve Windows Autopilot kullanabilirsiniz. Bunu yapmak için bu makaledeki adımları izleyin.
@@ -90,7 +90,7 @@ Bilgisayar oluşturma hakları verilen kuruluş biriminin eşleşmesi gerekir:
 
 1. Girdinizi doğrulamak için **adları denetle** ' yi seçin, **Tamam**' ı seçin ve ardından **İleri**' yi seçin.
 
-1.  > **devretmek için özel bir görev oluştur** ' u seçin.
+1.  > **devretmek için özel bir görev oluştur** ' u seçin. **Next**
 
 1. Klasör onay kutusunda **yalnızca şu nesneleri** seçin ve ardından **bilgisayar nesnelerini**seçin, **Bu klasörde seçili nesneleri oluşturun**ve **Seçili nesneleri bu klasörde silin** onay kutularını işaretleyin.
 

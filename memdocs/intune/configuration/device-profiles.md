@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d57c852784d882a0e608d1ada3730b20a3f2172a
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: 4a2bd111b3e0dc172dbe4c3e9605a1b4451e2b39
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80274379"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327405"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune'daki cihaz profillerini kullanarak cihazlarınıza özellik ve ayar uygulama
 
@@ -53,7 +53,7 @@ Bu özellik şunları destekler:
 
 [Sertifikalar](../protect/certificates-configure.md), cihazlara atanan güvenilir, SCEP ve PKCS sertifikalarını yapılandırır. Bu sertifikalar WiFi, VPN ve e-posta profilleri için kimlik doğrulaması sağlar.
 
-Bu özellik şunları destekler: 
+Bu özellik şunları destekler:
 
 - Android Cihaz Yöneticisi
 - Android Kurumsal
@@ -84,6 +84,15 @@ Bu ayarları kullanarak yazılım güncelleştirmelerinin kuruluşunuzdaki ayarl
 Bu özellik şunları destekler:
 
 - Windows 10 ve üzeri
+
+## <a name="derived-credential"></a>Türetilmiş kimlik bilgileri
+
+[Türetilmiş kimlik bilgileri](../protect/derived-credentials.md) , kimlik doğrulama, imzalama ve şifreleme için akıllı kartlardaki sertifikalardır. Intune 'da, uygulamalar, e-posta profilleri, VPN, S/MIME ve Wi-Fi ' d e bağlanmak için bu kimlik bilgileriyle birlikte profiller oluşturabilirsiniz.
+
+Bu özellik şunları destekler:
+
+- Android Kurumsal
+- iOS/iPadOS
 
 ## <a name="device-features"></a>Cihaz özellikleri
 
@@ -141,7 +150,7 @@ Bu özellik şunları destekler:
 
 [E-posta ayarları](email-settings-configure.md), cihazlarda Exchange ActiveSync e-posta ayarları oluşturur, atar ve izler. E-posta profilleri tutarlılık konusunda yardımcı olur, destek çağrılarını azaltır ve son kullanıcıların, herhangi bir kurulum yapmalarına gerek kalmadan kendi cihazlarından şirket e-postasına erişmelerini sağlar. 
 
-Bu özellik şunları destekler: 
+Bu özellik şunları destekler:
 
 - Android Cihaz Yöneticisi
 - Android Kurumsal
@@ -151,12 +160,13 @@ Bu özellik şunları destekler:
 
 ## <a name="endpoint-protection"></a>Endpoint protection
 
-[Windows 10 Için Endpoint Protection ayarları](../protect/endpoint-protection-windows-10.md) , BitLocker ve Windows 10 cihazları Için Microsoft Defender ayarlarını yapılandırır.
+[Endpoint Protection](../protect/endpoint-protection-configure.md) , BitLocker ve Windows 10 cihazları Için Microsoft Defender ayarlarını yapılandırır. Ve, macOS cihazlarındaki güvenlik duvarını, ağ geçidini ve diğer kaynakları yapılandırın.
 
 Microsoft Intune ile Microsoft Defender Gelişmiş tehdit koruması (WDADTP) eklemek için bkz. [mobil cihaz yönetimi (MDM) araçlarını kullanarak uç noktaları yapılandırma](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
 Bu özellik şunları destekler:
 
+- Mac OS
 - Windows 10 ve üzeri
 
 ## <a name="esim-cellular---public-preview"></a>eSIM hücresel - Genel önizleme
@@ -194,6 +204,14 @@ Bu özellik şunları destekler:
 
 Bilgi noktası ayarları, [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)ve [iOS/ıpados](device-restrictions-ios.md#kiosk)için cihaz kısıtlamaları olarak da kullanılabilir.
 
+## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+
+[Microsoft Defender Gelişmiş tehdit koruması (ATP)](../protect/advanced-threat-protection.md) , cihazları izlemek ve korumak için Intune ile tümleşir. Risk düzeylerini ayarlar ve cihazların bu düzeyi aşması durumunda ne olacağını belirleyin. Koşullu erişimle birleştirildiğinde, kuruluşunuzdaki kötü amaçlı etkinlikleri önlemeye yardımcı olabilirsiniz.
+
+Bu özellik şunları destekler:
+
+- Windows 10 ve üzeri
+
 ## <a name="oemconfig"></a>OEMConfig
 
 [OEMConfig](android-oem-configuration-overview.md), OEM'lerin (orijinal ekipman üreticileri) ve EMM'lerin (kurumsal mobil yönetim), OEM'e özgü özellikleri Android Kurumsal cihazlarda standart bir şekilde geliştirme ve destekleme imkanı sunan bir standarttır. OEMConfig ile bir OEM, OEM'e özgü yönetim özelliklerini tanımlayan bir şema oluşturur ve bunu Google Play'e yüklenen bir uygulamaya ekler. Intune, uygulamadaki şemayı okur ve Intune yöneticilerinin şemada bu ayarları yapılandırmasını sağlar.
@@ -206,11 +224,18 @@ Bu özellik şunları destekler:
 
 [Windows 10 cihazlarında PowerShell betikleri](../apps/intune-management-extension.md) , Intune 'da PowerShell betiklerinizi karşıya yüklemek Için Intune yönetim uzantısını kullanır ve ardından bu betikleri cihazlarınızda çalıştırır. Ayrıca, uzantıyı kullanmak için gerekenleri, Intune 'a nasıl ekleneceğini ve diğer önemli bilgileri görün.
 
-
 Bu özellik şunları destekler:
 
 - Windows 10 ve üzeri
 - Windows 10 Holographic for Business
+
+## <a name="preference-file"></a>Tercih dosyası
+
+MacOS cihazlarındaki [tercih dosyaları](preference-file-settings-macos.md) , uygulamalar hakkında bilgi içerir. Örneğin, Web tarayıcısı ayarlarını denetlemek, uygulamaları özelleştirmek ve daha fazlasını yapmak için tercih dosyalarını kullanabilirsiniz.
+
+Bu özellik şunları destekler:
+
+- Mac OS
 
 ## <a name="shared-multi-user-device"></a>Paylaşılan çok kullanıcılı cihaz
 
@@ -260,14 +285,6 @@ Bu özellik şunları destekler:
 - iOS/iPadOS
 - Mac OS
 - Windows 8.1 (yalnızca içeri aktarma)
-- Windows 10 ve üzeri
-
-## <a name="windows-information-protection-profile"></a>Windows Bilgi Koruması profili
-
-[Windows Bilgi Koruması](../protect/windows-information-protection-configure.md), çalışanın deneyimine müdahale etmeden veri sızıntılarına karşı koruma sağlamaya yardımcı olur. Ayrıca, çalışanların işte kullandıkları kuruluşa ait cihazlardaki ve kişisel cihazlardaki kazayla veri sızıntılarına karşı kurumsal uygulamaların ve verilerin korunmasına yardımcı olur. Windows Bilgi Koruması'nı kullanmak için ortamınızda veya uygulamalarınızda değişiklik yapmanız gerekmez.
-
-Bu özellik şunları destekler:
-
 - Windows 10 ve üzeri
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra Mobility Uzantıları (MX)

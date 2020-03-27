@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,21 +15,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3821017b0fe15df8a0329000aa74272e4d9477e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 778ce3e6d069347522a98977da65d651e059e41c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086896"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327392"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Intune kullanarak adanmış bir bilgi noktası olarak çalışacak Windows 10 ve Windows holographic for Business cihaz ayarları
 
 Windows 10 cihazlarında, cihazları bir bilgi noktası olarak çalıştırmak için Intune 'u kullanın, bazen adanmış bir cihaz olarak bilinir. Bilgi noktası modundaki bir cihaz bir uygulama çalıştırabilir veya birçok uygulama çalıştırabilir. Bir başlangıç menüsünü gösterebilir ve özelleştirebilir, Win32 uygulamaları dahil farklı uygulamalar ekleyebilir, bir Web tarayıcısına belirli bir giriş sayfası ekleyebilir ve daha fazlasını yapabilirsiniz. 
 
-Bu özellik çalıştıran cihazlar için geçerlidir:
+Bu özellik şu platformlarda geçerlidir:
 
 - Windows 10 ve üzeri
 - Windows 10 Holographic for Business
+
+Diğer platformlar için bilgi noktası profilleri oluşturmak için bkz. [Android Cihaz Yöneticisi](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)ve [iOS/ıpados](device-restrictions-ios.md#kiosk).
 
 Intune, cihaz başına bir bilgi noktası profili destekler. Tek bir cihazda birden fazla bilgi noktası profiline ihtiyacınız varsa bir [Özel OMA-URI](custom-settings-windows-10.md) kullanabilirsiniz.
 
@@ -69,7 +71,9 @@ Profil oluşturulur ve profiller listesinde gösterilir. Sonra, profili [atayın
 [Profili atama](device-profile-assign.md) ve [durumunu izleme](device-profile-monitor.md).
 
 Aşağıdaki platformları çalıştıran cihazlar için bilgi noktası profilleri oluşturabilirsiniz:
+
 - [Android Cihaz Yöneticisi](device-restrictions-android.md#kiosk)
 - [Android Kurumsal](device-restrictions-android-for-work.md#dedicated-device-settings)
+- [iOS/ıpados](device-restrictions-ios.md#kiosk)
 - [Windows 10 ve üzeri](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

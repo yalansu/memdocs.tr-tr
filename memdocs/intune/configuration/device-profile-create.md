@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 462f9ca9618d16c0291792f86d00c46f641c6cc8
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084055"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327445"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Microsoft Intune’da cihaz profili oluşturma
 
@@ -37,73 +37,64 @@ Bu makalede:
 
 ## <a name="create-the-profile"></a>Profili oluşturma
 
-1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
+Profiller, [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oluşturulur. Bu yönetim merkezinde **cihazlar**' ı seçin. Şu seçenekleriniz vardır:
 
-2. **Yapılandırma profillerinin** > **cihazları** ' nı seçin. Şu seçenekleriniz vardır:
+- **Genel bakış**: profillerinizin durumunu listeler ve kullanıcılara ve cihazlara atadığınız profiller hakkında ek ayrıntılar sağlar.
+- **İzleyici**: başarılı veya başarısız için profillerinizin durumunu denetleyin ve ayrıca profilinizde günlükleri görüntüleyin.
+- **Platforma göre**: platformunuz için ilkeler ve Profiller oluşturun ve görüntüleyin. Bu görünüm, platforma özgü özellikleri de gösterebilir. Örneğin, **Windows**' u seçin. **Windows 10 güncelleştirme halkaları** ve **PowerShell betikleri**gibi Windows 'a özgü özellikler görürsünüz.
+- **İlke**: cihaz profilleri oluşturun, cihazlarda çalıştırmak Için özel [PowerShell betikleri](../apps/intune-management-extension.md) yükleyin ve [esım](esim-device-configuration.md)kullanarak cihazlara veri planları ekleyin.
 
-    - **Genel bakış**: profillerinizin durumunu listeler ve kullanıcılara ve cihazlara atadığınız profiller hakkında ek ayrıntılar sağlar.
-    - **Yönetin**: cihaz profilleri oluşturun, profil içinde çalıştırılacak özel [PowerShell betikleri](../apps/intune-management-extension.md) yükleyin ve [esım](esim-device-configuration.md)kullanarak cihazlara veri planları ekleyin.
-    - **İzleme**: bir profilin başarı veya başarısızlık durumunu denetleyin ve ayrıca profilinizde günlükleri görüntüleyin.
-    - **Kurulum**: bir SCEP veya PFX Sertifika yetkilisi ekleyin ya da profilde [Telekom gider yönetimini](telecom-expenses-monitor.md) etkinleştirin.
+Bir profil oluşturduğunuzda ( **profil oluşturma** > **yapılandırma profilleri** ), platformunuzu seçin:
 
-3. **Profil oluştur**' u seçin. Aşağıdaki özellikleri girin:
+- **Android Cihaz Yöneticisi**
+- **Android Kurumsal**
+- **iOS/ıpados**
+- **macOS**
+- **Windows 10 ve üzeri**
+- **Windows 8.1 ve üzeri**
+- **Windows Phone 8.1**
 
-   - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin **Şirketin tamamı için WP e-posta profili** gibi bir profil adı kullanabilirsiniz.
-   - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
-   - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:  
+Ardından profil türünü seçin. Seçtiğiniz platforma bağlı olarak, yapılandırabileceğiniz ayarlar farklılık gösterir. Aşağıdaki makaleler farklı profil türleri için ayarları anlatmaktadır:
 
-       - **Android Cihaz Yöneticisi**
-       - **Android kurumsal**
-       - **iOS/ıpados**
-       - **macOS**
-       - **Windows Phone 8.1**
-       - **Windows 8.1 ve üzeri**
-       - **Windows 10 ve üzeri**
+- [Yönetim Şablonları (Windows)](administrative-templates-windows.md)
+- [Özel](custom-settings-configure.md)
+- [Teslim iyileştirme (Windows)](delivery-optimization-windows.md)
+- [Türetilmiş kimlik bilgileri (Android Enterprise, iOS, ıpados)](../protect/derived-credentials.md)
+- [Cihaz özellikleri (macOS, iOS, ıpados)](device-features-configure.md)
+- [Cihaz üretici yazılımı (Windows)](device-firmware-configuration-interface-windows.md)
+- [Cihaz kısıtlamaları](device-restrictions-configure.md)
+- [Etki alanına ekleme (Windows)](domain-join-configure.md)
+- [Sürüm yükseltme ve mod anahtarı (Windows)](edition-upgrade-configure-windows-10.md)
+- [Eğitim (iOS, ıpados)](../fundamentals/education-settings-configure-ios.md)
+- [E-posta](email-settings-configure.md)
+- [Endpoint Protection (macOS, Windows)](../protect/endpoint-protection-configure.md)
+- [Uzantılar (macOS)](kernel-extensions-overview-macos.md)
+- [Kimlik koruması (Windows)](../protect/identity-protection-configure.md)
+- [Bilgi noktası](kiosk-settings.md)
+- [Microsoft Defender ATP (Windows)](../protect/advanced-threat-protection.md)
+- [Mobility uzantıları (MX) profili (Android Cihaz Yöneticisi)](android-zebra-mx-overview.md)
+- [OEMConfig (Android kurumsal)](android-oem-configuration-overview.md)
+- [PKCS sertifikası](../protect/certficates-pfx-configure.md)
+- [PKCS içeri aktarılan sertifika](../protect/certificates-imported-pfx-configure.md)
+- [Tercih dosyası (macOS)](preference-file-settings-macos.md)
+- [SCEP sertifikası](../protect/certificates-scep-configure.md)
+- [Güvenli değerlendirme (eğitim) (Windows)](education-settings-configure.md)
+- [Paylaşılan çok kullanıcılı cihaz (Windows)](shared-user-device-settings.md)
+- [Telekom giderleri (Android Cihaz Yöneticisi, iOS, ıpados)](telecom-expenses-monitor.md)
+- [Güvenilir sertifika](../protect/certificates-configure.md)
+- [VPN](vpn-settings-configure.md)
+- [Wi-Fi](wi-fi-settings-configure.md)
 
-   - **Profil türü**: oluşturmak istediğiniz ayarların türünü seçin. Gösterilen liste, seçtiğiniz **platforma** bağlıdır.
-   - **Ayarlar**: aşağıdaki makaleler her profil türü için ayarları anlatmaktadır:
+Örneğin, platform için **iOS/ıpados** ' ı seçerseniz, profil türü seçenekleriniz aşağıdaki profile benzer şekilde görünür:
 
-       - [Yönetim şablonları](administrative-templates-windows.md)
-       - [Özel](custom-settings-configure.md)
-       - [Teslim iyileştirme](delivery-optimization-windows.md)
-       - [Cihaz özellikleri](device-features-configure.md)
-       - [Cihaz kısıtlamaları](device-restrictions-configure.md)
-       - [Etki alanına ekleme](domain-join-configure.md)
-       - [Sürüm yükseltme ve mod değiştirme](edition-upgrade-configure-windows-10.md)
-       - [Eğitim](education-settings-configure.md)
-       - [E-posta](email-settings-configure.md)
-       - [Uç nokta koruması](../protect/endpoint-protection-configure.md)
-       - [Kimlik koruması](../protect/identity-protection-configure.md)  
-       - [Bilgi noktası](kiosk-settings.md)
-       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
-       - [PKCS sertifikası](../protect/certficates-pfx-configure.md)
-       - [PKCS içeri aktarılan sertifika](../protect/certificates-imported-pfx-configure.md)
-       - [Tercih dosyası](preference-file-settings-macos.md)
-       - [SCEP sertifikası](../protect/certificates-scep-configure.md)
-       - [Güvenilir sertifika](../protect/certificates-configure.md)
-       - [Güncelleştirme ilkeleri](../protect/software-updates-ios.md)
-       - [VPN](vpn-settings-configure.md)
-       - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Windows Bilgi Koruması](../protect/windows-information-protection-configure.md)
-
-     Örneğin, platform için **iOS/ıpados** ' ı seçerseniz, profil türü seçenekleriniz aşağıdaki profile benzer şekilde görünür:
-
-     > [!div class="mx-imgBorder"]
-     > Intune 'da iOS/ıpados profili oluşturma ![](./media/device-profile-create/create-device-profile.png)
-
-4. Bitirdiğinizde, yaptığınız değişiklikleri kaydetmek için **Tamam** > **Oluştur**'u seçin. Profil oluşturulur ve listede gösterilir.
+> [!div class="mx-imgBorder"]
+> Intune 'da iOS/ıpados profili oluşturma ![](./media/device-profile-create/create-device-profile.png)
 
 ## <a name="scope-tags"></a>Kapsam etiketleri
 
-Profilinize ayar ekledikten sonra bir kapsam etiketi de ekleyebilirsiniz. Kapsam etiketleri, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtre sağlar.
+Profilinize ayar ekledikten sonra bir kapsam etiketi de ekleyebilirsiniz. Kapsam etiketleri, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtre sağlar. Ve, dağıtıldığı için kullanılır.
 
 Kapsam etiketleri ve yapabilecekleriniz hakkında daha fazla bilgi için bkz. [Dağıtılmış BT için RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
-
-### <a name="add-a-scope-tag"></a>Kapsam etiketi ekleme
-
-1. **Kapsam (Etiketler)** öğesini seçin.
-2. **Ekle**'yi seçerek yeni bir kapsam etiketi oluşturun. İsterseniz listedeki kapsam etiketlerinden birini de seçebilirsiniz.
-3. Değişikliklerinizi kaydetmek için **Tamam**’ı seçin.
 
 ## <a name="applicability-rules"></a>Uygulanabilirlik kuralları
 
@@ -183,7 +174,7 @@ Profiller oluştururken aşağıdaki önerileri göz önünde bulundurun:
 
 - Kullanıcı ilkelerini cihaz ilkelerinden ayırın.
 
-  Örneğin, [Intune 'da Yönetim Şablonları](administrative-templates-windows.md) yüzlerce ADMX ayarı vardır. Bu şablonlar, bir ayarların kullanıcılar veya cihazlar için geçerli olup olmadığını gösterir. Yönetici şablonları oluştururken, kullanıcı ayarlarınızı bir kullanıcılar grubuna atayın ve cihaz ayarlarınızı bir cihaz grubuna atayın.
+  Örneğin, [Intune 'da Yönetim Şablonları](administrative-templates-windows.md) yüzlerce ADMX ayarı vardır. Bu şablonlar, bir ayarın kullanıcılara veya cihazlara uygulanacağını gösterir. Yönetici şablonları oluştururken, kullanıcı ayarlarınızı bir kullanıcılar grubuna atayın ve cihaz ayarlarınızı bir cihaz grubuna atayın.
 
   Aşağıdaki görüntüde kullanıcılara uygulanabilecek ve/veya cihazlara uygulanabilecek bir ayarın örneği gösterilmektedir:
 

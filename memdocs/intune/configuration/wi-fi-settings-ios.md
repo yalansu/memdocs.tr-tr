@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3765794048de337100be0384b325f5288063121
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 27a37642891693f59c8dc38aa9bb047b251084ca
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086358"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327362"
 ---
 # <a name="add-wi-fi-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune 'de iOS ve ıpados cihazları için Wi-Fi ayarları ekleme
 
@@ -33,7 +33,7 @@ Bu makalede bu ayarlar açıklanır.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Cihaz profili oluşturma](device-profile-create.md).
+[Cihaz profili oluşturma](wi-fi-settings-configure.md).
 
 > [!NOTE]
 > Bu ayarlar tüm kayıt türleri için kullanılabilir. Kayıt türleri hakkında daha fazla bilgi için bkz. [iOS/ıpados kaydı](../enrollment/ios-enroll.md).

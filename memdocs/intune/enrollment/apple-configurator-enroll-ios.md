@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a85ff2ae7f0724a2ff41be5bda22877cc099ef2a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 71563a44e991e7324b9ce258d66d288d4b5a6cdb
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325454"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327257"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-configurator"></a>Apple Configurator ile iOS/iPadOS cihaz kaydını ayarlama
 

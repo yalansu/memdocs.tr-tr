@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f8a15199f599cf0fd4f90ea965bcc3e668f3b27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 44cae6e1e7fdd310a6053cbcb6f19371263d0161
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330042"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326633"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Yönetme ve farklı bir cihaz yönetim özellikleri, Windows Holographic ve HoloLens cihazları Intune ile kullanma
 
@@ -58,7 +58,7 @@ Intune; kullanıcıların şirket verilerine erişmesi, cihaz kaydetmesi, uygula
 
 **[Cihaz uyumluluğu ilkesi oluşturma](../protect/compliance-policy-create-windows.md)**
 
-Uyumluluk ilkeleri, cihazların uyumlu olmak için karşılaması gereken kurallar ve ayarlardır. Uyumsuz cihazların şirket kaynaklarına erişimini engellemek için bu ilkeleri koşullu erişimle birlikte kullanın. Intune’da Windows Holographic for Business çalıştıran cihazlar için erişime izin vermek veya erişimi engellemek üzere uyumluluk ilkeleri oluşturun. Örneğin BitLocker’ın etkin olmasını gerektiren bir ilke oluşturabilirsiniz.
+Uyumluluk ilkeleri, cihazların uyumlu olmak için karşılaması gereken kurallar ve ayarlardır. Uyumsuz cihazların şirket kaynaklarına erişimini engellemek için bu ilkeleri koşullu erişimle birlikte kullanın. Intune’da Windows Holographic for Business çalıştıran cihazlar için erişime izin vermek veya erişimi engellemek üzere uyumluluk ilkeleri oluşturun. Örneğin, BitLocker 'ın etkinleştirilmesini gerektiren bir ilke oluşturabilirsiniz.
 
 Ayrıca bkz. **[Uyumluluk ilkelerini kullanmaya başlama](../protect/device-compliance-get-started.md)** .
 
@@ -107,7 +107,7 @@ Intune ile cihaz kategorileri oluşturarak cihazları Satış, Muhasebe, İnsan 
 
 ## <a name="device-configuration-profiles"></a>Cihaz yapılandırma profilleri
 
-**[Yapılandırma profillerini kullanmaya başlayın](../configuration/device-profiles.md) ve [kendi profilinizi oluşturun](../configuration/device-profile-create.md)**
+**[Yapılandırma profilleri ile çalışmaya başlayın](../configuration/device-profiles.md)ve [profile genel bakış](../configuration/device-profile-create.md)**
 
 Intune, kuruluşunuzdaki farklı cihazlarda etkinleştirebileceğiniz veya devre dışı bırakabileceğiniz ayarları ve özellikleri içerir. Bu ayarlar ve özellikler, profiller kullanılarak yönetilir. Örneğin, Cortana 'yı sağlayan veya Windows holographic for Business çalıştıran cihazlarınızda Microsoft Defender akıllı ekranını kullanan bir profil oluşturabilirsiniz.
 

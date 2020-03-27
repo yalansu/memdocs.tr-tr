@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: efd9b064e4ca6c3c375be227af7414544f4692a9
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: 8583c625277735d653143f5cf87c56c350bdc1ff
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80275008"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326715"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Yönetim nesnelerinin koleksiyonlarını gruplamak için ilke kümelerini kullanma
 

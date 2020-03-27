@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ac81ceced473eacc32a3fca566f7c36eb7a262e2
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: d79f97da88a939d95b68a9ef747da87cf3844598
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084872"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322463"
 ---
 # <a name="use-device-encryption-with-intune"></a>Intune ile cihaz şifrelemesini kullanma
 
@@ -43,7 +43,7 @@ Dosya kasasının cihazda çalışması için Kullanıcı tarafından onaylanan 
 
 Filekasası, macOS ile birlikte gelen bir tam disk şifreleme programıdır. **MacOS 10,13 veya üstünü**çalıştıran cihazlarda dosya kasasını yapılandırmak Için Intune 'u kullanabilirsiniz.
 
-Filekasasını yapılandırmak için, macOS platformu için Endpoint Protection için bir [cihaz yapılandırma profili](../configuration/device-profile-create.md) oluşturun. Filekasası ayarları, macOS Endpoint Protection için kullanılabilir ayar kategorilerinden biridir.
+Filekasasını yapılandırmak için, macOS platformu için Endpoint Protection için bir [cihaz yapılandırma profili](endpoint-protection-configure.md) oluşturun. Filekasası ayarları, macOS Endpoint Protection için kullanılabilir ayar kategorilerinden biridir.
 
 Cihazları dosya kasası ile şifrelemek için bir ilke oluşturduktan sonra, ilke iki aşamada cihazlara uygulanır. İlk olarak cihaz, Intune 'un kurtarma anahtarını alıp yedeklemesini sağlamak için hazır hale getirilir. Bu eyleme Emanet denir. Anahtar alındıktan sonra, disk şifrelemesi başlayabilir.
 
@@ -105,7 +105,7 @@ Windows 10 çalıştıran cihazlarda BitLocker Sürücü Şifrelemesi yapıland�
 
 BitLocker, **Windows 10 veya üzerini**çalıştıran cihazlarda kullanılabilir.
 
-Windows 10 veya sonraki bir platformda Endpoint Protection için bir [cihaz yapılandırma profili](../configuration/device-profile-create.md) oluşturduğunuzda BitLocker 'ı yapılandırın. BitLocker ayarları, Windows 10 Endpoint Protection için Windows şifreleme ayarları kategorisinde bulunur.
+Windows 10 veya sonraki bir platformda Endpoint Protection için bir [cihaz yapılandırma profili](endpoint-protection-configure.md) oluşturduğunuzda BitLocker 'ı yapılandırın. BitLocker ayarları, Windows 10 Endpoint Protection için Windows şifreleme ayarları kategorisinde bulunur.
 
 ![BitLocker ayarları](./media/encrypt-devices/bitlocker-settings.png)
 
