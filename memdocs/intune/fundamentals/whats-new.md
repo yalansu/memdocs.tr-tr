@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b33b33415628dab471d1d4951e141c2ce718eaa0
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 9632f47d3ab5582365a059b888892c2e0fe6ec8e
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326657"
+ms.locfileid: "80358721"
 ---
-# <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune yenilikler nelerdir?
+# <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
 [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde Microsoft Intune her hafta yenilikleri öğrenin. Ayrıca, [önemli bildirimler](#notices), [Geçmiş yayınlar](whats-new-archive.md)ve [Intune hizmet güncelleştirmelerinin nasıl yayımlandığına](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728)ilişkin bilgileri de bulabilirsiniz. 
 
@@ -55,6 +55,46 @@ ms.locfileid: "80326657"
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-march-24-2020"></a>24 Mart 2020 haftası
+
+### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Android ve Android kurumsal cihazlarda cihaz kısıtlama profilleri oluştururken Geliştirilmiş kullanıcı arabirimi deneyimi<!-- 5841361 -->
+
+Android veya Android Kurumsal cihazları için bir profil oluşturduğunuzda, uç nokta yönetimi Yönetim Merkezi 'ndeki deneyim güncellenir. Bu değişiklik aşağıdaki cihaz yapılandırma profillerini etkiler (**cihazlar** > **yapılandırma profilleri** > **profil oluşturma** > **Android Cihaz Yöneticisi** veya platform için **Android Enterprise** ):
+
+- Cihaz kısıtlamaları: Android Cihaz Yöneticisi
+- Cihaz kısıtlamaları: Android kurumsal cihaz sahibi
+- Cihaz kısıtlamaları: Android kurumsal iş profili
+
+Yapılandırabileceğiniz cihaz kısıtlamaları hakkında daha fazla bilgi için bkz. [Android Cihaz Yöneticisi](../configuration/device-restrictions-android.md) ve [Android Enterprise](../configuration/device-restrictions-android-for-work.md).
+
+### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>İOS/ıpados ve macOS cihazlarında yapılandırma profilleri oluştururken Geliştirilmiş kullanıcı arabirimi deneyimi<!-- 5569002 5568997 -->
+
+İOS veya macOS cihazları için bir profil oluşturduğunuzda, uç nokta yönetimi Yönetim Merkezi 'ndeki deneyim güncellenir. Bu değişiklik aşağıdaki cihaz yapılandırma profillerini**etkiler (cihaz** > **yapılandırma profilleri** > **profil oluşturma** > **iOS/ıpados** veya **MacOS** for Platform):
+
+- Özel: iOS/ıpados, macOS
+- Cihaz özellikleri: iOS/ıpados, macOS
+- Cihaz kısıtlamaları: iOS/ıpados, macOS
+- Endpoint Protection: macOS
+- Uzantılar: macOS
+- Tercih dosyası: macOS
+
+### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>MacOS cihazlarındaki cihaz özelliklerinde Kullanıcı yapılandırma ayarından gizle<!-- 6524869 -->
+
+MacOS cihazlarında bir cihaz özellikleri yapılandırma profili oluştururken, **Kullanıcı yapılandırma** profilleri ' nden yeni bir gizleme (**cihazlar** > **yapılandırma profilleri** > , profil > **oturum açma öğeleri**Için platform > **cihaz özellikleri** ) > **MacOS** **profili oluşturun** .
+
+Bu özellik, macOS cihazlarında **kullanıcı & grupları** oturum açma öğeleri uygulama listesinde bir uygulamanın gizleme onay işaretini ayarlar. Mevcut profiller listede bu ayarı yapılandırılmamış olarak gösterir. Yöneticiler, bu ayarı yapılandırmak için mevcut profilleri güncelleştirebilir.
+
+**Gizle**olarak ayarlandığında, uygulama için gizleme onay kutusu işaretlenir ve kullanıcılar bunu değiştiremezler. Kullanıcılar cihazlarında oturum açtıktan sonra da uygulamayı kullanıcılardan gizler.
+
+> [!div class="mx-imgBorder"]
+> Kullanıcılar Microsoft Intune ve Endpoint Manager 'da cihazda oturum açtıktan sonra macOS cihazlarındaki uygulamaları ![gizleyin](./media/whats-new/macos-hide-checkmark-users-groups-login-items-apps-list.png)
+
+Yapılandırabileceğiniz ayar hakkında daha fazla bilgi için bkz. [MacOS cihaz özelliği ayarları](../configuration/macos-device-features-settings.md).
+
+Bu özellik şu platformlarda geçerlidir:
+
+- Mac OS
+
 ## <a name="week-of-march-16-2020-2003-service-release"></a>16 Mart 2020 haftası (2003 hizmet sürümü)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -92,7 +132,7 @@ Bu değişiklikler, Intune hizmet arka ucu dağıttığı için Mart ayının he
 #### <a name="new-user-experience-when-creating-administrative-templates-on-windows-devices--5096036---"></a>Windows cihazlarında Yönetim Şablonları oluştururken yeni kullanıcı deneyimi<!--5096036 -->
 Müşteri geri bildirimlerine göre ve yeni Azure tam ekran deneyimine geçtiğimiz için, Yönetim Şablonları profili deneyimini bir klasör görünümüyle yeniden oluşturduk. Herhangi bir ayarlarda veya mevcut profillerde değişiklik yapmadık. Bu nedenle, mevcut profilleriniz aynı kalır ve yeni görünümde kullanılabilir. **Tüm ayarlar ' ı**seçip ara ' yı kullanarak tüm ayarlar seçeneklerinde gezinmeye devam edebilirsiniz. Ağaç görünümü bilgisayar ve Kullanıcı yapılandırmalarına göre bölünür. Windows, Office ve Edge ayarlarını ilişkili klasörlerinde bulacaksınız.  
 
-Uygulama alanı:
+Uygulama hedefi:
 - Windows 10 ve üzeri
 
 #### <a name="vpn-profiles-with-ikev2-vpn-connections-can-use-always-on-with-iosipados-devices---1947932-----"></a>IKEv2 VPN bağlantılarına sahip VPN profilleri, her zaman iOS/ıpados cihazlarıyla birlikte kullanılabilir<!-- 1947932   -->
@@ -102,7 +142,7 @@ Uygulama alanı:
 
 Yapılandırabileceğiniz Ikev2 ayarlarını görmek için [Microsoft Intune iOS CIHAZLARıNDA VPN ayarları ekle](../configuration/vpn-settings-ios.md#ikev2-settings)' ye gidin.
 
-Uygulama alanı:
+Uygulama hedefi:
 - iOS/iPadOS
 
 #### <a name="delete-bundles-and-bundle-arrays-in-oemconfig-device-configuration-profiles-on-android-enterprise-devices---5550355-----"></a>Android kurumsal cihazlarda OEMConfig cihaz yapılandırma profillerindeki paketleri ve paket dizilerini silme<!-- 5550355   -->
@@ -110,13 +150,13 @@ Android kurumsal cihazlarda, OEMConfig **profilleri oluşturun ve** güncelleşt
 
 OEMConfig profilleri hakkında daha fazla bilgi için bkz. [Microsoft Intune 'de oemconfig Ile Android Kurumsal cihazları kullanma ve yönetme](../configuration/android-oem-configuration-overview.md).
 
-Uygulama alanı:
+Uygulama hedefi:
 - Android Kurumsal
 
 #### <a name="configure-the-iosipados-microsoft-azure-ad-sso-app-extension---5672534-----"></a>İOS/ıpados Microsoft Azure AD SSO uygulama uzantısını yapılandırma<!-- 5672534   -->
 Microsoft Azure AD ekibi, iOS/ıpados 13.0 + kullanıcılarına tek bir oturum açma ile Microsoft uygulamalarına ve Web sitelerine erişim elde etmesine izin vermek için bir yeniden yönlendirme çoklu oturum açma (SSO) uygulama uzantısı oluşturdu. Daha önce Microsoft Authenticator uygulama ile aracılı kimlik doğrulaması yapmış olan tüm uygulamalar, yeni SSO uzantısıyla SSO almaya devam edecektir. Azure AD SSO uygulama uzantısı sürümü sayesinde, SSO uzantısını yeniden yönlendirme **SSO uygulama uzantısı**türü (**cihazlar** > **yapılandırma profilleri** > profil **oluşturma** > **iOS/IPA> > DOS** ) ile yapılandırabilirsiniz. **Device features**
 
-Uygulama alanı:
+Uygulama hedefi:
 - iOS 13,0 ve üzeri
 - ıpados 13,0 ve üzeri
 
@@ -125,7 +165,7 @@ Uygulama alanı:
 #### <a name="enterprise-app-trust-settings-modification-setting-is-removed-from-iosipados-device-restriction-profiles---6225131-----"></a>Kurumsal uygulama güven ayarları değiştirme ayarı iOS/ıpados cihaz kısıtlama profillerden kaldırılır<!-- 6225131   -->
 İOS/ıpados cihazlarında, bir cihaz kısıtlama profili (**cihazlar** > **yapılandırma profilleri** oluşturma > profil **oluşturma** için **iOS/IPA> DOS** > profil türü için **cihaz kısıtlamaları** ) oluşturun. **Kurumsal uygulama güven ayarları değiştirme** ayarı Apple tarafından kaldırılır ve Intune 'dan kaldırılır. Şu anda bu ayarı bir profilde kullanıyorsanız, hiçbir etkisi yoktur ve mevcut profillerden kaldırılır. Bu ayar ayrıca Intune 'daki herhangi bir raporlamadan kaldırılır.
 
-Uygulama alanı:
+Uygulama hedefi:
 - iOS/iPadOS
 
 Kısıtlayacakları ayarları görmek için [iOS ve ıpados cihaz ayarları ' na giderek özelliklere izin verin veya kısıtlayın](../configuration/device-restrictions-ios.md).
@@ -295,7 +335,11 @@ Bu güncelleştirmeyi yüklemeden önce [Configuration Manager Technical Preview
 Artık şu uzak eylemler için toplu komutlar verebilirsiniz: yeniden başlatma, yeniden adlandırma, Autopilot sıfırlama, silme ve silme. Yeni toplu eylemleri görmek için [Microsoft Endpoint Manager yönetim merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) > **cihazlar** > **tüm cihazlar** **toplu işlemler** > ' ne gidin.
 
 #### <a name="all-devices-list-improved-search-sort-and-filter--6179023--"></a>Tüm cihazlar için geliştirilmiş arama, sıralama ve filtreleme listeleri<!--6179023-->
-Tüm cihazlar listesi, daha iyi performans, arama, sıralama ve filtreleme için geliştirilmiştir. Daha fazla bilgi için [Bu destek ipucunu](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946)inceleyin.
+Tüm cihazlar listesi, daha iyi performans, arama, sıralama ve filtreleme için geliştirilmiştir. Daha fazla bilgi için [Bu destek ipucunu](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946)inceleyin.  
+
+### <a name="app-management"></a>Uygulama yönetimi  
+####  <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Android için Şirket Portalı 'de geliştirilmiş oturum açma deneyimi    
+Daha modern, basit ve kullanıcılar için temiz bir deneyim sunmak amacıyla Android için Şirket Portalı uygulamasındaki çeşitli oturum açma ekranlarının yerleşimini güncelleştirdik. Geliştirmelere göz atmak için bkz. [uygulama kullanıcı arabirimindeki](https://docs.microsoft.com/mem/intune/fundamentals/whats-new-app-ui)yenilikler.
 
 <!-- ########################## -->
 ## <a name="week-of-february-24-2020"></a>24 Şubat 2020 haftası
@@ -480,7 +524,7 @@ Artık kuruluş türünü seçtiğinizde, `proxy.contoso.com`gibi bir proxy sunu
 
 Yapılandırabileceğiniz geçerli Wi-Fi ayarlarını görmek için [Microsoft Intune ' de Android Enterprise ve Android bilgi noktası çalıştıran cihazlar Için Wi-Fi ayarları ekle](../configuration/wi-fi-settings-android-enterprise.md#work-profile-only)' ye gidin.
 
-Uygulama alanı:
+Uygulama hedefi:
 - Android kurumsal iş profili
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -575,7 +619,7 @@ Microsoft Edge, Office ve Windows ayarlarını denetlemek ve yönetmek için Mic
 
 Intune 'da ADMX şablonları hakkında daha fazla bilgi için, bkz. [Microsoft Intune Grup İlkesi ayarlarını yapılandırmak Için Windows 10 şablonlarını kullanma](../configuration/administrative-templates-windows.md).
 
-Uygulama alanı:
+Uygulama hedefi:
 
 - Windows 10 ve üzeri
 
@@ -613,7 +657,7 @@ Bu yeni ayarlar, SSO uygulama uzantıları ve Apple 'ın yerleşik Kerberos uzan
 
 Yapılandırabileceğiniz SSO uygulama uzantısı ayarlarının tam aralığını görmek için, [macOS 'Ta](../configuration/macos-device-features-settings.md#single-sign-on-app-extension)IOS ve SSO ['daki SSO](../configuration/ios-device-features-settings.md#single-sign-on-app-extension) ' ya gidin.
 
-Uygulama alanı:
+Uygulama hedefi:
 
 - iOS/iPadOS
 - Mac OS
@@ -719,7 +763,7 @@ Aşağıdakiler dahil olmak üzere kullanılabilir yeni Exchange ActiveSync ayar
 
 Bu ayarlar hakkında daha fazla bilgi için, [Intune 'Da iOS cihazları Için e-posta profili ayarları](../configuration/email-settings-ios.md)' na gidin. 
 
-Uygulama alanı:
+Uygulama hedefi:
 
 - iOS 13,0 ve üzeri
 - ıpados 13,0 ve üzeri
@@ -729,7 +773,7 @@ Android kurumsal tam olarak yönetilen ve ayrılmış cihazlarda, kullanıcılar
 
 Yapılandırabileceğiniz ayarları görmek için [Android kurumsal cihaz ayarları ' na giderek Intune kullanarak özelliklere izin verin veya kısıtlayın](../configuration/device-restrictions-android-for-work.md).
 
-Uygulama alanı:
+Uygulama hedefi:
 
 - Android kurumsal tam yönetilen cihazlar
 - Android kurumsal adanmış cihazlar
@@ -741,7 +785,7 @@ Bu ayarın cihazlar üzerinde hiçbir etkisi yoktur. Bu ayarı mevcut profillerd
 
 Yapılandırabileceğiniz tüm ayarları görmek için [iOS ve ıpados cihaz ayarları ' na bakın ve Intune kullanarak özelliklere izin verin veya kısıtlayın](../configuration/device-restrictions-ios.md).
 
-Uygulama alanı:
+Uygulama hedefi:
 
 - iOS/iPadOS
 
@@ -759,7 +803,7 @@ Yalnızca bazı uygulamalar yönetilen tercihleri destekler ve bu uygulamalar t�
 
 Bu özellik hakkında daha fazla bilgi için, bkz. [Microsoft Intune kullanarak macOS cihazlarına özellik listesi dosyası ekleme](../configuration/preference-file-settings-macos.md).
 
-Uygulama alanı:
+Uygulama hedefi:
 
 - 10,7 ve daha yeni çalıştıran macOS cihazları
 

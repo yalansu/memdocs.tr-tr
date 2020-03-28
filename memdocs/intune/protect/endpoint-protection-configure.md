@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 98e72f11781ba13dbe5d4e576643d04e51f3c95d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 4071614c7cb93194eef00f49aa2e1759ba1028f6
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327468"
+ms.locfileid: "80359255"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Intune’da Endpoint Protection ayarları ekleme
 
@@ -45,23 +45,38 @@ Bir profil oluşturmadan önce, Intune 'un desteklenen her platform için yönet
 
 2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
 
-3. Endpoint Protection profili için bir **Ad** ve **Açıklama** girin.
+3. Aşağıdaki özellikleri girin:
 
-4. **Platform** açılan listesinden, özel ayarları uygulamak istediğiniz cihaz platformunu seçin. Şu anda, cihaz kısıtlama ayarları için aşağıdaki platformlardan birini seçebilirsiniz:
+    - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:
 
-   - **macOS**
-   - **Windows 10 ve üzeri**
+        - **macOS**
+        - **Windows 10 ve üzeri**
 
-5. **Profil türü** açılan listesinden **Endpoint protection**'ı seçin.
+    - **Profil**: **Endpoint Protection**' ı seçin.
 
-6. Seçtiğiniz platforma bağlı olarak, yapılandırabileceğiniz ayarlar farklılık gösterir. Bkz.
+4. **Oluştur**’u seçin.
+5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
+
+    - **Ad**: ilke için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir ilke adı **MacOS: tüm MacOS cihazları Için güvenlik duvarını yapılandıran Endpoint Protection profilidir**.
+    - **Açıklama**: ilke için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+
+6. **İleri**'yi seçin.
+
+7. **Yapılandırma ayarları**' nda, seçtiğiniz platforma bağlı olarak, yapılandırabileceğiniz ayarlar farklıdır. Ayrıntılı ayarlar için platformunuzu seçin:
 
    - [macOS ayarları](endpoint-protection-macos.md)
    - [Windows 10 ayarları](endpoint-protection-windows-10.md)
 
-7. Geçerli ayarları yapılandırdıktan sonra **Profil oluştur** sayfasında **Oluştur** ' u seçin.
+8. **İleri**'yi seçin.
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili `US-NC IT Team` veya `JohnGlenn_ITDepartment`gıbı belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
-   Profil oluşturulur ve profil listesi sayfasında görüntülenir. Bu profili gruplara atamak için bkz. [cihaz profillerini atama](../configuration/device-profile-assign.md).
+    **İleri**'yi seçin.
+
+10. **Atamalar**' da, profilinizi alacak kullanıcıları veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](../configuration/device-profile-assign.md).
+
+    **İleri**'yi seçin.
+
+11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
 
 ## <a name="add-custom-firewall-rules-for-windows-10-devices"></a>Windows 10 cihazları için özel güvenlik duvarı kuralları ekleme
 
@@ -75,7 +90,7 @@ Microsoft Defender güvenlik duvarını Windows 10 için Endpoint Protection kur
 
 - Bir kural uygulanamazsa, profildeki tüm kurallar başarısız olarak bildirilir. Intune hangi bağımsız kuralın başarısız olduğunu tanımlayamıyor.  
 
-Intune 'un yönetebileceği güvenlik duvarı kuralları, Windows [güvenlik duvarı yapılandırma hizmeti sağlayıcısı]( https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) 'nda (CSP) ayrıntılı olarak açıklanmıştır. Intune 'un desteklediği Windows 10 cihazlarının özel güvenlik duvarı ayarlarının listesini gözden geçirmek için bkz. [özel güvenlik duvarı kuralları](endpoint-protection-windows-10.md#firewall-rules).
+Intune 'un yönetebileceği güvenlik duvarı kuralları, Windows [güvenlik duvarı yapılandırma hizmeti sağlayıcısı](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) 'nda (CSP) ayrıntılı olarak açıklanmıştır. Intune 'un desteklediği Windows 10 cihazlarının özel güvenlik duvarı ayarlarının listesini gözden geçirmek için bkz. [özel güvenlik duvarı kuralları](endpoint-protection-windows-10.md#firewall-rules).
 
 ### <a name="to-add-custom-firewall-rules-to-an-endpoint-protection-profile"></a>Uç nokta koruma profiline özel güvenlik duvarı kuralları eklemek için
 
@@ -83,20 +98,22 @@ Intune 'un yönetebileceği güvenlik duvarı kuralları, Windows [güvenlik duv
 
 2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
 
-3. *Platform*için **Windows 10 ve üzeri**' i seçin ve ardından *profil türü* için **Endpoint Protection**' ı seçin.
+3. *Platform*için **Windows 10 ve üzeri**' i seçin ve ardından *profil* **Endpoint Protection**' ı seçin.
 
-4. Yapılandırma sayfasını açmak için **Microsoft Defender güvenlik duvarı** ' nı seçin ve ardından *güvenlik duvarı kuralları* için **Ekle** ' yi seçerek **kural oluştur** sayfasını açın.
+    **Oluştur**’u seçin.
 
-5. Güvenlik duvarı kuralı için ayarları belirtin ve sonra kaydetmek için **Tamam** ' ı seçin. Belgelerde bulunan özel güvenlik duvarı kuralı seçeneklerini gözden geçirmek için bkz. [özel güvenlik duvarı kuralları](endpoint-protection-windows-10.md#firewall-rules).
+4. **Daha sonra**> profiliniz Için bir **ad** girin.
+5. **Yapılandırma ayarları**' nda, **Microsoft Defender güvenlik duvarı**' nı seçin. *Güvenlik duvarı kuralları*Için, **Ekle** ' yi seçerek **kural oluştur** sayfasını açın.
 
-6. Kuralı kaydettikten sonra, kural listesindeki *Microsoft Defender güvenlik duvarı* sayfasında görünür.
+6. Güvenlik duvarı kuralı için ayarları belirtin ve sonra kaydetmek için **Tamam** ' ı seçin. Belgelerde bulunan özel güvenlik duvarı kuralı seçeneklerini gözden geçirmek için bkz. [özel güvenlik duvarı kuralları](endpoint-protection-windows-10.md#firewall-rules).
 
-7. Bir kuralı değiştirmek için listeden kuralı seçin, kuralı **Düzenle** sayfasını açın.
+    1. Kural, kurallar listesindeki *Microsoft Defender güvenlik duvarı* sayfasında görüntülenir.
+    2. Bir kuralı değiştirmek için listeden kuralı seçin, kuralı **Düzenle** sayfasını açın.
+    3. Bir profilden bir kuralı silmek için, kural için üç nokta **(...)** simgesini seçin ve **Sil**' i seçin.
+    4. Kuralların görüntülenme sırasını değiştirmek için, kural listesinin en üstündeki *yukarı ok, aşağı ok* simgesini seçin.
 
-8. Bir profilden bir kuralı silmek için, kural için üç nokta **(...)** simgesini seçin ve **Sil**' i seçin.
-
-9. Kuralların görüntülenme sırasını değiştirmek için, kural listesinin en üstündeki *yukarı ok, aşağı ok* simgesini seçin.
+7. **Gözden geçirip oluştur**' a kadar **İleri ' yi** seçin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bir profili gruplara atamak için bkz. [cihaz profillerini atama](../configuration/device-profile-assign.md).
+Profil oluşturuldu, ancak henüz bir şey yapmamış olabilir. Ardından [profili atayın](../configuration/device-profile-assign.md) ve [durumunu izleyin](../configuration/device-profile-monitor.md).

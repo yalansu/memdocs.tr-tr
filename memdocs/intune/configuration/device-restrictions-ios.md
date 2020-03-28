@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/16/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea0968d15572fa9c3bde1e4d133dcb8b4c980274
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 2af29ea85a79977789326d48a773936b13cf6af2
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80087038"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359199"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için iOS ve ıpados cihaz ayarları
 
@@ -43,16 +43,16 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Ayarlar için geçerlidir: tüm kayıt türleri
 
-- **Kullanım verilerini paylaşma**: **blok** , cihazın Apple 'a tanılama ve kullanım verileri göndermesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu verilerin gönderilmesine izin verebilir.
+- **Kullanım verilerini paylaşma**: **blok** cihazların Apple 'a tanılama ve kullanım verileri göndermesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu verilerin gönderilmesine izin verebilir.
 
-- **Ekran yakalama**: **engelleme** , cihazdaki ekran görüntülerini veya ekran yakalamalarını engeller. İOS/ıpados 9,0 ve üzeri sürümlerde, ekran kayıtlarını da engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların ekran içeriğini bir görüntü veya video olarak yakalamasına izin verebilir.
+- **Ekran yakalama**: **blok** , cihazlarda ekran görüntülerini veya ekran yakalamalarını engeller. İOS/ıpados 9,0 ve üzeri sürümlerde, ekran kayıtlarını da engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların ekran içeriğini bir görüntü veya video olarak yakalamasına izin verebilir.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: cihaz kaydı, otomatik cihaz kaydı (denetimli)
 
-- **GÜVENILMEYEN TLS sertifikaları**: **engelleme** , cihazda güvenilmeyen Aktarım Katmanı Güvenliği (TLS) sertifikalarını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi TLS sertifikalarına izin verebilir.
-- **Kablosuz PKI güncelleştirmelerini engelle**: **blok** , cihazın bir bilgisayara bağlı olmadığı durumlar dışında yazılım güncelleştirmelerini almasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bir bilgisayara bağlı kalmadan bir cihazın yazılım güncelleştirmelerini almasına izin verebilir.
-- **Ad Izlemeyi sınırla**: cihaz reklam tanımlayıcısını devre dışı bırakmak için **sınır** ' ı seçin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi etkin durumda kalabilir.
-- **Kurumsal Uygulama güveni**: **blok** , cihaz üzerindeki cihaz yönetimi & Genel > profilleri > ayarlar ' da **Kurumsal Geliştirici güven** düğmesini kaldırır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kullanıcıların uygulama mağazasından indirilmemiş uygulamalara güvenmeyi seçebilmesine izin verebilir.
+- **GÜVENILMEYEN TLS sertifikaları**: **engelleme** , cihazlarda güvenilmeyen Aktarım Katmanı Güvenliği (TLS) sertifikalarını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi TLS sertifikalarına izin verebilir.
+- **Kablosuz PKI güncelleştirmelerini engelleyin**: **blok** , cihazların bir bilgisayara bağlı olmadığı durumlar dışında yazılım güncelleştirmelerini almasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bir bilgisayara bağlı kalmadan bir cihazın yazılım güncelleştirmelerini almasına izin verebilir.
+- **Ad Izlemeyi sınırla**: **sınır** , cihaz reklam tanımlayıcısını devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi etkin durumda kalabilir.
+- **Kurumsal Uygulama güveni**: **blok** , ayarlar > Genel > profillerinin cihaz yönetimi & cihazlarda **Kurumsal Geliştirici güven** düğmesini kaldırır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kullanıcıların uygulama mağazasından indirilmemiş uygulamalara güvenmeyi seçebilmesine izin verebilir.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
@@ -64,7 +64,7 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
   - iOS 9.3.2 ve üzeri
   - ıpados 13,0 ve üzeri
 
-- **Sınıf uygulamasına göre uzak ekran**izleme: **blok** , sınıf uygulamasının cihazda ekranı uzaktan görüntülemesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Apple derslik uygulamasının ekranı görüntülemesine izin verebilir.
+- **Sınıf uygulamasına göre uzak ekran**izleme: **blok** , sınıf uygulamasının cihazlarda ekranı uzaktan görüntülemesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Apple derslik uygulamasının ekranı görüntülemesine izin verebilir.
 
   Bu ayarı kullanmak için **ekran yakalama** ayarını **Engelle**olarak ayarlayın.
 
@@ -72,60 +72,60 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
   - iOS 9,3 ve üzeri
   - ıpados 13,0 ve üzeri
 
-- **Sınıf uygulamasına göre istem dışı ekran izleme**: **izin ver**olarak ayarlanırsa, öğretmenler, öğrenciler hakkında bilgi sahibi olmadan ders uygulamasını kullanan iOS/ıpados cihazlarının ekranını sessizce gözlemleyebilirsiniz. Sınıf uygulamasını kullanan bir sınıfa kayıtlı öğrenci cihazları otomatik olarak bu kurs öğretme için izin verir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği önleyebilir.
+- **Sınıf uygulamasına göre istem dışı ekran izleme**: **izin ver** , öğretmenlere öğrenci bilgisi olmadan ders uygulamasını kullanarak öğrencilerin iOS/ıpados cihazlarının ekranını sessizce gözlemlemeye olanak tanır. Sınıf uygulamasını kullanan bir sınıfa kayıtlı öğrenci cihazları otomatik olarak bu kurs öğretme için izin verir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği önleyebilir.
 
   Bu ayarı kullanmak için **ekran yakalama** ayarını **Engelle**olarak ayarlayın.
 
-- **Hesap değişikliği**: **engelleme**olarak ayarlandığında, kullanıcılar cihaza özgü ayarları iOS/ıpados ayarları uygulamasından güncelleştiremez. Örneğin, kullanıcılar yeni cihaz hesapları oluşturamaz veya Kullanıcı adını veya parolayı değiştirebilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların bu ayarları değiştirmesine izin verebilir.
+- **Hesap değişikliği**: **blok** , kullanıcıların iOS/ıpados ayarları uygulamasındaki cihaza özgü ayarları güncelleştirmesini engeller. Örneğin, kullanıcılar yeni cihaz hesapları oluşturamaz veya Kullanıcı adını veya parolayı değiştirebilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların bu ayarları değiştirmesine izin verebilir.
 
   Bu özellik ayrıca, e-posta, kişiler, takvim, Twitter ve daha fazlası gibi iOS/ıpados ayarları uygulamasından erişilebilen ayarlar için de geçerlidir. Bu özellik, Microsoft Outlook uygulaması gibi iOS/ıpados ayarları uygulamasından yapılandırılamayan hesap ayarlarına sahip uygulamalar için geçerlidir.
 
-- **Ekran süresi**: **blok** kullanıcıların ekran zamanında (cihaz ayarları) kendi kısıtlamalarını değiştirmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kullanıcıların cihazda cihaz kısıtlamalarını (ebeveyn denetimleri veya içerik ve gizlilik kısıtlamaları gibi) yapılandırmasına izin verebilir.
+- **Ekran süresi**: **blok** kullanıcıların ekran zamanında (cihaz ayarları) kendi kısıtlamalarını değiştirmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazlarda cihaz kısıtlamalarını (ebeveyn denetimleri veya içerik ve gizlilik kısıtlamaları gibi) yapılandırmasına izin verebilir.
 
   Bu ayar **Cihaz ayarlarında kısıtlamaları etkinleştirme** ayarının yeniden adlandırılmış halidir. Bu değişikliğin etkisi:  
   
   - iOS 11.4.1 ve üzeri: **Block** , kullanıcıların cihaz ayarlarında kendi kısıtlamalarını değiştirmesini engeller. Davranış aynıdır; ve kullanıcılar için herhangi bir değişiklik yoktur.
   - iOS 12,0 ve üzeri: **Block** , kullanıcıların, içerik ve gizlilik kısıtlamaları dahil cihaz ayarları 'Nda (Ayarlar > Genel > ekran süresi) kendi **ekran süresini** ayarlamalarına engel olur. iOS 12.0'dan yükseltilen cihazlar artık cihaz ayarlarında kısıtlamalar sekmesini (Ayarlar > Genel > Cihaz Yönetimi > Yönetim Profili > Kısıtlamalar) görmez. Bu ayarlar **Ekran Saati** altındadır.
   
-- **Cihazdaki tüm içeriği ve ayarları Sil seçeneğinin kullanımı**: **Engelle** ' yi seçin, böylece kullanıcılar cihazdaki tüm içeriği ve ayarları silme seçeneğini kullanamaz. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcılara bu ayarlara erişim verebilir.
-- **Cihaz adı değişikliği**: cihaz adının değiştirilebilmesi için **Engelle** ' yi seçin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazın adını değiştirmesine izin verebilir.
-- **Bildirim ayarlarının değiştirilmesi**: bildirim ayarlarının değiştirilenemez şekilde **blok** seçin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihaz bildirim ayarlarını değiştirmesine izin verebilir.
-- **Duvar kağıdı değişikliği**: **blok** duvar kağıdının değiştirilmesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazdaki duvar kağıdını değiştirmesine izin verebilir.
-- **Yapılandırma profili değişiklikleri**: **blok** , cihazdaki yapılandırma profili değişikliklerini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların yapılandırma profillerini yüklemelerine izin verebilir.
-- **Etkinleştirme Kilidi**: denetimli IOS/ıpados cihazlarında Etkinleştirme Kilidi etkinleştirmek Için **izin ver** ' i seçin. Etkinleştirme Kilidi, kaybolan veya çalınan bir cihazın yeniden etkinleştirilmesini zorlaştırır.
-- **Uygulama kaldırmayı engelle**: **blok** kullanıcıların uygulamaları kaldırmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazdan uygulama kaldırmasına izin verebilir.
-- **Cihaz KILITLIYKEN USB donatılara Izin ver**: **ızın ver** , USB aksesuarları 'nin bir saatten daha fazla kilitlenmiş bir cihazla veri alışverişi yapmasına olanak sağlar. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazda USB kısıtlı modunu güncelleştirmeyebilir ve USB aksesuarları bir saatten fazla kilitliyse verileri cihazdan aktarmaya engellenir.
-- **Otomatik tarih ve saati zorla**: **gerekli** cihazların otomatik olarak tarih & zamanını ayarlamaya zorlar. Cihazın hücresel bağlantıları olduğunda veya konum hizmetleriyle arasında Wi-Fi etkinleştirildiğinde saat dilimi güncelleştirilir.
+- **Cihazdaki tüm içeriği ve ayarları silme seçeneğinin kullanımı**: **blok** cihazlarda tüm içeriği ve ayarları silme seçeneğinin kullanılmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcılara bu ayarlara erişim verebilir.
+- **Cihaz adı değişikliği**: **blok** cihaz adının değiştirilmesini engelliyor. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazların adını değiştirmesine izin verebilir.
+- **Bildirim ayarlarının değiştirilmesi**: **engelleme** , bildirim ayarlarının değiştirilmesini engelliyor. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihaz bildirim ayarlarını değiştirmesine izin verebilir.
+- **Duvar kağıdı değişikliği**: **blok** duvar kağıdının değiştirilmesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazlarda duvar kağıdını değiştirmesine izin verebilir.
+- **Yapılandırma profili değişiklikleri**: **blok** , cihazlarda yapılandırma profili değişikliklerini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların yapılandırma profillerini yüklemelerine izin verebilir.
+- **Etkinleştirme Kilidi**: **izin ver** , denetimli iOS/ıpados cihazlarında Etkinleştirme Kilidi olanak tanır. Etkinleştirme Kilidi, kaybolan veya çalınan bir cihazın yeniden etkinleştirilmesini zorlaştırır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Uygulama kaldırmayı engelle**: **blok** uygulamaların kaldırılmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazlardan uygulama kaldırmasına izin verebilir.
+- **Cihaz KILITLIYKEN USB donatılara Izin ver**: **ızın ver** , USB aksesuarları 'nin bir saatten daha fazla kilitlenmiş cihazlarla veri alışverişi yapmasına olanak sağlar. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazlarda USB kısıtlı modunu güncelleştirmeyebilir ve USB aksesuarları bir saatten daha fazla kilitliyse verileri cihazlardan aktarmaya engellenir.
+- **Otomatik tarih ve saati zorla**: **gerekli** cihazların otomatik olarak tarih & zamanını ayarlamaya zorlar. Cihazın hücresel bağlantıları olduğunda veya konum hizmetleriyle arasında Wi-Fi etkinleştirildiğinde saat dilimi güncelleştirilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Öğrencilerden** **ayrılmaları için** öğrencilerin ders uygulamasını kullanarak yönetilmeyen bir kursa kaydolmaya izin istemesini gerektir: **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi öğrenciye izin istemek üzere zoristememeyebilir.
 
   Bu özellik şu platformlarda geçerlidir:  
   - iOS 11,3 ve üzeri
   - ıpados 13,0 ve üzeri
 
-- **Sınıfa sormadan bir uygulamayı kilitlemesine ve cihazı kilitlemesine Izin ver**: **Enable** , öğretmenin uygulamaları kilitlemesine veya öğrenciye sormadan ders uygulamasını kullanarak cihazı kilitlemesine olanak tanır. Uygulamaların kilitlenmesi cihazın yalnızca öğretmenin belirttiği uygulamalara erişebileceği anlamına gelir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, öğretmenlerin öğrenciye sormadan sınıf uygulamasını kullanarak uygulamaları veya cihazları kilitlemesini engelleyebilir.
+- **Sınıfa sormadan bir uygulamaya kilitleme ve cihazı kilitleme**olanağı sağlar: **Etkinleştir** , öğretmenin istenmeden uygulamaları kilitlemesine veya sınıf uygulamasını kullanarak cihazları kilitlemesine olanak tanır. Uygulamaları kilitlemek, cihazların yalnızca öğretmenlere belirtilen uygulamalara erişebileceği anlamına gelir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, öğretmenlerin öğrenciye sormadan sınıf uygulamasını kullanarak uygulamaları veya cihazları kilitlemesini engelleyebilir.
 
   Bu özellik şu platformlarda geçerlidir:  
   - iOS 11,0 ve üzeri
   - ıpados 13,0 ve üzeri
 
-- **Sınıf sınıflarını sorulmadan otomatik olarak birleştir**: **Etkinleştir** otomatik olarak, öğrencilerin öğretme istenmeden ders uygulamasındaki bir sınıfa katılmasına izin verir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi öğrencilerin ders uygulamasındaki bir sınıfa katılması istediğini öğretme isteyebilir.
+- **Sınıf sınıflarını sorulmadan otomatik olarak birleştir**: **Etkinleştir** otomatik olarak, öğrenciye sormadan derslik uygulamasında bir sınıfa katılmasına olanak tanır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi öğrencilerin ders uygulamasındaki bir sınıfa katılması istediğini öğretme isteyebilir.
 
   Bu özellik şu platformlarda geçerlidir:  
   - iOS 11,0 ve üzeri
   - ıpados 13,0 ve üzeri
 
-- **VPN oluşturmayı engelle**: **blok** , kullanıcıların VPN yapılandırma ayarları oluşturmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazda VPN oluşturmalarına izin verebilir.
-- **Esım ayarlarını değiştirme**: **Block** , kullanıcıların cihazdaki esım 'e bir hücresel plan kaldırmasını veya bu planı eklemesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların bu ayarları değiştirmesine izin verebilir.
+- **VPN oluşturmayı engelle**: **blok** , kullanıcıların VPN yapılandırma ayarları oluşturmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazlarda VPN oluşturmalarına izin verebilir.
+- **Esım ayarlarını değiştirme**: **blok** cihazlarda esım 'ye bir hücresel plan kaldırmayı veya bu planı eklemeyi önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların bu ayarları değiştirmesine izin verebilir.
 
   Bu özellik şu platformlarda geçerlidir:  
   - iOS 12,1 ve üzeri
   - ıpados 13,0 ve üzeri
 
-- **Yazılım güncelleştirmelerini ertele**: **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, Apple tarafından yayımlandığında Cihazdaki yazılım güncelleştirmelerini gösterebilir. Örneğin, bir iOS/ıpados güncelleştirmesi Apple tarafından belirli bir tarihte yayınlanmışsa, bu güncelleştirme doğal olarak cihazda yayın tarihinin etrafında görüntülenir.
+- **Yazılım güncelleştirmelerini ertele**: **Etkinleştir** ayarı, cihazlarda 0-90 günden itibaren yazılım güncelleştirmeleri gösterildiğinde gecikmenizi sağlar. Bu ayar, güncelleştirmelerin yüklenme tarihini veya durumunu denetlemez.
 
-  **Etkinleştir** ayarını kullanarak güncelleştirmelerin cihazlarda gösterilmesini 0-90 gün boyunca geciktirebilirsiniz. Bu ayar, güncelleştirmelerin yüklenme tarihini veya durumunu denetlemez. 
+  **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazlarda yazılım güncelleştirmelerini Apple yayınları olarak gösterebilir. Örneğin, bir iOS/ıpados güncelleştirmesi Apple tarafından belirli bir tarihte yayınlanmışsa, bu güncelleştirme doğal olarak yayın tarihi etrafında cihazlarda görüntülenir.  
 
-  - **Yazılım güncelleştirmeleri gecikmesi**: 0-90 günden bir değer girin. Gecikme süresi sona erdiğinde kullanıcılara gecikmenin tetiklendiği tarihte kullanılabilir durumda olan en eski işletim sistemi sürümüne güncelleştirme bildirimi gönderilir.
+  - **Yazılım güncelleştirmeleri gecikmesi**: 0-90 günden bir değer girin. Gecikme süresi sona erdiğinde, kullanıcılar gecikme tetiklendiğinde mevcut olan en eski işletim sistemi sürümüne güncelleştirme hakkında bildirim alırlar.
 
     Örneğin, iOS 12. a, **1 Ocak**'ta kullanılabilir ve **gecikme görünürlüğü** **5 güne**ayarlanmışsa, iOS 12. Kullanıcı cihazlarında kullanılabilir bir güncelleştirme olarak gösterilmez. Sürümden sonraki **altıncı gün** üzerinde, bu güncelleştirme kullanılabilir ve kullanıcılar uygulamayı yükleyebilir.
 
@@ -137,7 +137,7 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Ayarlar için geçerlidir: tüm kayıt türleri
 
-- **Parola**: kullanıcıların cihaza erişmek için bir parola girmesini **gerektir** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların bir parola girmeden cihaza erişmesine izin verebilir.
+- **Parola**: kullanıcıların cihazlara erişmek için parola girmesini **gerektir** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların bir parola girmeden cihazlara erişmelerine izin verebilir.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: cihaz kaydı, otomatik cihaz kaydı (denetimli)
 
@@ -152,24 +152,28 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
 - **Basit parolalar**: **blok** daha karmaşık parolalar gerektirir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi `0000` ve `1234`gibi basit parolalara izin verebilir.
 
-- **Gerekli parola türü**: kuruluşunuzun gerektirdiği parola türünü seçin. Seçenekleriniz şunlardır:
+- **Gerekli parola türü**: kuruluşunuzun gerektirdiği gerekli parola karmaşıklığı düzeyini girin. Seçenekleriniz şunlardır:
   - **Cihaz varsayılanı**
-  - **Sayısal**
-  - **Alfasayısal**
-- **Paroladaki alfasayısal olmayan karakter sayısı**: `#` veya `@`gibi, parolada bulunması gereken simge karakterlerinin sayısını girin.
+  - **Sayısal**: parola yalnızca sayı olmalıdır, örneğin 123456789.
+  - **Alfasayısal**: büyük harfler, küçük harfler ve sayısal karakterler içerir.
+- **Paroladaki alfasayısal olmayan karakter sayısı**: `#` veya `@`gibi simge karakter sayısını girin, bu, 1-4 adresinden, parolaya dahil olmalıdır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
-- **Minimum parola uzunluğu**: bir kullanıcının girmesi gereken minimum uzunluğu 4 ile 14 karakter arasında girin. Kullanıcı kayıtlı cihazlarda 4 ila 6 karakter uzunluğunda bir uzunluk girin.
+- **Minimum parola uzunluğu**: parolanın, 4-16 karakterden fazla olması gereken minimum uzunluğu girin. Kullanıcı kayıtlı cihazlarda 4 ila 6 karakter uzunluğunda bir uzunluk girin.
   
   > [!NOTE]
-  > Kullanıcı kayıtlı cihazlarda, kullanıcılar 6 basamaktan daha büyük bir PIN ayarlayabilir. Ancak cihazda 6 ' dan fazla basamak uygulanmaz. Örneğin, bir yönetici minimum uzunluğu `8`olarak ayarlar. Kullanıcı tarafından kaydedilen cihazlarda, kullanıcılardan yalnızca 6 basamaklı bir PIN ayarlaması gerekir. Intune, Kullanıcı tarafından kaydedilen cihazlarda 6 basamaktan daha büyük bir PIN 'ı zorlamaz.
+  > Kullanıcı kayıtlı cihazlarda, kullanıcılar 6 basamaktan daha büyük bir PIN ayarlayabilir. Ancak cihazlarda 6 ' dan fazla basamak uygulanmaz. Örneğin, bir yönetici minimum uzunluğu `8`olarak ayarlar. Kullanıcı tarafından kaydedilen cihazlarda, kullanıcılardan yalnızca 6 basamaklı bir PIN ayarlaması gerekir. Intune, Kullanıcı tarafından kaydedilen cihazlarda 6 basamaktan daha büyük bir PIN 'ı zorlamaz.
 
-- **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihaz temizlenmeden önce izin verilecek başarısız oturum açma işlemlerinin sayısını girin (4-11 arasında).
+- **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: Cihaz silinmeden önce başarısız oturum açma işlemlerinin sayısını 4-11 adresinden girin.
   
   iOS/ıpados, bu ayarı etkileyebilecek yerleşik güvenliğe sahiptir. Örneğin, iOS/ıpados, oturum açma hatalarının sayısına bağlı olarak ilkeyi tetikleyebilir. Aynı zamanda aynı geçiş kodunu bir girişimlerle tekrar girmeyi de düşünebilirsiniz. Apple 'ın [iOS/ıpados Güvenlik Kılavuzu](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) (Apple 'ın Web sitesini açar) iyi bir kaynaktır ve Passcodes hakkında daha ayrıntılı bilgiler sağlar.
   
-- **Parola istenmeden önce ekran kilitlenmesinden sonraki en fazla dakika**<sup>1</sup>: kullanıcıların parolasını yeniden girmesi gerekmeden önce cihazın ne kadar süreyle boşta kalacağını girin. Girdiğiniz süre cihazda şu anda ayarlanmış olan süreden uzunsa, cihaz girdiğiniz süreyi yoksayar. İOS 8.0 + çalıştıran cihazlarda desteklenir ve ıpados 13.0 +.
+- **Parola istenmeden önce ekran kilitlenmesinden sonra geçen en fazla dakika**<sup>1</sup>: kullanıcıların parolasını yeniden girmesi gerekmeden önce cihazın ne kadar süreyle boşta kalacağını girin. Girdiğiniz süre cihazda şu anda ayarlanmış olan süreden uzunsa, cihaz girdiğiniz süreyi yoksayar.
 
-- **Ekran kilitlenmeden önce geçmesi gereken en fazla dakika**sayısı<sup>1</sup>: ekran kilitlenmeden önce cihazda izin verilen en fazla dakika cinsinden süre sayısını girin.
+  Bu ayarın geçerli olduğu sürümler:  
+  - iOS 8.0 +
+  - Idos 13.0 +
+
+- **Ekran kilitlenmeden önce geçmesi gereken işlem yapılmayan dakika**sayısı<sup>1</sup>: ekran kilitlenmeden önce cihazlarda izin verilen en fazla dakika sayısını girin.
 
   **iOS/ıpados seçenekleri**:  
 
@@ -195,11 +199,11 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
   > [!NOTE]
   > Bu ayar için Intune kullanıcı arabirimi iOS ve ıpados tarafından desteklenen değerleri birbirinden ayırır. Kullanıcı arabirimi gelecek bir sürümde güncelleştirilmiş olabilir.
 
-- **Parola kullanım süresi (gün)** : cihaz parolasının değiştirilmesi gereken gün sayısını girin.
-- **Önceki parolaların yeniden kullanılmasını engelle**: eski bir parolanın yeniden kullanılabilmesi için kullanılması gereken yeni parola sayısını girin.
-- **Dokunma kimliği ve yüz kimliği kilit açma**: **blok** , cihazın kilidini açmak için parmak izi veya yüz kullanımını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kullanıcıların bu yöntemleri kullanarak cihazın kilidini açmalarına izin verebilir.
+- **Parola kullanım süresi (gün)** : cihaz parolasının, 1-65535 tarihinden önce değiştirilmesi gereken gün sayısını girin.
+- **Önceki parolaların yeniden kullanılmasını engelle**: kullanıcıların daha önce kullanılan parolaları oluşturmasını kısıtlamak için bu ayarı kullanın. 1-24 adresinden, daha önce kullanılmış olan parolaların sayısını girin. Örneğin, kullanıcıların geçerli parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için 5 girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Dokunma kimliği ve yüz kimliği kilit açma**: **blok** cihazların kilidini açmak için parmak izi veya yüz kullanımını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların biyometri kullanarak cihazların kilidini açmaya izin verebilir.
 
-  Bu ayarı engellemek, cihazın kilidini açmak için çok yönlü kimlik doğrulamasının kullanılmasını da engeller.
+  Bu ayarı engellemek, cihazların kilidini açmak için çok yönlü kimlik doğrulamanın kullanılmasını da engeller.
 
   Yüz KIMLIĞI şu şekilde geçerlidir:  
   - iOS 11,0 ve üzeri
@@ -207,9 +211,9 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
-- **Geçiş kodu değişikliği**: **blok** geçiş kodunun değiştirilmesini, eklenmesini veya kaldırılmasını engeller. Bu özellik engellendikten sonra denetimli cihazlarda geçiş kodu kısıtlamalarında yapılan değişiklikler yoksayılır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, geçiş kodlarını 'in eklenmesine, değiştirilmesine veya kaldırılmasına izin verebilir.
+- **Geçiş kodu değişikliği**: **blok** geçiş kodunun değiştirilmesini, eklenmesini veya kaldırılmasını engeller. Bu özellik engellendikten sonra, denetimli cihazlarda geçiş kodu kısıtlamalarına yapılan değişiklikler yok sayılır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, geçiş kodlarını 'in eklenmesine, değiştirilmesine veya kaldırılmasına izin verebilir.
 
-  - **Dokunma kimliği ve yüz kimliği değişikliği**: **blok** kullanıcıların TouchID parmak izleri ve yüz kimliğini değiştirmesini, eklemesini veya kaldırmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kullanıcıların cihazdaki TouchID parmak izlerini ve yüz KIMLIĞINI güncelleştirmesine izin verebilir.
+  - **Dokunma kimliği ve yüz kimliği değişikliği**: **blok** kullanıcıların TouchID parmak izleri ve yüz kimliğini değiştirmesini, eklemesini veya kaldırmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazlarda TouchID parmak izlerini ve yüz KIMLIĞINI güncelleştirmesine izin verebilir.
 
     Bu ayarı engellemek, kullanıcıların çok yönlü kimlik doğrulamasını değiştirmelerini, eklemesini veya kaldırmasını de engeller.
 
@@ -224,39 +228,40 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
   **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliklere izin verebilir.
 
-- **Parola yakınlık Isteklerini engelle**: bir kullanıcının cihazının yakındaki cihazlardan parola Isteyememesi için **Engelle** ' yi seçin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu parola isteklerine izin verebilir.
+- **Parola yakınlık Isteklerini engelle**: **blok** cihazların yakındaki cihazlardan parola istemelerine engel olur. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu parola isteklerine izin verebilir.
 - **Parola paylaşmayı engelle**: **blok** , AirDrop kullanan cihazlar arasında parolaların paylaşılmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi parolaların paylaşılmasına izin verebilir.
-- **Parola veya kredi kartı bilgileri Için dokunma kimliği veya yüz kimliği kimlik doğrulaması ıste otomatik doldurma**: **gerekli**olarak ayarlandığında, parolaların veya kredi kartı bilgilerinin otomatik olarak Safari ve diğer uygulamalarda otomatik olarak doldurulabilmesi için kullanıcıların TouchID veya çok yönlü kimliği kullanarak kimlik doğrulaması yapması gerekir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihaz ayarlarında bu özelliği denetlemesine izin verebilir.
+- **Parola veya kredi kartı bilgileri Için dokunma kimliği veya yüz kimliği kimlik doğrulamasını gerektir otomatik doldurma**: parolaların veya kredi kartı bilgilerinin, Safari ve diğer uygulamalarda otomatik olarak doldurulabilmesi için, kullanıcıların TouchID veya çok yönlü kimliği kullanarak kimlik **doğrulaması yapmasını zorlar** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihaz ayarlarında bu özelliği denetlemesine izin verebilir.
 
   Bu özellik şu platformlarda geçerlidir:  
   - iOS 11,0 ve üzeri
   - ıpados 13,0 ve üzeri
   
-<sup>1</sup> **parola istenmeden önce ekran kilitlenmesinden sonra ekran kilitlenmeden ve en fazla dakika geçtikten sonra** **işlem yapılmadan maksimum dakika** sayısını yapılandırdığınızda, bunlar sırayla uygulanır. Örneğin, her iki ayarın da değerini **5** dakikaya ayarlarsanız, ekran beş dakika sonra otomatik olarak kapanır ve cihazın kilitlenmesi için beş dakika daha geçmesi gerekir. Ancak, kullanıcılar ekranı el ile kapalarsa ikinci ayar hemen uygulanır. Aynı örnekte, kullanıcılar ekranı kapattıktan sonra cihaz beş dakika sonra kilitlenir.
+<sup>1</sup> **parola istenmeden önce ekran kilitlenmesinden sonra ekran kilitlenmeden ve en fazla dakika geçtikten sonra** **işlem yapılmadan maksimum dakika** sayısını yapılandırdığınızda, bunlar sırayla uygulanır. Örneğin, her iki ayar için değeri **5** dakikaya ayarlarsanız ekran, beş dakika sonra otomatik olarak kapanır ve cihazlar ek beş dakikadan sonra kilitlenir. Ancak, kullanıcılar ekranı el ile kapalarsa ikinci ayar hemen uygulanır. Aynı örnekte, kullanıcılar ekranı kapattıktan sonra cihaz beş dakika sonra kilitlenir.
 
 ## <a name="locked-screen-experience"></a>Kilit Ekranı Deneyimi
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Ayarlar için geçerlidir: tüm kayıt türleri
 
-- **Cihaz kilitliyken denetim merkezi erişimi**: **blok** , Cihaz kilitliyken Denetim Merkezi uygulamasına erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, cihaz kilitlendiğinde kullanıcıların Denetim Merkezi uygulamasına erişmesine izin verebilir.
-- **Cihaz kilitliyken bildirimler**: **blok** Cihaz kilitliyken bildirimlere erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, kullanıcıların cihazın kilidini açmadan bildirimlere erişmelerine izin verebilir.
-- **Cihaz kilitliyken bugün görünümü**: **blok** , Cihaz kilitliyken Bugün görünümüne erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, cihaz kilitlendiğinde kullanıcıların bugün görünümünü görmesine izin verebilir.
+- **Cihaz kilitliyken denetim merkezi erişimi**: **blok** , Cihaz kilitliyken Denetim Merkezi uygulamasına erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazlar kilitlendiğinde Denetim Merkezi uygulamasına erişime izin verebilir.
+- **Cihaz kilitliyken bildirimler**: **blok** , cihazlar kilitliyken bildirimlere erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazların kilidini açmadan bildirimlere erişime izin verebilir.
+- **Cihaz kilitliyken bugün görünümü**: **blok** , cihazlar kilitliyken Bugün görünümüne erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, cihazlar kilitlendiğinde kullanıcıların bugün görünümünü görmesine izin verebilir.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: cihaz kaydı, otomatik cihaz kaydı (denetimli)
 
-- **Cihaz kilitliyken cüzdan bildirimleri**: **blok** , Cihaz kilitliyken cüzdan uygulamasına erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, Cihaz kilitliyken kullanıcıların cüzdan uygulamasına erişmesine izin verebilir.
+- **Cihaz kilitliyken cüzdan bildirimleri**: **blok** , cihazlar kilitliyken cüzdan uygulamasına erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, cihazlar kilitliyken cüzdan uygulamasına erişime izin verebilir.
 
 ## <a name="app-store-doc-viewing-gaming"></a>Uygulama Mağazası, Belge Görüntüleme, Oyun
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Ayarlar için geçerlidir: tüm kayıt türleri
 
-- **Yönetilmeyen uygulamalarda kurumsal belgeleri görüntüleme**: **blok** , şirket belgelerinin yönetilmeyen uygulamalarda görüntülenmesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi şirket belgelerinin herhangi bir uygulamada görüntülenmesine izin verebilir. Örneğin kullanıcıların OneDrive uygulamasından Dropbox’a dosya kaydetmesini engellemek istiyorsunuz. Bu ayarı **Engelle** olarak yapılandırın. Cihaz ilkeyi aldıktan sonra (örneğin, yeniden başlatıldıktan sonra) artık kaydetmeye izin vermez.
+- **Yönetilmeyen uygulamalarda kurumsal belgeleri görüntüleme**: **blok** , şirket belgelerinin yönetilmeyen uygulamalarda görüntülenmesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi şirket belgelerinin herhangi bir uygulamada görüntülenmesine izin verebilir.
 
+  Örneğin kullanıcıların OneDrive uygulamasından Dropbox’a dosya kaydetmesini engellemek istiyorsunuz. Bu ayarı **Engelle** olarak yapılandırın. Cihazlar ilkeyi aldıktan sonra (örneğin, bir yeniden başlatmadan sonra), artık kaydetmeye izin vermez.
 
   > [!NOTE]
   > Bu ayar engellendiğinde, App Store 'dan yüklenen üçüncü taraf klavyeler de engellenir.
 
-  - **Yönetilmeyen uygulamaların yönetilen kişiler hesaplarından okumasına Izin ver**: **izin ver**olarak ayarlandığında, yerleşik IOS/ıpados kişileri uygulaması gibi yönetilmeyen uygulamalar, Outlook mobil uygulaması da dahil olmak üzere yönetilen uygulamalardaki iletişim bilgilerini okuyabilir ve bunlara erişebilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, cihazdaki yerleşik Kişiler uygulamasından yinelenenleri kaldırma dahil olmak üzere okumayı önleyebilir.  
+  - **Yönetilmeyen uygulamaların yönetilen kişiler hesaplarından okumasına Izin ver**: **izin ver** , yerleşik IOS/ıpados kişileri uygulaması gibi yönetilmeyen uygulamaların Outlook mobil uygulaması da dahil olmak üzere yönetilen uygulamalardan okuma ve bunlara erişme olanağı sağlar. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, cihazlarda bulunan yerleşik Kişiler uygulamasında bulunan yinelenenleri kaldırma dahil olmak üzere okumayı önleyebilir.  
   
     Bu ayar, iletişim bilgilerinin okunmasına izin verir veya bunu engeller. Uygulamalar arasındaki kişileri eşitlemeyi denetlemez.
   
@@ -264,7 +269,7 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
   Bu iki ayar hakkında daha fazla bilgi edinmek ve iOS/ıpados 'a yönelik Outlook 'a yönelik etkileri için Outlook 'ta etkileri için bkz. [destek İpucu: iOS/ıpados yerel kişiler uygulamasıyla Intune özel profil ayarlarını kullanma](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Use-Intune-custom-profile-settings-with-the-iOS/ba-p/298453).
 
-- **AirDrop 'u yönetilmeyen hedef olarak değerlendir**: **gerektir** AirDrop, yönetilmeyen bir bırakma hedefi olarak değerlendirilir. Yönetilen uygulamaların Airdrop'u kullanarak veri göndermesini durdurur. 
+- **AirDrop 'u yönetilmeyen hedef olarak değerlendir**: **gerektir** AirDrop, yönetilmeyen bir bırakma hedefi olarak değerlendirilir. Yönetilen uygulamaların Airdrop'u kullanarak veri göndermesini durdurur. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - Kurumsal **olmayan belgeleri kurumsal uygulamalarda görüntüleme**: **blok** kurumsal uygulamalarda kurumsal olmayan belgelerin görüntülenmesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi şirket tarafından yönetilen uygulamalarda herhangi bir belgenin görüntülenmesine izin verebilir.
 
   **Block** Ayrıca, IOS için Outlook 'Ta/ıpados 'a yönelik kişileri dışarı aktarma eşitlemesini engeller. Daha fazla bilgi için bkz. [destek İpucu: IOS12 MDM denetimleriyle Outlook iOS/ıpados Iletişim eşitlemesini etkinleştirme](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Enabling-Outlook-iOS-Contact-Sync-with-iOS12-MDM/ba-p/298453).
@@ -273,8 +278,8 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
 - **Tüm satın alımlarda ITunes mağazası parolası gerektir**: kullanıcıların her uygulama Içi veya iTunes satın alma IÇIN Apple kimlik parolasını girmesini **gerektir** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi her seferinde parola istemeden satın alma işlemlerine izin verebilir.
 - **Uygulama içi satın alımlar**: **blok** uygulama içi satın alımlara engel olur. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, çalışan bir uygulama içinde mağaza satın alımlara izin verebilir.
-- **IBook mağazasından ' erotik ' olarak işaretlenen Içerik indir**: **Block** , kullanıcıların IBook mağazasından Erotika olarak etiketlenmiş bir medya indirmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların "Erotika" kategorisiyle kitap indirmesine izin verebilir.
-- **Yönetilen uygulamaların yönetilmeyen kişiler hesaplarına kişi yazmasına Izin ver**: **izin ver**olarak ayarlandığında, Outlook Mobile uygulaması gibi yönetilen uygulamalar, iş ve şirket kişileri dahil iletişim bilgilerini yerleşik IOS/ıpados kişileri uygulamasına kaydedebilir veya eşitleyebilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, yönetilen uygulamaların cihazdaki yerleşik iOS/ıpados kişileri uygulamasına iletişim bilgilerini kaydetmesini veya eşitlemesini önleyebilir.
+- **IBook mağazasından ' erotik ' olarak işaretlenen Içerik indir**: **Block** , kullanıcıların, Erotika olarak etiketlenmiş IBook mağazasından medya indirmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların "Erotika" kategorisiyle kitap indirmesine izin verebilir.
+- **Yönetilen uygulamaların kişileri yönetilmeyen kişiler hesaplarına yazmalarına Izin ver**: **izin ver** , şirket Içi IOS/ıpados kişileri uygulamasına iş ve şirket kişileri de dahil olmak üzere, Outlook Mobile uygulaması gibi yönetilen uygulamaların yerleşik IOS/ıpados Kişiler uygulamasına kaydedilmesini sağlar. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, yönetilen uygulamaların cihazlardaki yerleşik iOS/ıpados kişileri uygulamasına iletişim bilgilerini kaydetmesini veya eşitlemesini önleyebilir.
   
   Bu ayarı kullanmak için **Yönetilmeyen uygulamalarda kurumsal belgeleri görüntüleme** ayarını **Engelle** olarak belirtin.
 
@@ -286,7 +291,7 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
   İOS/ıpados 13,0 ile başlayarak, bu ayar denetimli cihazlar gerektirir.
 
-  - **App Store 'dan uygulama yükleme**: cihaz ana ekranından uygulama mağazasını engellemek için **Engelle** ' yi seçin. Kullanıcılar, uygulamaları yüklemek için iTunes 'u veya Apple Configurator 'ı kullanmaya devam edebilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi ana ekranda uygulama deposuna izin verebilir.
+  - **App Store 'dan uygulama yükleme**: **blok** , uygulama mağazasını cihaz giriş ekranında göstermez. Kullanıcılar, uygulamaları yüklemek için iTunes 'u veya Apple Configurator 'ı kullanmaya devam edebilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi ana ekranda uygulama deposuna izin verebilir.
   - **Otomatik uygulama indirmeleri**: **engelleme** , diğer cihazlarda satın alınan uygulamaların otomatik olarak indirilmesini engeller. Mevcut uygulamalarında yapılan güncelleştirmeler bundan etkilenmez. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, diğer iOS/ıpados cihazlarında satın alınan uygulamaların cihaza indirilmesine izin verebilir.
 
 - **Açık iTunes Music, podcast veya News içeriği**: **Block** açık iTunes Music, podcast veya News içeriğini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, cihazın mağazadan yetişkinlere yönelik olarak derecelendirilmiş içeriğe erişmesine izin verebilir.
@@ -297,8 +302,8 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
   İOS/ıpados 13,0 ile başlayarak, bu ayar denetimli cihazlar gerektirir.
 
-- **Game Center**: Game Center uygulamasının kullanımını **engelleyin** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazda Game Center uygulamasının kullanılmasına izin verebilir.
-- Çok **oyunculu oyunlar**: **blok** çok oyunculu oyunları önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazda çok oyunculu oyunlar oynamasına izin verebilir.
+- **Game Center**: Game Center uygulamasını kullanarak **engelleyin** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazlarda Game Center uygulamasının kullanılmasına izin verebilir.
+- Çok **oyunculu oyunlar**: **blok** çok oyunculu oyunları önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazlarda çok oyunculu oyunları oynamasına izin verebilir.
 
   İOS/ıpados 13,0 ile başlayarak, bu ayar denetimli cihazlar gerektirir.
 
@@ -312,24 +317,24 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Ayarlar için geçerlidir: tüm kayıt türleri
 
-- **Siri**: **Block** Siri 'e erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazda Siri Voice Yardımcısı ile kullanılmasına izin verebilir.
-  - **Siri Cihaz kilitliyken**: **blok** , Cihaz kilitliyken Siri 'e erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, kilitli olduğunda cihazda Siri Voice Yardımcısı 'nı kullanmaya izin verebilir.
+- **Siri**: **Block** Siri 'e erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazlarda Siri Voice Yardımcısı ile kullanılmasına izin verebilir.
+  - **Siri Cihaz kilitliyken**: **blok** , cihazlar kilitliyken Siri 'e erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kilitlendiklerinde cihazlarda Siri Voice yardımcısını kullanmaya izin verebilir.
 
-- **Safari sahtekarlık uyarıları**: cihazdaki Web tarayıcısında sahtekarlık uyarılarının gösterilmesi **gerekir** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği devre dışı bırakabilir.
+- **Safari sahtekarlık uyarıları**: cihazlarda Web tarayıcısında sahtekarlık uyarılarının gösterilmesi **gerekir** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği devre dışı bırakabilir.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: cihaz kaydı, otomatik cihaz kaydı (denetimli)
 
 - **Internet 'ten sonuçları döndürmek Için Spotlight araması**: **Block** , projektörün bir Internet aramasından herhangi bir sonuç döndürmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Spotlight aramasının arama sonuçları sağlamak için Internet 'e bağlanmasına izin verebilir.
 
-- **Safari tanımlama bilgileri**: cihazda tanımlama bilgilerinin nasıl işleneceğini seçin. Seçenekleriniz şunlardır:
+- **Safari tanımlama bilgileri**: cihazlarda tanımlama bilgilerinin nasıl işlendiğini seçin. Seçenekleriniz şunlardır:
   - İzin ver
   - Tüm tanımlama bilgilerini engelle
   - Ziyaret edilen web sitelerinin tanımlama bilgilerine izin ver
   - Geçerli web sitesinin tanımlama bilgilerine izin ver
 
-- **Safari JavaScript**: **Block** tarayıcıda Java betiklerinin çalıştırılmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Java betiklerine izin verebilir.
+- **Safari JavaScript**: **Block** tarayıcıda Java betikleri 'nin cihazlarda çalıştırılmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Java betiklerine izin verebilir.
 
-- **Safari açılır pencereleri**: Web tarayıcısında açılır pencere engelleyicisini devre dışı bırakma **bloğu** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi açılır pencere engelleyiciye izin verebilir.
+- **Safari açılır pencereleri**: **blok** , Web tarayıcısında açılır pencere engelleyicisini devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi açılır pencere engelleyiciye izin verebilir.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
@@ -337,37 +342,40 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
   İOS/ıpados 13,0 ile başlayarak, bu ayar denetimli cihazlar gerektirir.
 
-  - Çok **yönlü saat**: çok yönlü uygulama erişimini engelleme **bloğu** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazda çok yönlü bir zaman uygulamasına erişime izin verebilir.
+  - Çok **yönlü saat**: **blok** , çok yönlü uygulamaya erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazlarda çok yönlü bir zaman uygulamasına erişime izin verebilir.
 
     İOS/ıpados 13,0 ile başlayarak, bu ayar denetimli cihazlar gerektirir.
 
-- **Siri küfür filtresi**: **gerektir** , Siri 'ın dikte etmesini veya küfürlü dilini kullanmasını önler.
+- **Siri küfür filtresi**: **gerektir** , Siri 'ın dikte etmesini veya küfürlü dilini kullanmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
   Bu ayarı kullanmak için **Siri** ayarını **Engelle**olarak ayarlayın.
+
+  Bu özellik şu platformlarda geçerlidir:  
+  - iOS 11,0 ve üzeri
 
 - **Siri Kullanıcı tarafından oluşturulan içeriği Internet 'ten sorgulamak için**: **Block** , soruların yanıt vermesi için Web sitelerine erişmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Siri 'ın Kullanıcı tarafından oluşturulan içeriğe internet 'ten erişmesine izin verebilir.
 
   Bu ayarı kullanmak için **Siri** ayarını **Engelle**olarak ayarlayın.
 
-- **Apple News**: **blok** cihazdaki Apple News uygulamasına erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Apple News uygulamasının kullanılmasına izin verebilir.
+- **Apple News**: **Block** cihazlarda Apple News uygulamasına erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Apple News uygulamasının kullanılmasına izin verebilir.
 - **IBOOKS Store**: **Block** , iBooks deposuna erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların IBook Store 'dan kitaplar 'a gözatmasına ve satın almaya izin verebilir.
-- **Cihazdaki iletiler uygulaması**: **blok** , kullanıcıların IMessage için iletiler uygulamasını kullanmalarını engeller. Cihaz metin iletilerini destekliyorsa, kullanıcılar SMS kullanarak SMS mesajları gönderip alabilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi iletileri Internet üzerinden göndermek ve okumak için Iletiler uygulamasının kullanılmasına izin verebilir.
+- **Cihazdaki iletiler uygulaması**: **blok** , kullanıcıların IMessage için iletiler uygulamasını kullanmalarını engeller. Cihazlar SMS mesajlaşma 'yı destekliyorsa, kullanıcılar SMS kullanarak SMS mesajları gönderip alabilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi iletileri Internet üzerinden göndermek ve okumak için Iletiler uygulamasının kullanılmasına izin verebilir.
 - **Pod yayınları**: **blok** , kullanıcıların Pod yayınları uygulamasını kullanmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Pod yayınları uygulamasının kullanılmasına izin verebilir.
 - **Müzik hizmeti**: **blok** , müzik uygulamasını klasik moda geri döndürür ve müzik hizmetini devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Apple Music uygulamasının kullanılmasına izin verebilir.
-- **ITunes Radio hizmeti**: **Block** , kullanıcıların iTunes radyo uygulamasını kullanmalarını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi iTunes Radio uygulamasının kullanılmasına izin verebilir.
-- **iTunes Mağazası**: **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazlarda iTunes 'a izin verebilir. **Blok** , kullanıcıların cihazda iTunes kullanmasını engeller.
+- **ITunes Radio hizmeti**: **blok** iTunes Radyo uygulamasının kullanılmasını engelliyor. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi iTunes Radio uygulamasının kullanılmasına izin verebilir.
+- **iTunes Mağazası**: **blok** cihazlarda iTunes kullanımını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi iTunes 'a izin verebilir.
 
   Bu özellik şu platformlarda geçerlidir:  
   - iOS 4,0 ve üzeri
   - ıpados 13,0 ve üzeri
 
-- **İPhone 'umu bul**: **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, cihazın yaklaşık konumunu almak için bu uygulama Bul özelliğini kullanmaya izin verebilir. **Block** , bu özelliğin uygulamamda Bul özelliğini engelliyor. 
+- **İPhone 'umu bul**: **Block** uygulamamda bu özelliği engelliyor. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, cihazın yaklaşık konumunu almak için bu uygulama Bul özelliğini kullanmaya izin verebilir.
 
   Bu özellik şu platformlarda geçerlidir:  
   - iOS 13,0 ve üzeri
   - ıpados 13,0 ve üzeri
 
-- **Arkadaşlarımı bul**: **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, bir Apple cihazından veya iCloud.com aile ve arkadaşlar bulmak için bu uygulamamı Bul özelliğini kullanmaya izin verebilir. **Block** , bu özelliğin uygulamamda Bul özelliğini engelliyor.
+- **Arkadaşlarımı bul**: **blok** , uygulamamda Bul özelliğini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, bir Apple cihazından veya iCloud.com aile ve arkadaşlar bulmak için bu uygulamamı Bul özelliğini kullanmaya izin verebilir.
 
   Bu özellik şu platformlarda geçerlidir:  
   - iOS 13,0 ve üzeri
@@ -377,13 +385,13 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
 - **Internet 'ten sonuçları döndürmek Için Spotlight araması**: **Block** , projektörün bir Internet aramasından herhangi bir sonuç döndürmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Spotlight aramasının arama sonuçları sağlamak için Internet 'e bağlanmasına izin verebilir.
 
-- **Cihazdan sistem uygulamalarının kaldırılmasını engelle**: **blok** seçme, sistem uygulamalarını cihazdan kaldırma yeteneğini devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların sistem uygulamalarını kaldırmasına izin verebilir.
+- **Cihazdan sistem uygulamalarının kaldırılmasını engelle**: **bloğu** , sistem uygulamalarını cihazlardan kaldırma yeteneğini devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların sistem uygulamalarını kaldırmasına izin verebilir.
 
-- **Safari**: cihazda Safari tarayıcısını kullanmayı **engelleyin** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların Safari tarayıcısını kullanmasına izin verebilir.
+- **Safari**: cihazlarda Safari tarayıcısını kullanmayı **engelleyin** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların Safari tarayıcısını kullanmasına izin verebilir.
 
   İOS/ıpados 13,0 ile başlayarak, bu ayar denetimli cihazlar gerektirir.
 
-- **Safari otomatik doldurma**: **blok** cihazdaki otomatik doldurma özelliğini devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların Web tarayıcısında otomatik tamamlama ayarlarını değiştirmesine izin verebilir.
+- **Safari otomatik doldurma**: **blok** cihazlarda otomatik doldurma özelliğini devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların Web tarayıcısında otomatik tamamlama ayarlarını değiştirmesine izin verebilir.
 
   İOS/ıpados 13,0 ile başlayarak, bu ayar denetimli cihazlar gerektirir.
 
@@ -393,9 +401,9 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
 - **Kısıtlanmış uygulamalar listesi türü**: Kullanıcıların yüklemesine veya kullanmasına izin verilmeyen uygulamaların bir listesini oluşturun. Seçenekleriniz şunlardır:
 
-  - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez. Kullanıcıların atadığınız uygulamalara ve yerleşik uygulamalarına erişimi vardır.
-  - **Yasaklanmış uygulamalar**: Intune tarafından yönetilmeyen ve cihaza yüklenmesini istemediğiniz uygulamalar. Kullanıcıların yasaklanmış bir uygulamayı yüklemesi engellenmiyor. Ancak bir Kullanıcı bu listeden bir uygulama yüklerse Intune 'da raporlanır.
-  - **Onaylanan uygulamalar**: Kullanıcıların yüklemesine izin verilen uygulamalar. Kullanıcılar listelenmeyen uygulamaları yüklememelidir. Intune tarafından yönetilen uygulamalara otomatik olarak izin verilir. Kullanıcıların onaylı uygulamalar listesinde olmayan bir uygulamayı yüklenmesi engellenmez. Ancak bunu yaptıysanız Intune 'da raporlanır.
+  - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi atadığınız uygulamalara ve yerleşik uygulamalara erişime izin verebilir.
+  - **Yasaklanmış uygulamalar**: Kullanıcıların yüklemesine ve çalıştırmasına izin verilmeyen uygulamaları (Intune tarafından yönetilmeyen) listeleyin. Kullanıcıların yasaklanmış bir uygulamayı yüklemesi engellenmiyor. Bir Kullanıcı bu listeden bir uygulama yüklerse Intune 'da raporlanır.
+  - **Onaylanan uygulamalar**: Kullanıcıların yüklemesine izin verilen uygulamaları listeleyin. Uyumluluğun korunması için kullanıcılar diğer uygulamaları yüklememelidir. Şirket Portalı uygulaması da dahil olmak üzere Intune tarafından yönetilen uygulamalara otomatik olarak izin verilir. Kullanıcıların onaylı uygulamalar listesinde olmayan bir uygulamayı yüklenmesi engellenmez. Ancak bunu yaptıysanız Intune 'da raporlanır.
 
 Bu listelere uygulama eklemek için şunları yapabilirsiniz:
 
@@ -412,7 +420,10 @@ Bu listelere uygulama eklemek için şunları yapabilirsiniz:
 
 ## <a name="show-or-hide-apps"></a>Uygulamaları gösterme veya gizleme
 
-İOS 9,3 + ve ıpados 13.0 + çalıştıran cihazlar için geçerlidir.
+Bu özellik şu platformlarda geçerlidir:
+
+- iOS 9,3 ve üzeri
+- ıpados 13,0 ve üzeri
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
@@ -447,34 +458,33 @@ Uygulamaları eklemek için şunları yapabilirsiniz:
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: cihaz kaydı, otomatik cihaz kaydı (denetimli)
 
-Veri dolaşımı için gereken Not (müşteri karışıklığına yardımcı olması için Ipucu veya önemli not): Bu ayar hedeflenen cihazın yönetim profilinde gösterilmez. Bunun nedeni, bu ayarın uzak bir cihaz eylemi olarak kabul edilmesidir ve cihazdaki veri dolaşımı durumu her değiştirildiğinde, Intune hizmeti tarafından yeniden engellenir. Yönetim profilinde olmasa dahi, yönetim konsolundaki raporlamadan başarı olarak gösterilse de çalışır. 
 - **Veri dolaşımı**: **blok** , hücresel ağ üzerinde veri dolaşımını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihaz hücresel ağ üzerindeyken veri dolaşımına izin verebilir.
 
   > [!IMPORTANT]
-  > Bu ayar uzak cihaz eylemi olarak değerlendirilir. Bu nedenle, bu ayar cihazdaki yönetim profilinde gösterilmez. Cihazda veri dolaşımı durumu her değiştiğinde **veri dolaşımı** , Intune hizmeti tarafından engellenir. Intune 'da, raporlama durumu bir başarı gösteriyorsa, bu ayar cihazdaki yönetim profilinde gösterilmese de, çalıştığını öğrenin.
+  > Bu ayar uzak cihaz eylemi olarak değerlendirilir. Bu nedenle, bu ayar cihazlarda yönetim profilinde gösterilmez. Cihazda veri dolaşımı durumu her değiştiğinde **veri dolaşımı** , Intune hizmeti tarafından engellenir. Intune 'da, raporlama durumu bir başarı gösteriyorsa, bu ayar cihazdaki yönetim profilinde gösterilmese de, çalıştığını öğrenin.
 
-- **Dolaşım sırasında genel arka plan getirme**: **blok** , hücresel ağ üzerinde dolaşımda genel arka plan getirme özelliğinin kullanılmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, cihazın bir hücresel ağda dolaşımda olduğu gibi verileri (e-posta gibi) getirmeye izin verebilir.
-- **Sesli arama**: **Block** , kullanıcıların cihazda sesli arama özelliğini kullanmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazda sesli aramaya izin verebilir.
-- **Ses dolaşımı**: **blok** , hücresel ağ üzerinde ses dolaşımını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, cihaz hücresel ağ üzerindeyken ses dolaşımına izin verebilir.
+- **Dolaşım sırasında genel arka plan getirme**: **blok** , hücresel ağ üzerinde dolaşımda genel arka plan getirme özelliğinin kullanılmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, cihazların bir hücresel ağda dolaşımda olduğu gibi, e-posta gibi verileri getirmeye izin verebilir.
+- **Sesli arama**: **blok** , cihazlarda sesli arama özelliğinin kullanılmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazlarda sesli aramaya izin verebilir.
+- **Ses dolaşımı**: **blok** , hücresel ağ üzerinde ses dolaşımını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, cihazlar hücresel ağ üzerindeyken ses dolaşımına izin verebilir.
 - **Kişisel etkin nokta**: **blok** her cihaz eşitlemesine sahip cihazlarda kişisel etkin noktayı kapatır. Bu ayar bazı taşıyıcılar ile uyumlu olmayabilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, kişisel etkin nokta yapılandırmasını varsayılan olarak kullanıcılar tarafından ayarlanmış olarak tutabilir.
 
   > [!IMPORTANT]
-  > Bu ayar uzak cihaz eylemi olarak değerlendirilir. Bu nedenle, bu ayar cihazdaki yönetim profilinde gösterilmez. Kişisel etkin nokta durumu cihazda her değiştiğinde **Kişisel etkin nokta** , Intune hizmeti tarafından engellenir. Intune 'da, raporlama durumu bir başarı gösteriyorsa, bu ayar cihazdaki yönetim profilinde gösterilmese de, çalıştığını öğrenin.
+  > Bu ayar uzak cihaz eylemi olarak değerlendirilir. Bu nedenle, bu ayar cihazlarda yönetim profilinde gösterilmez. Kişisel etkin nokta durumu cihazda her değiştiğinde **Kişisel etkin nokta** , Intune hizmeti tarafından engellenir. Intune 'da, raporlama durumu bir başarı gösteriyorsa, bu ayar cihazdaki yönetim profilinde gösterilmese de, çalıştığını öğrenin.
 
-- **Hücresel kullanım kuralları (yalnızca yönetilen uygulamalar)** : yönetilen uygulamaların hücresel ağlarda ne zaman kullanabileceği veri türlerini tanımlayın. Seçenekleriniz şunlardır:
+- **Hücresel kullanım kuralları (yalnızca yönetilen uygulamalar)** : **izin ver** , yönetilen uygulamaların hücresel ağlarda ne zaman kullanabileceği veri türlerini tanımlar. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Seçenekleriniz şunlardır:
   - **Hücresel veri kullanımını engelleyin**: **tüm yönetilen uygulamalar** için hücresel veri kullanmayı engelleyin veya **belirli uygulamaları seçin**.
   - **Dolaşım sırasında hücresel veri kullanımını engelle**: **tüm yönetilen uygulamalar** için Dolaşımda hücresel veri kullanmayı engelleyin veya **belirli uygulamaları seçin**.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
 - **Uygulama hücresel veri kullanım ayarlarında yapılan değişiklikler**: **blok** , uygulama hücresel veri kullanımı ayarlarında değişiklik yapılmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların hangi uygulamaların hücresel veri kullanmasına izin verileceğini denetlemesine izin verebilir.
-- **Hücresel plan ayarlarındaki değişiklikler**: **blok** , kullanıcıların hücresel plandaki ayarları değiştirmelerini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların değişiklik yapmasına izin verebilir.
+- **Hücresel plan ayarlarındaki değişiklikler**: **blok** , hücresel plandaki ayarların değiştirilmesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların değişiklik yapmasına izin verebilir.
 
   Bu özellik şu platformlarda geçerlidir:  
   - iOS 11,0 ve üzeri
   - ıpados 13,0 ve üzeri
 
-- **Kişisel etkin noktanın Kullanıcı değişikliği**: **engelleme**olarak ayarlandığında, kullanıcılar kişisel etkin nokta ayarını değiştiremezler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların kişisel etkin kullanımlarını etkinleştirmesine veya devre dışı bırakmasına izin verebilir.
+- **Kişisel etkin noktanın Kullanıcı değişikliği**: **blok** , kişisel etkin nokta ayarının değiştirilmesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların kişisel etkin kullanımlarını etkinleştirmesine veya devre dışı bırakmasına izin verebilir.
 
   Bu ayarı engellerseniz ve **Kişisel etkin nokta** ayarını engellerseniz kişisel etkin nokta kapalıdır.
 
@@ -482,13 +492,13 @@ Veri dolaşımı için gereken Not (müşteri karışıklığına yardımcı olm
   - iOS 12,2 ve üzeri
   - ıpados 13,0 ve üzeri
 
-- **Yalnızca yapılandırma profillerini kullanarak Wi-Fi ağlarına katılarak**: **gerektir** ayarı, cihazı yalnızca Intune yapılandırma profilleri aracılığıyla ayarlanan Wi-Fi ağlarını kullanmaya zorlar. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazın diğer Wi-Fi ağlarını kullanmasına izin verebilir.
+- **Yalnızca yapılandırma profillerini kullanarak Wi-Fi ağlarını birleştirin**: cihazların yalnızca Intune yapılandırma profilleri aracılığıyla ayarlanmış Wi-Fi ağlarını **kullanmasını zorunlu kılar** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazların diğer Wi-Fi ağlarını kullanmasına izin verebilir.
 
-  **Gerektir**olarak ayarlandığında, cihazda bir Wi-Fi profili bulunduğundan emin olun. Bir Wi-Fi profili atamadıysanız, bu ayar cihazın İnternet 'e bağlanmasını engelleyebilir. Diğer bir deyişle, bu cihaz kısıtlama profili bir Wi-Fi profilinden önce atanırsa cihazın İnternet 'e bağlanması engellenebilir.
+  **Gerektir**olarak ayarlandığında, cihazda bir Wi-Fi profili bulunduğundan emin olun. Bir Wi-Fi profili atamadıysanız, bu ayar cihazların internet 'e bağlanmasını engelleyebilir. Diğer bir deyişle, bu cihaz kısıtlama profili bir Wi-Fi profilinden önce atanırsa cihazın İnternet 'e bağlanması engellenebilir.
   
   Bağlanamıyorsa, cihazın kaydını kaldırın ve bir Wi-Fi profiliyle yeniden kaydedin. Ardından, bu ayarı cihaz kısıtlamaları profilinde **gerekli** olacak şekilde ayarlayın ve profili cihaza atayın.
 
-- **Wi-Fi her zaman açık**: **gerektir**olarak ayarlandığında, Ayarlar uygulamasında Wi-Fi açık kalır. Cihaz uçak modundayken bile ayarlarda veya denetim merkezinde devre dışı bırakılamaz. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların Wi-Fi açmayı veya kapatmayı denetlemesine izin verebilir.
+- **Wi-Fi her zaman açık**: **gerekli** Ayarlar uygulamasında Wi-Fi ' ı devam ediyor. Cihaz uçak modundayken bile ayarlarda veya denetim merkezinde devre dışı bırakılamaz. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların Wi-Fi ' ı açıp kapatmasına izin verebilir.
 
   Bu ayarın yapılandırılması, kullanıcıların bir Wi-Fi ağı seçmesini engellemez.
 
@@ -500,22 +510,22 @@ Veri dolaşımı için gereken Not (müşteri karışıklığına yardımcı olm
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Ayarlar için geçerlidir: tüm kayıt türleri
 
-- **Eşleştirilmiş Apple Watch Için bilek algılama**: **gerektir** , eşleştirilmiş bir Apple Watch 'un bilek algılamayı kullanmasına zorlar. Gerekli seçilirse, Apple Watch takılmadığında bildirim görüntülemez. 
+- **Eşleştirilmiş Apple Watch Için bilek algılama**: **gerektir** , eşleştirilmiş bir Apple Watch 'un bilek algılamayı kullanmasına zorlar. Gerekli seçilirse, Apple Watch takılmadığında bildirim görüntülemez. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: cihaz kaydı, otomatik cihaz kaydı (denetimli)
 
-- **AirPlay giden istek eşleştirme parolasını gerektir**: kullanıcılar, diğer Apple cihazlarına içerik akışı sağlamak Için AirPlay kullandığında eşleştirme parolası **gerektir** . **Yapılandırılmadı** (varsayılan), kullanıcıların bir parola girmeden AirPlay kullanarak içerik akışına olanak sağlar.
+- **AirPlay giden istek eşleştirme parolasını gerektir**: diğer Apple cihazlarına içerik akışı sağlamak Için AirPlay kullanırken eşleştirme parolası **gerektir** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların bir parola girmeden AirPlay 'i kullanarak içerik akışına izin verebilir.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
-- **AirDrop**: **Block** cihazda AirDrop kullanımını engelliyor. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, Yakındaki cihazlarla içerik değişimi için AirDrop özelliğinin kullanılmasına izin verebilir.
-- **Apple Watch eşleştirme**: **blok** bir Apple Watch eşlemeyi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazın bir Apple Watch eşleştirmeye izin verebilir.
-- **Bluetooth değişikliği**: **engelleme** , kullanıcıların cihazdaki Bluetooth ayarlarını değiştirmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların bu ayarları değiştirmesine izin verebilir.
-- **İOS/ıpados cihazının eşleşebileceği cihazları denetlemek Için konak eşleştirme**: **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, yöneticinin bir iOS/ıpados cihazının hangi cihazlara eşlenebileceğini denetlemesine olanak tanımak için konak eşleştirmeye izin verebilir. **Engelle** ayarı konak eşleştirmeyi önler.
-- **AirPrint 'ı engelle**: **blok** cihazdaki AirPrint özelliğinin kullanılmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların AirPrint kullanmasına izin verebilir.
-  - **Anahtarlıkta AirPrint kimlik bilgilerinin depolanmasını engelle**: **blok** , cihazdaki Kullanıcı adı ve parola için Anahtarlık depolamanın kullanılmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, anahtar zinciri uygulamasında AirPrint Kullanıcı adını ve parolasını depolamaya izin verebilir.
-  - **AirPrint için güvenilir BIR TLS sertifikası gerektir**: **gerektır** , cihazın TLS yazdırma iletişimi için güvenilir sertifikaları kullanmasını zorlar.
-  - **AirPrint yazıcıları bloğunu engelle**: **blok** , ağ trafiği için kimlik avından kötü amaçlı AirPrint Bluetooth işaretlerini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazdaki AirPrint yazıcılarına izin verebilir.
+- **AirDrop**: **Block** cihazlarda AirDrop kullanımına engel olur. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, Yakındaki cihazlarla içerik değişimi için AirDrop özelliğinin kullanılmasına izin verebilir.
+- **Apple Watch eşleştirme**: **blok** bir Apple Watch eşlemeyi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazların bir Apple Watch eşleştirmeye izin verebilir.
+- **Bluetooth değişikliği**: **blok** kullanıcıların cihazlarda Bluetooth ayarlarını değiştirmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların bu ayarları değiştirmesine izin verebilir.
+- **İOS/ıpados cihazının eşleşebileceği cihazları denetlemek Için konak eşleştirme**: **Block** , konak eşleşmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, yöneticinin bir iOS/ıpados cihazının hangi cihazlara eşlenebileceğini denetlemesine olanak tanımak için konak eşleştirmeye izin verebilir.
+- **AirPrint 'ı engelle**: **blok** cihazlarda AirPrint özelliğinin kullanılmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların AirPrint kullanmasına izin verebilir.
+  - **Anahtarlıkta AirPrint kimlik bilgilerinin depolanmasını engelle**: **blok** , cihazlarda Kullanıcı adı ve parola için Anahtarlık depolamanın kullanılmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, anahtar zinciri uygulamasında AirPrint Kullanıcı adını ve parolasını depolamaya izin verebilir.
+  - **AirPrint için güvenilir BIR TLS sertifikası gerektir**: cihazların TLS yazdırma iletişimi için güvenilen sertifikaları **kullanmalarını zorunlu kılar** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+  - **AirPrint yazıcıları bloğunu engelle**: **blok** , ağ trafiği için kimlik avından kötü amaçlı AirPrint Bluetooth işaretlerini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazlarda AirPrint yazıcılarına izin verebilir.
 - **Yeni yakındaki cihazları ayarlamayı engelle**: **blok** yakında yeni cihazları ayarlamaya yönelik istemi devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, kullanıcıların diğer yakındaki Apple cihazlarına bağlanmasına yönelik istemlere izin verebilir.
 
   Bu özellik şu platformlarda geçerlidir:  
@@ -532,13 +542,13 @@ Veri dolaşımı için gereken Not (müşteri karışıklığına yardımcı olm
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
-- **Sözcük tanımı arama**: **blok** , kullanıcının bir sözcüğü vurgulamasını ve sonra da cihazda tanımını aramasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi tanım arama özelliğine erişime izin verebilir.
-- Tahmine **dayalı klavyeler**: **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kullanıcıların istedikleri sözcükleri önermek için tahmine dayalı klavyeler kullanılmasına izin verebilir. **Engelle** ayarı bu özelliği önler.
-- **Otomatik Düzeltme**: **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazın yanlış yazılan sözcükleri otomatik olarak düzeltmesini sağlayabilir. **Engelle** ayarı otomatik düzeltme kullanılmasını önler.
-- **Klavye yazım denetimi**: **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazda SpellChecker kullanılmasına izin verebilir. **Engelle** ayarı yazım denetleyicisine izin verir.
-- **Klavye kısayolları**: **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazda klavye kısayollarının kullanılmasına izin verebilir. **Blok** , kullanıcıların klavye kısayollarını kullanmasını engeller.
+- **Sözcük tanımı arama**: **blok** bir sözcüğün vurgulanmasını ve tanımını aramasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi tanım arama özelliğine erişime izin verebilir.
+- Tahmine **dayalı klavyeler**: **blok** , kullanıcıların istedikleri sözcükleri önermek için tahmine dayalı klavyeler kullanılmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliğe izin verebilir.
+- **Otomatik Düzeltme**: **blok** otomatik düzeltme kullanımını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazların yanlış yazılan sözcükleri otomatik olarak düzeltmesini sağlayabilir.
+- **Klavye yazım denetimi**: **blok** yazım denetimcisini engelliyor. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi SpellChecker kullanılmasına izin verebilir.
+- **Klavye kısayolları**: **blok** kullanıcıların klavye kısayollarını kullanmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazlarda klavye kısayollarının kullanılmasına izin verebilir.
 - **Dikte**: **blok** , kullanıcıların metin girmek için ses girişi kullanmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların dikte girişi kullanmasına izin verebilir.
-- **Hızlı yol**: **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların, cihazın klavyesinde sürekli bir giriş sağlayan hızlı yol kullanmasına izin verebilir. Kullanıcılar, sözcükler oluşturmak için anahtarlar arasında çekerek yazı yazabilir. **Block** , kullanıcıların hızlı yol kullanmasını engeller. 
+- **QuickPath**: **Block** , kullanıcıların hızlı yol kullanmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların, cihazın klavyesinde sürekli bir giriş sağlayan hızlı yol kullanmasına izin verebilir. Kullanıcılar, sözcükler oluşturmak için anahtarlar arasında çekerek yazı yazabilir.
 
   Bu özellik şu platformlarda geçerlidir:  
   - iOS 13,0 ve üzeri
@@ -548,25 +558,25 @@ Veri dolaşımı için gereken Not (müşteri karışıklığına yardımcı olm
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Ayarlar için geçerlidir: tüm kayıt türleri
 
-- **Şifrelenmiş yedekleme**: **gerekli** olduğundan cihaz yedeklemelerinin şifrelenmesi gerekir.
-- **Yönetilen uygulamalar buluta eşitlenir**: **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Intune 'a, uygulamaların kullanıcının iCloud hesabıyla veri eşitlemesine izin verebilir. **Engelle** ayarı iCloud'a bu veri eşitlemesini engeller.
-- **Kurumsal kitap yedeklemesini engelle**: **Block** , kullanıcıların kurumsal kitaplar yedeklemesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların bu kitapları yedeklemelerine izin verebilir.
+- **Şifrelenmiş yedekleme**: **gerekli** olduğundan cihaz yedeklemelerinin şifrelenmesi gerekir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Yönetilen uygulamalar buluta eşitlenir**: **blok** , Intune tarafından yönetilen uygulamaların kullanıcının iCloud hesabıyla veri eşitlemesine engel olur. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu verilerin iCloud 'a eşitlenmesine izin verebilir.
+- **Kurumsal kitap yedeklemesini engelle**: **blok** , kurumsal kitapların yedeklenmesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların bu kitapları yedeklemelerine izin verebilir.
 - **Kurumsal kitap meta verileri eşitlemesini engelleyin (notlar ve vurgular)** : **blok** , kurumsal kitaplar 'da notların ve vurguların eşitlenmesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi eşitlemeye izin verebilir.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: cihaz kaydı, otomatik cihaz kaydı (denetimli)
 
-- **İCloud 'A fotoğraf akışı eşitleniyor**: **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kullanıcıların cihazlarındaki **fotoğraf akışımı** iCloud 'a eşitlemesine ve tüm kullanıcıların cihazlarında fotoğraflar kullanmasına olanak sağlayabilir. **Engelle** ayarı iCloud'a fotoğraf akışının eşitlenmesini önler. Bu özelliğin engellenmesi veri kaybına neden olabilir. 
-- **ICloud Fotoğraf Kitaplığı**: **blok** fotoğraflar ve videoları bulutta depolamak için iCloud Fotoğraf Kitaplığı kullanmayı devre dışı bırakır. iCloud Fotoğraf Arşivi'nden cihaza tamamen indirilmeyen tüm fotoğraflar cihazdan kaldırılır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi iCloud Fotoğraf Kitaplığı kullanımına izin verebilir.
-- **Paylaşılan fotoğraf akışı**: **blok** , cihazda **iCloud Fotoğraf paylaşımını** devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi paylaşılan fotoğraf akışına izin verebilir.
-- **İletim**: **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların bir iOS/ıpados cihazında çalışmaya başlamasını sağlayabilir ve sonra başka bir iOS/ıpados veya macOS cihazında başlatıldıklarında çalışmaya devam edebilir. **Engelle** ayarı bu iletimi önler.
+- **İCloud 'A fotoğraf akışı eşitlemesi**: **blok** , iCloud 'a fotoğraf akışı eşitlemesini önler. Bu özelliğin engellenmesi veri kaybına neden olabilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kullanıcıların cihazlarındaki **fotoğraf akışımı** iCloud 'a eşitlemesine ve tüm kullanıcıların cihazlarında fotoğraflar kullanmasına olanak sağlayabilir.
+- **ICloud Fotoğraf Kitaplığı**: **blok** fotoğraflar ve videoları bulutta depolamak için iCloud Fotoğraf Kitaplığı kullanmayı devre dışı bırakır. İCloud Fotoğraf Kitaplığı 'ndan cihazlara tam olarak indirilmeyen tüm fotoğraflar cihazdan kaldırılır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi iCloud Fotoğraf Kitaplığı kullanımına izin verebilir.
+- **Paylaşılan fotoğraf akışı**: **blok** , cihazlarda **iCloud Fotoğraf paylaşımını** devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi paylaşılan fotoğraf akışına izin verebilir.
+- **İletim**: **Block** , kullanıcıların bir iOS/ıpados cihazında iş başlatmasını ve sonra başka bir iOS/ıpados veya MacOS cihazında çalışmaya devam etmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu iletime izin verebilir.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
-- **İCloud 'A yedekleme**: **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazı iCloud 'a yedeklemesine izin verebilir. **Blok** , kullanıcıların cihazı iCloud 'a yedeklemesini engeller.
+- **İCloud 'A yedekleme**: **blok** , kullanıcıların cihazları iCloud 'a yedeklemesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazları iCloud 'a yedeklemesine izin verebilir.
 
   İOS/ıpados 13,0 ile başlayarak, bu ayar denetimli cihazlar gerektirir.
 
-- **ICloud belge eşitlemesini engelle**: **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi iCloud depolama alanınızda belge ve anahtar-değer eşitlemeye izin verebilir. **Engelle** ayarı, iCloud'ın belgeleri ve verileri eşitlemesini engeller.
+- **ICloud belge eşitlemesini engelle**: **blok** , iCloud 'ın belge ve verileri eşitlemesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi iCloud depolama alanınızda belge ve anahtar-değer eşitlemeye izin verebilir.
 
   İOS/ıpados 13,0 ile başlayarak, bu ayar denetimli cihazlar gerektirir.
 
@@ -588,20 +598,20 @@ Veri dolaşımı için gereken Not (müşteri karışıklığına yardımcı olm
 
 Ayrıca, uygulama adlarının ve paket kimliklerinin listesini içeren bir CSV dosyasını **Içeri aktarabilirsiniz** . Alternatif olarak uygulamaları içeren mevcut listeyi **dışarı aktarabilirsiniz**.
 
-## <a name="kiosk"></a>Bilgi Noktası
+## <a name="kiosk"></a>Bilgi noktası
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
 - **Bilgi noktası modunda çalıştırılacak uygulama**: bilgi noktası modunda çalıştırmak istediğiniz uygulama türlerini seçin. Seçenekleriniz şunlardır:
   - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bilgi noktası ayarlarını uygulamayamayabilir. Cihaz bilgi noktası modunda çalışmıyor.
   - **Mağaza uygulaması**: iTunes App Store 'da bir uygulamanın URL 'sini girin.
-  - **Yönetilen uygulama**: Intune 'a eklediğiniz bir uygulamayı seçin.
+  - **Yönetilen uygulama**: daha önce Intune 'a eklemiş olduğunuz bir uygulamayı seçin.
   - **Yerleşik uygulama**: yerleşik UYGULAMANıN [paket kimliğini](bundle-ids-built-in-ios-apps.md) girin.
 
-- **Yardımcı dokunma**: cihazda yardımcı dokunma erişilebilirlik ayarının olması **gerekir** . Bu özellik kullanıcılara zorlanabilecekleri ekran hareketlerinde yardımcı olur. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği bilgi noktası modunda çalıştırmayabilir veya etkinleştiremeyebilir.
+- **Yardımcı dokunma**: cihazlarda yardımcı dokunma erişilebilirlik ayarının olması **gerekir** . Bu özellik kullanıcılara zorlanabilecekleri ekran hareketlerinde yardımcı olur. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği bilgi noktası modunda çalıştırmayabilir veya etkinleştiremeyebilir.
 - **Renkleri ters çevir**: görsel sorunları olan kullanıcıların ekran ekranını değiştirebilmeleri Için renkleri ters çevir erişilebilirlik ayarını **gerektir** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği bilgi noktası modunda çalıştırmayabilir veya etkinleştiremeyebilir.
-- **Mono ses**: cihazda mono ses erişilebilirlik ayarının olması **gerekir** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği bilgi noktası modunda çalıştırmayabilir veya etkinleştiremeyebilir.
-- **Voice Control**: **gerektir** , cihazda ses denetimi sağlar ve kullanıcıların Siri komutlarını kullanarak işletim sistemini tam olarak denetlemesine olanak tanır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazda ses denetimini devre dışı bırakabilir.
+- **Mono ses**: cihazlarda mono ses erişilebilirlik ayarının olması **gerekir** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği bilgi noktası modunda çalıştırmayabilir veya etkinleştiremeyebilir.
+- **Voice Control**: **gerektir** , cihazlarda ses denetimi yapmanızı sağlar ve kullanıcıların Siri komutlarını kullanarak işletim sistemini tam olarak denetlemesine olanak tanır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi ses denetimini devre dışı bırakabilir.
 
   Bu ayarın geçerli olduğu sürümler:  
   - iOS 13,0 ve üzeri
@@ -610,17 +620,17 @@ Ayrıca, uygulama adlarının ve paket kimliklerinin listesini içeren bir CSV d
   > [!TIP]
   > Kuruluşunuz için kullanılabilir LOB uygulamalarınız varsa ve iOS 13,0 yayımları olduğunda gün 0 ' da hazır bir **ses denetimi** yoksa, bu ayarı **yapılandırılmamış**olarak bırakmanız önerilir.
 
-- **VoiceOver**: ekrandaki metin okumak için VoiceOver erişilebilirlik ayarının cihazda olması **gerekir** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği bilgi noktası modunda çalıştırmayabilir veya etkinleştiremeyebilir.
-- **Yakınlaştır**: kullanıcıların ekranda yakınlaştırmak için dokunmatik kullanmasına izin vermek üzere yakınlaştırma ayarının cihazda olmasını **gerektir** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği bilgi noktası modunda çalıştırmayabilir veya etkinleştiremeyebilir.
-- **Otomatik kilit**: **engelleme** cihazın otomatik olarak kilitlenmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliğe izin verebilir.
-- **Zil düğmesi**: **blok** cihazdaki zil (sessiz) geçiş devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliğe izin verebilir.
+- **VoiceOver**: ekrandaki metni okumak için VoiceOver erişilebilirlik ayarının yüksek sesle **kullanılmasını gerektir** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği bilgi noktası modunda çalıştırmayabilir veya etkinleştiremeyebilir.
+- **Yakınlaştır**: kullanıcıların ekranda yakınlaştırmak için yakınlaştırabilmesi için yakınlaştırma ayarını **gerektir** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği bilgi noktası modunda çalıştırmayabilir veya etkinleştiremeyebilir.
+- **Otomatik kilit**: **engelleme** cihazların otomatik olarak kilitlenmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliğe izin verebilir.
+- **Zil düğmesi**: **blok** cihazlarda zil devre dışı bırakır (sessiz). **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliğe izin verebilir.
 - **Ekran döndürme**: **engelleme** , kullanıcılar Cihazı döndürürken ekran yönünün değiştirilmesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliğe izin verebilir.
-- **Ekran uyku düğmesi**: **blok** cihazdaki ekran uyku modundan çıkarma düğmesini devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliğe izin verebilir.
-- **Touch**: **Block** cihazdaki dokunmatik ekranı devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların dokunmatik ekranı kullanmasına izin verebilir.
-- **Ses düğmeleri**: **blok** , cihazdaki ses düğmelerinin kullanımını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi ses düğmelerine izin verebilir.
-- **Yardımcı dokunma denetimi**: kullanıcıların yardımcı Touch işlevini kullanmasına **izin ver** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği devre dışı bırakabilir.
-- **Renkleri ters çevir denetimi**: kullanıcıların renkleri ters çevirme işlevini ayarlamasına izin vermek için renk değişikliklerine ters çevirmeyi **izin verin** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği devre dışı bırakabilir.
-- **Seçili metinde konuş**: konuşma seçimine **izin ver** erişilebilirlik ayarları cihazda olmalıdır. Bu özellik, kullanıcıların seçolduğu sesli metni okur. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği devre dışı bırakabilir.
+- **Ekran uyku düğmesi**: **blok** cihazlarda ekran uyku modundan çıkarma düğmesini devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliğe izin verebilir.
+- **Touch**: **Block** cihazlarda dokunmatik ekranı devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların dokunmatik ekranı kullanmasına izin verebilir.
+- **Ses düğmeleri**: **blok** , cihazlarda ses düğmelerinin kullanılmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi ses düğmelerine izin verebilir.
+- **Yardımcı dokunma denetimi**: **izin ver** , kullanıcıların yardımcı Touch işlevini kullanmasına izin verir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği devre dışı bırakabilir.
+- **Renkleri ters çevir denetimi**: kullanıcıların renkleri ters çevirme işlevini ayarlamasına olanak tanımak için evirmelerin renk değişikliklerine **izin verin** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği devre dışı bırakabilir.
+- **Seçili metinde konuş**: konuş seçimi erişilebilirlik ayarlarının cihazlarda **bulunmasına izin ver** . Bu özellik, kullanıcıların seçolduğu sesli metni okur. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği devre dışı bırakabilir.
 - **Ses denetimi değişikliği**: kullanıcıların cihazlarındaki ses denetimi durumunu değiştirmesine **izin verin** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazlarındaki ses denetimi durumunu değiştirmelerini engelleyebilir.
 
   Bu ayarın geçerli olduğu sürümler:  
@@ -631,10 +641,10 @@ Ayrıca, uygulama adlarının ve paket kimliklerinin listesini içeren bir CSV d
 - **Yakınlaştırma denetimi**: kullanıcılara göre değişikliklere **izin ver** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi yakınlaştırılmış değişiklikleri engelleyebilir.
 
 > [!NOTE]
-> İOS/ıpados cihazını bilgi noktası modu için yapılandırmadan önce, Apple Configurator aracını veya Apple Aygıt Kayıt Programı kullanarak cihazı denetimli moda almanız gerekir. Apple Configurator aracını kullanma konusunda Apple'ın kılavuzuna bakın.
+> İOS/ıpados cihazını bilgi noktası modu için yapılandırmadan önce, cihazları denetimli moda yerleştirmek için Apple Configurator aracını veya Apple Aygıt Kayıt Programı kullanmanız gerekir. Apple Configurator aracını kullanma konusunda Apple'ın kılavuzuna bakın.
 > Girdiğiniz iOS/ıpados uygulaması profili atadıktan sonra yüklendiyse, cihaz yeniden başlatılana kadar cihaz bilgi noktası moduna girmez.
 
-## <a name="domains"></a>Etki alanları
+## <a name="domains"></a>Domains
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: cihaz kaydı, otomatik cihaz kaydı (denetimli)
 
@@ -695,7 +705,7 @@ iOS/ıpados Denetimli mod yalnızca Apple Aygıt Kayıt Programı aracılığıy
 > - Müstehcen içerik
 > - iCloud belgeleri ve verileri
 > - Çok oyunculu oyun
-> - Oyun Merkezi Arkadaşları Ekleyin
+> - Oyun Merkezi arkadaşları ekleme
 > - Siri
 
 ## <a name="next-steps"></a>Sonraki adımlar

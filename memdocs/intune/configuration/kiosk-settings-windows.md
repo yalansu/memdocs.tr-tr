@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1750ff93f0896e620af243d96914caa428e37a4a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 69432082c199152b18b2afa95fd8351917d9bba9
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332010"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359233"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Intune 'da bilgi noktası olarak çalıştırılacak Windows 10 ve üzeri cihaz ayarları
 
@@ -196,6 +196,6 @@ Bu modda uygulamalar Başlat menüsünde sağlanır. Bu uygulamalar, yalnızca k
 
 [Profili atama](device-profile-assign.md) ve [durumunu izleme](device-profile-monitor.md).
 
-[Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)ve [Windows holographic for Business](kiosk-settings-holographic.md) cihazları için bilgi noktası profilleri de oluşturabilirsiniz.
+[Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)ve [Windows holographic for Business](kiosk-settings-holographic.md) cihazları için bilgi noktası profilleri de oluşturabilirsiniz.
 
 Ayrıca bkz. [tek uygulama bilgi noktası ayarlama](https://docs.microsoft.com/windows/configuration/kiosk-single-app) veya Windows kılavuzunda [birden çok uygulama bilgi noktası](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) ayarlama.

@@ -6,26 +6,25 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa471beb5929a6c5b39267871518f560fe6978f6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e18fad8f1112681a62bcdacd63c652cfd4ad3ac
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326662"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359283"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-extensions-in-intune"></a>Intune 'da çekirdek uzantılarını yapılandırmak ve kullanmak için macOS cihaz ayarları
-
-
 
 Bu makalede, macOS cihazlarında denetleyebilmeniz için farklı çekirdek uzantısı ayarları listelenir ve açıklanmaktadır. Mobil cihaz yönetimi (MDM) çözümünüzün bir parçası olarak, cihazlarınıza çekirdek uzantıları eklemek ve bunları yönetmek için bu ayarları kullanın.
 
@@ -44,7 +43,7 @@ Bu ayarlar, Intune'da bir cihaz yapılandırma profiline eklenir ve daha sonra m
 
 ### <a name="settings-apply-to-user-approved-automated-device-enrollment"></a>Ayarlar için geçerlidir: Kullanıcı onaylı, otomatik cihaz kaydı
 
-- **Kullanıcı geçersiz kılmasına Izin ver**: **izin ver** , yapılandırma profilinde bulunmayan kullanıcıların çekirdek uzantılarını onaylamasını sağlar. **Yapılandırılmadı** (varsayılan), kullanıcıların yapılandırma profilinde bulunmayan uzantılara izin vermesini engeller. Anlamı olarak yalnızca yapılandırma profiline eklenen uzantılara izin verilir.
+- **Kullanıcı geçersiz kılmasına Izin ver**: **izin ver** , yapılandırma profilinde bulunmayan kullanıcıların çekirdek uzantılarını onaylamasını sağlar. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların yapılandırma profilinde bulunmayan uzantılara izin vermesini engelleyebilir. Anlamı olarak yalnızca yapılandırma profiline eklenen uzantılara izin verilir.
 
   Bu özellik hakkında daha fazla bilgi için bkz. [Kullanıcı onaylı çekirdek uzantısı yükleme](https://developer.apple.com/library/archive/technotes/tn2459/_index.html) (Apple 'ın Web sitesini açar).
 

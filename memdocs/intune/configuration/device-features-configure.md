@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0f1552d2edc6bfa5f6bdb255f156bcfb77a4990
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 30bf5ba078029e35988d3531ee510d9db6c6cdb8
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084087"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359479"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Intune 'da iOS, ıpados veya macOS cihaz özelliği ayarları ekleme
 
@@ -46,7 +46,7 @@ Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [macOS](macos
 
 AirPrint hakkında daha fazla bilgi için Apple 'ın Web sitesinde [AirPrint hakkında](https://support.apple.com/HT201311) bölümüne bakın.
 
-Uygulama alanı:
+Uygulama hedefi:
 
 - iOS 7,0 ve üzeri
 - ıpados 13,0 ve üzeri
@@ -60,7 +60,7 @@ Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [iOS/ıpados 
 
 Bu özellik hakkında daha fazla bilgi için bkz. Apple 'ın Web sitesindeki [Bildirimler](https://developer.apple.com/notifications/) .
 
-Uygulama alanı:
+Uygulama hedefi:
 
 - iOS 9,3 ve üzeri
 - ıpados 13,0 ve üzeri
@@ -78,7 +78,7 @@ Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [macOS 'Ta il
 
 Bu özellik hakkında daha fazla bilgi için bkz. Apple 'ın Web sitesinde [bir uygulamanın Ilişkili etki alanlarını ayarlama](https://developer.apple.com/documentation/security/password_autofill/setting_up_an_app_s_associated_domains) .
 
-Uygulama alanı:
+Uygulama hedefi:
 
 - macOS 10,15 ve üzeri
 
@@ -91,7 +91,7 @@ Bu ayarlar, iOS ve ıpados cihazlarında yerleştirme ve giriş ekranlarındaki 
 
 Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [iOS/ıpados üzerinde giriş ekranı düzeni](ios-device-features-settings.md#home-screen-layout).
 
-Uygulama alanı:
+Uygulama hedefi:
 
 - iOS 9,3 ve üzeri
 - ıpados 13,0 ve üzeri
@@ -104,7 +104,7 @@ Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [iOS/ıpados 
 
 Kilit ekranı Iletisi hakkında daha fazla bilgi için bkz. Apple 'ın Web sitesinde [Lockscreenmessage](https://developer.apple.com/documentation/devicemanagement/lockscreenmessage) .
 
-Uygulama alanı:
+Uygulama hedefi:
 
 - iOS 9,3 ve üzeri
 - ıpados 13,0 ve üzeri
@@ -115,7 +115,7 @@ Kullanıcılar cihazlarda oturum açtıklarında açık olan uygulamaları, öze
 
 Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [macOS 'Ta oturum açma öğeleri](macos-device-features-settings.md#login-items).
 
-Uygulama alanı:
+Uygulama hedefi:
 
 - macOS 10,13 ve üzeri
 
@@ -125,7 +125,7 @@ Oturum açmadan önce kullanıcılara sunulan oturum açma ekranının ve işlev
 
 Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [macOS 'Ta oturum açma penceresi](macos-device-features-settings.md#login-window).
 
-Uygulama alanı:
+Uygulama hedefi:
 
 - macOS 10,7 ve üzeri
 
@@ -142,7 +142,7 @@ Uygulama alanı:
 
 Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [iOS 'Ta çoklu oturum açma/ıpados](ios-device-features-settings.md#single-sign-on).
 
-Uygulama alanı:
+Uygulama hedefi:
 
 - iOS 7,0 ve üzeri
 - ıpados 13,0 ve üzeri
@@ -175,7 +175,7 @@ SSO uygulama uzantısı geliştirme hakkında daha fazla bilgi için Apple 'ın 
 >
 > - Yerleşik Kerberos **Çoklu oturum açma uygulaması uzantısı** , Web sayfaları ve uygulamaları Için yalnızca **Çoklu oturum**açma gibi Kerberos sorunlarını işler. Bununla birlikte, yerleşik Kerberos uzantısı, parola değişikliklerini destekler ve kurumsal ağlarda daha iyi davranır. Kerberos **Çoklu oturum açma uygulaması uzantısı** ve **Çoklu oturum açma**arasında karar verirken, gelişmiş performans ve yetenekler nedeniyle uzantının kullanılmasını öneririz.
 
-Uygulama alanı:
+Uygulama hedefi:
 
 - iOS 13,0 ve üzeri
 - ıpados 13,0 ve üzeri
@@ -187,7 +187,7 @@ Denetimli iOS/ıpados cihazlarınıza özel bir. png,. jpg veya. JPEG görüntü
 
 Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [iOS/ıpados üzerinde duvar kağıdı](ios-device-features-settings.md#wallpaper).
 
-Uygulama alanı:
+Uygulama hedefi:
 
 - iOS
 - ıpados 13,0 ve üzeri
@@ -198,35 +198,50 @@ Bu ayarlar Apple 'ın yerleşik otomatik filtre algoritmasını, Web sayfaların
 
 Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [iOS/ıpados 'Ta Web içeriği filtresi](ios-device-features-settings.md#web-content-filter).
 
-Uygulama alanı:
+Uygulama hedefi:
 
 - iOS 7,0 ve üzeri
 - ıpados 13,0 ve üzeri
 
-## <a name="create-a-device-profile"></a>Bir cihaz profili oluşturma
+## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
 3. Aşağıdaki özellikleri girin:
 
-    - **Ad**: ilke için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir ilke adı **MacOS: oturum açma ekranını yapılandırır**.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
     - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:  
+
         - **iOS/ıpados**
         - **macOS**
-    - **Profil türü**: **Cihaz özellikleri**'ni seçin.
 
-4. Seçtiğiniz platforma bağlı olarak, yapılandırabileceğiniz ayarlar farklılık gösterir. Ayrıntılı ayarlar için platformunuzu seçin:
+    - **Profil**: **cihaz özellikleri**' ni seçin.
+
+4. **Oluştur**’u seçin.
+5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
+
+    - **Ad**: ilke için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir ilke adı **MacOS: oturum açma ekranını yapılandırır**.
+    - **Açıklama**: ilke için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+
+6. **İleri**'yi seçin.
+
+7. **Yapılandırma ayarları**' nda, seçtiğiniz platforma bağlı olarak, yapılandırabileceğiniz ayarlar farklıdır. Ayrıntılı ayarlar için platformunuzu seçin:
 
     - [iOS/ıpados](ios-device-features-settings.md)
     - [macOS](macos-device-features-settings.md)
 
-5. İşiniz bittiğinde **Tamam** > **Oluştur**’u seçerek değişikliklerinizi kaydedin.
+8. **İleri**'yi seçin.
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili `US-NC IT Team` veya `JohnGlenn_ITDepartment`gıbı belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
-Profil oluşturulur ve profiller listesinde gösterilir. [Profili atayıp](device-profile-assign.md) [durumunu izlemeyi](device-profile-monitor.md)unutmayın.
+    **İleri**'yi seçin.
+
+10. **Atamalar**' da, profilinizi alacak kullanıcıları veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
+
+    **İleri**'yi seçin.
+
+11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Profil oluşturulduktan sonra atanmak için hazırlanın. Ardından [profili atayın](device-profile-assign.md) ve [durumunu izleyin](device-profile-monitor.md).
+Profil oluşturuldu, ancak henüz bir şey yapmamış olabilir. Ardından [profili atayın](device-profile-assign.md) ve [durumunu izleyin](device-profile-monitor.md).
 
 [İOS/ıpados](ios-device-features-settings.md) ve [MacOS](macos-device-features-settings.md) cihazları için tüm cihaz özelliği ayarlarını görüntüleyin.

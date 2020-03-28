@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c532ba774305f0597b07c0830740f8de0d523e9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 185cfbf49c9a6623559a2b50f0184980286e03eb
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323893"
+ms.locfileid: "80358705"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Microsoft Intune uygulama yönetimi nedir?
 
@@ -71,7 +71,7 @@ Intune, ihtiyacınız olan uygulamaları çalıştırmak istediğiniz cihazlara 
 <sup>1</sup> Windows 10 çalıştıran cihazlarda uygulamaları korumak için [Windows Bilgi Koruması](../protect/windows-information-protection-configure.md)’nu kullanmayı göz önüne alabilirsiniz.<br>
 <sup>2</sup> Yalnızca Intune tarafından yönetilen cihazlar için geçerlidir.<br>
 <sup>3</sup> Intune, Android Kurumsal cihazlarda Yönetilen Google Play mağazasında kullanılabilen uygulamaları destekler.<br>
-<sup>4</sup> Intune, standart Android Kurumsal cihazlarda web bağlantısı biçiminde uygulama kısayolu yüklenmesi seçeneğini sunmaz. Ancak web bağlantısı desteği [çoklu uygulama için ayrılmış Android Kurumsal cihazlarında](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings) desteklenir. 
+<sup>4</sup> Intune, standart Android Kurumsal cihazlarda web bağlantısı biçiminde uygulama kısayolu yüklenmesi seçeneğini sunmaz. Ancak web bağlantısı desteği [çoklu uygulama için ayrılmış Android Kurumsal cihazlarında](../configuration/device-restrictions-android-for-work.md#dedicated-devices) desteklenir. 
 
 
 ## <a name="get-started"></a>Kullanmaya başlayın

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,16 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ef60333b53e03b3a6a8d736817ef27df9a182f1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329322"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359453"
 ---
-# <a name="macos-endpoint-protection-settings-in-intune"></a>Intune 'da MacOS Endpoint Protection ayarları  
+# <a name="macos-endpoint-protection-settings-in-intune"></a>Intune’da macOS Endpoint Protection ayarları  
 
 Bu makalede, macOS çalıştıran cihazlar için yapılandırabileceğiniz Endpoint Protection ayarları gösterilmektedir. Bu ayarları, Intune 'da [Endpoint Protection](endpoint-protection-configure.md) Için bir MacOS cihaz yapılandırma profili kullanarak yapılandırırsınız.  
+
+## <a name="before-you-begin"></a>Başlamadan önce
+
+[MacOS uç nokta koruma profili oluşturun](endpoint-protection-configure.md).
 
 ## <a name="gatekeeper"></a>Ağ Geçidi Denetleyicisi  
 
@@ -97,7 +101,7 @@ Apple Filekasası ayarları hakkında daha fazla bilgi için Apple geliştirici 
     Cihazlar için *kişisel anahtar* kurtarma anahtarları oluşturulur. Kişisel anahtar için aşağıdaki ayarları yapılandırın.  
 
     - **Kişisel kurtarma anahtarının konumu** -kullanıcıya kişisel kurtarma anahtarını nasıl ve nereden alabilecekleri hakkında kısa bir ileti belirtin. Bu metin, bir parola unutursa kişisel kurtarma anahtarını girmeniz istendiğinde kullanıcının oturum açma ekranında gördüğü iletiye eklenir.  
-      
+
     - **Kişisel kurtarma anahtarı döndürme** -bir cihaz için kişisel kurtarma anahtarının ne sıklıkta döndürüleceğini belirtin. **Yapılandırılmadı**' dan varsayılan değeri veya **1** ile **12** ay arasında bir değer seçebilirsiniz.  
 
   - **Oturumu kapatmak için istemi devre dışı bırak**  
@@ -118,3 +122,8 @@ Apple Filekasası ayarları hakkında daha fazla bilgi için Apple geliştirici 
 
 Intune ile Filekasası hakkında daha fazla bilgi için bkz. [filekasası kurtarma anahtarları](encryption-monitor.md#filevault-recovery-keys).
 
+## <a name="next-steps"></a>Sonraki adımlar
+
+[Profili atama](../configuration/device-profile-assign.md) ve [durumunu izleme](../configuration/device-profile-monitor.md).
+
+Ayrıca, [Windows 10 ve daha yeni cihazlarda](endpoint-protection-windows-10.md)Endpoint Protection 'ı yapılandırabilirsiniz.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45e1d022f4b8d77684e22ec17cd3b1b169a06216
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 0d596a0a43c17243431fa47bcac996868fd38066
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323442"
+ms.locfileid: "80358692"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Android Enterprise için Microsoft tarafından yönetilen giriş ekranı uygulamasını yapılandırma
 
@@ -34,7 +34,7 @@ Yönetilen giriş ekranı, Intune ile kaydedilen ve çok uygulama bilgi noktası
 Genellikle, ayarlar cihaz yapılandırması aracılığıyla sizin için kullanılabilir ise, ayarları burada yapılandırın. Bunun yapılması zamandan tasarruf eder, hataları en aza indirir ve size daha iyi bir Intune destek deneyimi sağlar. Ancak, yönetilen giriş ekranı ayarlarından bazıları şu anda yalnızca Intune konsolundaki **uygulama yapılandırma ilkeleri** bölmesi aracılığıyla kullanılabilir. Yapılandırma tasarımcısını veya bir JSON betiği kullanarak farklı ayarların nasıl yapılandırılacağını öğrenmek için bu belgeyi kullanın. 
 
 > [!NOTE]
-> **Uygulama** ve **cihaz yapılandırması**aracılığıyla, izin verilen uygulamaları ve sabitlenmiş web bağlantılarını ayarlamak için şu anda mümkün değildir ve önerilir. Yönetilen giriş ekranını etkileyen **cihaz yapılandırmasında** kullanılabilen ayarların tam listesi için bkz. [adanmış cihaz ayarları](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).  
+> **Uygulama** ve **cihaz yapılandırması**aracılığıyla, izin verilen uygulamaları ve sabitlenmiş web bağlantılarını ayarlamak için şu anda mümkün değildir ve önerilir. Yönetilen giriş ekranını etkileyen **cihaz yapılandırmasında** kullanılabilen ayarların tam listesi için bkz. [adanmış cihaz ayarları](../configuration/device-restrictions-android-for-work.md#dedicated-devices).  
 
 İlk olarak, [Microsoft Endpoint Manager yönetim merkezine](https://go.microsoft.com/fwlink/?linkid=2109431) gidin ve **uygulama yapılandırma ilkeleri** > **uygulamalar** ' ı seçin. **Android** çalıştıran **yönetilen cihazlar** için bir yapılandırma ilkesi ekleyin ve Ilişkili uygulama olarak **yönetilen giriş ekranı** ' nı seçin. Kullanılabilir farklı yönetilen giriş ekranı ayarlarını yapılandırmak için **yapılandırma ayarları** ' na tıklayın. 
 
@@ -65,7 +65,7 @@ Aşağıdaki tablo, yönetilen giriş ekranı kullanılabilir yapılandırma ana
 | Cihaz duvar kağıdını ayarla | string | Varsayılan | Duvar kağıdı olarak ayarlamak istediğiniz görüntünün URL 'sini girerek tercih ettiğiniz bir duvar kağıdını ayarlamanıza olanak sağlar. |
 | Uygulama simge boyutunu ayarla | integer | 2 | Ana ekranda görüntülenecek uygulamalar için simge boyutunu ayarlamanıza olanak sağlar. Bu yapılandırmada, farklı boyutlar (en küçük), 1 (küçük), 2 (normal), 3 (büyük) ve 4 (en büyük) için aşağıdaki değerleri seçebilirsiniz. |
 | Uygulama klasörü simgesini ayarla | integer | 0 | Ana ekranda uygulama klasörlerinin görünümünü tanımlamanızı sağlar. Şu değerlerden görünümü seçebilirsiniz: koyu kare (0);   Koyu Daire (1); Açık kare (2); Açık daire (3). |
-| Ekran yönünü ayarla | integer | 1 | Giriş ekranının yönünü dikey moda, yatay moda ayarlamanıza veya otomatik olarak döndürmeye izin verir. Yönü 1 (dikey mod için), 2 (Yatay mod için), 3 (Oto döndürme için) değerini girerek ayarlayabilirsiniz. |
+| Ekran yönünü ayarla | integer | 1\. | Giriş ekranının yönünü dikey moda, yatay moda ayarlamanıza veya otomatik olarak döndürmeye izin verir. Yönü 1 (dikey mod için), 2 (Yatay mod için), 3 (Oto döndürme için) değerini girerek ayarlayabilirsiniz. |
 | Cihaz telemetrisini etkinleştir | bool | Yanlış | Yönetilen giriş ekranı için yakalanan tüm Telemetriyi sunar. Bu ayarı etkinleştirirseniz, Microsoft, belirli bir uygulamanın bu cihazda başlatılma sayısı gibi cihaz kullanımı telemetrisini yakalayabilir. |
 | İzin verilen uygulamaları ayarla | Paketleme Learray | Yanlış | , Cihazda yüklü uygulamalar arasından giriş ekranında görünür olan uygulama kümesini tanımlamanızı sağlar. Uygulamaları, görünür hale getirmek istediğiniz uygulamaların uygulama paketi adını girerek tanımlayabilirsiniz, örneğin com. Microsoft. emmx, ayarları giriş ekranında erişilebilir hale getirir. Bu bölümde izin verilen uygulamaların, ana ekranda görünür olması için cihazda zaten yüklü olması gerekir. |
 | Sabitlenmiş Web bağlantıları ayarla | Paketleme Learray | Yanlış | Web sitelerini giriş ekranında hızlı başlatma simgeleri olarak sabitetmenize olanak tanır. Bu yapılandırmayla, URL 'YI tanımlayabilir ve son kullanıcının tarayıcıda tek bir dokunmayla başlatması için giriş ekranına ekleyebilirsiniz. |
@@ -136,7 +136,7 @@ Aşağıda, tüm kullanılabilir yapılandırma anahtarlarının dahil olduğu b
                     "managedProperty": [
                         {
                             "key": "package",
-                            "valueString": “app package name here”
+                            "valueString": "app package name here"
                         }
                     ]
                 }
@@ -149,11 +149,11 @@ Aşağıda, tüm kullanılabilir yapılandırma anahtarlarının dahil olduğu b
                     "managedProperty": [
                         {
                             "key": "link",
-                            "valueString": “link here”
+                            "valueString": "link here"
                         },
                         {
                             "key": "label",
-                            "valueString": “weblink label here”
+                            "valueString": "weblink label here"
                         }
                     ]
                 }
@@ -335,7 +335,7 @@ Aşağıda, tüm kullanılabilir yapılandırma anahtarlarının dahil olduğu b
 Yönetilen giriş ekranı uygulaması artık Google 'ın Android cihaz Ilkesi uygulamasına erişim sağlar. Yönetilen giriş ekranı uygulaması, Intune 'A kayıtlı cihazlar için çok uygulama bilgi noktası modunu kullanan Android kurumsal (AE) adanmış cihazlar olarak kullanılan özel bir başlatıdır. Android cihaz Ilkesi uygulamasına erişebilir veya destek ve hata ayıklama amacıyla kullanıcılara Android cihaz Ilkesi uygulamasına rehberlik edebilirsiniz. Bu başlatma özelliği, cihazın ne zaman kaydolur ve yönetilen giriş ekranına kilitlediği sırada kullanılabilir. Bu işlevselliği kullanmak için ek yükleme gerekmez.
 
 ## <a name="managed-home-screen-debug-screen"></a>Yönetilen giriş ekranı hata ayıklama ekranı
-Hata ayıklama ekranı görüntülenene kadar **geri** düğmesine tıklayarak yönetilen giriş ekranının hata ayıklama ekranına erişebilirsiniz ( **geri** düğmesine 15 kez veya daha fazla tıklayın). Bu hata ayıklama ekranından, Android cihaz Ilkesi uygulamasını başlatabilir, günlükleri görüntüleyebilir ve yükleyebilir ya da cihazı güncelleştirmek için geçici olarak bilgi noktası modunu duraklatabilirsiniz. Bilgi noktası modunu duraklatma hakkında daha fazla bilgi için, Android kurumsal [adanmış cihaz ayarlarındaki](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings) **bilgi noktası modu** öğesine bakın.
+Hata ayıklama ekranı görüntülenene kadar **geri** düğmesine tıklayarak yönetilen giriş ekranının hata ayıklama ekranına erişebilirsiniz ( **geri** düğmesine 15 kez veya daha fazla tıklayın). Bu hata ayıklama ekranından, Android cihaz Ilkesi uygulamasını başlatabilir, günlükleri görüntüleyebilir ve yükleyebilir ya da cihazı güncelleştirmek için geçici olarak bilgi noktası modunu duraklatabilirsiniz. Bilgi noktası modunu duraklatma hakkında daha fazla bilgi için, Android kurumsal [adanmış cihaz ayarlarındaki](../configuration/device-restrictions-android-for-work.md#dedicated-devices) **bilgi noktası modu** öğesine bakın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6122f4624cc40152184c1c460afa6a7a39976063
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c96de75557a4817f4e5f034689faecf7374cfe3f
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083994"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359438"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Intune'da özel ayarlarla profil oluşturma
 
@@ -38,20 +38,26 @@ Bu makalede, Android Cihaz Yöneticisi, Android Enterprise, iOS/ıpados, macOS v
 2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
 3. Aşağıdaki özellikleri girin:
 
+    - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:  
+
+        - **Android Cihaz Yöneticisi**
+        - **Android Kurumsal**
+        - **iOS/ıpados**
+        - **macOS**
+        - **Windows 10 ve üzeri**
+        - **Windows Phone 8.1**
+
+    - **Profil**: **özel**' i seçin.
+
+4. **Oluştur**’u seçin.
+5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
+
     - **Ad**: ilke için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir ilke adı **Windows 10: Allowvpnoverhücresel özel OMA-URI ' y i sağlayan özel profildir**.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
-    - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:
+    - **Açıklama**: ilke için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
 
-      - **Android Cihaz Yöneticisi**
-      - **Android Kurumsal**
-      - **iOS/ıpados**
-      - **macOS**
-      - **Windows 10 ve üzeri**
-      - **Windows 8.1 ve üzeri**
+6. **İleri**'yi seçin.
 
-    - **Profil türü**: **özel**' i seçin.
-
-4. Ayarlar her platform için farklıdır. Belirli bir platformun ayarlarını görmek için platformunuzu seçin:
+7. **Yapılandırma ayarları**' nda, seçtiğiniz platforma bağlı olarak, yapılandırabileceğiniz ayarlar farklıdır. Ayrıntılı ayarlar için platformunuzu seçin:
 
     - [Android Cihaz Yöneticisi](custom-settings-android.md)
     - [Android Kurumsal](custom-settings-android-for-work.md)
@@ -61,10 +67,24 @@ Bu makalede, Android Cihaz Yöneticisi, Android Enterprise, iOS/ıpados, macOS v
     - [Windows Holographic for Business](custom-settings-windows-holographic.md)
     - [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
 
-5. İşiniz bittiğinde, **oluştur** > **Profil oluştur** ' u seçin.
+8. **İleri**'yi seçin.
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili `US-NC IT Team` veya `JohnGlenn_ITDepartment`gıbı belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
-Profil oluşturulur ve profiller listesinde gösterilir (**cihaz yapılandırma** > **profilleri**).
+    **İleri**'yi seçin.
+
+10. **Atamalar**' da, profilinizi alacak kullanıcıları veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
+
+    **İleri**'yi seçin.
+
+11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki örnekte, **Connectivity/AllowVPNOverCellular** ayarı etkinleştirilmiştir. Bu ayar, bir Windows 10 cihazın hücresel bir ağdayken VPN bağlantısı açmasına izin verir.
+
+> [!div class="mx-imgBorder"]
+> Intune ve Endpoint Manager 'da VPN ayarlarını içeren özel ilkeye örnek ![](./media/custom-settings-configure/custom-policy-example.png)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Profil oluşturulduktan sonra atanmak için hazırlanın. Ardından [profili atayın](device-profile-assign.md) ve [durumunu izleyin](device-profile-monitor.md).
+Profil oluşturuldu, ancak henüz bir şey yapmamış olabilir. Ardından [profili atayın](device-profile-assign.md) ve [durumunu izleyin](device-profile-monitor.md).

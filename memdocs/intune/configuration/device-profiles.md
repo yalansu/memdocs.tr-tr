@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a2bd111b3e0dc172dbe4c3e9605a1b4451e2b39
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327405"
+ms.locfileid: "80359307"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune'daki cihaz profillerini kullanarak cihazlarınıza özellik ve ayar uygulama
 
@@ -177,7 +177,7 @@ Bu özellik şunları destekler:
 
 - Windows 10 Fall Creators Update ve üzeri
 
-## <a name="extensions"></a>Uzantılar
+## <a name="extensions"></a>Uzantıları
 
 [Çekirdek uzantıları](kernel-extensions-overview-macos.md) , yöneticilerin MacOS cihazlarında çekirdek düzeyinde özellik veya program eklemesine olanak tanır. Bu ayarları, belirli bir geliştirici veya iş ortağındaki tüm uzantılara güvenmek veya belirli çekirdek uzantılarına izin vermek üzere yapılandırın.
 
@@ -194,7 +194,7 @@ Bu özellik şunları destekler:
 - Windows 10 ve üzeri
 - Windows 10 Holographic for Business  
 
-## <a name="kiosk"></a>Bilgi Noktası
+## <a name="kiosk"></a>Bilgi noktası
 
 [Bilgi noktası ayarları](kiosk-settings.md) profili, cihazı tek uygulama veya birden çok uygulama çalıştıracak şekilde yapılandırır. Ayrıca bilgi noktanızda başlat menüsü ve web tarayıcısı gibi diğer özellikleri de özelleştirebilirsiniz.
 
@@ -202,7 +202,7 @@ Bu özellik şunları destekler:
 
 - Windows 10 ve üzeri
 
-Bilgi noktası ayarları, [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)ve [iOS/ıpados](device-restrictions-ios.md#kiosk)için cihaz kısıtlamaları olarak da kullanılabilir.
+Bilgi noktası ayarları, [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)ve [iOS/ıpados](device-restrictions-ios.md#kiosk)için cihaz kısıtlamaları olarak da kullanılabilir.
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 

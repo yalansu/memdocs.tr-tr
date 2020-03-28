@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 778ce3e6d069347522a98977da65d651e059e41c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 60a4ac793500cd4d31df2188344e2b5f4e1094a4
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327392"
+ms.locfileid: "80359155"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Intune kullanarak adanmış bir bilgi noktası olarak çalışacak Windows 10 ve Windows holographic for Business cihaz ayarları
 
@@ -31,7 +31,7 @@ Bu özellik şu platformlarda geçerlidir:
 - Windows 10 ve üzeri
 - Windows 10 Holographic for Business
 
-Diğer platformlar için bilgi noktası profilleri oluşturmak için bkz. [Android Cihaz Yöneticisi](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)ve [iOS/ıpados](device-restrictions-ios.md#kiosk).
+Diğer platformlar için bilgi noktası profilleri oluşturmak için bkz. [Android Cihaz Yöneticisi](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)ve [iOS/ıpados](device-restrictions-ios.md#kiosk).
 
 Intune, cihaz başına bir bilgi noktası profili destekler. Tek bir cihazda birden fazla bilgi noktası profiline ihtiyacınız varsa bir [Özel OMA-URI](custom-settings-windows-10.md) kullanabilirsiniz.
 
@@ -73,7 +73,6 @@ Profil oluşturulur ve profiller listesinde gösterilir. Sonra, profili [atayın
 Aşağıdaki platformları çalıştıran cihazlar için bilgi noktası profilleri oluşturabilirsiniz:
 
 - [Android Cihaz Yöneticisi](device-restrictions-android.md#kiosk)
-- [Android Kurumsal](device-restrictions-android-for-work.md#dedicated-device-settings)
-- [iOS/ıpados](device-restrictions-ios.md#kiosk)
+- [Android Kurumsal](device-restrictions-android-for-work.md#dedicated-devices)
 - [Windows 10 ve üzeri](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)
