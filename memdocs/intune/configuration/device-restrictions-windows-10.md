@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71e8b874e50fc1300124d748dfb70963acae089b
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 237e281b88492ff7b7e1b5614600662e15761935
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220107"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407835"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Windows 10 (ve üzeri) cihaz ayarları
 
@@ -208,7 +208,9 @@ Bu ayarlar, [deneyim ILKESI CSP](https://docs.microsoft.com/windows/client-manag
   Bu ilke ayarı, bilgisayar Azure AD 'ye katılırsa ve otomatik kayıt etkinse uygulanmaz.
 
 - **El ile kök sertifika yüklemesi** (yalnızca mobil): **blok** , son kullanıcıların kök sertifikaları ve ara Cap sertifikalarını el ile yüklemesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
-- **Kamera**: **blok** son kullanıcıların cihazdaki kamerayı kullanmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Kamera**: **blok** son kullanıcıların cihazdaki kamerayı kullanmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihaz kamerasına erişime izin verebilir.
+
+  Intune yalnızca cihaz kamerasına erişimi yönetir. Resimlere veya videolara erişimi yoktur.
 
   [Kamera CSP 'si](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7781eba9e2115b37dd6590733b89130203da0365
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: b25d5439aa9d0842cbbee24b5e8759d00f371d4b
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323967"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407714"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Microsoft Intune ile Microsoft Edge kullanarak Web erişimini yönetme
 
@@ -343,7 +343,7 @@ Varsayılan olarak, Microsoft Edge, kullanıcıların gözatma deneyimini kişis
 
 |    Anahtar    |    Değer    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     `com.microsoft.intune.man.managedbrowser.disableShareBrowsingHistory`    |     **true** , bu istemi son kullanıcılara görüntülemesini devre dışı bırakır.     |
+|     `com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory`    |     **true** , bu istemi son kullanıcılara görüntülemesini devre dışı bırakır.     |
 
 ### <a name="disable-prompts-that-offer-to-save-passwords"></a>Parolaları kaydetmek için teklif eden istemleri devre dışı bırak
 

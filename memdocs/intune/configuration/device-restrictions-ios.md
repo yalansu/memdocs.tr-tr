@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/25/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2af29ea85a79977789326d48a773936b13cf6af2
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 897366ba9b7bae15050c0aa5e392ba5255a90b24
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359199"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407811"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için iOS ve ıpados cihaz ayarları
 
@@ -340,6 +340,8 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
 - **Kamera**: **blok** cihazdaki kameraya erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihaz kamerasına erişime izin verebilir.
 
+  Intune yalnızca cihaz kamerasına erişimi yönetir. Resimlere veya videolara erişimi yoktur.
+
   İOS/ıpados 13,0 ile başlayarak, bu ayar denetimli cihazlar gerektirir.
 
   - Çok **yönlü saat**: **blok** , çok yönlü uygulamaya erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazlarda çok yönlü bir zaman uygulamasına erişime izin verebilir.
@@ -598,7 +600,7 @@ Uygulamaları eklemek için şunları yapabilirsiniz:
 
 Ayrıca, uygulama adlarının ve paket kimliklerinin listesini içeren bir CSV dosyasını **Içeri aktarabilirsiniz** . Alternatif olarak uygulamaları içeren mevcut listeyi **dışarı aktarabilirsiniz**.
 
-## <a name="kiosk"></a>Bilgi noktası
+## <a name="kiosk"></a>Bilgi Noktası
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
@@ -644,7 +646,7 @@ Ayrıca, uygulama adlarının ve paket kimliklerinin listesini içeren bir CSV d
 > İOS/ıpados cihazını bilgi noktası modu için yapılandırmadan önce, cihazları denetimli moda yerleştirmek için Apple Configurator aracını veya Apple Aygıt Kayıt Programı kullanmanız gerekir. Apple Configurator aracını kullanma konusunda Apple'ın kılavuzuna bakın.
 > Girdiğiniz iOS/ıpados uygulaması profili atadıktan sonra yüklendiyse, cihaz yeniden başlatılana kadar cihaz bilgi noktası moduna girmez.
 
-## <a name="domains"></a>Domains
+## <a name="domains"></a>Etki alanları
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: cihaz kaydı, otomatik cihaz kaydı (denetimli)
 
@@ -705,7 +707,7 @@ iOS/ıpados Denetimli mod yalnızca Apple Aygıt Kayıt Programı aracılığıy
 > - Müstehcen içerik
 > - iCloud belgeleri ve verileri
 > - Çok oyunculu oyun
-> - Oyun Merkezi arkadaşları ekleme
+> - Oyun Merkezi Arkadaşları Ekleyin
 > - Siri
 
 ## <a name="next-steps"></a>Sonraki adımlar

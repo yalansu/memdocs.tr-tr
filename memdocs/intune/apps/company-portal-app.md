@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1ec6d4ebe860a1c20ad1a11bd7e63086858a82c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e6a3152966dee507cde690d9be8f5a7e210c7945
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084264"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407745"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune Şirket Portalı uygulamaları, Şirket Portalı Web sitesini ve Intune uygulamasını özelleştirme
 
@@ -56,7 +56,7 @@ Doğru marka resmi, kuruluşunuzun markasının sağlam bir şekilde bir fikir s
 
 - Pazarlama veya sanat departmanınıza ulaşın. Bu departmanların elinde zaten onaylanmış birkaç marka imajı olabilir. Departmanlar ayrıca görüntüleri ihtiyaca göre iyileştirme konusunda size yardım edebilir.
 - Yatay ve dikey kompozisyonları değerlendirin. İmajın odak noktasını çevreleyen arka planın yeterli olmasına dikkat edin. İmaj cihaz boyutuna, hizalamasına ve platformuna göre farklı şekillerde kırpılabilir.
-- Sıradan, hazır bir imaj seçmekten kaçının. Görüntü, kuruluşunuzun markasını ve kullanıcılara tanıdık olduğunu yansıtmalıdır. Elinizde bir imaj yoksa, kullanıcılarınıza hiçbir şey ifade etmeyen sıradan bir görüntü kullanmak yerine hiçbir şey kullanmamak daha iyi olacaktır.
+- Sıradan, hazır bir imaj seçmekten kaçının. Görüntü, kuruluşunuzun markasını ve kullanıcılara tanıdık olduğunu yansıtmalıdır. Bir tane yoksa, bir tane kullanmaktan, kullanıcılarınız için bir anlamı olmayan bir genel kullanım kullanmaktan daha iyidir.
 - Gereksiz meta verileri kaldırın. İmaj dosyası; kamera profili, coğrafi konum, başlık, açıklama gibi meta veriler içerebilir. Kaliteyi korumak ve dosya boyutu sınırını aşmamak için bir görüntü iyileştirme aracını kullanarak bu bilgileri kaldırın.
 
 ### <a name="brand-image-examples"></a>Marka imajı örnekleri
@@ -193,4 +193,4 @@ Bazı platformlar ve Konfigürasyonlar self servis cihaz eylemlerine izin vermez
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Microsoft Intune kullanarak Windows 10 Şirket Portalı uygulamasını el ile ekleme](company-portal-app.md)
+- [Uygulamaları ekleme](apps-add.md)

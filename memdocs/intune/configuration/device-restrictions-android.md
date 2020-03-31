@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea84544223d890be7e61fafa5de082c242250403
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 4afc27680c464f67756340ebcb0958887ae6f795
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359342"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407865"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Intune 'da Android ve Samsung KNOX Standard cihaz kısıtlama ayarları listeleri
 
@@ -36,7 +36,10 @@ Bu makalede, Android çalıştıran cihazlar için yapılandırabileceğiniz tü
 
 ## <a name="general"></a>Genel
 
-- **Kamera**: **blok** kameraya erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihaz kamerasına erişime izin verebilir.
+- **Kamera**: **blok** cihaz kamerasına erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihaz kamerasına erişime izin verebilir.
+
+  Intune yalnızca cihaz kamerasına erişimi yönetir. Resimlere veya videolara erişimi yoktur.
+
 - **Kopyala ve Yapıştır (yalnızca Samsung KNOX)** : **blok** kopyalama ve yapıştırmayı önler. **Yapılandırılmadı** , cihazlarda kopyalama ve yapıştırma işlevlerine izin verir.
 - **Uygulamalar arasında Pano paylaşımı (yalnızca Samsung KNOX)** : **blok** , uygulamalar arasında kopyalama ve yapıştırma için panonun kullanılmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazlarda kopyalama ve yapıştırma işlevlerine izin verebilir.
 - **Tanılama verileri gönderme (yalnızca Samsung KNOX)** : **Block** , kullanıcıların cihazlardan hata raporları göndermesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların verileri göndermesine izin verebilir.
@@ -171,7 +174,7 @@ Her ayar için uygulamalarınızı ekleyin:
 - **Wi-Fi (yalnızca Samsung KNOX)** : **blok** , cihazlarda Wi-Fi kullanımını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Wi-Fi kullanılmasına izin verebilir.
 - **Wi-Fi internet paylaşımı (yalnızca Samsung KNOX)** : **blok** , cihazlarda Wi-Fi internet paylaşımı kullanımını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Wi-Fi internet paylaşımı kullanımına izin verebilir.
 
-## <a name="kiosk"></a>Bilgi noktası
+## <a name="kiosk"></a>Bilgi Noktası
 
 Bilgi noktası ayarları yalnızca Samsung Knox Standard cihazlarda ve Intune ile yönettiğiniz uygulamalarda geçerlidir.
 

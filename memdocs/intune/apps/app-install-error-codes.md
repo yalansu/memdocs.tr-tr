@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98567612b31604f79339a550275e274a2c90c3a4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 431d2753b04269e9aacd7ef951ef3f45a076df60
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326350"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407912"
 ---
 # <a name="intune-app-installation-error-reference"></a>Intune uygulama yükleme hatası başvurusu
 
@@ -92,6 +92,8 @@ Aşağıdaki hata iletileri ve açıklamaları, iOS/ıpados yükleme hatalarıyl
 | 0x87D13B77 | -2016330889 | Güvenli bağlantı başarısız oldu.  | Ağ bağlantısı nedeniyle uygulama bildirimi doğrulama hatası (güvenli bağlantı başarısız oldu) |
 | 0x87D13B80 | -2016330880 | CannotConnectToITunesStoreError | ITunes Store 'A Bağlanamamaya yönelik bir hata nedeniyle uygulama yüklemesi başarısız oldu |
 | 0x87D13B9F  | -2016330849 | VPP uygulamasında bir güncelleştirme var | Bu kod, bir VPP uygulaması yüklendiğinde döndürülür, ancak daha yeni bir sürüm kullanılabilir. |
+| 0x87D13B9E | 2016330850 | Uygulama kaldırma ayarı zorlanamadı. Uygulamayı yüklemeyi yeniden deneyin. | Uygulama cihazda zaten yüklü, ancak "devre dışı bırakma kaldırma" ayarı yapılandırılan değerle eşleşmiyor. Kullanıcıdan, "devre dışı bırakma kaldırma" ayarını yeniden uygulamayı denemek için Şirket Portalı 'dan uygulama yükleme işlemini istemesini tavsiye edin. |
+
 
 ## <a name="other-installation-errors"></a>Diğer yükleme hataları
 

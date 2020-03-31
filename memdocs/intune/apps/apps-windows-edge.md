@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4635c0e09bea54dd5a22dcb370154e4153bf217c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 687ef14791d1ae0df60d28802d27b99dd9547423
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324253"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401331"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Microsoft Intune Windows 10 için Microsoft Edge ekleyin
 
@@ -38,7 +38,7 @@ Uygulamaları dağıtmadan, yapılandırmadan, izleyebilmeniz veya koruyabilmeni
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Windows 10 RS2 ve üzeri gereklidir.
+- Windows 10 sürüm 1703 veya üzeri.
 - Kullanıcı bağlamlarındaki tüm kanallar için Microsoft Edge *sürüm 77 ve üzeri* sürümlerin önceden yüklenmiş sürümlerinin, sistem bağlamında yüklü olan bir kenara üzerine yazılır.
 
 ## <a name="configure-the-app-in-intune"></a>Uygulamayı Intune 'da yapılandırma

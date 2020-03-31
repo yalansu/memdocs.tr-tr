@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f58c20731395c95e532e28165553743fdef701e9
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 7686be29b819d29aa39ed12d558780dde9bf4159
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083569"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401379"
 ---
 # <a name="review-client-app-protection-logs"></a>İstemci uygulama koruma günlüklerini gözden geçirme
 
@@ -33,6 +33,9 @@ Günlükleri etkinleştirme ve toplama işlemi platforma göre farklılık göst
 - **iOS/ıpados cihazları** -günlükleri toplamak için IOS Için Microsoft Edge/ıpados kullanın. Ayrıntılar için bkz. [Microsoft Edge 'i Microsoft Intune kullanarak Web erişimini yönetme](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
 - **Windows 10 cihazları** - *mdmdiag* ve olay günlüklerini kullanın. Windows istemci yönetimi içeriğinde [Windows 10 ' da MDM başarısızlıklarını tanılama](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) ve blog [sorunlarını giderme Windows 10 Intune ilke hatalarıyla ilgili](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/)bilgi için bkz.
 - **Android cihazlar** -günlükleri toplamak için Android Için Microsoft Edge kullanın. Ayrıntılar için bkz. [Microsoft Edge 'i Microsoft Intune kullanarak Web erişimini yönetme](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
+
+  > [!Note]
+  > Android tam olarak yönetilen cihazlarda, bazı durumlarda Intune Şirket Portalı uygulama tüm uygulamalar altında görünür olabilir. Bu, bir uygulama koruma ilkesiyle ilişkili bir uygulama yüklü olmadığında veya başlatılmadığı zaman gerçekleşebilir. 
 
 Aşağıdaki tabloda, uygulama koruma ilkesi ayarı adı ve günlükte kaydedilen desteklenen değerler listelenmiştir. Ayrıca, her ayar Microsoft Endpoint Manager portalında bulunan ilke ayarını tanımlar. Her bir ayar hakkında ayrıntılı bilgi için bkz. [iOS/ıpados uygulama koruma ilkesi ayarları](app-protection-policy-settings-ios.md).
 

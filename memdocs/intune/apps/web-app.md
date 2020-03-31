@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5fd0b368eac3e7c883f6e85e812f253707788239
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: e6d4fd6022e7d772c70a2147e0e25bd7dad0775c
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325979"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407699"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Microsoft Intune’a web uygulamaları ekleme
 
@@ -41,6 +41,8 @@ Intune, kullanıcının cihazında Web uygulaması için bir kısayol oluşturur
 > Android kurumsal cihazlar için bkz. [yönetilen Google Play web bağlantıları](apps-add-android-for-work.md#managed-google-play-web-links).
 > 
 > İOS cihazlarında yeni web klipleri (sabitlenmiş Web uygulamaları), korumalı bir tarayıcıda açılması gerektiğinde Intune Managed Browser yerine Microsoft Edge 'de açılır. Daha eski iOS web klipleri için, bu web kliplerini, Managed Browser bunun yerine Microsoft Edge 'de açıldıklarından emin olmak için yeniden hedeflemeniz gerekir.
+>
+> Eski Cihaz Yöneticisi Android cihazları için Şirket Portalı pencere öğesi aracılığıyla sabitlenen Web bağlantıları, yalnızca kullanıcıların Şirket Portalı sürümü 5.0.4737.0 ' den eskiyse Intune Managed Browser ile birlikte açılabilir. 
 
 ## <a name="add-a-web-app-to-intune"></a>Intune’a bir web uygulaması ekleme
 Bir uygulamayı web’de uygulamanın kısayolu olarak Intune’a eklemek için:

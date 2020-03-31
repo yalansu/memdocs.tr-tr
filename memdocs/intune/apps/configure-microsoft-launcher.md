@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bde1a743c4f2e16994f7fc74a467fc5ece9fb255
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 0711b407b185b3a9621ff80a371bd3aaa5032ead
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324264"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407729"
 ---
 # <a name="configure-microsoft-launcher"></a>Microsoft Launcher’ı yapılandırma
 
@@ -33,7 +33,7 @@ Android kurumsal tam yönetilen cihazlarda, Başlatıcı, Kuruluş BT yöneticil
 
 ## <a name="how-to-configure-the-microsoft-launcher-app"></a>Microsoft başlatıcısı uygulamasını yapılandırma 
 
-[Microsoft Endpoint Manager yönetim merkezine](https://go.microsoft.com/fwlink/?linkid=2109431) gidin ve **uygulama yapılandırma ilkeleri** > **uygulamalar** ' ı seçin. **Android** çalıştıran **yönetilen cihazlar** için bir yapılandırma ilkesi ekleyin ve Ilişkili uygulama olarak **Microsoft başlatıcısı** ' nı seçin. Kullanılabilir farklı Microsoft başlatıcısı ayarlarını yapılandırmak için **yapılandırma ayarları** ' na tıklayın. 
+Microsoft başlatıcısı uygulaması [Intune 'a eklendikten](../apps/apps-add.md)sonra [Microsoft Endpoint Manager yönetim merkezine](https://go.microsoft.com/fwlink/?linkid=2109431) gidin ve **uygulamalar** > **uygulama yapılandırma ilkeleri**' ni seçin. **Android** çalıştıran **yönetilen cihazlar** için bir yapılandırma ilkesi ekleyin ve Ilişkili uygulama olarak **Microsoft başlatıcısı** ' nı seçin. Kullanılabilir farklı Microsoft başlatıcısı ayarlarını yapılandırmak için **yapılandırma ayarları** ' na tıklayın. 
 
 ## <a name="choosing-a-configuration-settings-format"></a>Yapılandırma ayarları biçimi seçme 
 
@@ -46,6 +46,9 @@ Microsoft başlatıcısı yapılandırma ayarlarını tanımlamak için kullanab
 **Yapılandırma tasarlayıcısıyla**Özellikler eklerseniz, aşağıda gösterildiği gibi **yapılandırma ayarları BIÇIM** açılır listesinden **JSON verisi gir** ' i seçerek bu özellikleri JSON 'a dönüştürebilirsiniz.
 
    ![Yapılandırma ayarları biçimi-yapılandırma tasarımcısını kullan](./media/configure-microsoft-launcher/configure-microsoft-launcher-01.png)
+
+   > [!NOTE]
+   > Özellikler yapılandırma Tasarımcısı aracılığıyla yapılandırıldıktan sonra JSON verileri de yalnızca bu özellikleri yansıtacak şekilde güncelleştirilir. JSON verilerine ek yapılandırma anahtarları eklemek için, her bir yapılandırma anahtarı için gerekli satırları kopyalamak üzere [JSON betiği örneğini](../apps/configure-microsoft-launcher.md#microsoft-launcher-configuration-example) kullanın. 
 
 ## <a name="using-configuration-designer"></a>Yapılandırma tasarımcısını kullanma
 
@@ -64,6 +67,10 @@ Aşağıdaki tabloda, Microsoft başlatıcısı kullanılabilir yapılandırma a
 |    Cihaz duvar kağıdı kullanıcı değişikliğine Izin verildi    |    Bool    |    Doğru    |    Cihazın duvar kağıdını ayarla ayarının Son Kullanıcı tarafından değiştirilip değiştirilemeyeceğini belirtmenize olanak tanır.<ul><li>**True**olarak ayarlanırsa, ilkedeki duvar kağıdı yalnızca ilk dağıtım için zorunlu kılınır. Daha sonra, Kullanıcı yapmış olabileceği değişikliklere göre ilke zorlanmaz.</li><li>**False**olarak ayarlanırsa, bu duvar kağıdı her eşitlemede zorlanır.</li></ul><br>JSON anahtar adı:<br>`com.microsoft.launcher.Wallpaper.URL.UserChangeAllowed`        |
 |    Akış etkinleştir    |    Boole değeri    |    Doğru    |    Kullanıcı ana ekranda sağa doğru geldiğinde, cihazda Başlatıcı akışını etkinleştirmenizi sağlar.<ul><li>**True**olarak ayarlanırsa akış etkinleştirilir.</li><li>**False**olarak ayarlanırsa akış devre dışı bırakılır.</li></ul><br>JSON anahtar adı:<br>`com.microsoft.launcher.Feed.Enabled`    |
 |    Akış etkinleştirme kullanıcı değişikliğine Izin verildi    |    Boole değeri    |    Doğru    |     **Akış etkinleştirme** ayarının Son Kullanıcı tarafından değiştirilip değiştirilemeyeceğini belirtmenize olanak tanır.<ul><li>**True**olarak ayarlanırsa, akış yalnızca ilk dağıtım için zorlanır. Daha sonra, Kullanıcı yapmış olabileceği değişikliklere göre ilke zorlanmaz.</li><li>**False**olarak ayarlanırsa, akış her eşitlemede zorlanır.</li></ul><br>JSON anahtar adı:`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
+|    Arama çubuğu yerleşimi   |    Dize    |    Alt    |  Giriş ekranında **arama çubuğunun yerleşimini** belirtmenize olanak tanır. <ul><li>**Alt**olarak ayarlanırsa, arama çubuğu ana ekranın alt kısmında yer alır.</li><li>**Üst**olarak ayarlanırsa, arama çubuğu ana ekranın üst kısmında yer alır.</li><li>**Gizle**olarak ayarlanırsa, arama çubuğu ana ekrandan kaldırılır.</li></ul><br>JSON anahtar adı:<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
+|    Arama çubuğu yerleşimi kullanıcı değişikliğine Izin verildi   |    Bool    |    Doğru    |  **Arama çubuğu yerleştirme** ayarının Son Kullanıcı tarafından değiştirilip değiştirilemeyeceğini belirtmenize olanak tanır. <ul><li>**True**olarak ayarlanırsa, arama çubuğu yerleşimi yalnızca ilk dağıtım için zorlanır. Daha sonra, Kullanıcı yapmış olabileceği değişikliklere göre ilke zorlanmaz.</li><li>**False**olarak ayarlanırsa, arama çubuğunun yerleştirilmesi her eşitlemede zorlanır.</li></ul><br>JSON anahtar adı:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`    |
+|    Yerleştirme modu  |    Dize    |    Göster    | Kullanıcı giriş ekranında sola doğru geldiğinde cihazdaki yerleştirmeyi etkinleştirmenizi sağlar.<ul><li>**Göstermek**için ayarlanırsa, yuva etkinleştirilir.</li><li>**Gizle**olarak ayarlanırsa, yerleştirme ana ekrandan gizlenir, ancak gerektiğinde Kullanıcı onu görüntüleyebilir.</li><li>**Devre dışı**olarak ayarlanırsa, Dock devre dışı bırakılır.</li></ul><br>JSON anahtar adı:<br>`com.microsoft.launcher.Dock.Mode`    |
+|   Yerleştirme modu kullanıcı değişikliğine Izin verildi   |    Dize    |    Doğru    |  Yuva modu ayarının Son Kullanıcı tarafından değiştirilip değiştirilemeyeceğini belirtmenize olanak tanır.<ul><li>**True**olarak ayarlanırsa, yerleştirme modu ayarı yalnızca ilk dağıtım için zorlanır. Daha sonra, Kullanıcı yapmış olabileceği değişikliklere göre ilke zorlanmaz.</li><li>**False**olarak ayarlanırsa, yerleştirme modu ayarı her eşitlemede zorlanır.</li></ul><br>JSON anahtar adı:<br>`com.microsoft.launcher.Dock.Mode.UserChangeAllowed`    |
 
 ## <a name="enter-json-data"></a>JSON verilerini girin
 
@@ -76,7 +83,9 @@ Yapılandırma Tasarımcısı tablosunda (yukarıda) listelenen yapılandırıla
 |    Yapılandırma Anahtarı    |    Değer türü    |    Varsayılan değer    |    Açıklama     |
 |----------------------------------------------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Izin verilen uygulamaları ayarla<br>JSON anahtarı:`com.microsoft.launcher.HomeScreen.Applications`    |    Paketleme Learray    | Bkz. [izin verilen uygulamaları ayarla](configure-microsoft-launcher.md#set-allow-listed-applications)</sup>    |    , Cihazda yüklü uygulamalar arasından giriş ekranında görünür olan uygulama kümesini tanımlamanızı sağlar. Uygulamaları, görünür hale getirmek istediğiniz uygulamaların uygulama paketi adını girerek tanımlayabilirsiniz; Örneğin, `com.android.settings`, ana ekranda ayarları erişilebilir hale getirir. Bu bölümde izin verilen uygulamaların, ana ekranda görünür olması için cihazda zaten yüklü olması gerekir.<p>Özelliklerinin<ul><li>**Paket:** Uygulama paketi adı</li><li>**Sınıf:** Belirli bir uygulama sayfasına özgü olan uygulama etkinliği. Bu değer boşsa varsayılan uygulama sayfasını kullanır.</li></ul>      |
-|    Ana ekran uygulama sırası<br>JSON anahtarı: `com.microsoft.launcher.HomeScreen.AppOrder`    |    Paketleme Learray    |    Bkz: [giriş ekranı uygulama sırası](configure-microsoft-launcher.md#home-screen-app-order)      |    Ana ekranda uygulama sırasını belirtmenize izin verir.<p>Özelliklerinin<br><ul><li>**Şunu yazın:** Desteklenen tek tür `application`.</li><li>**Konum:** Ana ekrandaki uygulama simge yuvası. Bu, sol üstteki konum 1 ' den başlar ve yukarıdan aşağıya doğru aşağı doğru ilerler.</li><li>**Paket:** Uygulama paketi adı.</li><li>**Sınıf:** Belirli bir uygulama sayfasına özgü olan uygulama etkinliği. Varsayılan uygulama sayfası, bu değer boşsa kullanılacaktır.</li></ul>    |
+|    Ana ekran uygulama sırası<br>JSON anahtarı: `com.microsoft.launcher.HomeScreen.AppOrder`    |    Paketleme Learray    |    Bkz: [giriş ekranı uygulama sırası](configure-microsoft-launcher.md#home-screen-app-order)      |    Ana ekranda uygulama sırasını belirtmenize izin verir.<p>Özelliklerinin<br><ul><li>**Şunu yazın:** Uygulama pozisyonları belirtmek istiyorsanız desteklenen tek tür `application`. Web bağlantılarının konumlarını belirtmek istiyorsanız tür `weblink`.</li><li>**Konum:** Bu, ana ekranda uygulama simge yuvasını belirler. Bu, sol üstteki konum 1 ' den başlar ve yukarıdan aşağıya doğru aşağı doğru ilerler.</li><li>**Paket:** Bu, uygulama sırasını belirtmek için kullanılan uygulama paketi adıdır.</li><li>**Sınıf:** , Belirli bir uygulama sayfasına özel bir uygulama etkinliğidir. Varsayılan uygulama sayfası, bu değer boşsa kullanılacaktır. Bu özellik uygulama için kullanılır.</li><li>**Etiket:** , Belirli bir uygulama sayfasına özel bir uygulama etkinliğidir. Varsayılan uygulama sayfası, bu değer boşsa kullanılacaktır. Bu özellik uygulama için kullanılır.</li><li>**Bağlantı:** Son Kullanıcı Web Bağlantısı simgesine tıkladıktan sonra başlatılacak URL. Bu özellik Web bağlantısı için kullanılır.</li></ul>    |
+|    Sabitlenmiş Web bağlantıları ayarla<br>JSON anahtarı: `com.microsoft.launcher.HomeScreen.WebLinks`    |    Paketleme Learray    |    Bkz: [sabitlenmiş Web bağlantıları ayarlama](configure-microsoft-launcher.md#set-pinned-web-link)      |    Bu anahtar, Web sitesini giriş ekranına hızlı başlatma simgesi olarak sabitetmenize olanak tanır. Böylece, son kullanıcının temel Web sitelerine hızlı ve kolay bir şekilde erişmesini sağlayabilirsiniz. ' Giriş ekranı uygulama sırası ' yapılandırmasındaki her bir Web bağlantısı simgesinin konumunu değiştirebilirsiniz.<p>Özelliklerinin<br><ul><li>**• Etiket:** MS Başlatıcısı Giriş ekranında görünen Web bağlantısı başlığı.</li><li>**Bağlantı:** Son Kullanıcı Web Bağlantısı simgesine tıkladıktan sonra başlatılacak URL.</li></ul>    |
+
 
 ### <a name="set-allow-listed-applications"></a>İzin verilen uygulamaları ayarla
 
@@ -131,6 +140,57 @@ Yapılandırma Tasarımcısı tablosunda (yukarıda) listelenen yapılandırıla
     ]
 }
 ```
+
+### <a name="set-pinned-web-link"></a>Sabitlenmiş Web bağlantısı ayarla
+
+```JSON
+{ 
+    "key": "com.microsoft.launcher.HomeScreen.WebLinks",  
+    "valueBundleArray": [ 
+        { 
+            "managedProperty": [ 
+                { 
+                    "key": "label",
+                    "valueString": "" 
+                },  
+                { 
+                    "key": "link", 
+                    "valueString": "" 
+                } 
+            ] 
+        }
+    ] 
+},
+{ 
+    "key": "com.microsoft.launcher.HomeScreen.AppOrder",  
+    "valueBundleArray": [ 
+        { 
+            "managedProperty": [ 
+                { 
+                    "key": "type",  
+                    "valueString": "" 
+                },  
+                { 
+                    "key": "position",  
+                    "valueInteger": 
+                },  
+                { 
+                    "key": "label",  
+                    "valueString": "" 
+                },  
+                { 
+                    "key": "link",  
+                    "valueString": "" 
+                } 
+            ] 
+        }
+    ] 
+}
+```
+
+
+
+### <a name="microsoft-launcher-configuration-example"></a>Microsoft başlatıcı yapılandırma örneği
 
 Aşağıda, tüm kullanılabilir yapılandırma anahtarlarının dahil olduğu bir JSON betiği verilmiştir:
 
@@ -204,6 +264,23 @@ Aşağıda, tüm kullanılabilir yapılandırma anahtarlarının dahil olduğu b
                 }
             ]
         }, 
+        { 
+            "key": "com.microsoft.launcher.HomeScreen.WebLinks",  
+            "valueBundleArray": [ 
+                { 
+                    "managedProperty": [ 
+                        { 
+                            "key": "label",
+                            "valueString": "News" 
+                        },  
+                        { 
+                            "key": "link", 
+                            "valueString": "https://www.bbc.com" 
+                        } 
+                    ] 
+                }
+            ] 
+        },
         {
             "key": "com.microsoft.launcher.HomeScreen.AppOrder.UserChangeAllowed", 
             "valueBool": false
@@ -270,11 +347,32 @@ Aşağıda, tüm kullanılabilir yapılandırma anahtarlarının dahil olduğu b
                             "valueString": ""
                         }
                     ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "type", 
+                            "valueString": "weblink"
+                        }, 
+                        {
+                            "key": "position", 
+                            "valueInteger": 20
+                        }, 
+                        {
+                            "key": "label", 
+                            "valueString": "News"
+                        }, 
+                        {
+                            "key": "link", 
+                            "valueString": "https://www.bbc.com"
+                        }
+                    ]
                 }
             ]
         }
     ]
 }
+
 ```
 
 ## <a name="next-steps"></a>Sonraki adımlar

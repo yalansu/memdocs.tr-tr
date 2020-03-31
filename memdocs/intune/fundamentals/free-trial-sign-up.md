@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83107121b05b2126e4c6b2b377baf57ee069f917
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 893981700ede9587a980faa0e4d6b0384c24e3d4
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326834"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401496"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Hızlı Başlangıç: Microsoft Intune'u ücretsiz deneyin
 
@@ -64,7 +64,7 @@ Intune'u 30 gün boyunca ücretsiz deneyebilirsiniz. Zaten bir iş veya okul hes
 
 Portalda zaten oturum açmadıysanız, aşağıdaki adımları izleyin:
 
-1. Yeni bir tarayıcı penceresi açın ve adres çubuğuna **https://devicemanagement.microsoft.com** ifadesini girin. 
+1. Yeni bir tarayıcı penceresi açın ve adres çubuğuna **https://endpoint.microsoft.com** ifadesini girin. 
 2. Oturum açmak için yukarıdaki adımlarda verilen kullanıcı KIMLIĞINI kullanın ( *yourID@yourdomain* . onmicrosoft.com).
 
     ![Portal oturum açma sayfasının görüntüsü](./media/free-trial-sign-up/azure-portal-signin.png)
@@ -126,7 +126,7 @@ Yukarıda belirtildiği gibi, kuruluşunuzun, **. onmicrosoft.com**olmadan kulla
 ## <a name="admin-experiences"></a>Yönetici deneyimi
 
 En sık kullanacağınız iki Portal vardır:
-- Microsoft Endpoint Manager Yönetim Merkezi ([https://devicemanagement.microsoft.com/](https://devicemanagement.microsoft.com/)), [Intune 'un yeteneklerini](what-is-intune.md)keşfedebileceğiniz yerdir. Bu, yöneticinin Intune ile çalıştığı yerdir.
+- Microsoft Endpoint Manager Yönetim Merkezi ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)), [Intune 'un yeteneklerini](what-is-intune.md)keşfedebileceğiniz yerdir. Bu, yöneticinin Intune ile çalıştığı yerdir.
 - Microsoft 365 Yönetim Merkezi ([https://admin.microsoft.com](https://admin.microsoft.com)), bu Azure Active Directory kullanmıyorsanız kullanıcıları ekleyebileceğiniz ve yönetebileceğiniz yerdir. Ayrıca hesabınızın faturalama ve destek gibi diğer yönlerini de yönetebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar

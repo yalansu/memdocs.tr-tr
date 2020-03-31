@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 03/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9632f47d3ab5582365a059b888892c2e0fe6ec8e
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 57bafb990df3a9a47da95ad80306f4ee1ff020f0
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80358721"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401402"
 ---
-# <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
+# <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune yenilikler nelerdir?
 
 [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde Microsoft Intune her hafta yenilikleri öğrenin. Ayrıca, [önemli bildirimler](#notices), [Geçmiş yayınlar](whats-new-archive.md)ve [Intune hizmet güncelleştirmelerinin nasıl yayımlandığına](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728)ilişkin bilgileri de bulabilirsiniz. 
 
@@ -53,6 +53,19 @@ ms.locfileid: "80358721"
 ### Monitor and troubleshoot
 ### Role-based access control
 -->  
+
+<!-- ########################## -->
+## <a name="week-of-march-30-2020"></a>30 Mart 2020 haftası
+
+### <a name="new-url-for-the-microsoft-endpoint-manager-admin-center---3704810---"></a>Microsoft Endpoint Manager Yönetim Merkezi için yeni URL<!-- 3704810 -->
+Son yılda Microsoft Endpoint Manager duyurusunu ile hizalamak için Microsoft Endpoint Manager Yönetim Merkezi 'nin URL 'sini (eski Microsoft 365 adıyla cihaz yönetimi) [https://endpoint.microsoft.com](https://endpoint.microsoft.com)olarak değiştirdik. Eski Yönetim Merkezi URL 'SI ([https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com)) çalışmaya devam eder, ancak yeni URL 'Yi kullanarak Microsoft Endpoint Manager yönetim merkezine erişmeye başlamanız önerilir.
+
+Daha fazla bilgi için bkz. [Microsoft Endpoint Manager yönetim merkezini kullanarak BT görevlerini basitleştirme](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center).
+
+### <a name="app-management"></a>Uygulama yönetimi
+
+#### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>MacOS cihazları için betik desteği (Genel Önizleme)<!-- 4280361 wnready -->
+MacOS cihazlarına komut dosyaları ekleyebilir ve dağıtım yapabilirsiniz. Bu destek, MacOS cihazlarındaki yerel MDM yeteneklerini kullanarak, macOS cihazlarını mümkün olduğunca fazla yapılandırma yeteneğinizi genişletmektedir. Daha fazla bilgi için bkz. [Intune 'Da macOS cihazlarında Shell betikleri kullanma](../apps/macos-shell-scripts.md).
 
 <!-- ########################## -->
 ## <a name="week-of-march-24-2020"></a>24 Mart 2020 haftası
@@ -132,7 +145,7 @@ Bu değişiklikler, Intune hizmet arka ucu dağıttığı için Mart ayının he
 #### <a name="new-user-experience-when-creating-administrative-templates-on-windows-devices--5096036---"></a>Windows cihazlarında Yönetim Şablonları oluştururken yeni kullanıcı deneyimi<!--5096036 -->
 Müşteri geri bildirimlerine göre ve yeni Azure tam ekran deneyimine geçtiğimiz için, Yönetim Şablonları profili deneyimini bir klasör görünümüyle yeniden oluşturduk. Herhangi bir ayarlarda veya mevcut profillerde değişiklik yapmadık. Bu nedenle, mevcut profilleriniz aynı kalır ve yeni görünümde kullanılabilir. **Tüm ayarlar ' ı**seçip ara ' yı kullanarak tüm ayarlar seçeneklerinde gezinmeye devam edebilirsiniz. Ağaç görünümü bilgisayar ve Kullanıcı yapılandırmalarına göre bölünür. Windows, Office ve Edge ayarlarını ilişkili klasörlerinde bulacaksınız.  
 
-Uygulama hedefi:
+Uygulama alanı:
 - Windows 10 ve üzeri
 
 #### <a name="vpn-profiles-with-ikev2-vpn-connections-can-use-always-on-with-iosipados-devices---1947932-----"></a>IKEv2 VPN bağlantılarına sahip VPN profilleri, her zaman iOS/ıpados cihazlarıyla birlikte kullanılabilir<!-- 1947932   -->
@@ -142,7 +155,7 @@ Uygulama hedefi:
 
 Yapılandırabileceğiniz Ikev2 ayarlarını görmek için [Microsoft Intune iOS CIHAZLARıNDA VPN ayarları ekle](../configuration/vpn-settings-ios.md#ikev2-settings)' ye gidin.
 
-Uygulama hedefi:
+Uygulama alanı:
 - iOS/iPadOS
 
 #### <a name="delete-bundles-and-bundle-arrays-in-oemconfig-device-configuration-profiles-on-android-enterprise-devices---5550355-----"></a>Android kurumsal cihazlarda OEMConfig cihaz yapılandırma profillerindeki paketleri ve paket dizilerini silme<!-- 5550355   -->
@@ -150,13 +163,13 @@ Android kurumsal cihazlarda, OEMConfig **profilleri oluşturun ve** güncelleşt
 
 OEMConfig profilleri hakkında daha fazla bilgi için bkz. [Microsoft Intune 'de oemconfig Ile Android Kurumsal cihazları kullanma ve yönetme](../configuration/android-oem-configuration-overview.md).
 
-Uygulama hedefi:
+Uygulama alanı:
 - Android Kurumsal
 
 #### <a name="configure-the-iosipados-microsoft-azure-ad-sso-app-extension---5672534-----"></a>İOS/ıpados Microsoft Azure AD SSO uygulama uzantısını yapılandırma<!-- 5672534   -->
 Microsoft Azure AD ekibi, iOS/ıpados 13.0 + kullanıcılarına tek bir oturum açma ile Microsoft uygulamalarına ve Web sitelerine erişim elde etmesine izin vermek için bir yeniden yönlendirme çoklu oturum açma (SSO) uygulama uzantısı oluşturdu. Daha önce Microsoft Authenticator uygulama ile aracılı kimlik doğrulaması yapmış olan tüm uygulamalar, yeni SSO uzantısıyla SSO almaya devam edecektir. Azure AD SSO uygulama uzantısı sürümü sayesinde, SSO uzantısını yeniden yönlendirme **SSO uygulama uzantısı**türü (**cihazlar** > **yapılandırma profilleri** > profil **oluşturma** > **iOS/IPA> > DOS** ) ile yapılandırabilirsiniz. **Device features**
 
-Uygulama hedefi:
+Uygulama alanı:
 - iOS 13,0 ve üzeri
 - ıpados 13,0 ve üzeri
 
@@ -165,7 +178,7 @@ Uygulama hedefi:
 #### <a name="enterprise-app-trust-settings-modification-setting-is-removed-from-iosipados-device-restriction-profiles---6225131-----"></a>Kurumsal uygulama güven ayarları değiştirme ayarı iOS/ıpados cihaz kısıtlama profillerden kaldırılır<!-- 6225131   -->
 İOS/ıpados cihazlarında, bir cihaz kısıtlama profili (**cihazlar** > **yapılandırma profilleri** oluşturma > profil **oluşturma** için **iOS/IPA> DOS** > profil türü için **cihaz kısıtlamaları** ) oluşturun. **Kurumsal uygulama güven ayarları değiştirme** ayarı Apple tarafından kaldırılır ve Intune 'dan kaldırılır. Şu anda bu ayarı bir profilde kullanıyorsanız, hiçbir etkisi yoktur ve mevcut profillerden kaldırılır. Bu ayar ayrıca Intune 'daki herhangi bir raporlamadan kaldırılır.
 
-Uygulama hedefi:
+Uygulama alanı:
 - iOS/iPadOS
 
 Kısıtlayacakları ayarları görmek için [iOS ve ıpados cihaz ayarları ' na giderek özelliklere izin verin veya kısıtlayın](../configuration/device-restrictions-ios.md).
@@ -524,7 +537,7 @@ Artık kuruluş türünü seçtiğinizde, `proxy.contoso.com`gibi bir proxy sunu
 
 Yapılandırabileceğiniz geçerli Wi-Fi ayarlarını görmek için [Microsoft Intune ' de Android Enterprise ve Android bilgi noktası çalıştıran cihazlar Için Wi-Fi ayarları ekle](../configuration/wi-fi-settings-android-enterprise.md#work-profile-only)' ye gidin.
 
-Uygulama hedefi:
+Uygulama alanı:
 - Android kurumsal iş profili
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -619,7 +632,7 @@ Microsoft Edge, Office ve Windows ayarlarını denetlemek ve yönetmek için Mic
 
 Intune 'da ADMX şablonları hakkında daha fazla bilgi için, bkz. [Microsoft Intune Grup İlkesi ayarlarını yapılandırmak Için Windows 10 şablonlarını kullanma](../configuration/administrative-templates-windows.md).
 
-Uygulama hedefi:
+Uygulama alanı:
 
 - Windows 10 ve üzeri
 
@@ -657,7 +670,7 @@ Bu yeni ayarlar, SSO uygulama uzantıları ve Apple 'ın yerleşik Kerberos uzan
 
 Yapılandırabileceğiniz SSO uygulama uzantısı ayarlarının tam aralığını görmek için, [macOS 'Ta](../configuration/macos-device-features-settings.md#single-sign-on-app-extension)IOS ve SSO ['daki SSO](../configuration/ios-device-features-settings.md#single-sign-on-app-extension) ' ya gidin.
 
-Uygulama hedefi:
+Uygulama alanı:
 
 - iOS/iPadOS
 - Mac OS
@@ -763,7 +776,7 @@ Aşağıdakiler dahil olmak üzere kullanılabilir yeni Exchange ActiveSync ayar
 
 Bu ayarlar hakkında daha fazla bilgi için, [Intune 'Da iOS cihazları Için e-posta profili ayarları](../configuration/email-settings-ios.md)' na gidin. 
 
-Uygulama hedefi:
+Uygulama alanı:
 
 - iOS 13,0 ve üzeri
 - ıpados 13,0 ve üzeri
@@ -773,7 +786,7 @@ Android kurumsal tam olarak yönetilen ve ayrılmış cihazlarda, kullanıcılar
 
 Yapılandırabileceğiniz ayarları görmek için [Android kurumsal cihaz ayarları ' na giderek Intune kullanarak özelliklere izin verin veya kısıtlayın](../configuration/device-restrictions-android-for-work.md).
 
-Uygulama hedefi:
+Uygulama alanı:
 
 - Android kurumsal tam yönetilen cihazlar
 - Android kurumsal adanmış cihazlar
@@ -785,7 +798,7 @@ Bu ayarın cihazlar üzerinde hiçbir etkisi yoktur. Bu ayarı mevcut profillerd
 
 Yapılandırabileceğiniz tüm ayarları görmek için [iOS ve ıpados cihaz ayarları ' na bakın ve Intune kullanarak özelliklere izin verin veya kısıtlayın](../configuration/device-restrictions-ios.md).
 
-Uygulama hedefi:
+Uygulama alanı:
 
 - iOS/iPadOS
 
@@ -803,7 +816,7 @@ Yalnızca bazı uygulamalar yönetilen tercihleri destekler ve bu uygulamalar t�
 
 Bu özellik hakkında daha fazla bilgi için, bkz. [Microsoft Intune kullanarak macOS cihazlarına özellik listesi dosyası ekleme](../configuration/preference-file-settings-macos.md).
 
-Uygulama hedefi:
+Uygulama alanı:
 
 - 10,7 ve daha yeni çalıştıran macOS cihazları
 
