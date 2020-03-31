@@ -96,6 +96,8 @@
               href: apps-advanced-threat-protection-macos.md
         - name: PowerShell komut dosyaları
           href: intune-management-extension.md
+        - name: macOS kabuk betikleri
+          href: macos-shell-scripts.md
     - name: Uygulamaları atama
       items:
         - name: Gruplara uygulama atama
