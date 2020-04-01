@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57bafb990df3a9a47da95ad80306f4ee1ff020f0
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: 677f85874ddf206b716e70a0cc6c659e10b99fef
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401402"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438812"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune yenilikler nelerdir?
 
@@ -236,7 +236,7 @@ Uyumlu olmayan bu cihazlarda, **cihaz ayarlarını Güncelleştir** sayfasında 
 2. İş profili yönetimine kaydolma
 3. Uyumluluk sorunlarını çözme 
  
-Google, Android Enterprise ile modern, daha zengin ve daha güvenli cihaz yönetimine geçme çabasında yeni Android sürümlerindeki Cihaz Yöneticisi desteğini düşürdüğünde.  Intune, yalnızca S2 CY2020 aracılığıyla Android 10 ve üzeri çalıştıran cihaz yönetici tarafından yönetilen Android cihazları için tam destek sağlayabilir. Android 10 veya sonraki sürümleri çalıştıran Cihaz Yöneticisi tarafından yönetilen cihazlar (Samsung hariç), tamamen yönetilemez. Özellikle, etkilenen cihazlar yeni parola gereksinimleri almaz. Daha fazla bilgi için bu [bildirimin](#decreasing-support-for-android-device-administrator)bölümüne bakın.
+Google, Android Enterprise ile modern, daha zengin ve daha güvenli cihaz yönetimine geçme çabasında yeni Android sürümlerindeki Cihaz Yöneticisi desteğini düşürdüğünde.  Intune, yalnızca S2 CY2020 aracılığıyla Android 10 ve üzeri çalıştıran cihaz yönetici tarafından yönetilen Android cihazları için tam destek sağlayabilir. Android 10 veya sonraki sürümleri çalıştıran Cihaz Yöneticisi tarafından yönetilen cihazlar (Samsung hariç), tamamen yönetilemez. Özellikle, etkilenen cihazlar yeni parola gereksinimleri almaz.
 
 Bu ayar hakkında daha fazla bilgi için bkz. [Android cihazlarını cihaz yöneticisinden iş profili yönetimine taşıma](../enrollment/android-move-device-admin-work-profile.md). 
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19f9d21afd46abccf36dbb3d50f81b16e854e92d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: c156e0d1b627d285c6654994d6114920f86b2bab
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325389"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488051"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Intune 'da Windows 10 yazılım güncelleştirmelerini yönetme
 
@@ -209,7 +209,7 @@ Bir cihaz Windows 10 özellik güncelleştirmeleri ilkesi aldığında:
 
 Intune 'da Windows 10 özellik güncelleştirmelerini kullanmak için aşağıdaki önkoşulların karşılanması gerekir.
 
-- Cihazların Intune MDM 'ye kayıtlı olması ve Azure AD 'ye katılmış olması veya Azure AD 'ye kayıtlı olması gerekir.
+- Cihazların Intune MDM 'ye kaydolması ve hibrit AD 'ye katılmış, Azure AD 'ye katılmış veya Azure AD 'nin kayıtlı olması gerekir.
 - Özellik güncelleştirmeleri ilkesini Intune ile birlikte kullanmak için, cihazların en düşük bir ayarla [*temel*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry)alarak telemetri açık olmalıdır. Telemetri, *Raporlama ve telemetri* altında [cihaz kısıtlama ilkesinin](../configuration/device-restrictions-configure.md)bir parçası olarak yapılandırılır.
   
   Özellik güncelleştirme ilkesi alan ve telemetri ayarlanmış *bir şekilde ayarlanmış olan cihazlar, devre*dışı olduğundan, özellik güncelleştirme ilkesinde tanımlananla Windows 'un daha yeni bir sürümünü yükleyebilirler. Telemetri gerektirmek için önkoşul, bu özellik genel kullanıma yönelik olarak taşındıkça gözden geçirme aşamasındadır.

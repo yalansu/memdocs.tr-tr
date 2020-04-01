@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/21/2020
+ms.date: 03/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18b42dffc2c34adea1f70c4587b5eb5384d0a778
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 2a807a90cdca18d79e7b92b4efeb56d341da2596
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220141"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438707"
 ---
-# <a name="in-development-for-microsoft-intune---march-2020"></a>Microsoft Intune için geliştirme sırasında-Mart 2020
+# <a name="in-development-for-microsoft-intune---april-2020"></a>Microsoft Intune için geliştirme sırasında-Nisan 2020
 
 Hazırlık ve planlamada yardımcı olması için bu sayfada Intune Kullanıcı Arabirimi güncelleştirmeleri ve geliştirme aşamasında olan ancak henüz yayınlanmayan özellikler listelenir. Bu sayfadaki bilgilere ek olarak: 
 
@@ -58,11 +58,26 @@ Hazırlık ve planlamada yardımcı olması için bu sayfada Intune Kullanıcı 
 <!-- ***********************************************-->
 ## <a name="app-management"></a>Uygulama yönetimi
 
-### <a name="company-portal-for-ios-to-support-landscape-mode--6048329----"></a>İOS için Şirket Portalı yatay modunu destekleyecek şekilde<!--6048329  -->
-Kullanıcılar cihazlarını kaydedebilir, uygulama bulabilir ve tercih ettikleri ekran yönünü kullanarak BT desteği alabilir. Kullanıcılar ekranı dikey modda kilitlemedikleri takdirde uygulama ekranları dikey veya yatay moda uyacak şekilde otomatik olarak algılar ve ayarlar.
+### <a name="update-to-android-app-configuration-policies---6113334----"></a>Android uygulama yapılandırma ilkelerine güncelleştirme<!-- 6113334  -->
+Android uygulama yapılandırma ilkeleri, yöneticilerin bir uygulama yapılandırma profili oluşturmadan önce cihaz kayıt türünü seçmesine olanak tanımak üzere güncelleştirilir. İşlev, kayıt türü (Iş profili veya cihaz sahibi) tabanlı sertifika profillerinin hesabına ekleniyor.  Yayın sonrasında aşağıdakiler gerçekleşir:
 
-### <a name="improved-sign-in-experience-in-company-portal-for-android---6103997----"></a>Android için Şirket Portalı 'de geliştirilmiş oturum açma deneyimi<!-- 6103997  -->
-Daha modern, basit ve kullanıcılar için temiz bir deneyim sunmak amacıyla Android için Şirket Portalı uygulamasındaki çeşitli oturum açma ekranlarının yerleşimini güncelleştiriyoruz.
+- Bu özelliğin, ilkeyle ilişkili herhangi bir sertifika profili olmayan, varsayılan olarak, cihaz kayıt türü için Iş profili ve cihaz sahibi profili olmak üzere oluşturulan mevcut ilkeler.
+- Bu özelliğin ilişkili olduğu Sertifika profillerinin bulunduğu sürümden önce oluşturulan mevcut ilkeler, varsayılan olarak yalnızca Iş profili ' dir.
+- Yeni bir profil oluşturulduysa ve cihaz kayıt türü için Iş profili ve cihaz sahibi profili seçilirse, bir sertifika profilini uygulama yapılandırma ilkesiyle ilişkilendiremeyeceksiniz.
+- Yeni bir profil oluşturulup Iş profili yalnızca seçili ise, cihaz yapılandırması altında oluşturulan Iş profili sertifika ilkeleri kullanılabilir.
+- Yeni bir profil oluşturulduysa ve yalnızca cihaz sahibi seçilirse, cihaz yapılandırması altında oluşturulan cihaz sahibi sertifika ilkeleri kullanılabilir.
+
+Mevcut ilkeler yeni sertifikaları düzeltmez veya vermez.
+
+Ayrıca, her iki e-posta yapılandırma türünde Sertifika profillerinin kullanılması da dahil olmak üzere hem Iş profili hem de cihaz sahibi kayıt türleri için çalışacak Gmail ve dokuz e-posta yapılandırma profilleri ekliyoruz.  Iş profillerinin cihaz yapılandırması altında oluşturduğunuz Gmail veya dokuz ilke cihaza uygulanmaya devam eder ve bunları uygulama yapılandırma ilkelerine taşımak gerekli değildir.
+
+[Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **uygulamalar** > **uygulama yapılandırma**ilkeleri ' ni seçerek uygulama yapılandırma ilkelerini bulabilirsiniz. Uygulama yapılandırma ilkeleri hakkında daha fazla bilgi için bkz. [Microsoft Intune Için uygulama yapılandırma ilkeleri](../apps/app-configuration-policies-overview.md).
+
+### <a name="microsoft-teams-is-now-included-in-the-office-365-suite-for-macos---5903936----"></a>Microsoft ekipleri artık macOS için Office 365 Suite 'e eklenmiştir<!-- 5903936  -->
+Microsoft Endpoint Manager 'da macOS için Microsoft Office atanan kullanıcılar artık mevcut Microsoft Office uygulamalarına (Word, Excel, PowerPoint, Outlook ve OneNote) ek olarak Microsoft ekipleri alacak. Intune, diğer Office macOS uygulamaları yüklü olan mevcut Mac cihazlarını algılar ve cihaz Intune ile bir dahaki sefer iade ettiğinde Microsoft ekipleri yüklemeye çalışır. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, MacOS için **Office 365 Suite** 'i, **MacOS** > **Add** > **uygulamalar** ' ı seçerek bulabilirsiniz. Daha fazla bilgi için bkz. [Microsoft Intune Ile macOS cihazlarına Office 365 atama](../apps/apps-add-office365-macos.md).
+
+### <a name="group-targeting-support-for-customization-pane----4722837----"></a>Özelleştirme bölmesi için Grup hedefleme desteği <!-- 4722837  -->
+Özelleştirme bölmesindeki ayarları Kullanıcı gruplarına hedefleyebilirsiniz. Intune portalından, **istemci uygulamaları** > **Özelleştirme**' yi seçin. Daha fazla bilgi için bkz. [Intune Şirket Portalı uygulamalar, Şirket Portalı Web sitesi ve Intune uygulaması özelleştirme] (şirket-Portal-app.md].
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Cihaz yapılandırması
@@ -83,14 +98,8 @@ Uygulama alanı:
 - Uzantılar: macOS
 - Tercih dosyası: macOS
 
-### <a name="improved-user-interface-experience-when-creating-oemconfig-configuration-profiles-on-android-enterprise-devices---5568645-----"></a>Android kurumsal cihazlarda OEMConfig yapılandırma profilleri oluştururken Geliştirilmiş kullanıcı arabirimi deneyimi<!-- 5568645   -->
-Android Kurumsal cihazları için bir OEMConfig profili oluştururken veya düzenlerken, Endpoint Management Yönetim Merkezi 'ndeki deneyim güncellenir. Güncelleştirilmiş deneyim, bir bakışta yapılandırdığınız ayarların özetini sağlayacaktır. Bu değişiklik, OEMConfig cihaz yapılandırma profilini (**cihazlar** > **yapılandırma profillerini** etkiler > platform için **Android Enterprise** >, profil türü için **oemconfig** ) > **oluşturur** .
-
-Bu özellik şu platformlarda geçerlidir:
-- Android Kurumsal 
-
 ### <a name="device-configuration-profile-settings-and-values-will-be-updated-for-windows-platforms---4091122---"></a>Cihaz yapılandırma profili ayarları ve değerleri Windows platformları için güncelleştirilecektir<!-- 4091122 -->
-Windows platformları için cihaz yapılandırma profilleri oluşturduğunuzda (**cihaz** > **yapılandırma profilleri** > platform için herhangi bir **Windows** seçeneği > **profil oluşturma** ), bazı ayarlar ve bunların değerleri CSP 'den farklıdır ve kafa karıştırıcı olabilir. Ayar adları ve değerleri daha açık olacak şekilde güncelleştirilecektir.
+Windows platformları için cihaz yapılandırma profilleri oluşturduğunuzda (**cihaz** > **yapılandırma profilleri** > platform için herhangi bir **Windows** seçeneği > **profil oluşturma** ), bazı ayarlar ve bunların değerleri CSP 'den farklıdır ve kafa karıştırıcı olabilir. Ayar adları ve değerleri daha net olacak şekilde güncelleştirilecektir.
 
 Uygulama alanı:
 
@@ -98,15 +107,6 @@ Uygulama alanı:
 - Windows holographic for Business cihaz yapılandırma profilleri
 - Windows 8.1 cihaz yapılandırma profilleri
 - Windows Phone 8,1 cihaz yapılandırma profilleri
-
-### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Android ve Android kurumsal cihazlarda cihaz kısıtlama profilleri oluştururken Geliştirilmiş kullanıcı arabirimi deneyimi<!-- 5841361 -->
-Android veya Android Kurumsal cihazları için bir profil oluşturduğunuzda, uç nokta yönetimi Yönetim Merkezi 'ndeki deneyim güncelleştirilir. Bu değişiklik aşağıdaki cihaz yapılandırma profillerini etkiler (**cihazlar** > **yapılandırma profilleri** > **profil oluşturma** > **Android Cihaz Yöneticisi** veya platform için **Android Enterprise** ):
-
-- Cihaz kısıtlamaları: Android Cihaz Yöneticisi
-- Cihaz kısıtlamaları: Android kurumsal cihaz sahibi
-- Cihaz kısıtlamaları: Android kurumsal iş profili
-
-Yapılandırabileceğiniz cihaz kısıtlamaları hakkında daha fazla bilgi için bkz. [Android Cihaz Yöneticisi](../configuration/device-restrictions-android.md) ve [Android Enterprise](../configuration/device-restrictions-android-for-work.md).
 
 ### <a name="configure-the-microsoft-defender-atp-app-for-macos-----5520115----"></a>MacOS için Microsoft Defender ATP uygulamasını yapılandırma  <!-- 5520115  -->
 Yakında bir Endpoint Protection cihaz yapılandırma profilinin parçası olarak macOS çalıştıran cihazlar için Microsoft Defender ATP uygulamasının [ayarlarını](../protect/endpoint-protection-macos.md) yapılandırabilirsiniz (**cihaz** > **yapılandırma profillerinin** > **profil oluşturma**, *Platform*için **MacOS** ve ardından *profil türü*için **Endpoint Protection** ). MacOS cihaz yapılandırması için sekiz ayar olacaktır. 
@@ -118,29 +118,46 @@ Defender ATP, macOS 10,13 (High Sierra) ve üzeri sürümlerde desteklenir ve bu
 
 Bu ayar, önceden oluşturulan ilkede kullanılamaz. Bu ayarı kullanmak üzere yapılandırmak için dosya Kasası ilkelerini yeniden oluşturmanız gerekir. 
 
-### <a name="configure-delivery-optimization-agent-when-downloading-win32-app-content---5410945----"></a>Win32 uygulama içeriğini indirirken teslim Iyileştirme aracısını yapılandırma<!-- 5410945  -->
-Teslim Iyileştirme aracısını, atamaya göre arka planda veya ön plan modunda Win32 uygulama içeriğini indirmek için yapılandırabileceksiniz. Mevcut Win32 uygulamaları için içerik arka plan modunda indirilmeye devam edecektir. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **uygulamalar** > **tüm uygulamalar** ' ı seçin > *Win32 uygulama* > **özelliklerini**seçin. **Atamalar**' ın yanındaki **Düzenle** ' yi seçin.  **Gerekli** bölümde **mod** altında **Ekle** seçeneğini belirleyerek atamayı düzenleyin.  Yeni ayarı, kullanılabilir hale geldiğinde **uygulama ayarları** bölümünde bulacaksınız. Teslim Iyileştirme hakkında daha fazla bilgi için bkz. [Win32 uygulama yönetimi-teslim iyileştirmesi](../apps/apps-win32-app-management.md#delivery-optimization).
+### <a name="send-push-notifications-as-an-action-for-non-compliance----1733150-----"></a>Uyumsuzluk için eylem olarak anında iletme bildirimleri gönder <!-- 1733150   -->
+İOS ve Android platformları için Şirket Portalı uygulaması aracılığıyla uygulama anında iletme bildirimi gönderecek uyumsuzluk için yeni bir eylem ekliyoruz. Kullanıcılar, Şirket Portalı uygulamasını başlatarak, uyumsuz oldukları nedeni görüntüleyen bildirimlere tıklayabilir. Yöneticiler bu yeni eylemi, Microsoft Endpoint Manager Yönetim Merkezi 'nde **cihazlara** giderek **uyumluluk ilkelerine** > , **ilke oluştur** > ve ardından uygulama anında iletme bildirimi göndermek için *eylemi* seçerek yapılandırabilecektir.
+
+### <a name="pre-release-testing-for-managed-google-play-apps---2681933----"></a>Yönetilen Google Play uygulamaları için yayın öncesi test<!-- 2681933  -->
+[Uygulama ön sürümü testi için Google Play 'ın kapalı test izlerini](https://support.google.com/googleplay/android-developer/answer/3131213) kullanan kuruluşlar, bu parçaları Intune ile yönetebilecektir. Test yapmak için Google Play 'in ön üretim izlerini, pilot gruplarına yayımlayan Iş kolu uygulamalarını seçmeli olarak atayabileceksiniz. Intune 'da, bir uygulamanın kendisine yayımlanmış bir üretim öncesi derleme testi izlemesine sahip olup olmadığını ve bu izlemeyi AAD Kullanıcı veya cihaz gruplarına atayabilmesini de görebileceksiniz. Bu özellik, şu anda desteklenen Android kurumsal senaryolarımız (iş profili, tam olarak yönetilen ve adanmış) için kullanılabilir. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **uygulamalar** > **Android** > **Ekle**' yi seçerek yönetilen bir Google Play uygulaması ekleyebilirsiniz. Daha fazla bilgi için bkz. [Intune Ile Android Enterprise cihazlarına yönetilen Google Play uygulamaları ekleme](../apps/apps-add-android-for-work.md).
+
+### <a name="manage-smime-settings-for-outlook-on-android---6517085-----"></a>Android 'de Outlook için S/MIME ayarlarını yönetme<!-- 6517085   -->
+Android Enterprise çalıştıran cihazlarda Outlook için S/MIME ayarını yönetmek üzere uygulama yapılandırma ilkelerini kullanabilirsiniz. Ayrıca, cihaz kullanıcılarının Outlook ayarları ' nda S/MIME 'yi etkinleştirmesine veya devre dışı bırakmasına izin verip vermeyeceğinizi seçebileceksiniz. Android için uygulama yapılandırma ilkesi 'ni kullanmak için [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) 'nde **uygulamalar** > **uygulama yapılandırma Ilkeleri** ' ne gidin > **yönetilen cihaz** **ekleyin** > .
+
+### <a name="additional-options-in-sso-and-sso-app-extension-profiles-on-iosipados-devices---6504155----"></a>İOS/ıpados cihazlarında SSO ve SSO uygulama uzantısı profillerindeki ek seçenekler<!-- 6504155  -->
+İOS/ıpados cihazlarında şunları yapabilirsiniz:
+
+- SSO profillerdeki (**cihazlar** > **yapılandırma profilleri** > profil **oluşturma** > **IOS/ıpados** için Platform > **cihaz özellikleri** > **Çoklu oturum açma**) için, Kerberos asıl adını SSO profillerindeki güvenlik hesabı Yöneticisi (Sam) hesap adı olarak ayarlayın. 
+- SSO uygulama uzantısı profillerinde (**cihazlar** > **yapılandırma profilleri** > profil **oluşturma** > **IOS/ıpados** , profil > **Çoklu oturum açma uygulama uzantısı**için Platform > **cihaz özellikleri** ), yeni bir SSO uygulama uzantısı türü kullanarak iOS/ıpados Microsoft Azure ad uzantısını daha az tıklamayla yapılandırın. Paylaşılan cihazlar için Azure AD uzantısını etkinleştirebilir ve uzantıya özgü verileri uzantıya gönderebilirsiniz.
+
+Uygulama alanı:
+- iOS/ıpados 13.0 +
+
+İOS/ıpados cihazlarında çoklu oturum açma kullanma hakkında daha fazla bilgi için bkz. [Çoklu oturum açma uygulama uzantısına genel bakış](../configuration/device-features-configure.md#single-sign-on-app-extension) ve [Çoklu oturum açma ayarları listesi](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
 
 <!-- ***********************************************-->
-<!--## Device enrollment-->
+## <a name="device-enrollment"></a>Cihaz kaydı
+
+### <a name="bring-your-own-devices-can-use-vpn-to-deploy--5015344---"></a>Kendi cihazlarını getir, dağıtmak için VPN kullanabilir<!--5015344 -->
+Yeni Autopilot profili **etki alanı bağlantısını atla onay** geçişi, kendi üçüncü taraf Win32 VPN istemcinizi kullanarak kurumsal ağınıza erişim olmadan karma Azure AD JOIN cihazlarını dağıtmanıza olanak tanır. Yeni geçişi görmek için [Microsoft Endpoint Manager yönetim merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) > **cihazlar**  > **Windows** > **Windows kayıt** > **dağıtım PROFILLERI** ' ne gidin > **kullanıma hazır deneyim (OOBE)** **oluşturun** . > 
 
 <!-- ***********************************************-->
 ## <a name="device-management"></a>Cihaz yönetimi
 
-### <a name="change-primary-user-for-windows-devices----3794742---"></a>Windows cihazları için birincil kullanıcıyı değiştirme <!-- 3794742 -->
-Windows karma ve Azure AD 'ye katılmış cihazlar için birincil kullanıcıyı değiştirebileceksiniz. Bunu yapmak için **ıntune** > **cihazlar** > **tüm cihazlar** ' a gidin > bir cihaz > **özellikleri** > **birincil Kullanıcı**seçin.
-
 ### <a name="powershell-scripts-support-for-byod-devices---1862833----"></a>KCG cihazları için PowerShell betikleri desteği<!-- 1862833  -->
 PowerShell betikleri, Intune 'da Azure AD kayıtlı cihazlarını destekleyecektir. PowerShell hakkında daha fazla bilgi için bkz. [Intune 'Da Windows 10 cihazlarda PowerShell betiklerini kullanma](../apps/intune-management-extension.md). Bu işlevsellik, Windows 10 Home Edition çalıştıran cihazları desteklemez.
 
-### <a name="new-information-in-device-details---5604099---"></a>Cihaz ayrıntılarında yeni bilgiler<!-- 5604099 -->
-Aşağıdaki bilgiler cihazların **genel bakış** sayfasında olacaktır:
-
-- Depolama kapasitesi (cihazdaki fiziksel depolama miktarı)
-- Bellek kapasitesi (cihazdaki fiziksel bellek miktarı)
-
 ### <a name="script-support-for-macos-devices---4280361----"></a>MacOS cihazları için betik desteği<!-- 4280361  -->
 MacOS cihazlarına komut dosyaları ekleyebilir ve bunları dağıtabileceksiniz. Bu destek, MacOS cihazlarındaki yerel MDM yeteneklerini kullanarak, macOS cihazlarını mümkün olduğunca fazla yapılandırma yeteneğinizi genişletmektedir.
+
+### <a name="log-analytics-will-include-device-details-log--6014987----"></a>Log Analytics, cihaz ayrıntıları günlüğünü içerecektir<!--6014987  -->
+Intune cihaz ayrıntı günlükleri, **raporlar** > **Log Analytics**'te kullanılabilir. Özel sorgular ve Azure çalışma kitapları oluşturmak için cihaz ayrıntılarını ilişkilendirebilirler.
+
+### <a name="push-notification-when-device-ownership-type-is-changed---5575875----"></a>Cihaz sahiplik türü değiştirildiğinde anında iletme bildirimi<!-- 5575875  -->
+Hem Android hem de iOS Şirket Portalı kullanıcılarınıza, cihaz sahiplik türü kişisel olarak bir gizlilik özelliği olarak değiştirildiğinde, bu kullanıcılara göndermek üzere bir anında iletme bildirimi yapılandırabileceksiniz. Bu ayar, Microsoft uç nokta yöneticisinde **kiracı yönetimi** > **özelleştirmesi**seçilerek bulunabilir. Cihaz sahipliğinin son kullanıcılarınızı nasıl etkilediği hakkında daha fazla bilgi edinmek için bkz. [cihaz sahipliğini değiştirme](../enrollment/corporate-identifiers-add.md#change-device-ownership).
 
 <!-- ***********************************************-->
 <!--## Intune apps-->
@@ -183,3 +200,6 @@ Intune ile desteklenen ayarlar değişmemektedir. Bu yalnızca Microsoft uç nok
 ## <a name="see-also"></a>Ayrıca bkz.
 
 Son gelişmeler hakkında daha fazla bilgi için bkz. [Microsoft Intune](whats-new.md)yenilikleri.
+
+
+

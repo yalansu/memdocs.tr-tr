@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec131df32e06c1c43b8904dde732b4e6a17a91aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3daf758ed93fb03ac63b062f604a457d033637dc
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323822"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438767"
 ---
 # <a name="add-and-assign-the-windows-10-company-portal-app-for-autopilot-provisioned-devices"></a>Autopilot tarafından sağlanan cihazlar için Windows 10 Şirket Portalı uygulaması ekleme ve atama
 
@@ -52,9 +52,9 @@ Windows 10 Autopilot tarafından sağlanan cihazlarda, Microsoft Store for Busin
 ## <a name="assign-the-company-portal-app"></a>Şirket Portalı uygulamasını atama
 
 1.  [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) 'nde Yönetici hesabınızla oturum açın. 
-2. Sağ bölmedeki **uygulamalar** sekmesini seçin.
-3.  **Platform tarafından**altında **Windows**' u seçin.
-4.  **Şirket portalı (çevrimdışı)** seçeneğini belirleyin.
+2. Sağ bölmedeki**uygulamalar**sekmesini seçin.
+3. **Platform tarafından**altında**Windows**' u seçin.
+4. **Şirket portalı (çevrimdışı)** seçeneğini belirleyin.
 5. Eşitleme zamanlamasının tamamlanmasını beklemeniz ya da Microsoft Endpoint Manager yönetim merkezinden el ile eşitleme yapmanız gerekir.
 6. Şirket Portalı uygulamasını seçtiğiniz Autopilot cihaz gruplarına gerekli bir uygulama olarak atayın.
 

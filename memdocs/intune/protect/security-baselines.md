@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a62b87861bbe2f1d9e498756aedb0acd28bbff5a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328682"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488043"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Intune 'da Windows 10 cihazlarını yapılandırmak için güvenlik temellerini kullanma
 
@@ -76,7 +76,7 @@ Aşağıdaki güvenlik temeli örnekleri Intune ile kullanılabilir. Her bir tab
 
 - **Microsoft Defender ATP taban çizgisi**
    *(Bu temeli kullanmak Için ortamınız [Microsoft Defender Gelişmiş tehdit koruması](advanced-threat-protection.md#prerequisites)'nı kullanmaya yönelik önkoşulları karşılamalıdır)* .
-  - [Microsoft Defender ATP temeli](security-baseline-settings-defender-atp.md)
+  - [Microsoft Defender ATP taban sürümü 3](security-baseline-settings-defender-atp.md)
 
   > [!NOTE]
   > Microsoft Defender ATP güvenlik temeli fiziksel cihazlar için iyileştirildi ve şu anda sanal makinelerde (VM) veya VDı uç noktalarında kullanılması önerilmez. Belirli taban çizgisi ayarları, sanallaştırılmış ortamlarda uzak etkileşimli oturumları etkileyebilir.  Daha fazla bilgi için bkz. Windows belgelerindeki [Microsoft Defender ATP güvenlik temeliyle uyumluluğu artırma](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .

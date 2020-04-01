@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1afbd444f46d14bb272410da54d43c5a5f8207d0
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 8e44fa26c84537fdcf801192ce8cc22790f320b9
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327320"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438795"
 ---
 # <a name="android-device-administrator-enrollment"></a>Android cihaz yöneticisi kaydı
 
@@ -32,8 +32,6 @@ Android Cihaz Yöneticisi (bazen "eski" Android yönetimi ve Android 2,2 ile kul
 Bu nedenle, bu tür azaltılmış işlevselliği önlemek için aşağıda açıklanan Cihaz Yöneticisi işlemini kullanarak yeni cihazların kaydedilmesini öneririz.
 
 Aynı nedenlerden dolayı, cihazların Android 10 ' a güncelleyecekse Cihaz Yöneticisi yönetiminden da cihazları geçirmeniz önerilir. 
-
-Android cihaz yöneticisi desteği için Intune desteği hakkında daha fazla bilgi için [Bildirimler bölümüne](../fundamentals/whats-new.md#decreasing-support-for-android-device-administrator)bakın.
 
 Kullanıcıların, Android cihazlarını Cihaz Yöneticisi yönetimine kaydetmesine hala karar verirseniz, sonraki bölüme geçin.  
 
