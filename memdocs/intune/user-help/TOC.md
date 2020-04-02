@@ -12,6 +12,7 @@
 
 ## Android cihazınızı kullanma
 ### [Android cihazınızı neden kaydetmelisiniz?](why-enroll-android-device.md)
+### [Çin’de Şirket Portalı’nı yükleme](install-company-portal-android-china.md)
 ### Cihazınızı kaydedin
 #### [Android cihazınızı kaydetme](enroll-device-android-company-portal.md)  
 #### [Android iş profili ile kaydolma](enroll-device-android-work-profile.md)
