@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8583c625277735d653143f5cf87c56c350bdc1ff
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 82e02795dc9dbcbc0598218418404fe74fdf1226
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326715"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551612"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Yönetim nesnelerinin koleksiyonlarını gruplamak için ilke kümelerini kullanma
 
@@ -104,7 +104,7 @@ Bir ilke kümesi oluşturduğunuzda, tek bir atama birimi oluşturur ve farklı 
 
 - İlke kümelerini destekleyen MAM ilke türleri şunları içerir: 
   - MAM WıP (Windows) MDM hedeflenen yönetilen uygulama koruması 
-  - MAM iiOS/ıpadosos hedeflenen yönetilen uygulama koruması
+  - MAM iOS/ıpados hedeflenen yönetilen uygulama korumasını
   - MAM Android hedeflenen yönetilen uygulama koruması
   - MAM iOS/ıpados hedeflenen yönetilen uygulama yapılandırması
   - MAM Android hedeflenen yönetilen uygulama yapılandırması

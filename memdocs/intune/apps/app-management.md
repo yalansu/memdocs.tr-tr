@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 185cfbf49c9a6623559a2b50f0184980286e03eb
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 9e97322fa8a126203bf6e4d1e7a3703b92ded339
+ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80358705"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80536844"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Microsoft Intune uygulama yönetimi nedir?
 
@@ -119,6 +119,8 @@ Konsolun içindeki aşağıdaki öğeler uygulamayla ilgili işlevsellik sağlar
 - **Apple VPP belirteçleri**: IOS/ıpados toplu satın alma programı (VPP) lisanslarınızı uygulayın ve görüntüleyin. Daha fazla bilgi için bkz. [iOS/ıpados toplu satın alınan uygulamalar](vpp-apps-ios.md).
 - **Yönetilen Google Play**: yönetilen Google Play, Google 'ın kurumsal uygulama mağazası ve Android Enterprise uygulamalarının tek kaynağıdır. Daha fazla bilgi için bkz. [Intune Ile Android Enterprise cihazlarına yönetilen Google Play uygulamaları ekleme](apps-add-android-for-work.md).
 - **Özelleştirme**: Şirket portalı, şirketinizin markasını sağlamak için özelleştirin. Daha fazla bilgi için bkz. [Şirket portalı Configuration](company-portal-app.md).
+
+Uygulamalar hakkında daha fazla bilgi için bkz. [Microsoft Intune uygulama ekleme](../apps/apps-add.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

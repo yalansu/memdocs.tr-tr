@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5937cd09a5224933004233b8d4efe8a0e47155f3
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 8f9212d275b17db6a40e3133b5363cd13c9d13d6
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359371"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551408"
 ---
 # <a name="add-macos-kernel-extensions-in-intune"></a>Intune 'A macOS çekirdek uzantıları ekleme
 
@@ -68,6 +68,9 @@ Bu makalede, Intune 'da çekirdek uzantıları kullanılarak bir cihaz yapıland
 >
 > - [Dağıtıma başlamadan önce uygulamanızı yeniden dağıtma](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) (Apple 'ın Web sitesini açar) 
 > - [MacOS High Sierra içindeki çekirdek uzantılarında değişikliklere hazırlanma](https://support.apple.com/en-us/HT208019) (Apple 'ın Web sitesini açar)
+
+> [!NOTE]
+> Intune kullanıcı arabirimi (UI) tam ekran deneyimine sahiptir ve birkaç hafta sürebilir. Kiracınız bu güncelleştirmeyi alıncaya kadar, bu makalede açıklanan ayarları oluştururken veya düzenlerken biraz farklı bir iş akışına sahip olursunuz.
 
 ## <a name="create-the-profile"></a>Profili oluşturma
 

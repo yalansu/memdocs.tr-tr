@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4ed859078f7cc6be5a91b303de45f7247248203
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 7c6c8b9d964355b1c08756fc2026a87e30bc7297
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359185"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551522"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Intune 'da macOS cihaz özelliği ayarları
 
@@ -82,6 +82,9 @@ AirPrinter sunucuları eklemek için, yazıcının IP adresi, kaynak yolu ve ba�
   Herhangi bir uygulama, klasör veya dosya eklerken doğru yolu girdiğinizden emin olun. Tüm öğeler `Applications` klasöründedir. Kullanıcılar bir öğeyi bir konumdan diğerine taşıdıysanız yol değişir. Bu taşınan öğe, Kullanıcı oturum açtığında açılmaz.
 
 - **Kullanıcı yapılandırmasından Gizle**: **Gizle** , uygulamayı kullanıcılar & Gruplar oturum açma öğeleri listesinde göstermez. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kullanıcılar & Gruplar oturum açma öğeleri listesinde, Gizle seçeneği işaretli değilken, oturum açma sırasında başlattığınız öğeyi gösterir.
+
+  > [!NOTE]
+  > Bu ayar, sonraki birkaç hafta boyunca tüm müşterilere gönderilir.
 
 ## <a name="login-window"></a>Oturum açma penceresi
 

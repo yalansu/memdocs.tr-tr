@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67a26a42efb56c75d9538d9e7fcd2d726327d26d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322984"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551377"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Microsoft Intune’da uyumluluk ilkesi oluşturma
 
@@ -47,7 +47,7 @@ Cihaz uyumluluk ilkelerini kullanmak için aşağıdakilerden emin olun:
 
 - Desteklenen bir platform kullanın:
 
-  - Android Cihaz Yöneticisi
+  - Android cihaz yöneticisi
   - Android Kurumsal
   - iOS
   - Mac OS
@@ -58,6 +58,9 @@ Cihaz uyumluluk ilkelerini kullanmak için aşağıdakilerden emin olun:
 - Cihazları Intune'a kaydetme (uyumluluk durumunu görmek için gereklidir)
 
 - Cihazları bir kullanıcıya kaydedin veya birincil kullanıcı olmadan kaydedin. Cihazların birden çok kullanıcıya kaydedilmesi desteklenmez.
+
+> [!NOTE]
+> Intune kullanıcı arabirimi (UI) tam ekran deneyimine sahiptir ve birkaç hafta sürebilir. Kiracınız bu güncelleştirmeyi alıncaya kadar, bu makalede açıklanan ayarları oluştururken veya düzenlerken biraz farklı bir iş akışına sahip olursunuz.
 
 ## <a name="create-the-policy"></a>İlkeyi oluşturma
 
@@ -161,7 +164,7 @@ Bir cihazda birden fazla uyumluluk ilkesi varsa ve cihazın bu atanmış uyumlul
 
 |Durum  |Önem Derecesi  |
 |---------|---------|
-|Bilinmiyor     |1|
+|Bilinmiyor     |1\.|
 |NotApplicable     |2|
 |Uyumlu|3|
 |YetkisizKullanımSüresinde|4|

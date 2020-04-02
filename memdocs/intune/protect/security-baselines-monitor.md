@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f7118fbbf05c7793d93faf2aa4c9a4bb1af821c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 53187f7795eee07a62a83c1fb17a289451b32ee2
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322625"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551664"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Microsoft Intune 'de güvenlik taban çizgisini ve profillerini izleme
 
@@ -153,4 +153,8 @@ Windows 10 cihazlarında, yerleşik bir MDM tanılama bilgileri raporu vardır. 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Cihaz profillerini izleyin](../configuration/device-profile-monitor.md) ve [bazı yaygın sorunlar ve çözümleri görüntüleyin](../configuration/device-profile-troubleshoot.md).
+- [Güvenlik temelleri hakkında bilgi edinin](security-baselines.md)
+- [Çakışmaları önleyin](security-baselines.md#avoid-conflicts)
+- [Cihaz profillerini izleme](../configuration/device-profile-monitor.md) 
+- [Yaygın sorunlar ve çözümleri](../configuration/device-profile-troubleshoot.md).
+- [Intune 'da ilke ve profillerin sorunlarını giderme](../configuration/troubleshoot-policies-in-microsoft-intune.md)

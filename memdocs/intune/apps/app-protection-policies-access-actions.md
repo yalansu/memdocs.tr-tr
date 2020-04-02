@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b877587e8eb50019086e2296d7cc5b7e900da62a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: f77fb3b93c2600bf422aa95af267abc3e64ae7ee
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323795"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551342"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Intune 'da uygulama koruma ilkesi koşullu başlatma eylemlerini kullanarak verileri seçmeli olarak silme
 
@@ -59,7 +59,7 @@ Uygulama koruma ilkesi ayarları tablosunda **Ayar**, **Değer**, ve **Eylem** s
 - Cihaz modeli/modelleri
 - İzin verilen en fazla cihaz tehdit düzeyi
 
-**Cihaz model** ayarlarını kullanmak Için, IOS/ıpados model tanımlayıcılarının noktalı virgülle ayrılmış bir listesini girin. Bu değerler büyük/küçük harfe duyarlı değildir. ' Cihaz modeli (ler) ' girişi için Intune raporlama kapsamında, [HockeyApp 'in destek belgelerindeki](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) veya bu [üçüncü taraf GitHub deposundaki](https://gist.github.com/adamawolf/3048717)cihaz türü sütununda bir iOS/ıpados model tanımlayıcısı bulabilirsiniz.<br>
+**Cihaz model** ayarlarını kullanmak Için, IOS/ıpados model tanımlayıcılarının noktalı virgülle ayrılmış bir listesini girin. Bu değerler büyük/küçük harfe duyarlı değildir. ' Cihaz modeli (ler) ' girişi için Intune raporlama kapsamında, bu [üçüncü taraf GitHub deposunda](https://gist.github.com/adamawolf/3048717)bir IOS/ıpados model tanımlayıcısı bulabilirsiniz.<br>
 Örnek giriş: *iPhone5,2;iPhone5,3*
 
 Son kullanıcı cihazlarında Intune istemcisi, Intune’un Uygulama Koruma İlkeleri'nde belirtilen cihaz modeli dizelerinin basit eşleştirmesine dayalı olarak eylem gerçekleştirir. Eşleştirme tamamen cihazın bildirdiklerine bağlıdır. BT yöneticisi olarak, çeşitli cihaz üreticileri ve modelleri temelinde ve küçük bir kullanıcı grubunu hedefleyerek bu ayarı test etmenizi ve beklenen davranışın gerçekleştiğinden emin olmanızı öneririz. Varsayılan değer **Yapılandırılmadı**'dır.<br>

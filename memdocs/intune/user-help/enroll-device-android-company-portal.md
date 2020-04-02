@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 04/01/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0f6efa6d026879a3231c21662e799bf8ba7ada09
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0c9bf96188e27afeaf66e7b2897f8cda19f9df37
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324914"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551647"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Cihazınızı Şirket Portalı kaydetme  
 Şirket e-postasına, uygulamalarına ve verilerine güvenli erişim sağlamak için kişisel veya şirkete ait Android cihazınızı kaydedin. Şirket Portalı, Android 4,4 ve üstünü çalıştıran Samsung KNOX dahil Android cihazlarını destekler.  
@@ -35,7 +35,7 @@ ms.locfileid: "79324914"
 > Samsung KNOX, belirli Samsung cihazlarının, yerel Android 'in sağladığı her yerde ek koruma için kullandığı bir güvenlik türüdür. Samsung KNOX cihazınız olup olmadığını denetlemek için > **ayarlar** > **cihaz hakkında**bölümüne gidin. Burada listelenen **Knox sürümünü** görmüyorsanız, yerel bir Android cihazınız vardır.
 
 ## <a name="enroll-device"></a>Cihazı kaydetme  
-[Ücretsiz Intune şirket portalı uygulamasını Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)yüklediğinizden emin olun. 
+Intune Şirket Portalı uygulamayı [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)yüklediğinizden emin olun. Uygulamayı ana kara Çin 'de sunan mağazaların bir listesi için bkz. [ana kara Çin 'de Şirket portalı uygulama yüklemesi](install-company-portal-android-china.md) .    
 
 Kayıt sırasında cihazınızı nasıl kullanacağınızı en iyi açıklayan bir kategori seçmeniz istenebilir. Şirketinizin destek, erişiminiz olan uygulamaları denetlemek için yanıtınızı kullanır.  
 

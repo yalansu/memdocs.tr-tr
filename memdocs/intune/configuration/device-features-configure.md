@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30bf5ba078029e35988d3531ee510d9db6c6cdb8
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: cb8d5b53e136ea22d1edbad7755e198fd4155285
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359479"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551398"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Intune 'da iOS, ıpados veya macOS cihaz özelliği ayarları ekleme
 
@@ -37,6 +37,9 @@ Intune, yöneticilerin iOS, ıpados ve macOS cihazlarını denetlemesine yardım
 Intune, kuruluşunuzun ihtiyaçlarına göre bu ayarları oluşturmak ve özelleştirmek için "yapılandırma profillerini" kullanır. Bu özellikleri bir profile ekledikten sonra, profili kuruluşunuzdaki iOS/ıpados ve macOS cihazlarına gönderirsiniz veya dağıtabilirsiniz.
 
 Bu makalede yapılandırabileceğiniz farklı özellikler açıklanmakta ve bir cihaz yapılandırma profili nasıl oluşturacağınız gösterilmektedir. [İOS/ıpados](ios-device-features-settings.md) ve [MacOS](macos-device-features-settings.md) cihazları için kullanılabilir tüm ayarları da görebilirsiniz.
+
+> [!NOTE]
+> Intune kullanıcı arabirimi (UI) tam ekran deneyimine sahiptir ve birkaç hafta sürebilir. Kiracınız bu güncelleştirmeyi alıncaya kadar, bu makalede açıklanan ayarları oluştururken veya düzenlerken biraz farklı bir iş akışına sahip olursunuz.
 
 ## <a name="airprint"></a>AirPrint
 

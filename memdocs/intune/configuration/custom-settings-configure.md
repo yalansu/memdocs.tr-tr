@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c96de75557a4817f4e5f034689faecf7374cfe3f
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: feb211b1de15aa0400e9ff71b428e2db02ef4b03
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359438"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551359"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Intune'da özel ayarlarla profil oluşturma
 
@@ -31,6 +31,9 @@ Microsoft Intune, bir cihazdaki farklı özellikleri denetlemek için pek çok y
 Yapılandırma profilleri hakkında daha fazla bilgi için bkz. [Microsoft Intune cihaz profili nedir?](device-profiles.md).
 
 Bu makalede, Android Cihaz Yöneticisi, Android Enterprise, iOS/ıpados, macOS ve Windows için nasıl özel bir profil oluşturacağınız gösterilmektedir. Farklı platformlar için kullanılabilir tüm ayarları da görebilirsiniz.
+
+> [!NOTE]
+> Intune kullanıcı arabirimi (UI) tam ekran deneyimine sahiptir ve birkaç hafta sürebilir. Kiracınız bu güncelleştirmeyi alıncaya kadar, bu makalede açıklanan ayarları oluştururken veya düzenlerken biraz farklı bir iş akışına sahip olursunuz.
 
 ## <a name="create-the-profile"></a>Profili oluşturma
 

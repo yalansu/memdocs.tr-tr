@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 618ed802d33f2c50a567f1e18da4689855bbf016
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488043"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551687"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Intune 'da Windows 10 cihazlarını yapılandırmak için güvenlik temellerini kullanma
 
@@ -62,11 +62,20 @@ Bir güvenlik temeli *profili*oluşturduğunuzda, profil otomatik olarak en son 
 
 Belirli bir profille kullanılan bir taban çizgisinin [sürümünün değiştirilmesini](#change-the-baseline-version-for-a-profile) seçebilirsiniz. Bu, yeni bir sürüm geldiğinde, bundan faydalanmak için yeni bir temel profil oluşturmanız gerekmediği anlamına gelir. Bunun yerine, hazır olduğunuzda bir temel profil seçebilir ve sonra bu profilin örnek sürümünü yeni bir profil olarak değiştirmek için yerleşik seçeneğini kullanabilirsiniz.
 
+## <a name="avoid-conflicts"></a>Çakışmaları önleyin
+
+Intune ortamınızda kullanılabilen bir veya daha fazla temeli aynı anda kullanabilirsiniz. Farklı Özelleştirmelerdeki aynı güvenlik temellerinin birden çok örneğini de kullanabilirsiniz.
+
+Birden çok güvenlik temeli kullandığınızda, farklı temel yapılandırmalarınızın aynı ayar için çakışan değerleri ne zaman tanıttığını belirlemek için her birindeki ayarları gözden geçirin. Farklı amaçlar için tasarlanan güvenlik temellerini dağıtabileceğiniz ve özelleştirilmiş ayarları içeren aynı taban çizgisinin birden çok örneğini dağıttığınız için, araştırılması ve çözümlenmesi gereken cihazlar için yapılandırma çakışmaları oluşturabilirsiniz.
+
+Ayrıca, güvenlik temelleri genellikle [cihaz yapılandırma profilleri](../configuration/device-profiles.md) veya diğer ilke türleri ile ayarlayabileceğiniz ayarların aynısını yönetir. Bu nedenle, ' ın farkında olun ve çakışmaları önlemek veya çözmek için arama yaparken ek ilkelerinize ve profillerinize göz önünde bulundurun.
+
+Çakışmaları belirlemenize ve çözmeye yardımcı olması için aşağıdaki bağlantılardaki bilgileri kullanın:
+
+- [Intune 'da ilke ve profillerin sorunlarını giderme](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Güvenlik temellerinizi izleyin](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
+
 ## <a name="available-security-baselines"></a>Kullanılabilir güvenlik temelleri
-
- Intune ortamınızda kullanılabilen bir veya daha fazla temeli aynı anda kullanabilirsiniz. Farklı Özelleştirmelerdeki aynı güvenlik temellerinin birden çok örneğini de kullanabilirsiniz.
-
-Birden çok güvenlik temeli kullandığınızda, farklı temellerin aynı ayar için çakışan değerleri ne zaman tanıttığını belirlemek için her birindeki ayarları gözden geçirin. Farklı amaçlar için tasarlanan güvenlik temellerini dağıtabileceğiniz ve özelleştirilmiş ayarları içeren aynı taban çizgisinin birden çok örneğini dağıttığınız [için, araştırılması ve çözümlenmesi gereken cihazlar için yapılandırma çakışmaları](security-baselines-monitor.md#troubleshoot-using-per-setting-status)oluşturabilirsiniz.  Ayrıca, aynı ayarların birçoğunu güvenlik temellerine göre yapılandırabilen [cihaz yapılandırma profillerinizin](../configuration/device-profiles.md)farkında olun.
 
 Aşağıdaki güvenlik temeli örnekleri Intune ile kullanılabilir. Her bir taban çizgisinin en son örneğine ilişkin ayarları görüntülemek için bağlantıları kullanın.
 
