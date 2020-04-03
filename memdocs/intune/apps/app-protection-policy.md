@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c57a201d71d3a8278499636c6ca794b437e11e9a
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 672c978a7e590e8e26f676733bd2903d3684e978
+ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083798"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80611732"
 ---
 # <a name="app-protection-policies-overview"></a>Uygulama koruma ilkelerine genel bakış
 
@@ -135,7 +135,7 @@ Bununla birlikte, dikkat edilecek bazı sınırlamalar vardır, örneğin:
 
 Intune [SDK](../developer/app-sdk.md) ile tümleştirilmiş veya [Intune uygulama sarmalama aracı](../developer/apps-prepare-mobile-application-management.md) tarafından Sarmalanan tüm uygulamalar, Intune uygulama koruma ilkeleri kullanılarak yönetilebilir. Bu araçlar kullanılarak oluşturulan ve genel kullanıma açık olan [Microsoft Intune korunan uygulamaların](apps-supported-intune-apps.md) resmi listesine bakın.
 
-Intune SDK geliştirme ekibi, yerel Android, iOS/ıpados (obj-C, Swift), Xamarin, Xamarin. Forms ve Cordova platformları ile oluşturulmuş uygulamalar için desteği etkin bir şekilde sınar ve korur. Bazı müşteriler, bir Kullanıcı ve NativeScript gibi diğer platformlarla Intune SDK tümleştirmesi ile başarılı olmuş olsa da, desteklenen platformlarımızdan başka herhangi bir şeyi kullanarak uygulama geliştiricileri için açık rehberlik veya eklentiler sağlamayız.
+Intune SDK geliştirme ekibi, yerel Android, iOS/ıpados (obj-C, Swift), Xamarin ve Xamarin. Forms platformları ile oluşturulmuş uygulamalar için desteği etkin bir şekilde sınar ve bakımını sağlar. Bazı müşteriler, bir Kullanıcı ve NativeScript gibi diğer platformlarla Intune SDK tümleştirmesi ile başarılı olmuş olsa da, desteklenen platformlarımızdan başka herhangi bir şeyi kullanarak uygulama geliştiricileri için açık rehberlik veya eklentiler sağlamayız.
 
 [INTUNE SDK](../developer/app-sdk.md) 'sı, hem 1. taraf hem de SDK 'nın 3. taraf sürümleri Için[Azure Active Directory kimlik doğrulama kitaplıklarından](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) gelişmiş modern kimlik doğrulama özellikleri kullanır. Bu nedenle, [Microsoft kimlik doğrulama kitaplığı](https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries) (msal), Intune uygulama koruması hizmetinde kimlik doğrulaması ve koşullu başlatma gibi temel senaryolarımızda iyi çalışmaz. Microsoft 'un kimlik ekibinin tüm Microsoft Office uygulamalar için MSAL 'e geçiş yapması, [Intune SDK 'sının](../developer/app-sdk.md) bu uygulamayı desteklemesi gerekir, ancak bugün bir plan yoktur.
 

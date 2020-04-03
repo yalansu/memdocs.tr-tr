@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/27/2020
+ms.date: 04/02/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 431d2753b04269e9aacd7ef951ef3f45a076df60
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: bdf779e35125d8da7093e67702e064cff362d6ed
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407912"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620548"
 ---
 # <a name="intune-app-installation-error-reference"></a>Intune uygulama yükleme hatası başvurusu
 
@@ -59,6 +59,7 @@ Aşağıdaki hata iletileri ve açıklamaları, iOS/ıpados yükleme hatalarıyl
 |--------------------|------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0x87D12906 | -2016335610 | Apple MDM Aracısı hatası: uygulama yükleme komutu bir hata nedeniyle başarısız oldu. Uygulamayı yüklemeyi yeniden deneyin. | Apple MDM Aracısı yükleme komutunun başarısız olduğu bilgisini döndürdü. |
 | 0x87D1313C | -2016333508 | İstemcideki ağ bağlantısı kaybedildi veya kesintiye uğradı. Daha sonra denemeler daha iyi bir ağ ortamında başarılı olmalıdır. | Güncelleştirilmiş indirme hizmeti URL'si cihaza gönderilirken ağ bağlantısı koptu. Özel olarak, belirtilen konak adına sahip sunucu bulunamadı. |
+| 0X87d1313b | -2016333507 | İTunes Store KIMLIĞIYLE uygulama için Lisans alınamadı | İlişkili VPP belirtecini eşitleyin ve ardından cihazı Intune ile eşitleyin. Sorun devam ederse, Grup atamasını kaldırın ve VPP uygulamasını cihaz lisanslı olarak yeniden atayın. Sorun devam ederse, **uygulamalar** > iOS ' a giderek uygulama lisansını iptal edin > **IOS** uygulama > **uygulama lisansları** ' nı *seçin* > *cihaz seçin*. Ardından, lisansı iptal edin ve uygulamayı kullanıcı grubuna veya cihaz grubuna yeniden atamayı deneyin. Sorun devam ederse, **cihazlar** > **iOS** 'a gıderek cihaz için tüm VPP lisanslarını iptal edin > *cihaz* > **genel bakış** > **Lisansları Iptal**edin, sonra cihazı devre dışı bırakın ve Intune 'a yeniden kaydedin.
 | 0x87D11388 | -2016341112 | iOS/ıpados cihazı şu anda meşgul.  | İOS/ıpados cihazı meşguldü ve bu, bir hatayla sonuçlandı. Cihaz kilitlendi. Uygulamayı yüklemek için kullanıcının cihazın kilidini açması gerekir. |
 | 0x87D13B64 | -2016330908 | Uygulama yüklemesi başarısız oldu.  | Uygulama yükleme hatası oluştu. Bu hatayı gidermek için iOS/ıpados konsol günlükleri gereklidir. |
 | 0x87D13B66 | -2016330906 | Uygulama yönetiliyor, ancak süresi doldu veya Kullanıcı tarafından kaldırıldı.  | Kullanıcı uygulamayı açıkça kaldırdı ya da uygulamanın geçerliliği, ancak indirilemedi ya da uygulama algılaması cihazdaki Yanıtla eşleşmiyor.   Ayrıca, bu hata bir iOS/ıpados 9.2.2 platform hatasına bağlı olarak gerçekleşebilir. |

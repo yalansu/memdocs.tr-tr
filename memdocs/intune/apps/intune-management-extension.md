@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d424163df07dbe6add74bbdab9ec36a7b220b655
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 3cb71634194cee7b542ebe3c661c5a62d3d80ead
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324237"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620592"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Intune 'da Windows 10 cihazlarında PowerShell betikleri kullanma
 
@@ -31,6 +31,9 @@ Windows 10 cihazlarında çalıştırmak için Intune 'da PowerShell betiklerini
 Bu özellik şu platformlarda geçerlidir:
 
 - Windows 10 ve üzeri
+
+> [!NOTE]
+> Intune yönetim uzantısı önkoşulları karşılandığında, bir PowerShell betiği veya bir Win32 uygulaması kullanıcı veya cihaza atandığında Intune yönetim uzantısı otomatik olarak yüklenir. Daha fazla bilgi için bkz. Intune yönetim uzantıları [önkoşulları](../apps/intune-management-extension.md#prerequisites).
 
 ## <a name="move-to-modern-management"></a>Modern yönetime taşı
 
