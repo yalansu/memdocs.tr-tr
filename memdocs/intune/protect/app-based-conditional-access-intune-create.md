@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73b471d7eefa8e696b17a949756ce1395530c5f7
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: fadd5817ccd4e591fe92c11cb30041296ac85d61
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323187"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696471"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Intune ile uygulama tabanlı koşullu erişim ilkeleri ayarlama
 
@@ -32,7 +32,7 @@ Onaylanan uygulamalar listesinin parçası olan uygulamalar için uygulama taban
 Uygulama tabanlı koşullu erişim ilkelerini kullanabilmeniz için uygulamalarınıza [Intune uygulama koruma ilkelerinin](../apps/app-protection-policies.md) uygulanması gerekir.
 
 > [!IMPORTANT]
-> Bu makale, uygulama tabanlı bir koşullu erişim ilkesi ekleme adımlarında size yol gösterir. Onaylı uygulamalar listesinden SharePoint Online, Microsoft Teams ve Microsoft Exchange Online gibi uygulamaları eklerken de aynı adımları kullanabilirsiniz.
+> Bu makalede, basit uygulama tabanlı bir koşullu erişim ilkesi ekleme adımlarında izlenecek yol gösterilmektedir. Diğer bulut uygulamaları için de aynı adımları kullanabilirsiniz. Daha fazla bilgi için bkz. [koşullu erişim dağıtımını planlayın](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access)
 
 ## <a name="create-app-based-conditional-access-policies"></a>Uygulama tabanlı koşullu erişim ilkeleri oluşturma
 
@@ -48,7 +48,7 @@ Microsoft Endpoint Manager yönetim merkezinden koşullu erişim ilkeleri oluşt
 
 3. Bir ilke **adı**girin ve ardından *atamalar*' ın altında **Kullanıcılar ve gruplar**' ı seçin. İlke için grupları eklemek üzere Dahil Et veya Hariç Tut seçeneklerini kullanın ve **Bitti**’yi seçin.
 
-4. **Bulut uygulamaları veya eylemler**' i seçin ve korunacak uygulamaları seçin. Örneğin **Uygulama seçin**’e tıklayın, **Office 365 SharePoint Online** ve **Office 365 Exchange Online**’ı seçin.
+4. **Bulut uygulamaları veya eylemler**' i seçin ve korunacak uygulamaları seçin. Örneğin, **Uygulama Seç**' i seçin ve **Office 365 (Önizleme)** öğesini seçin.
 
    Değişikliklerinizi kaydetmek için **Bitti**’yi seçin.
 
@@ -56,7 +56,7 @@ Microsoft Endpoint Manager yönetim merkezinden koşullu erişim ilkeleri oluşt
 
    Değişikliklerinizi kaydetmek için **Bitti**’yi seçin.
 
-6. *Erişim denetimleri*altında, cihaz uyumluluğuna göre koşullu erişim uygulamak Için **izin ver** ' i seçin. Örneğin **Erişim ver** > **Cihazın uyumlu olarak işaretlenmesini gerektir**’i seçin.
+6. *Erişim denetimleri*altında, cihaz uyumluluğuna göre koşullu erişim uygulamak Için **izin ver** ' i seçin. Örneğin, **erişim ver** > **onaylı istemci uygulaması gerektir** ve **Uygulama koruma ilkesi (Önizleme) gerektir** ' i seçin ve **Seçilen denetimlerden birini gerektir** ' i seçin.
 
    Değişikliklerinizi kaydetmek için **Seçin**’e tıklayın.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19660a8b2dc6b804a1ee1a1eaf407261ca9af2b1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1bbca477b389b568d2aca1ab0f9394ec09fe2b24
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327246"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696563"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Apple School Manager ile iOS/iPadOS cihaz kaydını ayarlama
 
@@ -38,7 +38,6 @@ Apple School Manager kaydı [Apple Aygıt Kayıt Programı](device-enrollment-pr
 **Önkoşullar**
 - [Apple Mobil Cihaz Yönetimi (MDM) anında iletme sertifikası](apple-mdm-push-certificate-get.md)
 - [MDM Yetkilisi](../fundamentals/mdm-authority-set.md)
-- [Apple MDM Anında İletme sertifikası](apple-mdm-push-certificate-get.md)
 - ADFS kullanılıyorsa kullanıcı benzeşimi, [WS-Trust 1.3 Kullanıcı adı/Karma uç noktası](https://technet.microsoft.com/library/adfs2-help-endpoints) gerektirir. [Daha fazla bilgi edinin](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 - [Apple School Management](http://school.apple.com) programından satın alınan cihazlar
 
@@ -120,7 +119,7 @@ Belirtecinizi yüklediğinize göre, Apple School cihazları için kayıt profil
 
 8. Birden çok kullanıcının yönetilen Apple kimliği kullanarak kayıtlı iPad’lerde oturum açmasına izin verebilirsiniz. Bunu yapmak için, **paylaşılan iPad** altında **Evet** ' i seçin (Bu seçenek, **Kullanıcı benzeşimi olmadan kaydolma** ve **denetimli** mod **Evet**olarak ayarlanmış olması gerekir.) Yönetilen Apple kimlikleri, Apple Okul Yöneticisi portalında oluşturulur. [Paylaşılan iPad](../fundamentals/education-settings-configure-ios-shared.md) ve [Apple'ın paylaşılan iPad gereksinimleri](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56) hakkında daha fazla bilgi edinin.
 
-9. Bu profili kullanan cihazların **Bilgisayarlarla eşitleme** imkanının olup olmayacağını seçin. **Sertifikaya göre Apple Configurator’a izin ver**’i seçerseniz, **Apple Configurator Sertifikaları**’nın altında bir sertifika seçmeniz gerekir.
+9. Bu profili kullanan cihazların **Bilgisayarlarla eşitleme** imkanının olup olmayacağını seçin. **Tümünü Reddet** , bu profili kullanan tüm cihazların herhangi bir bilgisayardaki verilerle eşitlenemeyeceği anlamına gelir. **Sertifikaya göre Apple Configurator’a izin ver**’i seçerseniz, **Apple Configurator Sertifikaları**’nın altında bir sertifika seçmeniz gerekir.
 
 10. Önceki adımda **Sertifikaya göre Apple Configurator’a izin ver**’i seçtiyseniz içeri aktaracak bir Apple Configurator Sertifikası seçin.
 

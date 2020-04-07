@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b25d5439aa9d0842cbbee24b5e8759d00f371d4b
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 58e651849632fd06f962edfc90649ad14eeaeda0
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407714"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696533"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Microsoft Intune ile Microsoft Edge kullanarak Web erişimini yönetme
 
@@ -367,14 +367,14 @@ Kuruluşunuz yüksek düzeyde düzenlenmiş bir sektörde çalışır veya kulla
 
 |    Anahtar    |    Değer    |
 |-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **InPrivate** , InPrivate taramayı devre dışı bırakır.   |
+|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **InPrivate** , InPrivate taramayı devre dışı bırakır.   |
 
 ### <a name="restrict-microsoft-edge-use-to-allowed-accounts-only"></a>Microsoft Edge kullanımını izin verilen-yalnızca hesaplar olarak kısıtla
 
 InPrivate ve MSA taramayı engellemeye ek olarak, yalnızca Kullanıcı AAD hesabıyla oturum açtığında Microsoft Edge kullanımına izin verebilirsiniz. Bu özellik yalnızca MDM 'ye kayıtlı kullanıcılar için kullanılabilir. Bu ayarı yapılandırma hakkında daha fazla bilgi edinebilirsiniz:
 
 >[!NOTE]
-> `com.microsoft.intune.mam.managedbrowser.disableFeatures`, aynı anda birden çok özelliği devre dışı bırakmak için kullanılabilir. Örneğin, hem InPrivate hem de parolayı devre dışı bırakmak için `inprivate| password`kullanın.
+> `com.microsoft.intune.mam.managedbrowser.disabledFeatures`, aynı anda birden çok özelliği devre dışı bırakmak için kullanılabilir. Örneğin, hem InPrivate hem de parolayı devre dışı bırakmak için `inprivate|password`kullanın.
 
 ## <a name="configure-microsoft-edge-as-a-kiosk-app-on-android-devices"></a>Android cihazlarda Microsoft Edge 'i bilgi noktası uygulaması olarak yapılandırma
 

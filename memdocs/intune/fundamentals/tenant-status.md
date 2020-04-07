@@ -6,26 +6,27 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.assetid: 7954a686-25dc-4fce-b395-324816f46d3b
+ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99a34167f8616c6bbf2e441628de0d73aba080c3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330498"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696438"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Intune kiracı durumu sayfasını kullanın
 Microsoft Intune kiracı durumu sayfası, kiracınız hakkındaki güncel ve önemli ayrıntıları görüntüleyebileceğiniz merkezi bir merkezdir. Ayrıntılar lisans kullanılabilirliği ve kullanımı, bağlayıcı durumu ve Intune hizmeti hakkındaki önemli iletişimleri içerir.  
 
-Panoyu görüntülemek için [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 'da oturum açın ve ardından **kiracı durumu**' nu seçin.  *Kiracı durumu* **Yardım ve destek**altında görünür.  
+Panoyu görüntülemek için [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) oturum açın **Kiracı Yönetimi**' ne gidin ve ardından **kiracı durumu**' nu seçin.
 
 Sayfa üç sekmeye bölünür:
 

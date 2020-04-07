@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd6956a9bdb19f25e39dd8cfb8e7e685d60f7b8c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 635804a9ad5cd76d104f16bcd204df1daa28b114
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083548"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696497"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Uygulama koruma ilkelerini kullanan veri koruma çerçevesi 
 
@@ -37,7 +37,7 @@ UYGULAMA veri koruma yapılandırma çerçevesi üç ayrı yapılandırma senary
 
 - 2\. düzey kurumsal gelişmiş veri koruma – Microsoft, kullanıcıların hassas veya gizli bilgilere erişebileceği cihazlar için bu yapılandırmayı önerir. Bu yapılandırma, iş veya okul verilerine erişen mobil kullanıcıların çoğu için geçerlidir. Bazı denetimler Kullanıcı deneyimini etkileyebilir.
 
-- Düzey 3 Kurumsal yüksek veri koruma – Microsoft bu yapılandırmayı daha büyük veya daha fazla gelişmiş güvenlik ekibine sahip bir kuruluş tarafından çalıştırılan veya benzersiz derecede yüksek riskli olan belirli kullanıcılar veya gruplar (tek bir örnek, bir kuruluş gibi) için önerir. hırsızlık, kendi stok fiyatlarını doğrudan ve ciddi bir şekilde etkileyen verileri işleyen kullanıcıları tanımladı. Bir kuruluş, iyi ifade edilen ve Gelişmiş reklam işlemleri tarafından hedeflenmek için bu yapılandırmaya amaçlayın olmalıdır.
+- Düzey 3 Kurumsal yüksek veri koruma – Microsoft bu yapılandırmayı daha büyük veya daha fazla gelişmiş güvenlik ekibine sahip bir kuruluş tarafından çalıştırılan veya benzersiz derecede yüksek riskli olan belirli kullanıcılar veya gruplar için önerir (bir örnek olarak, bir kuruluş, hırsızlığı doğrudan ve stok fiyatını önemli ölçüde etkileyecek verileri işleyen kullanıcıları tanımladı). Bir kuruluş, iyi ifade edilen ve Gelişmiş reklam işlemleri tarafından hedeflenmek için bu yapılandırmaya amaçlayın olmalıdır.
 
 ## <a name="app-data-protection-framework-deployment-methodology"></a>UYGULAMA veri koruma çerçevesi dağıtım yöntemi
 
@@ -62,6 +62,9 @@ Her bir uygulama için ayrı uygulama ayarları, uç ve ilgili URL 'YI kullanara
 Geçerli uygulamalar için aşağıdaki uygulama koruma Ilkesi ayarlarının etkinleştirilmesi ve tüm mobil kullanıcılara atanması gerekir. Her ilke ayarı hakkında daha fazla bilgi için bkz. [iOS uygulama koruma ilkesi ayarları](app-protection-policy-settings-ios.md) ve [Android uygulama koruma ilkesi ayarları](app-protection-policy-settings-android.md).
 
 Microsoft, kullanım senaryolarını gözden geçirmeyi ve kategorilere ayırmak ve daha sonra bu düzeyin yönetim kılavuzunu kullanarak kullanıcıları yapılandırmak için önerilir. Her çerçevede olduğu gibi, veri koruma, tehdit ortamını değerlendirmeli, risk uygulama ve kullanışlılık etkisi olması gerektiği için ilgili düzeyin içindeki ayarların kuruluşun ihtiyaçlarına göre ayarlanması gerekebilir.  
+
+### <a name="conditional-access-policies"></a>Koşullu erişim Ilkeleri
+Yalnızca uygulama koruma ilkelerini destekleyen uygulamaların iş veya okul hesabı verilerine erişmesini sağlamak için Azure Active Directory Koşullu erişim ilkeleri gerekir. Bkz **. Senaryo 1: Office 365 uygulamaları** , belirli ilkeleri uygulama adımları Için [koşullu erişimle Cloud App erişimi için uygulama koruma ilkesi gerektirir](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access) .
 
 ### <a name="apps-to-include-in-the-app-protection-policies"></a>Uygulama koruma Ilkelerine dahil edilecek uygulamalar  
 

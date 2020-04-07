@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35c125327755a184758b9f9356b9aa4d87a4b886
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 5b40ed9dff0d83639015e70889bf7008e8e68173
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551727"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696515"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Intune için Windows MDM güvenlik taban çizgisi ayarları
 
@@ -1583,6 +1583,9 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Defender](https://docs.m
 ::: zone pivot="mdm-may-2019"
 
 - **Bir alt Işlemde Adobe Reader 'ı Başlat**:  
+Bu kural, Adobe Reader 'ın ek işlem oluşturmasını engelleyerek saldırıları engeller. Kötü amaçlı yazılım, sosyal mühendisler veya güvenlik açıkları aracılığıyla ek yükleri indirebilir ve başlatabilir ve Adobe Reader 'dan daha fazla kesebilir. Alt işlemlerin Adobe Reader tarafından oluşturulmasını engelleyerek, bunu bir vektör olarak kullanmaya çalışan kötü amaçlı yazılımların yayılması engellenir.
+[Daha fazlasını öğrenin](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+
   **Varsayılan**: etkinleştir
 
 ::: zone-end

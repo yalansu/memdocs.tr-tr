@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5f32ffb864f40d8cb5402f7d4488b3870686d1a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ed5ff548d28a5bc973c43c84861b9b256b41a203
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322512"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696282"
 ---
 # <a name="see-device-details-in-intune"></a>Intune'da cihaz ayrıntılarına bakın
 
@@ -41,20 +41,26 @@ Bu makalede, tüm cihazlarınızı ve özelliklerini Azure portalında nasıl g�
       - [Silme](devices-wipe.md#wipe)
       - [Sil](devices-wipe.md#delete-devices-from-the-intune-portal)
       - [Uzaktan kilitleme](device-remote-lock.md)
-      - [Tablosunun](device-sync.md)
+      - [Eşitle](device-sync.md)
       - [Geçiş Kodunu Sıfırla](device-passcode-reset.md)
       - [Yeniden başlatma](device-restart.md) (yalnızca Windows)
       - [Yeni Başlangıç](device-fresh-start.md) (yalnızca Windows)
       - [Autopilot sıfırlaması](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (yalnızca Windows)
       - [Hızlı tarama](../configuration/device-restrictions-windows-10.md) (yalnızca Windows 10)
       - [Tam tarama](../configuration/device-restrictions-windows-10.md) (yalnızca Windows 10)
-       - [Cihazı yeniden adlandırma](device-rename.md)
-      - Uzaktan yardım oturumu başlatma
+      - Windows Defender güvenlik zekası 'nı güncelleştirme
+      - [BitLocker anahtar döndürme](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
+      - [Cihazı yeniden adlandırma](device-rename.md)
+      - [Yeni Uzaktan Yardım oturumu](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
    - **Özellikler**’i kullanarak [oluşturduğunuz bir cihaz kategorisini](../enrollment/device-group-mapping.md) atayabilir ve cihazın sahipliğini kişisel veya şirket olarak değiştirebilirsiniz.
    - **Donanım** cihaz kimliği, işletim sistemi ve sürümü, depolama alanı ve daha fazla ayrıntı gibi cihazla ilgili birçok ayrıntıyı içerir.
    - **Bulunan uygulamalar**, Intune’un cihazda yüklü olduğunu bulduğu tüm uygulamaları ve uygulama sürümlerini listeler. Daha fazla bilgi için bkz. [Intune bulunan uygulamalar](../apps/app-discovered-apps.md).
    - **Cihaz uyumluluğu**, atanmış tüm uyumluluk ilkelerini ve cihazın uyumlu olup olmadığını listeler.
    - **Cihaz yapılandırması**, cihaza atanmış tüm yapılandırma ilkelerini ve ilkenin başarılı olup olmadığını gösterir.
+   - **Uygulama yapılandırması** 
+   - **Uç nokta güvenlik yapılandırması**
+   - **Kurtarma anahtarları** , cihaz için bulunan kullanılabilir BitLocker anahtarlarını gösterir
+   - **Yönetilen uygulamalar** , Intune 'un yapılandırdığı ve cihaza dağıttığındaki tüm yönetilen uygulamaları listeler. 
 
 ## <a name="hardware-device-details"></a>Donanım cihazı durumu
 Cihazlar tarafından kullanılan taşıyıcıya bağlı olarak, tüm ayrıntılar toplanmayabilir

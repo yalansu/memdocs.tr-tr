@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 756d835a54a9b020be50a83d95d1925334fda8f1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 32e5d053b6dd579aad25a268604248d4fb5a6072
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326641"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696435"
 ---
 # <a name="device-management-overview"></a>Cihaz yönetimine genel bakış
 
@@ -76,7 +76,7 @@ Cihaz yönetim çözümlerinin başlıca görevlerinden biri güvenlik ve koruma
 
 Cihaz yönetimine birkaç şekilde yaklaşılabilir. İlk olarak, Intune 'da yerleşik özellikleri kullanarak cihazların farklı yönlerini yönetebilirsiniz. Bu yaklaşım, **mobil cihaz yönetimi (MDM)** olarak adlandırılır. Kullanıcılar cihazlarını "kaydeder" ve Intune ile iletişim kurmak için sertifikaları kullanır. BT Yöneticisi olarak, uygulamaları cihazlara gönderir, cihazları belirli bir işletim sistemiyle kısıtlar, kişisel cihazları engeller ve daha fazlasını yapın. Ayrıca bir cihazın kaybolması veya çalınması durumunda bu cihazdaki tüm verileri kaldırabilirsiniz.
 
-İkinci yaklaşımda cihazlardaki uygulamaları yönetirsiniz. Bu yaklaşım, **mobil uygulama yönetimi (MAM)** olarak adlandırılır. Kullanıcılar, kendi kişisel cihazlarını kurumsal kaynaklara erişmek için kullanabilir. E-posta veya SharePoint gibi bir uygulamayı açarken kullanıcılardan ek kimlik doğrulaması istenir. Bir cihazın kaybolması veya çalınması durumunda cihazdan kuruluşun tüm verilerini kaldırabilirsiniz.
+İkinci yaklaşımda cihazlardaki uygulamaları yönetirsiniz. Bu yaklaşım, **mobil uygulama yönetimi (MAM)** olarak adlandırılır. Kullanıcılar, kendi kişisel cihazlarını kurumsal kaynaklara erişmek için kullanabilir. E-posta veya SharePoint gibi bir uygulamayı açarken kullanıcılardan ek kimlik doğrulaması istenir. Bir cihaz kaybolduysa veya çalınırsa, Intune ile yönetilen uygulamalardan tüm kuruluş verilerini kaldırabilirsiniz.
 
 Ayrıca [MDM ve MAM](byod-technology-decisions.md) yaklaşımlarını birlikte de kullanabilirsiniz.
 
