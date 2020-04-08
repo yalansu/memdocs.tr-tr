@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 677f85874ddf206b716e70a0cc6c659e10b99fef
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.openlocfilehash: 00faad5cccf8b2ed3198542868a36cb4699299b8
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438812"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808203"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune yenilikler nelerdir?
 
@@ -55,14 +55,29 @@ ms.locfileid: "80438812"
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-april-6-2020"></a>6 Nisan 2020 haftası
+
+#### <a name="new-shell-script-settings-for-macos-devices---6884363---"></a>MacOS cihazları için yeni kabuk betik ayarları<!-- 6884363 -->
+MacOS cihazları için kabuk betikleri yapılandırılırken, artık aşağıdaki yeni ayarları yapılandırabilirsiniz: 
+- Cihazlarda betik bildirimlerini gizle
+- Betik sıklığı
+- Betik başarısız olursa en fazla yeniden deneme sayısı
+
+Daha fazla bilgi için bkz. [Intune 'Da macOS cihazlarında Shell betikleri kullanma](../apps/macos-shell-scripts.md).
+
+<!-- ########################## -->
 ## <a name="week-of-march-30-2020"></a>30 Mart 2020 haftası
 
 ### <a name="new-url-for-the-microsoft-endpoint-manager-admin-center---3704810---"></a>Microsoft Endpoint Manager Yönetim Merkezi için yeni URL<!-- 3704810 -->
 Son yılda Microsoft Endpoint Manager duyurusunu ile hizalamak için Microsoft Endpoint Manager Yönetim Merkezi 'nin URL 'sini (eski Microsoft 365 adıyla cihaz yönetimi) [https://endpoint.microsoft.com](https://endpoint.microsoft.com)olarak değiştirdik. Eski Yönetim Merkezi URL 'SI ([https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com)) çalışmaya devam eder, ancak yeni URL 'Yi kullanarak Microsoft Endpoint Manager yönetim merkezine erişmeye başlamanız önerilir.
 
-Daha fazla bilgi için bkz. [Microsoft Endpoint Manager yönetim merkezini kullanarak BT görevlerini basitleştirme](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center).
+Daha fazla bilgi için bkz. [Microsoft Endpoint Manager yönetim merkezini kullanarak BT görevlerini basitleştirme](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center).  
 
-### <a name="app-management"></a>Uygulama yönetimi
+
+### <a name="app-management"></a>Uygulama yönetimi  
+
+#### <a name="company-portal-for-ios-supports-landscape-mode--6048329-wnready---"></a>İOS için Şirket Portalı yatay modunu destekler<!--6048329 wnready -->   
+Kullanıcılar artık cihazlarını kaydedebilir, uygulama bulabilir ve tercih ettikleri ekran yönünü kullanarak BT desteği alabilir. Kullanıcılar ekranı dikey modda kilitlemedikleri takdirde uygulama ekranları dikey veya yatay moda uyacak şekilde otomatik olarak algılar ve ayarlar.  
 
 #### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>MacOS cihazları için betik desteği (Genel Önizleme)<!-- 4280361 wnready -->
 MacOS cihazlarına komut dosyaları ekleyebilir ve dağıtım yapabilirsiniz. Bu destek, MacOS cihazlarındaki yerel MDM yeteneklerini kullanarak, macOS cihazlarını mümkün olduğunca fazla yapılandırma yeteneğinizi genişletmektedir. Daha fazla bilgi için bkz. [Intune 'Da macOS cihazlarında Shell betikleri kullanma](../apps/macos-shell-scripts.md).
@@ -71,6 +86,9 @@ MacOS cihazlarına komut dosyaları ekleyebilir ve dağıtım yapabilirsiniz. Bu
 ## <a name="week-of-march-24-2020"></a>24 Mart 2020 haftası
 
 ### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Android ve Android kurumsal cihazlarda cihaz kısıtlama profilleri oluştururken Geliştirilmiş kullanıcı arabirimi deneyimi<!-- 5841361 -->
+
+> [!NOTE] 
+> Intune kullanıcı arabirimi tam ekran deneyimine sahiptir ve birkaç hafta sürebilir. Kiracınız bu güncelleştirmeyi alana kadar, ayarları oluştururken veya düzenlerken biraz farklı bir iş akışına sahip olursunuz.
 
 Android veya Android Kurumsal cihazları için bir profil oluşturduğunuzda, uç nokta yönetimi Yönetim Merkezi 'ndeki deneyim güncellenir. Bu değişiklik aşağıdaki cihaz yapılandırma profillerini etkiler (**cihazlar** > **yapılandırma profilleri** > **profil oluşturma** > **Android Cihaz Yöneticisi** veya platform için **Android Enterprise** ):
 
@@ -82,6 +100,9 @@ Yapılandırabileceğiniz cihaz kısıtlamaları hakkında daha fazla bilgi içi
 
 ### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>İOS/ıpados ve macOS cihazlarında yapılandırma profilleri oluştururken Geliştirilmiş kullanıcı arabirimi deneyimi<!-- 5569002 5568997 -->
 
+> [!NOTE]
+> Intune kullanıcı arabirimi tam ekran deneyimine sahiptir ve birkaç hafta sürebilir. Kiracınız bu güncelleştirmeyi alana kadar, ayarları oluştururken veya düzenlerken biraz farklı bir iş akışına sahip olursunuz.
+
 İOS veya macOS cihazları için bir profil oluşturduğunuzda, uç nokta yönetimi Yönetim Merkezi 'ndeki deneyim güncellenir. Bu değişiklik aşağıdaki cihaz yapılandırma profillerini**etkiler (cihaz** > **yapılandırma profilleri** > **profil oluşturma** > **iOS/ıpados** veya **MacOS** for Platform):
 
 - Özel: iOS/ıpados, macOS
@@ -92,6 +113,9 @@ Yapılandırabileceğiniz cihaz kısıtlamaları hakkında daha fazla bilgi içi
 - Tercih dosyası: macOS
 
 ### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>MacOS cihazlarındaki cihaz özelliklerinde Kullanıcı yapılandırma ayarından gizle<!-- 6524869 -->
+
+> [!NOTE]
+> Bu değişiklik, sonraki birkaç hafta boyunca tüm müşterilere gönderilir.
 
 MacOS cihazlarında bir cihaz özellikleri yapılandırma profili oluştururken, **Kullanıcı yapılandırma** profilleri ' nden yeni bir gizleme (**cihazlar** > **yapılandırma profilleri** > , profil > **oturum açma öğeleri**Için platform > **cihaz özellikleri** ) > **MacOS** **profili oluşturun** .
 
@@ -187,6 +211,10 @@ Kısıtlayacakları ayarları görmek için [iOS ve ıpados cihaz ayarları ' na
 Sorun giderme dikey penceresinde bekleyen bir MAM ilkesi için bildirim simgesi bir bilgilendirme simgesine değiştirilmiştir.
 
 ####  <a name="ui-update-when-configuring-compliance-policy---3961639------"></a>Uyumluluk ilkesini yapılandırırken kullanıcı arabirimi güncelleştirmesi<!-- 3961639    -->
+
+> [!NOTE]
+> Intune kullanıcı arabirimi tam ekran deneyimine sahiptir ve birkaç hafta sürebilir. Kiracınız bu güncelleştirmeyi alana kadar, ayarları oluştururken veya düzenlerken biraz farklı bir iş akışına sahip olursunuz.
+
 Microsoft Endpoint Manager 'da [uyumluluk ilkeleri oluşturmak](../protect/create-compliance-policy.md#create-the-policy) için Kullanıcı arabirimini güncelleştirdik (**cihaz** > **uyumluluk ilkeleri** > **ilkeleri** **ilke oluştur** > ). Daha önce kullandığınız ayarların ve ayrıntıların aynısını içeren yeni bir kullanıcı deneyimi sunuyoruz. Yeni deneyim, Uyumluluk ilkesini oluşturmak için sihirbaza benzer bir süreç izler ve ilke için *atamalar* ekleyebileceğiniz bir sayfa ve ilkeyi oluşturmadan önce yapılandırmanızı gözden geçirebileceğiniz bir *İnceleme + oluştur* sayfası içerir.
 
 #### <a name="retire-noncompliant-devices---1827291---------"></a>Uyumsuz cihazları devre dışı bırak<!-- 1827291       -->

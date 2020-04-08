@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cb71634194cee7b542ebe3c661c5a62d3d80ead
-ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
+ms.openlocfilehash: 6c8e1551b49fce5074bd2e88d1d8802f62cca2bb
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80620592"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808112"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Intune 'da Windows 10 cihazlarında PowerShell betikleri kullanma
 
@@ -124,7 +124,34 @@ Intune yönetim uzantısında aşağıdaki Önkoşullar bulunur. Önkoşullar ka
 
 - PowerShell betiklerini yürütmek için son kullanıcıların cihazda oturum açması gerekmez.
 
-- Intune yönetim uzantısı istemcisi her saatte bir kez ve her yeni komut dosyası veya değişiklik için her yeniden başlatmanın ardından Intune 'u denetler. İlkeyi Azure AD gruplarına atadıktan sonra, PowerShell betiği çalıştırılır ve çalıştırma sonuçları raporlanır. Betik yürütüldükten sonra, betikte veya ilkede bir değişiklik olmadıkça yeniden yürütülmez.
+- Intune yönetim uzantısı Aracısı her saatte bir kez ve her yeni komut dosyası veya değişiklik için her yeniden başlatmanın ardından Intune 'u denetler. İlkeyi Azure AD gruplarına atadıktan sonra, PowerShell betiği çalıştırılır ve çalıştırma sonuçları raporlanır. Betik yürütüldükten sonra, betikte veya ilkede bir değişiklik olmadıkça yeniden yürütülmez. Betik başarısız olursa, Intune yönetim uzantısı Aracısı bir sonraki 3 ardışık Intune yönetim uzantısı aracı iadeleri için betiği üç kez yeniden denemeye çalışacaktır.
+
+### <a name="failure-to-run-script-example"></a>Betik örneğini çalıştırma hatası
+8 ÖÖ
+  -  İade et
+  -  Betik **ConfigScript01** Çalıştır
+  -  Betik başarısız oluyor
+
+09.00
+  -  İade et
+  -  Betik **ConfigScript01** Çalıştır
+  -  Betik başarısız oluyor (yeniden deneme sayısı = 1)
+
+10 HAR
+  -  İade et
+  -  Betik **ConfigScript01** Çalıştır
+  -  Betik başarısız oluyor (yeniden deneme sayısı = 2)
+  
+11
+  -  İade et
+  -  Betik **ConfigScript01** Çalıştır
+  -  Betik başarısız oluyor (yeniden deneme sayısı = 3)
+
+12 PM
+  -  İade et
+  - **ConfigScript01**betiğini çalıştırmak için ek girişimde bulunulyoktur.
+  - İleri git, betikte başka değişiklik yapılistem, betiği çalıştırmak için ek girişimde bulunulmayacak.
+
 
 ## <a name="monitor-run-status"></a>Çalışma durumunu izle
 

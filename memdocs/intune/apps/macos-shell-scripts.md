@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36936976528b5ea9c3fff1f77ec11223a4e4e63d
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: ba099e3614c11e10ce4cd9ae94668a1648bfc150
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401773"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808062"
 ---
 # <a name="use-shell-scripts-on-macos-devices-in-intune-public-preview"></a>Intune 'da macOS cihazlarında kabuk betikleri kullanma (Genel Önizleme)
 
@@ -55,6 +55,9 @@ Kabuk betikleri oluştururken ve bunları macOS cihazlarına atarken aşağıdak
 4. **Betik ayarları**' nda aşağıdaki özellikleri girin ve **İleri**' yi seçin:
    - **Betiği karşıya yükle**: kabuk betiğine gidin. Betik dosyası boyutu 200 KB 'tan az olmalıdır.
    - **Betiği oturum açmış kullanıcı olarak çalıştır**: betiği kullanıcının cihazdaki kimlik bilgileriyle çalıştırmak için **Evet** ' i seçin. Betiği kök kullanıcı olarak çalıştırmak için **Hayır** (varsayılan) seçeneğini belirleyin. 
+   - **Cihazlarda betik bildirimlerini gizle:** Varsayılan olarak, komut dosyası bildirimleri çalıştırılan her komut için gösterilir. Son kullanıcılar, macOS cihazlarında Intune 'dan *bilgisayar bildirimini yapılandırıyor* .
+   - **Betik sıklığı:** Betiğin ne sıklıkla çalıştırılacağını seçin. Bir betiği yalnızca bir kez çalıştırmak için **Yapılandırılmadı** (varsayılan) seçeneğini belirleyin.
+   - **Betik başarısız olursa en fazla yeniden deneme sayısı:** Sıfır olmayan bir çıkış kodu döndürürse betiğin kaç kez çalışacağını seçin (sıfır başarı anlamına gelir). Bir komut dosyası başarısız olduğunda yeniden denenmemelidir **(varsayılan** ) seçeneğini belirleyin.
 5. **Kapsam etiketleri**' nde, isteğe bağlı olarak betik için kapsam etiketleri ekleyin ve **İleri**' yi seçin. Intune 'da betikleri kimlerin görebileceğini anlamak için kapsam etiketlerini kullanabilirsiniz. Kapsam etiketleri hakkında tam Ayrıntılar için bkz. [Dağıtılmış BT için rol tabanlı erişim denetimi ve kapsam etiketleri kullanma](../fundamentals/scope-tags.md).
 6. **Atamaları** seçin > **Eklenecek grupları**seçin. Mevcut bir Azure AD grupları listesi gösteriliyor. MacOS cihazları betiği almak için olan kullanıcıları içeren bir veya daha fazla cihaz grubu seçin. **Seçin** öğesini belirleyin. Seçtiğiniz gruplar listede gösterilir ve betik ilkenize gönderilir.
    > [!NOTE]
@@ -103,9 +106,17 @@ Atanmış Intune rolünüz, kabuk betiklerini silmek, atamak, oluşturmak, günc
  - Aracı, macOS cihazı için atanmış kabuk betikleri almak üzere iade etmeden önce Intune hizmetleriyle sessizce kimlik doğrular.
  - Aracı atanmış kabuk betikleri alır ve yapılandırılmış zamanlama, yeniden deneme girişimleri, bildirim ayarları ve yönetici tarafından ayarlanan diğer ayarlar temelinde betikleri çalıştırır.
  - Aracı, Intune hizmetleriyle genellikle her 8 saatte bir yeni veya güncelleştirilmiş betikleri denetler. Bu iade işlemi, MDM iadeden bağımsızdır. 
+ 
+ ### <a name="how-can-i-manually-initiate-an-agent-check-in-from-a-mac"></a>Bir Mac 'ten bir aracı denetimini el ile nasıl başlatabilirim?
+Aracının yüklü olduğu yönetilen bir Mac üzerinde, **terminali**açın, `IntuneMdmAgent` işlemini sonlandırmak için `sudo killall IntuneMdmAgent` komutunu çalıştırın. `IntuneMdmAgent` işlem hemen yeniden başlatılır, bu, Intune ile iade işlemini başlatacak.
 
- >[!NOTE]
- > Şirket Portalı **ayarları denetle** EYLEMI yalnızca MDM iadelerini zorlar. Aracı iade etme işlemi için el ile gerçekleştirilen eylem yok.
+Alternatif olarak, şunları yapabilirsiniz:
+1. **Etkinlik izleme** > **görünümünü** açın >  ***tüm süreçler**' ı seçin.* 
+2. `IntuneMdmAgent`adlı süreçler için arama yapın. 
+3. **Kök** Kullanıcı için çalışan işlemden çıkın. 
+
+> [!NOTE]
+> Şirket Portalı **ayarları** ve Microsoft Endpoint Manager Yönetici Konsolu 'ndaki cihazlar için **eşitleme** eylemi, bir MDM iade etme işlemini başlatır ve bir aracı iade etme işlemini zorlamaz.
 
  ### <a name="when-is-the-agent-removed"></a>Aracı ne zaman kaldırılır?
  Aracının cihazdan kaldırılmasına neden olabilecek çeşitli koşullar vardır:

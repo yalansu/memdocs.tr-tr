@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 691da0c74ceddb34a48bfdf01e19dadaed444e45
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.openlocfilehash: 2e5a9db094163bcf4f987b881c83d98be655acfd
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233465"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808095"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Yönetilen Android Kurumsal cihazları için uygulama yapılandırma ilkeleri ekleme
 
@@ -47,7 +47,7 @@ Microsoft Intune içindeki uygulama yapılandırma ilkeleri, yönetilen Android 
 8. **Izin Ekle** bölmesini göstermek için **Ekle** ' ye tıklayın.
 9. Geçersiz kılmak istediğiniz izinlere tıklayın. Verilen izinler, seçilen uygulamalar için "varsayılan uygulama izinleri" ilkesini geçersiz kılar.
 10. Her izin için **izin durumunu** ayarlayın. **Komut istemi**, **Otomatik Izin ver**veya **Otomatik Reddet**seçeneklerinden birini belirleyebilirsiniz. İzinler hakkında daha fazla bilgi için bkz. [Intune kullanarak cihazları uyumlu veya uyumsuz olarak işaretlemek Için Android kurumsal ayarları](../protect/compliance-policy-create-android-for-work.md).
-11. Açılan kutuda **yapılandırma ayarları biçimini**seçin. Yapılandırma bilgilerini eklemek için aşağıdaki yöntemlerden birini seçin:
+11. Yönetilen uygulama yapılandırma ayarlarını destekliyorsa, açılan kutuda **yapılandırma ayarları biçimini**seçin. Yapılandırma bilgilerini eklemek için aşağıdaki yöntemlerden birini seçin:
     - **Yapılandırma tasarımcısını kullanma**
     - **JSON verilerini girin**<br><br>
     Yapılandırma tasarımcısını kullanma hakkında ayrıntılar için bkz. [Yapılandırma tasarımcısını kullanma](#use-the-configuration-designer). XML verileri girme hakkında daha fazla bilgi için bkz. [JSON verisi](#enter-json-data)girme.

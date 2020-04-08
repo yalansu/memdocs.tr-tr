@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89d299edfb9542591eaabcf42d0b2069bbde4331
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: d768859d65fff18d6ce94a26b48bb28f57417af6
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327304"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808072"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Android kurumsal tam olarak yönetilen cihazların Intune kaydını ayarlama 
 
@@ -65,7 +65,7 @@ Android kurumsal tam olarak yönetilen cihaz yönetimini ayarlamak için aşağ�
 Bu ayar **Evet**olarak ayarlandığında, Intune kiracınız için bir kayıt belirteci (rastgele bir dize) ve QR kodu sağlar. Bu tek kayıt belirteci tüm kullanıcılarınız için geçerlidir ve sona ermez. Cihazın Android işletim sistemine ve sürümüne bağlı olarak, cihazı kaydetmek için belirteci veya QR kodunu kullanabilirsiniz.
 
 ## <a name="enroll-the-fully-managed-devices"></a>Tam olarak yönetilen cihazları kaydetme
-Artık [tam olarak yönetilen cihazlarınızı](android-dedicated-devices-fully-managed-enroll.md)kaydedebilirsiniz.
+Artık [tam olarak yönetilen cihazlarınızı](android-dedicated-devices-fully-managed-enroll.md) (dem hesapları kullanırken değil) kaydedebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 - [Android kurumsal tam yönetilen cihaz yapılandırma ilkeleri ekleme](../configuration/device-restrictions-android-for-work.md#device-owner-only)
