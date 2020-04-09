@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 633adc8fa28f422c4b21958675efb53cb2571d39
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ee88de19a34383cc759e6a11212393f642fc38d5
+ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324740"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80863069"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Microsoft Intune’a uygulama ekleme 
 
@@ -121,7 +121,7 @@ Kuruluşunuzun ihtiyacı olan uygulamaları belirleme hakkında daha fazla bilgi
 Intune, şirketinizin uyumluluk ve güvenlik ilkeleriyle uyum sağlaması için dağıttığınız uygulamaların işlevlerini değiştirmenize olanak verir. Böylece şirket verilerinizin nasıl korunduğunu belirleyebilirsiniz. Intune ile yönetilen uygulamalarda zengin bir mobil uygulama koruma ilkesi yelpazesi mevcuttur, örneğin:
 
 - Kopyala ve yapıştır ve farklı kaydet işlevlerini kısıtlama.
-- Web bağlantılarını Intune Managed Browser’da açılacak şekilde yapılandırma.
+- Web bağlantılarını Microsoft Edge uygulamasının içinde açılacak şekilde yapılandırma.
 - Çoklu kimlik kullanımı ve uygulama düzeyinde koşullu erişimi etkinleştirme.
 
 Intune ile yönetilen uygulamalar ayrıca kayıt gerekmeksizin uygulama korumasını etkinleştirebilir, böylece kullanıcının cihazını yönetmeden veri kaybını önleme ilkelerini uygulama seçeneğine sahip olursunuz. Buna ek olarak, Intune Uygulama SDK’sı ve Uygulama Sarmalama Aracı’nı kullanarak mobil uygulama yönetimini mobil ve iş kolu uygulamalarınızla birleştirebilirsiniz. Bu araçlar hakkında daha fazla bilgi için bkz. [Intune Uygulama SDK’sına genel bakış](../developer/app-sdk.md).

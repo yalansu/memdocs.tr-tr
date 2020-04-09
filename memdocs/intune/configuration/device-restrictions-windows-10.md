@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 237e281b88492ff7b7e1b5614600662e15761935
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 331679511aec17d271bdf8774e16c8809ad4fc27
+ms.sourcegitcommit: 9908de7d30991ee499cc462d2eb730e1e4fd75a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407835"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80900516"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Windows 10 (ve üzeri) cihaz ayarları
 
@@ -81,11 +81,13 @@ Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [ApplicationManageme
 
   [ApplicationManagement/AllowGameDVR CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
 
-- **Yalnızca mağazadan uygulamalar**: Bu ayar, kullanıcılar Microsoft Store dışındaki yerlerden uygulama yüklerken Kullanıcı deneyimini belirler. Seçenekleriniz şunlardır:
+- **Yalnızca mağazadan uygulamalar**: Bu ayar, kullanıcılar Microsoft Store dışındaki yerlerden uygulama yüklerken Kullanıcı deneyimini belirler. Bu, USB aygıtlarından, ağ paylaşımlarından veya internet dışı diğer kaynaklardan içerik yüklenmesini engellemez. Bu korumaların beklenen şekilde çalıştığından emin olmak için güvenilir bir tarayıcı kullanın.
+
+  Seçenekleriniz şunlardır:
 
   - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi son kullanıcıların diğer ilke ayarlarında tanımlı uygulamalar dahil olmak üzere Microsoft Store dışındaki yerlerden uygulama yüklemelerine izin verebilir.  
   - **Her yerde**: uygulama önerilerini devre dışı bırakır ve kullanıcıların herhangi bir konumdan uygulama yüklemesine izin verir.  
-  - **Yalnızca depola**: son kullanıcıları yalnızca Microsoft Store uygulama yüklemeye zorlar.
+  - **Yalnızca depola**: amaç, kötü amaçlı içeriğin internet 'ten yürütülebilir içerik indirirken Kullanıcı cihazlarınızı etkilemesini önlemektir. Kullanıcılar Internet 'ten uygulama yüklemeye çalıştıklarında, yükleme engellenir. Kullanıcılar Microsoft Store uygulamaları indirdikleri öneren bir ileti görür.
   - **Öneriler**: Microsoft Store bulunan Web 'den bir uygulama yüklerken, kullanıcılar onu mağazadan indirdikleri öneren bir ileti görür.  
   - **Depoyu tercih et**: Microsoft Store dışındaki yerlerden uygulama yüklediklerinde kullanıcıları uyarır.
 
@@ -424,7 +426,7 @@ Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [Networkproxy ILKESI
   - **Proxy özel durumları**: proxy sunucusunu kullanmamalıdır gereken URL 'leri girin. Her birini ayırmak için noktalı virgül kullanın.
   - **Yerel adres için proxy sunucusunu atla**: **Yapılandırılmadı** (varsayılan), intranetinizdeki yerel adresler için bir proxy sunucu kullanılmasını önler. **Izin ver** , yerel adresler için bir proxy sunucu kullanır.
 
-## <a name="password"></a>Parola
+## <a name="password"></a>istemcisiyle yönetilen bir cihaz için)
 
 Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [DeviceLock ILKESI CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock)'sini kullanır.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82b9dd1db3bd625f21dcdbf2df375f5b8612e74a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 240e19d7e0665da44d58bf0b2d4d5f2dd47a319e
+ms.sourcegitcommit: 10578b5a631f9148e59389a1ce4e7d4892f772a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327219"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80979282"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>İOS/ıpados cihazlarını Apple 'ın otomatik cihaz kaydıyla otomatik olarak kaydetme
 
@@ -114,7 +114,7 @@ Bir belirteç oluşturmak için [Apple Business Manager (ABA)](https://business.
 
    Apple portalında, cihazların listesini ve MDM sunucu atamasını görmek için **dağıtım programları** &gt; **aygıt kayıt programı** &gt; **atama geçmişini görüntüle** ' ye gidin.
 
-### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Adım 3: Bu belirteci oluşturmak için kullanılan Apple kimliğini kaydedin.
+### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>3\. Adım Bu belirteci oluşturmak için kullanılan Apple kimliğini kaydedin.
 
 [Microsoft Uç Nokta Yöneticisi Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), daha sonra başvurmak üzere Apple kimliğini sağlayın.
 
@@ -148,7 +148,7 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
 4. **İleri ' yi seçin: cihaz yönetimi ayarları**.
 
 5. **Kullanıcı Benzeşimi** için bu profile sahip cihazların atanan kullanıcıyla mı yoksa atanan kullanıcı olmadan mı kaydedilmesi gerektiğini seçin.
-    - **Kullanıcı Benzeşimi ile Kaydet** - Uygulamaları yükleme gibi hizmetler için Şirket Portalı’nı kullanmak isteyen kullanıcılara ait cihazlar için bu seçeneği seçin. ADFS kullanılıyorsa ve kayıt profili, **Kurulum Yardımcısı değil şirket portalı kimlik doğrulaması** içeriyorsa, [WS-Trust 1,3 Kullanıcı adı/karma uç nokta](https://technet.microsoft.com/library/adfs2-help-endpoints) **için** [daha fazla bilgi](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) gereklidir.
+    - **Kullanıcı Benzeşimi ile Kaydet** - Uygulamaları yükleme gibi hizmetler için Şirket Portalı’nı kullanmak isteyen kullanıcılara ait cihazlar için bu seçeneği seçin. ADFS kullanıyorsanız ve [WS-Trust 1,3 Kullanıcı adı/karma uç nokta](https://technet.microsoft.com/library/adfs2-help-endpoints) kimlik doğrulaması Için Kurulum Yardımcısı 'nı kullanıyorsanız [daha fazla bilgi edinin](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) .
 
     - **Kullanıcı Benzeşimi Olmadan Kaydetme** - Tek bir kullanıcıyla bağlantılı olmayan cihazlar için bu seçeneği seçin. Yerel Kullanıcı verilerine erişolmayan cihazlar için bu seçeneği kullanın. Şirket Portalı uygulama gibi uygulamalar çalışmaz.
 

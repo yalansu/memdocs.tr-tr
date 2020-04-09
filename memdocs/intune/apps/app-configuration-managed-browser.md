@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b62a717217daaffeca5480ac55d0ccef3b10136
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 47b6f624ba5c12cd68322bde5c1f85ad7f0a6430
+ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323401"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80862848"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Microsoft Intune ilke korumalı tarayıcısını kullanarak web erişimini yönetme
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Intune ilkesiyle korunan bir tarayıcı (Microsoft Edge veya Intune Managed Browser) kullanarak kurumsal Web sitelerine her zaman koruma önlemleri devrede olarak erişilmesini sağlayabilirsiniz.  Intune ile yapılandırıldığında korumalı tarayıcılar aşağıdakilerden yararlanabilir:
+Microsoft Edge gibi bir Intune ilkesiyle korunan bir tarayıcı kullanarak, kurumsal web sitelerine her zaman korumadan erişildiğinden emin olabilirsiniz. Intune ile yapılandırıldığında korumalı tarayıcılar aşağıdakilerden yararlanabilir:
 
 - Uygulama koruma ilkeleri
 - Koşullu Erişim
@@ -38,11 +38,11 @@ Intune ilkesiyle korunan bir tarayıcı (Microsoft Edge veya Intune Managed Brow
 - Azure uygulama proxy tümleştirmesi
 
 > [!IMPORTANT]
-> Intune Managed Browser kullanımdan kaldırılacak. Korumalı Intune tarayıcı deneyiminiz için Microsoft Edge kullanın. 
+> Intune Managed Browser kullanımdan kaldırılmıştır. Korumalı Intune tarayıcı deneyiminiz için [Microsoft Edge](../apps/manage-microsoft-edge.md) kullanın. 
 
 ## <a name="microsoft-edge-support"></a>Microsoft Edge desteği
 
-İOS/ıpados ve Android cihazlarda kurumsal senaryolar için Microsoft Edge 'i kullanabilirsiniz. Microsoft Edge, Intune Managed Browser ile aynı senaryoları desteklemenin yanı sıra son kullanıcı deneyiminde ek geliştirmeler sağlar. Intune ilkeleri tarafından etkinleştirilen aşağıdaki Microsoft Edge kurumsal özellikleri şunları içerir:
+İOS/ıpados ve Android cihazlarda kurumsal senaryolar için Microsoft Edge 'i kullanabilirsiniz. Intune ilkeleri tarafından etkinleştirilen aşağıdaki Microsoft Edge kurumsal özellikleri şunları içerir:
 
 - **Çift kimlik**: Kullanıcılar hem iş hesabı hem de kişisel hesap ekleyerek göz atabilir. Office 365 ve Outlook mimarilerinde ve deneyimlerinde olduğu gibi iki kimlik arasında belirgin bir ayrım vardır. Intune yöneticileri, iş hesabını kullanarak korumalı bir göz atma deneyimi sağlamak üzere istenen ilkeleri belirleyebilir. 
 - **Intune uygulama koruma ilkesi tümleştirmesi**: Yöneticiler artık uygulama koruma ilkeleri için Microsoft Edge'i hedefleyerek kes, kopyala ve yapıştır denetimi, ekran görüntüsü almayı engelleme ve kullanıcı tarafından seçilen bağlantıların yalnızca diğer yönetilen uygulamalarda açılmasını sağlama gibi denetimlere sahip olabilir.
@@ -53,7 +53,7 @@ Microsoft Edge için koruma ilkeleri Microsoft Intune kuruluşunuzun verilerini 
 
 ## <a name="getting-started"></a>Başlarken
 
-Microsoft Edge ve Intune Managed Browser, kuruluşunuzda kullanılmak üzere sizin ve son kullanıcılarınızın genel uygulama mağazalarından indirebileceği web tarayıcısı uygulamalarıdır. 
+Microsoft Edge, sizin ve son kullanıcılarınızın kuruluşunuzda kullanılmak üzere genel uygulama mağazalarından indirebileceğiniz bir Web tarayıcısı uygulamasıdır. 
 
 Tarayıcı ilkeleri için işletim sistemi gereksinimleri:
 - Android 4 ve üzeri veya
@@ -189,7 +189,7 @@ Yukarıdaki yordamı kullanarak bir Microsoft Edge uygulama yapılandırması ol
 
 ## <a name="how-to-configure-application-proxy-settings-for-protected-browsers"></a>Korumalı tarayıcılar için Uygulama Ara Sunucusu ayarlarını yapılandırma
 
-İOS/ıpados ve Android cihazlarının kullanıcıları için aşağıdaki senaryoları desteklemek üzere Microsoft Edge ve Intune Managed Browser ve [Azure AD uygulama ara sunucusu]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) birlikte kullanılabilir:
+Microsoft Edge ve [Azure AD uygulama ara sunucusu]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) , IOS/ıpados ve Android cihaz kullanıcıları için aşağıdaki senaryoları desteklemek üzere birlikte kullanılabilir:
 
 - Bir kullanıcı Microsoft Outlook uygulamasını indirir ve burada oturum açar. Intune uygulama koruma ilkeleri otomatik olarak uygulanır. Bu ilkeler, kayıtlı verileri şifreler ve kullanıcıların şirket dosyalarını cihazdaki yönetilmeyen uygulamalara veya konumlara aktarmasını engeller. Daha sonra kullanıcı Outlook’ta bir İntranet site bağlantısına tıkladığında bağlantının başka bir tarayıcı yerine korumalı tarayıcı uygulamasında açılacağını belirtebilirsiniz. Korumalı tarayıcı bu İntranet sitenin kullanıcıya Uygulama Ara Sunucusu aracılığıyla sunulduğunu algılar. Kullanıcı uygulama proxy 'Si üzerinden otomatik olarak yönlendirilir ve ilgili Multi-Factor Authentication ile kimlik doğrulamak için ve intranet sitesine ulaşmadan önce koşullu erişim sağlar. Önceden, kullanıcı uzakken bulunamayan bu site artık erişilebilir durumdadır ve Outlook’taki bağlantı olması gerektiği gibi çalışır.
 - Bir uzak kullanıcı korumalı tarayıcı uygulamasını açar ve dahili URL’yi kullanarak bir İntranet sitesine gider. Korumalı tarayıcı bu İntranet sitesinin kullanıcıya Uygulama Ara Sunucusu aracılığıyla sunulduğunu algılar. Kullanıcı uygulama proxy 'Si üzerinden otomatik olarak yönlendirilir ve ilgili Multi-Factor Authentication ile kimlik doğrulamak için ve intranet sitesine ulaşmadan önce koşullu erişim sağlar. Önceden, kullanıcı uzakken bulunamayan bu site artık erişilebilir durumdadır.
@@ -199,18 +199,17 @@ Yukarıdaki yordamı kullanarak bir Microsoft Edge uygulama yapılandırması ol
 - Dahili uygulamalarınızı Azure AD Uygulama Proxy’si aracılığıyla ayarlayın.
   - Uygulama Proxy’sini yapılandırmak ve uygulama yayımlamak için bkz. [kurulum belgeleri](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy). 
   - Kullanıcıların, yeniden yönlendirmenin gerçekleştirileceği kurumsal uygulamaya [atanması gerekir](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-add-on-premises-application#add-a-user-for-testing) . Uygulamanın ön kimlik doğrulaması için geçiş moduna ayarlanmış olması ve kullanıcı atama gereksiniminin uygulama proxy 'Si ayarlarında kapatılmış olması durumunda bile bu yapılmalıdır.
-- Managed Browser uygulamasının 1.2.0 veya üzeri bir sürümünü kullanıyor olmanız gerekir.
-- Managed Browser veya Microsoft Edge uygulamalarının kullanıcıları, uygulamaya atanmış bir [Intune uygulama koruma ilkesine](app-protection-policy.md) sahiptir.
+- Microsoft Edge uygulamasının kullanıcılarına, uygulamaya atanmış bir [Intune uygulama koruma ilkesi](app-protection-policy.md) olmalıdır.
 
     > [!NOTE]
-    > Güncelleştirilmiş Uygulama Ara Sunucusu’nun yeniden yönlendirme verilerinin Managed Browser’da veya Microsoft Edge'de etkinleşmesi 24 saati bulabilir.
+    > Güncelleştirilmiş uygulama proxy 'Si yeniden yönlendirme verilerinin, Microsoft Edge 'de etkili olması 24 saate kadar sürebilir.
 
 
 #### <a name="step-1-enable-automatic-redirection-to-a-protected-browser-from-outlook"></a>1\. adım: Outlook'tan korumalı tarayıcıya otomatik yeniden yönlendirmeyi etkinleştirme
 Outlook’un, **Managed Browser’da görüntülenecek içeriği kısıtla** ayarına imkan veren bir uygulama koruma ilkesiyle yapılandırılması gereklidir.
 
 #### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-protected-browser"></a>2\. Adım: korumalı tarayıcı için atanan bir uygulama yapılandırma ilkesi atama
-Bu yordam ile Managed Browser veya Microsoft Edge uygulamasını, uygulama ara sunucusu yeniden yönlendirmesini kullanmak üzere yapılandırabilirsiniz. 
+Bu yordam, Microsoft Edge uygulamasını uygulama proxy 'si yeniden yönlendirmeyi kullanacak şekilde yapılandırır. 
 
 İlke için yapılandırma ayarları ' nda **kenar** sekmesini açın ve uygulama proxy 'si yeniden yönlendirme değeri için **Etkinleştir** ' i seçin. Bu ayarın etkinleştirilmesi, kullanıcılara Azure uygulama proxy 'si aracılığıyla yayınlanan kurumsal bağlantılar ve şirket içi Web Apps erişimi sağlar.
 
@@ -223,7 +222,7 @@ Bu ayar ile kullanıcıların korumalı tarayıcıyı başlattıklarında veya y
 - Giriş sayfası kısayolu simgesi arama denetimi altındaki bir simge olarak görünür.  Bu düzenlenemez veya silinemez.
 - Giriş sayfası kısayolu, kuruluşunuzun adını görüntüleyerek bunu ayırt eder.  Bu her zaman ilk simge olarak görünür.
 
-Microsoft Edge veya Managed Browser uygulama yapılandırması oluşturma yordamını kullanarak aşağıdaki anahtar ve değer çiftini sağlayın:
+Microsoft Edge uygulama yapılandırması oluşturma yordamını kullanarak aşağıdaki anahtar ve değer çiftini sağlayın:
 
 |                                Anahtar                                |                                                           Değer                                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -237,7 +236,7 @@ Bu ayar ile Microsoft Edge veya Managed Browser kullanıcılarına sunulmak üze
 - Bu yer işaretleri listenin üstünde görüntülenir. Kullanıcıların kendi oluşturduğu yer işaretleri ise bu yer işaretlerinin altında bulunur.
 - Uygulama Proxy’si yeniden yönlendirmesini etkinleştirdiyseniz dahili veya harici URL’den birini kullanarak Uygulama Proxy’si web uygulamaları ekleyebilirsiniz.
 
-Microsoft Edge veya Managed Browser uygulama yapılandırması oluşturma yordamını kullanarak aşağıdaki anahtar ve değer çiftini sağlayın:
+Microsoft Edge uygulama yapılandırması oluşturma yordamını kullanarak aşağıdaki anahtar ve değer çiftini sağlayın:
 
 |                                Anahtar                                 |                                                                                                                                                                                                                                                         Değer                                                                                                                                                                                                                                                          |
 |--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -245,7 +244,7 @@ Microsoft Edge veya Managed Browser uygulama yapılandırması oluşturma yordam
 
 ## <a name="how-to-specify-allowed-and-blocked-urls-for-a-protected-browser"></a>Korumalı tarayıcı için izin verilen ve engellenen URL’leri belirtme
 
-Microsoft Edge veya Managed Browser uygulama yapılandırması oluşturma yordamını kullanarak aşağıdaki anahtar ve değer çiftini sağlayın:
+Microsoft Edge uygulama yapılandırması oluşturma yordamını kullanarak aşağıdaki anahtar ve değer çiftini sağlayın:
 
 |Anahtar|Değer|
 |-|-|
@@ -272,7 +271,7 @@ Microsoft Edge veya Managed Browser uygulama yapılandırması oluşturma yordam
 
 - URL belirtirken kullanabileceğini izin verilen desenler hakkında bilgi almak için aşağıdaki tabloyu kullanın:
 
-|                  {1&gt;URL&lt;1}                  |                     Ayrıntılar                      |                                                Eşleşir                                                |                                Eşleşmez                                 |
+|                  URL                  |                     Details                      |                                                Eşleşir                                                |                                Eşleşmez                                 |
 |---------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 |        `http://www.contoso.com`         |              Tek bir sayfayla eşleşir               |                                            `www.contoso.com`                                            |  `host.contoso.com`<br /><br />`www.contoso.com/images`<br /><br />`contoso.com`/   |
 |          `http://contoso.com`           |              Tek bir sayfayla eşleşir               |                                             `contoso.com/`                                              | `host.contoso.com`<br /><br />`www.contoso.com/images`<br /><br />`www.contoso.com` |
@@ -311,13 +310,13 @@ Microsoft Edge mobil kurumsal deneyim 'nın temel taş, Microsoft Edge 'in hem i
 
 Bu modelin avantajlarından biri, kullanıcılar kuruluşunuzun izin verilmeyen bir siteye (gazete makalesi gibi) bir bağlantı açmaya çalıştığında, kendi iş bağlamlarından tamamen ayrı tutulan kişisel bağlamlarına bunu yapabilecekleri anlamına gelir. Bu geçici geçiş işlemleri varsayılan olarak etkindir. 
 
-Microsoft Edge veya Managed Browser uygulama yapılandırması oluşturma yordamını kullanarak aşağıdaki anahtar ve değer çiftini sağlayın:
+Microsoft Edge uygulama yapılandırması oluşturma yordamını kullanarak aşağıdaki anahtar ve değer çiftini sağlayın:
 
 | Anahtar                                                                | Değer                                                 |
 |--------------------------------------------------------------------|-------------------------------------------------------|
 | **com. Microsoft. Intune. mam. managedbrowser. Allowgeçişli Tiononblock** | **False** , bu geçici geçişlerin oluşmasını engeller |
 
-## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>iOS’ta Managed Browser kullanarak yönetilen uygulama günlüklerine erişme
+## <a name="how-to-access-managed-app-logs-using-the-managed-browser-on-ios"></a>İOS üzerinde Managed Browser kullanarak yönetilen uygulama günlüklerine erişme
 
 Yönetilen tarayıcıyla iOS/ıpados cihazında yüklü olan son kullanıcılar, Microsoft tarafından yayımlanan tüm uygulamaların yönetim durumunu görüntüleyebilir. Yönetilen iOS/ıpados uygulamalarında sorun gidermeye yönelik Günlükler gönderebilirler.
 

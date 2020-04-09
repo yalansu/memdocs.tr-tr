@@ -1,6 +1,6 @@
 ---
 title: Microsoft Intune-Azure 'da Windows 10 cihazları için koruma ayarları | Microsoft Docs
-description: Windows 10 cihazlarında, Application Guard, güvenlik duvarı, SmartScreen, şifreleme ve BitLocker, Exploit Guard, uygulama denetimi, güvenlik merkezi ve güvenlik dahil olmak üzere Microsoft Defender özelliklerini etkinleştirmek için Endpoint Protection ayarlarını kullanın veya yapılandırın Microsoft Intune yerel cihazlar.
+description: Windows 10 cihazlarında, uygulama koruyucusu, güvenlik duvarı, SmartScreen, şifreleme ve BitLocker, Exploit Guard, uygulama denetimi, güvenlik merkezi ve Microsoft Intune içindeki yerel cihazlarda güvenlik dahil olmak üzere Microsoft Defender özelliklerini etkinleştirmek için Endpoint Protection ayarlarını kullanın veya yapılandırın.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aaec456a5ff9864fedf5e95f317bc484ddfc4d82
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: 08a9656328c6de29441a0d8b0b5e2526836cdb9b
+ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80275076"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80863205"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Intune kullanarak cihazları korumak için Windows 10 (ve üzeri) ayarları
 
@@ -54,7 +54,7 @@ Application Guard yalnızca Windows 10 (64 bit) cihazlar için kullanılabilir. 
    Application Guard CSP: [Ayarlar/ClipboardSettings](https://go.microsoft.com/fwlink/?linkid=872351)  
 
   Yerel BILGISAYAR ile Application Guard sanal tarayıcısı arasında kopyalama ve yapıştırma eylemlerine izin verileceğini seçin.  
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **BILGISAYARDAN yalnızca tarayıcıya kopyalama ve yapıştırmaya izin ver**  
   - **Tarayıcıdan yalnızca BILGISAYARA kopyalama ve yapıştırmaya izin ver**  
   - **BILGISAYAR ve tarayıcı arasında kopyalama ve yapıştırmaya izin ver**  
@@ -66,7 +66,7 @@ Application Guard yalnızca Windows 10 (64 bit) cihazlar için kullanılabilir. 
   Application Guard CSP: [Ayarlar/ClipboardFileType](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)  
 
   İzin verilen Pano içeriğini seçin.  
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Metinleri**  
   - **Yansımasını**  
   - **Metin ve görüntüler**  
@@ -110,7 +110,7 @@ Application Guard yalnızca Windows 10 (64 bit) cihazlar için kullanılabilir. 
  **Varsayılan**: yapılandırılmadı  
   Application Guard CSP: [Settings/AllowVirtualGPU](https://go.microsoft.com/fwlink/?linkid=872420)  
       
-  - Sanal grafik işleme birimine erişim sağlayarak grafik yoğun Web sitelerini ve videoları daha hızlı yükleyin.  
+  - **Enable** Sanal grafik işleme birimine erişim sağlayarak grafik yoğun Web sitelerini ve videoları daha hızlı yükleyin.  
   - **Yapılandırılmadı** Grafik için cihazın CPU 'sunu kullanın; Sanal grafik işleme birimini kullanmayın.  
 
 - **Dosyaları konak dosya sistemine indir**  
@@ -179,7 +179,7 @@ Bu ayarlar tüm ağ türlerine uygulanabilir.
   Güvenlik Duvarı CSP: [Mdmstore/Global/EnablePacketQueue](https://go.microsoft.com/fwlink/?linkid=872551)  
 
   IPSec tüneli ağ geçidi senaryosu için, şifreli alma ve şifresiz metin iletme için alma tarafında yazılım ölçeklendirmesinin nasıl etkinleştirildiğini belirtin. Bu ayar, paket sırasının korunduğunu onaylar. Şu seçenekler mevcuttur:  
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Tüm paket kuyruğu devre dışı bırak**  
   - **Yalnızca gelen şifreli paketleri sıraya al**  
   - **Şifre çözme sonrasında yalnızca iletme için kuyruk paketleri gerçekleştirildi**  
@@ -204,7 +204,7 @@ Aşağıdaki ayarlar bu makalede tek bir kez listelenirse, ancak tümü üç öz
 - **Gizli mod**  
   **Varsayılan**: yapılandırılmadı  
   Güvenlik Duvarı CSP: [Disablestealthmode](https://go.microsoft.com/fwlink/?linkid=872559)  
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Engelle** -güvenlik duvarının gizli modda çalışıyor olması engellenir. Gizli modu engellemek, **IPsec güvenli paket muafiyetini** de engellemenize imkan verir.  
   - **Izin ver** -güvenlik duvarı gizli modda çalışır ve bu da istekleri yoklamaya yönelik yanıtları önlemeye yardımcı olur.  
 
@@ -214,14 +214,14 @@ Aşağıdaki ayarlar bu makalede tek bir kez listelenirse, ancak tümü üç öz
 
   *Gizli mod* *blok*olarak ayarlandıysa bu seçenek yoksayılır.  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Block** -IPSec güvenli paketleri muafiyet almaz.  
   - **Allow** -muafiyetleri etkinleştir. Güvenlik duvarının gizli modu, ana bilgisayarın IPSec tarafından güvenliği sağlanmış olan istenmeyen ağ trafiğine yanıt vermesini önleyememelidir.  
 
 - **Korunan**  
   **Varsayılan**: yapılandırılmadı  
   Güvenlik Duvarı CSP: [korumalı](https://go.microsoft.com/fwlink/?linkid=872561)  
-    - **Yapılandırılmadı**  
+    - **Yapılandırılmamış**  
     - **Block** -Microsoft Defender güvenlik duvarı açık olduğunda ve bu ayar *Engelle*olarak ayarlandığında, diğer ilke ayarlarından bağımsız olarak tüm gelen trafik engellenir. 
     - **Izin ver** - *izin ver*olarak ayarlandığında, bu ayar kapalı olur ve diğer ilke ayarlarına bağlı olarak gelen trafiğe izin verilir.
 
@@ -230,7 +230,7 @@ Aşağıdaki ayarlar bu makalede tek bir kez listelenirse, ancak tümü üç öz
   Güvenlik Duvarı CSP 'si: [DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)  
   
   Normalde, yayın veya çok noktaya yayın iletilerine tek noktaya yayın yanıtları almak istemezsiniz. Bu yanıtlar, bir hizmet reddi (DOS) saldırısı veya bir saldırganın bilinen bir canlı bilgisayarı araştırmasına çalışan bir saldırgan olduğunu gösteriyor olabilir.  
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Engelle** -çok noktaya yayın yayınlarına tek noktaya yayın yanıtlarını devre dışı bırakma  
   - **Allow** -çok noktaya yayın yayınlarına tek noktaya yayın yanıtlarına izin verir.  
 
@@ -238,7 +238,7 @@ Aşağıdaki ayarlar bu makalede tek bir kez listelenirse, ancak tümü üç öz
   **Varsayılan**: yapılandırılmadı  
   Güvenlik Duvarı CSP: [Disableınboundnotifications](https://go.microsoft.com/fwlink/?linkid=8725630)  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Engelle** -bir uygulamanın bağlantı noktasında dinlemesi engellendiğinde kullanılan bildirimleri gizleyin.  
   - **Izin ver** -bu ayarı sağlar ve bir uygulamanın bağlantı noktasında dinlemesi engellendiğinde kullanıcılara bildirim gösterilebilir.  
 
@@ -248,7 +248,7 @@ Aşağıdaki ayarlar bu makalede tek bir kez listelenirse, ancak tümü üç öz
   
   Güvenlik duvarının giden bağlantılarda gerçekleştirdiği varsayılan eylemi yapılandırın. Bu ayar, Windows sürüm 1809 ve üzeri sürümlere uygulanır.  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Engelle** -varsayılan güvenlik duvarı eylemi, açıkça engellenmediği müddetçe giden trafik üzerinde çalışmaz.  
   - **Izin ver** -varsayılan güvenlik duvarı eylemleri giden bağlantılarda çalışır.  
 
@@ -256,7 +256,7 @@ Aşağıdaki ayarlar bu makalede tek bir kez listelenirse, ancak tümü üç öz
   **Varsayılan**: yapılandırılmadı  
   Güvenlik Duvarı CSP: [Defaulınboundadction](https://go.microsoft.com/fwlink/?linkid=872564)  
  
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Engelle** -varsayılan güvenlik duvarı eylemi gelen bağlantılarda çalıştırılmadı.  
   - **Izin ver** -varsayılan güvenlik duvarı eylemleri gelen bağlantılarda çalışır.  
 
@@ -266,7 +266,7 @@ Aşağıdaki ayarlar bu makalede tek bir kez listelenirse, ancak tümü üç öz
   **Varsayılan**: yapılandırılmadı  
   Güvenlik Duvarı CSP 'si: [AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Engelle** -yerel depodaki yetkili uygulama güvenlik duvarı kuralları yok sayılır ve zorlanmaz.  
   - **Izin ver** -
    , güvenlik duvarı kurallarını yerel depoda **Etkinleştir** ' i seçerek tanınırlar ve zorlanır.  
@@ -275,7 +275,7 @@ Aşağıdaki ayarlar bu makalede tek bir kez listelenirse, ancak tümü üç öz
   **Varsayılan**: yapılandırılmadı  
   Güvenlik Duvarı CSP 'si: [GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Engelle** -yerel depodaki genel bağlantı noktası güvenlik duvarı kuralları yok sayılır ve zorlanmaz.  
   - **Izin ver** -yerel depodaki genel bağlantı noktası güvenlik duvarı kurallarını tanınmak ve zorunlu olacak şekilde Uygula.  
 
@@ -283,7 +283,7 @@ Aşağıdaki ayarlar bu makalede tek bir kez listelenirse, ancak tümü üç öz
   **Varsayılan**: yapılandırılmadı  
   Güvenlik Duvarı CSP: [Allowlocalpolicymerge](https://go.microsoft.com/fwlink/?linkid=872567)  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Engelle** -yerel depodan gelen güvenlik duvarı kuralları yok sayılır ve zorlanmaz.
   - **Izin ver** -yerel depodaki Güvenlik Duvarı kurallarının tanınması ve zorlanabilmesi için bu kuralları uygulayın.  
 
@@ -291,7 +291,7 @@ Aşağıdaki ayarlar bu makalede tek bir kez listelenirse, ancak tümü üç öz
   **Varsayılan**: yapılandırılmadı  
   Güvenlik Duvarı CSP: [Allowlocalıpsecpolicymerge](https://go.microsoft.com/fwlink/?linkid=872568)  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Engelle** -yerel depodan gelen bağlantı güvenlik kuralları, şema sürümü ve bağlantı güvenliği kuralı sürümüne bakılmaksızın yok sayılır ve zorlanmaz.  
   - **Izin ver** -bağlantı güvenlik kurallarını, şema veya bağlantı güvenlik kuralı sürümlerinden bağımsız olarak yerel depodan uygulama.  
 
@@ -449,7 +449,7 @@ Cihazda Microsoft Edge yüklü olmalıdır.
   - **Gerektir** -kullanıcılardan cihaz şifrelemesini etkinleştirmesini iste. Windows sürümü ve sistem yapılandırmasına bağlı olarak kullanıcılardan şunlar istenebilir:  
     - Başka bir sağlayıcıdan şifrelemenin etkin olmadığını doğrulamak için.  
     - BitLocker Sürücü Şifrelemesi devre dışı bırakmak ve sonra BitLocker 'ı yeniden açmak için gereklidir.  
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   
   Başka bir şifreleme yöntemi etkinken Windows şifrelemesi açılırsa cihaz kullanılamaz hale gelebilir.  
 
@@ -802,7 +802,7 @@ Saldırı yüzeyi azaltma kuralları, bir kötü amaçlı yazılımın kötü am
 
   Genellikle, kötü amaçlı yazılım bulaşarak zararlı yazılımlara karşı kullanılan eylemleri ve uygulamaları önlemeye yardımcı olun.  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - Windows yerel güvenlik yetkilisi alt sisteminden (Lsass. exe) kimlik bilgisi çalmasını etkinleştir ' i **etkinleştirin** .  
   - **Yalnızca denetim**  
 
@@ -810,7 +810,7 @@ Saldırı yüzeyi azaltma kuralları, bir kötü amaçlı yazılımın kötü am
   **Varsayılan**: yapılandırılmadı  
   Kural: [Adobe Reader 'ın alt işlem oluşturmasını engelle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Enable** -Adobe Reader 'dan oluşturulan alt süreçlerini engelleyin.  
   - **Yalnızca denetim**  
 
@@ -822,7 +822,7 @@ Office uygulamalarının aşağıdaki eylemleri yapmasını engelleyin:
   **Varsayılan**: yapılandırılmadı  
   Kural: [Office uygulamalarının ekleme koddan diğer Işlemlere engel](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Engelle** -Office uygulamalarının diğer işlemlere ekleme engelleyin.  
   - **Yalnızca denetim**  
 
@@ -830,7 +830,7 @@ Office uygulamalarının aşağıdaki eylemleri yapmasını engelleyin:
   **Varsayılan**: yapılandırılmadı  
   Kural: [Office uygulamalarının yürütülebilir içerik oluşturmasını engelleyin](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Engelle** -Office uygulamalarının ve makroların yürütülebilir içerik oluşturmasını engelleyin.  
   - **Yalnızca denetim**  
 
@@ -838,7 +838,7 @@ Office uygulamalarının aşağıdaki eylemleri yapmasını engelleyin:
   **Varsayılan**: yapılandırılmadı  
   Kural: [tüm Office uygulamalarının alt işlem oluşturmasını engelle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Engelle** -Office uygulamalarının alt işlemlerin başlatılmasını engelleyin.  
   - **Yalnızca denetim**  
   
@@ -846,7 +846,7 @@ Office uygulamalarının aşağıdaki eylemleri yapmasını engelleyin:
   **Varsayılan**: yapılandırılmadı  
   Kural: [Office makrolarından gelen Win32 API çağrıları engelle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Block** -Office 'teki makro kodundan Win32 içeri aktarmaları engelleyin.  
   - **Yalnızca denetim**  
   
@@ -854,7 +854,7 @@ Office uygulamalarının aşağıdaki eylemleri yapmasını engelleyin:
   **Varsayılan**: yapılandırılmadı  
   Kural: [Office iletişim uygulamasının alt işlem oluşturmasını engelle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Enable** -Office iletişim uygulamalarından alt işlem oluşturmayı engelleyin.  
   - **Yalnızca denetim**  
 
@@ -866,7 +866,7 @@ Komut dosyası tehditlerini önlemeye yardımcı olmak için aşağıdakileri en
   **Varsayılan**: yapılandırılmadı  
   Kural: [büyük olasılıkla karıştırılmış betiklerin yürütülmesini engelle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Block** -tüm karıştırılmış js/vbs/PS/makro kodunu engelleyin.  
   - **Yalnızca denetim**  
 
@@ -874,7 +874,7 @@ Komut dosyası tehditlerini önlemeye yardımcı olmak için aşağıdakileri en
   **Varsayılan**: yapılandırılmadı  
   Kural: [JavaScript veya VBScript 'in indirilen yürütülebilir içeriği başlatmasını engelle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Block** -Block js/vbs, Internet 'ten indirilen yükü yürütmeyi engelliyor.  
   - **Yalnızca denetim**  
 
@@ -882,7 +882,7 @@ Komut dosyası tehditlerini önlemeye yardımcı olmak için aşağıdakileri en
   **Varsayılan**: yapılandırılmadı  
   Kural: [PSExec ve WMI komutlarından kaynaklanan işlem oluşturma Işlemlerini engelleyin](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Blok** -PSExec ve WMI komutlarından kaynaklanan işlem oluşturma işlemlerini engelleyin.  
   
   - **Yalnızca denetim**  
@@ -891,7 +891,7 @@ Komut dosyası tehditlerini önlemeye yardımcı olmak için aşağıdakileri en
   **Varsayılan**: yapılandırılmadı  
   Kural: [USB 'den çalıştırılan güvenilmeyen ve imzasız Işlem engelle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)    
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Engelle** -USB 'den çalıştırılan güvenilmeyen ve imzasız işlem engelle.  
   - **Yalnızca denetim**  
   
@@ -899,7 +899,7 @@ Komut dosyası tehditlerini önlemeye yardımcı olmak için aşağıdakileri en
   **Varsayılan**: yapılandırılmadı  
   Kural: [bir Preter, Age veya güvenilir liste ölçütüne uymadıkları takdirde yürütülebilir dosyaların çalıştırılmasını engelleyin](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Blok** blokları, bir Preter, Age veya güvenilir liste ölçütlerine uymadığı müddetçe yürütülebilir dosyaların çalıştırılmasını engeller.  
   - **Yalnızca denetim**  
 
@@ -911,7 +911,7 @@ E-posta tehditlerini önlemeye yardımcı olmak için aşağıdakileri engelleyi
   **Varsayılan**: yapılandırılmadı  
   Kural: [e-posta istemcisinden ve Web postasından 'ten yürütülebilir içeriği engelle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Block** -email (exe, dll, PS, js, vbs, vb.), e-postadan (Webmail/mail-Client) bırakılan yürütülebilir içeriklerin (exe, dll, PS  
   - **Yalnızca denetim**  
 
@@ -921,7 +921,7 @@ E-posta tehditlerini önlemeye yardımcı olmak için aşağıdakileri engelleyi
   Varsayılan: yapılandırılmadı  
   Kural: [fidye yazılımı ile gelişmiş koruma kullan](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Enable** -agresif fidye yazılımı korumasını kullanın.  
   - **Yalnızca denetim**  
 
@@ -942,6 +942,9 @@ E-posta tehditlerini önlemeye yardımcı olmak için aşağıdakileri engelleyi
 > **X86 istemci makinelerde**:  
 > *C:\Program Files\Microsoft Intune yönetim Extension\Content*  
 > *C:\windows\ımecache*  
+>
+> Daha fazla bilgi için bkz. [Windows 'un şu anda desteklenen sürümlerini çalıştıran kurumsal bilgisayarlara yönelik virüs tarama önerileri](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers).
+
 
 ### <a name="controlled-folder-access"></a>Denetlenen klasör erişimi  
 
@@ -953,7 +956,7 @@ Fidye yazılımı gibi kötü amaçlı uygulamalardan ve tehditlerden [değerli 
 
   Dosya ve klasörleri kötü amaçlı uygulamaların yetkisiz değişikliklerinden korur.  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Etkinleştir**  
   - **Yalnızca denetim**  
   - **Disk değişikliğini engelle**  
@@ -1060,7 +1063,7 @@ Microsoft Defender Güvenlik Merkezi uygulamasının çeşitli bölümlerine Son
 
   Son kullanıcıların Microsoft Defender Güvenlik Merkezi ' nde virüs ve tehdit koruması alanını görüntüleyip görüntüleyemadığını yapılandırın. Bu bölümün gizlenmesi, virüs ve tehdit koruması ile ilgili tüm bildirimleri de engeller.  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Gizlenecek**  
 
 - **Fidye koruma**  
@@ -1069,7 +1072,7 @@ Microsoft Defender Güvenlik Merkezi uygulamasının çeşitli bölümlerine Son
 
   Son kullanıcıların Microsoft Defender Güvenlik Merkezi ' nde fidye yazılımı koruma alanını görüntüleyip görüntüleyebir şekilde yapılandırın. Bu bölümün gizlenmesi, fidye korumasıyla ilgili tüm bildirimleri de engeller.  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Gizlenecek**  
 
 - **Hesap koruması**  
@@ -1078,7 +1081,7 @@ Microsoft Defender Güvenlik Merkezi uygulamasının çeşitli bölümlerine Son
 
   Son kullanıcıların Microsoft Defender Güvenlik Merkezi ' nde hesap koruma alanını görüntüleyip görüntüleyebir şekilde yapılandırın. Bu bölümün gizlenmesi, hesap korumasıyla ilgili tüm bildirimleri de engeller.  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Gizlenecek**  
 
 - **Güvenlik duvarı ve ağ koruması**  
@@ -1087,7 +1090,7 @@ Microsoft Defender Güvenlik Merkezi uygulamasının çeşitli bölümlerine Son
 
   Son kullanıcıların Microsoft Defender Güvenlik Merkezi 'nde güvenlik duvarı ve ağ koruması alanını görüntüleyip görüntüleyebir şekilde yapılandırın. Bu bölümün gizlenmesi, güvenlik duvarı ve ağ koruması ile ilgili tüm bildirimleri de engeller.  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Gizlenecek**  
 
 - **Uygulama ve tarayıcı denetimi**  
@@ -1096,7 +1099,7 @@ Microsoft Defender Güvenlik Merkezi uygulamasının çeşitli bölümlerine Son
 
   Son kullanıcıların Microsoft Defender Güvenlik Merkezi 'nde uygulama ve tarayıcı denetim alanını görüntüleyip görüntüleyebir şekilde yapılandırın. Bu bölümün gizlenmesi, uygulama ve tarayıcı denetimiyle ilgili tüm bildirimleri de engeller.  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Gizlenecek**  
 
 - **Donanım koruması**  
@@ -1105,7 +1108,7 @@ Microsoft Defender Güvenlik Merkezi uygulamasının çeşitli bölümlerine Son
 
   Son kullanıcıların Microsoft Defender Güvenlik Merkezi 'nde donanım koruma alanını görüntüleyip görüntüleyebir şekilde yapılandırın. Bu bölümün gizlenmesi, donanım korumasıyla ilgili tüm bildirimleri de engeller.  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Gizlenecek**  
 
 - **Cihaz performans ve sistem durumu**  
@@ -1114,7 +1117,7 @@ Microsoft Defender Güvenlik Merkezi uygulamasının çeşitli bölümlerine Son
 
   Son kullanıcıların Microsoft Defender Güvenlik Merkezi ' nde cihaz performans ve sistem durumu alanını görüntüleyip görüntüleyebir şekilde yapılandırın. Bu bölümün gizlenmesi, cihaz performansı ve sistem durumu ile ilgili tüm bildirimleri de engeller.  
   
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Gizlenecek**  
 
 - **Aile seçenekleri**  
@@ -1123,7 +1126,7 @@ Microsoft Defender Güvenlik Merkezi uygulamasının çeşitli bölümlerine Son
 
   Son kullanıcıların Microsoft Defender Güvenlik Merkezi ' nde aile seçenekleri alanını görüntüleyip görüntüleyebir şekilde yapılandırın. Bu bölümün gizlenmesi, Aile seçenekleriyle ilgili tüm bildirimleri de engeller.  
   
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Gizlenecek**  
 
 - **Uygulamanın görüntülenmekte olan alanlarından gelen bildirimler**  
@@ -1132,7 +1135,7 @@ Microsoft Defender Güvenlik Merkezi uygulamasının çeşitli bölümlerine Son
 
   Son kullanıcılara görüntülenecek bildirimleri seçin. Kritik olmayan bildirimler, taramalar tamamlandığında Bildirimler dahil olmak üzere Microsoft Defender virüsten koruma etkinliğinin özetlerini içerir. Diğer tüm bildirimler kritik olarak kabul edilir.  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Kritik olmayan bildirimleri engelle**  
   - **Tüm bildirimleri engelle**  
 
@@ -1141,7 +1144,7 @@ Microsoft Defender Güvenlik Merkezi uygulamasının çeşitli bölümlerine Son
 
   Bildirim alanı denetiminin görüntüsünü yapılandırın. Bu ayarın etkili olması için kullanıcının oturumu kapatıp açması ya da bilgisayarı yeniden başlatması gerekir.  
   
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Gizlenecek**  
 
 - **TPM 'YI temizle düğmesi**  
@@ -1149,7 +1152,7 @@ Microsoft Defender Güvenlik Merkezi uygulamasının çeşitli bölümlerine Son
 
   TPM 'YI Temizle düğmesinin görüntülenmesini yapılandırın.  
   
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Devre Dışı Bırak**  
 
 - **TPM bellenim güncelleştirme uyarısı**  
@@ -1157,7 +1160,7 @@ Microsoft Defender Güvenlik Merkezi uygulamasının çeşitli bölümlerine Son
   
   Güvenlik açığı bulunan bir bellenim algılandığında TPM güncelleştirme belleniminin görüntülenmesini yapılandırın.  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Gizlenecek**  
 
 - **Yetkisiz koruma**  
@@ -1234,7 +1237,7 @@ Windows 10 cihazlarında yerel güvenlik ayarlarını yapılandırmak için bu s
 
 
   - **Blok** Yerel yönetici hesabının kullanımını engelleyin.  
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
 
 - **Yönetici hesabını yeniden adlandır**  
   **Varsayılan**: *Yapılandırılmadı*  
@@ -1250,7 +1253,7 @@ Windows 10 cihazlarında yerel güvenlik ayarlarını yapılandırmak için bu s
   LocalPoliciesSecurityOptions CSP: [Localpoliciessecurityoptions](https://go.microsoft.com/fwlink/?linkid=867853)  
 
   - **Engelle** -Konuk hesabının kullanımını engelleyin.  
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
 
 - **Konuk hesabını yeniden adlandır**  
   **Varsayılan**: *Yapılandırılmadı*  
@@ -1290,7 +1293,7 @@ Windows 10 cihazlarında yerel güvenlik ayarlarını yapılandırmak için bu s
  
 
   Çıkarılabilir NTFS medyasını biçimlendirmeye ve çıkarmaya izin verilen kişileri tanımlayın:  
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Yöneticiler**  
   - **Yöneticiler ve Yetkili Kullanıcılar**  
   - **Yöneticiler ve Etkileşimli Kullanıcılar**  
@@ -1331,7 +1334,7 @@ Windows 10 cihazlarında yerel güvenlik ayarlarını yapılandırmak için bu s
 
   Oturum kilitlendiğinde görüntülenen kullanıcı bilgilerini yapılandırın. Yapılandırılmazsa, kullanıcı görünen adı, etki alanı ve kullanıcı adı gösterilir.  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Kullanıcı görünen adı, etki alanı ve kullanıcı adı**  
   - **Yalnızca kullanıcı görünen adı**  
   - **Kullanıcı bilgilerini görüntüleme**  
@@ -1452,7 +1455,7 @@ Windows 10 cihazlarında yerel güvenlik ayarlarını yapılandırmak için bu s
 
   Bu ayarı etkinleştirirseniz, SMB istemcisi güvenli olmayan konuk oturum açmaları reddeder.  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Engelle** -SMB istemcisi güvenli olmayan konuk oturum açmaları reddeder.  
 
 ### <a name="recovery-console-and-shutdown"></a>Kurtarma konsolu ve kapatma  
@@ -1504,7 +1507,7 @@ Windows 10 cihazlarında yerel güvenlik ayarlarını yapılandırmak için bu s
 
   Yönetici onay modu 'nda Yöneticiler için yükseltme isteminin davranışını tanımlayın.  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **İstem olmadan yükselt**  
   - **Güvenli masaüstünde kimlik bilgileri iste**  
   - **Kimlik bilgileri iste**  
@@ -1518,7 +1521,7 @@ Windows 10 cihazlarında yerel güvenlik ayarlarını yapılandırmak için bu s
 
   Standart kullanıcılar için yükseltme isteminin davranışını tanımlayın.  
 
-  - **Yapılandırılmadı**  
+  - **Yapılandırılmamış**  
   - **Yükseltme isteklerini otomatik olarak reddet**  
   - **Güvenli masaüstünde kimlik bilgileri iste**  
   - **Kimlik bilgileri iste**  
@@ -1612,7 +1615,7 @@ Windows 10 cihazlarında yerel güvenlik ayarlarını yapılandırmak için bu s
    
   Bu ayar, Xbox oyunu kaydet görevinin etkin veya devre dışı olduğunu belirler.  
   - **Etkinletir**
-  - **Yapılandırılmadı**
+  - **Yapılandırılmamış**
 
 - **Xbox donatı yönetim hizmeti**  
   **Varsayılan**: el ile  

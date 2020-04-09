@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -16,12 +16,12 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f4b50ac8df811a3e71070ebec979139b3ebbe62
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: fc1a06f596ee5d700d30430e4fb2693138fe1e39
+ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325124"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80863154"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Intune ile Windows cihazlarına dağıtmak için iş kolu uygulamalarını imzalayın
 
@@ -87,7 +87,7 @@ Microsoft Store erişim sağlamak istemiyorsanız, Intune 'u Iş Microsoft Store
 2. Uygulamayı aldıktan sonra **Envanter** sayfasında uygulamayı seçin.  
 3. **Platform** olarak **Windows 10 tüm cihazlar**’ı ve uygun **Mimari**’yi seçip sonra indirin. Bu uygulama için bir uygulama lisans dosyası gerekmez.
    Indirme için Windows 10 x86 paketi ayrıntılarının ![görüntüsü](./media/app-sideload-windows/Win10CP-all-devices.png)
-4. "Gerekli Çerçeveler" başlığı altındaki tüm paketleri indirin. Bu işlem x86, x64 ve ARM mimarileri için gerçekleştirilmelidir. Böylece aşağıda gösterildiği gibi toplam 9 paket gerekir.
+4. "Gerekli Çerçeveler" başlığı altındaki tüm paketleri indirin. Bu, x86, x64, ARM ve ARM64 mimarileri için yapılmalıdır. Bu, aşağıda gösterildiği gibi toplam 9 paket ile sonuçlanır.
 
    ![İndirilecek bağımlılık dosyalarının görüntüsü ](./media/app-sideload-windows/Win10CP-dependent-files.png)
 5. Şirket Portalı uygulamasını Intune’a yüklemeden önce, paketlerin aşağıdaki şekilde yapılandırıldığı bir klasör (ör. C:&#92;Company Portal) oluşturun:

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 672c978a7e590e8e26f676733bd2903d3684e978
-ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
+ms.openlocfilehash: 7441cd36a05e94140b46d322840346872b94b64f
+ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80611732"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80863171"
 ---
 # <a name="app-protection-policies-overview"></a>Uygulama koruma ilkelerine genel bakış
 
@@ -300,7 +300,7 @@ Seçmeli Temizleme başlatıldığında Kullanıcı uygulamayı kullanıyorsa, [
 Intune uygulama koruması, uygulama ve [ıNTUNE SDK](../developer/app-sdk.md)arasında tutarlı olması için kullanıcının kimliğine bağlıdır. Bunu garanti etmenin tek yolu modern kimlik doğrulaması yapmaktır. Uygulamaların bir şirket içi yapılandırma ile çalışabileceği senaryolar vardır, ancak bunlar tutarlı değildir ve garanti edilmez.
 
 **Yönetilen uygulamalardan Web bağlantıları açmak için güvenli yol**<br>
-BT yöneticisi, Microsoft Intune tarafından geliştirilen ve Intune ile kolayca yönetilebilen bir web tarayıcısı olan [Intune Managed Browser uygulamasını](app-configuration-managed-browser.md) dağıtabilir ve bunun için uygulama koruma ilkesi ayarlayabilir. BT yöneticisi, Intune ile yönetilen tüm uygulamalardaki web bağlantılarının Managed Browser uygulaması kullanılarak açılmasını gerekli kılabilir.
+BT Yöneticisi, Intune ile kolayca yönetilebilecek bir Web tarayıcısı olan [Microsoft Edge](app-configuration-managed-browser.md)için uygulama koruma ilkesi dağıtabilir ve ayarlayabilir. BT yöneticisi, Intune ile yönetilen tüm uygulamalardaki web bağlantılarının Managed Browser uygulaması kullanılarak açılmasını gerekli kılabilir.
 
 ## <a name="app-protection-experience-for-ios-devices"></a>İOS cihazları için uygulama koruma deneyimi
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c8e1551b49fce5074bd2e88d1d8802f62cca2bb
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: a773c449b0b6d60b9cf7bf6a280cc371d9c4cf03
+ms.sourcegitcommit: 10578b5a631f9148e59389a1ce4e7d4892f772a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808112"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80979231"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Intune 'da Windows 10 cihazlarında PowerShell betikleri kullanma
 
@@ -52,6 +52,9 @@ Intune yönetim uzantısında aşağıdaki Önkoşullar bulunur. Önkoşullar ka
 - Azure Active Directory (AD) 'ye katılmış cihazlar, şunlar dahil:  
   
   - Karma Azure AD 'ye katılmış: Azure Active Directory (AD) ve ayrıca şirket içi Active Directory (AD) ile birleştirilmiş cihazlar. Kılavuz için bkz. [karma Azure Active Directory JOIN Uygulamanızı planlayın](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) .
+  
+  > [!TIP]
+  > Cihazların Azure AD 'ye [katılmış](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) olduğundan emin olun. Yalnızca Azure AD 'de [kayıtlı](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) olan cihazlar betiklerinizi almaz.  
 
 - Intune 'a kayıtlı cihazlar, şunlar dahil:
 
@@ -71,8 +74,8 @@ Intune yönetim uzantısında aşağıdaki Önkoşullar bulunur. Önkoşullar ka
     - [İstemci uygulamaları iş yükü](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
     - [Configuration Manager iş yüklerini Intune 'a değiştirme](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
   
-> [!TIP]
-> Cihazların Azure AD 'ye [katılmış](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) olduğundan emin olun. Yalnızca Azure AD 'de [kayıtlı](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) olan cihazlar betiklerinizi almaz.
+> [!NOTE]
+> Windows 10 VM 'Leri kullanma hakkında bilgi için bkz. [Windows 10 sanal makinelerini Intune Ile kullanma](../fundamentals/windows-10-virtual-machines.md).
 
 ## <a name="create-a-script-policy-and-assign-it"></a>Betik ilkesi oluşturma ve atama
 
@@ -125,6 +128,8 @@ Intune yönetim uzantısında aşağıdaki Önkoşullar bulunur. Önkoşullar ka
 - PowerShell betiklerini yürütmek için son kullanıcıların cihazda oturum açması gerekmez.
 
 - Intune yönetim uzantısı Aracısı her saatte bir kez ve her yeni komut dosyası veya değişiklik için her yeniden başlatmanın ardından Intune 'u denetler. İlkeyi Azure AD gruplarına atadıktan sonra, PowerShell betiği çalıştırılır ve çalıştırma sonuçları raporlanır. Betik yürütüldükten sonra, betikte veya ilkede bir değişiklik olmadıkça yeniden yürütülmez. Betik başarısız olursa, Intune yönetim uzantısı Aracısı bir sonraki 3 ardışık Intune yönetim uzantısı aracı iadeleri için betiği üç kez yeniden denemeye çalışacaktır.
+
+- Paylaşılan cihazlar için, PowerShell betiği oturum açan her yeni kullanıcı için çalışır.
 
 ### <a name="failure-to-run-script-example"></a>Betik örneğini çalıştırma hatası
 8 ÖÖ
