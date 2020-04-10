@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/08/2020
+ms.date: 04/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 331679511aec17d271bdf8774e16c8809ad4fc27
-ms.sourcegitcommit: 9908de7d30991ee499cc462d2eb730e1e4fd75a9
+ms.openlocfilehash: 0e5726ec06ac5b315937bd30e9a2e2680c0030be
+ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80900516"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81007717"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Windows 10 (ve üzeri) cihaz ayarları
 
@@ -142,10 +142,15 @@ Bu ayarlar, [Bluetooth ILKESI CSP](https://docs.microsoft.com/windows/client-man
 
 Bu ayarlar, [CSP hesabı ilkesini](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts)kullanır; Ayrıca, desteklenen Windows sürümlerini de listeler.
 
-- **Microsoft hesabı**: **Block** , son kullanıcıların bir Microsoft hesabı cihazla ilişkilendirilmesini engeller. **Yapılandırılmadı** (varsayılan) Microsoft hesabı eklemeye ve kullanılmasına izin verir.
+- **Microsoft hesabı**: **Block** , son kullanıcıların bir Microsoft hesabı cihazla ilişkilendirilmesini engeller. **Blok** Ayrıca, kayıt işlemini tamamlaması için kullanıcılara güvenen bazı kayıt senaryolarını etkileyebilir.
+
+  **Yapılandırılmadı** (varsayılan) Microsoft hesabı eklemeye ve kullanılmasına izin verir.
+
 - **Microsoft hesabı dışı**: **Block** , son kullanıcıların kullanıcı arabirimini kullanarak Microsoft olmayan hesaplar eklemesini önler. **Yapılandırılmadı** (varsayılan), kullanıcıların bir Microsoft hesabı ile ilişkilendirilmemiş e-posta hesapları eklemesine olanak sağlar.
 - **Microsoft hesabı Için ayarların eşitlenmesi**: **Yapılandırılmadı** (varsayılan), bir Microsoft hesabı ilişkili cihaz ve uygulama ayarlarının cihazlar arasında eşitlenmesine izin verir. **Blok** bu eşitlemeyi engelliyor.
-- **Microsoft hesabı oturum açma Yardımcısı**: **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, son kullanıcılar **Microsoft hesabı oturum açma Yardımcısı** (wlidsvc) hizmetini başlatabilir ve durdurabilir. Bu işletim sistemi hizmeti, kullanıcıların Microsoft hesabı oturum açmasına olanak tanır. **Disable** , son kullanıcıların Microsoft oturum açma Yardımcısı hizmetini (wlidsvc) denetlemesini engeller.
+- **Microsoft hesabı oturum açma Yardımcısı**: **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, son kullanıcılar **Microsoft hesabı oturum açma Yardımcısı** (wlidsvc) hizmetini başlatabilir ve durdurabilir. Bu işletim sistemi hizmeti, kullanıcıların Microsoft hesabı oturum açmasına olanak tanır. **Disable** , Microsoft oturum açma Yardımcısı hizmetini (wlidsvc) devre dışı olarak yapılandırır ve son kullanıcıların bunu el ile başlatmasını önler.
+
+  **Devre dışı bırak ayarı** , kullanıcıların kaydı tamamlaması için kullandığı bazı kayıt senaryolarına de etkisi olabilir. Örneğin, [Autopilot beyaz eldiven](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove)kullanıyorsunuz. Genellikle, kullanıcılara bir Azure AD oturum açma penceresi gösterilir. **Devre dışı**olarak AYARLANDıĞıNDA Azure AD oturum açma seçeneği görüntülenmeyebilir. Bunun yerine, kullanıcıların EULA 'yı kabul etmesi ve yerel bir hesap oluşturması istenir ve bu da istediğiniz şey olmayabilir.
 
 ## <a name="cloud-printer"></a>Bulut Yazıcı
 

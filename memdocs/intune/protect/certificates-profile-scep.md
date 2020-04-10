@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a775171a72de32af98d8089311b5fe467e560515
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: e8838606a6f36ccbbbdee2e081f242035f4f3b61
+ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323139"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81007751"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Intune 'da SCEP sertifika profilleri oluşturma ve atama
 
@@ -87,7 +87,7 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
 
        *Konu adı biçimi* için biçim seçenekleri şunları içerir:
 
-       - **Yapılandırılmadı**
+       - **Yapılandırılmamış**
        - **Ortak ad**
        - **E-postayı içeren ortak ad**
        - **E-posta olarak ortak ad**
@@ -95,7 +95,8 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
        - **Seri numarası**
        - **Özel**: Bu seçeneği işaretlediğinizde bir **Özel** metin kutusu da gösterilir. Bu alanı, değişkenler dahil özel bir konu adı biçimi girmek için kullanın. Özel biçim, şu iki değişkeni destekler: **Ortak Ad (CN)** ve **E-posta (E)** . **Ortak Ad (CN)** şu iki değerden biri olarak ayarlanabilir:
 
-         - **CN = {{username}}** : kullanıcının janedoe@contoso.comgibi Kullanıcı asıl adı.
+         - **CN = {{username}}** : kullanıcının Kullanıcı adı (örneğin, ocetikan).
+         - **CN = {{userPrincipalName}}** : kullanıcının janedoe@contoso.comgibi Kullanıcı asıl adı.\*
          - **CN={{AAD_Device_ID}}** : Azure Active Directory’ye (AD) yeni bir cihaz kaydettiğinizde atanan bir kimlik. Bu kimlik genellikle Azure AD’de kimlik doğrulamak için kullanılır.
          - **CN = {{SERIALNUMBER}}** : genellikle üretici tarafından bir cihazı tanımlamak için kullanılan benzersiz seri numarası (sn).
          - **CN = {{ımekarmsayı}}** : bir cep telefonu tanımlamak Için kullanılan uluslararası mobil ekipman KIMLIĞI (IMEI) benzersiz numarası.
@@ -111,6 +112,8 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
          Bu örnekte, CN ve E değişkenlerini kullanan bir konu adı biçimi ve kuruluş birimi, kuruluş, konum, durum ve ülke değerleri için dizeler bulunur. [CertStrToName işlevi](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx), bu işlevi ve desteklenen dizelerini açıklar.
+         
+         Yalnızca Android cihaz sahibi profilleri Için \*, **CN = {{userPrincipalName}}** ayarı çalışmayacak. Android cihaz sahibi yalnızca kullanıcı olmayan cihazlar için kullanılabilir, bu profil kullanıcının Kullanıcı asıl adını alamaz. Kullanıcılar için bu seçeneğe gerçekten ihtiyaç duyuyorsanız, şu şekilde bir geçici çözüm kullanabilirsiniz: **CN = {{username}}@contoso.com** janedoe@contoso.com gibi, El Ile eklediğiniz kullanıcı adını ve etki alanını sağlar.
 
       - **Cihaz sertifika türü**
 
@@ -259,7 +262,7 @@ Konu adınız özel karakterlerden birini içerdiğinde, bu sınırlamaya geçic
 
 **Örneğin**, *test kullanıcısı (TESTCOMPANY, LLC)* olarak görünen bir konu adı vardır.  *Testcompany* ve *LLC* arasında virgül bulunan BIR CN içeren bir CSR bir sorun gösterir.  Bu sorun, tüm CN 'nin çevresine tırnak işareti koyarak veya tam olarak *Testcompany* ile *LLC*arasında virgül kaldırılarak önlenebilir:
 
-- **Tırnak Işaretleri ekleme**: *CN =* "test kullanıcısı (testcompany, LLC)", OU = useraccounts, DC = Corp, DC = contoso, DC = com *
+- **Tırnak Işaretleri ekleme**: *CN = "test kullanıcısı (TESTCOMPANY, LLC)", OU = useraccounts, DC = Corp, DC = contoso, DC = com*
 - **Virgülü kaldırın**: *CN = test kullanıcısı (testcompany LLC), OU = useraccounts, DC = Corp, DC = contoso, DC = com*
 
  Ancak, bir ters eğik çizgi karakterini kullanarak virgül kaçış girişimleri, CRP günlüklerinde hata vererek başarısız olur:

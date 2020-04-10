@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae24c8cad5ccee06444ffec6a4cd8b39b3371b49
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 04d9856242336c4a8c1fbd9bef0afb539054c904
+ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327298"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81007768"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Android Kurumsal ayrılmış cihazları için Intune kaydını ayarlama
 
@@ -39,7 +39,7 @@ Bu şekilde yönettiğiniz cihazlar, bir kullanıcı hesabı olmadan Intune’a 
 
 Cihazların Android Kurumsal ayrılmış cihazları olarak yönetilebilmesi için şu gereksinimleri karşılaması gerekir:
 
-- Android işletim sistemi sürüm 5.1 ve üzeri.
+- Android OS sürüm 6,0 ve üzeri.
 - Cihazlar Android’in Google Mobile Services (GMS) bağlantısı olan bir dağıtımını çalıştırmalıdır. Cihazlarda GMS kullanılabilir olmalı ve cihazlar GMS’ye bağlanabilmelidir.
 
 ## <a name="set-up-android-enterprise-dedicated-device-management"></a>Android Kurumsal ayrılmış cihaz yönetimi ayarları

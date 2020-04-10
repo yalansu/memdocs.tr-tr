@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3b9497d80fad3a0abd7e7b14b1b8ac02b249c77
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 73d8136ff1e03b00232a58c1b0687f9e193297e1
+ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325562"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81007734"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices"></a>Android kurumsal adanmış cihazlarınızı veya tam olarak yönetilen cihazları kaydedin
 
@@ -31,7 +31,7 @@ ms.locfileid: "79325562"
 
 | Kayıt yöntemi | Adanmış ve tam olarak yönetilen cihazlar için en düşük Android işletim sistemi sürümü |
 | ----- | ----- |
-| Yakın Alan İletişimi | 5.1 |
+| Yakın Alan İletişimi | 6.0 |
 | Belirteç girişi | 6.0 |
 | QR kodu | 7.0 |
 | Zero Touch  | 8,0\* |
@@ -40,7 +40,7 @@ katılan üreticilerle \*.
 
 ## <a name="enroll-by-using-near-field-communication-nfc"></a>Yakın Alan İletişimi (NFC) kullanarak kaydetme
 
-NFC 'yi destekleyen cihazlarda, özel olarak biçimlendirilmiş bir NFC etiketi oluşturarak cihazlarınızı sağlayabilirsiniz. Kendi uygulamanızı veya NFC etiketi oluşturan bir araç kullanabilirsiniz. Daha fazla bilgi için, bkz. Microsoft Intune ve [Google 'ın Android yönetim API 'si belgeleri](https://developers.google.com/android/management/provision-device#nfc_method) [Ile C tabanlı Android kurumsal cihaz kaydı](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) .
+NFC 'yi destekleyen cihazlar 6 ve üzeri için, özel olarak biçimlendirilmiş bir NFC etiketi oluşturarak cihazlarınızı sağlayabilirsiniz. Kendi uygulamanızı veya NFC etiketi oluşturan bir araç kullanabilirsiniz. Daha fazla bilgi için, bkz. Microsoft Intune ve [Google 'ın Android yönetim API 'si belgeleri](https://developers.google.com/android/management/provision-device#nfc_method) [Ile C tabanlı Android kurumsal cihaz kaydı](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) .
 
 ## <a name="enroll-by-using-a-token"></a>Belirteç kullanarak kaydetme
 
