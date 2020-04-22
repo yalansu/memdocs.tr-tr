@@ -1,0 +1,126 @@
+- name: Uygulama yönetimi belgeleri
+  href: index.yml
+- name: Anlama ve keşfetme
+  items:
+    - name: Giriş
+      href: understand/introduction-to-application-management.md
+- name: Kullanmaya başlayın
+  items:
+    - name: Uygulama oluşturma ve dağıtma
+      href: get-started/create-and-deploy-an-application.md
+- name: Planlama ve tasarlama
+  items:
+    - name: Uygulama yönetimini planlama ve yapılandırma
+      href: plan-design/plan-for-and-configure-application-management.md
+    - name: Yazılım Merkezini planlama
+      href: plan-design/plan-for-software-center.md
+    - name: Güvenlik ve gizlilik
+      href: plan-design/security-and-privacy-for-application-management.md
+- name: Dağıtma ve kullanma
+  items:
+    - name: Uygulama oluşturma
+      href: deploy-use/create-applications.md
+      items:
+        - name: Mac bilgisayar uygulamaları oluşturma
+          href: get-started/creating-mac-computer-applications.md
+        - name: Windows uygulamaları oluşturma
+          href: get-started/creating-windows-applications.md
+        - name: Linux ve UNIX sunucu uygulamaları oluşturma
+          href: get-started/creating-linux-and-unix-server-applications.md
+        - name: Windows Embedded uygulamaları oluşturma
+          href: get-started/creating-windows-embedded-applications.md
+        - name: Genel koşullar oluşturma
+          href: deploy-use/create-global-conditions.md
+        - name: Uygulama grupları oluşturma
+          href: deploy-use/create-app-groups.md
+        - name: Paketler ve programlar
+          href: deploy-use/packages-and-programs.md
+        - name: Paket tanımı dosyaları
+          href: deploy-use/package-definition-files.md
+    - name: Uygulamaları dağıtma
+      items:
+        - name: Uygulamaları dağıtma
+          href: deploy-use/deploy-applications.md
+        - name: Aşamalı dağıtım oluşturma
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+        - name: Uygulamaları onaylama
+          href: deploy-use/app-approval.md
+        - name: Bir cihaza uygulama yükleme
+          href: deploy-use/install-app-for-device.md
+        - name: Uygulama paylaşma
+          href: deploy-use/share-applications.md
+        - name: Uygulama dağıtımlarının simülasyonunu yapma
+          href: deploy-use/simulate-application-deployments.md
+        - name: Microsoft Edge sürüm 77 ve üzerini dağıtma
+          href: deploy-use/deploy-edge.md
+        - name: App-V sanal uygulamalarını dağıtma
+          href: get-started/deploying-app-v-virtual-applications.md
+        - name: Uygulama dağıtımına yönelik sorun giderme ipuçları
+          href: deploy-use/troubleshoot-application-deployment.md
+    - name: Uygulama izleme
+      items:
+        - name: Uygulamaları konsoldan izleme
+          href: deploy-use/monitor-applications-from-the-console.md
+        - name: Aşamalı dağıtım izleme ve yönetme
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+        - name: Yazılım kullanım ölçümü ile uygulama kullanımını izleme
+          href: deploy-use/monitor-app-usage-with-software-metering.md
+    - name: Uygulamaları yönetme
+      items:
+        - name: Yönetim görevleri
+          href: deploy-use/management-tasks-applications.md
+        - name: Kullanıcı aygıtı benzeşimi
+          href: deploy-use/link-users-and-devices-with-user-device-affinity.md
+        - name: İş ve Eğitim İçin Microsoft Store
+          href: deploy-use/manage-apps-from-the-windows-store-for-business.md
+        - name: App-V sanal ortamları
+          href: deploy-use/create-app-v-virtual-environments.md
+        - name: Uygulamaları içeri ve dışarı aktarma
+          href: deploy-use/import-export-applications.md
+    - name: Uygulamaları güncelleştirme ve devre dışı bırakma
+      items:
+        - name: Uygulamaları güncelleştirme ve devre dışı bırakma
+          href: deploy-use/update-and-retire-applications.md
+        - name: Uygulamaları gözden geçirme ve değiştirme
+          href: deploy-use/revise-and-supersede-applications.md
+        - name: Uygulama kaldırma
+          href: deploy-use/uninstall-applications.md
+    - name: Betik çalıştırma ve yönetme
+      href: deploy-use/create-deploy-scripts.md
+      items:
+        - name: PowerShell betik güvenliği hakkında bilgi edinme
+          href: deploy-use/learn-script-security.md
+    - name: Paket Dönüştürme Yöneticisi
+      items:
+        - name: Paket Dönüştürme Yöneticisi için Plan Yapma
+          href: pcm/package-conversion-manager.md
+        - name: Paketleri analiz etme ve dönüştürme
+          href: pcm/how-to-analyze-and-convert.md
+- name: Sorun giderme
+  items:
+    - name: Uygulama dağıtımları sorunlarını giderme
+      items:
+        - name: Başlamadan önce
+          href: understand/app-deployment-technical-reference.md
+        - name: Uygulama dağıtımı ilkesi
+          href: understand/deployment-policy-technical-reference.md
+        - name: Cihazlar için uygulama dağıtımı
+          href: understand/device-deployment-technical-reference.md
+        - name: Kullanıcılar için uygulama dağıtımı
+          href: understand/user-deployment-technical-reference.md
+        - name: Uygulama dağıtımı istemci bileşenleri
+          href: understand/client-components-technical-reference.md
+        - name: Uygulama değerlendirmesi
+          href: understand/deployment-evaluation-technical-reference.md
+        - name: Uygulama indirme
+          href: understand/deployment-download-technical-reference.md
+        - name: Uygulama yükleme
+          href: understand/deployment-install-technical-reference.md
+    - name: İş ve Eğitim İçin Microsoft Store tümleştirme sorunlarını giderme
+      href: deploy-use/troubleshoot-microsoft-store-for-business-integration.md
+    - name: Paket Dönüştürme Yöneticisi sorunlarını giderme
+      items:
+        - name: Paket Dönüştürme Yöneticisi sorunlarını giderme
+          href: pcm/troubleshoot-pcm.md
+        - name: Paket Dönüştürme Yöneticisi hata iletileri
+          href: pcm/error-messages.md

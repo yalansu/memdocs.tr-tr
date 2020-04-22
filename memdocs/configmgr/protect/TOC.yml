@@ -1,0 +1,144 @@
+- name: Verileri ve altyapıyı koruma belgeleri
+  href: index.yml
+- name: Anlama ve keşfetme
+  items:
+    - name: Genel bakış
+      href: understand\protect-data-and-site-infrastructure.md
+- name: Planlama ve tasarlama
+  items:
+    - name: Endpoint Protection için planlama
+      href: plan-design/planning-for-endpoint-protection.md
+    - name: BitLocker yönetimi için planlama
+      href: plan-design/bitlocker-management.md
+    - name: Sertifika profillerini planlama
+      items:
+        - name: Sertifika profili önkoşulları
+          href: plan-design/prerequisites-for-certificate-profiles.md
+        - name: Sertifika profilleri için sertifika şablonu izinleri
+          href: plan-design/planning-for-certificate-template-permissions.md
+    - name: Wi-Fi ve VPN profili önkoşulları
+      href: plan-design/prerequisites-for-wifi-vpn-profiles.md
+    - name: Güvenlik ve gizlilik
+      items:
+        - name: Wi-Fi ve VPN profilleri
+          href: plan-design/security-and-privacy-for-wifi-vpn-profiles.md
+        - name: Sertifika profilleri
+          href: plan-design/security-and-privacy-for-certificate-profiles.md
+- name: Dağıtma ve kullanma
+  items:
+    - name: Uç Nokta Koruma
+      items:
+        - name: Endpoint Protection'a genel bakış
+          href: deploy-use/endpoint-protection.md
+        - name: Endpoint Protection'ı yapılandırma
+          items:
+            - name: Endpoint Protection yapılandırması
+              href: deploy-use/endpoint-protection-configure.md
+            - name: Site sistemi rolü
+              href: deploy-use/endpoint-protection-site-role.md
+            - name: Uyarılar
+              href: deploy-use/endpoint-configure-alerts.md
+            - name: Tanım güncelleştirmeleri
+              items:
+                - name: Tanım güncelleştirmelerine genel bakış
+                  href: deploy-use/endpoint-definition-updates.md
+                - name: ConfigMgr güncelleştirmeleri
+                  href: deploy-use/endpoint-definitions-configmgr.md
+                - name: WSUS güncelleştirmeleri
+                  href: deploy-use/endpoint-definitions-wsus.md
+                - name: Microsoft güncelleştirmeleri
+                  href: deploy-use/endpoint-definitions-microsoft-updates.md
+                - name: Kötü Amaçlı Yazılımdan Koruma Merkezi
+                  href: deploy-use/endpoint-definitions-protection-center.md
+                - name: Ağ paylaşımı güncelleştirmeleri
+                  href: deploy-use/endpoint-definitions-network.md
+            - name: İlke dağıtma
+              href: deploy-use/endpoint-antimalware-policies.md
+            - name: İstemciyi yapılandırma
+              href: deploy-use/endpoint-protection-configure-client.md
+        - name: Windows Güvenlik Duvarı ilkeleri
+          href: deploy-use/create-windows-firewall-policies.md
+        - name: Microsoft Defender Gelişmiş Tehdit Koruması
+          href: deploy-use/windows-defender-advanced-threat-protection.md
+        - name: Açıktan koruma ilkesi oluşturma ve dağıtma
+          href: deploy-use/create-deploy-exploit-guard-policy.md
+        - name: Uygulama Koruma ilkesi oluşturma ve dağıtma
+          href: deploy-use/create-deploy-application-guard-policy.md
+        - name: Windows Defender Uygulama Denetimi ayarları
+          href: deploy-use/use-device-guard-with-configuration-manager.md
+        - name: Kötü amaçlı yazılımdan koruma yazılımı ve güvenlik duvarı görevleri
+          href: deploy-use/endpoint-antimalware-firewall.md
+        - name: Endpoint Protection senaryoları
+          href: deploy-use/scenarios-endpoint-protection.md
+        - name: Endpoint Protection istemci yardımı
+          href: deploy-use/endpoint-protection-client-help.md
+        - name: Sorun giderme istemcisi
+          href: deploy-use/troubleshoot-endpoint-client.md
+        - name: Windows Defender Hakkında SSS
+          href: deploy-use/endpoint-protection-client-faq.md
+    - name: BitLocker yönetimi
+      items:
+        - name: Kurtarma verilerini şifreleme
+          href: deploy-use/bitlocker/encrypt-recovery-data.md
+        - name: BitLocker yönetimini dağıtma
+          href: deploy-use/bitlocker/deploy-management-agent.md
+        - name: BitLocker portallarını ayarlama
+          href: deploy-use/bitlocker/setup-websites.md
+        - name: Self servis portalı özelleştirme
+          href: deploy-use/bitlocker/customize-self-service-portal.md
+        - name: BitLocker raporlarını görüntüleme
+          href: deploy-use/bitlocker/view-reports.md
+        - name: Yönetim ve web sitesini izleme
+          href: deploy-use/bitlocker/helpdesk-portal.md
+        - name: Self servis portalı
+          href: deploy-use/bitlocker/self-service-portal.md
+    - name: İş İçin Windows Hello ayarları
+      href: deploy-use/windows-hello-for-business-settings.md
+    - name: Sertifika profilleri
+      items:
+        - name: Sertifika profillerine giriş
+          href: deploy-use/introduction-to-certificate-profiles.md
+        - name: Sertifika profilleri oluşturma
+          href: deploy-use/create-certificate-profiles.md
+        - name: Sertifika altyapısını yapılandırma
+          href: deploy-use/certificate-infrastructure.md
+    - name: Wi-Fi profilleri
+      items:
+        - name: Wi-Fi profilleri oluşturma
+          href: deploy-use/create-wifi-profiles.md
+    - name: VPN profilleri
+      items:
+        - name: VPN profilleri
+          href: deploy-use/vpn-profiles.md
+        - name: VPN profilleri oluşturma
+          href: deploy-use/create-vpn-profiles.md
+        - name: Uygulama başına VPN için bir paket aile adı (PFN) bulma
+          href: deploy-use/find-a-pfn-for-per-app-vpn.md
+    - name: 'Wi-Fi, VPN, e-posta ve sertifika profilleri dağıtma'
+      href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
+    - name: Hüküm ve koşullar ayarları
+      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
+    - name: Korumayı izleme
+      items:
+        - name: 'Wi-Fi, e-posta ve VPN profillerini izleme'
+          href: deploy-use/monitor-wifi-email-vpn-profiles.md
+        - name: Sertifika profillerini izleme
+          href: deploy-use/monitor-certificate-profiles.md
+        - name: Endpoint Protection'ı izleme
+          href: deploy-use/monitor-endpoint-protection.md
+- name: Teknik başvuru
+  items:
+    - name: BitLocker yönetimi
+      items:
+        - name: Ayarlar başvurusu
+          href: tech-ref/bitlocker/settings.md
+        - name: BitLocker sorunlarını giderme
+          href: tech-ref/bitlocker/troubleshoot.md
+        - name: BitLocker olay günlükleri
+          href: tech-ref/bitlocker/about-event-logs.md
+        - name: İstemci olay günlükleri
+          href: tech-ref/bitlocker/client-event-logs.md
+        - name: Sunucu olay günlükleri
+          href: tech-ref/bitlocker/server-event-logs.md
+        - name: Uyumsuzluk kodları
+          href: tech-ref/bitlocker/non-compliance-codes.md

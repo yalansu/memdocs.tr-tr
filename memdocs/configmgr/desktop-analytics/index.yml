@@ -1,0 +1,54 @@
+### YamlMime:Landing
+title: Desktop Analytics belgeleri
+summary: Desktop Analytics, Configuration Manager ile tümleşen bir bulut hizmetidir. Windows istemcilerinizi güncelleştirmenize yardımcı olacak içgörüler sağlar.
+metadata:
+  title: Desktop Analytics belgeleri
+  titleSuffix: Configuration Manager
+  description: Desktop Analytics, Configuration Manager ile tümleşen bir bulut hizmetidir. Windows istemcilerinizi güncelleştirmenize yardımcı olacak içgörüler sağlar.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-analytics
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 1c0aa1c481acb18fadeebbdecdcd4759568d2242
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741417"
+landingContent:
+- title: Desktop Analytics hakkında
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Desktop Analytics nedir?
+      url: overview.md
+    - text: Yenilikler
+      url: whats-new.md
+  - linkListType: tutorial
+    links:
+    - text: Pilot Windows 10
+      url: tutorial-windows10.md
+- title: Kullanmaya başlayın
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Desktop Analytics’i ayarlama
+      url: set-up.md
+    - text: Configuration Manager’ı bağlama
+      url: connect-configmgr.md
+    - text: Cihazları kaydetme
+      url: enroll-devices.md
+- title: Kaynaklar
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Desktop Analytics hakkında SSS
+      url: faq.md
+    - text: Veri paylaşımını etkinleştirme
+      url: enable-data-sharing.md
+    - text: Bağlantı durumunu izleme
+      url: monitor-connection-health.md
+    - text: Desktop Analytics sorunlarını giderme
+      url: troubleshooting.md

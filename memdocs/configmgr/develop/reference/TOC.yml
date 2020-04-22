@@ -1,0 +1,2532 @@
+- name: Configuration Manager API başvurusu
+  href: configuration-manager-reference.md
+- name: Sınıf ve özellik niteleyicileri
+  href: misc/class-and-property-qualifiers.md
+- name: SMS_WhatsNewFeature sunucusu WMI sınıfı
+  href: misc/sms_whatsnewfeature-server-wmi-class.md
+  items:
+    - name: GetFeatures yöntemi
+      href: misc/getfeatures-method-in-class-sms_whatsnewfeature.md
+- name: SMS_WhatsNewScenario sunucusu WMI sınıfı
+  href: misc/sms_whatsnewscenario-server-wmi-class.md
+- name: Uyarı sistemi sunucusu WMI sınıfları
+  items:
+    - name: SMS_Alert sunucusu WMI sınıfı
+      href: core/servers/manage/sms_alert-server-wmi-class.md
+      items:
+        - name: Close yöntemi
+          href: core/servers/manage/close-method-in-class-sms_alert.md
+    - name: SMS_AlertBase sunucusu WMI sınıfı
+      href: core/servers/manage/sms_alertbase-server-wmi-class.md
+    - name: SMS_AlertEmailTemplate sunucusu WMI sınıfı
+      href: core/servers/manage/sms_alertemailtemplate-server-wmi-class.md
+    - name: SMS_AlertEvent sunucusu WMI sınıfı
+      href: core/servers/manage/sms_alertevent-server-wmi-class.md
+    - name: SMS_CHAlert sunucusu WMI sınıfı
+      href: core/servers/manage/sms_chalert-server-wmi-class.md
+      items:
+        - name: Close yöntemi
+          href: core/servers/manage/close-method-in-class-sms_chalert.md
+    - name: SMS_EPAlert sunucusu WMI sınıfı
+      href: core/servers/manage/sms_epalert-server-wmi-class.md
+      items:
+        - name: Close yöntemi
+          href: core/servers/manage/close-method-in-class-sms_epalert.md
+    - name: SMS_Subscription sunucusu WMI sınıfı
+      href: core/servers/manage/sms_subscription-server-wmi-class.md
+      items:
+        - name: GetAvailableLanguages yöntemi
+          href: core/servers/manage/getavailablelanguages-method-in-class-sms_subscription.md
+        - name: GetTestSmtpConnectionResult yöntemi
+          href: core/servers/manage/gettestsmtpconnectionresult-method-in-class-sms_subscription.md
+        - name: TestSmtpConnection yöntemi
+          href: core/servers/manage/testsmtpconnection-method-in-class-sms_subscription.md
+- name: Alternatif içerik sağlayıcı (ACP) sınıfları
+  items:
+    - name: CCM_CONTENTFLAG numaralandırması
+      href: core/servers/configure/ccm_contentflag-enumeration.md
+    - name: CCM_DTS_PRIORITY numaralandırması
+      href: core/servers/configure/ccm_dts_priority-enumeration.md
+    - name: CCM_DTS_FLAG numaralandırması
+      href: core/servers/configure/ccm_dts_flag-enumeration.md
+    - name: İlerleme türleri
+      href: core/servers/configure/progress-types.md
+    - name: CCM_CTM_JobStateEx4 sınıfı
+      href: core/servers/configure/ccm_ctm_jobstateex4-class.md
+    - name: CCM_Download_Provider WMI sınıfı
+      href: core/servers/configure/ccm_download_provider-wmi-class.md
+    - name: SendNotifyErrorToCTM yöntemi
+      href: core/servers/configure/sendnotifyerrortoctm-method.md
+    - name: SendNotifyProgressToCTM yöntemi
+      href: core/servers/configure/sendnotifyprogresstoctm-method.md
+    - name: SendNotifySuccessToCTM yöntemi
+      href: core/servers/configure/sendnotifysuccesstoctm-method.md
+    - name: ICcmAlternateDowloadProvider arabirimi
+      href: core/servers/configure/iccmalternatedowloadprovider-interface.md
+      items:
+        - name: CancelJob yöntemi
+          href: core/servers/configure/iccmalternatedownloadprovider---canceljob-method.md
+        - name: DownloadContent yöntemi
+          href: core/servers/configure/iccmalternatedownloadprovider---downloadcontent-method.md
+        - name: ModifyJobPriority yöntemi
+          href: core/servers/configure/iccmalternatedownloadprovider---modifyjobpriority-method.md
+        - name: ModifyJobSource yöntemi
+          href: core/servers/configure/iccmalternatedownloadprovider---modifyjobsource-method.md
+        - name: ModifyJobTimeout yöntemi
+          href: core/servers/configure/iccmalternatedownloadprovider---modifyjobtimeout-method.md
+        - name: Resume yöntemi
+          href: core/servers/configure/iccmalternatedownloadprovider---resume-method.md
+        - name: Suspend yöntemi
+          href: core/servers/configure/iccmalternatedownloadprovider---suspend-method.md
+    - name: ICcmContentTransferManager4 arabirimi
+      href: core/servers/configure/iccmcontenttransfermanager4-interface.md
+- name: Uygulama yönetimi sunucusu WMI sınıfları
+  items:
+    - name: SMS_AppConflictsData sunucusu WMI sınıfı
+      href: apps/sms_appconflictsdata-server-wmi-class.md
+    - name: SMS_AppDependencyData sunucusu WMI sınıfı
+      href: apps/sms_appdependencydata-server-wmi-class.md
+    - name: SMS_AppDeploymentAssetDetails sunucusu WMI sınıfı
+      href: apps/sms_appdeploymentassetdetails-server-wmi-class.md
+    - name: SMS_AppDeploymentErrorAssetDetails sunucusu WMI sınıfı
+      href: apps/sms_appdeploymenterrorassetdetails-server-wmi-class.md
+    - name: SMS_AppDeploymentErrorStatus sunucusu WMI sınıfı
+      href: apps/sms_appdeploymenterrorstatus-server-wmi-class.md
+    - name: SMS_AppDeploymentRequirementsNotMetAssetDetails sunucusu WMI sınıfı
+      href: apps/sms_appdeploymentrequirementsnotmetassetdetails-server-wmi-class.md
+    - name: SMS_AppDeploymentRequirementsNotMetStatus sunucusu WMI sınıfı
+      href: apps/sms_appdeploymentrequirementsnotmetstatus-server-wmi-class.md
+    - name: SMS_AppDeploymentStatus sunucusu WMI sınıfı
+      href: apps/sms_appdeploymentstatus-server-wmi-class.md
+    - name: SMS_AppDTDeploymentSummary sunucusu WMI sınıfı
+      href: apps/sms_appdtdeploymentsummary-server-wmi-class.md
+    - name: SMS_AppFailedVEsData sunucusu WMI sınıfı
+      href: apps/sms_appfailedvesdata-server-wmi-class.md
+    - name: SMS_Application sunucusu WMI sınıfı
+      href: apps/sms_application-server-wmi-class.md
+      items:
+        - name: GetCIDocumentBody yöntemi
+          href: apps/getcidocumentbody-method-in-class-sms_application.md
+        - name: GetCIDocuments yöntemi
+          href: apps/getcidocuments-method-in-class-sms_application.md
+        - name: InitiateUserInstall yöntemi
+          href: apps/initiateuserinstall-method-in-class-sms_application.md
+        - name: ManageDeploymentForDevice yöntemi
+          href: apps/managedeploymentfordevice-method-in-class-sms_application.md
+        - name: Restore yöntemi
+          href: apps/restore-method-in-class-sms_application.md
+        - name: SetIsExpired yöntemi
+          href: apps/setisexpired-method-in-class-sms_application.md
+        - name: UpdateStats yöntemi
+          href: apps/updatestats-method-in-class-sms_application.md
+    - name: SMS_ApplicationAssignment sunucusu WMI sınıfı
+      href: apps/sms_applicationassignment-server-wmi-class.md
+    - name: SMS_ApplicationCondition sunucusu WMI sınıfı
+      href: apps/sms_applicationcondition-server-wmi-class.md
+    - name: SMS_ApplicationLatest sunucusu WMI sınıfı
+      href: apps/sms_applicationlatest-server-wmi-class.md
+      items:
+        - name: SetIsExpired methodLatest
+          href: apps/setisexpired-method-in-class-sms_applicationlatest.md
+        - name: UpdateStats methodLatest
+          href: apps/updatestats-method-in-class-sms_applicationlatest.md
+    - name: SMS_ApplicationPublishingItem sunucusu WMI sınıfı
+      href: apps/sms_applicationpublishingitem-server-wmi-class.md
+    - name: SMS_ApplicationTechnology sunucusu WMI sınıfı
+      href: apps/sms_applicationtechnology-server-wmi-class.md
+    - name: SMS_AppRelation_Flat sunucusu WMI sınıfı
+      href: apps/sms_apprelation_flat-server-wmi-class.md
+    - name: SMS_AppRequirementsData sunucusu WMI sınıfı
+      href: apps/sms_apprequirementsdata-server-wmi-class.md
+    - name: SMS_CIDeploymentUnknownAssetDetails sunucusu WMI sınıfı
+      href: apps/sms_cideploymentunknownassetdetails-server-wmi-class.md
+    - name: SMS_CIDeploymentUnknownStatus sunucusu WMI sınıfı
+      href: apps/sms_cideploymentunknownstatus-server-wmi-class.md
+    - name: SMS_DeploymentInfo sunucusu WMI sınıfı
+      href: apps/sms_deploymentinfo-server-wmi-class.md
+      items:
+        - name: GetDeployments yöntemi
+          href: apps/getdeployments-method-in-class-sms_deployment_info.md
+    - name: SMS_DeploymentInfoFlat sunucusu WMI sınıfı
+      href: apps/sms_deploymentinfoflat-server-wmi-class.md
+    - name: SMS_DeploymentSummary sunucusu WMI sınıfı
+      href: apps/sms_deploymentsummary-server-wmi-class.md
+      items:
+        - name: UpdateClassicDeployment yöntemi
+          href: apps/updateclassicdeployment-method-in-class-sms_deploymentsummary.md
+        - name: UpdateDeployment yöntemi
+          href: apps/updatedeployment-method-in-class-sms_deploymentsummary.md
+    - name: SMS_DeploymentType sunucusu WMI sınıfı
+      href: apps/sms_deploymenttype-server-wmi-class.md
+      items:
+        - name: DistributeDeploymentTypeExtension yöntemi
+          href: apps/distributedeploymenttypeextension-method-in-class-sms_deploymenttype.md
+    - name: SMS_DeploymentTypeLicenseAssociation sunucusu WMI sınıfı
+      href: apps/sms_deploymenttypelicenseassociation-server-wmi-class.md
+      items:
+        - name: AddLicense yöntemi
+          href: apps/addlicense-method-in-class-sms_deploymenttypelicenseassociation.md
+    - name: SMS_G_System_AppClientState sunucusu WMI sınıfı
+      href: apps/sms_g_system_appclientstate-server-wmi-class.md
+    - name: SMS_G_SYSTEM_DCMDeploymentCompliantAssetDetails sunucusu WMI sınıfı
+      href: apps/sms_g_system_dcmdeploymentcompliantassetdetails-server-wmi-class.md
+    - name: SMS_G_SYSTEM_DCMDeploymentErrorAssetDetails sunucusu WMI sınıfı
+      href: apps/sms_g_system_dcmdeploymenterrorassetdetails-server-wmi-class.md
+    - name: SMS_G_SYSTEM_DCMDeploymentNonCompliantAssetDetails sunucusu WMI sınıfı
+      href: apps/sms_g_system_dcmdeploymentnoncompliantassetdetails-server-wmi-class.md
+    - name: SMS_G_USER_DCMDeploymentCompliantAssetDetails sunucusu WMI sınıfı
+      href: apps/sms_g_user_dcmdeploymentcompliantassetdetails-server-wmi-class.md
+    - name: SMS_G_USER_DCMDeploymentErrorAssetDetails sunucusu WMI sınıfı
+      href: apps/sms_g_user_dcmdeploymenterrorassetdetails-server-wmi-class.md
+    - name: SMS_G_USER_DCMDeploymentNonCompliantAssetDetails sunucusu WMI sınıfı
+      href: apps/sms_g_user_dcmdeploymentnoncompliantassetdetails-server-wmi-class.md
+    - name: SMS_GlobalCondition sunucusu WMI sınıfı
+      href: apps/sms_globalcondition-server-wmi-class.md
+    - name: SMS_LicensedVppApps sunucusu WMI sınıfı
+      href: apps/sms_licensedvppapps-server-wmi-class.md
+    - name: SMS_MAMStoreApplication sunucusu WMI sınıfı
+      href: apps/sms_mamstoreapplication-server-wmi-class.md
+    - name: SMS_UnManagedApps sunucusu WMI sınıfı
+      href: apps/sms_unmanagedapps-server-wmi-class.md
+    - name: SMS_UserApplicationRequest sunucusu WMI sınıfı
+      href: apps/sms_userapplicationrequest-server-wmi-class.md
+      items:
+        - name: Approve yöntemi
+          href: apps/approve-method-in-class-sms_userapplicationrequest.md
+        - name: Deny yöntemi
+          href: apps/deny-method-in-class-sms_userapplicationrequest.md
+    - name: SMS_UserApplicationRequestHistoryItem sunucusu WMI sınıfı
+      href: apps/sms_userapplicationrequesthistoryitem-server-wmi-class.md
+    - name: SMS_VirtualEnvironment sunucusu WMI sınıfları
+      href: apps/sms_virtualenvironment-server-wmi-classes.md
+- name: Varlık Yönetim Bilgileri sunucusu WMI sınıfları
+  items:
+    - name: SMS_AICategory sunucusu WMI sınıfı
+      href: core/clients/asset-intelligence/sms_aicategory-server-wmi-class.md
+      items:
+        - name: GetSummary yöntemi
+          href: core/clients/asset-intelligence/getsummary-method-in-class-sms_aicategory.md
+    - name: SMS_AIHardwareRequirements sunucusu WMI sınıfı
+      href: core/clients/asset-intelligence/sms_aihardwarerequirements-server-wmi-class.md
+      items:
+        - name: GetSummary yöntemi
+          href: core/clients/asset-intelligence/getsummary-method-in-class-sms_aihardwarerequirements.md
+    - name: SMS_AIMLSParser sunucusu WMI sınıfı
+      href: core/clients/asset-intelligence/sms_aimlsparser-server-wmi-class.md
+      items:
+        - name: GetStatus yöntemi
+          href: core/clients/asset-intelligence/getstatus-method-in-class-sms_aimlsparser.md
+        - name: GetSummary yöntemi
+          href: core/clients/asset-intelligence/getsummary-method-in-class-sms_aimlsparser.md
+        - name: Import yöntemi
+          href: core/clients/asset-intelligence/import-method-in-class-sms_aimlsparser.md
+    - name: SMS_AIProxy sunucusu WMI sınıfı
+      href: core/clients/asset-intelligence/sms_aiproxy-server-wmi-class.md
+      items:
+        - name: RequestCatalogUpdate yöntemi
+          href: core/clients/asset-intelligence/requestcatalogupdate-method-in-class-sms_aiproxy.md
+    - name: SMS_AISoftwareList sunucusu WMI sınıfı
+      href: core/clients/asset-intelligence/sms_aisoftwarelist-server-wmi-class.md
+      items:
+        - name: AddSoftwareHashData yöntemi
+          href: core/clients/asset-intelligence/addsoftwarehashdata-method-in-class-sms_aisoftwarelist.md
+        - name: GetCategorizationRequestText yöntemi
+          href: core/clients/asset-intelligence/getcategorizationrequesttext-method-in-class-sms_aisoftwarelist.md
+        - name: GetSummary yöntemi
+          href: core/clients/asset-intelligence/getsummary-method-in-class-sms_aisoftwarelist.md
+        - name: ResolveConflict yöntemi
+          href: core/clients/asset-intelligence/resolveconflict-method-in-class-sms_aisoftwarelist.md
+        - name: SetCategorizationRequest yöntemi
+          href: core/clients/asset-intelligence/setcategorizationrequest-method-in-class-sms_aisoftwarelist.md
+- name: İstemci sınıfları
+  items:
+    - name: Uygulama yönetimi istemci arabirimleri
+      href: core/clients/client-classes/application-management-client-interfaces.md
+      items:
+        - name: AppDetectState numaralandırması
+          href: core/clients/client-classes/appdetectstate-enumeration.md
+        - name: AppContentInfo yapısı
+          href: core/clients/client-classes/appcontentinfo-structure.md
+        - name: AppDeploymentTypeData yapısı
+          href: core/clients/client-classes/appdeploymenttypedata-structure.md
+        - name: AppDeploymentTypeItem yapısı
+          href: core/clients/client-classes/appdeploymenttypeitem-structure.md
+        - name: IAppContentExt arabirimi
+          href: core/clients/client-classes/iappcontentext-interface.md
+          items:
+            - name: IAppContentExt GetExcludedFileList
+              href: core/clients/client-classes/iappcontentext--getexcludedfilelist.md
+        - name: IAppManagementHandler arabirimi
+          href: core/clients/client-classes/iappmanagementhandler-interface.md
+          items:
+            - name: IAppManagementHandler CheckReconnectData metodu
+              href: core/clients/client-classes/iappmanagementhandler--checkreconnectdata-method.md
+            - name: IAppManagementHandler CompleteEnforcement metodu
+              href: core/clients/client-classes/iappmanagementhandler--completeenforcement-method.md
+            - name: IAppManagementHandler DiscoverApp metodu
+              href: core/clients/client-classes/iappmanagementhandler--discoverapp-method.md
+            - name: IAppManagementHandler EnforceApp metodu
+              href: core/clients/client-classes/iappmanagementhandler--enforceapp-method.md
+            - name: IAppManagementHandler EnumerateApps metodu
+              href: core/clients/client-classes/iappmanagementhandler--enumerateapps-method.md
+            - name: IAppManagementHandler GetPendingComponentList metodu
+              href: core/clients/client-classes/iappmanagementhandler--getpendingcomponentlist-method.md
+        - name: IAppManagementTypes arabirimi
+          href: core/clients/client-classes/iappmanagementtypes-interface.md
+          items:
+            - name: AppAction numaralandırması
+              href: core/clients/client-classes/appaction-enumeration.md
+    - name: Varlık Yönetim Bilgileri istemcisi WMI sınıfları
+      href: core/clients/client-classes/asset-intelligence-client-wmi-classes.md
+      items:
+        - name: SMS_AutoStartSoftware istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_autostartsoftware-client-wmi-class.md
+        - name: SMS_BrowserHelperObject istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_browserhelperobject-client-wmi-class.md
+        - name: SMS_InstalledExecutable istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_installedexecutable-client-wmi-class.md
+        - name: SMS_InstalledSoftware istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_installedsoftware-client-wmi-class.md
+        - name: SMS_InstalledSoftwareMS istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_installedsoftwarems-client-wmi-class.md
+        - name: SMS_Processor istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_processor-client-wmi-class.md
+        - name: SMS_SoftwareShortcut istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_softwareshortcut-client-wmi-class.md
+        - name: SMS_SoftwareTag istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_softwaretag-client-wmi-class.md
+        - name: SMS_SystemConsoleUsage istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_systemconsoleusage-client-wmi-class.md
+        - name: SMS_SystemConsoleUser istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_systemconsoleuser-client-wmi-class.md
+    - name: Configuration Manager istemci altyapısı
+      href: core/clients/client-classes/client-infrastructure.md
+      items:
+        - name: CCM_Messaging_Configuration istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_messaging_configuration-client-wmi-class.md
+        - name: CCM_Service_BITSConfiguration istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_service_bitsconfiguration-client-wmi-class.md
+        - name: CCM_Service_EndpointConfiguration istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_service_endpointconfiguration-client-wmi-class.md
+        - name: CCM_Service_GlobalConfiguration istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_service_globalconfiguration-client-wmi-class.md
+        - name: CCM_Service_HostedClass istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_service_hostedclass-client-wmi-class.md
+        - name: CCM_Service_IISConfiguration istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_service_iisconfiguration-client-wmi-class.md
+        - name: CCM_Service_SystemTaskConfiguration istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_service_systemtaskconfiguration-client-wmi-class.md
+        - name: SMS_Authority istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_authority-client-wmi-class.md
+        - name: SMS_Client istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_client-client-wmi-class.md
+          items:
+            - name: EvaluateMachinePolicy yöntemi
+              href: core/clients/client-classes/evaluatemachinepolicy-method-in-class-sms_client.md
+            - name: GetAssignedSite yöntemi
+              href: core/clients/client-classes/getassignedsite-method-in-class-sms_client.md
+            - name: RequestMachinePolicy yöntemi
+              href: core/clients/client-classes/requestmachinepolicy-method-in-class-sms_client.md
+            - name: ResetPolicy yöntemi
+              href: core/clients/client-classes/resetpolicy-method-in-class-sms_client.md
+            - name: SetAssignedSite yöntemi
+              href: core/clients/client-classes/setassignedsite-method-in-class-sms_client.md
+            - name: SetGlobalLoggingConfiguration yöntemi
+              href: core/clients/client-classes/setgloballoggingconfiguration-method-in-class-sms_client.md
+            - name: TriggerSchedule yöntemi
+              href: core/clients/client-classes/triggerschedule-method-in-class-sms_client.md
+        - name: SMS_LocalMP istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_localmp-client-wmi-class.md
+        - name: SMS_MPProxyInformation istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_mpproxyinformation-client-wmi-class.md
+        - name: SMS_PendingReRegistrationOnSiteReAssignment istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_pendingreregistrationonsitereassignment-client-wmi-class.md
+        - name: CCM_Policy istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_policy-client-wmi-class.md
+        - name: CCM_Policy_Action istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_policy_action-client-wmi-class.md
+        - name: CCM_Policy_ActionHandlerRegistration istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_policy_actionhandlerregistration-client-wmi-class.md
+        - name: CCM_Policy_Assignment istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_policy_assignment-client-wmi-class.md
+        - name: CCM_Policy_Assignment2 istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_policy_assignment2-client-wmi-class.md
+        - name: CCM_Policy_AuthorityData istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_policy_authoritydata-client-wmi-class.md
+        - name: CCM_Policy_Condition istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_policy_condition-client-wmi-class.md
+        - name: CCM_Policy_Config istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_policy_config-client-wmi-class.md
+        - name: CCM_Policy_EmbeddedObject istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_policy_embeddedobject-client-wmi-class.md
+        - name: CCM_Policy_Expression istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_policy_expression-client-wmi-class.md
+        - name: CCM_Policy_ExpressionHandlerRegistration istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_policy_expressionhandlerregistration-client-wmi-class.md
+        - name: CCM_Policy_Operator istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_policy_operator-client-wmi-class.md
+        - name: CCM_Policy_Policy istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_policy_policy-client-wmi-class.md
+        - name: CCM_Policy_Rule istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_policy_rule-client-wmi-class.md
+        - name: CCM_PolicyAgent_Configuration istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_policyagent_configuration-client-wmi-class.md
+    - name: Uyumluluk ayarları istemci arabirimleri
+      href: core/clients/client-classes/compliance-settings--dcm--client-interfaces.md
+      items:
+        - name: ICIINFO arabirimi
+          href: core/clients/client-classes/iciinfo-interface.md
+          items:
+            - name: ICIINFO GetCategory metodu
+              href: core/clients/client-classes/iciinfo--getcategory-method.md
+            - name: ICIINFO GetCategoryCount metodu
+              href: core/clients/client-classes/iciinfo--getcategorycount-method.md
+            - name: ICIINFO GetCIPresence metodu
+              href: core/clients/client-classes/iciinfo--getcipresence-method.md
+            - name: ICIINFO GetContextInfo metodu
+              href: core/clients/client-classes/iciinfo--getcontextinfo-method.md
+            - name: ICIINFO GetDependantPackages metodu
+              href: core/clients/client-classes/iciinfo--getdependantpackages-method.md
+            - name: ICIINFO GetDetailedComplianceInfo metodu
+              href: core/clients/client-classes/iciinfo--getdetailedcomplianceinfo-method.md
+            - name: ICIINFO GetEvalState metodu
+              href: core/clients/client-classes/iciinfo--getevalstate-method.md
+            - name: ICIINFO GetId metodu
+              href: core/clients/client-classes/iciinfo--getid-method.md
+            - name: ICIINFO GetJobState metodu
+              href: core/clients/client-classes/iciinfo--getjobstate-method.md
+            - name: ICIINFO GetLastEvalTime metodu
+              href: core/clients/client-classes/iciinfo--getlastevaltime-method.md
+            - name: ICIINFO GetProperty metodu
+              href: core/clients/client-classes/iciinfo--getproperty-method.md
+            - name: ICIINFO GetSdmTypeName metodu
+              href: core/clients/client-classes/iciinfo--getsdmtypename-method.md
+            - name: ICIINFO GetVersion metodu
+              href: core/clients/client-classes/iciinfo--getversion-method.md
+        - name: IDCMAgentCallback arabirimi
+          href: core/clients/client-classes/idcmagentcallback-interface.md
+          items:
+            - name: IDCMAgentCallback NotifyComplete metodu
+              href: core/clients/client-classes/idcmagentcallback--notifycomplete-method.md
+            - name: IDCMAgentCallback NotifyError metodu
+              href: core/clients/client-classes/idcmagentcallback--notifyerror-method.md
+            - name: IDCMAgentCallback NotifyProgress metodu
+              href: core/clients/client-classes/idcmagentcallback--notifyprogress-method.md
+        - name: IDCMSDK arabirimi
+          href: core/clients/client-classes/idcmsdk-interface.md
+          items:
+            - name: IDCMSDK EvaluateBaseline metodu
+              href: core/clients/client-classes/idcmsdk--evaluatebaseline-method.md
+            - name: IDCMSDK GetAssignedBaselines metodu
+              href: core/clients/client-classes/idcmsdk--getassignedbaselines-method.md
+            - name: IDCMSDK GetBaselineComplianceReport metodu
+              href: core/clients/client-classes/idcmsdk--getbaselinecompliancereport-method.md
+            - name: IDCMSDK GetBaselineInfo metodu
+              href: core/clients/client-classes/idcmsdk--getbaselineinfo-method.md
+            - name: IDCMSDK SetEvaluationCallback metodu
+              href: core/clients/client-classes/idcmsdk--setevaluationcallback-method.md
+        - name: CIDetectInfo yapısı
+          href: core/clients/client-classes/cidetectinfo-structure.md
+        - name: CIPackageInfo yapısı
+          href: core/clients/client-classes/cipackageinfo-structure.md
+        - name: CIEvalState numaralandırması
+          href: core/clients/client-classes/cievalstate-enumeration.md
+        - name: CIJobState numaralandırması
+          href: core/clients/client-classes/cijobstate-enumeration.md
+        - name: CIPresence numaralandırması
+          href: core/clients/client-classes/cipresence-enumeration.md
+    - name: Cihaz yönetimi istemcisi WMI sınıfları
+      href: core/clients/client-classes/device-management-client-wmi-classes.md
+      items:
+        - name: SMS_DmInvVersion istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_dminvversion-client-wmi-class.md
+        - name: SMS_ActiveSyncConnectedDevice istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_activesyncconnecteddevice-client-wmi-class.md
+        - name: SMS_ActiveSyncService istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_activesyncservice-client-wmi-class.md
+    - name: Stok aracısı istemcisi WMI sınıfları
+      href: core/clients/client-classes/inventory-agent-client-wmi-classes.md
+      items:
+        - name: CollectableFileItem istemcisi WMI sınıfı
+          href: core/clients/client-classes/collectablefileitem-client-wmi-class.md
+        - name: FileCollectionAction istemcisi WMI sınıfı
+          href: core/clients/client-classes/filecollectionaction-client-wmi-class.md
+        - name: FileSystemFile istemcisi WMI sınıfı
+          href: core/clients/client-classes/filesystemfile-client-wmi-class.md
+        - name: InventoryAction istemcisi WMI sınıfı
+          href: core/clients/client-classes/inventoryaction-client-wmi-class.md
+        - name: InventoryActionStatus istemcisi WMI sınıfı
+          href: core/clients/client-classes/inventoryactionstatus-client-wmi-class.md
+        - name: InventoryDataContext istemcisi WMI sınıfı
+          href: core/clients/client-classes/inventorydatacontext-client-wmi-class.md
+        - name: InventoryDataItem istemcisi WMI sınıfı
+          href: core/clients/client-classes/inventorydataitem-client-wmi-class.md
+        - name: SMS_MIFGroup istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_mifgroup-client-wmi-class.md
+        - name: SMS_Windows8Application istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_windows8application-client-wmi-class.md
+        - name: SMS_Windows8ApplicationUserInfo istemcisi WMI sınıfı
+          href: core/clients/client-classes/sms_windows8applicationuserinfo-client-wmi-class.md
+    - name: İşletim sistemi dağıtımı istemcisi COM otomasyon sınıfları
+      href: core/clients/client-classes/operating-system-deployment-client-com-automation-classes.md
+      items:
+        - name: ProgressUI istemcisi COM otomasyon sınıfı
+          href: core/clients/client-classes/progressui-client-com-automation-class.md
+          items:
+            - name: IProgressUI arabirimi
+              href: core/clients/client-classes/iprogressui-interface.md
+              items:
+                - name: IProgressUI CloseProgressDialog metodu
+                  href: core/clients/client-classes/iprogressui--closeprogressdialog-method.md
+                - name: IProgressUI ShowActionProgress metodu
+                  href: core/clients/client-classes/iprogressui--showactionprogress-method.md
+                - name: IProgressUI ShowErrorDialog metodu
+                  href: core/clients/client-classes/iprogressui--showerrordialog-method.md
+                - name: IProgressUI ShowMessage metodu
+                  href: core/clients/client-classes/iprogressui--showmessage-method.md
+                - name: IProgressUI ShowRebootDialog metodu
+                  href: core/clients/client-classes/iprogressui--showrebootdialog-method.md
+                - name: IProgressUI ShowSwapMediaDialog metodu
+                  href: core/clients/client-classes/iprogressui--showswapmediadialog-method.md
+                - name: IProgressUI ShowTSProgress metodu
+                  href: core/clients/client-classes/iprogressui--showtsprogress-method.md
+        - name: PxeAuthClass istemcisi COM otomasyon sınıfı
+          href: core/clients/client-classes/pxeauthclass-client-com-automation-class.md
+          items:
+            - name: IPxeAuthClass arabirimi
+              href: core/clients/client-classes/ipxeauthclass-interface.md
+              items:
+                - name: IPxeAuthClass CreateIdentity metodu
+                  href: core/clients/client-classes/ipxeauthclass--createidentity-method.md
+                - name: IPxeAuthClass ReadIdentity metodu
+                  href: core/clients/client-classes/ipxeauthclass--readidentity-method.md
+        - name: ITSEnvClass arabirimi
+          href: core/clients/client-classes/itsenvclass-interface.md
+          items:
+            - name: ITSEnvClass Clear metodu
+              href: core/clients/client-classes/itsenvclass--clear-method.md
+            - name: ITSEnvClass Create metodu
+              href: core/clients/client-classes/itsenvclass--create-method.md
+            - name: ITSEnvClass GetVariables metodu
+              href: core/clients/client-classes/itsenvclass--getvariables-method.md
+            - name: ITSEnvClass Value özelliği
+              href: core/clients/client-classes/itsenvclass--value-property.md
+    - name: Zamanlama istemcisi WMI sınıfları
+      href: core/clients/client-classes/scheduling-client-wmi-classes.md
+      items:
+        - name: CCM_Scheduler_History istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_scheduler_history-client-wmi-class.md
+        - name: CCM_Scheduler_ScheduledMessage istemcisi WMI sınıfı
+          href: core/clients/client-classes/ccm_scheduler_scheduledmessage-client-wmi-class.md
+- name: İstemci yapılandırma sunucusu WMI sınıfları
+  items:
+    - name: SMS_AdvancedAntimalwareSettings sunucusu WMI sınıfı
+      href: core/clients/config/sms_advancedantimalwaresettings-server-wmi-class.md
+    - name: SMS_AntimalwareAdvancedSettingsConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_antimalwareadvancedsettingsconfig-server-wmi-class.md
+    - name: SMS_AntimalwareConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_antimalwareconfig-server-wmi-class.md
+    - name: SMS_AntimalwareExcludedSettingsConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_antimalwareexcludedsettingsconfig-server-wmi-class.md
+    - name: SMS_AntimalwareRealtimeSettingsConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_antimalwarerealtimesettingsconfig-server-wmi-class.md
+    - name: SMS_AntimalwareScanConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_antimalwarescanconfig-server-wmi-class.md
+    - name: SMS_AntimalwareScanScheduleConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_antimalwarescanscheduleconfig-server-wmi-class.md
+    - name: SMS_AntimalwareSettings sunucusu WMI sınıfı
+      href: core/clients/config/sms_antimalwaresettings-server-wmi-class.md
+    - name: SMS_AntimalwareSettingsDefault sunucusu WMI sınıfı
+      href: core/clients/config/sms_antimalwaresettingsdefault-server-wmi-class.md
+    - name: SMS_AntimalwareSignatureUpdateConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_antimalwaresignatureupdateconfig-server-wmi-class.md
+    - name: SMS_AntimalwareSpynetConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_antimalwarespynetconfig-server-wmi-class.md
+    - name: SMS_AntimalwareThreatDefaultActionConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_antimalwarethreatdefaultactionconfig-server-wmi-class.md
+    - name: SMS_AntimalwareThreatOverrideActionConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_antimalwarethreatoverrideactionconfig-server-wmi-class.md
+    - name: SMS_ApplicationManagementAgentConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_applicationmanagementagentconfig-server-wmi-class.md
+    - name: SMS_BigGreenButtonConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_biggreenbuttonconfig-server-wmi-class.md
+    - name: SMS_BITS2Config sunucusu WMI sınıfı
+      href: core/clients/config/sms_bits2config-server-wmi-class.md
+    - name: SMS_ClientCommunicationConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_clientcommunicationconfig-server-wmi-class.md
+    - name: SMS_ClientResourcesConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_clientresourcesconfig-server-wmi-class.md
+    - name: SMS_ClientRestartAgentConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_clientrestartagentconfig-server-wmi-class.md
+    - name: SMS_ClientSettings sunucusu WMI sınıfı
+      href: core/clients/config/sms_clientsettings-server-wmi-class.md
+      items:
+        - name: CheckPortalUrl yöntemi
+          href: core/clients/config/checkportalurl-method-for-class-sms_clientsettings.md
+    - name: SMS_ClientSettingsAssignment sunucusu WMI sınıfı
+      href: core/clients/config/sms_clientsettingsassignment-server-wmi-class.md
+    - name: SMS_ClientSettingsBase sunucusu WMI sınıfı
+      href: core/clients/config/sms_clientsettingsbase-server-wmi-class.md
+    - name: SMS_ClientSettingsDefault sunucusu WMI sınıfı
+      href: core/clients/config/sms_clientsettingsdefault-server-wmi-class.md
+    - name: SMS_CloudAgentConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_cloudagentconfig-server-wmi-class.md
+    - name: SMS_ConfigMgrClientAgentConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_configmgrclientagentconfig-server-wmi-class.md
+    - name: SMS_DCMAgentConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_dcmagentconfig-server-wmi-class.md
+    - name: SMS_EndpointProtectionAgentConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_endpointprotectionagentconfig-server-wmi-class.md
+    - name: SMS_HardwareInventoryAgentConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_hardwareinventoryagentconfig-server-wmi-class.md
+    - name: SMS_MobileDeviceAgentConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_mobiledeviceagentconfig-server-wmi-class.md
+    - name: SMS_NetworkAccessAccountConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_networkaccessaccountconfig-server-wmi-class.md
+    - name: SMS_PolicyAgentConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_policyagentconfig-server-wmi-class.md
+    - name: SMS_PowerAgentConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_poweragentconfig-server-wmi-class.md
+    - name: SMS_RemoteToolsAgentConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_remotetoolsagentconfig-server-wmi-class.md
+    - name: SMS_SoftwareDistributionAgentConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_softwaredistributionagentconfig-server-wmi-class.md
+    - name: SMS_SoftwareInventoryAgentConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_softwareinventoryagentconfig-server-wmi-class.md
+    - name: SMS_SoftwareMeteringAgentConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_softwaremeteringagentconfig-server-wmi-class.md
+    - name: SMS_SoftwareUpdatesAgentConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_softwareupdatesagentconfig-server-wmi-class.md
+    - name: SMS_StateSystemConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_statesystemconfig-server-wmi-class.md
+    - name: SMS_TargetingAgentConfig sunucusu WMI sınıfı
+      href: core/clients/config/sms_targetingagentconfig-server-wmi-class.md
+- name: İstemci dağıtım sunucusu WMI sınıfları
+  items:
+    - name: SMS_ClientBaseline sunucusu WMI sınıfı
+      href: core/clients/deploy/sms_clientbaseline-server-wmi-class.md
+    - name: SMS_ClientBaselineItem sunucusu WMI sınıfı
+      href: core/clients/deploy/sms_clientbaselineitem-server-wmi-class.md
+    - name: SMS_ClientBaselineStatus sunucusu WMI sınıfı
+      href: core/clients/deploy/sms_clientbaselinestatus-server-wmi-class.md
+      items:
+        - name: GetClientBaselineStatusSummary yöntemi
+          href: core/clients/deploy/getclientbaselinestatussummary-method-in-class-sms_clientbaselinestatus.md
+    - name: SMS_ClientDataSourcesContent sunucusu WMI sınıfı
+      href: core/clients/deploy/sms_clientdatasourcescontent-server-wmi-class.md
+    - name: SMS_ClientDataSourcesContentStats sunucusu WMI sınıfı
+      href: core/clients/deploy/sms_clientdatasourcescontentstats-server-wmi-class.md
+    - name: SMS_ClientDataSourcesDeviceCounts sunucusu WMI sınıfı
+      href: core/clients/deploy/sms_clientdatasourcesdevicecounts-server-wmi-class.md
+    - name: SMS_ClientDataSourcesPolicy sunucusu WMI sınıfı
+      href: core/clients/deploy/sms_clientdatasourcespolicy-server-wmi-class.md
+    - name: SMS_ClientDeploymentCollectionBucket sunucusu WMI sınıfı
+      href: core/clients/deploy/sms_clientdeploymentcollectionbucket-server-wmi-class.md
+    - name: SMS_ClientDeploymentFailureBucket sunucusu WMI sınıfı
+      href: core/clients/deploy/sms_clientdeploymentfailurebucket-server-wmi-class.md
+    - name: SMS_ClientDeploymentStateDetailsView sunucusu WMI sınıfı
+      href: core/clients/deploy/sms_clientdeploymentstatedetailsview-server-wmi-class.md
+    - name: SMS_ClientPfxCertificate sunucusu WMI sınıfı
+      href: core/clients/deploy/sms_clientpfxcertificate-server-wmi-class.md
+      items:
+        - name: ImportForUser yöntemi
+          href: core/clients/deploy/importforuser-method-in-class-sms_clientpfxcertificate.md
+        - name: DeleteForUser yöntemi
+          href: core/clients/deploy/deleteforuser-method-in-class-sms_clientpfxcertificate.md
+- name: İstemci SDK WMI sınıfları
+  items:
+    - name: CCM_AppDeploymentType istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_appdeploymenttype-client-wmi-class.md
+      items:
+        - name: GetDeploymentTypeForUser yöntemi
+          href: core/clients/sdk/getdeploymenttypeforuser-method-in-class-ccm_appdeploymenttype.md
+        - name: GetProperty yöntemi
+          href: core/clients/sdk/getproperty-method-in-class-ccm_appdeploymenttype.md
+        - name: GetTargetedUsers yöntemi
+          href: core/clients/sdk/gettargetedusers-method-in-class-ccm_appdeploymenttype.md
+    - name: CCM_Application istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_application-client-wmi-class.md
+      items:
+        - name: Cancel yöntemi
+          href: core/clients/sdk/cancel-method-in-class-ccm_application.md
+        - name: DownloadContents yöntemi
+          href: core/clients/sdk/downloadcontents-method-in-class-ccm_application.md
+        - name: GetPendingComponentList yöntemi
+          href: core/clients/sdk/getpendingcomponentlist-method-in-class-ccm_application.md
+        - name: GetProperty yöntemi
+          href: core/clients/sdk/getproperty-method-in-class-ccm_application.md
+        - name: Install yöntemi
+          href: core/clients/sdk/install-method-in-class-ccm_application.md
+        - name: Uninstall yöntemi
+          href: core/clients/sdk/uninstall-method-in-class-ccm_application.md
+    - name: CCM_ApplicationActions istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_applicationactions-client-wmi-class.md
+    - name: CCM_ApplicationPolicy istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_applicationpolicy-client-wmi-class.md
+      items:
+        - name: EvaluateAllPolicies yöntemi
+          href: core/clients/sdk/evaluateallpolicies-method-in-class-ccm_applicationpolicy.md
+        - name: EvaluateAppPolicy yöntemi
+          href: core/clients/sdk/evaluateapppolicy-method-in-class-ccm_applicationpolicy.md
+        - name: GetEvaluationState yöntemi
+          href: core/clients/sdk/getevaluationstate-method-in-class-ccm_applicationpolicy.md
+    - name: CCM_CIEvaluationJob istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_cievaluationjob-client-wmi-class.md
+    - name: CCM_ClientAgentSettings istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_clientagentsettings-client-wmi-class.md
+    - name: CCM_ClientEvents istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_clientevents-client-wmi-class.md
+      items:
+        - name: StoreEvent yöntemi
+          href: core/clients/sdk/storeevent-method-in-class-ccm_clientevents.md
+    - name: CCM_ClientUtilities istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_clientutilities-client-wmi-class.md
+      items:
+        - name: DetermineIfRebootPending yöntemi
+          href: core/clients/sdk/determineifrebootpending-method-in-class-ccm_clientutilities.md
+        - name: GetMachinePolicy yöntemi
+          href: core/clients/sdk/getmachinepolicy-method-in-class-ccm_clientutilities.md
+        - name: GetNetworkCost yöntemi
+          href: core/clients/sdk/getnetworkcost-method-in-class-ccm_clientutilities.md
+        - name: GetUserCapability yöntemi
+          href: core/clients/sdk/getusercapability-method-in-class-ccm_clientutilities.md
+        - name: GetUserPolicy yöntemi
+          href: core/clients/sdk/getuserpolicy-method-in-class-ccm_clientutilities.md
+        - name: RestartComputer yöntemi
+          href: core/clients/sdk/restartcomputer-method-in-class-ccm_clientutilities.md
+    - name: CCM_ClientUXSettings istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_clientuxsettings-client-wmi-class.md
+      items:
+        - name: GetAutoInstallRequiredSoftwaretoNonBusinessHours yöntemi
+          href: core/clients/sdk/getautoinstallrequiredsoftwaretononbusinesshours-method.md
+        - name: GetBusinessHours yöntemi
+          href: core/clients/sdk/getbusinesshours-method-in-class-ccm_clientuxsettings.md
+        - name: GetSuppressComputerActivityInPresentationMode yöntemi
+          href: core/clients/sdk/getsuppresscomputeractivityinpresentationmode-method.md
+        - name: SetAutoInstallRequiredSoftwaretoNonBusinessHours yöntemi
+          href: core/clients/sdk/setautoinstallrequiredsoftwaretononbusinesshours-method.md
+        - name: SetBusinessHours yöntemi
+          href: core/clients/sdk/setbusinesshours-method-in-class-ccm_clientuxsettings.md
+        - name: SetSuppressComputerActivityInPresentationMode yöntemi
+          href: core/clients/sdk/setsuppresscomputeractivityinpresentationmode-method.md
+    - name: CCM_EvaluationState istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_evaluationstate-client-wmi-class.md
+    - name: CCM_InstalledDeploymentType istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_installeddeploymenttype-client-wmi-class.md
+    - name: CCM_InstanceEvent istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_instanceevent-client-wmi-class.md
+    - name: CCM_NetworkSettings istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_networksettings-client-wmi-class.md
+    - name: CCM_PowerManagementClientOptoutSetting istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_powermanagementclientoptoutsetting-client-wmi-class.md
+    - name: CCM_PowerManagementSettings istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_powermanagementsettings-client-wmi-class.md
+      items:
+        - name: SetPowerManagementSettings yöntemi
+          href: core/clients/sdk/setpowermanagementsettings-method-in-class-ccm_powermanagementsettings.md
+    - name: CCM_Program istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_program-client-wmi-class.md
+    - name: CCM_ProgramsManager istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_programsmanager-client-wmi-class.md
+      items:
+        - name: CancelDownload yöntemi
+          href: core/clients/sdk/canceldownload-method-in-class-ccm_programsmanager.md
+        - name: ExecuteProgram yöntemi
+          href: core/clients/sdk/executeprogram-method-in-class-ccm_programsmanager.md
+        - name: ExecutePrograms yöntemi
+          href: core/clients/sdk/executeprograms-method-in-class-ccm_programsmanager.md
+        - name: PostponeProgramsToNonBusinessHours yöntemi
+          href: core/clients/sdk/postponeprogramstononbusinesshours-method-in-class-ccm_programsmanager.md
+    - name: CCM_RemoteControlManager istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_remotecontrolmanager-client-wmi-class.md
+      items:
+        - name: GetRemCtrlSettings yöntemi
+          href: core/clients/sdk/getremctrlsettings-method-in-class-ccm_remotecontrolmanager.md
+        - name: SetRemCtrlSettings yöntemi
+          href: core/clients/sdk/setremctrlsettings-method-in-class-ccm_remotecontrolmanager.md
+    - name: CCM_RequestedAppPolicy istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_requested-apppolicy-client-wmi-class.md
+      items:
+        - name: QueueRequestedAppPolicy yöntemi
+          href: core/clients/sdk/queuerequestedapppolicy-method-in-class-ccm_requestedapppolicy.md
+    - name: CCM_RequestedAppPolicyActivation istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_requestedapppolicyactivation-client-wmi-class.md
+      items:
+        - name: QueueAppPolicyActivationAction yöntemi
+          href: core/clients/sdk/queueapppolicyactivationaction-method-in-class-ccm_requestedapppolicyactivation.md
+    - name: CCM_ServiceWindow istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_servicewindow-client-wmi-class.md
+    - name: CCM_ServiceWindowManager istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_servicewindowmanager-client-wmi-class.md
+      items:
+        - name: GetCurrentWindowAvailableTime yöntemi
+          href: core/clients/sdk/getcurrentwindowavailabletime-method-in-class-ccm_servicewindowmanager.md
+        - name: GetNextServiceWindowID yöntemi
+          href: core/clients/sdk/getnextservicewindowid-method-in-class-ccm_servicewindowmanager.md
+        - name: IsFutureWindowAvailable yöntemi
+          href: core/clients/sdk/isfuturewindowavailable-method-in-class-ccm_servicewindowmanager.md
+        - name: IsWindowAvailableNow yöntemi
+          href: core/clients/sdk/iswindowavailablenow-method-in-class-ccm_servicewindowmanager.md
+    - name: CCM_SoftwareBase istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_softwarebase-client-wmi-class.md
+    - name: CCM_SoftwareCatalogUtilities istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_softwarecatalogutilities-client-wmi-class.md
+      items:
+        - name: ApplyPolicyEx yöntemi
+          href: core/clients/sdk/applypolicyex-method-in-class-ccm_softwarecatalogutilities.md
+        - name: GetClientVersion yöntemi
+          href: core/clients/sdk/getclientversion-method-in-class-ccm_softwarecatalogutilities.md
+        - name: GetDeviceId yöntemi
+          href: core/clients/sdk/getdeviceid-method-in-class-ccm_softwarecatalogutilities.md
+        - name: GetPolicyState yöntemi
+          href: core/clients/sdk/getpolicystate-method-in-class-ccm_softwarecatalogutilities.md
+        - name: GetPortalUrlValue yöntemi
+          href: core/clients/sdk/getportalurlvalue-method-in-class-ccm_softwarecatalogutilities.md
+        - name: VerifySignature yöntemi
+          href: core/clients/sdk/verifysignature-method-in-class-ccm_softwarecatalogutilities.md
+    - name: CCM_SoftwareUpdate istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_softwareupdate-client-wmi-class.md
+    - name: CCM_SoftwareUpdatesManager istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_softwareupdatesmanager-client-wmi-class.md
+      items:
+        - name: CancelDownload yöntemi
+          href: core/clients/sdk/canceldownload-method-in-class-ccm_softwareupdatesmanager.md
+        - name: GetAllUpdatesUserExperience yöntemi
+          href: core/clients/sdk/getallupdatesuserexperience-method-in-class-ccm_softwareupdatesmanager.md
+        - name: InstallUpdates yöntemi
+          href: core/clients/sdk/installupdates-method-in-class-ccm_softwareupdatesmanager.md
+        - name: PostponeUpdatesToNonBusinessHours yöntemi
+          href: core/clients/sdk/postponeupdatestononbusinesshours-method-in-class-ccm_softwareupdatesmanager.md
+        - name: SetAllUpdatesUserExperience yöntemi
+          href: core/clients/sdk/setallupdatesuserexperience-method-in-class-ccm_softwareupdatesmanager.md
+    - name: CCM_UserLogonEvents istemcisi WMI sınıfı
+      href: core/clients/sdk/ccm_userlogonevents-client-wmi-class.md
+- name: İstemci durumu sunucusu WMI sınıfları
+  items:
+    - name: SMS_CH_CheckSummary sunucusu WMI sınıfı
+      href: core/clients/status/sms_ch_checksummary-server-wmi-class.md
+    - name: SMS_CH_EvalResult sunucusu WMI sınıfı
+      href: core/clients/status/sms_ch_evalresult-server-wmi-class.md
+    - name: SMS_CH_Settings sunucusu WMI sınıfı
+      href: core/clients/status/sms_ch_settings-server-wmi-class.md
+    - name: SMS_CH_SummaryCurrent sunucusu WMI sınıfı
+      href: core/clients/status/sms_ch_summarycurrent-server-wmi-class.md
+    - name: SMS_CH_SummaryHistory sunucusu WMI sınıfı
+      href: core/clients/status/sms_ch_summaryhistory-server-wmi-class.md
+    - name: SMS_CN_ClientStatus sunucusu WMI sınıfı
+      href: core/clients/status/sms_cn_clientstatus-server-wmi-class.md
+      items:
+        - name: GetOnlineCount yöntemi
+          href: core/clients/status/getonlinecount-method-in-class-sms_cn_clientstatus.md
+- name: Koleksiyonlar sunucusu WMI sınıfları
+  items:
+    - name: SMS_CM_RES_COLL_CollectionID sunucusu WMI sınıfı
+      href: core/clients/collections/sms_cm_res_coll_collectionid-server-wmi-class.md
+    - name: SMS_Collection sunucusu WMI sınıfı
+      href: core/clients/collections/sms_collection-server-wmi-class.md
+      items:
+        - name: AddMembershipRule yöntemi
+          href: core/clients/collections/addmembershiprule-method-in-class-sms_collection.md
+        - name: AddMembershipRules yöntemi
+          href: core/clients/collections/addmembershiprules-method-in-class-sms_collection.md
+        - name: ApproveClients yöntemi
+          href: core/clients/collections/approveclients-method-in-class-sms_collection.md
+        - name: BlockClients yöntemi
+          href: core/clients/collections/blockclients-method-in-class-sms_collection.md
+        - name: ChangeOwnership yöntemi
+          href: core/clients/collections/changeownership-method-in-class-sms_collection.md
+        - name: ClearDeploymentLocksForCollection yöntemi
+          href: core/clients/collections/cleardeploymentlocksforcollection-method-in-class-sms_collection.md
+        - name: ClearDeviceCategory yöntemi
+          href: core/clients/collections/cleardevicecategory-method-in-class-sms_collection.md
+        - name: ClearLastNBSAdvForCollection yöntemi
+          href: core/clients/collections/clearlastnbsadvforcollection-method-in-class-sms_collection.md
+        - name: ClearLastNBSAdvForMachines yöntemi
+          href: core/clients/collections/clearlastnbsadvformachines-method-in-class-sms_collection.md
+        - name: ClientEditions yöntemi
+          href: core/clients/collections/clienteditions-method-in-class-sms_collection.md
+        - name: CreateCCR yöntemi
+          href: core/clients/collections/createccr-method-in-class-sms_collection.md
+        - name: CreateCCRs yöntemi
+          href: core/clients/collections/createccrs-method-in-class-sms_collection.md
+        - name: DeleteAllMembers yöntemi
+          href: core/clients/collections/deleteallmembers-method-in-class-sms_collection.md
+        - name: DeleteMembershipRule yöntemi
+          href: core/clients/collections/deletemembershiprule-method-in-class-sms_collection.md
+        - name: DeleteMembershipRules yöntemi
+          href: core/clients/collections/deletemembershiprules-method-in-class-sms_collection.md
+        - name: FindResourceSite yöntemi
+          href: core/clients/collections/findresourcesite-method-in-class-sms_collection.md
+        - name: FindMachineSite yöntemi
+          href: core/clients/collections/findmachinesite-method-in-class-sms_collection.md
+        - name: GetNumResults yöntemi
+          href: core/clients/collections/getnumresults-method-in-class-sms_collection.md
+        - name: GenerateCCRByName yöntemi
+          href: core/clients/collections/generateccrbyname-method-in-class-sms_collecton.md
+        - name: GetTotalNumResults yöntemi
+          href: core/clients/collections/gettotalnumresults-method-in-class-sms_collection.md
+        - name: ReassignClientsToSite yöntemi
+          href: core/clients/collections/reassignclientstosite-method-in-class-sms_collection.md
+        - name: RequestRefresh yöntemi
+          href: core/clients/collections/requestrefresh-method-in-class-sms_collection.md
+        - name: SetDeviceCategory yöntemi
+          href: core/clients/collections/setdevicecategory-method-in-class-sms_collection.md
+        - name: SetMemberOrder yöntemi
+          href: core/clients/collections/setmemberorder-method-in-class-sms_collection.md
+        - name: UpdateVisibilityInEPDashBoard
+          href: core/clients/collections/updatevisibilityinepdashboard-in-class-sms_collection.md
+        - name: VerifyNoCircularDependencies yöntemi
+          href: core/clients/collections/verifynocirculardependencies-method-in-class-sms_collection.md
+    - name: SMS_CollectionBucket sunucusu WMI sınıfı
+      href: core/clients/collections/sms_collectionbucket-server-wmi-class.md
+    - name: SMS_CollectionDependencies sunucusu WMI sınıfı
+      href: core/clients/collections/sms_collectiondependencies-server-wmi-class.md
+    - name: SMS_CollectionMember sunucusu WMI sınıfı
+      href: core/clients/collections/sms_collectionmember-server-wmi-class.md
+    - name: SMS_CollectionMember_a sunucusu WMI sınıfı
+      href: core/clients/collections/sms_collectionmember_a-server-wmi-class.md
+    - name: SMS_CollectionPermission sunucusu WMI sınıfı
+      href: core/clients/collections/sms_collectionpermission-server-wmi-class.md
+    - name: SMS_CollectionRule sunucusu WMI sınıfı
+      href: core/clients/collections/sms_collectionrule-server-wmi-class.md
+    - name: SMS_CollectionRuleDirect sunucusu WMI sınıfı
+      href: core/clients/collections/sms_collectionruledirect-server-wmi-class.md
+    - name: SMS_CollectionRuleExcludeCollection sunucusu WMI sınıfı
+      href: core/clients/collections/sms_collectionruleexcludecollection-server-wmi-class.md
+    - name: SMS_CollectionRuleIncludeCollection sunucusu WMI sınıfı
+      href: core/clients/collections/sms_collectionruleincludecollection-server-wmi-class.md
+    - name: SMS_CollectionRuleQuery sunucusu WMI sınıfı
+      href: core/clients/collections/sms_collectionrulequery-server-wmi-class.md
+      items:
+        - name: ValidateQuery yöntemi
+          href: core/clients/collections/validatequery-method-in-class-sms_collectionrulequery.md
+    - name: SMS_CollectionSettings sunucusu WMI sınıfı
+      href: core/clients/collections/sms_collectionsettings-server-wmi-class.md
+    - name: SMS_CollectionToPkgAdvert_a sunucusu WMI sınıfı
+      href: core/clients/collections/sms_collectiontopkgadvert_a-server-wmi-class.md
+    - name: SMS_CombinedDeviceResources sunucusu WMI sınıfı
+      href: core/clients/collections/sms_combineddeviceresources-server-wmi-class.md
+    - name: SMS_CombinedResources sunucusu WMI sınıfı
+      href: core/clients/collections/sms_combinedresources-server-wmi-class.md
+    - name: SMS_CombinedUserResources sunucusu WMI sınıfı
+      href: core/clients/collections/sms_combineduserresources-server-wmi-class.md
+    - name: SMS_DirFullCollMem sunucusu WMI sınıfı
+      href: core/clients/collections/sms_dirfullcollmem-server-wmi-class.md
+    - name: SMS_FullCollectionMembership sunucusu WMI sınıfı
+      href: core/clients/collections/sms_fullcollectionmembership-server-wmi-class.md
+- name: Uyumluluk ayarları sunucusu WMI sınıfları
+  items:
+    - name: Uyumluluk ayarları sunucusu WMI sınıfları hakkında
+      href: compliance/compliance-settings-dcm-server-wmi-classes.md
+    - name: SMS_AdvancedThreatProtectionSettings sunucusu WMI sınıfı
+      href: compliance/sms_advancedthreatprotectionsettings-server-wmi-class.md
+    - name: SMS_BaselineAssignment sunucusu WMI sınıfı
+      href: compliance/sms_baselineassignment-server-wmi-class.md
+    - name: SMS_Category_LocalizedProperties sunucusu WMI sınıfı
+      href: compliance/sms_category_localizedproperties-server-wmi-class.md
+    - name: SMS_CategoryInstance sunucusu WMI sınıfı
+      href: compliance/sms_categoryinstance-server-wmi-class.md
+    - name: SMS_CategoryInstanceBase sunucusu WMI sınıfı
+      href: compliance/sms_categoryinstancebase-server-wmi-class.md
+    - name: SMS_CategoryInstanceMembership sunucusu WMI sınıfı
+      href: compliance/sms_categoryinstancemembership-server-wmi-class.md
+    - name: SMS_CI_ComplianceHistory sunucusu WMI sınıfı
+      href: compliance/sms_ci_compliancehistory-server-wmi-class.md
+    - name: SMS_CI_ComplianceSummary sunucusu WMI sınıfı
+      href: compliance/sms_ci_compliancesummary-server-wmi-class.md
+    - name: SMS_CI_CurrentComplianceStatus sunucusu WMI sınıfı
+      href: compliance/sms_ci_currentcompliancestatus-server-wmi-class.md
+    - name: SMS_CI_LocalizedEulas sunucusu WMI sınıfı
+      href: compliance/sms_ci_localizedeulas-server-wmi-class.md
+    - name: SMS_CI_LocalizedProperties sunucusu WMI sınıfı
+      href: compliance/sms_ci_localizedproperties-server-wmi-class.md
+    - name: SMS_CIAssignmentBaseClass sunucusu WMI sınıfı
+      href: compliance/sms_ciassignmentbaseclass-server-wmi-class.md
+    - name: SMS_CIAssignmentToCI sunucusu WMI sınıfı
+      href: compliance/sms_ciassignmenttoci-server-wmi-class.md
+    - name: SMS_CIRelation_Flat sunucusu WMI sınıfı
+      href: compliance/sms_cirelation_flat-server-wmi-class.md
+    - name: SMS_CIContentPackage sunucusu WMI sınıfı
+      href: compliance/sms_cicontentpackage-server-wmi-class.md
+    - name: SMS_CompliancePolicySettings sunucusu WMI sınıfı
+      href: compliance/sms_compliancepolicysettings-server-wmi-class.md
+    - name: SMS_ConfigurationBaselineInfo sunucusu WMI sınıfı
+      href: compliance/sms_configurationbaselineinfo-server-wmi-class.md
+    - name: SMS_ConfigurationItem sunucusu WMI sınıfı
+      href: compliance/sms_configurationitem-server-wmi-class.md
+      items:
+        - name: AcceptEULA yöntemi
+          href: compliance/accepteula-method-in-class-sms_configurationitem.md
+        - name: GetEULA yöntemi
+          href: compliance/geteula-method-in-class-sms_configurationitem.md
+        - name: GetSDMDefinition yöntemi
+          href: compliance/getsdmdefinition-method-in-class-sms_configurationitem.md
+        - name: SetEnforcement yöntemi
+          href: compliance/setenforcement-method-in-class-sms_configurationitem.md
+    - name: SMS_ConfigurationItemBaseClass sunucusu WMI sınıfı
+      href: compliance/sms_configurationitembaseclass-server-wmi-class.md
+    - name: SMS_ConfigurationItemLatestBaseClass sunucusu WMI sınıfı
+      href: compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md
+    - name: SMS_ConfigurationItemRules sunucusu WMI sınıfı
+      href: compliance/sms_configurationitemrules-server-wmi-class.md
+    - name: SMS_ConfigurationItemSettings sunucusu WMI sınıfı
+      href: compliance/sms_configurationitemsettings-server-wmi-class.md
+    - name: SMS_ConfigurationItemSettingReference sunucusu WMI sınıfı
+      href: compliance/sms_configurationitemsettingreference-server-wmi-class.md
+    - name: SMS_ConfigurationPlatform sunucusu WMI sınıfı
+      href: compliance/sms_configurationplatform-server-wmi-class.md
+    - name: SMS_ConfigurationPolicy sunucusu WMI sınıfı
+      href: compliance/sms_configurationpolicy-server-wmi-class.md
+      items:
+        - name: AcceptEULA yöntemi
+          href: compliance/accepteula-method-in-class-sms_configurationpolicy.md
+        - name: GetEULA yöntemi
+          href: compliance/geteula-method-in-class-sms_configurationpolicy.md
+    - name: SMS_ConfigurationPolicyAssignment sunucusu WMI sınıfı
+      href: compliance/sms_configurationpolicyassignment-server-wmi-class.md
+    - name: SMS_ConfigurationPolicyBase sunucusu WMI sınıfı
+      href: compliance/sms_configurationpolicybase-server-wmi-class.md
+      items:
+        - name: AcceptEULA yöntemi
+          href: compliance/accepteula-method-in-class-sms_configurationpolicybase.md
+        - name: GetEULA yöntemi
+          href: compliance/geteula-method-in-class-sms_configurationpolicybase.md
+    - name: SMS_DCMDeploymentCompliantAssetDetails sunucusu WMI sınıfı
+      href: compliance/sms_dcmdeploymentcompliantassetdetails-server-wmi-class.md
+    - name: SMS_DCMDeploymentCompliantDetailsPerAsset sunucusu WMI sınıfı
+      href: compliance/sms_dcmdeploymentcompliantdetailsperasset-server-wmi-class.md
+    - name: SMS_DCMDeploymentCompliantStatus sunucusu WMI sınıfı
+      href: compliance/sms_dcmdeploymentcompliantstatus-server-wmi-class.md
+    - name: SMS_DCMDeploymentErrorAssetDetails sunucusu WMI sınıfı
+      href: compliance/sms_dcmdeploymenterrorassetdetails-server-wmi-class.md
+    - name: SMS_DCMDeploymentErrorDetailsPerAsset sunucusu WMI sınıfı
+      href: compliance/sms_dcmdeploymenterrordetailsperasset-server-wmi-class.md
+    - name: SMS_DCMDeploymentErrorStatus sunucusu WMI sınıfı
+      href: compliance/sms_dcmdeploymenterrorstatus-server-wmi-class.md
+    - name: SMS_DCMDeploymentNonCompliantAssetDetails sunucusu WMI sınıfı
+      href: compliance/sms_dcmdeploymentnoncompliantassetdetails-server-wmi-class.md
+    - name: SMS_DCMDeploymentNonCompliantStatus sunucusu WMI sınıfı
+      href: compliance/sms_dcmdeploymentnoncompliantstatus-server-wmi-class.md
+    - name: SMS_G_System_CI_ComplianceState sunucusu WMI sınıfı
+      href: compliance/sms_g_system_ci_compliancestate-server-wmi-class.md
+    - name: SMS_HealthAttestationDetails sunucusu WMI sınıfı
+      href: compliance/sms_healthattestationdetails-server-wmi-class.md
+    - name: SMS_MAMPolicyTemplate sunucusu WMI sınıfı
+      href: compliance/sms_mampolicytemplate-server-wmi-class.md
+    - name: SMS_PassportForWorkProfileSettings sunucusu WMI sınıfı
+      href: compliance/sms_passportforworkprofilesettings-server-wmi-class.md
+    - name: SMS_PfxCertificateSettings sunucusu WMI sınıfı
+      href: compliance/sms_pfxcertificatesettings-server-wmi-class.md
+    - name: SMS_SDMPackageLocalizedData sunucusu WMI sınıfı
+      href: compliance/sms_sdmpackagelocalizeddata-server-wmi-class.md
+    - name: SMS_SettingsDefinitionBase sunucusu WMI sınıfı
+      href: compliance/sms_settingsdefinitionbase-server-wmi-class.md
+      items:
+        - name: AcceptEULA yöntemi
+          href: compliance/accepteula-method-in-class-sms_settingsdefinitionbase.md
+        - name: GetEULA yöntemi
+          href: compliance/geteula-method-in-class-sms_settingsdefinitionbase.md
+    - name: SMS_TermsAndConditionsSettings sunucusu WMI sınıfı
+      href: compliance/sms_termsandconditionssettings-server-wmi-class.md
+    - name: SMS_UserStateManagementSettings sunucusu WMI sınıfı
+      href: compliance/sms_userstatemanagementsettings-server-wmi-class.md
+      items:
+        - name: AcceptEULA yöntemi
+          href: compliance/accepteula-method-in-class-sms_userstatemanagementsettings.md
+        - name: GetEULA yöntemi
+          href: compliance/geteula-method-in-class-sms_userstatemanagementsettings.md
+    - name: SMS_WSfBConfigurationData sunucusu WMI sınıfı
+      href: compliance/sms_wsfbconfigurationdata-server-wmi-class.md
+- name: Konsol uzantısı sunucusu WMI sınıfları
+  items:
+    - name: Configuration Manager konsolu klasör sunucusu WMI sınıfları
+      items:
+        - name: SMS_InstanceChangeNotification sunucusu WMI sınıfı
+          href: core/servers/console/sms_instancechangenotification-server-wmi-class.md
+        - name: SMS_ObjectContainerItem sunucusu WMI sınıfı
+          href: core/servers/console/sms_objectcontaineritem-server-wmi-class.md
+          items:
+            - name: MoveMembers yöntemi
+              href: core/servers/console/movemembers-method-in-class-sms_objectcontaineritem.md
+            - name: MoveMembersEx yöntemi
+              href: core/servers/console/movemembersex-method-in-class-sms_objectcontaineritem.md
+        - name: SMS_ObjectContainerNode sunucusu WMI sınıfı
+          href: core/servers/console/sms_objectcontainernode-server-wmi-class.md
+          items:
+            - name: MoveFolders yöntemi
+              href: core/servers/console/movefolders-method-in-class-sms_objectcontainernode.md
+        - name: SMS_ObjectContentExtraInfo sunucusu WMI sınıfı
+          href: core/servers/console/sms_objectcontentextrainfo-server-wmi-class.md
+        - name: SMS_ObjectContentInfo sunucusu WMI sınıfı
+          href: core/servers/console/sms_objectcontentinfo-server-wmi-class.md
+        - name: SMS_RoleInObjectType sunucusu WMI sınıfı
+          href: core/servers/console/sms_roleinobjecttype-server-wmi-class.md
+        - name: SMS_SearchFolder sunucusu WMI sınıfı
+          href: core/servers/console/sms_searchfolder-server-wmi-class.md
+- name: İçerik sunucusu WMI sınıfları
+  items:
+    - name: SMS_Content sunucusu WMI sınıfı
+      href: core/servers/configure/sms_content-server-wmi-class.md
+      items:
+        - name: IsOfficeContent yöntemi
+          href: core/servers/configure/isofficecontent-method-in-class-sms_content.md
+    - name: SMS_ContentPackage sunucusu WMI sınıfı
+      href: core/servers/configure/sms_contentpackage-server-wmi-class.md
+      items:
+        - name: AddChangeNotification yöntemi
+          href: core/servers/configure/addchangenotification-method-in-class-sms_contentpackage.md
+        - name: AddContent yöntemi
+          href: core/servers/configure/addcontent-method-in-class-sms_contentpackage.md
+        - name: AddDistributionPointGroup yöntemi
+          href: core/servers/configure/adddistributionpointgroup-method-in-class-sms_contentpackage.md
+        - name: AddDistributionPoints yöntemi
+          href: core/servers/configure/adddistributionpoints-method-in-class-sms_contentpackage.md
+        - name: Commit yöntemi
+          href: core/servers/configure/commit-method-in-class-sms_contentpackage.md
+        - name: RefreshPkgSource yöntemi
+          href: core/servers/configure/refreshpkgsource-method-in-class-sms_contentpackage.md
+        - name: RemoveContent yöntemi
+          href: core/servers/configure/removecontent-method-in-class-sms_contentpackage.md
+        - name: SetSourceSite yöntemi
+          href: core/servers/configure/setsourcesite-method-in-class-sms_contentpackage.md
+        - name: Unlock yöntemi
+          href: core/servers/configure/unlock-method-in-class-sms_contentpackage.md
+    - name: SMS_DPContentInfo sunucusu WMI sınıfı
+      href: core/servers/configure/sms_dpcontentinfo-server-wmi-class.md
+    - name: SMS_DPGroupCollections sunucusu WMI sınıfı
+      href: core/servers/configure/sms_dpgroupcollections-server-wmi-class.md
+    - name: SMS_DPGroupContentInfo sunucusu WMI sınıfı
+      href: core/servers/configure/sms_dpgroupcontentinfo-server-wmi-class.md
+    - name: SMS_DPGroupDistributionStatus sunucusu WMI sınıfı
+      href: core/servers/configure/sms_dpgroupdistributionstatus-server-wmi-class.md
+    - name: SMS_DPGroupDistributionStatusDetails sunucusu WMI sınıfı
+      href: core/servers/configure/sms_dpgroupdistributionstatusdetails-server-wmi-class.md
+    - name: SMS_DPGroupInfo sunucusu WMI sınıfı
+      href: core/servers/configure/sms_dpgroupinfo-server-wmi-class.md
+    - name: SMS_DPGroupMembers sunucusu WMI sınıfı
+      href: core/servers/configure/sms_dpgroupmembers-server-wmi-class.md
+    - name: SMS_DPGroupPackages sunucusu WMI sınıfı
+      href: core/servers/configure/sms_dpgrouppackages-server-wmi-class.md
+    - name: SMS_DPStatusDetails sunucusu WMI sınıfı
+      href: core/servers/configure/sms_dpstatusdetails-server-wmi-class.md
+    - name: SMS_DPStatusInfo sunucusu WMI sınıfı
+      href: core/servers/configure/sms_dpstatusinfo-server-wmi-class.md
+    - name: SMS_PackageContentServerInfo sunucusu WMI sınıfı
+      href: core/servers/configure/sms_packagecontentserverinfo-server-wmi-class.md
+- name: Kullanım dışı işlevler
+  href: misc/deprecated-functions.md
+- name: Cihaz yönetimi sunucusu WMI sınıfları
+  href: mdm/device-management-server-wmi-classes.md
+  items:
+    - name: SMS_DeviceEnrollmentProfile sunucusu WMI sınıfı
+      href: mdm/sms_deviceenrollmentprofile-server-wmi-class.md
+    - name: SMS_DeviceMethods sunucusu WMI sınıfı
+      href: mdm/sms_devicemethods-server-wmi-class.md
+      items:
+        - name: AllowAccess yöntemi
+          href: mdm/allowaccess-method-in-class-sms_devicemethods.md
+        - name: BlockAccess yöntemi
+          href: mdm/blockaccess-method-in-class-sms_devicemethods.md
+        - name: CancelRetire yöntemi
+          href: mdm/cancelretire-method-in-class-sms_devicemethods.md
+        - name: CancelWipe yöntemi
+          href: mdm/cancelwipe-method-in-class-sms_devicemethods.md
+        - name: RequestRetire yöntemi
+          href: mdm/requestretire-method-in-class-sms_devicemethods.md
+        - name: RequestWipe yöntemi
+          href: mdm/requestwipe-method-in-class-sms_devicemethods.md
+    - name: SMS_DeviceSettingItem sunucusu WMI sınıfı
+      href: mdm/sms_devicesettingitem-server-wmi-class.md
+    - name: SMS_DeviceSettingPackage sunucusu WMI sınıfı
+      href: mdm/sms_devicesettingpackage-server-wmi-class.md
+      items:
+        - name: AddChangeNotification yöntemi
+          href: mdm/addchangenotification-method-in-class-sms_devicesettingpackage.md
+        - name: AddDistributionPoints yöntemi
+          href: mdm/adddistributionpoints-method-in-class-sms_devicesettingpackage.md
+        - name: RefreshPkgSource yöntemi
+          href: mdm/refreshpkgsource-method-in-class-sms_devicesettingpackage.md
+        - name: SetSourceSite yöntemi
+          href: mdm/setsourcesite-method-in-class-sms_devicesettingpackage.md
+        - name: Unlock yöntemi
+          href: mdm/unlock-method-in-class-sms_devicesettingpackage.md
+    - name: SMS_DeviceSettingPackageItem sunucusu WMI sınıfı
+      href: mdm/sms_devicesettingpackageitem-server-wmi-class.md
+- name: Bulma sınıfları
+  items:
+    - name: Bulma sunucusu WMI sınıfları
+      items:
+        - name: SMS_ADDomain sunucusu WMI sınıfı
+          href: core/servers/configure/sms_addomain-server-wmi-class.md
+        - name: SMS_ADForest sunucusu WMI sınıfı
+          href: core/servers/configure/sms_adforest-server-wmi-class.md
+          items:
+            - name: DeleteDiscoveryData yöntemi
+              href: core/servers/configure/deletediscoverydata-method-in-class-sms_adforest.md
+        - name: SMS_ADForestDiscoveryStatus sunucusu WMI sınıfı
+          href: core/servers/configure/sms_adforestdiscoverystatus-server-wmi-class.md
+        - name: SMS_ADSite sunucusu WMI sınıfı
+          href: core/servers/configure/sms_adsite-server-wmi-class.md
+        - name: SMS_ADSubnet sunucusu WMI sınıfı
+          href: core/servers/configure/sms_adsubnet-server-wmi-class.md
+    - name: SMSResGen COM otomasyon sınıfı
+      href: core/servers/configure/smsresgen-com-automation-class.md
+      items:
+        - name: ISMSResGen arabirimi
+          href: core/servers/configure/ismsresgen-interface.md
+          items:
+            - name: DDRAddStringArray
+              href: core/servers/configure/ddraddstringarray.md
+            - name: DDRAddIntegerArray
+              href: core/servers/configure/ddraddintegerarray.md
+            - name: DDRAddInteger
+              href: core/servers/configure/ddraddinteger.md
+            - name: DDRNew
+              href: core/servers/configure/ddrnew.md
+            - name: DDRWrite
+              href: core/servers/configure/ddrwrite.md
+            - name: DDRAddString
+              href: core/servers/configure/ddraddstring.md
+            - name: DDRPropertyFlagsEnum numaralandırması
+              href: core/servers/configure/ddrpropertyflagsenum-enumeration.md
+- name: Endpoint Protection sunucusu WMI sınıfları
+  items:
+    - name: SMS_AmPolicySummary sunucusu WMI sınıfı
+      href: protect/sms_ampolicysummary-server-wmi-class.md
+    - name: SMS_ClientAction sunucusu WMI sınıfı
+      href: protect/sms_clientaction-server-wmi-class.md
+    - name: SMS_ClientActionStatus sunucusu WMI sınıfı
+      href: protect/sms_clientactionstatus-server-wmi-class.md
+    - name: SMS_ClientOperation sunucusu WMI sınıfı
+      href: protect/sms_clientoperation-server-wmi-class.md
+      items:
+        - name: AllowThreat yöntemi
+          href: protect/allowthreat-method-in-class-sms_clientoperation.md
+        - name: CancelClientOperation yöntemi
+          href: protect/cancelclientoperation-method-in-class-sms_clientoperation.md
+        - name: DeleteClientOperation yöntemi
+          href: protect/deleteclientoperation-method-in-class-sms_clientoperation.md
+        - name: ExcludeScanPaths yöntemi
+          href: protect/excludescanpaths-method-in-class-sms_clientoperation.md
+        - name: IsClientOperationAllowed yöntemi
+          href: protect/isclientoperationallowed-method-in-class-sms_clientoperation.md
+        - name: IsClientOperationUpdateAllowed yöntemi
+          href: protect/isclientoperationupdateallowed-method-in-class-sms_clientoperation.md
+        - name: InitiateClientOperation yöntemi
+          href: protect/initiateclientoperation-method-in-class-sms_clientoperation.md
+        - name: RestoreQuarantinedItem yöntemi
+          href: protect/restorequarantineditem-method-in-class-sms_clientoperation.md
+    - name: SMS_ClientOperationStatus sunucusu WMI sınıfı
+      href: protect/sms_clientoperationstatus-server-wmi-class.md
+    - name: SMS_EndpointProtectionDashboardBucket sunucusu WMI sınıfı
+      href: protect/sms_endpointprotectiondashboardbucket-server-wmi-class.md
+    - name: SMS_EndpointProtectionHealthStatus sunucusu WMI sınıfı
+      href: protect/sms_endpointprotectionhealthstatus-server-wmi-class.md
+    - name: SMS_EndpointProtectionThreatData sunucusu WMI sınıfı
+      href: protect/sms_endpointprotectionthreatdata-server-wmi-class.md
+    - name: SMS_FirewallSettings sunucusu WMI sınıfı
+      href: protect/sms_firewallsettings-server-wmi-class.md
+    - name: SMS_FirewallPolicy sunucusu WMI sınıfı
+      href: protect/sms_firewallpolicy-server-wmi-class.md
+    - name: SMS_G_SYSTEM_AmPolicyStatus sunucusu WMI sınıfı
+      href: protect/sms_g_system_ampolicystatus-server-wmi-class.md
+    - name: SMS_G_System_EndpointProtectionStatus sunucusu WMI sınıfı
+      href: protect/sms_g_system_endpointprotectionstatus-server-wmi-class.md
+    - name: SMS_TopThreatsDetected sunucusu WMI sınıfı
+      href: protect/sms_topthreatsdetected-server-wmi-class.md
+    - name: SMS_TopThreatPath sunucusu WMI sınıfı
+      href: protect/sms_topthreatpath-server-wmi-class.md
+    - name: SMS_TopThreatSummary sunucusu WMI sınıfı
+      href: protect/sms_topthreatsummary-server-wmi-class.md
+- name: Karma sunucu WMI sınıfları
+  items:
+    - name: Mobil Cihaz Yönetimi sunucusu WMI sınıfları
+      items:
+        - name: MDM_GenericAppConfiguration sunucusu WMI sınıfı
+          href: mdm/mdm_genericappconfiguration-server-wmi-class.md
+        - name: SMS_BulkEnrollmentProfiles sunucusu WMI sınıfı
+          href: mdm/sms_bulkenrollmentprofiles-server-wmi-class.md
+          items:
+            - name: GenerateProvisioningXML yöntemi
+              href: mdm/generateprovisioningxml-method-in-class-sms_bulkenrollmentprofiles.md
+        - name: SMS_IntuneAccountInfo sunucusu WMI sınıfı
+          href: mdm/sms_intuneaccountinfo-server-wmi-class.md
+        - name: SMS_MDMAppleVppLicense sunucusu WMI sınıfı
+          href: mdm/sms_mdmapplevpplicense-server-wmi-class.md
+        - name: SMS_MDMAppleVppToken sunucusu WMI sınıfı
+          href: mdm/sms_mdmapplevpptoken-server-wmi-class.md
+          items:
+            - name: SyncToken yöntemi
+              href: mdm/synctoken-method-in-class-sms_mdmapplevpptoken.md
+            - name: UploadToken yöntemi
+              href: mdm/uploadtoken-method-in-class-sms_mdmapplevpptoken.md
+        - name: SMS_MDMBulkEnrollmentPackages sunucusu WMI sınıfı
+          href: mdm/sms_mdmbulkenrollmentpackages-server-wmi-class.md
+          items:
+            - name: ImportForProfile yöntemi
+              href: mdm/importforprofile-method-in-class-sms_mdmbulkenrollmentpackages.md
+        - name: SMS_MDMBulkEnrollmentProfiles sunucusu WMI sınıfı
+          href: mdm/sms_mdmbulkenrollmentprofiles-server-wmi-class.md
+        - name: SMS_MDMCorpEnrollmentProfiles sunucusu WMI sınıfı
+          href: mdm/sms_mdmcorpenrollmentprofiles-server-wmi-class.md
+        - name: SMS_MDMCorpOwnedDevices sunucusu WMI sınıfı
+          href: mdm/sms_mdmcorpowneddevices-server-wmi-class.md
+          items:
+            - name: UpdateProfileIDForDevices yöntemi
+              href: mdm/updateprofileidfordevices-method-in-class-sms_mdmcorpowneddevices.md
+        - name: SMS_MDMDeviceCategory sunucusu WMI sınıfı
+          href: mdm/sms_mdmdevicecategory-server-wmi-class.md
+        - name: SMS_MDMDeviceEnrollmentManagers sunucusu WMI sınıfı
+          href: mdm/sms_mdmdeviceenrollmentmanagers-server-wmi-class.md
+          items:
+            - name: InsertMultipleResourceIds yöntemi
+              href: mdm/insertmultipleresourceids-method-in-class-sms_mdmdeviceenrollmentmanagers.md
+            - name: RemoveMultipleResourceIds yöntemi
+              href: mdm/removemultipleresourceids-method-in-class-sms_mdmdeviceenrollmentmanagers.md
+    - name: SMS_WinRTSideLoadingKey sunucusu WMI sınıfı
+      href: mdm/sms_winrtsideloadingkey-server-wmi-class.md
+- name: Geçiş sunucusu WMI sınıfları
+  items:
+    - name: SMS_MigrationCollectionInfo sunucusu WMI sınıfı
+      href: core/migration/sms_migrationcollectioninfo-server-wmi-class.md
+      items:
+        - name: GetClientsCountByCollections yöntemi
+          href: core/migration/getclientscountbycollections-method-in-class-sms_migrationcollectioninfo.md
+    - name: SMS_MigrationDashboard sunucusu WMI sınıfı
+      href: core/migration/sms_migrationdashboard-server-wmi-class.md
+    - name: SMS_MigrationDP sunucusu WMI sınıfı
+      href: core/migration/sms_migrationdp-server-wmi-class.md
+    - name: SMS_MigrationEntity sunucusu WMI sınıfı
+      href: core/migration/sms_migrationentity-server-wmi-class.md
+      items:
+        - name: ExcludeAndInclude yöntemi
+          href: core/migration/excludeandinclude-method-in-class-sms_migrationentity.md
+        - name: GetEntityReferences yöntemi
+          href: core/migration/getentityreferences-method-in-class-sms_migrationentity.md
+    - name: SMS_MigrationEntityDependency sunucusu WMI sınıfı
+      href: core/migration/sms_migrationentitydependency-server-wmi-class.md
+    - name: SMS_MigrationExpandingScope sunucusu WMI sınıfı
+      href: core/migration/sms_migrationexpandingscope-server-wmi-class.md
+    - name: SMS_MigrationJob sunucusu WMI sınıfı
+      href: core/migration/sms_migrationjob-server-wmi-class.md
+      items:
+        - name: Start yöntemi
+          href: core/migration/start-method-in-class-sms_migrationjob.md
+        - name: Stop yöntemi
+          href: core/migration/stop-method-in-class-sms_migrationjob.md
+    - name: SMS_MigrationJobEntityRelation sunucusu WMI sınıfı
+      href: core/migration/sms_migrationjobentityrelation-server-wmi-class.md
+    - name: SMS_MigrationSiteMapping sunucusu WMI sınıfı
+      href: core/migration/sms_migrationsitemapping-server-wmi-class.md
+      items:
+        - name: ActivateHierarchy yöntemi
+          href: core/migration/activatehierarchy-method-in-class-sms_migrationsitemapping.md
+        - name: CheckDecommissionState yöntemi
+          href: core/migration/checkdecommissionstate-method-in-class-sms_migrationsitemapping.md
+        - name: CleanupHierarchyData yöntemi
+          href: core/migration/cleanuphierarchydata-method-in-class-sms_migrationsitemapping.md
+        - name: Decommission yöntemi
+          href: core/migration/decommission-method-in-class-sms_migrationsitemapping.md
+        - name: Resuscitate yöntemi
+          href: core/migration/resuscitate-method-in-class-sms_migrationsitemapping.md
+        - name: Sync yöntemi
+          href: core/migration/sync-method-in-class-sms_migrationsitemapping.md
+    - name: SMS_MigrationSourceSite sunucusu WMI sınıfı
+      href: core/migration/sms_migrationsourcesite-server-wmi-class.md
+- name: Kullanımdan Kaldırılmış Sınıflar
+  href: misc/obsolete-classes.md
+- name: İşletim sistemi dağıtımı sınıfları
+  items:
+    - name: İşletim sistemi dağıtım sürücüsü desteklenen platformlar şeması
+      href: osd/operating-system-deployment-driver-supported-platforms-schema.md
+      items:
+        - name: PlatformApplicabilityCondition
+          href: osd/platformapplicabilitycondition.md
+        - name: PlatformApplicabilityConditions
+          href: osd/platformapplicabilityconditions.md
+        - name: Query1
+          href: osd/query1.md
+        - name: Query2
+          href: osd/query2.md
+    - name: İşletim sistemi dağıtım sunucusu WMI sınıfları
+      items:
+        - name: SMS_BootImagePackage sunucusu WMI sınıfı
+          href: osd/sms_bootimagepackage-server-wmi-class.md
+          items:
+            - name: AddChangeNotification yöntemi
+              href: osd/addchangenotification-method-in-class-sms_bootimagepackage.md
+            - name: AddDistributionPoints yöntemi
+              href: osd/adddistributionpoints-method-in-class-sms_bootimagepackage.md
+            - name: DeleteContextID yöntemi
+              href: osd/deletecontextid-method-in-class-sms_bootimagepackage.md
+            - name: ExportDefaultBootImage yöntemi
+              href: osd/exportdefaultbootimage-method-in-class-sms_bootimagepackage.md
+            - name: GetImageProperties yöntemi
+              href: osd/getimageproperties-method-in-class-sms_bootimagepackage.md
+            - name: QueryOSDBinaryInjectionStatus yöntemi
+              href: osd/queryosdbinaryinjectionstatus-method-in-class-sms_bootimagepackage.md
+            - name: RefreshPkgSource yöntemi
+              href: osd/refreshpkgsource-method-in-class-sms_bootimagepackage.md
+            - name: ReloadImageProperties yöntemi
+              href: osd/reloadimageproperties-method-in-class-sms_bootimagepackage.md
+            - name: SetSourceSite yöntemi
+              href: osd/setsourcesite-method-in-class-sms_bootimagepackage.md
+            - name: Unlock yöntemi
+              href: osd/unlock-method-in-class-sms_bootimagepackage.md
+            - name: UpdateDefaultImage yöntemi
+              href: osd/updatedefaultimage-method-in-class-sms_bootimagepackage.md
+            - name: UpdateImage yöntemi
+              href: osd/updateimage-method-in-class-sms_bootimagepackage.md
+            - name: UpdateOptionalComponents yöntemi
+              href: osd/updateoptionalcomponents-method-in-class-sms_bootimagepackage.md
+        - name: SMS_BootImagePackage_DriverRef sunucusu WMI sınıfı
+          href: osd/sms_bootimagepackage_driverref-server-wmi-class.md
+        - name: SMS_Certificate sunucusu WMI sınıfı
+          href: osd/sms_certificate-server-wmi-class.md
+        - name: SMS_CertificateData sunucusu WMI sınıfı
+          href: osd/sms_certificatedata-server-wmi-class.md
+          items:
+            - name: SubmitCertificate yöntemi
+              href: osd/submitcertificate-method-in-class-sms_certificatedata.md
+            - name: DeleteCertificate yöntemi
+              href: osd/deletecertificate-method-in-class-sms_certificatedata.md
+        - name: SMS_CertificateInfo sunucusu WMI sınıfı
+          href: osd/sms_certificateinfo-server-wmi-class.md
+          items:
+            - name: BlockCertificate yöntemi
+              href: osd/blockcertificate-method-in-class-sms_certificateinfo.md
+        - name: SMS_CollectionVariable sunucusu WMI sınıfı
+          href: osd/sms_collectionvariable-server-wmi-class.md
+        - name: SMS_Driver sunucusu WMI sınıfı
+          href: osd/sms_driver-server-wmi-class.md
+          items:
+            - name: CreateFromINF yöntemi
+              href: osd/createfrominf-method-in-class-sms_driver.md
+            - name: CreateFromINFs yöntemi
+              href: osd/createfrominfs-method-in-class-sms_driver.md
+            - name: CreateFromOEM yöntemi
+              href: osd/createfromoem-method-in-class-sms_driver.md
+        - name: SMS_DriverContainer sunucusu WMI sınıfı
+          href: osd/sms_drivercontainer-server-wmi-class.md
+        - name: SMS_Driver_Details sunucusu WMI sınıfı
+          href: osd/sms_driver_details-server-wmi-class.md
+        - name: SMS_DriverPackage sunucusu WMI sınıfı
+          href: osd/sms_driverpackage-server-wmi-class.md
+          items:
+            - name: AddChangeNotification yöntemi
+              href: osd/addchangenotification-method-in-class-sms_driverpackage.md
+            - name: AddDistributionPoints yöntemi
+              href: osd/adddistributionpoints-method-in-class-sms_driverpackage.md
+            - name: AddDriverContent yöntemi
+              href: osd/adddrivercontent-method-in-class-sms_driverpackage.md
+            - name: CheckSourceFolder yöntemi
+              href: osd/checksourcefolder-method-in-class-sms_driverpackage.md
+            - name: RebuildPackage yöntemi
+              href: osd/rebuildpackage-method-in-class-sms_driverpackage.md
+            - name: RefreshPkgSource yöntemi
+              href: osd/refreshpkgsource-method-in-class-sms_driverpackage.md
+            - name: RemoveDriverContent yöntemi
+              href: osd/removedrivercontent-method-in-class-sms_driverpackage.md
+            - name: SetSourceSite yöntemi
+              href: osd/setsourcesite-method-in-class-sms_driverpackage.md
+            - name: Unlock yöntemi
+              href: osd/unlock-method-in-class-sms_driverpackage.md
+            - name: ValidateNewPackageSource yöntemi
+              href: osd/validatenewpackagesource-method-in-class-sms_driverpackage.md
+        - name: SMS_DriverModel sunucusu WMI sınıfı
+          href: osd/sms_drivermodel-server-wmi-class.md
+        - name: SMS_FailedImageUpdateView sunucusu WMI sınıfı
+          href: osd/sms_failedimageupdateview-server-wmi-class.md
+        - name: SMS_ImageDiskInformation sunucusu WMI sınıfı
+          href: osd/sms_imagediskinformation-server-wmi-class.md
+        - name: SMS_ImageInformation sunucusu WMI sınıfı
+          href: osd/sms_imageinformation-server-wmi-class.md
+        - name: SMS_ImagePackage sunucusu WMI sınıfı
+          href: osd/sms_imagepackage-server-wmi-class.md
+          items:
+            - name: AddChangeNotification yöntemi
+              href: osd/addchangenotification-method-in-class-sms_imagepackage.md
+            - name: AddDistributionPoints yöntemi
+              href: osd/adddistributionpoints-method-in-class-sms_imagepackage.md
+            - name: GetImageProperties yöntemi
+              href: osd/getimageproperties-method-in-class-sms_imagepackage.md
+            - name: RefreshPkgSource yöntemi
+              href: osd/refreshpkgsource-method-in-class-sms_imagepackage.md
+            - name: ReloadImageProperties yöntemi
+              href: osd/reloadimageproperties-method-in-class-sms_imagepackage.md
+            - name: RunOfflineServicingManager yöntemi
+              href: osd/runofflineservicingmanager-method-in-class-sms_imagepackage.md
+            - name: SetSourceSite yöntemi
+              href: osd/setsourcesite-method-in-class-sms_imagepackage.md
+            - name: Unlock yöntemi
+              href: osd/unlock-method-in-class-sms_imagepackage.md
+        - name: SMS_ImageServicingProgress sunucusu WMI sınıfı
+          href: osd/sms_imageservicingprogress-server-wmi-class.md
+        - name: SMS_ImageServicingSchedule sunucusu WMI sınıfı
+          href: osd/sms_imageservicingschedule-server-wmi-class.md
+        - name: SMS_ImageServicingScanRequest sunucusu WMI sınıfı
+          href: osd/sms_imageservicingscanrequest-server-wmi-class.md
+        - name: SMS_ImageServicingScheduledImage sunucusu WMI sınıfı
+          href: osd/sms_imageservicingscheduledimage-server-wmi-class.md
+        - name: SMS_ImageServicingScheduledUpdate sunucusu WMI sınıfı
+          href: osd/sms_imageservicingscheduledupdate-server-wmi-class.md
+        - name: SMS_ImageUpdateHistory sunucusu WMI sınıfı
+          href: osd/sms_imageupdatehistory-server-wmi-class.md
+        - name: SMS_ImageUpdateStatus sunucusu WMI sınıfı
+          href: osd/sms_imageupdatestatus-server-wmi-class.md
+        - name: SMS_ImageUpdateStatusView sunucusu WMI sınıfı
+          href: osd/sms_imageupdatestatusview-server-wmi-class.md
+        - name: SMS_MachineSettings sunucusu WMI sınıfı
+          href: osd/sms_machinesettings-server-wmi-class.md
+        - name: SMS_MachineVariable sunucusu WMI sınıfı
+          href: osd/sms_machinevariable-server-wmi-class.md
+        - name: SMS_OperatingSystemInstallPackage sunucusu WMI sınıfı
+          href: osd/sms_operatingsysteminstallpackage-server-wmi-class.md
+          items:
+            - name: AddChangeNotification yöntemi
+              href: osd/addchangenotification-method-in-class-sms_operatingsysteminstallpackage.md
+            - name: AddDistributionPoints yöntemi
+              href: osd/adddistributionpoints-method-in-class-sms_operatingsysteminstallpackage.md
+            - name: GetImageProperties yöntemi
+              href: osd/getimageproperties-method-in-class-sms_operatingsysteminstallpackage.md
+            - name: RefreshPkgSource yöntemi
+              href: osd/refreshpkgsource-method-in-class-sms_operatingsysteminstallpackage.md
+            - name: ReloadImageProperties yöntemi
+              href: osd/reloadimageproperties-method-in-class-sms_operatingsysteminstallpackage.md
+            - name: SetSourceSite yöntemi
+              href: osd/setsourcesite-method-in-class-sms_operatingsysteminstallpackage.md
+            - name: Unlock yöntemi
+              href: osd/unlock-method-in-class-sms_operatingsysteminstallpackage.md
+        - name: SMS_OSDeploymentConfig sunucusu WMI sınıfı
+          href: osd/sms_osdeploymentconfig-server-wmi-class.md
+        - name: SMS_OSDeploymentKitInstalledVersion sunucusu WMI sınıfı
+          href: osd/sms_osdeploymentkitinstalledversion-server-wmi-class.md
+        - name: SMS_OSDeploymentKitSupportedPlatforms sunucusu WMI sınıfı
+          href: osd/sms_osdeploymentkitsupportedplatforms-server-wmi-class.md
+        - name: SMS_OSDeploymentKitWinPEOptionalComponent sunucusu WMI sınıfı
+          href: osd/sms_osdeploymentkitwinpeoptionalcomponent-server-wmi-class.md
+        - name: SMS_PXECertificateInfo sunucusu WMI sınıfı
+          href: osd/sms_pxecertificateinfo-server-wmi-class.md
+        - name: SMS_StateInformation sunucusu WMI sınıfı
+          href: osd/sms_stateinformation-server-wmi-class.md
+        - name: SMS_StateMigration sunucusu WMI sınıfı
+          href: osd/sms_statemigration-server-wmi-class.md
+          items:
+            - name: AddAssociation yöntemi
+              href: osd/addassociation-method-in-class-sms_statemigration.md
+            - name: AddAssociationEx yöntemi
+              href: osd/addassociationex-method-in-class-sms_statemigration.md
+            - name: DeleteAssociation yöntemi
+              href: osd/deleteassociation-method-in-class-sms_statemigration.md
+            - name: GetEncryptDecryptKey yöntemi
+              href: osd/getencryptdecryptkey-method-in-class-sms_statemigration.md
+        - name: SMS_StateMigrationUserNames sunucusu WMI sınıfı
+          href: osd/sms_statemigrationusernames-server-wmi-class.md
+        - name: SMS_TaskSequence sunucusu WMI sınıfı
+          href: osd/sms_tasksequence-server-wmi-class.md
+          items:
+            - name: ExportXml yöntemi
+              href: osd/exportxml-method-in-class-sms_tasksequence.md
+            - name: LoadFromXml yöntemi
+              href: osd/loadfromxml-method-in-class-sms_tasksequence.md
+            - name: SaveToXml yöntemi
+              href: osd/savetoxml-method-in-class-sms_tasksequence.md
+        - name: SMS_TaskSequence_Action sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_action-server-wmi-class.md
+        - name: SMS_TaskSequence_ApplicationInfo sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_applicationinfo-server-wmi-class.md
+        - name: SMS_TaskSequence_ApplyDataImageAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_applydataimageaction-server-wmi-class.md
+        - name: SMS_TaskSequence_ApplyDriverPackageAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_applydriverpackageaction-server-wmi-class.md
+        - name: SMS_TaskSequence_ApplyNetworkSettingsAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_applynetworksettingsaction-server-wmi-class.md
+        - name: SMS_TaskSequence_ApplyOperatingSystemAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_applyoperatingsystemaction-server-wmi-class.md
+        - name: SMS_TaskSequence_ApplyWindowsSettingsAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_applywindowssettingsaction-server-wmi-class.md
+        - name: SMS_TaskSequence_AutoApplyAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_autoapplyaction-server-wmi-class.md
+        - name: SMS_TaskSequence_CaptureNetworkSettingsAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_capturenetworksettingsaction-server-wmi-class.md
+        - name: SMS_TaskSequence_CaptureSystemImageAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_capturesystemimageaction-server-wmi-class.md
+        - name: SMS_TaskSequence_CaptureUserStateAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_captureuserstateaction-server-wmi-class.md
+        - name: SMS_TaskSequence_CaptureWindowsSettingsAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_capturewindowssettingsaction-server-wmi-class.md
+        - name: SMS_TaskSequence_Condition sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_condition-server-wmi-class.md
+        - name: SMS_TaskSequence_ConditionExpression sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_conditionexpression-server-wmi-class.md
+        - name: SMS_TaskSequence_ConditionOperand sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_conditionoperand-server-wmi-class.md
+        - name: SMS_TaskSequence_ConditionOperator sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_conditionoperator-server-wmi-class.md
+        - name: SMS_TaskSequence_ConnectNetworkFolderAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_connectnetworkfolderaction-server-wmi-class.md
+        - name: SMS_TaskSequence_ConvertDiskAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_convertdiskaction-server-wmi-class.md
+        - name: SMS_TaskSequence_DisableBitLockerAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_disablebitlockeraction-server-wmi-class.md
+        - name: SMS_TaskSequence_DownloadPackageContentAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_downloadpackagecontentaction-server-wmi-class.md
+        - name: SMS_TaskSequence_EnableBitLockerAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_enablebitlockeraction-server-wmi-class.md
+        - name: SMS_TaskSequence_FileConditionExpression sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_fileconditionexpression-server-wmi-class.md
+        - name: SMS_TaskSequence_FolderConditionExpression sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_folderconditionexpression-server-wmi-class.md
+        - name: SMS_TaskSequence_Group sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_group-server-wmi-class.md
+        - name: SMS_TaskSequence_InstallApplicationAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_installapplicationaction-server-wmi-class.md
+        - name: SMS_TaskSequence_InstallDeployToolsAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_installdeploytoolsaction-server-wmi-class.md
+        - name: SMS_TaskSequence_InstallSoftwareAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_installsoftwareaction-server-wmi-class.md
+        - name: SMS_TaskSequence_InstallUpdateAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_installupdateaction-server-wmi-class.md
+        - name: SMS_TaskSequence_JoinDomainWorkgroupAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_joindomainworkgroupaction-server-wmi-class.md
+        - name: SMS_TaskSequence_NetworkAdapterSettings sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_networkadaptersettings-server-wmi-class.md
+        - name: SMS_TaskSequence_OfflineEnableBitLockerAction
+          href: osd/sms_tasksequence_offlineenablebitlockeraction.md
+        - name: SMS_TaskSequence_OSConditionGroup sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_osconditiongroup-server-wmi-class.md
+        - name: SMS_TaskSequence_OSExpressionGroup sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_osexpressiongroup-server-wmi-class.md
+        - name: SMS_TaskSequence_PackageInfo sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_packageinfo-server-wmi-class.md
+        - name: SMS_TaskSequence_PartitionDiskAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_partitiondiskaction-server-wmi-class.md
+        - name: SMS_TaskSequence_PartitionSettings sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_partitionsettings-server-wmi-class.md
+        - name: SMS_TaskSequence_Pointer sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_pointer-server-wmi-class.md
+        - name: SMS_TaskSequence_PrepareOSAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_prepareosaction-server-wmi-class.md
+        - name: SMS_TaskSequence_PrepareSMSClientAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_preparesmsclientaction-server-wmi-class.md
+        - name: SMS_TaskSequence_RebootAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_rebootaction-server-wmi-class.md
+        - name: SMS_TaskSequence_Reference sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_reference-server-wmi-class.md
+        - name: SMS_TaskSequence_RegistryConditionExpression sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_registryconditionexpression-server-wmi-class.md
+        - name: SMS_TaskSequence_ReleaseStateStoreAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_releasestatestoreaction-server-wmi-class.md
+        - name: SMS_TaskSequence_RequestStateStoreAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_requeststatestoreaction-server-wmi-class.md
+        - name: SMS_TaskSequence_RestoreUserStateAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_restoreuserstateaction-server-wmi-class.md
+        - name: SMS_TaskSequence_RunCommandLineAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_runcommandlineaction-server-wmi-class.md
+        - name: SMS_TaskSequence_SetupWindowsAndSMSAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_setupwindowsandsmsaction-server-wmi-class.md
+        - name: SMS_TaskSequence_SetVariableAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_setvariableaction-server-wmi-class.md
+        - name: SMS_TaskSequence_SoftwareConditionExpression sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_softwareconditionexpression-server-wmi-class.md
+        - name: SMS_TaskSequence_Step sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_step-server-wmi-class.md
+        - name: SMS_TaskSequence_UpgradeOperatingSystemAction sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_upgradeoperatingsystemaction-server-wmi-class.md
+        - name: SMS_TaskSequence_VariableConditionExpression sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_variableconditionexpression-server-wmi-class.md
+        - name: SMS_TaskSequence_WMIConditionExpression sunucusu WMI sınıfı
+          href: osd/sms_tasksequence_wmiconditionexpression-server-wmi-class.md
+        - name: SMS_TaskSequenceAppReferenceDps sunucusu WMI sınıfı
+          href: osd/sms_tasksequenceappreferencedps-server-wmi-class.md
+        - name: SMS_TaskSequenceAppReferencesInfo sunucusu WMI sınıfı
+          href: osd/sms_tasksequenceappreferencesinfo-server-wmi-class.md
+        - name: SMS_TaskSequencePackage sunucusu WMI sınıfı
+          href: osd/sms_tasksequencepackage-server-wmi-class.md
+          items:
+            - name: AddChangeNotification yöntemi
+              href: osd/addchangenotification-method-in-class-sms_tasksequencepackage.md
+            - name: AddDistributionPoints yöntemi
+              href: osd/adddistributionpoints-method-in-class-sms_tasksequencepackage.md
+            - name: CheckReferencesShareType yöntemi
+              href: osd/checkreferencessharetype-method-in-class-sms_tasksequencepackage.md
+            - name: GetClientConfigPolicies yöntemi
+              href: osd/getclientconfigpolicies-method-in-class-sms_tasksequencepackage.md
+            - name: GetContentHash yöntemi
+              href: osd/getcontenthash-method-in-class-sms_tasksequencepackage.md
+            - name: GetPackageDefaultHash yöntemi
+              href: osd/getpackagedefaulthash-method-in-class-sms_tasksequencepackage.md
+            - name: GetPackageHash yöntemi
+              href: osd/getpackagehash-method-in-class-sms_tasksequencepackage.md
+            - name: GetSequence yöntemi
+              href: osd/getsequence-method-in-class-sms_tasksequencepackage.md
+            - name: GetTsPolicies yöntemi
+              href: osd/gettspolicies-method-in-class-sms_tasksequencepackage.md
+            - name: GetTsPoliciesSaMedia yöntemi
+              href: osd/gettspoliciessamedia-method-in-class-sms_tasksequencepackage.md
+            - name: GetTSRelatedToDriverCategory yöntemi
+              href: osd/gettsrelatedtodrivercategory-method-in-class-sms_tasksequencepackage.md
+            - name: ImportSequence yöntemi
+              href: osd/importsequence-method-in-class-sms_tasksequencepackage.md
+            - name: RefreshPkgSource yöntemi
+              href: osd/refreshpkgsource-method-in-class-sms_tasksequencepackage.md
+            - name: SetSequence yöntemi
+              href: osd/setsequence-method-in-class-sms_tasksequencepackage.md
+            - name: SetSourceSite yöntemi
+              href: osd/setsourcesite-method-in-class-sms_tasksequencepackage.md
+            - name: Unlock yöntemi
+              href: osd/unlock-method-in-class-sms_tasksequencepackage.md
+        - name: SMS_TaskSequencePackageReference sunucusu WMI sınıfı
+          href: osd/sms_tasksequencepackagereference-server-wmi-class.md
+        - name: SMS_TaskSequenceReferenceDps sunucusu WMI sınıfı
+          href: osd/sms_tasksequencereferencedps-server-wmi-class.md
+        - name: SMS_TaskSequenceReferencesInfo sunucusu WMI sınıfı
+          href: osd/sms_tasksequencereferencesinfo-server-wmi-class.md
+        - name: SMS_TaskSequencePackageReference_All sunucusu WMI sınıfı
+          href: osd/sms_tasksequencepackagereference_all-server-wmi-class.md
+        - name: SMS_TaskSequencePackageReference_Flat sunucusu WMI sınıfı
+          href: osd/sms_tasksequencepackagereference_flat-server-wmi-class.md
+        - name: SMS_TaskSequenceExecutionStatus sunucusu WMI sınıfı
+          href: osd/sms_tasksequenceexecutionstatus-server-wmi-class.md
+        - name: SMS_UserSettings sunucusu WMI sınıfı
+          href: osd/sms_usersettings-server-wmi-class.md
+        - name: SMS_UserVariable sunucusu WMI sınıfı
+          href: osd/sms_uservariable-server-wmi-class.md
+        - name: SMS_WinPEOptionalComponentInBootImage sunucusu WMI sınıfı
+          href: osd/sms_winpeoptionalcomponentinbootimage-server-wmi-class.md
+        - name: SMS_WinPEOptionalComponentInfo sunucusu WMI sınıfı
+          href: osd/sms_winpeoptionalcomponentinfo-server-wmi-class.md
+        - name: İşletim sistemi dağıtımı CreateMedia.exe
+          href: osd/operating-system-deployment-createmedia.exe.md
+- name: Raporlama sunucusu WMI sınıfları
+  items:
+    - name: SMS_ReportViewSchema sunucusu WMI sınıfı
+      href: core/servers/reporting/sms_reportviewschema-server-wmi-class.md
+      items:
+        - name: GetSampleValues yöntemi
+          href: core/servers/reporting/getsamplevalues-method-in-class-sms_reportviewschema.md
+- name: Kaynak yönetimi sunucusu WMI sınıfları
+  items:
+    - name: Donanım Envanteri sunucusu WMI sınıfları
+      href: core/clients/manage/hardware-inventory-server-wmi-classes.md
+      items:
+        - name: SMS_G_System_SYSTEM sunucusu WMI sınıfı
+          href: core/clients/manage/sms_g_system_system-server-wmi-class.md
+        - name: SMS_G_Sysetm_WORKSTATION_STATUS sunucusu WMI sınıfı
+          href: core/clients/manage/sms_g_system_workstation_status-server-wmi-class.md
+        - name: SMS_InventoryClass sunucusu WMI sınıfı
+          href: core/clients/manage/sms_inventoryclass-server-wmi-class.md
+        - name: SMS_InventoryClassProperty sunucusu WMI sınıfı
+          href: core/clients/manage/sms_inventoryclassproperty-server-wmi-class.md
+        - name: SMS_InventoryReport sunucusu WMI sınıfı
+          href: core/clients/manage/sms_inventoryreport-server-wmi-class.md
+          items:
+            - name: ImportInventoryReport yöntemi
+              href: core/clients/manage/importinventoryreport-method-in-class-sms_inventoryreport.md
+        - name: SMSInventoryReportClass sunucusu WMI sınıfı
+          href: core/clients/manage/sms_inventoryreportclass-server-wmi-class.md
+    - name: SMS_G_System sunucusu WMI sınıfı
+      href: core/clients/manage/sms_g_system-server-wmi-class.md
+    - name: SMS_G_System_AdvancedThreatProtectionHealthStatus sunucusu WMI sınıfı
+      href: core/clients/manage/sms_g_system_advancedthreatprotectionhealthstatus-server-wmi-class.md
+    - name: SMS_G_System_CollectedFile sunucusu WMI sınıfı
+      href: core/clients/manage/sms_g_system_collectedfile-server-wmi-class.md
+    - name: SMS_G_System_Current sunucusu WMI sınıfı
+      href: core/clients/manage/sms_g_system_current-server-wmi-class.md
+    - name: SMS_G_System_ExHistory sunucusu WMI sınıfı
+      href: core/clients/manage/sms_g_system_exthistory-server-wmi-class.md
+    - name: SMS_G_System_History sunucusu WMI sınıfı
+      href: core/clients/manage/sms_g_system_history-server-wmi-class.md
+    - name: SMS_G_System_LastSoftwareScan sunucusu WMI sınıfı
+      href: core/clients/manage/sms_g_system_lastsoftwarescan-server-wmi-class.md
+    - name: SMS_G_SYSTEM_ResourceClientSettingsAssignment sunucusu WMI sınıfı
+      href: core/clients/manage/sms_g_system_resourceclientsettingsassignment-server-wmi-class.md
+    - name: SMS_G_System_SoftwareFile sunucusu WMI sınıfı
+      href: core/clients/manage/sms_g_system_softwarefile-server-wmi-class.md
+    - name: SMS_G_System_SoftwareProduct sunucusu WMI sınıfı
+      href: core/clients/manage/sms_g_system_softwareproduct-server-wmi-class.md
+    - name: SMS_G_System_UnknownFile sunucusu WMI sınıfı
+      href: core/clients/manage/sms_g_system_unknownfile-server-wmi-class.md
+    - name: SMS_Group sunucusu WMI sınıfı
+      href: core/clients/manage/sms_group-server-wmi-class.md
+    - name: SMS_PendingRegistrationRecord sunucusu WMI sınıfı
+      href: core/clients/manage/sms_pendingregistrationrecord-server-wmi-class.md
+      items:
+        - name: ResolvePendingRegistrationRecord yöntemi
+          href: core/clients/manage/resolvependingregistrationrecord-method-in-class-sms_pendingregistrationrecord.md
+    - name: SMS_Query sunucusu WMI sınıfı
+      href: core/clients/manage/sms_query-server-wmi-class.md
+      items:
+        - name: CreateCCRs yöntemi
+          href: core/clients/manage/createccrs-method-in-class-sms_query.md
+        - name: FindResourceSite yöntemi
+          href: core/clients/manage/findresourcesite-method-in-class-sms_query.md
+    - name: SMS_R_IPNetwork sunucusu WMI sınıfı
+      href: core/clients/manage/sms_r_ipnetwork-server-wmi-class.md
+    - name: SMS_R_System sunucusu WMI sınıfı
+      href: core/clients/manage/sms_r_system-server-wmi-class.md
+    - name: SMS_R_User sunucusu WMI sınıfı
+      href: core/clients/manage/sms_r_user-server-wmi-class.md
+    - name: SMS_R_UserGroup sunucusu WMI sınıfı
+      href: core/clients/manage/sms_r_usergroup-server-wmi-class.md
+    - name: SMS_ResIDValueLookup sunucusu WMI sınıfı
+      href: core/clients/manage/sms_residvaluelookup-server-wmi-class.md
+    - name: SMS_Resource sunucusu WMI sınıfı
+      href: core/clients/manage/sms_resource-server-wmi-class.md
+    - name: SMS_ResourceMap sunucusu WMI sınıfı
+      href: core/clients/manage/sms_resourcemap-server-wmi-class.md
+      items:
+        - name: GetClassesWithData yöntemi
+          href: core/clients/manage/getclasseswithdata-method-in-class-sms_resourcemap.md
+        - name: Refresh yöntemi
+          href: core/clients/manage/refresh-method-in-class-sms_resourcemap.md
+    - name: SMS_SoftwareConversionRules sunucusu WMI sınıfı
+      href: core/clients/manage/sms_softwareconversionrules-server-wmi-class.md
+    - name: SMS_UserMachineRelationship sunucusu WMI sınıfı
+      href: core/clients/manage/sms_usermachinerelationship-server-wmi-class.md
+      items:
+        - name: AddSource yöntemi
+          href: core/clients/manage/addsource-method-in-class-sms_usermachinerelationship.md
+        - name: AddType yöntemi
+          href: core/clients/manage/addtype-method-in-class-sms_usermachinerelationship.md
+        - name: CreateRelationship yöntemi
+          href: core/clients/manage/createrelationship-method-in-class-sms_usermachinerelationship.md
+        - name: RemoveSource yöntemi
+          href: core/clients/manage/removesource-method-in-class-sms_usermachinerelationship.md
+        - name: RemoveType yöntemi
+          href: core/clients/manage/removetype-method-in-class-sms_usermachinerelationship.md
+- name: Rol tabanlı yönetim sunucusu WMI sınıfları
+  items:
+    - name: SMS_Admin sunucusu WMI sınıfı
+      href: core/servers/configure/sms_admin-server-wmi-class.md
+      items:
+        - name: GetAdminExtendedData yöntemi
+          href: core/servers/configure/getadminextendeddata-method-in-class-sms_admin.md
+    - name: SMS_AdminCategory sunucusu WMI sınıfı
+      href: core/servers/configure/sms_admincategory-server-wmi-class.md
+    - name: SMS_AdminRole sunucusu WMI sınıfı
+      href: core/servers/configure/sms_adminrole-server-wmi-class.md
+    - name: SMS_APermission sunucusu WMI sınıfı
+      href: core/servers/configure/sms_apermission-server-wmi-class.md
+    - name: SMS_ARoleOperation sunucusu WMI sınıfı
+      href: core/servers/configure/sms_aroleoperation-server-wmi-class.md
+    - name: SMS_AssociatedSecuredCategory sunucusu WMI sınıfı
+      href: core/servers/configure/sms_associatedsecuredcategory-server-wmi-class.md
+    - name: SMS_InitSettableSecuredCategory sunucusu WMI sınıfı
+      href: core/servers/configure/sms_initsettablesecuredcategory-server-wmi-class.md
+    - name: SMS_LastCategoryObject sunucusu WMI sınıfı
+      href: core/servers/configure/sms_lastcategoryobject-server-wmi-class.md
+    - name: SMS_Operation sunucusu WMI sınıfı
+      href: core/servers/configure/sms_operation-server-wmi-class.md
+    - name: SMS_Permission sunucusu WMI sınıfı
+      href: core/servers/configure/sms_permission-server-wmi-class.md
+    - name: SMS_RbacSecuredObject sunucusu WMI sınıfı
+      href: core/servers/configure/sms_rbacsecuredobject-server-wmi-class.md
+      items:
+        - name: GetAvailableScopes yöntemi
+          href: core/servers/configure/getavailablescopes-method-in-class-sms_rbacsecuredobject.md
+        - name: GetCollectionsWithResourcePermissions yöntemi
+          href: core/servers/configure/getcollectionswithresourcepermissions-method-in-class-sms_rbacsecuredobject.md
+        - name: GetUserList yöntemi
+          href: core/servers/configure/getuserlist-method-in-class-sms_rbacsecuredobject.md
+        - name: UserHasPermissions yöntemi
+          href: core/servers/configure/userhaspermissions-method-in-class-sms_rbacsecuredobject.md
+    - name: SMS_Role sunucusu WMI sınıfı
+      href: core/servers/configure/sms_role-server-wmi-class.md
+      items:
+        - name: ExportRole yöntemi
+          href: core/servers/configure/exportrole-method-in-class-sms_role.md
+        - name: ImportRole yöntemi
+          href: core/servers/configure/importrole-method-in-class-sms_role.md
+    - name: SMS_SecuredCategory sunucusu WMI sınıfı
+      href: core/servers/configure/sms_securedcategory-server-wmi-class.md
+    - name: SMS_SecuredCategoryMembership sunucusu WMI sınıfı
+      href: core/servers/configure/sms_securedcategorymembership-server-wmi-class.md
+      items:
+        - name: AddMemberships yöntemi
+          href: core/servers/configure/addmemberships-method-in-class-sms_securedcategorymembership.md
+        - name: RemoveMemberships yöntemi
+          href: core/servers/configure/removememberships-method-in-class-sms_securedcategorymembership.md
+    - name: SMS_SettableSecuredCategory sunucusu WMI sınıfı
+      href: core/servers/configure/sms_settablesecuredcategory-server-wmi-class.md
+- name: Zamanlama sunucusu WMI sınıfları
+  items:
+    - name: SMS_ScheduleMethods sunucusu WMI sınıfı
+      href: core/servers/configure/sms_schedulemethods-server-wmi-class.md
+      items:
+        - name: ReadFromString yöntemi
+          href: core/servers/configure/readfromstring-method-in-class-sms_schedulemethods.md
+        - name: WriteToString yöntemi
+          href: core/servers/configure/writetostring-method-in-class-sms_schedulemethods.md
+    - name: SMS_ScheduleToken sunucusu WMI sınıfı
+      href: core/servers/configure/sms_scheduletoken-server-wmi-class.md
+    - name: SMS_ST_NonRecurring sunucusu WMI sınıfı
+      href: core/servers/configure/sms_st_nonrecurring-server-wmi-class.md
+    - name: SMS_ST_RecurInterval sunucusu WMI sınıfı
+      href: core/servers/configure/sms_st_recurinterval-server-wmi-class.md
+    - name: SMS_ST_RecurMonthlyByDate sunucusu WMI sınıfı
+      href: core/servers/configure/sms_st_recurmonthlybydate-server-wmi-class.md
+    - name: SMS_ST_RecurMonthlyByWeekday sunucusu WMI sınıfı
+      href: core/servers/configure/sms_st_recurmonthlybyweekday-server-wmi-class.md
+    - name: SMS_ST_RecurWeekly sunucusu WMI sınıfı
+      href: core/servers/configure/sms_st_recurweekly-server-wmi-class.md
+- name: SEDO sunucusu WMI sınıfları
+  items:
+    - name: SMS_ObjectLock sunucusu WMI sınıfı
+      href: misc/sms_objectlock-server-wmi-class.md
+      items:
+        - name: CancelLockRequest yöntemi
+          href: misc/cancellockrequest-method-in-class-sms_objectlock.md
+        - name: CancelLockRequests yöntemi
+          href: misc/cancellockrequests-method-in-class-sms_objectlock.md
+        - name: CheckLockRequest yöntemi
+          href: misc/checklockrequest-method-in-class-sms_objectlock.md
+        - name: CheckLockRequests yöntemi
+          href: misc/checklockrequests-method-in-class-sms_objectlock.md
+        - name: GetLockInformation yöntemi
+          href: misc/getlockinformation-method-in-class-sms_objectlock.md
+        - name: ReleaseAllLocks yöntemi
+          href: misc/releasealllocks-method-in-class-sms_objectlock.md
+        - name: ReleaseLock yöntemi
+          href: misc/releaselock-method-in-class-sms_objectlock.md
+        - name: ReleaseLocks yöntemi
+          href: misc/releaselocks-method-in-class-sms_objectlock.md
+        - name: RequestLock yöntemi
+          href: misc/requestlock-method-in-class-sms_objectlock.md
+        - name: RequestLockAsync yöntemi
+          href: misc/requestlockasync-method-in-class-sms_objectlock.md
+        - name: RequestLocks yöntemi
+          href: misc/requestlocks-method-in-class-sms_objectlock.md
+        - name: RequestLocksAsync yöntemi
+          href: misc/requestlocksasync-method-in-class-sms_objectlock.md
+    - name: SMS_ObjectLockRequest sunucusu WMI sınıfı
+      href: misc/sms_objectlockrequest-server-wmi-class.md
+- name: Site yapılandırma sunucusu WMI sınıfları
+  href: core/servers/configure/site-configuration-server-wmi-classes.md
+  items:
+    - name: SMS_Boundary sunucusu WMI sınıfı
+      href: core/servers/configure/sms_boundary-server-wmi-class.md
+    - name: SMS_BoundaryGroup sunucusu WMI sınıfı
+      href: core/servers/configure/sms_boundarygroup-server-wmi-class.md
+      items:
+        - name: AddBoundary yöntemi
+          href: core/servers/configure/addboundary-method-in-class-sms_boundarygroup.md
+        - name: AddSiteSystem yöntemi
+          href: core/servers/configure/addsitesystem-method-in-class-sms_boundarygroup.md
+        - name: RemoveBoundary yöntemi
+          href: core/servers/configure/removeboundary-method-in-class-sms_boundarygroup.md
+        - name: RemoveSiteSystem yöntemi
+          href: core/servers/configure/removesitesystem-method-in-class-sms_boundarygroup.md
+    - name: SMS_BoundaryGroupMembers sunucusu WMI sınıfı
+      href: core/servers/configure/sms_boundarygroupmembers-server-wmi-class.md
+    - name: SMS_BoundaryGroupRelationships sunucusu WMI sınıfı
+      href: core/servers/configure/sms-boundarygrouprelationships-server-wmi-class.md
+      items:
+        - name: FallbackDP yöntemi
+          href: core/servers/configure/fallbackdp-method-in-class-sms-boundarygrouprelationships.md
+        - name: FallbackMP yöntemi
+          href: core/servers/configure/fallbackmp-method-in-class-sms-boundarygrouprelationships.md
+        - name: FallbackSMP yöntemi
+          href: core/servers/configure/fallbacksmp-method-in-class-sms-boundarygrouprelationships.md
+        - name: FallbackSUP yöntemi
+          href: core/servers/configure/fallbacksup-method-in-class-sms-boundarygrouprelationships.md
+    - name: SMS_BoundaryGroupSiteSystems sunucusu WMI sınıfı
+      href: core/servers/configure/sms_boundarygroupsitesystems-server-wmi-class.md
+    - name: SMS_Client_Reg_MultiString_List sunucusu WMI sınıfı
+      href: core/servers/configure/sms_client_reg_multistring_list-server-wmi-class.md
+    - name: SMS_CMSiteConfiguration sunucusu WMI sınıfı
+      href: core/servers/configure/sms_cmsiteconfiguration-server-wmi-class.md
+    - name: SMS_DefaultBoundaryGroup sunucusu WMI sınıfı
+      href: core/servers/configure/sms-defaultboundarygroup-server-wmi-class.md
+      items:
+        - name: AddBoundary yöntemi
+          href: core/servers/configure/addboundary-method-in-class-sms-defaultboundarygroup.md
+        - name: AddSiteSystem yöntemi
+          href: core/servers/configure/addsitesystem-method-in-class-sms-defaultboundarygroup.md
+        - name: RemoveBoundary yöntemi
+          href: core/servers/configure/removeboundary-method-in-class-sms-defaultboundarygroup.md
+        - name: RemoveSiteSystem yöntemi
+          href: core/servers/configure/removesitesystem-method-in-class-sms-defaultboundarygroup.md
+    - name: SMS_EmbeddedProperty sunucusu WMI sınıfı
+      href: core/servers/configure/sms_embeddedproperty-server-wmi-class.md
+    - name: SMS_EmbeddedPropertyList sunucusu WMI sınıfı
+      href: core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md
+    - name: SMS_Identification sunucusu WMI sınıfı
+      href: core/servers/configure/sms_identification-server-wmi-class.md
+      items:
+        - name: GetCurrentUser yöntemi
+          href: core/servers/configure/getcurrentuser-method-in-class-sms_identification.md
+        - name: GetFileBinary yöntemi
+          href: core/servers/configure/getfilebinary-method-in-class-sms_identification.md
+        - name: GetProviderVersion yöntemi
+          href: core/servers/configure/getproviderversion-method-in-class-sms_identification.md
+        - name: GetSiteID yöntemi
+          href: core/servers/configure/getsiteid-method-in-class-sms_identification.md
+    - name: SMS_RcmSqlControl sunucusu WMI sınıfı
+      href: core/servers/configure/sms_rcmsqlcontrol-server-wmi-class.md
+    - name: SMS_RcmSqlControlProperty sunucusu WMI sınıfı
+      href: core/servers/configure/sms_rcmsqlcontrolproperty-server-wmi-class.md
+    - name: SMS_ReplicationGroup sunucusu WMI sınıfı
+      href: core/servers/configure/sms_replicationgroup-server-wmi-class.md
+      items:
+        - name: InitializeData yöntemi
+          href: core/servers/configure/initializedata-method-in-class-sms_replicationgroup.md
+    - name: SMS_ReplicationLinkStatus sunucusu WMI sınıfı
+      href: core/servers/configure/sms_replicationlinkstatus-server-wmi-class.md
+    - name: SMS_ReplicationLinkSummary sunucusu WMI sınıfı
+      href: core/servers/configure/sms_replicationlinksummary-server-wmi-class.md
+    - name: SMS_SCI_Address sunucusu WMI sınıfı
+      href: core/servers/configure/sms_sci_address-server-wmi-class.md
+    - name: SMS_SCI_ClientComp sunucusu WMI sınıfı
+      href: core/servers/configure/sms_sci_clientcomp-server-wmi-class.md
+    - name: SMS_SCI_ClientConfig sunucusu WMI sınıfı
+      href: core/servers/configure/sms_sci_clientconfig-server-wmi-class.md
+    - name: SMS_SCI_Component sunucusu WMI sınıfı
+      href: core/servers/configure/sms_sci_component-server-wmi-class.md
+    - name: SMS_SCI_Configuration sunucusu WMI sınıfı
+      href: core/servers/configure/sms_sci_configuration-server-wmi-class.md
+    - name: SMS_SCI_FileDefinition sunucusu WMI sınıfı
+      href: core/servers/configure/sms_sci_filedefinition-server-wmi-class.md
+    - name: SMS_SCI_MaintenanceTask sunucusu WMI sınıfı
+      href: core/servers/configure/sms_sci_maintenancetask-server-wmi-class.md
+    - name: SMS_SCI_SiteDefinition sunucusu WMI sınıfı
+      href: core/servers/configure/sms_sci_sitedefinition-server-wmi-class.md
+    - name: SMS_SCI_SQLTask sunucusu WMI sınıfı
+      href: core/servers/configure/sms_sci_sqltask-server-wmi-class.md
+    - name: SMS_SCI_SysResUse sunucusu WMI sınıfı
+      href: core/servers/configure/sms_sci_sysresuse-server-wmi-class.md
+    - name: SMS_SII_Property sunucusu WMI sınıfı
+      href: core/servers/configure/sms_sii_property-server-wmi-class.md
+    - name: SMS_SII_PropertyList sunucusu WMI sınıfı
+      href: core/servers/configure/sms_sii_propertylist-server-wmi-class.md
+    - name: SMS_SIIB_AddressType sunucusu WMI sınıfı
+      href: core/servers/configure/sms_siib_addresstype-server-wmi-class.md
+    - name: SMS_SIIB_Component_FileList sunucusu WMI sınıfı
+      href: core/servers/configure/sms_siib_component_filelist-server-wmi-class.md
+    - name: SMS_SIIB_Configuration sunucusu WMI sınıfı
+      href: core/servers/configure/sms_siib_configuration-server-wmi-class.md
+    - name: SMS_SIIB_Generic_Configuration sunucusu WMI sınıfı
+      href: core/servers/configure/sms_siib_generic_configuration-server-wmi-class.md
+    - name: SMS_SIIB_SenderType sunucusu WMI sınıfı
+      href: core/servers/configure/sms_siib_sendertype-server-wmi-class.md
+    - name: SMS_SIIB_SysResRole sunucusu WMI sınıfı
+      href: core/servers/configure/sms_siib_sysresrole-server-wmi-class.md
+    - name: SMS_Site sunucusu WMI sınıfı
+      href: core/servers/configure/sms_site-server-wmi-class.md
+      items:
+        - name: EncryptDataEx yöntemi
+          href: core/servers/configure/encryptdataex-method-in-class-sms_site.md
+        - name: GetAutoUpgradeConfigs yöntemi
+          href: core/servers/configure/getautoupgradeconfigs-method-in-class-sms_site.md
+        - name: GetClientInfo yöntemi
+          href: core/servers/configure/getclientinfo-method-in-class-sms_site.md
+        - name: GetClientPilotingConfigs yöntemi
+          href: core/servers/configure/getclientpilotingconfigs-method-in-class-sms_site.md
+        - name: GetFeatureState yöntemi
+          href: core/servers/configure/getfeaturestate-method-in-class-sms_site.md
+        - name: GetSiteADInfo yöntemi
+          href: core/servers/configure/getsiteadinfo-method-in-class-sms_site.md
+        - name: ImportGlobalUserAccount yöntemi
+          href: core/servers/configure/importglobaluseraccount-method-in-class-sms_site.md
+        - name: ImportGlobalUserAccountEx yöntemi
+          href: core/servers/configure/importglobaluseraccountex-method-in-class-sms_site.md
+        - name: ImportMachineEntry yöntemi
+          href: core/servers/configure/importmachineentry-method-in-class-sms_site.md
+        - name: ImportMachineEntryToMultipleCollections yöntemi
+          href: core/servers/configure/importmachineentrytomultiplecollections-method-in-class-sms_site.md
+        - name: IsUsedCert yöntemi
+          href: core/servers/configure/isusedcert-method-in-class-sms_site.md
+        - name: RedistributeAutoUpgradeClientContent yöntemi
+          href: core/servers/configure/redistributeautoupgradeclientcontent-method-in-class-sms_site.md
+        - name: SubmitRegistrationRecord yöntemi
+          href: core/servers/configure/submitregistrationrecord-method-in-class-sms_site.md
+        - name: UpdateAutoUpgradeClientContent yöntemi
+          href: core/servers/configure/updateautoupgradeclientcontent-method-in-class-sms_site.md
+        - name: UpdateAutoUpgradeConfigs yöntemi
+          href: core/servers/configure/updateautoupgradeconfigs-method-in-class-sms_site.md
+        - name: UpdateClientPilotingConfigs yöntemi
+          href: core/servers/configure/updateclientpilotingconfigs-method-in-class-sms_site.md
+        - name: UpdateConsoleUsageData yöntemi
+          href: core/servers/configure/updateconsoleusagedata-method-in-class-sms_site.md
+        - name: UpdateFeatureState yöntemi
+          href: core/servers/configure/updatefeaturestate-method-in-class-sms_site.md
+        - name: VerifyNoLoops yöntemi
+          href: core/servers/configure/verifynoloops-method-in-class-sms_site.md
+    - name: SMS_SiteAndSubsites sunucusu WMI sınıfı
+      href: core/servers/configure/sms_siteandsubsites-server-wmi-class.md
+    - name: SMS_SiteControlDaySchedule sunucusu WMI sınıfı
+      href: core/servers/configure/sms_sitecontroldayschedule-server-wmi-class.md
+    - name: SMS_SiteControlFile sunucusu WMI sınıfı
+      href: core/servers/configure/sms_sitecontrolfile-server-wmi-class.md
+    - name: SMS_SiteControlItem sunucusu WMI sınıfı
+      href: core/servers/configure/sms_sitecontrolitem-server-wmi-class.md
+    - name: SMS_SiteInstallItem sunucusu WMI sınıfı
+      href: core/servers/configure/sms_siteinstallitem-server-wmi-class.md
+    - name: SMS_SiteInstallItemBase sunucusu WMI sınıfı
+      href: core/servers/configure/sms_siteinstallitembase-server-wmi-class.md
+    - name: SMS_SiteInstallMap sunucusu WMI sınıfı
+      href: core/servers/configure/sms_siteinstallmap-server-wmi-class.md
+      items:
+        - name: Refresh yöntemi
+          href: core/servers/configure/refresh-method-in-class-sms_siteinstallmap.md
+    - name: SMS_SystemResourceList sunucusu WMI sınıfı
+      href: core/servers/configure/sms_systemresourcelist-server-wmi-class.md
+    - name: SMS_SCFToSCI_a sunucusu WMI sınıfı
+      href: core/servers/configure/sms_scftosci_a-server-wmi-class.md
+    - name: SMS_SCFToSite_a sunucusu WMI sınıfı
+      href: core/servers/configure/sms_scftosite_a-server-wmi-class.md
+    - name: SMS_SiteToSubSite_a sunucusu WMI sınıfı
+      href: core/servers/configure/sms_sitetosubsite_a-server-wmi-class.md
+    - name: SMS_SiteToSiteID_a sunucusu WMI sınıfı
+      href: core/servers/configure/sms_sitetositeid_a-server-wmi-class.md
+- name: Yazılım dağıtımı sunucusu WMI sınıfları
+  items:
+    - name: SMS_Advertisement sunucusu WMI sınıfı
+      href: core/servers/configure/sms_advertisement-server-wmi-class.md
+      items:
+        - name: GetAdvertisements yöntemi
+          href: core/servers/configure/getadvertisements-method-in-class-sms_advertisement.md
+        - name: GetNextID yöntemi
+          href: core/servers/configure/getnextid-method-in-class-sms_advertisement.md
+        - name: RiskyDeploymentStatusMessage yöntemi
+          href: core/servers/configure/riskydeploymentstatusmessage-method-in-class-sms_advertisement.md
+        - name: SetNextID yöntemi
+          href: core/servers/configure/setnextid-method-in-class-sms_advertisement.md
+        - name: SetSourceSite yöntemi
+          href: core/servers/configure/setsourcesite-method-in-class-sms_advertisement.md
+        - name: Unlock yöntemi
+          href: core/servers/configure/unlock-method-in-class-sms_advertisement.md
+    - name: SMS_AdvertisementInfo sunucusu WMI sınıfı
+      href: core/servers/configure/sms_advertisementinfo-server-wmi-class.md
+    - name: SMS_AdvertisementStatusInformation sunucusu WMI sınıfı
+      href: core/servers/configure/sms_advertisementstatusinformation-server-wmi-class.md
+    - name: SMS_AdvertToSourceSite_a sunucusu WMI sınıfı
+      href: core/servers/configure/sms_adverttosourcesite_a-server-wmi-class.md
+    - name: SMS_ClassicDeploymentAssetDetails sunucusu WMI sınıfı
+      href: core/servers/configure/sms_classicdeploymentassetdetails-server-wmi-class.md
+    - name: SMS_ClassicDeploymentStatus sunucusu WMI sınıfı
+      href: core/servers/configure/sms_classicdeploymentstatus-server-wmi-class.md
+    - name: SMS_ClientAdvertisementStatus sunucusu WMI sınıfı
+      href: core/servers/configure/sms_clientadvertisementstatus-server-wmi-class.md
+    - name: SMS_ClientAdvertisementSummary sunucusu WMI sınıfı
+      href: core/servers/configure/sms_clientadvertisementsummary-server-wmi-class.md
+    - name: SMS_DistributionDPStatus sunucusu WMI sınıfı
+      href: core/servers/configure/sms_distributiondpstatus-server-wmi-class.md
+    - name: SMS_DistributionJob sunucusu WMI sınıfı
+      href: core/servers/configure/sms_distributionjob-server-wmi-class.md
+    - name: SMS_DistributionPoint sunucusu WMI sınıfı
+      href: core/servers/configure/sms_distributionpoint-server-wmi-class.md
+      items:
+        - name: VerifyPackage yöntemi
+          href: core/servers/configure/verifypackage-method-in-class-sms_distributionpoint.md
+        - name: CancelDistribution yöntemi
+          href: core/servers/configure/canceldistribution-method-in-class-sms_distributionpoint.md
+    - name: SMS_DistributionPointDriveInfo sunucusu WMI sınıfı
+      href: core/servers/configure/sms_distributionpointdriveinfo-server-wmi-class.md
+    - name: SMS_DistributionPointGroup sunucusu WMI sınıfı
+      href: core/servers/configure/sms_distributionpointgroup-server-wmi-class.md
+      items:
+        - name: AddDistributionPoints yöntemi
+          href: core/servers/configure/adddistributionpoints-method-in-class-sms_distributionpointgroup.md
+        - name: AddPackages yöntemi
+          href: core/servers/configure/addpackages-method-in-class-sms_distributionpointgroup.md
+        - name: AssociateCollections yöntemi
+          href: core/servers/configure/associatecollections-method-in-class-sms_distributionpointgroup.md
+        - name: DisassociateCollections yöntemi
+          href: core/servers/configure/disassociatecollections-method-in-class-sms_distributionpointgroup.md
+        - name: ReDistributePackage yöntemi
+          href: core/servers/configure/redistributepackage-method-in-class-sms_distributionpointgroup.md
+        - name: RefreshDPGroup yöntemi
+          href: core/servers/configure/refreshdpgroup-method-in-class-sms_distributionpointgroup.md
+        - name: RemoveDistributionPoints yöntemi
+          href: core/servers/configure/removedistributionpoints-method-in-class-sms_distributionpointgroup.md
+        - name: RemovePackages yöntemi
+          href: core/servers/configure/removepackages-method-in-class-sms_distributionpointgroup.md
+    - name: SMS_DistributionPointInfo sunucusu WMI sınıfı
+      href: core/servers/configure/sms_distributionpointinfo-server-wmi-class.md
+      items:
+        - name: GetChainedPullDPs yöntemi
+          href: core/servers/configure/getchainedpulldps-method-in-class-smsdistributionpointinfo.md
+        - name: SetDPMaintenanceMode yöntemi
+          href: core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo.md
+    - name: SMS_DistributionStatus sunucusu WMI sınıfı
+      href: core/servers/configure/sms_distributionstatus-server-wmi-class.md
+    - name: SMS_LastPXEAdvertisement sunucusu WMI sınıfı
+      href: core/servers/configure/sms_lastpxeadvertisement-server-wmi-class.md
+    - name: SMS_OS_Details sunucusu WMI sınıfı
+      href: core/servers/configure/sms_os_details-server-wmi-class.md
+    - name: SMS_Package sunucusu WMI sınıfı
+      href: core/servers/configure/sms_package-server-wmi-class.md
+      items:
+        - name: AddChangeNotification yöntemi
+          href: core/servers/configure/addchangenotification-method-in-class-sms_package.md
+        - name: AddDistributionPoints yöntemi
+          href: core/servers/configure/adddistributionpoints-method-in-class-sms_package.md
+        - name: CheckDuplicateShareName yöntemi
+          href: core/servers/configure/checkduplicatesharename-method-in-class-sms_package.md
+        - name: CheckDuplicateSourceName yöntemi
+          href: core/servers/configure/checkduplicatesourcename-method-in-class-sms_package.md
+        - name: CheckPackageShareForTaskSequenceDeployment yöntemi
+          href: core/servers/configure/checkpackagesharefortasksequencedeployment-method-in-class-sms_package.md
+        - name: RefreshPkgSource yöntemi
+          href: core/servers/configure/refreshpkgsource-method-in-class-sms_package.md
+        - name: SetSourceSite yöntemi
+          href: core/servers/configure/setsourcesite-method-in-class-sms_package.md
+        - name: Unlock yöntemi
+          href: core/servers/configure/unlock-method-in-class-sms_package.md
+    - name: SMS_PackageAccessByUsers sunucusu WMI sınıfı
+      href: core/servers/configure/sms_packageaccessbyusers-server-wmi-class.md
+    - name: SMS_PackageBaseclass sunucusu WMI sınıfı
+      href: core/servers/configure/sms_packagebaseclass-server-wmi-class.md
+    - name: SMS_PackageStatus sunucusu WMI sınıfı
+      href: core/servers/configure/sms_packagestatus-server-wmi-class.md
+    - name: SMS_PackageStatusDetailSummarizer sunucusu WMI sınıfı
+      href: core/servers/configure/sms_packagestatusdetailsummarizer-server-wmi-class.md
+    - name: SMS_PackageStatusDistPointsSummarizer sunucusu WMI sınıfı
+      href: core/servers/configure/sms_packagestatusdistpointssummarizer-server-wmi-class.md
+    - name: SMS_PackageStatusRootSummarizer sunucusu WMI sınıfı
+      href: core/servers/configure/sms_packagestatusrootsummarizer-server-wmi-class.md
+    - name: SMS_PackageToAdvert_a sunucusu WMI sınıfı
+      href: core/servers/configure/sms_packagetoadvert_a-server-wmi-class.md
+    - name: SMS_PackageToContent sunucusu WMI sınıfı
+      href: core/servers/configure/sms_packagetocontent-server-wmi-class.md
+      items:
+        - name: IsContentValid yöntemi
+          href: core/servers/configure/iscontentvalid-method-in-class-sms_packagetocontent.md
+    - name: SMS_PackageToSourceSite_a sunucusu WMI sınıfı
+      href: core/servers/configure/sms_packagetosourcesite_a-server-wmi-class.md
+    - name: SMS_PDF_Package sunucusu WMI sınıfı
+      href: core/servers/configure/sms_pdf_package-server-wmi-class.md
+      items:
+        - name: GetPDFData yöntemi
+          href: core/servers/configure/getpdfdata-method-in-class-sms_pdf_package.md
+        - name: LoadIconForPDF yöntemi
+          href: core/servers/configure/loadiconforpdf-method-in-class-sms_pdf_package.md
+        - name: LoadPDF yöntemi
+          href: core/servers/configure/loadpdf-method-in-class-sms_pdf_package.md
+        - name: ProcessInBox yöntemi
+          href: core/servers/configure/processinbox-method-in-class-sms_pdf_package.md
+    - name: SMS_PDF_Program sunucusu WMI sınıfı
+      href: core/servers/configure/sms_pdf_program-server-wmi-class.md
+    - name: SMS_PDFPkgToPDFProgram_a sunucusu WMI sınıfı
+      href: core/servers/configure/sms_pdfpkgtopdfprogram_a-server-wmi-class.md
+    - name: SMS_PkgToPkgAccess_a sunucusu WMI sınıfı
+      href: core/servers/configure/sms_pkgtopkgaccess_a-server-wmi-class.md
+    - name: SMS_PkgToPkgProgram_a sunucusu WMI sınıfı
+      href: core/servers/configure/sms_pkgtopkgprogram_a-server-wmi-class.md
+    - name: SMS_PkgToPkgServer_a sunucusu WMI sınıfı
+      href: core/servers/configure/sms_pkgtopkgserver_a-server-wmi-class.md
+    - name: SMS_Program sunucusu WMI sınıfı
+      href: core/servers/configure/sms_program-server-wmi-class.md
+    - name: SMS_ServiceWindow sunucusu WMI sınıfı
+      href: core/servers/configure/sms_servicewindow-server-wmi-class.md
+    - name: SMS_SupportedPlatforms sunucusu WMI sınıfı
+      href: core/servers/configure/sms_supportedplatforms-server-wmi-class.md
+      items:
+        - name: Enable yöntemi
+          href: core/servers/configure/enable-method-in-class-sms_supportedplatforms.md
+    - name: SMS_SupportedPlatformsOfflineServicing sunucusu WMI sınıfı
+      href: core/servers/configure/sms_supportedplatformsofflineservicing-server-wmi-class.md
+- name: Yazılım kullanım ölçümü sunucusu WMI sınıfları
+  items:
+    - name: SMS_FileUsageSummary sunucusu WMI sınıfı
+      href: apps/sms_fileusagesummary-server-wmi-class.md
+    - name: SMS_G_System_SoftwareUsageData sunucusu WMI sınıfı
+      href: apps/sms_g_system_softwareusagedata-server-wmi-class.md
+    - name: SMS_MeterData sunucusu WMI sınıfı
+      href: apps/sms_meterdata-server-wmi-class.md
+    - name: SMS_MeteredFiles sunucusu WMI sınıfı
+      href: apps/sms_meteredfiles-server-wmi-class.md
+    - name: SMS_MeteredProductRule sunucusu WMI sınıfı
+      href: apps/sms_meteredproductrule-server-wmi-class.md
+    - name: SMS_MeteredUser sunucusu WMI sınıfı
+      href: apps/sms_metereduser-server-wmi-class.md
+    - name: SMS_MonthlyUsageSummary sunucusu WMI sınıfı
+      href: apps/sms_monthlyusagesummary-server-wmi-class.md
+    - name: SMS_ProductFileInfo sunucusu WMI sınıfı
+      href: apps/sms_productfileinfo-server-wmi-class.md
+    - name: SMS_SummarizationInterval sunucusu WMI sınıfı
+      href: apps/sms_summarizationinterval-server-wmi-class.md
+- name: Yazılım güncelleştirmeleri sunucusu WMI sınıfları
+  items:
+    - name: SMS_ADRDeploymentSettings sunucusu WMI sınıfı
+      href: sum/sms_adrdeploymentsettings-server-wmi-class.md
+    - name: SMS_AutoDeployment sunucusu WMI sınıfı
+      href: sum/sms_autodeployment-server-wmi-class.md
+      items:
+        - name: EvaluateAllAutoDeployment yöntemi
+          href: sum/evaluateallautodeployment-method-in-class-sms_autodeployment.md
+        - name: EvaluateAutoDeployment yöntemi
+          href: sum/evaluateautodeployment-method-in-class-sms_autodeployment.md
+    - name: SMS_AuthorizationList sunucusu WMI sınıfı
+      href: sum/sms_authorizationlist-server-wmi-class.md
+      items:
+        - name: RunAuthListStatusSummarization yöntemi
+          href: sum/runauthliststatussummarization-method-in-class-sms_authorizationlist.md
+    - name: SMS_CIAllCategories sunucusu WMI sınıfı
+      href: sum/sms_ciallcategories-server-wmi-class.md
+    - name: SMS_CIContentFiles sunucusu WMI sınıfı
+      href: sum/sms_cicontentfiles-server-wmi-class.md
+    - name: SMS_CIRelation sunucusu WMI sınıfı
+      href: sum/sms_cirelation-server-wmi-class.md
+    - name: SMS_CIToContent sunucusu WMI sınıfı
+      href: sum/sms_citocontent-server-wmi-class.md
+    - name: SMS_CIUpdateSources sunucusu WMI sınıfı
+      href: sum/sms_ciupdatesources-server-wmi-class.md
+    - name: SMS_CM_UpdateFeatures sunucusu WMI sınıfı
+      href: sum/sms_cm_updatefeatures-server-wmi-class.md
+      items:
+        - name: UpdateFeatureExposureStatus yöntemi
+          href: sum/updatefeatureexposurestatus-method-in-class-sms_cm_updatefeatures.md
+    - name: SMS_CM_UpdatePackageFeatures sunucusu WMI sınıfı
+      href: sum/sms_cm_updatepackagefeatures-server-wmi-class.md
+      items:
+        - name: UpdateFeatureExposureStatus yöntemi
+          href: sum/updatefeatureexposurestatus-method-in-class-sms_cm_updatepackagefeatures.md
+    - name: SMS_CM_UpdatePackages sunucusu WMI sınıfı
+      href: sum/sms_cm_updatepackages-server-wmi-class.md
+      items:
+        - name: IsCurrentWorkingUpdatePackage yöntemi
+          href: sum/iscurrentworkingupdatepackage-method-in-class-sms_cm_updatepackages.md
+        - name: RetryContentReplication yöntemi
+          href: sum/retrycontentreplication-method-in-class-sms_cm_updatepackages.md
+        - name: SetIgnorePrereqWarning yöntemi
+          href: sum/setignoreprereqwarning-method-in-class-sms_cm_updatepackages.md
+        - name: UpdatePrereqAndStateFlags yöntemi
+          href: sum/updateprereqandstateflags-method-in-class-sms_cm_updatepackages.md
+    - name: SMS_CM_UpdatePackagesHistory sunucusu WMI sınıfı
+      href: sum/sms_cm_updatepackageshistory-server-wmi-class.md
+    - name: SMS_CM_UpdatePackageSiteStatus sunucusu WMI sınıfı
+      href: sum/sms_cm_updatepackagesitestatus-server-wmi-class.md
+      items:
+        - name: UpdatePackageSiteState yöntemi
+          href: sum/updatepackagesitestate-method-in-class-sms_cm_updatepackagesitestatus.md
+    - name: SMS_CM_UpdatePackDetailedMonitoring sunucusu WMI sınıfı
+      href: sum/sms_cm_updatepackdetailedmonitoring-server-wmi-class.md
+    - name: SMS_CM_UpdatePackDetailedPrereqMonitoring sunucusu WMI sınıfı
+      href: sum/sms_cm_updatepackdetailedprereqmonitoring-server-wmi-class.md
+    - name: SMS_CM_UpdatePackDetailedSiteStatus sunucusu WMI sınıfı
+      href: sum/sms_cm_updatepackdetailedsitestatus-server-wmi-class.md
+    - name: SMS_CM_UpdatePackDownloadMonitoring sunucusu WMI sınıfı
+      href: sum/sms_cm_updatepackdownloadmonitoring-server-wmi-class.md
+    - name: SMS_CM_UpdatePackTopLevelMonitoring sunucusu WMI sınıfı
+      href: sum/sms_cm_updatepacktoplevelmonitoring-server-wmi-class.md
+    - name: SMS_EULAContent sunucusu WMI sınıfı
+      href: sum/sms_eulacontent-server-wmi-class.md
+    - name: SMS_FeatureExtension sunucusu WMI sınıfı
+      href: sum/sms_featureextension-server-wmi-class.md
+    - name: SMS_ServicePlan sunucusu WMI sınıfı
+      href: sum/sms_serviceplan-server-wmi-class.md
+    - name: SMS_SoftwareUpdate sunucusu WMI sınıfı
+      href: sum/sms_softwareupdate-server-wmi-class.md
+      items:
+        - name: AcceptEULA yöntemi
+          href: sum/accepteula-method-in-class-sms_softwareupdate.md
+        - name: GetEULA yöntemi
+          href: sum/geteula-method-in-class-sms_softwareupdate.md
+        - name: SetEnforcement yöntemi
+          href: sum/setenforcement-method-in-class-sms_softwareupdate.md
+        - name: SyncNow yöntemi
+          href: sum/syncnow-method-in-class-sms_softwareupdate.md
+    - name: SMS_SoftwareUpdateBase sunucusu WMI sınıfı
+      href: sum/sms_softwareupdatebase-server-wmi-class.md
+    - name: SMS_SoftwareUpdateSource sunucusu WMI sınıfı
+      href: sum/sms_softwareupdatesource-server-wmi-class.md
+    - name: SMS_SoftwareUpdatesPackage sunucusu WMI sınıfı
+      href: sum/sms_softwareupdatespackage-server-wmi-class.md
+      items:
+        - name: AddChangeNotification yöntemi
+          href: sum/addchangenotification-method-in-class-sms_softwareupdatespackage.md
+        - name: AddDistributionPoints yöntemi
+          href: sum/adddistributionpoints-method-in-class-sms_softwareupdatespackage.md
+        - name: AddUpdateContent yöntemi
+          href: sum/addupdatecontent-method-in-class-sms_softwareupdatespackage.md
+        - name: RebuildPackage yöntemi
+          href: sum/rebuildpackage-method-in-class-sms_softwareupdatespackage.md
+        - name: RefreshPkgSource yöntemi
+          href: sum/refreshpkgsource-method-in-class-sms_softwareupdatespackage.md
+        - name: RemoveContent yöntemi
+          href: sum/removecontent-method-in-class-sms_softwareupdatespackage.md
+        - name: SetSourceSite yöntemi
+          href: sum/setsourcesite-method-in-class-sms_softwareupdatespackage.md
+        - name: Unlock yöntemi
+          href: sum/unlock-method-in-class-sms_softwareupdatespackage.md
+        - name: ValidateNewPackageSource yöntemi
+          href: sum/validatenewpackagesource-method-in-class-sms_softwareupdatespackage.md
+    - name: SMS_SUMDeploymentAssetDetails sunucusu WMI sınıfı
+      href: sum/sms_sumdeploymentassetdetails-server-wmi-class.md
+    - name: SMS_SUMDeploymentStatistics sunucusu WMI sınıfı
+      href: sum/sms_sumdeploymentstatistics-server-wmi-class.md
+    - name: SMS_SUMDeploymentStatus sunucusu WMI sınıfı
+      href: sum/sms_sumdeploymentstatus-server-wmi-class.md
+    - name: SMS_SUPSyncStatus sunucusu WMI sınıfı
+      href: sum/sms_supsyncstatus-server-wmi-class.md
+    - name: SMS_Template sunucusu WMI sınıfı
+      href: sum/sms_template-server-wmi-class.md
+    - name: SMS_UpdateCategoryInstance sunucusu WMI sınıfı
+      href: sum/sms_updatecategoryinstance-server-wmi-class.md
+    - name: SMS_UpdateComplianceStatus sunucusu WMI sınıfı
+      href: sum/sms_updatecompliancestatus-server-wmi-class.md
+    - name: SMS_UpdateDeploymentSummary sunucusu WMI sınıfı
+      href: sum/sms_updatedeploymentsummary-server-wmi-class.md
+    - name: SMS_UpdateGroupAssignment sunucusu WMI sınıfı
+      href: sum/sms_updategroupassignment-server-wmi-class.md
+    - name: SMS_UpdatesAssignment sunucusu WMI sınıfı
+      href: sum/sms_updatesassignment-server-wmi-class.md
+- name: Destekleyen sunucu WMI sınıfları
+  items:
+    - name: SMS_ContextMethods sunucusu WMI sınıfı
+      href: misc/sms_contextmethods-server-wmi-class.md
+      items:
+        - name: ClearContextHandle yöntemi
+          href: misc/clearcontexthandle-method-in-class-sms_contextmethods.md
+        - name: GetContextHandle yöntemi
+          href: misc/getcontexthandle-method-in-class-sms_contextmethods.md
+    - name: SMS_ExtendedStatus sunucusu WMI sınıfı
+      href: misc/sms_extendedstatus-server-wmi-class.md
+    - name: SMS_NAL_Methods sunucusu WMI sınıfı
+      href: misc/sms_nal_methods-server-wmi-class.md
+      items:
+        - name: PackNALPath yöntemi
+          href: misc/packnalpath-method-in-class-sms_nal_methods.md
+        - name: UnPackNALPath yöntemi
+          href: misc/unpacknalpath-method-in-class-sms_nal_methods.md
+    - name: SMS_ProviderLocation sunucusu WMI sınıfı
+      href: misc/sms_providerlocation-server-wmi-class.md
+- name: Durum sınıfları
+  items:
+    - name: Durum istemcisi API'leri
+      items:
+        - name: Smscstat.dll durum iletisi işlevleri
+          href: core/servers/manage/smscstat.dll-status-message-functions.md
+          items:
+            - name: AddAttributeToSMSStatusMessage işlevi
+              href: core/servers/manage/addattributetosmsstatusmessage-function.md
+            - name: CreateSMSStatusMessage işlevi
+              href: core/servers/manage/createsmsstatusmessage-function.md
+            - name: ReportSMSStatusMessage işlevi
+              href: core/servers/manage/reportsmsstatusmessage-function.md
+        - name: SMSEvent sınıfı
+          href: core/servers/manage/smsevent-class.md
+          items:
+            - name: ICCMEvent EventType özelliği
+              href: core/servers/manage/iccmevent--eventtype-property.md
+            - name: ICCMEvent RawEvent özelliği
+              href: core/servers/manage/iccmevent--rawevent-property.md
+            - name: ICCMEvent SetProperty metodu
+              href: core/servers/manage/iccmevent--setproperty-method.md
+            - name: ICCMEvent Submit metodu
+              href: core/servers/manage/iccmevent--submit-method.md
+            - name: ICCMEvent SubmitPending metodu
+              href: core/servers/manage/iccmevent--submitpending-method.md
+    - name: Durum iletisi türleri
+      items:
+        - name: SMS_SofwareDistribution_Event
+          href: core/servers/manage/sms_sofwaredistribution_event.md
+        - name: SoftDistDownloadFailedEvent
+          href: core/servers/manage/softdistdownloadfailedevent.md
+        - name: SoftDistProgramCompletedSuccessfullyEvent
+          href: core/servers/manage/softdistprogramcompletedsuccessfullyevent.md
+        - name: SoftwareDistributionPackageEvent
+          href: core/servers/manage/softwaredistributionpackageevent.md
+    - name: Durum MIF işlevleri
+      href: core/servers/manage/status-mif-functions.md
+      items:
+        - name: Create işlevi
+          href: core/servers/manage/create-function.md
+        - name: InstallStatusMIF işlevi
+          href: core/servers/manage/installstatusmif-function.md
+        - name: InstallStatusMIFEx işlevi
+          href: core/servers/manage/installstatusmifex-function.md
+    - name: Durum sunucusu API’si
+      items:
+        - name: SMSFormatMessageCtl sınıfı
+          href: core/servers/manage/smsformatmessagectl-class.md
+          items:
+            - name: FormatModuleMessage yöntemi
+              href: core/servers/manage/formatmodulemessage-method.md
+            - name: FormatModuleString yöntemi
+              href: core/servers/manage/formatmodulestring-method.md
+            - name: FormatSystemMessage yöntemi
+              href: core/servers/manage/formatsystemmessage-method.md
+    - name: Durum sunucusu WMI sınıfları
+      items:
+        - name: SMS_ComponentSummarizer sunucusu WMI sınıfı
+          href: core/servers/manage/sms_componentsummarizer-server-wmi-class.md
+          items:
+            - name: DeleteStatistics yöntemi
+              href: core/servers/manage/deletestatistics-method-in-class-sms_componentsummarizer.md
+        - name: SMS_SecondarySiteStatus sunucusu WMI sınıfı
+          href: core/servers/manage/sms_secondarysitestatus-server-wmi-class.md
+        - name: SMS_SiteDetailSummarizer sunucusu WMI sınıfı
+          href: core/servers/manage/sms_sitedetailsummarizer-server-wmi-class.md
+        - name: SMS_SiteSystemSummarizer sunucusu WMI sınıfı
+          href: core/servers/manage/sms_sitesystemsummarizer-server-wmi-class.md
+        - name: SMS_StatAttr sunucusu WMI sınıfı
+          href: core/servers/manage/sms_statattr-server-wmi-class.md
+        - name: SMS_StatInsStr sunucusu WMI sınıfı
+          href: core/servers/manage/sms_statinsstr-server-wmi-class.md
+        - name: SMS_StatMsg sunucusu WMI sınıfı
+          href: core/servers/manage/sms_statmsg-server-wmi-class.md
+        - name: SMS_StatMsgAttributes sunucusu WMI sınıfı
+          href: core/servers/manage/sms_statmsgattributes-server-wmi-class.md
+        - name: SMS_StatMsgInsStrings sunucusu WMI sınıfı
+          href: core/servers/manage/sms_statmsginsstrings-server-wmi-class.md
+        - name: SMS_StatMsgModuleNames sunucusu WMI sınıfı
+          href: core/servers/manage/sms_statmsgmodulenames-server-wmi-class.md
+        - name: SMS_StatMsgWithInsStrings sunucusu WMI sınıfı
+          href: core/servers/manage/sms_statmsgwithinsstrings-server-wmi-class.md
+        - name: SMS_StatusMessage sunucusu WMI sınıfı
+          href: core/servers/manage/sms_statusmessage-server-wmi-class.md
+          items:
+            - name: DeleteByID yöntemi
+              href: core/servers/manage/deletebyid-method-in-class-sms_statusmessage.md
+            - name: DeleteByQuery yöntemi
+              href: core/servers/manage/deletebyquery-method-in-class-sms_statusmessage.md
+            - name: RaiseErrorStatusMsg yöntemi
+              href: core/servers/manage/raiseerrorstatusmsg-method-in-class-sms_statusmessage.md
+            - name: RaiseInformationalStatusMsg yöntemi
+              href: core/servers/manage/raiseinformationalstatusmsg-method-in-class-sms_statusmessage.md
+            - name: RaiseRawStatusMsg yöntemi
+              href: core/servers/manage/raiserawstatusmsg-method-in-class-sms_statusmessage.md
+            - name: RaiseWarningStatusMsg yöntemi
+              href: core/servers/manage/raisewarningstatusmsg-method-in-class-sms_statusmessage.md
+        - name: SMS_SummarizerRootStatus sunucusu WMI sınıfı
+          href: core/servers/manage/sms_summarizerrootstatus-server-wmi-class.md
+          items:
+            - name: GetTallyIntervals yöntemi
+              href: core/servers/manage/gettallyintervals-method-in-class-sms_summarizerrootstatus.md
+        - name: SMS_SummarizationSettings sunucusu WMI sınıfı
+          href: core/servers/manage/sms_summarizationsettings-server-wmi-class.md
+          items:
+            - name: GetSummarizationSettings yöntemi
+              href: core/servers/manage/getsummarizationsettings-method-in-class-sms_summarizationsettings.md
+            - name: SetSummarizationSettings yöntemi
+              href: core/servers/manage/setsummarizationsettings-method-in-class-sms_summarizationsettings.md
+        - name: SMS_SummarizerSiteStatus sunucusu WMI sınıfı
+          href: core/servers/manage/sms_summarizersitestatus-server-wmi-class.md
+        - name: SMS_SummarizerStatus sunucusu WMI sınıfı
+          href: core/servers/manage/sms_summarizerstatus-server-wmi-class.md
+- name: Microsoft Azure sunucusu WMI sınıfları
+  items:
+    - name: SMS_AzureService sunucusu WMI sınıfı
+      href: core/servers/configure/sms_azureservice-server-wmi-class.md
+      items:
+        - name: Start yöntemi
+          href: core/servers/configure/start-method-in-class-sms_azureservice.md
+        - name: Stop yöntemi
+          href: core/servers/configure/stop-method-in-class-sms_azureservice.md
+    - name: SMS_AzureServicesTask sunucusu WMI sınıfı
+      href: core/servers/configure/sms_azureservicestask-server-wmi-class.md
+- name: Windows 10 bakım sunucusu WMI sınıfları
+  items:
+    - name: SMS_AdminUIContent sunucusu WMI sınıfı
+      href: misc/sms-adminuicontent-server-wmi-class.md
+    - name: SMS_Windows10Dashboard sunucusu WMI sınıfı
+      href: misc/sms_windows10dashboard-server-wmi-class.md
+    - name: SMS_WindowsServicingBusinessReadyUpdates sunucusu WMI sınıfı
+      href: misc/sms_windowsservicingbusinessreadyupdates-server-wmi-class.md
+    - name: SMS_WindowsServicingLocalizedNames sunucusu WMI sınıfı
+      href: misc/sms_windowsservicinglocalizednames-server-wmi-class.md
+    - name: SMS_WindowsServicingStates sunucusu WMI sınıfı
+      href: misc/sms_windowsservicingstates-server-wmi-class.md

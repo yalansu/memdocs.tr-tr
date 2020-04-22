@@ -1,0 +1,8 @@
+- name: Kiracı ekleme belgeleri
+  href: index.yml
+- name: Dağıtma ve kullanma
+  items:
+    - name: Kiracı eklemeyi etkinleştirme
+      href: device-sync-actions.md
+    - name: Cihaz eylemlerinde sorun giderme
+      href: technical-reference.md

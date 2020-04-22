@@ -1,0 +1,879 @@
+- name: Temel altyapı belgeleri
+  href: index.yml
+- name: Anlama ve keşfetme
+  items:
+    - name: Configuration Manager nedir?
+      href: understand/introduction.md
+    - name: Microsoft Endpoint Configuration Manager hakkında SSS
+      href: understand/microsoft-endpoint-manager-faq.md
+    - name: SCCM’ye ne oldu?
+      href: understand/what-happened-to-sccm.md
+    - name: Giriş
+      items:
+        - name: Configuration Manager için yardım bulma
+          href: understand/find-help.md
+        - name: Belgeleri kullanma
+          href: understand/use-docs.md
+        - name: Konsolu kullanma
+          href: servers/manage/admin-console.md
+        - name: Erişilebilirlik özellikleri
+          href: understand/accessibility-features.md
+        - name: Yazılım Merkezi kullanıcı kılavuzu
+          href: understand/software-center.md
+    - name: Temel bilgiler
+      items:
+        - name: Configuration Manager'ın temelleri
+          href: understand/fundamentals.md
+        - name: Siteler ve hiyerarşiler
+          href: understand/fundamentals-of-sites-and-hierarchies.md
+        - name: 'Yükseltme, güncelleştirme ve yükleme hakkında'
+          href: understand/upgrade-update-install.md
+        - name: Cihazları yönetme
+          href: understand/fundamentals-of-managing-devices.md
+        - name: İstemci yönetimi
+          href: understand/fundamentals-of-client-management-tasks.md
+        - name: Güvenlik
+          href: understand/fundamentals-of-security.md
+        - name: Rol tabanlı yönetim
+          href: understand/fundamentals-of-role-based-administration.md
+    - name: Configuration Manager ve Hizmet olarak Windows
+      href: understand/configuration-manager-and-windows-as-service.md
+    - name: Bulut hizmetlerini kullanma
+      items:
+        - name: Bulut hizmetlerine genel bakış
+          href: understand/use-cloud-services.md
+        - name: Azure’da Configuration Manager
+          href: understand/configuration-manager-on-azure.md
+    - name: Site boyutlandırması ve performansı hakkında SSS
+      href: understand/site-size-performance-faq.md
+    - name: Ürün ve lisanslama hakkında SSS
+      href: understand/product-and-licensing-faq.md
+    - name: Configuration Manager’ın hangi dalını kullanmalıyım?
+      href: understand/which-branch-should-i-use.md
+    - name: Lisans ve dallar
+      href: understand/learn-more-editions.md
+    - name: Genişletilmiş birlikte çalışabilirlik istemcisi
+      href: understand/interoperability-client.md
+    - name: Uzun süreli bakım dalı
+      items:
+        - name: Uzun süreli bakım dalına genel bakış
+          href: understand/introduction-to-the-ltsb.md
+        - name: LTSB için desteklenen yapılandırmalar
+          href: understand/supported-configurations-for-ltsb.md
+        - name: LTSB’yi yükleme
+          href: understand/install-the-ltsb.md
+        - name: LTSB’yi yönetme
+          href: understand/manage-the-ltsb.md
+        - name: LTSB’yi güncel dala yükseltme
+          href: understand/convert-to-current-branch.md
+- name: Planlama ve tasarlama
+  items:
+    - name: Configuration Manager'a hazırlık
+      href: plan-design/get-ready.md
+    - name: Ürün değişiklikleri
+      items:
+        - name: Özellikler ve yetenekler
+          href: plan-design/changes/features-and-capabilities.md
+        - name: Artımlı sürümlerdeki yenilikler
+          href: plan-design/changes/whats-new-incremental-versions.md
+        - name: Sürüm 2002’deki yenilikler
+          href: plan-design/changes/whats-new-in-version-2002.md
+        - name: Sürüm 1910’daki yenilikler
+          href: plan-design/changes/whats-new-in-version-1910.md
+        - name: Sürüm 1906’daki yenilikler
+          href: plan-design/changes/whats-new-in-version-1906.md
+        - name: Sürüm 1902’deki yenilikler
+          href: plan-design/changes/whats-new-in-version-1902.md
+        - name: Sürüm 1810’daki yenilikler
+          href: plan-design/changes/whats-new-in-version-1810.md
+        - name: Configuration Manager 2012’den sonraki değişiklikler
+          href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
+        - name: Kaldırılan ve kullanım dışı bırakılan
+          items:
+            - name: Kaldırılan ve kullanım dışı bırakılanlara genel bakış
+              href: plan-design/changes/deprecated/removed-and-deprecated.md
+            - name: Kaldırılan ve kullanım dışı bırakılan özellikler
+              href: plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md
+            - name: Site sunucuları için kaldırılan ve kullanım dışı bırakılan özellikler
+              href: plan-design/changes/deprecated/removed-and-deprecated-server.md
+            - name: İstemciler için kaldırılan ve kullanım dışı bırakılan özellikler
+              href: plan-design/changes/deprecated/removed-and-deprecated-client.md
+    - name: Desteklenen yapılandırmalar
+      items:
+        - name: Desteklenen yapılandırmalar
+          href: plan-design/configs/supported-configurations.md
+        - name: Boyut ve ölçek sayıları
+          href: plan-design/configs/size-and-scale-numbers.md
+        - name: Site ve site sistemi önkoşulları
+          href: plan-design/configs/site-and-site-system-prerequisites.md
+        - name: Site boyutu ve performansına ilişkin yönergeler
+          href: plan-design/configs/site-size-performance-guidelines.md
+        - name: Site sistem sunucuları için desteklenen işletim sistemleri
+          href: plan-design/configs/supported-operating-systems-for-site-system-servers.md
+        - name: İstemciler ve cihazlar için desteklenen işletim sistemleri
+          href: plan-design/configs/supported-operating-systems-for-clients-and-devices.md
+        - name: İstemci olarak Windows 10 için destek
+          href: plan-design/configs/support-for-windows-10.md
+        - name: Konsollar için desteklenen işletim sistemleri
+          href: plan-design/configs/supported-operating-systems-consoles.md
+        - name: Önerilen donanım
+          href: plan-design/configs/recommended-hardware.md
+        - name: SQL Server sürümleri desteği
+          href: plan-design/configs/support-for-sql-server-versions.md
+        - name: Active Directory etki alanları için destek
+          href: plan-design/configs/support-for-active-directory-domains.md
+        - name: Windows özellikleri ve ağları için destek
+          href: plan-design/configs/support-for-windows-features-and-networks.md
+        - name: Sanallaştırma ortamları desteği
+          href: plan-design/configs/support-for-virtualization-environments.md
+    - name: Cihaz yönetim çözümü seçme
+      href: plan-design/choose-a-device-management-solution.md
+    - name: Site hiyerarşisi tasarlama
+      items:
+        - name: Hiyerarşi tasarlama
+          href: plan-design/hierarchy/design-a-hierarchy-of-sites.md
+        - name: SMS Sağlayıcı planı
+          href: plan-design/hierarchy/plan-for-the-sms-provider.md
+        - name: Site veritabanı planlaması
+          href: plan-design/hierarchy/plan-for-the-site-database.md
+        - name: Site sistem sunucularını planlama
+          href: plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md
+        - name: İçerik yönetimi için temel kavramlar
+          items:
+            - name: İçerik yönetiminin temelleri
+              href: plan-design/hierarchy/fundamental-concepts-for-content-management.md
+            - name: Bulut tabanlı dağıtım noktası kullanma
+              href: plan-design/hierarchy/use-a-cloud-based-distribution-point.md
+            - name: İstek temelli dağıtım noktası kullanma
+              href: plan-design/hierarchy/use-a-pull-distribution-point.md
+            - name: İçerik kitaplığı
+              href: plan-design/hierarchy/the-content-library.md
+            - name: Akış çizelgesi - İçerik kitaplığını yönetme
+              href: plan-design/hierarchy/manage-content-library-flowchart.md
+            - name: İçerik kitaplığı temizleme aracı
+              href: plan-design/hierarchy/content-library-cleanup-tool.md
+            - name: Configuration Manager istemcileri için Eş Önbellek
+              href: plan-design/hierarchy/client-peer-cache.md
+            - name: Paket Aktarma Yöneticisi
+              href: plan-design/hierarchy/package-transfer-manager.md
+            - name: İçerik yönetimi için ağ bant genişliğini yönetme
+              href: plan-design/hierarchy/manage-network-bandwidth.md
+            - name: İçerik yönetimi için güvenlik ve gizlilik
+              href: plan-design/hierarchy/security-and-privacy-for-content-management.md
+        - name: Siteler arasında veri aktarımı
+          items:
+            - name: Veri aktarım türleri
+              href: plan-design/hierarchy/data-transfers-between-sites.md
+            - name: Dosya tabanlı çoğaltma
+              href: plan-design/hierarchy/file-based-replication.md
+            - name: Veritabanı çoğaltması
+              href: plan-design/hierarchy/database-replication.md
+        - name: İstemciler kaynakları ve hizmetleri nasıl bulur
+          href: plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md
+        - name: Site Yönetimi için güvenlik ve gizlilik
+          href: plan-design/hierarchy/security-and-privacy-for-site-administration.md
+    - name: Ağ altyapısını planlama
+      items:
+        - name: Ağ altyapısıyla ilgili konular
+          href: plan-design/network/configure-firewalls-ports-domains.md
+        - name: Bağlantı noktaları
+          href: plan-design/hierarchy/ports.md
+        - name: Proxy sunucu desteği
+          href: plan-design/network/proxy-server-support.md
+        - name: İnternet erişimi gereksinimleri
+          href: plan-design/network/internet-endpoints.md
+        - name: Active Directory şeması
+          items:
+            - name: Active Directory şemasını hazırlama
+              href: plan-design/network/extend-the-active-directory-schema.md
+            - name: Şema uzantıları
+              href: plan-design/network/schema-extensions.md
+        - name: Windows Server'ı site sistemlerini destekleyecek şekilde hazırlama
+          href: plan-design/network/prepare-windows-servers.md
+        - name: Site sistemi sunucuları için web siteleri
+          href: plan-design/network/websites-for-site-system-servers.md
+        - name: CNG sertifikalarına genel bakış
+          href: plan-design/network/cng-certificates-overview.md
+        - name: PKI sertifikası gereksinimleri
+          href: plan-design/network/pki-certificate-requirements.md
+        - name: Örnek PKI sertifikası dağıtımı
+          href: plan-design/network/example-deployment-of-pki-certificates.md
+    - name: Tanılama ve kullanım verileri
+      items:
+        - name: Tanılama ve kullanım verilerine genel bakış
+          href: plan-design/diagnostics/diagnostics-and-usage-data.md
+        - name: Microsoft’un tanılama ve kullanım bilgilerini kullanma şekli
+          href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
+        - name: Configuration Manager’ın veri toplama şekli
+          href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md
+        - name: Tanılama ve kullanım verilerini görüntüleme
+          href: plan-design/diagnostics/view-diagnostics-and-usage-data.md
+        - name: Tanılama ve kullanım verileri düzeyleri
+          items:
+            - name: Düzeylere genel bakış
+              href: plan-design/diagnostics/levels-overview.md
+            - name: Sürüm 2002 verileri
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002.md
+            - name: Sürüm 1910 verileri
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1910.md
+            - name: Sürüm 1906 verileri
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
+            - name: Sürüm 1902 verileri
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
+            - name: Sürüm 1810 verileri
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
+        - name: Sık sorulan sorular (SSS)
+          href: plan-design/diagnostics/frequently-asked-questions.md
+    - name: Configuration Manager için güvenlik ve gizlilik
+      items:
+        - name: Güvenlik ve gizliliğe genel bakış
+          href: plan-design/security/security-and-privacy.md
+        - name: Güvenliği planlama
+          href: plan-design/security/plan-for-security.md
+        - name: En iyi güvenlik yöntemleri ve gizlilik bilgileri
+          href: plan-design/security/security-best-practices-and-privacy-information.md
+        - name: Gizlilik bildirimi - Configuration Manager Cmdlet Kitaplığı
+          href: plan-design/security/privacy-statement-cmdlet-library.md
+        - name: Ek gizlilik bilgileri
+          href: plan-design/security/additional-privacy.md
+        - name: Güvenliği yapılandırma
+          href: plan-design/security/configure-security.md
+        - name: Şifreleme denetimleri teknik başvurusu
+          href: plan-design/security/cryptographic-controls-technical-reference.md
+        - name: TLS 1.2’yi etkinleştirme
+          items:
+            - name: TLS 1.2’yi etkinleştirme hakkında
+              href: plan-design/security/enable-tls-1-2.md
+            - name: TLS 1.2’yi istemcilerde etkinleştirme
+              href: plan-design/security/enable-tls-1-2-client.md
+            - name: TLS 1.2’yi site sunucularında ve uzak site sistemlerinde etkinleştirme
+              href: plan-design/security/enable-tls-1-2-server.md
+            - name: TLS 1.2’yi etkinleştirmeye yönelik sık karşılaşılan sorunlar
+              href: plan-design/security/enable-tls-1-2-troubleshoot.md
+- name: Kullanmaya başlayın
+  items:
+    - name: Configuration Manager’ı laboratuvarda değerlendirme
+      items:
+        - name: Laboratuvara genel bakış
+          href: get-started/evaluate-with-lab-environment.md
+        - name: Laboratuvarınızı kurma
+          href: get-started/set-up-your-lab.md
+        - name: Azure'da laboratuvar oluşturma
+          href: get-started/azure-template.md
+    - name: Technical Preview
+      items:
+        - name: Teknik Önizlemeye genel bakış
+          href: get-started/technical-preview.md
+        - name: 2003 özellikleri
+          href: get-started/2020/technical-preview-2003.md
+        - name: 2002.2 özellikleri
+          href: get-started/2020/technical-preview-2002-2.md
+        - name: 2002 özellikleri
+          href: get-started/2020/technical-preview-2002.md
+        - name: 2001.2 özellikleri
+          href: get-started/2020/technical-preview-2001-2.md
+        - name: 2001 özellikleri
+          href: get-started/2020/technical-preview-2001.md
+        - name: 1912 özellikleri
+          href: get-started/2019/technical-preview-1912.md
+    - name: Hiyerarşiler arasında veri geçirme
+      items:
+        - name: Geçişe genel bakış
+          href: migration/migrate-data-between-hierarchies.md
+        - name: Geçiş planlaması
+          items:
+            - name: Geçişi planlama
+              href: migration/planning-for-migration.md
+            - name: Geçiş için önkoşullar
+              href: migration/prerequisites-for-migration.md
+            - name: Geçiş için denetim listeleri
+              href: migration/administrator-checklists-for-migration-planning.md
+            - name: Verilerin geçirilip geçirilmeyeceğini belirleme
+              href: migration/determine-whether-to-migrate-data.md
+            - name: Kaynak hiyerarşisini planlama
+              href: migration/planning-a-source-hierarchy-strategy.md
+            - name: Geçiş işlerini planlama
+              href: migration/planning-a-migration-job-strategy.md
+            - name: İstemci geçişini planlama
+              href: migration/planning-a-client-migration-strategy.md
+            - name: İçerik dağıtımını planlama
+              href: migration/planning-a-content-deployment-migration-strategy.md
+            - name: Nesnelerin geçirilmesini planlama
+              href: migration/planning-for-the-migration-of-objects.md
+            - name: Geçiş işlemini izlemeyi planlama
+              href: migration/planning-to-monitor-migration-activity.md
+            - name: Geçiş işleminin tamamlanmasını planlama
+              href: migration/planning-to-complete-migration.md
+        - name: Kaynak hiyerarşileri ve kaynak sitelerini yapılandırma
+          href: migration/configuring-source-hierarchies-and-source-sites-for-migration.md
+        - name: Geçiş için işlemler
+          href: migration/operations-for-migration.md
+        - name: Geçiş için güvenlik ve gizlilik
+          href: migration/security-and-privacy-for-migration.md
+- name: Sunucuları ve rolleri dağıtma
+  items:
+    - name: Sunucuları ve rolleri dağıtma
+      href: servers/deploy/start-using.md
+    - name: Altyapıyı yükleme
+      items:
+        - name: Yükleme ortamını edinme
+          href: servers/deploy/install/get-install-media.md
+        - name: Kurulumu çalıştırmadan önce
+          items:
+            - name: Kurulum başvurusu
+              href: servers/deploy/install/setup-reference.md
+            - name: Kurulum indirme programı
+              href: servers/deploy/install/setup-downloader.md
+            - name: Önkoşul denetleyicisi
+              href: servers/deploy/install/prerequisite-checker.md
+            - name: Önkoşul denetimleri
+              href: servers/deploy/install/list-of-prerequisite-checks.md
+        - name: Site yükleme
+          items:
+            - name: Site yüklemeye hazırlanmaya genel bakış
+              href: servers/deploy/install/installing-sites.md
+            - name: Site yüklemeye hazırlanma
+              href: servers/deploy/install/prepare-to-install-sites.md
+            - name: Site yükleme önkoşulları
+              href: servers/deploy/install/prerequisites-for-installing-sites.md
+            - name: Kurulum sihirbazını kullanma
+              href: servers/deploy/install/use-the-setup-wizard-to-install-sites.md
+            - name: Komut satırı kullanma
+              items:
+                - name: Komut satırına genel bakış
+                  href: servers/deploy/install/use-a-command-line-to-install-sites.md
+                - name: Komut satırı seçenekleri
+                  href: servers/deploy/install/command-line-options-for-setup.md
+            - name: Konsolları yükleme
+              href: servers/deploy/install/install-consoles.md
+            - name: Değerlendirme yüklemesini yükseltme
+              href: servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md
+            - name: Configuration Manager’a yükseltme
+              href: servers/deploy/install/upgrade-to-configuration-manager.md
+            - name: Yüklemeyi kolaylaştırma senaryoları
+              href: servers/deploy/install/scenarios-to-streamline-your-installation.md
+    - name: Siteleri ve hiyerarşileri yapılandırma
+      items:
+        - name: Siteleri ve hiyerarşileri yapılandırmaya genel bakış
+          href: servers/deploy/configure/configure-sites-and-hierarchies.md
+        - name: Site sistemi rolleri ekleme
+          items:
+            - name: Site sistemi rolleri eklemeye genel bakış
+              href: servers/deploy/configure/add-site-system-roles.md
+            - name: Site sistemi rolleri yükleme
+              href: servers/deploy/configure/install-site-system-roles.md
+            - name: Bulut tabanlı dağıtım noktaları yükleme
+              href: servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md
+            - name: Hizmet bağlantı noktası hakkında
+              href: servers/deploy/configure/about-the-service-connection-point.md
+            - name: Site sistemi rolleri için yapılandırma seçenekleri
+              href: servers/deploy/configure/configuration-options-for-site-system-roles.md
+            - name: Yönetim noktaları için veritabanı çoğaltmaları
+              href: servers/deploy/configure/database-replicas-for-management-points.md
+        - name: Site bileşenleri
+          href: servers/deploy/configure/site-components.md
+        - name: Site verilerini yayımlama
+          href: servers/deploy/configure/publish-site-data.md
+        - name: İçeriği ve içerik altyapısını yönetme
+          items:
+            - name: İçerik altyapısına genel bakış
+              href: servers/deploy/configure/manage-content-and-content-infrastructure.md
+            - name: Dağıtım noktası yükleme ve yapılandırma
+              href: servers/deploy/configure/install-and-configure-distribution-points.md
+            - name: İçerik dağıtma ve yönetme
+              href: servers/deploy/configure/deploy-and-manage-content.md
+            - name: İçeriği izleme
+              href: servers/deploy/configure/monitor-content-you-have-distributed.md
+            - name: Microsoft Bağlı Önbellek
+              href: plan-design/hierarchy/microsoft-connected-cache.md
+            - name: Microsoft Bağlı Önbellek sorunlarını giderme
+              href: servers/deploy/configure/troubleshoot-microsoft-connected-cache.md
+        - name: Bulmayı çalıştırma
+          items:
+            - name: Bulma yöntemlerine genel bakış
+              href: servers/deploy/configure/run-discovery.md
+            - name: Bulma yöntemleri hakkında
+              href: servers/deploy/configure/about-discovery-methods.md
+            - name: Bulma yöntemlerini seçme
+              href: servers/deploy/configure/select-discovery-methods-to-use.md
+            - name: Bulma yöntemlerini yapılandırma
+              href: servers/deploy/configure/configure-discovery-methods.md
+        - name: Site sınırları ve sınır grupları
+          items:
+            - name: Site sınırları ve sınır gruplarına genel bakış
+              href: servers/deploy/configure/define-site-boundaries-and-boundary-groups.md
+            - name: Sınırlar
+              href: servers/deploy/configure/boundaries.md
+            - name: Sınır grupları
+              href: servers/deploy/configure/boundary-groups.md
+            - name: Sınır gruplarına yönelik yordamlar
+              href: servers/deploy/configure/boundary-group-procedures.md
+        - name: Yüksek kullanılabilirlik
+          items:
+            - name: Yüksek kullanılabilirlik seçenekleri
+              href: servers/deploy/configure/high-availability-options.md
+            - name: Site sunucusu yüksek kullanılabilirliği
+              href: servers/deploy/configure/site-server-high-availability.md
+            - name: Akış Çizelgesi - Pasif site sunucusu kurulumu
+              href: servers/deploy/configure/passive-site-server-flowchart.md
+            - name: Akış Çizelgesi - Site sunucusu yükseltme (planlı)
+              href: servers/deploy/configure/promote-site-server-flowchart.md
+            - name: Akış Çizelgesi - Site sunucusu yükseltme (plansız)
+              href: servers/deploy/configure/promote-site-server-unplanned-flowchart.md
+            - name: SQL Server Always On kullanmaya hazırlanma
+              href: servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md
+            - name: SQL Server Always On’u yapılandırma
+              href: servers/deploy/configure/configure-aoag.md
+            - name: SQL Server kümesi kullanma
+              href: servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md
+        - name: Veritabanı dosyaları için özel konumlar
+          href: servers/deploy/configure/custom-locations-for-site-database-files.md
+        - name: Rol tabanlı yönetimi yapılandırma
+          href: servers/deploy/configure/configure-role-based-administration.md
+        - name: Azure hizmetlerini yapılandırma
+          href: servers/deploy/configure/azure-services-wizard.md
+    - name: Yüklemeyi kaldırma
+      items:
+        - name: 'Rolleri, siteleri ve hiyerarşileri kaldırma'
+          href: servers/deploy/install/uninstall-sites-and-hierarchies.md
+        - name: CAS’yi kaldırma
+          href: servers/deploy/install/remove-central-administration-site.md
+    - name: Teknik başvuru
+      items:
+        - name: Hesaplar
+          href: plan-design/hierarchy/accounts.md
+        - name: Uç noktalar arasında iletişim
+          href: plan-design/hierarchy/communications-between-endpoints.md
+        - name: Gelişmiş HTTP site sistemleri
+          href: plan-design/hierarchy/enhanced-http.md
+        - name: Hiyerarşi bakım aracı
+          href: servers/manage/hierarchy-maintenance-tool-preinst.exe.md
+        - name: Uluslararası destek
+          href: plan-design/hierarchy/international-support.md
+        - name: Farklı sürümler arasında birlikte çalışabilirlik
+          href: plan-design/hierarchy/interoperability-between-different-versions.md
+        - name: Dil paketleri
+          href: servers/deploy/install/language-packs.md
+        - name: Günlük dosyaları hakkında
+          href: plan-design/hierarchy/about-log-files.md
+        - name: Günlük dosyası başvurusu
+          href: plan-design/hierarchy/log-files.md
+        - name: Sürüm notları
+          href: servers/deploy/install/release-notes.md
+        - name: Durum iletileri
+          href: plan-design/hierarchy/state-messaging-system-center-configuration-manager.md
+        - name: Unicode ve ASCII desteği
+          href: plan-design/hierarchy/unicode-and-ascii-support.md
+- name: Altyapıyı yönetme
+  items:
+    - name: Yönetim içgörüleri
+      href: servers/manage/management-insights.md
+    - name: CMPivot
+      items:
+        - name: CMPivot'u kullanma
+          href: servers/manage/cmpivot.md
+        - name: CMPivot sorunlarını giderme
+          href: servers/manage/cmpivot-tsg.md
+    - name: Bakım görevleri
+      items:
+        - name: Bakım görevlerine genel bakış
+          href: servers/manage/maintenance-tasks.md
+        - name: Bakım görevleri için başvuru
+          href: servers/manage/reference-for-maintenance-tasks.md
+    - name: Altyapınızı değiştirme
+      items:
+        - name: Altyapıyı değiştirme
+          href: servers/manage/modify-your-infrastructure.md
+        - name: CD.Latest klasörü
+          href: servers/manage/the-cd.latest-folder.md
+    - name: Şirket içi altyapıyı yükseltme
+      href: servers/manage/upgrade-on-premises-infrastructure.md
+    - name: Configuration Manager güncelleştirmelerine genel bakış
+      items:
+        - name: Configuration Manager güncelleştirmeleri
+          href: servers/manage/updates.md
+        - name: Konsol içi güncelleştirmeler
+          items:
+            - name: Konsol güncelleştirmelerini yükleyin
+              href: servers/manage/install-in-console-updates.md
+            - name: Sıfırlama aracını güncelleştirme
+              href: servers/manage/update-reset-tool.md
+            - name: Sınama veritabanını yükseltme
+              href: servers/manage/test-database-upgrade.md
+            - name: Akış Grafiği - Güncelleştirmeleri indir
+              href: servers/manage/download-updates-flowchart.md
+            - name: Akış Çizelgesi - Çoğaltmayı güncelleştirme
+              href: servers/manage/update-replication-flowchart.md
+        - name: Yayın öncesi özellikler
+          href: servers/manage/pre-release-features.md
+        - name: Site sunucuları için bakım pencereleri
+          href: servers/manage/service-windows.md
+        - name: Hizmet bağlantısı aracını kullanma
+          href: servers/manage/use-the-service-connection-tool.md
+        - name: Yükseltme kaydı aracını kullanma
+          href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
+        - name: Düzeltme yükleyicisini kullanma
+          href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+        - name: Güncelleştirme 2002’yi yüklemek için denetim listesi
+          href: servers/manage/checklist-for-installing-update-2002.md
+        - name: Güncelleştirme 1910’u yüklemek için denetim listesi
+          href: servers/manage/checklist-for-installing-update-1910.md
+        - name: Güncelleştirme 1906’yı yüklemek için denetim listesi
+          href: servers/manage/checklist-for-installing-update-1906.md
+        - name: Güncelleştirme 1902’yı yüklemek için denetim listesi
+          href: servers/manage/checklist-for-installing-update-1902.md
+        - name: Güncelleştirme 1810’yı yüklemek için denetim listesi
+          href: servers/manage/checklist-for-installing-update-1810.md
+        - name: Geçerli dal sürümleri için destek
+          href: servers/manage/current-branch-versions-supported.md
+    - name: Yedekleme ve kurtarma
+      items:
+        - name: Siteleri yedekleme
+          href: servers/manage/backup-and-recovery.md
+        - name: Siteleri kurtarma
+          href: servers/manage/recover-sites.md
+        - name: Katılımsız site kurtarma
+          href: servers/manage/unattended-recovery.md
+    - name: Site hatası etkileri
+      href: servers/manage/site-failure-impacts.md
+    - name: Altyapıyı izleme
+      items:
+        - name: İzleme hiyerarşisi
+          href: servers/manage/monitor-hierarchy.md
+        - name: Uyarıları ve durum sistemini kullanma
+          href: servers/manage/use-alerts-and-the-status-system.md
+        - name: Cihaz durumu kanıtlama
+          href: servers/manage/health-attestation.md
+        - name: Çoğaltma altyapısı
+          items:
+            - name: Çoğaltmayı izleme
+              href: servers/manage/monitor-replication.md
+            - name: SQL çoğaltma sorunlarını giderme
+              items:
+                - name: SQL çoğaltma sorunlarını giderme
+                  href: servers/manage/replication/overview.md
+                - name: SQL çoğaltması
+                  href: servers/manage/replication/sql-replication.md
+                - name: SQL yapılandırması
+                  href: servers/manage/replication/sql-configuration.md
+                - name: SQL performansı
+                  href: servers/manage/replication/sql-performance.md
+                - name: SQL çoğaltmayı yeniden başlatma (yeniden başlatma)
+                  href: servers/manage/replication/sql-replication-reinit.md
+                - name: Genel verileri yeniden başlatma
+                  href: servers/manage/replication/global-data-reinit.md
+                - name: Site verilerini yeniden başlatma
+                  href: servers/manage/replication/site-data-reinit.md
+                - name: Eksik iletiyi yeniden başlatma
+                  href: servers/manage/replication/reinit-missing-message.md
+        - name: Sorgular
+          items:
+            - name: Sorgulara giriş
+              href: servers/manage/introduction-to-queries.md
+            - name: Sorguları yönetme
+              href: servers/manage/manage-queries.md
+            - name: Sorgu oluşturma
+              href: servers/manage/create-queries.md
+            - name: Sorgular için güvenlik ve gizlilik
+              href: servers/manage/security-and-privacy-for-queries.md
+        - name: Raporlama
+          items:
+            - name: Raporlamaya giriş
+              href: servers/manage/introduction-to-reporting.md
+            - name: Power BI Rapor Sunucusu ile tümleştirme
+              href: servers/manage/powerbi-report-server.md
+            - name: Raporlama planı
+              items:
+                - name: Raporlama planı
+                  href: servers/manage/planning-for-reporting.md
+                - name: Raporlama için önkoşullar
+                  href: servers/manage/prerequisites-for-reporting.md
+                - name: Rapor listesi
+                  href: servers/manage/list-of-reports.md
+            - name: Raporlamayı yapılandırma
+              href: servers/manage/configuring-reporting.md
+            - name: Raporlamaya yönelik işlemler ve bakım
+              href: servers/manage/operations-and-maintenance-for-reporting.md
+            - name: Özel rapor modelleri oluşturma
+              href: servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md
+        - name: Veri ambarı
+          href: servers/manage/data-warehouse.md
+    - name: Destek Merkezi
+      href: support/support-center.md
+      items:
+        - name: Destek Merkezi'ne genel bakış
+          href: support/support-center.md
+        - name: Hızlı başlangıç kılavuzu
+          href: support/support-center-quickstart.md
+        - name: Erişilebilirlik
+          href: support/support-center-accessibility.md
+        - name: Kullanıcı arabirimi başvurusu
+          href: support/support-center-ui-reference.md
+        - name: Özelleştirmeler
+          href: support/support-center-customize.md
+        - name: Destek Merkezi OneTrace (Önizleme)
+          href: support/support-center-onetrace.md
+    - name: Configuration Manager araçları
+      items:
+        - name: Araçlara genel bakış
+          href: support/tools.md
+        - name: CMTrace
+          href: support/cmtrace.md
+        - name: İstemci Gözetleme
+          href: support/clispy.md
+        - name: Dağıtım İzleme Aracı
+          href: support/deployment-monitoring-tool.md
+        - name: İlke Gözetleme
+          href: support/policy-spy.md
+        - name: Power Viewer Aracı
+          href: support/power-viewer-tool.md
+        - name: Gönderme Zamanlaması Aracı
+          href: support/send-schedule-tool.md
+        - name: DP İş Kuyruğu Yöneticisi
+          href: support/dp-job-manager.md
+        - name: Koleksiyon Değerlendirme Görüntüleyicisi
+          href: support/ceviewer.md
+        - name: Kitaplık Tarayıcı İçeriği
+          href: support/content-library-explorer.md
+        - name: Kitaplık Aktarma İçeriği
+          href: support/content-library-transfer.md
+        - name: İçerik Sahipliği Aracı
+          href: support/content-ownership-tool.md
+        - name: Microsoft Azure’a genişleme ve geçme
+          href: support/azure-migration-tool.md
+        - name: Rol Tabanlı Yönetim ve Denetim Aracı
+          href: support/rbaviewer.md
+        - name: Ölçüm Özetleme Aracını Çalıştırma
+          href: support/run-meter-summ.md
+    - name: Yüksek riskli dağıtımları yönetme
+      href: servers/manage/settings-to-manage-high-risk-deployments.md
+- name: İstemcileri dağıtma
+  items:
+    - name: İstemci dağıtımını planlama
+      items:
+        - name: İstemci yükleme yöntemleri
+          href: clients/deploy/plan/client-installation-methods.md
+        - name: Windows bilgisayarlara istemci dağıtmak için önkoşullar
+          items:
+            - name: İstemcileri dağıtma önkoşulları
+              href: clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md
+            - name: İstemciler için Windows Güvenlik Duvarı ve bağlantı noktası ayarları
+              href: clients/deploy/windows-firewall-and-port-settings-for-clients.md
+        - name: İstemciler için site sistemi rollerini belirleme
+          href: clients/deploy/plan/determine-the-site-system-roles-for-clients.md
+        - name: İstemciler için güvenlik ve gizlilik
+          href: clients/deploy/plan/security-and-privacy-for-clients.md
+        - name: İstemci dağıtımı için en iyi yöntemler
+          href: clients/deploy/plan/best-practices-for-client-deployment.md
+        - name: İstemcilerin engellenip engellenmeyeceğini belirleme
+          href: clients/deploy/plan/determine-whether-to-block-clients.md
+        - name: Linux ve UNIX bilgisayarlara istemci dağıtımını planlama
+          href: clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md
+        - name: Mac bilgisayarlara istemci dağıtımını planlama
+          href: clients/deploy/plan/planning-for-client-deployment-to-mac-computers.md
+        - name: Windows Embedded cihazlarına istemci dağıtımı
+          items:
+            - name: Windows Ekli cihazlara istemci dağıtımını planlama
+              href: clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md
+            - name: Örnek senaryo
+              href: clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md
+        - name: İstemcilerin nasıl uyandırılacağını planlama
+          href: clients/deploy/plan/plan-wake-up-clients.md
+        - name: VDI istemcilerini yönetme
+          href: clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md
+    - name: İstemci dağıtım görevleri
+      items:
+        - name: İstemci iletişim bağlantı noktalarını yapılandırma
+          href: clients/deploy/configure-client-communication-ports.md
+        - name: İstemcileri DNS yayımlaması kullanacak şekilde yapılandırma
+          href: clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md
+        - name: İstemci ayarlarını yapılandırma
+          items:
+            - name: İstemci ayarlarını yapılandırma
+              href: clients/deploy/configure-client-settings.md
+            - name: İstemci ayarları hakkında
+              href: clients/deploy/about-client-settings.md
+        - name: Cihaz yeniden başlatma bildirimleri
+          href: clients/deploy/device-restart-notifications.md
+        - name: LAN'da Uyandırmayı yapılandırma
+          href: clients/deploy/configure-wake-on-lan.md
+        - name: Windows bilgisayarlarına istemcileri dağıtma
+          items:
+            - name: İstemcileri Windows bilgisayarlara dağıtma
+              href: clients/deploy/deploy-clients-to-windows-computers.md
+            - name: Azure AD kullanarak istemcileri yükleme
+              href: clients/deploy/deploy-clients-cmg-azure.md
+            - name: CMG için belirteç tabanlı kimlik doğrulaması
+              href: clients/deploy/deploy-clients-cmg-token.md
+            - name: İstemci yükleme özellikleri
+              href: clients/deploy/about-client-installation-properties.md
+            - name: AD'de yayımlanan istemci yükleme özellikleri
+              href: clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md
+        - name: UNIX ve Linux sunucularına istemcileri dağıtma
+          items:
+            - name: UNIX ve Linux sunuculara istemci dağıtma
+              href: clients/deploy/deploy-clients-to-unix-and-linux-servers.md
+            - name: Linux ve UNIX istemci komutları
+              href: clients/deploy/linux-and-unix-clients-technical-reference.md
+        - name: Mac bilgisayarlara istemci dağıtmaya hazırlanma
+          href: clients/deploy/prepare-to-deploy-mac-clients.md
+        - name: Mac bilgisayarlara istemci dağıtma
+          href: clients/deploy/deploy-clients-to-macs.md
+        - name: İstemcileri bir siteye atama
+          href: clients/deploy/assign-clients-to-a-site.md
+        - name: İstemci durumunu yapılandırma
+          href: clients/deploy/configure-client-status.md
+        - name: İstemci dağıtım durumunu izleme
+          href: clients/deploy/monitor-client-deployment-status.md
+- name: İstemcileri yönetme
+  items:
+    - name: İstemcileri yönetmeye genel bakış
+      href: clients/manage/monitor-and-manage-clients.md
+    - name: İstemcileri izleme ve yönetme
+      items:
+        - name: İstemcileri izleme
+          href: clients/manage/monitor-clients.md
+        - name: Linux ve UNIX istemcilerini izleme
+          href: clients/manage/monitor-clients-for-linux-and-unix-servers.md
+        - name: İstemcileri yönetme
+          href: clients/manage/manage-clients.md
+        - name: İstemci bildirimi
+          href: clients/manage/client-notification.md
+        - name: Linux ve UNIX istemcilerini yönetme
+          href: clients/manage/manage-clients-for-linux-and-unix-servers.md
+        - name: Verileri Azure İzleyici ile eşitleme
+          href: 'https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=sccm/core/context/core-context'
+        - name: Mac istemcilerinin bakımını yapma
+          href: clients/manage/maintain-mac-clients.md
+        - name: Surface cihazı panosu
+          href: clients/manage/surface-device-dashboard.md
+    - name: İnternetteki istemcileri yönetme
+      items:
+        - name: İnternetteki istemcileri yönetmeye genel bakış
+          href: clients/manage/manage-clients-internet.md
+        - name: Bulut yönetimi ağ geçidi
+          items:
+            - name: Bulut yönetimi ağ geçidi planlama
+              href: clients/manage/cmg/plan-cloud-management-gateway.md
+            - name: Bulut yönetimi ağ geçidi için güvenlik ve gizlilik
+              href: clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md
+            - name: Bulut yönetimi ağ geçidi hakkında SSS bölümü
+              href: clients/manage/cmg/cloud-management-gateway-faq.md
+            - name: Bulut yönetimi ağ geçidine yönelik sertifikalar
+              href: clients/manage/cmg/certificates-for-cloud-management-gateway.md
+            - name: Bulut yönetimi ağ geçidini kurma
+              href: clients/manage/cmg/setup-cloud-management-gateway.md
+            - name: Bulut yönetimi ağ geçidinde istemcileri izleme
+              href: clients/manage/cmg/monitor-clients-cloud-management-gateway.md
+        - name: İnternet tabanlı istemci yönetimi için planlama
+          href: clients/manage/plan-internet-based-client-management.md
+        - name: Azure AD kimlik doğrulaması iş akışı
+          href: clients/manage/azure-ccmsetup.md
+    - name: Koleksiyonlar
+      items:
+        - name: Koleksiyonlara giriş
+          href: clients/manage/collections/introduction-to-collections.md
+        - name: Koleksiyonlar için önkoşullar
+          href: clients/manage/collections/prerequisites-for-collections.md
+        - name: Koleksiyonlar için en iyi yöntemler
+          href: clients/manage/collections/best-practices-for-collections.md
+        - name: Koleksiyon oluşturma
+          href: clients/manage/collections/create-collections.md
+        - name: Koleksiyonları yönetme
+          href: clients/manage/collections/manage-collections.md
+        - name: Bakım pencerelerini kullanma
+          href: clients/manage/collections/use-maintenance-windows.md
+        - name: Cihazları otomatik olarak koleksiyonlara ayırma
+          href: clients/manage/collections/automatically-categorize-devices-into-collections.md
+        - name: Koleksiyonlar için güvenlik ve gizlilik
+          href: clients/manage/collections/security-and-privacy-for-collections.md
+    - name: Donanım envanteri
+      items:
+        - name: Donanım envanterine giriş
+          href: clients/manage/inventory/introduction-to-hardware-inventory.md
+        - name: Donanım envanterini genişletme
+          href: clients/manage/inventory/extend-hardware-inventory.md
+        - name: Donanım envanterini yapılandırma
+          href: clients/manage/inventory/configure-hardware-inventory.md
+        - name: Donanım envanterini görüntülemek için Kaynak Gezgini’ni kullanma
+          href: clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md
+        - name: Kaynak Gezgini varsayılan sınıfları
+          href: clients/manage/inventory/resource-explorer-classes.md
+        - name: Linux ve UNIX için donanım envanteri
+          href: clients/manage/inventory/hardware-inventory-for-linux-and-unix.md
+        - name: Donanım envanteri için güvenlik ve gizlilik
+          href: clients/manage/inventory/security-and-privacy-for-hardware-inventory.md
+    - name: Yazılım envanteri
+      items:
+        - name: Yazılım envanterine giriş
+          href: clients/manage/inventory/introduction-to-software-inventory.md
+        - name: Yazılım envanterini yapılandırma
+          href: clients/manage/inventory/configure-software-inventory.md
+        - name: Yazılım envanterini görüntülemek için Kaynak Gezgini’ni kullanma
+          href: clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md
+        - name: Yazılım envanteri için güvenlik ve gizlilik
+          href: clients/manage/inventory/security-and-privacy-for-software-inventory.md
+    - name: Varlık Yönetim Bilgileri
+      items:
+        - name: Giriş
+          href: clients/manage/asset-intelligence/introduction-to-asset-intelligence.md
+        - name: Önkoşullar
+          href: clients/manage/asset-intelligence/prerequisites-for-asset-intelligence.md
+        - name: Varlık Yönetim Bilgileri’ni yapılandırma
+          href: clients/manage/asset-intelligence/configuring-asset-intelligence.md
+        - name: Varlık Yönetim Bilgileri’ni kullanma
+          href: clients/manage/asset-intelligence/operations-for-asset-intelligence.md
+        - name: Güvenlik ve gizlilik
+          href: clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md
+        - name: Örnek doğrulama durumu geçişleri
+          href: clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md
+        - name: Örnek genel lisans içeri aktarma dosyası
+          href: clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md
+        - name: Ürün yaşam döngüsü panosunu kullanma
+          href: clients/manage/asset-intelligence/product-lifecycle-dashboard.md
+    - name: Uzaktan denetim
+      items:
+        - name: Uzaktan denetime giriş
+          href: clients/manage/remote-control/introduction-to-remote-control.md
+        - name: Uzaktan denetim için önkoşullar
+          href: clients/manage/remote-control/prerequisites-for-remote-control.md
+        - name: Uzaktan denetimi yapılandırma
+          href: clients/manage/remote-control/configuring-remote-control.md
+        - name: Bir Windows istemci bilgisayarını uzaktan yönetme
+          href: clients/manage/remote-control/remotely-administer-a-windows-client-computer.md
+        - name: Uzaktan denetim kullanımını denetleme
+          href: clients/manage/remote-control/audit-remote-control-usage.md
+        - name: Uzaktan denetimde güvenlik ve gizlilik
+          href: clients/manage/remote-control/security-and-privacy-for-remote-control.md
+    - name: Güç yönetimi
+      items:
+        - name: Güç yönetimine giriş
+          href: clients/manage/power/introduction-to-power-management.md
+        - name: Güç yönetimi için önkoşullar
+          href: clients/manage/power/prerequisites-for-power-management.md
+        - name: Güç yönetimi için en iyi uygulamalar
+          href: clients/manage/power/best-practices-for-power-management.md
+        - name: Güç yönetimi için yönetici denetim listesi
+          href: clients/manage/power/administrator-checklist-for-power-management.md
+        - name: Güç yönetimini yapılandırma
+          href: clients/manage/power/configuring-power-management.md
+        - name: Güç planı oluşturma ve uygulama
+          href: clients/manage/power/create-and-apply-power-plans.md
+        - name: Güç yönetimini izleme ve planlama
+          href: clients/manage/power/monitor-and-plan-for-power-management.md
+        - name: Güç yönetimi için güvenlik ve gizlilik
+          href: clients/manage/power/security-and-privacy-for-power-management.md
+    - name: İstemcileri yükseltin
+      items:
+        - name: İstemcileri yükseltme
+          href: clients/manage/upgrade/upgrade-clients.md
+        - name: Bir ön üretim koleksiyonunda istemci yükseltmelerini test etme
+          href: clients/manage/upgrade/test-client-upgrades.md
+        - name: Windows istemcilerini yükseltmelerin dışında tutma
+          href: clients/manage/upgrade/exclude-clients-windows.md
+        - name: Windows istemcilerini yükseltme
+          href: clients/manage/upgrade/upgrade-clients-for-windows-computers.md
+        - name: Linux ve UNIX istemcilerini yükseltme
+          href: clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md
+        - name: Mac istemcilerini yükseltme
+          href: clients/manage/upgrade/upgrade-clients-on-mac-computers.md

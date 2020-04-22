@@ -1,0 +1,54 @@
+- name: Ortak yönetim belgeleri
+  href: index.yml
+- name: Genel bakış
+  items:
+    - name: Ortak yönetim nedir?
+      href: overview.md
+- name: Hızlı başlangıçlar
+  items:
+    - name: Hızlı başlangıca genel bakış
+      href: quickstarts.md
+    - name: Anlık değer
+      items:
+        - name: Koşullu erişim
+          href: quickstart-conditional-access.md
+        - name: Intune’dan uzak eylemler
+          href: quickstart-remote-actions.md
+        - name: İstemci sistem durumu
+          href: quickstart-client-health.md
+        - name: Hibrit Azure AD
+          href: quickstart-hybrid-aad.md
+        - name: Windows Autopilot
+          href: quickstart-autopilot.md
+    - name: Kullanmaya başlama
+      items:
+        - name: Ortak yönetim yolları
+          href: quickstart-paths.md
+        - name: Hibrit Azure AD’yi ayarlama
+          href: quickstart-setup-hybrid-aad.md
+        - name: Windows 10’a yükseltme
+          href: quickstart-upgrade-win10.md
+        - name: FastTrack'ten yardım alma
+          href: quickstart-fasttrack.md
+- name: Öğreticiler
+  items:
+    - name: Configuration Manager istemcileri için ortak yönetimi etkinleştirme
+      href: tutorial-co-manage-clients.md
+    - name: İnternet tabanlı cihazlar için ortak yönetimi etkinleştirme
+      href: tutorial-co-manage-new-devices.md
+- name: Kavramlar
+  items:
+    - name: İş yükleri
+      href: workloads.md
+    - name: Üçüncü taraf MDM birlikte kullanımı
+      href: coexistence.md
+- name: Nasıl yapılır kılavuzları
+  items:
+    - name: Ortak yönetimi etkinleştirme
+      href: how-to-enable.md
+    - name: İnternet tabanlı cihazları hazırlama
+      href: how-to-prepare-Win10.md
+    - name: İş yüklerinin Intune'a geçişi
+      href: how-to-switch-workloads.md
+    - name: Ortak yönetimi izleme
+      href: how-to-monitor.md

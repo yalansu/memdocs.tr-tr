@@ -1,0 +1,48 @@
+- name: MDM belgeleri
+  href: index.yml
+- name: Şirket içi MDM
+  items:
+    - name: Şirket içi MDM nedir?
+      href: understand/manage-mobile-devices-with-on-premises-infrastructure.md
+    - name: Şirket içi MDM’i planlama
+      href: plan-design/plan-on-premises-mdm.md
+    - name: Setup
+      items:
+        - name: Şirket içi rolleri yükleme
+          href: get-started/install-site-system-roles-for-on-premises-mdm.md
+        - name: Sertifikaları ayarlama
+          href: get-started/set-up-certificates-on-premises-mdm.md
+        - name: Kayıt için ayarlar
+          href: get-started/set-up-device-enrollment-on-premises-mdm.md
+    - name: Cihazları kaydetme
+      items:
+        - name: Kayda genel bakış
+          href: deploy-use/enroll-devices-on-premises-mdm.md
+        - name: Kullanıcı kaydı
+          href: deploy-use/user-enroll-devices-on-premises-mdm.md
+        - name: Toplu kayıt
+          href: deploy-use/bulk-enroll-devices-on-premises-mdm.md
+    - name: Cihazları yönetme ve verileri koruma
+      href: deploy-use/wipe-lock-reset-devices.md
+    - name: Uygulamaları yönetme
+      href: deploy-use/management-tasks-applications.md
+    - name: Yapılandırma ayarlarını yönetme
+      href: deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md
+    - name: Kaynak erişimini yönetme
+      items:
+        - name: PFX sertifika profilleri oluşturma
+          href: deploy-use/create-pfx-certificate-profiles.md
+        - name: PFX sertifika profilleri içeri aktarma
+          href: deploy-use/import-pfx-certificate-profiles.md
+        - name: Wi-Fi profilleri
+          href: ../protect/deploy-use/create-wifi-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+        - name: VPN profilleri
+          href: ../protect/deploy-use/vpn-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+- name: Exchange Server bağlayıcısı
+  items:
+    - name: Exchange ile cihaz yönetimi
+      href: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+    - name: Exchange bağlayıcısını yükleme
+      href: deploy-use/install-configure-exchange-connector.md
+- name: Hibrit MDM’ye ne oldu?
+  href: understand/what-happened-to-hybrid.md

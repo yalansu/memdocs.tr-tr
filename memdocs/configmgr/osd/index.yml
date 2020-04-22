@@ -1,0 +1,62 @@
+### YamlMime:Landing
+title: İşletim sistemi dağıtımı belgeleri
+summary: Windows’u farklı yöntemlerle dağıtmak ve görevleri otomatikleştirmek için Configuration Manager’ı kullanın.
+metadata:
+  title: İşletim sistemi dağıtımı belgeleri
+  titleSuffix: Configuration Manager
+  description: Windows’u farklı yöntemlerle dağıtmak ve görevleri otomatikleştirmek için Configuration Manager’ı kullanın.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-osd
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 5c56cef287ee16a8899c16af72d4734c9d1f4bad
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741961"
+landingContent:
+- title: İşletim sistemi dağıtımı hakkında
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: İşletim sistemi dağıtımına giriş
+      url: understand/introduction-to-operating-system-deployment.md
+    - text: Altyapı gereksinimleri
+      url: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+  - linkListType: concept
+    links:
+    - text: İşletim sistemi dağıtımına hazırlanma
+      url: get-started/prepare-for-operating-system-deployment.md
+    - text: İşletim sistemi dağıtım senaryoları
+      url: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+    - text: İşletim sistemi dağıtım yöntemleri
+      url: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+- title: Kullanmaya başlayın
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Görev dizilerini yönetme
+      url: deploy-use/manage-task-sequences-to-automate-tasks.md
+    - text: İşletim sistemi yükseltme görev sırasını oluşturma
+      url: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+    - text: Aşamalı dağıtım oluşturma
+      url: deploy-use/create-phased-deployment-for-task-sequence.md
+    - text: Görev dizisini dağıtma
+      url: deploy-use/deploy-a-task-sequence.md
+    - text: Görev dizisinde hata ayıklama
+      url: deploy-use/debug-task-sequence.md
+- title: Teknik başvuru
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Görev dizisi düzenleyicisini kullanma
+      url: understand/task-sequence-editor.md
+    - text: Görev dizisi adımları hakkında
+      url: understand/task-sequence-steps.md
+    - text: Görev dizisi değişkenlerini kullanma
+      url: understand/using-task-sequence-variables.md
+    - text: Görev dizisi değişkeni başvurusu
+      url: understand/task-sequence-variables.md

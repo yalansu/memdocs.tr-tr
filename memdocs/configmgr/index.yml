@@ -1,0 +1,235 @@
+### YamlMime:Hub
+title: Microsoft Endpoint Configuration Manager belgeleri
+summary: 'Microsoft Endpoint Manager’ın şu bileşenlerine yönelik resmi ürün belgeleri: Configuration Manager, ortak yönetim ve Desktop Analytics'
+metadata:
+  ms.topic: hub-page
+  ms.openlocfilehash: b890572e652528e1446f1dd2e194d933c27938dd
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741485"
+highlightedContent:
+  items:
+  - title: Yenilikler
+    itemType: learn
+    url: ./core/plan-design/changes/whats-new-incremental-versions.md
+  - title: Desteklenen yapılandırmalar
+    itemType: architecture
+    url: ./core/plan-design/configs/supported-configurations.md
+  - title: Güncelleştirmeler ve bakım
+    itemType: deploy
+    url: ./core/servers/manage/updates.md
+  - title: Günlük dosyaları
+    itemType: learn
+    url: ./core/plan-design/hierarchy/log-files.md
+  - title: Bağlantı noktaları
+    itemType: learn
+    url: ./core/plan-design/hierarchy/ports.md
+  - title: Teknik önizleme
+    itemType: get-started
+    url: ./core/get-started/technical-preview.md
+conceptualContent:
+  items:
+  - title: Buluta bağlı yönetim
+    links:
+    - text: İnternetteki istemcileri yönetme
+      url: ./core/clients/manage/manage-clients-internet.md
+      itemType: overview
+    - text: Azure AD planlaması
+      url: ./core/plan-design/security/plan-for-security.md#bkmk_planazuread
+      itemType: architecture
+    - text: Azure hizmetleri
+      url: ./core/servers/deploy/configure/azure-services-wizard.md
+      itemType: how-to-guide
+  - title: Ortak yönetim
+    links:
+    - text: Hızlı başlangıçlar
+      url: ./comanage/quickstarts.md
+      itemType: quickstart
+    - text: Öğretici
+      url: ./comanage/tutorial-co-manage-clients.md
+      itemType: tutorial
+    - text: İş yükleri
+      url: ./comanage/workloads.md
+      itemType: overview
+    footerLink:
+      text: Daha fazla
+      url: ./comanage/index.yml
+  - title: Gerçek zamanlı yönetim
+    links:
+    - text: CMPivot
+      url: ./core/servers/manage/cmpivot.md
+      itemType: get-started
+    - text: PowerShell komut dosyalarını çalıştırma
+      url: ./apps/deploy-use/create-deploy-scripts.md
+      itemType: how-to-guide
+  - title: Desktop Analytics
+    links:
+    - text: Genel bakış
+      url: ./desktop-analytics/overview.md
+      itemType: overview
+    - text: Windows 10’u pilotta dağıtma
+      url: ./desktop-analytics/tutorial-windows10.md
+      itemType: tutorial
+    - text: Desktop Analytics’i ayarlama
+      url: ./desktop-analytics/set-up.md
+      itemType: how-to-guide
+    - text: Office 365 panosu
+      url: ./sum/deploy-use/office-365-dashboard.md
+      itemType: learn
+    footerLink:
+      text: Daha fazla
+      url: ./desktop-analytics/index.yml
+  - title: Altyapı basitleştirmesi
+    links:
+    - text: Site sunucusu yüksek kullanılabilirliği
+      url: ./core/servers/deploy/configure/site-server-high-availability.md
+      itemType: deploy
+    - text: Dağıtım noktasını yeniden atama
+      url: ./core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_reassign
+      itemType: how-to-guide
+    - text: Azure’da Configuration Manager
+      url: ./core/understand/configuration-manager-on-azure.md
+      itemType: learn
+  - title: Çekirdek altyapı
+    links:
+    - text: Konsolu kullanma
+      url: ./core/servers/manage/admin-console.md
+      itemType: how-to-guide
+    - text: İstemcileri dağıtma
+      url: ./core/clients/deploy/deploy-clients-to-windows-computers.md
+      itemType: deploy
+    - text: ConfigMgr ve Windows 10 ile güncel kalma
+      url: ./core/understand/configuration-manager-and-windows-as-service.md
+      itemType: learn
+    footerLink:
+      text: Daha fazla
+      url: ./core/index.yml
+  - title: Uygulama yönetimi
+    links:
+    - text: Uygulama oluşturma
+      url: ./apps/get-started/create-and-deploy-an-application.md
+      itemType: how-to-guide
+    - text: Uygulama dağıtma
+      url: ./apps/deploy-use/deploy-applications.md
+      itemType: deploy
+    - text: Yazılım Merkezini planlama
+      url: ./apps/plan-design/plan-for-software-center.md
+      itemType: architecture
+    - text: Microsoft Edge yönetimi
+      url: ./apps/deploy-use/deploy-edge.md
+      itemType: how-to-guide
+    footerLink:
+      text: Daha fazla
+      url: ./apps/index.yml
+  - title: İşletim sistemi dağıtımı
+    links:
+    - text: Windows 10’a yükseltme
+      url: ./osd/deploy-use/upgrade-windows-to-the-latest-version.md
+      itemType: overview
+    - text: Aşamalı dağıtımlar
+      url: ./osd/deploy-use/create-phased-deployment-for-task-sequence.md
+      itemType: how-to-guide
+    - text: Görev dizisi adımları
+      url: ./osd/understand/task-sequence-steps.md
+      itemType: learn
+    footerLink:
+      text: Daha fazla
+      url: ./osd/index.yml
+  - title: Yazılım güncelleştirmeleri
+    links:
+    - text: Yazılım güncelleştirmelerini planlama
+      url: ./sum/plan-design/plan-for-software-updates.md
+      itemType: architecture
+    - text: Yazılım güncelleştirmelerini dağıtma
+      url: ./sum/deploy-use/deploy-software-updates.md
+      itemType: deploy
+    - text: Windows 10 güncelleştirmelerini en iyi duruma getirme
+      url: ./sum/deploy-use/optimize-windows-10-update-delivery.md
+      itemType: learn
+    - text: Office 365’i güncelleştirme
+      url: ./sum/deploy-use/manage-office-365-proplus-updates.md
+      itemType: how-to-guide
+    footerLink:
+      text: Daha fazla
+      url: ./sum/index.yml
+  - title: Cihaz uyumluluğu
+    links:
+    - text: Yapılandırma öğeleri oluşturma
+      url: ./compliance/deploy-use/create-configuration-items.md
+      itemType: how-to-guide
+    - text: Microsoft Edge ayarları
+      url: ./compliance/deploy-use/browser-profiles.md
+      itemType: how-to-guide
+    - text: Windows sürüm yükseltme
+      url: ./compliance/deploy-use/upgrade-windows-version.md
+      itemType: how-to-guide
+    footerLink:
+      text: Daha fazla
+      url: ./compliance/index.yml
+  - title: Koruma
+    links:
+    - text: Windows Defender
+      url: ./protect/deploy-use/endpoint-protection.md
+      itemType: overview
+    - text: WDATP
+      url: ./protect/deploy-use/windows-defender-advanced-threat-protection.md
+      itemType: how-to-guide
+    - text: BitLocker yönetimi
+      url: ./protect/plan-design/bitlocker-management.md
+      itemType: overview
+    footerLink:
+      text: Daha fazla
+      url: ./protect/index.yml
+additionalContent:
+  sections:
+  - title: Configuration Manager topluluk ve destek
+    items:
+    - title: Configuration Manager blogu
+      summary: Haberler ve duyurular
+      url: https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/bg-p/ConfigurationManagerBlog
+    - title: 'Twitter: #ConfigMgr'
+      summary: Twitter’daki etkin topluluğumuzu takip edin
+      url: https://twitter.com/hashtag/configmgr
+    - title: Configuration Manager forumları
+      summary: Ürün forumlarında teknik sorular sorun
+      url: https://social.technet.microsoft.com/Forums/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc
+    - title: UserVoice ürün geri bildirimi
+      summary: Ürün fikirlerinizi mühendislik ekibiyle paylaşın
+      url: https://configurationmanager.uservoice.com/forums/300492-ideas
+    - title: Ürün desteği
+      summary: Microsoft desteğinden profesyonel yardım alın
+      url: https://aka.ms/cmcbsupport
+    - title: System Center 2012 R2 Configuration Manager
+      summary: Configuration Manager’ın önceki sürümüne yönelik belgeler
+      url: https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144(v=technet.10)
+  - title: Diğer içerikler
+    items:
+    - title: Geliştirme
+      links:
+      - url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
+        text: PowerShell
+      - url: ./develop/index.yml
+        text: Yazılım geliştirme seti (SDK)
+      - url: ./develop/adminservice/index.yml
+        text: Yönetim hizmeti REST API’si
+      - url: ./develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views.md
+        text: SQL görünümleri
+    - title: Araçlar
+      links:
+      - url: ./core/support/support-center.md
+        text: Destek Merkezi
+      - url: ./mdt/index.yml
+        text: MDT
+      - url: ./apps/pcm/package-conversion-manager.md
+        text: Paket Dönüştürme Yöneticisi
+      - url: ./core/support/tools.md
+        text: Daha fazla >
+    - title: Diğer topluluk siteleri
+      links:
+      - url: https://www.reddit.com/r/sccm
+        text: Reddit’te ConfigMgr
+      - url: https://www.facebook.com/groups/ConfigMgr2012
+        text: Facebook’ta ConfigMgr Uzmanları Grubu
+  footer: Sitemizde bir sorunla mı karşılaştınız? [Bize bildirin](./core/understand/use-docs.md#bkmk_docfeedback)

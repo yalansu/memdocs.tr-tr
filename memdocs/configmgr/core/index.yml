@@ -1,0 +1,84 @@
+### YamlMime:Landing
+title: Temel altyapı belgeleri
+summary: Site sunucuları ve istemciler dahil olmak üzere Configuration Manager ürünü hakkındaki temel bilgiler.
+metadata:
+  title: Temel altyapı belgeleri
+  titleSuffix: Configuration Manager
+  description: Site sunucuları ve istemciler dahil olmak üzere Configuration Manager ürünü hakkındaki temel bilgiler.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-core
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/30/2020
+  ms.openlocfilehash: 2816bb6b4685cdd6e7ce56b981fc9e0ffbd89ac3
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741451"
+landingContent:
+- title: Çekirdek altyapı hakkında
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Configuration Manager nedir?
+      url: understand/introduction.md
+    - text: Microsoft Endpoint Configuration Manager hakkında SSS
+      url: understand/microsoft-endpoint-manager-faq.md
+    - text: Yenilikler
+      url: plan-design/changes/whats-new-incremental-versions.md
+    - text: Teknik önizleme
+      url: get-started/technical-preview.md
+  - linkListType: get-started
+    links:
+    - text: Konsolu kullanma
+      url: servers/manage/admin-console.md
+    - text: Yazılım Merkezi’ni kullanma
+      url: understand/software-center.md
+    - text: Belgeleri kullanma
+      url: understand/use-docs.md
+    - text: Yardım bulma
+      url: understand/find-help.md
+- title: Kullanmaya başlayın
+  linkLists:
+  - linkListType: architecture
+    links:
+    - text: Desteklenen yapılandırmalar
+      url: plan-design/configs/supported-configurations.md
+    - text: Windows 10 için destek
+      url: plan-design/configs/support-for-windows-10.md
+    - text: Site önkoşulları
+      url: plan-design/configs/site-and-site-system-prerequisites.md
+  - linkListType: deploy
+    links:
+    - text: Güncelleştirmeler ve bakım
+      url: servers/manage/updates.md
+    - text: Konsol güncelleştirmelerini yükleyin
+      url: servers/manage/install-in-console-updates.md
+    - text: İstemcileri dağıtma
+      url: clients/deploy/deploy-clients-to-windows-computers.md
+    - text: Hiyerarşiler arasında geçiş
+      url: migration/migrate-data-between-hierarchies.md
+- title: Sık kullanılan görevler
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: TLS 1.2’yi etkinleştirme
+      url: plan-design/security/enable-tls-1-2.md
+    - text: CMPivot
+      url: servers/manage/cmpivot.md
+    - text: CMG planlaması
+      url: clients/manage/cmg/plan-cloud-management-gateway.md
+    - text: Gelişmiş HTTP
+      url: plan-design/hierarchy/enhanced-http.md
+  - linkListType: reference
+    links:
+    - text: Günlük dosyaları
+      url: plan-design/hierarchy/about-log-files.md
+    - text: Bağlantı noktaları
+      url: plan-design/hierarchy/ports.md
+    - text: İstemci ayarları
+      url: clients/deploy/about-client-settings.md
+    - text: Araçlar
+      url: support/tools.md

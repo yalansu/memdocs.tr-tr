@@ -1,0 +1,16 @@
+- name: Yönetim hizmeti belgeleri
+  href: index.yml
+- name: Yönetim hizmeti nedir?
+  href: overview.md
+- name: Nasıl yapılır kılavuzları
+  items:
+    - name: Nasıl ayarlanır?
+      href: set-up.md
+    - name: Nasıl kullanılır?
+      href: usage.md
+- name: Başvuru
+  items:
+    - name: Sık sorulan sorular
+      href: faq.md
+    - name: Sürüm notları
+      href: release-notes.md

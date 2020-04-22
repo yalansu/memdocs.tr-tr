@@ -1,0 +1,95 @@
+- name: Yazılım güncelleştirme yönetimi belgeleri
+  href: index.yml
+- name: Anlama ve keşfetme
+  items:
+    - name: Yazılım güncelleştirmelerine giriş
+      href: understand/software-updates-introduction.md
+    - name: Yazılım güncelleştirmeleri için kullanılan simgeler
+      href: understand/software-updates-icons.md
+- name: Planlama ve tasarlama
+  items:
+    - name: Yazılım güncelleştirmelerini planlama
+      href: plan-design/plan-for-software-updates.md
+    - name: Yazılım güncelleştirmeleri için önkoşullar
+      href: plan-design/prerequisites-for-software-updates.md
+    - name: Yazılım güncelleştirmeleri için en iyi uygulamalar
+      href: plan-design/software-updates-best-practices.md
+    - name: Yazılım güncelleştirmeleri için güvenlik ve gizlilik
+      href: plan-design/security-and-privacy-for-software-updates.md
+- name: Kullanmaya başlayın
+  items:
+    - name: Yazılım güncelleştirme yönetimine hazırlanma
+      href: get-started/prepare-for-software-updates-management.md
+    - name: Yazılım güncelleştirme noktası yükleme
+      href: get-started/install-a-software-update-point.md
+    - name: Yazılım güncelleştirmelerini eşitleme
+      href: get-started/synchronize-software-updates.md
+    - name: Sınıflandırmaları ve ürünleri yapılandırma
+      href: get-started/configure-classifications-and-products.md
+    - name: Yazılım güncelleştirmesi ayarlarını yönetme
+      href: get-started/manage-settings-for-software-updates.md
+    - name: Bağlantısı olmayan ortamlarda yazılım güncelleştirmelerini eşitleme
+      items:
+        - name: Bağlantısı kesilmiş bir yazılım güncelleştirme noktasından yazılım güncelleştirmelerini eşitleme
+          href: get-started/synchronize-software-updates-disconnected.md
+        - name: Bağlantısı kesilmiş bir yazılım güncelleştirme noktasından Office 365 güncelleştirmelerini eşitleme
+          href: get-started/synchronize-office-updates-disconnected.md
+- name: Dağıtma ve kullanma
+  items:
+    - name: Yazılım güncelleştirmelerini indirme
+      href: deploy-use/download-software-updates.md
+    - name: Yazılım güncelleştirmelerini güncelleştirme grubuna ekleme
+      href: deploy-use/add-software-updates-to-an-update-group.md
+    - name: Yazılım güncelleştirmelerini dağıtma
+      href: deploy-use/deploy-software-updates.md
+      items:
+        - name: Yazılım güncelleştirmelerini el ile dağıtma
+          href: deploy-use/manually-deploy-software-updates.md
+        - name: Yazılım güncelleştirmelerini otomatik dağıtma
+          href: deploy-use/automatically-deploy-software-updates.md
+        - name: Aşamalı dağıtım oluşturma
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+    - name: Yazılım güncelleştirmelerini izleme
+      href: deploy-use/monitor-software-updates.md
+      items:
+        - name: Aşamalı dağıtım izleme ve yönetme
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+    - name: Yazılım güncelleştirmeleri bakımı
+      href: deploy-use/software-updates-maintenance.md
+    - name: Düzenleme grupları
+      href: deploy-use/orchestration-groups.md
+    - name: Sunucu grubu hizmeti
+      href: deploy-use/service-a-server-group.md
+    - name: Office 365 İstemci Yönetimi Panosu
+      href: deploy-use/office-365-dashboard.md
+    - name: Office 365 ProPlus güncelleştirmelerini yönetme
+      href: deploy-use/manage-office-365-proplus-updates.md
+    - name: Windows 10 güncelleştirme teslimini en iyi duruma getirme
+      href: deploy-use/optimize-windows-10-update-delivery.md
+    - name: Windows 10 güncelleştirmeleri için Hızlı yükleme dosyalarını yönetme
+      href: deploy-use/manage-express-installation-files-for-windows-10-updates.md
+    - name: Windows 10’da Windows Update for Business ile Tümleştirme
+      href: deploy-use/integrate-windows-update-for-business-windows-10.md
+    - name: Üçüncü taraf yazılım güncelleştirmeleri
+      href: deploy-use/third-party-software-updates.md
+    - name: Güvenlik güncelleştirmelerini dağıtmak için örnek senaryo
+      href: deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md
+- name: System Center Updates Publisher
+  href: tools/updates-publisher.md
+  items:
+    - name: Yükle
+      href: tools/install-updates-publisher.md
+    - name: Seçenekleri yapılandırma
+      href: tools/updates-publisher-options.md
+    - name: Katalogları yönetme
+      href: tools/updates-publisher-catalogs.md
+    - name: Güncelleştirmeleri yönetme
+      href: tools/manage-updates-with-updates-publisher.md
+    - name: Yayınları yönetme
+      href: tools/updates-publisher-publications.md
+    - name: Yeni güncelleştirmeler oluşturma
+      href: tools/create-updates-with-updates-publisher.md
+    - name: Uygulanabilirlik kuralları
+      href: tools/updates-publisher-applicability-rules.md
+    - name: Sertifikalar ve güvenlik
+      href: tools/updates-publisher-security.md

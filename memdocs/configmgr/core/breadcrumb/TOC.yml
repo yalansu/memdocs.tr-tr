@@ -1,0 +1,7 @@
+- name: Configuration Manager
+  tocHref: /azure/azure-monitor/
+  topicHref: /sccm/index
+  items:
+    - name: Çekirdek altyapı
+      tocHref: /azure/azure-monitor/platform/
+      topicHref: /sccm/core/understand/introduction

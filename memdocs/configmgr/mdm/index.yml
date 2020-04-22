@@ -1,0 +1,58 @@
+### YamlMime:Landing
+title: Mobil cihaz yönetimi (MDM) belgeleri
+summary: Kuruluşunuzda bulunan hem şirket içi hem bulut tabanlı mobil cihazları yönetmek için Microsoft Uç Nokta Yöneticisi’ni kullanın
+metadata:
+  title: Mobil aygıt yönetimi
+  titleSuffix: Configuration Manager
+  description: Kuruluşunuzda bulunan hem şirket içi hem bulut tabanlı mobil cihazları yönetmek için Microsoft Uç Nokta Yöneticisi’ni kullanın
+  ms.prod: configuration-manager
+  ms.technology: configmgr-mdm
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 12/31/2019
+  ms.openlocfilehash: d9e3c95272c9e0d6596d214f73ea53f572b54c6b
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741808"
+landingContent:
+- title: Şirket içi MDM hakkında
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Şirket içi MDM nedir?
+      url: understand/manage-mobile-devices-with-on-premises-infrastructure.md
+    - text: Şirket içi MDM’i planlama
+      url: plan-design/plan-on-premises-mdm.md
+  - linkListType: how-to-guide
+    links:
+    - text: Rolleri yükleme
+      url: get-started/install-site-system-roles-for-on-premises-mdm.md
+    - text: Cihazları kaydetme
+      url: deploy-use/enroll-devices-on-premises-mdm.md
+    - text: Cihazları yönetme
+      url: deploy-use/wipe-lock-reset-devices.md
+- title: ConfigMgr ve Exchange’i bağlama
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Exchange ile cihaz yönetimi
+      url: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+  - linkListType: how-to-guide
+    links:
+    - text: Exchange bağlayıcısını yükleme
+      url: deploy-use/install-configure-exchange-connector.md
+- title: Bulut tabanlı Intune kullanma
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Intune nedir?
+      url: https://docs.microsoft.com/intune/fundamentals/what-is-intune
+    - text: Cihaz yönetimine genel bakış
+      url: https://docs.microsoft.com/intune/fundamentals/what-is-device-management
+  - linkListType: tutorial
+    links:
+    - text: Microsoft Endpoint Manager’da Intune için izlenecek yol
+      url: https://docs.microsoft.com/intune/fundamentals/tutorial-walkthrough-endpoint-manager

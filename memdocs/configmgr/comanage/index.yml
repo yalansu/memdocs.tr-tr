@@ -1,0 +1,56 @@
+### YamlMime:Landing
+title: Ortak yönetim belgeleri
+summary: Ortak yönetim, Configuration Manager’ı ve Microsoft Intune’u kullanarak Windows 10 cihazlarını eş zamanlı olarak yönetmenizi sağlar.
+metadata:
+  title: Ortak yönetim belgeleri
+  titleSuffix: Configuration Manager
+  description: Ortak yönetim, Configuration Manager’ı ve Microsoft Intune’u kullanarak Windows 10 cihazlarını eş zamanlı olarak yönetmenizi sağlar.
+  ms.product: configuration-manager
+  ms.technology: configmgr-comanage
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: bc1bf65ecaf77ded325fcdae19a0d318052b1cc9
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741009"
+landingContent:
+- title: Ortak yönetim hakkında
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Ortak yönetim nedir?
+      url: overview.md
+    - text: Ortak yönetim yolları
+      url: quickstart-paths.md
+  - linkListType: video
+    links:
+    - text: Ortak yönetim ile koşullu erişim
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/The-Security-Benefits-of-Conditional-Access/player
+- title: Kullanmaya başlayın
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Mevcut Configuration Manager istemcileri için ortak yönetimi etkinleştirme
+      url: tutorial-co-manage-clients.md
+    - text: İnternet tabanlı yeni cihazlar için ortak yönetimi etkinleştirme
+      url: tutorial-co-manage-new-devices.md
+  - linkListType: video
+    links:
+    - text: Ortak yönetim için Windows 10’a yükseltme
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/Upgrading-to-Windows-10-to-Enable-Co-Management/player
+- title: Sık kullanılan görevler
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configuration Manager iş yüklerinin Intune'a geçişi
+      url: how-to-switch-workloads.md
+    - text: Configuration Manager'da ortak yönetimi izleme
+      url: how-to-monitor.md
+  - linkListType: video
+    links:
+    - text: Ortak yönetim ile Windows Autopilot
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/Using-Windows-Autopilot-with-Co-Management/player

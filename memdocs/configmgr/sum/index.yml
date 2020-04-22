@@ -1,0 +1,66 @@
+### YamlMime:Landing
+title: Yazılım güncelleştirme yönetimi belgeleri
+summary: Configuration Manager, yazılım güncelleştirmelerini izleme ve kuruluşunuzdaki istemcilere uygulamaya yönelik karmaşık görevi yönetmeye yardımcı olur.
+metadata:
+  title: Yazılım güncelleştirme yönetimi belgeleri
+  titleSuffix: Configuration Manager
+  description: Configuration Manager, yazılım güncelleştirmelerini izleme ve kuruluşunuzdaki istemcilere uygulamaya yönelik karmaşık görevi yönetmeye yardımcı olur.
+  ms.product: configuration-manager
+  ms.technology: configmgr-sum
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: aa421de09ee69713097a5efe78b0a9b2a1a71856
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741179"
+landingContent:
+- title: Yazılım güncelleştirme yönetimi hakkında
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Yazılım güncelleştirmelerine giriş
+      url: understand/software-updates-introduction.md
+    - text: Aylık yazılım güncelleştirmelerini dağıtma ve izleme örneği
+      url: deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md
+  - linkListType: architecture
+    links:
+    - text: Yazılım güncelleştirmelerini planlama
+      url: plan-design/plan-for-software-updates.md
+    - text: Yazılım güncelleştirmeleri için en iyi uygulamalar
+      url: plan-design/software-updates-best-practices.md
+- title: Kullanmaya başlayın
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Yazılım güncelleştirme noktası yükleme
+      url: get-started/install-a-software-update-point.md
+    - text: Sınıflandırmaları ve ürünleri yapılandırma
+      url: get-started/configure-classifications-and-products.md
+    - text: Yazılım güncelleştirmelerini eşitleme
+      url: get-started/synchronize-software-updates.md
+  - linkListType: how-to-guide
+    links:
+    - text: Yazılım güncelleştirmelerini otomatik dağıtma
+      url: deploy-use/automatically-deploy-software-updates.md
+    - text: Yazılım güncelleştirmelerini izleme
+      url: deploy-use/monitor-software-updates.md
+- title: Üst görevler
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Office 365 ProPlus güncelleştirmelerini yönetme
+      url: deploy-use/manage-office-365-proplus-updates.md
+    - text: Üçüncü taraf güncelleştirmelerini etkinleştirme
+      url: deploy-use/third-party-software-updates.md
+    - text: Yazılım güncelleştirmesi ayarlarını yönetme
+      url: get-started/manage-settings-for-software-updates.md
+  - linkListType: concept
+    links:
+    - text: Windows 10 güncelleştirme teslimini en iyi duruma getirme
+      url: deploy-use/optimize-windows-10-update-delivery.md
+    - text: Yazılım güncelleştirmeleri bakımı
+      url: deploy-use/software-updates-maintenance.md

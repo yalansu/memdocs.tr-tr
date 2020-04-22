@@ -1,0 +1,100 @@
+### YamlMime:Landing
+title: Verileri ve altyapıyı koruma belgeleri
+summary: Configuration Manager’ı kullanarak hem altyapınızı hem de verilerinizi güvenlik ihlallerine veya kötü amaçlı saldırılara karşı koruyun.
+metadata:
+  title: Verileri ve altyapıyı koruma belgeleri
+  titleSuffix: Configuration Manager
+  description: Configuration Manager’ı kullanarak hem altyapınızı hem de verilerinizi güvenlik ihlallerine veya kötü amaçlı saldırılara karşı koruyun.
+  ms.product: configuration-manager
+  ms.technology: configmgr-protect
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: 44481f1b0fb304ed12a40d100352a9f7a6d8dd39
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741859"
+landingContent:
+- title: BitLocker Sürücü Şifrelemesi’ni (BDE) yönetme
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: BitLocker yönetimi için planlama
+      url: plan-design/bitlocker-management.md
+  - linkListType: deploy
+    links:
+    - text: BitLocker yönetimini dağıtma
+      url: deploy-use/bitlocker/deploy-management-agent.md
+    - text: BitLocker portallarını ayarlama
+      url: deploy-use/bitlocker/setup-websites.md
+  - linkListType: how-to-guide
+    links:
+    - text: BitLocker raporlarını görüntüleme
+      url: deploy-use/bitlocker/view-reports.md
+    - text: BitLocker yönetim ve izleme web sitesini kullanma
+      url: deploy-use/bitlocker/helpdesk-portal.md
+- title: Sertifika profilleri
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Sertifika profillerine giriş
+      url: deploy-use/introduction-to-certificate-profiles.md
+  - linkListType: get-started
+    links:
+    - text: Sertifika profilleri için sertifika şablonu izinlerini planlama
+      url: plan-design/planning-for-certificate-template-permissions.md
+    - text: Sertifika profilleri için önkoşullar
+      url: plan-design/prerequisites-for-certificate-profiles.md
+  - linkListType: deploy
+    links:
+    - text: Sertifika altyapısını yapılandırma
+      url: deploy-use/certificate-infrastructure.md
+    - text: Sertifika profilleri oluşturma
+      url: deploy-use/endpoint-configure-alerts.md
+    - text: Kaynak erişim profillerini dağıtma
+      url: deploy-use/endpoint-definition-updates.md
+- title: Sık kullanılan görevler
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Microsoft Defender Gelişmiş Tehdit Koruması ekleme
+      url: deploy-use/windows-defender-advanced-threat-protection.md
+    - text: Windows Defender veya Endpoint Protection istemcisiyle ilgili sorunları giderme
+      url: deploy-use/troubleshoot-endpoint-client.md
+    - text: Kötü amaçlı yazılımdan koruma ilkelerini ve güvenlik duvarı ayarlarını yönetme
+      url: deploy-use/endpoint-antimalware-firewall.md
+    - text: Windows Defender Uygulama Denetimi yönetimi
+      url: deploy-use/use-device-guard-with-configuration-manager.md
+    - text: Windows Defender Application Guard oluşturma ve dağıtma
+      url: deploy-use/create-deploy-application-guard-policy.md
+    - text: İş İçin Windows Hello ayarları
+      url: deploy-use/windows-hello-for-business-settings.md
+- title: Uç Nokta Koruma
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Endpoint Protection'a genel bakış
+      url: deploy-use/endpoint-protection.md
+  - linkListType: get-started
+    links:
+    - text: Endpoint Protection için planlama
+      url: plan-design/planning-for-endpoint-protection.md
+  - linkListType: deploy
+    links:
+    - text: Endpoint Protection noktası site sistemi rolü oluşturma
+      url: deploy-use/endpoint-protection-site-role.md
+    - text: Endpoint Protection için uyarıları yapılandırma
+      url: deploy-use/endpoint-configure-alerts.md
+    - text: Endpoint Protection için tanım güncelleştirmelerini yapılandırma
+      url: deploy-use/endpoint-definition-updates.md
+  - linkListType: how-to-guide
+    links:
+    - text: Endpoint Protection için kötü amaçlı yazılımdan koruma ilkeleri oluşturma ve dağıtma
+      url: deploy-use/endpoint-antimalware-policies.md
+    - text: Endpoint Protection’a yönelik özel istemci ayarlarını yapılandırma
+      url: deploy-use/endpoint-protection-configure-client.md
+    - text: Endpoint Protection durumunu izleme
+      url: deploy-use/monitor-endpoint-protection.md

@@ -1,0 +1,66 @@
+### YamlMime:Landing
+title: Cihaz uyumluluğu belgeleri
+summary: Configuration Manager, kuruluşunuzdaki cihazların yapılandırma ve uyumluluğunu yönetmek için ihtiyacınız olan araçları ve kaynakları sağlar.
+metadata:
+  title: Cihaz uyumluluğu belgeleri
+  titleSuffix: Configuration Manager
+  description: Configuration Manager, kuruluşunuzdaki cihazların yapılandırma ve uyumluluğunu yönetmek için ihtiyacınız olan araçları ve kaynakları sağlar.
+  ms.product: configuration-manager
+  ms.technology: configmgr-compliance
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/25/2020
+  ms.openlocfilehash: 7b66409e8f4082927225246bb5144efb8b65d567
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741111"
+landingContent:
+- title: Cihaz uyumluluğu hakkında
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Cihaz uyumluluğuna giriş
+      url: understand/ensure-device-compliance.md
+    - text: Uyumluluk ayarlarını kullanmaya başlayın
+      url: get-started/get-started-with-compliance-settings.md
+  - linkListType: architecture
+    links:
+    - text: Uyumluluk ayarlarını planlama ve yapılandırma
+      url: plan-design/plan-for-and-configure-compliance-settings.md
+- title: Kullanmaya başlayın
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Uyumluluğu yönetmek için ortak görevler
+      url: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
+    - text: Windows 10 cihazları için yapılandırma öğeleri oluşturma
+      url: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
+    - text: Yapılandırma taban çizgileri oluşturma
+      url: deploy-use/create-configuration-baselines.md
+  - linkListType: deploy
+    links:
+    - text: Yapılandırma taban çizgilerini dağıtma
+      url: deploy-use/deploy-configuration-baselines.md
+  - linkListType: how-to-guide
+    links:
+    - text: Uyumluluk ayarlarını izleme
+      url: deploy-use/monitor-compliance-settings.md
+- title: Sık kullanılan görevler
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Özel yapılandırma öğeleri oluşturma
+      url: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
+    - text: Uzak bağlantı profilleri oluşturma
+      url: deploy-use/create-remote-connection-profiles.md
+    - text: Kullanıcı verileri ve profilleri yapılandırma öğeleri oluşturma
+      url: deploy-use/create-user-data-and-profiles-configuration-items.md
+  - linkListType: concept
+    links:
+    - text: OneDrive İş Profilleri
+      url: deploy-use/onedrive-profile.md
+    - text: Yapılandırma verilerini yönetme
+      url: deploy-use/management-tasks-for-configuration-data.md

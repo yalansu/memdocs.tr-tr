@@ -1,0 +1,32 @@
+### YamlMime:Landing
+title: Yönetim hizmeti belgeleri
+summary: Configuration Manager REST API’si için geliştirici belgeleri
+metadata:
+  title: Yönetim hizmeti belgeleri
+  titleSuffix: Configuration Manager
+  description: Configuration Manager cihazlarınızı bulut hizmetine ekleyin ve bunlar üzerinde işlem yapın.
+  ms.product: configuration-manager
+  ms.technology: configmgr-sdk
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 04/01/2020
+  ms.openlocfilehash: c6c2e97491982f39db4c149ac0bc38266bc2ea27
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741689"
+landingContent:
+- title: Yönetim hizmeti hakkında
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Yönetim hizmeti nedir?
+      url: overview.md
+  - linkListType: how-to-guide
+    links:
+    - text: Nasıl ayarlanır?
+      url: set-up.md
+    - text: Nasıl kullanılır?
+      url: usage.md

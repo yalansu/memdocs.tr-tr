@@ -1,0 +1,62 @@
+- name: Cihaz uyumluluğu belgeleri
+  href: index.yml
+- name: Anlama ve keşfetme
+  items:
+    - name: Cihaz uyumluluğunu sağlama
+      href: understand/ensure-device-compliance.md
+- name: Kullanmaya başlayın
+  items:
+    - name: Uyumluluk ayarlarını kullanmaya başlayın
+      href: get-started/get-started-with-compliance-settings.md
+- name: Planlama ve tasarlama
+  items:
+    - name: Uyumluluk ayarlarını planlama ve yapılandırma
+      href: plan-design/plan-for-and-configure-compliance-settings.md
+    - name: Uyumluluğu yönetme görevleri
+      items:
+        - name: Uyumluluğu yönetmek için ortak görevler
+          href: plan-design/common-tasks-for-managing-compliance.md
+        - name: Configuration Manager istemcisi olan cihazlar
+          href: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
+        - name: Yapılandırma taban çizgilerini oluşturma ve dağıtma
+          href: plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md
+    - name: Güvenlik ve gizlilik
+      href: plan-design/security-and-privacy-for-compliance-settings.md
+- name: Dağıtma ve kullanma
+  items:
+    - name: Yapılandırma öğeleri oluşturma
+      items:
+        - name: Yapılandırma öğeleri oluşturmaya genel bakış
+          href: deploy-use/create-configuration-items.md
+        - name: Configuration Manager istemcisiyle yönetilen cihazlar
+          items:
+            - name: Windows 10
+              href: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
+            - name: Mac OS X
+              href: deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md
+            - name: Windows masaüstü ve sunucu (özel)
+              href: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
+    - name: Alt yapılandırma öğeleri oluşturma
+      href: deploy-use/create-child-configuration-items.md
+    - name: Yapılandırma taban çizgileri oluşturma
+      href: deploy-use/create-configuration-baselines.md
+    - name: Yapılandırma taban çizgilerini dağıtma
+      href: deploy-use/deploy-configuration-baselines.md
+    - name: Yapılandırma verilerini yönetme
+      items:
+        - name: Yapılandırma verilerini yönetme
+          href: deploy-use/management-tasks-for-configuration-data.md
+        - name: Yapılandırma verilerini içeri aktarma
+          href: deploy-use/import-configuration-data.md
+    - name: Kullanıcı verileri ve profilleri yapılandırma öğeleri oluşturma
+      href: deploy-use/create-user-data-and-profiles-configuration-items.md
+    - name: OneDrive İş Profilleri
+      href: deploy-use/onedrive-profile.md
+    - name: Uzak bağlantı profilleri oluşturma
+      href: deploy-use/create-remote-connection-profiles.md
+    - name: Windows cihazlarını yeni bir sürüme yükseltme
+      href: deploy-use/upgrade-windows-version.md
+    - name: Microsoft Edge ayarlarını yapılandırma
+      href: deploy-use/browser-profiles.md
+    - name: Uyumluluk ayarlarını izleme
+      href: deploy-use/monitor-compliance-settings.md
