@@ -218,7 +218,7 @@ Managed Browser, Microsoft Edge ve Azure AD Uygulama Ara Sunucusu’nun şirket 
 ## <a name="how-to-configure-the-homepage-for-a-protected-browser"></a>Korumalı tarayıcı için giriş sayfasını yapılandırma
 
 Bu ayar ile kullanıcıların korumalı tarayıcıyı başlattıklarında veya yeni bir sekme oluşturduklarında karşılarına çıkacak giriş sayfasını yapılandırabilirsiniz. 
-- Bu ayar, Managed Browser’daki web sayfasını gösterir.  Edge bunun yerine bir giriş sayfası kısayolu görüntüler.
+- Bu ayar, Managed Browser’daki web sayfasını gösterir.  Microsoft Edge bunun yerine bir giriş sayfası kısayolu görüntüler.
 - Giriş sayfası kısayolu simgesi arama denetimi altındaki bir simge olarak görünür.  Bu düzenlenemez veya silinemez.
 - Giriş sayfası kısayolu, kuruluşunuzun adını görüntüleyerek bunu ayırt eder.  Bu her zaman ilk simge olarak görünür.
 

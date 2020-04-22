@@ -423,7 +423,7 @@ Microsoft Edge için ek güvenlik ve gizlilik konuları aşağıda verilmiştir:
 
 ## <a name="restrict-microsoft-edge-use-to-a-work-or-school-account"></a>Microsoft Edge kullanımını bir iş veya okul hesabıyla sınırlayın
 
-En büyük ve yüksek oranda düzenlenen müşterilerinin veri güvenliği ve uyumluluk ilkeleri, Microsoft 365 değerine göre önemli bir değerdir. Bazı şirketlerin kurumsal ortamlarında tüm iletişim bilgilerini yakalama gereksinimi vardır ve ayrıca cihazların yalnızca kurumsal iletişimler için kullanıldığından emin olun. Bu gereksinimleri desteklemek için iOS ve Android 'de kayıtlı cihazlarda Android için Edge, yalnızca tek bir şirket hesabının iOS ve Android için uç kapsamında sağlanmasını sağlayacak şekilde yapılandırılabilir.
+En büyük ve yüksek oranda düzenlenen müşterilerinin veri güvenliği ve uyumluluk ilkeleri, Microsoft 365 değerine göre önemli bir değerdir. Bazı şirketlerin kurumsal ortamlarında tüm iletişim bilgilerini yakalama gereksinimi vardır ve ayrıca cihazların yalnızca kurumsal iletişimler için kullanıldığından emin olun. Bu gereksinimleri desteklemek için iOS ve Android 'de kayıtlı cihazlarda Android için Microsoft Edge, yalnızca tek bir şirket hesabının iOS ve Android için uç kapsamında sağlanmasını sağlayacak şekilde yapılandırılabilir.
 
 Aşağıdaki kuruluş izin verilen hesaplar modu ayarını yapılandırma hakkında daha fazla bilgi edinebilirsiniz:
 

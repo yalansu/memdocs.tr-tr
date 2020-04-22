@@ -20,7 +20,7 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 00faad5cccf8b2ed3198542868a36cb4699299b8
 ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/07/2020
 ms.locfileid: "80808203"
@@ -167,7 +167,7 @@ Bu değişiklikler, Intune hizmet arka ucu dağıttığı için Mart ayının he
 ### <a name="device-configuration"></a>Cihaz yapılandırması
 
 #### <a name="new-user-experience-when-creating-administrative-templates-on-windows-devices--5096036---"></a>Windows cihazlarında Yönetim Şablonları oluştururken yeni kullanıcı deneyimi<!--5096036 -->
-Müşteri geri bildirimlerine göre ve yeni Azure tam ekran deneyimine geçtiğimiz için, Yönetim Şablonları profili deneyimini bir klasör görünümüyle yeniden oluşturduk. Herhangi bir ayarlarda veya mevcut profillerde değişiklik yapmadık. Bu nedenle, mevcut profilleriniz aynı kalır ve yeni görünümde kullanılabilir. **Tüm ayarlar ' ı**seçip ara ' yı kullanarak tüm ayarlar seçeneklerinde gezinmeye devam edebilirsiniz. Ağaç görünümü bilgisayar ve Kullanıcı yapılandırmalarına göre bölünür. Windows, Office ve Edge ayarlarını ilişkili klasörlerinde bulacaksınız.  
+Müşteri geri bildirimlerine göre ve yeni Azure tam ekran deneyimine geçtiğimiz için, Yönetim Şablonları profili deneyimini bir klasör görünümüyle yeniden oluşturduk. Herhangi bir ayarlarda veya mevcut profillerde değişiklik yapmadık. Bu nedenle, mevcut profilleriniz aynı kalır ve yeni görünümde kullanılabilir. **Tüm ayarlar ' ı**seçip ara ' yı kullanarak tüm ayarlar seçeneklerinde gezinmeye devam edebilirsiniz. Ağaç görünümü bilgisayar ve Kullanıcı yapılandırmalarına göre bölünür. Windows, Office ve Microsoft Edge ayarlarını ilişkili klasörlerinde bulacaksınız.  
 
 Uygulama alanı:
 - Windows 10 ve üzeri

@@ -20,7 +20,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2e5a9db094163bcf4f987b881c83d98be655acfd
 ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/07/2020
 ms.locfileid: "80808095"
@@ -111,7 +111,7 @@ Microsoft Intune Yöneticisi olarak, yönetilen cihazlarda hangi kullanıcı hes
 
    > [!NOTE]
    > Aşağıdaki uygulamalar, yukarıdaki uygulama yapılandırmasını işler ve yalnızca kuruluş hesaplarına izin verir:
-   > - Android için Edge (42.0.4.4048 ve üzeri)
+   > - Android için Microsoft Edge (42.0.4.4048 ve üzeri)
    > - Office, Word, Excel, Android için PowerPoint (16.0.9327.1000 ve üzeri)
    > - Android için OneDrive (5,28 ve üzeri)
    > - Android için Outlook (2.2.222 ve üzeri)
