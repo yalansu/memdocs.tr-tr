@@ -19,7 +19,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9a431ad92c285e1a2912e0f387ee5ea514e876ef
 ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/02/2020
 ms.locfileid: "80551760"
@@ -43,10 +43,10 @@ Microsoft Edge kullanırken, Microsoft Defender Application Guard, ortamınızı
 - **Edge için Application Guard 'ı açma (Seçenekler)**  
   CSP: [Settings/Allowwindowssavunma Derapplicationguard](https://go.microsoft.com/fwlink/?linkid=872350)
   
-  - **Edge Için etkinleştirildi** (*varsayılan*)-Application Guard, onaylanmamış siteleri bir Hyper-V sanallaştırılmış gözatma kapsayıcısında açar.
+  - **Microsoft Edge Için etkinleştirildi** (*varsayılan*)-Application Guard, onaylanmamış siteleri bir Hyper-V sanallaştırılmış gözatma kapsayıcısında açar.
   - **Yapılandırılmadı** -bir sanallaştırılmış kapsayıcıda değil, cihazda herhangi bir site (güvenilen ve güvenilmeyen) açılır.  
   
-  *Edge Için etkinleştir*olarak ayarlandığında, *dış içeriği blok olmayan bir şekilde onaylanan siteler* ve *Pano davranışından*yapılandırabilirsiniz.
+  *Microsoft Edge Için etkinleştir*olarak ayarlandığında, *dış içeriği blok olmayan bir şekilde onaylanan siteler* ve *Pano davranışından*yapılandırabilirsiniz.
 
   - **Kurumsal olmayan onaylanan sitelerden dış içeriği engelle**  
     CSP: [Ayarlar/BlockNonEnterpriseContent](https://go.microsoft.com/fwlink/?linkid=872352)
