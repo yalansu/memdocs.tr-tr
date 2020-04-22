@@ -1,6 +1,6 @@
 - name: Uzak eylemler
   href: index.yml
-- name: Genel bakış
+- name: Overview
   expanded: true
   items:
     - name: Cihaz yönetimine genel bakış

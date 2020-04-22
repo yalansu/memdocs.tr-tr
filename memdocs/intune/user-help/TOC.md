@@ -17,6 +17,9 @@
 #### [Android cihazınızı kaydetme](enroll-device-android-company-portal.md)  
 #### [Android iş profili ile kaydolma](enroll-device-android-work-profile.md)
 #### [Microsoft Intune uygulaması ile kaydolma](enroll-device-android-microsoft-intune-app.md)
+#### Türetilmiş kimlik bilgileriyle kaydetme
+##### [Entrust Datacard ile kaydetme](enroll-android-device-entrust-datacard.md)
+##### [Intercede ile kaydetme](enroll-android-device-intercede.md)
 ### [Yeni cihaz yönetimi kurulumuna taşıma](move-to-new-device-management-setup.md)
 ### [Cihazınızdaki yönetilen uygulamaları kullanma](use-managed-apps-on-your-device-android.md)
 ### [Cihazınızı şifreleme](encrypt-your-device-android.md)
@@ -34,7 +37,7 @@
 #### [Samsung Knox ile sık karşılaşılan sorunları çözme](samsung-knox-errors-android.md)
 #### [Outlook yüklemek için cihazınızı güncelleştirin](update-device-outlook-android.md)
 
-#### Günlüğe kaydetme
+#### Günlüğe Kaydetme
 ##### [Ayrıntılı günlük kaydını açma](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 ##### [Günlükleri karşıya yükleme ve e-posta ile gönderme](send-logs-to-your-it-admin-by-email-android.md)
 ##### [USB kablosu kullanarak günlükleri gönderme](send-logs-to-your-it-admin-using-cable-android.md)
