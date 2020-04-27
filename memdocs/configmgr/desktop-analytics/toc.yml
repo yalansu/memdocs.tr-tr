@@ -1,0 +1,60 @@
+- name: Desktop Analytics belgeleri
+  href: index.yml
+- name: Genel bakış
+  items:
+    - name: Desktop Analytics nedir?
+      href: overview.md
+    - name: Yenilikler
+      href: whats-new.md
+- name: Öğreticiler
+  items:
+    - name: Pilot Windows 10
+      href: tutorial-windows10.md
+- name: Kavramlar
+  items:
+    - name: Dağıtım planları
+      href: about-deployment-plans.md
+    - name: Varlıklar
+      href: about-assets.md
+    - name: Kalite ve özellik güncelleştirmeleri
+      href: about-updates.md
+    - name: Uyumluluk değerlendirmesi
+      href: compat-assessment.md
+    - name: Sistem durumunu izleme
+      href: health-status-monitoring.md
+- name: Nasıl yapılır kılavuzları
+  items:
+    - name: Desktop Analytics’i ayarlama
+      href: set-up.md
+    - name: Configuration Manager’ı bağlama
+      href: connect-configmgr.md
+    - name: Cihazları kaydetme
+      href: enroll-devices.md
+    - name: Dağıtım planları oluşturma
+      href: create-deployment-plans.md
+    - name: Pilota dağıtma
+      href: deploy-pilot.md
+    - name: Üretime dağıtma
+      href: deploy-prod.md
+    - name: Hesabınızı sıfırlama
+      href: account-reset.md
+    - name: Hesabınızı kapatma
+      href: account-close.md
+- name: Başvuru
+  items:
+    - name: Veri paylaşımını etkinleştirme
+      href: enable-data-sharing.md
+    - name: Gizlilik
+      href: privacy.md
+    - name: Sorun giderme
+      href: troubleshooting.md
+    - name: Günlük toplayıcısı
+      href: log-collector.md
+    - name: Bağlantı durumunu izleme
+      href: monitor-connection-health.md
+    - name: Grup ilkesi ayarları
+      href: group-policy-settings.md
+    - name: Sık sorulan sorular
+      href: faq.md
+    - name: Destek alma
+      href: get-support.md

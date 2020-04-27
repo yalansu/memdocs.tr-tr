@@ -1,0 +1,96 @@
+### YamlMime:Hub
+title: Microsoft Endpoint Manager belgeleri
+summary: Microsoft Endpoint Manager için resmi ürün belgeleri
+metadata:
+  services: service
+  ms.service: microsoft-intune
+  ms.topic: hub-page
+  author: dougeby
+  ms.author: dougeby
+  manager: mtillman
+  ms.date: 04/20/2020
+  ms.openlocfilehash: b72bb3a86129b67622f1f22b4e78814d3dfee574
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741315"
+highlightedContent:
+  items:
+  - title: Microsoft Endpoint Manager’a genel bakış
+    itemType: overview
+    url: endpoint-manager-overview.md
+  - title: Microsoft Endpoint Manager (ürün sayfası)
+    itemType: get-started
+    url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
+  - title: 'Öğretici: Microsoft Endpoint Manager’da Intune için izlenecek yol'
+    itemType: tutorial
+    url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md
+  - title: Uzak iş gücünüzün güvenliğini sağlama
+    itemType: get-started
+    url: https://docs.microsoft.com/enterprise-mobility-security/remote-work/
+conceptualContent:
+  items:
+  - title: Microsoft Intune
+    links:
+    - url: ./intune/index.yml
+      itemType: overview
+      text: Microsoft Intune belgeleri
+    - url: ./intune/fundamentals/index.yml
+      itemType: overview
+      text: Intune’u planlama ve ayarlama
+    - url: ./intune/enrollment/index.yml
+      itemType: overview
+      text: Cihazları kaydetme
+    - url: ./intune/remote-actions/index.yml
+      itemType: overview
+      text: Cihazları uzaktan yönetme
+    - url: ./intune/protect/index.yml
+      itemType: overview
+      text: Kullanıcılar ve cihazlar için uyumluluk kuralları oluşturma
+    - url: ./intune/configuration/index.yml
+      itemType: overview
+      text: Cihaz özelliklerini ve ayarlarını denetleme
+    - url: ./intune/apps/index.yml
+      itemType: concept
+      text: uygulama yönetme ve koruma
+  - title: Microsoft Endpoint Configuration Manager
+    links:
+    - url: ./configmgr/index.yml
+      itemType: get-started
+      text: Microsoft Endpoint Configuration Manager belgeleri
+    - url: ./configmgr/comanage/index.yml
+      itemType: concept
+      text: Configuration Manager ve Intune’da cihaz iş yüklerini yönetme
+    - url: ./configmgr/desktop-analytics/index.yml
+      itemType: overview
+      text: Güncelleştirme hazırlığı için Desktop Analytics’i kullanma
+    - url: ./configmgr/core/index.yml
+      itemType: overview
+      text: Altyapınızı yönetme
+    - url: ./configmgr/apps/index.yml
+      itemType: concept
+      text: Uygulamaları yönetme
+    - url: ./configmgr/osd/index.yml
+      itemType: concept
+      text: İşletim sistemi dağıtımı
+    - url: ./configmgr/sum/index.yml
+      itemType: concept
+      text: Yazılım güncelleştirmeleri
+    - url: ./configmgr/compliance/index.yml
+      itemType: concept
+      text: Cihazların yapılandırmasını ve uyumluluğunu yönetme
+    - url: ./configmgr/protect/index.yml
+      itemType: concept
+      text: Altyapınızı ve verilerinizi koruma
+  - title: Windows Autopilot
+    links:
+    - url: https://docs.microsoft.com/windows/deployment/windows-autopilot/
+      itemType: concept
+      text: Windows Autopilot belgeleri
+    - url: /mem/intune/enrollment/enrollment-autopilot
+      itemType: how-to-guide
+      text: 'Intune: Windows Autopilot kullanarak Windows cihazlarını kaydetme'
+    - url: ./configmgr/osd/deploy-use/windows-autopilot-for-existing-devices.md
+      itemType: how-to-guide
+      text: 'Configuration Manager: Mevcut cihazlar için Windows Autopilot’ı kullanma'

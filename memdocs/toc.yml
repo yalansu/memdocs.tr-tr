@@ -1,0 +1,7 @@
+- name: Microsoft Endpoint Manager
+  href: index.yml
+- name: Genel bakış
+  expanded: true
+  items:
+    - name: Microsoft Endpoint Manager’a genel bakış
+      href: endpoint-manager-overview.md
