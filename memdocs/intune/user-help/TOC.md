@@ -37,7 +37,7 @@
 #### [Samsung Knox ile sık karşılaşılan sorunları çözme](samsung-knox-errors-android.md)
 #### [Outlook yüklemek için cihazınızı güncelleştirin](update-device-outlook-android.md)
 
-#### Günlüğe Kaydetme
+#### Günlüğe kaydetme
 ##### [Ayrıntılı günlük kaydını açma](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 ##### [Günlükleri karşıya yükleme ve e-posta ile gönderme](send-logs-to-your-it-admin-by-email-android.md)
 ##### [USB kablosu kullanarak günlükleri gönderme](send-logs-to-your-it-admin-using-cable-android.md)
@@ -54,12 +54,11 @@
 #### [Desteklenmeyen güvenlik yaması](you-need-to-update-your-device-OS-security-patch-android.md)
 #### [Şifreleme hataları olan cihazlar](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
 
-### Mobile Threat Defense
-#### [Mobile Threat Defense uygulaması yükleme](you-are-prompted-to-install-mtd-android.md)
-##### [Lookout for Work’ü Yükleme](you-are-prompted-to-install-lookout-for-work-android.md)
-##### [Symantec Endpoint Protection Mobile’ı Yükleme](you-are-prompted-to-install-skycure-android.md)
-##### [SandBlast Mobile Protect’i Yükleme](you-are-prompted-to-install-sandblast-android.md)
-##### [Zimperium zIPS’i Yükleme](you-are-prompted-to-install-zips-android.md)
+### Mobil Tehdit Savunması uygulamaları 
+#### [Lookout for Work’ü Yükleme](you-are-prompted-to-install-lookout-for-work-android.md)
+#### [Symantec Endpoint Protection Mobile’ı Yükleme](you-are-prompted-to-install-skycure-android.md)
+#### [SandBlast Mobile Protect’i Yükleme](you-are-prompted-to-install-sandblast-android.md)
+#### [Zimperium zIPS’i Yükleme](you-are-prompted-to-install-zips-android.md)
 #### [Tehdidi çözümleme](you-need-to-resolve-a-threat-found-by-mtd-android.md)
 ##### [Lookout for Work’ü Kullanma](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
 ##### [Symantec Endpoint Protection Mobile’ı Kullanma](you-need-to-resolve-a-threat-found-by-skycure-android.md)
@@ -99,12 +98,11 @@
 #### [Outlook yüklemek için cihazınızı güncelleştirin](update-device-outlook-ios.md)
 #### [Kullandığım iOS sürümü henüz desteklenmiyor](your-ios-version-isnt-yet-supported.md)
 
-### Mobile Threat Defense
-#### [Mobile Threat Defense uygulaması yükleme](you-are-prompted-to-install-mtd-ios.md)
-##### [Lookout for Work’ü Yükleme](you-are-prompted-to-install-lookout-for-work-ios.md)
-##### [Symantec Endpoint Protection Mobile’ı Yükleme](you-are-prompted-to-install-skycure-ios.md)
-##### [SandBlast Mobile Protect’i Yükleme](you-are-prompted-to-install-sandblast-ios.md)
-##### [Zimperium zIPS’i Yükleme](you-are-prompted-to-install-zips-ios.md)
+### Mobil Tehdit Savunması uygulamaları
+#### [Lookout for Work’ü Yükleme](you-are-prompted-to-install-lookout-for-work-ios.md)
+#### [Symantec Endpoint Protection Mobile’ı Yükleme](you-are-prompted-to-install-skycure-ios.md)
+#### [SandBlast Mobile Protect’i Yükleme](you-are-prompted-to-install-sandblast-ios.md)
+#### [Zimperium zIPS’i Yükleme](you-are-prompted-to-install-zips-ios.md)
 #### [Tehdidi çözümleme](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
 ##### [Lookout for Work’ü Kullanma](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
 ##### [Symantec Endpoint Protection Mobile’ı Kullanma](you-need-to-resolve-a-threat-found-by-skycure-ios.md)
