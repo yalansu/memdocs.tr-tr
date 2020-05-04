@@ -1,5 +1,5 @@
 ---
-title: Android cihazınızı sıfırlarsanız ne olur? | Microsoft Docs
+title: Android cihazınızı sıfırlarsanız ne olur? | Microsoft Belgeleri
 description: ''
 keywords: ''
 author: lenewsad
@@ -20,17 +20,17 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1097abfa7ea0589812e3cc750e6d74cd898fe755
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327726"
 ---
 # <a name="what-happens-if-you-reset-your-android-device-using-the-company-portal"></a>Şirket Portalı’nı kullanarak Android cihazınızı sıfırlarsanız ne olur?
 
 Android cihazınızı sıfırlamak için Şirket Portalı’nı kullandığınızda, cihazınızdaki tüm uygulamalar, ayarlar ve kişisel veriler silinir. Bu sıfırlama, cihazınızı varsayılan fabrika ayarlarına döndürür.
 
-Samsung Knox cihazınız varsa Şirket Portalı’ndan **cihaz kaldırma** seçeneğini kullanarak "seçmeli silme" yapabilirsiniz. Seçmeli temizleme yalnızca aşağıdakileri kaldırır:
+Samsung KNOX cihazınız varsa, Şirket Portalı **cihaz kaldırma** seçeneğini belirleyerek "seçmeli silme" yapabilirsiniz. Seçmeli temizleme yalnızca aşağıdakileri kaldırır:
 
 - Şirketinizin destek biriminin kullanımınıza sunduğu iş uygulamaları.
 - E-posta, VPN ve Wi-Fi.

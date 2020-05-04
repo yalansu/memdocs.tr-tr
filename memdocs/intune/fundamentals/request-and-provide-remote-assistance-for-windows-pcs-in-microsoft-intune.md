@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 901064b4902ad9a0de490596d10f99a7507fa5e2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330702"
 ---
 # <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>Windows bilgisayarlar için uzaktan yardım isteme ve sağlama
@@ -80,9 +80,9 @@ Uzaktan yardım oturumu sırasında, uzak bilgisayarı denetlemek için tüm sa�
 ## <a name="remotely-restart-a-windows-pc"></a>Windows bilgisayarını uzaktan yeniden başlatma
 Kullanıcıların sorunlarına yardımcı olurken, bilgisayarlarını ara sıra uzaktan yeniden başlatmanız gerekebilir. Bir Windows bilgisayarı uzaktan yeniden başlatmak için aşağıdaki adımları kullanın.
 
-1. [Microsoft Intune yönetim konsolunda](https://manage.microsoft.com/), **gruplar** &gt; **tüm cihazlar** ' ı (veya yeniden başlatmak istediğiniz bilgisayarı içeren başka bir grubu) seçin.
+1. [Microsoft Intune yönetim konsolunda](https://manage.microsoft.com/)**Gruplar** &gt; **Tüm Cihazlar**’ı (veya yeniden başlatmak istediğiniz bilgisayarı içeren başka bir grubu) seçin.
 
-2. Bir veya daha fazla bilgisayar seçin ve ardından **Bilgisayarı yeniden başlat**&gt; **uzak görevler** ' i seçin.
+2. Bir veya birden çok bilgisayar seçin ve ardından **Uzak Görevler** &gt; **Bilgisayarı Yeniden Başlat**’ı seçin.
 
 3. Görev durumunu görüntülemek için, sayfanın sağ alt köşesinde **Uzak Görevler**'i seçin.
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8e44fa26c84537fdcf801192ce8cc22790f320b9
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80438795"
 ---
 # <a name="android-device-administrator-enrollment"></a>Android cihaz yöneticisi kaydı
@@ -42,7 +42,7 @@ Google 'ın Android kurumsal özellikleri hakkında daha fazla bilgi için şu m
 ## <a name="set-up-device-administrator-enrollment"></a>Cihaz yönetici kaydını ayarlama
 
 1. Mobil cihazların yönetimine hazırlık olarak, **Microsoft Intune**’a mobil cihaz yönetimi (MDM) yetkilisi ayarlamanız gerekir. Yönergeler için bkz. [MDM yetkilisini ayarlama](../fundamentals/mdm-authority-set.md). Bu öğeyi yalnızca mobil cihaz yönetimi için Intune’u ilk defa kurduğunuzda ayarlayabilirsiniz.
-2. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve **cihaz yönetim > ayrıcalıklarına sahip kişisel ve şirkete ait cihazlarda** > **cihazları** ** > ** ** >  > cihazları** **yönetmek için Cihaz Yöneticisi 'ni kullanın**.
+2. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve cihaz yönetim **Devices** > **Android** >  > ayrıcalıklarına sahip > cihazlar Android**Android kayıt** > **kişisel ve şirkete ait cihazlar**' ı seçin**cihazları yönetmek için cihaz yöneticisini kullanın**.
 3. [Kullanıcılarınıza cihazlarını nasıl kaydedeceklerini anlatın](../user-help/enroll-device-android-company-portal.md).  
 
 Bir kullanıcı kaydolduktan sonra [uyumluluk ilkeleri atama](../protect/compliance-policy-create-android.md), [uygulamaları yönetme](../apps/app-management.md) ve daha fazlası dahil olmak üzere kullanıcının cihazlarını Intune’da yönetmeye başlayabilirsiniz.

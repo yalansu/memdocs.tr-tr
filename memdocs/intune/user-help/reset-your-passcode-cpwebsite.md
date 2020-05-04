@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 3752ec0cf872e0a42113586cb9faa068643eb2dc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324462"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Şirket Portalı web sitesinden cihaz geçiş kodunuzu sıfırlama
@@ -42,7 +42,7 @@ Android 7,0 ve üstünü çalıştıran cihazlarda geçiş kodu sıfırlaması k
 
     ![, Tanımlanmamış, genel olarak adlandırılmış cihazları gösteren iki kutucuk içeren cihazlar sayfasının ekran görüntüsü. Gri bir başlık doğrudan cihazların altında bulunur ve kullanıcının kullanmakta oldukları aygıtı belirlemesini veya yeni bir tane eklemesini ister.](./media/rename-reset-device-step2-1808.png) 
 
-3. **Geçiş Kodunu Sıfırla**’ya dokunun. Geçiş kodu seçeneği sayfanın üst kısmında görünmüyorsa **Diğer (...)**  > **Geçiş Kodunu Sıfırla**’yı seçin.   
+3. **Geçiş Kodunu Sıfırla**’ya dokunun. Geçiş kodu seçeneği Sayfanızın üstünde görünmüyorsa, **diğer (...)** öğesini seçin.  >  **Geçiş kodunu sıfırlayın**.   
 
    ![Şirket Portalı web sitesinde seçilen bir cihaza yönelik cihaz ayrıntıları sayfası; üst kısmında Yeniden Adlandır, Kaldır, Cihazı Sıfırla, Geçiş Kodunu Sıfırla ve Uzaktan Kilitle bağlantıları ile. ](./media/rename-reset-device-1808.png)   
 

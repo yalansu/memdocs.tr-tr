@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d6dfba55c8e516e2e689513f063d56f5a43d52d9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331726"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Power BI ile Veri Ambarına bağlanma
@@ -47,7 +47,7 @@ Aşağıdaki adımlar, Power BI dosyasını nasıl indireceğinizi ve OData bağ
 
 ## <a name="install-power-bi"></a>Power BI yükleme
 
-En yeni [Power BI Desktop](https://aka.ms/intune/datawarehouseapi/installpowerbi) sürümünü yükleyin. Daha fazla bilgi için bkz. [Power BI Desktop](https://powerbi.microsoft.com/desktop)
+En son [Power BI Desktop](https://aka.ms/intune/datawarehouseapi/installpowerbi)sürümünü yükler. Daha fazla bilgi için bkz. [Power BI Desktop](https://powerbi.microsoft.com/desktop)
 
 ## <a name="load-the-data-and-reports-using-the-power-bi-intune-compliance-data-warehouse-app"></a>Power BI Intune Uyumluluğu Veri Ambarı Uygulamasını kullanarak verileri ve raporları yükleme
 
@@ -66,7 +66,7 @@ Power BI [Intune uyumluluk (veri ambarı)](https://aka.ms/intune/datawarehouseap
 
 Alternatif olarak, uygulamayı Intune portalından da yükleyebilirsiniz:
 
-1. Azure portalında oturum açın ve **İzleme + Yönetim** > **Intune**’u seçin. Ayrıca Intune için kaynak araması da yapabilirsiniz.
+1. Azure Portal oturum açın ve**Intune** **izleme ve yönetim** > ' ı seçin. Ayrıca Intune için kaynak araması da yapabilirsiniz.
 2. **Intune Veri Ambarı Ayarlama** dikey penceresini açın.
 3. Kiracınız için önceden oluşturulmuş olan Power BI raporlarına tarayıcıda erişmek ve bunları paylaşmak için **Power BI Uygulamasını edinin**'i seçin.
 4. Yukarıdaki 2-10 adımlarını izleyin.
@@ -80,14 +80,14 @@ Azure AD’de istemci kimliği doğrulandığı zaman OData URL’si, Veri Ambar
 3. Raporlama dikey penceresinden özel akış URL 'sini alın, örneğin:<br>
     `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 4. **Power BI Desktop**’ı açın.
-5. **Veri al** > **Dosya** ' yı seçin. **OData akışı**’nı seçin.
+5. **Dosya** > **Al veri al**seçeneğini belirleyin. **OData akışı**’nı seçin.
 6. **Temel**’i seçin.
 7. URL kutusuna **OData URL’sini** yazın veya yapıştırın.
 8. **Tamam**’ı seçin.
 9. Power BI Desktop istemcisinden Azure AD’de kiracınızın kimliğini doğrulamadıysanız, kimlik bilgilerinizi girin. Verilerinize erişim kazanmak için OAuth 2.0 kullanarak Azure Active Directory’de (Azure AD) yetkilendirilmeniz gerekir.  
     1. **Kuruluş hesabını** seçin.  
     2. Kullanıcı adınızı ve parolanızı yazın.  
-    3. **Oturum aç**’ı seçin.  
+    3. **Oturum aç '** ı seçin.  
     4. **Bağlan**’ı seçin.  
 10. **Yükle**’yi seçin.
 

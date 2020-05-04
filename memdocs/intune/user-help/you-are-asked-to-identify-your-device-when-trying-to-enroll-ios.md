@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 83e77f56f4d68e0f196e6ef13ad538c82c1fd578
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324078"
 ---
 # <a name="you-need-to-identify-your-device-when-youre-trying-to-enroll"></a>Kaydetme işlemi için iOS cihazınızı tanımlamanız gerekiyor
@@ -32,6 +32,6 @@ iOS cihazınızı Intune’a kaydetmeye çalışırken cihazınızı tanımlaman
 
 1. Cihazınızı listede görürseniz dokunun. Göremiyorsanız **yeni cihaz** öğesine dokunun.
 2. **Devam**’a dokunun.
-3. Intune’un cihazınızın kayıtlı olduğunu onaylaması için cihazınızın seri numarasının son dört karakterini girin. Seri numaranızı bulmak için bkz. [Cihazımda seri numarasını nasıl bulabilirim?](how-do-i-find-the-serial-number-on-my-device-ios.md)
+3. Intune’un cihazınızın kayıtlı olduğunu onaylaması için cihazınızın seri numarasının son dört karakterini girin. Seri numaranızı bulmak için bkz. [Cihazımda seri numarasını nasıl bulabilirim?](how-do-i-find-the-serial-number-on-my-device-ios.md).
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

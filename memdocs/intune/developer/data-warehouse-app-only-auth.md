@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5bf01b680bce047ec3db64c6d9d59a0e6e44918b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327270"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Intune Veri Ambarı uygulaması - yalnızca kimlik doğrulama
@@ -38,14 +38,14 @@ Azure Active Directory (Azure AD), OAuth 2.0’ı kullanarak Azure AD kiracını
 
 Aşağıdaki işlem, bir uygulama anahtarını işlemek ve dönüştürmek için gizli bir yöntem kullanır. Bu gizli yöntem SecureString olarak adlandırılmıştır. Alternatif olarak uygulaman anahtarını depolamak için Azure KeyVault kullanabilirsiniz. Daha fazla bilgi için bkz. [Key Vault](https://azure.microsoft.com/services/key-vault/).
 
-## <a name="create-a-web-app"></a>Web uygulaması oluşturma
+## <a name="create-a-web-app"></a>Web Uygulaması oluşturma
 
 Bu bölümde, Intune’da yönlendirme yapmak istediğiniz Web uygulaması hakkında ayrıntılar sağlayacaksınız. Web uygulaması, bir istemci-sunucu uygulamasıdır. Sunucu; kullanıcı arabirimi, içerik ve işlevleri içeren web uygulamasını sağlar. Bu tür bir uygulama Web’de ayrı olarak korunur. Intune’a web uygulaması erişimi vermek için Intune’u kullanırsınız. Veri akışı, web uygulaması tarafından başlatılır. 
 
-1. [Azure portalı](https://portal.azure.com)’nda oturum açın.
+1. [Azure Portal](https://portal.azure.com) oturum açın.
 2. Azure portalının üst tarafında yer alan **Arama kaynakları, hizmetler ve belgeler** alanını kullanarak **Azure Active Directory**’yi aratın.
 3. Açılan menüde **Hizmetler**’in altında **Azure Active Directory**’yi seçin.
-4. **Uygulama kayıtları**’nı seçin.
+4. **Uygulama kayıtları**'nı seçin.
 5. **Yeni uygulama kaydı**’nı seçerek **Oluştur** dikey penceresini görüntüleyin.
 6. **Oluştur** dikey penceresinde uygulama ayrıntılarınızı ekleyin:
 
@@ -58,7 +58,7 @@ Bu bölümde, Intune’da yönlendirme yapmak istediğiniz Web uygulaması hakk�
     >[!NOTE] 
     > **Kayıtlı uygulama** dikey penceresindeki **Uygulama kimliği**’ni daha sonra kullanmak üzere kopyalayın.
 
-## <a name="create-a-key"></a>Anahtar oluşturma
+## <a name="create-a-key"></a>Bir anahtar oluşturma
 
 Bu bölümde Azure AD, uygulamanız için bir anahtar değeri oluşturur.
 
@@ -79,7 +79,7 @@ Bu bölümde, uygulamalara izinler vereceksiniz.
 1. **Ayarlar** dikey penceresinde **Gerekli izinler**’i seçin.
 2. **Ekle**'ye tıklayın.
 3. **Bir API ekle**’yi seçerek **Bir API seç** dikey penceresini görüntüleyin.
-4. **Microsoft Intune API (MicrosoftIntuneAPI)** ’yi seçin ve daha sonra **Bir API seç** dikey penceresinden **Seç**’e tıklayın. **İzinleri seç** adımı seçilir ve **Erişim Ver** dikey penceresi görüntülenir.
+4. **Microsoft Intune API (MicrosoftIntuneAPI)**’yi seçin ve daha sonra **Bir API seç** dikey penceresinden **Seç**’e tıklayın. **İzinleri seç** adımı seçilir ve **Erişim Ver** dikey penceresi görüntülenir.
 5. **Uygulama İzinleri** bölümüden **Microsoft Intune’dan veri ambarı bilgileri al**’ı seçin.
 6. **Erişim Ver** dikey penceresinde **Seç**’e tıklayın.
 7. **API erişimi ekle** dikey penceresinde **Tamam**’a tıklayın.
@@ -89,12 +89,12 @@ Bu bölümde, uygulamalara izinler vereceksiniz.
 
 Visual Studio’yu kullanarak .NET Framework’ü destekleyen ve kodlama dili olarak C# kullanan bir Konsol Uygulaması (.NET Framework) projesi oluşturun.
 
-1. **Dosya** > **Yeni** > **Proje**’yi seçerek **Yeni Proje** iletişim kutusunu görüntüleyin.
-2. Sol tarafta **Visual C#** ’yi seçerek tüm .NET Framework projelerini görüntüleyin.
-3. **Konsol Uygulaması (.NET Framework)** ’nı seçin, bir uygulama adı ekleyin ve **Tamam**’a tıklayarak uygulamayı oluşturun.
+1. **Yeni proje** iletişim kutusunu göstermek için **Dosya** > **Yeni** > **Proje** ' yi seçin.
+2. Sol tarafta **Visual C#**’yi seçerek tüm .NET Framework projelerini görüntüleyin.
+3. **Konsol Uygulaması (.NET Framework)**’nı seçin, bir uygulama adı ekleyin ve **Tamam**’a tıklayarak uygulamayı oluşturun.
 4. **Çözüm Gezgini**’nde **Program.cs**’yi seçerek kodu görüntüleyin.
-5. Çözüm Gezgini, derleme `System.Configuration`bir başvuru ekleyin.
-6. Açılan menüde **Ekle** > **Yeni öğe**’yi seçin. **Yeni Öğe Ekle** iletişim kutusu görüntülenir.
+5. Çözüm Gezgini, derlemeye `System.Configuration`bir başvuru ekleyin.
+6. Açılır menüden**Yeni öğe** **Ekle** > ' yi seçin. **Yeni Öğe Ekle** iletişim kutusu görüntülenir.
 7. Sol tarafta, **Visual C#** altında **Kod**’u seçin.
 8. **Sınıf** seçin, sınıfın adını *IntuneDataWarehouseClass.cs* olarak değiştirin ve **Ekle**’ye tıklayın.
 9. <code>Main</code> yönteminde aşağıdaki kodu ekleyin:

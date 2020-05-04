@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: af0e541a21a07c60cde84affca5bfc5a16989d65
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79326270"
 ---
 # <a name="how-to-create-exceptions-to-the-intune-app-protection-policy-app-data-transfer-policy"></a>Intune Uygulama Koruması Ilkesi (uygulama) veri aktarımı ilkesi için özel durumlar oluşturma
@@ -53,11 +53,11 @@ Android'i hedefleyen bir ilke için, uygulama paketi adına göre veri aktarım�
 ### <a name="example"></a>Örnek
 MAM veri aktarımı ilkesine bir özel durum olarak **Webex** paketinin eklenmesiyle, yönetilen bir Outlook e-posta iletisindeki Webex bağlantılarının doğrudan Webex uygulamasında açılmasına izin verilir. Diğer yönetilmeyen uygulamalarda veri aktarımı kısıtlı olmaya devam eder.
 
-- iOS/ıpados **WebEx** örneği: Intune tarafından yönetilen uygulamalar tarafından çağrılmasına izin verilmesi Için **WebEx** uygulamasını muaf tutmak üzere, aşağıdaki dize için bir veri aktarımı özel durumu eklemeniz gerekir: <code>wbx</code>
+- iOS/ıpados **WebEx** örneği: Intune tarafından yönetilen uygulamalar tarafından çağrılmasına izin verilmesi Için **WebEx** uygulamasını muaf tutmak üzere, aşağıdaki dize için bir veri aktarımı özel durumu eklemeniz gerekir:<code>wbx</code>
     
-- iOS/ıpados **haritaları** örneği: Intune tarafından yönetilen uygulamalar tarafından çağrılmasına izin verilmesi Için yerel **haritalar** uygulamasını muaf tutmak üzere, aşağıdaki dize için bir veri aktarımı özel durumu eklemeniz gerekir: <code>maps</code>
+- iOS/ıpados **haritaları** örneği: Intune tarafından yönetilen uygulamalar tarafından çağrılmasına izin verilmesi Için yerel **haritalar** uygulamasını muaf tutmak üzere, aşağıdaki dize için bir veri aktarımı özel durumu eklemeniz gerekir:<code>maps</code>
 
-- Android **WebEx** örneği: Intune tarafından yönetilen uygulamalar tarafından çağrılmasına izin verilmesi Için **WebEx** uygulamasını muaf tutmak üzere, aşağıdaki dize için bir veri aktarımı özel durumu eklemeniz gerekir: <code>com.cisco.webex.meetings</code>
+- Android **WebEx** örneği: Intune tarafından yönetilen uygulamalar tarafından çağrılmasına izin verilmesi Için **WebEx** uygulamasını muaf tutmak üzere, aşağıdaki dize için bir veri aktarımı özel durumu eklemeniz gerekir:<code>com.cisco.webex.meetings</code>
     
 - Android **SMS** örneği: farklı mesajlaşma uygulamaları ve Android cihazlarda Intune tarafından yönetilen uygulamalar tarafından çağrılmasına izin verilmesi Için yerel **SMS** uygulamasını muaf tutmak üzere, aşağıdaki dizeler için veri aktarımı özel durumları eklemeniz gerekir: 
     <code>com.google.android.apps.messaging</code>

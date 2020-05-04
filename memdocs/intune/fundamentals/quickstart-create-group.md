@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d7adb23f4709bf3ead07a01cb00d1b38fcb23c40
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330810"
 ---
 # <a name="quickstart-create-a-group-to-manage-users"></a>Hızlı Başlangıç: Kullanıcıları yönetmek için grup oluşturma
@@ -36,14 +36,14 @@ Intune aboneliğiniz yoksa [ücretsiz deneme hesabı için kaydolun](free-trial-
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Microsoft Intune aboneliği - [ücretsiz deneme hesabına kaydolun](../fundamentals/free-trial-sign-up.md).
+- Microsoft Intune Abonelik- [ücretsiz deneme hesabı için kaydolun](../fundamentals/free-trial-sign-up.md).
 - Bu hızlı başlangıcı tamamlamak için [bir kullanıcı oluşturmanız](quickstart-create-user.md) gerekir.
 
 ## <a name="sign-in-to-intune-in-the-microsoft-endpoint-manager"></a>Microsoft uç nokta yöneticisinde Intune 'da oturum açma
 
 [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) [genel yönetici veya Intune Hizmet Yöneticisi](users-add.md#types-of-administrators)olarak oturum açın. Intune Deneme aboneliği oluşturduysanız aboneliği oluşturduğunuz hesap Genel yönetici rolüne sahip olur.
 
-## <a name="create-a-group"></a>Bir grup oluşturun
+## <a name="create-a-group"></a>Grup oluşturma
 
 Daha sonra bu hızlı başlangıç serisinde kullanılacak bir grup oluşturacaksınız. Bir grup oluşturmak için:
 
@@ -56,7 +56,7 @@ Daha sonra bu hızlı başlangıç serisinde kullanılacak bir grup oluşturacak
 
     ![Microsoft Intune'da grup oluşturma işleminin ekran görüntüsü](./media/quickstart-create-group/quickstart-use-groups-01.png)
 
-7. **Seç** > **Oluştur**’a tıklayın.
+7. Oluştur **Seç** > **Create**' e tıklayın.
 
 Grup başarıyla oluşturulduğunda **Tüm gruplar** listesinde görünür. 
 

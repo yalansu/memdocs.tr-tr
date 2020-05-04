@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 23bb882c7dbf06264b3c8e5aa29947f8e4cb712c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325763"
 ---
 # <a name="add-microsoft-store-apps-to-microsoft-intune"></a>Microsoft Store uygulamalarını Microsoft Intune’a ekleme
@@ -35,21 +35,21 @@ Uygulamaları atama, izleme, yapılandırma veya korumadan önce bunları Intune
 Aşağıdakileri yaparak Intune’a bir Microsoft Store uygulaması ekleyebilirsiniz:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tüm uygulamalar** ** >  > ** **Ekle**' yi seçin.
+2. **Uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, kullanılabilir **Mağaza uygulama** türleri altında, **Windows Mağazası uygulaması**' nı seçin.
-4. **Seçin**’e tıklayın. **Uygulama ekleme** adımları görüntülenir.
+4. **Seç**' e tıklayın. **Uygulama ekleme** adımları görüntülenir.
 5. Windows Mağazası uygulamalarına yönelik **uygulama bilgilerini** yapılandırmak için [Microsoft Store](https://www.microsoft.com/store/apps) ' a gidin ve dağıtmak istediğiniz uygulamayı arayın. Uygulama sayfasını görüntüleyin ve uygulama ayrıntılarını bir yere göz önünde yapın. 
 6. **Uygulama bilgileri** sayfasında, uygulama ayrıntılarını ekleyin:
-    - **Ad**: Şirket Portalı’nda görüntülendiği şekliyle uygulamanın adını girin. Kullandığınız uygulama adlarının benzersiz olduğundan emin olun. Bir uygulama adı iki kez kullanılırsa, Şirket Portalı’nda kullanıcılara yalnızca bir ad gösterilir.
+    - **Ad**: uygulamanın şirket portalında görüntülenecek olan adını girin. Kullandığınız uygulama adlarının benzersiz olduğundan emin olun. Bir uygulama adı iki kez kullanılırsa, Şirket Portalı’nda kullanıcılara yalnızca bir ad gösterilir.
     - **Açıklama**: Uygulama için bir açıklama girin. Bu açıklama Şirket Portalı’nda kullanıcılara görüntülenir.Açıklama şirket portalında kullanıcılara görüntülenir.
-    - **Yayımcı**: Uygulama yayıncısının adını girin.
+    - **Yayımcı**: Uygulama yayımcısının adını girin.
     - **Uygulama mağazası URL’si**: Oluşturmak istediğiniz uygulamanın App Store URL’sini yazın. URL, istenen uygulama için [Microsoft Store](https://www.microsoft.com/store/apps) arayarak bulunabilir. Tarayıcı adres çubuğundan URL 'YI kullanın.
     - **Kategori**: İsteğe bağlı olarak, yerleşik uygulama kategorilerinden veya kendi oluşturduğunuz kategorilerden birini ya da birkaçını seçin. Böylelikle, Şirket Portalı’na göz atarken kullanıcıların uygulamayı bulmaları kolaylaşır.
     - **Bunu şirket portalı öne çıkan uygulama olarak göster**: kullanıcılar uygulamalara gözatarken, uygulama paketini Şirket portalının ana sayfasında göze çarpacak şekilde görüntülemek için bu seçeneği belirleyin.
     - **Bilgi URL’si**: İsteğe bağlı olarak, bu uygulama hakkında bilgi içeren bir web sitesinin URL’sini girin. URL, şirket portalında kullanıcılara görüntülenir.
     - **Gizlilik URL’si**: İsteğe bağlı olarak, bu uygulamayla ilgili gizlilik bilgilerini içeren bir web sitesinin URL’sini girin. URL, şirket portalında kullanıcılara görüntülenir.
-    - **Geliştirici**: İsteğe bağlı olarak, uygulama geliştiricinin adını girin.
-    - **Sahip**: İsteğe bağlı olarak, bu uygulamanın sahibi için bir ad girin, örneğin *İK departmanı*.
+    - **Geliştirici**: İsteğe bağlı olarak, uygulama geliştiricisinin adını girin.
+    - **Sahip**: isteğe bağlı olarak, bu uygulamanın sahibi olarak *İK departmanı*gibi bir ad girin.
     - **Notlar**: İsteğe bağlı olarak bu uygulamayla ilişkilendirmek istediğiniz notları girin.
     - **Logo**: İsteğe bağlı olarak, uygulamayla ilişkilendirilecek bir simgeyi karşıya yükleyin. Bu simge, kullanıcılar şirket portalına gözatarken uygulamayla birlikte görüntülenir.
 7. **İleri** ' ye tıklayarak **kapsam etiketleri** sayfasını görüntüleyin.

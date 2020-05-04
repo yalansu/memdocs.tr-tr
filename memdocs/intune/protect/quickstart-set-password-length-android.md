@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b2e2d5fb2f698d7e0b544dbdbd4ab05f2b94b7ea
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325451"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Hızlı Başlangıç: Android cihazları için parola uyumluluk ilkesi oluşturma
@@ -44,15 +44,15 @@ Intune aboneliğiniz yoksa [ücretsiz deneme hesabı için kaydolun](../fundamen
 
 İş gücünün Android kullanıcılarının, Android cihazlarındaki bilgilere erişim verilmeden önce belirli bir uzunlukta parola girmesini gerektirmek için bir cihaz uyumluluk ilkesi oluşturun.
 
-1. Intune 'da **cihaz** > **Uyumluluk Ilkeleri** > **ilke oluştur**' u seçin.
+1. Intune ' da, **cihaz** > **uyumluluk ilkeleri** > **ilke oluştur**' u seçin.
 
 2. **Ad** olarak **Android uyumluluğu** yazın. Ayrıca bir **Açıklama** girin.
 
-3. **Platform** olarak **Android Kurumsal**’ı seçin.
+3. **Platform**Için **Android kurumsal**' i seçin.
 
 4. **Profil türü**için **iş profili**' ni seçin.
 
-5. **Ayarlar** > **Sistem Güvenliği**’ni seçerek Android **Sistem Güvenliği** dikey penceresini görüntüleyin.
+5. Android **sistem güvenliği** dikey penceresini göstermek için **Ayarlar** > **sistem güvenliği** ' ni seçin.
 
 6. **Mobil cihazların kilidini açmak için parola gerektir** ayarını **Gerektir** olarak belirleyin.
 
@@ -62,7 +62,7 @@ Intune aboneliğiniz yoksa [ücretsiz deneme hesabı için kaydolun](../fundamen
 
     ![Microsoft Intune'da grup oluşturma işleminin ekran görüntüsü](./media/quickstart-set-password-length-android/quickstart-set-password-length-android-01.png)
 
-9. İşiniz bittiğinde, ilkeyi oluşturmak için **tamam** ** > Tamam** > **Oluştur** ' u seçin.
+9. İşiniz bittiğinde, ilkeyi oluşturmak için **Tamam** > **Tamam** > **Oluştur** ' u seçin.
 
 İlkeyi başarıyla oluşturduğunuzda cihaz Complice ilkeleri listenizde görünür.
 

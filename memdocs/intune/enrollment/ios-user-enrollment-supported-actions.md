@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: aa78178f6649e0199aa2de96bac2725ba55208ae
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331534"
 ---
 # <a name="intune-actions-and-options-supported-with-apple-user-enrollment"></a>Apple Kullanıcı kaydıyla desteklenen Intune eylemleri ve seçenekleri
@@ -38,15 +38,15 @@ Kullanıcı kayıt cihazlarında, herhangi bir parola ayarını yapılandırırs
 
 Örneğin, **parola süre sonu** ayarını yapılandırır ve bu ilkeyi Kullanıcı tarafından kaydedilen cihazlara gönderirsiniz. Cihazlarda aşağıdakiler olur:
 - **Parola süre sonu** ayarı yok sayılır.
-- `111111` veya `123456`gibi basit parolalara izin verilmez.
+- Veya `111111` `123456`gibi basit parolalara izin verilmez.
 - 6 basamaklı bir PIN zorlanır.
 
 ## <a name="administrator-remote-device-actions-and-options"></a>Yönetici uzak cihaz eylemleri ve seçenekleri
 Yöneticiler, Kullanıcı kayıt cihazlarında aşağıdaki eylemleri ve seçenekleri gerçekleştirebilir:
-- Devre Dışı Bırak
+- Devre Dışı Bırakma
 - Sil
 - Uzaktan Kilitleme
-- Eşitle
+- Sync
 
 Diğer tüm eylemler desteklenmez.
 
@@ -110,7 +110,7 @@ Kullanıcı kaydıyla kaydedilen cihazlarda aşağıdaki seçenekler desteklenme
 
 ## <a name="known-issues-in-preview"></a>Önizlemede bilinen sorunlar
 - VPP lisansı iptali: lisansın iptal edildiğini belirten bir bildirim görüntülenir. Geçerli davranış, iptal işleminin başarılı olması ancak son kullanıcıya bildirilmemelidir. 
-- VPP uygulama raporlaması: Istemci uygulamalarında bulunan > Uygulamalar > [uygulama adı] > cihaz yüklemesi durumu, Kullanıcı tarafından kaydedilen cihazlara dağıtılan VPP uygulamaları, uygulama başarıyla cihaza dağıtıldığında bile "başarısız" olarak raporlanır. 
+- VPP uygulama raporlaması: Istemci uygulamalarında bulunan > uygulamalar > [uygulama adı] > cihaz yüklemesi durumu, Kullanıcı tarafından kaydedilen cihazlara dağıtılan VPP uygulamaları, uygulama başarıyla cihaza dağıtıldığında bile "başarısız" olarak raporlanır. 
 - Uygulama raporlama: Kullanıcı kaydında desteklenmeyen uygulama türleri Için raporlar, ilgisiz hata iletileri sağlayabilir. 
 - Uygulama deneyimi Şirket Portalı: kullanıcılar, bu uygulama türlerinin Kullanıcı tarafından kaydedilen cihazlarda desteklenip desteklenmediğini bağımsız olarak, onlara hedeflenen tüm uygulamaları görür. 
 - Uygulama deneyimi Şirket Portalı: kullanıcılar, yöneticinin hangi kuruluşların göremeyeceğini gösteren metni özelleştirmiş olması halinde Kullanıcı ve cihaz kaydı için kuruluşların neleri görebileceğini belirten metni görürler.
@@ -118,4 +118,4 @@ Kullanıcı kaydıyla kaydedilen cihazlarda aşağıdaki seçenekler desteklenme
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[İOS/ıpados ve ıpados Kullanıcı kaydını ayarlama](ios-user-enrollment.md)
+[iOS/iPadOS Kullanıcı Kaydını Ayarlama](ios-user-enrollment.md)

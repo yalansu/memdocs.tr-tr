@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6dad4dffba0efadcca0ea5eb7d61960bec1b3f8e
-ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80536828"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>macOS iş kolu (LOB) uygulamalarını Microsoft Intune’a ekleme
@@ -52,21 +52,21 @@ Bu makaledeki bilgiler macOS iş kolu uygulamalarını Microsoft Intune’a ekle
 
 2. İndirilen Aracı yürütülebilir olarak işaretleyin:
    - Terminal uygulamasını başlatın.
-   - Dizini `IntuneAppUtil` bulunduğu konum olarak değiştirin.
+   - Dizini, bulunduğu konum `IntuneAppUtil` olarak değiştirin.
    - Aracı yürütülebilir hale getirmek için aşağıdaki komutu çalıştırın:<br> 
        `chmod +x IntuneAppUtil`
 
-3. Bir `IntuneAppUtil`.intunemac**dosyasından**.pkg*LOB uygulama dosyasını sarmalamak için,* Mac için Intune Uygulama Sarmalama Aracı *'nın içinde*  komutunu kullanın.<br>
+3. Bir *.intunemac* dosyasından *.pkg* LOB uygulama dosyasını sarmalamak için, **Mac için Intune Uygulama Sarmalama Aracı**'nın içinde `IntuneAppUtil` komutunu kullanın.<br>
 
     macOS için Microsoft Intune Uygulama Sarmalama Aracı'na yönelik kullanılabilecek örnek komutlar:
     > [!IMPORTANT]
-    > `<source_file>` bağımsız değişkeninin `IntuneAppUtil` komutlarını çalıştırmadan önce boşluk içermediğinden emin olun.
+    > Bağımsız değişkenin `<source_file>` `IntuneAppUtil` komutları çalıştırmadan önce boşluk içermediğinden emin olun.
 
     - `IntuneAppUtil -h`<br>
     Bu komut aracın kullanım bilgilerini gösterir.
     
     - `IntuneAppUtil -c <source_file> -o <output_directory_path> [-v]`<br>
-    Bu komut, `<source_file>` belirtilen *. pkg* lob uygulaması dosyasını aynı ada sahip bir *. intunemac* dosyasına kaydırır ve `<output_directory_path>`tarafından işaret edilen klasöre yerleştirir.
+    Bu komut, içinde `<source_file>` belirtilen *. pkg* LOB uygulama dosyasını aynı ada sahip bir *. intunemac* dosyasına kaydırır ve tarafından `<output_directory_path>`işaret edilen klasöre yerleştirirsiniz.
     
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     Bu komut, oluşturulan *.intunemac* dosyası için algılanan parametreleri ve sürümünü ayıklar.
@@ -74,11 +74,11 @@ Bu makaledeki bilgiler macOS iş kolu uygulamalarını Microsoft Intune’a ekle
 ## <a name="select-the-app-type"></a>Uygulama türünü seçin
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tüm uygulamalar** ** >  > ** **Ekle**' yi seçin.
+2. **Uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, **diğer** uygulama türleri altında **iş kolu uygulaması**' nı seçin.
-4. **Seçin**’e tıklayın. **Uygulama ekleme** adımları görüntülenir.
+4. **Seç**' e tıklayın. **Uygulama ekleme** adımları görüntülenir.
 
-## <a name="step-1---app-information"></a>1\. adım-uygulama bilgileri
+## <a name="step-1---app-information"></a>1. adım-uygulama bilgileri
 
 ### <a name="select-the-app-package-file"></a>Uygulama paketi dosyasını seçin
 
@@ -91,32 +91,32 @@ Bu makaledeki bilgiler macOS iş kolu uygulamalarını Microsoft Intune’a ekle
 
 1. **Uygulama bilgileri** sayfasında uygulamanızın ayrıntılarını ekleyin. Seçtiğiniz uygulamaya bağlı olarak bu bölmedeki değerlerden bazıları otomatik olarak doldurulabilir.
     - **Ad**: Uygulamanın Şirket Portalı’nda görünen adını girin. Kullandığınız tüm uygulama adlarının benzersiz olduğundan emin olun. Aynı uygulama adı iki kez kullanılmışsa uygulamalardan yalnızca biri Şirket Portalı’nda kullanıcılara görüntülenir.
-    - **Açıklama**: Uygulama açıklamasını girin. Açıklama Şirket Portalı’nda görünür.
-    - **Yayımcı**: Uygulama yayıncısının adını girin.
+    - **Açıklama**: Uygulama açıklamasını girin. Açıklama, Şirket Portalı’nda görünür.
+    - **Yayımcı**: Uygulama yayımcısının adını girin.
     - **En Düşük İşletim Sistemi**: Listeden uygulamanın yüklenebileceği en düşük işletim sistemi sürümünü seçin. Uygulamayı daha önceki bir işletim sistemini çalıştıran cihazlara atarsanız, uygulama yüklenmez.
     - **Kategori**: Yerleşik uygulama kategorilerinden birini veya kendi oluşturduğunuz bir kategoriyi seçin. Kategoriler, kullanıcıların Şirket Portalı’na göz atarken uygulamayı daha kolay bulabilmesini sağlar.
     - **Bunu şirket portalı öne çıkan uygulama olarak göster**: kullanıcılar uygulamalara gözatarken, uygulamayı şirket portalının ana sayfasında göze çarpacak şekilde görüntüleyin.
-    - **Bilgi URL’si**: İsteğe bağlı olarak, bu uygulama hakkında bilgi içeren bir web sitesinin URL’sini girin. URL, Şirket Portalı’nda görünür.
-    - **Gizlilik URL’si**: İsteğe bağlı olarak, bu uygulamayla ilgili gizlilik bilgilerini içeren bir web sitesinin URL’sini girin. URL, Şirket Portalı’nda görünür.
-    - **Geliştirici**: İsteğe bağlı olarak, uygulama geliştiricinin adını girin.
+    - **Bilgi URL’si**: İsteğe bağlı olarak, bu uygulama hakkında bilgi içeren bir web sitesinin URL’sini girin. URL Şirket Portalı’nda görünür.
+    - **Gizlilik URL’si**: İsteğe bağlı olarak, bu uygulamayla ilgili gizlilik bilgilerini içeren bir web sitesinin URL’sini girin. URL Şirket Portalı’nda görünür.
+    - **Geliştirici**: İsteğe bağlı olarak, uygulama geliştiricisinin adını girin.
     - **Sahip**: İsteğe bağlı olarak uygulama sahibinin adını girin. Örneğin **İK departmanı**.
     - **Notlar**: Bu uygulamayla ilişkilendirmek istediğiniz notları girin.
     - **Logo**: Uygulamayla ilişkilendirilen bir simgeyi karşıya yükleyin. Bu simge, kullanıcılar Şirket Portalı’na göz atarken uygulamayla birlikte görüntülenir.
 2. **İleri** ' ye tıklayarak **kapsam etiketleri** sayfasını görüntüleyin.
 
-## <a name="step-2---select-scope-tags-optional"></a>2\. adım-kapsam etiketlerini seçin (isteğe bağlı)
+## <a name="step-2---select-scope-tags-optional"></a>2. adım-kapsam etiketlerini seçin (isteğe bağlı)
 
 Intune 'da istemci uygulama bilgilerini kimlerin görebileceğini anlamak için kapsam etiketlerini kullanabilirsiniz. Kapsam etiketleri hakkında tam Ayrıntılar için bkz. [Dağıtılmış BT için rol tabanlı erişim denetimi ve kapsam etiketleri kullanma](../fundamentals/scope-tags.md).
 
 1. İsteğe bağlı olarak uygulamanın kapsam etiketlerini eklemek için **kapsam etiketlerini Seç** ' e tıklayın. 
 2. **Atamalar** sayfasını göstermek için **İleri** ' ye tıklayın.
 
-## <a name="step-3---assignments"></a>3\. adım-atamalar
+## <a name="step-3---assignments"></a>3. adım-atamalar
 
 1. **Gerekli**, **Kayıtlı cihazlar için kullanılabilir**veya uygulama için Grup atamalarını **Kaldır** ' ı seçin. Daha fazla bilgi için bkz. [kullanıcıları ve cihazları düzenlemek için grup ekleme](../fundamentals/groups-add.md) ve [Microsoft Intune olan gruplara uygulama atama](apps-deploy.md).
 2. **İleri** ' ye tıklayarak **gözden geçir + oluştur** sayfasını görüntüleyin. 
 
-## <a name="step-4---review--create"></a>4\. adım-Inceleme ve oluşturma
+## <a name="step-4---review--create"></a>4. adım-Inceleme ve oluşturma
 
 1. Uygulama için girdiğiniz değerleri ve ayarları gözden geçirin.
 2. İşiniz bittiğinde, uygulamayı Intune 'a eklemek için **Oluştur** ' a tıklayın.
@@ -133,7 +133,7 @@ Oluşturduğunuz uygulama, uygulamalar listesinde görüntülenir ve burada uygu
 [!INCLUDE [shared-proc-lob-updateapp](../includes/shared-proc-lob-updateapp.md)]
 
 > [!NOTE]
-> Intune hizmetinin yeni bir *.pkg* dosyasını cihaza başarılı bir şekilde dağıtması için, `version`.pkg`CFBundleVersion` paketinizdeki *packageinfo* dosyasında paket *ve* dizesini artırmanız gerekir.
+> Intune hizmetinin yeni bir *.pkg* dosyasını cihaza başarılı bir şekilde dağıtması için, *.pkg* paketinizdeki *packageinfo* dosyasında paket `version` ve `CFBundleVersion` dizesini artırmanız gerekir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

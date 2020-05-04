@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ce008c21cefeb3920182a09547db091547681401
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79326554"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-testing-guide"></a>Android için uygulama SDK 'Sı test Kılavuzu Microsoft Intune
@@ -49,13 +49,13 @@ Aşağıdaki test çalışmaları yapılandırma ve onay adımları sağlar. Int
 
 ### <a name="required-pin-and-corporate-credentials"></a>Gerekli PIN ve şirket kimlik bilgileri
 
-Şirket kaynaklarına erişmek için PIN 'ı zorunlu kılabilirsiniz. Ayrıca, kullanıcıların yönetilen uygulamaları kullanabilmesi için önce şirket kimlik doğrulamasını uygulayabilirsiniz. Şöyle yapılır:
+Şirket kaynaklarına erişmek için PIN 'ı zorunlu kılabilirsiniz. Ayrıca, kullanıcıların yönetilen uygulamaları kullanabilmesi için önce şirket kimlik doğrulamasını uygulayabilirsiniz. Bunu yapmak için:
 
 1. **Erişim IÇIN PIN gerektir** ' i ayarlayın ve **Evet**' e **erişmek için kurumsal kimlik bilgileri gerektir** . Daha fazla bilgi için, bkz. [Microsoft Intune Android uygulama koruma ilkesi ayarları](../apps/app-protection-policy-settings-android.md#access-requirements).
 2. Aşağıdaki koşulları onaylayın:
     - Uygulama başlatma, PIN girişi veya Şirket Portalı kayıt sırasında kullanılan üretim kullanıcısı için bir istem sunmalıdır.
     - Geçerli bir oturum açma istemi sunamaması, özellikle Azure Active Directory kimlik doğrulaması kitaplığı (ADAL) Tümleştirmesi (SkipBroker, ClientID ve Authority) için değerler olarak yanlış yapılandırılmış bir Android bildiriminin nedeni olabilir.
-    - Herhangi bir istem sunma hatası, yanlış tümleşik `MAMActivity` bir değer olabilir. `MAMActivity`hakkında daha fazla bilgi için bkz. [Android Için uygulama SDK 'sı geliştirici kılavuzu Microsoft Intune](app-sdk-android.md).
+    - Herhangi bir istem sunma hatası, yanlış tümleşik `MAMActivity` bir değerden kaynaklanıyor olabilir. Hakkında `MAMActivity`daha fazla bilgi için bkz. [Android için uygulama SDK 'sı Geliştirici Kılavuzu Microsoft Intune](app-sdk-android.md).
 
 > [!NOTE] 
 > Önceki test çalışmıyorsa, aşağıdaki testler de başarısız olur. [SDK](app-sdk-android.md#sdk-integration) ve [adal](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal) tümleştirmesini gözden geçirin.
@@ -64,7 +64,7 @@ Aşağıdaki test çalışmaları yapılandırma ve onay adımları sağlar. Int
 Kurumsal yönetilen uygulamalar arasında veri aktarımını şu şekilde denetleyebilirsiniz:
 
 1. **Uygulamanın diğer uygulamalara veri aktarmasına Izin ver** **ilkesini ilkeyle yönetilen uygulamalar**olarak ayarlayın.
-2. **Uygulamanın diğer uygulamalardan tüm uygulamalara veri almasına Izin ver** 'i ayarlayın. Amaç ve içerik sağlayıcılarının kullanımı, bu ilkelerden etkilenir.
+2. **Uygulamanın diğer uygulamalardan tüm uygulamalara veri almasına Izin ver** ' **All apps**i ayarlayın. Amaç ve içerik sağlayıcılarının kullanımı, bu ilkelerden etkilenir.
 3. Aşağıdaki koşulları onaylayın:
     - Yönetilmeyen bir uygulamadan uygulama işlevlerinizi doğru açma.
     - Yönetilen uygulamalar arasında içerik paylaşımına izin verilir.
@@ -99,16 +99,16 @@ Uygulama yedeklemesini aşağıdaki şekilde kontrol edebilirsiniz:
     - Yedeklemeler kısıtlıdır.
 
 ### <a name="unenrollment"></a>Kayıt kaldırmaya
-Yönetilen uygulamaları, şirket e-posta ve belgelerinin bulunduğu bir şekilde uzaktan temizleyebilirsiniz ve artık yönetilmediğinde kişisel verilerin şifresi çözülür. Şöyle yapılır:
+Yönetilen uygulamaları, şirket e-posta ve belgelerinin bulunduğu bir şekilde uzaktan temizleyebilirsiniz ve artık yönetilmediğinde kişisel verilerin şifresi çözülür. Bunu yapmak için:
 
 1. Azure portal, [silme](../apps/apps-selective-wipe.md)işlemi yapın.
 2. Uygulamanız herhangi bir silme işleyicisine kaydolmazsa, aşağıdaki koşulları onaylayın:
     - Uygulamanın tam temizleme işlemi gerçekleşir.
-3. Uygulamanız `WIPE_USER_DATA` veya `WIPE_USER_AUXILARY_DATA`için kaydedilmişse, aşağıdaki koşulları onaylayın:
+3. Uygulamanız veya `WIPE_USER_DATA` `WIPE_USER_AUXILARY_DATA`için kaydedilmişse, aşağıdaki koşulları onaylayın:
     - Yönetilen içerik uygulamadan kaldırılır. Daha fazla bilgi için bkz. [Android Için Intune uygulama SDK 'sı Geliştirici Kılavuzu-seçmeli silme](app-sdk-android.md#selective-wipe).
 
 ### <a name="multi-identity-support"></a>Çoklu kimlik desteği
-[Çoklu kimlik desteğini](app-sdk-android.md#multi-identity-optional) tümleştirme, kapsamlı bir şekilde test olması gereken yüksek riskli bir değişiklik. En yaygın sorunlar, kimlik (bağlam ve tehdit düzeyi) ve izleme dosyalarını (`MAMFileProtectionManager`) yanlış ayarlamadığı için oluşur.
+[Çoklu kimlik desteğini](app-sdk-android.md#multi-identity-optional) tümleştirme, kapsamlı bir şekilde test olması gereken yüksek riskli bir değişiklik. En yaygın sorunlar, kimliği (bağlam ve tehdit düzeyi) ve izleme dosyalarını (`MAMFileProtectionManager`) yanlış ayarlamadığı için oluşur.
 
 En düşük düzeyde, aşağıdakileri onaylayın:
 
@@ -123,4 +123,4 @@ Yönetilen uygulamaların davranışını yapılandırabilirsiniz. Uygulamanız 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Microsoft Intune Android iş kolu uygulaması ekleme](../apps/lob-apps-android.md)
+- [Microsoft Intune’a bir Android iş kolu uygulaması ekleme](../apps/lob-apps-android.md)

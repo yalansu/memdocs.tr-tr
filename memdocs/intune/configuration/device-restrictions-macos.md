@@ -17,15 +17,15 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 50dd3d245b9a89836e3858d71a7ad124189e0973
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80407860"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune'u kullanarak özelliklere izin vermeyi veya bunları kısıtlamayı sağlayan macOS cihaz ayarları
 
-Bu makalede macOS cihazlarda denetleyebileceğiniz farklı ayarlar listelenmekte ve açıklanmaktadır. Mobil cihaz yönetimi (MDM) yönteminizin bir parçası olarak bu ayarları kullanabilir ve bu sayede özellikleri etkinleştirip devre dışı bırakabilir, parola kuralları uygulayabilir, belirli uygulamalara izin verebilir veya bunları kısıtlayabilir ve çok daha fazlasını yapabilirsiniz.
+Bu makalede macOS cihazlarda denetleyebileceğiniz farklı ayarlar listelenmekte ve açıklanmaktadır. Mobil cihaz yönetimi (MDM) çözümünüz kapsamında bu ayarları kullanabilir ve bu sayede özellikleri etkinleştirip devre dışı bırakabilir, parola kuralları uygulayabilir, belirli uygulamalara izin verebilir veya bunları kısıtlayabilir ve çok daha fazlasını yapabilirsiniz.
 
 Bu ayarlar, Intune'da bir cihaz yapılandırma profiline eklenir ve daha sonra macOS cihazlarınıza atanır veya dağıtılır.
 
@@ -89,12 +89,12 @@ Bu ayarlar, Intune'da bir cihaz yapılandırma profiline eklenir ve daha sonra m
     Bu özellik şu platformlarda geçerlidir:  
     - macOS 10.10.3 ve üzeri
 
-  - **Paroladaki alfasayısal olmayan karakter sayısı**: 0-4 adresinden, parolada gereken karmaşık karakter sayısını girin. Karmaşık bir karakter, `?` gibi bir simgedir
+  - **Paroladaki alfasayısal olmayan karakter sayısı**: 0-4 adresinden, parolada gereken karmaşık karakter sayısını girin. Karmaşık bir karakter, örneğin`?`
   - **Minimum parola uzunluğu**: parolanın, 4-16 karakterden fazla olması gereken minimum uzunluğu girin.
   - **Basit parolalar**: `0000` veya `1234`gibi basit parolalar kullanılmasına izin verin.
   - **Parola istenmeden önce ekran kilitlenmesinden sonra geçen en fazla dakika**: kilidini açmak için bir parola istenmeden önce cihazların etkin olmaması gereken sürenin uzunluğunu girin. Değer boş olduğunda veya **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
   - Ekran **kilitlenmeden önce geçen işlem yapılmayan dakika sayısı**: ekran otomatik olarak kilitlenmeden önce cihazların boşta olması gereken sürenin uzunluğunu girin. Örneğin, 5 dakika boşta kaldıktan sonra cihazları kilitlemek için 5 girin. Değer boş olduğunda veya **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
-  - **Parola kullanım süresi (gün)** : cihaz parolasının, 1-65535 adresinden sonra değiştirilmesi gereken gün sayısını girin. Örneğin, 90 gün sonra parolayı sona erdirmek için `90` girin. Parola geçerlilik süresi dolduğunda kullanıcıların yeni bir parola oluşturması istenir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+  - **Parola kullanım süresi (gün)**: cihaz parolasının, 1-65535 adresinden sonra değiştirilmesi gereken gün sayısını girin. Örneğin, 90 gün `90` sonra parolanın süresini dolacak şekilde girin. Parola geçerlilik süresi dolduğunda kullanıcıların yeni bir parola oluşturması istenir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
   - **Önceki parolaların yeniden kullanılmasını engelle**: kullanıcıların daha önce kullanılan parolaları oluşturmasını kısıtlamak için bu ayarı kullanın. 1-24 adresinden, daha önce kullanılmış olan parolaların sayısını girin. Örneğin, kullanıcıların geçerli parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için 5 girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
 - **Kullanıcının geçiş kodunu değiştirmesini engelle**: **blok** , geçiş kodunun değiştirilmesini, eklenmesini veya kaldırılmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, geçiş kodlarını 'in eklenmesine, değiştirilmesine veya kaldırılmasına izin verebilir.
@@ -171,7 +171,7 @@ Bu listelere uygulama eklemek için şunları yapabilirsiniz:
   Bu özellik şu platformlarda geçerlidir:  
   - macOS 10,15 ve üzeri
 
-## <a name="domains"></a>Etki alanları
+## <a name="domains"></a>Etki Alanları
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ayarlar için geçerlidir: cihaz kaydı ve otomatik cihaz kaydı
 

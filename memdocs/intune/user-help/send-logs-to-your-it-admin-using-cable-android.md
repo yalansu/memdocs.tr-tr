@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 48e0274cc9288e8f9266f3b7fd3c35969abd0c5e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327870"
 ---
 # <a name="upload-and-email-logs-using-a-usb-cable"></a>USB kablosu kullanarak karşıya yükleme ve e-posta günlükleri
@@ -37,7 +37,7 @@ ms.locfileid: "79327870"
 
 2. USB kablosunu kullanarak cihazınızı bilgisayarınıza bağlayın. 
 
-3. Bilgisayarda, cihazınızın adına sahip bir dizini arayın. Söz konusu dizinde, <strong>Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\\</strong> yolunu bulun.
+3. Bilgisayarda, cihazınızın adına sahip bir dizini arayın. Bu dizinde <strong>Android Device\Phone\Android\data\com.Microsoft.windowsintune.companyportal\files\\</strong>bulun.
 
 4. Dosyaları seçin ve bir e-postaya ekleyin. Bu e-postayı şirketinizin destek birimine gönderin.
 

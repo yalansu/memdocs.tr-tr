@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2e18fad8f1112681a62bcdacd63c652cfd4ad3ac
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359283"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-extensions-in-intune"></a>Intune 'da çekirdek uzantılarını yapılandırmak ve kullanmak için macOS cihaz ayarları
@@ -49,7 +49,7 @@ Bu ayarlar, Intune'da bir cihaz yapılandırma profiline eklenir ve daha sonra m
 
 - **Izin verilen takım tanımlayıcıları**: bir veya daha fazla takım kimliğine izin vermek için bu ayarı kullanın. Girdiğiniz ekip kimlikleriyle imzalanan tüm çekirdek uzantılarına izin verilir ve bunlar güvenilir. Diğer bir deyişle, belirli bir geliştirici veya iş ortağı olabilecek aynı takım KIMLIĞI içindeki tüm çekirdek uzantılarına izin vermek için bu seçeneği kullanın.
 
-  Yüklemek istediğiniz geçerli ve imzalı çekirdek uzantılarının ekip tanımlayıcısını **ekleyin** . Birden çok takım tanımlayıcısı ekleyebilirsiniz. Takım tanımlayıcısının alfasayısal (harfler ve rakamlar) olması ve 10 karaktere sahip olması gerekir. Örneğin, şunu girin: `ABCDE12345`.
+  Yüklemek istediğiniz geçerli ve imzalı çekirdek uzantılarının ekip tanımlayıcısını **ekleyin** . Birden çok takım tanımlayıcısı ekleyebilirsiniz. Takım tanımlayıcısının alfasayısal (harfler ve rakamlar) olması ve 10 karaktere sahip olması gerekir. Örneğin, `ABCDE12345` girin.
 
   Ekip tanımlayıcı ekledikten sonra da silinebilir.
 
@@ -57,14 +57,14 @@ Bu ayarlar, Intune'da bir cihaz yapılandırma profiline eklenir ve daha sonra m
 
 - **Izin verilen çekirdek uzantıları**: belirli çekirdek uzantılarına izin vermek için bu ayarı kullanın. Yalnızca girdiğiniz çekirdek uzantılarına izin verilir veya güvenilir.
 
-  Yüklemek istediğiniz bir çekirdek uzantısının paket tanımlayıcısını ve takım tanımlayıcısını **ekleyin** . İmzasız eski çekirdek uzantıları için boş bir takım tanımlayıcısı kullanın. Birden çok çekirdek uzantısı ekleyebilirsiniz. Takım tanımlayıcısının alfasayısal (harfler ve rakamlar) olması ve 10 karaktere sahip olması gerekir. Örneğin, **paket kimliği**için `com.contoso.appname.macos` girin ve **takım tanımlayıcısı**için `ABCDE12345`.
+  Yüklemek istediğiniz bir çekirdek uzantısının paket tanımlayıcısını ve takım tanımlayıcısını **ekleyin** . İmzasız eski çekirdek uzantıları için boş bir takım tanımlayıcısı kullanın. Birden çok çekirdek uzantısı ekleyebilirsiniz. Takım tanımlayıcısının alfasayısal (harfler ve rakamlar) olması ve 10 karaktere sahip olması gerekir. Örneğin, **paket kimliği**Için ve `ABCDE12345` **Takım tanımlayıcısı**için girin. `com.contoso.appname.macos`
 
   > [!TIP]
   > Bir macOS cihazında çekirdek uzantısının paket KIMLIĞINI (KEXT) almak için şunları yapabilirsiniz:
   >
-  > 1. Terminalde `kextstat | grep -v com.apple`çalıştırın ve çıktıyı aklınızda edin. İstediğiniz yazılımı veya KEXT 'yi yükler. `kextstat | grep -v com.apple` yeniden çalıştırın ve değişiklikler olup olmadığına bakın.
+  > 1. Terminalde çalıştırın `kextstat | grep -v com.apple`ve çıktıyı aklınızda yapın. İstediğiniz yazılımı veya KEXT 'yi yükler. Yeniden `kextstat | grep -v com.apple` çalıştırın ve değişiklikler olup olmadığına bakın.
   >
-  >    Terminalde `kextstat`, işletim sistemindeki tüm çekirdek uzantılarını listeler. 
+  >    Terminalde, `kextstat` işletim sistemindeki tüm çekirdek uzantılarını listeler. 
   >
   > 2. Cihazda, bir KEXT için bilgi özelliği liste dosyasını (Info. plist) açın. Paket KIMLIĞI gösterilir. Her bir KEXT içinde depolanan Info. plist dosyasına sahiptir.
 

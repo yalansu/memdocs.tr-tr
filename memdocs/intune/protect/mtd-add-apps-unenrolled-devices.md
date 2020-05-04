@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c85816c36427727416f531effa695e7d2eec66aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79325378"
 ---
 # <a name="add-mobile-threat-defense-apps-to-unenrolled-devices"></a>Kayıtlı olmayan cihazlara mobil tehdit savunma uygulamaları ekleme
@@ -65,7 +65,7 @@ Ancak, uygulamayı Intune Şirket Portalı aracılığıyla son kullanıcılar i
 - **Android**  
   - Yönergeler için bkz. [Microsoft Intune'a Android mağazası uygulamaları ekleme](../apps/store-apps-android.md). **Uygulama bilgilerini Yapılandır** bölümünü tamamlarken bu [Lookout for Work Play Store URL 'sini](https://play.google.com/store/apps/details?id=com.lookout.enterprise) kullanın.
 
-- **Android**
+- **iOS**
   - Yönergeler için bkz. [Microsoft Intune'a iOS mağazası uygulamaları ekleme](../apps/store-apps-ios.md). **Uygulama bilgilerini Yapılandır** bölümünü tamamlarken bu [Lookout for Work-iOS Uygulama Mağazası URL 'sini](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8) kullanın.
 
 <!-- ### Making Symantec Endpoint Protection Mobile available to end users
@@ -86,7 +86,7 @@ Ancak, uygulamayı Intune Şirket Portalı aracılığıyla son kullanıcılar i
 
 - **Android**
   - Yönergeler için bkz. [Microsoft Intune'a Android mağazası uygulamaları ekleme](../apps/store-apps-android.md). **Uygulama bilgilerini Yapılandır** bölümünü tamamlarken bu [zlaium-Play Store URL 'sini](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) kullanın.
-- **Android**
+- **iOS**
   - Yönergeler için bkz. [Microsoft Intune'a iOS mağazası uygulamaları ekleme](../apps/store-apps-ios.md). **Uygulama bilgilerini Yapılandır** bölümünü tamamlarken bu [zlaium-App Store URL 'sini](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) kullanın.
 
 <!-- ### Making Pradeo available to end users

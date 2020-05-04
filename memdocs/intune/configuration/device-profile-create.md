@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327445"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Microsoft Intune’da cihaz profili oluşturma
@@ -37,19 +37,19 @@ Bu makalede:
 
 ## <a name="create-the-profile"></a>Profili oluşturma
 
-Profiller, [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oluşturulur. Bu yönetim merkezinde **cihazlar**' ı seçin. Şu seçenekleriniz vardır:
+Profiller, [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oluşturulur. Bu yönetim merkezinde **cihazlar**' ı seçin. Aşağıdaki seçenekleriniz vardır:
 
 - **Genel bakış**: profillerinizin durumunu listeler ve kullanıcılara ve cihazlara atadığınız profiller hakkında ek ayrıntılar sağlar.
 - **İzleyici**: başarılı veya başarısız için profillerinizin durumunu denetleyin ve ayrıca profilinizde günlükleri görüntüleyin.
 - **Platforma göre**: platformunuz için ilkeler ve Profiller oluşturun ve görüntüleyin. Bu görünüm, platforma özgü özellikleri de gösterebilir. Örneğin, **Windows**' u seçin. **Windows 10 güncelleştirme halkaları** ve **PowerShell betikleri**gibi Windows 'a özgü özellikler görürsünüz.
 - **İlke**: cihaz profilleri oluşturun, cihazlarda çalıştırmak Için özel [PowerShell betikleri](../apps/intune-management-extension.md) yükleyin ve [esım](esim-device-configuration.md)kullanarak cihazlara veri planları ekleyin.
 
-Bir profil oluşturduğunuzda ( **profil oluşturma** > **yapılandırma profilleri** ), platformunuzu seçin:
+Bir profil oluşturduğunuzda (**yapılandırma profilleri** > **Profil oluştur**), platformunuzu seçin:
 
-- **Android Cihaz Yöneticisi**
+- **Android cihaz yöneticisi**
 - **Android Kurumsal**
-- **iOS/ıpados**
-- **macOS**
+- **iOS/iPadOS**
+- **Mac OS**
 - **Windows 10 ve üzeri**
 - **Windows 8.1 ve üzeri**
 - **Windows Phone 8.1**
@@ -75,7 +75,7 @@ Ardından profil türünü seçin. Seçtiğiniz platforma bağlı olarak, yapıl
 - [Mobility uzantıları (MX) profili (Android Cihaz Yöneticisi)](android-zebra-mx-overview.md)
 - [OEMConfig (Android kurumsal)](android-oem-configuration-overview.md)
 - [PKCS sertifikası](../protect/certficates-pfx-configure.md)
-- [PKCS içeri aktarılan sertifika](../protect/certificates-imported-pfx-configure.md)
+- [PKCS içeri aktarılmış sertifikası](../protect/certificates-imported-pfx-configure.md)
 - [Tercih dosyası (macOS)](preference-file-settings-macos.md)
 - [SCEP sertifikası](../protect/certificates-scep-configure.md)
 - [Güvenli değerlendirme (eğitim) (Windows)](education-settings-configure.md)
@@ -88,7 +88,7 @@ Ardından profil türünü seçin. Seçtiğiniz platforma bağlı olarak, yapıl
 Örneğin, platform için **iOS/ıpados** ' ı seçerseniz, profil türü seçenekleriniz aşağıdaki profile benzer şekilde görünür:
 
 > [!div class="mx-imgBorder"]
-> Intune 'da iOS/ıpados profili oluşturma ![](./media/device-profile-create/create-device-profile.png)
+> ![Intune 'da iOS/ıpados profili oluşturma](./media/device-profile-create/create-device-profile.png)
 
 ## <a name="scope-tags"></a>Kapsam etiketleri
 
@@ -98,7 +98,7 @@ Kapsam etiketleri ve yapabilecekleriniz hakkında daha fazla bilgi için bkz. [D
 
 ## <a name="applicability-rules"></a>Uygulanabilirlik kuralları
 
-Uygulama alanı:
+Şunlara uygulanır:
 
 - Windows 10 ve üzeri
 
@@ -111,7 +111,7 @@ Bu görevi yapmak için bir **uygulanabilirlik kuralı**oluşturun. Bu kurallar 
 
 Bu senaryolara yaklaşımak için şunları yapın:
 
-- Bellows üniversite 'deki tüm cihazları içeren bir cihaz grubu oluşturun. Profilde, işletim sistemi en düşük sürümü `16299` ve en yüksek sürüm `17134`, bu nedenle uygulanacak bir uygulanabilirlik kuralı ekleyin. Bu profili Bellows okul cihazları grubuna atayın.
+- Bellows üniversite 'deki tüm cihazları içeren bir cihaz grubu oluşturun. Profilde, en düşük işletim sistemi sürümü `16299` ve en yüksek sürüm ise uygulanacak bir uygulanabilirlik kuralı ekleyin. `17134` Bu profili Bellows okul cihazları grubuna atayın.
 
   Atandığında profil, girdiğiniz en düşük ve en yüksek sürüm arasındaki cihazlara uygulanır. Girdiğiniz en düşük ve en yüksek sürümler arasında olmayan cihazlarda, durumları **geçerli değil**olarak gösterilir.
 
@@ -132,7 +132,7 @@ Profili gruplara atadığınızda, uygulanabilirlik kuralları bir filtre işlev
 1. **Uygulanabilirlik kuralları**' nı seçin. **Kural**, **özellik**ve **işletim sistemi sürümünü**seçebilirsiniz:
 
     > [!div class="mx-imgBorder"]
-    > Microsoft Intune](./media/device-profile-create/applicability-rules.png) cihaz yapılandırma profiline uygulanabilirlik kuralı ekleme ![
+    > ![Microsoft Intune cihaz yapılandırma profiline uygulanabilirlik kuralı ekleme](./media/device-profile-create/applicability-rules.png)
 
 2. **Kuralda**, kullanıcıları veya grupları dahil etmek veya dışlamak istediğinizi seçin. Seçenekleriniz şunlardır:
 
@@ -144,7 +144,7 @@ Profili gruplara atadığınızda, uygulanabilirlik kuralları bir filtre işlev
     - **Işletim sistemi sürümü**: listede, kuralınıza dahil etmek istediğiniz Windows 10 sürümlerini (veya hariç tutmak) denetleyin.
     - **Işletim sistemi sürümü**: kuralınıza dahil etmek (veya dışlamak) istediğiniz **En düşük** ve **en yüksek** Windows 10 sürüm numaralarını girin. Her iki değer de gereklidir.
 
-      Örneğin, en yüksek sürüm için en düşük sürüm ve `10.0.17134.0` (RS4 veya 1803) için `10.0.16299.0` (RS3 veya 1709) girebilirsiniz. Ya da daha ayrıntılı olabilir ve en yüksek sürüm için en düşük sürüm ve `10.0.17134.319` `10.0.16299.001` girebilirsiniz.
+      Örneğin, en yüksek sürüm için `10.0.16299.0` en düşük sürüm ve `10.0.17134.0` (RS4 veya 1803) için (RS3 veya 1709) girebilirsiniz. Ya da, en düşük sürüm ve `10.0.16299.001` `10.0.17134.319` en yüksek sürüm için daha ayrıntılı bir şekilde girebilirsiniz.
 
 4. Değişikliklerinizi kaydetmek için **Ekle** ' yi seçin.
 
@@ -163,10 +163,10 @@ Profiller oluştururken aşağıdaki önerileri göz önünde bulundurun:
   Bazı yapılandırma profili örnekleri şunları içerir:
 
   **Profil adı**: yönetici şablonu-tüm Windows 10 kullanıcıları için OneDrive yapılandırma profili  
-  **Profil açıklaması**: tüm Windows 10 kullanıcıları için en düşük ve temel ayarları içeren OneDrive yönetici şablonu profili. Kullanıcıların kurumsal verileri kişisel OneDrive hesaplarına paylaşmasını engellemek için user@contoso.com tarafından oluşturulur.
+  **Profil açıklaması**: tüm Windows 10 kullanıcıları için en düşük ve temel ayarları içeren OneDrive yönetici şablonu profili. Kullanıcıların kurumsal user@contoso.com verileri kişisel OneDrive hesaplarına paylaşmasını engellemek için tarafından oluşturulur.
 
   **Profil adı**: Tüm IOS/ıpados kullanıcıları için VPN profili  
-  **Profil açıklaması**: contoso VPN 'ye bağlanacak tüm IOS/ıpados kullanıcıları için en düşük ve temel ayarları içeren VPN profili. Kullanıcıların Kullanıcı adı ve parola istemek yerine VPN 'de otomatik olarak kimlik doğrulaması yaptığı için user@contoso.com tarafından oluşturulur.
+  **Profil açıklaması**: contoso VPN 'ye bağlanacak tüm IOS/ıpados kullanıcıları için en düşük ve temel ayarları içeren VPN profili. Tarafından user@contoso.com oluşturulan kullanıcılar Kullanıcı adı ve parola Istemek yerine VPN 'de otomatik olarak kimlik doğrular.
 
 - Microsoft Edge ayarlarını yapılandırma, Microsoft Defender Anti-Virus ayarlarını etkinleştirme, iOS/ıpados jailbreak uygulanmış cihazlarını engelleme vb. gibi görevine göre profilinizi oluşturun.
 
@@ -179,7 +179,7 @@ Profiller oluştururken aşağıdaki önerileri göz önünde bulundurun:
   Aşağıdaki görüntüde kullanıcılara uygulanabilecek ve/veya cihazlara uygulanabilecek bir ayarın örneği gösterilmektedir:
 
   > [!div class="mx-imgBorder"]
-  > Kullanıcı ve cihazlara uygulanan ![Intune yönetici şablonu](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  > ![Kullanıcı ve cihazlar için geçerli olan Intune yönetici şablonu](./media/device-profile-create/setting-applies-to-user-and-device.png)
 
 - Her kısıtlayıcı ilke oluşturduğunuzda, bu değişikliği kullanıcılarınıza iletişim kurun. Örneğin, geçiş kodu gereksinimini 4 karakterden 6 karaktere değiştiriyorsanız, ilke atamadan önce kullanıcılarınızın bunu bilmesini sağlayın.
 

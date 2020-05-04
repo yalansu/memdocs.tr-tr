@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5b7e77933134dae3523edaf45f8b345aca4fc162
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79326638"
 ---
 # <a name="windows-holographic-for-business-settings-to-manage-shared-devices-using-intune"></a>Intune kullanarak paylaşılan cihazları yönetmek için Windows holographic for Business ayarları
@@ -45,8 +45,8 @@ Intune 'da bu özellik hakkında daha fazla bilgi için bkz. [PAYLAŞıLAN bilgi
 
 - **Hesap yönetimi**: konuklar tarafından oluşturulan yerel hesapları ve ad ve Azure AD hesaplarını otomatik olarak silmek için **etkinleştirin** . Kullanıcı cihazda oturumu kapattığında veya sistem bakımı çalıştırıldığında, bu hesaplar silinir. Etkinleştirildiğinde, aşağıdakileri de ayarlayın:
   - **Hesap silme**: hesapların ne zaman silineceğini seçin: **depolama alanı eşiğine**, **depolama alanı eşiğine ve etkin olmayan eşiğe**veya **oturum kapatıldıktan hemen sonra**. Ayrıca şunu girin:
-    - **Delete eşiğini Başlat (%)** : disk alanı yüzdesi (0-100) girin. Toplam disk/depolama alanı girdiğiniz değerin altına düştüğünde, önbelleğe alınmış hesaplar silinir. Disk alanı kazanmak için hesapları sürekli olarak siler. En uzun devre dışı olan hesaplar önce silinir.
-    - **Silme eşiğini Durdur (%)** : disk alanı yüzdesi (0-100) girin. Toplam disk/depolama alanı girdiğiniz değeri karşılıyorsa, silme işlemini sonlandırır.
+    - **Delete eşiğini Başlat (%)**: disk alanı yüzdesi (0-100) girin. Toplam disk/depolama alanı girdiğiniz değerin altına düştüğünde, önbelleğe alınmış hesaplar silinir. Disk alanı kazanmak için hesapları sürekli olarak siler. En uzun devre dışı olan hesaplar önce silinir.
+    - **Silme eşiğini Durdur (%)**: disk alanı yüzdesi (0-100) girin. Toplam disk/depolama alanı girdiğiniz değeri karşılıyorsa, silme işlemini sonlandırır.
 
   Konuklar tarafından oluşturulan yerel, AD ve Azure AD hesaplarını tutmak için **devre dışı** olarak ayarlayın.
 

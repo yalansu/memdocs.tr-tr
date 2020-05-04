@@ -16,10 +16,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d491fba013df10b6576f49b1e00ab9a1ea18f482
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324978"
 ---
 # <a name="reduce-help-desk-costs-with-self-service-password-reset"></a>Self servis parola sıfırlama ile yardım masası maliyetlerini azaltma
@@ -41,7 +41,7 @@ ms.locfileid: "79324978"
 
 Aşağıdaki makalelerde daha fazla bilgi edinin:
 
-* [En iyi parola uygulamaları](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwords) 
+* [Parolalarla ilgili en iyi yöntemler](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwords) 
 * [Self servis parola sıfırlama lisansı](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwords)
 
 Bunu veya diğer EMS ya da Office 365 senaryolarını etkinleştirmek için yardıma mı ihtiyacınız var? Microsoft 365, Enterprise Mobility + Security veya Azure Active Directory Premium için en az 150 lisansınız varsa, [FastTrack avantajlarınızdan](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program) yararlanın.

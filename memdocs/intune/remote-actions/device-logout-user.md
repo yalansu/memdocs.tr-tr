@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a731769a7fa3118170119ae935478eb7dd67e06b
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326553"
 ---
 # <a name="logout-the-current-user-on-intune-managed-iosipados-devices"></a>Intune tarafından yönetilen iOS/ıpados cihazlarında geçerli kullanıcının oturumunu kapatma
@@ -41,8 +41,8 @@ ms.locfileid: "80326553"
 
 ## <a name="how-to-log-out-the-current-user"></a>Geçerli kullanıcının oturumunu kapatma
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve **tüm cihazlar** > **cihazlar** ' ı seçin.
-2. **Geçerli kullanıcının oturumunu kapat**> **.** .. > iOS/ıpados cihazı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve **cihazlar** > **tüm cihazlar**' ı seçin.
+2. İOS/ıpados cihazı seçin > **...**  >  **Geçerli kullanıcının oturumunu kapat**.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

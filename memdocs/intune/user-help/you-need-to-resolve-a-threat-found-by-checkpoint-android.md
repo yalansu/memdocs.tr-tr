@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: bad48ac27aac60e91076ae1fef737f597154f3fc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324026"
 ---
 # <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>SandBlast Mobile Protect tarafından bulunan bir tehdidi çözme
@@ -30,7 +30,7 @@ SandBlast Mobile Protect, Android cihazlarınızda olası tehditleri belirleyen 
 
 * Şirket e-postasına bağlanma
 * Şirket Wi-Fi ağına bağlanma
-* SharePoint Online’a bağlanma
+* SharePoint Online'a bağlanma
 * OneDrive ile şirket dosyalarını eşitleme
 * Şirket uygulamalarına erişme
 

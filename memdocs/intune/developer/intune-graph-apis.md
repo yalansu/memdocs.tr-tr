@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b6306f89f1e8ed2aefadd2691df4b3b21e2edafe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327194"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Microsoft Graph’ta Intune API’lerine erişmek için Azure AD kullanma
@@ -51,7 +51,7 @@ Bu makalede:
 
 - Birden çok kiracının nasıl destekleneceği açıklanır.
 
-Daha fazla bilgi için bkz.:
+Daha fazla bilgi için bkz:
 
 - [OAuth 2.0 ve Azure Active Directory kullanarak web uygulamalarına erişim yetkisi verme](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code)
 - [Azure AD kimlik doğrulamasına başlarken](https://www.visualstudio.com/docs/integrate/get-started/auth/oauth)
@@ -68,7 +68,7 @@ Uygulamaları Microsoft Graph API kullanmak üzere kaydetmek için:
     - Kiracı yönetici hesabı.
     - **Kullanıcılar uygulamaları kaydedebilir** ayarı etkin şekilde bir kiracı kullanıcı hesabı.
 
-2. Menüden **Azure Active Directory** &gt; **uygulama kayıtları**' nı seçin.
+2. Menüden **Azure Active Directory** &gt; **Uygulama Kayıtları**’nı seçin.
 
     <img src="../media/azure-ad-app-reg.png" width="157" height="170" alt="The App registrations menu command" />
 
@@ -90,15 +90,15 @@ Uygulamaları Microsoft Graph API kullanmak üzere kaydetmek için:
 
     1. **Uygulama Kimliği** değerini not edin.
 
-    2. Ayarlar &gt; **API erişimi** **gerekli izinler**&gt; **ayarları** ' nı seçin.
+    2. **Ayarlar** &gt; **API erişimi** &gt; **Gerekli izinler**’i seçin.
 
     <img src="../media/azure-ad-req-perm.png" width="483" height="186" alt="The Required permissions setting" />
 
-6. **Gerekli izinler** dikey penceresinde **Ekle** &gt; **API erişimi ekle** ' yi seçin &gt; **bir API seçin**.
+6. **Gerekli İzinler** dikey penceresinden, **Ekle** &gt; **API erişimi ekle** &gt; **Bir API seçin**’i belirleyin.
 
     <img src="../media/azure-ad-add-graph.png" width="436" height="140" alt="The Microsoft Graph setting" />
 
-7. **BIR API seçin** dikey penceresinde **Microsoft Graph** &gt; **Seç**' i seçin.  **Erişimi etkinleştir** dikey penceresi açılır ve uygulamanızda kullanılabilen izin kapsamları listelenir.
+7. **Bir API seçin** dikey penceresinden, **Microsoft Graph** &gt; **Seçin** öğelerini belirleyin.  **Erişimi etkinleştir** dikey penceresi açılır ve uygulamanızda kullanılabilen izin kapsamları listelenir.
 
     <img src="../media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
@@ -144,23 +144,23 @@ Microsoft Graph’a izin verdiğinizde, Intune özelliklerine erişimi denetleme
 
 _Erişimi Etkinleştir_ ayarı | Kapsam adı
 :--|:--
-__Microsoft Intune cihazlarında kullanıcıları etkileyen uzak eylemler gerçekleştirme__ | [DeviceManagementManagedDevices.PrivilegedOperations.All](#mgd-po)
-__Microsoft Intune cihazlarını okuma ve yazma__ | [DeviceManagementManagedDevices.ReadWrite.All](#mgd-rw)
+__Microsoft Intune cihazlarında kullanıcıları etkileyen uzak eylemler gerçekleştirme__ | [DeviceManagementManagedDevices. PrivilegedOperations. All](#mgd-po)
+__Microsoft Intune cihazlarını okuma ve yazma__ | [DeviceManagementManagedDevices. ReadWrite. All](#mgd-rw)
 __Microsoft Intune cihazlarını okuma__ | [DeviceManagementManagedDevices.Read.All](#mgd-ro)
 __Microsoft Intune RBAC ayarlarını okuma ve yazma__ | [DeviceManagementRBAC.ReadWrite.All](#rac-rw)
-__Microsoft Intune RBAC ayarlarını okuma__ | Devicemanagementrtza. Read. All
+__Microsoft Intune RBAC ayarlarını okuma__ | DeviceManagementRBAC.Read.All
 __Microsoft Intune uygulamalarını okuma ve yazma__ | [DeviceManagementApps.ReadWrite.All](#app-rw)
 __Microsoft Intune uygulamalarını okuma__ | [DeviceManagementApps.Read.All](#app-ro)
-__Microsoft Intune Cihaz Yapılandırması ve İlkelerini okuma ve yazma__ | DeviceManagementConfiguration. ReadWrite. All
-__Microsoft Intune Cihaz Yapılandırması ve İlkelerini okuma__ | [DeviceManagementConfiguration.Read.All](#cfg-ro)
+__Microsoft Intune Cihaz Yapılandırması ve İlkelerini okuma ve yazma__ | DeviceManagementConfiguration.ReadWrite.All
+__Microsoft Intune Cihaz Yapılandırması ve İlkelerini okuma__ | [DeviceManagementConfiguration. Read. All](#cfg-ro)
 __Microsoft Intune yapılandırmasını okuma ve yazma__ | [DeviceManagementServiceConfig.ReadWrite.All](#svc-rw)
-__Microsoft Intune yapılandırmasını okuma__ | DeviceManagementServiceConfig. Read. All
+__Microsoft Intune yapılandırmasını okuma__ | DeviceManagementServiceConfig.Read.All
 
 Tablo, ayarları Azure portalında göründükleri sırayla listeler. Aşağıdaki bölümlerde kapsamlar alfabetik sırayla açıklanır.
 
 Şu anda tüm Intune izin kapsamları yönetici erişimi gerektirir.  Başka bir deyişle, Intune API’si kaynaklarına erişen uygulamaları veya betikleri çalıştırırken ilgili kimlik bilgilerine sahip olmanız gerekir.
 
-### <a name="app-ro"></a>DeviceManagementApps.Read.All
+### <a name="devicemanagementappsreadall"></a><a name="app-ro"></a>DeviceManagementApps.Read.All
 
 - **Erişimi Etkinleştir** ayarı: __Microsoft Intune uygulamalarını okuma__
 
@@ -170,7 +170,7 @@ Tablo, ayarları Azure portalında göründükleri sırayla listeler. Aşağıda
   - Uygulama Koruma İlkeleri
   - Uygulama Yapılandırmaları
 
-### <a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
+### <a name="devicemanagementappsreadwriteall"></a><a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
 
 - **Erişimi Etkinleştir** ayarı: __Microsoft Intune uygulamalarını okuma ve yazma__
 
@@ -183,7 +183,7 @@ Tablo, ayarları Azure portalında göründükleri sırayla listeler. Aşağıda
   - Uygulama Koruma İlkeleri
   - Uygulama Yapılandırmaları
 
-### <a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
+### <a name="devicemanagementconfigurationreadall"></a><a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
 
 - **Erişimi Etkinleştir** ayarı: __Microsoft Intune cihaz yapılandırması ve ilkelerini okuma__
 
@@ -192,7 +192,7 @@ Tablo, ayarları Azure portalında göründükleri sırayla listeler. Aşağıda
   - Cihaz Uyumluluğu İlkesi
   - Bildirim İletileri
 
-### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
+### <a name="devicemanagementconfigurationreadwriteall"></a><a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
 
 - **Erişimi Etkinleştir** ayarı: __Microsoft Intune cihaz yapılandırması ve ilkelerini okuma ve yazma__
 
@@ -203,21 +203,21 @@ Tablo, ayarları Azure portalında göründükleri sırayla listeler. Aşağıda
   - Cihaz Uyumluluğu İlkesi
   - Bildirim İletileri
 
-### <a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
+### <a name="devicemanagementmanageddevicesprivilegedoperationsall"></a><a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
 
 - **Erişimi Etkinleştir** ayarı: __Microsoft Intune cihazlarda kullanıcıları etkileyen uzak eylemler gerçekleştirme__
 
 - Aşağıdaki uzak eylemlere yönetilen bir cihazda izin verir:
-  - Devre Dışı Bırak
+  - Devre Dışı Bırakma
   - Silme
   - Geçiş Kodu Sıfırlama/Kurtarma
   - Uzaktan Kilitleme
   - Kayıp Modunu Etkinleştirme/Devre Dışı Bırakma
   - Bilgisayarı Temizleme
-  - Yeniden başlat
+  - Yeniden başlatma
   - Paylaşılan Cihazdan Kullanıcı Silme
 
-### <a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
+### <a name="devicemanagementmanageddevicesreadall"></a><a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
 
 - **Erişimi Etkinleştir** ayarı: __Microsoft Intune cihazlarını okuma__
 
@@ -228,7 +228,7 @@ Tablo, ayarları Azure portalında göründükleri sırayla listeler. Aşağıda
   - Uzak eylemler
   - Kötü amaçlı yazılım bilgileri
 
-### <a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
+### <a name="devicemanagementmanageddevicesreadwriteall"></a><a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
 
 - **Erişimi Etkinleştir** ayarı: __Microsoft Intune cihazlarını okuma ve yazma__
 
@@ -243,7 +243,7 @@ Tablo, ayarları Azure portalında göründükleri sırayla listeler. Aşağıda
   - Etkinleştirme Kilidini Devre Dışı Bırakma
   - Uzaktan yardım isteme
 
-### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All
+### <a name="devicemanagementrbacreadall"></a><a name="rac-ro"></a>DeviceManagementRBAC.Read.All
 
 - **Erişimi Etkinleştir** ayarı: __Microsoft Intune RBAC ayarlarını okuma__
 
@@ -252,7 +252,7 @@ Tablo, ayarları Azure portalında göründükleri sırayla listeler. Aşağıda
   - Rol Tanımları
   - Kaynak İşlemleri
 
-### <a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
+### <a name="devicemanagementrbacreadwriteall"></a><a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
 
 - **Erişimi Etkinleştir** ayarı: __Microsoft Intune RBAC ayarlarını okuma ve yazma__
 
@@ -262,12 +262,12 @@ Tablo, ayarları Azure portalında göründükleri sırayla listeler. Aşağıda
   - Rol Atamaları
   - Rol Tanımları
 
-### <a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
+### <a name="devicemanagementserviceconfigreadall"></a><a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
 
 - **Erişimi Etkinleştir** ayarı: __Microsoft Intune yapılandırmasını okuma__
 
 - Aşağıdaki varlık özelliklerine ve durumuna okuma erişimi verir:
-  - Aygıt Kaydetme
+  - Cihaz Kaydetme
   - Apple Anında İletilen Bildirim Servisi Sertifikası
   - Apple Cihaz Kaydı Programı
   - Apple Volume Purchase Program
@@ -278,14 +278,14 @@ Tablo, ayarları Azure portalında göründükleri sırayla listeler. Aşağıda
   - Markalama
   - Mobile Threat Defense
 
-### <a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
+### <a name="devicemanagementserviceconfigreadwriteall"></a><a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
 
 - **Erişimi Etkinleştir** ayarı: __Microsoft Intune yapılandırmasını okuma ve yazma__
 
 - DeviceManagementServiceConfig.Read.All_ ile aynı işlemlere izin verir
 
 - Uygulamalar, aşağıdaki Intune özelliklerini de yapılandırabilir:
-  - Aygıt Kaydetme
+  - Cihaz Kaydetme
   - Apple Anında İletilen Bildirim Servisi Sertifikası
   - Apple Cihaz Kaydı Programı
   - Apple Volume Purchase Program
@@ -344,7 +344,7 @@ Bu örnek, Intune hesabınızla ilişkili cihazların bir listesini almak için 
 3. Microsoft ADAL NuGet paketini projeye eklemek için Çözüm Gezgini’ni kullanın.
 
     1. Çözüm Gezgini’ne sağ tıklayın.
-    2. **NuGet Paketlerini Yönet...** ’i seçin &gt; **inceleyin**.
+    2. **NuGet Paketlerini Yönet...**’i seçin &gt;**İnceleyin**.
     3. `Microsoft.IdentityModel.Clients.ActiveDirectory` seçeneğini belirleyin ve **Yükle**’yi seçin.
 
     <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
@@ -372,7 +372,7 @@ Bu örnek, Intune hesabınızla ilişkili cihazların bir listesini almak için 
         return result.CreateAuthorizationHeader();
     ```
 
-    Daha önce açıklandığı gibi, en az `application_ID` izin kapsamı iznine sahip olan biriyle eşleştirmek üzere `DeviceManagementManagedDevices.Read.All` değerini değiştirmeyi unutmayın.
+    Daha önce açıklandığı gibi, en az `DeviceManagementManagedDevices.Read.All` izin kapsamı iznine sahip olan biriyle eşleştirmek üzere `application_ID` değerini değiştirmeyi unutmayın.
 
 6. Cihaz listesini almak için bir yöntem ekleyin:
 
@@ -602,7 +602,7 @@ Ayrıca:
     string authority = "https://login.microsoftonline.com/common/";
     ```
 
-    kime
+    -
 
     ``` csharp
     string authority = "https://login.microsoftonline.com/northwind.onmicrosoft.com/";

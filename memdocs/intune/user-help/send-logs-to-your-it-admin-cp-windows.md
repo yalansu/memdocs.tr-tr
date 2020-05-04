@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: b0df9499d79ff7773266326d5b0e1347413f88dd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327890"
 ---
 # <a name="email-your-company-support-about-problem-from-company-portal-for-windows"></a>Windows için Şirket Portalı sorun hakkında şirketinizin destek 'e e-posta gönderin
@@ -45,8 +45,8 @@ Yardım istediğinizde, bir önceden doldurulmuş e-posta açılarak sorunu ayr�
 
 ## <a name="steps-to-get-help"></a>Yardım almak için gereken adımlar  
 
-1. **Şirket Portalı** uygulamasını açın.
-2. Yardım **& destek** > Yardım **alın**' ı seçin.  
+1. **Şirket portalı** uygulamasını açın.
+2. Yardım almak **& destek** > **alın**' ı seçin.  
 
    ![Yardım & destek sayfasının ekran görüntüsü, sol gezinti çubuğunu vurgulama ve yardım alma bölümü.](./media/1812_UCP_Help_Support_Get_Help_Logs.png)    
 

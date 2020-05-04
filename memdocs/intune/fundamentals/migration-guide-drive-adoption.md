@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: da332528854af2b53879d30d6de90c927b49a889
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331210"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Microsoft Intune koşullu erişimle Son Kullanıcı benimsemesini sürücü olarak
@@ -38,7 +38,7 @@ Bir geçiş kampanyasını koşullu erişimle geliştirmeyle ilgili tipik bir ya
 
 3. Geçiş tamamlandıktan sonra, Intune erişime izin verilmediği takdirde tüm koşullu erişim ilkelerini varsayılan olarak engellenecek şekilde yapılandırın.
 
-### <a name="advantages"></a>Avantajlar
+### <a name="advantages"></a>Yararları
 
 - Yeni kullanıcı hesapları veya önceki çözüm tarafından yönetilmeyen kullanıcı hesabı için erişim denetimi sağlar.
 
@@ -61,9 +61,9 @@ Bu birçok yaklaşımdan biridir. Her aşama kaydolduktan sonra tüm koşullu er
 
 [Koşullu erişim kullanmanın yaygın yolları](../protect/conditional-access-intune-common-ways-use.md).
 
-### <a name="task-2-set-up-intune-conditional-access"></a>2\. görev: Intune koşullu erişimini ayarlama
+### <a name="task-2-set-up-intune-conditional-access"></a>2. görev: Intune koşullu erişimini ayarlama
 
-Aşağıdaki seçeneklerden birini seçin:
+Aşağıdaki seçeneklerden birini belirleyin:
 
 - [Azure Active Directory Koşullu erişimi yapılandırma](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
@@ -73,7 +73,7 @@ Aşağıdaki seçeneklerden birini seçin:
 
 - [SharePoint Online için uygulama tabanlı koşullu erişim ilkeleri ayarlama](../protect/app-based-conditional-access-intune-create.md)
 
-- [Modern kimlik doğrulaması (ADAL) kullanmayan uygulamaları engelleme](../protect/app-modern-authentication-block.md)
+- [Modern kimlik doğrulaması kullanılmayan uygulamaları engelleme (ADAL)](../protect/app-modern-authentication-block.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

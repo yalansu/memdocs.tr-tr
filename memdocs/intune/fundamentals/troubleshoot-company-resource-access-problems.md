@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 91a0f717a8ed3d5574b731fe2f20a40c5494a160
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330462"
 ---
 # <a name="common-error-codes-and-descriptions-in-microsoft-intune"></a>Microsoft Intune ortak hata kodları ve açıklamaları
@@ -32,7 +32,7 @@ Destek yardıma ihtiyacınız varsa bkz. [Microsoft Intune için destek alın](g
 
 ## <a name="status-codes-for-mdm-managed-windows-devices"></a>MDM ile yönetilen Windows cihazları için durum kodları
 
-|Durum kodu|Hata iletisi|Yapılması gereken|
+|Durum kodu|Hata iletisi|Ne yapılmalı|
 |---------------|-----------------|--------------|
 |10 (APP_CI_ENFORCEMENT_IN_PROGRESS)|Yükleme devam ediyor||
 |20 (APP_CI_ENFORCEMENT_IN_PROGRESS_WAITING_CONTENT)|İçerik bekleniyor||
@@ -380,7 +380,7 @@ Destek yardıma ihtiyacınız varsa bkz. [Microsoft Intune için destek alın](g
 |-2016345907|0x87D100CD|Kaynak, içeriğini GÜNCELLEŞTİRMELİDİR. Talebi gönderene, güncel sürümü edinmek için içeriğinin eşitlenmesi GEREKTİĞİ bildiriliyor.|
 |-2016345908|0x87D100CC|İstek başarıyla tamamlandı ancak hiçbir veri döndürülmüyor. Yanıt kodu aynı zamanda, hedefte içerik olmadığında bir Get’e yanıt olarak da döndürülür.|
 |-2016345909|0x87D100CB|Yetkili olmayan yanıt. Hedeflenenden farklı bir varlık isteğe yanıt veriyor. Yanıt yalnızca istek yetkili hedeften 200 yanıt kodu ile sonuçlanacaksa döndürülür.|
-|-2016345910|0x87D100CA|İşleme için kabul edildi. Bir uygulamanın uzaktan yürütmesini çalıştırma veya kullanıcı ya da uygulamaya bildirme isteği başarıyla gerçekleştirildi.|
+|-2016345910|0x87D100CA| İşleme için kabul edildi. Bir uygulamanın uzaktan yürütmesini çalıştırma veya kullanıcı ya da uygulamaya bildirme isteği başarıyla gerçekleştirildi.|
 |-2016345911|0x87D100C9|İstenen öğe eklendi.|
 |-2016345912|0x87D100C8|SyncML komutu başarıyla tamamlandı.|
 |-2016346011|0x87D10065|Belirtilen SyncML komutu yürütülüyor, ancak henüz tamamlanmadı.|

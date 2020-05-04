@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e50d518c3709d71085a57ad9a430444564c24cb9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331010"
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>Intune dağıtımınızı planlamak için ek kaynaklar
@@ -36,7 +36,7 @@ Her bölüm için tablo şablonları listesi aşağıdadır.
 |-----|----- |------|
 | Dağıtım hedefleri |Mevcut ortam|İşlevsel doğrulama sınaması|
 | Dağıtım amaçları |Cihazlar|BT yöneticisi senaryosu doğrulama sınaması|
-| Dağıtım zorlukları |Hüküm ve koşullar|Son kullanıcı senaryosu doğrulama sınaması|
+| Dağıtım zorlukları |Hüküm ve Koşullar|Son kullanıcı senaryosu doğrulama sınaması|
 | Kullanım örneği senaryoları |Yapılandırma ilkesi| |
 | Kullanım örneği senaryosu gereksinimleri |Sertifika profili| |
 | Piyasaya çıkma planı |Wi-Fi profili| |
@@ -44,9 +44,9 @@ Her bölüm için tablo şablonları listesi aşağıdadır.
 | |  E-posta Profili | |
 | | Uygulamalar | |
 | | Uyumluluk ilkesi | |
-| | Koşullu erişim ilkesi|-|
+| | Koşullu Erişim ilkesi|-|
 
-## <a name="further-reading"></a>Daha fazla bilgi için
+## <a name="further-reading"></a>Daha fazla bilgi
 
 Intune dağıtım planlama, tasarım ve uygulama süreci sırasında yardımcı olabilecek ek bilgiler için bu kaynaklara göz atın.
 

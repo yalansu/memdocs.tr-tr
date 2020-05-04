@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 569a80d21efd82b6008c7aa7a613c089a10c6ff3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331114"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Intune ağ yapılandırma gereksinimleri ve bant genişliği
@@ -38,12 +38,12 @@ Bu tabloda her istemci için ağ üzerinden geçen ortak içeriğin yaklaşık b
 
 |İçerik türü|Yaklaşık boyut|Sıklık ve ayrıntılar|
 |----------------|--------------------|-------------------------|
-|Intune istemci yüklemesi<br /><br />**Aşağıdaki gereksinimler Intune istemci yüklemesine ek niteliğindedir**|125 MB|**Bir kez**<br /><br />İstemcinin boyutu, istemci bilgisayarın işletim sistemine bağlı olarak değişir.|
-|İstemci kayıt paketi|15 MB|**Bir kez**<br /><br />Bu içerik türü için güncelleştirmeler olduğunda ek indirmeler yapılabilir.|
-|Endpoint Protection aracısı|65 MB|**Bir kez**<br /><br />Bu içerik türü için güncelleştirmeler olduğunda ek indirmeler yapılabilir.|
-|Operations Manager aracısı|11 MB|**Bir kez**<br /><br />Bu içerik türü için güncelleştirmeler olduğunda ek indirmeler yapılabilir.|
-|İlke aracısı|3 MB|**Bir kez**<br /><br />Bu içerik türü için güncelleştirmeler olduğunda ek indirmeler yapılabilir.|
-|Microsoft Easy Assist aracısı üzerinden Uzak Yardım|6 MB|**Bir kez**<br /><br />Bu içerik türü için güncelleştirmeler olduğunda ek indirmeler yapılabilir.|
+|Intune istemci yüklemesi<br /><br />**Aşağıdaki gereksinimler Intune istemci yüklemesine ek niteliğindedir**|125 MB|**Tek seferlik**<br /><br />İstemcinin boyutu, istemci bilgisayarın işletim sistemine bağlı olarak değişir.|
+|İstemci kayıt paketi|15 MB|**Tek seferlik**<br /><br />Bu içerik türü için güncelleştirmeler olduğunda ek indirmeler yapılabilir.|
+|Endpoint Protection aracısı|65 MB|**Tek seferlik**<br /><br />Bu içerik türü için güncelleştirmeler olduğunda ek indirmeler yapılabilir.|
+|Operations Manager aracısı|11 MB|**Tek seferlik**<br /><br />Bu içerik türü için güncelleştirmeler olduğunda ek indirmeler yapılabilir.|
+|İlke aracısı|3 MB|**Tek seferlik**<br /><br />Bu içerik türü için güncelleştirmeler olduğunda ek indirmeler yapılabilir.|
+|Microsoft Easy Assist aracısı üzerinden Uzak Yardım|6 MB|**Tek seferlik**<br /><br />Bu içerik türü için güncelleştirmeler olduğunda ek indirmeler yapılabilir.|
 |Günlük istemci işlemleri|6 MB|**Günlük**<br /><br />Intune istemcisi güncelleştirmeleri ve ilkeleri denetlemek ve istemcinin durumunu hizmete bildirmek için Intune hizmetiyle düzenli olarak iletişim kurar.|
 |Endpoint Protection kötü amaçlı yazılım tanımı güncelleştirmeleri|Değişir<br /><br />Genellikle 40 KB ile 2 MB arasında|**Günlük**<br /><br />Günde en fazla üç kez.|
 |Endpoint Protection altyapı güncelleştirmesi|5 MB|**Aylık**|
@@ -68,7 +68,7 @@ Intune istemcileri için içerikleri önbelleğe alan bir proxy sunucunun kullan
 |----------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         Önbellek boyutu         |             5 GB ila 30 GB             | Bu değer, ağınızdaki istemci bilgisayarların sayısına ve kullandığınız yapılandırmalara bağlı olarak değişir. Dosyaların çok kısa sürede silinmesini önlemek için ortamınıza yönelik önbellek boyutunu ayarlayın. |
 | Tek önbellek dosyası boyutu |                950 MB                 |                                                                     Bu ayar, tüm önbelleğe alan proxy sunucularında kullanılamayabilir.                                                                     |
-|   Önbelleğe alınacak nesne türleri    | istemcileri iki protokolü de kullandığından, proxy sunucusu hem<br /><br />hem de<br /><br />BITS |                                               Intune paketleri HTTP üzerinden Arka Plan Akıllı Aktarım Hizmeti (BITS) indirmesi tarafından alınan CAB dosyalarıdır.                                               |
+|   Önbelleğe alınacak nesne türleri    | HTTP<br /><br />HTTPS<br /><br />BİT |                                               Intune paketleri HTTP üzerinden Arka Plan Akıllı Aktarım Hizmeti (BITS) indirmesi tarafından alınan CAB dosyalarıdır.                                               |
 > [!NOTE]
 > İçerik isteklerini önbelleğe almak için bir ara sunucu kullanıyorsanız, istemci ile ara sunucu arasındaki ve ara sunucudan Intune'a giden trafik şifrelenir. İstemci ile Intune arasındaki bağlantıda uçtan uca şifreleme uygulanmaz.
 
@@ -104,7 +104,7 @@ BranchCache özelliğini kullanmak için istemci bilgisayarda BranchCache etkin 
 
 Intune istemcisi bilgisayarlara yüklendiğinde BranchCache ve dağıtılmış önbellek modu varsayılan olarak etkindir. Ancak bir Grup İlkesi, BranchCache’i devre dışı bıraktıysa Intune bu ilkeyi geçersiz kılmaz ve BranchCache devre dışı kalmaya devam eder.
 
-BranchCache kullanıyorsanız Grup İlkesini ve Intune Güvenlik Duvarı ilkesini yönetmek için kuruluşunuzdaki diğer yöneticilerle birlikte çalışın. Diğer yöneticilerin, BranchCache veya Güvenlik Duvarı özel durumlarını devre dışı bırakan bir ilke dağıtmadığından emin olun. BranchCache hakkında daha fazla bilgi için bkz. [BranchCache Özelliğine Genel Bakış](https://technet.microsoft.com/library/hh831696.aspx).
+BranchCache kullanıyorsanız Grup İlkesini ve Intune Güvenlik Duvarı ilkesini yönetmek için kuruluşunuzdaki diğer yöneticilerle birlikte çalışın. Diğer yöneticilerin, BranchCache veya Güvenlik Duvarı özel durumlarını devre dışı bırakan bir ilke dağıtmadığından emin olun. BranchCache hakkında daha fazla bilgi için bkz. [BranchCache 'e genel bakış](https://technet.microsoft.com/library/hh831696.aspx).
 
 > [!NOTE]
 > Windows bilgisayarlarını [mobil cihaz yönetimi (MDM) ile mobil cihazlar olarak](../enrollment/windows-enroll.md) veya Intune yazılım istemcisi ile bilgisayar olarak yönetmek için Microsoft Intune kullanabilirsiniz. Microsoft, müşterilerin mümkün olduğunda [MDM yönetim çözümünü kullanmalarını](../enrollment/windows-enroll.md) önerir. Bu şekilde yönetildiğinde BranchCache desteklenmez. Daha fazla bilgi için bkz. [Windows bilgisayarlarını bilgisayar veya mobil cihaz olarak yönetmeyi karşılaştırın](pc-management-comparison.md).

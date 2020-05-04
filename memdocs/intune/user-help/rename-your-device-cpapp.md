@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 88c9b6789f4475a95201e975d3492acecde3927e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324506"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Windows için Şirket Portalı uygulamasında bir cihazı yeniden adlandırma
@@ -55,7 +55,7 @@ Cihazı [bağlam menüsü](https://docs.microsoft.com//windows/uwp/design/contro
 2. Bağlam menüsünü açmak için cihaza sağ tıklayın veya cihazı basılı tutun.  
 
     ![Windows için Şirket Portalı uygulaması Giriş sayfasının örnek ekran görüntüsü. Cihaz bağlam menüsü sayfanın **Cihazlarım** bölümünde görülebilir ve "Yeniden adlandır", "Kaldır" ve "Erişimi denetle" eylemlerini gösterir.](./media/1809_DeviceContextMenu_Windows_CP.png)    
-3. **Yeniden Adlandır**'ı seçin.  
+3. **Yeniden Adlandır**' ı seçin.  
 4. Yeni bir ad yazın ve **Yeniden adlandır**’ı seçin. Uygulamada cihaz adı hemen güncelleştirilir.  
 
      ![Windows için Şirket Portalı uygulaması Giriş sayfasının örnek ekran görüntüsü. Yeniden adlandır açılan alanı, kullanıcının yeni bir ad yazıp Yeniden Adlandır veya İptal'e tıklayabileceği cihazın üst kısmında görünür.](./media/1808_RenameApp_Popup.png)  

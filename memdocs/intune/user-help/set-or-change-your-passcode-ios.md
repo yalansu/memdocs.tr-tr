@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 790aa9e73d990ec3996d4357cbda0e1ddcbf9de9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324358"
 ---
 # <a name="set-or-change-your-passcode"></a>Geçiş kodunuzu ayarlama veya değiştirme
@@ -35,13 +35,13 @@ Geçiş kodunuzu oluştururken veya değiştirirken sorun yaşıyorsanız BT des
 
 ## <a name="set-your-passcode"></a>Geçiş kodunuzu ayarlama
 
-1. **Ayarlar** > **Touch ID ve Geçiş Kodu**’na dokunun.
-2. **Touch ID ve Geçiş Kodu** menüsünde **Geçiş Kodunu Aç**’a dokunun.
+1. **Ayarlar** > **Touch ID & geçiş kodu**' na dokunun.
+2. **Touch ıd & geçiş** kodu menüsünde **geçiş kodunu aç**' a dokunun.
 3. Şirketinizin destek biriminin belirlediği gereksinimlerini karşılayan yeni bir geçiş kodu girin ve ardından doğrulamak için bu geçiş kodunu yeniden girin.
 
 ## <a name="change-your-passcode"></a>Geçiş kodunuzu değiştirme
 
-1. **Ayarlar** > **Touch ID ve Geçiş Kodu**’na dokunun.
+1. **Ayarlar** > **Touch ID & geçiş kodu**' na dokunun.
 2. Geçiş kodunuzu girin. **Touch ID ve Geçiş Kodu** menüsü açılır.
 2. **Parolayı Değiştir**'e dokunun ve eski geçiş kodunuzu girin.
 3. Şirketinizin destek biriminin belirlediği gereksinimlerini karşılayan yeni bir geçiş kodu girin ve ardından doğrulamak için bu geçiş kodunu yeniden girin.

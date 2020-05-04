@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e4e917ca63bb671e8dfa46b280a4130051e75ef0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79326502"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Intune yazılımı istemcisi ile Windows PC’leri bilgisayar olarak yönetme
@@ -73,11 +73,11 @@ Bir Intune yöneticisi olarak, Intune yazılımı istemcisini çeşitli şekille
 
 - **[Yazılım güncelleştirmelerini yönetme](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)** - Bilgisayarları güncel tutup güncelleştirmelerin ne zaman uygulanacağına karar verebilirsiniz.
 
-- **[Windows Güvenlik Duvarı ilkesi](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md)** - Bu özellik şirketinizde kullanılan bilgisayarların devre dışı veya yanlış yapılandırılmış bir Windows Güvenlik Duvarı’na sahip olmamasını sağlamaya yardımcı olur.
+- **[Windows güvenlik duvarı ilkesi](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md)** -bu, şirketinizde kullanılan hiçbir bilgisayarın devre dışı veya yanlış yapılandırılmış bir Windows Güvenlik Duvarı 'na sahip olmamasını sağlamaya yardımcı olur.
 
 - **[Kötü amaçlı yazılımdan koruma](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)** - Intune, bilgisayarlarınızın kötü amaçlı yazılımlara karşı korunmasına yardımcı olan Endpoint Protection’ı içerir.
 
-- **[Uzaktan yardım](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)** - Intune kullanıcıların BT destek personeliyle bağlantı kurmasına olanak tanır ve onlar da Intune’la birlikte gelen uzak masaüstü özelliğini kullanarak yardım sağlayabilir (TeamViewer yazılımı gerekir).
+- **[Uzaktan Yardım](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)** -Intune, kullanıcıların BT destek personeli ile iletişim kurabildiğinden, Intune 'da bulunan bir Uzak Masaüstü özelliğini kullanarak yardım sağlayabilir (TeamViewer yazılımı gerektirir).
 
 - **[Yazılım lisansı yönetimi](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)** - Kullanılabilir yazılım lisanslarının sayısını ve bunlardan kaç tanesinin kullanıldığını izleyin.
 - **[Uygulama dağıtımı](add-apps-for-windows-pcs-in-microsoft-intune.md)** - Yönettiğiniz bilgisayarlarda yazılım dağıtımı yapın. Bilgisayarları yazılım istemcisiyle yönettiğinizde bazı uygulama yönetimi özellikleri kullanılamaz.

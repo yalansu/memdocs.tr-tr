@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dc4580c1debec3f8583a68305438443a211f9243
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326190"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Intune cihazının birincil kullanıcısını bulma
@@ -39,7 +39,7 @@ Kullanıcı cihaz benzeşimi olarak da bilinen birincil Kullanıcı, her bir Int
 Bir cihazın birincil kullanıcısı, Azure AD 'ye katılmış veya hibrit Azure AD 'ye katılmış Windows 10 cihazları için güncelleştirilebilecek.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tüm cihazlar** > **cihazları** seçin > bir cihaz > **Özellikler** seçin > **birincil kullanıcıyı değiştirin**.
+2.  > **Tüm** **Cihazlar ' ı seçin >** bir cihaz seçin > **Özellikler** > **birincil kullanıcıyı değiştirin**.
 3. Yeni bir kullanıcı seçin ve **Seç**' i seçin.
 
 Birincil Kullanıcı güncelleştirildikten sonra Intune ve Azure AD cihaz Blade ' de de güncelleştirilir.
@@ -69,7 +69,7 @@ Paylaşılan cihazlardaki Şirket Portalı görünmesi için, kullanılabilir uy
 ## <a name="who-is-assigned-as-the-primary-user"></a>Birincil kullanıcı olarak kim atanır?
 Intune, kayıt sırasında veya hemen sonrasında cihazlara birincil kullanıcı otomatik olarak ekler. Kayıt yöntemi, birincil kullanıcının bir cihaza ne zaman ekleneceğini belirler.
 
-| Platfveyam | Kayıt yöntemi | Birincil Kullanıcı atandı | Birincil Kullanıcı atandı |
+| Platform | Kayıt yöntemi | Birincil Kullanıcı atandı | Birincil Kullanıcı atandı |
 | ---- | ---- | ---- | ---- |
 | Windows | İş veya okul ekleme (Kullanıcı odaklı) | Kullanıcı kaydediliyor | Kayıt sırasında |   
 | Windows | Modern uygulama oturum açma (Kullanıcı tabanlı) | Kullanıcı kaydediliyor | Kayıt sırasında | 
@@ -79,16 +79,16 @@ Intune, kayıt sırasında veya hemen sonrasında cihazlara birincil kullanıcı
 | Windows | Yalnızca MDM 'ye kaydolma | Kullanıcı kaydediliyor | Kayıt sırasında | 
 | Windows | Karma ASıFATı + otomatik kayıt GPO 'SU | Windows 'da oturum açmak için ilk Kullanıcı | İlk Kullanıcı Windows 'da oturum açtığında| 
 | Windows | Ortak yönetim | Windows 'da oturum açmak için ilk Kullanıcı | İlk Kullanıcı Windows 'da oturum açtığında | 
-| Windows | Azure AD birleşimi (toplu kayıt belirteci) | Yok. | Uygulanamaz | 
-| Windows | Azure AD katılımı (Autopilot kendi kendine dağıtım modu) | Yok. | Uygulanamaz | 
+| Windows | Azure AD birleşimi (toplu kayıt belirteci) | Hiçbiri | Uygulanamaz | 
+| Windows | Azure AD katılımı (Autopilot kendi kendine dağıtım modu) | Hiçbiri | Uygulanamaz | 
 | Platformlar arası | Şirket Portalı uygulamayla Kullanıcı odaklı kayıt | Kullanıcı kaydediliyor | Kayıt sırasında |
 | Platformlar arası | Cihaz Kayıt Yöneticisi (DEM) | DEM kullanıcısı kaydediliyor | Kayıt sırasında |
 | iOS/ıpados, macOS | Apple otomatik cihaz kaydı (Kullanıcı benzeşimi ile DEP | Kullanıcı kaydediliyor | Kayıt sırasında |
-| iOS/ıpados, macOS | Apple otomatik cihaz kaydı (Kullanıcı benzeşimi olmadan DEP) | Yok. | Uygulanamaz |
-| Android | Android şirkete ait, adanmış cihazlar | Yok. | Uygulanamaz |
+| iOS/ıpados, macOS | Apple otomatik cihaz kaydı (Kullanıcı benzeşimi olmadan DEP) | Hiçbiri | Uygulanamaz |
+| Android | Android şirkete ait, adanmış cihazlar | Hiçbiri | Uygulanamaz |
 
 ## <a name="primary-user-and-azure-ad-device-owner"></a>Birincil Kullanıcı ve Azure AD cihaz sahibi
-Bazı durumlarda, Intune birincil Kullanıcı Azure AD cihazının **Owner** özelliğinden farklı olabilir ( **azure ad cihazlarında** > **cihazlarda** görüntülenebilir). Azure AD cihaz sahibi, cihazın kaydı sırasında Azure Active Directory eklenir.
+Bazı durumlarda, Intune birincil Kullanıcı Azure AD cihazının **Owner** özelliğinden farklı olabilir ( **cihazlar** > **Azure AD cihazları**altında görüntülenebilir). Azure AD cihaz sahibi, cihazın kaydı sırasında Azure Active Directory eklenir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 [Intune cihazlarınızı yönetin.](device-management.md)

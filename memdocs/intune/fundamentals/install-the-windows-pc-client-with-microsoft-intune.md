@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a1641efe6899c46a797a8ccf7979b533cb620d19
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331442"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Windows bilgisayarlara Intune yazılım istemcisini yükleme
@@ -46,7 +46,7 @@ Intune lisanslarından biri, Intune istemci yazılımını en fazla beş bilgisa
 
 Intune istemci yazılımının kullanıcılar tarafından yüklendiği yöntemlerin dışındaki tüm yöntemler, sonrasında yazılımın son kullanıcılara dağıtılması için BT yöneticilerinin öncelikle yazılımı indirmesini gerektirir.
 
-1. [Microsoft Intune yönetim konsolunda](https://manage.microsoft.com/), **yönetici** &gt; **istemci yazılımı indirmesi**' ne tıklayın.
+1. [Microsoft Intune yönetim konsolunda](https://manage.microsoft.com/), **Yönetici** &gt; **İstemci Yazılımı İndirme**’ye tıklayın.
 
    ![Intune bilgisayar istemcisini indirme](./media/install-the-windows-pc-client-with-microsoft-intune/pc-sa-client-download.png)
 
@@ -57,7 +57,7 @@ Intune istemci yazılımının kullanıcılar tarafından yüklendiği yöntemle
 3. Yükleme paketinin içeriğini ağınızda güvenli bir konuma ayıklayın.
 
     > [!IMPORTANT]
-    > Ayıklanan **ACCOUNTCERT** dosyasını yeniden adlandırmayın veya kaldırmayın, aksi takdirde istemci yazılımının yüklenmesi başarısız olur.
+    > Ayıklanan **ACCOUNTCERT** dosyasını yeniden adlandırmayın veya kaldırmayın ya da istemci yazılımı yüklemesi başarısız olur.
 
 ## <a name="deploy-the-client-software-manually"></a>İstemci yazılımını el ile dağıtma
 
@@ -86,7 +86,7 @@ Intune istemci yazılımının kullanıcılar tarafından yüklendiği yöntemle
 ## <a name="deploy-the-client-software-as-part-of-an-image"></a>İstemci yazılımını bir görüntünün parçası olarak dağıtma
 Aşağıdaki yordamı örnek alarak Intune istemci yazılımını bilgisayarlara bir işletim sistemi görüntüsünün parçası olarak dağıtabilirsiniz:
 
-1. **Microsoft_Intune_Setup.exe** ve **MicrosoftIntune.accountcert** istemci yükleme dosyalarını, referans bilgisayarındaki **%Systemdrive%\Temp\Microsoft_Intune_Setup** klasörüne kopyalayın.
+1. İstemci yükleme dosyalarını **Microsoft_Intune_Setup. exe** ve **microsoftınsettings. ACCOUNTCERT**' i başvuru bilgisayarındaki **%systemdrive%\Temp\ Microsoft_Intune_Setup** klasörüne kopyalayın.
 
 2. **SetupComplete.cmd** betiğine aşağıdaki komutu ekleyerek **WindowsIntuneEnrollPending** kayıt defteri girişini oluşturun:
 
@@ -172,7 +172,7 @@ Başarılı istemci dağıtımını izlemenize ve doğrulamanıza yardımcı olm
 
 ### <a name="to-verify-the-installation-of-the-client-software-from-the-microsoft-intune-administrator-console"></a>Microsoft Intune yönetici konsolundan istemci yazılımının yüklendiğini doğrulamak için
 
-1. [Microsoft Intune yönetim konsolunda](https://manage.microsoft.com/)tüm **bilgisayarlar**&gt; tüm **cihazlar** ' a &gt; **gruplar** ' a tıklayın.
+1. [Microsoft Intune yönetim konsolunda](https://manage.microsoft.com/), **Gruplar** &gt; **Tüm Cihazlar** &gt; **Tüm Bilgisayarlar**’a tıklayın.
 
 2. Listede Intune ile iletişim kuran bilgisayarları bulun veya **Cihaz ara** kutusuna bilgisayar adını (veya adının bir parçasını) yazarak belirli bir yönetilen bilgisayar arayın.
 
@@ -180,7 +180,7 @@ Başarılı istemci dağıtımını izlemenize ve doğrulamanıza yardımcı olm
 
 ### <a name="to-create-a-computer-inventory-report-to-display-all-enrolled-computers"></a>Tüm kayıtlı bilgisayarları görüntülemek üzere bir bilgisayar envanteri raporu oluşturmak için
 
-1. [Microsoft Intune yönetim konsolunda](https://manage.microsoft.com/), **raporlar** &gt; **bilgisayar envanteri raporları**' na tıklayın.
+1. [Microsoft Intune yönetim konsolunda](https://manage.microsoft.com/), **Raporlar** &gt; **Bilgisayar Envanteri Raporları**’na tıklayın.
 
 2. **Yeni Rapor Oluştur** sayfasında, (filtre uygulamak istemiyorsanız) tüm alanlardaki varsayılan değerleri bırakın ve **Raporu Görüntüle**'ye tıklayın.
 
@@ -198,7 +198,7 @@ Windows istemci yazılımı kaydı iki yolla silinebilir:
 
 ### <a name="unenroll-by-using-the-intune-admin-console"></a>Intune yönetim konsolunu kullanarak kayıt silme
 
-Intune yönetim konsolunu kullanarak yazılım istemci kaydı silmek için **Gruplar** > **Tüm Bilgisayarlar** > **Cihazlar**’a gidin. İstemciye sağ tıklayın ve **Devre Dışı Bırak/Temizle**’yi seçin.
+Intune yönetim konsolunu kullanarak yazılım istemcisinin kaydını silmek için **gruplar** > **tüm bilgisayarlar** > **cihazlar**' a gidin. İstemciye sağ tıklayın ve **Devre Dışı Bırak/Temizle**’yi seçin.
 
 ### <a name="unenroll-by-using-a-command-prompt-on-the-client"></a>İstemci üzerindeki bir komut isteminden kayıt silme
 
@@ -251,8 +251,8 @@ Yükseltilmiş bir komut istemi kullanarak aşağıdaki komutlardan birini çal�
 "%ProgramFiles%\Microsoft\OnlineManagement" yolunu denetleyin ve solda sadece aşağıdaki dizinlerin gösterildiğinden emin olun:
 
 - AgentInstaller
-- Logs
-- Updates
+- Günlükler
+- Güncelleştirmeler
 - Common
 
 ### <a name="remove-the-onlinemanagement-folder"></a>OnlineManagement klasörünü kaldırma

@@ -1,5 +1,5 @@
 ---
-title: İlke varlıkları için başvuru
+title: Ilke varlıkları için başvuru
 titleSuffix: Microsoft Intune
 description: Intune Veri Ambarı API’sindeki varlık koleksiyonlarının İlke kategorisi için başvuru konusu.
 keywords: Intune Veri Ambarı
@@ -18,13 +18,13 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5a2f13bddb852b46459c9c79df39dda49ef9549d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79325582"
 ---
-# <a name="reference-for-policy-entities"></a>İlke varlıkları için başvuru
+# <a name="reference-for-policy-entities"></a>Ilke varlıkları için başvuru
 
 **İlkeler** kategorisi, mobil cihazlar için şu gibi bilgileri izleyen varlıklar içerir:
 
@@ -43,10 +43,10 @@ ms.locfileid: "79325582"
 | PolicyId |İlkenin veri ambarındaki benzersiz tanımlayıcısı. |b66bc706-ffff-7437-0340-032819502773 |
 | policyName |İlkenin Adı. |"Windows 10 Temel" |
 | policyVersion |Yapılandırmanın Sürümü. İlke düzenlendiğinde veya değiştirildiğinde, daha yeni bir sürüm oluşturulur. |1, 2, 3 |
-| isDeleted |Bu MAM uygulaması kaydının güncelleştirilip güncelleştirilmediğini gösterir.  <br>True- ilkenin güncelleştirilmiş alanları içeren yeni bir kaydı var. <br>False- ilke için en son kayıt. |Doğru/Yanlış |
-| startDateInclusiveUTC |Bu ilkenin veri ambarında oluşturulduğu tarih ve UTC diliminde saat. |23.11.2016 12:00:00 |
-| deletedDateUTC |IsDeleted değerinin True olarak değiştirildiği tarih ve UTC diliminde saat. |23.11.2016 12:00:00 |
-| rowLastModifiedDateTimeUTC |Bu ilkenin veri ambarında son değiştirildiği tarih ve UTC diliminde saat. |23.11.2016 12:00:00 |
+| isDeleted |Bu MAM uygulaması kaydının güncelleştirilip güncelleştirilmediğini gösterir.  <br>True- ilkenin güncelleştirilmiş alanları içeren yeni bir kaydı var. <br>False- ilke için en son kayıt. |True/False |
+| startDateInclusiveUTC |Bu ilkenin veri ambarında oluşturulduğu tarih ve UTC diliminde saat. |23/11/2016 00:00:00 |
+| deletedDateUTC |IsDeleted değerinin True olarak değiştirildiği tarih ve UTC diliminde saat. |23/11/2016 00:00:00 |
+| rowLastModifiedDateTimeUTC |Bu ilkenin veri ambarında son değiştirildiği tarih ve UTC diliminde saat. |23/11/2016 00:00:00 |
 
 ## <a name="policytypes"></a>policyTypes
 
@@ -67,7 +67,7 @@ ms.locfileid: "79325582"
 | dateKey |Cihaz Yapılandırma Profilinin iade işleminin, veri ambarına kaydedildiği zamanı belirten Tarih Anahtarı. |20160703 |
 | bekleniyor |Bekleme durumundaki benzersiz cihazların sayısı. |123 |
 | başarılı |Başarı durumundaki benzersiz cihazların sayısı. |12 |
-| hata |Hata durumundaki benzersiz cihazların sayısı. |10 |
+| error |Hata durumundaki benzersiz cihazların sayısı. |10 |
 | başarısız |Başarısız durumundaki benzersiz cihazların sayısı. |2 |
 
 **Deviceconfigurationprofileuseractivity** varlığı, başarılı, beklemede, başarısız veya hata durumundaki **kullanıcıların** günlük sayısını listeler. Bu sayı, varlığa atanmış Cihaz Yapılandırma Profillerini gösterir. Örneğin, bir **Kullanıcı** atanmış tüm ilkeleri için başarılı durumdaysa, başarılı olan sayacı o gün için bir tane yukarı gider. Bir kullanıcıya biri başarılı diğeri hata durumunda olmak üzere iki profil atanmışsa, kullanıcı hata durumunda olarak değerlendirilir.  **Deviceconfigurationprofileuseractivity** varlığı, son 30 gün içindeki belirli bir gün için kaç kullanıcının hangi durumda olduğunu listeler.
@@ -77,7 +77,7 @@ ms.locfileid: "79325582"
 | dateKey |Cihaz Yapılandırma Profilinin iade işleminin, veri ambarına kaydedildiği zamanı belirten Tarih Anahtarı. |20160703 |
 | bekleniyor |Bekleme durumundaki benzersiz kullanıcıların sayısı. |123 |
 | başarılı |Başarı durumundaki benzersiz kullanıcıların sayısı. |12 |
-| hata |Hata durumundaki benzersiz kullanıcıların sayısı. |10 |
+| error |Hata durumundaki benzersiz kullanıcıların sayısı. |10 |
 | başarısız |Başarısız durumundaki benzersiz kullanıcıların sayısı. |2 |
 
 ## <a name="policytypeactivities"></a>policyTypeActivities
@@ -91,7 +91,7 @@ ms.locfileid: "79325582"
 | policyTypeKey |İlke Anahtarı türü, İlke Türü ile birleştirilerek ilke türü adı elde edilebilir. |Windows 10 Uyumluluk İlkesi |
 | bekleniyor |Bekleme durumundaki benzersiz cihazların sayısı. |123 |
 | başarılı |Başarı durumundaki benzersiz cihazların sayısı. |12 |
-| hata |Hata durumundaki benzersiz cihazların sayısı. |10 |
+| error |Hata durumundaki benzersiz cihazların sayısı. |10 |
 | başarısız |Başarısız durumundaki benzersiz cihazların sayısı. |2 |
 
 ## <a name="compliance-policy"></a>Uyumluluk İlkesi
@@ -106,12 +106,12 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu özetler. Ve
 |Özellik     |Açıklama  |Örnek  |
 |---------|---------|---------|
 |dateKey  |Uyumluluk ilkesi için özetin oluşturulduğu tarihin anahtarı.|20161204 |
-|bilinmiyor  |Çevrimdışı olan veya Intune ya da Azure AD ile başka bir nedenle iletişim kuramayan cihaz sayısı. |5|
+|bilinmeyen  |Çevrimdışı olan veya Intune ya da Azure AD ile başka bir nedenle iletişim kuramayan cihaz sayısı. |5|
 |Notapplıcable      |Yönetici tarafından hedeflenen cihaz uyumluluk ilkelerinin uygulanabilir olmadığı cihaz sayısı.|201 |
 |Uyumluluk      |Yönetici tarafından hedeflenen bir veya daha fazla cihaz uyumluluk ilkesini başarıyla uygulayan cihaz sayısı. |4083 |
 |Yetkisizkullanımsüresinde      |Uyumlu olmayan ancak yönetici tarafından belirlenen mehil süresinde olan cihaz sayısı. |57|
 |ızde      |Yönetici tarafından hedeflenen bir veya daha fazla cihaz uyumluluk ilkesi ayarını uygulayamayan veya kullanıcısı yönetici tarafından hedeflenen ilkeler ile uyum sağlayamayan cihaz sayısı.|43 |
-|hata      |Intune veya Azure AD ile iletişim kuramayan ve hata iletisi veren cihaz sayısı. |3|
+|error      |Intune veya Azure AD ile iletişim kuramayan ve hata iletisi veren cihaz sayısı. |3|
 
 ### <a name="compliancepolicystatusdeviceperpolicyactivities"></a>compliancePolicyStatusDevicePerPolicyActivities 
 
@@ -124,12 +124,12 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 |dateKey  |Uyumluluk ilkesi için özetin oluşturulduğu tarihin anahtarı.|20161219|
 |policyKey     |Özetin oluşturulduğu uyumluluk ilkesi için anahtar. |10178 |
 |policyPlatformKey      |Özetin oluşturulduğu uyumluluk ilkesinin platform türü için anahtar.|5|
-|bilinmiyor     |Çevrimdışı olan veya Intune ya da Azure AD ile başka bir nedenle iletişim kuramayan cihaz sayısı.|13|
+|bilinmeyen     |Çevrimdışı olan veya Intune ya da Azure AD ile başka bir nedenle iletişim kuramayan cihaz sayısı.|13|
 |Notapplıcable     |Yönetici tarafından hedeflenen cihaz uyumluluk ilkelerinin uygulanabilir olmadığı cihaz sayısı.|3|
 |Uyumluluk      |Yönetici tarafından hedeflenen bir veya daha fazla cihaz uyumluluk ilkesini başarıyla uygulayan cihaz sayısı. |45|
 |Yetkisizkullanımsüresinde      |Uyumlu olmayan ancak yönetici tarafından belirlenen mehil süresinde olan cihaz sayısı. |3|
 |ızde      |Yönetici tarafından hedeflenen bir veya daha fazla cihaz uyumluluk ilkesi ayarını uygulayamayan veya kullanıcısı yönetici tarafından hedeflenen ilkeler ile uyum sağlayamayan cihaz sayısı.|7|
-|hata      |Intune veya Azure AD ile iletişim kuramayan ve hata iletisi veren cihaz sayısı. |3|
+|error      |Intune veya Azure AD ile iletişim kuramayan ve hata iletisi veren cihaz sayısı. |3|
 
 ### <a name="policyplatformtypes"></a>policyPlatformTypes
 
@@ -144,15 +144,15 @@ Aşağıdaki tablo, tüm atanmış ilkelerin platform türlerini içerir. Hiçbi
 
 ### <a name="policydeviceactivities"></a>policyDeviceActivities
 
-Aşağıdaki tablo; başarılı, beklemede, başarısız veya hata durumundaki cihazların günlük sayısını listeler. Bu sayı, İlke Türü profillerindeki verileri yansıtır. Örneğin, bir cihaz kendisine atanan tüm ilkeler için başarılı durumunda ise ilgili gün için başarılı sayacı bir artar. Cihaza biri başarılı diğeri hata durumunda olmak üzere iki profil atanmışsa varlık, başarılı sayacını artırır ve cihazı hata durumuna geçirir. PolicyDeviceActivity varlığı, son 30 gün içindeki belirli bir gün için kaç cihazın hangi durumda olduğunu listeler.
+Aşağıdaki tablo; başarılı, beklemede, başarısız veya hata durumundaki cihazların günlük sayısını listeler. Bu sayı, İlke Türü profillerindeki verileri yansıtır. Örneğin, bir cihaz kendisine atanan tüm ilkeler için başarılı durumunda ise ilgili gün için başarılı sayacı bir artar. Cihaza biri başarılı diğeri hata durumunda olmak üzere iki profil atanmışsa varlık, başarılı sayacını artırır ve cihazı hata durumuna geçirir. policyDeviceActivity varlığı, son 30 gün içindeki belirli bir gün için kaç cihazın hangi durumda olduğunu listeler.
 
 |Özellik  |Açıklama  |Örnek  |
 |---------|---------|---------|
 |dateKey|Cihaz Yapılandırma Profilinin iade işleminin, veri ambarına kaydedildiği zamanı belirten Tarih Anahtarı.|20160703|
 |bekleniyor|Bekleme durumundaki benzersiz cihazların sayısı.|123|
-|Başarılı|Başarı durumundaki benzersiz cihazların sayısı.|12|
+|Başarılı oldu|Başarı durumundaki benzersiz cihazların sayısı.|12|
 |policyKey|policyKey, policyName 'i almak için ilkeyle eklenebilir.|Windows 10 temel|
-|hata|Hata durumundaki benzersiz cihazların sayısı.|10|
+|error|Hata durumundaki benzersiz cihazların sayısı.|10|
 |başarısız|Başarısız durumundaki benzersiz cihazların sayısı.|2|
 
 ### <a name="policyuseractivities"></a>policyUserActivities
@@ -166,5 +166,5 @@ Aşağıdaki tablo; başarılı, beklemede, başarısız veya hata durumundaki k
 |  bekleniyor  |                         Bekleme durumundaki benzersiz cihazların sayısı.                          |         123         |
 | başarılı |                         Başarı durumundaki benzersiz cihazların sayısı.                          |         12          |
 | policyKey |                 policyKey, policyName 'i almak için ilkeyle eklenebilir.                 | Windows 10 temel |
-|   hata   |                          Hata durumundaki benzersiz cihazların sayısı.                           |         10          |
+|   error   |                          Hata durumundaki benzersiz cihazların sayısı.                           |         10          |
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f7490c2fffbb6e3a18da4763575b3c71867ced59
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331694"
 ---
 # <a name="reference-for-dates-entity"></a>Tarih varlığı başvurusu
@@ -37,7 +37,7 @@ Tarih **kategorisi,** veri modelindeki Tarih başvurularını tanımlamak için 
 |    Özellik     |                      Açıklama                       |       Örnek        |
 |-----------------|--------------------------------------------------------|----------------------|
 |     dateKey     | Veri ambarında bu tarihin benzersiz tanımlayıcısı. |       20160703       |
-|    fullDate     |    Bu tarihin tam Tarih/Saat biçiminde temsili.     | 3\.7.2016 12:00:00 |
+|    fullDate     |    Bu tarihin tam Tarih/Saat biçiminde temsili.     | 3.7.2016 12:00:00 |
 |    dayOfWeek    |                      Haftanın kaçıncı günü olduğu                       |          1           |
 |   dayOfMonth    |                      Ayın kaçıncı günü olduğu                      |          3           |
 |    dayOfYear    |                      Yılın kaçıncı günü olduğu                       |         185          |
@@ -46,7 +46,7 @@ Tarih **kategorisi,** veri modelindeki Tarih başvurularını tanımlamak için 
 | calendarQuarter |                    Takvim çeyreği                    |          3           |
 |  Takvim yılı   |                     Takvim yılı                      |         2016         |
 |     dateKey     | Veri ambarında bu tarihin benzersiz tanımlayıcısı. |       20160703       |
-|    fullDate     |    Bu tarihin tam Tarih/Saat biçiminde temsili.     | 3\.7.2016 12:00:00 |
+|    fullDate     |    Bu tarihin tam Tarih/Saat biçiminde temsili.     | 3.7.2016 12:00:00 |
 |    dayOfWeek    |                      Haftanın kaçıncı günü olduğu                       |          1           |
 |   dayOfMonth    |                      Ayın kaçıncı günü olduğu                      |          3           |
 |    dayOfYear    |                      Yılın kaçıncı günü olduğu                       |         185          |

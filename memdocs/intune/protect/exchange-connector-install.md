@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c10f2356e740036bbc779f03253eebec6fd7d05e
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327490"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>Şirket içi Intune Exchange bağlayıcısını ayarlama
@@ -56,7 +56,7 @@ Aşağıdaki tabloda, Intune Exchange bağlayıcısını yüklediğiniz bilgisay
 |---------------|------------------------|
 |  İşletim sistemleri        | Intune, Windows Server 2008 SP2 64-bit, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 veya Windows Server 2016 'ın herhangi bir sürümünü çalıştıran bir bilgisayarda Intune Exchange bağlayıcısını destekler.<br /><br />Bağlayıcı hiçbir sunucu çekirdeği yüklemesinde desteklenmez.  |
 | Microsoft Exchange          | Şirket içi bağlayıcılar için Microsoft Exchange 2010 SP3 veya üzeri ya da eski Exchange Online Ayrılmış gerekir. Exchange Online Dedicated ortamınızın *yeni* yapılandırmada mı yoksa *eski* yapılandırmada mı olduğunu belirlemek için hesap yöneticinize başvurun. |
-| Mobil cihaz yönetimi yetkilisi           | [Mobil cihaz yönetimi yetkilisi olarak Intune’u ayarlama](../fundamentals/mdm-authority-set.md). |
+| Mobil cihaz yönetimi yetkilisi           | [Mobil cihaz yönetimi yetkilisini Intune olarak ayarlayın](../fundamentals/mdm-authority-set.md). |
 | Donanım              | Bağlayıcıyı yüklediğiniz bilgisayar 2 GB RAM ve 10 GB boş disk alanı ile birlikte 1,6 GHz CPU gerektirir. |
 |  Active Directory eşitlemesi             | Intune 'U Exchange Server 'a bağlamak için bağlayıcıyı kullanmadan önce [Active Directory eşitlemeyi ayarlayın](../fundamentals/users-add.md). Yerel kullanıcılarınızın ve güvenlik gruplarınızın Azure Active Directory örneğinizle eşitlenmesi gerekir. |
 | Ek yazılım         | Bağlayıcıyı barındıran bilgisayarda Microsoft .NET Framework 4,5 ve Windows PowerShell 2,0 ' nin tam yüklemesi yapılmalıdır. |
@@ -85,12 +85,12 @@ Intune Exchange bağlayıcısını destekleyebilen bir Windows Server 'da:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.  Şirket içi Exchange sunucusunda yönetici olan ve Exchange Server 'ı kullanma lisansı olan bir hesabı kullanın.
 
-2. **Exchange erişimi** > **Kiracı Yönetimi** ' ni seçin.
+2. **Kiracı Yönetimi** > **Exchange erişimi**' ni seçin.
 
 3. **Kurulum**altında **Exchange ActiveSync şirket içi Bağlayıcısı** ' nı seçin ve ardından **Ekle**' yi seçin.
 
    > [!div class="mx-imgBorder"]
-   > Şirket içi bir Exchange ActiveSync Bağlayıcısı eklemek ![](./media/exchange-connector-install/add-connector.png)
+   > ![Şirket içi Exchange ActiveSync Bağlayıcısı ekleme](./media/exchange-connector-install/add-connector.png)
 
 4. **Bağlayıcı Ekle** sayfasında şirket **içi bağlayıcıyı indir**' i seçin. Intune Exchange Bağlayıcısı, açılabilen veya kaydedilebilen sıkıştırılmış (. zip) bir klasörde yer alabilir. **Dosya indirme** iletişim kutusunda, sıkıştırılmış klasörü güvenli bir konumda depolamak için **Kaydet** ' i seçin.
 
@@ -129,7 +129,7 @@ Intune Exchange bağlayıcısını yüklemek için bu adımları izleyin. Birden
 
        1. Proxy sunucusuna erişmek için Kullanıcı kimlik bilgileri gerekliyse, **proxy sunucusuna bağlanmak için kimlik bilgilerini kullan**' ı seçin. Ardından **etki alanı\kullanıcı** ve **parola** girin.
 
-       1. **Tamam**’ı seçin.
+       1. **Tamam ' ı**seçin.
 
 4. **Kullanıcı (etki alanı \ Kullanıcı)** ve **parola** alanlarında, Exchange sunucunuza bağlanmak için kimlik bilgilerini girin. Belirttiğiniz hesap, Intune 'U kullanmak için bir lisansa sahip olmalıdır.
 
@@ -170,11 +170,11 @@ Yük devretmek için bağlayıcı, Exchange 'e başarılı bir bağlantı oluşt
 
 Varsayılan olarak, ek CASs 'leri bulma etkindir. Yük devretmeyi kapatmanız gerekirse:
 
-1. Exchange bağlayıcısının yüklü olduğu sunucuda **%*ProgramData*% \ Microsoft\windows Intune Exchange Connector**' a gidin.
+1. Exchange bağlayıcısının yüklü olduğu sunucuda, ** % *ProgramData*% \ Microsoft\Windows Intune Exchange Connector**' a gidin.
 
 2. Bir metin düzenleyicisi kullanarak **OnPremisesExchangeConnectorServiceConfiguration.xml** dosyasını açın.
 
-3. **\<ıcasfailoverenabled >*true*\</ıscasfailoverenabled >** **\<ıscasfailoverenabled >*false*\</ıscasfailoverenabled >** olarak değiştirin.
+3. ** \<Icasfailoverenabled>*true*\</ıscasfailoverenabled>** , ** \<ıscasfailoverenabled>*false*\</ıscasfailoverenabled>** olarak değiştirin.
 
 ## <a name="performance-tune-the-exchange-connector-optional"></a>Performans-Exchange bağlayıcısını ayarlama (isteğe bağlı)
 
@@ -192,7 +192,7 @@ Exchange Connector performansını geliştirmek için:
 
 3. **Enableparallelcommandsupport** öğesini bulun ve değeri **true**olarak ayarlayın:
 
-   \<EnableParallelCommandSupport > doğru\</EnableParallelCommandSupport >
+   \<EnableParallelCommandSupport>true\</enableparallelcommandsupport>
 
 4. Dosyayı kaydedin ve ardından Microsoft Intune Exchange Connector hizmetini yeniden başlatın.
 
@@ -203,12 +203,12 @@ Bir Intune Exchange bağlayıcısını yeniden yüklemeniz gerekebilir. Her bir 
 1. Yeni bağlayıcıyı yüklemek için [Exchange Connector 'ı yüklemek ve yapılandırmak](#install-and-configure-the-intune-exchange-connector) bölümündeki adımları izleyin.
 
 2. İstendiğinde, yeni bağlayıcıyı yüklemek için **Değiştir** ' i seçin.
-   bağlayıcının yerine geçecek Yapılandırma Uyarısı ![](./media/exchange-connector-install/prompt-to-replace.png)
+   ![Bağlayıcının yerine geçecek Yapılandırma Uyarısı](./media/exchange-connector-install/prompt-to-replace.png)
 
 3. [Intune Exchange bağlayıcısını yükleyip yapılandırma](#install-and-configure-the-intune-exchange-connector) bölümünden adımlara devam edin ve Intune 'da yeniden oturum açın.
 
 4. Yüklemeyi gerçekleştirmek için son pencerede **Kapat** ' ı seçin.
-   ![tüm kurulum](./media/exchange-connector-install/successful-reinstall.png)
+   ![Kurulumu Tamam](./media/exchange-connector-install/successful-reinstall.png)
 
 ## <a name="monitor-an-exchange-connector"></a>Exchange bağlayıcısını izleme
 
@@ -216,7 +216,7 @@ Exchange bağlayıcısını başarıyla yapılandırdıktan sonra, bağlantılar
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Exchange erişimi** > **Kiracı Yönetimi** ' ni seçin.
+2. **Kiracı Yönetimi** > **Exchange erişimi**' ni seçin.
 
 3. **Exchange ActiveSync şirket içi Bağlayıcısı**' nı seçin ve ardından görüntülemek istediğiniz bağlayıcıyı seçin.
 
@@ -236,12 +236,12 @@ Intune panosunda **hızlı eşitleme** veya **tam eşitleme** seçeneklerini kul
 
    1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-   2. Exchange **ActiveSync şirket içi bağlayıcı bağlayıcısı** ** >   > ** **Kiracı Yönetimi** ' ni seçin.
+   2. **Kiracı Yönetimi** > **Exchange erişimi** >  **Exchange ActiveSync şirket içi Bağlayıcısı '** nı seçin.
 
-   3. Eşitlemek istediğiniz bağlayıcıyı seçin ve ardından hızlı eşitleme veya tam eşitleme ' yi seçin.
+   3. Eşitlemek istediğiniz bağlayıcıyı seçin ve sonra da Hızlı Eşitleme'yi veya Tam Eşitleme'yi seçin.
 
    > [!div class="mx-imgBorder"]
-   > bağlayıcı ayrıntılarının örnek ekran görüntüsünü ![](./media/exchange-connector-install/connector-details.png)
+   > ![Bağlayıcı ayrıntılarının örnek ekran görüntüsü](./media/exchange-connector-install/connector-details.png)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

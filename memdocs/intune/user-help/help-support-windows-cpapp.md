@@ -1,6 +1,6 @@
 ---
 title: Windows 10 için Şirket Portalı yardım ve destek alın | Microsoft Docs
-description: Şirket Portalı yardım & Destek sayfasında Günlükler gönderin, yardım masasına başvurun ve SSS makalesini okuyun.
+description: Şirket Portalı yardım & destek sayfasında Günlükler gönderin, yardım masasına başvurun ve SSS makalesini okuyun.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -19,10 +19,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1fcf4d98504f23f5fa19a099d61e7534e4df4571
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324606"
 ---
 # <a name="get-help-and-support-in-company-portal-for-windows-10"></a>Windows 10 için Şirket Portalı 'da yardım ve destek alın
@@ -40,7 +40,7 @@ Uygulamanızın sorunlarını gidermeye başlamak ve erişim sorunlarını gider
 
 ## <a name="get-help-with-app-problems"></a>Uygulama sorunlarıyla ilgili yardım alın
 
-Şirket Portalı karşılaştığınız sorunlar hakkında kuruluşunuza e-posta gönderin. Sorunu tanımlamaya başlamak için **Yardım al** ' ı seçin. Kuruluşunuz, sorunu gidermek için sağladığınız bilgileri kullanacaktır. Sorunu belirlemede daha fazla yardım gerekirse, kuruluşunuz Microsoft 'un destek ekibine ulaşmak için e-posta&ndash;otomatik olarak eklenen&ndash;tanılama KIMLIĞINI kullanır.  
+Şirket Portalı karşılaştığınız sorunlar hakkında kuruluşunuza e-posta gönderin. Sorunu tanımlamaya başlamak için **Yardım al** ' ı seçin. Kuruluşunuz, sorunu gidermek için sağladığınız bilgileri kullanacaktır. Sorunu belirlemede daha fazla yardım gerekirse, kuruluşunuz Microsoft 'un destek ekibine ulaşmak için e-postaya&ndash;&ndash;OTOMATIK olarak eklenen tanılama kimliğini kullanacaktır.  
 
 Adım adım yordam için, bkz. [Windows 10 için şirket portalı uygulamasından şirketinizin destek bölümüne günlük gönderme](send-logs-to-your-it-admin-cp-windows.md).  
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8396a9713e5ce4b6001aefb55485a908f0e605dd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331042"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Microsoft Intune planınızı uygulama
@@ -84,7 +84,7 @@ EMS/Intune ve Office 365 dağıtımı için hedeflediğiniz tüm kullanıcılar�
 
 Intune kullanarak cihazları kurmaya, yapılandırmaya, yönetmeye ve kaydetmeye başlamadan önce cihaz yönetimi yetkilisi olarak Intune’u ayarlamanız gerekir.
 
-- [Cihaz yönetimi yetkilisini ayarlama](mdm-authority-set.md) hakkında daha fazla bilgi edinin.
+- [Cihaz yönetimi yetkilisini ayarlama](mdm-authority-set.md)hakkında daha fazla bilgi edinin.
 
 ### <a name="task-6-enable-device-platforms"></a>Görev 6: Cihaz platformlarını etkinleştirme
 
@@ -124,7 +124,7 @@ Intune, uyumluluk ilkelerini destekler. Uyumluluk ilkelerini gerektiği gibi ekl
 
 ### <a name="task-12-enable-conditional-access-policies"></a>Görev 12: koşullu erişim ilkelerini etkinleştirme
 
-Intune, Exchange Online, şirket içi Exchange, SharePoint Online, Skype Kurumsal Çevrimiçi ve Dynamics CRM Online için koşullu erişimi destekler. Intune dağıtım kullanım örneklerine ve gereksinimlerinize göre uygun şekilde koşullu erişimi etkinleştirin ve yapılandırın.
+Intune, Exchange Online, şirket içi Exchange, SharePoint Online, Skype Kurumsal Çevrimiçi ve Dynamics CRM Online için koşullu erişimi destekler. Koşullu Erişimi Intune dağıtım kullanım örneklerinize ve gereksinimlerinize göre uygun şekilde etkinleştirin ve yapılandırın.
 
 - [Koşullu Erişim](../protect/conditional-access.md) hakkında daha fazla bilgi edinin.
 

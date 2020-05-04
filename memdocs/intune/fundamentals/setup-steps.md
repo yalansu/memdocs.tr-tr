@@ -1,5 +1,5 @@
 ---
-title: Microsoft Intune'u ayarlama
+title: Microsoft Intune ayarlama
 description: Intune aboneliğinizi kullanmaya başlamak için gereksinimler ve önkoşullar
 keywords: ''
 author: ErikjeMS
@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 53a6d38212433b786719379c0916129ea5304c21
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330606"
 ---
 # <a name="set-up-intune"></a>Intune’u ayarlama
@@ -39,9 +39,9 @@ Intune aboneliği ayarlama ve MDM yetkilisi ayarlama gibi bazı adımlar, çoğu
 |---|---|
 |   1   | [Desteklenen yapılandırmalar](supported-devices-browsers.md) - Başlamadan önce bilmeniz gerekenler. Bunlar arasında desteklenen yapılandırmalar ve ağ gereksinimleri vardır.|
 |   2   |  [Intune’da oturum açma](account-sign-up.md) - Deneme aboneliğinizde oturum açın veya yeni bir Intune aboneliği oluşturun. |
-|   3   | [Etki alanı adı yapılandırma](custom-domain-name-configure.md) - Şirketinizin etki alanı adını Intune’a bağlamak için DNS kaydı ayarlayın. Böylece, Intune’a bağlanırken ve kaynakları kullanırken kullanıcılara tanıdık bir etki alanı sağlarsınız. |
+|   3   | [Etki alanı adını yapılandırma](custom-domain-name-configure.md) -şirketinizin etki alanı adını Intune 'a bağlamak için DNS kaydı ayarlayın. Böylece, Intune’a bağlanırken ve kaynakları kullanırken kullanıcılara tanıdık bir etki alanı sağlarsınız. |
 |   4   | [Kullanıcı](users-add.md) ve [Grup](groups-add.md) ekleme-Intune ile eşitlemek için Kullanıcı ve grup ekleme veya Active Directory bağlama. Cihazlarınız, “kullanıcısız” bilgi noktası cihazları gibi cihazlar değilse gereklidir. Gruplar; uygulama, ayar ve diğer kaynakları atamak için kullanılır.|
-|   5   | [Lisans atama](licenses-assign.md) - Kullanıcıların Intune’u kullanmasına izin verin. Tüm kullanıcılar veya kullanıcısız cihazların Intune’a erişmesi için bir Intune lisansı gerekir. |
+|   5   | [Lisans atama](licenses-assign.md) -kullanıcılara Intune kullanma izni verin. Tüm kullanıcılar veya kullanıcısız cihazların Intune’a erişmesi için bir Intune lisansı gerekir. |
 |   6   | [MDM yetkilisini ayarlama](mdm-authority-set.md) -yönetim görevlerini basitleştirmek için Kullanıcı ve cihaz gruplarını kullanın. Gruplar; uygulama, ayar ve diğer kaynakları atamak için kullanılır. |
 |   7   | [Uygulama ekleme](../apps/apps-add.md) - Uygulamalar otomatik olarak gruplara atanabilir veya isteğe bağlı olarak yüklenebilir. |
 |   8   | [Cihaz yapılandırma](../configuration/device-profiles.md) - Cihaz ayarlarını yöneten profiller ayarlayın. Cihaz profilleri; e-posta, VPN, Wi-Fi ve cihaz özellikleri için ayarları önceden yapılandırabilir. Ayrıca cihazları ve verileri korumak için cihazları kısıtlayabilir. |

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 483f82e67c3f5d8ad3b4e55fba73e21eba85d49d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 03df52662aaced80280192b9096c6d169020b55d
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327157"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615448"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Cihazları şirkete ait olarak tanımlama
 
@@ -39,7 +39,7 @@ Kayıt sırasında Intune, şu özellikleri taşıyan cihazlara otomatik olarak 
 - İş veya okul kimlik bilgileriyle Azure Active Directory katıldı. [Azure Active Directory kayıtlı olan cihazlar](https://docs.microsoft.com/azure/active-directory/devices/overview) kişisel olarak işaretlenir.
 - [Cihazın özellikler listesinde](#change-device-ownership) şirket olarak ayarlı
 
-Kayıttan sonra [Kişisel](#change-device-ownership) veya **Şirket** arasında **sahiplik ayarını değiştirebilirsiniz**.
+Kayıttan sonra **Kişisel** veya **Şirket** arasında [sahiplik ayarını değiştirebilirsiniz](#change-device-ownership).
 
 ## <a name="identify-corporate-owned-devices-with-imei-or-serial-number"></a>Şirkete ait cihazları IMEI veya seri numarası ile belirleme
 
@@ -47,17 +47,17 @@ Bir Intune yöneticisi olarak, 14 basamaklı IMEI numaralarını veya seri numar
 
 Bu özellik aşağıdaki platformlar için desteklenir:
 
-| Platfveyam | IMEı numaraları | Seri numaraları |
+| Platform | IMEı numaraları | Seri numaraları |
 |---|---|---|
-| Windows | Desteklenen (Windows Phone) | Desteklenmez |
-| iOS/macOS | Desteklenmez | Desteklenir |
-| Cihaz Yöneticisi yönetilen Android OS ile v10 arasındaki | Desteklenmez | Desteklenmez |
-| Diğer Android | Desteklenmez | Desteklenir |
+| Windows | Desteklenen (Windows Phone) | Desteklenmiyor |
+| iOS/macOS | Desteklenmiyor | Destekleniyor |
+| Cihaz Yöneticisi yönetilen Android OS ile v10 arasındaki | Desteklenmiyor | Desteklenmiyor |
+| Diğer Android | Desteklenmiyor | Destekleniyor |
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 
 [Apple cihaz seri numarasını bulmayı öğrenin](https://support.apple.com/HT204308).<br>
-[Android cihaz seri numaranızı bulmayı öğrenin](https://support.google.com/store/answer/3333000).
+[Android cihazlarda seri numaranızı bulmayı öğrenin](https://support.google.com/store/answer/3333000).
 
 ## <a name="add-corporate-identifiers-by-using-a-csv-file"></a>Bir .csv dosyası kullanarak kurumsal tanımlayıcılar ekleme
 Listeyi oluşturmak için iki sütunlu, üst bilgisi olmayan bir virgülle ayrılmış değerler (.csv) listesi oluşturun. 14 basamaklı IMEI numaralarını veya seri numaraları sol sütuna, ayrıntıları sağ sütuna ekleyin. Tek bir .csv dosyasında yalnızca tek bir kimlik türü: IMEI veya seri numarası içeri aktarılabilir. Ayrıntılar 128 karakterle sınırlıdır ve yalnızca yönetimsel kullanım içindir. Ayrıntılar cihazda görüntülenmez. Her .csv dosyası için geçerli sınır 5.000 satırdır.
@@ -85,7 +85,7 @@ Bu .csv dosyası bir metin düzenleyicisinde görüntülendiğinde aşağıdaki 
 
 ### <a name="upload-a-csv-list-of-corporate-identifiers"></a>Kurumsal tanımlayıcıları içeren .csv listesini karşıya yükleme
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın, cihazlar ** > ** **cihazları** > **ŞIRKET cihaz tanımlayıcıları** >  > **karşıya yükleme CSV dosyası** **Ekle** ' yi seçin.
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar** > **kayıt cihazları** > **Şirket cihaz tanımlayıcıları** > **Add** > **karşıya yükleme CSV dosyası**Ekle ' yi seçin.
 
 2. **Tanımlayıcı ekle** dikey penceresinde tanımlayıcı türünü belirtin: **IMEI**veya **Seri**.
 
@@ -95,7 +95,7 @@ Bu .csv dosyası bir metin düzenleyicisinde görüntülendiğinde aşağıdaki 
 
 ## <a name="manually-enter-corporate-identifiers"></a>Kurumsal tanımlayıcıları el ile girme
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın, cihazlar ** > ** cihazları > **şirket cihaz tanımlayıcıları** > **kaydetme** > **el ile** **Ekle** ' ye tıklayın.
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar** > **kayıt cihazları** > **Şirket cihaz tanımlayıcıları** > ' nı seçin ve**ENTER tuşuna el ile****ekleyin** > .
 
 2. **Tanımlayıcı ekle** dikey penceresinde tanımlayıcı türünü belirtin: **IMEI**veya **Seri**.
 
@@ -109,9 +109,9 @@ Yeni cihaz tanımlayıcılarını görmek için **Yenile**'ye tıklayabilirsiniz
 
 ## <a name="delete-corporate-identifiers"></a>Kurumsal tanımlayıcıları silme
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın **, cihazlar ' ı seçerek** cihazları **kurumsal cihaz tanımlayıcıları** > **kaydedin** > .
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın, **cihazlar** > **kayıt cihazları** > **Kurumsal cihaz tanımlayıcıları**' nı seçin.
 2. Silmek istediğiniz cihaz tanımlayıcılarını seçin ve **Sil**’e dokunun.
-3. Silmeyi onaylayın.
+3. Silme işlemini onaylayın.
 
 Kayıtlı bir cihazın şirket tanımlayıcısını silmek, cihaz sahipliğini değiştirmez. Cihaz sahipliğini değiştirmek için **Cihazlar**’a gidip cihazı seçin, **Özellikler**’i seçin ve **Cihaz sahipliği**’ni değiştirin.
 
@@ -123,8 +123,14 @@ Uluslararası Mobil Donanım Kimlikleri (IMEI) hakkındaki ayrıntılı belirtim
 Intune’daki tüm cihaz kayıtlarının cihaz özelliklerinde **Sahiplik** görüntülenir. Yönetici olarak, cihazları **Kişisel** veya **Şirkete ait** olarak belirtebilirsiniz. Bir cihazın sahiplik türü Şirket içinden kişisel 'e değiştirildiğinde, Intune bu cihazdan daha önce toplanan tüm uygulama bilgilerini 7 gün içinde siler. Uygulanabiliyorsa, Intune kayıttaki telefon numarasını da siler. 
 
 **Cihaz sahipliğini değiştirmek için:**
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın, **cihazlar** > **tüm cihazlar** ' ı seçin > cihazı seçin.
-2. **Özellikler**’i seçin.
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar** > **tüm cihazlar** ' ı seçin > cihazı seçin.
+2. **Özellikler**'i seçin.
 3. **Cihaz sahipliği**’ni **Kişisel** veya **Şirkete ait** olarak belirtin.
 
    ![Cihaz kategorisi ve Cihaz sahipliği seçeneklerini gösteren cihaz özellikleri](./media/corporate-identifiers-add/device-properties.png)
+
+Hem Android hem de iOS Şirket Portalı kullanıcılarınıza, cihaz sahipliği türü **Kişisel** **olarak bir gizlilik özelliği olarak değiştirildiğinde** , bu kullanıcılara göndermek üzere bir anında iletme bildirimi yapılandırabilirsiniz. 
+
+Bir cihazın sahiplik türü Şirket içinden kişisel 'e değiştirildiğinde, Intune bu cihazdan daha önce toplanan tüm uygulama bilgilerini 7 gün içinde siler. Uygulanabiliyorsa, Intune kayıttaki telefon numarasını da siler. Intune, BT Yöneticisi tarafından cihazda yüklü olan uygulamaların envanterini almaya devam eder ve kişisel olarak işaretlendikten sonra cihaz için kısmi bir telefon numarası toplayacaktır.
+
+Bu ayar, **Kiracı Yönetimi** > **özelleştirmesi**seçilerek Microsoft Uç Nokta Yöneticisi ' nde bulunabilir. Daha fazla bilgi için bkz. [Şirket portalı-yapılandırma](../apps/company-portal-app.md#configuration).

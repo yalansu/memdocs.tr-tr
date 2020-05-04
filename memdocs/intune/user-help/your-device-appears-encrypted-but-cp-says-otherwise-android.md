@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 4fd08ba190654db5678766e34e3340330dcf3ca8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327482"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Cihaz şifrelendi, ancak uygulamalar bu şekilde söyleniyor
@@ -32,9 +32,9 @@ ms.locfileid: "79327482"
 
 ## <a name="add-a-startup-pin"></a>Başlangıç PIN’i ekleme
 
-Belirli Android cihazları, cihazınızın güvenli olduğundan emin olmak için bir başlangıç PIN’i oluşturmayı gerektirir. Bu ayarın konumu cihazınızın **Ayarlar** uygulamasında olacaktır. Ayarın adı ve konumu değişebilir. Örneğin, Samsung Galaxy S7, ayar **güvenli başlangıç**olarak adlandırılır. Etkinleştirmek ve geçiş kodu oluşturmak için **ayarlar** > **kilit ekranı ve güvenlik** > **güvenli başlatma**' ya gidin.  
+Belirli Android cihazları, cihazınızın güvenli olduğundan emin olmak için bir başlangıç PIN’i oluşturmayı gerektirir. Bu ayarın konumu cihazınızın **Ayarlar** uygulamasında olacaktır. Ayarın adı ve konumu değişebilir. Örneğin, Samsung Galaxy S7, ayar **güvenli başlangıç**olarak adlandırılır. Etkinleştirmek ve geçiş kodu oluşturmak için **Ayarlar** > **kilit ekranı ve güvenlik** > **güvenli başlangıç**' a gidin.  
 
-## <a name="encrypt-the-entire-device"></a>Tüm cihazı şifreleme
+## <a name="encrypt-the-entire-device"></a>Tüm cihazı şifreleyin
 
 Bu bölüm yalnızca Şirket Portalı uygulaması için geçerlidir. Bazı cihazlar size, tüm cihazı veya yalnızca kullanılan alanı şifreleme seçeneği sunar. Tüm cihazı şifreleme seçeneğini belirleyin. Yalnızca kullanılan alanı şifrelemeyi seçtiyseniz:
 

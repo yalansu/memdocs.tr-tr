@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 784a0f40fd07d53f7bc32d00ab3f3a9d76d4dcaf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324910"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Kuruluş tarafından sağlanan macOS cihazınızı yönetime kaydedin
@@ -49,14 +49,14 @@ macOS cihazınızı yönetime kaydetmek için aşağıdaki adımları tamamlayı
 3. Klavye düzenini seçin. Listede, seçtiğiniz ülkeyi/bölgenizi temel alan bir veya daha fazla seçenek gösterilmektedir. Seçtiğiniz ülke/bölgeinizden bağımsız olarak tüm düzen seçeneklerini görmek için **Tümünü göster**' e tıklayın. İşiniz bittiğinde **Devam**'a tıklayın.  
 
    ![Aralarından seçim yapılacak listenin, işaretsiz Tümünü Göster seçeneğinin ve Geri ile Devam düğmesinin gösterildiği macOS cihazı Kurulum Yardımcısı Klayve Düzeni ekranının görüntüsü.](./media/macos-dep-keyboard-1808.png)  
-4. Wi-Fi ağınıza seçin. Kuruluma devam etmek için İnternet bağlantınız olmalıdır. Ağınızı görmüyorsanız veya kablolu ağ üzerinden bağlanmanız gerekiyorsa, **Diğer Ağ Seçenekleri**'ne tıklayın. İşiniz bittiğinde **Devam**'a tıklayın.  
+4. Wi-Fi ağınıza seçin. Kuruluma devam etmek için İnternet bağlantınız olmalıdır. Ağınızı görmüyorsanız veya kablolu ağ üzerinden bağlanmanız gerekiyorsa, **Diğer Ağ Seçenekleri**'ne tıklayın. İşiniz bittiğinde **devam**' a tıklayın.  
 
    ![Aralarından seçim yapılacak kullanılabilir ağlar listesinin gösterildiği macOS cihazı Kurulum Yardımcısı Wi-Fi Ağınızı Seçin ekranının görüntüsü. Ayrıca Diğer Ağ Seçenekleri düğmesi, Geri Düğmesi ve Devam düğmesi de gösterilir.](./media/macos-dep-wifi-1808.png)  
-5. Wi-Fi bağlantısı kurduktan sonra, **Uzaktan Yönetim** ekranı görüntülenir. Uzaktan yönetim, kuruluşunuzun yöneticisinin cihazınızı şirketin gerektirdiği hesaplar, ayarlar, uygulamalar ve ağlarla uzaktan yapılandırmasına olanak tanır. Cihazınızın nasıl yönetildiğini anlamanıza yardımcı olması için uzaktan yönetim açıklamasını okuyun. Ardından **Devam**'a tıklayın.  
+5. Wi-Fi bağlantısı kurduktan sonra, **Uzaktan Yönetim** ekranı görüntülenir. Uzaktan yönetim, kuruluşunuzun yöneticisinin cihazınızı şirketin gerektirdiği hesaplar, ayarlar, uygulamalar ve ağlarla uzaktan yapılandırmasına olanak tanır. Cihazınızın nasıl yönetildiğini anlamanıza yardımcı olması için uzaktan yönetim açıklamasını okuyun. Sonra **devam**' a tıklayın.  
 
    ![Uzaktan yönetimi açıklayan metin ve daha fazla bilgi sağlayan belgelerin bağlantısıyla, macOS cihazı Kurulum Yardımcısı Yönetim ekranının görüntüsü. Ayrıca Geri düğmesi ve Devam düğmesi de gösterilir.](./media/macos-dep-remote-management-1-1808.png)  
 6. İstendiğinde, iş veya okul hesabınızla oturum açın. Kimliğiniz doğrulandıktan sonra cihazınız bir yönetim profili yükler. Profil yapılandırılır ve kuruluşunuzun kaynaklarına erişmenize olanak tanır.  
-7. Daha sonra kişisel bilgilerin ne zaman toplandığını belirleyebilmek için, Apple veri ve gizlilik simgesiyle ilgili bilgileri okuyun. Ardından **Devam**'a tıklayın.  
+7. Daha sonra kişisel bilgilerin ne zaman toplandığını belirleyebilmek için, Apple veri ve gizlilik simgesiyle ilgili bilgileri okuyun. Sonra **devam**' a tıklayın.  
 
    ![El sıkışan iki kişinin çiziminin gösterildiği ve Apple'ın kişisel bilgileri kullanımının açıklandığı macOS cihazı Kurulum Yardımcısı Veri ve Gizlilik ekranının görüntüsü. Ayrıca Geri ve Devam düğmesi de gösterilir.](./media/macos-dep-apple-data-privacy-1808.png)  
 8. Cihazınız kaydedildikten sonra, tamamlamanız gereken ek adımlar olabilir. Gördüğümüz adımlar, kuruluşunuzun kurulum deneyimini nasıl özelleştirdiğine bağlıdır. Şunları yapmanızı gerektirebilir:
@@ -70,12 +70,12 @@ macOS cihazınızı yönetime kaydetmek için aşağıdaki adımları tamamlayı
 
 Cihazınızda Mac OS için Intune Şirket Portalı uygulamasını indirin. Uygulama, cihazınızı yönetimde izlemenize, eşitlemenize, eklemenize ve kaldırmanıza, ayrıca uygulamalar yüklemenize olanak tanır. Bu adımlar ayrıca cihazınızı Şirket Portalı'na kaydetmeyi de anlatmaktadır.
 
-1. MacOS cihazınızda [https://portal.manage.microsoft.com/EnrollmentRedirect.aspx](https://portal.manage.microsoft.com/EnrollmentRedirect.aspx)' a gidin.
+1. MacOS cihazınızda adresine gidin [https://portal.manage.microsoft.com/EnrollmentRedirect.aspx](https://portal.manage.microsoft.com/EnrollmentRedirect.aspx).
 2. İş veya okul hesabınızla Şirket Portalı web sitesinde oturum açın. 
 3. Mac OS için Şirket Portalı yükleyicisini indirmek için **Uygulamayı Al**'a tıklayın.
 4. İstendiğinde .pkg dosyasını açın ve yükleme adımlarını tamamlayın.
 5. Şirket Portalı’nı açın ve iş veya okul hesabınızla oturum açın.
 6. Cihazınızı bulun ve **Kaydol**'a tıklayın.
-7. **Devam** > **Bitti**'ye tıklayın. Cihazınız artık Şirket Portalı uygulamasında kurumsal ve uyumlu bir cihaz olarak görünmelidir.
+7. **Devam et** > ' e**tıklayın.** Cihazınız artık Şirket Portalı uygulamasında kurumsal ve uyumlu bir cihaz olarak görünmelidir.
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

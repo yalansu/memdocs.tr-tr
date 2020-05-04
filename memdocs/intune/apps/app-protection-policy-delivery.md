@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8318e6dc364d0dfbf38ac278938018b80f703b58
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79326234"
 ---
 # <a name="understand-app-protection-policy-delivery-timing"></a>Uygulama koruma Ilkesi teslim zamanlamasını anlama
@@ -33,7 +33,7 @@ Son Kullanıcı cihazlarınızda değişikliklerin ne zaman görünmeli olduğun
 
 Uygulama koruma ilkesi teslimi, kullanıcılarınız için lisans durumuna ve Intune hizmeti kaydına bağlıdır.  
 
-|    Kullanıcı Durumu    |    Uygulama koruma davranışı     |    Yeniden deneme aralığı (bkz. nota bakın)    |    Bu neden gerçekleşir?    |
+|    Kullanıcı durumu    |    Uygulama koruma davranışı     |    Yeniden deneme aralığı (bkz. nota bakın)    |    Bunun nedeni nedir?    |
 |-----------------------------------------------------|-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 |    Kiracı eklendi değil    |    Sonraki yeniden deneme aralığı için bekleyin.  Uygulama koruması Kullanıcı için etkin değil.    |    24 saat    |    Intune için kiracınızı kurmayan bir durum oluşur.    |
 |    Kullanıcı lisanslı değil     |    Sonraki yeniden deneme aralığı için bekleyin.  Uygulama koruması Kullanıcı için etkin değil.     |    12 saat, ancak Android cihazlarda bu Aralık, Intune uygulama SDK 'Sı sürüm 5.6.0 veya üstünü gerektirir. Aksi takdirde, Androd cihazları için Aralık 24 saattir.   |    Kullanıcı Intune için lisanslanmadığı zaman gerçekleşir.    |

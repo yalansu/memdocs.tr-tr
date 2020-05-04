@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7b339941da247cf6bc5efd9f3fa9c598415ed0e9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79325578"
 ---
 # <a name="user-lifetime-representation-in-the-microsoft-intune-data-warehouse"></a>Microsoft Intune Veri Ambarı’nda kullanıcı ömrü gösterimi
@@ -37,26 +37,26 @@ Bir varlığın ömrünü incelerseniz bu senaryoyu daha iyi anlayabilirsiniz.
 
 **John Smith** adlı bir kullanıcıya 06/01/2017 tarihinde bir lisans atandığını ve ardından **Kullanıcı** tablosunun aşağıdaki girdiye sahip olacağını varsayalım: 
  
-| GörünenAd | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
+| DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
-| John Smith | Yanlış | 06/01/2017 | 12/31/9999 | TRUE
+| John Smith | FALSE | 06/01/2017 | 12/31/9999 | TRUE
  
 John Smith, 25/07/2017 tarihinde lisansından vazgeçti. **Kullanıcı** tablosunda aşağıdaki girdiler bulunur. Var olan kayıtlardaki değişiklikler `marked`. 
 
-| GörünenAd | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
+| DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
-| John Smith | Yanlış | 06/01/2017 | `07/26/2017` | `FALSE` 
+| John Smith | FALSE | 06/01/2017 | `07/26/2017` | `FALSE` 
 | John Smith | TRUE | 07/26/2017 | 12/31/9999 | TRUE 
 
 İlk satır, John Smith'in 06.01.2017 - 07/25/2017 arasındaki Intune'da var olduğunu belirtir. İkinci kayıt, kullanıcının 07/25/2017 tarihinde silindiği ve artık Intune'de bulunmadığını belirtir.
 
 Şimdi, John Smith'in 08/31/2017 tarihinde atanmış yeni bir lisans aldığını varsayalım, ardından Kullanıcı tablosunda aşağıdaki girdiler bulunur:
  
-| GörünenAd | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
+| DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
-| John Smith | Yanlış | 06/01/2017 | 07/26/2017 | Yanlış 
+| John Smith | FALSE | 06/01/2017 | 07/26/2017 | FALSE 
 | John Smith | TRUE | 07/26/2017 | `08/31/2017` | `FALSE` 
-| John Smith | Yanlış | 08/31/2017 | 12/31/9999 | TRUE 
+| John Smith | FALSE | 08/31/2017 | 12/31/9999 | TRUE 
  
 Tüm kullanıcıların mevcut durumunu görmek isteyen bir kişi, `IsCurrent = TRUE`de bir filtre uygulamak ister. 
  

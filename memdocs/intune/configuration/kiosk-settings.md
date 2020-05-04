@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 60a4ac793500cd4d31df2188344e2b5f4e1094a4
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359155"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Intune kullanarak adanmış bir bilgi noktası olarak çalışacak Windows 10 ve Windows holographic for Business cihaz ayarları
@@ -42,15 +42,15 @@ Bu makalede bir cihaz yapılandırma profili oluşturma konusu gösterilmektedir
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
    - **Ad**: Yeni profil için açıklayıcı bir ad girin.
-   - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+   - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
    - **Platform**: **Windows 10 ve üzeri**’ni seçin
    - **Profil türü**: **bilgi noktası** seçin
 
-4. **Ayarlar**' da bir **bilgi noktası modu**seçin. **Bilgi noktası modu**, ilke tarafından desteklenen bilgi noktası modu türünü belirler. Şu seçenekler mevcuttur:
+4. **Ayarlar**' da bir **bilgi noktası modu**seçin. **Bilgi noktası modu**, ilke tarafından desteklenen bilgi noktası modu türünü belirler. Seçeneklere şunlar dahildir:
 
     - **Yapılandırılmamış** (varsayılan): İlke, bilgi noktası modunu etkinleştirmez.
     - **Tekli uygulama, tam ekran bilgi noktası**: Cihaz tek kullanıcı hesabı olarak çalışır ve tek bir Mağaza uygulamasına kilitlenir. Dolayısıyla kullanıcı oturum açtığında belirli bir uygulama başlar. Bu mod ayrıca kullanıcının yeni uygulamalar açmasını veya çalışan uygulamayı değiştirmesini önler.
@@ -59,10 +59,10 @@ Bu makalede bir cihaz yapılandırma profili oluşturma konusu gösterilmektedir
         Çok uygulamalı bilgi noktasının veya sabit amaçlı cihazın yararı, yalnızca ihtiyaç duyulan uygulamalara erişim sağlayarak kullanıcılara anlaşılması kolay bir deneyim sunmasıdır. Ayrıca, Ayrıca, kullanıcıların ihtiyaç duydukları uygulamaları görüntüleyebilecekleri şekilde kaldırabilirsiniz.
 
     Tüm ayarların bir listesi ve ne yapacaklarınız için, bkz.:
-      - [Windows 10 bilgi noktası ayarları](kiosk-settings-windows.md)
+      - [Windows 10 kiosk ayarları](kiosk-settings-windows.md)
       - [Windows holographic for Business bilgi noktası ayarları](kiosk-settings-holographic.md)
 
-5. İşiniz bittiğinde **Tamam** > **Oluştur**’u seçerek değişikliklerinizi kaydedin.
+5. İşiniz bittiğinde, değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin.
 
 Profil oluşturulur ve profiller listesinde gösterilir. Sonra, profili [atayın](device-profile-assign.md) .
 
@@ -72,7 +72,7 @@ Profil oluşturulur ve profiller listesinde gösterilir. Sonra, profili [atayın
 
 Aşağıdaki platformları çalıştıran cihazlar için bilgi noktası profilleri oluşturabilirsiniz:
 
-- [Android Cihaz Yöneticisi](device-restrictions-android.md#kiosk)
+- [Android cihaz yöneticisi](device-restrictions-android.md#kiosk)
 - [Android Kurumsal](device-restrictions-android-for-work.md#dedicated-devices)
 - [Windows 10 ve üzeri](kiosk-settings-windows.md)
-- [Windows Holographic for Business](kiosk-settings-holographic.md)
+- [Windows 10 Holographic for Business](kiosk-settings-holographic.md)

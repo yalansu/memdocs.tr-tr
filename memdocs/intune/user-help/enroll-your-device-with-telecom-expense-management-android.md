@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 2b67a7bd05e8d10ebd9d2ea8649eedce2a8b256c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324658"
 ---
 # <a name="enroll-your-android-device-in-telecom-expense-management"></a>Android cihazınızı telekomünikasyon gider yönetimine kaydetme
@@ -40,7 +40,7 @@ Devam etmek için ekranın sağ üst köşesindeki __ileri__ okuna dokunun. Şir
 
 ## <a name="enroll-into-datalert-using-your-microsoft-work-or-school-account"></a>Microsoft iş veya okul hesabınızı kullanarak Datalert’e kaydolma
 
-1. __Microsoft hesabı ile kaydol__’u seçin.
+1. __Microsoft Hesabı ile kaydol__’u seçin.
 
    ![Bir Microsoft Office 365 hesabı ve Intune aboneliğiniz olduğunda ekranın üst kısmında telefon numarası alanı ve alt kısmında "Microsoft hesabı ile kaydol" seçenekleri sunan Datalert uygulamasının Ayarlar ekranının görüntüsü.](./media/and-enroll-12a-tem-datalert-enroll-msft-account.png)
 

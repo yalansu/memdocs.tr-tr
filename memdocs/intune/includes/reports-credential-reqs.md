@@ -2,7 +2,7 @@
 
 ## <a name="azure-ad-and-intune-credential-requirements"></a>Azure AD ve Intune kimlik bilgisi gereksinimleri
 
-Kimlik doğrulaması ve yetkilendirme, Azure AD kimlik bilgileri ve Intune rol tabanlı erişim denetimine (RBAC) bağlıdır. Varsayılan olarak kiracınızdaki tüm genel yöneticiler ve Intune hizmet yöneticilerinin Veri ambarına erişimi vardır. Intune rolleri ile kullanıcılara **Intune veri ambarı** kaynağı erişimi vererek daha fazla kullanıcıya erişim sağlayabilirsiniz.
+Kimlik doğrulaması ve yetkilendirme, Azure AD kimlik bilgileri ve Intune rol tabanlı erişim denetimine (RBAC) bağlıdır. Varsayılan olarak kiracınızdaki tüm genel yöneticiler ve Intune hizmet yöneticilerinin Veri ambarına erişimi vardır. Intune **veri ambarı** kaynağına erişim izni vererek daha fazla kullanıcıya erişim sağlamak için Intune rollerini kullanın.
 
 API dahil olmak üzere Intune Veri Ambarı’na erişim önkoşulları şöyledir:
 

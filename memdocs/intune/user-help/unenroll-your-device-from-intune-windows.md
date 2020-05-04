@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1392530643b4846c871b942d8265a7b43ace3124
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327798"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Windows cihazınızı yönetimden kaldırma
@@ -33,7 +33,7 @@ Artık aşağıdakileri yapmak istemediğinizde veya ihtiyaç duymadığınızda
 * İş veya okul e-postasına, uygulamasına ya da diğer kaynaklara erişin.
 
 Cihazın kaydını sildikten sonra cihazla okul veya iş kaynaklarına erişemezsiniz. Aşağıdaki Windows cihazlarını yönetimden kaldırabilirsiniz.  
-* Windows 10 cihazlar 
+* Windows 10 cihazları 
 * Windows 8.1 bilgisayar
 * Windows 8.1 telefon
  
@@ -48,7 +48,7 @@ Bir Windows 10 cihazını yönetimden kaldırmak için aşağıdaki adımları t
 2. **Giriş sayfası**'nda **Cihazlarım** bölümüne gidin.
 3. Kaldırmak istediğiniz cihazı seçin.
 3. Uygulamanın sağ üst köşesinde **Daha fazla** simgesini seçin.
-4. **Kaldır**’a tıklayın. 
+4. **Kaldır**’ı seçin. 
 5. Cihazın kaldırılmasını onaylamak için **Kaldır**'ı seçin.  
 
 ### <a name="remove-in-company-portal-app-device-context-menu"></a>Şirket Portalı uygulaması cihaz bağlam menüsünde kaldırma  
@@ -59,7 +59,7 @@ Bir Windows 10 cihazını yönetimden kaldırmak için aşağıdaki adımları t
 
 2. [Bağlam menüsünü](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus) açmak için cihaza sağ tıklayın veya cihazı basılı tutun.  
 
-3. **Kaldır**’a tıklayın.  
+3. **Kaldır**’ı seçin.  
 
     ![Windows için Şirket Portalı uygulaması Giriş sayfasının örnek ekran görüntüsü. Cihaz bağlam menüsü sayfanın **Cihazlarım** bölümünde görülebilir ve "Yeniden adlandır", "Kaldır" ve "Erişimi denetle" eylemlerini gösterir.](./media/1809_DeviceContextMenu_Windows_CP.png)  
 
@@ -70,14 +70,14 @@ Bir Windows 10 cihazını yönetimden kaldırmak için aşağıdaki adımları t
 
 ### <a name="remove-in-device-settings-app"></a>Cihaz Ayarlar uygulamasında kaldırma
 1. Ayarlar uygulamasını açın. 
-2. **Hesaplar** > **İşe veya okula erişmeye** gidin.
+2. **Hesaplara** > **erişim iş veya okul**sayfasına gidin.
 3. Kaldırmak istediğiniz bağlı hesabı ve ardından **Bağlantıyı kes**’i seçin.
 4. Cihazın kaldırılmasını onaylamak için **Evet**’i seçin.
 
 ## <a name="remove-your-windows-81-computer"></a>Windows 8.1 bilgisayarınızı kaldırma
 Bir Windows 8.1 bilgisayarı Intune’dan kaldırmak için aşağıdaki adımları tamamlayın.
 
-1. **Bilgisayar Ayarları** > **Ağ** > **Çalışma Alanı**’na gidin.
+1. **Bilgisayar ayarları** > **ağ** > **çalışma alanı**' na gidin.
 2. **Çalışma Alanına Katılma** altında **Çık**’ı seçin.
 3. **Cihaz yönetimini aç** altında **Kapat**’ı seçin.
 4. Açılan pencerede **Kapat**’ı seçin.
@@ -85,7 +85,7 @@ Bir Windows 8.1 bilgisayarı Intune’dan kaldırmak için aşağıdaki adımlar
 ## <a name="remove-your-windows-81-phone"></a>Windows 8.1 telefonunuzu kaldırma
 Bir Windows 8.1 telefonunu Intune'dan kaldırmak için aşağıdaki adımları tamamlayın.
 
-1. **Ayarlar** > **Çalışma Alanı**’na gidin.
+1. **Ayarlar** > **çalışma alanı**' na gidin.
 2. Kaydını kaldırmak istediğiniz çalışma alanı hesabına dokunun.
 3. Ekranın altındaki **Sil** seçeneğine dokunun.
 4. **Hesabı sil** iletişim kutusunda **Sil**’e dokunun.  

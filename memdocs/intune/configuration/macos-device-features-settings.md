@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/25/2020
+ms.date: 04/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c6c8b9d964355b1c08756fc2026a87e30bc7297
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 63ffda60d00c1a386eb65d851563c911957c0acd
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551522"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615723"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Intune 'da macOS cihaz özelliği ayarları
 
@@ -43,7 +43,7 @@ Bu makale, bu ayarları listeler ve her ayarın ne yaptığını açıklar. Ayr�
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ayarlar için geçerlidir: cihaz kaydı ve otomatik cihaz kaydı
 
 - **IP adresi**: yazıcının IPv4 veya IPv6 adresini girin. Yazıcıları tanımlamak için konak adlarını kullanıyorsanız, Terminal uygulamasındaki yazıcıya ping ekleyerek IP adresini alabilirsiniz. [IP adresini ve yolu al](#get-the-ip-address-and-path) (Bu makalede) daha fazla ayrıntı sağlar.
-- **Yol**: yazıcının yolunu girin. Yol, genellikle ağınızdaki yazıcılar için `ipp/print`. [IP adresini ve yolu al](#get-the-ip-address-and-path) (Bu makalede) daha fazla ayrıntı sağlar.
+- **Yol**: yazıcının yolunu girin. Yol, genellikle `ipp/print` ağınızdaki yazıcılar içindir. [IP adresini ve yolu al](#get-the-ip-address-and-path) (Bu makalede) daha fazla ayrıntı sağlar.
 - **Bağlantı noktası** (iOS 11.0 +, ıpados 13.0 +): AirPrint hedefinin dinleme bağlantı noktasını girin. Bu özelliği boş bırakırsanız AirPrint varsayılan bağlantı noktasını kullanır.
 - **TLS** (iOS 11.0 +, ıpados 13.0 +): Aktarım katmanı GÜVENLIĞI (TLS) Ile güvenli AirPrint bağlantıları sağlamak için **Etkinleştir** ' i seçin.
 
@@ -56,35 +56,32 @@ Ayrıca, AirPrint yazıcılarının listesini içeren bir virgülle ayrılmış 
 AirPrinter sunucuları eklemek için, yazıcının IP adresi, kaynak yolu ve bağlantı noktası gerekir. Aşağıdaki adımlarda bu bilgilerin nasıl alınacağı gösterilmektedir.
 
 1. AirPrint yazıcıları ile aynı yerel ağa (alt ağ) bağlı bir Mac üzerinde, açık **Terminal** ( **/Applications/Utilities**).
-2. Terminal uygulamasında `ippfind`yazın ve ENTER ' u seçin.
+2. Terminal uygulamasında yazın `ippfind`ve ENTER ' u seçin.
 
-    Yazıcı bilgilerini aklınızda edin. Örneğin, `ipp://myprinter.local.:631/ipp/port1`benzer bir işlem döndürebilir. İlk bölüm, yazıcının adıdır. Son Bölüm (`ipp/port1`) kaynak yoludur.
+    Yazıcı bilgilerini aklınızda edin. Örneğin, şuna benzer bir şey döndürebilir `ipp://myprinter.local.:631/ipp/port1`. İlk bölüm, yazıcının adıdır. Son Bölüm (`ipp/port1`) kaynak yoludur.
 
-3. Terminalde `ping myprinter.local`yazın ve ENTER ' u seçin.
+3. Terminalde yazın `ping myprinter.local`ve ENTER ' u seçin.
 
-   IP adresini aklınızda edin. Örneğin, `PING myprinter.local (10.50.25.21)`benzer bir işlem döndürebilir.
+   IP adresini aklınızda edin. Örneğin, şuna benzer bir şey döndürebilir `PING myprinter.local (10.50.25.21)`.
 
-4. IP adresi ve kaynak yolu değerlerini kullanın. Bu örnekte, IP adresi `10.50.25.21`ve kaynak yolu `/ipp/port1`.
+4. IP adresi ve kaynak yolu değerlerini kullanın. Bu örnekte, IP adresi `10.50.25.21`ve kaynak yolu olur. `/ipp/port1`
 
 ## <a name="login-items"></a>Oturum açma öğeleri
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Ayarlar için geçerlidir: tüm kayıt türleri
 
-- **Dosyalar, klasörler ve özel uygulamalar**: kullanıcılar cihazlarında oturum açtıklarında açmak istediğiniz bir dosya, klasör, özel uygulama veya sistem uygulamasının yolunu **ekleyin** . Kuruluşunuz için oluşturulmuş veya özelleştirilmiş olan sistem uygulamaları veya uygulamalar genellikle `Applications` klasöründedir ve `/Applications/AppName.app`benzer bir yoldur. 
+- **Dosyalar, klasörler ve özel uygulamalar**: kullanıcılar cihazlarında oturum açtıklarında açmak istediğiniz bir dosya, klasör, özel uygulama veya sistem uygulamasının yolunu **ekleyin** . Kuruluşunuz için oluşturulmuş veya özelleştirilmiş olan sistem uygulamaları veya uygulamalar genellikle `Applications` klasöründe, şuna benzer bir yol ile yapılır. `/Applications/AppName.app` 
 
-  Birçok dosya, klasör ve uygulama ekleyebilirsiniz. Örneğin şunu girin:  
+  Birçok dosya, klasör ve uygulama ekleyebilirsiniz. Örneğin şunu girin:   
   
   - `/Applications/Calculator.app`
   - `/Applications`
   - `/Applications/Microsoft Office/root/Office16/winword.exe`
   - `/Users/UserName/music/itunes.app`
   
-  Herhangi bir uygulama, klasör veya dosya eklerken doğru yolu girdiğinizden emin olun. Tüm öğeler `Applications` klasöründedir. Kullanıcılar bir öğeyi bir konumdan diğerine taşıdıysanız yol değişir. Bu taşınan öğe, Kullanıcı oturum açtığında açılmaz.
+  Herhangi bir uygulama, klasör veya dosya eklerken doğru yolu girdiğinizden emin olun. Tüm öğeler `Applications` klasörde değil. Kullanıcılar bir öğeyi bir konumdan diğerine taşıdıysanız yol değişir. Bu taşınan öğe, Kullanıcı oturum açtığında açılmaz.
 
-- **Kullanıcı yapılandırmasından Gizle**: **Gizle** , uygulamayı kullanıcılar & Gruplar oturum açma öğeleri listesinde göstermez. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kullanıcılar & Gruplar oturum açma öğeleri listesinde, Gizle seçeneği işaretli değilken, oturum açma sırasında başlattığınız öğeyi gösterir.
-
-  > [!NOTE]
-  > Bu ayar, sonraki birkaç hafta boyunca tüm müşterilere gönderilir.
+- **Kullanıcı yapılandırmasından Gizle**: **Gizle** , uygulamayı kullanıcılar & gruplar oturum açma öğeleri listesinde göstermez. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kullanıcılar & gruplar oturum açma öğeleri listesinde, Gizle seçeneği işaretli değilken, oturum açma sırasında başlattığınız öğeyi gösterir.
 
 ## <a name="login-window"></a>Oturum açma penceresi
 
@@ -112,7 +109,7 @@ AirPrinter sunucuları eklemek için, yazıcının IP adresi, kaynak yolu ve ba�
 
 #### <a name="other"></a>Diğer
 
-- **Konsoldan Kullanıcı oturumunu devre dışı bırak**: **devre dışı bırak** , oturum açmak için kullanılan MacOS komut satırını gizler. Tipik kullanıcılar için bu ayarı **devre dışı bırakın** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, gelişmiş kullanıcıların macOS komut satırını kullanarak oturum açmalarına izin verebilir. Konsol modunu girmek için, kullanıcılar Kullanıcı adı alanına `>console` girer ve konsol penceresinde kimlik doğrulaması yapılmalıdır.
+- **Konsoldan Kullanıcı oturumunu devre dışı bırak**: **devre dışı bırak** , oturum açmak için kullanılan MacOS komut satırını gizler. Tipik kullanıcılar için bu ayarı **devre dışı bırakın** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, gelişmiş kullanıcıların macOS komut satırını kullanarak oturum açmalarına izin verebilir. Konsol modunu girmek için, kullanıcılar Kullanıcı `>console` adı alanına girer ve konsol penceresinde kimlik doğrulaması yapılmalıdır.
 
 #### <a name="apple-menu"></a>Apple menüsü
 
@@ -142,14 +139,14 @@ Bu özellik şu platformlarda geçerlidir:
   > [!TIP]
   > **Yeniden yönlendirme** ve **kimlik bilgisi** türleriyle, uzantıdan geçirilecek kendi yapılandırma değerlerinizi eklersiniz. **Kimlik bilgisi**kullanıyorsanız, **Kerberos** türünde Apple tarafından sunulan yerleşik yapılandırma ayarlarını kullanmayı göz önünde bulundurun.
 
-- **UZANTı kimliği** (yeniden yönlendirme ve kimlik bilgisi): `com.apple.ssoexample`gibi SSO uygulama uzantınızı tanımlayan paket tanımlayıcısını girin.
-- **Takım Kimliği** (yeniden yönlendirme ve kimlik bilgisi): SSO uygulama uzantınızın ekip tanımlayıcısını girin. Takım tanımlayıcısı, Apple tarafından oluşturulan `ABCDE12345`gibi 10 karakterlik alfasayısal bir dizedir (sayılar ve harfler). 
+- **UZANTı kimliği** (yeniden yönlendirme ve kimlik bilgisi): SSO uygulama uzantınızı tanımlayan paket tanımlayıcısını (gibi) girin `com.apple.ssoexample`.
+- **Takım Kimliği** (yeniden yönlendirme ve kimlik bilgisi): SSO uygulama uzantınızın ekip tanımlayıcısını girin. Takım tanımlayıcısı, Apple tarafından oluşturulan ve gibi 10 karakterlik alfasayısal bir dizedir (sayılar ve harfler) `ABCDE12345`. 
 
   [Takım kimliğinizi bulun](https://help.apple.com/developer-account/#/dev55c3c710c) (Apple 'ın Web sitesini açar) daha fazla bilgi içerir.
 
-- **Bölge** (kimlik bilgileri ve Kerberos): kimlik doğrulama Realm adını girin. Bölge adı, `CONTOSO.COM`gibi büyük harfli olmalıdır. Genellikle, bölge adınız DNS etki alanı adınızla aynıdır, ancak tümü büyük harfle aynıdır.
+- **Bölge** (kimlik bilgileri ve Kerberos): kimlik doğrulama Realm adını girin. Bölge adı, gibi büyük harfli olmalıdır `CONTOSO.COM`. Genellikle, bölge adınız DNS etki alanı adınızla aynıdır, ancak tümü büyük harfle aynıdır.
 
-- **Etki alanları** (kimlik bilgileri ve Kerberos): SSO aracılığıyla kimlik doğrulayabilecek sitelerin etki alanı veya ana bilgisayar adlarını girin. Örneğin, Web siteniz `mysite.contoso.com`, `mysite` ana bilgisayar adıdır ve `contoso.com` etki alanı adıdır. Kullanıcılar bu sitelerden birine bağlandıklarında, uygulama uzantısı kimlik doğrulama sınamasını işler. Bu kimlik doğrulaması, kullanıcıların oturum açmak için yüz KIMLIĞI, Touch ID veya Apple pincode/geçiş kodu kullanmasına izin verir.
+- **Etki alanları** (kimlik bilgileri ve Kerberos): SSO aracılığıyla kimlik doğrulayabilecek sitelerin etki alanı veya ana bilgisayar adlarını girin. Örneğin, Web siteniz ise `mysite.contoso.com` `mysite` , ana bilgisayar adı ve `contoso.com` etki alanı adıdır. Kullanıcılar bu sitelerden birine bağlandıklarında, uygulama uzantısı kimlik doğrulama sınamasını işler. Bu kimlik doğrulaması, kullanıcıların oturum açmak için yüz KIMLIĞI, Touch ID veya Apple pincode/geçiş kodu kullanmasına izin verir.
 
   - Çoklu oturum açma uygulama uzantılarınızın Intune profillerindeki tüm etki alanları benzersiz olmalıdır. Farklı türlerde SSO uygulama uzantıları kullanıyor olsanız bile, bir etki alanını hiçbir oturum açma uygulama uzantısı profilinde tekrarlayamıyorum.
   - Bu etki alanları büyük/küçük harfe duyarlı değildir.
@@ -160,11 +157,11 @@ Bu özellik şu platformlarda geçerlidir:
   - URL 'Lerin http://veya https://ile başlaması gerekir.
 
 - **Ek yapılandırma** (yeniden yönlendirme ve kimlik bilgileri): SSO uygulama uzantısına geçirilecek uzantıya özgü ek veriler girin:
-  - **Anahtar**: `user name`gibi eklemek istediğiniz öğenin adını girin.
+  - **Anahtar**: eklemek istediğiniz öğenin adını girin, örneğin `user name`.
   - **Tür**: veri türünü girin. Seçenekleriniz şunlardır:
 
     - Dize
-    - Boole: **yapılandırma değeri**' nde `True` veya `False`girin.
+    - Boole: **yapılandırma değerinde**, veya `False`girin `True` .
     - Tamsayı: **yapılandırma değeri**alanına bir sayı girin.
     
   - **Değer**: verileri girin.
@@ -187,13 +184,13 @@ Bu özellik şu platformlarda geçerlidir:
 - **Minimum parola uzunluğu** (yalnızca Kerberos): kullanıcıların parolalarını yapabilirler en az karakter sayısını girin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcılara en az parola uzunluğu zorlayamayabilir.
 - **Parola yeniden kullanım sınırı** (yalnızca Kerberos): etki alanında önceki bir parolanın yeniden kullanılabilmesi için kullanılması gereken yeni parola sayısını 1-24 ' dan girin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi parola yeniden kullanım sınırını zorlayamayabilir.
 - **En az parola yaşı** (yalnızca Kerberos): kullanıcıların değiştirebilmesi için, etki alanında bir parolanın kullanılması gereken gün sayısını girin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi değiştirilebilmesi için en az bir parola yaşı zorlamayamayabilir.
-- **Parola süre sonu bildirimi** (yalnızca Kerberos): parolanın süresi dolmadan önce kullanıcıların parolasının süresinin dolacağını belirten gün sayısını girin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi `15` gün kullanabilir.
+- **Parola süre sonu bildirimi** (yalnızca Kerberos): parolanın süresi dolmadan önce kullanıcıların parolasının süresinin dolacağını belirten gün sayısını girin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi günleri kullanabilir `15` .
 - **Parola kullanım süresi** (yalnızca Kerberos): cihaz parolasının değiştirilmesi gereken gün sayısını girin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sisteminin hiç bir parola süre sonu yoktur.
 - **Parola değiştirme URL 'si** (yalnızca Kerberos): kullanıcılar bir Kerberos parolası değişikliği başlatdığındaki AÇıLAN URL 'yi girin.
-- **Asıl ad** (yalnızca Kerberos): Kerberos sorumlusunun Kullanıcı adını girin. Bölge adını eklemeniz gerekmez. Örneğin, `user@contoso.com``user` asıl addır ve `contoso.com` bölge adıdır.
+- **Asıl ad** (yalnızca Kerberos): Kerberos sorumlusunun Kullanıcı adını girin. Bölge adını eklemeniz gerekmez. Örneğin, içinde `user@contoso.com` `user` asıl addır ve `contoso.com` bölge adıdır.
 
   > [!TIP]
-  > - Büyük köşeli ayraç `{{ }}`girerek asıl ad içindeki değişkenleri de kullanabilirsiniz. Örneğin, Kullanıcı adını göstermek için `Username: {{username}}`girin. 
+  > - Ayrıca, küme ayraçları `{{ }}`girerek asıl ad içindeki değişkenleri de kullanabilirsiniz. Örneğin, Kullanıcı adını göstermek için girin `Username: {{username}}`. 
   > - Ancak, değişkenler kullanıcı arabiriminde doğrulanmamış ve büyük/küçük harfe duyarlı olduğundan değişken değiştirme konusunda dikkatli olun. Doğru bilgileri girdiğinizden emin olun.
   
 - **Active Directory site kodu** (yalnızca Kerberos): Kerberos uzantısının kullanması gereken Active Directory sitenin adını girin. Kerberos uzantısı Active Directory site kodunu otomatik olarak bulagerekebilmeniz için bu değeri değiştirmeniz gerekebilir.
@@ -218,15 +215,15 @@ Bu özellik şu platformlarda geçerlidir:
 
 - **Uygulama kimliği**: bir Web sitesiyle ilişkilendirilecek uygulamanın uygulama tanımlayıcısını girin. Uygulama tanımlayıcısı, takım KIMLIĞINI ve paket KIMLIĞINI içerir: `TeamID.BundleID`.
 
-  Takım KIMLIĞI, uygulama geliştiricileriniz için `ABCDE12345`gibi Apple tarafından oluşturulan 10 karakterlik alfasayısal bir dizedir (harfler ve rakamlar). [Takım kimliği bulun](https://help.apple.com/developer-account/#/dev55c3c710c) (Apple 'ın Web sitesini açar) daha fazla bilgi içerir.
+  Takım KIMLIĞI, uygulama geliştiricileriniz için Apple tarafından oluşturulan 10 karakterlik alfasayısal bir dizedir (harfler ve rakamlar) `ABCDE12345`. [Takım kimliğinizi](https://help.apple.com/developer-account/#/dev55c3c710c) bulun (Apple 'ın Web sitesini açar) daha fazla bilgi içerir.
 
   Paket KIMLIĞI, uygulamayı benzersiz şekilde tanımlar ve genellikle ters etki alanı adı gösteriminde biçimlendirilir. Örneğin, Finder 'ın paket KIMLIĞI `com.apple.finder`. Paket KIMLIĞINI bulmak için terminalde AppleScript kullanın:
 
   `osascript -e 'id of app "ExampleApp"'`
 
-- **Etki alanı**: bir uygulamayla ilişkilendirilecek Web sitesi etki alanını girin. Etki alanı, `webcredentials: www.contoso.com`gibi bir hizmet türü ve tam konak adı içerir.
+- **Etki alanı**: bir uygulamayla ilişkilendirilecek Web sitesi etki alanını girin. Etki alanı, bir hizmet türü ve gibi tam konak adı içerir `webcredentials:www.contoso.com`.
 
-  Etki alanının başlangıcından önce `*.` (bir yıldız joker karakteri ve bir nokta) girerek ilişkili bir etki alanının tüm alt etki alanlarını eşleştirebilirsiniz. Süre gereklidir. Tam etki alanları joker etki alanlarından daha yüksek önceliğe sahiptir. Bu nedenle, tam alt etki *alanında bir eşleşme* bulunmazsa üst etki alanlarından desenler eşleştirilir.
+  Etki alanının başlangıcından önce (bir yıldız joker karakteri ve bir `*.` nokta) girerek ilişkili bir etki alanının tüm alt etki alanlarını eşleştirebilirsiniz. Süre gereklidir. Tam etki alanları joker etki alanlarından daha yüksek önceliğe sahiptir. Bu nedenle, tam alt etki *alanında bir eşleşme* bulunmazsa üst etki alanlarından desenler eşleştirilir.
 
   Hizmet türü şu olabilir:
 
@@ -237,7 +234,7 @@ Bu özellik şu platformlarda geçerlidir:
 - **Ekle**: uygulamalarınızı ve ilişkili etki alanlarınızı eklemek için seçin.
 
 > [!TIP]
-> MacOS cihazınızda sorun gidermek için, **sistem tercihleri** > **profiller**' i açın. Oluşturduğunuz profilin cihaz profilleri listesinde olduğunu onaylayın. Listeleniyorsa, **Ilişkili etki alanı yapılandırmasının** profilde olduğundan emin olun ve doğru uygulama kimliği ve etki alanlarını içerir.
+> MacOS cihazınızda sorun gidermek için **Sistem Tercihleri** > **profilleri**' ni açın. Oluşturduğunuz profilin cihaz profilleri listesinde olduğunu onaylayın. Listeleniyorsa, **Ilişkili etki alanı yapılandırmasının** profilde olduğundan emin olun ve doğru uygulama kimliği ve etki alanlarını içerir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

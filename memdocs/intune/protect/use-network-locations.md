@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4da3a8e9e59f1f6a4d1c38354f14163c4773fd7d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325295"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Intune'da Konumları (ağ yalıtımı) kullanma
@@ -30,7 +30,7 @@ Cihaz bir konumdan ayrıldığında şirket ağına erişimini engelleyebilirsin
 
 Ağ yalıtımı olarak da bilinen, ağ konumu tabanlı bir uyumluluk ilkesi oluşturabilirsiniz. İlke, cihazların uyumlu olabilmesi için iş ağına bağlı olmasını zorunlu tutar. Bu ilke koşullu erişim ilkeleriyle birlikte kullanılabilir, böylece cihazların *yalnızca* cihaz iş ağına bağlıyken iş kaynaklarına erişimi olur. İş ağına bağlı olmayan cihaz, uyumsuz duruma geçer ve iş kaynaklarına erişimi kaybeder.
 
-Aşağıdaki senaryoyu göz önünde bulundurun:
+Şu senaryoyu göz önünde bulundurun:
 
 Üretim tesisinizde bazı çalışanlar Android cihazını kullanıyor. Bir çalışan Android cihazını tesisin dışına çıkarıyor. Yetkisiz erişimi önlemeye yardımcı olmak için şunları yapabilirsiniz:
 
@@ -50,14 +50,14 @@ Konum tabanlı bir uyumluluk ilkesi oluşturmak için:
 
 ## <a name="create-a-location"></a>Konum oluşturma
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nde, **cihaz** > **uyumluluk ilkeleri** ** >  > ** **Oluştur**' u seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar** > **uyumluluk ilkeleri** > **konumları** > **Oluştur**' u seçin.
 
 2. Aşağıdaki özellikleri girin:  
 
-   - Gerekli. Konum için **Üretim katı** veya **Bina 44-güvenli** gibi bir **Ad** girin.
-   - İsteğe bağlı. CIDR (Sınıfsız Etki Alanları Arası Yönlendirme) gösterimiyle **gibi bir**IPv4 Aralığı`aaa.bbb.ccc.ddd/n` girin.
-   - İsteğe bağlı. **gibi bir**IPv4 Ağ Geçidi`aaa.bbb.ccc.ddd` adresi girin.
-   - İsteğe bağlı. **gibi bir**IPv4 DHCP Sunucusu`aaa.bbb.ccc.ddd` adresini girin.
+   - Gereklidir. Konum için **Üretim katı** veya **Bina 44-güvenli** gibi bir **Ad** girin.
+   - İsteğe bağlı. CIDR (Sınıfsız Etki Alanları Arası Yönlendirme) gösterimiyle `aaa.bbb.ccc.ddd/n` gibi bir **IPv4 Aralığı** girin.
+   - İsteğe bağlı. `aaa.bbb.ccc.ddd` gibi bir **IPv4 Ağ Geçidi** adresi girin.
+   - İsteğe bağlı. `aaa.bbb.ccc.ddd` gibi bir **IPv4 DHCP Sunucusu** adresini girin.
    - İsteğe bağlı. **IPv4 DNS Sunucuları** adres listesini girin. Bu ayar **alt küme eşleştirmesi** kullanır. Cihazdaki IPv4 DNS Sunucuları tanımlanan değerlerin alt kümeleriyse, cihaz yalıtımın içinde olarak kabul edilir. Her satıra bir adres girdiğinizden emin olun; örneğin:  
      `aaa.bbb.ccc.ddd`  
      `aaa.bbb.ccc.ddd`
@@ -65,7 +65,7 @@ Konum tabanlı bir uyumluluk ilkesi oluşturmak için:
      `contoso.com`  
      `contoso.org`
 
-3. Yaptığınız değişiklikleri **kaydedin**.
+3. Değişikliklerinizi **kaydedin** .
 
 ## <a name="create-the-location-compliance-policy"></a>Konum uyumluluk ilkesini oluşturma
 

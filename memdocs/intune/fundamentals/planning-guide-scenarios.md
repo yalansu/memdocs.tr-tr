@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d277b47b2d753b5068e871fe33ce0cab48cfb1e4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330950"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Mobil cihaz yönetimi kullanım örneği senaryolarını belirleme
@@ -48,15 +48,15 @@ Her kullanım örneği senaryosunun alt kullanım örnekleri de içerip içermed
 
 - Yönetici
 
-- Bilgi Noktası
+- Bilgi noktası
 
 Kullanım örneği ve alt kullanım örneği senaryolarına birkaç örnek aşağıda verilmiştir:
 
-| **Kullanım örnekleri** | **Alt kullanım örnekleri** |
+| **Uygulama alanları** | **Alt kullanım örnekleri** |
 |:---:|:---:|
 | Kurumsal | Bilgi çalışanı |              
 | Kurumsal | Yöneticiler |           
-| Kurumsal | Bilgi Noktası |
+| Kurumsal | Bilgi noktası |
 | KCG | Bilgi çalışanı |           
 | KCG | Yöneticiler |
 
@@ -66,11 +66,11 @@ Kuruluşunuzun kullanım örneği ve alt kullanım örneği senaryolarını girm
 
 Şimdi, her bir kullanım örneği ve alt kullanım örneği senaryosu ile ilişkili kuruluş gruplarını tanımlamanız gerekir. Örneğin:
 
-| **Kullanım örnekleri** | **Alt kullanım örnekleri** | **Kuruluş grupları** |
+| **Uygulama alanları** | **Alt kullanım örnekleri** | **Kuruluş grupları** |
 |:---:|:---:|:---:|
 | Kurumsal | Bilgi çalışanı | İK, Finans |               
 | Kurumsal | Yönetici | İK, Finans |            
-| Kurumsal | Bilgi Noktası | Perakende |
+| Kurumsal | Bilgi noktası | Perakende |
 | KCG | Bilgi çalışanı | Pazarlama, Satış |            
 | KCG | Yönetici | Pazarlama, Satış |
 
@@ -81,11 +81,11 @@ Sonraki adım, her bir kullanım örneği senaryosuyla ilişkili mobil cihaz pla
 
 Örneğin, kurumsal kullanım örneği senaryonuz iOS/ıpados ve Android Samsung KNOX cihaz platformlarını destekleyebilir. KCG ilkeniz Android (Samsung Knox olmayan) ve Windows 10 Mobile gibi ek mobil cihaz platformları için destek içerebilir. Önceki örnekleri temel alarak mobil her kullanım örneği senaryosu ile cihaz platformları ilişkilendirdik.
 
-| **Kullanım örnekleri** | **Alt kullanım örnekleri** | **Gruplar** | **Cihaz platformları** |   
+| **Uygulama alanları** | **Alt kullanım örnekleri** | **Gruplar** | **Cihaz platformları** |   
 |:---:|:---:|:---:|:---:|
 | Kurumsal | Bilgi çalışanı | İK, Finans | iOS/iPadOS |                                                           
 | Kurumsal | Yöneticiler | İK, Finans | iOS/iPadOS |                                                           
-| Kurumsal | Bilgi Noktası | Perakende | Android |
+| Kurumsal | Bilgi noktası | Perakende | Android |
 | KCG | Bilgi çalışanı | Pazarlama, Satış | iOS/iPadOS |                                                           
 | KCG | Yöneticiler | Pazarlama, Satış | iOS/iPadOS |
 

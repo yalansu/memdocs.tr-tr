@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 2229d2845e5e9e293d14613587b301641e60ecc9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324254"
 ---
 # <a name="turn-off-microsoft-usage-data-collection"></a>Microsoft kullanım verilerini toplamayı devre dışı bırakma
@@ -33,7 +33,7 @@ Microsoft, ürünler ve hizmetlerle ilgili belirli verileri otomatik olarak topl
 Android cihazınızda veri toplamayı devre dışı bırakmak için:  
 
 1. Şirket Portalı veya Microsoft Intune uygulamasını açın.
-2. **Ayarlar**’ı seçin.
+2. **Ayarlar**' ı seçin.
 3. Kullanım verileri ayarı altında, geçiş konumuna çevirin. 
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 893981700ede9587a980faa0e4d6b0384c24e3d4
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80401496"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Hızlı Başlangıç: Microsoft Intune'u ücretsiz deneyin
@@ -64,8 +64,8 @@ Intune'u 30 gün boyunca ücretsiz deneyebilirsiniz. Zaten bir iş veya okul hes
 
 Portalda zaten oturum açmadıysanız, aşağıdaki adımları izleyin:
 
-1. Yeni bir tarayıcı penceresi açın ve adres çubuğuna **https://endpoint.microsoft.com** ifadesini girin. 
-2. Oturum açmak için yukarıdaki adımlarda verilen kullanıcı KIMLIĞINI kullanın ( *yourID@yourdomain* . onmicrosoft.com).
+1. Yeni bir tarayıcı penceresi açın ve adres **https://endpoint.microsoft.com** çubuğuna yazın. 
+2. Oturum açmak için yukarıdaki adımlarda verilen kullanıcı KIMLIĞINI kullanın (*yourID@yourdomain*. onmicrosoft.com).
 
     ![Portal oturum açma sayfasının görüntüsü](./media/free-trial-sign-up/azure-portal-signin.png)
 
@@ -86,8 +86,8 @@ Microsoft Uç Nokta Yöneticisi 'nde oturum açtıktan sonra, MDM yetkilisini he
 
 ### <a name="to-set-the-mdm-authority-to-intune-follow-these-steps"></a>MDM yetkilisini Intune olarak ayarlamak için şu adımları izleyin:
 
-1. Yeni bir tarayıcı penceresi açın ve adres çubuğuna **https://portal.azure.com** ifadesini girin. 
-2. **Tüm hizmetler** > **Microsoft Intune**'u seçin.
+1. Yeni bir tarayıcı penceresi açın ve adres **https://portal.azure.com** çubuğuna yazın. 
+2. **Tüm hizmetler** > **Microsoft Intune**seçin.
 3. Cihaz yönetimini etkinleştirmediğinizi gösteren başlığı veya başlığı göremiyorsanız **Cihaz kaydı**’nı seçin. Cihaz yönetimini henüz etkinleştirmediyseniz **MDM Yetkilisi seçin** dikey penceresi görüntülenir.
 
     > [!NOTE]
@@ -108,9 +108,9 @@ Yukarıda belirtildiği gibi, kuruluşunuzun, **. onmicrosoft.com**olmadan kulla
 
 1. [Microsoft 365 Yönetim Merkezi](https://admin.microsoft.com) ' ne gidin ve yönetici hesabınızı kullanarak oturum açın.
 
-2. Gezinme bölmesinde, **Kurulum** > **Etki alanları** > **Etki alanı ekle**'yi seçin.
+2. Gezinti bölmesinde, **Kurulum** > **etki alanları** > **etki alanı Ekle**' yi seçin.
 
-3. Özel etki alanı adınızı yazın. Ardından **İleri**'yi seçin.
+3. Özel etki alanı adınızı yazın. Ardından **İleri**' yi seçin.
 
    ![Yönetim Merkezi Microsoft 365 ekran görüntüsü-etki alanı Ekle](./media/free-trial-sign-up/domain-custom-add.png)
 
@@ -127,7 +127,7 @@ Yukarıda belirtildiği gibi, kuruluşunuzun, **. onmicrosoft.com**olmadan kulla
 
 En sık kullanacağınız iki Portal vardır:
 - Microsoft Endpoint Manager Yönetim Merkezi ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)), [Intune 'un yeteneklerini](what-is-intune.md)keşfedebileceğiniz yerdir. Bu, yöneticinin Intune ile çalıştığı yerdir.
-- Microsoft 365 Yönetim Merkezi ([https://admin.microsoft.com](https://admin.microsoft.com)), bu Azure Active Directory kullanmıyorsanız kullanıcıları ekleyebileceğiniz ve yönetebileceğiniz yerdir. Ayrıca hesabınızın faturalama ve destek gibi diğer yönlerini de yönetebilirsiniz.
+- Microsoft 365 Yönetim Merkezi ([https://admin.microsoft.com](https://admin.microsoft.com)), bu kullanıcı için Azure Active Directory kullanmıyorsanız kullanıcıları ekleyebileceğiniz ve yönetebileceğiniz yerdir. Ayrıca hesabınızın faturalama ve destek gibi diğer yönlerini de yönetebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

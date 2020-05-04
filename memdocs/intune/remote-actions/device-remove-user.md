@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 237f2e5d1a0d6ae6a58ceb8e5f4afb5a27031195
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326419"
 ---
 # <a name="remove-a-user-from-a-shared-iosipados-device"></a>Paylaşılan iOS/ıpados cihazından Kullanıcı kaldırma
@@ -42,7 +42,7 @@ ms.locfileid: "80326419"
 ## <a name="remove-a-user"></a>Kullanıcıyı kaldırma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihazlar** > **Tüm cihazlar**’ı seçin.
+2. **Cihazlar** > **tüm cihazlar**' ı seçin.
 3. Yönettiğiniz cihazların listesinde bir iOS/ıpados cihazı seçin.
 4. Cihazın bölmesinde **Kullanıcılar**'ı seçin.
 5. Listede, kaldırmak istediğiniz kullanıcıya sağ tıklayın ve **Kullanıcıyı kaldır**'ı seçin.

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 98451e7ffd6aef9e5fb298af96b91074f39c383e
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325263"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Microsoft Intune cihaz yönetimi nedir?
@@ -61,17 +61,17 @@ Kullanılabilir eylemler, cihaz platformuna ve cihazın yapılandırmasına bağ
   - [BitLocker anahtar döndürme](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (yalnızca Windows)
   - [Sil](devices-wipe.md#delete-devices-from-the-intune-portal)
   - [Etkinleştirme Kilidi devre dışı bırak](device-activation-lock-disable.md) (yalnızca iOS)
-  - [Yeni Başlangıç](device-fresh-start.md) (yalnızca Windows)
+  - [Yeni başlangıç](device-fresh-start.md) (yalnızca Windows)
   - [Tam tarama](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (yalnızca Windows 10)
-  - [Cihaz bulma](device-locate.md) (yalnızca iOS)
+  - [Cihazı bul](device-locate.md) (yalnızca iOS)
   - [Kayıp modu](device-lost-mode.md) (yalnızca iOS)
   - [Hızlı tarama](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (yalnızca Windows 10)
   - [Android için uzaktan denetim](teamviewer-support.md)
   - [Uzaktan kilitleme](device-remote-lock.md)
   - [Cihazı yeniden adlandırma](device-rename.md)
-  - [Geçiş Kodunu Sıfırla](device-passcode-reset.md)
+  - [Geçiş kodunu sıfırla](device-passcode-reset.md)
   - [Yeniden başlatma](device-restart.md) (yalnızca Windows)
-  - [Devre Dışı Bırak](devices-wipe.md#retire)
+  - [Devre dışı bırak](devices-wipe.md#retire)
   - [Windows Defender güvenlik zekası 'nı güncelleştirme](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
   - [Windows 10 PIN sıfırlama](device-windows-pin-reset.md)
   - [Silme](devices-wipe.md#wipe)

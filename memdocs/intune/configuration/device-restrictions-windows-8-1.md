@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 59af48b36cb9c76ce7587457d4921356f542493f
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80407659"
 ---
 # <a name="microsoft-intune-windows-81-device-restriction-settings"></a>Microsoft Intune Windows 8.1 cihaz kısıtlama ayarları
@@ -44,11 +44,11 @@ Bu makalede, Windows 8.1 çalıştıran cihazlar için yapılandırabileceğiniz
   - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez.
   - **Alfasayısal**: parola sayıların ve harflerin karışımı olmalıdır.
   - **Sayısal**: parola yalnızca sayı olmalıdır.
-- **Minimum parola uzunluğu**: 6-16 adresinden gereken en az karakter sayısını girin. Örneğin, parola uzunluğu için en az altı sayı veya karakter gerektirmek üzere `6` girin.
+- **Minimum parola uzunluğu**: 6-16 adresinden gereken en az karakter sayısını girin. Örneğin, parola uzunluğu `6` için en az altı sayı veya karakter gerektirmek için girin.
 - **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihaz temizlenmeden önce izin verilen hatalı parola sayısını 1-14 adresinden girin.
-- **Ekran kilitlenene kadar en fazla işlem yapılmayan dakika sayısı (dakika cinsinden)** : ekran otomatik olarak kilitlenmeden önce, 1-60 dakikadan itibaren bir cihazın boşta kalması gereken süreyi girin. Örneğin, 5 dakika boşta kaldıktan sonra cihazı kilitlemek için `5` girin. **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
-- **Parola kullanım süresi (gün)** : cihaz parolasının değiştirilme tarihi olan 1-255 ' dan gün cinsinden süre uzunluğunu girin. Örneğin, 90 gün sonra parolayı sona erdirmek için `90` girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
-- **Önceki parolaların yeniden kullanılmasını engelle**: daha önce kullanılan ve 1-24 'den kullanılamayan parolaların sayısını girin. Örneğin, kullanıcıların geçerli parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için `5` girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Ekran kilitlenene kadar en fazla işlem yapılmayan dakika sayısı (dakika cinsinden)**: ekran otomatik olarak kilitlenmeden önce, 1-60 dakikadan itibaren bir cihazın boşta kalması gereken süreyi girin. Örneğin, 5 dakika `5` boşta kaldıktan sonra cihazı kilitlemek için yazın. **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Parola kullanım süresi (gün)**: cihaz parolasının değiştirilme tarihi olan 1-255 ' dan gün cinsinden süre uzunluğunu girin. Örneğin, 90 gün `90` sonra parolanın süresini dolacak şekilde girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Önceki parolaların yeniden kullanılmasını engelle**: daha önce kullanılan ve 1-24 'den kullanılamayan parolaların sayısını girin. Örneğin, kullanıcıların geçerli `5` parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Resimli parola ve PIN**: **Block** , parola olarak bir resim veya PIN kullanılmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Resimli parola, kullanıcının resimdeki hareketlerle oturum açmasına olanak tanır. PIN, kullanıcıların dört basamaklı bir kodla hızla oturum açmalarına olanak tanır.
 - **Şifreleme**: dosyalar dahil olmak üzere cihazlarda şifreleme **gerektir** . Tüm cihazlar şifrelemeyi desteklemez. **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
@@ -73,31 +73,31 @@ Bu makalede, Windows 8.1 çalıştıran cihazlar için yapılandırabileceğiniz
 - **Açılır**pencereler: **blok** açılır pencere engelleyicisini açar ve Web tarayıcısında açılır pencereleri önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Do-Not-Track üstbilgileri**: **Block** cihazların izleme bilgilerini isteyen web sitelerine, izleme üst bilgileri göndermesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Eklentiler**: **Block** , kullanıcıların Internet Explorer 'da eklentiler eklemesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
-- **İntranet sitesinde tek sözcüklü giriş**: tek sözcükteki giriş, kullanıcıların `hr` veya `benefits`gibi tek bir kelime girerek intranet sitesine gitmelerini sağlar. **Engelle** ayarı bu özelliği önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **İntranet sitesinde tek sözcüklü giriş**: tek sözcüklü giriş, kullanıcıların, `hr` veya `benefits`gibi tek bir kelime girerek intranet sitesine gitmesini sağlar. **Engelle** ayarı bu özelliği önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Intranet sitesini otomatik algıla**: **blok** tarayıcının intranet sitelerini otomatik olarak algılamasını önler. Intranet eşleme kuralları engellenir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **İnternet güvenlik düzeyi**: internet siteleri için güvenlik düzeyini ayarlar. Seçenekleriniz şunlardır:
   - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez.
-  - **Orta**
+  - **Medium**
   - **Orta yüksek**
-  - **Yüksek**
+  - **Geniş**
 - **İntranet güvenlik düzeyi**: intranet siteleri için güvenlik düzeyini ayarlar. Seçenekleriniz şunlardır:
   - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez.
   - **Düşük**
   - **Orta-düşük**
-  - **Orta**
+  - **Medium**
   - **Orta yüksek**
-  - **Yüksek**
+  - **Geniş**
 - **Güvenilen siteler güvenlik düzeyi**: güvenilen siteler bölgesi için güvenlik düzeyini yapılandırır. Seçenekleriniz şunlardır:
   - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez.
   - **Düşük**
   - **Orta-düşük**
-  - **Orta**
+  - **Medium**
   - **Orta yüksek**
-  - **Yüksek**
+  - **Geniş**
 - **Kısıtlanmış siteler Için yüksek güvenlik**: Yasak siteler bölgesi için güvenlik düzeyini yapılandırır. **Yapılandırılmış** , kısıtlı siteler için yüksek güvenliği zorlar. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Kurumsal mod menü erişimi**: **blok** kullanıcıların Internet Explorer 'da Kurumsal mod menü seçeneklerine erişmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. **Engelle**olarak ayarlandığında, şunu da girin:
   - **Günlük raporu konum URL 'si**: Kurumsal mod erişimi açık olan Web sitelerini gösteren RAPORLARıN alınacağı URL konumunu girin.
-- **Kuruluş modu Site listesi konumu (yalnızca masaüstü)** : Kurumsal modda açılabilen Web sitelerinin listesinin konumunu girin.
+- **Kuruluş modu Site listesi konumu (yalnızca masaüstü)**: Kurumsal modda açılabilen Web sitelerinin listesinin konumunu girin.
 
 ## <a name="cellular"></a>Hücresel
 

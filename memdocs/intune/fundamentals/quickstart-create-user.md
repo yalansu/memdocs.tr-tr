@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: cf5c76e276722fb9bab2b5d6fac511f0b22ae1f2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330750"
 ---
 # <a name="quickstart-create-a-user-in-intune-and-assign-the-user-a-license"></a>Hızlı başlangıç: Intune 'da Kullanıcı oluşturma ve kullanıcıya lisans atama
@@ -35,13 +35,13 @@ Bu hızlı başlangıçta bir Kullanıcı oluşturacak ve sonra kullanıcıya bi
 
 [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) [genel yönetici veya Intune Hizmet Yöneticisi](users-add.md#types-of-administrators)olarak oturum açın. Bir Intune deneme aboneliği oluşturduysanız, aboneliği oluşturduğunuz hesap genel yöneticime sahip olur.
 
-## <a name="create-a-user"></a>Bir kullanıcı oluşturun
+## <a name="create-a-user"></a>Kullanıcı oluşturma
 
 Kullanıcının Intune cihaz yönetimine kaydolması için bir kullanıcı hesabı olması gerekir. Yeni bir kullanıcı oluşturmak için:
 
-1. Microsoft Endpoint Manager 'da **kullanıcılar** > **tüm kullanıcılar** > **Yeni Kullanıcı**: ![Microsoft Uç Nokta Yöneticisi 'nde Yeni Kullanıcı ' yı seçin](./media/quickstart-create-user/create-user.png)
-2. **Ad** kutusuna, *Kellum*: ![Kullanıcı](./media/quickstart-create-user/create-user-02.png) ayrıntıları Ekle gibi bir ad girin.
-3. **Kullanıcı adı** kutusuna, Dewey@contoso.onmicrosoft.comgibi bir kullanıcı tanımlayıcısı girin.
+1. Microsoft Endpoint Manager 'da **Kullanıcılar** > **tüm kullanıcılar** > **Yeni Kullanıcı**: Microsoft uç ![nokta Yöneticisi ' nde Yeni Kullanıcı ' yı seçin.](./media/quickstart-create-user/create-user.png)
+2. **Ad** kutusuna bir ad girin (örneğin, *Dewey Kellum*: ![kullanıcı ayrıntıları ekleme)](./media/quickstart-create-user/create-user-02.png)
+3. **Kullanıcı adı** kutusuna, gibi bir kullanıcı tanımlayıcısı girin Dewey@contoso.onmicrosoft.com.
 
     > [!NOTE]
     > Müşteri etki alanı adınızı yapılandırmadıysanız, Intune aboneliğini (veya [ücretsiz denemeyi](free-trial-sign-up.md#sign-up-for-a-microsoft-intune-free-trial)) oluşturmak için kullandığınız doğrulanmış etki alanı adını kullanın. 
@@ -56,7 +56,7 @@ Bir kullanıcı oluşturduktan sonra, kullanıcıya bir Intune lisansı atamak i
 Bir kullanıcıya bir Intune lisansı atamak için:
 
 1. [Microsoft 365 Yönetim merkezinde](https://go.microsoft.com/fwlink/p/?LinkId=698854) Intune 'da oturum açmak için kullandığınız kimlik bilgileriyle oturum açın.
-2. **Etkin kullanıcılar** > **Kullanıcılar** ' ı seçin ve ardından yeni oluşturduğunuz kullanıcıyı seçin.
+2. **Kullanıcılar** > **etkin kullanıcılar**' ı seçin ve ardından yeni oluşturduğunuz kullanıcıyı seçin.
 3. **Lisanslar ve uygulamalar** sekmesini seçin.
 4. **Konum Seç**' in altında, henüz ayarlanmamışsa Kullanıcı için bir konum seçin.
 2. **Lisanslar** bölümünde **Intune** onay kutusunu seçin. Başka bir lisans Intune içeriyorsa, bu lisansı seçebilirsiniz. Görüntülenmiş [ürün adı](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference) , Azure yönetiminde hizmet planı olarak kullanılır.
@@ -66,13 +66,13 @@ Bir kullanıcıya bir Intune lisansı atamak için:
    > [!NOTE]
    > Bu ayar, Kullanıcı için lisanslarınızdan birini kullanır. Deneme ortamı kullanıyorsanız, bu lisansı daha sonra canlı bir ortamda gerçek bir kullanıcıya yeniden atayacaksınız.
 
-6. **Değişiklikleri Kaydet**' i seçin.
+6. **Değişiklikleri kaydet**'i seçin.
 
 Yeni etkin Intune kullanıcısı artık bir **Intune** lisansı kullandığını gösterecektir.
 
 ## <a name="clean-up-resources"></a>Kaynakları temizleme
 
-Bu kullanıcıya artık ihtiyacınız yoksa, [Microsoft 365 yönetim merkezine](https://go.microsoft.com/fwlink/p/?LinkId=698854) gidip Kullanıcı > **kullanıcıları** * > Kullanıcı sil* *simgesini* ** > kullanıcıyı sil > ** **Kapat**' ı seçerek kullanıcıyı silebilirsiniz.
+Bu kullanıcıya artık ihtiyacınız yoksa, [Microsoft 365 yönetim merkezine](https://go.microsoft.com/fwlink/p/?LinkId=698854) gidip **Kullanıcılar** > *the user* > Kullanıcı*Sil simgesini* > **Kullanıcı Sil** > simgesini**seçerek kullanıcıyı silebilirsiniz.**
 
    ![Sil simgesini seçin](./media/quickstart-create-user/create-user-04.png)
 

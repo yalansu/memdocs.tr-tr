@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 68bc48461f6bac9fc7a220642e8867178ee3999c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324018"
 ---
 # <a name="resolve-a-threat-found-by-a-mobile-threat-defense-app"></a>Bir Mobile Threat Defense uygulaması tarafından bulunan tehditleri çözme
@@ -32,7 +32,7 @@ Tehditler, Şirket Portalı uygulamasında çözümlenmemiş ve uyumsuz sorunlar
 
 * Şirket e-postasına bağlanma
 * Şirket Wi-Fi ağına bağlanma
-* SharePoint Online’a bağlanma
+* SharePoint Online'a bağlanma
 * OneDrive ile şirket dosyalarını eşitleme
 * Şirket uygulamalarına erişme
 
@@ -43,6 +43,6 @@ Kuruluşunuzun ayarlamış olabileceği Android’e özgü Mobil Tehdit Savunmas
 * [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)
 * [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)  
 
-  Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. İletişim bilgileri için [Şirket Portalı web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın  
+  Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. İletişim bilgileri için [Şirket portalı Web sitesini](https://go.microsoft.com/fwlink/?linkid=2010980) denetleyin  
 
 

@@ -21,10 +21,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 4e2c16a4002d807ba7665e53eea7347d498f8981
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327790"
 ---
 # <a name="you-need-to-update-your-ios-device-to-install-the-outlook-app"></a>Outlook uygulamasını yüklemek için iOS cihazınızı güncelleştirmeniz gerekiyor
@@ -36,6 +36,6 @@ Outlook uygulaması, milyonlarca kullanıcının [iOS](https://itunes.apple.com/
 
 Bazen, özellikle cihazınız güncel değilse, bir uygulamayı yükleme işlemi başarısız olabilir. 
 
-Güncelleştirmek için **Ayarlar** > **Genel** > **Yazılım Güncelleştirmesi**’ne dokunun.
+Güncelleştirmek için **Ayarlar** > **genel** > **yazılım güncelleştirmesi**' ne dokunun.
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

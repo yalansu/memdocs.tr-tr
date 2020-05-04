@@ -1,5 +1,5 @@
 ---
-title: Microsoft Intune tasarımı oluşturma
+title: Microsoft Intune tasarımınızı oluşturun
 titleSuffix: Microsoft Intune
 description: Bu makale, Microsoft Intune yalnızca bulut tasarımı ve uygulaması için bir tasarım oluşturmanıza yardımcı olur.
 keywords: ''
@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d29294f1d9556f195fe70f0e2cb36cc8c9ddcfba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331062"
 ---
 # <a name="create-a-design"></a>Tasarım oluşturma
@@ -80,7 +80,7 @@ Mevcut ortamınız, tasarım kararlarını etkileyebilir ve diğer Intune tasar�
 
   - Hangi sertifika türlerini kullanıyorsunuz?
 
-- **Sistem yönetimi**
+- **Sistem Yönetimi**
 
   - PC ve sunucu ortamınızı nasıl yönetiyorsunuz?
 
@@ -94,11 +94,11 @@ Mevcut ortamınız, tasarım kararlarını etkileyebilir ve diğer Intune tasar�
 
 Geçerli MDM ortamını kaydederken ortamınızı etkileyebilecek tüm projeleri ve planları not aldığınızdan emin olun. Intune tasarımınızı oluştururken mevcut ortamı kaydetme yoluna ilişkin bir örnek aşağıda verilmiştir:
 
-| **Çözüm alanı** | **Mevcut ortam** | **Yorumlar** |
+| **Çözüm alanı** | **Geçerli ortam** | **Açıklamalar** |
 |---|---|---|
 | **Kimlik** | Azure AD, Azure AD Connect, şirket dışında değil, MFA yok | Yıl sonundan itibaren MFA’yı etkinleştirme projesi geçerli |                 
 | **E-posta ortamı** | Şirket İçi Exchange, Exchange Online | Şu anda Şirket İçi Exchange sürümünden Exchange Online sürümüne geçiriliyor. Posta kutularının % 75’i geçirildi. Kalan %25 Intune Pilot başlamadan önce geçirilecektir. |                
-| **SharePoint** | Şirket İçi SharePoint | SharePoint Online sürümüne geçirme planı yok |  
+| **SharePoint** | SharePoint on-premises | SharePoint Online sürümüne geçirme planı yok |  
 | **Geçerli MDM** | Exchange ActiveSync |  |
 | **Sertifika çözümü** | Microsoft Server 2012 R2, AD Sertifika Hizmetleri | Web Sitesi Sunucuları için yalnızca PKI kullanın |
 | **Sistem Yönetimi** | Geçerli dalı Configuration Manager | Ortak yönetim çözümünü araştırmak ister misiniz? |
@@ -140,9 +140,9 @@ Aşağıdaki Intune kimlik gereksinimleri hakkında daha fazla bilgi edinin:
 
 - [Kimlik gereksinimleri](https://docs.microsoft.com/azure/active-directory/understand-azure-identity-solutions).
 
-- [Dizin eşitlemesi gereksinimleri](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+- [Dizin eşitleme gereksinimleri](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
 
-- [Çok faktörlü kimlik doğrulaması gereksinimleri](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
+- [Multi-Factor Authentication gereksinimleri](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
 
 ### <a name="user-and-device-groups"></a>Kullanıcı ve cihaz grupları
 
@@ -161,7 +161,7 @@ Sertifikaları VPN, Wi-Fi veya Intune ile e-posta profilleriyle kullanmayı plan
 
 Ayrıca, SCEP sertifika profilleri kullanılacaksa, hangi sunucunun ağ cihazı kayıt hizmeti (NDES) özelliğini barındıraceğini ve iletişimin nasıl olacağını belirlemeniz gerekir.
 
-Daha fazla bilgi:
+Aşağıdakiler hakkında daha fazla bilgi edinin:
 
 - [Intune sertifika profillerini yapılandırma](../protect/certificates-configure.md)
 
@@ -209,7 +209,7 @@ Cihaz listenizi geliştirmek için [yukarıdaki tablonun bir şablonunu indirebi
 
 Intune, hem şirkete ait cihazları hem de kişisel cihazları destekler. Bir cihaz, cihaz kayıt yöneticisi tarafından veya cihaz kayıt programı ile kaydedilmişse şirkete ait olarak kabul edilir. Örneğin bir cihaz Apple Aygıt Kayıt Programı (DEP) aracılığıyla kaydedilmiş, şirkete ait olarak işaretlenmiş ve hedeflenen şirket ilkelerini ve uygulamalarını alan bir cihaz grubuna yerleştirilmiştir.
 
-Şirket ve KCG kullanım örnekleri hakkında daha fazla bilgi için [Bölüm 3: Kullanım örneği senaryosu gereksinimleri](planning-guide-requirements.md) bölümüne başvurun.
+Şirket ve KCG kullanım örnekleri hakkında daha fazla bilgi için [Bölüm 3: kullanım örneği senaryosu gereksinimlerini belirleme bölümüne](planning-guide-requirements.md) bakın.
 
 ### <a name="bulk-enrollment"></a>Toplu kayıt
 
@@ -294,7 +294,7 @@ Hangi kullanıcı grubunun sertifikaya ihtiyacı olduğunu, kaç sertifika profi
 
 Tasarım sırasında sertifikaları nasıl belgelayabilmeniz için bir örnek aşağıda verilmiştir:
 
-| **Tür** | **Profil adı** | **Cihaz platformu** | **Kullanım örnekleri** |   
+| **Tür** | **Profil adı** | **Cihaz platformu** | **Uygulama alanları** |   
 |:---:|:---:|:---:|:---:|
 | Kök CA | Kurumsal Kök CA | Android, iOS/ıpados, Windows Mobile | Kurumsal, KCG  |                                                           
 | SCEP | Kullanıcı Sertifikası | Android, iOS/ıpados, Windows Mobile | Kurumsal, KCG |                                                           
@@ -308,7 +308,7 @@ Wi-Fi profilleri, bir mobil cihazı otomatik olarak kablosuz ağa bağlamak içi
 
 Bir Wi-Fi profili için bir tasarım örneği aşağıda verilmiştir:
 
-| **Tür** | **Profil adı** | **Cihaz platformu** | **Kullanım örnekleri** |
+| **Tür** | **Profil adı** | **Cihaz platformu** | **Uygulama alanları** |
 |:---:|:---:|:---:|:---:|
 | Wi-Fi | Asya Wi-Fi profili | Android | Kurumsal, KCG Asya bölgesi|
 | Wi-Fi | Kuzey Amerika Wi-Fi profili | Android, iOS/ıpados, Windows 10 Mobile | Kurumsal, KCG Kuzey Amerika bölgesi |
@@ -321,7 +321,7 @@ VPN profilleri, kullanıcıların ağınıza uzak konumlardan güvenli bir şeki
 
 Bir VPN profili tasarımının belgelenmesine ilişkin bir örnek aşağıda verilmiştir.
 
-| **Tür** | **Profil adı** | **Cihaz platformu** | **Kullanım örnekleri** |
+| **Tür** | **Profil adı** | **Cihaz platformu** | **Uygulama alanları** |
 |:---:|:---:|:---:|:---:|
 | VPN | VPN Cisco herhangi bir bağlantı Profili | Android, iOS/ıpados, Windows 10 Mobile | Kurumsal, KCG Kuzey Amerika ve Almanya|
 | VPN | Pulse Secure | Android | Kurumsal, KCG Asya bölgesi |
@@ -330,11 +330,11 @@ VPN profili ihtiyaçlarınızı belirlemek için [yukarıdaki tablonun bir şabl
 
 #### <a name="email-profile"></a>E-posta profili
 
-E-posta profilleri, bir e-posta istemcisinin bağlantı bilgileriyle ve e-posta yapılandırması ile otomatik olarak ayarlamasına olanak tanır. Intune, bazı cihazlarda e-posta profillerini destekler. [E-posta profilleri ve hangi platformların desteklendiği](../configuration/email-settings-configure.md) hakkında daha fazla bilgi edinin.
+E-posta profilleri, bir e-posta istemcisinin bağlantı bilgileriyle ve e-posta yapılandırması ile otomatik olarak ayarlamasına olanak tanır. Intune, bazı cihazlarda e-posta profillerini destekler. [E-posta profilleri ve hangi platformların desteklendiği](../configuration/email-settings-configure.md)hakkında daha fazla bilgi edinin.
 
 E-posta profillerinin tasarımının belgelenmesine dair bir örnek aşağıda verilmiştir:
 
-| **Tür** | **Profil adı** | **Cihaz platformu** | **Kullanım örnekleri** |
+| **Tür** | **Profil adı** | **Cihaz platformu** | **Uygulama alanları** |
 |:---:|:---:|:---:|:---:|
 | E-posta profili | iOS e-posta profili | iOS | Kurumsal – KCG bilgi çalışanı |
 | E-posta profili | Android Knox e-posta profili | Android Knox | KCG |
@@ -342,7 +342,7 @@ E-posta profillerinin tasarımının belgelenmesine dair bir örnek aşağıda v
 E-posta profili ihtiyaçlarınızı belirlemek için [yukarıdaki tablonun bir şablonunu indirebilirsiniz](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
 ### <a name="apps"></a>Uygulamalar
 
-Kullanıcılara veya cihazlara uygulamaları çeşitli yollarla sunmak için Intune kullanabilirsiniz. Uygulama türü yazılım yükleme uygulamalarını, genel uygulama mağazası uygulamalarını, dış bağlantıları veya yönetilen iOS uygulamalarını içerir. Tek tek uygulama dağıtımlarına ek olarak, iOS ve Windows için toplu satın alma programları aracılığıyla edinilen toplu satın alınan uygulamaları yönetilebilir ve dağıtılabilirsiniz. Daha fazla bilgi:
+Kullanıcılara veya cihazlara uygulamaları çeşitli yollarla sunmak için Intune kullanabilirsiniz. Uygulama türü yazılım yükleme uygulamalarını, genel uygulama mağazası uygulamalarını, dış bağlantıları veya yönetilen iOS uygulamalarını içerir. Tek tek uygulama dağıtımlarına ek olarak, iOS ve Windows için toplu satın alma programları aracılığıyla edinilen toplu satın alınan uygulamaları yönetilebilir ve dağıtılabilirsiniz. Aşağıdakiler hakkında daha fazla bilgi edinin:
 
 - [Sağlayabileceğiniz uygulama türleri](../apps/app-management.md)
 
@@ -398,11 +398,11 @@ Koşullu erişim yalnızca uyumlu cihazların e-postaya ve diğer şirket kaynak
 
 Çevrimiçi erişim için hangi platformların ve Kullanıcı gruplarının koşullu erişim ilkeleri tarafından hedefleneceğini belirleyin. Ayrıca, şirket içi Exchange için Intune bağlayıcısını yüklemeniz veya yapılandırmanız gerekip gerekmediğini belirleme: 
 
-- [Şirket İçi Exchange](../protect/exchange-connector-install.md)
+- [Şirket içi Exchange](../protect/exchange-connector-install.md)
 
 Koşullu erişim ilkelerini Belgeme hakkında bir örnek aşağıda verilmiştir:
 
-| **Hizmet** | **Modern Kimlik Doğrulaması Platformları** | **Temel Kimlik Doğrulaması** | **Kullanım örnekleri** |
+| **Hizmet** | **Modern Kimlik Doğrulaması Platformları** | **Temel kimlik doğrulaması** | **Uygulama alanları** |
 |:---:|:---:|:---:|:---:|
 | Exchange Online | iOS/ıpados, Android | Intune’un desteklediği platformlarda uyumlu olmayan cihazları engelle | Kurumsal, KCG |
 | SharePoint Online | iOS/ıpados, Android |  | Kurumsal, KCG |

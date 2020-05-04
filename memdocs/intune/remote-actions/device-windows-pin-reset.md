@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7107669b3a87f0ca7488f2fdd5203c6052beffad
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326269"
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>Intune kullanarak Windows cihazlarında geçiş kodunu sıfırlama
@@ -53,9 +53,9 @@ Windows cihazlarında geçiş kodunu sıfırlamak için, PIN sıfırlama hizmeti
 
 Yönettiğiniz Windows cihazlarında PIN sıfırlamayı yapılandırmak için bir [Intune Windows 10 özel cihaz ilkesi](../configuration/custom-settings-windows-10.md) kullanın. İlkeyi, aşağıdaki Windows ilke yapılandırma hizmet sağlayıcısını (CSP) kullanarak yapılandırın:
 
-**Cihaz ilkesi kullanma** - `./Device/Vendor/MSFT/PassportForWork/*tenant ID*/Policies/EnablePinRecovery`
+**Cihaz ilkesini kullanma** - `./Device/Vendor/MSFT/PassportForWork/*tenant ID*/Policies/EnablePinRecovery`
 
-*Kiracı kimliğini*, **Azure portalında** Azure Active Directory'nin [Özellikler](https://portal.azure.com)'i arasında listelenen Azure AD Dizin Kimliğinizle değiştirin.
+*Kiracı kimliğini*, [Azure portalında](https://portal.azure.com) Azure Active Directory'nin **Özellikler**'i arasında listelenen Azure AD Dizin Kimliğinizle değiştirin.
 
 Bu CSP için değeri **True** olarak ayarlayın.
 
@@ -65,7 +65,7 @@ Bu CSP için değeri **True** olarak ayarlayın.
 ## <a name="reset-the-passcode"></a>Geçiş kodunu sıfırlama
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın. 
-2. **Cihazlar**’ı ve ardından **Tüm cihazlar**’ı seçin.
+2. **Cihazlar**’ı ve ardından **Tüm Cihazlar**’ı seçin.
 3. Geçiş kodunu sıfırlamak istediğiniz cihazı seçin. Cihaz özellikleri ' nde **geçiş kodunu Sıfırla**' yı seçin.
 4. Onaylamak için **Evet**'i seçin. Böylece geçiş kodu oluşturulur ve gelecek yedi gün boyunca portalda görüntülenir.
 

@@ -19,24 +19,24 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 25ccf224b2ed9371ad5795b8f5c91ea725ea8c84
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331666"
 ---
 # <a name="set-up-enrollment-of-android-enterprise-work-profile-devices"></a>Android Kurumsal iş profili cihazların kaydını ayarlama
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Intune, iş ve kişisel bilgilerin ayrı olduğundan emin olmak için Android kurumsal iş profili cihazlarına uygulama ve ayarlar dağıtmanıza yardımcı olur. Android Kurumsal hakkında belirli ayrıntıları öğrenmek için bkz. [Android Kurumsal gereksinimleri](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
+Intune, iş ve kişisel bilgilerin ayrı olduğundan emin olmak için Android kurumsal iş profili cihazlarına uygulama ve ayarlar dağıtmanıza yardımcı olur. Android Enterprise hakkında ayrıntılı bilgi için bkz. [Android Enterprise Requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
 Android Kurumsal iş profili yönetimini ayarlamak için aşağıdaki adımları izleyin:
 
-1. [Intune kiracı hesabınızı Android Kurumsal hesabınıza bağlayın](connect-intune-android-enterprise.md).
+1. [Intune kiracı Hesabınızı Android Kurumsal hesabınıza bağlayın](connect-intune-android-enterprise.md).
 2. Android Kurumsal iş profili kayıt ayarlarını belirtin. Android Kurumsal iş profilleri, [yalnızca belirli Android cihazlarda desteklenmektedir](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012%20style=%22target=new_window%22). Android kurumsal iş profillerini destekleyen herhangi bir cihaz, Android Cihaz Yöneticisi yönetimini de destekler. Intune, Android Kurumsal iş profilini destekleyen cihazların [Kayıt Kısıtlamaları](enrollment-restrictions-set.md) içerisinde nasıl yönetileceğini belirtmenize olanak sağlar.
     - **Engelle**: Android kurumsal iş profillerini destekleyen cihazlar dahil tüm Android cihazlar, Android Cihaz Yöneticisi kaydı da engellenmediği sürece Android Cihaz Yöneticisi cihazları olarak kaydedilir. 
-    - **Izin ver (varsayılan olarak ayarlanır)** : Android kurumsal iş profillerini destekleyen tüm cihazlar Android kurumsal iş profili cihazları olarak kaydedilir. Android kurumsal iş profillerini desteklemeyen Android cihazlar, Android Cihaz Yöneticisi kaydı engellenmediği sürece bir Android Cihaz Yöneticisi cihazı olarak kaydedilir. 
+    - **Izin ver (varsayılan olarak ayarlanır)**: Android kurumsal iş profillerini destekleyen tüm cihazlar Android kurumsal iş profili cihazları olarak kaydedilir. Android kurumsal iş profillerini desteklemeyen Android cihazlar, Android Cihaz Yöneticisi kaydı engellenmediği sürece bir Android Cihaz Yöneticisi cihazı olarak kaydedilir. 
 > [!NOTE]
 > Varsayılan **Izin ver** olarak ayarlanan yeni kiracılar Için 2019 Temmuz itibariyle geçerlidir. Tüm önceki kiracılar, kayıt kısıtlamalarında hiçbir değişiklik yapmadan deneyimlerdir ve kayıt kısıtlamalarında ayarlamış oldukları her türlü ilkeyi görür. Kayıt kısıtlamaları değişikliği olmayan önceki kiracılar için, **blok** hala Android kurumsal iş profilleri için varsayılan değer olacaktır.
 

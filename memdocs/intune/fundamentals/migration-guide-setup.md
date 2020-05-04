@@ -17,10 +17,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3b7784d4ad86e3418259f85ca1c4577d2289dc86
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331194"
 ---
 # <a name="basic-setup"></a>Temel kurulum
@@ -31,7 +31,7 @@ Ortamınızı değerlendirdikten sonra Microsoft Intune ayarlama zamanı vardır
 
 ### <a name="identity"></a>Kimlik
 
-Intune, kimlik ve kullanıcı gruplama sağlayıcısı olarak Azure Active Directory (AAD) gerektirir. Daha fazla bilgi:
+Intune, kimlik ve kullanıcı gruplama sağlayıcısı olarak Azure Active Directory (AAD) gerektirir. Aşağıdakiler hakkında daha fazla bilgi edinin:
 
 - [Kimlik gereksinimleri](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
@@ -55,17 +55,17 @@ Intune ile VPN, Wi-Fi veya e-posta profilleri için sertifika tabanlı kimlik do
 
 ## <a name="task-list-for-an-intune-setup"></a>Intune kurulumu için görev listesi
 
-### <a name="task-1-intune-subscription"></a>1\. Görev: Intune aboneliği
+### <a name="task-1-intune-subscription"></a>1. Görev: Intune aboneliği
 
 Intune 'a geçirebilmeniz için önce bir [Intune aboneliğine](account-sign-up.md)ihtiyacınız vardır.
 
-### <a name="task-2-assign-intune-user-licenses"></a>2\. Görev: Intune kullanıcı lisanslarını atayın
+### <a name="task-2-assign-intune-user-licenses"></a>2. Görev: Intune kullanıcı lisanslarını atayın
 
 - [Intune kullanıcı lisanslarının nasıl atanacağını](licenses-assign.md) öğrenin.
 
 - Yeni bir Azure Active Directory kiracısı oluşturduysanız [yeni kullanıcılar oluşturma veya şirket içi Active Directory’den (AD) kullanıcı eşitleme.](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
 
-### <a name="task-3-set-your-mdm-authority-to-intune"></a>3\. Görev: MDM yetkilinizi Intune olarak ayarlayın
+### <a name="task-3-set-your-mdm-authority-to-intune"></a>3. Görev: MDM yetkilinizi Intune olarak ayarlayın
 
 Intune 'U [Microsoft Endpoint Manager yönetim merkezini](https://go.microsoft.com/fwlink/?linkid=2109431)kullanarak yönetmenizi öneririz.
 
@@ -78,4 +78,4 @@ MDM yetkilinizi **Intune**olarak ayarlayın. Farklı bir MDM yetkilisi kullanmak
 
 ## <a name="next-step"></a>Sonraki adım
 
-[Mobil cihaz ve uygulama yönetimi ilkelerini](migration-guide-configure-policies.md) yapılandırın.
+[Cihaz ve uygulama yönetimi ilkelerini](migration-guide-configure-policies.md)yapılandırın.

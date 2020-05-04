@@ -1,6 +1,6 @@
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tüm uygulamalar** > **uygulamalar** ' ı seçin.
+2. **Uygulamalar** > **tüm uygulamalar**' ı seçin.
 3. Uygulama listesinden uygulamanızı bulun ve seçin.  
 4. Uygulama bölmesinden **Yönet** altında **Özellikler** ' i seçin.
 5. **Uygulama bilgileri**' nin yanındaki **Düzenle** ' yi seçin.  

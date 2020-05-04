@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 285144e42f2a029bf2d24b96493c54922727d6dc
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80407656"
 ---
 # <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Microsoft Intune Windows Phone 8.1 cihaz kısıtlama ayarları
@@ -48,18 +48,18 @@ Bu makalede, Windows Phone 8.1 çalıştıran cihazlar için yapılandırabilece
     - **Cihaz varsayılanı**: parola rakam ve harf içerebilir.
     - **Alfasayısal**: parola sayıların ve harflerin karışımı olmalıdır.
     - **Sayısal**: parola yalnızca sayı olmalıdır.
-  - **Minimum parola uzunluğu**: 4-16 adresinden gereken en az karakter sayısını girin. Örneğin, parola uzunluğu için en az altı karakter gerektiren `6` girin.
-  - **Basit parolalar**: **blok** kullanıcıların `1234` veya `1111`gibi basit parolalar oluşturmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+  - **Minimum parola uzunluğu**: 4-16 adresinden gereken en az karakter sayısını girin. Örneğin, parola uzunluğunun `6` en az altı karakter gerektirmek için girin.
+  - **Basit parolalar**: **blok** , kullanıcıların `1234` veya `1111`gibi basit parolalar oluşturmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
   - **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihazlar temizlenmeden önce izin verilen hatalı parola sayısını girin.
-  - **Ekran kilitlenmeden önce geçen işlem yapılmayan dakika sayısı**: ekran otomatik olarak kilitlenmeden önce cihazın boşta kalması gereken süreyi girin. Örneğin, 5 dakika boşta kaldıktan sonra cihazları kilitlemek için `5` girin. **Yapılandırılmadı** veya boş ol olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
-  - **Parola kullanım süresi (gün)** : cihaz parolasının değiştirilme tarihi olan 1-255 ' dan gün cinsinden süre uzunluğunu girin. Örneğin, 90 gün sonra parolayı sona erdirmek için `90` girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
-  - **Önceki parolaların yeniden kullanılmasını engelle**: daha önce kullanılan ve 1-24 'den kullanılamayan parolaların sayısını girin. Örneğin, kullanıcıların geçerli parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için `5` girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+  - **Ekran kilitlenmeden önce geçen işlem yapılmayan dakika sayısı**: ekran otomatik olarak kilitlenmeden önce cihazın boşta kalması gereken süreyi girin. Örneğin, 5 dakika `5` çalıştıktan sonra cihazları kilitlemek için yazın. **Yapılandırılmadı** veya boş ol olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+  - **Parola kullanım süresi (gün)**: cihaz parolasının değiştirilme tarihi olan 1-255 ' dan gün cinsinden süre uzunluğunu girin. Örneğin, 90 gün `90` sonra parolanın süresini dolacak şekilde girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+  - **Önceki parolaların yeniden kullanılmasını engelle**: daha önce kullanılan ve 1-24 'den kullanılamayan parolaların sayısını girin. Örneğin, kullanıcıların geçerli `5` parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Şifreleme**: dosyalar dahil olmak üzere cihazda şifreleme **gerektir** . Tüm cihazlar şifrelemeyi desteklemez. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Bu ayarı yapılandırmak ve uyumluluğu doğru şekilde raporlamak için aşağıdakileri de yapılandırın:
   - **Parola gerektir**: **gerektir**olarak ayarlayın.
   - **Gerekli parola türü**: en az **sayısal**olarak ayarlanır.
   - **Minimum parola uzunluğu**: en az `4`olarak ayarlanır.
 
-## <a name="app-store"></a>Uygulama Mağazası
+## <a name="app-store"></a>App Store
 
 - **App Store**: **Block** , kullanıcıların uygulama deposuna erişmesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
@@ -84,7 +84,7 @@ Uygulamanın sayfasını açın ve URL 'YI panoya kopyalayın. Artık bu URL 'YI
 
 ### <a name="additional-options"></a>Ek seçenekler
 
-Ayrıca, **Içeri aktar** ' a tıklayarak listeyi <*uygulama URL 'si*>, uygulama*adı*> < uygulama*yayımcısı*< veya aynı biçimde kısıtlanmış uygulamalar listesinin Içeriğini içeren bir CSV dosyası oluşturmak için **dışarı aktar** ' a tıklayabilirsiniz.
+Ayrıca, **Içeri aktar** ' a tıklayarak listeyi <*uygulama URL 'si*>, uygulama *adı*> <uygulama *yayımcısı* <veya aynı biçimde kısıtlanmış uygulamalar listesinin Içeriğini içeren bir CSV dosyası oluşturmak için **dışarı aktar** ' a tıklayabilirsiniz.
 
 ## <a name="browser"></a>Tarayıcı
 

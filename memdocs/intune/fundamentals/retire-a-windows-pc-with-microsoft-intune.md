@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e7d88b5ba8f5071821d1a9901a26bfb4a5a6fbd3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330678"
 ---
 # <a name="retire-a-windows-pc"></a>Bir Windows bilgisayarı devre dışı bırakma
@@ -31,7 +31,7 @@ ms.locfileid: "79330678"
 
 Bilgisayar olarak yönettiğiniz masaüstü cihazları, Intune yazılımını bunlar üzerinde çalıştırarak devre dışı bırakmak için aşağıdaki adımları uygulayın. Bir bilgisayarı devre dışı bıraktığınızda, yazılım söz konusu bilgisayarı Intune yönetiminden kaldırır. Bir bilgisayarı özgün fabrika ayarlarına döndürmek için Intune’dan silme gerçekleştiremezsiniz.
 
-1. [Microsoft Intune yönetim konsolunda](https://manage.microsoft.com/), **gruplar** &gt; **tüm cihazlar** ' ı (veya devre dışı bırakmak istediğiniz bilgisayarı içeren başka bir grubu) seçin.
+1. [Microsoft Intune yönetim konsolunda](https://manage.microsoft.com/)**Gruplar** &gt; **Tüm Cihazlar**’ı (veya devre dışı bırakmak istediğiniz bilgisayarı içeren başka bir grubu) seçin.
 
 2. Devre dışı bırakmak istediğiniz cihazları seçin ve ardından **Devre Dışı Bırak/Temizle**'yi seçin.
 

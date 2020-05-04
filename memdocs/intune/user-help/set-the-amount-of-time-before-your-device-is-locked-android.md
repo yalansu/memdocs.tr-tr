@@ -20,17 +20,17 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 099076ada85c36a2025f8bc41bb38cbf7b7c8abf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324342"
 ---
 # <a name="how-to-set-the-amount-of-time-before-your-device-is-locked"></a>Cihaz kilitlenmeden önce geçmesi gereken süreyi ayarlama
 
 Android cihazınızdaki verileri daha güvenli tutmak için şirketinizin destek birimi, cihazınızın otomatik olarak kilitlenmeden önce ne kadar süreyle boşta durabileceğini belirlemenizi zorunlu tutan bir ilke ayarlayabilir. Cihazınızın kilitlenmeden önce bekleyeceği süreyi ayarlamak için bu adımları izleyin.
 
-1. Cihazınızdaki **Ayarlar** ' da, **güvenlik** &gt; **otomatik olarak kilitle** ' ye tıklayın (Bu, bazı cihazlardan sonra bu şekilde **Telefon kilitle** olarak görünür).
+1. Cihazınızın **Ayarlar** bölümünden **Güvenlik** &gt; **Otomatik Olarak Kilitle** (bu, bazı cihazlarda **Şu kadar işlem yapılmadığında telefonu kilitle** olarak görünür).
 
 2. Parola zaman aşımı değerini belirtin.
 

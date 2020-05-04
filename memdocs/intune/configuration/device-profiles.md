@@ -1,6 +1,6 @@
 ---
 title: Microsoft Intune'daki cihaz özellikleri ve ayarları - Azure | Microsoft Docs
-description: Farklı Microsoft Intune cihaz profillerine genel bakış. Microsoft 'taki özellikler, kısıtlamalar, e-posta, WiFi, VPN, eğitim, sertifikalar, yükseltme Windows 10, BitLocker ve Microsoft Defender, Windows Information Protection, Yönetim Şablonları ve özel cihaz yapılandırma ayarlarını hakkında bilgi alın Endpoint Manager Yönetim Merkezi. Şirketinizdeki verileri ve cihazları yönetmek ve korumak için bu profilleri kullanın.
+description: Farklı Microsoft Intune cihaz profillerine genel bakış. Microsoft Endpoint Manager Yönetim merkezinde özellikler, kısıtlamalar, e-posta, WiFi, VPN, eğitim, sertifika, yükseltme Windows 10, BitLocker ve Microsoft Defender, Windows Information Protection, Yönetim Şablonları ve özel cihaz yapılandırma ayarlarını hakkında bilgi alın. Şirketinizdeki verileri ve cihazları yönetmek ve korumak için bu profilleri kullanın.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359307"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune'daki cihaz profillerini kullanarak cihazlarınıza özellik ve ayar uygulama
@@ -55,11 +55,11 @@ Bu özellik şunları destekler:
 
 Bu özellik şunları destekler:
 
-- Android Cihaz Yöneticisi
+- Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
 - Mac OS
-- WVPN profillerinidows Phone 8.1
+- Windows Phone 8.1
 - Windows 8.1
 - Windows 10 ve üzeri
 
@@ -69,15 +69,15 @@ Bu özellik şunları destekler:
 
 Bu özellik şunları destekler:
 
-- Android Cihaz Yöneticisi
+- Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
 - Mac OS
-- WVPN profillerinidows Phone 8.1
+- Windows Phone 8.1
 
 ## <a name="delivery-optimization"></a>Teslim iyileştirme
 
-[Teslim iyileştirme](delivery-optimization-windows.md), yazılım güncelleştirmelerini teslim etmek için daha iyi bir deneyim sunar. Bu ayarlar, **Yazılım Güncelleştirmeleri** > **Windows 10 güncelleştirme halkası** ayarlarının yerini alır.
+[Teslim iyileştirme](delivery-optimization-windows.md), yazılım güncelleştirmelerini teslim etmek için daha iyi bir deneyim sunar. Bu ayarlar **yazılım güncelleştirmeleri** > **Windows 10 güncelleştirme halkası** ayarlarını değiştiriyor.
 
 Bu ayarları kullanarak yazılım güncelleştirmelerinin kuruluşunuzdaki ayarlara nasıl indirileceğini denetleyebilirsiniz. Örneğin kullanıcıların kendi güncelleştirmelerini yapmalarına izin verebilir veya teslim iyileştirme bulut hizmetlerini bir cihaz profilinde kullanarak güncelleştirmeleri almalarını sağlayabilirsiniz.
 
@@ -117,14 +117,14 @@ Bu özellik şunları destekler:
 
 Bu özellik şunları destekler:
 
-- Android Cihaz Yöneticisi
+- Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
 - Mac OS
 - Windows 10 ve üzeri
 - Windows 10 Team
 
-## <a name="domain-join"></a>Etki alanına ekleme
+## <a name="domain-join"></a>Etki alanına katılım
 
 [Etki alanına ekleme](domain-join-configure.md) , şirket içi Active Directory etki alanı bilgilerini yapılandırır. Bu bilgiler, Windows Autopilot ve Intune kullanılarak sağlandığında karma Azure AD 'ye katılmış cihazlara dağıtılır. Bu profil, cihazlara hangi etki alanı ve OU 'ya katılacağını söyler.
 
@@ -152,10 +152,10 @@ Bu özellik şunları destekler:
 
 Bu özellik şunları destekler:
 
-- Android Cihaz Yöneticisi
+- Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- WVPN profillerinidows Phone 8.1
+- Windows Phone 8.1
 - Windows 10 ve üzeri
 
 ## <a name="endpoint-protection"></a>Endpoint protection
@@ -266,11 +266,11 @@ Sanal özel ağlar (VPN’ler), kullanıcılara şirket ağınıza güvenli uzak
 
 Bu özellik şunları destekler: 
 
-- Android Cihaz Yöneticisi
+- Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
 - Mac OS
-- WVPN profillerinidows Phone 8.1
+- Windows Phone 8.1
 - Windows 8.1
 - Windows 10 ve üzeri
 
@@ -280,7 +280,7 @@ Bu özellik şunları destekler:
 
 Bu özellik şunları destekler: 
 
-- Android Cihaz Yöneticisi
+- Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
 - Mac OS

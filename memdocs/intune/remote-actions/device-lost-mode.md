@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3cf638ba82d1b6e91e3c4c24d5cfd3433df3b010
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326529"
 ---
 # <a name="enable-lost-mode-on-iosipados-devices-with-intune"></a>Intune ile iOS/ıpados cihazlarında kayıp modunu etkinleştirme
@@ -43,7 +43,7 @@ Bu özellik aşağıdakilerde desteklenmez:
 ## <a name="enable-lost-mode"></a>Kayıp modunu etkinleştirme
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-3. **Cihazlar**’ı ve ardından **Tüm cihazlar**’ı seçin.
+3. **Cihazlar**’ı ve ardından **Tüm Cihazlar**’ı seçin.
 4. Yönettiğiniz cihazların listesinden bir iOS/ıpados cihazı seçin ve **kayıp modu (yalnızca denetimli)** seçin.
 5. **Kayıp modu**altında **Etkinleştir**' i seçin.
 6. **Kilit ekranında görüntülenecek ileti**içinde, cihazın kilit ekranında görüntülenecek bir ileti yazın.
@@ -61,4 +61,4 @@ Kayıp modunu etkinleştirdiğinizde cihazın tüm kullanımı engellenir. Siz k
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Kayıp modunu etkinleştirme durumunu görmek için **Cihazlar**’ı açın ve **Cihaz eylemleri**’ni seçin.
+Kayıp modunu etkinleştirme durumunu görmek için **cihazlar**' ı açın ve **cihaz eylemleri**' ni seçin.

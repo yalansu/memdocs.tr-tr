@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 18de92792582d4c6753bc8657c56d73fa1509788
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359134"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Intune 'da bilgi noktası olarak çalışacak Windows holographic for Business cihaz ayarları
@@ -60,7 +60,7 @@ Bu modda uygulamalar Başlat menüsünde sağlanır. Bu uygulamalar, yalnızca k
 
   - **Otomatik oturum açma**: Windows Holographic for Business’ta desteklenmez.
   - **Yerel kullanıcı hesapları**: Cihaz için yerel kullanıcı hesabını **ekleyin**. Girdiğiniz hesap, bilgi noktasında oturum açmak için kullanılır.
-  - **Azure Active Directory kullanıcı veya grubu (Windows 10, sürüm 1803 ve sonrası)** : Cihazda oturum açmak için kullanıcı kimlik bilgilerini gerektirir. Listeden Azure Active Directory kullanıcılarını veya gruplarını seçmek için **Ekle**’yi seçin. Birden çok kullanıcı ve grup seçebilirsiniz. Değişikliklerinizi kaydetmek için **Seçin**’e tıklayın.
+  - **Azure Active Directory kullanıcı veya grubu (Windows 10, sürüm 1803 ve sonrası)**: Cihazda oturum açmak için kullanıcı kimlik bilgilerini gerektirir. Listeden Azure Active Directory kullanıcılarını veya gruplarını seçmek için **Ekle**’yi seçin. Birden çok kullanıcı ve grup seçebilirsiniz. Değişikliklerinizi kaydetmek için **Seçin**’e tıklayın.
   - **HoloLens ziyaretçisi**: Ziyaretçi hesabı, [paylaşılan PC modu kavramlarında](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts) anlatıldığı gibi, kullanıcı kimlik bilgileri veya kimlik doğrulaması gerektirmeyen bir konuk hesabıdır.
 
 - **Uygulamalar**: Bilgi noktası cihazında çalışacak uygulamaları ekleyin. Birden fazla uygulama ekleyebileceğinizi unutmayın.
@@ -70,7 +70,7 @@ Bu modda uygulamalar Başlat menüsünde sağlanır. Bu uygulamalar, yalnızca k
   - **AUMID’e göre ekle**: Gelen kutusu Windows uygulamalarını eklemek için bu seçeneği kullanın. Aşağıdaki özellikleri girin: 
 
     - **Uygulama adı**: Gereklidir. Uygulama için bir ad girin.
-    - **Uygulama kullanıcı modeli kimliği (AUMID)** : Gereklidir. Windows uygulamasının uygulama kullanıcı modeli kimliğini (AUMID) girin. Bu kimliği almak için bkz. [Yüklü bir uygulamanın Uygulama Kullanıcı Modeli Kimliğini bulma](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+    - **Uygulama kullanıcı modeli kimliği (AUMID)**: Gereklidir. Windows uygulamasının uygulama kullanıcı modeli kimliğini (AUMID) girin. Bu kimliği almak için bkz. [Yüklü bir uygulamanın Uygulama Kullanıcı Modeli Kimliğini bulma](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
     - **Kutucuk boyutu**: Gereklidir. Küçük, Orta, Geniş veya Büyük uygulama kutucuk boyutu seçin.
 
 - **Bilgi noktası tarayıcı ayarları**: Windows Holographic for Business’ta desteklenmez.

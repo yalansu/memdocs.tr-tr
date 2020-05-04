@@ -19,13 +19,13 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e762106a13bb42be11771276f38a37e46ae24662
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79325270"
 ---
-# <a name="software-update-agent-error-codes-and-descriptions-in-microsoft-intune"></a>Microsoft Intune 'de yazılım güncelleştirme Aracısı hata kodları ve açıklamaları
+# <a name="software-update-agent-error-codes-and-descriptions-in-microsoft-intune"></a>Microsoft Intune’da yazılım güncelleştirme aracısı hata kodları ve açıklamaları
 
 Aşağıdaki tabloda Intune **Güncelleştirme Aracısı** hata kodları listelenmektedir. Bu tabloda belirli bir hata kodu bulamazsanız, [Windows Update hata kodu listesi](https://support.microsoft.com/help/938205/windows-update-error-code-list)' ne bakın.
 
@@ -155,7 +155,7 @@ Aşağıdaki tabloda Intune **Güncelleştirme Aracısı** hata kodları listele
 |**0x80cf401B**|OM_E_PT_HTTP_STATUS_PROXY_AUTH_REQ|**HTTP durum 407** ile aynı. Proxy kimlik doğrulaması gereklidir.|
 |**0x80cf401C**|OM_E_PT_HTTP_STATUS_REQUEST_TIMEOUT|**HTTP durum 408** ile aynı. Sunucu isteği beklerken zaman aşımına uğradı.|
 |**0x80cf401D**|OM_E_PT_HTTP_STATUS_CONFLICT|**HTTP durum 409** ile aynı. Kaynağın geçerli durumu ile bir çakışma olduğundan istek tamamlanamadı.|
-|**0x80cf401E**|OM_E_PT_HTTP_STATUS_GONE|**HTTP durum 410** ile aynı. İstenen kaynak sunucuda artık kullanılamıyor.|
+|**0x80cf401E**|OM_E_PT_HTTP_STATUS_GONE|**HTTP durum 410** ile aynı. İstenen kaynak artık sunucuda yok.|
 |**0x80cf401F**|OM_E_PT_HTTP_STATUS_SERVER_ERROR|**HTTP durum 500** ile aynı. Sunucuda bir iç hata isteğin yerine getirilmesini engelledi.|
 |**0x80cf4020**|OM_E_PT_HTTP_STATUS_NOT_SUPPORTED|**HTTP durum 500** ile aynı. Sunucu isteği yerine getirmek için gereken işlevselliği desteklemiyor.|
 |**0x80cf4021**|OM_E_PT_HTTP_STATUS_BAD_GATEWAY|**HTTP durum 502** ile aynı. Sunucu, ağ geçidi veya proxy gibi davranırken eriştiği yukarı akış sunucusundan geçersiz bir yanıt aldı.|

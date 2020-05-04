@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 06747035f2d04be01dad12a9c89b712a4baae6b4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79325242"
 ---
 # <a name="integrate-sophos-mobile-with-intune"></a>Sophos Mobile 'ı Intune ile tümleştirme  
@@ -35,8 +35,8 @@ Sophos Mobile 'ı Intune ile tümleştirme işlemine başlamadan önce aşağıd
 - Microsoft Intune aboneliği  
 - Şu izinleri vermek için Azure Active Directory yönetici kimlik bilgileri:  
   - Oturum açma ve kullanıcı profilini okuma  
-  - Oturum açmış kullanıcı olarak dizine erişim  
-  - Dizin verilerini okuma  
+  - Dizine oturum açmış kullanıcı olarak erişin  
+  - Dizin verilerini oku  
   - Intune’a cihaz bilgilerini gönderme  
 - Sophos Mobile Yönetici konsoluna erişmek için yönetici kimlik bilgileri.  
 
@@ -52,20 +52,20 @@ Sophos mobil uygulama yetkilendirme işlemi aşağıdaki gibidir:
 
 ## <a name="to-set-up-sophos-mobile-integration"></a>Sophos Mobile tümleştirmesini ayarlamak için  
 
-1. [Azure Portal]( https://portal.azure.com/)oturum açın, **Intune** > **cihaz uyumluluğu** > **Mobile Threat** Defense > ' a gidin ve **Ekle**' yi seçin.  
+1. [Azure Portal]( https://portal.azure.com/)oturum açın, **Intune** > **cihaz uyumluluğu** > **Mobil tehdit savunması** > gidin ve **Ekle**' yi seçin.  
 2. **Bağlayıcı Ekle** sayfasında, açılan menüyü kullanın ve **Sophos**' ı seçin. Sonra **Oluştur**' u seçin.  
 3. *Sophos yönetici konsolunu açmak*için bağlantıyı seçin.  
 4. Sophos kimlik bilgilerinizle, [Sophos yönetici konsolunda](https://central.sophos.com/) oturum açın.  
-5. **Mobil** > **ayarları** > **Kurulum** > **Sophos Setup**' a gidin.  
+5. **Mobil** > **Settings**ayarlar > **Setup**kurulum > **Sophos Setup**' a gidin.  
 6. **Sophos kurulum** sayfasında, **Intune MTD** sekmesini seçin.  
-   ![Sophos Setup](./media/sophos-mtd-connector-integration/sophos-setup.png) 
+   ![Sophos kurulumu](./media/sophos-mtd-connector-integration/sophos-setup.png) 
  
 7. **Bağla**' yı seçin ve ardından **Evet**' i seçin. Sophos, Intune 'a bağlanır ve Intune aboneliğinizde oturum açmanızı gerektirir. 
 8. Microsoft Intune kimlik doğrulaması penceresinde, Intune kimlik bilgilerinizi girin ve *Sophos Mobile Iş parçacığı savunması*için Izin Isteğini **kabul edin** .  
-   ![Intune kimlik doğrulamasını](./media/sophos-mtd-connector-integration/intune-authentication.png)
+   ![Intune kimlik doğrulaması](./media/sophos-mtd-connector-integration/intune-authentication.png)
 
 9. **Sophos kurulum** sayfasında, Intune yapılandırmasını gerçekleştirmek için **Kaydet** ' i seçin:  
-   Sophos Setup](./media/sophos-mtd-connector-integration/save-sophos-configuration.png) ![Kaydet  
+   ![Sophos kurulumunu Kaydet](./media/sophos-mtd-connector-integration/save-sophos-configuration.png)  
 
 1. **Başarılı Tümleştirme** iletisi göründüğünde tümleştirme tamamlanmıştır.  
 1. Intune konsolunda, Sophos artık kullanılabilir.  

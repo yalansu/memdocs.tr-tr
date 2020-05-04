@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: adbc96dade5b6da134fa8a22f2cb613fc0baa923
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326319"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Cihazları Intune ile uzaktan başlatma
@@ -45,8 +45,8 @@ Cihazı **Yeniden Başlat** eylemi, seçtiğiniz cihazın yeniden başlatılmas�
 ## <a name="restart-a-device"></a>Cihazı yeniden başlatma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-3. **Cihazlar** > **Tüm cihazlar**’ı seçin.
-4. Yönettiğiniz cihazların listesinde bir cihaz seçin > **yeniden başlat** ** > .**
+3. **Cihazlar** > **tüm cihazlar**' ı seçin.
+4. Yönettiğiniz cihazların listesinde bir cihaz seçin >**Evet**' i **yeniden başlatın** > .
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

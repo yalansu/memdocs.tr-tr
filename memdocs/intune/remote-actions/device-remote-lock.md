@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 29b30d46fc5998c69059c743c3f469e198cee1ef
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325128"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>Intune ile cihazları uzaktan kilitleme
@@ -50,10 +50,10 @@ ms.locfileid: "80325128"
 ## <a name="remote-lock-a-device"></a>Cihazı uzaktan kilitleme
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-3. **Cihazlar** > **Tüm cihazlar**’ı seçin.
+3. **Cihazlar** > **tüm cihazlar**' ı seçin.
 4. Cihaz listesinde bir cihaz seçin ve ardından **Uzaktan kilitle** eylemini seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- Bu eylemin durumunu görmek için **Microsoft Intune** > **Cihazlar** > **Cihaz eylemleri**'ni yapın. 
+- Bu eylemin durumunu görmek için **Microsoft Intune** > **cihazlar** > **cihaz eylemleri**' ni seçin. 
 - Cihazlarınızı yönetmenize yardımcı olabilecek diğer eylemler için bkz. [Kullanılabilir eylemler](device-management.md).

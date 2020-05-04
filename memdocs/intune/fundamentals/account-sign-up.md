@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e4bec3347ec45f020fd4c8e128278dc619335442
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80401456"
 ---
 # <a name="sign-up-or-sign-in-to-microsoft-intune"></a>Microsoft Intune’a kaydolma veya Intune’da oturum açma
@@ -62,20 +62,20 @@ Farklı izinlere sahip kullanıcılar için hizmeti yönetmek üzere erişim ver
 
 ### <a name="intune-admin-portal-url"></a>Intune yönetim portalı URL 'SI
 
-Microsoft Uç Nokta Yöneticisi Yönetim Merkezi: https://endpoint.microsoft.com
+Microsoft Uç Nokta Yöneticisi Yönetim Merkezi:https://endpoint.microsoft.com
 
-Intune Azure portal: https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade
+Intune Azure portal:https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade
 
-Eğitim için Intune: https://intuneeducation.portal.azure.com
+Eğitim için Intune:https://intuneeducation.portal.azure.com
 
-Klasik Intune Portalı: https://manage.microsoft.com klasik Intune portalı, yalnızca Intune PC yazılım istemcisi ile kaydedilen cihazları yönetmek için kullanılır
+Klasik Intune Portalı: https://manage.microsoft.com klasik Intune portalı yalnızca Intune bilgisayar yazılım istemcisiyle kaydedilen cihazları yönetmek için kullanılır
 
 ### <a name="urls-for-intune-services-provided-by-office-365"></a>Office 365 tarafından sunulan Intune Hizmetleri için URL 'Ler
 
-Microsoft 365 İş: https://portal.microsoft.com/adminportal
+Microsoft 365 İş:https://portal.microsoft.com/adminportal
 
-Office 365 mobil cihaz yönetimi: https://admin.microsoft.com/adminportal/home#/MifoDevices
+Office 365 mobil cihaz yönetimi:https://admin.microsoft.com/adminportal/home#/MifoDevices
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Office 365, Azure veya Intune 'da oturum açamazsınız](https://support.microsoft.com/help/2412085)
+[Office 365, Azure veya Intune’da oturum açamıyorsunuz](https://support.microsoft.com/help/2412085)

@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 69432082c199152b18b2afa95fd8351917d9bba9
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359233"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Intune 'da bilgi noktası olarak çalıştırılacak Windows 10 ve üzeri cihaz ayarları
@@ -54,7 +54,7 @@ Cihazda yalnızca bir uygulama çalıştırır.
 
 - **Kullanıcı oturum açma türü**: Eklediğiniz uygulamalar, girdiğiniz kullanıcı hesabı olarak çalışır. Seçenekleriniz şunlardır:
 
-  - **Otomatik oturum açma (Windows 10 sürüm 1803 ve üzeri)** : bir Konuk hesabına benzer şekilde, kullanıcının oturum açmasını gerektirmeyen, genel kullanıma yönelik ortamlarda bilgi noktaları üzerinde kullanın. Bu ayar, [AssignedAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp) kullanır.
+  - **Otomatik oturum açma (Windows 10 sürüm 1803 ve üzeri)**: bir Konuk hesabına benzer şekilde, kullanıcının oturum açmasını gerektirmeyen, genel kullanıma yönelik ortamlarda bilgi noktaları üzerinde kullanın. Bu ayar, [AssignedAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp) kullanır.
   - **Yerel kullanıcı hesabı**: Cihaz için yerel kullanıcı hesabını girin. Girdiğiniz hesap, bilgi noktasında oturum açar.
 
 - **Uygulama türü**: uygulama türünü seçin. Seçenekleriniz şunlardır:
@@ -62,12 +62,12 @@ Cihazda yalnızca bir uygulama çalıştırır.
   - **Microsoft Edge tarayıcısı Ekle**: **Microsoft Edge tarayıcısı**' nı seçin ve **uç bilgi noktası modu türünü**seçin:
 
     - **Dijital/Etkileşimli imza**: bir URL tam ekran açar ve yalnızca o Web sitesindeki içeriği gösterir. [Dijital Işaretleri ayarla](https://docs.microsoft.com/windows/configuration/setup-digital-signage) özelliği, bu özellik hakkında daha fazla bilgi sağlar.
-    - **Genel göz atma (InPrivate)** : Microsoft Edge 'in sınırlı bir çok sekmeli sürümünü çalıştırır. Kullanıcılar herkese açık bir şekilde göz atabilir veya gözatma oturumlarını sonlandırabilir.
+    - **Genel göz atma (InPrivate)**: Microsoft Edge 'in sınırlı bir çok sekmeli sürümünü çalıştırır. Kullanıcılar herkese açık bir şekilde göz atabilir veya gözatma oturumlarını sonlandırabilir.
 
     Bu seçenekler hakkında daha fazla bilgi için bkz. [Microsoft Edge bilgi noktası modunu dağıtma](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
     > [!NOTE]
-    > Bu ayar cihazda Microsoft Edge tarayıcısını sunar. Microsoft Edge 'e özgü ayarları yapılandırmak için bir cihaz yapılandırma **profili oluşturun (** **cihaz yapılandırma** > **profiller** >  > **Windows 10** platform > **cihaz kısıtlamaları** >  **Microsoft Edge tarayıcısı**). [Microsoft Edge tarayıcısı](device-restrictions-windows-10.md#microsoft-edge-browser) , kullanılabilir ayarları listeler ve açıklar.
+    > Bu ayar cihazda Microsoft Edge tarayıcısını sunar. Microsoft Edge 'e özgü ayarları yapılandırmak için bir cihaz yapılandırma profili oluşturun (cihaz**yapılandırma** > **profilleri** > **Create profile** > **Windows 10** for platform > **cihaz kısıtlamaları** >  **Microsoft Edge Browser**). [Microsoft Edge tarayıcısı](device-restrictions-windows-10.md#microsoft-edge-browser) , kullanılabilir ayarları listeler ve açıklar.
 
   - **Bilgi noktası tarayıcısı Ekle**: **bilgi noktası tarayıcı ayarları**' nı seçin. Bu ayarlar bilgi noktasındaki web tarayıcısı uygulamasını denetler. [Bilgi noktası tarayıcı uygulamasını](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) mağazadan aldığınızdan emin olun, bunu bir [Istemci uygulaması](../apps/apps-add.md)olarak Intune 'a ekleyin. Ardından, uygulamayı bilgi noktası cihazlarına atayın.
 
@@ -85,7 +85,7 @@ Cihazda yalnızca bir uygulama çalıştırır.
 
     - **İzin verilen web siteleri**: Belirli Web sitelerinin açılmasına izin vermek için bu ayarı kullanın. Diğer bir deyişle, cihazda web sitelerine erişimi kısıtlamak veya tamamen önlemek için bu özelliği kullanın. Örneğin `http://contoso.com` adresindeki tüm Web sitelerinin açılmasına izin verebilirsiniz. Varsayılan olarak tüm Web sitelerine izin verilir.
 
-      Belirli web sitelerine izin vermek için izin verilecek web sitelerini ayrı satırlarda listeleyen bir dosyayı karşıya yükleyin. Bir dosya eklemezseniz tüm web sitelerine izin verilir. Varsayılan olarak Intune, joker karakter destekler. Bu nedenle, etki alanını girdiğinizde `sharepoint.com`gibi, alt etki alanlarına izin ver, `contoso.sharepoint.com`, `my.sharepoint.com`vb. gibi otomatik olarak izin verilir.
+      Belirli web sitelerine izin vermek için izin verilecek web sitelerini ayrı satırlarda listeleyen bir dosyayı karşıya yükleyin. Bir dosya eklemezseniz tüm web sitelerine izin verilir. Varsayılan olarak Intune, joker karakter destekler. Bu `sharepoint.com`nedenle, etki alanını girdiğinizde, gibi, alt etki alanlarına izin ver gibi otomatik olarak izin verilir `contoso.sharepoint.com` `my.sharepoint.com`.
 
       Örnek dosyanız, aşağıdaki listeye benzer görünmelidir:
 
@@ -125,24 +125,24 @@ Bu modda uygulamalar Başlat menüsünde sağlanır. Bu uygulamalar, yalnızca k
 
 - **Kullanıcı oturum açma türü**: Eklediğiniz uygulamalar, girdiğiniz kullanıcı hesabı olarak çalışır. Seçenekleriniz şunlardır:
 
-  - **Otomatik oturum açma (Windows 10 sürüm 1803 ve üzeri)** : bir Konuk hesabına benzer şekilde, kullanıcının oturum açmasını gerektirmeyen, genel kullanıma yönelik ortamlarda bilgi noktaları üzerinde kullanın. Bu ayar, [AssignedAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp) kullanır.
+  - **Otomatik oturum açma (Windows 10 sürüm 1803 ve üzeri)**: bir Konuk hesabına benzer şekilde, kullanıcının oturum açmasını gerektirmeyen, genel kullanıma yönelik ortamlarda bilgi noktaları üzerinde kullanın. Bu ayar, [AssignedAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp) kullanır.
   - **Yerel kullanıcı hesabı**: Cihaz için yerel kullanıcı hesabını **ekleyin**. Girdiğiniz hesap, bilgi noktasında oturum açar.
-  - **Azure AD kullanıcısı veya grubu (Windows 10 sürüm 1803 ve üzeri)** : **Ekle**' yi SEÇIN ve listeden Azure AD kullanıcıları veya grupları ' nı seçin. Birden çok kullanıcı ve grup seçebilirsiniz. Değişikliklerinizi kaydetmek için **Seçin**’e tıklayın.
+  - **Azure AD kullanıcısı veya grubu (Windows 10 sürüm 1803 ve üzeri)**: **Ekle**' yi SEÇIN ve listeden Azure AD kullanıcıları veya grupları ' nı seçin. Birden çok kullanıcı ve grup seçebilirsiniz. Değişikliklerinizi kaydetmek için **Seçin**’e tıklayın.
   - **HoloLens ziyaretçisi**: Ziyaretçi hesabı, [paylaşılan PC modu kavramlarında](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts) anlatıldığı gibi, kullanıcı kimlik bilgileri veya kimlik doğrulaması gerektirmeyen bir konuk hesabıdır.
 
 - **Tarayıcı ve uygulamalar**: bilgi noktası cihazında çalıştırılacak uygulamaları ekleyin. Birden fazla uygulama ekleyebileceğinizi unutmayın.
 
-  - **Tarayıcısında**
+  - **Browsers (Tarayıcılar)**
 
     - **Microsoft Edge Ekle**: Microsoft Edge uygulama kılavuzuna eklenir ve tüm uygulamalar bu bilgi noktasında çalıştırılabilir. **Microsoft Edge bilgi noktası modu türünü**seçin:
 
-      - **Normal mod (Microsoft Edge 'in tam sürümü)** : tüm göz atma özellikleriyle Microsoft Edge 'in tam bir sürümünü çalıştırır. Kullanıcı verileri ve durumu oturumlar arasında kaydedilir.
-      - **Genel göz atma (InPrivate)** : tam ekran modunda çalışan bilgi noktaları için özel bir deneyim ile Microsoft Edge InPrivate 'ın çok bölgeli bir sürümünü çalıştırır.
+      - **Normal mod (Microsoft Edge 'in tam sürümü)**: tüm göz atma özellikleriyle Microsoft Edge 'in tam bir sürümünü çalıştırır. Kullanıcı verileri ve durumu oturumlar arasında kaydedilir.
+      - **Genel göz atma (InPrivate)**: tam ekran modunda çalışan bilgi noktaları için özel bir deneyim ile Microsoft Edge InPrivate 'ın çok bölgeli bir sürümünü çalıştırır.
 
       Bu seçenekler hakkında daha fazla bilgi için bkz. [Microsoft Edge bilgi noktası modunu dağıtma](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
       > [!NOTE]
-      > Bu ayar cihazda Microsoft Edge tarayıcısını sunar. Microsoft Edge 'e özgü ayarları yapılandırmak için bir cihaz yapılandırma **profili oluşturun (** **cihaz yapılandırma** > **profiller** >  > **Windows 10** platform > **cihaz kısıtlamaları** >  **Microsoft Edge tarayıcısı**). [Microsoft Edge tarayıcısı](device-restrictions-windows-10.md#microsoft-edge-browser) , kullanılabilir ayarları listeler ve açıklar.
+      > Bu ayar cihazda Microsoft Edge tarayıcısını sunar. Microsoft Edge 'e özgü ayarları yapılandırmak için bir cihaz yapılandırma profili oluşturun (cihaz**yapılandırma** > **profilleri** > **Create profile** > **Windows 10** for platform > **cihaz kısıtlamaları** >  **Microsoft Edge Browser**). [Microsoft Edge tarayıcısı](device-restrictions-windows-10.md#microsoft-edge-browser) , kullanılabilir ayarları listeler ve açıklar.
 
     - **Bilgi noktası tarayıcısı Ekle**: Bu ayarlar, bilgi noktasında bir Web tarayıcısı uygulamasını denetler. Bilgi noktasına web tarayıcısı uygulamasını [İstemci Uygulamaları](../apps/apps-add.md)’nı kullanarak dağıttığınıza emin olun.
 
@@ -173,12 +173,12 @@ Bu modda uygulamalar Başlat menüsünde sağlanır. Bu uygulamalar, yalnızca k
 
       - **Uygulama adı**: Gereklidir. Uygulama için bir ad girin.
       - **Yerel yol**: Gereklidir. Yürütülebilir dosyanın yolunu girin, örneğin `C:\Program Files (x86)\Microsoft VS Code\Code.exe` veya `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
-      - **Uygulama kullanıcı modeli kimliği (AUMID)** : Win32 uygulamasının uygulama kullanıcı modeli kimliğini (AUMID) girin. Bu ayar, masaüstündeki kutucuk başlangıç düzenini belirler. Bu KIMLIĞI almak için bkz. [Get-StartApps](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps).
+      - **Uygulama kullanıcı modeli kimliği (AUMID)**: Win32 uygulamasının uygulama kullanıcı modeli kimliğini (AUMID) girin. Bu ayar, masaüstündeki kutucuk başlangıç düzenini belirler. Bu KIMLIĞI almak için bkz. [Get-StartApps](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps).
 
     - **AUMID’e göre ekle**: Notepad veya Hesap Makinesi gibi gelen kutusu Windows uygulamalarını eklemek için bu seçeneği kullanın. Aşağıdaki özellikleri girin:
 
       - **Uygulama adı**: Gereklidir. Uygulama için bir ad girin.
-      - **Uygulama kullanıcı modeli kimliği (AUMID)** : Gereklidir. Windows uygulamasının uygulama kullanıcı modeli kimliğini (AUMID) girin. Bu kimliği almak için bkz. [Yüklü bir uygulamanın Uygulama Kullanıcı Modeli Kimliğini bulma](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+      - **Uygulama kullanıcı modeli kimliği (AUMID)**: Gereklidir. Windows uygulamasının uygulama kullanıcı modeli kimliğini (AUMID) girin. Bu kimliği almak için bkz. [Yüklü bir uygulamanın Uygulama Kullanıcı Modeli Kimliğini bulma](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
     - **Oto başlatması**: isteğe bağlı. Kullanıcı oturum açtığında, yeniden başlatılacak bir uygulama seçin. Yalnızca tek bir uygulama, oto başlatılabilir.
     - **Kutucuk boyutu**: Gereklidir. Küçük, Orta, Geniş veya Büyük uygulama kutucuk boyutu seçin.

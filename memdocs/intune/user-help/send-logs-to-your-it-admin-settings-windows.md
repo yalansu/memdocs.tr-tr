@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: c32be14ed453d7afd9b91e1c637a6c0484a872a6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327874"
 ---
 # <a name="send-logs-to-your-company-support-from-the-settings-app-for-windows-10"></a>Windows 10 cihazlar için Ayarlar uygulamasından şirketinizin destek birimine günlük gönderme
@@ -31,7 +31,7 @@ ms.locfileid: "79327874"
 Windows 10 için Şirket Portalı gidermek üzere Ayarlar uygulamasını kullanın. Uygulamayı Windows 10 cihazınızda kullanırken bir sorunla karşılaşırsanız, yardım için destek ekibinize e-posta gönderebilirsiniz. Şirket Portalı uygulamasında oluşan olaylar ve hatalar, bir _tanılama günlüğü_adlı özel bir belgede cihazınıza kaydedilir. Bu, hata hakkında ek Öngörüler içerebilir ve ne zaman verildiğinde ekipleri desteklemek için yararlıdır.
 
 1. **Ayarlar** uygulamasını açmak Için, **Başlat** menüsüne > **Ayarlar**' a gidin. Arama çubuğundaki *ayarları* da arayabilirsiniz.
-2. **Hesaplar** > **İşe veya okula erişmeye** gidin.
+2. **Hesaplara** > **erişim iş veya okul**sayfasına gidin.
 3. **Yönetim günlük dosyalarınızı dışarı aktar**' ı seçin.
 
    !["İlgili ayarlar" başlığının altından Dışa Aktarma seçeneğini sunan "İşe veya okula erişme" ekranı.](./media/w10-export-logs.png)
