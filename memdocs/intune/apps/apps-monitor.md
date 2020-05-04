@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c505b73b37daefac7027ff6b18f209583db99f0a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324479"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Microsoft Intune ile uygulama bilgilerini ve atamalarını izleme
@@ -32,7 +32,7 @@ ms.locfileid: "80324479"
 Intune, yönettiğiniz uygulamanın özelliklerini izlemeniz ve uygulama atama durumunu yönetmeniz için birkaç yol sağlar.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tüm uygulamalar** > **uygulamalar** ' ı seçin.
+2. **Uygulamalar** > **tüm uygulamalar**' ı seçin.
 3. Uygulama listesinde, izlenecek uygulamayı seçin. Cihaz durumuna ve kullanıcı durumuna genel bakışı içeren uygulama bölmesini göreceksiniz.
 
 > [!NOTE]
@@ -44,14 +44,14 @@ Intune, yönettiğiniz uygulamanın özelliklerini izlemeniz ve uygulama atama d
 
 Uygulama bölmesinde, ortamınızdaki bir uygulamanın durumu hakkındaki ayrıntıları gözden geçirebilirsiniz.
 
-### <a name="essentials"></a>Essentials
+### <a name="essentials"></a>Temel Bileşenler
 **Temel Parçalar** bölümünde, uygulama hakkında aşağıdaki bilgiler yer alır:
 
  | **Uygulama ayrıntıları**            | **Açıklama**                                                      |
 |------------------------|------------------------------------------------------------------|
-| **Yayımcı**          | Uygulamanın yayımcısı.                                            |
+| **'In**          | Uygulamanın yayımcısı.                                            |
 | **İşletim sistemi**   | Uygulamanın işletim sistemi (Windows, iOS/ıpados, Android, vb.). |
-| **Oluşturma Tarihi**             | Düzeltmenin oluşturulduğu tarih ve saat. <b>**Note**: Bu tarih değeri, bir BT Yöneticisi uygulama meta verilerini değiştirdiğinde (uygulama kategorisi veya uygulama açıklaması gibi) güncelleştirilir.                        |
+| **Oluşturulan**             | Düzeltmenin oluşturulduğu tarih ve saat. <b>**Note**: Bu tarih değeri, bir BT Yöneticisi uygulama meta verilerini değiştirdiğinde (uygulama kategorisi veya uygulama açıklaması gibi) güncelleştirilir.                        |
 | **Atanan**           | Uygulamanın atanıp atanmadığı (**Evet** veya **Hayır**).                  |
 
 ### <a name="device-and-user-status-graphs"></a>Cihaz ve kullanıcı durum grafikleri
@@ -60,8 +60,8 @@ Grafikler aşağıdaki durumlar için uygulamaların sayısını gösterir:
 | **Cihaz durumu**       | **Açıklama**                                       |
 |-----------------------|-------------------------------------------------------|
 | **Yüklendi**         | Yüklenen uygulamaların sayısı.                         |
-| **Yüklü Değil**     | Yüklenmemiş uygulamaların sayısı.                     |
-| **Başarısız**            | Başarısız olan yüklemelerin sayısı.                   |
+| **Yüklü değil**     | Yüklenmemiş uygulamaların sayısı.                     |
+| **Başaramadı**            | Başarısız olan yüklemelerin sayısı.                   |
 | **Yükleme Bekletiliyor**   | Yüklenme sürecinde olan uygulamaların sayısı. |
 | **Uygulanamaz**           | Durumun uygulanamadığı uygulamaların sayısı.            |
 
@@ -89,10 +89,10 @@ Menünün **İzleme** bölümünde **Kullanıcı yükleme durumu**’nu seçtiğ
 
 | **Kullanıcı sütunu**     | **Açıklama**                           |
 |---------------------|-------------------------------------------|
-| **Ad**            | Kullanıcının Azure Active Directory'deki adı.         |
+| **Adı**            | Kullanıcının Azure Active Directory'deki adı.         |
 | **Kullanıcı adı**       | Kullanıcının benzersiz adı.              |
 | **Yüklemeler**   | Kullanıcı tarafından yüklenen uygulamaların sayısı. |
-| **Hatalar**        | Kullanıcı için başarısız olan uygulama yüklemelerinin sayısı.     |
+| **Kesil**        | Kullanıcı için başarısız olan uygulama yüklemelerinin sayısı.     |
 | **Yüklü değil**   | Kullanıcı tarafından yüklenmeyen uygulamaların sayısı. |
 
 

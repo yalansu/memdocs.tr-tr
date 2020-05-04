@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fadd5817ccd4e591fe92c11cb30041296ac85d61
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696471"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Intune ile uygulama tabanlı koşullu erişim ilkeleri ayarlama
@@ -44,7 +44,7 @@ Microsoft Endpoint Manager yönetim merkezinden koşullu erişim ilkeleri oluşt
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) oturum açın
 
-2. **Son nokta güvenliği** > **koşullu erişim** > **Yeni ilke**' yi seçin.
+2. **Endpoint Security** > **koşullu erişim** > **Yeni ilke**' yi seçin.
 
 3. Bir ilke **adı**girin ve ardından *atamalar*' ın altında **Kullanıcılar ve gruplar**' ı seçin. İlke için grupları eklemek üzere Dahil Et veya Hariç Tut seçeneklerini kullanın ve **Bitti**’yi seçin.
 
@@ -52,11 +52,11 @@ Microsoft Endpoint Manager yönetim merkezinden koşullu erişim ilkeleri oluşt
 
    Değişikliklerinizi kaydetmek için **Bitti**’yi seçin.
 
-5. **Koşullar** > **İstemci uygulamaları**’nı seçerek ilkeyi uygulamalara ve tarayıcılara uygulayın. Örneğin **Evet**’i seçin ve ardından **Tarayıcı** ve **Mobil uygulamalar ve masaüstü istemciler**’i etkinleştirin.
+5. İlkeyi uygulamalara ve tarayıcılara uygulamak için **koşullar** > **istemci uygulamaları** ' nı seçin. Örneğin **Evet**’i seçin ve ardından **Tarayıcı** ve **Mobil uygulamalar ve masaüstü istemciler**’i etkinleştirin.
 
    Değişikliklerinizi kaydetmek için **Bitti**’yi seçin.
 
-6. *Erişim denetimleri*altında, cihaz uyumluluğuna göre koşullu erişim uygulamak Için **izin ver** ' i seçin. Örneğin, **erişim ver** > **onaylı istemci uygulaması gerektir** ve **Uygulama koruma ilkesi (Önizleme) gerektir** ' i seçin ve **Seçilen denetimlerden birini gerektir** ' i seçin.
+6. *Erişim denetimleri*altında, cihaz uyumluluğuna göre koşullu erişim uygulamak Için **izin ver** ' i seçin. Örneğin > , **erişim izni ver****onaylı istemci uygulaması gerektir** ' i seçin ve **Uygulama koruma ilkesi (Önizleme) gerektir** ' i seçin ve **Seçilen denetimlerden birini gerektir** ' i seçin
 
    Değişikliklerinizi kaydetmek için **Seçin**’e tıklayın.
 
@@ -71,5 +71,5 @@ Microsoft Endpoint Manager yönetim merkezinden koşullu erişim ilkeleri oluşt
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Uygulama koruma ilkeleriyle uygulama verilerini koruma](../apps/app-protection-policies.md)
-[Azure Active Directory’de Koşullu Erişim](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)
+[Uygulama verilerini uygulama koruma ilkeleriyle](../apps/app-protection-policies.md)
+koruma[Azure Active Directory Koşullu erişim](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)

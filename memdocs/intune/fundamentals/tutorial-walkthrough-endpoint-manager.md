@@ -19,13 +19,13 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 81ea88bc72e6bcd52dbfe51cb4fa12803605de18
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330390"
 ---
-# <a name="tutorial-walkthrough-intune-in-microsoft-endpoint-manager"></a>Öğretici: Microsoft Endpoint Manager 'da Intune 'da Izlenecek yol
+# <a name="tutorial-walkthrough-intune-in-microsoft-endpoint-manager"></a>Öğretici: Microsoft Endpoint Manager’da Intune için izlenecek yol
 
 [Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) , çok sayıda bulut bilgi işlem senaryosu ve olasılıklarıyla size yardımcı olmak için 100 'den fazla hizmet içerir. Azure 'da bulunan çeşitli hizmetlerden biridir Microsoft Intune. Intune, şirketinizin cihazlarınızın, uygulamalarının ve verilerinin şirketinizin güvenlik gereksinimlerini karşıladığından emin olmanıza yardımcı olur. Hangi gereksinimlerin denetlenmesi gerektiğini ve bu gereksinimler karşılanmazsa ne olacağını ayarlamaya yönelik denetime sahipsiniz. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) , Microsoft Intune hizmetini ve cihaz yönetimiyle ilgili diğer ayarları bulabileceğiniz yerdir. Intune 'da kullanılabilen özellikleri anlamak çeşitli mobil cihaz yönetimi (MDM) ve mobil uygulama yönetimi (MAM) görevlerini gerçekleştirmenize yardımcı olur.
 
@@ -128,7 +128,7 @@ Intune 'U Microsoft Endpoint Manager Yönetim Merkezi 'nde daha iyi anlamak içi
     Bu cihaz listesi uyumluluk, işletim sistemi sürümü ve son iade etme tarihiyle ilgili önemli ayrıntıları gösterir.
 
     > [!TIP]
-    > Intune 'u Azure portal daha önce kullandıysanız, [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 'da oturum açarak ve **tüm cihazlar** > **cihazlar** ' ı seçerek yukarıdaki ayrıntıları Azure Portal bulabilirsiniz.
+    > Intune 'u Azure Portal daha önce kullandıysanız, [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 'da oturum açarak ve **cihazlar** > **tüm cihazlar**' ı seçerek yukarıdaki ayrıntıları Azure Portal bulabilirsiniz.
  
 8. Uygulama durumuna genel bir bakış göstermek için gezinti bölmesinden **uygulamalar** ' ı seçin. Bu bölme aşağıdaki sekmelere göre uygulama yükleme durumu sağlar:
 
@@ -151,7 +151,7 @@ Intune 'U Microsoft Endpoint Manager Yönetim Merkezi 'nde daha iyi anlamak içi
 9. **Uygulamalar-genel bakış** bölmesinden, Intune 'a eklenmiş uygulamaların listesini görmek için **tüm uygulamalar** ' ı seçin.
 
     > [!TIP]
-    > Intune 'u Azure portal daha önce kullandıysanız, [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 'da oturum açarak ve **Istemci uygulamaları** > **uygulamalar**' ı seçerek yukarıdaki ayrıntıları Azure Portal bulabilirsiniz.
+    > Intune 'u Azure Portal daha önce kullandıysanız, [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 'da oturum açarak ve **istemci uygulamaları** > **uygulamaları**' nı seçerek yukarıdaki ayrıntıları Azure Portal bulabilirsiniz.
 
     Platforma, Intune 'a göre çeşitli farklı uygulama türleri ekleyebilirsiniz. Bir uygulama eklendikten sonra, Kullanıcı gruplarına atayabilirsiniz. 
 
@@ -188,7 +188,7 @@ Intune 'U Microsoft Endpoint Manager Yönetim Merkezi 'nde daha iyi anlamak içi
 
     Daha fazla bilgi için bkz. [Intune kiracı durumu](tenant-status.md).
 
-13. Gezinti bölmesinden, belirli bir kullanıcının durum ayrıntılarını denetlemek için **sorun giderme + destek > sorun** **giderme '** yi seçin. 
+13. Gezinti bölmesinden, belirli bir kullanıcının durum ayrıntılarını denetlemek için **sorun giderme + Destek** > **sorunlarını** giderme ' yi seçin. 
 
     > [!TIP]
     > Daha önce Azure portal Intune kullandıysanız, [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 'da oturum açarak ve **sorun giderme**' yi seçerek yukarıdaki ayrıntıları Azure Portal bulabilirsiniz.
@@ -199,7 +199,7 @@ Intune 'U Microsoft Endpoint Manager Yönetim Merkezi 'nde daha iyi anlamak içi
 
     Intune 'da sorun giderme hakkında daha fazla bilgi için bkz. [şirketinizde kullanıcılara yardımcı olmak için sorun giderme portalını kullanma](help-desk-operators.md).
 
-14. Gezinti bölmesinden, yardım istemek için **sorun giderme + destek** > **Yardım ve destek** ' i seçin.
+14. Gezinti bölmesinden, yardım istemek için **sorun giderme + Destek** > **Yardım ve destek** ' i seçin.
 
     > [!TIP]
     > Intune 'u Azure portal daha önce kullandıysanız, [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 'da oturum açarak ve **Yardım ve destek '** i seçerek yukarıdaki ayrıntıları Azure Portal bulabilirsiniz.
@@ -212,7 +212,7 @@ Intune 'U Microsoft Endpoint Manager Yönetim Merkezi 'nde daha iyi anlamak içi
 
     Daha fazla bilgi için bkz. [Microsoft Intune için destek alma](get-support.md).
 
-15. Gezinti bölmesinden, kullanılabilir Intune destekli senaryoları göstermek için **sorun giderme + destek** > **Kılavuzlu senaryolar** ' ı seçin.
+15. Gezinti bölmesinden, kullanılabilir Intune destekli senaryoları göstermek için **sorun giderme + Destek** > **temelli senaryolar** ' ı seçin.
 
     Kılavuzlu senaryo, bir uçtan uca kullanım örneği etrafında ortalanan özelleştirilmiş bir adım serisidir. Yaygın senaryolar, bir yönetici, Kullanıcı veya cihazın kuruluşunuzda oynadığı role dayalıdır. Bu roller genellikle en iyi kullanıcı deneyimini ve güvenliğini sağlamak için dikkatle düzenlenmiş profiller, ayarlar, uygulamalar ve güvenlik denetimleri koleksiyonu gerektirir.
 
@@ -245,4 +245,4 @@ Varsayılan görünümü, temayı, kimlik bilgileri zaman aşımı süresini ve 
 Microsoft Intune hızlı bir şekilde çalıştırmak için, önce ücretsiz bir Intune hesabı ayarlayarak Intune hızlı başlangıç adımlarını izleyin.
 
 > [!div class="nextstepaction"]
-> [Hızlı başlangıç: Microsoft Intune ücretsiz deneyin](free-trial-sign-up.md)
+> [Hızlı Başlangıç: Microsoft Intune'u ücretsiz deneyin](free-trial-sign-up.md)

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f3aaf2bf895082f3647f0a1ad6b9997a5e97baee
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79333030"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>İlke ve profillerin ve Intune 'da sorun giderme
@@ -79,7 +79,7 @@ Bu makalede bazı yaygın sorun giderme teknikleri listelenmekte ve karşılaşa
             - Android cihazında Şirket Portalı App > **cihazlarını** açın > cihazı listeden seçin > **cihaz ayarlarını denetleyin**.
             - İOS/ıpados cihazında, Şirket portalı uygulaması > **cihazları** açın > cihazı listeden seçin > **ayarları denetle**' ye tıklayın.
 
-        - Bir Windows cihazında **ayarlar** > **hesapları** açın > **iş veya okula erişin** > hesap veya MDM kayıt > **bilgi** > **eşitleme**' yi seçin.
+        - Bir Windows cihazında açık **Ayarlar** > **hesaplar** > **iş veya okul** > hesap veya MDM kaydı > **bilgi** > **eşitleme**' yi seçin.
 
     - İlkeye özgü bilgileri görmek için cihazı seçin.
 
@@ -104,7 +104,7 @@ Bu makalede bazı yaygın sorun giderme teknikleri listelenmekte ve karşılaşa
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Bir profilin doğru bir şekilde uygulanmış olması konusunda emin değilseniz
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tüm cihazlar** > **cihazları** seçin > Cihaz > cihaz **yapılandırmasını**seçin. 
+2. **Cihazlar** > **tüm cihazlar** ' ı seçin > cihazı > **cihaz yapılandırması**' nı seçin. 
 
     Her cihazda profillerini listeler. Her profilin bir **durumu**vardır. Bu durum, donanım ve işletim sistemi kısıtlamaları ve gereksinimleri de dahil olmak üzere tüm atanan profillerin birlikte kabul edildiği durumlarda geçerlidir. Olası durumlar şunlardır:
 
@@ -142,7 +142,7 @@ Windows Phone cihazlar, MDM veya EAS kullanılarak ayarlandıktan sonra güvenli
 
 Cihaz platformuna bağlı olarak, ilkeyi daha az güvenli bir değerle değiştirmek isterseniz, güvenlik ilkelerini sıfırlamanız gerekebilir.
 
-Örneğin, Windows 8.1 Masaüstünde, sağ taraftaki içeri doğru kaydırın ve sonra da **Charms** çubuğunu açın. **Kullanıcı hesapları** > **Denetim Masası** > **Ayarlar** ' ı seçin. Sol taraftaki **Güvenlik İlkelerini Sıfırla**’yı seçin ve **İlkeleri Sıfırla**’ya tıklayın.
+Örneğin, Windows 8.1 Masaüstünde, sağ taraftaki içeri doğru kaydırın ve sonra da **Charms** çubuğunu açın. **Ayarlar** > **Denetim Masası** > **Kullanıcı hesapları**' nı seçin. Sol taraftaki **Güvenlik İlkelerini Sıfırla**’yı seçin ve **İlkeleri Sıfırla**’ya tıklayın.
 
 Android, iOS/ıpados ve Windows Phone 8,1 gibi diğer platformların devre dışı bırakılması ve daha az kısıtlayıcı bir ilkeyi uygulamak için yeniden kaydedilmesi gerekebilir.
 
@@ -155,7 +155,7 @@ Android, iOS/ıpados ve Windows Phone 8,1 gibi diğer platformların devre dış
 
 ### <a name="microsoft-intune-policy-related-errors-in-policyplatformlog"></a>policyplatform.log dosyasındaki Microsoft Intune ilkesiyle ilgili hatalar
 
-Intune yazılım istemcisiyle yönetilen Windows bilgisayarları için `policyplatform.log` dosyasındaki ilke hataları, cihazdaki Windows Kullanıcı hesabı denetimi 'nde (UAC) varsayılan olmayan ayarlardan olabilir. Varsayılan olmayan bazı UAC ayarları Microsoft Intune istemci yüklemelerini ve ilke yürütmesini etkileyebilir.
+Intune yazılım istemcisiyle yönetilen Windows bilgisayarları için, `policyplatform.log` dosyadaki ilke hataları, cihazdaki Windows Kullanıcı hesabı denetimi 'NDE (UAC) varsayılan olmayan ayarlardan olabilir. Varsayılan olmayan bazı UAC ayarları Microsoft Intune istemci yüklemelerini ve ilke yürütmesini etkileyebilir.
 
 #### <a name="resolve-uac-issues"></a>UAC sorunlarını çözme
 

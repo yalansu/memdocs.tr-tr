@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: d9e074def368927504c3f3c1761ec21b3ab62d22
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696270"
 ---
 # <a name="encrypting-your-android-device"></a>Android cihazınızı şifreleme
@@ -45,7 +45,7 @@ Cihazınızı şifrelemek için aşağıdaki adımları izleyin. Cihazınız bir
 
 Şifreleme seçeneğinin adı ve konumu, cihaz üreticinize ve Android sürümüne bağlı olarak değişir. 
 
-1. **Ayarlar** uygulamasını açın.
+1. **Ayarlar** uygulamasını başlatın.
 2. İlgili ayarları bulmak için uygulamanın arama çubuğuna **güvenlik** veya **şifreleme** yazın.
 3. Cihazınızı şifrelemek için seçeneğe dokunun. Ekrandaki yönergeleri takip edin.  
 4. İstendiğinde, bir kilit ekranı parolası, PIN veya başka bir kimlik doğrulama yöntemi (kuruluşunuz tarafından izin verildiyse) ayarlayın. 
@@ -59,9 +59,9 @@ Kuruluşunuz, şifreleme ilkelerinin bir parçası olarak güvenli başlatmayı 
 
 Güvenli Başlatma seçeneğinin adı ve konumu, cihaz üreticinize ve Android sürümüne bağlı olarak değişir. Bazı cihazlarda bu ayar **güçlü koruma**olarak adlandırılabilir. 
 
-1. **Ayarlar** uygulamasını açın.
+1. **Ayarlar** uygulamasını başlatın.
 2. Uygulamanın arama çubuğunda **güvenli başlangıç** yazın.
-3. **Cihaz AÇıLDıĞıNDA PIN gerektir** > **güvenli başlangıç** ' a dokunun.
+3. Cihaz açıldığında **güvenli başlatma** > **PIN gerektir**' e dokunun.
 4. İstendiğinde, cihazınızın PIN 'inizi girin.   
 5. Ayarları yeniden denetlemek için Şirket Portalı veya Microsoft Intune uygulamasını açın.
     * Şirket Portalı kullanıcılar: cihazınızı seçin ve **cihaz ayarlarını denetle**' ye dokunun. 
@@ -73,12 +73,12 @@ Güvenli Başlatma seçeneğinin adı ve konumu, cihaz üreticinize ve Android s
 
 Kilit ekranı türünü seçmek veya değiştirmek için:
 
-1. **Ayarlar** uygulamasını açın.
+1. **Ayarlar** uygulamasını başlatın.
 2. Uygulamanın arama çubuğuna **ekran kilidi** yazın.
 3. **Ekran kilidi türü**' ne dokunun.
 4. Kullanmak istediğiniz ekran kilidi türüne dokunun ve onaylamak için ekrandaki yönergeleri izleyin.  
 
-## <a name="troubleshoot"></a>Sorunları Gider    
+## <a name="troubleshoot"></a>Sorun giderme    
 **Sorun**: şifreleme düğmesi devre dışı bırakıldı.   
 
 **Deneyebileceğiniz şey**: 
@@ -86,7 +86,7 @@ Kilit ekranı türünü seçmek veya değiştirmek için:
 
 **Sorun**: hala cihazınızı şifrelemeniz gerektiğini söyleyen bir ileti görürsünüz.  
 
-**Bunları deneyin**:
+**Deneyebileceğiniz şeyler**:
    *  Cihazınızda [bir kilit ekranı ayarlayın](#set-startup-passcode) . 
    * [Güvenli başlatmayı etkinleştirin](#enable-secure-startup).
 

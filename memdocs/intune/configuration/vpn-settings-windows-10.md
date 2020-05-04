@@ -17,10 +17,10 @@ ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086502"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Intune kullanarak VPN bağlantıları eklemek için Windows 10 ve Windows holographic cihaz ayarları
@@ -60,7 +60,7 @@ Seçtiğiniz ayarlara bağlı olarak, değerlerden bazıları yapılandırılama
   - **Check Point Capsule VPN**
   - **Citrix**
   - **Palo Alto Networks GlobalProtect**
-  - **Otomatik**
+  - **Automatic**
   - **IKEv2**
   - **L2TP**
   - **PPTP**
@@ -123,7 +123,7 @@ Seçtiğiniz ayarlara bağlı olarak, değerlerden bazıları yapılandırılama
 
 - **Bu VPN bağlantısı Için koşullu erişim**: istemciden cihaz uyumluluk akışını mümkün olarak sunar. Etkinleştirildiğinde, VPN istemcisi kimlik doğrulama için kullanmak üzere bir sertifika almak için Azure Active Directory (AD) ile iletişim kurar. VPN’nin sertifika kimlik doğrulamasını kullanacak şekilde ayarlanmış olması ve VPN sunucusunun Azure AD tarafından döndürülen sunucuya güvenmesi gerekir.
 
-- **Alternatif sertifika ile çoklu oturum açma (SSO)** : Cihaz uyumluluğu amacıyla Kerberos kimlik doğrulaması için VPN kimlik doğrulama sertifikasından farklı bir sertifika kullanın. Aşağıdaki ayarlarla sertifikayı girin:
+- **Alternatif sertifika ile çoklu oturum açma (SSO)**: Cihaz uyumluluğu amacıyla Kerberos kimlik doğrulaması için VPN kimlik doğrulama sertifikasından farklı bir sertifika kullanın. Aşağıdaki ayarlarla sertifikayı girin:
 
   - **Ad**: Genişletilmiş anahtar kullanımı (EKU) adı
   - **Nesne Tanımlayıcısı**: EKU için nesne tanımlayıcısı
@@ -149,8 +149,8 @@ Seçtiğiniz ayarlara bağlı olarak, değerlerden bazıları yapılandırılama
 
   - **Etki alanı**: kuralı uygulamak için tam etki alanı adını (FQDN) veya bir DNS sonekini girin. Ayrıca, DNS son ekinin başındaki bir nokta (.) girebilirsiniz. Örneğin `contoso.com` veya `.allcontososubdomains.com` girin.
   - **DNS sunucuları**: etki ALANıNı çözen IP ADRESINI veya DNS sunucusunu girin. Örneğin `10.0.0.3` veya `vpn.contoso.com` girin.
-  - **Proxy**: etki alanını çözen Web proxy sunucusunu girin. Örneğin, şunu girin: `http://proxy.com`.
-  - **Otomatik bağlan**: **etkinleştirildiğinde**, cihaz, girdiğiniz `contoso.com`gibi bir etki alanına bağlandığında, cihaz otomatik olarak VPN 'e bağlanır. **Yapılandırılmadığında** (varsayılan) cihaz VPN 'ye otomatik olarak bağlanmaz
+  - **Proxy**: etki alanını çözen Web proxy sunucusunu girin. Örneğin, `http://proxy.com` girin.
+  - **Otomatik bağlan**: **etkinleştirildiğinde**, bir cihaz girdiğiniz bir etki alanına BAĞLANDıĞıNDA cihaz otomatik olarak VPN 'e bağlanır `contoso.com`. **Yapılandırılmadığında** (varsayılan) cihaz VPN 'ye otomatik olarak bağlanmaz
   - **Persistent**: **etkin**olarak AYARLANDıĞıNDA, kural, VPN bağlantısı kesildikten sonra bile cihazdan El Ile kaldırılana kadar ad çözümleme ilkesi tablosunda (NRPT) kalır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, VPN BAĞLANTıSı kesildiğinde VPN profilindeki NRPT kuralları cihazdan kaldırılır.
 
 ## <a name="proxy-settings"></a>Proxy ayarları
@@ -162,7 +162,7 @@ Seçtiğiniz ayarlara bağlı olarak, değerlerden bazıları yapılandırılama
 
 ## <a name="split-tunneling"></a>Bölünmüş Tünel
 
-- **Bölünmüş tünel**: Trafiğe bağlı olarak hangi bağlantının kullanılacağına cihazların karar vermesini sağlamak için bu seçeneği **Etkinleştirin** veya **Devre Dışı Bırakın**. Örneğin, oteldeki bir kullanıcı çalışma dosyalarına erişmek için VPN bağlantısını, web’e göz atmak için ise otelin standart ağını kullanır.
+- **Bölünmüş tünel**: cihazların trafiğe bağlı olarak hangi bağlantının kullanılacağına karar vermesini sağlamak için **etkinleştirin** veya **devre dışı bırakın** . Örneğin, oteldeki bir kullanıcı çalışma dosyalarına erişmek için VPN bağlantısını, web’e göz atmak için ise otelin standart ağını kullanır.
 - **Bu VPN bağlantısının tünel oluşturma rotalarını ayırma**: Üçüncü taraf VPN sağlayıcıları için isteğe bağlı rotalar ekleyin. Her bağlantı için bir hedef ön eki ve ön ek boyutu girin.
 
 ## <a name="trusted-network-detection"></a>Güvenilen ağ algılama

@@ -19,17 +19,17 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 345c2d3824a6bd22f224429717e6c44a3941b0cf
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324600"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Microsoft Intune ile uygulamaları gruplara atama
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Microsoft Intune’a [bir uygulama ekledikten](apps-add.md) sonra uygulamayı kullanıcılara ve cihazlara atayabilirsiniz. Unutmayın; cihaz Intune tarafından yönetiliyor olsa da olmasa da uygulamayı cihaza atayabilirsiniz.
+Microsoft Intune [bir uygulama](apps-add.md) ekledikten sonra, uygulamayı kullanıcılara ve cihazlara atayabilirsiniz. Unutmayın; cihaz Intune tarafından yönetiliyor olsa da olmasa da uygulamayı cihaza atayabilirsiniz.
 
 > [!NOTE]
 > Kullanılabilir dağıtım amacı yalnızca kullanıcı grupları için desteklenir, cihaz grupları için desteklenmez.
@@ -38,15 +38,15 @@ Aşağıdaki tabloda uygulamaları kullanıcılara ve cihazlara atamaya yönelik
 
 |   | Intune’a kayıtlı cihazlar | Intune’a kayıtlı olmayan cihazlar |
 |-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
-| Kullanıcılara atama | Evet | Evet |
-| Cihazlara atama | Evet | Hayır |
-| Sarmalanan uygulamaları veya Intune SDK’sını birleştiren uygulamaları atama (uygulama koruma ilkeleri için) | Evet | Evet |
-| Uygulamaları Kullanılabilir olarak atama | Evet | Evet |
-| Uygulamalarını Gerekli olarak atama | Evet | Hayır |
-| Uygulamaları kaldırma | Evet | Hayır |
-| Intune’dan uygulama güncelleştirmelerini alma | Evet | Hayır |
-| Son kullanıcıların Şirket Portalı uygulamasından kullanılabilir uygulamaları yüklemesi | Evet | Hayır |
-| Son kullanıcıların web tabanlı Şirket Portalı’ndan kullanılabilir uygulamaları yüklemesi | Evet | Evet |
+| Kullanıcılara ata | Yes | Yes |
+| Cihazlara atama | Yes | Hayır |
+| Sarmalanan uygulamaları veya Intune SDK’sını birleştiren uygulamaları atama (uygulama koruma ilkeleri için) | Yes | Yes |
+| Uygulamaları Kullanılabilir olarak atama | Yes | Yes |
+| Uygulamalarını Gerekli olarak atama | Yes | Hayır |
+| Uygulamaları kaldırma | Yes | Hayır |
+| Intune’dan uygulama güncelleştirmelerini alma | Yes | Hayır |
+| Son kullanıcıların Şirket Portalı uygulamasından kullanılabilir uygulamaları yüklemesi | Yes | Hayır |
+| Son kullanıcıların web tabanlı Şirket Portalı’ndan kullanılabilir uygulamaları yüklemesi | Yes | Yes |
 
 > [!NOTE]
 > Şu anda, Intune 'a kayıtlı olmayan cihazlara iOS/ıpados ve Android Uygulamaları (iş kolu ve mağaza satın alınan uygulamalar) atayabilirsiniz.
@@ -56,7 +56,7 @@ Aşağıdaki tabloda uygulamaları kullanıcılara ve cihazlara atamaya yönelik
 ## <a name="assign-an-app"></a>Uygulama atama
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tüm uygulamalar** > **uygulamalar** ' ı seçin.
+2. **Uygulamalar** > **tüm uygulamalar**' ı seçin.
 3. **Uygulamalar** bölmesinde atamak istediğiniz uygulamayı seçin.
 4. Menünün **Yönet** bölümünde **Atamalar**’ı seçin.
 5. Uygulamayla ilgili **Grup ekle** bölmesini açmak için **Grup Ekle**'yi seçin.
@@ -138,7 +138,7 @@ Ayar için varsayılan değerler, yeni atamalar için aşağıdaki gibi önceden
 
 |iOS uygulama türü | "Cihaz kaldırma sırasında kaldırma" için varsayılan ayar |
 |--------------------|----------------|
-| İş kolu uygulaması | Evet |
+| İş kolu uygulaması | Yes |
 | Mağaza uygulaması | Hayır |
 | VPP uygulaması | Hayır |
 | Yerleşik uygulama | Hayır |

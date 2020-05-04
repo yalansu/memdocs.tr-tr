@@ -20,13 +20,13 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1d8b05a5cd4398026d58c04199caf7f63567cc1e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327966"
 ---
-# <a name="remove-your-device-from-the-company-portal"></a>Cihazınızı Şirket Portalı’ndan kaldırırma
+# <a name="remove-your-device-from-the-company-portal"></a>Cihazınızı Şirket Portalı’ndan kaldırma
 
 Cihazınızın artık şirketiniz veya kuruluşunuz tarafından yönetilmesini istemediğinize karar verirseniz [Şirket Portalı web sitesini](https://go.microsoft.com/fwlink/?linkid=2010980) kullanarak Şirket Portalı’ndan kaldırabilirsiniz. Cihazınızı kaldırırsanız artık Şirket Portalı’nda listelenmez. Ayrıca kuruluşunuzun verileri, uygulamaları ve e-postalarına erişiminizi kaybedebilirsiniz.
 
@@ -38,7 +38,7 @@ Cihazınızı kaldırmak için:
 
     ![Tanımlanmamış, genel olarak adlandırılmış cihazları gösteren 2 kutucuğun bulunduğu Cihazlar sayfasının ekran görüntüsü. Cihazların hemen altında gri bir başlık yer alır ve kullanıcılardan kullandıkları cihazı tanımlamalarını veya yeni bir tane eklemelerini ister.](./media/rename-reset-device-step2-1808.png) 
 
-3. **Kaldır**’a tıklayın. Kaldırma seçeneği sayfanın üst kısmında görünmüyorsa **Diğer (...)**  > **Kaldır**’ı seçin.  
+3. **Kaldır**’ı seçin. Sayfanın üst kısmında Kaldır seçeneği görünmüyorsa, **diğer (...)** öğesini seçin.  >  **Kaldırın**.  
 
    ![Şirket Portalı web sitesinde seçilen bir cihaza yönelik cihaz ayrıntıları sayfası; üst kısmında Yeniden Adlandır, Kaldır, Cihazı Sıfırla, Geçiş Kodunu Sıfırla ve Uzaktan Kilitle bağlantıları ile. ](./media/rename-reset-device-1808.png)  
   

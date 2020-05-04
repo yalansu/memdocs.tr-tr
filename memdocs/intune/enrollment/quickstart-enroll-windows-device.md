@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4f70c8487d9cb30b2a7cced63e6e019541f73704
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327046"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Hızlı Başlangıç: Windows 10 cihazınızı kaydetme
@@ -48,7 +48,7 @@ Windows 10 Masaüstü cihazınızı kaydetmeden önce yüklü olan Windows sür�
 
    ![Windows Ayarları - Sistem ekran görüntüsü](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-01.png)
 
-2. **Sistem** > **Hakkında**’yı seçin. 
+2. **Sistem** > **hakkında**' yı seçin. 
 
    ![Sistem ayarlarınızın ekran görüntüsü](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-02.png)
 
@@ -68,7 +68,7 @@ Windows 10 Masaüstü cihazınızı kaydetmeden önce yüklü olan Windows sür�
 
    ![Sistem ayarları - Hesaplar ekranınızın ekran görüntüsü](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-03.png)
 
-2. **İş veya okula erişim** > **Bağlan**’ı seçin.
+2. **Erişim iş veya okul** > **bağlantısı**' nı seçin.
 
     ![İş veya okul hesabına erişimi seçme](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-04.png)
 
@@ -92,7 +92,7 @@ Windows 10 Masaüstü cihazınızı kaydetmeden önce yüklü olan Windows sür�
 ## <a name="confirm-your-device-enrollment-in-intune"></a>Intune’da cihaz kaydınızı onaylama
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) genel yönetici veya Intune Hizmet Yöneticisi olarak oturum açın.
-2. Intune 'da kayıtlı cihazları görüntülemek için **tüm cihazlar** > **cihazları** seçin.
+2. Intune 'da kayıtlı cihazları görüntülemek için **cihazlar** > **tüm cihazlar** ' ı seçin.
 3. Intune’a kayıtlı bir ek cihazınız olduğunu doğrulayın.
 
    ![Intune’a kayıtlı cihazların ekran görüntüsü](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-07.png)
@@ -108,4 +108,4 @@ Bu hızlı başlangıçta Windows 10 cihazları Intune’a kaydetmeyi öğrendin
 Bu Intune hızlı başlangıç serisini takip etmek için bir sonraki hızlı başlangıca ilerleyin.
 
 > [!div class="nextstepaction"]
-> [Hızlı Başlangıç: Android cihazlar için gerekli parola uzunluğunu ayarlama](../protect/quickstart-set-password-length-android.md)
+> [Hızlı Başlangıç: Android cihazlar için gerekli parola uzunluğu ayarlama](../protect/quickstart-set-password-length-android.md)

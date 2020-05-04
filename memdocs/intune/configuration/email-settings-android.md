@@ -1,6 +1,6 @@
 ---
 title: Microsoft Intune-Azure 'da Android e-posta ayarları | Microsoft Docs
-description: Bir cihaz Exchange sunucularının kullandığı yapılandırma e-posta profilleri oluşturma ve Azure Active Directory öznitelikleri alınamıyor. SSL veya SMIME 'yi etkinleştirin, sertifikalar veya Kullanıcı adı/parola ile kullanıcıların kimliğini doğrulayın ve Microsoft Intune kullanarak Android Samsung KNOX cihazlarda e-posta ve zamanlamaları eşitler.
+description: Exchange sunucularını kullanan bir cihaz yapılandırması e-posta profili oluşturun ve Azure Active Directory öznitelikleri alın. SSL veya SMIME 'yi etkinleştirin, sertifikalar veya Kullanıcı adı/parola ile kullanıcıların kimliğini doğrulayın ve Microsoft Intune kullanarak Android Samsung KNOX cihazlarda e-posta ve zamanlamaları eşitler.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,15 +16,15 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 36e17dc12622b3bb95c35a4472556f1c4f31ccd0
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80087006"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Intune 'da e-posta, kimlik doğrulama ve eşitlemeyi yapılandırmak için Android cihaz ayarları
 
-Bu makalede, Intune 'da Android Samsung KNOX cihazlarında denetim için kullanabileceğiniz farklı e-posta ayarları listelenir ve açıklanmaktadır. Mobil cihaz Yönetimi (MDM) çözümünüzün bir parçası olarak, bu ayarları ve e-postaları şifrelemek için SSL kullanmak, bir e-posta sunucusu yapılandırmak için kullanın.
+Bu makalede, Intune 'da Android Samsung KNOX cihazlarında denetim için kullanabileceğiniz farklı e-posta ayarları listelenir ve açıklanmaktadır. Mobil cihaz yönetimi (MDM) çözümünüzün bir parçası olarak, bir e-posta sunucusunu yapılandırmak için bu ayarları kullanın, e-postaları şifrelemek için SSL kullanın ve daha fazlasını yapın.
 
 Bir Intune Yöneticisi olarak, Android Samsung KNOX Standard cihazlarına e-posta ayarları oluşturabilir ve atayabilirsiniz.
 
@@ -36,11 +36,11 @@ Intune 'da e-posta profilleri hakkında daha fazla bilgi için bkz. [e-posta aya
 
 ## <a name="android-samsung-knox"></a>Android (Samsung Knox)
 
-- **E-posta sunucusu**: Exchange sunucunuzun konak adını girin. Örneğin, şunu girin: `outlook.office365.com`.
+- **E-posta sunucusu**: Exchange sunucunuzun konak adını girin. Örneğin, `outlook.office365.com` girin.
 - **Hesap adı**: E-posta hesabı için görünen adı girin. Bu ad, cihazlarda kullanıcılara gösterilir.
 - **AAD'den kullanıcı adı özniteliği**: Bu ad, Intune'un Azure Active Directory'den (Azure AD) aldığı özniteliktir. Intune, bu profil tarafından kullanılan kullanıcı adını dinamik olarak oluşturur. Seçenekleriniz şunlardır:
   - **Kullanıcı asıl adı**: `user1` veya `user1@contoso.com`gibi adı alır.
-  - **Kullanıcı adı**: yalnızca `user1`gibi adı alır.
+  - **Kullanıcı adı**: yalnızca adı alır (örneğin,) `user1`.
   - **sAM Hesap Adı**: Etki alanı gerektirir; örneğin `domain\user1`. sAM hesabı adı yalnızca Android cihazlarıyla birlikte kullanılır. Şunları da girin:  
     - **Kullanıcı etki alanı adı kaynağı**: **AAD** (Azure Active Directory) veya **Özel**’i seçin.
 
@@ -48,11 +48,11 @@ Intune 'da e-posta profilleri hakkında daha fazla bilgi için bkz. [e-posta aya
       - **AAD 'Den Kullanıcı etki alanı adı özniteliği**: kullanıcının **tam etki alanı adını** veya **NetBIOS adı** özniteliğini almayı seçin.
 
       **Özel** öznitelikler kullanmayı seçerseniz şunları girin:
-      - **Kullanılacak özel etki alanı adı**: ıntune 'un `contoso.com` veya `contoso`gibi etki alanı adı için kullandığı bir değer girin.
+      - **Kullanılacak özel etki alanı adı**: Intune 'un `contoso.com` veya `contoso`gibi etki alanı adı için kullandığı bir değer girin.
 
 - **AAD 'Den e-posta adresi özniteliği**: Bu ad, Intune 'un Azure AD 'den aldığı e-posta özniteliğidir. Intune, bu profil tarafından kullanılan e-posta adresini dinamik olarak oluşturur. Seçenekleriniz şunlardır:
   - **Kullanıcı asıl adı**: e-posta adresi olarak `user1@contoso.com` veya `user1`gibi tam asıl adı kullanır.
-  - **BIRINCIL SMTP adresi**: Exchange 'de oturum açmak için `user1@contoso.com`gıbı birincil SMTP adresini kullanır.
+  - **BIRINCIL SMTP adresi**: Exchange 'de oturum açmak için gıbı birincil SMTP `user1@contoso.com`adresini kullanır.
 
 - **Kimlik doğrulama yöntemi**: E-posta profili tarafından kullanılan kimlik doğrulama yöntemi olarak **Kullanıcı Adı ve Parola**’yı veya **Sertifikalar**’ı seçin.
   - **Sertifika**’yı seçerseniz, Exchange bağlantısının kimliğini doğrulamak için daha önce oluşturduğunuz istemci SCEP veya PKCS sertifika profilini seçin.

@@ -1,6 +1,6 @@
 ---
 title: Microsoft Intune-Azure 'da VPN ayarlarını iOS/ıpados cihazlarına yapılandırma | Microsoft Docs
-description: Sanal özel ağ (VPN) yapılandırma ayarlarını kullanarak iOS/ıpados cihazlarına bir VPN yapılandırma profili ekleyin veya oluşturun. Bağlantı ayrıntılarını, kimlik doğrulama yöntemlerini, bölünmüş tüneli, özel VPN ayarlarını tanımlayıcı, anahtar ve değer çiftleri, Safari URL 'Leri içeren uygulama başına VPN ayarlarını ve SSID veya DNS arama etki alanları ile isteğe bağlı VPN 'Leri, dahil edilecek proxy ayarlarını yapılandırın Microsoft Intune bir yapılandırma betiği, IP veya FQDN adresi ve TCP bağlantı noktası.
+description: Sanal özel ağ (VPN) yapılandırma ayarlarını kullanarak iOS/ıpados cihazlarına bir VPN yapılandırma profili ekleyin veya oluşturun. Bağlantı ayrıntılarını, kimlik doğrulama yöntemlerini, bölünmüş tüneli, özel VPN ayarlarını, bir yapılandırma betiği, IP veya FQDN adresi ve Microsoft Intune TCP bağlantı noktasını içerecek şekilde, anahtar ve değer çiftleri, uygulama başına VPN ayarlarını ve SSID veya DNS arama etki alanları ile isteğe bağlı VPN ayarlarını yapılandırın.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 74e889419dcaaa75c2a31fe16931dddd84d1a967
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086530"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune 'de iOS ve ıpados cihazlarına VPN ayarları ekleme
@@ -43,7 +43,7 @@ Aşağıdaki satıcı listesinden VPN bağlantı türünü seçin:
 - **SonicWall Mobile Connect**
 - **F5 Access Eski**: F5 Access uygulama sürümü 2.1 ve öncesi için geçerlidir.
 - **F5 Access**: F5 Access uygulama sürümü 3.0 ve sonrası için geçerlidir.
-- **Palo Alto Networks GlobalProtect (Eski)** : Palo Alto Networks GlobalProtect uygulama sürümü 4.1 ve öncesi için geçerlidir.
+- **Palo Alto Networks GlobalProtect (Eski)**: Palo Alto Networks GlobalProtect uygulama sürümü 4.1 ve öncesi için geçerlidir.
 - **Palo Alto Networks GlobalProtect**: Palo Alto Networks GlobalProtect uygulama sürümü 5.0 ve sonrası için geçerlidir.
 - **Pulse Secure**
 - **Cisco (IPSec)**
@@ -106,7 +106,7 @@ Aşağıdaki listede gösterilen ayarlar, seçtiğiniz VPN bağlantı türüne g
 
 ## <a name="ikev2-settings"></a>Ikev2 ayarları
 
-Bu ayarlar, > **Ikev2** **bağlantı türünü** seçtiğinizde geçerlidir.
+Bu ayarlar,**Ikev2** **bağlantı türünü** > seçtiğinizde geçerlidir.
 
 - **Her zaman-on VPN**: **Enable** VPN ISTEMCISINI otomatik olarak bağlanıp VPN 'ye yeniden bağlanacak şekilde ayarlar. Her Zaman Açık VPN bağlantıları; kullanıcı cihazı kilitlediğinde, cihaz yeniden başlatıldığında veya kablosuz ağ değiştiğinde bağlı durumda kalır veya hemen bağlanır. **Devre dışı** (varsayılan) olarak ayarlandığında, tüm VPN istemcileri için her zaman VPN devre dışı bırakılır. Etkinleştirildiğinde, şunları da yapılandırın:
 
@@ -130,10 +130,10 @@ Bu ayarlar, > **Ikev2** **bağlantı türünü** seçtiğinizde geçerlidir.
   - **Yerel olmayan açıklamalı ağ uygulamalarından gelen TRAFIĞIN VPN dışında geçmesine Izin ver**: bir captive ağı, genellikle restoranlar ve oteller Içinde bulunan Wi-Fi etkin noktalarına başvurur. Seçenekleriniz şunlardır:
     - **Hayır**: VPN tüneli üzerinden tüm captive ağ (CN) uygulama trafiğini zorlar.
     - **Evet, tüm uygulamalar**: tüm CN uygulama trafiğinin VPN 'i atlamasına izin verir.
-    - **Evet, belirli uygulamalar**: trafiği VPN 'yi ATLAYABILECEĞI CN uygulamalarının bir listesini **ekleyin** . CN uygulamasının paket tanımlayıcılarını girin. Örneğin, şunu girin: `com.contoso.app.id.package`.
+    - **Evet, belirli uygulamalar**: trafiği VPN 'yi ATLAYABILECEĞI CN uygulamalarının bir listesini **ekleyin** . CN uygulamasının paket tanımlayıcılarını girin. Örneğin, `com.contoso.app.id.package` girin.
 
   - **Captive Web sayfası uygulamasından dış VPN 'den geçiş yapmak Için trafik**: captive Web sayfası, captive oturum açma 'yı işleyen yerleşik bir web tarayıcısıdır. **Etkinleştir** ayarı, tarayıcı uygulama trafiğinin VPN 'i atlamasına izin verir. **Devre dışı bırak** (varsayılan) Web sayfası trafiğini her zaman açık VPN 'yi kullanacak şekilde zorlar. Varsayılan değer en güvenli seçenektir.
-  - **Ağ adresi çevirisi (NAT) canlı tutma aralığı (saniye)** : VPN 'ye bağlı kalmak için, cihaz ağ paketlerini etkin kalacak şekilde gönderir. Bu paketlerin ne sıklıkta gönderileceğini, 20-1440 adresinden saniye cinsinden bir değer girin. Örneğin, ağ paketlerini her 60 saniyede bir VPN 'ye göndermek için `60` değerini girin. Varsayılan olarak, bu değer `110` saniye olarak ayarlanır.
+  - **Ağ adresi çevirisi (NAT) canlı tutma aralığı (saniye)**: VPN 'ye bağlı kalmak için, cihaz ağ paketlerini etkin kalacak şekilde gönderir. Bu paketlerin ne sıklıkta gönderileceğini, 20-1440 adresinden saniye cinsinden bir değer girin. Örneğin, ağ paketlerini her 60 saniyede `60` bir VPN 'ye göndermek için bir değer girin. Varsayılan olarak, bu değer saniye olarak `110` ayarlanır.
   - **Cihaz uykuda olduğunda NAT KeepAlive 'ı donanıma devretmek**: bir cihaz uykuda olduğunda, cihazın VPN 'ye bağlı KALMASı için NAT 'ın sürekli canlı tutma paketleri göndermesini **sağlar** . **Devre dışı bırak ayarı** bu özelliği kapatır.
 
 - **Uzak tanımlayıcı**: Ikev2 sunucusunun ağ IP ADRESINI, FQDN 'Sini, userfqdn 'SINI veya ASN1DN girin. Örneğin `10.0.0.3` veya `vpn.contoso.com` girin. Genellikle [**bağlantı adı**](#base-vpn-settings) ile aynı değeri girersiniz (Bu makalede). Ancak, Ikev2 Sunucu ayarlarınıza göre değişir.
@@ -164,8 +164,8 @@ Bu ayarlar, > **Ikev2** **bağlantı türünü** seçtiğinizde geçerlidir.
   - **Orta** (varsayılan): 10 dakikada bir canlı tutma iletisi gönderir.
   - **Yüksek**: her 60 saniyede bir KeepAlive iletisi gönderir.
 
-- **TLS sürüm aralığı en az**: kullanılacak en düşük TLS sürümünü girin. `1.0`, `1.1`veya `1.2`girin. Boş bırakılırsa, `1.0` varsayılan değeri kullanılır.
-- **En yüksek TLS sürüm aralığı**: kullanılacak en fazla TLS sürümünü girin. `1.0`, `1.1`veya `1.2`girin. Boş bırakılırsa, `1.2` varsayılan değeri kullanılır.
+- **TLS sürüm aralığı en az**: kullanılacak en düşük TLS sürümünü girin. , `1.0` `1.1`Veya `1.2`girin. Boş bırakılırsa varsayılan değeri `1.0` kullanılır.
+- **En yüksek TLS sürüm aralığı**: kullanılacak en fazla TLS sürümünü girin. , `1.0` `1.1`Veya `1.2`girin. Boş bırakılırsa varsayılan değeri `1.2` kullanılır.
 
 > [!NOTE]
 > Kullanıcı kimlik doğrulaması ve sertifikaları kullanılırken en düşük ve en yüksek TLS sürüm aralığı ayarlanmalıdır.
@@ -187,8 +187,8 @@ Bu ayarlar, > **Ikev2** **bağlantı türünü** seçtiğinizde geçerlidir.
     - SHA2-256 (varsayılan)
     - SHA2-384
     - SHA2-512
-  - **Diffie-Hellman grubu**: istediğiniz grubu seçin. Varsayılan Grup `2`.
-  - **Yaşam süresi** (dakika): anahtarlar döndürülünceye kadar güvenlik ilişkisinin ne kadar süreyle etkin kalacağını seçin. `10` ve `1440` arasında bir tam değer girin (1440 dakika 24 saat). Varsayılan değer `1440`.
+  - **Diffie-Hellman grubu**: istediğiniz grubu seçin. Varsayılan grup `2`.
+  - **Yaşam süresi** (dakika): anahtarlar döndürülünceye kadar güvenlik ilişkisinin ne kadar süreyle etkin kalacağını seçin. Ve `10` `1440` arasında bir tam değer girin (1440 dakika 24 saat). `1440` varsayılan değerdir.
 
 - **Alt güvenlik ilişkilendirmeleri için ayrı bir parametre kümesi yapılandırın**: IOS/ıPADOS, Ike bağlantısı için ayrı parametreleri ve tüm alt bağlantıları yapılandırmanıza olanak tanır. 
 
@@ -206,14 +206,14 @@ Bu ayarlar, > **Ikev2** **bağlantı türünü** seçtiğinizde geçerlidir.
     - SHA2-256 (varsayılan)
     - SHA2-384
     - SHA2-512
-  - **Diffie-Hellman grubu**: istediğiniz grubu seçin. Varsayılan Grup `2`.
-  - **Yaşam süresi** (dakika): anahtarlar döndürülünceye kadar güvenlik ilişkisinin ne kadar süreyle etkin kalacağını seçin. `10` ve `1440` arasında bir tam değer girin (1440 dakika 24 saat). Varsayılan değer `1440`.
+  - **Diffie-Hellman grubu**: istediğiniz grubu seçin. Varsayılan grup `2`.
+  - **Yaşam süresi** (dakika): anahtarlar döndürülünceye kadar güvenlik ilişkisinin ne kadar süreyle etkin kalacağını seçin. Ve `10` `1440` arasında bir tam değer girin (1440 dakika 24 saat). `1440` varsayılan değerdir.
 
 ## <a name="automatic-vpn-settings"></a>Otomatik VPN ayarları
 
 - **Uygulama başına VPN**: Uygulama başına VPN’i etkinleştirir. Belirli uygulamalar açıldığında VPN bağlantısının otomatik olarak tetiklenmesine izin verir. Ayrıca uygulamaları bu VPN profiliyle ilişkilendirir. Ikev2 üzerinde uygulama başına VPN desteklenmez. Daha fazla bilgi için bkz. [iOS/ıpados için uygulama BAŞıNA VPN ayarlama yönergeleri](vpn-setting-configure-per-app.md). 
   - **Sağlayıcı Türü**: Yalnızca Pulse Secure ve Özel VPN için kullanılabilir.
-  - Pulse Secure veya Custom VPN ile iOS/ıpados **BAŞıNA VPN** profilleri kullanırken, uygulama katmanı Tüneli (App-proxy) veya paket düzeyinde tünel oluşturma (paket-tünel) seçeneğini belirleyin. **ProviderType** değerini uygulama katmanı tüneli için **app-proxy** olarak veya paket katmanı tüneli için **packet-tunnel** ayarlayın. Hangi değeri kullanmanız gerektiğini bilmiyorsanız VPN sağlayıcınızın belgelerine bakın.
+  - Pulse Secure veya Custom VPN ile iOS/ıpados **BAŞıNA VPN** profilleri kullanırken, uygulama katmanı Tüneli (App-proxy) veya paket düzeyinde tünel oluşturma (paket-tünel) seçeneğini belirleyin. Uygulama katmanı tünellemesi için **ProviderType** değerini **App-proxy** veya paket katmanı tünellemesi için **paket tüneli** olarak ayarlayın. Hangi değeri kullanmanız gerektiğini bilmiyorsanız VPN sağlayıcınızın belgelerine bakın.
   - **Bu VPN’i tetikleyecek Safari URL’leri**: Bir veya daha fazla web sitesi URL’si ekleyin. Bu URL’ler cihazda Safari tarayıcıyla ziyaret edildiğinde, VPN bağlantısı otomatik olarak kurulur.
 
 - **İsteğe bağlı VPN**: VPN bağlantısının ne zaman başlatılacağını denetleyen koşullu kurallar yapılandırın. Örneğin, yalnızca cihaz şirketin Wi-Fi ağına bağlı olmadığında VPN bağlantısının kullanılacağı bir koşul oluşturun. Ya da bir koşul oluşturun. Örneğin, bir cihaz girdiğiniz DNS arama etki alanına erişemezse VPN bağlantısı başlatılmaz.
@@ -230,7 +230,7 @@ Bu ayarlar, > **Ikev2** **bağlantı türünü** seçtiğinizde geçerlidir.
     - Bağlan
     - Bağlantıyı değerlendir
     - Yoksayma
-    - Bağlantıyı Kes
+    - Bağlantıyı kes
 
 ## <a name="proxy-settings"></a>Proxy ayarları
 

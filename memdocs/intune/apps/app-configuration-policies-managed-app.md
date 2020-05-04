@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9729fa1fb89f31606c35d61773c224693e7da3c1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323463"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Cihaz kaydı olmadan yönetilen uygulamalar için uygulama yapılandırma ilkeleri ekleme
@@ -32,7 +32,7 @@ ms.locfileid: "80323463"
 Intune App SDK’sını destekleyen yönetilen uygulamalarla uygulama yapılandırma ilkelerini, kayıtlı olmayan cihazlarda dahi kullanabilirsiniz. 
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2.  > **yönetilen uygulamalar** **eklemek** > **uygulama yapılandırma ilkeleri** > **uygulamalar** ' ı seçin.
+2. **Uygulamalar** > **uygulama yapılandırma ilkeleri** > **Add** > **yönetilen uygulamalar**Ekle ' yi seçin.
 3. **Temel bilgiler** sayfasında, aşağıdaki ayrıntıları ayarlayın:
     - **Ad**: Azure Portal görünecek profilin adı.
     - **Açıklama**: Azure Portal görüntülenecek profil açıklaması.
@@ -43,7 +43,7 @@ Intune App SDK’sını destekleyen yönetilen uygulamalarla uygulama yapıland�
 
    Intune Uygulama SDK’sı özellikli uygulamalar, anahtar/değer çiftlerinde yapılandırmaları destekler. Hangi anahtar-değer yapılandırmalarının desteklendiğini öğrenmek için uygulamaların kendi belgelerine bakın. Uygulama tarafından oluşturulan verilerle dinamik olarak doldurulacak belirteçler kullanabileceğinizi unutmayın. Daha fazla bilgi için bkz. [belirteçleri kullanmak Için yapılandırma değerleri](app-configuration-policies-managed-app.md#configuration-values-for-using-tokens). İOS/ıpados uygulama yapılandırma ilkesi ayarları için Outlook hakkında daha fazla bilgi için, bkz. [Microsoft Intune iOS Için Outlook 'u/ıpados uygulama yapılandırmasını yönetme](https://technet.microsoft.com/library/mt813789(v=exchg.150).aspx).
 
-    Bir yapılandırmayı silmek için üç nokta simgesini ( **…** ) seçip **Sil**’e tıklayın.  
+    Bir yapılandırmayı silmek için üç nokta simgesini (**…**) seçip **Sil**’e tıklayın.  
 
 7. **Atamalar** sayfasını göstermek için **İleri** ' ye tıklayın.
 8. **Dahil edilecek grupları seç ' e**tıklayın.
@@ -59,7 +59,7 @@ Intune App SDK’sını destekleyen yönetilen uygulamalarla uygulama yapıland�
 
 ## <a name="configuration-values-for-using-tokens"></a>Belirteç kullanmak için yapılandırma değerleri
 
-Intune bazı belirteçleri oluşturabilir ve yönetilen uygulamaya gönderebilir. Örneğin uygulama yapılandırmanız bir e-posta ayarı kullanabiliyorsa, bir belirteç kullanarak dinamik bir e-posta ekleyebilirsiniz. **Ad** alanına uygulama tarafından beklenen adı yazıp `\{\{mail\}\}`Değer**alanına** yazın.
+Intune bazı belirteçleri oluşturabilir ve yönetilen uygulamaya gönderebilir. Örneğin uygulama yapılandırmanız bir e-posta ayarı kullanabiliyorsa, bir belirteç kullanarak dinamik bir e-posta ekleyebilirsiniz. **Ad** alanına uygulama tarafından beklenen adı yazıp **Değer** alanına `\{\{mail\}\}` yazın.
 
 Intune, yapılandırma ayarlarında aşağıdaki belirteç türlerini destekler. Diğer özel anahtar/değer çiftleri desteklenmez.
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d694a2221dff705d6ec2c1dc1db426740d95cdbe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329430"
 ---
 # <a name="prevent-data-leaks-on-non-managed-devices-using-microsoft-intune"></a>Microsoft Intune kullanarak yönetilmeyen cihazlarda veri sızıntılarını önleme
@@ -56,7 +56,7 @@ Aşağıdaki koşulları yerine getirdiğinizde aşağıdaki eylem planı kullan
 Windows 10 cihazları için:
 
 1. [Windows Bilgi Koruması’nın (WIP) nasıl çalıştığını](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip) öğrenin.
-2. [Windows 10 için uygulama koruma ilkelerini](../apps/app-protection-policies-configure-windows-10.md) yapılandırmaya hazırlanın.
+2. [Windows 10 için uygulama koruma ilkelerini](../apps/app-protection-policies-configure-windows-10.md)yapılandırmaya hazırlanın.
 3. [Intune ile WIP uygulama koruma ilkeleri oluşturun ve dağıtın](../apps/windows-information-protection-policy-create.md).
 
 ## <a name="what-to-tell-employees-and-students"></a>Çalışanlara ve öğrencilere söylenecekler

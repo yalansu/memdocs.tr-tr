@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7aabc09e276c723e9aeaed4ec8eb3dd4c0332b4e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332534"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Kılavuzlu senaryo-güvenli Microsoft Office mobil uygulamalar
@@ -38,7 +38,7 @@ Etkinleştirdiğiniz uygulama koruması aşağıdaki eylemleri uygular:
 - Cihaz 720 dakika boyunca çevrimdışıysa, çalışma dosyalarına erişimi engelleyin.
 - Cihaz 90 gün boyunca çevrimdışı ise iş dosyalarını kaldırın.
 
-## <a name="background"></a>Arka Plan
+## <a name="background"></a>Arka plan
 
 Office Mobile Apps 'in yanı sıra mobil için Microsoft Edge, ikili kimlik desteği. Çift kimlik, uygulamaların iş dosyalarını kişisel dosyalardan ayrı olarak yönetmesine olanak tanır. 
 
@@ -67,7 +67,7 @@ Intune yönetici izinlerini takip etmeniz gerekir:
 - İlke ayarları okuma, oluşturma ve atama izinleri
 - Kuruluş okuma izni
 
-## <a name="step-1---introduction"></a>1\. adım-giriş
+## <a name="step-1---introduction"></a>1. adım-giriş
 
 **Intune uygulama koruması** Kılavuzlu senaryoyu izleyerek verilerin kuruluşunuz dışında paylaşılmasını veya sızmasını önleyecaksınız. 
 
@@ -80,14 +80,14 @@ Kullanıcılarınızın ihtiyacı olan uygulamaları ve bunlara erişmek için g
 - Kurumsal kullanım için onaylanan Office uygulamalarının listesi.
 - Yönetilmeyen cihazlarda onaylanan uygulamaları başlatmaya yönelik tüm PIN gereksinimleri.
 
-## <a name="step-2---basics"></a>2\. adım-temel bilgiler
+## <a name="step-2---basics"></a>2. adım-temel bilgiler
 
 Bu adımda, yeni uygulama koruma ilkeniz için bir **ön ek** ve **Açıklama** girmeniz gerekir. **Ön eki**eklerken, Kılavuzlu senaryonun oluşturduğu kaynaklarla ilgili ayrıntılar güncelleştirilir. Atamaları ve yapılandırmayı değiştirmeniz gerekiyorsa, bu ayrıntılar daha sonra ilkelerinizi bulmayı kolaylaştırır.
 
 > [!TIP]
 > Daha sonra başvurabilmeniz için oluşturulacak kaynakları bir yere göz önünde bulundurmanız gerekir.
 
-## <a name="step-3---apps"></a>3\. adım-uygulamalar
+## <a name="step-3---apps"></a>3. adım-uygulamalar
 
 Başlamanıza yardımcı olması için, Bu Kılavuzlu senaryo iOS/ıpados ve Android cihazlarında korumak üzere aşağıdaki mobil uygulamaları önceden seçer:
 
@@ -105,26 +105,26 @@ Korumak istediğiniz ilkeyle yönetilen uygulamaların listesini değiştirin. B
 
 Uygulamaları seçtikten **sonra ileri**' ye tıklayın.
 
-## <a name="step-4---configuration"></a>4\. adım-yapılandırma
+## <a name="step-4---configuration"></a>4. adım-yapılandırma
 
 Bu adımda, bu uygulamalardaki kurumsal dosyalara ve e-postalara erişmek ve bunları paylaşmak için gereksinimleri yapılandırmanız gerekir. Varsayılan olarak, kullanıcılar kuruluşunuzun OneDrive ve SharePoint hesaplarına veri kaydedebilir.
 
 | Ayar | Açıklama | Varsayılan Değer |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
 | PIN türü | Sayısal PIN 'Ler tüm numaralardan oluşur. Passcodes, alfasayısal karakterlerden ve özel karakterlerden oluşur.  İOS/ıpados 'ta, "geçiş kodu" türünü yapılandırmak için, uygulamanın Intune SDK sürüm 7.1.12 veya üstüne sahip olmasını gerektirir. Sayısal türlerde Intune SDK sürümü kısıtlaması yoktur. | Sayısal |
-| Minimum PIN uzunluğunu seçin | PIN dizisindeki basamak sayısı alt sınırını belirtin. | 6 |
-| Daha sonra erişim gereksinimlerini yeniden denetle (dakika dışı) | İlke ile yönetilen uygulama, belirtilen işlem yapılmayan dakika sayısından daha uzun bir süre boyunca etkin değilse, uygulama erişim gereksinimlerini ister (ör. Uygulama başlatıldıktan sonra yeniden denetlenecek PIN, koşullu başlatma ayarları). | 30 |
-| Kuruluş verilerini yazdırma | Engellenirse, uygulama korumalı verileri yazdıramaz. | Engelle |
-| Yönetilmeyen tarayıcılarda ilkeyle yönetilen uygulama bağlantılarını açın | Engellenirse, ilkeyle yönetilen uygulama bağlantıları yönetilen bir tarayıcı açılmalıdır. | Engelle |
-| Yönetilmeyen uygulamalara veri kopyalama | Engellenirse, yönetilen veriler yönetilen uygulamalarda kalır. | İzin ver |
+| En düşük PIN uzunluğunu seçin | PIN dizisindeki basamak sayısı alt sınırını belirtin. | 6 |
+| Erişim gereksinimlerini yeniden denetle (eylemsizlik dakika sayısı) | İlke ile yönetilen uygulama, belirtilen işlem yapılmayan dakika sayısından daha uzun bir süre boyunca etkin değilse, uygulama erişim gereksinimlerini ister (ör. Uygulama başlatıldıktan sonra yeniden denetlenecek PIN, koşullu başlatma ayarları). | 30 |
+| Kuruluş verilerini yazdırma | Engellenirse, uygulama korumalı verileri yazdıramaz. | Blok |
+| Yönetilmeyen tarayıcılarda ilkeyle yönetilen uygulama bağlantılarını açın | Engellenirse, ilkeyle yönetilen uygulama bağlantıları yönetilen bir tarayıcı açılmalıdır. | Blok |
+| Yönetilmeyen uygulamalara veri kopyalama | Engellenirse, yönetilen veriler yönetilen uygulamalarda kalır. | İzin Ver |
 
-## <a name="step-5---assignments"></a>5\. adım-atamalar
+## <a name="step-5---assignments"></a>5. adım-atamalar
 
 Bu adımda, şirket verilerinize erişimi olduğundan emin olmak için eklemek istediğiniz kullanıcı gruplarını seçebilirsiniz. Uygulama koruması cihazlara değil kullanıcılara atanır, bu nedenle şirket verileriniz, kullanılan cihaz ve kayıt durumu ne olursa olsun güvenli olacaktır.
 
 Uygulama koruma ilkeleri ve koşullu erişim ayarları atanmayan kullanıcılar, mobil cihazlarında kişisel uygulamalara ve yönetilmeyen yerel depolamaya verileri şirket profilinden kaydedebilecektir. Ayrıca, kişisel uygulamalarla Microsoft Exchange gibi kurumsal veri hizmetlerine de bağlanabilirler.
 
-## <a name="step-6---review--create"></a>6\. adım-Inceleme ve oluşturma
+## <a name="step-6---review--create"></a>6. adım-Inceleme ve oluşturma
 
 Son adım, yapılandırdığınız ayarların özetini incelemenizi sağlar. Seçimlerinizi inceledikten sonra, Kılavuzlu senaryoyu tamamlamaya yönelik **Oluştur** ' a tıklayın. Kılavuzlu senaryo tamamlandıktan sonra bir kaynak tablosu görüntülenir. Bu kaynakları daha sonra düzenleyebilirsiniz, ancak Özet görünümden ayrıldığınızda tablo kaydedilmez.
 

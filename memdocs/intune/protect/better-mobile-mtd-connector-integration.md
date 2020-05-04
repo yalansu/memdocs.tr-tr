@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a509c24e4b84c1f72a5efa4f6691f69b8a309f00
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329958"
 ---
 # <a name="integrate-better-mobile-with-intune"></a>Better Mobile'ı Intune ile tümleştirme
@@ -38,9 +38,9 @@ Better Mobile'ı Intune ile tümleştirme sürecini başlatmadan önce aşağıd
 
   - Oturum açma ve kullanıcı profilini okuma
 
-  - Oturum açmış kullanıcı olarak dizine erişim
+  - Dizine oturum açmış kullanıcı olarak erişin
 
-  - Dizin verilerini okuma
+  - Dizin verilerini oku
 
   - Intune’a cihaz bilgilerini gönderme
 
@@ -61,7 +61,7 @@ Better Mobile uygulama yetkilendirme işlemi şu şekildedir:
 ## <a name="to-set-up-better-mobile-integration"></a>Better Mobile tümleştirmesini ayarlamak için
 
 1. [Better Mobile yönetim konsoluna](https://aad.bmobi.net) gidin ve kimlik bilgilerinizle oturum açın.
-2. **Integration** > **EMM/MDM** > **ADD ACCOUNT** öğesini seçin.
+2. **Tümleştirme** > **EMM/MDM** > **hesabı ekle**' yi seçin.
 
      ![Daha Iyi mobil yönetici konsolunun görüntüsü](./media/better-mobile-mtd-connector-integration/better_mobile_console.png)
 
@@ -69,8 +69,8 @@ Better Mobile uygulama yetkilendirme işlemi şu şekildedir:
 4. **ACCOUNT NAME** alanının yanına bir tanımlayıcı yazın.
 5. **Microsoft Oturum Açma** penceresinde Intune kimlik bilgilerinizi girin.
 6. **İstenen izinler** penceresinde **Kabul Et**'i seçin.
-7. Better Mobile'ın cihazları hangi Azure AD Güvenlik gruplarından eşitlemesini istiyorsanız, o gruplar için arama yapın ve listeden bunları seçin. Sonra **Devam**'ı seçin.
-8. **Bitti**’yi seçin.
+7. Better Mobile'ın cihazları hangi Azure AD Güvenlik gruplarından eşitlemesini istiyorsanız, o gruplar için arama yapın ve listeden bunları seçin. Daha sonra **Devam** seçeneğini belirleyin.
+8. **Done** (Bitti) öğesini seçin.
 9. **Hesap ekle** sayfası yeniden görüntülenir. Sayfayı kapatın.
 
 ## <a name="next-steps"></a>Sonraki adımlar

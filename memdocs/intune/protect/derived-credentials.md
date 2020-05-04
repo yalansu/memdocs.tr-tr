@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/17/2002
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebeb2c31b72ec10f4ce95b09e32b3e3c9accccfa
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 7b6940d191902627616501f192fc810363bee1a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323025"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81688237"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Microsoft Intune ' de türetilmiş kimlik bilgilerini kullan
 
-*Bu makale, iOS çalıştıran cihazlar için geçerlidir*
+*Bu makale, 7,0 ve üzeri sürümleri çalıştıran iOS/ıpados ve Android kurumsal tam olarak yönetilen cihazlar için geçerlidir.*
 
 Akıllı kartların kimlik doğrulama veya şifreleme ve imzalama için gerekli olduğu bir ortamda, mobil cihazları kullanıcının akıllı kartından türetilmiş bir sertifikayla sağlamak için artık Intune 'u kullanabilirsiniz. Bu sertifikaya *türetilmiş kimlik bilgileri*denir. Intune, [çeşitli türetilmiş kimlik bilgileri verenler destekler](#supported-issuers), ancak her seferinde her kiracı için yalnızca tek bir veren kullanabilirsiniz.
 
@@ -34,18 +34,19 @@ Türetilmiş kimlik bilgileri, özel yayın (SP) 800-157 kapsamında türetilmi�
 **Intune uygulamasıyla**:
 
 - Intune Yöneticisi, kiraclarını desteklenen bir türetilmiş kimlik bilgisi verenle çalışacak şekilde yapılandırır. Türetilmiş kimlik bilgileri verenin sisteminde herhangi bir Intune 'A özgü ayarı yapılandırmanız gerekmez.
-
 - Intune Yöneticisi, aşağıdaki nesneler için *kimlik doğrulama yöntemi* olarak **türetilmiş kimlik bilgilerini** belirtir:
-
+  
+  **İOS/ıpados için**:
   - İOS/ıpados Native Mail uygulamasını içeren Wi-Fi, VPN ve e-posta gibi ortak profil türleri
-
   - Uygulama kimlik doğrulaması
-
   - S/MIME imzalama ve şifreleme
 
+  **Android kurumsal tam yönetilen cihazlar için**:
+  - Wi-Fi ve VPN gibi ortak profil türleri
+  - Uygulama kimlik doğrulaması
+  
 - Kullanıcılar, türetilmiş kimlik bilgileri verende kimlik doğrulaması yapmak için bir bilgisayardaki akıllı kartlarını kullanarak türetilmiş bir kimlik bilgisi alır. Veren, daha sonra akıllı kartlarından türetilen bir sertifika olan mobil cihaza sorun verir.
-
-- Cihaz türetilmiş kimlik bilgilerini aldıktan sonra, uygulamalar veya kaynak erişim profilleri türetilmiş kimlik bilgisini gerektirdiğinde, kimlik doğrulaması ve S/MIME imzalama ve şifreleme için kullanılır. 
+- Cihaz türetilmiş kimlik bilgilerini aldıktan sonra, uygulamalar veya kaynak erişim profilleri türetilmiş kimlik bilgisini gerektirdiğinde, kimlik doğrulaması ve S/MIME imzalama ve şifreleme için kullanılır.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -53,21 +54,22 @@ Kiracınızı türetilmiş kimlik bilgilerini kullanacak şekilde yapılandırma
 
 ### <a name="supported-platforms"></a>Desteklenen platformlar
 
-Intune, aşağıdaki işletim sistemi platformlarında türetilmiş kimlik bilgilerini destekler:
+Intune, aşağıdaki platformlarda türetilmiş kimlik bilgilerini destekler:
 
 - iOS/iPadOS
+- Android kurumsal tam yönetilen cihazlar (sürüm 7,0 ve üzeri)
 
 ### <a name="supported-issuers"></a>Desteklenen verenler
 
 Intune, kiracı başına tek bir türetilmiş kimlik bilgisi veren destekler. Intune 'U, aşağıdaki verenler ile çalışacak şekilde yapılandırabilirsiniz:
 
-- **Dışa purebred**: https://cyber.mil/pki-pke/purebred/
-- **Entrust Datacard**: https://www.entrustdatacard.com/
-- **Intercede**: https://www.intercede.com/
+- **Dıpurebred** (yalnızca iOS): https:\//Cyber.mil/pki-PKE/purebred/
+- **Entrust Datacard**:https://www.entrustdatacard.com/
+- **Intercede**:https://www.intercede.com/
 
-Farklı verenler kullanma hakkında önemli ayrıntılar için bu veren için kılavuzu gözden geçirin<!-- , including the issuers end-user workflow-->. Daha fazla bilgi için bu makaledeki [türetilmiş kimlik bilgilerini planlayın](#plan-for-derived-credentials) bölümüne bakın.
+Farklı verenler kullanma hakkında önemli ayrıntılar için bu veren için kılavuzu gözden geçirin. Daha fazla bilgi için bu makaledeki [türetilmiş kimlik bilgilerini planlayın](#plan-for-derived-credentials) bölümüne bakın.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Kiracıdan türetilmiş bir kimlik bilgisi veren silerseniz, bu veren aracılığıyla ayarlanan türetilmiş kimlik bilgileri artık çalışmaz.
 >
 > Bu makalenin ilerleyen kısımlarında bulunan [türetilmiş kimlik bilgisi verenini değiştirme](#change-the-derived-credential-issuer) bölümüne bakın.
@@ -76,23 +78,24 @@ Farklı verenler kullanma hakkında önemli ayrıntılar için bu veren için k�
 
 Intune Şirket Portalı uygulamayı türetilmiş bir kimlik bilgisi için kaydedilecek cihazlara dağıtmayı planlayın. Cihaz kullanıcıları kimlik bilgileri kayıt işlemini başlatmak için Şirket Portalı uygulamasını kullanır.
 
-İOS/ıpados cihazları için bkz. [Microsoft Intune Için iOS/ıpados Mağazası uygulamaları ekleme](../apps/store-apps-ios.md).
+- İOS cihazları için bkz. [Microsoft Intune iOS Mağazası uygulamaları ekleme](../apps/store-apps-ios.md).
+- Android cihazlar için bkz. [Microsoft Intune Android Mağazası uygulamaları ekleme](../apps/store-apps-android.md).
 
 ## <a name="plan-for-derived-credentials"></a>Türetilmiş kimlik bilgilerini planlayın
 
 Türetilmiş bir kimlik bilgisi veren ayarlamadan önce aşağıdaki hususları anlayın.
 
-### <a name="1-review-the-documentation-for-your-chosen-derived-credential-issuer"></a>1) seçtiğiniz türetilmiş kimlik bilgisi veren için belgeleri gözden geçirin  
+### <a name="1-review-the-documentation-for-your-chosen-derived-credential-issuer"></a>1) seçtiğiniz türetilmiş kimlik bilgisi veren için belgeleri gözden geçirin
 
 Bir veren yapılandırmadan önce, sistemin cihazlara türetilmiş kimlik bilgilerini nasıl sağladığını anlamak için bu verenin belgelerini gözden geçirin.
 
-Seçtiğiniz verene bağlı olarak, kullanıcıların işlemi tamamına yardımcı olmak için kayıt sırasında personelin kullanılabilir olması gerekebilir. Ayrıca, cihazların veya kullanıcıların kimlik bilgisi isteğini tamamlaması için gerekli olan erişimi engellemediğinden emin olmak için geçerli Intune yapılandırmalarınızı gözden geçirmeniz gerekir.
+Seçtiğiniz verene bağlı olarak, kullanıcıların işlemi tamamına yardımcı olmak için kayıt sırasında personelin kullanılabilir olması gerekebilir. Ayrıca, cihazların veya kullanıcıların kimlik bilgisi isteğini tamamlaması için gerekli olan erişimi engellemediğinden emin olmak için geçerli Intune yapılandırmalarınızı gözden geçirin.
 
 Örneğin, uyumlu olmayan cihazlar için e-postaya erişimi engellemek üzere koşullu erişimi kullanabilirsiniz. Kullanıcıya türetilmiş kimlik bilgileri kayıt işlemini başlatmasını bildirmek için e-posta bildirimlerini kullandıysanız, kullanıcılarınız ilkeyle uyumlu olana kadar bu yönergeleri alamayabilir.
 
 Benzer şekilde, bazı türetilmiş kimlik bilgileri istek iş akışları, bir ekran QR kodunu taramak için cihaz kamerasının kullanılmasını gerektirir. Bu kod, bu cihazı, kullanıcının akıllı kart kimlik bilgileriyle türetilmiş kimlik bilgisi verenle karşı gerçekleşen kimlik doğrulama isteğine bağlar. Cihaz yapılandırma ilkeleri kamera kullanımını engellerseniz, Kullanıcı türetilmiş kimlik bilgileri kayıt isteğini tamamlayamıyor.
 
-Genel bilgiler:
+**Genel bilgiler**:
 
 - Her seferinde kiracı başına tek bir veren yapılandırabilirsiniz ve bu veren, kiracınızdaki tüm kullanıcılar ve desteklenen cihazlar için kullanılabilir.
 
@@ -106,39 +109,57 @@ Desteklenen her iş ortağı için önemli konular aşağıda verilmiştir.  Int
 
 #### <a name="disa-purebred"></a>DıŞA purebred
 
-[Dışa Popurebred için Kullanıcı iş akışını](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-disa-purebred)gözden geçirin. Bu iş akışı için temel gereksinimler şunlardır:
+Türetilmiş kimlik bilgileriyle kullanacağınız cihazlar için platforma özgü Kullanıcı iş akışını gözden geçirin.
+
+- [iOS ve ıpados](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
+
+**Temel gereksinimler şunlardır**:
 
 - Kullanıcıların, verenin kimliğini doğrulamak için akıllı kartlarını kullanabilecekleri bir bilgisayar veya bilgi noktası erişimine ihtiyacı vardır.
-
 - Türetilmiş bir kimlik bilgisine kaydedilecek cihazların Intune Şirket Portalı uygulamasını yüklemeleri gerekir.
-
 - Türetilmiş bir kimlik bilgisi için kaydedilecek cihazlara [, dışa ınpurebred uygulamasını dağıtmak](#deploy-the-disa-purebred-app) için Intune 'u kullanın. Bu uygulama, yönetilmek üzere Intune aracılığıyla dağıtılmalıdır ve daha sonra Intune Şirket Portalı uygulamayla çalışabilir. Bu uygulama, derlenen kimlik bilgisi isteğini tamamlaması için cihaz kullanıcıları tarafından kullanılır.
-
 - DıŞA yönelik olarak, uygulamanın türetilmiş kimlik bilgileri için kayıt sırasında DıŞA Üflere erişebildiğinden emin olmak için, bir [uygulama BAŞıNA VPN](../configuration/vpn-settings-configure.md) gerekir.
-
-- Kayıt işlemi sırasında cihaz kullanıcılarının canlı bir aracıyla çalışması gerekir. Kayıt sırasında, kayıt sürecinde ilerlerse kullanıcıya, zaman sınırlı bir kerelik geçiş kodları verilir.
+- Kayıt işlemi sırasında cihaz kullanıcılarının canlı bir aracıyla çalışması gerekir. Kayıt sırasında, kayıt işlemi boyunca devam ettikleri sürece kullanıcıya zaman sınırlı bir kerelik geçiş kodları verilir.
+- Yeni bir Wi-Fi profili oluşturma gibi türetilmiş kimlik bilgilerini kullanan bir ilkede değişiklik yapıldığında iOS ve ıpados kullanıcıları Şirket Portalı uygulamasını açmak üzere bilgilendirilir.
+- Kullanıcılara, türetilmiş kimlik bilgilerini yenilemeleri gerektiğinde Şirket Portalı uygulamayı açması bildirilir.
 
 DıŞA ınpurebred uygulamasını alma ve yapılandırma hakkında bilgi için bu makalenin ilerleyen kısımlarında bulunan [dışa ınpurebred uygulamasını dağıtma](#deploy-the-disa-purebred-app) bölümüne bakın.
 
 #### <a name="entrust-datacard"></a>Entrust Datacard
 
-[Entrust Datacard için Kullanıcı iş akışını](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-entrust-datacard)gözden geçirin. Bu iş akışı için temel gereksinimler şunlardır:
+Türetilmiş kimlik bilgileriyle kullanacağınız cihazlar için platforma özgü Kullanıcı iş akışını gözden geçirin.
+
+- [iOS ve ıpados](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust-datacard)
+- [Android kurumsal tam yönetilen cihazlar](../user-help/enroll-android-device-entrust-datacard.md)
+
+**Temel gereksinimler şunlardır**:
 
 - Kullanıcıların, verenin kimliğini doğrulamak için akıllı kartlarını kullanabilecekleri bir bilgisayar veya bilgi noktası erişimine ihtiyacı vardır.
-
 - Türetilmiş bir kimlik bilgisine kaydedilecek cihazların Intune Şirket Portalı uygulamasını yüklemeleri gerekir.
-
 - Mobil cihazdan türetilmiş kimlik bilgisi isteğine kimlik doğrulama isteğini bağlayan bir QR kodunu taramak için bir cihaz Kamerası kullanın.
+- Kullanıcılardan Şirket Portalı uygulaması veya türetilmiş kimlik bilgilerine kaydolmak için e-posta üzerinden sorulur.
+- Yeni bir Wi-Fi profili oluşturma gibi türetilmiş kimlik bilgilerini kullanan bir ilkede değişiklik yapıldığında:
+  - **iOS ve ıpados** -kullanıcılara şirket portalı uygulamasını açmak için bildirim yapılır.
+  - **Android kurumsal tam yönetilen cihazlar** -Şirket portalı uygulamasının açılması gerekmez.
+- Kullanıcılara, türetilmiş kimlik bilgilerini yenilemeleri gerektiğinde Şirket Portalı uygulamayı açması bildirilir.
 
 #### <a name="intercede"></a>Intercede
 
-[Intercede için Kullanıcı iş akışını](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-intercede)gözden geçirin. Bu iş akışı için temel gereksinimler şunlardır:
+Türetilmiş kimlik bilgileriyle kullanacağınız cihazlar için platforma özgü Kullanıcı iş akışını gözden geçirin.
+
+- [iOS ve ıpados](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede)
+- [Android kurumsal tam yönetilen cihazlar](../user-help/enroll-android-device-intercede.md)
+
+**Temel gereksinimler şunlardır**:
 
 - Kullanıcıların, verenin kimliğini doğrulamak için akıllı kartlarını kullanabilecekleri bir bilgisayar veya bilgi noktası erişimine ihtiyacı vardır.
-
 - Türetilmiş bir kimlik bilgisine kaydedilecek cihazların Intune Şirket Portalı uygulamasını yüklemeleri gerekir.
-
 - Mobil cihazdan türetilmiş kimlik bilgisi isteğine kimlik doğrulama isteğini bağlayan bir QR kodunu taramak için bir cihaz Kamerası kullanın.
+- Kullanıcılardan Şirket Portalı uygulaması veya türetilmiş kimlik bilgilerine kaydolmak için e-posta üzerinden sorulur.
+- Yeni bir Wi-Fi profili oluşturma gibi türetilmiş kimlik bilgilerini kullanan bir ilkede değişiklik yapıldığında:
+  - **iOS ve ıpados** -kullanıcılara şirket portalı uygulamasını açmak için bildirim yapılır.
+  - **Android kurumsal tam yönetilen cihazlar** -Şirket portalı uygulamasının açılması gerekmez.
+- Kullanıcılara, türetilmiş kimlik bilgilerini yenilemeleri gerektiğinde Şirket Portalı uygulamayı açması bildirilir.
 
 ### <a name="3-deploy-a-trusted-root-certificate-to-devices"></a>3) cihazlara güvenilen bir kök sertifika dağıtın
 
@@ -150,9 +171,15 @@ Türetilmiş kimlik bilgileri kayıt işlemini başlatma ve size seçtiğiniz ve
 
 Kılavuzunuzu barındıracak bir URL sağlamanızı öneririz. Bu URL 'yi, kiracınız için türetilmiş kimlik bilgisi veren yapılandırdığınızda ve bu URL Şirket Portalı uygulamasının içinden kullanılabilir hale geldiğinde belirtirsiniz. Kendi URL 'nizi belirtmezseniz, Intune genel ayrıntılara bir bağlantı sağlar. Bu ayrıntılar tüm senaryoları kapsamamaktadır ve ortamınız için doğru olmayabilir.
 
-### <a name="5-deploy-intune-policies-that-require-derived-credentials"></a>5) türetilmiş kimlik bilgileri gerektiren Intune ilkelerini dağıtma
+### <a name="dive-idsupported-objects-5-deploy-intune-policies-that-require-derived-credentials"></a><dive id="supported-objects">5) türetilmiş kimlik bilgileri gerektiren Intune ilkelerini dağıtma
 
-Türetilmiş kimlik bilgilerini kullanmak için yeni ilkeler oluşturun veya var olan ilkeleri düzenleyin. Türetilmiş kimlik bilgileri, uygulama kimlik doğrulaması, Wi-Fi, VPN, e-posta ve S/MIME imzalama ve şifreleme için diğer kimlik doğrulama yöntemlerinin yerini alır.
+Türetilmiş kimlik bilgilerini kullanmak için yeni ilkeler oluşturun veya var olan ilkeleri düzenleyin. Türetilmiş kimlik bilgileri aşağıdaki nesneler için diğer kimlik doğrulama yöntemlerinin yerini alır:
+
+- Uygulama kimlik doğrulaması
+- Wi-Fi
+- VPN
+- e-posta (yalnızca iOS)
+- Outlook (yalnızca iOS) dahil olmak üzere, S/MIME imzalama ve şifreleme
 
 Türetilmiş kimlik bilgilerini elde etmek için kullandığınız bir işleme erişmek üzere türetilmiş bir kimlik bilgisinin kullanılması gereğini önleyin, çünkü kullanıcıların isteği tamamlamasına engel olabilir.
 
@@ -161,15 +188,15 @@ Türetilmiş kimlik bilgilerini elde etmek için kullandığınız bir işleme e
 Türetilmiş bir kimlik bilgisinin kullanılması gereken ilkeler oluşturmadan önce, Intune konsolunda bir kimlik bilgisi veren ayarlayın. Türetilmiş bir kimlik bilgisi veren, kiracı genelinde bir ayardır. Kiracılar aynı anda yalnızca tek bir veren destekler.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Kiracı yönetimi** > **bağlayıcılar ve belirteçler** > **türetilmiş kimlik bilgileri**' ni seçin.
+2. **Kiracı Yönetimi** > **bağlayıcıları ' nı ve** > **türetilmiş kimlik bilgileri**belirteçlerini seçin.
 
     > [!div class="mx-imgBorder"]
-    > ![, konsolunda türetilen kimlik bilgilerini yapılandırmak](./media/derived-credentials/configure-provider.png)
+    > ![Konsolundaki türetilmiş kimlik bilgilerini yapılandırma](./media/derived-credentials/configure-provider.png)
 
 3. Türetilmiş kimlik bilgisi veren ilkesi için kolay bir **görünen ad** belirtin.  Bu ad, cihaz kullanıcılarınıza gösterilmez.
 
 4. **Türetilmiş kimlik bilgisi veren**için, kiracınız için seçtiğiniz türetilmiş kimlik bilgisi verenini seçin:
-   - DıŞA purebred
+   - DıŞA purebred (yalnızca iOS)
    - Entrust Datacard
    - Intercede  
 
@@ -181,7 +208,7 @@ Türetilmiş bir kimlik bilgisinin kullanılması gereken ilkeler oluşturmadan 
 
    - Yeni bir türetilmiş kimlik bilgisi almak için bir cihazı veren ile kaydedin.
    - Geçerli kimlik bilgisi sona ermeden yeni bir türetilmiş kimlik bilgisi alın.
-   - Wi-Fi, VPN, e-posta veya uygulama kimlik doğrulaması ve S/MIME imzalama ve şifreleme için bir ilkeyle türetilmiş bir kimlik bilgisi kullanın.
+   - [Desteklenen bir nesneyle](#supported-objects)türetilmiş bir kimlik bilgisi kullanın.
 
 7. Hazırlandığınızda, türetilmiş kimlik bilgisi verenin yapılandırmasını tamamladıktan sonra **Kaydet** ' i seçin.
 
@@ -197,8 +224,10 @@ Uygulamayı Intune ile dağıtmaya ek olarak, DıŞA Popurebred uygulaması içi
 
 **Aşağıdaki görevleri doldurun**:
   
-1. [Dışa Popurebred uygulamasını](https://cyber.mil/pki-pke/purebred/)indirin.
-2. Diğer Intune 'da bulunan DıŞA ınpurebred uygulamasını dağıtın.  [Microsoft Intune Için iOS/ıpados iş kolu uygulaması ekleme](../apps/lob-apps-ios.md)bölümüne bakın.
+1. DıŞA Popurebred uygulamasını indirin: https:\//Cyber.mil/pki-PKE/purebred/.
+
+2. Diğer Intune 'da bulunan DıŞA ınpurebred uygulamasını dağıtın. [Microsoft Intune için bir iOS iş kolu uygulaması ekleme](../apps/lob-apps-ios.md)bölümüne bakın.
+
 3. DıŞA purebred uygulaması için [uygulama BAŞıNA VPN oluşturun](../configuration/vpn-settings-configure.md) .
 
 ## <a name="use-derived-credentials-for-authentication-and-smime-signing-and-encryption"></a>Kimlik doğrulaması ve S/MIME imzalama ve şifreleme için türetilmiş kimlik bilgilerini kullan
@@ -206,10 +235,16 @@ Uygulamayı Intune ile dağıtmaya ek olarak, DıŞA Popurebred uygulaması içi
 Aşağıdaki profil türleri ve amaçları için **türetilmiş kimlik bilgilerini** belirtebilirsiniz:
 
 - [Uygulamalar](#use-derived-credentials-for-app-authentication)
-- [E-posta](../configuration/email-settings-ios.md)
-- [VPN](../configuration/vpn-settings-ios.md)
+- E-posta:
+  - [iOS ve ıpados](../configuration/email-settings-ios.md)
+  - [Android Kurumsal](../configuration/email-settings-android-enterprise.md)
+- SANAL
+  - [iOS ve ıpados](../configuration/vpn-settings-ios.md)
+  - [Android Kurumsal](../configuration/vpn-settings-android-enterprise.md)
 - [S/MIME imzalama ve şifreleme](certificates-s-mime-encryption-sign.md)
-- [Wi-Fi](../configuration/wi-fi-settings-ios.md)
+- Wi-Fi:
+  - [iOS ve ıpados](../configuration/wi-fi-settings-ios.md)
+  - [Android Kurumsal](../configuration/wi-fi-settings-android-enterprise.md)
 
   Wi-Fi profilleri için, *kimlik doğrulama yöntemi* yalnızca **EAP türü** aşağıdaki değerlerden birine ayarlandığında kullanılabilir:
   - EAP – TLS
@@ -221,35 +256,25 @@ Aşağıdaki profil türleri ve amaçları için **türetilmiş kimlik bilgileri
 Web siteleri ve uygulamalarına sertifika tabanlı kimlik doğrulaması için türetilmiş kimlik bilgilerini kullanın. Uygulama kimlik doğrulaması için türetilmiş bir kimlik bilgisi teslim etmek için:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+3. Aşağıdaki ayarları girin:
 
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+   İOS ve ıpados için:
+   - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, **iOS cihazlar profili Için türetilmiş kimlik bilgileridir**.
+   - **Açıklama**: Ayara genel bir bakış sağlayan ve diğer önemli ayrıntıları veren bir açıklama girin.
+   - **Platform**: **IOS/ıpados**' ı seçin.
+   - **Profil türü**: **türetilmiş kimlik bilgilerini**seçin.
 
-3. Aşağıdaki özellikleri girin:
-   - **Platform**: Bu profili alacak cihazların platformunu seçin.
-   - **Profil**: **türetilmiş kimlik bilgisini** seçin
+   Android Enterprise için:
+   - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, **Android kurumsal cihazlar profili Için türetilmiş kimlik bilgileridir**.
+   - **Açıklama**: Ayara genel bir bakış sağlayan ve diğer önemli ayrıntıları veren bir açıklama girin.
+   - **Platform**: **Android kurumsal**' i seçin.
+   - **Profil türü**: *yalnızca cihaz sahibi*altında, **türetilmiş kimlik bilgileri**' ni seçin.
 
-4. **Oluştur**’u seçin.
+4. Değişikliklerinizi kaydetmek için **Tamam**’ı seçin.
+5. İşiniz bittiğinde, Intune profilini oluşturmak için **Tamam** > **Oluştur** ' u seçin. Bu tamamlandığında, profiliniz **cihazlar-yapılandırma profilleri** listesinde gösterilir.
+6. Yeni profilinizi > **atamaları**' nı seçin. İlkeyi alması gereken grupları seçin.
 
-5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
-
-   - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, **iOS/ıpados cihazları profili Için türetilmiş kimlik bilgileridir**.
-   - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
-
-6. **İleri**'yi seçin.
-
-7. **Yapılandırma ayarları**' nda, **uygulama kimlik doğrulaması için türetilmiş kimlik bilgilerini** **Evet**olarak ayarlayın ve ardından **İleri**' yi seçin.
-
-8. **Kapsam etiketleri** ' nde (isteğe bağlı), profili `US-NC IT Team` veya `JohnGlenn_ITDepartment`gıbı belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
-
-   **İleri**'yi seçin.
-
-9. **Atamalar**' da, profilinizi alacak Kullanıcı veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](../configuration/device-profile-assign.md).
-
-    **İleri**'yi seçin.
-
-10. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. Oluştur ' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
-
- 
 Kullanıcılar, türetilmiş kimlik bilgileri verenini ayarlarken belirttiğiniz ayarlara bağlı olarak uygulamayı veya e-posta bildirimini alır. Bildirim, kullanıcıdan türetilmiş kimlik bilgileri ilkelerinin işlenebilmesi için Şirket Portalı başlatması konusunda bilgilendirir.
 
 ## <a name="renew-a-derived-credential"></a>Türetilmiş bir kimlik bilgisini Yenile
@@ -260,7 +285,6 @@ Türetilmiş kimlik bilgileri genişletilemiyor veya yenilenemiyor. Bunun yerine
 
 Bir cihaz yeni bir türetilmiş kimlik bilgisi aldıktan sonra, türetilmiş kimlik bilgilerini kullanan ilkeler o cihaza yeniden dağıtırsınız.
 
-
 ## <a name="change-the-derived-credential-issuer"></a>Türetilmiş kimlik bilgisi vereni değiştirme
 
 Kiracı düzeyinde, kiracı için tek seferde yalnızca bir veren destekleniyor olsa da, kimlik bilgisi vereninizi değiştirebilirsiniz.
@@ -269,11 +293,11 @@ Veren 'i değiştirdikten sonra kullanıcılardan yeni veren tarafından yeni bi
 
 ### <a name="change-the-issuer-for-your-tenant"></a>Kiracınız için sertifikayı değiştirme
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Sertifikayı bir veren siler ve hemen yeniden yapılandırırsanız, bu veren 'ten türetilmiş kimlik bilgilerini kullanmak için profilleri ve cihazları yine de güncelleştirmeniz gerekir. Veren silinmeden önce elde edilen türetilmiş kimlik bilgileri artık geçerli değil.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Kiracı yönetimi** > **bağlayıcılar ve belirteçler** > **türetilmiş kimlik bilgileri**' ni seçin.
+2. **Kiracı Yönetimi** > **bağlayıcıları ' nı ve** > **türetilmiş kimlik bilgileri**belirteçlerini seçin.
 3. Geçerli türetilmiş kimlik bilgisi verenini kaldırmak için **Sil** ' i seçin.
 4. Yeni bir veren yapılandırın.
 
@@ -287,4 +311,4 @@ Bir veren sildikten sonra yeni bir tane ekledikten sonra cihaz kullanıcıları 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Cihaz yapılandırma profiline genel bakış](../configuration/device-profile-create.md)
+[Cihaz yapılandırma profilleri oluşturun](../configuration/device-profile-create.md).

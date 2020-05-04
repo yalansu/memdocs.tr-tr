@@ -17,10 +17,10 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
 ms.openlocfilehash: 554bc09aa57306010069df4a85baa70fafdc41a6
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086277"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Microsoft Intune 'de Windows 10 Microsoft Defender virüsten koruma ilkesi ayarları
@@ -190,7 +190,7 @@ Bu gruptaki her bir ayar için ayarı genişletebilir, **Ekle**' yi seçebilir v
   - **Kullanıcı tanımlı** -cihaz kullanıcısı hangi eylemin ele alınacağı kararını yapar.
   - **Blok** -dosya yürütmeyi engeller.
 
-## <a name="scan"></a>dığınız
+## <a name="scan"></a>Tara
 
 - **Arşiv dosyalarını tara**  
   CSP: [AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047&clcid=0x409)
@@ -198,7 +198,7 @@ Bu gruptaki her bir ayar için ayarı genişletebilir, **Ekle**' yi seçebilir v
   Defender 'ı ZIP veya CAB dosyaları gibi arşiv dosyalarını tarayacak şekilde yapılandırın.
 
   - **Yapılandırılmadı** (*varsayılan*)-ayar, arşivlenen dosyaları taramak için istemci varsayılan değerini döndürür, ancak kullanıcı bunu devre dışı bırakabilir.
-Daha fazla bilgi
+Daha fazla bilgi edinin
   - Dosya Arşivi **taranmaz.** Cihaz kullanıcıları bu ayarı değiştiremezler.
   - **Evet** -arşiv dosyalarının taranmasını etkinleştirin. Cihaz kullanıcıları bu ayarı değiştiremezler.
 
@@ -268,7 +268,7 @@ Daha fazla bilgi
   - **Hayır**
   - **Evet**
 
-## <a name="updates"></a>Updates
+## <a name="updates"></a>Güncelleştirmeler
 
 - **Güvenlik Zekası güncelleştirmelerini denetleme sıklığını (0-24 saat) girin**  
   CSP: [Signatureupdateınterval](https://go.microsoft.com/fwlink/?linkid=2113936&clcid=0x409)

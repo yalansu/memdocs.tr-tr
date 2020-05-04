@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dbb8e5644390c589756af5a69f2fdd5a829866a1
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084017"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Microsoft Intune'da Zebra Mobility Uzantılarını içeren Zebra cihazlarını kullanma ve yönetme
@@ -34,7 +34,7 @@ Bu makalede Microsoft Intune'da Zebra cihazlarında Zebra Mobility Uzantıların
 
 Bu özellik şu platformlarda geçerlidir:
 
-- Android Cihaz Yöneticisi
+- Android cihaz yöneticisi
 
 Android kurumsal cihazlarda, [Oemconfig](android-oem-configuration-overview.md)' i kullanın.
 
@@ -53,7 +53,7 @@ Intune'u kullanarak Zebra cihazlarını kaydedip bu cihazlara iş kolu uygulamal
 - Oluşturduğunuz profillerin cihazın MX sürümü, işletim sistemi sürümü ve modeliyle uyumlu olduğunu onaylamak için [Zebra'nın tam MX özellik matrisini](http://techdocs.zebra.com/mx/compatibility) (Zebra'nın web sitesini açar) gözden geçirdiğinizden emin olun.
 - TC20/25 cihazları gibi bazı cihazlar StageNow'da sağlanan MX özelliklerinin tümünü desteklemez. Güncelleştirilmiş destek bilgileri için [Zebra'nın özellik matrisini](http://techdocs.zebra.com/mx/tc2x/) (Zebra'nın web sitesini açar) gözden geçirdiğinizden emin olun.
 
-## <a name="step-1-install-the-latest-company-portal-app"></a>1\. Adım: en son Şirket Portalı uygulamayı yüklemeyi
+## <a name="step-1-install-the-latest-company-portal-app"></a>1. Adım: en son Şirket Portalı uygulamayı yüklemeyi
 
 Cihazda Google Play Store ' u açın. Microsoft 'tan Intune Şirket Portalı uygulamasını indirin ve yükleyin. Şirket Portalı uygulaması Google Play'den yüklendiğinde güncelleştirmeleri ve düzeltmeleri otomatik olarak alır.
 
@@ -71,15 +71,15 @@ Aşağıdaki adımlar işleme genel bir bakış sağlar. Belirli ayrıntılar i�
 4. **Download MDM**'de **Transfer/Copy File** öğesini seçin. Şirket Portalı Android paketinin (APK) kaynağını ve hedefini ekleyin.
 5. **Launch MDM** adımında varsayılan değerleri olduğu gibi bırakın. Aşağıdaki ayrıntıları ekleyin:
 
-    - **Package Name**: `com.microsoft.windowsintune.companyportal`
-    - **Class Name**: `com.microsoft.windowsintune.companyportal.views.SplashActivity`
+    - **Paket adı**:`com.microsoft.windowsintune.companyportal`
+    - **Sınıf adı**:`com.microsoft.windowsintune.companyportal.views.SplashActivity`
 
 Profili yayımlamaya devam edin ve bunu cihazda StageNow uygulamasıyla kullanın. Şirket Portalı uygulaması yüklenir ve cihazda açılır.
 
 > [!TIP]
 > StageNow ile ilgili daha fazla bilgi edinmek ve ne yaptığını öğrenmek için bkz. [StageNow Android cihazı hazırlama](https://www.zebra.com/us/en/products/software/mobile-computers/mobile-app-utilities/stagenow.html) (Zebra'nın web sitesini açar).
 
-## <a name="step-2-confirm-the-company-portal-app-has-device-administrator-role"></a>2\. Adım: Şirket Portalı uygulamasının cihaz yöneticisi rolüne sahip olduğunu onaylayın
+## <a name="step-2-confirm-the-company-portal-app-has-device-administrator-role"></a>2. Adım: Şirket Portalı uygulamasının cihaz yöneticisi rolüne sahip olduğunu onaylayın
 
 Şirket Portalı uygulaması Android cihazlarını yönetmek için Cihaz Yöneticisi gerektirir. Cihaz Yöneticisi rolünü etkinleştirmek için bazı Zebra cihazlarında cihaz üzerinde bir kullanıcı arabirimi (UI) vardır. Cihazda UI varsa, Şirket Portalı uygulaması son kullanıcıdan [kayıt](#step-3-enroll-the-device-in-to-intune) sırasında Cihaz Yöneticisi rolünü vermesini ister (bu makalede).
 
@@ -96,17 +96,17 @@ Aşağıdaki adımlar işleme genel bir bakış sağlar. Belirli ayrıntılar i�
 
 Profili yayımlamaya devam edin ve bunu cihazda StageNow uygulamasıyla kullanın. Şirket Portalı uygulamasına Cihaz Yöneticisi rolü verilir.
 
-## <a name="step-3-enroll-the-device-in-to-intune"></a>3\. Adım: cihazı Intune 'a kaydetme
+## <a name="step-3-enroll-the-device-in-to-intune"></a>3. Adım: cihazı Intune 'a kaydetme
 
 İlk iki adım tamamlandıktan sonra Şirket Portalı uygulaması cihaza yüklenir. Cihaz Intune'a kaydedilmeye hazırdır.
 
 [Android cihazlarını kaydetme](../enrollment/android-enroll.md) başlığı altında adımlar listelenir. Çok sayıda Zebra cihazınız varsa [cihaz kayıt yöneticisi (DEM) hesabı](../enrollment/device-enrollment-manager-enroll.md) kullanmak isteyebilirsiniz. DEM hesabı kullanıldığında Şirket Portalı uygulamasından kaydı silme seçeneği kaldırılır, dolayısıyla kullanıcılar cihazın kaydını kolayca kaldıramaz.
 
-## <a name="step-4-create-a-device-management-profile-in-stagenow"></a>4\. Adım: StageNow 'da cihaz yönetim profili oluşturma
+## <a name="step-4-create-a-device-management-profile-in-stagenow"></a>4. Adım: StageNow 'da cihaz yönetim profili oluşturma
 
 StageNow'u kullanarak cihazda yönetmek istediğiniz ayarları yapılandıran bir profil oluşturun. Belirli ayrıntılar için Zebra'nın belgelerine bakın. [Profiller](http://techdocs.zebra.com/stagenow/3-2/stagingprofiles/) (Zebra'nın web sitesini açar) iyi bir kaynak olabilir.
 
-StageNow'da profil oluştururken, son adımda **Export to MDM** öğesini seçin. Bu adım bir XML dosyası oluşturur. Bu dosyayı kaydedin. Sonraki adımlardan birinde ihtiyacınız olacaktır.
+StageNow'da profil oluştururken, son adımda **Export to MDM** öğesini seçin. Bu adım bir XML dosyası oluşturur. Bu dosyayı kaydedin. Sonraki adımlardan birinde gerekecektir.
 
 - Profili kuruluşunuzdaki cihazlara dağıtmadan önce test etmeniz önerilir. Test etmek için, bilgisayarınızda StageNow'la profilleri oluştururken son adımda **Test** seçeneklerini kullanın. Ardından StageNow tarafından oluşturulan dosyayı cihazda StageNow uygulamasıyla kullanın.
 
@@ -129,28 +129,28 @@ Dosyayı test ettiğinizde, sonraki adım Intune'u kullanarak profili cihazlara 
   >
   > Aynı özellik tek bir MX profilinde birden çok kez yapılandırılmışsa, son yapılandırma kazanır.
 
-## <a name="step-5-create-a-profile-in-intune"></a>5\. Adım: Intune 'da profil oluşturma
+## <a name="step-5-create-a-profile-in-intune"></a>5. Adım: Intune 'da profil oluşturma
 
 Intune'da cihaz yapılandırma profili oluşturun:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Ad**: Yeni profil için açıklayıcı bir ad girin.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+    - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
     - **Platform**: **Android Cihaz Yöneticisi**' ni seçin.
-    - **Profil türü**: **MX profili seçin (yalnızca zeköşeli)** .
+    - **Profil türü**: **MX profili seçin (yalnızca zeköşeli)**.
 
 4. **.xml biçiminde MX profili** alanında [StageNow'dan dışarı aktardığınız](#step-4-create-a-device-management-profile-in-stagenow) XML profil dosyasını ekleyin (bu makalede).
-5. Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur**’u seçin. İlke oluşturulur ve listede gösterilir.
+5. Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin. İlke oluşturulur ve listede gösterilir.
 
     > [!TIP]
     > Güvenlik nedenleriyle, kaydettikten sonra profil XML metnini görmezsiniz. Metin şifrelenir ve siz yalnızca yıldız işaretleri (`****`) görürsünüz. MX profillerini Intune'a eklemeden önce, başvurabilmek için bu profillerin kopyalarını kaydetmeniz önerilir.
 
 Profil oluşturulur ancak henüz herhangi bir işlem gerçekleştirmez. Ardından [profili atayın](device-profile-assign.md) ve [durumunu izleyin](device-profile-monitor.md).
 
-Cihazın yapılandırma güncelleştirmelerini bir sonraki denetleyişinde MX profili cihaza dağıtılır. Cihazlar kaydedildiğinde ve ardından yaklaşık her 8 saatte bir Intune'la eşitlenir. Ayrıca [Intune'da eşitlemeyi zorlayabilirsiniz](../remote-actions/device-sync.md). İsterseniz cihazda **Şirket Portalı uygulaması** > **Ayarlar** > **Eşitle**'yi de açabilirsiniz. 
+Cihazın yapılandırma güncelleştirmelerini bir sonraki denetleyişinde MX profili cihaza dağıtılır. Cihazlar kaydedildiğinde ve ardından yaklaşık her 8 saatte bir Intune'la eşitlenir. Ayrıca [Intune'da eşitlemeyi zorlayabilirsiniz](../remote-actions/device-sync.md). Ya da cihazda, **uygulama** > **ayarları** > **eşitlemesini**Şirket Portalı açın. 
 
 ## <a name="update-a-zebra-mx-configuration-after-its-assigned"></a>Atandıktan sonra Zeköşeli MX yapılandırmasını güncelleştirme
 

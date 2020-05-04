@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: df8f6ba6873e98663be853e134995bab640541fc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332106"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Windows cihazlarında cihaz üretici yazılımı yapılandırma arabirimi profillerini Microsoft Intune (Genel Önizleme) kullanma
@@ -78,11 +78,11 @@ Bu profil, Windows kurulumu sırasında cihazların doğrulanıp doğrulandığ�
 Bu profil, yapılandırdığınız DFCı ayarlarını içerir.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Ad**: profil için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı **Windows: Windows cihazlarında dfcı ayarlarını yapılandırın**.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+    - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
     - **Platform**: **Windows 10 ve üzeri** seçeneğini belirleyin.
     - **Profil türü**: **cihaz üretici yazılımı yapılandırma arabirimini**seçin.
 
@@ -104,7 +104,7 @@ Bu profil, yapılandırdığınız DFCı ayarlarını içerir.
         - **Yapılandırılmadı**: Intune bu özelliğe dokunmaz ve tüm ayarları olduğu gibi bırakır.
         - **Etkin**: UEFı (BIOS) tarafından doğrudan yönetilen tüm yerleşik mikrofonlar ve hoparlörler etkindir. USB cihazları gibi çevre birimleri etkilenmez.
         - **Devre dışı**: UEFı (BIOS) tarafından doğrudan yönetilen tüm yerleşik mikrofonlar ve hoparlörler devre dışı bırakılır. USB cihazları gibi çevre birimleri etkilenmez.
-    - **Radyolar (Bluetooth, Wi-Fi, NFC vb.)** : seçenekleriniz:
+    - **Radyolar (Bluetooth, Wi-Fi, NFC vb.)**: seçenekleriniz:
         - **Yapılandırılmadı**: Intune bu özelliğe dokunmaz ve tüm ayarları olduğu gibi bırakır.
         - **Etkin**: UEFı (BIOS) tarafından doğrudan yönetilen tüm yerleşik radyolar etkindir. USB cihazları gibi çevre birimleri etkilenmez.
         - **Devre dışı**: UEFı (BIOS) tarafından doğrudan yönetilen tüm yerleşik radyolar devre dışı bırakıldı. USB cihazları gibi çevre birimleri etkilenmez.
@@ -121,7 +121,7 @@ Bu profil, yapılandırdığınız DFCı ayarlarını içerir.
         - **Etkin**: UEFı (BIOS), yerleşik ağ arabirimlerinden önyüklenmesine izin verir.
         - **Devre dışı**: UEFı (BIOS), yerleşik ağ arabirimlerinin önyüklenmesine izin vermez.
 
-5. İşiniz bittiğinde **Tamam** > **Oluştur**’u seçerek değişikliklerinizi kaydedin. Profil oluşturulur ve listede gösterilir.
+5. İşiniz bittiğinde, değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin. Profil oluşturulur ve listede gösterilir.
 
 ## <a name="assign-the-profiles-and-reboot"></a>Profilleri atayın ve yeniden başlatın
 
@@ -148,17 +148,17 @@ Ayrıca, [iade edilecek cihazlara sinyal](../remote-actions/device-sync.md)gönd
 
 ## <a name="reuse-retire-or-recover-the-device"></a>Cihazı yeniden kullanma, devre dışı bırakma veya kurtarma
 
-### <a name="reuse"></a>Pencereleri
+### <a name="reuse"></a>Yeniden kullanma
 
 Windows 'u cihaza yeniden amaçlandırın olarak sıfırlamayı planlıyorsanız, [cihazı](../remote-actions/devices-wipe.md)silin. Autopilot cihaz **kaydını kaldırmayın.**
 
 Cihazı sildikten sonra, cihazı yeni DFCı ve Autopilot profillerini atayan gruba taşıyın. Windows kurulumu 'nu yeniden çalıştırmak için cihazı yeniden başlattığınızdan emin olun.
 
-### <a name="retire"></a>Devre Dışı Bırak
+### <a name="retire"></a>Devre Dışı Bırakma
 
 Cihazı devre dışı bırakmaya ve yönetimden yayınlamaya hazırsanız, DFCı profilini çıkış durumunda istediğiniz UEFı (BIOS) ayarlarına güncelleştirin. Genellikle tüm ayarların etkinleştirilmesini istersiniz. Örneğin:
 
-1. DFCı profilinizi (**cihazlar** > **yapılandırma profilleri**) açın.
+1. Dfcı profilinizi açın (**cihazlar** > **yapılandırma profilleri**).
 2. **Yerel kullanıcının UEFI (BIOS) ayarlarını** **yalnızca yapılandırılmadı ayarlarına**değiştirmesine izin ver ayarını değiştirin.
 3. Diğer tüm ayarları **Yapılandırılmadı**olarak ayarlayın.
 4. Ayarlarınızı kaydedin.

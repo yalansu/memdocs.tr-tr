@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0189fea7f73b70286a6daf844a10806d4c1e8a5d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329670"
 ---
 # <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Intune'u kullanarak cihazları uyumlu veya uyumlu değil şeklinde işaretlemek için kullanabileceğiniz Windows 8.1 ayarları
@@ -28,14 +28,14 @@ Bu makalede Intune'daki Windows 8.1 cihazları için yapılandırabileceğiniz f
 
 Bu özellik şu platformlarda geçerlidir:
 
-- WVPN profillerinidows Phone 8.1
+- Windows Phone 8.1
 - Windows 8.1 ve üzeri
 
 Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun kaynaklarının korunmasına yardımcı olabilirsiniz. Uyumluluk ilkeleri ve işlevleri hakkında daha fazla bilgi için bkz. [Cihaz uyumluluğunu kullanmaya başlama](device-compliance-get-started.md).
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Uyumluluk ilkesi oluşturma](create-compliance-policy.md#create-the-policy). **Platform** olarak **Windows Phone 8.1** veya **Windows 8.1 ve sonrası**'nı seçin.
+[Bir uyumluluk Ilkesi oluşturun](create-compliance-policy.md#create-the-policy). **Platform** olarak **Windows Phone 8.1** veya **Windows 8.1 ve sonrası**'nı seçin.
 
 ## <a name="device-properties"></a>Cihaz Özellikleri
 
@@ -87,7 +87,7 @@ Windows 8.1 bilgisayarları **3** sürümünü döndürür. Windows için işlet
     Dört karakter kümesi şunlardır:
     - Küçük harfler
     - Büyük harfler
-    - Simgeler
+    - Simgeleri
     - Numaralar
 
     Daha yüksek bir sayı ayarlanırsa kullanıcının daha karmaşık bir parola oluşturması gerekir. Microsoft hesabı ile erişilen cihazlarda, aşağıdaki koşullardan biri karşılandığında uyumluluk ilkesi doğru şekilde değerlendirilemiyor:
@@ -98,7 +98,7 @@ Windows 8.1 bilgisayarları **3** sürümünü döndürür. Windows için işlet
 - **Parola istenmeden önce geçmesi gereken, işlem yapılmayan dakika sayısı**:  
   Kullanıcı parolasını yeniden girmeden önce boşta geçen süreyi girin.
 
-- **Parola zaman aşımı (gün sayısı)** :  
+- **Parola kullanım süresi (gün)**:  
   Parolanın süresi dolmadan önce geçecek gün sayısını seçin ve kullanıcıların yeni bir tane oluşturması gerekir.
 
 - **Yeniden kullanılması önlenecek önceki parola sayısı**:  
@@ -106,7 +106,7 @@ Windows 8.1 bilgisayarları **3** sürümünü döndürür. Windows için işlet
 
 ### <a name="encryption"></a>Şifreleme
 
-- **Cihazda veri deposunun şifrelenmesi**:  
+- **Cihazda veri depolamanın şifrelenmesi**:  
   - **Yapılandırılmadı** (*varsayılan*)
   - **Gerektir** -kullanım, cihazlarınızda veri depolamayı şifrelemek için *gerektir* .
 

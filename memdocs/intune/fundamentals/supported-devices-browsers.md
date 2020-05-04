@@ -19,13 +19,13 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a9622a89b8b689dab7ea2d6d332d1d29c38f5668
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80085749"
 ---
-# <a name="supported-operating-systems-and-browsers-in-intune"></a>Desteklenen işletim sistemleri ve tarayıcılar ıntune
+# <a name="supported-operating-systems-and-browsers-in-intune"></a>Intune 'da desteklenen işletim sistemleri ve tarayıcılar
 
 Microsoft Intune'u ayarlamadan önce, desteklenen işletim sistemleriyle tarayıcıları gözden geçirin.
 
@@ -51,7 +51,7 @@ MDM kaydını önleyen Knox etkinleştirme hatalarının önüne geçmek için �
 
 Aşağıdaki listede adı geçen Samsung cihaz modelleri, Knox desteklemez. Android için Şirket Portalı tarafından yerel Android cihazlar olarak kaydedilirler:
 
-| **Cihaz Adı** | **Cihaz Model Numaraları** |
+| **Cihaz adı** | **Cihaz Model Numaraları** |
 | --- | --- |
 | Galaxy Avant | SM-G386T |
 | Galaxy Core 2/Core 2 Duos | SM-G355H<br>SM-G355M |
@@ -93,7 +93,7 @@ Aşağıdaki listede adı geçen Samsung cihaz modelleri, Knox desteklemez. Andr
 Bir [Intune yazılım istemcisi](manage-windows-pcs-with-microsoft-intune.md) alternatif bir kayıt yöntemi olarak Windows bilgisayarlara dağıtılabilir ve yüklenebilir. Bu işlev, yalnızca klasik Intune portalında kullanılabilir. Intune yazılım istemcisini, Windows 10 Home Edition dışında 10 ve üzeri bilgisayarları yönetmek için kullanabilirsiniz.
 
 > [!Note]
-> Microsoft, Windows 7 desteğinin 14 Ocak 2020 tarihinde bittiğini duyurmuştur. Aynı tarihte Intune'da Windows 7 çalıştıran cihazlar için desteğini kaldıracaktır.
+> Microsoft Windows 7 desteğinin 14 Ocak 2020'de sona erdiğini duyurdu. Aynı tarihte Intune'da Windows 7 çalıştıran cihazlar için desteğini kaldıracaktır.
 >
 > Daha fazla bilgi için bkz. [Intune plan değişikliği: Windows 7 için destek sonu](whats-new.md#windows-7-ends-extended-support).
 >
@@ -109,8 +109,8 @@ You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#
 
 Farklı yönetim görevleri aşağıdaki yönetim web sitelerinden birini kullanmanızı gerektirir.
 
-- [Microsoft 365 Yönetim Merkezi](https://go.microsoft.com/fwlink/p/?LinkId=698854)
-- [Azure portalı](https://portal.azure.com/)
+- [Microsoft 365 yönetici merkezi](https://go.microsoft.com/fwlink/p/?LinkId=698854)
+- [Azure portal](https://portal.azure.com/)
 
 Bu portallar için aşağıdaki tarayıcılar desteklenir:
 
@@ -122,11 +122,11 @@ Bu portallar için aşağıdaki tarayıcılar desteklenir:
 
 ### <a name="intune-classic-portal"></a>Intune klasik portalı
 
-Klasik Intune portalı yalnızca Intune PC yazılım istemcisi (https://manage.microsoft.com)ile kaydedilmiş cihazların yönetilmesi için kullanılır. Klasik Intune portalı, Silverlight tarayıcı desteği gerektirir.
+Klasik Intune portalı yalnızca Intune PC yazılım istemcisi (https://manage.microsoft.com). Klasik Intune portalı, Silverlight tarayıcı desteği gerektirir.
 
 Aşağıdaki Silverlight tarayıcıları klasik Intune konsolunu destekler:
 
-- Internet Explorer 10 veya üstü
+- Internet Explorer 10 veya sonraki sürümler
 - Google Chrome (42. sürümden önceki sürümler)
 - Silverlight özellikli Mozilla Firefox (sürüm 56 ' den önceki sürümler)
 

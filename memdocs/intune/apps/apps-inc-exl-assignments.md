@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6095c079c6b5cb6f132d9963e3e7413e97180d70
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324594"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Microsoft Intune’da uygulama atamalarını dahil etme ve dışlama
@@ -51,14 +51,14 @@ Sonuç olarak, karışık gruplara uygulama atanması önerilmez.
 >
 > Intune konsolda önceden oluşturulmuş **Tüm Kullanıcılar** ve **Tüm Cihazlar** gruplarını sağlar. Size kolaylık sağlamak için grupların yerleşik iyileştirmeleri vardır. Tüm kullanıcı ve cihazları hedeflemek için kendi oluşturabileceğiniz "tüm kullanıcılar" veya "tüm cihazlar" grupları yerine bu grupları kullanmanızı kesinlikle öneririz.  
 >
-> Android kurumsal, grupları dahil etmeyi ve dışlamayı destekler. Android kurumsal uygulama ataması için yerleşik **Tüm Kullanıcılar** ve **Tüm Cihazlar** gruplarından yararlanabilirsiniz. 
+> Android kurumsal, grupları dahil etmeyi ve dışlamayı destekler. Android kurumsal uygulama ataması için yerleşik **tüm kullanıcılar** ve **tüm cihazlar** gruplarından yararlanabilirsiniz. 
 
 ## <a name="include-and-exclude-groups-when-assigning-apps"></a>Uygulama atarken grupları dahil etme ve dışlama
 
 Dahil etme ve dışlama atamasını kullanarak gruplara uygulama atamak için:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tüm uygulamalar** > **uygulamalar** ' ı seçin. Eklenen uygulamalar listesi gösterilir.
+2. **Uygulamalar** > **tüm uygulamalar**' ı seçin. Eklenen uygulamalar listesi gösterilir.
 3. Atamak istediğiniz uygulamayı seçin. Bir panoda uygulama hakkındaki bilgiler görüntülenir.
 4. Menünün **Yönet** bölümünde **Atamalar**’ı seçin.
 
@@ -88,7 +88,7 @@ Dahil etme ve dışlama atamasını kullanarak gruplara uygulama atamak için:
 
 Grup atamaları yaparken, zaten atanmış olan gruplar değiştirilemez. Şu anda kullanılamayan bir grup seçmek istiyorsanız, önce uygulamayı uygulamanın atanan listesinden kaldırın.
 
-Atamaları düzenlemek için, uygulamanın **Atamalar** listesinde değiştirmek istediğiniz atamayı içeren satırı seçin. Ayrıca, satırın sonundaki üç noktayı ( **…** ) ve sonra da **Kaldır**'ı seçerek de atamayı kaldırabilirsiniz. **Atamalar** listesinin görünümünü değiştirmek için **Atama türü**’ne veya **Dahil edilen/Dışlanan**’a göre gruplandırın.
+Atamaları düzenlemek için, uygulamanın **Atamalar** listesinde değiştirmek istediğiniz atamayı içeren satırı seçin. Ayrıca, satırın sonundaki üç noktayı (**…**) ve sonra da **Kaldır**'ı seçerek de atamayı kaldırabilirsiniz. **Atamalar** listesinin görünümünü değiştirmek için **Atama türü**’ne veya **Dahil edilen/Dışlanan**’a göre gruplandırın.
 
 ![Intune uygulama atamaları - Tamamlandı](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
 

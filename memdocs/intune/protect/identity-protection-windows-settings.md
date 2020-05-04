@@ -17,10 +17,10 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
 ms.openlocfilehash: b4581ba6bdc8b5be41d5cf567c631ffaad40d418
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329290"
 ---
 # <a name="windows-10-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Intune 'da Iş için Windows Hello 'Yu etkinleştirmek için Windows 10 cihaz ayarları
@@ -57,7 +57,7 @@ Intune 'da Iş için Windows Hello profilleri hakkında daha fazla bilgi edinmek
 
     **Varsayılan**: *Yapılandırılmadı*  
 
-  - **PIN 'de küçük harfler**  
+  - **PIN kodunda küçük harfler**  
     Son kullanıcıların küçük harfler içermesini zorunlu kılarak daha güçlü bir PIN uygulayabilirsiniz. Seçenekleriniz şunlardır:
 
     - **İzin verilmiyor** -kullanıcıların PIN kodunda küçük harf kullanmalarını engelleyin. Bu davranış, ayar yapılandırılmamışsa da oluşur.
@@ -71,8 +71,8 @@ Intune 'da Iş için Windows Hello profilleri hakkında daha fazla bilgi edinmek
     - **Izin verilen** -kullanıcıların PIN kodunda büyük harfler kullanmasına izin verir, ancak bu gerekli değildir.
     - **Gerekli** -kullanıcılar PIN 'e en az bir büyük harf içermelidir. Örneğin, en az bir büyük harfin ve bir özel karakterin zorunlu kılınması yaygın bir uygulamadır.
 
-  - **PIN 'de özel karakterler**  
-    Son kullanıcıların özel karakterler içermesini isteyerek daha güçlü bir PIN zorlayabilirsiniz. Özel karakterler şunlardır: `! " # $ % &amp; ' ( ) &#42; + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~`  
+  - **PIN kodunda özel karakterler**  
+    Son kullanıcıların özel karakterler içermesini isteyerek daha güçlü bir PIN zorlayabilirsiniz. Özel karakterler şunlardır:`! " # $ % &amp; ' ( ) &#42; + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~`  
 
     Seçenekleriniz şunlardır:
     - **İzin verilmiyor** -kullanıcıların PIN 'de özel karakterler kullanmalarını engelleyin. Bu davranış, ayar yapılandırılmamışsa da oluşur.
@@ -91,7 +91,7 @@ Intune 'da Iş için Windows Hello profilleri hakkında daha fazla bilgi edinmek
 
     **Varsayılan**: yapılandırılmadı  
 
-  - **PIN kurtarma  etkinleştir**  
+  - **PIN kurtarmayı etkinleştir**   
     Kullanıcının Iş için Windows Hello PIN kurtarma hizmetini kullanmasına izin verir. 
     
     - **Etkin** -PIN kurtarma gizli anahtarı cihazda depolanır ve gerekirse Kullanıcı PIN 'ini değiştirebilir.  
@@ -99,7 +99,7 @@ Intune 'da Iş için Windows Hello profilleri hakkında daha fazla bilgi edinmek
 
     **Varsayılan**: yapılandırılmadı
 
-  - **Güvenilir Platform Modülü (TPM) kullanın**   
+  - **Güvenilir Platform Modülü (TPM) kullanma**   
     TPM yongası ek bir veri güvenliği katmanı sağlar.  
 
     - **Etkin** -yalnızca erişilebilir TPM 'ye sahip cihazlar Iş Için Windows Hello 'yu sağlayabilir.

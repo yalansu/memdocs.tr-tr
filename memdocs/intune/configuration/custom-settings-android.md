@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 77f0df858f94f3d0b8d6c3a4ee2b251e6b917da6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79333178"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Microsoft Intune’da Android cihazlar için özel ayarlar kullanma
@@ -44,11 +44,11 @@ Bu makale, Android cihazlar için özel profil oluşturma işlemini gösterir.
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Aşağıdaki ayarları girin:
 
     - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı **Android özel profilidir**.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+    - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
     - **Platform**: **Android**' i seçin.
     - **Profil türü**: **özel**' i seçin.
 
@@ -61,10 +61,10 @@ Bu makale, Android cihazlar için özel profil oluşturma işlemini gösterir.
 
       - Dize
       - Dize (XML dosyası)
-      - Tarih ve Saat
+      - Tarih ve saat
       - Tamsayı
       - Kayan nokta
-      - Boole değeri
+      - Boole
       - Base64 (dosya)
 
     - **Değer**: Girdiğiniz OMA-URI ile ilişkilendirmek istediğiniz veri değerini girin. Değer, seçtiğiniz veri türüne bağlıdır. Örneğin, **Tarih ve saat**' i seçerseniz, bir tarih seçicisinden değeri seçin.
@@ -72,7 +72,7 @@ Bu makale, Android cihazlar için özel profil oluşturma işlemini gösterir.
     Bazı ayarları ekledikten sonra **Dışarı Aktar**’ı seçebilirsiniz. **Dışarı Aktar**, virgülle ayrılmış değerler (.csv) dosyasına eklediğiniz tüm değerlerin listesini oluşturur.
 
 5. Değişikliklerinizi kaydetmek için **Tamam**’ı seçin. Gerekirse diğer ayarları eklemeye devam edin.
-6. İşiniz bittiğinde, Intune profilini oluşturmak için **tamam** > **Oluştur** ' u seçin. Bu tamamlandığında, profiliniz **cihazlar-yapılandırma profilleri** listesinde gösterilir.
+6. İşiniz bittiğinde, Intune profilini oluşturmak için **Tamam** > **Oluştur** ' u seçin. Bu tamamlandığında, profiliniz **cihazlar-yapılandırma profilleri** listesinde gösterilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

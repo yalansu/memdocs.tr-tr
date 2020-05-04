@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 285f323f55d41edab5ccd450deb0244b6fbda874
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79526453"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Intune ile Sophos Mobile Threat Defense Bağlayıcısı
@@ -65,21 +65,21 @@ Cihazlarda kötü amaçlı yazılım gibi kötü amaçlı uygulamalar algıland�
 ![Algılanan kötü amaçlı uygulamaların kavramsal görüntüsü](./media/sophos-mtd-connector/sophos-malicious-apps-blocked.png)  
 
 *Düzeltmeye erişim izni verildi*:  
-düzeltmeden sonra erişim izni verilen ![kavramsal görüntüsünü](./media/sophos-mtd-connector/sophos-malicious-apps-unblocked.png)
+![Düzeltmeden sonra erişim izni verilen kavramsal resim](./media/sophos-mtd-connector/sophos-malicious-apps-unblocked.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Ağa yönelik tehdide dayalı olarak erişimi denetleme
 
-Ağ ile ilgili tehditleri, ortadaki adam saldırıları gibi algılayın ve cihaz riskine dayalı olarak Wi-Fi ağlarına erişimi koruyun.  
+Bağlantıyı izinsiz izleme saldırıları gibi ağınıza yönelik tehditleri algılayın ve cihaz riskine dayalı olarak Wi-Fi ağlarına erişimi koruyun.  
 
 *Wi-Fi üzerinden ağ erişimini engelleyin*:  
-![Wi-Fi ile ağ erişimini engelleyin](./media/sophos-mtd-connector/sophos-network-wifi-blocked.png)
+![Wi-Fi üzerinden ağ erişimini engelleyin](./media/sophos-mtd-connector/sophos-network-wifi-blocked.png)
 
 *Düzeltmeye erişim izni verildi*:   
-Düzeltme](./media/sophos-mtd-connector/sophos-network-wifi-unblocked.png) ![erişim izni verildi  
+![Düzeltmeye erişim verildi](./media/sophos-mtd-connector/sophos-network-wifi-unblocked.png)  
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Ağa yönelik tehdide dayalı olarak SharePoint Online’a erişimi denetleme
 
-Ağınız için, ortadaki adam saldırıları gibi tehditleri algılayın ve cihaz riskine dayalı olarak kurumsal dosyaların eşitlenmesini önleyin.  
+Bağlantıyı izinsiz izleme saldırıları gibi ağınıza yönelik tehditleri algılayın ve cihaz riskine dayalı olarak kurumsal dosyaların eşitlenmesini engelleyin.  
 
 *Ağ tehditleri algılandığında SharePoint Online 'ı engelleyin*:
 

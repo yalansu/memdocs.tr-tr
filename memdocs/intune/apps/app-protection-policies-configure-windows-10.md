@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e7dcad93f836ee564e973555bebe1a1f5d7ba3c3
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323682"
 ---
 # <a name="get-ready-for-windows-information-protection-in-windows-10"></a>Windows 10 ' da Windows Information Protection hazırlanın 
@@ -41,7 +41,7 @@ Azure AD’de MAM sağlayıcısını ayarlayarak Windows 10 için mobil uygulama
 6. **Yapılandırma** BÖLMESINDEKI **varsayılan mam URL 'lerini geri yükle** grubundaki ayarları yapılandırın.
 
    **MAM kullanıcı kapsamı**  
-   Çalışanlarınızın Windows cihazlarındaki kurumsal verileri yönetmek için MAM otomatik kaydı kullanın. MAM otomatik kayıt, kendi cihazını getir senaryoları için yapılandırılacaktır.<ul><li>**Yok.**<br>MAM’a kaydedilecek kullanıcı yoksa bunu seçin.</li><li>**Bazı**<br>MAM’a kayıt olacak kullanıcıları içeren Azure AD gruplarını seçin.</li><li>**Tümü**<br>Tüm kullanıcıların MAM’a kayıt olup olamayacağını seçin.</li></ul>
+   Çalışanlarınızın Windows cihazlarındaki kurumsal verileri yönetmek için MAM otomatik kaydı kullanın. MAM otomatik kayıt, kendi cihazını getir senaryoları için yapılandırılacaktır.<ul><li>**Yok**<br>MAM’a kaydedilecek kullanıcı yoksa bunu seçin.</li><li>**Bazıları**<br>MAM’a kayıt olacak kullanıcıları içeren Azure AD gruplarını seçin.</li><li>**Tümü**<br>Tüm kullanıcıların MAM’a kayıt olup olamayacağını seçin.</li></ul>
 
    **MDM kullanım koşulları URL’si**  
    MAM kullanım koşulları URL’si Microsoft Intune’da desteklenmez. Koruma ilkelerinin uygulanması için bu giriş kutusu boş bırakılmalıdır.
@@ -52,7 +52,7 @@ Azure AD’de MAM sağlayıcısını ayarlayarak Windows 10 için mobil uygulama
    **MAM uyumluluk URL’si**  
    MAM uyumluluk URL’si Microsoft Intune’da desteklenmez. Koruma ilkelerinin uygulanması için bu giriş kutusu boş bırakılmalıdır. 
 
-7. **Kaydet**'e tıklayın.
+7. **Kaydet**’e tıklayın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

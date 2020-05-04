@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 275939c4c97b25f7e9b2ab179a7491d47801e48e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330242"
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Windows bilgisayar yönetimini basitleştirmek için ilkeler kullanma
@@ -36,7 +36,7 @@ Windows masaüstü cihazlar üzerindeki Intune yazılım istemcisini çalıştı
 ## <a name="manage-the-microsoft-intune-center"></a>Microsoft Intune Center’ı yönetme
 Kullanıcılar Intune yazılımı istemcisini **Microsoft Intune Center** olarak görür. Microsoft Intune Center kullanıcıların şunları yapmasını sağlar:
 
-- Şirket portalı üzerinden uygulamaları alın.
+- Şirket portalı üzerinden uygulamaları alma.
 
 - Güncelleştirmeleri denetleyin.
 
@@ -48,7 +48,7 @@ Microsoft Intune Center, tüm yönetilen bilgisayarlarda yüklüdür. Intune ilk
 
 |İlke ayarı|Ayrıntılar|
 |------------------|--------------------|
-|**Ad**|Bilgisayarı yöneten yöneticinin adı.<br />En fazla uzunluk: 40 karakter|
+|**Adı**|Bilgisayarı yöneten yöneticinin adı.<br />En fazla uzunluk: 40 karakter|
 |**Telefon numarası**|Bilgisayarı yöneten yöneticinin telefon numarası.<br />En fazla uzunluk: 20 karakter|
 |**E-posta adresi**|Bilgisayarı yöneten yöneticinin e-posta adresi.<br />En fazla uzunluk: 40 karakter|
 |**Web sitesinin adı**|Kullanıcılar için destek web sitenizin adı.<br />>En fazla uzunluk: 40 karakter|

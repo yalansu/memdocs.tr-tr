@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 95f9677b95dc9dde4b12e60e3006b4cee5081471
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233411"
 ---
 # <a name="what-is-device-enrollment"></a>Cihaz kaydı nedir?
@@ -63,7 +63,7 @@ Aşağıdaki cihazları Şirket Portalı kaydedebilirsiniz:
 - Windows cihazları
   - Windows 10 Mobile
   - Windows 10 Masaüstü
-  - WVPN profillerinidows Phone 8.1
+  - Windows Phone 8.1
   - Windows 8.1
 - Apple cihazları
     - iOS
@@ -75,7 +75,7 @@ Aşağıdaki cihazları Şirket Portalı kaydedebilirsiniz:
 Kuruluşunuzun uygulamayla kullanılmak üzere ayarlamış olduğu şirkete ait Android cihazlarını kaydedebilirsiniz. Uygulama, Android 6,0 ve üstünü destekler. 
 
 ## <a name="can-you-remove-a-device-from-the-company-portal"></a>Bir cihazı Şirket Portalı kaldırabilir miyim?
-Bir cihazı Şirket Portalı kaldırabilir veya sıfırlayabilirsiniz. **Kaldırma** ile **sıfırlama** işlemi birbirinden farklıdır.
+Bir cihazı Şirket Portalı kaldırabilir veya sıfırlayabilirsiniz. **Kaldır** ve **Sıfırla**arasında bir farklılık vardır.
 
 Cihazın kaldırılması sırasında Şirket Portalı, cihazın kaydını siler ve kaydı kaldırır. Bu cihaz Şirket Portalı erişimini kaybeder. İş veya okul verileri de kaldırılabilir. 
 
@@ -92,7 +92,7 @@ Microsoft Intune uygulamasında, yalnızca kullanmakta olduğunuz cihazı görü
 ## <a name="where-else-can-i-go-for-help"></a>Yardım için başka nereye başvurabilirim?  
 Sık karşılaşılan sorunları gidermek için platforma özgü bu belgelere göz atın:  
 
-- [Android cihazınızdaki yaygın sorunları çözme](check-compliance-on-your-device-android.md)  
+- [Android cihazınızla ilgili sık karşılaşılan sorunları giderme](check-compliance-on-your-device-android.md)  
 - [iOS cihazınızdaki yaygın sorunları çözme](troubleshoot-your-device-ios.md)
 - [macOS cihazınızdaki yaygın sorunları çözme](troubleshoot-your-device-macos.md)
 - [Windows cihazınızdaki yaygın sorunları çözme](troubleshoot-your-device-windows.md)

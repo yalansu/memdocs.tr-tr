@@ -19,10 +19,10 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 22910604d19aecb37adef2452d01d46c1435f7ef
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330302"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Öğretici: Azure portal Microsoft Intune Izlenecek yol
@@ -171,4 +171,4 @@ Bu özellik, Intune’a kullanıcı ve gruplar gibi daha fazla içerik eklediği
 Microsoft Intune hızlı bir şekilde çalıştırmak için, önce ücretsiz bir Intune hesabı ayarlayarak Intune hızlı başlangıç adımlarını izleyin.
 
 > [!div class="nextstepaction"]
-> [Hızlı başlangıç: Microsoft Intune ücretsiz deneyin](free-trial-sign-up.md)
+> [Hızlı Başlangıç: Microsoft Intune'u ücretsiz deneyin](free-trial-sign-up.md)

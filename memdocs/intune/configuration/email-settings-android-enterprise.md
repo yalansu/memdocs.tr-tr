@@ -17,15 +17,15 @@ ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ab544d285e49fd3914a8e9867c35ad9ed97f5fe8
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80087024"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Intune 'da e-posta, kimlik doğrulama ve eşitlemeyi yapılandırmak için Android kurumsal cihaz ayarları
 
-Bu makalede, Android kurumsal cihazlarda denetleyebilmeniz için farklı e-posta ayarları listelenir ve açıklanmaktadır. Mobil cihaz Yönetimi (MDM) çözümünüzün bir parçası olarak, bu ayarları ve e-postaları şifrelemek için SSL kullanmak, bir e-posta sunucusu yapılandırmak için kullanın.
+Bu makalede, Android kurumsal cihazlarda denetleyebilmeniz için farklı e-posta ayarları listelenir ve açıklanmaktadır. Mobil cihaz yönetimi (MDM) çözümünüzün bir parçası olarak, bir e-posta sunucusunu yapılandırmak için bu ayarları kullanın, e-postaları şifrelemek için SSL kullanın ve daha fazlasını yapın.
 
 Bir Intune Yöneticisi olarak, iş profilinde Android kurumsal cihazlara e-posta ayarları oluşturabilir ve atayabilirsiniz.
 
@@ -38,15 +38,15 @@ Bir [cihaz yapılandırma profili](email-settings-configure.md) oluşturun (iş 
 ## <a name="android-enterprise"></a>Android Kurumsal
 
 - **E-posta uygulaması**: **Gmail** veya **dokuz iş**seçin.
-- **E-posta sunucusu**: Exchange sunucunuzun konak adını girin. Örneğin, şunu girin: `outlook.office365.com`.
+- **E-posta sunucusu**: Exchange sunucunuzun konak adını girin. Örneğin, `outlook.office365.com` girin.
 - **AAD'den kullanıcı adı özniteliği**: Bu ad, Intune'un Azure Active Directory'den (Azure AD) aldığı özniteliktir. Intune, bu profil tarafından kullanılan kullanıcı adını dinamik olarak oluşturur. Seçenekleriniz şunlardır:
 
   - **Kullanıcı asıl adı**: `user1` veya `user1@contoso.com`gibi adı alır.
-  - **Kullanıcı adı**: yalnızca `user1`gibi adı alır.
+  - **Kullanıcı adı**: yalnızca adı alır (örneğin,) `user1`.
 
 - **AAD 'Den e-posta adresi özniteliği**: Bu ad, Intune 'un Azure AD 'den aldığı e-posta özniteliğidir. Intune, bu profil tarafından kullanılan e-posta adresini dinamik olarak oluşturur. Seçenekleriniz şunlardır:
   - **Kullanıcı asıl adı**: e-posta adresi olarak `user1@contoso.com` veya `user1`gibi tam asıl adı kullanır.
-  - **BIRINCIL SMTP adresi**: Exchange 'de oturum açmak için `user1@contoso.com`gıbı birincil SMTP adresini kullanır.
+  - **BIRINCIL SMTP adresi**: Exchange 'de oturum açmak için gıbı birincil SMTP `user1@contoso.com`adresini kullanır.
 
 - **Kimlik doğrulama yöntemi**: e-posta profili tarafından kullanılan kimlik doğrulama yöntemi olarak **Kullanıcı adı ve parola** ya da **Sertifikalar** seçin.
   - **Sertifika**’yı seçerseniz, Exchange bağlantısının kimliğini doğrulamak için daha önce oluşturduğunuz istemci SCEP veya PKCS sertifika profilini seçin.

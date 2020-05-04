@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 179314f363c8f086239b2c926c4bed8d09c68204
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79333042"
 ---
 # <a name="control-access-accounts-and-power-features-on-shared-pc-or-multi-user-devices-using-intune"></a>Intune kullanarak paylaşılan bılgısayar veya çok kullanıcılı cihazlarda erişimi, hesapları ve güç özelliklerini denetleme
@@ -43,17 +43,17 @@ Profil Intune 'da oluşturulduğunda, profilinizi kuruluşunuzdaki cihaz gruplar
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
    - **Ad**: Yeni profil için açıklayıcı bir ad girin.
-   - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+   - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
    - **Platform**: **Windows 10 ve üstünü**seçin.
    - **Profil türü**: **paylaşılan çok kullanıcılı cihaz**' ı seçin.
 
 4. [Windows 10 ve üzeri](shared-user-device-settings-windows.md) ya da [Windows holographic for Business](shared-user-device-settings-windows-holographic.md)için ayarları yapılandırın.
 
-5. Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur**’u seçin.
+5. Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin.
 
 Profiliniz oluşturuldu ve listede gösteriliyor, ancak henüz bir şey gerçekleştirmiyor. Profili kuruluşunuzdaki cihaz gruplarına [atadığınızdan](device-profile-assign.md) emin olun.
 

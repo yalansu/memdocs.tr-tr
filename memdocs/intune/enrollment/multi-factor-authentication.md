@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2b645b41a721063ddfea6019d726a3c232c8dd78
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327021"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Intune cihaz kayıtları için çok faktörlü kimlik doğrulaması isteme
@@ -48,9 +48,9 @@ Bir cihaz kaydedildiğinde MFA istemek için şu adımları izleyin:
 >Bu ilkeyi uygulamak için kullanıcılara atanmış bir Azure Active Directory Premium P1 veya üzeri olması gerekir.
 
 >[!Important]
->Microsoft Intune kaydı için **Cihaz tabanlı erişim kuralları** yapılandırmayın.
+>Microsoft Intune kaydı için **cihaz tabanlı erişim kuralları** yapılandırmayın.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın, **cihaz** **koşullu erişim** > seçin. *Intune*’dan erişilen Koşullu Erişim düğümü *Azure AD*’den erişilen düğümle aynıdır.
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar** > **koşullu erişim**' i seçin. *Intune* 'Dan erişilen koşullu erişim düğümü, *Azure AD*'den erişilen aynı düğümdür.
 2. **Yeni ilke**’yi seçin.
 3. **Yeni** ilkede, ilke için açıklayıcı bir ad yazın.
 4. **Atamalar** kısmında **Kullanıcılar ve gruplar**’ı seçin. 
@@ -59,7 +59,7 @@ Bir cihaz kaydedildiğinde MFA istemek için şu adımları izleyin:
 7. **Bulut uygulamaları**‘nın **Ekleme** sekmesinde, **Uygulama seç**’i, daha sonra **Seçin** > **Microsoft Intune Kaydı**’nı ve son olarak **Bitti**’yi seçin. **Microsoft Intune kaydı**' nı seçerek, koşullu erişim MFA yalnızca cihazın kaydına uygulanır (tek seferlik MFA istemi).
 8. **Atamalar** bölümünde, **Koşullar** altında MFA için hiçbir ayar yapılandırmanız gerekmez.
 9. **Erişim denetimleri** kısmında **Ver**’i seçin.
-10. **Ver** kısmında **Erişim ver**’i ve daha sonra **Çok faktörlü kimlik doğrulamasını gerektir**’i seçin. **Cihazın uyumlu olarak işaretlenmesini gerektir**’i seçmeyin çünkü bir cihaz kaydedilene kadar cihazın uyumluluğu değerlendirilemez. Daha sonra **Seç**’e tıklayın.
+10. **Ver** kısmında **Erişim ver**’i ve daha sonra **Çok faktörlü kimlik doğrulamasını gerektir**’i seçin. **Cihazın uyumlu olarak işaretlenmesini gerektir**’i seçmeyin çünkü bir cihaz kaydedilene kadar cihazın uyumluluğu değerlendirilemez. Ardından **Seç** seçeneğini belirleyin.
 11. **Yeni ilke**’de **İlkeyi etkinleştir** > **Açık**’ı ve daha sonra **Oluştur**’u seçin.
 
 

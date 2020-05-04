@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 43199009740f259c6a6484e455b0205da76492ba
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084043"
 ---
 # <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>Intune’da Windows Holographic for Business cihazlar için özel ayarlar kullanma
@@ -38,7 +38,7 @@ Bu makale, Windows Holographic for Business cihazlar için özel profil oluştur
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Aşağıdaki ayarları girin:
 
     - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı **HoloLens özel profilidir**.
@@ -50,15 +50,15 @@ Bu makale, Windows Holographic for Business cihazlar için özel profil oluştur
 
     - **Ad**: Ayarlar listesinde tanımanıza yardımcı olması için OMA-URI ayarına benzersiz bir ad girin.
     - **Açıklama**: Ayara genel bir bakış sağlayan ve diğer önemli ayrıntıları veren bir açıklama girin.
-    - **OMA-URI**  (büyük/küçük harfe duyarlı): Ayar olarak kullanmak istediğiniz OMA-URI’yi girin.
+    - **OMA-URI ** (büyük/küçük harfe duyarlı): Ayar olarak kullanmak istediğiniz OMA-URI’yi girin.
     - **Veri türü**: Bu OMA-URI ayarı için kullanacağınız veri türünü seçin. Seçenekleriniz şunlardır:
 
         - Dize
         - Dize (XML dosyası)
-        - Tarih ve Saat
+        - Tarih ve saat
         - Tamsayı
         - Kayan nokta
-        - Boole değeri
+        - Boole
         - Base64 (dosya)
 
     - **Değer**: Girdiğiniz OMA-URI ile ilişkilendirmek istediğiniz veri değerini girin. Değer, seçtiğiniz veri türüne bağlıdır. Örneğin, **Tarih ve saat**' i seçerseniz, bir tarih seçicisinden değeri seçin.
@@ -66,7 +66,7 @@ Bu makale, Windows Holographic for Business cihazlar için özel profil oluştur
     Bazı ayarları ekledikten sonra **Dışarı Aktar**’ı seçebilirsiniz. **Dışarı Aktar**, virgülle ayrılmış değerler (.csv) dosyasına eklediğiniz tüm değerlerin listesini oluşturur.
 
 5. Değişikliklerinizi kaydetmek için **Tamam**’ı seçin. Gerekirse diğer ayarları eklemeye devam edin.
-6. İşiniz bittiğinde, Intune profilini oluşturmak için **tamam** > **Oluştur** ' u seçin. Bu tamamlandığında, profiliniz **cihazlar-yapılandırma profilleri** listesinde gösterilir.
+6. İşiniz bittiğinde, Intune profilini oluşturmak için **Tamam** > **Oluştur** ' u seçin. Bu tamamlandığında, profiliniz **cihazlar-yapılandırma profilleri** listesinde gösterilir.
 
 ## <a name="recommended-custom-settings"></a>Önerilen özel ayarlar
 
@@ -140,7 +140,7 @@ Bu ayarlar, Windows Holographic for Business çalıştıran cihazlar için fayda
 > [!div class="mx-tableFixed"]
 > |OMA URI|Veri türü|
 > |----|---|
-> |./Vendor/MSFT/AccountManagement/UserProfileManagement/EnableProfileManager|Boole değeri<br/>True - etkinleştir<br/>False - devre dışı bırak (varsayılan)|
+> |./Vendor/MSFT/AccountManagement/UserProfileManagement/EnableProfileManager|Boole<br/>True - etkinleştir<br/>False - devre dışı bırak (varsayılan)|
 
 ### <a name="profileinactivitythreshold"></a>[ProfileInactivityThreshold](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6aa9195e8d0559a106be323108487579eb068b91
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084805"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Intune’da kişisel verileri denetleme, dışarı aktarma veya silme
@@ -54,7 +54,7 @@ Bir kullanıcının kişisel verilerini dışarı aktarmak için şunu kullanabi
 ## <a name="delete-end-user-personal-data"></a>Son kullanıcı kişisel verilerini silme
 
 Kişisel verileri Intune yönetiminden kaldırmanın üç yolu vardır:
-- Cihazı Azure Active Directory’den silmek
+- Azure Active Directory’den kullanıcıyı silme
 - Cihazı fabrika ayarlarına sıfırlamak
 - Kullanıcının kendisini kaldırması
 
@@ -68,7 +68,7 @@ Fabrika ayarlarına sıfırlama, tüm şirkete ait ve kişisel veri ve ayarlar y
 ### <a name="user-self-removal-from-intune-management"></a>Kullanıcının kendisini Intune yönetiminden kaldırması
 Kullanıcılar, yönetici yardımı olmadan kendi [Android, Apple veya Windows](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-android) cihazlarını Intune’dan kaldırabilir.   
 
-### <a name="retire"></a>Devre Dışı Bırak
+### <a name="retire"></a>Devre Dışı Bırakma
 **Kullanımdan kaldırma** eylemi; şirket uygulamaları, Intune'un yönettiği uygulamalara ilişkin veriler, ilke ayarları ve Intune yoluyla sağlanan e-posta profilleri gibi Intune tarafından sağlanan verileri kaldırır. Bu eylem, kullanıcının kişisel verilerini cihazda bırakır.
 
 ### <a name="delete-a-tenant-from-microsoft-intune"></a>Microsoft Intune’dan kiracı silme

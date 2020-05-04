@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04d9856242336c4a8c1fbd9bef0afb539054c904
-ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
+ms.openlocfilehash: b8872efe661f01d2cc286282c38953739711982b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81007768"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397705"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Android Kurumsal ayrılmış cihazları için Intune kaydını ayarlama
 
@@ -31,7 +31,7 @@ ms.locfileid: "81007768"
 
 Android Kurumsal ayrılmış cihazlar çözüm kümesiyle şirkete ait, tek kullanımlık, bilgi noktası türündeki cihazları destekler. Bu tür cihazlar tek bir amaca hizmet eder; örneğin dijital işaretler, bilet yazdırma veya envanter yönetimi gibi. Yöneticiler bir cihazın kullanımını sınırlı sayıda uygulama ve web bağlantısına indirger. Ayrıca kullanıcılar başka uygulama ekleyemez veya farklı eylemler gerçekleştiremez.
 
-Intune, Android Kurumsal ayrılmış cihazlarına uygulama ve ayar dağıtmanıza yardımcı olur. Android Kurumsal hakkında belirli ayrıntıları öğrenmek için bkz. [Android Kurumsal gereksinimleri](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
+Intune, Android Kurumsal ayrılmış cihazlarına uygulama ve ayar dağıtmanıza yardımcı olur. Android Enterprise hakkında ayrıntılı bilgi için bkz. [Android Enterprise Requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
 Bu şekilde yönettiğiniz cihazlar, bir kullanıcı hesabı olmadan Intune’a kaydolur ve hiçbir son kullanıcı ile ilişkili değildir. Bu cihazlar, kullanıcıya özgü hesap verileri konusunda katı gereksinimleri olan Outlook veya Gmail gibi kişisel kullanım uygulamalarına uygun değildir.
 
@@ -48,30 +48,30 @@ Android Kurumsal ayrılmış cihaz yönetimini ayarlamak için aşağıdaki adı
 
 1. Mobil cihazların yönetimine hazırlık olarak, yönergeler için [**Microsoft Intune**’a mobil cihaz yönetimi (MDM) yetkilisi ayarlamanız](../fundamentals/mdm-authority-set.md) gerekir. Bu öğeyi yalnızca mobil cihaz yönetimi için Intune’u ilk defa kurduğunuzda ayarlarsınız.
 2. [Intune kiracı hesabınızı Yönetilen Google Play hesabınıza bağlayın](connect-intune-android-enterprise.md).
-3. [Bir kayıt profili oluşturun.](#create-an-enrollment-profile)
+3. [Kayıt profili oluşturun.](#create-an-enrollment-profile)
 4. [Bir cihaz grubu oluşturun](#create-a-device-group).
-5. [Ayrılmış cihazları kaydedin](#enroll-the-dedicated-devices).
+5. [Adanmış cihazları kaydedin](#enroll-the-dedicated-devices).
 
 ### <a name="create-an-enrollment-profile"></a>Kayıt profili oluşturma
 
 > [!NOTE]
-> Belirtecin süresi dolmuşsa, onunla ilişkili profil, **şirkete ait adanmış cihazlarda** > **Android kaydı** > **cihaz kaydı** 'nda gösterilmez. Hem etkin hem de etkin olmayan belirteçlerle ilişkili tüm profilleri görmek için **filtre** ' ye tıklayın ve hem "etkin" hem de "etkin olmayan" ilke durumlarının onay kutularını işaretleyin. 
+> Belirtecin süresi dolmuşsa, onunla ilişkili profil, **cihaz kaydı** > **Android kaydı** > **şirkete ait adanmış cihazlarda**gösterilmez. Hem etkin hem de etkin olmayan belirteçlerle ilişkili tüm profilleri görmek için **filtre** ' ye tıklayın ve hem "etkin" hem de "etkin olmayan" ilke durumlarının onay kutularını işaretleyin. 
 
 Ayrılmış cihazlarınızı kaydedebilmek için bir kayıt profili oluşturmalısınız. Profil oluşturulduktan sonra size bir kayıt belirteci (rastgele dize) ve QR kodu sağlar. Cihazın Android işletim sistemi ve cihazın sürümüne bağlı olarak [ayrılmış cihazı kaydetmek](#enroll-the-dedicated-devices) için belirteci veya QR kodunu kullanabilirsiniz.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve **cihazlar** > **Android** > Android **kaydı** > **şirkete ait adanmış cihazlar**' ı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve **cihazlar** > **Android** > **Android kayıt** > **şirkete ait adanmış cihazlar**' ı seçin.
 2. **Oluştur**’u seçin ve gerekli alanları doldurun.
     - **Ad**: Profili dinamik cihaz grubuna atarken kullanacağınız bir ad yazın.
     - **Belirteç sona erme tarihi**: Belirteç süresinin dolduğu tarih. Google, en fazla 90 günü kabul eder.
 3. **Oluştur**’u seçerek profili kaydedin.
 
-### <a name="create-a-device-group"></a>Bir cihaz grubu oluşturma
+### <a name="create-a-device-group"></a>Cihaz grubu oluşturma
 
 Uygulama ve ilkeleri, atanmış veya dinamik cihaz gruplarına hedefleyebilirsiniz. Dinamik AAD cihaz gruplarını, belirli bir kayıt profili ile kaydedilmiş cihazları otomatik olarak dolduracak şekilde yapılandırmak için şu adımları izleyin:
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve **gruplar** > **tüm gruplar** > **Yeni Grup**' a tıklayın.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve **gruplar** > **tüm gruplar** > **Yeni Grup**' ı seçin.
 2. **Grup** dikey penceresinde gerekli alanları aşağıdaki gibi doldurun:
-    - **Grup türü**: Güvenlik
+    - **Grup türü**: güvenlik
     - **Grup adı**: Kullanımı kolay bir ad yazın (Fabrika 1 cihazlar gibi)
     - **Üyelik türü**: Dinamik cihaz
 3. **Dinamik sorgu ekle**’yi seçin.
@@ -81,7 +81,7 @@ Uygulama ve ilkeleri, atanmış veya dinamik cihaz gruplarına hedefleyebilirsin
     - Ortadaki kutuda **eşittir**' i seçin.
     - Son alana ise daha önce oluşturduğunuz kayıt profili adını girin.
     Dinamik üyelik kuralları hakkında daha fazla bilgi için bkz: [AAD grupları için dinamik üyelik kuralları](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
-5. **Sorgu ekle** > **Oluştur**’u seçin.
+5. **Add sorgu** > **Oluştur**' a tıklayın.
 
 ### <a name="replace-or-remove-tokens"></a>Belirteçleri kaldırma veya değiştirme
 
@@ -92,7 +92,7 @@ Uygulama ve ilkeleri, atanmış veya dinamik cihaz gruplarına hedefleyebilirsin
 
 Bir belirteci/QR kodunu değiştirmek veya iptal etmek, önceden kaydedilmiş cihazları etkilemez.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve **cihazlar** > **Android** > **Android kayıt** > **ortak adanmış cihazlar**' ı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve **cihazlar** > **Android** > **Android kayıt** > **şirkete ait adanmış cihazlar**' ı seçin.
 2. Çalışmak istediğiniz profili seçin.
 3. **Belirteç**’i seçin.
 4. Belirteci değiştirmek için **Belirteci değiştir**’i seçin.

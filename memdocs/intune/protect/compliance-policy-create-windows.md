@@ -17,15 +17,15 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed0194f0ace1ed1e962a8b993a4e93f7ef487bdc
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084921"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Cihazları Intune ile uyumlu veya uyumsuz olarak işaretlemek için Windows 10 ve üzeri ayarları
 
-Bu makalede, Intune 'da Windows 10 ve üzeri cihazlarda yapılandırabileceğiniz farklı uyumluluk ayarları listelenir ve açıklanmaktadır. Mobil cihaz yönetimi (MDM) çözümünüzün bir parçası olarak, bu ayarları, BitLocker''ı gerektirmek, minimum ve maksimum işletim sistemi ayarlamak, Microsoft Defender Gelişmiş Tehdit Koruması (ATP) kullanarak bir risk düzeyi ayarlamak ve daha fazlası için kullanın.
+Bu makalede, Intune 'da Windows 10 ve üzeri cihazlarda yapılandırabileceğiniz farklı uyumluluk ayarları listelenir ve açıklanmaktadır. Mobil cihaz yönetimi (MDM) çözümünüzün bir parçası olarak BitLocker 'ı gerektirmek, en düşük ve en yüksek işletim sistemi ayarlamak, Microsoft Defender Gelişmiş tehdit koruması (ATP) kullanarak bir risk düzeyi ayarlamak ve daha fazlasını yapmak için bu ayarları kullanın.
 
 Bu özellik şu platformlarda geçerlidir:
 
@@ -37,14 +37,14 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Uyumluluk ilkesi oluşturma](create-compliance-policy.md#create-the-policy). **Platform** olarak **Windows 10 ve üzeri**'ni seçin.
+[Bir uyumluluk Ilkesi oluşturun](create-compliance-policy.md#create-the-policy). **Platform** olarak **Windows 10 ve üzeri**'ni seçin.
 
-## <a name="device-health"></a>Cihaz Durumu
+## <a name="device-health"></a>Cihaz Sistem Durumu
 
 ### <a name="windows-health-attestation-service-evaluation-rules"></a>Windows sistem durumu kanıtlama hizmeti değerlendirme kuralları
 
 - **BitLocker gerektir**:  
-   Windows BitLocker Sürücü Şifrelemesi, Windows işletim sistemi birimine depolanan tüm verileri şifreler. BitLocker, Windows işletim sistemini ve Kullanıcı verilerini korumaya yardımcı olmak için Güvenilir Platform Modülü (TPM) kullanır. Ayrıca, sol tarafta bırakılmış, kayıp veya çalınmış olsa bile bir bilgisayarın üzerinde oynanmadığını doğrulamanıza yardımcı olur. Bilgisayar TPM ile donatılmışsa, BitLocker TPM’yi verileri koruyan şifreleme anahtarlarını kilitlemek için kullanır. Sonuç olarak, TPM bilgisayarın durumunu doğrulana kadar anahtarlara erişilemez.  
+   Windows BitLocker Sürücü Şifrelemesi, Windows işletim sistemi biriminde depolanan tüm verileri şifreler. BitLocker, Windows işletim sistemini ve Kullanıcı verilerini korumaya yardımcı olmak için Güvenilir Platform Modülü (TPM) kullanır. Ayrıca, sol tarafta bırakılmış, kayıp veya çalınmış olsa bile bir bilgisayarın üzerinde oynanmadığını doğrulamanıza yardımcı olur. Bilgisayar TPM ile donatılmışsa, BitLocker TPM’yi verileri koruyan şifreleme anahtarlarını kilitlemek için kullanır. Sonuç olarak, TPM bilgisayarın durumunu doğrulana kadar anahtarlara erişilemez.  
 
    - **Yapılandırılmadı** (*varsayılan*)-Bu ayar uyumluluk veya uyumsuzluk için değerlendirilmez.
    - **Gerektir** -cihaz, sistem kapalı veya hazırda bekleme durumunda sürücüde depolanan verileri yetkisiz erişimden koruyabilir.  
@@ -145,13 +145,13 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
 - **Parola istenmeden önce geçmesi gereken, işlem yapılmayan dakika sayısı**:  
   Kullanıcı parolasını yeniden girmeden önce boşta geçen süreyi girin.
 
-- **Parola zaman aşımı (gün sayısı)** :  
+- **Parola kullanım süresi (gün)**:  
   Parolanın süresi dolmadan önce geçecek gün sayısını girin ve 1-730 adresinden yeni bir tane oluşturmanız gerekir.
 
 - **Yeniden kullanılması önlenecek önceki parola sayısı**:  
   Daha önce kullanılan kaç parolanın kullanılamayacağını belirtir.
 
-- **Cihaz boşta durumundan çıktığında parola iste (Mobile ve holographic)** :  
+- **Cihaz boşta durumundan çıktığında parola iste (Mobile ve holographic)**:  
   - **Yapılandırılmadı** (*varsayılan*)
   - **Gerektir** -cihaz boşta durumundan çıkarken cihaz kullanıcılarının parolayı girmesini gerektir.
 
@@ -179,7 +179,7 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
   > [!NOTE]
   > Yeniden başlatmanın ardından cihaz hemen eşitleniyorsa veya uykudan uyandırmaya hemen eşitlendikten sonra, bu ayar bir **hata**olarak rapor verebilir. Bu senaryo genel cihaz uyumluluk durumunu etkilemeyebilir. Uyumluluk durumunu yeniden değerlendirmek için cihazı el ile [eşitleyin](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows).
 
-- **Güvenilir Platform Modülü (TPM)** :  
+- **Güvenilir Platform Modülü (TPM)**:  
   - **Yapılandırılmadı** (*varsayılan*)-ıNTUNE, cihazı bir TPM yonga sürümü için denetlemez.
   - **Gerektir** -Intune, uyumluluk için TPM yonga sürümünü denetler. TPM yonga sürümü **0** ' dan büyükse cihaz uyumludur (sıfır). Cihazda TPM sürümü yoksa cihaz uyumlu değildir.  
 
@@ -187,11 +187,11 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
   
 - **Virüsten koruma**:  
   - **Yapılandırılmadı** (*varsayılan*)-Intune, cihazda yüklü olan herhangi bir virüsten koruma çözümünü denetlemez. 
-  - Symantec ve Microsoft Defender gibi [Windows Güvenlik Merkezi](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)'ne kayıtlı virüsten koruma çözümlerini kullanarak uyumluluğu kontrol edin.
+  - **Require** Symantec ve Microsoft Defender gibi [Windows Güvenlik Merkezi](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)'ne kayıtlı virüsten koruma çözümlerini kullanarak uyumluluğu kontrol edin.
 
 - **Casus yazılımdan koruma**:  
   - **Yapılandırılmadı** (*varsayılan*)-Intune, cihazda yüklü olan herhangi bir casus yazılımdan koruma çözümünü denetlemez.
-  - Symantec ve Microsoft Defender gibi [Windows Güvenlik Merkezi](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)'ne kayıtlı casus yazılımdan koruma çözümlerini kullanarak uyumluluğu kontrol edin.  
+  - **Require** Symantec ve Microsoft Defender gibi [Windows Güvenlik Merkezi](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)'ne kayıtlı casus yazılımdan koruma çözümlerini kullanarak uyumluluğu kontrol edin.  
 
 ### <a name="defender"></a>Defender
 
@@ -202,7 +202,7 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
   - **Gerektir** -Microsoft Defender kötü amaçlı yazılımdan koruma hizmetini etkinleştirin ve kullanıcıların bunu kapatmasını engelleyin.
 
 - **Microsoft Defender kötü amaçlı yazılımdan koruma en düşük sürümü**:  
-  Microsoft Defender kötü amaçlı yazılımdan koruma hizmeti 'nin izin verilen en düşük sürümünü girin. Örneğin, şunu girin: `4.11.0.0`. Boş bırakılırsa, Microsoft Defender kötü amaçlı yazılımdan koruma hizmeti 'nin herhangi bir sürümü kullanılabilir.  
+  Microsoft Defender kötü amaçlı yazılımdan koruma hizmeti 'nin izin verilen en düşük sürümünü girin. Örneğin, `4.11.0.0` girin. Boş bırakılırsa, Microsoft Defender kötü amaçlı yazılımdan koruma hizmeti 'nin herhangi bir sürümü kullanılabilir.  
 
   *Varsayılan olarak, sürüm yapılandırılmaz*.
 
@@ -240,7 +240,7 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
 
 Windows Holographic for Business, **Windows 10 ve sonrası** platformları kullanır. Windows Holographic for Business, aşağıdaki ayarı destekler:
 
-- **Sistem Güvenliği** > **Şifreleme** > **Cihazda veri deposu şifrelemesi**.
+- **System Security** > **Encryption** > **Cihazdaki veri depolamanın**sistem güvenlik şifrelemesi şifrelemesi.
 
 Microsoft HoloLens’te cihaz şifrelemesini doğrulamak için bkz. [Cihaz şifrelemesini doğrulama](https://docs.microsoft.com/hololens/hololens-encryption#verify-device-encryption).
 

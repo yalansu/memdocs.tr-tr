@@ -14,10 +14,10 @@ ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4de042fdc443a43e8a34a2eb433ecad34152887a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328906"
 ---
 # <a name="add-iosipados-software-update-policies-in-intune"></a>Intune 'da iOS/ıpados yazılım güncelleştirme ilkeleri ekleme
@@ -37,7 +37,7 @@ Varsayılan olarak, cihazlar, her 8 saatte bir Intune ile oturum iade ediyor. G�
 ## <a name="configure-the-policy"></a>İlkeyi yapılandırma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** seçin > **IOS/ıpados** > **Profil oluştur**' a tıklayın.
+2. **İOS/ıpados** > **Create profile**için **cihaz** > güncelleştirme ilkeleri ' ni seçin.
 3. **Temel bilgiler** sekmesinde, bu ilke için bir ad belirtin, bir açıklama (isteğe bağlı) belirtin ve ardından **İleri**' yi seçin.
 
    ![Temel bilgiler sekmesi](./media/software-updates-ios/basics-tab.png)
@@ -60,7 +60,7 @@ Varsayılan olarak, cihazlar, her 8 saatte bir Intune ile oturum iade ediyor. G�
       ![Zamanlanan süre içinde güncelleştirme seçme örneği](./media/software-updates-ios/scheduled-time.png)
 
       - **Saat dilimi**: bir saat dilimi seçin.
-      - **Zaman penceresi**: güncelleştirmelerin ne zaman yükleneceğini kısıtlayan bir veya daha fazla zaman bloğunu tanımlayın. Aşağıdaki seçeneklerin etkisi, seçtiğiniz zamanlama türüne bağlıdır. Başlangıç günü ve bitiş günü kullanarak, fazla gece blokları desteklenir. Şu seçenekler mevcuttur:
+      - **Zaman penceresi**: güncelleştirmelerin ne zaman yükleneceğini kısıtlayan bir veya daha fazla zaman bloğunu tanımlayın. Aşağıdaki seçeneklerin etkisi, seçtiğiniz zamanlama türüne bağlıdır. Başlangıç günü ve bitiş günü kullanarak, fazla gece blokları desteklenir. Seçeneklere şunlar dahildir:
 
         - **Başlangıç günü**: zamanlama penceresinin başladığı günü seçin.
         - **Başlangıç zamanı**: zamanlama penceresinin başladığı saat gününü seçin. Örneğin, 5 saat ' i seçerseniz ve *zamanlanan süre içinde*bir zamanlama türünde güncelleştirme varsa, güncelleştirmelerin yüklenmeye başlayaabileceği zaman 5 ' i olur. *Zamanlanan bir süre dışında güncelleştirme*zamanlama türünü seçerseniz, güncelleştirmelerin yüklenemeyecek bir süre başlangıcı 5 ÖÖ olur.
@@ -95,13 +95,13 @@ Intune destek ekibinin Kılavuzu için bkz. [denetimli cihazlar Için Intune 'da
 
 Varolan bir ilkeyi, sınırlı zamanları değiştirme dahil olmak üzere düzenleyebilirsiniz:
 
-1. **İOS Için güncelleştirme ilkelerini** > **cihazlar** ' ı seçin. Düzenlemek istediğiniz ilkeyi seçin.
+1. İOS için **cihaz** > **güncelleştirme ilkelerini**seçin. Düzenlemek istediğiniz ilkeyi seçin.
 
 2. İlke **özelliklerini**görüntülerken, değiştirmek istediğiniz ilke sayfası için **Düzenle** ' yi seçin.
 
    ![Bir ilkeyi düzenleme](./media/software-updates-ios/edit-policy.png)
 
-3. Bir değişikliği gönderdikten sonra, düzenlemelerinizi kaydetmek için **gözden geçir + kaydet** > **Kaydet** ' i seçin ve ilkeler *özelliklerine*geri dönün.
+3. Bir değişikliği gönderdikten sonra, **gözden geçir +** > **Kaydet** ' i seçerek düzenlemelerinizi kaydedin ve ilkeler *özelliklerine*geri dönün.
 
 > [!NOTE]
 > **Başlangıç saati** ve **bitiş saatinin** her ikisi de 12. olarak ayarlandıysa, Intune güncelleştirmelerin ne zaman yükleneceğine ilişkin kısıtlamaları denetlemez. Bu, **güncelleştirme yüklemelerinin yoksayılmasını** ve güncelleştirmelerin herhangi bir zamanda yüklenebilmesini sağlamak için, seçtiğiniz her yapılandırmalardan daha fazla yol gösterir.
@@ -109,7 +109,7 @@ Varolan bir ilkeyi, sınırlı zamanları değiştirme dahil olmak üzere düzen
 ## <a name="monitor-device-installation-failures"></a>Cihaz yükleme hatalarını izleme
 
 <!-- 1352223 -->
-İOS cihazları için **yazılım güncelleştirmeleri** > **yükleme hatalarıyla ilgili** güncelleştirme Ilkesi tarafından hedeflenen Denetlenen iOS/ıpados cihazlarının bir listesini gösterir, güncelleştirme denenir ve güncelleştirilemez. Her cihazda, cihazın otomatik olarak güncelleştirilememesinin nedenini açıklayan bir durum görebilirsiniz. İyi durumda, güncel cihazlar bu listede gösterilmez. “Güncel” cihazlar, cihazın desteklediği en yeni güncelleştirmeyi içerir.
+**Software updates** > **İOS cihazları için yazılım güncelleştirmeleri yükleme hatalarıyla** , bir güncelleştirme ilkesi tarafından hedeflenen ve güncelleştirme yapılmaya çalışılan ve güncelleştirilemeyen, denetimli iOS/ıpados cihazlarının bir listesi gösterilir. Her cihazda, cihazın otomatik olarak güncelleştirilememesinin nedenini açıklayan bir durum görebilirsiniz. İyi durumda, güncel cihazlar bu listede gösterilmez. “Güncel” cihazlar, cihazın desteklediği en yeni güncelleştirmeyi içerir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

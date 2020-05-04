@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fd7483319443b7a960f8e704442d2b43b6b00c66
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326921"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Windows cihazları için kaydı ayarlama
@@ -35,7 +35,7 @@ Bir Intune yöneticisi olarak, kayıt sürecini aşağıdaki yollarla basitleşt
 
 - [Otomatik kaydı etkinleştirme](#enable-windows-10-automatic-enrollment) (Azure AD Premium gereklidir)
 - [CNAME kaydı](#simplify-windows-enrollment-without-azure-ad-premium)
-- [Toplu kaydı etkinleştirme](windows-bulk-enroll.md) (Azure AD Premium ve Windows Yapılandırma Tasarımcısı gereklidir)
+- [Toplu kaydı etkinleştirme](windows-bulk-enroll.md) (Azure AD Premium ve Windows yapılandırma Tasarımcısı gereklidir)
 
 Windows cihaz kaydını nasıl basit hale getirebileceğinizi iki faktör belirler:
 
@@ -91,7 +91,7 @@ Contoso DNS yöneticisinin aşağıdaki CNAME'leri oluşturması gerekir:
 |CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 saat|
 |CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 saat|
 
-`EnterpriseEnrollment-s.manage.microsoft.com` – e-postanın etki alanı adından etki alanı tanıma ile Intune hizmetine yeniden yönlendirmeyi destekler
+`EnterpriseEnrollment-s.manage.microsoft.com`– E-postanın etki alanı adından etki alanı tanıma ile Intune hizmetine yeniden yönlendirmeyi destekler
 
 DNS kaydındaki değişikliklerin yaygınlaştırılması 72 saat kadar sürebilir. DNS kaydı yayılıncaya kadar DNS değişikliğini Intune'da doğrulayamazsınız.
 
@@ -102,7 +102,7 @@ EnterpriseEnrollment-s.manage.microsoft.com, kayıt için tercih edilen FQDN de�
 CNAME yapılandırması haricinde bir yöntem kullanılması desteklenmez. Örneğin enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc bağlantısının enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc veya manage.microsoft.com/EnrollmentServer/Discovery.svc is adresine yönlendirilmesi desteklenmez.
 
 **2. Adım: CNAME'i doğrulama** (isteğe bağlı)<br>
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **Windows > ** **windows kaydı** > **CNAME doğrulaması** > **cihazlar** ' ı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **Windows** > **Windows kaydı** > **CNAME doğrulaması**' nı seçin.
 2. **Etki Alanı** kutusuna şirket Web sitesini girin ve ardından **Test Et**'i seçin.
 
 ## <a name="tell-users-how-to-enroll-windows-devices"></a>Kullanıcılara Windows cihazlarını nasıl kaydedeceklerini anlatma
@@ -114,7 +114,7 @@ Kullanıcılara Windows cihazlarını nasıl kaydedeceklerini ve cihazları yön
 Son kullanıcı kayıt talimatları için bkz. [Windows cihazınızı Intune'a kaydetme](../user-help/windows-enrollment-company-portal.md). Ayrıca kullanıcılara [BT yöneticim cihazımda neleri görebilir?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) sayfasındaki bilgilere göz atmalarını da söyleyebilirsiniz.
 
 >[!IMPORTANT]
-> Otomatik MDM kaydını etkinleştirmediyseniz ancak Azure AD’ye katılmış Windows 10 cihazlarınız varsa, kayıt sonrasında Intune konsolunda iki kayıt görünecektir. Azure AD’ye katılmış cihazların, aynı hesabı kullanarak **Hesaplar** > **İş veya okula erişim** ve **Bağlan**’a gitmesini sağlayarak bunu önleyebilirsiniz. 
+> Otomatik MDM kaydını etkinleştirmediyseniz ancak Azure AD’ye katılmış Windows 10 cihazlarınız varsa, kayıt sonrasında Intune konsolunda iki kayıt görünecektir. Bu, Azure AD 'ye katılmış cihazların **hesaplara** > **erişim iş veya okul** hesabına gitmesini ve aynı hesabı kullanarak **bağlanmasını** sağlayarak bunu durdurabilirsiniz. 
 
 Son kullanıcı görevleri hakkında daha fazla bilgi için bkz. [Microsoft Intune’da son kullanıcı deneyimi hakkında kaynaklar](../fundamentals/end-user-educate.md).
 
@@ -123,7 +123,7 @@ Azure Active Directory, iOS/ıpados, Android ve Windows cihazları için cihaz k
 
 | Tür | Konak adı | Şunu gösterir: | TTL |
 | --- | --- | --- | --- |
-| ADA | EnterpriseRegistration. company_domain. com | EnterpriseRegistration.windows.net | 1 saat|
+| NAME | EnterpriseRegistration. company_domain. com | EnterpriseRegistration.windows.net | 1 saat|
 
 Cihaz kaydı hakkında daha fazla bilgi için bkz [. Azure Portal kullanarak cihaz kimliklerini yönetme](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
 

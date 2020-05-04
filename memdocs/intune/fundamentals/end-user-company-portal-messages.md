@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 91c79ae7ca7fc70c361fba0a7ad6becf8d035b5a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332614"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Son kullanıcıların Şirket Portalı uygulama iletilerini anlamasına yardımcı olma
@@ -48,9 +48,9 @@ Son kullanıcıların Şirket Portalı'nda görebileceği farklı uygulama ileti
 Bu istemi kabul ederek, kullanıcılar, cihazlarının telefon ve IMEI numaralarının Intune hizmetine gönderilmesine izin vermiş olur. Bunlar, yönetim konsolundaki __Donanım__ sayfasında görünür.
 
 > [!NOTE]
-> **Şirket Portalı uygulaması hiçbir zaman telefon çağrıları yapmaz veya çağrıları yönetmez!** İleti metni Google tarafından denetlenir ve değiştirilemez.
+> **Şirket Portalı uygulaması hiçbir şekilde telefon araması yapmaz ve yönetmez!** İleti metni Google tarafından denetlenir ve değiştirilemez.
 
-**Donanım** sayfasını görmek için, **Gruplar** > **Tüm mobil cihazlar** > **Cihazlar**’a gitmeniz gerekir. Kullanıcının cihazını seçin ve **Özellikleri Görüntüle** > **Donanım**’a gidin.
+**Donanım** sayfasını görmek için, **Gruplar** > **Tüm mobil cihazlar** > **Cihazlar**’a gitmeniz gerekir. Kullanıcının cihazını seçin ve **özellikleri** > görüntüle**donanım**' a gidin.
 
 ### <a name="what-happens-if-users-deny-access"></a>Kullanıcılar erişimi reddederse ne olur
 
@@ -58,7 +58,7 @@ Kullanıcıların erişimi reddederse, Şirket Portalı uygulamasını kullanmay
 
 Kullanıcılar erişime izin verip daha sonra erişimi reddederse kullanıcıların kayıt işleminin ardından Şirket Portalı uygulamasında bir sonraki oturum açışlarında ileti görüntülenir.
 
-Kullanıcılar daha sonra erişime izin vermeye karar verirse, **Ayarlar** > **Uygulamalar** > **Şirket Portalı** > **İzinler** > **Telefon**’a gidebilir ve ardından izni etkinleştirebilirler.
+Kullanıcılar daha sonra erişime izin vermeye karar verirse, **Ayarlar** > **uygulamalar** > **Şirket portalı** > **izin** > **telefonu**' na gidebilir ve açabilir.
 
 ### <a name="how-to-explain-this-to-your-users"></a>Bunu kullanıcılarınıza açıklama
 
@@ -83,7 +83,7 @@ Kullanıcılar erişime izin vermezse, cihazları Intune’a kaydedilmez ve yön
 
 Kullanıcılar erişime izin verip daha sonra erişimi reddederse ileti, kullanıcılar kayıt işleminin ardından Şirket Portalı uygulamasında bir sonraki sefer oturum açtığında görüntülenir.
 
-Kullanıcılar daha sonra erişime izin vermeye karar verirse, **Ayarlar** > **Uygulamalar** > **Şirket Portalı** > **İzinler** > **Telefon**’a gidebilir ve ardından izni etkinleştirebilirler.
+Kullanıcılar daha sonra erişime izin vermeye karar verirse, **Ayarlar** > **uygulamalar** > **Şirket portalı** > **izin** > **telefonu**' na gidebilir ve açabilir.
 
 ### <a name="how-to-explain-this-to-your-users"></a>Bunu kullanıcılarınıza açıklama
 
@@ -106,7 +106,7 @@ Bu istem kabul edildiğinde kullanıcılar, veri günlüklerinin cihazın SD kar
 
 Kullanıcılar erişimi reddederse, veri günlüklerini e-posta ile yine gönderebilirler, ancak günlükler cihazın SD kartına kopyalanmaz.
 
-Kullanıcılar, erişimi reddettikten sonra Şirket Portalı uygulamasında ikinci kez oturum açtığında, kullanıcıların iletinin bir daha görüntülenmemesini seçebilmesi için **Bir daha sorma** onay kutusu görüntülenir. Kullanıcılar erişime izin verip daha sonra erişimi reddederse ileti, kullanıcılar günlükleri tekrar göndermeye çalıştığında görüntülenir. Ancak kullanıcılar daha sonra erişime izin vermeye karar verirse **Ayarlar** > **Uygulamalar** > **Şirket Portalı** > **İzinler** > **Depolama**’ya gidip izni etkinleştirebilir.
+Kullanıcılar, erişimi reddettikten sonra Şirket Portalı uygulamasında ikinci kez oturum açtığında, kullanıcıların iletinin bir daha görüntülenmemesini seçebilmesi için **Bir daha sorma** onay kutusu görüntülenir. Kullanıcılar erişime izin verip daha sonra erişimi reddederse ileti, kullanıcılar günlükleri tekrar göndermeye çalıştığında görüntülenir. Ancak, kullanıcılar daha sonra erişime izin vermeye karar verirse, **Ayarlar** > **uygulamalar** > **Şirket portalı** > **izinleri** > **depolama alanına**gidebilir ve ardından izni açabilir.
 
 
 ### <a name="how-to-explain-this-to-your-users"></a>Bunu kullanıcılarınıza açıklama
@@ -142,11 +142,11 @@ Bu tür uygulamaları Şirket Portalı'ndan yükleyip çalıştırmak için indi
 
 1. Yüklediğiniz şirket uygulamasını (iş kolu uygulaması) çalıştırdığınızda "Güvenilmeyen Kurumsal Geliştirici" iletisiyle karşılaşırsınız. <br>
    **İptal**'e basın.
-2. **Ayarlar** > **Genel** > **Cihaz Yönetimi** yolunu izleyin.
+2. **Ayarlar** > **General**genel > **cihaz yönetimi**' ne gidin.
 
    ![iOS cihazı kullanıcı arabirimi - Cihaz Yönetimi](./media/end-user-company-portal-messages/end-user-company-portal-messages-02.png)
 
-3. **Yönetim Profili** > **Kurumsal uygulama**'yı seçin.
+3. **Yönetim profili** > **Kurumsal uygulaması**' nı seçin.
 4. Geliştirici adını seçin.
 5. **_Geliştirici adına_ güven**'e basın.
 6. Uygulama yüklenirken açılan iletide **Güven**'i seçerek uygulamayı onaylayın.

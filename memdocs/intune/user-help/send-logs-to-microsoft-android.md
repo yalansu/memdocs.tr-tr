@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 533c0117b73883776e3dbdd4628fda7630a3a15a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327902"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-android-devices"></a>Günlükleri, Android cihazları için Şirket Portalı geliştiricilerine gönderme
@@ -37,7 +37,7 @@ Günlükleri Microsoft’a göndermek için:
 
 1. Şirket Portalı uygulamasını açın.
 
-2. **Menü** > **Yardım** > **Desteğe E-posta Gönder**’e dokunun.
+2. **Menü** > **Help**Yardım > **e-posta desteği**' ne dokunun.
 
     > [!NOTE]
     > **Menü**, Android cihazınızın türüne bağlı olarak bir yazılım düğmesi veya donanım düğmesi olabilir.
@@ -46,6 +46,6 @@ Günlükleri Microsoft’a göndermek için:
 
 4. Karşıya yükleme tamamlandıktan sonra bir olay kimliği alırsınız. Kayıtlarınız için bu kimliği saklayın.
 
-Android için Şirket Portalı ekibiyle doğrudan iletişime geçmek için <a href="mailto:wintunedroidfbk@microsoft.com?subject=Send logs to Microsoft&body=Describe the issue you are having.">wintunedroidfbk@microsoft.com</a> adresine e-posta gönderin. 
+Android için Şirket Portalı ekibine doğrudan iletişim kurmak için e- <a href="mailto:wintunedroidfbk@microsoft.com?subject=Send logs to Microsoft&body=Describe the issue you are having.">wintunedroidfbk@microsoft.com</a>posta. 
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

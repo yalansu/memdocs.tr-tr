@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 831bc368553f4806c6bc734ac5697d2b81de38fe
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323726"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Uygulama koruma ilkelerini izleme
@@ -43,7 +43,7 @@ Uygulama koruma verileri için bekletme süresi 90 gündür. Son 90 gün içinde
 ## <a name="summary-view"></a>Özet görünümü
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-3. **Uygulama koruma durumunu** > **izleyici** > **uygulamalar** ' ı seçin.
+3. **Uygulama koruma durumunu****izlemek** > için **uygulamalar** > ' ı seçin.
 
    ![Intune mobil uygulama yönetimi bölmesindeki Özet kutucuğunun ekran görüntüsü](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
 
@@ -76,7 +76,7 @@ Ayrıntılı görünümde; hata iletisi, hata oluştuğunda erişilmiş olan uyg
 
 ## <a name="reporting-view"></a>Raporlama görünümü
 
-Aynı raporları **Uygulama koruma durumu** bölmesinin üst kısmında bulabilirsiniz. Bu raporları görüntülemek için **uygulamalar** > **uygulama koruma durumu** > **raporlar**' ı seçin. **Raporlar** bölmesi, aşağıdakiler de dahil olmak üzere Kullanıcı ve uygulamayı temel alan çeşitli raporlar sağlar:
+Aynı raporları **Uygulama koruma durumu** bölmesinin üst kısmında bulabilirsiniz. Bu raporları görüntülemek için **uygulamalar** > **Uygulama koruma durum** > **raporları**' nı seçin. **Raporlar** bölmesi, aşağıdakiler de dahil olmak üzere Kullanıcı ve uygulamayı temel alan çeşitli raporlar sağlar:
 
 ### <a name="user-report"></a>Kullanıcı raporu
 
@@ -173,7 +173,7 @@ App Protection. csv dosyası veya uygulama yapılandırması. csv dosyası oluş
     ![Raporu kaydet onay kutusunun ekran görüntüsü](./media/app-protection-policies-monitor/app-protection-report-csv-1.png)
    
 > [!NOTE]
-> Intune, uygulama kayıt KIMLIĞI, Android üreticisi, model ve güvenlik düzeltme eki sürümü ve iOS/ıpados modelinin yanı sıra ek cihaz raporlama alanları sağlar. Intune 'da, **uygulamalar** > uygulama **koruma durumu** > uygulama koruma **raporu: IOS/ıpados, Android '** i seçerek bu alanlara erişirsiniz. Ayrıca, bu parametreler cihaz üreticisi için **Izin verilenler** listesini (Android), cihaz modeli Için **izin verilenler** listesini (Android ve iOS/ıpados) ve **En düşük Android güvenlik düzeltme eki sürümü** ayarını yapılandırmanıza yardımcı olur.   
+> Intune, uygulama kayıt KIMLIĞI, Android üreticisi, model ve güvenlik düzeltme eki sürümü ve iOS/ıpados modelinin yanı sıra ek cihaz raporlama alanları sağlar. Intune 'da, **uygulamalar** > **Uygulama koruma durumu** > **Uygulama koruma raporu: iOS/ıpados, Android '** i seçerek bu alanlara erişirsiniz. Ayrıca, bu parametreler cihaz üreticisi için **Izin verilenler** listesini (Android), cihaz modeli Için **izin verilenler** listesini (Android ve iOS/ıpados) ve **En düşük Android güvenlik düzeltme eki sürümü** ayarını yapılandırmanıza yardımcı olur.   
  
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İOS/ıpados uygulamaları arasında veri aktarımını yönetme](data-transfer-between-apps-manage-ios.md)

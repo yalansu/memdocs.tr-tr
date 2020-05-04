@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 796e95b09193228fdc4612a370658e532fbbd2c6
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324365"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>S modundaki cihazlarda Win32 uygulamalarını etkinleştirme
@@ -49,7 +49,7 @@ Win32 uygulamalarının bir Windows 10 cihazında S modunda çalışmasına izin
    - Intune, [Intune yönetim uzantısını](intune-management-extension.md)kullanarak S modu cihazında Win32 uygulamasını yüklemek için imzalı uygulama kataloğunu uygular.
 
 > [!NOTE]
-> Windows 10 S modundaki iş kolu (LOB) `.appx` ve `.appx` demeti Microsoft Store Iş için (MSFB) imzalama aracılığıyla desteklenecektir.
+> İş kolu (LOB) `.appx` ve `.appx` Windows 10 S modundaki paketleri Microsoft Store for Business (msfb) imzalama yoluyla desteklenecektir.
 >
 > Uygulamalar için **S modu ek ilkesinin** , Intune yönetim uzantısı aracılığıyla teslim edilmesi gerekir.
 >
@@ -58,8 +58,8 @@ Win32 uygulamalarının bir Windows 10 cihazında S modunda çalışmasına izin
 Bir Windows 10 S modu ek ilkesi oluşturmak için aşağıdaki adımları kullanın:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Ilke oluştur** > **uygulamalar** > **S mod ek ilkeleri** ' ni seçin.
-3. **İlke dosyasını**eklemeden önce, onu oluşturmanız ve imzalamanız gerekir. Daha fazla bilgi için bkz.:
+2. **Uygulamalar** > **S modu ek ilkeleri** > **ilke oluştur**' u seçin.
+3. **İlke dosyasını**eklemeden önce, onu oluşturmanız ve imzalamanız gerekir. Daha fazla bilgi için bkz.
     - [PowerShell araçlarını kullanarak bir WDAC ilkesi oluşturun ve bunu ikili biçime dönüştürün](https://go.microsoft.com/fwlink/?linkid=2095387)
     - [Device Guard Imzalama hizmeti 'ni kullanmayı imzala](https://go.microsoft.com/fwlink/?linkid=2095629) **(önerilir)**
 
@@ -68,7 +68,7 @@ Bir Windows 10 S modu ek ilkesi oluşturmak için aşağıdaki adımları kullan
     | Değer | Açıklama |
     |--------------|------------------------------------------------|
     | İlke dosyası | WDAC ilkesini içeren dosya. |
-    | Ad | Bu ilkenin adı. |
+    | Adı | Bu ilkenin adı. |
     | Açıklama | Seçim Bu ilkenin açıklaması. |
 
 5. Ileri ' ye tıklayın **: kapsam etiketleri**.<br>

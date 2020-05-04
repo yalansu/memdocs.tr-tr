@@ -1,6 +1,6 @@
 ---
 title: VPN ayarlarını Microsoft Intune-Azure 'da macOS cihazlarına yapılandırma | Microsoft Docs
-description: Bağlantı ayrıntıları, bölünmüş tünel, tanımlayıcı, anahtar ve değer çiftleri ile özel VPN ayarları, bir yapılandırma betiği, IP veya FQDN adresi ve TCP bağlantı noktası içeren bir sanal özel ağ (VPN) yapılandırma profili ekleyin veya oluşturun. MacOS çalıştıran cihazlarda Microsoft Intune.
+description: Bağlantı ayrıntıları, bölünmüş tünel, tanımlayıcı, anahtar ve değer çiftleri, proxy ayarları, yapılandırma betiği, IP veya FQDN adresi ve macOS çalıştıran cihazlarda Microsoft Intune TCP bağlantı noktası içeren bir sanal özel ağ (VPN) yapılandırma profili ekleyin veya oluşturun.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 10bea151002673b36600d4d9deaa36bb8fc3ff79
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086524"
 ---
 # <a name="add-vpn-settings-on-macos-devices-in-microsoft-intune"></a>Microsoft Intune 'de macOS cihazlarına VPN ayarları ekleme
@@ -62,7 +62,7 @@ Seçtiğiniz ayarlara bağlı olarak, aşağıdaki listede yer alan değerlerden
 
 ## <a name="proxy-settings"></a>Proxy ayarları
 
-- **Otomatik yapılandırma betiği**: Proxy sunucusunu yapılandırmak için bir dosya kullanın. Yapılandırma dosyasını içeren **Proxy sunucu URL'sini** girin. Örneğin, şunu girin: `http://proxy.contoso.com`.
+- **Otomatik yapılandırma betiği**: Proxy sunucusunu yapılandırmak için bir dosya kullanın. Yapılandırma dosyasını içeren **Proxy sunucu URL'sini** girin. Örneğin, `http://proxy.contoso.com` girin.
 - **Adres**: proxy sunucu adresini (bir IP adresi olarak) girin.
 - **Bağlantı noktası numarası**: Proxy sunucusuyla ilişkilendirilmiş bağlantı noktası numarasını girin.
 

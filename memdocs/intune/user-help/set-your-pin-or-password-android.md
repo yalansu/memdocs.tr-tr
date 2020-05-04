@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: fa069eea0fc8dcc7b2c98c261f3f7527b802da6e
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233431"
 ---
 # <a name="set-your-pin-or-password"></a>PIN veya parolanızı ayarlama
@@ -32,10 +32,10 @@ ms.locfileid: "80233431"
 
 Bir PIN veya parola ayarlamak için aşağıdaki adımları kullanabilirsiniz.
 
-1. **Ayarlar** > **Güvenlik** > **Ekran Kilidi** > **Parola**’ya dokunun.
+1. **Ayarlar** > **güvenlik** > **Password**ekran kilidi parolası ' na dokunun.**Screen Lock** > 
 
 2. Yeni parolanızı seçin ve onaylayın.
 
-Bazı cihazlar için, ekran parolanızın yanı sıra başlangıç PIN'i ayarlamanız gerekebilir. Bu seçeneği etkinleştirmek için ayarlar uygulamanızda bir konum bularak bu sorunu gidermeyi deneyebilirsiniz. Örneğin, Samsung Galaxy S7’de, Güvenli Başlatma’yı **Ayarlar** > **Kilit Ekranı ve Güvenlik** > **Güvenli Başlatma** ekranına giderek etkinleştirirsiniz. Daha fazlasını [burada](your-device-appears-encrypted-but-cp-says-otherwise-android.md) bulabilirsiniz. 
+Bazı cihazlar için, ekran parolanızın yanı sıra başlangıç PIN'i ayarlamanız gerekebilir. Bu seçeneği etkinleştirmek için ayarlar uygulamanızda bir konum bularak bu sorunu gidermeyi deneyebilirsiniz. Örneğin, Samsung Galaxy S7, **Ayarlar** > **kilit ekranı ve güvenlik** > **güvenli başlatma**' ya giderek güvenli başlatmayı etkinleştirir. Daha fazlasını [burada](your-device-appears-encrypted-but-cp-says-otherwise-android.md) bulabilirsiniz. 
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

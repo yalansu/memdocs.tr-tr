@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9e2d5e3f1e5839040c3ffd2229c34f3063a3ce87
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330130"
 ---
 # <a name="view-hardware-and-software-inventory-for-windows-pcs"></a>Windows bilgisayarları için donanım ve yazılım envanterini görüntüleme
@@ -42,9 +42,9 @@ Intune, Intune yazılım istemcisini kullanarak bilgisayar olarak yönettiğiniz
 
 ## <a name="to-display-information-about-pcs-you-manage"></a>Yönettiğiniz bilgisayarlar hakkında bilgi görüntülemek için
 
-1. [Microsoft Intune yönetim konsolunda](https://manage.microsoft.com/), **raporlar** &gt; **bilgisayar envanteri raporları**' nı seçin.
+1. [Microsoft Intune yönetim konsolunda](https://manage.microsoft.com/) **raporlar** &gt; **bilgisayar envanteri raporları**' nı seçin.
 
-2. **Yeni Rapor Oluştur** sayfasında, varsayılan değerleri kabul edin veya raporun döndüreceği sonuçlara filtre uygulamak için değerleri özelleştirin. Örneğin, raporda yalnızca Windows 8.1 çalıştıran bilgisayarların görüntülendiğini seçebilirsiniz.
+2. **Yeni rapor oluştur** sayfasında, varsayılan değerleri kabul edin veya rapor tarafından döndürülecek sonuçları filtreleyecek şekilde özelleştirin. Örneğin, raporda yalnızca Windows 8.1 çalıştıran bilgisayarların görüntülendiğini seçebilirsiniz.
 
 3. **Bilgisayar Envanteri Raporu**'nu yeni bir pencerede açmak için **Raporu Görüntüle**'yi seçin.
 
@@ -52,9 +52,9 @@ Intune, Intune yazılım istemcisini kullanarak bilgisayar olarak yönettiğiniz
 
 ## <a name="to-display-software-installed-on-pcs-you-manage"></a>Yönettiğiniz bilgisayarlarda yüklü yazılımı görüntülemek için
 
-1. [Microsoft Intune yönetim konsolunda](https://manage.microsoft.com/), **raporlar** &gt; **algılanan yazılım raporları**' nı seçin.
+1. [Microsoft Intune yönetim konsolunda](https://manage.microsoft.com/) **raporlar** &gt; **algılanan yazılım raporları**' nı seçin.
 
-2. **Yeni Rapor Oluştur** sayfasında, varsayılan değerleri kabul edin veya raporun döndüreceği sonuçlara filtre uygulamak için değerleri özelleştirin. Örneğin, raporda yalnızca Microsoft tarafından yayınlanan yazılımı görüntülemeyi seçebilirsiniz.
+2. **Yeni rapor oluştur** sayfasında, varsayılan değerleri kabul edin veya rapor tarafından döndürülecek sonuçları filtreleyecek şekilde özelleştirin. Örneğin, raporda yalnızca Microsoft tarafından yayınlanan yazılımı görüntülemeyi seçebilirsiniz.
 
 3. **Algılanan Yazılım Raporu**'nu yeni bir pencerede açmak için **Raporu Görüntüle**'yi seçin.
 
@@ -62,11 +62,11 @@ Intune, Intune yazılım istemcisini kullanarak bilgisayar olarak yönettiğiniz
 
 ## <a name="to-refresh-computer-inventory-to-ensure-it-is-current"></a>Bilgisayar envanterinin güncel olduğundan emin olmak üzere yenilemek için
 
-1. [Microsoft Intune yönetim konsolunda](https://manage.microsoft.com/) **gruplar** &gt; **tüm cihazlar** ' ı (veya envanterini yenilemek istediğiniz bilgisayarı içeren başka bir grubu) seçin.
+1. [Microsoft Intune yönetim konsolunda](https://manage.microsoft.com/)**Gruplar** &gt; **Tüm Cihazlar**’ı (veya envanterini yenilemek istediğiniz bilgisayarı içeren başka bir grubu) seçin.
 
 2. Bir bilgisayar seçin veya **Ctrl** tuşunu basılı tutarak birden çok bilgisayarı seçin.
 
-3. Görev çubuğunda **uzak görevler** &gt; **envanteri Yenile**' yi seçin.
+3. Görev çubuğunda, **uzak görevler** &gt; **envanteri Yenile**' yi seçin.
 
 4. Görev durumunu görüntülemek için, sayfanın sağ alt köşesinde **Uzak Görevler**'i seçin.
 

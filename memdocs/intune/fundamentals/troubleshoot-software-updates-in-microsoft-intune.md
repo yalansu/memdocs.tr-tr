@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 851fea24f101d313dba3426e5d65c60c5f31fdb5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330402"
 ---
 # <a name="troubleshoot-software-updates-in-microsoft-intune"></a>Microsoft Intune’da yazılım güncelleştirmesi sorunlarını giderme
@@ -37,11 +37,11 @@ Microsoft Intune istemcileri aşağıdaki belirtilerden birini veya daha fazlas�
 - Cihazlar yüksek CPU kullanımı yaşar.
 - Uygulamalar, Intune aracılığıyla yüklendiğinde yavaş yüklenir.
 - Microsoft Intune Center şu hatayı gösterir: `An error occurred while updating your computer. Error found: Code 0x800705b4`.
-- Intune yönetici konsolu, gruplar > Tüm Cihazlar > durum > gösterir. `One or more agents that are installed on this computer have errors. The information for this computer may not be accurate or up-to-date.`
+- Intune yönetici konsolu, gruplar > tüm cihazların > durum > gösterir:`One or more agents that are installed on this computer have errors. The information for this computer may not be accurate or up-to-date.`
 
 Bu sorun, yenisiyle değiştirilen güncelleştirmeler (güncelleştirmeler başka bir güncelleştirmeyle değiştirilirse) uzun bir süre reddedilmemişse oluşabilir. Bir uygulamayı yükleme gibi belirli işlemlerde Windows, güncelleştirmelerin ve ardıllarını doğru şekilde eşlenmelidir şekilde sırayla yenisiyle değiştirilen tüm güncelleştirmeleri denetler. Yenisiyle değiştirilen güncelleştirmelerin listesi çok büyük alırsa, bu denetim görevi, işlem yükü ve gereken süre nedeniyle yüksek CPU kullanımına neden olabilir. Bu sorun, Windows 7 ' de bulunan çok sayıda yenisiyle değiştirilen çok sayıda güncelleştirme nedeniyle Windows 7 cihazlarını etkiler. Daha yeni işletim sistemleri, yenisiyle değiştirilen çok sayıda güncelleştirmeye sahip olmayabilir ve bu soruna maruz kalabilir.
 
-**Çözünürlüğüne**
+**Çözünürlük**
 
 1. [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)'da oturum açın.
 2. **Yazılım güncelleştirmelerini**seçin.

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: dfa2c9d9f2535bf336e28a7fe4cf591451d3bf94
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327970"
 ---
 # <a name="rename-your-device-from-the-company-portal-website"></a>Şirket Portalı web sitesinden cihazınızı yeniden adlandırma
@@ -36,7 +36,7 @@ ms.locfileid: "79327970"
 
     ![Tanımlanmamış, genel olarak adlandırılmış cihazları gösteren 2 kutucuğun bulunduğu Cihazlar sayfasının ekran görüntüsü. Cihazların hemen altında gri bir başlık yer alır ve kullanıcılardan kullandıkları cihazı tanımlamalarını veya yeni bir tane eklemelerini ister.](./media/rename-reset-device-step2-1808.png)   
 
-3. **Yeniden Adlandır**'ı seçin. Yeniden adlandırma seçeneği sayfanın üst kısmında görünmüyorsa **Diğer (...)**  > **Yeniden adlandır**’ı seçin.   
+3. **Yeniden Adlandır**' ı seçin. Sayfanızın üst kısmında yeniden adlandırma seçeneği görünmüyorsa, **daha fazla (...)** öğesini seçin.  >  **Yeniden Adlandır**.   
 
    ![Şirket Portalı web sitesinde seçilen bir cihaza yönelik cihaz ayrıntıları sayfası; üst kısmında Yeniden Adlandır, Kaldır, Cihazı Sıfırla, Geçiş Kodunu Sıfırla ve Uzaktan Kilitle bağlantıları ile. ](./media/rename-reset-device-1808.png)   
 

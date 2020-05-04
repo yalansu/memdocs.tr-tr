@@ -16,10 +16,10 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d4e377e0cd9ad15d1d3a0ac9fb5c088dc1366d48
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326742"
 ---
 # <a name="intune-reports"></a>Intune raporları
@@ -54,12 +54,12 @@ Uyumlu olmayan cihazlar, sorunları belirlemek ve sorunları düzeltmeye yardım
 **Uyumsuz cihazlar** raporunu aşağıdaki adımları kullanarak görebilirsiniz:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uyumlu olmayan cihazları** > **izleyici** > **cihazları** seçin.
+2. **Uyumsuz cihazları****izlemek** > için **cihazlar** > ' ı seçin.
 
     ![Uyumsuz cihaz raporu](./media/intune-reports/intune-reports-02.png)
 
     > [!TIP]
-    > Intune 'u Azure portal daha önce kullandıysanız, [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 'da oturum açarak ve **uyumlu olmayan cihazlar** > **cihaz uyumluluğu** ' nu seçerek yukarıdaki ayrıntıları Azure Portal bulabilirsiniz.
+    > Intune 'u Azure Portal daha önce kullandıysanız, [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 'da oturum açarak ve **cihaz uyumluluğu** > **uyumlu olmayan cihazlar**' ı seçerek yukarıdaki ayrıntıları Azure Portal bulabilirsiniz.
 
 ## <a name="device-compliance-report-organizational"></a>Cihaz uyumluluk raporu (kuruluş)
 
@@ -98,7 +98,7 @@ Cihaz uyumluluk eğilimleri için bir cihaz uyumluluk eğilimi raporu, cihaz uyu
 Aşağıdaki adımları kullanarak **eğilimler** raporunu görüntüleyebilirsiniz:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. Cihaz uyumluluğunu 60 günlük bir eğilim üzerinden görüntülemek için **raporlar** > **eğilimlerini** seçin.
+2. Cihaz uyumluluğunu 60 günlük bir eğilim üzerinden görüntülemek için **rapor** > **eğilimlerini** seçin.
 
     ![Intune eğilim raporu](./media/intune-reports/intune-reports-03.png)
 
@@ -113,7 +113,7 @@ Aşağıdaki adımları kullanarak **eğilimler** raporunu görüntüleyebilirsi
 Aşağıdaki adımları kullanarak özel raporlar oluşturabilir ve görüntüleyebilirsiniz:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tanılama ayarları** > **raporları** seçin [Tanılama ayarı](reports.md#diagnostic-settings)ekleyin.
+2. **Rapor** > **Tanılama ayarları** [Tanılama ayarı](reports.md#diagnostic-settings)Ekle ' yi seçin.
 
     ![Intune raporları Özeti](./media/intune-reports/intune-reports-04.png)
 
@@ -123,7 +123,7 @@ Aşağıdaki adımları kullanarak özel raporlar oluşturabilir ve görüntüle
 
     ![Intune raporları Özeti](./media/intune-reports/intune-reports-04a.png)
 
-6. **Kaydet**'e tıklayın.
+6. **Kaydet**’e tıklayın.
 7. Sonra, [Log Analytics](reports.md#log-analytics)kullanarak yeni bir günlük sorgusu oluşturmak ve çalıştırmak için **Log Analytics** ' i seçin.
 
    ![Log Analytics-günlük sorgusu](./media/intune-reports/intune-reports-05.png)
@@ -146,14 +146,14 @@ Tanılama ayarları hakkında daha fazla bilgi için bkz. [Azure 'da platform g�
 ### <a name="log-analytics"></a>Log Analytics
 Log Analytics, günlük sorgularını yazmak ve sorguların sonuçlarını etkileşimli olarak çözümlemek için Azure portal birincil araçtır. Günlük sorgusu Azure Izleyici 'de başka bir yerde kullanılsa bile, genellikle Log Analytics kullanarak sorguyu yazın ve test edersiniz. Log Analytics kullanma ve günlük sorguları oluşturma hakkında ayrıntılar için bkz. [Azure izleyici 'de günlük sorgularına genel bakış](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview). 
 
-### <a name="workbooks"></a>Kitabı
+### <a name="workbooks"></a>Çalışma Kitapları
 Çalışma kitapları metin, analiz sorguları, Azure ölçümleri ve parametreleri zengin etkileşimli raporlarla birleştirir. Çalışma kitapları aynı Azure kaynaklarına erişimi olan diğer takım üyeleri tarafından düzenlenebilir. Çalışma kitapları hakkında daha fazla bilgi için bkz. [Azure izleyici çalışma kitapları](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks). Ayrıca, ile çalışarak çalışma kitabı şablonlarına katkıda bulunabilirsiniz. Daha fazla bilgi için bkz. [Azure Izleyici çalışma kitabı şablonları](https://go.microsoft.com/fwlink/?linkid=867045).
 
 ## <a name="next-steps"></a>Sonraki adımlar 
 
 Aşağıdaki teknolojiler hakkında daha fazla bilgi edinin:
 - [Blog-Microsoft Intune raporlama çerçevesi](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553)
-- [Azure Izleyici](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
+- [Azure İzleyici](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
 - [Log Analytics nedir?](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
 - [Günlük sorguları](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview)
 - [Azure Izleyici 'de Log Analytics kullanmaya başlama](https://docs.microsoft.com/azure/azure-monitor/log-query/get-started-portal)

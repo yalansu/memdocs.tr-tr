@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e5a9db094163bcf4f987b881c83d98be655acfd
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
-ms.translationtype: HT
+ms.openlocfilehash: f61f0dd7f0f3b343b8f68de0b20b06d0f69212ac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808095"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397790"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Yönetilen Android Kurumsal cihazları için uygulama yapılandırma ilkeleri ekleme
 
@@ -35,7 +35,7 @@ Microsoft Intune içindeki uygulama yapılandırma ilkeleri, yönetilen Android 
 > Tüm uygulamalar, uygulama yapılandırmasını desteklemez. Uygulamanın uygulama yapılandırma ilkelerini destekleyip desteklemediğini görmek için uygulama geliştiricisine danışın.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **uygulama yapılandırma Ilkeleri** >  > **yönetilen cihaz** **Ekle** ' yi seçin. **Yönetilen cihazlar** ve **yönetilen uygulamalar**arasından seçim yapabileceğiniz unutulmamalıdır. Daha fazla bilgi için bkz. [uygulama yapılandırmasını destekleyen uygulamalar](app-configuration-policies-overview.md#apps-that-support-app-configuration).
+2. **Uygulamalar** > **uygulama yapılandırma ilkeleri** > **Add** > **yönetilen cihazlar**Ekle ' yi seçin. **Yönetilen cihazlar** ve **yönetilen uygulamalar**arasından seçim yapabileceğiniz unutulmamalıdır. Daha fazla bilgi için bkz. [uygulama yapılandırmasını destekleyen uygulamalar](app-configuration-policies-overview.md#apps-that-support-app-configuration).
 3. **Temel bilgiler** sayfasında, aşağıdaki ayrıntıları ayarlayın:
     - **Ad** - Azure portalında görünen profil adı.
     - **Açıklama** - Azure portalında görünen profil açıklaması.
@@ -47,8 +47,8 @@ Microsoft Intune içindeki uygulama yapılandırma ilkeleri, yönetilen Android 
 8. **Izin Ekle** bölmesini göstermek için **Ekle** ' ye tıklayın.
 9. Geçersiz kılmak istediğiniz izinlere tıklayın. Verilen izinler, seçilen uygulamalar için "varsayılan uygulama izinleri" ilkesini geçersiz kılar.
 10. Her izin için **izin durumunu** ayarlayın. **Komut istemi**, **Otomatik Izin ver**veya **Otomatik Reddet**seçeneklerinden birini belirleyebilirsiniz. İzinler hakkında daha fazla bilgi için bkz. [Intune kullanarak cihazları uyumlu veya uyumsuz olarak işaretlemek Için Android kurumsal ayarları](../protect/compliance-policy-create-android-for-work.md).
-11. Yönetilen uygulama yapılandırma ayarlarını destekliyorsa, açılan kutuda **yapılandırma ayarları biçimini**seçin. Yapılandırma bilgilerini eklemek için aşağıdaki yöntemlerden birini seçin:
-    - **Yapılandırma tasarımcısını kullanma**
+11. Yönetilen uygulama yapılandırma ayarlarını destekliyorsa, **yapılandırma ayarları biçim** açılan kutusu görünür. Yapılandırma bilgilerini eklemek için aşağıdaki yöntemlerden birini seçin:
+    - **Yapılandırma tasarımcısını kullan**
     - **JSON verilerini girin**<br><br>
     Yapılandırma tasarımcısını kullanma hakkında ayrıntılar için bkz. [Yapılandırma tasarımcısını kullanma](#use-the-configuration-designer). XML verileri girme hakkında daha fazla bilgi için bkz. [JSON verisi](#enter-json-data)girme.
 12. **Atamalar** sayfasını göstermek için **İleri** ' ye tıklayın.
@@ -76,7 +76,7 @@ Microsoft Intune içindeki uygulama yapılandırma ilkeleri, yönetilen Android 
 
 Uygulama yapılandırma ayarlarını destekleyecek şekilde tasarlandıysa, yönetilen Google Play uygulamalar için yapılandırma tasarımcısını kullanabilirsiniz. Yapılandırma, Intune 'a kayıtlı cihazlar için geçerlidir. Tasarımcı, uygulama tarafından sunulan ayarlar için belirli yapılandırma değerlerini yapılandırmanızı sağlar.
 
-1. **Ekle**’yi seçin. Uygulama için girmek istediğiniz yapılandırma ayarları listesini seçin.
+1. **Add (Ekle)** seçeneğini belirleyin. Uygulama için girmek istediğiniz yapılandırma ayarları listesini seçin.
 
     E-posta uygulamanız için GMail veya dokuz Iş kullanıyorsanız, bu ayarlarla ilgili daha fazla bilgi için [e-postayı yapılandırmak üzere Android kurumsal cihaz ayarları](../configuration/email-settings-android-enterprise.md) ' na bakın.
 
@@ -92,14 +92,14 @@ Yapılandırma değeri olarak değişken seçerseniz şunlar arasından seçim y
 | Seçenek | Örnek |
 |----|----|
 | AAD cihaz KIMLIĞI | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
-| Hesap kimliği | fc0dc142-71d8-4b12-bbea-bae2a8514c81 |
+| Hesap Kimliği | fc0dc142-71d8-4b12-bbea-bae2a8514c81 |
 | Intune Cihaz Kimliği | b9841cd9-9843-405f-be28-b2265c59ef97 |
-| Etki Alanı | contoso.com |
+| Domain | contoso.com |
 | Mail | john@contoso.com |
 | Kısmi UPN | john |
 | Kullanıcı Kimliği | 3ec2c00f-b125-4519-acf0-302ac3761822 |
 | Kullanıcı adı | John Doe |
-| Kullanıcı asıl adı | john@contoso.com |
+| Kullanıcı Asıl Adı | john@contoso.com |
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Çok kimlikli uygulamalarda yalnızca yapılandırılmış kuruluş hesaplarına izin verme 
 
@@ -107,11 +107,11 @@ Microsoft Intune Yöneticisi olarak, yönetilen cihazlarda hangi kullanıcı hes
 
 | **Anahtar** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|
-| **Değerler** | <ul><li>Bir veya daha fazla <code>;</code> ile sınırlandırılmış UPN.</li><li>Yalnızca bu anahtar ile tanımlanan yönetilen kullanıcı hesaplarına izin verilir.</li><li> Intune'a kayıtlı cihazlar için <code>{{userprincipalname}}</code> belirteci kayıtlı kullanıcı hesabını temsil etmek için kullanılabilir.</li></ul> |
+| **Deðerler** | <ul><li>Bir veya daha fazla <code>;</code> ile sınırlandırılmış UPN.</li><li>Yalnızca bu anahtar ile tanımlanan yönetilen kullanıcı hesaplarına izin verilir.</li><li> Intune'a kayıtlı cihazlar için <code>{{userprincipalname}}</code> belirteci kayıtlı kullanıcı hesabını temsil etmek için kullanılabilir.</li></ul> |
 
    > [!NOTE]
    > Aşağıdaki uygulamalar, yukarıdaki uygulama yapılandırmasını işler ve yalnızca kuruluş hesaplarına izin verir:
-   > - Android için Microsoft Edge (42.0.4.4048 ve üzeri)
+   > - Android için Edge (42.0.4.4048 ve üzeri)
    > - Office, Word, Excel, Android için PowerPoint (16.0.9327.1000 ve üzeri)
    > - Android için OneDrive (5,28 ve üzeri)
    > - Android için Outlook (2.2.222 ve üzeri)
@@ -134,7 +134,7 @@ Ayrıca, Android cihaz özelliklerine erişmek için uygulama izinlerini öncede
 
 Örneğin, bir uygulama cihazın mikrofonunu kullanır. Kullanıcıdan mikrofonu kullanmak için uygulamaya izin vermesi istenir.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **uygulamalar** > **uygulama yapılandırma ilkeleri** ' ni seçin >   > **yönetilen cihaz** **ekleyin** .
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **uygulamalar** > **uygulama yapılandırma ilkeleri** >  **Add** > **yönetilen cihazlar**Ekle ' yi seçin.
 2. Aşağıdaki özellikleri ekleyin:
 
     - **Ad**: ilke için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir ilke adı, **tüm şirket Için Android kurumsal istem izinleri uygulama ilkesidir**.
@@ -143,12 +143,12 @@ Ayrıca, Android cihaz özelliklerine erişmek için uygulama izinlerini öncede
     - **Platform**: **Android**' i seçin.
 
 3. **Ilişkili uygulama**' yı seçin. Yapılandırma ilkesi tanımlamak istediğiniz uygulamayı seçin. Onaylanan ve Intune ile eşitlenen Android iş profili uygulamaları listesinden seçim yapın.
-4. **Ekle** > **izinleri** seçin. Listeden, kullanılabilir uygulama izinlerini seçin > **Tamam**' ı seçin.
+4. **İzin** > **Ekle**' yi seçin. Listeden, kullanılabilir uygulama izinlerini seçin > **Tamam**' ı seçin.
 5. Bu ilkeyle verilecek her izin için bir seçenek belirleyin:
-    - **Sor**. Kullanıcıdan kabul etmesini veya reddetmesini isteme.
+    - **İstem**. Kullanıcıdan kabul etmesini veya reddetmesini isteme.
     - **Otomatik olarak izin ver**. Kullanıcıya bildirmeden otomatik olarak onayla.
     - **Otomatik olarak reddet**. Kullanıcıya bildirmeden otomatik olarak reddet.
-6. Uygulama yapılandırma ilkesini atamak için, uygulama yapılandırma ilkesi > **atama** > **grupları seçin**. Atanacak Kullanıcı gruplarını seçin > **seçin**.
+6. Uygulama yapılandırma ilkesini atamak için, uygulama yapılandırma ilkesi > **atama** > **grupları seçin**' i seçin. Atanacak Kullanıcı gruplarını seçin > **seçin**.
 7. İlkeyi atamak için **Kaydet**’i seçin.
 
 ## <a name="additional-information"></a>Ek bilgiler

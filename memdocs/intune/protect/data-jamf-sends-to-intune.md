@@ -19,17 +19,17 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e9b943ca03f54a976061c19f4ce60a94283640c0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329442"
 ---
 # <a name="data-jamf-pro-sends-to-intune"></a>Jamf Pro’nun Intune’a gönderdiği veriler
 
 Intune ile son kullanıcılarınızın Mac 'nizi yönetmek için [JAMF Pro](https://www.jamf.com) kullandığınızda, JAMF Pro yönetilen MacOS cihazlarıyla ilgili envanter bilgilerini yakalar. 
 
-## <a name="data"></a>Veri  
+## <a name="data"></a>Veriler  
 JAMF Pro paylaşımlarının Intune ile paylaştığı verilerin listesi için, JAMF Pro Technical belgelerindeki [ek: Microsoft Intune Ile paylaşılan envanter bilgileri](https://docs.jamf.com/technical-papers/jamf-pro/microsoft-intune/10.9.0/Appendix__Inventory_Information_Shared_with_Microsoft_Intune.html) bölümüne bakın. 
 
 <!--  

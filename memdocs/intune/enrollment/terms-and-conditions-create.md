@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 37eff19d940ef02cec0d2d0204644c46ef0742a2
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326983"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>Kullanıcı erişimi için hüküm ve koşullar
@@ -46,7 +46,7 @@ Hangi yöntemin sizin için en uygun olduğunu öğrenmek için [kuruluşunuzun 
 ## <a name="create-terms-and-conditions"></a>Hüküm ve koşulları oluşturma
 Hüküm ve koşulları oluşturmak için şu adımları tamamlayın. Görüntü adı ve açıklama yönetimin kullanımına yöneliktir; öte yandan, koşul özellikleri Şirket Portalı’nda kullanıcılara görüntülenir.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın, **Kiracı Yönetimi** > **hüküm ve koşullar**' ı seçin.
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **Kiracı Yönetimi** > **hüküm ve koşulları**' nı seçin.
 2. **Oluştur**’u seçin.
 3. **Temel bilgiler** sayfasında, aşağıdaki bilgileri belirtin:
 
@@ -69,7 +69,7 @@ Hüküm ve koşulları oluşturmak için şu adımları tamamlayın. Görüntü 
     - **Tüm kullanıcılar**: Bu hüküm ve koşulları tüm kullanıcılara atamak için bu seçeneği belirleyin.
     - **Grupları seçin**: Bu hüküm ve koşulları, **dahil edilecek grupları seç ' i**seçerek belirlediğiniz gruplardaki herkese atamak için bu seçeneği belirleyin.
 
-8. **Oluştur**' > **İleri ' yi** seçin.
+8. **İleri** > **Oluştur**seçeneğini belirleyin.
 
 ## <a name="see-how-terms-are-displayed-to-your-users"></a>Hükümlerin kullanıcılarınıza nasıl görüntüleneceğini görün
 Aşağıdaki örnekte, **Başlık** ve **Koşulların Özeti** yönetim konsolunda ve Şirket Portalı'nda gösterilmektedir.
@@ -83,7 +83,7 @@ Aşağıdaki örnekte hüküm ve koşullar yönetim konsolunda ve Şirket Portal
 
 ## <a name="monitor-terms-and-conditions"></a>Hüküm ve koşulları izleme
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın, **Kiracı Yönetimi** > **hüküm ve koşullar**' ı seçin.
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **Kiracı Yönetimi** > **hüküm ve koşulları**' nı seçin.
 2. Hüküm ve koşullar listesinde, kabul durumunu görüntülemek istediğiniz koşulları seçin > **Kabul Raporlama**’yı seçin.
 
 ## <a name="work-with-multiple-versions-of-terms-and-conditions"></a>Hüküm ve koşulların birden çok sürümü ile çalışma
@@ -93,10 +93,10 @@ Hüküm ve koşullarınızı düzenleyebilir ve bunların sürümlerini yöneteb
 
 Örneğin, yazım hatalarını düzeltiyor veya biçimlendirmeyi değiştiriyorsanız geçerli sürüm numarasını saklayın.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın, **Kiracı Yönetimi** > **hüküm ve koşullar** ' ı seçin > > **özelliklerini**değiştirmek istediğiniz hüküm ve koşulları seçin.
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **Kiracı Yönetimi** > **hüküm ve koşullar** ' ı seçin > > **özelliklerini**değiştirmek istediğiniz hüküm ve koşulları seçin.
 
 2. **Özellikler** bölmesinde **Hüküm ve Koşullar**’ı seçin ve ardından **Başlık**, **Koşulların Özeti** ve **Hüküm ve Koşullar**’da gerekli değişiklikleri yapın. Yaptığınız değişiklikler kullanıcıların koşulları yeniden kabul etmesini gerektiriyorsa **Kullanıcıların yeniden kabul etmesini ve sürüm numarasını şuna güncelleştirmesini gerektir** seçeneğini belirleyin
 
-3. **Tamam** > **Kaydet**’i seçin.
+3. **Tamam** > **Kaydet**' i seçin.
 
 Kullanıcıların güncelleştirilen hüküm ve koşulları yalnızca bir kez kabul etmesi gerekir. Birden çok cihazı olan kullanıcıların hüküm ve koşulları her cihazda ayrıca kabul etmesi gerekmez.

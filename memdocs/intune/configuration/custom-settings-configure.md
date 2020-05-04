@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: feb211b1de15aa0400e9ff71b428e2db02ef4b03
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551359"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Intune'da özel ayarlarla profil oluşturma
@@ -38,15 +38,15 @@ Bu makalede, Android Cihaz Yöneticisi, Android Enterprise, iOS/ıpados, macOS v
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:  
 
-        - **Android Cihaz Yöneticisi**
+        - **Android cihaz yöneticisi**
         - **Android Kurumsal**
-        - **iOS/ıpados**
-        - **macOS**
+        - **iOS/iPadOS**
+        - **Mac OS**
         - **Windows 10 ve üzeri**
         - **Windows Phone 8.1**
 
@@ -58,26 +58,26 @@ Bu makalede, Android Cihaz Yöneticisi, Android Enterprise, iOS/ıpados, macOS v
     - **Ad**: ilke için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir ilke adı **Windows 10: Allowvpnoverhücresel özel OMA-URI ' y i sağlayan özel profildir**.
     - **Açıklama**: ilke için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
 
-6. **İleri**'yi seçin.
+6. **İleri**’yi seçin.
 
 7. **Yapılandırma ayarları**' nda, seçtiğiniz platforma bağlı olarak, yapılandırabileceğiniz ayarlar farklıdır. Ayrıntılı ayarlar için platformunuzu seçin:
 
-    - [Android Cihaz Yöneticisi](custom-settings-android.md)
+    - [Android cihaz yöneticisi](custom-settings-android.md)
     - [Android Kurumsal](custom-settings-android-for-work.md)
-    - [iOS/ıpados](custom-settings-ios.md)
-    - [macOS](custom-settings-macos.md)
+    - [iOS/iPadOS](custom-settings-ios.md)
+    - [Mac OS](custom-settings-macos.md)
     - [Windows 10](custom-settings-windows-10.md)
-    - [Windows Holographic for Business](custom-settings-windows-holographic.md)
+    - [Windows 10 Holographic for Business](custom-settings-windows-holographic.md)
     - [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
 
-8. **İleri**'yi seçin.
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili `US-NC IT Team` veya `JohnGlenn_ITDepartment`gıbı belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+8. **İleri**’yi seçin.
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
-    **İleri**'yi seçin.
+    **İleri**’yi seçin.
 
 10. **Atamalar**' da, profilinizi alacak kullanıcıları veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
 
-    **İleri**'yi seçin.
+    **İleri**’yi seçin.
 
 11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
 
@@ -86,7 +86,7 @@ Bu makalede, Android Cihaz Yöneticisi, Android Enterprise, iOS/ıpados, macOS v
 Aşağıdaki örnekte, **Connectivity/AllowVPNOverCellular** ayarı etkinleştirilmiştir. Bu ayar, bir Windows 10 cihazın hücresel bir ağdayken VPN bağlantısı açmasına izin verir.
 
 > [!div class="mx-imgBorder"]
-> Intune ve Endpoint Manager 'da VPN ayarlarını içeren özel ilkeye örnek ![](./media/custom-settings-configure/custom-policy-example.png)
+> ![Intune ve Endpoint Manager 'da VPN ayarlarını içeren özel ilke örneği](./media/custom-settings-configure/custom-policy-example.png)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

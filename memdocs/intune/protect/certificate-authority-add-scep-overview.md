@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1dfac34615c208328cab06a3fd047d3a9b99c794
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329882"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>SCEP kullanarak Intune'da iş ortağı sertifika yetkilisi ekleme
@@ -41,7 +41,7 @@ Azure Active Directory (Azure AD) uygulamasını kullanarak, cihazlardan gelen S
 
 Bu makalede Azure AD uygulaması oluşturma da dahil olmak üzere Yönetici perspektifinden bu özelliğe bir genel bakış sağlanır.
 
-## <a name="overview"></a>Overview
+## <a name="overview"></a>Genel Bakış
 
 Aşağıdaki adımlarda, Intune 'da sertifikalar için SCEP kullanılmasına genel bir bakış sağlanmaktadır:
 
@@ -58,7 +58,7 @@ Aşağıdaki adımlarda, Intune 'da sertifikalar için SCEP kullanılmasına gen
 Aşağıdaki diyagramda Intune'la üçüncü taraf SCEP tümleştirmesinin ayrıntılı akışı gösterilir:
 
 > [!div class="mx-imgBorder"]
-> üçüncü taraf sertifika yetkilisi SCEP Microsoft Intune ile nasıl tümleştiğini ![](./media/certificate-authority-add-scep-overview/scep-certificate-vendor-integration.png)
+> ![Üçüncü taraf sertifika yetkilisi SCEP Microsoft Intune ile nasıl tümleştirilir?](./media/certificate-authority-add-scep-overview/scep-certificate-vendor-integration.png)
 
 ## <a name="set-up-third-party-ca-integration"></a>Üçüncü taraf CA tümleştirmesini ayarlama
 
@@ -72,7 +72,7 @@ Aşağıdaki diyagramda Intune'la üçüncü taraf SCEP tümleştirmesinin ayrı
 
 Azure AD uygulamasını kaydetmek için gerekli izinlere sahip olduğunuzdan emin olun. Azure AD belgelerinde [gerekli izinlere](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions)bakın.
 
-#### <a name="create-an-application-in-azure-active-directory"></a>Azure Active Directory bir uygulama oluşturma  
+#### <a name="create-an-application-in-azure-active-directory"></a>Azure Active Directory’de uygulama oluşturma  
 
 1. [Azure Portal](https://portal.azure.com), **Azure Active Directory** > **uygulama kayıtları**' na gidin ve ardından **Yeni kayıt**' ı seçin.  
 
@@ -89,7 +89,7 @@ Azure AD uygulamasını kaydetmek için gerekli izinlere sahip olduğunuzdan emi
    > [!IMPORTANT]  
    > Bu sayfadan ayrılmadan önce, istemci sırrı için değeri kopyalayın ve daha sonra üçüncü taraf CA uygulamanız ile kullanmak üzere kaydedin. Bu değer bir daha gösterilmez. Üçüncü taraf sertifika yetkilinizin kılavuzunu, uygulama KIMLIĞI, kimlik doğrulama anahtarı ve kiracı KIMLIĞI 'nin nasıl yapılandırılacağını istediğlerine göre gözden geçirdiğinizden emin olun.  
 
-6. **KIRACı kimliğinizi**kaydedin. Kiracı KIMLIĞI, hesabınızdaki @ işaretinden sonra gelen etki alanı metindir. Örneğin, hesabınız *admin@name.onmicrosoft.com* , kiracı kimliğiniz **Name.onmicrosoft.com**olur.  
+6. **KIRACı kimliğinizi**kaydedin. Kiracı Kimliği, hesabınızın @ işaretinden sonraki etki alanı metnidir. Örneğin, hesabınız ise *admin@name.onmicrosoft.com*kiracı kimliğiniz **Name.onmicrosoft.com**olur.  
 
 7. Uygulamanın gezinti bölmesinde, **Yönet**' ın altındaki **API izinleri** ' ne gidin ve **izin Ekle**' yi seçin.  
 

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 0c9bf96188e27afeaf66e7b2897f8cda19f9df37
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551647"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Cihazınızı Şirket Portalı kaydetme  
@@ -32,9 +32,9 @@ ms.locfileid: "80551647"
 > [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o?rel=0]
 
 > [!NOTE]
-> Samsung KNOX, belirli Samsung cihazlarının, yerel Android 'in sağladığı her yerde ek koruma için kullandığı bir güvenlik türüdür. Samsung KNOX cihazınız olup olmadığını denetlemek için > **ayarlar** > **cihaz hakkında**bölümüne gidin. Burada listelenen **Knox sürümünü** görmüyorsanız, yerel bir Android cihazınız vardır.
+> Samsung KNOX, belirli Samsung cihazlarının, yerel Android 'in sağladığı her yerde ek koruma için kullandığı bir güvenlik türüdür. Samsung KNOX cihazınız olup olmadığını denetlemek için >**cihaz** **ayarları** > ' na gidin. Burada listelenen **Knox sürümünü** görmüyorsanız, yerel bir Android cihazınız vardır.
 
-## <a name="enroll-device"></a>Cihazı kaydetme  
+## <a name="enroll-device"></a>Cihaz kaydetme  
 Intune Şirket Portalı uygulamayı [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)yüklediğinizden emin olun. Uygulamayı ana kara Çin 'de sunan mağazaların bir listesi için bkz. [ana kara Çin 'de Şirket portalı uygulama yüklemesi](install-company-portal-android-china.md) .    
 
 Kayıt sırasında cihazınızı nasıl kullanacağınızı en iyi açıklayan bir kategori seçmeniz istenebilir. Şirketinizin destek, erişiminiz olan uygulamaları denetlemek için yanıtınızı kullanır.  
@@ -61,7 +61,7 @@ Kayıt sırasında cihazınızı nasıl kullanacağınızı en iyi açıklayan b
     * **Şirket portalı telefon araması yapmasına ve yönetmesine Izin ver**: Bu izin, cihazınızın, kuruluşunuzun cihaz yönetim sağlayıcısı olan uluslararası mobil istasyon ekipman KIMLIĞI (IMEI) numarasını Intune ile paylaşmasını sağlar. Bu izne izin vermek güvenlidir. Microsoft hiçbir şekilde telefon araması yapmayacaktır veya yönetmez.  
     * **Şirket portalı kişilerinize erişmesine Izin ver**: Bu izin, Şirket portalı uygulamanın iş hesabınızı oluşturmasına, kullanmasına ve yönetmesine olanak tanır.  Bu izne izin vermek güvenlidir. Microsoft, kişilerinize hiçbir şekilde erişemez. 
 
-    İzni reddederseniz, Şirket Portalı için bir sonraki oturum açışınızda yeniden girmeniz istenir. Bu iletileri kapatmak için, **tekrar sorma**' yı seçin. Uygulama izinlerini yönetmek için, ayarlar uygulama > **uygulamalar** > **Şirket Portalı** > **izinleri** > **Telefon**' e gidin.  
+    İzni reddederseniz, Şirket Portalı için bir sonraki oturum açışınızda yeniden girmeniz istenir. Bu iletileri kapatmak için, **tekrar sorma**' yı seçin. Uygulama izinlerini yönetmek için, ayarlar uygulama > **uygulamalar** > **Şirket portalı** > **izinler** > **telefonuna**gidin.  
 
 6. Cihaz yönetici uygulamasını etkinleştirin. 
 
@@ -91,10 +91,10 @@ Kayıt sırasında cihazınızı nasıl kullanacağınızı en iyi açıklayan b
 
 ## <a name="next-steps"></a>Sonraki adımlar  
 
-Okul veya iş uygulamasını yüklemeyi denemeden önce **ayarlar** > **güvenlik**' e gidin ve **Bilinmeyen kaynaklar**' ı açın. Bu seçeneği kullanmazsanız, bir uygulamayı yüklemeye çalıştığınızda şu iletiyi görürsünüz: "Install engellendi. Güvenlik nedeniyle cihazınız bilinmeyen kaynaklardan gelen uygulamaların yüklenmesini engelleyecek şekilde ayarlanmış." iletisini görürsünüz. Doğrudan **Bilinmeyen kaynaklara**gitmek Için iletideki **ayarlara** dokunabilirsiniz.  
+Okul veya iş uygulamasını yüklemeyi denemeden önce **Ayarlar** > **güvenlik**' e gidin ve **Bilinmeyen kaynaklar**' ı açın. Bu seçeneği kullanmazsanız, bir uygulamayı yüklemeye çalıştığınızda şu iletiyi görürsünüz: "Install engellendi. Güvenlik nedeniyle cihazınız bilinmeyen kaynaklardan gelen uygulamaların yüklenmesini engelleyecek şekilde ayarlanmış." iletisini görürsünüz. Doğrudan **Bilinmeyen kaynaklara**gitmek Için iletideki **ayarlara** dokunabilirsiniz.  
 
 > [!Note]
-> Kuruluşunuzda telekomünikasyon gider yönetimi yazılımı kullanılıyorsa, cihazınız tam olarak kaydedilmeden önce tamamlamanız gereken ek birkaç adım vardır. Daha fazla bilgiyi [burada](enroll-your-device-with-telecom-expense-management-android.md) bulabilirsiniz.
+> Kuruluşunuzda telekomünikasyon gider yönetimi yazılımı kullanılıyorsa, cihazınız tam olarak kaydedilmeden önce tamamlamanız gereken ek birkaç adım vardır. [Buradan](enroll-your-device-with-telecom-expense-management-android.md) daha fazla bilgi edinin.
 
 Cihazınızı Intune 'a kaydetmeyi denerken bir hata alırsanız, [şirketinizin destek 'e e-posta](send-logs-to-your-it-admin-by-email-android.md)gönderebilirsiniz.  
 

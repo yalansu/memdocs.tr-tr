@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: df5c33e1e8e589f430fe8265ee4762b4755f3618
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086446"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Intune 'da önceden paylaşılan anahtarla bir WiFi profili oluşturmak için özel cihaz profili kullanma
@@ -30,7 +30,7 @@ ms.locfileid: "80086446"
 
 Bu özellik şunları destekler:
 
-- Android Cihaz Yöneticisi
+- Android cihaz yöneticisi
 - Android kurumsal Iş profili
 - Windows
 - EAP tabanlı Wi-Fi
@@ -49,11 +49,11 @@ Bu özellik şunları destekler:
 ## <a name="create-a-custom-profile"></a>Özel profil oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Ad**: ilke için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir ilke adı, **Android Cihaz Yöneticisi cihazları Için özel OMA-URI Wi-Fi profili ayarlarıdır**.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+    - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
     - **Platform**: platformunuzu seçin.
     - **Profil türü**: **özel**' i seçin.
 
@@ -63,19 +63,19 @@ Bu özellik şunları destekler:
     2. **Açıklama**: OMA-URI ayarı için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
     3. **OMA-URI**: aşağıdaki seçeneklerden birini girin:
 
-        - **Android için**: `./Vendor/MSFT/WiFi/Profile/SSID/Settings`
-        - **Windows için**: `./Vendor/MSFT/WiFi/Profile/SSID/WlanXml`
+        - **Android için**:`./Vendor/MSFT/WiFi/Profile/SSID/Settings`
+        - **Windows için**:`./Vendor/MSFT/WiFi/Profile/SSID/WlanXml`
 
         > [!NOTE]
         > Başına nokta karakterini eklediğinizden emin olun.
 
-        SSID, ilkeyi oluşturmakta olduğunuz SSID 'dir. Örneğin, Wi-Fi adı `Hotspot-1`, `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`girin.
+        SSID, ilkeyi oluşturmakta olduğunuz SSID 'dir. Örneğin, Wi-Fi adı `Hotspot-1`varsa, girin. `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`
 
     4. **Veri türü**: **dize**seçin.
 
     5. **Değer**: xml kodunuzu yapıştırın. Bu makaledeki [örneklere](#android-or-windows-wi-fi-profile-example) bakın. Her bir değeri ağ ayarlarınıza uyacak şekilde güncelleştirin. Kodun açıklamalar bölümü bazı işaretçiler içerir.
 
-5. İşiniz bittiğinde **Tamam** > **Oluştur**’u seçerek değişikliklerinizi kaydedin.
+5. İşiniz bittiğinde, değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin.
 
 Profiliniz profiller listesinde gösterilir. Sonra, [Bu profili](device-profile-assign.md) Kullanıcı gruplarınıza atayın. Bu ilke yalnızca kullanıcı gruplarına atabilir.
 
@@ -89,9 +89,9 @@ Aşağıdaki örnek bir Android veya Windows Wi-Fi profili için XML kodu örne�
 
 - `<protected>false</protected>`, **false** olarak ayarlanmalıdır. **true** olarak ayarlandığında, cihazın şifreli bir parola beklemesine ve bunun şifresini çözmeye çalışmasına neden olur; bu da başarısız bağlantıyla sonuçlanabilir.
 
-- `<hex>53534944</hex>`, `<name><SSID of wifi profile></name>` onaltılı değerine ayarlanmalıdır. Windows 10 cihazları yanlış bir `x87D1FDE8 Remediation failed` hatası döndürebilir, ancak cihaz hala profili içerir.
+- `<hex>53534944</hex>`, `<name><SSID of wifi profile></name>` onaltılı değerine ayarlanmalıdır. Windows 10 cihazları yanlış `x87D1FDE8 Remediation failed` bir hata döndürebilir, ancak cihaz hala profili içerir.
 
-- XML 'de `&` (ampersan) gibi özel karakterler vardır. Özel karakterlerin kullanılması, XML 'nin beklenen şekilde çalışmasını engelleyebilir. 
+- XML, `&` (ampersan) gibi özel karakterler içerir. Özel karakterlerin kullanılması, XML 'nin beklenen şekilde çalışmasını engelleyebilir. 
 
 ### <a name="example"></a>Örnek
 
@@ -228,22 +228,22 @@ Aşağıdaki örnekte EAP tabanlı Wi-Fi profili için XML kodu verilmiştir: Do
 Ayrıca, var olan bir Wi-Fi bağlantısından bir XML dosyası da oluşturabilirsiniz. Bir Windows bilgisayarda aşağıdaki adımları kullanın:
 
 1. C:\WiFi. gibi, dışarıya aktarılmış W-Fi profilleri için yerel bir klasör oluşturun
-2. Yönetici olarak bir komut istemi açın ( **yönetici olarak çalıştır** > `cmd`sağ tıklayın).
-3. `netsh wlan show profiles`'i çalıştırın. Tüm profillerin adları listelenir.
-4. `netsh wlan export profile name="YourProfileName" folder=c:\Wifi`'i çalıştırın. Bu komut, c:\Wifi. içinde `Wi-Fi-YourProfileName.xml` adlı bir dosya oluşturur
+2. Yönetici olarak bir komut istemi açın ( `cmd`  >  **yönetici olarak çalıştır**' a sağ tıklayın).
+3. `netsh wlan show profiles` öğesini çalıştırın. Tüm profillerin adları listelenir.
+4. `netsh wlan export profile name="YourProfileName" folder=c:\Wifi` öğesini çalıştırın. Bu komut c:\Wifi. içinde adlı `Wi-Fi-YourProfileName.xml` bir dosya oluşturur
 
-    - Önceden paylaşılan anahtar içeren bir Wi-Fi profilini dışarı aktarıyorsanız komuta `key=clear` ekleyin:
+    - Önceden paylaşılan anahtar içeren bir Wi-Fi profilini dışarı aktarıyorsanız komuta ekleyin `key=clear` :
   
         `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
 
-        `key=clear`, profili başarılı bir şekilde kullanmak için gereken anahtarı düz metin olarak dışarı aktarır.
+        `key=clear`, profili başarılı bir şekilde kullanmak için gereken anahtarı düz metin olarak dışa aktarır.
 
 XML dosyasına sahip olduktan sonra, XML sözdizimini kopyalayıp OMA-URI ayarları > **veri türü**' ne yapıştırın. [Özel bir profil oluşturma](#create-a-custom-profile) (Bu makalede) adımları listeler.
 
 > [!TIP]
-> `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}` tüm profilleri XML biçiminde de içerir.
+> `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}`XML biçimindeki tüm profilleri de içerir.
 
-## <a name="best-practices"></a>Önerilen uygulamalar
+## <a name="best-practices"></a>En iyi uygulamalar
 
 - PSK ile bir Wi-Fi profili dağıtmadan önce cihazın uç noktaya doğrudan bağlanabildiğini doğrulayın.
 

@@ -17,34 +17,34 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed5ff548d28a5bc973c43c84861b9b256b41a203
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696282"
 ---
 # <a name="see-device-details-in-intune"></a>Intune'da cihaz ayrıntılarına bakın
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-**Cihazlar** özelliği, yönettiğiniz cihazlarla ilgili olarak donanım ve yüklü uygulamalar gibi ek ayrıntılar sağlar.
+**Cihazlar** özelliği, yönettiğiniz cihazlara donanım ve yüklü uygulamalar dahil ek ayrıntılar sağlar.
 
 Bu makalede, tüm cihazlarınızı ve özelliklerini Azure portalında nasıl görüntüleyeceğiniz gösterilir.
 
 ## <a name="view-the-device-details"></a>Cihaz ayrıntılarını görüntüleme
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-3. **Cihazlar** > **Tüm cihazlar**’a gidin ve listelenen cihazlarınızdan birini seçip ayrıntılarını görüntüleyin:
+3. **Cihazlar** > **tüm cihazlar** ' ı seçin > listelenen cihazlarınızdan birini seçerek ayrıntılarını açın:
 
    - **Genel bakış** cihaz adını gösterir ve cihazın kişisel veya kurumsal bir cihaz, seri numarası, birincil kullanıcı ve daha fazlası gibi bazı temel özelliklerini listeler. Cihazda şunları yapabilirsiniz:
-      - [Devre Dışı Bırak](devices-wipe.md#retire)
+      - [Devre dışı bırak](devices-wipe.md#retire)
       - [Silme](devices-wipe.md#wipe)
       - [Sil](devices-wipe.md#delete-devices-from-the-intune-portal)
       - [Uzaktan kilitleme](device-remote-lock.md)
       - [Eşitle](device-sync.md)
-      - [Geçiş Kodunu Sıfırla](device-passcode-reset.md)
+      - [Geçiş kodunu sıfırla](device-passcode-reset.md)
       - [Yeniden başlatma](device-restart.md) (yalnızca Windows)
-      - [Yeni Başlangıç](device-fresh-start.md) (yalnızca Windows)
+      - [Yeni başlangıç](device-fresh-start.md) (yalnızca Windows)
       - [Autopilot sıfırlaması](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (yalnızca Windows)
       - [Hızlı tarama](../configuration/device-restrictions-windows-10.md) (yalnızca Windows 10)
       - [Tam tarama](../configuration/device-restrictions-windows-10.md) (yalnızca Windows 10)
@@ -68,9 +68,9 @@ Cihazlar tarafından kullanılan taşıyıcıya bağlı olarak, tüm ayrıntıla
 > [!Note]  
 > Donanım ve yazılım envanteri, Intune hizmetinde her 7 günde bir yenilenir.
 
-|Ayrıntı|Açıklama|Platfveyam| 
+|Ayrıntı|Açıklama|Platform| 
 |--------------|----------------------|----|  
-|Ad|Cihazın adı.|Windows, iOS|
+|Adı|Cihazın adı.|Windows, iOS|
 |Yönetim adı|Yalnızca konsolda kullanılan cihaz adı. Bu adın değiştirilmesi, cihazdaki adı değiştirmez.|Windows, iOS|
 |UDID|Cihazın Benzersiz Cihaz tanımlayıcısı.|Windows, iOS|
 |Intune Cihaz Kimliği|Cihazı benzersiz şekilde tanımlayan GUID.|Windows, iOS|
@@ -78,7 +78,7 @@ Cihazlar tarafından kullanılan taşıyıcıya bağlı olarak, tüm ayrıntıla
 |Paylaşılan cihaz|**Evet** ise cihaz birden fazla kullanıcı tarafından paylaşılır.|Windows, iOS|
 |Kullanıcı onaylı kayıt|Yanıt **Evet**ise, cihazın cihazdaki belirli güvenlik ayarlarını yönetmesine olanak tanıyan Kullanıcı onaylı kaydı vardır.|Windows, iOS|
 |İşletim sistemi|Cihazda kullanılan işletim sistemi.|Windows, iOS|
-|İşletim sistemi sürümü|Cihazdaki işletim sisteminin sürümü.|Windows, iOS|
+|İşletim sistemi sürümü|Cihazdaki işletim sistemi sürümü.|Windows, iOS|
 |İşletim sistemi dili|Cihazdaki işletim sisteminin dil kümesi.|Windows, iOS|
 |Yapı numarası|İşletim sisteminin yapı numarası.|Android|
 |Güvenlik Düzeltme eki düzeyi|Cihaz için güvenlik düzeltme eki düzeyi.|Android|

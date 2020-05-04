@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ce2a685abc1997e0152fcc2cf087b8c54d2253c3
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324636"
 ---
 # <a name="add-android-enterprise-system-apps-to-microsoft-intune"></a>Android kurumsal sistem uygulamalarını Microsoft Intune ekleyin
@@ -34,12 +34,12 @@ Bir cihaza veya kullanıcı grubuna uygulama atamadan önce uygulamayı ilk olar
 Aşağıdakileri yaparak Azure portal Intune 'a bir Android kurumsal sistem uygulaması ekleyebilirsiniz:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tüm uygulamalar** ** >  > ** **Ekle**' yi seçin.
+2. **Uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, kullanılabilir **diğer** türler altında **Android kurumsal sistem uygulaması**' nı seçin.
-4. **Seçin**’e tıklayın. **Uygulama ekleme** adımları görüntülenir.
+4. **Seç**' e tıklayın. **Uygulama ekleme** adımları görüntülenir.
 **Uygulama bilgileri** sayfasında, uygulama ayrıntılarını ekleyin:
     - **Uygulama adı**: uygulamanın adını girin.
-    - **Yayımcı**: Uygulama yayıncısının adını girin.  
+    - **Yayımcı**: Uygulama yayımcısının adını girin.  
     - **Paket adı**: bir paket adı girin. Intune, paket adının geçerli olduğunu doğrular.
 5. **İleri** ' ye tıklayarak **kapsam etiketleri** sayfasını görüntüleyin.
 8. İsteğe bağlı olarak uygulamanın kapsam etiketlerini eklemek için **kapsam etiketlerini Seç** ' e tıklayın. Daha fazla bilgi için bkz. [Dağıtılmış BT için rol tabanlı erişim denetimi (RBAC) ve kapsam etiketleri kullanma](../fundamentals/scope-tags.md).

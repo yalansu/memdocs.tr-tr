@@ -1,7 +1,7 @@
 ---
 title: Microsoft Intune-Azure 'da iOS/ıpados cihazları için Wi-Fi ayarlarını yapılandırma | Microsoft Docs
 titleSuffix: ''
-description: İOS/ıpados cihazları için bir WiFi cihaz yapılandırma profili oluşturun veya ekleyin. Microsoft Intune’da sertifika ekleme, EAP türü seçme ve bir kimlik doğrulama yöntemi seçme gibi farklı ayarları inceleyin.
+description: İOS/ıpados cihazları için bir WiFi cihaz yapılandırma profili oluşturun veya ekleyin. Microsoft Intune’da sertifika ekleme, EAP türü seçme ve bir kimlik doğrulama yöntemi seçme gibi farklı ayarları görün.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 27a37642891693f59c8dc38aa9bb047b251084ca
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327362"
 ---
 # <a name="add-wi-fi-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune 'de iOS ve ıpados cihazları için Wi-Fi ayarları ekleme
@@ -47,7 +47,7 @@ Bu makalede bu ayarlar açıklanır.
 - **Gizli ağ**: ağ SSID 'si yayınlanmadıysa **Etkinleştir** ' i seçin. Ağın SSID 'si yayınlandıysanız ve görülemiyorsa **devre dışı bırak** ' ı seçin.
 - **Güvenlik türü**: Wi-Fi ağında kimlik doğrulamak için kullanılacak güvenlik protokolünü seçin. Seçenekleriniz şunlardır:
 
-  - **Açık (kimlik doğrulamasız)** : Bu seçeneği yalnızca ağ güvenlik altına alınmamış olduğunda kullanın.
+  - **Açık (kimlik doğrulamasız)**: Bu seçeneği yalnızca ağ güvenlik altına alınmamış olduğunda kullanın.
   - **WPA/WPA2 - Kişisel**: **Önceden paylaşılan anahtar** olarak parolayı girin. Kuruluşunuzun ağı ayarlandığında veya yapılandırıldığında bir parola veya ağ anahtarı da yapılandırılır. PSK değeri için bu parolayı veya ağ anahtarını girin.
   - **4**
 
@@ -78,7 +78,7 @@ Bu makalede bu ayarlar açıklanır.
 
   - **EAP-TLS**: Ayrıca şunları girin:
 
-    - **Sunucu güveni** - **sertifika sunucusu adları**: güvenilir SERTIFIKA yetkiliniz (CA) tarafından kablosuz ağ erişim sunucularınıza verilen sertifikalarda kullanılan bir veya daha fazla ortak ad **ekleyin** . Örneğin, `mywirelessserver.contoso.com` veya `mywirelessserver`ekleyin. Bu bilgiyi girdikten sonra bu Wi-Fi ağına bağlanırken kullanıcının cihazında görüntülenen dinamik güven penceresini atlayabilirsiniz.
+    - **Sunucu güven** - **sertifikası sunucu adları**: güvenilir sertifika yetkiliniz (CA) tarafından kablosuz ağ erişim sunucularınıza verilen sertifikalarda kullanılan bir veya daha fazla ortak ad **ekleyin** . Örneğin, veya `mywirelessserver`ekleyin `mywirelessserver.contoso.com` . Bu bilgiyi girdikten sonra bu Wi-Fi ağına bağlanırken kullanıcının cihazında görüntülenen dinamik güven penceresini atlayabilirsiniz.
     - **Sunucu doğrulaması için kök sertifika**: Mevcut bir güvenilen kök sertifika profilini seçin. Bu sertifika, istemcinin kablosuz ağ erişim sunucusunun sertifikasına güvenmesini sağlar.
 
     - **Istemci kimlik doğrulaması** Bir **kimlik doğrulama yöntemi**seçin. Seçenekleriniz şunlardır:
@@ -87,11 +87,11 @@ Bu makalede bu ayarlar açıklanır.
 
       - **Sertifikalar**: Cihaza da dağıtılmış olan SCEP veya PKCS istemci sertifikası profilini seçin. Bu sertifika, bağlantının kimliğini doğrulamak için cihaz tarafından sunucuya sunulan kimliktir.
 
-    - **Kimlik gizliliği (dış kimlik)** : EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir, örneğin `anonymous`. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.
+    - **Kimlik gizliliği (dış kimlik)**: EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir, örneğin `anonymous`. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.
 
   - **EAP-TTLS**: Ayrıca şunları girin:
 
-    - **Sunucu güveni** - **sertifika sunucusu adları**: güvenilir SERTIFIKA yetkiliniz (CA) tarafından kablosuz ağ erişim sunucularınıza verilen sertifikalarda kullanılan bir veya daha fazla ortak ad **ekleyin** . Örneğin, `mywirelessserver.contoso.com` veya `mywirelessserver`ekleyin. Bu bilgiyi girdikten sonra bu Wi-Fi ağına bağlanırken kullanıcının cihazında görüntülenen dinamik güven penceresini atlayabilirsiniz.
+    - **Sunucu güven** - **sertifikası sunucu adları**: güvenilir sertifika yetkiliniz (CA) tarafından kablosuz ağ erişim sunucularınıza verilen sertifikalarda kullanılan bir veya daha fazla ortak ad **ekleyin** . Örneğin, veya `mywirelessserver`ekleyin `mywirelessserver.contoso.com` . Bu bilgiyi girdikten sonra bu Wi-Fi ağına bağlanırken kullanıcının cihazında görüntülenen dinamik güven penceresini atlayabilirsiniz.
     - **Sunucu doğrulaması için kök sertifika**: Mevcut bir güvenilen kök sertifika profilini seçin. Bu sertifika, istemcinin kablosuz ağ erişim sunucusunun sertifikasına güvenmesini sağlar.
 
     - **İstemci Kimlik Doğrulaması** - Bir **Kimlik doğrulama yöntemi** seçin. Seçenekleriniz şunlardır:
@@ -99,19 +99,19 @@ Bu makalede bu ayarlar açıklanır.
       - **Türetilmiş kimlik bilgileri**: kullanıcının akıllı kartından türetilmiş bir sertifika kullanın. Türetilmiş bir kimlik bilgisi veren yapılandırılmamışsa, Intune sizden bir tane eklemeniz istenir. Daha fazla bilgi için bkz. [Microsoft Intune türetilmiş kimlik bilgilerini kullanma](../protect/derived-credentials.md).
 
       - **Kullanıcı adı ve Parola**: Bağlantının kimliğini doğrulamak için kullanıcıdan bir kullanıcı adı ve parola girmesini isteyin. Şunları da girin:
-        - **EAP dışı yöntem (iç kimlik)** : Bağlantının kimliğini nasıl doğrulayacağınızı seçin. Wi-Fi ağınızda yapılandırılmış olan protokolü seçtiğinizden emin olun.
+        - **EAP dışı yöntem (iç kimlik)**: Bağlantının kimliğini nasıl doğrulayacağınızı seçin. Wi-Fi ağınızda yapılandırılmış olan protokolü seçtiğinizden emin olun.
 
-          Seçenekleriniz şunlardır: **Şifrelenmemiş parola (PAP)** , **Karşılıklı Kimlik Doğrulama Protokolü (CHAP)** , **Microsoft CHAP (MS-CHAP)** veya **Microsoft CHAP Sürüm 2 (MS-CHAP v2)**
+          Seçenekleriniz şunlardır: **Şifrelenmemiş parola (PAP)**, **Karşılıklı Kimlik Doğrulama Protokolü (CHAP)**, **Microsoft CHAP (MS-CHAP)** veya **Microsoft CHAP Sürüm 2 (MS-CHAP v2)**
 
       - **Sertifikalar**: Cihaza da dağıtılmış olan SCEP veya PKCS istemci sertifikası profilini seçin. Bu sertifika, bağlantının kimliğini doğrulamak için cihaz tarafından sunucuya sunulan kimliktir.
 
-      - **Kimlik gizliliği (dış kimlik)** : EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir, örneğin `anonymous`. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.
+      - **Kimlik gizliliği (dış kimlik)**: EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir, örneğin `anonymous`. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.
 
   - **LEAP**
 
   - **PEAP**: Ayrıca şunları girin:
 
-    - **Sunucu güveni** - **sertifika sunucusu adları**: güvenilir SERTIFIKA yetkiliniz (CA) tarafından kablosuz ağ erişim sunucularınıza verilen sertifikalarda kullanılan bir veya daha fazla ortak ad **ekleyin** . Örneğin, `mywirelessserver.contoso.com` veya `mywirelessserver`ekleyin. Bu bilgiyi girdikten sonra bu Wi-Fi ağına bağlanırken kullanıcının cihazında görüntülenen dinamik güven penceresini atlayabilirsiniz.
+    - **Sunucu güven** - **sertifikası sunucu adları**: güvenilir sertifika yetkiliniz (CA) tarafından kablosuz ağ erişim sunucularınıza verilen sertifikalarda kullanılan bir veya daha fazla ortak ad **ekleyin** . Örneğin, veya `mywirelessserver`ekleyin `mywirelessserver.contoso.com` . Bu bilgiyi girdikten sonra bu Wi-Fi ağına bağlanırken kullanıcının cihazında görüntülenen dinamik güven penceresini atlayabilirsiniz.
     - **Sunucu doğrulaması için kök sertifika**: Mevcut bir güvenilen kök sertifika profilini seçin. Bu sertifika, istemcinin kablosuz ağ erişim sunucusunun sertifikasına güvenmesini sağlar.
 
     - **İstemci Kimlik Doğrulaması** - Bir **Kimlik doğrulama yöntemi** seçin. Seçenekleriniz şunlardır:
@@ -122,7 +122,7 @@ Bu makalede bu ayarlar açıklanır.
 
       - **Sertifikalar**: Cihaza da dağıtılmış olan SCEP veya PKCS istemci sertifikası profilini seçin. Bu sertifika, bağlantının kimliğini doğrulamak için cihaz tarafından sunucuya sunulan kimliktir.
 
-      - **Kimlik gizliliği (dış kimlik)** : EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir, örneğin `anonymous`. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.
+      - **Kimlik gizliliği (dış kimlik)**: EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir, örneğin `anonymous`. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.
 
 - **Proxy ayarları**: Seçenekleriniz şunlardır:
   - **Hiçbiri**: Hiçbir ara sunucu ayarı yapılandırılmaz.

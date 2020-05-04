@@ -17,17 +17,17 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
 ms.openlocfilehash: 6b5d0f88222c8d48da4f91ff3cf8d4628ccb179d
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551586"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Intune’da Endpoint Protection ayarları ekleme
 
 Intune ile, cihazlarda aşağıdakiler de dahil olmak üzere ortak uç nokta koruma güvenlik özelliklerini yönetmek için cihaz yapılandırma profillerini kullanabilirsiniz:
 
-- Güvenlik Duvarı
+- Güvenlik duvarı
 - BitLocker
 - Uygulamalara izin verme ve bunları engelleme
 - Microsoft Defender ve şifreleme
@@ -46,13 +46,13 @@ Bir profil oluşturmadan önce, Intune 'un desteklenen her platform için yönet
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 
 3. Aşağıdaki özellikleri girin:
 
     - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:
 
-        - **macOS**
+        - **Mac OS**
         - **Windows 10 ve üzeri**
 
     - **Profil**: **Endpoint Protection**' ı seçin.
@@ -63,21 +63,21 @@ Bir profil oluşturmadan önce, Intune 'un desteklenen her platform için yönet
     - **Ad**: ilke için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir ilke adı **MacOS: tüm MacOS cihazları Için güvenlik duvarını yapılandıran Endpoint Protection profilidir**.
     - **Açıklama**: ilke için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
 
-6. **İleri**'yi seçin.
+6. **İleri**’yi seçin.
 
 7. **Yapılandırma ayarları**' nda, seçtiğiniz platforma bağlı olarak, yapılandırabileceğiniz ayarlar farklıdır. Ayrıntılı ayarlar için platformunuzu seçin:
 
    - [macOS ayarları](endpoint-protection-macos.md)
    - [Windows 10 ayarları](endpoint-protection-windows-10.md)
 
-8. **İleri**'yi seçin.
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili `US-NC IT Team` veya `JohnGlenn_ITDepartment`gıbı belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+8. **İleri**’yi seçin.
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
-    **İleri**'yi seçin.
+    **İleri**’yi seçin.
 
 10. **Atamalar**' da, profilinizi alacak kullanıcıları veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](../configuration/device-profile-assign.md).
 
-    **İleri**'yi seçin.
+    **İleri**’yi seçin.
 
 11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
 
@@ -99,7 +99,7 @@ Intune 'un yönetebileceği güvenlik duvarı kuralları, Windows [güvenlik duv
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 
 3. *Platform*için **Windows 10 ve üzeri**' i seçin ve ardından *profil* **Endpoint Protection**' ı seçin.
 

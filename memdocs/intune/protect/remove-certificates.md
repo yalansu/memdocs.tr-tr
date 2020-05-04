@@ -18,10 +18,10 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
 ms.openlocfilehash: b6303d7d98e718c2a4f54b199bf90a3bd0684bf8
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084757"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Microsoft Intune’da SCEP ve PKCS sertifikalarını kaldırma
@@ -92,7 +92,7 @@ PKCS sertifikaları cihazda *kalır* (sertifikalar iptal edilmez veya kaldırıl
 - Bir yönetici, PKCS profilini değiştirir veya güncelleştirir.
 - Bir sertifika profili grup atamasından kaldırılır.
 
-## <a name="ios-devices"></a>iOS aygıtları:
+## <a name="ios-devices"></a>iOS cihazları
 
 ### <a name="scep-certificates"></a>SCEP sertifikaları
 
@@ -247,4 +247,4 @@ PKCS sertifikaları cihazda kalır (sertifikalar iptal edilmez veya kaldırılma
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Kimlik doğrulaması için sertifikaları kullanma](certificates-configure.md)
+[Kimlik doğrulama için sertifika kullanma](certificates-configure.md)

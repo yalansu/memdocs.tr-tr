@@ -1,6 +1,6 @@
 ---
 title: Microsoft Intune-Azure 'da cihaz uyumluluk ilkeleri oluşturma | Microsoft Docs
-description: Yetkisizkullanımsüresinde durumunu, koşullu erişimle çalışma, atanmış bir ilke olmadan cihazları işleme ve Azure portal ile klasik portalda uyumluluk farklarını kullanarak cihaz uyumluluk ilkeleri oluşturun, durum ve önem düzeylerine genel bakış yapın. Microsoft Intune
+description: Yetkisizkullanımsüresinde durumunu, koşullu erişim ile çalışma, atanmış bir ilke olmadan cihazları işleme ve Azure portal ile klasik portalda uyumluluk farklarını kullanarak cihaz uyumluluk ilkeleri oluşturun, durum ve önem düzeylerine genel bakış yapın Microsoft Intune
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551377"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Microsoft Intune’da uyumluluk ilkesi oluşturma
@@ -53,7 +53,7 @@ Cihaz uyumluluk ilkelerini kullanmak için aşağıdakilerden emin olun:
   - Mac OS
   - Windows 10
   - Windows 8.1
-  - WVPN profillerinidows Phone 8.1
+  - Windows Phone 8.1
 
 - Cihazları Intune'a kaydetme (uyumluluk durumunu görmek için gereklidir)
 
@@ -66,13 +66,13 @@ Cihaz uyumluluk ilkelerini kullanmak için aşağıdakilerden emin olun:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Ilke oluştur** > **cihaz** > **uyumluluk ilkeleri** > **ilkeleri** ' ni seçin.
+2. **Cihaz** > **uyumluluk ilkeleri** > **Policies**ilkeleri > **ilke oluştur**' u seçin.
 
 3. Aşağıdaki seçeneklerden Bu ilke için bir **Platform** seçin:
-   - *Android Cihaz Yöneticisi*
+   - *Android cihaz yöneticisi*
    - *Android Kurumsal*
-   - *iOS/ıpados*
-   - *macOS*
+   - *iOS/iPadOS*
+   - *Mac OS*
    - *Windows Phone 8.1*
    - *Windows 8.1 ve üzeri*
    - *Windows 10 ve üzeri*
@@ -88,10 +88,10 @@ Cihaz uyumluluk ilkelerini kullanmak için aşağıdakilerden emin olun:
    Bir **Açıklama**belirtmeyi de tercih edebilirsiniz.
   
 5. **Uyumluluk ayarları** sekmesinde, kullanılabilir Kategoriler ' i genişletin ve ilkenizin ayarlarını yapılandırın.  Aşağıdaki makaleler her platformun ayarlarını anlatmaktadır:
-   - [Android Cihaz Yöneticisi](compliance-policy-create-android.md)
+   - [Android cihaz yöneticisi](compliance-policy-create-android.md)
    - [Android Kurumsal](compliance-policy-create-android-for-work.md)
-   - [iOS/ıpados](compliance-policy-create-ios.md)
-   - [macOS](compliance-policy-create-mac-os.md)
+   - [iOS/iPadOS](compliance-policy-create-ios.md)
+   - [Mac OS](compliance-policy-create-mac-os.md)
    - [Windows Phone 8.1, Windows 8.1 ve üzeri](compliance-policy-create-windows-8-1.md)
    - [Windows 10 ve üzeri](compliance-policy-create-windows.md)  
 
@@ -107,7 +107,7 @@ Cihaz uyumluluk ilkelerini kullanmak için aşağıdakilerden emin olun:
 
    Başka bir örnek, bir Uyumluluk ilkesine en az bir konum eklediğiniz konumların kullanımını içerir. Bu durumda, en az bir konum seçtiğinizde uyumsuzluk için varsayılan eylem geçerlidir. Cihaz seçilen konumlardan herhangi birine bağlı değilse, uyumlu değil olarak kabul edilir. Kullanıcılarınıza bir gün gibi yetkisiz kullanım süresi vermek için zamanlamayı yapılandırabilirsiniz.
 
-8. **Kapsam etiketleri** sekmesinde, ilkelerin `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli gruplara filtre uygulamasına yardımcı olması için Etiketler ' i seçin. Uyumluluk ilkelerinize ayar ekledikten sonra bir kapsam etiketi de ekleyebilirsiniz. 
+8. **Kapsam etiketleri** sekmesinde, ilkelerin `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli gruplara filtre uygulamak için Etiketler ' i seçin. Uyumluluk ilkelerinize ayar ekledikten sonra bir kapsam etiketi de ekleyebilirsiniz. 
 
    Kapsam etiketlerini kullanma hakkında bilgi için bkz. [ilkeleri filtrelemek için kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
@@ -152,9 +152,9 @@ Aşağıdaki tabloda bu noktalar özetlenmektedir:
 
 |Asıl uyumluluk durumu|Atanmış yetkisiz kullanım süresi değeri|Geçerli uyumluluk durumu|
 |---------|---------|---------|
-|Uyumsuz |Bir yetkisiz kullanım süresi atanmamış |Uyumsuz |
-|Uyumsuz |Dünün tarihi|Uyumsuz|
-|Uyumsuz |Yarının tarihi|YetkisizKullanımSüresinde|
+|NonCompliant |Bir yetkisiz kullanım süresi atanmamış |NonCompliant |
+|NonCompliant |Dünün tarihi|NonCompliant|
+|NonCompliant |Yarının tarihi|InGracePeriod|
 
 Cihaz uyumluluk ilkelerini izleme hakkında daha fazla bilgi için bkz. [Intune Cihaz uyumluluk ilkelerini izleme](compliance-policy-monitor.md).
 
@@ -162,13 +162,13 @@ Cihaz uyumluluk ilkelerini izleme hakkında daha fazla bilgi için bkz. [Intune 
 
 Bir cihazda birden fazla uyumluluk ilkesi varsa ve cihazın bu atanmış uyumluluk ilkelerinden iki veya daha fazlası için farklı uyumluluk durumları varsa, cihaza tek bir uyumluluk durumu atanır. Bu atama, uyumluluk durumlarına atanan kavramsal önem derecesi düzeyine dayalı olarak yapılır. Uyumluluk durumlarının önem derecesi aşağıdaki gibidir:
 
-|Durum  |Önem Derecesi  |
+|Durum  |Severity  |
 |---------|---------|
-|Bilinmiyor     |1\.|
+|Bilinmiyor     |1|
 |NotApplicable     |2|
 |Uyumlu|3|
-|YetkisizKullanımSüresinde|4|
-|Uyumsuz|5|
+|InGracePeriod|4|
+|NonCompliant|5|
 |Hata|6|
 
 Bir cihazda birden fazla uyumluluk ilkesi varsa, bu ilkelerden en yüksek önem derecesine sahip olanı bu cihaza atanır.

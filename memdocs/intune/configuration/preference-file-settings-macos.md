@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9cb8cea30b53c5619580b289f73529668d71e909
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551500"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Microsoft Intune kullanarak macOS cihazlarına bir özellik listesi dosyası ekleyin
@@ -50,7 +50,7 @@ Bu ayarlar, Intune'da bir cihaz yapılandırma profiline eklenir ve daha sonra m
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Platform**: **MacOS** seçin
@@ -62,12 +62,12 @@ Bu ayarlar, Intune'da bir cihaz yapılandırma profiline eklenir ve daha sonra m
     - **Ad**: ilke için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir ilke adı **MacOS: cihazlarda Microsoft Defender ATP 'yi yapılandıran tercih dosyası Ekle**' dir.
     - **Açıklama**: ilke için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
 
-6. **İleri**'yi seçin.
+6. **İleri**’yi seçin.
 
 7. **Yapılandırma ayarları**' nda ayarlarınızı yapılandırın:
 
-    - **Tercih etki alanı adı**: özellik listesi dosyaları genellikle Web tarayıcıları (Microsoft Edge), [Microsoft Defender Gelişmiş tehdit koruması](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)ve özel uygulamalar için kullanılır. Bir tercih etki alanı oluşturduğunuzda, bir paket KIMLIĞI de oluşturulur. `com.company.application`gibi paket KIMLIĞINI girin. Örneğin `com.Contoso.applicationName`, `com.Microsoft.Edge`veya `com.microsoft.wdav`girin.
-    - **Özellik listesi dosyası**: uygulamanızla ilişkili özellik listesi dosyasını seçin. Bir `.plist` veya `.xml` dosyası olduğundan emin olun. Örneğin, bir `YourApp-Manifest.plist` veya `YourApp-Manifest.xml` dosyası yükleyin.
+    - **Tercih etki alanı adı**: özellik listesi dosyaları genellikle Web tarayıcıları (Microsoft Edge), [Microsoft Defender Gelişmiş tehdit koruması](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)ve özel uygulamalar için kullanılır. Bir tercih etki alanı oluşturduğunuzda, bir paket KIMLIĞI de oluşturulur. Paket KIMLIĞINI girin, örneğin `com.company.application`. Örneğin,, veya `com.Contoso.applicationName` `com.microsoft.wdav`girin `com.Microsoft.Edge`.
+    - **Özellik listesi dosyası**: uygulamanızla ilişkili özellik listesi dosyasını seçin. Bir `.plist` veya `.xml` dosyası olduğundan emin olun. Örneğin, bir `YourApp-Manifest.plist` veya `YourApp-Manifest.xml` dosyasını karşıya yükleyin.
     - **Dosya içeriği**: Özellik Listesi dosyasındaki önemli bilgiler gösterilir. Anahtar bilgilerini değiştirmeniz gerekiyorsa, liste dosyasını başka bir düzenleyicide açın ve ardından dosyayı Intune 'A yeniden yükleyin.
 
     Dosyanızın doğru biçimlendirildiğinden emin olun. Dosya yalnızca anahtar değer çiftlerine sahip olmalı ve `<dict>`, `<plist>`veya `<xml>` etiketlerinde sarmalanmamalıdır. Örneğin, özellik listesi dosyanız aşağıdaki dosyaya benzer olmalıdır:
@@ -80,14 +80,14 @@ Bu ayarlar, Intune'da bir cihaz yapılandırma profiline eklenir ve daha sonra m
     ...
     ```
 
-8. **İleri**'yi seçin.
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili `US-NC IT Team` veya `JohnGlenn_ITDepartment`gıbı belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+8. **İleri**’yi seçin.
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
-    **İleri**'yi seçin.
+    **İleri**’yi seçin.
 
 10. **Atamalar**' da, profilinizi alacak kullanıcıları veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
 
-    **İleri**'yi seçin.
+    **İleri**’yi seçin.
 
 11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
 

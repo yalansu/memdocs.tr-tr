@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d768859d65fff18d6ce94a26b48bb28f57417af6
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: 8830d0c18bb4ef257abcffd75d001b9d8af5f502
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808072"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81220592"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Android kurumsal tam olarak yönetilen cihazların Intune kaydını ayarlama 
 
-Android kurumsal tam olarak yönetilen cihazlar, tek bir kullanıcıyla ilişkili ve özel olarak çalışan ve kişisel kullanım için kullanılan, şirkete ait cihazlardır. Yöneticiler cihazı tümüyle yönetebilir ve ilke denetimlerini iş profilleri için kullanılamaz hale uygulayabilir, örneğin:
+Android Kurumsal tam olarak yönetilen cihazları, tek kullanıcıyla ilişkilendirilmiş ve yalnızca iş için kullanılan (kişisel amaçlarla kullanılmayan) şirkete ait cihazlardır. Yöneticiler cihazı tümüyle yönetebilir ve ilke denetimlerini iş profilleri için kullanılamaz hale uygulayabilir, örneğin:
 - Yalnızca yönetilen Google Play uygulama yüklemeye izin verin.
 - Yönetilen uygulamaların kaldırılmasını engelleyin.
 - Kullanıcıların cihazların fabrika ayarlarına sıfırlamasını ve bu şekilde devam etmelerini önleyin.
 
-Intune, Android kurumsal tam olarak yönetilen cihazlar dahil olmak üzere Android kurumsal cihazlara uygulama ve ayarlar dağıtmanıza yardımcı olur. Android Kurumsal hakkında belirli ayrıntıları öğrenmek için bkz. [Android Kurumsal gereksinimleri](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
+Intune, Android kurumsal tam olarak yönetilen cihazlar dahil olmak üzere Android kurumsal cihazlara uygulama ve ayarlar dağıtmanıza yardımcı olur. Android Enterprise hakkında ayrıntılı bilgi için bkz. [Android Enterprise Requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
 ## <a name="technical-requirements"></a>Teknik gereksinimler
 
@@ -50,17 +50,17 @@ Yukarıdaki gereksinimler karşılanıyorsa cihaz üreticisi/OEM üzerinde bir k
 Android kurumsal tam olarak yönetilen cihaz yönetimini ayarlamak için aşağıdaki adımları izleyin:
 
 1. Mobil cihazları yönetmeye hazırlanmak için [mobil cihaz yönetimi (MDM) yetkilisini **Microsoft Intune**olarak ayarlamanız](../fundamentals/mdm-authority-set.md)gerekir. Bu öğeyi yalnızca mobil cihaz yönetimi için Intune’u ilk defa kurduğunuzda ayarlarsınız.
-2. [Intune kiracı hesabınızı Android Kurumsal hesabınıza bağlayın](connect-intune-android-enterprise.md).
+2. [Intune kiracı Hesabınızı Android Kurumsal hesabınıza bağlayın](connect-intune-android-enterprise.md).
 3. [Şirkete ait Kullanıcı cihazlarını etkinleştir](#enable-corporate-owned-user-devices)
 4. [Tam olarak yönetilen cihazları kaydedin](#enroll-the-fully-managed-devices).
 
 ### <a name="enable-corporate-owned-user-devices"></a>Şirkete ait Kullanıcı cihazlarını etkinleştir
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve **cihazlar** > **Android** > Android **kaydı**  > **şirkete ait, tam olarak yönetilen Kullanıcı cihazları**' nı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve **cihazlar** > **Android** > **Android kayıt**  > **şirkete ait, tam olarak yönetilen Kullanıcı cihazları ' nı**seçin.
 2. **Kullanıcıların şirkete ait Kullanıcı cihazlarını kaydetmesine Izin ver**altında **Evet**' i seçin.
 
 > [!NOTE]
-> *Bir cihazın uyumlu denetim olarak işaretlenmesini gerektir* ve **tüm bulut uygulamaları**, **Android** ve **TARAYıCıLAR** Için geçerli olmasını gerektiren bir Azure AD koşullu erişim ilkeniz varsa, bu ilkeden **Microsoft Intune** bulut uygulamasını dışmalısınız. Bunun nedeni, Android Kurulum işlemlerinin kaydolma sırasında kullanıcılarınızın kimliğini doğrulamak için bir Chrome sekmesi kullanmamasıdır. Daha fazla bilgi için bkz. [Azure AD koşullu erişim belgeleri](https://docs.microsoft.com/azure/active-directory/conditional-access/).
+> Bir cihazın uyumlu izin denetimi veya bir engelleme ilkesi *olarak işaretlenmesini gerektir* ve **tüm bulut uygulamaları**, **Android**ve **TARAYıCıLAR**Için geçerli olmasını gerektiren bir Azure AD koşullu erişim ilkeniz varsa, bu ilkeden **Microsoft Intune** Cloud App 'i dışarıda bırakmanız gerekir. Bunun nedeni, Android Kurulum işleminin kayıt sırasında kullanıcılarınızın kimliğini doğrulamak için bir Chrome sekmesi kullanmamasıdır. Daha fazla bilgi için bkz. [Azure AD koşullu erişim belgeleri](https://docs.microsoft.com/azure/active-directory/conditional-access/).
 
 Bu ayar **Evet**olarak ayarlandığında, Intune kiracınız için bir kayıt belirteci (rastgele bir dize) ve QR kodu sağlar. Bu tek kayıt belirteci tüm kullanıcılarınız için geçerlidir ve sona ermez. Cihazın Android işletim sistemine ve sürümüne bağlı olarak, cihazı kaydetmek için belirteci veya QR kodunu kullanabilirsiniz.
 

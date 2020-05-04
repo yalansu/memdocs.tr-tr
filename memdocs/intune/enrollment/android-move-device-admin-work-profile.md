@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80624925"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Android cihazlarını cihaz yöneticisinden iş profili yönetimine taşıma
@@ -45,23 +45,23 @@ Kullanıcılar bu nedenle uyumsuz olduklarını görtiklerinde, **Çözümle**' 
 
 ## <a name="create-device-compliance-policy"></a>Cihaz uyumluluk ilkesi oluştur
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nde, **cihaz** > **Uyumluluk Ilkeleri** > **ilkeler** > **ilke oluştur**' u seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihaz** > **uyumluluk ilkeleri** > **ilkeleri** > **ilke oluştur**' u seçin.
 
-    ![İlke oluştur](./media/android-move-device-admin-work-profile/create-policy.png)
+    ![İlke oluşturma](./media/android-move-device-admin-work-profile/create-policy.png)
 
-2. **Ilke oluştur** sayfasında, **platformu** **Android Cihaz Yöneticisi** olarak ayarlayın > **oluşturun**.
-3. **Temel bilgiler** sayfasında, **ad** ve **Açıklama** > **İleri**' ye yazın.
+2. **İlke oluştur** sayfasında, **platformu** **Android Cihaz Yöneticisi** > **Oluştur**olarak ayarlayın.
+3. **Temel bilgiler** sayfasında, bir**sonraki** **adı** ve **açıklamayı** > yazın.
 
-    ![Temel bilgileri sayfası](./media/android-move-device-admin-work-profile/basics.png)
+    ![Temel bilgiler sayfası](./media/android-move-device-admin-work-profile/basics.png)
     
-4. **Uyumluluk ayarları** sayfasında, **cihaz durumu** bölümünde, **cihaz yöneticisiyle yönetilen blok cihazların** **İleri**' ye > ' i **Evet** olarak ayarlayın.
+4. **Uyumluluk ayarları** sayfasında, **cihaz durumu** bölümünde, **cihaz yöneticisiyle yönetilen blok cihazların** **İleri**' ye **Evet** > ' i belirleyin.
 
     ![Cihazları engelle](./media/android-move-device-admin-work-profile/block-devices.png)
 
 5. **Konumlar** sayfasında, bir **sonraki**> isterseniz konum ekleyebilirsiniz.
 6. **Uyumsuzluğa yönelik eylemler**' de, **son kullanıcıya e-posta gönder** eylemini ayarlayabilirsiniz.
 
-    ![E-posta gönder](./media/android-move-device-admin-work-profile/send-email.png)
+    ![E-posta gönderin](./media/android-move-device-admin-work-profile/send-email.png)
 
 
     E-postada, aşağıdaki URL 'YI kullanıcılara iletilerinize ekleyebilirsiniz. URL, **cihaz ayarlarını Güncelleştir** sayfasında Android şirket portalı başlatacaktır. Bu sayfa iş profili yönetimine geçmek için akışını başlatır.
@@ -104,5 +104,5 @@ Kullanıcılar, Android Şirket Portalı **cihaz ayarlarını Güncelleştir SAY
 - Android cihaz Android 6 veya daha önceki bir sürümünü kullanır. 
 
 ## <a name="next-steps"></a>Sonraki adımlar
-[Intune Ile Android iş profili cihazlarını yönetme](android-enterprise-overview.md)
-[Son Kullanıcı akışına bakın](../user-help/move-to-new-device-management-setup.md)
+[See the end user flow](../user-help/move-to-new-device-management-setup.md)
+[Intune ile Android iş profili cihazlarını yönetme](android-enterprise-overview.md) hakkında bilgi için bkz. Son Kullanıcı akışı

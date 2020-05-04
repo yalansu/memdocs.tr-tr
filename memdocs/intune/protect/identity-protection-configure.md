@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ded5572d5b20ee1c9f59d3f4b253c71e34ef497f
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80322855"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Microsoft Intune ile Windows 10 cihazlarda Iş için Windows Hello 'Yu kullanma
@@ -44,12 +44,12 @@ Bu makalede bir cihaz yapılandırma profili oluşturma konusu gösterilmektedir
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 
 3. Aşağıdaki özellikleri girin:
 
    - **Ad**: Yeni profil için açıklayıcı bir ad girin.
-   - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+   - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
    - **Platform**: **Windows 10 ve üstünü**seçin. İş İçin Windows Hello, yalnızca Windows 10 ve üzeri çalıştıran cihazlarda desteklenir.
    - **Profil türü**: **kimlik koruması**' nı seçin.
 
@@ -68,7 +68,7 @@ Bu makalede bir cihaz yapılandırma profili oluşturma konusu gösterilmektedir
      - **Etkinleştir**
      - **Yapılandırılmadı** (varsayılan)
 
-5. İşiniz bittiğinde **Tamam** > **Oluştur**’u seçerek değişikliklerinizi kaydedin.
+5. İşiniz bittiğinde, değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin.
 
 Profil oluşturulur ve profiller listesinde görüntülenir. Daha sonra, gereksinimlerinizi karşılamak için bu profili Kullanıcı ve cihaz gruplarına [atayın](../configuration/device-profile-assign.md) .
 

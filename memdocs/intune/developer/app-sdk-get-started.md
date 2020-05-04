@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 709824c91173edd0b322e1477c3204db34db7a9f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086293"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Microsoft Intune Uygulama SDK’sını kullanmaya başlayın
@@ -38,7 +38,7 @@ Uygulamanızı kaydetmeniz _**gerekmez**_ . Şirket tarafından veya şirketiniz
 
 ### <a name="if-your-app-will-be-released-to-a-public-app-store-like-the-apple-app-store-or-google-play"></a>Uygulamanız Apple App Store veya Google Play gibi bir genel uygulama mağazasında yayınlanacaksa:
 
-Öncelikle uygulamanızı Microsoft Intune’a kaydetmeniz ve kayıt koşullarını kabul etmeniz _**gerekir**_ . BT yöneticileri daha sonra yönetilen uygulamaya bir [Intune korumalı iş ortağı uygulaması](../apps/apps-supported-intune-apps.md#partner-apps)olarak listelenen bir uygulama koruma ilkesi uygulayabilir.
+Öncelikle uygulamanızı Microsoft Intune’a kaydetmeniz ve kayıt koşullarını kabul etmeniz _**gerekir**_. BT yöneticileri daha sonra yönetilen uygulamaya bir [Intune korumalı iş ortağı uygulaması](../apps/apps-supported-intune-apps.md#partner-apps)olarak listelenen bir uygulama koruma ilkesi uygulayabilir.
 
 Kayıt tamamlanıp Microsoft Intune ekibi tarafından onaylanana kadar, Intune yöneticilerinin uygulamanızın ayrıntılı bağlantısına uygulama koruma ilkesi uygulama seçeneği olmaz. Microsoft ayrıca uygulamanızı kendi [Microsoft Intune İş Ortakları sayfasına](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) ekler. Sayfada Intune uygulama koruma ilkelerini desteklediğini göstermek üzere uygulamanın simgesi görüntülenir.
 
@@ -82,11 +82,11 @@ Depolarımızdan çatallama ve çekme işlemleri yaparken kullanabileceğiniz bi
 
 Intune Uygulama SDK'sı ile uygulamanızı tümleştirmenize yardımcı olması için aşağıdaki geliştirici kılavuzlarından biri gerekir:
 
-* **[iOS için Intune Uygulama SDK’sı Geliştirici Kılavuzu](app-sdk-ios.md)** : Bu belgede, yerel iOS uygulamanızı Intune Uygulama SDK’sı ile etkinleştirme işleminde size adım adım yol gösterilir.
+* **[iOS için Intune Uygulama SDK’sı Geliştirici Kılavuzu](app-sdk-ios.md)**: Bu belgede, yerel iOS uygulamanızı Intune Uygulama SDK’sı ile etkinleştirme işleminde size adım adım yol gösterilir.
 
-* **[Android için Intune Uygulama SDK’sı Geliştirici Kılavuzu](app-sdk-android.md)** : Bu belgede, yerel Android uygulamanızı Intune Uygulama SDK’sı ile etkinleştirme işleminde size adım adım yol gösterilir.
+* **[Android için Intune Uygulama SDK’sı Geliştirici Kılavuzu](app-sdk-android.md)**: Bu belgede, yerel Android uygulamanızı Intune Uygulama SDK’sı ile etkinleştirme işleminde size adım adım yol gösterilir.
 
-* **[Intune Uygulama SDK’sı Xamarin Bağlamaları kılavuzu](app-sdk-xamarin.md)** : Bu belge, Intune uygulama koruma ilkeleri için Xamarin kullanarak iOS ve Android uygulamaları oluşturmanıza yardımcı olur.
+* **[Intune Uygulama SDK’sı Xamarin Bağlamaları kılavuzu](app-sdk-xamarin.md)**: Bu belge, Intune uygulama koruma ilkeleri için Xamarin kullanarak iOS ve Android uygulamaları oluşturmanıza yardımcı olur.
 
 
 
@@ -123,7 +123,7 @@ Tam sürüm numarası iki bileşenden oluşur:
 - **Sürüm**  
   Sürüm numarası uygulamanın insan tarafından okunabilir yayın numarasıdır. Bu, son kullanıcılar tarafından uygulamanın farklı yayınlarını tanımlamak için kullanılır.
 
-- **Derleme Numarası**  
+- **Yapı numarası**  
   Derleme numarası, uygulama algılamada ve uygulamayı programlı olarak yönetmek için kullanılabilen dahili bir numaradır. Derleme numarası, uygulamanın koddaki değişikliklere başvuran bir yinelemesini ifade eder.
 
 ### <a name="version-and-build-number-in-android-and-ios"></a>Android ve iOS’te sürüm ve derleme numarası
@@ -183,7 +183,7 @@ Uygulamanızı bir Azure kiracısında kaydettikten ve **tüm uygulamalar**altı
 7. **Izin Ekle**' ye tıklayın.
 
 > [!NOTE]
-> Uygulamanız bu kaynağa erişirken bir hata nedeniyle oturum açmanızı kısıtlıyor: https\://intunemam.microsoftonline.com, uygulamanızın Istemci KIMLIĞI ile msintuneappsdk@microsoft.com için bir notun gönderilmesi gerekir. Bu, bugün el ile yapılan bir onay işlemidir.
+> Uygulamanız bu kaynağa erişirken bir hata nedeniyle oturum açmanızı kısıtlıyor: https\://intunemam.microsoftonline.com, UYGULAMANıZıN istemci kimliği ile öğesine msintuneappsdk@microsoft.com bir Note gönderilmesi gerekir. Bu, bugün el ile yapılan bir onay işlemidir.
 
 ### <a name="badge-your-app-optional"></a>Uygulamanıza rozet ekleyin (isteğe bağlı)
 

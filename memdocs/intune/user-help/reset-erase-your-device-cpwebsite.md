@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: f7f86f595adf8b06f9a3d9da198d89b263e00574
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327962"
 ---
 # <a name="reset-device-from-company-portal-website"></a>Şirket Portalı Web sitesinden cihaz sıfırlama
@@ -43,7 +43,7 @@ Sıfırlandıktan sonra cihaz Şirket Portalı’nda gösterilmez. Önceden var 
 
     ![, Tanımlanmamış, genel olarak adlandırılmış cihazları gösteren iki kutucuk içeren cihazlar sayfasının ekran görüntüsü. Gri bir başlık doğrudan cihazların altında bulunur ve kullanıcının kullanmakta oldukları aygıtı belirlemesini veya yeni bir tane eklemesini ister.](./media/rename-reset-device-step2-1808.png)  
 
-3. **Sıfırla**’yı seçin. Sıfırlama seçeneği sayfanın üst kısmında görünmüyorsa **Diğer (...)**  > **Sıfırla**’yı seçin.  
+3. **Sıfırla**’yı seçin. Sayfanın üst kısmında sıfırlama seçeneği görünmüyorsa, **daha fazla (...)** seçeneğini belirleyin.  >  **Sıfırlayın**.  
 
      ![Şirket Portalı web sitesinde seçilen bir cihaza yönelik cihaz ayrıntıları sayfası; üst kısmında Yeniden Adlandır, Kaldır, Cihazı Sıfırla, Geçiş Kodunu Sıfırla ve Uzaktan Kilitle bağlantıları ile. ](./media/rename-reset-device-1808.png)  
 

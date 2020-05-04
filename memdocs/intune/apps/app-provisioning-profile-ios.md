@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a1ce95391e8dbfa9fd8f5a8e2347f9c4249ee79f
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323429"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Uygulamalarınızın süresinin dolmasını engellemek için iOS uygulama sağlama profillerini kullanma
@@ -45,11 +45,11 @@ Yönetici olarak, iOS/ıpados uygulama sağlama yapılandırmasını atamak içi
 ## <a name="how-to-create-an-ios-mobile-app-provisioning-profile"></a>iOS mobil uygulama sağlama profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluştur** > **iOS uygulama sağlama profilleri** > **uygulamalar** ' ı seçin.
+2. **Uygulamalar** > ' ı seçin**iOS uygulama sağlama profilleri** > **Profil oluştur**.
 3. **Temel bilgiler** sayfasında, aşağıdaki değerleri ekleyin:
     - **Ad** - Bu mobil sağlama profiline bir ad verin.
     - **Açıklama** - İsteğe bağlı olarak, ilke için bir açıklama sağlayın.
-    - **Profili dosyasını karşıya yükleme** - **Aç** simgesini seçin ve ardından `.mobileprovision`Apple Developer web sitesinden[ indirdiğiniz Apple Mobil Yapılandırma dosyasını (](https://developer.apple.com/) uzantısına sahip) seçin.
+    - **Profili dosyasını karşıya yükleme** - **Aç** simgesini seçin ve ardından [Apple Developer web sitesinden](https://developer.apple.com/) indirdiğiniz Apple Mobil Yapılandırma dosyasını (`.mobileprovision` uzantısına sahip) seçin.
 
    **Sona erme tarihi** , yukarıda eklediğiniz Apple mobil yapılandırma profili dosyasındaki bir değerden doldurulur.<br>
 

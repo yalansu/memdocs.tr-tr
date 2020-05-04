@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: cb35fdc400c89c64b689f4695a48d201e50fc617
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328886"
 ---
 # <a name="resolve-common-errors-for-the-intune-exchange-connector"></a>Intune Exchange Connector için sık karşılaşılan hataları çözme
@@ -77,7 +77,7 @@ Microsoft Intune Exchange Connector yapılandırmayı denediğinizde aşağıdak
    Verify that you are connected to the Internet, check the Microsoft Intune Service Status, and try to connect again.  
    Error code: 0x00000006  
 ```  
-Bu hata, Internet 'e bağlanmak için bir proxy sunucusu kullanılıyorsa ve Intune hizmetine gelen trafiği engelliyorsa meydana gelebilir. Bir proxy 'nin kullanımda olup olmadığını belirlemek için **Denetim masası** > **Internet seçenekleri**' ne gidin, **bağlantı** sekmesini seçin ve ardından **LAN ayarları**' na tıklayın.
+Bu hata, Internet 'e bağlanmak için bir proxy sunucusu kullanılıyorsa ve Intune hizmetine gelen trafiği engelliyorsa meydana gelebilir. Bir proxy 'nin kullanımda olup olmadığını belirlemek için, **Denetim Masası** > **Internet seçenekleri**' ne gidin, **bağlantı** sekmesini seçin ve ardından **LAN ayarları**' na tıklayın.
 
 **Çözüm**:  
 
@@ -132,7 +132,7 @@ Intune Exchange bağlayıcısını çalıştıran bilgisayarda, **hizmet olarak 
 
 1. Bilgisayarda yönetici olarak veya Yöneticiler grubunun bir üyesi olarak oturum açın.
 2. Yerel güvenlik Ilkesini açmak için **secpol. msc** dosyasını çalıştırın.
-3. **Yerel ilkeler** > **güvenlik ayarları** ' na gidin ve **Kullanıcı hakları ataması**' nı seçin.
+3. **Güvenlik ayarları** > **Yerel ilkeler**' e gidin ve **Kullanıcı hakları ataması**' nı seçin.
 4. Sağ bölmede, **hizmet olarak oturum**aç ' a çift tıklayın.
 5. **Kullanıcı veya Grup Ekle**' yi seçin, ilkeye **WIEC_USER** ekleyin ve ardından iki kez **Tamam** ' ı seçin.
 

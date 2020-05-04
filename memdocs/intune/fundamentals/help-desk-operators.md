@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 07aceda512163513632d124d3e17d1041069b229
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80085806"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Şirketinizdeki kullanıcılara yardımcı olmak için sorun giderme portalını kullanma
@@ -50,7 +50,7 @@ Sorun giderme bölmesinde **Kullanıcı seçin**’e tıklayarak kullanıcı bil
 1. [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)'da oturum açın.
 3. **Intune** bölmesinde **Sorun gider**’i seçin.
 4. Sorun gidermek üzere bir kullanıcı belirlemek için **Seçin**’e tıklayın.
-5. Adını veya e-posta adresini yazarak bir kullanıcı seçin. **Seçin**’e tıklayın. Kullanıcı için sorun giderme bilgileri, Sorun Giderme bölmesinde görüntülenir. Bilgiler aşağıdaki tablolarda açıklanmıştır.
+5. Adını veya e-posta adresini yazarak bir kullanıcı seçin. **Seç**' e tıklayın. Kullanıcı için sorun giderme bilgileri, Sorun Giderme bölmesinde görüntülenir. Bilgiler aşağıdaki tablolarda açıklanmıştır.
 
 > [!Note]  
 > **Sorun giderme** bölmesine tarayıcınızı [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting) adresine yönlendirerek de erişebilirsiniz.
@@ -61,7 +61,7 @@ Kullanıcı bilgilerini gözden geçirmek için **Sorun Giderme** bölmesini kul
 
 ![Aşağıdaki tabloda açıklanan numaralandırılmış alanlarla sorun giderme panosu](./media/help-desk-operators/troubleshooting-dash.png)
 
-| Alan | Ad | Açıklama |
+| Alan | Adı | Açıklama |
 | ---  | ---  | ---         |
 | 1.   | Hesap durumu  | Geçerli Intune kiracısının durumunu **Etkin** veya **Etkin Değil** olarak gösterir.       |
 | 2.   | Kullanıcı seçimi  | Seçili kullanıcının adı. Yeni bir kullanıcı seçmek için **Kullanıcı değiştir**’e tıklayın.       |
@@ -251,7 +251,7 @@ Kayıt Hataları tablosu, başarısız olan kayıt denemelerini listeler. Aşağ
 | Tablo sütunu | Açıklama |
 |-------------|----------|
 | Kayıt başlangıç | Kullanıcının kaydı ilk kez başlattığı saat. |
-| İşletim sistemi | Cihazın işletim sistemi. |
+| İşletim Sistemi | Cihazın işletim sistemi. |
 | İşletim sistemi sürümü | Cihazın işletim sistemi sürümü. |
 | Hata | Hatanın nedeni. |
 
@@ -259,7 +259,7 @@ Kayıt Hataları tablosu, başarısız olan kayıt denemelerini listeler. Aşağ
 
 Bir hata satırını seçtiğinizde daha fazla ayrıntı sağlanır.
 
-| Bölüm | Açıklama |
+| Section | Açıklama |
 |-------------|----------|
 | Hata ayrıntıları | Hatanın daha ayrıntılı bir açıklaması. |
 | Toplam düzeltme sayısı | Hatayı gidermek için önerilen adımlar. Bazı hataların düzeltmeleri olmayabilir. |
@@ -297,7 +297,7 @@ Kullanıcının cihaz sorunlarını giderirken cihaz verilerini toplamaya yardı
 - [Ayrıntılı günlük kaydı ile şirketinizin destek birimine cihaz sorunlarını çözmede yardımcı olma](../user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 - [USB kablosu kullanarak Android günlüklerini şirketinizin destek birimine gönderme](../user-help/send-logs-to-your-it-admin-using-cable-android.md)
 - [Android tanılama veri günlüklerini e-posta kullanarak BT yöneticinize gönderme](../user-help/send-logs-to-your-it-admin-by-email-android.md)
-- [Android kayıt hatalarını BT yöneticinize gönderme](../user-help/send-logs-to-your-it-admin-by-email-android.md)
+- [BT yöneticinize Android kayıt hatalarını gönderme](../user-help/send-logs-to-your-it-admin-by-email-android.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

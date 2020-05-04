@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 839809de89d4220fa87012cd9a28e5f6b6c35dcf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328250"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Cihazı Android iş profiline kaydetme
@@ -46,7 +46,7 @@ ms.locfileid: "79328250"
 
     ![Örnek görüntü Şirket Portalı, gizlilik ekranınızı, devam düğmesini vurguladık.](./media/android-privacy-screen-1911.png)  
 
-4. Google 'ın iş profili oluşturma koşullarını gözden geçirin. Sonra **&AMP; devam et**' e dokunun. Bu ekranın görünümü cihazınızın Android sürümüne bağlı olarak değişir. 
+4. Google 'ın iş profili oluşturma koşullarını gözden geçirin. Sonra **& devam et**' e dokunun. Bu ekranın görünümü cihazınızın Android sürümüne bağlı olarak değişir. 
 
     ![Google 'ın iş profili koşullarının ekran görüntüsü](./media/android-wp-05-1908.png)  
 

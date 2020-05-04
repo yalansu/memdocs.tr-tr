@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 90f943c7eca95a5311023b03e769e4e18ada9249
-ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80863103"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Microsoft Intune’a bir iOS iş kolu uygulaması ekleme
@@ -42,11 +42,11 @@ Bir iOS iş kolu uygulamasını Microsoft Intune’a eklemek için bu makaledeki
 ## <a name="select-the-app-type"></a>Uygulama türünü seçin
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tüm uygulamalar** ** >  > ** **Ekle**' yi seçin.
+2. **Uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, **diğer** uygulama türleri altında **iş kolu uygulaması**' nı seçin.
-4. **Seçin**’e tıklayın. **Uygulama ekleme** adımları görüntülenir.
+4. **Seç**' e tıklayın. **Uygulama ekleme** adımları görüntülenir.
 
-## <a name="step-1---app-information"></a>1\. adım-uygulama bilgileri
+## <a name="step-1---app-information"></a>1. adım-uygulama bilgileri
 
 ### <a name="select-the-app-package-file"></a>Uygulama paketi dosyasını seçin
 
@@ -59,31 +59,31 @@ Bir iOS iş kolu uygulamasını Microsoft Intune’a eklemek için bu makaledeki
 
 1. **Uygulama bilgileri** sayfasında uygulamanızın ayrıntılarını ekleyin. Seçtiğiniz uygulamaya bağlı olarak bu bölmedeki değerlerden bazıları otomatik olarak doldurulabilir.
     - **Ad**: Uygulamanın Şirket Portalı’nda görünen adını girin. Kullandığınız tüm uygulama adlarının benzersiz olduğundan emin olun. Aynı uygulama adı iki kez kullanılmışsa uygulamalardan yalnızca biri Şirket Portalı’nda kullanıcılara görüntülenir.
-    - **Açıklama**: Uygulama açıklamasını girin. Açıklama Şirket Portalı’nda görünür.
-    - **Yayımcı**: Uygulama yayıncısının adını girin.
+    - **Açıklama**: Uygulama açıklamasını girin. Açıklama, Şirket Portalı’nda görünür.
+    - **Yayımcı**: Uygulama yayımcısının adını girin.
     - **En Düşük İşletim Sistemi**: Listeden uygulamanın yüklenebileceği en düşük işletim sistemi sürümünü seçin. Uygulamayı daha önceki bir işletim sistemini çalıştıran cihazlara atarsanız, uygulama yüklenmez.
     - **Kategori**: Yerleşik uygulama kategorilerinden birini veya kendi oluşturduğunuz bir kategoriyi seçin. Kategoriler, kullanıcıların Şirket Portalı’na göz atarken uygulamayı daha kolay bulabilmesini sağlar.
     - **Bunu şirket portalı öne çıkan uygulama olarak göster**: kullanıcılar uygulamalara gözatarken, uygulamayı şirket portalının ana sayfasında göze çarpacak şekilde görüntüleyin.
     - **Bilgi URL’si**: İsteğe bağlı olarak, bu uygulama hakkında bilgi içeren bir web sitesinin URL’sini girin. URL Şirket Portalı’nda görünür.
     - **Gizlilik URL’si**: İsteğe bağlı olarak, bu uygulamayla ilgili gizlilik bilgilerini içeren bir web sitesinin URL’sini girin. URL Şirket Portalı’nda görünür.
-    - **Geliştirici**: İsteğe bağlı olarak, uygulama geliştiricinin adını girin.
+    - **Geliştirici**: İsteğe bağlı olarak, uygulama geliştiricisinin adını girin.
     - **Sahip**: İsteğe bağlı olarak uygulama sahibinin adını girin. Örneğin **İK departmanı**.
     - **Notlar**: Bu uygulamayla ilişkilendirmek istediğiniz notları girin.
     - **Logo**: Uygulamayla ilişkilendirilen bir simgeyi karşıya yükleyin. Bu simge, kullanıcılar Şirket Portalı’na göz atarken uygulamayla birlikte görüntülenir.
 2. **İleri** ' ye tıklayarak **kapsam etiketleri** sayfasını görüntüleyin.
 
-## <a name="step-2---select-scope-tags-optional"></a>2\. adım-kapsam etiketlerini seçin (isteğe bağlı)
+## <a name="step-2---select-scope-tags-optional"></a>2. adım-kapsam etiketlerini seçin (isteğe bağlı)
 Intune 'da istemci uygulama bilgilerini kimlerin görebileceğini anlamak için kapsam etiketlerini kullanabilirsiniz. Kapsam etiketleri hakkında tam Ayrıntılar için bkz. [Dağıtılmış BT için rol tabanlı erişim denetimi ve kapsam etiketleri kullanma](../fundamentals/scope-tags.md).
 
 1. İsteğe bağlı olarak uygulamanın kapsam etiketlerini eklemek için **kapsam etiketlerini Seç** ' e tıklayın. 
 2. **Atamalar** sayfasını göstermek için **İleri** ' ye tıklayın.
 
-## <a name="step-3---assignments"></a>3\. adım-atamalar
+## <a name="step-3---assignments"></a>3. adım-atamalar
 
 1. **Kayıtlı cihazlar için kullanılabilir** **,** **kayıt olmadan veya kayıt olmadan kullanılabilir**, ya da uygulama için Grup atamalarını **kaldırmayı** seçin. Daha fazla bilgi için bkz. [kullanıcıları ve cihazları düzenlemek için grup ekleme](../fundamentals/groups-add.md) ve [Microsoft Intune olan gruplara uygulama atama](apps-deploy.md).
 2. **İleri** ' ye tıklayarak **gözden geçir + oluştur** sayfasını görüntüleyin.
 
-## <a name="step-4---review--create"></a>4\. adım-Inceleme ve oluşturma
+## <a name="step-4---review--create"></a>4. adım-Inceleme ve oluşturma
 
 1. Uygulama için girdiğiniz değerleri ve ayarları gözden geçirin.
 2. İşiniz bittiğinde, uygulamayı Intune 'a eklemek için **Oluştur** ' a tıklayın.
@@ -95,7 +95,7 @@ Oluşturduğunuz uygulama artık uygulamalar listesinde görünür. Bu listede, 
 > [!NOTE]
 > iOS LOB uygulamaları için profiller sağlanırken, bunların süresi dolmadan önce 30 günlük bir bildirim süresi vardır.
 
-## <a name="step-5-update-a-line-of-business-app"></a>5\. Adım: Bir iş kolu uygulamasını güncelleştirme
+## <a name="step-5-update-a-line-of-business-app"></a>5. Adım: Bir iş kolu uygulamasını güncelleştirme
 
 [!INCLUDE [shared-proc-lob-updateapp](../includes/shared-proc-lob-updateapp.md)]
 

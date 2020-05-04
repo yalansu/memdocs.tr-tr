@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c9ee00d13b32e1f52937489b86d29f075e5f580a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329394"
 ---
 # <a name="protect-devices-with-microsoft-intune"></a>Cihazları Microsoft Intune ile koruma
@@ -30,7 +30,7 @@ ms.locfileid: "79329394"
 Microsoft Intune, yönettiğiniz cihazları ve bu cihazlarda depolanan verileri korumanıza yardımcı olur.
 
 ## <a name="device-configuration"></a>Cihaz yapılandırması
-Intune [yapılandırma ilkeleri](../configuration/device-profiles.md), çeşitli ayar ve özellikleri denetleyerek cihazları korumanıza ve yapılandırmanıza yardımcı olur. Örneğin:
+Intune [yapılandırma ilkeleri](../configuration/device-profiles.md) , çok sayıda ayarı ve özelliği denetleyerek cihazları korumanıza ve yapılandırmanıza yardımcı olur. Örneğin:
 
 - Cihazdaki kamera veya Bluetooth gibi donanım özelliklerinin kullanımını kısıtlayabilirsiniz.
 - Uyumlu ve uyumsuz uygulamaları yapılandırabilirsiniz. Uyumsuz bir uygulama yüklenirse size uyarı verilir (ve bazı platformlar yüklemeyi engelleyebilir).

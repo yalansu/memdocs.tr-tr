@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 02f90fc0cd249062f878b5a18481f6a6a73228af
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323376"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Toplu satın alınan uygulamaları Microsoft Store Iş için Microsoft Intune ile yönetme
@@ -71,15 +71,15 @@ Artık devam edebilir ve Intune konsolunda eşitlemeyi ayarlayabilirsiniz.
 ## <a name="configure-synchronization"></a>Eşitlemeyi yapılandırma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Microsoft Store for Business** > **bağlayıcı ve belirteçler** > **Kiracı Yönetimi** ' ni seçin.
-3. **Etkinleştir**'e tıklayın.
+2. **İş için** **kiracı yönetim** > **bağlayıcıları ve belirteçleri** > Microsoft Store seçin.
+3. **Etkinleştir**' e tıklayın.
 4. Henüz yapmadıysanız İş İçin Microsoft Mağazası'na kaydolma bağlantısına tıklayın ve daha önce ayrıntı olarak açıklandığı gibi hesabınızı ilişkilendirin.
 5. **Dil** açılan listesinden İş için Microsoft Store’dan alınan uygulamaların Azure portalında görüntülendiği dili seçin. Uygulamalar, görüntülendikleri dilden bağımsız olarak, mevcut olması durumunda son kullanıcının dilinde yüklenir.
 6. Microsoft Mağazası’ndan satın aldığınız uygulamaları Intune’a almak için **Eşitle**’ye tıklayın.
 
 ## <a name="synchronize-apps"></a>Uygulamaları eşitleme
 
-1. **Microsoft Store for Business** > **bağlayıcı ve belirteçler** > **Kiracı Yönetimi** ' ni seçin.
+1. **İş için** **kiracı yönetim** > **bağlayıcıları ve belirteçleri** > Microsoft Store seçin.
 2. Microsoft Mağazası’ndan satın aldığınız uygulamaları Intune’a almak için **Eşitle**’ye tıklayın.
 
 > [!NOTE]
@@ -109,4 +109,4 @@ Mağazadan alınan uygulamaları, diğer tüm Intune uygulamalarıyla aynı şek
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-* [Toplu satın alınan uygulama ve kitapları Microsoft Intune ile yönetme](vpp-apps.md)
+* [Toplu satın alınan uygulamaları ve kitapları Microsoft Intune ile yönetme](vpp-apps.md)

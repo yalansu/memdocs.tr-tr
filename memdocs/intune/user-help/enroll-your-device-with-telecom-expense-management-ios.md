@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 19ab2f9390875a9c094ede4706952bab8187da2e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328162"
 ---
 # <a name="enroll-your-ios-device-in-telecom-expense-management"></a>iOS cihazınızı telekomünikasyon gider yönetimine kaydetme
@@ -41,7 +41,7 @@ Uygun seçeneği belirlediğinizde App Store’dan [__Datalert__](https://itunes
 > [!NOTE]
 > Bu yolla kayıt olmak için telefonunuzda [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) uygulamasının yüklü ve etkin olması gerekir.
 
-1. __Microsoft hesabı ile kaydol__’u seçin.
+1. __Microsoft Hesabı ile kaydol__’u seçin.
 
    ![Bir Microsoft Office 365 hesabı ve Intune aboneliğiniz olduğunda ekranın üst kısmında telefon numarası alanı ve alt kısmında "Microsoft hesabı ile kaydol" seçenekleri sunan Datalert uygulamasının Ayarlar ekranının görüntüsü.](./media/ios-enroll-11a-tem-datalert-enroll-msft-account.png)
 

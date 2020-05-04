@@ -1,5 +1,5 @@
 ---
-title: iOS cihazımda seri numarasını nasıl bulabilirim? | Microsoft Docs
+title: iOS cihazımda seri numarasını nasıl bulabilirim? | Microsoft Belgeleri
 description: ''
 keywords: ''
 author: lenewsad
@@ -20,14 +20,14 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 81424b5d253d0839bc266c20c2680fb9aebdda2e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328118"
 ---
 # <a name="how-do-i-find-the-serial-number-on-my-device"></a>Cihazımda seri numarasını nasıl bulabilirim?
 
-Cihazınızın seri numarası, cihazınızı benzersiz kılar ve cihazınızı yenisiyle değiştirme gibi belirli görevlerde şirketinizin destek birimine yardımcı olabilir. Seri numarasını bulmak için **Apple menüsü** > **Bu Mac Hakkında**'ya gidin.
+Cihazınızın seri numarası, cihazınızı benzersiz kılar ve cihazınızı yenisiyle değiştirme gibi belirli görevlerde şirketinizin destek birimine yardımcı olabilir. Seri numarasını bulmak için**Bu Mac ile ilgili** **Apple menüsüne** > gidin.
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

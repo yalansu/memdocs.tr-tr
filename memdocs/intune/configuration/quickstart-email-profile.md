@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: af7657eb89df14e8429a81616e76d81a5a9ac5c1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327434"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-iosipados"></a>Hızlı başlangıç: iOS/ıpados için bir e-posta cihaz profili oluşturma
@@ -39,8 +39,8 @@ Intune aboneliğiniz yoksa [ücretsiz deneme hesabı için kaydolun](../fundamen
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Profil oluşturma** > **cihaz** > **yapılandırma profilleri** ' ne gidin ve bu seçeneği belirleyin.
-   Intune 'da iOS/ıpados için bir e-posta profili oluşturma ![](./media/quickstart-email-profile/ios-create-profile.png)
+2. Seçin ve **cihazlar** > **yapılandırma profilleri** > **Profil oluştur**' a gidin.
+   ![Intune 'da iOS/ıpados için bir e-posta profili oluşturma](./media/quickstart-email-profile/ios-create-profile.png)
 
 3. Aşağıdaki özellikleri girin:
    - **Platform**: **IOS/ıpados** seçin
@@ -55,7 +55,7 @@ Intune aboneliğiniz yoksa [ücretsiz deneme hesabı için kaydolun](../fundamen
 
         ![Intune 'da iOS/ıpados cihazları ile kullanmak için bir e-posta profili oluşturma](./media/quickstart-email-profile/ios-email-profile-name.png)
 
-6. **İleri**'yi seçin.
+6. **İleri**’yi seçin.
 
 7. **Yapılandırma ayarları**' nda, aşağıdaki ayarları girin (diğer ayarlar için varsayılan değerleri bırakın):
    - **E-posta sunucusu**: Bu hızlı başlangıç için **outlook.office365.com** girin. Bu ayar, iOS/ıpados posta uygulamasının e-postaya bağlanmak için kullanacağı e-posta sunucusunun Exchange konumunu (URL) belirtir.
@@ -64,11 +64,11 @@ Intune aboneliğiniz yoksa [ücretsiz deneme hesabı için kaydolun](../fundamen
    - **AAD'den e-posta adresi özniteliği**: Bu ayar Exchange'de oturum açmak için kullanılacak Azure AD e-posta adresidir. Bu hızlı başlangıçta **Kullanıcı Asıl Adı**'nı seçin.
    - **Kimlik doğrulama yöntemi**: Bu hızlı başlangıçta **Kullanıcı adı ve parola**'yı seçin. (Intune için zaten bir sertifika ayarladıysanız, **sertifika** da seçebilirsiniz.)
 
-8. **İleri**'yi seçin.
+8. **İleri**’yi seçin.
 
 9. **Kapsam etiketleri** içinde (isteğe bağlı) **Ileri**' yi seçin. Bu profil için kapsam etiketi kullanmayacağız.
 
-10. **Atamalar**' da, **ata** için açılan eklentiyi kullanın ve **tüm kullanıcılar ve tüm cihazlar '** ı seçin.  Ardından **İleri**'yi seçin.
+10. **Atamalar**' da, **ata** için açılan eklentiyi kullanın ve **tüm kullanıcılar ve tüm cihazlar '** ı seçin.  Ardından **İleri**' yi seçin.
 
 11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. 
 
@@ -76,7 +76,7 @@ Intune aboneliğiniz yoksa [ücretsiz deneme hesabı için kaydolun](../fundamen
 
 Ek öğreticiler veya test için oluşturduğunuz profili kullanmayı düşünmüyorsanız, şimdi silebilirsiniz.
 
-1. Intune 'da **cihaz yapılandırma** > **cihazlar** ' ı seçin.
+1. Intune ' da**cihazlar** > **cihaz yapılandırması**' nı seçin.
 2. Oluşturduğunuz test profilini ve **iOS/ıpados iş e-postası gerektir**' i seçin ve **Sil**' i seçin. 
 
 ## <a name="next-steps"></a>Sonraki adımlar

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c0d9267f989988ae33d56696d424de56a649bca2
-ms.sourcegitcommit: 9908de7d30991ee499cc462d2eb730e1e4fd75a9
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80900482"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Microsoft Intune kullanarak macOS cihazlarına Microsoft Edge ekleme
@@ -29,7 +29,7 @@ ms.locfileid: "80900482"
 Uygulamaları dağıtmadan, yapılandırmadan, izleyebilmeniz veya koruyabilmeniz için önce bunları Intune 'a eklemeniz gerekir. Kullanılabilir [uygulama türlerinden](apps-add.md#app-types-in-microsoft-intune) biri Microsoft Edge *Sürüm 77 ve üzeri*. Intune 'da bu uygulama türünü seçerek, Microsoft Edge *sürüm 77 ve üstünü* , MacOS çalıştıran yönettiğiniz cihazlara atayabilir ve yükleyebilirsiniz. Bu uygulama türü, macOS uygulaması sarmalama aracı 'nı kullanmanıza gerek kalmadan, macOS cihazlarına Microsoft Edge 'i atamanızı kolaylaştırır. Uygulamalar daha güvenli ve güncel tutmaya yardımcı olmak için, uygulama Microsoft otomatik güncelleştirme (MAU) ile birlikte gelir.
 
 > [!IMPORTANT]
-> Bu uygulama türü, macOS için geliştirici ve Beta kanalları sunmaktadır. Dağıtım yalnızca Ingilizce (EN) ' dir, ancak son kullanıcılar tarayıcıdaki görüntüleme dilini **ayarlar** > **dilleri**altında değiştirebilir. 
+> Bu uygulama türü, macOS için geliştirici ve Beta kanalları sunmaktadır. Dağıtım yalnızca İngilizce (en) ' dir; ancak son kullanıcılar, **Ayarlar** > **dilleri**altında tarayıcıda görüntüleme dilini değiştirebilir. 
 
 > [!NOTE]
 > Microsoft Edge *sürüm 77 ve üzeri sürümleri* de Windows 10 ' da kullanılabilir.
@@ -43,7 +43,7 @@ Uygulamaları dağıtmadan, yapılandırmadan, izleyebilmeniz veya koruyabilmeni
 Aşağıdaki adımları kullanarak Intune 'a Microsoft Edge sürüm 77 ve üstünü ekleyebilirsiniz:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tüm uygulamalar** ** >  > ** **Ekle**' yi seçin.
+2. **Uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin.
 3. **Microsoft Edge, sürüm 77 ve üzeri**altındaki **uygulama türü** listesinde **MacOS**' u seçin.
 
 ## <a name="configure-app-information"></a>Uygulama bilgilerini yapılandırma
@@ -54,7 +54,7 @@ Bu adımda, bu uygulama dağıtımı hakkında bilgi sağlarsınız. Bu bilgiler
     - **Ad**: uygulamanın şirket portalında görüntülenecek olan adını girin. Tüm adların benzersiz olduğundan emin olun. Aynı uygulama adı iki kez kullanılmışsa uygulamalardan yalnızca biri şirket portalında kullanıcılara görüntülenir.
     - **Açıklama**: Uygulama için bir açıklama girin. Örneğin, açıklamada hedeflenen kullanıcıları listeleyebilirsiniz.
     - **Yayımcı**: Yayımcı olarak Microsoft gösterilir.
-    - **Kategori**: İsteğe bağlı olarak, yerleşik uygulama kategorilerinden veya kendi oluşturduğunuz kategorilerden birini ya da birkaçını seçin. Bu ayar, kullanıcıların şirket portalına gözatarken uygulamayı bulmasını kolaylaştırır.
+    - **Kategori**: isteğe bağlı olarak, yerleşik uygulama kategorilerinden birini veya oluşturduğunuz bir kategoriyi seçin. Bu ayar, kullanıcıların şirket portalına gözatarken uygulamayı bulmasını kolaylaştırır.
     - **Bunu şirket portalı öne çıkan uygulama olarak görüntüle**: kullanıcılar uygulamalara gözatarken, uygulamayı şirket portalının ana sayfasında göze çarpacak şekilde göstermek için bu seçeneği belirleyin.
     - **Bilgi URL’si**: İsteğe bağlı olarak, bu uygulama hakkında bilgi içeren bir web sitesinin URL’sini girin. URL, şirket portalında kullanıcılara görüntülenir.
     - **Gizlilik URL’si**: İsteğe bağlı olarak, bu uygulamayla ilgili gizlilik bilgilerini içeren bir web sitesinin URL’sini girin. URL, şirket portalında kullanıcılara görüntülenir.
@@ -80,10 +80,10 @@ Bu adımda, uygulama için yükleme seçeneklerini yapılandırın.
 
 ## <a name="select-scope-tags-optional"></a>Kapsam etiketlerini seçin (isteğe bağlı)
 Intune 'da istemci uygulama bilgilerini kimlerin görebileceğini anlamak için kapsam etiketlerini kullanabilirsiniz. Kapsam etiketleri hakkında tam Ayrıntılar için bkz. dağıtılmış BT için rol tabanlı erişim denetimi ve kapsam etiketleri kullanma.
-1.    **Ekle** > **kapsam (Etiketler)** seçin.
+1.    **Kapsam (Etiketler)** > **Ekle**öğesini seçin.
 2.    Kapsam etiketlerini aramak için **Seç** kutusunu kullanın.
 3.    Bu uygulamaya atamak istediğiniz kapsam etiketlerinin yanındaki onay kutusunu işaretleyin.
-4.    **Tamam** > **Seç** ' e tıklayın.
+4.    **Seç** > **Tamam 'a**tıklayın.
 
 ## <a name="add-the-app"></a>Uygulama ekleme
 Yapılandırmayı tamamladıktan sonra **uygulama uygulaması** bölmesinden **Ekle** ' yi seçin. 

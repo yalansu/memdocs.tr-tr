@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b23fbed8f12c4df90ff2136434e21f3eba369c9e
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80322560"
 ---
 # <a name="disable-activation-lock-on-supervised-iosipados-devices-with-intune"></a>Denetimli iOS/ıpados cihazlarında Intune ile Etkinleştirme Kilidi devre dışı bırakma
@@ -40,7 +40,7 @@ Microsoft Intune iOS/ıpados Etkinleştirme Kilidi, iOS için My iPhone uygulama
 
 Etkinleştirme Kilidi iOS/ıpados cihazlarının güvenliğinin sağlanmasına yardımcı olur ve kayıp veya çalınmış bir cihazı kurtarma olasılığınızı geliştirirken, bu özellik sizi bir BT Yöneticisi olarak, bir dizi zorluk sunacak şekilde sağlayabilir. Örneğin:
 
-- Bir kullanıcı bir cihazda Etkinleştirme Kilidi’ni ayarlar. Daha sonra kullanıcı şirketten ayrılır ve cihazı iade eder. Kullanıcının Apple Kimliği ve parolası olmadan cihazı yeniden etkinleştirmenin yolu yoktur.
+- Bir kullanıcı bir cihazda Etkinleştirme Kilidi’ni ayarlar. Daha sonra kullanıcı şirketten ayrılır ve cihazı  iade eder. Kullanıcının Apple Kimliği ve parolası olmadan cihazı yeniden etkinleştirmenin yolu yoktur.
 - Etkinleştirme Kilidi’nin etkinleştirildiği tüm cihazların raporunu almanız gerekir.
 - Kurumunuzda cihaz yenileme işlemi sırasında bazı cihazları farklı bir birime atamak istiyorsunuz. Yalnızca Etkinleştirme Kilidi etkin olmayan cihazları yeniden atayabilirsiniz.
 
@@ -84,7 +84,7 @@ Intune Etkinleştirme Kilidi uzak cihazı **devre dışı bırak** eylemi, kulla
     >Cihazı silmeden önce atlama kodunu kopyalayın. Kodu kopyalamadan önce cihaz ayarlarını sıfırlarsanız kod Azure’dan kaldırılır.
 
 7. Cihazın **Genel bakış** dikey penceresine gidin ve **Sil**’i seçin.
-8. Cihaz sıfırlandıktan sonra *Apple kimliğiniz* ve *parolanız* istenir. *Kimlik* alanını boş bırakın ve ardından **parola** için *atlama kodunu* girin. Bu işlem, hesabı cihazdan kaldırır. 
+8. Cihaz sıfırlandıktan sonra *Apple kimliğiniz* ve *parolanız* istenir. *Kimlik* alanını boş bırakın ve ardından *parola* için **atlama kodunu** girin. Bu işlem, hesabı cihazdan kaldırır. 
 
 
 ## <a name="next-steps"></a>Sonraki adımlar

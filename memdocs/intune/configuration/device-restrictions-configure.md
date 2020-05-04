@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 716925f077b7433eab06a6ea2f557c7653d0b03d
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551435"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Microsoft Intune’da cihaz kısıtlama ayarlarını yapılandırma
@@ -42,15 +42,15 @@ Bu makalede bir cihaz kısıtlama profili oluşturma yöntemi gösterilmektedir.
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:  
 
-        - **Android Cihaz Yöneticisi**
+        - **Android cihaz yöneticisi**
         - **Android Kurumsal**
-        - **iOS/ıpados**
-        - **macOS**
+        - **iOS/iPadOS**
+        - **Mac OS**
         - **Windows 10 ve üzeri**
         - **Windows 8.1 ve üzeri**
         - **Windows Phone 8.1**
@@ -65,28 +65,28 @@ Bu makalede bir cihaz kısıtlama profili oluşturma yöntemi gösterilmektedir.
     - **Ad**: ilke için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir ilke adı **iOS/ıpados: cihazlarda kamera blok**' dır.
     - **Açıklama**: ilke için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
 
-6. **İleri**'yi seçin.
+6. **İleri**’yi seçin.
 
 7. **Yapılandırma ayarları**' nda, seçtiğiniz platforma bağlı olarak, yapılandırabileceğiniz ayarlar farklıdır. Ayrıntılı ayarlar için platformunuzu seçin:
 
-    - [Android Cihaz Yöneticisi](device-restrictions-android.md)
+    - [Android cihaz yöneticisi](device-restrictions-android.md)
     - [Android Kurumsal](device-restrictions-android-for-work.md)
-    - [iOS/ıpados](device-restrictions-ios.md)
-    - [macOS](device-restrictions-macos.md)
+    - [iOS/iPadOS](device-restrictions-ios.md)
+    - [Mac OS](device-restrictions-macos.md)
     - [Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
     - [Windows 8.1](device-restrictions-windows-8-1.md)
     - [Windows 10 ve üzeri](device-restrictions-windows-10.md)
     - [Windows 10 Team](device-restrictions-windows-10-teams.md)
-    - [Windows Holographic for Business](device-restrictions-windows-holographic.md)
+    - [Windows 10 Holographic for Business](device-restrictions-windows-holographic.md)
 
-8. **İleri**'yi seçin.
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili `US-NC IT Team` veya `JohnGlenn_ITDepartment`gıbı belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+8. **İleri**’yi seçin.
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
-    **İleri**'yi seçin.
+    **İleri**’yi seçin.
 
 10. **Atamalar**' da, profilinizi alacak kullanıcıları veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
 
-    **İleri**'yi seçin.
+    **İleri**’yi seçin.
 
 11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
 

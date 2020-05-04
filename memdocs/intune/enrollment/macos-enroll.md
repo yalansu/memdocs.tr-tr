@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 410911a44ca84230c30ccbea394c24b539b77c4f
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327032"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Intune’da macOS cihazların kaydını ayarlama
@@ -39,11 +39,11 @@ macOS cihaz kaydını ayarlamadan önce, aşağıdaki önkoşulları tamamlayın
 
 - [Cihazınızın Apple cihaz kaydına uygun olduğundan emin olun](https://support.apple.com/en-us/HT204142#eligibility).
 - [Etki alanlarını yapılandırma](../fundamentals/custom-domain-name-configure.md)
-- [MDM Yetkilisini ayarlama](../fundamentals/mdm-authority-set.md)
+- [MDM yetkilisini ayarlama](../fundamentals/mdm-authority-set.md)
 - [Grup oluşturma](../fundamentals/groups-add.md)
 - [Şirket Portalı’nı yapılandırma](../apps/company-portal-app.md)
 - [Microsoft 365 yönetim merkezinde](https://go.microsoft.com/fwlink/p/?LinkId=698854) kullanıcı lisanslarını atama
-- [Bir MDM anında iletme sertifikası alma](../enrollment/apple-mdm-push-certificate-get.md)
+- [Apple MDM anında iletme sertifikası alın](../enrollment/apple-mdm-push-certificate-get.md)
 
 ## <a name="user-owned-macos-devices-byod"></a>Kullanıcıya ait macOS cihazları (KCG)
 
@@ -73,18 +73,18 @@ Varsayılan olarak, Intune macOS cihazlarının kaydına izin verir. macOS cihaz
 
 macOS sanal makineleri, Parallels Desktop veya VMware Fusion kullanarak sınama için kaydedebilirsiniz. 
 
-Parallels Desktop kullanırsanız, Intune’un sanal makineleri tanıyabilmesi için bunların donanım türü ve seri numaralarını ayarlamanız gerekir. Sınama için gerekli ayarları yapmak üzere Parallels’in donanım türünü ve [seri numarasını](http://kb.parallels.com/123455) ayarlama yönergelerini izleyin. Sanal makineleri çalıştıran cihazın donanım türünü, oluşturduğunuz sanal makinelerin donanım türüyle eşleştirmenizi öneririz. Bu donanım türünü **Apple menüsü** > **Bu Mac hakkında** > **Sistem Raporu** > **Model Tanımlayıcı**’da bulabilirsiniz. 
+Parallels Desktop kullanırsanız, Intune’un sanal makineleri tanıyabilmesi için bunların donanım türü ve seri numaralarını ayarlamanız gerekir. Sınama için gerekli ayarları yapmak üzere Parallels’in donanım türünü ve [seri numarasını ayarlama](http://kb.parallels.com/123455) yönergelerini izleyin. Sanal makineleri çalıştıran cihazın donanım türünü, oluşturduğunuz sanal makinelerin donanım türüyle eşleştirmenizi öneririz. Bu donanım türünü,**Bu Mac** > **Sistem rapor** > **modeli tanımlayıcısı**hakkında **Apple menüsünde** > bulabilirsiniz. 
 
-VMware Fusion kullanırsanız, sanal makinenin donanım türü ve seri numarasını ayarlamak için [.vmx dosyasını düzenlemeniz](https://kb.vmware.com/s/article/1014782) gerekir. Sanal makineleri çalıştıran cihazın donanım türünü, oluşturduğunuz sanal makinelerin donanım türüyle eşleştirmenizi öneririz. Bu donanım türünü **Apple menüsü** > **Bu Mac hakkında** > **Sistem Raporu** > **Model Tanımlayıcı**’da bulabilirsiniz. 
+VMware Fusion kullanırsanız, sanal makinenin donanım türü ve seri numarasını ayarlamak için [.vmx dosyasını düzenlemeniz](https://kb.vmware.com/s/article/1014782) gerekir. Sanal makineleri çalıştıran cihazın donanım türünü, oluşturduğunuz sanal makinelerin donanım türüyle eşleştirmenizi öneririz. Bu donanım türünü,**Bu Mac** > **Sistem rapor** > **modeli tanımlayıcısı**hakkında **Apple menüsünde** > bulabilirsiniz. 
 
 ## <a name="user-approved-enrollment"></a>Kullanıcı Onaylı kayıt
 Kullanıcı Onaylı MDM kaydı, güvenlik açısından hassas bazı ayarları yönetmek için kullanabileceğiniz bir macOS kayıt türüdür. Daha fazla bilgi için [Apple'ın destek belgelerine](https://support.apple.com/HT208019) bakın.  
  
-KCG kayıt işlemi sırasında, kullanıcıdan Apple Yönetim profilini el ile onaylaması istenir. Yönergeler macOS için Şirket Portalı uygulamasında sunulmaktadır. Kayıt işleminin tamamlanabilmesi için yönetim profili onayı gerekli olmasa da, Intune kullanıcı onaylı kayıtları önerir. Kullanıcı kayıt sırasında profili onaylamadıysanız, Kullanıcı **sistem tercihleri** > **profiller**' e gidebilir, yönetim profilini seçebilir ve **Onayla**' yı seçebilirler.    
+KCG kayıt işlemi sırasında, kullanıcıdan Apple Yönetim profilini el ile onaylaması istenir. Yönergeler macOS için Şirket Portalı uygulamasında sunulmaktadır. Kayıt işleminin tamamlanabilmesi için yönetim profili onayı gerekli olmasa da, Intune kullanıcı onaylı kayıtları önerir. Kullanıcı kayıt sırasında profili onaylamadıysanız, Kullanıcı **Sistem Tercihleri** > **profilleri**' ne gidebilir, yönetim profilini seçebilir ve **Onayla**' yı seçebilirler.    
 
 ### <a name="find-out-if-a-device-is-user-approved"></a>Bir cihazın Kullanıcı tarafından onaylanmış olup olmadığını bulma
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tüm cihazlar** > **cihazları** seçin > Cihaz > **donanımını**seçin.
+2. **Cihazlar** > **tüm cihazlar** ' ı seçin> cihazı > **donanımı**seçin.
 3. **Kullanıcının onayladığı kayıt** alanını denetleyin.
 
 

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 5c1ebf73dde1423f618d58d06cddc96162f725be
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327914"
 ---
 # <a name="submit-errors-to-the-right-people-for-your-managed-macos-device"></a>Yönetilen macOS cihazınızla ilgili hataları doğru kişilere gönderme
@@ -38,7 +38,7 @@ ms.locfileid: "79327914"
 
 - **Yardım** menüsü > **Tanılama Raporunu Kaydet**'e tıklayın. Dosyanın kaydedileceği yeri seçin. Ardından bu dosyayı şirketinizin destek görevlisine e-postayla gönderin veya yükleyin.
 
-- E-posta uygulamanız yapılandırıldıysa, **Yardım** > **Tanılama Raporu Gönder**'e giderek tanılama raporunu gönderebilirsiniz. Günlükler karşıya yüklendikten sonra **E-posta ayrıntıları**'na tıklayın.
+- E-posta uygulamanız yapılandırılmışsa, tanı raporu**Gönder** **' e giderek** > Tanılama raporunu gönderebilirsiniz. Günlükler karşıya yüklendikten sonra **E-posta ayrıntıları**'na tıklayın.
 
 ## <a name="send-errors-to-the-company-portal-developers-for-macos-devices"></a>Hataları, macOS cihazları için Şirket Portalı geliştiricilerine gönderme
 

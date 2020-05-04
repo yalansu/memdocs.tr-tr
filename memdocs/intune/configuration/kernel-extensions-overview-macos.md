@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8f9212d275b17db6a40e3133b5363cd13c9d13d6
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551408"
 ---
 # <a name="add-macos-kernel-extensions-in-intune"></a>Intune 'A macOS çekirdek uzantıları ekleme
@@ -45,7 +45,7 @@ Bu özelliği kullanmak için cihazların şu olması gerekir:
 
 - Apple 'ın Aygıt Kayıt Programı (DEP) kullanılarak Intune 'A kayıtlı. [MacOS cihazlarının otomatik olarak kaydedilmesi](../enrollment/device-enrollment-program-enroll-macos.md) daha fazla bilgi içerir.
 
-  VEYA
+  OR
 
 - "Kullanıcı onaylı kayıt" (Apple 'ın dönemi) ile Intune 'A kaydolmuş. [MacOS High Sierra içindeki çekirdek uzantılarında değişikliklere hazırlanma](https://support.apple.com/en-us/HT208019) (Apple 'ın Web sitesini açar) daha fazla bilgi içerir.
 
@@ -75,7 +75,7 @@ Bu makalede, Intune 'da çekirdek uzantıları kullanılarak bir cihaz yapıland
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Platform**: **MacOS** seçin
@@ -87,20 +87,20 @@ Bu makalede, Intune 'da çekirdek uzantıları kullanılarak bir cihaz yapıland
     - **Ad**: ilke için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir ilke adı **MacOS: cihazlara çekirdek uzantıları ekleme**.
     - **Açıklama**: ilke için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
 
-6. **İleri**'yi seçin.
+6. **İleri**’yi seçin.
 
 7. **Yapılandırma ayarları**' nda ayarlarınızı yapılandırın:
 
-    - [macOS](kernel-extensions-settings-macos.md)
+    - [Mac OS](kernel-extensions-settings-macos.md)
 
-8. **İleri**'yi seçin.
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili `US-NC IT Team` veya `JohnGlenn_ITDepartment`gıbı belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+8. **İleri**’yi seçin.
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
-    **İleri**'yi seçin.
+    **İleri**’yi seçin.
 
 10. **Atamalar**' da, profilinizi alacak kullanıcıları veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
 
-    **İleri**'yi seçin.
+    **İleri**’yi seçin.
 
 11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
 

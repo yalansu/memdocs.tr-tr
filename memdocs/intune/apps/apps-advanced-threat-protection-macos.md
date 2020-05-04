@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8707b938231e682fe1cd165c207cca8e575950d4
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324651"
 ---
 # <a name="add-microsoft-defender-atp-to-macos-devices-using-microsoft-intune"></a>Microsoft Intune kullanarak macOS cihazlarına Microsoft Defender ATP ekleme
@@ -34,13 +34,13 @@ Uygulamaları dağıtmadan, yapılandırmadan, izleyebilmeniz veya koruyabilmeni
 - Intune 'da çekirdek uzantısı dağıtın. Daha fazla bilgi için bkz. [Intune 'Da macOS çekirdek uzantıları ekleme](../configuration/kernel-extensions-overview-macos.md).
 
 > [!IMPORTANT]
-> Çekirdek uzantısı yalnızca, cihazda Microsoft Defender ATP uygulaması yüklenmeden önce varsa otomatik olarak onaylanabilir. Aksi takdirde, kullanıcılar, Mac 'te "sistem uzantısı engellendi" iletisini görür ve güvenlik **tercihleri** ' ne ve **sistem tercihleri** > **Güvenlik & gizliliği** ' ne giderek ve ardından **izin ver**' i seçerek uzantıyı onaylaması gerekir. Daha fazla bilgi için bkz. [Mac Için Microsoft Defender ATP içindeki çekirdek uzantısı sorunlarını giderme](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext).
+> Çekirdek uzantısı yalnızca, cihazda Microsoft Defender ATP uygulaması yüklenmeden önce varsa otomatik olarak onaylanabilir. Aksi takdirde, kullanıcılar Mac 'teki "sistem uzantısı engellendi" iletisini görür ve **Güvenlik tercihleri** ' ne, **Sistem Tercihleri** > **güvenlik & gizliliği** ' ne gidip **izin ver**' i seçerek uzantıyı onaylaması gerekir. Daha fazla bilgi için bkz. [Mac Için Microsoft Defender ATP içindeki çekirdek uzantısı sorunlarını giderme](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext).
 
 ## <a name="add-microsoft-defender-atp-to-intune"></a>Microsoft Defender ATP 'yi Intune 'a ekleme
 Aşağıdaki adımları kullanarak Microsoft Defender ATP 'yi Intune 'a ekleyebilirsiniz:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tüm uygulamalar** ** >  > ** **Ekle**' yi seçin.
+2. **Uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin.
 3. **Microsoft Defender ATP**altındaki **uygulama türü** listesinde **MacOS**' u seçin.
 
 ## <a name="configure-app-information"></a>Uygulama bilgilerini yapılandırma
@@ -51,7 +51,7 @@ Bu adımda, bu uygulama dağıtımı hakkında bilgi sağlarsınız. Bu bilgiler
     - **Ad**: uygulamanın şirket portalında görüntülenecek olan adını girin. Tüm adların benzersiz olduğundan emin olun. Aynı uygulama adı iki kez kullanılmışsa uygulamalardan yalnızca biri şirket portalında kullanıcılara görüntülenir.
     - **Açıklama**: Uygulama için bir açıklama girin. Örneğin, açıklamada hedeflenen kullanıcıları listeleyebilirsiniz.
     - **Yayımcı**: Yayımcı olarak Microsoft gösterilir.
-    - **Kategori**: İsteğe bağlı olarak, yerleşik uygulama kategorilerinden veya kendi oluşturduğunuz kategorilerden birini ya da birkaçını seçin. Bu ayar, kullanıcıların şirket portalına gözatarken uygulamayı bulmasını kolaylaştırır.
+    - **Kategori**: isteğe bağlı olarak, yerleşik uygulama kategorilerinden birini veya oluşturduğunuz bir kategoriyi seçin. Bu ayar, kullanıcıların şirket portalına gözatarken uygulamayı bulmasını kolaylaştırır.
     - **Bunu şirket portalı öne çıkan uygulama olarak görüntüle**: kullanıcılar uygulamalara gözatarken, uygulamayı şirket portalının ana sayfasında göze çarpacak şekilde göstermek için bu seçeneği belirleyin.
     - **Bilgi URL’si**: İsteğe bağlı olarak, bu uygulama hakkında bilgi içeren bir web sitesinin URL’sini girin. URL, şirket portalında kullanıcılara görüntülenir.
     - **Gizlilik URL’si**: İsteğe bağlı olarak, bu uygulamayla ilgili gizlilik bilgilerini içeren bir web sitesinin URL’sini girin. URL, şirket portalında kullanıcılara görüntülenir.
@@ -62,10 +62,10 @@ Bu adımda, bu uygulama dağıtımı hakkında bilgi sağlarsınız. Bu bilgiler
 
 ## <a name="select-scope-tags-optional"></a>Kapsam etiketlerini seçin (isteğe bağlı)
 Intune 'da istemci uygulama bilgilerini kimlerin görebileceğini anlamak için kapsam etiketlerini kullanabilirsiniz. Kapsam etiketleri hakkında tam Ayrıntılar için bkz. dağıtılmış BT için rol tabanlı erişim denetimi ve kapsam etiketleri kullanma.
-1.    **Ekle** > **kapsam (Etiketler)** seçin.
+1.    **Kapsam (Etiketler)** > **Ekle**öğesini seçin.
 2.    Kapsam etiketlerini aramak için **Seç** kutusunu kullanın.
 3.    Bu uygulamaya atamak istediğiniz kapsam etiketlerinin yanındaki onay kutusunu işaretleyin.
-4.    **Tamam** > **Seç** ' e tıklayın.
+4.    **Seç** > **Tamam 'a**tıklayın.
 
 ## <a name="add-the-app"></a>Uygulama ekleme
 Yapılandırmayı tamamladıktan sonra **uygulama uygulaması** bölmesinden **Ekle** ' yi seçin. 

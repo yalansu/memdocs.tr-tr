@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0aa02c58f2a2d75389be357ac7c700c2bac99027
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329170"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Intune ile Mobile Threat Defense tümleştirmesi
@@ -31,7 +31,7 @@ Intune, mobil tehdit savunma (MTD) satıcısındaki verileri cihaz uyumluluk ilk
 
 Intune, Intune uygulama koruma ilkelerini kullanarak, kayıtlı olmayan cihazlar için bu verileri kaynak olarak kullanabilir. Bu nedenle, Yöneticiler bu bilgileri [Microsoft Intune korunan bir uygulamadaki](../apps/apps-supported-intune-apps.md)kurumsal verileri korumak ve bir blok veya seçmeli silme vermek için kullanabilir.
 
-## <a name="protect-corporate-resources"></a>Kurumsal kaynakları koruma
+## <a name="protect-corporate-resources"></a>Şirket kaynaklarını koruma
 
 MTD satıcılarından bilgi Tümleştirme, mobil platformları etkileyen tehditlere karşı şirket kaynaklarınızı korumanıza yardımcı olabilir.  
 
@@ -74,10 +74,10 @@ Cihaz düzeltildiğinde erişim izni verilir:
 ## <a name="sample-scenarios-for-unenrolled-devices-using-intune-app-protection-policies"></a>Intune uygulama koruma ilkelerini kullanarak kayıtlı olmayan cihazların örnek senaryoları
 
 Mobile Threat Defense çözümü, bir cihazı etkilenmiş olarak kabul ettiğinde:<br>
-virüslü bir mobil tehdit savunması cihazını gösteren ![resim](./media/mobile-threat-defense/MTD-image-3.png)
+![Mobile Threat Defense’te etkilenmiş cihazı gösteren resim](./media/mobile-threat-defense/MTD-image-3.png)
 
 Cihaz düzeltildiğinde erişim izni verilir:<br>
-Mobil tehdit savunması erişimi verilen ![resim](./media/mobile-threat-defense/MTD-image-4.png)
+![Mobil tehdit savunması erişimi verilen resim](./media/mobile-threat-defense/MTD-image-4.png)
 
 > [!NOTE]
 > Tek bir Intune kiracısıyla birden çok mobil savunma satıcısı kullanabilirsiniz. Ancak, iki veya daha fazla satıcı aynı platform için kullanılmak üzere yapılandırıldığında, o platformu çalıştıran tüm cihazların her MTD uygulamasını yüklemesi ve tehditler taraması gerekir. Yapılandırılmış uygulamalardan bir tarama göndermemesi, cihazın uyumsuz olarak işaretlenmesine neden olur. 

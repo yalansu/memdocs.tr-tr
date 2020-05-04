@@ -18,17 +18,17 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8405ef9c8d83583fe2ceb5da668ccfd79d23a39a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79323790"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Mobil uygulama yönetimi sorunlarını giderme
 
 Bu konu, Intune Uygulama Koruması kullanılırken gerçekleşen yaygın sorunlara çözümler sağlar (Ayrıca MAM veya mobil uygulama yönetimi olarak da adlandırılır).
 
-Bu bilgiler sorununuzu çözmezse, yardım almanın diğer yollarını öğrenmek için bkz. [Microsoft Intune için destek alma](../fundamentals/get-support.md).
+Bu bilgiler sorununuzu çözmezse, yardım almanın daha fazla yolunu öğrenmek için bkz. [Microsoft Intune için destek alma](../fundamentals/get-support.md).
 
 ## <a name="common-it-administrator-issues"></a>Yaygın BT yöneticisi sorunları
 
@@ -41,7 +41,7 @@ Bunlar, Intune uygulama koruma ilkelerini kullanırken BT yöneticisinin karşı
 | Yönetici, uygulama koruma ilkesini Azure portalında yapılandıramıyor | BT Yöneticisi Kullanıcı Azure portal 'de uygulama koruma ilkelerini yapılandıramıyor. | Aşağıdaki kullanıcı rollerinin Azure portal erişimi vardır: <ul><li>[Microsoft 365 Yönetim Merkezi](https://admin.microsoft.com/) 'nde ayarlayabileceğiniz genel yönetici</li><li>[Azure Portal](https://portal.azure.com/)ayarlayabileceğiniz sahip.</li><li>[Azure Portal](https://portal.azure.com/)ayarlayabileceğiniz katkıda bulunan.</li></ul> Bu rolleri ayarlamayla ilgili yardım için [Microsoft Intune Ile rol tabanlı yönetim denetimine (RBAC)](../fundamentals/role-based-access-control.md) bakın.|
 |Uygulama koruma ilkesi raporlarında eksik kullanıcı hesapları var | Yönetim konsolu raporları, uygulama koruma ilkesinin en son dağıtıldığı kullanıcı hesaplarını göstermiyor. | Kullanıcı bir uygulama koruma ilkesiyle henüz hedeflenmişse, bu kullanıcının raporlarda hedeflenen kullanıcı olarak görünmesi 24 saate kadar sürebilir. |
 | İlke değişiklikleri çalışmıyor | Uygulama koruma ilkesinde yapılan değişikliklerin ve güncelleştirmelerin uygulanması 8 saate kadar sürebilir. | Mümkünse, son kullanıcı uygulama oturumunu kapatıp hizmetle eşitlemeyi zorlayarak tekrar oturum açabilir. |
-| Uygulama koruma ilkesi DEP ile çalışmıyor | Uygulama koruma ilkesi Apple DEP cihazlara uygulanmıyor. | Lütfen Kullanıcı Benzeşimi’ni Apple Aygıt Kayıt Programı (DEP) ile kullandığınızdan emin olun. Kullanıcı benzeşimi, DEP altında kullanıcı kimlik doğrulaması gerektiren her uygulama için gereklidir. <br><br>İOS/ıpados DEP kaydı hakkında daha fazla bilgi için bkz. [Apple 'ın aygıt kayıt programı iOS/ıpados cihazlarını otomatik olarak kaydetme](../enrollment/device-enrollment-program-enroll-ios.md) .|
+| Uygulama koruma ilkesi DEP ile çalışmıyor | Uygulama koruma ilkesi Apple DEP cihazlara uygulanmıyor. | Lütfen Kullanıcı Benzeşimi’ni Apple Aygıt Kayıt Programı (DEP) ile kullandığınızdan emin olun. Kullanıcı Benzeşimi, DEP altında kullanıcı kimlik doğrulaması gerektiren tüm uygulamalar için gereklidir. <br><br>İOS/ıpados DEP kaydı hakkında daha fazla bilgi için bkz. [Apple 'ın aygıt kayıt programı iOS/ıpados cihazlarını otomatik olarak kaydetme](../enrollment/device-enrollment-program-enroll-ios.md) .|
 | Veri aktarımı ilkesi iOS/ıpados ile çalışmıyor | **Uygulamanın diğer uygulamalara veri aktarmasına** ve **uygulamanın diğer uygulamalardan veri almasına** Izin ver Ilkesi, iOS/ıpados 'daki veri aktarımını başarıyla yönetemez. | [Microsoft Intune 'de iOS/ıpados uygulamaları arasında veri aktarımını yönetme](data-transfer-between-apps-manage-ios.md)bölümüne bakın. |
 
 ## <a name="common-end-user-issues"></a>Yaygın son kullanıcı sorunları
@@ -56,9 +56,9 @@ Yaygın son kullanıcı sorunları aşağıdaki kategorilere ayrılmıştır:
 
 ### <a name="normal-usage-scenarios"></a>Normal kullanım senaryoları
 
-Platfveyam | Senaryo | Açıklama |
+Platform | Senaryo | Açıklama |
 ---| --- | --- |
-iOS | Son Kullanıcı iOS/ıpados Share uzantısını kullanarak, veri aktarım ilkesi **yalnızca yönetilen uygulamalar** veya uygulamalar olarak ayarlanmış şekilde yönetilmeyen uygulamalarda iş veya okul verilerini açabilir **.** Bu veri sızıntısına neden olmaz mı? | Intune uygulama koruma ilkesi, cihazı yönetmeksizin iOS/ıpados paylaşma uzantısını denetlemez. Bu nedenle **Intune, “kurumsal” verileri uygulama dışında paylaşmadan önce şifreler**. Bunu, “kurumsal” dosyayı yönetilen uygulama dışında açmaya çalışarak doğrulayabilirsiniz. Bu dosya yalnızca şifrelenmiş ve yönetilen bir uygulama olarak açılmalıdır.
+iOS | Son Kullanıcı iOS/ıpados Share uzantısını kullanarak, veri aktarım ilkesi **yalnızca yönetilen uygulamalar** veya uygulamalar olarak ayarlanmış şekilde yönetilmeyen uygulamalarda iş veya okul verilerini açabilir **.** Bu veri sızıntısına neden olmaz mı? | Intune uygulama koruma ilkesi, cihazı yönetmeksizin iOS/ıpados paylaşma uzantısını denetlemez. Bu nedenle **Intune, “kurumsal” verileri uygulama dışında paylaşmadan önce şifreler**. Bunu, yönetilen uygulama dışında "kurumsal" dosyayı açmaya çalışarak doğrulayabilirsiniz. Bu dosya şifrelenmiş olmalı ve yönetilen bir uygulama dışında açılamamalıdır.
 iOS | Son kullanıcıdan **Microsoft Authenticator uygulamasını neden yüklemesi isteniyor** | Bu, uygulama tabanlı koşullu erişim uygulandığında gereklidir, bkz. [onaylanan istemci uygulaması gerektir](https://docs.microsoft.com/azure/active-directory/conditional-access/app-based-conditional-access).
 Android | MAM uygulama korumasını cihaz kaydı olmadan kullanıyor olsam bile son kullanıcının neden **Şirket Portalı uygulamasını yüklemesi gerekir**?  | Android’de, uygulama koruma işlevlerinin çoğu Şirket Portalı uygulamasında yerleşik olarak bulunur. **Şirket Portalı uygulaması her zaman gerekli olsa bile cihaz kaydı gerekli değildir**. Kayıt olmadan uygulama koruması için son kullanıcının cihazında Şirket Portalı uygulamasının yüklü olması yeterlidir.
 iOS/Android | Uygulama koruma ilkesi, Outlook uygulamasında taslak e-postasına uygulanmadı | Outlook hem kurumsal hem de kişisel bağlamı desteklediğinden, taslak e-postada MAM uygulamaz.
@@ -71,7 +71,7 @@ iOS | Outlook uygulamasında PDF eklerini açmak "eyleme Izin verilmiyor | Bu du
 
 ### <a name="normal-usage-dialogs"></a>Normal kullanım iletişim kutuları
 
-Platfveyam | İleti veya iletişim kutusu | Açıklama |
+Platform | İleti veya iletişim kutusu | Açıklama |
 --- | --- | --- |
 iOS, Android | **Oturum açma**: Kuruluşunuzun, verilerini korumak için bu uygulamayı yönetmesi gerekir. Bu işlemi tamamlamak için iş veya okul hesabınızla oturum açın. | Son kullanıcının, uygulama koruma ilkesi gerektiren bu uygulamayı kullanabilmesi için iş veya okul hesabıyla oturum açması gerekir. İlkenin uygulanabilmesi için, kullanıcının Azure Active Directory karşı kimlik doğrulaması gerekir.
 iOS, Android |**Yeniden Başlatma Gerekli**: Kuruluşunuz artık verilerini bu uygulama içinde koruyor. Devam etmek için uygulamayı yeniden başlatmanız gerekir. | Uygulama, bir Intune uygulama koruma ilkesi aldı ve ilkenin uygulanabilmesi için yeniden başlatılması gerekiyor.
@@ -84,7 +84,7 @@ Android | **Şirket Portalı gerekli**: İş veya okul hesabınızı bu uygulama
 
 Hata iletisi veya iletişim kutusu | Nedeni | Düzeltme |
 -- | --- | --- |
-**Uygulama Ayarlanmadı**: Bu uygulama, kullanabilmeniz için ayarlanmamış. Yardım için BT yöneticinize başvurun. | Uygulama için gerekli bir uygulama koruma ilkesi algılanamadı. |Kullanıcının güvenlik grubuna bir iOS uygulama koruma ilkesi dağıtıldığından ve bu uygulamayı hedeflediğinden emin olun.
+**Uygulama ayarlanmadı**: Bu uygulama, kullanabilmeniz için ayarlanmamış. Yardım için BT yöneticinize başvurun. | Uygulama için gerekli bir uygulama koruma ilkesi algılanamadı. |Kullanıcının güvenlik grubuna bir iOS uygulama koruma ilkesi dağıtıldığından ve bu uygulamayı hedeflediğinden emin olun.
 **Intune Managed Browser'a Hoş Geldiniz**: Bu uygulama, Microsoft Intune tarafından yönetildiğinde en iyi şekilde çalışır. Bu uygulamayı web'de gezinmek için her zaman kullanabilirsiniz ve uygulama Microsoft Intune tarafından yönetildiğinde ek veri koruma özelliklerine erişiminiz olur. | Intune Managed Browser uygulaması için gerekli uygulama koruma ilkesi algılanamadı. <br><br>Kullanıcı web’de gezinmek için uygulamayı kullanmaya devam edebilir ancak uygulama Intune tarafından yönetilmez. | Kullanıcının güvenlik grubuna bir iOS uygulama koruma ilkesi dağıtıldığından ve Intune Managed Browser uygulamasını hedeflediğinden emin olun.
 **Oturum Açma Başarısız**: Şu an oturumunuzu açamıyoruz. Lütfen daha sonra tekrar deneyin. | Kullanıcı iş veya okul hesabıyla oturum açmayı denedikten sonra MAM hizmetine kaydedilemiyor. | Kullanıcının güvenlik grubuna bir iOS uygulama koruma ilkesi dağıtıldığından ve bu uygulamayı hedeflediğinden emin olun.
 **Hesap Ayarlanmadı**: Kuruluşunuz hesabınızı iş veya okul verilerine erişecek şekilde ayarlamadı. Yardım için lütfen BT yöneticinizle görüşün. | Kullanıcı hesabının Intune A Direct lisansı yok. | Kullanıcı hesabının [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com)bir Intune lisansı atanmış olduğundan emin olun.
@@ -104,7 +104,7 @@ Hata iletisi veya iletişim kutusu | Nedeni | Düzeltme |
 **Uygulama başlatma başarısız oldu**: Uygulamanız başlatılırken bir sorun oluştu. Uygulamayı ya da Intune Şirket Portalı uygulamasını güncelleştirmeyi deneyin. Yardıma ihtiyacınız olursa BT yöneticinizle iletişime geçin. | Intune uygulama için uygulama koruma ilkesinin geçerli olduğunu algıladı, ancak uygulama MAM başlatılırken kilitleniyor. | Uygulama sürümünün güncel olduğundan emin olun. <br><br> Intune Şirket Portalı uygulamasının cihazda yüklü ve güncel olduğundan emin olun. <br><br> Hata devam ederse, günlükleri Intune 'a göndermek veya bir [destek bileti](../fundamentals/get-support.md#create-an-online-support-ticket)oluşturmak için şirket portalı uygulamasını kullanın.
 **Uygulama bulunamadı**: Bu cihazda, kuruluşunuzun bu içeriği açmasına izin verdiği herhangi bir uygulama yok. Yardım için BT yöneticinize başvurun. | Kullanıcı iş veya okul hesabını başka bir uygulamayla açmayı denedi ancak Intune verileri açma izni olan başka yönetilen uygulama bulamıyor. | Kullanıcının güvenliğine bir Android uygulama koruma ilkesi dağıtıldığından ve bu ilkenin söz konusu veriyi açabilen en azından başka bir MAM özellikli uygulamayı hedeflediğinden emin olun.
 **Oturum açma başarısız oldu**: Oturum açmayı yeniden deneyin. Sorun devam ederse yardım için BT yöneticinize başvurun. | Kullanıcının oturum açmayı denediği hesabın kimlik doğrulaması başarısız oldu. | Kullanıcının Intune MAM hizmetine zaten kayıtlı bir iş veya okul hesabıyla oturum açtığından emin olun (Bu uygulamada başarıyla oturum açılan ilk iş veya okul hesabı). <br><br> Uygulamanın verilerini temizleyin. <br><br> Uygulama sürümünün güncel olduğundan emin olun. <br><br> Şirket Portalı sürümünün güncel olduğundan emin olun.
-**İnternet bağlantısı gerekli**: Bu uygulamayı kullanabileceğinizi doğrulamak için İnternet'e bağlı olmalısınız. | Cihaz, İnternet'e bağlı değil. | Cihazı bir WiFi veya Veri ağına bağlayın.
+**İnternet bağlantısı gerekli**: Bu uygulamayı kullanbildiğinizi doğrulamak için internet 'e bağlı olmanız gerekir. | Cihaz, İnternet'e bağlı değil. | Cihazı bir WiFi veya Veri ağına bağlayın.
 **Cihaz uyumlu değil**: Bu uygulama, cihazınıza kök erişim izni verildiğinden kullanılamaz. Yardım için BT yöneticinize başvurun. | Intune, kullanıcının kök erişim izni verilmiş bir cihaz kullandığını algılandı. | Cihazı fabrika ayarlarına sıfırlayın.
 **Hesap ayarlanmadı**: Bu uygulamanın Microsoft Intune tarafından yönetilmesi gerekiyor, ancak hesabınız henüz ayarlanmamış. Yardım için BT yöneticinize başvurun. | Kullanıcı hesabının Intune A Direct lisansı yok. | Kullanıcı hesabının [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com)bir Intune lisansı atanmış olduğundan emin olun.
 **Uygulama kaydedilemedi**: Bu uygulamanın Microsoft Intune tarafından yönetilmesi gerekiyor ancak uygulama şu anda kaydedilemedi. Yardım için BT yöneticinize başvurun. | Uygulama koruma ilkesi gerekli olduğunda uygulama MAM hizmetine otomatik olarak kaydedilemedi. | Uygulamanın verilerini temizleyin. <br><br> Şirket Portalı uygulama aracılığıyla veya bir destek bileti dosyası aracılığıyla Intune 'a günlük gönderin. Daha fazla bilgi için bkz. [Microsoft Intune için destek alma](../fundamentals/get-support.md).
@@ -112,7 +112,7 @@ Hata iletisi veya iletişim kutusu | Nedeni | Düzeltme |
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [Mobil uygulama yönetimi kurulumunuzu doğrulama](app-protection-policies-validate.md)
-- Intune Uygulama Koruması ilke sorunlarını gidermek için günlük dosyalarını nasıl kullanacağınızı öğrenin, bkz. [https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372)
+- Intune Uygulama Koruması İlkesi sorunlarını gidermek için günlük dosyalarını nasıl kullanacağınızı öğrenin, bkz.[https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372)
 - Ek Intune sorun giderme bilgileri için bkz. [Şirketinizdeki kullanıcılara yardımcı olmak için sorun giderme portalını kullanma](../fundamentals/help-desk-operators.md). 
 - Microsoft Intune’daki tüm bilinen sorunlar hakkında bilgi edinin. Daha fazla bilgi için bkz. [Microsoft Intune’da bilinen sorunlar](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).
 - Ek yardım mı gerekiyor? Bkz. [Microsoft Intune için destek alma](../fundamentals/get-support.md).

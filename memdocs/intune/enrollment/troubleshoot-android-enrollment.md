@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: bcc524a69d0fb41da84a2e882b81a205fe7192cc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332786"
 ---
 # <a name="troubleshoot-android-enterprise-device-problems-in-microsoft-intune"></a>Microsoft Intune 'de Android kurumsal cihaz sorunlarını giderme
@@ -59,7 +59,7 @@ Evet. Daha fazla bilgi için bkz. [yönetilen Google Play web bağlantıları](.
 
   Şirket Portalı günlüklerini toplamak için aşağıdaki adımları izleyin:
 
-  1. Rozet ile Şirket Portalı uygulamasında, **menü** ' > **Yardım** > **e-posta desteği**' ne tıklayın ve ardından **e-posta gönder & karşıya yükle**' ye dokunun. 
+  1. Rozet ile şirket portalı uygulamasında, **menü** > **Help** > **e-posta desteği**' ne dokunun, ardından **e-posta gönder & karşıya yükleme günlükleri**' ne dokunun. 
   2. **Yardım Isteği göndermek**isteyip istemediğiniz sorulduğunda, e-posta uygulamalarından birini seçin.
   3. BT yöneticinize, Microsoft ürün desteği 'ne sağlanacak bir olay KIMLIĞI ile bir e-posta oluşturulur.
 
@@ -87,7 +87,7 @@ Adanmış cihazlar (COSU) ve tam olarak yönetilen cihaz geçiş kodu sıfırlam
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Intune’da cihaz kaydı sorunlarını giderme](troubleshoot-device-enrollment-in-intune.md)
+- [Intune'da cihaz kaydıyla ilgili sorunları giderme](troubleshoot-device-enrollment-in-intune.md)
 - [Intune forumundan soru sorun](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
 - [Microsoft Intune destek ekibi blogunu denetleyin](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Microsoft Enterprise Mobility ve Security blogunu denetleyin](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)

@@ -19,13 +19,13 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 71563a44e991e7324b9ce258d66d288d4b5a6cdb
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327257"
 ---
-# <a name="set-up-iosipados-device-enrollment-with-apple-configurator"></a>Apple Configurator ile iOS/iPadOS cihaz kaydını ayarlama
+# <a name="set-up-iosipados-device-enrollment-with-apple-configurator"></a>Apple Configurator ile iOS/ıpados cihaz kaydını ayarlama
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -48,7 +48,7 @@ Apple Configurator kayıt yöntemleri [cihaz kaydı yöneticisi](device-enrollme
 
 Bir cihaz kayıt profili kayıt sırasında uygulanan ayarları tanımlar. Bu ayarlar yalnızca bir kez uygulanır. Apple Configurator ile iOS/ıpados cihazlarını kaydetmek üzere bir kayıt profili oluşturmak için bu adımları izleyin.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **, > ** **IOS** > IOS **kaydı** > **Apple Configurator** > **profilleri** > **Oluştur**' u seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **iOS** > **iOS kaydı** > **Apple Configurator** > **profilleri** > **Oluştur**' u seçin.
 
     ![Apple Configurator için bir profil oluşturma](./media/apple-configurator-enroll-ios/apple-config-create-profile.png)
 
@@ -58,7 +58,7 @@ Bir cihaz kayıt profili kayıt sırasında uygulanan ayarları tanımlar. Bu ay
 
 3. **Kullanıcı Benzeşimi** için bu profile sahip cihazların atanan kullanıcıyla mı yoksa atanan kullanıcı olmadan mı kaydedilmesi gerektiğini seçin.
 
-    - **Kullanıcı benzeşimi ile kaydetme** - Uygulamaları yükleme gibi hizmetler için Şirket Portalı’nı kullanmak isteyen kullanıcılara ait cihazlar için bu seçeneği seçin. Cihaz Kurulum Yardımcısı ile bir kullanıcıya bağlanmalıdır. Böylece, cihaz şirket verilerine ve e-postalara erişebilir. Yalnızca Kurulum Yardımcısı kaydı için desteklenir. Kullanıcı benzeşimi [WS-Trust 1.3 Kullanıcı adı/Karma uç noktası](https://technet.microsoft.com/library/adfs2-help-endpoints) gerektirir. [Daha fazla bilgi edinin](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+    - **Kullanıcı benzeşimi Ile kaydetme** -kullanıcılara ait olan ve uygulamaları yükleme gibi hizmetler için şirket portalı 'nı kullanmak isteyen cihazlar için bu seçeneği belirleyin. Cihaz Kurulum Yardımcısı ile bir kullanıcıya bağlanmalıdır. Böylece, cihaz şirket verilerine ve e-postalara erişebilir. Yalnızca Kurulum Yardımcısı kaydı için desteklenir. Kullanıcı benzeşimi [WS-Trust 1.3 Kullanıcı adı/Karma uç noktası](https://technet.microsoft.com/library/adfs2-help-endpoints) gerektirir. [Daha fazla bilgi edinin](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
     - **Kullanıcı Benzeşimi Olmadan Kaydetme** - Tek bir kullanıcıyla bağlantılı olmayan cihazlar için bu seçeneği seçin. Yerel kullanıcı verilerine erişmeden görevleri yerine getiren cihazlar için bunu kullanın. Kullanıcı ilişkisi gerektiren uygulamalar (iş kolu uygulamalarını yüklemek için kullanılan Şirket Portalı uygulaması dahil) çalışmaz. Doğrudan kayıt için gereklidir.
 
@@ -88,7 +88,7 @@ Bir cihaz kayıt profili kayıt sırasında uygulanan ayarları tanımlar. Bu ay
     DLXQPCWVGHMJ,cihaz ayrıntıları
 
    [İOS/ıpados cihaz seri numarasını bulmayı](https://support.apple.com/HT204073)öğrenin.
-2. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **, > ** **IOS** > IOS **kaydı** > **Apple Configurator** > **cihazları** > **Ekle**' yi seçin.
+2. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **iOS** > **iOS kaydı** > **Apple Configurator** > **cihazlar** > **Ekle**' yi seçin.
 
 5. İçeri aktardığınız seri numaralarına uygulamak için bir **Kayıt profili** seçin. Seri numara ayrıntılarının önceki tüm ayrıntıların üzerine yazmasını istiyorsanız **Geçerli tanımlayıcı ayrıntılarının üzerine yaz**’ı seçin.
 6. **Cihaz İçeri Aktar** altında seri numaralarının bulunduğu csv dosyasına gözatın ve **Ekle**’yi seçin.
@@ -100,20 +100,20 @@ Apple Configurator kaydı için iOS/ıpados seri numaralarını içeri aktardı�
 - **AC profilleri**
 
 #### <a name="assign-from-apple-configurator-devices"></a>Apple Configurator cihazlarından atama
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nde, **iOS** > IOS **kaydı** > **Apple Configurator** > **cihazları** ' nı seçin > seri **numaralarını seçin >** **profil** > .
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar** > **iOS** > **iOS kaydı** > **Apple Configurator** > **cihazlar** ' ı seçin > seri numaralarını seçin > **profil atayın**.
 2. **Profil Ata** altında atamak istediğiniz **Yeni profil**’i, sonra da **Ata**’yı seçin.
 
 #### <a name="assign-from-profiles"></a>Profillerden atama
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, > **iOS** > **ios kaydı** > **Apple Configurator** > **profillerini** seçin > bir **profil seçin.**
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **iOS** > **iOS kaydı** > **Apple Configurator** > **profilleri** ' ni seçin > bir profil seçin.
 2. Profilde, **Atanmış cihazlar**’ı ve ardından **Ata**’yı seçin.
 3. Profile atamak istediğiniz cihaz seri numaralarını bulmak için filtre uygulayın, cihazları seçin ve ardından **Ata**’yı seçin.
 
 ### <a name="export-the-profile"></a>Profili dışarı aktarma
 Profil oluşturup seri numaralarını atadıktan sonra profili Intune'dan URL olarak dışarı aktarmanız gerekir. Ardından bunu cihazlara dağıtmak üzere bir Mac bilgisayardaki Apple Configurator’a içeri aktarırsınız.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, > **iOS** > **ios kaydı** > **Apple Configurator** > **profilleri** ' ni seçin > dışarı aktarılacak **profili seçin.**
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **iOS** > **iOS kaydı** > **Apple Configurator** > **profilleri** ' ni seçin > dışarı aktarılacak profili seçin.
 2. Profilde **Profili Dışarı Aktar**’ı seçin.
-3. **Profil URL’sini** kopyalayın. Ardından, iOS/ıpados cihazları tarafından kullanılan Intune profilini tanımlamak için bunu Apple Configurator 'a ekleyebilirsiniz.
+3. **Profil URL 'sini**kopyalayın. Ardından, iOS/ıpados cihazları tarafından kullanılan Intune profilini tanımlamak için bunu Apple Configurator 'a ekleyebilirsiniz.
 
    Ardından, iOS/ıpados cihazları tarafından kullanılan Intune profilini tanımlamak için aşağıdaki yordamda bu profili Apple Configurator 'a aktarın.
 
@@ -132,7 +132,7 @@ Profil oluşturup seri numaralarını atadıktan sonra profili Intune'dan URL ol
 6. **MDM Sunucusuna Kaydol** bölmesinde, oluşturduğunuz sunucunun adını ve sonra da **İleri**’yi seçin.
 7. **Cihazları Denetle** bölmesinde, denetim düzeyini seçin, sonra **İleri**’yi seçin.
 8. **Kuruluş Oluştur** bölmesinde **Kuruluş**’u seçin veya yeni bir kuruluş oluşturun, sonra **İleri**’yi seçin.
-9. **İOS/ıpados Kurulum Yardımcısı 'Nı Yapılandır** bölmesinde, kullanıcıya sunulacak adımları seçin ve ardından **hazırla**' yı seçin. İstenirse, güven ayarlarını güncelleştirmek için kimlik doğrulayın.  
+9. **İOS/ıpados Kurulum Yardımcısı 'Nı Yapılandır** bölmesinde, kullanıcıya sunulacak adımları seçin ve ardından **hazırla**' yı seçin. İstenirse, güven ayarlarını güncelleştirmek için kimlik doğrulaması yapın.  
 10. İOS/ıpados cihazı hazırlanma işlemini bitirdiğinde USB kablosunu sökün.  
 
 ### <a name="distribute-devices"></a>Cihazları dağıtma
@@ -147,7 +147,7 @@ Kullanıcıların, cihazlarını aldıktan sonra Kurulum Yardımcısı'nı tamam
 
 ### <a name="export-the-profile-as-mobileconfig-to-iosipados-devices"></a>Profili. mobileconfig olarak iOS/ıpados cihazlarına dışarı aktarma
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, > **iOS** > **ios kaydı** > **Apple Configurator** > **profilleri** ' ni seçin > **dışarı aktarma profilini**dışarı aktarmak için **profili seçin.**
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **iOS** > **iOS kaydı** > **Apple Configurator** > **profilleri** ' ni seçin > > **dışarı aktarma profilini**dışarı aktarmak için profili seçin.
 2. **Doğrudan kayıt** altında **Profil indir**’i seçin ve dosyayı kaydedin. Bir kayıt profili yalnızca iki hafta geçerlidir, iki haftanın sonunda bunu yeniden oluşturmanız gerekir.
 3. İOS/ıpados cihazlarına doğrudan bir yönetim profili olarak göndermek için dosyayı [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) çalıştıran bir Mac bilgisayara aktarın.
 4. Aşağıdaki adımları izleyerek cihazı Apple Configurator ile hazırlayın:
@@ -160,11 +160,11 @@ Kullanıcıların, cihazlarını aldıktan sonra Kurulum Yardımcısı'nı tamam
     4. Intune’dan dışarı aktardığınız .mobileconfig dosyasını seçmek için dosya seçiciyi kullanın ve sonra **Ekle**’yi seçin. Profil cihaza eklenir. Cihaz Denetimsiz ise, yüklemenin cihazda kabul edilmesi gerekir.
 5. Profili iOS/ıpados cihazına yüklemek için aşağıdaki adımları kullanın. Cihaz, Kurulum Yardımcısı’nı zaten tamamlamış ve hazır olmalıdır. Kayıt içinde uygulama dağıtımları da varsa uygulama dağıtımı, App Store için imzalanmış bir Apple Kimliğiniz olmasını gerektirdiğinden cihazda bir Apple Kimliği ayarlanmış olmalıdır.
     1. İOS/ıpados cihazının kilidini açın.
-    2. **Yönetim profili**’nin **Profili yükle** iletişim kutusunda **Yükle**’yi seçin.
+    2. **Yönetim profili**Için **profil yüklensin** iletişim kutusunda, **yükler**' i seçin.
     3. Gerekirse, Cihaz Geçiş Kodu veya Apple Kimliği sağlayın.
     4. **Uyarı**’yı kabul edin ve **Yükle**’yi seçin.
     5. **Uzak Uyarı**’yı kabul edin ve **Güven**’i seçin.
-    6. **Profil Yüklendi** kutusu profilin Yüklü olduğunu doğruladığında **Bitti**’yi seçin.
+    6. **Profil yüklendi** kutusu profili yüklendi olarak onayladığında **bitti**' yi seçin.
 
 6. İOS/ıpados cihazında **Ayarlar** ' ı açın ve **genel** > **cihaz yönetimi** > **Yönetim profili**' ne gidin. Profil yüklemesinin listelendiğini onaylayın ve iOS/ıpados ilke kısıtlamalarını ve yüklü uygulamaları denetleyin. İlke kısıtlamaları ve uygulamaların cihazda görünmesi 10 dakika kadar sürebilir.
 

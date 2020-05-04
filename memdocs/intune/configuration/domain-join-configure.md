@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 207b3983c214ad4e166ae58ea0ccd18ea23bf418
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79333114"
 ---
 # <a name="configuration-domain-join-settings-for-hybrid-azure-ad-joined-devices-in-microsoft-intune"></a>Microsoft Intune 'de karma Azure AD 'ye katılmış cihazlar için yapılandırma etki alanına katılma ayarları
@@ -31,7 +31,7 @@ Birçok ortam şirket içi Active Directory (AD) kullanır. AD etki alanına kat
 Bu özellik şu platformlarda geçerlidir:
 
 - Windows 10 ve üzeri
-- Karma Azure AD 'ye katılmış cihazlar
+- Hibrit Azure AD’ye katılmış cihazlar
 - Autopilot + Intune ile karma dağıtım
 
 Bu makalede, karma Autopilot dağıtımı için bir etki alanı ekleme profili oluşturma gösterilmektedir. Kullanılabilir ayarları da görebilirsiniz.
@@ -39,7 +39,7 @@ Bu makalede, karma Autopilot dağıtımı için bir etki alanı ekleme profili o
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Ad**: ilke için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir ilke adı **Windows 10: karma ad 'ye katılmış cihazları Windows Autopilot 'e kaydetmek için şirket içi etki alanı bilgilerini Içeren etki alanına katılma profilidir**.
@@ -47,15 +47,15 @@ Bu makalede, karma Autopilot dağıtımı için bir etki alanı ekleme profili o
     - **Platform**: **Windows 10 ve üstünü**seçin.
     - **Profil türü**: **etki alanına katılmayı (Önizleme)** seçin.
 
-4. **Ayarlar**’ı seçin. Aşağıdaki özellikleri girin:
+4. **Ayarlar**' ı seçin. Aşağıdaki özellikleri girin:
 
     - **Bilgisayar adı ön eki**: Cihaz adı için bir ön ek girin. Bilgisayar adları 15 karakter uzunluğundadır. Ön ek sonrasında, kalan 15 karakter rastgele oluşturulur.
-    - **Etki alanı adı**: cihazların katılabileceği tam etki alanı adını (FQDN) girin. Örneğin, `americas.corp.contoso.com.` girin
-    - **Kuruluş birimi** (isteğe bağlı): bilgisayar hesaplarının oluşturulacağı kuruluş BIRIMI (OU) için tam yolu ([ayırt edici ad](https://docs.microsoft.com/windows/win32/ad/object-names-and-identities#distinguished-name)) girin. Örneğin, şunu girin: `"CN=Users,DC=Contoso,DC=com"`. Değer girmezseniz, iyi bilinen bir bilgisayar nesne kapsayıcısı kullanılır.
+    - **Etki alanı adı**: cihazların katılabileceği tam etki alanı adını (FQDN) girin. Örneğin, şunu girin`americas.corp.contoso.com.`
+    - **Kuruluş birimi** (isteğe bağlı): bilgisayar hesaplarının oluşturulacağı kuruluş BIRIMI (OU) için tam yolu ([ayırt edici ad](https://docs.microsoft.com/windows/win32/ad/object-names-and-identities#distinguished-name)) girin. Örneğin, `"CN=Users,DC=Contoso,DC=com"` girin. Değer girmezseniz, iyi bilinen bir bilgisayar nesne kapsayıcısı kullanılır.
 
       Bu ayar hakkında daha fazla bilgi ve öneri için bkz. [karma Azure AD 'ye katılmış cihazları dağıtma](../enrollment/windows-autopilot-hybrid.md).
 
-5. İşiniz bittiğinde **Tamam** > **Oluştur**’u seçerek değişikliklerinizi kaydedin.
+5. İşiniz bittiğinde, değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin.
 
 Profil oluşturulur ve profiller listesinde gösterilir. Artık [Intune ve Windows Autopilot kullanarak karma Azure AD 'ye katılmış cihazları dağıtmanıza](../enrollment/windows-autopilot-hybrid.md)hazırdır.
 

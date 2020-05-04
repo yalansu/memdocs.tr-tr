@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07c29f45c2d9356bda78e021d3baf9647aa03397
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6633682a9572ba36f41f42e77c5aa64403e0e209
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326806"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81440586"
 ---
 # <a name="create-a-custom-role-in-intune"></a>Intune 'da özel bir rol oluşturma
 
@@ -34,13 +34,13 @@ Rolleri oluşturmak, düzenlemek ve atamak için, hesabınızın Azure AD’de a
 
 ## <a name="to-create-a-custom-role"></a>Özel bir rol oluşturmak için
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nde, **Oluştur** > **tüm roller** > **Kiracı Yönetimi** > **Roller** ' i seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **kiracı yönetim** > **rolleri** > **tüm roller** > **Oluştur**' u seçin.
 
 2. **Temel bilgiler** sayfasında, yeni rol için bir ad ve açıklama girin ve ardından **İleri**' yi seçin.
 
 3. **İzinler** sayfasında, bu rolle birlikte kullanmak istediğiniz izinleri seçin.
 
-4. **Kapsam (Etiketler)** sayfasında bu rolün etiketlerini seçin. Bu rol, bu etiketlerin de bulunduğu kaynaklara erişebilir. **İleri**’yi seçin.
+4. **Kapsam (Etiketler)** sayfasında bu rolün etiketlerini seçin. Bu rol bir kullanıcıya atandığında, bu kullanıcı aynı zamanda bu etiketlere sahip kaynaklara erişebilir. **İleri**’yi seçin.
 
 5. **Gözden geçir + oluştur** sayfasında, Işiniz bittiğinde **Oluştur**' u seçin. Yeni rol, **Intune rolleri-tüm roller** dikey penceresinde listede görüntülenir.
 
@@ -48,7 +48,7 @@ Rolleri oluşturmak, düzenlemek ve atamak için, hesabınızın Azure AD’de a
 
 Ayrıca, varolan bir rolü de kopyalayabilirsiniz.
 
-1. [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nde, **tüm roller** > **Kiracı Yönetimi** > **rolleri** ' ni seçin > listedeki bir rolün onay kutusunu seçin > **yineleniyor**.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **kiracı yönetim** > **rolleri** > **tüm roller** ' i seçin > listedeki bir rolün onay kutusunu **seçin >.**
 
 2. **Temel bilgiler** sayfasında, bir ad girin. Benzersiz bir ad kullandığınızdan emin olun.
 

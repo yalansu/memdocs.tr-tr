@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 81e5dc772ca85bf124af3da33a263b683ea0885b
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326975"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Intune ve Windows Autopilot kullanarak karma Azure AD 'ye katılmış cihazları dağıtma
@@ -78,7 +78,7 @@ Bilgisayar oluşturma hakları verilen kuruluş biriminin eşleşmesi gerekir:
 
     ![Temsilci denetimi komutu](./media/windows-autopilot-hybrid/delegate-control.png)
 
-1. **Denetim temsili** sihirbazında, **İleri** ' yi seçerek > **nesne türleri** **ekleyin** > .
+1. **Denetim temsili** sihirbazında, **İleri** > **Add** > **nesne türleri**Ekle ' yi seçin.
 
 1. **Nesne türleri** bölmesinde, **bilgisayarlar** onay kutusunu seçin ve ardından **Tamam**' ı seçin.
 
@@ -90,13 +90,13 @@ Bilgisayar oluşturma hakları verilen kuruluş biriminin eşleşmesi gerekir:
 
 1. Girdinizi doğrulamak için **adları denetle** ' yi seçin, **Tamam**' ı seçin ve ardından **İleri**' yi seçin.
 
-1.  > **devretmek için özel bir görev oluştur** ' u seçin. **Next**
+1.  > **Daha sonra** **atamak için özel bir görev oluştur**' u seçin.
 
 1. Klasör onay kutusunda **yalnızca şu nesneleri** seçin ve ardından **bilgisayar nesnelerini**seçin, **Bu klasörde seçili nesneleri oluşturun**ve **Seçili nesneleri bu klasörde silin** onay kutularını işaretleyin.
 
     ![Active Directory nesne türü bölmesi](./media/windows-autopilot-hybrid/only-following-objects.png)
     
-1. **İleri**'yi seçin.
+1. **İleri**’yi seçin.
 
 1. **İzinler**altında **tam denetim** onay kutusunu seçin.  
     Bu eylem diğer tüm seçenekleri seçer.
@@ -109,14 +109,14 @@ Bilgisayar oluşturma hakları verilen kuruluş biriminin eşleşmesi gerekir:
 
 Active Directory için Intune Bağlayıcısı, Windows Server 2016 veya üstünü çalıştıran bir bilgisayarda yüklü olmalıdır. Bilgisayarın Internet erişimi de ve Active Directory aynı zamanda erişimine sahip olması gerekir. Birden fazla Active Directory etki alanını desteklemek üzere ölçek ve kullanılabilirliği artırmak için ortamınıza birden fazla bağlayıcı yükleyebilirsiniz. Bağlayıcıyı, başka bir Intune Bağlayıcısı çalıştırmayan bir sunucuya yüklemenizi öneririz.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, Active Directory > **ekle**için **Windows** > **Windows kayıt** > **Intune Bağlayıcısı** > **cihazlar** ' ı seçin. 
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, Active Directory > **Windows** >  > **Ekle**için **cihazlar**Windows**Windows kaydı** > **Intune Bağlayıcısı**' nı seçin. 
 2. Bağlayıcıyı indirmek için yönergeleri izleyin.
 3. Bağlayıcıyı yüklemek için, yüklenen bağlayıcı kurulum dosyasını *Odjconnectorbootstrapper. exe*' yi açın.
 4. Kurulumun sonunda **Yapılandır**' ı seçin.
 5. **Oturum aç '** ı seçin.
 6. Kullanıcı genel yöneticisi veya Intune yönetici rolü kimlik bilgilerini girin.  
    Kullanıcı hesabının atanmış bir Intune lisansı olmalıdır.
-7. Active Directory için **windows > ** **Windows kayıt** > **Intune Bağlayıcısı** > **cihazlar** ' a gidin ve ardından bağlantı durumunun **etkin**olduğunu doğrulayın.
+7. Active Directory için **cihazlar** > **Windows** > **Windows kaydı** > **Intune Bağlayıcısı**' na gidin ve ardından bağlantı durumunun **etkin**olduğunu doğrulayın.
 
 > [!NOTE]
 > Bağlayıcıya oturum açtıktan sonra, [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)görünmesi birkaç dakika sürebilir. Yalnızca Intune hizmetiyle başarıyla iletişim kurabiliyorsa görünür.
@@ -129,7 +129,7 @@ Varsayılan olarak, Windows Server 'da Internet Explorer Artırılmış Güvenli
 Ağ ortamınızda bir Web proxy 'niz varsa, Active Directory Intune bağlayıcısının [mevcut şirket içi ara sunucularla çalışmaya](autopilot-hybrid-connector-proxy.md)başvurarak düzgün şekilde çalıştığından emin olun.
 
 
-## <a name="create-a-device-group"></a>Bir cihaz grubu oluşturma
+## <a name="create-a-device-group"></a>Cihaz grubu oluşturma
 1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **gruplar** > **Yeni Grup**' u seçin.
 
 1. **Grup** bölmesinde şunları yapın:
@@ -141,9 +141,9 @@ Ağ ortamınızda bir Web proxy 'niz varsa, Active Directory Intune bağlayıcı
     c. Bir **üyelik türü**seçin.
 
 1. Üyelik türü için **dinamik cihazlar** ' ı seçtiyseniz, **Grup** bölmesinde, **dinamik cihaz üyeleri** ' ni seçin ve ardından **Gelişmiş kural** kutusunda aşağıdakilerden birini yapın:
-    - Tüm Autopilot cihazlarınızı içeren bir grup oluşturmak için `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`girin.
-    - Intune 'un Grup etiketi alanı, Azure AD cihazlarındaki OrderID özniteliğiyle eşlenir. Belirli bir grup etiketi (OrderID) ile tüm Autopilot cihazlarınızı içeren bir grup oluşturmak istiyorsanız şunu yazmanız gerekir: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
-    - Belirli bir satın alma siparişi KIMLIĞINE sahip tüm Autopilot cihazlarınızı içeren bir grup oluşturmak için `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`girin.
+    - Tüm Autopilot cihazlarınızı içeren bir grup oluşturmak için, girin `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
+    - Intune 'un Grup etiketi alanı, Azure AD cihazlarındaki OrderID özniteliğiyle eşlenir. Belirli bir grup etiketi (OrderID) ile tüm Autopilot cihazlarınızı içeren bir grup oluşturmak istiyorsanız şunu yazmanız gerekir:`(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
+    - Belirli bir satın alma siparişi KIMLIĞINE sahip tüm Autopilot cihazlarınızı içeren bir grup oluşturmak için, girin `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`.
     
 1. **Kaydet**’i seçin.
 
@@ -170,14 +170,14 @@ Yeni cihaz satın alırken bazı OEM’ler cihazları sizin için kaydedebilir. 
 
 Autopilot cihazlarınız *kaydolduktan*sonra Intune 'a kaydolmadan önce, üç yerde (adları seri numaralarına ayarlanmış adlarla) görüntülenir:
 - Azure portal Intune 'daki **Autopilot cihazları** bölmesi. **Cihaz kaydı** > **Windows kayıt** > **cihazları**' nı seçin.
-- Azure portal Intune 'daki **Azure AD cihazları** bölmesi. **Azure AD cihazları** > **cihazları** seçin.
-- **Tüm**cihazlar > **cihazlar** ' a seçerek Azure Portal Azure Active Directory **Azure AD tüm cihazlar** bölmesi.
+- Azure portal Intune 'daki **Azure AD cihazları** bölmesi. **Cihazlar** > **Azure AD cihazları**' nı seçin.
+- **Devices**Cihazlar > **tüm cihazlar**' a seçerek Azure Portal Azure Active Directory **Azure AD tüm cihazlar** bölmesi.
 
 Autopilot cihazlarınız kaydedildikten *sonra, bunlar*dört yerde görüntülenir:
 - Azure portal Intune 'daki **Autopilot cihazları** bölmesi. **Cihaz kaydı** > **Windows kayıt** > **cihazları**' nı seçin.
-- Azure portal Intune 'daki **Azure AD cihazları** bölmesi. **Azure AD cihazları** > **cihazları** seçin.
-- Azure portal Azure Active Directory **Azure AD tüm cihazlar** bölmesi. **Tüm cihazlar** > **cihazları** seçin.
-- Azure portal Intune 'da bulunan **tüm cihazlar** bölmesi. **Tüm cihazlar** > **cihazları** seçin.
+- Azure portal Intune 'daki **Azure AD cihazları** bölmesi. **Cihazlar** > **Azure AD cihazları**' nı seçin.
+- Azure portal Azure Active Directory **Azure AD tüm cihazlar** bölmesi. **Cihazlar** > **tüm cihazlar**' ı seçin.
+- Azure portal Intune 'da bulunan **tüm cihazlar** bölmesi. **Cihazlar** > **tüm cihazlar**' ı seçin.
 
 Autopilot cihazlarınız kaydedildikten sonra, adları cihazın ana bilgisayar adı olur. Varsayılan olarak, ana bilgisayar adı *Desktop-* ile başlar.
 
@@ -185,35 +185,35 @@ Autopilot cihazlarınız kaydedildikten sonra, adları cihazın ana bilgisayar a
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Bir Autopilot dağıtım profili oluşturma ve atama
 Autopilot dağıtım profilleri, Autopilot cihazlarını yapılandırmak için kullanılır.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nde, **Windows** > **windows kayıt** > **dağıtım profilleri** > **Profil oluştur** > **cihazlar** ' ı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **Windows** > **Windows kayıt** > **dağıtım profilleri** > **Profil oluştur**' u seçin.
 2. **Temel bilgiler** sayfasında, bir **ad** ve isteğe bağlı bir **Açıklama**yazın.
 3. Atanan gruplardaki tüm cihazların otomatik olarak Autopilot'a dönüştürülmesini istiyorsanız **Hedeflenen tüm cihazları Autopilot'a dönüştür** seçeneğini **Evet** olarak ayarlayın. Atanan gruplardaki şirkete ait olmayan tüm Autopilot cihazları Autopilot dağıtım hizmetine kaydolacaktır. Kişiye ait cihazlar Autopilot 'e dönüştürülmeyecektir. Kaydın işlenmesi için 48 saat kadar bekleyin. Kaydı kaldırılıp sıfırlandığında Autopilot cihazı kaydeder. Bir cihaz bu şekilde kaydedildikten sonra bu seçeneğin devre dışı bırakılması veya profil atamasının kaldırılması cihazı Autopilot dağıtım hizmetinden kaldırmaz. Bunun yerine [cihazı doğrudan kaldırmanız](enrollment-autopilot.md#delete-autopilot-devices) gerekir.
-4. **İleri**'yi seçin.
+4. **İleri**’yi seçin.
 5. **Kullanıma hazır deneyim (OOBE)** sayfasında, **dağıtım modu**için **Kullanıcı odaklı**' ı seçin.
 6. **Azure AD 'ye katıl** kutusunda **karma Azure AD 'ye katılmış**' i seçin.
 7. **Kullanıma hazır deneyim (OOBE)** sayfasında yer alan diğer seçenekleri gerektiği şekilde yapılandırın.
-8. **İleri**'yi seçin.
+8. **İleri**’yi seçin.
 9. **Kapsam etiketleri** sayfasında bu profil için [kapsam etiketleri](../fundamentals/scope-tags.md) ' ni seçin.
-10. **İleri**'yi seçin.
+10. **İleri**’yi seçin.
 11. **Atamalar** sayfasında, **dahil etmek istediğiniz grupları seçin** > seçin **ve > cihaz grubunu seçin.**
-12. **Oluştur** > **İleri ' yi** seçin.
+12. **İleri** > **Oluştur**' u seçin.
 
 Cihaz profili durumunun *atama* ve, son olarak *atanan* *olarak değiştirilmesi* yaklaşık 15 dakika sürer.
 
 ## <a name="optional-turn-on-the-enrollment-status-page"></a>Seçim Kayıt durumu sayfasını aç
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nde, **Windows** > **Windows kaydı** > **kayıt durumu sayfası** > **cihazlar** ' ı seçin.
-1. **Kayıt durumu sayfası** bölmesinde **varsayılan** > **ayarları**' nı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **Windows** > **Windows kayıt** > **kayıt durumu sayfası**' nı seçin.
+1. **Kayıt durumu sayfası** bölmesinde **varsayılan** > **Ayarlar**' ı seçin.
 1. **Uygulama ve profil yükleme ilerleme durumunu göster** kutusunda **Evet**' i seçin.
 1. Diğer seçenekleri gerektiği şekilde yapılandırın.
 1. **Kaydet**’i seçin.
 
 ## <a name="create-and-assign-a-domain-join-profile"></a>Etki Alanına Katılım profili oluşturma ve atama
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nde, **cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 2. Aşağıdaki özellikleri girin:
    - **Ad**: Yeni profil için açıklayıcı bir ad girin.
-   - **Açıklama**: Profil için bir açıklama girin.
+   - **Açıklama**: profil için bir açıklama girin.
    - **Platform**: **Windows 10 ve üstünü**seçin.
    - **Profil türü**: **etki alanına katılmayı (Önizleme)** seçin.
 3. **Ayarlar**' ı seçin ve ardından bir **bilgisayar adı ön eki**, **etki alanı adı**sağlayın.
@@ -232,7 +232,7 @@ Cihaz profili durumunun *atama* ve, son olarak *atanan* *olarak değiştirilmesi
      
    > [!NOTE]
    > **Kuruluş birimindeki**değerin etrafında tırnak işareti kullanmayın.
-5. **Oluştur** > **Tamam ' ı** seçin.  
+5. **Tamam** > **Oluştur**' u seçin.  
     Profil oluşturulur ve listede görüntülenir.
 6. Profili atamak için, [Cihaz profili atama](../configuration/device-profile-assign.md#assign-a-device-profile) ' nın altındaki adımları izleyin ve profili bu adımda kullanılan gruba atayın [bir cihaz grubu oluşturun](windows-autopilot-hybrid.md#create-a-device-group). Alternatif olarak, farklı etki alanlarına veya OU 'Lara cihaz katılması gerektiğinde farklı gruplar kullanılabilir.
 

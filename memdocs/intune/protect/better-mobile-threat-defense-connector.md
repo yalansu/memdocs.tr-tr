@@ -16,17 +16,17 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 05dec05cdc5a16078328d736d2f622cea1b2aa00
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329910"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Intune ile Better Mobile Threat Defense bağlayıcısı
 
 Microsoft Intune ile tümleştirilen Mobile Threat Defense (MTD) çözümü daha Iyi mobil tarafından gerçekleştirilen risk değerlendirmesine dayalı koşullu erişimi kullanarak mobil cihaz erişimini kontrol edebilirsiniz. Risk, Better Mobile uygulamasını çalıştıran cihazlardan toplanan telemetriye göre değerlendirilir.
 
-Kayıtlı cihazlar için Intune cihaz uyumluluk ilkeleri aracılığıyla etkinleştirilen daha Iyi mobil risk değerlendirmesine göre koşullu erişim ilkelerini yapılandırabilirsiniz. bu sayede, uyumsuz cihazların algılanan şirket kaynaklarına erişmesine izin vermek veya erişimi engellemek için kullanabilirsiniz tehditleri. Kayıtlı olmayan cihazlar için, algılanan tehditlere dayalı olarak bir blok veya seçmeli Temizleme zorlamak için uygulama koruma ilkelerini kullanabilirsiniz.
+Kayıtlı cihazlar için Intune cihaz uyumluluk ilkeleri aracılığıyla etkinleştirilen ve uyumlu olmayan cihazların, algılanan tehditlere dayalı olarak şirket kaynaklarına erişmesine izin vermek veya erişimi engellemek için kullanabileceğiniz daha Iyi mobil risk değerlendirmesi temelinde koşullu erişim ilkelerini yapılandırabilirsiniz. Kayıtlı olmayan cihazlar için, algılanan tehditlere dayalı olarak bir blok veya seçmeli Temizleme zorlamak için uygulama koruma ilkelerini kullanabilirsiniz.
 
 ## <a name="how-do-intune-and-better-mobile-help-protect-your-company-resources"></a>Intune ve Better Mobile şirket kaynaklarınızın korunmasına nasıl yardımcı olur?
 
@@ -35,7 +35,7 @@ Better Mobile uygulaması mobil cihazlara yüklenir ve mobil cihazlarda çalış
 - **Kayıtlı cihazlar Için destek** -Intune cihaz uyumluluk Ilkesi, Mobile Threat Defense (MTD) Için daha iyi mobil 'ten risk değerlendirmesi bilgilerini kullanabileceğiniz bir kural içerir. MTD kuralı etkinleştirildiğinde, Intune, etkin olan ilkeyle cihaz uyumluluğunu değerlendirir. Cihaz uyumsuz bulunursa kullanıcıların Exchange Online ve SharePoint Online gibi kurumsal kaynaklara erişimi engellenir. Kullanıcılar ayrıca, sorunu çözmek ve kurumsal kaynaklara yeniden erişim kazanmak için cihazlarında yüklü olan Better Mobile uygulamasından yönergeler alır. Kayıtlı cihazlarla daha Iyi mobil kullanımı desteklemek için:
   - [Cihazlara MTD uygulamaları ekleme](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md)
   - [MTD 'yi destekleyen bir cihaz uyumluluk ilkesi oluşturma](../protect/mtd-device-compliance-policy-create.md)
-  - [Intune 'da MTD bağlayıcısını etkinleştirme](../protect/mtd-connector-enable.md)
+  - [Intune'da MTD bağlayıcısını etkinleştirme](../protect/mtd-connector-enable.md)
 
 - **Kayıtlı olmayan cihazlar Için destek** -Intune, Intune uygulama koruma ilkeleri kullandığınızda kayıtlı olmayan cihazlarda daha iyi mobil uygulamadaki risk değerlendirmesi verilerini kullanabilir. Yöneticiler bu bileşimi, [Microsoft Intune korunan bir uygulamadaki](../apps/apps-supported-intune-apps.md)kurumsal verilerin korunmasına yardımcı olmak için kullanabilir. Yöneticiler, kayıtlı olmayan cihazlarda Kurumsal veriler için bir blok veya seçmeli silme de verebilir. Kayıtlı olmayan cihazlarla daha Iyi mobil kullanımı desteklemek için:
   - [MTD uygulamasını kayıtlı olmayan cihazlara ekleme](../protect/mtd-add-apps-unenrolled-devices.md)
@@ -46,7 +46,7 @@ Better Mobile uygulaması mobil cihazlara yüklenir ve mobil cihazlarda çalış
 
 - **Android 4.1 ve üzeri**
 
-- **iOS 8.0 ve üzeri**
+- **iOS 8,0 ve üzeri**
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -72,7 +72,7 @@ Cihazlarda kötü amaçlı yazılım gibi kötü amaçlı uygulamalar algıland�
 
 - Şirket uygulamalarına erişme
 
-Kötü amaçlı uygulamalar algılandığında engelle:
+Kötü amaçlı yazılımlar algılandığında engelleme:
 
 ![Algılanan kötü amaçlı uygulamaları gösteren resim](./media/better-mobile-threat-defense-connector/better-mobile-maliciousapps-blocked.png)
 
@@ -84,7 +84,7 @@ Düzeltmeye erişim verildi:
 
 **Bağlantıyı izinsiz izleme** saldırıları gibi ağınıza yönelik tehditleri algılayın ve cihaz riskine dayalı olarak Wi-Fi ağlarına erişimi koruyun.
 
-Wi-Fi üzerinden ağ erişimini engelleyin:
+Wi-Fi üzerinden ağ erişimini engelleme:
 
 ![Wi-Fi üzerinden ağ erişimini engelleme](./media/better-mobile-threat-defense-connector/better-mobile-network-wifi-blocked.png)
 
@@ -106,7 +106,7 @@ Düzeltme ile erişim izni verildi:
 
 ### <a name="control--access-on-unenrolled-devices-based-on-threats-from-malicious-apps"></a>Kötü amaçlı uygulamalardaki tehditleri temel alan kayıtlı olmayan cihazlarda erişimi denetleme
 
-DAHA ıyı bir mobil tehdit savunması çözümü, bir cihazı bulaşma için düşünür: algılanan kötü amaçlı yazılım nedeniyle uygulama koruma ilkesi blokları ![](./media/better-mobile-threat-defense-connector/better-mobile-app-policy-block.png)
+DAHA ıyı bir mobil tehdit savunması çözümü, bir cihazı bulaşma olarak düşünür: ![algılanan kötü amaçlı yazılım nedeniyle uygulama koruma ilkesi blokları](./media/better-mobile-threat-defense-connector/better-mobile-app-policy-block.png)
 
 Düzeltmeye erişim verildi:
 
@@ -122,4 +122,4 @@ Düzeltmeye erişim verildi:
 
 - [Better Mobile MTD bağlayıcısını etkinleştirme](mtd-connector-enable.md)
 
-- [MTD uygulama koruma ilkesi oluşturma](mtd-app-protection-policy.md) 
+- [MTD uygulaması koruma ilkesi oluşturma](mtd-app-protection-policy.md) 

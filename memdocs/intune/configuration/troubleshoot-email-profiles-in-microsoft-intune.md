@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4d7e3b5b9a169baf336b0d4e7d8d66b06af38061
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332198"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Microsoft Intune 'daki e-posta profilleriyle ilgili yaygın sorunlar ve çözümler
@@ -62,8 +62,8 @@ Samsung KNOX için EAS profili yapılandırmanızı ve kaynak ilkeyi gözden ge�
 E-posta hesapları otomatik olarak yapılandırılmış kullanıcılar, cihazlarından resim veya resim gönderemez. Bu senaryo, **üçüncü taraf uygulamalardan e-posta gönderilmesine Izin ver** etkinleştirilmemişse gerçekleşebilir.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Yapılandırma profillerinin** > **cihazları** ' nı seçin.
-3. E-posta profilinizi > **özellikler** > **Ayarlar**' ı seçin.
+2. **Cihaz** > **yapılandırma profillerini**seçin.
+3. E-posta profilinizi > **Özellikler** > **ayarları**' nı seçin.
 4. **Etkinleştirmek**için **üçüncü taraf uygulamalardan e-posta gönderilmesine izin ver** ayarını belirleyin.
 
 ## <a name="next-steps"></a>Sonraki adımlar

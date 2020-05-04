@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.openlocfilehash: d79f97da88a939d95b68a9ef747da87cf3844598
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80322463"
 ---
 # <a name="use-device-encryption-with-intune"></a>Intune ile cihaz şifrelemesini kullanma
@@ -68,14 +68,14 @@ Aşağıda, **uzak görevler** kategorisinin bir parçası olan ve izin veren ye
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 
 3. Aşağıdaki seçenekleri ayarlayın:
 
    - Platform: macOS
    - Profil türü: Endpoint Protection
 
-4. **Dosya kasası** > **ayarları** ' nı seçin.
+4. **Ayarlar** > **Dosya Kasası**' nı seçin.
 
 5. *Filekasası*için **Etkinleştir**' i seçin.
 
@@ -97,7 +97,7 @@ Intune bir macOS cihazını Filekasasıyla şifreledikten sonra, bu cihazın ki�
 
 ### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices"></a>MEM şifreli macOS cihazlarından kişisel kurtarma anahtarını alma
 
-Son kullanıcılar, iOS Şirket Portalı uygulaması, Android Şirket Portalı uygulaması veya Android Intune uygulaması aracılığıyla kişisel kurtarma anahtarını (Filekasası anahtarı) alabilir. Kişisel kurtarma anahtarına sahip olan cihaz Intune 'a kaydolmalıdır ve Intune aracılığıyla Filekasasıyla şifrelenir. İOS Şirket Portalı uygulamasını, Android Şirket Portalı uygulamasını, Android Intune uygulamasını veya Şirket Portalı Web sitesini kullanarak, son kullanıcı Mac cihazlarına erişmek için gereken **Filekasasını** kurtarma anahtarını görebilir. Son kullanıcılar > *şifrelenmiş ve kayıtlı macOS cihazı* > **Kurtarma anahtarı al**' ı seçerek **cihazları** seçebilir. Tarayıcıda Web Şirket Portalı gösterilir ve kurtarma anahtarı görüntülenir. 
+Son kullanıcılar, iOS Şirket Portalı uygulaması, Android Şirket Portalı uygulaması veya Android Intune uygulaması aracılığıyla kişisel kurtarma anahtarını (Filekasası anahtarı) alabilir. Kişisel kurtarma anahtarına sahip olan cihaz Intune 'a kaydolmalıdır ve Intune aracılığıyla Filekasasıyla şifrelenir. İOS Şirket Portalı uygulamasını, Android Şirket Portalı uygulamasını, Android Intune uygulamasını veya Şirket Portalı Web sitesini kullanarak, son kullanıcı Mac cihazlarına erişmek için gereken **Filekasasını** kurtarma anahtarını görebilir. Son kullanıcılar *, şifrelenmiş ve kayıtlı MacOS cihazı* > **Kurtarma anahtarı al**' ı seçerek **cihazları** > seçebilir. Tarayıcıda Web Şirket Portalı gösterilir ve kurtarma anahtarı görüntülenir. 
 
 ## <a name="bitlocker-encryption-for-windows-10"></a>Windows 10 için BitLocker şifrelemesi
 
@@ -113,14 +113,14 @@ Windows 10 veya sonraki bir platformda Endpoint Protection için bir [cihaz yap�
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 
 3. Aşağıdaki seçenekleri ayarlayın:
 
    - Platform: Windows 10 ve üzeri
    - Profil türü: Endpoint Protection
 
-4. **Windows şifrelemesi** > **Ayarlar** ' ı seçin.
+4. **Ayarlar** > **Windows şifrelemesi**' ni seçin.
 
 5. BitLocker ayarlarını iş gereksinimlerinizi karşılayacak şekilde yapılandırın ve ardından **Tamam**' ı seçin.
 
@@ -141,8 +141,8 @@ Bir cihazın BitLocker 'ı sessizce etkinleştirmek için uygun olması için a�
 
 BitLocker [temel ayarları](../protect/endpoint-protection-windows-10.md#bitlocker-base-settings) için aşağıdaki Iki ayar BitLocker ilkesinde yapılandırılmalıdır:
 
-- **Diğer disk şifrelemesi** = *bloğu*uyarısı.
-- **Standart kullanıcıların Azure AD JOIN sırasında şifrelemeyi etkinleştirmesine Izin ver** = *izin* ver
+- **Diğer disk şifreleme** = *bloğu*uyarısı.
+- **Azure AD JOIN** = *izin verme* sırasında standart kullanıcıların şifrelemeyi etkinleştirmesine izin ver
 
 BitLocker ilkesi, bir başlangıç PIN 'ı veya başlangıç anahtarı kullanımını **gerektirmemelidir** . TPM başlangıç PIN 'ı veya başlangıç anahtarı *gerektiğinde*, BitLocker sessizce etkinleştirilemez ve son kullanıcıdan etkileşim gerektirir.  Bu gereksinim, aynı ilkedeki aşağıdaki üç [BitLocker işletim sistemi sürücü ayarı](../protect/endpoint-protection-windows-10.md#bitlocker-os-drive-settings) aracılığıyla karşılanır:
 
@@ -152,7 +152,7 @@ BitLocker ilkesi, bir başlangıç PIN 'ı veya başlangıç anahtarı kullanım
 
 
 
-### <a name="manage-bitlocker"></a>BitLocker 'ı yönetme
+### <a name="manage-bitlocker"></a>seçin,
 
 Intune bir Windows 10 cihazını BitLocker ile şifreledikten sonra, Intune [şifreleme raporunu](encryption-monitor.md)görüntülerken BitLocker kurtarma anahtarlarını görüntüleyebilir ve alabilirsiniz.
 
@@ -176,7 +176,7 @@ Cihazların BitLocker kurtarma anahtarının döndürmesini desteklemek için a�
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihazlar** > **Tüm cihazlar**’ı seçin.
+2. **Cihazlar** > **tüm cihazlar**' ı seçin.
 
 3. Yönettiğiniz cihazların listesinde bir cihaz seçin, **daha fazla**' yı seçin ve ardından **BitLocker anahtar döndürme** cihazı uzak eylemi ' ni seçin.
 

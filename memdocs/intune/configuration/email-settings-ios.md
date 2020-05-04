@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1ac4050e6113eba2a34099a627bf6141049d8454
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79333050"
 ---
 # <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune 'de iOS ve ıpados cihazları için e-posta ayarları ekleme
@@ -45,14 +45,14 @@ Bu makalede iOS/ıpados çalıştıran cihazlarda kullanılabilen tüm e-posta a
   - **sAM Hesap Adı**: Etki alanı gerektirir; örneğin `domain\user1`. Şunları da girin:  
     - **Kullanıcı etki alanı adı kaynağı**: **AAD** (Azure Active Directory) veya **Özel**’i seçin.
       - **AAD**: Azure AD 'den öznitelikleri alın. Şunları da girin:
-        - **AAD 'Den Kullanıcı etki alanı adı özniteliği**: kullanıcının **tam etki alanı adını** (`contoso.com`) veya **NetBIOS adı** (`contoso`) özniteliğini almayı seçin.
+        - **AAD 'den Kullanıcı etki alanı adı özniteliği**: kullanıcının **tam etki alanı adını** (`contoso.com`) veya **NetBIOS Name** (`contoso`) özniteliğini almayı seçin.
 
       - **Özel**: özel bir etki alanı adından öznitelikleri alın. Şunları da girin:
-        - **Kullanılacak özel etki alanı adı**: ıntune 'un `contoso.com` veya `contoso`gibi etki alanı adı için kullandığı bir değer girin.
+        - **Kullanılacak özel etki alanı adı**: Intune 'un `contoso.com` veya `contoso`gibi etki alanı adı için kullandığı bir değer girin.
 
 - **AAD’den e-posta adresi özniteliği**: Kullanıcı için e-posta adresinin nasıl oluşturulacağını seçin. Seçenekleriniz şunlardır:
   - **Kullanıcı asıl adı**: `user1@contoso.com` veya `user1`gibi, e-posta adresi olarak tam asıl adı kullanın.
-  - **BIRINCIL SMTP adresi**: Exchange 'de oturum açmak için, `user1@contoso.com`gıbı birincil SMTP adresini kullanın.
+  - **BIRINCIL SMTP adresi**: Exchange 'de oturum açmak IÇIN birincil SMTP adresini kullanın `user1@contoso.com`.
 - **Kimlik doğrulama yöntemi**: kullanıcıların e-posta sunucusunda kimliklerini nasıl doğrulayacağını seçin. Seçenekleriniz şunlardır:
   - **Sertifika**: Exchange bağlantısının kimliğini doğrulamak için daha önce oluşturduğunuz istemci SCEP veya PKCS sertifika profilini seçin. Bu seçenek, kullanıcılarınız için en güvenli ve sorunsuz deneyim sağlar.
   - Kullanıcı adı **ve parola**: kullanıcılardan Kullanıcı adını ve parolasını girmesi istenir.
@@ -72,7 +72,7 @@ Bu makalede iOS/ıpados çalıştıran cihazlarda kullanılabilen tüm e-posta a
 
   - Bazı kuruluşlar, son kullanıcının [self servis uygulama erişimi](https://docs.microsoft.com/azure/active-directory/manage-apps/manage-self-service-access)yapma yeteneğini devre dışı bırakır. Bu senaryoda, bir yönetici "iOS hesapları" Kurumsal uygulamasını oluşturup kullanıcılara Azure AD 'de uygulama erişimi verene kadar modern kimlik doğrulaması oturum açma işlemi başarısız olabilir.
 
-    Varsayılan eylem, uygulama [erişimi paneli](https://docs.microsoft.com/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) uygulama **Ekle** özelliği **iş onayı olmadan**kullanılarak uygulama eklemektir. Daha fazla bilgi için bkz. [uygulamalara kullanıcı atama](https://docs.microsoft.com/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
+    Varsayılan eylem, [Uygulama Erişim Paneli](https://docs.microsoft.com/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) **Uygulama Ekle** özelliğini **iş onayı olmadan** kullanarak uygulama eklemektir. Daha fazla bilgi için bkz. [uygulamalara kullanıcı atama](https://docs.microsoft.com/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
 
   > [!NOTE]
   > OAuth’u etkinleştirdiğinizde şunlar olur:  

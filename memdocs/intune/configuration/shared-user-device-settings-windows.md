@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c76045413324deef395f546033d37ec47405a28f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332250"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Intune kullanarak paylaşılan cihazları yönetmek için Windows 10 ve üzeri ayarları
@@ -49,16 +49,16 @@ Bu ayarlar [Sharedpc CSP](https://docs.microsoft.com/windows/client-management/m
   - **Konuk ve etki alanı**: cihazda yerel olarak bir Konuk hesabı oluşturur ve Azure ACTIVE DIRECTORY (ad).
 - **Hesap yönetimi**: konuklar tarafından oluşturulan yerel hesapları ve ad ve Azure AD hesaplarını otomatik olarak silmek için **etkinleştirin** . Kullanıcı cihazda oturumu kapattığında veya sistem bakımı çalıştırıldığında, bu hesaplar silinir. Etkinleştirildiğinde, aşağıdakileri de ayarlayın:
   - **Hesap silme**: hesapların ne zaman silineceğini seçin: **depolama alanı eşiğine**, **depolama alanı eşiğine ve etkin olmayan eşiğe**veya **oturum kapatıldıktan hemen sonra**. Ayrıca şunu girin:
-    - **Delete eşiğini Başlat (%)** : disk alanı yüzdesi (0-100) girin. Toplam disk/depolama alanı girdiğiniz değerin altına düştüğünde, önbelleğe alınmış hesaplar silinir. Disk alanı kazanmak için hesapları sürekli olarak siler. En uzun devre dışı olan hesaplar önce silinir.
-    - **Silme eşiğini Durdur (%)** : disk alanı yüzdesi (0-100) girin. Toplam disk/depolama alanı girdiğiniz değeri karşılıyorsa, silme işlemini sonlandırır.
+    - **Delete eşiğini Başlat (%)**: disk alanı yüzdesi (0-100) girin. Toplam disk/depolama alanı girdiğiniz değerin altına düştüğünde, önbelleğe alınmış hesaplar silinir. Disk alanı kazanmak için hesapları sürekli olarak siler. En uzun devre dışı olan hesaplar önce silinir.
+    - **Silme eşiğini Durdur (%)**: disk alanı yüzdesi (0-100) girin. Toplam disk/depolama alanı girdiğiniz değeri karşılıyorsa, silme işlemini sonlandırır.
 
   Konuklar tarafından oluşturulan yerel, AD ve Azure AD hesaplarını tutmak için **devre dışı** olarak ayarlayın.
 
 - **Yerel depolama**: kullanıcıların cihazın sabit sürücüsündeki dosyaları kaydetmesini ve görüntülemesini engellemek için **etkin** ' i seçin. Kullanıcıların dosya Gezgini 'ni kullanarak yerel olarak dosya görüp kaydetmesine izin vermek için **devre dışı** ' yı seçin. **Yapılandırılmadı** (varsayılan), bu ayarı Intune tarafından yönetilmeyen olarak bırakır ve bir cihazda bu ayarı denetlemek için herhangi bir ilke göndermez.
 - **Güç ilkeleri**: **etkin**olarak ayarlandığında, kullanıcılar hazırda beklemeyi kapatamaz, tüm uyku işlemlerini geçersiz kılamaz (kapağı kapatma gibi) ve güç ayarlarını değiştiremezler. **Devre dışı**olarak ayarlandığında, kullanıcılar cihazı hazırda beklemeye alabilir, cihazı uyku moduna almak için kapağı kapatabilir ve güç ayarlarını değiştirebilir. **Yapılandırılmadı** (varsayılan), bu ayarı Intune tarafından yönetilmeyen olarak bırakır ve bir cihazda bu ayarı denetlemek için herhangi bir ilke göndermez.
-- **Uyku zaman aşımı (saniye cinsinden)** : Cihaz uyku moduna geçmeden önce etkin olmayan saniyeler (0-18000) sayısını girin. `0`, cihazın hiçbir şekilde uyku moduna geçme anlamına gelir. Bir zaman ayarlamazsanız, cihaz 3600 saniye (60 dakika) sonra uyku moduna geçer.
+- **Uyku zaman aşımı (saniye cinsinden)**: Cihaz uyku moduna geçmeden önce etkin olmayan saniyeler (0-18000) sayısını girin. `0`, cihazın hiçbir şekilde uyku moduna geçme anlamına gelir. Bir zaman ayarlamazsanız, cihaz 3600 saniye (60 dakika) sonra uyku moduna geçer.
 - **Bilgisayar uyandığında oturum açma**: kullanıcıların cihaz uyku modundan çıktığında bir parolayla oturum açmasını gerektirmek için **etkin** olarak ayarlanır. Kullanıcıların Kullanıcı adı ve parolasını girmesi gerekmiyorsa **devre dışı** öğesini seçin. **Yapılandırılmadı** (varsayılan), bu ayarı Intune tarafından yönetilmeyen olarak bırakır ve bir cihazda bu ayarı denetlemek için herhangi bir ilke göndermez.
-- **Bakım başlangıç zamanı (gece yarısından itibaren dakika)** : Windows Update, gibi otomatik bakım görevleri çalıştırıldığında, dakika cinsinden süreyi (0-1440) girin. Varsayılan başlangıç saati gece yarısı veya sıfır (`0`) dakikadır. Başlangıç saatini, gece yarısından dakikalar içinde bir başlangıç saati girerek değiştirin. Örneğin, bakımın 2 ' de başlamasını istiyorsanız `120`girin. Bakımın 8 PM 'de başlamasını istiyorsanız `1200`girin.
+- **Bakım başlangıç zamanı (gece yarısından itibaren dakika)**: Windows Update, gibi otomatik bakım görevleri çalıştırıldığında, dakika cinsinden süreyi (0-1440) girin. Varsayılan başlangıç saati gece yarısı veya sıfır (`0`) dakikadır. Başlangıç saatini, gece yarısından dakikalar içinde bir başlangıç saati girerek değiştirin. Örneğin, bakımın 2 ' de başlamasını istiyorsanız, girin `120`. Bakımın 8 PM 'de başlamasını istiyorsanız girin `1200`.
 - **Eğitim ilkeleri**: okullar için kullanılan ve daha kısıtlayıcı olan cihazlar için önerilen ayarları kullanmak üzere **etkin** ' i seçin. Varsayılan ve önerilen eğitim ilkelerinin kullanılmamış olması için **devre dışı** öğesini seçin. **Yapılandırılmadı** (varsayılan), bu ayarı Intune tarafından yönetilmeyen olarak bırakır ve bir cihazda bu ayarı denetlemek için herhangi bir ilke göndermez.
 
   Eğitim ilkelerinin ne yaptığı hakkında daha fazla bilgi için bkz. [Eğitim müşterileri Için Windows 10 yapılandırma önerileri](https://docs.microsoft.com/education/windows/configure-windows-for-education).

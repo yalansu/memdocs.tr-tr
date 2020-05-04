@@ -17,10 +17,10 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696438"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Intune kiracı durumu sayfasını kullanın
@@ -50,7 +50,7 @@ Herhangi bir türden birden fazla bağlayıcı varsa, bu durum aynı bağlayıc�
 - **Sağlıksız**
   - Sertifika veya kimlik bilgisinin süresi doldu
   - Son eşitleme üç veya daha fazla gün önce
-- **Warning**
+- **Uyarı:**
   - Sertifikanın veya kimlik bilgisinin süresi yedi gün içinde dolacak
   - Son eşitleme bir günden daha önce
 - **Sağlıklı**

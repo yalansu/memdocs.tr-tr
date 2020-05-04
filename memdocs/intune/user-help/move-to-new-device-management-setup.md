@@ -21,13 +21,13 @@ ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
 ms.openlocfilehash: 0bc07c2a7c48253ca7b2809287502db272d0b1bd
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086249"
 ---
-# <a name="move-to-new-device-management-setup"></a>Yeni cihaz yönetimi kurulumuna taşı  
+# <a name="move-to-new-device-management-setup"></a>Yeni cihaz yönetimi kurulumuna taşıma  
 
 Kuruluşunuz yeni bir cihaz yönetimi kurulumuna geçiş yapmanızı gerektiriyorsa, Android iş profili eklemek için ekrandaki adımları izlemeniz gerekir. Bir iş profili, cihazınızdaki iş verilerini kişisel verilerden ayırır. Kuruluşunuz, yalnızca okul veya iş ile ilgili dosya ve verilerden oluşan iş profilini yönetir. Kuruluşunuz, cihazınızdaki kişisel verileri göremez veya yönetemez. 
 
@@ -39,10 +39,10 @@ Kuruluşunuz yeni bir cihaz yönetimi kurulumuna geçiş yapmanızı gerektiriyo
 
 2. İş profilini eklemek için uygulayabileceğiniz adımların denetim listesini okuyun. Ardından **Başlat**' a dokunun. 
 
-    ![\* * Yeni cihaz yönetimi kurulumuna taşı * * ekran, Başlat düğmesini vurgularlar.](./media/company-portal-unfinished-checklist-2003.png)  
+    ![* * Yeni cihaz yönetimi kurulumuna taşı * * ekran, Başlat düğmesini vurgularlar.](./media/company-portal-unfinished-checklist-2003.png)  
 
 3. Denetim listesindeki tüm adımlar Tamam olarak işaretlenene kadar Kılavuzlu kuruluma devam edin.  
 
-    ![\* * Yeni cihaz yönetimi kurulumuna taşı * * ekranı, tüm adımların tamamlandığını gösterir.](./media/company-portal-checklist-2003.png)  
+    ![* * Yeni cihaz yönetimi kurulumuna taşı * * ekranı, tüm adımların tamamlandığını gösterir.](./media/company-portal-checklist-2003.png)  
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.  

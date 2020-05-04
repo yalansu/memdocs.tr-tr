@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 17b120faa0021a1fc044d7831b4b81ea88f404a7
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79526589"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Intune ile mobil uç nokta güvenlik bağlayıcısını gevle
@@ -41,7 +41,7 @@ BT 'nin mobil uygulaması, **iş Için GEVME**ve mobil cihazlarda yüklü ve ça
 - **Kayıtlı cihazlar Için destek** -Intune cihaz uyumluluk Ilkesi, Mobile Threat Defense (MTD) için bir kural içerir ve bu, risk değerlendirmesi bilgilerini Iş açısından gevşekilde kullanabilir. MTD kuralı etkinleştirildiğinde, Intune, etkin olan ilkeyle cihaz uyumluluğunu değerlendirir. Cihaz uyumsuz bulunursa kullanıcıların Exchange Online ve SharePoint Online gibi kurumsal kaynaklara erişimi engellenir. Kullanıcılar ayrıca, sorunu çözmek ve kurumsal kaynaklara yeniden erişim kazanmak için cihazlarında yüklü olan çalışma uygulaması uygulamasının bir kılavuzunu alırlar. Kayıtlı cihazlarla çalışma için Gevbir sorun kullanmayı desteklemek için:
   - [Cihazlara MTD uygulamaları ekleme](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md)
   - [MTD 'yi destekleyen bir cihaz uyumluluk ilkesi oluşturma](../protect/mtd-device-compliance-policy-create.md)
-  - [Intune 'da MTD bağlayıcısını etkinleştirme](../protect/mtd-connector-enable.md)
+  - [Intune'da MTD bağlayıcısını etkinleştirme](../protect/mtd-connector-enable.md)
 
 - **Kayıtlı olmayan cihazlar Için destek** -Intune, Intune uygulama koruma ilkeleri kullandığınızda, kayıtlı olmayan cihazlarda Iş için gevyana uygulama uygulamasının risk değerlendirmesi verilerini kullanabilir. Yöneticiler bu bileşimi, [Microsoft Intune korunan bir uygulamadaki](../apps/apps-supported-intune-apps.md)kurumsal verilerin korunmasına yardımcı olmak için kullanabilir. Yöneticiler, kayıtlı olmayan cihazlarda Kurumsal veriler için bir blok veya seçmeli silme de verebilir. Kayıtlı olmayan cihazlarla iş için Gevyetkinlikleri kullanmayı desteklemek için:
   - [MTD uygulamasını kayıtlı olmayan cihazlara ekleme](../protect/mtd-add-apps-unenrolled-devices.md)
@@ -81,51 +81,51 @@ Cihazlarda kötü amaçlı yazılım gibi kötü amaçlı uygulamalar algıland�
 *Kötü amaçlı yazılımlar algılandığında engelleme:*
 
 > [!div class="mx-imgBorder"]
-> kötü amaçlı uygulamalar nedeniyle, ilkenin erişimini engelleyen kavramsal bir resim ![](./media/lookout-mobile-threat-defense-connector/malicious-apps-blocked.png)
+> ![Kötü amaçlı uygulamalar nedeniyle ilkenin erişimini engelleyen kavramsal resim](./media/lookout-mobile-threat-defense-connector/malicious-apps-blocked.png)
 
 *Düzeltme ile erişim izni verildi:*
 
 > [!div class="mx-imgBorder"]
-> Düzeltme sonrasında cihazlara erişim izni gösteren kavramsal resim ![](./media/lookout-mobile-threat-defense-connector/malicious-apps-unblocked.png)
+> ![Düzeltmeden sonra cihazlara erişim izni gösteren kavramsal resim](./media/lookout-mobile-threat-defense-connector/malicious-apps-unblocked.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Ağa yönelik tehdide dayalı olarak erişimi denetleme
 
 Bağlantıyı izinsiz izleme saldırıları gibi ağınıza yönelik tehditleri algılayın ve cihaz riskine dayalı olarak WiFi ağlarına erişimi koruyun.
 
-*WiFi üzerinden ağ erişimini engelleme:*
+*WiFi üzerinden ağ erişimini engelleyin:*
 
 > [!div class="mx-imgBorder"]
-> ağ tehditlerine dayalı olarak WiFi erişiminin engellenmesini gösteren ![resim](./media/lookout-mobile-threat-defense-connector/network-wifi-blocked.png)
+> ![Ağ tehditlerine dayalı olarak WiFi erişiminin engellenmesini gösteren resim](./media/lookout-mobile-threat-defense-connector/network-wifi-blocked.png)
 
 *Düzeltme ile erişim izni verildi:*
 
 > [!div class="mx-imgBorder"]
-> düzeltmeden sonra erişime izin veren Koşullu erişimin kavramsal görüntüsünü ![](./media/lookout-mobile-threat-defense-connector/network-wifi-unblocked.png)
+> ![Düzeltmeden sonra erişime izin veren Koşullu erişimin kavramsal resmi](./media/lookout-mobile-threat-defense-connector/network-wifi-unblocked.png)
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Ağa yönelik tehdide dayalı olarak SharePoint Online’a erişimi denetleme
 
 Bağlantıyı izinsiz izleme saldırıları gibi ağınıza yönelik tehditleri algılar ve cihaz riskine dayalı olarak kurumsal dosyaların eşitlenmesini engeller.
 
-*Ağ tehditleri algılandığında SharePoint Online’ı engelle:*
+*Ağ tehditleri algılandığında SharePoint Online 'ı engelleyin:*
 
 > [!div class="mx-imgBorder"]
-> SharePoint Online 'a erişimi engellemeye yönelik kavramsal resim ![](./media/lookout-mobile-threat-defense-connector/network-spo-blocked.png)
+> ![SharePoint Online 'a erişimi engellemeye yönelik kavramsal resim](./media/lookout-mobile-threat-defense-connector/network-spo-blocked.png)
 
 *Düzeltme ile erişim izni verildi:*
 
 > [!div class="mx-imgBorder"]
-> Ağ tehdidi düzeltildikten sonra erişime izin vermenin kavramsal görüntüsünü ![](./media/lookout-mobile-threat-defense-connector/network-spo-unblocked.png)
+> ![Ağ tehdidi düzeltildikten sonra erişime izin verme hakkında kavramsal resim](./media/lookout-mobile-threat-defense-connector/network-spo-unblocked.png)
 
 ### <a name="control-access-on-unenrolled-devices-based-on-threats-from-malicious-apps"></a>Kötü amaçlı uygulamalardaki tehditleri temel alan kayıtlı olmayan cihazlarda erişimi denetleme
 
 Mobil tehdit savunma çözümünü Gevlüme, bir cihazı bulaşma olarak kabul eder:
 > [!div class="mx-imgBorder"]
-> algılanan kötü amaçlı yazılım nedeniyle uygulama koruma ilkesi blokları ![](./media/lookout-mobile-threat-defense-connector/lookout-app-policy-block.png)
+> ![Algılanan kötü amaçlı yazılım nedeniyle uygulama koruma ilkesi blokları](./media/lookout-mobile-threat-defense-connector/lookout-app-policy-block.png)
 
 Düzeltmeye erişim verildi:
 
 > [!div class="mx-imgBorder"]
-> ![erişim, uygulama koruma ilkesi için düzeltilmek üzere verilir](./media/lookout-mobile-threat-defense-connector/lookout-app-policy-remediated.png)
+> ![Uygulama koruma ilkesi düzeltilmek için erişim izni verildi](./media/lookout-mobile-threat-defense-connector/lookout-app-policy-remediated.png)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -135,4 +135,4 @@ Bu çözümü uygulamak için yapılması gereken ana adımlar şunlardır:
 - [Intune 'da mobil uç nokta güvenliğini etkinleştirme](mtd-connector-enable.md)
 - [Lookout for Work uygulamasını ekleme ve atama](mtd-apps-ios-app-configuration-policy-add-assign.md)
 - [Lookout cihaz uyumluluğu ilkesini yapılandırma](mtd-device-compliance-policy-create.md)
-- [MTD uygulama koruma ilkesi oluşturma](mtd-app-protection-policy.md)
+- [MTD uygulaması koruma ilkesi oluşturma](mtd-app-protection-policy.md)

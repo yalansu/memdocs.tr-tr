@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8b43b9671767a2d67bb98db6150799d266fe9fa6
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086551"
 ---
 # <a name="android-device-settings-to-configure-vpn-in-intune"></a>Intune 'da VPN yapılandırmak için Android cihaz ayarları
@@ -36,7 +36,7 @@ Intune 'da VPN profilleri hakkında daha fazla bilgi edinmek için bkz. [VPN pro
 
 ## <a name="base-vpn"></a>Taban VPN
 
-- **Bağlantı adı**: Bu bağlantı için bir ad girin. Cihazlarındaki kullanılabilir VPN bağlantılarına göz atan son kullanıcılar bu adı görür. Örneğin, şunu girin: `Contoso VPN`.
+- **Bağlantı adı**: Bu bağlantı için bir ad girin. Cihazlarındaki kullanılabilir VPN bağlantılarına göz atan son kullanıcılar bu adı görür. Örneğin, `Contoso VPN` girin.
 - **IP adresi veya FQDN**: Cihazların bağlandığı VPN sunucusunun IP adresini veya tam etki alanı adını (FQDN) girin. Örneğin, **192.168.1.1** veya **vpn.contoso.com** yazın.
 
   - **Kimlik doğrulama yöntemi**: Cihazların VPN sunucusunda kimliklerini nasıl doğrulayacaklarını seçin. Seçenekleriniz şunlardır:
@@ -49,7 +49,7 @@ Intune 'da VPN profilleri hakkında daha fazla bilgi edinmek için bkz. [VPN pro
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**
   - **SonicWall Mobile Connect**
-  - **F5 erişimi**
+  - **F5 Access**
   - **Pulse Secure**
   - **Citrix SSO**
 

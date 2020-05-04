@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c7de0b978c24f28988c62854a249505a0598db95
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084072"
 ---
 # <a name="bundle-ids-for-built-in-ios-and-ipados-apps-you-can-use-in-intune"></a>Intune 'da kullanabileceğiniz yerleşik iOS ve ıpados uygulamalarının paket kimlikleri
@@ -31,8 +31,8 @@ ms.locfileid: "80084072"
 
 | Paket Kimliği                   | Uygulama Adı     | Yayımcı |
 |-----------------------------|--------------|-----------|
-| com.apple.AppStore          | Uygulama Mağazası    | Apple     |
-| com. Apple. Store. Jtamamen       | Apple mağazası  | Apple     |
+| com.apple.AppStore          | App Store    | Apple     |
+| com. Apple. Store. Jtamamen       | Apple Store  | Apple     |
 | com.apple.calculator        | Hesap Makinesi   | Apple     |
 | com.apple.mobilecal         | Takvim     | Apple     |
 | com.apple.camera            | Kamera       | Apple     |
@@ -46,7 +46,7 @@ ms.locfileid: "80084072"
 | com.apple.mobileme.fmip1    | iPhone’u Bul  | Apple     |
 | com.apple.gamecenter        | Oyun Merkezi  | Apple     |
 | com.apple.mobilegarageband  | GarageBand   | Apple     |
-| com.apple.Health            | Sistem Durumu       | Apple     |
+| com.apple.Health            | Durum       | Apple     |
 | com.apple.Home              | Giriş         | Apple     |
 | com.apple.iBooks            | iBooks       | Apple     |
 | com.apple.iMovie            | iMovie       | Apple     |
@@ -55,14 +55,14 @@ ms.locfileid: "80084072"
 | com.apple.itunesu           | iTunes U     | Apple     |
 | com.apple.Keynote           | Keynote      | Apple     |
 | com.apple.mobilemail        | Mail         | Apple     |
-| com.apple.Maps              | Harita         | Apple     |
-| com. Apple. Measure           | Ölçü      | Apple     |
+| com.apple.Maps              | Haritalar         | Apple     |
+| com. Apple. Measure           | Measure      | Apple     |
 | com.apple.MobileSMS         | İletiler     | Apple     |
 | com.apple.Music             | Müzik        | Apple     |
-| com.apple.news              | News         | Apple     |
+| com.apple.news              | Haberler         | Apple     |
 | com.apple.mobilenotes       | Notlar        | Apple     |
 | com.apple.Numbers           | Numaralar      | Apple     |
-| com.apple.Pages             | Pages        | Apple     |
+| com.apple.Pages             | Sayfalar        | Apple     |
 | com. Apple. mobilephone       | Telefon        | Apple     |
 | com.apple.Photo-Booth       | Photo Booth  | Apple     |
 | com.apple.mobileslideshow   | Fotoğraflar       | Apple     |
@@ -70,16 +70,16 @@ ms.locfileid: "80084072"
 | com.apple.reminders         | Anımsatıcılar    | Apple     |
 | com.apple.mobilesafari      | Safari       | Apple     |
 | com.apple.Preferences       | Ayarlar     | Apple     |
-| com. Apple. kýsayollar         | Kýsayol    | Apple     |
+| com. Apple. kýsayollar         | Kısayollar    | Apple     |
 | com.apple.SiriViewService   | Siri         | Apple     |
 | com.apple.stocks            | Borsa       | Apple     |
 | com.apple.tips              | İpuçları         | Apple     |
 | com.apple.tv                | TV           | Apple     |
 | com.apple.videos            | Videolar       | Apple     |
 | com.apple.VoiceMemos        | Sesli Notlar   | Apple     |
-| com.apple.Passbook          | Wallet       | Apple     |
-| com.apple.Bridge            | Watch        | Apple     |
-| com.apple.weather           | Hava Durumu      | Apple     |
+| com.apple.Passbook          | Cüzdan       | Apple     |
+| com.apple.Bridge            | İzle        | Apple     |
+| com.apple.weather           | Hava durumu      | Apple     |
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

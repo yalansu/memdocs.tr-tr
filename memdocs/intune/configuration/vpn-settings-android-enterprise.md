@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8bc627e7b9efb68e8d5cb777b5d8e659b06cab92
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086816"
 ---
 # <a name="android-enterprise-device-settings-to-configure-vpn-in-intune"></a>Intune 'da VPN yapılandırmak için Android kurumsal cihaz ayarları
@@ -39,7 +39,7 @@ Intune 'da VPN profilleri hakkında daha fazla bilgi edinmek için bkz. [VPN pro
 
 ## <a name="device-owner-only"></a>Yalnızca cihaz sahibi
 
-- **Bağlantı adı**: Bu bağlantı için bir ad girin. Cihazlarındaki kullanılabilir VPN bağlantılarına göz atan son kullanıcılar bu adı görür. Örneğin, şunu girin: `Contoso VPN`.
+- **Bağlantı adı**: Bu bağlantı için bir ad girin. Cihazlarındaki kullanılabilir VPN bağlantılarına göz atan son kullanıcılar bu adı görür. Örneğin, `Contoso VPN` girin.
 - **IP adresi veya FQDN**: Cihazların bağlandığı VPN sunucusunun IP adresini veya tam etki alanı adını (FQDN) girin. Örneğin, **192.168.1.1** veya **vpn.contoso.com** yazın.
 
   - **Kimlik doğrulama yöntemi**: Cihazların VPN sunucusunda kimliklerini nasıl doğrulayacaklarını seçin. Seçenekleriniz şunlardır:
@@ -50,12 +50,12 @@ Intune 'da VPN profilleri hakkında daha fazla bilgi edinmek için bkz. [VPN pro
 - **Bağlantı türü**: VPN bağlantısının türünü seçin. Seçenekleriniz şunlardır:
 
   - **Cisco AnyConnect**
-  - **F5 erişimi**
+  - **F5 Access**
   - **Pulse Secure**
 
 ## <a name="work-profile-only"></a>Yalnızca iş profili
 
-- **Bağlantı adı**: Bu bağlantı için bir ad girin. Cihazlarındaki kullanılabilir VPN bağlantılarına göz atan son kullanıcılar bu adı görür. Örneğin, şunu girin: `Contoso VPN`.
+- **Bağlantı adı**: Bu bağlantı için bir ad girin. Cihazlarındaki kullanılabilir VPN bağlantılarına göz atan son kullanıcılar bu adı görür. Örneğin, `Contoso VPN` girin.
 - **IP adresi veya FQDN**: Cihazların bağlandığı VPN sunucusunun IP adresini veya tam etki alanı adını (FQDN) girin. Örneğin, **192.168.1.1** veya **vpn.contoso.com** yazın.
 
   - **Kimlik doğrulama yöntemi**: Cihazların VPN sunucusunda kimliklerini nasıl doğrulayacaklarını seçin. Seçenekleriniz şunlardır:
@@ -66,7 +66,7 @@ Intune 'da VPN profilleri hakkında daha fazla bilgi edinmek için bkz. [VPN pro
 - **Bağlantı türü**: VPN bağlantısının türünü seçin. Seçenekleriniz şunlardır:
 
   - **Cisco AnyConnect**
-  - **F5 erişimi**
+  - **F5 Access**
   - **Pulse Secure**
   - **SonicWall Mobile Connect**
   - **Check Point Capsule VPN**

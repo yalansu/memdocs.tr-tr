@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d58ab666929e1e28cab4e19f2e2cec668f428452
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80083881"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Microsoft Intune özel profili kullanarak Android cihazları için uygulama başına VPN profili oluşturma
@@ -37,10 +37,10 @@ Intune tarafından yönetilen Android 5.0 ve üzeri cihazlar için uygulama baş
 >
 > Bu profil için yalnızca Pulse Secure ve Citrix bağlantı türleri desteklenir.
 
-## <a name="step-1-create-a-vpn-profile"></a>1\. Adım: VPN profili oluşturma
+## <a name="step-1-create-a-vpn-profile"></a>1. Adım: VPN profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Platform**: **Android Cihaz Yöneticisi**' ni seçin.
@@ -50,9 +50,9 @@ Intune tarafından yönetilen Android 5.0 ve üzeri cihazlar için uygulama baş
 5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
     - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, **tüm şirket Için Android Cihaz Yöneticisi uygulama BAŞıNA VPN profili**olur.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+    - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
 
-6. **İleri**'yi seçin.
+6. **İleri**’yi seçin.
 7. **Yapılandırma ayarları**' nda, profilde istediğiniz ayarları yapılandırın:
 
     - [Android Cihaz Yöneticisi cihazları Için VPN ayarları](vpn-settings-android.md).
@@ -61,27 +61,27 @@ Intune tarafından yönetilen Android 5.0 ve üzeri cihazlar için uygulama baş
 
 8. **İleri**' yi seçin ve profilinizi oluşturmaya devam edin. Daha fazla bilgi için bkz. [VPN profili oluşturma](vpn-settings-configure.md#create-the-profile).
 
-## <a name="step-2-create-a-custom-configuration-policy"></a>2\. Adım: Özel yapılandırma ilkesi oluşturma
+## <a name="step-2-create-a-custom-configuration-policy"></a>2. Adım: Özel yapılandırma ilkesi oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Ad**: özel profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, **tüm şirket Için özel OMA-URI ANDROID VPN profilidir**.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+    - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
     - **Platform**: **Android Cihaz Yöneticisi**' ni seçin.
     - **Profil türü**: **özel**' i seçin.
 
-4. **Ayarlar** > **Yapılandır**’ı seçin.
+4. **Ayarları** > **Yapılandır**' ı seçin.
 5. **Özel OMA-URI Ayarları** bölmesinde **Ekle**’yi seçin.
     - **Ad**: ayarınız için bir ad girin.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
-    - **OMA-URI**: `./Vendor/MSFT/VPN/Profile/*Name*/PackageList`girin; burada *ad* , 1. adım 'da not ettiğiniz bağlantı adıdır. Bu örnekte, dize `./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/PackageList`.
+    - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+    - **OMA-URI**: ENTER `./Vendor/MSFT/VPN/Profile/*Name*/PackageList`, burada *Name* , 1. adımda not ettiğiniz bağlantı adıdır. Bu örnekte, dize olur `./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/PackageList`.
     - **Veri türü**: **dize**girin.
-    - **Değer**: profille ilişkilendirilecek paketlerin noktalı virgülle ayrılmış bir listesini girin. Örneğin, Excel 'In ve Google Chrome tarayıcısının VPN bağlantısını kullanmasını istiyorsanız, `com.microsoft.office.excel;com.android.chrome`girin.
+    - **Değer**: profille ilişkilendirilecek paketlerin noktalı virgülle ayrılmış bir listesini girin. Örneğin, Excel 'In ve Google Chrome tarayıcısının VPN bağlantısını kullanmasını istiyorsanız, girin `com.microsoft.office.excel;com.android.chrome`.
 
     > [!div class="mx-imgBorder"]
-    >![örnek Android Cihaz Yöneticisi uygulama başına VPN özel ilkesi](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
+    >![Örnek Android Cihaz Yöneticisi uygulama başına VPN özel ilkesi](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
 
 ### <a name="set-your-app-list-to-blacklist-or-whitelist-optional"></a>Uygulama listenizi kara liste veya beyaz liste olarak ayarlama (isteğe bağlı)
 
@@ -89,11 +89,11 @@ VPN bağlantısını *kullanamaz* uygulamaların bir listesini girmek için **ka
 
 1. **Özel OMA-URI Ayarları** bölmesinde **Ekle**’yi seçin.
 2. Bir ayar adı girin.
-3. **OMA-URI**' de `./Vendor/MSFT/VPN/Profile/*Name*/Mode`girin; burada *ad* , 1. adım 'da not ettiğiniz VPN profili adıdır. Örneğimizde dize `./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/Mode`.
+3. **OMA-URI**' de girin `./Vendor/MSFT/VPN/Profile/*Name*/Mode`, burada *Name* , 1. adımda not ettiğiniz VPN profili adıdır. Örneğimizde, dize olur `./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/Mode`.
 4. **Veri türü**' nde **dize**girin.
 5. **Değer** alanına **KARA LİSTE** veya **BEYAZ LİSTE** girin.
 
-## <a name="step-3-assign-both-policies"></a>3\. Adım: Her iki ilkeyi de atama
+## <a name="step-3-assign-both-policies"></a>3. Adım: Her iki ilkeyi de atama
 
 Gerekli kullanıcılara veya cihazlara [her iki cihaz profilini de atayın](device-profile-assign.md) .
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2fbb82123f28c5049a60d60572aadcb3d03777b7
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326951"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Microsoft Intune için destek alma
@@ -53,7 +53,7 @@ Intune için yeni oluşturulmuş bir kiracı kullandığınızda, *Yardım ve de
 
 Hata ayrıntıları bir *oturum kimliği*, *uzantı* ayrıntıları ve daha fazlasını içerir.
 
-Bu sorun, yeni kiracı hesabınızı https://admin.microsoft.com'de **M365 Yönetim Merkezi** veya https://portal.office.com**Office 365 Portalı** aracılığıyla doğrulamadıysanız oluşur. Bu sorunu çözmek için, iletideki *M365 yönetim merkezine* yönelik bağlantıyı seçin veya https://portal.office.comziyaret edin ve oturum açın. Her iki sitede da aşağıdaki kimlik doğrulaması, Intune için *Yardım ve destek* erişilebilir hale gelir.
+https://admin.microsoft.comBu sorun, yeni kiracı hesabınızı üzerinde **M365 Yönetim Merkezi** veya ' de **Office 365 Portalı** aracılığıyla kimlik doğrulamasından geçmediğinde oluşur https://portal.office.com. Bu sorunu çözmek için, iletideki *M365 Yönetim Merkezi* bağlantısını seçin veya adresini ziyaret edin https://portal.office.comve oturum açın. Her iki sitede da aşağıdaki kimlik doğrulaması, Intune için *Yardım ve destek* erişilebilir hale gelir.
 
 **Yardım ve desteğe erişin**:
 
@@ -73,16 +73,16 @@ Bu sorun, yeni kiracı hesabınızı https://admin.microsoft.com'de **M365 Yöne
     - Ortak yönetim  
 
     > [!div class="mx-imgBorder"]
-    > ![yönetim türünü seçin](./media/get-support/select-management-type.png)
+    > ![Yönetim türünü seçin](./media/get-support/select-management-type.png)
 
     Bir yönetim türü seçtikten sonra, *Yardım ve destek* sayfası açılır ve burada belirli bir sorunun [çözümlerini bulmak](#find-solutions) için ayrıntıları belirtebilirsiniz. Ayrıntılar, seçtiğiniz yönetim türüne göre filtrelenir.
 
-     Doğru yönetim türü seçilmemişse **(1)** , Yönetim türü seçimi açılır öğesine dönmek için *Yönetim türü seç* **(2)** seçeneğine tıklayın:
+     Doğru yönetim türü seçilmemişse **(1)**, Yönetim türü seçimi açılır öğesine dönmek için *Yönetim türü seç* **(2)** seçeneğine tıklayın:
 
     > [!div class="mx-imgBorder"]
-    > ![](./media/get-support/confirm-management-selection.png) yönetim türünü onaylayın
+    > ![Yönetim türünü onaylayın](./media/get-support/confirm-management-selection.png)
 
-  - Yardım ve destek ' i **sorun giderme +** destek > **Yardım ve destek**' i açarsanız, yardım ve *destek*' in altında listelendiğini seçtiğiniz yönetim türünü görmezsiniz.
+  - **Sorun giderme + Destek** > **Yardım ve destek**aracılığıyla yardım ve destek ' i açarsanız, yardım ve *destek*altında listelenen yönetim türünü görmezsiniz.
 
   - *Cihazlar*, *uygulamalar*veya *Kullanıcılar*gibi başka bir düğüme göz katıyorsanız, *Yardım ve destek*' i seçerseniz, bir yönetim türü seçme veya tür *Yardım ve destek*altında görüntüleme şansınız olmayacaktır. Bu durumda, *Intune* kabul edilir. İçeriğin Intune olmasını istemiyorsanız, şunu kullanın **?** seçeneğini belirlerseniz, farklı bir yönetim türü seçebilirsiniz.
 
@@ -94,7 +94,7 @@ Bu sorun, yeni kiracı hesabınızı https://admin.microsoft.com'de **M365 Yöne
 
   Sol üst köşede, *Yardım gerekiyor?* penceresinde farklı bölmeleri açmak için seçebileceğiniz üç simge vardır. Görüntülediğiniz bölme altı çizili olarak tanımlanır.
 
-  **Premier** veya **Birleşik** destek sözleşmesine sahip müşteriler destek için [ek seçeneklere](#premier-and-unified-support-customers) sahiptir ve yardım almak için *gereken* bir başlık görürsünüz: ![Premier başlık](./media/get-support/premier-banner.png)
+  **Premier** veya **Birleşik** destek sözleşmesine sahip müşteriler, destek için [ek seçeneklere](#premier-and-unified-support-customers) sahiptir ve yardım almak için *gerekli* olan bir başlığı şu resme benzer şekilde görebilir: ![Premier başlık](./media/get-support/premier-banner.png)
 
   *Yardım mı gerekiyor?* *çözüm bul* bölmesine açılır. Ancak etkin bir destek örneğine sahipseniz, etkin ve kapalı destek durumlarınız hakkındaki ayrıntıları görüntüleyebileceğiniz *hizmet istekleri* bölmesinde pencere açılır.
 
@@ -156,7 +156,7 @@ Sol gezinti bölmesi **Yardım + Destek**' i kullandığınızda veya **?** *Yar
 
 Bu sayfadan **+ Yeni destek isteği** ' ni seçerek *Yardım + destek + yeni destek Isteği* sayfasının *temel bilgiler* sekmesini açın.
 
-![Yardım ve destek](./media/get-support/help-plus-support.png)
+![Yardım + destek](./media/get-support/help-plus-support.png)
 
 Bu sayfada:
 
@@ -226,5 +226,5 @@ Destek isteklerinizi Azure portal içinden görüntüleyebilirsiniz. Ancak, sın
 ## <a name="additional-resources"></a>Ek kaynaklar  
 
 - [Faturalama ve abonelik yönetimi desteği](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
-- [Toplu lisanslama](https://go.microsoft.com/fwlink/p/?LinkID=282015)
+- [Toplu Lisanslama](https://go.microsoft.com/fwlink/p/?LinkID=282015)
 - [Intune sorunlarını giderme](help-desk-operators.md)

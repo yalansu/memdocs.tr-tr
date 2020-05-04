@@ -20,17 +20,17 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 23ae0ec9d91a0bd1a171708699ae88e7c572a250
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084502"
 ---
 # <a name="install-the-company-portal-app-for-android"></a>Android için Şirket Portalı uygulamasını yükleme
 
 Şirket Portalı, şirketinizin veya okulunuzun uygulamalarına, e-postasına ve İnternet bağlantılarına erişmenizi sağlayacak bir uygulamadır. Bu uygulama, örneğin şirket uygulamalarını güncel tutarak veya cihazınızın belirli bir süreden sonra otomatik olarak kilitlenmesini sağlayarak cihazınızı ve kuruluş bilgilerini güvende tutar. Şirket Portalı özellikleri ve cihaz yönetiminin parçası hakkında daha fazla bilgi edinmek için bkz. [Android cihazınızı neden kaydetme](why-enroll-android-device.md).  
 
-1. **Giriş** > **Play Store**’a dokunun.
+1. **Home** > **Play Store**' a dokunun.
 
 2. **Arama** kutusuna **Intune şirket portalı**yazın.  
 
@@ -38,7 +38,7 @@ ms.locfileid: "80084502"
 
     ![android-search-company-portal](./media/and-cpinstall-1-search-cp.png)
 
-4. **YÜKLE**’ye dokunun.
+4. **Install**'a dokunun.
 
     ![android-install-company-portal](./media/and-cpinstall-2-install.png)
 

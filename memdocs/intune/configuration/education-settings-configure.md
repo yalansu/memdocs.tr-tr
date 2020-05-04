@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 12d04869834691167c2f31be853029c9a939a338
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79333094"
 ---
 # <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>Microsoft Intune 'da Windows 10 cihazlarda bir test alma uygulaması kullanın
@@ -39,11 +39,11 @@ Bu makalede Microsoft Intune ' de bir cihaz yapılandırma profili oluşturma ad
 ## <a name="create-a-device-profile"></a>Bir cihaz profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Ad**: Yeni profil için açıklayıcı bir ad girin.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+    - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
     - **Platform**: **Windows 10 ve üzeri** seçeneğini belirleyin.
     - **Profil**: **eğitim profili**seçin.
 
@@ -51,7 +51,7 @@ Bu makalede Microsoft Intune ' de bir cihaz yapılandırma profili oluşturma ad
 
     - [Windows 10 ve üzeri](education-settings-windows.md)
 
-5. Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur**’u seçin.
+5. Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin.
 
 Ayarlarınızı girdikten ve profili oluşturduktan sonra profiliniz profil listesinde gösterilir. Daha sonra [bu profili bazı gruplara atayın](device-profile-assign.md).
 

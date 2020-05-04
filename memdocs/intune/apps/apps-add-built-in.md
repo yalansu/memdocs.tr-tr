@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 74db26a3d5f80a0192e996913177745c0b438ac6
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324923"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Microsoft Intune’a yerleşik uygulama ekleme
@@ -38,9 +38,9 @@ Intune konsolunun önceki sürümlerinde Intune, Outlook ve OneDrive gibi varsay
 
 Microsoft Intune’da mümkün olan uygulamalara yerleşik uygulama eklemek için şunları yapın:
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tüm uygulamalar** ** >  > ** **Ekle**' yi seçin.
+2. **Uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, kullanılabilir **Mağaza uygulama** türleri altında **yerleşik uygulama**' yı seçin.
-4. **Seçin**’e tıklayın. **Uygulama ekleme** adımları görüntülenir.
+4. **Seç**' e tıklayın. **Uygulama ekleme** adımları görüntülenir.
 5. **Yerleşik uygulamaları seçin** sayfasında, dahil etmek istediğiniz uygulamaları seçmek Için **Uygulama Seç** ' e tıklayın.
 6. Dahil etmek istediğiniz yerleşik uygulamaları seçin. 
 7. Uygulamaları seçtikten sonra, **yerleşik uygulamalar** ' ı seçin bölmesinde **Seç** ' e tıklayın.
@@ -56,19 +56,19 @@ Microsoft Intune’da mümkün olan uygulamalara yerleşik uygulama eklemek içi
 ## <a name="configure-app-information"></a>Uygulama bilgilerini yapılandırma
 
 Yerleşik uygulama hakkındaki bilgileri değiştirebilirsiniz. Bu bilgiler, uygulamayı Intune’da bulmanıza yardımcı olur ve kullanıcıların uygulamayı Şirket Portalı’nda bulması kolaylaşır.
-1. **Tüm uygulamalar** > **uygulamalar** ' ı seçin ve değiştirmek istediğiniz yerleşik uygulamayı seçin.  
+1. **Uygulamalar** > **tüm uygulamalar** ' ı seçin ve değiştirmek istediğiniz yerleşik uygulamayı seçin.  
    Yerleşik uygulamaya ait bir bölme görüntülenecektir.
 2. **Özellikler**' i seçin.
 3. **Uygulama bilgileri**' nin yanındaki **Düzenle** ' yi seçin.
 4. **Uygulama bilgileri** bölmesinde aşağıdaki bilgileri değiştirebilirsiniz:
     - **Ad**: Yerleşik uygulamanın Şirket Portalı’nda görüntülenen adını girin. Kullandığınız tüm adların benzersiz olduğundan emin olun. Aynı uygulama adı iki kez kullanılmışsa uygulamalardan yalnızca biri şirket portalında kullanıcılara görüntülenir.
     - **Açıklama**: Uygulama için bir açıklama girin. 
-    - **Yayımcı**: Uygulama yayıncısının adını girin.
+    - **Yayımcı**: Uygulama yayımcısının adını girin.
     - **Kategori**: İsteğe bağlı olarak, yerleşik uygulama kategorilerinden birini seçin. Bu seçeneği ayarladığınızda, Şirket Portalı’na göz atarken kullanıcıların uygulamayı bulmaları kolaylaşır.
     - **Bunu şirket portalı 'nda öne çıkan bir uygulama olarak göster**: kullanıcılar uygulamalara gözatarken, uygulamayı şirket portalının ana sayfasında göze çarpacak şekilde görüntüleyin.
     - **Bilgi URL’si**: İsteğe bağlı olarak, bu uygulama hakkında bilgi içeren bir web sitesinin URL’sini girin. URL, şirket portalında kullanıcılara görüntülenir.
     - **Gizlilik URL’si**: İsteğe bağlı olarak, bu uygulamayla ilgili gizlilik bilgilerini içeren bir web sitesinin URL’sini girin. URL, şirket portalında kullanıcılara görüntülenir.
-    - **Geliştirici**: İsteğe bağlı olarak, uygulama geliştiricinin adını girin.
+    - **Geliştirici**: İsteğe bağlı olarak, uygulama geliştiricisinin adını girin.
     - **Sahip**: İsteğe bağlı olarak, bu uygulamanın sahibi için bir ad girin (örneğin *İK departmanı*).
     - **Notlar**: Bu uygulamayla ilişkilendirmek istediğiniz notları girin.
     - **Simge Yükle**: Kullanıcılar şirket portalına gözatarken uygulamayla birlikte görüntülenecek bir simge yükleyin.

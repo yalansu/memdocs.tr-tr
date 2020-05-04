@@ -19,17 +19,17 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed623abeb602e599866af7b7249756edd87d5a29
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328438"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Intune ile Zimperium Mobile Threat Defense bağlayıcısı
 
 Microsoft Intune ile tümleştirilen bir Mobile Threat Defense (MTD) çözümü olan Zemium tarafından gerçekleştirilen risk değerlendirmesine dayalı koşullu erişimi kullanarak mobil cihaz erişimini kontrol edebilirsiniz. Risk, Zimperium uygulamasını çalıştıran cihazlardan toplanan telemetriye göre değerlendirilir.
 
-Kayıtlı cihazlar için Intune cihaz uyumluluk ilkeleri aracılığıyla etkinleştirilen en yüksek riskli risk değerlendirmesine dayalı koşullu erişim ilkelerini yapılandırabilirsiniz ve bu sayede uyumsuz cihazların algılanan şirket kaynaklarına erişmesine izin vermek veya erişimi engellemek için kullanabilirsiniz tehditleri. Kayıtlı olmayan cihazlar için, algılanan tehditlere dayalı olarak bir blok veya seçmeli Temizleme zorlamak için uygulama koruma ilkelerini kullanabilirsiniz.
+Kayıtlı cihazlar için Intune cihaz uyumluluk ilkeleri aracılığıyla etkinleştirilen, uyumsuz cihazların, algılanan tehditlere dayalı olarak şirket kaynaklarına erişmesine izin vermek veya erişimi engellemek için kullanabileceğiniz, bulunan Zzium risk değerlendirmesi temelinde koşullu erişim ilkelerini yapılandırabilirsiniz. Kayıtlı olmayan cihazlar için, algılanan tehditlere dayalı olarak bir blok veya seçmeli Temizleme zorlamak için uygulama koruma ilkelerini kullanabilirsiniz.
 
 ## <a name="supported-platforms"></a>Desteklenen platformlar
 
@@ -54,7 +54,7 @@ Android ve iOS/ıpados için Zanium uygulaması dosya sistemi, ağ yığını, c
 - **Kayıtlı cihazlar Için destek** -Intune cihaz uyumluluk Ilkesi, Zmıium 'ten risk değerlendirmesi bilgilerini kullanabileceğiniz bir mobil tehdit savunması (MTD) için bir kural içerir. MTD kuralı etkinleştirildiğinde, Intune, etkin olan ilkeyle cihaz uyumluluğunu değerlendirir. Cihaz uyumsuz bulunursa kullanıcıların Exchange Online ve SharePoint Online gibi kurumsal kaynaklara erişimi engellenir. Kullanıcılar ayrıca, sorunu çözmek ve kurumsal kaynaklara yeniden erişim kazanmak için cihazlarında yüklü olan Zimperium uygulamasından yönergeler alır. Kayıtlı cihazlarla Zkusurium kullanımını desteklemek için:
   - [Cihazlara MTD uygulamaları ekleme](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md)
   - [MTD 'yi destekleyen bir cihaz uyumluluk ilkesi oluşturma](../protect/mtd-device-compliance-policy-create.md)
-  - [Intune 'da MTD bağlayıcısını etkinleştirme](../protect/mtd-connector-enable.md)
+  - [Intune'da MTD bağlayıcısını etkinleştirme](../protect/mtd-connector-enable.md)
 
 - **Kayıtlı olmayan cihazlar Için destek** -Intune, Intune uygulama koruma ilkelerini kullandığınızda, kayıtlı olmayan cihazlarda zboyutlu en yüksek uygulamadaki risk değerlendirmesi verilerini kullanabilir. Yöneticiler bu bileşimi, [Microsoft Intune korunan bir uygulamadaki](../apps/apps-supported-intune-apps.md)kurumsal verilerin korunmasına yardımcı olmak için kullanabilir. Yöneticiler, kayıtlı olmayan cihazlarda Kurumsal veriler için bir blok veya seçmeli silme de verebilir. Kayıtlı olmayan cihazlarla Zkusurium kullanımını desteklemek için:
   - [MTD uygulamasını kayıtlı olmayan cihazlara ekleme](../protect/mtd-add-apps-unenrolled-devices.md)
@@ -78,12 +78,12 @@ Cihazlarda kötü amaçlı yazılım gibi kötü amaçlı uygulamalar algıland�
 *Kötü amaçlı yazılımlar algılandığında engelleme:*
 
 > [!div class="mx-imgBorder"]
-> algılanan kötü amaçlı uygulamaların kavramsal görüntüsünü ![](./media/zimperium-mobile-threat-defense-connector/Maliciousapps-blocked-zimperium.png)
+> ![Algılanan kötü amaçlı uygulamaların kavramsal görüntüsü](./media/zimperium-mobile-threat-defense-connector/Maliciousapps-blocked-zimperium.png)
 
 *Düzeltme ile erişim izni verildi:*
 
 > [!div class="mx-imgBorder"]
-> düzeltmeden sonra erişim izni verilen ![kavramsal görüntüsünü](./media/zimperium-mobile-threat-defense-connector/maliciousapps-unblocked-zimperium.png)
+> ![Düzeltmeden sonra erişim izni verilen kavramsal resim](./media/zimperium-mobile-threat-defense-connector/maliciousapps-unblocked-zimperium.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Ağa yönelik tehdide dayalı olarak erişimi denetleme
 
@@ -92,38 +92,38 @@ Ağda **bağlantıyı izinsiz izleme** gibi tehditleri algılayın ve cihaz risk
 *Wi-Fi üzerinden ağ erişimini engelleme:*
 
 > [!div class="mx-imgBorder"]
-> ![Wi-Fi ile ağ erişimini engelleyin](./media/zimperium-mobile-threat-defense-connector/network-wifi-blocked-zimperium.png)
+> ![Wi-Fi üzerinden ağ erişimini engelleyin](./media/zimperium-mobile-threat-defense-connector/network-wifi-blocked-zimperium.png)
 
 *Düzeltme ile erişim izni verildi:*
 
 > [!div class="mx-imgBorder"]
-> Düzeltme](./media/zimperium-mobile-threat-defense-connector/network-wifi-unblocked-zimperium.png) ![erişim izni verildi
+> ![Düzeltmeye erişim verildi](./media/zimperium-mobile-threat-defense-connector/network-wifi-unblocked-zimperium.png)
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Ağa yönelik tehdide dayalı olarak SharePoint Online’a erişimi denetleme
 
 Ağda **Bağlantıyı izinsiz izleme** gibi tehditleri algılar ve cihaz riskine dayalı olarak kurumsal dosyaların eşitlenmesini engeller.
 
-*Ağ tehditleri algılandığında SharePoint Online’ı engelle:*
+*Ağ tehditleri algılandığında SharePoint Online 'ı engelleyin:*
 
 > [!div class="mx-imgBorder"]
-> ![ağ tehditleri algılandığında SharePoint Online 'ı engelleyin](./media/zimperium-mobile-threat-defense-connector/network-spo-blocked-zimperium.png)
+> ![Ağ tehditleri algılandığında SharePoint Online’ı engelleme](./media/zimperium-mobile-threat-defense-connector/network-spo-blocked-zimperium.png)
 
 *Düzeltme ile erişim izni verildi:*
 
 > [!div class="mx-imgBorder"]
-> ![erişim SharePoint örneği için düzeltmeye verildi](./media/zimperium-mobile-threat-defense-connector/network-spo-unblocked-zimperium.png)
+> ![Sharepoint için düzeltme ile erişim izni verme örneği](./media/zimperium-mobile-threat-defense-connector/network-spo-unblocked-zimperium.png)
 
 ### <a name="control-access-on-unenrolled-devices-based-on-threats-from-malicious-apps"></a>Kötü amaçlı uygulamalardaki tehditleri temel alan kayıtlı olmayan cihazlarda erişimi denetleme
 
 Zyium Mobile Threat Defense çözümü, bir cihazı bulaşma için kabul eder:
 
 > [!div class="mx-imgBorder"]
-> algılanan kötü amaçlı yazılım nedeniyle uygulama koruma ilkesi blokları ![](./media/zimperium-mobile-threat-defense-connector/zimperium-mobile-app-policy-block.png)
+> ![Algılanan kötü amaçlı yazılım nedeniyle uygulama koruma ilkesi blokları](./media/zimperium-mobile-threat-defense-connector/zimperium-mobile-app-policy-block.png)
 
 Düzeltmeye erişim verildi:
 
 > [!div class="mx-imgBorder"]
-> ![erişim, uygulama koruma ilkesi için düzeltilmek üzere verilir](./media/zimperium-mobile-threat-defense-connector/zimperium-mobile-app-policy-remediated.png)
+> ![Uygulama koruma ilkesi düzeltilmek için erişim izni verildi](./media/zimperium-mobile-threat-defense-connector/zimperium-mobile-app-policy-remediated.png)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -135,4 +135,4 @@ Düzeltmeye erişim verildi:
 
 - [Zimperium MTD bağlayıcısını etkinleştirme](mtd-connector-enable.md)
 
-- [MTD uygulama koruma ilkesi oluşturma](../protect/mtd-app-protection-policy.md)
+- [MTD uygulaması koruma ilkesi oluşturma](../protect/mtd-app-protection-policy.md)

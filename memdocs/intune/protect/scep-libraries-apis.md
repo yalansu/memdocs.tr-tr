@@ -1,5 +1,5 @@
 ---
-title: API'ları için yerleşik 3. taraf sertifika yetkilileri
+title: 3. taraf sertifika yetkililerini eklemek için API 'Ler
 titleSuffix: Microsoft Intune
 description: Microsoft Intune’daki cihazlara SCEP sertifikaları vermek için üçüncü taraf sertifika yetkililerine (CA) yönelik SCEP GitHub çözümünü ekleyin veya tümleştirin. Bu çözüm sertifikaları doğrulayan, Intune’a başarı ve başarısızlık bildirimleri gönderen ve Intune’la iletişim kurarken SSL yuva fabrikasını kullanan Java ve C# API’leri içerir. Ayrıca, SCEP CA yapılandırmanızı test etme adımlarına genel bakış bilgilerini görüntüleyin.
 keywords: ''
@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9a915ffc908c985b38533a362f2a17ec561ddf6f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329066"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>API’leri kullanarak Intune’a SCEP için üçüncü taraf CA’ları ekleme
@@ -100,7 +100,7 @@ Uygulamayı kaydetme ve kimliklerle anahtarları alma yönergeleri için bkz. [P
 
 ### <a name="java-library-api"></a>Java Kitaplığı API'si
 
-Java kitaplığı, oluşturulurken bağımlılıklarını içeri çeken bir Maven projesi olarak uygulanır. API, `com.microsoft.intune.scepvalidation` sınıfı tarafından `IntuneScepServiceClient` ad alanı altında uygulanır.
+Java kitaplığı, oluşturulurken bağımlılıklarını içeri çeken bir Maven projesi olarak uygulanır. API, `IntuneScepServiceClient` sınıfı tarafından `com.microsoft.intune.scepvalidation` ad alanı altında uygulanır.
 
 #### <a name="intunescepserviceclient-class"></a>IntuneScepServiceClient sınıfı
 
@@ -289,7 +289,7 @@ Oluşturulanlar:
 1. [Intune deneme hesabı](../fundamentals/account-sign-up.md) ayarlayın.
 2. [Azure portalına SCEP Sunucusunu](#onboard-scep-server-in-azure) ekleyin (bu makalede).
 3. SCEP sunucunuzu eklerken oluşturulan kimlikler ve anahtarla [SCEP Sunucusunu yapılandırın](certificates-scep-configure.md).
-4. [Senaryo test matrisindeki](../enrollment/device-enrollment.md) senaryoları test etmek için [cihazları kaydedin](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv).
+4. [Senaryo test matrisindeki](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv) senaryoları test etmek için [cihazları kaydedin](../enrollment/device-enrollment.md).
 5. Test Sertifika Yetkiliniz için [bir Güvenilen Kök Sertifika profili oluşturun](certificates-scep-configure.md).
 6. [Senaryo test matrisinde](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv) listelenen senaryoları test etmek için SCEP profilleri oluşturun.
 7. Cihazlarını kaydeden kullanıcılara [profilleri atayın](../configuration/device-profile-assign.md).

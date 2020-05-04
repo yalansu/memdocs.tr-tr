@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 61d84b0d1f5047df23e9571a0330768ed37eb921
-ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80862831"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Intune’da Windows 10 ve üzeri cihazlar için Wi-Fi ayarları ekleme
@@ -37,7 +37,7 @@ Bu makalede bu ayarlar açıklanır.
 
 - **Wi-Fi türü**: **Temel**’i seçin. 
 
-- **Wi-Fi adı (SSID)** : Hizmet kümesi tanımlayıcısının kısaltması. Bu değer, cihazların bağlandığı kablosuz ağın gerçek adıdır. Bununla birlikte, bağlantıyı seçen kullanıcılar yalnızca yapılandırdığınız **Bağlantı adını** görür.
+- **Wi-Fi adı (SSID)**: Hizmet kümesi tanımlayıcısının kısaltması. Bu değer, cihazların bağlandığı kablosuz ağın gerçek adıdır. Bununla birlikte, bağlantıyı seçen kullanıcılar yalnızca yapılandırdığınız **Bağlantı adını** görür.
 
 - **Bağlantı adı**: Bu Wi-Fi bağlantısı için bir kolay ad girin. Girdiğiniz metin, kullanıcıların cihazlarında kullanılabilir bağlantılara göz attıklarında görecekleri addır.
 
@@ -56,7 +56,7 @@ Bu makalede bu ayarlar açıklanır.
   - **Değişken**: Ağ trafiği bayt başına ücretlendiriliyorsa (bayt başına maliyet) bu seçeneği kullanın.
 
 - **Kablosuz Güvenlik Türü**: Ağınızda cihazların kimliğini doğrulamak için kullanılan güvenlik protokolünü girin. Seçenekleriniz şunlardır:
-  - **Açık (kimlik doğrulamasız)** : Bu seçeneği yalnızca ağ güvenlik altına alınmamış olduğunda kullanın.
+  - **Açık (kimlik doğrulamasız)**: Bu seçeneği yalnızca ağ güvenlik altına alınmamış olduğunda kullanın.
   - **WPA/WPA2-Kişisel**: Daha güvenli bir seçenektir ve genellikle Wi-Fi bağlantısı için kullanılır. Daha fazla güvenlik için önceden paylaşılan bir anahtar parolası veya ağ anahtarı girebilirsiniz.
 
     - **Önceden paylaşılan anahtar** (PSK): İsteğe bağlıdır. Güvenlik türü olarak **WPA/WPA2-Kişisel**’i seçtiğinizde gösterilir. Kuruluşunuzun ağı ayarlandığında veya yapılandırıldığında bir parola veya ağ anahtarı da yapılandırılır. PSK değeri için bu parolayı veya ağ anahtarını girin. 8-64 karakter arasında bir dize girin. Parolanız veya ağ anahtarınız 64 karakterden oluşuyorsa, onaltılık karakterler girin.
@@ -67,15 +67,15 @@ Bu makalede bu ayarlar açıklanır.
 - **Şirket ara sunucu ayarları**: Kuruluşunuz içinde ara sunucu ayarlarını kullanmak için seçin. Seçenekleriniz şunlardır:
   - **Hiçbiri**: Hiçbir ara sunucu ayarı yapılandırılmaz.
   - **El ile yapılandır**: **Ara sunucu IP adresini** ve onun **Bağlantı noktası numarasını** girin.
-  - **Otomatik olarak yapılandır**: Proxy otomatik yapılandırma (PAC) betiğine işaret eden URL’yi girin. Örneğin, şunu girin: `http://proxy.contoso.com/proxy.pac`.
+  - **Otomatik Yapılandır**: proxy otomatik yapılandırma (PAC) betiğine işaret eden URL 'yi girin. Örneğin, `http://proxy.contoso.com/proxy.pac` girin.
 
-Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur**’u seçin. Profil oluşturuldu ve profiller listesinde gösteriliyor.
+Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin. Profil oluşturuldu ve profiller listesinde gösteriliyor.
 
 ## <a name="enterprise-profile"></a>Kurumsal profil
 
 - **Wi-Fi türü**: **Kurumsal**’ı seçin.
 
-- **Wi-Fi adı (SSID)** : Hizmet kümesi tanımlayıcısının kısaltması. Bu değer, cihazların bağlandığı kablosuz ağın gerçek adıdır. Bununla birlikte, bağlantıyı seçen kullanıcılar yalnızca yapılandırdığınız **Bağlantı adını** görür.
+- **Wi-Fi adı (SSID)**: Hizmet kümesi tanımlayıcısının kısaltması. Bu değer, cihazların bağlandığı kablosuz ağın gerçek adıdır. Bununla birlikte, bağlantıyı seçen kullanıcılar yalnızca yapılandırdığınız **Bağlantı adını** görür.
 
 - **Bağlantı adı**: Bu Wi-Fi bağlantısı için bir kolay ad girin. Girdiğiniz metin, kullanıcıların cihazlarında kullanılabilir bağlantılara göz attıklarında görecekleri addır.
 
@@ -92,7 +92,7 @@ Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur**’u seçin. Profil
   - **Sabit**: Ağ, ağ trafiği için sabit sınırla yapılandırılmışsa bu seçeneği kullanın. Bu sınıra ulaşıldıktan sonra ağ erişimi engellenir.
   - **Değişken**: Ağ trafiği bayt başına ücretlendiriliyorsa bu seçeneği kullanın.
 
-- **Çoklu oturum açma (SSO)** : Kimlik bilgilerinin bilgisayar ve Wi-Fi ağı oturum açma işleminde paylaşıldığı çoklu oturum açmayı (SSO) yapılandırmanıza olanak tanır. Seçenekleriniz şunlardır:
+- **Çoklu oturum açma (SSO)**: Kimlik bilgilerinin bilgisayar ve Wi-Fi ağı oturum açma işleminde paylaşıldığı çoklu oturum açmayı (SSO) yapılandırmanıza olanak tanır. Seçenekleriniz şunlardır:
   - **Devre dışı bırak**: SSO davranışını devre dışı bırakır. Kullanıcının ağda ayrıca kimlik doğrulaması yapması gerekir.
   - **Kullanıcı cihazda oturum açmadan önce etkinleştir**: Kullanıcı oturum açma işleminden hemen önce ağda kimlik doğrulaması yapmak için SSO kullanın.
   - **Kullanıcı cihazda oturum açtıktan sonra etkinleştir**: Kullanıcı oturum açma işlemini tamamlandıktan hemen sonra ağda kimlik doğrulaması yapmak için SSO kullanın.
@@ -126,32 +126,32 @@ Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur**’u seçin. Profil
 
       **Sertifika doğrulaması için kök sertifika**: **EAP-TLS**, **EAP-TTLS** veya **PEAP** EAP türleri ile kullanın. Bağlantı kimliğini doğrulamak için kullanılan, güvenilen kök sertifika profilini seçin.  
 
-      **Kimlik gizliliği (dış kimlik)** : **PEAP** EAP türü ile kullanın. Bir EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.  
+      **Kimlik gizliliği (dış kimlik)**: **PEAP** EAP türü ile kullanın. Bir EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.  
 
-    - **İstemci Kimlik Doğrulaması**
+    - **İstemci kimlik doğrulaması**
 
-      **İstemci kimlik doğrulaması için istemci sertifikası (Kimlik sertifikası)** : **EAP-TLS** EAP türü ile kullanın. Bağlantı kimliğini doğrulamak için kullanılan sertifika profilini seçin.
+      **İstemci kimlik doğrulaması için istemci sertifikası (Kimlik sertifikası)**: **EAP-TLS** EAP türü ile kullanın. Bağlantı kimliğini doğrulamak için kullanılan sertifika profilini seçin.
 
       **Kimlik doğrulama yöntemi**: **EAP-TTLS** EAP türü ile kullanın. Bağlantı için kimlik doğrulama yöntemini seçin:  
 
       - **Sertifikalar**: Sunucuya gösterilen kimlik sertifikası olan istemci sertifikasını seçin.
-      - **Kullanıcı Adı ve Parola**: Kimlik doğrulaması için bir **EAP dışı yöntem (iç kimlik)** girin. Seçenekleriniz şunlardır:
+      - **Kullanıcı Adı ve Parola**: Kimlik doğrulama için bir **EAP dışı yöntem (iç kimlik)** girin. Seçenekleriniz şunlardır:
 
         - **Şifrelenmemiş parola (PAP)**
         - **Karşılıklı Kimlik Doğrulama Protokolü (CHAP)**
         - **Microsoft CHAP (MS-CHAP)**
         - **Microsoft CHAP Sürüm 2 (MS-CHAP v2)**
 
-      **Kimlik gizliliği (dış kimlik)** : **EAP-TTLS** EAP türü ile kullanın. Bir EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.
+      **Kimlik gizliliği (dış kimlik)**: **EAP-TTLS** EAP türü ile kullanın. Bir EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.
 
 - **Şirket ara sunucu ayarları**: Kuruluşunuz içinde ara sunucu ayarlarını kullanmak için seçin. Seçenekleriniz şunlardır:
   - **Hiçbiri**: Hiçbir ara sunucu ayarı yapılandırılmaz.
   - **El ile yapılandır**: **Ara sunucu IP adresini** ve onun **Bağlantı noktası numarasını** girin.
-  - **Otomatik olarak yapılandır**: Ara sunucu otomatik yapılandırma (PAC) betiğine işaret eden URL'yi girin. Örneğin, şunu girin: `http://proxy.contoso.com/proxy.pac`.
+  - **Otomatik olarak yapılandır**: Ara sunucu otomatik yapılandırma (PAC) betiğine işaret eden URL'yi girin. Örneğin, `http://proxy.contoso.com/proxy.pac` girin.
 
 - **Wi-Fi profilinin Federal Bilgi İşleme Standardı (FIPS) ile uyumlu olmasını zorla** FIPS 140-2 standardıyla doğrulama yaparken bunu **Evet** olarak ayarlayın. Bu standart, şifreleme tabanlı güvenlik sistemleri kullanan tüm ABD federal resmi kurumlarında dijital olarak saklanan, hassas fakat gizli olmayan bilgileri korumak için gereklidir. **Hayır**’ı seçerseniz FIPS ile uyumlu olamazsınız.
 
-Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur**’u seçin. Profil oluşturuldu ve profiller listesinde gösteriliyor.
+Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin. Profil oluşturuldu ve profiller listesinde gösteriliyor.
 
 ## <a name="use-an-imported-settings-file"></a>İçeri aktarılan ayarlar dosyasını kullanma
 
@@ -161,7 +161,7 @@ Intune'da sağlanmayan tüm ayarlar için, başka bir Windows cihazından Wi-Fi 
 
 Profil oluşturuldu ancak hiçbir şey yapmıyor. Daha sonra [bu profili atayın](device-profile-assign.md).
 
-## <a name="more-resources"></a>Daha fazla kaynak
+## <a name="more-resources"></a>Diğer kaynaklar
 
 - [Windows 8.1](wi-fi-settings-import-windows-8-1.md) için kullanılabilir ayarlara göz atın.
 - Diğer platformlar dahil olmak üzere [Wi-Fi ayarlarına genel bakış](wi-fi-settings-configure.md).

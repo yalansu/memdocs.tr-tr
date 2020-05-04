@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 31457667612617bb573ddfb145ed26f70de33159
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332270"
 ---
 # <a name="microsoft-intune-windows-10-team-device-restriction-settings"></a>Microsoft Intune Windows 10 Team cihaz kısıtlama ayarları
@@ -32,7 +32,7 @@ Bu makalede, Windows 10 Team çalıştıran cihazlar için yapılandırabileceğ
 - **Birisi odadayken uyku modundan çıkar** - Algılayıcı, odada birisini algıladığında cihazın otomatik olarak uyanmasına izin verir.
 - **Hoş Geldiniz ekranında gösterilen toplantı bilgileri** - Hoş Geldiniz ekranının Toplantılar kutucuğunda gösterilecek bilgileri seçmek için bu seçeneği etkinleştirin. Şunları yapabilirsiniz:
   - **Yalnızca düzenleyeni ve saati göster**
-  - **Düzenleyeni, saati ve konuyu göster (özel toplantılar için konu gizlidir)**
+  - **Düzenleyiciyi, saati ve konuyu göster (özel toplantılar için konu gizlidir)**
 - **Hoş Geldiniz ekranı arka plan görüntüsü URL’si** - Windows 10 Team cihazlarının **Hoş Geldiniz** ekranında, belirttiğiniz URL’den özel bir arka plan görüntülemek için bu ayarı etkinleştirin.<br>Görüntü PNG biçiminde olmalıdır ve URL **https://** ile başlamalıdır.
 
 ## <a name="azure-operational-insights"></a>Azure operasyonel içgörüler
@@ -52,4 +52,4 @@ Azure Operasyonel İçgörüler'e bağlanmak için bir **Çalışma Alanı Kimli
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Cihaz kısıtlama ayarlarını yapılandırma](device-restrictions-configure.md) makalesindeki bilgileri kullanarak profili kaydedin ve kullanıcı ve cihazlara atayın.
+Profili kaydetmek ve kullanıcılara ve cihazlara atamak için [cihaz kısıtlama ayarlarını yapılandırma](device-restrictions-configure.md) bölümündeki bilgileri kullanın.
