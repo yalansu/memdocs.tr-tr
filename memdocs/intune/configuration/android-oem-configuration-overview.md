@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d6fdb0e019c4c61a83beed63c6d2470a0ed04b1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: c2d0d4c186dd0c703e371169fd24c2dbdabaa8ea
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326044"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254852"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Microsoft Intune 'de OEMConfig ile Android kurumsal cihazlarını kullanma ve yönetme
 
@@ -34,7 +34,7 @@ Bu özellik şu platformlarda geçerlidir:
 
 Bu makalede, OEMConfig açıklanmakta, önkoşulları listelemektedir, bir yapılandırma profili oluşturma ve Intune 'da desteklenen OEMConfig uygulamalarının nasıl listelendiği gösterilmektedir.
 
-## <a name="overview"></a>Overview
+## <a name="overview"></a>Genel Bakış
 
 OEMConfig ilkeleri, [uygulama yapılandırma ilkesine](../apps/app-configuration-policies-overview.md)benzer şekilde özel bir cihaz yapılandırma ilkesi türüdür. OEMConfig, Android tarafından, OEM 'Ler tarafından yazılan uygulamalara cihaz ayarları göndermek için Android 'de uygulama yapılandırması kullanan bir standart standarttır (özgün ekipman üreticileri). Bu standart, OEM 'Lerin ve EMMs 'nin (Enterprise Mobility Management), OEM 'e özgü özellikleri standartlaştırılmış bir şekilde oluşturmasına ve desteklemeye izin verir. [OEMConfig hakkında daha fazla bilgi edinin](https://blog.google/products/android-enterprise/oemconfig-supports-enterprise-device-features/).
 
@@ -79,7 +79,7 @@ Cihazın OEMConfig 'i desteklediğinden emin olun, Intune 'a doğru OEMConfig uy
 ## <a name="create-an-oemconfig-profile"></a>OEMConfig profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Platform**: **Android kurumsal**' i seçin.
@@ -89,7 +89,7 @@ Cihazın OEMConfig 'i desteklediğinden emin olun, Intune 'a doğru OEMConfig uy
 5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
     - **Ad**: Yeni profil için açıklayıcı bir ad girin.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+    - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
     - **Oemconfig uygulaması**: **bir oemconfig uygulaması seçin**öğesini seçin.
 
 6. **İlişkili uygulamada**, daha önce eklemiş olduğunuz mevcut bir oemconfig uygulamasını seçin > **seçin**. İlkeyi atadığınız cihazlar için doğru OEMConfig uygulamasını seçtiğinizden emin olun.
@@ -99,11 +99,11 @@ Cihazın OEMConfig 'i desteklediğinden emin olun, Intune 'a doğru OEMConfig uy
     > [!IMPORTANT]
     > Bir OEMConfig uygulaması eklediyseniz ve onu Google Play olarak eşitledi ancak **ilişkili bir uygulama**olarak listelenmediyse, uygulamayı eklemek için Intune ile iletişim kurmanız gerekebilir. Bkz. [Yeni uygulama ekleme](#supported-oemconfig-apps) (Bu makalede).
 
-7. **İleri**'yi seçin.
+7. **İleri**’yi seçin.
 8. **Ayarları Yapılandır**bölümünde **yapılandırma tasarımcısını** veya **JSON düzenleyicisini**seçin:
 
     > [!TIP]
-    > Özellikleri doğru şekilde yapılandırdığınızdan emin olmak için OEM belgelerini okuyun. Bu uygulama özellikleri, Intune 'A değil, OEM tarafından dahildir. Intune, özelliklerin en düşük doğrulamasını veya girdiğiniz şeyleri yapar. Örneğin, bir bağlantı noktası numarası için `abcd` girerseniz, profil olarak kaydedilir ve yapılandırdığınız değerlerle cihazlarınıza dağıtılır. Doğru bilgileri girdiğinizden emin olun.
+    > Özellikleri doğru şekilde yapılandırdığınızdan emin olmak için OEM belgelerini okuyun. Bu uygulama özellikleri, Intune 'A değil, OEM tarafından dahildir. Intune, özelliklerin en düşük doğrulamasını veya girdiğiniz şeyleri yapar. Örneğin, bir bağlantı noktası numarası `abcd` girerseniz, profil olarak kaydedilir ve yapılandırdığınız değerlerle cihazlarınıza dağıtılır. Doğru bilgileri girdiğinizden emin olun.
 
     - **Yapılandırma Tasarımcısı**: Bu seçeneği belirlediğinizde, uygulama şeması içinde kullanılabilen özellikler, yapılandırmanız için gösterilir.
 
@@ -125,16 +125,16 @@ Cihazın OEMConfig 'i desteklediğinden emin olun, Intune 'a doğru OEMConfig uy
 
     Yapılandırma tasarımcısında yapılan tüm değişiklikler JSON düzenleyicisinde de otomatik olarak yapılır. Benzer şekilde, JSON düzenleyicisinde yapılan tüm değişiklikler otomatik olarak yapılandırma tasarımcısında yapılır. Giriş bilgileriniz geçersiz değerler içeriyorsa, sorunları düzelene kadar yapılandırma Tasarımcısı ile JSON Düzenleyicisi arasında geçiş yapamazsınız.
 
-9. **İleri**'yi seçin.
-10. **Kapsam etiketleri** ' nde (isteğe bağlı), profili `US-NC IT Team` veya `JohnGlenn_ITDepartment`gıbı belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+9. **İleri**’yi seçin.
+10. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
-    **İleri**'yi seçin.
+    **İleri**’yi seçin.
 
 11. **Atamalar**' da, profilinizi alacak kullanıcıları veya grupları seçin. Her cihaza bir profil atayın. OEMConfig modeli cihaz başına yalnızca bir ilkeyi destekler.
 
     Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
 
-    **İleri**'yi seçin.
+    **İleri**’yi seçin.
 
 12. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
 
@@ -151,21 +151,25 @@ OEMConfig Apps, standart uygulamalarla karşılaştırıldığında, Google tara
 
 | OEM | Paket Kimliği | OEM belgeleri (varsa) |
 | --- | --- | ---|
-| Samsung | com. Samsung. Android. Knox. kpu | [Knox hizmeti eklentisi Yönetici Kılavuzu](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
-| Zeköşeli teknolojiler | com. zeköşeli. oemconfig. Common | [Zeköşeli OEMConfig genel bakış](http://techdocs.zebra.com/oemconfig ) |
+| Ascom | com. Ascom. Myco. oemconfig | |
+| Cipherlab | com. cipherlab. oemconfig | |
 | Honeywell | com. Honeywell. oemconfig |  |
+| HMDGlobal-7,2 | com. hmdglobal. app. oemconfig. n7_2 | 
+| HMDGlobal-4,2 | com. hmdglobal. app. oemconfig. n4_2 | 
 | Kyocera | JP. Kyocera. enterprisedeviceconfig |  |
+| Samsung | com. Samsung. Android. Knox. kpu | [Knox hizmeti eklentisi Yönetici Kılavuzu](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
+| Seuic | com. seuic. seuicoemconfig | |
 | Spectralink-barkodlar | com. spectralınk. Barcode. Service |  |
 | Spectralink-düğmeler | com. spectralınk. düğmeler |  |
 | Spectralink-cihaz | com. Spectralink. slnkdevicesettings  |  |
 | Spectralink-günlüğe kaydetme | com. Spectralink. slnklogger |  |
 | Spectralink-VQO | com. Spectralink. slnkvqo |  |
-| Seuic | com. seuic. seuicoemconfig | |
 | Unitech elektroniği | com. Unitech. oemconfig | |
+| Zeköşeli teknolojiler | com. zeköşeli. oemconfig. Common | [Zeköşeli OEMConfig genel bakış](http://techdocs.zebra.com/oemconfig ) |
 
 -----------------
 
-Cihazınız için bir OEMConfig uygulaması varsa, ancak yukarıdaki tabloda yer alıyorsa veya Intune konsolunda görüntülenmiyorsa, e-posta `IntuneOEMConfig@microsoft.com`.
+Cihazınız için bir OEMConfig uygulaması varsa, ancak yukarıdaki tabloda değil veya Intune konsolunda, e-posta `IntuneOEMConfig@microsoft.com`ile gösterilmemişse.
 
 > [!NOTE]
 > Oemconfig Apps, OEMConfig profilleriyle yapılandırılanmadan önce Intune tarafından eklenmediyse olmalıdır. Bir uygulama desteklendikten sonra kiracınızda ayarlama hakkında Microsoft 'a başvurmanız gerekmez. Bu sayfadaki yönergeleri izlemeniz yeterlidir.

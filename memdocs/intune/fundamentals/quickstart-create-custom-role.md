@@ -15,18 +15,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f1f381d0b9f48f26c84785bb7c50434971d6c89
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6cb0080a63c14c2a2fe4acd5906980e63e6b832c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330878"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079986"
 ---
 # <a name="quickstart-create-and-assign-a-custom-role"></a>Hızlı Başlangıç: Özel rol oluşturma ve atama
 
 Bu Intune hızlı başlangıcında bir güvenlik işlemleri departmanı için belirli izinleri olan özel bir rol oluşturup atayacaksınız. Ardından rolü bu tür işletmenlerden oluşan bir gruba atayacaksınız. Hemen kullanabileceğiniz birkaç varsayılan rol bulunur. Ancak bunun gibi özel roller oluşturarak mobil cihaz yönetim sisteminizin tamamı üzerinde doğru ayarlı bir erişim denetiminiz olur.
 
-Bir Intune aboneliğiniz yoksa [ücretsiz bir deneme hesabı için kaydolun](free-trial-sign-up.md).
+Intune aboneliğiniz yoksa [ücretsiz deneme hesabı için kaydolun](free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -40,35 +40,35 @@ Bir Intune aboneliğiniz yoksa [ücretsiz bir deneme hesabı için kaydolun](fre
 
 Özel bir rol oluştururken çok çeşitli eylemler için izinler belirleyebilirsiniz. Güvenlik işleri rolünde, işletmenin bir cihazın yapılandırmalarını ve ilkelerini gözden geçirebilmesi için birkaç Okuma izni ayarlayacağız.
 
-1. Intune'da **Roller** > **Tüm roller** > **Ekle**'yi seçin.
+1. Intune ' da, **Roller** > **tüm roller** > **Ekle**' yi seçin.
 ![Tarayıcı](./media/quickstart-create-custom-role/add-custom-role.png)
 2. **Özel rol ekle** altında, **Ad** kutusuna *Güvenlik işlemleri*'ni girin.
 3. **Açıklama** kutusuna *Bu rol güvenlik işletmeninin cihaz yapılandırma ve uyumluluk bilgilerini izlemesine olanak tanır* açıklamasını girin.
-4. **Okuma** > **Tamam**'ın yanındaki  > Yapılandır**Kurumsal cihaz tanımlayıcılar** > **Evet**'i seçin.
+4.  >  **Oku****Tamam**' ın yanındaki**Kurumsal cihaz tanımlayıcılarını** >  **Yapılandır** > **Evet** ' i seçin.
 ![Tarayıcı](./media/quickstart-create-custom-role/corp-device-id-read.png)
-5. **Okuma** > **Tamam**'ın yanındaki **Cihaz uyumluluk ilkeleri** > **Evet**'i seçin.
-6. **Okuma** > **Tamam**'ın yanındaki **Cihaz yapılandırmaları** > **Evet**'i seçin.
-7. **Okuma** > **Tamam**'ın yanındaki **Kuruluş** > **Evet**'i seçin.
-8. **Tamam** > **Oluştur**'u seçin.
+5.  > **OK** **Okuma**Tamam '**ın yanındaki** **cihaz uyumluluk ilkeleri** > ' ni seçin.
+6.  > **OK** **Oku**Tamam '**ın yanındaki** **cihaz yapılandırması** > ' nı seçin.
+7.  > **OK** **Oku**Tamam ' ın yanındaki **kuruluş** > **Evet** ' i seçin.
+8. **Tamam** > **Oluştur**seçeneğini belirleyin.
 
 ## <a name="assign-the-role-to-a-group"></a>Rolü bir gruba atama
 
 Güvenlik işletmeninizin yeni izinleri kullanabilmesi için önce rolü güvenlik kullanıcısını içeren bir gruba atamalısınız.
 
-1. Intune’da **Roller** > **Tüm roller** > **Güvenlik işlemleri**’ni seçin.
+1. Intune ' da, **Roller** > **tüm roller** > **güvenlik işlemleri**' ni seçin.
 2. **Intune rolleri** altında **Atamalar** > **Ata**'yı seçin.
 3. **Atama adı** kutusuna *Güvenlik işletmenleri* ifadesini girin.
-4. **Üye (Gruplar)**  > **Ekle**'yi seçin.
+4. **Üye (gruplar)** > **Ekle**öğesini seçin.
 5. **Contoso Testçileri** grubunu seçin.
-6. **Seç** > **Tamam**'ı seçin.
-7. **Kapsam (Gruplar)**  > **Dahil edilecek grupları seç** > **Contoso Testçileri**'ni seçin.
-8. **Seç** > **Tamam** > **Tamam**'ı seçin.
+6. Tamam **Seç ' i** > **OK**seçin.
+7. **Kapsam (gruplar)** > seçeneğini belirleyin > **contoso sınayıcılarını****dahil etmek için grupları seçin**.
+8.  > **OK**Tamam > Tamam**Tamam ' ı**seçin. **Select**
 
 Artık gruptaki herkes *Güvenlik işlemleri* rolünün bir üyesidir ve bir cihaz hakkındaki şu bilgileri inceleyebilir: kurumsal cihaz tanımlayıcıları, cihaz uyumluluk ilkeleri, cihaz yapılandırmaları ve kuruluş bilgileri.
 
 ## <a name="clean-up-resources"></a>Kaynakları temizleme
 
-Yeni özel rolü artık kullanmak istemiyorsanız, silebilirsiniz. **Roller** > **Tüm roller**'i > rolün yanındaki üç noktayı seçin > **Sil**'i seçin.
+Yeni özel rolü artık kullanmak istemiyorsanız, silebilirsiniz. **Roller** > **tüm roller** ' i seçin > rolün yanındaki üç noktayı seçin > **silin**.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e568a7700a6849993d24be4dd042195a95ab000
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0b18af35b0e741540637ecdde74877d1058a7915
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325122"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254716"
 ---
 # <a name="windows-update-settings-for-intune"></a>Intune için Windows Update ayarları  
 
@@ -28,7 +28,7 @@ Microsoft Intune ile [yapılandırabileceğiniz ve yönetebileceğiniz](windows-
 
 Intune 'da Windows 10 güncelleştirme halkaları için ayarları yapılandırdığınızda Windows Update ayarlarını yapılandırıyorsunuz. Bir Windows Update ayarında Windows 10 sürüm bağımlılığı varsa, ayarlar ayrıntıları ' nda sürüm bağımlılığı belirtilir.  
 
-## <a name="update-settings"></a>Güncelleştirme ayarları  
+## <a name="update-settings"></a>Ayarları güncelleştirme  
 
 Güncelleştirme ayarları, bir cihazın indirileceği bitleri ve ne zaman yapılacağını denetler. Her ayarın davranışı hakkında daha fazla bilgi için, Windows başvuru belgelerine bakın.  
 
@@ -42,7 +42,7 @@ Güncelleştirme ayarları, bir cihazın indirileceği bitleri ve ne zaman yapı
 
   Desteklenen güncelleştirme kanalları:  
 
-  - Yarı yıllık Kanal  
+  - Yarı Yıllık Kanal  
   - Yarı yıllık kanal (hedefli)  
   - Windows Insider – hızlı  
   - Windows Insider – yavaş  
@@ -85,8 +85,7 @@ Güncelleştirme ayarları, bir cihazın indirileceği bitleri ve ne zaman yapı
   Desteklenen erteleme dönemi:  
 
   - *Windows sürüm 1709 ve üzeri* -0-365 gün  
-  - *Windows sürüm 1703* -0-180 gün  
-
+  
   Özellik Güncelleştirmeleri genellikle Windows’un yeni özellikleridir.  
 
 - **Özellik güncelleştirmesini kaldırma süresini ayarla (2 – 60 gün)**  
@@ -164,8 +163,6 @@ Kullanıcı deneyimi ayarları, cihaz yeniden başlatma ve anımsatıcıları i�
   
   Bu ayarın, Windows 'un cihazlar sürümüne bağlı olarak farklı sonuçları vardır:  
  
-  - *Windows sürüm 1703 ve önceki sürümler* -bir cihazı yeniden başlattığınızda, etkin kullanıcılar, pil düzeyleri, oyunları çalıştırmak ve daha fazlasını denetlemek dahil bazı denetimler vardır.  
-  
   - *Windows sürüm 1709 ve üzeri* -etkin saatler sırasında aşağıdaki süreçler güncelleştirmeler için çalıştırılmaz: tarama, indirme, yükleme ve yeniden başlatma. Etkin saatten sonra, güncelleştirme işlemi çalıştırılır ve cihaz, pil denetimleri ve güç denetimleri başarılı olduğu sürece cihazı uykudan uyandırabilirler, indirebilir, yükleyebilir, yükleyebilir ve yeniden başlatabilirsiniz. 
 
 - **Kullanıcının Windows güncelleştirmelerini duraklatmasını engelle**  
@@ -223,7 +220,7 @@ Kullanıcı deneyimi ayarları, cihaz yeniden başlatma ve anımsatıcıları i�
   Kullanıcının son tarih ayarlarını kullanmasına izin verir.  
 
   - **Yapılandırılmadı**
-  - **İzin ver**
+  - **Açılmasına**
 
   *Izin ver*olarak ayarlandığında, son tarihleri için aşağıdaki ayarları yapılandırabilirsiniz:
 

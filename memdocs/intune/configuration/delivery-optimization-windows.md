@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 71039737a74aebb3066c001536aaf677a0467696
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c37563dee40d776d352dec4e0b8ef11b1dc8f67b
+ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327354"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506548"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Microsoft Intune teslim iyileştirme ayarları
 
@@ -36,25 +36,31 @@ Windows 10 ' da teslim Iyileştirmesi hakkında bilgi edinmek için Windows belg
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 
 3. Aşağıdaki özellikleri girin:
+   - **Platform**: **Windows 10 ve üstünü**seçin.
+   - **Profil türü**: **teslim iyileştirmesi**' nı seçin.
 
-    - **Ad**: Yeni profil için açıklayıcı bir ad girin.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
-    - **Platform**: **Windows 10 ve üstünü**seçin.
-    - **Profil türü**: **teslim iyileştirmesi**' nı seçin.
+4. **Oluştur**’u seçin.
 
-4. **Yapılandırma** > **Ayarlar** ' ı seçin ve güncelleştirmelerin ve uygulamaların nasıl indirilmek istediğinizi tanımlayın. Kullanılabilir ayarlar hakkında daha fazla bilgi için bkz. [Intune Için teslim iyileştirme ayarları](delivery-optimization-settings.md).
+5. **Temel bilgiler** sayfasında, profil için bir ad ve açıklama girin ve ardından **İleri**' yi seçin.
 
-5. Bitirdiğinizde, yaptığınız değişiklikleri kaydetmek için **Tamam** > **Oluştur**'u seçin.
+6. **Yapılandırma ayarları** sayfasında, güncelleştirmelerin ve uygulamaların nasıl indirilmesini istediğinizi tanımlayın. Kullanılabilir ayarlar hakkında daha fazla bilgi için bkz. [Intune Için teslim iyileştirme ayarları](delivery-optimization-settings.md).
 
-Profil oluşturulur ve listede gösterilir. Sonra, [profili atayın](device-profile-assign.md) ve ardından [durumunu izleyin](device-profile-monitor.md).
+   Ayarları yapılandırmayı tamamladıktan **sonra ileri**' yi seçin.
 
-<!-- ## Move existing update rings to delivery optimization
+7. Scope **(Etiketler)** sayfasında kapsam **etiketleri Seç ' i seçerek profile** kapsam etiketleri atayın *Select tags* .
+  
+   Devam etmek için **İleri**’yi seçin.
 
-**Delivery optimization** settings replace **Software updates – Windows 10 Update Rings**. Your existing update rings can be easily changed to use the **Delivery optimization** settings. To maintain the same settings when you create a delivery optimization profile, use the same *Delivery optimization download mode* and then set the same settings as you already use. However, you can choose to reconfigure delivery optimization settings to take advantage of the full range of addition settings that the Delivery Optimization profile can manage. 
--->
+8. **Atamalar** sayfasında, bu profili alacak grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](../configuration/device-profile-assign.md).
+
+   **İleri**’yi seçin.
+
+9. **Uygulanabilirlik kuralları** sayfasında, bu profilin atanmış gruplar içinde nasıl uygulanacağını tanımlamak için **kural**, **özellik**ve **değer** seçeneklerini kullanın.
+
+10. **Gözden geçir + oluştur** sayfasında, Işiniz bittiğinde **Oluştur**' u seçin. Profil oluşturulur ve listede gösterilir. Sonra, [profili atayın](device-profile-assign.md) ve ardından [durumunu izleyin](device-profile-monitor.md).
 
 ## <a name="remove-delivery-optimization-from-windows-10-update-rings"></a>Windows 10 güncelleştirme halkalarından teslim Iyileştirmeyi kaldır
 
@@ -62,11 +68,11 @@ Teslim Iyileştirme daha önce yazılım güncelleştirme halkalarının bir par
 
 1. Teslim Iyileştirme cihaz yapılandırma profili oluşturma:
 
-    1. Microsoft Endpoint Manager Yönetim Merkezi 'nde, **cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+    1. Microsoft Endpoint Manager Yönetim Merkezi 'nde, **cihazlar** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
     2. Aşağıdaki özellikleri girin:
 
         - **Ad**: Yeni profil için açıklayıcı bir ad girin.
-        - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+        - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
         - **Platform**: **Windows 10 ve üstünü**seçin.
         - **Profil türü**: **teslim iyileştirmesi**' nı seçin.
         - **Ayarlar**: **teslim iyileştirme indirme modu**için, cihazlarınıza uyguladığınız ayarları değiştirmek istemediğiniz takdirde, var olan yazılım güncelleştirme halkası tarafından kullanılan modu seçin. Seçenekleriniz şunlardır:
@@ -85,7 +91,7 @@ Teslim Iyileştirme daha önce yazılım güncelleştirme halkalarının bir par
     1. Microsoft Endpoint Manager Yönetim Merkezi 'nde Windows 10 güncelleştirme halkaları > **yazılım güncelleştirmeleri** ' ne gidin.
     2. Listeden güncelleştirme halkasını seçin.
     3. Ayarlar ' da **teslim iyileştirme indirme modunu** **Yapılandırılmadı**olarak ayarlayın.
-    4. Değişikliklerinizi > **Save** **Tamam** ' a tıklayın.
+    4. **OK**Değişikliklerinizi kaydedin.**Save**  > 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

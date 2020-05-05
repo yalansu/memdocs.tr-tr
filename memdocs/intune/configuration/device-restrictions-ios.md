@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 897366ba9b7bae15050c0aa5e392ba5255a90b24
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
-ms.translationtype: MT
+ms.openlocfilehash: 2640107a4a3b17e2c544041445c8c797ef40b01e
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407811"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166562"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için iOS ve ıpados cihaz ayarları
 
-Bu makalede iOS ve ıpados cihazlarında denetleyebileceğinizi belirten farklı ayarlar listelenir. Mobil cihaz yönetimi (MDM) yönteminizin bir parçası olarak bu ayarları kullanabilir ve bu sayede özellikleri etkinleştirip devre dışı bırakabilir, parola kuralları uygulayabilir, belirli uygulamalara izin verebilir veya bunları kısıtlayabilir ve çok daha fazlasını yapabilirsiniz.
+Bu makalede iOS ve ıpados cihazlarında denetleyebileceğinizi belirten farklı ayarlar listelenir. Mobil cihaz yönetimi (MDM) çözümünüz kapsamında bu ayarları kullanabilir ve bu sayede özellikleri etkinleştirip devre dışı bırakabilir, parola kuralları uygulayabilir, belirli uygulamalara izin verebilir veya bunları kısıtlayabilir ve çok daha fazlasını yapabilirsiniz.
 
 Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/ıpados cihazlarınıza atanır veya dağıtılır.
 
@@ -52,7 +52,7 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 - **GÜVENILMEYEN TLS sertifikaları**: **engelleme** , cihazlarda güvenilmeyen Aktarım Katmanı Güvenliği (TLS) sertifikalarını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi TLS sertifikalarına izin verebilir.
 - **Kablosuz PKI güncelleştirmelerini engelleyin**: **blok** , cihazların bir bilgisayara bağlı olmadığı durumlar dışında yazılım güncelleştirmelerini almasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bir bilgisayara bağlı kalmadan bir cihazın yazılım güncelleştirmelerini almasına izin verebilir.
 - **Ad Izlemeyi sınırla**: **sınır** , cihaz reklam tanımlayıcısını devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi etkin durumda kalabilir.
-- **Kurumsal Uygulama güveni**: **blok** , ayarlar > Genel > profillerinin cihaz yönetimi & cihazlarda **Kurumsal Geliştirici güven** düğmesini kaldırır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kullanıcıların uygulama mağazasından indirilmemiş uygulamalara güvenmeyi seçebilmesine izin verebilir.
+- **Kurumsal Uygulama güveni**: **blok** , ayarlar > genel > profillerinin cihaz yönetimi & cihazlarda **Kurumsal Geliştirici güven** düğmesini kaldırır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kullanıcıların uygulama mağazasından indirilmemiş uygulamalara güvenmeyi seçebilmesine izin verebilir.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
@@ -85,7 +85,7 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
   Bu ayar **Cihaz ayarlarında kısıtlamaları etkinleştirme** ayarının yeniden adlandırılmış halidir. Bu değişikliğin etkisi:  
   
   - iOS 11.4.1 ve üzeri: **Block** , kullanıcıların cihaz ayarlarında kendi kısıtlamalarını değiştirmesini engeller. Davranış aynıdır; ve kullanıcılar için herhangi bir değişiklik yoktur.
-  - iOS 12,0 ve üzeri: **Block** , kullanıcıların, içerik ve gizlilik kısıtlamaları dahil cihaz ayarları 'Nda (Ayarlar > Genel > ekran süresi) kendi **ekran süresini** ayarlamalarına engel olur. iOS 12.0'dan yükseltilen cihazlar artık cihaz ayarlarında kısıtlamalar sekmesini (Ayarlar > Genel > Cihaz Yönetimi > Yönetim Profili > Kısıtlamalar) görmez. Bu ayarlar **Ekran Saati** altındadır.
+  - iOS 12,0 ve üzeri: **Block** , kullanıcıların, içerik ve gizlilik kısıtlamaları dahil cihaz ayarları 'Nda (ayarlar > genel > ekran süresi) kendi **ekran süresini** ayarlamalarına engel olur. iOS 12.0'dan yükseltilen cihazlar artık cihaz ayarlarında kısıtlamalar sekmesini (Ayarlar > Genel > Cihaz Yönetimi > Yönetim Profili > Kısıtlamalar) görmez. Bu ayarlar **Ekran Saati** altındadır.
   
 - **Cihazdaki tüm içeriği ve ayarları silme seçeneğinin kullanımı**: **blok** cihazlarda tüm içeriği ve ayarları silme seçeneğinin kullanılmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcılara bu ayarlara erişim verebilir.
 - **Cihaz adı değişikliği**: **blok** cihaz adının değiştirilmesini engelliyor. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazların adını değiştirmesine izin verebilir.
@@ -147,21 +147,21 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 > Örneğin, **parola süre sonu** ayarını yapılandırır ve bu ilkeyi Kullanıcı tarafından kaydedilen cihazlara gönderirsiniz. Cihazlarda aşağıdakiler olur:
 >
 > - **Parola süre sonu** ayarı yok sayılır.
-> - `1111` veya `1234`gibi basit parolalara izin verilmez.
+> - Veya `1111` `1234`gibi basit parolalara izin verilmez.
 > - 6 basamaklı bir PIN zorlanır.
 
-- **Basit parolalar**: **blok** daha karmaşık parolalar gerektirir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi `0000` ve `1234`gibi basit parolalara izin verebilir.
+- **Basit parolalar**: **blok** daha karmaşık parolalar gerektirir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, `0000` ve `1234`gibi basit parolalara izin verebilir.
 
 - **Gerekli parola türü**: kuruluşunuzun gerektirdiği gerekli parola karmaşıklığı düzeyini girin. Seçenekleriniz şunlardır:
   - **Cihaz varsayılanı**
   - **Sayısal**: parola yalnızca sayı olmalıdır, örneğin 123456789.
   - **Alfasayısal**: büyük harfler, küçük harfler ve sayısal karakterler içerir.
-- **Paroladaki alfasayısal olmayan karakter sayısı**: `#` veya `@`gibi simge karakter sayısını girin, bu, 1-4 adresinden, parolaya dahil olmalıdır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Paroladaki alfasayısal olmayan karakter sayısı**: 1-4 adresinden, parolada bulunması gereken simge karakterlerinin `#` `@`sayısını girin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
 - **Minimum parola uzunluğu**: parolanın, 4-16 karakterden fazla olması gereken minimum uzunluğu girin. Kullanıcı kayıtlı cihazlarda 4 ila 6 karakter uzunluğunda bir uzunluk girin.
   
   > [!NOTE]
-  > Kullanıcı kayıtlı cihazlarda, kullanıcılar 6 basamaktan daha büyük bir PIN ayarlayabilir. Ancak cihazlarda 6 ' dan fazla basamak uygulanmaz. Örneğin, bir yönetici minimum uzunluğu `8`olarak ayarlar. Kullanıcı tarafından kaydedilen cihazlarda, kullanıcılardan yalnızca 6 basamaklı bir PIN ayarlaması gerekir. Intune, Kullanıcı tarafından kaydedilen cihazlarda 6 basamaktan daha büyük bir PIN 'ı zorlamaz.
+  > Kullanıcı kayıtlı cihazlarda, kullanıcılar 6 basamaktan daha büyük bir PIN ayarlayabilir. Ancak cihazlarda 6 ' dan fazla basamak uygulanmaz. Örneğin, bir yönetici minimum uzunluğu olarak `8`ayarlar. Kullanıcı tarafından kaydedilen cihazlarda, kullanıcılardan yalnızca 6 basamaklı bir PIN ayarlaması gerekir. Intune, Kullanıcı tarafından kaydedilen cihazlarda 6 basamaktan daha büyük bir PIN 'ı zorlamaz.
 
 - **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: Cihaz silinmeden önce başarısız oturum açma işlemlerinin sayısını 4-11 adresinden girin.
   
@@ -194,12 +194,12 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
   - **10**: 10 dakikalık bir işlem yapılmadan sonra ekran kilitleniyor.
   - **15**: 15 dakika etkin olmadığında ekran kilitleri.
 
-  Bir değer iOS ve ıpados için uygulanmazsa, Apple en yakın *En düşük* değeri kullanır. Örneğin, `4` dakika girerseniz, ıpados cihazları `2` dakika kullanır. `10` dakika girerseniz, iOS cihazları `5` dakika kullanır. Bu bir Apple kısıtlamasıdır.
+  Bir değer iOS ve ıpados için uygulanmazsa, Apple en yakın *En düşük* değeri kullanır. Örneğin, dakika girerseniz `4` , ıpados cihazları dakika kullanır. `2` Dakikalar girerseniz `10` , iOS cihazlarının dakikaları kullanılır `5` . Bu bir Apple kısıtlamasıdır.
   
   > [!NOTE]
   > Bu ayar için Intune kullanıcı arabirimi iOS ve ıpados tarafından desteklenen değerleri birbirinden ayırır. Kullanıcı arabirimi gelecek bir sürümde güncelleştirilmiş olabilir.
 
-- **Parola kullanım süresi (gün)** : cihaz parolasının, 1-65535 tarihinden önce değiştirilmesi gereken gün sayısını girin.
+- **Parola kullanım süresi (gün)**: cihaz parolasının, 1-65535 tarihinden önce değiştirilmesi gereken gün sayısını girin.
 - **Önceki parolaların yeniden kullanılmasını engelle**: kullanıcıların daha önce kullanılan parolaları oluşturmasını kısıtlamak için bu ayarı kullanın. 1-24 adresinden, daha önce kullanılmış olan parolaların sayısını girin. Örneğin, kullanıcıların geçerli parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için 5 girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Dokunma kimliği ve yüz kimliği kilit açma**: **blok** cihazların kilidini açmak için parmak izi veya yüz kullanımını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların biyometri kullanarak cihazların kilidini açmaya izin verebilir.
 
@@ -324,17 +324,20 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: cihaz kaydı, otomatik cihaz kaydı (denetimli)
 
+
 - **Internet 'ten sonuçları döndürmek Için Spotlight araması**: **Block** , projektörün bir Internet aramasından herhangi bir sonuç döndürmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Spotlight aramasının arama sonuçları sağlamak için Internet 'e bağlanmasına izin verebilir.
 
+  Bu ayar Kullanıcı arabiriminde yinelenir ve yaklaşan bir sürümde düzeltilecektir. Şu anda bu ayar denetimli cihazlar için geçerlidir. Gelecekteki bir sürümde, bu ayar cihaz kayıtlı ve otomatik cihaz kayıtlı cihazları için geçerlidir ve gözetim gerektirmez.
+
 - **Safari tanımlama bilgileri**: cihazlarda tanımlama bilgilerinin nasıl işlendiğini seçin. Seçenekleriniz şunlardır:
-  - İzin ver
+  - İzin Ver
   - Tüm tanımlama bilgilerini engelle
   - Ziyaret edilen web sitelerinin tanımlama bilgilerine izin ver
   - Geçerli web sitesinin tanımlama bilgilerine izin ver
 
 - **Safari JavaScript**: **Block** tarayıcıda Java betikleri 'nin cihazlarda çalıştırılmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Java betiklerine izin verebilir.
 
-- **Safari açılır pencereleri**: **blok** , Web tarayıcısında açılır pencere engelleyicisini devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi açılır pencere engelleyiciye izin verebilir.
+- **Safari açılır pencereleri**: **blok** , Safari Web tarayıcısında tüm açılır pencereleri engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi açılır pencere engelleyiciye izin verebilir.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
@@ -387,6 +390,8 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
 - **Internet 'ten sonuçları döndürmek Için Spotlight araması**: **Block** , projektörün bir Internet aramasından herhangi bir sonuç döndürmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Spotlight aramasının arama sonuçları sağlamak için Internet 'e bağlanmasına izin verebilir.
 
+  Bu ayar Kullanıcı arabiriminde yinelenir ve yaklaşan bir sürümde düzeltilecektir. Şu anda bu ayar denetimli cihazlar için geçerlidir. Gelecekteki bir sürümde, bu ayar cihaz kayıtlı ve otomatik cihaz kayıtlı cihazları için geçerlidir ve gözetim gerektirmez.
+
 - **Cihazdan sistem uygulamalarının kaldırılmasını engelle**: **bloğu** , sistem uygulamalarını cihazlardan kaldırma yeteneğini devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların sistem uygulamalarını kaldırmasına izin verebilir.
 
 - **Safari**: cihazlarda Safari tarayıcısını kullanmayı **engelleyin** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların Safari tarayıcısını kullanmasına izin verebilir.
@@ -409,7 +414,7 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
 Bu listelere uygulama eklemek için şunları yapabilirsiniz:
 
-- İstediğiniz uygulamanın iTunes App mağazası URL'sini **ekleyin**. Örneğin, Microsoft çalışma klasörleri uygulamasını eklemek için `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` veya `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`girin.
+- İstediğiniz uygulamanın iTunes App mağazası URL'sini **ekleyin**. Örneğin, Microsoft çalışma klasörleri uygulamasını eklemek için veya `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`girin.
 
   Uygulamanın URL'sini bulmak için, iTunes App Store'u açın ve uygulamayı arayın. Örneğin `Microsoft Remote Desktop` veya `Microsoft Word` için arama yapın. Uygulamayı seçin ve URL'sini kopyalayın.
 
@@ -439,9 +444,9 @@ Bu özellik şu platformlarda geçerlidir:
 
 - **Uygulama URL 'si**: göstermek veya gizlemek istediğiniz uygulamanın Mağaza uygulama URL 'sini girin. Örneğin:
 
-  - Microsoft çalışma klasörleri uygulamasını eklemek için `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` veya `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`girin. 
+  - Microsoft çalışma klasörleri uygulamasını eklemek için veya `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`girin. 
 
-  - Microsoft Word uygulamasını eklemek için `https://itunes.apple.com/de/app/microsoft-word/id586447913` veya `https://apps.apple.com/de/app/microsoft-word/id586447913`girin.
+  - Microsoft Word uygulamasını eklemek için veya `https://itunes.apple.com/de/app/microsoft-word/id586447913` `https://apps.apple.com/de/app/microsoft-word/id586447913`girin.
 
   Uygulamanın URL'sini bulmak için, iTunes App Store'u açın ve uygulamayı arayın. Örneğin `Microsoft Remote Desktop` veya `Microsoft Word` için arama yapın. Uygulamayı seçin ve URL'sini kopyalayın.
 
@@ -473,7 +478,7 @@ Uygulamaları eklemek için şunları yapabilirsiniz:
   > [!IMPORTANT]
   > Bu ayar uzak cihaz eylemi olarak değerlendirilir. Bu nedenle, bu ayar cihazlarda yönetim profilinde gösterilmez. Kişisel etkin nokta durumu cihazda her değiştiğinde **Kişisel etkin nokta** , Intune hizmeti tarafından engellenir. Intune 'da, raporlama durumu bir başarı gösteriyorsa, bu ayar cihazdaki yönetim profilinde gösterilmese de, çalıştığını öğrenin.
 
-- **Hücresel kullanım kuralları (yalnızca yönetilen uygulamalar)** : **izin ver** , yönetilen uygulamaların hücresel ağlarda ne zaman kullanabileceği veri türlerini tanımlar. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Seçenekleriniz şunlardır:
+- **Hücresel kullanım kuralları (yalnızca yönetilen uygulamalar)**: **izin ver** , yönetilen uygulamaların hücresel ağlarda ne zaman kullanabileceği veri türlerini tanımlar. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Seçenekleriniz şunlardır:
   - **Hücresel veri kullanımını engelleyin**: **tüm yönetilen uygulamalar** için hücresel veri kullanmayı engelleyin veya **belirli uygulamaları seçin**.
   - **Dolaşım sırasında hücresel veri kullanımını engelle**: **tüm yönetilen uygulamalar** için Dolaşımda hücresel veri kullanmayı engelleyin veya **belirli uygulamaları seçin**.
 
@@ -563,7 +568,7 @@ Uygulamaları eklemek için şunları yapabilirsiniz:
 - **Şifrelenmiş yedekleme**: **gerekli** olduğundan cihaz yedeklemelerinin şifrelenmesi gerekir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Yönetilen uygulamalar buluta eşitlenir**: **blok** , Intune tarafından yönetilen uygulamaların kullanıcının iCloud hesabıyla veri eşitlemesine engel olur. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu verilerin iCloud 'a eşitlenmesine izin verebilir.
 - **Kurumsal kitap yedeklemesini engelle**: **blok** , kurumsal kitapların yedeklenmesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların bu kitapları yedeklemelerine izin verebilir.
-- **Kurumsal kitap meta verileri eşitlemesini engelleyin (notlar ve vurgular)** : **blok** , kurumsal kitaplar 'da notların ve vurguların eşitlenmesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi eşitlemeye izin verebilir.
+- **Kurumsal kitap meta verileri eşitlemesini engelleyin (notlar ve vurgular)**: **blok** , kurumsal kitaplar 'da notların ve vurguların eşitlenmesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi eşitlemeye izin verebilir.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: cihaz kaydı, otomatik cihaz kaydı (denetimli)
 
@@ -600,7 +605,7 @@ Uygulamaları eklemek için şunları yapabilirsiniz:
 
 Ayrıca, uygulama adlarının ve paket kimliklerinin listesini içeren bir CSV dosyasını **Içeri aktarabilirsiniz** . Alternatif olarak uygulamaları içeren mevcut listeyi **dışarı aktarabilirsiniz**.
 
-## <a name="kiosk"></a>Bilgi Noktası
+## <a name="kiosk"></a>Bilgi noktası
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
@@ -646,17 +651,17 @@ Ayrıca, uygulama adlarının ve paket kimliklerinin listesini içeren bir CSV d
 > İOS/ıpados cihazını bilgi noktası modu için yapılandırmadan önce, cihazları denetimli moda yerleştirmek için Apple Configurator aracını veya Apple Aygıt Kayıt Programı kullanmanız gerekir. Apple Configurator aracını kullanma konusunda Apple'ın kılavuzuna bakın.
 > Girdiğiniz iOS/ıpados uygulaması profili atadıktan sonra yüklendiyse, cihaz yeniden başlatılana kadar cihaz bilgi noktası moduna girmez.
 
-## <a name="domains"></a>Etki alanları
+## <a name="domains"></a>Etki Alanları
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: cihaz kaydı, otomatik cihaz kaydı (denetimli)
 
-- **İşaretlenmemiş e-** posta etki alanları > **eposta etki alanı URL 'si**: listeye bir veya daha fazla URL ekleyin. Kullanıcılar girdiğiniz etki alanlarından başka bir etki alanından e-posta aldığınızda, bu e-posta iOS/ıpados Mail uygulamasında güvenilmeyen olarak işaretlenir.
+- **İşaretlenmemiş e-posta etki** > **alanı e-posta alanı URL 'si**: listeye bir veya daha fazla URL ekleyin. Kullanıcılar girdiğiniz etki alanlarından başka bir etki alanından e-posta aldığınızda, bu e-posta iOS/ıpados Mail uygulamasında güvenilmeyen olarak işaretlenir.
 
-- **Yönetilen web etki alanları** > **Web Etki Alanı URL'si**; Listeye bir veya daha fazla URL ekleyin. Belgeler girdiğiniz etki alanlarından indirildiğinde yönetilen belgeler olarak değerlendirilir. Bu ayar yalnızca Safari tarayıcısı kullanılarak indirilen belgeler için geçerlidir.
+- **Yönetilen Web etki alanları** > **Web etki alanı URL 'si**; Listeye bir veya daha fazla URL ekleyin. Belgeler girdiğiniz etki alanlarından indirildiğinde yönetilen belgeler olarak değerlendirilir. Bu ayar yalnızca Safari tarayıcısı kullanılarak indirilen belgeler için geçerlidir.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
-- Safari parolası etki **alanı URL 'si** > **otomatik doldurma etki alanları** : listeye bir veya daha fazla URL ekleyin. Kullanıcılar yalnızca bu listedeki URL’lerdeki parolaları kaydedebilir. Bu ayar yalnızca Safari tarayıcısı ve denetimli moddaki cihazlar için geçerlidir. Herhangi bir URL girmezseniz, parolalar tüm Web sitelerinden kaydedilebilir.
+- **Safari parola otomatik doldurma etki** > **alanı URL 'si**: listeye bir veya daha fazla URL ekleyin. Kullanıcılar yalnızca bu listedeki URL’lerdeki parolaları kaydedebilir. Bu ayar yalnızca Safari tarayıcısı ve denetimli moddaki cihazlar için geçerlidir. Herhangi bir URL girmezseniz, parolalar tüm Web sitelerinden kaydedilebilir.
 
   Bu ayarın geçerli olduğu sürümler:  
   - iOS 9,3 ve üzeri
@@ -667,7 +672,6 @@ Ayrıca, uygulama adlarının ve paket kimliklerinin listesini içeren bir CSV d
 iOS/ıpados Denetimli mod yalnızca Apple Aygıt Kayıt Programı aracılığıyla veya Apple Configurator kullanılarak ilk cihaz kurulumu sırasında etkinleştirilebilir. Denetimli mod etkinleştirildikten sonra, Intune şu işlevleri kullanarak bir cihazı yapılandırabilir:
 
 - Uygulama Kilidi (Tek Uygulama Modu) 
-- Genel HTTP Proxy’si 
 - Etkinleştirme Kilidini Devre Dışı Bırakma 
 - Otonom Tek Uygulama Modu 
 - Web İçeriği Filtresi 
@@ -687,7 +691,7 @@ iOS/ıpados Denetimli mod yalnızca Apple Aygıt Kayıt Programı aracılığıy
 - Cihaz silme 
 - Kısıtlamalar kullanıcı arabirimi 
 - Kullanıcı arabirimine göre yapılandırma profili yüklemesi 
-- News 
+- Haberler 
 - Klavye kısayolları 
 - Geçiş kodu değişiklikleri 
 - Cihaz adı değişiklikleri 
@@ -707,7 +711,7 @@ iOS/ıpados Denetimli mod yalnızca Apple Aygıt Kayıt Programı aracılığıy
 > - Müstehcen içerik
 > - iCloud belgeleri ve verileri
 > - Çok oyunculu oyun
-> - Oyun Merkezi Arkadaşları Ekleyin
+> - Oyun Merkezi arkadaşları ekleme
 > - Siri
 
 ## <a name="next-steps"></a>Sonraki adımlar

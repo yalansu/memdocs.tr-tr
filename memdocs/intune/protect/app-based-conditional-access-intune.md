@@ -18,23 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04a8cd4ce64b566bf2d90ef301c1be44589a53e4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 27033c2452224bc93e335f3517c9548ad65666c4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329974"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080156"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Intune ile uygulama tabanlı koşullu erişim
 
 [Intune uygulama koruma ilkeleri](../apps/app-protection-policy.md) Intune’da kayıtlı cihazlarda şirket verilerinizi korumaya yardımcı olur. Uygulama koruma ilkelerini, yönetilmek üzere Intune’da kaydedilmemiş çalışan cihazları üzerinde de uygulayabilirsiniz. Bu durumda, şirketiniz cihazı yönetmiyor olmasına rağmen, şirket verilerinizin ve kaynaklarınızın korunmasını sağlamanız gerekir.
 
-Uygulama tabanlı koşullu erişim ve istemci uygulama yönetimi, Exchange Online ve diğer Office 365 hizmetlerine yalnızca Intune uygulama koruma ilkelerini destekleyen istemci uygulamaların erişmesine izin vererek bir güvenlik katmanı ekler.
+Uygulama tabanlı koşullu erişim ve istemci uygulama yönetimi, yalnızca Intune uygulama koruma ilkelerini destekleyen istemci uygulamalarının Exchange Online ve diğer Office 365 hizmetlerine erişebilmesini sağlayarak bir güvenlik katmanı ekler.
 
 > [!NOTE]
 > Yönetilen bir uygulama, uygulama koruma ilkelerinin uygulandığı ve Intune tarafından yönetilebilen bir uygulamadır.
 
-Yalnızca Microsoft Outlook uygulamasının Exchange Online 'a erişmesine izin vermek için iOS/ıpados ve Android 'teki yerleşik posta uygulamalarını engelleyebilirsiniz. Ayrıca, Intune uygulama koruma ilkelerinin uygulanmadığı uygulamaların SharePoint Online'a erişmesini engelleyebilirsiniz.
+Yalnızca Microsoft Outlook uygulamasının Exchange Online 'a erişmesine izin vermek için iOS/ıpados ve Android 'teki yerleşik posta uygulamalarını engelleyebilirsiniz. Ayrıca, Intune uygulama koruma ilkeleri, SharePoint Online 'a erişimi olmayan uygulamaları engelleyebilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -64,15 +64,15 @@ Bu örnekte, yönetici Outlook uygulamasına uygulama koruma ilkeleri uygulamı�
 
 2. Kullanıcı ilk kez kimlik doğrulamaya çalıştığında, aracı bir uygulama yüklemek üzere uygulama mağazasına yönlendirilir. Aracı uygulama, iOS için Microsoft Authenticator ya da Android cihazlar için Microsoft Şirket portalı olabilir.
 
-   Kullanıcılar yerel bir e-posta uygulaması kullanmaya çalışırsa önce uygulama mağazasına yeniden yönlendirilir ve ardından Outlook uygulamasını yüklemeleri gerekir.
+   Kullanıcılar yerel bir e-posta uygulaması kullanmaya çalışırlarsa, daha sonra Outlook uygulamasını yüklemek için App Store 'a yönlendirilir.
 
 3. Aracı uygulama cihaza yüklenir.
 
 4. Aracı uygulama, Azure AD'de bir cihaz kaydı oluşturan Azure AD kayıt işlemini başlatır. Bu, mobil cihaz yönetimi (MDM) kayıt işlemiyle aynı değildir, ancak koşullu erişim ilkelerinin cihazda zorlanabilmesi için bu kayıt gereklidir.
 
-5. Aracı uygulama, uygulamanın kimliğini doğrular. Aracı uygulamanın kullanıcı tarafından kullanılma yetkisi olup olmadığının doğrulayabilmesi için bir güvenlik katmanı vardır.
+5. Aracı uygulama, uygulamanın kimliğini doğrular. Bir güvenlik katmanı, uygulamanın kullanıcı tarafından kullanım için yetkilendirildiğini, aracı uygulamasının doğrulayabilmesini sağlayacak.
 
-6. Aracı uygulama, kullanıcı kimlik doğrulama işleminin bir parçası olarak Uygulama İstemci kimliğini Azure AD’ye gönderir ve böylece bunun onaylı ilke listesinde olup olmadığı denetlenebilir.
+6. Aracı uygulaması, ilke onaylı listesinde olup olmadığını kontrol etmek için Kullanıcı kimlik doğrulama işleminin bir parçası olarak uygulama Istemci KIMLIĞINI Azure AD 'ye gönderir.
 
 7. Azure AD, kullanıcının onaylı ilke listesine dayalı olarak uygulamanın kimliğini doğrulamasına ve kullanmasına olanak sağlar. Uygulama listede yoksa Azure AD uygulamaya erişimi engeller.
 

@@ -1,6 +1,6 @@
 ---
-title: Android Kurumsal cihaz ayarları Microsoft Intune - Azure | Microsoft Docs
-description: Android Enterprise veya Android for Work cihazlarında, kopyalama ve yapıştırma, bildirimleri gösterme, uygulama izinleri, veri paylaşımı, parola uzunluğu, oturum açma hatalarında oturum açmak, kilidi açmak, parolaları yeniden kullanmak ve Bluetooth 'u etkinleştirmek dahil olmak üzere cihazdaki ayarları kısıtlayın iş kişilerinin paylaşılması. Tek bir uygulama veya birden çok uygulama çalıştırmak için cihazları adanmış bir cihaz bilgi noktası olarak yapılandırın.
+title: Microsoft Intune-Azure 'da Android kurumsal cihaz ayarları | Microsoft Docs
+description: Android Enterprise veya Android for Work cihazlarında, kopyalama ve yapıştırma, bildirimleri gösterme, uygulama izinleri, veri paylaşımı, parola uzunluğu, oturum açma hatalarında oturum açmak, parolaları yeniden kullanmak ve iş kişilerinin Bluetooth paylaşımını etkinleştirmek dahil olmak üzere cihazdaki ayarları kısıtlayın. Tek bir uygulama veya birden çok uygulama çalıştırmak için cihazları adanmış bir cihaz bilgi noktası olarak yapılandırın.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf2c3c09ca957b0355669edc536dfd1f0d0e3226
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 38598e0245b0cfe15be4b9303620aea1724933d1
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407882"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166579"
 ---
-# <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>İzin vermek veya Intune kullanarak özellikleri kısıtlamak için android Kurumsal cihaz ayarları
+# <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Android kurumsal cihaz ayarları
 
-Bu makalede, listeler ve Android Kurumsal cihazlarda denetleyebileceğiniz farklı ayarlar açıklanır. Mobil cihaz yönetimi (MDM) çözümünüzün bir parçası olarak bu ayarları, özelliklere izin vermek veya devre dışı bırakmak, uygulamaları adanmış cihazlarda çalıştırmak, güvenliği denetlemek ve daha fazlasını yapmak için kullanın.
+Bu makale, Android kurumsal cihazlarda denetleyebilmeniz için farklı ayarları listeler ve tanımlar. Mobil cihaz yönetimi (MDM) çözümünüzün bir parçası olarak bu ayarları, özelliklere izin vermek veya devre dışı bırakmak, uygulamaları adanmış cihazlarda çalıştırmak, güvenliği denetlemek ve daha fazlasını yapmak için kullanın.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -43,7 +43,7 @@ Bu ayarlar, Intune 'un Android kurumsal tam olarak yönetilen veya adanmış cih
   Intune yalnızca cihaz kamerasına erişimi yönetir. Resimlere veya videolara erişimi yoktur.
 
 - **Varsayılan izin ilkesi**: Bu ayar, çalışma zamanı izin istekleri için varsayılan izin ilkesini tanımlar. Seçenekleriniz
-  - **Cihaz varsayılanı**: Cihazın varsayılan ayarını kullanın.
+  - **Cihaz varsayılanı**: cihazın varsayılan ayarını kullanın.
   - **İstem**: kullanıcılardan izni onaylaması istenir.
   - **Otomatik olarak izin ver**: İzinler otomatik olarak verilir.
   - **Otomatik olarak reddet**: İzinler otomatik reddedilir.
@@ -53,7 +53,7 @@ Bu ayarlar, Intune 'un Android kurumsal tam olarak yönetilen veya adanmış cih
 - **Güvenli önyükleme**: **Block** , kullanıcıların cihazı güvenli moda başlatmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazı güvenli modda yeniden önyüklemelerine izin verebilir.
 - **Durum çubuğu**: **blok** , bildirimler ve hızlı ayarlar dahil olmak üzere durum çubuğuna erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların durum çubuğuna erişmesine izin verebilir.
 - **Dolaşım veri Hizmetleri**: **blok** , hücresel ağ üzerinde veri dolaşımını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihaz hücresel ağ üzerindeyken veri dolaşımına izin verebilir.
-- **Wi-Fi ayarı değişiklikleri**: **Engelle** , kullanıcıların cihaz sahibi tarafından oluşturulan Wi-Fi ayarlarını değiştirmesini engeller. Kullanıcılar kendi Wi-Fi yapılandırmalarını oluşturabilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazdaki Wi-Fi ayarlarını değiştirmesine izin verebilir.
+- **Wi-Fi ayarı değişiklikleri**: **Engelle** , kullanıcıların cihaz sahibi tarafından oluşturulan Wi-Fi ayarlarını değiştirmesini engeller. Kullanıcılar kendi Wi-Fi yapılandırmalarının oluşturulmasını sağlayabilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazdaki Wi-Fi ayarlarını değiştirmesine izin verebilir.
 - **Wi-Fi erişim noktası yapılandırması**: **blok** kullanıcıların herhangi bir Wi-Fi yapılandırması oluşturmasını veya değiştirmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazdaki Wi-Fi ayarlarını değiştirmesine izin verebilir.
 - **Bluetooth yapılandırması**: **blok** kullanıcıların cihazda Bluetooth 'u yapılandırmalarını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazda Bluetooth kullanılmasına izin verebilir.
 - **Internet paylaşımı ve etkin noktalara erişim**: **blok** , İnternet paylaşımını ve taşınabilir etkin noktalara erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, internet paylaşımı ve taşınabilir etkin noktalara erişime izin verebilir.
@@ -63,13 +63,13 @@ Bu ayarlar, Intune 'un Android kurumsal tam olarak yönetilen veya adanmış cih
 - NFC: **Block** **kullanan Kirme verileri**, uygulamalardan gelen verileri Kirmek için yakın alan iletişimi (NFC) teknolojisinin kullanılmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, cihazlar arasında veri paylaşmak için NFC 'nin kullanılmasına izin verebilir.
 - **Hata ayıklama özellikleri**: kullanıcıların cihazdaki hata ayıklama özelliklerini kullanmasına izin vermek Için **izin ver** ' i seçin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazdaki hata ayıklama özelliklerini kullanmalarını engelleyebilir.
 - **Mikrofon ayarlaması**: **engelleme** , kullanıcıların mikrofonu kapatıp mikrofon birimini ayarlamasına engel olur. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazdaki mikrofonun hacmini kullanmasına ve ayarlamasına izin verebilir.
-- **Fabrika Sıfırlaması koruma e-postaları**: **Google hesabı e-posta adreslerini**seçin. Bunu temizlendikten sonra cihazın kilidini açmak cihaz yöneticilerinin e-posta adreslerini girin. E-posta adreslerini `admin1@gmail.com;admin2@gmail.com`gibi noktalı virgülle ayırdığınızdan emin olun. E-posta değil girdiyseniz, fabrika ayarlarına geri yüklendikten sonra herkes cihazın kilidini açabilirsiniz. Bu e-postalar yalnızca, Kurtarma menüsünü kullanarak Fabrika Sıfırlaması çalıştırma gibi kullanıcı olmayan bir fabrika sıfırlaması çalıştırıldığında geçerlidir.
+- **Fabrika Sıfırlaması koruma e-postaları**: **Google hesabı e-posta adreslerini**seçin. Temizlenmeden sonra cihazın kilidini açabilebilen cihaz yöneticilerinin e-posta adreslerini girin. E-posta adreslerini, gibi bir noktalı virgülle ayırdığınızdan emin olun `admin1@gmail.com;admin2@gmail.com`. E-posta girilmemişse, fabrika ayarlarına geri yüklendikten sonra herkes cihazın kilidini açabilir. Bu e-postalar yalnızca, Kurtarma menüsünü kullanarak Fabrika Sıfırlaması çalıştırma gibi kullanıcı olmayan bir fabrika sıfırlaması çalıştırıldığında geçerlidir.
 
   **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
-- **Ağ çıkış taraması**: **etkinleştirme** , kullanıcıların ağ çıkış tarama özelliğini açmasına olanak sağlar. Cihaz önyüklendiğinde bir ağ bağlantısı olmayan yaptıysanız, kaçış noktası geçici olarak bir ağa bağlayın ve cihaz ilkesini yenilemek sorar. Bu ilke uygulandıktan sonra geçici ağ unutulur ve cihaz önyüklemeye devam eder. Bu özellik, cihazları ağa bağlanır:
+- **Ağ çıkış taraması**: **etkinleştirme** , kullanıcıların ağ çıkış tarama özelliğini açmasına olanak sağlar. Cihaz önyüklendiğinde bir ağ bağlantısı yapılmazsa, çıkış taraması geçici olarak bir ağa bağlanmayı ve cihaz ilkesini yenilemeyi ister. Bu ilke uygulandıktan sonra geçici ağ unutulur ve cihaz önyüklemeye devam eder. Bu özellik aşağıdaki durumlarda cihazları bir ağa bağlar:
   - Son ilkede uygun bir ağ yok.
-  - Cihaz uygulama kilidi görev modunda önyüklenir.
+  - Cihaz, kilit görevi modunda bir uygulamada önyüklenir.
   - Kullanıcılar cihaz ayarlarına ulaşamıyor.
 
   **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, kullanıcıların cihazda ağ çıkış tarama özelliğini açmasını önleyebilir.
@@ -78,14 +78,14 @@ Bu ayarlar, Intune 'un Android kurumsal tam olarak yönetilen veya adanmış cih
   - **Cihaz Varsayılanı**: Cihazın varsayılan ayarını kullanın.
   - **Otomatik**: Güncelleştirmeler, kullanıcı etkileşimi olmadan otomatik olarak yüklenir. Bu ilkeyi seçmek, bekleyen tüm güncelleştirmeleri hemen yükler.
   - **Erteleme**: Güncelleştirmeler 30 gün boyunca ertelenir. 30 günün sonunda Android, kullanıcılardan güncelleştirmeyi yüklemesini ister. Cihaz üreticilerin veya taşıyıcıların önemli güvenli güncelleştirmelerinin ertelenmesini engellemek (muaf tutmak) mümkündür. Muaf tutulan güncelleştirme, cihazdaki kullanıcılara bir sistem bildirimi gösterir.
-  - **Bakım penceresi**: Güncelleştirmeleri Intune'da ayarladığınız bir günlük bakım penceresi içinde otomatik olarak yükler. Yükleme 30 gün boyunca her gün çalışır ve yeterli alan veya pil düzeyleri varsa başarısız olabilir. Android, 30 gün sonra kullanıcılardan yüklenmesini ister. Bu pencere ayrıca Oynatma uygulamalarının güncelleştirmelerini yüklemek için de kullanılır. Tek uygulamayla ayrılmış cihaz ön plan uygulamaları güncelleştirilemeyebilir, kiosks gibi adanmış cihazlar için bu seçeneği kullanın.
+  - **Bakım penceresi**: Güncelleştirmeleri Intune'da ayarladığınız bir günlük bakım penceresi içinde otomatik olarak yükler. Yükleme 30 gün boyunca günlük olarak çalışır ve yeterli alan veya pil düzeyi yoksa başarısız olabilir. Android, 30 gün sonra kullanıcılardan yüklenmesini ister. Bu pencere ayrıca Oynatma uygulamalarının güncelleştirmelerini yüklemek için de kullanılır. Tek uygulamayla ayrılmış cihaz ön plan uygulamaları güncelleştirilemeyebilir, kiosks gibi adanmış cihazlar için bu seçeneği kullanın.
 
 - **Bildirim pencereleri**: **devre dışı**olarak ayarlandığında, Tolar, gelen çağrılar, giden çağrılar, sistem uyarıları ve sistem hataları gibi pencere bildirimleri cihazda gösterilmez. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bildirimleri gösterebilir.
 - **İlk kullanım Ipuçlarını atla**: **Etkinleştir** , öğreticilerde adım adım geçen uygulamalardan veya uygulamanın başladığı bir ipuçlarına ilişkin önerileri gizler veya atlar. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, uygulama başlatıldığında işletim sistemi bu önerileri gösterebilir.
 
 ### <a name="system-security"></a>Sistem güvenliği
 
-- **Uygulamalarda tehdit taraması**: **gerektir** (varsayılan), uygulamaları yüklenmeden önce ve sonra taraması için Google Play koruma sağlar. Tehdit algılarsa, uygulamayı cihazdan kaldırmak için kullanıcıları uyarabilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi uygulamaları taramak için Google Play koruyamayabilir veya çalıştırmayabilir.
+- **Uygulamalarda tehdit taraması**: **gerektir** (varsayılan), uygulamaları yüklenmeden önce ve sonra taraması için Google Play koruma sağlar. Tehdit algılarsa, uygulamayı cihazdan kaldırmak için kullanıcıları uyarabilir. **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi uygulamaları taramak için Google Play koruyamayabilir veya çalıştırmayabilir.
 
 ### <a name="dedicated-devices"></a>Adanmış cihazlar
 
@@ -94,7 +94,7 @@ Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak içi
 **Bilgi noktası modu**: cihazın bir uygulama çalıştırmasını veya birden çok uygulamayı çalıştırmasını seçin.
 
 - **Yapılandırılmadı**: Intune bu ayarı değiştirmez veya güncelleştirmez.
-- **Tek uygulama**: kullanıcılar cihazdaki tek bir uygulamaya yalnızca erişebilir. Cihaz başlatıldığında, yalnızca belirli uygulamayı başlatır. Kullanıcılar yeni uygulamalar açamaz veya çalışan uygulamayı değiştiremez.
+- **Tek uygulama**: kullanıcılar cihazdaki tek bir uygulamaya yalnızca erişebilir. Cihaz başlatıldığında yalnızca belirli bir uygulama başlatılır. Kullanıcılar yeni uygulamalar açamaz veya çalışan uygulamayı değiştiremez.
 
   - **Yönetilen bir uygulama seçin**: listeden yönetilen Google Play uygulamasını seçin.
 
@@ -103,7 +103,7 @@ Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak içi
   > [!IMPORTANT]
   > Tek uygulama bilgi noktası modu kullanılırken, çevirici/telefon uygulamaları düzgün çalışmayabilir.
   
-- **Çoklu uygulama**: kullanıcılar cihazdaki sınırlı bir uygulama kümesine erişebilir. Cihaz başlatıldığında, yalnızca eklediğiniz uygulamalar başlatın. Ayrıca, kullanıcılar açabilir bazı web bağlantıları da ekleyebilirsiniz. İlkenin geçerli olduğu kullanıcı giriş ekranında simgeleri için izin verilen uygulamalar görürsünüz.
+- **Çoklu uygulama**: kullanıcılar cihazdaki sınırlı bir uygulama kümesine erişebilir. Cihaz başlatıldığında yalnızca eklediğiniz uygulamalar başlatılır. Ayrıca, kullanıcıların açabilme bazı Web bağlantıları ekleyebilirsiniz. İlke uygulandığında, kullanıcılar giriş ekranında izin verilen uygulamalar için simgeler görür.
 
   > [!IMPORTANT]
   > Çok uygulamayla ayrılmış cihazlarda, Google Play [yönetilen giriş ekranı uygulamasının](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) şu **olması gerekir**:
@@ -130,13 +130,13 @@ Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak içi
   
     1. **Çıkış bilgi noktası** düğmesi gösterilene kadar geri düğmesini seçmeye devam eder. 
     2. **Bilgi noktası çıkış** düğmesini seçer ve **bilgi noktası modu kod** PIN 'ini girer.
-    3. İşiniz bittiğinde, **yönetilen giriş ekranı** uygulamasını seçin. Bu adım, cihazı çoklu uygulama bilgi noktası moduna relocks.
+    3. İşiniz bittiğinde, **yönetilen giriş ekranı** uygulamasını seçin. Bu adım, cihazı çok uygulama bilgi noktası moduna yeniden kilitler.
 
       **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi yöneticilerin bilgi noktası modunu duraklatmasını önleyebilir. Yönetici geri düğmesini seçip, **bilgi noktası çıkışı** düğmesini seçerse bir ileti geçiş kodunun gerekli olduğunu belirtir.
 
-    - **Bilgi noktası modu kodunu bırak**: 4-6 basamaklı sayısal bir PIN girin. Yönetici bu PIN'i geçici olarak bilgi noktası modu duraklatmak için kullanır.
+    - **Bilgi noktası modu kodunu bırak**: 4-6 basamaklı sayısal bir PIN girin. Yönetici bilgi noktası modunu geçici olarak duraklatmak için bu PIN 'ı kullanır.
 
-  - **Özel URL arka planı ayarla**: adanmış cihazda arka plan ekranını özelleştirmek IÇIN bir URL girin. Örneğin, şunu girin: `http://contoso.com/backgroundimage.jpg`.
+  - **Özel URL arka planı ayarla**: adanmış cihazda arka plan ekranını özelleştirmek IÇIN bir URL girin. Örneğin, `http://contoso.com/backgroundimage.jpg` girin.
 
     > [!NOTE]
     > Çoğu durumda, en az aşağıdaki boyutlardaki görüntülerle başlamasını öneririz:
@@ -160,7 +160,7 @@ Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak içi
 
     Etkinleştirildiğinde, şunları da yapılandırın:
 
-    - **Özel ekran koruyucu görüntüsünü ayarla**: özel bir PNG, jpg, JPEG, GIF, BMP, WEBP veya ııMAGE URL 'sini girin. Örneğin şunu girin:
+    - **Özel ekran koruyucu görüntüsünü ayarla**: özel bir PNG, jpg, JPEG, GIF, BMP, WEBP veya ııMAGE URL 'sini girin. Örneğin şunu girin: 
 
       - `http://www.contoso.com/image.jpg`
       - `www.contoso.com/image.bmp`
@@ -201,22 +201,25 @@ Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak içi
     - **Gereken küçük harfli karakter sayısı**: parolanın, 0 ile 16 karakter arasında olması gereken küçük harfli karakter sayısını girin.
     - **Gerekli olan büyük harfli karakter sayısı**: parolanın, 0 ile 16 karakter arasında olması gereken büyük harfli karakter sayısını girin.
     - **Gerekli harf olmayan karakter sayısı**: parolanın, 0 ile 16 karakter arasında olması gereken harf olmayan karakter sayısını (alfabedeki harfler dışında bir şey) girin.
-    - **Gerekli sayısal karakter sayısı**: parolanın 0 ile 16 karakter arasında olması gereken sayısal karakter sayısını (`1`, `2`, `3`vb.) girin.
-    - **Gerekli simge karakter sayısı**: parolanın 0 ile 16 karakter arasında olması gereken simge karakterlerinin (`&`, `#`, `%`vb.) sayısını girin.
+    - **Gerekli sayısal karakter sayısı**: parolanın 0 ile 16 karakter arasında olması gereken`1`sayısal `2`karakter `3`(,, vb.) sayısını girin.
+    - **Gerekli simge karakter sayısı**: parolanın 0 ile 16 karakter arasında olması gereken`&`simge `#`karakterlerinin `%`(,, vb.) sayısını girin.
 
-- **Parolanın süresi dolana kadar geçen gün sayısı**: 1-365 adresinden cihaz parolasının değiştirilmesi gereken gün sayısını girin. Örneğin, 90 gün sonra parolayı sona erdirmek için `90` girin. Parola geçerlilik süresi dolduğunda kullanıcıların yeni bir parola oluşturması istenir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
-- **Kullanıcının bir parolayı yeniden kullanabilmesi için gereken parola sayısı**: Bu ayarı, kullanıcıların önceden kullanılan parolaları oluşturmasını kısıtlamak için kullanın. 1-24 adresinden, daha önce kullanılmış olan parolaların sayısını girin. Örneğin, kullanıcıların geçerli parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için `5` girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
-- **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihaz temizlenmeden önce izin verilen hatalı parola sayısını 4-11 adresinden girin. `0` (sıfır) cihaz temizleme işlevini devre dışı bırakabilir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Parolanın süresi dolana kadar geçen gün sayısı**: 1-365 adresinden cihaz parolasının değiştirilmesi gereken gün sayısını girin. Örneğin, 90 gün `90` sonra parolanın süresini dolacak şekilde girin. Parola geçerlilik süresi dolduğunda kullanıcıların yeni bir parola oluşturması istenir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Kullanıcının bir parolayı yeniden kullanabilmesi için gereken parola sayısı**: Bu ayarı, kullanıcıların önceden kullanılan parolaları oluşturmasını kısıtlamak için kullanın. 1-24 adresinden, daha önce kullanılmış olan parolaların sayısını girin. Örneğin, kullanıcıların geçerli `5` parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihaz temizlenmeden önce izin verilen hatalı parola sayısını 4-11 adresinden girin. `0`(sıfır) cihaz temizleme işlevini devre dışı bırakabilir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
+  > [!NOTE]
+  > Cihaz sahibi cihazların bir parola ayarlaması istenmez. Ayarlar zorunlu kılınır ve parolayı el ile ayarlamanız gerekir. Gereksinimlerinizi karşılayan parolayı ayarlayıp, bunu uygulayan ilke başarısız olarak rapor eder.
 
 ### <a name="power-settings"></a>Güç ayarları
 
-- **Kilit süresi ekranı**: bir kullanıcının cihaz kilitlenmeden önce ayarlayabilen en uzun süreyi girin. Örneğin, bu ayarı `10 minutes`olarak ayarlarsanız, kullanıcılar süreyi 15 saniyeden fazla 10 dakikaya ayarlayabilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Kilit süresi ekranı**: bir kullanıcının cihaz kilitlenmeden önce ayarlayabilen en uzun süreyi girin. Örneğin, bu ayarı olarak `10 minutes`ayarlarsanız, kullanıcılar süreyi 15 saniye ila 10 dakikaya ayarlayabilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
 - **Cihaz prize takılıyken ekran açık**: Cihaz prize takılıyken hangi güç kaynaklarının ekranın açık kalmasına neden olacağını seçin.
 
 ### <a name="users-and-accounts"></a>Kullanıcılar ve hesaplar
 
-- **Yeni Kullanıcı Ekle**: **Engelle** , kullanıcıların yeni kullanıcı eklemesini engeller. Her kullanıcının cihazda özel giriş ekranları, hesaplar, uygulamalar ve ayarlar için kişisel bir alanı vardır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihaza başka kullanıcılar eklemesine izin verebilir.
+- **Yeni Kullanıcı Ekle**: **Engelle** , kullanıcıların yeni kullanıcı eklemesini engeller. Her Kullanıcı, cihazda özel giriş ekranları, hesaplar, uygulamalar ve ayarlar için bir kişisel alana sahiptir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihaza başka kullanıcılar eklemesine izin verebilir.
 - **Kullanıcı kaldırma**: **Block** kullanıcıların kullanıcıları kaldırmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazdan diğer kullanıcıları kaldırmasına izin verebilir.
 - **Hesap değişiklikleri** (yalnızca adanmış cihazlar): **blok** kullanıcıların hesapları değiştirmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazdaki kullanıcı hesaplarını güncelleştirmesine izin verebilir.
 
@@ -258,7 +261,7 @@ Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak içi
   > - Seçtiğiniz VPN istemcisinin cihaza yüklenmesi ve cihazın uygulama başına VPN iş profillerini desteklemesi gerekir. Aksi takdirde bir hata oluşur. 
   > - VPN istemci uygulamasını yine de **Yönetilen Google Play Mağazası**'nda onaylamanız, uygulamayı Intune ile eşitlemeniz ve cihaza dağıtmanız gerekir. Bu yapıldıktan sonra uygulama kullanıcının iş profiline yüklenir.
   > - VPN istemcisini yine de bir [VPN profiliyle](vpn-settings-android-enterprise.md)veya bir [uygulama yapılandırma profilinde](../apps/app-configuration-policies-use-android.md)yapılandırmanız gerekir.
-  > - Bilinen sorunlar vardır uygulama başına VPN Android 3.0.4 için F5'e erişim ile kullanırken. Daha fazla bilgi için bkz. [F5's sürüm notları Android 3.0.4 Için F5 Access](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
+  > - Android 3.0.4 için F5 Access ile uygulama başına VPN kullanılırken bilinen sorunlar olabilir. Daha fazla bilgi için bkz. [F5's sürüm notları Android 3.0.4 Için F5 Access](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
 
 - **Kilitleme modu**: **Etkinleştir** ayarı, tüm ağ trafiğini VPN tünelini kullanacak şekilde zorlar. VPN'e bir bağlantı oluşturulmazsa, cihazın ağ erişimi olmaz. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi trafiğin VPN tüneli üzerinden veya mobil ağ aracılığıyla akışa eklenmesine izin verebilir.
 
@@ -270,10 +273,10 @@ Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak içi
 
   - **Doğrudan**: aşağıdakiler dahil olmak üzere proxy sunucu ayrıntılarını el ile girin:
     - **Ana bilgisayar**: proxy sunucunuzun ana bilgisayar adını veya IP adresini girin. Örneğin `proxy.contoso.com` veya `127.0.0.1` girin.
-    - **Bağlantı noktası numarası**: proxy sunucusu tarafından kullanılan TCP bağlantı noktası numarasını girin. Örneğin, şunu girin: `8080`.
-    - **Dışlanan konaklar**: proxy 'yi kullanmayan konak ADLARıNıN veya IP adreslerinin bir listesini girin. Bu liste, boşluk olmadan bir yıldız işareti (`*`) joker karakteri ve noktalı virgülle (`;`) ayrılmış birden çok Konağı içerebilir. Örneğin, şunu girin: `127.0.0.1;web.contoso.com;*.microsoft.com`.
+    - **Bağlantı noktası numarası**: proxy sunucusu tarafından kullanılan TCP bağlantı noktası numarasını girin. Örneğin, `8080` girin.
+    - **Dışlanan konaklar**: proxy 'yi kullanmayan konak ADLARıNıN veya IP adreslerinin bir listesini girin. Bu liste, boşluk olmadan bir yıldız`*`işareti () joker karakteri ve noktalı virgül (`;`) ile ayrılmış birden çok ana bilgisayar içerebilir. Örneğin, `127.0.0.1;web.contoso.com;*.microsoft.com` girin.
 
-  - **Proxy otomatik yapılandırma**: bir proxy otomatik yapılandırma betiğine **Pac URL 'sini** girin. Örneğin, şunu girin: `https://proxy.contoso.com/proxy.pac`.
+  - **Proxy otomatik yapılandırma**: bir proxy otomatik yapılandırma betiğine **Pac URL 'sini** girin. Örneğin, `https://proxy.contoso.com/proxy.pac` girin.
 
     PAC dosyaları hakkında daha fazla bilgi için bkz. [proxy otomatik yapılandırma (PAC) dosyası](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (Microsoft dışı bir site açar).
 
@@ -295,11 +298,11 @@ Bu ayarlar, Intune 'un yalnızca bir kişisel veya kendi cihazındaki (BYOD) And
 - **Cihaz kilitliyken iş profili bildirimleri**: **Engelle** , Kilitli cihazlarda gösterilmeleri, gelen çağrılar, giden çağrılar, sistem uyarıları ve sistem hataları dahil olmak üzere pencere bildirimlerini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bildirimleri gösterebilir.
 - **Varsayılan uygulama izinleri**: İş profilindeki tüm uygulamalar için varsayılan izin ilkesini ayarlar. Android 6 ' dan itibaren, kullanıcılardan uygulama başlatıldığında uygulamalar için gereken belirli izinleri vermesi istenir. Bu ilke ayarı, kullanıcıdan iş profilindeki tüm uygulamalar için izin istenip istenmeyeceğini belirlemenize olanak tanır. Örneğin, iş profiline konum erişimi gerektiren bir uygulama atarsınız. Normalde bu uygulama, kullanıcılardan uygulamaya konum erişimini onaylaması veya reddetmesini ister. Bu ilkeyi, istem olmadan otomatik olarak izin vermek, bir istem olmadan izinleri otomatik olarak reddetmek veya kullanıcıların karar vermesine izin vermek için kullanın. Seçenekleriniz şunlardır:
   - **Cihaz varsayılanı**
-  - **Sor**
-  - **Otomatik olarak izin ver**
-  - **Otomatik olarak reddet**
+  - **İstem**
+  - **Otomatik izin ver**
+  - **Otomatik Reddet**
 
-  Tek tek uygulamalara (**Istemci uygulamaları** > **uygulama yapılandırma ilkeleri**) izin vermek için bir uygulama yapılandırma ilkesi de kullanabilirsiniz.
+  Tek tek uygulamalara (**istemci uygulamaları** > **uygulama yapılandırma ilkeleri**) izin vermek için bir uygulama yapılandırma ilkesi de kullanabilirsiniz.
 
 - **Hesap ekleme ve kaldırma**: **engelleme** , kullanıcıların iş profilinde hesapları el ile eklemesini veya kaldırmasını engeller. Örneğin, Gmail uygulamasını bir Android iş profiline dağıttığınızda, kullanıcıların bu iş profilinde hesap eklemesini veya kaldırmasını engelleyebilirsiniz. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, iş profilinde hesap eklemeye izin verebilir.  
 
@@ -337,24 +340,24 @@ Bu ayarlar, Intune 'un yalnızca bir kişisel veya kendi cihazındaki (BYOD) And
   - İş profili etkin olan Android 7,0 ve üzeri
 
 - **Minimum parola uzunluğu**: parolanın, 4 ile 16 karakter arasında olması gereken minimum uzunluğu girin.
-- **İş profili kilitlenmeden önce geçen işlem yapılmayan dakika sayısı**: ekran otomatik olarak kilitlenmeden önce cihazların boşta olması gereken sürenin uzunluğunu girin. Kullanıcıların, erişimi yeniden kazanmak için kimlik bilgilerini girmesi gerekir. Örneğin, 5 dakika boşta kaldıktan sonra cihazı kilitlemek için `5` girin. Değer boş olduğunda veya **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **İş profili kilitlenmeden önce geçen işlem yapılmayan dakika sayısı**: ekran otomatik olarak kilitlenmeden önce cihazların boşta olması gereken sürenin uzunluğunu girin. Kullanıcıların, erişimi yeniden kazanmak için kimlik bilgilerini girmesi gerekir. Örneğin, 5 dakika `5` boşta kaldıktan sonra cihazı kilitlemek için yazın. Değer boş olduğunda veya **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
-  Cihazlarda, kullanıcılar profilde yapılandırılan süreden daha büyük bir zaman değeri ayarlayamamakta. Kullanıcılar, daha düşük bir saat değeri ayarlayabilir. Örneğin, profil `15` dakika olarak ayarlandıysa, kullanıcılar değeri 5 dakikaya ayarlayabilir. Kullanıcılar değeri 30 dakika olarak ayarlayamıyorum.
+  Cihazlarda, kullanıcılar profilde yapılandırılan süreden daha büyük bir zaman değeri ayarlayamamakta. Kullanıcılar, daha düşük bir saat değeri ayarlayabilir. Örneğin, profil dakikalar olarak `15` ayarlandıysa, kullanıcılar değeri 5 dakikaya ayarlayabilirler. Kullanıcılar değeri 30 dakika olarak ayarlayamıyorum.
 
-- **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihaz temizlenmeden önce izin verilen hatalı parola sayısını 4-11 adresinden girin. `0` (sıfır) cihaz temizleme işlevini devre dışı bırakabilir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihaz temizlenmeden önce izin verilen hatalı parola sayısını 4-11 adresinden girin. `0`(sıfır) cihaz temizleme işlevini devre dışı bırakabilir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
-- **Parola kullanım süresi (gün)** : kullanıcı parolalarının değiştirilmesi gereken gün sayısını girin ( **1**-**365**).
+- **Parola kullanım süresi (gün)**: kullanıcı parolalarının değiştirilmesi gereken gün sayısını girin ( **1**-**365**arasında).
 - **Gerekli parola türü**: gerekli parola karmaşıklığı düzeyini ve biyometrik cihazların kullanılıp kullanılamayacağını girin. Seçenekleriniz şunlardır:
   - **Cihaz varsayılanı**
   - **Düşük güvenlik Biyometri**: [güçlü ve zayıf Biyometri](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (Android 'in Web sitesini açar)
   - **Gerekli**
-  - **En az sayısal**: `123456789`gibi sayısal karakterler içerir.
+  - **En az sayısal**: gibi sayısal karakterler içerir `123456789`.
   - **Sayısal karmaşık**: `1111` veya `1234`gibi yinelenen veya ardışık numaralara izin verilmez.
   - En **az alfabetik**: alfabede harfler içerir. Rakamlar ve simgeler zorunlu tutulmaz.
   - En **az alfasayısal**: büyük harfler, küçük harfler ve sayısal karakterler içerir.
   - **Semboller ile en az alfasayısal**: büyük harfler, küçük harfler, sayısal karakterler, noktalama işaretleri ve semboller içerir.
 
-- **Önceki parolaların yeniden kullanılmasını engelle**: kullanıcıların daha önce kullanılan parolaları oluşturmasını kısıtlamak için bu ayarı kullanın. 1-24 adresinden, daha önce kullanılmış olan parolaların sayısını girin. Örneğin, kullanıcıların geçerli parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için `5` girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Önceki parolaların yeniden kullanılmasını engelle**: kullanıcıların daha önce kullanılan parolaları oluşturmasını kısıtlamak için bu ayarı kullanın. 1-24 adresinden, daha önce kullanılmış olan parolaların sayısını girin. Örneğin, kullanıcıların geçerli `5` parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Parmak iziyle kilit açma**: **engelleme** , kullanıcıların cihazın kilidini açmak için cihaz parmak izi tarayıcısını kullanmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların bir parmak izi kullanarak cihazın kilidini açmalarını sağlayabilir.
 - **Akıllı kilit ve diğer güven aracıları**: **blok** akıllı kilit veya diğer güven aracılarının uyumlu cihazlarda kilit ekranı ayarlarını değiştirmesini engeller. Cihazlar güvenilir bir konumdayken, güven aracısı olarak da bilinen bu özellik, cihaz kilit ekranı parolasını devre dışı bırakmanıza veya atlamanıza izin verir. Örneğin, cihazlar belirli bir Bluetooth cihazına bağlıyken veya cihazlar bir NFC etiketine yakın olduğunda iş profili parolasını atlayın. Bu ayarı, kullanıcıların Akıllı Kilit'i yapılandırmasını önlemek için kullanın.
 
@@ -362,26 +365,26 @@ Bu ayarlar, Intune 'un yalnızca bir kişisel veya kendi cihazındaki (BYOD) And
 
 ### <a name="password"></a>Parola
 
-Bu parola ayarlar, bir iş profili kullanan cihazlardaki kişisel profiller için geçerlidir.
+Bu parola ayarları, bir iş profili kullanan cihazlardaki kişisel profiller için geçerlidir.
 
 - **Minimum parola uzunluğu**: parolanın, 4 ile 16 karakter arasında olması gereken minimum uzunluğu girin.
-- Ekran **kilitlenmeden önce geçen işlem yapılmayan dakika sayısı**: ekran otomatik olarak kilitlenmeden önce cihazların boşta olması gereken sürenin uzunluğunu girin. Kullanıcıların, erişimi yeniden kazanmak için kimlik bilgilerini girmesi gerekir. Örneğin, 5 dakika boşta kaldıktan sonra cihazı kilitlemek için `5` girin. Değer boş olduğunda veya **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- Ekran **kilitlenmeden önce geçen işlem yapılmayan dakika sayısı**: ekran otomatik olarak kilitlenmeden önce cihazların boşta olması gereken sürenin uzunluğunu girin. Kullanıcıların, erişimi yeniden kazanmak için kimlik bilgilerini girmesi gerekir. Örneğin, 5 dakika `5` boşta kaldıktan sonra cihazı kilitlemek için yazın. Değer boş olduğunda veya **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
-  Cihazlarda, kullanıcılar profilde yapılandırılan süreden daha büyük bir zaman değeri ayarlayamamakta. Kullanıcılar, daha düşük bir saat değeri ayarlayabilir. Örneğin, profil `15` dakika olarak ayarlandıysa, kullanıcılar değeri 5 dakikaya ayarlayabilir. Kullanıcılar değeri 30 dakika olarak ayarlayamıyorum.
+  Cihazlarda, kullanıcılar profilde yapılandırılan süreden daha büyük bir zaman değeri ayarlayamamakta. Kullanıcılar, daha düşük bir saat değeri ayarlayabilir. Örneğin, profil dakikalar olarak `15` ayarlandıysa, kullanıcılar değeri 5 dakikaya ayarlayabilirler. Kullanıcılar değeri 30 dakika olarak ayarlayamıyorum.
 
-- **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihaz temizlenmeden önce izin verilen hatalı parola sayısını 4-11 adresinden girin. `0` (sıfır) cihaz temizleme işlevini devre dışı bırakabilir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
-- **Parola kullanım süresi (gün)** : cihaz parolasının, 1-365 adresinden değiştirilinceye kadar gün sayısını girin. Örneğin, 90 gün sonra parolayı sona erdirmek için `90` girin. Parola geçerlilik süresi dolduğunda kullanıcıların yeni bir parola oluşturması istenir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihaz temizlenmeden önce izin verilen hatalı parola sayısını 4-11 adresinden girin. `0`(sıfır) cihaz temizleme işlevini devre dışı bırakabilir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Parola kullanım süresi (gün)**: cihaz parolasının, 1-365 adresinden değiştirilinceye kadar gün sayısını girin. Örneğin, 90 gün `90` sonra parolanın süresini dolacak şekilde girin. Parola geçerlilik süresi dolduğunda kullanıcıların yeni bir parola oluşturması istenir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Gerekli parola türü**: gerekli parola karmaşıklığı düzeyini ve biyometrik cihazların kullanılıp kullanılamayacağını girin. Seçenekleriniz şunlardır:
   - **Cihaz varsayılanı**
   - **Düşük güvenlik Biyometri**: [güçlü ve zayıf Biyometri](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (Android 'in Web sitesini açar)
   - **Gerekli**
-  - **En az sayısal**: `123456789`gibi sayısal karakterler içerir.
+  - **En az sayısal**: gibi sayısal karakterler içerir `123456789`.
   - **Sayısal karmaşık**: `1111` veya `1234`gibi yinelenen veya ardışık numaralara izin verilmez.
   - En **az alfabetik**: alfabede harfler içerir. Rakamlar ve simgeler zorunlu tutulmaz.
   - En **az alfasayısal**: büyük harfler, küçük harfler ve sayısal karakterler içerir.
   - **Semboller ile en az alfasayısal**: büyük harfler, küçük harfler, sayısal karakterler, noktalama işaretleri ve semboller içerir.
 
-- **Önceki parolaların yeniden kullanılmasını engelle**: kullanıcıların daha önce kullanılan parolaları oluşturmasını kısıtlamak için bu ayarı kullanın. 1-24 adresinden, daha önce kullanılmış olan parolaların sayısını girin. Örneğin, kullanıcıların geçerli parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için `5` girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Önceki parolaların yeniden kullanılmasını engelle**: kullanıcıların daha önce kullanılan parolaları oluşturmasını kısıtlamak için bu ayarı kullanın. 1-24 adresinden, daha önce kullanılmış olan parolaların sayısını girin. Örneğin, kullanıcıların geçerli `5` parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Parmak iziyle kilit açma**: **engelleme** , kullanıcıların cihazın kilidini açmak için cihaz parmak izi tarayıcısını kullanmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların bir parmak izi kullanarak cihazın kilidini açmalarını sağlayabilir.
 - **Akıllı kilit ve diğer güven aracıları**: **blok** akıllı kilit veya diğer güven aracılarının uyumlu cihazlarda kilit ekranı ayarlarını değiştirmesini engeller. Cihazlar güvenilir bir konumdayken, güven aracısı olarak da bilinen bu özellik, cihaz kilit ekranı parolasını devre dışı bırakmanıza veya atlamanıza izin verir. Örneğin, cihazlar belirli bir Bluetooth cihazına bağlıyken veya cihazlar bir NFC etiketine yakın olduğunda iş profili parolasını atlayın. Bu ayarı, kullanıcıların Akıllı Kilit'i yapılandırmasını önlemek için kullanın.
 
@@ -420,7 +423,7 @@ Bu parola ayarlar, bir iş profili kullanan cihazlardaki kişisel profiller içi
   > [!IMPORTANT]
   > - Seçtiğiniz VPN istemcisinin cihaza yüklenmesi ve cihazın uygulama başına VPN iş profillerini desteklemesi gerekir. Aksi takdirde bir hata oluşur.
   > - VPN istemci uygulamasını yine de **Yönetilen Google Play Mağazası**'nda onaylamanız, uygulamayı Intune ile eşitlemeniz ve cihaza dağıtmanız gerekir. Bu yapıldıktan sonra uygulama kullanıcının iş profiline yüklenir.
-  > - Bilinen sorunlar vardır uygulama başına VPN Android 3.0.4 için F5'e erişim ile kullanırken. Daha fazla bilgi için bkz. [Android Için F5 erişimi Için F5's sürüm notları 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) .
+  > - Android 3.0.4 için F5 Access ile uygulama başına VPN kullanılırken bilinen sorunlar olabilir. Daha fazla bilgi için bkz. [Android Için F5 erişimi Için F5's sürüm notları 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) .
 
 - **Kilitleme modu**: **Etkinleştir** ayarı, tüm ağ trafiğini VPN tünelini kullanacak şekilde zorlar. VPN'e bir bağlantı oluşturulmazsa, cihazın ağ erişimi olmaz.
 

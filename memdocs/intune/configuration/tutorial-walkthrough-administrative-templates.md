@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26576212f4df86681210956669320ed4b124025d
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 41a2dce895761053e482fe029e4599819a099ac6
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488119"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254869"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Öğretici: Windows 10 cihazlarında ADMX şablonları ve Microsoft Intune Grup İlkesi yapılandırmak için bulutu kullanın
 
@@ -34,7 +34,7 @@ ADMX şablonları olarak da bilinen Grup İlkesi Yönetim Şablonları, bilgisay
 ADMX şablonları aşağıdaki hizmetler için kullanılabilir:
 
 - **Microsoft Edge**: [Microsoft Edge ilke dosyasında](https://www.microsoftedgeinsider.com/en-us/enterprise)indirin.
-- **Office**: [Office 365 ProPlus, Office 2019 ve Office 2016](https://www.microsoft.com/download/details.aspx?id=49030)' de indirin.
+- **Office**: [Microsoft 365 Apps, Office 2019 ve Office 2016 '](https://www.microsoft.com/download/details.aspx?id=49030)de indirin.
 - **Windows**: Windows 10 işletim sisteminde yerleşik olarak.
 
 ADMX ilkeleri hakkında daha fazla bilgi için bkz. [ADMX ile desteklenen Ilkeleri anlama](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies).
@@ -53,7 +53,7 @@ Bu laboratuvarın sonuna kadar, Intune 'u kullanmaya başlama becerileri ve kull
 
 Bu özellik şu platformlarda geçerlidir:
 
-- Windows 10 sürüm 1703 ve üzeri
+- Windows 10 sürüm 1709 ve üzeri
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -64,7 +64,7 @@ Bu özellik şu platformlarda geçerlidir:
 - Microsoft Intune, **ıNTUNE MDM yetkilisi**olarak yapılandırılır. Daha fazla bilgi için bkz. [mobil cihaz yönetimi yetkilisini ayarlama](../fundamentals/mdm-authority-set.md).
 
   > [!div class="mx-imgBorder"]
-  > ![MDM yetkilisini kiracı durumunuz Microsoft Intune olarak ayarlayın](./media/tutorial-walkthrough-administrative-templates/tenant-status.png)
+  > ![MDM yetkilisini kiracı durumınızda Microsoft Intune olarak ayarlama](./media/tutorial-walkthrough-administrative-templates/tenant-status.png)
 
 - Şirket içi Active Directory etki alanı denetleyicisinde (DC):
 
@@ -90,13 +90,13 @@ Bu özellik şu platformlarda geçerlidir:
 
   - **Rsat: Grup İlkesi Yönetim Araçları**'nı yükler:
 
-    1. **Ayarlar** uygulama > **uygulamalar** > , **Özellik Ekle** > **isteğe bağlı özellikler** ' i açın.
-    2. **Rsat: Grup ilkesi yönetim araçları** > **yüklemeyi**seçin.
+    1. **Ayarlar** uygulama > **uygulamalar** > **isteğe bağlı özellikler** > **ekleme özelliği**' ni açın.
+    2. **Rsat: Grup İlkesi Yönetim Araçları** > **yüklemesi**' ni seçin.
 
         Windows özelliği yüklerken bekleyin. Bu tamamlandığında, sonunda **Windows Yönetim Araçları** uygulamasında gösterilir.
 
         > [!div class="mx-imgBorder"]
-        > grup ilkesi yönetimi uygulaması da dahil olmak üzere Windows Yönetim Araçları uygulamalarını ![](./media/tutorial-walkthrough-administrative-templates/windows-administrative-tools-app.png)
+        > ![grup ilkesi yönetim uygulaması da dahil olmak üzere Windows Yönetim Araçları uygulamaları](./media/tutorial-walkthrough-administrative-templates/windows-administrative-tools-app.png)
 
   - Endpoint Manager yönetim merkezini içeren Microsoft 365 aboneliğine internet erişimi ve yönetici haklarına sahip olduğunuzdan emin olun.
 
@@ -112,12 +112,12 @@ Bu Yönetim Merkezi cihaz yönetimine odaklanır ve Azure AD ve Intune gibi Azur
 
 Ayrıca, [Microsoft 365 Yönetim merkezinden](https://admin.microsoft.com)Endpoint Manager yönetim merkezini açabilirsiniz:
 
-1. [https://admin.microsoft.com](https://admin.microsoft.com)gidin.
+1. Adresine gidin [https://admin.microsoft.com](https://admin.microsoft.com).
 2. Microsoft 365 Kiracı aboneliğinizin yönetici hesabıyla oturum açın.
-3. **Yönetim Merkezleri**altında, **uç nokta yönetimi** > **tüm yönetici merkezleri** ' ı seçin. Endpoint Manager Yönetim Merkezi açılır.
+3. **Yönetim Merkezleri**altında **tüm yönetim merkezleri** > **uç nokta yönetimi**' ni seçin. Endpoint Manager Yönetim Merkezi açılır.
 
     > [!div class="mx-imgBorder"]
-    > ![, Microsoft 365 Yönetim Merkezi 'ndeki tüm yönetim merkezlerini görüntüleyin](./media/tutorial-walkthrough-administrative-templates/microsoft365-admin-centers.png)
+    > ![Microsoft 365 Yönetim merkezinde tüm yönetim merkezlerini görüntüleyin](./media/tutorial-walkthrough-administrative-templates/microsoft365-admin-centers.png)
 
 ## <a name="create-groups-and-add-users"></a>Grup oluşturma ve Kullanıcı ekleme
 
@@ -139,7 +139,7 @@ Bu sonraki adımlarda güvenlik grupları oluşturacak ve bu gruplara kullanıc�
 
     Cihazları eklemek isteğe bağlıdır. Amaç, Grup oluşturma ve cihazların nasıl ekleneceğini bilme alışkanlıktır. Bu öğreticiyi bir üretim ortamında kullanıyorsanız, ne yaptığınızı unutmayın.
 
-4. Değişikliklerinizi kaydetmek için > **Oluştur** ' u **seçin** .
+4. **Select** > Değişikliklerinizi kaydetmek için**Oluştur** ' u seçin.
 
     Grubunuzu göremiyor musunuz? **Yenile**' yi seçin.
 
@@ -157,11 +157,11 @@ Bu sonraki adımlarda güvenlik grupları oluşturacak ve bu gruplara kullanıc�
         1. **Ifade Ekle**' yi seçin. İfadeniz **kural sözdiziminde**gösterilmektedir:
 
             > [!div class="mx-imgBorder"]
-            > ![dinamik sorgu oluşturma ve Microsoft Intune yönetim şablonuna ifade ekleme](./media/tutorial-walkthrough-administrative-templates/dynamic-group-query.png)
+            > ![Microsoft Intune yönetim şablonunda bir dinamik sorgu oluşturma ve ifade ekleme](./media/tutorial-walkthrough-administrative-templates/dynamic-group-query.png)
 
             Kullanıcılar veya cihazlar girdiğiniz ölçütlere uyduklarında, bunlar otomatik olarak dinamik gruplara eklenir. Bu örnekte, işletim sistemi Windows olduğunda cihazlar bu gruba otomatik olarak eklenir. Bu öğreticiyi bir üretim ortamında kullanıyorsanız dikkatli olun. Amaç, dinamik gruplar oluşturma alıştırması sağlamaktır.
 
-        2. Değişikliklerinizi **kaydetmek için > ** **oluşturun** .
+        2. **Save** > Değişikliklerinizi kaydetmek için**Oluştur** ' a kaydedin.
 
 6. Aşağıdaki ayarlarla **Tüm öğretmenler** grubunu oluşturun:
 
@@ -178,7 +178,7 @@ Bu sonraki adımlarda güvenlik grupları oluşturacak ve bu gruplara kullanıc�
 
             Kullanıcılar veya cihazlar girdiğiniz ölçütlere uyduklarında, bunlar otomatik olarak dinamik gruplara eklenir. Bu örnekte, bölümleri öğretmenler olduğunda kullanıcılar bu gruba otomatik olarak eklenir. Kullanıcılar kuruluşunuza eklendiğinde departmanı ve diğer özellikleri girebilirsiniz. Bu öğreticiyi bir üretim ortamında kullanıyorsanız dikkatli olun. Amaç, dinamik gruplar oluşturma alıştırması sağlamaktır.
 
-        2. Değişikliklerinizi **kaydetmek için > ** **oluşturun** .
+        2. **Save** > Değişikliklerinizi kaydetmek için**Oluştur** ' a kaydedin.
 
 ### <a name="talking-points"></a>Konuşma noktaları
 
@@ -197,7 +197,7 @@ Bu sonraki adımlarda güvenlik grupları oluşturacak ve bu gruplara kullanıc�
   - Tüm Android cihazlar
   - Tüm iOS/ıpados cihazları
   - Pazarlama
-  - İnsan kaynakları
+  - İnsan Kaynakları
   - Tüm Charlotte çalışanları
   - Tüm Redmond çalışanları
   - Batı Yakası IT yöneticileri
@@ -210,7 +210,7 @@ Oluşturulan kullanıcılar ve gruplar ayrıca [Microsoft 365 Yönetim merkezind
 1. Endpoint Manager Yönetim merkezinde, **kullanıcılar** > mevcut bir kullanıcının adını seçin.
 
     > [!div class="mx-imgBorder"]
-    > Endpoint Manager Yönetim Merkezi 'Nde ![kullanıcılar ' ı seçin](./media/tutorial-walkthrough-administrative-templates/select-users-endpoint-manager-admin-center.png)
+    > ![Endpoint Manager Yönetim Merkezi 'nde kullanıcılar ' ı seçin.](./media/tutorial-walkthrough-administrative-templates/select-users-endpoint-manager-admin-center.png)
 
 2. Ekleyebileceğiniz veya değiştirebilmeniz gereken bazı bilgileri gözden geçirin. Örneğin, Iş unvanı, departman, şehir, ofis konumu ve daha fazlası gibi yapılandırabileceğiniz özelliklere göz atın. Dinamik grupları oluştururken dinamik sorgularınızda bu özellikleri kullanabilirsiniz.
 3. Bu kullanıcının üyeliğini görmek için **grupları** seçin. Kullanıcıyı bir gruptan da kaldırabilirsiniz.
@@ -224,7 +224,7 @@ Endpoint Manager Yönetim merkezinde yeni güvenlik grupları oluşturdunuz ve v
 
 Bu bölümde, Intune 'da bir yönetim şablonu oluşturacağız, **Grup İlkesi yönetiminde**bazı ayarlara baktık ve Intune 'daki aynı ayarı karşılaştırıyoruz. Amaç, Grup İlkesi 'nde bir ayarı göstermek ve Intune 'da aynı ayarı göstermek için kullanılır.
 
-1. Endpoint Manager Yönetim Merkezi 'nde, **cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+1. Endpoint Manager Yönetim merkezinde, **cihazlar** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 2. Aşağıdaki özellikleri girin:
 
     - **Platform**: **Windows 10 ve üstünü**seçin.
@@ -234,18 +234,18 @@ Bu bölümde, Intune 'da bir yönetim şablonu oluşturacağız, **Grup İlkesi 
 4. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
     - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, **yönetici şablonu-Windows 10 öğrenci cihazları**girin.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+    - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
 
-5. **İleri**'yi seçin.
+5. **İleri**’yi seçin.
 6. **Yapılandırma ayarları**' nda, ayarlar cihazlara (**bilgisayar yapılandırması**) uygulanır ve ayarlar kullanıcılara uygulanır (**Kullanıcı Yapılandırması**):
 
     > [!div class="mx-imgBorder"]
     > ![Microsoft Intune Endpoint Manager 'daki kullanıcılara ve cihazlara ADMX şablonu ayarlarını uygulama](./media/tutorial-walkthrough-administrative-templates/administrative-templates-choose-computer-user-configuration.png)
 
-7. **Microsoft Edge** > **bilgisayar yapılandırması** ' nı genişletin > **SmartScreen ayarları**' nı seçin. İlkenin yolunu ve kullanılabilir tüm ayarları görebilirsiniz:
+7. **Bilgisayar yapılandırması** > **Microsoft Edge** > **SmartScreen ayarları**' nı seçin. İlkenin yolunu ve kullanılabilir tüm ayarları görebilirsiniz:
 
     > [!div class="mx-imgBorder"]
-    > ![, Microsoft Intune ' de ADMX şablonlarındaki Microsoft Edge SmartScreen ilkesi ayarlarına bakın](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-path.png)
+    > ![Microsoft Intune 'de ADMX şablonlarındaki Microsoft Edge SmartScreen ilkesi ayarlarına bakın](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-path.png)
 
 8. Ara alanında **İndir**' i girin. İlke ayarlarının filtrelendiğine dikkat edin:
 
@@ -266,41 +266,41 @@ Bu bölümde, Intune 'da ve Grup İlkesi Yönetimi Düzenleyicisi eşleşen ilke
 3. **Officeandedge** Policy > **Düzenle**' ye sağ tıklayın. Grup İlkesi Yönetimi Düzenleyicisi uygulaması açılır.
 
     > [!div class="mx-imgBorder"]
-    > ![Office ve Microsoft Edge ADMX Grup İlkesi ' ne sağ tıklayın ve Düzenle ' yi seçin](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management.png)
+    > ![Office ve Microsoft Edge ADMX Grup İlkesi ' ne sağ tıklayın ve Düzenle ' yi seçin.](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management.png)
 
     **Officeandedge** , Office ve MICROSOFT Edge ADMX şablonlarını içeren bir grup ilkesidir. Bu ilke, [Önkoşullar](#prerequisites) (Bu makalede) bölümünde açıklanmaktadır.
 
-4. **Bilgisayar yapılandırma** > **ilkeleri** > **Yönetim Şablonları** > **Denetim Masası** > **Kişiselleştirme**' yi genişletin. Kullanılabilir ayarlara dikkat edin.
+4.  > **Denetim Masası** > **Policies** >  **Computer configuration** > **kişiselleştirmesini****Yönetim Şablonları**bilgisayar yapılandırma ilkeleri ' ni genişletin. Kullanılabilir ayarlara dikkat edin.
 
     > [!div class="mx-imgBorder"]
-    > Grup İlkesi Yönetimi Düzenleyicisi ![bilgisayar yapılandırmasını genişlettikten sonra kişiselleştirme](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management-editor-admx-policy.png) git
+    > ![Grup İlkesi Yönetimi Düzenleyicisi 'de bilgisayar yapılandırması ' nı genişletin ve Kişiselleştirme ' ye gidin](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management-editor-admx-policy.png)
 
     **Kilit ekranı kamerayı etkinleştirmeyi engelle**' ye çift tıklayın ve kullanılabilir seçenekleri görüntüleyin:
 
     > [!div class="mx-imgBorder"]
-    > ![Grup İlkesi 'nde bilgisayar yapılandırma ayarı seçeneklerini görmek](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
+    > ![Grup İlkesi 'nde bilgisayar yapılandırma ayarı seçeneklerine bakın](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
 5. Endpoint Manager Yönetim merkezinde, **yönetici şablonunuz-Windows 10 öğrenci cihazları** şablonuna gidin.
-6. **Bilgisayar yapılandırması** > **Denetim Masası** > **Kişiselleştirme**' yi seçin. Kullanılabilir ayarlara dikkat edin:
+6. **Bilgisayar yapılandırma** > **Denetim Masası** > **kişiselleştirmesini**seçin. Kullanılabilir ayarlara dikkat edin:
 
     > [!div class="mx-imgBorder"]
-    > Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-control-panel-personalization-path.png) kişiselleştirme ilkesi ayarı yolunu ![
+    > ![Microsoft Intune kişiselleştirme ilkesi ayarı yolu](./media/tutorial-walkthrough-administrative-templates/computer-configuration-control-panel-personalization-path.png)
 
     Ayar türü **cihaz**olur ve yol **/Control Panel/kişiselleştirme**olur. Bu yol, Grup İlkesi Yönetimi Düzenleyicisi az önce gördüğünüzle benzerdir. **Kilit ekranı kamerayı etkinleştirmeyi engelle** ayarını açarsanız, Grup İlkesi Yönetimi Düzenleyicisi aynı **yapılandırılmamış**, **etkin**ve **devre dışı** seçeneklerinin aynısını görürsünüz.
 
 #### <a name="compare-a-user-policy"></a>Kullanıcı ilkesini karşılaştırma
 
-1. Yönetici şablonunuzda, **bilgisayar yapılandırması** > **Tüm ayarlar**' ı seçin ve **InPrivate Gözatma**' yı arayın. Yola dikkat edin.
+1. Yönetici şablonunuzda **bilgisayar yapılandırması** > **Tüm ayarlar**' ı seçin ve **InPrivate Gözatma**' yı arayın. Yola dikkat edin.
 
     **Kullanıcı Yapılandırması**için aynısını yapın. **Tüm ayarlar**' ı seçin ve **InPrivate Gözatma**' yı arayın.
 
 2. **Grup İlkesi Yönetimi Düzenleyicisi**, eşleşen kullanıcı ve cihaz ayarlarını bulun:
 
-    - Cihaz: **bilgisayar yapılandırma** > **ilkeleri** > **Yönetim Şablonları** > **Windows bileşenleri** > **Internet Explorer** > **Gizlilik** > **InPrivate taramayı kapat**' ı genişletin.
-    - Kullanıcı: **Kullanıcı yapılandırma** > **ilkeleri** > **Yönetim Şablonları** > **Windows bileşenleri** > **Internet Explorer** > **Gizlilik** > **InPrivate taramayı kapat**' ı genişletin.
+    - Cihaz:**Windows bileşenleri** > **Administrative Templates** >  > **Policies** > Yönetim Şablonları **bilgisayar yapılandırma**ilkeleri ' ni genişletin**Internet Explorer** > **gizliliği** > **InPrivate taramayı**kapat.
+    - Kullanıcı:**Windows bileşenleri** > **Administrative Templates** >  > **Policies** > Yönetim Şablonları **Kullanıcı yapılandırma**ilkeleri ' ni genişletin**Internet Explorer** > **gizliliği** > **InPrivate taramayı**kapat.
 
     > [!div class="mx-imgBorder"]
-    > ![ADMX şablonunu kullanarak Internet Explorer 'da InPrivate taramayı devre dışı bırakın](./media/tutorial-walkthrough-administrative-templates/group-policy-turn-off-inprivate-browsing.png)
+    > ![ADMX şablonunu kullanarak Internet Explorer 'da InPrivate taramayı kapatma](./media/tutorial-walkthrough-administrative-templates/group-policy-turn-off-inprivate-browsing.png)
 
 > [!TIP]
 > Yerleşik Windows ilkelerini görmek için GPEdit (**Grup İlkesi uygulamasını Düzenle** ) seçeneğini de kullanabilirsiniz.
@@ -308,14 +308,14 @@ Bu bölümde, Intune 'da ve Grup İlkesi Yönetimi Düzenleyicisi eşleşen ilke
 #### <a name="compare-an-edge-policy"></a>Kenar ilkesini karşılaştırın
 
 1. Endpoint Manager Yönetim merkezinde, **yönetici şablonunuz-Windows 10 öğrenci cihazları** şablonuna gidin.
-2. **Microsoft Edge** > **başlatma, giriş sayfası ve yeni sekme sayfası** > **bilgisayar yapılandırması** ' nı genişletin. Kullanılabilir ayarlara dikkat edin.
+2. **Bilgisayar yapılandırması** > **Microsoft Edge** > **başlatma, giriş sayfası ve yeni sekme sayfası '** nı genişletin. Kullanılabilir ayarlara dikkat edin.
 
     **Kullanıcı Yapılandırması**için aynısını yapın.
 
 3. Grup İlkesi Yönetimi Düzenleyicisi, şu ayarları bulun:
 
-    - Cihaz: **Microsoft Edge** > **Başlangıç, giriş sayfası ve yeni sekme sayfası** **Yönetim Şablonları** > **bilgisayar yapılandırma** > **ilkeleri** > genişletin.
-    - Kullanıcı: **Kullanıcı yapılandırma** > **ilkeleri** > **Yönetim Şablonları** > **Microsoft Edge** > **Başlangıç, giriş sayfası ve yeni sekme sayfası '** nı genişletin
+    - Cihaz: > **Microsoft Edge****Startup, giriş sayfası ve yeni sekme sayfası****Yönetim Şablonları** >  **bilgisayar yapılandırma** > **ilkeleri** > ' ni genişletin.
+    - Kullanıcı: > **Microsoft Edge****başlatma, giriş sayfası ve yeni sekme sayfası** **Yönetim Şablonları** >  **Kullanıcı yapılandırma** > **ilkeleri** > ' ni genişletin.
 
 ### <a name="what-did-i-just-do"></a>Ne yapmam gerekiyor?
 
@@ -328,7 +328,7 @@ Bu şablonda, bazı Internet Explorer ayarlarını birden çok öğrenci tarafı
 1. **Yönetici şablonunuzda-Windows 10 öğrenci cihazlarında** **bilgisayar yapılandırması**' nı genişletin, **Tüm ayarlar**' ı seçin ve **InPrivate taramayı**Kapat ' ı arayın:
 
     > [!div class="mx-imgBorder"]
-    > Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/turn-off-inprivate-browsing-administrative-template.png) yönetim şablonunda InPrivate Gözatma cihaz ilkesini kapatma ![
+    > ![Microsoft Intune içindeki yönetim şablonunda InPrivate Gözatma cihaz ilkesini kapatma](./media/tutorial-walkthrough-administrative-templates/turn-off-inprivate-browsing-administrative-template.png)
 
 2. **InPrivate taramayı** kapat ayarını seçin. Bu pencerede, ayarlayabileceğiniz açıklama ve değerlere dikkat edin. Bu seçenekler, Grup İlkesi 'nde gördüklerinize benzerdir.
 3. Değişikliklerinizi kaydetmek için **etkin** > **Tamam ' ı** seçin.
@@ -348,25 +348,25 @@ Bu şablonda, bazı Internet Explorer ayarlarını birden çok öğrenci tarafı
       - **Tür**: Kullanıcı
       - **Yol**: \Windows Internet Explorer
       - **Değer**: etkin
-      - **Giriş sayfası**: `contoso.com`gıbı bir URL girin.
+      - **Giriş sayfası**: gıbı bir URL girin `contoso.com`.
 
 5. Arama filtrenizi temizleyin. Yapılandırdığınız ayarların en üstte listelendiğini unutmayın:
 
     > [!div class="mx-imgBorder"]
-    > ![yapılandırılan ayarlar, Microsoft Intune üst kısmında listelenir](./media/tutorial-walkthrough-administrative-templates/configured-settings-administrative-template.png)
+    > ![Yapılandırılan ayarlar Microsoft Intune üst kısmında listelenir](./media/tutorial-walkthrough-administrative-templates/configured-settings-administrative-template.png)
 
 ### <a name="assign-your-template"></a>Şablonunuzu atama
 
 1. Şablonunuzda, **atamalar**' a gelene kadar **İleri** ' yi seçin. **Dahil edilecek grupları seç ' i**seçin:
 
     > [!div class="mx-imgBorder"]
-    > ![Microsoft Intune cihaz yapılandırma profilleri listesinden yönetim şablonu profilinizi seçin](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
+    > ![Yönetim şablonu profilinizi Microsoft Intune içindeki cihaz yapılandırma profilleri listesinden seçin](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
 
 2. Mevcut kullanıcılar ve grupların listesi gösterilir. Daha önce oluşturduğunuz **tüm Windows 10 öğrenci cihazları** grubunu seçin > **seçin**.
 
     Bu öğreticiyi bir üretim ortamında kullanıyorsanız boş olan grupları eklemeyi göz önünde bulundurun. Amaç, şablonunuzu atamaya yönelik bir uygulamadır.
 
-3. **İleri**'yi seçin. **Gözden geçir + oluştur**' da, değişikliklerinizi kaydetmek için **Oluştur** ' u seçin.
+3. **İleri**’yi seçin. **Gözden geçir + oluştur**' da, değişikliklerinizi kaydetmek için **Oluştur** ' u seçin.
 
 Profil kaydedildiği anda, Intune ile iade edildiğinde cihazlara uygulanır. Cihazlar internet 'e bağlıysa hemen gerçekleşebilir. İlke yenileme zamanları hakkında daha fazla bilgi için, [cihazların atanma sonrasında ilke, profil veya uygulama alma süresi ne kadar sürer](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
@@ -380,7 +380,7 @@ Endpoint Manager Yönetim merkezinde bir yönetim şablonu cihaz yapılandırma 
 
 Bu bölümde, bazı ayarları denetlemek için Intune 'da bir OneDrive yönetici şablonu oluşturacaksınız. Bu özel ayarlar, kuruluşlar tarafından yaygın olarak kullanıldıkları için seçilir.
 
-1. Başka bir profil (**cihaz** > **yapılandırma profilleri** > **Profil oluştur**) oluşturun.
+1. Başka bir profil oluşturun (**cihazlar** > **yapılandırma profilleri** > **profil oluşturma**).
 
 2. Aşağıdaki özellikleri girin:
 
@@ -391,12 +391,12 @@ Bu bölümde, bazı ayarları denetlemek için Intune 'da bir OneDrive yönetici
 4. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
     - **Ad**: **yönetici şablonunu girin-tüm Windows 10 kullanıcılarına uygulanan OneDrive ilkeleri**.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+    - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
 
-5. **İleri**'yi seçin.
+5. **İleri**’yi seçin.
 6. **Yapılandırma ayarları**' nda aşağıdaki ayarları yapılandırın. Değişikliklerinizi kaydetmek için **Tamam ' ı** seçtiğinizden emin olun.:
 
-    - **Bilgisayar yapılandırması** **Tüm ayarlar** > :
+    - **Bilgisayar yapılandırması** > **Tüm ayarlar**:
       - **Kullanıcıları Windows kimlik bilgileriyle OneDrive eşitleme istemcisine sessizce oturum açın**
         - **Tür**: cihaz
         - **Değer**: etkin
@@ -404,7 +404,7 @@ Bu bölümde, bazı ayarları denetlemek için Intune 'da bir OneDrive yönetici
         - **Tür**: cihaz
         - **Değer**: etkin
 
-    - **Tüm ayarlar** > **Kullanıcı Yapılandırması** :
+    - **Kullanıcı Yapılandırması** > **Tüm ayarlar**:
       - **Kullanıcıların kişisel OneDrive hesaplarını eşitlemesini engelleyin**
         - **Tür**: Kullanıcı
         - **Değer**: etkin
@@ -412,7 +412,7 @@ Bu bölümde, bazı ayarları denetlemek için Intune 'da bir OneDrive yönetici
 Ayarlarınız aşağıdaki ayarlara benzer şekilde görünür:
 
 > [!div class="mx-imgBorder"]
-> Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/one-drive-administrative-template.png) ![OneDrive yönetim şablonu oluşturma
+> ![Microsoft Intune OneDrive yönetim şablonu oluşturma](./media/tutorial-walkthrough-administrative-templates/one-drive-administrative-template.png)
 
 OneDrive istemci ayarları hakkında daha fazla bilgi için bkz. [OneDrive Sync istemci ayarlarını denetlemek için Grup İlkesi kullanma](https://docs.microsoft.com/onedrive/use-group-policy).
 
@@ -423,7 +423,7 @@ OneDrive istemci ayarları hakkında daha fazla bilgi için bkz. [OneDrive Sync 
 
     Bu öğreticiyi bir üretim ortamında kullanıyorsanız boş olan grupları eklemeyi göz önünde bulundurun. Amaç, şablonunuzu atamaya yönelik bir uygulamadır.
 
-3. **İleri**'yi seçin. **Gözden geçir + oluştur**' da, değişikliklerinizi kaydetmek için **Oluştur** ' u seçin.
+3. **İleri**’yi seçin. **Gözden geçir + oluştur**' da, değişikliklerinizi kaydetmek için **Oluştur** ' u seçin.
 
 Bu noktada, bazı yönetim şablonları oluşturdunuz ve bunları oluşturduğunuz gruplara atamış olursunuz. Sonraki adım, Windows PowerShell ve Intune için Microsoft Graph API kullanarak bir yönetim şablonu oluşturmaktır.
 
@@ -437,26 +437,26 @@ Bu bölüm aşağıdaki kaynakları kullanır. Bu kaynakları bu bölüme yükle
 1. Yönetici **bilgisayarda**, **Windows PowerShell** 'i yönetici olarak açın:
 
     1. Arama çubuğunuza **PowerShell**yazın.
-    2. **Windows PowerShell** > **yönetici olarak çalıştır**' a sağ tıklayın.
+    2. **Windows PowerShell** > 'i**yönetici olarak çalıştır**' a sağ tıklayın.
 
     > [!div class="mx-imgBorder"]
-    > Windows PowerShell 'i yönetici olarak çalıştırmak ![](./media/tutorial-walkthrough-administrative-templates/run-windows-powershell-administrator.png)
+    > ![Windows PowerShell 'i yönetici olarak çalıştırma](./media/tutorial-walkthrough-administrative-templates/run-windows-powershell-administrator.png)
 
 2. Yürütme ilkesini alın ve ayarlayın.
 
-    1. Şunu girin: `get-ExecutionPolicy`
+    1. Girmesini`get-ExecutionPolicy`
 
         ' Ne ayarlanmış olduğunu, **sınırlı**olabilecek şekilde yazın. Öğreticiyle işiniz bittiğinde, özgün değerine geri ayarlayın.
 
-    2. Şunu girin: `Set-ExecutionPolicy -ExecutionPolicy Unrestricted`
+    2. Girmesini`Set-ExecutionPolicy -ExecutionPolicy Unrestricted`
 
-    3. Değiştirmek için `Y` girin.
+    3. Değiştirmek `Y` için girin.
 
     PowerShell 'in yürütme ilkesi kötü amaçlı betiklerin yürütülmesini önlemeye yardımcı olur. Daha fazla bilgi için bkz. [yürütme Ilkeleri hakkında](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
-3. Şunu girin: `Install-Module -Name Microsoft.Graph.Intune`
+3. Girmesini`Install-Module -Name Microsoft.Graph.Intune`
 
-    `Y` şunu girin:
+    Şunu `Y` girin:
 
     - NuGet sağlayıcısı 'nı yüklemek isteyip istemediğiniz
     - Modülleri güvenilmeyen depolardan yüklemek isteyip istemediğiniz sorulur
@@ -464,25 +464,25 @@ Bu bölüm aşağıdaki kaynakları kullanır. Bu kaynakları bu bölüme yükle
     Tamamlanması birkaç dakika sürebilir. İşiniz bittiğinde, aşağıdaki komut istemine benzer bir istem gösterilir:
 
     > [!div class="mx-imgBorder"]
-    > Modül yüklendikten sonra Windows PowerShell istemi ![](./media/tutorial-walkthrough-administrative-templates/powershell-prompt.png)
+    > ![Modül yüklendikten sonra Windows PowerShell istemi](./media/tutorial-walkthrough-administrative-templates/powershell-prompt.png)
 
-4. Web tarayıcınızda [https://github.com/Microsoft/Intune-PowerShell-SDK/releases](https://github.com/Microsoft/Intune-PowerShell-SDK/releases)' a gidin ve **Intune-PowerShell-SDK_v6.1907.00921.0001. zip** dosyasını seçin.
+4. Web tarayıcınızda öğesine [https://github.com/Microsoft/Intune-PowerShell-SDK/releases](https://github.com/Microsoft/Intune-PowerShell-SDK/releases)gidin ve **Intune-PowerShell-SDK_v6.1907.00921.0001. zip** dosyasını seçin.
 
-    1. **Farklı kaydet**' i seçin ve anımsayabileceğiniz bir klasör seçin. `c:\psscripts` iyi bir seçenektir.
-    2. Klasörünüzü açın, tüm > **ayıklamayı** **ayıklamak** >. zip dosyasına sağ tıklayın. Klasör yapınız aşağıdaki klasöre benzer şekilde görünür:
+    1. **Farklı kaydet**' i seçin ve anımsayabileceğiniz bir klasör seçin. `c:\psscripts`iyi bir seçimdir.
+    2. Klasörünüzü açın, **Tüm** > **ayıklamayı**Ayıkla >. zip dosyasına sağ tıklayın. Klasör yapınız aşağıdaki klasöre benzer şekilde görünür:
 
         > [!div class="mx-imgBorder"]
-        > ayıklandıktan sonra Intune PowerShell SDK klasör yapısını ![](./media/tutorial-walkthrough-administrative-templates/psscripts-directory.png)
+        > ![Ayıklandıktan sonra Intune PowerShell SDK klasörü yapısı](./media/tutorial-walkthrough-administrative-templates/psscripts-directory.png)
 
 5. **Görünüm** sekmesinde **dosya adı uzantıları**' nı işaretleyin:
 
     > [!div class="mx-imgBorder"]
-    > Gezgin 'deki Görünüm sekmesinde dosya adı uzantılarını ![seçin](./media/tutorial-walkthrough-administrative-templates/file-names-extension.png)
+    > ![Gezgin 'deki Görünüm sekmesinde dosya adı uzantıları ' nı seçin](./media/tutorial-walkthrough-administrative-templates/file-names-extension.png)
 
-6. Klasörünüze gidin ve `c:\psscripts\Intune-PowerShell-SDK_v6.1907.00921.0001\drop\outputs\build\Release\net471`. Her. dll > **özellikler** > **Engellemeyi kaldır**' a sağ tıklayın.
+6. Klasörünüze gidin ve adresine gidin `c:\psscripts\Intune-PowerShell-SDK_v6.1907.00921.0001\drop\outputs\build\Release\net471`. Her. dll > **özellikleri** > **Engellemeyi kaldır**' a sağ tıklayın.
 
     > [!div class="mx-imgBorder"]
-    > Dll 'Leri engellemeyi kaldırmak ![](./media/tutorial-walkthrough-administrative-templates/unblock-dll.png)
+    > ![Dll 'Leri engellemeyi kaldır](./media/tutorial-walkthrough-administrative-templates/unblock-dll.png)
 
 7. **Windows PowerShell** uygulamanızda şunu girin:
 
@@ -490,22 +490,22 @@ Bu bölüm aşağıdaki kaynakları kullanır. Bu kaynakları bu bölüme yükle
     Import-Module c:\psscripts\Intune-PowerShell-SDK_v6.1907.00921.0001\drop\outputs\build\Release\net471\Microsoft.Graph.Intune.psd1
     ```
 
-    Güvenilmeyen yayımcıdan çalıştırmanız istenirse `R` girin.
+    Güvenilmeyen `R` yayımcıdan çalıştırmak isteyip istemediğiniz sorulursa girin.
 
 8. Intune Yönetim Şablonları, Graf beta sürümünü kullanır:
 
-    1. Şunu girin: `Update-MSGraphEnvironment -SchemaVersion 'beta'`
+    1. Girmesini`Update-MSGraphEnvironment -SchemaVersion 'beta'`
 
-    2. Şunu girin: `Connect-MSGraph -AdminConsent`
+    2. Girmesini`Connect-MSGraph -AdminConsent`
 
     3. İstendiğinde, aynı Microsoft 365 yönetici hesabıyla oturum açın. Bu cmdlet 'ler, ilkeyi kiracı kuruluşunuzda oluşturur.
 
         **Kullanıcı**: Microsoft 365 Kiracı aboneliğinizin yönetici hesabını girin.  
         **Parola**: parolasını girin.
 
-    4. **Kabul et**'i seçin.
+    4. **Kabul Et**’i seçin.
 
-9. **Test yapılandırması** yapılandırma profilini oluşturun. Girin:
+9. **Test yapılandırması** yapılandırma profilini oluşturun. Şunları girin:
 
     ```powershell
     $configuration = Invoke-MSGraphRequest -Url https://graph.microsoft.com/beta/deviceManagement/groupPolicyConfigurations -Content '{"displayName":"Test Configuration","description":"A test configuration created through PS"}' -HttpMethod POST
@@ -513,19 +513,19 @@ Bu bölüm aşağıdaki kaynakları kullanır. Bu kaynakları bu bölüme yükle
 
     Bu cmdlet 'ler başarılı olduğunda profil oluşturulur. Doğrulamak için, Endpoint Manager Yönetim Merkezi > **yapılandırma profilleri**' ne gidin. **Test yapılandırması** profiliniz listelenmelidir.
 
-10. Tüm SettingDefinitions 'ı alın. Girin:
+10. Tüm SettingDefinitions 'ı alın. Şunları girin:
 
     ```powershell
     $settingDefinitions = Invoke-MSGraphRequest -Url https://graph.microsoft.com/beta/deviceManagement/groupPolicyDefinitions -HttpMethod GET
     ```
 
-11. Görünen ad ayarını kullanarak tanım KIMLIĞINI bulun. Girin:
+11. Görünen ad ayarını kullanarak tanım KIMLIĞINI bulun. Şunları girin:
 
     ```powershell
     $desiredSettingDefinition = $settingDefinitions.value | ? {$_.DisplayName -Match "Silently sign in users to the OneDrive sync client with their Windows credentials"}
     ```
 
-12. Bir ayar yapılandırın. Girin:
+12. Bir ayar yapılandırın. Şunları girin:
 
     ```powershell
     $configuredSetting = Invoke-MSGraphRequest -Url "https://graph.microsoft.com/beta/deviceManagement/groupPolicyConfigurations('$($configuration.id)')/definitionValues" -Content ("{""enabled"":""true"",""configurationType"":""policy"",""definition@odata.bind"":""https://graph.microsoft.com/beta/deviceManagement/groupPolicyDefinitions('$($desiredSettingDefinition.id)')""}") -HttpMethod POST
@@ -541,7 +541,7 @@ Bu bölüm aşağıdaki kaynakları kullanır. Bu kaynakları bu bölüme yükle
 
 ### <a name="see-your-policy"></a>İlkenize bakın
 
-1. Endpoint Manager Yönetim merkezinde > **yapılandırma profilleri** > **yenileyin**.
+1. Endpoint Manager Yönetim Merkezi 'nde **yapılandırma profillerinin** > **yenilenmesi**>.
 2. **Test yapılandırma** profilinizi > **ayarları**' nı seçin.
 3. Açılan listede, **Tüm ürünler**' i seçin.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 04/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44cbde7eb7de9c50db488dabcb3bf5841b7248f7
-ms.sourcegitcommit: 10578b5a631f9148e59389a1ce4e7d4892f772a0
+ms.openlocfilehash: cc1b11fe533499ebe29101c09fb1355cd8d04243
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80979248"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82183084"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Microsoft Intune ile Microsoft Edge kullanarak Web erişimini yönetme
 
@@ -65,14 +65,14 @@ Kullanıcılarınıza yalnızca Microsoft Edge aracılığıyla şirket içeriğ
 
 Azure AD bağlantılı web uygulamalarının iOS ve Android 'de Microsoft Edge 'i kullanacak şekilde kısıtlamak için:
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. Intune düğümü altında, **koşullu erişim** > **Yeni ilke**' yi seçin.
+2. Intune düğümü altında **koşullu erişim** > **Yeni ilke**' yi seçin.
 3. Bölmenin **erişim denetimleri** bölümünden **ver** ' i seçin.
 4. **Onaylı istemci uygulaması gerektir**’e tıklayın.
 5. **İzin** bölmesinde **Seç ' i** seçin. Bu ilke, yalnızca Intune Managed Browser uygulaması tarafından erişilebilir olmasını istediğiniz bulut uygulamalarına atanmalıdır.
 
     ![Koşullu erişim ilkesi-verme ekran görüntüsü](./media/manage-microsoft-edge/manage-microsoft-edge-01.png)
 
-6. Atamalar bölümünde, **uygulamalar** > **koşullar** ' ı seçin. **Uygulamalar** bölmesi görüntülenir.
+6. Atamalar bölümünde **koşullar** > **uygulamalar**' ı seçin. **Uygulamalar** bölmesi görüntülenir.
 7. **Yapılandır**' ın altında, ilkeyi belirli istemci uygulamalarına uygulamak için **Evet** ' i seçin.
 8. **Tarayıcı**’nın bir istemci uygulaması olarak seçildiğini doğrulayın.
 
@@ -104,7 +104,7 @@ SSO, cihazınızın iOS cihazları için Microsoft Authenticator uygulaması vey
 Microsoft Edge için uygulama yapılandırması oluşturmak için:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Ekle** > **uygulama yapılandırma ilkeleri** > **uygulamalar** ' ı seçin.
+2. **Uygulamalar** > **uygulama yapılandırma ilkeleri** > **Ekle**' yi seçin.
 3. **Yapılandırma Ilkesi Ekle** bölmesinde, uygulama yapılandırma ayarları Için bir **ad** ve isteğe bağlı bir **Açıklama** girin.
 4. **Cihaz kayıt** türü için **Yönetilen uygulamalar**’ı seçin.
 5. **Gerekli uygulamayı Seç ' i**seçin. Ardından, **hedeflenen uygulamalar** bölmesinde IOS/ıpados, Android için veya her ikisi için **Managed Browser** veya **kenarı** seçin.
@@ -114,7 +114,7 @@ Microsoft Edge için uygulama yapılandırması oluşturmak için:
     > [!NOTE]
     > Microsoft Edge, Managed Browser ile aynı anahtar ve değer çiftini kullanır. Android 'de, uygulama yapılandırma ilkelerinin etkili olabilmesi için Microsoft Edge 'in uygulama koruma ilkelerini hedeflemeli olması gerekir.
 
-8. İşiniz bittiğinde **Tamam**' ı seçin.
+8. İşiniz bittiğinde **Tamam**’ı seçin.
 9. **Yapılandırma Ilkesi Ekle** bölmesinde **Ekle**' yi seçin.<br>
     Yeni yapılandırma oluşturulur ve **uygulama yapılandırma** bölmesinde görüntülenir.
 
@@ -133,7 +133,7 @@ Microsoft Edge, ilke korumalı bir tarayıcı olarak kullanılabilir. Kullanıc�
 
 |    Anahtar    |    Değer    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.useEdge`    |    `true` değeri, kullanıcılarınıza Microsoft Edge 'i indirmek ve kullanmak için yönlendirecektir.<br>`false` değeri, kullanıcılarınızın Intune Managed Browser kullanmasına izin verir.    |
+|    `com.microsoft.intune.useEdge`    |    Bu değer `true` , kullanıcılarınızı Microsoft Edge 'i indirip kullanacak şekilde yönlendirir.<br>Bu değer `false` , kullanıcılarınızın Intune Managed Browser kullanmasına izin verir.    |
 
 Bu uygulama yapılandırma **değeri ayarlanmamışsa,** aşağıdaki mantık kurumsal bağlantıları açmak için kullanılacak tarayıcıyı tanımlar.
 
@@ -165,17 +165,17 @@ Azure AD Uygulama Ara Sunucusu Etkinleştirme senaryolarına bazı örnekler aş
 > [!NOTE]
 > Güncelleştirilmiş Uygulama Ara Sunucusu’nun yeniden yönlendirme verilerinin Managed Browser’da veya Microsoft Edge'de etkinleşmesi 24 saati bulabilir.
 
-#### <a name="step-1-enable-automatic-redirection-to-microsoft-edge-from-outlook"></a>1\. Adım: otomatik yeniden yönlendirmeyi Outlook 'tan Microsoft Edge 'e etkinleştirme
+#### <a name="step-1-enable-automatic-redirection-to-microsoft-edge-from-outlook"></a>1. Adım: otomatik yeniden yönlendirmeyi Outlook 'tan Microsoft Edge 'e etkinleştirme
 Outlook 'U **ilke ile yönetilen tarayıcılarla Web Içeriği paylaşma**ayarını sağlayan bir uygulama koruma ilkesiyle yapılandırın.
 
 ![Uygulama koruma ilkesinin ekran görüntüsü-ilke ile yönetilen tarayıcılarla Web içeriğini paylaşma](./media/manage-microsoft-edge/manage-microsoft-edge-03.png)
 
-#### <a name="step-2-set-the-app-configuration-setting-to-enable-app-proxy"></a>2\. Adım: uygulama proxy 'sini etkinleştirmek için uygulama yapılandırma ayarını ayarlama
+#### <a name="step-2-set-the-app-configuration-setting-to-enable-app-proxy"></a>2. Adım: uygulama proxy 'sini etkinleştirmek için uygulama yapılandırma ayarını ayarlama
 Microsoft Edge için uygulama ara sunucusunu etkinleştirmek üzere aşağıdaki anahtar/değer çiftine sahip Microsoft Edge 'i hedefleyin:
 
 |    Anahtar    |    Değer    |
 |-------------------------------------------------------------------|-------------|
-|    com. Microsoft. Intune. mam. managedbrowser. AppProxyRedirection    |    true    |
+|    com.microsoft.intune.mam.managedbrowser.AppProxyRedirection    |    true    |
 
 Şirket içi Web uygulamalarına sorunsuz (ve korumalı) erişim için Microsoft Edge ve Azure AD Uygulama Ara Sunucusu kullanma hakkında daha fazla bilgi için bkz. [daha iyisi: Intune ve Azure Active Directory ekibi, Kullanıcı erişimini geliştirmek için](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/better-together-intune-and-azure-active-directory-team-up-to/ba-p/250254). Bu blog gönderisi Intune Managed Browser başvuruyor, ancak içerik Microsoft Edge 'e de uygulanır.
 
@@ -187,21 +187,21 @@ Bir giriş sayfası kısayolunu yapılandırmak için aşağıdaki anahtar/değe
 
 |    Anahtar    |    Değer    |
 |-------------------------------------------------------------------|-------------|
-|    com. Microsoft. Intune. mam. managedbrowser. giriþ   |    Geçerli bir URL belirtin. Hatalı URL’ler güvenlik önlemi olarak engellenir.<br>**Örnek:**  <`https://www.bing.com`>     |
+|    com.microsoft.intune.mam.managedbrowser.homepage   |    Geçerli bir URL belirtin. Hatalı URL’ler güvenlik önlemi olarak engellenir.<br>**Örneğinde** <`https://www.bing.com`>     |
 
 ## <a name="configure-multiple-top-site-shortcuts-for-new-tab-pages-in-microsoft-edge"></a>Microsoft Edge 'de yeni sekme sayfaları için birden çok üst site kısayolunu yapılandırma 
 Benzer şekilde, bir giriş sayfası kısayolunu yapılandırmak için, Microsoft Edge 'de yeni sekme sayfalarında birden çok üst site kısayolunu yapılandırabilirsiniz. Kullanıcı yönetilen bağlamdaki bu kısayolları düzenleyemez veya silemez. Note: bir giriş sayfası kısayolu da dahil olmak üzere toplam 8 kısayol yapılandırabilirsiniz. Bir giriş sayfası kısayolu yapılandırdıysanız, yapılandırılan ilk üst siteyi geçersiz kılar. 
 
 |    Anahtar    |    Değer    |
 |-------------------------------------------------------------------|-------------|
-|    com. Microsoft. Intune. mam. managedbrowser. managedTopSites   |    Değer URL 'Leri kümesi belirtin. Her üst site kısayolu bir başlık ve URL 'den oluşur. Başlığı ve URL 'YI `|` karakteriyle ayırın. Örneğin: <br> `GitHub | https://github.com/||LinkedIn|https://www.linkedin.com`    |
+|    com. Microsoft. Intune. mam. managedbrowser. managedTopSites   |    Değer URL 'Leri kümesi belirtin. Her üst site kısayolu bir başlık ve URL 'den oluşur. Başlığı ve URL 'YI `|` karakterle ayırın. Örneğin: <br> `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
 
 ## <a name="configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge"></a>Microsoft Edge 'de yeni sekme sayfaları için kuruluşunuzun logosunu ve marka rengini yapılandırın
 
 Bu ayarlar, Microsoft Edge 'in yeni sekme sayfasını, sayfanın arka planı olarak kuruluşunuzun logosunu ve marka rengini görüntüleyecek şekilde özelleştirmenize olanak tanır.
 
 Kuruluşunuzun logosunu ve rengini karşıya yüklemek için, önce aşağıdaki adımları uygulayın:
-- Azure portal içinde, [Microsoft Endpoint Manager yönetim merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) -> **kiracı yönetimi** -> **Özelleştirme** -> **Şirket kimliği markalaması**' na gidin.
+- Azure Portal içinde, [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) -> **Kiracı Yönetimi** -> **özelleştirmesi** -> **Şirket kimliği markasına**gidin.
 - Markanızı ayarlamak için "görüntü" altında "yalnızca şirket logosu" seçeneğini belirleyin. Saydam arka plan logoları önerilir. 
 - Markaınızın arka plan rengini ayarlamak için "ekran" bölümünde "Tema rengi" seçeneğini belirleyin. Microsoft Edge, yeni sekme sayfasında rengin daha açık bir gölge kopyasını uygular ve bu da sayfanın yüksek okunabilirlik olmasını sağlar. 
 
@@ -209,12 +209,12 @@ Daha sonra, kuruluşların markasını Microsoft Edge 'e çekmek için aşağıd
 
 |    Anahtar    |    Değer    |
 |--------------------------------------------------------------------|------------|
-|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandLogo    |    Doğru    |
-|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandColor    |    Doğru    |
+|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandLogo    |    True    |
+|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandColor    |    True    |
 
 ## <a name="display-relevant-industry-news-on-new-tab-pages"></a>Yeni sekme sayfalarında ilgili sektör haberlerini görüntüleme
 
-Microsoft Edge Mobile içindeki yeni sekme sayfası deneyimini, kuruluşunuzla ilgili sektör haberlerini görüntüleyecek şekilde yapılandırabilirsiniz. Bu özelliği etkinleştirdiğinizde, Microsoft Edge Mobile kuruluşunuzun etki alanı adını kuruluşunuz, kuruluşunuzun sektör ve rakipler hakkında Web 'den toplamak için kullanır. böylece kullanıcılarınız, tüm merkezi yeni Microsoft Edge içindeki sekme sayfaları. Sektör Haberleri varsayılan olarak kapalıdır ve kuruluşunuz için bu uygulamayı kabul etmek için kullanabilirsiniz. 
+Microsoft Edge Mobile içindeki yeni sekme sayfası deneyimini, kuruluşunuzla ilgili sektör haberlerini görüntüleyecek şekilde yapılandırabilirsiniz. Bu özelliği etkinleştirdiğinizde, Microsoft Edge Mobile kuruluşunuzun etki alanı adını kuruluşunuz, kuruluşunuzun sektör ve rakipler hakkında Web 'den toplamak için kullanır, böylece kullanıcılarınız ilgili dış haberleri Microsoft Edge içindeki Merkezi yeni sekme sayfalarından bulabilir. Sektör Haberleri varsayılan olarak kapalıdır ve kuruluşunuz için bu uygulamayı kabul etmek için kullanabilirsiniz. 
 
 |    Anahtar    |    Değer    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
@@ -236,7 +236,7 @@ Yönetilen yer imlerini yapılandırmak için aşağıdaki anahtar/değer çifti
 
 |    Anahtar    |    Değer    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com. Microsoft. Intune. mam. managedbrowser. yer imleri    |    Bu yapılandırmanın değeri, yer işaretlerinin bir listesidir. Her yer işareti, yer işareti başlığından ve yer işareti URL 'sinden oluşur. Başlığı ve URL 'YI `|` karakteriyle ayırın.      Örnek:<br>`Microsoft Bing|https://www.bing.com`<br>Birden çok yer işaretini yapılandırmak için, her çifti çift karakterle ayırın `||`.<p>Örnek:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
+|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Bu yapılandırmanın değeri, yer işaretlerinin bir listesidir. Her yer işareti, yer işareti başlığından ve yer işareti URL 'sinden oluşur. Başlığı ve URL 'YI `|` karakterle ayırın.      Örnek:<br>`Microsoft Bing|https://www.bing.com`<br>Birden çok yer işaretini yapılandırmak için, her çifti çift karakterle `||`ayırın.<p>Örnek:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
 ## <a name="display-myapps-within-microsoft-edge-bookmarks"></a>Microsoft Edge yer işaretleri içinde Uygulamaps 'Leri görüntüleme
 
@@ -262,7 +262,7 @@ Microsoft Edge için izin verilen veya engellenen bir site listesini yapılandı
 
 |    Anahtar    |    Değer    |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    Aşağıdakilerden birini seçin:<p>1. izin verilen URL 'Leri belirtin (yalnızca bu URL 'Lere izin verilir; başka sitelere erişilemez):<br>`com.microsoft.intune.mam.managedbrowser.AllowListURLs`<p>2. Engellenen URL 'Leri belirtin (diğer tüm sitelere erişilebilir):<br>`com.microsoft.intune.mam.managedbrowser.BlockListURLs`    |    Bir anahtara karşılık gelen değer bir URL listesidir. İzin vermek veya engellemek istediğiniz tüm URL 'Leri, kanal `|` karakteriyle ayırarak tek bir değer olarak girersiniz.<br>**Örnekler**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`  |
+|    Aşağıdakilerden birini seçin:<p>1. izin verilen URL 'Leri belirtin (yalnızca bu URL 'Lere izin verilir; başka sitelere erişilemez):<br>`com.microsoft.intune.mam.managedbrowser.AllowListURLs`<p>2. Engellenen URL 'Leri belirtin (diğer tüm sitelere erişilebilir):<br>`com.microsoft.intune.mam.managedbrowser.BlockListURLs`    |    Bir anahtara karşılık gelen değer bir URL listesidir. İzin vermek veya engellemek istediğiniz tüm URL’leri dikey çubuk `|` karakteriyle ayrılan tek bir değer olarak girin.<br>**Örnekler**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`  |
 
 Tanımlı izin verilenler listesi veya engellenenler listesi ayarlarından bağımsız olarak aşağıdaki sitelere her zaman izin verilir:
 - `https://*.microsoft.com/*`
@@ -276,20 +276,20 @@ Tanımlı izin verilenler listesi veya engellenenler listesi ayarlarından bağ�
 ### <a name="url-formats-for-allowed-and-blocked-site-list"></a>İzin verilen ve engellenen site listesi için URL biçimleri 
 İzin verilen/Engellenen siteler listelerinizi oluşturmak için çeşitli URL biçimleri kullanabilirsiniz. Bu izin verilen desenler aşağıdaki tabloda ayrıntılı olarak verilmiştir. Başlamadan önce bazı notlar: 
 - **Http://** veya **https://** ile tüm URL 'leri listeye girerken ön ek olduğunuzdan emin olun.
-- Aşağıdaki izin verilen desenler listesindeki kurallara göre joker karakter sembolünü (\*) kullanabilirsiniz.
-- Joker karakter, ana bilgisayar adının tamamını (noktalarla ayırarak) veya yolun tüm parçalarını (eğik çizgi ile ayrılmış olarak) eşleştirebilir. Örneğin **, `http://*contoso.com` desteklenmez.**
+- Aşağıdaki izin verilen desenler listesindeki kurallara göre\*joker karakter simgesini () kullanabilirsiniz.
+- Joker karakter, ana bilgisayar adının tamamını (noktalarla ayırarak) veya yolun tüm parçalarını (eğik çizgi ile ayrılmış olarak) eşleştirebilir. Örneğin `http://*contoso.com` **, desteklenmez.**
 - Adreste bağlantı noktası numaraları belirtebilirsiniz. Bir bağlantı noktası numarası belirtmezseniz, kullanılan değerler şöyle olacaktır:
   - http için bağlantı noktası 80
   - https için bağlantı noktası 443
 - Bağlantı noktası numarası için joker karakter kullanılması **desteklenmez.** Örneğin `http://www.contoso.com:*` ve `http://www.contoso.com:*/` desteklenmez. 
 
-    |    URL    |    Details    |    Eşleşir    |    Eşleşmez    |
+    |    URL'si    |    Ayrıntılar    |    Eşleşmeler    |    Eşleşmez    |
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
     |    `http://www.contoso.com`    |    Tek bir sayfayla eşleşir    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Tek bir sayfayla eşleşir    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
     |    `http://www.contoso.com/*;`   |    `www.contoso.com` ile başlayan tüm URL’lerle eşleşir    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
-    |    `http://*.contoso.com/*`    |    `contoso.com` altındaki tüm alt etki alanlarını eşleştirir    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`
-    |    `http://*contoso.com/*`    |    `contoso.com/` ile biten tüm alt etki alanlarını eşleştirir    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
+    |    `http://*.contoso.com/*`    |    Altındaki tüm alt etki alanlarını eşleştirir`contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`
+    |    `http://*contoso.com/*`    |    Şununla biten tüm alt etki alanlarını eşleştirir`contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
     `http://www.contoso.com/images`    |    Tek bir klasörle eşleşir    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
     |    `http://www.contoso.com:80`    |    Bir bağlantı noktası numarası kullanarak tek bir sayfayla eşleşir    |    `http://www.contoso.com:80`    |         |
     |    `https://www.contoso.com`    |    Güvenli tek bir sayfayla eşleşir    |    `https://www.contoso.com`    |    `http://www.contoso.com`    |
@@ -320,7 +320,7 @@ Bu yazılım geçişlerine izin verilip verilmeyeceğini yapılandırmak için a
 
 ## <a name="open-restricted-links-directly-in-inprivate-tab-pages"></a>Kısıtlanmış bağlantıları doğrudan InPrivate sekme sayfalarında aç
 
-Sınırlı bağlantıların, kullanıcılara daha sorunsuz bir gözatma deneyimi sağlayan, InPrivate göz atmaya doğrudan açılması gerektiğini yapılandırabilirsiniz. Bu, kullanıcılara bir siteyi görüntülemek için kişisel bağlamlarına geçiş yapmak zorunda olma adımını kaydeder. InPrivate Gözatma yönetilmeyen olarak kabul edilir. bu nedenle, kullanıcılar InPrivate gözatma modunu kullanırken erişemez.  Note: Bu ayarın etkili olması Için Yukarıdaki ayarı **true**olarak `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock` yapılandırmış olmanız da gerekir.
+Sınırlı bağlantıların, kullanıcılara daha sorunsuz bir gözatma deneyimi sağlayan, InPrivate göz atmaya doğrudan açılması gerektiğini yapılandırabilirsiniz. Bu, kullanıcılara bir siteyi görüntülemek için kişisel bağlamlarına geçiş yapmak zorunda olma adımını kaydeder. InPrivate Gözatma yönetilmeyen olarak kabul edilir. bu nedenle, kullanıcılar InPrivate gözatma modunu kullanırken erişemez.  Note: Bu ayarın etkili olması Için Yukarıdaki ayarı `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock` **doğru**olarak yapılandırmış olmanız gerekir.
 
 |    Anahtar    |    Değer    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -374,7 +374,7 @@ Kuruluşunuz yüksek düzeyde düzenlenmiş bir sektörde çalışır veya kulla
 InPrivate ve MSA taramayı engellemeye ek olarak, yalnızca Kullanıcı AAD hesabıyla oturum açtığında Microsoft Edge kullanımına izin verebilirsiniz. Bu özellik yalnızca MDM 'ye kayıtlı kullanıcılar için kullanılabilir. Bu ayarı yapılandırma hakkında daha fazla bilgi edinebilirsiniz:
 
 >[!NOTE]
-> `com.microsoft.intune.mam.managedbrowser.disabledFeatures`, aynı anda birden çok özelliği devre dışı bırakmak için kullanılabilir. Örneğin, hem InPrivate hem de parolayı devre dışı bırakmak için `inprivate|password`kullanın.
+> `com.microsoft.intune.mam.managedbrowser.disabledFeatures`aynı anda birden çok özelliği devre dışı bırakmak için kullanılabilir. Örneğin, hem InPrivate hem de parolayı devre dışı bırakmak için `inprivate|password`kullanın.
 
 ## <a name="configure-microsoft-edge-as-a-kiosk-app-on-android-devices"></a>Android cihazlarda Microsoft Edge 'i bilgi noktası uygulaması olarak yapılandırma
 
@@ -418,12 +418,12 @@ Microsoft Edge için ek güvenlik ve gizlilik konuları aşağıda verilmiştir:
 - Microsoft Edge, kullanıcıların cihazlarında yerel tarayıcı için ayarlandığı ayarları tüketmez, çünkü Microsoft Edge bu ayarlara erişemez.
 - Microsoft Edge ile ilişkili bir uygulama koruma ilkesinde erişim için **basıt PIN gerektir** veya erişim **için şirket kimlik bilgilerini gerektir** seçeneğini yapılandırabilirsiniz. Bir kullanıcı kimlik doğrulama sayfasındaki yardım bağlantısını seçerse, ilkede engellenen bir listeye eklenmediğine bakılmaksızın herhangi bir internet sitesine göz atabilir.
 - Microsoft Edge, sitelere yalnızca doğrudan erişildiğinde erişimi engelleyebilir. Kullanıcılar, siteye erişmek için ara hizmetler (örneğin bir çeviri hizmeti) kullandıklarında erişimi engellemez.
-- Kimlik doğrulamasına izin vermek ve Intune belgelerine erişmek için * **. Microsoft.com** , izin verilenler veya engellenenler listesi ayarlarından muaf tutulur. Her zaman izin verilir.
+- Kimlik doğrulamasına izin vermek ve Intune belgelerine erişmek için ***. Microsoft.com** , izin verilenler veya engellenenler listesi ayarlarından muaf tutulur. Her zaman izin verilir.
 - Kullanıcılar, veri toplamayı kapatabilir. Microsoft, ürün ve hizmetlerini geliştirmek için Managed Browser’ın performansı ve kullanımı hakkında otomatik olarak anonim bilgiler toplar. Kullanıcılar cihazlarındaki **Kullanım Verileri** ayarını kullanarak veri toplamayı kapatabilir. Bu verilerin toplanması üzerinde denetiminiz yoktur. İOS cihazlarda, kullanıcıların ziyaret ettiği veya güvenilmeyen bir sertifikaya sahip olan Web siteleri açılamaz.
 
 ## <a name="restrict-microsoft-edge-use-to-a-work-or-school-account"></a>Microsoft Edge kullanımını bir iş veya okul hesabıyla sınırlayın
 
-En büyük ve yüksek oranda düzenlenen müşterilerinin veri güvenliği ve uyumluluk ilkeleri, Microsoft 365 değerine göre önemli bir değerdir. Bazı şirketlerin kurumsal ortamlarında tüm iletişim bilgilerini yakalama gereksinimi vardır ve ayrıca cihazların yalnızca kurumsal iletişimler için kullanıldığından emin olun. Bu gereksinimleri desteklemek için iOS ve Android 'de kayıtlı cihazlarda Android için Microsoft Edge, yalnızca tek bir şirket hesabının iOS ve Android için uç kapsamında sağlanmasını sağlayacak şekilde yapılandırılabilir.
+En büyük ve yüksek oranda düzenlenen müşterilerinin veri güvenliği ve uyumluluk ilkeleri, Microsoft 365 değerine göre önemli bir değerdir. Bazı şirketlerin kurumsal ortamlarında tüm iletişim bilgilerini yakalama gereksinimi vardır ve ayrıca cihazların yalnızca kurumsal iletişimler için kullanıldığından emin olun. Bu gereksinimleri desteklemek için iOS ve Android 'de kayıtlı cihazlarda Android için Edge, yalnızca tek bir şirket hesabının iOS ve Android için uç kapsamında sağlanmasını sağlayacak şekilde yapılandırılabilir.
 
 Aşağıdaki kuruluş izin verilen hesaplar modu ayarını yapılandırma hakkında daha fazla bilgi edinebilirsiniz:
 
@@ -432,4 +432,4 @@ Aşağıdaki kuruluş izin verilen hesaplar modu ayarını yapılandırma hakkı
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Uygulama koruma ilkeleri nedir?](app-protection-policy.md) 
+- [Uygulama koruma ilkeleri nelerdir?](app-protection-policy.md) 

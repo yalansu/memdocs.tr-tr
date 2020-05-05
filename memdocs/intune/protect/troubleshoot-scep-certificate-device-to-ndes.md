@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55660497751f1961c9c579ba1d800900189db782
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 53f33b659e45720dc84b7c38ca54fec0e3768a60
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526470"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126092"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Microsoft Intune 'daki SCEP sertifika profilleri için cihazdan NDES sunucu iletişimi sorunlarını giderme
 
@@ -40,7 +40,7 @@ IIS günlükleri tüm platformlar için aynı tür girdileri içerir.
 
    `fe80::f53d:89b8:c3e8:5fec%13 GET /certsrv/mscep/mscep.dll/pkiclient.exe operation=GetCACaps&message=default 80 - fe80::f53d:89b8:c3e8:5fec%13 Mozilla/4.0+(compatible;+Win32;+NDES+client) - 200 0 0 186 0.`
 
-   Ve
+   And
 
    `fe80::f53d:89b8:c3e8:5fec%13 GET /certsrv/mscep/mscep.dll/pkiclient.exe operation=GetCACert&message=default 80 - fe80::f53d:89b8:c3e8:5fec%13 Mozilla/4.0+(compatible;+Win32;+NDES+client) - 200 0 0 3567 0`
 
@@ -76,8 +76,8 @@ IIS günlükleri tüm platformlar için aynı tür girdileri içerir.
 Anahtar girişleri aşağıdaki örnek metin dizelerini içerir:
 
 - 1 istek var
-- Https://\<Server > 'ye GetCACaps (CA) gönderilirken ' 200 OK ' alındı. msappproxy. net/certsrv/mscep/mscep. dll? Operation = GetCACaps & Message = CA
-- [DN = CN =\<Kullanıcı adı >; seri = 1] öğesine ait anahtar kullanılarak pkiMessage imzalanıyor
+- Https://\<Server> 'e GetCACaps (CA) gönderilirken ' 200 OK ' alındı. msappproxy.net/certsrv/mscep/mscep.dll?Operation=GetCACaps&iletisi = CA
+- [DN = CN =\<username>; seri = 1] öğesine ait anahtar kullanılarak pkiMessage imzalanıyor
 
 
 Bağlantı, NDES sunucusunun%systemdrive%\ınetpub\logs\logfiles\w3svc1\ klasöründe IIS tarafından da günlüğe kaydedilir. Aşağıda bir örnek verilmiştir:
@@ -110,13 +110,13 @@ Anahtar girişleri aşağıdaki örnek metin dizelerini içerir:
 
 ### <a name="windows-devices"></a>Windows cihazları
 
-NDES bağlantısı kuran bir Windows cihazında, Windows Olay Görüntüleyicisi cihazları görüntüleyebilir ve başarılı bir bağlantının göstergelerine bakabilirsiniz. Cihazlarda bir olay KIMLIĞI **36** olarak kaydedilir *DeviceManagement-Enterprise-Diagnostics-*  > **yönetici** günlüğü sağlayın.
+NDES bağlantısı kuran bir Windows cihazında, Windows Olay Görüntüleyicisi cihazları görüntüleyebilir ve başarılı bir bağlantının göstergelerine bakabilirsiniz. Cihazlarda bir olay kimliği **36** olarak kaydedilir *DeviceManagement-Enterprise-Diagnostics-* > **yönetici** günlüğü sağla.
 
 Günlüğü açmak için:
 
 1. Cihazda, Windows Olay Görüntüleyicisi açmak için **eventvwr. msc** ' yi çalıştırın.
 
-2. **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **admin** > **uygulamalar ve hizmet günlükleri '** ni genişletin.
+2. **Uygulama ve hizmet günlükleri** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **admin**' i genişletin.
 
 3. Anahtar **SCEP: sertifika isteği başarıyla oluşturuldu**ile aşağıdaki örneğe benzeyen olay **36**' i arayın:
 
@@ -151,7 +151,7 @@ Aşağıdaki örneğe benzeyen bağlantılar, 500 durum koduyla, *bir Istemcinin
 
 3. Sağ bölmedeki **kimlik doğrulamasından sonra Istemcinin özelliklerini Al ' a** çift tıklayın.
 
-4. **Kullanıcı veya Grup Ekle..** . ' ye tıklayın, **Seçilecek nesne adlarını girin kutusuna** **IIS_IURS** girin ve ardından **Tamam**' a tıklayın.
+4. **Kullanıcı veya Grup Ekle..**. ' ye tıklayın, **Seçilecek nesne adlarını girin kutusuna** **IIS_IURS** girin ve ardından **Tamam**' a tıklayın.
 
 5. **Tamam**'a tıklayın.
 
@@ -161,7 +161,7 @@ Aşağıdaki örneğe benzeyen bağlantılar, 500 durum koduyla, *bir Istemcinin
 
 SCEP sertifika profilinde belirtilen URL 'YI sınamak için aşağıdaki adımları kullanın.
 
-1. Intune 'da, SCEP sertifika profilinizi düzenleyin ve sunucu URL 'sini kopyalayın. URL *https://contoso.com/certsrv/mscep/msecp.dll* benzemelidir.
+1. Intune 'da, SCEP sertifika profilinizi düzenleyin ve sunucu URL 'sini kopyalayın. URL şuna benzemelidir *https://contoso.com/certsrv/mscep/mscep.dll*.
 
 2. Bir Web tarayıcısı açın ve ardından bu SCEP sunucu URL 'sine gidin. Sonuç şu şekilde olmalıdır: **http hatası 403,0 – yasak**. Bu sonuç URL 'nin doğru şekilde çalıştığını gösterir.
 
@@ -202,7 +202,7 @@ Bu sorun genellikle IIS 'deki **SCEP** uygulama havuzu başlamadığı için olu
 
 SCEP uygulama havuzu başlatılmazsa, sunucusundaki uygulama olay günlüğünü kontrol edin:
 
-1. Cihazda, **Olay Görüntüleyicisi** açmak ve **Windows günlükleri** > **uygulamasına**gitmek için **eventvwr. msc** ' yi çalıştırın.
+1. Cihazda, **Olay Görüntüleyicisi** açmak ve **Windows günlükleri** > **uygulaması**' na gitmek için **eventvwr. msc** ' yi çalıştırın.
 
 2. Aşağıdaki örneğe benzer bir olay arayın. Bu, bir istek alındığında uygulama havuzunun çöktüğü anlamına gelir:
 
@@ -224,7 +224,7 @@ SCEP uygulama havuzu başlatılmazsa, sunucusundaki uygulama olay günlüğünü
 
   **Çözüm**: ara sertifikaları Güvenilen kök sertifika yetkilileri sertifika deposundan kaldırın ve ardından NDES sunucusunu yeniden başlatın.
   
-  Güvenilen kök sertifika yetkilileri sertifika deposundaki tüm ara sertifikaları belirlemek için aşağıdaki PowerShell cmdlet 'ini çalıştırın: `Get-Childitem -Path cert:\LocalMachine\root -Recurse | Where-Object {$_.Issuer -ne $_.Subject}`
+  Güvenilen kök sertifika yetkilileri sertifika deposundaki tüm ara sertifikaları belirlemek için aşağıdaki PowerShell cmdlet 'ini çalıştırın:`Get-Childitem -Path cert:\LocalMachine\root -Recurse | Where-Object {$_.Issuer -ne $_.Subject}`
 
   Değerleri tarafından **verilen ve** **çıkarılan** bir sertifika, kök bir sertifikadır. Aksi takdirde, bu bir ara sertifikadır.
 
@@ -234,7 +234,7 @@ SCEP uygulama havuzu başlatılmazsa, sunucusundaki uygulama olay günlüğünü
 
   **Çözüm**: daha fazla bilgi toplamak için ek günlüğe yazmayı etkinleştirin:
   1. Olay Görüntüleyicisi açın, **görüntüle**' ye tıklayın, **analitik ve hata ayıklama günlüklerini göster** seçeneğinin işaretli olduğundan emin olun.
-  2. **Uygulamalar ve hizmetler günlüklerine** giderek **Microsoft** > **Windows** > **CAPI2** > **Işletimsel** > , **İşlemsel**' a sağ tıklayın ve **günlüğü etkinleştir**' e tıklayın.
+  2. **Uygulamalar ve hizmetler günlüklerine** > **Microsoft** > **Windows** > **CAPI2** > **operasyonel**, **işletimsel**öğesine sağ tıklayın ve **günlüğü etkinleştir**' e tıklayın.
   3. CAPı2 günlüğü etkinleştirildikten sonra sorunu yeniden oluşturun ve sorunu gidermek için olay günlüğünü inceleyin.
 
 - **Neden 3**: **Certificateregistrationsvc** 'de IIS izninin **Windows kimlik doğrulaması** etkinleştirilmiş olması.
@@ -252,9 +252,9 @@ SCEP uygulama havuzu başlatılmazsa, sunucusundaki uygulama olay günlüğünü
      - Mevcut Sertifikayı Yenile
      - Benzer özellikleri (konu, EKU, anahtar türü ve uzunluğu vb.) içeren farklı bir sertifika seçin
      - Yeni bir sertifika Kaydet
-  2. Geçerli değerleri yedeklemek için `NDESPolicy` kayıt defteri anahtarını dışarı aktarın.
-  3. `NDESCertThumbprint` kayıt defteri değerinin verisini yeni sertifikanın parmak iziyle değiştirin, tüm boşlukları kaldırarak ve metni küçük harfe dönüştürerek.
-  4. NDES IIS uygulama havuzlarını yeniden başlatın veya yükseltilmiş bir komut isteminden `iisreset` yürütün.
+  2. Geçerli değerleri `NDESPolicy` yedeklemek için kayıt defteri anahtarını dışarı aktarın.
+  3. `NDESCertThumbprint` Kayıt defteri değerinin verisini yeni sertifikanın parmak iziyle değiştirin, tüm boşlukları kaldırarak ve metni küçük harfe dönüştürerek.
+  4. NDES IIS uygulama havuzlarını yeniden başlatın veya yükseltilmiş `iisreset` bir komut isteminden yürütün.
 
 #### <a name="gatewaytimeout"></a>GatewayTimeout
 
@@ -268,13 +268,13 @@ SCEP sunucu URL 'sine gözattığınızda, şu hatayı alırsınız:
 
 #### <a name="http-414-request-uri-too-long"></a>HTTP 414 Isteği-URI çok uzun
 
-SCEP sunucu URL 'sine gözattığınızda şu hatayı alırsınız: `HTTP 414 Request-URI Too Long`
+SCEP sunucu URL 'sine gözattığınızda, şu hatayı alırsınız:`HTTP 414 Request-URI Too Long`
 
 - **Neden**: IIS istek FILTRELEME, NDES hizmetinin aldığı uzun URL 'leri (sorgular) destekleyecek şekilde yapılandırılmamış. Bu destek, [NDES HIZMETINI](certificates-scep-configure.md#configure-the-ndes-service) SCEP için altyapınızla birlikte kullanmak üzere yapılandırdığınızda yapılandırılır.
 
 - **Çözüm**: uzun URL 'ler için desteği yapılandırın.
 
-  1. NDES sunucusunda, IIS Yöneticisi ' ni açın, **varsayılan Web sitesi** ' ni seçin > istek **filtreleme** > **özellik ayarlarını** Düzenle ' yi seçerek **istek filtreleme ayarlarını Düzenle** sayfasını açın.
+  1. NDES sunucusunda, IIS Yöneticisi ' ni açın, **varsayılan Web sitesi** > **istek filtreleme** > **özellik ayarını** Düzenle ' yi seçerek **istek filtreleme ayarlarını Düzenle** sayfasını açın.
 
   2. Aşağıdaki ayarları yapılandırın:
      - **URL uzunluğu üst sınırı (bayt)** = 65534
@@ -298,11 +298,11 @@ Azure AD Uygulama Ara Sunucusu yapılandırıldı. SCEP sunucu URL 'sine gözatt
 
 `This page can't be displayed`
 
-- **Neden**: Bu sorun, SCEP dış URL 'Si Uygulama Proxy yapılandırmasında yanlış olduğunda oluşur. Bu URL 'ye bir örnek https://contoso.com/certsrv/mscep/mscep.dll.
+- **Neden**: Bu sorun, SCEP dış URL 'Si Uygulama Proxy yapılandırmasında yanlış olduğunda oluşur. Bu URL 'ye bir örnek `https://contoso.com/certsrv/mscep/mscep.dll`.
 
   **Çözüm**: uygulama ara sunucusu yapılandırmasındaki SCEP dış URL 'si için varsayılan *Yourtenant.msappproxy.net* etki alanını kullanın.
 
-#### <a name="internal-server-error"></a>500-iç sunucu hatası
+#### <a name="500---internal-server-error"></a><a name="internal-server-error"></a>500-iç sunucu hatası
 
 SCEP sunucu URL 'sine gözattığınızda, şu hatayı alırsınız:
 
@@ -324,7 +324,7 @@ SCEP sunucu URL 'sine gözattığınızda, şu hatayı alırsınız:
 
   3. **Bilgisayar hesabı**için Sertifikalar MMC 'yi açın.
 
-  4. **Kişisel**' i genişletin, **Sertifikalar**' a sağ tıklayın ve ardından **Yeni sertifika iste** > **Tüm görevler** ' i seçin
+  4. **Kişisel**' i genişletin, **Sertifikalar**' a sağ tıklayın ve ardından **Tüm görevler** > **Yeni sertifika iste**' yi seçin.
 
   5. **Sertifika iste** sayfasında, **Cep şifreleme**' yi seçin, ardından **Bu sertifikaya kaydolmak için daha fazla bilgi gerekiyor. Ayarları yapılandırmak için buraya tıklayın**.
 
@@ -338,7 +338,7 @@ SCEP sunucu URL 'sine gözattığınızda, şu hatayı alırsınız:
 
      Exchange kayıt aracısı (çevrimdışı istek) sertifikasına kaydoldığınızda, kullanıcı bağlamında yapılmalıdır. Bu sertifika şablonunun **konu türü** **Kullanıcı**olarak ayarlandığından.
 
-  9. **Kişisel**' i genişletin, **Sertifikalar**' a sağ tıklayın ve ardından **Yeni sertifika iste** > **Tüm görevler** ' i seçin
+  9. **Kişisel**' i genişletin, **Sertifikalar**' a sağ tıklayın ve ardından **Tüm görevler** > **Yeni sertifika iste**' yi seçin.
 
   10. **Sertifika iste** sayfasında **Exchange kayıt aracısı (çevrimdışı istek)** öğesini seçin ve ardından **Bu sertifikaya kaydolmak için daha fazla bilgi gerekiyor. Ayarları yapılandırmak için buraya tıklayın**.
 
@@ -346,7 +346,7 @@ SCEP sunucu URL 'sine gözattığınızda, şu hatayı alırsınız:
 
   11. **Sertifika özellikleri**' nde **Konu** sekmesine tıklayın, **konu adını** adım 2 sırasında topladığınız bilgilerle girin, **Ekle**' ye tıklayın.
 
-      ![Sertifika özellikleri](../protect/media/troubleshoot-scep-certificate-device-to-ndes/certificate-properties.png)
+      ![Sertifika Özellikleri](../protect/media/troubleshoot-scep-certificate-device-to-ndes/certificate-properties.png)
 
       **Özel anahtar** sekmesini seçin, **özel anahtarı dışarı aktarılabilir yap**' ı seçin ve ardından **Tamam**' a tıklayın.
 
@@ -360,7 +360,7 @@ SCEP sunucu URL 'sine gözattığınızda, şu hatayı alırsınız:
 
   15. Sertifikalar MMC ' de, yeni sertifikaların her biri için aşağıdaki işlemi yapın:
 
-      Sertifikaya sağ tıklayın, **Tüm görevler** > **özel anahtarları Yönet**' e tıklayın, NDES hizmet hesabına **Oku** izni ekleyin.
+      Sertifikaya sağ tıklayın, **Tüm görevler** > **özel anahtarları Yönet**, NDES hizmet hesabına **Oku** izni Ekle ' ye tıklayın.
 
   16. IIS 'i yeniden başlatmak için **iisreset** komutunu çalıştırın.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,26 +16,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8838606a6f36ccbbbdee2e081f242035f4f3b61
-ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
+ms.openlocfilehash: 3da418db81a315e4102b63c34ffc557646d36f70
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81007751"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126054"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Intune 'da SCEP sertifika profilleri oluşturma ve atama
 
 Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destekleyecek şekilde [yapılandırdıktan](certificates-scep-configure.md) sonra, Intune 'da kullanıcılara ve cihazlara SCEP sertifika profilleri oluşturup atayabilirsiniz.
 
-> [!IMPORTANT]  
-> SCEP sertifika profilleri oluşturmadan önce, SCEP sertifika profilini kullanacak cihazların güvenilen kök sertifika yetkilinizin (CA) güvenmesi gerekir. Intune 'da güvenilen bir *sertifika profili* kullanarak güvenilen sertifika profili hakkında bilgi edinmek Için GÜVENILEN kök CA sertifikasını kullanıcılara ve cihazlara sağlama konusuna bakın. [Güvenilen kök CA sertifikasını dışarı aktarma](certificates-configure.md#export-the-trusted-root-ca-certificate) ve [Güvenilen sertifika profilleri oluşturma](certificates-configure.md#create-trusted-certificate-profiles) ' da *Intune 'da kimlik doğrulaması için sertifikaları kullanma*.
-
+> [!IMPORTANT]
+> Cihazların bir SCEP sertifika profili kullanması için, güvenilen kök sertifika yetkilinizin (CA) güvenmesi gerekir. Kök CA 'nın güveni, [güvenilir bir sertifika profilinin](../protect/certificates-configure.md#create-trusted-certificate-profiles) , SCEP sertifika profilini alan aynı gruba dağıtılmasıyla en iyi şekilde belirlenir. Güvenilen sertifika profilleri, güvenilen kök CA sertifikasını temin edin.
 
 ## <a name="create-a-scep-certificate-profile"></a>Bir SCEP sertifika profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Profil oluşturma** > **cihaz** > **yapılandırma profilleri** ' ne gidin ve bu seçeneği belirleyin.
+2. Seçin ve **cihazlar** > **yapılandırma profilleri** > **Profil oluştur**' a gidin.
 
 3. Aşağıdaki özellikleri girin:
    - **Platform**: cihazlarınızın platformunu seçin.
@@ -55,9 +54,9 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
 
 5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
    - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı *şirketin tamamına ait SCEP profilidir*.
-   - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+   - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
 
-6. **İleri**'yi seçin.
+6. **İleri**’yi seçin.
 
 7. **Yapılandırma ayarları**' nda, aşağıdaki yapılandırmaları doldurun:
 
@@ -77,7 +76,7 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
      Intune 'un sertifika isteğinde konu adını otomatik olarak nasıl oluşturduğunu seçin. Konu adı biçimi için seçenekler, **Kullanıcı** veya **cihaz**' ı seçtiğiniz sertifika türüne bağlıdır.
 
      > [!NOTE]
-     > Elde edilen sertifika Imzalama Isteğindeki (CSR) konu adı, kaçış karakteri olarak şu karakterlerden birini içerdiğinde (bir ters eğik çizgi \\), sertifika almak için SCEP kullanmanın [bilinen bir sorunu](#avoid-certificate-signing-requests-with-escaped-special-characters) vardır:
+     > Elde edilen sertifika [known issue](#avoid-certificate-signing-requests-with-escaped-special-characters) imzalama ISTEĞINDEKI (CSR) konu adı, kaçış karakteri olarak aşağıdaki karakterlerden birini içerdiğinde (bir ters eğik çizgiyle \\devam eder), sertifika almak için SCEP kullanmanın bilinen bir sorunu vardır:
      > - \+
      > - ;
      > - ,
@@ -87,33 +86,33 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
 
        *Konu adı biçimi* için biçim seçenekleri şunları içerir:
 
-       - **Yapılandırılmamış**
+       - **Yapılandırılmadı**
        - **Ortak ad**
        - **E-postayı içeren ortak ad**
        - **E-posta olarak ortak ad**
        - **IMEI (Uluslararası Mobil Donanım Kimliği)**
        - **Seri numarası**
-       - **Özel**: Bu seçeneği işaretlediğinizde bir **Özel** metin kutusu da gösterilir. Bu alanı, değişkenler dahil özel bir konu adı biçimi girmek için kullanın. Özel biçim, şu iki değişkeni destekler: **Ortak Ad (CN)** ve **E-posta (E)** . **Ortak Ad (CN)** şu iki değerden biri olarak ayarlanabilir:
+       - **Özel**: Bu seçeneği işaretlediğinizde bir **Özel** metin kutusu da gösterilir. Bu alanı, değişkenler dahil özel bir konu adı biçimi girmek için kullanın. Özel biçim, şu iki değişkeni destekler: **Ortak Ad (CN)** ve **E-posta (E)**. **Ortak Ad (CN)** şu iki değerden biri olarak ayarlanabilir:
 
-         - **CN = {{username}}** : kullanıcının Kullanıcı adı (örneğin, ocetikan).
-         - **CN = {{userPrincipalName}}** : kullanıcının janedoe@contoso.comgibi Kullanıcı asıl adı.\*
-         - **CN={{AAD_Device_ID}}** : Azure Active Directory’ye (AD) yeni bir cihaz kaydettiğinizde atanan bir kimlik. Bu kimlik genellikle Azure AD’de kimlik doğrulamak için kullanılır.
-         - **CN = {{SERIALNUMBER}}** : genellikle üretici tarafından bir cihazı tanımlamak için kullanılan benzersiz seri numarası (sn).
-         - **CN = {{ımekarmsayı}}** : bir cep telefonu tanımlamak Için kullanılan uluslararası mobil ekipman KIMLIĞI (IMEI) benzersiz numarası.
-         - **CN = {{OnPrem_Distinguished_Name}}** : *CN = Gamze Etikan, OU = USERACCOUNTS, DC = Corp, DC = contoso, DC = com*gibi virgülle ayrılmış göreli ayırt edici adların sırası.
+         - **CN = {{username}}**: kullanıcının Kullanıcı adı (örneğin, ocetikan).
+         - **CN = {{userPrincipalName}}**: kullanıcının Kullanıcı asıl adı, örneğin janedoe@contoso.com.\*
+         - **CN={{AAD_Device_ID}}**: Azure Active Directory’ye (AD) yeni bir cihaz kaydettiğinizde atanan bir kimlik. Bu kimlik genellikle Azure AD’de kimlik doğrulamak için kullanılır.
+         - **CN = {{SERIALNUMBER}}**: genellikle üretici tarafından bir cihazı tanımlamak için kullanılan benzersiz seri numarası (sn).
+         - **CN = {{ımekarmsayı}}**: bir cep telefonu tanımlamak Için kullanılan uluslararası mobil ekipman KIMLIĞI (IMEI) benzersiz numarası.
+         - **CN = {{OnPrem_Distinguished_Name}}**: *CN = Gamze Etikan, OU = USERACCOUNTS, DC = Corp, DC = contoso, DC = com*gibi virgülle ayrılmış göreli ayırt edici adların sırası.
 
            *{{OnPrem_Distinguished_Name}}* değişkenini kullanmak Için, Azure AD 'nize [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) kullanarak *onpremisesdistinguishedname* Kullanıcı özniteliğini eşitlediğinizden emin olun.
 
-         - **CN = {{onPremisesSamAccountName}}** : Yöneticiler, *adlı BIR*özniteliğe Azure AD connect kullanarak sAMAccountName ÖZNITELIĞINI Active Directory 'den Azure AD 'ye eşitleyebilir. Intune, bu değişkeni bir sertifika konusunun sertifika verme isteğinin bir parçası olarak kullanabilir. SamAccountName özniteliği, Windows 'un önceki bir sürümünden (Windows 2000 öncesi) istemcileri ve sunucuları desteklemek için kullanılan Kullanıcı oturum açma adıdır. Kullanıcı oturum açma adı biçimi: EtkiAlanıAdı \ *testuser*veya yalnızca *testuser*.
+         - **CN = {{onPremisesSamAccountName}}**: Yöneticiler, *adlı BIR*özniteliğe Azure AD connect kullanarak sAMAccountName ÖZNITELIĞINI Active Directory 'den Azure AD 'ye eşitleyebilir. Intune, bu değişkeni bir sertifika konusunun sertifika verme isteğinin bir parçası olarak kullanabilir. SamAccountName özniteliği, Windows 'un önceki bir sürümünden (Windows 2000 öncesi) istemcileri ve sunucuları desteklemek için kullanılan Kullanıcı oturum açma adıdır. Kullanıcı oturum açma adı biçimi: EtkiAlanıAdı \ *testuser*veya yalnızca *testuser*.
 
             *{{OnPremisesSamAccountName}}* değişkenini kullanmak Için, Azure AD 'nize [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) kullanarak *onPremisesSamAccountName* User özniteliğini eşitlediğinizden emin olun.
 
          Bu değişkenlerin ve statik dizelerin bir veya birkaç tanesinin bir bileşimini kullanarak aşağıdaki gibi özel bir konu adı biçimi oluşturabilirsiniz:  
-         - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
+         - **CN={{KullanıcıAdı}},E={{EpostaAdresi}},OU=Mobil,O=Finans Grubu,L=Redmond,ST=Washington,C=US**
 
          Bu örnekte, CN ve E değişkenlerini kullanan bir konu adı biçimi ve kuruluş birimi, kuruluş, konum, durum ve ülke değerleri için dizeler bulunur. [CertStrToName işlevi](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx), bu işlevi ve desteklenen dizelerini açıklar.
          
-         Yalnızca Android cihaz sahibi profilleri Için \*, **CN = {{userPrincipalName}}** ayarı çalışmayacak. Android cihaz sahibi yalnızca kullanıcı olmayan cihazlar için kullanılabilir, bu profil kullanıcının Kullanıcı asıl adını alamaz. Kullanıcılar için bu seçeneğe gerçekten ihtiyaç duyuyorsanız, şu şekilde bir geçici çözüm kullanabilirsiniz: **CN = {{username}}@contoso.com** janedoe@contoso.com gibi, El Ile eklediğiniz kullanıcı adını ve etki alanını sağlar.
+         \*Yalnızca Android cihaz sahibi profilleri için **CN = {{userPrincipalName}}** ayarı çalışmayacak. Android cihaz sahibi yalnızca kullanıcı olmayan cihazlar için kullanılabilir, bu profil kullanıcının Kullanıcı asıl adını alamaz. Kullanıcılar için bu seçeneğe gerçekten ihtiyaç duyuyorsanız, şu şekilde bir geçici çözüm kullanabilirsiniz: **CN = {{username}\@} contoso.com** , Kullanıcı adı ve el ile eklediğiniz etki alanı gibijanedoe@contoso.com
 
       - **Cihaz sertifika türü**
 
@@ -171,11 +170,11 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
         - **{{Fullyıqualifieddomainname}}**
         - **{{MEıD}}**
 
-        Bir özniteliğe ilişkin bir değer belirtmek için, değişken adını küme ayraçları ile, sonra da bu değişken için olan metinle birlikte ekleyin. Örneğin, DNS özniteliği için bir değer **{{Azureaddeviceıd}}. domain. com** ' u *. domain.com* ise metindir. *Kullanıcı1* adlı bir Kullanıcı Için e-posta adresi {{Fullyıqualifieddomainname}} olarak görünebilirUser1@Contoso.com.
+        Bir özniteliğe ilişkin bir değer belirtmek için, değişken adını küme ayraçları ile, sonra da bu değişken için olan metinle birlikte ekleyin. Örneğin, DNS özniteliği için bir değer **{{Azureaddeviceıd}}. domain. com** ' u *. domain.com* ise metindir. *Kullanıcı1* adlı bir Kullanıcı Için e-posta adresi {{Fullyıqualifieddomainname}}User1@Contoso.comolarak görünebilir.
 
         > [!IMPORTANT]
         > - Bir cihaz sertifikası değişkeni kullanırken, değişken adını kaşlı ayraçlar {} içine alın.
-        > - Değişkeni izleyen metinde süslü ayraçları **{}** , kanal sembolleri **|** ve noktalı virgül **;** kullanmayın.
+        > - Değişkeni izleyen metinde süslü ayraçları **{}**, kanal **|** sembolleri ve noktalı virgül **;** kullanmayın.
         > - **IMEI**, **SerialNumber**ve **fullyıqualifieddomainname**gibi bir cihaz sertifikasının *Konu* veya *San* 'ı üzerinde kullanılan cihaz özellikleri, cihaza erişimi olan bir kişi tarafından sızılmış özelliklerdir.
         > - Bir cihazın, bu cihaza yüklemek için bir sertifika profilinde belirtilen tüm değişkenleri desteklemesi gerekir.  Örneğin, **{{IMEI}}** bir SCEP profilinin San 'ı içinde kullanılıyorsa ve IMEI numarası olmayan bir cihaza atanırsa, profil yüklenemez.
 
@@ -185,7 +184,7 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
 
      Örneğin, sertifika şablonunda sertifika geçerlilik süresi iki yılsa beş yıl değerini giremezsiniz ancak bir yıl değerini girebilirsiniz. Değerin, yayımlayan sertifika yetkilisinin sertifikası için kalan geçerlilik süresinden de düşük olması gerekir.
 
-   - **Anahtar depolama sağlayıcısı (KSP)** :
+   - **Anahtar depolama sağlayıcısı (KSP)**:
 
      *(İçin geçerlidir: Windows 8.1 ve üzeri, ve Windows 10 ve üzeri)*
 
@@ -203,7 +202,7 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
      - **Dijital imza**: Yalnızca anahtarın korunmasına bir dijital imza yardımcı olduğunda anahtar değişimine izin verir.
      - **Anahtar şifreleme**: Yalnızca anahtar şifreli olduğunda anahtar değişimine izin verir.
 
-   - **Anahtar boyutu (bit)** :
+   - **Anahtar boyutu (bit)**:
 
      Anahtarda bulunan bitlerin sayısını seçin.
 
@@ -221,23 +220,23 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
 
      Sertifikanın amaçlanan amacı için değer ekleyin. Çoğu durumda, Kullanıcı veya cihazın bir sunucuda kimliğini doğrulayabilmesi için sertifika *istemci kimlik doğrulaması* gerektirir. Gerektiğinde ek anahtar kullanımları ekleyebilirsiniz.
 
-   - **Yenileme eşiği (%)** :
+   - **Yenileme eşiği (%)**:
 
      Cihazın sertifikayı yenilemeyi istemesi için kalan sertifika ömrünün yüzdesini girin. Örneğin, 20 girerseniz, sertifikanın %80 ' ı dolduğunda sertifikanın yenilenmesi denenir. Yenileme başarılı olana kadar yenileme denemeleri devam eder. Yenileme, yeni bir ortak/özel anahtar çifti ile sonuçlanan yeni bir sertifika oluşturur.
 
    - **SCEP sunucu URL 'leri**:
 
-     SCEP aracılığıyla sertifika veren NDES sunucuları için bir veya daha fazla URL girin. Örneğin, *https://ndes.contoso.com/certsrv/mscep/mscep.dll* gibi bir ad girin. URL 'Ler, profille cihaza rastgele gönderildiğinden, yük dengeleme için gereken ek SCEP URL 'Leri ekleyebilirsiniz. SCEP sunucularından biri kullanılamıyorsa, SCEP isteği başarısız olur ve daha sonraki cihaz iadelerinde, sertifika isteği aşağı doğru aynı sunucuya göre yapılabilir.
+     SCEP aracılığıyla sertifika veren NDES sunucuları için bir veya daha fazla URL girin. Örneğin `https://ndes.contoso.com/certsrv/mscep/mscep.dll` gibi bir URI girebilirsiniz. URL 'Ler, profille cihaza rastgele gönderildiğinden, yük dengeleme için gereken ek SCEP URL 'Leri ekleyebilirsiniz. SCEP sunucularından biri kullanılamıyorsa, SCEP isteği başarısız olur ve daha sonraki cihaz iadelerinde, sertifika isteği aşağı doğru aynı sunucuya göre yapılabilir.
 
-8. **İleri**'yi seçin.
+8. **İleri**’yi seçin.
 
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili `US-NC IT Team` veya `JohnGlenn_ITDepartment`gıbı belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
-   **İleri**'yi seçin.
+   **İleri**’yi seçin.
 
 10. **Atamalar**' da, profilinizi alacak Kullanıcı veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](../configuration/device-profile-assign.md).
 
-    **İleri**'yi seçin.
+    **İleri**’yi seçin.
 
 11. (*Yalnızca Windows 10 Için geçerlidir*) **Uygulanabilirlik kuralları**' nda, bu profilin atanmasını iyileştirmek için uygulanabilirlik kurallarını belirtin. Profili, bir cihazın işletim sistemi sürümüne veya sürümüne göre atamayı veya atamayı seçebilirsiniz.
 
@@ -267,7 +266,7 @@ Konu adınız özel karakterlerden birini içerdiğinde, bu sınırlamaya geçic
 
  Ancak, bir ters eğik çizgi karakterini kullanarak virgül kaçış girişimleri, CRP günlüklerinde hata vererek başarısız olur:
  
-- **Atlanan virgül**: *CN = test kullanıcısı (TESTCOMPANY\\, LLC), OU = USERACCOUNTS, DC = Corp, DC = contoso, DC = com*
+- **Kaçan virgül**: *CN = test kullanıcısı (testcompany\\, LLC), OU = useraccounts, DC = Corp, DC = contoso, DC = com*
 
 Hata aşağıdaki hatayla benzerdir:
 
@@ -285,7 +284,11 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 
 ## <a name="assign-the-certificate-profile"></a>Sertifika profilini atama
 
-SCEP sertifika profillerini, diğer amaçlar için [Cihaz profillerini dağıttığınız](../configuration/device-profile-assign.md) şekilde atayın. Ancak, devam etmeden önce aşağıdakileri göz önünde bulundurun:
+SCEP sertifika profillerini, diğer amaçlar için [Cihaz profillerini dağıttığınız](../configuration/device-profile-assign.md) şekilde atayın.
+
+Bir SCEP sertifika profili kullanmak için, bir cihazın güvenilen kök CA sertifikanız ile onu sağlayan güvenilen sertifika profilini de almış olması gerekir. Hem güvenilen kök sertifika profilini hem de SCEP sertifika profilini aynı gruplara dağıtmanızı öneririz.
+
+Devam etmeden önce aşağıdakileri göz önünde bulundurun:
 
 - Gruplara SCEP sertifika profilleri atadığınızda, güvenilen kök CA sertifika dosyası ( *Güvenilen sertifika profilinde*belirtildiği gibi) cihaza yüklenir. Cihaz, bu güvenilen kök CA sertifikasına yönelik bir sertifika isteği oluşturmak için SCEP sertifika profilini kullanır.
 
@@ -297,14 +300,12 @@ SCEP sertifika profillerini, diğer amaçlar için [Cihaz profillerini dağıtt�
 
 - Intune ve Configuration Manager için ortak yönetim kullanıyorsanız, Configuration Manager ' de kaynak erişim Ilkeleri için [iş yükü kaydırıcısını](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) **Intune** veya **pilot Intune**'a ayarlayın. Bu ayar, Windows 10 istemcilerinin sertifika isteme işlemini başlatmasını sağlar.
 
-- Güvenilen sertifika profilini ve SCEP sertifika profilini ayrı ayrı oluşturup atarsanız, her ikisi de atanmalıdır. Bir cihaza her ikisi de yüklü olmadan, SCEP sertifika ilkesi başarısız olur. Tüm güvenilen kök sertifika profillerinin Ayrıca SCEP profiliyle aynı gruplara dağıtıldığından emin olun. Örneğin, bir kullanıcı grubuna SCEP sertifikası profili dağıtıyorsanız, güvenilen kök (ve ara) sertifika profili de aynı kullanıcı grubuna dağıtılmalıdır.
-
 > [!NOTE]
 > İOS/ıpados cihazlarında, bir SCEP sertifika profili veya PKCS sertifika profili, Wi-Fi veya VPN profili gibi ek bir profille ilişkilendirildiğinde, cihaz bu ek profillerin her biri için bir sertifika alır. Bu, iOS/ıpados cihazının SCEP veya PKCS sertifika isteği tarafından sunulan birden çok sertifikaya sahip olmasına neden olur. 
 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Profiller atama](../configuration/device-profile-assign.md)
+[Profil atama](../configuration/device-profile-assign.md)
 
 [SCEP Sertifika profillerinin dağıtımı sorunlarını giderme](../protect/troubleshoot-scep-certificate-profiles.md)

@@ -17,16 +17,16 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11959de1d03c7aa9cd29de2b4069c6d7bc133f79
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9a15bc7c1fd74aa3741a9bd699778795cbf3faab
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331282"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080037"
 ---
-# <a name="phase-2-migration-campaign"></a>2\. Aşama: Geçiş işlemi
+# <a name="phase-2-migration-campaign"></a>2. Aşama: Geçiş işlemi
 
-Kuruluşunuzun gereksinimlerinize en uygun geçiş yaklaşımını seçin ve uygulama taktiklerini özel gereksinimlerinize göre ayarlayın. Bu rehberin geri kalanında kullanıcılarınızın cihazlarını Intune’a kaydetme amacına ulaşmanız için gereken araçlar sağlanacaktır.
+Kuruluşunuzun gereksinimlerinize en uygun geçiş yaklaşımını seçin ve uygulama taktiklerini özel gereksinimlerinize göre ayarlayın. Bu kılavuzun geri kalanı, kullanıcılarınızın Intune 'a kayıtlı olan cihazlarını alma amacını elde etmek için ihtiyacınız olan araçları yönlendirecektir.
 
 ## <a name="keys-to-a-successful-migration"></a>Başarılı bir geçişin önemli noktaları
 
@@ -64,7 +64,7 @@ Geçişin ilk aşamasını tamamladıktan sonra, gelecek aşama için [geçiş d
 
 - Yardım masası ekibinin, geçiş süreci boyunca son kullanıcıları desteklemeye hazır olduğundan emin olun. Destek çağrısı iş yükünü tahmin edebilene kadar gönüllü bir geçiş çalıştırın.
 
-- Yardım masası, kalan kullanıcı sayısıyla başa çıkabilecek duruma gelene kadar kayıt için bir son tarih belirlemeyin
+- Kalan popülasyon yardım masanızla işlenene kadar kayıt için son tarihleri ayarlama
 
 > [!IMPORTANT]
 > Exchange veya SharePoint Online gibi kaynaklara erişim denetimleri uygulamak için hem Intune hem de mevcut üçüncü taraf MDM çözümünüzü yapılandırmayın. Ayrıca, cihazların aynı anda yalnızca bir çözüme kayıtlı olması gerekir.

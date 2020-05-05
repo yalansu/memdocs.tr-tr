@@ -2,7 +2,7 @@
 title: Konsol içi belgeler
 titleSuffix: Configuration Manager
 description: Bu makale yalnızca Configuration Manager konsolunda görüntülenir.
-ms.date: 03/12/2020
+ms.date: 04/23/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2bf2ceae88ed775ff53324f007567a4677832805
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.openlocfilehash: cd5c03b9b05bff253a93466eb27700685faea055
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80658146"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126041"
 ---
 <!-- 
 - Feature 1357546
@@ -27,7 +27,7 @@ ms.locfileid: "80658146"
 
 # <a name="microsoft-endpoint-configuration-manager-documentation"></a>Microsoft Endpoint Configuration Manager belgeleri
 
-*Son güncelleştirme: 12 Mart 2020*
+*Son güncelleştirme: 23 Nisan 2020*
 
 Bu içerik Configuration Manager öğreniyor ve desteklerken size yardımcı olabilir.
 
@@ -35,42 +35,42 @@ Bu içerik Configuration Manager öğreniyor ve desteklerken size yardımcı ola
 
 Daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [Configuration Manager belge kitaplığı](https://docs.microsoft.com/configmgr)  
-- [Configuration Manager belgelerini kullanma](https://docs.microsoft.com/configmgr/core/understand/use-docs)
+- [Configuration Manager belge kitaplığı](https://docs.microsoft.com/mem/configmgr)  
+- [Configuration Manager belgelerini kullanma](https://docs.microsoft.com/mem/configmgr/core/understand/use-docs)
 
 ## <a name="recommended"></a>Önerilen
 
 Önemli makalelerin seçkin bir listesi.
 
-- [Masaüstü Analizi](https://docs.microsoft.com/configmgr/desktop-analytics/overview)
-- [Windows 10 cihazları için ortak yönetim](https://docs.microsoft.com/configmgr/comanage/overview)  
-- [CMPivot](https://docs.microsoft.com/configmgr/core/servers/manage/cmpivot)  
-- [BitLocker yönetimini planlayın](https://docs.microsoft.com/configmgr/protect/plan-design/bitlocker-management)  
-- [Microsoft Edge yönetimi](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge)  
-- [Office 365 ProPlus güncelleştirmelerini yönetme](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates)  
-- [Geçerli dal ve hizmet olarak Windows Configuration Manager Temelleri](https://docs.microsoft.com/configmgr/core/understand/configuration-manager-and-windows-as-service)
-- [Configuration Manager ile Windows 10 güncelleştirme teslimini iyileştirin](https://docs.microsoft.com/configmgr/sum/deploy-use/optimize-windows-10-update-delivery)
-- [Teknik Önizleme sürümleri](https://docs.microsoft.com/configmgr/core/get-started/technical-preview)
-- [Şirket içi altyapıyı tamamlamak için bulut hizmetlerini kullanın](https://docs.microsoft.com/configmgr/core/understand/use-cloud-services)
+- [Microsoft Uç Nokta Yöneticisi kiracı iliştirme](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions)
+- [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview)
+- [Windows 10 cihazları için ortak yönetim](https://docs.microsoft.com/mem/configmgr/comanage/overview)  
+- [CMPivot](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot)  
+- [BitLocker yönetimi için planlama](https://docs.microsoft.com/mem/configmgr/protect/plan-design/bitlocker-management)  
+- [Microsoft Edge yönetimi](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge)  
+- [Office 365 ProPlus güncelleştirmelerini yönetme](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/manage-office-365-proplus-updates)  
+- [Geçerli dal ve hizmet olarak Windows Configuration Manager Temelleri](https://docs.microsoft.com/mem/configmgr/core/understand/configuration-manager-and-windows-as-service)
+- [Configuration Manager ile Windows 10 güncelleştirme teslimini iyileştirin](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery)
+- [Teknik Önizleme sürümleri](https://docs.microsoft.com/mem/configmgr/core/get-started/technical-preview)
 
 ## <a name="trending"></a>Popüler
 
-1 Şubat ve 29 Şubat 2020 arasındaki en popüler makaleler.
+1 Mart ve 30 Mart 2020 arasındaki en popüler makaleler.
 
 | Sayfa görünümleri | Başlık |
 |------------|-------|
-| 17949 | [Günlük dosyası başvurusu](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/log-files) |
-| 16788 | [Sürüm 1910 ' deki yenilikler](https://docs.microsoft.com/configmgr/core/plan-design/changes/whats-new-in-version-1910) |
-| 16336 | [Masaüstü Analizi](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
-| 15901 | [Aktarım katmanı güvenliğini etkinleştir (TLS) 1,2 genel bakış](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 15582 | [Güncelleştirmeler ve bakım](https://docs.microsoft.com/configmgr/core/servers/manage/updates) |
-| 13294 | [Bağlantılar için kullanılan bağlantı noktaları](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/ports) |
-| 11675 | [İstemcileri Windows 'a dağıtma](https://docs.microsoft.com/configmgr/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 11649 | [Windows 10 cihazları için ortak yönetim](https://docs.microsoft.com/configmgr/comanage/overview) |
-| 10898 | [Configuration Manager nedir?](https://docs.microsoft.com/configmgr/core/understand/introduction) |
-| 9837 | [Yazılım Merkezi kullanıcı kılavuzu](https://docs.microsoft.com/configmgr/core/understand/software-center) |
+| 22659 | [Bulut yönetimi ağ geçidi planlama](https://docs.microsoft.com/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 16797 | [Günlük dosyası başvurusu](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/log-files) |
+| 16142 | [Bağlantılar için kullanılan bağlantı noktaları](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/ports) |
+| 15907 | [Yazılım Merkezi kullanıcı kılavuzu](https://docs.microsoft.com/configmgr/core/understand/software-center) |
+| 14667 | [Güncelleştirmeler ve bakım](https://docs.microsoft.com/configmgr/core/servers/manage/updates) |
+| 14455 | [Aktarım katmanı güvenliğini etkinleştir (TLS) 1,2 genel bakış](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 12292 | [Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
+| 12062 | [Windows 10 cihazları için ortak yönetim](https://docs.microsoft.com/configmgr/comanage/overview) |
+| 11741 | [Configuration Manager nedir?](https://docs.microsoft.com/configmgr/core/understand/introduction) |
+| 11282 | [Sürüm 1910’daki yenilikler](https://docs.microsoft.com/configmgr/core/plan-design/changes/whats-new-in-version-1910) |
 
-Bu zaman döneminde 31.487 sayfa görünümü alınan [Configuration Manager hub sayfası](https://docs.microsoft.com/configmgr/) .
+Bu zaman döneminde 36.258 sayfa görünümü alınan [Configuration Manager hub sayfası](https://docs.microsoft.com/mem/configmgr/) .
 
 ## <a name="recently-updated"></a>Son güncelleştirilme tarihi
 
@@ -78,31 +78,31 @@ Son ve önemli güncelleştirme içeren makaleler.
 
 | Son Gözden geçirme | Başlık |
 |---------------|-------|
-| 2/28/2020 | [Technical Preview 2002,2](https://docs.microsoft.com/configmgr/core/get-started/2020/technical-preview-2002-2) |
-| 2/28/2020 | [Veri paylaşımını etkinleştir](https://docs.microsoft.com/configmgr/desktop-analytics/enable-data-sharing) |
-| 2/26/2020 | [Yüksek riskli dağıtımları yönetme](https://docs.microsoft.com/configmgr/core/servers/manage/settings-to-manage-high-risk-deployments) |
-| 2/19/2020 | [Site sunucuları için kullanım dışı](https://docs.microsoft.com/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-server) |
-| 2/19/2020 | [İstemciler için kullanım dışı](https://docs.microsoft.com/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client) |
-| 2/14/2020 | [Şirket içi siteyi genişletme ve Microsoft Azure için geçirme](https://docs.microsoft.com/configmgr/core/support/azure-migration-tool) |
-| 2/13/2020 | [Technical Preview 2002](https://docs.microsoft.com/configmgr/core/get-started/2020/technical-preview-2002) |
-| 2/12/2020 | [Ürün ve lisanslama hakkında SSS](https://docs.microsoft.com/configmgr/core/understand/product-and-licensing-faq) |
-| 2/3/2020 | [Masaüstü analizi için SSS](https://docs.microsoft.com/configmgr/desktop-analytics/faq) |
-| 2/3/2020 | [Technical Preview 2001,2](https://docs.microsoft.com/configmgr/core/get-started/2020/technical-preview-2001-2) |
+| 3/30/2020 | [Bakım görevleri için başvuru](https://docs.microsoft.com/configmgr/core/servers/manage/reference-for-maintenance-tasks) |
+| 3/30/2020 | [Yazılım güncelleştirmesi ayarlarını yönetme](https://docs.microsoft.com/configmgr/sum/get-started/manage-settings-for-software-updates) |
+| 3/25/2020 | [Kötü amaçlı yazılımdan koruma ilkeleri Endpoint Protection](https://docs.microsoft.com/configmgr/protect/deploy-use/endpoint-antimalware-policies) |
+| 23.03.2020 | [Mevcut cihazlar için Windows Autopilot](https://docs.microsoft.com/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices) |
+| 12.03.2020 | [Dağıtım planları oluşturma](https://docs.microsoft.com/configmgr/desktop-analytics/create-deployment-plans) |
+| 12.03.2020 | [Pilot 'a dağıtım](https://docs.microsoft.com/configmgr/desktop-analytics/deploy-pilot) |
+| 12.03.2020 | [Masaüstü Analizinizdeki yenilikler](https://docs.microsoft.com/configmgr/desktop-analytics/whats-new) |
+| 3/3/2020 | [Uyumluluk değerlendirmesi](https://docs.microsoft.com/configmgr/desktop-analytics/compat-assessment) |
+| 3/3/2020 | [Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
 
 ## <a name="troubleshooting-articles"></a>Sorun giderme makaleleri
 
 Configuration Manager bileşenlerinde ve özelliklerde sorun gidermeye yardımcı olacak Kılavuzlu izlenecek yollar.
 
-- [Uygulama dağıtımlarının sorunlarını giderme](https://docs.microsoft.com/configmgr/apps/understand/app-deployment-technical-reference)
+- [Uygulama dağıtımları sorunlarını giderme](https://docs.microsoft.com/mem/configmgr/apps/understand/app-deployment-technical-reference)
 - [PXE önyükleme sorunlarını giderme](https://support.microsoft.com/help/4468612)
 - [Configuration Manager güncelleştirmeleri ve bakımı anlama ve giderme](https://support.microsoft.com/help/4490424)
 - [Yazılım güncelleştirme eşitleme sorunlarını giderme](https://support.microsoft.com/help/10059)
 - [İçerik dağıtımını anlama ve sorun giderme](https://support.microsoft.com/help/4482728)
-- [Iş tümleştirmesinde Microsoft Store anlama ve sorun giderme](https://docs.microsoft.com/configmgr/apps/deploy-use/troubleshoot-microsoft-store-for-business-integration)
+- [Iş tümleştirmesinde Microsoft Store anlama ve sorun giderme](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/troubleshoot-microsoft-store-for-business-integration)
 - [Yazılım güncelleştirme yönetimi sorunlarını giderme](https://support.microsoft.com/help/10680)
 - [Uygulama yüklemesi görev sırası adımında sorun giderme](https://support.microsoft.com/help/18408/)
-- [Masaüstü Analizi sorunlarını giderme](https://docs.microsoft.com/configmgr/desktop-analytics/troubleshooting)
-- [Microsoft bağlı önbellek sorunlarını giderme](https://docs.microsoft.com/configmgr/core/servers/deploy/configure/troubleshoot-microsoft-connected-cache)
+- [Desktop Analytics sorunlarını giderme](https://docs.microsoft.com/mem/configmgr/desktop-analytics/troubleshooting)
+- [Microsoft Bağlı Önbellek sorunlarını giderme](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/troubleshoot-microsoft-connected-cache)
+- [BitLocker sorunlarını giderme](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/troubleshoot)
 
 ## <a name="new-and-updated-support-articles"></a>Yeni ve güncelleştirilmiş destek makaleleri
 
@@ -113,4 +113,4 @@ Configuration Manager bileşenlerinde ve özelliklerde sorun gidermeye yardımc�
 - [KB 4552181 Içerik dağıtımı Configuration Manager geçerli dalı, sürüm 1910 ' de](https://support.microsoft.com/help/4552181)
 - [KB 4550023 Configuration Manager yerinde yükseltme görev sırası, Windows 10 yerinde yükseltme geri alındıktan sonra devam etmez](https://support.microsoft.com/help/4550023)
 
-Yeni Configuration Manager Destek makalelerinin atom veya RSS bildirimine abone olmak için bkz. [içerik güncelleştirmelerini destekleme](https://support.microsoft.com/help/4089498/) ve **Microsoft uç nokta Configuration Manager**seçme.
+Yeni Configuration Manager Destek makalelerinin atom veya RSS bildirimine abone olmak için bkz. [içerik güncelleştirmelerini destekleme](https://support.microsoft.com/help/4089498/) ve **Microsoft uç nokta Configuration Manager**seçme.  

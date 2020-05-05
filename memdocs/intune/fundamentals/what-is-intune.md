@@ -17,20 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8fce5e8d7a92922d6061c33655bc4e83b3a1a95
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.openlocfilehash: 3a10709972b0387681d00c8fe848079807c6293a
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233486"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538089"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune, cihazlarınız için MDM ve MAM sağlayıcısıdır
 
 Microsoft Intune, mobil cihaz yönetimine (MDM) ve mobil uygulama yönetimine (MAM) odaklanan bulut tabanlı bir hizmettir. Intune, Microsoft 'un [Enterprise Mobility + Security (EMS) Suite](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)'e dahil edilmiştir ve kuruluşunuzun verilerinin korunmasını sağlarken kullanıcıların üretken olmalarını sağlar. Kimlerin erişebileceğini ve ne erişimleri olduğunu denetlemek için Microsoft 365 ve Azure Active Directory (Azure AD) dahil diğer hizmetlerle tümleştirilir ve veri koruma için Azure Information Protection. Microsoft 365 ile birlikte kullandığınızda, iş gücünüzün tüm cihazlarında üretken olmasını sağlayarak kuruluşunuzun bilgilerini korumalı hale getirebilirsiniz.
 
-![Intune mimarisi görüntüsü](./media/what-is-intune/intunearch_sm.png)
-
-Intune mimari diyagramının [daha büyük bir sürümünü](./media/what-is-intune/intunearchitecture.svg) görüntüleyin.
+[![Intune mimarisi görüntüsü](./media/what-is-intune/intunearch_sm.png )](./media/what-is-intune/intunearchitecture.svg#lightbox)
 
 Intune ile şunları yapabilirsiniz:
 
@@ -40,7 +38,7 @@ Intune ile şunları yapabilirsiniz:
 - Kullanıcıların bilgilere erişme ve paylaşma şeklini denetleyerek şirket bilgilerinizi koruyun.
 - Cihazların ve uygulamaların güvenlik gereksinimlerle uyumlu olduğundan emin olun.
 
-## <a name="manage-devices"></a>Aygıtları yönetin
+## <a name="manage-devices"></a>Cihazları yönetme
 
 Intune 'da, sizin için doğru olan bir yaklaşımı kullanarak cihazları yönetirsiniz. Kuruluşa ait cihazlar için, ayarlar, Özellikler ve güvenlik dahil olmak üzere cihazlarda tam denetim yapmak isteyebilirsiniz. Bu yaklaşımda, cihazlar ve bu cihazların kullanıcıları Intune 'da "kaydolmalıdır". Kaydolduktan sonra, kurallarınızı ve ayarlarınızı Intune 'da yapılandırılmış ilkeler aracılığıyla alırlar. Örneğin, parola ve PIN gereksinimlerini ayarlayabilir, bir VPN bağlantısı oluşturabilir, tehdit koruması ayarlayabilir ve daha fazlasını yapabilirsiniz.
 
@@ -60,7 +58,12 @@ Cihazlar Intune 'A kaydedildiğinde ve yönetildiğinde yöneticiler şunları y
 
 - [Cihaz profillerini kullanarak cihazlarınızda Özellikler ve ayarlar uygulama](../configuration/device-profiles.md)
 
-- [Microsoft Intune cihazları koruma](../protect/device-protect.md)
+- [Microsoft Intune ile cihaz koruma](../protect/device-protect.md)
+
+### <a name="try-the-interactive-guide"></a>Etkileşimli Kılavuzu deneyin
+[Microsoft Uç Nokta Yöneticisi ile cihazları yönetme](https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager) Etkileşimli Kılavuzu, mobil ve masaüstü uygulamalarını yönetme ve koruma hakkında size yardımcı olmak Için Microsoft Endpoint Manager Yönetim Merkezi 'nde size adım adım yol gösterir.</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager]
 
 ## <a name="manage-apps"></a>Uygulamaları yönetme
 

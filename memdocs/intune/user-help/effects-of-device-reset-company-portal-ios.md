@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 4cb9b22220e4c33aadd5b7c46f4274df44e3ec9c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 87b51d2df20f13ad29bca0b5961d59a41cbedf49
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324934"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080071"
 ---
 # <a name="effects-of-company-portal-ios-device-reset"></a>Şirket Portalı iOS cihaz sıfırlamasının etkileri 
 
@@ -32,13 +32,13 @@ ms.locfileid: "79324934"
 
 Kuruluşunuz cihazınızı yönetirse ve iş ve okul e-postalarına, uygulamalarına ve Wi-Fi ' a erişebilirsiniz:
 
-- Cihazınız artık Şirket Portalı’nda gösterilmez.  
+- Cihazınız artık Şirket Portalı görünmeyecek.  
 
 - Cihazınız, üreticinin varsayılan fabrika ayarlarına sıfırlanacak. Kişisel verileriniz, uygulamalarınız ve ayarlarınız kaldırılır.
 
 Cihazınız yalnızca iş veya okul e-postasına erişmek için ayarlandıysa:
 
-- Cihazınız artık Şirket Portalı’nda gösterilmez.  
+- Cihazınız artık Şirket Portalı görünmeyecek.  
 
 - İş veya okul e-posta hesabınız silinecek. Kaydedilmemiş e-postalar silinir.   
 

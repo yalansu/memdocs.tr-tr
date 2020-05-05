@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 04/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f3964ec67c9c78e5aedc70ff4f328a66c59c04b
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: 2c05a5518ff180bcfd3f00f6f59097815e9eed9d
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696519"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126166"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Intune 'da iOS/ıpados cihazlarını kaydetme
 
@@ -35,7 +35,7 @@ Bir Intune Yöneticisi olarak iOS/ıpados ve ıpados cihazlarının kaydını ş
 
 İOS/ıpados cihazlarını etkinleştirebilmeniz için aşağıdaki adımları izleyin:
 
-- [Cihazınızın Apple cihaz kaydına uygun olduğundan emin olun](https://support.apple.com/en-us/HT204142#eligibility).
+- [Cihazlarınızın desteklendiğinden emin olun](../fundamentals/supported-devices-browsers.md).
 - [Intune’u ayarlama](../fundamentals/setup-steps.md) - Bu adımlar, Intune altyapınızı ayarlar. Cihaz kaydı özellikle [MDM yetkilinizi ayarlamanızı](../fundamentals/mdm-authority-set.md) gerektirir.
 - [Apple MDM anında iletme sertifikası alma](apple-mdm-push-certificate-get.md) -Apple, IOS/ıpados ve MacOS cihazlarının yönetimini etkinleştirmek için bir sertifika gerektirir.
 

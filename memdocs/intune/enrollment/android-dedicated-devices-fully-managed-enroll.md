@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73d8136ff1e03b00232a58c1b0687f9e193297e1
-ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
+ms.openlocfilehash: 0913937714b59aca56c1e61fabe9d8154b6d4d24
+ms.sourcegitcommit: af8a3efd361a7f3fa6e98e5126dfb1391966ff76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81007734"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82149120"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices"></a>Android kurumsal adanmış cihazlarınızı veya tam olarak yönetilen cihazları kaydedin
 
@@ -34,9 +34,8 @@ ms.locfileid: "81007734"
 | Yakın Alan İletişimi | 6.0 |
 | Belirteç girişi | 6.0 |
 | QR kodu | 7.0 |
-| Zero Touch  | 8,0\* |
-
-katılan üreticilerle \*.
+| Zero Touch  | 8.0<br><br> Katılımcı üreticilerle. |
+| [Knox mobil kaydı](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll)  | 6.0<br><br> Yalnızca Samsung KNOX 2,8 veya üzeri cihazlarda. |
 
 ## <a name="enroll-by-using-near-field-communication-nfc"></a>Yakın Alan İletişimi (NFC) kullanarak kaydetme
 
@@ -91,6 +90,8 @@ Google’ın Zero Touch sistemini kullanmak için cihazın bunu destekliyor olma
 
 4. **Uygula**'yı seçin.
 
+## <a name="enroll-by-using-knox-mobile-enrollment"></a>Knox mobil kayıt kullanarak kaydolma
+Samsung 'in Knox mobil kaydını kullanmak için cihazda Android OS sürüm 6 veya üzeri ile Samsung KNOX 2,8 veya üzeri bir sürümü çalışıyor olmalıdır. Daha fazla bilgi için, [cihazlarınızın Knox Mobile kaydıyla otomatik olarak nasıl kaydedileceğini](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll)öğrenin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 - [Android uygulamalarını dağıtma](../apps/apps-deploy.md)

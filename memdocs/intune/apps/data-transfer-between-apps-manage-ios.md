@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d838260f0a4961302b24486474eec74b4cacd23e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f0a7bbdd5bb27b6fe17f5b4f44302551ff67de5d
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326822"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254988"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Microsoft Intune’da iOS uygulamaları arasında veri aktarımını yönetme
 
@@ -45,7 +45,7 @@ Aşağıdaki yollarla şirket verilerini korumak için iOS **Açık yönetim** �
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Microsoft Intune veya üçüncü taraf EMM için kullanıcı UPN ayarını yapılandırma
 Kullanıcı UPN ayarını yapılandırmak, kayıtlı Kullanıcı hesabını tanımlamak için Intune veya üçüncü taraf EMM çözümü tarafından yönetilen cihazlar için **gereklidir** . UPN yapılandırması, Intune 'dan dağıttığınız uygulama koruma ilkeleriyle birlikte kullanılabilir. Aşağıdaki yordam, UPN ayarının ve elde edilen kullanıcı deneyiminin nasıl yapılandırılacağı hakkında genel bir akışdır:
 
-1. [Azure Portal](https://portal.azure.com), IOS/ıpados için [bir uygulama koruma ilkesi oluşturun ve atayın](app-protection-policies.md) . İlke ayarlarını şirket gereksinimlerinize göre yapılandırın ve bu ilkeye sahip olacak iOS uygulamalarını seçin.
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)IOS/ıpados için [bir uygulama koruma ilkesi oluşturun ve atayın](app-protection-policies.md) . İlke ayarlarını şirket gereksinimlerinize göre yapılandırın ve bu ilkeye sahip olacak iOS uygulamalarını seçin.
 
 2. Aşağıdaki Genelleştirilmiş adımları kullanarak, Intune veya üçüncü taraf MDM çözümünüz aracılığıyla yönetilmesini istediğiniz uygulamaları ve e-posta profilini dağıtın. Bu deneyim *Örnek 1*' de de ele alınmıştır.
 
@@ -53,7 +53,7 @@ Kullanıcı UPN ayarını yapılandırmak, kayıtlı Kullanıcı hesabını tan�
 
       **anahtar** = ıntunemamupn, **değer** = <username@company.com>
 
-      Örnek: [‘IntuneMAMUPN’, ‘janellecraig@contoso.com’]
+      Örnek: [' ıntunemamupn ', 'janellecraig@contoso.com']
       
      > [!NOTE]
      > Intune 'da, uygulama yapılandırma ilkesi kayıt türü, **yönetilen cihazlar**olarak ayarlanmalıdır.
@@ -125,4 +125,4 @@ Kullanıcı UPN ayarını yapılandırdıktan sonra, iOS uygulamasının Intune 
 
 
 ## <a name="see-also"></a>Ayrıca bkz.
-[Intune uygulama koruma ilkesi nedir](app-protection-policy.md)
+[Intune uygulama koruma ilkesi nedir?](app-protection-policy.md)

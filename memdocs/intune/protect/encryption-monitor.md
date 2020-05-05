@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 81864c207cec560ca8b42041f9248560ebcf3b04
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 0b634dad49b11e39e9a046688f0b5fd9ddc53ab4
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322450"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255005"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Intune ile cihaz şifrelemesini izleme
 
@@ -53,10 +53,10 @@ Raporu bulmak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.mic
   - **Hazırlanıyor**: cihaz, cihazın aşağıdaki gereksinimleri KARŞıLAMASı gereken MDM ilkesi kullanılarak şifrelenebilir:
 
     **MacOS cihazları için**:
-    - MacOS sürüm 10,13 veya üzeri
+    - macOS sürüm 10,13 veya üzeri
 
     **Windows 10 cihazları için**:
-    - Sürüm 1703 veya üzeri, *iş*, *Kurumsal*, *eğitim*veya sürüm 1809 ya da *Pro* 'nun daha yeni sürümü
+    - Sürüm 1709 veya üzeri, *iş*, *Kurumsal*, *eğitim*veya sürüm 1809 ya da *Pro* 'nun daha yeni sürümü
     - Cihazda bir TPM yongasının olması gerekir
 
     Daha fazla bilgi için Windows belgelerindeki [BitLocker yapılandırma hizmeti sağlayıcısına (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) bakın.
@@ -96,7 +96,7 @@ Raporu bulmak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.mic
 
 - **Profil durumu Özeti** : Bu cihaza uygulanan profillerin Özeti. Özet, uygulanabilir profiller genelinde en az iyi koşulu temsil eder. Örneğin, birkaç uygulanabilir profilden yalnızca biri bir hata ile sonuçlanırsa, *profil durumu Özeti* *hata*görüntüler.
 
-  Bir durumun daha fazla ayrıntılarını görüntülemek için **ıntune** > **cihaz yapılandırması** > **profiller**' e gidin ve profili seçin. İsteğe bağlı olarak, **cihaz durumu** ' nu seçin ve ardından bir cihaz seçin.
+  Bir durumun daha fazla ayrıntılarını görüntülemek için **Intune** > **cihaz yapılandırma** > **profilleri**' ne gidin ve profili seçin. İsteğe bağlı olarak, **cihaz durumu** ' nu seçin ve ardından bir cihaz seçin.
 
 - **Durum ayrıntıları** – cihazın şifreleme durumu hakkında gelişmiş ayrıntılar.
 
@@ -120,11 +120,11 @@ Raporu bulmak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.mic
 
     *Göz önünde bulundurun: Intune zaten şifrelenmiş bir cihazda Filekasasını ayarlayamıyorum. Bunun yerine, bir cihaz yapılandırma ilkesi ve Intune tarafından yönetilebilmesi için kullanıcının cihazının el ile şifresinin çözülmesi gerekir*.
 
-  - Filekasasının, kullanıcının MacOS Catalina ve üzeri bir yönetim profilini onaylaması gerekir.
+  - Filekasasının, kullanıcının macOS Catalina ve üzeri bir yönetim profilini onaylaması gerekir.
 
-    *Göz önünde bulundurun: MacOS sürüm 10,15 (Catalina) Ile başlayarak, kullanıcının onayladığı kayıt ayarları, kullanıcıların dosya kasasını şifrelemeyi el ile onaylama gereksinimine neden olabilir. Daha fazla bilgi için bkz. Intune belgelerinde [Kullanıcı onaylı kayıt](../enrollment/macos-enroll.md)* .
+    *Göz önünde bulundurun: macOS sürüm 10,15 (Catalina) Ile başlayarak, kullanıcının onayladığı kayıt ayarları, kullanıcıların dosya kasasını şifrelemeyi el ile onaylama gereksinimine neden olabilir. Daha fazla bilgi için bkz. Intune belgelerinde [Kullanıcı onaylı kayıt](../enrollment/macos-enroll.md) *.
 
-  - Bilinmiyor.
+  - Bilinmeyen.
 
     *Göz önünde bulundurun: bilinmeyen bir durumun nedeni, cihazın kilitlenmesinden ve Intune 'un Emanet veya şifreleme işlemini başlatamamasına neden olabilir. Cihazın kilidi açıldıktan sonra, ilerleme devam edebilir*.
 
@@ -190,7 +190,7 @@ Intune, kişisel kurtarma anahtarlarını döndürmek ve kurtarmak için birden 
 
   1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
   
-  2. **Tüm cihazlar**>  **cihazları** seçin.
+  2. **Devices** Cihazlar> **tüm cihazlar**' ı seçin.
   
   3. Cihaz listesinden, şifrelenen ve anahtarını döndürmek istediğiniz aygıtı seçin. Ardından Izleyici ' nin altında, **kurtarma anahtarları**' nı seçin.
   
@@ -218,7 +218,7 @@ Intune, Windows 10 cihazlarınızın BitLocker anahtar kimliklerini ve kurtarma 
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihazlar** > **Tüm cihazlar**’ı seçin.
+2. **Cihazlar** > **tüm cihazlar**' ı seçin.
 
 3. Listeden bir cihaz seçin ve ardından *izleyici*altında **kurtarma anahtarları**' nı seçin.
   
@@ -229,7 +229,7 @@ Intune, Windows 10 cihazlarınızın BitLocker anahtar kimliklerini ve kurtarma 
 
    Anahtarlar Azure AD 'de olmadığında, Intune *Bu cihaz Için hiçbir BitLocker anahtarı bulunamadığını*gösterir.
 
-BitLocker için bilgi, [BitLocker yapılandırma hizmeti sağlayıcısı](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP) kullanılarak elde edilir. BitLocker CSP, Windows 10 sürüm 1703 ve üzeri sürümlerde ve Windows 10 Pro sürüm 1809 ve üzeri sürümlerde desteklenir.
+BitLocker için bilgi, [BitLocker yapılandırma hizmeti sağlayıcısı](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP) kullanılarak elde edilir. BitLocker CSP, Windows 10 sürüm 1709 ve üzeri sürümlerde ve Windows 10 Pro sürüm 1809 ve üzeri sürümlerde desteklenir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

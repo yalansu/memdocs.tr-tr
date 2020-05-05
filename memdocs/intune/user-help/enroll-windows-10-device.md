@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2d5438a83132323f67f9fd9655a8a1bff52439a9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8f3150a887cfbff73976bb697e0b13ea129f003f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328206"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080088"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Windows 10 cihazlarını Intune Şirket Portalı kaydetme
 
@@ -39,9 +39,9 @@ Bu adımlar, Windows 10, sürüm 1607 ve üzeri sürümlerde çalışan bir ciha
 
 1. **Başlat**'a gidin. Windows 10 Mobile cihazında çalışıyorsanız **tüm uygulamalar** listesine devam edin.
 
-2. **Ayarlar** uygulamasını açın. Uygulama, uygulamalar listenizde hazır değilse, arama çubuğuna gidin ve "Ayarlar" yazın.
+2. **Ayarlar** uygulamasını başlatın. Uygulama, uygulamalar listenizde hazır değilse, arama çubuğuna gidin ve "Ayarlar" yazın.
 
-3. **Hesaplar** > **İş veya okula erişim** > **Bağlan**’ı seçin.  
+3. **Hesap** > **erişimi iş veya okul** > **bağlantısı**' nı seçin.  
 
 
     ![İş veya okul hesabına erişimi seçme](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
@@ -62,7 +62,7 @@ Bu adımlar, Windows 10, sürüm 1607 ve üzeri sürümlerde çalışan bir ciha
 
 7. **Her şey hazırsınız!** ekranını görünce **Bitti**’yi seçin. Cihazınız artık kaydedilmiştir.  
 
-8. Bağlantınızı iki kez kontrol etmek için, **ayarlar** > **hesaplara** geri dönün > **iş veya okul erişimine erişin**.  Hesabınız artık listelenmelidir.  
+8. Bağlantınızı iki kez denetlemek için **Ayarlar** > **hesaplar** > **iş veya okula erişim**bölümüne dönün.  Hesabınız artık listelenmelidir.  
 
 
     ![Bağlantının düzgün biçimde ayarlandığını doğrulama](./media/w10-enroll-rs1-validate-successful-enrollment.png)  
@@ -74,9 +74,9 @@ Bu adımlar, Windows 10, sürüm 1511 ve önceki sürümlerde çalışan bir cih
 
 1. **Başlat**'a gidin. Windows 10 Mobile cihazında çalışıyorsanız **tüm uygulamalar** listesine devam edin.
 
-2. **Ayarlar** uygulamasını açın. Uygulama, uygulamalar listenizde hazır değilse, arama çubuğuna gidin ve "Ayarlar" yazın.
+2. **Ayarlar** uygulamasını başlatın. Uygulama, uygulamalar listenizde hazır değilse, arama çubuğuna gidin ve "Ayarlar" yazın.
 
-3. **Hesabınız** > **hesaplar** ' ı seçin.  
+3.  > **Hesabınızı** **seçin.**  
 
 
     ![Hesabınızı seçme](./media/W10-enroll-2-accounts-your-account.png)  
@@ -89,7 +89,7 @@ Bu adımlar, Windows 10, sürüm 1511 ve önceki sürümlerde çalışan bir cih
 6. İş veya okul kimlik bilgilerinizle oturum açın.  
 
 
-    ![Oturum aç](./media/W10-enroll-4-sign-in.png)  
+    ![Oturum açma](./media/W10-enroll-4-sign-in.png)  
 
 İş veya okul e-postalarınıza, dosyalarınıza veya diğer verilerinize hâlâ erişemiyor musunuz? Kayıt sırasında [hesap ile ilgili sorunların nasıl giderileceği](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account) hakkında bilgi edinin.  
 

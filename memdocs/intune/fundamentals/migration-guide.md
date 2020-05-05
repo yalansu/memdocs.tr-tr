@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88f30f10af5969d202dd8eb252cc82d03d3d921e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7b09240c2bd1d562985ce69c35f07181dc5c9489
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331166"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079918"
 ---
 # <a name="intune-migration-guide"></a>Intune geçiş kılavuzu
 
@@ -32,7 +32,7 @@ Microsoft Intune’a başarılı bir geçiş; geçerli mobil cihaz yönetimi (MD
 
 Bu kılavuz, bir üçüncü taraf MDM sağlayıcısından Intune’a geçiş ile ilgili çeşitli ayrıntılar hakkında bilgi sağlar.
 
-## <a name="whats-included-in-this-guide"></a>Kılavuza neler dahildir?
+## <a name="whats-included-in-this-guide"></a>Bu kılavuza neler dahildir?
 
 Bu kılavuz, geçiş işlemini iki aşamaya ayırır. Bu adımlar, aşamalardan oluşan Intune MDM’ye geçiş işleminde size yardımcı olacak görevler, stratejiler ve taktiksel kılavuz içerir.
 
@@ -42,19 +42,19 @@ Bu kılavuz, geçiş işlemini iki aşamaya ayırır. Bu adımlar, aşamalardan 
 
   - [Temel kurulum](migration-guide-setup.md)
 
-  - [Mobil cihaz ve uygulama yönetimi ilkelerini yapılandırma](migration-guide-configure-policies.md)
+  - [Cihaz ve uygulama yönetimi ilkelerini yapılandırma](migration-guide-configure-policies.md)
 
   - [Uygulama koruma ilkelerini yapılandırma](../apps/app-protection-policies.md)
 
   - [Geçiş konusunda dikkat edilmesi gereken önemli noktalar](migration-guide-considerations.md)
 
-- [2. Aşama: Geçiş kampanyası](migration-guide-campaign.md)
+- [2. Aşama: geçiş kampanyası](migration-guide-campaign.md)
 
   - [İletişim planı](migration-guide-communication-plan.md)
 
   - [Koşullu erişimle Son Kullanıcı benimsemesini sürücü](migration-guide-drive-adoption.md)
 
-  - [Normal geçiş süreci](migration-guide-cycle.md)
+  - [Tipik geçiş döngüsü](migration-guide-cycle.md)
     - [Geçiş izleme](migration-guide-cycle.md#monitoring-migration)
     - [Geçiş sonrası](migration-guide-cycle.md#post-migration)
 

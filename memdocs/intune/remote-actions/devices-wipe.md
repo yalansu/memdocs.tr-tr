@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2eae55477ef62c408ff886499f4668c81c799fc8
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: cbcd54a56304df36c536e5a623f4e9da5ba3f15b
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326297"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254699"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Silme, kullanımdan kaldırma veya el ile kaydını kaldırma yoluyla cihaz kaldırma
 
@@ -38,7 +38,7 @@ ms.locfileid: "80326297"
 
 |Silme eylemi|**Kayıt durumu ve kullanıcı hesabını koru**|Intune yönetiminden kaldırıldı|Açıklama|
 |:-------------:|:------------:|:------------:|------------|
-|**Silme**| İşaretli değil | Evet | Tüm kullanıcı hesapları, verileri, MDM ilkeleri ve ayarlarını siler. İşletim sistemini varsayılan durum ve ayarlarına sıfırlar.|
+|**Silme**| İşaretli değil | Yes | Tüm kullanıcı hesapları, verileri, MDM ilkeleri ve ayarlarını siler. İşletim sistemini varsayılan durum ve ayarlarına sıfırlar.|
 |**Silme**| İşaretli | Hayır | Tüm MDM ilkelerini temizler. Kullanıcı hesapları ve verilerini saklar. Kullanıcı ayarlarını varsayılana sıfırlar. İşletim sistemini varsayılan durum ve ayarlarına sıfırlar.|
 
 
@@ -54,7 +54,7 @@ Silme, cihazı yeni bir kullanıcıya vermeden önce veya cihaz kaybolduğunda/�
 ### <a name="wiping-a-device"></a>Bir cihazı silme
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-3. **Cihazlar** > **Tüm cihazlar**’ı seçin.
+3. **Cihazlar** > **tüm cihazlar**' ı seçin.
 4. Silme eylemini uygulamak istediğiniz cihazın adını seçin.
 5. Cihaz adının gösterildiği bölmede **Sil**’i seçin.
 6. Windows 10 sürüm 1709 veya üzeri için, ayrıca **silme cihazına sahip olursunuz, ancak kayıt durumunu ve ilişkili kullanıcı hesabı seçeneğini saklayın** . 
@@ -74,7 +74,7 @@ Silme, cihazı yeni bir kullanıcıya vermeden önce veya cihaz kaybolduğunda/�
 
 Cihaz açık ve bağlı olduğu sürece, **Silme** eylemi 15 dakikadan kısa süre içinde tüm cihaz türlerine yayılır.
 
-## <a name="retire"></a>Devre Dışı Bırak
+## <a name="retire"></a>Devre Dışı Bırakma
 
 **Kullanımdan kaldırma** eylemi; yönetilen uygulama verilerini (varsa), ayarlarını ve Intune kullanarak atanmış e-posta profillerini kaldırır. Cihaz Intune yönetiminden kaldırılır. Bu durum cihaz iade etme işlemi gerçekleştirdiğinde ve **Kullanımdan kaldırma** uzak eylemini aldığında ortaya çıkar. Cihaz, cihaz iade edilene kadar Intune 'da görünmeye devam eder. Eski cihazları hemen kaldırmak istiyorsanız, bunun yerine [silme eylemini](devices-wipe.md#delete-devices-from-the-intune-portal) kullanın.
 
@@ -94,7 +94,7 @@ Aşağıdaki tablolarda, hangi verilerin kaldırıldığı ve şirket verileri k
 |E-posta|Intune üzerinden sağlanan e-posta profilleri kaldırılır. Cihazın önbelleğindeki e-postalar silinir.|
 |Azure AD'den ayrılma|Azure AD kaydı kaldırılır.|
 
-### <a name="android"></a>Android
+### <a name="android-device-administrator"></a>Android cihaz yöneticisi
 
 |Veri türü|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
@@ -110,11 +110,11 @@ Aşağıdaki tablolarda, hangi verilerin kaldırıldığı ve şirket verileri k
 |E-posta|Yok (E-posta profilleri Android cihazları tarafından desteklenmez)|Intune üzerinden sağlanan e-posta profilleri kaldırılır. Cihazın önbelleğindeki e-postalar silinir.|
 |Azure AD'den ayrılma|Azure AD kaydı kaldırılır.|Azure AD kaydı kaldırılır.|
 
-### <a name="android-work-profile"></a>Android iş profili
+### <a name="android-enterprise-devices-with-a-work-profile"></a>İş profiline sahip Android Kurumsal cihazları
 
 Bir Android iş profili cihazdan şirket verilerinin kaldırılması, cihazdaki iş profilinde bulunan tüm verileri, uygulamaları ve ayarları kaldırır. Cihaz Intune yönetiminde devre dışı bırakıldı. Silme, Android iş profillerinde desteklenmez.
 
-### <a name="android-enterprise-kiosk-devices"></a>Android kurumsal bilgi noktası cihazları
+### <a name="android-enterprise-dedicated-devices"></a>Android kurumsal adanmış cihazlar
 
 Yalnızca bilgi noktası cihazlarını silebilirsiniz. Android bilgi noktası cihazlarını kullanımdan kaldıramazsınız.
 
@@ -134,17 +134,17 @@ Yalnızca bilgi noktası cihazlarını silebilirsiniz. Android bilgi noktası ci
 
 |Veri türü|Windows 8.1 (MDM) ve Windows RT 8.1|Windows RT|Windows Phone 8.1 ve Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Intune tarafından yüklenen şirket uygulamaları ve ilişkili veriler|EFS tarafından korunan dosyalar için anahtarlar iptal edilir. Kullanıcı dosyaları açamaz.|Şirket uygulamaları kaldırılmaz.|Başlangıçta Şirket Portalı üzerinden yüklenen uygulamalar kaldırılır. Şirket uygulama verileri kaldırılır.|Uygulamalar kaldırılır. Dışarıdan yükleme anahtarları kaldırılır.<br>Windows 10 sürüm 1703 (Creators Update) ve üzerinde Office 365 ProPlus uygulamaları kaldırılmaz. Kaydı kaldırılan cihazlardaki Intune yönetim uzantısıyla yüklenmiş olan Win32 uygulamaları kaldırılmaz. Yöneticiler, KCG cihazlarına Win32 uygulamalarını sunmamak amacıyla bunları atamadan hariç tutma seçeneğini değerlendirebilir.|
+|Intune tarafından yüklenen şirket uygulamaları ve ilişkili veriler|EFS tarafından korunan dosyalar için anahtarlar iptal edilir. Kullanıcı dosyaları açamaz.|Şirket uygulamaları kaldırılmaz.|Başlangıçta Şirket Portalı üzerinden yüklenen uygulamalar kaldırılır. Şirket uygulama verileri kaldırılır.|Uygulamalar kaldırılır. Dışarıdan yükleme anahtarları kaldırılır.<br>Windows 10 sürüm 1709 (Creators Update) ve üzeri için Microsoft 365 uygulamalar kaldırılmaz. Kaydı kaldırılan cihazlardaki Intune yönetim uzantısıyla yüklenmiş olan Win32 uygulamaları kaldırılmaz. Yöneticiler, KCG cihazlarına Win32 uygulamalarını sunmamak amacıyla bunları atamadan hariç tutma seçeneğini değerlendirebilir.|
 |Ayarlar|Intune ilkesi tarafından ayarlanan yapılandırmalar artık zorunlu tutulmaz. Kullanıcılar ayarları değiştirebilir.|Intune ilkesi tarafından ayarlanan yapılandırmalar artık zorunlu tutulmaz. Kullanıcılar ayarları değiştirebilir.|Intune ilkesi tarafından ayarlanan yapılandırmalar artık zorunlu tutulmaz. Kullanıcılar ayarları değiştirebilir.|Intune ilkesi tarafından ayarlanan yapılandırmalar artık zorunlu tutulmaz. Kullanıcılar ayarları değiştirebilir.|
-|Wi-Fi ve VPN profili ayarları|Kaldırıldı.|Kaldırıldı.|Desteklenmez.|Kaldırıldı.|
-|Sertifika profili ayarları|Sertifikalar kaldırılır ve iptal edilir.|Sertifikalar kaldırılır ve iptal edilir.|Desteklenmez.|Sertifikalar kaldırılır ve iptal edilir.|
-|E-posta|EFS'nin etkinleştirildiği e-postalar kaldırılır. Bunlar, Windows için Posta uygulamasındaki e-postalar ve eklerdir.|Desteklenmez.|Intune üzerinden sağlanan e-posta profilleri kaldırılır. Cihazın önbelleğindeki e-postalar silinir.|EFS'nin etkinleştirildiği e-postalar kaldırılır. Bunlar, Windows için Posta uygulamasındaki e-postalar ve eklerdir. Intune tarafından sağlanan posta hesaplarını kaldırır.|
+|Wi-Fi ve VPN profili ayarları|Kaldırıldı.|Kaldırıldı.|Desteklenmiyor.|Kaldırıldı.|
+|Sertifika profili ayarları|Sertifikalar kaldırılır ve iptal edilir.|Sertifikalar kaldırılır ve iptal edilir.|Desteklenmiyor.|Sertifikalar kaldırılır ve iptal edilir.|
+|E-posta|EFS'nin etkinleştirildiği e-postalar kaldırılır. Bunlar, Windows için Posta uygulamasındaki e-postalar ve eklerdir.|Desteklenmiyor.|Intune üzerinden sağlanan e-posta profilleri kaldırılır. Cihazın önbelleğindeki e-postalar silinir.|EFS'nin etkinleştirildiği e-postalar kaldırılır. Bunlar, Windows için Posta uygulamasındaki e-postalar ve eklerdir. Intune tarafından sağlanan posta hesaplarını kaldırır.|
 |Azure AD'den ayrılma|Hayır.|Hayır.|Azure AD kaydı kaldırılır.|Azure AD kaydı kaldırılır.|
 
 > [!NOTE]
 > İlk kurulum (OOBE) sırasında Azure AD 'ye eklenen Windows 10 cihazlarında, devre dışı bırakma komutu cihazdan tüm Azure AD hesaplarını kaldırır. Yerel yönetici olarak oturum açmak ve kullanıcının yerel verilerine yeniden erişim kazanmak için [Bilgisayarınızı güvenli modda başlatma bölümündeki](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode) adımları izleyin. 
 
-### <a name="retire"></a>Devre Dışı Bırak
+### <a name="retire"></a>Devre Dışı Bırakma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Cihazlar** bölmesinde **Tüm cihazlar**'ı seçin.
@@ -158,14 +158,14 @@ Cihaz açık ve bağlı olduğu sürece, **Kullanımdan kaldırma** eylemi 15 da
 Cihazları Intune portalından kaldırmak istiyorsanız, bunları belirli bir cihaz bölmesinden silebilirsiniz. Cihazın bir sonraki iade edilişinde, üzerindeki tüm şirket verileri kaldırılır.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihazlar** > **Tüm cihazlar** > silmek istediğiniz cihazları seçin > **Sil**'i seçin.
+2. **Cihazlar** > **tüm cihazlar** ' ı seçin > silmek istediğiniz cihazları seçin > **silin**.
 
 ### <a name="automatically-delete-devices-with-cleanup-rules"></a>Temizleme kuralları ile cihazları otomatik olarak silme
 Intune’u etkin olmayan, eski veya yanıt vermeyen cihazları otomatik olarak silmek üzere yapılandırabilirsiniz. Bu temizleme kuralları, cihaz kayıtlarınızın güncel kalması için cihazınızı kesintisiz bir şekilde izler. Bu şekilde silinen cihazlar, Intune yönetiminden kaldırılır.
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihazlar** > **Cihaz temizleme kuralları** > **Evet**’i seçin.
+2. **Cihazlar** > **cihaz temizleme kuralları** > **Evet**' i seçin.
 3. **Bu çok gün için iade edilmemiş cihazlarda silme** kutusuna 30 ile 270 arasında bir sayı girin.
-4. **Kaydet**’i seçin.
+4. **Kaydet**'i seçin.
 
 
 
@@ -173,10 +173,10 @@ Intune’u etkin olmayan, eski veya yanıt vermeyen cihazları otomatik olarak s
 
 İletişim sorunları veya eksik cihazlar nedeniyle, cihazları Azure AD'den silmeniz gerekebilir. Ulaşılamaz olduğunu ve Azure ile yeniden iletişim kurmasının pek olası olmadığını bildiğiniz cihazlarda, cihaz kayıtlarını Azure portalından kaldırmak için **Sil** eylemini kullanabilirsiniz. **Sil** eylemi, cihazı yönetimden kaldırmaz.
 
-1. Yönetici kimlik bilgilerinizi kullanarak [Azure portalında Azure Active Directory](https://aka.ms/accessaad)’de oturum açın. Ayrıca [Microsoft 365 yönetim merkezinde](https://admin.microsoft.com) de oturum açabilirsiniz. Menüden **Yönetim merkezleri** > **Azure AD**'yi seçin.
+1. Yönetici kimlik bilgilerinizi kullanarak [Azure portalında Azure Active Directory](https://aka.ms/accessaad)’de oturum açın. Ayrıca [Microsoft 365 yönetim merkezinde](https://admin.microsoft.com) de oturum açabilirsiniz. Menüden **Yönetim Merkezleri** > **Azure AD**' yi seçin.
 2. Hesabınız yoksa bir Azure aboneliği oluşturun. Ücretli bir hesabınız varsa, bu işlem için kredi kartı veya ödeme gerekmez ( **Ücretsiz Azure Active Directory kaydınız** abonelik bağlantısını seçin).
 3. **Azure Active Directory**’yi ve sonra da kuruluşunuzu seçin.
-4. **Kullanıcılar** sekmesini seçin.
+4. **Users (Kullanıcılar)** sekmesini seçin.
 5. Silmek istediğiniz cihazla ilişkilendirilmiş olan kullanıcıyı seçin.
 6. **Cihazlar**’ı seçin.
 7. Gereken cihazları kaldırın. Örneğin, artık kullanımda olmayan veya tanımları yanlış olan cihazları kaldırabilirsiniz.
@@ -186,7 +186,7 @@ Intune’u etkin olmayan, eski veya yanıt vermeyen cihazları otomatik olarak s
 Apple DEP cihazını Intune yönetiminden tamamen kaldırmak istiyorsanız bu adımları izleyin:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihazlar** > **Tüm cihazlar**’ı seçin, cihazı seçin ve sonra da **Kullanımdan kaldır**’ı seçin.
+2. **Cihazlar** > **tüm cihazlar** ' ı seçin > **devre dışı**> cihaz seçin.
 ![Kullanımdan kaldırma ekran görüntüsü](./media/devices-wipe/retire.png)
 3. [Business.Apple.com](http://business.apple.com) adresini ziyaret edin ve cihazın seri numarasına göre arama yapın.
 4. **Atanan** menüsünde **Atanmış**’ı seçin.

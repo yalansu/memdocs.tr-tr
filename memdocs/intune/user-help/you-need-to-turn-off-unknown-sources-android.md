@@ -1,7 +1,7 @@
 ---
 title: Bilinmeyen kaynakları kapatmanız gerekir | Microsoft Docs
 titlesuffix: Microsoft Intune
-description: Bilinmeyen kaynaklardan yüklemelerin devre dışı bırakılması gerekir.
+description: Bilinmeyen kaynaklardan yükleme devre dışı bırakılmalıdır.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -18,18 +18,18 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: ee7c1898315a01872bc47b9928116bc9a487b837
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 449bbd14ae32ca5a8b0d02347b00a827fb714b40
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323970"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080173"
 ---
 # <a name="you-need-to-turn-off-unknown-sources"></a>Bilinmeyen kaynakları kapatmanız gerekir
 
 Android cihazınız birçok konumdan uygulama yükleyebilir. Birçok kullanıcının ihtiyaç duyabileceği uygulamaların çoğu Google Play Store’da sunulur. Şirketiniz tarafından kurum içi kullanım için geliştirilen uygulamalar gibi bazı uygulamalar ise diğer mağazalardan yüklenebilir. Doğrulanmamış konumlardan uygulama yüklemek, cihazınızda problemlere yol açabilir ve olası güvenlik sorunlarına neden olabilir. Şirketinizin destek birimi, kurumsal verilerinizin güvenliğinden emin olmak için “Bilinmeyen kaynaklara” erişimi kapatmaya karar verdi.
 
-"Bilinmeyen kaynaklardan yüklemelerin devre dışı bırakılması gerekir" iletisini görürseniz, **Ayarlar** > **Güvenlik** bölümüne gitmeli (bazı cihazlarda bu, **Kilit ekranı ve güvenlik** bölümü olabilir) ve **Bilinmeyen kaynaklar**’ı kapatmalısınız.
+"Bilinmeyen kaynaklardan yükleme devre dışı bırakılmalıdır" iletisini görürseniz, **Ayarlar** > **güvenlik** bölümüne gitmeniz gerekir (bazı cihazlarda bu bunun yerine **kilit ekranı ve güvenlik** olabilir) ve **Bilinmeyen kaynakları**kapatabilirsiniz.
 
 **Bilinmeyen kaynaklar**’ı kapattığınızda, şirket veya okul verilerinize erişmek üzere Android cihazı kullanmaya devam edebilmeniz için birkaç dakika gerekebilir.
 

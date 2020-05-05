@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e97322fa8a126203bf6e4d1e7a3703b92ded339
-ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
+ms.openlocfilehash: baffa150b416b778e41a59fdf4e5a1b686cdae7b
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80536844"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538150"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Microsoft Intune uygulama yönetimi nedir?
 
@@ -51,22 +51,22 @@ Intune MAM iki yapılandırmayı destekler:
 
 Intune, ihtiyacınız olan uygulamaları çalıştırmak istediğiniz cihazlara almanıza yardımcı olacak çeşitli özellikler sunar. Aşağıdaki tablo, uygulama yönetimi özelliklerinin bir özetini sağlar.
 
-|  | Android/Android Kurumsal | iOS/iPadOS | Mac OS | Windows 10 | WVPN profillerinidows Phone 8.1 |
+|  | Android/Android Kurumsal | iOS/iPadOS | Mac OS | Windows 10 | Windows Phone 8.1 |
 |-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
-| Cihazlara ve kullanıcılara uygulamaları ekleme ve atama | Evet | Evet | Evet | Evet | Evet |
-| Intune’a kayıtlı olmayan cihazlara uygulamaları atama | Evet | Evet | Hayır | Hayır | Hayır |
-| Uygulamaların başlangıç davranışını denetlemek için uygulama yapılandırma ilkelerini kullanma | Evet | Evet | Hayır | Hayır | Hayır |
-| Süresi dolan uygulamaları yenilemek için mobil uygulama sağlama ilkelerini kullanma | Hayır | Evet | Hayır | Hayır | Hayır |
-| Uygulama koruma ilkeleriyle uygulamalardaki şirket verilerini koruma | Evet | Evet | Hayır | Hayır <sup>1</sup> | Hayır |
-| Yüklü uygulamadan yalnızca şirket verilerini kaldırma (uygulama seçmeli silme) | Evet | Evet | Hayır | Evet | Evet |
-| Uygulama atamalarını izleme | Evet | Evet | Evet | Evet | Evet |
-| Uygulama mağazasından toplu satın alınan uygulamaları atama ve izleme | Hayır | Hayır | Hayır | Evet | Hayır |
-| Cihazlara uygulamaları zorunlu yükleme (gerekli) <sup>2</sup> | Evet | Evet | Evet | Evet | Evet |
-| Şirket Portalı’ndan cihazlara isteğe bağlı yükleme (kullanılabilir yükleme) | Evet <sup>3</sup> | Evet | Evet | Evet | Evet |
-| Web’deki bir uygulamanın kısayolunu yükleme (web bağlantısı) | Evet <sup>4</sup> | Evet | Evet | Evet | Evet |
-| Şirket içi (iş kolu) uygulamaları | Evet | Evet | Evet | Evet | Hayır |
-| Mağazadan uygulamalar | Evet | Evet | Hayır | Evet | Evet |
-| Uygulamaları güncelleştirme | Evet | Evet | Hayır | Evet | Evet |
+| Cihazlara ve kullanıcılara uygulamaları ekleme ve atama | Yes | Yes | Yes | Yes | Yes |
+| Intune’a kayıtlı olmayan cihazlara uygulamaları atama | Yes | Yes | Hayır | Hayır | Hayır |
+| Uygulamaların başlangıç davranışını denetlemek için uygulama yapılandırma ilkelerini kullanma | Yes | Yes | Hayır | Hayır | Hayır |
+| Süresi dolan uygulamaları yenilemek için mobil uygulama sağlama ilkelerini kullanma | Hayır | Yes | Hayır | Hayır | Hayır |
+| Uygulama koruma ilkeleriyle uygulamalardaki şirket verilerini koruma | Yes | Yes | Hayır | Hayır <sup>1</sup> | Hayır |
+| Yüklü uygulamadan yalnızca şirket verilerini kaldırma (uygulama seçmeli silme) | Yes | Yes | Hayır | Yes | Yes |
+| Uygulama atamalarını izleme | Yes | Yes | Yes | Yes | Yes |
+| Uygulama mağazasından toplu satın alınan uygulamaları atama ve izleme | Hayır | Hayır | Hayır | Yes | Hayır |
+| Cihazlara uygulamaları zorunlu yükleme (gerekli) <sup>2</sup> | Yes | Yes | Yes | Yes | Yes |
+| Şirket Portalı’ndan cihazlara isteğe bağlı yükleme (kullanılabilir yükleme) | Evet <sup>3</sup> | Yes | Yes | Yes | Yes |
+| Web’deki bir uygulamanın kısayolunu yükleme (web bağlantısı) | Evet <sup>4</sup> | Yes | Yes | Yes | Yes |
+| Şirket içi (iş kolu) uygulamaları | Yes | Yes | Yes | Yes | Hayır |
+| Mağazadan uygulamalar | Yes | Yes | Hayır | Yes | Yes |
+| Uygulamaları güncelleştirme | Yes | Yes | Hayır | Yes | Yes |
 
 <sup>1</sup> Windows 10 çalıştıran cihazlarda uygulamaları korumak için [Windows Bilgi Koruması](../protect/windows-information-protection-configure.md)’nu kullanmayı göz önüne alabilirsiniz.<br>
 <sup>2</sup> Yalnızca Intune tarafından yönetilen cihazlar için geçerlidir.<br>
@@ -109,6 +109,11 @@ Uygulama iş yükü gezinti menüsünün en üst kısmında, yaygın olarak kull
     - **Uygulama kategorileri**: Uygulama kategorisi adlarını ekleyin, sabitleyin ve silin.
     - **E-kitaplar**: bazı uygulama depoları, şirketinizde kullanmak istediğiniz bir uygulama veya kitap için birden fazla lisans satın almanıza olanak sağlar. Daha fazla bilgi için bkz. [Toplu satın alınan uygulama ve kitapları Microsoft Intune ile yönetme](vpp-apps.md).
 - **Yardım ve destek**: Sorun giderin, destek isteyin veya Intune durumunu görüntüleyin. Daha fazla bilgi için bkz. sorun [giderme](../fundamentals/help-desk-operators.md).
+
+### <a name="try-the-interactive-guide"></a>Etkileşimli Kılavuzu deneyin
+[Microsoft Uç Nokta Yöneticisi ile mobil ve masaüstü uygulamalarını yönetme ve koruma](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) Etkileşimli Kılavuzu, Intune 'a kayıtlı cihazların nasıl yönetileceğini, ilkelerle uyumluluğu zorunlu kılmak ve kuruluşunuzun verilerini korumak Için Microsoft Uç Nokta Yöneticisi Yönetim Merkezi 'nde size adım adım yol gösterir.</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
 
 ## <a name="additional-information"></a>Ek bilgiler
 Konsolun içindeki aşağıdaki öğeler uygulamayla ilgili işlevsellik sağlar:

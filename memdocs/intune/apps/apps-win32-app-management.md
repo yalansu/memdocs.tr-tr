@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0af3574d5ca05a076cb62f899a0ce93aaf02ef09
-ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
+ms.openlocfilehash: 8d1933350675a0d36042d1a4bd1e6a26c9a95814
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80863188"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254614"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Tek başına Intune-Win32 uygulama yönetimi
 
@@ -61,7 +61,7 @@ GitHub 'dan [Microsoft Win32 Içerik hazırlığı aracını](https://go.microso
 
 ### <a name="run-the-microsoft-win32-content-prep-tool"></a>Microsoft Win32 Içerik hazırlığı aracını çalıştırma
 
-Komut penceresinden parametre olmadan `IntuneWinAppUtil.exe` çalıştırırsanız araç, gerekli parametreleri adım adım girmek için size rehberlik eder. Ya da aşağıdaki kullanılabilir komut satırı parametrelerine göre parametreleri komuta ekleyebilirsiniz.
+Komut penceresinden parametresiz `IntuneWinAppUtil.exe` çalıştırırsanız araç, gerekli parametreleri adım adım girmek için size rehberlik eder. Ya da aşağıdaki kullanılabilir komut satırı parametrelerine göre parametreleri komuta ekleyebilirsiniz.
 
 ### <a name="available-command-line-parameters"></a>Kullanılabilir komut satırı parametreleri 
 
@@ -100,15 +100,15 @@ Komut penceresinden parametre olmadan `IntuneWinAppUtil.exe` çalıştırırsan�
 Aşağıdaki adımlar Windows uygulamasını Intune'a eklemenize yardımcı olacak yönergeler sağlar.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tüm uygulamalar** ** >  > ** **Ekle**' yi seçin.
+2. **Uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, **diğer** uygulama türleri altında **Windows uygulaması (Win32)** öğesini seçin.
 
     > [!IMPORTANT]
     > Microsoft Win32 Içerik hazırlığı aracının en son sürümünü kullandığınızdan emin olun. En son sürümü kullanmıyorsanız, uygulamanın Microsoft Win32 Içerik hazırlığı aracının daha eski bir sürümü kullanılarak paketlenmediğini belirten bir uyarı görürsünüz. 
 
-4. **Seçin**’e tıklayın. **Uygulama ekleme** adımları görüntülenir.
+4. **Seç**' e tıklayın. **Uygulama ekleme** adımları görüntülenir.
 
-## <a name="step-1---app-information"></a>1\. adım-uygulama bilgileri
+## <a name="step-1---app-information"></a>1. adım-uygulama bilgileri
 
 ### <a name="select-the-app-package-file"></a>Uygulama paketi dosyasını seçin
 
@@ -121,29 +121,29 @@ Aşağıdaki adımlar Windows uygulamasını Intune'a eklemenize yardımcı olac
 
 1. **Uygulama bilgileri** sayfasında uygulamanızın ayrıntılarını ekleyin. Seçtiğiniz uygulamaya bağlı olarak bu bölmedeki değerlerden bazıları otomatik olarak doldurulabilir.
     - **Ad**: Uygulamanın Şirket Portalı’nda görünen adını girin. Kullandığınız tüm uygulama adlarının benzersiz olduğundan emin olun. Aynı uygulama adı iki kez kullanılmışsa uygulamalardan yalnızca biri Şirket Portalı’nda kullanıcılara görüntülenir.
-    - **Açıklama**: Uygulama açıklamasını girin. Açıklama Şirket Portalı’nda görünür.
-    - **Yayımcı**: Uygulama yayıncısının adını girin.
+    - **Açıklama**: Uygulama açıklamasını girin. Açıklama, Şirket Portalı’nda görünür.
+    - **Yayımcı**: Uygulama yayımcısının adını girin.
     - **Kategori**: Yerleşik uygulama kategorilerinden birini veya kendi oluşturduğunuz bir kategoriyi seçin. Kategoriler, kullanıcıların Şirket Portalı’na göz atarken uygulamayı daha kolay bulabilmesini sağlar.
     - **Bunu şirket portalı öne çıkan uygulama olarak göster**: kullanıcılar uygulamalara gözatarken, uygulamayı şirket portalının ana sayfasında göze çarpacak şekilde görüntüleyin.
     - **Bilgi URL’si**: İsteğe bağlı olarak, bu uygulama hakkında bilgi içeren bir web sitesinin URL’sini girin. URL Şirket Portalı’nda görünür.
     - **Gizlilik URL’si**: İsteğe bağlı olarak, bu uygulamayla ilgili gizlilik bilgilerini içeren bir web sitesinin URL’sini girin. URL Şirket Portalı’nda görünür.
-    - **Geliştirici**: İsteğe bağlı olarak, uygulama geliştiricinin adını girin.
+    - **Geliştirici**: İsteğe bağlı olarak, uygulama geliştiricisinin adını girin.
     - **Sahip**: İsteğe bağlı olarak uygulama sahibinin adını girin. Örneğin **İK departmanı**.
     - **Notlar**: Bu uygulamayla ilişkilendirmek istediğiniz notları girin.
     - **Logo**: Uygulamayla ilişkilendirilen bir simgeyi karşıya yükleyin. Bu simge, kullanıcılar Şirket Portalı’na göz atarken uygulamayla birlikte görüntülenir.
 2. **İleri** ' ye tıklayarak **Program** sayfasını görüntüleyin.
 
-## <a name="step-2-program"></a>2\. Adım: program
+## <a name="step-2-program"></a>2. Adım: program
 
 1. **Program** sayfasında, uygulama için uygulama yükleme ve kaldırma komutlarını yapılandırın:
     - **Yükleme komutu**: uygulamayı yüklemek için yükleme komut satırını tamamen ekleyin. 
 
-        Örneğin, uygulamanızın dosya adı **MyApp123**ise aşağıdakini ekleyin:<br>
+        Örneğin, uygulama dosyanızın adı **MyApp123** ise şunu ekleyin: <br>
         `msiexec /p "MyApp123.msp"`<p>
-        Uygulama `ApplicationName.exe`ise, komut uygulamanın adı ve paket tarafından desteklenen komut bağımsız değişkenleri (anahtarlar) gelir. <br>
+        Ve uygulama ise `ApplicationName.exe`, komut uygulamanın adı ve ardından paket tarafından desteklenen komut bağımsız değişkenleri (anahtarlar) gelir. <br>
         Örneğin:<br>
         `ApplicationName.exe /quiet`<br>
-        Yukarıdaki komutta, `ApplicationName.exe` paketi `/quiet` komut bağımsız değişkenini destekler.<p> 
+        Yukarıdaki komutta `ApplicationName.exe` paket, `/quiet` komut bağımsız değişkenini destekler.<p> 
         Uygulama paketi tarafından desteklenen belirli bağımsız değişkenler için uygulama satıcınıza başvurun.
 
         > [!IMPORTANT]
@@ -179,15 +179,15 @@ Aşağıdaki adımlar Windows uygulamasını Intune'a eklemenize yardımcı olac
         2. Gerekirse, ek dönüş kodları eklemek için **Ekle** ' ye tıklayın veya varolan dönüş kodlarını değiştirin.
 2. **İleri** ' ye tıklayarak **gereksinimler** sayfasını görüntüleyin.        
 
-## <a name="step-3-requirements"></a>3\. Adım: gereksinimler
+## <a name="step-3-requirements"></a>3. Adım: gereksinimler
 
 1. **Gereksinimler** sayfasında, uygulama yüklenmeden önce cihazların karşılaması gereken gereksinimleri belirtin:
     - **İşletim sistemi mimarisi**: Uygulamayı yüklemek için gereken mimarileri seçin.
     - **Minimum işletim sistemi**: Uygulamayı yüklemek için gereken minimum işletim sistemini seçin.
-    - **Gerekli disk alanı (MB)** : İsteğe bağlı olarak, uygulamayı yüklemek için sistem sürücüsünde gereken boş disk alanını ekleyin.
-    - **Gerekli fiziksel bellek (MB)** : İsteğe bağlı olarak, uygulamayı yüklemek için gereken fiziksel belleği (RAM) ekleyin.
+    - **Gerekli disk alanı (MB)**: İsteğe bağlı olarak, uygulamayı yüklemek için sistem sürücüsünde gereken boş disk alanını ekleyin.
+    - **Gerekli fiziksel bellek (MB)**: İsteğe bağlı olarak, uygulamayı yüklemek için gereken fiziksel belleği (RAM) ekleyin.
     - **Gereken en düşük mantıksal işlemci sayısı**: İsteğe bağlı olarak, uygulamayı yüklemek için gereken en düşük mantıksal işlemci sayısını ekleyin.
-    - **Gereken en düşük CPU hızı (MHz)** : İsteğe bağlı olarak, uygulamayı yüklemek için gereken en düşük CPU hızını ekleyin.
+    - **Gereken en düşük CPU hızı (MHz)**: İsteğe bağlı olarak, uygulamayı yüklemek için gereken en düşük CPU hızını ekleyin.
     - **Ek gereksinim kurallarını yapılandırın**: 
         1. **Gereksinim kuralı ekle** bölmesini göstermek ve ek gereksinim kurallarını yapılandırmak için **Ekle** ' ye tıklayın. Gereksinimin nasıl doğrulanacağını belirlemek için kullanacağınız kural türünü seçmek için **gereksinim türünü** seçin. Gereksinim kuralları dosya sistemi bilgilerini, kayıt defteri değerlerini veya PowerShell komut dosyalarını temel alabilir. 
             - **Dosya**: **Gereksinim türü**olarak **Dosya** ' yı seçtiğinizde, gereksinim kuralı bir dosya veya klasör, tarih, sürüm veya boyut algılamamalıdır. 
@@ -209,7 +209,7 @@ Aşağıdaki adımlar Windows uygulamasını Intune'a eklemenize yardımcı olac
         2. Gereksinim kurallarını ayarlamayı tamamladığınızda **Tamam**' ı seçin.
 2. **İleri** ' ye tıklayarak **algılama kuralları** sayfasını görüntüleyin.   
 
-## <a name="step-4-detection-rules"></a>4\. Adım: algılama kuralları
+## <a name="step-4-detection-rules"></a>4. Adım: algılama kuralları
 
 1. **Algılama kuralları** sayfasında, uygulamanın varlığını algılamak için kuralları yapılandırın:
     
@@ -273,7 +273,7 @@ Aşağıdaki adımlar Windows uygulamasını Intune'a eklemenize yardımcı olac
 
 2. Kurallarınızı ekledikten sonra, **Bağımlılıklar** sayfasını göstermek için **İleri** ' yi seçin.
 
-## <a name="step-5-dependencies"></a>5\. Adım: bağımlılıklar
+## <a name="step-5-dependencies"></a>5. Adım: bağımlılıklar
 
 Uygulama bağımlılıkları, Win32 uygulamanızın yüklenebilmesi için yüklenmesi gereken uygulamalardır. Diğer uygulamaların bağımlılık olarak yüklenmesini zorunlu kılabilirsiniz. Özellikle, cihazın Win32 uygulamasını yüklemeden önce bağımlı uygulamaları yüklemesi gerekir. Dahil edilen bağımlılıkların bağımlılıklarını ve uygulamanın kendisini içeren en fazla 100 bağımlılığı vardır. Win32 uygulaması bağımlılıklarını yalnızca Win32 uygulamanız eklendikten ve Intune 'a yüklendikten sonra ekleyebilirsiniz. Win32 uygulamanız eklendikten sonra, Win32 uygulamanızın bölmesinde **Bağımlılıklar** seçeneğini görürsünüz. 
 
@@ -298,21 +298,21 @@ Son Kullanıcı, bağımlı uygulamaların Win32 uygulama yükleme işleminin bi
 - 1 veya daha fazla bağımlı uygulama gereksinimi karşılanmadı
 - 1 veya daha fazla bağımlı uygulama, cihaz yeniden başlatma bekliyor
 
-**Otomatik olarak** bir bağımlılık yüklememeyi seçerseniz, Win32 uygulama yüklemesi denenmez. Ayrıca, uygulama raporlama bağımlılığın `failed` olarak işaretlenip işaretlenmediğini gösterir ve ayrıca bir hata nedeni sağlar. Win 32 uygulama [yükleme ayrıntılarında](troubleshoot-app-install.md#win32-app-installation-troubleshooting)belirtilen bir hataya (veya uyarıya) tıklayarak bağımlılık yükleme hatasını görüntüleyebilirsiniz.
+**Otomatik olarak** bir bağımlılık yüklememeyi seçerseniz, Win32 uygulama yüklemesi denenmez. Ayrıca, uygulama raporlama bağımlılığın işaretli olduğunu gösterir `failed` ve ayrıca bir hata nedeni sağlar. Win 32 uygulama [yükleme ayrıntılarında](troubleshoot-app-install.md#win32-app-installation-troubleshooting)belirtilen bir hataya (veya uyarıya) tıklayarak bağımlılık yükleme hatasını görüntüleyebilirsiniz.
 
 Her bağımlılık, Intune Win32 uygulaması yeniden deneme mantığına uyar (5 dakika bekledikten sonra 3 kez yüklemeyi deneyin) ve küresel yeniden değerlendirme zamanlaması. Ayrıca, bağımlılıklar yalnızca cihaza Win32 uygulamasını yükleme sırasında uygulanabilir. Bağımlılıklar bir Win32 uygulamasını kaldırmak için geçerli değildir. Bir bağımlılığı silmek için, bağımlılık listesi satırının sonunda bulunan bağımlı uygulamanın solundaki üç noktaya (üç nokta) tıklamalısınız. 
 
-## <a name="step-6---select-scope-tags-optional"></a>6\. adım-kapsam etiketlerini seçin (isteğe bağlı)
+## <a name="step-6---select-scope-tags-optional"></a>6. adım-kapsam etiketlerini seçin (isteğe bağlı)
 Intune 'da istemci uygulama bilgilerini kimlerin görebileceğini anlamak için kapsam etiketlerini kullanabilirsiniz. Kapsam etiketleri hakkında tam Ayrıntılar için bkz. [Dağıtılmış BT için rol tabanlı erişim denetimi ve kapsam etiketleri kullanma](../fundamentals/scope-tags.md).
 
 1. İsteğe bağlı olarak uygulamanın kapsam etiketlerini eklemek için **kapsam etiketlerini Seç** ' e tıklayın. 
 2. **Atamalar** sayfasını göstermek için **İleri** ' ye tıklayın.
 
-## <a name="step-7---assignments"></a>7\. adım-atamalar
+## <a name="step-7---assignments"></a>7. adım-atamalar
 
 **Kayıtlı cihazlar Için** **gerekli**olan, kullanılabilir olan cihazları seçebilir veya uygulama için Grup atamalarını **kaldırabilirsiniz** . Daha fazla bilgi için bkz. [kullanıcıları ve cihazları düzenlemek için grup ekleme](../fundamentals/groups-add.md) ve [Microsoft Intune olan gruplara uygulama atama](apps-deploy.md).
 
-1. Belirli bir uygulama için bir atama türü seçin:
+1. Belirli bir uygulama için atama türü seçin:
     - **Gerekli**: Uygulama, seçili gruplardaki cihazlara yüklenir.
     - **Kayıtlı cihazlar için bulunur**: Kullanıcılar, Şirket Portalı uygulamasından veya Şirket Portalı web sitesinden uygulamayı yükler.
     - **Kaldırma**: Uygulama, seçilen gruplardaki cihazlardan kaldırılır.
@@ -323,7 +323,7 @@ Intune 'da istemci uygulama bilgilerini kimlerin görebileceğini anlamak için 
 6. **Uygulama ayarları** bölümünde, uygulamanın **teslim iyileştirme önceliğini** seçin. Bu ayar, uygulama içeriğinin nasıl indirileceğini saptacaktır. Uygulama içeriğini atamaya göre arka plan modunda veya ön plan modunda indirmeyi tercih edebilirsiniz. 
 7. Uygulamalar için atamaları ayarlamayı tamamladıktan sonra, **gözden geçir + oluştur** sayfasını göstermek için **İleri** ' ye tıklayın.
 
-## <a name="step-8---review--create"></a>8\. adım-Inceleme + oluştur
+## <a name="step-8---review--create"></a>8. adım-Inceleme + oluştur
 
 1. Uygulama için girdiğiniz değerleri ve ayarları gözden geçirin. Uygulama bilgilerini doğru yapılandırdığınızdan emin olun.
 2. İşiniz bittiğinde, uygulamayı Intune 'a eklemek için **Oluştur** ' a tıklayın.
@@ -357,12 +357,17 @@ Ayrıca, Şirket Portalı uygulaması son kullanıcılara ek uygulama yükleme d
 ## <a name="set-win32-app-availability-and-notifications"></a>Win32 uygulama kullanılabilirliğini ve bildirimlerini ayarlama
 Bir Win32 uygulaması için başlangıç saatini ve son tarih saatini yapılandırabilirsiniz. Başlangıç zamanında, Intune yönetim uzantısı uygulama içeriğini indirmeyi başlatacak ve gerekli amaç için önbelleğe alacak. Uygulama son tarihte yüklenecektir. Kullanılabilir uygulamalar için, uygulama Şirket Portalı görünür olduğunda başlangıç zamanı görüntülenir ve Son Kullanıcı uygulamayı Şirket Portalı istediğinde içerik indirilir. Ayrıca, yeniden başlatma yetkisiz kullanım süresini de etkinleştirebilirsiniz. 
 
+> [!IMPORTANT]
+> **Atama** bölümündeki **yeniden başlatma yetkisiz kullanım süresi** ayarı yalnızca **Program** bölümünün **cihaz yeniden başlatma davranışı** aşağıdaki seçeneklerden birine ayarlandığında kullanılabilir:
+> - **Dönüş kodlarına dayalı davranışı belirleme**
+> - **Intune zorunlu bir cihaz yeniden başlatmaya zorlayacaktır**
+
 Aşağıdaki adımları kullanarak, gerekli bir uygulama için bir tarih ve saate göre uygulama kullanılabilirliğini ayarlayın:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tüm uygulamalar** > **uygulamalar** ' ı seçin.
+2. **Uygulamalar** > **tüm uygulamalar**' ı seçin.
 3. Listeden var olan bir **Windows uygulaması (Win32)** seçin. 
-4. Uygulama bölmesinden **Özellikler** ' i seçin > **atamalar** bölümünün yanındaki **Düzenle** ' yi seçin > **gerekli** atama türünün altına **Grup ekleyin** . 
+4. Uygulama bölmesinden, **atamalar** bölümünün yanındaki **Properties** > **Düzenle** ' yi seçin ve **gerekli** atama türünün altına **Grup ekleyin** >. 
    Uygulama kullanılabilirliği atama türüne göre ayarlanılabileceğini unutmayın. **Atama türü** **gerekli**, **Kayıtlı cihazlar için kullanılabilir**veya **kaldırma**olabilir.
 5. Uygulamaya atanacak kullanıcı grubunu belirtmek için **Grup Seç** bölmesinde bir grup seçin. 
 
@@ -378,15 +383,15 @@ Aşağıdaki adımları kullanarak, gerekli bir uygulama için bir tarih ve saat
 9. **Uygulama yükleme son tarihini** **belirli bir tarih ve saate** ayarlayın ve Tarih ve saati seçin. Bu tarih ve saat, uygulamanın son kullanıcılar cihazında yüklü olduğunu belirtir. Aynı kullanıcı veya cihaz için birden çok atama yapıldığında, uygulama yüklemesinin son tarihi, mümkün olan en erken zamana göre çekilir.
 
 10. **Yeniden başlatma yetkisiz kullanım süresinin**yanında **etkin** ' e tıklayın. Yeniden başlatma yetkisiz kullanım süresi, cihazda uygulama yüklemesi tamamlandıktan hemen sonra başlar. Devre dışı bırakıldığında, cihaz uyarı vermeden yeniden başlatılabilir. <br>Aşağıdaki seçenekleri özelleştirebilirsiniz:
-    - **Cihaz yeniden başlatma yetkisiz kullanım süresi (dakika)** : varsayılan değer 1440 dakikadır (24 saat). Bu değer en fazla 2 hafta olabilir.
-    - **Yeniden başlatma işleminin (dakika) ardından yeniden başlatma geri sayımı iletişim kutusunun ne zaman gösterileceğini seçin (dakika)** : varsayılan değer 15 dakikadır.
+    - **Cihaz yeniden başlatma yetkisiz kullanım süresi (dakika)**: varsayılan değer 1440 dakikadır (24 saat). Bu değer en fazla 2 hafta olabilir.
+    - **Yeniden başlatma işleminin (dakika) ardından yeniden başlatma geri sayımı iletişim kutusunun ne zaman gösterileceğini seçin (dakika)**: varsayılan değer 15 dakikadır.
     - **Kullanıcının yeniden başlatma bildirimini yeniden görüntülemesine Izin ver**: **Evet** veya **Hayır**seçeneğini belirleyebilirsiniz.
         - **Erteleme süresini (dakika) seçin**: varsayılan değer 240 dakikadır (4 saat). Erteleme değeri, yeniden başlatma yetkisiz kullanım süresinden daha fazla olamaz.
 
 11. **Gözden geçir + kaydet**' e tıklayın.
 
 ## <a name="toast-notifications-for-win32-apps"></a>Win32 uygulamaları için bildirim bildirimleri 
-Gerekirse, uygulama ataması başına Son Kullanıcı bildirim bildirimlerinin gösterilmesini gizleyebilirsiniz. Intune 'da, **uygulamalar** > **tüm uygulamalar** ' ı seçin > **grupları Ekle** > > **atamaları** seçin. 
+Gerekirse, uygulama ataması başına Son Kullanıcı bildirim bildirimlerinin gösterilmesini gizleyebilirsiniz. Intune 'da, **uygulamalar** > **tüm uygulamalar** ' ı seçin > uygulama > **atamaları** > **dahil et**' i seçin. 
 
 > [!NOTE]
 > Kaydı kaldırılan cihazlardaki Intune yönetim uzantısıyla yüklenmiş olan Win32 uygulamaları kaldırılmaz. Yöneticiler, KCG cihazlarına Win32 uygulamalarını sunmamak amacıyla bunları atamadan hariç tutma seçeneğini değerlendirebilir.
@@ -430,10 +435,10 @@ exit 1
 }
 ```
 
-Yukarıdaki PowerShell komutunda, `<path to binary file>` dizesini Win32 uygulama dosyanızın yoluyla değiştirin. Örnek bir yol aşağıdakine benzer olacaktır:<br>
+Yukarıdaki PowerShell komutunda, `<path to binary file>` dizeyi Win32 uygulama dosyanızın yoluyla değiştirin. Örnek bir yol aşağıdakine benzer olacaktır:<br>
 `C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe`
 
-Ayrıca, `<file version of successfully detected file>` dizesini, algılamak için gereken dosya sürümü ile değiştirin. Örnek bir dosya sürümü dizesi aşağıdakine benzer:<br>
+Ayrıca, dizeyi, `<file version of successfully detected file>` algılamak için gereken dosya sürümü ile değiştirin. Örnek bir dosya sürümü dizesi aşağıdakine benzer:<br>
 `2019.0150.18118.00 ((SSMS_Rel).190420-0019)`
 
 Win32 uygulamanızın sürüm bilgilerini almanız gerekiyorsa aşağıdaki PowerShell komutunu kullanabilirsiniz:
@@ -444,7 +449,7 @@ Win32 uygulamanızın sürüm bilgilerini almanız gerekiyorsa aşağıdaki Powe
 
 ```
 
-Yukarıdaki PowerShell komutunda `<path to binary file>`, dosya yolunuza göre değiştirin.
+Yukarıdaki PowerShell komutunda, öğesini dosya yolunuza göre değiştirin `<path to binary file>` .
 
 ### <a name="additional-troubleshooting-areas-to-consider"></a>Dikkate alınması gereken ek sorun giderme alanı
 - Aracının cihazda yüklü olduğundan emin olmak için hedefi denetleyin - Bir grubu hedefleyen Win32 uygulaması veya bir grubu hedefleyen PowerShell Betiği, güvenlik grubu için aracı yükleme ilkesi oluşturur.

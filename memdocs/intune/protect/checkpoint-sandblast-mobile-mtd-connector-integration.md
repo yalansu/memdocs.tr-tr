@@ -1,5 +1,5 @@
 ---
-title: Denetim noktası SandBlast MTD tümleştirin
+title: Check Point SandBlast MTD 'yi tümleştirin
 titleSuffix: Microsoft Intune
 description: Şirket kaynaklarınıza mobil cihaz erişimini denetlemek için CheckPoint SandBlast Mobile Threat Defense’i (MTD) Intune ile ayarlama.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed468bfd9a16bb231d29f21c545cd27f121d22e7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 71dc3eed84f2f1a5a267740b5c1539b29f4c63bb
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329722"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079867"
 ---
 # <a name="integrate-check-point-sandblast-mobile-with-intune"></a>Check Point SandBlast’ı Intune ile tümleştirme
 
@@ -44,9 +44,9 @@ Check Point SandBlast’ı Intune ile tümleştirme işlemine başlamadan önce,
 
   - Oturum açma ve kullanıcı profilini okuma
 
-  - Oturum açmış kullanıcı olarak dizine erişim
+  - Dizine oturum açmış kullanıcı olarak erişin
 
-  - Dizin verilerini okuma
+  - Dizin verilerini oku
 
   - Intune’a cihaz bilgilerini gönderme
 
@@ -58,7 +58,7 @@ Check Point SandBlast uygulama yetkilendirme işlemi aşağıdaki gibidir:
 
 - Check Point SandBlast Mobile hizmetinin, cihaz sistem durumuyla ilgili bilgileri Intune’a iletmesine izin verin.
 
-- Check Point SandBlast Mobile, cihazının veritabanını doldurmak için Azure AD Kayıt Grubu üyeliğiyle eşitlenir.
+- CheckPoint SandBlast Mobile, cihazının veritabanını doldurmak için Azure AD kayıt grubu üyeliğiyle eşitlenir.
 
 - Check Point SandBlast yönetici konsolunun, Azure AD Çoklu Oturum Açma (SSO) özelliğini kullanmasına izin verin.
 

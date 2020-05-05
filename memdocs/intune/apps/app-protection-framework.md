@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/03/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 635804a9ad5cd76d104f16bcd204df1daa28b114
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: 86117193ce7aae01380923ce26f84dfb5ba97a4d
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696497"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182302"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Uygulama koruma ilkelerini kullanan veri koruma çerçevesi 
 
@@ -33,11 +33,11 @@ Uygulama koruma Ilkeleri yapılandırılırken çeşitli ayar ve seçenek sayıs
 
 UYGULAMA veri koruma yapılandırma çerçevesi üç ayrı yapılandırma senaryosunda düzenlenmiştir:
 
-- 1\. düzey kurumsal temel veri koruması – Microsoft bu yapılandırmayı bir kurumsal cihazın en düşük veri koruma yapılandırması olarak önerir.
+- 1. düzey kurumsal temel veri koruması – Microsoft bu yapılandırmayı bir kurumsal cihazın en düşük veri koruma yapılandırması olarak önerir.
 
-- 2\. düzey kurumsal gelişmiş veri koruma – Microsoft, kullanıcıların hassas veya gizli bilgilere erişebileceği cihazlar için bu yapılandırmayı önerir. Bu yapılandırma, iş veya okul verilerine erişen mobil kullanıcıların çoğu için geçerlidir. Bazı denetimler Kullanıcı deneyimini etkileyebilir.
+- 2. düzey kurumsal gelişmiş veri koruma – Microsoft, kullanıcıların hassas veya gizli bilgilere erişebileceği cihazlar için bu yapılandırmayı önerir. Bu yapılandırma, iş veya okul verilerine erişen mobil kullanıcıların çoğu için geçerlidir. Bazı denetimler Kullanıcı deneyimini etkileyebilir.
 
-- Düzey 3 Kurumsal yüksek veri koruma – Microsoft bu yapılandırmayı daha büyük veya daha fazla gelişmiş güvenlik ekibine sahip bir kuruluş tarafından çalıştırılan veya benzersiz derecede yüksek riskli olan belirli kullanıcılar veya gruplar için önerir (bir örnek olarak, bir kuruluş, hırsızlığı doğrudan ve stok fiyatını önemli ölçüde etkileyecek verileri işleyen kullanıcıları tanımladı). Bir kuruluş, iyi ifade edilen ve Gelişmiş reklam işlemleri tarafından hedeflenmek için bu yapılandırmaya amaçlayın olmalıdır.
+- Düzey 3 Kurumsal yüksek veri koruma – Microsoft bu yapılandırmayı daha büyük veya daha fazla gelişmiş güvenlik ekibine sahip bir kuruluş tarafından çalıştırılan cihazlar için veya benzersiz derecede yüksek riskli olan belirli kullanıcılar veya gruplar (yetkisiz kullanım nedeniyle kuruluşa önemli ölçüde malzeme kaybına neden olur) için bu yapılandırmayı önerir. Bir kuruluş, iyi ifade edilen ve Gelişmiş reklam işlemleri tarafından hedeflenmek için bu yapılandırmaya amaçlayın olmalıdır.
 
 ## <a name="app-data-protection-framework-deployment-methodology"></a>UYGULAMA veri koruma çerçevesi dağıtım yöntemi
 
@@ -45,11 +45,11 @@ Yeni yazılımların, özelliklerin veya ayarların herhangi bir dağıtımında
 
 Microsoft, uygulama veri koruma çerçevesi için aşağıdaki dağıtım halkası yaklaşımını önerir:
 
-| Dağıtım halkası  | Kiracı  | Değerlendirme takımları  | Çıkış  | 'Ndeki  |
+| Dağıtım halkası  | Kiracı  | Değerlendirme takımları  | Çıktı  | Zaman çizelgesi  |
 |--------------------|------------------------|-------------------------------------------------------------------|----------------------------------------------------------|----------------------------------------|
-| Kalite güvencesi  | Ön üretim kiracısı  | Mobil yetenek sahipleri, güvenlik, risk değerlendirmesi, gizlilik, UX  | İşlevsel senaryo doğrulaması, taslak belgeler  | 0-30 gün  |
+| Kalite Güvencesi  | Ön üretim kiracısı  | Mobil yetenek sahipleri, güvenlik, risk değerlendirmesi, gizlilik, UX  | İşlevsel senaryo doğrulaması, taslak belgeler  | 0-30 gün  |
 | Önizleme  | Üretim kiracısı  | Mobil yetenek sahipleri, UX  | Son Kullanıcı senaryosu doğrulaması, kullanıcıya yönelik belgeler  | 7-14 gün, kalite sonrası güvence  |
-| Üretim  | Üretim kiracısı  | Mobil yetenek sahipleri, BT yardım masası  | YOK  | 7 gün-birkaç hafta, önizleme sonrası  |
+| Üretim  | Üretim kiracısı  | Mobil yetenek sahipleri, BT yardım masası  | Yok  | 7 gün-birkaç hafta, önizleme sonrası  |
 
 Yukarıdaki tabloda gösterildiği gibi, ilke ayarlarının etkilerini anlamak için uygulama koruma Ilkelerine yapılan tüm değişikliklerin önce üretim öncesi bir ortamda gerçekleştirilmesi gerekir. Test tamamlandıktan sonra değişiklikler üretime taşınabilir ve üretim kullanıcılarının, genellikle BT departmanının ve diğer ilgili grupların bir alt kümesine uygulanabilir. Son olarak, dağıtım mobil kullanıcı topluluğunun geri kalanına tamamlanabilir. Üretime dağıtım, değişikliğe ilişkin etkinin ölçeğine bağlı olarak daha uzun sürebilir. Kullanıcı etkisi yoksa, değişiklik hızlı bir şekilde kullanıma sunulmalıdır, ancak değişiklik Kullanıcı etkisinden sonuçlanırsa, kullanıcıların, değişiklikleri Kullanıcı popülasyonu ile iletişimine gerek duyabileceği için, dağıtım daha yavaş ilerlemelidir.
 
@@ -70,9 +70,9 @@ Yalnızca uygulama koruma ilkelerini destekleyen uygulamaların iş veya okul he
 
 Her uygulama koruma Ilkesi için aşağıdaki temel Microsoft uygulamaları eklenmelidir:
 
-- Kenarını
+- Edge
 - Excel
-- Ofis
+- Office
 - OneDrive
 - OneNote
 - Outlook
@@ -92,42 +92,42 @@ Düzey 1 ' deki ilkeler, Microsoft Endpoint Manager 'da uygulama koruma Ilkesi o
 
 #### <a name="data-protection"></a>Veri koruma
 
-| Ayar | Ayar açıklaması |             Değer  |             Platfveyam        |
+| Ayar | Ayar açıklaması |             Değer  |             Platform        |
 |-----------------|--------------------------------------------------------|-----------------------|----------------------------------------|
-| Veri Aktarımı |             Kuruluş verilerini buraya Yedekle...  |             İzin ver  |             iOS/ıpados, Android        |
+| Veri Aktarımı |             Kuruluş verilerini buraya Yedekle...  |             İzin Ver  |             iOS/ıpados, Android        |
 | Veri Aktarımı |       Diğer uygulamalara kuruluş verileri gönderme  |             Tüm uygulamalar  |             iOS/ıpados, Android        |
 | Veri Aktarımı |       Diğer uygulamalardan veri al  |             Tüm uygulamalar  |             iOS/ıpados, Android        |
 | Veri Aktarımı |       Uygulamalar arasında kesme, kopyalama ve yapıştırmayı kısıtla  |             Herhangi bir uygulama  |             iOS/ıpados, Android        |
-| Veri Aktarımı |       Üçüncü taraf klavyeler  |             İzin ver  |             iOS/iPadOS        |
-| Veri Aktarımı |       Onaylanan klavyeler  |             Gerekli değildir  |             Android        |
-| Veri Aktarımı |       Ekran yakalama ve Google Yardımcısı  |             İzin ver  |             Android        |
-| Şifreleme |             Kuruluş verilerini şifreleme  |             Gerekli  |             iOS/ıpados, Android        |
-| Şifreleme |       Kayıtlı cihazlarda kuruluş verilerini şifreleme  |             Gerekli  |             Android        |
-| İşlevi  |             Uygulamayı yerel kişiler uygulamasıyla Eşitle  |             İzin ver  |             iOS/ıpados, Android        |
-| İşlevi  |       Kuruluş verilerini yazdırma  |             İzin ver  |             iOS/ıpados, Android        |
-| İşlevi  |       Diğer uygulamalarla Web içeriği aktarımını kısıtla  |             Herhangi bir uygulama  |             iOS/ıpados, Android        |
-| İşlevi  |       Kuruluş verileri bildirimleri  |             İzin ver  |             iOS/ıpados, Android        |
+| Veri Aktarımı |       Üçüncü taraf klavyeler  |             İzin Ver  |             iOS/iPadOS        |
+| Veri Aktarımı |       Onaylanan klavyeler  |             Gerekli değil  |             Android        |
+| Veri Aktarımı |       Ekran yakalama ve Google Yardımcısı  |             İzin Ver  |             Android        |
+| Şifreleme |             Kuruluş verilerini şifreleme  |             Gerektirme  |             iOS/ıpados, Android        |
+| Şifreleme |       Kayıtlı cihazlarda kuruluş verilerini şifreleme  |             Gerektirme  |             Android        |
+| İşlev  |             Uygulamaları yerel kişiler uygulamasıyla eşitle  |             İzin Ver  |             iOS/ıpados, Android        |
+| İşlev  |       Kuruluş verilerini yazdırma  |             İzin Ver  |             iOS/ıpados, Android        |
+| İşlev  |       Diğer uygulamalarla Web içeriği aktarımını kısıtla  |             Herhangi bir uygulama  |             iOS/ıpados, Android        |
+| İşlev  |       Kuruluş verileri bildirimleri  |             İzin Ver  |             iOS/ıpados, Android        |
 
 #### <a name="access-requirements"></a>Erişim gereksinimleri 
 
-| Ayar  | Değer  | Platfveyam  | Notlar  |
+| Ayar  | Değer  | Platform  | Notlar  |
 |----------------------------------------------------------------|---------------|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Erişim için SABITLE  | Gerekli  | iOS/ıpados, Android  |   |
+| Erişim için PIN  | Gerektirme  | iOS/ıpados, Android  |   |
 | PIN türü  | Sayısal  | iOS/ıpados, Android  |   |
-| Basit PIN  | İzin ver  | iOS/ıpados, Android  |   |
+| Basit PIN  | İzin Ver  | iOS/ıpados, Android  |   |
 | Minimum PIN uzunluğunu seçin  | 4  | iOS/ıpados, Android  |   |
-| Erişim için PIN yerine biyometrik  | İzin ver  | iOS/ıpados, Android  |   |
-| Erişim için PIN yerine biyometrik öğesini geçersiz kıl  | Gerekli  | iOS/ıpados, Android  |   |
+| Erişim için PIN yerine biyometrik  | İzin Ver  | iOS/ıpados, Android  |   |
+| Erişim için PIN yerine biyometrik öğesini geçersiz kıl  | Gerektirme  | iOS/ıpados, Android  |   |
 | Zaman aşımı (etkinlik dakikası)  | 720  | iOS/ıpados, Android  |   |
-| Erişim için PIN yerine yüz KIMLIĞI  | İzin ver  | iOS/iPadOS  |   |
-| Gün sayısından sonra PIN sıfırlama  | Hayır  | iOS/ıpados, Android  |   |
-| Cihaz PIN 'ı ayarlandığında uygulama PIN 'ı  | Gerekli  | iOS/ıpados, Android  | Cihaz Intune 'A kaydedildiyse, Yöneticiler cihaz uyumluluk ilkesi aracılığıyla güçlü bir cihaz PIN 'ı zorlarsa bunu "gerekli değil" olarak ayarlamayı düşünebilirler.  |
-| Erişim için iş veya okul hesabı kimlik bilgileri  | Gerekli değildir  | iOS/ıpados, Android  |   |
-| Daha sonra erişim gereksinimlerini yeniden denetle (dakika dışı)  | 30  | iOS/ıpados, Android  |   |
+| Erişim için PIN yerine yüz KIMLIĞI  | İzin Ver  | iOS/iPadOS  |   |
+| Belirtilen sayıda gün sonra PIN sıfırlama  | Hayır  | iOS/ıpados, Android  |   |
+| Cihaz PIN'i ayarlı olduğunda uygulama PIN'i  | Gerektirme  | iOS/ıpados, Android  | Cihaz Intune 'A kaydedildiyse, Yöneticiler cihaz uyumluluk ilkesi aracılığıyla güçlü bir cihaz PIN 'ı zorlarsa bunu "gerekli değil" olarak ayarlamayı düşünebilirler.  |
+| Erişim için iş veya okul hesabı kimlik bilgileri  | Gerekli değil  | iOS/ıpados, Android  |   |
+| Erişim gereksinimlerini yeniden denetle (eylemsizlik dakika sayısı)  | 30  | iOS/ıpados, Android  |   |
 
 #### <a name="conditional-launch"></a>Koşullu başlatma 
 
-| Ayar | Ayar açıklaması |          Değer/eylem  |          Platfveyam        | Notlar |
+| Ayar | Ayar açıklaması |          Değer/eylem  |          Platform        | Notlar |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Uygulama koşulları |       En fazla PIN denemesi  |          5/PIN 'ı Sıfırla  |          iOS/ıpados, Android  |                  |
 | Uygulama koşulları |       Çevrimdışı yetkisiz kullanım süresi  |          720/erişimi engelle (dakika)  |          iOS/ıpados, Android  |                  |
@@ -144,23 +144,23 @@ Düzey 2 ' de zorlanan ilke ayarları, 1. düzey için önerilen tüm ilke ayarl
 
 #### <a name="data-protection"></a>Veri koruma
 
-| Ayar | Ayar açıklaması |             Değer  |             Platfveyam        | Notlar |
+| Ayar | Ayar açıklaması |             Değer  |             Platform        | Notlar |
 |---------------|----------------------------------------------------------|-----------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Veri Aktarımı |       Kuruluş verilerini buraya Yedekle...  |          Engelle  |          iOS/ıpados, Android  |                  |
+| Veri Aktarımı |       Kuruluş verilerini buraya Yedekle...  |          Blok  |          iOS/ıpados, Android  |                  |
 | Veri Aktarımı |       Diğer uygulamalara kuruluş verileri gönderme  |          İlke ile yönetilen uygulamalar  |          iOS/ıpados, Android  |          <p>İOS/ıpados ile, Yöneticiler bu değeri "Ilkeyle yönetilen uygulamalar", "işletim sistemi paylaşımı ile Ilke ile yönetilen uygulamalar" veya "açık/paylaşım filtresi ile Ilke ile yönetilen uygulamalar" olarak yapılandırabilir. </p><p>Cihaz Intune 'a kaydedildiğinde, işletim sistemi paylaşımıyla ilke ile yönetilen uygulamalar de kullanılabilir. Bu ayar, diğer ilkeyle yönetilen uygulamalara veri aktarımına ve Intune tarafından yönetilen diğer uygulamalara dosya aktarımlarını sağlar. </p><p>Açık/paylaşılan filtreleme ile ilke ile yönetilen uygulamalar, işletim sistemi açma/paylaşma iletişim kutularını yalnızca ilkeyle yönetilen uygulamaları görüntüleyecek şekilde filtreler. </p><p> Daha fazla bilgi için bkz. [iOS uygulama koruma ilkesi ayarları](app-protection-policy-settings-ios.md).</p> |
-| Veri Aktarımı |       Kuruluş verilerinin kopyalarını Kaydet  |          Engelle  |          iOS/ıpados, Android  |                  |
+| Veri Aktarımı |       Kuruluş verilerinin kopyalarını Kaydet  |          Blok  |          iOS/ıpados, Android  |                  |
 | Veri Aktarımı |       Kullanıcıların seçili hizmetlere kopya kaydetmesine izin ver  |          OneDrive Iş, SharePoint Online |          iOS/ıpados, Android  |                  |
 | Veri Aktarımı |       Uygulamalar arasında kesme, kopyalama ve yapıştırmayı kısıtla  |          Yapıştırma seçeneğiyle ilke ile yönetilen uygulamalar  |          iOS/ıpados, Android  |                  |
-| Veri Aktarımı |       Ekran yakalama ve Google Yardımcısı  |          Engelle  |          Android  |                  |
-| İşlevi |       Diğer uygulamalarla Web içeriği aktarımını kısıtla  |          Microsoft Edge  |          iOS/ıpados, Android  |                  |
-| İşlevi |       Kuruluş verileri bildirimleri  |          Kuruluş verilerini engelle  |          iOS/ıpados, Android  |          Bu ayarı destekleyen uygulamaların listesi için bkz. [iOS uygulama koruma ilkesi ayarları](app-protection-policy-settings-ios.md) ve [Android uygulama koruma ilkesi ayarları](app-protection-policy-settings-android.md).       |
+| Veri Aktarımı |       Ekran yakalama ve Google Yardımcısı  |          Blok  |          Android  |                  |
+| İşlev |       Diğer uygulamalarla Web içeriği aktarımını kısıtla  |          Microsoft Edge  |          iOS/ıpados, Android  |                  |
+| İşlev |       Kuruluş verileri bildirimleri  |          Kuruluş verilerini engelle  |          iOS/ıpados, Android  |          Bu ayarı destekleyen uygulamaların listesi için bkz. [iOS uygulama koruma ilkesi ayarları](app-protection-policy-settings-ios.md) ve [Android uygulama koruma ilkesi ayarları](app-protection-policy-settings-android.md).       |
 
 #### <a name="conditional-launch"></a>Koşullu başlatma
 
-| Ayar | Ayar açıklaması |          Değer/eylem  |          Platfveyam        | Notlar |
+| Ayar | Ayar açıklaması |          Değer/eylem  |          Platform        | Notlar |
 |--------------------|----------------------------|-----------------------------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cihaz koşulları  |       En düşük işletim sistemi sürümü  |          *Biçim: Ana. ikincil. derleme <br>örneği: 12.4.4* /Block erişimi |          iOS/iPadOS        | Microsoft, en düşük iOS ana sürümünün Microsoft uygulamaları için desteklenen iOS sürümleriyle eşleşecek şekilde yapılandırılmasını önerir.   Microsoft uygulamaları, N 'nin geçerli iOS ana yayın sürümü olduğu bir N-1 yaklaşımını destekler. Küçük ve derleme sürüm değerleri için Microsoft, cihazların ilgili güvenlik güncelleştirmeleriyle güncel olmasını önerir. Apple 'ın en son önerileri için bkz. [Apple güvenlik güncelleştirmeleri](https://support.apple.com/en-us/HT201222) |
-| Cihaz koşulları  |       En düşük işletim sistemi sürümü  |          *Biçim: Ana. ikincil<br> örnek: 8,0* /erişimi engelle   |          Android        | Microsoft, en düşük Android ana sürümünün Microsoft uygulamaları için desteklenen Android sürümleriyle eşleşecek şekilde yapılandırılmasını önerir. Android kurumsal gereksinimleri olan OEM 'Ler ve cihazlar, geçerli sevkiyat sürümü + bir mektup yükseltmesi desteklemelidir.   Android, bilgi çalışanları için Android 8,0 ve üstünü öneriyor.   Android 'in en son önerileri için bkz. [Android Enterprise önerilen gereksinimleri](https://www.android.com/enterprise/recommended/requirements/) |
+| Cihaz koşulları  |       En düşük işletim sistemi sürümü  |          *Biçim: Ana. ikincil. derleme <br>örneği: 12.4.6* /Block erişimi |          iOS/iPadOS        | Microsoft, en düşük iOS ana sürümünün Microsoft uygulamaları için desteklenen iOS sürümleriyle eşleşecek şekilde yapılandırılmasını önerir.   Microsoft uygulamaları, N 'nin geçerli iOS ana yayın sürümü olduğu bir N-1 yaklaşımını destekler. Küçük ve derleme sürüm değerleri için Microsoft, cihazların ilgili güvenlik güncelleştirmeleriyle güncel olmasını önerir. Apple 'ın en son önerileri için bkz. [Apple güvenlik güncelleştirmeleri](https://support.apple.com/en-us/HT201222) |
+| Cihaz koşulları  |       En düşük işletim sistemi sürümü  |          *Biçim: Ana. ikincil<br> örnek: 5,0* /erişimi engelle   |          Android        | Microsoft, en düşük Android ana sürümünün Microsoft uygulamaları için desteklenen Android sürümleriyle eşleşecek şekilde yapılandırılmasını önerir. Android kurumsal gereksinimleri olan OEM 'Ler ve cihazlar, geçerli sevkiyat sürümü + bir mektup yükseltmesi desteklemelidir.   Android, bilgi çalışanları için Android 8,0 ve üstünü öneriyor.   Android 'in en son önerileri için bkz. [Android Enterprise önerilen gereksinimleri](https://www.android.com/enterprise/recommended/requirements/) |
 | Cihaz koşulları  |       Min Patch sürümü  |          *Biçim: yyyy-aa-gg <br> örnek: 2020-01-01* /erişimi engelle  |          Android        | Android cihazlar aylık güvenlik düzeltme ekleri alabilir, ancak yayın OEM 'Lere ve/veya taşıyıcılar 'e bağımlıdır. Kuruluşlar, bu ayarı uygulamadan önce dağıtılmış Android cihazlarının güvenlik güncelleştirmelerini aldığından emin olmalıdır. En son düzeltme eki sürümleri için [Android güvenlik bültenlerini](https://source.android.com/security/bulletin/) inceleyin.  |
 
 #### <a name="level-3-enterprise-high-data-protection"></a>Düzey 3 Kurumsal yüksek veri koruma 
@@ -171,27 +171,28 @@ Düzey 3 ' te zorlanan ilke ayarları, düzey 2 ve 1 için önerilen tüm ilke a
 
 #### <a name="data-protection"></a>Veri koruma
 
-| Ayar | Ayar açıklaması |             Değer  |             Platfveyam        | Notlar |
+| Ayar | Ayar açıklaması |             Değer  |             Platform        | Notlar |
 |---------------|---------------------------------------|----------------------------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Veri aktarımı |       Diğer uygulamalardan veri al  |          İlke ile yönetilen uygulamalar  |          iOS/ıpados, Android         |  |
-| Veri aktarımı |       Üçüncü taraf klavyeler  |          Engelle  |          iOS/iPadOS        | İOS 'ta bu, tüm üçüncü taraf klavyelerin uygulama içinde çalışmasını engeller.  |
-| Veri aktarımı |       Onaylanan klavyeler  |          Gerekli  |          Android        | Android ile, dağıtılan Android cihazlarınıza göre kullanılabilmesi için klavyeler seçili olmalıdır.  |
+| Veri aktarımı |       Üçüncü taraf klavyeler  |          Blok  |          iOS/iPadOS        | İOS 'ta bu, tüm üçüncü taraf klavyelerin uygulama içinde çalışmasını engeller.  |
+| Veri aktarımı |       Onaylanan klavyeler  |          Gerektirme  |          Android        | Android ile, dağıtılan Android cihazlarınıza göre kullanılabilmesi için klavyeler seçili olmalıdır.  |
 | Veri aktarımı |       Onaylanacak klavyeleri seçin  |          *Klavye ekle/kaldır*  |          Android        | Android ile, dağıtılan Android cihazlarınıza göre kullanılabilmesi için klavyeler seçili olmalıdır.  |
-| İşlevi |       Kuruluş verilerini yazdırma  |          Engelle  |          iOS/ıpados, Android         |  |
+| İşlev |       Kuruluş verilerini yazdırma  |          Blok  |          iOS/ıpados, Android         |  |
 
 #### <a name="access-requirements"></a>Erişim gereksinimleri
 
-|       Ayar  |          Değer  |          Platfveyam  |
+|       Ayar  |          Değer  |          Platform  |
 |-----------------------------------------------------------|--------------------|---------------------------------|
-|       Basit PIN  |          Engelle  |          iOS/ıpados, Android  |
+|       Basit PIN  |          Blok  |          iOS/ıpados, Android  |
 |       Minimum PIN uzunluğunu seçin  |          6  |          iOS/ıpados, Android  |
-|       Gün sayısından sonra PIN sıfırlama  |          Evet  |          iOS/ıpados, Android  |
+|       Gün sayısından sonra PIN sıfırlama  |          Yes  |          iOS/ıpados, Android  |
 |       Gün sayısı  |          365  |          iOS/ıpados, Android  |
 
 #### <a name="conditional-launch"></a>Koşullu başlatma
 
-| Ayar | Ayar açıklaması |          Değer/eylem  |          Platfveyam        | Notlar |
+| Ayar | Ayar açıklaması |          Değer/eylem  |          Platform        | Notlar |
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Cihaz koşulları  |       En düşük işletim sistemi sürümü  |          *Biçim: Ana. ikincil<br> örnek: 8,0* /erişimi engelle   |          Android        | Microsoft, en düşük Android ana sürümünün Microsoft uygulamaları için desteklenen Android sürümleriyle eşleşecek şekilde yapılandırılmasını önerir. Android kurumsal gereksinimleri olan OEM 'Ler ve cihazlar, geçerli sevkiyat sürümü + bir mektup yükseltmesi desteklemelidir.   Android, bilgi çalışanları için Android 8,0 ve üstünü öneriyor.   Android 'in en son önerileri için bkz. [Android Enterprise önerilen gereksinimleri](https://www.android.com/enterprise/recommended/requirements/) |
 |       Cihaz koşulları  |          Jailbreak uygulanmış/kök erişim izni verilmiş cihazlar  |        N/A/silme verisi  |          iOS/ıpados, Android        |  |
 |       Cihaz koşulları  |          İzin verilen en fazla tehdit düzeyi  |          Güvenli/blok erişimi  |          iOS/ıpados, Android        | <p>Kayıtlı olmayan cihazlar, mobil tehdit savunması kullanılarak tehditler için incelenebilir. Daha fazla bilgi için bkz. [kayıtlı olmayan cihazlar Için mobil tehdit savunması](https://aka.ms/mtdmamdocs).      </p><p>     Cihaz kaydedildiyse bu ayar, kayıtlı cihazlar için Mobile Threat Defense 'in dağıtılmasıyla ilgili olarak atlanabilir. Daha fazla bilgi için bkz. [Kayıtlı cihazlar Için mobil tehdit savunması](../protect/mtd-device-compliance-policy-create.md).</p> |
 

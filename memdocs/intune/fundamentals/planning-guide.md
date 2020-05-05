@@ -18,22 +18,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6327de8fd4543f60d66eedc3ac6b86b8275f2ca2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 65d4745580a4b0d733ffe14be03f0f9893074586
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330906"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080105"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Intune dağıtım planlama, tasarım ve uygulama kılavuzu
 
 Başarılı bir Microsoft Intune dağıtımı iyi bir plan ve tasarıma sahip olmakla başlar. Bu kılavuzun amacı bir dağıtım planı geliştirme, bir tasarım oluşturma, Intune’u ekleme ve bir üretim dağıtımı gerçekleştirme süreçlerinde size adım adım rehberlik etmektir.
 
-## <a name="whats-included-in-this-guide"></a>Kılavuza neler dahildir?
+## <a name="whats-included-in-this-guide"></a>Bu kılavuza neler dahildir?
 
 Bu kılavuz Intune'u uçtan uca dağıtma sürecinde size adım adım rehberlik edecek bölümler içerir. Amaçlarınızı, hedeflerinizi ve zorlukları netleştirmek için Bölüm 1 ile başlayın. Ardından ihtiyaçlarınıza en çok uyan sırada 2. – 7. Bölümlere geçin. Bu bölümleri sırayla çalışmanız gerekmez; paralel olarak da tamamlayabilirsiniz.
 
-- [Bölüm 1: Intune dağıtım amaçlarını, hedeflerini ve zorluklarını belirleme](planning-guide-deployment-goals.md)
+- [Bölüm 1: dağıtım hedeflerini, amaçları ve zorlukları belirleme](planning-guide-deployment-goals.md)
 
 - [Bölüm 2: Kullanım örneği senaryolarını tanımlama](planning-guide-scenarios.md)
 
@@ -63,4 +63,4 @@ Bu kılavuz ayrıca, Intune dağıtım planlaması, tasarım ve uygulama süreç
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-İlk bölüm ile başlayalım: [Dağıtım hedeflerini, amaçlarını ve zorluklarını belirleme](planning-guide-deployment-goals.md).
+İlk bölüm ile başlayalım: [dağıtım hedeflerini, amaçları ve sorunlarını belirleyin](planning-guide-deployment-goals.md).

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/25/2019
+ms.date: 04/27/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b5df63a14f27b657c585eb43e09b02368d969939
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 676af3373acd399056a0ebdc77c9152442a72101
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084409"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182285"
 ---
 # <a name="install-mobile-threat-defense"></a>Mobil tehdit savunması 'nı yükler   
 
@@ -30,7 +30,7 @@ Kuruluşunuzun güvenlik gereksinimlerinin bir parçası olarak, bir Mobile Thre
 
 Gerekli MTD uygulamanız yoksa, iş veya okul hesabınızla korunan uygulamalarda oturum açmanız engellenir. Bu makalede, engeli kaldırılacak [BIR MTD uygulamasını nasıl yükleyeceğinizi](set-up-mobile-threat-defense.md#install-app) öğreneceksiniz.  
 
-Yüklemek için kullanabileceğiniz çeşitli MTD satıcı uygulamaları vardır; Kuruluşunuz hangisini kullanacağınızı bilmenizi sağlayacak. 
+Farklı adlara sahip olan, yüklemek için kullanabileceğiniz çeşitli MTD satıcı uygulamaları vardır. Kuruluşunuz hangisini kullanacağınızı bilmenizi sağlayacak. Uygulamayı yüklemek isteyip istemediğiniz sorulursa, daha fazla yönerge veya uygulama almaya yönelik bir bağlantı verilmemişse, BT destek sorumlunuza başvurun. 
 
 
 ## <a name="information-your-organization-can-see"></a>Kuruluşunuzun görebileceği bilgiler   
@@ -43,7 +43,7 @@ Kuruluşunuz, kişisel uygulamalarınızda metin, e-posta ve resim gibi verileri
 * Uygulama paketi ve dinamik Boyut: bir uygulamanın cihazınızda kullandığı alan miktarı. 
 
 
-## <a name="install-app"></a>Uygulamayı yükler    
+## <a name="install-app"></a>Uygulamayı yükleme    
 Korumalı bir uygulamada oturum açtığınızda, otomatik olarak bir MTD uygulaması kurmanız istenir. Yüklemeyi tamamlamaya yönelik ekrandaki adımları izleyin. Ek Yardım için bu bölümdeki adımları kullanın.  
  
 Cihazınızı kaydetmeniz de istenebilir. Kayıt, kimliğinizi doğrulamak ve okul veya iş hesabınızı cihazınıza bağlamak için gereklidir. Kaydolmadıysanız, MTD uygulamasını yüklemeden önce bu kurulum üzerinden otomatik olarak gezinirsiniz. **Erişim al** ekranına geldiğinizde, yükleme adımlarını başlatabilirsiniz.  
@@ -83,7 +83,7 @@ Uygulama günlüklerinizi, yükleme hakkında daha fazla bağlam sağlamak için
 
 * iOS cihaz kullanıcıları: iOS için Microsoft Edge 'ten [günlüklerinizi alın ve gönderin](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) .  
 
-## <a name="resolve-a-threat"></a>Tehdidi çözümleyin  
+## <a name="resolve-a-threat"></a>Tehdidi çözümleme  
 Bir tehdit kuruluşunuzun tanımlı tehdit düzeyini aşarsa, kuruluşunuzun şunları yapmanız gerekir:  
    
 * Erişimi engelle: iş veya okul hesabınızda oturum açtığınızda kuruluşunuzun korunan uygulamalarını kullanmanızı engeller.  

@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f9e62cd4c4034e4cf2eafaea56aa3e5175b1797e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cc2fbfac43916a8298646f6ff57c146c45966b1c
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324298"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254818"
 ---
 # <a name="sync-your-windows-device-manually"></a>Windows cihazınızı el ile eşitleme
 
@@ -34,17 +34,17 @@ Intune; Şirket Portalı uygulamasından, masaüstü görev çubuğu ve Başlat 
 
 Aşağıdakiler dahil olmak üzere tüm Windows cihazlar, cihazın Ayarlar uygulamasından eşitlenebilir:
 
-* [Windows 10 masaüstü](#windows-10-desktop)  
+* [Windows 10 Masaüstü](#windows-10-desktop)  
 * [Microsoft HoloLens](#microsoft-hololens)   
 * [Windows 10 Mobile](#windows-10-mobile)  
 * [Windows Phone 8.1](#windows-phone-81)    
 
 ## <a name="sync-directly-from-company-portal-app-for-windows"></a>Windows için Şirket Portalı uygulamasından doğrudan eşitleme
-Creator’s Update (1703) ve üzerini çalıştıran Windows 10 cihazları el ile eşitlemek için bu adımları tamamlayın.
+Oluşturan güncelleştirme (sürüm 1709) veya sonraki sürümü çalıştıran Windows 10 cihazlarını el ile eşitlemek için bu adımları uygulayın.
 
 1. Cihazınızda Şirket Portalı uygulamasını açın.
 
-2. **Ayarlar** > **Eşitle**’yi seçin.
+2. **Ayarları** > **eşitleme**' yi seçin.
 
     ![Şirket Portalı uygulamasının Ayarlar bölümünün vurgulandığı giriş sayfasının ekran görüntüsü](./media/RS1_homePage_settings_04.png)  
     
@@ -65,7 +65,7 @@ Eşitleme denetimine uygulama dışında, cihazınızın masaüstünden de eriş
 Microsoft HoloLens, Windows 10 Desktop, Windows 10 Mobile ve Windows Phone 8.1 cihazlarınızı Ayarlar uygulamasından el ile eşitlemek için bu adımları tamamlayın.  
 
 ### <a name="windows-10-desktop"></a>Windows 10 masaüstü
-1. Cihazınızda **Başlat** > **Ayarlar**’ı seçin.
+1. Cihazınızda**ayarları** **Başlat** > ' ı seçin.
 
 2. **Hesaplar**’ı seçin.
 
@@ -93,7 +93,7 @@ Microsoft HoloLens, Windows 10 Desktop, Windows 10 Mobile ve Windows Phone 8.1 c
 
 3. **Bilgi**’ye tıklayın. 
 
-4. **Eşitle**’ye tıklayın. 
+4. **Eşitle**'ye tıklayın. 
 
 #### <a name="work-access-steps"></a>İş erişimi adımları
 
@@ -112,7 +112,7 @@ Microsoft HoloLens, Windows 10 Desktop, Windows 10 Mobile ve Windows Phone 8.1 c
 
 ### <a name="windows-10-mobile"></a>Windows 10 Mobile
 
-   1. Cihazınızda **Tüm uygulamalar** > **Ayarlar** > **Hesaplar**’a gidin.
+   1. Cihazınızda **tüm uygulamalar** > **Ayarlar** > **hesaplar**' a gidin.
 
        ![Ayarları ekranında Hesapları Seçme](./media/win10m-sync-1-settings-accounts.png)
 
@@ -131,14 +131,14 @@ Microsoft HoloLens, Windows 10 Desktop, Windows 10 Mobile ve Windows Phone 8.1 c
 Bu yönergeler, Windows 10 Yıldönümü Güncelleştirmesi (RS1 olarak da bilinir) çalıştıran HoloLens cihazlarda geçerlidir. 
 1. Cihazınızda Ayarlar uygulamasını açın.  
 
-2. **Hesaplar** > **İş Erişimi**’ni seçin.  
+2. **Hesapların** > **iş erişimini**seçin.  
     ![Hesaplar bağlantısının vurgulandığı HoloLens ayarlar uygulamasının ekran görüntüsü](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
 
-3. **Eşitleme**> bağlı hesabınızı seçin.  ![ekran görüntüsü HoloLens ayarları uygulaması, Eşitle düğmesi vurgulanmış](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
+3. **Eşitleme**> bağlı hesabınızı seçin.  ![Ekran görüntüsü HoloLens ayarları uygulaması, Eşitle düğmesi vurgulanmış](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
 
-### <a name="windows-phone-81"></a>WVPN profillerinidows Phone 8.1
+### <a name="windows-phone-81"></a>Windows Phone 8.1
 
-1. **Tüm uygulamalar** > **Ayarlar** > **çalışma alanı**’na gidin.
+1. **Tüm uygulamalar** > **Ayarlar** > **çalışma alanı**' na gidin.
 
     ![Ayarlar listesi](./media/wp81-1-sync-settings-workplace.png)
 

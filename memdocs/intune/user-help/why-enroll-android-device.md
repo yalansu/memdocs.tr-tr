@@ -1,5 +1,5 @@
 ---
-title: Android cihazınızı neden kaydeder?
+title: Android cihazınızı neden kaydetmelisiniz?
 description: Cihazınızı Intune 'a kaydetmek için neden önemli olduğunu öğrenin
 keywords: ''
 author: lenewsad
@@ -19,14 +19,14 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ea760ef125ce2d6d7d0446564be3b2b27a6038ce
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: bee0f037e1695112739a898c75a67d232ea722d8
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324110"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079952"
 ---
-# <a name="why-enroll-your-android-device"></a>Android cihazınızı neden kaydeder?  
+# <a name="why-enroll-your-android-device"></a>Android cihazınızı neden kaydetmelisiniz?  
 
 Okullar ve işverenlere, iç kaynaklara erişmek için güvenli, güvenilir bir cihaz kullandığınızdan emin olmak ister. Şirket Portalı ve Microsoft Intune uygulamalar, bu kaynaklara erişirken Android cihazınızı ve verilerinizi güvende tutar. Nerede olursanız olun veya kullandığınız cihaz varsa kaynaklara güvenli bir şekilde erişmenizi sağlar. 
 
@@ -64,9 +64,9 @@ Cihazınız eşitlenmemiş veya artık gereksinimleri karşılamadığında, dur
 
 
 ## <a name="permits-company-support-access-to-your-device"></a>Şirket destek birimine cihazınıza erişim izni verir
-Cihazınızı kaydettiğinizde, şirketinizin destek veya BT yöneticinize sınırlı ve anlamlı nedenlerle cihaz erişimi verilir. Bu son kullanıcılar:  
+Cihazınızı kaydettiğinizde, şirketinizin destek veya BT yöneticinize sınırlı ve anlamlı nedenlerle cihaz erişimi verilir. Bu kullanıcılar şunları yapabilir:  
 
-* Cihazınızı üretici varsayılan ayarlarına geri döndürebilir. Yukarıda belirtildiği gibi cihazınıza sıfırlama erişiminiz de vardır. Ancak Şirket Portalı uygulamasına hemen erişemiyorsanız, şirketiniz cihazı sizin için sıfırlayabilir.  
+* Cihazınızı üreticinin varsayılan ayarlarına geri sıfırlayın. Yukarıda belirtildiği gibi cihazınıza sıfırlama erişiminiz de vardır. Ancak Şirket Portalı uygulamasına hemen erişemiyorsanız, şirketiniz cihazı sizin için sıfırlayabilir.  
 
 * Şirket ile ilgili tüm verileri kaldırabilir. Şirketten ayrılırsanız veya cihazınız yönetim dışına alınırsa, kuruluşunuz cihazınızdan şirketle ilgili verileri kaldırabilir. Kişisel verileriniz ve ayarlarınız kaldırılmaz ve cihazda kalır.  
 

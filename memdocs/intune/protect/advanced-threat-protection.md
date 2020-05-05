@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune-Azure 'da Microsoft Defender ATP 'yi kullanma | Microsoft Docs
-description: Kurulum ve yapılandırma dahil olmak üzere Intune ile Microsoft Defender Gelişmiş tehdit koruması 'nı (Microsoft Defender ATP) kullanın, Intune cihazlarınızı ATP ile ekleme ve ardından Intune cihaz uyumluluğuyla ve koşullu bir cihaz ATP risk değerlendirmesi kullanma ağ kaynaklarını korumak için erişim ilkeleri.
+description: Kurulum ve yapılandırma dahil olmak üzere Intune ile Microsoft Defender Gelişmiş tehdit koruması 'nı (Microsoft Defender ATP) kullanın, Intune cihazlarınızı ATP ile ekleme ve ardından Intune cihaz uyumluluğuyla bir cihaz ATP risk değerlendirmesi ve ağ kaynaklarını korumak için koşullu erişim ilkeleri kullanın.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,28 +16,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c5528e5de99e599c968f0c006aa98545b2004e2
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: beea54b7ca244190ec0821d4ce8364369797590a
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551556"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166629"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Intune 'da koşullu erişimle Microsoft Defender ATP için uyumluluğu zorlama
 
-Microsoft Defender Gelişmiş tehdit koruması 'nı (Microsoft Defender ATP), Microsoft Intune Mobile Threat Defense çözümü olarak tümleştirebilirsiniz. Tümleştirme, güvenlik ihlallerinin önlenmesine ve bir kuruluşun içindeki ihlallerinin etkilerini sınırlamanıza yardımcı olabilir. Microsoft Defender ATP, Windows 10 veya üstünü çalıştıran cihazlarla çalışır.
+Microsoft Defender Gelişmiş tehdit koruması 'nı (Microsoft Defender ATP), Microsoft Intune Mobile Threat Defense çözümü olarak tümleştirebilirsiniz. Tümleştirme, güvenlik ihlallerinin önlenmesine ve bir kuruluşun içindeki ihlallerinin etkilerini sınırlamanıza yardımcı olabilir. Microsoft Defender ATP, Windows 10 veya üzeri çalıştıran cihazlarla ve Android cihazlarla çalışır.
 
 Başarılı olmak için Concert 'de aşağıdaki konfigürasyonları kullanın:
 
-- **Intune Ile Microsoft Defender ATP arasında hizmetten hizmete bağlantı kurun**. Bu bağlantı, Microsoft Defender ATP 'yi Intune ile yönettiğiniz Windows 10 cihazlarından makine riski hakkında veri toplamasına olanak sağlar.
+- **Intune Ile Microsoft Defender ATP arasında hizmetten hizmete bağlantı kurun**. Bu bağlantı, Microsoft Defender ATP 'nin Windows 10 ' dan makine riski ve Intune ile yönettiğiniz Android cihazları hakkında veri toplamasını sağlar.
 - **Microsoft Defender ATP ile cihazları eklemek için bir cihaz yapılandırma profili kullanın**. Cihazları, Microsoft Defender ATP ile iletişim kuracak şekilde yapılandırmak ve risk düzeylerini değerlendirmeye yardımcı olan verileri sağlamak için kullanabilirsiniz.
 - **İzin vermek istediğiniz risk düzeyini ayarlamak için bir cihaz uyumluluk Ilkesi kullanın**. Risk düzeyleri Microsoft Defender ATP tarafından raporlanır. İzin verilen risk düzeyini aşan cihazlar uyumlu değil olarak tanımlanır.
 - Kullanıcıların, uyumlu olmayan cihazlardan şirket kaynaklarına erişmesini engellemek için **koşullu erişim Ilkesi kullanın** .
 
 Intune 'u Microsoft Defender ATP ile tümleştirdiğinizde, ATPs tehdidi & güvenlik açığı yönetimi (TVM) avantajlarından yararlanabilir ve [TVM tarafından tanımlanan uç nokta zayıflılığını düzeltmek Için Intune 'u kullanabilirsiniz](atp-manage-vulnerabilities.md).
-
-> [!NOTE]
-> Intune kullanıcı arabirimi (UI) tam ekran deneyimine sahiptir ve birkaç hafta sürebilir. Kiracınız bu güncelleştirmeyi alıncaya kadar, bu makalede açıklanan ayarları oluştururken veya düzenlerken biraz farklı bir iş akışına sahip olursunuz.
 
 ## <a name="example-of-using-microsoft-defender-atp-with-intune"></a>Intune ile Microsoft Defender ATP kullanma örneği
 
@@ -61,7 +58,7 @@ Cihazları uyumlu olmayan bir *Orta* veya *yüksek* düzeyde riske göre sınıf
 Microsoft Defender ATP 'yi Intune ile birlikte kullanmak için, aşağıdakilerin yapılandırıldığından ve kullanıma hazırlandığınızdan emin olun:
 
 - Enterprise Mobility + Security E3 ve Windows E5 (veya Microsoft 365 Kurumsal E5) için lisanslı kiracı
-- Azure AD’ye katılmış [Intune tarafından yönetilen](../enrollment/windows-enroll.md) Windows 10 cihazların olduğu Microsoft Intune ortamı
+- Microsoft Intune ortamı, [Intune ile yönetilen](../enrollment/windows-enroll.md) Windows 10 veya aynı zamanda Azure AD 'ye katılmış Android cihazları
 - Microsoft [Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) ve Microsoft Defender güvenlik MERKEZI (ATP portalı) erişimi
 
 > [!NOTE]
@@ -77,19 +74,21 @@ Yalnızca her kiracı için Defender ATP 'yi tek bir kez etkinleştirmeniz gerek
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Microsoft Defender ATP** > **uç nokta güvenliği** ' ni seçin ve ardından **Microsoft Defender Güvenlik Merkezi 'ni aç**' ı seçin.
+2. **Endpoint Security** > **Microsoft Defender ATP**' yi seçin ve ardından **Microsoft Defender Güvenlik Merkezi 'ni aç**' ı seçin.
 
    ![Microsoft Defender Güvenlik Merkezi 'ni açmak için seçin](./media/advanced-threat-protection/atp-device-compliance-open-microsoft-defender.png)
 
-4. **Microsoft Defender Güvenlik Merkezi**'nde:
-    1. **Ayarlar** > **Gelişmiş özellikler**’i seçin.
-    2. **Microsoft Intune bağlantısı** için **Açık** seçeneğini belirleyin:
+3. **Microsoft Defender Güvenlik Merkezi**'nde:
+   1. **Ayarlar** > **Gelişmiş Özellikler**' i seçin.
+   2. **Microsoft Intune bağlantısı** için **Açık** seçeneğini belirleyin:
 
-        ![Intune bağlantısını etkinleştirme](./media/advanced-threat-protection/atp-security-center-intune-toggle.png)
+      ![Intune bağlantısını etkinleştirme](./media/advanced-threat-protection/atp-security-center-intune-toggle.png)
 
-    3. **Tercihleri kaydet**’i seçin.
+   3. **Tercihleri kaydet**’i seçin.
 
-4. Microsoft Endpoint Manager Yönetim merkezinde **Microsoft Defender ATP** 'ye dönün. **MDM uyumluluk Ilkesi ayarları**altında, **Windows cihazları sürümü 10.0.15063 ve üstünü Microsoft Defender ATP** 'yi **Açık**olarak ayarlayın.
+4. Microsoft Endpoint Manager Yönetim merkezinde **Microsoft Defender ATP** 'ye dönün. **MDM uyumluluk Ilkesi ayarları**altında kuruluşunuzun ihtiyaçlarına bağlı olarak:
+   - **Windows cihazları 10.0.15063 ve üzeri sürümlerini Microsoft Defender ATP** 'yi **Açık** ve/veya üzerine bağla ayarı yapın
+   - **6.0.0 ve üzeri sürüm Android cihazlarını açık olarak Microsoft Defender ATP 'ye bağlayın** . **On**
 
 5. **Kaydet**’i seçin.
 
@@ -107,18 +106,18 @@ Yalnızca her kiracı için Defender ATP 'yi tek bir kez etkinleştirmeniz gerek
 >
 > Klasik koşullu erişim ilkelerini görüntülemek için [Azure](https://portal.azure.com/#home)'da **Azure Active Directory** > **koşullu erişim** > **Klasik ilkeleri**' ne gidin.
 
-## <a name="onboard-devices-by-using-a-configuration-profile"></a>Bir yapılandırma profili kullanarak cihazları ekleme
+## <a name="onboard-windows-devices-by-using-a-configuration-profile"></a>Yapılandırma profili kullanarak Windows cihazları ekleme 
 
-Intune ile Microsoft Defender ATP arasında hizmetten hizmete bağlantı kurduktan sonra, risk düzeyiyle ilgili verilerin toplanabilmesi ve kullanılabilmesi için Intune yönetilen cihazlarınızı ATP 'ye ekleyin. Cihazları eklemek için, Microsoft Defender ATP için bir cihaz yapılandırma profili kullanırsınız.
+Windows platformu için, Intune ile Microsoft Defender ATP arasında hizmet-hizmet bağlantısı kurduktan sonra, risk düzeyiyle ilgili verilerin toplanabilmesi ve kullanılabilmesi için Intune yönetilen cihazlarınızı ATP 'ye ekleyin. Cihazları eklemek için, Microsoft Defender ATP için bir cihaz yapılandırma profili kullanırsınız.
 
 Microsoft Defender ATP bağlantısı kurduktan sonra Intune, Microsoft Defender ATP 'den bir Microsoft Defender ATP ekleme yapılandırma paketi aldı. Bu paket cihaz yapılandırma profiliyle cihazlara dağıtılır. Yapılandırma paketi, cihazları taramak, tehditleri algılamak ve riski Microsoft Defender ATP 'ye bildirmek üzere [Microsoft Defender ATP hizmetleriyle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) iletişim kuracak şekilde yapılandırır. Yapılandırma paketini kullanarak bir cihaz ekledikten sonra, bunu tekrar yapmanız gerekmez. Ayrıca, bir [Grup İlkesi veya Microsoft uç noktası Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints)kullanarak da cihaz ekleyebilirsiniz.
 
 ### <a name="create-the-device-configuration-profile"></a>Cihaz yapılandırma profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Bir **Ad** ve **Açıklama** girin.
-4. **Platform** olarak **Windows 10 ve üzeri**’ni seçin
+4. **Platform**için **Windows 10 ve üzeri** ' i seçin 
 5. **Profil türü**Için **Microsoft Defender ATP (Windows 10 Masaüstü)** öğesini seçin.
 6. Şu ayarları yapılandırın:
 
@@ -137,17 +136,17 @@ Microsoft Defender ATP bağlantısı kurduktan sonra Intune, Microsoft Defender 
 
 ## <a name="create-and-assign-the-compliance-policy"></a>Uyumluluk ilkesi oluşturma ve atama
 
-Uyumluluk ilkesi, bir cihaz için kabul edilebilir olarak düşünebileceğiniz risk düzeyini belirler.
+Hem Windows hem de Android cihazlarda, uyumluluk ilkesi bir cihaz için kabul edilebilir olarak düşünmeniz gereken risk düzeyini belirler.
 
 Uyumluluk ilkesi oluşturma konusunda bilgi sahibi değilseniz, *Microsoft Intune ' de uyumluluk ilkesi oluşturma bölümünde* [ilke oluşturma](../protect/create-compliance-policy.md#create-the-policy) yordamına başvurun. Aşağıdaki bilgiler, bir uyumluluk ilkesinin parçası olarak Defender ATP yapılandırmasına özgüdür.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Ilke oluştur** > **cihaz** > **uyumluluk ilkeleri** > **ilkeleri** ' ni seçin.
+2. **Cihaz** > **uyumluluk ilkeleri** > **Policies**ilkeleri > **ilke oluştur**' u seçin.
 
-3. **Platform** için *Windows 10 ve üzeri*' i seçin ve ardından **Oluştur** ' u seçerek **ilke yapılandırma oluştur** penceresini açın.
+3. **Platform** için *Windows 10 ve üzeri*, **Android Cihaz Yöneticisi**ve/veya **Android Enterprise**' u seçin. Ardından, **Oluştur** ' u seçerek **ilke yapılandırma oluştur** penceresini açın.
 
-4. **Temel bilgiler** sekmesinde, daha sonra tanımanıza yardımcı olacak bir **ad** belirtin. Bir **Açıklama**belirtmeyi de tercih edebilirsiniz.
+4. Daha sonra tanımanıza yardımcı olacak bir **ad** belirtin. Bir **Açıklama**belirtmeyi de tercih edebilirsiniz.
   
 5. **Uyumluluk ayarları** sekmesinde, **Microsoft Defender ATP** grubunu genişletin ve cihazın tercih edilen düzeyinize **veya makine risk puanı altında olmasını gerektir** seçeneğini belirleyin.
 
@@ -169,7 +168,7 @@ Koşullu erişim ilkesi, uyumluluk ilkenizde ayarladığınız tehdit düzeyini 
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Son nokta güvenliği** > **koşullu erişim** > **Yeni ilke**' yi seçin.
+2. **Endpoint Security** > **koşullu erişim** > **Yeni ilke**' yi seçin.
 
 3. İlke için bir **Ad** girin ve **Kullanıcılar ve gruplar**’ı seçin. İlke için grupları eklemek üzere Dahil Et veya Hariç Tut seçeneklerini kullanın ve **Bitti**’yi seçin.
 
@@ -177,11 +176,11 @@ Koşullu erişim ilkesi, uyumluluk ilkenizde ayarladığınız tehdit düzeyini 
 
    Değişikliklerinizi kaydetmek için **Bitti**’yi seçin.
 
-5. **Koşullar** > **İstemci uygulamaları**’nı seçerek ilkeyi uygulamalara ve tarayıcılara uygulayın. Örneğin **Evet**’i seçin ve ardından **Tarayıcı** ve **Mobil uygulamalar ve masaüstü istemciler**’i etkinleştirin.
+5. İlkeyi uygulamalara ve tarayıcılara uygulamak için **koşullar** > **istemci uygulamaları** ' nı seçin. Örneğin **Evet**’i seçin ve ardından **Tarayıcı** ve **Mobil uygulamalar ve masaüstü istemciler**’i etkinleştirin.
 
    Değişikliklerinizi kaydetmek için **Bitti**’yi seçin.
 
-6. Cihaz uyumluluğuna göre koşullu erişim uygulamak için **Izin ver** ' i seçin. Örneğin **Erişim ver** > **Cihazın uyumlu olarak işaretlenmesini gerektir**’i seçin.
+6. Cihaz uyumluluğuna göre koşullu erişim uygulamak için **Izin ver** ' i seçin. Örneğin, **erişim** > ver**cihazın uyumlu olarak işaretlenmesini gerektir**' i seçin.
 
     Değişikliklerinizi kaydetmek için **Seçin**’e tıklayın.
 
@@ -193,19 +192,19 @@ Ardından, Microsoft Defender ATP Uyumluluk ilkesine sahip cihazların durumunu 
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. Cihaz > **ilke uyumluluğunu** **izlemek** > **cihazları** seçin.
+2. **Cihazları** > seçin**ilke uyumluluğunu****izleyin** > .
 
 3. Listede Microsoft Defender ATP ilkenizi bulun ve hangi cihazların uyumlu veya uyumsuz olduğunu görün.
 
 Aynı konumdaki uyumsuz cihazlar için *işletimsel* raporu da kullanabilirsiniz:
 
-1. **Uyumlu olmayan cihazları** > **izleyici** > **cihazları** seçin.
+1. **Uyumsuz cihazları****izlemek** > için **cihazlar** > ' ı seçin.
 
 Raporlar hakkında daha fazla bilgi için bkz. [Intune raporları](../fundamentals/reports.md).
 
 ## <a name="view-onboarding-status"></a>Ekleme durumunu görüntüle
 
-Tüm Intune ile yönetilen Windows 10 cihazlarının ekleme durumunu görüntülemek için, **Microsoft Defender ATP** > **cihaz uyumluluğu** ' na gidebilirsiniz. Bu sayfadan, Microsoft Defender ATP 'ye daha fazla cihaz ekleme için bir cihaz yapılandırma profili oluşturmayı da başlatabilirsiniz.
+Tüm Intune tarafından yönetilen Windows 10 cihazlarının ekleme durumunu görüntülemek için **Kiracı Yönetimi** > **Microsoft Defender ATP**'ye gidebilirsiniz. Bu sayfadan, Microsoft Defender ATP 'ye daha fazla cihaz ekleme için bir cihaz yapılandırma profili oluşturmayı da başlatabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

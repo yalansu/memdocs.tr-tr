@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 04/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a533344b72952098403fae0ebcabbcad473684a
-ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
+ms.openlocfilehash: 16c086295b93b72ef2f9cfbd2d6a15d6bb54f320
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80611718"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82183028"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>MAM ve uygulama koruma hakkında sık kullanılan sorular
 
@@ -38,14 +38,14 @@ MAM, bir uygulama içindeki kuruluş verilerini korur. Kayıtsız MAM (MAM-WE) i
 
 **MAM hangi cihaz yapılandırmalarını destekler?**<br></br>
 Intune MAM iki yapılandırmayı destekler:
-- **Intune MDM + MAM**: BT yöneticileri, yalnızca Intune mobil cihaz yönetiminde (MDM) kayıtlı cihazlarda MAM ve uygulama koruma ilkelerini kullanarak uygulamaları yönetebilir. Uygulamaları MAM-WE kullanarak yönetmek için, müşterilerin https://portal.azure.com adresindeki Azure portalında Intune konsolunu kullanması gerekir.
+- **Intune MDM + MAM**: BT yöneticileri, yalnızca Intune mobil cihaz yönetiminde (MDM) kayıtlı cihazlarda MAM ve uygulama koruma ilkelerini kullanarak uygulamaları yönetebilir. MDM + MAM kullanarak uygulamaları yönetmek için, müşterilerin [Microsoft Endpoint Manager yönetim merkezini](https://go.microsoft.com/fwlink/?linkid=2109431)kullanması gerekir.
 
-- **Cihaz kaydı olmadan MAM**: Cihaz kaydı olmadan MAM ya da diğer adıyla MAM-WE, BT yöneticilerinin Intune MDM’de kayıtlı olmayan cihazlarda MAM ve uygulama koruma ilkelerini kullanarak uygulamaları yönetmesine olanak sağlar. Bu, uygulamaların üçüncü taraf EMM sağlayıcılarında kayıtlı cihazlarda Intune tarafından yönetilebileceği anlamına gelir. Uygulamaları MAM-WE kullanarak yönetmek için, müşterilerin [https://portal.azure.com](https://portal.azure.com)Azure Portal Intune konsolunu kullanması gerekir. Ayrıca uygulamalar, üçüncü taraf Enterprise Mobility Management (EMM) sağlayıcıları ile kaydedilmiş veya hiçbir MDM ile kaydedilmemiş cihazlarda uygulamalar Intune ile yönetilebilir.
+- **Cihaz kaydı olmadan MAM**: Cihaz kaydı olmadan MAM ya da diğer adıyla MAM-WE, BT yöneticilerinin Intune MDM’de kayıtlı olmayan cihazlarda MAM ve uygulama koruma ilkelerini kullanarak uygulamaları yönetmesine olanak sağlar. Bu, uygulamaların üçüncü taraf EMM sağlayıcılarında kayıtlı cihazlarda Intune tarafından yönetilebileceği anlamına gelir. Uygulamaları MAM-WE kullanarak yönetmek için, müşterilerin [Microsoft Endpoint Manager yönetim merkezini](https://go.microsoft.com/fwlink/?linkid=2109431)kullanması gerekir. Ayrıca uygulamalar, üçüncü taraf Enterprise Mobility Management (EMM) sağlayıcıları ile kaydedilmiş veya hiçbir MDM ile kaydedilmemiş cihazlarda uygulamalar Intune ile yönetilebilir.
 
 
 ## <a name="app-protection-policies"></a>Uygulama koruma ilkeleri
 
-**Uygulama koruma ilkeleri nedir?**<br></br>
+**Uygulama koruma ilkeleri nelerdir?**<br></br>
 Uygulama koruma ilkeleri, bir kuruluşa ait verilerin güvenli veya yönetilen bir uygulamanın içinde kalmasını sağlayan kurallardır. İlke, kullanıcı “kurumsal” verilere erişmeye veya bunları taşımaya çalıştığında uygulanan bir kural veya kullanıcı uygulamadayken yasaklanan veya izlenen bir eylemler kümesi olabilir.
 
 **Uygulama koruma ilkelerinin örnekleri nelerdir?**<br></br>
@@ -54,6 +54,7 @@ Her uygulama koruma ilkesi ayarı hakkında ayrıntılı bilgi için [Android uy
 **Farklı cihazlarda aynı kullanıcıya hem MDM hem de MAM ilkelerinin aynı anda uygulanmasını mümkün mü? Örneğin, bir Kullanıcı kendi MAM etkin makinesinden iş kaynaklarına erişebiliyorsa, Ayrıca işe ve Intune MDM ile yönetilen bir cihaz kullanmaya da karşılık gelebilir. Bu fikir için herhangi bir uyarılar var mı?**<br></br>
 Kullanıcıya cihaz durumunu ayarlamadan bir MAM ilkesi uygularsanız, Kullanıcı hem KCG cihazında hem de Intune tarafından yönetilen cihazda MAM ilkesini alır. Yönetilen duruma göre bir MAM ilkesi de uygulayabilirsiniz. Bu nedenle, bir uygulama koruma ilkesi oluşturduğunuzda, hedefi tüm uygulama türleri ' nin yanında Hayır ' ı seçin. Ardından aşağıdakilerden birini yapın:
 - Intune tarafından yönetilen cihazlara daha az sıkı bir MAM ilkesi uygulayın ve MDM 'ye kayıtlı olmayan cihazlara daha kısıtlayıcı bir MAM ilkesi uygulayın.
+-   Intune tarafından yönetilen cihazlara, üçüncü taraf yönetilen cihazlara göre eşit katı bir MAM ilkesi uygulayın.
 - Yalnızca kaydı silinen cihazlara bir MAM ilkesi uygulayın.
 
 Daha fazla bilgi için bkz. [Uygulama koruma ilkelerini izleme](app-protection-policies-monitor.md).
@@ -69,7 +70,7 @@ Daha fazla bilgi için bkz. [Uygulama koruma ilkelerini izleme](app-protection-p
 
 - Son kullanıcının Azure Active Directory hesabına atanmış bir Microsoft Intune lisansının olması gerekir. Son kullanıcılara Intune lisanslarını nasıl atayacağınızı öğrenmek için [Intune lisanslarını yönetme](../fundamentals/licenses-assign.md) konusuna bakın.
 
-- Son kullanıcı bir uygulama koruma ilkesi tarafından hedeflenen bir güvenlik grubuna ait olmalıdır. Aynı uygulama koruma ilkesi, kullanılan belirli uygulamayı hedeflemelidir. Uygulama koruma ilkeleri [Azure portalındaki](https://portal.azure.com) Intune konsolunda oluşturulabilir ve dağıtılabilir. Güvenlik grupları Şu anda [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com)oluşturulabilir.
+- Son kullanıcı bir uygulama koruma ilkesi tarafından hedeflenen bir güvenlik grubuna ait olmalıdır. Aynı uygulama koruma ilkesi, kullanılan belirli uygulamayı hedeflemelidir. Uygulama koruma ilkeleri [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oluşturulabilir ve dağıtılabilir. Güvenlik grupları Şu anda [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com)oluşturulabilir.
 
 - Son kullanıcının AAD hesabını kullanarak uygulamada oturum açması gerekir.
 
@@ -78,7 +79,7 @@ Daha fazla bilgi için bkz. [Uygulama koruma ilkelerini izleme](app-protection-p
 Intune SDK geliştirme ekibi, yerel Android, iOS/ıpados (obj-C, Swift), Xamarin ve Xamarin. Forms platformları ile oluşturulmuş uygulamalar için desteği etkin bir şekilde sınar ve bakımını sağlar. Bazı müşteriler, bir Kullanıcı ve NativeScript gibi diğer platformlarla Intune SDK tümleştirmesi ile başarılı olmuş olsa da, desteklenen platformlarımızdan başka herhangi bir şeyi kullanarak uygulama geliştiricileri için açık rehberlik veya eklentiler sağlamayız.
 
 **Intune APP SDK’sı, Microsoft Authentication Library’yi (MSAL) veya diğer sosyal hesapları destekliyor mu?**<br></br>
-Intune APP SDK’sı, SDK’nın hem 1. hem de 3. taraf sürümleri için bazı gelişmiş ADAL işlevleri kullanır. Dolayısıyla MSAL, Intune Uygulama Koruması hizmetinde kimlik doğrulaması ve koşullu başlatma gibi çoğu temel senaryomuzla birlikte düzgün çalışmaz. Microsoft 'un kimlik ekibinin tüm Microsoft Office uygulamalar için MSAL 'e geçiş yapması, Intune SDK 'sının bu uygulamayı desteklemesi gerekir, ancak bugün bir plan yoktur.
+Intune uygulama SDK 'sı, kimlik doğrulama ve koşullu başlatma senaryoları için Azure Active Directory kimlik doğrulama kitaplığını ya da Microsoft kimlik doğrulama kitaplığını kullanabilir. Ayrıca, Kullanıcı kimliğini cihaz kayıt senaryoları olmadan yönetim için MAM hizmetine kaydetmek için ADAL/MSAL kullanır.
 
 **[Outlook mobil uygulamasını](https://products.office.com/outlook) kullanmak için ek gereksinimler nelerdir?**
 
@@ -91,7 +92,7 @@ Intune APP SDK’sı, SDK’nın hem 1. hem de 3. taraf sürümleri için bazı 
 
 **[Word, Excel ve PowerPoint](https://products.office.com/business/office) uygulamalarını kullanmak için ek gereksinimler nelerdir?**
 
-- Son kullanıcının Azure Active Directory hesabına bağlı bir [Office 365 İş veya Kurumsal](https://products.office.com/business/compare-more-office-365-for-business-plans) lisansına sahip olması gerekir. Aboneliğin mobil cihazlarda Office uygulamalarını içermesi gerekir ve [OneDrive İş](https://onedrive.live.com/about/business/)’te bir bulut depolama hesabını içerebilir. Office 365 lisansları, bu [yönergeleri](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)izleyerek [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com) atanabilir.
+- Son kullanıcının, Azure Active Directory hesaplarına bağlı [iş için Microsoft 365 uygulamaları veya kurumsal](https://products.office.com/business/compare-more-office-365-for-business-plans) bir lisansa sahip olması gerekir. Aboneliğin mobil cihazlarda Office uygulamalarını içermesi gerekir ve [OneDrive İş](https://onedrive.live.com/about/business/)’te bir bulut depolama hesabını içerebilir. Office 365 lisansları, bu [yönergeleri](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)izleyerek [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com) atanabilir.
 
 - Son kullanıcının, "kuruluş verilerinin kopyalarını Kaydet" uygulama koruma ilkesi ayarının altında parçalı farklı kaydet işlevi kullanılarak yapılandırılmış bir yönetilen konumu olmalıdır. Örneğin, yönetilen konum OneDrive ise [OneDrive](https://onedrive.live.com/about/) uygulaması son kullanıcının Word, Excel veya PowerPoint uygulamasında yapılandırılmalıdır.
 
@@ -140,7 +141,7 @@ Intune PIN 'i, etkinlik dışı tabanlı bir zamanlayıcıya (' saat sonra eriş
 
 - **Intune, PIN’i deneme yanılma saldırılarına karşı nasıl koruyor?**<br></br> Uygulama PIN’i ilkesinin parçası olarak BT yöneticisi, bir kullanıcının uygulama kilitlenmeden önce PIN’ini doğrulamayı en fazla kaç kez deneyebileceğini belirleyebilir. Deneme sayısına ulaşıldıktan sonra, Intune Uygulama SDK’sı uygulamadaki “kurumsal” verileri temizleyebilir.
   
-- **Ayın yayımcının uygulamalarında PIN'i neden iki kez ayarlamam gerekiyor?**<br></br> MAM (iOS 'ta/ıpados) Şu anda, uygulama düzeyinde PIN 'e (ör. WXP, Outlook, Managed Browser, Yammer) iOS için Intune uygulama SDK 'Sı/ıpados ile tümleşmesini gerektiren alfasayısal ve özel karakterler (' geçiş kodu ' adı verilir) sağlar. Bu olmadan geçiş kodu ayarları, hedeflenmiş uygulamalar için doğru şekilde zorlanır. Bu, iOS için Intune SDK/ıpados v ' de yayınlanan bir özelliktir. 7.1.12 sürümünde kullanıma sunulmuş olan bir özellikti. <br><br> Bu özelliği desteklemek ve iOS/ıpados için Intune SDK 'sının önceki sürümleriyle geriye dönük uyumluluk sağlamak için, 7.1.12 + içindeki tüm PIN 'Ler (sayısal veya geçiş kodu), SDK 'nın önceki sürümlerindeki sayısal PIN 'ten ayrı olarak işlenir. Bu nedenle, bir cihazda iOS/ıpados sürümleri için Intune SDK 'Sı ile 7.1.12 öncesi ve 7.1.12 'den daha sonra aynı yayımcıdan gelen uygulamalar varsa, iki PIN kurmak zorunda kalır. <br><br> Bununla birlikte, iki PIN (her uygulama için) herhangi bir şekilde birbiriyle ilgili değildir; uygulamaya uygulanan uygulama koruma ilkesine uygun olmaları gerekir. Dolayısıyla, *ancak* A ve B uygulamalarına aynı ilkeler uygulandıysa (PIN'e göre), kullanıcı aynı PIN'i iki kez ayarlayabilir. <br><br> Bu davranış, Intune mobil uygulama yönetimi ile etkinleştirilen iOS/ıpados uygulamalarındaki PIN 'e özgüdür. Zamanla, uygulamalar iOS için Intune SDK/ıpados 'ın sonraki sürümlerini benimsediği için, aynı yayımcıdan gelen uygulamalarda bir PIN 'ı iki kez ayarlamaya gerek bir sorundan daha az olur. Örnek görmek için lütfen aşağıdaki nota bakın.
+- **Ayın yayımcının uygulamalarında PIN'i neden iki kez ayarlamam gerekiyor?**<br></br> MAM (iOS 'ta/ıpados) Şu anda, uygulama düzeyinde PIN 'e (ör. WXP, Outlook, Managed Browser, Yammer) iOS için Intune uygulama SDK 'Sı/ıpados ile tümleşmesini gerektiren alfasayısal ve özel karakterler (' geçiş kodu ' adı verilir) sağlar. Bu olmadan geçiş kodu ayarları, hedeflenmiş uygulamalar için doğru şekilde zorlanır. Bu, iOS için Intune SDK/ıpados v ' de yayınlanan bir özelliktir. 7.1.12 sürümünde kullanıma sunulmuş olan bir özellikti. <br><br> Bu özelliği desteklemek ve iOS/ıpados için Intune SDK 'sının önceki sürümleriyle geriye dönük uyumluluk sağlamak için, 7.1.12 + içindeki tüm PIN 'Ler (sayısal veya geçiş kodu), SDK 'nın önceki sürümlerindeki sayısal PIN 'ten ayrı olarak işlenir. Bu nedenle, bir cihazda iOS/ıpados sürümleri için Intune SDK 'Sı ile 7.1.12 öncesi ve 7.1.12 'den daha sonra aynı yayımcıdan gelen uygulamalar varsa, iki PIN kurmak zorunda kalır. <br><br> Bu şekilde, iki PIN (her uygulama için) herhangi bir şekilde ilişkili değildir. Bu, uygulamaya uygulanan uygulama koruma ilkesine bağlı olmaları gerekir. Dolayısıyla, *ancak* A ve B uygulamalarına aynı ilkeler uygulandıysa (PIN'e göre), kullanıcı aynı PIN'i iki kez ayarlayabilir. <br><br> Bu davranış, Intune mobil uygulama yönetimi ile etkinleştirilen iOS/ıpados uygulamalarındaki PIN 'e özgüdür. Zamanla, uygulamalar iOS için Intune SDK/ıpados 'ın sonraki sürümlerini benimsediği için, aynı yayımcıdan gelen uygulamalarda bir PIN 'ı iki kez ayarlamaya gerek bir sorundan daha az olur. Örnek görmek için lütfen aşağıdaki nota bakın.
 
   >[!NOTE]
   > Örneğin, A uygulaması, 7.1.12 ' den önceki bir sürümle derlenirse ve B uygulaması aynı yayımcıdan gelen veya 7.1.12 ' den büyük bir sürüm ile derlenirse, her ikisi de bir iOS/ıpados cihazında yüklüyse son kullanıcının PIN 'leri ve B için ayrı olarak ayarlaması gerekir. <br><br> Cihazda SDK sürümü 7.1.9 olan bir C uygulaması yüklüyse, A uygulamasıyla aynı PIN'i paylaşır. <br><br> Sürümü 7.1.14 olan D uygulaması, B uygulamasıyla aynı PIN'i paylaşır. <br><br> Cihazda yalnızca A ve C uygulamaları yüklüyse, tek bir PIN'in ayarlanması yeterli olur. Cihazda yalnızca B ve D uygulamaları yüklü olduğunda da aynı durum geçerlidir.
@@ -161,7 +162,7 @@ Intune üç farklı şekilde uygulama verilerini temizleyebilir: tam cihaz temiz
 
 - **MDM için seçmeli temizleme nedir?**<br></br> Şirket verilerini kaldırma hakkında bilgi edinmek için [Cihaz kaldırma - kullanımdan kaldırma](../remote-actions/devices-wipe.md#retire) bölümüne bakın.
 
-- **MAM için seçmeli temizleme nedir?**<br></br> MAM için seçmeli temizleme, şirket uygulama verilerini uygulamadan kaldırır. Intune Azure portalı kullanarak istek başlatılır. Bir silme isteği başlatma hakkında bilgi edinmek için bkz. [Uygulamalardan yalnızca şirket verilerini temizleme](apps-selective-wipe.md).
+- **MAM için seçmeli temizleme nedir?**<br></br> MAM için seçmeli temizleme, şirket uygulama verilerini uygulamadan kaldırır. İstek, [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)kullanılarak başlatılır. Bir silme isteği başlatma hakkında bilgi edinmek için bkz. [Uygulamalardan yalnızca şirket verilerini temizleme](apps-selective-wipe.md).
 
 - **MAM için seçmeli temizleme ne kadar sürede gerçekleşir?**<br></br> Seçmeli temizleme başlatıldığında kullanıcı uygulamayı kullanıyorsa, Intune Uygulama SDK’sı her 30 dakikada bir Intune MAM hizmetinden bir seçmeli temizleme isteği gelip gelmediğini denetler. Ayrıca kullanıcı uygulamayı ilk kez başlattığında ve iş veya okul hesabı ile oturum açtığında da seçmeli temizleme isteği olup olmadığı denetlenir.
 
@@ -174,10 +175,10 @@ Evet! BT yöneticisi, Microsoft Intune tarafından geliştirilen ve Intune ile k
 ## <a name="app-experience-on-android"></a>Android’de uygulama deneyimi
 
 **Intune uygulama korumasının Android cihazlarda çalışması için neden Şirket Portalı uygulaması gerekiyor?**<br></br>
-Uygulama koruma işlevlerinin çoğu Şirket Portalı uygulamasında yerleşik olarak bulunur. Şirket Portalı uygulaması her zaman gerekli olsa bile cihaz kaydı _gerekli değildir_. MAM-WE için son kullanıcının cihazında Şirket Portalı uygulamasının yüklü olması yeterlidir.
+Uygulama koruma işlevlerinin çoğu Şirket Portalı uygulamasında yerleşik olarak bulunur. Şirket Portalı uygulaması her zaman gerekli olsa bile cihaz kaydı _gerekli değildir_ . MAM-WE için son kullanıcının cihazında Şirket Portalı uygulamasının yüklü olması yeterlidir.
 
 **Aynı uygulama ve kullanıcı kümesine yapılandırılan birden çok Intune uygulama koruma erişimi ayarları Android'de nasıl çalışır?**<br></br>
-Son kullanıcı cihazları kendi şirket hesaplarından hedeflenen uygulamaya erişmeyi denediklerinde, erişim için Intune uygulama koruma ilkeleri bu cihazlara belirli bir sırada uygulanır. Genel olarak, engelleme öncelikli olur ve ardından kapatılabilen uyarı gelir. Örneğin, belirli bir kullanıcı/uygulama için uygunsa, kullanıcıyı bir yama yükseltmesi alması için uyaran en düşük Android yama sürümü ayarı, kullanıcının erişimini engelleyen en düşük Android yama sürümü ayarından sonra uygulanacaktır. Dolayısıyla, BT yöneticisinin en düşük Android yama sürümü olarak 2018-03-01 ve en düşük Android yama sürümü (yalnızca Uyarı) olarak 2018-02-01'i ayarladığı bir senaryoda, uygulamaya erişmeye çalışan cihazın yama sürümü 2018-01-01 olduğunda, son kullanıcı erişimin engellenmesine yol açan en düşük Android yama sürümüne yönelik daha kısıtlayıcı ayar temel alınarak engellenebilir. 
+Son kullanıcı cihazları kendi şirket hesaplarından hedeflenen uygulamaya erişmeyi denediklerinde, erişim için Intune uygulama koruma ilkeleri bu cihazlara belirli bir sırada uygulanır. Genel olarak öncelik engellemededir; ardından kapatılabilen uyarı gelir. Örneğin, belirli bir kullanıcı/uygulama için uygunsa, kullanıcıyı bir yama yükseltmesi alması için uyaran en düşük Android yama sürümü ayarı, kullanıcının erişimini engelleyen en düşük Android yama sürümü ayarından sonra uygulanacaktır. Dolayısıyla, BT yöneticisinin en düşük Android yama sürümü olarak 2018-03-01 ve en düşük Android yama sürümü (yalnızca Uyarı) olarak 2018-02-01'i ayarladığı bir senaryoda, uygulamaya erişmeye çalışan cihazın yama sürümü 2018-01-01 olduğunda, son kullanıcı erişimin engellenmesine yol açan en düşük Android yama sürümüne yönelik daha kısıtlayıcı ayar temel alınarak engellenebilir. 
 
 Farklı ayar türleriyle ilgilenirken, uygulama sürümü gereksinimi önceliklidir ve bunu Android işletim sistemi sürümü gereksinimi ile Android yama sürümü gereksinimi izler. Ardından, tüm ayarlar türlerine yönelik uyarılar aynı sırada denetlenir.
 
@@ -210,7 +211,7 @@ Intune uygulama koruma ilkeleri, yalnızca Intune lisanslı kullanıcılara uygu
 Bunun amacı, uygulama içerisindeki kuruluş verilerinizin güvenliğini sağlamak ve verileri uygulama düzeyinde korumaktır. Bu özellik yalnızca iOS/ıpados için kullanılabilir ve iOS/ıpados, sürüm 9.0.1 veya üzeri için Intune uygulama SDK 'sını tümleştiren uygulamaların katılımını gerektirir. Hedeflenen uygulamalarda davranışın zorlanabilmesi için SDK tümleştirmesi gereklidir. Bu tümleştirme, sıralı bir şekilde gerçekleşir ve belirli uygulama ekiplerine bağımlıdır. Katılan uygulamalardan bazıları WXP, Outlook, Managed Browser ve Yammer’dır.
   
 **Veri aktarım ilkesi "yalnızca yönetilen uygulamalar" veya "uygulama yok" olarak ayarlanmış olsa bile, yönetilmeyen uygulamalarda iş veya okul verilerini açmak için iOS Share uzantısını kullanabiliyorum. Bu veri sızıntısı mı?**<br></br>
-Intune uygulama koruma ilkesi cihazı yönetmiyorsa iOS paylaşım uzantısını denetleyemez. Bu nedenle, Intune _**“kurumsal” verileri veriler uygulama dışında paylaşılmadan önce şifreler**_ . Bunu, “kurumsal” dosyayı yönetilen uygulama dışında açmaya çalışarak doğrulayabilirsiniz. Bu dosya yalnızca şifrelenmiş ve yönetilen bir uygulama olarak açılmalıdır.
+Intune uygulama koruma ilkesi, cihaz yönetilmeden iOS paylaşım uzantısını denetleyemez. Bu nedenle, Intune _**“kurumsal” verileri veriler uygulama dışında paylaşılmadan önce şifreler**_. Bunu, yönetilen uygulama dışında "kurumsal" dosyayı açmaya çalışarak doğrulayabilirsiniz. Bu dosya şifrelenmiş olmalı ve yönetilen bir uygulama dışında açılamamalıdır.
 
 **Aynı uygulama ve kullanıcı kümesine yapılandırılan birden çok Intune uygulama koruma erişimi ayarları iOS'da nasıl çalışır?**<br></br>
 Son kullanıcı cihazları kendi şirket hesaplarından hedeflenen uygulamaya erişmeyi denediklerinde, erişim için Intune uygulama koruma ilkeleri bu cihazlara belirli bir sırada uygulanır. Genel olarak öncelik temizlemededir; ardından engelleme, sonra da kapatılabilen uyarı gelir. Örneğin, belirli bir Kullanıcı/uygulama için geçerliyse, bir kullanıcıyı iOS/ıpados sürümünü güncelleştirmek üzere uyaran en düşük iOS/ıpados işletim sistemi ayarı, kullanıcının erişimini engelleyen en düşük iOS/ıpados işletim sistemi ayarından sonra uygulanır. Bu nedenle, BT yöneticisinin en düşük iOS/ıpados işletim sistemini 11.0.0.0 ve en düşük iOS/ıpados işletim sistemine (yalnızca uyarı) 11.1.0.0 olarak yapılandıracağından, uygulamaya erişmeye çalışan cihaz iOS/ıpados 10 ' da olduğunda, son kullanıcı engellenen erişime neden olan min iOS/ıpados işletim sistemi sürümü için daha kısıtlayıcı ayara bağlı olarak engellenir.
@@ -221,9 +222,9 @@ Farklı ayar türleriyle ilgilenirken, bir Intune uygulama SDK 'Sı sürüm gere
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Intune planınızı uygulama](../fundamentals/planning-guide-onboarding.md)
 - [Intune sınama ve doğrulama](../fundamentals/planning-guide-test-validation.md)
-- [Microsoft Intune’da Android mobil uygulama yönetim ilkesi ayarları](../apps/app-protection-policy-settings-android.md)
+- [Microsoft Intune’da Android mobil uygulaması yönetim ilkesi ayarları](../apps/app-protection-policy-settings-android.md)
 - [iOS/ıpados mobil uygulama yönetimi ilkesi ayarları](../apps/app-protection-policy-settings-ios.md)
 - [Uygulama koruma ilkeleri ilke yenileme](../apps/app-protection-policy-delivery.md)
 - [Uygulama koruma ilkelerinizi doğrulama](../apps/app-protection-policy-delivery.md)
-- [Cihaz kaydı olmadan yönetilen uygulamalar için uygulama yapılandırma ilkeleri ekleme](../apps/app-configuration-policies-managed-app.md)
+- [Yönetilen uygulamalar için cihaz kaydı olmadan uygulama yapılandırma ilkeleri ekleme](../apps/app-configuration-policies-managed-app.md)
 - [Microsoft Intune için destek alma](../fundamentals/get-support.md)
