@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 671f80efb54f51cac410b37de6227e456d9316d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 36b39d20e666015ae040a1fa058dca1d167686e4
+ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323123"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739911"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Intune için Exchange şirket içi erişimini yapılandırma
 
@@ -35,7 +35,7 @@ Ayrılmış Exchange Online ortamınız varsa ve bunun yapılandırmasının yen
 
 Koşullu erişimi yapılandırmadan önce, aşağıdaki yapılandırmaların mevcut olduğunu doğrulayın:
 
-- Exchange sürümünüz **exchange 2010 SP1 veya sonraki**bir sürümü. Exchange Server İstemci Erişimi Sunucusu (CAS) dizisi desteklenir.
+- Exchange sürümünüz **exchange 2010 SP3 veya üzeri**bir sürümdür. Exchange Server İstemci Erişimi Sunucusu (CAS) dizisi desteklenir.
 
 - Intune 'u şirket içi Exchange 'e bağlayan [Exchange ActiveSync şirket Içi Exchange bağlayıcısını](exchange-connector-install.md)yüklediniz ve kullanıyorsunuz.
 
@@ -52,7 +52,7 @@ Koşullu erişimi yapılandırmadan önce, aşağıdaki yapılandırmaların mev
   - Intune’a **kayıtlı** veya etki alanına katılmış bir bilgisayar olmalıdır.
   - **Azure Active Directory’de kayıtlı olmalıdır**. Buna ek olarak, istemci Exchange ActiveSync kimliği Azure Active Directory’de kayıtlı olmalıdır.
 
-- Azure AD Cihaz Kayıt Hizmeti (DRS), Intune ve Office 365 müşterileri için otomatik olarak etkinleştirilir. ADFS cihaz kayıt hizmeti 'ni zaten dağıtan müşteriler, kayıtlı cihazları şirket içi Active Directory göremez. **Bu, Windows bilgisayarları ve Windows Phone cihazları için geçerli değildir**.
+- Azure AD Cihaz Kayıt Hizmeti (DRS), Intune ve Office 365 müşterileri için otomatik olarak etkinleştirilir. ADFS cihaz kayıt hizmeti 'ni zaten dağıtan müşteriler, kayıtlı cihazları şirket içi Active Directory göremez. **Bu, Windows bilgisayarları ve Windows Phone cihazları için geçerlidir**.
 
 - Söz konusu cihaza dağıtılan cihaz uyumluluk ilkeleriyle **uyumluluk**.
 
@@ -66,7 +66,7 @@ Koşullu erişimi yapılandırmadan önce, aşağıdaki yapılandırmaların mev
 - **İOS/ıpados üzerinde yerel e-posta uygulaması** -koşullu erişim ilkesi oluşturmak için bkz. [koşullu erişim ilkeleri oluşturma](../protect/create-conditional-access-intune.md)
 - **Android 4 veya üzeri sürümlerde Gmail gibi EAS posta istemcileri** -koşullu erişim ilkesi oluşturmak için bkz. [koşullu erişim ilkeleri oluşturma](../protect/create-conditional-access-intune.md)
 
-- **Android iş profili cihazlarda EAS posta istemcileri** -Android iş profili cihazlarında yalnızca *Gmail* ve *dokuz iş için* desteklenir. Android iş profilleriyle çalışmak üzere koşullu erişim için, *Android Enterprise uygulaması Için Gmail veya dokuz iş* için bir e-posta profili dağıtmanız ve ayrıca bu uygulamaları gerekli bir yükleme olarak dağıtmanız gerekir. Uygulamayı dağıttıktan sonra cihaz tabanlı koşullu erişim ayarlayabilirsiniz.
+- **Android iş profili cihazlarda EAS posta istemcileri** -Android iş profili cihazlarında yalnızca *Gmail* ve *dokuz iş için* desteklenir. Android iş profilleriyle çalışmak üzere koşullu erişim için, *Android Enterprise uygulaması Için Gmail veya dokuz iş* için *Gmail* bir e-posta profili dağıtmanız ve ayrıca bu uygulamaları gerekli bir yükleme olarak dağıtmanız gerekir. Uygulamayı dağıttıktan sonra cihaz tabanlı koşullu erişim ayarlayabilirsiniz.
 
 #### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>Android iş profili cihazlarına koşullu erişim ayarlamak için
 
@@ -76,11 +76,11 @@ Koşullu erişimi yapılandırmadan önce, aşağıdaki yapılandırmaların mev
 
   3. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin, profil için **ad** ve **Açıklama** girin.
 
-  4. Platformda **Android Enterprise** 'u seçin, **profil türünde** **e-posta** ' yı seçin.
+  4. Platformda **Android Enterprise** ' **Platform**u seçin, **profil türünde** **e-posta** ' yı seçin.
 
   5. [E-posta profili ayarlarını](https://docs.microsoft.com/intune/configuration/email-settings-android-enterprise#android-enterprise)yapılandırın.
 
-  6. İşiniz bittiğinde **Tamam** > **Oluştur**’u seçerek değişikliklerinizi kaydedin.
+  6. İşiniz bittiğinde, değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin.
 
   7. E-posta profilini oluşturduktan sonra [gruplara atayın](https://docs.microsoft.com/intune/device-profile-assign).
 
@@ -99,30 +99,30 @@ Windows 8.1 ve sonraki sürümlerde yerel **posta** uygulaması (ıNTUNE ile MDM
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Exchange access** > **Kiracı Yönetimi** ' ne gidin ve **Şirket içi Exchange erişimi**' ni seçin.
+2. **Kiracı Yönetimi** > **Exchange erişimi**' ne gidin ve **Şirket içi Exchange erişimi**' ni seçin.
 
 3. Şirket içi **Exchange erişimi** bölmesinde, Şirket *içi Exchange erişim denetimini etkinleştirmek*için **Evet** ' i seçin.
 
    > [!div class="mx-imgBorder"]
-   > Şirket içi Exchange erişimi ekranının örnek ekran görüntüsünü ![](./media/conditional-access-exchange-create/exchange-on-premises-access.png)
+   > ![Şirket içi Exchange erişimi ekranının örnek ekran görüntüsü](./media/conditional-access-exchange-create/exchange-on-premises-access.png)
 
 4. **Atama**altında, **dahil edilecek grupları seç**' i seçin ve ardından erişimi yapılandırmak için bir veya daha fazla grup seçin.
 
    Seçtiğiniz grupların üyelerine, şirket içi Exchange erişimi için koşullu erişim ilkesi uygulanır. Bu ilkeyi alan kullanıcıların şirket içi Exchange 'e erişebilmesi için cihazlarını Intune 'A kaydetmesi ve uyumluluk profilleriyle uyumlu olmaları gerekir.
 
    > [!div class="mx-imgBorder"]
-   > ![eklenecek grupları seçin](./media/conditional-access-exchange-create/select-groups.png)
+   > ![Dahil edilecek grupları seçin](./media/conditional-access-exchange-create/select-groups.png)
 
 5. Grupları dışlamak için, **hariç tutulacak grupları seç**' i seçin ve ardından cihazları kaydetmek ve şirket içi Exchange 'e erişmeden önce uyumluluk profilleriyle uyumlu olmak için gereksinimlerden muaf tutulan bir veya daha fazla grup seçin.
 
    Yapılandırmanızı kaydetmek için **Kaydet** ' i seçin ve **Exchange erişimi** bölmesine dönün.
 
-6. Ardından, Intune şirket içi Exchange Connector ayarlarını yapılandırın. Konsolunda, **kiracı yönetimi** > exchange **Access**> **Exchange ActiveSync şirket içi Bağlayıcısı** ' nı seçin ve ardından yapılandırmak istediğiniz Exchange kuruluşunun bağlayıcısını seçin.
+6. Ardından, Intune şirket içi Exchange Connector ayarlarını yapılandırın. Konsolunda, **Kiracı Yönetimi** > **Exchange erişimi**> **Exchange ActiveSync şirket içi Bağlayıcısı** ' nı seçin ve ardından yapılandırmak istediğiniz Exchange kuruluşunun bağlayıcısını seçin.
 
 7. **Kullanıcı bildirimleri**Için, *Kullanıcı bildirim* iletisini değiştirebileceğiniz kuruluş iş akışını **Düzenle** ' yi açmak için **Düzenle** ' yi seçin.
 
    > [!div class="mx-imgBorder"]
-   > bildirim için kuruluş iş akışını Düzenle](./media/conditional-access-exchange-create/edit-organization-user-notification.png) örnek ekran görüntüsünü ![
+   > ![Bildirimler için kuruluş iş akışını Düzenle örnek ekran görüntüsü](./media/conditional-access-exchange-create/edit-organization-user-notification.png)
 
    Cihazları uyumlu olmayan ve şirket içi Exchange 'e erişmek istedikleri durumlarda kullanıcılara gönderilen varsayılan e-posta iletisini değiştirin. İleti şablonunda Biçimlendirme dili kullanılır. Ayrıca, iletinin yazarken nasıl görüneceğine ilişkin önizlemeyi görebilirsiniz
 
@@ -134,7 +134,7 @@ Windows 8.1 ve sonraki sürümlerde yerel **posta** uygulaması (ıNTUNE ile MDM
 8. Ardından, **Gelişmiş Exchange ActiveSync erişim ayarları** ' nı seçerek cihaz erişim kurallarını yapılandırdığınız *Gelişmiş Exchange ActiveSync erişim ayarları* iş akışını açın.
 
    > [!div class="mx-imgBorder"]
-   > Gelişmiş ayarlar için kuruluş iş akışını Düzenle ' nin örnek ekran görüntüsünü ![](./media/conditional-access-exchange-create/edit-organization-advanced-settings.png)
+   > ![Gelişmiş ayarlar için kuruluş iş akışını düzenleme örnek ekran görüntüsü](./media/conditional-access-exchange-create/edit-organization-advanced-settings.png)
 
    - **Yönetilmeyen cihaz erişimi**Için, koşullu erişim veya diğer kurallardan etkilenmeyen cihazlardan erişim için genel varsayılan kuralı ayarlayın:
 

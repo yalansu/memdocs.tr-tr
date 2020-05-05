@@ -11,12 +11,12 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b91f6b11df1b65176711df0ecd907a1764c2e692
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3892da4f3783e8b169bff576a9945f34cc47c356
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330250"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81726035"
 ---
 # <a name="using-the-intune-docs"></a>Intune belgelerini kullanma
 
@@ -28,15 +28,15 @@ Intune için genel yardım ve destek için bkz. [Intune için destek alın](get-
 
  İhtiyacınız olan bilgileri bulmanıza yardımcı olması için aşağıdaki arama ipuçlarını kullanın:  
 
-- Microsoft Intune için içerik bulmak üzere tercih ettiğiniz arama altyapısını kullanırken, arama anahtar kelimelerinizle birlikte `Intune` ekleyin.  
+- Microsoft Intune için içerik bulmak üzere tercih ettiğiniz arama altyapısını kullanırken, arama anahtar `Intune` kelimelerinizle birlikte dahil edin.  
 
   - Docs.microsoft.com 'deki sonuçlara bakın. Technet.microsoft.com veya msdn.microsoft.com ' den kaynaklanan sonuçlar eski ürün sürümleri içindir.  
 
-  - Arama sonuçlarını geçerli içerik kitaplığına daha fazla odaklanmak için, arama altyapısının kapsamına `site:docs.microsoft.com` dahil edin.  
+  - Arama sonuçlarını geçerli içerik kitaplığına daha fazla odaklanmak için, arama altyapısının kapsamına `site:docs.microsoft.com` ekleyin.  
 
 - Kullanıcı arabirimindeki ve çevrimiçi belgelerdeki terminoloji ile eşleşen arama terimlerini kullanın. Topluluk içeriğinde görebileceğiniz resmi olmayan terimlerin veya kısaltmaların önüne kaçının.
 
-- Görüntülemekte olduğunuz bir makale içinde arama yapmak için tarayıcınızın **bul** özelliğini kullanın. Modern Web tarayıcıları sayesinde, **Ctrl**+**F** tuşlarına basın ve arama terimlerinizi girin.  
+- Görüntülemekte olduğunuz bir makale içinde arama yapmak için tarayıcınızın **bul** özelliğini kullanın. Modern Web tarayıcıları sayesinde, **CTRL**+**F** tuşlarına basın ve arama terimlerinizi girin.  
 
 - Docs.microsoft.com üzerindeki her makale, içeriği aramanıza yardımcı olmak için aşağıdaki alanları içerir:  
 
@@ -94,7 +94,7 @@ Yazma ekibi, çekme isteğinizi alacak, öğeyi uygun yazıcıya atacaktır, met
 
 Katkıda bulunmakla ilgileniyorsanız ancak nereden başlayabileceğinizi bilmiyorsanız aşağıdaki önerilere bakın:  
 
-- Doğruluk için bir makaleyi gözden geçirin. Ardından `mm/dd/yyyy` biçimini kullanarak **MS. Date** meta verilerini güncelleştirin. Bu katkı, içeriğin yeni kalmasına yardımcı olur.  
+- Doğruluk için bir makaleyi gözden geçirin. Ardından biçimi `mm/dd/yyyy` kullanarak **MS. Date** meta verilerini güncelleştirin. Bu katkı, içeriğin yeni kalmasına yardımcı olur.  
 
 - Deneyiminize göre açıklamalar, örnekler veya rehberlik ekleyin. Bu katkı, bilgi paylaşmak için topluluğun gücünü kullanır.
 
@@ -117,11 +117,11 @@ Intune belgelerine katkıda bulunmak için aşağıdaki genel yönergeleri izley
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Microsoft Uç Nokta Yöneticisi belgelerinin birleştirilmesi
 
-Intune ve Configuration Manager birleştirilmiş senaryoları daha iyi desteklemek için, bu belge kitaplığı [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune)taşındı. Configuration Manager belge kitaplığı daha sonra `docs.microsoft.com/mem/configmgr`taşınacak. Tüm bağlantılar otomatik olarak yönlendirilir, bu nedenle bu içeriği okumak için herhangi bir değişiklik yapmanız gerekmez.
+Intune ve Configuration Manager birleştirilmiş senaryoları daha iyi desteklemek için Intune ve Configuration Manager belgelerinin Microsoft Endpoint Manager sitesinde birleştirilmesi gerekir. Intune belgeleri şu anda [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) ve Configuration Manager belge kitaplığı ' da kullanılabilir. [https://docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr) Eski bir URL kullanıyorsanız, tüm bağlantılar otomatik olarak yönlendirilir, bu nedenle bu içeriği okumak için herhangi bir değişiklik yapmanız gerekmez.
 
 Geribildirim sağlar veya makalelere katkıda bulunun, bazı değişiklikler gereklidir:
 
-- Mevcut GitHub sorunları özgün depoda kalır, [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues).
+- Mevcut GitHub sorunları özgün depoda [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues) veya. [https://github.com/MicrosoftDocs/sccmdocs/issues](https://github.com/MicrosoftDocs/sccmdocs/)
 
   - Bu sorunlar, bağlantılı makalenin geri bildirim bölümünde açık veya kapalı sorunlar olarak gösterilmez.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e1a7c9665f142bf7dd7832e6bac0e016539ddea
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 86c90d8313cd9eed853ad438a5ea9a31f0d834ce
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331370"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725546"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Microsoft Intune için ağ uç noktaları  
 
@@ -33,6 +33,9 @@ Yalnızca bulutta yer alan bir hizmet olan Intune, sunucular veya ağ geçitleri
 ## <a name="access-for-managed-devices"></a>Yönetilen cihazlara erişim  
 
 Güvenlik duvarı ve ara sunucular arkasındaki cihazları yönetmek için Intune iletişimini etkinleştirmeniz gerekir.
+
+> [!NOTE]
+> Bölümündeki bilgiler Microsoft Intune Sertifika Bağlayıcısı için de geçerlidir. Bağlayıcı, yönetilen cihazlarla aynı ağ gereksinimlerine sahiptir
 
 - Intune istemcileri her iki protokolü de kullandığından, proxy sunucusu hem **http (80)** hem de **https (443)** desteğine sahip olmalıdır. Windows Information Protection 444 numaralı bağlantı noktasını kullanır.
 - Bazı görevler (Klasik bilgisayar Aracısı için yazılım güncelleştirmelerini indirme gibi) için Intune, manage.microsoft.com için kimliği doğrulanmamış proxy sunucu erişimi gerektirir
@@ -45,11 +48,12 @@ Ara sunucu ayarlarını istemci bilgisayarlardan değiştirebilirsiniz. Belirtil
 
 Yönetilen cihazlar, **Tüm Kullanıcıların** güvenlik duvarları üzerinden hizmetlere erişmesine izin veren yapılandırmalar gerektirir.
 
+
 Aşağıdaki tabloda Intune istemcisinin eriştiği bağlantı noktaları ve hizmetler listelenir:
 
-|Etki alanları    |IP adresi      |
+|Etki Alanları    |IP adresi      |
 |-----------|----------------|
-|login.microsoftonline.com <br> *. officeconfig.msocdn.com <br> config.office.com <br> Graph.Windows.NET| Daha fazla bilgi için [Office 365 URL’leri ve IP adres aralıkları](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) |
+|login.microsoftonline.com <br> *. officeconfig.msocdn.com <br> config.office.com <br> graph.windows.net| Daha fazla bilgi için [Office 365 URL’leri ve IP adres aralıkları](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) |
 |portal.manage.microsoft.com<br> m.manage.microsoft.com |52.175.12.209<br>20.188.107.228<br>52.138.193.149<br>51.144.161.187<br>52.160.70.20<br>52.168.54.64 <br>13.72.226.202<br>52.189.220.232|
 | sts.manage.microsoft.com | 13.93.223.241 <br>52.170.32.182 <br>52.164.224.159 <br>52.174.178.4 <br>13.75.122.143 <br>52.163.120.84<br>13.73.112.122<br>52.237.192.112|
 |Manage.microsoft.com <br>i.manage.microsoft.com <br>r.manage.microsoft.com <br>a.manage.microsoft.com <br>p.manage.microsoft.com <br>EnterpriseEnrollment.manage.microsoft.com <br>EnterpriseEnrollment-s.manage.microsoft.com |40.83.123.72<br>13.76.177.110<br>52.169.9.87<br>52.174.26.23<br>104.40.82.191<br>13.82.96.212<br>52.147.8.239<br>40.115.69.185|
@@ -125,9 +129,9 @@ Teslim Iyileştirme meta verileri için:
 
 ## <a name="apple-device-network-information"></a>Apple cihaz ağ bilgileri  
 
-|Kullanım alanı:|Ana bilgisayar adı (IP adresi/alt ağ)|Protokol|Bağlantı Noktası|
+|Kullanıldığı yerler|Ana bilgisayar adı (IP adresi/alt ağ)|Protokol|Bağlantı noktası|
 |-----|--------|------|-------|
-|Apple sunucularından içerik alma ve görüntüleme|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br> \*.phobos.itunes-apple.com.akadns.net |    istemcileri iki protokolü de kullandığından, proxy sunucusu hem    |      80      |
+|Apple sunucularından içerik alma ve görüntüleme|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br> \*.phobos.itunes-apple.com.akadns.net |    HTTP    |      80      |
 |APNS sunucularıyla iletişim|#-courier.push.apple.com<br>"#", 0 ile 50 arasında rastgele bir sayıdır.|    TCP     |  5223 ve 443  |
 |World Wide Web, iTunes Mağazası, macOS App Store, iCloud, mesajlaşma vb. erişim dahil çeşitli işlevler |phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 veya 443   |
 
