@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7fd1a1567096f804b56c5f141fccfc825f4a02e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6c0dab3c84e3a87048a8071c591722c63d89ad69
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331858"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078133"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Intune Uygulama Sarmalama Aracı ile Android uygulamalarını uygulama koruma ilkelerine hazırlama
 
 Şirket içi Android uygulamalarınızın davranışını, uygulamanın kodunu değiştirmeden uygulama özelliklerini kısıtlayarak değiştirmek için Android için Microsoft Intune Uygulama Sarmalama Aracı'nı kullanın.
 
-Bu araç, PowerShell’de çalışan ve Android uygulamanızın etrafında sarmalayıcı oluşturan bir Windows komut satırı uygulamasıdır. Uygulama sarmalandıktan sonra, Intune’daki [mobil uygulama yönetimi ilkelerini](../apps/app-protection-policies.md) yapılandırarak uygulamanın işlevini değiştirebilirsiniz.
+Bu araç, PowerShell’de çalışan ve Android uygulamanızın etrafında sarmalayıcı oluşturan bir Windows komut satırı uygulamasıdır. Uygulama sarmalandıktan sonra, Intune 'da [mobil uygulama yönetimi ilkelerini](../apps/app-protection-policies.md) yapılandırarak uygulamanın işlevini değiştirebilirsiniz.
 
 Aracı çalıştırmadan önce bkz. [Uygulama Sarmalama Aracını çalıştırmaya ilişkin güvenlik konuları](#security-considerations-for-running-the-app-wrapping-tool). Aracı indirmek için GitHub’daki [Android için Microsoft Intune Uygulama Sarmalama Aracı](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android)’na gidin.
 
@@ -54,7 +54,7 @@ Aracı çalıştırmadan önce bkz. [Uygulama Sarmalama Aracını çalıştırma
     > [!NOTE]
     > Intune Uygulama Sarmalama Aracı uygulama imzalama için Google'ın v2 ve yakında çıkacak v3 imza düzenlerini desteklemiyor. Intune Uygulama Sarmalama Aracı'nı kullanarak .apk uygulamasını sarmaladıktan sonra, [Google'ın sağladığı Apksigner aracının]( https://developer.android.com/studio/command-line/apksigner) kullanılması önerilir. Bu sayede uygulama son kullanıcıların cihazlarına ulaştığında Android standartları tarafından düzgün başlatılabilir. 
 
-- Seçim Bazen bir uygulama, sarmalama sırasında eklenen Intune MAM SDK sınıfları nedeniyle Dalvik çalıştırılabilir (DEX) boyut sınırına ulaşmayabilir. DEX dosyaları, Android uygulamaları derlemesinin bir parçasıdır. Intune uygulama sarmalama aracı, en düşük API düzeyi 21 veya daha yüksek olan uygulamalar için ( [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)itibariyle), dizin oluşturma sırasında otomatik olarak Dex dosyası taşmasını işler. En düşük API düzeyi < 21 olan uygulamalar için, en iyi yöntem sarmalayıcı `-UseMinAPILevelForNativeMultiDex` bayrağını kullanarak en düşük API düzeyini artırmalıdır. Müşterilerin, uygulamanın en düşük API düzeyini artıramasından dolayı aşağıdaki DEX overflow geçici çözümleri kullanılabilir. Bazı kuruluşlarda bu, uygulamayı (IE. app Build ekibi) derleyen ile çalışmayı gerektirebilir:
+- Seçim Bazen bir uygulama, sarmalama sırasında eklenen Intune MAM SDK sınıfları nedeniyle Dalvik çalıştırılabilir (DEX) boyut sınırına ulaşmayabilir. DEX dosyaları, Android uygulamaları derlemesinin bir parçasıdır. Intune uygulama sarmalama aracı, en düşük API düzeyi 21 veya daha yüksek olan uygulamalar için ( [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)itibariyle), dizin oluşturma sırasında otomatik olarak Dex dosyası taşmasını işler. En iyi API düzeyi < 21 olan uygulamalar için en iyi yöntem, sarmalayıcı `-UseMinAPILevelForNativeMultiDex` bayrağını kullanarak en düşük API düzeyini artırmalıdır. Müşterilerin, uygulamanın en düşük API düzeyini artıramasından dolayı aşağıdaki DEX overflow geçici çözümleri kullanılabilir. Bazı kuruluşlarda bu, uygulamayı (IE. app Build ekibi) derleyen ile çalışmayı gerektirebilir:
 
   - Uygulamanın birincil DEX dosyasından kullanılmayan sınıf başvurularını ortadan kaldırmak için ProGuard 'ı kullanın.
   - Android Gradle eklentisinin v 3.1.0 veya üstünü kullanan müşteriler için [D8 Dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html)'yi devre dışı bırakın.  
@@ -88,13 +88,13 @@ Aracı yüklediğiniz klasörü not edin. Varsayılan konum: C:\Program Files (x
 
 |Özellik|Bilgi|Örnek|
 |-------------|--------------------|---------|
-|**-InputPath**&lt;Dize&gt;|Kaynak Android uygulamasının (.apk) yolu.| |
- |**-OutputPath**&lt;Dize&gt;|Çıktı Android uygulamasının yolu. Bu dizin yolu InputPath ile aynıysa paket oluşturma başarısız olur.| |
-|**-KeyStorePath**&lt;Dize&gt;|İmzalama için ortak/özel anahtar çiftini içeren anahtar deposu dosyasının yolu.|Varsayılan olarak anahtar deposu dosyaları "C:\Program Files (x86)\Java\jreX.X.X_XX\bin" konumunda saklanır. |
-|**-KeyStorePassword**&lt;GüvenliDize&gt;|Anahtar deposunun şifresini çözmek için kullanılan parola. Android, tüm uygulama paketlerinin (.apk) imzalanmasını gerektirir. KeyStorePassword üretmek için Java keytool kullanın. Java [KeyStore](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html) hakkında daha fazla bilgiyi burada bulabilirsiniz.| |
-|**-KeyAlias**&lt;Dize&gt;|İmzalama için kullanılacak anahtarın adı.| |
-|**-KeyPassword**&lt;GüvenliDize&gt;|İmzalama için kullanılan özel anahtarın şifresini çözmek için kullanılan parola.| |
-|**-SigAlg**&lt;GüvenliDize&gt;| (İsteğe bağlı) İmzalama için kullanan imza algoritmasının adı. Algoritma, özel anahtar ile uyumlu olmalıdır.|Örnekler: SHA256withRSA, SHA1withRSA|
+|**-Inputpath**&lt;dizesi&gt;|Kaynak Android uygulamasının (.apk) yolu.| |
+ |**-OutputPath**&lt;dizesi&gt;|Çıktı Android uygulamasının yolu. Bu dizin yolu InputPath ile aynıysa paket oluşturma başarısız olur.| |
+|**-Keystorepath**&lt;dizesi&gt;|İmzalama için ortak/özel anahtar çiftini içeren anahtar deposu dosyasının yolu.|Varsayılan olarak anahtar deposu dosyaları "C:\Program Files (x86)\Java\jreX.X.X_XX\bin" konumunda saklanır. |
+|**-KeyStorePassword**&lt;SecureString&gt;|Anahtar deposunun şifresini çözmek için kullanılan parola. Android, tüm uygulama paketlerinin (.apk) imzalanmasını gerektirir. KeyStorePassword üretmek için Java keytool kullanın. Java [KeyStore](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html) hakkında daha fazla bilgiyi burada bulabilirsiniz.| |
+|**-Keyalıas**&lt;dizesi&gt;|İmzalama için kullanılacak anahtarın adı.| |
+|**-KeyPassword**&lt;SecureString&gt;|İmzalama için kullanılan özel anahtarın şifresini çözmek için kullanılan parola.| |
+|**-Sigalg**&lt;SecureString&gt;| (İsteğe bağlı) İmzalama için kullanan imza algoritmasının adı. Algoritma, özel anahtar ile uyumlu olmalıdır.|Örnekler: SHA256withRSA, SHA1withRSA|
 |**-UseMinAPILevelForNativeMultiDex**| Seçim Kaynak Android uygulamasının en düşük API düzeyini 21 ' e yükseltmek için bu bayrağı kullanın. Bu bayrak, bu uygulamayı kimlerin yükleyebilen ile sınırlı olacağı için onay isteyecek. Kullanıcılar "-Onayla: $false" parametresini PowerShell komutuna ekleyerek onay iletişim kutusunu atlayabilir. Bayrak yalnızca, DEX taşma hataları nedeniyle başarıyla kaydıramayan en az API < 21 olan uygulamalardaki müşteriler tarafından kullanılmalıdır. | |
 | **&lt;CommonParameters&gt;** | (İsteğe bağlı) Komut, ayrıntılı ve hata ayıklama gibi ortak PowerShell parametrelerini destekler. |
 
@@ -107,7 +107,7 @@ Aracı yüklediğiniz klasörü not edin. Varsayılan konum: C:\Program Files (x
     Help Invoke-AppWrappingTool
     ```
 
-**Örnek:**
+**Örneğinde**
 
 PowerShell modülünü içeri aktarın.
 
@@ -156,6 +156,6 @@ Olası yanıltma, bilgi ifşası ve ayrıcalıkların yükseltilmesi saldırıla
 - Sarmalanan uygulamayı içeren çıkış dizinini güvenli hale getirin. Çıkış için kullanıcı düzeyinde bir dizin kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Microsoft Intune ile uygulamaların mobil uygulama yönetimi için nasıl hazırlanacağına karar verme](../developer/apps-prepare-mobile-application-management.md)
+- [Microsoft Intune ile uygulamaların mobil uygulama yönetimine nasıl hazırlanacağına karar verme](../developer/apps-prepare-mobile-application-management.md)
 
 - [Android için Microsoft Intune Uygulama SDK’sı geliştirici kılavuzu](../developer/app-sdk-android.md)

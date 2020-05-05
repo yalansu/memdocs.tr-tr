@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ef8989c9f4de0211a7636c747ff9a01111842f6
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: da2bc520448236c93845731b1f7c937d417fc2e0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325325"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079000"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Intune 'da özel bildirimler gönderme
 
@@ -41,7 +41,7 @@ Yönetilen iOS/ıpados ve Android cihazlarındaki kullanıcılara özel bildirim
 Cihaz kilitliyse, bildirim aşağıdaki ekran görüntüsüne benzer:
 
 > [!div class="mx-imgBorder"]
-> ![kilitli cihaz iOS/ıpados test bildirimi](./media/custom-notifications/105046-2.png)
+> ![Kilitli cihaz iOS/ıpados test bildirimi](./media/custom-notifications/105046-2.png)
 
 ### <a name="what-the-notification-looks-like-on-an-android-device"></a>Bir Android cihazında bildirim nasıl görünür?
 
@@ -65,8 +65,8 @@ Android cihazda Şirket Portalı uygulaması açıksa, bildirim aşağıdaki ekr
 
 **İzinler**:
 
-- Gruplara bildirim göndermek için, hesabınız Intune 'da şu RBAC iznine sahip olmalıdır: *kuruluş* > **güncelleştirmesi**.
-- Bir cihaza bildirim göndermek için, hesabınız Intune 'da şu RBAC iznine sahip olmalıdır: *uzak görevler* > **özel bildirimler gönder**.
+- Gruplara bildirim göndermek için, hesabınız Intune 'da aşağıdaki RBAC iznine sahip olmalıdır: *kuruluş* > **güncelleştirmesi**.
+- Bir cihaza bildirim göndermek için, hesabınız Intune 'da şu RBAC iznine sahip olmalıdır: *uzak görevler* > **özel bildirimler gönderir**.
 
 **Bildirimler oluşturuluyor**:
  
@@ -89,7 +89,7 @@ Android cihazda Şirket Portalı uygulaması açıksa, bildirim aşağıdaki ekr
 
 ## <a name="send-a-custom-notification-to-groups"></a>Gruplara özel bildirim gönder
 
-1. Bildirim oluşturma ve gönderme izinlerine sahip bir hesapla [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) oturum açın ve **Kiracı Yönetimi** > **özel bildirimler**' e gidin.  
+1. Bildirim oluşturma ve gönderme izinlerine sahip bir hesapla [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) oturum açın ve **Kiracı Yönetimi** > **özel bildirimleri**' ne gidin.  
 
 2. Temel bilgiler sekmesinde, aşağıdakileri belirtin ve devam etmek için **İleri** ' yi seçin.  
    - **Title** : Bu bildirim için bir başlık belirtin. Başlıklar 50 karakterle sınırlıdır.  

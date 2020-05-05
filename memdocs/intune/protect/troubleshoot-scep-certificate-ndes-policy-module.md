@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9f0a4b260fcd2698315ba8b777d88b86e203259
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f58723be1a3fed09173a20a585077aef72e0c8f0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328686"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079119"
 ---
 # <a name="troubleshoot-the-ndes-policy-module-in-microsoft-intune"></a>Microsoft Intune 'de NDES ilke modülünün sorunlarını giderme
 
@@ -86,7 +86,7 @@ Mobil cihazlardaki modern tarayıcılar ve tarayıcılar, *konu alternatif adlar
 
   - **Konu adı**  
     CN = dış sunucu adı
-  - **Konu diğer adı**  
+  - **Konu Diğer Adı**  
      Ad = dış sunucu adı  
      DNS adı = iç sunucu adı
 

@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d08b058303d70188c89d3ded989d4d3864b318f
-ms.sourcegitcommit: 012947b2095979ceb4e9c9f698e9c32f46baa7d8
+ms.openlocfilehash: 10cda4126f709ddd0cb5cda40b36067bd078a3f0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80525201"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079595"
 ---
 # <a name="integrate-pradeo-mobile-threat-defense-with-intune"></a>Pradeo Mobile Threat Defense 'i Intune ile tümleştirme
 
@@ -32,7 +32,7 @@ Pradeo Mobile Threat Defense çözümünü Intune ile tümleştirmek için aşa�
 ## <a name="before-you-begin"></a>Başlamadan önce
 
 > [!NOTE]
-> Aşağıdaki adımların [Pradeo Security konsolunda](https://www.apps-security.com) tamamlanması gerekir.
+> Aşağıdaki adımların [Pradeo Security konsolunda](https://pradeo-security.com/) tamamlanması gerekir.
 
 Pradeo’yu Intune ile tümleştirme sürecini başlatmadan önce aşağıdakilere sahip olduğunuzdan emin olun:
 
@@ -42,9 +42,9 @@ Pradeo’yu Intune ile tümleştirme sürecini başlatmadan önce aşağıdakile
 
   - Oturum açma ve kullanıcı profilini okuma
 
-  - Oturum açmış kullanıcı olarak dizine erişim
+  - Dizine oturum açmış kullanıcı olarak erişin
 
-  - Dizin verilerini okuma
+  - Dizin verilerini oku
 
   - Intune’a cihaz bilgilerini gönderme
 
@@ -56,7 +56,7 @@ Pradeo uygulama yetkilendirme işlemi şu şekildedir:
 
 - Pradeo hizmetine Intune’a cihaz durumuyla ilgili bilgi iletme izni verin.
 
-- Cihazının veritabanını doldurmak için Pradeo, Azure AD Kayıt Grubu üyeliğiyle eşitlenir.
+- Pradeo, cihazın veritabanını doldurmak için Azure AD kayıt grubu üyeliğiyle eşitlenir.
 
 - Pradeo yönetim konsolunun Azure AD Çoklu Oturum Açma (SSO) kullanmasına izin verin.
 

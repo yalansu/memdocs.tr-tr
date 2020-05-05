@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2bd295b0dca016971c34997873994a4fe1bc2c0d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5c521740eb714ac6e80499dfb99d1e9de2df376e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324050"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079646"
 ---
 # <a name="install-symantec-endpoint-protection-mobile-on-your-android-device"></a>Android cihazınıza Symantec Endpoint Protection Mobile yükleme
 
@@ -52,7 +52,7 @@ Yüklemeyle ilgili bir sorun yaşarsanız bu konunun sonundaki sorun giderme ad�
 
    * Herhangi bir tehdit bulunmazsa, üç tehdit türü de yeşil görünür.
 
-     * Şirket Portalı’ndaki **Cihaz Ayrıntıları** ekranı, artık şirketinizin güvenlik gereksinimlerine uyduğunuzu gösterir.
+     * Şirket Portalı **cihaz ayrıntıları** ekranı, artık şirketinizin güvenlik gereksinimleriyle uyumlu olduğunuzu gösterir.
 
      ![Cihazınız artık ilkelerle uyumludur](./media/mtd-device-now-compliant-android.png)
 

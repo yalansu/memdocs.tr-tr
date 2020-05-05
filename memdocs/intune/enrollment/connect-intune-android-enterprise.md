@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97024c641be4c61561e762751cfabfab2732e4c1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6027a8f193bc470c4c7ab7724f3b9736c2487980
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327181"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078031"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>Intune hesabınızı Yönetilen Google Play hesabınıza bağlama
 
@@ -41,8 +41,8 @@ Android kurumsal yönetimini yapılandırıp kullanmanızı kolaylaştırmak iç
 > [!NOTE]
 > Google ve Microsoft etki alanları arasındaki etkileşim nedeniyle tarayıcı ayarlarınızı değiştirmeniz gerekebilir.  “portal.azure.com” ve “play.google.com” adreslerinin tarayıcınızda aynı güvenlik bölgesinde olduğundan emin olun.
 
-1. Henüz yapmadıysanız, [mobil cihaz yönetimi yetkilisini](../fundamentals/mdm-authority-set.md)**Microsoft Intune** olarak ayarlayarak mobil cihaz yönetimine hazırlanın.
-2. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın, **cihazlar** > **Android** > **Android kayıt** > **yönetilen Google Play**' i seçin.  Özel bir Intune yönetici rolü kullanıyorsanız bu seçeneğe erişim, Kuruluş Okuma ve Güncelleştirme izinlerini gerektirir.
+1. Henüz yapmadıysanız, [mobil cihaz yönetimi yetkilisini](../fundamentals/mdm-authority-set.md) **Microsoft Intune**olarak ayarlayarak mobil cihaz yönetimine hazırlanın.
+2. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar** > **Android** > **Android kaydı** > **yönetilen Google Play**' yi seçin.  Özel bir Intune yönetici rolü kullanıyorsanız bu seçeneğe erişim, Kuruluş Okuma ve Güncelleştirme izinlerini gerektirir.
    
    ![Android kurumsal kayıt ekranı](./media/connect-intune-android-enterprise/android-work-bind.png)
 
@@ -64,7 +64,7 @@ Android kurumsal yönetimini yapılandırıp kullanmanızı kolaylaştırmak iç
 Android Kurumsal kaydı ve yönetimini kapatabilirsiniz. Bunu yapmak için, önce iş profili aygıtları, adanmış cihazlar ve tam olarak yönetilen cihazlar dahil tüm kayıtlı Android kurumsal cihazlarını devre dışı bırakmanız gerekir. Ardından, kayıtlı tüm Android kurumsal iş profili cihazlarını, adanmış cihazları ve tam olarak yönetilen cihazları kayıttan kaldırmak için Intune yönetim konsolunda **bağlantıyı kes** ' i seçin. Bu işlem Yönetilen Google Play hesabı ile Intune arasındaki ilişkiyi de kaldırır.
 
 1. Bir Intune Yöneticisi olarak, [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Android > ** **Android kaydı** > **yönetilen > Google Play** **bağlantısını kes** > **cihazları** seçin.
+2. **Cihazları** > seçin**Android** > **Android kaydı** > **yönetilen Google Play** > **bağlantısını kes**.
 3. **Evet**’i seçerek tüm Android kurumsal cihazların Intune bağlantısını kesin ve cihazları yönetimden kaldırın.
 
 ## <a name="next-steps"></a>Sonraki adımlar

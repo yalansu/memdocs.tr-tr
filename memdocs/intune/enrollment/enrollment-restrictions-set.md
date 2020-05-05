@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b05d89c40f274a7cacc29634fcf60433019c7e1f
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 4da13b77b52a8110072dcba208b70d1ce0407cbb
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327096"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077997"
 ---
 # <a name="set-enrollment-restrictions"></a>Kayıt kısıtlamalarını ayarlama
 
@@ -33,7 +33,7 @@ Bir Intune Yöneticisi olarak, cihazları aşağıdakiler dahil olmak üzere han
 - Cihaz sayısı.
 - İşletim sistemleri ve sürümleri.
 
-Birden çok kısıtlama oluşturabilir ve bunları farklı kullanıcı gruplarına uygulayabilirsiniz. Farklı kısıtlamalarınız için [öncelik sırası](#change-enrollment-restriction-priority) ayarlayabilirsiniz.
+Birden çok kısıtlama oluşturabilir ve bunları farklı kullanıcı gruplarına uygulayabilirsiniz. Farklı kısıtlamalarınız için [öncelik sırasını](#change-enrollment-restriction-priority) ayarlayabilirsiniz.
 
 >[!NOTE]
 >Kayıt kısıtlamaları güvenlik özellikleri değildir. Güvenliği aşılan cihazlar karakterlerini yanlış gösterebilir. Bu kısıtlamalar, kötü amaçlı olmayan kullanıcılara yönelik olabilecek en iyi engeldir.
@@ -42,10 +42,10 @@ Birden çok kısıtlama oluşturabilir ve bunları farklı kullanıcı grupları
 
 - Kayıtlı cihaz sayısı üst sınırı.
 - Kaydedilebilecek cihaz platformları:
-  - Android Cihaz Yöneticisi
+  - Android cihaz yöneticisi
   - Android kurumsal iş profili
   - iOS/iPadOS
-  - Mac OS
+  - macOS
   - Windows
   - Windows Mobile
 - İOS/ıpados, Android Cihaz Yöneticisi, Android kurumsal iş profili, Windows ve Windows Mobile için Platform işletim sistemi sürümü. (Yalnızca Windows 10 sürümleri kullanılabilir. Windows 8.1'e izin veriliyorsa bunu boş bırakın.)
@@ -59,11 +59,11 @@ Hem cihaz türü hem de cihaz sınırı kayıt kısıtlamaları için varsayıla
 
 ## <a name="create-a-device-type-restriction"></a>Cihaz türü kısıtlaması oluşturma
 
-1. [Microsoft Endpoint Manager yönetim merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) > **cihazlarda** oturum açın > **kayıt kısıtlamaları** > **kısıtlama oluşturma** > **cihaz türü kısıtlaması**.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) > **cihazlar** > **Kayıt kısıtlamaları** > ' nda oturum açın,**kısıtlama** > **cihaz türü kısıtlaması**oluşturun.
 2. **Temel bilgiler** sayfasında, kısıtlamaya bir **ad** ve isteğe bağlı bir **Açıklama**sağlayın.
 3. **İleri ' yi** seçerek **Platform ayarları** sayfasına gidin.
 4. **Platform**altında, bu kısıtlamanın izin vermek istediğiniz platformlar Için **izin ver** ' i seçin.
-    Platform ayarlarını seçmek için ![ekran ucu](./media/enrollment-restrictions-set/choose-platform-settings.png)
+    ![Platform ayarlarını seçmek için ekran ucu](./media/enrollment-restrictions-set/choose-platform-settings.png)
 5. **Sürümler**altında, izin verilen platformların desteklemesini istediğiniz en düşük ve en yüksek sürümleri seçin. Sürüm kısıtlamaları yalnızca Şirket Portalı kaydedilmiş cihazlara uygulanır.
      Desteklenen sürüm biçimleri:
     - Android Cihaz Yöneticisi ve Android kurumsal iş profili, ana. ikincil. Rev. Build 'yi destekler.
@@ -84,8 +84,8 @@ Hem cihaz türü hem de cihaz sınırı kayıt kısıtlamaları için varsayıla
 6. **Kişisel**olarak sahip olunan cihazlara izin vermek istediğiniz platformlar Için **izin ver** ' i seçin.
 7. **Cihaz üreticisi**altında, engellemek istediğiniz üreticilerin virgülle ayrılmış bir listesini girin.
 8. **Atamalar** sayfasına gitmek için **İleri ' yi** seçin.
-9. **Dahil edilecek grupları seç** ' i seçin ve ardından bu kısıtlamaya dahil etmek istediğiniz grupları bulmak için arama kutusunu kullanın. Kısıtlama yalnızca atandığı gruplara uygulanır. Kısıtlamayı en az bir gruba atamazsanız, hiçbir etkisi olmaz. Daha sonra **Seç**’e tıklayın. 
-    Platform ayarlarını seçmek için ![ekran ucu](./media/enrollment-restrictions-set/select-groups.png)
+9. **Dahil edilecek grupları seç** ' i seçin ve ardından bu kısıtlamaya dahil etmek istediğiniz grupları bulmak için arama kutusunu kullanın. Kısıtlama yalnızca atandığı gruplara uygulanır. Kısıtlamayı en az bir gruba atamazsanız, hiçbir etkisi olmaz. Ardından **Seç** seçeneğini belirleyin. 
+    ![Platform ayarlarını seçmek için ekran ucu](./media/enrollment-restrictions-set/select-groups.png)
 10. **İleri ' yi** seçerek **gözden geçir + oluştur** sayfasına gidin.
 11. Kısıtlamayı oluşturmak için **Oluştur** ' u seçin.
 12. Yeni kısıtlama, varsayılan öncelik düzeyinin hemen üstündeki öncelik düzeyiyle oluşturulur. [Önceliği değiştirebilirsiniz](#change-enrollment-restriction-priority).
@@ -93,14 +93,14 @@ Hem cihaz türü hem de cihaz sınırı kayıt kısıtlamaları için varsayıla
 
 ## <a name="create-a-device-limit-restriction"></a>Cihaz sınırı kısıtlaması oluşturma
 
-1. [Microsoft Endpoint Manager yönetim merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) > **cihazlarda** oturum açın > **kayıt kısıtlamaları** > **kısıtlama oluşturma** > **cihaz sınır kısıtlaması**.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) > **cihazlar** > **Kayıt kısıtlamaları** > **kısıtlama** > **cihaz sınırı kısıtlaması**' nda oturum açın.
 2. **Temel bilgiler** sayfasında, kısıtlamaya bir **ad** ve isteğe bağlı bir **Açıklama**sağlayın.
 3. **Cihaz sınırı** sayfasına gitmek için **İleri ' yi** seçin.
 4. **Cihaz sınırı**için, bir kullanıcının kaydedebileceği en fazla cihaz sayısını seçin.
-    cihaz sınırı seçmek için ![ekran ucu](./media/enrollment-restrictions-set/choose-device-limit.png)
+    ![Cihaz sınırı seçmek için ekran ucu](./media/enrollment-restrictions-set/choose-device-limit.png)
 5. **Atamalar** sayfasına gitmek için **İleri ' yi** seçin.
-6. **Dahil edilecek grupları seç** ' i seçin ve ardından bu kısıtlamaya dahil etmek istediğiniz grupları bulmak için arama kutusunu kullanın. Kısıtlama yalnızca atandığı gruplara uygulanır. Kısıtlamayı en az bir gruba atamazsanız, hiçbir etkisi olmaz. Daha sonra **Seç**’e tıklayın. 
-    grupları seçmek için ekran ucunu ![](./media/enrollment-restrictions-set/select-groups-device-limit.png)
+6. **Dahil edilecek grupları seç** ' i seçin ve ardından bu kısıtlamaya dahil etmek istediğiniz grupları bulmak için arama kutusunu kullanın. Kısıtlama yalnızca atandığı gruplara uygulanır. Kısıtlamayı en az bir gruba atamazsanız, hiçbir etkisi olmaz. Ardından **Seç** seçeneğini belirleyin. 
+    ![Grupları seçmek için ekran ucu](./media/enrollment-restrictions-set/select-groups-device-limit.png)
 7. **İleri ' yi** seçerek **gözden geçir + oluştur** sayfasına gidin.
 8. Kısıtlamayı oluşturmak için **Oluştur** ' u seçin.
 9. Yeni kısıtlama, varsayılan öncelik düzeyinin hemen üstündeki öncelik düzeyiyle oluşturulur. [Önceliği değiştirebilirsiniz](#change-enrollment-restriction-priority).
@@ -126,7 +126,7 @@ KCG kayıtları sırasında kullanıcılar, kayıtlı cihaz sınırına ulaştı
 
 Aşağıdaki adımları izleyerek, bir kayıt kısıtlamasının ayarlarını değiştirebilirsiniz. Bu kısıtlamalar, zaten kaydedilmiş olan cihazları etkilemez. Bu özellikle [Intune PC aracısı](../fundamentals/manage-windows-pcs-with-microsoft-intune.md) ile kaydedilen cihazlar engellenemez.
 
-1. [Microsoft Endpoint Manager yönetim merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) > **cihazlarda** oturum açın > **Kayıt kısıtlamaları** > > **özelliklerini**değiştirmek istediğiniz kısıtlamayı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) > **cihazlar** > **kayıt kısıtlamalarında** oturum açın > > **özelliklerini**değiştirmek istediğiniz kısıtlamayı seçin.
 2. Değiştirmek istediğiniz ayarların yanındaki **Düzenle** ' yi seçin.
 3. **Düzenle** sayfasında, istediğiniz değişiklikleri yapın ve **gözden geçir + kaydet** sayfasına ilerleyin ve ardından **Kaydet**' i seçin.
 
@@ -143,16 +143,16 @@ Windows şirket kaydı olarak yetkilendirme için aşağıdaki yöntemler uygund
 - Kaydeden kullanıcı [cihaz kayıt yöneticisi hesabı]( device-enrollment-manager-enroll.md) kullanıyor.
 - Cihaz [Windows Autopilot](enrollment-autopilot.md) yoluyla kaydediliyor.
 - Cihaz Windows Autopilot ile kaydediliyor ancak Windows Ayarları'ndan bir yalnızca MDM kaydı seçeneği değil.
-- Cihazın IMEI numarası **Cihaz kaydı** >  **[Şirket cihaz tanımlayıcıları](corporate-identifiers-add.md)** ’nda listelenmiş. (Windows Phone 8.1 için desteklenmez.)
+- Cihazın IMEI numarası **cihaz kaydı** > **[Kurumsal cihaz tanımlayıcılarında](corporate-identifiers-add.md)** listelenir. (Windows Phone 8.1 için desteklenmez.)
 - Cihaz bir [toplu sağlama paketi](windows-bulk-enroll.md) ile kaydediliyor.
 - Cihaz, GPO 'dan kaydolur veya [ortak yönetim için Configuration Manager otomatik kayıt](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1)yapar.
  
 Aşağıdaki kayıtlar Intune tarafından kurumsal olarak işaretlenir. Ancak Intune yöneticisi cihaz başına denetim sağlamadığı için engellenir:
-- [Windows kurulumu sırasında Azure Active Directory'ye katılma](windows-enroll.md#enable-windows-10-automatic-enrollment)[ ile ](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx)otomatik MDM kaydı\*.
-- [Windows Ayarları'ndan Azure Active Directory'ye katılma](windows-enroll.md#enable-windows-10-automatic-enrollment)*ile [otomatik MDM kaydı](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network).
+- [Windows kurulumu sırasında Azure Active Directory'ye katılma](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx)\* ile [otomatik MDM kaydı](windows-enroll.md#enable-windows-10-automatic-enrollment).
+- [Windows Ayarları'ndan Azure Active Directory'ye katılma](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)*ile [otomatik MDM kaydı](windows-enroll.md#enable-windows-10-automatic-enrollment).
  
 Aşağıdaki kişisel kayıt yöntemleri de engellenir:
-- [Windows Ayarları'ndan İş Hesabı ekleme](windows-enroll.md#enable-windows-10-automatic-enrollment)[ ile ](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network)otomatik MDM kaydı\*.
+- [Windows Ayarları'ndan İş Hesabı ekleme](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network)\* ile [otomatik MDM kaydı](windows-enroll.md#enable-windows-10-automatic-enrollment).
 - Windows Ayarları’ndan [Yalnızca MDM kaydı]( https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) seçeneği.
 
 \* Bunlar, Autopilot ile kaydedilirse engellenmez.
@@ -174,8 +174,8 @@ Cihaz kaydı, hem cihaz türü hem de cihaz sınırı kısıtlamaları için var
 
 Varsayılan kısıtlamalar dışındaki tüm kısıtlamaların önceliğini değiştirebilirsiniz.
 
-1. Azure portalında oturum açın.
+1. Azure Portal’da oturum açın.
 2. **Diğer Hizmetler**'i seçin, **Intune** için arama yapın ve ardından **Intune**'u seçin.
-3. **Cihaz kaydı** > **Kayıt kısıtlamaları**’nı seçin.
+3. **Cihaz kaydı** > **Kayıt kısıtlamaları**' nı seçin.
 4. Öncelik listesinde kısıtlamanın üzerine gelin.
 5. Üç dikey noktayı kullanarak, önceliği listede dilediğiniz konuma sürükleyin.

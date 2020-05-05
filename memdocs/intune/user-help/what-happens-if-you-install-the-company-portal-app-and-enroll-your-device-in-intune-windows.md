@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 6a8c7212de97fbcb741d03cbcec57bafc4692484
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 65533f3d93d226b91493c98fd029c6257e7e6409
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324142"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077266"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-device-in-intune"></a>Şirket Portalı uygulamasını yüklerseniz ve Windows cihazınızı Intune’a kaydederseniz ne olur?
 
@@ -33,7 +33,7 @@ ms.locfileid: "79324142"
 ## <a name="what-happens-to-all-windows-devices-after-enrollment"></a>Kayıttan sonra tüm Windows cihazlarına ne olur?
 Windows veya Windows Phone cihazınızı Intune’a kaydettiğinizde:
 
-- Şirket ağına, e-postalarınıza ve iş dosyalarınıza erişebilirsiniz.
+- Şirket ağına ve e-postanıza ve çalışma dosyalarınıza erişin.
 
 - Şirket Portalı web sitesi üzerinden şirket uygulamalarını alın. (__Not__: Windows 7 ve Windows Vista’da, şirket uygulamalarını yalnızca Şirket Portalı web sitesi üzerinden alabilirsiniz.)
 
@@ -43,9 +43,9 @@ Windows veya Windows Phone cihazınızı Intune’a kaydettiğinizde:
 
 Cihazınızı kaydettiğinizde, şirketinizin destek birimine şu tür işlemleri yapma izni vermiş olursunuz:
 
-- Cihazınızı üretici varsayılan ayarlarına geri döndürebilir. Cihaz çalındıysa veya kaybolduysa bu yararlıdır.
+- Cihazınızı üreticinin varsayılan ayarlarına geri sıfırlayın. Cihaz çalındıysa veya kaybolduysa bu yararlıdır.
 
-- Yalnızca şirketle ilgili dosyaları ve iş uygulamalarını kaldırabilir. *Kişisel ayarlarınız ve verileriniz kaldırılmaz.*
+- Yalnızca şirketle ilgili dosyaları ve iş uygulamalarını kaldırabilir. *Kişisel verileriniz ve ayarlarınız kaldırılmaz.*
 
 - Şirketinizin destek birimi, kişisel olarak yüklediğiniz yazılımlar dahil olmak üzere bilgisayarda yüklü olan tüm yazılımları görüntüleyebilir.
 
@@ -63,7 +63,7 @@ Cihazınızı kaydettiğinizde, şirketinizin destek birimine şu tür işlemler
 
 - Intune Endpoint Protection bilgisayarınızda yüklü olabilir. Bu yazılım, bilgisayarı virüs ve kötü amaçlı yazılımlara karşı denetler.
 
-- Şirketinizin destek birimi bilgisayarınızın sabit sürücüsünden veri toplayabilir veya onları silebilir.
+- Şirketinizin destek, bilgisayarınızın sabit sürücüsünden veri toplayabilir veya silebilir.
 
 - Şirketinizin destek birimi aynı zamanda bilgisayarınıza uygulama ve güncelleştirme de yükleyebilir.
 

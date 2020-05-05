@@ -1,6 +1,6 @@
 ---
-title: Windows Holographic iş cihaz ayarları - Microsoft Intune - Azure | Microsoft Docs
-description: Windows holographic for Business için Microsoft Intune, kayıt, coğrafi konum, parolalar, App Store 'dan uygulama yüklemesi, Microsoft Edge, Microsoft Defender, ara, tanımlama bilgileri ve açılır pencereler dahil cihaz kısıtlama ayarlarını okuyun ve yapılandırın. Azure 'daki bulut ve depolama, Bluetooth bağlantısı, sistem saati ve kullanım verileri.
+title: Windows holographic Business cihaz ayarları-Microsoft Intune-Azure | Microsoft Docs
+description: Kayıt, coğrafi konum, parolalar, App Store 'dan uygulama yüklemesi, Microsoft Edge, Microsoft Defender, arama, bulut ve depolama, Bluetooth bağlantısı, sistem saati ve Azure 'daki kullanım verileri dahil olmak üzere Windows holographic for Business için Microsoft Intune cihaz kısıtlama ayarlarını okuyun ve yapılandırın.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -15,18 +15,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 837e7b5ccbeeae0664095619bf8703fa5cf422c6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0a207c34c0d46b423eda44abf953e9c084cc9b2d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332262"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078235"
 ---
-# <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Windows Holographic for Business izin vermek veya Intune kullanarak özellikleri kısıtlamak için cihaz ayarları
+# <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Windows holographic for Business cihaz ayarları
 
 
 
-Bu makale, listeler ve farklı ayarları denetleyebilirsiniz gibi Microsoft Hololens cihazları Windows Holographic for Business açıklar. Mobil cihaz Yönetimi (MDM) çözümünüzün bir parçası olarak, izin veya özellikler, güvenlik denetimi ve daha fazla devre dışı için bu ayarları kullanın.
+Bu makalede, Microsoft HoloLens gibi Windows holographic for Business cihazlarında denetleyebilmeniz için farklı ayarlar listelenmektedir ve açıklanmaktadır. Mobil cihaz yönetimi (MDM) çözümünüzün bir parçası olarak bu ayarları, özelliklere izin vermek veya devre dışı bırakmak, güvenliği denetlemek ve daha fazlasını yapmak için kullanın.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -43,7 +43,7 @@ Bu makale, listeler ve farklı ayarları denetleyebilirsiniz gibi Microsoft Holo
 - **Parola**: son kullanıcının cihaza erişmek için bir parola girmesini gerektir.
 - **Cihaz boşta durumundan çıkarken parola iste**: kullanıcının cihazın kilidini açmak için bir parola girmesi gerektiğini belirtir.
 
-## <a name="app-store"></a>Uygulama Mağazası
+## <a name="app-store"></a>App Store
 
 - **Mağaza 'dan uygulamaları otomatik güncelleştir**: Microsoft Store yüklenen uygulamaların otomatik olarak güncelleştirilmesini sağlar.
 - **Güvenilen uygulama yüklemesi**: güvenilen bir sertifikayla imzalanan uygulamaların dışarıdan yüklenmesine izin verir.
@@ -61,9 +61,9 @@ Bu makale, listeler ve farklı ayarları denetleyebilirsiniz gibi Microsoft Holo
 
 - **Microsoft Edge Için SmartScreen**: site ve dosya indirmelerine erişmek Için Microsoft Edge SmartScreen 'i etkinleştirin.
 
-## <a name="search"></a>Ara
+## <a name="search"></a>Arama
 
-- **Arama konumu** - Aramanın konumu kullanıp kullanamayacağını belirtin. bilgi
+- **Arama konumu** - Aramanın konumu kullanıp kullanamayacağını belirtin. bilgiler
 
 ## <a name="cloud-and-storage"></a>Bulut ve Depolama
 
@@ -85,11 +85,11 @@ Bu ayarlar salt okunurdur ve değiştirilemez. Bilgi noktası modunu yapılandı
 
 Bir bilgi noktası cihazı genellikle belirli bir uygulama çalıştırır. Kullanıcıların cihazda bilgi noktası uygulaması dışında başka özellik veya işlevlere erişimi engellenmiştir.
 
-- **Bilgi noktası modu**: ilke tarafından desteklenen bilgi noktası modunun türünü tanımlar. Şu seçenekler mevcuttur:
+- **Bilgi noktası modu**: ilke tarafından desteklenen bilgi noktası modunun türünü tanımlar. Seçeneklere şunlar dahildir:
 
   - **Yapılandırılmamış** (varsayılan): İlke, bilgi noktası modunu etkinleştirmez. 
   - **Tek uygulama bilgi noktası**: profil, cihazın yalnızca bir uygulama çalıştırmasına olanak sağlar. Kullanıcı oturum açtığında belirli bir uygulama başlar. Bu mod ayrıca kullanıcının yeni uygulamalar açmasını veya çalışan uygulamayı değiştirmesini önler.
-  - **Birden çok uygulama bilgi noktası**: profil, cihazın birden çok uygulama çalıştırmasına olanak sağlar. Yalnızca eklediğiniz uygulamalar kullanıcı tarafından kullanılabilir. Bir çoklu uygulama bilgi noktasının veya sabit amaçlı cihazın yararı, yalnızca ihtiyaç duyulan uygulamalara erişim sağlayarak bireylere anlaşılması kolay bir deneyim sunmasıdır. İhtiyaç duymadıkları uygulamaları ise gözlerinin önünden kaldırır. 
+  - **Birden çok uygulama bilgi noktası**: profil, cihazın birden çok uygulama çalıştırmasına olanak sağlar. Yalnızca eklediğiniz uygulamalar kullanıcı tarafından kullanılabilir. Bir çoklu uygulama bilgi noktasının veya sabit amaçlı cihazın yararı, yalnızca ihtiyaç duyulan uygulamalara erişim sağlayarak bireylere anlaşılması kolay bir deneyim sunmasıdır. Ve, kendi görünümlerinden gerekmeyen uygulamaları kaldırma. 
   
     Çoklu uygulama bilgi noktası deneyimi için uygulama eklediğinizde, başlat menüsü düzen dosyası da eklersiniz. [Başlat menüsü düzeni dosyası](/hololens/hololens-kiosk#start-layout-file-for-mdm-intune-and-others), Intune’da kullanılabilecek örnek bir XML içerir. 
 
@@ -101,7 +101,7 @@ Aşağıdaki ayarları girin:
 
     Herkese açık ortamlarda bulunan ve otomatik oturum açma etkin bilgi noktaları için olabildiğince az ayrıcalığa sahip bir kullanıcı türü (yerel standart kullanıcı hesabı gibi) kullanılmalıdır. Bir Azure Active Directory (AD) hesabını bilgi noktası moduna yapılandırmak için `AzureAD\user@contoso.com` biçimini kullanın.
 
-- **Uygulamanın uygulama Kullanıcı MODELI kimliği (aumıd)** : bilgi noktası uygulamasının aumıd 'sini girin. Daha fazla bilgi için bkz. [Yüklü bir uygulamanın Uygulama Kullanıcı Model Kimliğini bulma](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+- **Uygulamanın uygulama Kullanıcı MODELI kimliği (aumıd)**: bilgi noktası uygulamasının aumıd 'sini girin. Daha fazla bilgi için bkz. [Yüklü bir uygulamanın Uygulama Kullanıcı Model Kimliğini bulma](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
 ## <a name="reporting-and-telemetry"></a>Raporlama ve Telemetri
 

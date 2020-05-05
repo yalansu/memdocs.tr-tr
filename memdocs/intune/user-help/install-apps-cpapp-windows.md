@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: e0802e068b98e3f71393ca9b8124558243bf4847
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c16f2d8cf70fe42e5122083364efa222cffa706e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328038"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078898"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Cihazınızda uygulama yükleme ve paylaşma
 
@@ -62,7 +62,7 @@ Uygulamaları iş veya okuldaki tanıdığınız kişilerle paylaşın veya bu k
 
     ![Windows 10 için Şirket Portalı uygulaması ön sayfası uygulamaların ve cihazların bir listesini gösterirken. Tıklanabilen "Paylaş" bağlam menüsü, örnek uygulama simgesinin üzerinde görülebilir. ](./media/1808_ShareContext_CP_Windows.png)  
 
-2. **Paylaş**'ı seçin.
+2. **Paylaşma**' yı seçin.
 3. Bir gruba göndermek için kişiler arasından birini veya OneNote gibi başka bir programı seçin. Kullanmak istediğiniz bir uygulamayı görmüyorsanız, bulunan diğer uygulamaları görmek için **Store'dan uygulama edin**'i seçin.  
 
     ![Windows 10 için Şirket Portalı uygulamasının açılmış Paylaş sayfasıyla örnek ekran görüntüsü. Sayfada "<örnek uygulama adı> hakkında Şirket Portalı uygulamasında bilgi edinin" deniyor. Bağlantıyı göndermek için seçilebilecek bir kişi ve 2 uygulama ve bir "Store'dan uygulama edinin" bağlantısı gösteriliyor. ](./media/1808_ShareApps_CP_Windows.png) 
@@ -79,7 +79,7 @@ Uygulamalar size kuruluşunuz tarafından atanır. Kuruluşunuz, bazı uygulamal
 Uygulamalar, cihaz türüne bağlı olarak sizin için de kullanılabilir hale getirilir. Örneğin, Windows için Şirket Portalı uygulamasını kullanıyorsanız, iOS uygulamalarına değil, Windows uygulamalarına erişebilirsiniz.
 
 ## <a name="request-an-app-for-work-or-school"></a>İş veya okul için bir uygulama isteyin  
-İhtiyacınız olan bir uygulamaya sahipseniz, ancak Şirket Portalı görmüyorsanız, isteyin. Yardım & Destek sayfasında, Şirket Portalı uygulamasındaki Yardım **masasına** ait iletişim ayrıntılarını bulun. Aynı iletişim bilgilerini [Şirket portalı Web sitesinde](https://go.microsoft.com/fwlink/?linkid=2010980)bulacaksınız.    
+İhtiyacınız olan bir uygulamaya sahipseniz, ancak Şirket Portalı görmüyorsanız, isteyin. Yardım & destek sayfasında, Şirket Portalı uygulamasındaki Yardım **masasına** ait iletişim ayrıntılarını bulun. Aynı iletişim bilgilerini [Şirket portalı Web sitesinde](https://go.microsoft.com/fwlink/?linkid=2010980)bulacaksınız.    
 
   ![Windows 10 için Şirket Portalı uygulaması, yardım masası ayrıntılarını vurgulayan yardım & destek sayfası. ](./media/1812_UCP_Help_Support_helpdesk.png)  
 

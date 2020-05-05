@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1bd216049c5dbda7c044949f9fa39c3b7bd56f9d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b83092521f1ab0058d47d599e7fd9c10c2fd6d35
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324758"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077776"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-intercede"></a>İOS veya ıpados cihazını Şirket Portalı ve ıntercede ile ayarlama
 
@@ -36,7 +37,7 @@ Kayıt sırasında, bir türetilmiş kimlik bilgisini cihazınıza de yüklersin
 * Okul veya iş uygulamalarında oturum açma, Wi-Fi ve sanal özel ağlar (VPN)
 * Okul veya iş e-postalarını S/MIME sertifikaları kullanarak imzalama ve şifreleme  
 
-Bu makalede şunları yapmanız gerekir:  
+Bu makalede şunları yapacaksınız:  
 
 * Intune Şirket Portalı ile bir mobil iOS veya ıpados cihazı kaydedin.  
 * Kuruluşunuzun türetilmiş kimlik bilgisi sağlayıcısından, [ıntercede](https://www.intercede.com/)tarafından türetilmiş bir kimlik bilgisi alın.   
@@ -61,12 +62,12 @@ Türetilmiş kimlik bilgileri, özel yayın (SP) 800-157 kapsamında türetilmi�
 * Cihazınızda yüklü iOS ve Idos Intune Şirket Portalı uygulaması
 
 
-## <a name="enroll-device"></a>Cihazı kaydetme  
+## <a name="enroll-device"></a>Cihaz kaydetme  
 1. Mobil cihazınızda iOS için Şirket Portalı App/ıpados ' i açın ve iş hesabınızla oturum açın.  
 2. Ekranda görüntülenen kodu yazın.  
 
     ![Ekran ileti ve kodu ile Şirket Portalı uygulamasının örnek görüntüsü.](./media/copy-code-intercede.png)  
-1. Akıllı kart etkin cihazınıza geçin ve https://microsoft.com/devicelogingidin. 
+1. Akıllı kart etkin cihazınıza geçin ve adresine gidin https://microsoft.com/devicelogin. 
 
 1. Daha önce yazdığınız kodu girin.
  
@@ -86,11 +87,11 @@ Türetilmiş kimlik bilgileri, özel yayın (SP) 800-157 kapsamında türetilmi�
 6. Akıllı kart etkin cihazınıza veya self servis bilgi noktası 'na geçin ve MyID uygulamasını açın. İş kimlik bilgilerinizle oturum açın.  
 7. KIMLIĞINIZI isteme seçeneğini belirleyin. 
 8. Kullanmak istediğiniz profil sorulduğunda, mobil kimlik bilgileriyle etkinleştirme seçeneğini belirleyin. QR kodu görüntülenir.  
-9. Mobil cihazınıza geri dönün. **QR kod** Şirket Portalı > Al ekranında **devam**' a dokunun.  
+9. Mobil cihazınıza geri dönün. **QR kod** Şirket portalı > al ekranında **devam**' a dokunun.  
 
     ![Şirket Portalı QR kodu alma ekranının örnek ekran görüntüsü.](./media/get-qr-code-intercede.png) 
  
-10. **Kamera kullan** > **Tamam**' a dokunun.  
+10. **Kamera** > kullan**Tamam**' a dokunun.  
 
     ![Kamera erişimine izin vermek için izin isteyen Şirket Portalı isteminin örnek ekran görüntüsü.](./media/allow-cp-camera-access-intercede.png)  
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a26e32d0a719df7c3982591042991ae760d9281
-ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
+ms.openlocfilehash: 863e6e540fcb79ff18accc40142a8e50c1406943
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80611710"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078082"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>İş kolu uygulamalarını uygulama koruma ilkelerine hazırlama
 
@@ -50,8 +50,8 @@ Intune’a kayıtlı olmayan cihazlarda uygulama koruma ilkeleri uygulamak için
 
 |**Uygulama Sarmalama Aracı** | **Xamarin** |**Cordova** |
 |------|----|----|
-|**Android** |Evet|Evet|
-|**Android**|Hayır - [Intune Uygulaması SDK Xamarin Bağlamalarını](app-sdk-xamarin.md) kullan.|Evet|
+|**iOS** |Yes|Yes|
+|**Android**|Hayır - [Intune Uygulaması SDK Xamarin Bağlamalarını](app-sdk-xamarin.md) kullan.|Yes|
 
 ## <a name="intune-app-sdk"></a>Intune Uygulama SDK'sı
 
@@ -69,10 +69,10 @@ SDK hakkında daha fazla bilgi edinmek için bkz. [Genel bakış](app-sdk.md). S
 
 ### <a name="supported-app-development-platforms"></a>Desteklenen uygulama geliştirme platformları
 
-|**Intune Uygulama SDK'sı** |**Xamarin** |**Cordova**
+|**Intune uygulama SDK 'Sı** |**Xamarin** |**Cordova**
 |------|----|----|
-|**Android**|Evet – [Intune Uygulaması SDK Xamarin Bağlamalarını](app-sdk-xamarin.md) kullan.|Hayır|
-|**Android**| Evet - [Intune Uygulaması SDK Xamarin Bağlamalarını](app-sdk-xamarin.md) kullan.|Hayır|
+|**iOS**|Evet – [Intune Uygulaması SDK Xamarin Bağlamalarını](app-sdk-xamarin.md) kullan.|Hayır|
+|**Android**| Evet- [Intune uygulama SDK 'Sı Xamarin bağlamalarını](app-sdk-xamarin.md)kullanın.|Hayır|
 
 ## <a name="not-using-an-app-development-platform-listed-above"></a>Yukarıda listelenen bir uygulama geliştirme platformu kullanmıyor musunuz?
 
@@ -97,14 +97,14 @@ Bu tablo, uygulama SDK 'sını veya uygulama sarmalama aracını kullanıyorsa e
 |Erişim için kurumsal kimlik bilgileri gerektir|X|X|
 |PIN süre sonu ayarlama|X|X|
 |Yönetilen cihazların, jailbreak uygulanmış veya kökü belirtilmiş cihazlarda çalışmasını engelle|X|X|
-|Uygulama verilerini şifrele|X|X|
+|Uygulama verilerini şifreleme|X|X|
 |Belirtilen sayıda dakika sonrasında erişim gereksinimlerini yeniden denetle|X|X|
 |Çevrimdışı kullanım süresini belirtin|X|X|
 |Ekran yakalamayı engelle (yalnızca Android)|X|X|
 |Cihaz kaydı olmadan MAM desteği|X|X|
 |Uygulama verilerini tam Temizleme|X|X|
 |Çoklu kimlik senaryolarında iş ve okul verilerinin seçmeli silme <br><br>**Note:** İOS/ıpados için, Yönetim profili kaldırıldığında, uygulama da kaldırılır.|X||
-|“Farklı Kaydet”i önleme|X||
+|"Farklı kaydet" i engelle|X||
 |Hedeflenen uygulama yapılandırması (veya "MAM Channel" aracılığıyla uygulama yapılandırması)|X|X|
 |Çoklu Kimlik Desteği|X||
 |Özelleştirilebilir Stil |X|||

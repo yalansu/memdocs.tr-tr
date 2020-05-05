@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 104996e87c830701b1725129727c76d8c7a09ee3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cf4fc3017ccf3efcf93986544c8a60b60acbf3c8
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326878"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076127"
 ---
 # <a name="how-to-configure-intune-settings-for-the-iosipados-classroom-app"></a>İOS/ıpados sınıf uygulaması için Intune ayarlarını yapılandırma
 
@@ -46,14 +46,14 @@ Cihazınızda sınıf ayarlamak için bir Intune iOS/ıpados eğitim cihaz profi
 Bu ayarları yapılandırmaya başlamadan önce, aşağıdakilere dikkat edin:
 
 - Hem öğretmen hem de öğrenci iPad cihazlarının Intune’a kayıtlı olması gerekir.
-- Öğretmenin cihazına [Apple Classroom](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8) uygulamasını yüklediğinizden emin olun. Uygulamayı el ile yükleyebilir veya [Intune uygulama yönetimi](../apps/app-management.md)'ni kullanabilirsiniz.
+- [Apple derslik](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8) uygulamasını öğretmen cihazına yüklediğinizden emin olun. Uygulamayı el ile yükleyebilir veya [Intune uygulama yönetimi](../apps/app-management.md)'ni kullanabilirsiniz.
 - Öğretmen ve öğrenci cihazları arasındaki bağlantıların kimliğini doğrulamak için sertifikaları yapılandırmanız gerekir (bkz. 2. adım, Intune 'da iOS/ıpados eğitim profili oluşturma ve atama).
 - Öğretmen ve öğrencilerin iPad cihazları aynı Wi-Fi ağında olmalı ve cihazların Bluetooth özellikleri etkin olmalıdır.
 - Sınıf uygulaması, iOS/ıpados 9,3 veya üzeri çalıştıran denetimli iPads üzerinde çalışır.
 - Bu sürümde, Intune her öğrencinin kendine ait bir iPad cihazının olduğu 1:1 senaryosunu yönetmeyi destekler.
 
 
-## <a name="step-1---import-your-school-data-into-azure-active-directory"></a>1\. Adım - Okul verilerinizi Azure Active Directory'ye aktarın
+## <a name="step-1---import-your-school-data-into-azure-active-directory"></a>1. Adım - Okul verilerinizi Azure Active Directory'ye aktarın
 
 Mevcut Öğrenci Bilgi Sisteminden (SIS) Azure Active Directory’ye (Azure AD) okul kayıtlarını içeri aktarmak için Microsoft'un School Data Sync (SDS) özelliğini kullanın.
 SDS, SIS bilgilerinizi eşitler ve Azure AD'de depolar. Azure AD, kullanıcıları ve cihazları düzenlemenize yardımcı olan bir Microsoft yönetim sistemidir. Ardından öğrencilerinizi ve sınıflarınızı yönetmenize yardımcı olması için bu verileri kullanabilirsiniz. [SDS dağıtma hakkında daha fazla bilgi edinin](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91).
@@ -72,18 +72,18 @@ Aşağıdaki yöntemlerden birini kullanarak SDS’ye bilgi aktarabilirsiniz:
 - [Microsoft School Data Sync hakkında daha fazla bilgi edinin](https://sds.microsoft.com/)
 - [Azure Active Directory'de lisanslama hakkında daha fazla bilgi edinin](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
-## <a name="step-2---create-and-assign-an-iosipados-education-profile-in-intune"></a>2\. adım-Intune 'da iOS/ıpados eğitim profili oluşturma ve atama
+## <a name="step-2---create-and-assign-an-iosipados-education-profile-in-intune"></a>2. adım-Intune 'da iOS/ıpados eğitim profili oluşturma ve atama
 
 ### <a name="configure-general-settings"></a>Genel ayarları yapılandırma
 
 1. [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)'da oturum açın.
-3. **Intune** bölmesinde, **Cihaz yapılandırması**’nı seçin.
+3. **Intune** bölmesinde **Cihaz yapılandırması**’nı seçin.
 2. **Yönet** bölümü altındaki **Cihaz yapılandırması** bölmesinden **Profiller**’i seçin.
-5. Profiller bölmesinde **Profil oluştur**’u seçin.
+5. Profiller bölmesinde **Profil oluştur**' u seçin.
 6. **Profil oluştur** bölmesinde, IOS/ıpados eğitim profili Için bir **ad** ve **Açıklama** girin.
 7. **Platform** açılan listesinden **iOS**’yi seçin.
 8. **Profil türü** açılan listesinde **Eğitim**’i seçin.
-9. **Ayarlar** > **Yapılandır**’ı seçin.
+9. **Ayarları** > **Yapılandır**' ı seçin.
 
 
 Sonraki bölümde, öğretmen ve öğrencilerin iPad cihazları arasında bir güven ilişkisi kurmak için sertifikalar oluşturacaksınız. Sertifikalar, kullanıcı adları ve parolaları girmeye gerek olmadan cihazlar arasında bağlantıların kimliğini sorunsuz ve sessiz bir şekilde doğrulamak için kullanılır.
@@ -109,7 +109,7 @@ Oluşturulan sertifikaların, kullanıcı kimlik doğrulaması ve sunucu kimlik 
 
 **Öğretmen PKCS #12 sertifikası** altında aşağıdaki değerleri yapılandırın:
 
-- **Konu adı biçimi** - Intune, öğretmen sertifikası ortak adlarının başına otomatik olarak **lider** ifadesini getirir. Öğrenci sertifikası ortak adlarının önünde **üye** ifadesi bulunur.
+- **Konu adı biçimi** - **Intune, öğretmen**sertifikaları için ortak adları otomatik olarak ön ekler. Öğrenci sertifikası ortak adlarının önünde **üye** ifadesi bulunur.
 - **Sertifika yetkilisi** - Windows Server 2008 R2 veya üzeri bir Enterprise sürümünde çalışan Kuruluş Sertifika Yetkilisi (CA). Tek Başına CA desteklenmez. 
 - **Sertifika yetkilisi adı** - Sertifika yetkilinizin adını girin.
 - **Sertifika şablonu adı** - Sertifika verme yetkilisine eklenmiş bir sertifika şablonunun adını girin. 
@@ -121,7 +121,7 @@ Sertifikaları yapılandırmayı bitirdiğinizde **Tamam**’ı seçin.
 
 ### <a name="configure-student-certificates"></a>Öğrenci sertifikalarını yapılandırma
 
-1. **Eğitim** bölmesinde **Öğrenci sertifikaları**’nı seçin.
+1. **Eğitim** bölmesinde **öğrenci sertifikaları**' nı seçin.
 2. **Öğrenci sertifikaları** bölmesinde, **Öğrenci cihaz sertifikaları** türü listesinde yazın, **1:1** seçeneğini belirleyin.
 
 #### <a name="configure-student-root-certificate"></a>Öğrenci kök sertifikasını yapılandırma
@@ -134,7 +134,7 @@ Sertifikaları yapılandırmayı bitirdiğinizde **Tamam**’ı seçin.
 
 **Öğrenci PKCS #12 sertifikası** altında aşağıdaki değerleri yapılandırın:
 
-- **Konu adı biçimi** - Intune, öğretmen sertifikası ortak adlarının başına otomatik olarak **lider** ifadesini getirir. Öğrenci sertifikası ortak adlarının önünde **üye** ifadesi bulunur.
+- **Konu adı biçimi** - **Intune, öğretmen**sertifikaları için ortak adları otomatik olarak ön ekler. Öğrenci sertifikası ortak adlarının önünde **üye** ifadesi bulunur.
 - **Sertifika yetkilisi** - Windows Server 2008 R2 veya üzeri bir Enterprise sürümünde çalışan Kuruluş Sertifika Yetkilisi (CA). Tek Başına CA desteklenmez. 
 - **Sertifika yetkilisi adı** - Sertifika yetkilinizin adını girin.
 - **Sertifika şablonu adı** - Sertifika verme yetkilisine eklenmiş bir sertifika şablonunun adını girin. 
@@ -146,12 +146,12 @@ Sertifikaları yapılandırmayı bitirdiğinizde **Tamam**’ı seçin.
 
 ## <a name="finish-up"></a>Bitirme
 
-1. **Eğitim** bölmesinde Tamam'ı seçin.
-2. **Profil oluştur** bölmesinde **Oluştur**’u seçin.
+1. **Eğitim** bölmesinde Tamam ' ı seçin.
+2. **Profil Oluştur** bölmesinde **Oluştur**’u seçin.
 
 Profil oluşturulur ve profil listesi bölmesinde görüntülenir.
 
-Okul verilerinizi Azure AD ile eşitlediğinizde oluşturulan sınıf gruplarındaki öğrenci cihazlarına profili atayın (bkz. [Cihaz profilleri atama](../configuration/device-profile-assign.md).
+Okul verilerinizi Azure AD ile eşitledikten sonra oluşturulan derslik gruplarındaki öğrenci cihazlarına profili atayın (bkz. [Cihaz profillerini atama](../configuration/device-profile-assign.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

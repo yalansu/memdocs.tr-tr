@@ -16,39 +16,39 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87cfb3edf860cfc9de9c479a13dd1ea3fa54e599
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ef7a076c0a41e84e0028da6655569401f334772c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326464"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078983"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Intune’da bir cihazın geçiş kodunu sıfırlama veya kaldırma
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Bu belgede, Android Enterprise 'ta (eski adıyla Android for Work veya AfW) cihaz düzeyinde geçiş kodu sıfırlama ve iş profili geçiş kodu sıfırlama açıklanmaktadır. Her biri için gereksinimler farklılık gösterebileceğinden, bu ayrımı dikkate almak önemlidir. Cihaz düzeyinde bir geçiş kodu sıfırlaması geçiş kodunu cihazın tamamı için sıfırlar. İş profili geçiş kodu sıfırlaması, geçiş kodunu yalnızca kullanıcının Android kurumsal cihazlarındaki iş profili için sıfırlar.
+Bu belgede, Android Enterprise 'ta (eski adıyla Android for Work veya AfW) cihaz düzeyinde geçiş kodu sıfırlama ve iş profili geçiş kodu sıfırlama açıklanmaktadır. Her biri için gereksinimler farklılık gösterebileceğinden, bu ayrımı dikkate almak önemlidir. Cihaz düzeyinde bir geçiş kodu sıfırlaması geçiş kodunu cihazın tamamı için sıfırlar. Bir iş profili geçiş kodu sıfırlama, geçiş kodunu yalnızca Android kurumsal cihazlarındaki kullanıcının iş profili için sıfırlar.
 
 ## <a name="supported-platforms-for-device-level-passcode-reset"></a>Cihaz düzeyinde geçiş kodu sıfırlama için desteklenen platformlar
 
-| Platfveyam | Destekleniyor mu? |
+| Platform | Destekleniyor mu? |
 | ---- | ---- |
-| Sürüm 6.x veya öncesindeki Android cihazları | Evet |
-| Cihaz sahibi olarak kaydedilmiş Android Kurumsal cihazları | Evet |
-| iOS/ıpados cihazları | Evet |
+| Sürüm 6.x veya öncesindeki Android cihazları | Yes |
+| Cihaz sahibi olarak kaydedilmiş Android Kurumsal cihazları | Yes |
+| iOS/ıpados cihazları | Yes |
 | Kullanıcı kaydıyla kaydedilen iOS/ıpados cihazları | Hayır |
 | İş profiliyle kaydedilmiş Android cihazları | Hayır |
 | Sürüm 7.0 veya üzeri Android cihazlar | Hayır |
 | Mac OS | Hayır |
 | Windows | Hayır |
 
-Android cihazlarda, bu, cihaz düzeyi geçiş kodu sıfırlamasının yalnızca 6. x veya önceki sürümleri çalıştıran cihazlarda ya da bilgi noktası modunda çalışan Android kurumsal cihazlarda desteklenir. Bunun nedeni Google'ın bir Android 7 cihazının geçiş kodunu/parolasını bir Cihaz Yöneticisi tarafından verilen bir uygulama içinden sıfırlama desteğini kaldırmış olması ve bunun tüm MDM satıcıları için geçerli olmasıdır.
+Android cihazlarda, bu, cihaz düzeyi geçiş kodu sıfırlamasının yalnızca 6. x veya önceki sürümleri çalıştıran cihazlarda ya da bilgi noktası modunda çalışan Android kurumsal cihazlarda desteklenir. Bunun nedeni, Google 'ın bir Android 7 cihazının geçiş kodunu/parolasını bir cihaz yöneticisi tarafından verilen uygulama içinden sıfırlama desteğinin kaldırılmasına ve tüm MDM satıcılarına uygulanmasından kaynaklanır.
 
 ## <a name="supported-platforms-for-android-enterprise-work-profile-passcode-reset"></a>Android kurumsal iş profili geçiş kodu sıfırlaması için desteklenen platformlar
 
-| Platfveyam | Destekleniyor mu? |
+| Platform | Destekleniyor mu? |
 | ---- | ---- |
-| Bir iş profili ile kaydedilmiş ve sürüm 8.0 ve sonrasını çalıştıran Android kurumsal cihazlar | Evet |
+| Bir iş profili ile kaydedilmiş ve sürüm 8.0 ve sonrasını çalıştıran Android kurumsal cihazlar | Yes |
 | Bir iş profili ile kaydedilmiş ve sürüm 7.x ve öncesini çalıştıran Android kurumsal cihazlar | Hayır |
 | Sürüm 7.x ve öncesini çalıştıran Android cihazlar | Hayır |
 
@@ -58,14 +58,16 @@ Yeni bir iş profili geçiş kodu oluşturmak için Geçiş Kodunu Sıfırla eyl
 
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) şu rollerden herhangi biriyle oturum açın: Azure Active Directory genel yönetici, Azure Active Directory Intune Hizmet Yöneticisi, yardım masası Işleci veya rol yöneticisi.
-2. **Cihazlar**’ı ve ardından **Tüm cihazlar**’ı seçin.
-3. Yönettiğiniz cihazların listesinden bir cihaz seçin ve **geçiş kodunu kaldır**' ı seçin.
+2. **Cihazlar**’ı ve ardından **Tüm Cihazlar**’ı seçin.
+3. Yönettiğiniz cihazların listesinden bir cihaz seçin ve **geçiş kodunu Sıfırla**' yı seçin.
 
-## <a name="reset-android-work-profile-passcodes"></a>Android iş profili geçiş kodlarını sıfırlama
+## <a name="reset-android-work-profile-and-device-owner-passcodes"></a>Android iş profilini ve cihaz sahibi geçiş kodlarını Sıfırla
 
 İş profili ile kaydolmuş desteklenen Android Kurumsal cihazları, yeni bir yönetilen profil kilidi açma parolası veya son kullanıcı için bir yönetilen profil sınaması alır.
 
-Sürüm 8.x veya sonrasını çalıştıran ve bir iş profili ile kayıtlı Android Kurumsal cihazlarda, kayıtları tamamlandıktan hemen sonra sıfırlama geçiş kodlarını etkinleştirmeleri için son kullanıcılara bildirim gönderilir. Bir iş profili parolası gerekli ve ayarlıysa bildirim görüntülenir. Geçiş kodu girildikten sonra bildirim kaybolur.
+Sürüm 8. x veya üzeri çalıştıran Android kurumsal iş profili cihazlarında, son kullanıcılar kayıt tamamlandıktan hemen sonra sıfırlama geçiş kodunu etkinleştirmek için bildirim alırlar. Bir iş profili parolası gerekli ve ayarlıysa bildirim görüntülenir. Geçiş kodu girildikten sonra bildirim kapatılır.
+
+Sürüm 8. x veya sonrasını çalıştıran Android kurumsal cihaz sahibi veya iş profili cihazlarında, sıfırlama geçiş kodu konsolundan seçildikten sonra, MEM Intune yöneticisine geçici bir geçiş kodu sunulur. Geçici geçiş kodu cihaza girilmelidir. Cihazın geçici geçiş kodu konsolda 7 gün boyunca görüntülenir.
 
 
 ## <a name="remove-iosipados-passcodes"></a>İOS/ıpados geçiş kodlarını kaldır

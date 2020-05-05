@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5cb910d38deaca76ee92246badcebf02a7e4de
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a2f8ccfccfdca26416b0da92e6f27425e13c90c6
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325486"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078048"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Intune ile Android iş profili cihazlarını yönetme
 
@@ -45,7 +45,7 @@ Intune, Android iş profili cihazlarında yapılandırabileceğiniz bir dizi yer
 
 ## <a name="app-publishing-and-distribution"></a>Uygulama yayımlama ve dağıtma
 
-Yönetilen Google Play, Android kurumsal uygulama dağıtımı ve yönetiminin ayrılmaz bir parçasıdır. İş profilindeki Android kurumsal iş profili cihazlarına dağıtılan tüm uygulamalar, yönetilen Google Play hizmetinden gelir. Play Store’daki uygulamaları yönetmek ve dağıtmak için Google Play web sitesinde şirketinizin Google yönetimi yönetici kimlik bilgileriyle oturum açarsınız. Android kurumsal dağıtım için uygulamaları, cihazların iş profillerinde görünmesini sağlamak üzere onaylayabilirsiniz. Ardından bu uygulamalar Intune konsoluna eşitlenir ve burada Intune kullanılarak dağıtılıp yönetilebilir. Kuruluşunuz tarafından geliştirilen iş kolu (LOB) uygulamalarının Google’ın Android uygulama yayımlama konsolu kullanılarak Yönetilen Google Play’de yayımlanması gerekir. İş kolu uygulamalarının, kuruluşunuza erişimi kısıtlamak için Android uygulama yayımlama konsolunda yapılandırılması gerekir.
+Yönetilen Google Play, Android kurumsal uygulama dağıtımı ve yönetiminin ayrılmaz bir parçasıdır. İş profilindeki Android kurumsal iş profili cihazlarına dağıtılan tüm uygulamalar, yönetilen Google Play hizmetinden gelir. Play Store’daki uygulamaları yönetmek ve dağıtmak için Google Play web sitesinde şirketinizin Google yönetimi yönetici kimlik bilgileriyle oturum açarsınız. Android kurumsal dağıtım için uygulamaları, cihazların iş profillerinde görünmesini sağlamak üzere onaylayabilirsiniz. Ardından bu uygulamalar Intune konsoluna eşitlenir ve burada Intune kullanılarak dağıtılıp yönetilebilir. Kuruluşunuz tarafından geliştirilmiş iş kolu (LOB) uygulamaları, Google 'ın Android uygulama yayımlama konsolu kullanılarak yönetilen Google Play yayımlanmalıdır. İş kolu uygulamalarının, kuruluşunuza erişimi kısıtlamak için Android uygulama yayımlama konsolunda yapılandırılması gerekir.
 
 Uygulamalar kullanıcı etkileşimi olmadan ve kullanıcının **Bilinmeyen Kaynaklardan Yükleme**'ye izin vermesine gerek kalmadan yüklenebilir. İsteğe bağlı veya kullanılabilir uygulamalara göz atmak ve onları yüklemek için kullanıcı cihazındaki Play for Work mağazasını gözden geçirebilir. Daha fazla bilgi için bkz. [Intune Ile Android Enterprise iş profili cihazlarına uygulama atama](../apps/apps-add-android-for-work.md).
 
@@ -91,5 +91,5 @@ Daha fazla bilgi için bkz. [Microsoft Intune’da cihazlarınız için sertifik
 Cihaz Intune 'dan kullanımdan kaldırıldığında ve iş profili silindiğinde, Android Enterprise tarafından yönetilen Wi-Fi profilleri kaldırılır. Daha fazla bilgi için bkz. [Microsoft Intune’da Wi-Fi ayarlarını yapılandırma](../configuration/wi-fi-settings-configure.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- [Android cihazlarını kaydetme](android-enroll.md)
+- [Android cihazları kaydetme](android-enroll.md)
 - [Intune ile Android Enterprise iş profili cihazlarına uygulama atama](../apps/apps-add-android-for-work.md)

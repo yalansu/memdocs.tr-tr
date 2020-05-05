@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58203c09784f0d4a50472ff4ae9cd06957025a1c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 391fa20cf7ba53af649f9f614d9ca02c653c278b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324329"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079323"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Microsoft Intune kullanarak Windows 10 uygulama dağıtımı 
 
 Microsoft Intune, Windows 10 cihazlarında çeşitli uygulama türlerini ve dağıtım senaryolarını destekler. Intune’a bir uygulama ekledikten sonra uygulamayı kullanıcılara ve cihazlara atayabilirsiniz. Bu makalede desteklenen Windows 10 senaryoları hakkında daha ayrıntılı bilgi sağlanır ve ayrıca Windows 'a uygulama dağıttığınızda göz önünde bulunan önemli ayrıntıları ele alınmaktadır. 
 
-Windows 10 cihazlarında desteklenen uygulama türleri İş kolu (LOB) uygulamaları ve İş için Microsoft Store uygulamalarıdır. Windows uygulamaları için dosya uzantıları. msi,. appx ve. appxdemeti içerir.  
+Windows 10 cihazlarında desteklenen uygulama türleri İş kolu (LOB) uygulamaları ve İş için Microsoft Store uygulamalarıdır. Windows uygulamaları için dosya uzantıları .msi, .appx ve .appxbundle’dır.  
 
 > [!Note]
 > Modern uygulamaları dağıtmak için en azından şunlar gerekir:
@@ -44,17 +44,17 @@ Windows 10 cihazlarında desteklenen uygulama türleri İş kolu (LOB) uygulamal
 
 Belirli uygulama türleri, kullanıcılarınızın çalıştırdığı Windows 10 sürümüne göre desteklenir. Aşağıdaki tabloda, uygulama türü ve Windows 10 Supportability sağlanmaktadır.
 
-| Uygulama türü | Giriş | Pro | İş | Enterprise | Eğitim | S modu | HoloLens<sup>1 | Surface Hub | WCOS | Cep Telefonu |
+| Uygulama türü | Giriş | Pro | İş | Enterprise | Eğitim | S modu | HoloLens<sup>1 | Surface Hub | WCOS | Mobil |
 |----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
-|  . DEFTERI | Hayır | Evet | Evet | Evet | Evet | Hayır | Hayır | Hayır | Hayır | Hayır |
-| . Intunewin | Hayır | Evet | Evet | Evet | Evet | 19H2 + | Hayır | Hayır | Hayır | Hayır |
-| Office C2R 'NDA | Hayır | Evet | Evet | Evet | Evet | RS4 + | Hayır | Hayır | Hayır | Hayır |
-| LOB: APPX/MALTı | Evet | Evet | Evet | Evet | Evet | Evet | Evet | Evet | Evet | Evet |
-| MSFB çevrimdışı | Evet | Evet | Evet | Evet | Evet | Evet | Evet | Evet | Evet | Evet |
-| MSFB çevrimiçi | Evet | Evet | Evet | Evet | Evet | Evet | RS4 + | Hayır | Evet | Evet |
-| Web Apps | Evet | Evet | Evet | Evet | Evet | Evet | Evet<sup>2 | Evet<sup>2 | Evet | Evet<sup>2 |
-| Mağaza bağlantısı | Evet | Evet | Evet | Evet | Evet | Evet | Evet | Evet | Evet | Evet |
-| Microsoft Edge | Hayır | Evet | Evet | Evet | Evet | 19H2 +<sup>3 | Hayır | Hayır | Hayır | Hayır |
+|  . DEFTERI | Hayır | Yes | Yes | Yes | Yes | Hayır | Hayır | Hayır | Hayır | Hayır |
+| . Intunewin | Hayır | Yes | Yes | Yes | Yes | 19H2 + | Hayır | Hayır | Hayır | Hayır |
+| Office C2R 'NDA | Hayır | Yes | Yes | Yes | Yes | RS4 + | Hayır | Hayır | Hayır | Hayır |
+| LOB: APPX/MALTı | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| MSFB çevrimdışı | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| MSFB çevrimiçi | Yes | Yes | Yes | Yes | Yes | Yes | RS4 + | Hayır | Yes | Yes |
+| Web Apps | Yes | Yes | Yes | Yes | Yes | Yes | Evet<sup>2 | Evet<sup>2 | Yes | Evet<sup>2 |
+| Mağaza bağlantısı | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Microsoft Edge | Hayır | Yes | Yes | Yes | Yes | 19H2 +<sup>3 | Hayır | Hayır | Hayır | Hayır |
 
 <sup>1</sup> uygulama yönetiminin kilidini açmak Için, Hololens cihazınızı [holographic for Business](../fundamentals/windows-holographic-for-business.md)'a yükseltin.<br />
 yalnızca Şirket Portalı <sup>2</sup> ' den başlatın.<br />
@@ -67,16 +67,16 @@ yalnızca Şirket Portalı <sup>2</sup> ' den başlatın.<br />
 
 Windows 10 LOB uygulamalarını imzalayabilir ve Intune yönetim konsoluna yükleyebilirsiniz. Bunlar, Evrensel Windows Platformu (UWP) uygulamaları ve Windows uygulama paketleri (AppX) gibi modern uygulamaların yanı sıra basit Microsoft yükleyicisi paket dosyaları (MSI) gibi Win 32 uygulamaları da içerebilir. Yöneticinin LOB uygulamalarının güncelleştirmelerini el ile yüklemesi ve dağıtması gerekir. Bu güncelleştirmeler, uygulamayı yüklemiş olan Kullanıcı cihazlarına otomatik olarak yüklenir. Kullanıcı müdahalesi gerekli değildir ve kullanıcının güncelleştirmeler üzerinde denetimi yoktur. 
 
-## <a name="microsoft-store-for-business-apps"></a>İş İçin Microsoft Mağazası uygulamaları
+## <a name="microsoft-store-for-business-apps"></a>İş uygulamaları için Microsoft Mağazası
 
-Iş uygulamaları için Microsoft Store, Microsoft Store for Business yönetici portalından satın alınan modern uygulamalardır. Daha sonra yönetim için Microsoft Intune için eşitlenir. Uygulamalar çevrimiçi lisanslanmış ya da çevrimdışı lisanslanabilir. Microsoft Store, yönetici tarafından hiçbir ek eylem gerekmeden güncelleştirmeleri doğrudan yönetir. Ayrıca, özel bir Tekdüzen Kaynak tanımlayıcısı (URI) kullanarak belirli uygulamalara yönelik güncelleştirmeleri engelleyebilirsiniz. Daha fazla bilgi için bkz. [Kurumsal uygulama yönetimi - Uygulamaların otomatik güncelleştirmeleri almasını engelleme](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Kullanıcı aynı zamanda cihazdaki tüm Iş uygulamaları için Microsoft Store güncelleştirmelerini devre dışı bırakabilir. 
+Iş uygulamaları için Microsoft Store, Microsoft Store for Business yönetici portalından satın alınan modern uygulamalardır. Daha sonra yönetim için Microsoft Intune için eşitlenir. Uygulamalar çevrimiçi lisanslanabileceği gibi çevrimdışı da lisanslanabilir. Microsoft Store, yönetici tarafından hiçbir ek eylem gerekmeden güncelleştirmeleri doğrudan yönetir. Ayrıca, özel bir Tekdüzen Kaynak tanımlayıcısı (URI) kullanarak belirli uygulamalara yönelik güncelleştirmeleri engelleyebilirsiniz. Daha fazla bilgi için bkz. [Kurumsal uygulama yönetimi - Uygulamaların otomatik güncelleştirmeleri almasını engelleme](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Kullanıcı aynı zamanda cihazdaki tüm Iş uygulamaları için Microsoft Store güncelleştirmelerini devre dışı bırakabilir. 
 
 ### <a name="categorize-microsoft-store-for-business-apps"></a>Iş uygulamaları için Microsoft Store kategorilere ayırın 
 Iş uygulamalarına yönelik Microsoft Store kategorilere ayırmak için: 
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tüm uygulamalar** > **uygulamalar** ' ı seçin. 
-3. Iş için bir Microsoft Store seçin. Ardından > **Özellikler** ' i seçerek **uygulama bilgileri** > **kategorisini**seçin. 
+2. **Uygulamalar** > **tüm uygulamalar**' ı seçin. 
+3. Iş için bir Microsoft Store seçin. Ardından **Özellikler** > **uygulama bilgileri** > **kategorisi**' ni seçin. 
 4. Bir kategori seçin.
 
 ## <a name="install-apps-on-windows-10-devices"></a>Windows 10 cihazlarına uygulama yüklemesi
@@ -97,7 +97,7 @@ Uygulamalar yalnızca cihaz ve Intune uygulama türü tarafından desteklenerek 
 - Win32 uygulamaları
 - Iş uygulamaları için çevrimdışı lisanslı Microsoft Store
 - LOB uygulamaları (MSI, APPX ve MALTı)
-- Office 365 ProPlus
+- Enterprise için Microsoft 365 uygulamalar
 
 Cihaz bağlamına yüklemeyi seçtiğiniz Windows LOB uygulamaları (özellikle APPX ve MSIX) ve Microsoft Store Iş uygulamalarının (çevrimdışı uygulamalar) bir cihaz grubuna atanması gerekir. Bu uygulamalardan biri kullanıcı bağlamında dağıtıldığında yükleme başarısız olur. Yönetim konsolunda aşağıdaki durum ve hata görüntülenir:
   - Durum: Başarısız.
@@ -117,5 +117,5 @@ Daha fazla bilgi için bkz. [Microsoft Intune’da uygulama atamalarını dahil 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Microsoft Intune olan gruplara uygulama atama](apps-deploy.md)
+- [Microsoft Intune ile uygulamaları gruplara atama](apps-deploy.md)
 - [Uygulamaları izleme](apps-monitor.md)

@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 38d1b40ecdeee5bfd872297a5fd4f0229cb48dcf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 268ed874be65c9ade7f801b89528d1a23f176ee1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324866"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077810"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-disa-purebred"></a>İOS veya ıpados cihazını Şirket Portalı ve DıŞA purebred ile ayarlama  
 
@@ -36,10 +37,10 @@ Kayıt sırasında, bir türetilmiş kimlik bilgisini cihazınıza de yüklersin
 * Okul veya iş uygulamalarında oturum açma, Wi-Fi ve sanal özel ağlar (VPN)
 * Okul veya iş e-postalarını S/MIME sertifikaları kullanarak imzalama ve şifreleme  
 
-Bu makalede şunları yapmanız gerekir:  
+Bu makalede şunları yapacaksınız:  
 
    * Intune Şirket Portalı ile bir mobil iOS veya ıpados cihazı kaydedin.  
-   * Kuruluşunuzun türetilmiş kimlik bilgisi sağlayıcısından, [dışa purebred](https://cyber.mil/pki-pke/purebred/)'nin türetilmiş bir kimlik bilgisini alın.  
+   * Kuruluşunuzun türetilmiş kimlik bilgisi sağlayıcısından, DıŞA purebred: https:\//Cyber.mil/pki-PKE/purebred/türetilmiş bir kimlik bilgisi alın.  
 
 ## <a name="what-are-derived-credentials"></a>Türetilmiş kimlik bilgileri nelerdir?  
 Türetilmiş kimlik bilgileri, akıllı kart kimlik bilgilerinizle derlenen ve cihazınızda yüklü olan bir sertifikadır. Bu, iş kaynaklarına uzaktan erişim izni verir, ancak yetkisiz kullanıcıların hassas bilgilere erişmesini önler.  
@@ -61,13 +62,13 @@ Türetilmiş kimlik bilgileri, özel yayın (SP) 800-157 kapsamında türetilmi�
 
 Ayrıca, kurulum sırasında purebred Aracısı veya temsilcisiyle iletişim kurmanız gerekecektir.      
 
-## <a name="enroll-device"></a>Cihazı kaydetme  
+## <a name="enroll-device"></a>Cihaz kaydetme  
 1. Mobil cihazınızda iOS için Şirket Portalı App/ıpados ' i açın ve iş hesabınızla oturum açın.  
 
 2. Ekrandaki kodu yazın.  
 
     ![Ekran ileti ve kodu ile Şirket Portalı uygulamasının örnek görüntüsü.](./media/copy-code-intercede.png)  
-3. Akıllı kart etkin cihazınıza geçin ve https://microsoft.com/devicelogingidin. 
+3. Akıllı kart etkin cihazınıza geçin ve adresine gidin https://microsoft.com/devicelogin. 
 4. Daha önce yazdığınız kodu girin.  
 
     ![Şirket Portalı Web sitesinin örnek ekran görüntüsü "kodu gir" istemi.](./media/enter-code-intercede.png)   
@@ -86,12 +87,12 @@ Ayrıca, kurulum sırasında purebred Aracısı veya temsilcisiyle iletişim kur
 
     ![Rekkred uygulamasını açmak için Şirket Portalı isteminin örnek ekran görüntüsü.](./media/open-app-prompt-disa-purbred.png)  
 10. Uygulama çalışırken, purebred kayıt yapılandırma profilini yapılandırmak ve indirmek için kuruluşunuzun purebred aracısıyla birlikte çalışın.   
-11. Ayarlar uygulaması > **genel** > **profilleri & cihaz yönetimi** > **profil yüklemesi** ' ne gidin ve ardından **Install**' a dokunun.  
+11. Ayarlar uygulaması > **genel** > **profiller cihaz yönetimi** > **yüklemesi profili** & ' ne gidin ve **yükler**' e dokunun.  
 12. Cihaz geçiş kodunuzu girin.  
 13. Profili yükler. Yüklemeyi başlatmak için birden çok kez **yükleme** ' ye dokunmanız gerekebilir. 
 14. Purebred kayıt uygulamasına geri dönün. Devam etmek için purebred aracısının yönergelerini izleyin.  
  
-15. Yapılandırma profilini indirdikten sonra, ayarlar uygulaması > **genel** > **profilleri & cihaz yönetimi** > **profil yükle** ' ye gidin ve **Yükle**' ye dokunun.   
+15. Yapılandırma profilini indirdikten sonra, ayarlar uygulaması > **genel** > **profiller cihaz yönetimi** > **yükleme profili** & ' ne gidin ve **Yükle**' ye dokunun.   
 16.  Cihaz geçiş kodunuzu girin.
 17. Profili yükler. Yüklemeyi başlatmak için birden çok kez **yükleme** ' ye dokunmanız gerekebilir. 
 18. Yükleme tamamlandıktan sonra Şirket Portalı uygulamasına geri dönün.  
@@ -99,19 +100,19 @@ Ayrıca, kurulum sırasında purebred Aracısı veya temsilcisiyle iletişim kur
 
 20. **Sertifikaları Içeri aktar** ekranında, dışarı aktarılan türetilmiş kimlik bilgisini alıp içeri aktarırsınız.  
 
-    a. **Devam**’a dokunun.   
+    a. **Devam**' a dokunun.   
 
-    ![sertifikaları Içeri aktarma ekranını Şirket Portalı örnek ekran görüntüsü.](./media/import-certificate-disa-purebred.png)  
-    b. İCloud **sürücüsüne gidin** > **konumlara** gidip **diğer konumlar**' a dokunun.  
+    ![Sertifikaları Içeri aktarma Şirket Portalı ayarlama ekranının örnek ekran görüntüsü.](./media/import-certificate-disa-purebred.png)  
+    b. İCloud sürücü **gezinme** > **konumlarına** gidin ve **diğer konumlar**' a dokunun.  
 
-    iCloud sürücüsünün örnek ekran görüntüsünü ![, menü daha fazla konum seçeneğine gözatıp.](./media/icloud-drive-more-locations.png)  
+    ![İCloud sürücüsünün örnek ekran görüntüsü, daha fazla konum seçeneğine gözatıp menü vurgulaması.](./media/icloud-drive-more-locations.png)  
     c. **Purebred anahtar zincirini**etkinleştirmek için anahtara dokunun.  
 
     ![İCloud sürücüsünün örnek ekran görüntüsü, purebred anahtar zinciri anahtarının etkin olduğunu vurgulama görünümü.](./media/icloud-drive-enable-purebred-keychain.png)   
 
     d. **Purebred kimlik bilgisi paketi**' ne dokunun.  
 
-    seçilebilir purebred kimlik bilgisi paket seçeneği içeren bir iOS ekranının örnek ekran görüntüsü ![.](./media/purebred-credential-package.png)  
+    ![Seçilebilir purebred kimlik bilgisi paketi seçeneği içeren bir iOS ekranının örnek ekran görüntüsü.](./media/purebred-credential-package.png)  
     f. Sertifika listesi görüntülenir. Bir tane seçin ve ardından **anahtarı Içeri aktar**' a dokunun.  
 
     ![Seçilebilir sertifikaların listesinin örnek ekran görüntüsü, önceden seçilmiş bir.](./media/import-purebred-keychain.png) 

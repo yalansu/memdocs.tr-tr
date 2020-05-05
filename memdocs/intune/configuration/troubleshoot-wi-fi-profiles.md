@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48ca59c9eea6ba7dd489f5c958ef6976095f27c9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 40eaf6be1b5f6cdb0222fc5bd79e8e5a5b72a947
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331954"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078218"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Microsoft Intune 'de Wi-Fi cihaz yapılandırma profillerinin sorunlarını giderme
 
@@ -46,12 +46,12 @@ Bu senaryo bir Nokia 6,1 cihazı kullanır. Wi-Fi profili cihaza yüklenmeden ö
 1. Son kullanıcılar, güvenilen kök sertifika profilini yüklemek için bir bildirim alır:
 
     > [!div class="mx-imgBorder"]
-    > Güvenilen kök sertifika profili yüklemek için Android 'de ![örnek Şirket Portalı uygulama bildirimi](./media/troubleshoot-wi-fi-profiles/android-end-user-company-portal-trusted-root.png)
+    > ![Güvenilen kök sertifika profili yüklemek için Android 'de örnek Şirket Portalı uygulama bildirimi](./media/troubleshoot-wi-fi-profiles/android-end-user-company-portal-trusted-root.png)
 
 2. Sonraki bildirim, SCEP sertifika profilini yüklemek için istemde bulunur:
 
     > [!div class="mx-imgBorder"]
-    > SCEP sertifika profili yüklemek için Android 'de ![örnek Şirket Portalı uygulama bildirimi](./media/troubleshoot-wi-fi-profiles/android-end-user-company-portal-scep-certificate.png)
+    > ![SCEP sertifika profili yüklemek için Android 'de örnek Şirket Portalı uygulama bildirimi](./media/troubleshoot-wi-fi-profiles/android-end-user-company-portal-scep-certificate.png)
 
     > [!TIP]
     > Cihaz Yöneticisi tarafından yönetilen bir Android cihaz kullanırken, birden fazla sertifika listelenmiş olabilir. Bir sertifika profili iptal edildiğinde veya kaldırıldığında, sertifika cihazda kalır. Bu senaryoda, en yeni sertifikayı seçin. Genellikle listede gösterilen son sertifikadır.
@@ -61,12 +61,12 @@ Bu senaryo bir Nokia 6,1 cihazı kullanır. Wi-Fi profili cihaza yüklenmeden ö
 3. Ardından, kullanıcılar Wi-Fi profilini yüklemek için bir bildirim alır:
 
     > [!div class="mx-imgBorder"]
-    > SCEP sertifika profili yüklemek için Android 'de ![örnek Şirket Portalı uygulama bildirimi](./media/troubleshoot-wi-fi-profiles/android-end-user-install-wifi-profile.png)
+    > ![SCEP sertifika profili yüklemek için Android 'de örnek Şirket Portalı uygulama bildirimi](./media/troubleshoot-wi-fi-profiles/android-end-user-install-wifi-profile.png)
 
 4. Tamamlandığında, Wi-Fi bağlantısı kayıtlı ağ olarak gösterilir:
 
     > [!div class="mx-imgBorder"]
-    > ![Wi-Fi bağlantısı, kayıtlı ağ olarak gösterilir](./media/troubleshoot-wi-fi-profiles/android-end-user-saved-networks.png)
+    > ![Wi-Fi bağlantısı kayıtlı ağ olarak gösterilir](./media/troubleshoot-wi-fi-profiles/android-end-user-saved-networks.png)
 
 ### <a name="review-company-portal-app-logs"></a>Şirket Portalı uygulama günlüklerini gözden geçirme
 
@@ -75,7 +75,7 @@ Android 'de **Omadmlog. log** dosyası, cihaza yüklendiğinde Wi-Fi profilinin 
 Aşağıdaki örnekte, günlük okumak için [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) 'i kullanın ve "wifimgr" ifadesini aratın:
 
 > [!div class="mx-imgBorder"]
-> ![Wi-Fi bağlantısı, kayıtlı ağ olarak gösterilir](./media/troubleshoot-wi-fi-profiles/android-cmtrace-filter-wifimgr.png)
+> ![Wi-Fi bağlantısı kayıtlı ağ olarak gösterilir](./media/troubleshoot-wi-fi-profiles/android-cmtrace-filter-wifimgr.png)
 
 Aşağıdaki günlük, arama sonuçlarınızı gösterir ve başarıyla uygulanan Wi-Fi profilini gösterir:
 
@@ -105,25 +105,25 @@ Aşağıdaki günlük, arama sonuçlarınızı gösterir ve başarıyla uygulana
 Wi-Fi profili cihaza yüklendikten sonra **Yönetim profilinde**gösterilir:
 
 > [!div class="mx-imgBorder"]
-> Intune 'da iOS/ıpados cihazında yönetim profilini ![](./media/troubleshoot-wi-fi-profiles/ios-management-profile.png)
+> ![Intune 'da iOS/ıpados cihazında Yönetim profili](./media/troubleshoot-wi-fi-profiles/ios-management-profile.png)
 
 > [!div class="mx-imgBorder"]
-> ![Wi-Fi bağlantısı, Intune 'da iOS/ıpados cihazında Wi-Fi ağı olarak gösterilir](./media/troubleshoot-wi-fi-profiles/ios-wifi-connection-in-management-profile.png)
+> ![Wi-Fi bağlantısı iOS/ıpados cihazında Intune 'da Wi-Fi ağı olarak gösteriliyor](./media/troubleshoot-wi-fi-profiles/ios-wifi-connection-in-management-profile.png)
 
 ### <a name="review-the-iosipados-console-and-device-logs"></a>İOS/ıpados konsolunu ve cihaz günlüklerini gözden geçirin
 
 İOS/ıpados cihazlarında Şirket Portalı Uygulama günlüğü, Wi-Fi profilleriyle ilgili bilgileri içermez. Wi-Fi profillerinizin yükleme ayrıntılarını görmek için konsol/cihaz günlüklerini kullanın:
 
-1. İOS/ıpados cihazını Mac 'e bağlayın. **Uygulamalar** > **yardımcı programlar**' a gidin ve konsol uygulamasını açın.
+1. İOS/ıpados cihazını Mac 'e bağlayın. **Uygulamalar** > **yardımcı programları**' na gidin ve konsol uygulamasını açın.
 2. **Eylem**altında, **bilgi iletilerini dahil et** ve **hata ayıklama iletilerini içer**' i seçin:
 
     > [!div class="mx-imgBorder"]
-    > ![bilgi Iletilerini dahil edin ve iOS/ıpados konsol uygulamasına hata ayıklama Iletileri ekleyin](./media/troubleshoot-wi-fi-profiles/ios-console-app-include-info-messages-debug-messages.png)
+    > ![İOS/ıpados konsol uygulamasına bilgi Iletileri ekleme ve hata ayıklama Iletilerini ekleme](./media/troubleshoot-wi-fi-profiles/ios-console-app-include-info-messages-debug-messages.png)
 
 3. Senaryoyu yeniden oluşturun ve günlükleri bir metin dosyasına kaydedin:
 
-    1. Geçerli ekrandaki tüm iletileri seçin: **düzenle** > **Tümünü Seç**' i seçin.
-    2. İletileri kopyalayın: **düzenle** > **Kopyala**.
+    1. Geçerli ekrandaki tüm iletileri seçin: **Düzenle** > **Tümünü Seç**.
+    2. İletileri kopyalayın: kopyayı **Düzenle** > **Copy**.
     3. Günlük verilerini bir metin düzenleyicisine yapıştırın ve dosyayı kaydedin.
 
 4. Ayrıntılı bilgileri görmek için kaydedilen günlük dosyasında arama yapın. Profil başarıyla yüklendiğinde, çıktılarınız aşağıdaki günlüğe benzer şekilde görünür:
@@ -136,20 +136,20 @@ Wi-Fi profili cihaza yüklendikten sonra **Yönetim profilinde**gösterilir:
 
 ## <a name="windows"></a>Windows
 
-Wi-Fi profili cihaza yüklendikten sonra, **iş veya okula erişim** > **Ayarlar** > **hesaplar** ' a gidin. Hesap > **bilgilerinizi**seçin:
+Wi-Fi profili cihaza yüklendikten sonra **Ayarlar** > **hesaplar** > **erişim iş veya okul**bölümüne gidin. Hesap > **bilgilerinizi**seçin:
 
 > [!div class="mx-imgBorder"]
-> ![işe veya okula erişin ve Windows cihazında bilgi ' yi seçin](./media/troubleshoot-wi-fi-profiles/windows-access-work-school-info.png)
+> ![İş veya okula erişin ve Windows cihazında bilgi ' yi seçin](./media/troubleshoot-wi-fi-profiles/windows-access-work-school-info.png)
 
 **Microsoft tarafından yönetilen alanlarda** **WiFi** gösterilmektedir:
 
 > [!div class="mx-imgBorder"]
-> Microsoft tarafından yönetilen alanlarda ![bkz. Windows 'da WiFi 'nin listelenmesi](./media/troubleshoot-wi-fi-profiles/windows-wifi-areas-managed-by-microsoft.png)
+> ![Microsoft tarafından yönetilen alanlarda bkz. Windows 'ta WiFi listesi](./media/troubleshoot-wi-fi-profiles/windows-wifi-areas-managed-by-microsoft.png)
 
-Wi-Fi bağlantısını görmek için, **ayarlar** > **ağ & Internet**  > **Wi-Fi**' a gidin:
+Wi-Fi bağlantısını görmek için, **Ayarlar** > **ağ & Internet**  > **Wi-Fi**' a gidin:
 
 > [!div class="mx-imgBorder"]
-> Windows üzerinde ![, ayarlar bölümünde bilinen ağ olarak Wi-Fi bağlantısına bakın](./media/troubleshoot-wi-fi-profiles/windows-wifi-connection-known-networks.png)
+> ![Windows 'da, ayarlar bölümünde bilinen ağ olarak Wi-Fi bağlantısına bakın](./media/troubleshoot-wi-fi-profiles/windows-wifi-connection-known-networks.png)
 
 ### <a name="review-event-viewer-logs"></a>Olay Görüntüleyici günlüklerini gözden geçirme
 
@@ -157,7 +157,7 @@ Windows cihazlarında, Wi-Fi profilleriyle ilgili ayrıntılar Olay Görüntüle
 
 1. **Olay Görüntüleyicisi** uygulamasını açın.
 2. **Görünüm** menüsünde **analitik ve hata ayıklama günlüklerini göster**' i seçin.
-3. **Uygulama ve hizmet günlüklerini** genişletme > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **admin**
+3. **Uygulama ve hizmet günlükleri** > ' ni genişletin**Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **admin**
 
 Çıktılarınız aşağıdaki günlüklere benzer:
 
@@ -175,13 +175,13 @@ Description:
 WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The operation completed successfully.).
 ```
 
-## <a name="common-issues"></a>Yaygın sorunlar
+## <a name="common-issues"></a>Genel sorunlar
 
 ### <a name="issue-1-the-wi-fi-profile-isnt-deployed-to-the-device"></a>Sorun 1: Wi-Fi profili cihaza dağıtılmadı
 
 - Wi-Fi profilinin doğru gruba atandığını onaylayın:
 
-    1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **yapılandırma profilleri**' ni seçin.
+    1. [Microsoft Uç Nokta Yöneticisi Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **cihazlar** > **yapılandırma profilleri**' ni seçin.
     2. Profilinizi > **atamaları**' nı seçin. Seçili grupların doğru olduğunu onaylayın.
     3. Uç nokta yöneticisinde, **sorun giderme + Destek**' i seçin. **Atamalar** bilgilerini gözden geçirin.
 
@@ -191,14 +191,14 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 - Windows 10 ve daha yeni cihazlarda, MDM tanılama bilgileri günlüğünü gözden geçirin:
 
-  1. **İş veya okula erişim** > **Ayarlar** > **hesaplar** ' a gidin.
+  1. **Ayarlar** > **Accounts**hesaplar > **iş veya okula erişim**bölümüne gidin.
   2. İş veya okul hesabınızın **bilgilerini**> seçin.
   3. **Ayarlar** sayfasının en altında **rapor oluştur**' u seçin.
-  4. Günlük dosyalarının yolunu gösteren bir pencere açılır. **Dışarı aktar**' ı seçin.
-  5. `\Users\Public\Documents\MDMDiagnostics` yoluna gidin ve raporu görüntüleyin:
+  4. Günlük dosyalarının yolunu gösteren bir pencere açılır. **Export** (Dışarı aktar) öğesini seçin.
+  5. `\Users\Public\Documents\MDMDiagnostics` Yola gidin ve raporu görüntüleyin:
 
       > [!div class="mx-imgBorder"]
-      > Windows 10 cihazlarında WiFi profili yapılandırmasını gösteren örnek MDM tanılama bilgilerini ![](./media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png)
+      > ![Windows 10 cihazlarında WiFi profili yapılandırmasını gösteren örnek MDM tanılama bilgileri](./media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png)
 
   > [!TIP]
   > Daha fazla bilgi için bkz. [Windows 10 ' da MDM başarısızlıklarını tanılama](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).
@@ -228,10 +228,10 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
     Aşağıdaki örnek, **herhangi bir amaç** EKU 'su IÇIN girilen SCEP profilini gösterir. Ancak, sertifika yetkilisinde (CA) sertifika şablonuna girilmemiş. Sorunu giderecek **bir amaç** seçeneğini sertifika şablonuna ekleyin. Ya da SCEP profilinden **herhangi bir amaç** seçeneğini kaldırın.
 
     > [!div class="mx-imgBorder"]
-    > Android 'de ![, sertifika yetkilisinde sertifika şablonuna herhangi bir amaç ekleyin](./media/troubleshoot-wi-fi-profiles/android-add-any-purpose-eku.png)
+    > ![Android 'de, sertifika yetkilisinde sertifika şablonuna herhangi bir amaç ekleyin](./media/troubleshoot-wi-fi-profiles/android-add-any-purpose-eku.png)
 
     > [!div class="mx-imgBorder"]
-    > Android 'de ![Intune 'daki SCEP sertifika yapılandırma profiline herhangi bir amaç ekleyin](./media/troubleshoot-wi-fi-profiles/android-any-purpose-scep-device-config-profile.png)
+    > ![Android 'de, Intune 'da SCEP sertifika yapılandırma profiline herhangi bir amaç ekleyin](./media/troubleshoot-wi-fi-profiles/android-any-purpose-scep-device-config-profile.png)
 
   - Tüm sertifika zincirindeki tüm gerekli sertifikaların Android cihazında olduğunu onaylayın. Aksi halde, Wi-Fi profili cihaza yüklenemez. Daha fazla bilgi için bkz. [ara sertifika yetkilisi eksik](https://developer.android.com/training/articles/security-ssl#MissingCa) (Android 'in Web sitesini açar).
   - Wi-Fi profilinde kullanılan sertifika ve profil başarıyla uygulanmışsa gibi bilgileri aramak için Omadmlog anahtar sözcükleriyle filtreleyin.
@@ -239,12 +239,12 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
     Örneğin, günlükleri okumak için [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) ' i kullanın. "Wifimgr" filtrelemek için arama dizesini kullanın:
 
     > [!div class="mx-imgBorder"]
-    > Android cihazlarda WiFiMgr yapılandırma profillerini aramak için CMTrace 'e filtre ![](./media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png)
+    > ![Android cihazlarda WiFiMgr yapılandırma profillerini aramak için CMTrace 'i filtrele](./media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png)
 
     Çıktı aşağıdaki günlüğe benzer şekilde görünür:
 
     > [!div class="mx-imgBorder"]
-    > ![, WiFi Intune yapılandırma profilinin cihazlara başarıyla uygulandığını gösteren örnek CMTrace günlük çıkışı](./media/troubleshoot-wi-fi-profiles/cmtrace-sample-log-output.png)
+    > ![WiFi Intune yapılandırma profilinin cihazlara başarıyla uygulandığını gösteren örnek CMTrace günlüğü çıkışı](./media/troubleshoot-wi-fi-profiles/cmtrace-sample-log-output.png)
 
     Günlükte bir hata görürseniz hatanın zaman damgasını kopyalayın ve günlüğün filtresini kaldırın. Ardından, hatadan önce ne olduğunu görmek için zaman damgasıyla birlikte "bul" seçeneğini kullanın.
 

@@ -1,5 +1,5 @@
 ---
-title: Android cihazınızın kaydını sildiğinizde ne olur? | Microsoft Docs
+title: Android cihazınızın kaydını sildiğinizde ne olur? | Microsoft Belgeleri
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,24 +19,24 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 368972acc1b3380b1adf9b21939adbca0dc1434c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a8bbabee06e2aa94b6dc7c4d273c76f513005ddf
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327718"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077028"
 ---
 # <a name="what-happens-if-you-unenroll-your-android-device-from-intune"></a>Android cihazınızın Intune kaydını sildiğinizde ne olur?
 
 Android cihazınızın Intune kaydını sildiğinizde:
 
-- Şirketinizin destek birimi, artık mobil cihazınızı yönetmiyor.
+- Şirketinizin destek aygıtı artık cihazı yönetmez.
 
 - Şirket verilerine ve kaynaklarına erişimi kaybedersiniz.
 
-- Cihazınız artık Şirket Portalı’nda gösterilmez.
+- Cihazınız artık Şirket Portalı görünmüyor.
 
-- Artık Şirket Portalı’ndan uygulama yükleyemezsiniz.
+- Artık Şirket Portalı uygulama yükleyemezsiniz.
 
 - Cihazı eklediğinizde değiştirilen tüm ayarlar, mesela kamerayı devre dışı bırakmak veya belirli bir parola uzunluğu gerekliliği gibi ayarlar geçerliliğini kaybeder.
 

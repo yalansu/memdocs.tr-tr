@@ -17,18 +17,18 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d5a9c1fab01393f45c877165230ae68118b1113
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cdef53672c46fe4e49a5d21a22e585654c504f03
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331214"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075957"
 ---
 # <a name="typical-migration-cycle"></a>Tipik geçiş döngüsü
 
-Bir kuruluşun Intune geçişini BT departmanı içindeki kullanıcılarının bir alt kümesini hedefleyerek küçük bir pilot grup ile başlatması yaygındır. Ayrıca, kuruluşunuzun geçiş zaman çerçevesini belirlemede yardımcı olması için kullanıcıların değişiklik isteyip istemedikleri, kullanıcı sayısı, karmaşıklık, gereksinimler, konum ve iş riski gibi faktörleri ele alması gerekebilir.
+Bir kuruluşun, BT departmanında kullanıcılarının bir alt kümesini hedefleyerek küçük bir pilot ile Intune geçişini başlatması yaygındır. Ayrıca, kuruluşunuz, geçiş zaman çerçevesini belirlemede yardımcı olmak üzere değişiklik, Kullanıcı sayısı, karmaşıklık, gereksinimler, konum ve iş riski gibi faktörlerin bu tür faktörleri tartışmasına gerek duyar.
 
-Hedef gruplarınızın zaman çizelgesinin nasıl oluşturulacağına ilişkin bir örnek aşağıda verilmiştir:
+Hedef gruplarınızın nasıl zamanlanabileceği hakkında bir örnek aşağıda verilmiştir:
 
   | **Geçiş hedeflenen gruplar** | **Dönem 1** | **Dönem 2** | **Dönem 3** | **Dönem 4** | **...**
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -61,6 +61,6 @@ Her aşamadan sonra kaç kullanıcının cihazlarını kaydettiğini izleyerek �
 - Koşullu erişim zorlama etkisini tahmin edin.
 
 
-## <a name="post-migration"></a>Geçiş Sonrası
+## <a name="post-migration"></a>Geçiş sonrası
 
-Intune'a geçtikten sonra önceki MDM sağlayıcısını devre dışı bırakın ve hizmet aboneliğinizi bitirin. Ayrıca, MDM sağlayıcısının yönergelerini izleyerek gereksiz altyapı gereksinimlerinin tümünü kaldırın.
+Intune'a geçtikten sonra önceki MDM sağlayıcısını devre dışı bırakın ve hizmet aboneliğinizi bitirin. Ayrıca, MDM sağlayıcısının yönergelerini izleyerek gereksiz altyapı gereksinimlerini kaldırın.

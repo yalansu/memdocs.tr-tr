@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af44b09f5e539306a24ae0e0294b3ad674f7cb74
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8a2cee7e57f303f798f3484e52462a22e981ed59
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325162"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079136"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Intune Exchange Connector sorunlarını giderme
 
@@ -45,9 +45,9 @@ Intune 'da bir Exchange Connector sorununu gidermeye başlamadan önce, bir Soli
 
 ### <a name="use-powershell-to-get-more-data-on-exchange-connector-issues"></a>Exchange Connector sorunları hakkında daha fazla veri almak için PowerShell 'i kullanma
 
-- Bir posta kutusunun tüm mobil cihazlarının listesini almak için `Get-ActiveSyncDeviceStatistics -mailbox mbx` kullanın
-- Posta kutusu için SMTP adreslerinin bir listesini almak için `Get-Mailbox -Identity user | select emailaddresses | fl` kullanın
-- Bir cihazın erişim durumu hakkında ayrıntılı bilgi almak için `Get-CASMailbox <upn> | fl` kullanın
+- Bir posta kutusunun tüm mobil cihazlarının listesini almak için, şunu kullanın`Get-ActiveSyncDeviceStatistics -mailbox mbx`
+- Posta kutusu için SMTP adreslerinin bir listesini almak için kullanın`Get-Mailbox -Identity user | select emailaddresses | fl`
+- Bir cihazın erişim durumu hakkında ayrıntılı bilgi almak için şunu kullanın`Get-CASMailbox <upn> | fl`
 
 ## <a name="review-the-connector-configuration"></a>Bağlayıcı yapılandırmasını gözden geçirme
 

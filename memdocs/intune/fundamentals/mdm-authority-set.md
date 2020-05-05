@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8545f7d1ef48cc426f4b8e48aa1832ce3328bf0
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: eee979ad22a501f8545b93c85790d37ca9648cf7
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326760"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077912"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Mobil cihaz yönetimi yetkilisini ayarlayın
 
@@ -47,7 +47,7 @@ MDM yetkilisini henüz ayarlamadıysanız, aşağıdaki adımları izleyin.
 1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nde, **mobil cihaz yönetim yetkilisi** ayarını açmak için turuncu başlık ' ı seçin. Turuncu başlık, ancak henüz MDM yetkilisini ayarlamadıysanız görüntülenir.
 2. **Mobil Cihaz Yönetimi Yetkilisi** altında, aşağıdakilerden birini MDM yetkiliniz olarak belirtin:
    - **Intune MDM Yetkilisi**
-   - **Yok.**
+   - **Yok**
 
    ![Intune tarafından ayarlı mobil cihaz yönetim yetkilisi ekranının ekran görüntüsü](./media/mdm-authority-set/set-mdm-auth.png)
 
@@ -73,7 +73,7 @@ Yeni MDM yetkilisine geçtikten sonra cihazın iade edilmesi ve hizmetle eşitle
 
 ## <a name="change-mdm-authority-to-office-365"></a>MDM yetkilisini Office 365 olarak değiştirme
 
-Office 365 MDM 'yi etkinleştirmek için (veya mevcut Intune hizmetinize ek olarak MDM birlikte kullanımını etkinleştirmek için), [https://protection.office.com](https://protection.office.com)gidin, **veri kaybı engellemesini** > **cihaz güvenlik Ilkeleri** > **yönetilen cihazların listesini görüntüle** > **izin ver**' i seçin.
+[https://protection.office.com](https://protection.office.com)Office 365 MDM 'yi etkinleştirmek için (veya mevcut Intune hizmetinize ek olarak MDM birlikte kullanımını etkinleştirmek için), adresine gidin, **veri kaybını önleme** > **cihaz güvenlik ilkeleri** > **Görünüm listesi, yönetilen cihazların** > görünüm listesini**kullanmaya**başlayın.
 
 Daha fazla bilgi için bkz. [Office 365’te Mobil Cihaz Yönetimi (MDM) ayarlama](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd).
 
@@ -89,7 +89,7 @@ MDM yetkilisi tekrar Bilinmeyen olarak değiştirilemez. MDM yetkilisi, hizmet t
 
 ## <a name="what-to-expect-after-changing-the-mdm-authority"></a>MDM yetkilisini değiştirdikten sonra ne olur
 
-- Intune hizmeti, bir kiracının MDM yetkilisinin değiştiğini algıladığında kayıtlı tüm cihazlara hizmete iade etmeleri ve hizmetle eşitlenmeleri için bir bildirim iletisi gönderir (bu bildirim, düzenli olarak zamanlanmış iadenin dışındadır). Bu nedenle, kiracının MDM yetkilisi tek başına Intune 'dan değiştirildikten sonra, açık ve çevrimiçi olan cihazlar hizmete bağlanır, yeni MDM yetkilisini alır ve yeni MDM yetkilisi tarafından yönetilir. Bu cihazların yönetiminde ve korunmasında bir kesinti olmaz.
+- Intune hizmeti bir kiracının MDM yetkilisinin değiştiğini algıladığında, hizmetine giriş yapmak ve hizmeti eşitlenmek üzere tüm kayıtlı cihazlara bir bildirim iletisi gönderir (Bu bildirim düzenli olarak zamanlanan iadinin dışında). Bu nedenle, kiracının MDM yetkilisi tek başına Intune 'dan değiştirildikten sonra, açık ve çevrimiçi olan cihazlar hizmete bağlanır, yeni MDM yetkilisini alır ve yeni MDM yetkilisi tarafından yönetilir. Bu cihazların yönetiminde ve korunmasında bir kesinti olmaz.
 - MDM yetkilisindeki değişiklik sırasında (veya hemen sonrasında) açık ve çevrimiçi olan cihazlarda bile, cihazlar yeni MDM yetkilisi altında hizmete kaydolmadan önce sekiz saate kadar (bir sonraki zamanlanmış düzenli iadenin zamanına bağlı olarak) bir gecikme olur.    
 
   > [!IMPORTANT]    

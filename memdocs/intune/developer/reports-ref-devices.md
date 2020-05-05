@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae1f0117f6dbf186b3a4bdddb393d053c33c914a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 31eef700f7aa38b70c5e9a2fa75fd3faee4c9713
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331698"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078065"
 ---
 # <a name="reference-for-devices-entities"></a>Cihaz varlıkları için başvuru
 
@@ -50,7 +50,7 @@ ms.locfileid: "79331698"
 
 ### <a name="example"></a>Örnek
 
-| deviceTypeID  | Ad | Açıklama |
+| deviceTypeID  | Adı | Açıklama |
 |---------|------------|--------|
 | 0 |Masaüstü |Windows Masaüstü cihaz |
 | 1 |WindowsRT |WindowsRT cihaz |
@@ -85,7 +85,7 @@ KayıtSayısı **varlığı,** bir cihaz kaydının etkinliğini gösterir.
 | Kayıt%0 kategori anahtarı  | Kayıt hatası kategorisinin anahtarı (kayıt başarısız olduysa).        |
 | Kayıtefailurereasonkey    | Kayıt hatası nedeninin anahtarı (kayıt başarısız olursa).          |
 | osVersion                     | Cihazın işletim sistemi sürümü.                               |
-| {1&gt;count&lt;1}                         | Yukarıdaki sınıflandırmalarla eşleşen kayıt etkinliklerinin toplam sayısı.  |
+| count                         | Yukarıdaki sınıflandırmalarla eşleşen kayıt etkinliklerinin toplam sayısı.  |
 
 ## <a name="enrollmenteventstatuses"></a>kayıt \ Menteventdurumlar 
 KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
@@ -101,7 +101,7 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 |----------------------------|----------------------------------------|
 | Başarılı                    | Başarılı bir cihaz kaydı         |
 | Başarısız                     | Hatalı bir cihaz kaydı             |
-| Kullanılamıyor              | Kayıt durumu kullanılamıyor.  |
+| Kullanılamaz              | Kayıt durumu kullanılamıyor.  |
 
 ## <a name="enrollmentfailurecategories"></a>kayıtkonumunda Mentfailurecategories 
 **Kayıt%0 kategori** varlığı, cihaz kaydının neden başarısız olduğunu gösterir. 
@@ -115,10 +115,10 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 
 | kayıtkonumunda Mentfailurecategoryname   | Açıklama                                                                                                   |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Uygulanamaz                  | Kayıt hatası kategorisi geçerli değil.                                                            |
-| Kullanılamıyor                   | Kayıt hatası kategorisi kullanılamıyor.                                                             |
+| Geçerli değil                  | Kayıt hatası kategorisi geçerli değil.                                                            |
+| Kullanılamaz                   | Kayıt hatası kategorisi kullanılamıyor.                                                             |
 | Bilinmiyor                         | Bilinmeyen hata.                                                                                                |
-| Kimlik Doğrulama                  | Kimlik doğrulama başarısız oldu.                                                                                        |
+| Kimlik doğrulaması                  | Kimlik doğrulaması gerçekleştirilemedi.                                                                                        |
 | Yetkilendirme                   | Çağrının kimliği doğrulandı, ancak kaydolma yetkisi yok.                                                         |
 | AccountValidation               | Kayıt için Hesap doğrulanamadı. (Hesap engellendi, kayıt etkin değil)                      |
 | Kullanıcı doğrulaması                  | Kullanıcı doğrulanamadı. (Kullanıcı yok, Lisans eksik)                                           |
@@ -142,8 +142,8 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 
 | Kayıtefailurereasonname      | Açıklama                                                                                                                                                                                            |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Uygulanamaz                   | Kayıt hatası nedeni geçerli değil.                                                                                                                                                       |
-| Kullanılamıyor                    | Kayıt hatası nedeni kullanılamıyor.                                                                                                                                                        |
+| Geçerli değil                   | Kayıt hatası nedeni geçerli değil.                                                                                                                                                       |
+| Kullanılamaz                    | Kayıt hatası nedeni kullanılamıyor.                                                                                                                                                        |
 | Bilinmiyor                          | Bilinmeyen hata.                                                                                                                                                                                         |
 | Usernotlisanslanmış                  | Kullanıcı Intune 'da bulunamadı veya geçerli bir lisansı yok.                                                                                                                                     |
 | Kullanıcı bilinmiyor                      | Kullanıcı Intune tarafından tanınmıyor.                                                                                                                                                                           |
@@ -170,7 +170,7 @@ Kayıtsahibi **türü** varlığı, bir cihazın kurumsal, kişisel veya bilinme
 | ownerTypeName |Cihazların sahip türünü temsil eder:  <br>Şirket-cihaz, kuruluşa aittir. <br>Kişisel - cihaz kişiye aittir (KCG).  <br>Bilinmiyor - bu cihazda bilgi yok. |Şirket kişisel bilinmiyor |
 
 > [!Note]  
-> Cihazlar için dinamik gruplar oluştururken AzureAD içindeki `ownerTypeName` için, `deviceOwnership` filtre değerini `Company`olarak ayarlamanız gerekir. Daha fazla bilgi için bkz. [Cihazlar Için kurallar](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> Cihazlar için `ownerTypeName` dinamik gruplar oluştururken azuread içinde, filtre değerini `deviceOwnership` olarak `Company`ayarlamanız gerekir. Daha fazla bilgi için bkz. [Cihazlar Için kurallar](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="managementstates"></a>managementStates
 
@@ -184,14 +184,14 @@ Kayıtsahibi **türü** varlığı, bir cihazın kurumsal, kişisel veya bilinme
 
 ### <a name="example"></a>Örnek
 
-| managementStateID  | Ad | Açıklama |
+| managementStateID  | Adı | Açıklama |
 |---------|------------|--------|
 | 0 |Yönetilen | Hiçbir bekleyen uzak eylem olmadan yönetilir. |
 | 1 |RetirePending | Cihaz için bekleyen bir devre dışı bırakma komutu vardır. |
 | 2 |RetireFailed | Devre dışı bırakma komutu cihazda başarısız oldu. |
 | 3 |WipePending | Cihaz için bekleyen bir silme komutu vardır. |
 | 4 |WipeFailed | Silme komutu cihazda başarısız oldu. |
-| 5 |Sağlıksız | Kötü durumda. |
+| 5 |Uygun Değil | Kötü durumda. |
 | 6 |DeletePending | Cihaz için bekleyen bir silme komutu vardır. |
 | 7 |RetireIssued | Cihaz için bir devre dışı bırakma komutu verildi. |
 | 8 |WipeIssued | Bir silme komutu verildi. |
@@ -211,7 +211,7 @@ Kayıtsahibi **türü** varlığı, bir cihazın kurumsal, kişisel veya bilinme
 
 ### <a name="example"></a>Örnek
 
-| ManagementAgentTypeID  | Ad | Açıklama |
+| ManagementAgentTypeID  | Adı | Açıklama |
 |---------|------------|--------|
 | 1 |EAS | Cihaz, Exchange Active Sync yoluyla yönetiliyor |
 | 2 |MDM | Cihaz bir MDM aracısı kullanılarak yönetiliyor |
@@ -221,7 +221,7 @@ Kayıtsahibi **türü** varlığı, bir cihazın kurumsal, kişisel veya bilinme
 | 8 |ConfigManagerClient | Cihaz, Configuration Manager Aracısı tarafından yönetiliyor |
 | 16 |Bilinmiyor | Bilinmeyen yönetim aracısı türü |
 
-## <a name="devices"></a>devices
+## <a name="devices"></a>cihazlar
 
 **Cihazlar** varlığı, yönetim altındaki tüm kayıtlı cihazları ve bunlara karşılık gelen özellikleri listeler.
 
@@ -245,10 +245,10 @@ Kayıtsahibi **türü** varlığı, bir cihazın kurumsal, kişisel veya bilinme
 | osVersion                  | Cihazın işletim sistemi sürümü.                                                                                                                                                |
 | Easdeviceıd                | Cihazın Exchange ActiveSync KIMLIĞI.                                                                                                                                                  |
 | serialNumber               | SerialNumber                                                                                                                                                                           |
-| UserID                     | Cihazla ilişkili kullanıcının Benzersiz Tanımlayıcısı.                                                                                                                           |
+| userId                     | Cihazla ilişkili kullanıcının Benzersiz Tanımlayıcısı.                                                                                                                           |
 | rowLastModifiedDateTimeUTC | Bu cihazın veri ambarında son değiştirilme tarihi ve saati (UTC).                                                                                                       |
 | üretici               | Cihazın üreticisi                                                                                                                                                             |
-| {1&gt;model&lt;1}                      | Cihazın modeli                                                                                                                                                                    |
+| model                      | Cihazın modeli                                                                                                                                                                    |
 | operatingSystem            | Cihazın işletim sistemi. Windows, iOS/ıpados, vb.                                                                                                                                   |
 | isDeleted                  | Bu cihazın silinip silinmediğini gösteren ikili dosya.                                                                                                                                 |
 | androidSecurityPatchLevel  | Android güvenlik düzeltme eki düzeyi                                                                                                                                                           |

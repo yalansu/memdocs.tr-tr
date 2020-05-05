@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 210ec5ea6acc2d0ce91a93c83991b630a6fdbb4d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
-ms.translationtype: MT
+ms.openlocfilehash: d5ac87b7539888ddceb6095b8a8c37f194c5a97a
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329682"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079833"
 ---
 # <a name="macos-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Intune'u kullanarak cihazları uyumlu veya uyumlu değil şeklinde işaretlemek için kullanabileceğiniz macOS ayarları
 
@@ -35,9 +35,9 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Uyumluluk ilkesi oluşturma](create-compliance-policy.md#create-the-policy). **Platform** olarak **macOS**’u seçin.
+[Bir uyumluluk Ilkesi oluşturun](create-compliance-policy.md#create-the-policy). **Platform** olarak **macOS**’u seçin.
 
-## <a name="device-health"></a>Cihaz Durumu
+## <a name="device-health"></a>Cihaz Sistem Durumu
 
 - **Sistem bütünlüğü koruması gerektir**:  
   - **Yapılandırılmadı** (*varsayılan*)-Bu ayar uyumluluk veya uyumsuzluk için değerlendirilmez.
@@ -45,7 +45,7 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
 
 ## <a name="device-properties"></a>Cihaz Özellikleri
 
-- **Gereken en düşük işletim sistemi**:  
+- **Gerekli en düşük işletim sistemi**:  
   Bir cihaz en düşük işletim sistemi sürümü gereksinimini karşılamadığında uyumsuz olarak bildirilir. Yükseltme hakkında bilgi içeren bir bağlantı gösterilir. Cihaz kullanıcısı cihazlarını yükseltmeyi tercih edebilir. Bundan sonra, kuruluş kaynaklarına erişebilir.
 
 - **İzin verilen en yüksek işletim sistemi sürümü**:  
@@ -82,13 +82,13 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
 - **Parola istenmeden önce geçmesi gereken, işlem yapılmayan dakika sayısı**:  
   Kullanıcı parolasını yeniden girmeden önce boşta geçen süreyi girin.
 
-- **Parola zaman aşımı (gün sayısı)** :  
+- **Parola kullanım süresi (gün)**:  
   Parolanın süresi dolup yeni bir parola oluşturulması gerekmeden önce geçmesi gereken gün sayısını seçin.
 
 - **Yeniden kullanılması önlenecek önceki parola sayısı**:  
   Daha önce kullanılan kaç parolanın kullanılamayacağını belirtir.
 > [!IMPORTANT]
-> Bir macOS cihazda parola gerekliliği değiştirildiğinde, kullanıcı parolasını değiştirene kadar bu değişiklik gerçekleşmez. Örneğin parola uzunluğu sekiz basamakla kısıtlıyken macOS cihazın altı basamaklı bir parolası varsa, kullanıcı cihazda şifresini güncelleştirene kadar cihaz uyumlu kalır.
+> Bir macOS cihazında parola gereksinimi değiştirildiğinde, Kullanıcı parolasını değiştirene kadar bu işlem geçerli değildir. Örneğin parola uzunluğu sekiz basamakla kısıtlıyken macOS cihazın altı basamaklı bir parolası varsa, kullanıcı cihazda şifresini güncelleştirene kadar cihaz uyumlu kalır.
 
 ### <a name="encryption"></a>Şifreleme
 

@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ee2d862f29866ecaaa758983f847d0a1a598e2f1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ee0cd575da83231723ea869d472da1be599ce477
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327598"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079629"
 ---
 # <a name="install-zimperium-zips-on-your-android-device"></a>Android cihazınıza Zimperium zIPS yükleme
 
@@ -52,7 +52,7 @@ Yüklemeyle ilgili bir sorun yaşarsanız bu konunun sonundaki sorun giderme ad�
 
    * Herhangi bir tehdit bulunmazsa, üç tehdit türü de yeşil görünür.
 
-11. Şirket Portalı’ndaki **Cihaz Ayrıntıları** ekranı, artık şirketinizin güvenlik gereksinimlerine uyduğunuzu gösterir.
+11. Şirket Portalı **cihaz ayrıntıları** ekranı, artık şirketinizin güvenlik gereksinimleriyle uyumlu olduğunuzu gösterir.
 
     ![Cihazınız artık ilkelerle uyumludur](./media/mtd-device-now-compliant-android.png)
 

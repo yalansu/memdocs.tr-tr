@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 6d588955a625c6cf1e7771560f298bd612b10aff
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6eaf0013531018e77a65386ca32dece0bee4ea08
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327658"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079697"
 ---
 # <a name="install-lookout-for-work"></a>Lookout for Work’ü yükleme
 
@@ -68,7 +68,7 @@ Yüklemeyle ilgili bir sorun yaşarsanız bu konunun sonundaki sorun giderme ad�
 
    ![Lookout for Work hiçbir güvenlik tehdidi bulamadı](./media/lookout-scan-no-threats-found-android.png)
 
-   Şirket Portalı’ndaki Cihaz Ayrıntıları ekranı, artık şirketinizin güvenlik gereksinimlerine uyduğunuzu gösterir.
+   Şirket Portalı cihaz ayrıntıları ekranı, artık şirketinizin güvenlik gereksinimleriyle uyumlu olduğunuzu gösterir.
 
     ![cihazınız artık ilkelerle uyumludur](./media/mtd-device-now-compliant-android.png)
 

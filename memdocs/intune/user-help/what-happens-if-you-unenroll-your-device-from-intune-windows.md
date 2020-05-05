@@ -1,5 +1,5 @@
 ---
-title: Windows cihazınızın kaydını sildiğinizde ne olur? | Microsoft Docs
+title: Windows cihazınızın kaydını sildiğinizde ne olur? | Microsoft Belgeleri
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 56a7b87f61c522eb7796d201be4b3100d57f8ca1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: bea6ab16baa923d4cc38dee421342636de9e1942
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327722"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076807"
 ---
 # <a name="what-happens-if-you-unenroll-your-windows-device-from-intune"></a>Windows cihazınızın Intune kaydını sildiğinizde ne olur?
 
@@ -33,7 +33,7 @@ Bu sayfanın sağ tarafında, **Bu makalede** bölümü altındaki bağlantılar
 
 ## <a name="windows-10-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
-- Cihazınız artık Şirket Portalı’nda görünmez ve Şirket Portalı’ndan uygulama yükleyemezsiniz.
+- Cihazınız artık Şirket Portalı görünmüyor ve artık Şirket Portalı uygulama yükleyemezsiniz.
 
 - Intune istemci yazılımını yüklediyseniz, bilgisayarınızdan kaldırılır.
 
@@ -48,9 +48,9 @@ Bu sayfanın sağ tarafında, **Bu makalede** bölümü altındaki bağlantılar
 
 Ayrıca, Windows 8.1 için:
 
-- Cihazınızda artık şirket uygulamalarını ve şirket verilerini kullanamazsınız.
+- Artık cihazınızda şirket uygulamalarını ve şirket verilerini kullanamazsınız.
 
-- Windows Mail gibi bazı e-posta uygulamaları artık cihazınızda depolanan şirket e-postalarına erişemez.
+- Windows Mail gibi bazı e-posta uygulamaları artık cihazınızda depolanan şirket e-postasına erişemez.
 
 - Wi-Fi veya bir sanal özel ağ kullanarak şirket ağınıza bağlanamayabilirsiniz.
 
@@ -58,9 +58,9 @@ Ayrıca, Windows 8.1 için:
 
 ## <a name="windows-10-mobile-and-windows-phone-81"></a>Windows 10 Mobile ve Windows Phone 8.1
 
-- Şirket Portalı uygulaması cihazınızdan kaldırılır. Bu, cihazınızın artık Şirket Portalı’nda görünmeyeceği ve Şirket Portalı uygulamasından veya Şirket Portalı web sitesinden uygulama yükleyemeyeceğiniz anlamına gelir.
+- Şirket Portalı uygulaması cihazınızdan kaldırılır. Bu, cihazınızın artık Şirket Portalı görünmeyeceği ve Şirket Portalı uygulamasından veya Şirket Portalı Web sitesinden uygulama yükleyemeyeceğiniz anlamına gelir.
 
-- Cihazınızda artık şirket uygulamalarını ve şirket verilerini kullanamazsınız.
+- Artık cihazınızda şirket uygulamalarını ve şirket verilerini kullanamazsınız.
 
 - Cihazı eklediğinizde değiştirilen tüm ayarlar, mesela kamerayı devre dışı bırakmak veya belirli bir parola uzunluğu gerekliliği gibi ayarlar geçerliliğini kaybeder.
 
@@ -69,9 +69,9 @@ Ayrıca, Windows 8.1 için:
 
 ## <a name="windows-rt-running-windows-81"></a>Windows 8.1 çalıştıran Windows RT
 
-- Şirket Portalı uygulaması cihazınızdan kaldırılır. Bu, cihazınızın artık Şirket Portalı’nda görünmeyeceği ve Şirket Portalı’ndan uygulama yükleyemeyeceğiniz anlamına gelir.
+- Şirket Portalı uygulaması cihazınızdan kaldırılır. Bu, cihazınızın artık Şirket Portalı görünmeyeceği ve Şirket Portalı uygulama yükleyemeyeceğiniz anlamına gelir.
 
-- Cihazınızda artık şirket uygulamalarını ve şirket verilerini kullanamazsınız.
+- Artık cihazınızda şirket uygulamalarını ve şirket verilerini kullanamazsınız.
 
 - Cihazı eklediğinizde değiştirilen tüm ayarlar, mesela kamerayı devre dışı bırakmak veya belirli bir parola uzunluğu gerekliliği gibi ayarlar geçerliliğini kaybeder.
 
@@ -79,13 +79,13 @@ Ayrıca, Windows 8.1 için:
 
 - Dosya paylaşımları veya dahili web siteleri gibi şirket kaynaklarına erişemeyebilirsiniz.
 
-- Windows Mail gibi bazı e-posta uygulamaları artık cihazınızda depolanan şirket e-postalarına erişemez.
+- Windows Mail gibi bazı e-posta uygulamaları artık cihazınızda depolanan şirket e-postasına erişemez.
 
 Windows RT cihazınızı kaldırdığınızda şunlar olur:
 
-- Şirket Portalı uygulaması cihazınızdan kaldırılır. Bu, cihazınızın artık Şirket Portalı’nda görünmeyeceği ve Şirket Portalı’ndan uygulama yükleyemeyeceğiniz anlamına gelir.
+- Şirket Portalı uygulaması cihazınızdan kaldırılır. Bu, cihazınızın artık Şirket Portalı görünmeyeceği ve Şirket Portalı uygulama yükleyemeyeceğiniz anlamına gelir.
 
-- Cihazınızda artık şirket uygulamalarını ve şirket verilerini kullanamazsınız.
+- Artık cihazınızda şirket uygulamalarını ve şirket verilerini kullanamazsınız.
 
 - Cihazı eklediğinizde değiştirilen tüm ayarlar, mesela kamerayı devre dışı bırakmak veya belirli bir parola uzunluğu gerekliliği gibi ayarlar geçerliliğini kaybeder.
 

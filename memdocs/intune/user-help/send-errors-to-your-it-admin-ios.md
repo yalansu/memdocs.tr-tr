@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 542a49e53e8d95a1f0290001151e175a0bbd7eab
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8f533a04e9865b4d841bee1a2764eef2fbbbcda9
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327906"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079391"
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>iOS cihazınızla ilgili sorunlar için şirketinizin destek birimine hata gönderme
 iOS cihazınızda Şirket Portalı uygulamasını kullanırken bazen bir hatayla karşılaşabilirsiniz. Böyle bir durumda hatanın ayrıntılarını şirketinizin destek çalışanına e-posta ile gönderebilirsiniz. Bu ayrıntılar, sorununuzu gidermek için gerekli bağlamı sağlayacaktır.
@@ -33,10 +33,10 @@ Günlükleri Şirket Portalı uygulamasına yüklediğinizde bunlar önce bu uyg
 
 Şirket Portalı uygulamasını kullanırken iOS cihazınızda hata alırsanız, şirketinizin destek biriminin sorunu gidermesine yardımcı olmak için bilgi gönderebilirsiniz. Hata bilgilerini farklı yollarla gönderebilirsiniz:
 
-- Hata uyarı iletilerinde **Rapor**’a dokunun.
+- Hata uyarı iletilerinde **rapor**' a dokunun.
 
 - Şirket Portalı uygulamasının **Diğer** sekmesinde **Yardım Al**’a dokunun.
 
-- Şirket Portalı uygulamasında, cihazınızı sallayın ve ardından tanılama uyarısı görüntülendiğinde **Tanılama Raporu Gönder**’e dokunun. Cihazı salladığınızda uyarı görüntülenmezse, **Ayarlar** > **Şirket Portalı**’nı açın ve **Sallama Hareketi** seçeneğinin açık olduğundan emin olun.
+- Şirket Portalı uygulamasında, cihazınızı sallayın ve ardından tanılama uyarısı görüntülendiğinde **Tanılama Raporu Gönder**’e dokunun. Cihazı salladığınızda uyarı görüntülenmezse, **Ayarlar** > **Şirket portalı**açın ve **sallama hareketi** seçeneğinin açık olduğundan emin olun.
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

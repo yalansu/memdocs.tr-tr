@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d82121fbd3d02c5eef9f45a4e67a897277da9334
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8c3c2719759180fb4b367d46e45a314995b6f425
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331074"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079255"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>Dağıtım iletişim planı geliştirme
 
@@ -37,11 +37,11 @@ ms.locfileid: "79331074"
 
 - İletişim için zaman çizelgesi
 
-Her alanı daha ayrıntılı bir şekilde inceleyeceğiz.
+Her alanı daha ayrıntılı bir şekilde gözden geçirelim.
 
 ## <a name="what-needs-to-be-communicated"></a>Neyin iletilmesi gerekir?
 
-Hangi bilgilerin iletileceği, iletmekte olduğunuz Intune dağıtma sürecine bağlı olacaktır. Kuruluş gruplarınız ve kullanıcılarınız ile bir Intune piyasaya çıkma açılışı, ardından kayıt öncesi ve sonra da kayıt sonrası dalgalarını takip ederek iletişim kurmaya karar verebilirsiniz. Her dalgada iletilebilecek bilgi türlerinden bahsedelim.
+Hangi bilgilerin iletileceği, iletmekte olduğunuz Intune dağıtma sürecine bağlı olacaktır. Kuruluş gruplarınız ve kullanıcılarınız ile bir Intune piyasaya çıkma açılışı, ardından kayıt öncesi ve sonra da kayıt sonrası dalgalarını takip ederek iletişim kurmaya karar verebilirsiniz. Her bir dalgaya iletibilecek bilgi türünü tartışalım.
 
 **Açılış dalgası** <br/>Intune projesini tanıtan genel iletişim. Intune'un ne olduğu, kuruluşun neden Intune'u benimsediği (kuruluş ve kullanıcılar için sağladığı yararlar) gibi sorulara yanıt vermeli ve dağıtım ve piyasaya çıkma için üst düzey bir plan sunmalıdır.
 

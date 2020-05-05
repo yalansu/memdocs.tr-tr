@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b196b7e29ee8423efebd458564d12be950c14102
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8ce6c44ed569498e7c168353b39876dbfe14f8a2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327918"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079408"
 ---
 # <a name="resolve-access-point-restrictions"></a>Erişim noktası kısıtlamalarını çözme
 
@@ -48,7 +48,7 @@ Tanınmayan veya onaylanmamış bir ağa bağlanmayı denediğinizde, aşağıda
 |------------------------|-----------------------------------|--------------------------|
 | **Cihaz onaylanan bir ağa bağlı değildir – Onaylanan bir kablosuz ağa bağlanın.** | İş erişimi için onaylanmamış bir ağa bağlandınız. Bu ağa bağlı olduğunuz sürece, iş e-postasına, uygulamalarına ve diğer korunan şirket kaynaklarına erişemezsiniz. | Şirket tarafından onaylanan bir ağa bağlayın. Ardından **Çözümle**'ye dokunarak yeniden deneyin. |
 
-## <a name="restrictions-couldnt-be-enforced"></a>Kısıtlamalar zorunlu tutulamadı  
+## <a name="restrictions-couldnt-be-enforced"></a>Kısıtlamalar zorlanamadı  
 
 | Şirket Portalı iletisi | İletinin anlamı | Yapmanız gerekenler                                                                      
 |------------------------|-----------------------------------|--------------------------|

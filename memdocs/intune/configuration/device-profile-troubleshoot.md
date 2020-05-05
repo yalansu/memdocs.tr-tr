@@ -1,6 +1,6 @@
 ---
 title: Microsoft Intune - Azure’da cihaz profillerinde sorun giderme | Microsoft Docs
-description: Cihaz ilkeleri ve profillerle ilgili yaygın sorular ve yanıtlar, Kullanıcı veya cihazlara uygulanmadı, yeni ilkelerin cihazlara itilmesi ne kadar sürer, birden çok ilke olduğunda hangi ayarlar uygulanır, bir profil silinir veya kaldırılır ve Microsoft Intune daha fazla.
+description: Profil değişiklikleri, kullanıcılara veya cihazlara uygulanmadı, yeni ilkelerin cihazlara itilme süresini, birden çok ilke olduğunda hangi ayarların uygulanacağını, bir profil silindiğinde veya kaldırıldığında ne olacağı ve Microsoft Intune daha fazlası dahil olmak üzere cihaz ilkeleri ve profillerle ilgili yaygın sorular ve yanıtlar.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67d0d271b5befc65ad286a8da6e00f647973d73d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7893e845d2f4c73d4fc6fdecd8691b288c33bb48
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333134"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078252"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Microsoft Intune 'deki cihaz ilkeleri ve profillerle ilgili yaygın sorular, sorunlar ve çözümler
 
@@ -40,7 +40,7 @@ Bazı ek öneriler:
 - Bir Wi-Fi uç noktasına (Wi-Fi yönlendiricisi) başarıyla bağlandıktan sonra SSID’yi ve kullanılan kimlik bilgilerini (bu değer erişim kodu veya paroladır) not edin.
 - SSID ve kimlik bilgilerini (parola) Önceden Paylaşılan Anahtar alanına girin. 
 - Profili, tercihen yalnızca BT ekibinden oluşan, sınırlı sayıda kullanıcıları olan bir test grubuna dağıtın. 
-- İOS/ıpados cihazınızı Intune 'a eşitleyin. Daha önce kaydolmadıysanız kaydolun. 
+- İOS/ıpados cihazınızı Intune 'a eşitleyin. Henüz kaydolmadıysanız kaydolun. 
 - Aynı Wi-Fi uç noktasına bağlantıyı (ilk adımda bahsedildiği gibi) tekrar test edin.
 - Daha büyük gruplara veya sonuçta kuruluşunuzdaki tüm beklenen kullanıcılara dağıtın. 
 
@@ -52,7 +52,7 @@ Bir cihaz, ilk bildirimden sonra ilkeyi veya profili almak için iade vermezse, 
 
 **Tahmini** Sıklık:
 
-| Platfveyam | Döngü süresi|
+| Platform | Döngü süresi|
 | --- | --- |
 | iOS/iPadOS | Her 8 saatte bir |
 | Mac OS | Her 8 saatte bir |
@@ -63,7 +63,7 @@ Bir cihaz, ilk bildirimden sonra ilkeyi veya profili almak için iade vermezse, 
 
 Cihaz son zamanlarda kaydedildiyse, uyumluluk, uyumsuzluk ve yapılandırma iadede daha sık çalışır ve bu da **tahmin** edilir:
 
-| Platfveyam | Sıklık |
+| Platform | Frequency |
 | --- | --- |
 | iOS/iPadOS | 1 saat boyunca 15 dakikada bir ve daha sonra 8 saatte bir |  
 | Mac OS | 1 saat boyunca 15 dakikada bir ve daha sonra 8 saatte bir | 
@@ -72,7 +72,7 @@ Cihaz son zamanlarda kaydedildiyse, uyumluluk, uyumsuzluk ve yapılandırma iade
 | Windows Phone | 15 dakika boyunca 5 dakikada bir, sonra 2 saat boyunca 15 dakikada bir ve daha sonra 8 saatte bir | 
 | Windows 8.1 | 15 dakika boyunca 5 dakikada bir, sonra 2 saat boyunca 15 dakikada bir ve daha sonra 8 saatte bir | 
 
-Herhangi bir zamanda kullanıcılar, ilke veya profil güncelleştirmelerini anında denetlemek için Şirket Portalı uygulaması, **ayarlar** > **eşitleme** ' yi açabilir.
+Herhangi bir zamanda, kullanıcılar, ilke veya profil güncelleştirmelerini hemen denetlemek için şirket portalı uygulamasını, **Ayarlar** > **eşitlemesini** açabilir.
 
 ## <a name="what-actions-cause-intune-to-immediately-send-a-notification-to-a-device"></a>Hangi eylemler cihaza Intune tarafından anında bildirim gönderilmesine neden olur?
 
@@ -120,18 +120,18 @@ Bir profili sildiğinizde veya bir cihazı profilin bulunduğu bir gruptan kald�
   
     - Mobil cihazların kilidini açmak için bir parola gerektir
     - Basit parolalara izin ver
-    - Parola uzunluğu alt sınırı
+    - Minimum parola uzunluğu
     - Gerekli parola türü
     - Parola geçerlilik süresi (gün)
     - Parola geçmişini anımsa
     - Cihaz temizlenmeden önce izin verilen yinelenen oturum açma hatası sayısı
-    - Parola istenmeden önce geçen işlem yapılmayan dakika sayısı
+    - Parola gerekmeden önce etkin olmama süresi (dakika)
     - Gerekli parola türü – minimum karakter kümesi sayısı
     - Kameraya izin ver
     - Cihazda şifrelemeyi gerektir
     - Çıkarılabilir depolama birimine izin ver
     - Web tarayıcısına izin ver
-    - Uygulama mağazasına izin ver
+    - Uygulama depolamaya izin ver
     - Ekran yakalamaya izin ver
     - Coğrafi konuma izin ver
     - Microsoft Hesabına izin ver
@@ -154,7 +154,7 @@ Bir profili sildiğinizde veya bir cihazı profilin bulunduğu bir gruptan kald�
 
 Windows Phone cihazlar bir kez ayarlandıktan sonra MDM veya EAS kullanılarak ayarlanan güvenlik ilkelerine güvenlik altına düşmesini sağlar. Örneğin, **en az sayıda karakter parolası** 8 olarak ayarlanır. Bunu 4 ' e azaltmayı deneyin. Cihaza daha kısıtlayıcı olan profil zaten uygulandı.
 
-Profili daha az güvenli bir değerle değiştirmek için güvenlik ilkelerini sıfırlayın. Örneğin, Windows 8.1 Masaüstünde, sağ tarafta içeri doğru kaydırın > **ayarlar** > **Denetim Masası**' nı seçin. **Kullanıcı Hesapları** uygulamasını seçin. Sol taraftaki gezinti menüsünde **güvenlik Ilkelerini Sıfırla** bağlantısı vardır (en alta doğru). Bunu seçin ve ardından **İlkeleri Sıfırla**’yı seçin.
+Profili daha az güvenli bir değerle değiştirmek için güvenlik ilkelerini sıfırlayın. Örneğin, Windows 8.1 Masaüstünde, sağ > tarafta içeri doğru kaydırın ve **Ayarlar** > **Denetim Masası**' nı seçin. **Kullanıcı Hesapları** uygulamasını seçin. Sol taraftaki gezinti menüsünde **güvenlik Ilkelerini Sıfırla** bağlantısı vardır (en alta doğru). Bunu seçin ve ardından **İlkeleri Sıfırla**’yı seçin.
 
 Android, Windows Phone 8,1 ve üzeri, iOS/ıpados ve Windows 10 gibi diğer MDM cihazlarının devre dışı bırakılması ve daha az kısıtlayıcı bir profil uygulamak için Intune 'a yeniden kaydedilmesi gerekebilir.
 

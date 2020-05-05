@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc536d4c2c0d06a768d42d4a796ec56cf80c0d66
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: aa70d5881a60d159ca668751ab2e1de9cf0cbd07
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401436"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076110"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Intune destekli senaryolara genel bakış 
 
@@ -44,9 +44,9 @@ Aşağıdaki senaryolar Kılavuzlu:
 
 Kılavuzlu senaryolar belirli işlevleri sunar. Aşağıdaki ayrıntılar, kılavuzlu bir senaryoyu izleyerek yapabileceklerinizi ve yapamadıklarınızı açıklamaya yardımcı olur.
 
-### <a name="launching"></a>Başlatma  
+### <a name="launching"></a>Başlatılıyor  
 
-Tüm Kılavuzlu senaryolar **[cihaz yönetim portalından](https://endpoint.microsoft.com)**  > , **sorun giderme +** **destekli senaryolar** > destek aracılığıyla kullanılabilir. 
+Tüm Kılavuzlu senaryolar **[cihaz yönetim portalı](https://endpoint.microsoft.com)** > **sorunlarını giderme +** > **destekli senaryolardan**kullanılabilir. 
 
 Kılavuzlu senaryo, senaryonun amacını ve kurulumu tamamlaması gereken önkoşulları açıklayan bir giriş ile başlar. Bu noktada, senaryoyu tamamlamaya yönelik tüm gerekli ayrıcalıklara sahip olduğunuzu doğrulamak için yönetici izinleriniz denetlenir.  
 
@@ -72,7 +72,7 @@ Kılavuzlu senaryolar, ilk oluşturma işleminden ayrı olarak mevcut kaynaklar�
 
 Kılavuzlu senaryolar, ilk dağıtımda hata sırasında otomatik temizliğin dışında, mevcut kaynakları devre dışı bırakmak için kullanılamaz. Oluşturulduktan sonra tüm kaynakların, grupların ve atamaların mevcut iş yükleri kullanılarak Kullanımdan kaldırılmış olması gerekir. 
 
-### <a name="updating"></a>Güncelleştirme
+### <a name="updating"></a>Bilen
 
 Teknoloji geliştikçe, Intune zaman zaman, kullanıcının deneyimini, güvenliğini veya senaryonun diğer yönlerini geliştirmek üzere kılavuzlu bir senaryoyu güncelleştirebilir. Bu güncelleştirme, yalnızca Kılavuzlu senaryo tarafından yapılan yeni dağıtımları etkiler. Intune, daha önce Kılavuzlu senaryo tarafından oluşturulan mevcut kaynakları, yeni en iyi yöntemler veya önerilere uyacak şekilde güncelleştirmez.  
 

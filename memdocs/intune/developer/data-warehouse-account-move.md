@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b7bf08775a6cccac3dd96268765d6e1a2e453c51
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 95c7104f949216a6a9f7704ac9bec6a7c2dfa7aa
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327258"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078099"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>Intune Veri Ambarı hesabı verilerinizi taşıma 
 
@@ -43,16 +43,16 @@ Veri Ambarı verilerinizi yedeklemek için Veri Ambarı verilerinizi, Veri Ambar
 Azure portalı görünümünüzdeki bazı eğilim grafikleri sıfırlanacaktır. **Graph**’ta şu betiği çalıştırarak bu grafikleri yedekleyebilirsiniz:   
 
 ### <a name="terms--conditions-acceptance-reports"></a>Hüküm ve Koşulların Kabulü raporları
-1. Azure portalında **Microsoft Intune** -> **Cihaz Kaydı** -> **Hüküm ve Koşullar**’a gidin.
+1. Azure Portal, **Microsoft Intune** -> **cihaz kayıt** -> **Koşulları & koşullara**gidin.
 2. Her bir **Hüküm ve Koşullar** öğesi için **Kabul Raporu** ve ardından **Dışarı Aktar**’ı seçin.
 3. Raporu yerel olarak kaydedin.
  
 ### <a name="app-protection-reports"></a>Uygulama Koruma raporları  
-1. Azure portalında **Microsoft Intune** -> **İstemci Uygulamaları** -> **Uygulama koruma durumu**’na gidin.
+1. Azure Portal, **Microsoft Intune** -> **istemci uygulamaları** -> **Uygulama koruma durumu**' na gidin.
 2. Her bir raporu kaydetmek için indirme simgesine ( ⤓ ) tıklayın.
 
 ### <a name="device-configuration-charts"></a>Cihaz Yapılandırma grafikleri 
-1. Azure portalında **Microsoft Intune** -> **Cihaz Yapılandırması**’na gidin.
+1. Azure Portal, **Microsoft Intune** -> **deviceconfiguration**' a gidin.
 2. Microsoft [Graph Gezgini](https://developer.microsoft.com/graph/graph-explorer)’ni kullanarak grafiklerdeki verileri indirin. 
     - Tüm cihazlardaki cihaz yapılandırma profillerinin dağıtım durumları için bkz. [Cihaz dağıtım durumu](https://graph.microsoft.com/beta/reports/deviceConfigurationDeviceActivity/content).
 
@@ -64,7 +64,7 @@ Azure portalı görünümünüzdeki bazı eğilim grafikleri sıfırlanacaktır.
     > Cihaz yapılandırması ve dağıtım durumu bilgilerine erişmek için geçerli bir kimlik doğrulaması belirteciniz olmalıdır.
 
 ## <a name="device-enrollment-charts"></a>Cihaz Kayıt grafikleri
-1. Azure portalında **Microsoft Intune** -> **Cihaz Kaydı**’na gidin.
+1. Azure Portal, **Microsoft Intune** -> **devicekaydına**gidin.
 2. Microsoft [Graph Gezgini](https://developer.microsoft.com/graph/graph-explorer)’ni kullanarak grafiklerdeki verileri indirin.
     - Kayıt durumu için bu [kayıt durumu sorgusunu](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentFailureTrends()/content) kopyalayın ve [Graph Gezgini](https://developer.microsoft.com/graph/graph-explorer)’ne yapıştırın.
     - Bu haftanın en sık görülen kayıt hataları için bu [kayıt hataları sorgusunu](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentTopFailures(period=null)/content) kopyalayın ve [Graph Gezgini](https://developer.microsoft.com/graph/graph-explorer)’ne yapıştırın.
@@ -78,9 +78,9 @@ Veri Ambarı hesabı taşındıktan sonra, Intune’da Veri Ambarı’nın sıf�
 
 ## <a name="data-warehouse-move-example"></a>Veri Ambarı taşıma örneği 
 
-X müşterisi, hesap taşımasının 1.06.2018 tarihinde başlamasını ister. Bu isteğe yanıt olarak müşteri, önceki Veri Ambarı verilerini yedeklemek istemesi halinde gerekli adımları ayrıntılı olarak açıklayan belgeleri bulacağı bir bağlantı alır. 1\.06.2018 tarihinde Veri Ambarı ve ambarın desteklediği grafikler sıfırlanır ve yeni veri merkezinde veri depolamaya başlar. 
+X müşterisi, hesap taşımasının 1.06.2018 tarihinde başlamasını ister. Bu isteğe yanıt olarak müşteri, önceki Veri Ambarı verilerini yedeklemek istemesi halinde gerekli adımları ayrıntılı olarak açıklayan belgeleri bulacağı bir bağlantı alır. 1.06.2018 tarihinde Veri Ambarı ve ambarın desteklediği grafikler sıfırlanır ve yeni veri merkezinde veri depolamaya başlar. 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Intune’daki haftalık yenilikleri](../fundamentals/whats-new.md) öğrenin. Yaklaşan değişiklikler, hizmet hakkında önemli bildirimler ve geçmiş sunumlar hakkında bilgiler de alabilirsiniz.
+- [Intune 'daki her haftanın](../fundamentals/whats-new.md)yenilikleri hakkında bilgi edinin. Yaklaşan değişiklikler, hizmet hakkında önemli bildirimler ve geçmiş sunumlar hakkında bilgiler de alabilirsiniz.
 - [Microsoft Intune Blogu](https://go.microsoft.com/fwlink/?LinkID=273882)’nu okuyun.

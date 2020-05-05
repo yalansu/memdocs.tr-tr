@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 763d67c393eede1920f356e54d6ab422bc75a480
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d0e933d3ab40b6c07615f701c9d181d41e4fded5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328222"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077793"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-entrust-datacard"></a>İOS veya ıpados cihazını Şirket Portalı ve Entrust Datacard ile ayarlama
 
@@ -36,7 +37,7 @@ Kayıt sırasında, bir türetilmiş kimlik bilgisini cihazınıza de yüklersin
 * Okul veya iş uygulamalarında oturum açma, Wi-Fi ve sanal özel ağlar (VPN)
 * Okul veya iş e-postalarını S/MIME sertifikaları kullanarak imzalama ve şifreleme  
 
-Bu makalede şunları yapmanız gerekir:  
+Bu makalede şunları yapacaksınız:  
 
    * Intune Şirket Portalı ile bir mobil iOS veya ıpados cihazı kaydedin.  
    * Kuruluşunuzun türetilmiş kimlik bilgisi sağlayıcısından, [Entrust Datacard](https://www.entrustdatacard.com/)türetilmiş bir kimlik bilgisi alın.  
@@ -60,14 +61,14 @@ Türetilmiş kimlik bilgileri, özel yayın (SP) 800-157 kapsamında türetilmi�
 * Cihazınızda yüklü iOS ve Idos Intune Şirket Portalı uygulaması  
 
 
-## <a name="enroll-device"></a>Cihazı kaydetme  
+## <a name="enroll-device"></a>Cihaz kaydetme  
 1. Mobil cihazınızda iOS için Şirket Portalı App/ıpados ' i açın ve iş hesabınızla oturum açın.  
 
 2. Ekrandaki kodu yazın.  
 
     ![Ekran ileti ve kodu ile Şirket Portalı uygulamasının örnek görüntüsü.](./media/copy-code-intercede.png)   
 
-3. Akıllı kart etkin cihazınıza geçin ve https://microsoft.com/devicelogingidin. 
+3. Akıllı kart etkin cihazınıza geçin ve adresine gidin https://microsoft.com/devicelogin. 
 4. Daha önce yazdığınız kodu girin.  
 
     ![Şirket Portalı Web sitesinin örnek ekran görüntüsü "kodu gir" istemi.](./media/enter-code-intercede.png)   
@@ -86,7 +87,7 @@ Türetilmiş kimlik bilgileri, özel yayın (SP) 800-157 kapsamında türetilmi�
 
 9. Akıllı kart etkin cihazınıza geçiş yapın ve ıdentityguard 'ı açın. 
 10. Akıllı kimlik bilgisi oturum açma alanını bulun ve oturum aç düğmesini seçin.  
-11. Bir sertifika seçmeniz istendiğinde, akıllı kart kimlik bilgilerinizi seçin. Ardından **Tamam**' ı seçin. 
+11. Bir sertifika seçmeniz istendiğinde, akıllı kart kimlik bilgilerinizi seçin. Sonra **Tamam**’ı seçin. 
 12. Akıllı kart PIN 'inizi girin.  
 13. Eylem listesinden seçim yapmanız istenir. Türetilmiş bir mobil akıllı kimlik bilgileri için kaydolmanızı sağlayan birini seçin. Bağlantı veya düğme, **türetilmiş bir mobil akıllı kart kimlik bilgisi için kaydolmak istiyorum gibi görünebilir.**  
 14. Başarılı bir şekilde indirdiğiniz ve akıllı kimlik bilgileri etkinleştirilmiş uygulamayı yüklediğinizden emin olmalısınız. Sonra bir sonraki ekrana geçin.   
@@ -95,10 +96,10 @@ Türetilmiş kimlik bilgileri, özel yayın (SP) 800-157 kapsamında türetilmi�
     b. Açılan menüde, **Entrust ıdentitygudard mobil akıllı kimlik bilgileri**' ni seçin.  
     c. Sonraki ekrana devam edin. Bir QR kodunu, altında sayısal parolaya sahip olacak şekilde görürsünüz.  
 
-16. Mobil cihazınıza geri dönün. **QR kod** Şirket Portalı > Al ekranında **devam**' a dokunun. 
+16. Mobil cihazınıza geri dönün. **QR kod** Şirket portalı > al ekranında **devam**' a dokunun. 
 
     ![Şirket Portalı QR kodu alma ekranının örnek ekran görüntüsü.](./media/get-qr-code-intercede.png)  
-17. **Kamera kullan** > **Tamam**' a dokunun.  
+17. **Kamera** > kullan**Tamam**' a dokunun.  
 
     ![Kamera erişimine izin vermek için izin isteyen Şirket Portalı isteminin örnek ekran görüntüsü.](./media/allow-cp-camera-access-intercede.png)  
 18. Akıllı kart özellikli cihazınızda bulunan QR kodunun görüntüsünü tarayın.  

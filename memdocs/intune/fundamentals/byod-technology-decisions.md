@@ -15,18 +15,18 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bc28f1b5170fb955f8614f098a46ed0c66a9f3a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f5d0e809e834a82f192128263742bc2b9b0024a2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326954"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079289"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>KCG'yi Microsoft Enterprise Mobility + Security (EMS) ile etkinleştirmeye yönelik teknoloji kararları
 
 Çalışanların uzaktan kendi cihazlarında çalışmalarını (BYOD) sağlama stratejinizi geliştirirken, KCG'yi etkinleştirme ve şirket verilerinizi koruma senaryolarında önemli kararlar vermeniz gerekir. Neyse ki, EMS kapsamlı bir çözüm kümesinde ihtiyacınız olan özelliklerin tümünü sunar.  
 
-Bu konu başlığı altında, şirket e-postasına KCG erişimini etkinleştirme örneğini inceliyoruz. Cihazın tamamını mı yoksa yalnızca uygulamaları mı yönetmeniz gerektiğine odaklanacağız, çünkü bunların her ikisi de geçerli seçeneklerdir.
+Bu konu başlığı altında, şirket e-postasına KCG erişimini etkinleştirme örneğini inceliyoruz. Tüm cihazı mı yoksa yalnızca tam olarak geçerli olan uygulamaları mı yönetmeniz gerektiği hakkında odaklanacağız.
 
 ## <a name="assumptions"></a>Varsayımlar
 * Azure Active Directory ve Microsoft Intune hakkında temel bilgilere sahipsiniz
@@ -60,7 +60,7 @@ Daha önce belirtildiği gibi, koşullu erişim bir kullanıcıyı cihazlarını
 * Oturum açma riski düzeyi
 * Cihaz platformu
 
-Yine de, birçok kuruluşu endişelendiren belirli riskler vardır.  Aşağıdaki tabloda yaygın endişeler ve MDM ile MAM'nin bunlara yanıtı listelenir.
+Yine de birçok kuruluşun ilgilendikleri belirli riskleri vardır.  Aşağıdaki tabloda yaygın endişeler ve MDM ile MAM'nin bunlara yanıtı listelenir.
 
 | Endişe   |   MDM  |   MAM  |
 |------------|--------|--------|
@@ -73,7 +73,7 @@ Yine de, birçok kuruluşu endişelendiren belirli riskler vardır.  Aşağıdak
 |Ele geçirilen kullanıcı hesabı | Cihaz PIN'i | Uygulama PIN'i |
 | | | |
 | Güvenliği aşılmış cihaz veya uygulama | Uyumlu cihaz gerektirir | Uygulama başlatmada kaçış denetimi |
-| Güvenliği aşılmış cihaz veya uygulama | Cihaz verilerini şifreleme | Uygulama verilerini şifrele |
+| Güvenliği aşılmış cihaz veya uygulama | Cihaz verilerini şifreleme | Uygulama verilerini şifreleme |
 | | | |
 |Kayıp veya çalınan cihaz | Tüm cihaz verilerini kaldırma | Tüm uygulama verilerini kaldırma|
 | | | |
@@ -82,6 +82,6 @@ Yine de, birçok kuruluşu endişelendiren belirli riskler vardır.  Aşağıdak
 |Verileri yanlışlıkla paylaşma veya güvenli olmayan konumlara kaydetme | Yazdırmayı devre dışı bırak | yok|
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Artık kuruluşunuzda KCG'yi etkinleştirirken cihaz yönetimine, uygulama yönetimine veya her ikisine de odaklanma konusunda karar vermenizin zamanı geldi. Nasıl hayata geçireceğiniz konusunda kararı siz verirsiniz ve bu arada da Azure AD'de sağlanan kimlik ve güvenlik özelliklerinin yine sağlanacağından emin olabilirsiniz.  
+Artık cihaz yönetimine, uygulama yönetimine veya ikisinin birleşimine odaklanarak kuruluşunuzda BYOD 'yi etkinleştirip etkinleştirmemeye karar vereceğiz. Nasıl hayata geçireceğiniz konusunda kararı siz verirsiniz ve bu arada da Azure AD'de sağlanan kimlik ve güvenlik özelliklerinin yine sağlanacağından emin olabilirsiniz.  
 
 Planlamanızda bir sonraki düzeyi belirlemek için Intune [Planlama Kılavuzu](planning-guide.md)'nu kullanın.

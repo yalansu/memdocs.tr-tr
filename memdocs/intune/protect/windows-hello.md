@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: cb88ddf489fbcf588d3abbaffae545dc46d91b7d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: e6537eec4e897afa183c51f67f32704c75985e05
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326573"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079034"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>İş için Windows Hello ile Microsoft Intune tümleştirmesi  
 
@@ -42,7 +42,7 @@ Tüm kuruluşunuzu hedefleyen bir varsayılan İş İçin Windows Hello ilkesi o
 > [!IMPORTANT]
 > Yıldönümü Güncelleştirmesi’nden önceki Windows 10 masaüstü ve mobil sürümlerinde, kaynaklarda kimlik doğrulama için kullanılabilen iki farklı PIN ayarlayabilirsiniz:
 > - **Cihaz PIN’i** cihazın kilidini açmak ve bulut kaynaklarına bağlanmak için kullanılabilir.
-> - **İş PIN’i** kullanıcının kişisel cihazlarından (KCG) Azure AD kaynaklarına erişmek için kullanılır.
+> - **Iş PIN 'i** , kullanıcının kişisel cihazlarında (KCG) Azure AD kaynaklarına erişmek için kullanıldı.
 > 
 > Yıldönümü Güncelleştirmesi’nde bu iki PIN, tek bir cihaz PIN’inde birleştirilmiştir.
 > Cihaz PIN’ini denetlemek için ayarladığınız Intune yapılandırma ilkelerinin yanı sıra, yapılandırmış olduğunuz İş İçin Windows Hello ilkeleri de bu yeni PIN değerine ayarlanmıştır.
@@ -55,11 +55,11 @@ Tüm kuruluşunuzu hedefleyen bir varsayılan İş İçin Windows Hello ilkesi o
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihazlara >  git** > **Enrollment** **cihazları kaydetme** > **iş için Windows Hello** > **Windows kaydı** . Iş için Windows Hello bölmesi açılır.
+2. **Cihazlar** >  **Enrollment**kayıt > **kaydetme**cihazları > **Windows**kaydı > **iş için Windows Hello**'ya gidin. Iş için Windows Hello bölmesi açılır.
 
 3. **İş Için Windows Hello 'Yu yapılandırmak**için aşağıdaki seçenekler arasından seçim yapın:
 
-    - **Devre Dışı**. İş İçin Windows Hello’yu kullanmak istemiyorsanız, bu ayarı seçin. Devre dışı bırakılırsa, kullanıcılar, sağlama gerekebilecek mobil telefonlar Azure Active Directory dahil olmak üzere Iş için Windows Hello sağlayamaz.
+    - **Devre dışı**. İş İçin Windows Hello’yu kullanmak istemiyorsanız, bu ayarı seçin. Devre dışı bırakılırsa, kullanıcılar, sağlama gerekebilecek mobil telefonlar Azure Active Directory dahil olmak üzere Iş için Windows Hello sağlayamaz.
     - **Etkin**. İş İçin Windows Hello ayarlarını yapılandırmak istiyorsanız bu ayarı seçin.  *Etkin*' i seçtiğinizde, WINDOWS Hello için ek ayarlar görünür hale gelir.
     - **Yapılandırılmadı**. Intune’un İş İçin Windows Hello ayarlarını denetlemesini istemiyorsanız bu ayarı seçin. Windows 10 cihazlarında mevcut Iş için Windows Hello ayarları değiştirilmez. Bölmedeki diğer ayarlardan hiçbiri kullanılamaz.
 
@@ -80,15 +80,15 @@ Tüm kuruluşunuzu hedefleyen bir varsayılan İş İçin Windows Hello ilkesi o
 
      PIN’de büyük harf, küçük harf ve özel karakter kullanımını gerekli kılarak daha güçlü PIN zorunluluğu getirebilirsiniz. Her bir için şunları seçin:
 
-     - **İzin Verildi**. Kullanıcılar PIN kodlarında karakter türünü kullanabilir, ancak bu zorunlu değildir.
+     - **Izin verildi**. Kullanıcılar PIN kodlarında karakter türünü kullanabilir, ancak bu zorunlu değildir.
 
      - **Gerekli**. Kullanıcılar PIN kodlarında karakter türlerinden en az birini bulundurmalıdır. Örneğin, en az bir büyük harfin ve bir özel karakterin zorunlu kılınması yaygın bir uygulamadır.
 
      - **İzin verilmiyor** (varsayılan). Kullanıcılar PIN’de bu karakter türlerini kullanmamalıdır. (Ayar yapılandırılmazsa, bu davranış da budur.)
 
-       Özel karakterler şunlardır: **! " # $ % &amp; ' ( ) &#42; + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~**
+       Özel karakterler şunlardır: **! "# $% &amp; ' () &#42; +,-. / : ; &lt; = &gt; ? @ [\] ^ _ &#96; {&#124;} ~**
 
-   - **PIN süre sonu (gün)** :
+   - **PIN süre sonu (gün)**:
 
      Son kullanıcıların belirli bir süre sonunda PIN’i değiştirmesini zorunlu tutmak için bir PIN kullanım süresi belirtmek iyi bir uygulamadır. Varsayılan değer 41 gündür.
 
@@ -111,7 +111,7 @@ Tüm kuruluşunuzu hedefleyen bir varsayılan İş İçin Windows Hello ilkesi o
 
    - **Telefonla oturum açmaya Izin ver**:
 
-     Bu seçenek **Evet** olarak ayarlanırsa, kullanıcılar masaüstü bilgisayar kimlik doğrulaması için bir taşınabilir özel cihaz olarak hizmet verecek bir uzak passport kullanabilir. Masaüstü bilgisayarının Azure Active Directory’ye katılmış ve eşlik eden cihazın bir İş İçin Windows Hello PIN’i ile yapılandırılmış olması gerekir.
+     Bu seçenek **Evet** olarak ayarlanırsa, kullanıcılar masaüstü bilgisayar kimlik doğrulaması için bir taşınabilir özel cihaz olarak hizmet verecek bir uzak passport kullanabilir. Masaüstü bilgisayarı Azure Active Directory’e katılmış olmalıdır ve özel cihaz bir İş İçin Windows Hello PIN kodu ile yapılandırılmalıdır.
 
 ## <a name="windows-holographic-for-business-support"></a>Windows 10 Holographic for Business desteği
 

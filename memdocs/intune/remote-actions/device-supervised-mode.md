@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da03bb3fdf1f0d67639f7719215d756b7d598d7c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6b4afd0c440455b7dab9c1e7674a935967b2fd64
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325082"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078949"
 ---
-# <a name="turn-on-iosipados-supervised-mode"></a>iOS/iPadOS denetimli modunu açma
+# <a name="turn-on-iosipados-supervised-mode"></a>İOS/ıpados denetimli modunu aç
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -33,7 +33,7 @@ Apple iOS/ıpados Denetimli mod yöneticilere Apple cihazlarını yönetirken da
 
 Intune, [Apple Aygıt Kayıt Programı](../enrollment/device-enrollment-program-enroll-ios.md)’nın (DEP) bir parçası olarak denetimli modu destekler.
 
-Denetim gerektiren Apple denetimleri listesi için Apple’ın [Yük ayarları başvurusuna](http://help.apple.com/configurator/mac/2.4/#/cad5370d089) bakın.
+Gözetim gerektiren Apple denetimlerinin listesi için bkz. Apple 'ın [Yük ayarları başvurusu](http://help.apple.com/configurator/mac/2.4/#/cad5370d089).
 
 ## <a name="turn-on-supervised-mode-during-enrollment"></a>Denetimli modu kayıt sırasında açma
 
@@ -41,7 +41,7 @@ Denetim gerektiren Apple denetimleri listesi için Apple’ın [Yük ayarları b
 
 ## <a name="turn-on-supervised-mode-after-enrollment"></a>Denetimli modu kayıt sonrasında açma
 
-Kayıt sonrasında denetimli modu açmak için tek yol, bir iOS/ıpados cihazını Mac 'e bağlamak ve [Apple Configurator](../enrollment/apple-configurator-enroll-ios.md) 'ı (cihazı sıfırlayacaktır) kullanmaktır. Kayıttan sonra bir cihazı Intune’da Denetimli mod için yapılandıramazsınız.
+Kayıt sonrasında denetimli modu açmak için tek yol, bir iOS/ıpados cihazını Mac 'e bağlamak ve [Apple Configurator](../enrollment/apple-configurator-enroll-ios.md) 'ı (cihazı sıfırlayacaktır) kullanmaktır. Kayıt sonrasında Intune 'da Denetimli mod için bir cihaz yapılandıramazsınız.
 
 ## <a name="identify-a-supervised-device"></a>Denetimli bir cihazı tanımlama
 

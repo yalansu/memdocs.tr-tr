@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2c5590acd870e2623491052ba43bf29e4676568
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d9ad6414bd0565389b39cc97322341ada0b4b4c4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326950"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079306"
 ---
 # <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>Intune yazılım istemcisi çalıştıran Windows bilgisayarlarına uygulama ekleme
 
@@ -42,7 +42,7 @@ Kullanıcıların uygulama yüklemelerini denetlemesine olanak sağlayabilirsini
 ## <a name="add-the-app"></a>Uygulama ekleme
 Aşağıdaki yordamı izleyerek uygulamanın özelliklerini yapılandırmak ve uygulamayı bulut depolama alanınıza yüklemek için Intune Yazılım Yayımcısı’nı kullanacaksınız.
 
-1. [Microsoft Intune yönetici konsolu](https://manage.microsoft.com), Intune yazılım yayımcısı başlatmak için **uygulamalar** &gt; **uygulamalar Ekle** ' yi seçin.
+1. Intune Yazılım Yayımcısını başlatmak için [Microsoft Intune yönetim konsolu](https://manage.microsoft.com)’nda **Uygulamalar** &gt; **Uygulama Ekle**‘yi seçin.
 
    > [!TIP]
    > Yayımcının başlatılması için önce Intune kullanıcı adınızı ve parolanızı girmeniz gerekebilir.
@@ -51,7 +51,7 @@ Aşağıdaki yordamı izleyerek uygulamanın özelliklerini yapılandırmak ve u
 
    - **Yazılım yükleyicisi dosya türünü seçin**. Bu, dağıtmak istediğiniz yazılım türünü belirtir. Windows bilgisayarları için, **Windows Installer**’ı seçin.
    - **Yazılım kurulum dosyalarının konumunu belirtin**. Yükleme dosyalarının konumunu girin veya **Gözat**’ı seçerek bir listeden konumu seçin.
-   - **Aynı klasörden başka dosya ve alt klasör ekleme**. Windows Installer kullanan bazı yazılımlar destekleme dosyaları gerektirir. Bu dosyalar yükleme dosyası ile aynı klasörde bulunmalıdır. Bu destek dosyalarını dağıtmak istiyorsanız bu seçeneği belirtin.
+   - **Aynı klasörden başka dosya ve alt klasör ekle**. Windows Installer kullanan bazı yazılımlar destekleme dosyaları gerektirir. Bu dosyalar yükleme dosyası ile aynı klasörde bulunmalıdır. Bu destek dosyalarını dağıtmak istiyorsanız bu seçeneği belirtin.
 
    Örneğin, Intune’a Application.msi adlı bir uygulama yüklemek isterseniz sayfa şöyle görünür: ![Yayımcının yazılım kurulum sayfası](./media/add-apps-for-windows-pcs-in-microsoft-intune/publisher-for-pc.png)
 
@@ -73,12 +73,12 @@ Aşağıdaki yordamı izleyerek uygulamanın özelliklerini yapılandırmak ve u
 4. **Gereksinimler** sayfasında uygulamanın cihaza yüklenmesinden önce karşılanması gereken gereksinimleri belirtin. Aşağıdakilerden birini seçin:
 
    - **Mimari**. Bu uygulamanın 32 bit işletim sistemlerine, 64 bit işletim sistemlerine veya ikisine de yüklenebileceğini belirtin.
-   - **İşletim Sistemi**. Bu uygulamanın üzerine yüklenebileceği en düşük işletim sistemini seçin.
+   - **Işletim sistemi**. Bu uygulamanın üzerine yüklenebileceği en düşük işletim sistemini seçin.
 
 5. **Algılama kuralları** sayfasında yapılandırmakta olduğunuz uygulamanın bir bilgisayarda zaten yüklü olup olmadığını algılamak için kurallar yapılandırabilirsiniz. Veya varsayılan algılama kurallarını, önceden yüklenmiş tüm uygulama sürümlerinin otomatik olarak üzerine yazılması için kullanabilirsiniz. Bu seçenek Windows Installer içindir (yalnızca .exe dosyaları).
 
    Yapılandırabileceğiniz kurallar şunlardır:
-   - **Dosya var**. Algılanmasını istediğiniz dosyanın yolunu belirtin. Bu yolu bilgisayarda **%ProgramFiles%** altında arayabileceğiniz gibi (**Program Files**\&lt;path&gt; ve **Program Files (x86)** \&lt;path&gt; altında arar), ya da **%SystemDrive%** altında da arayabilirsiniz (bilgisayarın kök sürücüsünde, genellikle C sürücüsü altında arar).
+   - **Dosya var**. Algılanmasını istediğiniz dosyanın yolunu belirtin. Bu yolu bilgisayarda **%ProgramFiles%** altında arayabileceğiniz gibi (**Program Files**\&lt;path&gt; ve **Program Files (x86)**\&lt;path&gt; altında arar), ya da **%SystemDrive%** altında da arayabilirsiniz (bilgisayarın kök sürücüsünde, genellikle C sürücüsü altında arar).
    - **MSI ürün kodu var**. **Gözat**’ı seçerek algılamak istediğiniz Windows Installer (.msi) dosyasını seçin.
    - <strong>Kayıt defteri anahtarı var</strong>. <strong>HKEY_LOCAL_MACHINE\</strong> ile başlayan bir kayıt defteri anahtarı belirtin. Hem 32 bit hem de 64 bit kayıt defteri yollarında arama yapılır. Belirttiğiniz anahtar iki konumdan birinde varsa, algılama kuralına uyulmuş olur.
 
@@ -104,4 +104,4 @@ Uygulama, **Uygulamalar** çalışma alanının **Uygulamalar** düğümünde g�
 
 Bir uygulama oluşturduktan sonra, sonraki adım uygulamayı dağıtmaktır. Daha fazla bilgi edinmek için bkz. [Microsoft Intune ile uygulamaları gruplara atama](../apps/apps-deploy.md).
 
-Windows bilgisayarlara yazılım dağıtmak için ipuçları ve püf noktaları hakkında daha fazla edinmek isterseniz [Destek İpucu: Intune Yazılımının Bilgisayarlara Dağıtımı için En İyi Uygulamalar](https://support.microsoft.com/en-US/help/2583929) blog gönderisini inceleyin.
+Windows bilgisayarlarına yazılım dağıtmaya yönelik ipuçları ve püf noktaları hakkında daha fazla bilgi edinmek istiyorsanız, bkz. blog gönderisi [İpucu: Intune yazılım dağıtımı Için En Iyi uygulamalar-bilgisayar 's](https://support.microsoft.com/en-US/help/2583929).

@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7af5274065217331cf3c7fc2a493374f4c0e2227
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f0ad29e04e2f1d15c94e3ecdc4dbb3c891cd605e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324270"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077725"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Windows 10 cihaz kaydı sorunlarınızı giderme
 Cihazınızı kaydettiyseniz, ancak iş veya okul e-postanıza ve dosyalarınıza erişemiyorsanız, bu sorun giderme adımlarını deneyin.  
@@ -41,7 +41,7 @@ Cihazınızı kaydettiyseniz, ancak iş veya okul e-postanıza ve dosyalarınız
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>“İşe veya okula erişim”i görüyorsanız izlenecek sorun giderme adımları
 
-1. Yukarıdaki adımları izlemenize rağmen iş veya okul e-postanıza ve dosyalarınıza erişemiyorsanız, **İşe veya okula erişim** bölümüne geri dönün.
+1. Yukarıdaki adımları izlediyseniz, ancak iş veya okul e-postanıza ve dosyalarınıza erişemiyorsanız, **işe veya okula erişin**bölümüne geri dönün.
 
 2. Aşağıdakilerden birini yapın:
 
@@ -53,11 +53,11 @@ Cihazınızı kaydettiyseniz, ancak iş veya okul e-postanıza ve dosyalarınız
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>“Hesabınız”ı görüyorsanız izlenecek sorun giderme adımları
 
-Yukarıdaki adımları izlemenize rağmen iş veya okul e-postanıza, dosyalarınıza ve diğer verilerinize erişemiyorsanız, **Hesaplar**’a dönün ve **İş erişimi**’ne dokunun
+Yukarıdaki adımları izlediyseniz, ancak iş veya okul e-postanıza, dosyalarınıza ve diğer verilerinize erişemiyorsanız, **hesaplara**geri dönün ve **iş erişimi**' ne dokunun.
 
 - İş veya okul hesabınızı listede görürseniz, bağlanırsınız.  
 
-- İş veya okul hesabınızı görmüyorsanız **Bağlan**’a dokunun ve ardından iş veya okul kimlik bilgilerinizle oturum açın.
+- İş veya okul hesabınızı görmüyorsanız **Bağlan**' a dokunun ve ardından iş veya okul kimlik bilgilerinizle oturum açın.
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-set-up-a-work-or-school-account"></a>“İş veya okul hesabı ayarlama”yı görüyorsanız izlenecek sorun giderme adımları
 

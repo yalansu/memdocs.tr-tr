@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a3fc8976c4799759088db4c4f28a9f50dff8e37
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d754076537fb8014b3e66a05413379637a67ba32
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332854"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077980"
 ---
 # <a name="incomplete-user-enrollments-report"></a>Tamamlanmamış Kullanıcı kayıtları raporu
 
 Bu rapor, Şirket Portalı kayıt işlemi kullanıcılarının kayıt işlemini tamamlamada nerede olduğunu söyler.
 
-Raporu görmek için **ıntune** > **cihaz kaydı** > **tamamlanmamış Kullanıcı**kayıtları ' nı seçin.
+Raporu görmek için **Intune** > **cihaz kaydı** > **tamamlanmamış Kullanıcı**kayıtları ' nı seçin.
 
 Bu bilgileri kullanarak, kullanıcıların kaydı tamamlamasını sağlamak için ekleme belgelerinizi güncelleştirebilirsiniz. Örneğin çok sayıda kullanıcı Kullanım Koşulları ekranında kaydı bırakıyorsa bu alanı araştırıp kullanıcılar için kullanımı daha kolay bir hale getirebilirsiniz.
 
@@ -74,21 +74,21 @@ Aşağıdaki tablolarda, tamamlanmamış bir kayıt isteminde bulunarak nitelend
 
 #### <a name="setup-checklist-section"></a>Kurulum denetim listesi bölümü
 
-| Eylem adı | Ekran veya akış | Platfveyam | Eylem |
+| Eylem adı | Ekran veya akış | Platform | Eylem |
 | ---- |---- |---- |---- |
 | EnrollmentWrapUp | Sayfayı Şirket Portalı’nda açmaya yönelik istem | iOS/Android | **İptal** |
 | EnrollmentWrapUp | **Şirket kaynakları yükleniyor** işlemi tamamlanana kadar gösterilen cihaz kaydetme ekranı | iOS/Android | 30 dakikadan fazla sürdü |
 | DeviceCategory | **Bitti** düğmesine tıklanana kadar görüntülenen Cihaz Kategorisi seçimi (yönetici tarafından yapılandırılmışsa) | iOS/Android | 30 dakikadan fazla sürdü |
 | PreEnrollmentWizard | Kaydı başlattıktan sonra Erişimi ayarlama ekranına dönüldüğünde gösterilen Erişimi ayarlama ekranı | iOS/Android| **Ertele** |
-| PreEnrollmentWizard | **Sırada Ne Var** ekranında **Sonraki** düğmesine tıklanana kadar görüntülenen Erişimi ayarlama ekranı | iOS/Android | 30 dakikadan fazla sürdü |
+| PreEnrollmentWizard | **Sonraki** ekranda **İleri** ' ye tıklanana kadar erişim ekranını ayarlama | iOS/Android | 30 dakikadan fazla sürdü |
 
 #### <a name="platform-screens-section"></a>Platform ekranları bölümü
 
-| Eylem adı | Ekran veya akış | Platfveyam | Eylem |
+| Eylem adı | Ekran veya akış | Platform | Eylem |
 | ---- |---- |---- |---- |
-| iOSProfileLaunch | Bir yapılandırma profilini göstermeye yönelik istem | iOS/iPadOS | **Yoksay** |
+| iOSProfileLaunch | Bir yapılandırma profilini göstermeye yönelik istem | iOS/iPadOS | **Yoksayma** |
 | iOSProfileLaunch | Profili yükleme ekranı | iOS/iPadOS | **İptal** |
-| iOSProfileLaunch | Profil kaynağının cihazı kaydetmesine güvenme istemi | iOS/iPadOS | **İptal** |
+| iOSProfileLaunch | Cihazı kaydetmek için profilin kaynağına güvenmesini iste | iOS/iPadOS | **İptal** |
 | iOSProfileLaunch | Profil yüklenene kadar görüntülenen profil yükleme ekranı | iOS/iPadOS | 30 dakikadan fazla sürdü |
 | AndroidPermissions | Cihaz yöneticisi etkinleştirme ekranı | Android | **İptal** |
 | AndroidPermissions | Cihaz yöneticisi için **Etkinleştir** düğmesine tıklanana kadar telefon çağrıları yapma ve bunları yönetmeye yönelik onay istemi | Android | 30 dakikadan fazla sürdü |
@@ -97,14 +97,14 @@ Aşağıdaki tablolarda, tamamlanmamış bir kayıt isteminde bulunarak nitelend
 
 #### <a name="terms-of-use-section"></a>Kullanım koşulları bölümü
 
-| Eylem adı | Ekran veya akış | Platfveyam | Eylem |
+| Eylem adı | Ekran veya akış | Platform | Eylem |
 | ---- |---- |---- |---- |
 | TermsofUse | Kullanım koşulları (yönetici yapılandırmışsa) | iOS/Android | **Tümünü Reddet** |
 | TermsofUse | **Tümünü kabul et** seçeneği belirtilene kadar gösterilen Kullanım koşulları ekranı | iOS/Android | 30 dakikadan fazla sürdü |
 
 #### <a name="complianceactivation-section"></a>Uyumluluk/Etkinleştirme bölümü
 
-| Eylem adı | Ekran veya akış | Platfveyam | Eylem |
+| Eylem adı | Ekran veya akış | Platform | Eylem |
 | ---- |---- |---- |---- |
 | Uyumluluk | Cihaz uyumluluğu (yönetici yapılandırmışsa), kayıt sonrası erişim kurulumunda yeşil dışındaki bir renkte gösterilir| iOS/Android | **Ertele** |
 | Uyumluluk | Cihaz uyumluluğu, yeşil görünecek şekilde güncelleştirilene kadar yeşil dışındaki bir renkte gösterilir | iOS/Android | 30 dakikadan fazla sürdü |

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1c3c08a8ea50e23b9e3e59a6a6e8f04168f10e2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 57210928bf92c5300db69dc68d5d5dd4d37795e7
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332506"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079442"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Microsoft Intune’da Windows Güvenlik Duvarı ilkelerini kullanarak Windows bilgisayarlarının korunmasına yardımcı olma
 
@@ -34,7 +34,7 @@ ms.locfileid: "79332506"
 
 Microsoft Intune, Intune istemcisiyle yönettiğiniz Windows bilgisayarları çeşitli yollarla güvenli hale getirmenize yardımcı olabilir. Bu yollardan biri, bilgisayarlarda Windows Güvenlik Duvarı ayarlarını yapılandırmanıza olanak tanıyan ilkeler sağlamaktır.
 
-Intune Windows bilgisayarlar istemcisini henüz bilgisayarlarınıza yüklemediyseniz, bkz. [Microsoft Intune ile Windows bilgisayar istemcisini yükleme](install-the-windows-pc-client-with-microsoft-intune.md).
+Intune Windows BILGISAYARı istemcisini bilgisayarlarınıza henüz yüklemediyseniz, bkz. [Microsoft Intune WINDOWS bilgisayarı Istemcisini yükleme](install-the-windows-pc-client-with-microsoft-intune.md).
 
 Windows bilgisayarlarda Windows Güvenlik Duvarı ilkelerini yapılandırmanıza, dağıtmanıza ve izlemenize yardımcı olması için, aşağıdaki bölümlerde yer alan bilgileri kullanın.
 
@@ -54,11 +54,11 @@ Windows Güvenlik Duvarı ilkesi, yönetilen bilgisayarlarda Windows Güvenlik D
 
 ## <a name="configure-a-windows-firewall-policy"></a>Bir Windows Güvenlik Duvarı ilkesini yapılandırma
 
-1. [Microsoft Intune yönetim konsolunda](https://manage.microsoft.com/) **Ilke &gt; ilke** **Ekle**' yi seçin.
+1. [Microsoft Intune yönetim konsolunda](https://manage.microsoft.com/) **ilke** &gt; **ilke Ekle**' yi seçin.
 
-2. Bir **Windows Güvenlik Duvarı Ayarları** ilkesi yapılandırın ve dağıtın. Önerilen ayarları kullanabilir veya ayarları özelleştirebilirsiniz. İlke oluşturma ve dağıtma hakkında daha fazla bilgi için, bkz. [Microsoft Intune bilgisayar istemcisi ile genel Windows bilgisayarı yönetim görevleri](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
+2. Bir **Windows Güvenlik Duvarı Ayarları** ilkesi yapılandırın ve dağıtın. Önerilen ayarları kullanabilir veya ayarları özelleştirebilirsiniz. İlke oluşturma ve dağıtma hakkında daha fazla bilgiye ihtiyacınız varsa, bkz. [Microsoft Intune bilgisayar Istemcisiyle ortak WINDOWS bilgisayarı yönetim görevleri](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
-    Aşağıdaki bölümde, ilkede yapılandırabileceğiniz değerlerin yanı sıra ilkeyi özelleştirmediğinizde kullanılacak varsayılan değerler listelenmektedir.
+    Aşağıdaki bölümde, ilkede yapılandırabileceğiniz değerlerin yanı sıra, ilkeyi özelleştirmezseniz kullanılacak varsayılan değerler listelenmektedir.
 
 Bir Windows Güvenlik Duvarı ilkesi dağıttıktan sonra, bunun durumunu **İlke** çalışma alanının **Tüm İlkeler** sayfasında görüntüleyebilirsiniz.
 
@@ -112,12 +112,12 @@ Daha önce yapılandırılmış değerlerden bağımsız olarak belirli türlerd
 |**Çekirdek Ağ**|İstemcilerin ağ kaynaklarına bağlanmak için IPv4 ve IPv6 kullanmasına izin verir.|
 |**Dağıtılmış İşlem Düzenleyicisi**|Yönetilen bilgisayarların; veritabanları, ileti kuyrukları ve dosya sistemleri gibi işlem korumalı kaynakları güncelleştiren işlemleri düzenlemesine olanak tanır.|
 |**Dosya ve Yazıcı Paylaşımı**|Kullanıcıların ağ üzerindeki diğer kullanıcılarla yerel dosya ve yazıcıları paylaşmasına olanak tanır. Bu ayar NetBIOS, Bağlantı Yerel Çok Noktaya Yayın Adı Çözümleme (LLMNR), Sunucu ileti bloğu (SMB) protokolü ve RPC kullanır.|
-|**HomeGroup**<br>(Windows 7 veya üzeri)|Yönetilen bilgisayarların bir Ev Grubu'na katılmasına olanak tanır.|
+|**EvGrubu**<br>(Windows 7 veya üzeri)|Yönetilen bilgisayarların bir Ev Grubu'na katılmasına olanak tanır.|
 |**iSCSI Hizmeti**|Yönetilen bilgisayarların iSCSI sunucularına ve cihazlarına bağlanmasına olanak tanır.|
 |**Anahtar Yönetimi Hizmeti**|Kurumsal ortamlarda bilgisayarların lisans uyumluluğu için sayılmasına izin verir.|
-|**Media Center Extender’lar**|Media Center Extender'larının Windows Media Center çalıştıran bilgisayarlar ile iletişim kurmasına olanak tanır. Bu ayar Basit Hizmet Algılama Protokolü (SSDP) ve qWave kullanır.|
+|**Media Center Extenders**|Media Center Extender'larının Windows Media Center çalıştıran bilgisayarlar ile iletişim kurmasına olanak tanır. Bu ayar Basit Hizmet Algılama Protokolü (SSDP) ve qWave kullanır.|
 |**Netlogon Hizmeti**|Kullanıcıların ve hizmetlerin kimlik doğrulaması için etki alanı istemcileri ve etki alanı denetleyicisi arasında bir güvenlik kanalı yapılandırır. Bu ayar RPC kullanır.|
-|**Ağ Bulma**|Bilgisayarların diğer cihazları bulmasına ve ağ üzerindeki diğer cihazlar tarafından bulunmasına izin verir. Bu ayar, Function Discovery Host ve Publication Services ve SSDP, NetBIOS, LLMNR ve UPnPağ protokollerini kullanır.|
+|**Ağ bulma**|Bilgisayarların diğer cihazları bulmasına ve ağ üzerindeki diğer cihazlar tarafından bulunmasına izin verir. Bu ayar, Function Discovery Host ve Publication Services ve SSDP, NetBIOS, LLMNR ve UPnP ağ protokollerini kullanır.|
 |**Performans Günlükleri ve Uyarılar**|Performans Günlükleri ve Uyarılar hizmetinin uzaktan yönetilmesine olanak tanır. Bu ayar RPC kullanır.|
 |**Uzaktan Yönetim**|Bilgisayarın uzaktan yönetilmesine olanak tanır.|
 |**Uzaktan Yardım**|Yönetilen bilgisayarların kullanıcılarının ağ üzerindeki diğer kullanıcılardan Uzaktan Yardım istemesine izin verir. Bu ayar SSDP, Eş Adı Çözümleme Protokolü (PNRP), Teredo ve UPnP ağ protokollerini kullanır.|
@@ -128,8 +128,8 @@ Daha önce yapılandırılmış değerlerden bağımsız olarak belirli türlerd
 |**Uzaktan Birim Yönetimi**|Uzak yazılım ve donanım disk birimi yönetimine olanak tanır. Bu ayar RPC kullanır.|
 |**Yönlendirme ve Uzaktan Erişim**|Bilgisayarlara gelen VPN ve uzaktan erişim bağlantılarına olanak tanır.|
 |**Güvenli Yuva Tünel Protokolü**|Güvenli Yuva Tünel Protokolü (SSTP) ile yönetilen bilgisayarlara gelen VPN bağlantılarına olanak tanır. Bu ayar HTTPS kullanır.|
-|**SNMP Yakalama**|Yönetilen bilgisayarların Basit Ağ Yönetimi Protokolü (SNMP) Yakalama hizmeti trafiğini almasına olanak tanır.|
-|**UPnP Çerçevesi**|Bilgisayarlardaki UPnP Çerçevesi hizmetini, bilgisayarların UPnP sertifikalı cihazları bulmasına ve kullanmasına olanak sağlayacak biçimde yapılandırır.|
+|**SNMP Trap**|Yönetilen bilgisayarların Basit Ağ Yönetimi Protokolü (SNMP) Yakalama hizmeti trafiğini almasına olanak tanır.|
+|**UPnP Framework**|Bilgisayarlardaki UPnP Çerçevesi hizmetini, bilgisayarların UPnP sertifikalı cihazları bulmasına ve kullanmasına olanak sağlayacak biçimde yapılandırır.|
 |**Windows İşbirliği Bilgisayar Adı Kayıt Hizmeti**|Bilgisayarların SSDP ve PNRP kullanarak diğer bilgisayarları bulmasını ve bunlarla iletişim kurmasını sağlar.|
 |**Windows Media Player**|Kullanıcıların Kullanıcı Veri Birimi Protokolü (UDP) üzerinden akış medyası almasına olanak tanır.|
 |**Windows Media Player Ağ Paylaşım Hizmeti**|Kullanıcıların bir ağ üzerinden medya paylaşmasına olanak sağlar. Bu ayar SSDP, qWave ve UPnP ağ protokollerini kullanır.|
@@ -137,9 +137,9 @@ Daha önce yapılandırılmış değerlerden bağımsız olarak belirli türlerd
 |**Windows Toplantı Alanı**|Kullanıcıların ağ üzerinden işbirliği yaparak belge, program ve masaüstü paylaşmasına izin verir. Bu ayar Dağıtılmış Dosya Sistemi Çoğaltma (DFSR) ve P2P kullanır.|
 |**Windows Eşler Arası İşbirliği Altyapısı**|Bunların bağlanmasına imkan sağlayacak çeşitli eşler arası programlar ve teknolojiler yapılandırır. Bu ayar SSDP ve PNRP kullanır.|
 |**Windows Uzaktan Yönetim (Uyumluluk)**|İşletim sistemleri ve cihazların uzaktan yönetimi için Web hizmeti tabanlı bir protokol olan WS-Management ile yönetilen bilgisayarların uzaktan yönetilmesine olanak tanır.|
-|**Windows Uzaktan Yönetim**<br>(Windows 8 veya üstü).|İşletim sistemleri ve cihazların uzaktan yönetimi için Web hizmeti tabanlı bir protokol olan WS-Management ile yönetilen bilgisayarların uzaktan yönetilmesine olanak tanır.|
+|**Windows Uzaktan Yönetimi**<br>(Windows 8 veya üzeri).|İşletim sistemleri ve cihazların uzaktan yönetimi için Web hizmeti tabanlı bir protokol olan WS-Management ile yönetilen bilgisayarların uzaktan yönetilmesine olanak tanır.|
 |**Windows Virtual PC**<br>(Windows 7 veya üzeri)|Sanal makinelerin diğer bilgisayarlarla iletişim kurmasına olanak tanır.|
 |**Taşınabilir Kablosuz Cihazlar**|Medya Aktarım Protokolü (MTP) ile ağ bağlantısı etkin kamera veya medya cihazı verilerinin yönetilen bilgisayarlara aktarılmasına olanak tanır. Bu ayar SSDP ve UPnP ağ protokollerini kullanır.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-[Windows bilgisayarlarını koruma ilkeleri](policies-to-protect-windows-pcs-in-microsoft-intune.md)
+[Windows bilgisayarları koruma ilkeleri](policies-to-protect-windows-pcs-in-microsoft-intune.md)

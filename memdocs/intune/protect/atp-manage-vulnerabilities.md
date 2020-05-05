@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3d0335274604519da82146cab8837459e190801
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 5464e70d915dceb9cf2c6a3b2385419cfc11e38b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322830"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077844"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Intune kullanarak Microsoft Defender ATP tarafından tanımlanan güvenlik açıklarını düzeltin
 
@@ -45,7 +45,7 @@ Düzeltme için genel eylemler şunları içerir:
 - Güvenlik açığını etkilemek için yapılandırmayı **devre dışı bırakın** veya **etkinleştirin** .
 - Sağlanması gereken uygun bir öneri olmadığında yöneticiye **dikkat edin** .
 
-Örnek iş akışı:
+Örnek bir iş akışı:
 
 - Microsoft Defender ATP içinde, contoso Media Player v4 adlı bir uygulamaya yönelik bir güvenlik açığı bulunur ve bir yönetici bu uygulamayı güncelleştirmek için bir güvenlik görevi oluşturur. Contoso medya oynatıcı, Intune ile dağıtılan yönetilmeyen bir uygulamadır.
 
@@ -81,7 +81,7 @@ Düzeltme için genel eylemler şunları içerir:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Uç nokta güvenliği** > **Güvenlik görevleri**' ni seçin.
+2. **Uç nokta güvenlik** > **güvenliği görevleri**' ni seçin.
 
 3. Listeden bir görev seçerek bu güvenlik görevinin ek ayrıntılarını görüntüleyen bir kaynak penceresi açın.
 

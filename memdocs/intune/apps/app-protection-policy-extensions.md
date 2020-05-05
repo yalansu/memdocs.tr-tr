@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7de306a7d4f632b3eedf321323e12c7ad95b713
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1dce45d0ad8d44d09345ebfe3fcd358b34a104d6
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326210"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078388"
 ---
 # <a name="protecting-application-extensions"></a>Uygulama uzantılarını koruma
 
@@ -70,12 +70,12 @@ Bir kullanıcı, Office eklentilerinde olduğu gibi hesaplar arasında veri payl
 |[Takvimler](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#calendars-permissions) için okuma izinleri     |Uygulamanın kullanıcı takvimlerindeki etkinlikleri okumasına izin verir. Oturum açan kullanıcının takvimindeki toplantıları, zamanlarını, yerlerini ve katılımcıları içerir.         |
 |[Kullanıcı Profili](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#user-permissions) için okuma izinleri     |Kullanıcıların uygulamada oturum açmasını sağlar ve uygulamanın oturum açan kullanıcıların profilini okumasına izin verir. Ayrıca uygulamanın oturum açan kullanıcılar için temel şirket bilgilerini okumasına izin verir.         |
 |Abonelikler     |Bu kapsam mevcut değil ve henüz kullanılmıyor. Kullanıcının kuruluşu tarafından sağlanan Office 365 gibi Microsoft uygulamaları ve hizmetleri aboneliklerini içerir.         |
-|İçgörüler     |Bu kapsam mevcut değil ve henüz kullanılmıyor. Oturum açan kullanıcı hesabıyla ilişkili Microsoft hizmetleri kullanımını temel alan ilgi alanlarını içerir.         |
+|Insights     |Bu kapsam mevcut değil ve henüz kullanılmıyor. Oturum açan kullanıcı hesabıyla ilişkili Microsoft hizmetleri kullanımını temel alan ilgi alanlarını içerir.         |
 
-### <a name="learn-more"></a>Daha fazla bilgi
+### <a name="learn-more"></a>Daha fazla bilgi edinin
 
 - [Microsoft uygulamalarınızdaki LinkedIn bilgileri ve özellikleri](https://go.microsoft.com/fwlink/?linkid=850740) hakkında bilgi edinin.
 - [Office 365 Yol haritası sayfasında](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc) LinkedIn hesap bağlantıları yayını hakkında bilgi edinin. 
 - [LinkedIn hesap bağlantılarını yapılandırma](https://docs.microsoft.com/azure/active-directory/linkedin-integration) hakkında bilgi edinin.
-- Kullanıcıların LinkedIn ve Microsoft iş veya okul hesapları arasında paylaşılan veriler hakkında daha fazla bilgi için bkz. [İş veya okulunuzda Microsoft uygulamalarında LinkedIn](https://www.linkedin.com/help/linkedin/answer/84077).
+- Kullanıcıların LinkedIn ve Microsoft iş veya okul hesapları arasında paylaşılan veriler hakkında daha fazla bilgi için, [iş veya okulunuzdaki Microsoft uygulamalarında LinkedIn](https://www.linkedin.com/help/linkedin/answer/84077)'e bakın.
 

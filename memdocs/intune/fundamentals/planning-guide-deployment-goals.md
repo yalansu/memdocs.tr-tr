@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ff60d5823d7b249e4648b5858ff5ab2dcd5935a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 74fbf1af85fdaef7cebde5c58f7892015b433ff6
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331058"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079238"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Intune dağıtım hedeflerini, amaçlarını ve zorluklarını belirleme
 
-İyi bir dağıtım planı, kuruluşunuzun dağıtım hedeflerini, amaçlarını ve olası zorlukları belirlemekle başlar. Her alanı daha ayrıntılı bir şekilde açıklayacağız.
+İyi bir dağıtım planına sahip olmak, kuruluşunuzun dağıtım hedeflerini ve amaçlarını ilk kez tanımlayarak, olası güçlüklerle başlar. Her alanı daha ayrıntılı bir şekilde tartışalım.
 
 ## <a name="deployment-goals"></a>Dağıtım hedefleri
 
@@ -43,7 +43,7 @@ Dağıtım hedefleri, kuruluşunuza Intune dağıtarak uzun vadede ulaşmak iste
 
   - **Açıklama:** Çalışanların çalışmak istedikleri yerde, kendilerine en uygun gelen cihazı kullanarak daha üretken olmalarını sağlama. Bu proje, mobil üretkenliğe olanak tanımayı ve kurumsal verilere güvenli bir şekilde erişilmesini sağlamayı hedeflemelidir.
 
-  - **İş değeri:** Çalışanların çevik olmalarını ve çalışmaları gereken yerde çalışabilmelerini sağlamak, işletmenin daha rekabetçi hale gelmesini ve daha doyurucu bir çalışma ortamı sağlamasını olanaklı kılar.
+  - **İş değeri:** Çalışanların çevik olmasını ve ihtiyaç duydukları yerden çalışmasını sağlamak, işletmenin daha rekabet etmesine ve daha fazla çalışma ortamı sağlamasına imkan tanır.
 
 - **Mobil cihazlarda veri koruması sağlama**
 
@@ -61,19 +61,19 @@ Dağıtım hedefleri, kuruluşunuza Intune dağıtarak uzun vadede ulaşmak iste
 
 Dağıtım amaçları, kuruluşunuzun Intune dağıtım hedeflerine ulaşması için gerçekleştirebileceği eylemlerdir. Aşağıda dağıtım amaçlarına bazı örnekler ve bunların nasıl gerçekleştirilebileceği listelenmiştir.
 
-- **Cihaz yönetim çözümlerinin sayısını azaltma**
+- **Cihaz yönetim çözümlerinin sayısını düşürme**
 
   - **Uygulama:** Tek bir mobil cihaz yönetimi çözümünde birleşin: uygulama ve cihazlara yönelik kurumsal veri koruması için Microsoft Intune kullanın.
 
-- **Exchange'e ve SharePoint Online’a güvenli erişim sağlama**
+- **Exchange ve SharePoint Online’a güvenli erişim sağlama**
 
   - **Uygulama:** Exchange ve SharePoint Online için koşullu erişim uygulayın.
 
-- **Kurumsal verilerin mobil cihazda depolanmasını veya kurum dışı hizmetlere iletilmesini engelleme**
+- **Kurumsal verilerin mobil cihaza kaydedilmesini veya kurum dışı hizmetlere iletilmesini engelleme**
 
   - **Uygulama:** Microsoft Office ve iş kolu uygulamaları için Intune uygulama koruma ilkeleri uygulayın.
 
-- **Cihazdan kurumsal veri silme yeteneği sağlama**
+- **Cihazdan kurumsal verileri silme yeteneği sağlama**
 
   - **Uygulama:** Cihazları Intune'a kaydedin. Bu, uygun olduğunda şirket verilerini ve kaynaklarını uzaktan silebilmenizi sağlar.
 
@@ -95,4 +95,4 @@ Dağıtım zorlukları, bir kuruluşun önde gelen ve dağıtım üzerinde olums
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Artık dağıtım hedeflerinizi, amaçlarınızı ve olası zorlukları tanımladığınıza göre bir sonraki bölüme geçebiliriz: [Kullanım örneği senaryolarını tanımlama](planning-guide-scenarios.md).
+Dağıtım Hedeflerinizi, amaçları ve olası güçlüklerinizi tanımladığınıza göre, bir sonraki bölüme geçelim: [kullanım örneği senaryolarını tanımlama](planning-guide-scenarios.md).

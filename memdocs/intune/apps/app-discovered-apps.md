@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2538a8c9755efe9ecec80358b7d90f10d5f2c33a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 44089df5645b128ba29e481e899d52c90b8c0a42
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323820"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078405"
 ---
 # <a name="intune-discovered-apps"></a>Intune bulunan uygulamalar
 
@@ -34,7 +34,7 @@ Intune **bulunan uygulamalar** , Kiracınızdaki Intune 'a kayıtlı cihazlarda 
 Intune, kiracınızdaki Intune 'A kayıtlı cihazlarda algılanan uygulamaların toplanmış bir listesini sağlar.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **bulunan uygulamalar** > **izleme** ' yi seçin.
+2. **Uygulamaları** > **Monitor**izleme > **bulunan uygulamaları**seçin.
 
 >[!NOTE]
 >**Bulunan uygulamalar bölmesinden** **dışarı aktar** ' i seçerek bulunan uygulamalar listesini bir. csv dosyasına dışarı aktarabilirsiniz.
@@ -44,7 +44,7 @@ Intune, kiracınızdaki Intune 'A kayıtlı cihazlarda algılanan uygulamaların
 Intune, kiracınızdaki ayrı bir cihaz için bulunan uygulamaların listesini de sağlar.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Tüm cihazlar** > **cihazları** seçin.
+2. **Cihazlar** > **tüm cihazlar**' ı seçin.
 3. Cihaz seçin.
 4. Bu cihaza yönelik algılanan uygulamaları görüntülemek için **izleyici** bölümünde **bulunan uygulamalar** ' ı seçin.
 
@@ -52,9 +52,9 @@ Intune, kiracınızdaki ayrı bir cihaz için bulunan uygulamaların listesini d
 
 Aşağıdaki liste, uygulama platformu türünü, kişisel cihazlar için izlenen uygulamaları, şirkete ait cihazlar için izlenen uygulamaları ve yenileme döngüsünü sağlar. Intune tarafından desteklenen uygulama türleri hakkında daha fazla bilgi için bkz. [Microsoft Intune Içindeki uygulama türleri](apps-add.md#app-types-in-microsoft-intune).
 
-| Platfveyam | Kişiye ait cihazlar için | Şirkete ait cihazlar için | Döngü süresi |
+| Platform | Kişiye ait cihazlar için | Şirkete ait cihazlar için | Döngü süresi |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10 (Win32 uygulamaları) NOTE: cihazda [Intune yönetim uzantısı gerekir](intune-management-extension.md) | Uygulanamaz | Yalnızca yönetilen uygulamalar | Cihaz kaydından her 24 saatte bir |
+| Windows 10 (Win32 uygulamaları) NOTE: cihazda [Intune yönetim uzantısı gerekir](intune-management-extension.md) | Geçerli değil | Cihazda yüklü tüm uygulamalar | Cihaz kaydından her 24 saatte bir |
 | Windows 10 (modern uygulamalar) | Yalnızca yönetilen modern uygulamalar | Cihazda yüklü tüm modern uygulamalar | Her 7 günde bir cihaz kaydı |
 | Windows 8.1 | Yalnızca yönetilen uygulamalar | Yalnızca yönetilen uygulamalar | Her 7 günde bir cihaz kaydı |
 | Windows Phone 8 | Yalnızca yönetilen uygulamalar | Yalnızca yönetilen uygulamalar | Her 7 günde bir cihaz kaydı |
@@ -77,5 +77,5 @@ Bulunan uygulamaların sayısı uygulama yükleme durumu sayısıyla eşleşmeye
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Microsoft Intune içindeki uygulama türleri](apps-add.md#app-types-in-microsoft-intune)
+- [Microsoft Intune’da uygulama türleri](apps-add.md#app-types-in-microsoft-intune)
 - [Microsoft Intune ile uygulama bilgilerini ve atamalarını izleme](apps-monitor.md)

@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1ac77e4c539c8d5614001f9a326b32536ee07629
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 79bcfc1fabab3b14a9a2560b692c5f2ca459aee4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324526"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079425"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Şirket Portalı web sitesinden cihazınızı uzaktan kilitleme
 
@@ -45,7 +45,7 @@ Uzaktan kilitleme ayarı şu platformlarda çalışır:
 
     ![Tanımlanmamış, genel olarak adlandırılmış cihazları gösteren 2 kutucuğun bulunduğu Cihazlar sayfasının ekran görüntüsü. Cihazların hemen altında gri bir başlık yer alır ve kullanıcılardan kullandıkları cihazı tanımlamalarını veya yeni bir tane eklemelerini ister.](./media/rename-reset-device-step2-1808.png) 
 
-3. **Uzaktan kilitleme**’ye dokunun. Kilitleme seçeneği sayfanın üst kısmında görünmüyorsa **Diğer (...)**  > **Uzaktan kilitle**’yi seçin.  
+3. **Uzaktan kilitleme**’ye dokunun. Kilit seçeneği Sayfanızın üstünde görünmüyorsa, **diğer (...)** öğesini seçin.  >  **Uzaktan kilitleme**.  
 
    ![Şirket Portalı web sitesinde seçilen bir cihaza yönelik cihaz ayrıntıları sayfası; üst kısmında Yeniden Adlandır, Kaldır, Cihazı Sıfırla, Geçiş Kodunu Sıfırla ve Uzaktan Kilitle bağlantıları ile. ](./media/rename-reset-device-1808.png) 
 
@@ -53,7 +53,7 @@ Uzaktan kilitleme ayarı şu platformlarda çalışır:
 
 4. Cihazınızı kilitlemek üzere olduğunuza dair sizi uyaran bir ileti görüntülenir. Onaylamak için **Uzaktan kilitle**’ye dokunun.
 
-Onaydan sonra Şirket Portalı, cihazınızı kilitlemeye çalışır. Bu süre boyunca ekranda “Uzaktan kilitleme bekliyor” iletisi görüntülenir. Cihazınız kilitlendiğinde bu ileti “Uzaktan kilitleme başarılı.” olarak değişir.  
+Onaydan sonra Şirket Portalı, cihazınızı kilitlemeye çalışır. Bu süre boyunca bir "Uzaktan kilitleme bekliyor" iletisi görünür. Cihazınız kilitliyken, durum "Uzaktan kilitleme başarılı." olarak görüntülenir.  
 
 Uzaktan Kilitleme durumu üç yerde görüntülenir:
 
@@ -62,7 +62,7 @@ Uzaktan Kilitleme durumu üç yerde görüntülenir:
 * Sayfanın **Cihazlar** bölümünde cihaz adını gösteren kutucuk.  
 
 > [!Note]
-> Uzaktan kilitlemenin başarısız olduğu konusunda bir bildirim görürseniz birkaç dakika bekleyin. Daha sonra cihazınızı kilitlemeyi tekrar deneyin. Durum tekrar “Uzaktan kilitleme bekliyor.” olarak değişir. Yeniden deneme de işe yaramazsa yardım için şirketinizin destek birimine başvurun.
+> Uzaktan kilitlemenin başarısız olduğu konusunda bir bildirim görürseniz birkaç dakika bekleyin. Daha sonra cihazınızı kilitlemeyi tekrar deneyin. Durum, "Uzaktan kilitleme bekliyor." olarak değişir. Yeniden deneme de işe yaramazsa yardım için şirketinizin destek birimine başvurun.
 
 Cihazınızı bulursanız ve Uzaktan Kilitleme kullandıktan sonra onun kilidini açmak istiyorsanız, tek yapmanız gereken geçiş kodunu girmektir.  
 

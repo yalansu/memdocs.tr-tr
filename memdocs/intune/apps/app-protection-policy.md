@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7441cd36a05e94140b46d322840346872b94b64f
-ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
+ms.openlocfilehash: de679314bcd3b52ff879fbe9a6340a61d2b7e993
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80863171"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078371"
 ---
 # <a name="app-protection-policies-overview"></a>Uygulama koruma ilkelerine genel bakış
 
@@ -36,7 +36,7 @@ Mobil uygulama yönetimi (MAM) uygulama koruma ilkeleri, kuruluşunuzun verileri
 ## <a name="how-you-can-protect-app-data"></a>Uygulama verilerinizi nasıl koruyabilirsiniz?
 Çalışanlarınız hem kişisel hem de iş amaçlı görevler için mobil cihazlar kullanır. Bir yandan çalışanlarınızın üretken olmasını sağlarken diğer yandan, isteyerek ve istemeyerek yaşanabilecek veri kayıplarını önlemek isteyebilirsiniz. Ayrıca sizin yönetiminizde olmayan cihazlardan erişilen şirket verilerini de korumak istersiniz.
 
-Intune uygulama koruma ilkelerini **mobil cihaz yönetimi (MDM) çözümlerinden bağımsız olarak** kullanabilirsiniz. Bu bağımsız kullanım imkanı, bir cihaz yönetim çözümüne dahil ettiğiniz ve etmediğiniz cihazlarda şirketinizin verilerini korumanıza yardımcı olur. **Uygulama düzeyinde ilkeler** uygulayarak, şirket kaynaklarına erişimi kısıtlayabilir ve verileri BT departmanınızın kapsamında tutabilirsiniz.
+Intune uygulama koruma ilkelerini **mobil cihaz yönetimi (MDM) çözümlerinden bağımsız olarak** kullanabilirsiniz. Bu bağımsızlık, cihazları bir cihaz yönetimi çözümüne kaydederek veya kaydetmeden şirketinizin verilerini korumanıza yardımcı olur. **Uygulama düzeyinde ilkeler** uygulayarak, şirket kaynaklarına erişimi kısıtlayabilir ve verileri BT departmanınızın kapsamında tutabilirsiniz.
 
 ### <a name="app-protection-policies-on-devices"></a>Cihazlarda uygulama koruma ilkeleri
 
@@ -60,7 +60,7 @@ Uygulama koruma ilkelerini kullanmanın önemli avantajları şunlardır:
 
 - **Şirket verilerinizi uygulama düzeyinde koruma.** Mobil uygulama yönetimi, cihaz yönetimi gerektirmediği için şirket verilerini hem yönetilen hem de yönetilmeyen cihazlarda koruyabilirsiniz. Yönetim, kullanıcı kimliğine odaklandığından cihaz yönetimine gerek kalmaz.
 
-- **Son Kullanıcı üretkenliği etkilenmez ve uygulama kişisel bağlamda kullanılırken ilkeler uygulanmaz.** İlkeler yalnızca iş bağlamında uygulanır; bu da size şirket verilerini kişisel verilere dokunmadan koruma olanağı tanır.
+- **Son kullanıcının üretkenliği etkilenmez ve uygulama kişisel bağlamda kullanılırken ilkeler uygulanmaz.** İlkeler yalnızca iş bağlamında uygulanır; bu da size şirket verilerini kişisel verilere dokunmadan koruma olanağı tanır.
 
 - **Uygulama koruma ilkeleri, uygulama katmanı korumalarının yerinde olmasını sağlar.** Örneğin, şunları yapabilirsiniz:
   - Bir uygulamanın iş bağlamında açılması için PIN isteyebilirsiniz 
@@ -79,7 +79,7 @@ Kullanıcıya cihaz durumunu ayarlamadan bir MAM ilkesi uygularsanız, Kullanıc
 
 Intune, ihtiyacınız olan uygulamaları çalıştırmak istediğiniz cihazlara almanıza yardımcı olacak çeşitli özellikler sunar. Daha fazla bilgi için bkz. [platforma göre uygulama yönetimi özellikleri](app-management.md#app-management-capabilities-by-platform).
 
-Intune uygulama koruma ilkeleri platformu desteği, Android ve iOS/ıpados cihazları için Office mobil uygulama platformu desteği ile hizalanır. Ayrıntılar için **Office Sistem Gereksinimleri**'nin [Mobil uygulamalar](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg) bölümüne bakın.
+Intune uygulama koruma ilkeleri platformu desteği, Android ve iOS/ıpados cihazları için Office mobil uygulama platformu desteği ile hizalanır. Ayrıntılar için [Office Sistem Gereksinimleri](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg)'nin **Mobil uygulamalar** bölümüne bakın.
 
 > [!IMPORTANT]
 > Android 'de uygulama koruma Ilkelerini almak için cihazda Intune Şirket Portalı gereklidir. Daha fazla bilgi için bkz. [Intune Şirket Portalı uygulama erişim gereksinimleri](../fundamentals/end-user-mam-apps-android.md#access-apps).
@@ -96,7 +96,7 @@ Uygulamalar kısıtlama olmadan kullanıldığında, şirket verileri ile kişis
 
 Şirket verilerinin cihazın yerel depolama alanına kaydedilmesini engellemek için uygulama koruma ilkelerini kullanabilirsiniz (aşağıdaki resme bakın). Ayrıca Uygulama koruma ilkesi kapsamında olmayan diğer uygulamalara veri taşımayı da kısıtlayabilirsiniz. Uygulama koruma ilkesi ayarları aşağıdakileri içerir:
 - **Kuruluş verilerinin kopyalarını kaydetme**ve **kesme, kopyalama ve yapıştırmayı kısıtlama**gibi veri konumu değiştirme ilkeleri.
-- **Erişim için basit PIN gerektir**, **Yönetilen uygulamaların, jailbreak uygulanmış veya kök erişim izni verilmiş cihazlarda çalışmasını engelle** gibi erişim ilkesi ayarları.
+- Erişim **için basıt PIN gerektir**, ve **yönetilen uygulamaların jailbreak uygulanmış veya kök erişim izni verilmiş cihazlarda çalıştırılmasını engellemek**gibi erişim ilkesi ayarları.
 
 ![İlkelere tarafından korunan şirket verilerini gösteren kavramsal görüntü](./media/app-protection-policy/apps-with-protection-policies.png)
 
@@ -167,7 +167,7 @@ Uygulama koruma ilkelerini Microsoft Office uygulamalarla kullanırken farkında
 ### <a name="word-excel-and-powerpoint"></a>Word, Excel ve PowerPoint
 [Word, Excel ve PowerPoint](https://products.office.com/business/office) uygulamalarını kullanmak için ek gereksinimler şunlardır:
 
-- Son kullanıcının Azure Active Directory hesabına bağlı bir [Office 365 İş veya Kurumsal](https://products.office.com/business/compare-more-office-365-for-business-plans) lisansına sahip olması gerekir. Aboneliğin mobil cihazlarda Office uygulamalarını içermesi gerekir ve [OneDrive İş](https://onedrive.live.com/about/business/)’te bir bulut depolama hesabını içerebilir. Office 365 lisansları, bu [yönergeleri](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)izleyerek [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com) atanabilir.
+- Son kullanıcının, Azure Active Directory hesaplarına bağlı [iş için Microsoft 365 uygulamaları veya kurumsal](https://products.office.com/business/compare-more-office-365-for-business-plans) bir lisansa sahip olması gerekir. Aboneliğin mobil cihazlarda Office uygulamalarını içermesi gerekir ve [OneDrive İş](https://onedrive.live.com/about/business/)’te bir bulut depolama hesabını içerebilir. Office 365 lisansları, bu [yönergeleri](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)izleyerek [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com) atanabilir.
 
 - Son kullanıcının, "kuruluş verilerinin kopyalarını Kaydet" uygulama koruma ilkesi ayarının altında parçalı farklı kaydet işlevi kullanılarak yapılandırılmış bir yönetilen konumu olmalıdır. Örneğin, yönetilen konum OneDrive ise [OneDrive](https://onedrive.live.com/about/) uygulaması son kullanıcının Word, Excel veya PowerPoint uygulamasında yapılandırılmalıdır.
 
@@ -190,7 +190,7 @@ OneDrive Admin konsolundan bulunabilecek ayarlar **Genel** ilke olarak adlandır
 
 Etkinleştirildikten sonra, iOS/ıpados ve Android için OneDrive ve SharePoint uygulamaları varsayılan olarak seçilen ayarlarla korunur. Bir BT uzmanı bu ilkeyi Intune konsolunda düzenleyebilir ve hedeflenen başka uygulamalar ekleyebilir ve herhangi bir ilke ayarını değiştirebilir. 
 
-Varsayılan olarak kiracı başına yalnızca bir **Genel** ilke olabilir. Ancak kiracı başına fazladan genel ilkeler oluşturmak için [Intune Grafik API'leri](../developer/intune-graph-apis.md) kullanılabilirse de bu önerilmez. Fazladan genel ilkeler oluşturmak, böyle bir ilkenin uygulanmasındaki sorunları gidermek karmaşık hale gelebileceği için önerilmez.
+Varsayılan olarak kiracı başına yalnızca bir **Genel** ilke olabilir. Ancak kiracı başına fazladan genel ilkeler oluşturmak için [Intune Grafik API'leri](../developer/intune-graph-apis.md) kullanılabilirse de bu önerilmez. Bu tür bir ilkenin uygulanması karmaşık hale gelebileceğinden çok sayıda genel ilke oluşturulması önerilmez.
 
 **Genel** ilke kiracınızdaki tüm kullanıcılar için geçerli olsa da herhangi bir standart Intune uygulama koruma ilkesi bu ayarları geçersiz kılabilir.
 
@@ -310,7 +310,7 @@ Intune uygulama koruma ilkeleri, yalnızca Intune lisanslı kullanıcılara uygu
 Bu işlemin amacı, kuruluşunuzun uygulama içindeki verilerinin güvenli ve uygulama düzeyinde korunmasını sürdürmeye devam etmek için kullanılır. Bu özellik yalnızca iOS/ıpados için kullanılabilir ve iOS/ıpados, sürüm 9.0.1 veya üzeri için Intune SDK 'sını tümleştiren uygulamaların katılımını gerektirir. Hedeflenen uygulamalarda davranışın zorlanabilmesi için SDK tümleştirmesi gereklidir. Bu tümleştirme, sıralı bir şekilde gerçekleşir ve belirli uygulama ekiplerine bağımlıdır. Katılan uygulamalardan bazıları WXP, Outlook, Managed Browser ve Yammer’dır.
   
 ### <a name="ios-share-extension"></a>iOS Share uzantısı
-Veri Aktarım İlkesi **yalnızca yönetilen uygulamalar** veya **uygulama olmadan**ayarlanmış olsa bile, yönetilmeyen uygulamalarda iş veya okul verilerini açmak Için iOS/ıpados Share uzantısını kullanabilirsiniz. Intune uygulama koruma ilkesi, cihazı yönetmeksizin iOS/ıpados paylaşma uzantısını denetlemez. Bu nedenle, Intune _**“kurumsal” verileri veriler uygulama dışında paylaşılmadan önce şifreler**_ . Yönetilen uygulama dışında bir "Kurumsal" dosya açmaya çalışırken bu şifreleme davranışını doğrulayabilirsiniz. Bu dosya yalnızca şifrelenmiş ve yönetilen bir uygulama olarak açılmalıdır.
+Veri Aktarım İlkesi **yalnızca yönetilen uygulamalar** veya **uygulama olmadan**ayarlanmış olsa bile, yönetilmeyen uygulamalarda iş veya okul verilerini açmak Için iOS/ıpados Share uzantısını kullanabilirsiniz. Intune uygulama koruma ilkesi, cihazı yönetmeksizin iOS/ıpados paylaşma uzantısını denetlemez. Bu nedenle, Intune _**“kurumsal” verileri veriler uygulama dışında paylaşılmadan önce şifreler**_. Yönetilen uygulama dışında bir "Kurumsal" dosya açmaya çalışırken bu şifreleme davranışını doğrulayabilirsiniz. Bu dosya şifrelenmiş olmalı ve yönetilen bir uygulama dışında açılamamalıdır.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Aynı uygulama ve kullanıcı kümesi için birden çok Intune uygulama koruma erişimi ayarı
 Erişim için Intune uygulama koruma ilkeleri, hedeflenen bir uygulamaya kurumsal hesabından erişmeyi denediğinde Son Kullanıcı cihazlarında belirli bir sırada uygulanır. Genel olarak öncelik temizlemededir; ardından engelleme, sonra da kapatılabilen uyarı gelir. Örneğin, belirli bir Kullanıcı/uygulama için geçerliyse, bir kullanıcıyı iOS/ıpados sürümünü güncelleştirmek üzere uyaran en düşük iOS/ıpados işletim sistemi ayarı, kullanıcının erişimini engelleyen en düşük iOS/ıpados işletim sistemi ayarından sonra uygulanır. Dolayısıyla, BT yöneticisinin en düşük iOS işletim sistemi olarak 11.0.0.0 ve en düşük iOS işletim sistemi (yalnızca Uyarı) olarak 11.1.0.0'ı ayarladığı bir senaryoda, uygulamaya erişmeye çalışan cihazın işletim sistemi iOS 10 olduğunda, son kullanıcı erişimin engellenmesine yol açan en düşük iOS işletim sistemi sürümüne yönelik daha kısıtlayıcı ayar temel alınarak engellenebilir.
@@ -320,7 +320,7 @@ Farklı ayar türleriyle ilgilenirken, bir Intune SDK sürümü gereksinimi önc
 ## <a name="app-protection-experience-for-android-devices"></a>Android cihazlar için uygulama koruma deneyimi
 
 ### <a name="company-portal-app-and-intune-app-protection"></a>Şirket Portalı uygulaması ve Intune uygulama koruması
-Uygulama koruma işlevlerinin çoğu Şirket Portalı uygulamasında yerleşik olarak bulunur. Şirket Portalı uygulaması her zaman gerekli olsa bile cihaz kaydı _gerekli değildir_. Kayıt olmadan mobil uygulama yönetimi için son kullanıcının cihazda Şirket Portalı uygulamasının yüklü olması gerekir.
+Uygulama koruma işlevlerinin çoğu Şirket Portalı uygulamasında yerleşik olarak bulunur. Şirket Portalı uygulaması her zaman gerekli olsa bile cihaz kaydı _gerekli değildir_ . Kayıt olmadan mobil uygulama yönetimi için son kullanıcının cihazda Şirket Portalı uygulamasının yüklü olması gerekir.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Aynı uygulama ve kullanıcı kümesi için birden çok Intune uygulama koruma erişimi ayarı
 Erişim için Intune uygulama koruma ilkeleri, hedeflenen bir uygulamaya kurumsal hesabından erişmeyi denediğinde Son Kullanıcı cihazlarında belirli bir sırada uygulanır. Genel olarak öncelik engellemededir; ardından kapatılabilen uyarı gelir. Örneğin, belirli bir kullanıcı/uygulama için uygunsa, kullanıcıyı bir yama yükseltmesi alması için uyaran en düşük Android yama sürümü ayarı, kullanıcının erişimini engelleyen en düşük Android yama sürümü ayarından sonra uygulanacaktır. Dolayısıyla, BT yöneticisinin en düşük Android yama sürümü olarak 2018-03-01 ve en düşük Android yama sürümü (yalnızca Uyarı) olarak 2018-02-01'i ayarladığı bir senaryoda, uygulamaya erişmeye çalışan cihazın yama sürümü 2018-01-01 olduğunda, son kullanıcı erişimin engellenmesine yol açan en düşük Android yama sürümüne yönelik daha kısıtlayıcı ayar temel alınarak engellenebilir. 
@@ -334,7 +334,7 @@ Intune uygulama koruma ilkeleri, yöneticilerin, Son Kullanıcı cihazların And
 Intune Uygulama Koruması Ilkeleri, yöneticilerin Android cihazları için Google 'ın uygulamaları doğrula API 'SI aracılığıyla Son Kullanıcı cihazların sinyal göndermesini gerektirmek için yetenek sağlar. Bunun nasıl yapılacağı hakkında yönergeler cihaz tarafından biraz farklılık gösterir. Genel işlem, Google Play Store gidip **uygulamalarıma & oyunlarına**tıklayarak, son uygulama taramasının sonucunu tıklayarak, yürütme koruması menüsüne gidecektir. **Tarama cihazını güvenlik tehditlerine** karşı değiştirme seçeneğinin açık olduğundan emin olun.
 
 ### <a name="googles-safetynet-attestation-api"></a>Google 'ın SafetyNet kanıtlama API 'SI 
-Intune, kayıtlı olmayan cihazlar için mevcut kök algılama denetimlerimize eklemek üzere SafetyNet API 'Lerini koruma Google Play kullanır. Google, Android uygulamalarının köklü cihazlarda çalıştırılmasını istemediklerinde benimsemesini sağlamak üzere bu API kümesini geliştirmiştir ve yaşmıştır. Android ödeme uygulaması bu şekilde eklenmiştir. Google, oluşan kök algılama denetimlerinden tamamen ortak bir şekilde paylaşmadığı sürece, bu API 'Lerin cihazlarını barındıran kullanıcıları algılamasını bekledik. Bu kullanıcıların, ilke etkin uygulamalarından daha sonra erişimine veya şirket hesaplarına erişimi engellenebilir. **Temel bütünlüğü denetle** , cihazın genel bütünlüğünü söyler. Köklü cihazlar, Öykünücüler, sanal cihazlar ve değişiklik işaretlerine sahip cihazlar temel bütünlüğü başarısız oluyor. **& Sertifikalı cihazların temel bütünlüğünü kontrol edin** ve bu, cihazın Google 'ın hizmetleriyle uyumluluğunu söyler. Yalnızca Google tarafından sertifikalı değiştirilmemiş cihazlar bu denetimi geçirebilir. Başarısız olacak cihazlar şunları içerir:
+Intune, kayıtlı olmayan cihazlar için mevcut kök algılama denetimlerimize eklemek üzere SafetyNet API 'Lerini koruma Google Play kullanır. Google, Android uygulamalarının köklü cihazlarda çalıştırılmasını istemediklerinde benimsemesini sağlamak üzere bu API kümesini geliştirmiştir ve yaşmıştır. Android ödeme uygulaması bu şekilde eklenmiştir. Google, oluşan kök algılama denetimlerinden tamamen ortak bir şekilde paylaşmadığı sürece, bu API 'Lerin cihazlarını barındıran kullanıcıları algılamasını bekledik. Bu kullanıcıların, ilke etkin uygulamalarından daha sonra erişimine veya şirket hesaplarına erişimi engellenebilir. **Temel bütünlüğü denetle** , cihazın genel bütünlüğünü söyler. Köklü cihazlar, Öykünücüler, sanal cihazlar ve değişiklik işaretlerine sahip cihazlar temel bütünlüğü başarısız oluyor. **& sertifikalı cihazların temel bütünlüğünü kontrol edin** ve bu, cihazın Google 'ın hizmetleriyle uyumluluğunu söyler. Yalnızca Google tarafından sertifikalı değiştirilmemiş cihazlar bu denetimi geçirebilir. Başarısız olacak cihazlar şunları içerir:
 
 - Temel bütünlük başarısız olan cihazlar
 - Kilidi açılmış bir önyükleme yükleyicisine sahip cihazlar

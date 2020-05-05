@@ -1,5 +1,5 @@
 ---
-title: Kuruluş tarafından sağlanan iOS cihazınızı yönetime kaydedin. | Microsoft Docs
+title: Kuruluş tarafından sağlanan iOS cihazınızı yönetime kaydedin. | Microsoft Belgeleri
 description: Kuruluşunuz tarafından satın alınan ve sağlanan bir iOS cihazın Intune’a nasıl kaydedildiğini açıklar
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1f6af588b6350bb7a0d2058f8f623c51bbdaa4c4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4c31f8ee0389da35fe515928cbb286dd2632809f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324842"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077742"
 ---
 # <a name="enroll-your-organization-provided-ios-device-in-management"></a>Kuruluş tarafından sağlanan iOS cihazınızı yönetime kaydedin
 
@@ -45,7 +45,7 @@ Kuruluş tarafından sağlanan bir cihaz yerine kendi iOS cihazınızı kullanı
 1. iOS cihazınızı başlatın.
 2. **Dil** ayarınızı yaptıktan sonra cihazınızı Wi-Fi’a bağlayın.
 3. **İOS cihazını ayarla** ekranında **yeni cihaz olarak ayarla**' yı seçin.  
-4. Wi-Fi’a bağlandıktan sonra **Yapılandırma** ekranı görünür. Bu ekranda **[Şirketiniz], cihazınızı otomatik olarak yapılandıracaktır** ifadesi yer alır.
+4. Wi-Fi ' a Bağlandıktan sonra **yapılandırma** ekranı görüntülenir. Bu ekranda **[Şirketiniz], cihazınızı otomatik olarak yapılandıracaktır** ifadesi yer alır.
 
    **Yapılandırma [şirketiniz] uygulamasının bu cihazı hava üzerinden yönetmesine olanak tanır. Yönetici, e-posta ve ağ hesapları ayarlamanıza, uygulama yükleyip yapılandırmanıza ve ayarları uzaktan yönetmenize yardımcı olabilir. Bir yönetici özellikleri devre dışı bırakabilir, uygulama yükleyip kaldırabilir, Internet trafiğinizi izleyip kısıtlayabilir ve bu cihazı uzaktan silebilir.**
 

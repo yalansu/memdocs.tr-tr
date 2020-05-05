@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 525389e2f1cec207389bc37816ea4fc5399c99b4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9bb40b21d9a257586bbd38d24b2e9b6b0a9f8ce3
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329114"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079544"
 ---
 # <a name="data-storage-and-processing-in-intune"></a>Intune’da veri depolama ve işleme
 
@@ -35,9 +35,9 @@ Toplanan ve telemetri olmayan tüm veriler, Intune hizmetinde işlenir ve aşağ
 
 - SQLAzure 
 - Güvenilir Koleksiyonlar (Service Fabric)  
-- Azure depolama 
+- Azure Storage 
 
-İzlemenin ve düzgün çalışan bir hizmet sağlamanın anahtarı olan telemetri (hizmet günlükleri, performans günlükleri, hatalar vb.) Microsoft’un telemetri veri depolarına gönderilir.
+İzleme için anahtar olan telemetri (hizmet günlükleri, performans günlükleri, hatalar vb.) Microsoft 'un telemetri veri depolarına gönderilir.
 
 ### <a name="storage-locations"></a>Depolama konumları
 
@@ -63,12 +63,12 @@ Microsoft Intune, hizmet sağlama işleminin parçası olarak toplanan hiçbir k
 
 ### <a name="restrict-processing-of-personal-data"></a>Kişisel verilerin işlenmesini kısıtlama
 
-Bir kullanıcıya ait kişisel verilerin işlenmesini kısıtlamak için kullanıcı hesabını aşağıdaki yollarla silebilirsiniz:
+Bir kullanıcının kişisel verilerinin işlenmesini kısıtlamak için, kullanıcılar hesabını şu şekilde silebilirsiniz:
 1. Kullanıcının aşağıdakiler dahil olmak üzere kişisel verilerinin elektronik kopyasını dışarı aktararak
-    - hesaplar
+    - accounts
     - hizmet verileri
-    - ilişkili uygulamalar
-2. Kullanıcının hesabını ve ilişkili verilerini Intune’dan silerek.
+    - ilişkili günlükler
+2. Kullanıcının hesabı ve Intune 'dan ilişkili veriler siliniyor.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dc2c1d4f07e601d98bc2f26ec4766e21a8f1bc7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5d56d3982a036ace198ceae9bf2d01a8c12de6d5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328890"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079153"
 ---
 # <a name="troubleshoot-conditional-access"></a>Koşullu erişim sorunlarını giderme
 Bu makalede, kullanıcılarınız koşullu erişimle korunan kaynaklara erişim izni alamazsanız veya kullanıcılar korumalı kaynaklara erişebiliyorsa ve engellenmesi gereken durumlarda ne yapılacağını açıklar.
@@ -42,7 +42,7 @@ Koşullu erişimin çalışması için aşağıdaki gereksinimlerin karşılanma
 
 - Gerek kullanıcı, gerekse cihaz, atanan Intune ilkeleriyle uyumlu olmalıdır.
 
-- Kullanıcıya varsayılan olarak bir cihaz uyumluluk ilkesi atanmış olmalıdır. Bu, Intune yönetim portalında **cihaz uyumluluğu** > **Uyumluluk ilkesi ayarları** ' nın altında olan **Uyumluluk ilkesi atanmamış ayar işareti cihazlarının** yapılandırmasına bağlıdır.
+- Kullanıcıya varsayılan olarak bir cihaz uyumluluk ilkesi atanmış olmalıdır. Bu, Intune yönetim portalındaki **cihaz uyumluluk** > **uyumluluğu ilke ayarları** altında olan **Uyumluluk ilkesi atanmamış olan ayar işareti cihazlarının** yapılandırmasına bağlıdır.
 
 - Kullanıcı Outlook yerine cihazın yerel posta istemcisini kullanıyorsa, cihazda Exchange ActiveSync etkinleştirilmelidir. Bu, iOS/ıpados, Windows Phone ve Android Knox cihazları için otomatik olarak gerçekleşir.
 
@@ -80,16 +80,16 @@ Azure Yönetim Portalı’nda ve cihaz envanteri raporunda her cihaz için bu ko
   1. Şirket Portalı uygulamasını açın.
   2. Üçlü noktalar (...) veya donanım menü düğmesinden Ayarlar sayfasına gidin.
   3. *Tarayıcı erişimini etkinleştir* düğmesini seçin.
-  4. Chrome tarayıcıda, Office 365 oturumunu kapatın ve Chrome’u yeniden başlatın.  
+  4. Chrome tarayıcısında, Office 365 oturumunu kapatın ve Chrome’u yeniden başlatın.  
 
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>Cihazlar engelleniyor ve hiçbir karantina e-postası alınmıyor
 
-- Cihazın Intune yönetim konsolunda bir Exchange ActiveSync cihazı olarak mevcut olduğundan emin olun. Değilse, cihaz olası bir Exchange Connector sorunu nedeniyle bulunamıyor olabilir. Daha fazla bilgi için bkz. [Intune şirket Içi Exchange Connector sorunlarını giderme](troubleshoot-exchange-connector.md).
+- Cihazın Intune yönetim konsolunda bir Exchange ActiveSync cihazı olarak mevcut olduğundan emin olun. Aksi takdirde, büyük olasılıkla bir Exchange Connector sorunu nedeniyle cihaz bulma başarısız olur. Daha fazla bilgi için bkz. [Intune şirket Içi Exchange Connector sorunlarını giderme](troubleshoot-exchange-connector.md).
 
 - Exchange Connector bir cihazı engellemeden önce bir etkinleştirme (karantina) e-postası gönderir. Cihaz çevrimdışıysa, etkinleştirme e-postasını almayabilir. 
 
-- Cihazdaki e-posta istemcisinin e-postayı **Yoklama** yerine **Anında İletme** ile alacak şekilde mi yapılandırıldığına bakın. Öyle yapılandırılmışsa, bu, kullanıcının e-postayı kaçırmasına neden olabilir. **Yoklama** yöntemine geçip cihazın e-postayı alıp almadığına bakın.
+- Cihazdaki e-posta istemcisinin e-postayı **Yoklama** yerine **Anında İletme** ile alacak şekilde mi yapılandırıldığına bakın. Öyle yapılandırılmışsa, bu, kullanıcının e-postayı kaçırmasına neden olabilir. **Yoklamaya** geçin ve cihazın e-postayı alıp almadığına bakın.
 
 ## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>Cihazlar uyumsuz, ancak kullanıcılar engellenmiyor
 
@@ -105,12 +105,12 @@ Azure Yönetim Portalı’nda ve cihaz envanteri raporunda her cihaz için bu ko
 
 Bir cihaz uyumlu değilse ancak erişime sahip olmaya devam ederse, aşağıdaki işlemleri gerçekleştirin.
 
-- Hedef ve Dışlama gruplarını gözden geçirin. Kullanıcı doğru hedef grupta değilse veya dışlama grubundaysa, engellenmez. Yalnızca Hedef grupta olan kullanıcıların cihazlarında uyumluluk denetimi yapılır.
+- Hedef ve Dışlama gruplarını gözden geçirin. Bir kullanıcı doğru hedef grupta değilse veya dışlama grubsa, bunlar engellenmeyecektir. Yalnızca Hedef grupta olan kullanıcıların cihazlarında uyumluluk denetimi yapılır.
 
 - Cihazın bulunabildiğinden emin olun. Exchange Connector bir Exchange 2010 CAS’ine, buna karşın kullanıcı bir Exchange 2013 sunucusuna mı işaret ediyor? Bu durumda, varsayılan Exchange kuralı İzin Ver ise, kullanıcı Hedef grupta olsa bile Intune cihazın Exchange’a bağlandığının farkında olamaz.
 
 - Exchange’de Cihazın Varlığı/Erişim Durumu’nu kontrol edin:
-  - Bir posta kutusunun tüm mobil cihazlarının listesini almak için bu PowerShell cmdlet 'ini kullanın: ' Get-ActiveSyncDeviceStatistics-Mailbox MBX '. Cihaz listede yoksa Exchange’e erişmiyordur.
+  - Bir posta kutusunun tüm mobil cihazlarının listesini almak için bu PowerShell cmdlet 'ini kullanın: ' Get-ActiveSyncDeviceStatistics-Mailbox MBX '. Cihaz listede yoksa Exchange 'e erişmez.
   
   - Cihaz listeleniyorsa, ' Get-CASmailbox-Identity: ' UPN ' kullanın | fl ' cmdlet 'i, erişim durumu hakkında ayrıntılı bilgi almak ve bu bilgileri Microsoft Desteği sağlamak için sağlar.
 

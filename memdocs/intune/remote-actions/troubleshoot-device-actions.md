@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78dec649f5486e0dcf56f92b8ac16d176d119653
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 2ad644d8438b23f36eccad24bee31ee92de5c040
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322332"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078864"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Intune 'da cihaz eylemlerinin sorunlarını giderme
 
@@ -32,7 +32,7 @@ Microsoft Intune, cihazlarınıza yardımcı olacak çok sayıda eyleme sahiptir
 ## <a name="disable-activation-lock-action"></a>Etkinleştirme Kilidi eylemini devre dışı bırak
 
 ### <a name="i-clicked-the-disable-activation-lock-action-in-the-portal-but-nothing-happened-on-the-device"></a>Portalda "Etkinleştirme Kilidi devre dışı bırak" eylemine tıkladım, ancak cihazda hiçbir şey yapılmadı.
-Bu beklenen bir değer. Devre dışı bırakma Etkinleştirme Kilidi eylemini başlattıktan sonra, Intune Apple 'dan güncelleştirilmiş bir kod istedi. Cihazınız Etkinleştirme Kilidi ekranında olduktan sonra kodu geçiş kodu alanına el ile girersiniz. Bu kod yalnızca 15 gün için geçerlidir. bu nedenle, silme işlemini gerçekleştirmeden önce eyleme tıkladıktan sonra kodu kopyalamanız gerekir.
+Bu beklenen bir durumdur. Devre dışı bırakma Etkinleştirme Kilidi eylemini başlattıktan sonra, Intune Apple 'dan güncelleştirilmiş bir kod istedi. Cihazınız Etkinleştirme Kilidi ekranında olduktan sonra kodu geçiş kodu alanına el ile girersiniz. Bu kod yalnızca 15 gün için geçerlidir. bu nedenle, silme işlemini gerçekleştirmeden önce eyleme tıkladıktan sonra kodu kopyalamanız gerekir.
 
 ### <a name="why-dont-i-see-the-disable-activation-lock-code-in-the-hardware-overview-blade-of-my-iosipados-device"></a>İOS/ıpados cihazımın donanım genel bakış dikey penceresinde neden devre dışı bırak Etkinleştirme Kilidi kodunu görmüyorum?
 En olası nedenler şunlardır:
@@ -54,7 +54,7 @@ Hayır. Ve kısa çizgileri girmeniz gerekmez.
 ## <a name="remove-devices-action"></a>Cihazları kaldır eylemi
 
 ### <a name="how-do-i-tell-who-started-a-retirewipe"></a>Nasıl yaparım? devre dışı bırakmayı/silmeyi kimin başlatdığına söylüyorsunuz?
-[Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nde, **Denetim günlükleri** > **kiracı yönetimi** ' ne gidin > **başlatılan** sütununa bakın.
+[Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **Kiracı Yönetimi** > **Denetim günlükleri** ' ne gidin > **tarafından başlatılan** sütununa bakın.
 Giriş görmüyorsanız, eylemi başlatan en olası kişi cihazın kullanıcısı olur. Büyük olasılıkla Şirket Portalı uygulamasını veya portal.manage.microsoft.com kullandık.
 
 ### <a name="why-wasnt-my-application-uninstalled-after-using-retire"></a>Uygulamam kullanımdan kaldırıldıktan sonra neden kaldırılamadı?

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8612640ec71075194af680535a988f2228bb66fd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 21b1fb333ce77fdf358e268eb22db17708bbfe11
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332650"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076144"
 ---
 # <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>Paylaşılan iPad cihazları için Intune eğitim ayarlarını yapılandırma
 
@@ -40,11 +40,11 @@ Sınıf uygulamasını kullanmak üzere adanmış (1:1) iPad cihazlarını yapı
 
 Paylaşılan iPad özelliklerini kullanmak için önkoşullar şunlardır:
 
-- [Apple School Manager](../enrollment/apple-school-manager-set-up-ios.md) ve [School Data Sync (SDS)](https://support.office.com/article/Apple-School-Manager-integration-with-Intune-for-Education-and-School-Data-Sync-974bd1f9-2c7a-45cb-9447-b58166108617)’i kurma.
+- [Apple Okul Yöneticisi](../enrollment/apple-school-manager-set-up-ios.md) ve [okul VERI eşitlemesini (SDS)](https://support.office.com/article/Apple-School-Manager-integration-with-Intune-for-Education-and-School-Data-Sync-974bd1f9-2c7a-45cb-9447-b58166108617)ayarlayın.
 - Apple School Manager kurulumunun bir parçası olarak [Apple kimliklerini yönet](http://help.apple.com/schoolmanager/#/tes78b477c81)'i öğrenciler için yapılandırın. [Yönetilen Apple kimlikleri hakkında daha fazla bilgi edinin](https://support.apple.com/HT205918).
 - Apple School Manager'dan eşitlenmiş cihaz seri numaraları için bir kayıt profili oluşturun.
 
-## <a name="step-1---import-your-school-data-into-azure-active-directory"></a>1\. Adım - Okul verilerinizi Azure Active Directory'ye aktarın
+## <a name="step-1---import-your-school-data-into-azure-active-directory"></a>1. Adım - Okul verilerinizi Azure Active Directory'ye aktarın
 
 Mevcut Öğrenci Bilgi Sisteminden (SIS) Azure Active Directory’ye (Azure AD) okul kayıtlarını içeri aktarmak için Microsoft'un School Data Sync (SDS) özelliğini kullanın.
 SDS, SIS bilgilerinizi eşitler ve Azure AD'de depolar. Azure AD, kullanıcıları ve cihazları düzenlemenize yardımcı olan bir Microsoft yönetim sistemidir. Ardından öğrencilerinizi ve sınıflarınızı yönetmenize yardımcı olması için bu verileri kullanabilirsiniz. [SDS dağıtma hakkında daha fazla bilgi edinin](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91).
@@ -64,18 +64,18 @@ Aşağıdaki yöntemlerden birini kullanarak SDS’ye bilgi aktarabilirsiniz:
 - [Azure Active Directory'de lisanslama hakkında daha fazla bilgi edinin](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
 
-## <a name="step-2---create-and-assign-an-iosipados-education-profile-in-intune"></a>2\. adım-Intune 'da iOS/ıpados eğitim profili oluşturma ve atama
+## <a name="step-2---create-and-assign-an-iosipados-education-profile-in-intune"></a>2. adım-Intune 'da iOS/ıpados eğitim profili oluşturma ve atama
 
 ### <a name="configure-general-settings"></a>Genel ayarları yapılandırma
 
 1. [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)'da oturum açın.
-3. **Intune** bölmesinde, **Cihaz yapılandırması**’nı seçin.
+3. **Intune** bölmesinde **Cihaz yapılandırması**’nı seçin.
 2. **Yönet** bölümü altındaki **Cihaz yapılandırması** bölmesinden **Profiller**’i seçin.
-5. Profiller bölmesinde **Profil oluştur**’u seçin.
+5. Profiller bölmesinde **Profil oluştur**' u seçin.
 6. **Profil oluştur** bölmesinde, IOS/ıpados eğitim profili Için bir **ad** ve **Açıklama** girin.
 7. **Platform** açılan listesinden **iOS**’yi seçin.
 8. **Profil türü** açılan listesinde **Eğitim**’i seçin.
-9. **Ayarlar** > **Yapılandır**’ı seçin.
+9. **Ayarları** > **Yapılandır**' ı seçin.
 
 Ardından, öğretmen ve öğrencilerin iPad cihazları arasında bir güven ilişkisi kurmak için sertifikalara ihtiyacınız olacaktır. Sertifikalar, kullanıcı adları ve parolaları girmeye gerek olmadan cihazlar arasında bağlantıların kimliğini sorunsuz ve sessiz bir şekilde doğrulamak için kullanılır.
 
@@ -132,11 +132,11 @@ Sertifikaları yapılandırmayı bitirdiğinizde **Tamam**’ı seçin.
 ### <a name="complete-certificate-setup"></a>Sertifika Kurulumunu Tamamlama
 
 1. **Eğitim** bölmesinde **Tamam**'ı seçin.
-2. **Profil oluştur** bölmesinde **Oluştur**’u seçin.
+2. **Profil Oluştur** bölmesinde **Oluştur**’u seçin.
 
 Profil oluşturulur ve profil listesi bölmesinde görüntülenir.
 
-## <a name="step-3---create-a-device-category"></a>3\. Adım - Bir cihaz kategorisi oluşturun
+## <a name="step-3---create-a-device-category"></a>3. Adım - Bir cihaz kategorisi oluşturun
 
 1. [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)'da oturum açın.
 3. **Intune** bölmesinde **Cihaz kaydı**'nı seçin.
@@ -147,7 +147,7 @@ Profil oluşturulur ve profil listesi bölmesinde görüntülenir.
 
 Cihaz kategorisi **Kayıt – Cihaz Kategorileri** bölmesinde oluşturulur.
 
-## <a name="step-4--create-a-dynamic-group"></a>4\. Adım – Dinamik bir grup oluşturun
+## <a name="step-4--create-a-dynamic-group"></a>4. Adım – Dinamik bir grup oluşturun
 
 1. [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)'da oturum açın.
 3. **Intune** bölmesinde **Gruplar**'ı seçin.
@@ -164,37 +164,37 @@ Cihaz kategorisi **Kayıt – Cihaz Kategorileri** bölmesinde oluşturulur.
 
 Dinamik grup **Kullanıcılar ve Gruplar – Tüm Gruplar** bölmesinde oluşturulur.
 
-## <a name="step-5--assign-a-device-to-a-category-carts"></a>5\. Adım – Bir kategoriye cihaz atayın (Sepetler)
+## <a name="step-5--assign-a-device-to-a-category-carts"></a>5. Adım – Bir kategoriye cihaz atayın (Sepetler)
 
 1. [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)'da oturum açın.
 3. **Intune** bölmesinde **Cihazlar**’ı seçin.
-4. **Cihazlar** bölmesinde, **Tüm cihazlar**'ı seçin.
+4. **Cihazlar** bölmesinde **Tüm cihazlar**'ı seçin.
 5. **Cihazlar – Tüm cihazlar** bölmesinde bir cihaz seçin.
 6. Cihaz bölmesinde **Özellikler**'i seçin.
-7. Cihazın özellikler bölmesinde, **Cihaz kategorisi** metin kutusuna cihaz kategorisini girin.
+7. Cihazın Özellikler **bölmesinde cihaz kategorisi metin kutusuna** cihaz kategorisini girin.
 8. Cihaz bölmesinde **Kaydet**'i seçin.
 
 Cihaz artık cihaz kategorisiyle ilişkilendirilmiştir. Bu işlemi, oluşturduğunuz cihaz kategorisiyle ilişkilendirmek istediğiniz tüm cihazlar için yineleyin.
 
-## <a name="step-6--create-classroom-profiles"></a>6\. Adım – Sınıf profilleri oluşturma
+## <a name="step-6--create-classroom-profiles"></a>6. Adım – Sınıf profilleri oluşturma
 
 1. [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)'da oturum açın.
-3. **Intune** bölmesinde, **Cihaz yapılandırması**’nı seçin.
+3. **Intune** bölmesinde **Cihaz yapılandırması**’nı seçin.
 4. **Cihaz yapılandırması** bölmesinde **Yönet** > **Sepet Profilleri**'ni seçin.
 5. Profiller bölmesinde **Profil Oluştur**’u seçin.
 6. **İlişkilendirme Oluştur** bölmesinde, bir **Ad** ve **Açıklama** girin.
-7. Grupları Sepet Profili ile ilişkilendirmek için **Sınıf Seç** > **Yapılandır** seçeneklerini belirleyin.
+7. Grupları sepet profili ile ilişkilendirmek için **sınıfları** > Seç**Yapılandır** ' ı seçin.
 8. Sepet Profili'ne dahil edilecek sınıfları seçin sonra **Seç**'i işaretleyin. 
-9. Grupları Sepet Profili ile ilişkilendirmek için **Sepet Seç** > **Yapılandır**'ı seçin.
+9. Grupları sepet profili ile ilişkilendirmek için **HTS** > **Yapılandır** ' ı seçin.
 10. Sepet Profili'ne dahil etmek istediğiniz grupları seçin, sonra **Seç**'i işaretleyin.
 11. **İlişkilendirme Oluştur** bölmesinde, Sepet Profili'ni kaydetmek için **Kaydet**'i seçin.
 
 Profil oluşturulur ve profil listesi bölmesinde görüntülenir.
 
-## <a name="step-7---assign-the-cart-profile-to-classes"></a>7\. Adım - Sepet Profilini Sınıflara Atama
+## <a name="step-7---assign-the-cart-profile-to-classes"></a>7. Adım - Sepet Profilini Sınıflara Atama
 
 1. [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)'da oturum açın.
-3. **Intune** bölmesinde, **Cihaz yapılandırması**’nı seçin.
+3. **Intune** bölmesinde **Cihaz yapılandırması**’nı seçin.
 4. **Cihaz yapılandırması** bölmesinde, **İzle** > **Atama durumu**'nu seçin.
 5. **Atama durumu** bölmesinde, oluşturduğunuz **Sepet Profili**'ni seçin.
 6. **Sepet Profili** bölmesinde **Atamalar**'ı seçin, sonra **Dahil Et**'in altından **Dahil edilecek grupları seç**'i seçin.

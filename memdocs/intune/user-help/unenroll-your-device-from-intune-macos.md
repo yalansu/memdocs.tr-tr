@@ -19,12 +19,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5b22902d4cc0aa28903cf5a159355c92befb8e6b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c0c2e76157ee09d5094e81856a27e655b5932d1f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324198"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077419"
 ---
 # <a name="unenroll-your-macos-device-from-company-portal"></a>MacOS cihazınızın Şirket Portalı kaydını kaldırma
 
@@ -40,15 +40,15 @@ macOS cihazınızın yönetim kaydını silmek için bu adımları izleyin:
 
 Cihazınızı Intune’dan kaldırdığınızda şunlar olur:
 
-- Cihazınız Şirket Portalı’nda gösterilmez.
+- Cihazınız Şirket Portalı görünmüyor.
 
-- Şirket Portalı’ndan uygulama yükleyemezsiniz.
+- Şirket Portalı uygulama yükleyemezsiniz.
 
 - Cihazı eklediğinizde değiştirilmiş olan ayarların (parola uzunluğu gibi) hiçbiri artık geçerli değildir.
 
 - Dosya paylaşımları veya dahili web siteleri gibi şirket kaynaklarına erişemeyebilirsiniz.
 
-- Cihazınızda artık şirket uygulamalarını ve şirket verilerini kullanamazsınız.
+- Artık cihazınızda şirket uygulamalarını ve şirket verilerini kullanamazsınız.
 
 - Artık Wi-Fi veya bir sanal özel ağ (VPN) kullanarak şirket ağınıza bağlanamayabilirsiniz.
 

@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b4a16204afc99169183e02eb269ab24d7f63cc49
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6fa5865c1be4733df6edef484894b246c767db59
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327470"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079612"
 ---
 # <a name="install-missing-certificate-required-by-your-organization"></a>Kuruluşunuz için gereken eksik sertifikayı yükler  
 
@@ -43,7 +43,7 @@ Gerekli sertifikayı indirmeyi ve cihazınızın kaydedilmesini sağlamak için 
 Tarayıcı erişimini etkinleştirmek için bu adımları izleyin. Erişimi etkinleştirdikten sonra, Şirket Portalı uygun sertifikayı yükleyecek ve kayıt işlemine devam edecektir.    
 
 1. Şirket Portalı uygulamasında sağ köşeye gidin ve menüyü seçin.  
-2. **Ayarlar**’ı seçin.  
+2. **Ayarlar**' ı seçin.  
 3. **Tarayıcı erişimini etkinleştir** ' ın yanında **Etkinleştir**' i seçin.  
 4. Cihaz Yöneticisi ekranında **Etkinleştir**' i seçin. 
 
@@ -74,7 +74,7 @@ Sertifikayı cihazınızda el ile tanımlamak ve yüklemek için bu adımları u
 
 4. Aşağıdaki ekran görüntüsünde gösterilen **Sertifikayı Adlandır** iletişim kutusunda varsayılan sertifika adını kabul edin.
 
-5. **Kimlik Bilgisi Kullanımı**’nın **VPN ve uygulamalar için kullanılır** olarak ayarlandığından emin olun ve **Tamam**’a dokunun.
+5. **Kimlik bilgisi kullanımı** ' nın **VPN ve uygulamalar için kullanılmak**üzere ayarlandığından emin olun ve ardından **Tamam**' a dokunun.
 
     ![screenshot-certificate-name-dialog-showing-certificate-name](./media/andr-missing-cert-cert-name.png)
 

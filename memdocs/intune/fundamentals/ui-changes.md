@@ -18,15 +18,15 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbf58b7ae035bbd7da15814787f283c7b80e13e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5ff2898f97bbef4cba0d14d4810a503d613cff18
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330258"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077929"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Azure'daki Intune özelliğim nereye gitti?
-Intune'u Azure portalına taşırken bazı görevleri daha mantıklı bir şekilde organize ettik. Ancak her geliştirme sonrasında atlatılması gereken bir yeni düzene alışma süreci vardır. Bu başvuru kılavuzu, klasik portalda Intune’a aşina olanlar ve bir işlemi Azure portalında Intune’da nasıl gerçekleştireceğini merak edenler için hazırlanmıştır. Aradığınız özellik bu makalede yoksa , güncelleştirebilmemiz için makalenin sonuna yorumlarınızı yazın.
+Intune'u Azure portalına taşırken bazı görevleri daha mantıklı bir şekilde organize ettik. Ancak her geliştirme sonrasında atlatılması gereken bir yeni düzene alışma süreci vardır. Bu başvuru kılavuzu, klasik portalda Intune’a aşina olanlar ve bir işlemi Azure portalında Intune’da nasıl gerçekleştireceğini merak edenler için hazırlanmıştır. Bu makale bulmaya çalıştığınız bir özelliği kapsamazsa, güncelleştirebilmemiz için makalenin sonunda bir yorum bırakın.
 ## <a name="quick-reference-guide"></a>Hızlı başvuru kılavuzu
 
 |Özellik |Klasik portalda yol|Azure portalında Intune’da yol|
@@ -64,7 +64,7 @@ Varsayılan Cihaz Türü Kısıtlaması, klasik portaldaki Platform Kısıtlamal
 
 ![Azure cihaz türü kısıtlamalarının görüntüsü](./media/ui-changes/04-azure-platform-restrictions.png)
 
-Kişisel cihazlara izin verme veya bu cihazları engelleme özelliği artık Cihaz Türü Kısıtlamasının Platform Yapılandırmaları bölümünde yönetilmektedir.
+Kişisel cihazların izin verme veya engelleme özelliği artık cihaz türü kısıtlamasının platform yapılandırmalarının altında yönetiliyor.
 
 ![Azure kişisel cihaz engelleme ayarlarının görüntüsü](./media/ui-changes/05-azure-personal-block.png)
 
@@ -81,7 +81,7 @@ Kiracınız Azure portalına geçtikten sonra kiracınızın uyumluluk ilkeleri 
 Uyumluluk ilkelerini görüntülemek ve ilkeler üzerinde değişiklik yapmak için Azure portalını kullanmak isterseniz klasik portaldan eski ilkeleri kaldırmanız gerekir. Daha sonra bunları Azure portalında yeniden oluşturmalısınız. Cihaz uyumluluk ilkeleri hakkında daha fazla bilgi için bkz. [Intune’da cihaz uyumluluk ilkelerini kullanmaya başlama](../protect/device-compliance-get-started.md). 
 
 ## <a name="where-did-apple-dep-go"></a>Apple DEP nereye gitti?
-Klasik portalda Intune’u Apple’ın Aygıt Kayıt Programı ile tümleştirebiliyor ve Apple’ın hizmetiyle el ile eşitleme isteğinde bulunuyordunuz:
+Klasik portalda, Intune 'u Apple 'ın Aygıt Kayıt Programı tümleştirilecek ve Apple hizmetiyle el ile eşitleme isteğinde bulabilirsiniz:
 
 ![Klasik DEP belirtecinin görüntüsü](./media/ui-changes/06-classic-dep-token.png)
 
@@ -101,11 +101,11 @@ Klasik portalda Apple Aygıt Kayıt Programı (DEP) ve Apple Configurator aracı
 
 Bu listede hem Apple DEP hem de Configurator kayıtları bir arada görüntülenir. Profil ataması uyuşmazlığını (DEP profili ile AC seri numarası arası) azaltmak için Azure portalında seri numaraları iki liste haline getirdik:
 
-**DEP seri numaraları**
-![Azure DEP seri numaralarının görüntüsü](./media/ui-changes/10-azure-dep-serials.png)
+**DEP serial numbers**
+![Azure DEP seri numaralarının DEP seri numaraları resmi](./media/ui-changes/10-azure-dep-serials.png)
 
-**Apple Configurator seri numaraları**
-![Azure Apple Configurator seri numaralarının görüntüsü](./media/ui-changes/11-azure-ac-serials.png)
+**Apple Configurator serial numbers**
+![Azure Apple Configurator seri numaralarının Apple Configurator seri numaraları resmi](./media/ui-changes/11-azure-ac-serials.png)
 
 ### <a name="by-imei-all-platforms"></a>IMEI'ye göre (tüm platformlar)
 
@@ -128,8 +128,8 @@ Bu listede Apple Cihaz Kayıt Programı (**DEP Açık**) ile kullanılabilecek p
 
 İki profil türü arasındaki karışıklıkları ve olası yanlış eşlenmiş atamaları (DEP profili yerine Configurator cihazları ve tersi) azaltmak için Kayıt Programı profillerinin (hem Apple Cihaz Kayıt Programını hem de Apple Okul Yöneticisi'ni destekleyen) oluşturma ve yönetim adımlarıyla Apple Configurator profillerininkini ayırdık:
 
-**DEP profilleri**
-![Azure DEP profillerinin görüntüsü](./media/ui-changes/15-azure-dep-profiles.png)
+**DEP profiles**
+![Azure DEP profillerinin DEP profilleri görüntüsü](./media/ui-changes/15-azure-dep-profiles.png)
 
-**Apple Configurator profilleri**
-![Azure Apple Configurator profillerinin görüntüsü](./media/ui-changes/16-azure-ac-profiles.png)
+**Apple Configurator profiles**
+![Azure Apple Configurator profillerinin Apple Configurator profilleri görüntüsü](./media/ui-changes/16-azure-ac-profiles.png)

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aebb9163d236e5da48b92cfbbfc12e76db69b55c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9f4e6d425923637d991ef62bb0e3c8090e657403
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325318"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079561"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Intune’da veri güvenliği ve paylaşımı
 
@@ -52,21 +52,21 @@ Müşterinin Raporlayabildiği Güvenlik Olayı (CRSI) tanımlandığında müş
 
 Kiracı yöneticileri bazı işlevleri (Apple Aygıt Kayıt Programı gibi) açtığında, Microsoft Intune uygun üçüncü taraflarla veri paylaşımı için yönetici onayı alır. Böyle durumlarda Intune, şu taraflarla kişisel verileri paylaşabilir:
 
-- Microsoft’un aracısı olarak davranan üçüncü taraflar.
-- Yalnızca kiracı yöneticileri Intune’a açıkça bu izni verdiğinde Microsoft’un aracısı olarak davranan üçüncü taraflar.
+- Microsoft 'un aracıları gibi davranan üçüncü taraflar.
+- Üçüncü taraflar, Microsoft 'un aracıları olarak davranmayan, ancak yalnızca kiracı yöneticilerinin Intune iznini açıkça izin vermesi durumunda.
 
 Microsoft aracısı olarak davranan tüm üçüncü tarafları [Online Services Alt Yüklenici listesinde](https://aka.ms/Online_Serv_Subcontractor_List) bulabilirsiniz.
 
 Bu varlıklarla veri paylaşmanın amacı müşteri desteğine ve teknik desteğe, hizmet bakımına ve diğer işlemlere yardımcı olmaktır.
 
-Bir kiracının üçüncü tarafla anlaşması, üçüncü tarafın hizmetinde tutulan Intune kişisel verilerini yönetir. Bu anlaşma ayrıca Intune’a üçüncü taraf hizmete veri iletme izni verir.  
+Üçüncü tarafa sahip bir kiracının sözleşmesi, üçüncü tarafın hizmetinde tutulan Intune kişisel verilerini yönetir. Bu anlaşma ayrıca Intune’a üçüncü taraf hizmete veri iletme izni verir.  
 
 Belirli üçüncü taraflarla paylaşılan veriler hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 - [Intune’un Apple’a gönderdiği veriler](data-intune-sends-to-apple.md)
 - [Intune’un Google’a gönderdiği veriler](data-intune-sends-to-google.md)
 - [Apple’ın Intune’a gönderdiği veriler](data-apple-sends-to-intune.md)
 - [Google’ın Intune’a gönderdiği veriler](data-google-sends-to-intune.md)
-- [Veri JAMF Pro, Intune 'a gönderir](data-jamf-sends-to-intune.md)
+- [Jamf Pro’nun Intune’a gönderdiği veriler](data-jamf-sends-to-intune.md)
 
 ### <a name="microsoft-endpoint-configuration-manager-data-sharing"></a>Microsoft uç noktası Configuration Manager veri paylaşımı
 

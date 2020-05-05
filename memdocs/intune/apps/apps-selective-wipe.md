@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a063baf405c9f9886718242f48a47e1e5fe68f5
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1640928bfb1ca27d4ee72e014adad88db0976a2d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324497"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078354"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Intune tarafından yönetilen uygulamalardan kurumsal verileri temizleme
 
@@ -39,13 +39,13 @@ Cihaz kaybolduğunda veya çalındığında ya da çalışan şirketten ayrıld�
 >[!IMPORTANT]
 > Uygulamadan yerel adres defterine doğrudan eşitlenen kişiler kaldırılır. Yerel adres defterinden başka bir dış kaynağa eşitlenen kişiler silinemez. Şu anda bu özellik yalnızca Microsoft Outlook uygulaması için geçerlidir.
 
-## <a name="deployed-wip-policies-without-user-enrollment"></a>Kullanıcı kaydı olmadan dağıtılmış WıP ilkeleri
-Windows Information Protection (WıP) ilkeleri, MDM kullanıcılarının Windows 10 cihazını kaydetmesine gerek kalmadan dağıtılabilir. Bu yapılandırma, kullanıcıların Windows cihazlarının yönetimini sürdürmesini sağlarken şirketlerin de kurumsal belgelerini WIP yapılandırmasına göre korumasını sağlar. Belgeler bir kez bir WIP ilkesiyle korunduktan sonra korumalı veriler bir Intune yöneticisi tarafından seçmeli olarak silinebilir. Kullanıcı ve cihaz seçilerek ve bir silme isteği gönderilerek WIP İlkesi aracılığıyla korunan tüm veriler kullanılamaz hale getirilir. Azure portal Intune 'da, **istemci uygulaması** > **uygulama seçmeli silme**' yi seçin. Daha fazla bilgi için bkz. [Intune ile Windows Bilgi Koruması (WIP) uygulama koruma ilkesi oluşturma ve dağıtma](windows-information-protection-policy-create.md).
+## <a name="deployed-wip-policies-without-user-enrollment"></a>Kullanıcı kaydı olmadan dağıtılan WIP ilkeleri 
+Windows Information Protection (WıP) ilkeleri, MDM kullanıcılarının Windows 10 cihazını kaydetmesine gerek kalmadan dağıtılabilir. Bu yapılandırma, kullanıcıların Windows cihazlarının yönetimini sürdürmesini sağlarken şirketlerin de kurumsal belgelerini WIP yapılandırmasına göre korumasını sağlar. Belgeler bir WıP ilkesiyle korunduktan sonra, korunan veriler bir Intune Yöneticisi ([genel yönetici veya Intune Hizmet Yöneticisi](../fundamentals/users-add.md#types-of-administrators)) tarafından seçmeli olarak silinebilir. Kullanıcı ve cihaz seçilerek ve bir silme isteği gönderilerek WIP İlkesi aracılığıyla korunan tüm veriler kullanılamaz hale getirilir. Azure Portal Intune 'da, **istemci uygulama** > **uygulaması seçmeli silme**' yi seçin. Daha fazla bilgi için bkz. [Intune ile Windows Bilgi Koruması (WIP) uygulama koruma ilkesi oluşturma ve dağıtma](windows-information-protection-policy-create.md).
 
-## <a name="create-a-wipe-request"></a>Temizleme isteği oluşturma
+## <a name="create-a-device-based-wipe-request"></a>Cihaz tabanlı silme isteği oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulama seçmeli silme** > **silme Isteği oluştur** > **uygulamalar** ' ı seçin.<br>
+2. **Uygulamalar** > **uygulaması seçmeli silme** > **silme isteği oluştur**' u seçin.<br>
    **Temizleme Isteği oluştur** bölmesi görüntülenir.
 3. **Kullanıcı Seç**' e tıklayın, uygulama verilerini silmek istediğiniz kullanıcıyı seçin ve **Kullanıcı Seç** bölmesinin en altında bulunan **Seç** ' e tıklayın.
 
@@ -61,11 +61,21 @@ Hizmet, cihazdaki korunan her uygulama için ayrı bir silme isteği oluşturur 
 
    ![' Istemci uygulamalar-uygulama seçmeli silme ' bölmesinin ekran görüntüsü](./media/apps-selective-wipe/apps-selective-wipe-03.png)
 
+## <a name="create-a-user-based-wipe-request"></a>Kullanıcı tabanlı silme isteği oluştur
+
+Kullanıcı düzeyi temizlemeye Kullanıcı ekleyerek, tüm Kullanıcı cihazlarındaki tüm uygulamalara otomatik olarak temizleme komutları yayınlarız.  Kullanıcı tüm cihazlardan her iadede Temizleme komutlarını almaya devam edecektir.  Bir kullanıcıyı yeniden etkinleştirmek için bunları listeden kaldırmanız gerekir.  
+
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
+2. **Uygulamalar** > **uygulaması seçmeli silme** > **silme isteği oluştur**' u seçin.<br>
+   **Kullanıcı düzeyinde silme** seçin
+3. **Ekle** ' ye tıklayın ve Kullanıcı bölmesi görüntülenir ' i **seçin** .
+4. Uygulama verilerini silmek istediğiniz kullanıcıyı **seçin ve Seç**' e tıklayın.
+
 ## <a name="monitor-your-wipe-requests"></a>Silme isteklerinizi izleme
 
 Temizleme isteğinin genel durumunu gösteren ve bekleyen isteklerle hataların sayısını içeren bir özet raporunuz olabilir. Daha fazla bilgi almak için şu adımları izleyin:
 
-1. **Uygulamalar** > **uygulama seçmeli silme** bölmesinde, isteklerinizin kullanıcılara göre gruplandırılmış listesini görebilirsiniz. Sistem, cihazda çalışan her korumalı uygulama için bir temizleme isteği oluşturduğundan, bir kullanıcı için birden çok istek görebilirsiniz. Durum, temizleme isteğinin **bekliyor**, **başarısız** veya **başarılı** olup olmadığını gösterir.
+1. **Uygulamalar** > **uygulaması seçmeli silme** bölmesinde, isteklerinizin kullanıcılara göre gruplandırılmış listesini görebilirsiniz. Sistem, cihazda çalışan her korumalı uygulama için bir temizleme isteği oluşturduğundan, bir kullanıcı için birden çok istek görebilirsiniz. Durum, temizleme isteğinin **bekliyor**, **başarısız** veya **başarılı** olup olmadığını gösterir.
 
     ![Uygulama seçmeli silme bölmesinde temizleme isteği durumunun ekran görüntüsü](./media/apps-selective-wipe/wipe-request-status-1.png)
 
@@ -74,7 +84,7 @@ Buna ek olarak, cihaz adını ve cihaz türünü görebilirsiniz; bunlar raporla
 >[!IMPORTANT]
 > Silmenin gerçekleşmesi için kullanıcı uygulamayı açmalıdır ve silme işlemi, istekte bulunulduktan sonra 30 dakikaya kadar zaman alabilir.
 
-## <a name="delete-a-wipe-request"></a>Temizleme isteğini silme
+## <a name="delete-a-device-wipe-request"></a>Bir cihaz silme isteğini silme
 
 Bekleme durumundaki silmeler, siz bunları elle silinceye kadar görüntülenir. Temizleme isteğini el ile silmek için:
 
@@ -85,6 +95,14 @@ Bekleme durumundaki silmeler, siz bunları elle silinceye kadar görüntülenir.
     ![Uygulama seçmeli silme bölmesinde temizleme isteği listesinin ekran görüntüsü](./media/apps-selective-wipe/delete-wipe-request.png)
 
 3. Silme işlemini onaylamanız istenir; **Evet** veya **Hayır**’ı seçin, sonra da **Tamam**’a tıklayın.
+
+## <a name="delete-a-user-wipe-request"></a>Kullanıcı Temizleme isteğini silme
+
+Kullanıcı silinince, yönetici tarafından kaldırılana kadar listede kalır. Bir kullanıcıyı listeden kaldırmak için:
+
+1. **Istemci uygulamaları-uygulama seçmeli silme** bölmesinde **Kullanıcı düzeyinde silme ' yi** seçin
+2. Listeden, silmek istediğiniz kullanıcıya sağ tıklayın ve **Sil**' i seçin. 
+
 
 ## <a name="see-also"></a>Ayrıca bkz.
 [Uygulama koruma ilkesi nedir](app-protection-policy.md)

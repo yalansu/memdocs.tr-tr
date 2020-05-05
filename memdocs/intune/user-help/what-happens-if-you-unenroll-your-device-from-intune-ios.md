@@ -19,26 +19,26 @@ ms.reviewer: esmich, elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 92fcdda0e3b99e227fafb85a87a4f1eda27756e1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 91a69f413e4b24a5a9f5b5fb092270039d4e0668
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324126"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076909"
 ---
 # <a name="what-happens-if-you-unenroll-your-ios-or-macos-device-from-intune"></a>iOS veya macOS cihazınızın Intune kaydını sildiğinizde ne olur?
 
 iOS veya macOS cihazınızın Intune kaydını sildiğinizde:
 
-- Cihazınız artık Şirket Portalı’nda gösterilmez.
+- Cihazınız artık Şirket Portalı görünmüyor.
 
-- Artık Şirket Portalı’ndan uygulama yükleyemezsiniz.
+- Artık Şirket Portalı uygulama yükleyemezsiniz.
 
 - Cihazı eklediğinizde değiştirilen tüm ayarlar, mesela kamerayı devre dışı bırakmak veya belirli bir parola uzunluğu gerekliliği gibi ayarlar geçerliliğini kaybeder.
 
 - Dosya paylaşımları veya dahili web siteleri gibi şirket kaynaklarına erişemeyebilirsiniz.
 
-- Cihazınızda artık şirket uygulamalarını ve şirket verilerini kullanamazsınız.
+- Artık cihazınızda şirket uygulamalarını ve şirket verilerini kullanamazsınız.
 
 - Artık Wi-Fi veya bir sanal özel ağ (VPN) kullanarak şirket ağınıza bağlanamayabilirsiniz.
 

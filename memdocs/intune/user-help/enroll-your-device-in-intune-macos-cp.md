@@ -19,12 +19,12 @@ ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2ef7951217b0b6df21a86ca29a8637385aa65715
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a069a70077a2b6b1b484bb8a88960c314488cc70
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324690"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075923"
 ---
 # <a name="enroll-your-macos-device-using-the-company-portal-app"></a>Şirket Portalı uygulamasını kullanarak macOS cihazınızı kaydetme  
 
@@ -67,15 +67,15 @@ MacOS cihazınızı kuruluşunuza kaydetmek için aşağıdaki adımları kullan
 
 1. İş veya okul hesabınızla Şirket Portalı için oturum açın.  
 2. Uygulama açıldığında **Başlat**' ı seçin.  
-3. Kuruluşunuzun kayıtlı cihazınızda neleri görebileceğini ve neleri görebileceklerini gözden geçirin. Sonra **Devam**'ı seçin.
+3. Kuruluşunuzun kayıtlı cihazınızda neleri görebileceğini ve neleri görebileceklerini gözden geçirin. Daha sonra **Devam** seçeneğini belirleyin.
 4.  İstenirse, **Yönetim profili yüklemesi** ekranında cihaz parolanızı girin.
 
     ![Şirket Portalı örnek ekran görüntüsü, yönetim profilini yükler ekranı, parola istemi 'ni vurgular.](./media/install-management-profile-macos-1912.PNG)   
 5. **Cihaz yönetimini Onayla** ekranında **sistem tercihlerini aç**' ı seçin.  
 
     ![Cihaz yönetimini Onayla ekranının örnek ekran görüntüsü, "sistem tercihlerini aç" düğmesini vurgulıyorum.](./media/confirm-device-management-macos-1912.PNG)  
-6. Cihazınızın sistem tercihleri açılır. Cihaz profilleri listesinden **Yönetim profili** ' **ni seçin ve ardından Onayla > Onayla** ' yı **seçin.**  
-    Sistem Tercihleri, Yönetim profili ekranının, "Onayla" düğmesinin örnek ekran görüntüsünü ![.](./media/management-profile-approve-macos-1912.PNG)   
+6. Cihazınızın sistem tercihleri açılır. Cihaz profilleri listesinden **Yönetim profili** ' ni seçin ve ardından onaylamayı **Onayla ' yı seçin.** > **Approve**  
+    ![Sistem Tercihleri, Yönetim profili ekranının, "Onayla" düğmesinin örnek ekran görüntüsü.](./media/management-profile-approve-macos-1912.PNG)   
 1. Şirket Portalı dönün ve **devam**' ı seçin.    
 2. Kuruluşunuz, cihaz ayarlarınızı güncelleştirmenizi gerektirebilir. Ayarları güncelleştirmeyi tamamladığınızda **ayarları denetle**' yi seçin.  
 
@@ -85,15 +85,15 @@ MacOS cihazınızı kuruluşunuza kaydetmek için aşağıdaki adımları kullan
 
  ## <a name="troubleshooting-and-feedback"></a>Sorun giderme ve geri bildirim   
 
-Kayıt sırasında sorunlarla karşılaşırsanız, Microsoft uygulama geliştiricilerine sorunu bildirmek için **yardım** > **Tanılama raporu gönder** ' e gidin. Bu bilgiler, uygulamanın iyileştirilmesine yardımcı olmak için kullanılır. Bu bilgiler ayrıca, BT 'nin yardım almak için BT 'yi desteklemesi durumunda sorunu çözmeye yardımcı olması için de kullanılır.  
+Kayıt sırasında sorunlarla karşılaşırsanız, Microsoft uygulama geliştiricilerine sorunu bildirmek için **Yardım** > **Tanılama raporu gönder** ' e gidin. Bu bilgiler, uygulamanın iyileştirilmesine yardımcı olmak için kullanılır. Bu bilgiler ayrıca, BT 'nin yardım almak için BT 'yi desteklemesi durumunda sorunu çözmeye yardımcı olması için de kullanılır.  
 
 Sorunu Microsoft 'a bildirdikten sonra, deneyiminizin ayrıntılarını BT destek sorumlunuza gönderebilirsiniz. **E-posta ayrıntılarını**seçin. E-postanın gövdesinde karşılaştığınız şeyleri yazın. Destek sorumlunuza ait e-posta adresini bulmak için Şirket Portalı App > **Contact**adresine gidin. Veya [Şirket portalı Web sitesini](https://go.microsoft.com/fwlink/?linkid=2010980)denetleyin.  
  
 
-Ayrıca, Microsoft Intune Şirket Portalı ekibi görüşlerinizi duymak için çok sevecekti. **Yardım** > düşüncelerinizi ve fikirlerinizi paylaşmak Için **geri bildirim gönder** ' e gidin.  
+Ayrıca, Microsoft Intune Şirket Portalı ekibi görüşlerinizi duymak için çok sevecekti. Düşüncelerinizi ve fikirlerinizi paylaşmak için **yardıma** > **geri bildirim gönder** sayfasına gidin.  
 
 ## <a name="unverified-profiles"></a>Doğrulanmamış profiller  
-Yüklü mobil cihaz yönetimi (MDM) profillerini **sistem tercihleri** > **profillerinde**görüntülediğinizde, bazı profiller doğrulanmamış bir durum gösterebilir. Yönetim profilinde doğrulanmış bir durum olduğu sürece, endişelenmeniz gerekmez.  
+Yüklü mobil cihaz yönetimi (MDM) profillerini **Sistem Tercihleri** > **profillerinde**görüntülediğinizde, bazı profiller doğrulanmamış bir durum gösterebilir. Yönetim profilinde doğrulanmış bir durum olduğu sürece, endişelenmeniz gerekmez.  
 
 MDM kanalı bağlantısını tanımlayan yönetim profilidir. Yönetim profili doğrulanmadığı sürece, bu kanal aracılığıyla makineye teslim edilen diğer profiller, yönetim profilinin güvenlik nitelikleri de devralınır.  
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e81a88ae3d6db37dfeece31a2e78a2243a9a6387
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a05e36a2da42bf88e2d9d7e94a67e2d81b8f1271
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333146"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078286"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Microsoft Intune'da kullanıcı ve cihaz profilleri atama
 
@@ -44,20 +44,20 @@ Profiller atamak için uygun role sahip olduğunuzdan emin olun. Daha fazla bilg
 ## <a name="assign-a-device-profile"></a>Bir cihaz profili atama
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Yapılandırma profillerinin** > **cihazları** ' nı seçin. Tüm profiller listelenir.
+2. **Cihaz** > **yapılandırma profillerini**seçin. Tüm profiller listelenir.
 3. Atamak istediğiniz profili ve ardından **Atamalar**'ı seçin.
 4. Grupları **Dahil Etmeyi** veya **Dışlamayı** seçin ve sonra da gruplarınızı belirtin. Gruplarınızı seçtiğinizde, bir Azure AD grubu seçersiniz. Birden çok grup seçmek için grupları seçerken **Ctrl** tuşunu basılı tutun.
 
     ![Grupları bir profil atamasına dahil etme veya atamadan dışlama seçeneklerinin ekran görüntüsü](./media/device-profile-assign/group-include-exclude.png)
 
-5. Yaptığınız değişiklikleri **kaydedin**.
+5. Değişikliklerinizi **kaydedin** .
 
 ### <a name="evaluate-how-many-users-are-targeted"></a>Kaç kullanıcının hedeflendiğini değerlendirme
 
 Profili atadıktan sonra etkilenen kullanıcı sayısını da **değerlendirebilirsiniz**. Bu özellik, cihaz değil kullanıcı sayısını hesaplar.
 
-1. Yönetim merkezinde **cihazlar** > **yapılandırma profilleri**' ni seçin.
-2. Bir profil seçip **Atamalar** > **Değerlendir** yolunu izleyin. Bu profilin kaç kullanıcıyı hedeflediğini gösteren bir ileti görüntülenir.
+1. Yönetim merkezinde, **cihazlar** > **yapılandırma profilleri**' ni seçin.
+2. **Atamalar** > **değerlendirmesi**> bir profil seçin. Bu profilin kaç kullanıcıyı hedeflediğini gösteren bir ileti görüntülenir.
 
 **Değerlendir** düğmesi gri gösteriliyorsa, profilin bir veya birden fazla gruba atandığından emin olun.
 
@@ -65,7 +65,7 @@ Profili atadıktan sonra etkilenen kullanıcı sayısını da **değerlendirebil
 
 Bir profil oluşturduğunuzda veya güncelleştirdiğinizde, profile kapsam etiketleri ve Uygulanabilirlik kuralları da ekleyebilirsiniz.
 
-**Kapsam etiketleri** , `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli gruplara profilleri filtrelemeye yönelik harika bir yoldur. Daha fazla bilgi için bkz. [Dağıtılmış BT için RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+**Kapsam etiketleri** , veya `US-NC IT Team` `JohnGlenn_ITDepartment`gibi belirli gruplar için profilleri filtrelemek için harika bir yoldur. Daha fazla bilgi için bkz. [Dağıtılmış BT için RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
 Windows 10 cihazlarında, profil yalnızca belirli bir işletim sistemi sürümü veya belirli bir Windows sürümü için geçerli olacak şekilde **uygulanabilirlik kuralları** ekleyebilirsiniz. [Uygulanabilirlik kurallarında](device-profile-create.md#applicability-rules) daha fazla bilgi bulunur.
 
@@ -73,7 +73,7 @@ Windows 10 cihazlarında, profil yalnızca belirli bir işletim sistemi sürüm�
 
 Birçok kullanıcı, Kullanıcı gruplarını ne zaman kullanacağınızı ve cihaz gruplarının ne zaman kullanılacağını sorar. Yanıt, amacınız için farklılık gösterir. İşte başlamanıza yardımcı olacak bazı rehberlik.
 
-### <a name="device-groups"></a>Cihaz grupları
+### <a name="device-groups"></a>Device groups
 
 Bir cihaza, kim oturum açmış olduğunuza bakılmaksızın ayarları uygulamak istiyorsanız, profillerinizi bir cihaz grubuna atayın. Cihaz gruplarına uygulanan ayarlar, Kullanıcı değil, her zaman cihaza gider.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e28ca9e9b8ed77cdd01b415761fd90308d5b7017
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a36449de6d6ebc437b445309bb64f3a9b448d90f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329530"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079816"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Koşullu erişim ilkelerini klasik Intune portalından Azure portal yeniden atama
 
@@ -86,7 +86,7 @@ Azure portalındaki **Intune Uygulama Koruması** dikey penceresi, yöneticileri
     ![Intune ve Azure portalları arasında Kullanıcı grubu Kullanıcı ARABIRIMINI karşılaştıran resim](./media/conditional-access-intune-reassign/reassign-ca-1.png)
 
     > [!IMPORTANT] 
-    > Klasik portal için yaptığınız bu seçim, Azure portalında yaptığınızla ilişkili olmalıdır. Örneğin klasik Intune portalında tüm kullanıcıları seçtiyseniz Azure portalında da **Tüm kullanıcılar**’ı seçin. Ayrıca klasik Intune portalında **Grupları çıkar** seçeneğini seçtiyseniz bu grupları Azure portalında da dışlayın.
+    > Klasik portal için yaptığınız bu seçim, Azure portalında yaptığınızla ilişkili olmalıdır. Örneğin klasik Intune portalında tüm kullanıcıları seçtiyseniz Azure portalında da **Tüm kullanıcılar**’ı seçin. Ayrıca, klasik Intune portalında **muaf gruplar** seçeneğini belirlediyseniz, bu seçili grupları Azure Portal de hariç tutabilirsiniz.
 
 5. Grubunuzu belirledikten sonra **Seç**’e ve ardından **Bitti**’ye tıklayın.
 
@@ -133,7 +133,7 @@ Azure portalındaki **Intune Uygulama Koruması** dikey penceresi, yöneticileri
 
 19. Etki alanına katılmış Windows cihazlar gerektiren bir ilkeniz varsa ve Intune ile kaydedilmiş ve Intune uyumlu Windows cihazlara da izin veriyorsanız **Etki alanına katılmış hizmet gerektir**, **Cihazın uyumlu olarak işaretlenmesini gerektir** ve **Seçili denetimlerden birini gerektir**’i seçin.
 
-20. Intune’a kayıtlı ve Intune uyumlu Windows cihazlarına izin vermiyorsanız geçerli ilkeden Windows ilkesini çıkarın. Daha sonra **Cihaz platformları** **Windows** olarak ayarlı olan ayrı bir ilke oluşturun, diğer koşulları yukarıda belirtilen şekilde dahil edin ve **Erişim Denetimleri Ver**’in altında **Etki alanına katılmış cihaz gerektir**’i seçin.
+20. Intune’a kayıtlı ve Intune uyumlu Windows cihazlarına izin vermiyorsanız geçerli ilkeden Windows ilkesini çıkarın. Daha sonra **Cihaz platformları****Windows** olarak ayarlı olan ayrı bir ilke oluşturun, diğer koşulları yukarıda belirtilen şekilde dahil edin ve **Erişim Denetimleri Ver**’in altında **Etki alanına katılmış cihaz gerektir**’i seçin.
 
 21. **Yeni** koşullu erişim ilkesi dikey penceresinde **ilkeyi etkinleştir** ' i açın ve sonra **Oluştur**' a tıklayın.
 
@@ -154,7 +154,7 @@ Klasik Intune portalında bir Exchange Online ilkesinin parçası olarak Exchang
     ![Azure ve Intune portalları arasında Kullanıcı grubu Kullanıcı ARABIRIMI karşılaştırmasını gösteren resim](./media/conditional-access-intune-reassign/reassign-ca-12.png)
 
     > [!IMPORTANT] 
-    > Azure portalı için yaptığınız bu seçim, Azure portalında yaptığınızla ilişkili olmalıdır. Örneğin klasik Intune portalında tüm kullanıcıları seçtiyseniz Azure portalında da **Tüm kullanıcılar**’ı seçin. Ayrıca klasik Intune portalında **Grupları çıkar** seçeneğini seçtiyseniz bu grupları Azure portalında da dışlayın.
+    > Azure portalı için yaptığınız bu seçim, Azure portalında yaptığınızla ilişkili olmalıdır. Örneğin klasik Intune portalında tüm kullanıcıları seçtiyseniz Azure portalında da **Tüm kullanıcılar**’ı seçin. Ayrıca, klasik Intune portalında **muaf gruplar** seçeneğini belirlediyseniz, bu seçili grupları Azure Portal de hariç tutabilirsiniz.
 
 5. Grubunuzu belirledikten sonra **Seç**’e ve ardından **Bitti**’ye tıklayın.
 
@@ -167,7 +167,7 @@ Klasik Intune portalında bir Exchange Online ilkesinin parçası olarak Exchang
     > [!IMPORTANT] 
     > EAS istemciler için Koşullu Erişim ilkeleri, başka bulut uygulamalarını barındıramaz.
 
-8. **Koşullar** dikey penceresinde **İstemci uygulamalar**’ı seçin ve daha sonra uygun istemci uygulamayı seçin. Intune tarafından desteklenmeyen istemcileri engellemeyi seçtiyseniz **İlkeyi yalnızca desteklenen platformlara uygula** seçeneğini kullanın.
+8. **Koşullar** dikey penceresinde **İstemci uygulamalar**’ı seçin ve daha sonra uygun istemci uygulamayı seçin. Intune tarafından desteklenmeyen istemcileri engellemeyi seçtiyseniz, **ilkeyi yalnızca desteklenen platformlar Için Uygula** seçeneğini kullanın.
 
     ![Azure ve Intune portalları arasında istemci uygulamaları kullanıcı arabirimi karşılaştırmasını gösteren resim](./media/conditional-access-intune-reassign/reassign-ca-15.png)
 
@@ -203,4 +203,4 @@ MDM, klasik Intune portalından kaldırıldığından, klasik bu ilkeleri görü
 
 - [Intune ile koşullu erişim kullanmanın yaygın yolları](conditional-access-intune-common-ways-use.md)
 - [Intune ile uygulama tabanlı koşullu erişim](app-based-conditional-access-intune.md)
-- [Azure Active Directory’de Koşullu Erişim](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+- [Azure Active Directory Koşullu erişim](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

@@ -19,18 +19,18 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 64a1a8484af537649fd618b5cfa718dc7dff5607
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: af748f91d47d6276b5590577079130e2be470e05
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324158"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077368"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-ios-device-in-intune"></a>Şirket Portalı uygulamasını yükler ve iOS cihazınızı Intune’a kaydederseniz ne olur?
 
 Şirket Portalı uygulamasını yükleyip iOS cihazınızı Intune’a kaydettiğinizde, Şirket Portalı uygulamasını kullanarak şunları yapabilirsiniz:
 
-- Şirket ağına, e-postalarınıza ve iş dosyalarınıza erişebilirsiniz.
+- Şirket ağına ve e-postanıza ve çalışma dosyalarınıza erişin.
 
 - Şirket Portalı üzerinden şirket uygulamalarını alabilirsiniz.
 
@@ -45,9 +45,9 @@ Cihazınızı Intune’a kaydettikten sonra, şirketinizin destek biriminin ciha
 
 Cihazınız kaydolduğunda, şirketinizin destek birimi şunları yapabilir:
 
-- Cihazınız kaybolur veya çalınırsa, cihazı üretici varsayılan ayarlarına sıfırlayabilir.
+- Cihazın kaybolması veya çalınması durumunda cihazınızı üreticinin varsayılan ayarlarına geri sıfırlayın.
 
-- Yüklenmiş olan, şirketle ilgili tüm verileri ve iş uygulamalarını kaldırabilir. Kişisel ayarlarınız ve verileriniz kaldırılmaz.
+- Yüklenmiş olan, şirketle ilgili tüm verileri ve iş uygulamalarını kaldırabilir. Kişisel verileriniz ve ayarlarınız kaldırılmaz.
 
 - Cihazda bir parola veya PIN kodu belirlemenizi gerektirebilir.
 
