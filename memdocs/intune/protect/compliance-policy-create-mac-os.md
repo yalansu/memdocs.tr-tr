@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d5ac87b7539888ddceb6095b8a8c37f194c5a97a
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
-ms.translationtype: HT
+ms.openlocfilehash: 04063cf519c9dcb4a10e7acfa0e51181b3bf259a
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079833"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782251"
 ---
 # <a name="macos-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Intune'u kullanarak cihazları uyumlu veya uyumlu değil şeklinde işaretlemek için kullanabileceğiniz macOS ayarları
 
@@ -39,60 +39,61 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
 
 ## <a name="device-health"></a>Cihaz Sistem Durumu
 
-- **Sistem bütünlüğü koruması gerektir**:  
+- **Sistem bütünlüğü koruması gerektir**  
   - **Yapılandırılmadı** (*varsayılan*)-Bu ayar uyumluluk veya uyumsuzluk için değerlendirilmez.
   - **Gerektir** -MacOS cihazlarının [sistem bütünlüğü koruması](https://support.apple.com/HT204899) (Apple 'ın Web sitesini açar) etkin olmasını gerektir.  
 
 ## <a name="device-properties"></a>Cihaz Özellikleri
 
-- **Gerekli en düşük işletim sistemi**:  
+- **Gereken en düşük işletim sistemi**  
   Bir cihaz en düşük işletim sistemi sürümü gereksinimini karşılamadığında uyumsuz olarak bildirilir. Yükseltme hakkında bilgi içeren bir bağlantı gösterilir. Cihaz kullanıcısı cihazlarını yükseltmeyi tercih edebilir. Bundan sonra, kuruluş kaynaklarına erişebilir.
 
-- **İzin verilen en yüksek işletim sistemi sürümü**:  
+- **İzin verilen en yüksek işletim sistemi sürümü**  
   Cihaz kuralda belirtilenden sonraki bir işletim sistemi sürümünü kullandığında, kuruluş kaynaklarına erişim engellenir. Cihaz kullanıcısına BT yöneticisine başvurması istenir. İşletim sistemine izin veren bir kural değişikliği oluncaya kadar bu cihaz kuruluş kaynaklarına erişemez.
 
-- **En düşük işletim sistemi derleme sürümü**:  
+- **En düşük işletim sistemi derleme sürümü**  
   Apple güvenlik güncelleştirmeleri yayımladığında genellikle işletim sistemi sürümü yerine derleme numarası güncelleştirilir. Bu özelliği kullanarak cihazda izin verilen en düşük işletim sistemi derleme sürümünü girebilirsiniz.
 
-- **En yüksek işletim sistemi derleme sürümü**:  
+- **En yüksek işletim sistemi derleme sürümü**  
   Apple güvenlik güncelleştirmeleri yayımladığında genellikle işletim sistemi sürümü yerine derleme numarası güncelleştirilir. Bu özelliği kullanarak cihazda izin verilen en yüksek işletim sistemi derleme sürümünü girebilirsiniz.
 
 ## <a name="system-security-settings"></a>Sistem güvenliği ayarları
 
 ### <a name="password"></a>Parola
 
-- **Mobil cihazların kilidini açmak için parola gerektir**:  
+- **Mobil cihazların kilidini açmak için bir parola gerektir**  
   - **Yapılandırılmadı** (*varsayılan*)
   - **Gerektir** Kullanıcıların cihazlarına erişebilmesi için önce bir parola girmesi gerekir.
 
-- **Basit parolalar**:  
+- **Basit parolalar**  
   - **Yapılandırılmadı** (*varsayılan*)-kullanıcılar, **1234** veya **1111**gibi basit parolalar oluşturabilir.
   - **Engelle** -kullanıcılar, **1234** veya **1111**gibi basit parolalar oluşturamaz.
 
-- **Minimum parola uzunluğu**:  
+- **Minimum parola uzunluğu**  
   Parolanın sahip olması gereken minimum rakam veya karakter sayısını girin.
 
-- **Parola türü**: Parolanın yalnızca **Sayısal** karakterlerden mi yoksa sayı ve diğer karakterlerin karışımından (**Alfasayısal**) mı oluşması gerektiğini seçin.
+- **Parola türü**  
+  Parolanın yalnızca **Sayısal** karakterlerden mi yoksa sayı ve diğer karakterlerin karışımından (**Alfasayısal**) mı oluşması gerektiğini seçin.
 
-- **Paroladaki alfasayısal olmayan karakter sayısı**:  
+- **Paroladaki alfasayısal olmayan karakter sayısı**  
   Parolada bulunması gereken `&`, `#`, `%`, `!` gibi özel karakterlerin alt sınırını girin.
 
   Daha yüksek bir sayı ayarlanırsa kullanıcının daha karmaşık bir parola oluşturması gerekir.
 
-- **Parola istenmeden önce geçmesi gereken, işlem yapılmayan dakika sayısı**:  
+- **Parola istenmeden önce geçen işlem yapılmayan dakika sayısı**  
   Kullanıcı parolasını yeniden girmeden önce boşta geçen süreyi girin.
 
-- **Parola kullanım süresi (gün)**:  
+- **Parola geçerlilik süresi (gün)**  
   Parolanın süresi dolup yeni bir parola oluşturulması gerekmeden önce geçmesi gereken gün sayısını seçin.
 
-- **Yeniden kullanılması önlenecek önceki parola sayısı**:  
+- **Yeniden kullanılmasını önleyen önceki parola sayısı**  
   Daha önce kullanılan kaç parolanın kullanılamayacağını belirtir.
 > [!IMPORTANT]
 > Bir macOS cihazında parola gereksinimi değiştirildiğinde, Kullanıcı parolasını değiştirene kadar bu işlem geçerli değildir. Örneğin parola uzunluğu sekiz basamakla kısıtlıyken macOS cihazın altı basamaklı bir parolası varsa, kullanıcı cihazda şifresini güncelleştirene kadar cihaz uyumlu kalır.
 
 ### <a name="encryption"></a>Şifreleme
 
-- **Cihazda veri deposunun şifrelenmesi**:  
+- **Cihazda veri depolamanın şifrelenmesi**  
   - **Yapılandırılmadı** (*varsayılan*)
   - **Gerektir** -kullanım, cihazlarınızda veri depolamayı şifrelemek için *gerektir* .
 
@@ -100,15 +101,15 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
 
 Güvenlik Duvarı, cihazları yetkisiz erişimine karşı korur. Güvenlik Duvarı'nı kullanarak uygulama başına bağlantıları denetleyebilirsiniz. 
 
-- **Güvenlik duvarı**:  
+- **Güvenlik duvarı**  
   - **Yapılandırılmadı** (*varsayılan*)-Bu ayar güvenlik duvarını devre dışı bırakır ve ağ trafiğine izin verilir (engellenmez).
   - **Etkinleştir** -cihazların yetkisiz erişime karşı korunmasına yardımcı olmak için *Etkinleştir* ' i kullanın. Bu özelliği etkinleştirdiğinizde gelen İnternet bağlantılarını işleyebilir ve gizli modu kullanabilirsiniz. 
 
-- **Gelen bağlantılar**:  
+- **Gelen bağlantılar**  
   - **Yapılandırılmadı** (*varsayılan*)-gelen bağlantılara ve paylaşım hizmetlerine izin verir.
   - **Engelle** -DHCP, Bonjour ve IPSec gibi temel Internet Hizmetleri için gereken bağlantılar hariç tüm gelen ağ bağlantılarını engelleyin. Bu ayarlar ekran paylaşımı, uzaktan erişim, iTunes müzik paylaşımı gibi tüm paylaşım hizmetlerini engeller.  
 
-- **Gizli Mod**:  
+- **Gizli mod**  
   - **Yapılandırılmadı** (*varsayılan*)-Bu ayar gizli mod kapalı bırakır.
   - **Enable** -cihazların, kötü amaçlı Kullanıcılarım haline getirilen yoklama isteklerine yanıt vermesini engellemek için gizli modu etkinleştirin. Etkinleştirildiğinde, cihaz yetkilendirilmiş uygulamalardan gelen istekleri yanıtlamaya devam eder.  
 
@@ -116,12 +117,13 @@ Güvenlik Duvarı, cihazları yetkisiz erişimine karşı korur. Güvenlik Duvar
 
 Daha fazla bilgi için bkz. [macOS üzerinde ağ geçidi denetleyicisi](https://support.apple.com/HT202491) (Apple web sitesini açar).
 
-**Şu konumlardan indirilen uygulamalara izin ver**: Desteklenen uygulamaların farklı konumlardan cihazlarınıza yüklenmesine izin verir. Konum seçenekleriniz:
+- **Bu konumlardan indirilen uygulamalara izin ver**  
+  Desteklenen uygulamaların farklı konumlardan cihazlarınıza yüklenmesine izin verir. Konum seçenekleriniz:
 
-- **Yapılandırılmadı** (*varsayılan*)-ağ geçidi seçeneğinin uyumluluk veya uyumsuzluk üzerinde hiçbir etkisi yoktur.  
-- **Mac App Store** -yalnızca Mac App Store için uygulamaları yükler. Üçüncü taraf veya tanımlı geliştirici uygulamaları yüklenemez. Bir kullanıcı, Gatekeeper’ı Mac App Store dışından uygulama yüklemesi için seçerse cihaz uyumsuz olarak değerlendirilir.
-- **Mac App Store ve tanımlanan geliştiriciler** -Mac App Store ve tanımlanan geliştiricilerden uygulama yükler. macOS, geliştiricilerin kimliğini denetler ve uygulama bütünlüğünü doğrulamak için başka denetimler de gerçekleştirir. Bir kullanıcı, Gatekeeper’ı bu seçenekler haricindeki uygulamaları yüklemesi için seçerse cihaz uyumsuz olarak değerlendirilir.
-- Her **yerden** uygulama herhangi bir yerden ve herhangi bir geliştirici tarafından yüklenebilir. Bu, güvenliği en düşük olan seçenektir.
+  - **Yapılandırılmadı** (*varsayılan*)-ağ geçidi seçeneğinin uyumluluk veya uyumsuzluk üzerinde hiçbir etkisi yoktur.  
+  - **Mac App Store** -yalnızca Mac App Store için uygulamaları yükler. Üçüncü taraf veya tanımlı geliştirici uygulamaları yüklenemez. Bir kullanıcı, Gatekeeper’ı Mac App Store dışından uygulama yüklemesi için seçerse cihaz uyumsuz olarak değerlendirilir.
+  - **Mac App Store ve tanımlanan geliştiriciler** -Mac App Store ve tanımlanan geliştiricilerden uygulama yükler. macOS, geliştiricilerin kimliğini denetler ve uygulama bütünlüğünü doğrulamak için başka denetimler de gerçekleştirir. Bir kullanıcı, Gatekeeper’ı bu seçenekler haricindeki uygulamaları yüklemesi için seçerse cihaz uyumsuz olarak değerlendirilir.
+  - Her **yerden** uygulama herhangi bir yerden ve herhangi bir geliştirici tarafından yüklenebilir. Bu, güvenliği en düşük olan seçenektir.
  
 
 ## <a name="next-steps"></a>Sonraki adımlar

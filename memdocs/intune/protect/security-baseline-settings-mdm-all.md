@@ -5,7 +5,7 @@ description: Windows MDM güvenlik temelinin Microsoft Intune ile yönetebilece�
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11d01481369f1f6439217262c4181c2c9dabf548
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
-ms.translationtype: HT
+ms.openlocfilehash: 0416332c74ba3305d344794c888d1867c25f8271
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693376"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782234"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Intune için Windows MDM güvenlik taban çizgisi ayarları
 
@@ -38,6 +38,7 @@ Görüntülemek istediğiniz taban çizgisinin sürümünü seçtiğinizden emin
 <!-- Cookies might be required to enable some browsers to display the zone options -->
 
 ::: zone pivot="mdm-may-2019"
+
 **2019 Mayıs Için MDM güvenlik temeli**:  
 > [!NOTE]
 > Haziran 2019 ' de, *mayıs 2019 şablonunun MDM güvenlik temeli* genel kullanıma sunuldu (önizlemede değil) olarak yayımlanmıştır. Güvenlik temelinin bu sürümü, *2018 Ekim Için MDM güvenlik temelini*, önceki taban çizgisinin yerini almıştır.  Mayıs 2019 temelinin kullanılabilirliği öncesinde oluşturulan profiller, Mayıs 2019 sürümündeki ayarları ve değerleri yansıtacak şekilde güncellemeyebilir.  Önizleme şablonunu temel alan yeni profiller oluşturmasanız da, önizleme şablonunu temel alan daha önce oluşturduğunuz profilleri düzenleyebilir ve kullanmaya devam edebilirsiniz.
@@ -46,6 +47,7 @@ Taban çizgisinin bu sürümünde önceki sürümden nelerin değiştirildiğini
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
+
 **Preview-2018 Ekim IÇIN MDM güvenlik temeli**:  
 > [!NOTE]
 > Bu, Ekim 2018 ' de yayınlanan MDM güvenlik temelinin önizleme sürümüdür. Bu önizleme temeli, 2019 Haziran 'da, genel kullanıma açık olan (Önizleme aşamasında değil) *mayıs 2019 şablonu Için MDM güvenlik temeli* sürümü ile değiştirilmiştir. *Mayıs 2019 temeli Için MDM güvenlik temelinin* kullanılabilirliği öncesinde oluşturulan profiller, Mayıs 2019 sürümü Için MDM güvenlik temelindeki ayarları ve değerleri yansıtacak şekilde güncellemeyebilir. Önizleme şablonunu temel alan yeni profiller oluşturmasanız da, önizleme şablonunu temel alan daha önce oluşturduğunuz profilleri düzenleyebilir ve kullanmaya devam edebilirsiniz.
@@ -146,11 +148,17 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-BitLocker](https://docs.
 
   BitLocker çıkarılabilir sürücü ilkesi için aşağıdaki ayarı yapılandırın:
 
-  - **Yazma erişimi için şifreleme gerektir**:  
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+  - **BitLocker tarafından korunmayan çıkarılabilir veri sürücülerine yönelik yazma erişimini engelleyin**:  
     **Varsayılan**: Evet
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
+
+  - **Yazma erişimi için şifreleme gerektir**:  
+    **Varsayılan**: Evet
 
 - **BitLocker çıkarılabilir sürücü ilkesi**:  
   Bu ilke ayarı, şifreleme yöntemini ve şifre gücünü denetlemek için kullanılır. Bu ilkenin değerleri BitLocker 'ın şifreleme için kullandığı şifre gücünü belirlemektir. Kuruluşlar, artırılmış güvenlik için şifreleme düzeyini denetlemek isteyebilir (AES-256, AES-128 ' den daha güçlüdür). Bu ayarı etkinleştirirseniz, sabit veri sürücüleri, işletim sistemi sürücüleri ve çıkarılabilir veri sürücüleri için şifreleme algoritması ve anahtar şifreleme gücü ayrı ayrı yapılandırabilirsiniz. Sabit ve işletim sistemi sürücüleri için, XTS-AES algoritmasını kullanmanızı öneririz. Sürücü, Windows 10, sürüm 1511 veya üzerini çalıştırmayan diğer cihazlarda kullanılıyorsa, çıkarılabilir sürücüler için AES-CBC 128-bit veya AES-CBC 256-bit ' i kullanmanız gerekir. Sürücü zaten şifrelendiyse veya şifreleme devam ediyorsa şifreleme yönteminin değiştirilmesi etkisizdir. Bu durumlarda, bu ilke ayarı yok sayılır.  
@@ -284,7 +292,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-DataProtection](https://
 
 Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard) bölümüne bakın.
 
-- **Credential Guard**:  
+- **Credential Guard 'ı aç**:  
   Bu ayar, kullanıcıların bir sonraki yeniden başlatmada kimlik bilgilerini korumaya yardımcı olmak üzere sanallaştırma tabanlı güvenlik ile Credential Guard 'ı kapatmasına olanak sağlar.  
   [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067044)
 
@@ -384,7 +392,7 @@ Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-DeviceLock](https://do
 
     **Varsayılan**: 60
 
-  - **Gerekli parola türü**:  
+  - **Gerekli parola**:  
     Gerekli PIN veya parola türünü belirler.  
     [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067027)
 
@@ -892,7 +900,7 @@ Daha fazla bilgi için bkz. Windows belgelerindeki [Ilke CSP-ınternebir](https:
 
   **Varsayılan**: etkin
 
-- **Internet Explorer güvenilen bölgesi, etkin X denetimlerine karşı kötü amaçlı yazılımdan koruma çalıştırmayın**:  
+- **Internet Explorer güvenilen bölgesi, etkin X denetimlerine karşı kötü amaçlı yazılımdan koruma çalıştırılmıyor**:  
   Bu ilke ayarı, Internet Explorer 'ın, sayfalarda güvenli olup olmadığını denetlemek için kötü amaçlı yazılımdan koruma programlarını ActiveX denetimlerine karşı çalıştırmasını belirler. Bu ilke ayarını etkinleştirirseniz, Internet Explorer, ActiveX denetiminin bir örneğini oluşturmanın güvenli olup olmadığını görmek için kötü amaçlı yazılımdan koruma programınızı denetlemez. Bu ilke ayarını devre dışı bırakırsanız, Internet Explorer, ActiveX denetiminin bir örneğinin oluşturulması için güvenli olup olmadığını görmek üzere her zaman kötü amaçlı yazılımdan koruma programınızı denetler. Bu ilke ayarını yapılandırmazsanız, Internet Explorer, ActiveX denetiminin bir örneğinin oluşturulması için güvenli olup olmadığını görmek üzere her zaman kötü amaçlı yazılımdan koruma programınızı denetler. Kullanıcılar, Internet Explorer güvenlik ayarlarını kullanarak bu davranışı etkinleştirebilir veya devre dışı bırakabilirsiniz.  
   [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067115)
 
@@ -1504,7 +1512,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-LocalPoliciesSecurityOpt
 
   **Varsayılan**: Evet
   
-- **Güvenli konumlar IÇIN UI erişim uygulamalarına Izin ver**:  
+- **Yalnızca güvenli konumlar IÇIN UI erişim uygulamalarına izin ver**:  
   Bu ilke ayarı, Kullanıcı arabirimi erişilebilirliği (UIAccess veya UıA) programlarının standart bir kullanıcı tarafından kullanılan yükseltme istemleri için güvenli masaüstünü otomatik olarak devre dışı bırakıp bırakamayacağını denetler.
 
   - Windows Uzaktan Yardım dahil olmak üzere *Evet* -UIA programları, yükseltme istemleri için güvenli masaüstünü otomatik olarak devre dışı bırakır. "Kullanıcı hesabı denetimi: Yükseltme isterken güvenli masaüstüne geç" ilke ayarını devre dışı bırakmazsanız, istemler güvenli masaüstü yerine etkileşimli kullanıcının masaüstünde görünür.
@@ -1542,151 +1550,168 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-LocalPoliciesSecurityOpt
 
 Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) bölümüne bakın.
 
-- **Gelen posta Iletilerini Tara**:  
-  E-postanın taranarak veya taramaya izin vermez.  
-  [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067116)
-
-  **Varsayılan**: Evet
-
-- **Office uygulamaları alt işlem türünü Başlat**:  
-  Office uygulamalarının alt işlem oluşturmasına izin verilmez. Buna Word, Excel, PowerPoint, OneNote ve Access dahildir. Bu, özellikle de kötü amaçlı yürütülebilir dosyaları başlatmak veya indirmek üzere Office uygulamalarını kullanmaya çalışacak makro tabanlı saldırılar için tipik bir kötü amaçlı yazılım davranışıdır.  
-  [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067121)
-
-  **Varsayılan**: engelle
-
-- **Defender örnek gönderimi onay türü**:  
-  Veri göndermek için Microsoft Defender 'daki Kullanıcı izin düzeyini denetler. Gerekli onay zaten verildiyse, Microsoft Defender bunları gönderir. Değilse (ve Kullanıcı hiçbir zaman sorma olarak belirtilmişse), veri göndermeden önce Kullanıcı izni (Defender/AllowCloudProtection 'a izin verildiğinde) istemek için kullanıcı ARABIRIMI başlatılır.  
-  [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067131)
-
-  **Varsayılan**: güvenli örnekleri otomatik olarak gönder
-
-- **İmza güncelleştirme aralığı (saat)**:  
-  Defender imza güncelleştirme aralığı saat olarak.
-
-  **Varsayılan**: 4
-
-- **Betiği indirilen yük yürütme türü**:  
-  Defender betiği yük yürütme türünü indirdi.
-
-  **Varsayılan**: engelle
-  
-- **Kimlik bilgisi hırsızlığı türünü engelle**:  
-  Microsoft Defender Credential Guard, yalnızca ayrıcalıklı sistem yazılımlarının erişebilmesi için gizli dizileri yalıtmak üzere sanallaştırma tabanlı güvenlik kullanır. Bu parolalara yetkisiz erişim, Pass-the-Hash veya Pass-The-Ticket gibi kimlik bilgisi hırsızlığı saldırılarına yol açabilir. Microsoft Defender Credential Guard, NTLM parola karmalarını, Kerberos bileti verme biletlerini ve uygulamalar tarafından etki alanı kimlik bilgileri olarak depolanan kimlik bilgilerini koruyarak bu saldırıları engeller.  
-  [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067065)
-  
-  **Varsayılan**: etkinleştir
-
-- **E-posta içeriği yürütme türü**:  
-  Bu kural, aşağıdaki dosya türlerinin Microsoft Outlook veya Web postasından (örn. exe,. dll veya. SCR) komut dosyaları (örneğin, PowerShell. PS, VisualBasic. vbs veya JavaScript. js dosyası gibi) komut dosyası arşiv dosyaları gibi, çalışan veya bir e-posta yoluyla çalıştırılmasını engeller.  
-  [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067063)
-
-  **Varsayılan**: engelle
-
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **Bir alt Işlemde Adobe Reader 'ı Başlat**:  
+- **Adobe Reader 'ın alt işlem oluşturmasını engelleyin**:  
 Bu kural, Adobe Reader 'ın ek işlem oluşturmasını engelleyerek saldırıları engeller. Kötü amaçlı yazılım, sosyal mühendisler veya güvenlik açıkları aracılığıyla ek yükleri indirebilir ve başlatabilir ve Adobe Reader 'dan daha fazla kesebilir. Alt işlemlerin Adobe Reader tarafından oluşturulmasını engelleyerek, bunu bir vektör olarak kullanmaya çalışan kötü amaçlı yazılımların yayılması engellenir.
 [Daha fazlasını öğrenin](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   **Varsayılan**: etkinleştir
 
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Ağ koruması**:  
-  Bu ilke, Microsoft Defender Exploit Guard 'da ağ korumasını (engelleme/denetim) açmanıza veya kapatmanıza olanak sağlar. Ağ koruması, Microsoft Defender Exploit Guard 'ın herhangi bir uygulamayı kullanan çalışanları, kimlik avı dolandırıcılığı, yararlanma siteleri ve Internet 'teki kötü amaçlı içeriklere erişmesini koruyan bir özelliktir. Bu, üçüncü taraf tarayıcıların tehlikeli sitelere bağlanmasını engellemeyi de kapsar. Değer türü tamsayı. Bu ayarı etkinleştirirseniz, ağ koruması açıktır ve çalışanlar bu özelliği kapatamaz. Davranışı şu seçenekler tarafından denetlenebilir: Block ve audit. Bu ilkeyi "engelle" seçeneği ile etkinleştirirseniz, kullanıcıların ve uygulamaların tehlikeli etki alanlarına bağlanması engellenir. Bu etkinliği Microsoft Defender Güvenlik Merkezi 'nde görebilirsiniz. Bu ilkeyi "Denetim" seçeneği ile etkinleştirirseniz, kullanıcıların/uygulamaların tehlikeli etki alanlarına bağlanması engellenmez. Bununla birlikte, yine de bu etkinliği Microsoft Defender Güvenlik Merkezi ' nde görürsünüz. Bu ilkeyi devre dışı bırakırsanız, kullanıcıların/uygulamaların tehlikeli etki alanlarına bağlanması engellenmez. Microsoft Defender Güvenlik Merkezi 'nde herhangi bir ağ etkinliği görmezsiniz. Bu ilkeyi yapılandırmazsanız, ağ engelleme varsayılan olarak devre dışıdır.  
-  [Daha fazlasını öğrenin](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)
+- **Office iletişim uygulamaları bir alt işlemde başlatılır**:  
+  [Cihazları kötüye bilgisayarlardan koruyun](https://go.microsoft.com/fwlink/?linkid=874499)
 
   **Varsayılan**: etkinleştir
+
+- **Güvenlik Zekası güncelleştirmelerini denetleme sıklığını (0-24 saat) girin**  
+  CSP: [Defender/Signatureupdateınterval](https://go.microsoft.com/fwlink/?linkid=2113936)
+  
+  Yeni imzaların ne sıklıkta denetleyeceğini belirtin. 1 değeri bir saat, 2 iki saattir ve bu şekilde devam eder.
+
+  **Varsayılan**: 4
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
 
 - **Defender Tarama günü zamanlaması**:  
   Defender tarama gününü zamanlayamıyor.
 
   **Varsayılan**: günlük
 
-- **Buluta teslim edilen koruma**:  
-  Bilgisayarınızı en iyi şekilde korumak için Microsoft Defender, bulduğu sorunlar hakkında Microsoft 'a bilgi gönderir. Microsoft bu bilgileri analiz eder, sizi ve diğer müşterileri etkileyen sorunlar hakkında daha fazla bilgi edinin ve geliştirilmiş çözümler sunar.  
-  [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067039)
+- **Buluta teslim edilen korumayı açın**:  
+  CSP: [Defender/AllowCloudProtection](https://go.microsoft.com/fwlink/?linkid=2113937)
+  
+  Evet olarak ayarlandığında, Defender bulduğu sorunlar hakkında bilgileri Microsoft 'a gönderir. Yapılandırılmadı olarak ayarlanırsa istemci, özelliği sağlayan, ancak kullanıcının devre dışı bırakmasına izin veren varsayılan ' a döner.
 
   **Varsayılan**: Evet  
 
-- **Defender istenmeyebilecek uygulama eylemi**:  
-  Microsoft Defender virüsten koruma 'daki istenmeyebilecek uygulama (PUA) koruması özelliği, PUAs 'yi ağınızdaki uç noktalara indirme ve yükleme işlemi için tanımlayabilir ve engelleyebilir. Bu uygulamalar virüsler, kötü amaçlı yazılım veya diğer tehdit türleri olarak kabul edilmez, ancak performansını veya kullanımını olumsuz yönde etkileyen uç noktalar üzerinde eylemler gerektirebilir. PUA, zayıf bir saygınlığa sahip olarak kabul edilen uygulamalara da başvurabilir. Tipik PUA davranışı şunları içerir: Web tarayıcıları sürücüsüne ad ekleme ve sorunları tespit eden en iyi duruma getirme, hataları gidermek için ödeme isteme, ancak uç noktada kalan, ancak "sahte virüsten koruma" programları olarak da bilinen çeşitli türde yazılım paketleyiciler. Bu uygulamalar, ağınıza kötü amaçlı yazılımdan etkilenme riskini artırabilir, kötü amaçlı yazılımdan bulaşmaları daha zor hale gelir ve uygulamaları temizlemede BT kaynaklarını boşa çıkarabilir.  
-  [Daha fazlasını öğrenin](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+- **Gerçek zamanlı korumayı aç**  
+  CSP: [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050)
 
-  **Varsayılan**: engelle  
-
-- **Betik gizleme makro kod türü**:  
-  Kötü amaçlı yazılım ve diğer tehditler bazı betik dosyalarında kötü amaçlı kodlarını gizlemeyi veya gizlemeyi deneyebilir. Bu kural, görünmeyen görünen betiklerin çalışmasını engeller.  
-  [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067026)
-
-  **Varsayılan**: engelle
-
-- **Tam tarama sırasında çıkarılabilir sürücüleri Tara**:  
-  Microsoft Defender 'ın, tam tarama sırasında çıkarılabilir sürücülerde (örneğin, Flash sürücüler) kötü amaçlı ve istenmeyen yazılımları taramasına izin verir. Microsoft Defender virüsten koruma, yürütmeden önce USB cihazlarındaki tüm dosyaları tarar.  
-  [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067036)
+  Bu ayar Evet olarak ayarlandığında gerçek zamanlı izleme zorunlu kılınır ve Kullanıcı bunu devre dışı bırakamayabilir. Yapılandırılmadı olarak ayarlandığında, ayarı üzerinde olan istemci varsayılan öğesine döndürülür, ancak kullanıcı bunu değiştirebilir. Gerçek zamanlı izlemeyi devre dışı bırakmak için özel bir URI kullanın.
 
   **Varsayılan**: Evet  
 
 - **Arşiv dosyalarını Tara**:  
-  Defender arşiv dosyalarını tarar.
+  'SINI[](https://go.microsoft.com/fwlink/?linkid=2114047)
+  
+  Evet olarak ayarlandığında, ZIP veya CAB dosyası taraması gibi arşiv dosyaları zorlanır. Yapılandırılmadı olarak ayarlandığında, bu ayar, arşivlenmiş dosyaları taramak için istemci varsayılana geri döndürülür, ancak kullanıcı bunu devre dışı bırakabilir.
 
   **Varsayılan**: Evet
 
-- **Davranış izleme**:  
-  Microsoft Defender davranış Izleme işlevselliğine izin verir veya vermez. Windows 10 ' da gömülü olan bu sensörler, işletim sisteminden davranış sinyallerini toplayıp işler ve bu algılayıcı verilerini Microsoft Defender ATP 'nin özel, yalıtılmış, bulut örneğine gönderir.  
-  [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067111)
+- **Davranış Izlemeyi aç**:  
+  CSP: [Defender/AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
+
+  Bu ayar Evet olarak ayarlandığında, davranış izleme zorunlu kılınır ve Kullanıcı bunu devre dışı bırakamayabilir. Yapılandırılmadı olarak ayarlandığında, ayarı üzerinde olan istemci varsayılan öğesine döndürülür, ancak kullanıcı bunu değiştirebilir. Gerçek zamanlı izlemeyi devre dışı bırakmak için özel bir URI kullanın.
 
   **Varsayılan**: Evet
 
-- **Ağ klasörlerinden açılan dosyaları tara**:  
-  Dosyalar salt okunurdur, Kullanıcı algılanan herhangi bir kötü amaçlı yazılımı kaldıramayacaktır.
+- **Gelen posta Iletilerini Tara**:  
+  CSP: [Defender/AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
+
+  Evet olarak ayarlandığında, PST, DBX, MNX, MIME ve BINHEX gibi e-posta posta kutusu ve posta dosyaları taranacaktır. Yapılandırılmadığında, bu ayar, taranmayan e-posta dosyalarının istemci varsayılan durumuna geri döner.
 
   **Varsayılan**: Evet
 
-- **GÜVENILMEYEN USB işlem türü**:  
-  Bu kuralla, Yöneticiler, imzasız veya güvenilmeyen yürütülebilir dosyaların SD kartları dahil USB çıkarılabilir sürücülerden çalışmasını engelleyebilir.  
-  [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067100)
+- **Tam tarama sırasında çıkarılabilir sürücüleri Tara**:  
+  CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946)
+
+  Evet olarak ayarlandığında, tam tarama çıkarılabilir sürücüler (ör. USB flash sürücüler) taranır. Yapılandırılmadı olarak ayarlandığında, bu ayar, çıkarılabilir sürücülerin tarandığı istemci varsayılan öğesine döner, ancak kullanıcı bunu devre dışı bırakabilir.
+  **Varsayılan**: Evet  
+
+- **Office uygulamalarının ekleme koddan diğer Işlemlere engel**:  
+  [Cihazları kötüye bilgisayarlardan koruyun](https://go.microsoft.com/fwlink/?linkid=872974)
+
+  Evet olarak ayarlandığında, Office uygulamalarının diğer işlemlere ekleme kodu engellenir. Yalnızca denetim olarak ayarlandığında, Windows olayları engelleme yerine oluşturulur. Yapılandırılmadı olarak ayarlandığında ayarı Windows varsayılan olarak devre dışı bırakılır. Bu ASR kuralı şu GUID aracılığıyla denetlenir: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
 
   **Varsayılan**: engelle
 
-- **Office uygulamaları diğer işlem ekleme türü**:  
-  Word, Excel, PowerPoint ve OneNote dahil Office uygulamaları diğer işlemlere kod ekleyemiyor. Bu genellikle kötü amaçlı yazılım tarafından virüsten koruma tarama altyapılarından etkinliği gizleme girişiminde kötü amaçlı kod çalıştırmak için kullanılır.  
-  [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067019)
+- **Office uygulamalarının yürütülebilir içerik oluşturmasını engelleyin**  
+  [Cihazları kötüye bilgisayarlardan koruyun](https://go.microsoft.com/fwlink/?linkid=872975)
+
+  Evet olarak ayarlandığında, Office uygulamalarının yürütülebilir içerik oluşturmasına izin verilmez. Yalnızca denetim olarak ayarlandığında, Windows olayları engelleme yerine oluşturulur. Yapılandırılmadı olarak ayarlandığında ayarı Windows varsayılan olarak devre dışı bırakılır. Bu ASR kuralı şu GUID aracılığıyla denetlenir: 3B576869-A4EC-4529-8536-B80A7769E899
 
   **Varsayılan**: engelle
 
-- **Office makro kodu Win32 içeri aktarmalar türüne izin ver**:  
-  Kötü amaçlı yazılım, sistem genelinde daha fazla bulaşma sağlamak üzere API çağrıları yapmak için kullanılan Win32 DLL 'Lerini içeri ve dışarı aktarmak için Office dosyalarındaki makro kodunu kullanabilir. Bu kural, Win32 DLL 'Leri içeri aktarabileceğiniz makro kodu içeren Office dosyalarını engellemeye çalışır. Buna Word, Excel, PowerPoint ve OneNote dahildir.  
-  [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067130)
+- **Tüm Office uygulamalarının alt işlem oluşturmasını engelle**  
+  [Cihazları kötüye bilgisayarlardan koruyun](https://go.microsoft.com/fwlink/?linkid=872976)
+
+  Denetim moduna ayarlandığında, Windows olayları engelleme yerine oluşturulur. Yapılandırılmadı olarak ayarlandığında ayarı Windows varsayılan olarak devre dışı bırakılır. Bu ASR kuralı şu GUID aracılığıyla denetlenir: D4F940AB-401B-4EFC-AADC-AD5F3C50688A
 
   **Varsayılan**: engelle
 
-- **Defender bulut blok düzeyi**:  
-  Defender bulut blok düzeyi.
+- **Office makrolarından gelen Win32 API çağrılarını engelle**:  
+  [Cihazları kötüye bilgisayarlardan koruyun](https://go.microsoft.com/fwlink/?linkid=872977)
 
-  **Varsayılan**: yapılandırılmadı
+  Evet olarak ayarlandığında, Office makrosunda Win32 API çağrıları kullanılması engellenir. Yalnızca denetim olarak ayarlandığında, Windows olayları engelleme yerine oluşturulur. Yapılandırılmadı olarak ayarlandığında ayarı Windows varsayılan olarak devre dışı bırakılır. Bu ASR kuralı şu GUID aracılığıyla denetlenir: 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
+  
+  **Varsayılan**: engelle
 
-- **Gerçek zamanlı izleme**:  
-  Defender gerçek zamanlı izleme gerektirir.
+- **Büyük olasılıkla karıştırılmış betiklerin (js/vbs/PS) yürütülmesini engelleyin**:  
+  [Cihazları kötüye bilgisayarlardan koruyun](https://go.microsoft.com/fwlink/?linkid=872978)
 
-  **Varsayılan**: Evet
+  Evet olarak ayarlandığında, Defender karıştırılmış betiklerin yürütülmesini engeller. Yalnızca denetim olarak ayarlandığında, Windows olayları engelleme yerine oluşturulur. Yapılandırılmadı olarak ayarlandığında ayarı Windows varsayılan olarak devre dışı bırakılır. Bu ASR kuralı şu GUID aracılığıyla denetlenir: 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
+  
+  **Varsayılan**: engelle
+
+- **E-posta içeriği yürütme türü**:    
+  [E-posta ve Web postasından istemcilerinden yürütülebilir içerik indirmeyi engelle](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  Evet olarak ayarlandığında, e-posta ve Web postasından istemcilerinden indirilen yürütülebilir içerik engellenir. Yalnızca denetim olarak ayarlandığında, Windows olayları engelleme yerine oluşturulur. Yapılandırılmadı olarak ayarlandığında ayarı Windows varsayılan olarak devre dışı bırakılır.
+
+  **Varsayılan**: engelle
+
+- **Kimlik bilgisi hırsızlığı türünü engelle**:  
+  [Cihazları kötüye bilgisayarlardan koruyun](https://go.microsoft.com/fwlink/?linkid=874499)
+  
+  Evet olarak ayarlandığında, Lsass. exe aracılığıyla kimlik bilgilerini çalmaya çalışır. Yalnızca denetim olarak ayarlandığında, Windows olayları engelleme yerine oluşturulur. Yapılandırılmadı olarak ayarlandığında ayarı Windows varsayılan olarak devre dışı bırakılır. Bu ASR kuralı şu GUID aracılığıyla denetlenir: 9e6c4e1f-7d60-472F-ba1a-a39ef669e4b2
+
+  **Varsayılan**: etkinleştir
+
+- **Defender istenmeyebilecek uygulama eylemi**:  
+  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
+
+  Microsoft Defender virüsten koruma 'daki istenmeyebilecek uygulama (PUA) koruması özelliği, PUAs 'yi ağınızdaki uç noktalara indirme ve yükleme işlemi için tanımlayabilir ve engelleyebilir. Bu uygulamalar virüsler, kötü amaçlı yazılım veya diğer tehdit türleri olarak kabul edilmez, ancak performansını veya kullanımını olumsuz yönde etkileyen uç noktalar üzerinde eylemler gerektirebilir. PUA, zayıf bir saygınlığa sahip olarak kabul edilen uygulamalara da başvurabilir. Tipik PUA davranışı şunları içerir: Web tarayıcıları sürücüsüne ad ekleme ve sorunları tespit eden en iyi duruma getirme, hataları gidermek için ödeme isteme, ancak uç noktada kalan, ancak "sahte virüsten koruma" programları olarak da bilinen çeşitli türde yazılım paketleyiciler. Bu uygulamalar, ağınıza kötü amaçlı yazılımdan etkilenme riskini artırabilir, kötü amaçlı yazılımdan bulaşmaları daha zor hale gelir ve uygulamaları temizlemede BT kaynaklarını boşa çıkarabilir.
+
+  **Varsayılan**: engelle
+
+- **USB 'den çalıştırılan güvenilmeyen ve imzasız Işlemlerin engelle**:  
+  [Cihazları kötüye bilgisayarlardan koruyun](https://go.microsoft.com/fwlink/?linkid=874502)
+  
+  Evet olarak ayarlandığında, bir USB sürücüsünden yürütülen güvenilmeyen/imzasız işlem engellenir. Yalnızca denetim olarak ayarlandığında, Windows olayları engelleme yerine oluşturulur. Yapılandırılmadı olarak ayarlandığında ayarı Windows varsayılan olarak devre dışı bırakılır. Bu ASR kuralı şu GUID aracılığıyla denetlenir: b2b3f03d-6A65-4F7B-a9c7-1c7ef74a9ba4
+
+  **Varsayılan**: engelle
+
+- **Ağ koruması**:  
+  [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
+
+  Evet olarak ayarlandığında, sistemdeki tüm kullanıcılar için ağ koruması etkinleştirilir. Ağ koruması, çalışanların kimlik avı dolandırıcılığı ve Internet 'teki kötü amaçlı içeriklere erişmesini önler. Buna üçüncü taraf tarayıcıları dahildir. Bunu yalnızca denetim olarak ayarlamak, kullanıcılar tehlikeli etki alanlarından engellenmeyecektir, ancak bunun yerine Windows olayları tetiklenir. Bunu Yapılandırılmadı olarak ayarlamak, ayarı devre dışı olan Windows varsayılan öğesine döndürür.
+
+  **Varsayılan**: etkinleştir
+
+- **Defender örnek gönderimi onay türü**:  
+  [Defender/Submitsamplesonayı](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  Veri göndermek için Microsoft Defender 'daki Kullanıcı izin düzeyini denetler. Gerekli onay zaten verildiyse, Microsoft Defender bunları gönderir. Aksi takdirde (ve Kullanıcı hiçbir zaman sorma), veri göndermeden önce Kullanıcı izni (Defender/AllowCloudProtection 'a izin verildiğinde) istemek için kullanıcı ARABIRIMI başlatılır.
+
+  **Varsayılan**: güvenli örnekleri otomatik olarak gönder
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **Office iletişim uygulamaları bir alt işlemde başlatılır**:  
-  **Varsayılan**: etkinleştir
+- **Ağ dosyalarını Tara**  
+  [Defender/AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049)
+
+  - **Varsayılan**: Evet
+
+- **JavaScript veya VBScript 'in indirilen yürütülebilir içeriği başlatmasını engelle**  
+  [Cihazları kötüye bilgisayarlardan koruyun](https://go.microsoft.com/fwlink/?linkid=872979)
+
+  Evet olarak ayarlandığında, Defender, Internet 'ten indirilen JavaScript veya VBScript dosyalarını yürütülmeden engeller. Yalnızca denetim olarak ayarlandığında, Windows olayları engelleme yerine oluşturulur. Yapılandırılmadı olarak ayarlandığında ayarı Windows varsayılan olarak devre dışı bırakılır. Bu ASR kuralı şu GUID aracılığıyla denetlenir: D3E037E1-3EB8-44C8-A917-57927947596D
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Office uygulamaları yürütülebilir içerik oluşturma veya başlatma türü**:  
-  Bu kural, şüpheli ve kötü amaçlı eklentiler ve yürütülebilir dosyalar oluşturan ya da Başlatan olağan dışı eklentiler ve betikler (Uzantılar) tarafından kullanılan tipik davranışları hedefler. Bu tipik bir kötü amaçlı yazılım tekniğidir. Uzantıların Office uygulamaları tarafından kullanılması engellenir. Genellikle bu uzantılar Windows komut dosyası konağını kullanır (. WSH dosyaları) belirli görevleri otomatikleştiren veya Kullanıcı tarafından oluşturulan eklenti özellikleri sağlayan betikleri çalıştırır.  
-  [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067108)
-
-  **Varsayılan**: engelle
+::: zone pivot="mdm-may-2019,mdm-preview"
 
 ## <a name="ms-security-guide"></a>MS Güvenlik Kılavuzu
 
@@ -1736,7 +1761,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-MSSLegacy](https://docs.
 
   **Varsayılan**: en yüksek koruma
 
-- **Ağ ICMP yeniden yönlendirmeleri geçersiz KıLMA OSPF oluşturuldu**:  
+- **Ağ ICMP yönlendirmeleri, OSPF tarafından oluşturulan yolları geçersiz kılar**:  
   [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067326)
 
   **Varsayılan**: devre dışı
@@ -1790,19 +1815,21 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-RemoteAssistance](https:
 
   **Varsayılan**: Uzaktan Yardım 'ı devre dışı bırak
 
-  *Uzaktan Yardımı etkinleştirmek*için ayarlandığında, aşağıdaki ek ayarları yapılandırın:
+<!-- These settings are not available: 
+  When set to *Enable Remote Assistance*, configure the following additional settings:
 
-  - **Uzaktan Yardım istenen izin**:  
-    **Varsayılan**: görünüm
+  - **Remote Assistance solicited permission**:  
+    **Default**: View
 
-  - **En fazla bilet süresi değeri**:  
-    **Varsayılan**: *Yapılandırılmadı*
+  - **Maximum ticket time value**:  
+    **Default**: *Not configured*
 
-  - **En fazla bilet süresi aralığı**:  
-    **Varsayılan**: dakika
+  - **Maximum ticket time period**:  
+    **Default**: Minutes
 
-  - **E-posta davet yöntemi**:  
-    **Varsayılan**: basit MAPI
+  - **E-Mail invitation method**:  
+    **Default**: Simple MAPI
+-->
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -1920,6 +1947,9 @@ Daha fazla bilgi için bkz. [Ilke CSP-](https://docs.microsoft.com/windows/clien
 
 Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) bölümüne bakın.
 
+::: zone-end
+::: zone pivot="mdm-preview"
+
 - **Doğrulanmamış dosyaların yürütülmesini engelle**:  
   Kullanıcının doğrulanmamış dosyaları çalıştırmasını engelleyin.
 
@@ -1936,6 +1966,26 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-SmartScreen](https://doc
   [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067168)
 
   **Varsayılan**: Evet
+
+::: zone-end
+::: zone pivot="mdm-may-201"
+
+- **Windows SmartScreen 'i açma**  
+  CSP: [SmartScreen/Enablesmartscreenınshell](https://go.microsoft.com/fwlink/?linkid=872784)
+
+  Bunu evet olarak ayarlamak, SmartScreen 'in tüm kullanıcılar için kullanımını zorunlu tutar. Bunu Yapılandırılmadı olarak ayarlamak, SmartScreen 'i etkinleştirmek için Windows varsayılan ayarını döndürür, ancak kullanıcılar bu ayarı değiştirebilir. SmartScreen 'i devre dışı bırakmak için özel bir URI kullanın.
+
+  **Varsayılan**: Evet
+
+- **Kullanıcıların SmartScreen uyarılarını yoksaymalarını engelleyin**  
+  CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+
+  Bunu evet olarak ayarlamak, SmartScreen kullanıcının uyarıyı görmezden ve uygulamayı çalıştırmasına yönelik bir seçenek sunmayacak. Uyarı sunulacaktır, ancak kullanıcı onu atlayabilir. Bunu Yapılandırılmadı olarak ayarlamak, kullanıcının geçersiz kılınmasına izin vermek için bu ayarı Windows varsayılan olarak döndürür. Bu ayar, ' uygulamalar ve dosyalar için SmartScreen 'i zorla ' ayarının etkinleştirilmesini gerektirir.
+
+  **Varsayılan**: Evet
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
 
 ## <a name="system"></a>Sistem
 
@@ -1994,52 +2044,40 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsConnectionManager
 
 ## <a name="windows-hello-for-business"></a>İş İçin Windows Hello
 
-- **Kullanılabilir olduğunda, Gelişmiş kimlik sahtekarlığı korumasını kullanmak için etkinleştirin**
+- **Iş için Windows Hello 'Yu engelle**  
+  Iş için Windows Hello, parolaları, akıllı kartları ve sanal akıllı kartları değiştirerek Windows 'da oturum açmak için alternatif bir yöntemdir. Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, cihaz Iş için Windows Hello 'Yu sağlar. Bu ilke ayarını etkinleştirirseniz, cihaz herhangi bir kullanıcı için Iş için Windows Hello sağlamaz.
 
-  Yanıt Evet ise, cihazlar, kullanılabilir olduğunda gelişmiş yanıltma koruması kullanacaktır. Hayır ise, sahtekarlığı önleme engellenir. Yapılandırılmadı, istemci üzerinde gerçekleştirilen yapılandırmalara uyar.  
-  [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067192)
+  **Varsayılan**: etkin
+  
+  *Devre dışı*olarak ayarlandığında, aşağıdaki ayarları yapılandırabilirsiniz:
 
-  **Varsayılan**: Evet
+  - **Minimum PIN uzunluğu**  
+    Minimum PIN uzunluğu 4 ile 127 arasında olmalıdır.
 
-- **Iş için Windows Hello 'Yu yapılandırma**
+    **Varsayılan**: *Yapılandırılmadı*
 
-  Iş için Windows Hello, parolaları, akıllı kartları ve sanal akıllı kartları değiştirerek Windows 'da oturum açmak için alternatif bir yöntemdir.
+  - **Kullanılabilir olduğunda, Gelişmiş kimlik sahtekarlığı korumasını kullanmak için etkinleştirin**  
+    [Sahtekarlığı önleme koruması](https://go.microsoft.com/fwlink/?linkid=2067192)
 
-  > [!IMPORTANT]
-  > Bu ayarın seçenekleri, örtülü anlamlarından ters çevrilir. Ters çevrilirken, *Evet* değeri Windows Hello 'yu etkinleştirmez ve bunun yerine *yapılandırılmamış*olarak değerlendirilir. Bu ayar *Yapılandırılmadı*olarak ayarlandığında, bu temeli alan cihazlarda Windows Hello etkinleştirilir.
-  >
-  > Aşağıdaki açıklamalar bu davranışı yansıtacak şekilde düzenlendi. Ayarların ters çevrilmesi, bu güvenlik temeline yönelik gelecekteki bir güncelleştirmede düzeltilecektir.
+    Etkinleştirilirse, cihazlar, kullanılabilir olduğunda gelişmiş yanıltma koruması kullanacaktır. Yapılandırılmazsa, kimlik sahtekarlığına karşı koruma için istemci yapılandırması kabul edilir.
 
-  - *Yapılandırılmadı*olarak ayarlandığında Windows Hello etkinleştirilmiştir ve cihaz Iş Için Windows Hello 'yu sağlar.
-  - *Evet*olarak ayarlandığında, taban çizgisi cihazın ilke ayarını etkilemez. Bu, Iş için Windows Hello 'nun bir cihazda devre dışı bırakıldığı durumlarda devre dışı kaldığı anlamına gelir. Etkinleştirilirse, etkin kalır.
-  <!-- expected behavior 
-  - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
-  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
-  -->
+    **Varsayılan**: yapılandırılmadı
 
-  Bu taban çizgisi aracılığıyla Iş için Windows Hello 'Yu devre dışı bırakamıyoruz. [Windows kaydını](windows-hello.md)yapılandırırken veya [kimlik koruması](identity-protection-configure.md)için bir cihaz yapılandırma profilinin parçası olarak Iş için Windows Hello 'yu devre dışı bırakabilirsiniz.  
+  - **PIN 'de küçük harfler**:  
+    Gerekirse, Kullanıcı PIN 'ı en az bir küçük harf içermelidir.
 
-  **Varsayılan**: Evet
+    **Varsayılan**: izin verilmiyor
 
-- **PIN kodunda küçük harfler iste**:  
-  Gerekirse, Kullanıcı PIN 'ı en az bir küçük harf içermelidir.
+  - **PIN 'de özel karakterler**:  
+    Gerekirse, Kullanıcı PIN 'ı en az bir özel karakter içermelidir.
 
-  **Varsayılan**: izin verildi
+    **Varsayılan**: izin verilmiyor
+ 
 
-- **PIN 'de özel karakterler iste**:  
-  Gerekirse, Kullanıcı PIN 'ı en az bir özel karakter içermelidir.
+  - **PIN kodunda büyük harfler**:  
+    Gerekirse, Kullanıcı PIN 'ı en az bir büyük harf içermelidir.
 
-  **Varsayılan**: izin verildi
-
-- **MINIMUM PIN uzunluğu**:  
-  Minimum PIN uzunluğu 4 ile 127 arasında olmalıdır.
-
-  **Varsayılan**: 6
-
-- **PIN kodunda büyük harfler iste**:  
-  Gerekirse, Kullanıcı PIN 'ı en az bir büyük harf içermelidir.
-
-  **Varsayılan**: izin verildi
+    **Varsayılan**: izin verilmiyor
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -2065,7 +2103,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsInkWorkspace](htt
 
 Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell) bölümüne bakın.
 
-- **Power Shell kabuğu betik bloğu günlüğü**:  
+- **PowerShell betiği blok günlüğü**:  
   Bu ilke ayarı, tüm PowerShell betiği girişinin Microsoft-Windows-PowerShell/Işletimsel olay günlüğüne kaydedilmesini sağlar. Bu ilke ayarını etkinleştirirseniz, Windows PowerShell komutların, betik bloklarının, işlevlerin ve betiklerin işlenmesini ister etkileşimli olarak, ister Otomasyon aracılığıyla günlüğe kaydeder. Bu ilke ayarını devre dışı bırakırsanız, PowerShell betik girişinin günlüğe kaydı devre dışı bırakılır. Betik bloğu çağırma günlüğünü etkinleştirirseniz, PowerShell Ayrıca bir komut, betik bloğu, işlev veya komut dosyası başlatıldığında veya durdurulduğunda olayları günlüğe kaydeder. Çağırma günlüğünü etkinleştirmek, yüksek miktarda olay günlüğü oluşturur. Note: Bu ilke ayarı, grup ilkesi düzenleyicisinde hem bilgisayar yapılandırması hem de Kullanıcı Yapılandırması altında bulunur. Bilgisayar yapılandırma ilkesi ayarı, Kullanıcı yapılandırma ilkesi ayarından önceliklidir.  
   [Daha fazlasını öğrenin](https://go.microsoft.com/fwlink/?linkid=2067330)
 

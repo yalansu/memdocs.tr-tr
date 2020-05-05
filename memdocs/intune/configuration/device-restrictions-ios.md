@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2640107a4a3b17e2c544041445c8c797ef40b01e
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
-ms.translationtype: HT
+ms.openlocfilehash: f21728c62b5cb306e03b259940eef37141592b25
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166562"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782217"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için iOS ve ıpados cihaz ayarları
 
@@ -593,9 +593,12 @@ Uygulamaları eklemek için şunları yapabilirsiniz:
 
 ## <a name="autonomous-single-app-mode"></a>Otonom tek uygulama modu
 
-İOS/ıpados cihazlarını, belirli uygulamaları otonom tek uygulama modunda çalıştıracak şekilde yapılandırmak için bu ayarları kullanın. Bu mod yapılandırıldığında ve kullanıcılar yapılandırılmış uygulamalardan birini başlatdıklarında, cihaz bu uygulamaya kilitlenir. Uygulama/görev değiştirme, kullanıcılar izin verilen uygulamadan çıkana kadar devre dışı bırakıldı.
+İOS/ıpados cihazlarını, otonom tek uygulama modunda (ASAM) belirli uygulamaları çalıştıracak şekilde yapılandırmak için bu ayarları kullanın. Bu mod yapılandırıldığında ve kullanıcılar yapılandırılmış uygulamalardan birini başlatdıklarında, cihaz bu uygulamaya kilitlenir. Uygulama/görev değiştirme, kullanıcılar izin verilen uygulamadan çıkana kadar devre dışı bırakıldı.
 
 Örneğin, okul veya üniversite ortamında, kullanıcıların cihazda bir test geçirmesine imkan tanıyan bir uygulama ekleyin. Ya da, Kullanıcı kimlik doğrulamasından çıkana kadar cihazı Şirket Portalı uygulamasına kilitleyin. Uygulamalar eylemleri kullanıcılar tarafından tamamlandığında veya bu ilkeyi kaldırdığınızda cihaz normal durumuna geri döner.
+
+> [!NOTE]
+> Tüm uygulamalar otonom tek uygulama modunu desteklemez. Bir uygulamayı otonom tek uygulama modunda yerleştirmek için, bir paket KIMLIĞI veya bir uygulama yapılandırma ilkesi tarafından teslim edilen anahtar değer çifti genellikle gereklidir. Daha fazla bilgi için Apple MDM belgelerindeki [ `autonomousSingleAppModePermittedAppIDs` kısıtlamaya](https://developer.apple.com/documentation/devicemanagement/restrictions) bakın. Yapılandırmakta olduğunuz uygulama için gereken belirli ayarlar hakkında daha fazla bilgi için satıcı belgelerine bakın.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
@@ -606,6 +609,8 @@ Uygulamaları eklemek için şunları yapabilirsiniz:
 Ayrıca, uygulama adlarının ve paket kimliklerinin listesini içeren bir CSV dosyasını **Içeri aktarabilirsiniz** . Alternatif olarak uygulamaları içeren mevcut listeyi **dışarı aktarabilirsiniz**.
 
 ## <a name="kiosk"></a>Bilgi noktası
+
+Intune 'da bilgi noktası modu, tek uygulama modu olarak da bilinir. [Apple MDM belgelerinde](https://developer.apple.com/documentation/devicemanagement/applock)bilgi noktası modu, uygulama kilidi olarak bilinir.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
@@ -671,7 +676,7 @@ Ayrıca, uygulama adlarının ve paket kimliklerinin listesini içeren bir CSV d
 
 iOS/ıpados Denetimli mod yalnızca Apple Aygıt Kayıt Programı aracılığıyla veya Apple Configurator kullanılarak ilk cihaz kurulumu sırasında etkinleştirilebilir. Denetimli mod etkinleştirildikten sonra, Intune şu işlevleri kullanarak bir cihazı yapılandırabilir:
 
-- Uygulama Kilidi (Tek Uygulama Modu) 
+- Bilgi noktası modu (tek uygulama modu): Apple MDM belgelerinde "uygulama kilidi" adı verilir.
 - Etkinleştirme Kilidini Devre Dışı Bırakma 
 - Otonom Tek Uygulama Modu 
 - Web İçeriği Filtresi 

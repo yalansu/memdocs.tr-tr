@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a703914b589430f3e2347c0ea08843193595dc0e
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
-ms.translationtype: HT
+ms.openlocfilehash: 5f85a8ffc81aa91bce09d6a76eeb5a52335d8b23
+ms.sourcegitcommit: dda5e6f00f79737348e850d971f15fc3093d6431
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729333"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82745198"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Intune Cihaz uyumluluk ilkelerini izleme
 
@@ -104,9 +104,9 @@ Bu eylem **cihaz uyumluluk** penceresini açar ve cihazları bir **cihaz durumu*
 Belirli bir kullanıcının sahip olduğu tüm cihazları görmek isterseniz, kullanıcının e-postasını yazarak Grafik raporuna da filtre uygulayabilirsiniz.
 
 > [!TIP]
-> Bir Kullanıcı cihazda oturum içermiyorsa, hedeflenen cihaz Uyumluluk ilkesine sahip cihaz, Kullanıcı asıl adı olarak **sistem hesabını** gösteren bir uyumluluk raporu Intune 'a geri gönderilir. Bu durum, bir cihaz uyumluluk ilkesinin bir kullanıcı veya cihaz grubuna hedeflendiği ve uyumluluk uyumluluğu değerlendirildiği sırada cihazda hiç Kullanıcı imzalanmadığı için oluşur.
+> Cihazda oturum açmış bir kullanıcı yoksa, hedeflenen cihaz Uyumluluk ilkesine sahip cihaz, Kullanıcı asıl adı olarak **sistem hesabını** gösteren bir uyumluluk raporu Intune 'a geri gönderilir. Bu durum, bir cihaz uyumluluk ilkesinin bir kullanıcı veya cihaz grubuna hedeflendiği ve uyumluluk ilkesi değerlendirildiği sırada cihazda hiçbir kullanıcının imzalanmadığı için oluşur.
 >
-> Ayrıca, aynı cihazda birden çok Kullanıcı imzalanmışsa ve bu cihaz bir cihaz uyumluluk ilkesiyle hedefleniyorsa ve bu kullanıcıların değerlendirilmesi gereken cihaz uyumluluk ilkesinin bir parçası olduğunu düşünüyorsa, uyumluluk raporu cihaz Uyumluluk ilkesini değerlendirmek ve Intune 'a geri bildirmek için aynı cihazı birden çok kez gösterebilir.
+> Ayrıca, aynı cihazda birden çok Kullanıcı imzalanmışsa ve cihaz, cihazda oturum açmış olan tüm kullanıcıları kapsamakta olan bir uyumluluk ilkesiyle hedeflenirse, uyumluluk raporu cihazda oturum açan tüm kullanıcılar cihaz Uyumluluk ilkesini değerlendirmek ve Intune 'a geri bildirmek için aynı cihazı birden çok kez gösterebilir.
 
 #### <a name="filter-and-columns"></a>Filtre ve sütunlar
 
