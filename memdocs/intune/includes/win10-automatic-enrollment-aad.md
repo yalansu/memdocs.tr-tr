@@ -21,16 +21,18 @@ Otomatik kayıt, kullanıcıların Windows 10 cihazlarını Intune’a kaydetmes
 
    ![Azure portalının ekran görüntüsü](../enrollment/media/windows-enroll/auto-enroll-intune.png)
 
-4. **MDM Kullanıcı kapsamını** yapılandırın. Cihazları Microsoft Intune tarafından yönetilecek kullanıcıları belirtin. Bu Windows 10 cihazlar, Microsoft Intune ile yönetim için otomatik olarak kaydedilebilir.
+4. **MDM Kullanıcı kapsamını** yapılandırın. Hangi kullanıcıların cihazlarının Microsoft Intune tarafından yönetilmesi gerektiğini belirtin. Bu Windows 10 cihazlar, Microsoft Intune ile yönetim için otomatik olarak kaydedilebilir.
 
    - **Hiçbiri** - MDM otomatik kayıt devre dışı
    - **Bazıları** - Windows 10 cihazlarını otomatik olarak kaydedebilecek **Grupları** seçin
    - **Tümü** - Tüm kullanıcılar Windows 10 cihazlarını otomatik olarak kaydedebilir
 
       > [!IMPORTANT]
-      > KCG cihazlarında hem MAM kullanıcı kapsamı hem de MDM kullanıcı kapsamı (otomatik MDM kaydı) tüm kullanıcılar (veya aynı kullanıcı grupları) için etkinleştirilmişse MAM kullanıcı kapsamı önceliklidir. Cihaz MDM''ye kayıtlı olmak yerine Windows Bilgi Koruması (WIP) ilkelerini (yapılandırıldıysa) kullanır.
+      > Windows KCG cihazlarında, MAM Kullanıcı kapsamı, tüm kullanıcılar (veya aynı kullanıcı grupları) için hem MAM Kullanıcı kapsamı hem de MDM Kullanıcı kapsamı (otomatik MDM kaydı) etkin olursa öncelik kazanır. Cihaz MDM kaydı olmayacaktır ve bunları yapılandırdıysanız Windows Information Protection (WıP) Ilkeleri uygulanır.
       >
-      > Her iki kapsam da etkinleştirilmişse şirket cihazları için MDM kullanıcı kapsamı önceliklidir. Cihazlar MDM kayıtlı olur.
+      > Amacınız Windows KCG cihazları için MDM 'ye otomatik kaydı etkinleştirmek istiyorsanız: MDM Kullanıcı kapsamını **Tümü** **(veya bir**grup belirtin) olarak yapılandırın ve Mam Kullanıcı kapsamını **hiçbiri** (veya **bazılarına**) olarak yapılandırın ve bir grup belirtin ve kullanıcıların hem MDM hem de mam Kullanıcı kapsamları tarafından hedeflenen bir grubun üyesi olmamasını sağlar.
+      >
+      >[Kurumsal cihazlarda](../enrollment/enrollment-restrictions-set.md#blocking-personal-windows-devices), MDM ve Mam Kullanıcı KAPSAMLARı etkinse MDM Kullanıcı kapsamı öncelikli olur. Cihaz, yapılandırılan MDM 'ye otomatik olarak kaydedilir.
 
    > [!NOTE]
    > MDM Kullanıcı kapsamı, Kullanıcı nesneleri içeren bir Azure AD grubuna ayarlanmalıdır.
@@ -44,4 +46,4 @@ Otomatik kayıt, kullanıcıların Windows 10 cihazlarını Intune’a kaydetmes
 
 6. **Kaydet**’i seçin.
 
-Varsayılan olarak, iki faktörlü kimlik doğrulaması hizmet için etkin değildir. Ancak, bir cihaz kaydederken iki faktörlü kimlik doğrulaması önerilir. İki öğeli kimlik doğrulamasını etkinleştirmek için Azure AD’de bir iki öğeli kimlik doğrulaması sağlayıcısı yapılandırmanız ve çok faktörlü kimlik doğrulaması için kullanıcı hesaplarınızı yapılandırmanız gerekir. Bkz. [Azure Multi-Factor Authentication Sunucusunu kullanmaya başlama](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
+Varsayılan olarak hizmet için iki öğeli kimlik doğrulama etkin değildir. Yine de bir cihaz kaydedilirken iki öğeli kimlik doğrulama önerilir. İki öğeli kimlik doğrulamasını etkinleştirmek için Azure AD’de bir iki öğeli kimlik doğrulaması sağlayıcısı yapılandırmanız ve çok faktörlü kimlik doğrulaması için kullanıcı hesaplarınızı yapılandırmanız gerekir. Bkz. [Azure Multi-Factor Authentication Sunucusunu kullanmaya başlama](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).

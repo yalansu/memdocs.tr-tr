@@ -19,24 +19,24 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 07d0d807a9d675d7eef0a3910a50d547dc6be872
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 764c04e130f206e77a99e557d0397a329865c2ab
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324170"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605091"
 ---
 # <a name="using-your-ios-device-with-intune-company-portal"></a>iOS cihazınızı Intune Şirket Portalı ile kullanma
 Bu makale, iOS için Şirket Portalı'na özgü görev ve bilgileri listelemektedir. iOS cihazınızda sorun gidermenize ve cihazı yönetmenize yardımcı olacaktır. Daha fazla ayrıntı, adım ve ekran görüntüsü görmek için herhangi bir bağlantıya tıklayın.
 
 ## <a name="supported-versions"></a>Desteklenen sürümler
 
-iOS için Şirket Portalı şu anda iOS 10.0 ve sonrasını desteklemektedir.  
+İOS için Şirket Portalı Şu anda iOS 11,0 ve üstünü desteklemektedir.  
 
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Intune'a kaydolma ve Şirket Portalı'nı yükleme
 
-- [Intune Şirket Portalı uygulamasını yükleme ve uygulamada oturum açma](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
+- [Intune Şirket Portalı uygulamayı yükleyip oturum açın](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 - [iOS cihazınızı Intune'a kaydetme](enroll-your-device-in-intune-ios.md)
 - [Şirket Portalı uygulamasını yükler ve cihazınızı Intune’a kaydederseniz ne olur?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md)  
 
@@ -47,7 +47,7 @@ iOS için Şirket Portalı şu anda iOS 10.0 ve sonrasını desteklemektedir.
   <!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-ios.md) -->
 - [Kaybolan veya çalınan cihazınızı sıfırlama (silme)](reset-erase-your-device-cpwebsite.md)
 - [Microsoft kullanım verilerini toplamayı devre dışı bırakma](turn-off-microsoft-usage-data-collection-ios.md)
-- [Cihazınızın Intune kaydını silme](unenroll-your-device-from-intune-ios.md)
+- [Cihazınızın Intune kaydını kaldırma](unenroll-your-device-from-intune-ios.md)
 - [Cihazınızın Intune kaydını sildiğinizde ne olur?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
 - [Şirket Portalı’nı kullanarak cihazınızı sıfırlarsanız ne olur?](effects-of-device-reset-company-portal-ios.md)
 - [Cihazınızı el ile eşitleme](sync-your-device-manually-ios.md)

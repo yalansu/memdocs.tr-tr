@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a2dbd43ff5a8048286693dbfb417d6bb720a877
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
-ms.translationtype: MT
+ms.openlocfilehash: a703914b589430f3e2347c0ea08843193595dc0e
+ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329618"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82729333"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Intune Cihaz uyumluluk ilkelerini izleme
 
@@ -38,7 +38,7 @@ Uyumluluk raporları, cihaz uyumluluğunu gözden geçirmenize ve kuruluşunuzda
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihazların** > **genel bakış** > **uyumluluk durumu** sekmesini seçin.
+2. **Cihazlara** > **genel bakış** > **uyumluluk durumu** sekmesini seçin.
 
 > [!IMPORTANT]
 > Cihaz uyumluluk ilkelerini almak için, cihazların Intune'a kayıtlı olmaları gerekir.
@@ -68,9 +68,9 @@ Farklı cihaz uyumluluk ilkesi durumlarının açıklamaları:
 
 - **Uyumlu**: Cihaz, bir veya daha fazla cihaz uyumluluk ilkesi ayarını başarıyla uyguladı.
 
-- **Yetkisiz kullanım süresinde:** Cihaz, bir veya daha fazla cihaz uyumluluk ilkesi ayarı tarafından hedefleniyor. Ancak kullanıcı henüz bu ilkeleri uygulamadı. Bu, cihazın uyumsuz ancak yönetici tarafından belirlenen yetkisiz kullanım süresinde olduğunu gösterir.
+- **Yetkisiz kullanım süresinde:** Cihaz, bir veya daha fazla cihaz uyumluluk ilkesi ayarı tarafından hedefleniyor. Ancak, kullanıcı ilkeleri henüz uygulanmamıştır. Bu, cihazın uyumlu olmadığı, ancak yönetici tarafından tanımlanan yetkisiz kullanım döneminde olduğu anlamına gelir.
 
-  - [Uyumlu olmayan cihazlara yönelik eylemler](actions-for-noncompliance.md) hakkında daha fazla bilgi edinin.
+  - [Uyumsuz cihazlara yönelik eylemler](actions-for-noncompliance.md)hakkında daha fazla bilgi edinin.
 
 - **Değerlendirilmedi**: Yeni kaydedilen cihazlar için ilk durum. Bu durumun diğer olası nedenleri şunlardır:
 
@@ -81,7 +81,7 @@ Farklı cihaz uyumluluk ilkesi durumlarının açıklamaları:
     - Android bilgi noktası veya Android kurumsal adanmış cihazlar
   - Cihaz Kayıt Yöneticisi (DEM) hesabıyla kaydedilen cihazlar
 
-- **Uyumsuz**: Cihaz, bir veya daha fazla cihaz uyumluluk ilkesi ayarını uygulayamadı. Veya kullanıcı ilkelere uyum sağlamadı.
+- **Uyumsuz**: Cihaz, bir veya daha fazla cihaz uyumluluk ilkesi ayarını uygulayamadı. Ya da Kullanıcı ilkelerle karmaşıkmış.
 
 - **Cihaz eşitlenmedi:** Cihaz, aşağıdaki nedenlerden biri sonucunda cihaz uyumluluk ilkesi durumunu bildiremedi:
 
@@ -99,9 +99,14 @@ Farklı cihaz uyumluluk ilkesi durumlarının açıklamaları:
 ![Uyumsuz durumunu seçme](./media/compliance-policy-monitor/select-not-compliant-status.png)
 
 Bu eylem **cihaz uyumluluk** penceresini açar ve cihazları bir **cihaz durumu** grafiğinde görüntüler. Grafik, işletim sistemi platformu, son iade tarihi ve daha fazlası dahil olmak üzere söz konusu durumdaki cihazlar hakkında daha fazla ayrıntı gösterir.
-![Pano görüntüsü bu belirli durumda cihaz hakkında daha fazla ayrıntı gösterir](./media/compliance-policy-monitor/drill-down-details.png)
+![Pano görüntüsü, bu durumdaki cihazlar hakkında daha fazla ayrıntı sağlar](./media/compliance-policy-monitor/drill-down-details.png)
 
-Belirli bir kullanıcıya ait tüm cihazları görmek istiyorsanız kullanıcının e-postasını yazarak grafik raporunu filtreleyebilirsiniz.
+Belirli bir kullanıcının sahip olduğu tüm cihazları görmek isterseniz, kullanıcının e-postasını yazarak Grafik raporuna da filtre uygulayabilirsiniz.
+
+> [!TIP]
+> Bir Kullanıcı cihazda oturum içermiyorsa, hedeflenen cihaz Uyumluluk ilkesine sahip cihaz, Kullanıcı asıl adı olarak **sistem hesabını** gösteren bir uyumluluk raporu Intune 'a geri gönderilir. Bu durum, bir cihaz uyumluluk ilkesinin bir kullanıcı veya cihaz grubuna hedeflendiği ve uyumluluk uyumluluğu değerlendirildiği sırada cihazda hiç Kullanıcı imzalanmadığı için oluşur.
+>
+> Ayrıca, aynı cihazda birden çok Kullanıcı imzalanmışsa ve bu cihaz bir cihaz uyumluluk ilkesiyle hedefleniyorsa ve bu kullanıcıların değerlendirilmesi gereken cihaz uyumluluk ilkesinin bir parçası olduğunu düşünüyorsa, uyumluluk raporu cihaz Uyumluluk ilkesini değerlendirmek ve Intune 'a geri bildirmek için aynı cihazı birden çok kez gösterebilir.
 
 #### <a name="filter-and-columns"></a>Filtre ve sütunlar
 
@@ -131,7 +136,7 @@ Kutucuğu seçtiğinizde uyumluluk ilkeleri olmayan cihazlar görüntülenir. Ay
 
 - **Uyumluluk ilkesi atanmamış cihazları şu şekilde işaretle** güvenlik ayarı için uyumluluk ilkesi olmayan cihazları belirlemek önemlidir. Cihazlar belirlendikten sonra bunlara en az bir uyumluluk ilkesi atayabilirsiniz.
 
-  Bu güvenlik ayarı, Intune portalında yapılandırılabilir. **Cihazlara** , uyumluluk **ilkeleri** > **Uyumluluk ilkesi ayarları** > . Daha sonra **Uyumluluk ilkesi atanmamış cihazları şu şekilde işaretle** seçeneğini **Uyumlu** veya **Uyumsuz** olarak ayarlayın.
+  Bu güvenlik ayarı, Intune portalında yapılandırılabilir. **Cihaz** > **uyumluluk ilkeleri** > **Uyumluluk ilkesi ayarları**için. Daha sonra **Uyumluluk ilkesi atanmamış cihazları şu şekilde işaretle** seçeneğini **Uyumlu** veya **Uyumsuz** olarak ayarlayın.
 
   Bu [Intune hizmetinde güvenlik geliştirmesi](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/) hakkında daha fazla bilgi edinin.
 
@@ -151,11 +156,11 @@ Kutucuğu seçtiğinizde uyumluluk ilkeleri olmayan cihazlar görüntülenir. Ay
 
 ## <a name="view-compliance-reports"></a>Uyumluluk raporlarını görüntüle
 
-*Uyumluluk durumundaki*grafikleri kullanmanın yanı sıra, **cihaz uyumluluğu** > **raporlar** ' a gidebilirsiniz.
+*Uyumluluk durumundaki*grafikleri kullanmanın yanı sıra, **raporlar** > **cihaz uyumluluğu**' na gidebilirsiniz.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihazlar** > **İzleyicisi**' ni seçin ve ardından aşağıdaki **Uyumluluk** ' den görüntülemek istediğiniz raporu seçin. Kullanılabilir uyumluluk raporlarının bazıları şunlardır:
+2. **Cihazlar** > **İzleyicisi**' ni seçin ve ardından aşağıdan **uyumluluğa** , görüntülemek istediğiniz raporu seçin. Kullanılabilir uyumluluk raporlarının bazıları şunlardır:
 
    - Cihaz uyumluluğu
    - Uyumsuz cihazlar

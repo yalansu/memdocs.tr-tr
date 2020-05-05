@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f53096f25b4bb05b80d11246ac2fa01486f6e42
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: 0151bfd993c3ad5cc48194da368d3385d8bc32ec
+ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808169"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619568"
 ---
-# <a name="in-development-for-microsoft-intune---april-2020"></a>Microsoft Intune için geliştirme sırasında-Nisan 2020
+# <a name="in-development-for-microsoft-intune"></a>Microsoft Intune için geliştirme aşamasında
 
 Hazırlık ve planlamada yardımcı olması için bu sayfada Intune Kullanıcı Arabirimi güncelleştirmeleri ve geliştirme aşamasında olan ancak henüz yayınlanmayan özellikler listelenir. Bu sayfadaki bilgilere ek olarak: 
 
@@ -33,9 +33,11 @@ Hazırlık ve planlamada yardımcı olması için bu sayfada Intune Kullanıcı 
 - Stratejik teslim edilebilirler ve zaman çizelgeleri için [Microsoft 365 yol haritasını](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) inceleyin.
 
 > [!NOTE]
-> Bu sayfa, gelecekteki bir sürümde Intune özelliklerine ilişkin geçerli beklentilerimizi yansıtır. Tarihler ve bireysel Özellikler değişebilir. Bu sayfa, geliştirmede tüm özellikleri tanımlamaz.
+> Bu sayfa, yaklaşan bir sürümdeki Intune özellikleri hakkındaki geçerli beklentilerimizi yansıtır. Tarihler ve bireysel Özellikler değişebilir. Bu sayfa, geliştirmede tüm özellikleri tanımlamaz.
 
-**RSS akışı**: Şu URL 'yi kopyalayıp akış okuyucunuzun içine yapıştırarak bu sayfanın ne zaman güncelleştirileceğini öğrenin: `https://docs.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us`
+**RSS akışı**: aşağıdaki URL 'yi kopyalayıp akış okuyucunuzun içine yapıştırarak bu sayfanın ne zaman güncelleştirileceğini öğrenin:`https://docs.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us`
+
+Bu makale, yukarıdaki başlık altında listelenen tarihte son güncelleştirilme aşamasındadır.
 
 <!--
 ## What's coming to Intune in the Azure portal 
@@ -58,40 +60,41 @@ Hazırlık ve planlamada yardımcı olması için bu sayfada Intune Kullanıcı 
 <!-- ***********************************************-->
 ## <a name="app-management"></a>Uygulama yönetimi
 
-### <a name="update-to-android-app-configuration-policies---6113334----"></a>Android uygulama yapılandırma ilkelerine güncelleştirme<!-- 6113334  -->
-Android uygulama yapılandırma ilkeleri, yöneticilerin bir uygulama yapılandırma profili oluşturmadan önce cihaz kayıt türünü seçmesine olanak tanımak üzere güncelleştirilir. İşlev, kayıt türü (Iş profili veya cihaz sahibi) tabanlı sertifika profillerinin hesabına ekleniyor.  Yayın sonrasında aşağıdakiler gerçekleşir:
+### <a name="support-for-multiple-accounts-in-company-portal-for-mac---5779449----"></a>Mac için Şirket Portalı 'de birden çok hesap desteği<!-- 5779449  -->
+MacOS cihazlarındaki Şirket Portalı artık Kullanıcı hesaplarını önbelleğe alır, oturum açma daha kolay hale getirir. Kullanıcıların, uygulamayı her başlattığında artık Şirket Portalı oturum açması gerekmez. Ayrıca, birden çok kullanıcı hesabı önbelleğe alınmışsa, kullanıcıların kullanıcı adını girmesi gerekmiyorsa Şirket Portalı bir hesap seçici görüntülenir. 
 
-- Bu özelliğin, ilkeyle ilişkili herhangi bir sertifika profili olmayan, varsayılan olarak, cihaz kayıt türü için Iş profili ve cihaz sahibi profili olmak üzere oluşturulan mevcut ilkeler.
-- Bu özelliğin ilişkili olduğu Sertifika profillerinin bulunduğu sürümden önce oluşturulan mevcut ilkeler, varsayılan olarak yalnızca Iş profili ' dir.
-- Yeni bir profil oluşturulduysa ve cihaz kayıt türü için Iş profili ve cihaz sahibi profili seçilirse, bir sertifika profilini uygulama yapılandırma ilkesiyle ilişkilendiremeyeceksiniz.
-- Yeni bir profil oluşturulup Iş profili yalnızca seçili ise, cihaz yapılandırması altında oluşturulan Iş profili sertifika ilkeleri kullanılabilir.
-- Yeni bir profil oluşturulduysa ve yalnızca cihaz sahibi seçilirse, cihaz yapılandırması altında oluşturulan cihaz sahibi sertifika ilkeleri kullanılabilir.
+### <a name="auto-update-vpp-available-apps---3640511----"></a>VPP ile kullanılabilen uygulamaları otomatik güncelleştirme<!-- 3640511  -->
+Toplu satın alma programı (VPP) kullanılabilir uygulamalar olarak yayımlanan uygulamalar, **otomatik uygulama GÜNCELLEŞTIRMELERI** VPP belirteci için etkinleştirildiğinde otomatik olarak güncelleştirilir. Şu anda VPP ile kullanılabilir uygulamalar otomatik olarak güncelleştirmez. Bunun yerine, son kullanıcılar Şirket Portalı gitmeli ve daha yeni bir sürüm varsa uygulamayı yeniden yüklemektir. Ancak gerekli uygulamalar şu anda otomatik güncelleştirmeleri destekler.
 
-Mevcut ilkeler yeni sertifikaları düzeltmez veya vermez.
+### <a name="customize-self-service-device-actions-in-the-company-portal--4393379----"></a>Şirket Portalı self servis cihaz eylemlerini özelleştirme<!--4393379  -->
+Şirket Portalı uygulamasında ve Web sitesinde son kullanıcılara gösterilen kullanılabilir self servis cihaz eylemlerini özelleştirebilirsiniz. İstenmeyen cihaz eylemlerini önlemeye yardımcı olmak için, **Kiracı Yönetimi** > **özelleştirmesi** > **Oluştur** > **Gizle özellikleri**' ni seçerek Şirket portalı uygulaması için bu ayarları yapılandırabileceksiniz. Aşağıdaki eylemler kullanılabilir:
+- Kurumsal Windows cihazında **Kaldır** düğmesini gizleyin.
+- Kurumsal Windows cihazlarında **sıfırlama** düğmesini gizleyin.
+- Kurumsal iOS cihazlarında **sıfırlama** düğmesini gizleyin.
+- Kurumsal iOS cihazlarda **Kaldır** düğmesini gizleyin.
 
-Ayrıca, her iki e-posta yapılandırma türünde Sertifika profillerinin kullanılması da dahil olmak üzere hem Iş profili hem de cihaz sahibi kayıt türleri için çalışacak Gmail ve dokuz e-posta yapılandırma profilleri ekliyoruz.  Iş profillerinin cihaz yapılandırması altında oluşturduğunuz Gmail veya dokuz ilke cihaza uygulanmaya devam eder ve bunları uygulama yapılandırma ilkelerine taşımak gerekli değildir.
+Daha fazla bilgi için, [Şirket portalı Kullanıcı self servis cihaz eylemleri](../apps/company-portal-app.md#user-self-service-device-actions-from-the-company-portal)bölümüne bakın.
 
-[Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **uygulamalar** > **uygulama yapılandırma**ilkeleri ' ni seçerek uygulama yapılandırma ilkelerini bulabilirsiniz. Uygulama yapılandırma ilkeleri hakkında daha fazla bilgi için bkz. [Microsoft Intune Için uygulama yapılandırma ilkeleri](../apps/app-configuration-policies-overview.md).
+### <a name="unified-delivery-of-azure-ad-enterprise-or-office-online-applications-in-the-company-portal--4404429---"></a>Şirket Portalı Azure AD kurumsal veya Office Online uygulamalarının birleştirilmiş teslimi<!--4404429 -->
+Şirket Portalı Azure AD kurumsal veya Office Online uygulamalarının görüntülenmesini (**gizleyebilir** veya **gösterebilirsiniz**) mümkün olacaktır. Her Kullanıcı, seçilen Microsoft hizmetinden Uygulama Kataloğu 'nun tamamını görür. Varsayılan olarak, her bir ek uygulama kaynağı **gizleyecek**şekilde ayarlanır. Bu özellik ilk olarak 2005 sürümündeki Şirket Portalı Web sitesinde, Windows, iOS/ıpados ve daha sonra izlenmesi beklenen macOS şirket portallarındaki destek ile etkili olacaktır. Bu gelecekteki ayarı bulmak için [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde **Kiracı Yönetimi** > **özelleştirmesi** ' nı seçin. İlgili bilgiler için bkz. [Intune şirket portalı uygulamalar, Şirket portalı Web sitesi ve Intune uygulaması nasıl özelleştirilir](../apps/company-portal-app.md).
 
-### <a name="microsoft-teams-is-now-included-in-the-office-365-suite-for-macos---5903936----"></a>Microsoft ekipleri artık macOS için Office 365 Suite 'e eklenmiştir<!-- 5903936  -->
-Microsoft Endpoint Manager 'da macOS için Microsoft Office atanan kullanıcılar artık mevcut Microsoft Office uygulamalarına (Word, Excel, PowerPoint, Outlook ve OneNote) ek olarak Microsoft ekipleri alacak. Intune, diğer Office macOS uygulamaları yüklü olan mevcut Mac cihazlarını algılar ve cihaz Intune ile bir dahaki sefer iade ettiğinde Microsoft ekipleri yüklemeye çalışır. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, MacOS için **Office 365 Suite** 'i, **MacOS** > **Add** > **uygulamalar** ' ı seçerek bulabilirsiniz. Daha fazla bilgi için bkz. [Microsoft Intune Ile macOS cihazlarına Office 365 atama](../apps/apps-add-office365-macos.md).
+### <a name="search-the-intune-docs-from-the-company-portal---1736480---"></a>Şirket Portalı Intune belgelerini arama<!-- 1736480 -->
+Artık doğrudan macOS uygulamasındaki Şirket Portalı Intune belgelerini arayabilirsiniz. Menü çubuğunda **Yardım** > **Ara** ' yı seçin ve sorularınızın yanıtlarını hızlı bir şekilde bulmak için aramanızın anahtar sözcüklerini girin.
 
-### <a name="group-targeting-support-for-customization-pane----4722837----"></a>Özelleştirme bölmesi için Grup hedefleme desteği <!-- 4722837  -->
-Özelleştirme bölmesindeki ayarları Kullanıcı gruplarına hedefleyebilirsiniz. Intune portalından, **istemci uygulamaları** > **Özelleştirme**' yi seçin. Daha fazla bilgi için bkz. [Intune Şirket Portalı uygulamalar, Şirket Portalı Web sitesi ve Intune uygulaması özelleştirme] (şirket-Portal-app.md].
+### <a name="company-portal-for-android-will-guide-users-to-get-apps-after-work-profile-enrollment----6103999----"></a>Android için Şirket Portalı, kullanıcıların iş profili kaydından sonra uygulama almasını yönlendirecektir <!-- 6103999  -->
+Kullanıcıların uygulamaları bulmasını ve yüklemesini kolaylaştırmak için Şirket Portalı 'teki uygulama içi Kılavuzu geliştiriyoruz.  İş profili yönetimine kaydolduktan sonra, kullanıcılar, Google Play 'in hatalı sürümünde önerilen uygulamaları bulabilecekleri bir ileti görür. Kullanıcılar ayrıca soldaki Şirket Portalı çekmecede yeni bir **uygulamalar al** bağlantısı görür. Bu yeni ve geliştirilmiş deneyimlere yönelik bir yöntem oluşturmak için, **uygulamalar** sekmesi kaldırılır. 
+
+### <a name="android-company-portal-user-experience---5736084---"></a>Android Şirket Portalı Kullanıcı deneyimi<!-- 5736084 -->
+Android Şirket Portalı 2005 sürümünde, bir uygulama koruma ilkesi tarafından uyarı veren, blok veya temizleme yapan Android cihazların son kullanıcıları yeni bir kullanıcı deneyimi görür. Son kullanıcılar, geçerli iletişim kutusu deneyimi yerine, uyarı, blok veya silme nedeninizi ve sorunu düzeltmek için gereken adımları açıklayan bir tam sayfa mesajı görür. Daha fazla bilgi için, bkz. Microsoft Intune [Android cihazları Için uygulama koruma deneyimi](../apps/app-protection-policy.md#app-protection-experience-for-android-devices) ve [Android uygulama koruma ilkesi ayarları](../apps/app-protection-policy-settings-android.md).
+
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Cihaz yapılandırması
 
-### <a name="wired-network-device-configuration-profiles-for-macos-devices---3508686----"></a>MacOS cihazları için kablolu ağ cihaz yapılandırma profilleri<!-- 3508686  -->
-Kablolu ağları yapılandıran yeni bir macOS cihaz yapılandırma profili kullanılabilir (**cihaz yapılandırma** > **profilleri** ** > ,** > Platform için **MacOS** > profil türü için **kablolu ağ** ). Kablolu ağları yönetmek için 802.1 x profilleri oluşturmak ve bu kablolu ağları macOS cihazlarınıza dağıtmak için bu özelliği kullanın.
-
-Uygulama alanı:
-- Mac OS
-
 ### <a name="device-configuration-profile-settings-and-values-will-be-updated-for-windows-platforms---4091122---"></a>Cihaz yapılandırma profili ayarları ve değerleri Windows platformları için güncelleştirilecektir<!-- 4091122 -->
-Windows platformları için cihaz yapılandırma profilleri oluşturduğunuzda (**cihaz** > **yapılandırma profilleri** > platform için herhangi bir **Windows** seçeneği > **profil oluşturma** ), bazı ayarlar ve bunların değerleri CSP 'den farklıdır ve kafa karıştırıcı olabilir. Ayar adları ve değerleri daha net olacak şekilde güncelleştirilecektir.
+Windows platformları için cihaz**yapılandırma profilleri oluştururken** (**cihaz** > **yapılandırma profilleri** > platform için herhangi bir **Windows** seçeneği >), bazı ayarlar ve bunların değerleri CSP 'den farklıdır ve kafa karıştırıcı olabilir. Ayar adları ve değerleri daha net olacak şekilde güncelleştirilecektir.
 
-Uygulama alanı:
+Şunlara uygulanır:
 
 - Windows 10 ve üzeri cihaz yapılandırma profilleri
 - Windows holographic for Business cihaz yapılandırma profilleri
@@ -99,40 +102,46 @@ Uygulama alanı:
 - Windows Phone 8,1 cihaz yapılandırma profilleri
 
 ### <a name="configure-the-microsoft-defender-atp-app-for-macos-----5520115----"></a>MacOS için Microsoft Defender ATP uygulamasını yapılandırma  <!-- 5520115  -->
-Yakında bir Endpoint Protection cihaz yapılandırma profilinin parçası olarak macOS çalıştıran cihazlar için Microsoft Defender ATP uygulamasının [ayarlarını](../protect/endpoint-protection-macos.md) yapılandırabilirsiniz (**cihaz** > **yapılandırma profillerinin** > **profil oluşturma**, *Platform*için **MacOS** ve ardından *profil türü*için **Endpoint Protection** ). MacOS cihaz yapılandırması için sekiz ayar olacaktır. 
+Yakında Endpoint Protection cihaz yapılandırma profilinin bir parçası olarak MacOS çalıştıran cihazlar için Microsoft Defender ATP uygulamasının [ayarlarını](../protect/endpoint-protection-macos.md) yapılandırabileceksiniz (**cihaz** > **yapılandırma profilleri** > **profil oluşturma**, *Platform*için **MacOS** ve sonra *profil türü*için **uç nokta koruma** ). MacOS cihaz yapılandırması için sekiz ayar olacaktır. 
 
 Defender ATP, macOS 10,13 (High Sierra) ve üzeri sürümlerde desteklenir ve bu ayarlar uygulandıktan *sonra* [Microsoft Defender ATP](../apps/apps-advanced-threat-protection-macos.md) uygulamasının cihaza dağıtılması gerekir. Uygulama dağıtılmadan önce ayarların cihaza gönderilmesi gerekir. MacOS 'un beta sürümleri desteklenmez.
 
 ### <a name="new-filevault-setting-for-macos-endpoint-protection-device-configuration-policy---5459801-----"></a>MacOS Endpoint Protection cihaz yapılandırma ilkesi için yeni Filekasası ayarı<!-- 5459801   -->
-[MacOS Endpoint Protection](../protect/endpoint-protection-macos.md) şablonu Içindeki filekasası kategorisine yeni bir ayar ekliyoruz: kurtarma anahtarını gizleyin. (**Cihazlar** > **yapılandırma profillerini** **Profil oluştur** > , *Platform* için **MacOS** ' u ve ardından *profil türü*için **Endpoint Protection** ' ı seçin. Bu ayar, Filekasa2 şifrelemesi sırasında son kullanıcıdan kişisel anahtarı gizler. Bir cihaz kullanıcısı, kişisel kurtarma anahtarını iOS şirket portalı uygulamasından veya şifrelenmiş macOS cihazının Şirket portalı Web sitesinden dilediğiniz zaman görüntüleyebilir. Kişisel kurtarma anahtarını görüntülemek için cihaz ayrıntılarına gidebilir ve *Kurtarma anahtarı al*' a tıklayabilirsiniz.
+[MacOS Endpoint Protection](../protect/endpoint-protection-macos.md) şablonu Içindeki filekasası kategorisine yeni bir ayar ekliyoruz: kurtarma anahtarını gizleyin. (**Cihaz** > **yapılandırma profilleri** > **profil oluşturur**, *Platform* için **MacOS** ' u ve ardından *profil türü*için **Endpoint Protection** ' ı seçin). Bu ayar, Filekasa2 şifrelemesi sırasında son kullanıcıdan kişisel anahtarı gizler. Bir cihaz kullanıcısı, kişisel kurtarma anahtarını iOS şirket portalı uygulamasından veya şifrelenmiş macOS cihazının Şirket portalı Web sitesinden dilediğiniz zaman görüntüleyebilir. Kişisel kurtarma anahtarını görüntülemek için cihaz ayrıntılarına gidebilir ve *Kurtarma anahtarı al*' a tıklayabilirsiniz.
 
 Bu ayar, önceden oluşturulan ilkede kullanılamaz. Bu ayarı kullanmak üzere yapılandırmak için dosya Kasası ilkelerini yeniden oluşturmanız gerekir. 
 
-### <a name="send-push-notifications-as-an-action-for-non-compliance----1733150-----"></a>Uyumsuzluk için eylem olarak anında iletme bildirimleri gönder <!-- 1733150   -->
-İOS ve Android platformları için Şirket Portalı uygulaması aracılığıyla uygulama anında iletme bildirimi gönderecek uyumsuzluk için yeni bir eylem ekliyoruz. Kullanıcılar, Şirket Portalı uygulamasını başlatarak, uyumsuz oldukları nedeni görüntüleyen bildirimlere tıklayabilir. Yöneticiler bu yeni eylemi, Microsoft Endpoint Manager Yönetim Merkezi 'nde **cihazlara** giderek **uyumluluk ilkelerine** > , **ilke oluştur** > ve ardından uygulama anında iletme bildirimi göndermek için *eylemi* seçerek yapılandırabilecektir.
+### <a name="configure-system-extensions-on-macos-devices---6255624----"></a>MacOS cihazlarında sistem uzantılarını yapılandırma<!-- 6255624  -->
+MacOS cihazlarında, çekirdek düzeyinde ayarları yapılandırmak için bir çekirdek uzantıları profili oluşturabilirsiniz (**cihaz** > **yapılandırma profilleri** > **for platform** > Platform **uzantıları** for profile). Apple, daha sonra çekirdek uzantılarını kullanımdan kaldırır ve sonraki sürümlerde sistem uzantıları ile değiştirmektir. Sistem uzantıları Kullanıcı alanında çalışır ve çekirdeğe erişim vermez. Amaç, güvenliği artırmak ve daha fazla Son Kullanıcı denetimi sağlamak, ancak saldırıları çekirdek düzeyinde sınırlandırmaktır. Her iki çekirdek uzantısı ve sistem uzantısı, kullanıcıların işletim sisteminin yerel yeteneklerini genişleten uygulama uzantılarını yüklemelerine izin verir.
 
-### <a name="pre-release-testing-for-managed-google-play-apps---2681933----"></a>Yönetilen Google Play uygulamaları için yayın öncesi test<!-- 2681933  -->
-[Uygulama ön sürümü testi için Google Play 'ın kapalı test izlerini](https://support.google.com/googleplay/android-developer/answer/3131213) kullanan kuruluşlar, bu parçaları Intune ile yönetebilecektir. Test yapmak için Google Play 'in ön üretim izlerini, pilot gruplarına yayımlayan Iş kolu uygulamalarını seçmeli olarak atayabileceksiniz. Intune 'da, bir uygulamanın kendisine yayımlanmış bir üretim öncesi derleme testi izlemesine sahip olup olmadığını ve bu izlemeyi AAD Kullanıcı veya cihaz gruplarına atayabilmesini de görebileceksiniz. Bu özellik, şu anda desteklenen Android kurumsal senaryolarımız (iş profili, tam olarak yönetilen ve adanmış) için kullanılabilir. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **uygulamalar** > **Android** > **Ekle**' yi seçerek yönetilen bir Google Play uygulaması ekleyebilirsiniz. Daha fazla bilgi için bkz. [Intune Ile Android Enterprise cihazlarına yönetilen Google Play uygulamaları ekleme](../apps/apps-add-android-for-work.md).
+Intune 'da, hem çekirdek uzantılarını hem de sistem uzantılarını yapılandırabilirsiniz (**cihaz** > **yapılandırma profilleri** > **MacOS** for platform >, profil için **sistem uzantıları** ). Çekirdek uzantıları, 10.13.2 ve üzeri için geçerlidir. Sistem uzantıları 10,15 ve üzeri sürümler için geçerlidir. MacOS 10,15 ' den macOS 10.15.4, çekirdek uzantıları ve sistem uzantıları yan yana çalışabilir. 
 
-### <a name="manage-smime-settings-for-outlook-on-android---6517085-----"></a>Android 'de Outlook için S/MIME ayarlarını yönetme<!-- 6517085   -->
-Android Enterprise çalıştıran cihazlarda Outlook için S/MIME ayarını yönetmek üzere uygulama yapılandırma ilkelerini kullanabilirsiniz. Ayrıca, cihaz kullanıcılarının Outlook ayarları ' nda S/MIME 'yi etkinleştirmesine veya devre dışı bırakmasına izin verip vermeyeceğinizi seçebileceksiniz. Android için uygulama yapılandırma ilkesi 'ni kullanmak için [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) 'nde **uygulamalar** > **uygulama yapılandırma Ilkeleri** ' ne gidin > **yönetilen cihaz** **ekleyin** > .
+MacOS cihazlarındaki çekirdek uzantıları hakkında bilgi edinmek için bkz. [MacOS çekirdek uzantıları ekleme](../configuration/kernel-extensions-overview-macos.md).
 
-### <a name="additional-options-in-sso-and-sso-app-extension-profiles-on-iosipados-devices---6504155----"></a>İOS/ıpados cihazlarında SSO ve SSO uygulama uzantısı profillerindeki ek seçenekler<!-- 6504155  -->
-İOS/ıpados cihazlarında şunları yapabilirsiniz:
-
-- SSO profillerdeki (**cihazlar** > **yapılandırma profilleri** > profil **oluşturma** > **IOS/ıpados** için Platform > **cihaz özellikleri** > **Çoklu oturum açma**) için, Kerberos asıl adını SSO profillerindeki güvenlik hesabı Yöneticisi (Sam) hesap adı olarak ayarlayın. 
-- SSO uygulama uzantısı profillerinde (**cihazlar** > **yapılandırma profilleri** > profil **oluşturma** > **IOS/ıpados** , profil > **Çoklu oturum açma uygulama uzantısı**için Platform > **cihaz özellikleri** ), yeni bir SSO uygulama uzantısı türü kullanarak iOS/ıpados Microsoft Azure ad uzantısını daha az tıklamayla yapılandırın. Paylaşılan cihazlar için Azure AD uzantısını etkinleştirebilir ve uzantıya özgü verileri uzantıya gönderebilirsiniz.
-
-Uygulama alanı:
-- iOS/ıpados 13.0 +
-
-İOS/ıpados cihazlarında çoklu oturum açma kullanma hakkında daha fazla bilgi için bkz. [Çoklu oturum açma uygulama uzantısına genel bakış](../configuration/device-features-configure.md#single-sign-on-app-extension) ve [Çoklu oturum açma ayarları listesi](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
+Şunlara uygulanır:
+- macOS 10,15 ve üzeri
 
 <!-- ***********************************************-->
 ## <a name="device-enrollment"></a>Cihaz kaydı
 
 ### <a name="bring-your-own-devices-can-use-vpn-to-deploy--5015344---"></a>Kendi cihazlarını getir, dağıtmak için VPN kullanabilir<!--5015344 -->
-Yeni Autopilot profili **etki alanı bağlantısını atla onay** geçişi, kendi üçüncü taraf Win32 VPN istemcinizi kullanarak kurumsal ağınıza erişim olmadan karma Azure AD JOIN cihazlarını dağıtmanıza olanak tanır. Yeni geçişi görmek için [Microsoft Endpoint Manager yönetim merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) > **cihazlar**  > **Windows** > **Windows kayıt** > **dağıtım PROFILLERI** ' ne gidin > **kullanıma hazır deneyim (OOBE)** **oluşturun** . > 
+Bu özellik gecikebilir.
+
+### <a name="automated-device-sync-interval-down-to-12-hours--3077535---"></a>Otomatik cihaz eşitleme aralığı, 12 saate kadar<!--3077535 -->
+Apple 'ın otomatik cihaz kaydı için, Intune ile Apple Business Manager arasındaki otomatik cihaz eşitleme aralığı, 24 saatten 12 saate kadar azaltılır. Eşitleme hakkında daha fazla bilgi için bkz. [yönetilen cihazları eşitleme](../enrollment/device-enrollment-program-enroll-ios.md#sync-managed-devices).
+
+### <a name="autopilot-support-for-hololens-2-devices--6305220--"></a>HoloLens 2 cihazları için Autopilot desteği<!--6305220-->
+Windows Autopilot, Hololens 2 cihazlarını destekleyecektir. Intune 'da Autopilot kullanma hakkında daha fazla bilgi için bkz. [Windows Autopilot kullanarak Intune 'Da Windows cihazlarını kaydetme](../enrollment/enrollment-autopilot.md).
+
+### <a name="enrollment-restrictions-will-support-scope-tags--4209550---"></a>Kayıt kısıtlamaları kapsam etiketlerini destekleyecektir<!--4209550 -->
+Kayıt kısıtlamalarına kapsam etiketleri atayabileceksiniz. Bunu yapmak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) > **cihazlar** > **Kayıt kısıtlamaları** > **oluşturma kısıtlaması**' na gidin. Her iki kısıtlama türünü de oluşturun ve **kapsam etiketleri** sayfasını görürsünüz.
+
+### <a name="shared-ipads-for-business--6367326---"></a>Iş için paylaşılan IPad 'ler<!--6367326 -->
+Birden çok çalışanın cihazları paylaşabilmesi için Intune ve Apple Business Manager 'ı kullanarak paylaşılan iPad 'i kolayca ve güvenli bir şekilde ayarlayabilirsiniz. Apple 'ın [paylaşılan iPad](https://developer.apple.com/education/shared-ipad/) 'i, Kullanıcı verilerini korurken birden çok kullanıcı için kişiselleştirilmiş bir deneyim sağlar. Yönetilen bir Apple KIMLIĞI kullanarak, kullanıcılar kuruluşlarındaki paylaşılan iPad 'de oturum açtıktan sonra uygulamalarına, verilerine ve ayarlarına erişebilirler. Paylaşılan iPad, Federasyon kimlikleriyle birlikte çalışmaktadır.
+
+Bu özelliği görmek için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) > **cihazlar** > **iOS** > **iOS kayıt** > **kayıt programı belirteçleri** ' ne gidin > belirteç seçin * * > **profiller** > **profil** > oluştur**iOS**. **Yönetim ayarları** sayfasında, **Kullanıcı benzeşimi olmadan kaydet** ' i seçin ve **paylaşılan iPad** seçeneğini görürsünüz.
+
+**Uygulama hedefi:** ıpados 13,4 ve üzeri. Bu sürüm, kullanıcıların yönetilen bir Apple KIMLIĞI olmadan bir cihaza erişebilmeleri için paylaşılan iPad ile geçici oturumlar için destek ekledi. Oturum kapatma sonrasında cihaz tüm Kullanıcı verilerini siler, böylece cihaz kullanıma hemen kullanılabilir hale gelir ve cihaz temizleme gereksinimini ortadan kaldırır. 
 
 <!-- ***********************************************-->
 ## <a name="device-management"></a>Cihaz yönetimi
@@ -140,23 +149,24 @@ Yeni Autopilot profili **etki alanı bağlantısını atla onay** geçişi, kend
 ### <a name="powershell-scripts-support-for-byod-devices---1862833----"></a>KCG cihazları için PowerShell betikleri desteği<!-- 1862833  -->
 PowerShell betikleri, Intune 'da Azure AD kayıtlı cihazlarını destekleyecektir. PowerShell hakkında daha fazla bilgi için bkz. [Intune 'Da Windows 10 cihazlarda PowerShell betiklerini kullanma](../apps/intune-management-extension.md). Bu işlevsellik, Windows 10 Home Edition çalıştıran cihazları desteklemez.
 
-### <a name="script-support-for-macos-devices---4280361----"></a>MacOS cihazları için betik desteği<!-- 4280361  -->
-MacOS cihazlarına komut dosyaları ekleyebilir ve bunları dağıtabileceksiniz. Bu destek, MacOS cihazlarındaki yerel MDM yeteneklerini kullanarak, macOS cihazlarını mümkün olduğunca fazla yapılandırma yeteneğinizi genişletmektedir.
-
 ### <a name="log-analytics-will-include-device-details-log--6014987----"></a>Log Analytics, cihaz ayrıntıları günlüğünü içerecektir<!--6014987  -->
-Intune cihaz ayrıntı günlükleri, **raporlar** > **Log Analytics**'te kullanılabilir. Özel sorgular ve Azure çalışma kitapları oluşturmak için cihaz ayrıntılarını ilişkilendirebilirler.
+Intune cihaz ayrıntı günlükleri, **raporlar** > **Log Analytics**' te kullanılabilir. Özel sorgular ve Azure çalışma kitapları oluşturmak için cihaz ayrıntılarını ilişkilendirebilirler.
 
-### <a name="push-notification-when-device-ownership-type-is-changed---5575875----"></a>Cihaz sahiplik türü değiştirildiğinde anında iletme bildirimi<!-- 5575875  -->
-Hem Android hem de iOS Şirket Portalı kullanıcılarınıza, cihaz sahiplik türü kişisel olarak bir gizlilik özelliği olarak değiştirildiğinde, bu kullanıcılara göndermek üzere bir anında iletme bildirimi yapılandırabileceksiniz. Bu ayar, Microsoft uç nokta yöneticisinde **kiracı yönetimi** > **özelleştirmesi**seçilerek bulunabilir. Cihaz sahipliğinin son kullanıcılarınızı nasıl etkilediği hakkında daha fazla bilgi edinmek için bkz. [cihaz sahipliğini değiştirme](../enrollment/corporate-identifiers-add.md#change-device-ownership).
+### <a name="new-details-for-the-autopilot-report--5405786---"></a>Autopilot raporu için yeni ayrıntılar<!--5405786 -->
+Uygulama ve ilke yüklemesi durumu hakkında yeni ayrıntıları görmek için [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' ne gidin, **cihazlar** > **izleyici** > **Autopilot dağıtımlar**' ı seçin.
+
+### <a name="macos-script-support---6376978----"></a>macOS betik desteği<!-- 6376978  -->
+MacOS için betik desteği genel kullanıma sunuldu. Ayrıca, Apple 'ın otomatik cihaz kaydına (eski adıyla Aygıt Kayıt Programı) kaydedilmiş Kullanıcı tarafından atanan betikler ve macOS cihazları için de destek ekleyeceğiz. Daha fazla bilgi için bkz. [Intune 'Da macOS cihazlarında Shell betikleri kullanma](../apps/macos-shell-scripts.md).
 
 <!-- ***********************************************-->
 <!--## Intune apps-->
  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-<!--
-## Monitor and troubleshoot
--->
+## <a name="monitor-and-troubleshoot"></a>İzleme ve sorun giderme
+
+### <a name="power-bi-compliance-report-template-v20---636958----"></a>Power BI uyumluluk raporu şablonu V 2.0<!-- 636958  -->
+Yöneticiler, Power BI uyumluluk raporu şablonu sürümünü V 1.0 'dan V 2.0 'a güncelleştirebilir. V 2.0, gelişmiş bir tasarım, Ayrıca, şablonun bir parçası olarak ortaya çıkacak hesaplamalarda ve verilerde yapılan değişiklikleri içerir. İlgili bilgiler için bkz. [Power BI veri ambarına bağlanma](../developer/reports-proc-get-a-link-powerbi.md).
 
 <!-- ***********************************************-->
 <!--
@@ -166,21 +176,34 @@ Hem Android hem de iOS Şirket Portalı kullanıcılarınıza, cihaz sahiplik t�
 <!-- ***********************************************-->
 ## <a name="security"></a>Güvenlik
 
-### <a name="derived-credentials-support-on-android-fully-managed-devices--4839592--"></a>Android tam olarak yönetilen cihazlarda türetilmiş kimlik bilgileri desteği<!--4839592-->
-Android kurumsal tam olarak yönetilen cihazlarda türetilmiş kimlik bilgilerini kullanabilirsiniz. Entrust Datacard, ıntercede ve DıŞA purebred için türetilmiş bir kimlik bilgisi almak üzere destek eklenecektir. Uygulama kimlik doğrulaması, Wi-Fi, VPN veya S/MIME imzalama ve/veya şifrelemeyi destekleyen uygulamalarla şifreleme için türetilmiş bir kimlik bilgisi kullanabileceksiniz.
+### <a name="derived-credentials-support-for-disa-purebred-on-android-devices--4839592---"></a>Android cihazlarda DıŞA ınpurebred için türetilmiş kimlik bilgileri desteği<!--4839592 -->
+Android kurumsal tam olarak yönetilen cihazlarda (**kiracı yönetim** > **bağlayıcıları ve belirteçleri** > **türetilmiş kimlik bilgileri**), bir [türetilmiş kimlik bilgileri](../protect/derived-credentials.md) sağlayıcısı olarak, *reberkred* 'yi kullanabileceksiniz. DıPUREBRED için türetilmiş bir kimlik bilgisi alma desteği dahil edilir. Uygulama kimlik doğrulaması, Wi-Fi, VPN veya S/MIME imzalama ve/veya şifrelemeyi destekleyen uygulamalarla şifreleme için türetilmiş bir kimlik bilgisi kullanabileceksiniz. 
+
+Nisan 'da Intune, türetilmiş kimlik bilgileri için *Entrust Datacard* ve *ıntercede* sağlayıcıları için destek ekledi. 
 
 ### <a name="privacy-preferences-settings-for-macos-devices---2934232---"></a>MacOS cihazları için Gizlilik Tercihleri ayarları<!-- 2934232 --> 
 MacOS Catalina 10,15 sürümü sayesinde, Apple yeni güvenlik ve gizlilik iyileştirmeleri ekledi. Varsayılan olarak, uygulamalar ve süreçler Kullanıcı izni olmadan belirli verilere erişemez. Kullanıcılar onay sağlamıyorsa, uygulamalar ve süreçler çalışmayabilir. Intune, macOS 10,14 ve üstünü çalıştıran cihazlarda son kullanıcılar adına, BT yöneticilerinin veri erişimine izin vermesini veya bu izni vermemeyi sağlayan ayarlar için destek ekliyor. Bu ayarlar, uygulamaların ve işlemlerin düzgün şekilde çalışmaya devam etmesini ve son kullanıcıların deneyimlerine yönelik istem sayısını azaltmasını sağlar.
 
-### <a name="updated-ui-text-and-labels-for-windows-10-endpoint-protection-profile-settings---5983747---"></a>Windows 10 Endpoint Protection profili ayarları için Kullanıcı arabirimi metni ve Etiketler güncelleştirildi<!-- 5983747 -->
-Kullanım ve sonuç olarak tasarlanan ayarları daha kolay anlamak için Windows 10 cihaz yapılandırma profilleri olarak yapılandırdığınız çeşitli ayarların metnini güncelleştiriyoruz.
 
-Güncelleştiriyoruz ayarlar şunlar için Windows 10 cihaz yapılandırma profillerini içerir:
+### <a name="duplicate-your-policies-in-endpoint-security---5892558-----"></a>Uç nokta güvenliğine ait ilkelerinizi çoğaltın<!-- 5892558   -->
+Microsoft Endpoint Manager Yönetim Merkezi 'nin uç nokta güvenlik düğümünde oluşturduğunuz bir ilkeyi seçebileceksiniz ve sonra bir kopya oluşturmak için onu çoğaltabilirsiniz.  Bu ilkeler, sizin için oluşturduğunuz ilkeleri içerir: 
 
-- Microsoft Defender virüsten koruma > [cihaz kısıtlamaları](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)  
-- [Endpoint Protection](../protect/endpoint-protection-windows-10.md) > Microsoft Defender virüsten koruma
+- Virüsten Koruma
+- Disk şifrelemesi
+- Güvenlik duvarı
+- Uç nokta algılama ve yanıt
+- Saldırı yüzeyi azaltma
+- Hesap koruması
 
-Intune ile desteklenen ayarlar değişmemektedir. Bu yalnızca Microsoft uç nokta yönetimi Yönetim Merkezi 'ndeki Kullanıcı arabirimi metnine yönelik bir güncelleştirmedir.
+Çoğaltma, özgün ilkenin bir kopyasını oluşturacak ve daha sonra yeniden adlandırabilir ve düzenleyebilirim. Kopya, orijinalden atamalar içermez.
+
+### <a name="send-push-notifications-as-an-action-for-non-compliance----1733150-----"></a>Uyumsuzluk için eylem olarak anında iletme bildirimleri gönder <!-- 1733150   -->
+İOS ve Android platformları için Şirket Portalı uygulaması aracılığıyla uygulama anında iletme bildirimi gönderecek uyumsuzluk için yeni bir eylem ekliyoruz. Kullanıcılar Şirket Portalı uygulamasını Başlatan bildirimlere tıklayabilir ve bu nedenle uyumsuz oldukları nedeni görüntüler. Yöneticiler, **cihaz** > **uyumluluk ilkeleri** > **ilke oluştur**' a giderek ve ardından uygulama anında iletme bildirimi gönderecek *eylemi* seçerek Microsoft Endpoint Manager Yönetim merkezinde uyumsuzluk için bu yeni eylemi yapılandırabilecektir. 
+
+### <a name="new-profile-for-endpoint-security-firewall-policy---5653324-----"></a>Uç nokta güvenlik duvarı ilkesi için yeni profil<!-- 5653324   -->
+Önizleme olarak, Intune 'un uç nokta güvenliğine yönelik güvenlik duvarı ilkesine Windows 10 ve üzeri için ek bir profil ekliyoruz (**uç nokta güvenlik** > **güvenlik duvarı** > **ilke oluştur** > **Windows 10 ve üstünü**seçin). 
+
+Bu yeni profilin her örneği en fazla 150 özel *Microsoft Defender güvenlik duvarı kuralını*destekler. Microsoft Defender güvenlik duvarı kuralları profili, Windows 10 ' da bağlantı noktalarına ve uygulamalara izin vermek veya bunları engellemek için ayrıntılı Windows güvenlik duvarı kuralları tanımlamanızı sağlar.
 
 <!-- ***********************************************-->
 ## <a name="notices"></a>Bildirimler

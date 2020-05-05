@@ -5,34 +5,58 @@ description: Microsoft Defender Gelişmiş tehdit koruması 'nı yönetmek için
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 05/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a431ad92c285e1a2912e0f387ee5ea514e876ef
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
-ms.translationtype: HT
+zone_pivot_groups: atp-baseline-versions
+ms.openlocfilehash: e1081395c733807c38dc940ebd1b7c2765da7a9a
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551760"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693407"
 ---
+<!-- Pivots in use: 
+::: zone pivot="atp-april-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020,atp-april-2020"
+::: zone-end
+-->
+
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Intune için Microsoft Defender Gelişmiş tehdit koruması temel ayarları
 
 Microsoft Intune tarafından desteklenen Microsoft Defender Gelişmiş tehdit koruması taban çizgisi ayarlarını görüntüleyin. Gelişmiş tehdit koruması (ATP) taban çizgisi Varsayılanları, ATP için önerilen yapılandırmayı temsil eder ve diğer güvenlik temelleri için temel varsayılanlarla eşleşmeyebilir.
 
-Bu makaledeki ayrıntılar, 1 Mart 2020 ' de kullanıma sunulan Microsoft Defender ATP taban çizgisinin 3. sürümü için geçerlidir.
+::: zone pivot="atp-april-2020"
+
+Bu makaledeki ayrıntılar, 21 Nisan 2020 ' de kullanıma sunulan Microsoft Defender ATP taban çizgisinin 4. sürümü için geçerlidir. Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın.
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
+Bu makaledeki ayrıntılar, 1 Mart 2020 ' de kullanıma sunulan Microsoft Defender ATP taban çizgisinin 3. sürümü için geçerlidir. Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
 
 Microsoft Defender Gelişmiş tehdit koruması temeli, ortamınız [Microsoft Defender Gelişmiş tehdit koruması](advanced-threat-protection.md#prerequisites)kullanımı için önkoşulları karşılıyorsa kullanılabilir.
 
 Bu taban çizgisi fiziksel cihazlar için iyileştirilmiştir ve şu anda sanal makinelerde (VM) veya VDı uç noktalarında kullanılması önerilmez. Belirli taban çizgisi ayarları, sanallaştırılmış ortamlarda uzak etkileşimli oturumları etkileyebilir. Daha fazla bilgi için bkz. Windows belgelerindeki [Microsoft Defender ATP güvenlik temeliyle uyumluluğu artırma](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .
+
 
 ## <a name="application-guard"></a>Application Guard
 
@@ -43,10 +67,10 @@ Microsoft Edge kullanırken, Microsoft Defender Application Guard, ortamınızı
 - **Edge için Application Guard 'ı açma (Seçenekler)**  
   CSP: [Settings/Allowwindowssavunma Derapplicationguard](https://go.microsoft.com/fwlink/?linkid=872350)
   
-  - **Microsoft Edge Için etkinleştirildi** (*varsayılan*)-Application Guard, onaylanmamış siteleri bir Hyper-V sanallaştırılmış gözatma kapsayıcısında açar.
+  - **Edge Için etkinleştirildi** (*varsayılan*)-Application Guard, onaylanmamış siteleri bir Hyper-V sanallaştırılmış gözatma kapsayıcısında açar.
   - **Yapılandırılmadı** -bir sanallaştırılmış kapsayıcıda değil, cihazda herhangi bir site (güvenilen ve güvenilmeyen) açılır.  
   
-  *Microsoft Edge Için etkinleştir*olarak ayarlandığında, *dış içeriği blok olmayan bir şekilde onaylanan siteler* ve *Pano davranışından*yapılandırabilirsiniz.
+  *Edge Için etkinleştir*olarak ayarlandığında, *dış içeriği blok olmayan bir şekilde onaylanan siteler* ve *Pano davranışından*yapılandırabilirsiniz.
 
   - **Kurumsal olmayan onaylanan sitelerden dış içeriği engelle**  
     CSP: [Ayarlar/BlockNonEnterpriseContent](https://go.microsoft.com/fwlink/?linkid=872352)
@@ -57,7 +81,7 @@ Microsoft Edge kullanırken, Microsoft Defender Application Guard, ortamınızı
   - **Pano davranışı**  
     CSP: [Ayarlar/ClipboardSettings](https://go.microsoft.com/fwlink/?linkid=872351)
 
-    Yerel BILGISAYAR ile Application Guard sanal tarayıcısı arasında kopyalama ve yapıştırma eylemlerine izin verileceğini seçin. Şu seçenekler mevcuttur:
+    Yerel BILGISAYAR ile Application Guard sanal tarayıcısı arasında kopyalama ve yapıştırma eylemlerine izin verileceğini seçin. Seçeneklere şunlar dahildir:
     - **Yapılandırılmadı**  
     - **Bilgisayar ile tarayıcı arasında kopyalama ve yapıştırmayı engelle** (*varsayılan*)-engelle. BILGISAYAR ve sanal tarayıcı arasında veri aktarılamaz.
     - **Tarayıcıdan yalnızca bilgisayara kopyalama ve yapıştırmaya Izin ver** -veriler bilgisayardan sanal tarayıcıya aktarılamaz.
@@ -133,7 +157,7 @@ Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları
     - **Evet** -Windows, BitLocker korumalı olmayan sabit sürücülere hiçbir verinin yazılmasına izin vermez. Sabit bir sürücü şifrelenmemişse, yazma erişimi verilmeden önce kullanıcının BitLocker kurulum Sihirbazı 'nı tamamlaması gerekir.
 
   - **Sabit veri sürücüleri için şifreleme yöntemini yapılandırma**  
-    CSP: [Encryptionmethodbydrivetype](h https://go.microsoft.com/fwlink/?linkid=872526)  
+    CSP: [Encryptionmethodbydrivetype](https://go.microsoft.com/fwlink/?linkid=872526)  
     Bu ayar *BitLocker sabit sürücü Ilkesi* *Yapılandır*olarak ayarlandığında kullanılabilir.
 
     Sabit veri sürücüleri diskleri için şifreleme yöntemini ve şifre gücünü yapılandırın. *XTS-AES 128-bit* , Windows varsayılan şifreleme yöntemidir ve önerilen değerdir.
@@ -215,7 +239,7 @@ Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları
 ## <a name="device-installation"></a>Cihaz yüklemesi
 
 - **Cihaz tanımlayıcılarına göre donanım cihazı yüklemesi**  
-  [Deviceınstallation/Preventınstalnmatchingdevicıdıd](h https://go.microsoft.com/fwlink/?linkid=2066794)  
+  [Deviceınstallation/Preventınstalnmatchingdevicıdıd](https://go.microsoft.com/fwlink/?linkid=2066794)  
   
   Bu ilke ayarı, Windows 'un yüklemesi engellenen cihazlar için Tak ve Kullan donanım kimliklerinin ve uyumlu kimliklerin bir listesini belirtmenizi sağlar. Bu ilke ayarı, Windows 'un bir cihaz yüklemesine izin veren diğer tüm ilke ayarlarından önceliklidir.  Uzak Masaüstü sunucusunda bu ilke ayarını etkinleştirirseniz, ilke ayarı, belirtilen cihazların uzak masaüstü istemcisinden uzak masaüstü sunucusuna yönlendirilmesini etkiler.
 
@@ -293,7 +317,7 @@ Aşağıdaki ayarlar hakkında daha fazla bilgi için Windows belgelerindeki [Wi
   - **Evet** (*varsayılan*)
   - **Yapılandırılmadı**
 
-## <a name="firewall"></a>Güvenlik Duvarı
+## <a name="firewall"></a>Güvenlik duvarı
 
 Daha fazla bilgi için Windows belgelerindeki [güvenlik DUVARı CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) bölümüne bakın.
 
@@ -316,7 +340,7 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
    UTF-8 gerekmiyorsa, önceden paylaşılmış anahtarlar UTF-8 kullanılarak kodlanacaktır. Bundan sonra cihaz kullanıcıları başka bir kodlama yöntemi seçebilirler.
 
   - **Yapılandırılmadı**
-  - **Yok.**
+  - **Yok**
   - **UTF8** (*varsayılan*)
 
 - **Sertifika iptal listesi (CRL) doğrulaması**  
@@ -325,9 +349,9 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
   Sertifika iptal listesi (CRL) doğrulamanın nasıl uygulanacağını belirtin.  
 
   - **Yapılandırılmadı** (*varsayılan*)-CRL doğrulaması devre dışı bırakıldı.
-  - **Yok.**
+  - **Yok**
   - **Girişimde**
-  - **Gerekli**
+  - **Gerektirme**
 
 - **Paket Kuyruklama**  
   CSP: [Mdmstore/Global/EnablePacketQueue](https://go.microsoft.com/fwlink/?linkid=872551)
@@ -565,7 +589,7 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
 - **Zamanlanan Taramalar için düşük CPU önceliğini yapılandırma**  
   CSP: [Defender/Enablelowcpupriınıd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
 
-  **evet** -(*varsayılan*)
+  -**Evet** (*varsayılan*)
   - **Yapılandırılmadı**
 
 - **Office iletişim uygulamalarının alt işlem oluşturmasını engelleyin**  
@@ -630,11 +654,26 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
   - **Evet** (*varsayılan*)-indirilen tüm dosyalar ve ekler taranır. Ayar, üzerinde olan istemci varsayılan öğesine döndürülür, ancak kullanıcı bunu değiştirebilir. Bu ayarı devre dışı bırakmak için özel bir URI kullanın.
   - **Yapılandırılmadı** -ayar, üzerinde olan istemci varsayılanı olarak döndürülür, ancak kullanıcı bunu değiştirebilir. Bu ayarı devre dışı bırakmak için özel bir URI kullanın.
 
+::: zone-end
+::: zone pivot="atp-april-2020"
+
+- **Erişim Koruması 'nda engelle**  
+  CSP: [Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+
+  - **Evet**
+  - **Yapılandırılmadı** (*varsayılan*)
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
 - **Erişim Koruması 'nda engelle**  
   CSP: [Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
 
   - **Evet** (*varsayılan*)
   - **Yapılandırılmadı**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 - **Tarayıcı betiklerini Tara**  
   CSP: [Defender/AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
@@ -815,7 +854,7 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
   - **Evet** (*varsayılan*)-kullanıcıların Microsoft Defender Güvenlik Merkezi 'ndeki yararlanma koruması ayarları alanında değişiklik yapmasını engelleyin.
   - **Yapılandırılmadı** -yerel kullanıcılar, açıktan yararlanma koruması ayarları alanında değişiklik yapabilirler.
 
-## <a name="smart-screen"></a>Akıllı Ekran
+## <a name="smart-screen"></a>Akıllı ekran
 
 - **Kullanıcıların SmartScreen uyarılarını yoksaymalarını engelleyin**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
@@ -849,12 +888,12 @@ Daha fazla bilgi için Windows belgelerindeki [Passportforwork CSP](https://docs
 
   *Devre dışı*olarak ayarlandığında, aşağıdaki ayarları yapılandırabilirsiniz:
 
-  - **PIN 'de küçük harfler**  
+  - **PIN kodunda küçük harfler**  
     - **İzin verilmiyor**
     - **Gerekli**
     - **Izin verilen** (*varsayılan*)
 
-  - **PIN 'de özel karakterler**
+  - **PIN kodunda özel karakterler**
     - **İzin verilmiyor**
     - **Gerekli**
     - **Izin verilen** (*varsayılan*)
@@ -864,8 +903,10 @@ Daha fazla bilgi için Windows belgelerindeki [Passportforwork CSP](https://docs
     - **Gerekli**
     - **Izin verilen** (*varsayılan*)
 
+::: zone-end
+
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [Güvenlik temelleri hakkında bilgi edinin](security-baselines.md)
 - [Çakışmaları önleyin](security-baselines.md#avoid-conflicts)
-- [Intune 'da ilke ve profillerin sorunlarını giderme](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Intune'da ilke ve profil sorunları giderme](../configuration/troubleshoot-policies-in-microsoft-intune.md)

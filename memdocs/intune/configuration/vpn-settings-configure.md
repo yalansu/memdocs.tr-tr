@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64356bf9be0c2c439c1f4fc296a9728a7937b001
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 70b0c5693c22b6504016d85e35977c5f99935742
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086569"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587196"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Intune 'da VPN sunucularına bağlanmak için VPN profilleri oluşturma
 
@@ -43,20 +43,20 @@ Sanal özel ağlar (VPN 'Ler), kullanıcılara kuruluş ağınıza güvenli uzak
 
 VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsiniz:
 
-- Otomatik
+- Automatic
   - Windows 10
 
 - Check Point Capsule VPN
-  - Android Cihaz Yöneticisi
+  - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
   - iOS/iPadOS
   - Mac OS
   - Windows 10
   - Windows 8.1
-  - WVPN profillerinidows Phone 8.1
+  - Windows Phone 8.1
 
 - Cisco AnyConnect
-  - Android Cihaz Yöneticisi
+  - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
   - Android kurumsal cihaz sahibi (tam olarak yönetilen)
   - iOS/iPadOS
@@ -66,7 +66,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - iOS/iPadOS
 
 - Citrix SSO
-  - Android Cihaz Yöneticisi
+  - Android cihaz yöneticisi
   - Android kurumsal iş profilleri: [uygulama yapılandırma Ilkesini](../apps/app-configuration-policies-use-android.md) kullanma
   - Android kurumsal cihaz sahibi (tamamen yönetilen): [uygulama yapılandırma Ilkesini](../apps/app-configuration-policies-use-android.md) kullanma
   - iOS/iPadOS
@@ -79,14 +79,14 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   [Özel ayarlarla profil oluşturma](custom-settings-configure.md)içindeki URI ayarlarını kullanarak özel VPN profilleri oluşturun.
 
 - F5 Access
-  - Android Cihaz Yöneticisi
+  - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
   - Android kurumsal cihaz sahibi (tam olarak yönetilen)
   - iOS/iPadOS
   - Mac OS
   - Windows 10
   - Windows 8.1
-  - WVPN profillerinidows Phone 8.1
+  - Windows Phone 8.1
 
 - IKEv2
   - iOS/iPadOS
@@ -104,23 +104,23 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - Windows 10
 
 - Pulse Secure
-  - Android Cihaz Yöneticisi
+  - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
   - Android kurumsal cihaz sahibi (tam olarak yönetilen)
   - iOS/iPadOS
   - Mac OS
   - Windows 10
   - Windows 8.1
-  - WVPN profillerinidows Phone 8.1
+  - Windows Phone 8.1
 
 - SonicWall Mobile Connect
-  - Android Cihaz Yöneticisi
+  - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
   - iOS/iPadOS
   - Mac OS
   - Windows 10
   - Windows 8.1
-  - WVPN profillerinidows Phone 8.1
+  - Windows Phone 8.1
 
 - Zscaler
   - Android kurumsal iş profilleri: [uygulama yapılandırma Ilkesini](../apps/app-configuration-policies-use-android.md) kullanma
@@ -132,15 +132,15 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:
-      - **Android Cihaz Yöneticisi**
-      - Yalnızca **Android kurumsal** > **cihaz sahibi**
-      - Yalnızca **Android kurumsal** > **iş profili**
-      - **iOS/ıpados**
-      - **macOS**
+      - **Android cihaz yöneticisi**
+      - **Yalnızca Android kurumsal** > **cihaz sahibi**
+      - **Yalnızca Android kurumsal** > **iş profili**
+      - **iOS/iPadOS**
+      - **Mac OS**
       - **Windows 10 ve üzeri**
       - **Windows 8.1 ve üzeri**
       - **Windows Phone 8.1**
@@ -150,27 +150,27 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
 5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
     - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı **Şirket genelinde VPN profilidir**.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+    - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
 
-6. **İleri**'yi seçin.
+6. **İleri**’yi seçin.
 7. **Yapılandırma ayarları**' nda, seçtiğiniz platforma bağlı olarak, yapılandırabileceğiniz ayarlar farklıdır. Ayrıntılı ayarlar için platformunuzu seçin:
 
-    - [Android Cihaz Yöneticisi](vpn-settings-android.md)
+    - [Android cihaz yöneticisi](vpn-settings-android.md)
     - [Android Kurumsal](vpn-settings-android-enterprise.md)
-    - [iOS/ıpados](vpn-settings-ios.md)
-    - [macOS](vpn-settings-macos.md)
+    - [iOS/iPadOS](vpn-settings-ios.md)
+    - [Mac OS](vpn-settings-macos.md)
     - [Windows 10](vpn-settings-windows-10.md) (Windows holographic for Business dahil)
     - [Windows 8.1](vpn-settings-windows-8-1.md)
     - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
-8. **İleri**'yi seçin.
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili `US-NC IT Team` veya `JohnGlenn_ITDepartment`gıbı belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+8. **İleri**’yi seçin.
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
-    **İleri**'yi seçin.
+    **İleri**’yi seçin.
 
 10. **Atamalar**' da, profilinizi alacak Kullanıcı veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
 
-    **İleri**'yi seçin.
+    **İleri**’yi seçin.
 
 11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
 
@@ -181,6 +181,8 @@ VPN profilleri, farklı üreticilerden farklı bağlantı türleri ve farklı pr
 ### <a name="certificates"></a>Sertifikalar
 
 VPN profilini oluştururken, Intune’da önceden oluşturduğunuz bir SCEP veya PKCS sertifika profilini seçersiniz. Bu profil, kimlik sertifikası olarak bilinir. Kullanıcının cihazının bağlanmasına izin vermek için oluşturduğunuz bir güvenilir sertifika profiline (veya *kök sertifikaya*) göre kimlik doğrulaması yapmak için kullanılır. Güvenilir sertifika, VPN bağlantısının kimliğini doğrulayan bilgisayara atanır. Bu, genellikle VPN sunucusudur.
+
+VPN profiliniz için sertifika tabanlı kimlik doğrulaması kullanıyorsanız, her cihazın sertifika yetkilinizin yasallığını algılayabilmesi için VPN profilini, sertifika profilini ve güvenilen kök profilini aynı gruplara dağıtın.
 
 Intune’da sertifika profillerini oluşturma ve kullanma hakkında daha fazla bilgi için bkz. [Microsoft Intune ile sertifikaları yapılandırma](../protect/certificates-configure.md).
 

@@ -5,23 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 05/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: shpate
+ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 618ed802d33f2c50a567f1e18da4689855bbf016
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 35e48be90b80d0c776087c95444f5f77f5ff547c
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551687"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693412"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Intune 'da Windows 10 cihazlarını yapılandırmak için güvenlik temellerini kullanma
 
@@ -38,7 +38,7 @@ Ayrı taban çizgisi türleri aynı ayarları içerebilir, ancak bu ayarlar içi
 > [!NOTE]
 > Microsoft, bir üretim ortamında güvenlik temellerinin önizleme sürümlerinin kullanılmasını önermez. Önizleme temelindeki ayarlar Önizleme kursu üzerinde değişebilir.
 
-Güvenlik temelleri, Microsoft 365 çalışırken uçtan uca güvenli bir iş akışına sahip olmanıza yardımcı olabilir. Bazı avantajlardan bazıları şunlardır:
+Güvenlik temelleri, Microsoft 365 çalışırken uçtan uca güvenli bir iş akışına sahip olmanıza yardımcı olabilir. Bazı avantajları şunlardır:
 
 - Güvenlik temeli, güvenliği etkileyen ayarlarla ilgili en iyi uygulamaları ve önerileri içerir. Intune, Grup İlkesi güvenlik temelleri oluşturan aynı Windows güvenlik ekibine sahip iş ortakları. Bu öneriler, kılavuzluk ve kapsamlı deneyimi temel alır.
 - Intune 'a yeni başladıysanız ve nereden başlayabileceğiniz konusunda emin değilseniz, güvenlik temelleri size bir avantaj sunar. Kuruluşunuzun kaynaklarını ve verilerini korumaya yardımcı olduğunuzu bilerek, güvenli bir profil oluşturup dağıtabilirsiniz.
@@ -46,21 +46,49 @@ Güvenlik temelleri, Microsoft 365 çalışırken uçtan uca güvenli bir iş ak
 
 [Windows güvenlik temelleri](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) , bu özellik hakkında daha fazla bilgi edinmek için harika bir kaynaktır. [Mobil cihaz yönetimi](https://docs.microsoft.com/windows/client-management/mdm/) (MDM) MDM ile ilgili harika bir kaynaktır ve Windows cihazlarında neler yapabilirsiniz.
 
+## <a name="available-security-baselines"></a>Kullanılabilir güvenlik temelleri
+
+Aşağıdaki güvenlik temeli örnekleri Intune ile kullanılabilir. Her bir taban çizgisinin en son örneğine ilişkin ayarları görüntülemek için bağlantıları kullanın.
+
+- **MDM güvenlik temeli**
+  - [2019 Mayıs için MDM güvenlik temeli](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
+  - [Önizleme: 2018 Ekim için MDM güvenlik temeli](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
+
+- **Microsoft Defender ATP temeli**
+   *(Bu temeli kullanmak için ortamınızın [Microsoft Defender Gelişmiş tehdit koruması](advanced-threat-protection.md#prerequisites)'nı kullanma önkoşulları karşılaması gerekir)*.
+  - [Nisan 2020 için Microsoft Defender ATP temeli-sürüm 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
+  - [Mart 2020 için Microsoft Defender ATP temeli-sürüm 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
+
+  > [!NOTE]
+  > Microsoft Defender ATP güvenlik temeli fiziksel cihazlar için iyileştirildi ve şu anda sanal makinelerde (VM) veya VDı uç noktalarında kullanılması önerilmez. Belirli taban çizgisi ayarları, sanallaştırılmış ortamlarda uzak etkileşimli oturumları etkileyebilir.  Daha fazla bilgi için bkz. Windows belgelerindeki [Microsoft Defender ATP güvenlik temeliyle uyumluluğu artırma](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .
+
+- **Microsoft Edge taban çizgisi**
+  - [2020 Nisan için Microsoft Edge taban çizgisi (Edge sürüm 80 ve üzeri)](security-baseline-settings-edge.md?pivots-edge-april-2020)
+  - [Önizleme: 2019 Ekim için Microsoft Edge Baseline (Edge sürüm 77 ve üzeri)](security-baseline-settings-edge.md?pivots=edge-october-2019)
+
+Önizleme şablonu yeni profiller oluşturmak için artık kullanılabilir olmadığında bile, daha önce bir önizleme şablonunu temel alarak oluşturduğunuz profilleri kullanmaya ve düzenlemeye devam edebilirsiniz.
+
+Kullandığınız bir taban çizgisinin daha yeni bir sürümüne taşımaya hazırsanız, bu makaledeki [bir profilin temel sürümünü değiştirme](#change-the-baseline-version-for-a-profile) bölümüne bakın. 
+
 ## <a name="about-baseline-versions-and-instances"></a>Temel sürümler ve örnekler hakkında
 
 Bir taban çizgisinin her yeni sürüm örneği, ayarları ekleyebilir veya kaldırabilir veya diğer değişiklikleri getirebilir. Örneğin, yeni Windows 10 ayarları Windows 10 ' un yeni sürümleriyle kullanılabilir hale geldiğinde, MDM güvenlik temeli en yeni ayarları içeren yeni bir sürüm örneği alabilir.
 
-Intune konsolunda her bir taban çizgisi için kutucuk, taban çizgisi şablon adını ve bu taban çizgisi hakkındaki temel bilgileri görüntüler. Bu bilgiler, bu taban çizgisi türünü kullanan profillerin sayısını, taban çizgisi türünün kaç farklı örneğine (sürümlerini) kullanılabildiğini ve temel şablonun kiracınıza ne zaman eklendiğini belirleyen *son Yayımlanma* tarihini içerir. Aşağıdaki örnek, iyi kullanılan bir MDM güvenlik temeli için kutucuğu göstermektedir:
+[Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **uç nokta güvenlik** > **güvenliği temelleri** altında, kullanılabilir temellerin bir listesini görürsünüz. Bu liste, taban çizgisi şablonu adını, bu taban çizgisi türünü kullanan profil sayısını, taban çizgisi türünün kaç farklı örneğine (sürümlerini) kullanılabildiğini ve temel şablon en son sürümünün ne zaman kullanılabilir duruma geldiğini belirleyen *son Yayımlanma* tarihini içerir.
 
-![Taban çizgisi kutucuğu](./media/security-baselines/baseline-tile.png)
-
-Kullandığınız temel sürümler hakkında daha fazla bilgi görüntülemek için bir temel kutucuk seçerek *genel bakış* bölmesini açın ve ardından **sürümler**' i seçin. Intune, profilleriniz tarafından kullanılan bu taban çizgisinin sürümleriyle ilgili ayrıntıları görüntüler. Sürümler bölmesinde, bu sürümü kullanan profillerle ilgili daha derin ayrıntıları görüntülemek için tek bir sürüm seçebilirsiniz. Ayrıca, iki farklı sürüm seçebilir ve bu farklılıkları ayrıntılarıyla bir CSV dosyası indirmek için **temelleri Karşılaştır** ' ı seçebilirsiniz.
-
-![Temelleri Karşılaştır](./media/security-baselines/compare-baselines.png)
-
-Bir güvenlik temeli *profili*oluşturduğunuzda, profil otomatik olarak en son yayınlanan güvenlik temeli örneğini kullanır.  Önizleme sürümü kullanılarak oluşturulan taban çizgileri dahil daha önce daha önce oluşturduğunuz profilleri kullanmaya ve düzenlemeye devam edebilirsiniz.
+Kullandığınız temel sürümler hakkında daha fazla bilgi görüntülemek için bir temel kutucuk seçerek *genel bakış* bölmesini açın ve ardından **sürümler**' i seçin. Intune, en son ve geçerli temel sürümü de dahil olmak üzere, profilleriniz tarafından kullanılan taban çizgisinin sürümleriyle ilgili ayrıntıları görüntüler.  Bu sürümü kullanan profillerle ilgili daha derin ayrıntıları görüntülemek için tek bir sürüm seçebilirsiniz.
 
 Belirli bir profille kullanılan bir taban çizgisinin [sürümünün değiştirilmesini](#change-the-baseline-version-for-a-profile) seçebilirsiniz. Bu, yeni bir sürüm geldiğinde, bundan faydalanmak için yeni bir temel profil oluşturmanız gerekmediği anlamına gelir. Bunun yerine, hazır olduğunuzda bir temel profil seçebilir ve sonra bu profilin örnek sürümünü yeni bir profil olarak değiştirmek için yerleşik seçeneğini kullanabilirsiniz.
+
+### <a name="compare-baseline-versions"></a>Temel sürümleri Karşılaştır
+
+Güvenlik temeli için **sürümler** bölmesinde, dağıttığınız Bu taban çizgisinin her bir sürümünün listesidir. Bu liste, taban çizgisinin en son ve etkin sürümünü de içerir. Yeni bir güvenlik temeli *profili*oluşturduğunuzda, profil güvenlik temelinin en son sürümünü kullanır.  Önizleme sürümü kullanılarak oluşturulan taban çizgileri dahil daha önce daha önce oluşturduğunuz profilleri kullanmaya ve düzenlemeye devam edebilirsiniz.
+
+Sürümler arasında nelerin değiştirildiğini anlamak için iki farklı sürüm için onay kutularını seçin ve ardından bu farklılıkları ayrıntılarıyla bir CSV dosyası indirmek için **temelleri Karşılaştır** ' ı seçin. 
+
+İndirme iki temel sürümündeki her bir ayarı tanımlar ve bu ayar değiştirildiyse (*NotEqual*) veya aynı (*eşittir*) durumunda. Ayrıntılar Ayrıca, sürümüne göre ayar için varsayılan değeri içerir ve ayar daha yeni sürüme *eklendiyse* veya daha yeni sürümden *kaldırılırsa* .
+
+![Temelleri Karşılaştır](./media/security-baselines/compare-baselines.png)
 
 ## <a name="avoid-conflicts"></a>Çakışmaları önleyin
 
@@ -72,28 +100,8 @@ Ayrıca, güvenlik temelleri genellikle [cihaz yapılandırma profilleri](../con
 
 Çakışmaları belirlemenize ve çözmeye yardımcı olması için aşağıdaki bağlantılardaki bilgileri kullanın:
 
-- [Intune 'da ilke ve profillerin sorunlarını giderme](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Intune'da ilke ve profil sorunları giderme](../configuration/troubleshoot-policies-in-microsoft-intune.md)
 - [Güvenlik temellerinizi izleyin](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
-
-## <a name="available-security-baselines"></a>Kullanılabilir güvenlik temelleri
-
-Aşağıdaki güvenlik temeli örnekleri Intune ile kullanılabilir. Her bir taban çizgisinin en son örneğine ilişkin ayarları görüntülemek için bağlantıları kullanın.
-
-- **MDM güvenlik temeli**
-  - [2019 Mayıs için MDM güvenlik temeli](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
-  - [Önizleme: 2018 Ekim için MDM güvenlik temeli](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
-
-- **Microsoft Defender ATP taban çizgisi**
-   *(Bu temeli kullanmak Için ortamınız [Microsoft Defender Gelişmiş tehdit koruması](advanced-threat-protection.md#prerequisites)'nı kullanmaya yönelik önkoşulları karşılamalıdır)* .
-  - [Microsoft Defender ATP taban sürümü 3](security-baseline-settings-defender-atp.md)
-
-  > [!NOTE]
-  > Microsoft Defender ATP güvenlik temeli fiziksel cihazlar için iyileştirildi ve şu anda sanal makinelerde (VM) veya VDı uç noktalarında kullanılması önerilmez. Belirli taban çizgisi ayarları, sanallaştırılmış ortamlarda uzak etkileşimli oturumları etkileyebilir.  Daha fazla bilgi için bkz. Windows belgelerindeki [Microsoft Defender ATP güvenlik temeliyle uyumluluğu artırma](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .
-
-- **Microsoft Edge taban çizgisi**
-  - [Önizleme: Microsoft Edge taban çizgisi](security-baseline-settings-edge.md)
-
-Önizleme şablonu yeni profiller oluşturmak için artık kullanılabilir olmadığında bile, daha önce bir önizleme şablonunu temel alarak oluşturduğunuz profilleri kullanmaya ve düzenlemeye devam edebilirsiniz.
 
 ## <a name="manage-baselines"></a>Temelleri yönetme
 
@@ -114,7 +122,7 @@ Güvenlik temellerinde çalışırken ortak görevler şunları içerir:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. Kullanılabilir temeller listesini görüntülemek için **uç nokta güvenliği** > **güvenlik temellerini** seçin.
+2. Kullanılabilir temeller listesini görüntülemek için **uç nokta güvenlik** > **güvenliği temelleri** ' ni seçin.
 
    ![Yapılandırmak için bir güvenlik temeli seçin](./media/security-baselines/available-baselines.png)
 
@@ -151,7 +159,7 @@ Güvenlik temellerinde çalışırken ortak görevler şunları içerir:
 
    ![Taban çizgisini gözden geçirme](./media/security-baselines/review.png)
 
-9. Bir profil oluşturduktan sonra, **uç nokta güvenliği** > **güvenlik temelleri**' ne giderek düzenleyin, yapılandırdığınız taban çizgisi türünü seçin ve ardından **profiller**' i seçin. Kullanılabilir profiller listesinden profili seçin ve ardından **Özellikler**' i seçin. Tüm kullanılabilir yapılandırma sekmelerinden ayarları düzenleyebilir ve değişikliklerinizi uygulamak için **gözden geçir + kaydet** ' i seçebilirsiniz.
+9. Bir profil oluşturduktan sonra, **uç nokta güvenlik** > **güvenliği temelleri**' ne giderek düzenleyin, yapılandırdığınız taban çizgisi türünü seçin ve ardından **profiller**' i seçin. Kullanılabilir profiller listesinden profili seçin ve ardından **Özellikler**' i seçin. Tüm kullanılabilir yapılandırma sekmelerinden ayarları düzenleyebilir ve değişikliklerinizi uygulamak için **gözden geçir + kaydet** ' i seçebilirsiniz.
 
 ### <a name="change-the-baseline-version-for-a-profile"></a>Bir profilin temel sürümünü değiştirme
 
@@ -173,7 +181,7 @@ Kaydetme sırasında, dönüştürme işlemi tamamlandıktan sonra, taban çizgi
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın. 
 
-2. **Uç nokta güvenliği** > **güvenlik temelleri**' ni seçin ve ardından değiştirmek istediğiniz profilin bulunduğu temel türün kutucuğunu seçin.
+2. **Uç nokta güvenlik** > **güvenliği temelleri**' ni seçin ve ardından değiştirmek istediğiniz profile sahip olan temel türün kutucuğunu seçin.
 
 3. Ardından, **profiller**' i seçin ve ardından düzenlemek istediğiniz profilin onay kutusunu seçin ve ardından **sürümü Değiştir**' i seçin.
 
@@ -191,7 +199,7 @@ Kaydetme sırasında, dönüştürme işlemi tamamlandıktan sonra, taban çizgi
    - **Temel değişiklikleri kabul et ancak var olan ayar özelleştirmelerini tut** -Bu seçenek, taban çizgisi profilinde yaptığınız özelleştirmeleri korur ve bunları kullanmak üzere seçtiğiniz yeni sürüme uygular.
    - **Temel değişiklikleri kabul et ve var olan ayar özelleştirmelerini at** -Bu seçenek özgün profilinizi tamamen geçersiz kılar. Güncelleştirilmiş profil tüm ayarlar için varsayılan değerleri kullanır.
 
-7. **Gönder**' i seçin. Profil, seçili temel sürüme ve dönüştürme tamamlandıktan sonra güncelleştirilir ve taban çizgisi atanan gruplara hemen yeniden dağıtılır.
+7. **Gönder**’i seçin. Profil, seçili temel sürüme ve dönüştürme tamamlandıktan sonra güncelleştirilir ve taban çizgisi atanan gruplara hemen yeniden dağıtılır.
 
 ### <a name="remove-a-security-baseline-assignment"></a>Güvenlik temeli atamasını kaldırma
 
@@ -199,13 +207,21 @@ Bir güvenlik temeli ayarı bir cihaz için artık geçerli olmadığında veya 
 
 Daha sonra cihazdaki ayarları değiştirebilecek diğer işlemlere, farklı veya yeni bir güvenlik taban çizgisi, cihaz yapılandırma profili, grup ilkesi yapılandırmaları veya cihazdaki ayarı el ile düzenleme sayılabilir.
 
+### <a name="older-baseline-versions"></a>Eski temel sürümler
+
+Microsoft Uç Nokta Yöneticisi, yerleşik güvenlik temellerinin sürümlerini, tipik bir kuruluşun değişen ihtiyaçlarına bağlı olarak güncelleştirir. Her yeni sürüm, belirli bir taban çizgisine bir sürüm güncelleştirmesine neden olur. Bu, müşterilerin cihaz yapılandırma profillerinin başlangıç noktası olarak en son temel sürümünü kullanacağı beklentidir.
+
+Kiracınızda listelenen eski bir taban çizgisini kullanan hiçbir profil yoksa, Microsoft Endpoint Manager yalnızca kullanılabilir en son temel sürümü listeler.
+
+Eski bir taban çizgisiyle ilişkili bir profiliniz varsa, bu eski taban çizgisi listelenmeye devam edecektir.
+
 ## <a name="co-managed-devices"></a>Ortak yönetilen cihazlar
 
 Intune tarafından yönetilen cihazlarda güvenlik temelleri, Configuration Manager ile birlikte yönetilen cihazlara benzerdir. Ortak yönetilen cihazlar Windows 10 cihazlarını eşzamanlı olarak yönetmek için Configuration Manager ve Microsoft Intune kullanır. Mevcut Configuration Manager yatırımınızın Intune avantajlarından faydalanmasına olanak tanır. [Ortak yönetime genel bakış](https://docs.microsoft.com/configmgr/comanage/overview) , Configuration Manager kullanırsanız ve ayrıca bulutun avantajlarından yararlanmak istiyorsanız harika bir kaynaktır.
 
 Ortak yönetilen cihazlar kullanılırken **cihaz yapılandırma** iş yükünü (ayarlarını) Intune 'a geçmeniz gerekir. [Cihaz yapılandırma iş yükleri](https://docs.microsoft.com/configmgr/comanage/workloads#device-configuration) daha fazla bilgi sağlar.
 
-## <a name="q--a"></a>Soru ve Cevap
+## <a name="q--a"></a>Soru-Cevap
 
 ### <a name="why-these-settings"></a>Bu ayarlar neden?
 

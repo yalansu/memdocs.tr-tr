@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 04/29/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 337f7608b4c75a5a2ce2c85774d2090d549ae1fe
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359453"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587255"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Intune’da macOS Endpoint Protection ayarları  
 
@@ -50,12 +50,12 @@ Bu makalede, macOS çalıştıran cihazlar için yapılandırabileceğiniz Endpo
 
   **Varsayılan**: yapılandırılmadı  
 
-## <a name="firewall"></a>Güvenlik Duvarı  
+## <a name="firewall"></a>Güvenlik duvarı  
 
 Bağlantı noktası yerine uygulama başına bağlantıları denetlemek için güvenlik duvarı kullanın. Uygulama başına ayarlar kullanmak, güvenlik duvarı korumasından faydalanmayı kolaylaştırır. Ayrıca istenmeyen uygulamaların, güvenilen uygulamalara açık olan ağ bağlantı noktalarının kontrolünü ele geçirmelerini önler.  
 
 **Genel**
-- **Duvarını**  
+- **Güvenlik duvarı**  
   Gelen bağlantıların ortamınızda nasıl işleneceğini yapılandırmak için güvenlik duvarını etkinleştirin.  
   - **Yapılandırılmadı**  
   - **Etkinleştir**  
@@ -65,7 +65,7 @@ Bağlantı noktası yerine uygulama başına bağlantıları denetlemek için g�
 - **Gelen bağlantılar**  
   DHCP, Bonjour ve IPSec gibi temel Internet Hizmetleri için gereken bağlantılar hariç tüm gelen bağlantıları engelleyin. Bu özellik ayrıca, Dosya Paylaşımı ve Ekran Paylaşımı gibi tüm paylaşım hizmetlerini engeller. Paylaşım cihazları kullanıyorsanız bu ayarı *Yapılandırılmadı* olarak bırakın.  
   - **Yapılandırılmadı**  
-  - **Engelle**  
+  - **Engelleyin**  
 
   **Varsayılan**: yapılandırılmadı  
 
@@ -84,7 +84,7 @@ Bağlantı noktası yerine uygulama başına bağlantıları denetlemek için g�
 
     **Varsayılan**: yapılandırılmadı  
 
-## <a name="filevault"></a>Dosya Kasası  
+## <a name="filevault"></a>FileVault  
 Apple Filekasası ayarları hakkında daha fazla bilgi için Apple geliştirici içerikleriyle ilgili [Fdefilekasasını](https://developer.apple.com/documentation/devicemanagement/fdefilevault) inceleyin. 
 
 > [!IMPORTANT]  
@@ -113,6 +113,18 @@ Apple Filekasası ayarları hakkında daha fazla bilgi için Apple geliştirici 
 
   - **Atlayakaç kez izin verilir**  
   Kullanıcının oturum açması için dosya kasasından önce dosya kasasını etkinleştirmek üzere bir kullanıcının istekleri yoksaymasına izin sayısını belirleyin. 
+
+    > [!IMPORTANT]
+    >
+    > Hiçbir limit değeri olmayan bilinen bir sorun vardır **, her zaman sor**. Kullanıcının oturum açtıklarında şifrelemeyi atlamasına olanak tanımak yerine, bu ayar bir sonraki oturum açma sırasında cihaz şifrelemesi gerektirir. Bu sorunun geç Haziran 'da düzeltilmesi ve MC210922 içinde bildirilmesi beklenmektedir.
+    >
+    > Bu ayar düzeltildiğinde, bir Kullanıcı cihazda bir dahaki sefer oturum açtığında cihazların şifrelenmesini gerektiren yeni bir sıfır (**0**) seçeneği olacaktır. Buna ek olarak, Intune bu çözümü dahil etmek için güncelleştirmeler yaparken, sınırsız olarak ayarlanan herhangi bir ilke, **her zaman sor** , şifreleme gerektirmesinin geçerli davranışını tutan yeni **0**değerini kullanacak şekilde güncelleştirilir.
+    >
+    > Bu sorun giderildikten sonra, bu ayarı **hiçbir sınır** ayarlamak için yeniden yapılandırarak şifreleme gerektirmeyi atlama özelliğini kullanabilirsiniz, ayarın başlangıçta beklendiği gibi çalışacağını ve kullanıcıların cihazı şifrelemeyi atlamasına izin vermesini sağlayabilirsiniz.
+    >
+    > Kayıtlı MacOS cihazları varsa, [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açtığınızda daha fazla bilgi görüntüleyebilirsiniz, **Kiracı Yönetimi** > **kiracı durumu**' na gidin, **hizmet durumu ve ileti merkezi**' ni seçip ileti kimliği **MC210922**' ni arayın.
+
+    <br> 
 
     - **Yapılandırılmadı** -bir sonraki oturum açma işlemine izin verilmesi için cihazda şifreleme gerekir.  
     - **1** ila **10** -bir kullanıcının cihazda şifrelemeyi gerektirmeden önce 1 ila 10 kez istemi yoksaymasına izin verin.  

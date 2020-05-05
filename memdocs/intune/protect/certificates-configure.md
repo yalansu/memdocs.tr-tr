@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7bcc99937cfdf0c286eeb4f7f3d11ff4bf5c0c4f
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: c9b23d68928b183a70e8069edbf6027ddc0436ed
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322812"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587312"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Microsoft Intune kimlik doğrulaması için sertifikaları kullanma
 
@@ -30,11 +30,11 @@ VPN, Wi-Fi veya e-posta profilleri aracılığıyla kullanıcılarınızın uygu
 
 ## <a name="intune-supported-certificates-and-usage"></a>Intune tarafından desteklenen sertifikalar ve kullanım
 
-| Tür              | Kimlik Doğrulama | S/MIME Imzalama | S/MIME şifrelemesi  |
+| Tür              | Kimlik doğrulaması | S/MIME Imzalama | S/MIME şifrelemesi  |
 |--|--|--|--|
-| Ortak anahtar şifreleme standartları (PKCS) içeri aktarılan sertifika |  | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png)|
-| PKCS#12 (veya PFX)    | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) |  |
-| Basit Sertifika Kayıt Protokolü (SCEP)  | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) | |
+| Ortak anahtar şifreleme standartları (PKCS) içeri aktarılan sertifika |  | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png)|
+| PKCS#12 (veya PFX)    | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) |  |
+| Basit Sertifika Kayıt Protokolü (SCEP)  | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) | |
 
 Bu sertifikaları dağıtmak için cihazlara sertifika profilleri oluşturup atayacaksınız.
 
@@ -77,17 +77,17 @@ Bir Microsoft sertifika yetkilisi (CA) kullandığınızda:
 
 ## <a name="supported-platforms-and-certificate-profiles"></a>Desteklenen platformlar ve sertifika profilleri
 
-| Platfveyam              | Güvenilen sertifika profili | PKCS sertifika profili | SCEP sertifika profili | PKCS içeri aktarılan sertifika profili  |
+| Platform              | Güvenilen sertifika profili | PKCS sertifika profili | SCEP sertifika profili | PKCS içeri aktarılan sertifika profili  |
 |--|--|--|--|---|
-| Android Cihaz Yöneticisi | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png)|  ![Desteklenir](./media/certificates-configure/green-check.png) |
-| Android Kurumsal <br> -Tam olarak yönetilen (cihaz sahibi)   | ![Desteklenir](./media/certificates-configure/green-check.png) |   | ![Desteklenir](./media/certificates-configure/green-check.png) |   |
-| Android Kurumsal <br> -Adanmış (cihaz sahibi)   | ![Desteklenir](./media/certificates-configure/green-check.png)  |   | ![Desteklenir](./media/certificates-configure/green-check.png)  |   |
-| Android Kurumsal <br> -İş profili    | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) |
-| iOS/iPadOS                   | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) |
-| Mac OS                 | ![Desteklenir](./media/certificates-configure/green-check.png) |  ![Desteklenir](./media/certificates-configure/green-check.png) |![Desteklenir](./media/certificates-configure/green-check.png)|![Desteklenir](./media/certificates-configure/green-check.png)|
-| WVPN profillerinidows Phone 8.1     |![Desteklenir](./media/certificates-configure/green-check.png)  |  | ![Desteklenir](./media/certificates-configure/green-check.png)| ![Desteklenir](./media/certificates-configure/green-check.png) |
-| Windows 8.1 ve üzeri |![Desteklenir](./media/certificates-configure/green-check.png)  |  |![Desteklenir](./media/certificates-configure/green-check.png) |   |
-| Windows 10 ve üzeri  | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) |
+| Android cihaz yöneticisi | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png)|  ![Destekleniyor](./media/certificates-configure/green-check.png) |
+| Android Kurumsal <br> -Tam olarak yönetilen (cihaz sahibi)   | ![Destekleniyor](./media/certificates-configure/green-check.png) |   | ![Destekleniyor](./media/certificates-configure/green-check.png) |   |
+| Android Kurumsal <br> -Adanmış (cihaz sahibi)   | ![Destekleniyor](./media/certificates-configure/green-check.png)  |   | ![Destekleniyor](./media/certificates-configure/green-check.png)  |   |
+| Android Kurumsal <br> -İş profili    | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) |
+| iOS/iPadOS                   | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) |
+| Mac OS                 | ![Destekleniyor](./media/certificates-configure/green-check.png) |  ![Destekleniyor](./media/certificates-configure/green-check.png) |![Destekleniyor](./media/certificates-configure/green-check.png)|![Destekleniyor](./media/certificates-configure/green-check.png)|
+| Windows Phone 8.1     |![Destekleniyor](./media/certificates-configure/green-check.png)  |  | ![Destekleniyor](./media/certificates-configure/green-check.png)| ![Destekleniyor](./media/certificates-configure/green-check.png) |
+| Windows 8.1 ve üzeri |![Destekleniyor](./media/certificates-configure/green-check.png)  |  |![Destekleniyor](./media/certificates-configure/green-check.png) |   |
+| Windows 10 ve üzeri  | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) |
 
 ## <a name="export-the-trusted-root-ca-certificate"></a>Güvenilen kök CA sertifikasını dışarı aktarma
 
@@ -99,7 +99,9 @@ Bu. cer dosyasını, bu sertifikayı cihazlarınıza dağıtmak için [Güvenile
 
 ## <a name="create-trusted-certificate-profiles"></a>Güvenilen sertifika profilleri oluşturma
 
-Bir SCEP, PKCS veya PKCS içeri aktarılan sertifika profili oluşturabilmeniz için önce bir güvenilen sertifika profili oluşturun. Güvenilen bir sertifika profili dağıtmak, her bir cihazın CA 'nızın yasallığını tanımasını sağlar. SCEP sertifika profilleri doğrudan bir güvenilen sertifika profiline başvurur. PKCS sertifika profilleri, güvenilen sertifika profiline doğrudan başvurmazlar, ancak CA 'nizi barındıran sunucuya doğrudan başvurur. PKCS içeri aktarılan sertifika profilleri güvenilen sertifika profiline doğrudan başvurmazlar, ancak bunu cihazda kullanabilir. Güvenilen bir sertifika profilinin cihazlara dağıtımı, bu güvenin kurulabilmesini sağlar. Bir cihaz kök CA 'ya güvenmezse, SCEP veya PKCS sertifika profili ilkesi başarısız olur.
+Bir SCEP, PKCS veya PKCS içeri aktarılan sertifika profili oluşturmadan önce güvenilen bir sertifika profili oluşturun ve dağıtın. Güvenilen bir sertifika profilini diğer sertifika profili türlerini alan gruplara dağıtmak, her cihazın CA 'nızın yasallığını tanımasını sağlar. Buna VPN, Wi-Fi ve e-posta gibi profiller dahildir.
+
+SCEP sertifika profilleri doğrudan bir güvenilen sertifika profiline başvurur. PKCS sertifika profilleri, güvenilen sertifika profiline doğrudan başvurmazlar, ancak CA 'nizi barındıran sunucuya doğrudan başvurur. PKCS içeri aktarılan sertifika profilleri güvenilen sertifika profiline doğrudan başvurmazlar, ancak bunu cihazda kullanabilir. Güvenilen bir sertifika profilinin cihazlara dağıtımı, bu güvenin kurulabilmesini sağlar. Bir cihaz kök CA 'ya güvenmezse, SCEP veya PKCS sertifika profili ilkesi başarısız olur.
 
 Desteklemek istediğiniz her cihaz platformu için, SCEP, PKCS ve PKCS içeri aktarılan sertifika profillerinde yaptığınız gibi ayrı bir güvenilen sertifika profili oluşturun.
 
@@ -107,7 +109,7 @@ Desteklemek istediğiniz her cihaz platformu için, SCEP, PKCS ve PKCS içeri ak
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Profil oluşturma** > **cihaz** > **yapılandırma profilleri** ' ne gidin ve bu seçeneği belirleyin.
+2. Seçin ve **cihazlar** > **yapılandırma profilleri** > **Profil oluştur**' a gidin.
 
    ![Intune 'a gidin ve güvenilen bir sertifika için yeni bir profil oluşturun](./media/certificates-configure/certificates-configure-profile-new.png)
 
@@ -119,29 +121,29 @@ Desteklemek istediğiniz her cihaz platformu için, SCEP, PKCS ve PKCS içeri ak
 
 5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
    - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı *şirketin tamamına yönelik güvenilen sertifika profilidir*.
-   - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+   - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
 
-6. **İleri**'yi seçin.
+6. **İleri**’yi seçin.
 
 7. **Yapılandırma ayarları**' nda, önceden verdiğiniz GÜVENILEN kök CA sertifikası için. cer dosyasını belirtin. 
 
    Yalnızca Windows 8.1 ve Windows 10 cihazları için, güvenilen sertifika için **Hedef Depo** olarak şunlardan birini seçin:
 
    - **Bilgisayar sertifika deposu - Kök**
-   - **Bilgisayar sertifika deposu - Ara**
+   - **Bilgisayar sertifika deposu-ara**
    - **Kullanıcı sertifika deposu - Ara**
 
-   ![Bir profil oluşturun ve güvenilen bir sertifikayı karşıya yükleyin](./media/certificates-configure/certificates-configure-profile-fill.png)
+   ![Bir profili oluşturun ve güvenilen bir sertifika yükleyin](./media/certificates-configure/certificates-configure-profile-fill.png)
 
-8. **İleri**'yi seçin.
+8. **İleri**’yi seçin.
 
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili `US-NC IT Team` veya `JohnGlenn_ITDepartment`gıbı belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
-   **İleri**'yi seçin.
+   **İleri**’yi seçin.
 
 10. **Atamalar**' da, profilinizi alacak Kullanıcı veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](../configuration/device-profile-assign.md).
 
-    **İleri**'yi seçin.
+    **İleri**’yi seçin.
 
 11. (*Yalnızca Windows 10 Için geçerlidir*) **Uygulanabilirlik kuralları**' nda, bu profilin atanmasını iyileştirmek için uygulanabilirlik kurallarını belirtin. Profili, bir cihazın işletim sistemi sürümüne veya sürümüne göre atamayı veya atamayı seçebilirsiniz.
 
@@ -161,4 +163,4 @@ Kullanmak istediğiniz her platform için SCEP, PKCS veya PKCS içeri aktarılm�
 
 - [Intune ile SCEP sertifikalarını destekleyecek altyapıyı yapılandırma](certificates-scep-configure.md)  
 - [Intune ile PKCS sertifikalarını yapılandırma ve yönetme](certficates-pfx-configure.md)  
-- [PKCS içeri aktarılan sertifika profili oluşturma](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
+- [PKCS içeri aktarılmış sertifika profili oluşturma](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 235f5517c9968ba63b04fefa03d9486e5bd6e52d
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: d1ff20db13a87faea41d262da5742a428ec4d28f
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086401"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587293"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Microsoft Intune’da cihazlarınız için Wi-Fi ayarları ekleme ve kullanma
 
@@ -52,15 +52,15 @@ Wi-Fi profilleri aşağıdaki cihaz platformlarını destekler:
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Profil oluşturma** > **yapılandırma profilleri** > **cihazları** seçin.
+2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:
 
-      - **Android Cihaz Yöneticisi**
+      - **Android cihaz yöneticisi**
       - **Android Kurumsal**
-      - **iOS/ıpados**
-      - **macOS**
+      - **iOS/iPadOS**
+      - **Mac OS**
       - **Windows 10 ve üzeri**
       - **Windows 8.1 ve üzeri**
 
@@ -68,35 +68,39 @@ Wi-Fi profilleri aşağıdaki cihaz platformlarını destekler:
 
       > [!TIP]
       >
-      > - Adanmış bir cihaz (bilgi noktası) olarak çalışan **Android kurumsal** cihazlarda **yalnızca cihaz sahibi** > **Wi-Fi**' y i seçin.
-      > - **Windows 8.1 ve sonrasında** **Wi-Fi içeri aktar**’ı seçebilirsiniz. Bu seçenek, Wi-Fi ayarlarını daha önce başka cihazdan dışarı aktarmış olduğunuz bir XML dosyası olarak içeri aktarmanıza olanak tanır.
+      > - Adanmış bir cihaz (bilgi noktası) olarak çalışan **Android kurumsal**  > cihazlarda **yalnızca cihaz sahibi****Wi-Fi**' ı seçin.
+      > - **Windows 8.1 ve sonrasında****Wi-Fi içeri aktar**’ı seçebilirsiniz. Bu seçenek, Wi-Fi ayarlarını daha önce başka cihazdan dışarı aktarmış olduğunuz bir XML dosyası olarak içeri aktarmanıza olanak tanır.
 
 4. **Oluştur**’u seçin.
 5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
     - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı **tüm şirket Için WiFi profilidir**.
-    - **Açıklama**: Profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+    - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
 
-6. **İleri**'yi seçin.
+6. **İleri**’yi seçin.
 7. **Yapılandırma ayarları**' nda, seçtiğiniz platforma bağlı olarak, yapılandırabileceğiniz ayarlar farklıdır. Ayrıntılı ayarlar için platformunuzu seçin:
 
-    - [Android Cihaz Yöneticisi](wi-fi-settings-android.md)
+    - [Android cihaz yöneticisi](wi-fi-settings-android.md)
     - Adanmış cihazlar dahil [Android Enterprise](wi-fi-settings-android-enterprise.md)
-    - [iOS/ıpados](wi-fi-settings-ios.md)
-    - [macOS](wi-fi-settings-macos.md)
+    - [iOS/iPadOS](wi-fi-settings-ios.md)
+    - [Mac OS](wi-fi-settings-macos.md)
     - [Windows 10 ve üzeri](wi-fi-settings-windows.md)
     - [Windows 8.1 ve sonrası](wi-fi-settings-import-windows-8-1.md), Windows Holographic for Business dahil
 
-8. **İleri**'yi seçin.
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili `US-NC IT Team` veya `JohnGlenn_ITDepartment`gıbı belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+8. **İleri**’yi seçin.
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
-    **İleri**'yi seçin.
+    **İleri**’yi seçin.
 
 10. **Atamalar**' da, profilinizi alacak Kullanıcı veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
 
-    **İleri**'yi seçin.
+    **İleri**’yi seçin.
 
 11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
+
+> [!TIP]
+> Wi-Fi profiliniz için sertifika tabanlı kimlik doğrulaması kullanıyorsanız, her bir cihazın sertifika yetkilinizin yasallığını algılayabilmesi için Wi-Fi profilini, sertifika profilini ve güvenilen kök profilini aynı gruplara dağıtın.  Daha fazla bilgi için bkz. [Microsoft Intune sertifikaları yapılandırma](../protect/certificates-configure.md).
+
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

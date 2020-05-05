@@ -12,16 +12,16 @@ ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: shpate
+ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53187f7795eee07a62a83c1fb17a289451b32ee2
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: b9208c07b35aa7830cfe702604a6dabbcb41ab9f
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551664"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693428"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Microsoft Intune 'de güvenlik taban çizgisini ve profillerini izleme
 
@@ -35,7 +35,7 @@ Bu makalede, izleme seçeneklerinde her ikisi de anlatılmaktadır.
 
 Bir taban çizgisini izlerken, Microsoft 'un önerilerine bağlı olarak cihazlarınızın güvenlik durumu hakkında öngörüler elde edersiniz. Bu öngörüleri Intune konsolundaki güvenlik temelinin genel bakış bölmesinden görüntüleyebilirsiniz.  İlk olarak bir taban çizgisi atadıktan sonra verilerin görünmesi 24 saate kadar sürer. Sonraki değişikliklerin görünmesi altı saate kadar sürer.
 
-Taban çizgisi ve cihazlara ilişkin izleme verilerini görüntülemek için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın. Sonra, **uç nokta güvenliği** > **güvenlik temelleri**' ni seçin, bir taban çizgisi seçin ve **genel bakış** bölmesini görüntüleyin.
+Taban çizgisi ve cihazlara ilişkin izleme verilerini görüntülemek için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın. Sonra, **uç nokta güvenlik** > **güvenliği temelleri**' ni seçin, bir taban çizgisi seçin ve **genel bakış** bölmesini görüntüleyin.
 
 **Genel bakış** bölmesi, durumu izlemek için iki yöntem sunar:
 
@@ -98,7 +98,7 @@ Profili izlemek, cihazlarınızın dağıtım durumu hakkında fikir verir, anca
 
    ![Kaç cihaza ve kullanıcıya güvenlik temelleri profili atandığını öğrenin](./media/security-baselines-monitor/existing-profile-overview.png)
 
-3. **Yönet** > **özellikleri**altında, taban çizgisinde tüm ayarların bir listesi gösterilir. Ayrıca, bu ayarlardan herhangi birini değiştirebilirsiniz:
+3. Özellikleri **Yönet** > **Properties**altında, taban çizgisinde tüm ayarların bir listesi gösterilir. Ayrıca, bu ayarlardan herhangi birini değiştirebilirsiniz:
 
    ![Güvenlik temelleri profilindeki ayarları görme ve güncelleştirme](./media/security-baselines-monitor/manage-settings.png)
 
@@ -112,7 +112,7 @@ Tek bir cihaza uygulanan güvenlik yapılandırmalarının ayrıntılarını gö
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Tüm cihazlar** > **cihazlar** ' a gidin ve görüntülemek istediğiniz cihazı seçin.
+2. **Cihazlar** > **tüm cihazlar** ' a gidin ve görüntülemek istediğiniz cihazı seçin.
 
 3. *İzleyici* kategorisinde, bu cihaza uygulanan güvenlik yapılandırmalarının listesini görüntülemek Için **uç nokta güvenlik yapılandırması** ' nı seçin.
 
@@ -124,7 +124,7 @@ Bir güvenlik temeli dağıttıysanız, ancak dağıtım durumu bir hata göster
 
 1. Intune 'da **güvenlik temelleri** ' ni seçin > oluşturulan temel > **profillerini**seçin.
 
-2. **Ayar başına** > **izleme** > bir profil seçin.
+2.  > **Ayar başına ayarla durumu**altında **bir**profil > seçin.
 
 3. Tabloda tüm ayarlar ve her ayarın durumu gösterilmektedir. Hataya neden olan ayarı görmek için **hata** sütununu veya **Çakışma** sütununu seçin.
 
@@ -134,9 +134,9 @@ Artık sorunlu ayarı öğrenmiş oldunuz. Bir sonraki adım, bu ayarın neden b
 
 Windows 10 cihazlarında, yerleşik bir MDM tanılama bilgileri raporu vardır. Bu rapor varsayılan değerleri, geçerli değerleri, ilkeyi listeler, cihaza veya kullanıcıya dağıtılıp dağıtılmadığını gösterir ve daha fazlasını içerir. Ayarın bir çakışmaya veya hataya neden neden olduğunu belirlemenize yardımcı olması için bu raporu kullanın.
 
-1. Cihazda, **ayarlar** > **hesaplar** ' a gidin. **iş veya okul erişimi** > .
+1. Cihazda **Ayarlar** > **hesaplar** > **iş veya okul erişimi**' ne gidin.
 
-2. Hesap > **bilgi** > **gelişmiş tanılama raporu** > **rapor oluştur**' u seçin.
+2. > **bilgi** > **Gelişmiş tanılama raporu** > **rapor oluştur**hesabını seçin.
 
 3. **Dışarı aktar**' ı seçin ve oluşturulan dosyayı açın.
 
@@ -149,7 +149,7 @@ Windows 10 cihazlarında, yerleşik bir MDM tanılama bilgileri raporu vardır. 
 > [!TIP]
 >
 > - Bazı ayarlar GUID 'YI de listeler. Herhangi bir küme değeri için yerel kayıt defterinde (regedit) Bu GUID için arama yapabilirsiniz.
-> - Olay Görüntüleyicisi Günlükler, sorunlu ayara (**olay görüntüleyicisi** > **uygulama ve hizmet günlükleri** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **admin**) bazı hata bilgilerini de içerebilir.
+> - Olay Görüntüleyicisi Günlükler, sorunlu ayara (**Olay Görüntüleyicisi** > **Uygulamaları ve hizmet günlükleri** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **admin**) ilişkin bazı hata bilgilerini de içerebilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -157,4 +157,4 @@ Windows 10 cihazlarında, yerleşik bir MDM tanılama bilgileri raporu vardır. 
 - [Çakışmaları önleyin](security-baselines.md#avoid-conflicts)
 - [Cihaz profillerini izleme](../configuration/device-profile-monitor.md) 
 - [Yaygın sorunlar ve çözümleri](../configuration/device-profile-troubleshoot.md).
-- [Intune 'da ilke ve profillerin sorunlarını giderme](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Intune'da ilke ve profil sorunları giderme](../configuration/troubleshoot-policies-in-microsoft-intune.md)
