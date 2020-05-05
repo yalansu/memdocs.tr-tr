@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/16/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6a3152966dee507cde690d9be8f5a7e210c7945
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 7e584019063c6af7f04f5666ba2c38d8199681c5
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407745"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771423"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune Şirket Portalı uygulamaları, Şirket Portalı Web sitesini ve Intune uygulamasını özelleştirme
 
@@ -31,7 +31,7 @@ Android üzerinde Şirket Portalı uygulamalar, Şirket Portalı Web sitesi ve I
 
 ## <a name="customizing-the-user-experience"></a>Kullanıcı deneyimini özelleştirme
 
-Son Kullanıcı deneyimini özelleştirerek, son kullanıcılarınız için tanıdık ve yararlı bir deneyim sağlamaya yardımcı olursunuz. Bunu yapmak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' ne gidin, **Kiracı Yönetimi** > **Özelleştirme**' yi seçin ve gerekli ayarları yapılandırın. Bu ayarlar, Android 'de Şirket Portalı uygulamalar, Şirket Portalı Web sitesi ve Intune uygulaması için de geçerlidir.
+Son Kullanıcı deneyimini özelleştirerek, son kullanıcılarınız için tanıdık ve yararlı bir deneyim sağlamaya yardımcı olursunuz. Bunu yapmak için, [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' ne gidin ve **Kiracı Yönetimi** > **özelleştirmesi**' ni seçin; burada varsayılan ilkeyi düzenleyebilir veya en fazla 10 grup hedefli ilke oluşturabilirsiniz. Bu ayarlar, Android 'de Şirket Portalı uygulamalar, Şirket Portalı Web sitesi ve Intune uygulaması için de geçerlidir.
 
 ## <a name="branding"></a>Markalama
 
@@ -81,7 +81,7 @@ Aşağıda, Android için Intune uygulamasındaki marka görüntüsünün bir ö
 | Telefon numarası | 20 | Bu sayı, kullanıcıların destek için çağrı yapmasına olanak sağlar. |
 | E-posta adresi | 40 | Bu e-posta adresi, kullanıcıların destek için e-posta gönderebilecekleri yerdir. `alias@domainname.com` biçiminde geçerli bir e-posta adresi girmeniz gerekir. |
 | Web sitesinin adı | 40 | Bu, destek web sitesinin URL 'SI için bazı konumlarda görüntülenen kolay addır. Bir destek web sitesi URL 'SI belirtirseniz ve kolay bir ad yoksa, URL 'nin kendisi Son Kullanıcı deneyimlerinde görüntülenir.  |
-| Web sitesi URL 'SI | 150 | Kullanıcıların kullanması gereken destek web sitesi. URL `https://www.contoso.com`biçiminde olmalıdır.  |
+| Web sitesi URL'si | 150 | Kullanıcıların kullanması gereken destek web sitesi. URL biçiminde `https://www.contoso.com`olmalıdır.  |
 | Ek bilgiler | 120 | Kullanıcılara daha fazla destekle ilgili tüm iletileri ekleyin. |
 
 ## <a name="configuration"></a>Yapılandırma
@@ -90,9 +90,10 @@ Aşağıdaki tabloda ek yapılandırma ayrıntıları verilmiştir:
 
 | Alan adı | Maksimum uzunluk | Daha fazla bilgi |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Gizlilik bildirimi URL 'SI | 79 | Kullanıcılar gizlilik bağlantılarına tıkladığı zaman görüntülenecek şekilde kuruluşunuzun gizlilik bildirimini ayarlayın. `https://www.contoso.com` biçiminde geçerli bir URL girmeniz gerekir. |
+| Gizlilik bildirimi URL'si | 79 | Kullanıcılar gizlilik bağlantılarına tıkladığı zaman görüntülenecek şekilde kuruluşunuzun gizlilik bildirimini ayarlayın. `https://www.contoso.com` biçiminde geçerli bir URL girmeniz gerekir. |
 | İOS/ıpados için Şirket Portalı gizlilik iletisi | 520 | Kuruluşunuzun yönetilen iOS/ıpados cihazlarında görebileceği veya göremediği öğeleri listelemek için varsayılanı tutun veya özel bir ileti ayarlayın. Marku kullanarak madde işaretleri, kalın, italik ve bağlantılar ekleyebilirsiniz. |
-| Cihaz kaydı | YOK | Kullanıcıların mobil cihaz yönetimine kaydolmasını ve nasıl sorulup sorulmayacağını belirtin. Ayrıntılar aşağıda verilmiştir. |
+| Cihaz kaydı | Yok | Kullanıcıların mobil cihaz yönetimine kaydolmasını ve nasıl sorulup sorulmayacağını belirtin. Ayrıntılar aşağıda verilmiştir. |
+| Cihaz sahipliği bildirimi | Yok | Hem Android hem de iOS Şirket Portalı kullanıcılarınıza cihaz sahiplik türü kişisel ' e değiştirildiğinde, anında iletme bildirimi gönderin. Varsayılan olarak, bu anında iletme bildirimi off olarak ayarlanır. Cihaz sahipliği kurumsal sahiplik olarak ayarlandığında, Intune cihaza daha fazla erişim sahibi olur. Bu, tam uygulama envanteri, Filekasası anahtar döndürme, telefon numarası alma ve birkaç uzak eylem seçme işlemlerini içerir. Daha fazla bilgi için bkz. [cihaz sahipliğini değiştirme](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
 
 ### <a name="device-enrollment-setting-options"></a>Cihaz kayıt ayarı seçenekleri
 
@@ -103,9 +104,9 @@ Aşağıdaki tabloda ek yapılandırma ayrıntıları verilmiştir:
 
 |    Cihaz kayıt seçenekleri    |    Açıklama    |    Denetim listesi istemleri    |    Bildirim    |    Cihaz ayrıntıları durumu    |    Uygulama ayrıntıları durumu (kayıt gerektiren bir uygulama)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
-|    Kullanılabilir, istemlerle    |    Tüm olası konumlara kaydolmak için istemlerle ilgili varsayılan deneyim.    |    Evet    |    Evet    |    Evet    |    Evet    |
-|    Kullanılabilir, istem yok    |    Kullanıcı, geçerli cihazlarından veya kayıt gerektiren uygulamalardan cihaz ayrıntıları ' nda durum aracılığıyla kaydedebilir.    |    Hayır    |    Hayır    |    Evet    |    Evet    |
-|    Kullanılamıyor    |    Kullanıcıların kaydolmasına yol yoktur.    |    Hayır    |    Hayır    |    Hayır    |    Hayır<sup>(1)</sup>    |
+|    Kullanılabilir, istemlerle    |    Tüm olası konumlara kaydolmak için istemlerle ilgili varsayılan deneyim.    |    Yes    |    Yes    |    Yes    |    Yes    |
+|    Kullanılabilir, istem yok    |    Kullanıcı, geçerli cihazlarından veya kayıt gerektiren uygulamalardan cihaz ayrıntıları ' nda durum aracılığıyla kaydedebilir.    |    Hayır    |    Hayır    |    Yes    |    Yes    |
+|    Kullanılamaz    |    Kullanıcıların kaydolmasına yol yoktur.    |    Hayır    |    Hayır    |    Hayır    |    Hayır<sup>(1)</sup>    |
 
 <sup>(1)</sup> **bilinen sorun:** uygulamaları yüklemek için kayıt gerektirecek şekilde ayarlarsanız ve ayrıca cihaz kaydını "kullanılamaz" olarak ayarlarsanız, Android 'deki Şirket portalı uygulaması, kullanıcıların kaydolmasına kılavuzluk eder. Bu, kısa süre içinde kaldırılacak.
 
@@ -136,20 +137,20 @@ Windows Şirket Portalı uygulamasında aşağıdaki kısayollar kullanılabilir
 
 | Alan | Açıklama | Klavye kısayolu |
 |:------------------:|:--------------:|:-----------------:|
-| Gezinti menüsü | Gezinme | Alt + a |
-|  | Giriş | Alt + H |
-|  | Tüm uygulamalar | Alt + A |
+| Gezinti menüsü | Gezinti | Alt+M |
+|  | Giriş | Alt+H |
+|  | Tüm uygulamalar | Alt+A |
 |  | Yüklenen uygulamalar | Alt+I |
-|  | Geri bildirim gönder | Alt + F |
-|  | Profilim | Alt + U |
-|  | Ayarlar | Alt + T |
-| Giriş - Cihaz kutucuğu | Yeniden adlandır | F2 |
+|  | Geri bildirim gönder | Alt+F |
+|  | Profilim | Alt+U |
+|  | Ayarlar | Alt+T |
+| Giriş - Cihaz kutucuğu | Rename | F2 |
 |  | Kaldır | Ctrl+D veya Delete |
-|  | Erişimi denetle | Ctrl+M veya F9 |
-| Cihaz ayrıntıları | Yeniden adlandır | F2 |
+|  | Erişimi denetleme | Ctrl+M veya F9 |
+| Cihaz ayrıntıları | Rename | F2 |
 |  | Kaldır | Ctrl+D veya Delete |
-|  | Erişimi denetle | Ctrl+M veya F9 |
-| Uygulama ayrıntıları | Yükle | Ctrl+I |
+|  | Erişimi denetleme | Ctrl+M veya F9 |
+| Uygulama ayrıntıları | Yükleme | Ctrl+I |
 | Cihazlar | Kullanılabilir | Ctrl+D |
 
 Son kullanıcılar, Windows Şirket Portalı uygulamasında kullanılabilen kısayolları da görebilir.
@@ -174,13 +175,13 @@ Bazı platformlar ve Konfigürasyonlar self servis cihaz eylemlerine izin vermez
 
 |  | Windows 10<sup>(3)</sup> | iOS/ıpados<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Devre Dışı Bırak | Kullanılabilir<sup>(1)</sup> | Kullanılabilir | Kullanılabilir | Kullanılabilir<sup>(7)</sup> |
-| Silme | Kullanılabilir | Kullanılabilir<sup>(5)</sup> | Yok | Kullanılabilir<sup>(7)</sup> |
+| Devre Dışı Bırakma | Kullanılabilir<sup>(1)</sup> | Kullanılabilir | Kullanılabilir | Kullanılabilir<sup>(7)</sup> |
+| Silme | Kullanılabilir | Kullanılabilir<sup>(5)</sup> | NA | Kullanılabilir<sup>(7)</sup> |
 | Yeniden Adlandır<sup>(4)</sup> | Kullanılabilir | Kullanılabilir | Kullanılabilir | Kullanılabilir |
-| Eşitle | Kullanılabilir | Kullanılabilir | Kullanılabilir | Kullanılabilir |
+| Sync | Kullanılabilir | Kullanılabilir | Kullanılabilir | Kullanılabilir |
 | Uzaktan Kilitleme | Yalnızca Windows Phone | Kullanılabilir | Kullanılabilir | Kullanılabilir |
-| Geçiş Kodunu Sıfırla | Yalnızca Windows Phone | Kullanılabilir<sup>(8)</sup> | Yok | Kullanılabilir<sup>(6)</sup> |
-| Anahtar kurtarma | Yok | Yok | Kullanılabilir<sup>(2)</sup> | Yok |
+| Geçiş kodunu Sıfırla | Yalnızca Windows Phone | Kullanılabilir<sup>(8)</sup> | NA | Kullanılabilir<sup>(6)</sup> |
+| Anahtar Kurtarma | NA | NA | Kullanılabilir<sup>(2)</sup> | NA |
 
 <sup>(1)</sup> **devre dışı BıRAKMA** , Azure AD 'ye katılmış Windows cihazlarında her zaman engellenir.<br>
 <sup>(2)</sup> MacOS Için **anahtar kurtarma** yalnızca Web portalı aracılığıyla kullanılabilir.<br>
@@ -188,8 +189,8 @@ Bazı platformlar ve Konfigürasyonlar self servis cihaz eylemlerine izin vermez
 <sup>(4)</sup> **yeniden adlandırma** yalnızca cihaz adını cihazda değil şirket portalı uygulamasında veya Web portalında değiştirir.<br>
 <sup>(5)</sup> Kullanıcı kayıtlı IOS/ıpados cihazlarında **silme** işlemi kullanılamıyor.<br>
 <sup>(6)</sup> bazı Android ve Android kurumsal yapılandırmalarında, **geçiş kodu sıfırlama** işlemi desteklenmez. Daha fazla bilgi için bkz. [Intune 'da cihaz geçiş kodunu sıfırlama veya kaldırma](../remote-actions/device-passcode-reset.md).<br>
-<sup>(7)</sup> **devre dışı bırakma** ve **Temizleme** , ANDROID kurumsal cihaz sahibi senaryolarında (Cope, Cobo, cosu) kullanılamaz.<br> 
-<sup>(8)</sup> Kullanıcı kayıtlı IOS/ıpados cihazlarında **geçiş kodu sıfırlama** işlemi desteklenmez.
+<sup>(7)</sup> **devre dışı bırakma** ve **Temizleme** , ANDROID kurumsal cihaz sahibi senaryolarında (Cope, Cobo, cosu) kullanılamaz.<br>
+<sup>(8)</sup> Kullanıcı kayıtlı IOS/ıpados cihazlarında **geçiş kodunu sıfırlama** işlemi desteklenmez.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

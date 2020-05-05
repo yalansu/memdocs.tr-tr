@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0efaaf94f969e0b1b27582027a68b9e59c944b0c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 8ba3563a243b13b874608ad7a3ec918130e5bb80
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326842"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022713"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Kayıt durumu sayfası ayarlama
  
@@ -41,21 +41,21 @@ Kayıt durumu sayfası, kullanıcıların cihaz kurulumu sırasında cihazının
 Ayrıca, her bir profilin öncelik sırasını aynı kullanıcıya yönelik çakışan profil atamalarını hesaba atayabilirsiniz.
 
 > [!NOTE]
-> Kayıt durumu sayfası yalnızca atanan bir gruba ait olan bir kullanıcıyı hedefleyebilir ve ilkeyi, cihazı kullanan tüm kullanıcılar için kayıt sırasında ayarlar.  
+> Kayıt durumu sayfası yalnızca atanan bir gruba ait olan bir kullanıcıyı hedefleyebilir ve ilkeyi, cihazı kullanan tüm kullanıcılar için kayıt sırasında ayarlar.  Kayıt durumu sayfası profillerinin cihaz hedeflemesi şu anda desteklenmiyor.
 
 ## <a name="available-settings"></a>Kullanılabilir ayarlar
 
  Aşağıdaki ayarlar, kayıt durumu sayfasının davranışını özelleştirmek için yapılandırılabilir:
 
 <table>
-<th align="left">Ayar<th align="left">Evet<th align="left">Hayır
+<th align="left">Ayar<th align="left">Yes<th align="left">Hayır
 <tr><td>Uygulama ve profil yükleme ilerlemesini göster<td>Kayıt durumu sayfası görüntülenir.<td>Kayıt durumu sayfası görüntülenmiyor.
 <tr><td>Tüm uygulamalar ve profiller yüklenene kadar cihaz kullanımını engelle<td>Bu tablodaki ayarlar, kullanıcının olası yükleme sorunlarını ele abilmesi için kayıt durumu sayfasının davranışını özelleştirmek üzere kullanılabilir hale getirilir.
 <td>Kayıt durumu sayfası, yükleme başarısızlıklarını ele almak için ek seçenek olmadan görüntülenir.
 <tr><td>Yükleme hatası oluşursa kullanıcıların cihazı sıfırlamasına izin ver<td>Yükleme hatası varsa, <b>cihazı Sıfırla</b> düğmesi görüntülenir.<td>Yükleme hatası varsa, <b>cihazı Sıfırla</b> düğmesi gösterilmez.
 <tr><td>Yükleme hatası oluşursa kullanıcıların cihazı kullanmasına izin ver<td>Yükleme hatası varsa <b>yine de devam et</b> düğmesi görüntülenir.<td>Yükleme hatası varsa <b>devam et</b> düğmesi gösterilmez.
 <tr><td>Yükleme belirtilen dakika sayısından daha uzun sürerse zaman aşımı hatası göster<td colspan="2">Yüklemenin tamamlanmasını beklemek için beklenecek dakika sayısını belirtin. Varsayılan 60 dakikalık bir değer girilir.
-<tr><td>Bir hata oluştuğunda özel iletiyi göster<td>Bir yükleme hatası oluşursa görüntülenecek özel bir ileti belirtebileceğiniz bir metin kutusu sağlanır.<td>Varsayılan ileti görüntülenir: <br><b>yükleme, kuruluşunuz tarafından ayarlanan zaman sınırını aştı. Yardım almak için yeniden deneyin veya BT destek sorumlunuza başvurun.<b>
+<tr><td>Bir hata oluştuğunda özel iletiyi göster<td>Bir yükleme hatası oluşursa görüntülenecek özel bir ileti belirtebileceğiniz bir metin kutusu sağlanır.<td>Varsayılan ileti görüntülenir: <br><b>Yükleme, kuruluşunuz tarafından ayarlanan zaman sınırını aştı. Yardım almak için yeniden deneyin veya BT destek sorumlunuza başvurun.<b>
 <tr><td>Kullanıcıların yükleme hatalarıyla ilgili günlükleri toplamasına izin ver<td>Yükleme hatası varsa, bir biriktirme <b>günlüğü</b> düğmesi görüntülenir. <br>Kullanıcı bu düğmeye tıkladığında, <b>Mdmdiagreport. cab</b> günlük dosyasını kaydetmek için bir konum seçmesi istenir<td>Yükleme hatası varsa <b>günlükleri topla</b> düğmesi gösterilmez.
 <tr><td>Bu gerekli uygulamalar kullanıcıya/cihaza atanırsa yüklenene kadar cihaz kullanımını engelle<td colspan="2"><b>Tümü</b> veya <b>Seçili</b>öğesini seçin. <br><br><b>Seçili</b> seçilirse, cihazı etkinleştirmeden önce hangi uygulamaların yüklü olması gerektiğini seçmenize olanak sağlayan bir <b>uygulamalar seçin</b> düğmesi görüntülenir.
 </table>
@@ -64,25 +64,25 @@ Ayrıca, her bir profilin öncelik sırasını aynı kullanıcıya yönelik çak
 
 Kayıt durumu sayfasını açmak için aşağıdaki adımları izleyin.
  
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nde, **Windows** > **Windows kaydı** > **kayıt durumu sayfası** > **cihazlar** ' ı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar** > **Windows** > **Windows kayıt** > **kayıt durumu sayfası**' nı seçin.
 2. **Kayıt Durumu Sayfası** dikey penceresinde, **Varsayılan** > **Ayarlar**’ı seçin.
 3. **Uygulama ve profil yükleme ilerleyişini göster** için **Evet**’i seçin.
 4. Açmak istediğiniz diğer ayarları seçin ve **Kaydet**’i seçin.
 
 ## <a name="create-enrollment-status-page-profile-and-assign-to-a-group"></a>Kayıt durumu sayfası profili oluşturma ve gruba atama
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nde, **Windows** > **Windows kayıt** > **kayıt durumu sayfası** > **Profil oluştur** > **cihazlar** ' ı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **Windows** > **Windows kayıt** > **kayıt durumu sayfası** > **Profil oluştur**' u seçin.
 2. Bir **Ad** ve **Açıklama** sağlayın.
 3. **Oluştur**’u seçin.
 4. **Kayıt Durumu Sayfası** listesinde yeni profili seçin.
-5. **Atamalar** > **Grup seçin** > bu profili benimsemesini istediğiniz grupları seçin > **Seç** > **Kaydet**’i seçin.
+5. **Atamaları** > **seçin grupları seçin** > bu profili benimsemek istediğiniz grupları seçin >**Kaydet**' **i seçin** > .
 6. **Ayarlar** > bu profile uygulamak istediğiniz ayarları seçin > **Kaydet**’i seçin.
 
 ## <a name="set-the-enrollment-status-page-priority"></a>Kayıt durumu sayfası önceliğini ayarlama
 
 Bir kullanıcı birçok grupta olabilir ve birçok kayıt durumu sayfası profili bulunabilir. Bu tür çakışmaları işlemek için her bir profilin önceliklerini ayarlayabilirsiniz. Kaydetme sırasında, birisinin birden fazla kayıt durumu sayfası profili varsa, kaydolan cihaza yalnızca en yüksek öncelikli profil uygulanır.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nde, **Windows** > **Windows kaydı** > **kayıt durumu sayfası** > **cihazlar** ' ı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar** > **Windows** > **Windows kayıt** > **kayıt durumu sayfası**' nı seçin.
 2. Listede profilin üzerine gelin.
 3. Üç dikey noktayı kullanarak, profili listede dilediğiniz konuma sürükleyin.
 
@@ -90,12 +90,16 @@ Bir kullanıcı birçok grupta olabilir ve birçok kayıt durumu sayfası profil
 
 Kullanıcının masaüstüne erişebilmesi için yüklenmesi gereken uygulamaları belirtebilirsiniz.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nde, **Windows** > **Windows kaydı** > **kayıt durumu sayfası** > **cihazlar** ' ı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar** > **Windows** > **Windows kayıt** > **kayıt durumu sayfası**' nı seçin.
 2. Bir profil seçip **Ayarlar**'a tıklayın.
 3. **Uygulama ve profil yükleme ilerleyişini göster** için **Evet**'i seçin.
 4. **Tüm uygulamalar ve profiller yüklenene kadar cihaz kullanımını engelle** için **Evet**'i seçin.
-5. **Bu gerekli uygulamalar kullanıcıya/cihaza atanırsa, bu uygulamaların yüklenmesi Için seçili cihaz kullanımını engelle**' yi seçin.
+5. **Bu gerekli uygulamalar kullanıcıya/cihaza atanırsa, bu uygulamaların yüklenmesi Için seçili cihaz kullanımını engelle**' yi seçin. **Selected**
 6. **Uygulama seç**'e tıklayın, uygulamaları seçin ve **Seç** > **Kaydet** yolunu izleyin.
+
+Bu listede yer alan uygulamalar, engelleme olarak kabul edilmesi gereken listeyi filtrelemek için Intune tarafından kullanılır.  Hangi uygulamaların yükleneceğini belirtmez.  Örneğin, bu listeyi "uygulama 1", "uygulama 2" ve "uygulama 3" ve "uygulama 3" ve "App 4", cihaza veya kullanıcıya hedeflenmiş olarak yapılandırırsanız, kayıt durumu sayfası yalnızca "uygulama 3" i izler.  "App 4" yine de yüklenecek, ancak kayıt durumu sayfası işlemin tamamlanmasını bekleyemez.
+
+En fazla 25 uygulama belirtilebilir.
 
 ## <a name="enrollment-status-page-tracking-information"></a>Kayıt durumu sayfası izleme bilgileri
 
@@ -133,7 +137,7 @@ Hesap kurulumu için, kayıt durumu sayfası şu anda oturum açmış olan kulla
   - Tüm Cihazlar, Tüm Kullanıcılar veya cihazı kaydeden kullanıcının üyesi olduğu bir kullanıcı grubuna atanan kullanıcı başına LoB MSI uygulamaları.
   - Tüm Kullanıcılar veya cihazı kaydeden kullanıcının üyesi olduğu bir kullanıcı grubuna atanan makine başına LoB MSI uygulamaları.
   - Aşağıdaki nesnelerden birine atanan LoB Mağazası uygulamaları, çevrimiçi mağaza uygulamaları ve çevrimdışı mağaza uygulamaları:
-    - Tüm Cihazlar
+    - All Devices
     - Tüm Kullanıcılar
     - Cihazı kaydeden Kullanıcı grubu, yükleme bağlamı Kullanıcı olarak ayarlanan bir üyedir.
   - Win32 uygulamaları (yalnızca Windows 10 sürüm 1903 ve üzeri) 
@@ -145,10 +149,11 @@ Hesap kurulumu için, kayıt durumu sayfası şu anda oturum açmış olan kulla
 ### <a name="troubleshooting"></a>Sorun giderme
 Sorun giderme için sık sorulan sorular.
 
-- Uygulamalarım, kayıt durumu sayfasını kullanan Autopilot dağıtımı sırasında cihaz Kurulum aşaması sırasında neden yüklenmedi?
-  - Uygulamaların bir Autopilot cihaz kurulumu aşamasında yüklü olduğundan emin olmak için, 
-        1. Uygulama seçilen uygulamalar listesinde erişimi engelleyecek şekilde seçildi
-        2. Uygulamaları, Autopilot profilinizin atandığı Azure AD cihaz grubuna hedefliyoruz. 
+- Uygulamalarım neden yüklenmedi ve kayıt durumu sayfası kullanılarak izlenmiyor?
+  - Uygulamaların, kayıt durumu sayfası kullanılarak yüklenip izlendiğinden emin olmak için şunları yapın:
+      - Uygulamalar, "gerekli" atama kullanılarak cihazı (cihaz hedefli uygulamalar için) veya kullanıcıyı (kullanıcı hedefli uygulamalar için) içeren bir Azure AD grubuna atanır.  (Cihaz hedefli uygulamalar, ESP 'nin cihaz aşamasında izlenir ve kullanıcı hedefli uygulamalar, ESP Kullanıcı aşamasında izlenir.)
+      - **Tüm uygulamalar ve profiller yüklenene kadar cihaz kullanımını engelle ' i** veya **gerekli uygulamalar yüklenene kadar uygulamayı blok cihaza** Ekle ' ye dahil et ' i belirtin.
+      - Uygulamalar cihaz bağlamına yüklenir ve hiçbir Kullanıcı bağlamı uygulanabilirlik kuralına sahip değildir.
 
 - Autopilot olmayan dağıtımlar için kayıt durumu sayfası neden gösteriliyor. Örneğin, bir Kullanıcı Configuration Manager ortak yönetim tarafından kaydedilen bir cihazda ilk kez oturum açtığında?  
   - Kayıt durumu sayfası, aşağıdakiler dahil olmak üzere tüm kayıt yöntemleri için yükleme durumunu listeler.
@@ -190,7 +195,6 @@ Sorun giderme için sık sorulan sorular.
 ### <a name="known-issues"></a>Bilinen sorunlar
 Aşağıda bilinen sorunlar verilmiştir. 
 - ESP profilini devre dışı bırakmak cihazlardan ESP ilkesini kaldırmaz ve kullanıcılar cihazda ilk kez oturum açtıklarında yine de ESP almaya devam eder. ESP profili devre dışı bırakıldığında ilke kaldırılmaz. ESP 'yi devre dışı bırakmak için OMA-URI ' i dağıtmanız gerekir. OMA-URI kullanarak ESP 'yi devre dışı bırakma hakkında yönergeler için bkz. Yukarıdaki. 
-- Bekleyen bir yeniden başlatma işlemi her zaman zaman aşımına neden olur. Zaman aşımı, cihazın yeniden başlatılması gerektiğinden oluşur. Kayıt durumu sayfasında izlenen öğenin tamamlanmasına izin vermek için yeniden başlatma gerekir. Yeniden başlatma işlemi, kayıt durumu sayfasının çıkmasına ve önyükleme sonrasında cihaz, yeniden başlatmadan sonra hesap kurulumu sırasında girmeyecektir.  Uygulama yüklemesiyle yeniden başlatma gerektirmeyi düşünün. 
 - Cihaz kurulumu sırasında yeniden başlatma işlemi, kullanıcıyı hesap kurulum aşamasına geçmeden önce kimlik bilgilerini girmeye zorlar. Kullanıcı kimlik bilgileri, yeniden başlatma sırasında korunmaz. Kullanıcının kimlik bilgilerini girmesini sağlamak için kayıt durumu sayfası devam edebilir. 
 - Kayıt durumu sayfası, 1903 ' den küçük Windows 10 sürümlerinde iş ve okul hesabı kaydı ekleme sırasında her zaman zaman aşımına uğrar. Kayıt durumu sayfası, Azure AD kaydının tamamlanmasını bekler. Sorun Windows 10 sürüm 1903 ve daha yeni sürümlerde düzeltildi.  
 - ESP ile hibrit Azure AD Autopilot dağıtımı, ESP profilinde tanımlanan zaman aşımı süresinden daha uzun sürer. Karma Azure AD Autopilot dağıtımlarında, ESP, ESP profilinde ayarlanan değerden 40 dakika daha uzun sürer. Bu gecikme, şirket içi AD bağlayıcısının yeni cihaz kaydını Azure AD 'ye oluşturması için zaman kazandırır. 
@@ -199,7 +203,7 @@ Aşağıda bilinen sorunlar verilmiştir.
     - Cihaz kurulum aşamasından hesap kurulum aşamasına geçmeden önce kullanıcının kimlik bilgilerini tekrar girmesi gerekir
 - ESP uzun bir süre takılmış veya "tanımlama" aşamasını hiçbir zaman tamamlıyor. Intune, tanımlama aşamasında ESP ilkelerini hesaplar. Geçerli kullanıcıya bir Intune lisansı atanmış değilse bir cihaz, ESP ilkelerini hesaplama hiçbir şekilde tamamlanmayabilir.  
 - Microsoft Defender uygulama denetimi 'nin yapılandırılması, Autopilot sırasında yeniden başlatma istemi oluşmasına neden olur. Microsoft Defender uygulamasının (AppLocker CSP) yapılandırılması için yeniden başlatma gerekir. Bu ilke yapılandırıldığında, Autopilot sırasında cihazın yeniden başlatılmasına neden olabilir. Şu anda, yeniden başlatmayı bastırmayı veya ertelemeyi yapmanın bir yolu yoktur.
-- DeviceLock ilkesi (https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock), bir ESP profilinin bir parçası olarak etkinleştirildiğinde, iki nedenden dolayı OOBE veya Kullanıcı masaüstü oturum açma işlemi unexpectantly başarısız olabilir.
+- DeviceLock ilkesi (https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) bir ESP profilinin bir parçası olarak etkinleştirildiğinde, iki nedenden dolayı OOBE veya Kullanıcı Masaüstü otomatik oturum açma işlemi unexpectantly hatası verebilir.
   - Cihaz, ESP cihaz kurulum aşamasından çıkmadan önce yeniden başlatmadıysanız, kullanıcıdan Azure AD kimlik bilgilerini girmesi istenebilir. Bu istem, kullanıcının Windows ilk oturum açma animasyonunu gördüğü başarılı bir otomatik oturum açma yerine oluşur.
   - Kullanıcı Azure AD kimlik bilgilerini girdikten sonra, ancak ESP cihaz kurulum aşamasından çıkmadan önce yeniden oturum açma işlemi başarısız olur. Bu hata, ESP cihaz Kurulum aşaması hiç tamamlanmadığından oluşur. Geçici çözüm, cihazı sıfırlamadır.
 

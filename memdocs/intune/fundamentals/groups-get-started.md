@@ -16,12 +16,12 @@ ms.assetid: 323f384d-8a76-4adc-999b-e508d641bfa1
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae7613606cd6803c4d65007ce5792e47d60bfb38
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5e8fdd0de8b276017a51c2fd464eef4b1d8505bc
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331510"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075396"
 ---
 # <a name="microsoft-intune-classic-groups-in-the-azure-portal"></a>Azure portalında klasik Microsoft Intune grupları
 
@@ -47,8 +47,8 @@ Intune gruplarının daha önce kullanıyor olabileceğiniz bazı özellikleri A
 ## <a name="how-to-get-started"></a>Nereden başlayacaksınız?
 
 - Azure AD güvenlik grupları ve nasıl çalıştıkları hakkında bilgi edinmek için aşağıdaki konuları okuyun:
-  - [Azure Active Directory grupları ile kaynaklara erişimi yönetme](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/).
-  - [Azure Active Directory'de grupları yönetme](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/).
+  - [Azure Active Directory gruplarıyla kaynaklara erişimi yönetme](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/).
+  - [Azure Active Directory grupları yönetme](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/).
   - [Gelişmiş kurallar oluşturmak için öznitelikleri kullanma](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/).
 - Grup oluşturması gereken yöneticilerin **Intune Hizmet Yöneticisi** Azure AD rolüne eklenmesini sağlayın. Azure AD Hizmet Yöneticisi rolü, **Grubu Yönet** izinlerine sahip değildir.
 - Intune gruplarınız **Belirli üyeleri dışla** seçeneğini kullandıysa, bu grupları dışlamalar olmadan yeniden tasarlama ya da iş gereksinimlerini karşılamak için gelişmiş kurallar kullanma arasında karar verin.
@@ -65,7 +65,7 @@ Gruplar Azure portalından Azure portalında Intune’a geçirilirken aşağıda
 |Dinamik cihaz grubu|Dinamik Azure AD güvenlik grubu|
 |Dahil etme koşullu bir grup|Intune’da dahil etme koşulundan herhangi bir statik veya dinamik üye içeren Statik Azure AD güvenlik grubu|
 |Dışlama koşullu bir grup|Geçirilmez|
-|Yerleşik gruplar:<br>- **Tüm Kullanıcılar**<br>- **Gruplanmamış Kullanıcılar**<br>- **Tüm Cihazlar**<br>- **Gruplanmamış cihazlar**<br>- **Tüm Bilgisayarlar**<br>- **Tüm Mobil Cihazlar**<br>- **MDM tarafından yönetilen tüm cihazlar**<br>- **EAS tarafından yönetilen tüm cihazlar**|Azure AD güvenlik grupları|
+|Yerleşik gruplar:<br>- **Tüm kullanıcılar**<br>- **Gruplanmamış Kullanıcılar**<br>- **Tüm cihazlar**<br>- **Gruplandırılmamış cihazlar**<br>- **Tüm bilgisayarlar**<br>- **Tüm mobil cihazlar**<br>- **MDM tarafından yönetilen tüm cihazlar**<br>- **EAS tarafından yönetilen tüm cihazlar**|Azure AD güvenlik grupları|
 
 ## <a name="group-hierarchy"></a>Grup hiyerarşisi
 
@@ -82,7 +82,7 @@ Intune konsolunda tüm grupların bir üst grubu vardı. Gruplar yalnızca üst 
 |Kullanıcı grupları için yönetici özniteliği|Dinamik gruplarda *yönetici* özniteliği için Gelişmiş Kural|
 |Üst kullanıcı grubundan tüm kullanıcılar|O grubun üye olduğu statik grup|
 |Üst cihaz grubundaki tüm mobil cihazlar|O grubun üye olduğu statik grup|
-|Intune tarafından yönetilen tüm mobil cihazlar|Dinamik grup için değer olarak ‘MDM’ ile Yönetim Türü özniteliği|
+|Intune tarafından yönetilen tüm mobil cihazlar|Dinamik grup için değer olarak ' MDM ' olan Yönetim türü özniteliği|
 |Statik gruplar içinde iç içe geçmiş gruplar |Statik gruplar içinde iç içe geçmiş gruplar|
 |Dinamik gruplar içinde iç içe geçmiş gruplar|Bir iç içe geçme düzeyine sahip dinamik grup|
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 682791256bf0ce40db1dedd1fa6b947efc85b729
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: aa8a18d24fb27b1d1ca7ea7dbe4fad532f85d662
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329418"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022747"
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Microsoft Intune kullanarak şirket verilerine yetkisiz erişimi engelleme
 
@@ -36,7 +36,7 @@ Aşağıdaki koşulları yerine getirdiğinizde aşağıdaki eylem planı kullan
 * Şirketiniz Office 365 Exchange Online, SharePoint Online, OneDrive İş veya Yammer kullanmaktadır.
 * Şirketinizin Microsoft 365, Enterprise Mobility + Security (EMS) veya Azure Information Protection lisansları vardır.
 * Şirketiniz Windows 7 Service Pack 1 veya üzerini çalıştıran cihazlarla çalışıyordur.
-* Şirketiniz Office 365 ProPlus ile 2016 ya da 2013 uygulamaları, Office Professional Plus 2016, Office Professional Plus 2013 Service Pack 1 veya Office Professional Plus 2010 kullanıyordur.
+* Şirketiniz, 2016 uygulama veya 2013 uygulama, Office Professional Plus 2016, Office Professional 2013 Plus with Service Pack 1 veya Office Professional Plus 2010 ile Microsoft 365 uygulamalar kullanır.
 
 ## <a name="action-plan"></a>Eylem planı
 

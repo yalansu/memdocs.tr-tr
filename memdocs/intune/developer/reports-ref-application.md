@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78fce6f5f518227500b3cf42f1d935c0dd88df8c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4ec35681b6e81eb28c114733cc7913dd90875bfd
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331718"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023325"
 ---
 # <a name="reference-for-application-entities"></a>Uygulama varlıkları için başvuru
 
@@ -37,25 +37,25 @@ ms.locfileid: "79331718"
 
 ## <a name="apprevisions"></a>appRevisions
 
-**appRevision** varlığı, uygulamaların tüm sürümlerini listeler.
+**Apprevision** varlığı, tüm uygulama sürümlerini listeler.
 
 | Özellik  | Açıklama | Örnek |
 |---------|------------|--------|
 | appKey |Uygulamanın benzersiz tanımlayıcısı. |123 |
-| Uygulama |Uygulamanın benzersiz tanımlayıcısı - AppKey’e benzer ancak doğal anahtardır. |b66bc706-ffff-7437-0340-032819502773 |
-| uncaya |İkili karşıya yüklenirken yönetici tarafından bahsedilen sürüm. |2 |
-| title |Uygulama başlığı. |Excel |
-| publisher |Uygulama yayımcısı. |Microsoft |
+| applicationId |Uygulamanın benzersiz tanımlayıcısı - AppKey’e benzer ancak doğal anahtardır. |b66bc706-ffff-7437-0340-032819502773 |
+| revision |İkili karşıya yüklenirken yönetici tarafından bahsedilen sürüm. |2 |
+| başlık |Uygulama başlığı. |Excel |
+| yayımcı |Uygulama yayımcısı. |Microsoft |
 | uploadState |Uygulamanın karşıya yüklenme durumu. |1 |
 | appTypeKey |Aşağıdaki bölümde açıklanan AppType özelliğine başvuru. | |
 | vppProgramTypeKey |Aşağıda açıklanan VppProgramType özelliğine başvuru. | |
-| creationTime |Düzeltmenin oluşturulduğu zaman. |23.11.2016 12:00:00 |
-| modifiedTime |Bu düzeltmeyle ilgili herhangi bir şeyin en son değiştirildiği an. |23.11.2016 12:00:00 |
-| boyut |İkili boyutu. | |
-| startDateInclusiveUTC |Bu uygulama düzeltmesi, veri ambarında oluşturulduğunda tarih ve UTC diliminde saat. |23.11.2016 12:00:00 |
-| endDateExclusiveUTC |Bu uygulama düzeltmesi kullanımdan kalktığında tarih ve UTC diliminde saat. |23.11.2016 12:00:00 |
-| IsCurrent |Uygulama sürümünün, veri ambarında mevcut olup olmadığını gösterir. |Doğru/Yanlış |
-| rowLastModifiedDateTimeUTC |Bu uygulama sürümü, veri ambarında son değiştirildiğinde tarih ve UTC diliminde saat. |23.11.2016 12:00:00 |
+| creationTime |Düzeltmenin oluşturulduğu zaman. |23/11/2016 00:00:00 |
+| modifiedTime |Bu düzeltmeyle ilgili herhangi bir şeyin en son değiştirildiği an. |23/11/2016 00:00:00 |
+| size |İkili boyutu. | |
+| startDateInclusiveUTC |Bu uygulama düzeltmesi, veri ambarında oluşturulduğunda tarih ve UTC diliminde saat. |23/11/2016 00:00:00 |
+| endDateExclusiveUTC |Bu uygulama düzeltmesi kullanımdan kalktığında tarih ve UTC diliminde saat. |23/11/2016 00:00:00 |
+| IsCurrent |Uygulama sürümünün, veri ambarında mevcut olup olmadığını gösterir. |True/False |
+| rowLastModifiedDateTimeUTC |Bu uygulama sürümü, veri ambarında son değiştirildiğinde tarih ve UTC diliminde saat. |23/11/2016 00:00:00 |
 
 ## <a name="apptypes"></a>appTypes
 
@@ -69,7 +69,7 @@ ms.locfileid: "79331718"
 
 ### <a name="example"></a>Örnek
 
-| AppTypeID  | Ad | Açıklama |
+| AppTypeID  | Adı | Açıklama |
 |---------|------------|--------|
 | 0 |Android mağazası uygulaması | Bir Android mağazası uygulaması. |
 | 1 |Android LOB uygulaması | Bir Android iş kolu uygulaması. |
@@ -77,7 +77,7 @@ ms.locfileid: "79331718"
 | 3 |iOS mağazası uygulaması | Bir iOS mağazası uygulaması. |
 | 4 |iOS LOB uygulaması | Bir iOS iş kolu uygulaması. |
 | 5 |Yönetilen iOS mağazası uygulaması (MAM?) | Yönetimi etkin bir iOS mağazası uygulaması. |
-| 6 |O365 Pro Plus Suite | Windows 10 için Office 365 Pro Plus Suite. |
+| 6 |O365 Pro Plus Suite | Windows 10 için Microsoft 365 uygulamalar. |
 | 7 |Web uygulaması | Bir web uygulaması. |
 | 8 |Windows Phone 8.1 mağazası uygulaması | Bir Windows Phone 8.1 mağazası uygulaması. |
 | 9 |Windows mağazası uygulaması | Bir Windows mağazası uygulaması. |
@@ -98,7 +98,7 @@ ms.locfileid: "79331718"
 
 ### <a name="example"></a>Örnek
 
-| VppProgramID  | Ad | Açıklama |
+| VppProgramID  | Adı | Açıklama |
 |---------|------------|--------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft | Microsoft’un VPP programı. |
 | 00000000-0000-0000-0000-000000000000 | Henüz kullanılamıyor | Varsayılan değer, No VPP. |

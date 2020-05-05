@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8720eec22c8e7fd8a9c8c2303b50e71db0e834ad
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1fcd77774cb19a70ee02cab9d2d1e6a44dd9745a
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332558"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023206"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Kılavuzlu senaryo-bulutta yönetilen modern masaüstü
 
-Modern masaüstü, bilgi çalışanı için son teknoloji üretkenlik platformudur. Office 365 ProPlus ve Windows 10, Windows 10 ve Microsoft Defender Gelişmiş tehdit koruması için en son güvenlik temelleriyle birlikte modern masaüstünün temel bileşenleridir.
+Modern masaüstü, bilgi çalışanı için son teknoloji üretkenlik platformudur. Microsoft 365 uygulamalar ve Windows 10, Windows 10 ve Microsoft Defender Gelişmiş tehdit koruması için en son güvenlik temelleriyle birlikte modern masaüstünün temel bileşenleridir.
 
 Modern masaüstü 'nü buluttan yönetmek, internet genelindeki uzak eylemlerin ek avantajını getirir. Bulut yönetimi, yerleşik Windows mobil cihaz yönetimi ilkelerini kullanır ve yerel Active Directory Grup İlkesi bağımlılıklarını kaldırır.
 
@@ -44,9 +44,9 @@ Bulutta yönetilen bir modern masaüstünü kendi kuruluşunuzda değerlendirmek
   - Güvenlik temelleri okuma, oluşturma, silme, atama ve güncelleştirme
   - İlke ayarları okuma, oluşturma, silme, atama ve güncelleştirme
 
-## <a name="step-1---introduction"></a>1\. adım-giriş
+## <a name="step-1---introduction"></a>1. adım-giriş
 
-Bu Kılavuzlu senaryoyu kullanarak bir test kullanıcısı ayarlayabilir, bir cihazı Intune 'a kaydedebilir ve Intune tarafından önerilen ayarlarla, ayrıca Windows 10 ve Office ProPlus ile cihazı dağıtabilirsiniz. [Bu korumayı Intune 'da etkinleştirmeyi](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune)seçerseniz cihazınız Microsoft Defender Gelişmiş tehdit koruması için de yapılandırılır. Ayarladığınız Kullanıcı ve Kaydolmakta olduğunuz cihaz yeni bir güvenlik grubuna eklenir ve güvenlik ve üretkenlik için önerilen ayarlarla yapılandırılır.
+Bu Kılavuzlu senaryoyu kullanarak bir test kullanıcısı ayarlayabilir, bir cihazı Intune 'a kaydedebilir ve Intune tarafından önerilen ayarlarla, ayrıca Windows 10 ve Microsoft 365 uygulamaları dağıtabilirsiniz. [Bu korumayı Intune 'da etkinleştirmeyi](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune)seçerseniz cihazınız Microsoft Defender Gelişmiş tehdit koruması için de yapılandırılır. Ayarladığınız Kullanıcı ve Kaydolmakta olduğunuz cihaz yeni bir güvenlik grubuna eklenir ve güvenlik ve üretkenlik için önerilen ayarlarla yapılandırılır.
 
 ### <a name="what-you-will-need-to-continue"></a>Devam etmeniz gerekenler
 
@@ -57,13 +57,13 @@ Bu Kılavuzlu senaryoda test cihazınızı ve test kullanıcısını sağlamanı
 - Seçim [Test cihazını Windows Autopilot 'ye kaydedin](../enrollment/enrollment-autopilot.md#add-devices).
 - Seçim [Kuruluşunuzun Azure Active Directory oturum açma sayfasına marka](https://go.microsoft.com/fwlink/?linkid=2102455)özelliğini etkinleştirin.
 
-## <a name="step-2---user"></a>2\. Adım-Kullanıcı
+## <a name="step-2---user"></a>2. Adım-Kullanıcı
 
 Cihazda ayarlanacak bir kullanıcı seçin. Bu kişi, cihazın birincil kullanıcısı olacak.
 
 Bu yapılandırmaya daha fazla Kullanıcı veya cihaz eklemek istiyorsanız, Kullanıcı ve cihazları sihirbaz tarafından oluşturulan AAD güvenlik gruplarına eklemeniz yeterlidir. Diğer Kılavuzlu senaryolardan farklı olarak, yapılandırma özelleştirilemez olduğundan Sihirbazı birden çok kez çalıştırmanız gerekmez. Oluşturulan AAD gruplarına daha fazla Kullanıcı ve cihaz eklemeniz yeterlidir. Sihirbazı tamamladıktan sonra, dağıtılan önerilen ilkeler ile oluşturulan grubu görüntüleyebileceksiniz.
 
-## <a name="step-3---device"></a>3\. adım-cihaz
+## <a name="step-3---device"></a>3. adım-cihaz
 
 Cihazınızın Windows 10, sürüm 1903 veya sonraki bir sürümü çalıştırdığından emin olun.  Birincil kullanıcının, aldığı sırada cihazı ayarlaması gerekir. Kullanıcının kullanabileceği iki kurulum seçeneği vardır.
 
@@ -75,7 +75,7 @@ Windows Autopilot, kullanıcıların bunları BT yardımı olmadan kullanıma ha
 
 Kullanıcılar, mobil cihaz yönetiminde yeni cihazlarını el ile ayarlayıp kaydeder. Bu senaryoyu tamamladıktan sonra, cihazı sıfırlayın ve birincil kullanıcıya Windows cihazları için kayıt yönergeleri verin. Daha fazla bilgi için, [ilk çalıştırma deneyimi sırasında Windows 10 cihazını Azure AD 'ye katma](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device)bölümüne bakın.
 
-## <a name="step-4---review--create"></a>4\. adım-Inceleme ve oluşturma
+## <a name="step-4---review--create"></a>4. adım-Inceleme ve oluşturma
 
 Son adım, yapılandırdığınız ayarların özetini incelemenizi sağlar. Seçimlerinizi inceledikten sonra, Kılavuzlu senaryoyu gerçekleştirmek için **Dağıt** ' a tıklayın. Kılavuzlu senaryo tamamlandıktan sonra bir kaynak tablosu görüntülenir. Bu kaynakları daha sonra düzenleyebilirsiniz, ancak Özet görünümden ayrıldığınızda tablo kaydedilmez.
 
@@ -121,7 +121,7 @@ Ayrıca, Kılavuzlu senaryo kişiselleştirilmiş bir kurulum deneyimi için kul
 
 Kullanıcı cihazı Azure Active Directory katıldıktan sonra cihaza aşağıdaki yapılandırma uygulanır:
 
-1. Office 365 ProPlus, bulut tarafından yönetilen BILGISAYARA otomatik olarak yüklenir. Erişim, Excel, OneNote, Outlook, PowerPoint, Yayımcı, Skype Kurumsal ve Word dahil olmak üzere, bildiğiniz uygulamaları içerir. Bu uygulamaları, SharePoint Online, Exchange Online ve Skype Kurumsal Çevrimiçi gibi Office 365 hizmetleriyle bağlantı kurmak için kullanabilirsiniz. Office 365 ProPlus, Office 'in abonelik dışı sürümlerinden farklı olarak yeni özelliklerle düzenli olarak güncelleştirilir. Yeni özelliklerin listesi için bkz. Office 365 ' deki yenilikler.
+1. Microsoft 365 uygulamalar, bulut tarafından yönetilen BILGISAYARA otomatik olarak yüklenir. Erişim, Excel, OneNote, Outlook, PowerPoint, Yayımcı, Skype Kurumsal ve Word dahil olmak üzere, bildiğiniz uygulamaları içerir. Bu uygulamaları, SharePoint Online, Exchange Online ve Skype Kurumsal Çevrimiçi gibi Office 365 hizmetleriyle bağlantı kurmak için kullanabilirsiniz. Microsoft 365 uygulamalar, Office 'in abonelik dışı sürümlerinden farklı olarak yeni özelliklerle düzenli olarak güncelleştirilir. Yeni özelliklerin listesi için bkz. Office 365 ' deki yenilikler.
 2. Windows güvenlik temelleri, bulut tarafından yönetilen BILGISAYARA yüklenir. Microsoft Defender Gelişmiş tehdit koruması kurulumu yaptıysanız, Kılavuzlu senaryo da Defender için taban çizgisi ayarlarını yapılandırır. Defender Gelişmiş tehdit koruması, Windows 10 güvenlik yığınına yeni bir ihlal sonrası koruma katmanı sağlar. Windows 10 ' da ve güçlü bir bulut hizmetinde yerleşik olarak bulunan istemci teknolojisinin bir birleşimi sayesinde, diğer savunmaları geçmiş tehditleri algılamaya yardımcı olur. 
 
 ## <a name="next-steps"></a>Sonraki adımlar

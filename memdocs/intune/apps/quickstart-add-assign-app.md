@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5b6762669e4d816010982c63a119bffdec2f055
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 32405d7cc00d7ddbf528eb9ce736cf0faf702b42
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323846"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023036"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Hızlı Başlangıç: İstemci uygulaması ekleme ve atama
 
@@ -45,9 +45,9 @@ Intune’un uygulama görünüşünü yönetebilmesi amacıyla herhangi bir uygu
 
 Intune’a bir uygulama eklemek için aşağıdaki adımları kullanın:
 
-1. [Intune](https://aka.ms/intuneportal)'Da, **uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin. 
-2. **Uygulama türü seç** bölmesinin **Office 365 Suite** bölümünde **Windows 10** ' u seçin.
-3. **Seçin**’e tıklayın. **Uygulama ekleme** adımları görüntülenir.
+1. [Intune](https://aka.ms/intuneportal)'da, **uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin. 
+2. **Uygulama türü seç** bölmesinin **Microsoft 365 uygulamalar** bölümünde **Windows 10** ' u seçin.
+3. **Seç**' e tıklayın. **Uygulama ekleme** adımları görüntülenir.
 4. **Uygulama paketi bilgileri** sayfasında varsayılan ayrıntıları onaylayın.
 5. **İleri** ' ye tıklayarak **uygulama paketini Yapılandır** sayfasını görüntüleyin.
 6. **Güncelleştirme kanalı** ' nın yanındaki açılan kutudan **aylık** ' i seçin.
@@ -68,12 +68,12 @@ Microsoft Intune’a bir uygulama ekledikten sonra uygulamayı kullanıcı veya 
 
 Uygulamaları gruplara eklemek için aşağıdaki adımları kullanın:
 
-1. [Intune](https://aka.ms/intuneportal)'da **tüm uygulamalar** > **uygulamalar** ' ı seçin. 
+1. [Intune](https://aka.ms/intuneportal)'da **uygulamalar** > **tüm uygulamalar**' ı seçin. 
 2. Bir gruba atamak istediğiniz uygulamayı seçin.
-3. **Grup Ekle bölmesini göstermek** için **atamalar** > **Grup Ekle** ' ye tıklayın.
+3. **Grup** Ekle bölmesini göstermek için **atamalar** > **Grup Ekle** ' ye tıklayın.
 4. Açılan **Atama türü** kutusunda **Kayıtlı cihazlar için kullanılabilir**’i seçin. 
-5. **Dahil Edilen Gruplar** > **Dahil edilecek grupları seçin** > **Contoso Sınama Aracı**’nı seçin.
-6. Grubu atamak için **Seçin** > **Tamam** > **Tamam** > **Kaydet**’e tıklayın.
+5. **Dahil edilen gruplar** > ' a tıklayarak**contoso sınayıcılarını****dahil edin** > .
+6.  > Grubu atamak için**Tamam** > **Tamam tamam** > **Kaydet** **' e**tıklayın.
 
 Böylece uygulamayı **Contoso Sınama Aracı**’na atadınız.
 
@@ -87,13 +87,13 @@ Intune yoluyla kullanılabilir olan **Contoso’nun To-Do** uygulamasını yükl
     > Cihazın [Intune’a kayıtlı](../enrollment/quickstart-enroll-windows-device.md) olması gerekir. Ayrıca uygulamaya atadığınız gruba dahil olan bir hesapla cihazda oturum açmanız gerekir.
 
 2. **Başlat** menüsünden **Microsoft Store**’u açın. Daha sonra **Şirket Portalı** uygulamasını bulun ve yükleyin.
-3. **Şirket Portalı** uygulamasını başlatın.
-4. Intune’u kullanarak eklediğiniz uygulamaya tıklayın. Bu hızlı başlangıçta **Microsoft Office 365 uygulama paketi** uygulamasını eklediniz.
+3. **Şirket portalı** uygulamasını başlatın.
+4. Intune’u kullanarak eklediğiniz uygulamaya tıklayın. Bu hızlı başlangıçta **Microsoft 365 Apps** Suite 'i eklediniz.
 
     > [!NOTE]
     > Intune kullanıcısına hiçbir uygulama atayamadıysanız şu iletiyi görürsünüz: *BT yöneticiniz hiçbir uygulamayı sizin kullanımınıza sunmadı.*
 
-5. **Yükle**'ye tıklayın.
+5. **Install**'a tıklayın.
 
 İş gereksinimleriniz Şirket Portalı uygulamasını iş gücünüze atamanızı gerektiriyorsa Windows 10 Şirket Portalı uygulamasını doğrudan Intune’dan el ile atayabilirsiniz. Daha fazla bilgi için bkz. [Microsoft Intune kullanarak Windows 10 Şirket Portalı uygulamasını el ile ekleme](company-portal-app.md).
 

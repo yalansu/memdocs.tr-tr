@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82e02795dc9dbcbc0598218418404fe74fdf1226
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: e6a3e2b9026024791ef1a9e4eb5aca08718d8573
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551612"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023172"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Yönetim nesnelerinin koleksiyonlarını gruplamak için ilke kümelerini kullanma
 
@@ -45,7 +45,7 @@ Aşağıdaki yönetim nesnelerini bir ilke kümesine dahil edebilirsiniz:
 - Uygulama yapılandırma ilkeleri
 - Uygulama koruma ilkeleri
 - Cihaz yapılandırma profilleri
-- Cihaz uyumluluk ilkeleri
+- Cihaz uyumluluğu ilkeleri
 - Cihaz türü kısıtlamaları
 - Windows Autopilot dağıtım profilleri
 - Kayıt durumu sayfası
@@ -58,7 +58,7 @@ Bir ilke kümesi oluşturduğunuzda, tek bir atama birimi oluşturur ve farklı 
 ## <a name="how-to-create-a-policy-set"></a>İlke kümesi oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2.  > **Oluştur**ilke **kümeleri > ** ilke **kümeleri > ** **cihazları** seçin.
+2. **Cihazlar** > **ilke kümeleri** > **ilke kümelerini** > Seç**Oluştur**' u seçin.
 3. **Temel bilgiler** sayfasında, aşağıdaki değerleri ekleyin:
     - **İlke kümesi adı** -Bu ilke kümesi için bir ad sağlayın.
     - **Açıklama** -isteğe bağlı olarak, ilke kümesi için bir açıklama sağlayın.
@@ -89,7 +89,7 @@ Bir ilke kümesi oluşturduğunuzda, tek bir atama birimi oluşturur ve farklı 
   - Android mağazası uygulaması
   - Android iş kolu uygulaması
   - Yönetilen Android iş kolu uygulaması
-  - Office 365 ProPlus Suite (Windows 10)
+  - Microsoft 365 uygulamalar (Windows 10)
   - Web bağlantısı
   - Yerleşik iOS/ıpados uygulaması
   - Yerleşik Android uygulaması
@@ -121,7 +121,8 @@ Bir ilke kümesi oluşturduğunuzda, tek bir atama birimi oluşturur ve farklı 
     Bir gruba dağıtılan bir ilke kümesine bir ilke eklenirse, Grup "ilke kümesi ile atanmamış" değil, iş yükünde doğrudan atanmış olarak gösterilir. Bunun sonucunda, MAM, ilke kümelerinden gelen grup atama silme işlemlerini işlemez.
 
 - MAM herhangi bir ilke türü için **tüm kullanıcılara** ve **tüm cihazlar** sanal gruplarına dağıtımı desteklemez.
+- "Yönetim Şablonları" türündeki cihaz yapılandırma profili, ilke kümesinin bir parçası olarak seçilemez.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Microsoft Intune cihazları kaydetme](../enrollment/index.yml)
+- [Microsoft Intune’da cihazları kaydetme](../enrollment/index.yml)

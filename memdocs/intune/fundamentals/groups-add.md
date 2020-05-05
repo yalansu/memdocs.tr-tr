@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61ca3d5ecc614cee70c1d8a834f29b9db7ad21d2
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 42e28238a1ffbad3faa162dd21d4639e742ec7e3
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326830"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075413"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Kullanıcıları ve cihazları düzenlemek için grup ekleme
 
@@ -36,14 +36,14 @@ Aşağıdaki grup türlerini ekleyebilirsiniz:
 
   Örneğin, yönetici başlığıyla bir kullanıcı eklendiğinde, Kullanıcı otomatik olarak **Tüm Yöneticiler** kullanıcı grubuna eklenir. Ya da bir cihazda iOS/ıpados cihaz işletim sistemi türü varsa, cihaz otomatik olarak **tüm iOS/ıpados cihazları** cihazları grubuna eklenir.
 
-## <a name="add-a-new-group"></a>Yeni bir grup ekleme
+## <a name="add-a-new-group"></a>Yeni grup ekleme
 
 Yeni bir grup oluşturmak için aşağıdaki adımları kullanın.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Yeni grup** > **grupları** seçin:
+2. **Grup** > Seç**Yeni Grup**:
 
-   ![Yeni Grup seçiliyken Azure portal ekran görüntüsü](./media/groups-add/groups-add-new.png)
+   ![Yeni Grup seçeneğinin belirlendiği Intune portalı ekran görüntüsü](./media/groups-add/groups-add-new.png)
 
 3. **Grup türü**' nde, aşağıdaki seçeneklerden birini seçin:
 
@@ -85,7 +85,7 @@ Yeni bir grup oluşturmak için aşağıdaki adımları kullanın.
 > - Tüm Android Kurumsal cihazları
 > - Tüm iOS 11 ve eski cihazlar
 > - Pazarlama
-> - İnsan kaynakları
+> - İnsan Kaynakları
 > - Tüm Charlotte çalışanları
 > - Tüm WA çalışanları
 
@@ -106,4 +106,4 @@ Yapılandırma profili önerileri ve Kılavuzu için bkz. [Kullanıcı grupları
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Microsoft Intune ile rol tabanlı erişim denetimi (RBAC)](role-based-access-control.md)
-- [Azure AD gruplarıyla kaynaklara erişimi yönetme](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)
+- [Azure AD grupları ile kaynaklara erişimi yönetin](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)

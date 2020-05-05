@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b9f5a560b0f44b8ff256034b51cb9057faf0ec2
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 5aa91a84b2fe5d8870afc93022ab5a468b30e0db
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80576835"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074801"
 ---
 # <a name="how-to-use-intune-in-environments-without-google-mobile-services"></a>Intune 'u Google Mobile Services olmayan ortamlarda kullanma
 
@@ -33,7 +33,7 @@ Microsoft Intune, Android cihazlarını yönetirken Microsoft Intune şirket por
 
 ### <a name="for-users-outside-of-mainland-china"></a>Ana kara Çin dışındaki kullanıcılar için 
 
-Google Play kullanılamıyorsa, Android cihazlar [Android için Microsoft Intune şirket portalı](../user-help/install-the-company-portal-app-android.md) indirebilir ve uygulamayı dışarıdan yükleyebilir. Uygulama bu şekilde yüklendiğinde güncelleştirmeleri veya düzeltmeleri otomatik olarak almaz. Uygulamayı düzenli olarak güncelleştirdiğinizden ve düzeltme ekinin el ile düzeltmeniz gerekir. 
+Google Play kullanılamıyorsa, Android cihazlar [Android için Microsoft Intune şirket portalı](https://www.microsoft.com/en-us/download/details.aspx?id=49140) indirebilir ve uygulamayı dışarıdan yükleyebilir. Uygulama bu şekilde yüklendiğinde güncelleştirmeleri veya düzeltmeleri otomatik olarak almaz. Uygulamayı düzenli olarak güncelleştirdiğinizden ve düzeltme ekinin el ile düzeltmeniz gerekir. 
 
 ### <a name="for-users-in-mainland-china"></a>Ana kara Çin 'deki kullanıcılar için 
 
@@ -47,7 +47,7 @@ Bazı Intune özellikleri, Google Play deposu veya Google Play hizmetleri gibi G
 
 | Senaryo  | Özellikler  |
 |-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cihaz uyumluluk ilkeleri  | Android Cihaz Yöneticisi için uyumluluk ilkeleri oluştururken veya düzenlenirken, **Google Play koruma** altında listelenen tüm seçenekler kullanılamaz.  |
+| Cihaz uyumluluğu ilkeleri  | Android Cihaz Yöneticisi için uyumluluk ilkeleri oluştururken veya düzenlenirken, **Google Play koruma** altında listelenen tüm seçenekler kullanılamaz.  |
 | Uygulama koruma ilkeleri (koşullu başlatma)  | **Uygulamalar üzerinde tehdit taraması gerektir ve uygulamalarda tehdit taraması iste** **cihaz koşulları** koşullu başlatma için kullanılamaz.  |
 | İstemci uygulamaları  | **Android** türündeki uygulamalar kullanılamıyor. Uygulamaları dağıtmak ve yönetmek için **Iş kolu uygulamasını** kullanın.  |
 | Mobile Threat Defense  | Çözümünüzün Intune ile tümleştirildiğini, ilgilendiğiniz bölgede kullanılabilir olup olmadığını ve GMS 'ye dayanmasını anlamak için MTD satıcınız ile birlikte çalışın.  |
@@ -81,4 +81,4 @@ Cihaz son zamanlarda kaydedildiyse, uyumluluk, uyumsuzluk ve yapılandırma iade
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Microsoft Intune olan gruplara uygulama atama](../apps/apps-deploy.md)
+- [Microsoft Intune ile uygulamaları gruplara atama](../apps/apps-deploy.md)
