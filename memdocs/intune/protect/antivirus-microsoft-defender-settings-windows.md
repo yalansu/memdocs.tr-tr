@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 554bc09aa57306010069df4a85baa70fafdc41a6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7d8ea221b6c1768055e3ca1839c20ed64e2e3838
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086277"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802030"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Microsoft Intune 'de Windows 10 Microsoft Defender virüsten koruma ilkesi ayarları
 
@@ -82,7 +82,7 @@ Bu gruptaki her bir ayar için ayarı genişletebilir, **Ekle**' yi seçebilir v
   - **Evet** -gerçek zamanlı izlemenin kullanımını zorla. Cihaz kullanıcıları bu ayarı değiştiremezler.
 
 - **Erişim Koruması 'nı etkinleştir**  
-  CSP: [Allowonaccessprotection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+  CSP: [Allowonaccessprotection](https://go.microsoft.com/fwlink/?linkid=2113935)
 
   İsteğe bağlı olarak, sürekli etkin olan virüs korumasını yapılandırın.
 
@@ -90,8 +90,16 @@ Bu gruptaki her bir ayar için ayarı genişletebilir, **Ekle**' yi seçebilir v
   - Cihazlarda erişim koruması için **hiçbir blok yok** . Cihaz kullanıcıları bu ayarı değiştiremezler.
   - **Evet** -açık erişim koruması cihazlarda etkin.
 
+- **Gelen ve giden dosyalar için izleme**  
+  CSP: [Defender/RealTimeScanDirection](https://go.microsoft.com/fwlink/?linkid=2113943)
+
+  Hangi NTFS dosyası ve program etkinliğinin izleneceğini öğrenmek için bu ayarı yapılandırın.
+  - **Tüm dosyaları izle** (*varsayılan*)
+  - **Yalnızca gelen dosyaları izle**
+  - **Yalnızca giden dosyaları izle**
+
 - **Davranış izlemeyi aç**  
-  CSP: [AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048&clcid=0x409)
+  CSP: [AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
 
   Varsayılan olarak, Windows 10 Masaüstü cihazlarda Defender davranış Izleme işlevini kullanır.
 
@@ -109,7 +117,7 @@ Bu gruptaki her bir ayar için ayarı genişletebilir, **Ekle**' yi seçebilir v
   - **Evet** -ağ koruması açıktır. Cihaz kullanıcıları bu ayarı değiştiremezler.
 
 - **İndirilen tüm dosyaları ve ekleri Tara**  
-  CSP: [Enablenetworkprotection](https://go.microsoft.com/fwlink/?linkid=2113939&clcid=0x409)
+  CSP: [Enablenetworkprotection](https://go.microsoft.com/fwlink/?linkid=2113939)
 
   Tüm indirilen dosya ve ekleri taramak için Defender 'ı yapılandırın.
 
@@ -118,7 +126,7 @@ Bu gruptaki her bir ayar için ayarı genişletebilir, **Ekle**' yi seçebilir v
   - **Evet** -Defender indirilen tüm dosya ve ekleri tarar. Cihaz kullanıcıları bu ayarı değiştiremezler.
 
 - **Microsoft tarayıcılarında kullanılan betikleri tarayın**  
-  CSP: [Allowscriptscanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
+  CSP: [Allowscriptscanning](https://go.microsoft.com/fwlink/?linkid=2114054)
 
   Defender 'ı betikleri tarayacak şekilde yapılandırın.
 
@@ -127,7 +135,7 @@ Bu gruptaki her bir ayar için ayarı genişletebilir, **Ekle**' yi seçebilir v
   - **Evet** -Defender betikleri tarar. Cihaz kullanıcıları bu ayarı değiştiremezler.
 
 - **Ağ dosyalarını Tara**  
-  CSP: [Allowscanningnetworkfiles](https://go.microsoft.com/fwlink/?linkid=2114049&clcid=0x409)
+  CSP: [Allowscanningnetworkfiles](https://go.microsoft.com/fwlink/?linkid=2114049&)
 
   Defender 'ı ağ dosyalarını tarayacak şekilde yapılandırın.
 
@@ -136,7 +144,7 @@ Bu gruptaki her bir ayar için ayarı genişletebilir, **Ekle**' yi seçebilir v
   - **Evet** -ağ dosyalarının taranmasını aç. Cihaz kullanıcıları bu ayarı değiştiremezler.
 
 - **E-postaları Tara**  
-  CSP: [Allowemailscanning](https://go.microsoft.com/fwlink/?linkid=2114052&clcid=0x409)
+  CSP: [Allowemailscanning](https://go.microsoft.com/fwlink/?linkid=2114052)
 
   Defender 'ı gelen e-postayı tarayacak şekilde yapılandırın.
 
@@ -147,7 +155,7 @@ Bu gruptaki her bir ayar için ayarı genişletebilir, **Ekle**' yi seçebilir v
 ## <a name="remediation"></a>Düzeltme
 
 - **Karantinaya alınan kötü amaçlı yazılımı tutmak için gün sayısı (0-90)**  
-  CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055&clcid=0x409)
+  CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055)
 
   Sistemin, karantinaya alınan öğeleri otomatik olarak kaldırılmadan önce depoladığından, 0 ile 90 arasında bir gün sayısı belirtin. Sıfır değeri, Karantinadaki öğeleri tutar ve onları otomatik olarak kaldırmaz.
 
@@ -160,7 +168,7 @@ Bu gruptaki her bir ayar için ayarı genişletebilir, **Ekle**' yi seçebilir v
   - **Tüm örnekleri otomatik olarak gönder**
 
 - **İstenmeyebilecek uygulamalarda gerçekleştirilecek eylem**  
-  CSP: [Puaprotection](https://go.microsoft.com/fwlink/?linkid=2114051&clcid=0x409)
+  CSP: [Puaprotection](https://go.microsoft.com/fwlink/?linkid=2114051)
 
   İstenmeyebilecek uygulamalar için algılama düzeyini belirtin (PUAs). Defender, istenmeyebilecek yazılımların indirileceği veya bir cihaza yüklenmeye çalıştığı durumlarda kullanıcıları uyarır.
 
@@ -170,7 +178,7 @@ Bu gruptaki her bir ayar için ayarı genişletebilir, **Ekle**' yi seçebilir v
   - **Denetim modu** -Defender istenmeyebilecek uygulamaları algılar, ancak hiçbir işlem gerçekleşmez. Olay Görüntüleyicisi Defender tarafından oluşturulan olayları arayarak, uygulama Defender ile ilgili bilgileri gözden geçirebilirsiniz.
 
 - **Algılanan tehditler için Eylemler**  
-  CSP: [Threatseveritydefaultaction](https://go.microsoft.com/fwlink/?linkid=2113938&clcid=0x409)
+  CSP: [Threatseveritydefaultaction](https://go.microsoft.com/fwlink/?linkid=2113938)
 
   Kötü amaçlı yazılımın tehdit düzeyine bağlı olarak algılanan kötü amaçlı yazılım için Defender 'ın aldığı eylemi belirtin.
   
@@ -193,7 +201,7 @@ Bu gruptaki her bir ayar için ayarı genişletebilir, **Ekle**' yi seçebilir v
 ## <a name="scan"></a>Tara
 
 - **Arşiv dosyalarını tara**  
-  CSP: [AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047&clcid=0x409)
+  CSP: [AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
 
   Defender 'ı ZIP veya CAB dosyaları gibi arşiv dosyalarını tarayacak şekilde yapılandırın.
 
@@ -203,7 +211,7 @@ Daha fazla bilgi edinin
   - **Evet** -arşiv dosyalarının taranmasını etkinleştirin. Cihaz kullanıcıları bu ayarı değiştiremezler.
 
 - **Zamanlanan Taramalar için düşük CPU önceliği kullan**  
-  CSP: [Enablelowcpupriınıd](https://go.microsoft.com/fwlink/?linkid=2113944&clcid=0x409)
+  CSP: [Enablelowcpupriınıd](https://go.microsoft.com/fwlink/?linkid=2113944)
 
   Zamanlanan Taramalar için CPU önceliğini yapılandırın.
   - **Yapılandırılmadı** (*varsayılan*)-ayar, CPU önceliğinde hiçbir değişiklik yapılmamakta sistem varsayılan değerini döndürür.
@@ -211,7 +219,7 @@ Daha fazla bilgi edinin
   - **Evet** -düşük CPU önceliği, zamanlanmış taramalar sırasında kullanılacaktır. Cihaz kullanıcıları bu ayarı değiştiremezler.
 
 - **Yakalama tam taramasını devre dışı bırak**  
-  CSP: [Disablecatch Upfullscan](https://go.microsoft.com/fwlink/?linkid=2114042&clcid=0x409)
+  CSP: [Disablecatch Upfullscan](https://go.microsoft.com/fwlink/?linkid=2114042)
 
   Zamanlanan tam taramalar için yakalama taramaları yapılandırın. Bir yakalama taraması, düzenli olarak zamanlanmış bir tarama kaçırıldığı için başlatılan bir taramadır. Bilgisayar zamanlanan saatte kapatılmış olduğundan, genellikle bu zamanlanmış taramalar kaçırıldı.
 
@@ -220,7 +228,7 @@ Daha fazla bilgi edinin
   - **Evet** -zamanlanmış tam taramalar için yakalama taramaları zorlanır ve Kullanıcı bunları devre dışı bırakamaz. Arka arkaya iki zamanlanmış tarama için bir bilgisayar çevrimdışıysa, bir Kullanıcı bilgisayarda ilk kez oturum açtığında bir yakalama taraması başlatılır. Yapılandırılmış zamanlanmış tarama yoksa, hiçbir yakalama tarama çalıştırması olmaz. Cihaz kullanıcıları bu ayarı değiştiremezler.
 
 - **Yakalama hızlı taramayı devre dışı bırak**  
-  CSP: [Disablecatchupquickscan](https://go.microsoft.com/fwlink/?linkid=2113941&clcid=0x409)
+  CSP: [Disablecatchupquickscan](https://go.microsoft.com/fwlink/?linkid=2113941)
 
   Zamanlanan hızlı taramalar için yakalama taramaları yapılandırın. Bir yakalama taraması, düzenli olarak zamanlanmış bir tarama kaçırıldığı için başlatılan bir taramadır. Bilgisayar zamanlanan saatte kapatılmış olduğundan, genellikle bu zamanlanmış taramalar kaçırıldı.
 
@@ -229,12 +237,12 @@ Daha fazla bilgi edinin
   - **Evet** -zamanlanmış hızlı taramalar için yakalama taramaları zorlanır ve Kullanıcı bunları devre dışı bırakamaz. Arka arkaya iki zamanlanmış tarama için bir bilgisayar çevrimdışıysa, bir Kullanıcı bilgisayarda ilk kez oturum açtığında bir yakalama taraması başlatılır. Yapılandırılmış zamanlanmış tarama yoksa, hiçbir yakalama tarama çalıştırması olmaz. Cihaz kullanıcıları bu ayarı değiştiremezler.
 
 - **Tarama başına CPU kullanım sınırı**  
-  CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046&clcid=0x409)
+  CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046)
 
   Defender taraması için Ortalama CPU yükleme faktörü olan 0 ile 100 arasında bir yüzde olarak belirtin.
 
 - **Tam tarama sırasında eşlenmiş ağ sürücülerine Tara**  
-  CSP: [Allowfullscanonmappednetworkdrives](https://go.microsoft.com/fwlink/?linkid=2113945&clcid=0x409)
+  CSP: [Allowfullscanonmappednetworkdrives](https://go.microsoft.com/fwlink/?linkid=2113945)
 
   Defender 'ı eşlenmiş ağ sürücülerine tarayacak şekilde yapılandırın.
 
@@ -243,13 +251,13 @@ Daha fazla bilgi edinin
   - **Evet** -eşlenen ağ sürücülerinin taranmasını etkinleştirin. Cihaz kullanıcıları bu ayarı değiştiremezler.
 
 - **Günlük hızlı taramayı şurada Çalıştır:**  
-  CSP: [Schedulequickscantime](https://go.microsoft.com/fwlink/?linkid=2114053&clcid=0x409)
+  CSP: [Schedulequickscantime](https://go.microsoft.com/fwlink/?linkid=2114053)
 
   Defender hızlı taramanın çalışacağı günün saatini seçin.
   Varsayılan olarak, bu **yapılandırılmaz**
 
 - **Tarama türü**  
-  CSP: [Scanparameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
+  CSP: [Scanparameter](https://go.microsoft.com/fwlink/?linkid=2114045)
 
   Defender 'ın çalıştığı taramanın türünü seçin.
 
@@ -271,14 +279,14 @@ Daha fazla bilgi edinin
 ## <a name="updates"></a>Güncelleştirmeler
 
 - **Güvenlik Zekası güncelleştirmelerini denetleme sıklığını (0-24 saat) girin**  
-  CSP: [Signatureupdateınterval](https://go.microsoft.com/fwlink/?linkid=2113936&clcid=0x409)
+  CSP: [Signatureupdateınterval](https://go.microsoft.com/fwlink/?linkid=2113936)
 
   İmzaları denetlemek için kullanılan aralığı sıfır ile 24 arasında (saat cinsinden) belirtin. Sıfır değeri, yeni imzalar için denetim yok sonucunu vermez. 2 değeri her iki saatte bir denetlenir ve bu şekilde devam eder.
 
 ## <a name="user-experience"></a>Kullanıcı deneyimleri
 
 - **Microsoft Defender uygulamasına kullanıcı erişimine izin ver**  
-  CSP: [AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043&clcid=0x409)  
+  CSP: [AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043)  
 
   - **Yapılandırılmadı** (*varsayılan*)-ayar, Kullanıcı arabirimi ve bildirimlerine izin verilen istemci varsayılan değerini döndürür.
   - **Hayır** -Defender Kullanıcı ARABIRIMINE (UI) erişilemiyor ve bildirimler Ware gizlendi.

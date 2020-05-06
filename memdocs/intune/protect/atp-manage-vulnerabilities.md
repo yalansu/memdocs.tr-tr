@@ -63,7 +63,7 @@ Düzeltme için genel eylemler şunları içerir:
 
 - Düzeltmeyi tamamladıktan sonra, Intune Yöneticisi güvenlik görevini açar ve **tamamlanmış görevi**seçer.  Düzeltme durumu, Intune ve ATP 'de, güvenlik yöneticilerinin güvenlik açığı için düzeltilen durumu doğrulayabileceği şekilde güncelleştirilir.
 
-## <a name="prerequisites"></a>Önkoşullar  
+## <a name="prerequisites"></a>Ön koşullar  
 
 **Abonelikler**:
 

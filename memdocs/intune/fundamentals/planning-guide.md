@@ -13,17 +13,17 @@ ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a65efa6e-4a48-47f3-8f6e-34a85ca64ced
-ms.reviewer: jeffbu, cgerth
+ms.reviewer: andredm7
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65d4745580a4b0d733ffe14be03f0f9893074586
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 613bb0ddf935815a4022fa483e0aad615c64121a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080105"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802047"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Intune dağıtım planlama, tasarım ve uygulama kılavuzu
 
@@ -53,7 +53,10 @@ Bu kılavuz Intune'u uçtan uca dağıtma sürecinde size adım adım rehberlik 
 
 Bu kılavuz ayrıca, Intune dağıtım planlaması, tasarım ve uygulama süreçlerinde size yardım edebilecek ek teknik bilgiler ve tablo şablonları sağlar.
 
-- [Ek kaynaklar: Bağlantılar ve tablo şablonları](planning-guide-resources.md)
+### <a name="additional-resources"></a>Ek kaynaklar
+
+- [Microsoft Endpoint Manager kavram kanıtı (PoC) Kılavuzu:](https://www.microsoft.com/microsoft-365/partners/endpoint-manager-poc) bu, kuruluşunuzda başarılı bir POC 'nin nasıl çalıştırılacağı hakkında bir çerçeve ve teknik kılavuz sağlamak üzere tasarlanmıştır.
+- [Bağlantılar ve tablo şablonları](planning-guide-resources.md)
 
 ## <a name="assumptions"></a>Varsayımlar
 

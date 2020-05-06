@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5657a26419280871e6739060509a72c4604fc3a7
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: c3adb6f1548c0b332aaa477014f07559ffc826c1
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255022"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842300"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune’daki yenilikler - önceki aylar
 
@@ -4187,7 +4187,7 @@ Bir Intune cihaz kısıtlama profilinde iOS cihazlar için artık aşağıdaki [
 - Bildirim seslerine izin verilip verilmeyeceğini belirleme.
 
 ### <a name="configure-ios-apps-to-run-in-single-app-mode-autonomously---737837---"></a>iOS uygulamalarını otonom tek uygulama modunda çalışacak şekilde yapılandırma<!-- 737837 -->
-Bir Intune cihaz profili kullanarak belirtilen uygulamaları artık [otonom tek uygulama modunda](../configuration/device-restrictions-ios.md#autonomous-single-app-mode) çalışacak şekilde iOS cihazlarını yapılandırabilirsiniz. Bu mod yapılandırılıp uygulama çalıştırıldığında cihaz yalnızca belirtilen uygulamayı çalıştıracak şekilde kilitlenir. Buna örnek olarak kullanıcıların cihazda test çözmesini sağlayan bir uygulama verilebilir. Uygulamanın eylemleri tamamlandığında veya bu ilkeyi kaldırdığınızda cihaz normal durumuna geri döner.
+Bir Intune cihaz profili kullanarak belirtilen uygulamaları artık [otonom tek uygulama modunda](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam) çalışacak şekilde iOS cihazlarını yapılandırabilirsiniz. Bu mod yapılandırılıp uygulama çalıştırıldığında cihaz yalnızca belirtilen uygulamayı çalıştıracak şekilde kilitlenir. Buna örnek olarak kullanıcıların cihazda test çözmesini sağlayan bir uygulama verilebilir. Uygulamanın eylemleri tamamlandığında veya bu ilkeyi kaldırdığınızda cihaz normal durumuna geri döner.
 
 ### <a name="configure-trusted-domains-for-email-and-web-browsing-on-ios-devices---723765---"></a>iOS cihazlarda e-posta ve web üzerinde gezinme için güvenilen etki alanlarını yapılandırma<!-- 723765 -->
 Artık bir iOS cihaz kısıtlama profilinden aşağıdaki [etki alanı ayarlarını](../configuration/device-restrictions-ios.md#domains) yapılandırabilirsiniz:

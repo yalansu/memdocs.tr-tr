@@ -147,12 +147,12 @@
               href: apps-configure-chrome-android.md
         - name: Toplu satın alınan uygulamalar ve kitaplar
           items:
-            - name: VPP uygulamalarını ve defterlerini yönetme
+            - name: Toplu satın almaya genel bakış
               href: vpp-apps.md
               displayName: vpp; volume purchased
-            - name: iOS VPP uygulamaları
+            - name: Toplu satın alınan iOS uygulamaları
               href: vpp-apps-ios.md
-            - name: İş uygulamaları için Microsoft Mağazası
+            - name: İş İçin Microsoft Mağazası uygulamaları
               href: windows-store-for-business.md
             - name: iOS e-Kitapları
               href: vpp-ebooks-ios.md
@@ -206,6 +206,10 @@
           href: app-install-error-codes.md
         - name: Mobil uygulama yönetimi sorunlarını giderme
           href: troubleshoot-mam.md
+        - name: Uygulama koruma günlüklerini gözden geçirme
+          href: app-protection-policy-settings-log.md
+        - name: Uygulama koruma ilkesi dağıtımı sorunlarını giderme
+          href: troubleshoot-app-protection-policy-deployment.md
 - name: Başvuru
   items:
     - name: Intune Uygulama SDK’sı ile uygulama koruma

@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f21728c62b5cb306e03b259940eef37141592b25
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: af842bbb9c8dcb133bfe0d52f49948761f968c71
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782217"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842266"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için iOS ve ıpados cihaz ayarları
 
@@ -591,7 +591,7 @@ Uygulamaları eklemek için şunları yapabilirsiniz:
 
   İOS/ıpados 13,0 ile başlayarak, bu ayar denetimli cihazlar gerektirir.
 
-## <a name="autonomous-single-app-mode"></a>Otonom tek uygulama modu
+## <a name="autonomous-single-app-mode-asam"></a>Otonom tek uygulama modu (ASAM)
 
 İOS/ıpados cihazlarını, otonom tek uygulama modunda (ASAM) belirli uygulamaları çalıştıracak şekilde yapılandırmak için bu ayarları kullanın. Bu mod yapılandırıldığında ve kullanıcılar yapılandırılmış uygulamalardan birini başlatdıklarında, cihaz bu uygulamaya kilitlenir. Uygulama/görev değiştirme, kullanıcılar izin verilen uygulamadan çıkana kadar devre dışı bırakıldı.
 
@@ -599,6 +599,8 @@ Uygulamaları eklemek için şunları yapabilirsiniz:
 
 > [!NOTE]
 > Tüm uygulamalar otonom tek uygulama modunu desteklemez. Bir uygulamayı otonom tek uygulama modunda yerleştirmek için, bir paket KIMLIĞI veya bir uygulama yapılandırma ilkesi tarafından teslim edilen anahtar değer çifti genellikle gereklidir. Daha fazla bilgi için Apple MDM belgelerindeki [ `autonomousSingleAppModePermittedAppIDs` kısıtlamaya](https://developer.apple.com/documentation/devicemanagement/restrictions) bakın. Yapılandırmakta olduğunuz uygulama için gereken belirli ayarlar hakkında daha fazla bilgi için satıcı belgelerine bakın.
+
+Örneğin, ölçek odalarını otonom tek uygulama modunda yapılandırmak için, yakınlaştırma `us.zoom.zpcontroller` paket kimliğini kullanmak üzere diyor. Bu örnekte, yakınlaştırma web portalında da bir değişiklik yaparsınız. Daha fazla bilgi için bkz. [zoom yardım merkezi](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
