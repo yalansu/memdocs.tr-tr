@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe95196da3e75dc50e585dc1c4508e8d20c7d5e3
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 4d29da297689f09cfdcbaf884f5f343a519093db
+ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255039"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82881103"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune son kullanıcı uygulamaları arabirimlerinde yapılan güncelleştirmeler
 
@@ -615,6 +615,6 @@ Bunlar, kullanıcı arabirimimizi güncelleştirerek kullanıcı deneyimini geli
 
 
 ## <a name="see-also"></a>Ayrıca bkz.
-* [Microsoft Intune Blogu](https://go.microsoft.com/fwlink/?LinkID=273882)
+* [Microsoft Intune Blogu](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/)
 * [Bulut Platformu yol haritası](https://www.microsoft.com/cloud-platform/roadmap)
 * [Intune’daki yenilikler](whats-new.md)

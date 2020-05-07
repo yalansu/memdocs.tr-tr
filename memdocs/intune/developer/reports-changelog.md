@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 632f3bf16fd062acf05c7bd4e269069468df42a3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 36944b05a12b150c15e59f145efd9fef85598a2f
+ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331826"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82881052"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Intune Veri Ambarı API’si için değişiklik günlüğü
 
@@ -265,4 +265,4 @@ Artık kullanıcı ve cihaz varlık koleksiyonlarını ilişkilendiren kullanıc
 
 ## <a name="next-steps"></a>Sonraki adımlar
 - [Intune 'daki her haftanın](../fundamentals/whats-new.md)yenilikleri hakkında bilgi edinin. Yaklaşan değişiklikler, hizmet hakkında önemli bildirimler ve geçmiş sunumlar hakkında bilgiler de alabilirsiniz.
-- [Microsoft Intune Blogu](https://go.microsoft.com/fwlink/?LinkID=273882)’nu okuyun.
+- [Microsoft Intune Blogu](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/)’nu okuyun.

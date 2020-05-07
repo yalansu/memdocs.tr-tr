@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2002
+ms.date: 04/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b6940d191902627616501f192fc810363bee1a3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e8d4b866ca2086ae11efa10f1967b08f12e55919
+ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688237"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82881035"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Microsoft Intune ' de türetilmiş kimlik bilgilerini kullan
 
@@ -48,7 +48,7 @@ Türetilmiş kimlik bilgileri, özel yayın (SP) 800-157 kapsamında türetilmi�
 - Kullanıcılar, türetilmiş kimlik bilgileri verende kimlik doğrulaması yapmak için bir bilgisayardaki akıllı kartlarını kullanarak türetilmiş bir kimlik bilgisi alır. Veren, daha sonra akıllı kartlarından türetilen bir sertifika olan mobil cihaza sorun verir.
 - Cihaz türetilmiş kimlik bilgilerini aldıktan sonra, uygulamalar veya kaynak erişim profilleri türetilmiş kimlik bilgisini gerektirdiğinde, kimlik doğrulaması ve S/MIME imzalama ve şifreleme için kullanılır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Kiracınızı türetilmiş kimlik bilgilerini kullanacak şekilde yapılandırmadan önce aşağıdaki bilgileri gözden geçirin.
 

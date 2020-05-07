@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95c7104f949216a6a9f7704ac9bec6a7c2dfa7aa
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 94592505806ec005fcc5abf6aead04ec89422d6e
+ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078099"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82881086"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>Intune Veri Ambarı hesabı verilerinizi taşıma 
 
@@ -83,4 +83,4 @@ X müşterisi, hesap taşımasının 1.06.2018 tarihinde başlamasını ister. B
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [Intune 'daki her haftanın](../fundamentals/whats-new.md)yenilikleri hakkında bilgi edinin. Yaklaşan değişiklikler, hizmet hakkında önemli bildirimler ve geçmiş sunumlar hakkında bilgiler de alabilirsiniz.
-- [Microsoft Intune Blogu](https://go.microsoft.com/fwlink/?LinkID=273882)’nu okuyun.
+- [Microsoft Intune Blogu](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/)’nu okuyun.

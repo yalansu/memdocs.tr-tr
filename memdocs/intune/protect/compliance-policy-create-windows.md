@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed0194f0ace1ed1e962a8b993a4e93f7ef487bdc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: bafe9f564519e597e0bcc84350de3bb17dc646e1
+ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084921"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82862352"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Cihazları Intune ile uyumlu veya uyumsuz olarak işaretlemek için Windows 10 ve üzeri ayarları
 
@@ -188,10 +188,20 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
 - **Virüsten koruma**:  
   - **Yapılandırılmadı** (*varsayılan*)-Intune, cihazda yüklü olan herhangi bir virüsten koruma çözümünü denetlemez. 
   - **Require** Symantec ve Microsoft Defender gibi [Windows Güvenlik Merkezi](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)'ne kayıtlı virüsten koruma çözümlerini kullanarak uyumluluğu kontrol edin.
+  
+  [DeviceStatus CSP-DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+
+  > [!NOTE]
+  > Virüsten koruma için DeviceStatus CSP, *Windows 10 Home* için desteklenmez ve *geçerli olmayan*bir durum bildirir. Bu sınırlama, Intune için gelecekteki bir aylık güncelleştirmede değinilecek. Bu kısıtlamayı geçici olarak çözmek için, cihaz uyumluluk ilkenizde [Windows Defender](#defender) ayarlarını kullanmayı düşünün. Windows Defender ayarları Windows 10 Home ile desteklenir.  
 
 - **Casus yazılımdan koruma**:  
   - **Yapılandırılmadı** (*varsayılan*)-Intune, cihazda yüklü olan herhangi bir casus yazılımdan koruma çözümünü denetlemez.
   - **Require** Symantec ve Microsoft Defender gibi [Windows Güvenlik Merkezi](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)'ne kayıtlı casus yazılımdan koruma çözümlerini kullanarak uyumluluğu kontrol edin.  
+  
+  [DeviceStatus CSP-DeviceStatus/antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+
+  > [!NOTE]
+  > Casus yazılımdan koruma için DeviceStatus CSP, *Windows 10 Home* için desteklenmez ve *geçerli olmayan*bir durum bildirir. Bu sınırlama, Intune için gelecekteki bir aylık güncelleştirmede değinilecek. Bu kısıtlamayı geçici olarak çözmek için, cihaz uyumluluk ilkenizde [Windows Defender](#defender) ayarlarını kullanmayı düşünün. Windows Defender ayarları Windows 10 Home ile desteklenir. 
 
 ### <a name="defender"></a>Defender
 

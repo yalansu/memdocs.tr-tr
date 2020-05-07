@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0151bfd993c3ad5cc48194da368d3385d8bc32ec
-ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
+ms.openlocfilehash: 0098ff8f7916dd08b32fbc4acc9289a403a860ef
+ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619568"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82881069"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Microsoft Intune için geliştirme aşamasında
 
@@ -37,7 +37,7 @@ Hazırlık ve planlamada yardımcı olması için bu sayfada Intune Kullanıcı 
 
 **RSS akışı**: aşağıdaki URL 'yi kopyalayıp akış okuyucunuzun içine yapıştırarak bu sayfanın ne zaman güncelleştirileceğini öğrenin:`https://docs.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us`
 
-Bu makale, yukarıdaki başlık altında listelenen tarihte son güncelleştirilme aşamasındadır.
+**Bu makale, yukarıdaki başlık altında listelenen tarihte son güncelleştirilme aşamasındadır.**
 
 <!--
 ## What's coming to Intune in the Azure portal 

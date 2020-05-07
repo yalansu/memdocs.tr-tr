@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3da418db81a315e4102b63c34ffc557646d36f70
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: fe91e36ab5cc66fe81c77401a2a0374f6577b202
+ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126054"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82862386"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Intune 'da SCEP sertifika profilleri oluşturma ve atama
 
@@ -301,7 +301,8 @@ Devam etmeden önce aşağıdakileri göz önünde bulundurun:
 - Intune ve Configuration Manager için ortak yönetim kullanıyorsanız, Configuration Manager ' de kaynak erişim Ilkeleri için [iş yükü kaydırıcısını](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) **Intune** veya **pilot Intune**'a ayarlayın. Bu ayar, Windows 10 istemcilerinin sertifika isteme işlemini başlatmasını sağlar.
 
 > [!NOTE]
-> İOS/ıpados cihazlarında, bir SCEP sertifika profili veya PKCS sertifika profili, Wi-Fi veya VPN profili gibi ek bir profille ilişkilendirildiğinde, cihaz bu ek profillerin her biri için bir sertifika alır. Bu, iOS/ıpados cihazının SCEP veya PKCS sertifika isteği tarafından sunulan birden çok sertifikaya sahip olmasına neden olur. 
+> - İOS/ıpados cihazlarında, bir SCEP sertifika profili veya PKCS sertifika profili, Wi-Fi veya VPN profili gibi ek bir profille ilişkilendirildiğinde, cihaz bu ek profillerin her biri için bir sertifika alır. Bu, iOS/ıpados cihazının SCEP veya PKCS sertifika isteği tarafından sunulan birden çok sertifikaya sahip olmasına neden olur. 
+> - İOS 13 ve macOS 10,15 ' de, Apple tarafından ele alınması gereken bazı [ek güvenlik gereksinimleri](https://support.apple.com/HT210176) vardır.  
 
 
 ## <a name="next-steps"></a>Sonraki adımlar
