@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ffa3d11b92c38373da22e53b96fe9cf9e520b5b
-ms.sourcegitcommit: af8a3efd361a7f3fa6e98e5126dfb1391966ff76
+ms.openlocfilehash: 8e72fc48608ebf32f3e32d4a94ab7203ee418d8f
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82149182"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943816"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Intune 'da iOS, ıpados veya macOS cihaz özelliği ayarları ekleme
 
@@ -153,7 +153,7 @@ Bu ayarlar iOS, ıpados ve macOS cihazlarınız için çoklu oturum açma (SSO) 
 
 Intune 'da, kuruluşunuz tarafından oluşturulan bir SSO uygulama uzantısını yapılandırmak için bu ayarları kullanın, kimlik sağlayıcınız, Microsoft veya Apple. SSO uygulama uzantısı kullanıcılarınız için kimlik doğrulamasını işler. Bu ayarlar, yeniden yönlendirme türü ve kimlik bilgisi türü SSO uygulama uzantılarını yapılandırır.
 
-- Yeniden yönlendirme türü, OAuth ve SAML2 gibi modern kimlik doğrulama protokolleri için tasarlanmıştır. MacOS cihazlarında genel yeniden yönlendirme uzantısı kullanabilirsiniz. İOS/ıpados cihazları için Microsoft 'un Azure AD SSO uzantısı ([Microsoft ENTERPRISE SSO eklentisi](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) ve genel yeniden yönlendirme uzantısı arasında seçim yapabilirsiniz.
+- Yeniden yönlendirme türü, OpenID Connect, OAuth ve SAML2 gibi modern kimlik doğrulama protokolleri için tasarlanmıştır. MacOS cihazlarında genel yeniden yönlendirme uzantısı kullanabilirsiniz. İOS/ıpados cihazları için Microsoft 'un Azure AD SSO uzantısı ([Microsoft ENTERPRISE SSO eklentisi](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) ve genel yeniden yönlendirme uzantısı arasında seçim yapabilirsiniz.
 - Kimlik bilgisi türü, sınama ve yanıt kimlik doğrulama akışları için tasarlanmıştır. Apple tarafından sunulan, Kerberos 'a özgü kimlik bilgisi uzantısı ve genel kimlik bilgisi uzantısı arasında seçim yapabilirsiniz.
 
 Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [iOS/ıpados SSO uygulama uzantısı](ios-device-features-settings.md#single-sign-on-app-extension) ve [MacOS SSO uygulama uzantısı](macos-device-features-settings.md#single-sign-on-app-extension).
@@ -212,7 +212,7 @@ Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [iOS/ıpados 
     - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:  
 
         - **iOS/iPadOS**
-        - **Mac OS**
+        - **macOS**
 
     - **Profil**: **cihaz özellikleri**' ni seçin.
 
@@ -227,7 +227,7 @@ Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [iOS/ıpados 
 7. **Yapılandırma ayarları**' nda, seçtiğiniz platforma bağlı olarak, yapılandırabileceğiniz ayarlar farklıdır. Ayrıntılı ayarlar için platformunuzu seçin:
 
     - [iOS/iPadOS](ios-device-features-settings.md)
-    - [Mac OS](macos-device-features-settings.md)
+    - [macOS](macos-device-features-settings.md)
 
 8. **İleri**’yi seçin.
 9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).

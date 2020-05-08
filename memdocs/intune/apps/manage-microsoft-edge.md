@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc1b11fe533499ebe29101c09fb1355cd8d04243
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 373c3c5a6a3167943d78e5a17ac9b7cab8afba8a
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82183084"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943867"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Microsoft Intune ile Microsoft Edge kullanarak Web erişimini yönetme
 
@@ -351,7 +351,7 @@ Varsayılan olarak, iOS 'ta Microsoft Edge, kullanıcılarınızın parolaların
 
 |    Anahtar    |    Değer    |
 |-----------------------|-----------------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **parola** , son kullanıcının parolalarının kaydedilmesini sağlayan istemleri devre dışı bırakacak.    |
+|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **parola** , son kullanıcının parolalarının kaydedilmesini sağlayan istemleri devre dışı bırakacak.    |
 
 ### <a name="disable-users-from-adding-extensions-to-microsoft-edge"></a>Kullanıcıların Microsoft Edge 'e uzantı eklemelerini devre dışı bırak 
 

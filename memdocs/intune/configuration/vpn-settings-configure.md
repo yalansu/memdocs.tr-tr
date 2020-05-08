@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70b0c5693c22b6504016d85e35977c5f99935742
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: c72d2f8d9bd6a7235845863000272f605bb41089
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587196"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943833"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Intune 'da VPN sunucularına bağlanmak için VPN profilleri oluşturma
 
@@ -50,7 +50,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
   - iOS/iPadOS
-  - Mac OS
+  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -60,7 +60,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - Android kurumsal iş profilleri
   - Android kurumsal cihaz sahibi (tam olarak yönetilen)
   - iOS/iPadOS
-  - Mac OS
+  - macOS
 
 - Cisco (IPSec)
   - iOS/iPadOS
@@ -74,7 +74,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
 
 - Özel VPN
   - iOS/iPadOS
-  - Mac OS
+  - macOS
 
   [Özel ayarlarla profil oluşturma](custom-settings-configure.md)içindeki URI ayarlarını kullanarak özel VPN profilleri oluşturun.
 
@@ -83,7 +83,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - Android kurumsal iş profilleri
   - Android kurumsal cihaz sahibi (tam olarak yönetilen)
   - iOS/iPadOS
-  - Mac OS
+  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -108,7 +108,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - Android kurumsal iş profilleri
   - Android kurumsal cihaz sahibi (tam olarak yönetilen)
   - iOS/iPadOS
-  - Mac OS
+  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -117,7 +117,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
   - iOS/iPadOS
-  - Mac OS
+  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -140,7 +140,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
       - **Yalnızca Android kurumsal** > **cihaz sahibi**
       - **Yalnızca Android kurumsal** > **iş profili**
       - **iOS/iPadOS**
-      - **Mac OS**
+      - **macOS**
       - **Windows 10 ve üzeri**
       - **Windows 8.1 ve üzeri**
       - **Windows Phone 8.1**
@@ -158,7 +158,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
     - [Android cihaz yöneticisi](vpn-settings-android.md)
     - [Android Kurumsal](vpn-settings-android-enterprise.md)
     - [iOS/iPadOS](vpn-settings-ios.md)
-    - [Mac OS](vpn-settings-macos.md)
+    - [macOS](vpn-settings-macos.md)
     - [Windows 10](vpn-settings-windows-10.md) (Windows holographic for Business dahil)
     - [Windows 8.1](vpn-settings-windows-8-1.md)
     - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
@@ -185,6 +185,10 @@ VPN profilini oluştururken, Intune’da önceden oluşturduğunuz bir SCEP veya
 VPN profiliniz için sertifika tabanlı kimlik doğrulaması kullanıyorsanız, her cihazın sertifika yetkilinizin yasallığını algılayabilmesi için VPN profilini, sertifika profilini ve güvenilen kök profilini aynı gruplara dağıtın.
 
 Intune’da sertifika profillerini oluşturma ve kullanma hakkında daha fazla bilgi için bkz. [Microsoft Intune ile sertifikaları yapılandırma](../protect/certificates-configure.md).
+
+> [!NOTE]
+> **PKCS içeri aktarılan sertifika** profili türü kullanılarak eklenen sertifikalar VPN kimlik doğrulaması için desteklenmez. **PKCS sertifikaları** profil türü kullanılarak eklenen sertifikalar VPN kimlik doğrulaması için desteklenir.
+
 
 ### <a name="user-name-and-password"></a>Kullanıcı adı ve parola
 

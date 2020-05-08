@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 569a80d21efd82b6008c7aa7a613c089a10c6ff3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5b3052d8d213ce3190ed29b43f580a8de9c840b7
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331114"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943850"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Intune ağ yapılandırma gereksinimleri ve bant genişliği
 
@@ -74,14 +74,6 @@ Intune istemcileri için içerikleri önbelleğe alan bir proxy sunucunun kullan
 
 Önbelleğe içerik almak için proxy sunucu kullanma hakkında bilgi için proxy sunucunuzun çözümünü içeren belgelere bakın.
 
-### <a name="use-background-intelligent-transfer-service-bits-on-computers"></a>Bilgisayarlarda Arka Plan Akıllı Aktarım Hizmeti'ni (BITS) kullanma
-
-Ağ bant genişliğini azaltmak için belirlediğiniz saatlerde Windows yüklü bir bilgisayar üzerinde BITS hizmetini kullanabilirsiniz. BITS ilkesini Intune Aracısı ilkesinin **Ağ bant genişliği** sayfasında yapılandırabilirsiniz.
-
-> [!NOTE]
-> Windows üzerinde MDM yönetimi için yalnızca MobileMSI uygulama türü için işletim sisteminin yönetim arabirimi, indirmek için BIT kullanır. AppX/MsiX, kendi BITS olmayan indirme yığınını kullanırken Intune aracısı üzerinden erişilene Win32 uygulamaları da BITS yerine Teslim İyileştirme özelliğinden faydalanır.
-
-BITS ve Windows bilgisayarlar hakkında daha fazla bilgi için TechNet Kitaplığında [Arka Plan Akıllı Aktarım Hizmeti](https://technet.microsoft.com/library/bb968799.aspx) konusuna bakın.
 
 ### <a name="delivery-optimization"></a>Teslim Iyileştirme
 
@@ -91,7 +83,22 @@ Teslim Iyileştirme tarafından desteklenen Windows 10 sürümlerinin ve içerik
 
 [Teslim iyileştirme](../configuration/delivery-optimization-settings.md) 'yi cihaz yapılandırma profillerinizin bir parçası olarak ayarlayabilirsiniz.
 
-### <a name="use-branchcache-on-computers"></a>Bilgisayarlarda BranchCache kullanma
+
+### <a name="background-intelligent-transfer-service-bits-and-branchcache"></a>Arka Plan Akıllı Aktarım Hizmeti (BITS) ve BranchCache 
+
+Windows bilgisayarlarını [mobil cihaz yönetimi (MDM) ile mobil cihazlar olarak](../enrollment/windows-enroll.md) veya Intune yazılım istemcisi ile bilgisayar olarak yönetmek için Microsoft Intune kullanabilirsiniz. Microsoft, müşterilerin mümkün olduğunda [MDM yönetim çözümünü kullanmalarını](../enrollment/windows-enroll.md) önerir. Bu şekilde yönetildiğinde BranchCache ve BITS desteklenmez. Daha fazla bilgi için bkz. [Windows bilgisayarlarını bilgisayar veya mobil cihaz olarak yönetmeyi karşılaştırın](pc-management-comparison.md).
+
+#### <a name="use-bits-on-computers-requires-intune-software-client"></a>Bilgisayarlarda (BITS) kullan (Intune yazılım istemcisi gerekir)
+
+Ağ bant genişliğini azaltmak için belirlediğiniz saatlerde Windows yüklü bir bilgisayar üzerinde BITS hizmetini kullanabilirsiniz. BITS ilkesini Intune Aracısı ilkesinin **Ağ bant genişliği** sayfasında yapılandırabilirsiniz.
+
+> [!NOTE]
+> Windows üzerinde MDM yönetimi için yalnızca MobileMSI uygulama türü için işletim sisteminin yönetim arabirimi, indirmek için BIT kullanır. AppX/MsiX, kendi BITS olmayan indirme yığınını kullanırken Intune aracısı üzerinden erişilene Win32 uygulamaları da BITS yerine Teslim İyileştirme özelliğinden faydalanır.
+
+BITS ve Windows bilgisayarlar hakkında daha fazla bilgi için TechNet Kitaplığında [Arka Plan Akıllı Aktarım Hizmeti](https://technet.microsoft.com/library/bb968799.aspx) konusuna bakın.
+
+
+#### <a name="use-branchcache-on-computers-requires-intune-software-client"></a>Bilgisayarlarda BranchCache kullanın (Intune yazılım istemcisi gerekir)
 
 Intune istemcileri geniş alan ağı (WAN) trafiğini azaltmak için BranchCache kullanabilir. Aşağıdaki işletim sistemleri BranchCache’i desteklemektedir:
 
@@ -106,8 +113,6 @@ Intune istemcisi bilgisayarlara yüklendiğinde BranchCache ve dağıtılmış �
 
 BranchCache kullanıyorsanız Grup İlkesini ve Intune Güvenlik Duvarı ilkesini yönetmek için kuruluşunuzdaki diğer yöneticilerle birlikte çalışın. Diğer yöneticilerin, BranchCache veya Güvenlik Duvarı özel durumlarını devre dışı bırakan bir ilke dağıtmadığından emin olun. BranchCache hakkında daha fazla bilgi için bkz. [BranchCache 'e genel bakış](https://technet.microsoft.com/library/hh831696.aspx).
 
-> [!NOTE]
-> Windows bilgisayarlarını [mobil cihaz yönetimi (MDM) ile mobil cihazlar olarak](../enrollment/windows-enroll.md) veya Intune yazılım istemcisi ile bilgisayar olarak yönetmek için Microsoft Intune kullanabilirsiniz. Microsoft, müşterilerin mümkün olduğunda [MDM yönetim çözümünü kullanmalarını](../enrollment/windows-enroll.md) önerir. Bu şekilde yönetildiğinde BranchCache desteklenmez. Daha fazla bilgi için bkz. [Windows bilgisayarlarını bilgisayar veya mobil cihaz olarak yönetmeyi karşılaştırın](pc-management-comparison.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

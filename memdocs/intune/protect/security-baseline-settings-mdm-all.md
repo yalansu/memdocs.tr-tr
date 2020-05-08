@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0416332c74ba3305d344794c888d1867c25f8271
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: 67bb805df6406226c67084ed832f5cc590b1664a
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782234"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943918"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Intune için Windows MDM güvenlik taban çizgisi ayarları
 
@@ -1594,7 +1594,7 @@ Bu kural, Adobe Reader 'ın ek işlem oluşturmasını engelleyerek saldırılar
   **Varsayılan**: Evet  
 
 - **Arşiv dosyalarını Tara**:  
-  'SINI[](https://go.microsoft.com/fwlink/?linkid=2114047)
+  CSP: [Defender/AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
   
   Evet olarak ayarlandığında, ZIP veya CAB dosyası taraması gibi arşiv dosyaları zorlanır. Yapılandırılmadı olarak ayarlandığında, bu ayar, arşivlenmiş dosyaları taramak için istemci varsayılana geri döndürülür, ancak kullanıcı bunu devre dışı bırakabilir.
 

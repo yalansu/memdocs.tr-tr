@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/27/2020
+ms.date: 05/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af60c16c4a7c9d27409f82cfc53d5c345dfe1af0
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: fce26aab90989f31ee56a9abd58f617c780d9c4b
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210271"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943884"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune 'da ortak iOS/ıpados özelliklerini kullanmak için iOS ve ıpados cihaz ayarları
 
@@ -107,7 +107,7 @@ Cihaz yuvası için en fazla **altı** öğe (birleştirilmiş uygulamalar ve kl
       Cihaz yuvası için en fazla **20** sayfa ekleyebilirsiniz.
 
 > [!NOTE]
-> Yerleştirme ayarlarını kullanarak simgeler eklediğinizde, ana ekrandaki ve sayfalardaki simgeler kilitlenir ve taşınamaz. Bu, iOS/ıpados ve Apple 'ın MDM ilkeleriyle tasarım sağlayabilir.
+> Sayfa eklemek için giriş ekranı düzen ayarlarını kullandığınızda veya yerleştir 'e sayfalar ve uygulamalar eklemek için, giriş ekranındaki ve sayfalardaki simgeler kilitlenir. Bunlar taşınamaz veya silinemez. Bu davranış, iOS/ıpados ve Apple 'ın MDM ilkeleriyle tasarım sağlayabilir.
 
 #### <a name="example"></a>Örnek
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0098ff8f7916dd08b32fbc4acc9289a403a860ef
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: 7827c85585d630f64ba9c6d342b6275fca506b1d
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881069"
+ms.locfileid: "82906968"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Microsoft Intune için geliştirme aşamasında
 
@@ -152,8 +152,6 @@ PowerShell betikleri, Intune 'da Azure AD kayıtlı cihazlarını destekleyecekt
 ### <a name="log-analytics-will-include-device-details-log--6014987----"></a>Log Analytics, cihaz ayrıntıları günlüğünü içerecektir<!--6014987  -->
 Intune cihaz ayrıntı günlükleri, **raporlar** > **Log Analytics**' te kullanılabilir. Özel sorgular ve Azure çalışma kitapları oluşturmak için cihaz ayrıntılarını ilişkilendirebilirler.
 
-### <a name="new-details-for-the-autopilot-report--5405786---"></a>Autopilot raporu için yeni ayrıntılar<!--5405786 -->
-Uygulama ve ilke yüklemesi durumu hakkında yeni ayrıntıları görmek için [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' ne gidin, **cihazlar** > **izleyici** > **Autopilot dağıtımlar**' ı seçin.
 
 ### <a name="macos-script-support---6376978----"></a>macOS betik desteği<!-- 6376978  -->
 MacOS için betik desteği genel kullanıma sunuldu. Ayrıca, Apple 'ın otomatik cihaz kaydına (eski adıyla Aygıt Kayıt Programı) kaydedilmiş Kullanıcı tarafından atanan betikler ve macOS cihazları için de destek ekleyeceğiz. Daha fazla bilgi için bkz. [Intune 'Da macOS cihazlarında Shell betikleri kullanma](../apps/macos-shell-scripts.md).
