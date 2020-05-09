@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/05/2020
+ms.date: 05/08/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d29da297689f09cfdcbaf884f5f343a519093db
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: 17213a29d5182176fe2fd8e5802e5ca03587d8f7
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881103"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991821"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune son kullanıcı uygulamaları arabirimlerinde yapılan güncelleştirmeler
 
@@ -36,6 +36,26 @@ Bir çalışan ya da öğrenciyseniz, Şirket Portalı yardım belgelerinin ekra
 
 
 
+## <a name="week-of-may-4-2020"></a>4 Mayıs 2020 haftası  
+### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>Android için Şirket Portalı, iş profili kaydından sonra kullanıcıların uygulamaları almasını sağlar <!-- 6103999 -->
+Kullanıcıların uygulamaları bulmasını ve yüklemesini kolaylaştırmak için Şirket Portalı 'teki uygulama içi Kılavuzu geliştirdik. Kullanıcılar, iş profili yönetimine kaydolduktan sonra, Google Play 'in hatalı sürümünde önerilen uygulamaları nasıl bulabileceğinizi açıklayan bir ileti alır. [Android profili ile cihaz kaydetme](../user-help/enroll-device-android-work-profile.md) bölümündeki son adım yeni iletiyi gösterecek şekilde güncelleştirilmiştir. 
+
+![Şirket Portalı, cihazlar sekmesinin örnek görüntüsü Google Play ' ın bozuk sürümünü açmasını sağlar.](./media/whats-new-app-ui/updated-banner-android-2005.png)  
+
+Kullanıcılar ayrıca soldaki Şirket Portalı çekmecede yeni bir **uygulamalar al** bağlantısı görür. 
+
+![Örnek görüntü Şirket Portalı sol taraftaki çekmece, uygulamaları Al menü öğesi vurgulaması.](./media/whats-new-app-ui/updated-drawer-android-2005.png)  
+
+Bu yeni ve geliştirilmiş deneyimlere yönelik bir yöntem oluşturmak için, aşağıdaki görüntüde gösterilen **uygulamalar** sekmesi kaldırılmıştır.  
+
+![Şimdi kaldırılan Şirket Portalı, uygulamalar sekmesinin örnek görüntüsü.](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
+
+
+
+
+
+
+
 ## <a name="week-of-march-2-2020"></a>2 Mart 2020 haftası   
 ### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Android için Şirket Portalı 'de geliştirilmiş oturum açma deneyimi   
 Daha modern, basit ve kullanıcılar için temiz bir deneyim sunmak amacıyla Android için Şirket Portalı uygulamasındaki çeşitli oturum açma ekranlarının yerleşimini güncelleştirdik. Android kayıt yönergelerine ilişkin tüm Şirket Portalı görmek için [Android cihazınızı kaydetme](../user-help/enroll-device-android-company-portal.md) veya [Android iş profiline kaydolma](../user-help/enroll-device-android-work-profile.md)bölümüne gidin.   
@@ -44,7 +64,7 @@ Daha modern, basit ve kullanıcılar için temiz bir deneyim sunmak amacıyla An
 |Güncelleştirildi|Önceki|   
 |---|---|   
 |![Yeni Şirket Portalı oturum açma ekranının örnek görüntüsü, oturum aç düğmesi.](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![Daha önceki Şirket Portalı oturum açma sayfasında, busier tasarımını gösteren örnek resim.](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
-|![Yeni oturum açma ilerleme ekranının örnek görüntüsü, tek bir ilerleme çubuğu gösteriliyor.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Bir busier tasarımını gösteren, önceki oturum açma ilerleme ekranının örnek görüntüsü.](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|  
+|![Yeni oturum açma ilerleme ekranının örnek görüntüsü, tek bir ilerleme çubuğu gösteriliyor.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Bir busier tasarımını gösteren, önceki oturum açma ilerleme ekranının örnek görüntüsü.](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|
 ## <a name="week-of-february-3-2020"></a>3 Şubat 2020 haftası
 
 ### <a name="screen-removed-from-company-portal-android-work-profile-enrollment---6103987---"></a>Şirket Portalı, Android iş profili kaydından kaldırılan ekran <!--6103987 -->

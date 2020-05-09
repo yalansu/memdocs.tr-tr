@@ -18,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81e5dc772ca85bf124af3da33a263b683ea0885b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2ea6d407417300d2b758861ed35fcecc88f7ec74
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326975"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991716"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Intune ve Windows Autopilot kullanarak karma Azure AD 'ye katılmış cihazları dağıtma
 Karma Azure Active Directory (Azure AD) ile birleştirilmiş cihazları ayarlamak için Intune ve Windows Autopilot kullanabilirsiniz. Bunu yapmak için bu makaledeki adımları izleyin.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 [Hibrit Azure AD 'ye katılmış cihazlarınız](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)başarıyla yapılandırılır. Get-MsolDevice cmdlet 'ini kullanarak [cihaz kaydınızı doğruladığınızdan](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) emin olun.
 
@@ -108,6 +108,8 @@ Bilgisayar oluşturma hakları verilen kuruluş biriminin eşleşmesi gerekir:
 ## <a name="install-the-intune-connector"></a>Intune Bağlayıcısını yükleme
 
 Active Directory için Intune Bağlayıcısı, Windows Server 2016 veya üstünü çalıştıran bir bilgisayarda yüklü olmalıdır. Bilgisayarın Internet erişimi de ve Active Directory aynı zamanda erişimine sahip olması gerekir. Birden fazla Active Directory etki alanını desteklemek üzere ölçek ve kullanılabilirliği artırmak için ortamınıza birden fazla bağlayıcı yükleyebilirsiniz. Bağlayıcıyı, başka bir Intune Bağlayıcısı çalıştırmayan bir sunucuya yüklemenizi öneririz.
+
+Intune Bağlayıcısı, [Intune ile aynı uç noktaları](../fundamentals/intune-endpoints.md)gerektirir.
 
 1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, Active Directory > **Windows** >  > **Ekle**için **cihazlar**Windows**Windows kaydı** > **Intune Bağlayıcısı**' nı seçin. 
 2. Bağlayıcıyı indirmek için yönergeleri izleyin.

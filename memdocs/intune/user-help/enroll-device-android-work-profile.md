@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/08/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 839809de89d4220fa87012cd9a28e5f6b6c35dcf
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3007e9a40dd77e156f0c0a77214e819948fc01da
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79328250"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991561"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Cihazı Android iş profiline kaydetme
 
@@ -74,6 +74,15 @@ ms.locfileid: "79328250"
 9. Kurulum tamamlandığında **bitti**' ye dokunun.  
 
     ![Şirket Portalı, şirket erişimi kurulumu ekranının örnek görüntüsü, tamamlanan kurulum ve vurgulama bitti düğmesini gösterir.](./media/work-profile-done-1911.png)  
+
+10. Kuruluşunuzun önerilen uygulamalarını Google Play görüntülemeniz istendiğinde **Aç**' ı seçin. 
+
+    ![Google Play 'ın rozet sürümünü açmak için Şirket Portalı isteminin örnek görüntüsü.](./media/get-apps-banner-android-2005.png) 
+
+    Uygulamaları yüklemeye hazırsanız, doğrudan Google Play uygulamasının rozetlenmiş sürümüne giderek onlara daha sonra erişebilirsiniz. Ayrıca Şirket Portalı menüsünden **uygulamaları al** ' ı seçebilirsiniz.  
+
+    ![Şirket Portalı menünün örnek görüntüsü, uygulamaları al bağlantısı vurgulandığında.](./media/updated-drawer-android-2005.png) 
+
 
 
 ## <a name="next-steps"></a>Sonraki adımlar  

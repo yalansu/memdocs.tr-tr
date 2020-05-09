@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db9164d68783356faf01fe4fc4e8d74f2a4b0869
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 994ab31e2a06b0d2ef570fcfbb4f9d8c6ea7cca4
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023359"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991756"
 ---
-# <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>İOS/ıpados cihazlarını Apple 'ın otomatik cihaz kaydıyla otomatik olarak kaydetme
+# <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS/iPadOS cihazlarını Apple’ın Otomatik Cihaz Kayıt Anlaşması ile otomatik olarak kaydetme
 
 > [!IMPORTANT]
 > Apple, Apple Aygıt Kayıt Programı (DEP) ile Apple otomatik cihaz kaydı (ADE) arasında son zamanlarda değiştirilmiştir. Intune, Intune kullanıcı arabirimini bunu yansıtacak şekilde güncelleştirme sürecinden oluşur. Bu değişiklikler tamamlanana kadar, Intune portalında *aygıt kayıt programı* görmeye devam edersiniz. Gösterildiği her yerde, artık otomatik cihaz kaydını kullanır.
@@ -62,7 +62,7 @@ Apple, iOS/ıpados 5 ' te Denetimli mod sunmuştur. Denetimli modda bulunan bir 
 4. [Assign DEP profile to devices](#assign-an-enrollment-profile-to-devices)
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 - [Apple 'ıN Ade](https://deploy.apple.com) 'de satın alınan cihazlar
 - [Mobil Cihaz Yönetimi (MDM) Yetkilisi](../fundamentals/mdm-authority-set.md)
 - [Apple MDM anında Iletme sertifikası](apple-mdm-push-certificate-get.md)
@@ -148,8 +148,7 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
 
     ![Profil oluşturma ekran görüntüsü.](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. **Temel bilgiler** sayfasında, yönetim amaçları için profil Için bir **ad** ve **Açıklama** girin. Kullanıcılar bu ayrıntıları göremez. Azure Active Directory’de dinamik bir grup oluşturmak için **Ad** alanını kullanabilirsiniz. enrollmentProfileName parametresini, bu kayıt profiliyle cihazlara atamak amacıyla tanımlamak için profil adını kullanın. Kullanıcı benzeşimi ile otomatik cihaz kaydıyla kaydedilen cihazlar için, kaydolan kullanıcının cihaz kurulumundan önce üye olduğu AAD Kullanıcı gruplarını, cihazlara en hızlı ilke teslimini güvence altına alacak şekilde hedefleyin. Kayıt profillerini temel alan dinamik gruplar için uygulamaları ve ilkeleri hedeflemek, kayıt akışını tamamladıktan sonra cihazlara uygulanırken bazı gecikmelere neden olur.
-[Azure Active Directory dinamik grupları](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) hakkında daha fazla bilgi edinin.
+3. **Temel bilgiler** sayfasında, yönetim amaçları için profil Için bir **ad** ve **Açıklama** girin. Kullanıcılar bu ayrıntıları göremez. 
 
     ![Profil adı ve açıklaması.](./media/device-enrollment-program-enroll-ios/image05.png)
 
@@ -264,6 +263,17 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
 16. **İleri ' yi** seçerek **gözden geçir + oluştur** sayfasına gidin.
 
 17. Profili kaydetmek için **Oluştur**’u seçin.
+
+### <a name="dynamic-groups-in-azure-active-directory"></a>Azure Active Directory içindeki dinamik gruplar
+
+Azure Active Directory içinde dinamik bir grup oluşturmak için kayıt **adı** alanını kullanabilirsiniz. Daha fazla bilgi için bkz. [dinamik grupları Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership.md).
+
+Bu kayıt profiliyle cihazları atamak için [Kayıtlıprofilename parametresini](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) tanımlamak üzere profil adını kullanabilirsiniz.
+
+Kullanıcı benzeşimi olan ADE cihazlarda en hızlı ilke teslimi için, kaydolan kullanıcının bir AAD Kullanıcı grubunun cihaz kurulumundan önce bir üye olduğundan emin olun. 
+
+Kayıt profillerine dinamik gruplar atamak, kayıt sonrasında cihazlara uygulama ve ilke sunarken bir gecikmeye neden olabilir.
+
 
 ## <a name="sync-managed-devices"></a>Yönetilen cihazları eşitleme
 Artık Intune’a cihazlarınızı yönetme izni verildiğine göre, yönetilen cihazlarınızı Intune’da Azure portalında görmek için Intune’u Apple ile eşitleyebilirsiniz.

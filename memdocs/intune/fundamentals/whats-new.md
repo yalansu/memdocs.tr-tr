@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/30/2020
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf490c71fdc94b974e53a9d0f388a777e986f13c
-ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
+ms.openlocfilehash: 5b3c8287d9b5ca2d46094d04ee2179128bead4a8
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619585"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991737"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -51,6 +51,14 @@ ms.locfileid: "82619585"
 ### Device security
 ### Intune apps
 ### Monitor and troubleshoot
+
+<!-- ########################## -->
+## <a name="week-of-may-4-2020"></a>4 Mayıs 2020 haftası  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
+
+### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>Android için Şirket Portalı, iş profili kaydından sonra kullanıcıların uygulamaları almasını sağlar <!-- 6103999 -->
+Kullanıcıların uygulamaları bulmasını ve yüklemesini kolaylaştırmak için Şirket Portalı 'teki uygulama içi Kılavuzu geliştirdik. Kullanıcılar, iş profili yönetimine kaydolduktan sonra, Google Play 'in hatalı sürümünde önerilen uygulamaları nasıl bulabileceğinizi açıklayan bir ileti alır. [Android profili ile cihaz kaydetme](../user-help/enroll-device-android-work-profile.md) bölümündeki son adım yeni iletiyi gösterecek şekilde güncelleştirilmiştir. Kullanıcılar ayrıca soldaki Şirket Portalı çekmecede yeni bir **uygulamalar al** bağlantısı görür. Bu yeni ve geliştirilmiş deneyimlere yönelik bir yöntem oluşturmak için, **uygulamalar** sekmesi kaldırılmıştır. Güncelleştirilmiş ekranları görmek için [Intune son kullanıcı uygulamaları Için Kullanıcı Arabirimi güncelleştirmeleri](./whats-new-app-ui.md)' ne gidin. 
 
 <!-- ########################## -->
 ## <a name="week-of-april-20-2020"></a>20 Nisan 2020 haftası
@@ -118,7 +126,7 @@ Yalnızca listedeki ilk kurala göre kabul edilir. Bu davranış sabittir ve Int
 
 Şunlara uygulanır:
 - iOS/iPadOS
-- Mac OS
+- macOS
 
 VPN profilleri hakkında daha fazla bilgi için bkz. [VPN profilleri oluşturma](../configuration/vpn-settings-configure.md).
 
@@ -258,7 +266,7 @@ Yapılandırabileceğiniz ayar hakkında daha fazla bilgi için bkz. [MacOS ciha
 
 Bu özellik şu platformlarda geçerlidir:
 
-- Mac OS
+- macOS
 
 ## <a name="week-of-march-16-2020-2003-service-release"></a>16 Mart 2020 haftası (2003 hizmet sürümü)
 
@@ -826,7 +834,7 @@ Yapılandırabileceğiniz SSO uygulama uzantısı ayarlarının tam aralığın�
 Şunlara uygulanır:
 
 - iOS/iPadOS
-- Mac OS
+- macOS
 
 #### <a name="we-have-updated-two-device-restriction-settings-for-ios-and-ipados-devices-to-correct-their-behavior---5701352------"></a>İOS ve ıpados cihazları için davranışlarını düzeltmek üzere iki cihaz kısıtlama ayarını güncelleştirdik<!-- 5701352    -->
 İOS cihazları için, **Kablosuz PKI güncelleştirmelerine izin** veren cihaz kısıtlama profilleri oluşturabilir ve **USB kısıtlı modunu engeller** (**cihazlar** > **cihaz yapılandırma** > **profilleri** > , profil türü için **cihaz kısıtlamaları** > platform için**iOS/ıpados** **oluşturma** > ). Bu sürümden önce, aşağıdaki ayarlar için Kullanıcı arabirimi ayarları ve açıklamaları hatalıydı ve artık düzeltildi. Bu sürümden itibaren, ayarlar davranışı aşağıdaki gibidir:
