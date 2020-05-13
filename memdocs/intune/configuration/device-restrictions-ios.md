@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f1b183d960f3413e59d29cfb18c5aa0be35ae590
-ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
+ms.openlocfilehash: 49ecd2a1aaa5408a721b06264703720be601c73c
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82862403"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269023"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için iOS ve ıpados cihaz ayarları
 
@@ -151,21 +151,21 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 > Örneğin, **parola süre sonu** ayarını yapılandırır ve bu ilkeyi Kullanıcı tarafından kaydedilen cihazlara gönderirsiniz. Cihazlarda aşağıdakiler olur:
 >
 > - **Parola süre sonu** ayarı yok sayılır.
-> - Veya `1111` `1234`gibi basit parolalara izin verilmez.
+> - Veya gibi basit parolalara `1111` `1234` izin verilmez.
 > - 6 basamaklı bir PIN zorlanır.
 
-- **Basit parolalar**: **blok** daha karmaşık parolalar gerektirir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, `0000` ve `1234`gibi basit parolalara izin verebilir.
+- **Basit parolalar**: **blok** daha karmaşık parolalar gerektirir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, ve gibi basit parolalara izin verebilir `0000` `1234` .
 
 - **Gerekli parola türü**: kuruluşunuzun gerektirdiği gerekli parola karmaşıklığı düzeyini girin. Seçenekleriniz şunlardır:
   - **Cihaz varsayılanı**
   - **Sayısal**: parola yalnızca sayı olmalıdır, örneğin 123456789.
   - **Alfasayısal**: büyük harfler, küçük harfler ve sayısal karakterler içerir.
-- **Paroladaki alfasayısal olmayan karakter sayısı**: 1-4 adresinden, parolada bulunması gereken simge karakterlerinin `#` `@`sayısını girin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Paroladaki alfasayısal olmayan karakter sayısı**: 1-4 adresinden, parolada bulunması gereken simge karakterlerinin sayısını girin `#` `@` . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
 - **Minimum parola uzunluğu**: parolanın, 4-16 karakterden fazla olması gereken minimum uzunluğu girin. Kullanıcı kayıtlı cihazlarda 4 ila 6 karakter uzunluğunda bir uzunluk girin.
   
   > [!NOTE]
-  > Kullanıcı kayıtlı cihazlarda, kullanıcılar 6 basamaktan daha büyük bir PIN ayarlayabilir. Ancak cihazlarda 6 ' dan fazla basamak uygulanmaz. Örneğin, bir yönetici minimum uzunluğu olarak `8`ayarlar. Kullanıcı tarafından kaydedilen cihazlarda, kullanıcılardan yalnızca 6 basamaklı bir PIN ayarlaması gerekir. Intune, Kullanıcı tarafından kaydedilen cihazlarda 6 basamaktan daha büyük bir PIN 'ı zorlamaz.
+  > Kullanıcı kayıtlı cihazlarda, kullanıcılar 6 basamaktan daha büyük bir PIN ayarlayabilir. Ancak cihazlarda 6 ' dan fazla basamak uygulanmaz. Örneğin, bir yönetici minimum uzunluğu olarak ayarlar `8` . Kullanıcı tarafından kaydedilen cihazlarda, kullanıcılardan yalnızca 6 basamaklı bir PIN ayarlaması gerekir. Intune, Kullanıcı tarafından kaydedilen cihazlarda 6 basamaktan daha büyük bir PIN 'ı zorlamaz.
 
 - **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: Cihaz silinmeden önce başarısız oturum açma işlemlerinin sayısını 4-11 adresinden girin.
   
@@ -198,7 +198,7 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
   - **10**: 10 dakikalık bir işlem yapılmadan sonra ekran kilitleniyor.
   - **15**: 15 dakika etkin olmadığında ekran kilitleri.
 
-  Bir değer iOS ve ıpados için uygulanmazsa, Apple en yakın *En düşük* değeri kullanır. Örneğin, dakika girerseniz `4` , ıpados cihazları dakika kullanır. `2` Dakikalar girerseniz `10` , iOS cihazlarının dakikaları kullanılır `5` . Bu bir Apple kısıtlamasıdır.
+  Bir değer iOS ve ıpados için uygulanmazsa, Apple en yakın *En düşük* değeri kullanır. Örneğin, `4` dakika girerseniz, ıpados cihazları `2` dakika kullanır. `10`Dakikalar girerseniz, iOS cihazlarının `5` dakikaları kullanılır. Bu bir Apple kısıtlamasıdır.
   
   > [!NOTE]
   > Bu ayar için Intune kullanıcı arabirimi iOS ve ıpados tarafından desteklenen değerleri birbirinden ayırır. Kullanıcı arabirimi gelecek bir sürümde güncelleştirilmiş olabilir.
@@ -296,7 +296,7 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
   İOS/ıpados 13,0 ile başlayarak, bu ayar denetimli cihazlar gerektirir.
 
   - **App Store 'dan uygulama yükleme**: **blok** , uygulama mağazasını cihaz giriş ekranında göstermez. Kullanıcılar, uygulamaları yüklemek için iTunes 'u veya Apple Configurator 'ı kullanmaya devam edebilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi ana ekranda uygulama deposuna izin verebilir.
-  - **Otomatik uygulama indirmeleri**: **engelleme** , diğer cihazlarda satın alınan uygulamaların otomatik olarak indirilmesini engeller. Mevcut uygulamalarında yapılan güncelleştirmeler bundan etkilenmez. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, diğer iOS/ıpados cihazlarında satın alınan uygulamaların cihaza indirilmesine izin verebilir.
+  - **Otomatik uygulama indirmeleri**: **blok** , diğer cihazlarda satın alınan uygulamaların otomatik olarak indirilmesini ve yeni uygulamalara otomatik güncelleştirme yapılmasını engeller. Mevcut uygulamalarında yapılan güncelleştirmeler bundan etkilenmez. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, diğer iOS/ıpados cihazlarında satın alınan uygulamaların cihazda indirilip güncelleştirmesine izin verebilir.
 
 - **Açık iTunes Music, podcast veya News içeriği**: **Block** açık iTunes Music, podcast veya News içeriğini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, cihazın mağazadan yetişkinlere yönelik olarak derecelendirilmiş içeriğe erişmesine izin verebilir.
 
@@ -418,7 +418,7 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
 Bu listelere uygulama eklemek için şunları yapabilirsiniz:
 
-- İstediğiniz uygulamanın iTunes App mağazası URL'sini **ekleyin**. Örneğin, Microsoft çalışma klasörleri uygulamasını eklemek için veya `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`girin.
+- İstediğiniz uygulamanın iTunes App mağazası URL'sini **ekleyin**. Örneğin, Microsoft çalışma klasörleri uygulamasını eklemek için `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` veya girin `https://apps.apple.com/us/app/work-folders/id950878067?mt=8` .
 
   Uygulamanın URL'sini bulmak için, iTunes App Store'u açın ve uygulamayı arayın. Örneğin `Microsoft Remote Desktop` veya `Microsoft Word` için arama yapın. Uygulamayı seçin ve URL'sini kopyalayın.
 
@@ -448,9 +448,9 @@ Bu özellik şu platformlarda geçerlidir:
 
 - **Uygulama URL 'si**: göstermek veya gizlemek istediğiniz uygulamanın Mağaza uygulama URL 'sini girin. Örneğin:
 
-  - Microsoft çalışma klasörleri uygulamasını eklemek için veya `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`girin. 
+  - Microsoft çalışma klasörleri uygulamasını eklemek için `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` veya girin `https://apps.apple.com/us/app/work-folders/id950878067?mt=8` . 
 
-  - Microsoft Word uygulamasını eklemek için veya `https://itunes.apple.com/de/app/microsoft-word/id586447913` `https://apps.apple.com/de/app/microsoft-word/id586447913`girin.
+  - Microsoft Word uygulamasını eklemek için `https://itunes.apple.com/de/app/microsoft-word/id586447913` veya girin `https://apps.apple.com/de/app/microsoft-word/id586447913` .
 
   Uygulamanın URL'sini bulmak için, iTunes App Store'u açın ve uygulamayı arayın. Örneğin `Microsoft Remote Desktop` veya `Microsoft Word` için arama yapın. Uygulamayı seçin ve URL'sini kopyalayın.
 
@@ -604,7 +604,7 @@ Uygulamaları eklemek için şunları yapabilirsiniz:
 > [!NOTE]
 > Tüm uygulamalar otonom tek uygulama modunu desteklemez. Bir uygulamayı otonom tek uygulama modunda yerleştirmek için, bir paket KIMLIĞI veya bir uygulama yapılandırma ilkesi tarafından teslim edilen anahtar değer çifti genellikle gereklidir. Daha fazla bilgi için Apple MDM belgelerindeki [ `autonomousSingleAppModePermittedAppIDs` kısıtlamaya](https://developer.apple.com/documentation/devicemanagement/restrictions) bakın. Yapılandırmakta olduğunuz uygulama için gereken belirli ayarlar hakkında daha fazla bilgi için satıcı belgelerine bakın.
 
-Örneğin, ölçek odalarını otonom tek uygulama modunda yapılandırmak için, yakınlaştırma `us.zoom.zpcontroller` paket kimliğini kullanmak üzere diyor. Bu örnekte, yakınlaştırma web portalında da bir değişiklik yaparsınız. Daha fazla bilgi için bkz. [zoom yardım merkezi](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
+Örneğin, ölçek odalarını otonom tek uygulama modunda yapılandırmak için, yakınlaştırma paket KIMLIĞINI kullanmak üzere diyor `us.zoom.zpcontroller` . Bu örnekte, yakınlaştırma web portalında da bir değişiklik yaparsınız. Daha fazla bilgi için bkz. [zoom yardım merkezi](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
@@ -616,7 +616,7 @@ Ayrıca, uygulama adlarının ve paket kimliklerinin listesini içeren bir CSV d
 
 ## <a name="kiosk"></a>Bilgi noktası
 
-Intune 'da bilgi noktası modu, tek uygulama modu olarak da bilinir. [Apple MDM belgelerinde](https://developer.apple.com/documentation/devicemanagement/applock)bilgi noktası modu, uygulama kilidi olarak bilinir.
+[Tek uygulama modu](https://support.apple.com/guide/mdm/mdm80a981/web) , Intune 'Da bilgi noktası modu olarak adlandırılır.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
@@ -666,13 +666,13 @@ Intune 'da bilgi noktası modu, tek uygulama modu olarak da bilinir. [Apple MDM 
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: cihaz kaydı, otomatik cihaz kaydı (denetimli)
 
-- **İşaretlenmemiş e-posta etki** > **alanı e-posta alanı URL 'si**: listeye bir veya daha fazla URL ekleyin. Kullanıcılar girdiğiniz etki alanlarından başka bir etki alanından e-posta aldığınızda, bu e-posta iOS/ıpados Mail uygulamasında güvenilmeyen olarak işaretlenir.
+- **İşaretlenmemiş e-posta etki alanları**  >  **E-posta etki alanı URL 'si**: listeye bir veya daha fazla URL ekleyin. Kullanıcılar girdiğiniz etki alanlarından başka bir etki alanından e-posta aldığınızda, bu e-posta iOS/ıpados Mail uygulamasında güvenilmeyen olarak işaretlenir.
 
-- **Yönetilen Web etki alanları** > **Web etki alanı URL 'si**; Listeye bir veya daha fazla URL ekleyin. Belgeler girdiğiniz etki alanlarından indirildiğinde yönetilen belgeler olarak değerlendirilir. Bu ayar yalnızca Safari tarayıcısı kullanılarak indirilen belgeler için geçerlidir.
+- **Yönetilen Web etki alanları**  >  **Web etki alanı URL 'si**; Listeye bir veya daha fazla URL ekleyin. Belgeler girdiğiniz etki alanlarından indirildiğinde yönetilen belgeler olarak değerlendirilir. Bu ayar yalnızca Safari tarayıcısı kullanılarak indirilen belgeler için geçerlidir.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
-- **Safari parola otomatik doldurma etki** > **alanı URL 'si**: listeye bir veya daha fazla URL ekleyin. Kullanıcılar yalnızca bu listedeki URL’lerdeki parolaları kaydedebilir. Bu ayar yalnızca Safari tarayıcısı ve denetimli moddaki cihazlar için geçerlidir. Herhangi bir URL girmezseniz, parolalar tüm Web sitelerinden kaydedilebilir.
+- **Safari parola otomatik doldurma etki alanları**  >  **Etki alanı URL 'si**: listeye bir veya daha fazla URL ekleyin. Kullanıcılar yalnızca bu listedeki URL’lerdeki parolaları kaydedebilir. Bu ayar yalnızca Safari tarayıcısı ve denetimli moddaki cihazlar için geçerlidir. Herhangi bir URL girmezseniz, parolalar tüm Web sitelerinden kaydedilebilir.
 
   Bu ayarın geçerli olduğu sürümler:  
   - iOS 9,3 ve üzeri
@@ -682,7 +682,7 @@ Intune 'da bilgi noktası modu, tek uygulama modu olarak da bilinir. [Apple MDM 
 
 iOS/ıpados Denetimli mod yalnızca Apple Aygıt Kayıt Programı aracılığıyla veya Apple Configurator kullanılarak ilk cihaz kurulumu sırasında etkinleştirilebilir. Denetimli mod etkinleştirildikten sonra, Intune şu işlevleri kullanarak bir cihazı yapılandırabilir:
 
-- Bilgi noktası modu (tek uygulama modu): Apple MDM belgelerinde "uygulama kilidi" adı verilir.
+- Bilgi noktası modu (tek uygulama modu): [Apple geliştirici belgelerinde](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf)"uygulama kilidi" olarak adlandırılır.
 - Etkinleştirme Kilidini Devre Dışı Bırakma 
 - Otonom Tek Uygulama Modu 
 - Web İçeriği Filtresi 

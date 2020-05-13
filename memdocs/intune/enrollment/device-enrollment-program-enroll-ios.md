@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 994ab31e2a06b0d2ef570fcfbb4f9d8c6ea7cca4
-ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
+ms.openlocfilehash: dd999f621375cfdbfa80bf076766be20053221dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82991756"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269074"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS/iPadOS cihazlarını Apple’ın Otomatik Cihaz Kayıt Anlaşması ile otomatik olarak kaydetme
 
@@ -85,7 +85,7 @@ Bir belirteç oluşturmak için [Apple Business Manager (ABA)](https://business.
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>1. Adım. Belirteci oluşturmak için gereken Intune ortak anahtar sertifikasını indirin.
 
-1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **cihazlar** > **iOS** > **iOS kayıt** > **kayıt programı belirteçleri** > **Ekle**' yi seçin.
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **cihazlar**  >  **iOS**  >  **iOS kayıt**  >  **kayıt programı belirteçleri**  >  **Ekle**' yi seçin.
 
     ![Bir kayıt programı belirteci alın.](./media/device-enrollment-program-enroll-ios/image01.png)
 
@@ -143,8 +143,8 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
 > Bir VPP belirteci için yeterli Şirket Portalı lisansı yoksa veya belirtecin süresi dolmuşsa cihazlar engellenir. Belirtecin süresinin dolmasına az zaman kaldığında veya lisans sayısı azaldığında Intune'da bir uyarı görüntülenir.
  
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **iOS** > **iOS kaydı** > **kayıt programı belirteçleri**' ni seçin.
-2. Bir belirteç seçin, **profiller** > **profil** > oluştur**iOS**' u seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **iOS**  >  **iOS kaydı**  >  **kayıt programı belirteçleri**' ni seçin.
+2. Bir belirteç seçin, **profiller**  >  **Profil oluştur**  >  **iOS**' u seçin.
 
     ![Profil oluşturma ekran görüntüsü.](./media/device-enrollment-program-enroll-ios/image04.png)
 
@@ -197,7 +197,7 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
     Kullanıcılara cihazlarının denetimli olduğu iki yolla bildirilir:
 
    - Kilit ekranında “Bu iPhone, Contoso tarafından yönetilmektedir.” yazar.
-   - **Ayarlar** > **General**genel > **hakkında** ekranı şöyle diyor: "Bu iPhone denetimli. ifadesi ve
+   - **Ayarlar**  >  **genel**  >  **hakkında** ekranı şöyle diyor: "Bu iPhone denetimli. ifadesi ve
 
      > [!NOTE]
      > Denetim olmadan kaydedilen bir cihaz, yalnızca Apple Configurator kullanılarak sıfırlanıp denetimli yapılabilir. Bu şekilde cihazın sıfırlanması, bir iOS/ıpados cihazının USB kablosuyla bir Mac 'e bağlanmasını gerektirir. Bu konu hakkında daha fazla bilgi için [Apple Configurator belgelerine](http://help.apple.com/configurator/mac/2.3) bakın.
@@ -205,8 +205,8 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
 10. Bu profili kullanan cihazlarda kilitli kayıt isteyip istemediğinizi seçin. **Kilitli kayıt** , yönetim profilinin **Ayarlar** menüsünden kaldırılmasına Izin veren iOS/ıpados ayarlarını devre dışı bırakır. Cihazı kaydettikten sonra cihazı silmeden bu ayarı değiştiremezsiniz. Bu cihazlarda **Denetimli** Yönetim Modu *Evet* olarak ayarlı olmalıdır. 
 
     > [!NOTE]
-    > Cihaz, **kilitli kayıt**ile kaydedildikten sonra, Şirket portalı uygulamasında, kullanıcılar **cihaz kaldırma** veya **fabrika sıfırlama** 'yı kullanamaz. Seçenekler Kullanıcı tarafından kullanılamaz. Kullanıcı da Şirket Portalı Web sitesinde (https://portal.manage.microsoft.com).
-    > Ayrıca, bir KCG cihazı Apple otomatik cihaz kayıt cihazına dönüştürülürse ve **kilitli bir kayıt** etkin profille kaydedildiyse, kullanıcının **cihaz kaldırma** ve **fabrika sıfırlamasını** 30 gün sonra kullanmasına izin verilir ve sonra seçenekler devre dışı bırakılır veya kullanılamaz. Başvuru: https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859.
+    > Cihaz, **kilitli kayıt**ile kaydedildikten sonra, Şirket portalı uygulamasında, kullanıcılar **cihaz kaldırma** veya **fabrika sıfırlama** 'yı kullanamaz. Seçenekler Kullanıcı tarafından kullanılamaz. Kullanıcı da Şirket Portalı Web sitesinde ( https://portal.manage.microsoft.com) .
+    > Ayrıca, bir KCG cihazı Apple otomatik cihaz kayıt cihazına dönüştürülürse ve **kilitli bir kayıt** etkin profille kaydedildiyse, kullanıcının **cihaz kaldırma** ve **fabrika sıfırlamasını** 30 gün sonra kullanmasına izin verilir ve sonra seçenekler devre dışı bırakılır veya kullanılamaz. Başvuru: https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859 .
 
 11. Bu profili kullanan cihazların **Bilgisayarlarla eşitleme** imkanının olup olmayacağını seçin. **Sertifikaya göre Apple Configurator’a izin ver**’i seçerseniz, **Apple Configurator Sertifikaları**’nın altında bir sertifika seçmeniz gerekir.
 
@@ -220,7 +220,7 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
 
 14. **İleri ' yi seçin: Kurulum Yardımcısı özelleştirmesi**.
 
-15. **Kurulum Yardımcısı özelleştirmesi** sayfasında, aşağıdaki profil ayarlarını yapılandırın: ![Kurulum Yardımcısı özelleştirmesi.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
+15. **Kurulum Yardımcısı özelleştirmesi** sayfasında, aşağıdaki profil ayarlarını yapılandırın: ![ Kurulum Yardımcısı özelleştirmesi.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
     | Departman ayarları | Açıklama |
@@ -266,9 +266,9 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
 
 ### <a name="dynamic-groups-in-azure-active-directory"></a>Azure Active Directory içindeki dinamik gruplar
 
-Azure Active Directory içinde dinamik bir grup oluşturmak için kayıt **adı** alanını kullanabilirsiniz. Daha fazla bilgi için bkz. [dinamik grupları Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership.md).
+Azure Active Directory içinde dinamik bir grup oluşturmak için kayıt **adı** alanını kullanabilirsiniz. Daha fazla bilgi için bkz. [dinamik grupları Azure Active Directory](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
 
-Bu kayıt profiliyle cihazları atamak için [Kayıtlıprofilename parametresini](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) tanımlamak üzere profil adını kullanabilirsiniz.
+Bu kayıt profiliyle cihazları atamak için [Kayıtlıprofilename parametresini](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) tanımlamak üzere profil adını kullanabilirsiniz.
 
 Kullanıcı benzeşimi olan ADE cihazlarda en hızlı ilke teslimi için, kaydolan kullanıcının bir AAD Kullanıcı grubunun cihaz kurulumundan önce bir üye olduğundan emin olun. 
 
@@ -278,7 +278,7 @@ Kayıt profillerine dinamik gruplar atamak, kayıt sonrasında cihazlara uygulam
 ## <a name="sync-managed-devices"></a>Yönetilen cihazları eşitleme
 Artık Intune’a cihazlarınızı yönetme izni verildiğine göre, yönetilen cihazlarınızı Intune’da Azure portalında görmek için Intune’u Apple ile eşitleyebilirsiniz.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **iOS** > **iOS kaydı** > **kayıt programı belirteçleri** ' ni seçin > listeden bir belirteç seçin > **cihazlar** > **eşitleme**' yi seçin. ![Kayıt programı cihazları düğümünün ve eşitleme bağlantısının ekran görüntüsü.](./media/device-enrollment-program-enroll-ios/image06.png)
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **iOS** > **iOS kaydı** > **kayıt programı belirteçleri** ' ni seçin > listeden bir belirteç seçin > **cihazlar** > **eşitleme**' yi seçin. ![ Kayıt programı cihazları düğümünün ve eşitleme bağlantısının ekran görüntüsü.](./media/device-enrollment-program-enroll-ios/image06.png)
 
    Intune 'un kabul edilebilir kayıt programı trafiğine yönelik koşullarını izlemek için aşağıdaki kısıtlamaları uygular:
    - Tam eşitleme en sık yedi günde bir çalıştırılabilir. Tam eşitleme sırasında Intune, Intune’a bağlı Apple MDM sunucusuna atanan seri numaraların tam güncelleştirilmiş bir listesini alır. Bir ADE cihazı Intune portalından silinirse, bu, ADE portalındaki Apple MDM sunucusundan atanmamış olmalıdır. Atamanın kaldırılmaması durumunda bu cihazlar tam eşitleme çalıştırılana kadar Intune'a yeniden aktarılamaz.   
@@ -291,7 +291,7 @@ Cihazların kaydedilmesi için bunlara bir kayıt programı profili atamalısın
 >[!NOTE]
 >Ayrıca, **Apple Seri Numaraları** dikey penceresinde profillere seri numaralar da atayabilirsiniz.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **iOS** > **iOS kaydı** > **kayıt programı belirteçleri** ' ni seçin > listeden bir belirteç seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **iOS**  >  **iOS kaydı**  >  **kayıt programı belirteçleri** ' ni seçin > listeden bir belirteç seçin.
 2. **Cihazlar** > listeden cihazları seçin > **Profil ata**’yı seçin.
 3. **Profil ata**'nın altında cihazlar için bir profil seçin > **Ata**’ya tıklayın.
 
@@ -299,7 +299,7 @@ Cihazların kaydedilmesi için bunlara bir kayıt programı profili atamalısın
 
 Belirli bir belirteç ile kaydedilen tüm cihazlara uygulanacak varsayılan bir profil seçebilirsiniz.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **iOS** > **iOS kaydı** > **kayıt programı belirteçleri** ' ni seçin > listeden bir belirteç seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **iOS**  >  **iOS kaydı**  >  **kayıt programı belirteçleri** ' ni seçin > listeden bir belirteç seçin.
 2. **Varsayılan Profil Ayarla**’yı seçin, açılan listeden bir profil seçin ve daha sonra **Kaydet**’e tıklayın. Profil, bu belirteçle kaydedilen tüm cihazlara uygulanacaktır.
 
 ## <a name="distribute-devices"></a>Cihazları dağıtma
@@ -319,7 +319,7 @@ Bkz. [aygıt kayıt programı iOS/ıpados cihazınızı Intune 'A kaydetme](../u
     ![Yeni belirteç oluşturma ekran görüntüsü.](./media/device-enrollment-program-enroll-ios/generatenewtoken.png)
 
 4. **Sunucu Belirteciniz**’i seçin.  
-5. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **iOS** > **iOS kaydı** > **kayıt programı belirteçleri** ' ni seçin > belirteci seçin.
+5. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **iOS**  >  **iOS kaydı**  >  **kayıt programı belirteçleri** ' ni seçin > belirteci seçin.
     ![Kayıt programı belirteçlerinin ekran görüntüsü.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
 6. **Belirteci yenile**’yi seçin ve orijinal belirteci oluşturmak için kullanılan Apple kimliğini girin.  
@@ -335,8 +335,8 @@ Kayıt profili belirteçlerini Intune 'dan olduğu sürece silebilirsiniz.
 - belirtece hiçbir cihaz atanmadı
 - varsayılan profile hiçbir cihaz atanmadı
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **iOS/MacOS** > **iOS/MacOS kaydı** > **kayıt programı belirteçleri** ' ni seçin > belirteci > **cihazları**seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **iOS/MacOS**  >  **iOS/MacOS kaydı**  >  **kayıt programı belirteçleri** ' ni seçin > belirteci > **cihazları**seçin.
 2. Belirtece atanan tüm cihazları silin.
-3. **Cihazlar** > **iOS/MacOS** > **iOS/MacOS kayıt** > **kayıt programı belirteçleri** ' ne gidin > belirteç > **profilleri**' ni seçin.
+3. **Cihazlar**  >  **iOS/MacOS**  >  **iOS/MacOS kayıt**  >  **kayıt programı belirteçleri** ' ne gidin > belirteç > **profilleri**' ni seçin.
 4. Varsayılan bir profil varsa, silin.
-5. **Cihazlara** > git**iOS/MacOS** > **iOS/MacOS kayıt** > **programı belirteçleri** > > **Sil**belirtecini seçin.
+5. Cihazlara git **Devices**  >  **iOS/MacOS**  >  **iOS/MacOS kayıt**  >  **programı belirteçleri** > > **Sil**belirtecini seçin.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8710043244e0b6becebef60890ac1a0ec3105971
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 80e15e78e270ae72bdf584e9db967cae81d3ac2b
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254648"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343006"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Cihaz kayıt yöneticisi hesabı kullanarak cihazları Intune 'A kaydetme
 
@@ -47,13 +47,15 @@ DEM kullanıcı hesapları ve bir DEM kullanıcı hesabıyla kaydedilen cihazlar
 
 ## <a name="enrollment-methods-supported-by-dem-accounts"></a>DEM hesapları tarafından desteklenen kayıt yöntemleri
 
+DEM hesaplarını kullanarak cihazları kaydetmek için aşağıdaki yöntemleri kullanabilirsiniz:
+
 - [Windows Autopilot](enrollment-autopilot.md)
 - [Windows cihazları toplu kaydı](windows-bulk-enroll.md)
 - DEM Şirket Portalı aracılığıyla başlatıldı
 
 ## <a name="add-a-device-enrollment-manager"></a>Cihaz kayıt yöneticisi ekleme
 
-1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar** > **kayıt cihazları** > **Cihaz Kayıt yöneticileri**' ni seçin.
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar**  >  **kayıt cihazları**  >  **Cihaz Kayıt yöneticileri**' ni seçin.
 
 2. **Add (Ekle)** seçeneğini belirleyin.
 
@@ -73,6 +75,6 @@ Cihaz kayıt yöneticisinin kaldırılması, kayıtlı cihazları etkilemez.
 
 **Cihaz kayıt yöneticisi kaldırmak için**
 
-1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar** > **kayıt cihazları** > **Cihaz Kayıt yöneticileri**' ni seçin.
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar**  >  **kayıt cihazları**  >  **Cihaz Kayıt yöneticileri**' ni seçin.
 2. **Cihaz kayıt yöneticileri** dikey penceresinde DEM kullanıcısını ve **Sil**’i seçin.
 
