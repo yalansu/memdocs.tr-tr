@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 12d04869834691167c2f31be853029c9a939a338
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 476f0c3ef058c1c051ce3b571adec5d48787ee0e
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333094"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401707"
 ---
 # <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>Microsoft Intune 'da Windows 10 cihazlarda bir test alma uygulaması kullanın
-
-
 
 Intune 'da eğitim profilleri, öğrenciler için cihazlarda bir test veya sınava yönelik olarak tasarlanmıştır. Bu özellik bir test URL 'SI eklemek için **bir test** uygulaması ve ayarlar alma, son kullanıcıların teste nasıl oturum açmasını ve daha fazlasını içerir. Bu özellik aşağıdaki platformu destekler:
 
@@ -39,24 +37,39 @@ Bu makalede Microsoft Intune ' de bir cihaz yapılandırma profili oluşturma ad
 ## <a name="create-a-device-profile"></a>Bir cihaz profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
+
+    - **Platform**: **Windows 10 ve üstünü**seçin.
+    - **Profil**: **güvenli değerlendirme (eğitim)** seçeneğini belirleyin.
+
+4. **Oluştur**’u seçin.
+5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
     - **Ad**: Yeni profil için açıklayıcı bir ad girin.
     - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
-    - **Platform**: **Windows 10 ve üzeri** seçeneğini belirleyin.
-    - **Profil**: **eğitim profili**seçin.
 
-4. Yapılandırmak istediğiniz ayarları girin:
+6. **İleri**’yi seçin.
+7. **Yapılandırma ayarları**' nda, yapılandırmak istediğiniz ayarları girin:
 
     - [Windows 10 ve üzeri](education-settings-windows.md)
 
-5. Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin.
+8. **İleri**’yi seçin.
 
-Ayarlarınızı girdikten ve profili oluşturduktan sonra profiliniz profil listesinde gösterilir. Daha sonra [bu profili bazı gruplara atayın](device-profile-assign.md).
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+
+    **İleri**’yi seçin.
+
+10. **Atamalar**' da, profilinizi alacak kullanıcıları veya kullanıcı grubunu seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
+
+    **İleri**’yi seçin.
+
+11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
+
+Her cihazın bir sonraki denetimi sırasında ilke uygulanır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 [Windows 10 eğitim ayarlarının](education-settings-windows.md) ve açıklamalarının listesini görüntüleyin.
 
-[Profili atama](device-profile-assign.md) ve [durumunu izleme](device-profile-monitor.md).
+[Profil atandıktan](device-profile-assign.md)sonra [durumunu izleyin](device-profile-monitor.md).

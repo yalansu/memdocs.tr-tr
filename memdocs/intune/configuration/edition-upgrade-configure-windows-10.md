@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 068363167d5c6abb54dde26939b102db2f120d27
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b7c75d75b6afef728b23093dd4313f1c028fc5c7
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333110"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401722"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Microsoft Intune kullanarak cihazlarda Windows 10 sürümlerini yükseltme veya S modunu değiştirme
-
-
 
 Mobil cihaz yönetimi (MDM) çözümünüzün bir parçası olarak, Windows 10 cihazlarınızı yükseltmek isteyebilirsiniz. Örneğin, Windows 10 Professional cihazlarınızı Windows 10 Enterprise 'a yükseltmek istiyorsunuz. Ya da cihazın S modundan geçiş istediğini tercih edersiniz.
 
@@ -47,7 +45,7 @@ Bu makalede, desteklenen yükseltme yolları listelenmekte ve cihaz yapılandır
 > [!NOTE]
 > İlke atamasını daha sonra kaldırırsanız, cihazdaki Windows sürümü geri döndürülemez. Cihaz normal olarak çalışmaya devam eder.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Cihazları yükseltmeden önce, aşağıdaki önkoşullara sahip olduğunuzdan emin olun:
 
@@ -97,24 +95,40 @@ Aşağıdaki tabloda, Windows 10 sürümü yükseltme profili için desteklenen 
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
-    - **Ad**: Yeni profil için açıklayıcı bir ad girin. Örneğin, veya `Windows 10 edition upgrade profile` `Windows 10 switch off S mode`gibi bir ad girin.
-    - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
     - **Platform**: **Windows 10 ve üstünü**seçin.
-    - **Profil türü**: **sürüm yükseltme**' yi seçin.
-    - **Ayarlar**: yapılandırmak istediğiniz ayarları girin. Tüm ayarların bir listesi ve ne yapacaklarınız için, bkz.:
+    - **Profil**: **sürüm yükseltme**' yi seçin.
 
-        - [Windows 10 yükseltme ve S modu](edition-upgrade-windows-settings.md)
-        - [Windows 10 Holographic for Business](holographic-upgrade.md)
+4. **Oluştur**’u seçin.
+5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
-4. Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin.
+    - **Ad**: Yeni profil için açıklayıcı bir ad girin. Örneğin, veya gibi bir ad `Windows 10 edition upgrade profile` girin `Windows 10 switch off S mode` .
+    - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
 
-Profil oluşturulur ve listede gösterilir. [Profili atayıp](device-profile-assign.md) [durumunu izlemeyi](device-profile-monitor.md)unutmayın.
+6. **İleri**’yi seçin.
+7. **Yapılandırma ayarları**' nda, yapılandırmak istediğiniz ayarları girin. Tüm ayarların bir listesi ve ne yapacaklarınız için, bkz.:
+
+    - [Windows 10 yükseltme ve S modu](edition-upgrade-windows-settings.md)
+    - [Windows 10 Holographic for Business](holographic-upgrade.md)
+
+8. **İleri**’yi seçin.
+
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+
+    **İleri**’yi seçin.
+
+10. **Atamalar**' da, profilinizi alacak kullanıcıları veya kullanıcı grubunu seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
+
+    **İleri**’yi seçin.
+
+11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
+
+Her cihazın bir sonraki denetimi sırasında ilke uygulanır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Profil oluşturulduktan sonra atanmak için hazırlanın. Ardından [profili atayın](device-profile-assign.md) ve [durumunu izleyin](device-profile-monitor.md).
+[Profil atandıktan](device-profile-assign.md)sonra [durumunu izleyin](device-profile-monitor.md).
 
-[Windows 10](edition-upgrade-windows-settings.md) ve [Windows holographic for Business](holographic-upgrade.md) cihazlarına yönelik yükseltme ve S modu ayarlarını görüntüleyin.
+[Windows 10](edition-upgrade-windows-settings.md) ve [Windows holographic for Business](holographic-upgrade.md) cihazları için yükseltme ve S modu ayarlarına bakın.

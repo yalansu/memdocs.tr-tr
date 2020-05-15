@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 179314f363c8f086239b2c926c4bed8d09c68204
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f1a11d9b41d17935d9c74490aabb5b983d04b4e1
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333042"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401515"
 ---
 # <a name="control-access-accounts-and-power-features-on-shared-pc-or-multi-user-devices-using-intune"></a>Intune kullanarak paylaşılan bılgısayar veya çok kullanıcılı cihazlarda erişimi, hesapları ve güç özelliklerini denetleme
 
@@ -43,21 +43,42 @@ Profil Intune 'da oluşturulduğunda, profilinizi kuruluşunuzdaki cihaz gruplar
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
+
+   - **Platform**: **Windows 10 ve üstünü**seçin.
+   - **Profil**: **paylaşılan çok kullanıcılı cihaz**' ı seçin.
+
+4. **Oluştur**’u seçin.
+5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
    - **Ad**: Yeni profil için açıklayıcı bir ad girin.
    - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
-   - **Platform**: **Windows 10 ve üstünü**seçin.
-   - **Profil türü**: **paylaşılan çok kullanıcılı cihaz**' ı seçin.
 
-4. [Windows 10 ve üzeri](shared-user-device-settings-windows.md) ya da [Windows holographic for Business](shared-user-device-settings-windows-holographic.md)için ayarları yapılandırın.
+6. **İleri**’yi seçin.
+7. **Yapılandırma ayarları**' nda, seçtiğiniz platforma bağlı olarak, yapılandırabileceğiniz ayarlar farklıdır. Ayrıntılı ayarlar için platformunuzu seçin:
 
-5. Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin.
+    - [Windows 10 ve üzeri](shared-user-device-settings-windows.md)
+    - [Windows 10 Holographic for Business](shared-user-device-settings-windows-holographic.md)
 
-Profiliniz oluşturuldu ve listede gösteriliyor, ancak henüz bir şey gerçekleştirmiyor. Profili kuruluşunuzdaki cihaz gruplarına [atadığınızdan](device-profile-assign.md) emin olun.
+8. **İleri**’yi seçin.
+
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+
+    **İleri**’yi seçin.
+
+10. **Atamalar**' da, profilinizi alacak cihazlar grubunu seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
+
+    **İleri**’yi seçin.
+
+    > [!NOTE]
+    > Profili kuruluşunuzdaki cihaz gruplarına atadığınızdan emin olun.
+
+11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
+
+Her cihazın bir sonraki denetimi sırasında ilke uygulanır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [Windows 10 ve daha yeni](shared-user-device-settings-windows.md) ve [Windows holographic for Business](shared-user-device-settings-windows-holographic.md)için tüm ayarları görüntüleyin.
-- [Profili atama](device-profile-assign.md) ve [durumunu izleme](device-profile-monitor.md).
+- [Profil atandıktan](device-profile-assign.md)sonra [durumunu izleyin](device-profile-monitor.md).

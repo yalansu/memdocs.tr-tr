@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df8f6ba6873e98663be853e134995bab640541fc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: dce3c269686c6928e495796dedbadc6a1ba51a99
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79332106"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401619"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Windows cihazlarında cihaz üretici yazılımı yapılandırma arabirimi profillerini Microsoft Intune (Genel Önizleme) kullanma
-
-
 
 Autopilot cihazlarını yönetmek için Intune kullandığınızda, cihaz üretici yazılımı yapılandırma arabirimini (DFCı) kullanarak, UEFı (BIOS) ayarlarını, kaydolduktan sonra yönetebilirsiniz. Avantajlar, senaryolar ve önkoşullara genel bakış için bkz. [DFCı 'Ya genel bakış](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 
@@ -78,34 +76,38 @@ Bu profil, Windows kurulumu sırasında cihazların doğrulanıp doğrulandığ�
 Bu profil, yapılandırdığınız DFCı ayarlarını içerir.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
+
+    - **Platform**: **Windows 10 ve üzeri** seçeneğini belirleyin.
+    - **Profil**: **cihaz üretici yazılımı yapılandırma arabirimini**seçin.
+
+4. **Oluştur**’u seçin.
+5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
     - **Ad**: profil için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı **Windows: Windows cihazlarında dfcı ayarlarını yapılandırın**.
     - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
-    - **Platform**: **Windows 10 ve üzeri** seçeneğini belirleyin.
-    - **Profil türü**: **cihaz üretici yazılımı yapılandırma arabirimini**seçin.
 
-4. Şu ayarları yapılandırın:
+6. **İleri**’yi seçin.
+7. **Yapılandırma ayarları**' nda, aşağıdaki ayarları yapılandırın:
 
     - **Yerel kullanıcının UEFI (BIOS) ayarlarını değiştirmesine Izin ver**: seçenekleriniz:
       - **Yalnızca yapılandırılmadı**ayarı: Yerel Kullanıcı, Intune tarafından **etkinleştirmek** veya **devre dışı bırakmak** için açıkça ayarlanmış olan bu ayarlar *dışında* herhangi bir ayarı değiştirebilir.
       - **Hiçbiri**: Yerel Kullanıcı, dfcı profilinde görünmeyen ayarlar dahil olmak üzere UEFı (BIOS) ayarlarını değiştiremeyebilir.
 
     - **CPU ve GÇ Sanallaştırması**: seçenekleriniz:
-        - **Yapılandırılmadı**: Intune bu özelliğe dokunmaz ve tüm ayarları olduğu gibi bırakır.
+        - **Yapılandırılmadı**: Intune bu ayarı değiştirmez veya güncelleştirmez.
         - **Etkin**: BIOS, platformun CPU ve GÇ sanallaştırma özelliklerini işletim sistemi tarafından kullanılmak üzere sunar. Windows sanallaştırma tabanlı güvenlik ve cihaz koruyucu teknolojilerini etkinleştirir.
-        - **Devre dışı bırak**: BIOS, platform CPU & IO sanallaştırma yeteneklerini devre dışı bırakır ve bunların kullanılmasını önler.
     - **Kameralar**: seçenekleriniz:
-        - **Yapılandırılmadı**: Intune bu özelliğe dokunmaz ve tüm ayarları olduğu gibi bırakır.
+        - **Yapılandırılmadı**: Intune bu ayarı değiştirmez veya güncelleştirmez.
         - **Etkin**: UEFı (BIOS) tarafından doğrudan yönetilen tüm yerleşik kameralar etkindir. USB kameraları gibi çevre birimleri etkilenmez.
         - **Devre dışı**: UEFı (BIOS) tarafından doğrudan yönetilen tüm yerleşik kamera devre dışı bırakıldı. USB kameraları gibi çevre birimleri etkilenmez.
     - **Mikrofonlar ve hoparlörler**: seçenekleriniz:
-        - **Yapılandırılmadı**: Intune bu özelliğe dokunmaz ve tüm ayarları olduğu gibi bırakır.
+        - **Yapılandırılmadı**: Intune bu ayarı değiştirmez veya güncelleştirmez.
         - **Etkin**: UEFı (BIOS) tarafından doğrudan yönetilen tüm yerleşik mikrofonlar ve hoparlörler etkindir. USB cihazları gibi çevre birimleri etkilenmez.
         - **Devre dışı**: UEFı (BIOS) tarafından doğrudan yönetilen tüm yerleşik mikrofonlar ve hoparlörler devre dışı bırakılır. USB cihazları gibi çevre birimleri etkilenmez.
     - **Radyolar (Bluetooth, Wi-Fi, NFC vb.)**: seçenekleriniz:
-        - **Yapılandırılmadı**: Intune bu özelliğe dokunmaz ve tüm ayarları olduğu gibi bırakır.
+        - **Yapılandırılmadı**: Intune bu ayarı değiştirmez veya güncelleştirmez.
         - **Etkin**: UEFı (BIOS) tarafından doğrudan yönetilen tüm yerleşik radyolar etkindir. USB cihazları gibi çevre birimleri etkilenmez.
         - **Devre dışı**: UEFı (BIOS) tarafından doğrudan yönetilen tüm yerleşik radyolar devre dışı bırakıldı. USB cihazları gibi çevre birimleri etkilenmez.
 
@@ -113,19 +115,31 @@ Bu profil, yapılandırdığınız DFCı ayarlarını içerir.
         > **Radyoların** ayarını devre dışı bırakırsanız, cihaz kablolu ağ bağlantısı gerektirir. Aksi takdirde, cihaz yönetilebilir olabilir.
 
     - **Dış medyadan (USB, SD) önyükleme**: seçenekleriniz:
-        - **Yapılandırılmadı**: Intune bu özelliğe dokunmaz ve tüm ayarları olduğu gibi bırakır.
+        - **Yapılandırılmadı**: Intune bu ayarı değiştirmez veya güncelleştirmez.
         - **Etkin**: UEFı (BIOS), sabit olmayan sürücü depolamadan önyükleme yapılmasına izin verir.
         - **Devre dışı**: UEFı (BIOS), sabit olmayan sürücü depolamadan önyüklenmesine izin vermez.
     - **Ağ bağdaştırıcılarından önyükleme**: seçenekleriniz:
-        - **Yapılandırılmadı**: Intune bu özelliğe dokunmaz ve tüm ayarları olduğu gibi bırakır.
+        - **Yapılandırılmadı**: Intune bu ayarı değiştirmez veya güncelleştirmez.
         - **Etkin**: UEFı (BIOS), yerleşik ağ arabirimlerinden önyüklenmesine izin verir.
         - **Devre dışı**: UEFı (BIOS), yerleşik ağ arabirimlerinin önyüklenmesine izin vermez.
 
-5. İşiniz bittiğinde, değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin. Profil oluşturulur ve listede gösterilir.
+8. **İleri**’yi seçin.
+
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+
+    **İleri**’yi seçin.
+
+10. **Atamalar**' da, profilinizi alacak kullanıcıları veya kullanıcı grubunu seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
+
+    **İleri**’yi seçin.
+
+11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
+
+Her cihazın bir sonraki denetimi sırasında ilke uygulanır.
 
 ## <a name="assign-the-profiles-and-reboot"></a>Profilleri atayın ve yeniden başlatın
 
-Profiller oluşturulduktan sonra, [atanmak için hazırlırlar](../configuration/device-profile-assign.md). Profilleri, DFCı cihazlarınızı içeren Azure AD güvenlik gruplarına atadığınızdan emin olun.
+Profilleri, DFCı cihazlarınızı içeren Azure AD güvenlik gruplarına [atadığınızdan](../configuration/device-profile-assign.md) emin olun. Profil, oluşturulduğunda veya sonrasında atanabilir.
 
 Cihaz Windows Autopilot çalıştırdığında, kayıt durumu sayfasında, DFCı yeniden başlatmayı zorlayabilir. Bu ilk yeniden başlatma, UEFı 'yi Intune 'a kaydeder. 
 
@@ -158,7 +172,7 @@ Cihazı sildikten sonra, cihazı yeni DFCı ve Autopilot profillerini atayan gru
 
 Cihazı devre dışı bırakmaya ve yönetimden yayınlamaya hazırsanız, DFCı profilini çıkış durumunda istediğiniz UEFı (BIOS) ayarlarına güncelleştirin. Genellikle tüm ayarların etkinleştirilmesini istersiniz. Örneğin:
 
-1. Dfcı profilinizi açın (**cihazlar** > **yapılandırma profilleri**).
+1. Dfcı profilinizi açın (**cihazlar**  >  **yapılandırma profilleri**).
 2. **Yerel kullanıcının UEFI (BIOS) ayarlarını** **yalnızca yapılandırılmadı ayarlarına**değiştirmesine izin ver ayarını değiştirin.
 3. Diğer tüm ayarları **Yapılandırılmadı**olarak ayarlayın.
 4. Ayarlarınızı kaydedin.
@@ -179,4 +193,4 @@ DFCı ilkesi uygulandığında, UEFı (BIOS) menüsü parola korumalı olsa bile
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Profil atandıktan sonra [durumunu izleyin](device-profile-monitor.md).
+[Profil atandıktan](device-profile-assign.md)sonra [durumunu izleyin](device-profile-monitor.md).

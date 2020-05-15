@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2d0d4c186dd0c703e371169fd24c2dbdabaa8ea
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: c28229808c6404e08c569c7a8300db5c925c79e6
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254852"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401598"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Microsoft Intune 'de OEMConfig ile Android kurumsal cihazlarını kullanma ve yönetme
 
@@ -58,7 +58,7 @@ OEMConfig kullanırken aşağıdaki bilgileri unutmayın:
 - Herhangi bir zamanda, OEM 'Ler desteklenen özellikleri ve şemaları güncelleştirebilir ve yeni bir uygulamayı Google Play karşıya yükleyebilir. Intune, Google Play 'ten her zaman OEMConfig uygulamasının en son sürümünü eşitler. Intune, şemanın veya uygulamanın eski sürümlerini korumaz. Sürüm çakışmaları ' nı çalıştırırsanız daha fazla bilgi için OEM 'ye başvurmanızı öneririz.
 - Bir cihaza bir OEMConfig profili atayın. Aynı cihaza birden çok profil atanmışsa, tutarsız bir davranış görebilirsiniz. OEMConfig modeli cihaz başına yalnızca tek bir ilkeyi destekler.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Cihazlarınızda OEMConfig kullanmak için aşağıdaki gereksinimlere sahip olduğunuzdan emin olun:
 
@@ -79,11 +79,11 @@ Cihazın OEMConfig 'i desteklediğinden emin olun, Intune 'a doğru OEMConfig uy
 ## <a name="create-an-oemconfig-profile"></a>OEMConfig profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Platform**: **Android kurumsal**' i seçin.
-    - **Profil türü**: **oemconfig**' i seçin.
+    - **Profil**: **oemconfig**' i seçin.
 
 4. **Oluştur**’u seçin.
 5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
@@ -103,7 +103,7 @@ Cihazın OEMConfig 'i desteklediğinden emin olun, Intune 'a doğru OEMConfig uy
 8. **Ayarları Yapılandır**bölümünde **yapılandırma tasarımcısını** veya **JSON düzenleyicisini**seçin:
 
     > [!TIP]
-    > Özellikleri doğru şekilde yapılandırdığınızdan emin olmak için OEM belgelerini okuyun. Bu uygulama özellikleri, Intune 'A değil, OEM tarafından dahildir. Intune, özelliklerin en düşük doğrulamasını veya girdiğiniz şeyleri yapar. Örneğin, bir bağlantı noktası numarası `abcd` girerseniz, profil olarak kaydedilir ve yapılandırdığınız değerlerle cihazlarınıza dağıtılır. Doğru bilgileri girdiğinizden emin olun.
+    > Özellikleri doğru şekilde yapılandırdığınızdan emin olmak için OEM belgelerini okuyun. Bu uygulama özellikleri, Intune 'A değil, OEM tarafından dahildir. Intune, özelliklerin en düşük doğrulamasını veya girdiğiniz şeyleri yapar. Örneğin, `abcd` bir bağlantı noktası numarası girerseniz, profil olarak kaydedilir ve yapılandırdığınız değerlerle cihazlarınıza dağıtılır. Doğru bilgileri girdiğinizden emin olun.
 
     - **Yapılandırma Tasarımcısı**: Bu seçeneği belirlediğinizde, uygulama şeması içinde kullanılabilen özellikler, yapılandırmanız için gösterilir.
 
@@ -126,7 +126,7 @@ Cihazın OEMConfig 'i desteklediğinden emin olun, Intune 'a doğru OEMConfig uy
     Yapılandırma tasarımcısında yapılan tüm değişiklikler JSON düzenleyicisinde de otomatik olarak yapılır. Benzer şekilde, JSON düzenleyicisinde yapılan tüm değişiklikler otomatik olarak yapılandırma tasarımcısında yapılır. Giriş bilgileriniz geçersiz değerler içeriyorsa, sorunları düzelene kadar yapılandırma Tasarımcısı ile JSON Düzenleyicisi arasında geçiş yapamazsınız.
 
 9. **İleri**’yi seçin.
-10. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+10. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
     **İleri**’yi seçin.
 
@@ -169,7 +169,7 @@ OEMConfig Apps, standart uygulamalarla karşılaştırıldığında, Google tara
 
 -----------------
 
-Cihazınız için bir OEMConfig uygulaması varsa, ancak yukarıdaki tabloda değil veya Intune konsolunda, e-posta `IntuneOEMConfig@microsoft.com`ile gösterilmemişse.
+Cihazınız için bir OEMConfig uygulaması varsa, ancak yukarıdaki tabloda değil veya Intune konsolunda, e-posta ile gösterilmemişse `IntuneOEMConfig@microsoft.com` .
 
 > [!NOTE]
 > Oemconfig Apps, OEMConfig profilleriyle yapılandırılanmadan önce Intune tarafından eklenmediyse olmalıdır. Bir uygulama desteklendikten sonra kiracınızda ayarlama hakkında Microsoft 'a başvurmanız gerekmez. Bu sayfadaki yönergeleri izlemeniz yeterlidir.

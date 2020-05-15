@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a05e36a2da42bf88e2d9d7e94a67e2d81b8f1271
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: aac4bf355724194e55f55bd89b66426487d50427
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078286"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401682"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Microsoft Intune'da kullanıcı ve cihaz profilleri atama
 
@@ -44,11 +44,11 @@ Profiller atamak için uygun role sahip olduğunuzdan emin olun. Daha fazla bilg
 ## <a name="assign-a-device-profile"></a>Bir cihaz profili atama
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profillerini**seçin. Tüm profiller listelenir.
+2. **Cihaz**  >  **yapılandırma profillerini**seçin. Tüm profiller listelenir.
 3. Atamak istediğiniz profili ve ardından **Atamalar**'ı seçin.
 4. Grupları **Dahil Etmeyi** veya **Dışlamayı** seçin ve sonra da gruplarınızı belirtin. Gruplarınızı seçtiğinizde, bir Azure AD grubu seçersiniz. Birden çok grup seçmek için grupları seçerken **Ctrl** tuşunu basılı tutun.
 
-    ![Grupları bir profil atamasına dahil etme veya atamadan dışlama seçeneklerinin ekran görüntüsü](./media/device-profile-assign/group-include-exclude.png)
+    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="Microsoft Intune içindeki bir profil atamasında grupları dahil etme veya hariç tutma seçeneklerinin ekran görüntüsü":::
 
 5. Değişikliklerinizi **kaydedin** .
 
@@ -56,8 +56,8 @@ Profiller atamak için uygun role sahip olduğunuzdan emin olun. Daha fazla bilg
 
 Profili atadıktan sonra etkilenen kullanıcı sayısını da **değerlendirebilirsiniz**. Bu özellik, cihaz değil kullanıcı sayısını hesaplar.
 
-1. Yönetim merkezinde, **cihazlar** > **yapılandırma profilleri**' ni seçin.
-2. **Atamalar** > **değerlendirmesi**> bir profil seçin. Bu profilin kaç kullanıcıyı hedeflediğini gösteren bir ileti görüntülenir.
+1. Yönetim merkezinde, **cihazlar**  >  **yapılandırma profilleri**' ni seçin.
+2. **Atamalar**değerlendirmesi > bir profil seçin  >  **Evaluate**. Bu profilin kaç kullanıcıyı hedeflediğini gösteren bir ileti görüntülenir.
 
 **Değerlendir** düğmesi gri gösteriliyorsa, profilin bir veya birden fazla gruba atandığından emin olun.
 
@@ -65,7 +65,7 @@ Profili atadıktan sonra etkilenen kullanıcı sayısını da **değerlendirebil
 
 Bir profil oluşturduğunuzda veya güncelleştirdiğinizde, profile kapsam etiketleri ve Uygulanabilirlik kuralları da ekleyebilirsiniz.
 
-**Kapsam etiketleri** , veya `US-NC IT Team` `JohnGlenn_ITDepartment`gibi belirli gruplar için profilleri filtrelemek için harika bir yoldur. Daha fazla bilgi için bkz. [Dağıtılmış BT için RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+**Kapsam etiketleri** , veya gibi belirli gruplar için profilleri filtrelemek için harika bir yoldur `US-NC IT Team` `JohnGlenn_ITDepartment` . Daha fazla bilgi için bkz. [Dağıtılmış BT için RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
 Windows 10 cihazlarında, profil yalnızca belirli bir işletim sistemi sürümü veya belirli bir Windows sürümü için geçerli olacak şekilde **uygulanabilirlik kuralları** ekleyebilirsiniz. [Uygulanabilirlik kurallarında](device-profile-create.md#applicability-rules) daha fazla bilgi bulunur.
 
@@ -109,7 +109,7 @@ En iyi uygulama olarak, Kullanıcı gruplarınız için özel profiller oluştur
 
 Profillerinizi atadığınızda, grupları dahil etmek ve dışlamak için aşağıdaki tabloyu kullanın. Onay işareti, atamanın desteklendiği anlamına gelir:
 
-![Desteklenen seçenekler bir profil atamasında grupları içerir veya hariç tutar](./media/device-profile-assign/include-exclude-user-device-groups.png)
+:::image type="content" source="./media/device-profile-assign/include-exclude-user-device-groups.png" alt-text="Desteklenen seçenekler bir profil atamasında grupları içerir veya hariç tutar":::
 
 ### <a name="what-you-should-know"></a>Bilmeniz gerekenler
 

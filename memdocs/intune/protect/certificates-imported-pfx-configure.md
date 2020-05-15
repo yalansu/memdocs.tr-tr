@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9a3e2c2a2c50f2d0fde264eedc2096d34f815a9
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: d80c01380350463543fd7a24dc57031675104c1f
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023189"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406411"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Intune ile içeri aktarılan PKCS sertifikalarını yapılandırma ve kullanma
 
@@ -46,7 +46,7 @@ Intune, aşağıdaki platformlar için PFX sertifikalarının içeri aktarımın
 - Android kurumsal-tam yönetilen
 - Android kurumsal Iş profili
 - iOS/iPadOS
-- Mac OS
+- macOS
 - Windows 10
 
 ## <a name="requirements"></a>Gereksinimler
@@ -89,14 +89,14 @@ Bir kullanıcıya **içeri aktarılan BIR PFX sertifikasını** dağıtmak için
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Kiracı Yönetimi** > **bağlayıcıları ve belirteçleri** > **sertifika bağlayıcıları** > **Ekle**' yi seçin.
+2. **Kiracı Yönetimi**  >  **bağlayıcıları ve belirteçleri**  >  **sertifika bağlayıcıları**  >  **Ekle**' yi seçin.
 
    ![Microsoft Intune indirmek için PFX Sertifika Bağlayıcısı](./media/certificates-imported-pfx-configure/download-imported-pfxconnector.png)
 
 3. *Microsoft Intune Için PFX Sertifika bağlayıcısını* , bağlayıcıyı yükleyeceğiniz sunucudan erişilebilen bir konuma indirmek için yönergeleri izleyin.
 
 4. İndirme tamamlandıktan sonra, sunucusunda oturum açın ve yükleyiciyi (PfxCertificateConnectorBootstrapper. exe) çalıştırın.  
-   - Varsayılan yükleme konumunu kabul ettiğinizde, bağlayıcı ' a yüklenir `Program Files\Microsoft Intune\PFXCertificateConnector`.
+   - Varsayılan yükleme konumunu kabul ettiğinizde, bağlayıcı ' a yüklenir `Program Files\Microsoft Intune\PFXCertificateConnector` .
    - Bağlayıcı hizmeti yerel sistem hesabının altında çalışır. İnternet erişimi için bir proxy gerekliyse, yerel hizmet hesabının sunucudaki proxy ayarlarına erişediğini doğrulayın.
 
 5. Microsoft Intune için PFX Sertifika Bağlayıcısı yüklendikten sonra **Kayıt** sekmesini açar. Intune bağlantısını etkinleştirmek için **Oturum Aç**'ı seçin ve Azure genel yöneticisi veya Intune yöneticisi izinleri olan bir hesap girin.
@@ -106,7 +106,7 @@ Bir kullanıcıya **içeri aktarılan BIR PFX sertifikasını** dağıtmak için
 
 6. Pencereyi kapatın.
 
-7. Microsoft Endpoint Manager Yönetim merkezinde, **Kiracı Yönetimi** > **bağlayıcıları ve belirteçleri** > **sertifika bağlayıcıları**' na geri dönün. Birkaç dakika içinde yeşil bir onay işareti görünür ve bağlantı durumu güncellenir. Bağlayıcı sunucusu artık Intune ile iletişim kurabilir.
+7. Microsoft Endpoint Manager Yönetim merkezinde, **Kiracı Yönetimi**  >  **bağlayıcıları ve belirteçleri**  >  **sertifika bağlayıcıları**' na geri dönün. Birkaç dakika içinde yeşil bir onay işareti görünür ve bağlantı durumu güncellenir. Bağlayıcı sunucusu artık Intune ile iletişim kurabilir.
 
 ## <a name="import-pfx-certificates-to-intune"></a>PFX sertifikalarını Intune 'a aktarma
 
@@ -122,15 +122,15 @@ PowerShell cmdlet 'lerini kullanmak için, Visual Studio kullanarak projeyi kend
 
    ![GitHub indirme düğmesi](./media/certificates-imported-pfx-configure/github-download.png)
 
-2. `.\Intune-Resource-Access-develop\src\PFXImportPowershell\` ' A gidin ve **pfxımportps. sln**dosyasını kullanarak Visual Studio ile projeyi açın.
+2. ' A gidin `.\Intune-Resource-Access-develop\src\PFXImportPowershell\` ve **Pfxımportps. sln**dosyasını kullanarak Visual Studio ile projeyi açın.
 
 3. Üstteki sayfada **hata ayıklamanın** **sürümüne**geçin.
 
-4. **Derleme** bölümüne gidin ve **derleme pfxımportps**' yi seçin. Birkaç dakika sonra Visual Studio 'nun sol alt kısmında bulunan **Derleme başarılı** onay onayını görürsünüz.
+4. **Derleme** bölümüne gidin ve **derleme pfxımportps**' yi seçin. Birkaç dakika içinde, Visual Studio 'nun sol alt kısmında bulunan **Derleme başarılı** onay onayını görürsünüz.
 
    ![Visual Studio derleme seçeneği](./media/certificates-imported-pfx-configure/vs-build-release.png)
 
-5. Yapı işlemi, üzerinde `.\Intune-Resource-Access-develop\src\PFXImportPowershell\PFXImportPS\bin\Release`PowerShell modülü ile yeni bir klasör oluşturur.
+5. Yapı işlemi, üzerinde PowerShell modülü ile yeni bir klasör oluşturur `.\Intune-Resource-Access-develop\src\PFXImportPowershell\PFXImportPS\bin\Release` .
 
    Bu **Sürüm** klasörünü sonraki adımlar için kullanacaksınız.
 
@@ -146,7 +146,7 @@ PowerShell modülü, Windows şifrelemesi kullanarak bir anahtar oluşturmak iç
 
 2. Sunucusunda, *PowerShell* 'i yönetici olarak açın ve ardından PowerShell modülünü içeren *yayın* klasörüne gidin.
 
-3. Modülünü içeri aktarmak için, modülünü `Import-Module .\IntunePfxImport.psd1` içeri aktarmak üzere öğesini çalıştırın.
+3. Modülünü içeri aktarmak için, `Import-Module .\IntunePfxImport.psd1` modülünü içeri aktarmak üzere öğesini çalıştırın.
 
 4. Sonra, Çalıştır`Add-IntuneKspKey "Microsoft Software Key Storage Provider" "PFXEncryptionKey"`
 
@@ -187,12 +187,12 @@ Anahtarı oluşturmak için kullandığınız sağlayıcıyla eşleşen anahtar 
 
 3. Modülünü içeri aktarmak için şunu çalıştırın`Import-Module .\IntunePfxImport.psd1`
 
-4. Intune grafiğinde kimlik doğrulaması yapmak için şunu çalıştırın`$authResult = Get-IntuneAuthenticationToken -AdminUserName "<Admin-UPN>"`
+4. Intune grafiğinde kimlik doğrulaması yapmak için şunu çalıştırın`Set-IntuneAuthenticationToken  -AdminUserName "<Admin-UPN>"`
 
    > [!NOTE]
    > Kimlik doğrulaması, grafiğe karşı çalıştırıldığı için, AppID için izinler sağlamalısınız. Bu yardımcı programı ilk kez kullandıysanız, *genel yönetici* gerekir. PowerShell cmdlet 'leri [PowerShell Intune örnekleri](https://github.com/microsoftgraph/powershell-intune-samples)ile birlikte kullanılan AppID 'yi kullanır.
 
-5. İçeri aktardığınız her PFX dosyası için parolayı, çalıştırarak `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force`güvenli bir dizeye dönüştürün.
+5. İçeri aktardığınız her PFX dosyası için parolayı çalıştırarak güvenli bir dizeye dönüştürün `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force` .
 
 6. **Userpfxsertifika** nesnesi oluşturmak için şunu çalıştırın`$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>"`
 
@@ -201,9 +201,11 @@ Anahtarı oluşturmak için kullandığınız sağlayıcıyla eşleşen anahtar 
    > [!NOTE]
    > Sertifikayı bağlayıcının yüklü olduğu sunucudan başka bir sistemden içeri aktardığınızda, Use anahtar dosya yolunu içeren aşağıdaki komutu kullanmalıdır:`$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>" "<File path to public key file>"`
 
-7. **Userpfxsertifikası** nesnesini çalıştırarak Intune 'a aktarın`Import-IntuneUserPfxCertificate -AuthenticationResult $authResult -CertificateList $userPFXObject`
+7. **Userpfxsertifikası** nesnesini çalıştırarak Intune 'a aktarın`Import-IntuneUserPfxCertificate -CertificateList $userPFXObject`
 
-8. Sertifikanın içeri aktarıldığını doğrulamak için şunu çalıştırın`Get-IntuneUserPfxCertificate -AuthenticationResult $authResult -UserList "<UserUPN>"`
+8. Sertifikanın içeri aktarıldığını doğrulamak için şunu çalıştırın`Get-IntuneUserPfxCertificate -UserList "<UserUPN>"`
+
+9.  AAD belirteci önbelleğinin kendi üzerinde süre sonu beklemeden temizlenmesi için en iyi uygulama olarak, şunu çalıştırın`Remove-IntuneAuthenticationToken`
 
 Kullanılabilir diğer komutlar hakkında daha fazla bilgi için, [GitHub 'da, Pfxımport PowerShell projesinde](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell)bulunan Benioku dosyasına bakın.
 
@@ -216,7 +218,7 @@ Sertifikaları Intune’da içeri aktardıktan sonra bir **PKCS içeri aktarılm
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. Seçin ve **cihazlar** > **yapılandırma profilleri** > **Profil oluştur**' a gidin.
+2. Seçin ve **cihazlar**  >  **yapılandırma profilleri**  >  **Profil oluştur**' a gidin.
 
 3. Aşağıdaki özellikleri girin:
    - **Platform**: cihazlarınızın platformunu seçin.
@@ -241,7 +243,7 @@ Sertifikaları Intune’da içeri aktardıktan sonra bir **PKCS içeri aktarılm
 
 8. **İleri**’yi seçin.
 
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
    **İleri**’yi seçin.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5c33e1e8e589f430fe8265ee4762b4755f3618
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3de08fd1b7369e2a7038bd6698af3d1608c006be
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086446"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401757"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Intune 'da önceden paylaşılan anahtarla bir WiFi profili oluşturmak için özel cihaz profili kullanma
 
@@ -49,15 +49,20 @@ Bu özellik şunları destekler:
 ## <a name="create-a-custom-profile"></a>Özel profil oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
+
+    - **Platform**: platformunuzu seçin.
+    - **Profil**: **özel**' i seçin.
+
+4. **Oluştur**’u seçin.
+5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
     - **Ad**: ilke için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir ilke adı, **Android Cihaz Yöneticisi cihazları Için özel OMA-URI Wi-Fi profili ayarlarıdır**.
     - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
-    - **Platform**: platformunuzu seçin.
-    - **Profil türü**: **özel**' i seçin.
 
-4. **Ayarlar**' da **Ekle**' yi seçin. Aşağıdaki özelliklerle yeni bir OMA-URI ayarı girin:
+6. **İleri**’yi seçin.
+7. **Yapılandırma ayarları**' nda **Ekle**' yi seçin. Aşağıdaki özelliklerle yeni bir OMA-URI ayarı girin:
 
     1. **Ad**: OMA-URI ayarı için bir ad girin.
     2. **Açıklama**: OMA-URI ayarı için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
@@ -69,15 +74,27 @@ Bu özellik şunları destekler:
         > [!NOTE]
         > Başına nokta karakterini eklediğinizden emin olun.
 
-        SSID, ilkeyi oluşturmakta olduğunuz SSID 'dir. Örneğin, Wi-Fi adı `Hotspot-1`varsa, girin. `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`
+        SSID, ilkeyi oluşturmakta olduğunuz SSID 'dir. Örneğin, Wi-Fi adı varsa `Hotspot-1` , girin `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings` .
 
     4. **Veri türü**: **dize**seçin.
 
     5. **Değer**: xml kodunuzu yapıştırın. Bu makaledeki [örneklere](#android-or-windows-wi-fi-profile-example) bakın. Her bir değeri ağ ayarlarınıza uyacak şekilde güncelleştirin. Kodun açıklamalar bölümü bazı işaretçiler içerir.
+    6. Değişikliklerinizi kaydetmek için **Ekle** ' yi seçin.
 
-5. İşiniz bittiğinde, değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin.
+8. **İleri**’yi seçin.
 
-Profiliniz profiller listesinde gösterilir. Sonra, [Bu profili](device-profile-assign.md) Kullanıcı gruplarınıza atayın. Bu ilke yalnızca kullanıcı gruplarına atabilir.
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+
+    **İleri**’yi seçin.
+
+10. **Atamalar**' da, profilinizi alacak kullanıcıları veya kullanıcı grubunu seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
+
+    > [!NOTE]
+    > Bu ilke yalnızca kullanıcı gruplarına atabilir.
+
+    **İleri**’yi seçin.
+
+11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
 
 Cihazların bir sonraki iadesinde, ilke uygulanır ve cihazda bir Wi-Fi profili oluşturulur. Cihaz daha sonra ağa otomatik olarak bağlanabilir.
 
@@ -89,7 +106,7 @@ Aşağıdaki örnek bir Android veya Windows Wi-Fi profili için XML kodu örne�
 
 - `<protected>false</protected>`, **false** olarak ayarlanmalıdır. **true** olarak ayarlandığında, cihazın şifreli bir parola beklemesine ve bunun şifresini çözmeye çalışmasına neden olur; bu da başarısız bağlantıyla sonuçlanabilir.
 
-- `<hex>53534944</hex>`, `<name><SSID of wifi profile></name>` onaltılı değerine ayarlanmalıdır. Windows 10 cihazları yanlış `x87D1FDE8 Remediation failed` bir hata döndürebilir, ancak cihaz hala profili içerir.
+- `<hex>53534944</hex>`, `<name><SSID of wifi profile></name>` onaltılı değerine ayarlanmalıdır. Windows 10 cihazları yanlış bir hata döndürebilir `x87D1FDE8 Remediation failed` , ancak cihaz hala profili içerir.
 
 - XML, `&` (ampersan) gibi özel karakterler içerir. Özel karakterlerin kullanılması, XML 'nin beklenen şekilde çalışmasını engelleyebilir. 
 
@@ -230,9 +247,9 @@ Ayrıca, var olan bir Wi-Fi bağlantısından bir XML dosyası da oluşturabilir
 1. C:\WiFi. gibi, dışarıya aktarılmış W-Fi profilleri için yerel bir klasör oluşturun
 2. Yönetici olarak bir komut istemi açın ( `cmd`  >  **yönetici olarak çalıştır**' a sağ tıklayın).
 3. `netsh wlan show profiles` öğesini çalıştırın. Tüm profillerin adları listelenir.
-4. `netsh wlan export profile name="YourProfileName" folder=c:\Wifi` öğesini çalıştırın. Bu komut c:\Wifi. içinde adlı `Wi-Fi-YourProfileName.xml` bir dosya oluşturur
+4. `netsh wlan export profile name="YourProfileName" folder=c:\Wifi` öğesini çalıştırın. Bu komut c:\Wifi. içinde adlı bir dosya oluşturur `Wi-Fi-YourProfileName.xml`
 
-    - Önceden paylaşılan anahtar içeren bir Wi-Fi profilini dışarı aktarıyorsanız komuta ekleyin `key=clear` :
+    - Önceden paylaşılan anahtar içeren bir Wi-Fi profilini dışarı aktarıyorsanız `key=clear` komuta ekleyin:
   
         `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
 

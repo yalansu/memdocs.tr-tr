@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b0c673eb702e3e9f08209d04bf256c049b10ee6
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: a702532b08f199c561677785877195502455ebab
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022696"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406707"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Microsoft Intune Yönetim Şablonları ile Office 365 güncelleştirmek için kanalı güncelleştirme ve hedef sürüm ayarlarını kullanın
 
@@ -35,7 +35,7 @@ Yönetim Şablonları hakkında daha fazla bilgi için bkz. [Windows 10 şablonl
 - Windows 10 ve üzeri
 - Office 365
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Office uygulamalarınız için [Microsoft 365 Apps otomatik güncelleştirmelerini](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus) etkinleştirdiğinizden emin olun. Bunu Grup İlkesi veya Intune Office 2016 ADMX şablonu kullanarak yapabilirsiniz:
 
@@ -44,7 +44,7 @@ Office uygulamalarınız için [Microsoft 365 Apps otomatik güncelleştirmeleri
 
 ## <a name="set-the-update-channel-in-the-intune-administrative-template"></a>Intune yönetim şablonunda güncelleştirme kanalını ayarlama
 
-1. [Intune yönetim şablonunuzda](administrative-templates-windows.md#create-the-template), **kanalı Güncelleştir** ayarına gidin ve istediğiniz kanalı girin. Örneğin şunları seçin `Semi-Annual Channel`:
+1. [Intune yönetim şablonunuzda](administrative-templates-windows.md#create-the-template), **kanalı Güncelleştir** ayarına gidin ve istediğiniz kanalı girin. Örneğin şunları seçin `Semi-Annual Channel` :
 
     > [!div class="mx-imgBorder"]
     > ![Intune yönetim şablonunda, Office için güncelleştirme kanalı ayarını ayarlayın](./media/administrative-templates-update-office/admx-enable-update-channel-setting.png)
@@ -62,17 +62,17 @@ Office uygulamalarınız için [Microsoft 365 Apps otomatik güncelleştirmeleri
 İlkeyi atadıktan sonra cihaz eşitlendikten sonra, ilkenin uygulandığını doğrulayabilirsiniz:
 
 1. Cihazda, **kayıt defteri Düzenleyicisi** uygulamasını açın.
-2. Intune ilke yoluna gidin: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\Providers\<Provider ID>\default\Device\office16~Policy~L_MicrosoftOfficemachine~L_Updates`.
+2. Intune ilke yoluna gidin: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\Providers\<Provider ID>\default\Device\office16~Policy~L_MicrosoftOfficemachine~L_Updates` .
 
     > [!TIP]
-    > `<Provider ID>` Kayıt defteri anahtarında değişiklik yapılır. Cihazınızın sağlayıcı KIMLIĞINI bulmak için, **kayıt defteri Düzenleyicisi** uygulamasını açın ve adresine gidin `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\AdmxInstalled`. Sağlayıcı KIMLIĞI gösterilir.
+    > `<Provider ID>`Kayıt defteri anahtarında değişiklik yapılır. Cihazınızın sağlayıcı KIMLIĞINI bulmak için, **kayıt defteri Düzenleyicisi** uygulamasını açın ve adresine gidin `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\AdmxInstalled` . Sağlayıcı KIMLIĞI gösterilir.
 
     İlke uygulandığında, aşağıdaki kayıt defteri anahtarlarını görürsünüz:
 
     - `L_UpdateBranch`
     - `L_UpdateTargetVersion`
 
-    Aşağıdaki örneğe bakarak, aşağıdakine benzer bir değer `L_UpdateBranch` görürsünüz `<enabled /><data id="L_UpdateBranchID" value="Deferred" />`. Bu değer, yarı yıllık kanal olarak ayarlanan anlamına gelir:
+    Aşağıdaki örneğe bakarak, `L_UpdateBranch` aşağıdakine benzer bir değer görürsünüz `<enabled /><data id="L_UpdateBranchID" value="Deferred" />` . Bu değer, yarı yıllık kanal olarak ayarlanan anlamına gelir:
 
     > [!div class="mx-imgBorder"]
     > ![Yönetim şablonu L_Updatebranch kayıt defteri anahtarı örneği](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
@@ -91,23 +91,23 @@ Bu noktada, Intune ilkesi cihaza başarıyla uygulandı.
 ## <a name="check-the-office-registry-keys"></a>Office kayıt defteri anahtarlarını denetleme
 
 1. Cihazda, **kayıt defteri Düzenleyicisi** uygulamasını açın.
-2. Office ilkesi yoluna gidin: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration`.
+2. Office ilkesi yoluna gidin: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration` .
 
     Aşağıdaki kayıt defteri anahtarlarını görürsünüz:
 
     - `UpdateChannel`: Yapılandırılan ayarlara bağlı olarak değişen dinamik anahtar.
     - `CDNBaseUrl`: Office 365 cihaza yüklendiğinde ayarlanır.
 
-3. `UpdateChannel` Değere bakın. Bu değer, Office 'in ne sıklıkla güncelleştirileceğini söyler. Değerleri Configuration Manager listeler ve olarak ayarlandığı [Microsoft 365 uygulamaları yönetin](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) .
+3. `UpdateChannel`Değere bakın. Bu değer, Office 'in ne sıklıkla güncelleştirileceğini söyler. Değerleri Configuration Manager listeler ve olarak ayarlandığı [Microsoft 365 uygulamaları yönetin](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) .
 
-    Aşağıdaki örneğe bakarak, `UpdateChannel` `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`' nin, **aylık**olarak ayarlandığını görürsünüz:
+    Aşağıdaki örneğe bakarak, ' nin, `UpdateChannel` aylık olarak ayarlandığını görürsünüz `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60` : **monthly**
 
     > [!div class="mx-imgBorder"]
     > ![Yönetim şablonu Office UpdateChannel kayıt defteri anahtarı örneği](./media/administrative-templates-update-office/admx-update-channel-office-registry-key.png)
 
     Bu örnek, kısmen **yıllık**değil, hala **aylık**olarak ayarlandığı için ilkenin henüz uygulanmadığı anlamına gelir.
 
-Bu kayıt defteri anahtarı, **Görev Zamanlayıcı** > **Office otomatik güncelleştirmeleri 2,0** çalıştırıldığında veya Kullanıcı cihazda oturum açtığında güncelleştirilir. Onaylamak için **Office otomatik güncelleştirmeler 2,0** görev > **tetikleyicilerini**açın. Tetikleyicilere bağlı olarak, `UpdateChannel` kayıt defteri anahtarı güncellendiğinden en az bir gün ve daha fazlasını alabilir.
+Bu kayıt defteri anahtarı, **Görev Zamanlayıcı**  >  **Office otomatik güncelleştirmeleri 2,0** çalıştırıldığında veya Kullanıcı cihazda oturum açtığında güncelleştirilir. Onaylamak için **Office otomatik güncelleştirmeler 2,0** görev > **tetikleyicilerini**açın. Tetikleyicilere bağlı olarak, `UpdateChannel` kayıt defteri anahtarı güncellendiğinden en az bir gün ve daha fazlasını alabilir.
 
 ## <a name="force-office-automatic-updates-to-run"></a>Office otomatik güncelleştirmelerini çalıştırmaya zorla
 
@@ -116,22 +116,22 @@ Bu kayıt defteri anahtarı, **Görev Zamanlayıcı** > **Office otomatik günce
 1. Kayıt defteri anahtarını temizleyin:
 
     1. `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Updates` kısmına gidin.
-    2. `UpdateDetectionLastRunTime` Anahtarı çift seçin, **Tamam**> değer verisini silin.
+    2. Anahtarı çift seçin `UpdateDetectionLastRunTime` , **Tamam**> değer verisini silin.
 
 2. Office otomatik güncelleştirmeler görevini çalıştırın:
 
     1. Cihazda **Görev Zamanlayıcı** uygulamasını açın.
-    2. **Görev Zamanlayıcı Kitaplığı** > **Microsoft** > **Office**' i genişletin.
-    3. **Office otomatik güncelleştirmeleri 2,0** > **Çalıştır**'ı seçin:
+    2. **Görev Zamanlayıcı Kitaplığı**  >  **Microsoft**  >  **Office**' i genişletin.
+    3. **Office otomatik güncelleştirmeleri 2,0**  >  **Çalıştır**'ı seçin:
 
         > [!div class="mx-imgBorder"]
         > ![Görev zamanlamasını açın ve Office otomatik güncelleştirmelerini çalıştırın](./media/administrative-templates-update-office/admx-task-scheduler-office-automatic-updates.png)
 
         Görevin bitmesini bekleyin, bu işlem birkaç dakika sürebilir.
 
-3. **Kayıt defteri Düzenleyicisi** uygulamasında öğesine `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration`gidin. `UpdateChannel` Değeri denetleyin.
+3. **Kayıt defteri Düzenleyicisi** uygulamasında öğesine gidin `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration` . Değeri denetleyin `UpdateChannel` .
 
-    İlkede ayarlanan değerle birlikte güncelleştirilmeleri gerekir. Örneğimizde, değer olarak `http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114`ayarlanmalıdır.
+    İlkede ayarlanan değerle birlikte güncelleştirilmeleri gerekir. Örneğimizde, değer olarak ayarlanmalıdır `http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114` .
 
 Bu noktada, Office güncelleştirme kanalı cihazda başarıyla değiştirilmiştir. Durumu denetlemek için, bu güncelleştirmeyi alan bir kullanıcı için bir Office 365 uygulaması açabilirsiniz.
 
@@ -162,7 +162,7 @@ Daha fazlasını yapmak istiyorsanız, Office 'i en son sürüm güncelleştirme
 
 1. **Kayıt defteri Düzenleyicisi** uygulamasında şuraya gidin`Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\Providers\<Provider ID>\default\Device\office16~Policy~L_MicrosoftOfficemachine~L_Updates`
 
-2. `L_UpdateTargetVersion` Değere bakın. İlke uygulandıktan sonra değer, girdiğiniz sürüme ayarlanır, örneğin `<enabled /><data id="L_UpdateTargetVersionID" value="16.0.10730.20344" />`.
+2. `L_UpdateTargetVersion`Değere bakın. İlke uygulandıktan sonra değer, girdiğiniz sürüme ayarlanır, örneğin `<enabled /><data id="L_UpdateTargetVersionID" value="16.0.10730.20344" />` .
 
     Bu noktada, Intune ilkesi cihaza başarıyla uygulandı.
 
@@ -170,8 +170,8 @@ Daha fazlasını yapmak istiyorsanız, Office 'i en son sürüm güncelleştirme
 
     Güncelleştirme birkaç dakika sürer. Office 'in girdiğiniz sürümü almaya çalışıyor olduğunu doğrulayabilirsiniz:
 
-      1. Cihazda öğesine `C:\Program Files (x86)\Microsoft Office\Updates\Detection\Version`gidin.
-      2. `VersionDescriptor.xml` Dosyasını açın ve `<Version>` bölümüne gidin. Kullanılabilir sürüm, Intune ilkesinde girdiğiniz sürümle aynı olmalıdır, örneğin:
+      1. Cihazda öğesine gidin `C:\Program Files (x86)\Microsoft Office\Updates\Detection\Version` .
+      2. Dosyasını açın `VersionDescriptor.xml` ve `<Version>` bölümüne gidin. Kullanılabilir sürüm, Intune ilkesinde girdiğiniz sürümle aynı olmalıdır, örneğin:
 
           > [!div class="mx-imgBorder"]
           > ![Sürüm tanımlayıcısı Office XML dosyasındaki sürüm bölümünü denetleyin](./media/administrative-templates-update-office/office-version-descriptor-xml-example.png)

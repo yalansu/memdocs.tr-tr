@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 05/13/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3aaf2bf895082f3647f0a1ad6b9997a5e97baee
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e96199d9f525fa0dcbf7545d2c20b90a3a76b9cd
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333030"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401816"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>İlke ve profillerin ve Intune 'da sorun giderme
 
@@ -39,12 +39,12 @@ Bu makalede bazı yaygın sorun giderme teknikleri listelenmekte ve karşılaşa
 
 1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nde **sorun giderme + Destek**' i seçin:
 
-    ![Intune 'da yardım ve destek ' e gidin ve sorun giderme ' yi seçin.](./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png)
+    :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png" alt-text="Endpoint Management Yönetim Merkezi ve Intune 'da sorun giderme ve destek bölümüne gidin.":::
 
 2. **Kullanıcı seç** > seçin > bir sorun yaşayan Kullanıcı Seç ' **i seçin**.
 3. **Intune lisansının** ve **hesap durumunun** her ikisinin de yeşil denetimleri göstermesini onaylayın:
 
-    ![Intune 'da Kullanıcı seçin ve hesap durumunu onaylayın ve Intune lisansı durum için yeşil denetim işaretlerini göster](./media/troubleshoot-policies-in-microsoft-intune/account-status-intune-license-show-green.png)
+    :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/account-status-intune-license-show-green.png" alt-text="Intune 'da, kullanıcıyı seçin ve hesap durumunu onaylayın ve Intune lisansı durum için yeşil denetim işaretlerini görüntüleyin.":::
 
     **Faydalı bağlantılar**:
 
@@ -79,7 +79,7 @@ Bu makalede bazı yaygın sorun giderme teknikleri listelenmekte ve karşılaşa
             - Android cihazında Şirket Portalı App > **cihazlarını** açın > cihazı listeden seçin > **cihaz ayarlarını denetleyin**.
             - İOS/ıpados cihazında, Şirket portalı uygulaması > **cihazları** açın > cihazı listeden seçin > **ayarları denetle**' ye tıklayın.
 
-        - Bir Windows cihazında açık **Ayarlar** > **hesaplar** > **iş veya okul** > hesap veya MDM kaydı > **bilgi** > **eşitleme**' yi seçin.
+        - Bir Windows cihazında açık **Ayarlar**  >  **hesaplar**  >  **iş veya okul** > hesap veya MDM kaydı > **bilgi**  >  **eşitleme**' yi seçin.
 
     - İlkeye özgü bilgileri görmek için cihazı seçin.
 
@@ -104,7 +104,7 @@ Bu makalede bazı yaygın sorun giderme teknikleri listelenmekte ve karşılaşa
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Bir profilin doğru bir şekilde uygulanmış olması konusunda emin değilseniz
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihazlar** > **tüm cihazlar** ' ı seçin > cihazı > **cihaz yapılandırması**' nı seçin. 
+2. **Cihazlar**  >  **tüm cihazlar** ' ı seçin > cihazı > **cihaz yapılandırması**' nı seçin. 
 
     Her cihazda profillerini listeler. Her profilin bir **durumu**vardır. Bu durum, donanım ve işletim sistemi kısıtlamaları ve gereksinimleri de dahil olmak üzere tüm atanan profillerin birlikte kabul edildiği durumlarda geçerlidir. Olası durumlar şunlardır:
 
@@ -142,7 +142,7 @@ Windows Phone cihazlar, MDM veya EAS kullanılarak ayarlandıktan sonra güvenli
 
 Cihaz platformuna bağlı olarak, ilkeyi daha az güvenli bir değerle değiştirmek isterseniz, güvenlik ilkelerini sıfırlamanız gerekebilir.
 
-Örneğin, Windows 8.1 Masaüstünde, sağ taraftaki içeri doğru kaydırın ve sonra da **Charms** çubuğunu açın. **Ayarlar** > **Denetim Masası** > **Kullanıcı hesapları**' nı seçin. Sol taraftaki **Güvenlik İlkelerini Sıfırla**’yı seçin ve **İlkeleri Sıfırla**’ya tıklayın.
+Örneğin, Windows 8.1 Masaüstünde, sağ taraftaki içeri doğru kaydırın ve sonra da **Charms** çubuğunu açın. **Ayarlar**  >  **Denetim Masası**  >  **Kullanıcı hesapları**' nı seçin. Sol taraftaki **Güvenlik İlkelerini Sıfırla**’yı seçin ve **İlkeleri Sıfırla**’ya tıklayın.
 
 Android, iOS/ıpados ve Windows Phone 8,1 gibi diğer platformların devre dışı bırakılması ve daha az kısıtlayıcı bir ilkeyi uygulamak için yeniden kaydedilmesi gerekebilir.
 
@@ -155,7 +155,7 @@ Android, iOS/ıpados ve Windows Phone 8,1 gibi diğer platformların devre dış
 
 ### <a name="microsoft-intune-policy-related-errors-in-policyplatformlog"></a>policyplatform.log dosyasındaki Microsoft Intune ilkesiyle ilgili hatalar
 
-Intune yazılım istemcisiyle yönetilen Windows bilgisayarları için, `policyplatform.log` dosyadaki ilke hataları, cihazdaki Windows Kullanıcı hesabı denetimi 'NDE (UAC) varsayılan olmayan ayarlardan olabilir. Varsayılan olmayan bazı UAC ayarları Microsoft Intune istemci yüklemelerini ve ilke yürütmesini etkileyebilir.
+Intune yazılım istemcisiyle yönetilen Windows bilgisayarları için, dosyadaki ilke hataları, `policyplatform.log` cihazdaki Windows Kullanıcı hesabı denetimi 'nde (UAC) varsayılan olmayan ayarlardan olabilir. Varsayılan olmayan bazı UAC ayarları Microsoft Intune istemci yüklemelerini ve ilke yürütmesini etkileyebilir.
 
 #### <a name="resolve-uac-issues"></a>UAC sorunlarını çözme
 

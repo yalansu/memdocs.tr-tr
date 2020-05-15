@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune-Azure 'da Windows 10 cihazları için şablonları kullanma | Microsoft Docs
-description: Windows 10 cihazları için ayar grupları oluşturmak üzere Microsoft Intune ve uç nokta yöneticisinde Yönetim şablonlarını kullanın. Office programlarını, Microsoft Edge 'i, Internet Explorer 'daki güvenli özellikleri denetlemek, OneDrive 'a erişimi denetlemek, uzak masaüstü özelliklerini kullanmak, otomatik yürütmeye izin vermek, farklı Kullanıcı oturum açma seçenekleri kullanmak ve olay günlüğü boyutunu denetlemek için bir cihaz yapılandırma profilinde Bu ayarları kullanın.
+description: Windows 10 cihazları için ayar grupları oluşturmak üzere Microsoft Intune ve uç nokta yöneticisinde Yönetim şablonlarını kullanın. Office programlarını, Microsoft Edge 'i güvenli Internet Explorer, OneDrive 'a erişme, uzak masaüstü kullanma, otomatik yürütmeye olanak sağlama, güç yönetimi ayarlarını belirleme, HTTP yazdırmayı kullanma, Kullanıcı oturum açma denetimi ve olay günlüğü boyutunu değiştirme için bir cihaz yapılandırma profilinde Bu ayarları kullanın.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f609ec62259deffb220c8ee935d0f10a98ae77b5
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: b77f823d60871288505257fc1aaec5d7959165be
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254903"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406528"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Microsoft Intune 'de Grup İlkesi ayarlarını yapılandırmak için Windows 10 şablonlarını kullanın
 
 Kuruluşunuzdaki cihazları yönetirken, farklı cihaz gruplarına uygulanan ayar grupları oluşturmak istersiniz. Örneğin, birkaç cihaz grubunuz vardır. GroupA için belirli bir ayar kümesi atamak istersiniz. GroupB için farklı bir ayar kümesi atamak istersiniz. Ayrıca yapılandırabileceğiniz ayarların basit bir görünümünü de istiyorsunuz.
 
-Bu görevi, Microsoft Intune **Yönetim Şablonları** kullanarak tamamlayabilirsiniz. Yönetim Şablonları, Microsoft Edge sürüm 77 ve üzeri, Internet Explorer, Microsoft Office programlar, Uzak Masaüstü, OneDrive, parolalar ve PIN 'Ler gibi özellikleri denetleyen yüzlerce ayarı içerir. Bu ayarlar, grup yöneticilerinin bulutu kullanarak grup ilkelerini yönetmesine olanak tanır.
+Bu görevi, Microsoft Intune **Yönetim Şablonları** kullanarak tamamlayabilirsiniz. Yönetim Şablonları, Microsoft Edge sürüm 77 ve üzeri, Internet Explorer, Microsoft Office programları, Uzak Masaüstü, OneDrive, parolalar, PIN ve daha fazlasını denetleyen binlerce ayarı içerir. Bu ayarlar, grup yöneticilerinin bulutu kullanarak grup ilkelerini yönetmesine olanak tanır.
 
 Bu özellik şu platformlarda geçerlidir:
 
@@ -48,7 +48,7 @@ Bu makalede, Windows 10 cihazları için şablon oluşturma adımları listeleni
 ## <a name="create-the-template"></a>Şablonu oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Platform**: **Windows 10 ve üstünü**seçin.
@@ -62,27 +62,27 @@ Bu makalede, Windows 10 cihazları için şablon oluşturma adımları listeleni
 
 6. **İleri**’yi seçin.
 
-7. **Yapılandırma ayarları**' nda, cihaza uygulanan ayarları (**bilgisayar yapılandırması**) ve kullanıcılara uygulanan ayarları **(Kullanıcı Yapılandırması**) yapılandırın:
+7. **Yapılandırma ayarları**' nda **Tüm** ayarlar ' ı seçerek tüm ayarların alfabetik bir listesini görüntüleyin. Ya da, cihazlara (**bilgisayar yapılandırması**) uygulanan ayarları ve kullanıcılara uygulanan ayarları **(Kullanıcı Yapılandırması**) yapılandırın:
 
     > [!div class="mx-imgBorder"]
     > ![Microsoft Intune Endpoint Manager 'daki kullanıcılara ve cihazlara ADMX şablonu ayarlarını uygulama](./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png)
 
-8. **Bilgisayar yapılandırması**' nı seçtiğinizde, ayar kategorileri gösterilir. Kullanılabilir ayarları görmek için herhangi bir kategori seçebilirsiniz.
-
-    Örneğin, Internet Explorer 'a uygulanan tüm cihaz ayarlarını görmek için **bilgisayar yapılandırması** > **Windows bileşenleri** > **Internet Explorer** ' ı seçin:
-
-    > [!div class="mx-imgBorder"]
-    > ![Microsoft Intune Endpoint Manager 'da Internet Explorer için uygulanan tüm cihaz ayarlarını görüntüleyin](./media/administrative-templates-windows/administrative-templates-all-internet-explorer-settings-device.png)
-
-9. Her cihaz ayarını görmek için **Tüm ayarlar** ' ı da seçebilirsiniz. Daha fazla ayar görmek için önceki ve sonraki okları kullanmak üzere aşağı kaydırın:
+8. **Tüm ayarlar**' ı seçtiğinizde, her ayar listelenir. Daha fazla ayar görmek için önceki ve sonraki okları kullanmak üzere aşağı kaydırın:
 
     > [!div class="mx-imgBorder"]
     > ![Ayarların örnek listesini görüntüleyin ve önceki ve sonraki düğmeleri kullanın](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
 
-10. Herhangi bir ayarı seçin. Örneğin, **Office**üzerinde filtreleme yapın ve **Kısıtlanmış taramayı etkinleştir**' i seçin. Ayarın ayrıntılı bir açıklaması gösterilir. **Etkin**, **devre dışı**seçeneğini belirleyin veya ayarı **Yapılandırılmadı** (varsayılan) olarak bırakın. Ayrıntılı açıklama Ayrıca **etkin**, **devre dışı**veya **yapılandırılmamış**' ı seçtiğinizde ne olacağını açıklar.
+9. Herhangi bir ayarı seçin. Örneğin, **Office**üzerinde filtreleme yapın ve **Kısıtlanmış taramayı etkinleştir**' i seçin. Ayarın ayrıntılı bir açıklaması gösterilir. **Etkin**, **devre dışı**seçeneğini belirleyin veya ayarı **Yapılandırılmadı** (varsayılan) olarak bırakın. Ayrıntılı açıklama Ayrıca **etkin**, **devre dışı**veya **yapılandırılmamış**' ı seçtiğinizde ne olacağını açıklar.
 
     > [!TIP]
-    > Intune 'daki Windows ayarları Yerel Grup İlkesi Düzenleyicisi (`gpedit`) ' de gördüğünüz şirket içi Grup İlkesi yoluyla bağıntılı
+    > Intune 'daki Windows ayarları Yerel Grup İlkesi Düzenleyicisi () ' de gördüğünüz şirket içi Grup İlkesi yoluyla bağıntılı `gpedit`
+
+10. **Bilgisayar yapılandırması** veya **Kullanıcı Yapılandırması**' nı seçtiğinizde, ayar kategorileri gösterilir. Kullanılabilir ayarları görmek için herhangi bir kategori seçebilirsiniz.
+
+    Örneğin, **Computer configuration**  >  Internet Explorer 'a uygulanan tüm cihaz ayarlarını görmek için bilgisayar yapılandırması**Windows bileşenleri**  >  **Internet Explorer** ' ı seçin:
+
+    > [!div class="mx-imgBorder"]
+    > ![Microsoft Intune Endpoint Manager 'da Internet Explorer için uygulanan tüm cihaz ayarlarını görüntüleyin](./media/administrative-templates-windows/administrative-templates-all-internet-explorer-settings-device.png)
 
 11. Değişikliklerinizi kaydetmek için **Tamam**’ı seçin.
 
@@ -97,14 +97,14 @@ Bu makalede, Windows 10 cihazları için şablon oluşturma adımları listeleni
     - Ve çok daha fazlası...
 
 12. **İleri**’yi seçin.
-13. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](..//fundamentals/scope-tags.md).
+13. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](..//fundamentals/scope-tags.md).
 
     **İleri**’yi seçin.
 
 14. **Atamalar**' da, profilinizi alacak Kullanıcı veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
 
-    Profil kullanıcı gruplarına atanırsa, yapılandırılan ADMX ayarları kullanıcının kaydettiği herhangi bir cihaza uygulanır ve oturum açar. Profil cihaz gruplarına atanırsa, yapılandırılan ADMX ayarları, bu cihazda oturum açan tüm kullanıcılara uygulanır. Bu atama, ADMX ayarı bir bilgisayar yapılandırması (`HKEY_LOCAL_MACHINE`) veya bir Kullanıcı Yapılandırması (`HKEY_CURRENT_USER`) ise gerçekleşir. Bazı ayarlarla, bir kullanıcıya atanan bir bilgisayar ayarı bu cihazdaki diğer kullanıcıların deneyimini de etkileyebilir.
-    
+    Profil kullanıcı gruplarına atanırsa, yapılandırılan ADMX ayarları kullanıcının kaydettiği herhangi bir cihaza uygulanır ve oturum açar. Profil cihaz gruplarına atanırsa, yapılandırılan ADMX ayarları, bu cihazda oturum açan tüm kullanıcılara uygulanır. Bu atama, ADMX ayarı bir bilgisayar yapılandırması ( `HKEY_LOCAL_MACHINE` ) veya bir Kullanıcı Yapılandırması () ise gerçekleşir `HKEY_CURRENT_USER` . Bazı ayarlarla, bir kullanıcıya atanan bir bilgisayar ayarı bu cihazdaki diğer kullanıcıların deneyimini de etkileyebilir.
+
     Daha fazla bilgi için bkz. [Kullanıcı grupları ve cihaz grupları karşılaştırması](device-profile-assign.md#user-groups-vs-device-groups).
 
     **İleri**’yi seçin.
@@ -115,16 +115,22 @@ Cihaz, yapılandırma güncelleştirmelerini bir dahaki sefer denetlediğinde, y
 
 ## <a name="find-some-settings"></a>Bazı ayarları bul
 
-Bu şablonlarda yüzlerce ayar bulunur. Belirli ayarları bulmayı kolaylaştırmak için yerleşik özellikleri kullanın:
+Bu şablonlarda binlerce ayar mevcuttur. Belirli ayarları bulmayı kolaylaştırmak için yerleşik özellikleri kullanın:
 
-- Şablonunuzda, listeyi sıralamak için **Ayarlar**, **durum**, **ayar türü**veya **yol** sütunlarını seçin. Örneğin, **yol** sütununu seçin ve sıradaki ayarları `Microsoft Excel` görmek için bir sonraki oku kullanın:
+- Şablonunuzda, listeyi sıralamak için **Ayarlar**, **durum**, **ayar türü**veya **yol** sütunlarını seçin. Örneğin, **yol** sütununu seçin ve yoldaki ayarları görmek için bir sonraki oku kullanın `Microsoft Excel` .
 
-- Şablonunuzda, belirli ayarları bulmak için **arama** kutusunu kullanın. Ayar veya yola göre arama yapabilirsiniz. Örneğin, `copy`araması yapın. Tüm ayarlar `copy` gösterilir:
+- Şablonunuzda, belirli ayarları bulmak için **arama** kutusunu kullanın. Ayar veya yola göre arama yapabilirsiniz. Örneğin, **Tüm ayarlar**' ı seçin ve arama yapın `copy` . Tüm ayarlar `copy` gösterilir:
 
   > [!div class="mx-imgBorder"]
   > ![Intune 'da yönetim şablonlarındaki tüm cihaz ayarlarını göstermek için Kopyala araması yapın](./media/administrative-templates-windows/search-copy-settings.png) 
 
-  Başka bir örnekte, için `microsoft word`arama yapın. Microsoft Word programı için ayarlayabileceğiniz ayarları görürsünüz. Şablonunuza ekleyebileceğiniz `explorer` Internet Explorer ayarlarını görmek için arama yapın.
+  Başka bir örnekte, için arama yapın `microsoft word` . Microsoft Word programı için ayarlayabileceğiniz ayarları görürsünüz. `explorer`Şablonunuza ekleyebileceğiniz Internet Explorer ayarlarını görmek için arama yapın.
+
+- Ayrıca, aramanızı yalnızca **bilgisayar yapılandırması** veya **Kullanıcı Yapılandırması**seçerek daraltabilirsiniz.
+
+  Örneğin, tüm kullanılabilir Internet Explorer Kullanıcı ayarlarını görmek için **Kullanıcı Yapılandırması**' nı seçin ve arama yapın `Internet Explorer` . Yalnızca kullanıcılara uygulanan IE ayarları gösterilir:
+
+  :::image type="content" source="./media/administrative-templates-windows/show-all-internet-explorer-settings-user-configuration.png" alt-text="ADMX şablonunda, Kullanıcı Yapılandırması ' nı seçin ve Microsoft Intune Internet Explorer için arama veya filtreleme yapın.":::
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

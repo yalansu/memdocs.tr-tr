@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 79e6f8c7b4501f0f15d00b094d7d90ad66225dd9
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80087002"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401779"
 ---
-# <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Intune - Genel önizleme’de eSIM hücresel profilleri yapılandırma
+# <a name="configure-esim-cellular-profiles-in-intune-public-preview"></a>Intune 'da esım hücresel profillerini yapılandırma (Genel Önizleme)
 
 eSIM, katıştırılmış bir SIM yongasıdır ve [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro) gibi eSIM özellikli bir cihazdaki hücresel veri bağlantısı üzerinden İnternete bağlanmanızı sağlar. eSIM ile mobil operatörünüzden SIM kart almanız gerekmez. Genel gezgin olarak mobil operatörler ve veri planları arasında geçiş yaparak sürekli bağlantı sağlayabilirsiniz.
 
@@ -75,7 +75,7 @@ Aşağıdaki cihazların eSIM özellikli olduğu bildirilmiştir ve bugün satı
 Hücresel etkinleştirme kodları cep telefonu operatörünüz tarafından virgülle ayrılmış bir dosyada (csv) sağlanır. Bu dosyayı aldığınızda aşağıdaki adımları izleyerek Intune’a ekleyin:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihazları** > Seç**eseko****hücresel profiller** > Ekle.
+2. **Cihazları**Seç  >  **eseko hücresel profiller**  >  **Ekle**.
 3. Etkinleştirme kodlarınızı içeren CSV dosyasını seçin.
 4. Değişikliklerinizi kaydetmek için **Tamam**’ı seçin.
 
@@ -97,11 +97,11 @@ Etkinleştirme kodlarını içeren csv dosyasıyla çalışırken cep telefonu o
     1. İlk sütun benzersiz ICCID’dir (SIM yongasının tanımlayıcısı)
     2. İkinci sütun yalnızca virgülle ayrılmış (sonda virgül bulunmaz) Eşleşen Kimliktir. Aşağıdaki örneğe bakın:
 
-        ![Cep telefonu operatörü etkinleştirme kodunun örnek csv dosyası](./media/esim-device-configuration/url-activation-code-examples.png)
+        :::image type="content" source="./media/esim-device-configuration/url-activation-code-examples.png" alt-text="Mobil operatör etkinleştirme kodu örnek CSV dosyası.":::
 
 3. CSV dosya adı, Endpoint Manager Yönetim merkezinde hücresel abonelik havuzu adı olur. Önceki görüntüde dosya adı `UnlimitedDataSkynet.csv`‘dir. Bu nedenle Intune `UnlimitedDataSkynet.csv` abonelik havuzunu adlandırır:
 
-    ![Hücresel abonelik havuzu, etkinleştirme kodu örneği csv dosya adını alır](./media/esim-device-configuration/subscription-pool-name-csv-file.png)
+    :::image type="content" source="./media/esim-device-configuration/subscription-pool-name-csv-file.png" alt-text="Hücresel abonelik havuzu, etkinleştirme kodu örnek CSV dosyası adı olarak adlandırılır.":::
 
 ## <a name="step-2-create-an-azure-ad-device-group"></a>2. Adım: Azure AD cihazı grubunu oluşturma
 
@@ -116,11 +116,11 @@ eSIM özellikli cihazları içeren bir Cihaz grubu oluşturun. [Grup ekleme](../
 eSIM cihazlarınızı içeren Azure AD grubuna profili atayın.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihazlar** > **esım hücresel profilleri**' ni seçin.
+2. **Cihazlar**  >  **esım hücresel profilleri**' ni seçin.
 3. Profil listesinde, atamak istediğiniz eSIM hücresel abonelik havuzunu ve ardından **Atamalar**’ı seçin.
 4. Grupları **Dahil Etmeyi** veya **Dışlamayı** seçin ve sonra da grupları belirtin.
 
-    ![Profili atamak için cihaz grubunu dahil etme](./media/esim-device-configuration/include-exclude-groups.png)
+    :::image type="content" source="./media/esim-device-configuration/include-exclude-groups.png" alt-text="Microsoft Intune profili atamak için cihaz grubunu ekleyin.":::
 
 5. Gruplarınızı seçtiğinizde, bir Azure AD grubu seçersiniz. Birden çok grup seçmek için **Ctrl** tuşunu kullanın ve grupları seçin.
 6. İşiniz bittiğinde, değişikliklerinizi **Kaydedin**.
@@ -134,14 +134,14 @@ eSIM etkinleştirme kodları tek bir kez kullanılır. Intune bir cihaza etkinle
 Profili atadıktan sonra abonelik havuzunun dağıtım durumunu izleyebilirsiniz.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihazlar** > **esım hücresel profilleri**' ni seçin. Mevcut tüm eSIM hücresel abonelik havuzlarınız listelenir.
+2. **Cihazlar**  >  **esım hücresel profilleri**' ni seçin. Mevcut tüm eSIM hücresel abonelik havuzlarınız listelenir.
 3. Abonelik seçin ve **Dağıtım Durumu**’nu gözden geçirin.
 
 ### <a name="check-the-profile-status"></a>Profil durumunu denetleme
 
 Cihaz profilinizi oluşturduktan sonra, Intune grafikler sağlar. Bu grafikler profilin durumunu, örneğin cihazlara başarıyla atandığını veya çakışma gösterip göstermediğini görüntüler.
 
-1. **Cihazların** > **eseslik hücresel profillerini** seçin > var olan bir aboneliği seçin.
+1. **Cihazların**  >  **eseslik hücresel profillerini** seçin > var olan bir aboneliği seçin.
 2. **Genel Bakış** sekmesinde, en üstteki grafikte belirli bir eSIM hücresel abonelik havuzu dağıtımına atanan cihazların sayısı gösterilir.
 
     Ayrıca ayrı cihaz profiline atanmış olan diğer platformlardaki cihazların sayısını da gösterir.
@@ -157,7 +157,7 @@ Cihaz profilinizi oluşturduktan sonra, Intune grafikler sağlar. Bu grafikler p
 
 Cihaz Durumu'nda görebildiğiniz cihazların ayrıntılı bir listesini izleyebilir ve görüntüleyebilirsiniz.**
 
-1. **Cihazların** > **eseslik hücresel profillerini** seçin > var olan bir aboneliği seçin.
+1. **Cihazların**  >  **eseslik hücresel profillerini** seçin > var olan bir aboneliği seçin.
 2. **Cihaz Durumu**’nu seçin. Intune cihaz hakkında ek ayrıntılar gösterir:
 
     - **Cihaz Adı**: Hedeflenen cihazın adı
@@ -170,10 +170,10 @@ Cihaz Durumu'nda görebildiğiniz cihazların ayrıntılı bir listesini izleyeb
 ### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Gerçek cihazda eSIM profil ayrıntılarını izleme
 
 1. Cihazınızda **Ayarlar**'ı açın > **Ağ ve İnternet**'e gidin.
-2. **Hücresel** > **Yönetim esım profillerini** seçin
+2. **Hücresel**  >  **Yönetim esım profillerini** seçin
 3. eSIM profilleri listelenir:
 
-    ![Cihaz ayarlarınızda eSIM profillerini görüntüleme](./media/esim-device-configuration/device-settings-cellular-profiles.png)
+    :::image type="content" source="./media/esim-device-configuration/device-settings-cellular-profiles.png" alt-text="Cihaz ayarlarınızda esım profillerini görüntüleyin.":::
 
 ## <a name="remove-the-esim-profile-from-device"></a>eSIM profilini cihazdan kaldırma
 
@@ -197,4 +197,5 @@ Ayrıca cihaz [kullanımdan kaldırıldığında](../remote-actions/devices-wipe
   - **Hücresel etkinleştirme hatası, cep telefonu operatörüne başvurun**: Etkinleştirme kodu kendi ağı içinde etkinleştirilemiyor olabilir. Belki de profil indirme ve hücresel etkinleştirme başarısız olmuştur.
 
 ## <a name="next-steps"></a>Sonraki adımlar
+
 [Cihaz profillerini yapılandırma](device-profiles.md)

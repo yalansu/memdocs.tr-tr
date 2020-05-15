@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60a4ac793500cd4d31df2188344e2b5f4e1094a4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a56aa9f1953a1886b0736c5a3d1c0bfbd10853a1
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359155"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401544"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Intune kullanarak adanmış bir bilgi noktası olarak çalışacak Windows 10 ve Windows holographic for Business cihaz ayarları
 
@@ -42,33 +42,49 @@ Bu makalede bir cihaz yapılandırma profili oluşturma konusu gösterilmektedir
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
+
+   - **Platform**: **Windows 10 ve üstünü**seçin.
+   - **Profil**: **bilgi noktası**seçin.
+
+4. **Oluştur**’u seçin.
+5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
    - **Ad**: Yeni profil için açıklayıcı bir ad girin.
    - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
-   - **Platform**: **Windows 10 ve üzeri**’ni seçin
-   - **Profil türü**: **bilgi noktası** seçin
 
-4. **Ayarlar**' da bir **bilgi noktası modu**seçin. **Bilgi noktası modu**, ilke tarafından desteklenen bilgi noktası modu türünü belirler. Seçeneklere şunlar dahildir:
+6. **İleri**’yi seçin.
+7. **Yapılandırma ayarları**' nda  >  **bir bilgi noktası modu seçin**, ilke tarafından desteklenen bilgi noktası modu türünü seçin. Seçeneklere şunlar dahildir:
 
-    - **Yapılandırılmamış** (varsayılan): İlke, bilgi noktası modunu etkinleştirmez.
+    - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez. İlke bilgi noktası modunu etkinleştirmez.
     - **Tekli uygulama, tam ekran bilgi noktası**: Cihaz tek kullanıcı hesabı olarak çalışır ve tek bir Mağaza uygulamasına kilitlenir. Dolayısıyla kullanıcı oturum açtığında belirli bir uygulama başlar. Bu mod ayrıca kullanıcının yeni uygulamalar açmasını veya çalışan uygulamayı değiştirmesini önler.
     - **Çoklu uygulama bilgi noktası**: Cihaz, Uygulama Kullanıcı Modeli Kimliği (AUMID) kullanarak birden fazla Store, Win32 veya Windows uygulaması çalıştırır. Cihazda yalnızca eklediğiniz uygulamalar kullanılabilir.
 
         Çok uygulamalı bilgi noktasının veya sabit amaçlı cihazın yararı, yalnızca ihtiyaç duyulan uygulamalara erişim sağlayarak kullanıcılara anlaşılması kolay bir deneyim sunmasıdır. Ayrıca, Ayrıca, kullanıcıların ihtiyaç duydukları uygulamaları görüntüleyebilecekleri şekilde kaldırabilirsiniz.
 
     Tüm ayarların bir listesi ve ne yapacaklarınız için, bkz.:
+
       - [Windows 10 kiosk ayarları](kiosk-settings-windows.md)
       - [Windows holographic for Business bilgi noktası ayarları](kiosk-settings-holographic.md)
 
-5. İşiniz bittiğinde, değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin.
+8. **İleri**’yi seçin.
 
-Profil oluşturulur ve profiller listesinde gösterilir. Sonra, profili [atayın](device-profile-assign.md) .
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+
+    **İleri**’yi seçin.
+
+10. **Atamalar**' da, profilinizi alacak kullanıcıları veya kullanıcı grubunu seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
+
+    **İleri**’yi seçin.
+
+11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
+
+Her cihazın bir sonraki denetimi sırasında ilke uygulanır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Profili atama](device-profile-assign.md) ve [durumunu izleme](device-profile-monitor.md).
+[Profil atandıktan](device-profile-assign.md)sonra [durumunu izleyin](device-profile-monitor.md).
 
 Aşağıdaki platformları çalıştıran cihazlar için bilgi noktası profilleri oluşturabilirsiniz:
 

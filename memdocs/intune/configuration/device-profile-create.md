@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 71929e59e4447340d26516c8caec6beb2b3612f3
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327445"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406420"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Microsoft Intune’da cihaz profili oluşturma
 
@@ -44,12 +44,12 @@ Profiller, [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft
 - **Platforma göre**: platformunuz için ilkeler ve Profiller oluşturun ve görüntüleyin. Bu görünüm, platforma özgü özellikleri de gösterebilir. Örneğin, **Windows**' u seçin. **Windows 10 güncelleştirme halkaları** ve **PowerShell betikleri**gibi Windows 'a özgü özellikler görürsünüz.
 - **İlke**: cihaz profilleri oluşturun, cihazlarda çalıştırmak Için özel [PowerShell betikleri](../apps/intune-management-extension.md) yükleyin ve [esım](esim-device-configuration.md)kullanarak cihazlara veri planları ekleyin.
 
-Bir profil oluşturduğunuzda (**yapılandırma profilleri** > **Profil oluştur**), platformunuzu seçin:
+Bir profil oluşturduğunuzda (**yapılandırma profilleri**  >  **Profil oluştur**), platformunuzu seçin:
 
 - **Android cihaz yöneticisi**
 - **Android Kurumsal**
 - **iOS/iPadOS**
-- **Mac OS**
+- **macOS**
 - **Windows 10 ve üzeri**
 - **Windows 8.1 ve üzeri**
 - **Windows Phone 8.1**
@@ -92,7 +92,7 @@ Ardından profil türünü seçin. Seçtiğiniz platforma bağlı olarak, yapıl
 
 ## <a name="scope-tags"></a>Kapsam etiketleri
 
-Profilinize ayar ekledikten sonra bir kapsam etiketi de ekleyebilirsiniz. Kapsam etiketleri, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtre sağlar. Ve, dağıtıldığı için kullanılır.
+Profilinize ayar ekledikten sonra bir kapsam etiketi de ekleyebilirsiniz. Kapsam etiketleri, veya gibi belirli BT gruplarına filtre sağlar `US-NC IT Team` `JohnGlenn_ITDepartment` . Ve, dağıtıldığı için kullanılır.
 
 Kapsam etiketleri ve yapabilecekleriniz hakkında daha fazla bilgi için bkz. [Dağıtılmış BT için RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
@@ -111,7 +111,7 @@ Bu görevi yapmak için bir **uygulanabilirlik kuralı**oluşturun. Bu kurallar 
 
 Bu senaryolara yaklaşımak için şunları yapın:
 
-- Bellows üniversite 'deki tüm cihazları içeren bir cihaz grubu oluşturun. Profilde, en düşük işletim sistemi sürümü `16299` ve en yüksek sürüm ise uygulanacak bir uygulanabilirlik kuralı ekleyin. `17134` Bu profili Bellows okul cihazları grubuna atayın.
+- Bellows üniversite 'deki tüm cihazları içeren bir cihaz grubu oluşturun. Profilde, en düşük işletim sistemi sürümü `16299` ve en yüksek sürüm ise uygulanacak bir uygulanabilirlik kuralı ekleyin `17134` . Bu profili Bellows okul cihazları grubuna atayın.
 
   Atandığında profil, girdiğiniz en düşük ve en yüksek sürüm arasındaki cihazlara uygulanır. Girdiğiniz en düşük ve en yüksek sürümler arasında olmayan cihazlarda, durumları **geçerli değil**olarak gösterilir.
 
@@ -144,7 +144,7 @@ Profili gruplara atadığınızda, uygulanabilirlik kuralları bir filtre işlev
     - **Işletim sistemi sürümü**: listede, kuralınıza dahil etmek istediğiniz Windows 10 sürümlerini (veya hariç tutmak) denetleyin.
     - **Işletim sistemi sürümü**: kuralınıza dahil etmek (veya dışlamak) istediğiniz **En düşük** ve **en yüksek** Windows 10 sürüm numaralarını girin. Her iki değer de gereklidir.
 
-      Örneğin, en yüksek sürüm için `10.0.16299.0` en düşük sürüm ve `10.0.17134.0` (RS4 veya 1803) için (RS3 veya 1709) girebilirsiniz. Ya da, en düşük sürüm ve `10.0.16299.001` `10.0.17134.319` en yüksek sürüm için daha ayrıntılı bir şekilde girebilirsiniz.
+      Örneğin, en `10.0.16299.0` yüksek sürüm için en düşük sürüm ve `10.0.17134.0` (RS4 veya 1803) için (RS3 veya 1709) girebilirsiniz. Ya da, `10.0.16299.001` En düşük sürüm ve en yüksek sürüm için daha ayrıntılı bir şekilde girebilirsiniz `10.0.17134.319` .
 
 4. Değişikliklerinizi kaydetmek için **Ekle** ' yi seçin.
 
@@ -163,10 +163,10 @@ Profiller oluştururken aşağıdaki önerileri göz önünde bulundurun:
   Bazı yapılandırma profili örnekleri şunları içerir:
 
   **Profil adı**: yönetici şablonu-tüm Windows 10 kullanıcıları için OneDrive yapılandırma profili  
-  **Profil açıklaması**: tüm Windows 10 kullanıcıları için en düşük ve temel ayarları içeren OneDrive yönetici şablonu profili. Kullanıcıların kurumsal user@contoso.com verileri kişisel OneDrive hesaplarına paylaşmasını engellemek için tarafından oluşturulur.
+  **Profil açıklaması**: tüm Windows 10 kullanıcıları için en düşük ve temel ayarları içeren OneDrive yönetici şablonu profili. user@contoso.comKullanıcıların kurumsal verileri kişisel OneDrive hesaplarına paylaşmasını engellemek için tarafından oluşturulur.
 
   **Profil adı**: Tüm IOS/ıpados kullanıcıları için VPN profili  
-  **Profil açıklaması**: contoso VPN 'ye bağlanacak tüm IOS/ıpados kullanıcıları için en düşük ve temel ayarları içeren VPN profili. Tarafından user@contoso.com oluşturulan kullanıcılar Kullanıcı adı ve parola Istemek yerine VPN 'de otomatik olarak kimlik doğrular.
+  **Profil açıklaması**: contoso VPN 'ye bağlanacak tüm IOS/ıpados kullanıcıları için en düşük ve temel ayarları içeren VPN profili. Tarafından oluşturulan user@contoso.com Kullanıcılar Kullanıcı adı ve parola istemek yerıne VPN 'de otomatik olarak kimlik doğrular.
 
 - Microsoft Edge ayarlarını yapılandırma, Microsoft Defender Anti-Virus ayarlarını etkinleştirme, iOS/ıpados jailbreak uygulanmış cihazlarını engelleme vb. gibi görevine göre profilinizi oluşturun.
 
@@ -174,7 +174,7 @@ Profiller oluştururken aşağıdaki önerileri göz önünde bulundurun:
 
 - Kullanıcı ilkelerini cihaz ilkelerinden ayırın.
 
-  Örneğin, [Intune 'da Yönetim Şablonları](administrative-templates-windows.md) yüzlerce ADMX ayarı vardır. Bu şablonlar, bir ayarın kullanıcılara veya cihazlara uygulanacağını gösterir. Yönetici şablonları oluştururken, kullanıcı ayarlarınızı bir kullanıcılar grubuna atayın ve cihaz ayarlarınızı bir cihaz grubuna atayın.
+  Örneğin, [Intune 'daki Yönetim Şablonları](administrative-templates-windows.md) binlerce ADMX ayarı vardır. Bu şablonlar, bir ayarın kullanıcılara veya cihazlara uygulanacağını gösterir. Yönetici şablonları oluştururken, kullanıcı ayarlarınızı bir kullanıcılar grubuna atayın ve cihaz ayarlarınızı bir cihaz grubuna atayın.
 
   Aşağıdaki görüntüde kullanıcılara uygulanabilecek ve/veya cihazlara uygulanabilecek bir ayarın örneği gösterilmektedir:
 
