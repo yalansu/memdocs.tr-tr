@@ -20,6 +20,7 @@
 #### Türetilmiş kimlik bilgileriyle kaydetme
 ##### [Entrust Datacard ile kaydetme](enroll-android-device-entrust-datacard.md)
 ##### [Intercede ile kaydetme](enroll-android-device-intercede.md)
+##### [Disa Purebred ile kaydolma](enroll-android-device-disa-purebred.md)
 ### [Yeni cihaz yönetimi kurulumuna taşıma](move-to-new-device-management-setup.md)
 ### [Cihazınızdaki yönetilen uygulamaları kullanma](use-managed-apps-on-your-device-android.md)
 ### [Cihazınızı şifreleme](encrypt-your-device-android.md)

@@ -82,8 +82,12 @@
         - name: StageNow günlükleri ve yaygın sorunlar
           href: android-zebra-mx-logs-troubleshoot.md
     - name: Android Kurumsal üzerinde OEMConfig
-      href: android-oem-configuration-overview.md
-      displayName: 'original equipment manufacturers, schema'
+      displayName: 'original equipment manufacturers, schema, zebra, order'
+      items:
+        - name: Kullanmaya başlayın
+          href: android-oem-configuration-overview.md
+        - name: Zebra cihazlarındaki profiller
+          href: oemconfig-zebra-android-devices.md
     - name: Bilgi noktaları ve ayrılmış cihazlar
       href: kiosk-settings.md
       displayName: 'single app, multi app'
