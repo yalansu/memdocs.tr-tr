@@ -60,12 +60,51 @@
           href: actions-for-noncompliance.md
         - name: Cihaz uyumluluğunu izleme
           href: compliance-policy-monitor.md
-    - name: Cihazları şifreleme
+    - name: Uç nokta güvenliği
+      href: endpoint-security.md
       items:
-        - name: Cihazları Şifreleme
-          href: encrypt-devices.md
-        - name: Cihaz şifrelemesini izleme
-          href: encryption-monitor.md
+        - name: Cihazları yönetme
+          href: endpoint-security-manage-devices.md
+        - name: Güvenlik temelleri
+          items:
+            - name: Güvenlik temelleri
+              href: security-baselines.md
+            - name: Temellerinizi izleme
+              href: security-baselines-monitor.md
+        - name: Güvenlik görevleri
+          href: atp-manage-vulnerabilities.md
+        - name: Güvenlik ilkesi
+          items:
+            - name: Güvenlik ilkelerini yönetin
+              href: endpoint-security-policy.md
+            - name: Virüsten Koruma
+              href: endpoint-security-antivirus-policy.md
+            - name: Disk şifrelemesi
+              href: endpoint-security-disk-encryption-policy.md
+            - name: Güvenlik duvarı
+              href: endpoint-security-firewall-policy.md
+            - name: Uç nokta algılama ve yanıt
+              href: endpoint-security-edr-policy.md
+            - name: Saldırı yüzeyini azaltma
+              href: endpoint-security-asr-policy.md
+            - name: Hesap koruması
+              href: endpoint-security-account-protection-policy.md
+        - name: Microsoft Defender ATP
+          href: advanced-threat-protection.md
+        - name: Disk şifreleme
+          items:
+            - name: BitLocker ilkesini yönetme
+              href: encrypt-devices.md
+            - name: FileVault ilkesini yönetme
+              href: encrypt-devices-filevault.md
+            - name: Disk şifrelemesini yönetme
+              href: encryption-monitor.md
+    - name: Kimlik koruması
+      items:
+        - name: Windows Hello
+          href: windows-hello.md
+        - name: Kimlik koruması
+          href: identity-protection-configure.md
     - name: Koşullu Erişim
       items:
         - name: Koşullu Erişime genel bakış
@@ -87,100 +126,76 @@
           href: app-based-conditional-access-intune-create.md
         - name: ADAL ve Intune
           href: app-modern-authentication-block.md
-        - name: macOS için Jamf Pro
-          items:
-            - name: Jamf Cloud bağlayıcısını kullanma
-              href: conditional-access-jamf-cloud-connector.md
-            - name: Intune ile Jamf’yi el ile tümleştirme
-              href: conditional-access-integrate-jamf.md
-            - name: Jamf Pro ile yönetilen Mac bilgisayarları üzerinde uyumluluğu zorla
-              href: conditional-access-assign-jamf.md
-    - name: Tehdit koruması
-      items:
-        - name: Mobile Threat Defense
-          href: mobile-threat-defense.md
-          items:
-            - name: Kayıtlı olmayan cihazlarda MTD
-              items:
-                - name: Kayıtlı olmayan cihazlara MTD uygulamaları ekleme
-                  href: mtd-add-apps-unenrolled-devices.md
-                - name: MTD uygulaması koruma ilkesi oluşturma
-                  href: mtd-app-protection-policy.md
-                - name: Kayıtlı olmayan cihazlar için MTD’yi etkinleştirme
-                  href: mtd-enable-unenrolled-devices.md
-            - name: Kayıtlı cihazlarda MTD
-              items:
-                - name: Kayıtlı cihazlara MTD uygulamaları ekleme
-                  href: mtd-apps-ios-app-configuration-policy-add-assign.md
-                - name: Bir MTD cihaz uyumluluk ilkesi oluşturma
-                  href: mtd-device-compliance-policy-create.md
-                - name: Kayıtlı cihazlar için MTD’yi etkinleştirme
-                  href: mtd-connector-enable.md
-            - name: MTD uygulamaları
-              items:
-                - name: Better Mobile’ı ayarlama
-                  href: better-mobile-threat-defense-connector.md
-                  items:
-                    - name: Better Mobile ve Intune tümleştirmesi
-                      href: better-mobile-mtd-connector-integration.md
-                      displayName: sso
-                - name: Check Point’i ayarlama
-                  href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
-                  items:
-                    - name: Check Point ve Intune tümleştirmesi
-                      href: checkpoint-sandblast-mobile-mtd-connector-integration.md
-                - name: Lookout’u ayarlama
-                  href: lookout-mobile-threat-defense-connector.md
-                  items:
-                    - name: Lookout ve Intune tümleştirmesi
-                      href: lookout-mtd-connector-integration.md
-                - name: Pradeo’yu Ayarlama
-                  href: pradeo-mobile-threat-defense-connector.md
-                  items:
-                    - name: Pradeo ve Intune tümleştirmesi
-                      href: pradeo-mtd-connector-integration.md
-                - name: Sophos Mobile'ı ayarlama
-                  href: sophos-mtd-connector.md
-                  items:
-                    - name: Sophos Mobile ve Intune tümleştirmesi
-                      href: sophos-mtd-connector-integration.md
-                - name: Symantec'i ayarlama
-                  href: skycure-mobile-threat-defense-connector.md
-                  items:
-                    - name: Symantec ve Intune tümleştirmesi
-                      href: skycure-mtd-connector-integration.md
-                - name: Wandera’yı ayarlama
-                  href: wandera-mtd-connector.md
-                  items:
-                    - name: Wandera ve Intune tümleştirmesi
-                      href: wandera-mtd-connector-integration.md
-                - name: Zimperium’u ayarlama
-                  href: zimperium-mobile-threat-defense-connector.md
-                  items:
-                    - name: Zimperium ve Intune tümleştirmesi
-                      href: zimperium-mtd-connector-integration.md
-        - name: Microsoft Defender
-          items:
-            - name: Microsoft Defender ATP
-              href: advanced-threat-protection.md
-            - name: Güvenlik görevleri
-              href: atp-manage-vulnerabilities.md
-    - name: Güvenlik temelleri
-      items:
-        - name: Güvenlik temelleri
-          href: security-baselines.md
-        - name: Temellerinizi izleme
-          href: security-baselines-monitor.md
+        - name: Uyumluluk için Jamf Pro’yu Intune ile tümleştirme
+          href: conditional-access-integrate-jamf.md
+        - name: Jamf Pro ile yönetilen Mac bilgisayarları üzerinde uyumluluğu zorla
+          href: conditional-access-assign-jamf.md
     - name: Endpoint protection
       href: endpoint-protection-configure.md
+    - name: Mobile Threat Defense iş ortakları
+      href: mobile-threat-defense.md
+      items:
+        - name: Kayıtlı olmayan cihazlarda MTD
+          items:
+            - name: Kayıtlı olmayan cihazlara MTD uygulamaları ekleme
+              href: mtd-add-apps-unenrolled-devices.md
+            - name: MTD uygulaması koruma ilkesi oluşturma
+              href: mtd-app-protection-policy.md
+            - name: Kayıtlı olmayan cihazlar için MTD’yi etkinleştirme
+              href: mtd-enable-unenrolled-devices.md
+        - name: Kayıtlı cihazlarda MTD
+          items:
+            - name: Kayıtlı cihazlara MTD uygulamaları ekleme
+              href: mtd-apps-ios-app-configuration-policy-add-assign.md
+            - name: Bir MTD cihaz uyumluluk ilkesi oluşturma
+              href: mtd-device-compliance-policy-create.md
+            - name: Kayıtlı cihazlar için MTD’yi etkinleştirme
+              href: mtd-connector-enable.md
+        - name: MTD uygulamaları
+          items:
+            - name: Better Mobile’ı ayarlama
+              href: better-mobile-threat-defense-connector.md
+              items:
+                - name: Better Mobile ve Intune tümleştirmesi
+                  href: better-mobile-mtd-connector-integration.md
+                  displayName: sso
+            - name: Check Point’i ayarlama
+              href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
+              items:
+                - name: Check Point ve Intune tümleştirmesi
+                  href: checkpoint-sandblast-mobile-mtd-connector-integration.md
+            - name: Lookout’u ayarlama
+              href: lookout-mobile-threat-defense-connector.md
+              items:
+                - name: Lookout ve Intune tümleştirmesi
+                  href: lookout-mtd-connector-integration.md
+            - name: Pradeo’yu Ayarlama
+              href: pradeo-mobile-threat-defense-connector.md
+              items:
+                - name: Pradeo ve Intune tümleştirmesi
+                  href: pradeo-mtd-connector-integration.md
+            - name: Sophos Mobile'ı ayarlama
+              href: sophos-mtd-connector.md
+              items:
+                - name: Sophos Mobile ve Intune tümleştirmesi
+                  href: sophos-mtd-connector-integration.md
+            - name: Symantec'i ayarlama
+              href: skycure-mobile-threat-defense-connector.md
+              items:
+                - name: Symantec ve Intune tümleştirmesi
+                  href: skycure-mtd-connector-integration.md
+            - name: Wandera’yı ayarlama
+              href: wandera-mtd-connector.md
+              items:
+                - name: Wandera ve Intune tümleştirmesi
+                  href: wandera-mtd-connector-integration.md
+            - name: Zimperium’u ayarlama
+              href: zimperium-mobile-threat-defense-connector.md
+              items:
+                - name: Zimperium ve Intune tümleştirmesi
+                  href: zimperium-mtd-connector-integration.md
     - name: Ağ erişim denetimi
       href: network-access-control-integrate.md
-    - name: Windows Hello
-      items:
-        - name: Windows Hello
-          href: windows-hello.md
-        - name: Kimlik koruması
-          href: identity-protection-configure.md
     - name: Sertifikalar
       items:
         - name: Kimlik doğrulama için sertifika kullanma
@@ -257,13 +272,8 @@
           href: troubleshoot-jamf.md
 - name: Başvuru
   items:
-    - name: Virüsten koruma ilke ayarları
-      items:
-        - name: macOS Defender Virüsten Koruma ayarları
-          href: antivirus-microsoft-defender-settings-macos.md
-        - name: Windows 10 Microsoft Defender Virüsten Koruma ayarları
-          href: antivirus-microsoft-defender-settings-windows.md
     - name: Üçüncü taraf sertifika yetkilisi ekleme API'si
+      href: scep-libraries-apis.md
     - name: Uyumluluk ilkesi ayarları
       items:
         - name: Uyumluluk ilkesi ayarları - Android
@@ -280,7 +290,26 @@
           href: compliance-policy-create-windows-8-1.md
         - name: Uyumluluk ilkesi ayarları - Windows Phone 8.1
           href: compliance-policy-create-windows-8-1.md
-      href: scep-libraries-apis.md
+    - name: Uç nokta güvenlik ilkesi ayarları
+      items:
+        - name: Virüsten koruma ilke ayarları
+          items:
+            - name: macOS Defender Virüsten Koruma ayarları
+              href: antivirus-microsoft-defender-settings-macos.md
+            - name: Windows 10 Microsoft Defender Virüsten Koruma ayarları
+              href: antivirus-microsoft-defender-settings-windows.md
+            - name: Windows Güvenlik deneyimi ayarları
+              href: antivirus-security-experience-windows-settings.md
+        - name: Disk şifreleme profili ayarları
+          href: endpoint-security-disk-encryption-profile-settings.md
+        - name: Güvenlik duvarı ilkesi ayarları
+          href: endpoint-security-firewall-profile-settings.md
+        - name: Uç nokta algılama ve yanıt profili ayarları
+          href: endpoint-security-edr-profile-settings.md
+        - name: Saldırı yüzeyi azaltma profili ayarları
+          href: endpoint-security-asr-profile-settings.md
+        - name: Hesap koruma profili ayarları
+          href: endpoint-security-account-protection-profile-settings.md
     - name: Güvenlik temel ayarları
       items:
         - name: Windows 10 MDM temel ayarları
