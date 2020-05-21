@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4da13b77b52a8110072dcba208b70d1ce0407cbb
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 0b870d3adf36b4427281182d8453cc3046b1858e
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077997"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429989"
 ---
 # <a name="set-enrollment-restrictions"></a>Kayıt kısıtlamalarını ayarlama
 
@@ -59,7 +59,7 @@ Hem cihaz türü hem de cihaz sınırı kayıt kısıtlamaları için varsayıla
 
 ## <a name="create-a-device-type-restriction"></a>Cihaz türü kısıtlaması oluşturma
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) > **cihazlar** > **Kayıt kısıtlamaları** > ' nda oturum açın,**kısıtlama** > **cihaz türü kısıtlaması**oluşturun.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)cihazlar kayıt kısıtlamaları ' nda oturum açın,  >  **Devices**  >  **Enrollment restrictions**  >  **kısıtlama**  >  **cihaz türü kısıtlaması**oluşturun.
 2. **Temel bilgiler** sayfasında, kısıtlamaya bir **ad** ve isteğe bağlı bir **Açıklama**sağlayın.
 3. **İleri ' yi** seçerek **Platform ayarları** sayfasına gidin.
 4. **Platform**altında, bu kısıtlamanın izin vermek istediğiniz platformlar Için **izin ver** ' i seçin.
@@ -83,27 +83,31 @@ Hem cihaz türü hem de cihaz sınırı kayıt kısıtlamaları için varsayıla
 
 6. **Kişisel**olarak sahip olunan cihazlara izin vermek istediğiniz platformlar Için **izin ver** ' i seçin.
 7. **Cihaz üreticisi**altında, engellemek istediğiniz üreticilerin virgülle ayrılmış bir listesini girin.
-8. **Atamalar** sayfasına gitmek için **İleri ' yi** seçin.
-9. **Dahil edilecek grupları seç** ' i seçin ve ardından bu kısıtlamaya dahil etmek istediğiniz grupları bulmak için arama kutusunu kullanın. Kısıtlama yalnızca atandığı gruplara uygulanır. Kısıtlamayı en az bir gruba atamazsanız, hiçbir etkisi olmaz. Ardından **Seç** seçeneğini belirleyin. 
+8. **Kapsam etiketleri** sayfasına gitmek için **İleri ' yi** seçin.
+9. **Kapsam etiketleri** sayfasında isteğe bağlı olarak, bu kısıtlamaya uygulamak istediğiniz kapsam etiketlerini ekleyin. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT için rol tabanlı erişim denetimi ve kapsam etiketleri kullanma](../fundamentals/scope-tags.md). Kapsam etiketleri kayıt kısıtlamalarıyla kullanılırken, kullanıcılar yalnızca kapsamlarına sahip oldukları ilkeleri yeniden sıraya alabilir. Ayrıca, yalnızca kapsamlarına sahip oldukları ilke konumlarına yönelik yeniden sıralama yapılabilir. Kullanıcılar her ilkede doğru ilke öncelik numarasını görür. Kapsamlı bir Kullanıcı, diğer tüm ilkeleri görmese de, ilkelerinin göreli önceliğini söyleyebilir.
+10. **Atamalar** sayfasına gitmek için **İleri ' yi** seçin.
+11. **Dahil edilecek grupları seç** ' i seçin ve ardından bu kısıtlamaya dahil etmek istediğiniz grupları bulmak için arama kutusunu kullanın. Kısıtlama yalnızca atandığı gruplara uygulanır. Kısıtlamayı en az bir gruba atamazsanız, hiçbir etkisi olmaz. Ardından **Seç** seçeneğini belirleyin. 
     ![Platform ayarlarını seçmek için ekran ucu](./media/enrollment-restrictions-set/select-groups.png)
-10. **İleri ' yi** seçerek **gözden geçir + oluştur** sayfasına gidin.
-11. Kısıtlamayı oluşturmak için **Oluştur** ' u seçin.
-12. Yeni kısıtlama, varsayılan öncelik düzeyinin hemen üstündeki öncelik düzeyiyle oluşturulur. [Önceliği değiştirebilirsiniz](#change-enrollment-restriction-priority).
+12. **İleri ' yi** seçerek **gözden geçir + oluştur** sayfasına gidin.
+13. Kısıtlamayı oluşturmak için **Oluştur** ' u seçin.
+14. Yeni kısıtlama, varsayılan öncelik düzeyinin hemen üstündeki öncelik düzeyiyle oluşturulur. [Önceliği değiştirebilirsiniz](#change-enrollment-restriction-priority).
 
 
 ## <a name="create-a-device-limit-restriction"></a>Cihaz sınırı kısıtlaması oluşturma
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) > **cihazlar** > **Kayıt kısıtlamaları** > **kısıtlama** > **cihaz sınırı kısıtlaması**' nda oturum açın.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **cihazlar**  >  **Kayıt kısıtlamaları**  >  **kısıtlama**  >  **cihaz sınırı kısıtlaması**' nda oturum açın.
 2. **Temel bilgiler** sayfasında, kısıtlamaya bir **ad** ve isteğe bağlı bir **Açıklama**sağlayın.
 3. **Cihaz sınırı** sayfasına gitmek için **İleri ' yi** seçin.
 4. **Cihaz sınırı**için, bir kullanıcının kaydedebileceği en fazla cihaz sayısını seçin.
     ![Cihaz sınırı seçmek için ekran ucu](./media/enrollment-restrictions-set/choose-device-limit.png)
-5. **Atamalar** sayfasına gitmek için **İleri ' yi** seçin.
-6. **Dahil edilecek grupları seç** ' i seçin ve ardından bu kısıtlamaya dahil etmek istediğiniz grupları bulmak için arama kutusunu kullanın. Kısıtlama yalnızca atandığı gruplara uygulanır. Kısıtlamayı en az bir gruba atamazsanız, hiçbir etkisi olmaz. Ardından **Seç** seçeneğini belirleyin. 
+5. **Kapsam etiketleri** sayfasına gitmek için **İleri ' yi** seçin.
+6. **Kapsam etiketleri** sayfasında isteğe bağlı olarak, bu kısıtlamaya uygulamak istediğiniz kapsam etiketlerini ekleyin. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT için rol tabanlı erişim denetimi ve kapsam etiketleri kullanma](../fundamentals/scope-tags.md). Kapsam etiketleri kayıt kısıtlamalarıyla kullanılırken, kullanıcılar yalnızca kapsamlarına sahip oldukları ilkeleri yeniden sıraya alabilir. Ayrıca, yalnızca kapsamlarına sahip oldukları ilke konumlarına yönelik yeniden sıralama yapılabilir. Kullanıcılar her ilkede doğru ilke öncelik numarasını görür. Kapsamlı bir Kullanıcı, diğer tüm ilkeleri görmese de, ilkelerinin göreli önceliğini söyleyebilir.
+7. **Atamalar** sayfasına gitmek için **İleri ' yi** seçin.
+8. **Dahil edilecek grupları seç** ' i seçin ve ardından bu kısıtlamaya dahil etmek istediğiniz grupları bulmak için arama kutusunu kullanın. Kısıtlama yalnızca atandığı gruplara uygulanır. Kısıtlamayı en az bir gruba atamazsanız, hiçbir etkisi olmaz. Ardından **Seç** seçeneğini belirleyin. 
     ![Grupları seçmek için ekran ucu](./media/enrollment-restrictions-set/select-groups-device-limit.png)
-7. **İleri ' yi** seçerek **gözden geçir + oluştur** sayfasına gidin.
-8. Kısıtlamayı oluşturmak için **Oluştur** ' u seçin.
-9. Yeni kısıtlama, varsayılan öncelik düzeyinin hemen üstündeki öncelik düzeyiyle oluşturulur. [Önceliği değiştirebilirsiniz](#change-enrollment-restriction-priority).
+9. **İleri ' yi** seçerek **gözden geçir + oluştur** sayfasına gidin.
+10. Kısıtlamayı oluşturmak için **Oluştur** ' u seçin.
+11. Yeni kısıtlama, varsayılan öncelik düzeyinin hemen üstündeki öncelik düzeyiyle oluşturulur. [Önceliği değiştirebilirsiniz](#change-enrollment-restriction-priority).
 
 KCG kayıtları sırasında kullanıcılar, kayıtlı cihaz sınırına ulaştığında bunu belirten bir bildirim görür. Örneğin iOS üzerinde:
 
@@ -126,7 +130,7 @@ KCG kayıtları sırasında kullanıcılar, kayıtlı cihaz sınırına ulaştı
 
 Aşağıdaki adımları izleyerek, bir kayıt kısıtlamasının ayarlarını değiştirebilirsiniz. Bu kısıtlamalar, zaten kaydedilmiş olan cihazları etkilemez. Bu özellikle [Intune PC aracısı](../fundamentals/manage-windows-pcs-with-microsoft-intune.md) ile kaydedilen cihazlar engellenemez.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) > **cihazlar** > **kayıt kısıtlamalarında** oturum açın > > **özelliklerini**değiştirmek istediğiniz kısıtlamayı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **cihazlar**  >  **kayıt kısıtlamalarında** oturum açın > > **özelliklerini**değiştirmek istediğiniz kısıtlamayı seçin.
 2. Değiştirmek istediğiniz ayarların yanındaki **Düzenle** ' yi seçin.
 3. **Düzenle** sayfasında, istediğiniz değişiklikleri yapın ve **gözden geçir + kaydet** sayfasına ilerleyin ve ardından **Kaydet**' i seçin.
 
@@ -143,7 +147,7 @@ Windows şirket kaydı olarak yetkilendirme için aşağıdaki yöntemler uygund
 - Kaydeden kullanıcı [cihaz kayıt yöneticisi hesabı]( device-enrollment-manager-enroll.md) kullanıyor.
 - Cihaz [Windows Autopilot](enrollment-autopilot.md) yoluyla kaydediliyor.
 - Cihaz Windows Autopilot ile kaydediliyor ancak Windows Ayarları'ndan bir yalnızca MDM kaydı seçeneği değil.
-- Cihazın IMEI numarası **cihaz kaydı** > **[Kurumsal cihaz tanımlayıcılarında](corporate-identifiers-add.md)** listelenir. (Windows Phone 8.1 için desteklenmez.)
+- Cihazın IMEI numarası **cihaz kaydı**  >  **[Kurumsal cihaz tanımlayıcılarında](corporate-identifiers-add.md)** listelenir. (Windows Phone 8.1 için desteklenmez.)
 - Cihaz bir [toplu sağlama paketi](windows-bulk-enroll.md) ile kaydediliyor.
 - Cihaz, GPO 'dan kaydolur veya [ortak yönetim için Configuration Manager otomatik kayıt](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1)yapar.
  
@@ -176,6 +180,6 @@ Varsayılan kısıtlamalar dışındaki tüm kısıtlamaların önceliğini değ
 
 1. Azure Portal’da oturum açın.
 2. **Diğer Hizmetler**'i seçin, **Intune** için arama yapın ve ardından **Intune**'u seçin.
-3. **Cihaz kaydı** > **Kayıt kısıtlamaları**' nı seçin.
+3. **Cihaz kaydı**  >  **Kayıt kısıtlamaları**' nı seçin.
 4. Öncelik listesinde kısıtlamanın üzerine gelin.
 5. Üç dikey noktayı kullanarak, önceliği listede dilediğiniz konuma sürükleyin.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 861d7f526711f2169e8fd03b3df09659440523b9
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: c20489b8da3080506065d68aeb1b19dae362c2fb
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693452"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556328"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="edge-october-2019"
@@ -47,7 +47,6 @@ Microsoft Intune tarafından desteklenen Microsoft Edge Web tarayıcısı taban 
 ::: zone-end
 ::: zone pivot="edge-april-2020"
 
-*Bu yeni taban çizgisi, bir sonraki birkaç hafta içinde kiracılar için kullanıma alınıyor. Tüm kiracıların bu yeni taban çizgisine erken bir süre içinde sahip olacağını umuz.*
 Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın. Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın.
 
 ::: zone-end
@@ -280,7 +279,7 @@ Microsoft Intune tarafından desteklenen Microsoft Edge Web tarayıcısı taban 
 
   Kullanıcıların Microsoft Edge 'e yükleyene özel uzantıları listeleyin. Bu ilkeyi dağıttığınızda, bu listede daha önce yüklenmiş olan uzantılar devre dışıdır ve Kullanıcı bunları etkinleştiremeyecektir. Engellenen uzantılar listesinden bir öğeyi kaldırırsanız, bu uzantı önceden yüklenmiş olduğu her yerde otomatik olarak yeniden etkinleştirilir.
   
-  İzin **\*** verilenler listesinde açıkça listelenmeyen tüm uzantıları engellemek için kullanın. Bu ilke *Yapılandırılmadı*olarak ayarlandıysa, kullanıcılar Microsoft Edge 'de herhangi bir uzantıyı yükleyebilir.
+  **\*** İzin verilenler listesinde açıkça listelenmeyen tüm uzantıları engellemek için kullanın. Bu ilke *Yapılandırılmadı*olarak ayarlandıysa, kullanıcılar Microsoft Edge 'de herhangi bir uzantıyı yükleyebilir.
   
   Örnek değer: extension_id1 extension_id2.  
   <br>

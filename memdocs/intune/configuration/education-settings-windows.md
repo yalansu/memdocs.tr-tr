@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 551f0a442f81712cff29a9ff6f55c62aeaba547a
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 55e38ac8b5503e98df4878529ac892b55a52be47
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078201"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429616"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Intune kullanarak Windows 10 cihazlarda bir test alma uygulaması yapılandırma
 
@@ -37,14 +37,12 @@ Profili yapılandırdıktan sonra öğrencilerinize atayıp dağıtın.
 [Bir cihaz yapılandırma profili oluşturun](education-settings-configure.md#create-a-device-profile).
 
 ## <a name="take-a-test-settings"></a>Test ayarları yapın
-Bir cihaz yapılandırma profili oluşturduktan sonra, **profil türü** ' ne gidin ve **güvenli değerlendirme (eğitim)** seçeneğini belirleyin. Aşağıdaki bir test uygulaması ayarlarını yapın. 
-
 
 - **Hesap türü**: kullanıcıların testte oturum açmasını seçin. Seçenekleriniz şunlardır:
   - Azure AD hesabı
   - Etki alanı hesabı
   - Yerel hesap
-  - Yerel Konuk hesabı: yalnızca Windows 10, sürüm 1903 ve üzeri sürümleri çalıştıran cihazlarda kullanılabilir.    
+  - Yerel Konuk hesabı: yalnızca Windows 10, sürüm 1903 ve üzeri sürümleri çalıştıran cihazlarda kullanılabilir.
 - **Hesap Kullanıcı adı**: bir test alma uygulamasıyla kullanılan hesabın kullanıcı adını girin. Hesapları aşağıdaki biçimde girebilirsiniz:
   - `user@contoso.com`
   - `domain\username`
@@ -52,10 +50,12 @@ Bir cihaz yapılandırma profili oluşturduktan sonra, **profil türü** ' ne gi
   - `computerName\username`
 - **Hesap adı**: bir yerel Konuk hesap türü ayarlamak Için, test alma uygulaması ile kullanılan hesabın adını girin. Hesap adı, oturum açma ekranında bir kutucuk olarak görüntülenir. Öğrenciler, testi başlatmak için kutucuğa tıklayın.  
 - **Değerlendirme URL 'si**: kullanıcıların geçirmesine istediğiniz testin URL 'sini girin. URL 'YI alma hakkında daha fazla bilgi için [test alma belgelerine](https://docs.microsoft.com/education/windows/take-tests-in-windows-10)bakın.
-- **Yazıcı bağlantısı**: bir yazıcıya bağlı cihazlardan yalnızca bir test alma uygulaması erişimine izin vermek için **gerektir** ' i seçin. Bu ayar ayrıca uygulamanın Yazdır düğmesini test çiciler için kullanılabilir hale getirir. **Yapılandırılmadı** , öğrenciler, bir yazıcıya bağlı olmayan cihazlardan uygulamaya erişmesine izin verir.  
-- **Ekran izleme**: kullanıcılar bir test alırken ekran etkinliğini Izlemeye **izin ver** ' i seçin. **Yapılandırılmadı** , sınama sırasında ekranı izlemekten engel olur.
-- **Metin önerileri**: **izin ver** ' i seçin, böylece test takiciler metin önerilerini görüntüleyebilir. **Yapılandırılmadı** , kullanıcılar bir test sunarken metin önerilerini engeller.
+- **Yazıcı bağlantısı**: **gerekli** yalnızca bir yazıcıya bağlı cihazlardan test alma uygulaması erişimine izin verir. Bu ayar ayrıca uygulamanın Yazdır düğmesini test çiciler için kullanılabilir hale getirir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi öğrencilerin bir yazıcıya bağlı olmayan cihazlardan uygulamaya erişmesine izin verebilir.  
+- **Ekran izleme**: **izin ver** , kullanıcılar bir test alırken ekran etkinliğini izler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, sınama sırasında ekranı izlemeden engel olabilir.
+- **Metin önerileri**: **izin ver** ' i seçin, böylece test takiciler metin önerilerini görüntüleyebilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kullanıcılar bir test sunarken metin önerilerini engelleyebilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Profili atadığınızdan](device-profile-assign.md)emin olun ve [durumunu izleyin](device-profile-monitor.md).
+[Profili atayın](device-profile-assign.md)ve [durumunu izleyin](device-profile-monitor.md).
+
+[Test alma uygulaması](education-settings-configure.md)hakkında daha fazla bilgi edinin.

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/10/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c76045413324deef395f546033d37ec47405a28f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f013074ac67b7622b509d8b9781de3ab5f4041e0
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79332250"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429501"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Intune kullanarak paylaşılan cihazları yönetmek için Windows 10 ve üzeri ayarları
 
@@ -42,32 +42,57 @@ Intune 'da bu özellik hakkında daha fazla bilgi için bkz. [PAYLAŞıLAN bilgi
 
 Bu ayarlar [Sharedpc CSP](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp)kullanır.
 
-- **PAYLAŞıLAN bilgisayar modu**: paylaşılan bilgisayar modunu açmak için **Etkinleştir** ' i seçin. Bu modda, tek seferde cihazda yalnızca bir Kullanıcı oturum açar. Birinci Kullanıcı oturumu kapatana kadar başka bir Kullanıcı oturum açamaz. **Yapılandırılmadı** (varsayılan), bu ayarı Intune tarafından yönetilmeyen olarak bırakır ve bir cihazda bu ayarı denetlemek için herhangi bir ilke göndermez.
+- **PAYLAŞıLAN bilgisayar modu**: **Etkinleştir** ayarı, paylaşılan bilgisayar modunu etkinleştirir. Bu modda, tek seferde cihazda yalnızca bir Kullanıcı oturum açar. Birinci Kullanıcı oturumu kapatana kadar başka bir Kullanıcı oturum açamaz. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Konuk hesabı**: oturum açma ekranında Konuk seçeneği oluşturmayı seçin. Konuk hesapları için Kullanıcı kimlik bilgileri veya kimlik doğrulaması gerekmez. Bu ayar her kullanıldığında yeni bir yerel hesap oluşturur. Seçenekleriniz şunlardır:
   - **Konuk**: cihazda yerel olarak bir Konuk hesabı oluşturur.
   - **Etki alanı**: Azure ACTIVE DIRECTORY (ad) içinde bir Konuk hesabı oluşturur.
   - **Konuk ve etki alanı**: cihazda yerel olarak bir Konuk hesabı oluşturur ve Azure ACTIVE DIRECTORY (ad).
-- **Hesap yönetimi**: konuklar tarafından oluşturulan yerel hesapları ve ad ve Azure AD hesaplarını otomatik olarak silmek için **etkinleştirin** . Kullanıcı cihazda oturumu kapattığında veya sistem bakımı çalıştırıldığında, bu hesaplar silinir. Etkinleştirildiğinde, aşağıdakileri de ayarlayın:
-  - **Hesap silme**: hesapların ne zaman silineceğini seçin: **depolama alanı eşiğine**, **depolama alanı eşiğine ve etkin olmayan eşiğe**veya **oturum kapatıldıktan hemen sonra**. Ayrıca şunu girin:
+- **Hesap yönetimi**: hesapların otomatik olarak silinip silinmediğini seçin. Seçenekleriniz şunlardır:
+  - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez.
+  - **Etkin**: konuklar tarafından oluşturulan hesaplar ve ad ve Azure AD 'de hesaplar otomatik olarak silinir. Kullanıcı cihazda oturumu kapattığında veya sistem bakımı çalıştırıldığında, bu hesaplar silinir.
+
+    Şunları da girin:
+
+    - **Hesap silme**: hesapların ne zaman silineceğini seçin:
+      - **Depolama alanı eşiğine göre**
+      - **Depolama alanı eşiği ve etkin olmayan eşik**
+      - **Oturum kapatıldıktan hemen sonra**
+
+    Şunları da girin:
+
     - **Delete eşiğini Başlat (%)**: disk alanı yüzdesi (0-100) girin. Toplam disk/depolama alanı girdiğiniz değerin altına düştüğünde, önbelleğe alınmış hesaplar silinir. Disk alanı kazanmak için hesapları sürekli olarak siler. En uzun devre dışı olan hesaplar önce silinir.
     - **Silme eşiğini Durdur (%)**: disk alanı yüzdesi (0-100) girin. Toplam disk/depolama alanı girdiğiniz değeri karşılıyorsa, silme işlemini sonlandırır.
+    - **Etkin olmayan hesap eşiği**: 0-60 günden itibaren, oturum açmamış hesabı silmeden önce ardışık gün sayısını girin.
 
-  Konuklar tarafından oluşturulan yerel, AD ve Azure AD hesaplarını tutmak için **devre dışı** olarak ayarlayın.
+  - **Devre dışı**: konuklar tarafından oluşturulan yerel, ad ve Azure AD hesapları cihazda kalır ve silinmez.
 
-- **Yerel depolama**: kullanıcıların cihazın sabit sürücüsündeki dosyaları kaydetmesini ve görüntülemesini engellemek için **etkin** ' i seçin. Kullanıcıların dosya Gezgini 'ni kullanarak yerel olarak dosya görüp kaydetmesine izin vermek için **devre dışı** ' yı seçin. **Yapılandırılmadı** (varsayılan), bu ayarı Intune tarafından yönetilmeyen olarak bırakır ve bir cihazda bu ayarı denetlemek için herhangi bir ilke göndermez.
-- **Güç ilkeleri**: **etkin**olarak ayarlandığında, kullanıcılar hazırda beklemeyi kapatamaz, tüm uyku işlemlerini geçersiz kılamaz (kapağı kapatma gibi) ve güç ayarlarını değiştiremezler. **Devre dışı**olarak ayarlandığında, kullanıcılar cihazı hazırda beklemeye alabilir, cihazı uyku moduna almak için kapağı kapatabilir ve güç ayarlarını değiştirebilir. **Yapılandırılmadı** (varsayılan), bu ayarı Intune tarafından yönetilmeyen olarak bırakır ve bir cihazda bu ayarı denetlemek için herhangi bir ilke göndermez.
+- **Yerel depolama**: yerel depolama ile, kullanıcılar cihazın sabit sürücüsündeki dosyaları kaydedebilir ve görüntüleyebilir. Seçenekleriniz şunlardır:
+  - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez.
+  - **Etkin**: kullanıcıların cihazın sabit sürücüsündeki dosyaları kaydetmesini ve görüntülemesini engeller.
+  - **Devre dışı**: kullanıcıların dosya Gezgini 'ni kullanarak yerel olarak dosya görüp kaydetmesine izin verir.
+
+- **Güç ilkeleri**: kullanıcıların güç ayarlarını değiştirmesini sağlar veya engelleyin. Seçenekleriniz şunlardır:
+  - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez.
+  - **Etkin**: kullanıcılar hazırda beklemeyi kapatamaz, tüm uyku işlemlerini geçersiz kılamazsınız (kapağı kapatma gibi) ve güç ayarlarını değiştiremezler.
+  - **Devre dışı**: kullanıcılar cihazı hazırda beklemeye alabilir, cihazı uyku moduna almak için kapağı kapatabilir ve güç ayarlarını değiştirebilir.
+
 - **Uyku zaman aşımı (saniye cinsinden)**: Cihaz uyku moduna geçmeden önce etkin olmayan saniyeler (0-18000) sayısını girin. `0`, cihazın hiçbir şekilde uyku moduna geçme anlamına gelir. Bir zaman ayarlamazsanız, cihaz 3600 saniye (60 dakika) sonra uyku moduna geçer.
-- **Bilgisayar uyandığında oturum açma**: kullanıcıların cihaz uyku modundan çıktığında bir parolayla oturum açmasını gerektirmek için **etkin** olarak ayarlanır. Kullanıcıların Kullanıcı adı ve parolasını girmesi gerekmiyorsa **devre dışı** öğesini seçin. **Yapılandırılmadı** (varsayılan), bu ayarı Intune tarafından yönetilmeyen olarak bırakır ve bir cihazda bu ayarı denetlemek için herhangi bir ilke göndermez.
-- **Bakım başlangıç zamanı (gece yarısından itibaren dakika)**: Windows Update, gibi otomatik bakım görevleri çalıştırıldığında, dakika cinsinden süreyi (0-1440) girin. Varsayılan başlangıç saati gece yarısı veya sıfır (`0`) dakikadır. Başlangıç saatini, gece yarısından dakikalar içinde bir başlangıç saati girerek değiştirin. Örneğin, bakımın 2 ' de başlamasını istiyorsanız, girin `120`. Bakımın 8 PM 'de başlamasını istiyorsanız girin `1200`.
-- **Eğitim ilkeleri**: okullar için kullanılan ve daha kısıtlayıcı olan cihazlar için önerilen ayarları kullanmak üzere **etkin** ' i seçin. Varsayılan ve önerilen eğitim ilkelerinin kullanılmamış olması için **devre dışı** öğesini seçin. **Yapılandırılmadı** (varsayılan), bu ayarı Intune tarafından yönetilmeyen olarak bırakır ve bir cihazda bu ayarı denetlemek için herhangi bir ilke göndermez.
+
+- **Bilgisayar uyandığında oturum açma**: Cihaz uyku modundan çıktıktan sonra kullanıcıların oturum açması gerekiyorsa seçin. Seçenekleriniz şunlardır:
+  - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez.
+  - **Etkin**: Cihaz uyku modundan geldiği zaman kullanıcıların bir parolayla oturum açmasını gerektirir.
+  - **Devre dışı**: kullanıcıların kullanıcı adını ve parolasını girmesi gerekmez.
+
+- **Bakım başlangıç zamanı (gece yarısından itibaren dakika)**: Windows Update, gibi otomatik bakım görevleri çalıştırıldığında, dakika cinsinden süreyi (0-1440) girin. Varsayılan başlangıç saati gece yarısı veya sıfır ( `0` ) dakikadır. Başlangıç saatini, gece yarısından dakikalar içinde bir başlangıç saati girerek değiştirin. Örneğin, bakımın 2 ' de başlamasını istiyorsanız, girin `120` . Bakımın 8 PM 'de başlamasını istiyorsanız girin `1200` .
+
+  **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
+- **Eğitim ilkeleri**: eğitim ortamı ilkelerinin etkinleştirilip etkinleştirilmeyeceğini seçin. Seçenekleriniz şunlardır:
+  - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez.
+  - **Etkin**: okulda kullanılan ve daha kısıtlayıcı olan cihazlar için önerilen ayarları kullanır.
+  - **Devre dışı**: varsayılan ve önerilen eğitim ilkeleri kullanılmaz.
 
   Eğitim ilkelerinin ne yaptığı hakkında daha fazla bilgi için bkz. [Eğitim müşterileri Için Windows 10 yapılandırma önerileri](https://docs.microsoft.com/education/windows/configure-windows-for-education).
-
-- **Hızlı ilk oturum açma** (kullanım dışı): kullanıcıların hızlı bir ilk oturum açma deneyimi olması için **etkin** ' i seçin. **Etkinleştirildiğinde**, cihaz yeni yönetici olmayan Azure AD hesaplarını önceden yapılandırılmış aday yerel hesaplarına otomatik olarak bağlar. Hızlı ilk oturum açma deneyimini engellemek için **devre dışı** öğesini seçin. **Yapılandırılmadı** (varsayılan), bu ayarı Intune tarafından yönetilmeyen olarak bırakır ve bir cihazda bu ayarı denetlemek için herhangi bir ilke göndermez.
-
-  Bu ayar yaklaşan bir sürümde kaldırılmıştır. Bu ayarı kullanmayın.
-
-  [Authentication/Enablefastfirstsignın CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-enablefastfirstsignin)
 
 > [!TIP]
 > [Paylaşılan veya Konuk BIR bilgisayar ayarlama](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc) (başka bir Belgeler Web sitesini açar), paylaşılan modda ayarlanulabilecek kavramlar ve grup ilkeleri de dahil olmak üzere bu Windows 10 özelliğindeki harika bir kaynaktır.

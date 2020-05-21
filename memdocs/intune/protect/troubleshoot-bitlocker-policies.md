@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac6650f06abddd2633e73f39a6bf72d54e344a61
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 92d1e1c5d1e2a66ed036d0ed7a5a75d40c737bf3
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079204"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428966"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Microsoft Intune 'de BitLocker ilkeleri sorunlarını giderme
 
@@ -37,7 +37,7 @@ Microsoft Intune, Windows 10 cihazlarda BitLocker 'ı yönetmek için aşağıda
 
    Kullanılabilir seçenekler ve özellikler hakkında buradan bilgi edinebilirsiniz: [Windows şifrelemesi](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
 
-- **Güvenlik temelleri** - [güvenlik temelleri](security-baselines.md) , Windows cihazlarının güvenli hale getirilmesine yardımcı olmak üzere ilgili güvenlik ekibinin önerdiği, bilinen ayar ve varsayılan değer gruplarıdır. *MDM güvenlik temeli* veya *Microsoft Defender ATP temeli* gibi farklı temel kaynaklar aynı ayarları ve birbirinden farklı ayarları yönetebilir. Ayrıca, cihaz yapılandırma ilkeleriyle yönettiğiniz ayarların aynısını yönetebilirler. 
+- **Güvenlik temelleri**  -  [Güvenlik temelleri](security-baselines.md) , Windows cihazlarının güvenli hale getirilmesine yardımcı olmak üzere ilgili güvenlik ekibinin önerdiği, bilinen ayar ve varsayılan değer gruplarıdır. *MDM güvenlik temeli* veya *Microsoft Defender ATP temeli* gibi farklı temel kaynaklar aynı ayarları ve birbirinden farklı ayarları yönetebilir. Ayrıca, cihaz yapılandırma ilkeleriyle yönettiğiniz ayarların aynısını yönetebilirler. 
 
 Intune 'a ek olarak, modern bekleme ve HSTı ile uyumlu donanımlar için, bu özelliklerden birini kullanırken, Kullanıcı bir cihaza Azure AD 'ye katıldığında BitLocker cihaz şifrelemesi otomatik olarak açılır. Azure AD, kurtarma anahtarlarının da yedeklendiği bir portal sağlar. bu sayede kullanıcılar, gerekirse self servis için kendi kurtarma anahtarlarını alabilir.
 
@@ -68,7 +68,7 @@ BitLocker 'ı yapılandırmak için cihaz yapılandırma ilkesi kullandığını
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihaz** > **yapılandırma profilleri** ' ni seçin ve ardından BitLocker ayarlarını içeren profili seçin.
+2. **Cihaz**  >  **yapılandırma profilleri** ' ni seçin ve ardından BitLocker ayarlarını içeren profili seçin.
 
 3. Görüntülemek istediğiniz profili seçtikten sonra **cihaz durumu**' nu seçin. Profile atanan cihazlar listelenir ve *cihaz durumu* sütunu, bir cihazın profili başarıyla dağıtmadığını gösterir.
 
@@ -76,13 +76,13 @@ Bir BitLocker ilkesi alan bir cihaz ve sürücünün tamamen şifrelendiğinden 
 
 ### <a name="use-control-panel-on-the-client"></a>İstemcide denetim masası 'nı kullanma  
 
-BitLocker 'ı etkinleştirilen ve bir sürücüyü şifrelenen bir cihazda, BitLocker durumunu bir cihazlar denetim masasından görüntüleyebilirsiniz. Cihazda, **Denetim Masası** > **sistem ve güvenlik** > **BitLocker Sürücü Şifrelemesi**' ni açın. Onay aşağıdaki görüntüde görüldüğü gibi görünür.  
+BitLocker 'ı etkinleştirilen ve bir sürücüyü şifrelenen bir cihazda, BitLocker durumunu bir cihazlar denetim masasından görüntüleyebilirsiniz. Cihazda, **Denetim Masası**  >  **sistem ve güvenlik**  >  **BitLocker Sürücü Şifrelemesi**' ni açın. Onay aşağıdaki görüntüde görüldüğü gibi görünür.  
 
 ![BitLocker, Denetim Masası 'nda açıktır](./media/troubleshooting-bitlocker-policies/control-panel.png)
 
 ### <a name="use-a-command-prompt"></a>Komut istemi kullanın  
 
-BitLocker 'ı etkinleştirilmiş ve bir sürücüyü şifrelenen bir cihazda, yönetici kimlik bilgileriyle komut Istemi ' ni başlatın ve ardından komutunu çalıştırın `manage-bde -status`. Sonuçlar aşağıdaki örneğe benzemelidir:  
+BitLocker 'ı etkinleştirilmiş ve bir sürücüyü şifrelenen bir cihazda, yönetici kimlik bilgileriyle komut Istemi ' ni başlatın ve ardından komutunu çalıştırın `manage-bde -status` . Sonuçlar aşağıdaki örneğe benzemelidir:  
 ![Durum komutunun sonucu](./media/troubleshooting-bitlocker-policies/command.png)
 
 Örnekte:
@@ -105,7 +105,7 @@ Confirm-SecureBootUEFI
 
 ### <a name="review-the-devices-registry-key-configuration"></a>Cihazlar kayıt defteri anahtarı yapılandırmasını gözden geçirin
 
-BitLocker ilkesi bir cihaza başarıyla dağıtıldıktan sonra, cihazda BitLocker ayarlarının yapılandırmasını gözden geçirebileceğiniz aşağıdaki kayıt defteri anahtarını görüntüleyin: *HKEY_LOCAL_MACHINE \Software\microsoft\policymanager\current\devıcebitlocker*. Bir örneği aşağıda verilmiştir:
+BitLocker ilkesi bir cihaza başarıyla dağıtıldıktan sonra, cihazda BitLocker ayarlarının yapılandırmasını gözden geçirebileceğiniz aşağıdaki kayıt defteri anahtarını görüntüleyin: *HKEY_LOCAL_MACHINE \Software\microsoft\policymanager\current\devıcebitlocker*. İşte bir örnek:
 
 ![BitLocker kayıt defteri anahtarı](./media/troubleshooting-bitlocker-policies/registry.png)
 
@@ -169,11 +169,11 @@ Intune ilkeniz herhangi bir kapasitede mevcut olmadığında **, ilke cihaza ula
      
 **BitLocker şifrelemesi sessizce gerçekleştirilmez** -"diğer disk şifrelemesi için uyarı" ayarı engellenmeye ayarlanmış bir Endpoint Protection ilkesi yapılandırdınız ve şifreleme Sihirbazı hala görünür:
 
-- **Windows sürümünün sessiz şifrelemeyi desteklediğini onaylayın** Bu, en az sürüm 1803 gerektirir. Kullanıcı cihazda bir yöneticici değilse, en düşük 1809 sürümünü gerektirir. Ayrıca 1809, modern beklemeyi desteklemeyen cihazlar için eklenmiştir
+- **Windows sürümünün sessiz şifrelemeyi desteklediğini onaylayın** Bu, en az sürüm 1803 gerektirir. Kullanıcı cihazda bir yönetici değilse, en düşük 1809 sürümünü gerektirir. Ayrıca 1809, modern beklemeyi desteklemeyen cihazlar için eklenmiştir
 
 **BitLocker şifreli cihaz, Intune uyumluluk ilkeleri Için uyumsuz olarak gösterilir** -bu sorun, BitLocker şifrelemesi bitmediğinde oluşur. Disk boyutu, dosya sayısı ve BitLocker ayarları gibi etkenlere bağlı olarak BitLocker şifrelemesi uzun sürebilir. Şifreleme tamamlandıktan sonra cihaz uyumlu olarak gösterilir. Cihazlar son zamanlarda WIndows güncelleştirmelerinin yüklenmesinin ardından geçici olarak uyumsuz hale gelebilir.
 
-256 ilkeler, varsayılan olarak, Windows 10, XTS-AES 128-bit şifrelemeli bir sürücüyü şifreleyerek **128 bit algorithim kullanılarak şifrelenir** . [Autopilot sırasında BitLocker için 256 bit şifrelemeyi ayarlamaya](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#)yönelik bu kılavuza bakın.
+256 ilke, varsayılan olarak, Windows 10, XTS-AES 128-bit şifrelemeli bir sürücüyü şifreleyecek şekilde **128 bit algoritması kullanılarak şifrelenir** . [Autopilot sırasında BitLocker için 256 bit şifrelemeyi ayarlamaya](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#)yönelik bu kılavuza bakın.
 
 
 **Örnek araştırma**
@@ -194,7 +194,7 @@ Intune ilkeniz herhangi bir kapasitede mevcut olmadığında **, ilke cihaza ula
 
 - BitLocker TPM 'yi kullandığından, Intune veya ilkeyle ilgili bir sorun nedeniyle BitLocker 'ın başarısız olmaması, ancak cihazın bir TPM yongasına sahip olmaması veya BIOS 'ta TPM 'nin devre dışı bırakılması olabilir.
 
-  Ek bir ipucu olarak, Windows Olay Görüntüleyicisi **uygulamalar ve hizmetler günlüğü** > **Microsoft** > **Windows** > **BitLocker API 'si**altında aynı olduğunu doğrulayabilirsiniz. **BITLOCKER API** olay günlüğünde TPM 'nin kullanılamadığı anlamına gelen BIR olay kimliği 853 bulacaksınız:
+  Ek bir ipucu olarak, Windows Olay Görüntüleyicisi **uygulamalar ve hizmetler günlüğü**  >  **Microsoft**  >  **Windows**  >  **BitLocker API 'si**altında aynı olduğunu doğrulayabilirsiniz. **BITLOCKER API** olay günlüğünde TPM 'nin kullanılamadığı anlamına gelen BIR olay kimliği 853 bulacaksınız:
 
   ![Olay KIMLIĞI 853](./media/troubleshooting-bitlocker-policies/event-error.png)
 

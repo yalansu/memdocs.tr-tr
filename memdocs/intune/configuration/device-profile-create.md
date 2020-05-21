@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71929e59e4447340d26516c8caec6beb2b3612f3
-ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
+ms.openlocfilehash: dd6160520660f015c69dccd968b67b1f4581c8a8
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83406420"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551766"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Microsoft Intune’da cihaz profili oluşturma
 
@@ -37,7 +37,7 @@ Bu makalede:
 
 ## <a name="create-the-profile"></a>Profili oluşturma
 
-Profiller, [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oluşturulur. Bu yönetim merkezinde **cihazlar**' ı seçin. Aşağıdaki seçenekleriniz vardır:
+Profiller, [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oluşturulur. Bu yönetim merkezinde **cihazlar**' ı seçin. Aşağıdaki seçenekler mevcuttur:
 
 - **Genel bakış**: profillerinizin durumunu listeler ve kullanıcılara ve cihazlara atadığınız profiller hakkında ek ayrıntılar sağlar.
 - **İzleyici**: başarılı veya başarısız için profillerinizin durumunu denetleyin ve ayrıca profilinizde günlükleri görüntüleyin.
@@ -58,7 +58,7 @@ Ardından profil türünü seçin. Seçtiğiniz platforma bağlı olarak, yapıl
 
 - [Yönetim Şablonları (Windows)](administrative-templates-windows.md)
 - [Özel](custom-settings-configure.md)
-- [Teslim iyileştirme (Windows)](delivery-optimization-windows.md)
+- [Teslim Iyileştirme (Windows)](delivery-optimization-windows.md)
 - [Türetilmiş kimlik bilgileri (Android Enterprise, iOS, ıpados)](../protect/derived-credentials.md)
 - [Cihaz özellikleri (macOS, iOS, ıpados)](device-features-configure.md)
 - [Cihaz üretici yazılımı (Windows)](device-firmware-configuration-interface-windows.md)
@@ -85,10 +85,9 @@ Ardından profil türünü seçin. Seçtiğiniz platforma bağlı olarak, yapıl
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
 
-Örneğin, platform için **iOS/ıpados** ' ı seçerseniz, profil türü seçenekleriniz aşağıdaki profile benzer şekilde görünür:
+Örneğin, platform için **iOS/ıpados** ' ı seçerseniz, profil seçenekleriniz aşağıdaki profile benzer şekilde görünür:
 
-> [!div class="mx-imgBorder"]
-> ![Intune 'da iOS/ıpados profili oluşturma](./media/device-profile-create/create-device-profile.png)
+:::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="Microsoft Intune ' de bir iOS/ıpados profili oluşturun.":::
 
 ## <a name="scope-tags"></a>Kapsam etiketleri
 
@@ -129,10 +128,9 @@ Profili gruplara atadığınızda, uygulanabilirlik kuralları bir filtre işlev
 
 ### <a name="add-a-rule"></a>Kural ekleme
 
-1. **Uygulanabilirlik kuralları**' nı seçin. **Kural**, **özellik**ve **işletim sistemi sürümünü**seçebilirsiniz:
+1. **Uygulanabilirlik kuralları**' nı seçin. **Kuralını**ve **özelliğini**seçebilirsiniz:
 
-    > [!div class="mx-imgBorder"]
-    > ![Microsoft Intune cihaz yapılandırma profiline uygulanabilirlik kuralı ekleme](./media/device-profile-create/applicability-rules.png)
+    :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Microsoft Intune bir Windows 10 cihaz yapılandırma profiline uygulanabilirlik kuralı ekleyin.":::
 
 2. **Kuralda**, kullanıcıları veya grupları dahil etmek veya dışlamak istediğinizi seçin. Seçenekleriniz şunlardır:
 
@@ -178,8 +176,7 @@ Profiller oluştururken aşağıdaki önerileri göz önünde bulundurun:
 
   Aşağıdaki görüntüde kullanıcılara uygulanabilecek ve/veya cihazlara uygulanabilecek bir ayarın örneği gösterilmektedir:
 
-  > [!div class="mx-imgBorder"]
-  > ![Kullanıcı ve cihazlar için geçerli olan Intune yönetici şablonu](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Kullanıcı ve cihazlar için geçerli olan Intune yönetici şablonu.":::
 
 - Her kısıtlayıcı ilke oluşturduğunuzda, bu değişikliği kullanıcılarınıza iletişim kurun. Örneğin, geçiş kodu gereksinimini 4 karakterden 6 karaktere değiştiriyorsanız, ilke atamadan önce kullanıcılarınızın bunu bilmesini sağlayın.
 

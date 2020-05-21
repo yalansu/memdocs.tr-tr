@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de7b96b5ad54a207b92221f7685f6c7f50942c46
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 50ea177f2d400d54869d02a461a69bb7b0115414
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079884"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551834"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>DigiCert PKI platformu için Intune sertifika bağlayıcısını ayarlama
 
@@ -32,7 +32,7 @@ DigiCert PKI platformundan Intune tarafından yönetilen cihazlara PKCS sertifik
 > [!TIP]
 > DigiCert Symantec 'in Web sitesi güvenliğini ve ilgili PKI çözümleri işletmelerini aldı. Bu değişiklik hakkında daha fazla bilgi için bkz. [Symantec Teknik Destek makalesi](https://support.symantec.com/en_US/article.INFO4722.html).
 
-Bir Microsoft CA 'dan PKCS veya System Center Endpoint Protection kullanarak sertifika vermek için Intune sertifika bağlayıcısını zaten kullanıyorsanız, bu bağlayıcıyı kullanarak bir DigiCert CA 'dan PKCS sertifikaları yapılandırabilir ve verebilirsiniz. DigiCert CA 'sını destekleyecek şekilde yapılandırmayı tamamladıktan sonra, Intune sertifika Bağlayıcısı aşağıdaki sertifikaları verebilir:
+Bir Microsoft CA 'dan PKCS veya Basit Sertifika Kayıt Protokolü (SCEP) kullanarak sertifika vermek için Intune sertifika bağlayıcısını zaten kullanıyorsanız, bu bağlayıcıyı kullanarak bir DigiCert CA 'dan PKCS sertifikaları yapılandırabilir ve verebilirsiniz. DigiCert CA 'sını destekleyecek şekilde yapılandırmayı tamamladıktan sonra, Intune sertifika Bağlayıcısı aşağıdaki sertifikaları verebilir:
 
 * Bir Microsoft CA 'dan PKCS sertifikaları
 * DigiCert CA 'dan PKCS sertifikaları
@@ -42,7 +42,7 @@ Bağlayıcı yüklü değilse ancak hem Microsoft CA hem de DigiCert CA 'sı iç
 
 Bağlayıcıyı yalnızca DigiCert CA 'sı ile kullanacaksanız, bağlayıcıyı yüklemek ve yapılandırmak için bu makaledeki yönergeleri kullanabilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - **DigiCert CA 'sında etkin bir abonelik**: DigiCert CA 'dan bir kayıt YETKILISI (ra) sertifikası almak için abonelik gerekir.
 - Microsoft Intune Sertifika Bağlayıcısı, [yönetilen cihazlarla](../fundamentals/intune-endpoints.md#access-for-managed-devices)aynı ağ gereksinimlerine sahiptir.
@@ -96,7 +96,7 @@ Bağlayıcıyı yalnızca DigiCert CA 'sı ile kullanacaksanız, bağlayıcıyı
 
    b. Sertifika için bir kolay ad sağlayın.
 
-   c. **Devam**'ı seçin.
+   c. **Devam**’ı seçin.
 
    d. RA sertifikasını yerel bilgisayarınıza indirmek için, belirtilen bağlantıyı kullanın.
 
@@ -104,29 +104,29 @@ Bağlayıcıyı yalnızca DigiCert CA 'sı ile kullanacaksanız, bağlayıcıyı
 
    a. Bir MMC konsolu açın.
 
-   b. **Dosya** > **Ekle veya Kaldır ek bileşenleri** > **sertifika** > **Ekle**' yi seçin.
+   b. **Dosya**  >  **Ekle veya Kaldır ek bileşenleri**  >  **sertifika**  >  **Ekle**' yi seçin.
 
-   c. **Bilgisayar hesabı** > **İleri ' yi**seçin.
+   c. **Bilgisayar hesabı**  >  **İleri ' yi**seçin.
 
-   d. **Yerel bilgisayar** > **sonu**' nu seçin.
+   d. **Yerel bilgisayar**  >  **sonu**' nu seçin.
 
-   e. **Ek bileşenler ekleme veya kaldırma** penceresinde **Tamam ' ı** seçin. **Sertifikalar (yerel bilgisayar)** > **Kişisel** > **Sertifikalar**' ı genişletin.
+   e. **Ek bileşenler ekleme veya kaldırma** penceresinde **Tamam ' ı** seçin. **Sertifikalar (yerel bilgisayar)**  >  **Kişisel**  >  **Sertifikalar**' ı genişletin.
 
    f. **Sertifikalar** düğümüne sağ tıklayın ve **Tüm Görevler** > **İçeri aktar**’ı seçin.
 
    g. DigiCert CA 'dan indirdiğiniz RA sertifikasının konumunu seçin ve ardından **İleri**' yi seçin.
 
-   h. **Daha sonra** **kişisel sertifika depolama alanını** > seçin.
+   h. Daha **sonra kişisel sertifika depolama alanını**seçin  >  **Next**.
 
    i. RA sertifikasını ve özel anahtarını **yerel makine-kişisel** mağazaya aktarmak için **son** ' u seçin.
 
 6. Özel anahtar sertifikasını içeri ve dışarı aktarma:
 
-   a. **Sertifikalar (yerel makine)** > **Kişisel** > **Sertifikalar**' ı genişletin.
+   a. **Sertifikalar (yerel makine)**  >  **Kişisel**  >  **Sertifikalar**' ı genişletin.
 
    b. Önceki adımda içeri aktarılan sertifikayı seçin.
 
-   c. Sertifikaya sağ tıklayın ve **Tüm görevler** > **dışarı aktar**' ı seçin.
+   c. Sertifikaya sağ tıklayın ve **Tüm görevler**  >  **dışarı aktar**' ı seçin.
 
    d. **İleri**' yi seçin ve parolayı girin.
 
@@ -158,7 +158,7 @@ Bağlayıcıyı yalnızca DigiCert CA 'sı ile kullanacaksanız, bağlayıcıyı
 
 4. .NET Framework 3.5 yükleme:
 
-   a. **Denetim Masası** > **Programlar ve Özellikler** > **Windows özelliklerini açın veya kapatın**.
+   a. **Denetim Masası**  >  **Programlar ve Özellikler**  >  **Windows özelliklerini açın veya kapatın**.
 
    b. **.NET Framework 3.5**’i seçin ve yükleyin.
 
@@ -171,7 +171,7 @@ Intune yönetim portalından en son Intune sertifika Bağlayıcısı sürümün�
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Kiracı Yönetimi** > **bağlayıcıları ve belirteçleri** > **sertifika bağlayıcıları** > **+ Ekle**' yi seçin.
+2. **Kiracı Yönetimi**  >  **bağlayıcıları ve belirteçleri**  >  **sertifika bağlayıcıları**  >  **+ Ekle**' yi seçin.
 
 3. PKCS #12 Bağlayıcısı için *sertifika Bağlayıcısı yazılımını indir* ' e tıklayın ve dosyayı bağlayıcıyı yükleyeceğiniz sunucudan erişebileceğiniz bir konuma kaydedin.
 
@@ -194,7 +194,7 @@ Varsayılan olarak, Intune sertifika Bağlayıcısı **%ProgramFiles%\Microsoft 
 
 1. **Ndesconnectorsvc** klasöründe, Not defteri 'Nde **ndesconnector. exe. config** dosyasını açın.
 
-   a. Anahtar değerini `RACertThumbprint` , önceki bölümde kopyaladığınız sertifika parmak izi değeriyle güncelleştirin. Örneğin:
+   a. `RACertThumbprint`Anahtar değerini, önceki bölümde kopyaladığınız sertifika parmak izi değeriyle güncelleştirin. Örnek:
 
         <add key="RACertThumbprint"
         value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
@@ -242,7 +242,7 @@ Intune tarafından yönetilen cihazlar için dağıtacağınız PKCS sertifikala
 
    a. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-   b. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+   b. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 
    c. Aşağıdaki özellikleri girin:
 
@@ -281,7 +281,7 @@ Sertifika profili OID 'si, DigiCert CA 'sında bir sertifika profili şablonuyla
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 
 3. Aşağıdaki özellikleri girin:
 
@@ -313,8 +313,8 @@ Sertifika profili OID 'si, DigiCert CA 'sında bir sertifika profili şablonuyla
 
 |Öznitelik | Desteklenen Intune biçimleri | DigiCert bulut CA 'sı Desteklenen biçimleri | sonuç |
 | --- | --- | --- | --- |
-| Konu adı |Intune, konu adını yalnızca aşağıdaki üç formatta destekler: <br><br> 1. ortak ad <br> 2. e-posta içeren ortak ad <br> 3. e-posta olarak ortak ad <br><br> Örneğin: <br><br> `CN = IWUser0 <br><br> E = IWUser0@samplendes.onmicrosoft.com` | DigiCert CA 'sı daha fazla öznitelik destekler.  Daha fazla öznitelik seçmek istiyorsanız, bu değerlerin DigiCert sertifika profili şablonunda sabit değerlerle tanımlanması gerekir.| PKCS sertifika isteğinden ortak ad veya e-posta kullanıyoruz. <br><br> Intune sertifika profili ve DigiCert sertifika profili şablonu arasındaki öznitelik seçiminde herhangi bir uyuşmazlık, DigiCert CA 'dan verilen sertifika olmadan sonuçlanır.|
-| SAN | Intune yalnızca aşağıdaki SAN alan değerlerini destekler: <br><br> **AltNameTypeEmail** <br> **AltNameTypeUpn** <br> **Altnametypeothername** (kodlanmış değer) | DigiCert bulut CA 'sı de bu parametreleri destekler. Daha fazla öznitelik seçmek istiyorsanız, bu değerlerin DigiCert sertifika profili şablonunda sabit değerlerle tanımlanması gerekir. <br><br> **Altnametypeemail**: Bu tür San 'da bulunmazsa, Intune sertifika Bağlayıcısı, **Altnametypeupn**' den değeri kullanır.  **Altnametypeupn** de San 'da bulunmazsa, Intune sertifika Bağlayıcısı e-posta biçimindeyse konu adından değeri kullanır.  Tür hala bulunamazsa, Intune sertifika Bağlayıcısı sertifikaları veremez. <br><br> Örnek: `RFC822 Name=IWUser0@ndesvenkatb.onmicrosoft.com`  <br><br> **Altnametypeupn**: Bu tür San 'da bulunmazsa, Intune sertifika Bağlayıcısı **Altnametypeemail**değerini kullanır. **Altnametypeemail** de San 'da bulunmazsa, Intune sertifika Bağlayıcısı e-posta biçimindeyse konu adından değeri kullanır. Tür hala bulunamazsa, Intune sertifika Bağlayıcısı sertifikaları veremez.  <br><br> Örnek: `Other Name: Principal Name=IWUser0@ndesvenkatb.onmicrosoft.com` <br><br> **Altnametypeothername**: Bu tür San 'da bulunmazsa, Intune sertifika Bağlayıcısı sertifikaları veremez. <br><br> Örnek: `Other Name: DS Object Guid=04 12 b8 ba 65 41 f2 d4 07 41 a9 f7 47 08 f3 e4 28 5c ef 2c` <br><br>  Bu alanın değeri, DigiCert CA 'sı tarafından yalnızca kodlanmış biçimde (onaltılı değer) desteklenir. Bu alandaki herhangi bir değer için, Intune sertifika Bağlayıcısı sertifika isteğini göndermeden önce Base64 kodlamaya dönüştürür. *Intune sertifika Bağlayıcısı, bu değerin zaten kodlanmış olup olmadığını doğrulamaz.* | Hiçbiri |
+| Konu adı |Intune, konu adını yalnızca aşağıdaki üç formatta destekler: <br><br> 1. ortak ad <br> 2. e-posta içeren ortak ad <br> 3. e-posta olarak ortak ad <br><br> Örnek: <br><br> `CN = IWUser0 <br><br> E = IWUser0@samplendes.onmicrosoft.com` | DigiCert CA 'sı daha fazla öznitelik destekler.  Daha fazla öznitelik seçmek istiyorsanız, bu değerlerin DigiCert sertifika profili şablonunda sabit değerlerle tanımlanması gerekir.| PKCS sertifika isteğinden ortak ad veya e-posta kullanıyoruz. <br><br> Intune sertifika profili ve DigiCert sertifika profili şablonu arasındaki öznitelik seçiminde herhangi bir uyuşmazlık, DigiCert CA 'dan verilen sertifika olmadan sonuçlanır.|
+| SAN | Intune yalnızca aşağıdaki SAN alan değerlerini destekler: <br><br> **AltNameTypeEmail** <br> **AltNameTypeUpn** <br> **Altnametypeothername** (kodlanmış değer) | DigiCert bulut CA 'sı de bu parametreleri destekler. Daha fazla öznitelik seçmek istiyorsanız, bu değerlerin DigiCert sertifika profili şablonunda sabit değerlerle tanımlanması gerekir. <br><br> **Altnametypeemail**: Bu tür San 'da bulunmazsa, Intune sertifika Bağlayıcısı, **Altnametypeupn**' den değeri kullanır.  **Altnametypeupn** de San 'da bulunmazsa, Intune sertifika Bağlayıcısı e-posta biçimindeyse konu adından değeri kullanır.  Tür hala bulunamazsa, Intune sertifika Bağlayıcısı sertifikaları veremez. <br><br> Örnek: `RFC822 Name=IWUser0@ndesvenkatb.onmicrosoft.com`  <br><br> **Altnametypeupn**: Bu tür San 'da bulunmazsa, Intune sertifika Bağlayıcısı **Altnametypeemail**değerini kullanır. **Altnametypeemail** de San 'da bulunmazsa, Intune sertifika Bağlayıcısı e-posta biçimindeyse konu adından değeri kullanır. Tür hala bulunamazsa, Intune sertifika Bağlayıcısı sertifikaları veremez.  <br><br> Örnek: `Other Name: Principal Name=IWUser0@ndesvenkatb.onmicrosoft.com` <br><br> **Altnametypeothername**: Bu tür San 'da bulunmazsa, Intune sertifika Bağlayıcısı sertifikaları veremez. <br><br> Örnek: `Other Name: DS Object Guid=04 12 b8 ba 65 41 f2 d4 07 41 a9 f7 47 08 f3 e4 28 5c ef 2c` <br><br>  Bu alanın değeri, DigiCert CA 'sı tarafından yalnızca kodlanmış biçimde (onaltılı değer) desteklenir. Bu alandaki herhangi bir değer için, Intune sertifika Bağlayıcısı sertifika isteğini göndermeden önce Base64 kodlamaya dönüştürür. *Intune sertifika Bağlayıcısı, bu değerin zaten kodlanmış olup olmadığını doğrulamaz.* | Yok |
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
@@ -322,7 +322,7 @@ Intune sertifika Bağlayıcısı hizmet günlükleri, NDES bağlayıcı makinesi
 
 | Sorun/hata iletisi | Çözüm adımları |
 | --- | --- |
-| NDES Bağlayıcısı Kullanıcı arabiriminde Intune kiracı yönetici hesabıyla oturum açılamıyor. | Bu durum, şirket içi sertifika Bağlayıcısı Microsoft Endpoint Manager Yönetim Merkezi 'nde etkin olmadığında ortaya çıkabilir. Bu sorunu çözmek için: <br><br> 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın. <br> 2. **Kiracı Yönetimi** > **bağlayıcıları ve belirteçleri** > **sertifika bağlayıcıları**' nı seçin. <br> 3. sertifika bağlayıcısını bulun ve etkinleştirildiğinden emin olun. <br><br> Önceki adımları tamamladıktan sonra, NDES Bağlayıcısı Kullanıcı arabiriminde aynı Intune kiracı yönetici hesabıyla oturum açmayı deneyin. |
+| NDES Bağlayıcısı Kullanıcı arabiriminde Intune kiracı yönetici hesabıyla oturum açılamıyor. | Bu durum, şirket içi sertifika Bağlayıcısı Microsoft Endpoint Manager Yönetim Merkezi 'nde etkin olmadığında ortaya çıkabilir. Bu sorunu çözmek için: <br><br> 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın. <br> 2. **Kiracı Yönetimi**  >  **bağlayıcıları ve belirteçleri**  >  **sertifika bağlayıcıları**' nı seçin. <br> 3. sertifika bağlayıcısını bulun ve etkinleştirildiğinden emin olun. <br><br> Önceki adımları tamamladıktan sonra, NDES Bağlayıcısı Kullanıcı arabiriminde aynı Intune kiracı yönetici hesabıyla oturum açmayı deneyin. |
 | NDES Bağlayıcı Sertifikası bulunamadı. <br><br> System. ArgumentNullException: değer null olamaz. | Intune kiracı yönetici hesabı NDES Bağlayıcı Kullanıcı Arabirimi'nde hiç oturum açmadıysa, Intune Sertifika Bağlayıcı bu hatayı gösterir. <br><br> Bu hata devam ederse, Intune Service bağlayıcısını yeniden başlatın. <br><br> 1. **Services. msc**dosyasını açın. <br> 2. **Intune bağlayıcı hizmeti**' ni seçin. <br> 3. sağ tıklayın ve **Yeniden Başlat**'ı seçin.|
 | NDES Bağlayıcısı - IssuePfx- Genel Özel Durumu: <br> System.NullReferenceException: Nesne başvurusu bir nesnenin örneğine ayarlı değil. | Bu geçici bir hatadır. Intune hizmet bağlayıcısını yeniden başlatın. <br><br> 1. **Services. msc**dosyasını açın. <br> 2. **Intune bağlayıcı hizmeti**' ni seçin. <br> 3. sağ tıklayın ve **Yeniden Başlat**'ı seçin. |
 | DigiCert sağlayıcısı-DigiCert ilkesi alınamadı. <br><br>"İşlem zaman aşımına uğradı." | Intune sertifika Bağlayıcısı, DigiCert CA ile iletişim kurarken bir işlem zaman aşımı hatası aldı. Bu hata oluşmaya devam ederse, bağlantı zaman aşımı değerini artırın ve yeniden deneyin. <br><br> Bağlantı zaman aşımını artırmak için: <br> 1. NDES bağlayıcı bilgisayarına gidin. <br>2. **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config** dosyasını Not defteri 'nde açın. <br> 3. aşağıdaki parametre için zaman aşımı değerini artırın: <br><br> `CloudCAConnTimeoutInMilliseconds` <br><br> 4. Intune sertifika Bağlayıcısı hizmetini yeniden başlatın. <br><br> Sorun devam ederse, DigiCert müşteri desteği 'ne başvurun. |
@@ -330,7 +330,7 @@ Intune sertifika Bağlayıcısı hizmet günlükleri, NDES bağlayıcı makinesi
 | DigiCert sağlayıcısı-DigiCert ilkesi alınamadı. <br><br>"İstek durduruldu: SSL/TLS güvenli kanalı oluşturulamadı." | Bu hata, aşağıdaki senaryolarda oluşur: <br><br> 1. Intune sertifika Bağlayıcısı hizmeti, kaynak yetkilendirme sertifikasını yerel makine kişisel sertifika deposundan özel anahtarıyla birlikte okuma iznine sahip değil. Bu sorunu çözmek için, Connector hizmetinin çalışan bağlam hesabını Services. msc ' de denetleyin. Bağlayıcı hizmeti NT AUTHORITY\SYSTEM bağlamı altında çalışmalıdır. <br><br> 2. Intune yönetim portalındaki PKCS sertifika profili, DigiCert CA 'sı için geçersiz bir temel hizmet FQDN 'SI ile yapılandırılmış olabilir. FQDN, **pki-ws.symauth.com**ile benzerdir. Bu sorunu çözmek için, URL 'nin aboneliğiniz için doğru olup olmadığını DigiCert müşteri desteğiyle denetleyin. <br><br> 3. Intune sertifika Bağlayıcısı, özel anahtarı alamadığından, kaynak yetkilendirme sertifikası aracılığıyla DigiCert CA 'sı ile kimlik doğrulaması yapamaz. Bu sorunu çözmek için, kaynak yetkilendirme sertifikasını yerel makine-kişisel sertifika depolama alanındaki özel anahtarıyla birlikte yüklemelisiniz. <br><br> Sorun devam ederse, DigiCert müşteri desteği 'ne başvurun. |
 | DigiCert sağlayıcısı-DigiCert ilkesi alınamadı. <br><br>"İstek öğesi anlaşılmadı." | Intune sertifika Bağlayıcısı, istemci profili OID 'si Intune sertifika profiliyle eşleşmediğinden, DigiCert sertifika profili şablonunu alamadı. Başka bir durumda, Intune sertifika Bağlayıcısı, DigiCert CA 'sında istemci profili OID 'siyle ilişkili sertifika profili şablonunu bulamaz. <br><br> Bu sorunu çözmek için, DigiCert CA 'daki DigiCert sertifika şablonundan doğru Istemci profili OID 'sini edinin. Ardından, Intune yönetici portalındaki PKCS sertifika profilini güncelleştirin. <br><br> DigiCert CA 'sından istemci profili OID 'sini edinin: <br> 1. DigiCert CA yönetici portalında oturum açın. <br> 2. **sertifika profillerini Yönet**' i seçin. <br> 3. kullanmak istediğiniz sertifika profilini seçin. <br> 4. sertifika profili OID 'sini alın. Çıktı aşağıdaki örneğe benzer: <br> `Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109` <br><br> PKCS sertifika profilini doğru sertifika profili OID 'siyle güncelleştirin: <br>1. Intune yönetici portalında oturum açın. <br> 2. PKCS sertifika profiline gidin ve **Düzenle**'yi seçin. <br> 3. sertifika şablonu adı için alanındaki sertifika profili OID 'sini güncelleştirin. <br> 4. PKCS sertifika profilini kaydedin. |
 | DigiCert sağlayıcısı-Ilke doğrulaması başarısız oldu. <br><br> Öznitelik, DigiCert tarafından desteklenen sertifika şablonu öznitelikleri listesinin altına düşmüyor. | DigiCert sertifika profili şablonu ile Intune sertifika profili arasında bir tutarsızlık olduğunda DigiCert CA 'sı bu iletiyi gösterir. Bu sorun büyük olasılıkla **SubjectName** veya **SubjectAltName**içindeki öznitelik uyumsuzluğu nedeniyle oluştu. <br><br> Bu sorunu çözmek için, DigiCert sertifika profili şablonunda **SubjectName** ve **SubjectAltName** için Intune tarafından desteklenen öznitelikler ' i seçin. Daha fazla bilgi için bkz. **sertifika parametreleri** bölümünde Intune tarafından desteklenen öznitelikler. |
-| Bazı kullanıcı cihazları DigiCert CA 'dan PKCS sertifikaları almıyor. | Bu sorun, Kullanıcı UPN alt çizgi gibi özel karakterler içerdiğinde oluşur (örnek: `global_admin@intune.onmicrosoft.com`). <br><br> DigiCert CA **mail_firstname** ve **mail_lastname**özel karakterleri desteklemez. <br><br> Bu sorunu çözmek için, aşağıdaki adımları uygulayın: <br><br> 1. DigiCert CA yönetici portalında oturum açın. <br> 2. **sertifika profillerini Yönet**'e gidin. <br> 3. Intune için kullanılan sertifika profilini seçin. <br> 4. **özelleştirme seçenekleri** bağlantısını seçin. <br> 5. **Gelişmiş Seçenekler** düğmesini seçin. <br> 6. **sertifika alanları altında – Subject DN**, **ortak ad (CN)** alanını ekleyin ve var olan **ortak ad (CN)** alanını silin. Ekleme ve silme işlemlerinin birlikte gerçekleştirilmesi gerekir. <br> 7. **Kaydet**'i seçin. <br><br> Yukarıdaki değişiklik ile, DigiCert sertifika profili, **mail_firstname** ve **mail_lastname**yerine **"<upn>CN ="** ister. |
+| Bazı kullanıcı cihazları DigiCert CA 'dan PKCS sertifikaları almıyor. | Bu sorun, Kullanıcı UPN alt çizgi gibi özel karakterler içerdiğinde oluşur (örnek: `global_admin@intune.onmicrosoft.com` ). <br><br> DigiCert CA **mail_firstname** ve **mail_lastname**özel karakterleri desteklemez. <br><br> Bu sorunu çözmek için, aşağıdaki adımları uygulayın: <br><br> 1. DigiCert CA yönetici portalında oturum açın. <br> 2. **sertifika profillerini Yönet**'e gidin. <br> 3. Intune için kullanılan sertifika profilini seçin. <br> 4. **özelleştirme seçenekleri** bağlantısını seçin. <br> 5. **Gelişmiş Seçenekler** düğmesini seçin. <br> 6. **sertifika alanları altında – Subject DN**, **ortak ad (CN)** alanını ekleyin ve var olan **ortak ad (CN)** alanını silin. Ekleme ve silme işlemlerinin birlikte gerçekleştirilmesi gerekir. <br> 7. **Kaydet**'i seçin. <br><br> Yukarıdaki değişiklik ile, DigiCert sertifika profili, **mail_firstname** ve **Mail_lastname**yerine **"CN = <upn> "** ister. |
 | Kullanıcı, önceden dağıtılan sertifikayı elle cihazdan sildi. | Intune, sonraki iade veya ilke zorlaması sırasında aynı sertifikayı yeniden dağıtır. Bu durumda, NDES Bağlayıcısı bir PKCS sertifika isteği almaz. |
 
 ## <a name="next-steps"></a>Sonraki adımlar

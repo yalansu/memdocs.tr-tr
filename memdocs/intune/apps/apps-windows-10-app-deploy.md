@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/25/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 391fa20cf7ba53af649f9f614d9ca02c653c278b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: f06a6d6689107c97a80e11149da499ccd51fa755
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079323"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633295"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Microsoft Intune kullanarak Windows 10 uygulama dağıtımı 
 
@@ -44,7 +44,7 @@ Windows 10 cihazlarında desteklenen uygulama türleri İş kolu (LOB) uygulamal
 
 Belirli uygulama türleri, kullanıcılarınızın çalıştırdığı Windows 10 sürümüne göre desteklenir. Aşağıdaki tabloda, uygulama türü ve Windows 10 Supportability sağlanmaktadır.
 
-| Uygulama türü | Giriş | Pro | İş | Enterprise | Eğitim | S modu | HoloLens<sup>1 | Surface Hub | WCOS | Mobil |
+| Uygulama türü | Giriş Sayfası | Pro | İş | Enterprise | Eğitim | S modu | HoloLens <sup> 1 | Surface Hub | WCOS | Cep telefonu |
 |----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
 |  . DEFTERI | Hayır | Yes | Yes | Yes | Yes | Hayır | Hayır | Hayır | Hayır | Hayır |
 | . Intunewin | Hayır | Yes | Yes | Yes | Yes | 19H2 + | Hayır | Hayır | Hayır | Hayır |
@@ -52,9 +52,9 @@ Belirli uygulama türleri, kullanıcılarınızın çalıştırdığı Windows 1
 | LOB: APPX/MALTı | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | MSFB çevrimdışı | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | MSFB çevrimiçi | Yes | Yes | Yes | Yes | Yes | Yes | RS4 + | Hayır | Yes | Yes |
-| Web Apps | Yes | Yes | Yes | Yes | Yes | Yes | Evet<sup>2 | Evet<sup>2 | Yes | Evet<sup>2 |
+| Web Apps | Yes | Yes | Yes | Yes | Yes | Yes | Evet<sup>2 | Evet<sup>2 | Evet | Evet<sup>2 |
 | Mağaza bağlantısı | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Microsoft Edge | Hayır | Yes | Yes | Yes | Yes | 19H2 +<sup>3 | Hayır | Hayır | Hayır | Hayır |
+| Microsoft Edge | Hayır | Yes | Yes | Yes | Yes | 19H2 + <sup> 3 | Hayır | Hayır | Hayır | Hayır |
 
 <sup>1</sup> uygulama yönetiminin kilidini açmak Için, Hololens cihazınızı [holographic for Business](../fundamentals/windows-holographic-for-business.md)'a yükseltin.<br />
 yalnızca Şirket Portalı <sup>2</sup> ' den başlatın.<br />
@@ -67,7 +67,7 @@ yalnızca Şirket Portalı <sup>2</sup> ' den başlatın.<br />
 
 Windows 10 LOB uygulamalarını imzalayabilir ve Intune yönetim konsoluna yükleyebilirsiniz. Bunlar, Evrensel Windows Platformu (UWP) uygulamaları ve Windows uygulama paketleri (AppX) gibi modern uygulamaların yanı sıra basit Microsoft yükleyicisi paket dosyaları (MSI) gibi Win 32 uygulamaları da içerebilir. Yöneticinin LOB uygulamalarının güncelleştirmelerini el ile yüklemesi ve dağıtması gerekir. Bu güncelleştirmeler, uygulamayı yüklemiş olan Kullanıcı cihazlarına otomatik olarak yüklenir. Kullanıcı müdahalesi gerekli değildir ve kullanıcının güncelleştirmeler üzerinde denetimi yoktur. 
 
-## <a name="microsoft-store-for-business-apps"></a>İş uygulamaları için Microsoft Mağazası
+## <a name="microsoft-store-for-business-apps"></a>İş İçin Microsoft Mağazası uygulamaları
 
 Iş uygulamaları için Microsoft Store, Microsoft Store for Business yönetici portalından satın alınan modern uygulamalardır. Daha sonra yönetim için Microsoft Intune için eşitlenir. Uygulamalar çevrimiçi lisanslanabileceği gibi çevrimdışı da lisanslanabilir. Microsoft Store, yönetici tarafından hiçbir ek eylem gerekmeden güncelleştirmeleri doğrudan yönetir. Ayrıca, özel bir Tekdüzen Kaynak tanımlayıcısı (URI) kullanarak belirli uygulamalara yönelik güncelleştirmeleri engelleyebilirsiniz. Daha fazla bilgi için bkz. [Kurumsal uygulama yönetimi - Uygulamaların otomatik güncelleştirmeleri almasını engelleme](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Kullanıcı aynı zamanda cihazdaki tüm Iş uygulamaları için Microsoft Store güncelleştirmelerini devre dışı bırakabilir. 
 
@@ -75,8 +75,8 @@ Iş uygulamaları için Microsoft Store, Microsoft Store for Business yönetici 
 Iş uygulamalarına yönelik Microsoft Store kategorilere ayırmak için: 
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **tüm uygulamalar**' ı seçin. 
-3. Iş için bir Microsoft Store seçin. Ardından **Özellikler** > **uygulama bilgileri** > **kategorisi**' ni seçin. 
+2. **Uygulamalar**  >  **tüm uygulamalar**' ı seçin. 
+3. Iş için bir Microsoft Store seçin. Ardından **Özellikler**  >  **uygulama bilgileri**  >  **kategorisi**' ni seçin. 
 4. Bir kategori seçin.
 
 ## <a name="install-apps-on-windows-10-devices"></a>Windows 10 cihazlarına uygulama yüklemesi
@@ -92,7 +92,9 @@ Uygulama türüne bağlı olarak, uygulamayı iki şekilde bir Windows 10 cihaz�
 > [!NOTE]
 > Çift modlu uygulamalar olarak oluşturulan Win32 uygulamaları için, uygulamanın bu örnekle ilişkili tüm atamalar için Kullanıcı modu veya makine modu uygulaması olarak işlev görür olması gerekir. Dağıtım bağlamı atama başına değiştirilemez.  
 
-Uygulamalar yalnızca cihaz ve Intune uygulama türü tarafından desteklenerek cihaz bağlamına yüklenebilir. Aşağıdaki uygulama türlerini cihaz bağlamına yükleyebilir ve bu uygulamaları bir cihaz grubuna atayabilirsiniz:
+Uygulamalar yalnızca cihaz ve Intune uygulama türü tarafından desteklenerek cihaz bağlamına yüklenebilir. Cihaz bağlamı yüklemeleri, Surface Hub gibi Windows 10 masaüstleri ve takımlar cihazlarında desteklenir. Microsoft HoloLens gibi Windows holographic for Business çalıştıran cihazlarda desteklenmemektedir.
+
+Aşağıdaki uygulama türlerini cihaz bağlamına yükleyebilir ve bu uygulamaları bir cihaz grubuna atayabilirsiniz:
 
 - Win32 uygulamaları
 - Iş uygulamaları için çevrimdışı lisanslı Microsoft Store

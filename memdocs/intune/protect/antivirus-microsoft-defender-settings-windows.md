@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/05/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 7d8ea221b6c1768055e3ca1839c20ed64e2e3838
-ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
+ms.openlocfilehash: be850b2351de138ddacb087b2acf198e164dcd67
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82802030"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83430088"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Microsoft Intune 'de Windows 10 Microsoft Defender virüsten koruma ilkesi ayarları
 
-Microsoft Intune 'de Windows 10 için Microsoft Defender virüsten koruma profili için yapılandırabileceğiniz virüsten koruma ilkesi ayarlarını görüntüleyin.
+Bir [uç nokta güvenlik ilkesinin](../protect/endpoint-security-policy.md)parçası olarak Microsoft Intune Windows 10 Için Microsoft Defender virüsten koruma profili Için yapılandırabileceğiniz uç nokta güvenliği virüsten koruma ilkesi ayarlarını görüntüleyin.
 
 ## <a name="cloud-protection"></a>Bulut koruması
 
@@ -206,7 +206,7 @@ Bu gruptaki her bir ayar için ayarı genişletebilir, **Ekle**' yi seçebilir v
   Defender 'ı ZIP veya CAB dosyaları gibi arşiv dosyalarını tarayacak şekilde yapılandırın.
 
   - **Yapılandırılmadı** (*varsayılan*)-ayar, arşivlenen dosyaları taramak için istemci varsayılan değerini döndürür, ancak kullanıcı bunu devre dışı bırakabilir.
-Daha fazla bilgi edinin
+Daha fazlasını öğrenin
   - Dosya Arşivi **taranmaz.** Cihaz kullanıcıları bu ayarı değiştiremezler.
   - **Evet** -arşiv dosyalarının taranmasını etkinleştirin. Cihaz kullanıcıları bu ayarı değiştiremezler.
 

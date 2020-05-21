@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd999f621375cfdbfa80bf076766be20053221dc
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 09c8713bd9f0e63182dd94187de1711ef65af802
+ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269074"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732967"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS/iPadOS cihazlarını Apple’ın Otomatik Cihaz Kayıt Anlaşması ile otomatik olarak kaydetme
 
@@ -83,7 +83,7 @@ Bir belirteç oluşturmak için [Apple Business Manager (ABA)](https://business.
 > [!NOTE]
 > Azure 'a geçiş yapmadan önce klasik Intune portalından belirteç silerseniz, Intune silinen bir Apple ADE belirtecini geri yükleyebilir. ADE belirtecini Azure portal yeniden silebilirsiniz.
 
-### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>1. Adım. Belirteci oluşturmak için gereken Intune ortak anahtar sertifikasını indirin.
+### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Adım 1. Belirteci oluşturmak için gereken Intune ortak anahtar sertifikasını indirin.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **cihazlar**  >  **iOS**  >  **iOS kayıt**  >  **kayıt programı belirteçleri**  >  **Ekle**' yi seçin.
 
@@ -99,7 +99,7 @@ Bir belirteç oluşturmak için [Apple Business Manager (ABA)](https://business.
 3. Şifreleme dosyasını (.pem) indirmek ve yerel olarak kaydetmek için **Ortak anahtarınızı indirin** öğesini seçin. .pem dosyası Apple portalından güven ilişkisi sertifikası istemek için kullanılır.
 
 
-### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>2. Adım Anahtarınızı kullanarak Apple’dan bir belirteç indirin.
+### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>Adım 2. Anahtarınızı kullanarak Apple’dan bir belirteç indirin.
 
 1. Apple 'ın Iş Portalını açmak için **Apple 'ın aygıt kayıt programı belirteç oluştur** ' u seçin ve ŞIRKETINIZIN Apple kimliğiyle oturum açın. Bu Apple KIMLIĞINI, ADE belirtecinizi yenilemek için kullanabilirsiniz.
 2. Apple [iş portalında](https://business.apple.com) **aygıt kayıt programı**için **kullanmaya başlayın** ' ı seçin.
@@ -235,29 +235,33 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
 
     | Kurulum Yardımcısı ekran ayarları | **Göster**'i seçerseniz, kurulum sırasında cihaz... |
     |------------------------------------------|------------------------------------------|
-    | <strong>Geçiş kodu</strong> | Kullanıcıdan geçiş kodu ister. Güvenliği sağlanmayan veya erişim denetimi başka bir yolla (cihazı tek uygulamayla sınırlandıran bilgi noktası modu gibi) sağlanan cihazlar için her zaman geçiş kodu isteyin. |
-    | <strong>Konum Hizmetleri</strong> | Kullanıcıdan konum ister. |
-    | <strong>Geri Yükleme</strong> | Uygulamalar & veri ekranını görüntüleyin. Bu ekran kullanıcıya cihazı kurarken iCloud Backup'tan verileri geri yükleme veya aktarma seçeneği sağlar. |
-    | <strong>iCloud ve Apple Kimliği</strong> | Kullanıcıya Apple Kimliği ile oturum açma ve iCloud'u kullanma seçenekleri sağlar.                         |
-    | <strong>Hüküm ve Koşullar</strong> | Kullanıcının Apple'ın hüküm ve koşullarını kabul etmesini gerektirir. |
-    | <strong>Touch ID</strong> | Kullanıcıya cihaz için parmak izi tanımlama özelliğini ayarlama seçeneği sağlar. |
-    | <strong>Apple Pay</strong> | Kullanıcıya cihazda Apple Pay ayarlama seçeneği sağlar. |
-    | <strong>Zoom</strong> | Kullanıcıya cihazı ayarlarken ekranı yakınlaştırma seçeneği sağlar. |
-    | <strong>Siri</strong> | Kullanıcıya Siri'yi ayarlama seçeneği sağlar. |
-    | <strong>Tanılama Verileri</strong> | Kullanıcıya Tanılama ekranını görüntüler. Bu ekran kullanıcıya Apple'a tanılama verileri gönderme seçeneği sağlar. |
-    | <strong>Görüntü Tonu</strong> | Kullanıcıya Görüntü Tonunu açma seçeneği sunar. |
-    | <strong>Gizlilik</strong> | Kullanıcıya Gizlilik ekranını gösterir. |
-    | <strong>Android Geçişi</strong> | Kullanıcıya Android cihazdan veri geçirme seçeneği sunar. |
-    | <strong>iMessage ve FaceTime</strong> | Kullanıcıya IMessage ve çok yönlü saat ayarlama seçeneği sunun. |
-    | <strong>Ekleme</strong> | Kapak Sayfası, Çok Görevli Çalışma ve Denetim Merkezi gibi kullanıcı eğitimine yönelik ekleme bilgi ekranlarının görüntülenmesini sağlar. |
-    | <strong>Watch Geçişi</strong> | Kullanıcıya Watch cihazından veri geçirme seçeneği sunar. |
-    | <strong>Ekran Süresi</strong> | Ekran Süresi ekranını görüntüler. |
-    | <strong>Yazılım Güncelleştirmesi</strong> | Zorunlu yazılım güncelleştirmesi ekranı görüntüler. |
-    | <strong>SIM Ayarları</strong> | Kullanıcıya hücresel plan ekleme seçeneği sunar. |
-    | <strong>Görünüm</strong> | Kullanıcıya Görünüm ekranını gösterir. |
+    | <strong>Geçiş kodu</strong> | Kullanıcıdan geçiş kodu ister. Güvenliği sağlanmayan veya erişim denetimi başka bir yolla (cihazı tek uygulamayla sınırlandıran bilgi noktası modu gibi) sağlanan cihazlar için her zaman geçiş kodu isteyin. İOS/ıpados 7,0 ve üzeri için. |
+    | <strong>Konum Hizmetleri</strong> | Kullanıcıdan konum ister. MacOS 10,11 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
+    | <strong>Geri Yükleme</strong> | Uygulamalar & veri ekranını görüntüleyin. Bu ekran kullanıcıya cihazı kurarken iCloud Backup'tan verileri geri yükleme veya aktarma seçeneği sağlar. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
+    | <strong>iCloud ve Apple Kimliği</strong> | Kullanıcıya Apple Kimliği ile oturum açma ve iCloud'u kullanma seçenekleri sağlar. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için.   |
+    | <strong>Hüküm ve Koşullar</strong> | Kullanıcının Apple'ın hüküm ve koşullarını kabul etmesini gerektirir. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
+    | <strong>Touch ID</strong> | Kullanıcıya cihaz için parmak izi tanımlama özelliğini ayarlama seçeneği sağlar. MacOS 10.12.4 ve üzeri ve iOS/ıpados 8,1 ve üzeri için. |
+    | <strong>Apple Pay</strong> | Kullanıcıya cihazda Apple Pay ayarlama seçeneği sağlar. MacOS 10.12.4 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
+    | <strong>Zoom</strong> | Kullanıcıya cihazı ayarlarken ekranı yakınlaştırma seçeneği sağlar. İOS/ıpados 8,3 ve üzeri için. |
+    | <strong>Siri</strong> | Kullanıcıya Siri'yi ayarlama seçeneği sağlar. MacOS 10,12 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
+    | <strong>Tanılama Verileri</strong> | Kullanıcıya Tanılama ekranını görüntüler. Bu ekran kullanıcıya Apple'a tanılama verileri gönderme seçeneği sağlar. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
+    | <strong>Görüntü Tonu</strong> | Kullanıcıya Görüntü Tonunu açma seçeneği sunar. MacOS 10.13.6 ve üzeri ve iOS/ıpados 9.3.2 ve üzeri için. |
+    | <strong>Gizlilik</strong> | Kullanıcıya Gizlilik ekranını gösterir. MacOS 10.13.4 ve üzeri ve iOS/ıpados 11,3 ve üzeri için. |
+    | <strong>Android Geçişi</strong> | Kullanıcıya Android cihazdan veri geçirme seçeneği sunar. İOS/ıpados 9,0 ve üzeri için.|
+    | <strong>iMessage ve FaceTime</strong> | Kullanıcıya IMessage ve çok yönlü saat ayarlama seçeneği sunun. İOS/ıpados 9,0 ve üzeri için. |
+    | <strong>Ekleme</strong> | Kapak Sayfası, Çok Görevli Çalışma ve Denetim Merkezi gibi kullanıcı eğitimine yönelik ekleme bilgi ekranlarının görüntülenmesini sağlar. İOS/ıpados 11,0 ve üzeri için. |
+    | <strong>Watch Geçişi</strong> | Kullanıcıya Watch cihazından veri geçirme seçeneği sunar. İOS/ıpados 11,0 ve üzeri için.|
+    | <strong>Ekran Süresi</strong> | Ekran Süresi ekranını görüntüler. MacOS 10,15 ve üzeri ve iOS/ıpados 12,0 ve üzeri için. |
+    | <strong>Yazılım Güncelleştirmesi</strong> | Zorunlu yazılım güncelleştirmesi ekranı görüntüler. İOS/ıpados 12,0 ve üzeri için. |
+    | <strong>SIM Ayarları</strong> | Kullanıcıya hücresel plan ekleme seçeneği sunar. İOS/ıpados 12,0 ve üzeri için. |
+    | <strong>Görünüm</strong> | Kullanıcıya Görünüm ekranını gösterir. MacOS 10,14 ve üzeri ve iOS/ıpados 13,0 ve üzeri için. |
     | <strong>Hızlı dil</strong>| Kullanıcı için hızlı dil ekranını görüntüleyin. |
     | <strong>Tercih edilen dil</strong> | Kullanıcıya **tercih edilen dilini**seçme seçeneğini sunun. |
-    | <strong>Cihazdan cihaza geçişe</strong> | Kullanıcıya verileri eski cihazlarından bu cihaza geçirme seçeneğini sunun.|
+    | <strong>Cihazdan cihaza geçişe</strong> | Kullanıcıya verileri eski cihazlarından bu cihaza geçirme seçeneğini sunun. İOS/ıpados 13,0 ve üzeri için. |
+    | <strong>Kayıt</strong> | Kullanıcının kayıt ekranını görüntüleyin. MacOS 10,9 ve üzeri için. |
+    | <strong>FileVault</strong> | Kullanıcının dosya Kasası 2 şifreleme ekranını görüntüleyin. MacOS 10,10 ve üzeri için. |
+    | <strong>iCloud tanılama</strong> | Kullanıcıya iCloud Analayanve ekranını görüntüleyin. MacOS 10.12.4 ve üzeri için. |
+    | <strong>iCloud Depolama</strong> | Kullanıcıya iCloud belgelerini ve masaüstü ekranını görüntüleyin. MacOS 10.13.4 ve üzeri için. |
     
 
 16. **İleri ' yi** seçerek **gözden geçir + oluştur** sayfasına gidin.
@@ -282,7 +286,7 @@ Artık Intune’a cihazlarınızı yönetme izni verildiğine göre, yönetilen 
 
    Intune 'un kabul edilebilir kayıt programı trafiğine yönelik koşullarını izlemek için aşağıdaki kısıtlamaları uygular:
    - Tam eşitleme en sık yedi günde bir çalıştırılabilir. Tam eşitleme sırasında Intune, Intune’a bağlı Apple MDM sunucusuna atanan seri numaraların tam güncelleştirilmiş bir listesini alır. Bir ADE cihazı Intune portalından silinirse, bu, ADE portalındaki Apple MDM sunucusundan atanmamış olmalıdır. Atamanın kaldırılmaması durumunda bu cihazlar tam eşitleme çalıştırılana kadar Intune'a yeniden aktarılamaz.   
-   - Eşitleme 24 saatte bir otomatik olarak çalıştırılır. **Eşitle** düğmesine basarak da eşitleyebilirsiniz (en fazla 15 dakikada bir kez). Tüm eşitleme isteklerinin tamamlanması için 15 dakika verilir. Eşitleme tamamlanana kadar **Eşitle** düğmesi devre dışı kalır. Bu eşitleme, mevcut aygıt durumunu yeniler ve Apple MDM sunucusuna atanan yeni cihazları içeri aktarır.   
+   - Her 12 saatte bir eşitleme otomatik olarak çalıştırılır. **Eşitle** düğmesine basarak da eşitleyebilirsiniz (en fazla 15 dakikada bir kez). Tüm eşitleme isteklerinin tamamlanması için 15 dakika verilir. Eşitleme tamamlanana kadar **Eşitle** düğmesi devre dışı kalır. Bu eşitleme, mevcut aygıt durumunu yeniler ve Apple MDM sunucusuna atanan yeni cihazları içeri aktarır.   
 
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>Cihazlara kayıt profili atama

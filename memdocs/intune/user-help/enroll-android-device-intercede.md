@@ -18,12 +18,12 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8afc499f85e91658b411a25988ac858ca59030cc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f48fb487df6a1b20e333ee6a2154490a59d220a9
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81616004"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551970"
 ---
 # <a name="set-up-android-device-with-company-portal-and-intercede"></a>Android cihazını Şirket Portalı ve ıntercede ile ayarlama
 
@@ -52,7 +52,7 @@ Türetilmiş kimlik bilgileri şu şekilde kullanılır:
 
 Türetilmiş kimlik bilgileri, özel yayın (SP) 800-157 kapsamında türetilmiş kişisel kimlik doğrulama (PıV) kimlik bilgileri için ulusal standartlar ve Teknoloji Enstitüsü (NıST) kuralları uygulamasıdır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
  Kaydı tamamlayabilmeniz için, şunları yapmanız gerekir:
 
@@ -135,7 +135,7 @@ Bu bölümde, şirketinizin sağladığı QR kodunuzu taracaksınız.  İşiniz 
 ### <a name="token-enrollment"></a>Belirteç kaydı  
 Bu bölümde, şirketinizin sunduğu belirteci girersiniz. İşiniz bittiğinde cihaz kayıt adımlarına geri yönlendiriyoruz.  
 
-1. Google oturum açma ekranında, **e-posta veya telefon** kutusuna **AFW # kurulum**yazın. **İleri**' ye dokunun. 
+1. Google oturum açma ekranında, **e-posta veya telefon** kutusuna **AFW # kurulum**yazın. Sonra **İleri**' ye dokunun. 
 
    ![Google oturum açma ekranının örnek görüntüsü, "AFW # kurulum" ın alana yazılmış olduğunu gösterir.](./media/token-intune-app-01.png)   
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b7e77933134dae3523edaf45f8b345aca4fc162
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49d1b8f407814fd368a7ff45bb94bc4c5ef7fd9d
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79326638"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556294"
 ---
 # <a name="windows-holographic-for-business-settings-to-manage-shared-devices-using-intune"></a>Intune kullanarak paylaşılan cihazları yönetmek için Windows holographic for Business ayarları
 
@@ -36,24 +36,33 @@ Intune 'da bu özellik hakkında daha fazla bilgi için bkz. [PAYLAŞıLAN bilgi
 
 ## <a name="before-your-begin"></a>Başlamadan önce
 
-[Profili oluşturun](shared-user-device-settings.md).
+[Windows 10 paylaşılan çok kullanıcılı cihaz yapılandırma profili oluşturun](shared-user-device-settings.md).
+
+Bir Windows 10 paylaşılan Kullanıcı cihaz yapılandırma profili oluşturduğunuzda, bu makalede listelenenlerden daha fazla ayar vardır. Bu makaledeki ayarlar Windows holographic for Business cihazlarında desteklenir.
 
 ## <a name="shared-multi-user-device-settings"></a>Paylaşılan çok kullanıcılı cihaz ayarları
 
 > [!NOTE]
 > Microsoft HoloLens de dahil olmak üzere Windows holographic for Business çalıştıran cihazlar yalnızca **Hesap yönetimi** ayarlarını destekler. Intune 'da gösterilen, **PAYLAŞıLAN bilgisayar modu**dahil diğer ayarlardan herhangi birini yapılandırırsanız, bu cihazlar üzerinde hiçbir etkisi olmaz.
 
-- **Hesap yönetimi**: konuklar tarafından oluşturulan yerel hesapları ve ad ve Azure AD hesaplarını otomatik olarak silmek için **etkinleştirin** . Kullanıcı cihazda oturumu kapattığında veya sistem bakımı çalıştırıldığında, bu hesaplar silinir. Etkinleştirildiğinde, aşağıdakileri de ayarlayın:
-  - **Hesap silme**: hesapların ne zaman silineceğini seçin: **depolama alanı eşiğine**, **depolama alanı eşiğine ve etkin olmayan eşiğe**veya **oturum kapatıldıktan hemen sonra**. Ayrıca şunu girin:
+- **Hesap yönetimi**: hesapların otomatik olarak silinip silinmediğini seçin. Seçenekleriniz şunlardır:
+  - **Yapılandırılmadı** (varsayılan): konuklar tarafından oluşturulan yerel hesapları ve ad ve Azure AD 'de hesapları otomatik olarak siler. Kullanıcı cihazda oturumu kapattığında veya sistem bakımı çalıştırıldığında, bu hesaplar silinir.
+
+    Şunları da girin:
+
+    - **Hesap silme**: hesapların ne zaman silineceğini seçin:
+      - **Depolama alanı eşiğine göre**
+      - **Depolama alanı eşiği ve etkin olmayan eşik**
+      - **Oturum kapatıldıktan hemen sonra**
+
+    Şunları da girin:
+
     - **Delete eşiğini Başlat (%)**: disk alanı yüzdesi (0-100) girin. Toplam disk/depolama alanı girdiğiniz değerin altına düştüğünde, önbelleğe alınmış hesaplar silinir. Disk alanı kazanmak için hesapları sürekli olarak siler. En uzun devre dışı olan hesaplar önce silinir.
     - **Silme eşiğini Durdur (%)**: disk alanı yüzdesi (0-100) girin. Toplam disk/depolama alanı girdiğiniz değeri karşılıyorsa, silme işlemini sonlandırır.
 
-  Konuklar tarafından oluşturulan yerel, AD ve Azure AD hesaplarını tutmak için **devre dışı** olarak ayarlayın.
-
-  > [!NOTE]
-  > Microsoft HoloLens cihazları yalnızca **Hesap yönetimi** ayarlarını destekler.
+  - **Devre dışı bırak**: konuklar tarafından oluşturulan yerel, ad ve Azure AD hesapları cihazda kalır ve silinmez.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [Profili atama](device-profile-assign.md) ve [durumunu izleme](device-profile-monitor.md).
-- Bkz. [Windows 10 ve üzeri](shared-user-device-settings-windows.md)için ayarlar.
+- Bkz. [Windows 10 ve daha yeni](shared-user-device-settings-windows.md)için paylaşılan Kullanıcı cihaz ayarları.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31eef700f7aa38b70c5e9a2fa75fd3faee4c9713
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2ad156e49444679bbf7b15c53e87f504b07897bd
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078065"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709375"
 ---
 # <a name="reference-for-devices-entities"></a>Cihaz varlıkları için başvuru
 
@@ -50,7 +50,7 @@ ms.locfileid: "82078065"
 
 ### <a name="example"></a>Örnek
 
-| deviceTypeID  | Adı | Açıklama |
+| deviceTypeID  | Name | Açıklama |
 |---------|------------|--------|
 | 0 |Masaüstü |Windows Masaüstü cihaz |
 | 1 |WindowsRT |WindowsRT cihaz |
@@ -118,7 +118,7 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 | Geçerli değil                  | Kayıt hatası kategorisi geçerli değil.                                                            |
 | Kullanılamaz                   | Kayıt hatası kategorisi kullanılamıyor.                                                             |
 | Bilinmiyor                         | Bilinmeyen hata.                                                                                                |
-| Kimlik doğrulaması                  | Kimlik doğrulaması gerçekleştirilemedi.                                                                                        |
+| Kimlik Doğrulaması                  | Kimlik doğrulaması gerçekleştirilemedi.                                                                                        |
 | Yetkilendirme                   | Çağrının kimliği doğrulandı, ancak kaydolma yetkisi yok.                                                         |
 | AccountValidation               | Kayıt için Hesap doğrulanamadı. (Hesap engellendi, kayıt etkin değil)                      |
 | Kullanıcı doğrulaması                  | Kullanıcı doğrulanamadı. (Kullanıcı yok, Lisans eksik)                                           |
@@ -170,7 +170,7 @@ Kayıtsahibi **türü** varlığı, bir cihazın kurumsal, kişisel veya bilinme
 | ownerTypeName |Cihazların sahip türünü temsil eder:  <br>Şirket-cihaz, kuruluşa aittir. <br>Kişisel - cihaz kişiye aittir (KCG).  <br>Bilinmiyor - bu cihazda bilgi yok. |Şirket kişisel bilinmiyor |
 
 > [!Note]  
-> Cihazlar için `ownerTypeName` dinamik gruplar oluştururken azuread içinde, filtre değerini `deviceOwnership` olarak `Company`ayarlamanız gerekir. Daha fazla bilgi için bkz. [Cihazlar Için kurallar](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> `ownerTypeName`Cihazlar Için dinamik gruplar oluştururken AzureAD içinde, filtre değerini olarak ayarlamanız gerekir `deviceOwnership` `Company` . Daha fazla bilgi için bkz. [Cihazlar Için kurallar](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="managementstates"></a>managementStates
 
@@ -184,7 +184,7 @@ Kayıtsahibi **türü** varlığı, bir cihazın kurumsal, kişisel veya bilinme
 
 ### <a name="example"></a>Örnek
 
-| managementStateID  | Adı | Açıklama |
+| managementStateID  | Name | Açıklama |
 |---------|------------|--------|
 | 0 |Yönetilen | Hiçbir bekleyen uzak eylem olmadan yönetilir. |
 | 1 |RetirePending | Cihaz için bekleyen bir devre dışı bırakma komutu vardır. |
@@ -211,7 +211,7 @@ Kayıtsahibi **türü** varlığı, bir cihazın kurumsal, kişisel veya bilinme
 
 ### <a name="example"></a>Örnek
 
-| ManagementAgentTypeID  | Adı | Açıklama |
+| ManagementAgentTypeID  | Name | Açıklama |
 |---------|------------|--------|
 | 1 |EAS | Cihaz, Exchange Active Sync yoluyla yönetiliyor |
 | 2 |MDM | Cihaz bir MDM aracısı kullanılarak yönetiliyor |
@@ -263,6 +263,11 @@ Kayıtsahibi **türü** varlığı, bir cihazın kurumsal, kişisel veya bilinme
 | cellularTechnology         | Cihazın hücresel teknolojisi                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
 | ICD                       | Tümleşik devre kartı tanımlayıcısı                                                                                                                                                     |
+| windowsOsEdition           | Windows Işletim sistemi sürümü.                                                                                                                             |
+| ethernetMacAddress           | Bu cihazın benzersiz ağ tanımlayıcısı.                                                                                                                                        |
+| model                      | Cihaz modeli.                                                                                                                                                                      |
+| office365Version           | Cihaza yüklü Office 365 sürümü.                                                                                                                             |
+
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
@@ -281,4 +286,6 @@ Kayıtsahibi **türü** varlığı, bir cihazın kurumsal, kişisel veya bilinme
 | OSVersion                  | İşletim sistemi sürümü.                                                                                                                                                                          |
 | Jailbreak uygulanmış                 | Cihazda jailbreak yapılıp yapılmadığı veya kök erişim izni verilip verilmediğini gösterir.                                                                                                                                         |
 | deviceCategoryKey          | Bu cihaz için cihaz kategorisi özniteliğinin anahtarı. 
+| Physicalmemorybytes      | Bayt cinsinden fiziksel bellek.                                                                                                                                                          |
+| totalStorageSpaceInBytes   | Toplam depolama kapasitesi (bayt cinsinden).                                                                                                                                                                |
 

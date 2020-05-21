@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2fbb82123f28c5049a60d60572aadcb3d03777b7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 97566b4c14e0d5cb63847547822ce1908a33bb8a
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326951"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633385"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Microsoft Intune için destek alma
 
@@ -53,7 +53,7 @@ Intune için yeni oluşturulmuş bir kiracı kullandığınızda, *Yardım ve de
 
 Hata ayrıntıları bir *oturum kimliği*, *uzantı* ayrıntıları ve daha fazlasını içerir.
 
-https://admin.microsoft.comBu sorun, yeni kiracı hesabınızı üzerinde **M365 Yönetim Merkezi** veya ' de **Office 365 Portalı** aracılığıyla kimlik doğrulamasından geçmediğinde oluşur https://portal.office.com. Bu sorunu çözmek için, iletideki *M365 Yönetim Merkezi* bağlantısını seçin veya adresini ziyaret edin https://portal.office.comve oturum açın. Her iki sitede da aşağıdaki kimlik doğrulaması, Intune için *Yardım ve destek* erişilebilir hale gelir.
+Bu sorun, yeni kiracı hesabınızı üzerinde **M365 Yönetim Merkezi** https://admin.microsoft.com veya ' de **Office 365 Portalı** aracılığıyla kimlik doğrulamasından geçmediğinde oluşur https://portal.office.com . Bu sorunu çözmek için, iletideki *M365 Yönetim Merkezi* bağlantısını seçin veya adresini ziyaret edin https://portal.office.com ve oturum açın. Her iki sitede da aşağıdaki kimlik doğrulaması, Intune için *Yardım ve destek* erişilebilir hale gelir.
 
 **Yardım ve desteğe erişin**:
 
@@ -68,7 +68,7 @@ https://admin.microsoft.comBu sorun, yeni kiracı hesabınızı üzerinde **M365
 
   - Microsoft Endpoint Manager Yönetim Merkezi 'ndeki herhangi bir düğümden öğesini **seçin.** simgesine tıklayın ve sonra da yardım almak istediğiniz yönetim türünü seçmek için açılan listesini kullanın. Microsoft Endpoint Manager Yönetim Merkezi aşağıdaki yönetim türlerini destekler ve Intune gibi yardım almak istediğinizi seçmeniz gerekir:
 
-    - Yöneticiyi yapılandırma (Masaüstü analizlerini içerir)
+    - Configuration Manager (Masaüstü analizlerini içerir)
     - Intune
     - Ortak yönetim  
 
@@ -82,7 +82,7 @@ https://admin.microsoft.comBu sorun, yeni kiracı hesabınızı üzerinde **M365
     > [!div class="mx-imgBorder"]
     > ![Yönetim türünü onaylayın](./media/get-support/confirm-management-selection.png)
 
-  - **Sorun giderme + Destek** > **Yardım ve destek**aracılığıyla yardım ve destek ' i açarsanız, yardım ve *destek*altında listelenen yönetim türünü görmezsiniz.
+  - **Sorun giderme + Destek**  >  **Yardım ve destek**aracılığıyla yardım ve destek ' i açarsanız, yardım ve *destek*altında listelenen yönetim türünü görmezsiniz.
 
   - *Cihazlar*, *uygulamalar*veya *Kullanıcılar*gibi başka bir düğüme göz katıyorsanız, *Yardım ve destek*' i seçerseniz, bir yönetim türü seçme veya tür *Yardım ve destek*altında görüntüleme şansınız olmayacaktır. Bu durumda, *Intune* kabul edilir. İçeriğin Intune olmasını istemiyorsanız, şunu kullanın **?** seçeneğini belirlerseniz, farklı bir yönetim türü seçebilirsiniz.
 
@@ -94,7 +94,7 @@ https://admin.microsoft.comBu sorun, yeni kiracı hesabınızı üzerinde **M365
 
   Sol üst köşede, *Yardım gerekiyor?* penceresinde farklı bölmeleri açmak için seçebileceğiniz üç simge vardır. Görüntülediğiniz bölme altı çizili olarak tanımlanır.
 
-  **Premier** veya **Birleşik** destek sözleşmesine sahip müşteriler, destek için [ek seçeneklere](#premier-and-unified-support-customers) sahiptir ve yardım almak için *gerekli* olan bir başlığı şu resme benzer şekilde görebilir: ![Premier başlık](./media/get-support/premier-banner.png)
+  **Premier** veya **Birleşik** destek sözleşmesine sahip müşteriler, destek için [ek seçeneklere](#premier-and-unified-support-customers) sahiptir ve yardım almak için *gerekli* olan bir başlığı şu resme benzer şekilde görebilir: ![ Premier başlık](./media/get-support/premier-banner.png)
 
   *Yardım mı gerekiyor?* *çözüm bul* bölmesine açılır. Ancak etkin bir destek örneğine sahipseniz, etkin ve kapalı destek durumlarınız hakkındaki ayrıntıları görüntüleyebileceğiniz *hizmet istekleri* bölmesinde pencere açılır.
 

@@ -1,12 +1,12 @@
 ---
-title: Microsoft Intune-Azure 'da macOS çekirdek uzantısı ayarları | Microsoft Docs
+title: Microsoft Intune-Azure 'da macOS uzantı ayarları | Microsoft Docs
 titleSuffix: ''
-description: Çekirdek uzantıları kullanmak için macOS cihazlarındaki ayarları ekleyin, yapılandırın veya oluşturun. Ayrıca, kullanıcıların onaylanan uzantıları geçersiz kılmasına, bir takım tanımlayıcısından tüm uzantılara izin vermelerine veya Microsoft Intune içindeki belirli uzantılara veya uygulamalara izin erişmesine izin verin.
+description: System Extensions ve Kernel uzantıları kullanmak için macOS cihazlarında Ayarlar ekleyin, yapılandırın veya oluşturun. Ayrıca, kullanıcıların onaylanan uzantıları geçersiz kılmasına, bir takım tanımlayıcısından tüm uzantılara izin vermelerine veya Microsoft Intune içindeki belirli uzantılara veya uygulamalara izin erişmesine izin verin.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 05/12/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,39 +17,47 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e18fad8f1112681a62bcdacd63c652cfd4ad3ac
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8b716a7e85f817e95a9f1fec992458e052570d81
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359283"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429525"
 ---
-# <a name="macos-device-settings-to-configure-and-use-kernel-extensions-in-intune"></a>Intune 'da çekirdek uzantılarını yapılandırmak ve kullanmak için macOS cihaz ayarları
+# <a name="macos-device-settings-to-configure-and-use-kernel-and-system-extensions-in-intune"></a>Intune 'da çekirdek ve sistem uzantılarını yapılandırmak ve kullanmak için macOS cihaz ayarları
 
-Bu makalede, macOS cihazlarında denetleyebilmeniz için farklı çekirdek uzantısı ayarları listelenir ve açıklanmaktadır. Mobil cihaz yönetimi (MDM) çözümünüzün bir parçası olarak, cihazlarınıza çekirdek uzantıları eklemek ve bunları yönetmek için bu ayarları kullanın.
+> [!NOTE]
+> macOS çekirdek uzantıları sistem uzantıları ile değiştiriliyor. Daha fazla bilgi için bkz. [destek İpucu: Intune 'Da macOS Catalina 10,15 için çekirdek uzantıları yerine sistem uzantılarını kullanma](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-system-extensions-instead-of-kernel-extensions/ba-p/1191413).
 
-Intune 'da çekirdek uzantıları ve Önkoşullar hakkında daha fazla bilgi edinmek için bkz. [macOS çekirdek uzantıları ekleme](kernel-extensions-overview-macos.md).
+Bu makalede, macOS cihazlarında denetleyebilmeniz için farklı çekirdek ve sistem uzantısı ayarları listelenmektedir ve açıklanmaktadır. Mobil cihaz yönetimi (MDM) çözümünüzün bir parçası olarak, cihazlarınızda uzantıları eklemek ve yönetmek için bu ayarları kullanın.
+
+Intune ve Önkoşullar hakkında daha fazla bilgi edinmek için bkz. [macOS uzantıları ekleme](kernel-extensions-overview-macos.md).
 
 Bu ayarlar, Intune'da bir cihaz yapılandırma profiline eklenir ve daha sonra macOS cihazlarınıza atanır veya dağıtılır.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Bir cihaz çekirdeği Uzantıları yapılandırma profili oluşturun](kernel-extensions-overview-macos.md).
+[MacOS Uzantıları yapılandırma profili oluşturun](kernel-extensions-overview-macos.md).
 
 > [!NOTE]
 > Bu ayarlar farklı kayıt türleri için geçerlidir. Farklı kayıt türleri hakkında daha fazla bilgi için bkz. [MacOS kaydı](../enrollment/macos-enroll.md).
 
 ## <a name="kernel-extensions"></a>Çekirdek uzantıları
 
-### <a name="settings-apply-to-user-approved-automated-device-enrollment"></a>Ayarlar için geçerlidir: Kullanıcı onaylı, otomatik cihaz kaydı
+Bu özellik şu platformlarda geçerlidir:
 
-- **Kullanıcı geçersiz kılmasına Izin ver**: **izin ver** , yapılandırma profilinde bulunmayan kullanıcıların çekirdek uzantılarını onaylamasını sağlar. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların yapılandırma profilinde bulunmayan uzantılara izin vermesini engelleyebilir. Anlamı olarak yalnızca yapılandırma profiline eklenen uzantılara izin verilir.
+- macOS 10.13.2 ve üzeri
+- Kullanıcı tarafından onaylanan cihaz kaydı gereklidir 
 
-  Bu özellik hakkında daha fazla bilgi için bkz. [Kullanıcı onaylı çekirdek uzantısı yükleme](https://developer.apple.com/library/archive/technotes/tn2459/_index.html) (Apple 'ın Web sitesini açar).
+### <a name="settings-apply-to-user-approved-device-enrollment-automated-device-enrollment"></a>Ayarlar için geçerlidir: Kullanıcı tarafından onaylanan cihaz kaydı, otomatik cihaz kaydı
+
+- **Kullanıcı geçersiz kılmalara Izin ver**: **Evet** seçeneği, kullanıcıların, yapılandırma profilinde bulunmayan çekirdek uzantılarını onaylamasını sağlar. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların yapılandırma profilinde bulunmayan uzantılara izin vermesini engelleyebilir. Anlamı olarak yalnızca yapılandırma profiline eklenen uzantılara izin verilir.
+
+  Bu özellik hakkında daha fazla bilgi için bkz. [Kullanıcı onaylı çekirdek uzantısı yüklemesi](https://developer.apple.com/library/archive/technotes/tn2459/_index.html) (Apple 'ın Web sitesini açar).
 
 - **Izin verilen takım tanımlayıcıları**: bir veya daha fazla takım kimliğine izin vermek için bu ayarı kullanın. Girdiğiniz ekip kimlikleriyle imzalanan tüm çekirdek uzantılarına izin verilir ve bunlar güvenilir. Diğer bir deyişle, belirli bir geliştirici veya iş ortağı olabilecek aynı takım KIMLIĞI içindeki tüm çekirdek uzantılarına izin vermek için bu seçeneği kullanın.
 
-  Yüklemek istediğiniz geçerli ve imzalı çekirdek uzantılarının ekip tanımlayıcısını **ekleyin** . Birden çok takım tanımlayıcısı ekleyebilirsiniz. Takım tanımlayıcısının alfasayısal (harfler ve rakamlar) olması ve 10 karaktere sahip olması gerekir. Örneğin, `ABCDE12345` girin.
+  Yüklenecek geçerli ve imzalı çekirdek uzantılarının ekip tanımlayıcısını **ekleyin** . Birden çok takım tanımlayıcısı ekleyebilirsiniz. Takım tanımlayıcısının alfasayısal (harfler ve rakamlar) olması ve 10 karaktere sahip olması gerekir. Örneğin, `ABCDE12345` girin.
 
   Ekip tanımlayıcı ekledikten sonra da silinebilir.
 
@@ -57,12 +65,12 @@ Bu ayarlar, Intune'da bir cihaz yapılandırma profiline eklenir ve daha sonra m
 
 - **Izin verilen çekirdek uzantıları**: belirli çekirdek uzantılarına izin vermek için bu ayarı kullanın. Yalnızca girdiğiniz çekirdek uzantılarına izin verilir veya güvenilir.
 
-  Yüklemek istediğiniz bir çekirdek uzantısının paket tanımlayıcısını ve takım tanımlayıcısını **ekleyin** . İmzasız eski çekirdek uzantıları için boş bir takım tanımlayıcısı kullanın. Birden çok çekirdek uzantısı ekleyebilirsiniz. Takım tanımlayıcısının alfasayısal (harfler ve rakamlar) olması ve 10 karaktere sahip olması gerekir. Örneğin, **paket kimliği**Için ve `ABCDE12345` **Takım tanımlayıcısı**için girin. `com.contoso.appname.macos`
+  Yüklenecek çekirdek uzantısının paket tanımlayıcısını ve takım tanımlayıcısını **ekleyin** . İmzasız eski çekirdek uzantıları için boş bir takım tanımlayıcısı kullanın. Birden çok çekirdek uzantısı ekleyebilirsiniz. Takım tanımlayıcısının alfasayısal (harfler ve rakamlar) olması ve 10 karaktere sahip olması gerekir. Örneğin, `com.contoso.appname.macos` **paket kimliği**için ve `ABCDE12345` **Takım tanımlayıcısı**için girin.
 
   > [!TIP]
   > Bir macOS cihazında çekirdek uzantısının paket KIMLIĞINI (KEXT) almak için şunları yapabilirsiniz:
   >
-  > 1. Terminalde çalıştırın `kextstat | grep -v com.apple`ve çıktıyı aklınızda yapın. İstediğiniz yazılımı veya KEXT 'yi yükler. Yeniden `kextstat | grep -v com.apple` çalıştırın ve değişiklikler olup olmadığına bakın.
+  > 1. Terminalde çalıştırın `kextstat | grep -v com.apple` ve çıktıyı aklınızda yapın. İstediğiniz yazılımı veya KEXT 'yi yükler. `kextstat | grep -v com.apple`Yeniden çalıştırın ve değişiklikler olup olmadığına bakın.
   >
   >    Terminalde, `kextstat` işletim sistemindeki tüm çekirdek uzantılarını listeler. 
   >
@@ -70,6 +78,46 @@ Bu ayarlar, Intune'da bir cihaz yapılandırma profiline eklenir ve daha sonra m
 
 > [!NOTE]
 > Takım tanımlayıcıları ve çekirdek uzantıları eklemeniz gerekmez. Bir veya diğerini yapılandırabilirsiniz.
+
+## <a name="system-extensions"></a>Sistem uzantıları
+
+Bu özellik şu platformlarda geçerlidir:
+
+- macOS 10,15 ve üzeri
+- Kullanıcı tarafından onaylanan cihaz kaydı gereklidir
+
+### <a name="settings-apply-to-user-approved-device-enrollment-automated-device-enrollment"></a>Ayarlar için geçerlidir: Kullanıcı tarafından onaylanan cihaz kaydı, otomatik cihaz kaydı
+
+- **Kullanıcı geçersiz kılmalarını engelle**: **Evet** seçeneği, kullanıcıların izin verilenler listesinde olmayan sistem uzantılarını onaylamayı engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların yapılandırma profilinde bulunmayan bilinmeyen uzantıları onaylamasını sağlayabilir. Anlamı, yapılandırma profiline dahil olmayan uzantılara izin verilir.
+
+- **Izin verilen takım tanımlayıcıları**: bir veya daha fazla takım kimliğine izin vermek için bu ayarı kullanın. Girdiğiniz ekip kimlikleriyle imzalanan tüm sistem uzantılarına her zaman izin verilir ve güvenilir. Diğer bir deyişle, belirli bir geliştirici veya iş ortağı olabilecek aynı takım KIMLIĞI içindeki tüm sistem uzantılarına izin vermek için bu seçeneği kullanın.
+
+  Yüklenecek geçerli ve imzalı sistem uzantılarının **ekip tanımlayıcısını** **ekleyin** . Birden çok takım tanımlayıcısı ekleyebilirsiniz. Takım tanımlayıcısının alfasayısal (harfler ve rakamlar) olması ve 10 karaktere sahip olması gerekir. Örneğin, `ABCDE12345` girin.
+
+  Ekip tanımlayıcı ekledikten sonra da silinebilir.
+
+  [Takım kimliğinizi bulun](https://help.apple.com/developer-account/#/dev55c3c710c) (Apple 'ın Web sitesini açar) daha fazla bilgi içerir.
+
+- **Izin verilen sistem uzantıları**: Bu ayarı, belirli sistem uzantılarına her zaman izin vermek için kullanın. Yalnızca girdiğiniz sistem uzantılarına izin veriliyor veya güvenilir.
+
+  Yüklenecek bir sistem uzantısının **paket tanımlayıcısını** ve **Takım tanımlayıcısını** **ekleyin** . İmzasız eski sistem uzantıları için boş bir takım tanımlayıcısı kullanın. Birden çok sistem uzantısı ekleyebilirsiniz. Takım tanımlayıcısının alfasayısal (harfler ve rakamlar) olması ve 10 karaktere sahip olması gerekir. Örneğin, `com.contoso.appname.macos` **paket kimliği**için ve `ABCDE12345` **Takım tanımlayıcısı**için girin.
+
+- **Izin verilen sistem uzantısı türleri**: takım kimliği ve bu takım kimliği için izin verilecek sistem uzantısı türlerini girin:
+  - **Takım tanımlayıcısı**: belirli uzantı türlerine izin vermek istediğiniz başka bir sistem UZANTıSıNıN takım kimliğini girin. Ya da **Izin verilen sistem uzantılarına**eklediğiniz BIR takım kimliği girin.
+  - **Izin verilen sistem uzantısı türleri**: her takım kimliği için izin verilecek sistem uzantısı türlerini seçin. Seçenekleriniz şunlardır:
+    - Tümünü seç
+    - Sürücü uzantıları
+    - Ağ uzantıları
+    - Uç nokta güvenlik uzantıları
+
+    Bu uzantı türleri hakkında daha fazla bilgi için bkz. [System Extensions](https://developer.apple.com/system-extensions/) (Apple 'ın Web sitesini açar).
+
+    **Izin verilen sistem uzantıları** listesinden bır takım kimliği ekleyebilir ve belirli bir uzantı türüne izin verebilirsiniz. Uzantı izin verilmeyen bir tür ise, uzantı çalışmayabilir.
+
+    Bir takım KIMLIĞI için tüm uzantı türlerine izin vermek üzere, takım KIMLIĞINI **Izin verilen sistem uzantıları** listesine ekleyin. Takım KIMLIĞINI **Izin verilen sistem uzantısı türleri** listesine eklemeyin. Diğer bir deyişle, bir takım KIMLIĞI izin verilen sistem **uzantıları** listesinde ise, izin verilen **sistem uzantısı türleri** listesinde DEĞILSE, bu takım kimliği için tüm uzantı türlerine izin verilir.
+
+> [!NOTE]
+> **Izin verilen sistem uzantıları** ve **izin verilen takım tanımlayıcıları** için aynı takım kimliğini eklemek hata ve profil başarısız olmasına neden olabilir. Aynı tam takım tanımlayıcısını her iki ayarı da eklemeyin. 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

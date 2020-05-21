@@ -1,12 +1,12 @@
 ---
-title: Windows 10 Team için Microsoft Intune cihaz kısıtlamaları
+title: Microsoft Intune-Azure 'da Windows 10 Team cihaz kısıtlamalarını Surface Hub | Microsoft Docs
 titleSuffix: ''
-description: Windows 10 Team çalıştıran cihazlar için sağlanan cihaz kısıtlamaları hakkında bilgi edinin.
+description: Windows 10 Team çalıştıran Surface Hub cihaz ayarlarını eklemek veya yapılandırmak için Intune 'U kullanın.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,40 +16,69 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31457667612617bb573ddfb145ed26f70de33159
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b57bc0b7c76a6b67a26c7b1fdacb7880173a055c
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79332270"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429684"
 ---
-# <a name="microsoft-intune-windows-10-team-device-restriction-settings"></a>Microsoft Intune Windows 10 Team cihaz kısıtlama ayarları
+# <a name="windows-10-team-settings-to-allow-or-restrict-features-on-surface-hub-devices-using-intune"></a>Intune kullanarak Surface Hub cihazlarda özellikleri izin vermek veya kısıtlamak için Windows 10 Team ayarları
 
-Bu makalede, Windows 10 Team çalıştıran cihazlar için yapılandırabileceğiniz Microsoft Intune cihaz kısıtlama ayarları gösterilir.
+Bu makalede, Surface Hub cihazları dahil olmak üzere Windows 10 Team çalıştıran cihazlar için yapılandırabileceğiniz cihaz kısıtlama ayarlarını Microsoft Intune gösterilmektedir.
+
+## <a name="before-you-begin"></a>Başlamadan önce
+
+[Cihaz profili oluşturun](device-restrictions-configure.md#create-the-profile).
 
 ## <a name="apps-and-experience"></a>Uygulamalar ve deneyim
 
-- **Birisi odadayken uyku modundan çıkar** - Algılayıcı, odada birisini algıladığında cihazın otomatik olarak uyanmasına izin verir.
-- **Hoş Geldiniz ekranında gösterilen toplantı bilgileri** - Hoş Geldiniz ekranının Toplantılar kutucuğunda gösterilecek bilgileri seçmek için bu seçeneği etkinleştirin. Şunları yapabilirsiniz:
-  - **Yalnızca düzenleyeni ve saati göster**
-  - **Düzenleyiciyi, saati ve konuyu göster (özel toplantılar için konu gizlidir)**
-- **Hoş Geldiniz ekranı arka plan görüntüsü URL’si** - Windows 10 Team cihazlarının **Hoş Geldiniz** ekranında, belirttiğiniz URL’den özel bir arka plan görüntülemek için bu ayarı etkinleştirin.<br>Görüntü PNG biçiminde olmalıdır ve URL **https://** ile başlamalıdır.
+Bu ayarlar [Surçok yönlü hub CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp)kullanır.
+
+- **Oda içinde birisi**: **blok** , algılayıcısı odada birini algıladığında ekranın otomatik olarak uyandırmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Hoş Geldiniz ekranında görüntülenen toplantı bilgileri**: hoş geldiniz ekranının toplantılar kutucuğunda gösterilen bilgileri seçin. Seçenekleriniz şunlardır:
+  - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez.
+  - **Yalnızca düzenleyici ve saat**
+  - **Düzenleyici, saat ve konu (özel toplantılar için konu gizlidir)**
+- **Hoş geldiniz ekranı arka plan resmi URL 'si**: Windows 10 Team cihazlarının **hoş geldiniz** ekranında özel bir arka plan olarak istediğiniz BIR. png görüntüsünün URL 'sini girin. Görüntünün PNG biçiminde olması ve URL ile başlaması gerekir `https://` .
+- **Otomatik başlatma Connect**: **Block** , bir projeksiyon başlatıldığında Connect uygulamasının otomatik olarak açılmasını önler. Engellenirse, kullanıcılar Connect uygulamasını hub ayarlarından el ile başlatabilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Oturum açma önerileri**: **blok** , oturum açma iletişim kutusunun zamanlanan toplantılardan davetlerle oto doldurmasını devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Toplantılarım ve dosyalar**: **Engelle** , Başlat menüsündeki **toplantılarımı ve dosyalar** özelliğini devre dışı bırakır. Bu özellik, Office 365 ' deki oturum açan kullanıcının toplantılarını ve dosyalarını gösterir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
 ## <a name="azure-operational-insights"></a>Azure operasyonel içgörüler
 
-- **Azure Operasyonel İçgörüler** - Microsoft Operations Manager’ın bir parçası olan Azure Operasyonel İçgörüler Windows 10 Team cihazlarından günlük dosyası verilerini toplar, depolar ve analiz eder.
-Azure Operasyonel İçgörüler'e bağlanmak için bir **Çalışma Alanı Kimliği** ve bir **Çalışma Alanı Anahtarı** belirtmeniz gerekir.
+- **Azure operasyonel**içgörüler **: Azure** operasyonel Içgörüler ile Windows 10 Team cihazlarından günlük verilerini toplar, depolar ve analiz edin. Azure operasyonel içgörüler, Microsoft Operations Manager Suite 'in bir parçasıdır. Azure operasyonel içgörüler 'e bağlanmak için **çalışma alanı kimliği** ve **çalışma alanı anahtarını** girin.
+
+  **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu verileri toplamayabilir.
 
 ## <a name="maintenance"></a>Bakım
 
-- **Güncelleştirmeler için bakım penceresi** - Cihazda güncelleştirme gerçekleştirilebildiği zaman pencereyi yapılandırır. Pencerenin **Başlangıç saati** ve **Saat cinsinden süresi**’ni (1-5 saat) yapılandırabilirsiniz.
+Bu ayarlar [Surçok yönlü hub CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp)kullanır.
+
+- **Güncelleştirmeler Için bakım penceresi**: **Etkinleştir** , güncelleştirmeler yüklenedurumlarda bir bakım penceresi oluşturur. Bakım penceresi **başlangıç saatini**ve **saat cinsinden süreyi**1-5 saatten girin.
+
+  **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
+## <a name="session"></a>Oturum
+
+Bu ayarlar [Surçok yönlü hub CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp)kullanır.
+
+- **Birim**: 0-100 adresinden yeni bir oturum için varsayılan birim değerini girin. Boş bırakılırsa, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi birimi 45 olarak ayarlayabilir.
+- **Ekran zaman aşımı**: hub ekranı kapanana kadar geçecek dakika sayısını girin.
+- **Oturum zaman aşımı**: oturum zaman aşımına uğrayana kadar geçecek dakika sayısını girin.
+- **Uyku zaman aşımı**: hub uyku moduna girene kadar geçecek dakika sayısını girin.
+- **Oturum sürdürme**: **engelleme** , kullanıcıların oturum zaman aşımına uğrarsa oturumu sürdürmesine engel olur. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
 ## <a name="wireless-projection"></a>Kablosuz yansıtma
 
-- **Kablosuz projeksiyon için PIN** - Cihazın kablosuz projeksiyon özelliklerini kullanabilmek için PIN girmenin gerekli olup olmadığını belirtir.
-- **Miracast kablosuz projeksiyon** - Windows 10 Team cihazlarının projeksiyon için Miracast özellikli cihazları kullanmasına izin vermek istiyorsanız bu seçeneği etkinleştirin.
-- **Miracast kablosuz yansıtma kanalı** - Bağlantı kurmak için kullanılan Miracast kanalını seçin.
+Bu ayarlar [Surçok yönlü hub CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp)kullanır.
+
+- **Kablosuz Projeksiyon Için PIN**: **gerekli** , kullanıcıların cihazda kablosuz PROJEKSIYON özelliklerini kullanmadan önce PIN girmesini zorlar. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Miracast Kablosuz Projeksiyon**: **blok** , Miracast özellikli cihazların projeye kullanılmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Miracast Kablosuz Projeksiyon kanalı**: bağlantıyı kurmak için Miracast kanalını seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Profili kaydetmek ve kullanıcılara ve cihazlara atamak için [cihaz kısıtlama ayarlarını yapılandırma](device-restrictions-configure.md) bölümündeki bilgileri kullanın.
+Daha fazla bilgi için bkz. [cihaz kısıtlama ayarlarını yapılandırma](device-restrictions-configure.md).
+
+[Profili atayın](device-profile-assign.md)ve [durumunu izleyin](device-profile-monitor.md).

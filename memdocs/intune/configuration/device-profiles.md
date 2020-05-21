@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 05/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: aeaa184717f96def1b84447d9ded207c93d8b423
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359307"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429833"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune'daki cihaz profillerini kullanarak cihazlarınıza özellik ve ayar uygulama
 
@@ -77,7 +77,7 @@ Bu özellik şunları destekler:
 
 ## <a name="delivery-optimization"></a>Teslim iyileştirme
 
-[Teslim iyileştirme](delivery-optimization-windows.md), yazılım güncelleştirmelerini teslim etmek için daha iyi bir deneyim sunar. Bu ayarlar **yazılım güncelleştirmeleri** > **Windows 10 güncelleştirme halkası** ayarlarını değiştiriyor.
+[Teslim iyileştirme](delivery-optimization-windows.md), yazılım güncelleştirmelerini teslim etmek için daha iyi bir deneyim sunar. Bu ayarlar **yazılım güncelleştirmeleri**  >  **Windows 10 güncelleştirme halkası** ayarlarını değiştiriyor.
 
 Bu ayarları kullanarak yazılım güncelleştirmelerinin kuruluşunuzdaki ayarlara nasıl indirileceğini denetleyebilirsiniz. Örneğin kullanıcıların kendi güncelleştirmelerini yapmalarına izin verebilir veya teslim iyileştirme bulut hizmetlerini bir cihaz profilinde kullanarak güncelleştirmeleri almalarını sağlayabilirsiniz.
 
@@ -177,9 +177,9 @@ Bu özellik şunları destekler:
 
 - Windows 10 Fall Creators Update ve üzeri
 
-## <a name="extensions"></a>Uzantıları
+## <a name="extensions"></a>Uzantılar
 
-[Çekirdek uzantıları](kernel-extensions-overview-macos.md) , yöneticilerin MacOS cihazlarında çekirdek düzeyinde özellik veya program eklemesine olanak tanır. Bu ayarları, belirli bir geliştirici veya iş ortağındaki tüm uzantılara güvenmek veya belirli çekirdek uzantılarına izin vermek üzere yapılandırın.
+[MacOS sistem uzantıları ve çekirdek uzantıları](kernel-extensions-overview-macos.md) , yöneticilerin işletim sisteminin yerel yeteneklerini genişleten özellikler veya programlar eklemesine olanak tanır. Bu ayarları, belirli bir geliştirici veya iş ortağındaki tüm uzantılara güvenmek veya belirli uzantılara izin vermek üzere yapılandırın.
 
 Bu özellik şunları destekler:
 

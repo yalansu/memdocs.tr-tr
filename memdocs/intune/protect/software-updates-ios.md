@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4de042fdc443a43e8a34a2eb433ecad34152887a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7e608ea7a5d37e8093cdac0345d2e873c9c2b334
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79328906"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709528"
 ---
 # <a name="add-iosipados-software-update-policies-in-intune"></a>Intune 'da iOS/ıpados yazılım güncelleştirme ilkeleri ekleme
 
@@ -34,10 +34,14 @@ Bu özellik şu platformlarda geçerlidir:
 
 Varsayılan olarak, cihazlar, her 8 saatte bir Intune ile oturum iade ediyor. Güncelleştirme ilkesi aracılığıyla bir güncelleştirme varsa, cihaz güncelleştirmeyi indirir. Daha sonra cihaz, güncelleştirmeleri zamanlama yapılandırmanızın sonraki iadeye yükleme sırasında yüklenir. Güncelleştirme işlemi genellikle herhangi bir kullanıcı etkileşimini kapsamaz, ancak cihazın bir geçiş kodu varsa, yazılım güncelleştirmesini başlatmak için kullanıcının parolayı girmesi gerekir. Profiller, kullanıcıların işletim sistemini el ile güncelleştirmesine engel olmaz. Yazılım güncelleştirmelerinin görünürlüğünü kısıtlamak için, kullanıcıların işletim sistemini bir cihaz yapılandırma ilkesiyle el ile güncelleştirmelerini engellemiş olabilir.
 
+> [!NOTE]
+> [Otonom tek uygulama modu (ASAM)](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-ios#autonomous-single-app-mode-asam)kullanılıyorsa, işletim sistemi güncelleştirmelerinin etkisi, sonuçta ortaya çıkan davranış istenmeyen bir şekilde düşünülmelidir.
+ASAM 'da çalıştırdığınız uygulamada işletim sistemi güncelleştirmelerinin etkisini değerlendirmek için test etmeyi düşünün.
+
 ## <a name="configure-the-policy"></a>İlkeyi yapılandırma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **İOS/ıpados** > **Create profile**için **cihaz** > güncelleştirme ilkeleri ' ni seçin.
+2. **Devices**  >  **İOS/ıpados**  >  **Create profile**için cihaz güncelleştirme ilkeleri ' ni seçin.
 3. **Temel bilgiler** sekmesinde, bu ilke için bir ad belirtin, bir açıklama (isteğe bağlı) belirtin ve ardından **İleri**' yi seçin.
 
    ![Temel bilgiler sekmesi](./media/software-updates-ios/basics-tab.png)
@@ -70,7 +74,9 @@ Varsayılan olarak, cihazlar, her 8 saatte bir Intune ile oturum iade ediyor. G�
        Başlangıç veya bitiş için zaman yapılandırmak istemiyorsanız, yapılandırma hiçbir zaman herhangi bir kısıtlama ve güncelleştirme yüklemeye neden olur.  
 
        > [!NOTE]
-       > Denetimli iOS/ıpados cihazlarınızda belirli bir süre için yazılım güncelleştirmelerinin görünürlüğünü geciktirmek için bu ayarları [cihaz kısıtlamalarında](../configuration/device-restrictions-ios.md#general)yapılandırın. Yazılım güncelleştirme ilkeleri tüm cihaz kısıtlamalarını geçersiz kılar. Yazılım güncelleştirmelerinin görünürlüğünü geciktirmek için hem yazılım güncelleştirme ilkesi hem de kısıtlama ayarladığınızda, cihaz ilke başına bir yazılım güncelleştirmesi zorlar. Kısıtlama, kullanıcıların cihazın kendilerini güncelleştirme seçeneğini görmemesi ve güncelleştirme iOS güncelleştirme ilkenize göre belirlenen şekilde itilmesi için geçerlidir.
+       > Cihaz [kısıtlamalarındaki](../configuration/device-restrictions-ios.md#general) ayarları, denetimli IOS/ıpados cihazlarınızda bir süre boyunca cihaz kullanıcılarından gizlemek için yapılandırabilirsiniz. Bir kısıtlama süresi, kullanıcıların yüklemesi için görünür hale gelmeden önce bir güncelleştirmeyi test etmeniz için zaman alabilir. Cihaz kısıtlama süresi dolduktan sonra, güncelleştirme kullanıcılara görünür hale gelir. Kullanıcılar daha sonra yüklemeyi seçebilir veya yazılım güncelleştirme ilkeleriniz daha sonra kısa süre içinde otomatik olarak yüklenebilirler.
+       >
+       > Bir güncelleştirmeyi gizlemek için bir cihaz kısıtlaması kullandığınızda, bu kısıtlama süresi bitmeden önce güncelleştirme yüklemesini zamanlamadıklarından emin olmak için yazılım güncelleştirme ilkelerinizi gözden geçirin. Yazılım güncelleştirme ilkeleri, güncelleştirme gizlenmeden veya cihaz kullanıcısına görünmeksizin kendi zamanlamaya göre güncelleştirmeleri yükler.
 
    *Güncelleştirme ilkesi ayarlarını*yapılandırdıktan sonra **İleri**' yi seçin.
 
@@ -95,13 +101,13 @@ Intune destek ekibinin Kılavuzu için bkz. [denetimli cihazlar Için Intune 'da
 
 Varolan bir ilkeyi, sınırlı zamanları değiştirme dahil olmak üzere düzenleyebilirsiniz:
 
-1. İOS için **cihaz** > **güncelleştirme ilkelerini**seçin. Düzenlemek istediğiniz ilkeyi seçin.
+1. **Devices**  >  **İOS için cihaz güncelleştirme ilkelerini**seçin. Düzenlemek istediğiniz ilkeyi seçin.
 
 2. İlke **özelliklerini**görüntülerken, değiştirmek istediğiniz ilke sayfası için **Düzenle** ' yi seçin.
 
    ![Bir ilkeyi düzenleme](./media/software-updates-ios/edit-policy.png)
 
-3. Bir değişikliği gönderdikten sonra, **gözden geçir +** > **Kaydet** ' i seçerek düzenlemelerinizi kaydedin ve ilkeler *özelliklerine*geri dönün.
+3. Bir değişikliği gönderdikten sonra, **gözden geçir +**  >  **Kaydet** ' i seçerek düzenlemelerinizi kaydedin ve ilkeler *özelliklerine*geri dönün.
 
 > [!NOTE]
 > **Başlangıç saati** ve **bitiş saatinin** her ikisi de 12. olarak ayarlandıysa, Intune güncelleştirmelerin ne zaman yükleneceğine ilişkin kısıtlamaları denetlemez. Bu, **güncelleştirme yüklemelerinin yoksayılmasını** ve güncelleştirmelerin herhangi bir zamanda yüklenebilmesini sağlamak için, seçtiğiniz her yapılandırmalardan daha fazla yol gösterir.
@@ -109,7 +115,7 @@ Varolan bir ilkeyi, sınırlı zamanları değiştirme dahil olmak üzere düzen
 ## <a name="monitor-device-installation-failures"></a>Cihaz yükleme hatalarını izleme
 
 <!-- 1352223 -->
-**Software updates** > **İOS cihazları için yazılım güncelleştirmeleri yükleme hatalarıyla** , bir güncelleştirme ilkesi tarafından hedeflenen ve güncelleştirme yapılmaya çalışılan ve güncelleştirilemeyen, denetimli iOS/ıpados cihazlarının bir listesi gösterilir. Her cihazda, cihazın otomatik olarak güncelleştirilememesinin nedenini açıklayan bir durum görebilirsiniz. İyi durumda, güncel cihazlar bu listede gösterilmez. “Güncel” cihazlar, cihazın desteklediği en yeni güncelleştirmeyi içerir.
+**Yazılım güncelleştirmeleri**  >  **İOS cihazları Için yükleme hatalarıyla** , bir güncelleştirme ilkesi tarafından hedeflenen denetlenen IOS/ıpados cihazlarının bir listesi görüntülenir, güncelleştirme denenir ve güncelleştirilemez. Her cihazda, cihazın otomatik olarak güncelleştirilememesinin nedenini açıklayan bir durum görebilirsiniz. İyi durumda, güncel cihazlar bu listede gösterilmez. “Güncel” cihazlar, cihazın desteklediği en yeni güncelleştirmeyi içerir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

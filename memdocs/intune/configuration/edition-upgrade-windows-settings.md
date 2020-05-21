@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ab94c3cc8bb9009d49a6b301d9a67fa6ffc5f1a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a91a84ece833bf893395e494a0e99fa675f14c2a
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333086"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429651"
 ---
 # <a name="windows-10-and-newer-device-settings-to-upgrade-editions-or-enable-s-mode-in-intune"></a>Windows 10 (ve daha yeni) cihazları yükseltmek veya Intune 'da S modunu etkinleştirmek için cihaz ayarları
 
@@ -44,12 +44,14 @@ Bu özellik hakkında daha fazla bilgi için bkz. [Windows 10 sürümlerini yük
 
 ## <a name="mode-switch"></a>Mod anahtarı
 
-- **Yapılandırma yok**: s modu bir cihaz, s modunda kalır. Son kullanıcı cihazı S modundan çıkarabilir.
-- **S modunda tut**: Son kullanıcının cihazı S modundan çıkarmasını devre dışı bırakır.
-- **Çıkış**: Cihazı S modundan çıkarır.
+- **S modundan geçiş**: aygıtı s modundan geçirir. Seçenekleriniz şunlardır:
+
+  - **Yapılandırma yok**: Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, S modu cihaz modunda kalabilir. Kullanıcı, cihazı S modundan dışarı değiştirebilir.
+  - **S modunda tut**: kullanıcıların cihazı s modundan çıkmadan değiştirmesini engeller.
+  - **Anahtar**: kullanıcıların cihazı S modundan dışarı değiştirmesine izin verir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Profil oluşturuldu, ancak henüz bir şey yapmamış olabilir. [Profili atadığınızdan](device-profile-assign.md)emin olun ve [durumunu izleyin](device-profile-monitor.md).
+[Profili atayın](device-profile-assign.md)ve [durumunu izleyin](device-profile-monitor.md).
 
 Ayrıca, [Windows holographic for Business](holographic-upgrade.md) cihazları için sürüm yükseltme profilleri oluşturabilirsiniz.

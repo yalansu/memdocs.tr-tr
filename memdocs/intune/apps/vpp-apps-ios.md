@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef23854fd3fee0883f6f91415a40ebbcc1b3c240
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: add599a715d32eac84b2784de976de4caf17faa9
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80620570"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428800"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Microsoft Intune ile Apple Volume Purchase Program aracılığıyla satın alınan iOS ve macOS uygulamalarını yönetme
 
@@ -50,7 +50,7 @@ Satın alınan uygulamalar, Apple 'ın iOS/ıpados ve macOS cihazları için sun
 |-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Uygulama Mağazası oturum açma | Gerekli değildir. | Her son kullanıcının, App Store 'da oturum açmanız istendiğinde benzersiz bir Apple KIMLIĞI kullanması gerekir. |
 | Cihaz yapılandırması uygulama deposuna erişimi engelliyor | Uygulamalar, Şirket Portalı kullanılarak yüklenip güncelleştirilemeyebilir. | Apple VPP 'ye katılma daveti App Store 'a erişim gerektirir. App Store 'u devre dışı bırakmak için bir ilke ayarladıysanız, VPP uygulamaları için Kullanıcı lisanslama çalışmaz. |
-| Otomatik uygulama güncelleştirmesi | Apple VPP belirteci ayarlarında, uygulamanın atama türünün gerekli olduğu şekilde Intune Yöneticisi tarafından yapılandırıldığı gibi.<p>Atama türü kayıtlı cihazlar için kullanılabiliyorsa, kullanılabilir uygulama güncelleştirmeleri Şirket Portalı yüklenebilir. | Kişisel uygulama mağazası ayarları 'nda Son Kullanıcı tarafından yapılandırılır. Bu, Intune Yöneticisi tarafından yönetilemez. |
+| Otomatik uygulama güncelleştirmesi | Apple VPP belirteci ayarlarında Intune Yöneticisi tarafından yapılandırıldığı gibi.<p>Atama türü kayıtlı cihazlar için kullanılabiliyorsa, uygulama ayrıntıları sayfasında **Güncelleştir** eylemi seçilerek Şirket portalı kullanılabilir uygulama güncelleştirmeleri de yüklenebilir. | Kişisel uygulama mağazası ayarları 'nda Son Kullanıcı tarafından yapılandırılır. Bu, Intune Yöneticisi tarafından yönetilemez. |
 | Kullanıcı kaydı | Desteklenmiyor. | Yönetilen Apple kimlikleri kullanılarak desteklenir. |
 | Kitaplar | Desteklenmiyor. | Destekleniyor. |
 | Kullanılan lisanslar | cihaz başına 1 lisans. Lisans cihazla ilişkilendirilir. | aynı kişisel Apple KIMLIĞINI kullanarak en fazla 5 cihaz için 1 lisans. Lisans kullanıcıyla ilişkilendirilir.<p>Intune 'da kişisel bir Apple KIMLIĞIYLE ve yönetilen bir Apple KIMLIĞIYLE ilişkili bir Son Kullanıcı 2 uygulama lisansı kullanır. |
@@ -64,7 +64,7 @@ Apple Business Manager kullanarak ortak ve özel uygulamalar satın alabilir ve 
 - **Mağaza uygulamaları:** Apple Business Manager 'ı kullanarak, Içerik yöneticileri App Store 'da bulunan ücretsiz ve ücretli uygulamaları satın alabilir.
 - **Özel uygulamalar:** Apple Business Manager 'ı kullanarak, Içerik yöneticileri kuruluşunuza özel olarak sunulan özel uygulamalar da satın alabilir. Bu uygulamalar, doğrudan çalıştığınız geliştiriciler tarafından kuruluşunuzun özel ihtiyaçlarına göre tasarlanmıştır. [Özel uygulamaları dağıtma](https://developer.apple.com/business/custom-apps/)hakkında daha fazla bilgi edinin.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 - Kuruluşunuz için bir [Apple Business Manager](https://business.apple.com/) veya [Apple Okul Yöneticisi](https://school.apple.com/) hesabı. 
 - Bir veya daha fazla konum belirtece atanan uygulama lisansları satın alındı. 
 - Konum belirteçleri indirildi. 
@@ -87,13 +87,13 @@ Mevcut satın alınan VPP içeriğini ve belirteçleri Apple Business Manager ve
 1. VPP Satınalmacılar ' ı kuruluşunuza katılarak ve her kullanıcıyı benzersiz bir konum seçmek üzere yönlendirecek şekilde davet edin. 
 2. Devam etmeden önce kuruluşunuzdaki tüm VPP satınalmacıların 1. adımı tamamladığınızdan emin olun.
 3. Satın alınan tüm uygulamaların ve lisansların Apple Business Manager veya Apple Okul Yöneticisi 'ndeki uygulamalara ve kitaplara geçirildiğini doğrulayın.
-4. **Apple Business (veya okul) Yöneticisi** > **ayarları** > **uygulamalarına** > gidip**sunucu belirteçlerimi**Kitaplar ' a giderek yeni konum belirtecini indirin.
-5. **Kiracı yönetim** > **bağlayıcılarına giderek,** > **Apple VPP belirteçlerini** ve belirteci eşitleyerek Microsoft Endpoint Manager Yönetim Merkezi 'nde konum belirtecini güncelleştirin.
+4. **Apple Business (veya okul) Yöneticisi**  >  **ayarları**  >  **uygulamalarına**gidip  >  **sunucu belirteçlerimi**Kitaplar ' a giderek yeni konum belirtecini indirin.
+5. **Kiracı yönetim**  >  **bağlayıcılarına giderek,**  >  **Apple VPP belirteçlerini** ve belirteci eşitleyerek Microsoft Endpoint Manager Yönetim Merkezi 'nde konum belirtecini güncelleştirin.
 
 ## <a name="upload-an-apple-vpp-or-location-token"></a>Apple VPP veya Location belirtecini karşıya yükleme
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Kiracı Yönetimi** > **bağlayıcıları ' nı seçin ve** > **Apple VPP belirteçlerini**belirteçler yapın.
+2. **Kiracı Yönetimi**  >  **bağlayıcıları ' nı seçin ve**  >  **Apple VPP belirteçlerini**belirteçler yapın.
 3. VPP belirteçleri listesi bölmesinde **Oluştur**’u seçin.
 4. **VPP belirteci oluştur** bölmesinde aşağıdaki bilgileri girin:
     - **VPP belirteç dosyası** -henüz yapmadıysanız, Apple Business Manager veya Apple Okul Yöneticisi için kaydolun. Kaydolduktan sonra hesabınıza yönelik Apple VPP belirtecini indirin ve burada seçin.
@@ -108,7 +108,7 @@ Mevcut satın alınan VPP içeriğini ve belirteçleri Apple Business Manager ve
     - **Otomatik uygulama güncelleştirmeleri** - Otomatik güncelleştirmeleri etkinleştirmek için **Açık** veya **Kapalı** olarak ayarlayın. Bu etkinleştirildiğinde Intune, uygulama mağazasındaki VPP uygulama güncelleştirmelerini algılar ve cihaz iade edildiğinde bunları cihaza otomatik olarak gönderir.
 
         > [!NOTE]
-        > Apple VPP uygulamaları için otomatik uygulama güncelleştirmeleri yalnızca **Gerekli** yükleme amacı ile dağıtılmış olan uygulamaları otomatik olarak güncelleştirir. **Kullanılabilir** yüklemede dağıtılan uygulamalar için otomatik GÜNCELLEŞTIRME, BT Yöneticisi için, uygulamanın yeni bir sürümünün kullanılabildiğini bildiren bir durum iletisi oluşturur. Bu durum iletisi, uygulama seçilerek, cihaz yüklemesi durumu seçilerek ve durum ayrıntıları denetlenerek görüntülenebilir.  
+        > Apple VPP uygulamalarına yönelik otomatik uygulama güncelleştirmeleri, hem **gerekli** hem de **kullanılabilir** yüklemeleri otomatik olarak güncelleştirir. **Kullanılabilir** yüklemede dağıtılan uygulamalar için otomatik GÜNCELLEŞTIRME, BT Yöneticisi için, uygulamanın yeni bir sürümünün kullanılabildiğini bildiren bir durum iletisi oluşturur. Bu durum iletisi, uygulama seçilerek, cihaz yüklemesi durumu seçilerek ve durum ayrıntıları denetlenerek görüntülenebilir.  
 
     - **Microsoft 'a hem Kullanıcı hem de cihaz bilgilerini Apple 'a göndermek için izin veriyorum.** -Devam etmek için **kabul** ediyorum ' u seçmeniz gerekir. Microsoft 'un Apple 'a gönderdiği verileri gözden geçirmek için bkz. [Intune 'un Apple 'a gönderdiği veriler](../protect/data-intune-sends-to-apple.md).
 5. İşiniz bittiğinde **Oluştur**'u seçin. Belirteç, belirteçler listesi bölmesinde görüntülenir.
@@ -119,9 +119,9 @@ Seçilen bir belirteç için **Eşitle** ' yi seçerek, Intune 'da satın alına
 
 ## <a name="assign-a-volume-purchased-app"></a>Toplu satın alınan bir uygulamayı atama
 
-1. **Uygulamalar** > **tüm uygulamalar**' ı seçin.
+1. **Uygulamalar**  >  **tüm uygulamalar**' ı seçin.
 2. Uygulama listesi bölmesinde atamak istediğiniz uygulamayı ve daha sonra **Atamalar**’ı seçin.
-3. **Uygulama adı** - **atamaları** bölmesinde, **Grup Ekle** ' yi seçin, **Grup Ekle** bölmesinde bir **atama türü** seçin ve uygulamayı atamak istediğiniz Azure AD Kullanıcı veya cihaz gruplarını seçin.
+3. **Uygulama adı**  -  **atamaları** bölmesinde, **Grup Ekle** ' yi seçin, **Grup Ekle** bölmesinde bir **atama türü** seçin ve uygulamayı atamak istediğiniz Azure AD Kullanıcı veya cihaz gruplarını seçin.
 5. Seçtiğiniz her grup için aşağıdaki ayarları yapılandırın:
     - **Tür** - Uygulamanın **Kullanılabilir** mi (son kullanıcılar uygulamayı Şirket Portalı’ndan indirebilir) yoksa **Gerekli** mi (son kullanıcıların cihazlarında uygulama otomatik olarak yüklenir) olacağını seçin.
     - **Lisans türü** - **Kullanıcı lisanslama** veya **Cihaz lisanslama**’yı seçin.
@@ -190,8 +190,8 @@ Apple Business Manager veya Apple Okul Yöneticisi 'nden yeni bir belirteç indi
 
 Apple VPP belirteçlerine ve VPP uygulamalarına erişim, Intune 'daki özel yönetici rollerine atanan izinler kullanılarak bağımsız olarak denetlenebilir.
 
-* Intune özel rolünün, **uygulamalar** > **Apple VPP belirteçleri**altında Apple VPP belirteçlerini yönetmesine izin vermek için, **yönetilen uygulamalar**için izin atayın.
-* Intune özel rolünün, **uygulamalar** > **tüm uygulamalar**altındaki iOS/ıpados VPP belirteçleri kullanılarak satın alınan uygulamaları yönetmesine izin vermek için, **mobil uygulamalar**için izin atayın. 
+* Intune özel rolünün, **uygulamalar**Apple VPP belirteçleri altında Apple VPP belirteçlerini yönetmesine izin vermek için  >  **Apple VPP tokens**, **yönetilen uygulamalar**için izin atayın.
+* Intune özel rolünün, **uygulamalar**tüm uygulamalar altındaki iOS/ıpados VPP belirteçleri kullanılarak satın alınan uygulamaları yönetmesine izin vermek için  >  **All apps**, **mobil uygulamalar**için izin atayın. 
 
 ## <a name="additional-information"></a>Ek bilgiler
 

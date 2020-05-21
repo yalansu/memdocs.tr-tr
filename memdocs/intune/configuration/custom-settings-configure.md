@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 05/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feb211b1de15aa0400e9ff71b428e2db02ef4b03
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b9da0e5af08812af5a1b2da3cb159e10ef5bdb29
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551359"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556141"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Intune'da özel ayarlarla profil oluşturma
 
@@ -32,13 +32,10 @@ Yapılandırma profilleri hakkında daha fazla bilgi için bkz. [Microsoft Intun
 
 Bu makalede, Android Cihaz Yöneticisi, Android Enterprise, iOS/ıpados, macOS ve Windows için nasıl özel bir profil oluşturacağınız gösterilmektedir. Farklı platformlar için kullanılabilir tüm ayarları da görebilirsiniz.
 
-> [!NOTE]
-> Intune kullanıcı arabirimi (UI) tam ekran deneyimine sahiptir ve birkaç hafta sürebilir. Kiracınız bu güncelleştirmeyi alıncaya kadar, bu makalede açıklanan ayarları oluştururken veya düzenlerken biraz farklı bir iş akışına sahip olursunuz.
-
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:  
@@ -46,7 +43,7 @@ Bu makalede, Android Cihaz Yöneticisi, Android Enterprise, iOS/ıpados, macOS v
         - **Android cihaz yöneticisi**
         - **Android Kurumsal**
         - **iOS/iPadOS**
-        - **Mac OS**
+        - **macOS**
         - **Windows 10 ve üzeri**
         - **Windows Phone 8.1**
 
@@ -65,13 +62,13 @@ Bu makalede, Android Cihaz Yöneticisi, Android Enterprise, iOS/ıpados, macOS v
     - [Android cihaz yöneticisi](custom-settings-android.md)
     - [Android Kurumsal](custom-settings-android-for-work.md)
     - [iOS/iPadOS](custom-settings-ios.md)
-    - [Mac OS](custom-settings-macos.md)
+    - [macOS](custom-settings-macos.md)
     - [Windows 10](custom-settings-windows-10.md)
     - [Windows 10 Holographic for Business](custom-settings-windows-holographic.md)
     - [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
 
 8. **İleri**’yi seçin.
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
     **İleri**’yi seçin.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/09/2020
+ms.date: 05/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e584019063c6af7f04f5666ba2c38d8199681c5
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: e4c8ee2e25d14d6b39cea91255ed955eeb27174d
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771423"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690696"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune Şirket Portalı uygulamaları, Şirket Portalı Web sitesini ve Intune uygulamasını özelleştirme
 
@@ -31,7 +31,7 @@ Android üzerinde Şirket Portalı uygulamalar, Şirket Portalı Web sitesi ve I
 
 ## <a name="customizing-the-user-experience"></a>Kullanıcı deneyimini özelleştirme
 
-Son Kullanıcı deneyimini özelleştirerek, son kullanıcılarınız için tanıdık ve yararlı bir deneyim sağlamaya yardımcı olursunuz. Bunu yapmak için, [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' ne gidin ve **Kiracı Yönetimi** > **özelleştirmesi**' ni seçin; burada varsayılan ilkeyi düzenleyebilir veya en fazla 10 grup hedefli ilke oluşturabilirsiniz. Bu ayarlar, Android 'de Şirket Portalı uygulamalar, Şirket Portalı Web sitesi ve Intune uygulaması için de geçerlidir.
+Son Kullanıcı deneyimini özelleştirerek, son kullanıcılarınız için tanıdık ve yararlı bir deneyim sağlamaya yardımcı olursunuz. Bunu yapmak için, [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' ne gidin ve **Kiracı Yönetimi**  >  **özelleştirmesi**' ni seçin; burada varsayılan ilkeyi düzenleyebilir veya en fazla 10 grup hedefli ilke oluşturabilirsiniz. Bu ayarlar, Android 'de Şirket Portalı uygulamalar, Şirket Portalı Web sitesi ve Intune uygulaması için de geçerlidir.
 
 ## <a name="branding"></a>Markalama
 
@@ -42,7 +42,7 @@ Aşağıdaki tabloda son kullanıcı deneyimi için marka özelleştirme ayrınt
 | **Kuruluş adı** | Bu ad, son kullanıcı deneyiminde mesajlaşma boyunca görüntülenir. Üst **bilgide göster** ayarı kullanılarak, üstbilgilere görüntülenecek şekilde ayarlanabilir. Maksimum Uzunluk 40 karakterdir. |
 | **Renk** | Beş standart renkten seçmek için **Standart** ' ı seçin. Onaltılık kod değerine göre belirli bir rengi seçmek için **özel** ' i seçin. |
 | **Tema rengi** | Son Kullanıcı deneyimine göre göstermek için tema rengini ayarlayın. Metin rengini otomatik olarak siyah veya beyaz olarak ayarlayacağız, bu sayede seçtiğiniz tema renginizdeki en üstünde görünür. |
-| **Üst bilgide göster** | Son Kullanıcı deneyimlerinde bulunan üstbilginin **Şirket logosu ve adı**, **yalnızca şirket logosu**veya **yalnızca şirket adı**' nı görüntüleyip görüntülememeyeceğini seçin. Aşağıdaki önizleme kutuları, adı değil yalnızca logoları gösterir.  |
+| **Üst bilgide göster** | Son Kullanıcı deneyimlerinde bulunan üstbilginin **kuruluş logosu ve adı**, **yalnızca kuruluş logosu**veya **yalnızca kuruluş adını**görüntülemesi gerekip gerekmediğini seçin. Aşağıdaki önizleme kutuları, adı değil yalnızca logoları gösterir.  |
 | **Tema rengi arka planı için logoyu karşıya yükle** | Seçtiğiniz Tema renginiz üzerinde göstermek istediğiniz logoyu karşıya yükleyin. En iyi görünüm için saydam bir arka plana sahip bir logo yükleyin. Bunun, ayarın altındaki Önizleme kutusunda nasıl görüneceğini görebilirsiniz.<p>Maksimum görüntü boyutu: 400 x 400 piksel<br>En büyük dosya boyutu: 750KB<br>Dosya türü: PNG, JPG veya JPEG |
 | **Beyaz veya hafif arka plan için logoyu karşıya yükle** | Beyaz veya hafif renkli arka planların üzerine göstermek istediğiniz logoyu karşıya yükleyin. En iyi görünüm için saydam bir arka plana sahip bir logo yükleyin. Bunun, ayarın altındaki Önizleme kutusunda beyaz bir arka plana nasıl görüneceğini görebilirsiniz.<p>Maksimum görüntü boyutu: 400 x 400 piksel<br>En büyük dosya boyutu: 750 KB<br>Dosya türü: PNG, JPG veya JPEG |
 | **Marka görüntüsünü karşıya yükle** | Kuruluşunuzun markasını yansıtan bir görüntü yükleyin.<p><ul><li>Önerilen Görüntü genişliği: 1125 piksel 'den büyük (en az 650 piksel olması gerekir)</li><li>En büyük görüntü boyutu: 1,3 MB</li><li>Dosya türü: PNG, JPG veya JPEG</li><li>Şu konumlarda görüntülenir:</li><ul><li>iOS/ıpados Şirket Portalı: kullanıcının profil sayfasında arka plan resmi.</li><li>Şirket Portalı Web sitesi: kullanıcının profil sayfasında arka plan resmi.</li><li>Android Intune uygulaması: çekmecede, kullanıcının profil sayfasında bir arka plan görüntüsü olarak.</li></ul></ul> |
@@ -81,21 +81,22 @@ Aşağıda, Android için Intune uygulamasındaki marka görüntüsünün bir ö
 | Telefon numarası | 20 | Bu sayı, kullanıcıların destek için çağrı yapmasına olanak sağlar. |
 | E-posta adresi | 40 | Bu e-posta adresi, kullanıcıların destek için e-posta gönderebilecekleri yerdir. `alias@domainname.com` biçiminde geçerli bir e-posta adresi girmeniz gerekir. |
 | Web sitesinin adı | 40 | Bu, destek web sitesinin URL 'SI için bazı konumlarda görüntülenen kolay addır. Bir destek web sitesi URL 'SI belirtirseniz ve kolay bir ad yoksa, URL 'nin kendisi Son Kullanıcı deneyimlerinde görüntülenir.  |
-| Web sitesi URL'si | 150 | Kullanıcıların kullanması gereken destek web sitesi. URL biçiminde `https://www.contoso.com`olmalıdır.  |
+| Web sitesi URL'si | 150 | Kullanıcıların kullanması gereken destek web sitesi. URL biçiminde olmalıdır `https://www.contoso.com` .  |
 | Ek bilgiler | 120 | Kullanıcılara daha fazla destekle ilgili tüm iletileri ekleyin. |
 
 ## <a name="configuration"></a>Yapılandırma
 
-Aşağıdaki tabloda ek yapılandırma ayrıntıları verilmiştir:
+Şirket Portalı deneyimini, özellikle kayıt, gizlilik, bildirimler, uygulama kaynakları ve self servis eylemleri için yapılandırabilirsiniz.
+
+### <a name="enrollment"></a>Kayıt
+
+Aşağıdaki tabloda kayda özgü yapılandırma ayrıntıları verilmiştir:
 
 | Alan adı | Maksimum uzunluk | Daha fazla bilgi |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Gizlilik bildirimi URL'si | 79 | Kullanıcılar gizlilik bağlantılarına tıkladığı zaman görüntülenecek şekilde kuruluşunuzun gizlilik bildirimini ayarlayın. `https://www.contoso.com` biçiminde geçerli bir URL girmeniz gerekir. |
-| İOS/ıpados için Şirket Portalı gizlilik iletisi | 520 | Kuruluşunuzun yönetilen iOS/ıpados cihazlarında görebileceği veya göremediği öğeleri listelemek için varsayılanı tutun veya özel bir ileti ayarlayın. Marku kullanarak madde işaretleri, kalın, italik ve bağlantılar ekleyebilirsiniz. |
-| Cihaz kaydı | Yok | Kullanıcıların mobil cihaz yönetimine kaydolmasını ve nasıl sorulup sorulmayacağını belirtin. Ayrıntılar aşağıda verilmiştir. |
-| Cihaz sahipliği bildirimi | Yok | Hem Android hem de iOS Şirket Portalı kullanıcılarınıza cihaz sahiplik türü kişisel ' e değiştirildiğinde, anında iletme bildirimi gönderin. Varsayılan olarak, bu anında iletme bildirimi off olarak ayarlanır. Cihaz sahipliği kurumsal sahiplik olarak ayarlandığında, Intune cihaza daha fazla erişim sahibi olur. Bu, tam uygulama envanteri, Filekasası anahtar döndürme, telefon numarası alma ve birkaç uzak eylem seçme işlemlerini içerir. Daha fazla bilgi için bkz. [cihaz sahipliğini değiştirme](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
+| Cihaz kaydı | Yok | Kullanıcıların mobil cihaz yönetimine kaydolmasını ve nasıl sorulup sorulmayacağını belirtin. Daha fazla bilgi için bkz. [cihaz kayıt ayarı seçenekleri](../apps/company-portal-app.md#device-enrollment-setting-options). |
 
-### <a name="device-enrollment-setting-options"></a>Cihaz kayıt ayarı seçenekleri
+#### <a name="device-enrollment-setting-options"></a>Cihaz kayıt ayarı seçenekleri
 
 > [!NOTE]
 > Cihaz kayıt ayarı için destek, son kullanıcıların bu Şirket Portalı sürümlerine sahip olmasını gerektirir:
@@ -110,11 +111,51 @@ Aşağıdaki tabloda ek yapılandırma ayrıntıları verilmiştir:
 
 <sup>(1)</sup> **bilinen sorun:** uygulamaları yüklemek için kayıt gerektirecek şekilde ayarlarsanız ve ayrıca cihaz kaydını "kullanılamaz" olarak ayarlarsanız, Android 'deki Şirket portalı uygulaması, kullanıcıların kaydolmasına kılavuzluk eder. Bu, kısa süre içinde kaldırılacak.
 
-> [!NOTE]
-> Azure Kamu kullanıyorsanız, bir sorunla ilgili yardım alma sürecini başlattığında bunu nasıl paylaşacağına karar vermesi için son kullanıcıya uygulama günlükleri sunulur. Ancak, Azure Kamu 'yu kullanmıyorsanız, Kullanıcı bir sorunla ilgili yardım almak için işlemi başlattığında Şirket Portalı uygulama günlüklerini doğrudan Microsoft 'a gönderir. Uygulama günlüklerini Microsoft'a göndermek sorunları gidermeyi ve çözmeyi kolaylaştıracaktır.
+### <a name="privacy"></a>Gizlilik
+
+Aşağıdaki tabloda gizlilik 'e özgü yapılandırma ayrıntıları verilmiştir:
+
+| Alan adı | Maksimum uzunluk | Daha fazla bilgi |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Gizlilik bildirimi URL'si | 79 | Kullanıcılar gizlilik bağlantılarına tıkladığı zaman görüntülenecek şekilde kuruluşunuzun gizlilik bildirimini ayarlayın. `https://www.contoso.com` biçiminde geçerli bir URL girmeniz gerekir. |
+| İOS/ıpados için Şirket Portalı gizlilik iletisi | 520 | Kuruluşunuzun yönetilen iOS/ıpados cihazlarında göremediği öğeleri listelemek için **Varsayılanı** değiştirmeyin veya **özel** bir ileti ayarlayın. Marku kullanarak madde işaretleri, kalın, italik ve bağlantılar ekleyebilirsiniz. Kullanıcılar ayrıca kuruluşunuzun görebileceği ve yapabileceğinize ilişkin bir liste görür, ancak bu liste Intune tarafından otomatik olarak oluşturulur ve özelleştirilemez. |
+
+### <a name="device-ownership-notification"></a>Cihaz sahipliği bildirimi
+
+Aşağıdaki tabloda bildirime özgü yapılandırma ayrıntıları verilmiştir:
+
+| Alan adı | Maksimum uzunluk | Daha fazla bilgi |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Cihaz sahiplik türü kişisel 'den şirkete (yalnızca Android ve iOS/ıpados) değiştirildiğinde kullanıcılara anında iletme bildirimi gönderin | Yok | Hem Android hem de iOS Şirket Portalı kullanıcılarınıza cihaz sahiplik türü kişisel ' e değiştirildiğinde, anında iletme bildirimi gönderin. Varsayılan olarak, bu anında iletme bildirimi off olarak ayarlanır. Cihaz sahipliği kurumsal sahiplik olarak ayarlandığında, Intune cihaza daha fazla erişim sahibi olur. Bu, tam uygulama envanteri, Filekasası anahtar döndürme, telefon numarası alma ve birkaç uzak eylem seçme işlemlerini içerir. Daha fazla bilgi için bkz. [cihaz sahipliğini değiştirme](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
+
+### <a name="app-sources"></a>Uygulama kaynakları
+
+Şirket Portalı, hangi ek uygulama kaynaklarının gösterildiğini seçebilirsiniz. Aşağıdaki tabloda, uygulama kaynağına özgü yapılandırma ayrıntıları verilmiştir:
+
+| Alan adı | Maksimum uzunluk | Daha fazla bilgi |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Azure AD kurumsal uygulamaları | Yok | Her son kullanıcı için Şirket Portalı **Azure AD kurumsal uygulamalarını** görüntülemek üzere **Gizle** veya **göster** ' i seçin. Daha fazla bilgi için bkz. [Uygulama kaynağı ayarı seçenekleri](../apps/company-portal-app.md#app-source-setting-options). |
+| Office Online Uygulamaları | Yok | Her son kullanıcı için Şirket Portalı **Office Online uygulamalarını** görüntülemek üzere **Gizle** veya **göster** ' i seçin. Daha fazla bilgi için bkz. [Uygulama kaynağı ayarı seçenekleri](../apps/company-portal-app.md#app-source-setting-options). |
+
+#### <a name="app-source-setting-options"></a>Uygulama kaynağı ayarı seçenekleri
 
 > [!NOTE]
-> Microsoft ve Apple ilkesiyle tutarlı olan her nedenden dolayı hizmetimiz tarafından toplanan herhangi bir veriyi üçüncü taraflardan satmayacağız.
+> Şirket Portalı Web sitesi, ilk olarak diğer Microsoft hizmetlerinden uygulamaların görüntülenmesini destekler.
+
+Her son kullanıcı için Şirket Portalı **Azure AD kurumsal uygulamalarını** ve **Office Online uygulamalarını** gizleyebilir veya gösterebilirsiniz. **Göster** , Şirket portalı, kullanıcıya atanan seçili Microsoft hizmetinden tüm uygulama kataloğunun görüntülenmesine neden olur. **Azure AD kurumsal uygulamaları** [Azure Portal](https://portal.azure.com)aracılığıyla kaydedilir ve atanır. **Office Online Uygulamaları** , [M365 Yönetim merkezinde](https://admin.microsoft.com)bulunan lisanslama denetimleri kullanılarak atanır. Bu yapılandırma ayarını bulmak için [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde **Kiracı Yönetimi**  >  **özelleştirmesi** ' nı seçin. Varsayılan olarak, her bir ek uygulama kaynağı **gizleyecek**şekilde ayarlanır. 
+
+### <a name="customizing-user-self-service-actions-for-the-company-portal"></a>Şirket Portalı için Kullanıcı self servis eylemlerini özelleştirme
+
+Şirket Portalı uygulamasında ve Web sitesinde son kullanıcılara gösterilen kullanılabilir self servis cihaz eylemlerini özelleştirebilirsiniz. İstenmeyen cihaz eylemlerini önlemeye yardımcı olmak için **Kiracı Yönetimi**özelleştirmesi ' nı seçerek Şirket portalı uygulamasının ayarlarını yapılandırabilirsiniz  >  **Customization**. 
+
+Aşağıdaki eylemler kullanılabilir:
+- Kurumsal Windows cihazlarında **Kaldır** düğmesini gizleyin.
+- Kurumsal Windows cihazlarında **sıfırlama** düğmesini gizleyin.
+- Kurumsal iOS/ıpados cihazlarında **Kaldır** düğmesini gizleyin.
+- Kurumsal iOS/ıpados cihazlarında **sıfırlama** düğmesini gizleyin.
+
+> [!NOTE]
+> Bu eylemler, Şirket Portalı uygulaması ve Web sitesindeki cihaz eylemlerini kısıtlamak ve herhangi bir cihaz kısıtlama ilkesi uygulamamayı yapmak için kullanılabilir. Kullanıcıların, ayarlardan fabrika sıfırlaması veya MDM kaldırma gerçekleştirmesini kısıtlamak için, cihaz kısıtlama ilkelerini yapılandırmanız gerekir. 
 
 ## <a name="company-portal-derived-credentials-for-iosipados-devices"></a>İOS/ıpados cihazları için türetilmiş kimlik bilgilerini Şirket Portalı
 
@@ -138,7 +179,7 @@ Windows Şirket Portalı uygulamasında aşağıdaki kısayollar kullanılabilir
 | Alan | Açıklama | Klavye kısayolu |
 |:------------------:|:--------------:|:-----------------:|
 | Gezinti menüsü | Gezinti | Alt+M |
-|  | Giriş | Alt+H |
+|  | Giriş Sayfası | Alt+H |
 |  | Tüm uygulamalar | Alt+A |
 |  | Yüklenen uygulamalar | Alt+I |
 |  | Geri bildirim gönder | Alt+F |
@@ -159,7 +200,9 @@ Son kullanıcılar, Windows Şirket Portalı uygulamasında kullanılabilen kıs
 
 ## <a name="user-self-service-device-actions-from-the-company-portal"></a>Şirket Portalı Kullanıcı self servis cihaz eylemleri
 
-Kullanıcılar, Android 'deki Şirket Portalı uygulaması veya Web sitesi ya da Intune uygulaması aracılığıyla yerel veya uzak cihazlarında eylemler gerçekleştirebilir. Bir kullanıcının gerçekleştirebileceği eylemler cihaz platformu ve yapılandırmasına göre farklılık gösterir. Her durumda, uzak cihaz eylemleri yalnızca cihazın birincil kullanıcısı tarafından gerçekleştirilebilir.
+Kullanıcılar, Android 'de Şirket Portalı uygulama, Şirket Portalı Web sitesi veya Intune uygulaması aracılığıyla yerel veya uzak cihazlarında eylemler gerçekleştirebilir. Bir kullanıcının gerçekleştirebileceği eylemler cihaz platformu ve yapılandırmasına göre farklılık gösterir. Her durumda, uzak cihaz eylemleri yalnızca cihazın birincil kullanıcısı tarafından gerçekleştirilebilir.  
+
+Kullanılabilir self servis cihaz eylemleri şunları içerir:
 
 - **Devre dışı bırak** – cihazı Intune yönetiminden kaldırır. Şirket portalı uygulamasında ve Web sitesinde bu, **Kaldır**olarak gösterilir.
 - **Silme** – bu eylem bir cihaz sıfırlamayı başlatır. Şirket portalı Web sitesinde bu, **Sıfırla**veya IOS/ıpados Şirket portalı uygulamasında **Fabrika Sıfırlaması** olarak gösterilir.
@@ -168,6 +211,8 @@ Kullanıcılar, Android 'deki Şirket Portalı uygulaması veya Web sitesi ya da
 - **Uzaktan kilitleme** – bu, cihazın kilidini açmak için PIN gerektiren cihazı kilitler.
 - **Geçiş kodunu Sıfırla** – bu eylem, cihaz geçiş kodunu sıfırlamak için kullanılır. İOS/ıpados cihazlarında geçiş kodu kaldırılır ve son kullanıcının ayarlar ' da yeni bir kod girmesi gerekecektir. Desteklenen Android cihazlarda Intune tarafından yeni bir geçiş kodu oluşturulur ve geçici olarak Şirket Portalı görüntülenir.
 - **Anahtar kurtarma** – bu eylem, Şirket portalı Web sitesinden şifrelenmiş MacOS cihazları için kişisel kurtarma anahtarını kurtarmak üzere kullanılır. 
+
+Kullanılabilir Kullanıcı self servis eylemlerini özelleştirmek için bkz. [Şirket portalı için Kullanıcı self servis eylemlerini özelleştirme](../apps/company-portal-app.md#customizing-user-self-service-actions-for-the-company-portal).
 
 ### <a name="self-service-actions"></a>Self Servis eylemleri
 
@@ -192,6 +237,14 @@ Bazı platformlar ve Konfigürasyonlar self servis cihaz eylemlerine izin vermez
 <sup>(7)</sup> **devre dışı bırakma** ve **Temizleme** , ANDROID kurumsal cihaz sahibi senaryolarında (Cope, Cobo, cosu) kullanılamaz.<br>
 <sup>(8)</sup> Kullanıcı kayıtlı IOS/ıpados cihazlarında **geçiş kodunu sıfırlama** işlemi desteklenmez.
 
+### <a name="app-logs"></a>Uygulama günlükleri
+
+Azure Kamu kullanıyorsanız, bir sorunla ilgili yardım alma sürecini başlattığında bunu nasıl paylaşacağına karar vermesi için son kullanıcıya uygulama günlükleri sunulur. Ancak, Azure Kamu 'yu kullanmıyorsanız, Kullanıcı bir sorunla ilgili yardım almak için işlemi başlattığında Şirket Portalı uygulama günlüklerini doğrudan Microsoft 'a gönderir. Uygulama günlüklerini Microsoft'a göndermek sorunları gidermeyi ve çözmeyi kolaylaştıracaktır.
+
+> [!NOTE]
+> Microsoft ve Apple ilkesiyle tutarlı olan her nedenden dolayı hizmetimiz tarafından toplanan herhangi bir veriyi üçüncü taraflardan satmayacağız.
+
 ## <a name="next-steps"></a>Sonraki adımlar
 
+- [Microsoft Edge 'de yeni sekme sayfaları için kuruluşunuzun logosunu ve marka rengini yapılandırın](../apps/manage-microsoft-edge.md#configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge)
 - [Uygulamaları ekleme](apps-add.md)

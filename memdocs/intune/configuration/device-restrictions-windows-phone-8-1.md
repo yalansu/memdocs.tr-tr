@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 285144e42f2a029bf2d24b96493c54922727d6dc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24fd2085839df35a486fcfa4cf817944b0d19944
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407656"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556260"
 ---
 # <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Microsoft Intune Windows Phone 8.1 cihaz kısıtlama ayarları
 
 Bu makalede, Windows Phone 8.1 çalıştıran cihazlar için yapılandırabileceğiniz Microsoft Intune cihaz kısıtlama ayarları gösterilir.
+
+## <a name="before-you-begin"></a>Başlamadan önce
+
+[Windows Phone 8,1 cihaz kısıtlamaları profili oluşturun](device-restrictions-configure.md).
 
 ## <a name="general"></a>Genel
 
@@ -48,16 +52,16 @@ Bu makalede, Windows Phone 8.1 çalıştıran cihazlar için yapılandırabilece
     - **Cihaz varsayılanı**: parola rakam ve harf içerebilir.
     - **Alfasayısal**: parola sayıların ve harflerin karışımı olmalıdır.
     - **Sayısal**: parola yalnızca sayı olmalıdır.
-  - **Minimum parola uzunluğu**: 4-16 adresinden gereken en az karakter sayısını girin. Örneğin, parola uzunluğunun `6` en az altı karakter gerektirmek için girin.
-  - **Basit parolalar**: **blok** , kullanıcıların `1234` veya `1111`gibi basit parolalar oluşturmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+  - **Minimum parola uzunluğu**: 4-16 adresinden gereken en az karakter sayısını girin. Örneğin, `6` parola uzunluğunun en az altı karakter gerektirmek için girin.
+  - **Basit parolalar**: **blok** , kullanıcıların veya gibi basit parolalar oluşturmasını engeller `1234` `1111` . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
   - **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihazlar temizlenmeden önce izin verilen hatalı parola sayısını girin.
-  - **Ekran kilitlenmeden önce geçen işlem yapılmayan dakika sayısı**: ekran otomatik olarak kilitlenmeden önce cihazın boşta kalması gereken süreyi girin. Örneğin, 5 dakika `5` çalıştıktan sonra cihazları kilitlemek için yazın. **Yapılandırılmadı** veya boş ol olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
-  - **Parola kullanım süresi (gün)**: cihaz parolasının değiştirilme tarihi olan 1-255 ' dan gün cinsinden süre uzunluğunu girin. Örneğin, 90 gün `90` sonra parolanın süresini dolacak şekilde girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
-  - **Önceki parolaların yeniden kullanılmasını engelle**: daha önce kullanılan ve 1-24 'den kullanılamayan parolaların sayısını girin. Örneğin, kullanıcıların geçerli `5` parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+  - **Ekran kilitlenmeden önce geçen işlem yapılmayan dakika sayısı**: ekran otomatik olarak kilitlenmeden önce cihazın boşta kalması gereken süreyi girin. Örneğin, `5` 5 dakika çalıştıktan sonra cihazları kilitlemek için yazın. **Yapılandırılmadı** veya boş ol olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+  - **Parola kullanım süresi (gün)**: cihaz parolasının değiştirilme tarihi olan 1-255 ' dan gün cinsinden süre uzunluğunu girin. Örneğin, `90` 90 gün sonra parolanın süresini dolacak şekilde girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+  - **Önceki parolaların yeniden kullanılmasını engelle**: daha önce kullanılan ve 1-24 'den kullanılamayan parolaların sayısını girin. Örneğin, `5` kullanıcıların geçerli parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Şifreleme**: dosyalar dahil olmak üzere cihazda şifreleme **gerektir** . Tüm cihazlar şifrelemeyi desteklemez. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Bu ayarı yapılandırmak ve uyumluluğu doğru şekilde raporlamak için aşağıdakileri de yapılandırın:
   - **Parola gerektir**: **gerektir**olarak ayarlayın.
   - **Gerekli parola türü**: en az **sayısal**olarak ayarlanır.
-  - **Minimum parola uzunluğu**: en az `4`olarak ayarlanır.
+  - **Minimum parola uzunluğu**: en az olarak ayarlanır `4` .
 
 ## <a name="app-store"></a>App Store
 

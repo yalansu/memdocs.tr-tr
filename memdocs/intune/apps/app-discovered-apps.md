@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44089df5645b128ba29e481e899d52c90b8c0a42
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 451b1f2744f7f82d2a1c50c9003fba549bea4bdd
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078405"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556083"
 ---
 # <a name="intune-discovered-apps"></a>Intune bulunan uygulamalar
 
@@ -34,7 +34,7 @@ Intune **bulunan uygulamalar** , Kiracınızdaki Intune 'a kayıtlı cihazlarda 
 Intune, kiracınızdaki Intune 'A kayıtlı cihazlarda algılanan uygulamaların toplanmış bir listesini sağlar.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamaları** > **Monitor**izleme > **bulunan uygulamaları**seçin.
+2. **Uygulamaları**  >  **izleme**  >  **bulunan uygulamaları**seçin.
 
 >[!NOTE]
 >**Bulunan uygulamalar bölmesinden** **dışarı aktar** ' i seçerek bulunan uygulamalar listesini bir. csv dosyasına dışarı aktarabilirsiniz.
@@ -44,7 +44,7 @@ Intune, kiracınızdaki Intune 'A kayıtlı cihazlarda algılanan uygulamaların
 Intune, kiracınızdaki ayrı bir cihaz için bulunan uygulamaların listesini de sağlar.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihazlar** > **tüm cihazlar**' ı seçin.
+2. **Cihazlar**  >  **tüm cihazlar**' ı seçin.
 3. Cihaz seçin.
 4. Bu cihaza yönelik algılanan uygulamaları görüntülemek için **izleyici** bölümünde **bulunan uygulamalar** ' ı seçin.
 
@@ -54,7 +54,7 @@ Aşağıdaki liste, uygulama platformu türünü, kişisel cihazlar için izlene
 
 | Platform | Kişiye ait cihazlar için | Şirkete ait cihazlar için | Döngü süresi |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10 (Win32 uygulamaları) NOTE: cihazda [Intune yönetim uzantısı gerekir](intune-management-extension.md) | Geçerli değil | Cihazda yüklü tüm uygulamalar | Cihaz kaydından her 24 saatte bir |
+| Windows 10 (Win32 uygulamaları) NOTE: cihazda [Intune yönetim uzantısı gerekir](intune-management-extension.md) | Geçerli değil | Cihazda MSI yüklü uygulamalar | Cihaz kaydından her 24 saatte bir |
 | Windows 10 (modern uygulamalar) | Yalnızca yönetilen modern uygulamalar | Cihazda yüklü tüm modern uygulamalar | Her 7 günde bir cihaz kaydı |
 | Windows 8.1 | Yalnızca yönetilen uygulamalar | Yalnızca yönetilen uygulamalar | Her 7 günde bir cihaz kaydı |
 | Windows Phone 8 | Yalnızca yönetilen uygulamalar | Yalnızca yönetilen uygulamalar | Her 7 günde bir cihaz kaydı |

@@ -1,6 +1,6 @@
 ---
 title: Microsoft Intune-Azure 'da cihazlara VPN ayarları ekleme | Microsoft Docs
-description: Android Cihaz Yöneticisi, Android Enterprise, iOS, ıpados, macOS ve Windows cihazlarında, Microsoft Intune 'de sanal özel ağ (VPN) bağlantıları oluşturmak için yerleşik ayarları kullanın.
+description: Android Cihaz Yöneticisi, Android Enterprise, iOS, ıpados, macOS ve Windows cihazlarında, Microsoft Intune ' de sanal özel ağ (VPN) bağlantıları oluşturmak için yerleşik ayarları kullanın.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c72d2f8d9bd6a7235845863000272f605bb41089
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 3d078f813b334806adb9e62054efc1fe844cea21
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943833"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429168"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Intune 'da VPN sunucularına bağlanmak için VPN profilleri oluşturma
 
-Sanal özel ağlar (VPN 'Ler), kullanıcılara kuruluş ağınıza güvenli uzaktan erişim olanağı sağlar. Cihazlar VPN sunucusuyla bir bağlantı başlatmak için bir VPN bağlantısı profili kullanır. Microsoft Intune ' deki **VPN profilleri** , kuruluşunuzun kullanıcılara ve cihazlarına VPN ayarları atayarak kurumsal ağınıza kolayca ve güvenli bir şekilde bağlanabilmelerini sağlar.
+Sanal özel ağlar (VPN 'Ler), kullanıcılara kuruluş ağınıza güvenli uzaktan erişim olanağı sağlar. Cihazlar VPN sunucusuyla bir bağlantı başlatmak için bir VPN bağlantısı profili kullanır. Microsoft Intune içindeki **VPN profilleri** , kuruluşunuzdaki kullanıcılara ve cihazlara VPN ayarları atar. Kullanıcıların kuruluş ağınıza kolayca ve güvenli bir şekilde bağlanabilmeleri için bu ayarları kullanın.
 
 Örneğin, kuruluş ağındaki bir dosya paylaşımıyla bağlantı kurmak için tüm iOS/ıpados cihazlarını gerekli ayarlarla yapılandırmak istiyorsunuz. Bu ayarları içeren bir VPN profili oluşturursunuz. Ardından, bu profili iOS/ıpados cihazlarına sahip tüm kullanıcılara atarsınız. Kullanıcılar, VPN bağlantısını kullanılabilir ağlar listesinde görür ve ağa kolaylıkla bağlanabilir.
 
@@ -50,7 +50,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
   - iOS/iPadOS
-  - macOS
+  - Mac OS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -60,7 +60,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - Android kurumsal iş profilleri
   - Android kurumsal cihaz sahibi (tam olarak yönetilen)
   - iOS/iPadOS
-  - macOS
+  - Mac OS
 
 - Cisco (IPSec)
   - iOS/iPadOS
@@ -74,7 +74,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
 
 - Özel VPN
   - iOS/iPadOS
-  - macOS
+  - Mac OS
 
   [Özel ayarlarla profil oluşturma](custom-settings-configure.md)içindeki URI ayarlarını kullanarak özel VPN profilleri oluşturun.
 
@@ -83,7 +83,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - Android kurumsal iş profilleri
   - Android kurumsal cihaz sahibi (tam olarak yönetilen)
   - iOS/iPadOS
-  - macOS
+  - Mac OS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -108,7 +108,6 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - Android kurumsal iş profilleri
   - Android kurumsal cihaz sahibi (tam olarak yönetilen)
   - iOS/iPadOS
-  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -117,7 +116,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
   - iOS/iPadOS
-  - macOS
+  - Mac OS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -132,13 +131,13 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:
       - **Android cihaz yöneticisi**
-      - **Yalnızca Android kurumsal** > **cihaz sahibi**
-      - **Yalnızca Android kurumsal** > **iş profili**
+      - **Android kurumsal**  >  **Yalnızca cihaz sahibi**
+      - **Android kurumsal**  >  **Yalnızca iş profili**
       - **iOS/iPadOS**
       - **macOS**
       - **Windows 10 ve üzeri**
@@ -164,7 +163,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
     - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
 8. **İleri**’yi seçin.
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
     **İleri**’yi seçin.
 
@@ -182,7 +181,7 @@ VPN profilleri, farklı üreticilerden farklı bağlantı türleri ve farklı pr
 
 VPN profilini oluştururken, Intune’da önceden oluşturduğunuz bir SCEP veya PKCS sertifika profilini seçersiniz. Bu profil, kimlik sertifikası olarak bilinir. Kullanıcının cihazının bağlanmasına izin vermek için oluşturduğunuz bir güvenilir sertifika profiline (veya *kök sertifikaya*) göre kimlik doğrulaması yapmak için kullanılır. Güvenilir sertifika, VPN bağlantısının kimliğini doğrulayan bilgisayara atanır. Bu, genellikle VPN sunucusudur.
 
-VPN profiliniz için sertifika tabanlı kimlik doğrulaması kullanıyorsanız, her cihazın sertifika yetkilinizin yasallığını algılayabilmesi için VPN profilini, sertifika profilini ve güvenilen kök profilini aynı gruplara dağıtın.
+VPN profiliniz için sertifika tabanlı kimlik doğrulaması kullanıyorsanız, VPN profilini, sertifika profilini ve güvenilen kök profilini aynı gruplara dağıtın. Bu atama, her cihazın sertifika yetkilinizin yasallığını tanımasını sağlar.
 
 Intune’da sertifika profillerini oluşturma ve kullanma hakkında daha fazla bilgi için bkz. [Microsoft Intune ile sertifikaları yapılandırma](../protect/certificates-configure.md).
 

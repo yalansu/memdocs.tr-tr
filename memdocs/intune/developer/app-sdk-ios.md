@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 242ec66ef79195533e7362694efb00928769b305
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 919c285366f44a208c1c8d803770b9cbaeb00c5c
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078184"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429279"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>iOS için Microsoft Intune Uygulama SDK’sı geliştirici kılavuzu
 
@@ -33,7 +33,7 @@ ms.locfileid: "82078184"
 
 iOS için Microsoft Intune Uygulama SDK’sı, Intune uygulama koruma ilkelerini (APP veya MAM ilkeleri olarak da bilinir) yerel iOS uygulamanıza eklemenizi sağlar. MAM özellikli uygulamalar Intune Uygulama SDK’sı ile tümleşik çalışır. Intune uygulamayı etkin bir şekilde yönetirken, BT yöneticileri mobil uygulamanıza uygulama koruma ilkeleri dağıtabilir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 * OS X 10.8.5 veya üstünü çalıştıran bir Mac OS bilgisayara ihtiyacınız vardır ve Ayrıca Xcode 9 veya üzeri bir sürümü yüklü olur.
 
@@ -97,14 +97,14 @@ iOS için Intune Uygulama SDK'sının amacı, kodda minimum düzeyde değişikli
 
 Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin:
 
-1. **Seçenek 1-Framework (önerilir)**: Xcode 10.2 + kullanıyorsanız ve uygulamanız/uzantınız Swift kodu içeriyorsa ve `IntuneMAMSwift.framework` hedeflemenize ve hedeflemenize `IntuneMAMSwiftStub.framework` , bağlantı ve hedef Için `IntuneMAMSwift.framework` , `IntuneMAMSwiftStub.framework` proje hedefinin **katıştırılmış ikili dosyalar** listesine sürükleyin.
+1. **Seçenek 1-Framework (önerilir)**: Xcode 10.2 + kullanıyorsanız ve uygulamanız/uzantınız Swift kodu içeriyorsa ve `IntuneMAMSwift.framework` `IntuneMAMSwiftStub.framework` hedeflemenize ve hedeflemenize, bağlantı ve hedef Için `IntuneMAMSwift.framework` , `IntuneMAMSwiftStub.framework` proje hedefinin **katıştırılmış ikili dosyalar** listesine sürükleyin.
 
-    Aksi takdirde, `IntuneMAM.framework` hedefle bağlantı: proje hedefinin `IntuneMAM.framework` **katıştırılmış ikili dosyalar** listesine sürükleyin.
+    Aksi takdirde, `IntuneMAM.framework` hedefle bağlantı: `IntuneMAM.framework` proje hedefinin **katıştırılmış Ikili dosyalar** listesine sürükleyin.
 
    > [!NOTE]
    > Çerçeveyi kullanırsanız, uygulamanızı App Store’a göndermeden önce evrensel çerçeveden simülatör mimarilerini kendiniz çıkarmanız gerekir. Daha fazla bilgi için bkz. [Uygulamanızı App Store'a gönderme](#submit-your-app-to-the-app-store).
 
-   **Seçenek 2-statik kitaplık**: Bu seçenek yalnızca bir Swift kodu içermeyen veya 10,2 < Xcode ile oluşturulmuş uygulamalar/uzantılar için kullanılabilir. `libIntuneMAM.a` Kitaplık bağlantısı. `libIntuneMAM.a` kitaplığını proje hedefinin **Bağlantılı Çerçeveler ve Kitaplıklar** listesine sürükleyin.
+   **Seçenek 2-statik kitaplık**: Bu seçenek yalnızca bir Swift kodu içermeyen veya 10,2 < Xcode ile oluşturulmuş uygulamalar/uzantılar için kullanılabilir. `libIntuneMAM.a`Kitaplık bağlantısı. `libIntuneMAM.a` kitaplığını proje hedefinin **Bağlantılı Çerçeveler ve Kitaplıklar** listesine sürükleyin.
 
     ![Intune Uygulama SDK’sı iOS: bağlantılı çerçeveler ve kitaplıklar](./media/app-sdk-ios/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
 
@@ -122,7 +122,7 @@ Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin
 2. Aşağıdaki iOS çerçevelerini projeye ekleyin:  
 -  MessageUI.framework  
 -  Security.framework  
--  MobileCoreServices.framework  
+-  CoreServices. Framework  
 -  SystemConfiguration.framework  
 -  libsqlite3.tbd  
 -  libc++.tbd  
@@ -135,7 +135,7 @@ Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin
 3. Her bir proje hedefinde **Özellikler**’i seçip **Anahtar Zinciri Paylaşımı** anahtarını etkinleştirerek anahtar zinciri paylaşımını etkinleştirin (önceden etkinleştirilmemişse). Anahtarlık paylaşımı, sonraki adıma devam edebilmeniz için gereklidir.
 
    > [!NOTE]
-   > Sağlama profilinizin, yeni anahtarlık paylaşımı değerlerini desteklemesi gerekir. Anahtarlık erişim grupları bir joker karakteri desteklemelidir. Bunu,. mobileprovision dosyasını bir metin düzenleyicisinde açıp **Anahtarlık erişim grupları**araması yaparak ve bir joker karakter olmasını sağlayarak denetleyebilirsiniz. Örneğin:
+   > Sağlama profilinizin, yeni anahtarlık paylaşımı değerlerini desteklemesi gerekir. Anahtarlık erişim grupları bir joker karakteri desteklemelidir. Bunu,. mobileprovision dosyasını bir metin düzenleyicisinde açıp **Anahtarlık erişim grupları**araması yaparak ve bir joker karakter olmasını sağlayarak denetleyebilirsiniz. Örnek:
    >
    >  ```xml
    >  <key>keychain-access-groups</key>
@@ -154,7 +154,7 @@ Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin
     
       ![Intune Uygulama SDK’sı iOS: Anahtarlık paylaşımı](./media/app-sdk-ios/intune-app-sdk-ios-keychain-sharing.png)
     
-    d. Anahtarlık erişim gruplarını oluşturmak için yukarıda gösterilen Xcode UI'ı kullanmak yerine doğrudan yetkilendirme dosyalarını düzenliyorsanız, anahtarlık erişim gruplarını `$(AppIdentifierPrefix)` öğesinin önüne ekleyin (Xcode bunu otomatik olarak işler). Örneğin:
+    d. Anahtarlık erişim gruplarını oluşturmak için yukarıda gösterilen Xcode UI'ı kullanmak yerine doğrudan yetkilendirme dosyalarını düzenliyorsanız, anahtarlık erişim gruplarını `$(AppIdentifierPrefix)` öğesinin önüne ekleyin (Xcode bunu otomatik olarak işler). Örnek:
     
       - `$(AppIdentifierPrefix)com.microsoft.intune.mam`
       - `$(AppIdentifierPrefix)com.microsoft.adalcache`
@@ -194,7 +194,7 @@ Uygulamanızın en son [adal](https://github.com/AzureAD/azure-activedirectory-l
 
 1. Uygulamanızda tanımlanmış bir Anahtarlık erişim grubu yoksa, uygulamanın paket KIMLIĞINI ilk grup olarak ekleyin.
 
-2. Anahtarlık erişim gruplarına ekleyerek `com.microsoft.adalcache` adal/msal çoklu oturum açma (SSO) özelliğini etkinleştirin.
+2. Anahtarlık erişim gruplarına ekleyerek ADAL/MSAL çoklu oturum açma (SSO) özelliğini etkinleştirin `com.microsoft.adalcache` .
 
 3. ADAL paylaşımlı önbellek anahtar zinciri grubunu açıkça ayarlıyorsanız, ayarın `<appidprefix>.com.microsoft.adalcache` olduğundan emin olun. Bu ayarı geçersiz kılmadığınız sürece ADAL bunu sizin için ayarlar. `com.microsoft.adalcache` öğesini değiştirmek için özel bir anahtarlık grubu belirtmek isterseniz, bunu IntuneMAMSettings altındaki Info.plist dosyası içinde `ADALCacheKeychainGroupOverride` anahtarını kullanarak belirtin.
 
@@ -210,11 +210,11 @@ Uygulamanız kimlik doğrulaması için zaten ADAL veya MSAL kullanıyorsa ve ke
 
 Uygulamanız zaten ADAL veya MSAL kullanıyorsa, aşağıdaki konfigürasyonlar gereklidir:
 
-1. Projenin Info. plist dosyasında, anahtar adı `ADALClientId`Ile **ıntunemamsettings** sözlüğü altında, adal ÇAĞRıLARı için kullanılacak istemci kimliğini belirtin.
+1. Projenin Info. plist dosyasında, anahtar adı ile **ıntunemamsettings** sözlüğü altında, `ADALClientId` adal çağrıları IÇIN kullanılacak istemci kimliğini belirtin.
 
-2. Ayrıca, anahtar adlı `ADALAuthority` **ıntunemamsettings** sözlüğü altında, Azure AD yetkilisini belirtin.
+2. Ayrıca, anahtar adlı **ıntunemamsettings** sözlüğü altında `ADALAuthority` , Azure AD yetkilisini belirtin.
 
-3. Ayrıca, anahtar adlı `ADALRedirectUri` **ıntunemamsettings** sözlüğü altında, adal çağrıları IÇIN kullanılacak yeniden yönlendirme URI 'sini belirtin. Alternatif olarak, uygulamanın yeniden yönlendirme URI'si `scheme://bundle_id` biçimindeyse bunun yerine `ADALRedirectScheme` belirtebilirsiniz.
+3. Ayrıca, anahtar adlı **ıntunemamsettings** sözlüğü altında `ADALRedirectUri` , adal çağrıları için kullanılacak yeniden yönlendirme URI 'sini belirtin. Alternatif olarak, uygulamanın yeniden yönlendirme URI'si `scheme://bundle_id` biçimindeyse bunun yerine `ADALRedirectScheme` belirtebilirsiniz.
 
 Ayrıca, uygulamalar çalışma zamanında bu Azure AD ayarlarını geçersiz kılabilir. Bunu yapmak için `IntuneMAMPolicyManager` örneğinde `aadAuthorityUriOverride`, `aadClientIdOverride` ve `aadRedirectUriOverride` özelliklerini ayarlamanız yeterlidir.
 
@@ -229,12 +229,12 @@ Daha önce belirtildiği gibi, Intune uygulama SDK 'sı kimlik doğrulaması ve 
 
 ADAL-Intune uygulama SDK 'Sı, ADAL parametrelerinin varsayılan değerlerini sağlar ve Azure AD kimlik doğrulamasını işler. Geliştiricilerin daha önce bahsedilen ADAL ayarları için herhangi bir değer belirtmelerine gerek yoktur. 
 
-MSAL-geliştiricilerin, [burada](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration)belirtilen biçimde özel bir yeniden yönlendirme URI 'SI ile AAD 'de bir uygulama kaydı oluşturması gerekir. Geliştiriciler daha önce bahsedilen `ADALClientID` ve `ADALRedirectUri` ayarlarını ya da `aadClientIdOverride` `aadRedirectUriOverride` `IntuneMAMPolicyManager` örnekteki eşdeğerini ve özellikleri ayarlamalıdır. Geliştiriciler, Intune uygulama koruma hizmeti 'ne uygulama kaydı erişimi sağlamak için önceki bölümde 4. adımı izlediklerinden emin olmalıdır.
+MSAL-geliştiricilerin, [burada](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration)belirtilen biçimde özel bir yeniden yönlendirme URI 'SI ile AAD 'de bir uygulama kaydı oluşturması gerekir. Geliştiriciler `ADALClientID` `ADALRedirectUri` daha önce bahsedilen ve ayarlarını ya da `aadClientIdOverride` örnekteki eşdeğerini ve özellikleri ayarlamalıdır `aadRedirectUriOverride` `IntuneMAMPolicyManager` . Geliştiriciler, Intune uygulama koruma hizmeti 'ne uygulama kaydı erişimi sağlamak için önceki bölümde 4. adımı izlediklerinden emin olmalıdır.
 
 ### <a name="special-considerations-when-using-msal"></a>MSAL kullanılırken özel konular 
 
-1. **WebView hesabınızı kontrol edin** ; uygulamaların, uygulama tarafından başlatılan msal etkileşimli kimlik doğrulama işlemlerinde Web görünümü olarak SFSafariViewController, SFAuthSession veya ASWebAuthSession kullanması önerilir. Bazı nedenlerle uygulamanızın herhangi bir etkileşimli MSAL auth işlemi için bu Web görünümlerinden birini kullanması gerekiyorsa, uygulamanın Info. plist dosyasındaki `SafariViewControllerBlockedOverride` `true` `IntuneMAMSettings` sözlük altında olarak da ayarlanmalıdır. Uyarı: Bu, kimlik doğrulama oturumunu etkinleştirmek üzere Intune 'un SafariViewController kancalarını devre dışı bırakır. Bu, uygulama kurumsal verileri görüntülemek için SafariViewController kullanıyorsa, uygulama bu Web görünümü türlerinden herhangi birinde kurumsal verileri göstermemelidir.
-2. **Hem adal hem de msal** -geliştiricilerin bağlanması, Intune 'un bu senaryoda adal üzerinde msal 'yi tercih edebilecekleri şekilde kabul etmelidir. Varsayılan olarak, Intune desteklenen ADAL sürümlerini desteklenen MSAL sürümlerine, her ikisi de çalışma zamanında bağlanmışsa tercih edecektir. Intune, Intune 'un ilk kimlik doğrulama işlemi `IntuneMAMUseMSALOnNextLaunch` `true` sırasında olduğunda yalnızca desteklenen bir msal sürümünü tercih eder. `NSUserDefaults` `IntuneMAMUseMSALOnNextLaunch` Veya ayarlanmamışsa, Intune varsayılan davranışa geri dönecektir `false` . Adından da anlaşılacağı gibi, bir değişiklik sonraki `IntuneMAMUseMSALOnNextLaunch` başlatma üzerinde devreye girer.
+1. **WebView hesabınızı kontrol edin** ; uygulamaların, uygulama tarafından başlatılan msal etkileşimli kimlik doğrulama işlemlerinde Web görünümü olarak SFSafariViewController, SFAuthSession veya ASWebAuthSession kullanması önerilir. Bazı nedenlerle uygulamanızın herhangi bir etkileşimli MSAL auth işlemi için bu Web görünümlerinden birini kullanması gerekiyorsa, `SafariViewControllerBlockedOverride` `true` `IntuneMAMSettings` uygulamanın Info. plist dosyasındaki sözlük altında olarak da ayarlanmalıdır. Uyarı: Bu, kimlik doğrulama oturumunu etkinleştirmek üzere Intune 'un SafariViewController kancalarını devre dışı bırakır. Bu, uygulama kurumsal verileri görüntülemek için SafariViewController kullanıyorsa, uygulama bu Web görünümü türlerinden herhangi birinde kurumsal verileri göstermemelidir.
+2. **Hem adal hem de msal** -geliştiricilerin bağlanması, Intune 'un bu senaryoda adal üzerinde msal 'yi tercih edebilecekleri şekilde kabul etmelidir. Varsayılan olarak, Intune desteklenen ADAL sürümlerini desteklenen MSAL sürümlerine, her ikisi de çalışma zamanında bağlanmışsa tercih edecektir. Intune, Intune 'un ilk kimlik doğrulama işlemi sırasında olduğunda yalnızca desteklenen bir MSAL sürümünü tercih eder `IntuneMAMUseMSALOnNextLaunch` `true` `NSUserDefaults` . `IntuneMAMUseMSALOnNextLaunch` `false` Veya ayarlanmamışsa, Intune varsayılan davranışa geri dönecektir. Adından da anlaşılacağı gibi, bir değişiklik `IntuneMAMUseMSALOnNextLaunch` sonraki başlatma üzerinde devreye girer.
 
 
 ## <a name="configure-settings-for-the-intune-app-sdk"></a>Intune Uygulama SDK'sı ayarlarını yapılandırma
@@ -274,7 +274,7 @@ MAMTelemetryUsePPE | Boole | MAM SDK'sının PPE telemetri arka ucuna veri gönd
 MaxFileProtectionLevel | Dize | İsteğe bağlı. Uygulamanın destekleyebildiği maksimum `NSFileProtectionType` belirtmesine olanak tanır. Düzey uygulamanın destekleyebildiğinden daha yüksekse, bu değer hizmet tarafından gönderilen ilkeyi geçersiz kılar. Olası değerler: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
 OpenInActionExtension | Boole | Şurada aç Eylemi uzantıları için EVET olarak ayarlayın. Daha fazla bilgi için UIActivityViewController yoluyla Veri Paylaşımı bölümüne bakın. |
 WebViewHandledURLSchemes | Dize Dizisi | Uygulamanızın WebView’unun işlediği URL şemalarını belirtir. | Uygulamanız URL'leri bağlantılar ve/veya javascript aracılığıyla işleyen bir WebView kullanıyorsa gereklidir. |
-DocumentBrowserFileCachePath | Dize | Uygulamanız, [`UIDocumentBrowserViewController`](https://developer.apple.com/documentation/uikit/uidocumentbrowserviewcontroller?language=objc) çeşitli dosya sağlayıcılarındaki dosyalara göz atmak için kullanıyorsa, bu yolu uygulama korumalı alan ana dizinine göre ayarlayabilirsiniz, böylece Intune SDK şifresi çözülmüş yönetilen dosyaları bu klasöre bırakabilir. | İsteğe bağlı. Varsayılan olarak `/Documents/` dizini. |
+DocumentBrowserFileCachePath | Dize | Uygulamanız, [`UIDocumentBrowserViewController`](https://developer.apple.com/documentation/uikit/uidocumentbrowserviewcontroller?language=objc) çeşitli dosya sağlayıcılarındaki dosyalara göz atmak için kullanıyorsa, bu yolu uygulama korumalı alan ana dizinine göre ayarlayabilirsiniz, böylece ıNTUNE SDK şifresi çözülmüş yönetilen dosyaları bu klasöre bırakabilir. | İsteğe bağlı. Varsayılan olarak `/Documents/` dizini. |
 VerboseLoggingEnabled | Boole | Evet olarak ayarlanırsa, Intune ayrıntılı modda günlüğe kaydedilir. | İsteğe bağlı. Varsayılan olarak Hayır |
 
 ## <a name="receive-app-protection-policy"></a>Uygulama koruma ilkesini alma
@@ -288,7 +288,7 @@ Intune uygulama koruma ilkesini almak için, uygulamaların Intune MAM hizmetiyl
 
 ### <a name="apps-that-already-use-adal-or-msal"></a>Zaten ADAL veya MSAL kullanan uygulamalar
 
-Zaten ADAL veya MSAL kullanan uygulamalar, Kullanıcı başarıyla doğrulandıktan `registerAndEnrollAccount` sonra `IntuneMAMEnrollmentManager` örnekteki yöntemi çağırmalıdır:
+Zaten ADAL veya MSAL kullanan uygulamalar, `registerAndEnrollAccount` `IntuneMAMEnrollmentManager` Kullanıcı başarıyla doğrulandıktan sonra örnekteki yöntemi çağırmalıdır:
 
 ```objc
 /*
@@ -336,7 +336,7 @@ Bu API çağrıldıktan sonra, uygulama normal çalışmasına devam edebilir. K
 
 ### <a name="let-intune-handle-authentication-and-enrollment-at-launch"></a>Intune'un başlatma sırasında kimlik doğrulama ve kayıt işlemlerini işlemesini sağlama
 
-Intune SDK 'sının, uygulamanızın başlatılması tamamlanmadan önce ADAL/MSAL ve kayıt kullanarak tüm kimlik doğrulamasını işlemesini istiyorsanız ve uygulamanız her zaman uygulama ilkesi gerektirdiğinde, API 'yi kullanmanız `loginAndEnrollAccount` gerekmez. Uygulamanın Info.plist dosyasındaki IntuneMAMSettings sözlüğünde aşağıdaki iki ayarı EVET olarak ayarlamanız yeterli olur.
+Intune SDK 'sının, uygulamanızın başlatılması tamamlanmadan önce ADAL/MSAL ve kayıt kullanarak tüm kimlik doğrulamasını işlemesini istiyorsanız ve uygulamanız her zaman uygulama ilkesi gerektirdiğinde, API 'yi kullanmanız gerekmez `loginAndEnrollAccount` . Uygulamanın Info.plist dosyasındaki IntuneMAMSettings sözlüğünde aşağıdaki iki ayarı EVET olarak ayarlamanız yeterli olur.
 
 Ayar  | Tür  | Tanım |
 --       |  --   |   --       |  
@@ -475,16 +475,16 @@ IntuneMAMDataProtectionManager.h | IntuneMAMDataProtectionManager sınıfı, uyg
 
 Intune, BT yöneticilerinin Kullanıcı tarafından hangi hesapların oturum açgirebileceği belirtmesini sağlar. Uygulamalar, belirtilen izin verilen hesaplar listesi için Intune uygulama SDK 'sını sorgulayabilir ve sonra yalnızca izin verilen hesapların cihazda imzalandığından emin olabilir.
 
-İzin verilen hesapları sorgulamak için uygulama üzerinde `allowedAccounts` özelliğini denetlemelidir. `IntuneMAMEnrollmentManager` `allowedAccounts` Özelliği, izin verilen hesapları içeren bir dizi ya da Nil. Özellik Nil ise izin verilen hesaplar belirtilmez.
+İzin verilen hesapları sorgulamak için uygulama `allowedAccounts` üzerinde özelliğini denetlemelidir `IntuneMAMEnrollmentManager` . `allowedAccounts`Özelliği, izin verilen hesapları içeren bir dizi ya da Nil. Özellik Nil ise izin verilen hesaplar belirtilmez.
 
-Uygulamalar, `allowedAccounts` `IntuneMAMAllowedAccountsDidChangeNotification` bildirimi gözlemleyerek özelliğin değişikliklerine de tepki verebilir. Bildirim, `allowedAccounts` Özellik değeri her değiştiğinde gönderilir.
+Uygulamalar, `allowedAccounts` bildirimi gözlemleyerek özelliğin değişikliklerine de tepki verebilir `IntuneMAMAllowedAccountsDidChangeNotification` . Bildirim, `allowedAccounts` özellik değeri her değiştiğinde gönderilir.
 
 ## <a name="implement-save-as-and-open-from-controls"></a>Farklı Kaydet ve açılan denetimleri uygulama
 
-Intune, BT yöneticilerinin yönetilen bir uygulamanın verileri hangi depolama konumlarına kaydedebileceği veya buradan veri açmasını sağlar. Uygulamalar, içinde `isSaveToAllowedForLocation` `IntuneMAMPolicy.h`tanımlanan API 'yi kullanarak izin verilen kayıt depolama konumları için Intune MAM SDK 'sını sorgulayabilir. Uygulamalar, içinde `isOpenFromAllowedForLocation` `IntuneMAMPolicy.h`tanımlanan API 'yi kullanarak izin verilen açık depolama konumları için Intune MAM SDK 'sını de sorgulayabilir.
+Intune, BT yöneticilerinin yönetilen bir uygulamanın verileri hangi depolama konumlarına kaydedebileceği veya buradan veri açmasını sağlar. Uygulamalar, `isSaveToAllowedForLocation` içinde tanımlanan API 'yi kullanarak izin verilen kayıt depolama konumları Için ıNTUNE mam SDK 'sını sorgulayabilir `IntuneMAMPolicy.h` . Uygulamalar, `isOpenFromAllowedForLocation` içinde tanımlanan API 'yi kullanarak izin verilen açık depolama konumları Için ıNTUNE mam SDK 'sını de sorgulayabilir `IntuneMAMPolicy.h` .
 
 Yönetilen verileri bulut depolama alanına veya yerel konumlara kaydetmeden önce, BT yöneticisinin o konuma veri kaydedilmesine izin verip vermediğini öğrenmek için uygulamaların `isSaveToAllowedForLocation` API’sini denetlemesi gerekir.
-Bir bulut depolama alanından veya yerel bir konumdan bir uygulamaya veri açmadan önce, uygulamanın BT yöneticisinin veri üzerinde açılıp açılmadığını bilmesi için `isOpenFromAllowedForLocation` API 'yi denetlemesi gerekir.
+Bir bulut depolama alanından veya yerel bir konumdan bir uygulamaya veri açmadan önce, uygulamanın `isOpenFromAllowedForLocation` BT yöneticisinin veri üzerinde açılıp açılmadığını bilmesi için API 'yi denetlemesi gerekir.
 
 Uygulamalar `isSaveToAllowedForLocation` veya `isOpenFromAllowedForLocation` API 'leri kullanırken, varsa, depolama konumu için UPN 'ye geçmesi gerekir.
 
@@ -502,11 +502,11 @@ Uygulamalar, OneDrive İş gibi “yönetilen” veya “kişisel” olarak kabu
 
 Uygulama yerel cihazdaki herhangi bir konuma veri kaydediyorsa `IntuneMAMSaveLocationLocalDrive` sabiti kullanılmalıdır.
 
-Hedef konum için hesap bilinmiyorsa, `nil` geçirilmesi gerekir. `IntuneMAMSaveLocationLocalDrive` Konum her zaman bir `nil` hesapla eşleştirilmelidir.
+Hedef konum için hesap bilinmiyorsa, `nil` geçirilmesi gerekir. `IntuneMAMSaveLocationLocalDrive`Konum her zaman bir `nil` Hesapla eşleştirilmelidir.
 
 ### <a name="supported-open-locations"></a>Desteklenen açık konumlar
 
-`isOpenFromAllowedForLocation` API, BT yöneticisinin ' de `IntuneMAMPolicy.h`tanımlanan konumlardan veri açılmasına izin verip vermediğini denetlemek için sabitler sağlar.
+`isOpenFromAllowedForLocation`API, BT yöneticisinin ' de tanımlanan konumlardan veri açılmasına izin verip vermediğini denetlemek için sabitler sağlar `IntuneMAMPolicy.h` .
 
 * Intunemamopenlocationother
 * Intunemamopenlocationonedriveforbusiness
@@ -515,27 +515,27 @@ Hedef konum için hesap bilinmiyorsa, `nil` geçirilmesi gerekir. `IntuneMAMSave
 * Intunemamopenlocationlocalstorage
 * Intunemamopenlocationaccountdocument
 
-Uygulamalar, OneDrive Iş veya " `isOpenFromAllowedForLocation` kişisel" gibi "yönetilen" olarak kabul edilen konumlardan verilerin açılıp açılmadığını denetlemek için içindeki sabitleri kullanmalıdır. Ayrıca, uygulama bir konumun "yönetilen" veya "kişisel" olup olmadığını denetleyemiyorum, API kullanılmalıdır.
+Uygulamalar, `isOpenFromAllowedForLocation` OneDrive iş veya "kişisel" gibi "yönetilen" olarak kabul edilen konumlardan verilerin açılıp açılmadığını denetlemek için içindeki sabitleri kullanmalıdır. Ayrıca, uygulama bir konumun "yönetilen" veya "kişisel" olup olmadığını denetleyemiyorum, API kullanılmalıdır.
 
-Uygulama `IntuneMAMOpenLocationCamera` , kameradan veya fotoğraf albümünden verileri açarken sabit kullanılmalıdır.
+`IntuneMAMOpenLocationCamera`Uygulama, kameradan veya fotoğraf albümünden verileri açarken sabit kullanılmalıdır.
 
-Uygulama `IntuneMAMOpenLocationLocalStorage` yerel cihazdaki herhangi bir konumdan veri açarken sabit kullanılmalıdır.
+`IntuneMAMOpenLocationLocalStorage`Uygulama yerel cihazdaki herhangi bir konumdan veri açarken sabit kullanılmalıdır.
 
-Uygulama `IntuneMAMOpenLocationAccountDocument` , yönetilen hesap kimliği olan bir belgeyi açarken sabit kullanılmalıdır (aşağıdaki "paylaşılan veriler" bölümüne bakın)
+`IntuneMAMOpenLocationAccountDocument`Uygulama, yönetilen hesap kimliği olan bir belgeyi açarken sabit kullanılmalıdır (aşağıdaki "paylaşılan veriler" bölümüne bakın)
 
-Kaynak konumu hesabı bilinmiyorsa, `nil` geçirilmesi gerekir. `IntuneMAMOpenLocationLocalStorage` Ve `IntuneMAMOpenLocationCamera` konumları her zaman bir `nil` hesapla eşleştirilmelidir.
+Kaynak konumu hesabı bilinmiyorsa, `nil` geçirilmesi gerekir. `IntuneMAMOpenLocationLocalStorage`Ve `IntuneMAMOpenLocationCamera` konumları her zaman bir `nil` Hesapla eşleştirilmelidir.
 
 ### <a name="unknown-or-unlisted-locations"></a>Bilinmeyen veya listelenmemiş konumlar
 
-İstenen konum `IntuneMAMSaveLocation` veya `IntuneMAMOpenLocation` numaralandırmalar içinde listelenmediyse veya bilinmiyorsa, iki konumdan birinin kullanılması gerekir.
-* Bir yönetilen hesapla kaydetme konumuna erişiliyorsa, `IntuneMAMSaveLocationAccountDocument` konumun kullanılması gerekir (`IntuneMAMOpenLocationAccountDocument` açma için).
-* Aksi takdirde, `IntuneMAMSaveLocationOther` konumunu (`IntuneMAMOpenLocationOther` açma için) kullanın.
+İstenen konum `IntuneMAMSaveLocation` veya numaralandırmalar içinde listelenmediyse `IntuneMAMOpenLocation` veya bilinmiyorsa, iki konumdan birinin kullanılması gerekir.
+* Bir yönetilen hesapla kaydetme konumuna erişiliyorsa, `IntuneMAMSaveLocationAccountDocument` konumun kullanılması gerekir ( `IntuneMAMOpenLocationAccountDocument` açma için).
+* Aksi takdirde, `IntuneMAMSaveLocationOther` konumunu ( `IntuneMAMOpenLocationOther` açma için) kullanın.
 
-Yönetilen hesap ile yönetilen hesabın UPN 'sini paylaşan bir hesap arasında ayrım yapmak önemlidir. Örneğin, "user@contoso.com" UPN 'si ile yönetilen bir hesap, OneDrive 'da oturum açmış "" UPNuser@contoso.com'sine sahip bir hesapla aynı değildir. Yönetilen hesapta oturum açarak bilinmeyen veya listelenmemiş bir hizmete erişiliyorsa (ör. "user@contoso.com" OneDrive 'da oturum açıldı), `AccountDocument` konum tarafından temsil edilmelidir. Bilinmeyen veya listelenmemiş hizmet başka bir hesapta oturum açarsa (ör. "user@contoso.com" Dropbox 'ta oturum açıldı), yönetilen bir hesapla konuma erişmez ve `Other` konum tarafından temsil edilmelidir.
+Yönetilen hesap ile yönetilen hesabın UPN 'sini paylaşan bir hesap arasında ayrım yapmak önemlidir. Örneğin, "" UPN 'si ile yönetilen bir hesap, user@contoso.com OneDrive 'da oturum açmış "" UPN 'sine sahip bir hesapla aynı değildir user@contoso.com . Yönetilen hesapta oturum açarak bilinmeyen veya listelenmemiş bir hizmete erişiliyorsa (ör. " user@contoso.com " OneDrive 'da oturum açıldı), konum tarafından temsil edilmelidir `AccountDocument` . Bilinmeyen veya listelenmemiş hizmet başka bir hesapta oturum açarsa (ör. " user@contoso.com " Dropbox 'ta oturum açıldı), yönetilen bir hesapla konuma erişmez ve konum tarafından temsil edilmelidir `Other` .
 
 ### <a name="sharing-blocked-alert"></a>Paylaşım engellendi uyarısı
 
-UI Yardımcısı işlevi, `isSaveToAllowedForLocation` veya `isOpenFromAllowedForLocation` API çağrıldığında ve Kaydet/Aç eylemini engelleyecek şekilde bulunursa kullanılabilir. Uygulama, kullanıcıya eylemin engellendiğini bildirmek isterse, genel bir iletiyle bir uyarı görünümü sunmak için içinde `showSharingBlockedMessage` `IntuneMAMUIHelper.h` tanımlanan API 'yi çağırabilir.
+UI Yardımcısı işlevi, `isSaveToAllowedForLocation` veya `isOpenFromAllowedForLocation` API çağrıldığında ve Kaydet/Aç eylemini engelleyecek şekilde bulunursa kullanılabilir. Uygulama, kullanıcıya eylemin engellendiğini bildirmek isterse, `showSharingBlockedMessage` `IntuneMAMUIHelper.h` genel bir iletiyle bir uyarı görünümü sunmak için içinde tanımlanan API 'yi çağırabilir.
 
 ## <a name="share-data-via-uiactivityviewcontroller"></a>UIActivityViewController yoluyla Veri Paylaşımı
 
@@ -543,9 +543,9 @@ Sürüm 8.0.2'den başlayarak, yalnızca Intune tarafından yönetilen paylaşı
 
 ### <a name="copy-to-actions"></a>' Kopyalama ' eylemleri
 
-`UIActivityViewController` Ve `UIDocumentInteractionController`aracılığıyla belge paylaşırken, iOS, paylaşılan belgeyi açmayı destekleyen her uygulama için ' Kopyala ' eylemlerini görüntüler. Uygulamalar, Info.plist dosyalarındaki `CFBundleDocumentTypes` ayarı yoluyla destekledikleri belge türlerini bildirir. İlke yönetilmeyen uygulamalara paylaşımı yasaklarsa, bu paylaşım türü artık kullanılabilir olmaz. Bunun yerine kullanıcı, kullanıcı arabirimi olmayan Eylem uzantısını ekleyip bunu Intune Uygulama SDK’sına bağlamak zorunda kalır. Eylem uzantısı, yalnızca bir saplamadır. SDK, dosya paylaşım davranışını uygular. Aşağıdaki adımları izleyin:
+Ve aracılığıyla belge paylaşırken `UIActivityViewController` `UIDocumentInteractionController` , iOS, paylaşılan belgeyi açmayı destekleyen her uygulama Için ' Kopyala ' eylemlerini görüntüler. Uygulamalar, Info.plist dosyalarındaki `CFBundleDocumentTypes` ayarı yoluyla destekledikleri belge türlerini bildirir. İlke yönetilmeyen uygulamalara paylaşımı yasaklarsa, bu paylaşım türü artık kullanılabilir olmaz. Bunun yerine kullanıcı, kullanıcı arabirimi olmayan Eylem uzantısını ekleyip bunu Intune Uygulama SDK’sına bağlamak zorunda kalır. Eylem uzantısı, yalnızca bir saplamadır. SDK, dosya paylaşım davranışını uygular. Aşağıdaki adımları izleyin:
 
-1. Uygulamanız, kendi Info. plist `CFBundleURLTypes` altında, onun `-intunemam` karşılığına göre tanımlanmış en az bir ıgnmeurl içermelidir. Örneğin:
+1. Uygulamanız, kendi Info. plist altında, onun karşılığına göre tanımlanmış en az bir ıgnmeurl içermelidir `CFBundleURLTypes` `-intunemam` . Örnek:
     ```objc
     <key>CFBundleURLSchemes</key>
     <array>
@@ -554,7 +554,7 @@ Sürüm 8.0.2'den başlayarak, yalnızca Intune tarafından yönetilen paylaşı
     </array>
     ```
 
-2. Uygulamanızın ve eylem uzantınızın her ikisi de en az bir uygulama grubunu paylaşmalıdır ve uygulama grubu, uygulamanın ve uzantısının ıntunemamsettings sözlüklerinin altındaki `AppGroupIdentifiers` dizi altında listelenmelidir.
+2. Uygulamanızın ve eylem uzantınızın her ikisi de en az bir uygulama grubunu paylaşmalıdır ve uygulama grubu, `AppGroupIdentifiers` uygulamanın ve uzantısının ıntunemamsettings sözlüklerinin altındaki dizi altında listelenmelidir.
 
 3. Hem uygulama hem de eylem uzantınız, Anahtarlık paylaşım özelliğine sahip olmalı ve `com.microsoft.intune.mam` Anahtarlık grubunu paylaşmalıdır.
 
@@ -566,9 +566,9 @@ Sürüm 8.0.2'den başlayarak, yalnızca Intune tarafından yönetilen paylaşı
     IntuneMAMConfigurator -generateOpenInIcons /path/to/app.app -o /path/to/output/directory
     ```
 
-6. Uzantının Info. plist dosyasındaki ıntunemamsettings altında YES değeri ile adlı `OpenInActionExtension` bir Boole ayarı ekleyin.
+6. Uzantının Info. plist dosyasındaki ıntunemamsettings altında YES değeri ile adlı bir Boole ayarı ekleyin `OpenInActionExtension` .
 
-7. Öğesini tek `NSExtensionActivationRule` bir dosyayı ve uygulamanın `CFBundleDocumentTypes` önekli tüm türleri destekleyecek şekilde yapılandırın `com.microsoft.intune.mam`. Örneğin uygulama public.text ve public.image destekliyorsa, etkinleştirme kuralı şu şekilde olur:
+7. Öğesini `NSExtensionActivationRule` tek bir dosyayı ve uygulamanın önekli tüm türleri destekleyecek şekilde yapılandırın `CFBundleDocumentTypes` `com.microsoft.intune.mam` . Örneğin uygulama public.text ve public.image destekliyorsa, etkinleştirme kuralı şu şekilde olur:
 
     ```objc
     SUBQUERY (
@@ -707,7 +707,7 @@ Alternatif olarak, uygulamalar `IntuneMAMFilePolicyManager` kullanarak sahip kim
 
 Uygulama hem yönetilen hem de yönetilmeyen kullanıcıların verilerini içeren dosyalar oluşturursa, yönetilen kullanıcının verilerini şifrelemeden uygulama sorumludur. `IntuneMAMDataProtectionManager` içindeki `protect` ve `unprotect` API'lerini kullanarak veri şifreleyebilirsiniz.
 
-`protect` yöntemi, bir kimliği yönetilen veya yönetilmeyen kullanıcı olarak kabul eder. Kullanıcı yönetiliyorsa, veriler şifrelenir. Kullanıcı yönetilmiyorsa, kimliği kodlayan verilere bir üst bilgi eklenir ancak veriler şifrelenmez. Verilerin sahibini almak için `protectionInfo` yöntemini kullanabilirsiniz.
+`protect` yöntemi, bir kimliği yönetilen veya yönetilmeyen kullanıcı olarak kabul eder. Kullanıcı yönetiliyorsa, veriler şifrelenir. Kullanıcı yönetilmiyorsa, kimliği kodlayan verilere bir üst bilgi eklenir ancak veriler şifrelenmez. `protectionInfo`Verilerin sahibini almak için yöntemini kullanabilirsiniz.
 
 ### <a name="share-extensions"></a>Paylaşım uzantıları
 
@@ -745,10 +745,10 @@ Varsayılan olarak, uygulamalar tek kimlikli olarak değerlendirilir. SDK, kayı
     Bu yöntemin bir arka plan iş parçacığından çağrıldığını unutmayın. Kullanıcıya yönelik tüm veriler kaldırılana kadar uygulama bir değer döndürmemelidir (uygulama FALSE döndürürse dosyalar hariç olmak üzere).
 
 ## <a name="siri-intents"></a>Siri amaçları
-Uygulamanız Siri hedefleri ile tümleşiyorsa, bu senaryoyu destekleme yönergeleri için lütfen `areSiriIntentsAllowed` içindeki `IntuneMAMPolicy.h` açıklamalarını okuduğunuzdan emin olun. 
+Uygulamanız Siri hedefleri ile tümleşiyorsa, `areSiriIntentsAllowed` `IntuneMAMPolicy.h` Bu senaryoyu destekleme yönergeleri için lütfen içindeki açıklamalarını okuduğunuzdan emin olun. 
     
 ## <a name="notifications"></a>Bildirimler
-Uygulamanız bildirimler alırsa, bu senaryoyu destekleme yönergeleri için lütfen `notificationPolicy` içindeki `IntuneMAMPolicy.h` açıklamalarını okuduğunuzdan emin olun.  Uygulamaların ' de `IntuneMAMPolicyDidChangeNotification` `IntuneMAMPolicyManager.h`açıklanabileceği ve bu değeri Anahtarlık `UNNotificationServiceExtension` aracılığıyla bu değerle iletişim kurması önerilir.
+Uygulamanız bildirimler alırsa, `notificationPolicy` `IntuneMAMPolicy.h` Bu senaryoyu destekleme yönergeleri için lütfen içindeki açıklamalarını okuduğunuzdan emin olun.  Uygulamaların `IntuneMAMPolicyDidChangeNotification` ' de `IntuneMAMPolicyManager.h` açıklanabileceği ve bu değeri Anahtarlık aracılığıyla bu değerle iletişim kurması önerilir `UNNotificationServiceExtension` .
 ## <a name="displaying-web-content-within-application"></a>Uygulama Içinde Web Içeriğini görüntüleme
 Uygulamanızın Web sitesinde Web sitelerini görüntüleyebilme özelliği varsa ve görüntülenen Web sayfaları rasgele sitelere gidebilme özelliğine sahipse, uygulama, yönetilen verilerin Web görünümü aracılığıyla sızmaması için geçerli kimliği ayarlamak üzere responisble olur. Bunun örnekleri, bir arama motoruna doğrudan veya dolaylı bağlantıları olan ' bir özellik önerme ' veya ' geri bildirim ' Web sayfalarıdır.
 Çoklu kimlik uygulamaları, web görünümünü görüntülemeden önce boş dizeyi geçirerek ıntunemampolicymanager Setuipolicyıdentity öğesini çağırmalıdır. Web görünümü kapatıldıktan sonra, uygulama geçerli kimliğe geçirerek Setuipolicyıdentity öğesini çağırmalıdır.
@@ -807,7 +807,7 @@ Evet! Açık kaynak örnek uygulamamız [Wagr for iOS](https://github.com/Micros
 
 ### <a name="how-can-i-troubleshoot-my-app"></a>Uygulamamda nasıl sorun giderebilirim?
 
-İOS için Intune SDK 9.0.3 +, ilkeleri ve günlüğe kaydetme hatalarını test etmek üzere mobil uygulama içinde bir Tanılama Konsolu ekleyebilme özelliğini destekler. `IntuneMAMDiagnosticConsole.h`geliştiricilerin Intune `IntuneMAMDiagnosticConsole` tanılama konsolunu göstermek için kullanabileceği sınıf arabirimini tanımlar. Bu, test sırasında son kullanıcıların veya geliştiricilerin, sahip oldukları herhangi bir sorunu tanılamaya yardımcı olmak için Intune günlüklerini toplamasını ve paylaşmasını sağlar. Bu API, tümleştiricileri için isteğe bağlıdır.
+İOS için Intune SDK 9.0.3 +, ilkeleri ve günlüğe kaydetme hatalarını test etmek üzere mobil uygulama içinde bir Tanılama Konsolu ekleyebilme özelliğini destekler. `IntuneMAMDiagnosticConsole.h``IntuneMAMDiagnosticConsole`geliştiricilerin Intune tanılama konsolunu göstermek için kullanabileceği sınıf arabirimini tanımlar. Bu, test sırasında son kullanıcıların veya geliştiricilerin, sahip oldukları herhangi bir sorunu tanılamaya yardımcı olmak için Intune günlüklerini toplamasını ve paylaşmasını sağlar. Bu API, tümleştiricileri için isteğe bağlıdır.
 
 ## <a name="submit-your-app-to-the-app-store"></a>Uygulamanızı App Store’a gönderme
 

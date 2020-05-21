@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,15 +16,19 @@ ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a4d747a38dd8e2f95cafb25ec5705f83199f4c54
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696438"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690683"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Intune kiracı durumu sayfasını kullanın
-Microsoft Intune kiracı durumu sayfası, kiracınız hakkındaki güncel ve önemli ayrıntıları görüntüleyebileceğiniz merkezi bir merkezdir. Ayrıntılar lisans kullanılabilirliği ve kullanımı, bağlayıcı durumu ve Intune hizmeti hakkındaki önemli iletişimleri içerir.  
+
+Microsoft Intune kiracı durumu sayfası, kiracınız hakkındaki güncel ve önemli ayrıntıları görüntüleyebileceğiniz merkezi bir merkezdir. Ayrıntılar lisans kullanılabilirliği ve kullanımı, bağlayıcı durumu ve Intune hizmeti hakkındaki önemli iletişimleri içerir.
+
+> [!TIP]
+> Kiracı, Azure Active Directory (Azure AD) örneğidir. Intune aboneliğiniz bir Azure AD kiracısı tarafından barındırılır. Daha fazla bilgi için bkz. Azure AD belgelerinde [kiracı ayarlama](https://docs.microsoft.com/azure/active-directory/develop/quickstart-create-new-tenant) .
 
 Panoyu görüntülemek için [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) oturum açın **Kiracı Yönetimi**' ne gidin ve ardından **kiracı durumu**' nu seçin.
 
@@ -64,20 +68,20 @@ Listeden bir bağlayıcı seçtiğinizde, Portal bu bağlayıcı ile ilgili olan
 ## <a name="service-health-dashboard"></a>Hizmet durumu panosu  
 Hizmet durumu panosunda, kiracınızı etkileyen *hizmet olaylarına* ilişkin ayrıntıları ve güncelleştirmeler ve planlanan değişiklikler hakkında bilgi sağlayan *Intune haberlerini* görüntüleyebilirsiniz.
 
-### <a name="intune-service-health"></a>Intune hizmet durumu
+### <a name="intune-service-health-and-message-center"></a>Intune hizmet durumu ve ileti merkezi
 Microsoft 365 hizmet durumu panosuna veya her ikisi de [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com)bulunan ileti merkezine gitmek zorunda kalmadan etkin olaylar ve Danışma belgeleri ayrıntılarını görüntüleyin. Yalnızca kiracınızı etkileyen olaylar gösterilir.  
 
 Bir olay seçtiğinizde, olay ayrıntıları doğrudan kiracı durumu sayfasında sunulur. Geçmiş Danışma belgelerini ve olayları görüntülemek için **Geçmiş olayları/Danışma belgelerini**göster ' i seçin. Microsoft 365 Yönetim Merkezi açılır ve kiracınız için son 30 günden sonra Danışma belgelerini ve olayları görüntüleyebilirsiniz.  
 
-*Intune hizmet durumu*bilgilerini görüntülemek için, hesabınız Azure Active Directory veya Microsoft 365 Yönetim Merkezi 'Nde **genel yönetici** veya **Hizmet Yöneticisi** rolüne sahip olmalıdır. Bu izinleri atamak için, [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com) genel yönetici izinleriyle oturum açın. **Etkin kullanıcılar > kullanıcılar**' ı seçin ve ardından erişim gerektiren hesabı seçin. Roller için **Düzenle** ' yi seçin, *Hizmet Yöneticisi* veya *genel yönetici*' yi seçin ve ardından Izinleri atamak için Düzenle ' yi **kaydedin** .  
+*Intune hizmet durumu*bilgilerini görüntülemek için hesabınızın Azure Active Directory veya Microsoft 365 Yönetim Merkezi 'Nde **genel yönetici** veya **hizmet desteği Yöneticisi** rolüne sahip olması gerekir. Bu izinleri atamak için, [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com) genel yönetici izinleriyle oturum açın. **Etkin kullanıcılar > kullanıcılar**' ı seçin ve ardından erişim gerektiren hesabı seçin. Roller için **Düzenle** ' yi seçin, *hizmet desteği Yöneticisi* veya *genel yönetici*' yi seçin ve ardından izinleri atamak için düzenlemenizi **kaydedin** .  
 
 Intune hizmet durumu için iletişim tercihlerinizi yalnızca Microsoft 365 Yönetim Merkezi aracılığıyla ayarlayabilirsiniz.
 
-### <a name="intune-news"></a>Intune haberleri  
+### <a name="intune-message-center"></a>Intune Ileti Merkezi  
 Office Ileti merkezine gitmek zorunda kalmadan Intune hizmet ekibinin bilgilendirici iletişimlerini görüntüleyin. İletişimler, son zamanlarda Intune hizmetinde gerçekleşen veya kiracınızın bir yolu olan değişikliklerle ilgili mesajlar içerir.  
 
 Varsayılan olarak, en son 10 ve etkin iletiler görüntülenir. Eski iletileri görüntülemek için, Microsoft 365 Yönetim merkezinde *ileti merkezini* açmak üzere **geçmiş iletileri göster** ' i seçin.  
 
-Intune haberleri bilgilerini görüntülemek için hesabınızın Azure Active Directory **genel yönetici** veya **hizmet yöneticisi** rolüne veya Microsoft 365 Yönetim merkezinde **ileti merkezi okuyucu** rolüne sahip olması gerekir.  Bu izni atamak için yönetici izinlerine sahip [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com) oturum açın. **Etkin kullanıcılar > kullanıcılar**' ı seçin ve ardından erişim gerektiren hesabı seçin. *Roller*için **Düzenle** ' yi seçin, *takımlar iletişim Yöneticisi*' ni seçin ve ardından Izinleri atamak için Düzenle ' yi **kaydedin** .  
+Intune haberleri bilgilerini görüntülemek için hesabınızın Azure Active Directory 'de **genel yönetici** veya **hizmet desteği yöneticisi** rolüne veya Microsoft 365 Yönetim merkezinde **ileti merkezi okuyucu** rolüne sahip olması gerekir.  Bu izni atamak için yönetici izinlerine sahip [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com) oturum açın. **Etkin kullanıcılar > kullanıcılar**' ı seçin ve ardından erişim gerektiren hesabı seçin. *Roller*için **Düzenle** ' yi seçin, *takımlar iletişim Yöneticisi*' ni seçin ve ardından Izinleri atamak için Düzenle ' yi **kaydedin** .  
 
-Yalnızca Microsoft 365 Yönetim Merkezi aracılığıyla Intune haberleri için iletişim tercihlerinizi ayarlayabilirsiniz.
+Intune Ileti Merkezi için iletişim tercihlerinizi yalnızca Microsoft 365 Yönetim Merkezi aracılığıyla ayarlayabilirsiniz.

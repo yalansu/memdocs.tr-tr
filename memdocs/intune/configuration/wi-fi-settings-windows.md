@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61d84b0d1f5047df23e9571a0330768ed37eb921
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ea4b196a6b2fade8ca926d13c3436207cb4b764e
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80862831"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429764"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Intune’da Windows 10 ve üzeri cihazlar için Wi-Fi ayarları ekleme
 
@@ -69,8 +69,6 @@ Bu makalede bu ayarlar açıklanır.
   - **El ile yapılandır**: **Ara sunucu IP adresini** ve onun **Bağlantı noktası numarasını** girin.
   - **Otomatik Yapılandır**: proxy otomatik yapılandırma (PAC) betiğine işaret eden URL 'yi girin. Örneğin, `http://proxy.contoso.com/proxy.pac` girin.
 
-Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin. Profil oluşturuldu ve profiller listesinde gösteriliyor.
-
 ## <a name="enterprise-profile"></a>Kurumsal profil
 
 - **Wi-Fi türü**: **Kurumsal**’ı seçin.
@@ -116,7 +114,7 @@ Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin. Profil
   - **Korumalı PEAP** (PEAP)
 
     **EAP-TLS, EAP-TTLS ve PEAP ek ayarları**:
-    
+
     > [!NOTE]
     > Şu anda, EAP türünü kullanırken yalnızca SCEP sertifika profilleri destekleniyor. PKCS sertifika profilleri desteklenmiyor. Kullanıcıdan her sertifika girişi istendiğinde, bir SCEP sertifikası seçtiğinizden emin olun.
 
@@ -150,8 +148,6 @@ Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin. Profil
   - **Otomatik olarak yapılandır**: Ara sunucu otomatik yapılandırma (PAC) betiğine işaret eden URL'yi girin. Örneğin, `http://proxy.contoso.com/proxy.pac` girin.
 
 - **Wi-Fi profilinin Federal Bilgi İşleme Standardı (FIPS) ile uyumlu olmasını zorla** FIPS 140-2 standardıyla doğrulama yaparken bunu **Evet** olarak ayarlayın. Bu standart, şifreleme tabanlı güvenlik sistemleri kullanan tüm ABD federal resmi kurumlarında dijital olarak saklanan, hassas fakat gizli olmayan bilgileri korumak için gereklidir. **Hayır**’ı seçerseniz FIPS ile uyumlu olamazsınız.
-
-Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin. Profil oluşturuldu ve profiller listesinde gösteriliyor.
 
 ## <a name="use-an-imported-settings-file"></a>İçeri aktarılan ayarlar dosyasını kullanma
 

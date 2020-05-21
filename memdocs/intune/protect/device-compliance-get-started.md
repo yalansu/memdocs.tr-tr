@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9fa14dd54a820ed20f8b3b504a836392c7f428f
-ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
+ms.openlocfilehash: c2af5957d22b5b512b28f574f2a0996801e19018
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538154"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690518"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Intune'u kullanarak kuruluşunuzdaki kaynaklara erişim izni verme amacıyla cihazlarda kural oluşturun
 
@@ -86,24 +86,24 @@ Kullanıcı gruplarındaki kullanıcılara veya cihaz gruplarındaki cihazlara u
 
 Intune ayrıca bir dizi yerleşik uyumluluk ilkesi ayarına da sahiptir. Aşağıdaki yerleşik ilkeler, Intune'a kaydedilen tüm cihazlarda değerlendirilir:
 
-- **Kendisine hiçbir uyumluluk ilkesi atanmamış cihazları şöyle işaretle**: Bu özelliğin iki değeri vardır:
+- **Cihazları uyumluluk ilkesi atanmamış olarak işaretle**: Bu, uyumsuzluk için varsayılan bir eylemdir. Bu özelliğin iki değeri vardır:
 
   - **Uyumlu** (*varsayılan*): güvenlik özelliği kapalı
   - **Uyumlu değil**: güvenlik özelliği açık
 
   Bir cihaza bir uyumluluk ilkesi atanmamışsa, bu cihaz varsayılan olarak uyumlu olarak değerlendirilir. Uyumluluk ilkeleriyle koşullu erişim kullanıyorsanız, varsayılan ayarı **uyumlu değil**olarak değiştirmeniz önerilir. Bir ilke atanmadığı için son kullanıcı uyumsuzsa, [Şirket Portalı](../apps/company-portal-app.md)`No compliance policies have been assigned` ifadesine yer verir.
 
-- **Gelişmiş jailbreak algılama**: etkinleştirildiğinde, bu ayar jailbreak uygulanmış cihaz durumunun IOS/ıpados cihazlarında daha sık oluşmasına neden olur. Bu ayar yalnızca jailbreak uygulanmış cihazlarını engelleyen bir uyumluluk ilkesiyle hedeflenen cihazları etkiler. Bu özelliği etkinleştirmek, cihazın konum hizmetlerini kullanır ve pil kullanımını etkileyebilir. Kullanıcı konumu verileri Intune tarafından depolanmaz ve yalnızca arka planda jailbreak algılamayı daha sık tetiklemek için kullanılır. 
+- **Gelişmiş jailbreak algılama** (*IOS/ıpados için geçerlidir*): etkinleştirildiğinde, bu ayar jailbreak uygulanmış cihaz durumunun iOS/ıpados cihazlarında daha sık oluşmasına neden olur. Bu ayar yalnızca jailbreak uygulanmış cihazlarını engelleyen bir uyumluluk ilkesiyle hedeflenen cihazları etkiler. Bu özelliği etkinleştirmek, cihazın konum hizmetlerini kullanır ve pil kullanımını etkileyebilir. Kullanıcı konumu verileri Intune tarafından depolanmaz ve yalnızca arka planda jailbreak algılamayı daha sık tetiklemek için kullanılır. 
 
   Bu ayarın etkinleştirilmesi, cihazlarda şunları gerektirir:
   - Konum hizmetlerinin işletim sistemi düzeyinde etkinleştirilmesi.
   - Şirket Portalı konum hizmetlerini kullanmasına her zaman izin verin.
 
-  Değerlendirme, Şirket Portalı uygulaması açılarak veya cihazı fiziksel olarak yaklaşık 500 ölçüm veya daha fazla mesafeden bir uzaklığa göre hareket ettirilerek tetiklenir. İOS 13 ve üzerinde, bu özellik, cihazın arka planda konumunu kullanmasına izin Şirket Portalı vermeye devam etmek için kullanıcıların her zaman Izin ver ' i seçmesini ister. Kullanıcılar her zaman konum erişimine izin vermediğinde ve bu ayarı yapılandırılmış bir ilkeye sahip değilse, cihazları uyumsuz olarak işaretlenir. Intune 'un, her önemli konum değişikliğinin, bir cihazın ağ bağlantısına bağlı olarak bir jailbreak algılama denetimini güvence altına aldığından emin olamayacağını unutmayın.
+  Gelişmiş algılama, konum hizmetleri aracılığıyla çalışmaktadır. Değerlendirme, Şirket Portalı uygulaması açılarak veya cihazı fiziksel olarak yaklaşık 500 ölçüm veya daha fazla mesafede hareket ettirilerek tetiklenir. İOS 13 ve üzerinde, bu özellik, cihazın arka planda konumunu kullanmasına izin Şirket Portalı vermeye devam etmek için kullanıcıların her zaman Izin vermeyi seçmesini gerektirir. Kullanıcılar her zaman konum erişimine izin vermediğinde ve bu ayarı yapılandırılmış bir ilkeye sahip değilse, cihazları uyumsuz olarak işaretlenir. Intune 'un, her önemli konum değişikliğinin, bir cihazın ağ bağlantısına bağlı olarak bir jailbreak algılama denetimini güvence altına aldığından emin olamayacağını unutmayın.
 
-- **Uyumluluk durumu geçerlilik süresi (gün)**: Alınan tüm uyumluluk ilkeleri için cihazların durum rapor etme süresini girin. Bu süre içinde durum döndürmeyen cihazlar uyumsuz olarak kabul edilir. Varsayılan değer 30 gündür. En küçük değer 1 gündür.
+- **Uyumluluk durumu geçerlilik süresi (gün)**: Alınan tüm uyumluluk ilkeleri için cihazların durum rapor etme süresini girin. Bu süre içinde durum döndürmeyen cihazlar uyumsuz olarak kabul edilir. Varsayılan değer 30 gündür. Maksimum değer 120 gündür. En küçük değer 1 gündür.
 
-  Bu ayar, **etkin** varsayılan uyumluluk ilkesi (**cihazlar** > **izleyici** > **ayarı uyumluluğu**) olarak gösterilir. Bu ilke için arka plan görevi günde bir kez çalışır.
+  Bu ayar, **etkin** varsayılan uyumluluk ilkesi (**cihazlar**  >  **izleyici**  >  **ayarı uyumluluğu**) olarak gösterilir. Bu ilke için arka plan görevi günde bir kez çalışır.
 
 Bu ayarları izlemek için bu yerleşik ilkeleri kullanabilirsiniz. Intune ayrıca cihaz platformuna göre belirlenen farklı aralıklarla [yenileme yapar veya güncelleştirmeleri denetler](create-compliance-policy.md#refresh-cycle-times). [Microsoft Intune'daki cihaz ilkeleri ve profiller hakkında yaygın sorular, sorunlar ve çözümler](../configuration/device-profile-troubleshoot.md) sayfası iyi bir kaynaktır.
 
@@ -142,7 +142,7 @@ Aşağıdaki tabloda, bir uyumluluk ilkesi koşullu erişim ilkesi ile kullanıl
   - [Android](compliance-policy-create-android.md)
   - [Android Kurumsal](compliance-policy-create-android-for-work.md)
   - [iOS](compliance-policy-create-ios.md)
-  - [Mac OS](compliance-policy-create-mac-os.md)
+  - [macOS](compliance-policy-create-mac-os.md)
   - [Windows 10 Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
   - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
   - [Windows 8.1 ve üzeri](compliance-policy-create-windows-8-1.md)

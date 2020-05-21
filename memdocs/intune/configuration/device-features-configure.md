@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune-Azure ile iOS/ıpados veya macOS cihaz profili oluşturma | Microsoft Docs
-description: İOS, ıpados veya macOS cihaz profili ekleyin veya oluşturun ve ardından Microsoft Intune ' deki AirPrint, ana ekran düzeni, uygulama bildirimleri, paylaşılan cihaz, çoklu oturum açma ve Web içerik filtresi ayarları ayarlarını yapılandırın.
+description: İOS, ıpados veya macOS cihaz profili ekleyin veya oluşturun. Microsoft Intune 'daki AirPrint, ana ekran düzeni, uygulama bildirimleri, paylaşılan cihaz, çoklu oturum açma ve Web içeriği filtresi ayarlarını yapılandırın.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/09/2020
+ms.date: 05/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e72fc48608ebf32f3e32d4a94ab7203ee418d8f
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 0c50b43f2bad7b357c9f10a198c177a0ba47e1eb
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943816"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427710"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Intune 'da iOS, ıpados veya macOS cihaz özelliği ayarları ekleme
 
@@ -54,7 +54,7 @@ AirPrint hakkında daha fazla bilgi için Apple 'ın Web sitesinde [AirPrint hak
 
 ## <a name="app-notifications"></a>Uygulama bildirimleri
 
-İOS ve ıpados cihazlarınızdaki uygulamaların nasıl bildirim alacağını seçin. Örneğin, Intune 'dan bildirim merkezinde göstermek, kilit ekranında göstermek veya ses çalmak için uygulama bildirimleri gönderin.
+İOS ve ıpados cihazlarınızdaki uygulamaların nasıl bildirim alacağını seçin. Örneğin, bildirim merkezinde göstermek, kilit ekranında göstermek veya ses çalmak için uygulama bildirimleri gönderin.
 
 Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [iOS/ıpados üzerinde uygulama bildirimleri](ios-device-features-settings.md#app-notifications).
 
@@ -67,7 +67,7 @@ Bu özellik hakkında daha fazla bilgi için bkz. Apple 'ın Web sitesindeki [Bi
 
 ## <a name="associated-domains"></a>İlişkili etki alanları
 
-İlişkili etki alanları `contoso.com`, ve uygulamalarınız gibi etki alanlarınız arasında bir ilişki oluşturmanıza olanak sağlar. Bu özellik şunları yapmanıza olanak sağlar:
+İlişkili etki alanları, ve uygulamalarınız gibi etki alanlarınız arasında bir ilişki oluşturmanıza olanak sağlar `contoso.com` . Bu özellik şunları yapmanıza olanak sağlar:
 
 - Kuruluşunuzdaki uygulamalar ve Web siteleri arasında veri paylaşma ve oturum açma kimlik bilgileri.
 - Çoklu oturum açma uygulaması uzantısı, evrensel bağlantılar ve parola otomatik doldurma gibi Web sitenize dayalı uygulama özelliklerini kullanın.
@@ -206,7 +206,7 @@ Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [iOS/ıpados 
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:  
@@ -230,7 +230,7 @@ Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [iOS/ıpados 
     - [macOS](macos-device-features-settings.md)
 
 8. **İleri**’yi seçin.
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
     **İleri**’yi seçin.
 

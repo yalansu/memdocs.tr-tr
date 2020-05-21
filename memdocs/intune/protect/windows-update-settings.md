@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b18af35b0e741540637ecdde74877d1058a7915
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: c6cb913d0f3d3f806a8a9a2592624b2bcf376f40
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254716"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551919"
 ---
 # <a name="windows-update-settings-for-intune"></a>Intune için Windows Update ayarları  
 
@@ -248,8 +248,8 @@ Kullanıcı deneyimi ayarları, cihaz yeniden başlatma ve anımsatıcıları i�
     - **Evet**
     - **Hayır**
 
-### <a name="delivery-optimization-download-mode"></a>Teslim iyileştirme indirme modu  
+### <a name="delivery-optimization-download-mode"></a>Teslim Iyileştirme indirme modu  
 
-Teslim iyileştirme artık yazılım güncelleştirmeleri kapsamında bir Windows 10 güncelleştirme halkası 'nin parçası olarak yapılandırılmamıştır. Teslim iyileştirme artık cihaz yapılandırması ile ayarlanır. Ancak, önceki yapılandırma konsolunda kullanılabilir kalır. Bu önceki konfigürasyonları, *Yapılandırılmadı*olarak düzenleyerek kaldırabilirsiniz, ancak başka bir şekilde değiştirilemez. 
+Teslim Iyileştirme artık yazılım güncelleştirmeleri kapsamında bir Windows 10 güncelleştirme halkası 'nin parçası olarak yapılandırılmamıştır. Teslim Iyileştirme artık cihaz yapılandırması ile ayarlanır. Ancak, önceki yapılandırma konsolunda kullanılabilir kalır. Bu önceki konfigürasyonları, *Yapılandırılmadı*olarak düzenleyerek kaldırabilirsiniz, ancak başka bir şekilde değiştirilemez. 
 
 Yeni ve eski ilke arasındaki çakışmaları önlemek için bkz. [Windows 10 güncelleştirme halkalarından teslim Iyileştirmeyi kaldırma](../configuration/delivery-optimization-windows.md#remove-delivery-optimization-from-windows-10-update-rings) ve sonra ayarlarınızı bir teslim iyileştirme profiline taşıma.

@@ -6,7 +6,7 @@ keywords: Intune Veri Ambarı
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/14/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,18 +18,49 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36944b05a12b150c15e59f145efd9fef85598a2f
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: 8a4ddbb96c17e8e370fee73e6a6ec1d004df05f9
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881052"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709341"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Intune Veri Ambarı API’si için değişiklik günlüğü
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Intune Veri Ambarı hakkında güncel bilgiler edinin.
+
+## <a name="2004"></a>2004 
+_Yayımlanma tarihi 2020_
+
+### <a name="beta-changes"></a>Beta değişiklikleri
+
+Aşağıdaki tabloda, Intune veri ambarındaki **cihaz** varlığına eklenen özellik listelenmektedir.
+
+|    Koleksiyon                          |    Değiştir     |    Açıklama bilgileri                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    windowsOsEdition     |    Eklendi    |    Windows Işletim sistemi sürümü.                                                                                                                                                                                                                                                                     |
+
+## <a name="2003"></a>2003 
+_Yayımlanma tarihi 2020_
+
+### <a name="beta-changes"></a>Beta değişiklikleri
+
+Aşağıdaki tabloda, Intune veri ambarındaki **cihaz** varlığına eklenen özellikler listelenmiştir.
+
+|    Koleksiyon                          |    Değiştir     |    Açıklama bilgileri                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    ethernetMacAddress    |    Eklendi    |    Bu cihazın benzersiz ağ tanımlayıcısı.                                                                                                                                                                                                                                                                     |
+|    model    |    Eklendi    |    Cihaz modeli.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    Eklendi    |    Cihaza yüklü Office 365 sürümü.                                                                                                                                                                                                                                                                     |
+
+Aşağıdaki tabloda, Intune veri ambarındaki **Devicepropertyhistory** varlığına eklenen özellikler listelenmiştir.
+
+|    Koleksiyon                          |    Değiştir     |    Açıklama bilgileri                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    Physicalmemorybytes    |    Eklendi    |    Bayt cinsinden fiziksel bellek.                                                                                                                                                                                                                                                                     |
+|    totalStorageSpaceInBytes     |    Eklendi    |    Bayt cinsinden toplam depolama alanı.                                                                                                                                                                                                                                                                     |
 
 ## <a name="1903-part-2"></a>1903 (Bölüm 2)
 _Yayımlanma tarihi 2019_
@@ -43,7 +74,7 @@ Aşağıdaki tabloda, Intune veri ambarındaki son kaldırılan koleksiyonlar ve
 |    Mobileappdeviceuserınstallstatus    |    Kaldırıldı    |    Bunun yerine [Mobileappınstallstatuscounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts) kullanın.                                                                                                                                                                                                                                                                     |
 |    enrollmentTypes                     |    Kaldırıldı    |    Bunun yerine [Devicekayıtlarını Menttypes](intune-data-warehouse-collections.md#deviceenrollmenttypes) kullanın.                                                                                                                                                                                                                                                                                      |
 |    Mdmdurumlar                         |    Kaldırıldı    |    Bunun yerine [Karmaşıkstes](intune-data-warehouse-collections.md#compliancestates) kullanın.                                                                                                                                                                                                                                                                                               |
-|    workPlaceJoinStateTypes             |    Kaldırıldı    |    Bunun yerine `azureAdRegistered` [Devices](intune-data-warehouse-collections.md#devices) ve [devicepropertygeçmişteki](intune-data-warehouse-collections.md#devicepropertyhistories) özelliğini kullanın.                                                                                                                                                                                                             |
+|    workPlaceJoinStateTypes             |    Kaldırıldı    |    `azureAdRegistered`Bunun yerine [Devices](intune-data-warehouse-collections.md#devices) ve [devicepropertygeçmişteki](intune-data-warehouse-collections.md#devicepropertyhistories) özelliğini kullanın.                                                                                                                                                                                                             |
 |    clientRegistrationStateTypes        |    Kaldırıldı    |    Bunun yerine [Deviceregistrationstates](intune-data-warehouse-collections.md#deviceregistrationstates) kullanın.                                                                                                                                                                                                                                                                             |
 |    currentUser                         |    Kaldırıldı    |    Bunun yerine [Kullanıcılar](intune-data-warehouse-collections.md#users) koleksiyonunu kullanın.                                                                                                                                                                                                                                                                                                      |
 |    Mdmdeviceınventoryhistories         |    Kaldırıldı    |    Özelliklerin birçoğu gereksizdir veya artık [Devicepropertygeçmişleri](intune-data-warehouse-collections.md#devicepropertyhistories) veya [cihazlar](intune-data-warehouse-collections.md#devices) koleksiyonlarında bulunabilir. Bu iki koleksiyon ile önceden listelenmeyen tüm **Mdmdeviceınventorygeçmişözellikleri** artık kullanılamaz. Ayrıntıları aşağıda bulabilirsiniz.    |
@@ -71,7 +102,7 @@ Aşağıdaki tabloda, daha önce **Mdmdeviceınventorygeçmişin** koleksiyonund
 |    osName                      |    cihazlar koleksiyonunda deviceTypeKey, DeviceType koleksiyonuna başvuruyor    |
 |    phoneNumber                 |    cihazlar koleksiyonundaki phoneNumber                                            |
 |    platformType                |    cihazlar koleksiyonundaki model                                                  |
-|    ürün                     |    cihazlar koleksiyonunda deviceTypeKey                                          |
+|    product                     |    cihazlar koleksiyonunda deviceTypeKey                                          |
 |    productVersion              |    Devicepropertygeçmişde koleksiyonda osVersion                              |
 |    serialNumber                |    cihazlar koleksiyonunda serialNumber                                           |
 |    storageFree                 |    cihazlar koleksiyonundaki freeStorageSpaceInBytes özelliği                   |

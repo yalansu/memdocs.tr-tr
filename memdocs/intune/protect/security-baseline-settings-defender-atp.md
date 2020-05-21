@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: e1081395c733807c38dc940ebd1b7c2765da7a9a
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: 330a4387ef1a079b2a0f691bfb0b887117dd9e4b
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693407"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429349"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -596,7 +596,7 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
   [Cihazları kötüye bilgisayarlardan koruyun](https://go.microsoft.com/fwlink/?linkid=874499)  
 
   Bu ASR kuralı şu GUID aracılığıyla denetlenir: 26190899-1602-49e8-8b27-eb1d0a1ce869.
-  - **Yapılandırılmadı** -Windows varsayılanı geri yüklendi, alt işlemlerin oluşturulmasını engellemez.
+  - **Yapılandırılmadı** -Windows varsayılanı geri yüklenir, bu, alt işlemlerin oluşturulmasını engellemez.
   - **Kullanıcı tanımlı**
   - **Etkinleştir** (*varsayılan*)-Office iletişim uygulamalarının alt işlem oluşturması engellenir.
   - **Denetim modu** -Windows olayları, alt işlemlerin engellenmesi yerine oluşturulur.

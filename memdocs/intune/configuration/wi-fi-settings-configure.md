@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1ff20db13a87faea41d262da5742a428ec4d28f
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: ed04114f40ee15a5da2ccfec60abd72999a0c326
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587293"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709414"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Microsoft Intune’da cihazlarınız için Wi-Fi ayarları ekleme ve kullanma
 
@@ -39,11 +39,11 @@ Bu makalede, Wi-Fi profili oluşturma adımları listelenir. Ayrıca, her platfo
 
 Wi-Fi profilleri aşağıdaki cihaz platformlarını destekler:
 
-- Android 4 ve üzeri
+- Android 5 ve üzeri
 - Android Kurumsal ve bilgi noktası
-- iOS 8,0 ve üzeri
+- iOS 11,0 ve üzeri
 - ıpados 13,0 ve üzeri
-- macOS X 10,11 ve üzeri
+- macOS X 10,12 ve üzeri
 - Windows 10 ve üzeri, Windows 10 Mobile ve Windows holographic for Business
 
 > [!NOTE]
@@ -52,7 +52,7 @@ Wi-Fi profilleri aşağıdaki cihaz platformlarını destekler:
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:
@@ -60,7 +60,7 @@ Wi-Fi profilleri aşağıdaki cihaz platformlarını destekler:
       - **Android cihaz yöneticisi**
       - **Android Kurumsal**
       - **iOS/iPadOS**
-      - **Mac OS**
+      - **macOS**
       - **Windows 10 ve üzeri**
       - **Windows 8.1 ve üzeri**
 
@@ -68,8 +68,8 @@ Wi-Fi profilleri aşağıdaki cihaz platformlarını destekler:
 
       > [!TIP]
       >
-      > - Adanmış bir cihaz (bilgi noktası) olarak çalışan **Android kurumsal**  > cihazlarda **yalnızca cihaz sahibi****Wi-Fi**' ı seçin.
-      > - **Windows 8.1 ve sonrasında****Wi-Fi içeri aktar**’ı seçebilirsiniz. Bu seçenek, Wi-Fi ayarlarını daha önce başka cihazdan dışarı aktarmış olduğunuz bir XML dosyası olarak içeri aktarmanıza olanak tanır.
+      > - Adanmış bir cihaz (bilgi noktası) olarak çalışan **Android kurumsal** cihazlarda **yalnızca cihaz sahibi**  >  **Wi-Fi**' ı seçin.
+      > - **Windows 8.1 ve daha yeni bir sürümü**için **Wi-Fi içeri aktarmayı**seçebilirsiniz. Bu seçenek, Wi-Fi ayarlarını daha önce başka cihazdan dışarı aktarmış olduğunuz bir XML dosyası olarak içeri aktarmanıza olanak tanır.
 
 4. **Oluştur**’u seçin.
 5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
@@ -83,12 +83,12 @@ Wi-Fi profilleri aşağıdaki cihaz platformlarını destekler:
     - [Android cihaz yöneticisi](wi-fi-settings-android.md)
     - Adanmış cihazlar dahil [Android Enterprise](wi-fi-settings-android-enterprise.md)
     - [iOS/iPadOS](wi-fi-settings-ios.md)
-    - [Mac OS](wi-fi-settings-macos.md)
+    - [macOS](wi-fi-settings-macos.md)
     - [Windows 10 ve üzeri](wi-fi-settings-windows.md)
-    - [Windows 8.1 ve sonrası](wi-fi-settings-import-windows-8-1.md), Windows Holographic for Business dahil
+    - Windows holographic for Business dahil [Windows 8.1 ve daha yeni](wi-fi-settings-import-windows-8-1.md)
 
 8. **İleri**’yi seçin.
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
     **İleri**’yi seçin.
 

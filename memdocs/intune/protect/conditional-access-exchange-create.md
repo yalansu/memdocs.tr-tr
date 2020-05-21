@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36b39d20e666015ae040a1fa058dca1d167686e4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3cb279677f3693200112f663b1c5c538a3426dc9
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739911"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690635"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Intune için Exchange şirket içi erişimini yapılandırma
 
@@ -66,7 +66,10 @@ Koşullu erişimi yapılandırmadan önce, aşağıdaki yapılandırmaların mev
 - **İOS/ıpados üzerinde yerel e-posta uygulaması** -koşullu erişim ilkesi oluşturmak için bkz. [koşullu erişim ilkeleri oluşturma](../protect/create-conditional-access-intune.md)
 - **Android 4 veya üzeri sürümlerde Gmail gibi EAS posta istemcileri** -koşullu erişim ilkesi oluşturmak için bkz. [koşullu erişim ilkeleri oluşturma](../protect/create-conditional-access-intune.md)
 
+- **Android Cihaz Yöneticisi 'Nde EAS posta istemcileri** -koşullu erişim ilkesi oluşturmak için bkz. [koşullu erişim ilkeleri oluşturma](../protect/create-conditional-access-intune.md)
+
 - **Android iş profili cihazlarda EAS posta istemcileri** -Android iş profili cihazlarında yalnızca *Gmail* ve *dokuz iş için* desteklenir. Android iş profilleriyle çalışmak üzere koşullu erişim için, *Android Enterprise uygulaması Için Gmail veya dokuz iş* için *Gmail* bir e-posta profili dağıtmanız ve ayrıca bu uygulamaları gerekli bir yükleme olarak dağıtmanız gerekir. Uygulamayı dağıttıktan sonra cihaz tabanlı koşullu erişim ayarlayabilirsiniz.
+
 
 #### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>Android iş profili cihazlarına koşullu erişim ayarlamak için
 
@@ -74,13 +77,13 @@ Koşullu erişimi yapılandırmadan önce, aşağıdaki yapılandırmaların mev
   
   2. Gmail veya dokuz Iş uygulamasını **gerektiği**şekilde dağıtın.
 
-  3. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin, profil için **ad** ve **Açıklama** girin.
+  3. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin, profil için **ad** ve **Açıklama** girin.
 
   4. Platformda **Android Enterprise** ' **Platform**u seçin, **profil türünde** **e-posta** ' yı seçin.
 
   5. [E-posta profili ayarlarını](https://docs.microsoft.com/intune/configuration/email-settings-android-enterprise#android-enterprise)yapılandırın.
 
-  6. İşiniz bittiğinde, değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin.
+  6. İşiniz bittiğinde, değişikliklerinizi kaydetmek için **Tamam**  >  **Oluştur** ' u seçin.
 
   7. E-posta profilini oluşturduktan sonra [gruplara atayın](https://docs.microsoft.com/intune/device-profile-assign).
 
@@ -99,7 +102,7 @@ Windows 8.1 ve sonraki sürümlerde yerel **posta** uygulaması (ıNTUNE ile MDM
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Kiracı Yönetimi** > **Exchange erişimi**' ne gidin ve **Şirket içi Exchange erişimi**' ni seçin.
+2. **Kiracı Yönetimi**  >  **Exchange erişimi**' ne gidin ve **Şirket içi Exchange erişimi**' ni seçin.
 
 3. Şirket içi **Exchange erişimi** bölmesinde, Şirket *içi Exchange erişim denetimini etkinleştirmek*için **Evet** ' i seçin.
 
@@ -117,7 +120,7 @@ Windows 8.1 ve sonraki sürümlerde yerel **posta** uygulaması (ıNTUNE ile MDM
 
    Yapılandırmanızı kaydetmek için **Kaydet** ' i seçin ve **Exchange erişimi** bölmesine dönün.
 
-6. Ardından, Intune şirket içi Exchange Connector ayarlarını yapılandırın. Konsolunda, **Kiracı Yönetimi** > **Exchange erişimi**> **Exchange ActiveSync şirket içi Bağlayıcısı** ' nı seçin ve ardından yapılandırmak istediğiniz Exchange kuruluşunun bağlayıcısını seçin.
+6. Ardından, Intune şirket içi Exchange Connector ayarlarını yapılandırın. Konsolunda, **Kiracı Yönetimi**  >  **Exchange erişimi** >  **Exchange ActiveSync şirket içi Bağlayıcısı** ' nı seçin ve ardından yapılandırmak istediğiniz Exchange kuruluşunun bağlayıcısını seçin.
 
 7. **Kullanıcı bildirimleri**Için, *Kullanıcı bildirim* iletisini değiştirebileceğiniz kuruluş iş akışını **Düzenle** ' yi açmak için **Düzenle** ' yi seçin.
 

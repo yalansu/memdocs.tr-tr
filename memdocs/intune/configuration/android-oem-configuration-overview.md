@@ -5,24 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/02/2020
+ms.date: 05/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: ''
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: ''
+ms.reviewer: jieyan
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c28229808c6404e08c569c7a8300db5c925c79e6
-ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
+ms.openlocfilehash: 9875e394fb72e1c190bcc57da5e6ba4db04c1051
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83401598"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690584"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Microsoft Intune 'de OEMConfig ile Android kurumsal cihazlarını kullanma ve yönetme
 
@@ -31,6 +31,8 @@ Microsoft Intune 'de, Android Kurumsal cihazları için OEM 'e özgü ayarları 
 Bu özellik şu platformlarda geçerlidir:  
 
 - Android Kurumsal
+
+Android Cihaz Yöneticisi cihazları için [Mobil uzantılar (MX)](android-zebra-mx-overview.md)kullanın.
 
 Bu makalede, OEMConfig açıklanmakta, önkoşulları listelemektedir, bir yapılandırma profili oluşturma ve Intune 'da desteklenen OEMConfig uygulamalarının nasıl listelendiği gösterilmektedir.
 
@@ -56,7 +58,9 @@ OEMConfig kullanırken aşağıdaki bilgileri unutmayın:
 - Intune, OEMConfig uygulamasının şemasını, yapılandırmak için kullanıma sunar. Intune, uygulama tarafından belirtilen şemayı doğrulamaz veya değiştirmez. Bu nedenle, şema yanlışsa veya hatalı veriler içeriyorsa, bu veriler cihazlara gönderilir. Şemada kaynaklanan bir sorun bulursanız, kılavuza yönelik OEM ile görüşün.
 - Intune, uygulama şemasının içeriğini etkilemez veya denetlemez. Örneğin, Intune dizeler, dil, izin verilen eylemler ve benzeri bir denetim yoktur. OEMConfig ile cihazlarını yönetme hakkında daha fazla bilgi için OEM 'ye başvurmanızı öneririz.
 - Herhangi bir zamanda, OEM 'Ler desteklenen özellikleri ve şemaları güncelleştirebilir ve yeni bir uygulamayı Google Play karşıya yükleyebilir. Intune, Google Play 'ten her zaman OEMConfig uygulamasının en son sürümünü eşitler. Intune, şemanın veya uygulamanın eski sürümlerini korumaz. Sürüm çakışmaları ' nı çalıştırırsanız daha fazla bilgi için OEM 'ye başvurmanızı öneririz.
-- Bir cihaza bir OEMConfig profili atayın. Aynı cihaza birden çok profil atanmışsa, tutarsız bir davranış görebilirsiniz. OEMConfig modeli cihaz başına yalnızca tek bir ilkeyi destekler.
+- Zeköşeli cihazlarda birden çok profil oluşturabilir ve bunları aynı cihaza atayabilirsiniz. Daha fazla bilgi için bkz. [Zeköşeli cihazlarda Oemconfig](oemconfig-zebra-android-devices.md).
+
+  Zemilden olmayan cihazlarda OEMConfig modeli yalnızca cihaz başına tek bir ilkeyi destekler. Aynı cihaza birden çok profil atanmışsa, tutarsız bir davranış görebilirsiniz.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
@@ -153,6 +157,7 @@ OEMConfig Apps, standart uygulamalarla karşılaştırıldığında, Google tara
 | --- | --- | ---|
 | Ascom | com. Ascom. Myco. oemconfig | |
 | Cipherlab | com. cipherlab. oemconfig | |
+| Dataloi | com. datalobir. Settings. oemconfig | |
 | Honeywell | com. Honeywell. oemconfig |  |
 | HMDGlobal-7,2 | com. hmdglobal. app. oemconfig. n7_2 | 
 | HMDGlobal-4,2 | com. hmdglobal. app. oemconfig. n4_2 | 

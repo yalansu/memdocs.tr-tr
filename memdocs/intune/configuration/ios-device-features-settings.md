@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fce26aab90989f31ee56a9abd58f617c780d9c4b
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 235a79f644bf15b82eb9e8750f04519238760aca
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943884"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551936"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune 'da ortak iOS/ıpados özelliklerini kullanmak için iOS ve ıpados cihaz ayarları
 
@@ -60,15 +60,15 @@ AirPrint sunucuları eklemek için şunları yapabilirsiniz:
 AirPrinter sunucuları eklemek için, yazıcının IP adresi, kaynak yolu ve bağlantı noktası gerekir. Aşağıdaki adımlarda bu bilgilerin nasıl alınacağı gösterilmektedir.
 
 1. AirPrint yazıcıları ile aynı yerel ağa (alt ağ) bağlı bir Mac üzerinde, açık **Terminal** ( **/Applications/Utilities**).
-2. Terminalde yazın `ippfind`ve ENTER ' u seçin.
+2. Terminalde yazın `ippfind` ve ENTER ' u seçin.
 
-    Yazıcı bilgilerini aklınızda edin. Örneğin, şuna benzer bir şey döndürebilir `ipp://myprinter.local.:631/ipp/port1`. İlk bölüm, yazıcının adıdır. Son Bölüm (`ipp/port1`) kaynak yoludur.
+    Yazıcı bilgilerini aklınızda edin. Örneğin, şuna benzer bir şey döndürebilir `ipp://myprinter.local.:631/ipp/port1` . İlk bölüm, yazıcının adıdır. Son Bölüm ( `ipp/port1` ) kaynak yoludur.
 
-3. Terminalde yazın `ping myprinter.local`ve ENTER ' u seçin.
+3. Terminalde yazın `ping myprinter.local` ve ENTER ' u seçin.
 
-   IP adresini aklınızda edin. Örneğin, şuna benzer bir şey döndürebilir `PING myprinter.local (10.50.25.21)`.
+   IP adresini aklınızda edin. Örneğin, şuna benzer bir şey döndürebilir `PING myprinter.local (10.50.25.21)` .
 
-4. IP adresi ve kaynak yolu değerlerini kullanın. Bu örnekte, IP adresi `10.50.25.21`ve kaynak yolu olur. `/ipp/port1`
+4. IP adresi ve kaynak yolu değerlerini kullanın. Bu örnekte, IP adresi `10.50.25.21` ve kaynak yolu olur `/ipp/port1` .
 
 ## <a name="home-screen-layout"></a>Giriş ekranı düzeni
 
@@ -210,10 +210,10 @@ Bu özellik şu platformlarda geçerlidir:
 
 - **Kilit ekranı dipnotu**: cihazlar kaybolur veya çalınırsa, cihazın döndürülmesini sağlamaya yardımcı olabilecek bir durum girin. İstediğiniz herhangi bir metin girebilirsiniz. Örneğin `If found, call Contoso at ...` gibi bir URI girebilirsiniz.
 
-  Cihaz belirteçleri, bu alanlara cihaza özgü bilgiler eklemek için de kullanılabilir. Örneğin, seri numarasını göstermek için girin `Serial Number: {{serialnumber}}`. Kilit ekranında metin şuna benzer şekilde `Serial Number 123456789ABC`görünür. Değişken girerken, küme ayraçları `{{ }}`kullandığınızdan emin olun. [Uygulama yapılandırma belirteçleri](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) , kullanılabilecek değişkenlerin bir listesini içerir. Ayrıca, herhangi bir `deviceName` cihaza özgü değeri de kullanabilirsiniz.
+  Cihaz belirteçleri, bu alanlara cihaza özgü bilgiler eklemek için de kullanılabilir. Örneğin, seri numarasını göstermek için girin `Serial Number: {{serialnumber}}` . Kilit ekranında metin şuna benzer şekilde görünür `Serial Number 123456789ABC` . Değişken girerken, küme ayraçları kullandığınızdan emin olun `{{ }}` . [Uygulama yapılandırma belirteçleri](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) , kullanılabilecek değişkenlerin bir listesini içerir. Ayrıca, `deviceName` herhangi bir cihaza özgü değeri de kullanabilirsiniz.
 
   > [!NOTE]
-  > Değişkenler kullanıcı arabiriminde doğrulanmaz ve büyük/küçük harfe duyarlıdır. Sonuç olarak, yanlış girişle kaydedilmiş profiller görebilirsiniz. Örneğin, yerine girdiğinizde `{{DeviceID}}` `{{deviceid}}`, cihazın benzersiz kimliği yerine değişmez dize gösterilir. Doğru bilgileri girdiğinizden emin olun.
+  > Değişkenler kullanıcı arabiriminde doğrulanmaz ve büyük/küçük harfe duyarlıdır. Sonuç olarak, yanlış girişle kaydedilmiş profiller görebilirsiniz. Örneğin, `{{DeviceID}}` `{{deviceid}}` ya da ' {{DeviceID}} ' yerine girerseniz, CIHAZıN benzersiz kimliği yerine değişmez dize gösterilir. Doğru bilgileri girdiğinizden emin olun. Tüm küçük harfler veya tüm büyük harfler desteklenir, ancak bir karışımı değildir. 
 
 ## <a name="single-sign-on"></a>Çoklu oturum açma
 
@@ -230,7 +230,7 @@ Bu özellik şu platformlarda geçerlidir:
 
     Ayrıca, **Bölge** metin kutusuna girdiğiniz metinle bölge değerinin üzerine yazabilirsiniz.
 
-    Örneğin contoso, Avrupa, Asya ve Kuzey Amerika dahil olmak üzere birkaç bölgeye sahiptir. Contoso, Asya kullanıcılarının SSO kullanmasını istiyor ve uygulama, UPN 'nin `username@asia.contoso.com` biçiminde olmasını istiyor. **Kullanıcı asıl adı**' nı seçtiğinizde, her bir kullanıcının BÖLGESI Azure AD 'den alınır `contoso.com`. Böylece, Asya 'daki kullanıcılar için **Kullanıcı asıl adı**' nı seçin ve `asia.contoso.com`girin. Bunun yerine kullanıcının UPN 'si `username@asia.contoso.com` `username@contoso.com`olur.
+    Örneğin contoso, Avrupa, Asya ve Kuzey Amerika dahil olmak üzere birkaç bölgeye sahiptir. Contoso, Asya kullanıcılarının SSO kullanmasını istiyor ve uygulama, UPN 'nin biçiminde olmasını istiyor `username@asia.contoso.com` . **Kullanıcı asıl adı**' nı seçtiğinizde, her bir kullanıcının BÖLGESI Azure AD 'den alınır `contoso.com` . Böylece, Asya 'daki kullanıcılar için **Kullanıcı asıl adı**' nı seçin ve girin `asia.contoso.com` . `username@asia.contoso.com`Bunun yerine kullanıcının UPN 'si olur `username@contoso.com` .
 
   - **Intune CIHAZ kimliği**: Intune, ıNTUNE cihaz kimliğini otomatik olarak seçer.
 
@@ -245,7 +245,7 @@ Bu özellik şu platformlarda geçerlidir:
 
 - **Uygulamalar**: Kullanıcıların cihazlarına çoklu oturum açma kullanan uygulamalar **ekleyin** .
 
-  Dizi `AppIdentifierMatches` , uygulama paketi kimlikleriyle eşleşen dizeler içermelidir. Bu dizeler gibi tam eşleşmeler `com.contoso.myapp`olabilir veya \* joker karakterini kullanarak paket kimliğinde bir ön ek eşleşmesi girebilirsiniz. Joker karakter, bir nokta karakterinden (.) sonra görünmelidir ve dizenin sonunda, gibi yalnızca bir kez görünebilir `com.contoso.*`. Joker karakter eklendiğinde, paket kimlikleri bu ön ekle başlayan tüm uygulamaların hesaba erişimine izin verilir.
+  `AppIdentifierMatches`Dizi, uygulama paketi kimlikleriyle eşleşen dizeler içermelidir. Bu dizeler gibi tam eşleşmeler olabilir `com.contoso.myapp` veya joker karakterini kullanarak paket kimliğinde bir ön ek eşleşmesi girebilirsiniz \* . Joker karakter, bir nokta karakterinden (.) sonra görünmelidir ve dizenin sonunda, gibi yalnızca bir kez görünebilir `com.contoso.*` . Joker karakter eklendiğinde, paket kimlikleri bu ön ekle başlayan tüm uygulamaların hesaba erişimine izin verilir.
 
   **Uygulama Adı**’nı kullanarak paket kimliğini ayırt etmenize yardımcı olacak bir kolay ad ekleyin.
 
@@ -254,11 +254,11 @@ Bu özellik şu platformlarda geçerlidir:
   Örneğin, bir Kullanıcı bu sitelerden birine bağlanırsa, iOS/ıpados cihazı çoklu oturum açma kimlik bilgilerini kullanır. Kullanıcıların ek kimlik bilgileri girmesi gerekmez. Multi-Factor Authentication etkinleştirilirse, kullanıcıların ikinci kimlik doğrulamasını girmesi gerekir.
 
   > [!NOTE]
-  > Bu URL'ler düzgün biçimlendirilmiş FQDN'ler olmalıdır. Apple bunların `http://<yourURL.domain>` biçiminde olmasını gerektirir.
+  > Bu URL'ler düzgün biçimlendirilmiş FQDN'ler olmalıdır. Apple bunların biçiminde olmasını gerektirir `http://<yourURL.domain>` .
 
-  URL eşleştirme desenleri `http://` veya `https://` ile başlamalıdır. Basit bir dize eşleşmesi çalıştırılır, bu nedenle `http://www.contoso.com/` URL öneki eşleşmez. `http://www.contoso.com:80/` İOS 10.0 + ve ıpados 13.0 + ile eşleşen tüm değerleri girmek \* için tek bir joker karakter kullanılabilir. Örneğin, `http://*.contoso.com/` `http://store.contoso.com/` ve `http://www.contoso.com`ile eşleşir.
+  URL eşleştirme desenleri `http://` veya `https://` ile başlamalıdır. Basit bir dize eşleşmesi çalıştırılır, bu nedenle `http://www.contoso.com/` URL öneki eşleşmez `http://www.contoso.com:80/` . İOS 10.0 + ve ıpados 13.0 + ile \* eşleşen tüm değerleri girmek için tek bir joker karakter kullanılabilir. Örneğin, `http://*.contoso.com/` ve ile eşleşir `http://store.contoso.com/` `http://www.contoso.com` .
 
-  `http://.com` Ve `https://.com` desenleri SıRASıYLA tüm http ve https URL 'leri ile eşleşir.
+  `http://.com`Ve `https://.com` desenleri SıRASıYLA tüm http ve https URL 'leri ile eşleşir.
 
 - **Yenileme sertifikası**: kimlik doğrulaması için Sertifikalar (parolalar değil) kullanılıyorsa, mevcut SCEP veya PFX sertifikasını kimlik doğrulama sertifikası olarak seçin. Genellikle, bu sertifika VPN, Wi-Fi veya e-posta gibi diğer profiller için kullanıcılara dağıtılan aynı sertifikadır.
 
@@ -283,7 +283,7 @@ Bu özellik şu platformlarda geçerlidir:
     - **Yer Işareti yolu**: Apple bu ayarı değiştirdi. Tüm yer işaretleri **onaylanan siteler** klasörüne gider. Yer işaretleri girdiğiniz yer işareti yoluna gitmez.
     - **Başlık**: yer işareti için açıklayıcı bir başlık girin.
 
-    Herhangi bir URL girmezseniz, kullanıcılar `microsoft.com`, `microsoft.net`ve `apple.com`dışında herhangi bir Web sitesine erişemez. Bu URL 'Lere Intune tarafından otomatik olarak izin verilir.
+    Herhangi bir URL girmezseniz, kullanıcılar, ve dışında herhangi bir Web sitesine erişemez `microsoft.com` `microsoft.net` `apple.com` . Bu URL 'Lere Intune tarafından otomatik olarak izin verilir.
 
 ## <a name="single-sign-on-app-extension"></a>Çoklu oturum açma uygulama uzantısı
 
@@ -315,15 +315,15 @@ Bu özellik şu platformlarda geçerlidir:
 
   Paylaşılan cihaz modu ve bu aygıtın nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. iOS cihazları için [paylaşılan cihaz moduna](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) ve [paylaşılan cihaz moduna](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices)genel bakış.  
 
-- **UZANTı kimliği** (yeniden yönlendirme ve kimlik bilgisi): SSO uygulama uzantınızı tanımlayan paket tanımlayıcısını (gibi) girin `com.apple.extensiblesso`.
+- **UZANTı kimliği** (yeniden yönlendirme ve kimlik bilgisi): SSO uygulama uzantınızı tanımlayan paket tanımlayıcısını (gibi) girin `com.apple.extensiblesso` .
 
-- **Takım Kimliği** (yeniden yönlendirme ve kimlik bilgisi): SSO uygulama uzantınızın ekip tanımlayıcısını girin. Takım tanımlayıcısı, Apple tarafından oluşturulan ve gibi 10 karakterlik alfasayısal bir dizedir (sayılar ve harfler) `ABCDE12345`. Takım KIMLIĞI gerekli değildir.
+- **Takım Kimliği** (yeniden yönlendirme ve kimlik bilgisi): SSO uygulama uzantınızın ekip tanımlayıcısını girin. Takım tanımlayıcısı, Apple tarafından oluşturulan ve gibi 10 karakterlik alfasayısal bir dizedir (sayılar ve harfler) `ABCDE12345` . Takım KIMLIĞI gerekli değildir.
 
   [Takım kimliğinizi bulun](https://help.apple.com/developer-account/#/dev55c3c710c) (Apple 'ın Web sitesini açar) daha fazla bilgi içerir.
 
-- **Bölge** (kimlik bilgileri ve Kerberos): kimlik doğrulama Realm adını girin. Bölge adı, gibi büyük harfli olmalıdır `CONTOSO.COM`. Genellikle, bölge adınız DNS etki alanı adınızla aynıdır, ancak tümü büyük harfle aynıdır.
+- **Bölge** (kimlik bilgileri ve Kerberos): kimlik doğrulama Realm adını girin. Bölge adı, gibi büyük harfli olmalıdır `CONTOSO.COM` . Genellikle, bölge adınız DNS etki alanı adınızla aynıdır, ancak tümü büyük harfle aynıdır.
 
-- **Etki alanları** (kimlik bilgileri ve Kerberos): SSO aracılığıyla kimlik doğrulayabilecek sitelerin etki alanı veya ana bilgisayar adlarını girin. Örneğin, Web siteniz ise `mysite.contoso.com` `mysite` , ana bilgisayar adı ve `contoso.com` etki alanı adıdır. Kullanıcılar bu sitelerden birine bağlandıklarında, uygulama uzantısı kimlik doğrulama sınamasını işler. Bu kimlik doğrulaması, kullanıcıların oturum açmak için yüz KIMLIĞI, Touch ID veya Apple pincode/geçiş kodu kullanmasına izin verir.
+- **Etki alanları** (kimlik bilgileri ve Kerberos): SSO aracılığıyla kimlik doğrulayabilecek sitelerin etki alanı veya ana bilgisayar adlarını girin. Örneğin, Web siteniz ise, `mysite.contoso.com` `mysite` ana bilgisayar adı ve `contoso.com` etki alanı adıdır. Kullanıcılar bu sitelerden birine bağlandıklarında, uygulama uzantısı kimlik doğrulama sınamasını işler. Bu kimlik doğrulaması, kullanıcıların oturum açmak için yüz KIMLIĞI, Touch ID veya Apple pincode/geçiş kodu kullanmasına izin verir.
 
   - Çoklu oturum açma uygulama uzantılarınızın Intune profillerindeki tüm etki alanları benzersiz olmalıdır. Farklı türlerde SSO uygulama uzantıları kullanıyor olsanız bile, bir etki alanını hiçbir oturum açma uygulama uzantısı profilinde tekrarlayamıyorum.
   - Bu etki alanları büyük/küçük harfe duyarlı değildir.
@@ -331,14 +331,14 @@ Bu özellik şu platformlarda geçerlidir:
 - **URL 'ler** (yalnızca yeniden yönlendir): kimlik SAĞLAYıCıLARıNıZıN URL öneklerini girin adına yeniden yönlendirme uygulama uzantısı SSO kullanır. Kullanıcılar bu URL 'lere yeniden yönlendirildiğinde, SSO uygulama uzantısı SSO 'yu müdahale eder ve sorar.
 
   - Intune çoklu oturum açma uygulama uzantısı profillerindeki tüm URL 'Lerin benzersiz olması gerekir. Farklı türlerde SSO uygulama uzantıları kullanıyor olsanız bile, hiçbir SSO uygulama uzantısı profilinde bir etki alanını tekrarlayabilirsiniz.
-  - URL 'Ler veya `http://` `https://`ile başlamalıdır.
+  - URL 'Ler veya ile başlamalıdır `http://` `https://` .
 
 - **Ek yapılandırma** (Microsoft Azure AD, yeniden yönlendirme ve kimlik bilgisi): SSO uygulama uzantısına geçirilecek uzantıya özgü ek veriler girin:
-  - **Anahtar**: eklemek istediğiniz öğenin adını girin, örneğin `user name`.
+  - **Anahtar**: eklemek istediğiniz öğenin adını girin, örneğin `user name` .
   - **Tür**: veri türünü girin. Seçenekleriniz şunlardır:
 
     - Dize
-    - Boole: **yapılandırma değerinde**, veya `False`girin `True` .
+    - Boole: **yapılandırma değerinde**, veya girin `True` `False` .
     - Tamsayı: **yapılandırma değeri**alanına bir sayı girin.
 
   - **Değer**: verileri girin.
@@ -357,7 +357,7 @@ Bu özellik şu platformlarda geçerlidir:
 - **Asıl ad** (yalnızca Kerberos): Kerberos sorumlusunun Kullanıcı adını girin. Bölge adını eklemeniz gerekmez. Örneğin, içinde `user@contoso.com` `user` asıl addır ve `contoso.com` bölge adıdır.
 
   > [!TIP]
-  > - Ayrıca, küme ayraçları `{{ }}`girerek asıl ad içindeki değişkenleri de kullanabilirsiniz. Örneğin, Kullanıcı adını göstermek için girin `Username: {{username}}`. 
+  > - Ayrıca, küme ayraçları girerek asıl ad içindeki değişkenleri de kullanabilirsiniz `{{ }}` . Örneğin, Kullanıcı adını göstermek için girin `Username: {{username}}` . 
   > - Ancak, değişkenler kullanıcı arabiriminde doğrulanmamış ve büyük/küçük harfe duyarlı olduğundan değişken değiştirme konusunda dikkatli olun. Doğru bilgileri girdiğinizden emin olun.
 
 - **Active Directory site kodu** (yalnızca Kerberos): Kerberos uzantısının kullanması gereken Active Directory sitenin adını girin. Kerberos uzantısı Active Directory site kodunu otomatik olarak bulagerekebilmeniz için bu değeri değiştirmeniz gerekebilir.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e77c1dd32bc70b94d5c4fdd74ea82dbd65211e38
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: ee69e70c243ae7016cbfa2e79a6f69ae2058000d
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166647"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690645"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Microsoft Intune’a bir Windows iş kolu uygulaması ekleme
 
@@ -37,7 +37,7 @@ ms.locfileid: "82166647"
 ## <a name="select-the-app-type"></a>Uygulama türünü seçin
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin.
+2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, **diğer** uygulama türleri altında **iş kolu uygulaması**' nı seçin.
 4. **Seç**' e tıklayın. **Uygulama ekleme** adımları görüntülenir.
 
@@ -50,7 +50,7 @@ ms.locfileid: "82166647"
    Uygulama ayrıntıları görüntülenir.
 
     > [!NOTE]
-    > Windows uygulamaları için dosya uzantıları **.msi**, **.appx**, **.appxbundle**, **.msix** ve **.msixbundle**'dır.  
+    > Windows uygulamaları için dosya uzantıları **.msi**, **.appx**, **.appxbundle**, **.msix** ve **.msixbundle**'dır. **. Msix**hakkında daha fazla bilgi için bkz. [maltı belge](https://docs.microsoft.com/windows/msix/) ve [maltı uygulama dağıtımı](https://docs.microsoft.com/windows/msix/desktop/managing-your-msix-deployment-enterprise).
 
 3. İşiniz bittiğinde uygulamayı eklemek için **uygulama paketi dosyası** bölmesinde **Tamam** ' ı seçin.
 
@@ -99,7 +99,7 @@ Oluşturduğunuz uygulama artık uygulamalar listesinde görünür. Bu listede, 
 [!INCLUDE [shared-proc-lob-updateapp](../includes/shared-proc-lob-updateapp.md)]
 
    > [!NOTE]
-   > Intune hizmetinin yeni bir APPX dosyasını cihaza başarıyla dağıtması için, APPX paketinizin AppxManifest. xml dosyasındaki `Version` dizeyi artırmanız gerekir.
+   > Intune hizmetinin yeni bir APPX dosyasını cihaza başarıyla dağıtması için, `Version` appx paketinizin AppxManifest. xml dosyasındaki dizeyi artırmanız gerekir.
 
 ## <a name="configure-a-self-updating-mobile-msi-app-to-ignore-the-version-check-process"></a>Sürüm denetim işlemini yoksaymak için bir kendi kendini güncelleştiren MSI uygulaması yapılandırma
 

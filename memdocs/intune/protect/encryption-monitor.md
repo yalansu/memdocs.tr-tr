@@ -17,24 +17,24 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0b634dad49b11e39e9a046688f0b5fd9ddc53ab4
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 5e90cb7ad97ce3fc0fe728a3d8b7d7c122605751
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255005"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429856"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Intune ile cihaz şifrelemesini izleme
 
 Microsoft Intune şifreleme raporu, cihazın şifreleme durumu hakkındaki ayrıntıları görüntülemek ve cihaz kurtarma anahtarlarını yönetmek için seçenekleri bulmak için merkezi bir konumdur. Kullanılabilir kurtarma anahtarı seçenekleri, görüntülemekte olduğunuz cihazın türüne bağlıdır.
 
-Raporu bulmak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın. **Cihazlar** > **İzleyicisi**' ni seçin ve sonra *yapılandırma*altında **şifreleme raporu**' nu seçin.
+Raporu bulmak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın. **Cihazlar**  >  **İzleyicisi**' ni seçin ve sonra *yapılandırma*altında **şifreleme raporu**' nu seçin.
 
 ## <a name="view-encryption-details"></a>Şifreleme ayrıntılarını görüntüle
 
 Şifreleme raporu, yönettiğiniz desteklenen cihazlar genelinde ortak ayrıntıları gösterir. Aşağıdaki bölümlerde, Intune 'un raporda sunduğu bilgiler hakkındaki ayrıntılar sağlanmaktadır.
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 
 Şifreleme raporu, aşağıdaki işletim sistemi sürümlerini çalıştıran cihazlarda raporlamayı destekler:
 
@@ -96,7 +96,7 @@ Raporu bulmak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.mic
 
 - **Profil durumu Özeti** : Bu cihaza uygulanan profillerin Özeti. Özet, uygulanabilir profiller genelinde en az iyi koşulu temsil eder. Örneğin, birkaç uygulanabilir profilden yalnızca biri bir hata ile sonuçlanırsa, *profil durumu Özeti* *hata*görüntüler.
 
-  Bir durumun daha fazla ayrıntılarını görüntülemek için **Intune** > **cihaz yapılandırma** > **profilleri**' ne gidin ve profili seçin. İsteğe bağlı olarak, **cihaz durumu** ' nu seçin ve ardından bir cihaz seçin.
+  Bir durumun daha fazla ayrıntılarını görüntülemek için **Intune**  >  **cihaz yapılandırma**  >  **profilleri**' ne gidin ve profili seçin. İsteğe bağlı olarak, **cihaz durumu** ' nu seçin ve ardından bir cihaz seçin.
 
 - **Durum ayrıntıları** – cihazın şifreleme durumu hakkında gelişmiş ayrıntılar.
 
@@ -169,68 +169,20 @@ Raporu bulmak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.mic
 
 Bu rapor, cihaz gruplarıyla ilgili sorunları belirlemek için kullanılabilir. Örneğin, tüm rapor *Dosya kasasının Kullanıcı tarafından zaten etkinleştirilmiş olduğu*MacOS cihazlarının listesini tanımlamak için raporu kullanabilirsiniz. Bu, Intune 'un dosya Kasası Ayarlarını yönetebilmesi için el ile şifresinin çözülmesi gereken cihazları gösterir.
 
-## <a name="filevault-recovery-keys"></a>Filekasası kurtarma anahtarları
+## <a name="manage-recovery-keys"></a>Kurtarma anahtarlarını yönetme
 
-Intune, bir macOS cihazını dosya kasası ile ilk kez şifrele, kişisel bir kurtarma anahtarı oluşturulur. Şifreleme sonrasında cihaz, kişisel anahtarı son kullanıcıya tek bir kez görüntüler.
+Kurtarma anahtarlarını yönetme hakkında daha fazla bilgi için, Intune belgelerinde aşağıdakilere bakın:
 
-Intune, yönetilen cihazlarda kişisel kurtarma anahtarının bir kopyasını sağlayabilir. Anahtarların Emanet, Intune yöneticilerinin cihazları korumaya yardımcı olmak için anahtarları döndürmesine ve kullanıcıların kayıp veya döndürülmüş bir kişisel kurtarma anahtarını kurtarmasına olanak sağlar.
+macOS Filekasası:
+- [Kişisel kurtarma anahtarını al](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [Kurtarma anahtarlarını döndür](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
+- [Kurtarma anahtarlarını kurtar](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 
-Intune, kişisel kurtarma anahtarlarını döndürmek ve kurtarmak için birden çok seçeneği destekler. Geçerli kişisel anahtarın kaybolması veya risk altında olması düşünülmek, bir anahtarı döndürmenizi bir neden olur.
-
-> [!IMPORTANT]
-> Intune tarafından değil, kullanıcılar tarafından şifrelenen cihazlar Intune tarafından yönetilemez. Bu, Intune 'un bu cihazların kişisel kurtarmasını ve kurtarma anahtarı döndürmesini yönetemeyeceği anlamına gelir. Intune 'un cihaz için dosya kasasını ve kurtarma anahtarlarını yönetebilmesi için, kullanıcının cihazının şifresini çözmesine ve ardından Intune 'un cihazı şifrelemesine izin vermelidir.
-
-### <a name="rotate-recovery-keys"></a>Kurtarma anahtarlarını döndür
-
-- **Otomatik döndürme**: yönetici olarak, kişisel kurtarma anahtarı dönüşü için otomatik olarak yeni kurtarma anahtarı oluşturmak üzere filekasa ayarını yapılandırabilirsiniz. Bir cihaz için yeni bir anahtar oluşturulduğunda, anahtar kullanıcıya gösterilmez. Bunun yerine, kullanıcının anahtarı bir yöneticiden ya da Şirket Portalı uygulamasını kullanarak alması gerekir.
-
-- **El ile döndürme**: yönetici olarak, Intune ile yönettiğiniz ve filekasasıyla şifrelenen bir cihazın bilgilerini görüntüleyebilirsiniz. Daha sonra, şirket cihazları için kurtarma anahtarını el ile döndürmeyi tercih edebilirsiniz. Kişisel cihazlar için kurtarma anahtarlarını döndüremezsiniz.
-
-  Kurtarma anahtarını döndürmek için:
-
-  1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-  
-  2. **Devices** Cihazlar> **tüm cihazlar**' ı seçin.
-  
-  3. Cihaz listesinden, şifrelenen ve anahtarını döndürmek istediğiniz aygıtı seçin. Ardından Izleyici ' nin altında, **kurtarma anahtarları**' nı seçin.
-  
-  4. Kurtarma anahtarları bölmesinde, **Filekasası kurtarma anahtarını Döndür**' ü seçin.
-
-     Cihazın Intune ile bir sonraki denetlemesi sırasında kişisel anahtar döndürülür. Gerektiğinde yeni anahtar, son kullanıcı tarafından Şirket portalı üzerinden alınabilir.
-
-### <a name="recover-recovery-keys"></a>Kurtarma anahtarlarını kurtar
-
-- **Yönetici**: Yöneticiler, filekasasıyla şifrelenen cihazların kişisel kurtarma anahtarlarını görüntüleyemez.
-
-- **Son Kullanıcı**: son kullanıcılar herhangi bir cihazdan Şirket portalı Web sitesini kullanarak yönetilen cihazlarından herhangi biri için geçerli kişisel kurtarma anahtarını görüntüler. Şirket Portalı uygulamasından kurtarma anahtarlarını görüntüleyemezsiniz.
-
-  Kurtarma anahtarını görüntülemek için:
-  
-  1. Herhangi bir cihazdan *Intune şirket portalı* Web sitesinde oturum açın.
-
-  2. Portalda **cihazlar** ' a gidin ve filekasasıyla şifrelenen MacOS cihazını seçin.
-
-  3. **Kurtarma anahtarını al**' ı seçin. Geçerli kurtarma anahtarı görüntülenir.
-
-## <a name="bitlocker-recovery-keys"></a>BitLocker kurtarma anahtarları
-
-Intune, Windows 10 cihazlarınızın BitLocker anahtar kimliklerini ve kurtarma anahtarlarını Intune portalından görüntüleyebilmeniz için BitLocker için Azure AD dikey penceresine erişim sağlar. Erişilebilir olması için cihazın, Azure AD 'ye yönelik anahtarları olması gerekir.
-
-1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-
-2. **Cihazlar** > **tüm cihazlar**' ı seçin.
-
-3. Listeden bir cihaz seçin ve ardından *izleyici*altında **kurtarma anahtarları**' nı seçin.
-  
-   Azure AD 'de anahtarlar kullanılabilir olduğunda aşağıdaki bilgiler kullanılabilir:
-   - BitLocker anahtar KIMLIĞI
-   - BitLocker kurtarma anahtarı
-   - Sürücü Türü
-
-   Anahtarlar Azure AD 'de olmadığında, Intune *Bu cihaz Için hiçbir BitLocker anahtarı bulunamadığını*gösterir.
-
-BitLocker için bilgi, [BitLocker yapılandırma hizmeti sağlayıcısı](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP) kullanılarak elde edilir. BitLocker CSP, Windows 10 sürüm 1709 ve üzeri sürümlerde ve Windows 10 Pro sürüm 1809 ve üzeri sürümlerde desteklenir.
+Windows 10 BitLocker:
+- [BitLocker kurtarma anahtarlarını döndür](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bir [cihaz uyumluluk](compliance-policy-create-windows.md) ilkesi oluşturun.
+[BitLocker ilkesini yönetme](../protect/encrypt-devices.md)
+
+[FileVault ilkesini yönetme](encrypt-devices-filevault.md)
