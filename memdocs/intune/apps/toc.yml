@@ -165,7 +165,7 @@
             - name: Uygulama koruma ilkelerine genel bakış
               href: app-protection-policy.md
               displayName: app; protection; policy
-            - name: APP kullanan veri koruma çerçevesi
+            - name: Uygulama koruma ilkeleri kullanan veri koruma altyapısı
               href: app-protection-framework.md
             - name: Uygulama koruma ilkeleri oluşturma
               items:
