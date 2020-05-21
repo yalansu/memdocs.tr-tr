@@ -28,6 +28,8 @@
       href: terms-and-conditions-create.md
     - name: Kısıtlamalar
       href: enrollment-restrictions-set.md
+    - name: Intune ve Azure AD cihaz sınırlarını anlama
+      href: device-limit-intune-azure.md
     - name: Apple MDM anında iletme sertifikası
       href: apple-mdm-push-certificate-get.md
     - name: Kurumsal tanımlayıcılar

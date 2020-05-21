@@ -18,8 +18,12 @@
     - name: Profile genel bakış
       href: device-profile-create.md
     - name: Özel ayarlar
-      href: custom-settings-configure.md
-      displayName: oma-uri
+      displayName: 'oma-uri, csp'
+      items:
+        - name: Özel profiller oluşturma
+          href: custom-settings-configure.md
+        - name: HoloLens 2 örneği
+          href: custom-profile-hololens.md
     - name: Cihaz ayarlarını ve özelliklerini kısıtlama
       href: device-restrictions-configure.md
       displayName: device restrictions
