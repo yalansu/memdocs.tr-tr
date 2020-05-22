@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9657353dd877b380d506e588934e3f6fd29b51c1
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: 6d60d7f366159777548e61fdf52aadedfecb32ae
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587028"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764042"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Intune kullanarak cihazlara e-posta ayarları ekleme
 
@@ -29,9 +29,9 @@ Microsoft Intune, kuruluşunuzdaki cihazlara dağıtabileceğiniz farklı e-post
 
 Aşağıdaki cihazlarda yerleşik e-posta ayarlarını yapılandırmak için e-posta profillerini kullanabilirsiniz:
 
-- Samsung KNOX Standard 4,0 ve üzeri üzerinde Android Cihaz Yöneticisi
+- Samsung KNOX Standard 5,0 ve üzeri üzerinde Android Cihaz Yöneticisi
 - Android Kurumsal
-- iOS 8,0 ve üzeri
+- iOS 11,0 ve üzeri
 - ıpados 13,0 ve üzeri
 - Windows Phone 8,1 ve üzeri
 - Windows 10 (masaüstü) ve Windows 10 Mobile
@@ -41,7 +41,7 @@ Bu makalede, Microsoft Intune’da e-posta profili oluşturma işlemi gösterili
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:  
@@ -71,7 +71,7 @@ Bu makalede, Microsoft Intune’da e-posta profili oluşturma işlemi gösterili
     - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
 
 8. **İleri**’yi seçin.
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
     **İleri**’yi seçin.
 
@@ -85,7 +85,7 @@ Bu makalede, Microsoft Intune’da e-posta profili oluşturma işlemi gösterili
 
 E-posta profilleri kullanıcı gruplarına değil cihaz gruplarına atanır. Cihazda sadece bir e-posta profili olduğunda bile e-posta profilini kaldırmanın farklı yolları vardır:
 
-- **Seçenek 1**: e-posta profilini açın (**cihaz** > **yapılandırma profilleri** > profilinizi seçin) ve **atamalar**' ı seçin. **Ekle** sekmesi, profil atanmış grupları gösterir. Gruba sağ tıklayın ve **Kaldır**’ı seçin. Değişikliklerinizi kaydetmek için **Kaydet**’e tıklamayı unutmayın.
+- **Seçenek 1**: e-posta profilini açın (**cihaz**  >  **yapılandırma profilleri** > profilinizi seçin) ve **atamalar**' ı seçin. **Ekle** sekmesi, profil atanmış grupları gösterir. Gruba sağ tıklayın ve **Kaldır**’ı seçin. Değişikliklerinizi kaydetmek için **Kaydet**’e tıklamayı unutmayın.
 
 - **2. Seçenek**: [Cihazı devre dışı bırakın veya silin](../remote-actions/devices-wipe.md). Veri ve ayarları seçmeli olarak veya tamamen kaldırmak için bu eylemleri kullanabilirsiniz.
 

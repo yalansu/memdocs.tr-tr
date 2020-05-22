@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: add599a715d32eac84b2784de976de4caf17faa9
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 5f50005ace235c66b26ed441169a62cf73bae6d9
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428800"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764110"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Microsoft Intune ile Apple Volume Purchase Program aracılığıyla satın alınan iOS ve macOS uygulamalarını yönetme
 
@@ -88,7 +88,7 @@ Mevcut satın alınan VPP içeriğini ve belirteçleri Apple Business Manager ve
 2. Devam etmeden önce kuruluşunuzdaki tüm VPP satınalmacıların 1. adımı tamamladığınızdan emin olun.
 3. Satın alınan tüm uygulamaların ve lisansların Apple Business Manager veya Apple Okul Yöneticisi 'ndeki uygulamalara ve kitaplara geçirildiğini doğrulayın.
 4. **Apple Business (veya okul) Yöneticisi**  >  **ayarları**  >  **uygulamalarına**gidip  >  **sunucu belirteçlerimi**Kitaplar ' a giderek yeni konum belirtecini indirin.
-5. **Kiracı yönetim**  >  **bağlayıcılarına giderek,**  >  **Apple VPP belirteçlerini** ve belirteci eşitleyerek Microsoft Endpoint Manager Yönetim Merkezi 'nde konum belirtecini güncelleştirin.
+5. Microsoft Endpoint Manager Yönetim Merkezi 'ndeki konum belirtecini **kiracı yönetim**  >  **bağlayıcıları ' na giderek ve**  >  **Apple VPP belirteçlerini** belirteçlerini ve belirteci el ile karşıya yükleyerek güncelleştirin.
 
 ## <a name="upload-an-apple-vpp-or-location-token"></a>Apple VPP veya Location belirtecini karşıya yükleme
 
@@ -158,7 +158,7 @@ Son kullanıcı, birkaç senaryoda VPP uygulama yüklemesi için istem alır. A�
 
 Belirli bir cihaz, Kullanıcı veya uygulamayı temel alan tüm ilişkili iOS/ıpados veya macOS toplu satın alma programı (VPP) uygulama lisanslarını iptal edebilirsiniz.  Ancak iOS/ıpados ve macOS platformları arasında bazı farklılıklar vardır. 
 
-|  | iOS/iPadOS | Mac OS |
+|  | iOS/iPadOS | macOS |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Uygulama atamasını Kaldır | Bir kullanıcıya atanmış bir uygulamayı kaldırdığınızda, Intune kullanıcı veya cihaz lisansını geri kazanır ve uygulamayı cihazdan kaldırır. | Bir kullanıcıya atanmış bir uygulamayı kaldırdığınızda, Intune kullanıcı veya cihaz lisansını geri kazanır. Uygulama cihazdan kaldırılmadı. |
 | Uygulama lisansını iptal et | Kullanıcı veya cihazdan uygulama lisansını geri kazanır bir uygulama lisansını iptal etme. Uygulamayı cihazdan kaldırmak için atamayı **kaldırmak** üzere değiştirmeniz gerekir. | Kullanıcı veya cihazdan uygulama lisansını geri kazanır bir uygulama lisansını iptal etme. İptal edilen lisans olan macOS uygulaması cihazda kullanılabilir durumda kalır, ancak bir lisans Kullanıcı veya cihaza yeniden atanana kadar güncelleştirilemez. Apple 'a göre, bu gibi uygulamalar 30 günlük yetkisiz kullanım süresinden sonra kaldırılır. Ancak, Apple atama kaldırma eylemini kullanarak Intune 'un uygulamayı kaldırması için bir yol sağlamaz. |

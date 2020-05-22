@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09c8713bd9f0e63182dd94187de1711ef65af802
-ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
+ms.openlocfilehash: 35c2a9f5dec506d1a9f0eafc9c82f277cd2635db
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732967"
+ms.locfileid: "83764229"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS/iPadOS cihazlarını Apple’ın Otomatik Cihaz Kayıt Anlaşması ile otomatik olarak kaydetme
 
@@ -44,9 +44,6 @@ ADE kayıtları, Şirket Portalı uygulamasının App Store sürümü ile uyumlu
 Kayıt sırasında modern kimlik doğrulamayı etkinleştirmek için, ADE profilinde VPP 'yi (toplu satın alma programı) **yükleme Şirket portalı** kullanarak uygulamayı cihaza gönderin. Daha fazla bilgi için bkz. [Apple Ade Ile iOS/ıpados cihazlarını otomatik olarak kaydetme](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 Şirket Portalı otomatik olarak güncelleştirilmesini ve Şirket Portalı uygulamayı ADE ile zaten kaydedilmiş cihazlara sağlamak için, [uygulama yapılandırma ilkesi](../apps/app-configuration-policies-use-ios.md) uygulanmış bir gerekli toplu satın alma programı (VPP) uygulaması olarak ıntune aracılığıyla şirket portalı uygulamasını dağıtın.
-
-> [!NOTE]
-> Otomatik cihaz kaydı sırasında, Şirket Portalı tek uygulama modunda çalışırken **daha fazla bilgi edinin** bağlantısına tıkladığınızda tek uygulama modundayken bir hata mesajı oluşur. Kayıt tamamlandıktan sonra, cihaz artık tek bir uygulama modunda olmadığında CP 'de daha fazla bilgi görüntüleyebilirsiniz. 
 
 ## <a name="what-is-supervised-mode"></a>Denetimli mod nedir?
 
@@ -237,7 +234,7 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
     |------------------------------------------|------------------------------------------|
     | <strong>Geçiş kodu</strong> | Kullanıcıdan geçiş kodu ister. Güvenliği sağlanmayan veya erişim denetimi başka bir yolla (cihazı tek uygulamayla sınırlandıran bilgi noktası modu gibi) sağlanan cihazlar için her zaman geçiş kodu isteyin. İOS/ıpados 7,0 ve üzeri için. |
     | <strong>Konum Hizmetleri</strong> | Kullanıcıdan konum ister. MacOS 10,11 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
-    | <strong>Geri Yükleme</strong> | Uygulamalar & veri ekranını görüntüleyin. Bu ekran kullanıcıya cihazı kurarken iCloud Backup'tan verileri geri yükleme veya aktarma seçeneği sağlar. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
+    | <strong>Yükleyebilmek</strong> | Uygulamalar & veri ekranını görüntüleyin. Bu ekran kullanıcıya cihazı kurarken iCloud Backup'tan verileri geri yükleme veya aktarma seçeneği sağlar. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
     | <strong>iCloud ve Apple Kimliği</strong> | Kullanıcıya Apple Kimliği ile oturum açma ve iCloud'u kullanma seçenekleri sağlar. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için.   |
     | <strong>Hüküm ve Koşullar</strong> | Kullanıcının Apple'ın hüküm ve koşullarını kabul etmesini gerektirir. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
     | <strong>Touch ID</strong> | Kullanıcıya cihaz için parmak izi tanımlama özelliğini ayarlama seçeneği sağlar. MacOS 10.12.4 ve üzeri ve iOS/ıpados 8,1 ve üzeri için. |

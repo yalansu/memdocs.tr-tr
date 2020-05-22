@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: ed3f9f6f01c8dc2df3a89daee991d9f8c61056b9
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: d546c92cb498a58c649ed0668dc254bbd6903699
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210324"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791841"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Cihazımı kaydettiğimde kuruluşum hangi bilgileri görebilir?
 
@@ -51,7 +51,14 @@ Bir cihazı Microsoft Intune’a kaydettiğinizde kuruluşunuz kişisel bilgiler
 - IMEI
 
  > [!NOTE]
- > Android kurumsal tam yönetilen ve ayrılmış cihazlarda, tüm uygulama envanterini göremezsiniz.    
+ > Android kurumsal tam yönetilen ve ayrılmış cihazlarda, tüm uygulama envanterini göremezsiniz.
+ 
+ > [!NOTE]
+ > Uygulama, aşağıdaki yollarla yüklendiğinde **yönetilen uygulama** olarak kabul edilir:
+ > 1. Bir Kullanıcı, Intune Yöneticisi tarafından **kullanılabilir** olarak yayımlandıktan sonra uygulamayı şirket portalı uygulamasından yükler.
+ > 2. Uygulama, Intune Yöneticisi tarafından **gerekli** olduğu gibi yayımlanır ve cihaza yüklenir. 
+ >
+ > Kuruluşunuzdaki bir BT yöneticisiyseniz veya destek sorumlusu varsa ve Intune 'da uygulama yönetimi hakkında daha fazla bilgi istiyorsanız bkz. [yönetilmeyen uygulamaların, yönetilen uygulamaların ve Mam uygulamaların yeteneklerini anlama](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/understanding-the-capabilities-of-unmanaged-apps-managed-apps/ba-p/249164).
     
 **Kuruluşunuzun görme olasılığı olan şeyler:**
 

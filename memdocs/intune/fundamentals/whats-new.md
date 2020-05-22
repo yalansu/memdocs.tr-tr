@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 05/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb23c67fa4a750728987122a44cbcf7a6f04df05
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: c737de8a991bc8d96e38d729292be721c6bdd1cf
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709545"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791853"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -71,7 +71,7 @@ Toplu satın alma programı (VPP) kullanılabilir uygulamalar olarak yayımlanan
 
 
 #### <a name="unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-company-portal---4404429-----"></a>Şirket Portalı Azure AD kurumsal ve Office Online uygulamalarının birleştirilmiş teslimi<!-- 4404429   -->
-*Bu özellik devam ediyor ve önümüzdeki birkaç hafta içinde kullanıma alınıyor. Özellik denetimlerini Kullanıcı arabiriminde görebilirsiniz, ancak ayarlar birkaç hafta boyunca etkili olmayacaktır.*
+*Bu özellik gecikti.*
 Intune 'un **Özelleştirme** bölmesinde Şirket portalı hem **Azure AD kurumsal uygulamalarını** hem de **Office Online uygulamalarını** **gizleme** veya **gösterme** seçeneğini belirleyebilirsiniz. Her Son Kullanıcı tüm uygulama kataloglarını seçilen Microsoft hizmetinden görürler. Varsayılan olarak, her bir ek uygulama kaynağı **gizleyecek**şekilde ayarlanır. Bu özellik ilk olarak Şirket Portalı Web sitesinde, Windows, iOS/ıpados ve takip eden macOS şirket portallarında desteğiyle etkili olur. Bu yapılandırma ayarını bulmak için [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde **Kiracı Yönetimi**  >  **özelleştirmesi** ' nı seçin. İlgili bilgiler için bkz. [Intune şirket portalı uygulamalar, Şirket portalı Web sitesi ve Intune uygulaması nasıl özelleştirilir](../apps/company-portal-app.md).
 
 #### <a name="android-company-portal-user-experience---5736084----"></a>Android Şirket Portalı Kullanıcı deneyimi<!-- 5736084  -->
@@ -169,6 +169,7 @@ Kullanıcılar cihazlarından anında iletme bildirimini seçerken, neden uyumsu
 #### <a name="endpoint-security-content-and-new-features---5720009-5892558-7130145-5653324-7140602----"></a>Uç nokta güvenlik içeriği ve yeni özellikler<!-- 5720009 5892558, 7130145, 5653324, 7140602  -->
 
 Intune [Endpoint Security](../protect/endpoint-security.md) belgeleri artık kullanılabilir. Microsoft Endpoint Manager Yönetim Merkezi 'nin uç nokta güvenlik düğümünde şunları yapabilirsiniz:
+
 - Yönetilen cihazlarınıza odaklanmış güvenlik ilkeleri oluşturun ve dağıtın
 - Microsoft Defender Gelişmiş tehdit koruması ile tümleştirmeyi yapılandırın ve güvenlik görevlerini yönetin ATP ekibiniz tarafından tanımlandığı şekilde risk altındaki cihazlarda riskleri düzeltmeye yardımcı olur
 - Güvenlik temellerini yapılandırma
@@ -182,13 +183,15 @@ Intune [Endpoint Security](../protect/endpoint-security.md) belgeleri artık kul
   - Yeni bir *genel önizlemede*, Windows 10 güvenlik duvarı Ilkesi Için [ **Microsoft Defender güvenlik duvarı kuralları** profili](../protect/endpoint-security-firewall-policy.md#firewall-profiles) ' ni kullanabilirsiniz. Bu profilin her örneğiyle, Microsoft Defender güvenlik duvarı profillerinizi karmaşıklama etmek için en fazla 150 güvenlik duvarı kuralı yapılandırabilirsiniz. 
   - Hesap koruması güvenlik ilkesi önizlemede kalır. 
 
-- Artık [**bir uç nokta güvenlik ilkesi yinelemesi oluşturabilirsiniz**](../protect/endpoint-security-policy.md#duplicate-a-policy). Yinelemeler, özgün ilkenin ayarlar yapılandırmasını tutar, ancak yeni bir ad alır ve gruplar eklemek için düzenlenene kadar gruplara atamalar eklemeyin.  
+- Artık [**bir uç nokta güvenlik ilkesi yinelemesi oluşturabilirsiniz**](../protect/endpoint-security-policy.md#duplicate-a-policy). Yinelemeler, özgün ilkenin ayarlar yapılandırmasını tutar, ancak yeni bir ad alır. Sonra yeni ilke örneği, yeni ilke örneğini eklemek üzere düzenlemeye kadar gruplara atamalar içermez. Aşağıdaki ilkeleri çoğaltabilirsiniz:
   - Virüsten Koruma
   - Disk şifrelemesi
   - Güvenlik duvarı
   - Uç nokta algılama ve yanıt
   - Saldırı yüzeyini azaltma
   - Hesap koruması
+
+- Artık [**bir güvenlik taban çizgisi yinelemesi oluşturabilirsiniz**](../protect/security-baselines.md#duplicate-a-security-baseline). Yinelemeler özgün taban çizgisinin ayarlar yapılandırmasını tutar, ancak yeni bir ad alır. Yeni temel örnek, yeni temel örneği eklemek için düzenlenene kadar gruplara atamalar içermez.
 
 - Endpoint Security virüsten koruma ilkesi için yeni bir rapor kullanılabilir: [**Windows 10 sağlıksız uç noktalar**](../protect/endpoint-security-antivirus-policy.md#windows-10-unhealthy-endpoints). Bu rapor, uç nokta güvenlik virüsten koruma ilkenizi görüntülerken seçebileceğiniz yeni bir sayfasıdır. Rapor, MDM ile yönetilen Windows 10 cihazlarınızın virüsten koruma durumunu görüntüler.  
 
@@ -289,7 +292,7 @@ Yalnızca listedeki ilk kurala göre kabul edilir. Bu davranış sabittir ve Int
 
 Şunlara uygulanır:
 - iOS/iPadOS
-- Mac OS
+- macOS
 
 VPN profilleri hakkında daha fazla bilgi için bkz. [VPN profilleri oluşturma](../configuration/vpn-settings-configure.md).
 
@@ -427,7 +430,7 @@ Yapılandırabileceğiniz ayar hakkında daha fazla bilgi için bkz. [MacOS ciha
 
 Bu özellik şu platformlarda geçerlidir:
 
-- Mac OS
+- macOS
 
 ## <a name="week-of-march-16-2020-2003-service-release"></a>16 Mart 2020 haftası (2003 hizmet sürümü)
 
@@ -999,7 +1002,7 @@ Yapılandırabileceğiniz SSO uygulama uzantısı ayarlarının tam aralığın�
 Şunlara uygulanır:
 
 - iOS/iPadOS
-- Mac OS
+- macOS
 
 #### <a name="we-have-updated-two-device-restriction-settings-for-ios-and-ipados-devices-to-correct-their-behavior---5701352------"></a>İOS ve ıpados cihazları için davranışlarını düzeltmek üzere iki cihaz kısıtlama ayarını güncelleştirdik<!-- 5701352    -->
 İOS cihazları için, **Kablosuz PKI güncelleştirmelerine izin** veren cihaz kısıtlama profilleri oluşturabilir ve **USB kısıtlı modunu engeller** (**cihazlar**  >  **cihaz yapılandırma**  >  **profilleri**,  >  **Create profile**  >  profil türü için **cihaz kısıtlamaları** > platform için**iOS/ıpados** oluşturma). Bu sürümden önce, aşağıdaki ayarlar için Kullanıcı arabirimi ayarları ve açıklamaları hatalıydı ve artık düzeltildi. Bu sürümden itibaren, ayarlar davranışı aşağıdaki gibidir:

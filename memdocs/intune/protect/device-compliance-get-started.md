@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 05/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2af5957d22b5b512b28f574f2a0996801e19018
-ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
+ms.openlocfilehash: 116ce7aa024afff5665fa3f09bfca56b54a1c452
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690518"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764297"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Intune'u kullanarak kuruluşunuzdaki kaynaklara erişim izni verme amacıyla cihazlarda kural oluşturun
 
@@ -64,11 +64,17 @@ Remember that you need to implement Conditional Access policies in addition to c
 
 ## <a name="device-compliance-policies-work-with-azure-ad"></a>Cihaz uyumluluk ilkeleri Azure AD ile birlikte çalışır
 
-Intune, uyumluluk uygulanmasını sağlamak için Azure Active Directory (AD) [koşullu erişim](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) (başka bir docs Web sitesi açar) kullanır. Bir cihaz Intune'a kaydedildiğinde Azure AD kayıt işlemi başlar ve Azure AD'deki cihaz bilgileri güncelleştirilir. En önemli bilgilerden biri, cihaz uyumluluk durumudur. Bu uyumluluk durumu, e-posta ve diğer kuruluş kaynaklarına erişimi engellemek veya erişime izin vermek için koşullu erişim ilkeleri tarafından kullanılır.
+Intune, uyumluluğu zorunlu kılmak için [koşullu erişim](../protect/conditional-access.md) kullanır. Koşullu Erişim, bir Azure Active Directory (Azure AD) teknolojisidir.
 
-- [Azure Active Directory'de cihaz yönetimi nedir?](https://docs.microsoft.com/azure/active-directory/device-management-introduction) sayfasında cihazların Azure AD'ye kayıt nedeni ve yöntemi hakkında ayrıntılı bilgiler verilmektedir.
+Bir cihaz Intune'a kaydedildiğinde Azure AD kayıt işlemi başlar ve Azure AD'deki cihaz bilgileri güncelleştirilir. En önemli bilgilerden biri, cihaz uyumluluk durumudur. Bu uyumluluk durumu, e-posta ve diğer kuruluş kaynaklarına erişimi engellemek veya erişime izin vermek için koşullu erişim ilkeleri tarafından kullanılır.
 
-- [Koşullu erişim](conditional-access.md) ve [koşullu erişim kullanmanın yaygın yolları](conditional-access-intune-common-ways-use.md) , Intune ile ilgili olarak bu özelliği tanımlar.
+Koşullu erişim ve Intune hakkında bilgi edinin:
+
+- [Intune ile koşullu erişim kullanmanın yaygın yolları](conditional-access-intune-common-ways-use.md)
+
+Azure AD belgelerinde koşullu erişim hakkında bilgi edinin:
+  - [Koşullu erişim nedir?](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+  - [Cihaz kimliği nedir?](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
 
 ## <a name="ways-to-use-device-compliance-policies"></a>Cihaz uyumluluk ilkelerini kullanma yolları
 

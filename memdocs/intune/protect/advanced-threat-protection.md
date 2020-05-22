@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: beea54b7ca244190ec0821d4ce8364369797590a
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: e158edfcb622f7a6e614b767ab05633f0a5151c7
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166629"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764178"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Intune 'da koşullu erişimle Microsoft Defender ATP için uyumluluğu zorlama
 
@@ -53,7 +53,7 @@ Microsoft Defender ATP, bu senaryo gibi güvenlik olaylarının çözümlenmesin
 
 Cihazları uyumlu olmayan bir *Orta* veya *yüksek* düzeyde riske göre sınıflandırmak için bir Intune cihaz uyumluluk ilkeniz olduğundan, güvenliği aşılmış bir cihaz uyumlu değil olarak sınıflandırılmıştır. Bu sınıflandırma, koşullu erişim ilkenizin, bu cihazdan kurumsal kaynaklarınıza erişimi başlatmanıza ve erişimini engellemeye olanak tanır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Microsoft Defender ATP 'yi Intune ile birlikte kullanmak için, aşağıdakilerin yapılandırıldığından ve kullanıma hazırlandığınızdan emin olun:
 
@@ -74,12 +74,12 @@ Yalnızca her kiracı için Defender ATP 'yi tek bir kez etkinleştirmeniz gerek
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Endpoint Security** > **Microsoft Defender ATP**' yi seçin ve ardından **Microsoft Defender Güvenlik Merkezi 'ni aç**' ı seçin.
+2. **Endpoint Security**  >  **Microsoft Defender ATP**' yi seçin ve ardından **Microsoft Defender Güvenlik Merkezi 'ni aç**' ı seçin.
 
    ![Microsoft Defender Güvenlik Merkezi 'ni açmak için seçin](./media/advanced-threat-protection/atp-device-compliance-open-microsoft-defender.png)
 
 3. **Microsoft Defender Güvenlik Merkezi**'nde:
-   1. **Ayarlar** > **Gelişmiş Özellikler**' i seçin.
+   1. **Ayarlar**  >  **Gelişmiş Özellikler**' i seçin.
    2. **Microsoft Intune bağlantısı** için **Açık** seçeneğini belirleyin:
 
       ![Intune bağlantısını etkinleştirme](./media/advanced-threat-protection/atp-security-center-intune-toggle.png)
@@ -104,7 +104,7 @@ Yalnızca her kiracı için Defender ATP 'yi tek bir kez etkinleştirmeniz gerek
 > - , MTD 'leri yönetmeye yardımcı olmak için oluşturabileceğiniz koşullu erişim ilkelerinden farklıdır.
 > - Varsayılan olarak, değerlendirme için kullandığınız diğer koşullu erişim ilkeleriyle etkileşime geçin.
 >
-> Klasik koşullu erişim ilkelerini görüntülemek için [Azure](https://portal.azure.com/#home)'da **Azure Active Directory** > **koşullu erişim** > **Klasik ilkeleri**' ne gidin.
+> Klasik koşullu erişim ilkelerini görüntülemek için [Azure](https://portal.azure.com/#home)'da **Azure Active Directory**  >  **koşullu erişim**  >  **Klasik ilkeleri**' ne gidin.
 
 ## <a name="onboard-windows-devices-by-using-a-configuration-profile"></a>Yapılandırma profili kullanarak Windows cihazları ekleme 
 
@@ -115,7 +115,7 @@ Microsoft Defender ATP bağlantısı kurduktan sonra Intune, Microsoft Defender 
 ### <a name="create-the-device-configuration-profile"></a>Cihaz yapılandırma profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Bir **Ad** ve **Açıklama** girin.
 4. **Platform**için **Windows 10 ve üzeri** ' i seçin 
 5. **Profil türü**Için **Microsoft Defender ATP (Windows 10 Masaüstü)** öğesini seçin.
@@ -142,7 +142,7 @@ Uyumluluk ilkesi oluşturma konusunda bilgi sahibi değilseniz, *Microsoft Intun
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihaz** > **uyumluluk ilkeleri** > **Policies**ilkeleri > **ilke oluştur**' u seçin.
+2. **Cihaz**  >  **uyumluluk ilkeleri**  >  **ilkeleri**  >  **ilke oluştur**' u seçin.
 
 3. **Platform** için *Windows 10 ve üzeri*, **Android Cihaz Yöneticisi**ve/veya **Android Enterprise**' u seçin. Ardından, **Oluştur** ' u seçerek **ilke yapılandırma oluştur** penceresini açın.
 
@@ -168,7 +168,7 @@ Koşullu erişim ilkesi, uyumluluk ilkenizde ayarladığınız tehdit düzeyini 
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Endpoint Security** > **koşullu erişim** > **Yeni ilke**' yi seçin.
+2. **Endpoint Security**  >  **koşullu erişim**  >  **Yeni ilke**' yi seçin.
 
 3. İlke için bir **Ad** girin ve **Kullanıcılar ve gruplar**’ı seçin. İlke için grupları eklemek üzere Dahil Et veya Hariç Tut seçeneklerini kullanın ve **Bitti**’yi seçin.
 
@@ -176,11 +176,11 @@ Koşullu erişim ilkesi, uyumluluk ilkenizde ayarladığınız tehdit düzeyini 
 
    Değişikliklerinizi kaydetmek için **Bitti**’yi seçin.
 
-5. İlkeyi uygulamalara ve tarayıcılara uygulamak için **koşullar** > **istemci uygulamaları** ' nı seçin. Örneğin **Evet**’i seçin ve ardından **Tarayıcı** ve **Mobil uygulamalar ve masaüstü istemciler**’i etkinleştirin.
+5. **Conditions**  >  İlkeyi uygulamalara ve tarayıcılara uygulamak için koşullar**istemci uygulamaları** ' nı seçin. Örneğin **Evet**’i seçin ve ardından **Tarayıcı** ve **Mobil uygulamalar ve masaüstü istemciler**’i etkinleştirin.
 
    Değişikliklerinizi kaydetmek için **Bitti**’yi seçin.
 
-6. Cihaz uyumluluğuna göre koşullu erişim uygulamak için **Izin ver** ' i seçin. Örneğin, **erişim** > ver**cihazın uyumlu olarak işaretlenmesini gerektir**' i seçin.
+6. Cihaz uyumluluğuna göre koşullu erişim uygulamak için **Izin ver** ' i seçin. Örneğin, **erişim ver**  >  **cihazın uyumlu olarak işaretlenmesini gerektir**' i seçin.
 
     Değişikliklerinizi kaydetmek için **Seçin**’e tıklayın.
 
@@ -192,19 +192,19 @@ Ardından, Microsoft Defender ATP Uyumluluk ilkesine sahip cihazların durumunu 
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihazları** > seçin**ilke uyumluluğunu****izleyin** > .
+2. **Cihazları**seçin  >  **Monitor**  >  **ilke uyumluluğunu**izleyin.
 
 3. Listede Microsoft Defender ATP ilkenizi bulun ve hangi cihazların uyumlu veya uyumsuz olduğunu görün.
 
 Aynı konumdaki uyumsuz cihazlar için *işletimsel* raporu da kullanabilirsiniz:
 
-1. **Uyumsuz cihazları****izlemek** > için **cihazlar** > ' ı seçin.
+1. **Devices**  >  **Monitor**  >  **Uyumsuz cihazları**izlemek için cihazlar ' ı seçin.
 
 Raporlar hakkında daha fazla bilgi için bkz. [Intune raporları](../fundamentals/reports.md).
 
 ## <a name="view-onboarding-status"></a>Ekleme durumunu görüntüle
 
-Tüm Intune tarafından yönetilen Windows 10 cihazlarının ekleme durumunu görüntülemek için **Kiracı Yönetimi** > **Microsoft Defender ATP**'ye gidebilirsiniz. Bu sayfadan, Microsoft Defender ATP 'ye daha fazla cihaz ekleme için bir cihaz yapılandırma profili oluşturmayı da başlatabilirsiniz.
+Tüm Intune tarafından yönetilen Windows 10 cihazlarının ekleme durumunu görüntülemek için **Endpoint Security**  >  **Microsoft Defender ATP**'ye gidebilirsiniz. Bu sayfadan, Microsoft Defender ATP 'ye daha fazla cihaz ekleme için bir cihaz yapılandırma profili oluşturmayı da başlatabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

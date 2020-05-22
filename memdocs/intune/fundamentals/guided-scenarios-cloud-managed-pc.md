@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fcd77774cb19a70ee02cab9d2d1e6a44dd9745a
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: ec125e1ab58e733707adb3d9f4df304e21ffabcf
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023206"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764144"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Kılavuzlu senaryo-bulutta yönetilen modern masaüstü
 
@@ -31,7 +31,7 @@ Modern masaüstü 'nü buluttan yönetmek, internet genelindeki uzak eylemlerin 
 
 Bulutta yönetilen bir modern masaüstünü kendi kuruluşunuzda değerlendirmek istiyorsanız, Bu Kılavuzlu senaryo temel bir dağıtım için gerekli tüm konfigürasyonları önceden tanımlar. Bu Kılavuzlu senaryoda, Intune cihaz yönetimi yeteneklerini deneyebileceğiniz güvenli bir ortam oluşturacaksınız.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - [MDM yetkilisini Intune olarak ayarlama](../fundamentals/mdm-authority-set.md#set-mdm-authority-to-intune) -mobil cihaz YÖNETIMI (MDM) yetkilisi ayarı, cihazlarınızı nasıl yöneteceğinizi belirler. Kullanıcıların yönetilmek üzere cihaz kaydedebilmeleri için, BT yöneticisi olarak bir MDM yetkilisi ayarlamanız gerekir.
 - M365 E3 en düşük (veya en iyi güvenlik için M365 E5)
@@ -80,7 +80,7 @@ Kullanıcılar, mobil cihaz yönetiminde yeni cihazlarını el ile ayarlayıp ka
 Son adım, yapılandırdığınız ayarların özetini incelemenizi sağlar. Seçimlerinizi inceledikten sonra, Kılavuzlu senaryoyu gerçekleştirmek için **Dağıt** ' a tıklayın. Kılavuzlu senaryo tamamlandıktan sonra bir kaynak tablosu görüntülenir. Bu kaynakları daha sonra düzenleyebilirsiniz, ancak Özet görünümden ayrıldığınızda tablo kaydedilmez.
 
 > [!IMPORTANT]
-> Kılavuzlu senaryo tamamlandıktan sonra bir özet görüntülenir. Özette listelenen kaynakları daha sonra değiştirebilirsiniz, ancak bu kaynağı görüntüleyen tablo kaydedilmez.
+> Kılavuzlu senaryo tamamlandıktan sonra bir özet görüntülenir. Özette listelenen kaynakları daha sonra değiştirebilirsiniz, ancak bu kaynakları görüntüleyen tablo kaydedilmez.
 
 ### <a name="verification"></a>Doğrulama
 

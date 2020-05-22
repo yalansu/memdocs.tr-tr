@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 05/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e2b271c9dae03e5352f37404401f540fb78d6f7
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: ae89a939e35f68f55d2e63e7495a9b743cc0fa34
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556190"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791760"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Intune 'da bilgi noktası olarak çalıştırılacak Windows 10 ve üzeri cihaz ayarları
 
@@ -85,7 +85,7 @@ Cihazda yalnızca bir uygulama çalıştırır.
 
     - **İzin verilen web siteleri**: Belirli Web sitelerinin açılmasına izin vermek için bu ayarı kullanın. Diğer bir deyişle, cihazda web sitelerine erişimi kısıtlamak veya tamamen önlemek için bu özelliği kullanın. Örneğin `http://contoso.com` adresindeki tüm Web sitelerinin açılmasına izin verebilirsiniz. Varsayılan olarak tüm Web sitelerine izin verilir.
 
-      Belirli web sitelerine izin vermek için izin verilecek web sitelerini ayrı satırlarda listeleyen bir dosyayı karşıya yükleyin. Bir dosya eklemezseniz tüm web sitelerine izin verilir. Varsayılan olarak Intune, joker karakter destekler. Bu nedenle, etki alanını girdiğinizde, gibi, alt etki `sharepoint.com` alanlarına izin ver gibi otomatik olarak izin verilir `contoso.sharepoint.com` `my.sharepoint.com` .
+      Belirli web sitelerine izin vermek için izin verilecek web sitelerini ayrı satırlarda listeleyen bir dosyayı karşıya yükleyin. Bir dosya eklemezseniz tüm web sitelerine izin verilir. Varsayılan olarak, Intune Web sitesinin tüm alt etki alanlarına izin verir. Örneğin, `sharepoint.com` etki alanını girersiniz. Intune, ve gibi tüm alt etki alanlarına otomatik olarak izin verir `contoso.sharepoint.com` `my.sharepoint.com` . Yıldız işareti () gibi joker karakterler girmeyin `*` .
 
       Örnek dosyanız, aşağıdaki listeye benzer görünmelidir:
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 05/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb5a04b8db382345cbf8f3e86feab8b3cea9efd9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 40a1106ec11dc62263e734810287bfbe3f1ea1e5
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615691"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764280"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Intune ile Mobile Threat Defense (MTD) cihaz uyumluluk ilkesi oluşturma
 
@@ -44,7 +44,7 @@ MTD ile cihaz uyumluluk ilkesinin önkoşulları:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihaz** > **uyumluluk ilkeleri** > **ilke oluştur**' u seçin.
+2. **Cihaz**  >  **uyumluluk ilkeleri**  >  **ilke oluştur**' u seçin.
 
 3. Bir cihaz uyumluluk ilkesi **adı**belirtin, **Açıklama**, **platformu**seçin ve **Ayarlar** bölümü altında **Yapılandır** ' ı seçin.
 
@@ -60,11 +60,6 @@ MTD ile cihaz uyumluluk ilkesinin önkoşulları:
 
    - **Yüksek**: Bu, en az güvenli düzeydir. Bu, tüm tehdit düzeylerine izin verir ve Mobile Threat Defense’i yalnızca raporlama amacıyla kullanır. Cihazlar, bu ayar ile MTD uygulamasının etkin olmasını gerektirir.
 
-   > [!IMPORTANT]
-   > Android kurumsal cihaz sahibi için bir ilke oluşturup kaydettikten sonra, tehdit düzeyini değiştirmek için ilkeyi daha sonra düzenleyemezsiniz. Cihaz Durumu ayarı için cihaz tehdit düzeyini değiştirme düzenlemeleri, cihazın **cihaz tehdit düzeyinde veya altında olmasını gerektir seçeneğinin** etkili bir şekilde başarısız olmasına neden olur. Tehdit düzeyi değerini değiştirmek için geçerli ilkeyi silmeniz ve istenen tehdit düzeyini ayarlayan yeni bir ilke oluşturmanız gerekir.
-   >
-   > Bu, gelecekteki bir Intune güncelleştirmesinde çözümlenecek bilinen bir sorundur.
-
 6. **Tamam** ' ı iki kez seçin ve ilkeyi oluşturmak için **Oluştur** ' u seçin.
 
 > [!IMPORTANT]
@@ -76,7 +71,7 @@ Kullanıcılara bir cihaz uyumluluk ilkesi atamak için:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihaz** > **uyumluluk ilkeleri**' ni seçin.
+2. **Cihaz**  >  **uyumluluk ilkeleri**' ni seçin.
 
 3. Kullanıcılara atamak istediğiniz ilkeyi seçin ve ardından **atamalar**' ı seçin. Bu ilkeyi almak üzere grupları *dahil* etmek ve *dışlamak* için kullanılabilir seçenekleri kullanın.  
 
