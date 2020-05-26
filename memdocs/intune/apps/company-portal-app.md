@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4c8ee2e25d14d6b39cea91255ed955eeb27174d
-ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
+ms.openlocfilehash: 6f22b2d87492d227b8a78859adb1debc504da8d5
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690696"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824192"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune Şirket Portalı uygulamaları, Şirket Portalı Web sitesini ve Intune uygulamasını özelleştirme
 
@@ -220,8 +220,8 @@ Bazı platformlar ve Konfigürasyonlar self servis cihaz eylemlerine izin vermez
 
 |  | Windows 10<sup>(3)</sup> | iOS/ıpados<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Devre Dışı Bırakma | Kullanılabilir<sup>(1)</sup> | Kullanılabilir | Kullanılabilir | Kullanılabilir<sup>(7)</sup> |
-| Silme | Kullanılabilir | Kullanılabilir<sup>(5)</sup> | NA | Kullanılabilir<sup>(7)</sup> |
+| Devre Dışı Bırakma | Kullanılabilir<sup>(1)</sup> | Kullanılabilir<sup>(9)</sup> | Kullanılabilir | Kullanılabilir<sup>(7)</sup> |
+| Silme | Kullanılabilir | Kullanılabilir<sup>(5)</sup><sup>(9)</sup> | NA | Kullanılabilir<sup>(7)</sup> |
 | Yeniden Adlandır<sup>(4)</sup> | Kullanılabilir | Kullanılabilir | Kullanılabilir | Kullanılabilir |
 | Sync | Kullanılabilir | Kullanılabilir | Kullanılabilir | Kullanılabilir |
 | Uzaktan Kilitleme | Yalnızca Windows Phone | Kullanılabilir | Kullanılabilir | Kullanılabilir |
@@ -235,7 +235,8 @@ Bazı platformlar ve Konfigürasyonlar self servis cihaz eylemlerine izin vermez
 <sup>(5)</sup> Kullanıcı kayıtlı IOS/ıpados cihazlarında **silme** işlemi kullanılamıyor.<br>
 <sup>(6)</sup> bazı Android ve Android kurumsal yapılandırmalarında, **geçiş kodu sıfırlama** işlemi desteklenmez. Daha fazla bilgi için bkz. [Intune 'da cihaz geçiş kodunu sıfırlama veya kaldırma](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> **devre dışı bırakma** ve **Temizleme** , ANDROID kurumsal cihaz sahibi senaryolarında (Cope, Cobo, cosu) kullanılamaz.<br>
-<sup>(8)</sup> Kullanıcı kayıtlı IOS/ıpados cihazlarında **geçiş kodunu sıfırlama** işlemi desteklenmez.
+<sup>(8)</sup> Kullanıcı kayıtlı IOS/ıpados cihazlarında **geçiş kodunu sıfırlama** işlemi desteklenmez.<br>
+<sup>(9)</sup> Tüm iOS/ıpados otomatik cihaz kayıt cihazlarının (daha önce DEP olarak bilinirdi) devre dışı **bırakma** ve **silme** seçenekleri devre dışıdır.
 
 ### <a name="app-logs"></a>Uygulama günlükleri
 

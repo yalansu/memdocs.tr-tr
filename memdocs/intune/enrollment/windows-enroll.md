@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/05/2019
+ms.date: 05/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd7483319443b7a960f8e704442d2b43b6b00c66
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 55d7be5d54d194ccd3a1f982f70f26ee8c829d4f
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326921"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824158"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Windows cihazları için kaydı ayarlama
 
@@ -95,14 +95,14 @@ Contoso DNS yöneticisinin aşağıdaki CNAME'leri oluşturması gerekir:
 
 DNS kaydındaki değişikliklerin yaygınlaştırılması 72 saat kadar sürebilir. DNS kaydı yayılıncaya kadar DNS değişikliğini Intune'da doğrulayamazsınız.
 
-## <a name="additional-endpoints-are-supported-but-not-recommended"></a>Ek Uç Noktalar Desteklenir Ancak Önerilmez
-EnterpriseEnrollment-s.manage.microsoft.com, kayıt için tercih edilen FQDN değeridir ancak geçmişte müşteriler tarafından kullanılan ve desteklenen iki farklı uç nokta daha vardır. EnterpriseEnrollment.manage.microsoft.com (-s eklentisi olmadan) ve manage.microsoft.com adresleri, otomatik bulma sunucusu için hedef olarak çalışır ancak kullanıcının onay iletisinde Tamam seçeneğine dokunması gerekecektir. EnterpriseEnrollment-s.manage.microsoft.com üzerine geldiğinizde, kullanıcının ek onay adımını yapması gerekmez, bu nedenle önerilen yapılandırmadır
+## <a name="additional-endpoints-are-used-but-no-longer-supported"></a>Ek uç noktalar kullanılıyor ancak artık desteklenmiyor
+EnterpriseEnrollment-s.manage.microsoft.com, kayıt için tercih edilen FQDN 'dir. Geçmişte müşteriler tarafından kullanılan ve çalışmaya devam eden iki uç nokta vardır ancak artık desteklenmiyordur. EnterpriseEnrollment.manage.microsoft.com (-s eklentisi olmadan) ve manage.microsoft.com adresleri, otomatik bulma sunucusu için hedef olarak çalışır ancak kullanıcının onay iletisinde Tamam seçeneğine dokunması gerekecektir. EnterpriseEnrollment-s.manage.microsoft.com üzerine geldiğinizde, kullanıcının ek onay adımını yapması gerekmez, bu nedenle önerilen yapılandırmadır
 
 ## <a name="alternate-methods-of-redirection-are-not-supported"></a>Alternatif Yönlendirme Yöntemleri Desteklenmez
 CNAME yapılandırması haricinde bir yöntem kullanılması desteklenmez. Örneğin enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc bağlantısının enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc veya manage.microsoft.com/EnrollmentServer/Discovery.svc is adresine yönlendirilmesi desteklenmez.
 
 **2. Adım: CNAME'i doğrulama** (isteğe bağlı)<br>
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **Windows** > **Windows kaydı** > **CNAME doğrulaması**' nı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **Windows**  >  **Windows kaydı**  >  **CNAME doğrulaması**' nı seçin.
 2. **Etki Alanı** kutusuna şirket Web sitesini girin ve ardından **Test Et**'i seçin.
 
 ## <a name="tell-users-how-to-enroll-windows-devices"></a>Kullanıcılara Windows cihazlarını nasıl kaydedeceklerini anlatma
@@ -114,7 +114,7 @@ Kullanıcılara Windows cihazlarını nasıl kaydedeceklerini ve cihazları yön
 Son kullanıcı kayıt talimatları için bkz. [Windows cihazınızı Intune'a kaydetme](../user-help/windows-enrollment-company-portal.md). Ayrıca kullanıcılara [BT yöneticim cihazımda neleri görebilir?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) sayfasındaki bilgilere göz atmalarını da söyleyebilirsiniz.
 
 >[!IMPORTANT]
-> Otomatik MDM kaydını etkinleştirmediyseniz ancak Azure AD’ye katılmış Windows 10 cihazlarınız varsa, kayıt sonrasında Intune konsolunda iki kayıt görünecektir. Bu, Azure AD 'ye katılmış cihazların **hesaplara** > **erişim iş veya okul** hesabına gitmesini ve aynı hesabı kullanarak **bağlanmasını** sağlayarak bunu durdurabilirsiniz. 
+> Otomatik MDM kaydını etkinleştirmediyseniz ancak Azure AD’ye katılmış Windows 10 cihazlarınız varsa, kayıt sonrasında Intune konsolunda iki kayıt görünecektir. Bu, Azure AD 'ye katılmış cihazların **hesaplara**  >  **erişim iş veya okul** hesabına gitmesini ve aynı hesabı kullanarak **bağlanmasını** sağlayarak bunu durdurabilirsiniz. 
 
 Son kullanıcı görevleri hakkında daha fazla bilgi için bkz. [Microsoft Intune’da son kullanıcı deneyimi hakkında kaynaklar](../fundamentals/end-user-educate.md).
 

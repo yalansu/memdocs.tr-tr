@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 05/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c737de8a991bc8d96e38d729292be721c6bdd1cf
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: ca3ec1605bd4d63c182511c32297da0bdb503d8b
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791853"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824175"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -53,6 +53,22 @@ ms.locfileid: "83791853"
 ### Monitor and troubleshoot
 
 <!-- ########################## -->
+
+## <a name="week-of-may-18-2020"></a>18 Mayıs 2020 haftası
+
+### <a name="device-security"></a>Cihaz güvenliği
+
+#### <a name="use-endpoint-detection-and-response-policy-to-onboard-devices-to-defender-atp---7130165----"></a>Cihazları Defender ATP 'ye eklemek için uç nokta algılama ve yanıt ilkesini kullanın<!-- 7130165  -->
+
+Microsoft Defender Gelişmiş tehdit koruması (Defender ATP) dağıtımınız için cihaz eklemek ve yapılandırmak üzere [uç nokta algılama ve yanıt](../protect/endpoint-security-edr-policy.md) (EDR) için uç nokta güvenlik ilkesi kullanın. EDR, Intune (MDM) tarafından yönetilen Windows cihazları için ilkeyi ve Configuration Manager tarafından yönetilen Windows cihazları için ayrı bir ilkeyi destekler. 
+
+Configuration Manager cihazlar için ilkeyi kullanmak üzere, [EDR ilkesini desteklemek için Configuration Manager ayarlamanız](../protect/endpoint-security-edr-policy.md#set-up-configuration-manager-to-support-edr-policy)gerekir. Kurulum şunları içerir:
+
+- *Kiracı iliştirme*için Configuration Manager 'ı yapılandırın.
+- EDR ilkeleri desteğini etkinleştirmek için Configuration Manager için konsol içi bir güncelleştirme yükler. Bu güncelleştirme yalnızca *kiracı iliştirme*'yi etkinleştirilen Hiyerarşiler için geçerlidir.
+- Cihaz koleksiyonlarınızı, hiyerarşinizi Microsoft Uç Nokta Yöneticisi Yönetim Merkezi olarak bir biçimde eşitler.
+
+
 ## <a name="week-of-may-11-2020-2005-service-release"></a>11 Mayıs 2020 (2005 hizmet sürümü) haftası
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
