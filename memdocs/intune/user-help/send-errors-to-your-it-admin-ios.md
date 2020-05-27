@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 05/23/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8f533a04e9865b4d841bee1a2764eef2fbbbcda9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2a005730220633184b25ead68b6f7ba8a3efd52b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079391"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881369"
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>iOS cihazınızla ilgili sorunlar için şirketinizin destek birimine hata gönderme
 iOS cihazınızda Şirket Portalı uygulamasını kullanırken bazen bir hatayla karşılaşabilirsiniz. Böyle bir durumda hatanın ayrıntılarını şirketinizin destek çalışanına e-posta ile gönderebilirsiniz. Bu ayrıntılar, sorununuzu gidermek için gerekli bağlamı sağlayacaktır.
@@ -37,6 +37,6 @@ Günlükleri Şirket Portalı uygulamasına yüklediğinizde bunlar önce bu uyg
 
 - Şirket Portalı uygulamasının **Diğer** sekmesinde **Yardım Al**’a dokunun.
 
-- Şirket Portalı uygulamasında, cihazınızı sallayın ve ardından tanılama uyarısı görüntülendiğinde **Tanılama Raporu Gönder**’e dokunun. Cihazı salladığınızda uyarı görüntülenmezse, **Ayarlar** > **Şirket portalı**açın ve **sallama hareketi** seçeneğinin açık olduğundan emin olun.
+- Şirket Portalı uygulamasında, cihazınızı sallayın ve ardından tanılama uyarısı görüntülendiğinde **Tanılama Raporu Gönder**’e dokunun. Cihazı salladığınızda uyarı görüntülenmezse, **Ayarlar**  >  **Şirket portalı**açın ve **sallama hareketi** seçeneğinin açık olduğundan emin olun.
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

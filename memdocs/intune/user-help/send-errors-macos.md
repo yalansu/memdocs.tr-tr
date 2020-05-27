@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/25/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5c1ebf73dde1423f618d58d06cddc96162f725be
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8bb10a81f015b5ffa4b1d22d2afab1e8c4d40d05
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327914"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881409"
 ---
 # <a name="submit-errors-to-the-right-people-for-your-managed-macos-device"></a>Yönetilen macOS cihazınızla ilgili hataları doğru kişilere gönderme
 
@@ -38,7 +38,7 @@ ms.locfileid: "79327914"
 
 - **Yardım** menüsü > **Tanılama Raporunu Kaydet**'e tıklayın. Dosyanın kaydedileceği yeri seçin. Ardından bu dosyayı şirketinizin destek görevlisine e-postayla gönderin veya yükleyin.
 
-- E-posta uygulamanız yapılandırılmışsa, tanı raporu**Gönder** **' e giderek** > Tanılama raporunu gönderebilirsiniz. Günlükler karşıya yüklendikten sonra **E-posta ayrıntıları**'na tıklayın.
+- E-posta uygulamanız yapılandırılmışsa, tanı raporu gönder **' e giderek**Tanılama raporunu gönderebilirsiniz  >  **Send Diagnostic Report**. Günlükler karşıya yüklendikten sonra **E-posta ayrıntıları**'na tıklayın.
 
 ## <a name="send-errors-to-the-company-portal-developers-for-macos-devices"></a>Hataları, macOS cihazları için Şirket Portalı geliştiricilerine gönderme
 

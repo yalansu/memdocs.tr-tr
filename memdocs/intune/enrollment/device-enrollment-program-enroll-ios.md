@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35c2a9f5dec506d1a9f0eafc9c82f277cd2635db
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 8b90d37737618d238597919b1baf5089758d1ca5
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764229"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864982"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS/iPadOS cihazlarını Apple’ın Otomatik Cihaz Kayıt Anlaşması ile otomatik olarak kaydetme
 
@@ -209,7 +209,7 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
 
      > [!NOTE]
      > **Bilgisayarlarla eşitleme** , **Tümünü Reddet**olarak ayarlandıysa, bağlantı noktası iOS ve ıpados cihazlarında sınırlı olur. Bağlantı noktası yalnızca dolduruluyor ve başka hiçbir şey için kullanılabilir. Bağlantı noktasının iTunes veya Apple Configurator 2 kullanılması engellenir.
-     **Bilgisayarlarla eşitleme** , **sertifikaya göre Apple Configurator 'a izin ver**olarak ayarlandıysa, daha sonra erişebileceğiniz sertifikanın yerel bir kopyasını kaydettiğinizden emin olun. Karşıya yüklenen kopyada değişiklik yapamayacağız. Bu sertifikanın gelecekte erişilebilir olması için saklanması önemlidir. 
+     **Bilgisayarlarla eşitleme** , **sertifikaya göre Apple Configurator 'a izin ver**olarak ayarlandıysa, daha sonra erişebileceğiniz bir sertifikanın yerel kopyasına sahip olduğunuzdan emin olun. Karşıya yüklenen kopyada değişiklik yapamazsınız ve bu sertifikanın gelecekte erişilebilir olması için saklanması önemlidir. Bir macOS cihazından veya BILGISAYARDAN iOS/ıpados cihazına bağlanmak için, bu yapılandırma ve sertifikayla otomatik cihaz kayıt profiline kaydedilmiş iOS/ıpados cihazından bağlantı kuran cihazda aynı sertifikanın yüklü olması gerekir.
 
 12. Önceki adımda **Sertifikaya göre Apple Configurator’a izin ver**’i seçtiyseniz içeri aktaracak bir Apple Configurator Sertifikası seçin.
 
@@ -234,7 +234,7 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
     |------------------------------------------|------------------------------------------|
     | <strong>Geçiş kodu</strong> | Kullanıcıdan geçiş kodu ister. Güvenliği sağlanmayan veya erişim denetimi başka bir yolla (cihazı tek uygulamayla sınırlandıran bilgi noktası modu gibi) sağlanan cihazlar için her zaman geçiş kodu isteyin. İOS/ıpados 7,0 ve üzeri için. |
     | <strong>Konum Hizmetleri</strong> | Kullanıcıdan konum ister. MacOS 10,11 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
-    | <strong>Yükleyebilmek</strong> | Uygulamalar & veri ekranını görüntüleyin. Bu ekran kullanıcıya cihazı kurarken iCloud Backup'tan verileri geri yükleme veya aktarma seçeneği sağlar. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
+    | <strong>Geri Yükleme</strong> | Uygulamalar & veri ekranını görüntüleyin. Bu ekran kullanıcıya cihazı kurarken iCloud Backup'tan verileri geri yükleme veya aktarma seçeneği sağlar. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
     | <strong>iCloud ve Apple Kimliği</strong> | Kullanıcıya Apple Kimliği ile oturum açma ve iCloud'u kullanma seçenekleri sağlar. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için.   |
     | <strong>Hüküm ve Koşullar</strong> | Kullanıcının Apple'ın hüküm ve koşullarını kabul etmesini gerektirir. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
     | <strong>Touch ID</strong> | Kullanıcıya cihaz için parmak izi tanımlama özelliğini ayarlama seçeneği sağlar. MacOS 10.12.4 ve üzeri ve iOS/ıpados 8,1 ve üzeri için. |

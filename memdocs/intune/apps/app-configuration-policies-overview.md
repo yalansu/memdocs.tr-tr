@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4dd0b1702b06f3efbed07a70b13a59b271816f8
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: b6e42049a7fef0646fa94bde1b42d62c1ef8c066
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023019"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853562"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Microsoft Intune için uygulama yapılandırma ilkeleri
 
@@ -99,7 +99,7 @@ Aşağıdaki üç yöntemi kullanarak uygulama yapılandırma ilkesini doğrulay
 
       ![Cihaz yüklemesi durumunun ikinci ekran görüntüsü](./media/app-configuration-policies-overview/device-install-status-2.png)
 
-      Ayrıca, **Intune** -> **cihazları** -> ekranın sol tarafındaki**tüm cihazlar** ' ın altında, **uygulama yapılandırma** seçeneği atanan tüm ilkeleri ve bunların durumunu görüntüler:
+      Ayrıca, **Intune**  ->  **cihazları**  ->  ekranın sol tarafındaki**tüm cihazlar** ' ın altında, **uygulama yapılandırma** seçeneği atanan tüm ilkeleri ve bunların durumunu görüntüler:
 
       ![Uygulama yapılandırması ekran görüntüsü](./media/app-configuration-policies-overview/app-configuration.png)
 
@@ -107,10 +107,10 @@ Aşağıdaki üç yöntemi kullanarak uygulama yapılandırma ilkesini doğrulay
 
 ### <a name="iosipados-configuration-on-unmanaged-devices"></a>yönetilmeyen cihazlarda iOS/ıpados yapılandırması
 
-Yönetilen uygulama yapılandırması için, yönetilmeyen cihazlarda **Intune tanılama günlüğü** ile IOS/ıpados yapılandırmasını doğrulayabilirsiniz. Aşağıdaki adımlara ek olarak, Microsoft Edge kullanarak yönetilen uygulama günlüklerine erişebilirsiniz. Daha fazla bilgi için bkz. [yönetilen uygulama günlüklerine erişmek Için iOS 'Ta Microsoft Edge 'ı kullanma/ıpados](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
+Yönetilen uygulama yapılandırması için, yönetilmeyen cihazlarda **Intune tanılama günlüğü** ile IOS/ıpados yapılandırmasını doğrulayabilirsiniz. Aşağıdaki adımlara ek olarak, Microsoft Edge kullanarak yönetilen uygulama günlüklerine erişebilirsiniz. Daha fazla bilgi için bkz. [yönetilen uygulama günlüklerine erişmek Için iOS ve Android Için Edge kullanma](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
 1. Cihazda zaten yüklü değilse, **Microsoft Edge** 'ı App Store 'dan indirip yükleyin. Daha fazla bilgi için bkz. [Microsoft Intune korumalı uygulamalar](apps-supported-intune-apps.md).
-2. **Microsoft Edge** 'i başlatın ve gezinti çubuğundan**ıntunehelp** **hakkında** > ' yı seçin.
+2. **Microsoft Edge** 'i başlatın ve **about**  >  Gezinti çubuğundan**ıntunehelp** hakkında ' yı seçin.
 3. **Başlarken**' e tıklayın.
 4. **Günlükleri paylaşma**' ya tıklayın.
 5. Bilgisayarınızda görüntülenebilmeleri için günlüğü kendinize göndermek üzere seçtiğiniz posta uygulamasını kullanın. 
@@ -154,7 +154,7 @@ Uygulama yapılandırma ayrıntılarınız, kiracınız için yapılandırılmı
 Yönetilen uygulama yapılandırması için iOS/ıpados yapılandırmasını yönetilen cihazlarda **Intune tanılama günlüğü** ile doğrulayabilirsiniz.
 
 1. Cihazda zaten yüklü değilse, **Microsoft Edge** 'ı App Store 'dan indirip yükleyin. Daha fazla bilgi için bkz. [Microsoft Intune korumalı uygulamalar](apps-supported-intune-apps.md).
-2. **Microsoft Edge** 'i başlatın ve gezinti çubuğundan**ıntunehelp** **hakkında** > ' yı seçin.
+2. **Microsoft Edge** 'i başlatın ve **about**  >  Gezinti çubuğundan**ıntunehelp** hakkında ' yı seçin.
 3. **Başlarken**' e tıklayın.
 4. **Günlükleri paylaşma**' ya tıklayın.
 5. Bilgisayarınızda görüntülenebilmeleri için günlüğü kendinize göndermek üzere seçtiğiniz posta uygulamasını kullanın. 
@@ -165,12 +165,12 @@ Yönetilen uygulama yapılandırması için iOS/ıpados yapılandırmasını yö
 
 Yönetilen uygulama yapılandırması için, yönetilen cihazlarda **Intune tanılama günlüğü** ile Android yapılandırmasını doğrulayabilirsiniz.
 
-Android cihazından günlükleri toplamak için, siz veya son kullanıcının, bir USB bağlantısı aracılığıyla (veya cihazdaki **Dosya Gezgini** eşdeğerini) günlükleri cihazdan indirmesi gerekir. Adımlar aşağıdaki gibidir:
+Android cihazından günlükleri toplamak için, siz veya son kullanıcının, bir USB bağlantısı aracılığıyla (veya cihazdaki **Dosya Gezgini** eşdeğerini) günlükleri cihazdan indirmesi gerekir. Uygulamanız gereken adımlar:
 
 1. Android cihazını USB kablosuyla bilgisayarınıza bağlayın.
-2. Bilgisayarda, cihazınızın adına sahip bir dizini arayın. Bu dizinde öğesini bulun `Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal`.
-3. `com.microsoft.windowsintune.companyportal` Klasöründe Dosyalar klasörünü açın ve açın `OMADMLog_0`.
-3. Uygulamayla ilgili `AppConfigHelper` yapılandırma iletilerini bulmak için arama yapın. Sonuçlar aşağıdaki veri bloğuna benzer şekilde görünür:
+2. Bilgisayarda, cihazınızın adına sahip bir dizini arayın. Bu dizinde öğesini bulun `Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal` .
+3. `com.microsoft.windowsintune.companyportal`Klasöründe Dosyalar klasörünü açın ve açın `OMADMLog_0` .
+3. `AppConfigHelper`Uygulamayla ilgili yapılandırma iletilerini bulmak için arama yapın. Sonuçlar aşağıdaki veri bloğuna benzer şekilde görünür:
 
     `2019-06-17T20:09:29.1970000       INFO   AppConfigHelper     10888  02256  Returning app config JSON [{"ApplicationConfiguration":[{"Name":"com.microsoft.intune.mam.managedbrowser.BlockListURLs","Value":"https:\/\/www.aol.com"},{"Name":"com.microsoft.intune.mam.managedbrowser.bookmarks","Value":"Outlook Web|https:\/\/outlook.office.com||Bing|https:\/\/www.bing.com"},{"Name":"com.microsoft.intune.mam.managedbrowser.homepage","Value":"https:\/\/www.arstechnica.com"}]},{"ApplicationConfiguration":[{"Name":"IntuneMAMUPN","Value":"AdeleV@M365x935807.OnMicrosoft.com"},{"Name":"com.microsoft.outlook.Mail.NotificationsEnabled","Value":"false"},{"Name":"com.microsoft.outlook.Mail.NotificationsEnabled.UserChangeAllowed","Value":"false"}]}] for user User-875363642`
     

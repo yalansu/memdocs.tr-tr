@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/01/2020
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0c9bf96188e27afeaf66e7b2897f8cda19f9df37
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 82272fd4239b50657b887bf6c310b280eeecae7a
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551647"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880076"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Cihazınızı Şirket Portalı kaydetme  
 Şirket e-postasına, uygulamalarına ve verilerine güvenli erişim sağlamak için kişisel veya şirkete ait Android cihazınızı kaydedin. Şirket Portalı, Android 4,4 ve üstünü çalıştıran Samsung KNOX dahil Android cihazlarını destekler.  
@@ -32,7 +32,7 @@ ms.locfileid: "80551647"
 > [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o?rel=0]
 
 > [!NOTE]
-> Samsung KNOX, belirli Samsung cihazlarının, yerel Android 'in sağladığı her yerde ek koruma için kullandığı bir güvenlik türüdür. Samsung KNOX cihazınız olup olmadığını denetlemek için >**cihaz** **ayarları** > ' na gidin. Burada listelenen **Knox sürümünü** görmüyorsanız, yerel bir Android cihazınız vardır.
+> Samsung KNOX, belirli Samsung cihazlarının, yerel Android 'in sağladığı her yerde ek koruma için kullandığı bir güvenlik türüdür. Samsung KNOX cihazınız olup olmadığını denetlemek için > cihaz **ayarları**' na gidin  >  **About device**. Burada listelenen **Knox sürümünü** görmüyorsanız, yerel bir Android cihazınız vardır.
 
 ## <a name="enroll-device"></a>Cihaz kaydetme  
 Intune Şirket Portalı uygulamayı [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)yüklediğinizden emin olun. Uygulamayı ana kara Çin 'de sunan mağazaların bir listesi için bkz. [ana kara Çin 'de Şirket portalı uygulama yüklemesi](install-company-portal-android-china.md) .    
@@ -61,7 +61,7 @@ Kayıt sırasında cihazınızı nasıl kullanacağınızı en iyi açıklayan b
     * **Şirket portalı telefon araması yapmasına ve yönetmesine Izin ver**: Bu izin, cihazınızın, kuruluşunuzun cihaz yönetim sağlayıcısı olan uluslararası mobil istasyon ekipman KIMLIĞI (IMEI) numarasını Intune ile paylaşmasını sağlar. Bu izne izin vermek güvenlidir. Microsoft hiçbir şekilde telefon araması yapmayacaktır veya yönetmez.  
     * **Şirket portalı kişilerinize erişmesine Izin ver**: Bu izin, Şirket portalı uygulamanın iş hesabınızı oluşturmasına, kullanmasına ve yönetmesine olanak tanır.  Bu izne izin vermek güvenlidir. Microsoft, kişilerinize hiçbir şekilde erişemez. 
 
-    İzni reddederseniz, Şirket Portalı için bir sonraki oturum açışınızda yeniden girmeniz istenir. Bu iletileri kapatmak için, **tekrar sorma**' yı seçin. Uygulama izinlerini yönetmek için, ayarlar uygulama > **uygulamalar** > **Şirket portalı** > **izinler** > **telefonuna**gidin.  
+    İzni reddederseniz, Şirket Portalı için bir sonraki oturum açışınızda yeniden girmeniz istenir. Bu iletileri kapatmak için, **tekrar sorma**' yı seçin. Uygulama izinlerini yönetmek için, ayarlar uygulama > **uygulamalar**  >  **Şirket portalı**  >  **izinler**  >  **telefonuna**gidin.  
 
 6. Cihaz yönetici uygulamasını etkinleştirin. 
 
@@ -91,7 +91,7 @@ Kayıt sırasında cihazınızı nasıl kullanacağınızı en iyi açıklayan b
 
 ## <a name="next-steps"></a>Sonraki adımlar  
 
-Okul veya iş uygulamasını yüklemeyi denemeden önce **Ayarlar** > **güvenlik**' e gidin ve **Bilinmeyen kaynaklar**' ı açın. Bu seçeneği kullanmazsanız, bir uygulamayı yüklemeye çalıştığınızda şu iletiyi görürsünüz: "Install engellendi. Güvenlik nedeniyle cihazınız bilinmeyen kaynaklardan gelen uygulamaların yüklenmesini engelleyecek şekilde ayarlanmış." iletisini görürsünüz. Doğrudan **Bilinmeyen kaynaklara**gitmek Için iletideki **ayarlara** dokunabilirsiniz.  
+Okul veya iş uygulamasını yüklemeyi denemeden önce **Ayarlar**  >  **güvenlik**' e gidin ve **Bilinmeyen kaynaklar**' ı açın. Bu seçeneği kullanmazsanız, bir uygulamayı yüklemeye çalıştığınızda şu iletiyi görürsünüz: "Install engellendi. Güvenlik nedeniyle cihazınız bilinmeyen kaynaklardan gelen uygulamaların yüklenmesini engelleyecek şekilde ayarlanmış." iletisini görürsünüz. Doğrudan **Bilinmeyen kaynaklara**gitmek Için iletideki **ayarlara** dokunabilirsiniz.  
 
 > [!Note]
 > Kuruluşunuzda telekomünikasyon gider yönetimi yazılımı kullanılıyorsa, cihazınız tam olarak kaydedilmeden önce tamamlamanız gereken ek birkaç adım vardır. [Buradan](enroll-your-device-with-telecom-expense-management-android.md) daha fazla bilgi edinin.

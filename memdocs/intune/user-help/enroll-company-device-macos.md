@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 08/29/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 784a0f40fd07d53f7bc32d00ab3f3a9d76d4dcaf
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4a20e1b26df1d07a80d8919f8e59e0d9117f891d
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324910"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880254"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Kuruluş tarafından sağlanan macOS cihazınızı yönetime kaydedin
 
@@ -70,12 +70,12 @@ macOS cihazınızı yönetime kaydetmek için aşağıdaki adımları tamamlayı
 
 Cihazınızda Mac OS için Intune Şirket Portalı uygulamasını indirin. Uygulama, cihazınızı yönetimde izlemenize, eşitlemenize, eklemenize ve kaldırmanıza, ayrıca uygulamalar yüklemenize olanak tanır. Bu adımlar ayrıca cihazınızı Şirket Portalı'na kaydetmeyi de anlatmaktadır.
 
-1. MacOS cihazınızda adresine gidin [https://portal.manage.microsoft.com/EnrollmentRedirect.aspx](https://portal.manage.microsoft.com/EnrollmentRedirect.aspx).
+1. MacOS cihazınızda adresine gidin [https://portal.manage.microsoft.com/EnrollmentRedirect.aspx](https://portal.manage.microsoft.com/EnrollmentRedirect.aspx) .
 2. İş veya okul hesabınızla Şirket Portalı web sitesinde oturum açın. 
 3. Mac OS için Şirket Portalı yükleyicisini indirmek için **Uygulamayı Al**'a tıklayın.
 4. İstendiğinde .pkg dosyasını açın ve yükleme adımlarını tamamlayın.
 5. Şirket Portalı’nı açın ve iş veya okul hesabınızla oturum açın.
 6. Cihazınızı bulun ve **Kaydol**'a tıklayın.
-7. **Devam et** > ' e**tıklayın.** Cihazınız artık Şirket Portalı uygulamasında kurumsal ve uyumlu bir cihaz olarak görünmelidir.
+7. **Devam et**' e tıklayın  >  **Done**. Cihazınız artık Şirket Portalı uygulamasında kurumsal ve uyumlu bir cihaz olarak görünmelidir.
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

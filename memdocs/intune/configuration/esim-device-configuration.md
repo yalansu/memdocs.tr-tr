@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 05/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79e6f8c7b4501f0f15d00b094d7d90ad66225dd9
-ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
+ms.openlocfilehash: be6958f36d15032d93cee49d19617fe5f2b04bc0
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83401779"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880758"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune-public-preview"></a>Intune 'da esım hücresel profillerini yapılandırma (Genel Önizleme)
 
@@ -54,21 +54,7 @@ Bu makale bu adımlarda size yol gösterir.
 
 ## <a name="esim-capable-devices"></a>eSIM özellikli cihazlar
 
-Aşağıdaki cihazların eSIM özellikli olduğu bildirilmiştir ve bugün satılmaktadır. Ayrıca [cihazınızın eSIM’i destekleyip desteklemediğini](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data) kontrol edin.
-
-- Acer Swift 7
-- Asus NovoGo TP370QL
-- Asus TP401
-- Asus Transformer Mini T103
-- HP Elitebook G5
-- HP Envy x2
-- HP Probook G5
-- Lenovo Miix 630
-- Lenovo T480
-- Samsung Galaxy Book
-- Surface Pro LTE
-- HP Spectre Folio 13
-- Lenovo Yoga C630
+Cihazlarınız esım 'i destekledikleri konusunda emin değilseniz, cihaz üreticinize başvurun. Windows cihazlarında, esım desteklenebilirliğini doğrulayabilirsiniz. Daha fazla bilgi için bkz. [Windows 10 bilgisayarınızda hücresel veri bağlantısı almak için bir esım kullanma](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
 
 ## <a name="step-1-add-cellular-activation-codes"></a>1. Adım: Hücresel etkinleştirme kodlarını ekleme
 

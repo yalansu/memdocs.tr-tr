@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 749b648cb3527c75aac85fd7817b918a61f3a2a8
-ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
+ms.openlocfilehash: 8610b619a4ac05f37b893060b3b3a2bcb1dae528
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83733645"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864863"
 ---
 # <a name="understand-intune-and-azure-ads-device-limit-restrictions"></a>Intune ve Azure AD 'nin cihaz sınır kısıtlamalarını anlayın
 
@@ -54,15 +54,15 @@ Hem Intune hem de Azure cihaz sınırı kısıtlaması varsa, aşağıdaki tablo
 | Android Cihaz Yöneticisi DEM | Hayır | | Hayır | 
 | iOS/macOS BYOD | Yes | Yes | Yes |
 | iOS/macOS otomatik cihaz kaydı (ADE) | Yes | Yes | Yes |
-| iOS/macOS ADE | Hayır | Evet | Hayır |
+| iOS/macOS ADE | No | Yes | No |
 | Windows BYOD | Yes | Yes | Yes |
 | Yalnızca Windows MD | | Yes | Yes |
-| Windows Azure AD 'ye katılmış| Yes | Yes | Hayır |
-| Windows Autopilot | Yes | Yes | Hayır |
-| Windows hibrit Azure AD 'ye katılmış | Hayır | Hayır | Evet |
-| Windows ortak yönetimi | Hayır | Evet | Hayır |
-| Windows DEM | Hayır | Evet | Hayır |
-| Windows Toplu kaydı | Hayır | Evet | Hayır |
+| Windows Azure AD 'ye katılmış| Yes | Yes | No |
+| Windows Autopilot | Yes | Yes | No |
+| Windows hibrit Azure AD 'ye katılmış | Hayır | Hayır | Yes |
+| Windows ortak yönetimi | No | Yes | No |
+| Windows DEM | No | Yes | No |
+| Windows Toplu kaydı | No | Yes | No |
 
 
 ## <a name="android-and-ios-devices"></a>Android ve iOS cihazları
@@ -114,6 +114,6 @@ Azure 'daki cihaz sınırı kısıtlaması için, **Kullanıcı başına en fazl
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Azure 'da bir cihaz sınırı kısıtlaması oluşturun.](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings)
+- [Azure 'da bir cihaz sınırı kısıtlaması oluşturun.](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
 - [Azure 'da cihaz ayarlarını yapılandırın.](enrollment-restrictions-set.md#create-a-device-limit-restriction)
-- [Kayıt ve etki alanına katılmış hakkında daha fazla bilgi edinin.](https://docs.microsoft.com/azure/active-directory/devices/overview.md#getting-devices-in-azure-ad)
+- [Kayıt ve etki alanına katılmış hakkında daha fazla bilgi edinin.](https://docs.microsoft.com/azure/active-directory/devices/overview#getting-devices-in-azure-ad)

@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 08/28/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 79bcfc1fabab3b14a9a2560b692c5f2ca459aee4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 9d932fffa7381cca26699bb37e10783bcd7803dd
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079425"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880929"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Şirket Portalı web sitesinden cihazınızı uzaktan kilitleme
 
@@ -34,7 +34,7 @@ Uzaktan kilitleme ayarı şu platformlarda çalışır:
 
 * Android
 * iOS
-* Mac OS
+* macOS
 * Windows 10
 * Windows 10 Mobile (cihazın zaten bir geçiş kodu kümesi varsa)
 * Windows Phone 8.1 (cihazın zaten bir geçiş kodu kümesi varsa)  
@@ -45,7 +45,7 @@ Uzaktan kilitleme ayarı şu platformlarda çalışır:
 
     ![Tanımlanmamış, genel olarak adlandırılmış cihazları gösteren 2 kutucuğun bulunduğu Cihazlar sayfasının ekran görüntüsü. Cihazların hemen altında gri bir başlık yer alır ve kullanıcılardan kullandıkları cihazı tanımlamalarını veya yeni bir tane eklemelerini ister.](./media/rename-reset-device-step2-1808.png) 
 
-3. **Uzaktan kilitleme**’ye dokunun. Kilit seçeneği Sayfanızın üstünde görünmüyorsa, **diğer (...)** öğesini seçin.  >  **Uzaktan kilitleme**.  
+3. **Uzaktan kilitleme**’ye dokunun. Kilit seçeneği Sayfanızın üstünde görünmüyorsa, **diğer (...)**  >  öğesini seçin. **Uzaktan kilitleme**.  
 
    ![Şirket Portalı web sitesinde seçilen bir cihaza yönelik cihaz ayrıntıları sayfası; üst kısmında Yeniden Adlandır, Kaldır, Cihazı Sıfırla, Geçiş Kodunu Sıfırla ve Uzaktan Kilitle bağlantıları ile. ](./media/rename-reset-device-1808.png) 
 

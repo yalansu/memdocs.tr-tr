@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7eb352e73a88f8da8eb927400b5db86356c10363
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 49f9b9076d20c1f5d4740a6f8b1b9883e12ce629
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764161"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853545"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>Kılavuzlu senaryo-mobil için Microsoft Edge dağıtma
 
@@ -90,6 +90,5 @@ Son adım, yapılandırdığınız ayarların özetini incelemenizi sağlar. Se�
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- Intune uygulama koruma ilkesi tümleştirmesini ayarlayarak Microsoft Edge 'i kullanmaya ilişkin güvenliği artırın. Daha fazla bilgi için bkz. [Microsoft Edge Için uygulama koruma ilkeleri](../apps/manage-microsoft-edge.md#application-protection-policies-for-microsoft-edge).
-- Dahil edilecek intranet siteleriniz varsa, Azure uygulama proxy 'Si tümleştirmesiyle erişimi korumayı keşfedebilirsiniz. Daha fazla bilgi için bkz. [Microsoft Edge Için uygulama proxy ayarlarını yapılandırma](../apps/manage-microsoft-edge.md#configure-application-proxy-settings-for-microsoft-edge).
-
+- Intune uygulama koruma ilkesi tümleştirmesini ayarlayarak Microsoft Edge 'i kullanmaya ilişkin güvenliği artırın. Daha fazla bilgi için bkz. [Intune uygulama koruma Ilkeleri oluşturma](../apps/manage-microsoft-edge.md#create-intune-app-protection-policies).
+- Dahil edilecek intranet siteleriniz varsa, Azure uygulama proxy 'Si tümleştirmesiyle erişimi korumayı keşfedebilirsiniz. Daha fazla bilgi için bkz. [proxy yapılandırmasını yönetme](../apps/manage-microsoft-edge.md#manage-proxy-configuration).

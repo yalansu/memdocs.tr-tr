@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 05/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8b8bde6b7979cfe3b936a08630e23e19fc7e5a0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b74ea17e0fdadfbb6f7c1ec82e502f57187ba74e
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615055"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864931"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Intune 'da uyumsuz cihazlar için eylemleri yapılandırma
 
@@ -60,7 +60,7 @@ E-posta gönderildiğinde, Intune e-posta bildiriminde uyumsuz cihaz hakkındaki
   Aşağıdaki platformlar bu eylemi destekler:
   - Android
   - iOS
-  - Mac OS
+  - macOS
   - Windows 10 Mobile
   - Windows Phone 8.1 ve üzeri
 
@@ -104,7 +104,7 @@ Bir cihaz uyumluluk ilkesi oluşturmak için platforma özgü aşağıdaki kıla
 - [Android](compliance-policy-create-android.md)
 - [Android iş profilleri](compliance-policy-create-android-for-work.md)
 - [iOS](compliance-policy-create-ios.md)
-- [Mac OS](compliance-policy-create-mac-os.md)
+- [macOS](compliance-policy-create-mac-os.md)
 - [Windows](compliance-policy-create-windows.md)
 
 ## <a name="create-a-notification-message-template"></a>Bildirim iletisi şablonu oluşturma
@@ -112,7 +112,7 @@ Bir cihaz uyumluluk ilkesi oluşturmak için platforma özgü aşağıdaki kıla
 Kullanıcılarınıza e-posta göndermek için bir bildirim iletisi şablonu oluşturun. Cihazın uyumsuz olması durumunda, şablona girdiğiniz ayrıntılar kullanıcılarınıza gönderilen e-postada görüntülenir.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **uyumluluk ilkeleri** > **Notifications**bildirimleri > **Oluştur bildirim oluştur**' u seçin.
+2. **Cihaz**  >  **uyumluluk ilkeleri**  >  **bildirimleri**  >  **Oluştur bildirim oluştur**' u seçin.
 3. *Temel bilgiler*altında, aşağıdaki bilgileri belirtin:
 
    - **Adı**
@@ -144,14 +144,14 @@ Bir uyumluluk ilkesi oluşturduğunuzda veya mevcut bir ilkeyi güncelleştirdi�
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihaz** > **uyumluluk ilkeleri** > **ilkeleri**' ni seçin, ilkelerinizin birini seçin ve ardından **Özellikler**' i seçin.
+2. **Cihaz**  >  **uyumluluk ilkeleri**  >  **ilkeleri**' ni seçin, ilkelerinizin birini seçin ve ardından **Özellikler**' i seçin.
 
    Henüz bir ilkeniz yok mu? [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) veya başka bir platform ilkesi oluşturun.
 
    > [!NOTE]
    > JAMF cihazlar ve cihaz grupları tarafından hedeflenen cihazlar, şu anda uyumluluk eylemleri alamaz.
 
-3. **Uyumsuzluk** > **Ekle**için Eylemler ' i seçin.
+3. **Uyumsuzluk Ekle için Eylemler**' i seçin  >  **Add**.
 
 4. İstediğiniz **Eylem**’i seçin:
 
@@ -161,7 +161,7 @@ Bir uyumluluk ilkesi oluşturduğunuzda veya mevcut bir ilkeyi güncelleştirdi�
 
    - **Uyumsuz cihazları uzaktan kilitle**: Cihaz uyumsuz olduğunda cihazı kilitleyin. Bu eylem, kullanıcının cihazın kilidini açmak için bir PIN veya geçiş kodu girmesini zorlar.
 
-   - **Uyumsuz cihazı devre dışı bırak**: cihaz uyumsuzsa, cihazdaki tüm şirket verilerini kaldırın ve cihazı Intune yönetiminden kaldırın. Bir cihazın yanlışlıkla silinmesini engellemek için, bu eylem en az **30** günlük zamanlamayı destekler.
+   - **Uyumsuz cihazı devre dışı bırak**: cihaz uyumsuzsa, cihazdaki tüm şirket verilerini kaldırın ve cihazı Intune yönetiminden kaldırın.
 
    - **Son kullanıcıya anında iletme bildirimi gönder**: cihazdaki Şirket portalı uygulama veya Intune uygulaması aracılığıyla bir cihaza uyumsuzluk hakkında anında iletme bildirimi göndermek için bu eylemi yapılandırın.
 
@@ -173,7 +173,7 @@ Bir uyumluluk ilkesi oluşturduğunuzda veya mevcut bir ilkeyi güncelleştirdi�
 
   Uyumluluk ve yerleşik eylemler hakkında daha fazla bilgi için bkz. [uyumluluğa genel bakış](device-compliance-get-started.md).
 
-6. İşiniz bittiğinde, değişikliklerinizi kaydetmek için**Tamam** **Ekle** > ' yi seçin.
+6. İşiniz bittiğinde, **Add**  >  değişikliklerinizi kaydetmek için**Tamam** Ekle ' yi seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

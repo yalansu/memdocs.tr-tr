@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e036e139e97ce033b3269ba0b8d5cf202fad773
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8a90345bef46161911bcb1c1072b6ae4af41f16e
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331770"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864965"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>REST istemcisi ile Intune Veri Ambarı API’sinden veri alma
 
@@ -41,7 +41,7 @@ REST istemcisi ile API’yi yetkilendirme ve buna erişmeyi öğrenmek için aş
 
 Azure’da yerel bir uygulama oluşturun. Bu yerel uygulama, istemci uygulamadır. Yerel makinenizde çalışan istemci, yerel istemci kimlik bilgileri istediğinde Intune Veri Ambarı API’sine başvurur.
 
-1. Kiracınız için Azure portalında oturum açın. **Uygulama kayıtları** bölmesini açmak için **Azure Active Directory** > **uygulama kayıtları** seçin.
+1. Kiracınız için Azure portalında oturum açın. **Azure Active Directory**  >  **Uygulama kayıtları** bölmesini açmak için Azure Active Directory**uygulama kayıtları** seçin.
 2. **Yeni uygulama kaydı**’nı seçin.
 3. Uygulama ayrıntılarını yazın.
     1. **Ad** kısmına, Intune Veri Ambarı İstemcisi gibi kolay bir ad yazın.
@@ -66,7 +66,7 @@ Artık Azure’da tanımlanan bir uygulamanız var. Yerel uygulamadan Microsoft 
 7. **Seç**’i seçin.
 8. **Microsoft Intune’dan veri ambarı bilgileri almak** için **Temsilcili İzinler**’e tıklayın.
 
-    ![Erişimi etkinleştirme - Microsot Intune API'si](./media/reports-proc-data-rest/reports-get_rest_data_client_access.png)
+    ![Access-Microsoft Intune API 'sini etkinleştir](./media/reports-proc-data-rest/reports-get_rest_data_client_access.png)
 
 9. **Seç**’i seçin.
 10. **Done** (Bitti) öğesini seçin.
@@ -155,7 +155,7 @@ Aşağıdaki örnek, bir basit REST istemcisi içerir. Kod, .Net kitaplığında
 > Aşağıdaki kod [örneğine GitHub’dan](https://github.com/Microsoft/Intune-Data-Warehouse/blob/master/Samples/CSharp/Program.cs) ulaşabilirsiniz. Örnekteki son değişiklikler ve güncelleştirmeler için GitHub deposuna başvurun.
 
 1. **Microsoft Visual Studio**’yu açın.
-2. **Dosya** > **Yeni proje**' yi seçin. **Visual C#**’yi genişletin ve **Konsol Uygulaması (.Net Framework)** öğesini seçin.
+2. **Dosya**  >  **Yeni proje**' yi seçin. **Visual C#**’yi genişletin ve **Konsol Uygulaması (.Net Framework)** öğesini seçin.
 3. Projeyi `IntuneDataWarehouseSamples` olarak adlandırın, projeyi kaydetmek istediğiniz konuma göz atın ve **Tamam**’a tıklayın.
 4. Çözüm Gezgini’nde çözümün adına sağ tıklayın ve daha sonra **Çözüm için NuGet Paketlerini Yönetme**’ye tıklayın. **Gözat**’a tıklayın, daha sonra arama kutusuna `Microsoft.IdentityModel.Clients.ActiveDirectory` yazın.
 5. Paketi seçin, Çözümünüz için Paketleri Yönetme altında **IntuneDataWarehouseSamples**’a tıklayın ve daha sonra **Yükle**’yi seçin.
@@ -216,6 +216,7 @@ Aşağıdaki örnek, bir basit REST istemcisi içerir. Kod, .Net kitaplığında
 
    Console.Write(response.Content.ReadAsStringAsync().Result);
    Console.ReadKey();
+   }
    }
    }
    ```

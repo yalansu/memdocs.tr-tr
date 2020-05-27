@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de679314bcd3b52ff879fbe9a6340a61d2b7e993
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3ad6baf1ec1ed892495845e0b9fdaaa5583bba85
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078371"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853647"
 ---
 # <a name="app-protection-policies-overview"></a>Uygulama koruma ilkelerine genel bakış
 
@@ -84,6 +84,18 @@ Intune uygulama koruma ilkeleri platformu desteği, Android ve iOS/ıpados cihaz
 > [!IMPORTANT]
 > Android 'de uygulama koruma Ilkelerini almak için cihazda Intune Şirket Portalı gereklidir. Daha fazla bilgi için bkz. [Intune Şirket Portalı uygulama erişim gereksinimleri](../fundamentals/end-user-mam-apps-android.md#access-apps).
 
+## <a name="app-protection-policy-data-protection-framework"></a>Uygulama koruma ilkesi veri koruma çerçevesi
+
+Uygulama koruma ilkelerinde (uygulama) kullanılabilen seçimler, kuruluşların korumayı kendi özel ihtiyaçlarına göre uyarlamalarını sağlar. Bazıları için, bir bütün senaryoyu uygulamak için hangi ilke ayarlarının gerekli olduğu açık olmayabilir. Microsoft, kuruluşların mobil istemci uç noktası sağlamlaştırma için öncelik vermesini sağlamak üzere iOS ve Android mobil uygulama yönetimi için uygulama veri koruma çerçevesi için Taksonomi sunmuştur.
+
+UYGULAMA veri koruma çerçevesi, her düzey bir önceki düzeyin üzerinde oluşturulmasıyla birlikte üç ayrı yapılandırma düzeyi halinde düzenlenmiştir:
+
+- **Kurumsal temel veri koruması** (düzey 1), uygulamaların PIN ile korunmasını ve şifreli silme işlemleri gerçekleştirmesini sağlar. Android cihazlar için bu düzey, Android cihaz kanıtlamasını doğrular. Bu, Exchange Online posta kutusu ilkelerinde benzer veri koruma denetimi sağlayan ve bunu ve Kullanıcı popülasyonu uygulamayı sunan bir giriş düzeyi yapılandırmadır.
+- **Kurumsal gelişmiş veri koruması** (düzey 2), uygulama veri sızıntısı önleme mekanizmalarını ve en düşük işletim sistemi gereksinimlerini tanıtır. Bu, iş veya okul verilerine erişen mobil kullanıcıların çoğu için geçerli olan yapılandırmadır.
+- **Kurumsal yüksek veri koruma** (düzey 3) gelişmiş veri koruma mekanizmaları, gelişmiş PIN YAPıLANDıRMASı ve uygulama mobil tehdit savunması sağlar. Bu yapılandırma, yüksek riskli verilere erişen kullanıcılar için istenir.
+
+Her yapılandırma düzeyi ve korunması gereken en düşük uygulamalar için belirli önerilere bakmak için, [Uygulama koruma ilkelerini kullanarak Data Protection Framework 'ü](app-protection-framework.md)inceleyin.
+
 ## <a name="how-app-protection-policies-protect-app-data"></a>Uygulama koruma ilkeleri uygulama verilerini nasıl korur
 
 ### <a name="apps-without-app-protection-policies"></a>Uygulama koruma ilkelerinin bulunmadığı uygulamalar
@@ -143,13 +155,13 @@ Intune SDK geliştirme ekibi, yerel Android, iOS/ıpados (obj-C, Swift), Xamarin
 
 Aşağıdaki listede, Intune tarafından yönetilen bir uygulamada uygulama koruma ilkelerini kullanmak için son kullanıcı gereksinimleri verilmiştir:
 
-- Son kullanıcının bir Azure Active Directory (AAD) hesabı olması gerekir. Azure Active Directory’de Intune kullanıcılarını nasıl oluşturacağınızı öğrenmek için [Kullanıcı ekleme ve Intune'a yönetici izni verme](../fundamentals/users-add.md) konusuna bakın.
+- Son kullanıcının bir Azure Active Directory (Azure AD) hesabı olmalıdır. Azure Active Directory’de Intune kullanıcılarını nasıl oluşturacağınızı öğrenmek için [Kullanıcı ekleme ve Intune'a yönetici izni verme](../fundamentals/users-add.md) konusuna bakın.
 
 - Son kullanıcının Azure Active Directory hesabına atanmış bir Microsoft Intune lisansının olması gerekir. Son kullanıcılara Intune lisanslarını nasıl atayacağınızı öğrenmek için [Intune lisanslarını yönetme](../fundamentals/licenses-assign.md) konusuna bakın.
 
 - Son kullanıcı bir uygulama koruma ilkesi tarafından hedeflenen bir güvenlik grubuna ait olmalıdır. Aynı uygulama koruma ilkesi, kullanılan belirli uygulamayı hedeflemelidir. Uygulama koruma ilkeleri [Azure portalındaki](https://portal.azure.com) Intune konsolunda oluşturulabilir ve dağıtılabilir. Güvenlik grupları Şu anda [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com)oluşturulabilir.
 
-- Son kullanıcının AAD hesabını kullanarak uygulamada oturum açması gerekir.
+- Son kullanıcının Azure AD hesabını kullanarak uygulamada oturum açması gerekir.
 
 ## <a name="app-protection-policies-for-microsoft-office-apps"></a>Microsoft Office uygulamalar için uygulama koruma ilkeleri
 
@@ -207,7 +219,7 @@ Varsayılan olarak kiracı başına yalnızca bir **Genel** ilke olabilir. Ancak
 Outlook 'ta "kişisel" ve "Kurumsal" e-postaların birleştirilmiş bir e-posta görünümü vardır. Bu durumda, Outlook uygulaması başlatma sırasında Intune PIN 'ı ister.
 
   >[!NOTE]
-  > Edge "Kurumsal" bağlamda olsa da Kullanıcı, OneDrive "Kurumsal" bağlam dosyalarını kasıtlı olarak bilinmeyen bir kişisel bulut depolama konumuna taşıyabilir. Bunu önlemek için bkz. [Microsoft Edge için izin verilen veya engellenen siteler listesini belirtme](../apps/manage-microsoft-edge.md#specify-allowed-or-blocked-sites-list-for-microsoft-edge) ve kenar için izin verilen/engellenen site listesini yapılandırma.
+  > Edge "Kurumsal" bağlamda olsa da Kullanıcı, OneDrive "Kurumsal" bağlam dosyalarını kasıtlı olarak bilinmeyen bir kişisel bulut depolama konumuna taşıyabilir. Bunu önlemek için bkz. [kısıtlı web sitelerini yönetme](manage-microsoft-edge.md#manage-restricted-web-sites) ve kenar için izin verilen/engellenen site listesini yapılandırma.
 
 Intune 'da çoklu kimlik hakkında daha fazla bilgi için bkz. [mam and Multi-Identity](apps-supported-intune-apps.md).
 

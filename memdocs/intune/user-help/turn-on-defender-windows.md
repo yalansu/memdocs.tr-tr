@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 11/08/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 46ad7a5d34e6d006794b13cd5eae9c533e047ec3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f29cc024b34736a0a6d759179af70ceb51e12ea1
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324258"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881114"
 ---
 # <a name="turn-on-windows-defender-to-access-company-resources"></a>Şirket kaynaklarına erişmek için Windows Defender’ı etkinleştirme
 
@@ -35,8 +35,8 @@ Erişim sorunlarını düzeltmek için Windows Defender’ınızda değiştirmen
 ## <a name="turn-on-windows-defender"></a>Windows Defender’ı etkinleştirme
 
 1. **Başlangıç**’ta **Denetim Masası**’nı açın.
-2. **Yönetim Araçları** > **düzenleme grup ilkesi**' ni açın. Bu, **Yerel Grup İlkesi Düzenleyicisi**’ni yeni bir pencerede açar.
-3. **Bilgisayar yapılandırması** > **Yönetim Şablonları** > **Windows bileşenleri** > **Windows Defender virüsten koruma**' yı açın. **Windows Defender Antivirüs’ü kapatma** ayarı, diğer ayar klasörlerinin altındadır. 
+2. **Yönetim Araçları**  >  **düzenleme grup ilkesi**' ni açın. Bu, **Yerel Grup İlkesi Düzenleyicisi**’ni yeni bir pencerede açar.
+3. **Bilgisayar yapılandırması**  >  **Yönetim Şablonları**  >  **Windows bileşenleri**  >  **Windows Defender virüsten koruma**' yı açın. **Windows Defender Antivirüs’ü kapatma** ayarı, diğer ayar klasörlerinin altındadır. 
 4. **Windows Defender Antivirüs’ü kapatma**’yı açın ve **Devre dışı** veya **Yapılandırılmamış** olarak ayarlı olduğundan emin olun.
 
 ## <a name="turn-on-real-time-protection"></a>Gerçek zamanlı korumayı etkinleştirme
@@ -44,8 +44,8 @@ Erişim sorunlarını düzeltmek için Windows Defender’ınızda değiştirmen
 **Başlangıç**’a gidip **Windows Defender Güvenlik Merkezi** için arama yaparak Gerçek Zamanlı Korumanın etkin olduğundan emin olun. **Virüs ve tehdit koruma ayarları**’nı seçin ve **Gerçek zamanlı koruma** ile **Bulut ile sunulan koruma**’nin **Açık** olarak ayarlı olduğunu onaylayın. Bu seçenekler görünmüyorsa, etkin olmaları için şunları yapın:
 
 1. **Başlangıç**’ta **Denetim Masası**’nı açın.
-2. **Yönetim Araçları** > **düzenleme grup ilkesi**' ni açın. Bu, **Yerel Grup İlkesi Düzenleyicisi**’ni yeni bir pencerede açar.
-3. **Bilgisayar yapılandırması** > **Yönetim Şablonları** > **Windows bileşenleri** > **Windows Defender Güvenlik Merkezi** > **virüsü ve tehdit koruması '** nı açın.
+2. **Yönetim Araçları**  >  **düzenleme grup ilkesi**' ni açın. Bu, **Yerel Grup İlkesi Düzenleyicisi**’ni yeni bir pencerede açar.
+3. **Bilgisayar yapılandırması**  >  **Yönetim Şablonları**  >  **Windows bileşenleri**  >  **Windows Defender Güvenlik Merkezi**  >  **virüsü ve tehdit koruması '** nı açın.
 4. **Virüs ve tehdit koruma alanı** ayarını açın ve **Devre dışı** olarak ayarlayın.
 
 ## <a name="update-your-antivirus-definitions"></a>Antivirüs tanımlarınızı güncelleştirme

@@ -7,7 +7,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -20,18 +20,18 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: b180337ccba00727f37026230a796e515ec5ff9f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 05d427ae32bc0de9ce1c9086f5523bb444dd4874
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327486"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880716"
 ---
 # <a name="you-need-to-update-your-windows-device"></a>Windows cihazınızı güncelleştirmeniz gerekiyor
 
 [!INCLUDE [wit_nextref](includes/end-user-os-update-guidance.md)]
 
-Windows çalıştıran mobil cihazlar için **Ayarlar** > **Telefon güncelleştirmesi** > **Güncelleştirmeleri denetle**' ye giderek cihazınızı güncelleştirin.
+Windows çalıştıran mobil cihazlar için **Ayarlar**  >  **Telefon güncelleştirmesi**  >  **Güncelleştirmeleri denetle**' ye giderek cihazınızı güncelleştirin.
 
 Windows çalıştıran bilgisayarlarda **işletim sistemi** için arama yapın ve çalıştırdığınız Windows sürümünü belirlemek için istemleri takip edin.
 

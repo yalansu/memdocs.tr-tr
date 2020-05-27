@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/31/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b83092521f1ab0058d47d599e7fd9c10c2fd6d35
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: bac9edcb91ef49cfa2252bd82e6e88bfd512d9ef
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077776"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881511"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-intercede"></a>İOS veya ıpados cihazını Şirket Portalı ve ıntercede ile ayarlama
 
@@ -52,7 +52,7 @@ Türetilmiş kimlik bilgileri şu şekilde kullanılır:
 
 Türetilmiş kimlik bilgileri, özel yayın (SP) 800-157 kapsamında türetilmiş kişisel kimlik doğrulama (PıV) kimlik bilgileri için ulusal standartlar ve Teknoloji Enstitüsü (NıST) kuralları uygulamasıdır.  
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
  Kaydı tamamlayabilmeniz için, şunları yapmanız gerekir:
 
@@ -67,7 +67,7 @@ Türetilmiş kimlik bilgileri, özel yayın (SP) 800-157 kapsamında türetilmi�
 2. Ekranda görüntülenen kodu yazın.  
 
     ![Ekran ileti ve kodu ile Şirket Portalı uygulamasının örnek görüntüsü.](./media/copy-code-intercede.png)  
-1. Akıllı kart etkin cihazınıza geçin ve adresine gidin https://microsoft.com/devicelogin. 
+1. Akıllı kart etkin cihazınıza geçin ve adresine gidin https://microsoft.com/devicelogin . 
 
 1. Daha önce yazdığınız kodu girin.
  
@@ -91,7 +91,7 @@ Türetilmiş kimlik bilgileri, özel yayın (SP) 800-157 kapsamında türetilmi�
 
     ![Şirket Portalı QR kodu alma ekranının örnek ekran görüntüsü.](./media/get-qr-code-intercede.png) 
  
-10. **Kamera** > kullan**Tamam**' a dokunun.  
+10. **Kamera kullan**  >  **Tamam**' a dokunun.  
 
     ![Kamera erişimine izin vermek için izin isteyen Şirket Portalı isteminin örnek ekran görüntüsü.](./media/allow-cp-camera-access-intercede.png)  
 

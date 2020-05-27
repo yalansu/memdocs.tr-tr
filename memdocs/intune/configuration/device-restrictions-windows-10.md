@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8ad2583bb7cf4bf4c783dc244eaa9f7be0c9306
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 20c552ff879574edc0ed497b5c99b45b8092918a
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429670"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864913"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Windows 10 (ve üzeri) cihaz ayarları
 
@@ -234,11 +234,20 @@ Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [deneyim ILKESI CSP]
   [Kamera CSP 'si](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
 
 - **OneDrive dosya eşitleme**: **Block** , kullanıcıların dosyaları OneDrive 'a cihazdan eşitlemesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
+  [System/DisableOneDriveFileSync CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-disableonedrivefilesync)
+
 - **Çıkarılabilir depolama**: **Block** , kullanıcıların cihazla SD kartlar gibi harici depolama cihazlarını kullanmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Coğrafi konum**: **blok** kullanıcıların cihazdaki konum hizmetlerini açmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
+  [Sistem/AllowLocation CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowlocation)
+
 - **İnternet paylaşımı**: **engelleme** cihazda İnternet bağlantısı paylaşımını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Telefon sıfırlaması**: **engelleme** , kullanıcıların cihazda fabrika sıfırlaması gerçekleştirmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **USB bağlantısı**: **blok** , cihazdaki bir USB bağlantısı aracılığıyla dış depolama cihazlarına erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. USB ücretlendirme bu ayardan etkilenmez.
+
+  [Bağlantı/AllowUSBConnection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
+
 - **Hırsızlık önleme modu** (yalnızca mobil): **Block** , kullanıcıların cihazda antihırsızlık modu tercihini seçmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Cortana**: **blok** , cihazda Cortana sesli yardımcısını devre dışı bırakır. Cortana devre dışı bırakıldığında, kullanıcılar hala cihazdaki öğeleri bulmak için arama yapabilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Cortana 'Ya izin verebilir.
 
@@ -249,6 +258,9 @@ Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [deneyim ILKESI CSP]
 - **Sağlama paketleri ekleme**: **blok** , cihaza sağlama paketlerini yükleyen çalışma zamanı yapılandırma aracısını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Sağlama paketlerini kaldır**: **blok** , kaynak sağlama paketlerini cihazdan kaldıran çalışma zamanı yapılandırma aracısını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Cihaz bulma**: **blok** cihazın diğer cihazlar tarafından bulunmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
+  [Deneyim/AllowDeviceDiscovery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowdevicediscovery)
+
 - **Görev değiştirici** (yalnızca mobil): **blok** cihazda görev değiştirmeyi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **SIM kart hatası iletişim kutusu** (yalnızca mobil): bir SIM kart algılanmazsa cihazda hata Iletilerinin gösterilmesini **engelleyin** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi hata iletilerini gösterebilir.
 - **Mürekkep çalışma alanı**: kullanıcının mürekkep çalışma alanına erişip erişene olduğunu ve nasıl erişebileceğini seçin. Seçenekleriniz şunlardır:

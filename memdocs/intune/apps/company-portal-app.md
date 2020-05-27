@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f22b2d87492d227b8a78859adb1debc504da8d5
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: d69167a034970216e1e245f638bd59091ed6e18c
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824192"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853613"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune Şirket Portalı uygulamaları, Şirket Portalı Web sitesini ve Intune uygulamasını özelleştirme
 
@@ -247,5 +247,5 @@ Azure Kamu kullanıyorsanız, bir sorunla ilgili yardım alma sürecini başlatt
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Microsoft Edge 'de yeni sekme sayfaları için kuruluşunuzun logosunu ve marka rengini yapılandırın](../apps/manage-microsoft-edge.md#configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge)
+- [İOS ve Android için Microsoft Edge 'de yeni sekme sayfaları için kuruluşunuzun logosunu ve marka rengini yapılandırın](manage-microsoft-edge.md#organization-logo-and-brand-color)
 - [Uygulamaları ekleme](apps-add.md)

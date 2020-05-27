@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 08/28/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: dfa2c9d9f2535bf336e28a7fe4cf591451d3bf94
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4764d32f4ab9fccdcf903df76bf57604fe7b983a
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327970"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881091"
 ---
 # <a name="rename-your-device-from-the-company-portal-website"></a>Şirket Portalı web sitesinden cihazınızı yeniden adlandırma
 
@@ -36,7 +36,7 @@ ms.locfileid: "79327970"
 
     ![Tanımlanmamış, genel olarak adlandırılmış cihazları gösteren 2 kutucuğun bulunduğu Cihazlar sayfasının ekran görüntüsü. Cihazların hemen altında gri bir başlık yer alır ve kullanıcılardan kullandıkları cihazı tanımlamalarını veya yeni bir tane eklemelerini ister.](./media/rename-reset-device-step2-1808.png)   
 
-3. **Yeniden Adlandır**' ı seçin. Sayfanızın üst kısmında yeniden adlandırma seçeneği görünmüyorsa, **daha fazla (...)** öğesini seçin.  >  **Yeniden Adlandır**.   
+3. **Yeniden Adlandır**' ı seçin. Sayfanızın üst kısmında yeniden adlandırma seçeneği görünmüyorsa, **daha fazla (...)**  >  öğesini seçin. **Yeniden Adlandır**.   
 
    ![Şirket Portalı web sitesinde seçilen bir cihaza yönelik cihaz ayrıntıları sayfası; üst kısmında Yeniden Adlandır, Kaldır, Cihazı Sıfırla, Geçiş Kodunu Sıfırla ve Uzaktan Kilitle bağlantıları ile. ](./media/rename-reset-device-1808.png)   
 

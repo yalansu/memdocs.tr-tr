@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 11/06/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 3ff737d99a5d57e8e4a1f090e65e787f9b57c5e3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b0b18db54b83b0ccf4371f73918e4bc4b5c01ece
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324038"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880737"
 ---
 # <a name="how-to-enable-user-access-control"></a>Kullanıcı Hesabı Denetimini etkinleştirme
 
@@ -33,7 +33,7 @@ ms.locfileid: "79324038"
 Kullanıcı Hesabı Denetimi ayarlarını şu şekilde değiştirebilirsiniz:
 
 1. **Başlangıç**’a gidin ve **Denetim Masası**’nı açın.
-2. Açık **güvenlik ve bakım** > **Kullanıcı hesabı denetim ayarlarını değiştirin**.
+2. Açık **güvenlik ve bakım**  >  **Kullanıcı hesabı denetim ayarlarını değiştirin**.
 3. **Bilgisayarınızdaki değişiklikler hakkında ne zaman uyarılacağınızı seçin** sayfasında kaydıracı, iki çentikten **Her zaman uyar**’a en yakın olanına kaydırın.
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. İletişim bilgileri için [Şirket Portalı web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

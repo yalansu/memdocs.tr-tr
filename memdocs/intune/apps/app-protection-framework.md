@@ -1,12 +1,12 @@
 ---
-title: Uygulama koruma ilkelerini kullanan veri koruma çerçevesi
+title: Uygulama koruma ilkeleri kullanan veri koruma altyapısı
 titleSuffix: Microsoft Intune
 description: Uygulama koruma Ilkelerinin (uygulama), cihazın kayıtlı olup olmamasına bakılmaksızın bir kuruluşun verilerinin güvenli veya yönetilen bir uygulamada yer aldığından emin olun.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86117193ce7aae01380923ce26f84dfb5ba97a4d
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 91683280a2e48d82fd145bf19228c33b432b6b49
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82182302"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853579"
 ---
-# <a name="data-protection-framework-using-app-protection-policies"></a>Uygulama koruma ilkelerini kullanan veri koruma çerçevesi 
+# <a name="data-protection-framework-using-app-protection-policies"></a>Uygulama koruma ilkeleri kullanan veri koruma altyapısı 
 
 Daha fazla kuruluş, iş veya okul verilerine erişmek için mobil cihaz stratejileri uyguladıkça, veri sızıntılarına karşı koruma, Paramount hale gelir. Veri sızıntılarına karşı koruma için Intune 'un mobil uygulama yönetimi çözümü, uygulama koruma Ilkelerdir (uygulama). UYGULAMA, cihazın kayıtlı olup olmamasına bakılmaksızın bir kuruluşun verilerinin güvenli kalmasını veya yönetilen bir uygulamada yer aldığından emin olmanızı sağlayan kurallardır. Daha fazla bilgi için bkz. [Uygulama koruma ilkelerine genel bakış](app-protection-policy.md).
 
@@ -55,7 +55,7 @@ Yukarıdaki tabloda gösterildiği gibi, ilke ayarlarının etkilerini anlamak i
 
 Bir UYGULAMADAKI değişiklikleri test ederken, [Teslimat zamanlamasıyla](app-protection-policy-delivery.md)haberdar olun. Belirli bir kullanıcı için uygulama tesliminin durumu izlenebilir. Daha fazla bilgi için bkz. [Uygulama koruma ilkelerini izleme](app-protection-policies-monitor.md).
 
-Her bir uygulama için ayrı uygulama ayarları, uç ve ilgili URL 'YI kullanarak cihazlarda doğrulanabilir *: ıntunehelp*. Daha fazla bilgi için bkz. [Microsoft Edge 'i Microsoft Intune kullanarak](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs) [istemci uygulama koruma günlüklerini gözden geçirme](app-protection-policy-settings-log.md) ve Web erişimini yönetme.
+Her bir uygulama için ayrı uygulama ayarları, uç ve ilgili URL 'YI kullanarak cihazlarda doğrulanabilir *: ıntunehelp*. Daha fazla bilgi için bkz. [istemci uygulama koruma günlüklerini gözden geçirme](app-protection-policy-settings-log.md) ve [yönetilen uygulama günlüklerine erişmek Için iOS ve Android için Edge kullanma](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
 ## <a name="app-data-protection-framework-settings"></a>UYGULAMA veri koruma çerçevesi ayarları
 
@@ -120,7 +120,7 @@ Düzey 1 ' deki ilkeler, Microsoft Endpoint Manager 'da uygulama koruma Ilkesi o
 | Erişim için PIN yerine biyometrik öğesini geçersiz kıl  | Gerektirme  | iOS/ıpados, Android  |   |
 | Zaman aşımı (etkinlik dakikası)  | 720  | iOS/ıpados, Android  |   |
 | Erişim için PIN yerine yüz KIMLIĞI  | İzin Ver  | iOS/iPadOS  |   |
-| Belirtilen sayıda gün sonra PIN sıfırlama  | Hayır  | iOS/ıpados, Android  |   |
+| Belirtilen sayıda gün sonra PIN sıfırlama  | No  | iOS/ıpados, Android  |   |
 | Cihaz PIN'i ayarlı olduğunda uygulama PIN'i  | Gerektirme  | iOS/ıpados, Android  | Cihaz Intune 'A kaydedildiyse, Yöneticiler cihaz uyumluluk ilkesi aracılığıyla güçlü bir cihaz PIN 'ı zorlarsa bunu "gerekli değil" olarak ayarlamayı düşünebilirler.  |
 | Erişim için iş veya okul hesabı kimlik bilgileri  | Gerekli değil  | iOS/ıpados, Android  |   |
 | Erişim gereksinimlerini yeniden denetle (eylemsizlik dakika sayısı)  | 30  | iOS/ıpados, Android  |   |
@@ -140,7 +140,7 @@ Düzey 1 ' deki ilkeler, Microsoft Endpoint Manager 'da uygulama koruma Ilkesi o
 
 Düzey 2, kullanıcıların daha hassas bilgilere erişen cihazlarda bir standart olarak önerilen veri koruma yapılandırması ' dır. Bu cihazlar, günümüzde kuruluşlarda doğal bir hedeftir. Bu öneriler, büyük ölçüde yüksek düzeyde güvenlik uygulayıcıları olan büyük bir personeli varsaymaz ve bu nedenle kurumsal kuruluşların çoğu tarafından erişilebilmelidir. Bu yapılandırma, veri aktarımı senaryolarını kısıtlayarak ve en düşük işletim sistemi sürümü gerektirerek, düzey 1 ' deki yapılandırmanın üzerine genişletilir.
 
-Düzey 2 ' de zorlanan ilke ayarları, 1. düzey için önerilen tüm ilke ayarlarını içerir ve daha fazla denetim ve düzey 1 ' den daha karmaşık bir yapılandırma uygulamak için yalnızca aşağıdaki ilke ayarlarını ekler veya günceller. Bu ayarlar, kullanıcılar veya uygulamalar için biraz daha yüksek bir etkiye sahip olsa da, kullanıcıların mobil cihazlarda hassas bilgilere erişimi olan riskler konusunda daha fazla bilgi sahibi olan bir veri koruma düzeyi daha fazla yorum uygular.
+Düzey 2 ' de zorlanan ilke ayarları, 1. düzey için önerilen tüm ilke ayarlarını içerir, ancak aşağıda, daha fazla denetim ve düzey 1 ' den daha karmaşık bir yapılandırma uygulamak için eklenen veya değiştirilen bu ayarları listeler. Bu ayarlar, kullanıcılar veya uygulamalar için biraz daha yüksek bir etkiye sahip olsa da, kullanıcıların mobil cihazlarda hassas bilgilere erişimi olan riskler konusunda daha fazla bilgi sahibi olan bir veri koruma düzeyi daha fazla yorum uygular.
 
 #### <a name="data-protection"></a>Veri koruma
 
@@ -159,15 +159,15 @@ Düzey 2 ' de zorlanan ilke ayarları, 1. düzey için önerilen tüm ilke ayarl
 
 | Ayar | Ayar açıklaması |          Değer/eylem  |          Platform        | Notlar |
 |--------------------|----------------------------|-----------------------------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cihaz koşulları  |       En düşük işletim sistemi sürümü  |          *Biçim: Ana. ikincil. derleme <br>örneği: 12.4.6* /Block erişimi |          iOS/iPadOS        | Microsoft, en düşük iOS ana sürümünün Microsoft uygulamaları için desteklenen iOS sürümleriyle eşleşecek şekilde yapılandırılmasını önerir.   Microsoft uygulamaları, N 'nin geçerli iOS ana yayın sürümü olduğu bir N-1 yaklaşımını destekler. Küçük ve derleme sürüm değerleri için Microsoft, cihazların ilgili güvenlik güncelleştirmeleriyle güncel olmasını önerir. Apple 'ın en son önerileri için bkz. [Apple güvenlik güncelleştirmeleri](https://support.apple.com/en-us/HT201222) |
-| Cihaz koşulları  |       En düşük işletim sistemi sürümü  |          *Biçim: Ana. ikincil<br> örnek: 5,0* /erişimi engelle   |          Android        | Microsoft, en düşük Android ana sürümünün Microsoft uygulamaları için desteklenen Android sürümleriyle eşleşecek şekilde yapılandırılmasını önerir. Android kurumsal gereksinimleri olan OEM 'Ler ve cihazlar, geçerli sevkiyat sürümü + bir mektup yükseltmesi desteklemelidir.   Android, bilgi çalışanları için Android 8,0 ve üstünü öneriyor.   Android 'in en son önerileri için bkz. [Android Enterprise önerilen gereksinimleri](https://www.android.com/enterprise/recommended/requirements/) |
-| Cihaz koşulları  |       Min Patch sürümü  |          *Biçim: yyyy-aa-gg <br> örnek: 2020-01-01* /erişimi engelle  |          Android        | Android cihazlar aylık güvenlik düzeltme ekleri alabilir, ancak yayın OEM 'Lere ve/veya taşıyıcılar 'e bağımlıdır. Kuruluşlar, bu ayarı uygulamadan önce dağıtılmış Android cihazlarının güvenlik güncelleştirmelerini aldığından emin olmalıdır. En son düzeltme eki sürümleri için [Android güvenlik bültenlerini](https://source.android.com/security/bulletin/) inceleyin.  |
+| Cihaz koşulları  |       En düşük işletim sistemi sürümü  |          *Biçim: Ana. ikincil. derleme <br> Örnek: 12.4.6* /Block erişimi |          iOS/iPadOS        | Microsoft, en düşük iOS ana sürümünün Microsoft uygulamaları için desteklenen iOS sürümleriyle eşleşecek şekilde yapılandırılmasını önerir.   Microsoft uygulamaları, N 'nin geçerli iOS ana yayın sürümü olduğu bir N-1 yaklaşımını destekler. Küçük ve derleme sürüm değerleri için Microsoft, cihazların ilgili güvenlik güncelleştirmeleriyle güncel olmasını önerir. Apple 'ın en son önerileri için bkz. [Apple güvenlik güncelleştirmeleri](https://support.apple.com/en-us/HT201222) |
+| Cihaz koşulları  |       En düşük işletim sistemi sürümü  |          *Biçim: Ana. ikincil <br>   Örnek: 5,0* /erişimi engelle   |          Android        | Microsoft, en düşük Android ana sürümünün Microsoft uygulamaları için desteklenen Android sürümleriyle eşleşecek şekilde yapılandırılmasını önerir. Android kurumsal gereksinimleri olan OEM 'Ler ve cihazlar, geçerli sevkiyat sürümü + bir mektup yükseltmesi desteklemelidir.   Android, bilgi çalışanları için Android 8,0 ve üstünü öneriyor.   Android 'in en son önerileri için bkz. [Android Enterprise önerilen gereksinimleri](https://www.android.com/enterprise/recommended/requirements/) |
+| Cihaz koşulları  |       Min Patch sürümü  |          *Biçim: yyyy-aa-gg <br> Örnek: 2020-01-01* /erişimi engelle  |          Android        | Android cihazlar aylık güvenlik düzeltme ekleri alabilir, ancak yayın OEM 'Lere ve/veya taşıyıcılar 'e bağımlıdır. Kuruluşlar, bu ayarı uygulamadan önce dağıtılmış Android cihazlarının güvenlik güncelleştirmelerini aldığından emin olmalıdır. En son düzeltme eki sürümleri için [Android güvenlik bültenlerini](https://source.android.com/security/bulletin/) inceleyin.  |
 
 #### <a name="level-3-enterprise-high-data-protection"></a>Düzey 3 Kurumsal yüksek veri koruma 
 
 Düzey 3, büyük ve karmaşık güvenlik kuruluşları olan kuruluşlar için standart olarak önerilen veri koruma yapılandırması ya da reklam işlemleri tarafından benzersiz bir şekilde hedeflenen belirli kullanıcılar ve gruplar için önerilir. Bu tür kuruluşlar genellikle iyi ve karmaşık reklam ve Gelişmiş reklam işlemleri tarafından hedeflenir ve bu nedenle açıklanan ek kısıtlamaları ve denetimleri bu şekilde ele almıştır. Bu yapılandırma, ek veri aktarımı senaryolarını kısıtlayarak, PIN yapılandırmasının karmaşıklığını artırarak ve mobil tehdit algılama 'yı ekleyerek düzey 2 ' deki yapılandırmayı genişletir.  
 
-Düzey 3 ' te zorlanan ilke ayarları, düzey 2 ve 1 için önerilen tüm ilke ayarlarını içerir ve yalnızca katı veri koruma yapılandırması ve denetimleri uygulamak için aşağıdaki ilke ayarlarını ekler veya günceller. Bu ilke ayarları, kullanıcılara veya uygulamalara yönelik potansiyel olarak önemli bir etkiye sahip olabilir ve hedeflenen kuruluşların riskleri sayesinde güvenlik yorumlarının bir düzeyini zorunlu tutacaktır.  
+Düzey 3 ' te zorlanan ilke ayarları, düzey 2 için önerilen tüm ilke ayarlarını içerir ancak aşağıda, daha fazla denetim ve düzey 2 ' den daha karmaşık bir yapılandırma uygulamak için eklenen veya değiştirilen bu ayarları listeler. Bu ilke ayarları, kullanıcılara veya uygulamalara yönelik potansiyel olarak önemli bir etkiye sahip olabilir ve hedeflenen kuruluşların riskleri sayesinde güvenlik yorumlarının bir düzeyini zorunlu tutacaktır.  
 
 #### <a name="data-protection"></a>Veri koruma
 
@@ -192,7 +192,7 @@ Düzey 3 ' te zorlanan ilke ayarları, düzey 2 ve 1 için önerilen tüm ilke a
 
 | Ayar | Ayar açıklaması |          Değer/eylem  |          Platform        | Notlar |
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cihaz koşulları  |       En düşük işletim sistemi sürümü  |          *Biçim: Ana. ikincil<br> örnek: 8,0* /erişimi engelle   |          Android        | Microsoft, en düşük Android ana sürümünün Microsoft uygulamaları için desteklenen Android sürümleriyle eşleşecek şekilde yapılandırılmasını önerir. Android kurumsal gereksinimleri olan OEM 'Ler ve cihazlar, geçerli sevkiyat sürümü + bir mektup yükseltmesi desteklemelidir.   Android, bilgi çalışanları için Android 8,0 ve üstünü öneriyor.   Android 'in en son önerileri için bkz. [Android Enterprise önerilen gereksinimleri](https://www.android.com/enterprise/recommended/requirements/) |
+| Cihaz koşulları  |       En düşük işletim sistemi sürümü  |          *Biçim: Ana. ikincil <br>   Örnek: 8,0* /erişimi engelle   |          Android        | Microsoft, en düşük Android ana sürümünün Microsoft uygulamaları için desteklenen Android sürümleriyle eşleşecek şekilde yapılandırılmasını önerir. Android kurumsal gereksinimleri olan OEM 'Ler ve cihazlar, geçerli sevkiyat sürümü + bir mektup yükseltmesi desteklemelidir.   Android, bilgi çalışanları için Android 8,0 ve üstünü öneriyor.   Android 'in en son önerileri için bkz. [Android Enterprise önerilen gereksinimleri](https://www.android.com/enterprise/recommended/requirements/) |
 |       Cihaz koşulları  |          Jailbreak uygulanmış/kök erişim izni verilmiş cihazlar  |        N/A/silme verisi  |          iOS/ıpados, Android        |  |
 |       Cihaz koşulları  |          İzin verilen en fazla tehdit düzeyi  |          Güvenli/blok erişimi  |          iOS/ıpados, Android        | <p>Kayıtlı olmayan cihazlar, mobil tehdit savunması kullanılarak tehditler için incelenebilir. Daha fazla bilgi için bkz. [kayıtlı olmayan cihazlar Için mobil tehdit savunması](https://aka.ms/mtdmamdocs).      </p><p>     Cihaz kaydedildiyse bu ayar, kayıtlı cihazlar için Mobile Threat Defense 'in dağıtılmasıyla ilgili olarak atlanabilir. Daha fazla bilgi için bkz. [Kayıtlı cihazlar Için mobil tehdit savunması](../protect/mtd-device-compliance-policy-create.md).</p> |
 

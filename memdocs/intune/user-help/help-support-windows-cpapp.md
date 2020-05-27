@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/09/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
 ms.technology: ''
@@ -18,12 +18,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1fcf4d98504f23f5fa19a099d61e7534e4df4571
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c1d89d6635928ced8190f819c0be7f9314894d4a
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324606"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881245"
 ---
 # <a name="get-help-and-support-in-company-portal-for-windows-10"></a>Windows 10 için Şirket Portalı 'da yardım ve destek alın
 
@@ -40,7 +40,7 @@ Uygulamanızın sorunlarını gidermeye başlamak ve erişim sorunlarını gider
 
 ## <a name="get-help-with-app-problems"></a>Uygulama sorunlarıyla ilgili yardım alın
 
-Şirket Portalı karşılaştığınız sorunlar hakkında kuruluşunuza e-posta gönderin. Sorunu tanımlamaya başlamak için **Yardım al** ' ı seçin. Kuruluşunuz, sorunu gidermek için sağladığınız bilgileri kullanacaktır. Sorunu belirlemede daha fazla yardım gerekirse, kuruluşunuz Microsoft 'un destek ekibine ulaşmak için e-postaya&ndash;&ndash;OTOMATIK olarak eklenen tanılama kimliğini kullanacaktır.  
+Şirket Portalı karşılaştığınız sorunlar hakkında kuruluşunuza e-posta gönderin. Sorunu tanımlamaya başlamak için **Yardım al** ' ı seçin. Kuruluşunuz, sorunu gidermek için sağladığınız bilgileri kullanacaktır. Sorunu belirlemede daha fazla yardım gerekirse, kuruluşunuz &ndash; &ndash; Microsoft 'un destek ekibine ulaşmak için e-postaya otomatik olarak eklenen tanılama kimliğini kullanacaktır.  
 
 Adım adım yordam için, bkz. [Windows 10 için şirket portalı uygulamasından şirketinizin destek bölümüne günlük gönderme](send-logs-to-your-it-admin-cp-windows.md).  
 

@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/05/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 695ef28063d44aeba1bb91b63d79085717822912
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: aed17d518213f875e15f2261ec1a18640357203a
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324534"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880948"
 ---
 # <a name="device-password-requirements-for-enrolled-devices"></a>Kayıtlı cihazlar için cihaz parolası gereksinimleri
 
@@ -45,7 +45,7 @@ Ek Yardım veya kuruluşunuzun özel gereksinimlerini öğrenmek için BT destek
 | Parola çok kısa.| Daha fazla karakter içeren bir parola güncelleştirin veya ayarlayın. Kuruluşunuz parolanızın belirli bir uzunlukta olmasını gerektirir. Gerçekte seçtikleri Özellikler farklılık gösterir, ancak ihtiyaç duydukları en düşük uzunluk 4 karakterdir ve üst sınır 16 ' dır. |
 | Parola yalnızca sayı içermelidir. | Yalnızca sayı içeren bir parola ayarlayın.|
 | Parola yalnızca alfasayısal karakterlerden oluşmalıdır. | Sayıların ve harflerin karışımını içeren bir parola ayarlayın.|
-| Parola karmaşık karakterler içermelidir. | Sayılar, büyük harfler ve, `$` `%`ve `#`gibi semboller gibi karmaşık karakterler ekleyin. Kuruluşunuz, diğerlerinin parolayı tahmin etmelerini zorlaştırmak için harf, sayı ve alfasayısal olmayan karakterlerin bir karışımını gerektirir.|  
+| Parola karmaşık karakterler içermelidir. | Sayılar, büyük harfler ve, ve gibi semboller gibi karmaşık karakterler ekleyin `$` `%` `#` . Kuruluşunuz, diğerlerinin parolayı tahmin etmelerini zorlaştırmak için harf, sayı ve alfasayısal olmayan karakterlerin bir karışımını gerektirir.|  
 | Parolanın süresi doldu. | Yeni bir parola ayarlayın. Kuruluşunuz, parolanızın belirli bir süre geçtikten sonra değiştirilmesini gerektirir. |
 | Parolanız çok kısa süre önce kullanıldı. | Daha önce kullanılmayan bir parola seçin. Bir parolayı yeniden kullanmadan önce kuruluşunuz belirli bir süre geçiş yapılmasını gerektirir. |
 
@@ -58,7 +58,7 @@ Ek Yardım veya kuruluşunuzun özel gereksinimlerini öğrenmek için BT destek
 | Geçiş kodu çok kısa. | Bir geçiş kodunu daha fazla karakterle güncelleştirin veya ayarlayın. Kuruluşunuz, geçiş kodunun belirli bir uzunlukta olmasını gerektiriyor. Gerçekte seçtikleri Özellikler farklılık gösterir, ancak ihtiyaç duydukları en düşük uzunluk 4 karakterdir ve üst sınır 14 ' tür. Geçiş kodunuzu değiştirdiğinizde, Apple 'dan 6 veya daha fazla karakter girebileceğini söyleyen bir istem görürsünüz. Bu ileti, bir Apple sistem önerisine sahiptir. Kuruluşunuz yalnızca 4 veya 5 karakterden oluşan bir geçiş kodu gerektiriyorsa, 6 basamaklı bir geçiş kodu girmeniz gerekmez.|  
 | Geçiş kodu yalnızca sayı içermelidir. | Yalnızca sayı içeren bir geçiş kodu ayarlayın.|
 | Geçiş kodu yalnızca alfasayısal karakterlerden oluşmalıdır.| Sayı ve harf karışımı içeren bir geçiş kodu ayarlayın.|
-| Geçiş kodu, alfasayısal olmayan karakterler içermelidir. | ,,, `&`Ve `!` `$` `%` `#`gibi özel karakterler ekleyin. Kuruluşunuz, başkalarının geçiş kodunu tahmin etmelerini zorlaştırmak için harf, sayı ve alfasayısal olmayan karakterlerin bir karışımını gerektirir.|
+| Geçiş kodu, alfasayısal olmayan karakterler içermelidir. | ,,, Ve gibi özel karakterler ekleyin `&` `!` `$` `%` `#` . Kuruluşunuz, başkalarının geçiş kodunu tahmin etmelerini zorlaştırmak için harf, sayı ve alfasayısal olmayan karakterlerin bir karışımını gerektirir.|
 | Geçiş kodunun süresi doldu. | Yeni bir parola ayarlayın. Kuruluşunuz, parolanızın belirli bir süre geçtikten sonra değiştirilmesini gerektirir. |
 | Geçiş kodu çok kısa süre önce kullanıldı.| Daha önce kullanmadığınız bir geçiş kodu seçin. Bir geçiş kodunu yeniden kullanmadan önce kuruluşunuz belirli bir süre için geçiş yapılmasını gerektirir. |
 |Dokunma KIMLIĞI veya yüz KIMLIĞI kimlik doğrulaması gerekiyor. | Touch ID veya yüz KIMLIĞI ayarlayın. Kuruluşunuz, parolalar veya kredi kartı bilgileri için otomatik doldurma kullanmadan önce bu yöntemlerden biriyle kimlik doğrulaması yapmanızı gerektirir. | 
@@ -71,7 +71,7 @@ Ek Yardım veya kuruluşunuzun özel gereksinimlerini öğrenmek için BT destek
 | Parola çok kısa. | Daha fazla karakter içeren bir parola güncelleştirin veya ayarlayın. Kuruluşunuz parolanızın belirli bir uzunlukta olmasını gerektirir.|
 | Parola yalnızca sayı içermelidir. | Yalnızca sayı içeren bir parola ayarlayın.|
 | Parola yalnızca alfasayısal karakterlerden oluşmalıdır. | Sayıların ve harflerin karışımını içeren bir parola ayarlayın.|
-| Parola, alfasayısal olmayan karakterler içermelidir. | ,,, `&`Ve `!` `$` `%` `#`gibi özel karakterler ekleyin. Kuruluşunuz, diğerlerinin parolayı tahmin etmelerini zorlaştırmak için harf, sayı ve alfasayısal olmayan karakterlerin bir karışımını gerektirir.|
+| Parola, alfasayısal olmayan karakterler içermelidir. | ,,, Ve gibi özel karakterler ekleyin `&` `!` `$` `%` `#` . Kuruluşunuz, diğerlerinin parolayı tahmin etmelerini zorlaştırmak için harf, sayı ve alfasayısal olmayan karakterlerin bir karışımını gerektirir.|
 | Parolanın süresi doldu. | Yeni bir parola ayarlayın. Kuruluşunuz, parolanızın belirli bir süre geçtikten sonra değiştirilmesini gerektirir. |
 | Parolanız çok kısa süre önce kullanıldı. | Daha önce kullanılmayan bir parola seçin. Bir parolayı yeniden kullanmadan önce kuruluşunuz belirli bir süre geçiş yapılmasını gerektirir. |
 
@@ -84,7 +84,7 @@ Ek Yardım veya kuruluşunuzun özel gereksinimlerini öğrenmek için BT destek
 | Parola sayı içermelidir. | Sayı içeren bir parola veya PIN kodu ayarlayın.|
 | Parola harf içermelidir. | Alfabeden harfler içeren bir parola ayarlayın.|
 | Parola alfasayısal karakterlerden oluşmalıdır. | Sayıların ve harflerin karışımını içeren bir parola ayarlayın.|
-| Parola alfasayısal karakterler ve semboller içermelidir. | ,,, `&`Ve `!` `$` `%` `#`gibi harflerin, sayıların ve özel karakterlerin bir karışımını içeren bir parola ayarlayın. |
+| Parola alfasayısal karakterler ve semboller içermelidir. | ,,, Ve gibi harflerin, sayıların ve özel karakterlerin bir karışımını içeren bir parola ayarlayın `&` `!` `$` `%` `#` . |
 | Parola, biyometrik teknolojiyi kullanmalıdır.| Cihazınızı parmak izi veya yüz tanıma gibi biyometrik kimlik doğrulaması kullanacak şekilde ayarlayın.
 | Parolanın süresi doldu. | Yeni bir parola ayarlayın. Kuruluşunuz, parolanızın belirli bir süre geçtikten sonra değiştirilmesini gerektirir. |
 | Parolanız çok kısa süre önce kullanıldı. | Daha önce kullanılmayan bir parola seçin. Bir parolayı yeniden kullanmadan önce kuruluşunuz belirli bir süre geçiş yapılmasını gerektirir. |

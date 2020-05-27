@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 05/24/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1956db4b044faffdd5e010ed66de2dfbc6738419
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5e7cd5e5fa5f04e674b2fd9d37c8895b72372c4c
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324102"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881396"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Intune Şirket Portalı Windows cihaz kaydı  
 
@@ -39,7 +39,7 @@ Cihazınızda Şirket Portalı uygulamanız zaten yüklü olabilir. __Tüm uygul
 
 2. **Arama** alanına **Şirket portalı**yazın.
 
-3. Sonuçlar listesinde, **Şirket portalı** > **yüklemesi**' ni seçin.
+3. Sonuçlar listesinde, **Şirket portalı**  >  **yüklemesi**' ni seçin.
 
 4. **Yükle** veya **Ücretsiz**’i seçin. Bu iki seçenek arasında fark yoktur; sözcükler, kuruluşunuzun uygulamayı nasıl ayarlauna göre görünür.  
 
@@ -62,18 +62,18 @@ Kayıt adımları farklı Windows 10 cihazlarının sürümleri için farklılı
 
 4. Sürümünüz  
 
-    * __1607 veya üzeri__: [ **Ayarlar** > **hesabı** > **erişim iş veya okul** rotası](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device)yoluyla cihazınızı kaydedin.   
-    * __1511 veya önceki sürümler__: [ **Settings** > **Account** > **hesaplarınız** için hesap yönlendirmenize](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device)olanak sağlayarak cihazınızı kaydedin.  
+    * __1607 veya üzeri__: [ **Ayarlar**  >  **hesabı**  >  **erişim iş veya okul** rotası](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device)yoluyla cihazınızı kaydedin.   
+    * __1511 veya önceki sürümler__: hesaplarınız için hesap [ **Settings**  >  **Account**  >  **Your accounts** yönlendirmenize](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device)olanak sağlayarak cihazınızı kaydedin.  
 
 ### <a name="windows-10-mobile-devices"></a>Windows 10 Mobile cihazları
 
 1. __Tüm uygulamalar__ ' a gidin ve __Ayarlar__ uygulamasını seçin.
-2. __Sistem__ > __hakkında__' yı seçin.
+2. __Sistem__  >  __hakkında__' yı seçin.
 3. __Cihaz bilgileri__altında __sürümü__bulun.  
 4. Sürümünüz  
 
-    * __1607 veya üzeri__: [ **Ayarlar** > **iş veya okul** rotası ayarlarını](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device)kullanarak cihazınızı kaydedin.   
-    * __1511 veya önceki sürümler__: [ **Ayarlar** > **hesaplar** yolunu](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device)kullanarak cihazınızı kaydedin.  
+    * __1607 veya üzeri__: [ **Ayarlar**  >  **iş veya okul** rotası ayarlarını](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device)kullanarak cihazınızı kaydedin.   
+    * __1511 veya önceki sürümler__: [ **Ayarlar**  >  **hesaplar** yolunu](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device)kullanarak cihazınızı kaydedin.  
 
 ## <a name="enroll-non-windows-10-devices"></a>Windows 10 olmayan cihazları kaydetme  
 Şirket Portalı Web sitesi aracılığıyla desteklenen diğer Windows cihazlarını kaydetmek için aşağıdaki makaleleri kullanın:   

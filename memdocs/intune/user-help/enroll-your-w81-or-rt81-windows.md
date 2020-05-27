@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 00f3b217140b1d5f46b68409b38ca2db76c45406
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 35b2fdd25f58df4acea202d1d4d844683f632b49
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324634"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880629"
 ---
 # <a name="how-to-enroll-your-windows-81-or-windows-rt-81-device-in-intune"></a>Windows 8.1 veya Windows RT 8.1 cihazınızı Intune’a kaydetme  
 
@@ -61,7 +61,7 @@ Windows 8.1 veya Windows RT 8.1 cihazınızı kaydetmek için:
 
 Ayrıca sizinle ve rolünüzle ilgili olan şirket uygulamalarını kolayca belirleyip edinmenizi sağlayan Şirket Portalı uygulamasını yüklemenizi öneririz. Şirketinizin Intune’u nasıl ayarladığına bağlı olarak, Şirket Portalı uygulaması kayıt sürecinizin parçası olarak yüklenmiş olabilir. Uygulamaya sahip olup olmadığınızı denetlemek için uygulama listenizde **Şirket Portalı**’nı arayın. Uygulama listenizde Şirket Portalı’nı görmüyorsanız, yüklemek için aşağıdaki adımları izleyin.
 
-1. Mağazayı **Başlat** &gt; **Store**' a dokunun.  
+1. Mağazayı **Başlat** ' a dokunun &gt; **Store**.  
 
 2. **Ara**’ya dokunun, sonra **şirket portalı** yazın.  
 

@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/03/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1392530643b4846c871b942d8265a7b43ace3124
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9e9101a46cac488ef8a80858377cbabac8dc7936
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327798"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881594"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Windows cihazınızı yönetimden kaldırma
 
@@ -70,14 +70,14 @@ Bir Windows 10 cihazını yönetimden kaldırmak için aşağıdaki adımları t
 
 ### <a name="remove-in-device-settings-app"></a>Cihaz Ayarlar uygulamasında kaldırma
 1. Ayarlar uygulamasını açın. 
-2. **Hesaplara** > **erişim iş veya okul**sayfasına gidin.
+2. **Hesaplara**  >  **erişim iş veya okul**sayfasına gidin.
 3. Kaldırmak istediğiniz bağlı hesabı ve ardından **Bağlantıyı kes**’i seçin.
 4. Cihazın kaldırılmasını onaylamak için **Evet**’i seçin.
 
 ## <a name="remove-your-windows-81-computer"></a>Windows 8.1 bilgisayarınızı kaldırma
 Bir Windows 8.1 bilgisayarı Intune’dan kaldırmak için aşağıdaki adımları tamamlayın.
 
-1. **Bilgisayar ayarları** > **ağ** > **çalışma alanı**' na gidin.
+1. **Bilgisayar ayarları**  >  **ağ**  >  **çalışma alanı**' na gidin.
 2. **Çalışma Alanına Katılma** altında **Çık**’ı seçin.
 3. **Cihaz yönetimini aç** altında **Kapat**’ı seçin.
 4. Açılan pencerede **Kapat**’ı seçin.
@@ -85,7 +85,7 @@ Bir Windows 8.1 bilgisayarı Intune’dan kaldırmak için aşağıdaki adımlar
 ## <a name="remove-your-windows-81-phone"></a>Windows 8.1 telefonunuzu kaldırma
 Bir Windows 8.1 telefonunu Intune'dan kaldırmak için aşağıdaki adımları tamamlayın.
 
-1. **Ayarlar** > **çalışma alanı**' na gidin.
+1. **Ayarlar**  >  **çalışma alanı**' na gidin.
 2. Kaydını kaldırmak istediğiniz çalışma alanı hesabına dokunun.
 3. Ekranın altındaki **Sil** seçeneğine dokunun.
 4. **Hesabı sil** iletişim kutusunda **Sil**’e dokunun.  

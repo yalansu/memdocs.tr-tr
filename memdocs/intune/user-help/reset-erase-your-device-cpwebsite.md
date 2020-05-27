@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/18/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: coferro
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f7f86f595adf8b06f9a3d9da198d89b263e00574
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 77643d689a2a5693b71f85a7e82b98bddec9a646
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327962"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881475"
 ---
 # <a name="reset-device-from-company-portal-website"></a>Şirket Portalı Web sitesinden cihaz sıfırlama
 
@@ -43,7 +43,7 @@ Sıfırlandıktan sonra cihaz Şirket Portalı’nda gösterilmez. Önceden var 
 
     ![, Tanımlanmamış, genel olarak adlandırılmış cihazları gösteren iki kutucuk içeren cihazlar sayfasının ekran görüntüsü. Gri bir başlık doğrudan cihazların altında bulunur ve kullanıcının kullanmakta oldukları aygıtı belirlemesini veya yeni bir tane eklemesini ister.](./media/rename-reset-device-step2-1808.png)  
 
-3. **Sıfırla**’yı seçin. Sayfanın üst kısmında sıfırlama seçeneği görünmüyorsa, **daha fazla (...)** seçeneğini belirleyin.  >  **Sıfırlayın**.  
+3. **Sıfırla**’yı seçin. Sayfanın üst kısmında sıfırlama seçeneği görünmüyorsa, **daha fazla (...)**  >  seçeneğini belirleyin. **Sıfırlayın**.  
 
      ![Şirket Portalı web sitesinde seçilen bir cihaza yönelik cihaz ayrıntıları sayfası; üst kısmında Yeniden Adlandır, Kaldır, Cihazı Sıfırla, Geçiş Kodunu Sıfırla ve Uzaktan Kilitle bağlantıları ile. ](./media/rename-reset-device-1808.png)  
 
