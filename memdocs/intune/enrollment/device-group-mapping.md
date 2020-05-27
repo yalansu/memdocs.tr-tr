@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b10d56e9eb915273d5be9a5b14ca4528a64a2057
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 761e668ae2c774bb52dbe6971d343d60b3e95516
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327098"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83986095"
 ---
 # <a name="categorize-devices-into-groups"></a>Cihazları gruplar halinde kategorilere ayırma
 
@@ -38,14 +38,14 @@ Cihaz kategorileri aşağıdaki iş akışını kullanır:
 İstediğiniz herhangi bir cihaz kategorisini oluşturabilirsiniz. Örneğin:
 - Satış noktası cihazı
 - Tanıtım cihazı
-- Satışlar
+- Sales
 - Muhasebe
 - Yönetici
 
 ## <a name="how-to-configure-device-categories"></a>Cihaz kategorilerini yapılandırma
 
 ### <a name="step-1-create-device-categories-on-the-intune-blade-of-the-azure-portal"></a>1. Adım: Azure portalının Intune dikey penceresinde cihaz kategorileri oluşturma
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın, **cihazlar** > **cihaz kategorileri**' ni seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın, **cihazlar**  >  **cihaz kategorileri**' ni seçin.
 2. Yeni bir kategori eklemek için **cihaz kategorileri** sayfasında **Oluştur** ' u seçin.
 3. **Cihaz kategorisi oluştur** dikey penceresinde, yeni kategori için bir **Ad** ve isteğe bağlı bir **Açıklama** girin.
 4. İşiniz bittiğinde **Oluştur**'u seçin. Kategori listesinde yeni kategoriyi görebilirsiniz.
@@ -63,15 +63,15 @@ Siz cihaz gruplarını yapılandırdıktan ve kullanıcılar cihazlarını kayde
 
 ### <a name="view-the-categories-of-devices-that-you-manage"></a>Yönettiğiniz cihazların kategorilerini görüntüleme
 
-1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar** > **tüm cihazlar**' ı seçin.
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar**  >  **tüm cihazlar**' ı seçin.
 
 2. Cihaz listesinde **Cihaz kategorisi** sütununu inceleyin.
 
-**Cihaz kategorisi** sütunu gösterilmemişse, **sütunlar** > **kategorisi** > **Uygula**' yı seçin.
+**Cihaz kategorisi** sütunu gösterilmemişse, **sütunlar**  >  **kategorisi**  >  **Uygula**' yı seçin.
 
 ### <a name="change-the-category-of-a-device"></a>Bir cihazın kategorisini değiştirme
 
-1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar** > **tüm cihazlar** ' ı seçin > > **özellikleri**istediğiniz cihazı seçin.
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar**  >  **tüm cihazlar** ' ı seçin > > **özellikleri**istediğiniz cihazı seçin.
 2. Sonraki dikey pencerede, seçili cihazın **Cihaz kategorisi**’ni daha önce yapılandırmış olduğunuz herhangi bir kategori adıyla değiştirebilirsiniz.
 
 ## <a name="after-you-configure-device-groups"></a>Cihaz gruplarını yapılandırdıktan sonra

@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 05/07/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aeaa184717f96def1b84447d9ded207c93d8b423
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 3437a1b9fe3c663844d366bbfda6c0bcb463c3ab
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429833"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983811"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune'daki cihaz profillerini kullanarak cihazlarınıza özellik ve ayar uygulama
 
@@ -58,7 +58,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- Mac OS
+- macOS
 - Windows Phone 8.1
 - Windows 8.1
 - Windows 10 ve üzeri
@@ -72,7 +72,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- Mac OS
+- macOS
 - Windows Phone 8.1
 
 ## <a name="delivery-optimization"></a>Teslim iyileştirme
@@ -101,7 +101,7 @@ Bu özellik şunları destekler:
 Bu özellik şunları destekler:
 
 - iOS/iPadOS
-- Mac OS
+- macOS
 
 ## <a name="device-firmware-configuration-interface"></a>Cihaz üretici yazılımı yapılandırma arabirimi
 
@@ -120,7 +120,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- Mac OS
+- macOS
 - Windows 10 ve üzeri
 - Windows 10 Team
 
@@ -166,7 +166,7 @@ Microsoft Intune ile Microsoft Defender Gelişmiş tehdit koruması (WDADTP) ekl
 
 Bu özellik şunları destekler:
 
-- Mac OS
+- macOS
 - Windows 10 ve üzeri
 
 ## <a name="esim-cellular---public-preview"></a>eSIM hücresel - Genel önizleme
@@ -183,7 +183,7 @@ Bu özellik şunları destekler:
 
 Bu özellik şunları destekler:
 
-- Mac OS
+- macOS
 
 ## <a name="identity-protection"></a>Kimlik koruması
 
@@ -235,7 +235,7 @@ MacOS cihazlarındaki [tercih dosyaları](preference-file-settings-macos.md) , u
 
 Bu özellik şunları destekler:
 
-- Mac OS
+- macOS
 
 ## <a name="shared-multi-user-device"></a>Paylaşılan çok kullanıcılı cihaz
 
@@ -269,7 +269,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- Mac OS
+- macOS
 - Windows Phone 8.1
 - Windows 8.1
 - Windows 10 ve üzeri
@@ -283,7 +283,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- Mac OS
+- macOS
 - Windows 8.1 (yalnızca içeri aktarma)
 - Windows 10 ve üzeri
 

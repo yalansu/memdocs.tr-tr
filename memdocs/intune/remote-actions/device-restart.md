@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: adbc96dade5b6da134fa8a22f2cb613fc0baa923
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e95ceb3aabf4e97d020c52983deea683646fa85d
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326319"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983141"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Cihazları Intune ile uzaktan başlatma
 
@@ -45,8 +45,8 @@ Cihazı **Yeniden Başlat** eylemi, seçtiğiniz cihazın yeniden başlatılmas�
 ## <a name="restart-a-device"></a>Cihazı yeniden başlatma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-3. **Cihazlar** > **tüm cihazlar**' ı seçin.
-4. Yönettiğiniz cihazların listesinde bir cihaz seçin >**Evet**' i **yeniden başlatın** > .
+3. **Cihazlar**  >  **tüm cihazlar**' ı seçin.
+4. Yönettiğiniz cihazların listesinde bir cihaz seçin > Evet ' i **yeniden başlatın**  >  **Yes**.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/08/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 796e95b09193228fdc4612a370658e532fbbd2c6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 92aa9705fc1a59a288db08a5583bc5b83de111e2
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324365"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985921"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>S modundaki cihazlarda Win32 uygulamalarını etkinleştirme
 
@@ -58,7 +58,7 @@ Win32 uygulamalarının bir Windows 10 cihazında S modunda çalışmasına izin
 Bir Windows 10 S modu ek ilkesi oluşturmak için aşağıdaki adımları kullanın:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **S modu ek ilkeleri** > **ilke oluştur**' u seçin.
+2. **Uygulamalar**  >  **S modu ek ilkeleri**  >  **ilke oluştur**' u seçin.
 3. **İlke dosyasını**eklemeden önce, onu oluşturmanız ve imzalamanız gerekir. Daha fazla bilgi için bkz.
     - [PowerShell araçlarını kullanarak bir WDAC ilkesi oluşturun ve bunu ikili biçime dönüştürün](https://go.microsoft.com/fwlink/?linkid=2095387)
     - [Device Guard Imzalama hizmeti 'ni kullanmayı imzala](https://go.microsoft.com/fwlink/?linkid=2095629) **(önerilir)**
@@ -68,7 +68,7 @@ Bir Windows 10 S modu ek ilkesi oluşturmak için aşağıdaki adımları kullan
     | Değer | Açıklama |
     |--------------|------------------------------------------------|
     | İlke dosyası | WDAC ilkesini içeren dosya. |
-    | Adı | Bu ilkenin adı. |
+    | Name | Bu ilkenin adı. |
     | Açıklama | Seçim Bu ilkenin açıklaması. |
 
 5. Ileri ' ye tıklayın **: kapsam etiketleri**.<br>

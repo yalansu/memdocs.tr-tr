@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 4/24/2019
-ms.topic: conceptual
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3636314ee21823b76a09120f92aca45965437d3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8d907aaac6c37cbe7cad71e850fbc44322c93841
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80808184"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83986381"
 ---
 # <a name="what-is-device-enrollment"></a>Cihaz kaydı nedir?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -35,48 +35,48 @@ Varsayılan olarak tüm platform cihazları Intune'a kaydedilebilir. Ancak [ciha
 
 ## <a name="iosipados-enrollment-methods"></a>iOS/ıpados kayıt yöntemleri
 
-| **Yöntem** | **Sıfırlama Gerekli** | [**Kullanıcı Benzeşimi**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) | **Kilitli** | **Bilgileri** |
+| **Yöntem** | **Sıfırlama Gerekli** | [**Kullanıcı Benzeşimi**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) | **Kilitli** | **Ayrıntılar** |
 |:---:|:---:|:---:|:---:|:---:|
 | | Kayıt sırasında cihazlar silinir. | Her bir cihazı bir kullanıcıyla ilişkilendirir.| Yanıt Evet ise, kullanıcılar cihazların kaydını geri kaydedemez. | |
-|**[KCG](#bring-your-own-device)** | Hayır| Yes | Hayır | [Daha fazla bilgi](apple-mdm-push-certificate-get.md)|
+|**[KCG](#bring-your-own-device)** | No| Yes | No | [Daha fazla bilgi](apple-mdm-push-certificate-get.md)|
 |**[DEM](#device-enrollment-manager)**| Hayır |Hayır |Hayır | [Daha fazla bilgi](device-enrollment-manager-enroll.md)|
-|**[FATURALANMıŞ](#apple-automated-device-enrollment)**| Yes | İsteğe Bağlı | İsteğe Bağlı|[Daha fazla bilgi](device-enrollment-program-enroll-ios.md)|
-|**[USB-SA](#usb-sa)**| Yes | İsteğe Bağlı | Hayır| [Daha fazla bilgi](apple-configurator-enroll-ios.md)|
+|**[ADE](#apple-automated-device-enrollment)**| Yes | İsteğe Bağlı | İsteğe Bağlı|[Daha fazla bilgi](device-enrollment-program-enroll-ios.md)|
+|**[USB-SA](#usb-sa)**| Yes | İsteğe Bağlı | No| [Daha fazla bilgi](apple-configurator-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| Hayır | Hayır | Hayır|[Daha fazla bilgi](apple-configurator-enroll-ios.md)|
 
 ## <a name="macos-enrollment-methods"></a>macOS kayıt yöntemleri
-| **Yöntem** |  **Sıfırlama Gerekli** |  **Kullanıcı Benzeşimi** | **Kilitli** | **Bilgileri**|
+| **Yöntem** |  **Sıfırlama Gerekli** |  **Kullanıcı Benzeşimi** | **Kilitli** | **Ayrıntılar**|
 |:---:|:---:|:---:|:---:|:---:|
-|**[KCG](#bring-your-own-device)** | Hayır| Yes | Hayır | [Daha fazla bilgi](macos-enroll.md)|
+|**[KCG](#bring-your-own-device)** | No| Yes | No | [Daha fazla bilgi](macos-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Hayır |Hayır |Hayır  | [Daha fazla bilgi](device-enrollment-manager-enroll.md)|
-|**[FATURALANMıŞ](#apple-automated-device-enrollment)**| Yes | İsteğe Bağlı | İsteğe Bağlı|[Daha fazla bilgi](device-enrollment-program-enroll-macos.md)|
+|**[ADE](#apple-automated-device-enrollment)**| Yes | İsteğe Bağlı | İsteğe Bağlı|[Daha fazla bilgi](device-enrollment-program-enroll-macos.md)|
 
 ## <a name="windows-enrollment-methods"></a>Windows kayıt yöntemleri
 
-| **Yöntem** | **Sıfırlama Gerekli** | **Kullanıcı Benzeşimi** | **Kilitli** | **Bilgileri**|
+| **Yöntem** | **Sıfırlama Gerekli** | **Kullanıcı Benzeşimi** | **Kilitli** | **Ayrıntılar**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[KCG](#bring-your-own-device)** | Hayır | Yes | Hayır | [Daha fazla bilgi](windows-enroll.md)|
+|**[KCG](#bring-your-own-device)** | No | Yes | No | [Daha fazla bilgi](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Hayır |Hayır |Hayır |[Daha fazla bilgi](device-enrollment-manager-enroll.md)|
-|**Otomatik kayıt** | Hayır |Yes |Hayır | [Daha fazla bilgi](windows-enroll.md#enable-windows-10-automatic-enrollment)|
-|**Autopilot** |Yes |Yes |Hayır | [Daha fazla bilgi](enrollment-autopilot.md)
+|**Otomatik kayıt** | No |Yes |No | [Daha fazla bilgi](windows-enroll.md#enable-windows-10-automatic-enrollment)|
+|**Autopilot** |Yes |Yes |No | [Daha fazla bilgi](enrollment-autopilot.md)
 |**Toplu kayıt** |Hayır |Hayır |Hayır | [Daha fazla bilgi](windows-bulk-enroll.md) |
-|**Ortak yönetim** |Hayır |Yes |Hayır | [Daha fazla bilgi](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
-|**GPO** |Hayır |Yes |Hayır | [Daha fazla bilgi](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
+|**Ortak yönetim** |No |Yes |No | [Daha fazla bilgi](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
+|**GPO** |No |Yes |No | [Daha fazla bilgi](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 ## <a name="android-enrollment-methods"></a>Android kayıt yöntemleri
 
-| **Kişisel** | **Kayıt Yöntemleri** | **Sıfırlama Gerekli** | **Kullanıcı Benzeşimi** | **Kilitli** | **Bilgileri**|
+| **Kişisel** | **Kayıt Yöntemleri** | **Sıfırlama Gerekli** | **Kullanıcı Benzeşimi** | **Kilitli** | **Ayrıntılar**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Android Cihaz Yöneticisi**|**Şirket Portalı aracılığıyla başlatılan Kullanıcı** | Hayır | Yes | Hayır | [Daha fazla bilgi](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
-|**Android kurumsal Iş profili**|**Şirket Portalı aracılığıyla başlatılan Kullanıcı**| Hayır | Yes | Hayır | [Daha fazla bilgi](android-work-profile-enroll.md)|
+|**Android Cihaz Yöneticisi**|**Şirket Portalı aracılığıyla başlatılan Kullanıcı** | No | Yes | No | [Daha fazla bilgi](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
+|**Android kurumsal Iş profili**|**Şirket Portalı aracılığıyla başlatılan Kullanıcı**| No | Yes | No | [Daha fazla bilgi](android-work-profile-enroll.md)|
 
 
-| **Kurumsal** | **Kayıt Yöntemleri** | **Sıfırlama Gerekli** | **Kullanıcı Benzeşimi** | **Kilitli** | **Bilgileri**|
+| **Kurumsal** | **Kayıt Yöntemleri** | **Sıfırlama Gerekli** | **Kullanıcı Benzeşimi** | **Kilitli** | **Ayrıntılar**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Android Cihaz Yöneticisi**|**[DEM](#device-enrollment-manager) Şirket Portalı aracılığıyla başlatıldı**| Hayır | Hayır | Hayır |[Daha fazla bilgi](device-enrollment-manager-enroll.md)|
-|**Android Cihaz Yöneticisi**|**(Önceden tanımlanmış ıMEı veya SN) Şirket Portalı aracılığıyla başlatılan Kullanıcı**| Hayır | Yes | Hayır | [Daha fazla bilgi](corporate-identifiers-add.md)|
-|**Zeköşeli Mobility uzantılarına sahip Android Cihaz Yöneticisi**|**Şirket Portalı aracılığıyla başlatılan Kullanıcı veya [dem](#device-enrollment-manager)**| Hayır | Kullanıcı başlatılmışsa Evet, [dem](#device-enrollment-manager) başlatılmışsa Hayır | Hayır | [Daha fazla bilgi](../configuration/android-zebra-mx-overview.md)|
-|**Android kurumsal adanmış**|**NFC, Token, QR kodu, sıfır Touch**| Yes | Hayır | İlke aracılığıyla yapılandırılabilir | [Daha fazla bilgi](android-kiosk-enroll.md)|
+|**Android Cihaz Yöneticisi**|**(Önceden tanımlanmış ıMEı veya SN) Şirket Portalı aracılığıyla başlatılan Kullanıcı**| No | Yes | No | [Daha fazla bilgi](corporate-identifiers-add.md)|
+|**Zeköşeli Mobility uzantılarına sahip Android Cihaz Yöneticisi**|**Şirket Portalı aracılığıyla başlatılan Kullanıcı veya [dem](#device-enrollment-manager)**| No | Kullanıcı başlatılmışsa Evet, [dem](#device-enrollment-manager) başlatılmışsa Hayır | No | [Daha fazla bilgi](../configuration/android-zebra-mx-overview.md)|
+|**Android kurumsal adanmış**|**NFC, Token, QR kodu, sıfır Touch**| Yes | No | İlke aracılığıyla yapılandırılabilir | [Daha fazla bilgi](android-kiosk-enroll.md)|
 |**Android kurumsal tam yönetilen**|**NFC, Token, QR kodu, sıfır Touch**| Yes | Yes [Dem](device-enrollment.md#device-enrollment-manager) başlatılmışsa Hayır | İlke aracılığıyla yapılandırılabilir | [Daha fazla bilgi](android-dedicated-devices-fully-managed-enroll.md)|
 
 

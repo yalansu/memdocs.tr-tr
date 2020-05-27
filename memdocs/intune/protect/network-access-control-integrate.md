@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/19/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bafd916ef31bea50dabb2de5012d693039ca741
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9302e2229b84519b46c9b2ade80488e7ca10aebf
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084834"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985019"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Ağ erişim denetimini (NAC) Intune ile tümleştirme
 
@@ -41,7 +41,7 @@ Cihaz kayıtlı ve Intune ile uyumlu ise NAC çözümü, cihazın şirket kaynak
 
 ## <a name="feature-behaviors"></a>Özellik davranışları
 
-Intune ile etkin bir şekilde eşitlenen cihazlar **uyumlu** / **olmayan** bilgisayardan **eşitlenmemiş** olarak taşınamaz (veya **bilinmiyor**). Yeni kaydedilmiş ve uyumluluğu henüz değerlendirilmemiş cihazlar için **Bilinmiyor** durumu korunur.
+Intune ile etkin bir şekilde eşitlenen cihazlar **uyumlu**  /  **olmayan** bilgisayardan **eşitlenmemiş** olarak taşınamaz (veya **bilinmiyor**). Yeni kaydedilmiş ve uyumluluğu henüz değerlendirilmemiş cihazlar için **Bilinmiyor** durumu korunur.
 
 Kaynaklara erişimi engellenmiş cihazlar için, engelleme hizmetinin tüm kullanıcıları cihazın neden engellendiğini belirlemek üzere [yönetim portalına](https://portal.manage.microsoft.com) yönlendirmesi gerekir.  Kullanıcılar bu sayfayı ziyaret ederse, cihazları zaman uyumlu olarak uyumluluk için yeniden değerlendirilir.
 
@@ -85,13 +85,13 @@ NAC, Cisco AnyConnect, Citrix SSO ve F5 erişimi için de desteklenir.
 - Citrix Gateway 12.0.59 veya üstünü kullanın.  
 - Kullanıcıların Citrix SSO 1.1.6 veya sonraki bir sürümü yüklü olmalıdır.
 - Citrix ürün belgelerinde açıklandığı gibi [, NetScaler 'ı NAC Için Intune Ile tümleştirin](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) .
-- VPN profilinde, **temel ayarlar** > **ağ Access Control etkinleştir ' i (NAC)** seçin > **kabul**ediyorum ' u seçin.
+- VPN profilinde, **temel ayarlar**  >  **ağ Access Control etkinleştir ' i (NAC)** seçin > **kabul**ediyorum ' u seçin.
 
 ### <a name="to-enable-nac-for-f5-access"></a>F5 erişimi için NAC 'yı etkinleştirmek için
 
 - F5 BIG-IP 13.1.1.5 veya üstünü kullanın.
 - NAC için büyük IP 'yi Intune ile tümleştirin. [Genel bakış: Endpoint Management sistemleri ile cihaz gönderme denetimleri IÇIN APM yapılandırma](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5 Guide adımları listeler.
-- VPN profilinde, **temel ayarlar** > **ağ Access Control etkinleştir ' i (NAC)** seçin > **kabul**ediyorum ' u seçin.
+- VPN profilinde, **temel ayarlar**  >  **ağ Access Control etkinleştir ' i (NAC)** seçin > **kabul**ediyorum ' u seçin.
 
 Güvenlik nedenleriyle VPN bağlantısının her 24 saatte bir bağlantısı kesilir. VPN hemen yeniden bağlanabilir.
 

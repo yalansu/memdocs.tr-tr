@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/07/2020
-ms.topic: conceptual
+ms.date: 05/26/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d69167a034970216e1e245f638bd59091ed6e18c
-ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
+ms.openlocfilehash: cc08dc37d4f043b69888c0fc99274e8720ee5562
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83853613"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985941"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune Şirket Portalı uygulamaları, Şirket Portalı Web sitesini ve Intune uygulamasını özelleştirme
 
@@ -102,6 +102,9 @@ Aşağıdaki tabloda kayda özgü yapılandırma ayrıntıları verilmiştir:
 > Cihaz kayıt ayarı için destek, son kullanıcıların bu Şirket Portalı sürümlerine sahip olmasını gerektirir:
 > - İOS/ıpados üzerinde Şirket Portalı: sürüm 4,4 veya üzeri
 > - Android üzerinde Şirket Portalı: sürüm 5.0.4715.0 veya üzeri 
+
+> [!IMPORTANT]
+> Aşağıdaki ayarlar, [otomatik cihaz kaydına](../enrollment/device-enrollment-program-enroll-ios.md)kaydolmak üzere yapılandırılmış IOS/ıpados cihazlarına uygulanmaz. Bu ayarın nasıl yapılandırıldığına bakılmaksızın, otomatik cihaz kaydına kaydolmak üzere yapılandırılan iOS/ıpados cihazları, kullanıma hazır akış sırasında kaydedilir ve kullanıcıların Şirket Portalı başlatırken oturum açması istenir.
 
 |    Cihaz kayıt seçenekleri    |    Açıklama    |    Denetim listesi istemleri    |    Bildirim    |    Cihaz ayrıntıları durumu    |    Uygulama ayrıntıları durumu (kayıt gerektiren bir uygulama)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|

@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/07/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,26 +17,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64cb05d6e031cfe08789d6b7c923d9e489d0e433
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 71b6468975012f41b0c34bbfbe5921bc8a60cb57
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254325"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985816"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Microsoft Intune Windows 10 için Microsoft Edge ekleyin
 
 Uygulamaları dağıtmadan, yapılandırmadan, izleyebilmeniz veya koruyabilmeniz için önce bunları Intune 'a eklemeniz gerekir. Kullanılabilir [uygulama türlerinden](apps-add.md#app-types-in-microsoft-intune) biri Microsoft Edge *Sürüm 77 ve üzeri*. Intune 'da bu uygulama türünü seçerek, Microsoft Edge *sürüm 77 ve üstünü* Windows 10 çalıştıran yönettiğiniz cihazlara atayabilir ve yükleyebilirsiniz.
 
 > [!IMPORTANT]
-> Bu uygulama türü Windows 10 için kararlı, Beta ve geliştirme kanalları sunar. Dağıtım yalnızca İngilizce (en) ' dir; ancak son kullanıcılar, **Ayarlar** > **dilleri**altında tarayıcıda görüntüleme dilini değiştirebilir. Microsoft Edge, sistem bağlamında ve benzer mimarilere (x86 IŞLETIM sisteminde x86 uygulaması ve x64 IŞLETIM sisteminde x64 uygulaması) yüklenen bir Win32 uygulamasıdır. Intune, önceden varolan Microsoft Edge yüklemelerini algılar. Kullanıcı bağlamında yüklüyse, bir sistem yüklemesi bu dosyanın üzerine yazar. Sistem bağlamına yüklenirse yükleme başarısı raporlanır. Ayrıca, Microsoft Edge 'in otomatik güncelleştirmeleri varsayılan olarak **Açık** .
+> Bu uygulama türü Windows 10 için kararlı, Beta ve geliştirme kanalları sunar. Dağıtım yalnızca İngilizce (en) ' dir; ancak son kullanıcılar, **Ayarlar**dilleri altında tarayıcıda görüntüleme dilini değiştirebilir  >  **Languages**. Microsoft Edge, sistem bağlamında ve benzer mimarilere (x86 IŞLETIM sisteminde x86 uygulaması ve x64 IŞLETIM sisteminde x64 uygulaması) yüklenen bir Win32 uygulamasıdır. Intune, önceden varolan Microsoft Edge yüklemelerini algılar. Kullanıcı bağlamında yüklüyse, bir sistem yüklemesi bu dosyanın üzerine yazar. Sistem bağlamına yüklenirse yükleme başarısı raporlanır. Ayrıca, Microsoft Edge 'in otomatik güncelleştirmeleri varsayılan olarak **Açık** .
 
 > [!NOTE]
 > Microsoft Edge *sürüm 77 ve üzeri* , MacOS için de kullanılabilir.
 >
 > Çalışma alanına katılma bilgisayarları için Microsoft Edge 'in yerleşik uygulama dağıtımını kullanamazsınız. Yerleşik uygulama dağıtımı, yalnızca AAD 'ye katılmış cihazlar için mevcut olan Intune yönetim uzantısını gerektirir. Microsoft Edge *sürüm 77 ve üstünü* **uygulamalara**yüklenmiş bir *. msi* kullanarak dağıtmaya devam edebilirsiniz. [Microsoft Intune için Windows iş kolu uygulaması ekleme](lob-apps-windows.md)bölümüne bakın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Windows 10 sürüm 1709 veya üzeri.
 - Kullanıcı bağlamlarındaki tüm kanallar için Microsoft Edge *sürüm 77 ve üzeri* sürümlerin önceden yüklenmiş sürümlerinin, sistem bağlamında yüklü olan bir kenara üzerine yazılır.
@@ -46,7 +46,7 @@ Uygulamaları dağıtmadan, yapılandırmadan, izleyebilmeniz veya koruyabilmeni
 Aşağıdaki adımları kullanarak Intune 'a bir Microsoft Edge sürüm 77 ve üzeri ekleyebilirsiniz:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin.
+2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Microsoft Edge, sürüm 77 ve üzeri**altındaki **uygulama türü** listesinde **Windows 10**' u seçin.
 
 ## <a name="configure-app-information"></a>Uygulama bilgilerini yapılandırma
@@ -83,10 +83,10 @@ Bu adımda, uygulama için yükleme seçeneklerini yapılandırın.
 
 ## <a name="select-scope-tags-optional"></a>Kapsam etiketlerini seçin (isteğe bağlı)
 Intune 'da istemci uygulama bilgilerini kimlerin görebileceğini anlamak için kapsam etiketlerini kullanabilirsiniz. Kapsam etiketleri hakkında tam Ayrıntılar için bkz. dağıtılmış BT için rol tabanlı erişim denetimi ve kapsam etiketleri kullanma.
-1.    **Kapsam (Etiketler)** > **Ekle**öğesini seçin.
+1.    **Kapsam (Etiketler)**  >  **Ekle**öğesini seçin.
 2.    Kapsam etiketlerini aramak için **Seç** kutusunu kullanın.
 3.    Bu uygulamaya atamak istediğiniz kapsam etiketlerinin yanındaki onay kutusunu işaretleyin.
-4.    **Seç** > **Tamam 'a**tıklayın.
+4.    **Seç**  >  **Tamam 'a**tıklayın.
 
 ## <a name="add-the-app"></a>Uygulama ekleme
 Uygulamayı yapılandırmayı tamamladığınızda, **uygulama uygulaması** bölmesinden **Ekle** ' yi seçin. 
@@ -101,7 +101,7 @@ Oluşturduğunuz uygulama, uygulamalar listesinde görüntülenir ve burada uygu
 Kullanıcının cihazlarından Microsoft Edge 'i kaldırmanız gerektiğinde aşağıdaki adımları kullanın.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamaları** > seçin**tüm uygulamalar** > *Microsoft Edge* uygulaması > **atamaları** > **Grup Ekle**.
+2. **Uygulamaları**seçin  >  **tüm uygulamalar**  >  *Microsoft Edge* uygulaması > **atamaları**  >  **Grup Ekle**.
 3. **Grup Ekle** bölmesinde **Kaldır**' ı seçin.
 
     > [!NOTE]

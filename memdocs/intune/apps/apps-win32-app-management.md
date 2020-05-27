@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/02/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d1933350675a0d36042d1a4bd1e6a26c9a95814
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 70cb3e2f8baf89be5e77867b385788cb04181ba1
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254614"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83986027"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Tek başına Intune-Win32 uygulama yönetimi
 
@@ -35,7 +35,7 @@ ms.locfileid: "82254614"
 > [!IMPORTANT]
 > Win32 uygulamalarını dağıttığınızda, özellikle de çok sayfalı bir Win32 uygulaması yükleyicinizin olduğu durumlarda, [Intune yönetim uzantısı](../apps/intune-management-extension.md) yaklaşımını özel olarak kullanmayı düşünün. AutoPilot kaydı sırasında Win32 uygulamaları ve iş kolu uygulamaları yüklemesini karıştırırsanız, uygulama yüklemesi başarısız olabilir. Intune yönetim uzantısı, bir PowerShell betiği veya bir Win32 uygulaması kullanıcı veya cihaza atandığında otomatik olarak yüklenir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Win32 uygulama yönetimini kullanmak için aşağıdaki ölçütleri karşıladığınızdan emin olun:
 
@@ -61,7 +61,7 @@ GitHub 'dan [Microsoft Win32 Içerik hazırlığı aracını](https://go.microso
 
 ### <a name="run-the-microsoft-win32-content-prep-tool"></a>Microsoft Win32 Içerik hazırlığı aracını çalıştırma
 
-Komut penceresinden parametresiz `IntuneWinAppUtil.exe` çalıştırırsanız araç, gerekli parametreleri adım adım girmek için size rehberlik eder. Ya da aşağıdaki kullanılabilir komut satırı parametrelerine göre parametreleri komuta ekleyebilirsiniz.
+`IntuneWinAppUtil.exe`Komut penceresinden parametresiz çalıştırırsanız araç, gerekli parametreleri adım adım girmek için size rehberlik eder. Ya da aşağıdaki kullanılabilir komut satırı parametrelerine göre parametreleri komuta ekleyebilirsiniz.
 
 ### <a name="available-command-line-parameters"></a>Kullanılabilir komut satırı parametreleri 
 
@@ -100,7 +100,7 @@ Komut penceresinden parametresiz `IntuneWinAppUtil.exe` çalıştırırsanız ar
 Aşağıdaki adımlar Windows uygulamasını Intune'a eklemenize yardımcı olacak yönergeler sağlar.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin.
+2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, **diğer** uygulama türleri altında **Windows uygulaması (Win32)** öğesini seçin.
 
     > [!IMPORTANT]
@@ -140,7 +140,7 @@ Aşağıdaki adımlar Windows uygulamasını Intune'a eklemenize yardımcı olac
 
         Örneğin, uygulama dosyanızın adı **MyApp123** ise şunu ekleyin: <br>
         `msiexec /p "MyApp123.msp"`<p>
-        Ve uygulama ise `ApplicationName.exe`, komut uygulamanın adı ve ardından paket tarafından desteklenen komut bağımsız değişkenleri (anahtarlar) gelir. <br>
+        Ve uygulama ise, `ApplicationName.exe` komut uygulamanın adı ve ardından paket tarafından desteklenen komut bağımsız değişkenleri (anahtarlar) gelir. <br>
         Örneğin:<br>
         `ApplicationName.exe /quiet`<br>
         Yukarıdaki komutta `ApplicationName.exe` paket, `/quiet` komut bağımsız değişkenini destekler.<p> 
@@ -365,9 +365,9 @@ Bir Win32 uygulaması için başlangıç saatini ve son tarih saatini yapıland�
 Aşağıdaki adımları kullanarak, gerekli bir uygulama için bir tarih ve saate göre uygulama kullanılabilirliğini ayarlayın:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **tüm uygulamalar**' ı seçin.
+2. **Uygulamalar**  >  **tüm uygulamalar**' ı seçin.
 3. Listeden var olan bir **Windows uygulaması (Win32)** seçin. 
-4. Uygulama bölmesinden, **atamalar** bölümünün yanındaki **Properties** > **Düzenle** ' yi seçin ve **gerekli** atama türünün altına **Grup ekleyin** >. 
+4. Uygulama bölmesinden, atamalar bölümünün yanındaki Düzenle ' **yi seçin ve**  >  **Edit** **gerekli** atama türünün altına **Grup ekleyin** >. **Assignments** 
    Uygulama kullanılabilirliği atama türüne göre ayarlanılabileceğini unutmayın. **Atama türü** **gerekli**, **Kayıtlı cihazlar için kullanılabilir**veya **kaldırma**olabilir.
 5. Uygulamaya atanacak kullanıcı grubunu belirtmek için **Grup Seç** bölmesinde bir grup seçin. 
 
@@ -391,7 +391,7 @@ Aşağıdaki adımları kullanarak, gerekli bir uygulama için bir tarih ve saat
 11. **Gözden geçir + kaydet**' e tıklayın.
 
 ## <a name="toast-notifications-for-win32-apps"></a>Win32 uygulamaları için bildirim bildirimleri 
-Gerekirse, uygulama ataması başına Son Kullanıcı bildirim bildirimlerinin gösterilmesini gizleyebilirsiniz. Intune 'da, **uygulamalar** > **tüm uygulamalar** ' ı seçin > uygulama > **atamaları** > **dahil et**' i seçin. 
+Gerekirse, uygulama ataması başına Son Kullanıcı bildirim bildirimlerinin gösterilmesini gizleyebilirsiniz. Intune 'da, **uygulamalar**  >  **tüm uygulamalar** ' ı seçin > uygulama > **atamaları**  >  **dahil et**' i seçin. 
 
 > [!NOTE]
 > Kaydı kaldırılan cihazlardaki Intune yönetim uzantısıyla yüklenmiş olan Win32 uygulamaları kaldırılmaz. Yöneticiler, KCG cihazlarına Win32 uygulamalarını sunmamak amacıyla bunları atamadan hariç tutma seçeneğini değerlendirebilir.
@@ -449,7 +449,7 @@ Win32 uygulamanızın sürüm bilgilerini almanız gerekiyorsa aşağıdaki Powe
 
 ```
 
-Yukarıdaki PowerShell komutunda, öğesini dosya yolunuza göre değiştirin `<path to binary file>` .
+Yukarıdaki PowerShell komutunda, öğesini `<path to binary file>` Dosya yolunuza göre değiştirin.
 
 ### <a name="additional-troubleshooting-areas-to-consider"></a>Dikkate alınması gereken ek sorun giderme alanı
 - Aracının cihazda yüklü olduğundan emin olmak için hedefi denetleyin - Bir grubu hedefleyen Win32 uygulaması veya bir grubu hedefleyen PowerShell Betiği, güvenlik grubu için aracı yükleme ilkesi oluşturur.

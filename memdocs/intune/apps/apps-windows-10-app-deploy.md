@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 05/19/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f06a6d6689107c97a80e11149da499ccd51fa755
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: 5ed491fd379879369ead35ceb2c618def91d3e53
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633295"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985935"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Microsoft Intune kullanarak Windows 10 uygulama dağıtımı 
 
@@ -44,17 +44,17 @@ Windows 10 cihazlarında desteklenen uygulama türleri İş kolu (LOB) uygulamal
 
 Belirli uygulama türleri, kullanıcılarınızın çalıştırdığı Windows 10 sürümüne göre desteklenir. Aşağıdaki tabloda, uygulama türü ve Windows 10 Supportability sağlanmaktadır.
 
-| Uygulama türü | Giriş Sayfası | Pro | İş | Enterprise | Eğitim | S modu | HoloLens <sup> 1 | Surface Hub | WCOS | Cep telefonu |
+| Uygulama türü | Giriş Sayfası | Pro | İş | Enterprise | Eğitim | S modu | HoloLens <sup> 1 | Surface Hub | WCOS | Mobil |
 |----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
-|  . DEFTERI | Hayır | Yes | Yes | Yes | Yes | Hayır | Hayır | Hayır | Hayır | Hayır |
-| . Intunewin | Hayır | Yes | Yes | Yes | Yes | 19H2 + | Hayır | Hayır | Hayır | Hayır |
-| Office C2R 'NDA | Hayır | Yes | Yes | Yes | Yes | RS4 + | Hayır | Hayır | Hayır | Hayır |
+|  . DEFTERI | No | Yes | Yes | Yes | Yes | Hayır | Hayır | Hayır | Hayır | Hayır |
+| . Intunewin | No | Yes | Yes | Yes | Yes | 19H2 + | Hayır | Hayır | Hayır | Hayır |
+| Office C2R 'NDA | No | Yes | Yes | Yes | Yes | RS4 + | Hayır | Hayır | Hayır | Hayır |
 | LOB: APPX/MALTı | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | MSFB çevrimdışı | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| MSFB çevrimiçi | Yes | Yes | Yes | Yes | Yes | Yes | RS4 + | Hayır | Yes | Yes |
-| Web Apps | Yes | Yes | Yes | Yes | Yes | Yes | Evet<sup>2 | Evet<sup>2 | Evet | Evet<sup>2 |
+| MSFB çevrimiçi | Yes | Yes | Yes | Yes | Yes | Yes | RS4 + | No | Yes | Yes |
+| Web Apps | Yes | Yes | Yes | Yes | Yes | Yes | Evet<sup>2 | Evet<sup>2 | Yes | Evet<sup>2 |
 | Mağaza bağlantısı | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Microsoft Edge | Hayır | Yes | Yes | Yes | Yes | 19H2 + <sup> 3 | Hayır | Hayır | Hayır | Hayır |
+| Microsoft Edge | No | Yes | Yes | Yes | Yes | 19H2 + <sup> 3 | Hayır | Hayır | Hayır | Hayır |
 
 <sup>1</sup> uygulama yönetiminin kilidini açmak Için, Hololens cihazınızı [holographic for Business](../fundamentals/windows-holographic-for-business.md)'a yükseltin.<br />
 yalnızca Şirket Portalı <sup>2</sup> ' den başlatın.<br />
