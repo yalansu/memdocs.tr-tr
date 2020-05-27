@@ -26,7 +26,7 @@
     - name: Uygulama koruma ilkeleri ve çalışma profilleri (Android)
       href: android-deployment-scenarios-app-protection-work-profiles.md
       displayName: app-we; without; without enrollment
-    - name: GMS olmadan Intune kullanma
+    - name: Intune’u Google Mobile Services olmadan kullanma
       href: manage-without-gms.md
     - name: MAM İLE İLGİLİ SSS
       href: mam-faq.md
