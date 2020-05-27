@@ -6,7 +6,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/30/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8d290e038529a85a01de3bdb890b9f131ef8442
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 36b85fa6713af5679e59382efaeb354bb4949705
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430042"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990592"
 ---
 # <a name="use-shell-scripts-on-macos-devices-in-intune"></a>Intune 'da macOS cihazlarında kabuk betikleri kullanma
 

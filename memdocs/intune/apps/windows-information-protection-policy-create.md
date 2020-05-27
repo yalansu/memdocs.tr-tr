@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/25/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8103e1a4946c0a325501b0d9f538c00d08a1e4cb
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 66ea84d8defa1d1d5b79f686537b391452cf3c30
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078320"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990287"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>Intune ile Windows Information Protection (WıP) ilkesi oluşturma ve dağıtma
 
@@ -47,7 +47,7 @@ Bir WIP ilkesi eklerken kullanılan birkaç kavramı anlamanız gerekir:
 - **Mağaza uygulamaları:** Windows mağazasındaki tüm uygulamaları ilkeye ekleyebilirsiniz.
 - **Windows masaüstü uygulamaları:** İlkeye tüm geleneksel Windows masaüstü uygulamalarını ekleyebilirsiniz (örneğin .exe, .dll)
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 WıP ilkesi oluşturabilmeniz için önce MAM sağlayıcısını yapılandırmanız gerekir. [MAM sağlayıcınızı Intune ile yapılandırma](app-protection-policies-configure-windows-10.md) hakkında daha fazla bilgi edinin.  
 
@@ -72,7 +72,7 @@ Kuruluşunuzda Intune'u kurduktan sonra WIP’ye özel bir ilke oluşturabilirsi
 
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **Uygulama koruma ilkeleri** > **ilke oluştur**' u seçin.
+2. **Uygulamalar**  >  **Uygulama koruma ilkeleri**  >  **ilke oluştur**' u seçin.
 3. Aşağıdaki değerleri ekleyin:
     - **Adı:** Yeni ilkeniz için bir ad yazın (gereklidir).
     - **Açıklama:** (İsteğe bağlı) Bir açıklama yazın.
@@ -83,7 +83,7 @@ Kuruluşunuzda Intune'u kurduktan sonra WIP’ye özel bir ilke oluşturabilirsi
 ## <a name="to-add-recommended-apps-to-your-protected-apps-list"></a>Korunan uygulamalar listenize önerilen uygulamalar eklemek için
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **Uygulama koruma ilkeleri**' ni seçin.
+2. **Uygulamalar**  >  **Uygulama koruma ilkeleri**' ni seçin.
 3. **Uygulama koruma ilkeleri** bölmesinde, değiştirmek istediğiniz ilkeyi seçin. **Intune uygulama koruması** bölmesi görüntülenir.
 4. **Intune uygulama koruması** bölmesinden **korumalı uygulamalar** ' ı seçin. **Korunan uygulamalar** bölmesi, bu uygulama koruma ilkesi için listede zaten bulunan tüm uygulamaları gösteren açılır.
 5. **Uygulama ekle**’yi seçin. **Uygulama ekle** bilgileri uygulamaların filtrelenmiş bir listesini gösterir. Bölmenin en üstündeki liste, liste filtresini değiştirmenize izin verir.
@@ -96,7 +96,7 @@ Kuruluşunuzda Intune'u kurduktan sonra WIP’ye özel bir ilke oluşturabilirsi
 **Bir Mağaza uygulaması eklemek için**
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **Uygulama koruma ilkeleri**' ni seçin.
+2. **Uygulamalar**  >  **Uygulama koruma ilkeleri**' ni seçin.
 3. **Uygulama koruma ilkeleri** bölmesinde, değiştirmek istediğiniz ilkeyi seçin. **Intune uygulama koruması** bölmesi görüntülenir.
 4. **Intune uygulama koruması** bölmesinden **korumalı uygulamalar** ' ı seçin. **Korunan uygulamalar** bölmesi, bu uygulama koruma ilkesi için listede zaten bulunan tüm uygulamaları gösteren açılır.
 5. **Uygulama ekle**’yi seçin. **Uygulama ekle** bilgileri uygulamaların filtrelenmiş bir listesini gösterir. Bölmenin en üstündeki liste, liste filtresini değiştirmenize izin verir.
@@ -109,7 +109,7 @@ Kuruluşunuzda Intune'u kurduktan sonra WIP’ye özel bir ilke oluşturabilirsi
 
 **Bir masaüstü uygulaması ekleme**
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **Uygulama koruma ilkeleri**' ni seçin.
+2. **Uygulamalar**  >  **Uygulama koruma ilkeleri**' ni seçin.
 3. **Uygulama koruma ilkeleri** bölmesinde, değiştirmek istediğiniz ilkeyi seçin. **Intune uygulama koruması** bölmesi görüntülenir.
 4. **Intune uygulama koruması** bölmesinden **korumalı uygulamalar** ' ı seçin. **Korunan uygulamalar** bölmesi, bu uygulama koruma ilkesi için listede zaten bulunan tüm uygulamaları gösteren açılır.
 5. **Uygulama ekle**’yi seçin. **Uygulama ekle** bilgileri uygulamaların filtrelenmiş bir listesini gösterir. Bölmenin en üstündeki liste, liste filtresini değiştirmenize izin verir.
@@ -158,9 +158,9 @@ WIP’yi kapatmanızdan sonra yerel olarak bağlı sürücülerde WIP ile etiket
 
 1. [Azure Portal](https://portal.azure.com)açın. **Tüm hizmetler**’i seçin. Metin kutusu filtresine **Intune** yazın.
 
-3. **Intune** > **uygulamalarını**seçin.
+3. **Intune**  >  **uygulamalarını**seçin.
 
-4. **Uygulama koruma durumu** > **raporları** > **Windows Information Protection öğrenme**' yi seçin.  
+4. **Uygulama koruma durumu**  >  **raporları**  >  **Windows Information Protection öğrenme**' yi seçin.  
 
     Uygulamaların WIP Öğrenme günlük raporunda görünmesini sağladıktan sonra bunları uygulama koruma ilkelerinize ekleyebilirsiniz.
 
@@ -186,7 +186,7 @@ Bu uygulama koruma ilkesi seçeneği, Windows Bilgi Koruması ilkesinin **Geliş
 
 WIP uygulama koruma ilkenizi oluşturduktan sonra, bu ilkeyi MAM’yi kullanarak kuruluşunuza dağıtmanız gerekir.
 
-1. **Uygulama ilkesi** bölmesinde yeni oluşturduğunuz uygulama koruma ilkenizi seçin, **Kullanıcı grupları** > **Kullanıcı grubu Ekle**' yi seçin.
+1. **Uygulama ilkesi** bölmesinde yeni oluşturduğunuz uygulama koruma ilkenizi seçin, **Kullanıcı grupları**  >  **Kullanıcı grubu Ekle**' yi seçin.
 
     Azure Active Directory tüm güvenlik gruplarından oluşan Kullanıcı gruplarının listesi, **Kullanıcı grubu Ekle** bölmesinde açılır.
 

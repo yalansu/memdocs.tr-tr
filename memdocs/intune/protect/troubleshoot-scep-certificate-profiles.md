@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/30/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed98ca328bdd196cd9dd7005f5e2d5ac75ff7511
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7163a8a615edd8f1b813801aab1e499ab30e0c20
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79328670"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991011"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>Microsoft Intune ile SCEP sertifika profillerinde sorun gidermeye genel bakış
 
@@ -125,14 +125,14 @@ Ayrıca, destek için [e-posta günlükleri de yükleyebilir](../user-help/send-
 
 İOS/ıpados çalıştıran cihazlarda, bir Mac bilgisayarda çalışan hata ayıklama günlükleri ve **Xcode** kullanın:
 
-1. İOS/ıpados cihazını Mac 'e bağlayın ve ardından **uygulama** > **yardımcı programları** ' na giderek konsol uygulamasını açın. 
+1. İOS/ıpados cihazını Mac 'e bağlayın ve ardından **uygulama**  >  **yardımcı programları** ' na giderek konsol uygulamasını açın. 
 
 2. **Eylem**altında, **bilgi Iletilerini Içer** ve **hata ayıklama iletilerini içer**' i seçin.
 
    ![Günlük seçeneklerini seçin](../protect/media/troubleshoot-scep-certificate-profiles/message-options.png)
 
 3. Sorunu yeniden oluşturun ve sonra günlükleri bir metin dosyasına kaydedin:
-   1. Geçerli ekrandaki tüm iletileri seçmek için **Düzenle** > Seç**Tümünü** Seç ' i seçin ve ardından iletileri panoya kopyalamak için**kopyayı** **Düzenle** > ' yi seçin. 
+   1. **Edit**  >  Geçerli ekrandaki tüm iletileri seçmek için Düzenle Seç**Tümünü** Seç ' i seçin ve ardından **Edit**  >  iletileri panoya kopyalamak için**kopyayı** Düzenle ' yi seçin. 
    2. TextEdit uygulamasını açın, kopyalanmış günlükleri yeni bir metin dosyasına yapıştırın ve dosyayı kaydedin.
 
 
@@ -142,7 +142,7 @@ Ayrıca, destek için [e-posta günlükleri de yükleyebilir](../user-help/send-
 
 Windows çalıştıran cihazlarda, Intune ile yönettiğiniz cihazların kayıt veya cihaz yönetimi sorunlarını tanılamak için Windows olay günlüklerini kullanın.
 
-Cihazda **Olay Görüntüleyicisi** > **uygulamalar ve hizmet günlükleri** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** ' ı açın.
+Cihazda **Olay Görüntüleyicisi**  >  **uygulamalar ve hizmet günlükleri**  >  **Microsoft**  >  **Windows**  >  **DeviceManagement-Enterprise-Diagnostics-Provider** ' ı açın.
 
 ![Windows olay günlükleri](../protect/media/troubleshoot-scep-certificate-profiles/windows-event-log.png)
 

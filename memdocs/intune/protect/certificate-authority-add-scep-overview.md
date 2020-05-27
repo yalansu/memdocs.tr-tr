@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 07/03/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1dfac34615c208328cab06a3fd047d3a9b99c794
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b3b7316cd496f7ae8ae97bd2d896695c0c11e156
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79329882"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990373"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>SCEP kullanarak Intune'da iş ortağı sertifika yetkilisi ekleme
 
@@ -74,7 +74,7 @@ Azure AD uygulamasını kaydetmek için gerekli izinlere sahip olduğunuzdan emi
 
 #### <a name="create-an-application-in-azure-active-directory"></a>Azure Active Directory’de uygulama oluşturma  
 
-1. [Azure Portal](https://portal.azure.com), **Azure Active Directory** > **uygulama kayıtları**' na gidin ve ardından **Yeni kayıt**' ı seçin.  
+1. [Azure Portal](https://portal.azure.com), **Azure Active Directory**  >  **uygulama kayıtları**' na gidin ve ardından **Yeni kayıt**' ı seçin.  
 
 2. **Uygulama kaydetme** sayfasında, aşağıdaki ayrıntıları belirtin:  
    - **Ad** bölümünde anlamlı bir uygulama adı girin.  
@@ -89,7 +89,7 @@ Azure AD uygulamasını kaydetmek için gerekli izinlere sahip olduğunuzdan emi
    > [!IMPORTANT]  
    > Bu sayfadan ayrılmadan önce, istemci sırrı için değeri kopyalayın ve daha sonra üçüncü taraf CA uygulamanız ile kullanmak üzere kaydedin. Bu değer bir daha gösterilmez. Üçüncü taraf sertifika yetkilinizin kılavuzunu, uygulama KIMLIĞI, kimlik doğrulama anahtarı ve kiracı KIMLIĞI 'nin nasıl yapılandırılacağını istediğlerine göre gözden geçirdiğinizden emin olun.  
 
-6. **KIRACı kimliğinizi**kaydedin. Kiracı Kimliği, hesabınızın @ işaretinden sonraki etki alanı metnidir. Örneğin, hesabınız ise *admin@name.onmicrosoft.com*kiracı kimliğiniz **Name.onmicrosoft.com**olur.  
+6. **KIRACı kimliğinizi**kaydedin. Kiracı Kimliği, hesabınızın @ işaretinden sonraki etki alanı metnidir. Örneğin, hesabınız ise *admin@name.onmicrosoft.com* KIRACı kimliğiniz **Name.onmicrosoft.com**olur.  
 
 7. Uygulamanın gezinti bölmesinde, **Yönet**' ın altındaki **API izinleri** ' ne gidin ve **izin Ekle**' yi seçin.  
 

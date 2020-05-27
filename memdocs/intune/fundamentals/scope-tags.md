@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 08/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.technology: ''
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eea973ec936ce41578754cb1a68d1b9128895b76
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8c447c9187696a8e918886117847dde6421b4014
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326678"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990735"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Dağıtılmış BT için rol tabanlı erişim denetimi (RBAC) ve kapsam etiketleri kullanma
 
@@ -43,14 +43,14 @@ Varsayılan kapsam etiketi özelliği, Microsoft uç noktası Configuration Mana
 
 ## <a name="to-create-a-scope-tag"></a>Kapsam etiketi oluşturmak için
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **kiracı yönetim** > **rolleri** > **kapsam (Etiketler)** > **Oluştur**' u seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **kiracı yönetim**  >  **rolleri**  >  **kapsam (Etiketler)**  >  **Oluştur**' u seçin.
 2. **Temel bilgiler** sayfasında, bir **ad** ve isteğe bağlı bir **Açıklama**girin. **İleri**’yi seçin.
 3. **Atamalar** sayfasında, bu kapsam etiketini atamak istediğiniz cihazları içeren grupları seçin. **İleri**’yi seçin.
 4. **Gözden geçir + oluştur** sayfasında **Oluştur**' u seçin.
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Kapsam etiketini bir role atamak için
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **kiracı yönetim** > **rolleri** > **tüm roller** ' i seçin > bir rol seçin > **atama** > **ata**' yı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **kiracı yönetim**  >  **rolleri**  >  **tüm roller** ' i seçin > bir rol seçin > **atama**  >  **ata**' yı seçin.
 2. **Temel bilgiler** sayfasında, bir **atama adı** ve **Açıklama**belirtin. **İleri**’yi seçin.
 3. **Yönetici grupları** sayfasında, **dahil edilecek grupları seç**' i seçin ve bu atamanın bir parçası olarak istediğiniz grupları seçin. Bu gruptaki kullanıcıların, kapsamdaki kullanıcıları/cihazları yönetme izinleri olacaktır (gruplar). **İleri**’yi seçin.
 
@@ -70,10 +70,10 @@ Varsayılan kapsam etiketi özelliği, Microsoft uç noktası Configuration Mana
 
 Kapsam etiketlerini destekleyen nesneler için, kapsam etiketleri genellikle **Özellikler**altında görünür. Örneğin, bir yapılandırma profiline bir kapsam etiketi atamak için aşağıdaki adımları izleyin:
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihaz** > **yapılandırma profilleri** ' ni seçin > bir profil seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihaz**  >  **yapılandırma profilleri** ' ni seçin > bir profil seçin.
 
-2. **Özellikler** > **kapsam (Etiketler)** > seçin**kapsam etiketlerini** **Düzenle** > > Profile eklemek istediğiniz etiketleri seçin. Bir nesneye en fazla 100 kapsam etiketi atayabilirsiniz.
-4. **Gözden geçirmeyi Seç + kaydet**' **i** > seçin.
+2. **Özellikler**  >  **kapsam (Etiketler)** seçin  >  **Edit**  >  **kapsam etiketlerini** Düzenle > Profile eklemek istediğiniz etiketleri seçin. Bir nesneye en fazla 100 kapsam etiketi atayabilirsiniz.
+4. **Select**  >  **Gözden geçirmeyi Seç + kaydet**' i seçin.
 
 ## <a name="scope-tag-details"></a>Kapsam etiketi ayrıntıları
 Kapsam etiketleriyle çalışırken bu ayrıntıları unutmayın: 

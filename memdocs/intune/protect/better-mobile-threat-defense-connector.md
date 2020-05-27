@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 05dec05cdc5a16078328d736d2f622cea1b2aa00
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: beb1f8c287e952726c0ba929b49496c16599fe08
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79329910"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990427"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Intune ile Better Mobile Threat Defense bağlayıcısı
 
@@ -48,7 +48,7 @@ Better Mobile uygulaması mobil cihazlara yüklenir ve mobil cihazlarda çalış
 
 - **iOS 8,0 ve üzeri**
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Azure Active Directory Premium
 
@@ -106,7 +106,7 @@ Düzeltme ile erişim izni verildi:
 
 ### <a name="control--access-on-unenrolled-devices-based-on-threats-from-malicious-apps"></a>Kötü amaçlı uygulamalardaki tehditleri temel alan kayıtlı olmayan cihazlarda erişimi denetleme
 
-DAHA ıyı bir mobil tehdit savunması çözümü, bir cihazı bulaşma olarak düşünür: ![algılanan kötü amaçlı yazılım nedeniyle uygulama koruma ilkesi blokları](./media/better-mobile-threat-defense-connector/better-mobile-app-policy-block.png)
+DAHA ıyı bir mobil tehdit savunması çözümü, bir cihazı bulaşma olarak düşünür: ![ algılanan kötü amaçlı yazılım nedeniyle uygulama koruma ilkesi blokları](./media/better-mobile-threat-defense-connector/better-mobile-app-policy-block.png)
 
 Düzeltmeye erişim verildi:
 

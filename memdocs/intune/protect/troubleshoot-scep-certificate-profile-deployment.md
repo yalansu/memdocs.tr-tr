@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/30/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06d2c0b659f3dacb68f5029c23fbd488c06c1fbe
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: aea6da1a0f163160719a7fcf028380e8372ad6cb
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079102"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991033"
 ---
 # <a name="troubleshoot-deployment-of-a-scep-certificate-profile-to-devices-in-microsoft-intune"></a>Microsoft Intune içindeki cihazlara SCEP sertifika profili dağıtımı sorunlarını giderme
 
@@ -36,7 +36,7 @@ Android için SCEP sertifika profilleri, cihaza bir SyncML olarak gelir ve [OMAD
 
 ### <a name="validate-that-the-android-device-was-sent-the-policy"></a>Android cihazının ilkeyi gönderdiğini doğrulama
 
-Bekleyen cihaza bir profil gönderildiğini doğrulamak için, [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) 'nde **sorun giderme + Destek** > **sorunlarını**giderme bölümüne gidin.  *Sorun giderme* penceresinde, **atamaları** **yapılandırma profillerine** ayarlayın ve ardından aşağıdaki yapılandırmaları doğrulayın:
+Bekleyen cihaza bir profil gönderildiğini doğrulamak için, [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) 'nde **sorun giderme + Destek**  >  **sorunlarını**giderme bölümüne gidin.  *Sorun giderme* penceresinde, **atamaları** **yapılandırma profillerine** ayarlayın ve ardından aşağıdaki yapılandırmaları doğrulayın:
 
 1. SCEP sertifika profilini alması gereken bir kullanıcı belirtin.
 
@@ -63,7 +63,7 @@ Anahtar girişi örnekleri:
 
 ### <a name="validate-that-the-iosipados-device-was-sent-the-policy"></a>İOS/ıpados cihazının ilkeyi gönderdiğini doğrulama
 
-Bekleyen cihaza bir profil gönderildiğini doğrulamak için, [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) 'nde **sorun giderme + Destek** > **sorunlarını**giderme bölümüne gidin.  *Sorun giderme* penceresinde, **atamaları** **yapılandırma profillerine** ayarlayın ve ardından aşağıdaki yapılandırmaları doğrulayın:
+Bekleyen cihaza bir profil gönderildiğini doğrulamak için, [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) 'nde **sorun giderme + Destek**  >  **sorunlarını**giderme bölümüne gidin.  *Sorun giderme* penceresinde, **atamaları** **yapılandırma profillerine** ayarlayın ve ardından aşağıdaki yapılandırmaları doğrulayın:
 
 1. SCEP sertifika profilini alması gereken bir kullanıcı belirtin.
 
@@ -90,7 +90,7 @@ Anahtar girişi örnekleri:
 
 ### <a name="validate-that-the-windows-device-was-sent-the-policy"></a>Windows cihazının ilkeyi gönderdiğini doğrulama
 
-Profilin istediğiniz cihaza gönderildiğini doğrulamak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)[Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) 'nde **sorun giderme + Destek** > **sorunlarını**giderme bölümüne gidin.  *Sorun giderme* penceresinde, **atamaları** **yapılandırma profillerine** ayarlayın ve ardından aşağıdaki yapılandırmaları doğrulayın:
+Profilin istediğiniz cihaza gönderildiğini doğrulamak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)[Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) 'nde **sorun giderme + Destek**  >  **sorunlarını**giderme bölümüne gidin.  *Sorun giderme* penceresinde, **atamaları** **yapılandırma profillerine** ayarlayın ve ardından aşağıdaki yapılandırmaları doğrulayın:
 
 1. SCEP sertifika profilini alması gereken bir kullanıcı belirtin.
 
@@ -102,13 +102,13 @@ Profilin istediğiniz cihaza gönderildiğini doğrulamak için [Microsoft Endpo
 
 ### <a name="validate-the-policy-reached-the-windows-device"></a>İlkeyi Windows cihazına ulaştı
 
-Profile yönelik ilkenin varışı bir Windows cihazının *DeviceManagement-Enterprise-Diagnostics-Provider* > **Yönetim** günlüğüne kaydedilir ve bu olay kimliği **306**' dir. 
+Profile yönelik ilkenin varışı bir Windows cihazının *DeviceManagement-Enterprise-Diagnostics-Provider*  >  **Yönetim** günlüğüne kaydedilir ve bu olay kimliği **306**' dir. 
 
 Günlüğü açmak için:
 
 1. Cihazda, Windows Olay Görüntüleyicisi açmak için **eventvwr. msc** ' yi çalıştırın.
 
-2. **Uygulama ve hizmet günlükleri** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **admin**' i genişletin.
+2. **Uygulama ve hizmet günlükleri**  >  **Microsoft**  >  **Windows**  >  **DeviceManagement-Enterprise-Diagnostic-Provider**  >  **admin**' i genişletin.
 
 3. Aşağıdaki örneğe benzeyen olay **306**' i arayın:
 

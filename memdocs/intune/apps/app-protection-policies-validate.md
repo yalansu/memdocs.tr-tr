@@ -10,7 +10,7 @@ ms.date: 03/31/2020
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.topic: conceptual
+ms.topic: how-to
 ms.technology: ''
 ms.assetid: 15f8a838-0b69-412b-a42e-c6edb61f0cae
 ms.reviewer: joglocke
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d41dec48ff1f357733882ebe99bcad670e676675
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 0630c38a28499c0add8cacf4deb5356345167c99
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80488021"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990463"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>Microsoft Intune'da uygulama koruma ilkesi kurulumunuzu doğrulama
 
@@ -44,7 +44,7 @@ Sınama, uygulama koruma ilkelerinizin davranışının beklendiği gibi çalı�
 
 ### <a name="user-app-protection-status"></a>Kullanıcı uygulama koruma durumu
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-3. **Uygulama koruma durumunu****izlemek** >  için **uygulamalar** > ' ı seçin ve ardından **atanan kullanıcılar** kutucuğunu seçin. 
+3. **Apps**  >  **Monitor**  >   **Uygulama koruma durumunu**izlemek için uygulamalar ' ı seçin ve ardından **atanan kullanıcılar** kutucuğunu seçin. 
 4. **Uygulama raporlama** sayfasında **Kullanıcı seçin**'i belirterek kullanıcı ve grupların bulunduğu listeyi açın. 
 5. Arama yapıp listeden bir kullanıcı seçin ve sonra **Kullanıcı seçin**’i belirtin. **Uygulama raporlama** bölmesinin en üstünde kullanıcının uygulama koruması için lisanslı olup olmadığını görebilirsiniz. Ayrıca, kullanıcının O365 lisansının olup olmadığını ve kullanıcının tüm cihazları için uygulama durumunu göreceksiniz.
 

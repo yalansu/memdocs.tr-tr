@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d37bf060f11be9e295a9ef2743fa0ba33844df7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6460691ee80a5aed7571ebc2a4471a1d5099859f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79325890"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990898"
 ---
 # <a name="deploying-apps-using-intune-on-the-gcc-high-and-dod-environments"></a>GCC High ve DoD ortamlarında Intune kullanarak uygulama dağıtma 
 
@@ -41,10 +41,10 @@ Intune kullanarak GCC High veya DoD ortamına yönelik bir iş kolu uygulaması 
 Iş için Microsoft Store [çevrimdışı lisansa sahip bir uygulamayı indirmeniz](https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) gerekiyorsa, uygulamayı indirmek için şu adımları izleyin: 
 
 1. [İş Için mağazada](https://businessstore.microsoft.com/)oturum açın.
-2. Ayarları **Yönet** > **Settings**' i seçin.
+2. Ayarları **Yönet**' i seçin  >  **Settings**.
 3. **Alışveriş deneyimi**altında **çevrimdışı uygulamaları** **Açık**olarak göster ' i ayarlayın.
 
-Uygulamalar için alışveriş yaparken, çevrimdışı bir sürüm varsa, lisans türünü çevrimdışı olarak değiştirmeyi seçebilirsiniz. Uygulamayı aldıktan sonra, [iş Mağazası](https://businessstore.microsoft.com/)'ndaki**ürünleri & Hizmetleri** **Yönet** > ' i seçerek bunu yönetebilirsiniz. Ayrıca, uygulamayı ve bağımlılıklarını indirebilirsiniz. Daha sonra, bu indirilen uygulamayı (ve bağımlılıklarını) Intune kullanarak kullanıcılara dağıtabilirsiniz.  
+Uygulamalar için alışveriş yaparken, çevrimdışı bir sürüm varsa, lisans türünü çevrimdışı olarak değiştirmeyi seçebilirsiniz. Uygulamayı aldıktan sonra, **Manage**  >  [iş Mağazası](https://businessstore.microsoft.com/)'ndaki**ürünleri & Hizmetleri** Yönet ' i seçerek bunu yönetebilirsiniz. Ayrıca, uygulamayı ve bağımlılıklarını indirebilirsiniz. Daha sonra, bu indirilen uygulamayı (ve bağımlılıklarını) Intune kullanarak kullanıcılara dağıtabilirsiniz.  
 
 ## <a name="syncing-intune-to-the-store-for-business"></a>Intune 'U Iş için mağazaya eşitleme 
 

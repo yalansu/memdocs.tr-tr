@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/12/2020
-ms.topic: troubleshooting
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e8045ac53369a471ce232f0eca3e185be2e3e85
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 010bbd18c09424ed2434dc19405851bb5c254591
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79330666"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990779"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Intune 'da günlük verilerini depolama, Olay Hub 'ları veya Log Analytics 'e gönderme (Önizleme)
 
@@ -43,7 +43,7 @@ Bu özellikler, Intune 'da **Tanılama ayarlarının** bir parçasıdır.
 
 Bu makalede, farklı hizmetlere günlük verileri göndermek, örnek ve maliyet tahminleri sağlamak ve bazı yaygın soruların **cevapları Için tanılama ayarlarının** nasıl kullanılacağı gösterilmektedir. Bu özelliği etkinleştirdikten sonra, günlüklerinizin seçtiğiniz Azure Izleyici hizmetine yönlendirilmesidir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Bu özelliği kullanmak için şunlara ihtiyacınız vardır:
 
@@ -60,7 +60,7 @@ Denetim günlüğü verilerini yönlendirmek istediğiniz yere bağlı olarak, a
 ## <a name="send-logs-to-azure-monitor"></a>Günlükleri Azure izleyici 'ye gönderme
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Rapor** > **Tanılama ayarları**' nı seçin. İlk kez açtığınızda açın. Aksi takdirde, bir ayar ekleyin.
+2. **Rapor**  >  **Tanılama ayarları**' nı seçin. İlk kez açtığınızda açın. Aksi takdirde, bir ayar ekleyin.
 
     > [!div class="mx-imgBorder"]
     > ![Azure Izleyici 'ye Günlükler göndermek için Intune 'da tanılama ayarlarını etkinleştirin](./media/review-logs-using-azure-monitor/diagnostics-settings-turn-on.png)
@@ -85,20 +85,20 @@ Denetim günlüğü verilerini yönlendirmek istediğiniz yere bağlı olarak, a
 
             [Azure Log Analytics çalışma alanı](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace) , bu ayarlar hakkında daha fazla ayrıntı sağlar.
 
-    - **Günlük** > **auditlogs**: [Intune denetim günlüklerini](monitor-audit-logs.md) depolama hesabınıza, Olay Hub 'ına veya Log Analytics 'e göndermek için bu seçeneği belirleyin. Denetim günlükleri, Intune 'da kimin ve ne zaman yaptığına ilişkin bir değişiklik üreten her görevin geçmişini gösterir.
+    - **Günlüğe kaydet**  >  **Auditlogs**: [Intune denetim günlüklerini](monitor-audit-logs.md) depolama hesabınıza, Olay Hub 'ına veya Log Analytics 'e göndermek için bu seçeneği belirleyin. Denetim günlükleri, Intune 'da kimin ve ne zaman yaptığına ilişkin bir değişiklik üreten her görevin geçmişini gösterir.
 
-      Bir depolama hesabı kullanmayı seçerseniz, verileri (bekletme) kaç gün tutmak istediğinizi de girin. Verileri süresiz olarak tutmak için, **bekletme (gün)** değerini `0` (sıfır) olarak ayarlayın.
+      Bir depolama hesabı kullanmayı seçerseniz, verileri (bekletme) kaç gün tutmak istediğinizi de girin. Verileri süresiz olarak tutmak için, **bekletme (gün)** `0` değerini (sıfır) olarak ayarlayın.
 
-    - **Günlük** > **operationallogs**: işlemsel Günlükler (Önizleme), Intune 'a kaydolduğunu kullanıcıların ve cihazların başarısını veya başarısızlığını ve uyumlu olmayan cihazların ayrıntılarını gösterir. Kayıt günlüklerini depolama hesabınıza, Olay Hub 'ınıza veya Log Analytics 'e göndermek için bu seçeneği belirleyin.
+    - **Günlüğe kaydet**  >  **Operationallogs**: işlemsel Günlükler (Önizleme) Intune 'a kaydolduğunu kullanıcıların ve cihazların başarısını veya başarısızlığını ve uyumlu olmayan cihazların ayrıntılarını gösterir. Kayıt günlüklerini depolama hesabınıza, Olay Hub 'ınıza veya Log Analytics 'e göndermek için bu seçeneği belirleyin.
 
-      Bir depolama hesabı kullanmayı seçerseniz, verileri (bekletme) kaç gün tutmak istediğinizi de girin. Verileri süresiz olarak tutmak için, **bekletme (gün)** değerini `0` (sıfır) olarak ayarlayın.
+      Bir depolama hesabı kullanmayı seçerseniz, verileri (bekletme) kaç gün tutmak istediğinizi de girin. Verileri süresiz olarak tutmak için, **bekletme (gün)** `0` değerini (sıfır) olarak ayarlayın.
 
       > [!NOTE]
       > İşletimsel Günlükler önizlemededir. İşletimsel günlüklerde bilgi dahil olmak üzere geri bildirim sağlamak için [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback)'a gidin.
 
-    - **Günlük** > **devicekarmaşıkanceorg**: cihaz uyumluluğu kurumsal günlükleri (Önizleme) Intune 'da cihaz uyumluluğu ve uyumlu olmayan cihazların ayrıntıları için kuruluş raporunu gösterir. Uyumluluk günlüklerini depolama hesabınıza, Olay Hub 'ına veya Log Analytics 'e göndermek için bu seçeneği belirleyin.
+    - **Günlüğe kaydet**  >  **Devicekarmaşıkanceorg**: cihaz uyumluluğu kuruluş günlükleri (Önizleme) Intune 'Da cihaz uyumluluğu ve uyumlu olmayan cihazların ayrıntıları için kuruluş raporunu gösterir. Uyumluluk günlüklerini depolama hesabınıza, Olay Hub 'ına veya Log Analytics 'e göndermek için bu seçeneği belirleyin.
 
-      Bir depolama hesabı kullanmayı seçerseniz, verileri (bekletme) kaç gün tutmak istediğinizi de girin. Verileri süresiz olarak tutmak için, **bekletme (gün)** değerini `0` (sıfır) olarak ayarlayın.
+      Bir depolama hesabı kullanmayı seçerseniz, verileri (bekletme) kaç gün tutmak istediğinizi de girin. Verileri süresiz olarak tutmak için, **bekletme (gün)** `0` değerini (sıfır) olarak ayarlayın.
  
       > [!NOTE]
       > Cihaz uyumluluğu kurumsal günlükleri önizlemededir. Rapordaki bilgiler dahil olmak üzere geri bildirim sağlamak için [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback)' a gidin.
@@ -108,7 +108,7 @@ Denetim günlüğü verilerini yönlendirmek istediğiniz yere bağlı olarak, a
     > [!div class="mx-imgBorder"]
     > ![Intune denetim günlüklerini bir Azure depolama hesabına gönderen örnek resim](./media/review-logs-using-azure-monitor/diagnostics-settings-example.png)
 
-4. Değişikliklerinizi **kaydedin** . Ayarınız listede gösterilir. Oluşturulduktan > **sonra ayarları değiştir** **ayarını Düzenle**' yi seçerek değiştirebilirsiniz.
+4. Değişikliklerinizi **kaydedin** . Ayarınız listede gösterilir. Oluşturulduktan sonra Ayarları Değiştir **ayarını Düzenle**' yi seçerek değiştirebilirsiniz  >  **Save**.
 
 ## <a name="use-audit-logs-throughout-intune"></a>Intune boyunca denetim günlüklerini kullanma
 

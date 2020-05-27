@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 05/15/2020
-ms.topic: reference
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d721ffadc5d4fdee5248b9fdfd256623ccc7d77f
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 99ac1e069386c69011543ac40878dd62a0d50527
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431380"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990833"
 ---
 # <a name="manage-endpoint-security-in-microsoft-intune"></a>Microsoft Intune uç nokta güvenliğini yönetme
 
@@ -158,7 +158,7 @@ Microsoft Endpoint Manager Yönetim merkezinde aşağıdaki izin listesini, **ki
   - Oluştur
   - Sil
   - Okuma
-  - Güncelleştirme
+  - Güncelleştir
   - Raporları görüntüle
 - **Cihaz yapılandırmaları**
   - Okuma
@@ -178,7 +178,7 @@ Microsoft Endpoint Manager Yönetim merkezinde aşağıdaki izin listesini, **ki
   - Sil
   - Okuma
   - Birincil kullanıcıyı ayarla
-  - Güncelleştirme
+  - Güncelleştir
 - **Mobil uygulamalar**
   - Okuma
 - **Kuruluş**
@@ -196,10 +196,10 @@ Microsoft Endpoint Manager Yönetim merkezinde aşağıdaki izin listesini, **ki
   - Oluştur
   - Sil
   - Okuma
-  - Güncelleştirme
+  - Güncelleştir
 - **Güvenlik görevleri**
   - Okuma
-  - Güncelleştirme
+  - Güncelleştir
 - **Telekom giderleri**
   - Okuma
 - **Hüküm ve koşullar**

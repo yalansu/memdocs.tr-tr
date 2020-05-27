@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/21/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfa559a9c628dfc87c982023e350947d3e9bfeea
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 2694897e0a9e0ebf0744615e65d76f29416811d0
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771466"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990409"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Intune ile PKCS sertifikalarını yapılandırma ve kullanma
 
@@ -57,7 +57,7 @@ PKCS sertifikalarını Intune ile kullanmak için aşağıdaki altyapıya sahip 
   Kök sertifikanızın Kurumsal CA'ndan dışa aktarılmış bir kopyası.
 
 - **Microsoft Intune sertifika Bağlayıcısı** ( *NDES sertifika Bağlayıcısı*da denir):  
-  Intune portalında **cihaz yapılandırma** > **sertifikası bağlayıcıları** > **Ekle**' ye gidin ve *PKCS #12 bağlayıcısını yüklemek için adımları*izleyin. Sertifika Bağlayıcısı yükleyicisini **Ndesconnectorsetup. exe**' yi indirmeye başlamak için portaldaki indirme bağlantısını kullanın.  
+  Intune portalında **cihaz yapılandırma**  >  **sertifikası bağlayıcıları**  >  **Ekle**' ye gidin ve *PKCS #12 bağlayıcısını yüklemek için adımları*izleyin. Sertifika Bağlayıcısı yükleyicisini **Ndesconnectorsetup. exe**' yi indirmeye başlamak için portaldaki indirme bağlantısını kullanın.  
 
   Intune, kiracı başına bu bağlayıcının en fazla 100 örneğini destekler. Her bir Bağlayıcısı örneği ayrı bir Windows Server üzerinde olmalıdır. Bu bağlayıcının bir örneğini, Microsoft Intune için PFX Sertifika bağlayıcısının bir örneğiyle aynı sunucuya yükleyebilirsiniz. Birden çok bağlayıcı kullandığınızda bağlayıcı altyapısı, kullanılabilir bağlayıcı örnekleri PKCS sertifika isteklerinizi işleyebilmeniz için yüksek kullanılabilirlik ve yük dengelemeyi destekler. 
 
@@ -66,7 +66,7 @@ PKCS sertifikalarını Intune ile kullanmak için aşağıdaki altyapıya sahip 
   Microsoft Intune Sertifika Bağlayıcısı Ayrıca federal bilgi Işleme standardı (FIPS) modunu destekler. FIPS gerekli değildir ancak etkinleştirildiğinde sertifika verebilir ve iptal edebilirsiniz.
 
 - **Microsoft Intune Için PFX Sertifika Bağlayıcısı**:  
-  S/MIME e-posta şifrelemesini kullanmayı planlıyorsanız, PFX sertifikalarının içeri aktarımını destekleyen *PFX Sertifika bağlayıcısını* Indirmek için Intune portalını kullanın.  **Cihaz yapılandırma** > **sertifikası bağlayıcıları** > **Ekle**' ye gidin ve *içeri aktarılan PFX sertifikalarına yönelik bağlayıcı 'yı yüklemek için adımları*izleyin. **Pfxcertificateconnectorbootstrapper. exe**yükleyicisini yüklemeye başlamak için portaldaki indirme bağlantısını kullanın.
+  S/MIME e-posta şifrelemesini kullanmayı planlıyorsanız, PFX sertifikalarının içeri aktarımını destekleyen *PFX Sertifika bağlayıcısını* Indirmek için Intune portalını kullanın.  **Cihaz yapılandırma**  >  **sertifikası bağlayıcıları**  >  **Ekle**' ye gidin ve *içeri aktarılan PFX sertifikalarına yönelik bağlayıcı 'yı yüklemek için adımları*izleyin. **Pfxcertificateconnectorbootstrapper. exe**yükleyicisini yüklemeye başlamak için portaldaki indirme bağlantısını kullanın.
 
   Her Intune kiracısı, bu bağlayıcının tek bir örneğini destekler. Bu bağlayıcıyı, Microsoft Intune sertifika bağlayıcısının bir örneğiyle aynı sunucuya yükleyebilirsiniz.
 
@@ -95,7 +95,7 @@ VPN, WiFi veya diğer kaynaklarla bir cihazın kimliğini doğrulamak için bir 
 **Komut satırı kullanın**:  
 1. Kök sertifika yetkilisi sunucusunda yönetici hesabıyla oturum açın.
  
-2.  > **Çalıştır**' a gidin ve ardından komut **istemi 'ni açmak**için **cmd** girin. 
+2. **Start**  >  **Çalıştır**' a gidin ve ardından komut istemi 'ni açmak için **cmd** girin. 
     
 3. Kök sertifikayı *CA_NAME. cer*adlı bir dosya olarak dışarı aktarmak için **certutil-ca. CERT CA_NAME. cer** belirtin.
 
@@ -129,7 +129,7 @@ VPN, WiFi veya diğer kaynaklarla bir cihazın kimliğini doğrulamak için bir 
     > İOS/ıpados sertifika şablonları için, **Uzantılar** sekmesine gidin, **anahtar kullanımı**' nı güncelleştirin ve **imzanın kaynak kanıtı** olduğunu onaylayın.
 
 10. **Güvenlik**'te, Microsoft Intune Sertifika Bağlayıcı yüklediğiniz sunucunun Bilgisayar Hesabını ekleyin. Bu hesabın izinleri **Okuma** ve **Kaydetme**’sine izin verin.
-11. Sertifika şablonunu kaydetmek için **Uygula** > **Tamam ' ı** seçin. **Sertifika Şablonları konsolunu**kapatın.
+11. **Apply**  >  Sertifika şablonunu kaydetmek için Uygula**Tamam ' ı** seçin. **Sertifika Şablonları konsolunu**kapatın.
 12. **Sertifika Yetkilisi** konsolunda **Sertifika Şablonları** > **Yeni** > **Yayımlanacak Sertifika Şablonu**’na sağ tıklayın. Önceki adımlarda oluşturduğunuz şablonu seçin. **Tamam**’ı seçin.
 13. Sunucunun kayıtlı cihazlar ve kullanıcılar için sertifikaları yönetmesi için aşağıdaki adımları kullanın:
 
@@ -146,7 +146,7 @@ VPN, WiFi veya diğer kaynaklarla bir cihazın kimliğini doğrulamak için bir 
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Kiracı Yönetimi** > **bağlayıcıları ve belirteçleri** > **sertifika bağlayıcıları** > **+ Ekle**' yi seçin.
+2. **Kiracı Yönetimi**  >  **bağlayıcıları ve belirteçleri**  >  **sertifika bağlayıcıları**  >  **+ Ekle**' yi seçin.
 
 3. PKCS #12 Bağlayıcısı için *sertifika Bağlayıcısı yazılımını indir* ' e tıklayın ve dosyayı bağlayıcıyı yükleyeceğiniz sunucudan erişebileceğiniz bir konuma kaydedin.
 
@@ -160,12 +160,12 @@ VPN, WiFi veya diğer kaynaklarla bir cihazın kimliğini doğrulamak için bir 
 
 5. Microsoft Intune Sertifika Bağlayıcısı **kayıt** sekmesini açar. Intune bağlantısını etkinleştirmek için **oturum açın**ve genel yönetici izinlerine sahip bir hesap girin.
 6. **Gelişmiş** sekmesinde **Bu bilgisayarın SİSTEM hesabını kullan (varsayılan)**’ı seçili bırakmanız önerilir.
-7. **Apply** > **Kapanışı** Uygula
-8. Intune portalına geri dönün (**Intune** > **cihaz yapılandırması** > **sertifika bağlayıcıları**). Birkaç dakika sonra yeşil bir onay işareti gösterilir ve **bağlantı durumu** **etkin**olur. Bağlayıcı sunucunuz artık Intune'la iletişim kurabilir.
+7. **Uygula**  >  **Kapat**
+8. Intune portalına geri dönün (**Intune**  >  **cihaz yapılandırması**  >  **sertifika bağlayıcıları**). Birkaç dakika sonra yeşil bir onay işareti gösterilir ve **bağlantı durumu** **etkin**olur. Bağlayıcı sunucunuz artık Intune'la iletişim kurabilir.
 9. Ağ ortamınızda bir Web proxy 'niz varsa, bağlayıcının çalışmasını sağlamak için ek yapılandırmalara ihtiyacınız olabilir. Daha fazla bilgi için, bkz. Azure Active Directory belgelerinde [mevcut şirket içi proxy sunucularıyla çalışma](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) .
     - Android Enterprise (*Iş profili*)
     - iOS
-    - Mac OS
+    - macOS
     - Windows 10 ve üzeri
 
 > [!NOTE]
@@ -175,7 +175,7 @@ VPN, WiFi veya diğer kaynaklarla bir cihazın kimliğini doğrulamak için bir 
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. Seçin ve **cihazlar** > **yapılandırma profilleri** > **Profil oluştur**' a gidin.
+2. Seçin ve **cihazlar**  >  **yapılandırma profilleri**  >  **Profil oluştur**' a gidin.
 
 3. Aşağıdaki özellikleri girin:
    - **Platform**: Bu profili alacak cihazların platformunu seçin.
@@ -198,7 +198,7 @@ VPN, WiFi veya diğer kaynaklarla bir cihazın kimliğini doğrulamak için bir 
 
 8. **İleri**’yi seçin.
 
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
    **İleri**’yi seçin.
 
@@ -216,7 +216,7 @@ VPN, WiFi veya diğer kaynaklarla bir cihazın kimliğini doğrulamak için bir 
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. Seçin ve **cihazlar** > **yapılandırma profilleri** > **Profil oluştur**' a gidin.
+2. Seçin ve **cihazlar**  >  **yapılandırma profilleri**  >  **Profil oluştur**' a gidin.
 
 3. Aşağıdaki özellikleri girin:
    - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:
@@ -224,7 +224,7 @@ VPN, WiFi veya diğer kaynaklarla bir cihazın kimliğini doğrulamak için bir 
      - Yalnızca Android kurumsal > cihaz sahibi
      - Yalnızca Android kurumsal > Iş profili
      - iOS/iPadOS
-     - Mac OS
+     - macOS
      - Windows 10 ve üzeri
    - **Profil**: **PKCS sertifikası** seçin
 
@@ -247,16 +247,16 @@ VPN, WiFi veya diğer kaynaklarla bir cihazın kimliğini doğrulamak için bir 
    |**Sertifika yetkilisi**      |<ul><li>Tümü         |Kuruluş sertifika yetkilinizin iç tam etki alanı adını (FQDN) görüntüler.  |
    |**Sertifika yetkilisi adı** |<ul><li>Tümü         |Kuruluş SERTIFIKA yetkilinizin adını (örneğin, "contoso sertifika yetkilisi") listeler. |
    |**Sertifika şablonu adı**    |<ul><li>Tümü         |Sertifika şablonunuzun adını listeler. |
-   |**Sertifika türü**             |<ul><li>Android Enterprise (*Iş profili*)</li><li>iOS</li><li>Mac OS</li><li>Windows 10 ve üzeri|Bir tür seçin: <ul><li> **Kullanıcı** sertifikaları hem Kullanıcı hem de cihaz özniteliklerini, sertifikanın konu ve San 'ı içerebilir. </il><li>**Cihaz** sertifikaları, sertifikanın konu ve San 'ı yalnızca cihaz özniteliklerini içerebilir. Cihazı, bilgi noktaları veya diğer paylaşılan cihazlar gibi Kullanıcı-daha az cihazlar gibi senaryolar için kullanın.  <br><br> Bu seçim konu adı biçimini etkiler. |
-   |**Konu adı biçimi**          |<ul><li>Tümü         |Konu adı biçiminin nasıl yapılandırılacağı hakkında ayrıntılı bilgi için bu makalenin ilerleyen kısımlarında yer alan [Konu adı biçimi](#subject-name-format) bölümüne bakın.  <br><br> Çoğu platformda, aksi belirtilmedikçe **ortak ad** seçeneğini kullanın. <br><br>Aşağıdaki platformlar için konu adı biçimi sertifika türü tarafından belirlenir: <ul><li>Android Enterprise (*Iş profili*)</li><li>iOS</li><li>Mac OS</li><li>Windows 10 ve üzeri</li></ul>  <p>  |
+   |**Sertifika türü**             |<ul><li>Android Enterprise (*Iş profili*)</li><li>iOS</li><li>macOS</li><li>Windows 10 ve üzeri|Bir tür seçin: <ul><li> **Kullanıcı** sertifikaları hem Kullanıcı hem de cihaz özniteliklerini, sertifikanın konu ve San 'ı içerebilir. </il><li>**Cihaz** sertifikaları, sertifikanın konu ve San 'ı yalnızca cihaz özniteliklerini içerebilir. Cihazı, bilgi noktaları veya diğer paylaşılan cihazlar gibi Kullanıcı-daha az cihazlar gibi senaryolar için kullanın.  <br><br> Bu seçim konu adı biçimini etkiler. |
+   |**Konu adı biçimi**          |<ul><li>Tümü         |Konu adı biçiminin nasıl yapılandırılacağı hakkında ayrıntılı bilgi için bu makalenin ilerleyen kısımlarında yer alan [Konu adı biçimi](#subject-name-format) bölümüne bakın.  <br><br> Çoğu platformda, aksi belirtilmedikçe **ortak ad** seçeneğini kullanın. <br><br>Aşağıdaki platformlar için konu adı biçimi sertifika türü tarafından belirlenir: <ul><li>Android Enterprise (*Iş profili*)</li><li>iOS</li><li>macOS</li><li>Windows 10 ve üzeri</li></ul>  <p>  |
    |**Konu diğer adı**     |<ul><li>Tümü         |*Öznitelik*için, aksi belirtilmedikçe **Kullanıcı asıl adı (UPN)** seçeneğini belirleyin, karşılık gelen bir *değeri*yapılandırın ve ardından **Ekle**' ye tıklayın. <br><br>Daha fazla bilgi için bu makalenin ilerleyen kısımlarında [Konu adı biçimi](#subject-name-format) bölümüne bakın.|
    |**Genişletilmiş anahtar kullanımı**           |<ul><li> Android cihaz yöneticisi </li><li>Android Enterprise (*cihaz sahibi*, *iş profili*) </li><li>Windows 10 |Sertifikalar genellikle kullanıcı veya cihazın bir sunucuda kimliğini doğrulayabilmesi için *Istemci kimlik doğrulaması* gerektirir. |
-   |**Tüm uygulamaların özel anahtara erişimine izin ver** |<ul><li>Mac OS  |İlişkili Mac cihaz için yapılandırılmış uygulamaların PKCS Certificates özel anahtarına erişimi **sağlamak için '** i ayarlayın. <br><br> Bu ayar hakkında daha fazla bilgi için Apple geliştirici belgelerindeki [yapılandırma profili başvurusunun](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) sertifika yükü *bölümüne bakın.* |
+   |**Tüm uygulamaların özel anahtara erişimine izin ver** |<ul><li>macOS  |İlişkili Mac cihaz için yapılandırılmış uygulamaların PKCS Certificates özel anahtarına erişimi **sağlamak için '** i ayarlayın. <br><br> Bu ayar hakkında daha fazla bilgi için Apple geliştirici belgelerindeki [yapılandırma profili başvurusunun](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) sertifika yükü *bölümüne bakın.* |
    |**Kök sertifika**             |<ul><li>Android cihaz yöneticisi </li><li>Android Enterprise (*cihaz sahibi*, *iş profili*) |Daha önce atanmış olan bir kök CA sertifika profili seçin. |
 
 8. **İleri**’yi seçin.
 
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
    **İleri**’yi seçin.
 
@@ -275,11 +275,11 @@ Platform
 
 - Android Enterprise (*Iş profili*)
 - iOS
-- Mac OS
+- macOS
 - Windows 10 ve üzeri
 
 > [!NOTE]
-> Elde edilen sertifika Imzalama Isteğindeki (CSR) konu adı, kaçış karakteri olarak aşağıdaki karakterlerden birini içerdiğinde (bir ters eğik çizgiyle \\devam eder), [SCEP için görülen aynı sorun olan](certificates-profile-scep.md#avoid-certificate-signing-requests-with-escaped-special-characters) sertifikaları almak için PKCS kullanma konusunda bilinen bir sorun vardır:
+> Elde edilen sertifika Imzalama Isteğindeki (CSR) konu adı, kaçış karakteri olarak aşağıdaki karakterlerden birini içerdiğinde (bir ters eğik çizgiyle devam eder), [SCEP için görülen aynı sorun olan](certificates-profile-scep.md#avoid-certificate-signing-requests-with-escaped-special-characters) sertifikaları almak için PKCS kullanma konusunda bilinen bir sorun vardır \\ :
 > - \+
 > - ;
 > - ,
@@ -288,7 +288,7 @@ Platform
 - **Kullanıcı sertifika türü**  
   *Konu adı biçimi* için biçim seçenekleri iki değişken Içerir: **ortak ad (CN)** ve **e-posta (e)**. **Ortak Ad (CN)** şu iki değerden biri olarak ayarlanabilir:
 
-  - **CN = {{username}}**: kullanıcının Kullanıcı asıl adı (gibi) janedoe@contoso.com.
+  - **CN = {{username}}**: kullanıcının Kullanıcı asıl adı (gibi) janedoe@contoso.com .
   - **CN={{AAD_Device_ID}}**: Azure Active Directory’ye (AD) yeni bir cihaz kaydettiğinizde atanan bir kimlik. Bu kimlik genellikle Azure AD’de kimlik doğrulamak için kullanılır.
   - **CN = {{SERIALNUMBER}}**: genellikle üretici tarafından bir cihazı tanımlamak için kullanılan benzersiz seri numarası (sn).
   - **CN = {{ımekarmsayı}}**: bir cep telefonu tanımlamak Için kullanılan uluslararası mobil ekipman KIMLIĞI (IMEI) benzersiz numarası.

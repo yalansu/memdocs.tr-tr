@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/30/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d869f6129141b9e54058494260a45330fac29f8
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3acd8f0605ffbfe4f04ea4a9f0aaf81249e38cf5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79325154"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991058"
 ---
 # <a name="troubleshoot-the-delivery-of-certificates-provisioned-by-scep-to-devices-in-microsoft-intune"></a>Microsoft Intune 'daki cihazlara SCEP tarafından sağlanan sertifikaların tesliminde sorun giderme
 
@@ -93,14 +93,14 @@ Default 18:30:57.320616 -0500 profiled Profile \'93www.windowsintune.com.SCEP.Mo
 
 Windows cihazında, sertifikanın teslim edildiğini doğrulayın:
 
-- Olay Görüntüleyicisi açmak için **eventvwr. msc** ' i çalıştırın. **Uygulama ve hizmet günlükleri** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **admin** bölümüne gidin ve **olay 39**' i arayın. Bu olay için genel bir açıklama olmalıdır: **SCEP: sertifika başarıyla yüklendi.**
+- Olay Görüntüleyicisi açmak için **eventvwr. msc** ' i çalıştırın. **Uygulama ve hizmet günlükleri**  >  **Microsoft**  >  **Windows**  >  **DeviceManagement-Enterprise-Diagnostic-Provider**  >  **admin** bölümüne gidin ve **olay 39**' i arayın. Bu olay için genel bir açıklama olmalıdır: **SCEP: sertifika başarıyla yüklendi.**
 
    ![Windows uygulama günlüğünde olay 39](../protect/media/troubleshoot-scep-certificate-delivery/device-app-log.png)
 
 Cihazdaki sertifikayı görüntülemek için, Sertifikalar MMC 'yi açmak üzere **certmgr. msc** ' yi çalıştırın ve kök ve SCEP sertifikalarının kişisel depodaki cihaza doğru şekilde yüklendiğini doğrulayın:
 
-   1. **Sertifikalar (yerel bilgisayar)** > **Güvenilen kök sertifika yetkilileri** > **sertifikaları**' na gidin ve CA 'nızdan kök sertifikanın mevcut olduğunu doğrulayın. *Verilen* ve *veren* değerleri aynı olacaktır.
-   2. Sertifikalar MMC ' de, **Sertifikalar – Geçerli Kullanıcı** > **Kişisel** > **sertifikaları**' na gidin ve istenen sertifikanın, CA adına eşit *olarak verilmiş* olduğunu doğrulayın.
+   1. **Sertifikalar (yerel bilgisayar)**  >  **Güvenilen kök sertifika yetkilileri**  >  **sertifikaları**' na gidin ve CA 'nızdan kök sertifikanın mevcut olduğunu doğrulayın. *Verilen* ve *veren* değerleri aynı olacaktır.
+   2. Sertifikalar MMC ' de, **Sertifikalar – Geçerli Kullanıcı**  >  **Kişisel**  >  **sertifikaları**' na gidin ve istenen sertifikanın, CA adına eşit *olarak verilmiş* olduğunu doğrulayın.
 
 ## <a name="troubleshoot-failures"></a>Sorun giderme hataları
 
@@ -116,7 +116,7 @@ Bu adımı gidermek için, cihazlar hata ayıklama günlüğünde günlüğe kay
 
 Cihazda yüklü olmayan sorunları gidermek için, sorun öneren hatalar için Windows olay günlüğü 'ne bakın:
 
-- Cihazda, Olay Görüntüleyicisi açmak için **eventvwr. msc** ' yi çalıştırın ve ardından **uygulama ve hizmet günlükleri** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Yöneticisi**' ne gidin.
+- Cihazda, Olay Görüntüleyicisi açmak için **eventvwr. msc** ' yi çalıştırın ve ardından **uygulama ve hizmet günlükleri**  >  **Microsoft**  >  **Windows**  >  **DeviceManagement-Enterprise-Diagnostic-Provider**  >  **Yöneticisi**' ne gidin.
 
 Sertifikayı cihaza teslim ve yükleme ile ilgili hatalar genellikle Intune 'a değil, Windows işlemleri ile ilgilidir.
 

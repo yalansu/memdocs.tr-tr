@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 05/07/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d078f813b334806adb9e62054efc1fe844cea21
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 1c92220fabf8d1cb2a34ac702dd4157ef848762b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429168"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990267"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Intune 'da VPN sunucularına bağlanmak için VPN profilleri oluşturma
 
@@ -50,7 +50,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
   - iOS/iPadOS
-  - Mac OS
+  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -60,7 +60,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - Android kurumsal iş profilleri
   - Android kurumsal cihaz sahibi (tam olarak yönetilen)
   - iOS/iPadOS
-  - Mac OS
+  - macOS
 
 - Cisco (IPSec)
   - iOS/iPadOS
@@ -74,7 +74,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
 
 - Özel VPN
   - iOS/iPadOS
-  - Mac OS
+  - macOS
 
   [Özel ayarlarla profil oluşturma](custom-settings-configure.md)içindeki URI ayarlarını kullanarak özel VPN profilleri oluşturun.
 
@@ -83,7 +83,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - Android kurumsal iş profilleri
   - Android kurumsal cihaz sahibi (tam olarak yönetilen)
   - iOS/iPadOS
-  - Mac OS
+  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -116,7 +116,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
   - iOS/iPadOS
-  - Mac OS
+  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1

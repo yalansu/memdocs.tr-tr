@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/31/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dad4dffba0efadcca0ea5eb7d61960bec1b3f8e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 673adad15e92fb06cf5cf7c3589b06ab8b1b337a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80536828"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990662"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>macOS iş kolu (LOB) uygulamalarını Microsoft Intune’a ekleme
 
@@ -52,7 +52,7 @@ Bu makaledeki bilgiler macOS iş kolu uygulamalarını Microsoft Intune’a ekle
 
 2. İndirilen Aracı yürütülebilir olarak işaretleyin:
    - Terminal uygulamasını başlatın.
-   - Dizini, bulunduğu konum `IntuneAppUtil` olarak değiştirin.
+   - Dizini, bulunduğu konum olarak değiştirin `IntuneAppUtil` .
    - Aracı yürütülebilir hale getirmek için aşağıdaki komutu çalıştırın:<br> 
        `chmod +x IntuneAppUtil`
 
@@ -60,13 +60,13 @@ Bu makaledeki bilgiler macOS iş kolu uygulamalarını Microsoft Intune’a ekle
 
     macOS için Microsoft Intune Uygulama Sarmalama Aracı'na yönelik kullanılabilecek örnek komutlar:
     > [!IMPORTANT]
-    > Bağımsız değişkenin `<source_file>` `IntuneAppUtil` komutları çalıştırmadan önce boşluk içermediğinden emin olun.
+    > Bağımsız değişkenin `<source_file>` komutları çalıştırmadan önce boşluk içermediğinden emin olun `IntuneAppUtil` .
 
     - `IntuneAppUtil -h`<br>
     Bu komut aracın kullanım bilgilerini gösterir.
     
     - `IntuneAppUtil -c <source_file> -o <output_directory_path> [-v]`<br>
-    Bu komut, içinde `<source_file>` belirtilen *. pkg* LOB uygulama dosyasını aynı ada sahip bir *. intunemac* dosyasına kaydırır ve tarafından `<output_directory_path>`işaret edilen klasöre yerleştirirsiniz.
+    Bu komut, içinde belirtilen *. pkg* LOB uygulama dosyasını `<source_file>` aynı ada sahip bir *. intunemac* dosyasına kaydırır ve tarafından işaret edilen klasöre yerleştirirsiniz `<output_directory_path>` .
     
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     Bu komut, oluşturulan *.intunemac* dosyası için algılanan parametreleri ve sürümünü ayıklar.
@@ -74,7 +74,7 @@ Bu makaledeki bilgiler macOS iş kolu uygulamalarını Microsoft Intune’a ekle
 ## <a name="select-the-app-type"></a>Uygulama türünü seçin
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin.
+2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, **diğer** uygulama türleri altında **iş kolu uygulaması**' nı seçin.
 4. **Seç**' e tıklayın. **Uygulama ekleme** adımları görüntülenir.
 

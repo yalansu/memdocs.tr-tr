@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 05/30/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97298bba752f4af29c9dc7c2483c324cbd77a6bc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 28454fc067a7d8ab281b92d571a872bd9e0aa2d0
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80438771"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991167"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Microsoft Intune için ABD devlet uç noktaları
 
@@ -48,25 +48,25 @@ Aşağıdaki tabloda Intune istemcisinin eriştiği bağlantı noktaları ve hiz
 | enterpriseregistration.microsoftonline.us | 13.72.188.239 <br> 13.72.55.179 |
 
 ## <a name="us-government-customer-designated-endpoints"></a>ABD devlet müşteri tarafından belirlenen uç noktalar:
-- Azure portal: https:\//Portal.Azure.us/ 
-- Office 365: https:\//Portal.office365.us/ 
-- Intune Şirket Portalı: https:\//Portal.Manage.Microsoft.us/ 
-- Microsoft Uç Nokta Yöneticisi Yönetim Merkezi: https\/:/Endpoint.Microsoft.us/
+- Azure portal: https: \/ /Portal.Azure.us/ 
+- Office 365: https: \/ /Portal.office365.us/ 
+- Intune Şirket Portalı: https: \/ /Portal.Manage.Microsoft.us/ 
+- Microsoft Uç Nokta Yöneticisi Yönetim Merkezi: https: \/ /Endpoint.Microsoft.us/
 
 ## <a name="partner-service-endpoints-that-intune-depends-on"></a>Intune 'un bağımlı olduğu iş ortağı hizmeti uç noktaları:
-- AAD Eşitleme hizmeti: https:\//SyncService.gov.us.microsoftonline.com/DirectoryService.svc
-- EVO STS: https:\//Login.microsoftonline.us
-- Dizin proxy 'Si: https\/:/directoryproxy.MicrosoftAzure.us/DirectoryProxy.svc
-- AAD grafiği: https:\//Directory.MicrosoftAzure.us ve https:\//Graph.MicrosoftAzure.us
-- MS Graph: https:\//Graph.Microsoft.us
-- ADRS: https:\//enterpriseregistration.microsoftonline.us
+- AAD Eşitleme hizmeti: https: \/ /SyncService.gov.us.microsoftonline.com/DirectoryService.svc
+- EVO STS: https: \/ /login.microsoftonline.us
+- Dizin proxy 'Si: https: \/ /directoryproxy.MicrosoftAzure.us/DirectoryProxy.svc
+- AAD grafiği: https: \/ /Directory.MicrosoftAzure.us ve https: \/ /Graph.MicrosoftAzure.us
+- MS Graph: https: \/ /Graph.Microsoft.us
+- ADRS: https: \/ /enterpriseregistration.microsoftonline.us
 
 ## <a name="windows-push-notification-services"></a>Windows anında Iletme Bildirim Hizmetleri
 Mobil cihaz yönetimi (MDM) kullanılarak yönetilen Intune tarafından yönetilen cihazlarda, cihaz eylemleri ve diğer anında etkinlikler için Windows Push Bildirim Hizmetleri (WNS) gereklidir. Daha fazla bilgi için bkz. [WNS trafiğini desteklemek Için kurumsal güvenlik duvarı ve proxy yapılandırması](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
 
 ## <a name="apple-device-network-information"></a>Apple cihaz ağ bilgileri
 
-|**Kullanıldığı yerler**|**Ana bilgisayar adı (IP adresi/alt ağ)**|**Protocol**|**Bağ**|
+|**Kullanıldığı yerler**|**Ana bilgisayar adı (IP adresi/alt ağ)**|**Protokol**|**Bağ**|
 |------------|-----------|------------|-----------|
 |Apple sunucularından içerik alma ve görüntüleme|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br>\*.phobos.itunes-apple.com.akadns.net|HTTP|80|
 |APNS sunucularıyla iletişim|#-courier.push.apple.com<br>"#", 0 ile 50 arasında rastgele bir sayıdır.|TCP|5223 ve 443|

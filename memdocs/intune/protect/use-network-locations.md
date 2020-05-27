@@ -6,7 +6,7 @@ author: Brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4da3a8e9e59f1f6a4d1c38354f14163c4773fd7d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9974177b27d94b7ad058fe9f0fa188a62c3d2be6
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325295"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990967"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Intune'da Konumları (ağ yalıtımı) kullanma
 
@@ -40,7 +40,7 @@ Ağ yalıtımı olarak da bilinen, ağ konumu tabanlı bir uyumluluk ilkesi olu�
 
 Ayrıca [uyumsuzluk için eylemler](#configure-the-actions-for-noncompliance) de ekleyebilirsiniz. Cihaz, yeniden şirket içine ve ağ konumuna geldiğinde şirket kaynaklarına yeniden erişim kazanır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Konum tabanlı bir uyumluluk ilkesi oluşturmak için:
 
@@ -50,7 +50,7 @@ Konum tabanlı bir uyumluluk ilkesi oluşturmak için:
 
 ## <a name="create-a-location"></a>Konum oluşturma
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar** > **uyumluluk ilkeleri** > **konumları** > **Oluştur**' u seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar**  >  **uyumluluk ilkeleri**  >  **konumları**  >  **Oluştur**' u seçin.
 
 2. Aşağıdaki özellikleri girin:  
 

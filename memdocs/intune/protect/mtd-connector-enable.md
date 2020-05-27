@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/19/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c70cdabf412c4c9a57473c5ad11f16288eb7cdc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f97b6f04bae066474d83139422c0fc4c281c2b60
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80322529"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991099"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Intune'da Mobil Threat Defense bağlayıcısını etkinleştirme
 
@@ -48,13 +48,13 @@ MTD uygulamaları için klasik koşullu erişim ilkeleri:
 
 - Varsayılan olarak, değerlendirme için kullandığınız diğer koşullu erişim ilkeleriyle etkileşime geçin.
 
-Klasik koşullu erişim ilkelerini görüntülemek için [Azure](https://portal.azure.com/#home)'da **Azure Active Directory** > **koşullu erişim** > **Klasik ilkeleri**' ne gidin.
+Klasik koşullu erişim ilkelerini görüntülemek için [Azure](https://portal.azure.com/#home)'da **Azure Active Directory**  >  **koşullu erişim**  >  **Klasik ilkeleri**' ne gidin.
 
 ## <a name="to-enable-the-mobile-threat-defense-connector"></a>Mobile Threat Defense bağlayıcısını etkinleştirmek için
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Kiracı Yönetimi** > **bağlayıcıları ve belirteçleri** > **Mobil tehdit savunması**' nı seçin.
+2. **Kiracı Yönetimi**  >  **bağlayıcıları ve belirteçleri**  >  **Mobil tehdit savunması**' nı seçin.
 
 3. **Mobile Threat** Defense bölmesinde **Ekle**' yi seçin.
 
@@ -70,9 +70,9 @@ Kuruluşunuzun gereksinimlerine göre hangi MTD geçiş seçeneklerini etkinleş
 
 **MDM uyumluluk Ilkesi ayarları**
 
-- ** _ \<Desteklenen sürüm>sürümlerinin_ Android cihazlarını _ \<MTD iş ortağı adına bağlama>_ **: Bu seçeneği etkinleştirdiğinizde, Android 4.1 + cihazların güvenlik riskini Intune 'a geri bildirimini sağlayabilirsiniz.
+- ** _ \< Desteklenen sürüm>sürümlerinin_ Android cihazlarını _ \< mtd iş ortağı adına bağlama>_ **: Bu seçeneği etkinleştirdiğinizde, Android 4.1 + cihazların güvenlik riskini Intune 'a geri bildirimini sağlayabilirsiniz.
 
-- **İOS cihazları sürümü _ \<desteklenen sürümleri>_ _ \<MTD iş ortağı adına bağlama>_ **: Bu seçeneği etkinleştirdiğinizde, iOS 8.0 + cihazların güvenlik riskini Intune 'a geri raporlamasını sağlayabilirsiniz.
+- **İOS cihazları sürümü _ \< desteklenen sürümleri>_ _ \< mtd iş ortağı adına bağlama>_ **: Bu seçeneği etkinleştirdiğinizde, iOS 8.0 + cihazların güvenlik riskini Intune 'a geri raporlamasını sağlayabilirsiniz.
 
 - **iOS Cihazlar için Uygulama Eşitlemeyi etkinleştir**: Bu Mobil Tehdit Savunması iş ortağının tehdit analizi için kullanmak amacıyla Intune’dan iOS uygulamalarının meta verilerini istemesine izin verir.
 
@@ -82,7 +82,7 @@ Kuruluşunuzun gereksinimlerine göre hangi MTD geçiş seçeneklerini etkinleş
 
 - ** * \<>desteklenen* sürüm Android cihazlarını uygulama koruma ilkesi değerlendirmesi için * \<>MTD iş ortağı adına* bağlama**: Bu seçeneği etkinleştirdiğinizde, cihaz tehdit düzeyi kuralını kullanan uygulama koruma ilkeleri, bu bağlayıcıdaki veriler dahil olmak üzere cihazları değerlentirecektir.
 
-- **İOS cihazları sürümü * \<desteklenen sürümleri>* uygulama koruma ilkesi değerlendirmesi için * \<MTD iş ortağı adı>* bağlayın**: Bu seçeneği etkinleştirdiğinizde, cihaz tehdit düzeyi kuralını kullanan uygulama koruma ilkeleri, bu bağlayıcıdaki veriler dahil olmak üzere cihazları değerlentirecektir.
+- **İOS cihazları sürümü * \< desteklenen sürümleri>* uygulama koruma ilkesi değerlendirmesi için * \< MTD iş ortağı adı>* bağlayın**: Bu seçeneği etkinleştirdiğinizde, cihaz tehdit düzeyi kuralını kullanan uygulama koruma ilkeleri, bu bağlayıcıdaki veriler dahil olmak üzere cihazları değerlentirecektir.
 
 Intune Uygulama Koruması Ilkesi değerlendirmesi için Mobile Threat Defense bağlayıcıları kullanma hakkında daha fazla bilgi edinmek için bkz. [kayıtlı olmayan cihazlar Için mobil tehdit savunması ayarlama](mtd-enable-unenrolled-devices.md).
 

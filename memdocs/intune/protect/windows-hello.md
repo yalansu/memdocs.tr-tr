@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/25/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: e6537eec4e897afa183c51f67f32704c75985e05
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 00f617d91541c1a580f6dec0b6b844abfc8d0d97
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079034"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990934"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>İş için Windows Hello ile Microsoft Intune tümleştirmesi  
 
@@ -55,7 +55,7 @@ Tüm kuruluşunuzu hedefleyen bir varsayılan İş İçin Windows Hello ilkesi o
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihazlar** >  **Enrollment**kayıt > **kaydetme**cihazları > **Windows**kaydı > **iş için Windows Hello**'ya gidin. Iş için Windows Hello bölmesi açılır.
+2. **Cihazlar**  >   **kayıt**  >  **kaydetme cihazları**  >  **Windows kaydı**  >  **iş için Windows Hello**'ya gidin. Iş için Windows Hello bölmesi açılır.
 
 3. **İş Için Windows Hello 'Yu yapılandırmak**için aşağıdaki seçenekler arasından seçim yapın:
 

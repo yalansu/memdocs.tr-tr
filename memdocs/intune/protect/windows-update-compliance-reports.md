@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 157c61e9f145295f5ef728d12385fa44697a88e2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b4ef3a4c2ba539cc507ef413a4648b42e246b11d
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81725635"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990911"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Güncelleştirmeler için Intune uyumluluk raporları
 
@@ -33,7 +33,7 @@ Yapılandırdığınız Windows 10 güncelleştirme halkaları için dağıtım 
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihazlara** > **genel bakış** > **yazılım güncelleştirme durumunu**seçin. Atadığınız tüm güncelleştirme halkalarının durumu hakkında genel bilgileri görebilirsiniz.
+2. **Cihazlara**  >  **genel bakış**  >  **yazılım güncelleştirme durumunu**seçin. Atadığınız tüm güncelleştirme halkalarının durumu hakkında genel bilgileri görebilirsiniz.
 
 3. Ek ayrıntıları görüntülemek için **izleyici**' yi seçin. Ardından **yazılım güncelleştirmeleri**' nin altında, **güncelleştirme halkası dağıtım durumu** ' nu seçin ve gözden geçirilecek dağıtım halkasını seçin.
 
@@ -61,7 +61,7 @@ Ticari KIMLIĞI yapılandırmaya yönelik OMA-URI (büyük/küçük harfe duyarl
 - **Ayar açıklaması**: Windows Analytics çözümleri IÇIN ticari kimliği yapılandırma
 - **OMA-URI** (büyük/küçük harfe duyarlı): *./Vendor/MSFT/DMClient/Provider/MS DM Server/ticari IDID*
 - **Veri Türü:** Dize
-- **Değer**: \<OMS çalışma alanınızdaki Windows telemetri sekmesinde gösterilen GUID 'yi kullanın>
+- **Değer**: \< OMS çalışma alanınızdaki Windows TELEMETRI sekmesinde gösterilen guıd 'yi kullanın>
 
 > [!NOTE]
 > MS DM Sunucusu hakkında daha fazla bilgi için bkz. [DMClient yapılandırma hizmet sağlayıcısı (CSP)]( https://docs.microsoft.com/windows/client-management/mdm/dmclient-csp).

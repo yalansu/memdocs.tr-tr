@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/19/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 627fb13554f8f379f75f08c27d18cdd0b1106028
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: bb83a8e5b907ee55dd1c02d3af0dc04002790a18
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084836"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991121"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Intune ile Mobile Threat Defense (MTD) uygulamaları ekleme ve atama
 
@@ -82,7 +82,7 @@ MTD sağlayıcınızı kapsayan bölümü seçin:
 
     3. IPA’yı imzaladığınızda seçtiğiniz müşteri paketi kimliğini **com.lookout.enterprise.yourcompanyname** ile değiştirin.
 
-    4. Ek yeniden yönlendirme URI 'si ekleyin: ** &lt;CompanyPortal://Code/>** ve ardından özgün yeniden yönlendirme URI 'nizin URL kodlamalı bir sürümü.
+    4. Ek yeniden yönlendirme URI 'si ekleyin: ** &lt; CompanyPortal://Code/>** ve ardından özgün yeniden YÖNLENDIRME URI 'nizin URL kodlamalı bir sürümü.
 
     5. Uygulamanıza **Temsilci İzinleri** ekleyin.
 
@@ -232,7 +232,7 @@ Wandera iOS uygulama yapılandırma ilkesini eklemek için [iOS için Microsoft 
 
 - **Yapılandırma ayarları biçimi**için **XML verisi gir**' i seçin.
 
-Radar bir portala oturum açın ve **Ayarlar** > **EMM Integration** > **App Push**' a gidin. **Intune**' u seçin ve ardından aşağıdaki içeriği kopyalayıp yapılandırma ilkesi gövdesine yapıştırın.  
+Radar bir portala oturum açın ve **Ayarlar**  >  **EMM Integration**  >  **App Push**' a gidin. **Intune**' u seçin ve ardından aşağıdaki içeriği kopyalayıp yapılandırma ilkesi gövdesine yapıştırın.  
 
   ```
   <dict><key>secretKey</key>

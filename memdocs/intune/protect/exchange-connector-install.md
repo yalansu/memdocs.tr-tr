@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c10f2356e740036bbc779f03253eebec6fd7d05e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 390a80f6333229a99daec9627e3810c27ca6b580
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327490"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990838"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>Şirket içi Intune Exchange bağlayıcısını ayarlama
 
@@ -85,7 +85,7 @@ Intune Exchange bağlayıcısını destekleyebilen bir Windows Server 'da:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.  Şirket içi Exchange sunucusunda yönetici olan ve Exchange Server 'ı kullanma lisansı olan bir hesabı kullanın.
 
-2. **Kiracı Yönetimi** > **Exchange erişimi**' ni seçin.
+2. **Kiracı Yönetimi**  >  **Exchange erişimi**' ni seçin.
 
 3. **Kurulum**altında **Exchange ActiveSync şirket içi Bağlayıcısı** ' nı seçin ve ardından **Ekle**' yi seçin.
 
@@ -174,7 +174,7 @@ Varsayılan olarak, ek CASs 'leri bulma etkindir. Yük devretmeyi kapatmanız ge
 
 2. Bir metin düzenleyicisi kullanarak **OnPremisesExchangeConnectorServiceConfiguration.xml** dosyasını açın.
 
-3. ** \<Icasfailoverenabled>*true*\</ıscasfailoverenabled>** , ** \<ıscasfailoverenabled>*false*\</ıscasfailoverenabled>** olarak değiştirin.
+3. ** \< Icasfailoverenabled>*true* \< /ıscasfailoverenabled>** , ** \< ıscasfailoverenabled>*false* \< /ıscasfailoverenabled>** olarak değiştirin.
 
 ## <a name="performance-tune-the-exchange-connector-optional"></a>Performans-Exchange bağlayıcısını ayarlama (isteğe bağlı)
 
@@ -192,7 +192,7 @@ Exchange Connector performansını geliştirmek için:
 
 3. **Enableparallelcommandsupport** öğesini bulun ve değeri **true**olarak ayarlayın:
 
-   \<EnableParallelCommandSupport>true\</enableparallelcommandsupport>
+   \<EnableParallelCommandSupport>true \< /Enableparallelcommandsupport>
 
 4. Dosyayı kaydedin ve ardından Microsoft Intune Exchange Connector hizmetini yeniden başlatın.
 
@@ -216,7 +216,7 @@ Exchange bağlayıcısını başarıyla yapılandırdıktan sonra, bağlantılar
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Kiracı Yönetimi** > **Exchange erişimi**' ni seçin.
+2. **Kiracı Yönetimi**  >  **Exchange erişimi**' ni seçin.
 
 3. **Exchange ActiveSync şirket içi Bağlayıcısı**' nı seçin ve ardından görüntülemek istediğiniz bağlayıcıyı seçin.
 
@@ -236,7 +236,7 @@ Intune panosunda **hızlı eşitleme** veya **tam eşitleme** seçeneklerini kul
 
    1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-   2. **Kiracı Yönetimi** > **Exchange erişimi** >  **Exchange ActiveSync şirket içi Bağlayıcısı '** nı seçin.
+   2. **Kiracı Yönetimi**  >  **Exchange erişimi**  >   **Exchange ActiveSync şirket içi Bağlayıcısı '** nı seçin.
 
    3. Eşitlemek istediğiniz bağlayıcıyı seçin ve sonra da Hızlı Eşitleme'yi veya Tam Eşitleme'yi seçin.
 

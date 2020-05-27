@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/12/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 47b6f624ba5c12cd68322bde5c1f85ad7f0a6430
-ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
+ms.openlocfilehash: 706871d750c9061c6d18fa622fe7b868990b9eec
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80862848"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991194"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Microsoft Intune ilke korumalı tarayıcısını kullanarak web erişimini yönetme
 
@@ -59,7 +59,7 @@ Tarayıcı ilkeleri için işletim sistemi gereksinimleri:
 - Android 4 ve üzeri veya
 - iOS/ıpados 8,0 ve üzeri.
 
-Android ve iOS/ıpados 'ın önceki sürümleri Managed Browser kullanmaya devam edebilir, ancak uygulamanın yeni sürümlerini yükleyemeyecektir ve tüm uygulama özelliklerine erişemeyebilir. Bu cihazların desteklenen işletim sistemi sürümüne güncelleştirmenizi öneririz.
+Android ve iOS/ıpados 'ın önceki sürümleri Managed Browser kullanmaya devam edebilir, ancak uygulamanın yeni sürümlerini yükleyemeyecektir ve tüm uygulama özelliklerine erişemeyebilir. Bu cihazları desteklenen işletim sistemi sürümüne güncelleştirmenizi öneririz.
 
 >[!NOTE]
 >Managed Browser, Güvenli Yuva Katmanı sürüm 3 (SSLv3) şifreleme protokolünü desteklemez.
@@ -95,10 +95,10 @@ Managed Browser artık Koşullu Erişim için onaylı bir istemci uygulaması. Y
 Azure AD bağlantılı web uygulamalarının mobil platformlarda Intune Managed Browser kullanmasını kısıtlamak için, onaylı istemci uygulamalarını gerektiren bir Koşullu Erişim ilkesi oluşturabilirsiniz. 
 
 > [!TIP]  
-> Koşullu Erişim, bir Azure Active Directory (Azure AD) teknolojisidir. *Intune*’dan erişilen Koşullu Erişim düğümü *Azure AD*’den erişilen düğümle aynıdır.  
+> Koşullu Erişim, bir Azure Active Directory (Azure AD) teknolojisidir. *Intune* 'Dan erişilen koşullu erişim düğümü, *Azure AD*'den erişilen aynı düğümdür.  
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Yeni ilke** > **koşullu erişim** > **cihazları** seçin.
+2. **Cihazlar**  >  **koşullu erişim**  >  **Yeni ilke**' yi seçin.
 3. İlke **adını**ekleyin. 
 4. **Atamalar** bölümünde **Koşullar** > **İstemci uygulamaları**’nı seçin. **İstemci uygulamaları** bölmesi görüntülenir.
 5. Belirli istemci uygulamalarında ilkeyi uygulamak için **Yapılandır** altında **Evet**’e tıklayın.
@@ -109,7 +109,7 @@ Azure AD bağlantılı web uygulamalarının mobil platformlarda Intune Managed 
     > [!NOTE]
     > Bu bulut uygulamalarına erişebilecek yerel uygulamaları (tarayıcı olmayan uygulamalar) kısıtlamak için **Mobil uygulamalar ve masaüstü istemciler**’i de seçebilirsiniz.
 
-7. Bitti ** > bitti** ' ye **tıklayın.**
+7. **Bitti**' ye tıklayın  >  **Done**.
 8. **Atamalar** bölümünde **Kullanıcılar ve gruplar** ' ı seçin ve bu ilkeyi atamak istediğiniz kullanıcıları veya grupları seçin. Bölmeyi kapatmak için **bitti** ' ye tıklayın.
 9. **Atamalar** bölümünde, bu ilkeyle korunacak uygulamaları seçmek için **bulut uygulamaları veya eylemler** ' i seçin. Bölmeyi kapatmak için **bitti** ' ye tıklayın.
 10. Bölmenin **erişim denetimleri** bölümünden **ver** ' i seçin. 
@@ -139,7 +139,7 @@ SSO, cihazınızın iOS/ıpados veya Android üzerindeki Intune Şirket Portalı
 >Uygulama yapılandırmalarının uygulanması için kullanıcının korumalı tarayıcısının veya cihazdaki başka bir uygulamanın [Intune uygulama koruma ilkesi](app-protection-policy.md) tarafından yönetiliyor olması gerekir
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulama yapılandırma ilkeleri** >  > **yönetilen uygulamalar** **eklemek** > **uygulamalar** ' ı seçin.
+2. **Uygulamalar**  >  **uygulama yapılandırma ilkeleri**  >  **Add**  >  **yönetilen uygulamalar**ekleme ' yi seçin.
 3. **Uygulama yapılandırma Ilkesi oluştur** bölmesinin **temel bilgiler** sayfasında, uygulama yapılandırma ayarları için bir **ad** ve isteğe bağlı bir **Açıklama** girin.
 4. **Ortak uygulamayı Seç** ' i seçin ve IOS/ıpados, Android için veya her ikisi için **Managed Browser** ve/veya **kenarını** seçin.
 5. **Uygulama yapılandırma Ilkesi oluştur** bölmesine dönmek için **Seç** ' e tıklayın.
@@ -180,7 +180,7 @@ Yukarıdaki yordamı kullanarak bir Microsoft Edge uygulama yapılandırması ol
 
 | Anahtar                              |  Değer   |
 |----------------------------------|----------|
-| **com. Microsoft. Intune. useEdge** | **true** |
+| **com. Microsoft. Intune. useEdge** | **değeri** |
 
 > [!NOTE]
 > Uygulama yapılandırmasında belirtilen Microsoft Edge ve ilişkili uygulamaları yöneten uygulama koruma ilkesinde aşağıdaki veri koruma ilkesi ayarlarının ayarlandığından emin olun:
@@ -205,10 +205,10 @@ Microsoft Edge ve [Azure AD uygulama ara sunucusu]( https://docs.microsoft.com/a
     > Güncelleştirilmiş uygulama proxy 'Si yeniden yönlendirme verilerinin, Microsoft Edge 'de etkili olması 24 saate kadar sürebilir.
 
 
-#### <a name="step-1-enable-automatic-redirection-to-a-protected-browser-from-outlook"></a>1\. adım: Outlook'tan korumalı tarayıcıya otomatik yeniden yönlendirmeyi etkinleştirme
+#### <a name="step-1-enable-automatic-redirection-to-a-protected-browser-from-outlook"></a>1. adım: Outlook'tan korumalı tarayıcıya otomatik yeniden yönlendirmeyi etkinleştirme
 Outlook’un, **Managed Browser’da görüntülenecek içeriği kısıtla** ayarına imkan veren bir uygulama koruma ilkesiyle yapılandırılması gereklidir.
 
-#### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-protected-browser"></a>2\. Adım: korumalı tarayıcı için atanan bir uygulama yapılandırma ilkesi atama
+#### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-protected-browser"></a>2. Adım: korumalı tarayıcı için atanan bir uygulama yapılandırma ilkesi atama
 Bu yordam, Microsoft Edge uygulamasını uygulama proxy 'si yeniden yönlendirmeyi kullanacak şekilde yapılandırır. 
 
 İlke için yapılandırma ayarları ' nda **kenar** sekmesini açın ve uygulama proxy 'si yeniden yönlendirme değeri için **Etkinleştir** ' i seçin. Bu ayarın etkinleştirilmesi, kullanıcılara Azure uygulama proxy 'si aracılığıyla yayınlanan kurumsal bağlantılar ve şirket içi Web Apps erişimi sağlar.
@@ -218,7 +218,7 @@ Managed Browser, Microsoft Edge ve Azure AD Uygulama Ara Sunucusu’nun şirket 
 ## <a name="how-to-configure-the-homepage-for-a-protected-browser"></a>Korumalı tarayıcı için giriş sayfasını yapılandırma
 
 Bu ayar ile kullanıcıların korumalı tarayıcıyı başlattıklarında veya yeni bir sekme oluşturduklarında karşılarına çıkacak giriş sayfasını yapılandırabilirsiniz. 
-- Bu ayar, Managed Browser’daki web sayfasını gösterir.  Microsoft Edge bunun yerine bir giriş sayfası kısayolu görüntüler.
+- Bu ayar, Managed Browser’daki web sayfasını gösterir.  Edge bunun yerine bir giriş sayfası kısayolu görüntüler.
 - Giriş sayfası kısayolu simgesi arama denetimi altındaki bir simge olarak görünür.  Bu düzenlenemez veya silinemez.
 - Giriş sayfası kısayolu, kuruluşunuzun adını görüntüleyerek bunu ayırt eder.  Bu her zaman ilk simge olarak görünür.
 
@@ -257,7 +257,7 @@ Microsoft Edge uygulama yapılandırması oluşturma yordamını kullanarak aşa
 ### <a name="url-format-for-allowed-and-blocked-urls"></a>İzin verilen ve engellenen URL'ler için URL biçimi
 İzin verilenler ve engellenenler listesinde URL belirtirken kullanabileceğiniz izin verilen biçimler ve joker karakterler hakkında bilgi almak için aşağıdaki bilgileri kullanın:
 
-- Joker karakter sembolünü ( **&#42;** ) aşağıdaki izin verilen örnekler listesinde yer alan kurallara uygun olarak kullanabilirsiniz:
+- Joker karakter sembolünü (**&#42;**) aşağıdaki izin verilen örnekler listesinde yer alan kurallara uygun olarak kullanabilirsiniz:
 
 - Tüm URL'leri listeye eklerken başlarına **http** veya **https** önekini yazdığınızdan emin olun.
 
@@ -271,7 +271,7 @@ Microsoft Edge uygulama yapılandırması oluşturma yordamını kullanarak aşa
 
 - URL belirtirken kullanabileceğini izin verilen desenler hakkında bilgi almak için aşağıdaki tabloyu kullanın:
 
-|                  URL                  |                     Details                      |                                                Eşleşir                                                |                                Eşleşmez                                 |
+|                  URL                  |                     Ayrıntılar                      |                                                Eşleşmeler                                                |                                Eşleşmez                                 |
 |---------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 |        `http://www.contoso.com`         |              Tek bir sayfayla eşleşir               |                                            `www.contoso.com`                                            |  `host.contoso.com`<br /><br />`www.contoso.com/images`<br /><br />`contoso.com`/   |
 |          `http://contoso.com`           |              Tek bir sayfayla eşleşir               |                                             `contoso.com/`                                              | `host.contoso.com`<br /><br />`www.contoso.com/images`<br /><br />`www.contoso.com` |
@@ -323,7 +323,7 @@ Yönetilen tarayıcıyla iOS/ıpados cihazında yüklü olan son kullanıcılar,
 1. İOS/ıpados **ayarlarını**açın.
 2. **Managed Browser** uygulama ayarlarını seçin.
 3. **Intune Tanılamayı Etkinleştir**’i açarak tarayıcıyı sorun giderme moduna ayarlayın.
-4. **Managed Browser**’ı açın. **Intune Uygulama Durumunu Görüntüle**’ye tıklayarak uygulamaların kendi ilke ayarlarını gözden geçirin.
+4. Managed **Browser**'ı açın. **Intune Uygulama Durumunu Görüntüle**’ye tıklayarak uygulamaların kendi ilke ayarlarını gözden geçirin.
 5. **Başla** ve **Günlük Paylaş** veya **Günlükleri Microsoft’a Gönder**’i seçerek sorun giderme günlüklerini BT yöneticinize veya Microsoft’a gönderin.
 
 Browser’ı ayrıca uygulama içerisinden de sorun giderme modunda açabilirsiniz.
@@ -351,4 +351,4 @@ Microsoft, ürün ve hizmetlerini geliştirmek için Managed Browser’ın perfo
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Uygulama koruma ilkeleri nedir?](app-protection-policy.md) 
+- [Uygulama koruma ilkeleri nelerdir?](app-protection-policy.md) 

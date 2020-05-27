@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 05/15/2020
-ms.topic: reference
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 0e6a1f30d482e4811e02a8166e87aca4d1f23207
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 9c2e6f742610eb8f2f526c6fc7a5afabfbadcbbf
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431284"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990860"
 ---
 # <a name="manage-device-security-with-endpoint-security-policies-in-microsoft-intune"></a>Microsoft Intune uç nokta güvenlik ilkeleriyle cihaz güvenliğini yönetme
 
@@ -63,7 +63,7 @@ Aşağıdaki bölümler tüm uç nokta güvenlik ilkeleri için geçerlidir.
 
 3. Aşağıdaki özellikleri girin:
    - **Platform**: ilke oluşturmakta olduğunuz platformu seçin. Kullanılabilir seçenekler, seçtiğiniz ilke türüne bağlıdır:
-     - Mac OS
+     - macOS
      - Windows 10 ve üzeri
    - **Profil**: seçtiğiniz platform için kullanılabilir profiller arasından seçim yapın. Profiller hakkında daha fazla bilgi için, seçtiğiniz ilke türü için bu makaledeki adanmış bölümüne bakın.
 

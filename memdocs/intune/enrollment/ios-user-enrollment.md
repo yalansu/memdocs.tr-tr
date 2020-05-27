@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 10/2/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3b66c0fd88910dc192af10a1b5ad701304c885e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 775a03e378fb8cee5992de7d81625f4485e6cc84
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327066"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990561"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>İOS/ıpados ve ıpados Kullanıcı kaydını ayarlama (Önizleme)
 
@@ -34,7 +34,7 @@ Kullanıcı kaydında kullanılabilen seçenekler hakkında daha fazla bilgi iç
 > [!NOTE]
 > Apple 'ın Intune 'da Kullanıcı kaydı desteği şu anda önizlemededir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 - [Mobil Cihaz Yönetimi (MDM) Yetkilisi](../fundamentals/mdm-authority-set.md)
 - [Apple MDM anında Iletme sertifikası](apple-mdm-push-certificate-get.md)
 - [Yönetilen Apple kimlikleri](https://support.apple.com/guide/apple-business-manager/mdm1c9622977/web).
@@ -43,7 +43,7 @@ Kullanıcı kaydında kullanılabilen seçenekler hakkında daha fazla bilgi iç
 
 Kayıt profili, kayıt sırasında bir cihaz grubuna uygulanan ayarları tanımlar. 
 
-1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **cihazlar** > **iOS** > **iOS kayıt** > **kayıt türleri (Önizleme)** > **profil** > oluştur**iOS/ıpados**' ı seçin. Bu profil, iOS/ıpados ve ıpados son kullanıcılarınızın kurumsal bir Apple yöntemiyle kaydedilmeyen cihazlarda sahip olacağı kayıt deneyimini belirtebileceğiniz yerdir. Değişiklik yapmak isterseniz, bu profili oluşturduktan sonra düzenleyebilirsiniz.
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **cihazlar**  >  **iOS**  >  **iOS kayıt**  >  **kayıt türleri (Önizleme)**  >  **Profil oluştur**  >  **iOS/ıpados**' ı seçin. Bu profil, iOS/ıpados ve ıpados son kullanıcılarınızın kurumsal bir Apple yöntemiyle kaydedilmeyen cihazlarda sahip olacağı kayıt deneyimini belirtebileceğiniz yerdir. Değişiklik yapmak isterseniz, bu profili oluşturduktan sonra düzenleyebilirsiniz.
 
     ![Apple kayıt profili oluştur](./media/ios-user-enrollment/create-profile.png)
 
@@ -78,7 +78,7 @@ Kayıt profili, kayıt sırasında bir cihaz grubuna uygulanan ayarları tanıml
 
 Birden fazla kayıt türü profili oluşturduktan sonra, uygulandıkları öncelik sırasını değiştirebilirsiniz.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **iOS** > **iOS kayıt** > **kayıt türleri (Önizleme)** öğesini seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **iOS**  >  **iOS kayıt**  >  **kayıt türleri (Önizleme)** öğesini seçin.
 2. Listedeki profilleri, uygulanmasını istediğiniz sırada sürükleyip bırakın.
 
 Herhangi bir kullanıcının profilleri arasındaki çakışmalar söz konusu olduğunda, Kullanıcı için daha yüksek öncelikli profil uygulanır.
