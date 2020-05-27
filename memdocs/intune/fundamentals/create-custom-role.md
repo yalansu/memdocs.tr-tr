@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/26/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6633682a9572ba36f41f42e77c5aa64403e0e209
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 51c8ce62d27efa72b6c974f10364e33fb7e6da76
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81440586"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988022"
 ---
 # <a name="create-a-custom-role-in-intune"></a>Intune 'da özel bir rol oluşturma
 
@@ -34,7 +34,7 @@ Rolleri oluşturmak, düzenlemek ve atamak için, hesabınızın Azure AD’de a
 
 ## <a name="to-create-a-custom-role"></a>Özel bir rol oluşturmak için
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **kiracı yönetim** > **rolleri** > **tüm roller** > **Oluştur**' u seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **kiracı yönetim**  >  **rolleri**  >  **tüm roller**  >  **Oluştur**' u seçin.
 
 2. **Temel bilgiler** sayfasında, yeni rol için bir ad ve açıklama girin ve ardından **İleri**' yi seçin.
 
@@ -48,7 +48,7 @@ Rolleri oluşturmak, düzenlemek ve atamak için, hesabınızın Azure AD’de a
 
 Ayrıca, varolan bir rolü de kopyalayabilirsiniz.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **kiracı yönetim** > **rolleri** > **tüm roller** ' i seçin > listedeki bir rolün onay kutusunu **seçin >.**
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **kiracı yönetim**  >  **rolleri**  >  **tüm roller** ' i seçin > listedeki bir rolün onay kutusunu seçin >. **Duplicate**
 
 2. **Temel bilgiler** sayfasında, bir ad girin. Benzersiz bir ad kullandığınızdan emin olun.
 

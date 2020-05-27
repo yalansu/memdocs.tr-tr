@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 02/18/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40eaf6be1b5f6cdb0222fc5bd79e8e5a5b72a947
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 82706356f82008798dc8c9b9de02ad55606ee87b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078218"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83987857"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Microsoft Intune 'de Wi-Fi cihaz yapılandırma profillerinin sorunlarını giderme
 
@@ -114,7 +114,7 @@ Wi-Fi profili cihaza yüklendikten sonra **Yönetim profilinde**gösterilir:
 
 İOS/ıpados cihazlarında Şirket Portalı Uygulama günlüğü, Wi-Fi profilleriyle ilgili bilgileri içermez. Wi-Fi profillerinizin yükleme ayrıntılarını görmek için konsol/cihaz günlüklerini kullanın:
 
-1. İOS/ıpados cihazını Mac 'e bağlayın. **Uygulamalar** > **yardımcı programları**' na gidin ve konsol uygulamasını açın.
+1. İOS/ıpados cihazını Mac 'e bağlayın. **Uygulamalar**  >  **yardımcı programları**' na gidin ve konsol uygulamasını açın.
 2. **Eylem**altında, **bilgi iletilerini dahil et** ve **hata ayıklama iletilerini içer**' i seçin:
 
     > [!div class="mx-imgBorder"]
@@ -122,8 +122,8 @@ Wi-Fi profili cihaza yüklendikten sonra **Yönetim profilinde**gösterilir:
 
 3. Senaryoyu yeniden oluşturun ve günlükleri bir metin dosyasına kaydedin:
 
-    1. Geçerli ekrandaki tüm iletileri seçin: **Düzenle** > **Tümünü Seç**.
-    2. İletileri kopyalayın: kopyayı **Düzenle** > **Copy**.
+    1. Geçerli ekrandaki tüm iletileri seçin: **Düzenle**  >  **Tümünü Seç**.
+    2. İletileri kopyalayın: kopyayı **Düzenle**  >  **Copy**.
     3. Günlük verilerini bir metin düzenleyicisine yapıştırın ve dosyayı kaydedin.
 
 4. Ayrıntılı bilgileri görmek için kaydedilen günlük dosyasında arama yapın. Profil başarıyla yüklendiğinde, çıktılarınız aşağıdaki günlüğe benzer şekilde görünür:
@@ -136,7 +136,7 @@ Wi-Fi profili cihaza yüklendikten sonra **Yönetim profilinde**gösterilir:
 
 ## <a name="windows"></a>Windows
 
-Wi-Fi profili cihaza yüklendikten sonra **Ayarlar** > **hesaplar** > **erişim iş veya okul**bölümüne gidin. Hesap > **bilgilerinizi**seçin:
+Wi-Fi profili cihaza yüklendikten sonra **Ayarlar**  >  **hesaplar**  >  **erişim iş veya okul**bölümüne gidin. Hesap > **bilgilerinizi**seçin:
 
 > [!div class="mx-imgBorder"]
 > ![İş veya okula erişin ve Windows cihazında bilgi ' yi seçin](./media/troubleshoot-wi-fi-profiles/windows-access-work-school-info.png)
@@ -146,7 +146,7 @@ Wi-Fi profili cihaza yüklendikten sonra **Ayarlar** > **hesaplar** > **erişim 
 > [!div class="mx-imgBorder"]
 > ![Microsoft tarafından yönetilen alanlarda bkz. Windows 'ta WiFi listesi](./media/troubleshoot-wi-fi-profiles/windows-wifi-areas-managed-by-microsoft.png)
 
-Wi-Fi bağlantısını görmek için, **Ayarlar** > **ağ & Internet**  > **Wi-Fi**' a gidin:
+Wi-Fi bağlantısını görmek için, **Ayarlar**  >  **ağ & Internet**   >  **Wi-Fi**' a gidin:
 
 > [!div class="mx-imgBorder"]
 > ![Windows 'da, ayarlar bölümünde bilinen ağ olarak Wi-Fi bağlantısına bakın](./media/troubleshoot-wi-fi-profiles/windows-wifi-connection-known-networks.png)
@@ -157,7 +157,7 @@ Windows cihazlarında, Wi-Fi profilleriyle ilgili ayrıntılar Olay Görüntüle
 
 1. **Olay Görüntüleyicisi** uygulamasını açın.
 2. **Görünüm** menüsünde **analitik ve hata ayıklama günlüklerini göster**' i seçin.
-3. **Uygulama ve hizmet günlükleri** > ' ni genişletin**Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **admin**
+3. **Uygulama ve hizmet günlükleri '** ni genişletin  >  **Microsoft**  >  **Windows**  >  **DeviceManagement-Enterprise-Diagnostic-Provider**  >  **admin**
 
 Çıktılarınız aşağıdaki günlüklere benzer:
 
@@ -181,7 +181,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 - Wi-Fi profilinin doğru gruba atandığını onaylayın:
 
-    1. [Microsoft Uç Nokta Yöneticisi Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **cihazlar** > **yapılandırma profilleri**' ni seçin.
+    1. [Microsoft Uç Nokta Yöneticisi Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **cihazlar**  >  **yapılandırma profilleri**' ni seçin.
     2. Profilinizi > **atamaları**' nı seçin. Seçili grupların doğru olduğunu onaylayın.
     3. Uç nokta yöneticisinde, **sorun giderme + Destek**' i seçin. **Atamalar** bilgilerini gözden geçirin.
 
@@ -191,11 +191,11 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 - Windows 10 ve daha yeni cihazlarda, MDM tanılama bilgileri günlüğünü gözden geçirin:
 
-  1. **Ayarlar** > **Accounts**hesaplar > **iş veya okula erişim**bölümüne gidin.
+  1. **Ayarlar**  >  **hesaplar**  >  **iş veya okula erişim**bölümüne gidin.
   2. İş veya okul hesabınızın **bilgilerini**> seçin.
   3. **Ayarlar** sayfasının en altında **rapor oluştur**' u seçin.
   4. Günlük dosyalarının yolunu gösteren bir pencere açılır. **Export** (Dışarı aktar) öğesini seçin.
-  5. `\Users\Public\Documents\MDMDiagnostics` Yola gidin ve raporu görüntüleyin:
+  5. `\Users\Public\Documents\MDMDiagnostics`Yola gidin ve raporu görüntüleyin:
 
       > [!div class="mx-imgBorder"]
       > ![Windows 10 cihazlarında WiFi profili yapılandırmasını gösteren örnek MDM tanılama bilgileri](./media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png)

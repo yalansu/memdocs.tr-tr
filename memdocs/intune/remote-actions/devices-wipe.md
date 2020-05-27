@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 2/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbcd54a56304df36c536e5a623f4e9da5ba3f15b
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: c910b840d51a1db94702bc8e095255e557246bea
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254699"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988195"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Silme, kullanımdan kaldırma veya el ile kaydını kaldırma yoluyla cihaz kaldırma
 
@@ -54,7 +54,7 @@ Silme, cihazı yeni bir kullanıcıya vermeden önce veya cihaz kaybolduğunda/�
 ### <a name="wiping-a-device"></a>Bir cihazı silme
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-3. **Cihazlar** > **tüm cihazlar**' ı seçin.
+3. **Cihazlar**  >  **tüm cihazlar**' ı seçin.
 4. Silme eylemini uygulamak istediğiniz cihazın adını seçin.
 5. Cihaz adının gösterildiği bölmede **Sil**’i seçin.
 6. Windows 10 sürüm 1709 veya üzeri için, ayrıca **silme cihazına sahip olursunuz, ancak kayıt durumunu ve ilişkili kullanıcı hesabı seçeneğini saklayın** . 
@@ -119,9 +119,9 @@ Bir Android iş profili cihazdan şirket verilerinin kaldırılması, cihazdaki 
 Yalnızca bilgi noktası cihazlarını silebilirsiniz. Android bilgi noktası cihazlarını kullanımdan kaldıramazsınız.
 
 
-### <a name="macos"></a>Mac OS
+### <a name="macos"></a>macOS
 
-|Veri türü|Mac OS|
+|Veri türü|macOS|
 |-------------|-------|
 |Ayarlar|Intune ilkesi tarafından ayarlanan yapılandırmalar artık zorunlu tutulmaz. Kullanıcılar ayarları değiştirebilir.|
 |Wi-Fi ve VPN profili ayarları|Kaldırıldı.|
@@ -158,12 +158,12 @@ Cihaz açık ve bağlı olduğu sürece, **Kullanımdan kaldırma** eylemi 15 da
 Cihazları Intune portalından kaldırmak istiyorsanız, bunları belirli bir cihaz bölmesinden silebilirsiniz. Cihazın bir sonraki iade edilişinde, üzerindeki tüm şirket verileri kaldırılır.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihazlar** > **tüm cihazlar** ' ı seçin > silmek istediğiniz cihazları seçin > **silin**.
+2. **Cihazlar**  >  **tüm cihazlar** ' ı seçin > silmek istediğiniz cihazları seçin > **silin**.
 
 ### <a name="automatically-delete-devices-with-cleanup-rules"></a>Temizleme kuralları ile cihazları otomatik olarak silme
 Intune’u etkin olmayan, eski veya yanıt vermeyen cihazları otomatik olarak silmek üzere yapılandırabilirsiniz. Bu temizleme kuralları, cihaz kayıtlarınızın güncel kalması için cihazınızı kesintisiz bir şekilde izler. Bu şekilde silinen cihazlar, Intune yönetiminden kaldırılır.
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihazlar** > **cihaz temizleme kuralları** > **Evet**' i seçin.
+2. **Cihazlar**  >  **cihaz temizleme kuralları**  >  **Evet**' i seçin.
 3. **Bu çok gün için iade edilmemiş cihazlarda silme** kutusuna 30 ile 270 arasında bir sayı girin.
 4. **Kaydet**'i seçin.
 
@@ -173,7 +173,7 @@ Intune’u etkin olmayan, eski veya yanıt vermeyen cihazları otomatik olarak s
 
 İletişim sorunları veya eksik cihazlar nedeniyle, cihazları Azure AD'den silmeniz gerekebilir. Ulaşılamaz olduğunu ve Azure ile yeniden iletişim kurmasının pek olası olmadığını bildiğiniz cihazlarda, cihaz kayıtlarını Azure portalından kaldırmak için **Sil** eylemini kullanabilirsiniz. **Sil** eylemi, cihazı yönetimden kaldırmaz.
 
-1. Yönetici kimlik bilgilerinizi kullanarak [Azure portalında Azure Active Directory](https://aka.ms/accessaad)’de oturum açın. Ayrıca [Microsoft 365 yönetim merkezinde](https://admin.microsoft.com) de oturum açabilirsiniz. Menüden **Yönetim Merkezleri** > **Azure AD**' yi seçin.
+1. Yönetici kimlik bilgilerinizi kullanarak [Azure portalında Azure Active Directory](https://aka.ms/accessaad)’de oturum açın. Ayrıca [Microsoft 365 yönetim merkezinde](https://admin.microsoft.com) de oturum açabilirsiniz. Menüden **Yönetim Merkezleri**  >  **Azure AD**' yi seçin.
 2. Hesabınız yoksa bir Azure aboneliği oluşturun. Ücretli bir hesabınız varsa, bu işlem için kredi kartı veya ödeme gerekmez ( **Ücretsiz Azure Active Directory kaydınız** abonelik bağlantısını seçin).
 3. **Azure Active Directory**’yi ve sonra da kuruluşunuzu seçin.
 4. **Users (Kullanıcılar)** sekmesini seçin.
@@ -186,7 +186,7 @@ Intune’u etkin olmayan, eski veya yanıt vermeyen cihazları otomatik olarak s
 Apple DEP cihazını Intune yönetiminden tamamen kaldırmak istiyorsanız bu adımları izleyin:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihazlar** > **tüm cihazlar** ' ı seçin > **devre dışı**> cihaz seçin.
+2. **Cihazlar**  >  **tüm cihazlar** ' ı seçin > **devre dışı**> cihaz seçin.
 ![Kullanımdan kaldırma ekran görüntüsü](./media/devices-wipe/retire.png)
 3. [Business.Apple.com](http://business.apple.com) adresini ziyaret edin ve cihazın seri numarasına göre arama yapın.
 4. **Atanan** menüsünde **Atanmış**’ı seçin.

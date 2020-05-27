@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 06/11/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54e81a7b9614e1633fe9061fd13d1b99810ce43c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4951db457c6a49179dd38ca24463dda292b227e5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79329222"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988128"
 ---
 # <a name="set-up-lookout-mobile-endpoint-security-integration-with-intune"></a>Intune ile mobil uç nokta güvenliği tümleştirmesini ayarlama
 [Önkoşulları](lookout-mobile-threat-defense-connector.md#prerequisites)karşılayan bir ortam sayesinde, mobil uç nokta güvenliğini Intune ile tümleştirebilirsiniz. Bu makaledeki bilgiler, Intune ile kullanım için, tümleştirme ayarlama ve önemli ayarları yapılandırma konusunda size kılavuzluk eder.  
@@ -34,7 +34,7 @@ ms.locfileid: "79329222"
 ## <a name="collect-azure-ad-information"></a>Azure AD bilgileri toplama  
 Intune ile tümleşik bir sorun olması için, Gevite Mobility uç noktası güvenlik kiracınızı Azure Active Directory (AD) aboneliğinizle ilişkilendirirsiniz.
 
-Mobil uç nokta güvenlik aboneliği tümleştirmesini Intune ile etkinleştirmek için, destek (enterprisesupport@lookout.com) için aşağıdaki bilgileri sağlayın:  
+Mobil uç nokta güvenlik aboneliği tümleştirmesini Intune ile etkinleştirmek için, destek () için aşağıdaki bilgileri sağlayın enterprisesupport@lookout.com :  
 
 - **Azure AD kiracı dizin KIMLIĞI**  
 
@@ -51,12 +51,12 @@ Mobil uç nokta güvenlik aboneliği tümleştirmesini Intune ile etkinleştirme
 
 1. [Azure Portal](https://portal.azure.com) bir genel yönetici hesabıyla oturum açın.
 
-2. **Azure Active Directory** > **Özellikler** ' e gidin ve **Dizin kimliğinizi**bulun. Dizin KIMLIĞINI kopyalamak için *Kopyala* düğmesini kullanın ve ardından bir metin dosyasına kaydedin.
+2. **Azure Active Directory**  >  **Özellikler** ' e gidin ve **Dizin kimliğinizi**bulun. Dizin KIMLIĞINI kopyalamak için *Kopyala* düğmesini kullanın ve ardından bir metin dosyasına kaydedin.
 
    ![Azure AD özellikleri](./media/lookout-mtd-connector-integration/azure-ad-properties.png)  
 
 3. Daha sonra, Azure AD kullanıcılarına erişim sağlamak için kullandığınız hesapların Azure AD grubu KIMLIĞINI bulun. Tek bir grup *tam erişime*yöneliktir ve ikinci grup, *kısıtlı erişim* için isteğe bağlıdır. Her hesap için *nesne kimliğini*almak için:  
-   1. Gruplar *-tüm gruplar* bölmesini açmak için **Azure Active Directory** > **gruplar** ' a gidin.  
+   1. Gruplar **Azure Active Directory**  >  *-tüm gruplar* bölmesini açmak için Azure Active Directory**gruplar** ' a gidin.  
 
    2. *Tam erişim* için oluşturduğunuz grubu seçerek *genel bakış* bölmesini açın.  
 
@@ -66,28 +66,28 @@ Mobil uç nokta güvenlik aboneliği tümleştirmesini Intune ile etkinleştirme
 
       ![Azure AD grubu nesne KIMLIĞI](./media/lookout-mtd-connector-integration/azure-ad-group-id.png)  
 
-   Bu bilgileri topladıktan sonra, BT desteği ile iletişime geçin (e- enterprisesupport@lookout.composta:). GEVME desteği, verdiğiniz bilgileri kullanarak aboneliğinizi eklemek ve GEVME kurumsal hesabınızı oluşturmak için birincil Kişinizden çalışacaktır.  
+   Bu bilgileri topladıktan sonra, BT desteği ile iletişime geçin (e-posta: enterprisesupport@lookout.com ). GEVME desteği, verdiğiniz bilgileri kullanarak aboneliğinizi eklemek ve GEVME kurumsal hesabınızı oluşturmak için birincil Kişinizden çalışacaktır.  
 
 ## <a name="configure-your-lookout-subscription"></a>Gevbir abonelik aboneliğinizi yapılandırma  
 
 Aşağıdaki adımlar, kuruluş yönetim konsolunda tamamlanacaktır ve Intune 'a kayıtlı cihazlar (cihaz uyumluluğu aracılığıyla) **ve** kayıtlı olmayan cihazlar (uygulama koruma ilkeleri aracılığıyla) için bakım hizmetine bir bağlantı etkinleştirecektir.
 
-Gevrme desteği, gevþsiz kurumsal hesabınızı oluşturur, bu destek, oturum açma URL 'si bağlantısı ile şirketiniz için birincil ilgili kişiye bir e-posta gönderir: https://aad.lookout.com/les?action=consent 
+Gevrme desteği, gevþsiz kurumsal hesabınızı oluşturur, bu destek, oturum açma URL 'si bağlantısı ile şirketiniz için birincil ilgili kişiye bir e-posta https://aad.lookout.com/les?action=consent gönderir: 
 
 ### <a name="initial-sign-in"></a>İlk oturum açma  
-Gevrme MES konsolundaki ilk oturum açma, bir onay sayfası (https://aad.lookout.com/les?action=consent). Bir Azure AD Genel Yöneticisi, oturum açıp **kabul etmeniz**yeterlidir. Sonraki oturum açma, kullanıcının bu düzeyde Azure AD ayrıcalığına sahip olmasını gerektirmez. 
+Gevrme MES konsolundaki ilk oturum açma, bir onay sayfası ( https://aad.lookout.com/les?action=consent) . Bir Azure AD Genel Yöneticisi, oturum açıp **kabul etmeniz**yeterlidir. Sonraki oturum açma, kullanıcının bu düzeyde Azure AD ayrıcalığına sahip olmasını gerektirmez. 
 
  Bir onay sayfası görüntülenir. Kaydı tamamlamak için **Kabul Et**’i seçin. 
    ![GEVME konsolunun ilk kez oturum açma sayfasının ekran görüntüsü](./media/lookout-mtd-connector-integration/lookout_mtp_initial_login.png)
 
 Kabul edip onay aldığınızda, Gevyorla konsoluna yönlendirilirsiniz.
 
-İlk oturum açma ve onay tamamlandıktan sonra, uygulamasından https://aad.lookout.com oturum AÇıLAN kullanıcılar mes konsoluna yönlendirilir. Onay henüz verilmediyse, tüm oturum açma girişimleri hatalı oturum açma hatası oluşmasına neden olacak.
+İlk oturum açma ve onay tamamlandıktan sonra, uygulamasından oturum açılan kullanıcılar https://aad.lookout.com mes konsoluna yönlendirilir. Onay henüz verilmediyse, tüm oturum açma girişimleri hatalı oturum açma hatası oluşmasına neden olacak.
 
 ### <a name="configure-the-intune-connector"></a>Intune bağlayıcısını yapılandırma  
 Aşağıdaki yordamda, daha önce Azure AD 'de Gevyorma dağıtımınızı test etmek için bir Kullanıcı grubu oluşturmuş olduğunuz varsayılır. En iyi uygulama, Gevlüklerinizin ve Intune yöneticilerinin ürün tümleştirmelerini öğrenmesine olanak tanımak için küçük bir kullanıcı grubuyla başlamadır. Tanıdık olduktan sonra, kaydı ek kullanıcı gruplarına genişletebilirsiniz.
 
-1. [Gevmes uçlarında](https://aad.lookout.com) oturum açın ve **sistem** > **Bağlayıcılar**' a gidip **bağlayıcı Ekle**' yi seçin.  **Intune**' u seçin.
+1. [Gevmes uçlarında](https://aad.lookout.com) oturum açın ve **sistem**  >  **Bağlayıcılar**' a gidip **bağlayıcı Ekle**' yi seçin.  **Intune**' u seçin.
 
    ![Bağlayıcılar sekmesinde Intune seçeneğiyle GEVME konsolunun görüntüsü](./media/lookout-mtd-connector-integration/lookout_mtp_setup-intune-connector.png)
 
@@ -119,7 +119,7 @@ GEVMES yapılandırıldıktan sonra [Intune 'Da GEVME](mtd-connector-enable.md)b
 Aşağıda, GEVME MES konsolunda yapılandırabileceğiniz ek ayarlar verilmiştir.  
 
 ### <a name="configure-enrollment-settings"></a>Kayıt ayarlarını yapılandırma
-Gevmes uçpenceresinde **sistem** > **kayıt** > **kayıt ayarlarını**Yönet ' i seçin.  
+Gevmes uçpenceresinde **sistem**  >  **kayıt**  >  **kayıt ayarlarını**Yönet ' i seçin.  
 
 - **Bağlantısı kesilmiş durum**için, bağlı olmayan bir cihazın bağlantısı kesik olarak işaretlenmeden önce geçecek gün sayısını belirtin.  
 

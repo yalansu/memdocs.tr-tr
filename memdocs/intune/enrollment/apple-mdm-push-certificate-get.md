@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/08/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd1bea64bbde5c7da7579471f93f659b71dffa87
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a66171d678ffd19e424fb399633c3fed3db9a588
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327202"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83986999"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Apple MDM anında iletme sertifikası alma
 
@@ -41,14 +41,14 @@ Bir anında iletme sertifikasının süresi dolduğunda bunu yenilemeniz gerekir
 
 
 ## <a name="steps-to-get-your-certificate"></a>Sertifikanızı almak için adımlar
-[Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar** > **cihazları** > Kaydet**Apple kayıt** > **Apple MDM anında iletme sertifikası**' ı seçin ve ardından aşağıdaki adımları izleyin.
+[Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar**  >  **cihazları kaydet**  >  **Apple kayıt**  >  **Apple MDM anında iletme sertifikası**' ı seçin ve ardından aşağıdaki adımları izleyin.
 
-### <a name="step-1-grant-microsoft-permission-to-send-user-and-device-information-to-apple"></a>1. Adım. Microsoft’un Apple’a kullanıcı ve cihaz bilgilerini göndermesine izin verin
+### <a name="step-1-grant-microsoft-permission-to-send-user-and-device-information-to-apple"></a>Adım 1. Microsoft’un Apple’a kullanıcı ve cihaz bilgilerini göndermesine izin verin
 Kabul ediyorum ' u seçin **.** Microsoft’a verileri Apple’a gönderme izni verin.
 
 ![MDM Anında İletme Sertifikası ekranında MDM Anında İletme’nin ayarlanmamış hali.](./media/apple-mdm-push-certificate-get/create-mdm-push-certificate.png)
 
-### <a name="step-2-download-the-intune-certificate-signing-request-required-to-create-an-apple-mdm-push-certificate"></a>2. Adım Apple MDM anında iletme sertifikası oluşturmak için gereken Intune sertifika imzalama isteğini indirin
+### <a name="step-2-download-the-intune-certificate-signing-request-required-to-create-an-apple-mdm-push-certificate"></a>Adım 2. Apple MDM anında iletme sertifikası oluşturmak için gereken Intune sertifika imzalama isteğini indirin
 İstek dosyasını indirip yerel olarak kaydetmek için **CSR 'Nizi indirin** seçeneğini belirleyin. Bu dosya, Apple Push Certificates Portalından bir güven ilişkisi sertifikası istemek için kullanılır.
 
 ### <a name="step-3-create-an-apple-mdm-push-certificate"></a>3. Adım Apple MDM anında iletme sertifikası oluşturun
@@ -68,12 +68,12 @@ Apple MDM anında iletme sertifikası bir yıl boyunca geçerlidir ve iOS/ıpado
 
 Sertifika, sertifikayı oluşturmak için kullanılan Apple Kimliği ile ilişkilidir. MDM anında iletme sertifikasını oluşturmak için kullandığınız aynı Apple Kimliği ile yenileyin.
 
-1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar** > **kayıt cihazları** > **Apple kayıt** > **Apple MDM anında iletme sertifikası**' yi seçin.
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar**  >  **kayıt cihazları**  >  **Apple kayıt**  >  **Apple MDM anında iletme sertifikası**' yi seçin.
 2. İstek dosyasını indirip yerel olarak kaydetmek için **CSR 'Nizi indirin** seçeneğini belirleyin. Bu dosya, Apple Push Certificates Portalından bir güven ilişkisi sertifikası istemek için kullanılır.
 3. Apple anında iletme sertifikası portalı 'na gitmek için **MDM anında Iletme sertifikanızı oluşturun** öğesini seçin. Yenilemek istediğiniz sertifikayı bulun ve **Yenile**' yi seçin.
 4. **Anında Iletme sertifikasını yenileme** ekranında, ileride sertifikayı tanımanıza yardımcı olacak notlar sağlayın, indirdiğiniz yeni istek dosyasına gitmek Için **Dosya Seç** ' i seçin ve **karşıya yükle**' yi seçin.
    > [!TIP]
-   > Bir Sertifika, UID’i tarafından tanımlanabilir. UID 'nin GUID kısmını bulmak için sertifika ayrıntılarında **konu kimliği** ' ni inceleyin. Ya da kayıtlı bir iOS/ıpados cihazında **Ayarlar** > **genel** > **cihaz** **yönetimi** > **Yönetim profili** > **diğer ayrıntılar** > **Yönetim profili**' ne gidin. İkinci satır öğesi olan **Konu**, Apple anında iletme sertifikaları portalındaki sertifikayla eşleşitebilmeniz IÇIN benzersiz GUID 'yi içerir.
+   > Bir Sertifika, UID’i tarafından tanımlanabilir. UID 'nin GUID kısmını bulmak için sertifika ayrıntılarında **konu kimliği** ' ni inceleyin. Ya da kayıtlı bir iOS/ıpados cihazında **Ayarlar**  >  **genel**  >  **cihaz** **yönetimi**  >  **Yönetim profili**  >  **diğer ayrıntılar**  >  **Yönetim profili**' ne gidin. İkinci satır öğesi olan **Konu**, Apple anında iletme sertifikaları portalındaki sertifikayla eşleşitebilmeniz IÇIN benzersiz GUID 'yi içerir.
  
 6. **Onay** ekranında, **karşıdan yükle** ' yi seçin ve. ped dosyasını yerel olarak kaydedin.
 7. [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)'DA **Apple MDM anında iletme sertifikası** araştır simgesini seçin, Apple 'dan indirilen. PEZ dosyasını seçin ve **karşıya yükle**' yi seçin.
