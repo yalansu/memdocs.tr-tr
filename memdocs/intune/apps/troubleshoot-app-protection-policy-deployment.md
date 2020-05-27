@@ -9,17 +9,17 @@ search.appverid:
 audience: ITPro
 ms.date: 4/17/2020
 ms.service: microsoft-intune
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Intune
-ms.openlocfilehash: 3b4c02e366f4778e65b4fe4c853ed147fcdb1df3
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 8443ca01a0ca1647e8069fdccf1d71aef74c23d8
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82072761"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989458"
 ---
 # <a name="troubleshooting-app-protection-policy-deployment-in-intune"></a>Intune 'da uygulama koruma İlkesi dağıtımı sorunlarını giderme
 
@@ -80,7 +80,7 @@ Skype Kurumsal karma ve şirket içi yapılandırmalarda HMA 'yı etkinleştirme
 Uygulama koruma durumunuzu denetlemek için şu adımları izleyin:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulama koruma durumunu****izlemek** > için **uygulamalar** > ' ı seçin ve ardından **atanan kullanıcılar** kutucuğunu seçin.
+2. **Apps**  >  **Monitor**  >  **Uygulama koruma durumunu**izlemek için uygulamalar ' ı seçin ve ardından **atanan kullanıcılar** kutucuğunu seçin.
 3. **Uygulama raporlama** sayfasında **Kullanıcı seçin**'i belirterek kullanıcı ve grupların bulunduğu listeyi açın.
 4. Listeden etkilenen kullanıcılardan birini arayıp seçin, sonra **Kullanıcı Seç**' i seçin. Uygulama raporlama bölmesinin üst kısmında, kullanıcının uygulama koruması için lisanslandığını ve O365 için bir lisansa sahip olup olmadığını görebilirsiniz. Ayrıca, tüm kullanıcı cihazları için uygulama durumunu görebilirsiniz.
 5. Hedeflenen uygulamalar, cihaz türleri, ilkeler, cihaz iade durumu ve son eşitleme zamanı gibi önemli bilgilere dikkat edin.
@@ -105,7 +105,7 @@ Intune uygulama koruma ilkelerinin kullanıcıları hedeflemeli olması gerekir.
 İlkenin hedeflenen kullanıcıya uygulandığını doğrulamak için şu adımları izleyin:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulama koruma durumunu****izleme** >  **uygulamaları** > ' nı seçin ve ardından **Kullanıcı durumu** kutucuğunu (cihaz işletim sistemi platformuna göre) seçin.
+2. **Apps**  >  **Monitor**  >  **Uygulama koruma durumunu**izleme uygulamaları ' nı seçin ve ardından **Kullanıcı durumu** kutucuğunu (cihaz işletim sistemi platformuna göre) seçin.
 Açılan **uygulama raporlama** bölmesinde, Kullanıcı aramak Için **Kullanıcı Seç** ' i seçin.
 3. Listeden kullanıcı seçin. Bu kullanıcının ayrıntılarını görebilirsiniz.
 
@@ -168,7 +168,7 @@ Ayrıca, uygulama koruma ilkesinde yapılan değişikliklerin ve güncelleştirm
 Uygulama koruma durumunu denetlemek için şu adımları izleyin:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulama koruma durumunu****izlemek** > için **uygulamalar** > ' ı seçin ve ardından **atanan kullanıcılar** kutucuğunu seçin.
+2. **Apps**  >  **Monitor**  >  **Uygulama koruma durumunu**izlemek için uygulamalar ' ı seçin ve ardından **atanan kullanıcılar** kutucuğunu seçin.
 3. Uygulama Raporlama sayfasında, **Kullanıcı Seç** ' i seçerek kullanıcılar ve gruplar listesini açın.
 4. Listeden etkilenen kullanıcılardan birini arayıp seçin, sonra **Kullanıcı Seç**' i seçin.
 5. Durum ve son eşitleme saati dahil olmak üzere, şu anda uygulanmış olan ilkeleri gözden geçirin.
@@ -180,7 +180,7 @@ Uygulama koruma durumunu denetlemek için şu adımları izleyin:
 Intune uygulama koruma ilkesi, çoklu kimlik desteği içerir. Intune, uygulama koruma ilkelerini yalnızca uygulamada oturum açan iş veya okul hesabına uygulayabilir. Ancak, cihaz başına yalnızca bir iş veya okul hesabı desteklenir.
 
 ### <a name="scenario-the-policy-is-applied-but-ios-users-can-still-transfer-work-files-to-unmanaged-apps"></a>Senaryo: ilke uygulandı, ancak iOS kullanıcıları iş dosyalarını yine de yönetilmeyen uygulamalara aktarmaya devam edebilir
-İOS cihazları için **açma yönetimi** ( ![aç düğmesi](media/troubleshoot-app-protection/troubleshoot-app-protection.jpg) ) özelliği, MDM kanalı aracılığıyla dağıtılan uygulamalar arasında dosya aktarımlarını sınırlayabilir. Kullanıcı, yapılandırmaya bağlı olarak OneDrive ve Exchange gibi yönetilen konumlardan iş dosyalarını, yönetilmeyen uygulamalara veya konumlara aktarabilir. İOS **Açık yönetim** özelliği diğer veri aktarımı yöntemlerinin dışında çalışmaktadır. Bu nedenle, **farklı kaydet** ve **Kopyala/Yapıştır** ayarları bundan etkilenmez.
+İOS cihazları için **açma yönetimi** ( ![ Aç düğmesi ](media/troubleshoot-app-protection/troubleshoot-app-protection.jpg) ) özelliği, MDM kanalı aracılığıyla dağıtılan uygulamalar arasında dosya aktarımlarını sınırlayabilir. Kullanıcı, yapılandırmaya bağlı olarak OneDrive ve Exchange gibi yönetilen konumlardan iş dosyalarını, yönetilmeyen uygulamalara veya konumlara aktarabilir. İOS **Açık yönetim** özelliği diğer veri aktarımı yöntemlerinin dışında çalışmaktadır. Bu nedenle, **farklı kaydet** ve **Kopyala/Yapıştır** ayarları bundan etkilenmez.
 
 Şirket verilerini aşağıdaki şekilde korumak için Intune uygulama koruma ilkelerini iOS birlikte **açma yönetimi** özelliğiyle birlikte kullanabilirsiniz:
 

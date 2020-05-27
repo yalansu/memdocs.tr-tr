@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/26/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a679df157a2623012d19fab2370792cac73f6f2b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 31e73bd1c3ebed40865ea6c13952b91c3a672852
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326811"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988847"
 ---
 # <a name="assign-a-role-to-an-intune-user"></a>Intune kullanıcısına rol atama
 
@@ -32,9 +32,9 @@ Rolleri oluşturmak, düzenlemek ve atamak için, hesabınızın Azure AD’de a
 - **Genel Yönetici**
 - **Intune Hizmet Yöneticisi**
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **kiracı yönetim** > **rolleri** > **tüm roller**' i seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **kiracı yönetim**  >  **rolleri**  >  **tüm roller**' i seçin.
 
-2. **Intune rolleri-tüm roller** dikey penceresinde, atamak istediğiniz yerleşik rolü seçin > **atamaları** > **atayın**.
+2. **Intune rolleri-tüm roller** dikey penceresinde, atamak istediğiniz yerleşik rolü seçin > **atamaları**  >  **atayın**.
 
 5. **Temel bilgiler** sayfasında, bir **atama adı** ve isteğe bağlı **atama açıklaması**girin ve ardından **İleri**' yi seçin.
 

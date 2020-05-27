@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33e4f36afce9b8a2f296697623cd7031edf0fa74
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: fd9741cfa8cf9edd03d723e63ed1936e1c986d08
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791776"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989052"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Android cihazlarını cihaz yöneticisinden iş profili yönetimine taşıma
 
@@ -60,13 +60,17 @@ Kullanıcılar bu nedenle uyumsuz olduklarını görtiklerinde, **Çözümle**' 
 
 5. **Konumlar** sayfasında, bir **sonraki**> isterseniz konum ekleyebilirsiniz.
 
-6. **Uyumsuzluğa yönelik eylemler**' de, bu akış için son kullanıcı deneyimini özelleştirmek üzere [uyumsuzluk için kullanılabilir eylemleri](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) yapılandırabilirsiniz. Göz önünde bulundurulması gereken bazı eylemler vardır.
+6. **Uyumsuzluk eylemleri** sekmesinde, bu akış için son kullanıcı deneyimini özelleştirmek üzere [uyumsuzluk için kullanılabilir eylemleri](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) yapılandırabilirsiniz.
 
-- **Cihazı uyumsuz olarak işaretle**: varsayılan olarak, bu eylem sıfır (0) güne ayarlanır ve cihazları hemen uyumsuz olarak işaretler. Bunu daha fazla güne değiştirmek, kullanıcılara henüz uyumsuz olarak işaretlenmeksizin iş profili yönetimine geçiş yapmak için akışı görebilecekleri bir yetkisiz kullanım süresi sağlar. Örneğin, bunu 14 gün olarak ayarlamak, kullanıcılara, kaynaklara erişimi kaybetme riski olmadan cihaz yöneticisinden iş profili yönetimine geçiş yapmak için iki hafta daha verebilir.
-- **Son kullanıcıya anında iletme bildirimi gönder**: bunu, Cihaz Yöneticisi cihazlarına anında iletme bildirimleri gönderecek şekilde yapılandırın. Bir Kullanıcı bildirimi seçtiğinde, **cihaz ayarlarını Güncelleştir** sayfasında iş profili yönetimine geçiş yapmak için akışı başlatabilecekleri Android şirket portalı başlatılır.
-- **Son kullanıcıya e-posta gönder**: bunu, cihaz yöneticisinden iş profili yönetimine taşıma hakkında kullanıcılara e-posta gönderecek şekilde yapılandırın. E-postada aşağıdaki URL 'YI ekleyebilirsiniz. Bu işlem, seçildiğinde, iş profili yönetimine geçmek üzere akışı başlatabilecekleri cihaz ayarlarını Güncelleştir sayfasında Android Şirket Portalı başlatacak.
-    - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
-    - ABD kamu için bu bağlantıyı şu şekilde kullanabilirsiniz: `https://portal.manage.microsoft.us/UpdateSettings.aspx` .
+    ![Uyumsuzluk eylemleri](media/android-move-device-admin-work-profile/noncompliance-actions.png)
+
+    Göz önünde bulundurulması gereken bazı eylemler şunlardır:
+
+    - **Cihazı uyumsuz olarak işaretle**: varsayılan olarak, bu eylem sıfır (0) güne ayarlanır ve cihazları hemen uyumsuz olarak işaretler. Bunu daha fazla güne değiştirmek, kullanıcılara henüz uyumsuz olarak işaretlenmeksizin iş profili yönetimine geçiş yapmak için akışı görebilecekleri bir yetkisiz kullanım süresi sağlar. Örneğin, bunu 14 gün olarak ayarlamak, kullanıcılara, kaynaklara erişimi kaybetme riski olmadan cihaz yöneticisinden iş profili yönetimine geçiş yapmak için iki hafta daha verebilir.
+    - **Son kullanıcıya anında iletme bildirimi gönder**: bunu, Cihaz Yöneticisi cihazlarına anında iletme bildirimleri gönderecek şekilde yapılandırın. Bir Kullanıcı bildirimi seçtiğinde, **cihaz ayarlarını Güncelleştir** sayfasında iş profili yönetimine geçiş yapmak için akışı başlatabilecekleri Android şirket portalı başlatılır.
+    - **Son kullanıcıya e-posta gönder**: bunu, cihaz yöneticisinden iş profili yönetimine taşıma hakkında kullanıcılara e-posta gönderecek şekilde yapılandırın. E-postada aşağıdaki URL 'YI ekleyebilirsiniz. Bu işlem, seçildiğinde, iş profili yönetimine geçmek üzere akışı başlatabilecekleri cihaz ayarlarını Güncelleştir sayfasında Android Şirket Portalı başlatacak.
+      - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
+      - ABD kamu için bu bağlantıyı şu şekilde kullanabilirsiniz: `https://portal.manage.microsoft.us/UpdateSettings.aspx` .
   
     > [!NOTE]
     > - Tabii ki, kullanıcılarla iletişiminizdeki bağlantılar için Kullanıcı dostu hiper metin kullanabilirsiniz. Ancak, bu şekilde değiştirildiyse bağlantılar çalışamadığı için URL-kısa kullanım belirteçleri kullanmayın.

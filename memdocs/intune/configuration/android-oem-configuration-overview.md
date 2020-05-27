@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 05/12/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 014608a5042f15ab9ef250b42ad816e8130e2960
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: 8eaa636659cb9e2382f61fb668d8aec2ecd75f7a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791700"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990184"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Microsoft Intune 'de OEMConfig ile Android kurumsal cihazlarını kullanma ve yönetme
 
@@ -32,7 +32,7 @@ Bu özellik şu platformlarda geçerlidir:
 
 - Android Kurumsal
 
-Android Cihaz Yöneticisi cihazları için [Mobil uzantılar (MX)](android-zebra-mx-overview.md)kullanın.
+Android Cihaz Yöneticisi 'ni kullanarak Zeköşeli teknolojiler cihazlarını yönetmek için [Zeköşeli mobil uzantıları 'nı (MX)](android-zebra-mx-overview.md)kullanın.
 
 Bu makalede, OEMConfig açıklanmakta, önkoşulları listelemektedir, bir yapılandırma profili oluşturma ve Intune 'da desteklenen OEMConfig uygulamalarının nasıl listelendiği gösterilmektedir.
 
@@ -149,7 +149,7 @@ Cihaz yapılandırma güncelleştirmelerini bir daha denetlediğinde, yapıland�
 
 ## <a name="supported-oemconfig-apps"></a>Desteklenen OEMConfig uygulamaları
 
-OEMConfig Apps, standart uygulamalarla karşılaştırıldığında, Google tarafından daha karmaşık şemaları desteklemek için verilen yönetilen yapılandırma ayrıcalıklarını genişletir. Intune Şu anda aşağıdaki OEMConfig uygulamalarını desteklemektedir:
+OEMConfig Apps, standart uygulamalarla karşılaştırıldığında, Google tarafından daha karmaşık şemaları ve işlevleri desteklemek için verilen yönetilen yapılandırma ayrıcalıklarını genişletir. OEM 'Lerin OEMConfig uygulamalarını Google ile kaydetmesi gerekir. Kaydolmazsanız, bu özellikler beklendiği gibi çalışmayabilir. Intune Şu anda aşağıdaki OEMConfig uygulamalarını desteklemektedir:
 
 -----------------
 
@@ -157,7 +157,7 @@ OEMConfig Apps, standart uygulamalarla karşılaştırıldığında, Google tara
 | --- | --- | ---|
 | Ascom | com. Ascom. Myco. oemconfig | |
 | Cipherlab | com. cipherlab. oemconfig | |
-| Dataloi | com. datalobir. Settings. oemconfig | [Datalobir OEMConfig Kılavuzu](https://datalogic.github.io/oemconfig/overview) |
+| Dataloi | com. datalobir. Settings. oemconfig | |
 | Honeywell | com. Honeywell. oemconfig |  |
 | HMDGlobal-7,2 | com. hmdglobal. app. oemconfig. n7_2 | 
 | HMDGlobal-4,2 | com. hmdglobal. app. oemconfig. n4_2 | 

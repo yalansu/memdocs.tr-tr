@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/22/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74db26a3d5f80a0192e996913177745c0b438ac6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9ee40dc9feb9b66b6267fc91448cc7265296597f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324923"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989555"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Microsoft Intune’a yerleşik uygulama ekleme
 
@@ -38,7 +38,7 @@ Intune konsolunun önceki sürümlerinde Intune, Outlook ve OneDrive gibi varsay
 
 Microsoft Intune’da mümkün olan uygulamalara yerleşik uygulama eklemek için şunları yapın:
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin.
+2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, kullanılabilir **Mağaza uygulama** türleri altında **yerleşik uygulama**' yı seçin.
 4. **Seç**' e tıklayın. **Uygulama ekleme** adımları görüntülenir.
 5. **Yerleşik uygulamaları seçin** sayfasında, dahil etmek istediğiniz uygulamaları seçmek Için **Uygulama Seç** ' e tıklayın.
@@ -56,7 +56,7 @@ Microsoft Intune’da mümkün olan uygulamalara yerleşik uygulama eklemek içi
 ## <a name="configure-app-information"></a>Uygulama bilgilerini yapılandırma
 
 Yerleşik uygulama hakkındaki bilgileri değiştirebilirsiniz. Bu bilgiler, uygulamayı Intune’da bulmanıza yardımcı olur ve kullanıcıların uygulamayı Şirket Portalı’nda bulması kolaylaşır.
-1. **Uygulamalar** > **tüm uygulamalar** ' ı seçin ve değiştirmek istediğiniz yerleşik uygulamayı seçin.  
+1. **Uygulamalar**  >  **tüm uygulamalar** ' ı seçin ve değiştirmek istediğiniz yerleşik uygulamayı seçin.  
    Yerleşik uygulamaya ait bir bölme görüntülenecektir.
 2. **Özellikler**' i seçin.
 3. **Uygulama bilgileri**' nin yanındaki **Düzenle** ' yi seçin.

@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 10/21/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1987783be15bbde704e34bbd21ecd70dc048935
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3de0b0a6302bd53384bd492aaf9377c0e5653384
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078269"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988444"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Microsoft Intune’da cihaz profillerini izleme
 
@@ -33,7 +33,7 @@ Intune, cihaz yapılandırma profillerinizi izlemeye ve yönetmeye yardımcı ol
 ## <a name="view-existing-profiles"></a>Mevcut profilleri görüntüleme
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profillerini**seçin.
+2. **Cihaz**  >  **yapılandırma profillerini**seçin.
 
 Tüm mevcut profilleriniz listelenir, ayrıca platform gibi ayrıntılar ve profilin herhangi bir cihaza atanıp atanmadığı gösterilir.
 
@@ -73,9 +73,9 @@ Cihaz profilinizi oluşturduktan sonra, Intune grafikler sağlar. Bu grafikler p
 
 ## <a name="view-conflicts"></a>Çakışmaları görüntüleme
 
-**Cihazlar** > **tüm cihazlar**' da bir çakışmaya neden olan ayarları görebilirsiniz. Bir çakışma olduğunda, bu ayarı içeren tüm yapılandırma profillerini de görürsünüz. Yöneticiler bu özelliği kullanarak sorun gidermeye ve profiller arasındaki herhangi bir uyuşmazlığı düzeltmeye yardımcı olabilir.
+**Cihazlar**  >  **tüm cihazlar**' da bir çakışmaya neden olan ayarları görebilirsiniz. Bir çakışma olduğunda, bu ayarı içeren tüm yapılandırma profillerini de görürsünüz. Yöneticiler bu özelliği kullanarak sorun gidermeye ve profiller arasındaki herhangi bir uyuşmazlığı düzeltmeye yardımcı olabilir.
 
-1. Intune ' da, **cihazlar** > **tüm cihazlar** ' ı seçin > listeden var olan bir cihazı seçin. Son kullanıcılar, Şirket Portalı uygulamasından cihaz adını alabilir.
+1. Intune ' da, **cihazlar**  >  **tüm cihazlar** ' ı seçin > listeden var olan bir cihazı seçin. Son kullanıcılar, Şirket Portalı uygulamasından cihaz adını alabilir.
 2. **Cihaz yapılandırması**’nı seçin. Cihaza uygulanan tüm yapılandırma ilkeleri listelenir.
 3. İlkeyi seçin. İlke, cihaza uygulanan ilkedeki tüm ayarları gösterir. Bir cihaz **Çakışma** durumundaysa, o satırı seçin. Açılan yeni pencerede, çakışma yaratan ayara sahip tüm profilleri ve profil adlarını görürsünüz.
 

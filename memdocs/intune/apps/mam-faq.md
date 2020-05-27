@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73d34424d9263378e92f1c2c888f6b79bb30ce55
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: c544109b170d25f4d9a2999a11bc47d4b4a090c5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764314"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989969"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>MAM ve uygulama koruma hakkında sık kullanılan sorular
 
@@ -170,7 +170,7 @@ Intune üç farklı şekilde uygulama verilerini temizleyebilir: tam cihaz temiz
 Intune uygulama koruması, kullanıcı kimliğinin uygulama ve Intune Uygulama SDK’sı arasında tutarlı olmasına bağlıdır. Bunu garanti etmenin tek yolu modern kimlik doğrulaması yapmaktır. Uygulamaların bir şirket içi yapılandırma ile çalışabileceği senaryolar vardır, ancak bunlar tutarlı değildir ve garanti edilmez.
 
 **Web bağlantılarını yönetilen uygulamalardan açmanın güvenli bir yolu var mı?**<br></br>
-Evet! BT yöneticisi, Microsoft Intune tarafından geliştirilen ve Intune ile kolayca yönetilebilen bir web tarayıcısı olan [Intune Managed Browser uygulamasını](../apps/app-configuration-managed-browser.md) dağıtabilir ve bunun için uygulama koruma ilkesi ayarlayabilir. BT yöneticisi, Intune ile yönetilen tüm uygulamalardaki web bağlantılarının Managed Browser uygulaması kullanılarak açılmasını gerekli kılabilir.
+Evet! BT Yöneticisi, Microsoft Edge uygulaması için uygulama koruma ilkesi dağıtabilir ve ayarlayabilir. BT Yöneticisi, Intune ile yönetilen uygulamalardaki tüm Web bağlantılarının Microsoft Edge uygulaması kullanılarak açılmasını gerektirebilir.
 
 ## <a name="app-experience-on-android"></a>Android’de uygulama deneyimi
 

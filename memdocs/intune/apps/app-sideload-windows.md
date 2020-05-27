@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/07/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0834ee2ac6cbd7460ed96024a9b30ab503fae9fb
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 8194c3fcc90942b791d5300a37b3c093a5229cc9
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078347"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989592"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Intune ile Windows cihazlarına dağıtmak için iş kolu uygulamalarını imzalayın
 
@@ -34,7 +34,7 @@ Bir Intune Yöneticisi olarak, Şirket Portalı uygulaması da dahil olmak üzer
 
 Windows 10 ' da, dışarıdan yükleme Windows 'un önceki sürümlerinden farklıdır:
 
-- Kurumsal bir ilke kullanarak dışarıdan yükleme için bir cihazın kilidini açabilirsiniz. Intune, "güvenilir uygulama yüklemesi" adlı bir cihaz yapılandırma ilkesi sağlar. Bunu olarak <allow> ayarlamak, appx uygulamasını imzalamak için kullanılan sertifikaya zaten güvenecek olan cihazlar için gereklidir.
+- Kurumsal bir ilke kullanarak dışarıdan yükleme için bir cihazın kilidini açabilirsiniz. Intune, "güvenilir uygulama yüklemesi" adlı bir cihaz yapılandırma ilkesi sağlar. Bunu olarak ayarlamak, <allow> appx uygulamasını imzalamak için kullanılan sertifikaya zaten güvenecek olan cihazlar için gereklidir.
 
 - Symantec telefon sertifikaları ve dışarıdan yükleme lisans anahtarları gerekli değildir. Ancak, şirket içi bir sertifika yetkilisi yoksa, bir genel sertifika yetkilisinden kod imzalama sertifikası edinmeniz gerekebilir. Daha fazla bilgi için bkz. [kod Imzalamaya giriş](https://docs.microsoft.com/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing).
 
@@ -53,7 +53,7 @@ Uygulamayı kullanıcılara veya cihazlara gereken şekilde dağıtırsanız, ı
 Windows 10 cihazınız sertifika yetkilisine zaten güvenmezse, appx paketinizi imzaladıktan ve Intune hizmetine yükledikten sonra, kod imzalama sertifikasını Intune portalına yüklemeniz gerekir:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Kiracı Yönetimi** > **bağlayıcıları ve belirteçleri** > **Windows Enterprise sertifikası**' na tıklayın.
+2. **Kiracı Yönetimi**  >  **bağlayıcıları ve belirteçleri**  >  **Windows Enterprise sertifikası**' na tıklayın.
 3. **Kod imzalama sertifika dosyası**altında bir dosya seçin.
 4. *. Cer* dosyanızı seçin ve **Aç**' a tıklayın.
 5. Sertifika dosyanızı Intune 'a eklemek için **karşıya yükle** ' ye tıklayın.
@@ -122,7 +122,7 @@ Windows 10 Şirket Portalı uygulaması bu şekilde imzalanır ve dağıtılırs
 
 Uygulamayı şu şekilde nasıl imzalayıp dağıtırsınız:
 
-1. Microsoft Intune Windows 10 Şirket Portalı uygulama Imzalama betiği ' nden [https://aka.ms/win10cpscript](https://aka.ms/win10cpscript)indirin.  Bu betik, Windows 10 için Windows SDK’nın ana bilgisayara yüklenmiş olmasını gerektirir. Windows 10 için Windows SDK indirmek için, adresini ziyaret [https://go.microsoft.com/fwlink/?LinkId=619296](https://go.microsoft.com/fwlink/?LinkId=619296)edin.
+1. Microsoft Intune Windows 10 Şirket Portalı uygulama Imzalama betiği ' nden indirin [https://aka.ms/win10cpscript](https://aka.ms/win10cpscript) .  Bu betik, Windows 10 için Windows SDK’nın ana bilgisayara yüklenmiş olmasını gerektirir. Windows 10 için Windows SDK indirmek için, adresini ziyaret edin [https://go.microsoft.com/fwlink/?LinkId=619296](https://go.microsoft.com/fwlink/?LinkId=619296) .
 2. Windows 10 Şirket Portalı uygulamasını yukarıda açıklandığı biçimde İş İçin Microsoft Mağazası'ndan indirin.  
 3. Betik üst bilgisinde açıklanan giriş parametrelerini (ayıklanmış hali aşağıdadır) kullanıp betiği çalıştırarak Windows 10 Şirket Portalı uygulamasını imzalayın. Bağımlılıkların betiğe geçirilmesi gerekmez. Bunlar, yalnızca uygulama Intune Yönetici Konsolu’na yüklenirken gereklidir.
 

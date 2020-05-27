@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 11/26/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ba3563a243b13b874608ad7a3ec918130e5bb80
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 33c57e5641934200120839ad48a9a4c8b8d0a8fa
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022713"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988890"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Kayıt durumu sayfası ayarlama
  
@@ -64,25 +64,25 @@ Ayrıca, her bir profilin öncelik sırasını aynı kullanıcıya yönelik çak
 
 Kayıt durumu sayfasını açmak için aşağıdaki adımları izleyin.
  
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar** > **Windows** > **Windows kayıt** > **kayıt durumu sayfası**' nı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar**  >  **Windows**  >  **Windows kayıt**  >  **kayıt durumu sayfası**' nı seçin.
 2. **Kayıt Durumu Sayfası** dikey penceresinde, **Varsayılan** > **Ayarlar**’ı seçin.
 3. **Uygulama ve profil yükleme ilerleyişini göster** için **Evet**’i seçin.
 4. Açmak istediğiniz diğer ayarları seçin ve **Kaydet**’i seçin.
 
 ## <a name="create-enrollment-status-page-profile-and-assign-to-a-group"></a>Kayıt durumu sayfası profili oluşturma ve gruba atama
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **Windows** > **Windows kayıt** > **kayıt durumu sayfası** > **Profil oluştur**' u seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **Windows**  >  **Windows kayıt**  >  **kayıt durumu sayfası**  >  **Profil oluştur**' u seçin.
 2. Bir **Ad** ve **Açıklama** sağlayın.
 3. **Oluştur**’u seçin.
 4. **Kayıt Durumu Sayfası** listesinde yeni profili seçin.
-5. **Atamaları** > **seçin grupları seçin** > bu profili benimsemek istediğiniz grupları seçin >**Kaydet**' **i seçin** > .
+5. **Atamaları**seçin  >  **grupları seçin** > bu profili benimsemek istediğiniz grupları seçin > Kaydet ' **i seçin**  >  **Save**.
 6. **Ayarlar** > bu profile uygulamak istediğiniz ayarları seçin > **Kaydet**’i seçin.
 
 ## <a name="set-the-enrollment-status-page-priority"></a>Kayıt durumu sayfası önceliğini ayarlama
 
 Bir kullanıcı birçok grupta olabilir ve birçok kayıt durumu sayfası profili bulunabilir. Bu tür çakışmaları işlemek için her bir profilin önceliklerini ayarlayabilirsiniz. Kaydetme sırasında, birisinin birden fazla kayıt durumu sayfası profili varsa, kaydolan cihaza yalnızca en yüksek öncelikli profil uygulanır.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar** > **Windows** > **Windows kayıt** > **kayıt durumu sayfası**' nı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar**  >  **Windows**  >  **Windows kayıt**  >  **kayıt durumu sayfası**' nı seçin.
 2. Listede profilin üzerine gelin.
 3. Üç dikey noktayı kullanarak, profili listede dilediğiniz konuma sürükleyin.
 
@@ -90,7 +90,7 @@ Bir kullanıcı birçok grupta olabilir ve birçok kayıt durumu sayfası profil
 
 Kullanıcının masaüstüne erişebilmesi için yüklenmesi gereken uygulamaları belirtebilirsiniz.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar** > **Windows** > **Windows kayıt** > **kayıt durumu sayfası**' nı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar**  >  **Windows**  >  **Windows kayıt**  >  **kayıt durumu sayfası**' nı seçin.
 2. Bir profil seçip **Ayarlar**'a tıklayın.
 3. **Uygulama ve profil yükleme ilerleyişini göster** için **Evet**'i seçin.
 4. **Tüm uygulamalar ve profiller yüklenene kadar cihaz kullanımını engelle** için **Evet**'i seçin.
@@ -203,7 +203,7 @@ Aşağıda bilinen sorunlar verilmiştir.
     - Cihaz kurulum aşamasından hesap kurulum aşamasına geçmeden önce kullanıcının kimlik bilgilerini tekrar girmesi gerekir
 - ESP uzun bir süre takılmış veya "tanımlama" aşamasını hiçbir zaman tamamlıyor. Intune, tanımlama aşamasında ESP ilkelerini hesaplar. Geçerli kullanıcıya bir Intune lisansı atanmış değilse bir cihaz, ESP ilkelerini hesaplama hiçbir şekilde tamamlanmayabilir.  
 - Microsoft Defender uygulama denetimi 'nin yapılandırılması, Autopilot sırasında yeniden başlatma istemi oluşmasına neden olur. Microsoft Defender uygulamasının (AppLocker CSP) yapılandırılması için yeniden başlatma gerekir. Bu ilke yapılandırıldığında, Autopilot sırasında cihazın yeniden başlatılmasına neden olabilir. Şu anda, yeniden başlatmayı bastırmayı veya ertelemeyi yapmanın bir yolu yoktur.
-- DeviceLock ilkesi (https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) bir ESP profilinin bir parçası olarak etkinleştirildiğinde, iki nedenden dolayı OOBE veya Kullanıcı Masaüstü otomatik oturum açma işlemi unexpectantly hatası verebilir.
+- DeviceLock ilkesi ( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) BIR ESP profilinin bir parçası olarak etkinleştirildiğinde, iki nedenden dolayı OOBE veya Kullanıcı Masaüstü otomatik oturum açma işlemi unexpectantly hatası verebilir.
   - Cihaz, ESP cihaz kurulum aşamasından çıkmadan önce yeniden başlatmadıysanız, kullanıcıdan Azure AD kimlik bilgilerini girmesi istenebilir. Bu istem, kullanıcının Windows ilk oturum açma animasyonunu gördüğü başarılı bir otomatik oturum açma yerine oluşur.
   - Kullanıcı Azure AD kimlik bilgilerini girdikten sonra, ancak ESP cihaz kurulum aşamasından çıkmadan önce yeniden oturum açma işlemi başarısız olur. Bu hata, ESP cihaz Kurulum aşaması hiç tamamlanmadığından oluşur. Geçici çözüm, cihazı sıfırlamadır.
 

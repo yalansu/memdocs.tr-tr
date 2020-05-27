@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/02/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f50005ace235c66b26ed441169a62cf73bae6d9
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: c145a4b7fa150a9d42c9bf20eca4f85f6356acf8
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764110"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988515"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Microsoft Intune ile Apple Volume Purchase Program aracılığıyla satın alınan iOS ve macOS uygulamalarını yönetme
 
@@ -142,11 +142,11 @@ Son kullanıcı, birkaç senaryoda VPP uygulama yüklemesi için istem alır. A�
 
 | # | Senaryo                                | Bir Apple VPP programına davet                              | Uygulama yükleme istemi | Apple kimliği istemi |
 |---|--------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------------------|
-| 1 | KCG – kullanıcı lisanslı (Kullanıcı kayıt cihazı değil)                             | E                                                                                               | E                                           | E                                 |
-| 2 | Şirket – kullanıcı lisanslı (denetimsiz cihaz)     | E                                                                                               | E                                           | E                                 |
-| 3 | Şirket – kullanıcı lisanslı (denetimli cihaz)         | E                                                                                               | N                                           | E                                 |
-| 4 | KCG – cihaz lisanslı                           | N                                                                                               | E                                           | N                                 |
-| 5 | ŞİRKET – cihaz lisanslı (denetimsiz cihaz)                           | N                                                                                               | E                                           | N                                 |
+| 1 | KCG – kullanıcı lisanslı (Kullanıcı kayıt cihazı değil)                             | Y                                                                                               | Y                                           | Y                                 |
+| 2 | Şirket – kullanıcı lisanslı (denetimsiz cihaz)     | Y                                                                                               | Y                                           | Y                                 |
+| 3 | Şirket – kullanıcı lisanslı (denetimli cihaz)         | Y                                                                                               | N                                           | Y                                 |
+| 4 | KCG – cihaz lisanslı                           | N                                                                                               | Y                                           | N                                 |
+| 5 | ŞİRKET – cihaz lisanslı (denetimsiz cihaz)                           | N                                                                                               | Y                                           | N                                 |
 | 6 | ŞİRKET – cihaz lisanslı (denetimli cihaz)                           | N                                                                                               | N                                           | N                                 |
 | 7 | Bilgi noktası modu (denetimli cihaz) – cihaz lisanslı | N                                                                                               | N                                           | N                                 |
 | 8 | Bilgi noktası modu (denetimli cihaz) – kullanıcı lisanslı   | --- | ---                                          | ---                                |

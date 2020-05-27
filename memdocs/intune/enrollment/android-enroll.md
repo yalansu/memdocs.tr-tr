@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 7/23/2019
-ms.topic: conceptual
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3d179af4a531134a543b070e5e70731231eda2c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a0739b27d5b2b6bb21809b2a9f109c894765ea7e
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79325490"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988570"
 ---
 # <a name="enroll-android-devices"></a>Android cihazlarını kaydetme
 
@@ -36,7 +36,7 @@ Bir Intune Yöneticisi olarak, Android cihazlarını aşağıdaki yollarla kayde
     - [**Android kurumsal tam olarak yönetilen**](android-fully-managed-enroll.md): şirkete ait, tek kullanıcı cihazları için özel olarak çalışır ve kişisel kullanım için kullanılır. Yöneticiler cihazın tamamını yönetebilir ve ilke denetimlerini iş profilleri için kullanılamaz hale getirebilirsiniz. 
 - Samsung KNOX Standard cihazlar ve [Zeköşeli cihazlar](../configuration/android-zebra-mx-overview.md)dahil olmak üzere [**Android Cihaz Yöneticisi**](android-enroll-device-administrator.md). 
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Mobil cihazların yönetimine hazırlık olarak, **Microsoft Intune**’a mobil cihaz yönetimi (MDM) yetkilisi ayarlamanız gerekir. Yönergeler için bkz. [MDM yetkilisini ayarlama](../fundamentals/mdm-authority-set.md). Bu öğeyi yalnızca mobil cihaz yönetimi için Intune’u ilk defa kurduğunuzda ayarlayabilirsiniz.
 

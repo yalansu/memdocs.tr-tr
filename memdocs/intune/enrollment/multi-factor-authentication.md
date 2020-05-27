@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ROBOTS: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b645b41a721063ddfea6019d726a3c232c8dd78
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8df3c23417f146821d6f9b73e8b68f59c71a31df
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327021"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988957"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Intune cihaz kayıtları için çok faktörlü kimlik doğrulaması isteme
 
@@ -50,7 +50,7 @@ Bir cihaz kaydedildiğinde MFA istemek için şu adımları izleyin:
 >[!Important]
 >Microsoft Intune kaydı için **cihaz tabanlı erişim kuralları** yapılandırmayın.
 
-1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar** > **koşullu erişim**' i seçin. *Intune* 'Dan erişilen koşullu erişim düğümü, *Azure AD*'den erişilen aynı düğümdür.
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar**  >  **koşullu erişim**' i seçin. *Intune* 'Dan erişilen koşullu erişim düğümü, *Azure AD*'den erişilen aynı düğümdür.
 2. **Yeni ilke**’yi seçin.
 3. **Yeni** ilkede, ilke için açıklayıcı bir ad yazın.
 4. **Atamalar** kısmında **Kullanıcılar ve gruplar**’ı seçin. 

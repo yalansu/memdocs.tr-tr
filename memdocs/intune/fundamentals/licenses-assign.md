@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 12/12/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8552bd6bb570c91e84acd40cd2b654696eca972
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: fe2625a7e13cc3082c156fcbf802c88d095b9859
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210358"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989828"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Cihazlarını Intune’a kaydedebilmeleri için kullanıcılara lisans atama
 
@@ -34,9 +34,9 @@ El ile kullanıcı eklediğinizde veya şirket içi Active Directory'nizden eşi
 
 Bulut tabanlı kullanıcıları el ile eklemek ve hem bulut tabanlı kullanıcı hesaplarına hem de şirket içi Active Directory Azure AD 'ye eşitlenen hesaplara lisans atamak için [Microsoft Endpoint Manager yönetim merkezini](https://go.microsoft.com/fwlink/?linkid=2109431) kullanabilirsiniz.
 
-1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **Kullanıcılar** > **tüm kullanıcılar** > bir Kullanıcı > **Lisans** > **ataması**seçin.
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **Kullanıcılar**  >  **tüm kullanıcılar** > bir Kullanıcı > **Lisans**  >  **ataması**seçin.
 
-2. **Intune** > **kaydetme**kutusunu seçin. Enterprise Mobility + Security E5 veya başka bir lisans kullanmak istiyorsanız, bunun yerine bu kutuyu seçin.
+2. **Intune**  >  **kaydetme**kutusunu seçin. Enterprise Mobility + Security E5 veya başka bir lisans kullanmak istiyorsanız, bunun yerine bu kutuyu seçin.
 
    ![Microsoft 365 Yönetim Merkezi ürün lisansları bölümünün ekran görüntüsü.](./media/licenses-assign/mem-assign-license.png)
 

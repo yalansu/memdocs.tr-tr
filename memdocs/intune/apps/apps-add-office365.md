@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/10/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d411950dce117aa9c99f806d2ef80796a2a2fc50
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: f8a0fba0f342995070b3408f4edc6b06d2012e7c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023274"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989532"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Microsoft Intune ile Windows 10 cihazlarına Office 365 uygulamaları ekleme
 
@@ -52,7 +52,7 @@ Uygulamaları atama, izleme, yapılandırma veya korumadan önce bunları Intune
 ## <a name="select-microsoft-365-apps"></a>Microsoft 365 uygulamaları seçin
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin.
+2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Uygulama türü seç** bölmesinin **Microsoft 365 uygulamalar** bölümünde **Windows 10** ' u seçin.
 4. **Seç**' e tıklayın. **Microsoft 365 ekleme uygulamaları** adımları görüntülenir.
 
@@ -111,7 +111,7 @@ Bu adımda, uygulama paketi hakkında bilgi sağlarsınız. Bu bilgiler, Intune'
     - **Paylaşımlı bilgisayar etkinleştirme kullanın**: Birden çok kullanıcı tek bir bilgisayarı kullanıyorsa bu seçeneği belirtin. Daha fazla bilgi için bkz. [Microsoft 365 uygulamalar için paylaşılan bilgisayar etkinleştirmeye genel bakış](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Uygulama son kullanıcı lisans sözleşmesini otomatik kabul edin**: Son kullanıcıların lisans sözleşmesini kabul etmesinin gerekli olmasını istemiyorsanız bunu seçin. Ardından Intune, sözleşmeyi otomatik olarak kabul eder.
     - **Diller**: Office, son kullanıcının bilgisayarına Windows ile yüklenmiş olan tüm dillerde otomatik olarak yüklenir. Uygulama paketiyle birlikte ilave diller yüklemek istiyorsanız bunu seçin. <p></p>
-        Intune üzerinden yönetilen Office 365 Pro Plus uygulamaları için ek diller dağıtabilirsiniz. Kullanılabilir diller listesi, dil paketinin **Tür** bilgisini içerir (çekirdek, kısmı ve yazım denetleme). Azure Portal **Microsoft Intune** > **uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin. **Uygulama Ekle** bölmesinin **uygulama türü** listesinde, **Microsoft 365 uygulamalar**altında **Windows 10** ' u seçin. **Uygulama paketi ayarları** bölmesinde **Diller** ' i seçin. Daha fazla bilgi için bkz. [Microsoft 365 uygulamalarda dil dağıtmaya genel bakış](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
+        Intune üzerinden yönetilen Office 365 Pro Plus uygulamaları için ek diller dağıtabilirsiniz. Kullanılabilir diller listesi, dil paketinin **Tür** bilgisini içerir (çekirdek, kısmı ve yazım denetleme). Azure Portal **Microsoft Intune**  >  **uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin. **Uygulama Ekle** bölmesinin **uygulama türü** listesinde, **Microsoft 365 uygulamalar**altında **Windows 10** ' u seçin. **Uygulama paketi ayarları** bölmesinde **Diller** ' i seçin. Daha fazla bilgi için bkz. [Microsoft 365 uygulamalarda dil dağıtmaya genel bakış](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
 2. **İleri** ' ye tıklayarak **kapsam etiketleri** sayfasını görüntüleyin.
 
 ## <a name="step-2---option-2-configure-app-suite-using-xml-data"></a>2. adım-(**2. seçenek**) App SUITE 'i XML verilerini kullanarak yapılandırma 
@@ -123,7 +123,7 @@ Bu adımda, uygulama paketi hakkında bilgi sağlarsınız. Bu bilgiler, Intune'
 1. Yapılandırma XML 'niz eklendi.
 
     > [!NOTE]
-    > Ürün KIMLIĞI Iş (`O365BusinessRetail`) veya ProPlus (`O365ProPlusRetail`) olabilir. Ancak, XML verilerini kullanarak yalnızca Microsoft 365 Apps for Business Edition uygulama paketini yapılandırabilirsiniz. Microsoft Office 365 ProPlus 'ın **kurumsal Microsoft 365 uygulamalar**olarak yeniden adlandırıldığını unutmayın.
+    > Ürün KIMLIĞI Iş ( `O365BusinessRetail` ) veya ProPlus ( `O365ProPlusRetail` ) olabilir. Ancak, XML verilerini kullanarak yalnızca Microsoft 365 Apps for Business Edition uygulama paketini yapılandırabilirsiniz. Microsoft Office 365 ProPlus 'ın **kurumsal Microsoft 365 uygulamalar**olarak yeniden adlandırıldığını unutmayın.
 
 2. **İleri** ' ye tıklayarak **kapsam etiketleri** sayfasını görüntüleyin.
 
@@ -190,7 +190,7 @@ Hem Intune hem de ağ altyapısının beklendiği gibi çalıştığını sonuç
 - Office 'in mevcut MSI sürümleri cihazdan düzgün şekilde kaldırıldı. Intune, Office MSI ile uyumlu olmayan Office Tıkla-Çalıştır 'ı kullanır. Bu davranış, bu belgede daha da bahsediliyor:<br>
   [Aynı bilgisayarda Tıkla-Çalıştır ve Windows Installer ile yüklenen Office desteklenmez](https://support.office.com/article/office-installed-with-click-to-run-and-windows-installer-on-same-computer-isn-t-supported-30775ef4-fa77-4f47-98fb-c5826a6926cd)
 - Oturum açma kullanıcısının cihaza uygulama yüklemesi için izni olmalıdır.
-- Windows Olay Görüntüleyicisi günlük **Windows günlükleri** -> **uygulamalarını**temel alan bir sorun olmadığını onaylayın.
+- Windows Olay Görüntüleyicisi günlük **Windows günlükleri**uygulamalarını temel alan bir sorun olmadığını onaylayın  ->  **Applications**.
 - Yükleme sırasında Office yükleme ayrıntılı günlüklerini yakalayın. Bunu yapmak için şu adımları uygulayın:<br>
     1. Hedef makinelerde Office yüklemesi için ayrıntılı günlük kaydını etkinleştirin. Bunu yapmak için, kayıt defterini değiştirmek için aşağıdaki komutu çalıştırın:<br>
         `reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v LogLevel /t REG_DWORD /d 3`<br>
@@ -210,7 +210,7 @@ Karşınıza çıkabilecek yaygın hata kodları ve anlamları, aşağıdaki tab
 
 | Durum | Aşama | Açıklama |
 |--------------------------------------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1460 (ERROR_TIMEOUT) | İndirme | Office Dağıtım Aracı’nı indirme başarısız |
+| 1460 (ERROR_TIMEOUT) | İndir | Office Dağıtım Aracı’nı indirme başarısız |
 | 13 (ERROR_INVALID_DATA) | - | İndirilen Office Dağıtım Aracı’nın imzası doğrulanamıyor |
 | CertVerifyCertificateChainPolicy hata kodu | - | İndirilen Office Dağıtım Aracı için sertifika denetimi başarısız |
 | 997 | Süren İş | Yükleme |

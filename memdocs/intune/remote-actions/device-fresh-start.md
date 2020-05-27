@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac718ee2351260f79ae91882c71373111900d8fd
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: d7003bf0aa943eab6d884b55c511fea5dddeae8e
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254750"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989932"
 ---
 # <a name="use-fresh-start-to-reset-windows-10-devices-with-intune"></a>Windows 10 cihazlarını Intune ile sıfırlamak için Fresh Start kullanma
 
@@ -30,7 +30,7 @@ ms.locfileid: "82254750"
 
 **Yeni başlangıç** aygıtı eylemi, Windows 10, sürüm 1709 veya sonraki sürümleri ÇALıŞTıRAN bir bilgisayarda yüklü tüm uygulamaları kaldırır. Yeni Başlangıç, genellikle yeni bir bilgisayara önceden yüklenmiş (OEM) uygulamaları kaldırmaya yardımcı olur. 
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve **cihazlar** > **tüm cihazlar**' ı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve **cihazlar**  >  **tüm cihazlar**' ı seçin.
 2. Yönettiğiniz cihazların listesinden bir Windows 10 masaüstü cihazını seçin.
 3. **Yeni Başlangıç**'a tıklayın. 
 4. **Bu cihazdaki kullanıcı verilerini sakla**'yı seçerek:

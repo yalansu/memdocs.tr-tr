@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/11/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28ce4e7d80e79f752bded8f0cdf03494aa629e1b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65ecc658b0a63b943a1008c879ae63cfc2c4e8a1
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80233459"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988734"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Yönetilen iOS/ıpados cihazları için uygulama yapılandırma ilkeleri ekleme
 
@@ -51,7 +51,7 @@ Uygulama yapılandırma ilkenize dahil edilen grupları seçtikten sonra, dışl
 ## <a name="create-an-app-configuration-policy"></a>Uygulama yapılandırma ilkesi oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **uygulama yapılandırma ilkeleri** > **Add** > **yönetilen cihazlar**Ekle ' yi seçin. **Yönetilen cihazlar** ve **yönetilen uygulamalar**arasından seçim yapabileceğiniz unutulmamalıdır. Daha fazla bilgi için bkz. [uygulama yapılandırmasını destekleyen uygulamalar](app-configuration-policies-overview.md#apps-that-support-app-configuration).
+2. **Uygulamalar**  >  **uygulama yapılandırma ilkeleri**  >  **Add**  >  **yönetilen cihazlar**Ekle ' yi seçin. **Yönetilen cihazlar** ve **yönetilen uygulamalar**arasından seçim yapabileceğiniz unutulmamalıdır. Daha fazla bilgi için bkz. [uygulama yapılandırmasını destekleyen uygulamalar](app-configuration-policies-overview.md#apps-that-support-app-configuration).
 3. **Temel bilgiler** sayfasında, aşağıdaki ayrıntıları ayarlayın:
     - **Ad** - Azure portalında görünen profil adı.
     - **Açıklama** - Azure portalında görünen profil açıklaması.
@@ -108,7 +108,7 @@ Microsoft Intune, bir uygulamaya özgü yapılandırma ayarları sağlar. Micros
 
 Microsoft Intune Yöneticisi olarak, yönetilen cihazlarda hangi kullanıcı hesaplarının Microsoft uygulamalarına ekleneceğini denetleyebilirsiniz. Erişimi yalnızca izin verilen kullanıcı hesaplarıyla sınırlayabilecek ve kayıtlı cihazlarda kişisel hesapları engelleyebilirsiniz. İOS/ıpados cihazları için aşağıdaki anahtar/değer çiftlerini kullanın:
 
-| **Anahtar** | **Deðerler** |
+| **Anahtar** | **Değerler** |
 |----|----|
 | IntuneMAMAllowedAccountsOnly | <ul><li>**Enabled**: İzin verilen tek hesap, [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) anahtarıyla tanımlanan yönetilen kullanıcı hesabıdır.</li><li>**Disabled** (veya **Enabled** ile eşleşmeyen bir değer): Tüm hesaplara izin verilir.</li></ul> |
 | IntuneMAMUPN | <ul><li>Uygulamada oturum açmaya izin verilen hesabın UPN 'si.</li><li> Intune'a kayıtlı cihazlar için <code>{{userprincipalname}}</code> belirteci kayıtlı kullanıcı hesabını temsil etmek için kullanılabilir.</li></ul>  |
@@ -174,23 +174,23 @@ Intune, bir özellik listesinde aşağıdaki veri türlerini destekler:
 ### <a name="tokens-used-in-the-property-list"></a>Özellik listesinde kullanılan belirteçler
 
 Ayrıca, Intune özellik listesinde aşağıdaki belirteç türlerini destekler:
-- \{\{userPrincipalName\}\}— örneğin **John\@contoso.com**
-- \{\{posta\}\}— örneğin **John\@contoso.com**
+- \{\{userPrincipalName \} \} — örneğin **John \@ contoso.com**
+- \{\{posta \} \} — örneğin **John \@ contoso.com**
 - \{\{partialupn\}\}—örneğin, **John**
-- \{\{AccountId\}\}— Örneğin, **fc0dc142-71d8-4B12-bbea-bae2a8514c81**
+- \{\{AccountId \} \} — Örneğin, **fc0dc142-71d8-4B12-bbea-bae2a8514c81**
 - \{\{deviceid\}\}—örneğin, **b9841cd9-9843-405f-be28-b2265c59ef97**
-- \{\{Kullanıcı\}\}kimliği — Örneğin, **3ec2c00f-B125-4519-acf0-302ac3761822**
-- \{\{Kullanıcı\}\}adı — örneğin, **John tikan**
-- \{\{SerialNumber\}\}— Örneğin, **F4KN99ZUG5V2** (iOS/ıpados cihazları için)
-- \{\{serialnumberlast4digits\}\}— Örneğin, **G5V2** (iOS/ıpados cihazları için)
+- \{\{Kullanıcı kimliği \} \} — Örneğin, **3ec2c00f-B125-4519-acf0-302ac3761822**
+- \{\{Kullanıcı adı \} \} — Örneğin, **John tikan**
+- \{\{SerialNumber \} \} — Örneğin, **F4KN99ZUG5V2** (iOS/ıpados cihazları için)
+- \{\{serialnumberlast4digits \} \} — Örneğin, **G5V2** (iOS/ıpados cihazları için)
 - \{\{aaddeviceid\}\}—örneğin **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 
 ## <a name="configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices"></a>Şirket Portalı uygulamasını iOS ve ıpados DEP cihazlarını destekleyecek şekilde yapılandırma
 
 DEP (Apple Aygıt Kayıt Programı) kayıtları, Şirket Portalı uygulamasının App Store sürümü ile uyumlu değildir. Ancak, aşağıdaki adımları kullanarak Şirket Portalı uygulamasını iOS/ıpados DEP cihazlarını destekleyecek şekilde yapılandırabilirsiniz.
 
-1. Intune 'da, gerekirse, **Intune** > **uygulamalarına** > **tüm uygulamalar** > **Ekle**' ye giderek Intune şirket portalı uygulamasını ekleyin.
-2. Şirket portalı uygulaması için bir uygulama yapılandırma ilkesi oluşturmak üzere **uygulamalar** > **uygulama yapılandırma ilkeleri**' ne gidin.
+1. Intune 'da, gerekirse, **Intune**  >  **uygulamalarına**  >  **tüm uygulamalar**  >  **Ekle**' ye giderek Intune şirket portalı uygulamasını ekleyin.
+2. **Apps**  >  Şirket portalı uygulaması için bir uygulama yapılandırma ilkesi oluşturmak üzere uygulamalar**uygulama yapılandırma ilkeleri**' ne gidin.
 3. Aşağıda XML ile bir uygulama yapılandırma ilkesi oluşturun. Uygulama yapılandırma ilkesi oluşturma hakkında daha fazla bilgi ve XML verilerinin girilmesi, [yönetilen iOS/ıpados cihazları için uygulama yapılandırma Ilkeleri ekleme](app-configuration-policies-use-ios.md)konusunda daha fazla bilgi bulunabilir.
 
     ``` xml

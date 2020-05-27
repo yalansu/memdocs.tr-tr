@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/26/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 548174cfa891e832f9392604cca8347493db3dab
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 41f52f899f8cb370cd540ddc6bc24120261fb6e4
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80323561"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988475"
 ---
 # <a name="how-to-manage-iosipados-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Microsoft Intune ile toplu satın alma programı aracılığıyla satın aldığınız iOS/ıpados eBook 'larını yönetme
 
@@ -58,7 +58,7 @@ Başlamadan önce, Apple'dan bir VPP belirteci alın ve Intune hesabınıza yük
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Apple VPP belirtecini almak ve karşıya yüklemek için
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Kiracı Yönetimi** > **bağlayıcıları ' nı seçin ve** > **Apple VPP belirteçlerini**belirteçler yapın.
+2. **Kiracı Yönetimi**  >  **bağlayıcıları ' nı seçin ve**  >  **Apple VPP belirteçlerini**belirteçler yapın.
 3. VPP belirteçleri listesi bölmesinde **Oluştur**’a tıklayın.
 5. **Yeni VPP Belirteci** bölmesinde aşağıdaki bilgileri girin:
     - **VPP belirteç dosyası** - İş İçin Volume Purchase Program veya Eğitim İçin Volume Purchase Program’e kaydolduğunuzdan emin olun. Ardından hesabınızın Apple VPP belirtecini indirin ve buradan seçin.
@@ -73,7 +73,7 @@ Belirteç, belirteçler listesi bölmesinde görüntülenir.
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Toplu satın alınmış bir uygulamayı atamak için
 
-1. **Uygulamalar** > **eBooks** > **tüm e**-kitapları ' nı seçin.
+1. **Uygulamalar**  >  **eBooks**  >  **tüm e**-kitapları ' nı seçin.
 2. Kitap listesi bölmesinde, atamak istediğiniz kitabı ve daha sonra ‘**...**’ > **Grup Ata**’yı seçin.
 3. <*kitap adı*> - **Atanan Gruplar** bölmesinde **Yönet** > **Atanan Gruplar**'ı seçin.
 4. **Grupları Ata**'yı, ardından **Grup seç** bölmesinde kitabı atamak istediğiniz Azure AD gruplarını seçin. Cihaz grupları henüz desteklenmemektedir.

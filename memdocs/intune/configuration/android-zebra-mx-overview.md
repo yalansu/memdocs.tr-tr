@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/18/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbb8e5644390c589756af5a69f2fdd5a829866a1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 077318d4b55c7e1f2a83864aba51e2282630b9fb
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084017"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990140"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Microsoft Intune'da Zebra Mobility Uzantılarını içeren Zebra cihazlarını kullanma ve yönetme
 
@@ -134,7 +134,7 @@ Dosyayı test ettiğinizde, sonraki adım Intune'u kullanarak profili cihazlara 
 Intune'da cihaz yapılandırma profili oluşturun:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Ad**: Yeni profil için açıklayıcı bir ad girin.
@@ -143,14 +143,14 @@ Intune'da cihaz yapılandırma profili oluşturun:
     - **Profil türü**: **MX profili seçin (yalnızca zeköşeli)**.
 
 4. **.xml biçiminde MX profili** alanında [StageNow'dan dışarı aktardığınız](#step-4-create-a-device-management-profile-in-stagenow) XML profil dosyasını ekleyin (bu makalede).
-5. Değişikliklerinizi kaydetmek için **Tamam** > **Oluştur** ' u seçin. İlke oluşturulur ve listede gösterilir.
+5. **OK**  >  Değişikliklerinizi kaydetmek için Tamam**Oluştur** ' u seçin. İlke oluşturulur ve listede gösterilir.
 
     > [!TIP]
     > Güvenlik nedenleriyle, kaydettikten sonra profil XML metnini görmezsiniz. Metin şifrelenir ve siz yalnızca yıldız işaretleri (`****`) görürsünüz. MX profillerini Intune'a eklemeden önce, başvurabilmek için bu profillerin kopyalarını kaydetmeniz önerilir.
 
 Profil oluşturulur ancak henüz herhangi bir işlem gerçekleştirmez. Ardından [profili atayın](device-profile-assign.md) ve [durumunu izleyin](device-profile-monitor.md).
 
-Cihazın yapılandırma güncelleştirmelerini bir sonraki denetleyişinde MX profili cihaza dağıtılır. Cihazlar kaydedildiğinde ve ardından yaklaşık her 8 saatte bir Intune'la eşitlenir. Ayrıca [Intune'da eşitlemeyi zorlayabilirsiniz](../remote-actions/device-sync.md). Ya da cihazda, **uygulama** > **ayarları** > **eşitlemesini**Şirket Portalı açın. 
+Cihazın yapılandırma güncelleştirmelerini bir sonraki denetleyişinde MX profili cihaza dağıtılır. Cihazlar kaydedildiğinde ve ardından yaklaşık her 8 saatte bir Intune'la eşitlenir. Ayrıca [Intune'da eşitlemeyi zorlayabilirsiniz](../remote-actions/device-sync.md). Ya da cihazda, **uygulama**  >  **ayarları**  >  **eşitlemesini**Şirket Portalı açın. 
 
 ## <a name="update-a-zebra-mx-configuration-after-its-assigned"></a>Atandıktan sonra Zeköşeli MX yapılandırmasını güncelleştirme
 

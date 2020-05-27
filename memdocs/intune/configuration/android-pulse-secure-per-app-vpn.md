@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/19/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d58ab666929e1e28cab4e19f2e2cec668f428452
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 367ac927650ebf08c245b1ff554ad01db3bf3792
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80083881"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990170"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Microsoft Intune özel profili kullanarak Android cihazları için uygulama başına VPN profili oluşturma
 
@@ -40,7 +40,7 @@ Intune tarafından yönetilen Android 5.0 ve üzeri cihazlar için uygulama baş
 ## <a name="step-1-create-a-vpn-profile"></a>1. Adım: VPN profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Platform**: **Android Cihaz Yöneticisi**' ni seçin.
@@ -64,7 +64,7 @@ Intune tarafından yönetilen Android 5.0 ve üzeri cihazlar için uygulama baş
 ## <a name="step-2-create-a-custom-configuration-policy"></a>2. Adım: Özel yapılandırma ilkesi oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Ad**: özel profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, **tüm şirket Için özel OMA-URI ANDROID VPN profilidir**.
@@ -72,13 +72,13 @@ Intune tarafından yönetilen Android 5.0 ve üzeri cihazlar için uygulama baş
     - **Platform**: **Android Cihaz Yöneticisi**' ni seçin.
     - **Profil türü**: **özel**' i seçin.
 
-4. **Ayarları** > **Yapılandır**' ı seçin.
+4. **Ayarları**  >  **Yapılandır**' ı seçin.
 5. **Özel OMA-URI Ayarları** bölmesinde **Ekle**’yi seçin.
     - **Ad**: ayarınız için bir ad girin.
     - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
-    - **OMA-URI**: ENTER `./Vendor/MSFT/VPN/Profile/*Name*/PackageList`, burada *Name* , 1. adımda not ettiğiniz bağlantı adıdır. Bu örnekte, dize olur `./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/PackageList`.
+    - **OMA-URI**: ENTER `./Vendor/MSFT/VPN/Profile/*Name*/PackageList` , burada *Name* , 1. adımda not ettiğiniz bağlantı adıdır. Bu örnekte, dize olur `./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/PackageList` .
     - **Veri türü**: **dize**girin.
-    - **Değer**: profille ilişkilendirilecek paketlerin noktalı virgülle ayrılmış bir listesini girin. Örneğin, Excel 'In ve Google Chrome tarayıcısının VPN bağlantısını kullanmasını istiyorsanız, girin `com.microsoft.office.excel;com.android.chrome`.
+    - **Değer**: profille ilişkilendirilecek paketlerin noktalı virgülle ayrılmış bir listesini girin. Örneğin, Excel 'In ve Google Chrome tarayıcısının VPN bağlantısını kullanmasını istiyorsanız, girin `com.microsoft.office.excel;com.android.chrome` .
 
     > [!div class="mx-imgBorder"]
     >![Örnek Android Cihaz Yöneticisi uygulama başına VPN özel ilkesi](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
@@ -89,7 +89,7 @@ VPN bağlantısını *kullanamaz* uygulamaların bir listesini girmek için **ka
 
 1. **Özel OMA-URI Ayarları** bölmesinde **Ekle**’yi seçin.
 2. Bir ayar adı girin.
-3. **OMA-URI**' de girin `./Vendor/MSFT/VPN/Profile/*Name*/Mode`, burada *Name* , 1. adımda not ettiğiniz VPN profili adıdır. Örneğimizde, dize olur `./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/Mode`.
+3. **OMA-URI**' de girin `./Vendor/MSFT/VPN/Profile/*Name*/Mode` , burada *Name* , 1. adımda not ettiğiniz VPN profili adıdır. Örneğimizde, dize olur `./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/Mode` .
 4. **Veri türü**' nde **dize**girin.
 5. **Değer** alanına **KARA LİSTE** veya **BEYAZ LİSTE** girin.
 

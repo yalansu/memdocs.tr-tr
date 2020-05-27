@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/31/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 060fa4af918df05588a858a3883d0bbb96a99334
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: d246ea2811e0fb561bc623ae29d3fb5ef0de66f9
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254682"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989382"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Intune’da Windows 10 yazılım güncelleştirmelerini yönetme
 
@@ -40,7 +40,7 @@ Cihaz gruplarına Windows 10 güncelleştirme halkaları ve Windows 10 özellik 
 
 Daha fazla bilgi için bkz. [İşletmeler için Windows Update'i kullanarak güncelleştirmeleri yönetme](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Intune 'da Windows 10 cihazları için Windows güncelleştirmelerini kullanmak üzere aşağıdaki önkoşulların karşılanması gerekir.
 
@@ -63,7 +63,7 @@ Intune 'da Windows 10 cihazları için Windows güncelleştirmelerini kullanmak 
   > - Windows 10 Mobile  
   > - Windows 10 Enterprise LTSC. Windows Update for Business (WUfB) Şu anda *uzun süreli hizmet kanalı* sürümlerini desteklememektedir. WSUS veya Configuration Manager gibi alternatif düzeltme eki uygulama yöntemlerini kullanmayı planlayın.
 
-- Windows cihazlarında **geri bildirim & tanılama** > **tanılaması ve kullanım verilerinin** **temel**, **Gelişmiş**veya **tam**olarak ayarlanması gerekir.
+- Windows cihazlarında **geri bildirim & tanılama**  >  **tanılaması ve kullanım verilerinin** **temel**, **Gelişmiş**veya **tam**olarak ayarlanması gerekir.
 
   Windows 10 cihazları için *Tanılama ve kullanım verileri* ayarını el ile yapılandırabilir veya Windows 10 ve üzeri Için bir Intune cihaz kısıtlama profili kullanabilirsiniz. Bir cihaz kısıtlama profili kullanıyorsanız, **kullanım verilerini paylaşma** [cihaz kısıtlama ayarını](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry) en az **temel**olarak ayarlayın. Bu ayar, Windows 10 veya üzeri için bir cihaz kısıtlama ilkesi yapılandırdığınızda **Raporlama ve telemetri** kategorisi altında bulunur.
 
@@ -79,7 +79,7 @@ Windows 10 güncelleştirme halkaları [kapsam etiketlerini](../fundamentals/sco
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihazları** > **seçin Windows** > **Windows 10 güncelleştirme halkaları** > **Oluştur**.
+2. **Cihazları**seçin  >  **Windows**  >  **Windows 10 güncelleştirme halkaları**  >  **Oluştur**.
 
 3. *Temel bilgiler*altında bir ad, açıklama (isteğe bağlı) belirtin ve ardından **İleri**' yi seçin.
   ![Güncelleştirme halkası oluşturma](./media/windows-update-for-business-configure/basics-tab.png)
@@ -96,7 +96,7 @@ Windows 10 güncelleştirme halkaları [kapsam etiketlerini](../fundamentals/sco
 
 ### <a name="manage-your-windows-10-update-rings"></a>Windows 10 güncelleştirme Halkalarınızı yönetin
 
-Portalda, **cihazlar** > **Windows** > **Windows 10 güncelleştirme halkaları** ' na gidin ve yönetmek istediğiniz ilkeyi seçin.  İlke, **genel bakış** sayfasında açılır.
+Portalda, **cihazlar**  >  **Windows**  >  **Windows 10 güncelleştirme halkaları** ' na gidin ve yönetmek istediğiniz ilkeyi seçin.  İlke, **genel bakış** sayfasında açılır.
 
 Bu sayfadan, halkalar atama durumunu görüntüleyebilir ve güncelleştirme halkasını yönetmek için genel bakış bölmesinin üst kısmından aşağıdaki eylemleri seçebilirsiniz:
 
@@ -155,7 +155,7 @@ Bir güncelleştirme halkası duraklatıldığında, bu güncelleştirme halkas�
 2. **Özelliklerin** veya **kalite** güncelleştirmelerinin her birini sürdürmesini sağlamak için kullanılabilir seçenekler arasından seçim yapın ve ardından **Tamam**' ı seçin.
 3. Bir güncelleştirme türü için duraklama 'yı genişlettikten sonra, diğer güncelleştirme türünü genişletmek için yeniden Genişlet seçeneğini belirleyebilirsiniz.
 
-#### <a name="uninstall"></a>Kaldır  
+#### <a name="uninstall"></a>Kaldırma  
 
 Bir Intune Yöneticisi, etkin veya duraklatılmış bir güncelleştirme halkası için en son *özellik* güncelleştirmesini veya en son *kalite* güncelleştirmesini kaldırmak (geri almak) için **kaldırmayı** kullanabilir. Bir tür kaldırıldıktan sonra, diğer türü kaldırabilirsiniz. Intune, kullanıcıların güncelleştirmeleri kaldırma yeteneğini desteklemez veya yönetemez.  
 
@@ -177,7 +177,7 @@ Kaldırma kullandığınızda aşağıdakileri göz önünde bulundurun:
 
 - Özellik veya kalite güncelleştirmeleri için kaldırma özelliğinin kullanılması, Windows 10 makinelerinizde önceki güncelleştirmeyi geri yüklemek için bir ilke tetikler.
 
-- Bir Windows 10 cihazında, kalite güncelleştirmesi başarıyla geri alındıktan sonra cihaz kullanıcıları **Windows ayarları** > **güncelleştirmeleri** > **güncelleştirme geçmişi**' nde listelenen güncelleştirmeyi görmeye devam eder.
+- Bir Windows 10 cihazında, kalite güncelleştirmesi başarıyla geri alındıktan sonra cihaz kullanıcıları **Windows ayarları**  >  **güncelleştirmeleri**  >  **güncelleştirme geçmişi**' nde listelenen güncelleştirmeyi görmeye devam eder.
 
 - Özellikle özellik güncelleştirmeleri için güncelleştirmeyi kaldırabilmeniz için zaman 2-60 gün sınırlı olur. Bu süre güncelleştirme halkaları güncelleştirme ayarı, **özellik güncelleştirme kaldırma süresi (2 – 60 gün)** tarafından yapılandırılır. Güncelleştirme, yapılandırılan kaldırma süresinden daha uzun bir süre için yüklendikten sonra bir cihaza yüklenmiş bir özellik güncelleştirmesini geri alamazsınız.
 
@@ -226,7 +226,7 @@ Intune 'da Windows 10 özellik güncelleştirmelerini kullanmak için aşağıda
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihazları** > **seçin Windows** > **Windows 10 özellik güncelleştirmeleri** > **Oluştur**.
+2. **Cihazları**seçin  >  **Windows**  >  **Windows 10 özellik güncelleştirmeleri**  >  **Oluştur**.
 
 3. **Temel bilgiler**altında bir ad, açıklama (isteğe bağlı) belirtin ve **dağıtılacak Özellik Güncelleştirmesi**için, istediğiniz özellik kümesiyle Windows sürümünü seçin ve ardından **İleri**' yi seçin.
 
@@ -236,7 +236,7 @@ Intune 'da Windows 10 özellik güncelleştirmelerini kullanmak için aşağıda
 
 ### <a name="manage-windows-10-feature-updates"></a>Windows 10 özellik güncelleştirmelerini yönetme
 
-Yönetim merkezinde, **cihazlar** > **Windows** > **Windows 10 özellik güncelleştirmeleri** ' ne gidin ve yönetmek istediğiniz ilkeyi seçin. İlke, **genel bakış** bölmesi olarak açılır.
+Yönetim merkezinde, **cihazlar**  >  **Windows**  >  **Windows 10 özellik güncelleştirmeleri** ' ne gidin ve yönetmek istediğiniz ilkeyi seçin. İlke, **genel bakış** bölmesi olarak açılır.
 
 Bu bölmeden şunları yapabilirsiniz:
 

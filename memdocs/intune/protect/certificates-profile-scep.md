@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/21/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe91e36ab5cc66fe81c77401a2a0374f6577b202
-ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
+ms.openlocfilehash: dfa830f1e7bfd87c20c1aed78b933f81e96b8dca
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82862386"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988656"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Intune 'da SCEP sertifika profilleri oluşturma ve atama
 
@@ -34,7 +34,7 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. Seçin ve **cihazlar** > **yapılandırma profilleri** > **Profil oluştur**' a gidin.
+2. Seçin ve **cihazlar**  >  **yapılandırma profilleri**  >  **Profil oluştur**' a gidin.
 
 3. Aşağıdaki özellikleri girin:
    - **Platform**: cihazlarınızın platformunu seçin.
@@ -76,7 +76,7 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
      Intune 'un sertifika isteğinde konu adını otomatik olarak nasıl oluşturduğunu seçin. Konu adı biçimi için seçenekler, **Kullanıcı** veya **cihaz**' ı seçtiğiniz sertifika türüne bağlıdır.
 
      > [!NOTE]
-     > Elde edilen sertifika [known issue](#avoid-certificate-signing-requests-with-escaped-special-characters) imzalama ISTEĞINDEKI (CSR) konu adı, kaçış karakteri olarak aşağıdaki karakterlerden birini içerdiğinde (bir ters eğik çizgiyle \\devam eder), sertifika almak için SCEP kullanmanın bilinen bir sorunu vardır:
+     > Elde edilen sertifika Imzalama Isteğindeki (CSR) konu adı, kaçış karakteri olarak aşağıdaki karakterlerden birini içerdiğinde (bir ters eğik çizgiyle devam eder), sertifika almak için SCEP kullanmanın [bilinen bir sorunu](#avoid-certificate-signing-requests-with-escaped-special-characters) vardır \\ :
      > - \+
      > - ;
      > - ,
@@ -95,7 +95,7 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
        - **Özel**: Bu seçeneği işaretlediğinizde bir **Özel** metin kutusu da gösterilir. Bu alanı, değişkenler dahil özel bir konu adı biçimi girmek için kullanın. Özel biçim, şu iki değişkeni destekler: **Ortak Ad (CN)** ve **E-posta (E)**. **Ortak Ad (CN)** şu iki değerden biri olarak ayarlanabilir:
 
          - **CN = {{username}}**: kullanıcının Kullanıcı adı (örneğin, ocetikan).
-         - **CN = {{userPrincipalName}}**: kullanıcının Kullanıcı asıl adı, örneğin janedoe@contoso.com.\*
+         - **CN = {{userPrincipalName}}**: kullanıcının Kullanıcı asıl adı, örneğin janedoe@contoso.com .\*
          - **CN={{AAD_Device_ID}}**: Azure Active Directory’ye (AD) yeni bir cihaz kaydettiğinizde atanan bir kimlik. Bu kimlik genellikle Azure AD’de kimlik doğrulamak için kullanılır.
          - **CN = {{SERIALNUMBER}}**: genellikle üretici tarafından bir cihazı tanımlamak için kullanılan benzersiz seri numarası (sn).
          - **CN = {{ımekarmsayı}}**: bir cep telefonu tanımlamak Için kullanılan uluslararası mobil ekipman KIMLIĞI (IMEI) benzersiz numarası.
@@ -112,7 +112,7 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
 
          Bu örnekte, CN ve E değişkenlerini kullanan bir konu adı biçimi ve kuruluş birimi, kuruluş, konum, durum ve ülke değerleri için dizeler bulunur. [CertStrToName işlevi](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx), bu işlevi ve desteklenen dizelerini açıklar.
          
-         \*Yalnızca Android cihaz sahibi profilleri için **CN = {{userPrincipalName}}** ayarı çalışmayacak. Android cihaz sahibi yalnızca kullanıcı olmayan cihazlar için kullanılabilir, bu profil kullanıcının Kullanıcı asıl adını alamaz. Kullanıcılar için bu seçeneğe gerçekten ihtiyaç duyuyorsanız, şu şekilde bir geçici çözüm kullanabilirsiniz: **CN = {{username}\@} contoso.com** , Kullanıcı adı ve el ile eklediğiniz etki alanı gibijanedoe@contoso.com
+         \*Yalnızca Android cihaz sahibi profilleri için **CN = {{userPrincipalName}}** ayarı çalışmayacak. Android cihaz sahibi yalnızca kullanıcı olmayan cihazlar için kullanılabilir, bu profil kullanıcının Kullanıcı asıl adını alamaz. Kullanıcılar için bu seçeneğe gerçekten ihtiyaç duyuyorsanız, şu şekilde bir geçici çözüm kullanabilirsiniz: **CN = {{username}} \@ contoso.com** , Kullanıcı adı ve el ile eklediğiniz etki alanı gibijanedoe@contoso.com
 
       - **Cihaz sertifika türü**
 
@@ -170,11 +170,11 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
         - **{{Fullyıqualifieddomainname}}**
         - **{{MEıD}}**
 
-        Bir özniteliğe ilişkin bir değer belirtmek için, değişken adını küme ayraçları ile, sonra da bu değişken için olan metinle birlikte ekleyin. Örneğin, DNS özniteliği için bir değer **{{Azureaddeviceıd}}. domain. com** ' u *. domain.com* ise metindir. *Kullanıcı1* adlı bir Kullanıcı Için e-posta adresi {{Fullyıqualifieddomainname}}User1@Contoso.comolarak görünebilir.
+        Bir özniteliğe ilişkin bir değer belirtmek için, değişken adını küme ayraçları ile, sonra da bu değişken için olan metinle birlikte ekleyin. Örneğin, DNS özniteliği için bir değer **{{Azureaddeviceıd}}. domain. com** ' u *. domain.com* ise metindir. *Kullanıcı1* adlı bir Kullanıcı Için e-posta adresi {{Fullyıqualifieddomainname}} olarak görünebilir User1@Contoso.com .
 
         > [!IMPORTANT]
         > - Bir cihaz sertifikası değişkeni kullanırken, değişken adını kaşlı ayraçlar {} içine alın.
-        > - Değişkeni izleyen metinde süslü ayraçları **{}**, kanal **|** sembolleri ve noktalı virgül **;** kullanmayın.
+        > - Değişkeni izleyen metinde süslü ayraçları **{}**, kanal sembolleri **|** ve noktalı virgül **;** kullanmayın.
         > - **IMEI**, **SerialNumber**ve **fullyıqualifieddomainname**gibi bir cihaz sertifikasının *Konu* veya *San* 'ı üzerinde kullanılan cihaz özellikleri, cihaza erişimi olan bir kişi tarafından sızılmış özelliklerdir.
         > - Bir cihazın, bu cihaza yüklemek için bir sertifika profilinde belirtilen tüm değişkenleri desteklemesi gerekir.  Örneğin, **{{IMEI}}** bir SCEP profilinin San 'ı içinde kullanılıyorsa ve IMEI numarası olmayan bir cihaza atanırsa, profil yüklenemez.
 
@@ -230,7 +230,7 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
 
 8. **İleri**’yi seçin.
 
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
    **İleri**’yi seçin.
 
@@ -266,7 +266,7 @@ Konu adınız özel karakterlerden birini içerdiğinde, bu sınırlamaya geçic
 
  Ancak, bir ters eğik çizgi karakterini kullanarak virgül kaçış girişimleri, CRP günlüklerinde hata vererek başarısız olur:
  
-- **Kaçan virgül**: *CN = test kullanıcısı (testcompany\\, LLC), OU = useraccounts, DC = Corp, DC = contoso, DC = com*
+- **Kaçan virgül**: *CN = test kullanıcısı (testcompany \\ , LLC), OU = useraccounts, DC = Corp, DC = contoso, DC = com*
 
 Hata aşağıdaki hatayla benzerdir:
 

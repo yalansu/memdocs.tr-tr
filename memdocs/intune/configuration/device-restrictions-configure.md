@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 716925f077b7433eab06a6ea2f557c7653d0b03d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 951293ff723ff0243d4068656497cbe0bca27ef9
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551435"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989172"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Microsoft Intune’da cihaz kısıtlama ayarlarını yapılandırma
 
@@ -36,13 +36,10 @@ Bu özellikler Intune 'da kullanılabilir ve yönetici tarafından yapılandır�
 
 Bu makalede bir cihaz kısıtlama profili oluşturma yöntemi gösterilmektedir. Farklı platformlar için kullanılabilir tüm ayarları da görebilirsiniz.
 
-> [!NOTE]
-> Intune kullanıcı arabirimi (UI) tam ekran deneyimine sahiptir ve birkaç hafta sürebilir. Kiracınız bu güncelleştirmeyi alıncaya kadar, bu makalede açıklanan ayarları oluştururken veya düzenlerken biraz farklı bir iş akışına sahip olursunuz.
-
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki özellikleri girin:
 
     - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:  
@@ -50,7 +47,7 @@ Bu makalede bir cihaz kısıtlama profili oluşturma yöntemi gösterilmektedir.
         - **Android cihaz yöneticisi**
         - **Android Kurumsal**
         - **iOS/iPadOS**
-        - **Mac OS**
+        - **macOS**
         - **Windows 10 ve üzeri**
         - **Windows 8.1 ve üzeri**
         - **Windows Phone 8.1**
@@ -72,7 +69,7 @@ Bu makalede bir cihaz kısıtlama profili oluşturma yöntemi gösterilmektedir.
     - [Android cihaz yöneticisi](device-restrictions-android.md)
     - [Android Kurumsal](device-restrictions-android-for-work.md)
     - [iOS/iPadOS](device-restrictions-ios.md)
-    - [Mac OS](device-restrictions-macos.md)
+    - [macOS](device-restrictions-macos.md)
     - [Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
     - [Windows 8.1](device-restrictions-windows-8-1.md)
     - [Windows 10 ve üzeri](device-restrictions-windows-10.md)
@@ -80,7 +77,7 @@ Bu makalede bir cihaz kısıtlama profili oluşturma yöntemi gösterilmektedir.
     - [Windows 10 Holographic for Business](device-restrictions-windows-holographic.md)
 
 8. **İleri**’yi seçin.
-9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli BT gruplarına filtrelemek için bir etiket atayın. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
+9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 
     **İleri**’yi seçin.
 

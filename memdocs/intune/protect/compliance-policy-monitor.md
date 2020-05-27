@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 12/18/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f85a8ffc81aa91bce09d6a76eeb5a52335d8b23
-ms.sourcegitcommit: dda5e6f00f79737348e850d971f15fc3093d6431
+ms.openlocfilehash: d73ad9a962042fb06da26c2a03509d4e484a9274
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82745198"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989238"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Intune Cihaz uyumluluk ilkelerini izleme
 
@@ -38,7 +38,7 @@ Uyumluluk raporları, cihaz uyumluluğunu gözden geçirmenize ve kuruluşunuzda
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihazlara** > **genel bakış** > **uyumluluk durumu** sekmesini seçin.
+2. **Cihazlara**  >  **genel bakış**  >  **uyumluluk durumu** sekmesini seçin.
 
 > [!IMPORTANT]
 > Cihaz uyumluluk ilkelerini almak için, cihazların Intune'a kayıtlı olmaları gerekir.
@@ -136,7 +136,7 @@ Kutucuğu seçtiğinizde uyumluluk ilkeleri olmayan cihazlar görüntülenir. Ay
 
 - **Uyumluluk ilkesi atanmamış cihazları şu şekilde işaretle** güvenlik ayarı için uyumluluk ilkesi olmayan cihazları belirlemek önemlidir. Cihazlar belirlendikten sonra bunlara en az bir uyumluluk ilkesi atayabilirsiniz.
 
-  Bu güvenlik ayarı, Intune portalında yapılandırılabilir. **Cihaz** > **uyumluluk ilkeleri** > **Uyumluluk ilkesi ayarları**için. Daha sonra **Uyumluluk ilkesi atanmamış cihazları şu şekilde işaretle** seçeneğini **Uyumlu** veya **Uyumsuz** olarak ayarlayın.
+  Bu güvenlik ayarı, Intune portalında yapılandırılabilir. **Cihaz**  >  **uyumluluk ilkeleri**  >  **Uyumluluk ilkesi ayarları**için. Daha sonra **Uyumluluk ilkesi atanmamış cihazları şu şekilde işaretle** seçeneğini **Uyumlu** veya **Uyumsuz** olarak ayarlayın.
 
   Bu [Intune hizmetinde güvenlik geliştirmesi](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/) hakkında daha fazla bilgi edinin.
 
@@ -156,11 +156,11 @@ Kutucuğu seçtiğinizde uyumluluk ilkeleri olmayan cihazlar görüntülenir. Ay
 
 ## <a name="view-compliance-reports"></a>Uyumluluk raporlarını görüntüle
 
-*Uyumluluk durumundaki*grafikleri kullanmanın yanı sıra, **raporlar** > **cihaz uyumluluğu**' na gidebilirsiniz.
+*Uyumluluk durumundaki*grafikleri kullanmanın yanı sıra, **raporlar**  >  **cihaz uyumluluğu**' na gidebilirsiniz.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihazlar** > **İzleyicisi**' ni seçin ve ardından aşağıdan **uyumluluğa** , görüntülemek istediğiniz raporu seçin. Kullanılabilir uyumluluk raporlarının bazıları şunlardır:
+2. **Cihazlar**  >  **İzleyicisi**' ni seçin ve ardından aşağıdan **uyumluluğa** , görüntülemek istediğiniz raporu seçin. Kullanılabilir uyumluluk raporlarının bazıları şunlardır:
 
    - Cihaz uyumluluğu
    - Uyumsuz cihazlar
@@ -178,7 +178,7 @@ Platforma göre, ilkelerinizin farklı durumlarını denetleyebilirsiniz. Örne�
 
 Bu özellik cihaz durumu bildirimine eklenmiştir:
 
-1. **Cihaz** > **uyumluluk ilkeleri** > **ilkeleri**' ni seçin. Platform da dahil olmak üzere ilkelerin listesi, ilkenin atanıp atanmadığı ve diğer ayrıntılar gösterilir.
+1. **Cihaz**  >  **uyumluluk ilkeleri**  >  **ilkeleri**' ni seçin. Platform da dahil olmak üzere ilkelerin listesi, ilkenin atanıp atanmadığı ve diğer ayrıntılar gösterilir.
 2. Bir ilke seçin ve **Genel Bakış**'ı seçin. Bu görünümde, ilke ataması aşağıdaki durumları içerir:
 
     - **Başarılı**: ilke uygulandı

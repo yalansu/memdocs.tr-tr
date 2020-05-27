@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 433bea6442ef52cd970513213d1623faf8aae2ca
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 825105fb11c37293285638e8d86514aae4ba8303
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327476"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989874"
 ---
 # <a name="locate-lost-or-stolen-iosipados-devices-with-intune"></a>Intune ile kaybolan veya çalınan iOS/ıpados cihazlarını bulma
 
@@ -36,7 +36,7 @@ Bir haritadaki kayıp veya çalınmış bir iOS/ıpados cihazının konumunu alm
 Bu özellik aşağıdaki sistemlerde desteklenmez: 
 - Windows
 - Windows Phone
-- Mac OS
+- macOS
 - Android
 
 ## <a name="locate-a-lost-or-stolen-device"></a>Kaybolan veya çalınan bir cihazın yerini bulma
@@ -52,7 +52,7 @@ Bu özellik aşağıdaki sistemlerde desteklenmez:
 
 Birisi iOS/ıpados 9,3 veya üzeri cihazını kaybetmişse, kullanıcının bulması için cihazı bir uyarı sesi çalmak üzere uzaktan tetikleyebilirsiniz. Cihazın [kayıp modunda](device-lost-mode.md) olması gerekir.
 
-[Azure Portal Intune](https://aka.ms/intuneportal)' da, **cihazlar** > **tüm cihazlar** ' ı seçin > iOS/ıpados cihazı seçin > **genel bakış** > kayıp modu**daha fazla** > **çal (yalnızca denetimli)**.
+[Azure Portal Intune](https://aka.ms/intuneportal)' da, **cihazlar**  >  **tüm cihazlar** ' ı seçin > iOS/ıpados cihazı seçin > **genel bakış**  >  kayıp modu**daha fazla**  >  **çal (yalnızca denetimli)**.
 
 Kullanıcı cihazda sesi devre dışı bırakana veya cihaz kayıp modundan çıkarılana kadar ses çalmaya devam eder.
 

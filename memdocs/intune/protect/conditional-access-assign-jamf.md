@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b7ef62056fc85f7584d0d7fed3eab646d199476
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f920513fbef101c60ea5caa3e8c6659557213ba3
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81525691"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989218"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Jamf Pro ile yönetilen Mac bilgisayarları üzerinde uyumluluğu zorla
 
@@ -43,7 +43,7 @@ Intune, bu makaledeki yordamlardan ayrı olarak yapılandırdığınız JAMF Pro
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihaz** > **uyumluluk ilkeleri**' ni seçin. Daha önce oluşturulmuş bir ilke kullanıyorsanız, konsolda Bu ilkeyi seçin ve sonra bu yordamın sonraki adımına gidin. Yeni bir ilke oluşturmak için, **Ilke oluştur** ' u seçin ve ardından **MacOS** *platformuyla* bir ilkenin ayrıntılarını belirtin. Kurumsal gereksinimlerinizi karşılamak için *uyumsuzluk Için* *ayarları* ve eylemleri yapılandırın ve ardından ilkeyi kaydetmek için **Oluştur** ' u seçin.
+2. **Cihaz**  >  **uyumluluk ilkeleri**' ni seçin. Daha önce oluşturulmuş bir ilke kullanıyorsanız, konsolda Bu ilkeyi seçin ve sonra bu yordamın sonraki adımına gidin. Yeni bir ilke oluşturmak için, **Ilke oluştur** ' u seçin ve ardından **MacOS** *platformuyla* bir ilkenin ayrıntılarını belirtin. Kurumsal gereksinimlerinizi karşılamak için *uyumsuzluk Için* *ayarları* ve eylemleri yapılandırın ve ardından ilkeyi kaydetmek için **Oluştur** ' u seçin.
 
 3. İlkelere *genel bakış* bölmesinde **atamalar**' ı seçin. Bu ilkeyi hangi Azure Active Directory (Azure AD) kullanıcılarının ve güvenlik gruplarının alacağını yapılandırmak için kullanılabilir seçenekleri kullanın. **Intune ile JAMF tümleştirmesi, cihaz gruplarını hedefleyen Uyumluluk ilkesini desteklemez.**
 
@@ -67,11 +67,11 @@ Aşağıdaki yordamı gerçekleştirmek için bir macOS cihazına ve JAMF Pro po
 
 1. MacOS cihazında, [MacOS için şirket portalı uygulamasının](https://go.microsoft.com/fwlink/?linkid=862280)güncel sürümünü indirin, ancak yüklemeyin. Uygulamanın yalnızca bir kopyasına ihtiyacınız olduğundan, uygulamayı JAMF Pro 'ya yükleyebilirsiniz.  
 
-2. JAMF Pro 'yu açın ve **Bilgisayar Yönetimi** > **paketleri**' ne gidin.
+2. JAMF Pro 'yu açın ve **Bilgisayar Yönetimi**  >  **paketleri**' ne gidin.
 
 3. MacOS için Şirket Portalı uygulamayla yeni bir paket oluşturun ve ardından **Kaydet**' i seçin.
 
-4. **Bilgisayar** > **ilkelerini**açın ve ardından **Yeni**' yi seçin.
+4. **Bilgisayar**  >  **ilkelerini**açın ve ardından **Yeni**' yi seçin.
 
 5. **Genel** yükünü kullanarak ilkenin ayarlarını yapılandırın. Bu ayarlar şöyle olmalıdır:
    - Tetikleyici: **Kayıt Tamamlandı** ve **Yinelenen İade Etme**'yi seçin
@@ -97,7 +97,7 @@ Cihaz kaydı, bir cihaz kullanıcısının JAMF Self Service içinden Intune Şi
 
 ### <a name="to-create-the-registration-policy"></a>Kayıt ilkesini oluşturmak için  
 
-1. JAMF Pro 'da **bilgisayar** > **ilkeleri**' ne gidin ve ardından cihaz kaydı için yeni bir ilke oluşturun.
+1. JAMF Pro 'da **bilgisayar**  >  **ilkeleri**' ne gidin ve ardından cihaz kaydı için yeni bir ilke oluşturun.
 
 2. Tetikleyici ve yürütme sıklığı da dahil olmak üzere **Microsoft Intune Tümleştirmesi** yükünü yapılandırın.
 
@@ -109,7 +109,7 @@ Cihaz kaydı, bir cihaz kullanıcısının JAMF Self Service içinden Intune Şi
 
 JAMF Pro ve Microsoft Intune arasındaki iletişimin başarılı olduğunu onaylamak için JAMF Pro konsolunu kullanın. 
 
-- JAMF Pro 'da **Ayarlar** > **genel yönetim** > **Microsoft Intune tümleştirme**' e gidin ve ardından **Test**' i seçin.
+- JAMF Pro 'da **Ayarlar**  >  **genel yönetim**  >  **Microsoft Intune tümleştirme**' e gidin ve ardından **Test**' i seçin.
 
     Konsol, bağlantının başarılı veya başarısız olduğunu belirten bir ileti görüntüler.  
 
@@ -118,7 +118,7 @@ JAMF Pro konsolundaki bağlantı testi başarısız olursa, JAMF yapılandırmas
 
 ## <a name="removing-a-jamf-managed-device-from-intune"></a>Jamf ile yönetilen bir cihazı Intune’dan kaldırma
 
-JAMF ile yönetilen bir cihazı kaldırmak için Microsoft Endpoint Manager yönetici merkezini açın ve **cihazlar** > **tüm cihazlar**' ı seçin, cihazı seçin ve ardından **Sil**' i seçin.  Toplu cihaz silme işlemi birden çok cihaz seçip **Sil**’e tıklayarak etkinleştirilebilir.
+JAMF ile yönetilen bir cihazı kaldırmak için Microsoft Endpoint Manager yönetici merkezini açın ve **cihazlar**  >  **tüm cihazlar**' ı seçin, cihazı seçin ve ardından **Sil**' i seçin.  Toplu cihaz silme işlemi birden çok cihaz seçip **Sil**’e tıklayarak etkinleştirilebilir.
 
 JAMF [Pro belgelerinden JAMF ile yönetilen bir cihazı kaldırma](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information)hakkında bilgi alın. Ek Yardım için [JAMF desteğiyle](https://www.jamf.com/support/) bir destek bileti de oluşturabilirsiniz. 
 

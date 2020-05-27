@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/18/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed5ff548d28a5bc973c43c84861b9b256b41a203
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3c8b8599c7b207900d6e4a14b7580a324a238dfe
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696282"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989914"
 ---
 # <a name="see-device-details-in-intune"></a>Intune'da cihaz ayrıntılarına bakın
 
@@ -34,7 +34,7 @@ Bu makalede, tüm cihazlarınızı ve özelliklerini Azure portalında nasıl g�
 ## <a name="view-the-device-details"></a>Cihaz ayrıntılarını görüntüleme
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-3. **Cihazlar** > **tüm cihazlar** ' ı seçin > listelenen cihazlarınızdan birini seçerek ayrıntılarını açın:
+3. **Cihazlar**  >  **tüm cihazlar** ' ı seçin > listelenen cihazlarınızdan birini seçerek ayrıntılarını açın:
 
    - **Genel bakış** cihaz adını gösterir ve cihazın kişisel veya kurumsal bir cihaz, seri numarası, birincil kullanıcı ve daha fazlası gibi bazı temel özelliklerini listeler. Cihazda şunları yapabilirsiniz:
       - [Devre dışı bırak](devices-wipe.md#retire)
@@ -70,7 +70,7 @@ Cihazlar tarafından kullanılan taşıyıcıya bağlı olarak, tüm ayrıntıla
 
 |Ayrıntı|Açıklama|Platform| 
 |--------------|----------------------|----|  
-|Adı|Cihazın adı.|Windows, iOS|
+|Name|Cihazın adı.|Windows, iOS|
 |Yönetim adı|Yalnızca konsolda kullanılan cihaz adı. Bu adın değiştirilmesi, cihazdaki adı değiştirmez.|Windows, iOS|
 |UDID|Cihazın Benzersiz Cihaz tanımlayıcısı.|Windows, iOS|
 |Intune Cihaz Kimliği|Cihazı benzersiz şekilde tanımlayan GUID.|Windows, iOS|

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f529a80403d27cf9d12c03c6090670095bf569fa
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 662b0ab94004bf54d793d9a913157c53f36d0dcc
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79329970"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989777"
 ---
 # <a name="block-apps-that-dont-use-modern-authentication-adal"></a>Modern kimlik doğrulaması (ADAL) kullanmayan uygulamaları engelleme
 
@@ -33,7 +33,7 @@ Uygulama koruma ilkeleriyle uygulama tabanlı koşullu erişim, OAuth2 uygulamas
 
 ## <a name="block-access-to-apps"></a>Uygulama erişimini engelleme
 
-Modern kimlik doğrulaması kullanmayan uygulamalara erişimi engellemek için Intune uygulama koruması ilkelerini kullanarak koşullu erişimi yapılandırın. Daha fazla bilgi için bkz. [Intune Ile uygulama tabanlı koşullu erişim](app-based-conditional-access-intune.md).
+Modern kimlik doğrulaması kullanmayan uygulamalara erişimi engellemek için, koşullu erişim uygulamak üzere Intune uygulama koruma ilkelerini kullanın. Daha fazla bilgi için bkz. [Intune Ile uygulama tabanlı koşullu erişim](app-based-conditional-access-intune.md).
 
 ## <a name="additional-information"></a>Ek bilgiler
 

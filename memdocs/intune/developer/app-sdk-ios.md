@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 919c285366f44a208c1c8d803770b9cbaeb00c5c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 379eacee731c8cdd773fc7a15f556ab85e409f7c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429279"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989897"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>iOS için Microsoft Intune Uygulama SDK’sı geliştirici kılavuzu
 
@@ -135,7 +135,7 @@ Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin
 3. Her bir proje hedefinde **Özellikler**’i seçip **Anahtar Zinciri Paylaşımı** anahtarını etkinleştirerek anahtar zinciri paylaşımını etkinleştirin (önceden etkinleştirilmemişse). Anahtarlık paylaşımı, sonraki adıma devam edebilmeniz için gereklidir.
 
    > [!NOTE]
-   > Sağlama profilinizin, yeni anahtarlık paylaşımı değerlerini desteklemesi gerekir. Anahtarlık erişim grupları bir joker karakteri desteklemelidir. Bunu,. mobileprovision dosyasını bir metin düzenleyicisinde açıp **Anahtarlık erişim grupları**araması yaparak ve bir joker karakter olmasını sağlayarak denetleyebilirsiniz. Örnek:
+   > Sağlama profilinizin, yeni anahtarlık paylaşımı değerlerini desteklemesi gerekir. Anahtarlık erişim grupları bir joker karakteri desteklemelidir. Bunu,. mobileprovision dosyasını bir metin düzenleyicisinde açıp **Anahtarlık erişim grupları**araması yaparak ve bir joker karakter olmasını sağlayarak denetleyebilirsiniz. Örneğin:
    >
    >  ```xml
    >  <key>keychain-access-groups</key>
@@ -154,7 +154,7 @@ Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin
     
       ![Intune Uygulama SDK’sı iOS: Anahtarlık paylaşımı](./media/app-sdk-ios/intune-app-sdk-ios-keychain-sharing.png)
     
-    d. Anahtarlık erişim gruplarını oluşturmak için yukarıda gösterilen Xcode UI'ı kullanmak yerine doğrudan yetkilendirme dosyalarını düzenliyorsanız, anahtarlık erişim gruplarını `$(AppIdentifierPrefix)` öğesinin önüne ekleyin (Xcode bunu otomatik olarak işler). Örnek:
+    d. Anahtarlık erişim gruplarını oluşturmak için yukarıda gösterilen Xcode UI'ı kullanmak yerine doğrudan yetkilendirme dosyalarını düzenliyorsanız, anahtarlık erişim gruplarını `$(AppIdentifierPrefix)` öğesinin önüne ekleyin (Xcode bunu otomatik olarak işler). Örneğin:
     
       - `$(AppIdentifierPrefix)com.microsoft.intune.mam`
       - `$(AppIdentifierPrefix)com.microsoft.adalcache`
@@ -248,7 +248,7 @@ Bu ayarlardan bazıları önceki bölümlerde ele alınmış olabilir ve bazıla
 Ayar  | Tür  | Tanım | Gerekli mi?
 --       |  --   |   --       |  --
 ADALClientId  | Dize  | Uygulamanın Azure AD istemci tanımlayıcısı. | Intune olmayan bir AAD kaynağına erişen MSAL ve herhangi bir ADAL uygulamasını kullanan tüm uygulamalar için gereklidir. |
-ADALAuthority | Dize | Uygulamanın Azure AD yetkilisi kullanımda. AAD hesaplarının yapılandırıldığı ortamınızı kullanmanız gerekir. | Uygulama, Intune olmayan bir AAD kaynağına erişmek için ADAL veya MSAL kullanıyorsa gereklidir. Bu değer yoksa, Intune varsayılanı kullanılır.|
+ADALAuthority | Dize | Uygulamanın Azure AD yetkilisi kullanımda. AAD hesaplarının yapılandırıldığı ortamınızı kullanmanız gerekir. | İsteğe bağlı. Uygulama, tek bir kuruluş/AAD kiracısı içinde kullanılmak üzere oluşturulmuş özel bir iş kolu uygulaması ise önerilir. Bu değer yoksa, ortak AAD yetkilisi kullanılır.|
 ADALRedirectUri  | Dize  | Uygulamanın Azure AD yeniden yönlendirme URI 'SI. | MSAL kullanan tüm uygulamalar için ADALRedirectUri veya ADALRedirectScheme, Intune olmayan bir AAD kaynağına erişen herhangi bir ADAL uygulaması için gereklidir.  |
 ADALRedirectScheme  | Dize  | Uygulamanın Azure AD yeniden yönlendirme şeması. Bu, uygulamanın yeniden yönlendirme URI'si `scheme://bundle_id` biçimindeyse ADALRedirectUri yerine kullanılabilir. | MSAL kullanan tüm uygulamalar için ADALRedirectUri veya ADALRedirectScheme, Intune olmayan bir AAD kaynağına erişen herhangi bir ADAL uygulaması için gereklidir. |
 ADALLogOverrideDisabled | Boole  | SDK 'nın tüm ADAL/MSAL günlüklerini (varsa, uygulamadan gelen ADAL çağrıları dahil) kendi günlük dosyasına yönlendirip yönlendirmeyeceğini belirtir. Varsayılan ayar HAYIR’dır. Uygulama kendi ADAL/MSAL günlük geri aramasını ayarlayacaktır Evet olarak ayarlayın. | İsteğe bağlı. |
@@ -545,7 +545,7 @@ Sürüm 8.0.2'den başlayarak, yalnızca Intune tarafından yönetilen paylaşı
 
 Ve aracılığıyla belge paylaşırken `UIActivityViewController` `UIDocumentInteractionController` , iOS, paylaşılan belgeyi açmayı destekleyen her uygulama Için ' Kopyala ' eylemlerini görüntüler. Uygulamalar, Info.plist dosyalarındaki `CFBundleDocumentTypes` ayarı yoluyla destekledikleri belge türlerini bildirir. İlke yönetilmeyen uygulamalara paylaşımı yasaklarsa, bu paylaşım türü artık kullanılabilir olmaz. Bunun yerine kullanıcı, kullanıcı arabirimi olmayan Eylem uzantısını ekleyip bunu Intune Uygulama SDK’sına bağlamak zorunda kalır. Eylem uzantısı, yalnızca bir saplamadır. SDK, dosya paylaşım davranışını uygular. Aşağıdaki adımları izleyin:
 
-1. Uygulamanız, kendi Info. plist altında, onun karşılığına göre tanımlanmış en az bir ıgnmeurl içermelidir `CFBundleURLTypes` `-intunemam` . Örnek:
+1. Uygulamanız, kendi Info. plist altında, onun karşılığına göre tanımlanmış en az bir ıgnmeurl içermelidir `CFBundleURLTypes` `-intunemam` . Örneğin:
     ```objc
     <key>CFBundleURLSchemes</key>
     <array>

@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5b568a90d4077c32a88044beea746907613eb0e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8b70d1e8b64a9000d10e46a17b0d3cb6133088f5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81525742"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989133"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Uyumluluk için Jamf Pro’yu Intune ile tümleştirme
 
@@ -37,7 +37,7 @@ JAMF Pro, Intune ile tümleştiriliyorsa, macOS cihazlarındaki envanter veriler
 
 Tümleştirmeyi yapılandırdıktan sonra JAMF ve Intune 'u, JAMF tarafından yönetilen cihazlarda [koşullu erişimle uyumluluğu zorlamak üzere yapılandırırsınız](conditional-access-assign-jamf.md) .
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 ### <a name="products-and-services"></a>Ürünler ve hizmetler
 
@@ -77,7 +77,7 @@ Intune 'u JAMF Pro ile bağlamak için:
 
 ### <a name="create-an-application-in-azure-active-directory"></a>Azure Active Directory’de uygulama oluşturma
 
-1. [Azure Portal](https://portal.azure.com), **Azure Active Directory** > **uygulama kayıtları**' na gidin ve ardından **Yeni kayıt**' ı seçin.
+1. [Azure Portal](https://portal.azure.com), **Azure Active Directory**  >  **uygulama kayıtları**' na gidin ve ardından **Yeni kayıt**' ı seçin.
 
 2. **Uygulama kaydetme** sayfasında, aşağıdaki ayrıntıları belirtin:
 
@@ -102,7 +102,7 @@ Intune 'u JAMF Pro ile bağlamak için:
 
 9. **API Izinleri iste** sayfasında, **Intune**' u seçin ve ardından **Uygulama izinleri**' ni seçin. Yalnızca **update_device_attributes** onay kutusunu seçin ve yeni izni kaydedin.
 
-10. Sonra, **API izinleri** sayfasının sol üst kısmında ** _ \<kiracı>_ için yönetici onayı ver** ' i seçerek bu uygulamaya yönetici onayı verin. Yeni pencerede hesabınızın kimliğini yeniden kimlik doğrulaması yapmanız ve istemleri izleyerek uygulama erişimi vermeniz gerekebilir.  
+10. Sonra, **API izinleri** sayfasının sol üst kısmında ** _ \< kiracı>_ için yönetici onayı ver** ' i seçerek bu uygulamaya yönetici onayı verin. Yeni pencerede hesabınızın kimliğini yeniden kimlik doğrulaması yapmanız ve istemleri izleyerek uygulama erişimi vermeniz gerekebilir.  
 
 11. Sayfanın üst kısmındaki **Yenile** düğmesine tıklayarak sayfayı yenileyin. **Update_device_attributes** izni için yönetici onayı verildiğini doğrulayın. 
 
@@ -119,7 +119,7 @@ Intune 'u JAMF Pro ile bağlamak için:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Kiracı Yönetimi** > **bağlayıcıları ve belirteçleri** > **iş ortağı cihaz yönetimi**' ni seçin.
+2. **Kiracı Yönetimi**  >  **bağlayıcıları ve belirteçleri**  >  **iş ortağı cihaz yönetimi**' ni seçin.
 
 3. Bir önceki yordam sırasında kaydettiğiniz uygulama KIMLIĞINI **JAMF için Azure Active Directory uygulama kimliğini belirtin** alanına yapıştırarak *JAMF için uyumluluk bağlayıcısını* etkinleştirin.
 
@@ -129,7 +129,7 @@ Intune 'u JAMF Pro ile bağlamak için:
 
 1. JAMF Pro konsolundaki bağlantıyı etkinleştirin:
 
-   1. JAMF Pro konsolunu açın ve **küresel yönetim** > **koşullu erişimi**' ne gidin. **MacOS Intune tümleştirmesi** sekmesinde **Düzenle** düğmesine tıklayın.
+   1. JAMF Pro konsolunu açın ve **küresel yönetim**  >  **koşullu erişimi**' ne gidin. **MacOS Intune tümleştirmesi** sekmesinde **Düzenle** düğmesine tıklayın.
    2. **MacOS Için Intune tümleştirmesini etkinleştir**onay kutusunu işaretleyin.
    3. Azure kiracınız hakkında **konum**, **etki alanı adı**, **uygulama kimliği**ve Azure AD 'de uygulamayı oluştururken kaydettiğiniz *istemci sırrı* için değer dahil olmak üzere gerekli bilgileri sağlayın.
    4. **Kaydet**’i seçin. JAMF Pro, ayarlarınızı sınar ve başarısını doğrular.
@@ -160,7 +160,7 @@ Intune ve JAMF arasındaki tümleştirmeyi yapılandırdıktan sonra, [JAMF tara
 
 JAMF Pro tümleştirmesini Intune ile kaldırmanız gerekir, bağlantıyı JAMF Pro konsolundan kaldırmak için aşağıdaki adımları kullanın. Bu bilgiler, hem el ile yapılandırılmış bir tümleştirme hem de bulut bağlayıcısı kullanılarak tümleştirme için geçerlidir.
 
-1. JAMF Pro 'da **küresel yönetim** > **koşullu erişimi**' ne gidin. **MacOS Intune tümleştirmesi** sekmesinde **Düzenle**' yi seçin.
+1. JAMF Pro 'da **küresel yönetim**  >  **koşullu erişimi**' ne gidin. **MacOS Intune tümleştirmesi** sekmesinde **Düzenle**' yi seçin.
 
 2. **MacOS Için Intune tümleştirmesini etkinleştir** onay kutusunu temizleyin.
 
@@ -168,7 +168,7 @@ JAMF Pro tümleştirmesini Intune ile kaldırmanız gerekir, bağlantıyı JAMF 
 
 4. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-5. Durumun şimdi **sonlandırıldığını**doğrulamak için **Kiracı Yönetimi** > **bağlayıcıları ve belirteçleri** > **iş ortağı cihaz yönetimi** ' ni seçin.
+5. **Tenant administration**  >  Durumun şimdi sonlandırıldığını doğrulamak için Kiracı Yönetimi**bağlayıcıları ve belirteçleri**  >  **iş ortağı cihaz yönetimi** ' **Terminated**ni seçin.
 
    > [!NOTE]
    > Kuruluşunuzun Mac cihazları konsolunda gösterilen tarihte (3 ay) kaldırılacaktır.

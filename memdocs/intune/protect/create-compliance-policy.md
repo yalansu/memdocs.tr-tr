@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: de23dc438ac176383cf5f5fbfac4da22f91bd4b2
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551377"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988817"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Microsoft Intune’da uyumluluk ilkesi oluşturma
 
@@ -50,7 +50,7 @@ Cihaz uyumluluk ilkelerini kullanmak için aşağıdakilerden emin olun:
   - Android cihaz yöneticisi
   - Android Kurumsal
   - iOS
-  - Mac OS
+  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -59,20 +59,17 @@ Cihaz uyumluluk ilkelerini kullanmak için aşağıdakilerden emin olun:
 
 - Cihazları bir kullanıcıya kaydedin veya birincil kullanıcı olmadan kaydedin. Cihazların birden çok kullanıcıya kaydedilmesi desteklenmez.
 
-> [!NOTE]
-> Intune kullanıcı arabirimi (UI) tam ekran deneyimine sahiptir ve birkaç hafta sürebilir. Kiracınız bu güncelleştirmeyi alıncaya kadar, bu makalede açıklanan ayarları oluştururken veya düzenlerken biraz farklı bir iş akışına sahip olursunuz.
-
 ## <a name="create-the-policy"></a>İlkeyi oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Cihaz** > **uyumluluk ilkeleri** > **Policies**ilkeleri > **ilke oluştur**' u seçin.
+2. **Cihaz**  >  **uyumluluk ilkeleri**  >  **ilkeleri**  >  **ilke oluştur**' u seçin.
 
 3. Aşağıdaki seçeneklerden Bu ilke için bir **Platform** seçin:
    - *Android cihaz yöneticisi*
    - *Android Kurumsal*
    - *iOS/iPadOS*
-   - *Mac OS*
+   - *macOS*
    - *Windows Phone 8.1*
    - *Windows 8.1 ve üzeri*
    - *Windows 10 ve üzeri*
@@ -91,7 +88,7 @@ Cihaz uyumluluk ilkelerini kullanmak için aşağıdakilerden emin olun:
    - [Android cihaz yöneticisi](compliance-policy-create-android.md)
    - [Android Kurumsal](compliance-policy-create-android-for-work.md)
    - [iOS/iPadOS](compliance-policy-create-ios.md)
-   - [Mac OS](compliance-policy-create-mac-os.md)
+   - [macOS](compliance-policy-create-mac-os.md)
    - [Windows Phone 8.1, Windows 8.1 ve üzeri](compliance-policy-create-windows-8-1.md)
    - [Windows 10 ve üzeri](compliance-policy-create-windows.md)  
 
@@ -107,7 +104,7 @@ Cihaz uyumluluk ilkelerini kullanmak için aşağıdakilerden emin olun:
 
    Başka bir örnek, bir Uyumluluk ilkesine en az bir konum eklediğiniz konumların kullanımını içerir. Bu durumda, en az bir konum seçtiğinizde uyumsuzluk için varsayılan eylem geçerlidir. Cihaz seçilen konumlardan herhangi birine bağlı değilse, uyumlu değil olarak kabul edilir. Kullanıcılarınıza bir gün gibi yetkisiz kullanım süresi vermek için zamanlamayı yapılandırabilirsiniz.
 
-8. **Kapsam etiketleri** sekmesinde, ilkelerin `US-NC IT Team` veya `JohnGlenn_ITDepartment`gibi belirli gruplara filtre uygulamak için Etiketler ' i seçin. Uyumluluk ilkelerinize ayar ekledikten sonra bir kapsam etiketi de ekleyebilirsiniz. 
+8. **Kapsam etiketleri** sekmesinde, ilkelerin veya gibi belirli gruplara filtre uygulamak için Etiketler ' i seçin `US-NC IT Team` `JohnGlenn_ITDepartment` . Uyumluluk ilkelerinize ayar ekledikten sonra bir kapsam etiketi de ekleyebilirsiniz. 
 
    Kapsam etiketlerini kullanma hakkında bilgi için bkz. [ilkeleri filtrelemek için kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).
 

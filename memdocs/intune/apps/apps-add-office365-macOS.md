@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39837fc3d97389d830fb1befe7e55c276022d351
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 14a4d66cfd5ac0ee3c0938e96794ed12d5b5fde6
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023240"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989509"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Microsoft Intune ile macOS cihazlara Office 365 atama
 
@@ -43,7 +43,7 @@ MacOS cihazlarına Office 365 uygulamaları eklemeye başlamadan önce aşağıd
 ## <a name="select-microsoft-365-apps"></a>Microsoft 365 uygulamaları seçin
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin.
+2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Uygulama türü seç** bölmesinin **Microsoft 365 uygulamalar** bölümünde **MacOS** ' u seçin.
 4. 4. **Seç**' e tıklayın. **Microsoft 365 ekleme uygulamaları** adımları görüntülenir.
 

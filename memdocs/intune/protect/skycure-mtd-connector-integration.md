@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 10/21/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0810205e1b1e8b349d074560ec589b10e85443f1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9ebd42a4603224004ab586fb6648dcd6360e2f94
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80525215"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988318"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Symantec Endpoint Protection Mobile'ın Intune ile tümleştirmesini ayarlama
 
@@ -101,7 +101,7 @@ SEP Mobile, Mobile Threat Defense hizmetini çalıştıran cihazları Azure AD g
 
 ### <a name="retrieve-the-directory-id-in-azure-ad"></a>Azure AD'de Dizin Kimliğini alma
 
-1. [Azure Portal](https://portal.azure.com) oturum açın.
+1. [Azure portalında](https://portal.azure.com) oturum açın.
 
 2. Arama kutusuna "Active Directory" yazın ve ardından **Azure Active Directory**'yi seçin.
 
@@ -126,13 +126,13 @@ SEP Mobile, Mobile Threat Defense hizmetini çalıştıran cihazları Azure AD g
 
 2. **SEP Mobile yönetici kimlik bilgilerinizi** girin ve **Devam**'ı seçin.
 
-3. **Settings** > **Integrations**Ayarlar > **Intune**tümleştirme Intune > **EMM tümleştirme seçimi** bölümüne gidin.
+3. **Ayarlar**  >  **tümleştirme**  >  **Intune**  >  **EMM tümleştirme seçimi** bölümüne gidin.
 
 4. **Dizin Kimliği** kutusunda, önceki bölümde Azure Active Directory'den kopyaladığınız Dizin Kimliğini yapıştırın ve ayarları kaydedin.
 
     ![SEP Mobile portalında Dizin Kimliğini gösteren resim](./media/skycure-mtd-connector-integration/symantec-portal-directory-ID.png)
 
-5. **Ayarlar** > **Integrations**tümleştirme > **Intune**Intune > **temel kurulum** bölümüne gidin.
+5. **Ayarlar**  >  **tümleştirme**  >  **Intune**  >  **temel kurulum** bölümüne gidin.
 
 6. **iOS Uygulaması**'nın yanında **Active Directory'ye Ekle** düğmesini seçin.
 
@@ -150,7 +150,7 @@ SEP Mobile, Mobile Threat Defense hizmetini çalıştıran cihazları Azure AD g
 
     ![SEP Mobile uygulamaları için kullanıcı gruplarını gösteren resim](./media/skycure-mtd-connector-integration/symantec-portal-basic-groups.png)
 
-11. SEP Mobile seçili gruplardaki cihazları eşitler ve Intune'a bilgileri raporlamayı başlatır. Tam Tümleştirme bölümünde bu verileri görüntüleyebilirsiniz. **Ayarlar** > **Integrations**tümleştirme > **Intune**Intune > **tam tümleştirme** bölümüne gidin.
+11. SEP Mobile seçili gruplardaki cihazları eşitler ve Intune'a bilgileri raporlamayı başlatır. Tam Tümleştirme bölümünde bu verileri görüntüleyebilirsiniz. **Ayarlar**  >  **tümleştirme**  >  **Intune**  >  **tam tümleştirme** bölümüne gidin.
 
      ![SEP Mobile tam tümleştirmesinin tamamlandığını gösteren resim](./media/skycure-mtd-connector-integration/symantec-portal-basic-status.PNG)
 ## <a name="next-steps"></a>Sonraki adımlar

@@ -7,7 +7,7 @@ author: erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/19/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4e377e0cd9ad15d1d3a0ac9fb5c088dc1366d48
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 299eba5cfd07edac44db35d3b3eb6b97e5242973
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326742"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989999"
 ---
 # <a name="intune-reports"></a>Intune raporları
 Microsoft Intune raporları, kuruluşunuzdaki uç noktaların sistem durumunu ve etkinliğini daha etkili ve verimli bir şekilde izlemenize olanak tanır ve ayrıca Intune genelinde diğer raporlama verileri sağlar. Örneğin, cihaz uyumluluğu, cihaz sistem durumu ve cihaz eğilimleri hakkındaki raporları görebileceksiniz. Ayrıca, daha belirli verileri almak için özel raporlar da oluşturabilirsiniz. 
@@ -54,12 +54,12 @@ Uyumlu olmayan cihazlar, sorunları belirlemek ve sorunları düzeltmeye yardım
 **Uyumsuz cihazlar** raporunu aşağıdaki adımları kullanarak görebilirsiniz:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uyumsuz cihazları****izlemek** > için **cihazlar** > ' ı seçin.
+2. **Devices**  >  **Monitor**  >  **Uyumsuz cihazları**izlemek için cihazlar ' ı seçin.
 
     ![Uyumsuz cihaz raporu](./media/intune-reports/intune-reports-02.png)
 
     > [!TIP]
-    > Intune 'u Azure Portal daha önce kullandıysanız, [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 'da oturum açarak ve **cihaz uyumluluğu** > **uyumlu olmayan cihazlar**' ı seçerek yukarıdaki ayrıntıları Azure Portal bulabilirsiniz.
+    > Intune 'u Azure Portal daha önce kullandıysanız, [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 'da oturum açarak ve **cihaz uyumluluğu**  >  **uyumlu olmayan cihazlar**' ı seçerek yukarıdaki ayrıntıları Azure Portal bulabilirsiniz.
 
 ## <a name="device-compliance-report-organizational"></a>Cihaz uyumluluk raporu (kuruluş)
 
@@ -98,7 +98,7 @@ Cihaz uyumluluk eğilimleri için bir cihaz uyumluluk eğilimi raporu, cihaz uyu
 Aşağıdaki adımları kullanarak **eğilimler** raporunu görüntüleyebilirsiniz:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. Cihaz uyumluluğunu 60 günlük bir eğilim üzerinden görüntülemek için **rapor** > **eğilimlerini** seçin.
+2. **Reports**  >  Cihaz uyumluluğunu 60 günlük bir eğilim üzerinden görüntülemek için rapor**eğilimlerini** seçin.
 
     ![Intune eğilim raporu](./media/intune-reports/intune-reports-03.png)
 
@@ -113,7 +113,7 @@ Aşağıdaki adımları kullanarak **eğilimler** raporunu görüntüleyebilirsi
 Aşağıdaki adımları kullanarak özel raporlar oluşturabilir ve görüntüleyebilirsiniz:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Rapor** > **Tanılama ayarları** [Tanılama ayarı](reports.md#diagnostic-settings)Ekle ' yi seçin.
+2. **Rapor**  >  **Tanılama ayarları** [Tanılama ayarı](reports.md#diagnostic-settings)Ekle ' yi seçin.
 
     ![Intune raporları Özeti](./media/intune-reports/intune-reports-04.png)
 
