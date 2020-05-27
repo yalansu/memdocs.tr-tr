@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/19/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: c288ea474fde9466b4b66056445ec93b572b29d2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8094f9739f05a7e7c0ffc10e9b4835c67c5539b3
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327894"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881988"
 ---
 # <a name="upload-and-email-logs"></a>Günlükleri karşıya yükleme ve e-posta ile gönderme  
 
@@ -38,7 +38,7 @@ Gerçek hata ayrıntıları, cihazınızda _tanılama günlüğü_adlı özel bi
 ## <a name="upload-and-email-logs-from-company-portal"></a>Şirket Portalı karşıya yükleme ve e-posta günlükleri  
 
 1. Şirket Portalı uygulamasında, e-posta desteği başlatmak için iki yol vardır.
-    * Ana ekrandan: **menü** > **Yardım** > **e-posta desteği**' ne dokunun.  
+    * Ana ekrandan: **menü**  >  **Yardım**  >  **e-posta desteği**' ne dokunun.  
     * Bir hata iletisinden **Yardım** veya varsa **bilgi gönder**' e dokunun.  
 
     > [!NOTE]
@@ -52,7 +52,7 @@ Gerçek hata ayrıntıları, cihazınızda _tanılama günlüğü_adlı özel bi
 ## <a name="upload-and-email-logs-from-microsoft-intune-app"></a>Microsoft Intune uygulamadan karşıya yükleme ve e-posta günlükleri   
 
 1. Microsoft Intune uygulamasında, e-posta desteği başlatmak için iki yol vardır.  
-    * Ana ekrandan: **menü** > **Yardımı yardım** > **Al**' a dokunun.  
+    * Ana ekrandan: **menü**  >  **Yardımı yardım**  >  **Al**' a dokunun.  
     * Bir hata iletisinden **Yardım** veya varsa **bilgi gönder**' e dokunun.  
 
     > [!NOTE]

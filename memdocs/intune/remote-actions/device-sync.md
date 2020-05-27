@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e1f4512441212d308e97122fe71369eaadd1226
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 650a91d17223c31e02d660e47874a42731de572a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077827"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983028"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Intune ile en son ilkeleri ve eylemleri almak için cihazları eşitleme
 
@@ -33,17 +33,17 @@ Cihazı **Eşitle** eylemi, seçili cihazı Intune’a hemen giriş yapmaya zorl
 - Windows
 - Windows Phone
 - iOS
-- Mac OS
+- macOS
 - Android
 
 ## <a name="sync-a-device"></a>Cihaz eşitleme
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın. 
-3. **Cihazlar** > **tüm cihazlar**' ı seçin.
+3. **Cihazlar**  >  **tüm cihazlar**' ı seçin.
 4. Yönettiğiniz cihazların listesinde, *genel bakış* bölmesini açmak için bir cihaz seçin ve ardından **Eşitle**' yi seçin.
 5. Onaylamak için **Evet**'i seçin.
 
-Eşitleme eyleminin durumunu görmek için **cihazlar** > **Monitor** > **cihaz eylemlerini**İzle ' yi seçin.
+Eşitleme eyleminin durumunu görmek için **cihazlar**  >  **Monitor**  >  **cihaz eylemlerini**İzle ' yi seçin.
 
 [Yenileme çevrimi süreleriyle](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)standart Intune ilke iade sıklıklarını bulabilirsiniz.
 
@@ -54,15 +54,15 @@ Bir yönetici **eşitleme** cihazı eylemini çalıştırdığında, başarısı
 
 | Hata kodu  | Önerilen açıklama | Yeniden denenebilir |
 |---|---|---|
-| 2016330898 | Bilinmeyen bir hata oluştu. | Hayır |
+| 2016330898 | Bilinmeyen bir hata oluştu. | No |
 | 2016330897 | Intune bağlantınız zaman aşımına uğradı. Bağlantınızı sıfırlayın. | Yes |
 | 2016330896 | İnternet bağlantınız kesildi. Bağlantınızı sıfırlayın. | Yes |
 | 2016330895 | İnternet bağlantınız kesildi. Bağlantınızı sıfırlayın. | Yes |
 | 2016330894 | İnternet bağlantınız kesildi. Bağlantınızı sıfırlayın. | Yes |
 | 2016330893 | İnternet bağlantınız kesildi. Bağlantınızı sıfırlayın. | Yes|
-| 2016330892 | Uluslararası dolaşım devre dışı bırakıldı. | Hayır|
+| 2016330892 | Uluslararası dolaşım devre dışı bırakıldı. | No|
 | 2016330891 | Telefon araması sırasında bu cihaz için hücresel veri bağlantısına erişilemiyor. Görüşmenin sonlanmasını bekleyin. | Yes|
-| 2016330890 | Bu cihaz için hücresel ağ. Bu cihazlar şu anda kullanılamıyor. | Hayır|
+| 2016330890 | Bu cihaz için hücresel ağ. Bu cihazlar şu anda kullanılamıyor. | No|
 | 2016330889 | Güvenli bağlantı başarısız oldu. Bağlantınızı sıfırlayın. | Yes|
 | 2016330888 | Sunucu güven değerlendirmesi başarısız oldu. | Hayır|
 

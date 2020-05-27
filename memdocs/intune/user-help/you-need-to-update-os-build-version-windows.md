@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 11/06/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,19 +19,19 @@ ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2e44a6d3ad1fe0b3666ba4684169aeda7f31b5d1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7c81381c88ece6cc41f6e03a1f27b7927f76ab5f
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327498"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882478"
 ---
 # <a name="update-your-windows-10-device"></a>Windows 10 cihazınızı güncelleştirme
 
 İşiniz veya okulunuz, kaynaklarına erişen cihazların güvenli olduğundan emin olmak ister. Bunu yapmak için seçtikleri bir yol, cihazlarınızın güncel olduğundan emin olmaktır. Buna cihazınızda “İşletim Sistemi Derlemesi” adı verilir. Windows 10 cihazınızı şu şekilde güncelleştirebilirsiniz:
 
 1. **Başlangıç**’ta **Ayarlar**’ı açın.
-2.  > **İşletim sistemi derlemesi****hakkında** **Ayarlar** > **sistemine** > gidin.
+2. **Settings**  >  **System**  >  **About**  >  **İşletim sistemi derlemesi**hakkında ayarlar sistemine gidin.
 3. İşletim Sistemi Derlemesi, şirketinizin kullanmanızı istediği sürümden daha düşükse **Güncelleştir**’e tıklayarak yeni bir Windows sürümüne güncelleştirebilirsiniz.
 
 Windows sürümünüz şirketinizin desteklediğinden daha yeniyse, [sorunu çözmek için farklı adımlar denemeniz](your-windows-version-isnt-yet-supported.md) gerekir

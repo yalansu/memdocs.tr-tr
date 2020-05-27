@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/21/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3daf758ed93fb03ac63b062f604a457d033637dc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d0e5e3e0b142b47dba64b1cb26dfb5d798e877c9
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80438767"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983860"
 ---
 # <a name="add-and-assign-the-windows-10-company-portal-app-for-autopilot-provisioned-devices"></a>Autopilot tarafından sağlanan cihazlar için Windows 10 Şirket Portalı uygulaması ekleme ve atama
 
 Cihazları yönetmek ve uygulamaları yüklemek için kullanıcılarınız Şirket Portalı uygulamasını kullanabilir. Windows 10 Şirket Portalı uygulamasını doğrudan Intune 'dan atayabilirsiniz. 
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Windows 10 Autopilot tarafından sağlanan cihazlarda, Microsoft Store for Business hesabınızı Intune ile ilişkilendirmeniz önerilir. Daha fazla bilgi için bkz. [Microsoft Intune Ile iş için Microsoft Store toplu satın alınan uygulamaları yönetme](windows-store-for-business.md).
 
@@ -51,7 +51,7 @@ Windows 10 Autopilot tarafından sağlanan cihazlarda, Microsoft Store for Busin
 
 ## <a name="assign-the-company-portal-app"></a>Şirket Portalı uygulamasını atama
 
-1. Yönetici hesabınızla [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın. 
+1. Yönetici hesabınızla [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın   . 
 2. Sağ bölmedeki**uygulamalar**sekmesini seçin.
 3. **Platform tarafından**altında**Windows**' u seçin.
 4. **Şirket portalı (çevrimdışı)** seçeneğini belirleyin.

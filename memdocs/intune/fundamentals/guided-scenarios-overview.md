@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/09/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa70d5881a60d159ca668751ab2e1de9cf0cbd07
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 1ad9d641bc59b9fee99abce4d05b3871eb90e189
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076110"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984850"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Intune destekli senaryolara genel bakış 
 
@@ -46,7 +46,7 @@ Kılavuzlu senaryolar belirli işlevleri sunar. Aşağıdaki ayrıntılar, kıla
 
 ### <a name="launching"></a>Başlatılıyor  
 
-Tüm Kılavuzlu senaryolar **[cihaz yönetim portalı](https://endpoint.microsoft.com)** > **sorunlarını giderme +** > **destekli senaryolardan**kullanılabilir. 
+Tüm Kılavuzlu senaryolar **[cihaz yönetim portalı](https://endpoint.microsoft.com)**  >  **sorunlarını giderme +**  >  **destekli senaryolardan**kullanılabilir. 
 
 Kılavuzlu senaryo, senaryonun amacını ve kurulumu tamamlaması gereken önkoşulları açıklayan bir giriş ile başlar. Bu noktada, senaryoyu tamamlamaya yönelik tüm gerekli ayrıcalıklara sahip olduğunuzu doğrulamak için yönetici izinleriniz denetlenir.  
 

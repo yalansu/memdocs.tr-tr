@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/07/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0d9267f989988ae33d56696d424de56a649bca2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2ab0674cdf584aac2fe3b0f8284eadf544778e5b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80900482"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984646"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Microsoft Intune kullanarak macOS cihazlarına Microsoft Edge ekleme
 
 Uygulamaları dağıtmadan, yapılandırmadan, izleyebilmeniz veya koruyabilmeniz için önce bunları Intune 'a eklemeniz gerekir. Kullanılabilir [uygulama türlerinden](apps-add.md#app-types-in-microsoft-intune) biri Microsoft Edge *Sürüm 77 ve üzeri*. Intune 'da bu uygulama türünü seçerek, Microsoft Edge *sürüm 77 ve üstünü* , MacOS çalıştıran yönettiğiniz cihazlara atayabilir ve yükleyebilirsiniz. Bu uygulama türü, macOS uygulaması sarmalama aracı 'nı kullanmanıza gerek kalmadan, macOS cihazlarına Microsoft Edge 'i atamanızı kolaylaştırır. Uygulamalar daha güvenli ve güncel tutmaya yardımcı olmak için, uygulama Microsoft otomatik güncelleştirme (MAU) ile birlikte gelir.
 
 > [!IMPORTANT]
-> Bu uygulama türü, macOS için geliştirici ve Beta kanalları sunmaktadır. Dağıtım yalnızca İngilizce (en) ' dir; ancak son kullanıcılar, **Ayarlar** > **dilleri**altında tarayıcıda görüntüleme dilini değiştirebilir. 
+> Bu uygulama türü, macOS için geliştirici ve Beta kanalları sunmaktadır. Dağıtım yalnızca İngilizce (en) ' dir; ancak son kullanıcılar, **Ayarlar**dilleri altında tarayıcıda görüntüleme dilini değiştirebilir  >  **Languages**. 
 
 > [!NOTE]
 > Microsoft Edge *sürüm 77 ve üzeri sürümleri* de Windows 10 ' da kullanılabilir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - MacOS cihazı, Microsoft Edge 'i yüklemeden önce macOS 10,12 veya sonraki bir sürümü çalıştırmalıdır.
 
@@ -43,7 +43,7 @@ Uygulamaları dağıtmadan, yapılandırmadan, izleyebilmeniz veya koruyabilmeni
 Aşağıdaki adımları kullanarak Intune 'a Microsoft Edge sürüm 77 ve üstünü ekleyebilirsiniz:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin.
+2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Microsoft Edge, sürüm 77 ve üzeri**altındaki **uygulama türü** listesinde **MacOS**' u seçin.
 
 ## <a name="configure-app-information"></a>Uygulama bilgilerini yapılandırma
@@ -80,10 +80,10 @@ Bu adımda, uygulama için yükleme seçeneklerini yapılandırın.
 
 ## <a name="select-scope-tags-optional"></a>Kapsam etiketlerini seçin (isteğe bağlı)
 Intune 'da istemci uygulama bilgilerini kimlerin görebileceğini anlamak için kapsam etiketlerini kullanabilirsiniz. Kapsam etiketleri hakkında tam Ayrıntılar için bkz. dağıtılmış BT için rol tabanlı erişim denetimi ve kapsam etiketleri kullanma.
-1.    **Kapsam (Etiketler)** > **Ekle**öğesini seçin.
+1.    **Kapsam (Etiketler)**  >  **Ekle**öğesini seçin.
 2.    Kapsam etiketlerini aramak için **Seç** kutusunu kullanın.
 3.    Bu uygulamaya atamak istediğiniz kapsam etiketlerinin yanındaki onay kutusunu işaretleyin.
-4.    **Seç** > **Tamam 'a**tıklayın.
+4.    **Seç**  >  **Tamam 'a**tıklayın.
 
 ## <a name="add-the-app"></a>Uygulama ekleme
 Yapılandırmayı tamamladıktan sonra **uygulama uygulaması** bölmesinden **Ekle** ' yi seçin. 

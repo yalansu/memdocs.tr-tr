@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 345c2d3824a6bd22f224429717e6c44a3941b0cf
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b80527921172201dc86c5f3241e9978525afa083
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324600"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984830"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Microsoft Intune ile uygulamaları gruplara atama
 
@@ -56,7 +56,7 @@ Aşağıdaki tabloda uygulamaları kullanıcılara ve cihazlara atamaya yönelik
 ## <a name="assign-an-app"></a>Uygulama atama
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **tüm uygulamalar**' ı seçin.
+2. **Uygulamalar**  >  **tüm uygulamalar**' ı seçin.
 3. **Uygulamalar** bölmesinde atamak istediğiniz uygulamayı seçin.
 4. Menünün **Yönet** bölümünde **Atamalar**’ı seçin.
 5. Uygulamayla ilgili **Grup ekle** bölmesini açmak için **Grup Ekle**'yi seçin.
@@ -94,7 +94,7 @@ Aşağıdaki tablodaki bilgiler, bir çakışma oluştuğunda ortaya çıkan ama
 |-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Kullanıcı Gerekli|Kullanıcı Mevcut|Gerekli ve Kullanılabilir|
 |Kullanıcı Gerekli|Kullanıcı Kaldır|Gerekli|
-|Kullanıcı Mevcut|Kullanıcı Kaldır|Kaldır|
+|Kullanıcı Mevcut|Kullanıcı Kaldır|Kaldırma|
 |Kullanıcı Gerekli|Cihaz Gerekli|İkisi de mevcut, Intune Gerekli olanı işler
 |Kullanıcı Gerekli|Cihaz Kaldır|İkisi de mevcut, Intune Gerekli olanı çözümler
 |Kullanıcı Mevcut|Cihaz Gerekli|İkisi de mevcut; Intune Gerekli (Gerekli ve Kullanılabilir) olanı çözümler
@@ -139,9 +139,9 @@ Ayar için varsayılan değerler, yeni atamalar için aşağıdaki gibi önceden
 |iOS uygulama türü | "Cihaz kaldırma sırasında kaldırma" için varsayılan ayar |
 |--------------------|----------------|
 | İş kolu uygulaması | Yes |
-| Mağaza uygulaması | Hayır |
-| VPP uygulaması | Hayır |
-| Yerleşik uygulama | Hayır |
+| Mağaza uygulaması | No |
+| VPP uygulaması | No |
+| Yerleşik uygulama | No |
 
 >[!NOTE]
 >**"Kullanılabilir" atama türleri:** "Kayıtlı cihazlar için kullanılabilir" veya "kayıt olmaksızın kullanılabilir" grupları için bu ayarı güncelleştiriyorsanız, zaten yönetilen uygulamaya sahip olan kullanıcılar, cihazı Intune ile eşitlemeden ve uygulamayı yeniden yüklemeden, güncelleştirilmiş ayarı almaz. 

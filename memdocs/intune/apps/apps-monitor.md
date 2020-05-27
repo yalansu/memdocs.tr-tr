@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c505b73b37daefac7027ff6b18f209583db99f0a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 44fa8860380c2059be9feb0ceac3a4b749423ae9
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324479"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984116"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Microsoft Intune ile uygulama bilgilerini ve atamalarını izleme
 
@@ -32,7 +32,7 @@ ms.locfileid: "80324479"
 Intune, yönettiğiniz uygulamanın özelliklerini izlemeniz ve uygulama atama durumunu yönetmeniz için birkaç yol sağlar.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Uygulamalar** > **tüm uygulamalar**' ı seçin.
+2. **Uygulamalar**  >  **tüm uygulamalar**' ı seçin.
 3. Uygulama listesinde, izlenecek uygulamayı seçin. Cihaz durumuna ve kullanıcı durumuna genel bakışı içeren uygulama bölmesini göreceksiniz.
 
 > [!NOTE]
@@ -49,7 +49,7 @@ Uygulama bölmesinde, ortamınızdaki bir uygulamanın durumu hakkındaki ayrın
 
  | **Uygulama ayrıntıları**            | **Açıklama**                                                      |
 |------------------------|------------------------------------------------------------------|
-| **'In**          | Uygulamanın yayımcısı.                                            |
+| **Publisher**          | Uygulamanın yayımcısı.                                            |
 | **İşletim sistemi**   | Uygulamanın işletim sistemi (Windows, iOS/ıpados, Android, vb.). |
 | **Oluşturulan**             | Düzeltmenin oluşturulduğu tarih ve saat. <b>**Note**: Bu tarih değeri, bir BT Yöneticisi uygulama meta verilerini değiştirdiğinde (uygulama kategorisi veya uygulama açıklaması gibi) güncelleştirilir.                        |
 | **Atanan**           | Uygulamanın atanıp atanmadığı (**Evet** veya **Hayır**).                  |
@@ -92,7 +92,7 @@ Menünün **İzleme** bölümünde **Kullanıcı yükleme durumu**’nu seçtiğ
 | **Adı**            | Kullanıcının Azure Active Directory'deki adı.         |
 | **Kullanıcı adı**       | Kullanıcının benzersiz adı.              |
 | **Yüklemeler**   | Kullanıcı tarafından yüklenen uygulamaların sayısı. |
-| **Kesil**        | Kullanıcı için başarısız olan uygulama yüklemelerinin sayısı.     |
+| **Hatalar**        | Kullanıcı için başarısız olan uygulama yüklemelerinin sayısı.     |
 | **Yüklü değil**   | Kullanıcı tarafından yüklenmeyen uygulamaların sayısı. |
 
 

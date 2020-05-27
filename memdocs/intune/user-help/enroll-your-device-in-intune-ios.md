@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/18/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 49e598f370669ed55688af6e6a570a932b5bf9d3
-ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
+ms.openlocfilehash: a8d48235141c0b5ad07fbdce4d24e894f8103e6f
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82137975"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882402"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Şirket kaynaklarınıza iOS cihaz erişimi ayarlayın  
 
@@ -109,7 +109,7 @@ Kayıt sırasında birkaç dakikadan uzun bir süre durakladığında uygulaman�
 
     ![Ayarlar uygulamasının örnek ekran görüntüsü, kuruluşa kaydolma seçeneği.](./media/enroll-in-organization-ios-1909.PNG)  
 
-   Seçeneklerden hiçbiri görünmezse,**cihaz yönetimi**> **Yönetim profili**& **genel** > profiller ' e gidin. Hala bir yönetim profili görmüyorsanız, yeniden indirmeniz gerekebilir.  
+   Seçeneklerden hiçbiri görünmezse, **General**  >  **cihaz yönetimi** >  **Yönetim profili**& genel profiller ' e gidin. Hala bir yönetim profili görmüyorsanız, yeniden indirmeniz gerekebilir.  
 
 5. **Yükle**’ye dokunun.  
     
@@ -159,7 +159,7 @@ Kayıt sırasında birkaç dakikadan uzun bir süre durakladığında uygulaman�
 
     ![Ayarlar uygulamasının örnek ekran görüntüsü, kuruluşa kaydolma seçeneği.](./media/enroll-in-organization-ios-1909.PNG)  
 
-   Seçeneklerden hiçbiri görünmezse,**cihaz yönetimi**> **Yönetim profili**& **genel** > profiller ' e gidin. Hala bir yönetim profili görmüyorsanız, yeniden indirmeniz gerekebilir.   
+   Seçeneklerden hiçbiri görünmezse, **General**  >  **cihaz yönetimi** >  **Yönetim profili**& genel profiller ' e gidin. Hala bir yönetim profili görmüyorsanız, yeniden indirmeniz gerekebilir.   
 
 
 6. **Kullanıcı kaydı** ekranında, **IPhone 'umu kaydet**' e dokunun.  

@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 02/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5862793180efa2184f620920aad7decf3935e1ae
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b6c762aafbc1d82e7e51746806f8ba15cc5ad83c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80322422"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984933"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>Kayıtlı olmayan cihazlar için Intune 'da Mobile Threat Defense bağlayıcısını etkinleştirme
 
@@ -52,13 +52,13 @@ MTD uygulamaları için klasik koşullu erişim ilkeleri:
 
 - Varsayılan olarak, değerlendirme için kullandığınız diğer koşullu erişim ilkeleriyle etkileşime geçin.
 
-Klasik koşullu erişim ilkelerini görüntülemek için [Azure](https://portal.azure.com/#home)'da **Azure Active Directory** > **koşullu erişim** > **Klasik ilkeleri**' ne gidin.
+Klasik koşullu erişim ilkelerini görüntülemek için [Azure](https://portal.azure.com/#home)'da **Azure Active Directory**  >  **koşullu erişim**  >  **Klasik ilkeleri**' ne gidin.
 
 ## <a name="to-enable-the-mtd-connector"></a>MTD bağlayıcısını etkinleştirmek için
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Kiracı Yönetimi** > **bağlayıcıları ve belirteçleri** > **Mobil tehdit savunması**' nı seçin.
+2. **Kiracı Yönetimi**  >  **bağlayıcıları ve belirteçleri**  >  **Mobil tehdit savunması**' nı seçin.
 
 3. **Mobile Threat Defense** bölmesinde **Ekle**’yi seçin.
 
@@ -74,9 +74,9 @@ Kuruluşunuzun gereksinimlerine göre hangi MTD geçiş seçeneklerini etkinleş
 
 **Uygulama koruma Ilkesi ayarları**
 
-- **4,4 ve üzeri sürüm Android cihazlarını, uygulama koruma ilkesi değerlendirmesi için * \<>MTD iş ortağı adına* bağlayın**: Bu seçeneği etkinleştirdiğinizde, cihaz tehdit düzeyi kuralını kullanan uygulama koruma ilkeleri, bu bağlayıcıdaki veriler de dahil olmak üzere cihazları değerlentirecektir.
+- **4,4 ve üzeri sürüm Android cihazlarını, uygulama koruma ilkesi değerlendirmesi için * \<>MTD Iş ortağı adına* bağlayın**: Bu seçeneği etkinleştirdiğinizde, cihaz tehdit düzeyi kuralını kullanan uygulama koruma ilkeleri, bu bağlayıcıdaki veriler de dahil olmak üzere cihazları değerlentirecektir.
 
-- **İOS cihazları sürüm 11 ve üstünü, uygulama koruma ilkesi değerlendirmesi için * \<>MTD iş ortağı adına* bağlayın**: Bu seçeneği etkinleştirdiğinizde, cihaz tehdit düzeyi kuralını kullanan uygulama koruma ilkeleri, bu bağlayıcıdaki veriler dahil olmak üzere cihazları değerlentirecektir.
+- **İOS cihazları sürüm 11 ve üstünü, uygulama koruma ilkesi değerlendirmesi için * \<>MTD Iş ortağı adına* bağlayın**: Bu seçeneği etkinleştirdiğinizde, cihaz tehdit düzeyi kuralını kullanan uygulama koruma ilkeleri, bu bağlayıcıdaki veriler dahil olmak üzere cihazları değerlentirecektir.
 
 **Ortak paylaşılan ayarlar**
 

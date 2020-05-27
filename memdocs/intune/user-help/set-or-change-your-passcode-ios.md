@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/18/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 790aa9e73d990ec3996d4357cbda0e1ddcbf9de9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 85b98d9ea3a4953e26bf94f990e2c1321309f4de
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324358"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881935"
 ---
 # <a name="set-or-change-your-passcode"></a>Geçiş kodunuzu ayarlama veya değiştirme
 
@@ -35,13 +35,13 @@ Geçiş kodunuzu oluştururken veya değiştirirken sorun yaşıyorsanız BT des
 
 ## <a name="set-your-passcode"></a>Geçiş kodunuzu ayarlama
 
-1. **Ayarlar** > **Touch ID & geçiş kodu**' na dokunun.
+1. **Ayarlar**  >  **Touch ID & geçiş kodu**' na dokunun.
 2. **Touch ıd & geçiş** kodu menüsünde **geçiş kodunu aç**' a dokunun.
 3. Şirketinizin destek biriminin belirlediği gereksinimlerini karşılayan yeni bir geçiş kodu girin ve ardından doğrulamak için bu geçiş kodunu yeniden girin.
 
 ## <a name="change-your-passcode"></a>Geçiş kodunuzu değiştirme
 
-1. **Ayarlar** > **Touch ID & geçiş kodu**' na dokunun.
+1. **Ayarlar**  >  **Touch ID & geçiş kodu**' na dokunun.
 2. Geçiş kodunuzu girin. **Touch ID ve Geçiş Kodu** menüsü açılır.
 2. **Parolayı Değiştir**'e dokunun ve eski geçiş kodunuzu girin.
 3. Şirketinizin destek biriminin belirlediği gereksinimlerini karşılayan yeni bir geçiş kodu girin ve ardından doğrulamak için bu geçiş kodunu yeniden girin.

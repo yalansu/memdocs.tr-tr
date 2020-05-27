@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 07/24/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cc2fbfac43916a8298646f6ff57c146c45966b1c
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 5346a288a8411a66ab79b0816385a530eeabb8c2
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254818"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881853"
 ---
 # <a name="sync-your-windows-device-manually"></a>Windows cihazınızı el ile eşitleme
 
@@ -44,7 +44,7 @@ Oluşturan güncelleştirme (sürüm 1709) veya sonraki sürümü çalıştıran
 
 1. Cihazınızda Şirket Portalı uygulamasını açın.
 
-2. **Ayarları** > **eşitleme**' yi seçin.
+2. **Ayarları**  >  **eşitleme**' yi seçin.
 
     ![Şirket Portalı uygulamasının Ayarlar bölümünün vurgulandığı giriş sayfasının ekran görüntüsü](./media/RS1_homePage_settings_04.png)  
     
@@ -65,7 +65,7 @@ Eşitleme denetimine uygulama dışında, cihazınızın masaüstünden de eriş
 Microsoft HoloLens, Windows 10 Desktop, Windows 10 Mobile ve Windows Phone 8.1 cihazlarınızı Ayarlar uygulamasından el ile eşitlemek için bu adımları tamamlayın.  
 
 ### <a name="windows-10-desktop"></a>Windows 10 masaüstü
-1. Cihazınızda**ayarları** **Başlat** > ' ı seçin.
+1. Cihazınızda ayarları **Başlat**' ı seçin  >  **Settings**.
 
 2. **Hesaplar**’ı seçin.
 
@@ -112,7 +112,7 @@ Microsoft HoloLens, Windows 10 Desktop, Windows 10 Mobile ve Windows Phone 8.1 c
 
 ### <a name="windows-10-mobile"></a>Windows 10 Mobile
 
-   1. Cihazınızda **tüm uygulamalar** > **Ayarlar** > **hesaplar**' a gidin.
+   1. Cihazınızda **tüm uygulamalar**  >  **Ayarlar**  >  **hesaplar**' a gidin.
 
        ![Ayarları ekranında Hesapları Seçme](./media/win10m-sync-1-settings-accounts.png)
 
@@ -131,14 +131,14 @@ Microsoft HoloLens, Windows 10 Desktop, Windows 10 Mobile ve Windows Phone 8.1 c
 Bu yönergeler, Windows 10 Yıldönümü Güncelleştirmesi (RS1 olarak da bilinir) çalıştıran HoloLens cihazlarda geçerlidir. 
 1. Cihazınızda Ayarlar uygulamasını açın.  
 
-2. **Hesapların** > **iş erişimini**seçin.  
+2. **Hesapların**  >  **iş erişimini**seçin.  
     ![Hesaplar bağlantısının vurgulandığı HoloLens ayarlar uygulamasının ekran görüntüsü](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
 
 3. **Eşitleme**> bağlı hesabınızı seçin.  ![Ekran görüntüsü HoloLens ayarları uygulaması, Eşitle düğmesi vurgulanmış](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
 
 ### <a name="windows-phone-81"></a>Windows Phone 8.1
 
-1. **Tüm uygulamalar** > **Ayarlar** > **çalışma alanı**' na gidin.
+1. **Tüm uygulamalar**  >  **Ayarlar**  >  **çalışma alanı**' na gidin.
 
     ![Ayarlar listesi](./media/wp81-1-sync-settings-workplace.png)
 
