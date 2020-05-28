@@ -10,12 +10,12 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 2c8ca66bc83ec8eb18bc331287b6dbee47af7d85
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a2a45ff866ea02aacc83c42109c8cba4020ed4e
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719809"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906794"
 ---
 #  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a>Yazılım güncelleştirmeleri için ayarları yönetme  
 
@@ -40,7 +40,7 @@ Yazılım güncelleştirme noktasında çalıştırılan WSUS'a bağlanmak üzer
 Yazılım güncelleştirme noktası bir site için oluşturulduğunda istemciler, yazılım güncelleştirme noktası sunucu adını sağlayan ve bilgisayardaki **Intranet Microsoft update hizmet konumunu belirt** yerel ilkesini yapılandıran bir makine ilkesini alır. WUA, **Güncelleştirmelerin algılanması için intranet update hizmetini kur** ayarında belirtilen sunucu adını alır ve yazılım güncelleştirmeleri uyumluluğu için tarama yaptığında bu sunucuya bağlanır. **Intranet Microsoft update hizmet konumunu belirt** ayarı için bir etki alanı ilkesi oluşturulduğunda bu ilke yerel ilkeyi geçersiz kılar ve WUA, yazılım güncelleştirme noktasının dışındaki bir sunucuya bağlanabilir. Bu durumda istemci, farklı ürünlere, sınıflandırmalara ve dillere bağlı olarak yazılım güncelleştirme uyumluluğu için tarama yapabilir. Bu nedenle, Active Directory ilkesini istemci bilgisayarları için yapılandırmamanız gerekir.  
 
 ### <a name="allow-signed-content-from-intranet-microsoft-update-service-location-group-policy"></a>Microsoft Update Hizmet Konumu'ndan Alınan İçeriğe İzin Ver grup ilkesi  
-Bilgisayarlardaki WUA, System Center Updates Publisher ile oluşturulan ve yayınlanan yazılım güncelleştirmeleri için tarama yapmadan önce **Microsoft update hizmet konumundan alınan imzalı içeriğe izin ver** Grup İlkesi ayarını etkinleştirmeniz gerekir. İlke ayarı etkinleştirildiğinde, bir intranet konumu üzerinden alınan yazılım güncelleştirmeleri yerel bilgisayarın **Güvenilir Yayımcılar** sertifika deposunda imzalanırsa WUA bu yazılım güncelleştirmelerini kabul eder. Updates Publisher için gereken Grup İlkesi ayarları hakkında daha fazla bilgi için bkz. [Updates Publisher 2011 Belge Kitaplığı](https://go.microsoft.com/fwlink/p/?LinkId=232476).  
+Bilgisayarlardaki WUA, System Center Updates Publisher ile oluşturulan ve yayınlanan yazılım güncelleştirmeleri için tarama yapmadan önce **Microsoft update hizmet konumundan alınan imzalı içeriğe izin ver** Grup İlkesi ayarını etkinleştirmeniz gerekir. İlke ayarı etkinleştirildiğinde, bir intranet konumu üzerinden alınan yazılım güncelleştirmeleri yerel bilgisayarın **Güvenilir Yayımcılar** sertifika deposunda imzalanırsa WUA bu yazılım güncelleştirmelerini kabul eder. Updates Publisher için gereken Grup İlkesi ayarları hakkında daha fazla bilgi için bkz. [Updates Publisher 2011 Belge Kitaplığı](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 ### <a name="automatic-updates-configuration"></a>Otomatik güncelleştirmeler yapılandırması  
 Otomatik Güncelleştirmeler güvenlik güncelleştirmelerinin ve diğer önemli indirmelerin istemci bilgisayarlarında alınmasını sağlar. Otomatik Güncelleştirmeler **Otomatik Güncelleştirmeleri Yapılandır** Grup İlkesi ayarı veya yerel bilgisayardaki Denetim Masası üzerinden yapılandırılır. Otomatik Güncelleştirmeler etkinleştirildiğinde istemci bilgisayarları güncelleştirme bildirimlerini alır ve yapılandırma ayarlarına bağlı olarak gerekli güncelleştirmeleri indirir ve yükler. Otomatik Güncelleştirmeler yazılım güncelleştirmeleriyle bir arada bulunduğunda tüm istemci bilgisayarları aynı güncelleştirme için bildirim simgelerini ve açılan ekran bildirimlerini görüntüleyebilir. Aynı zamanda, bir yeniden başlatma gerektiğinde tüm istemci bilgisayarları aynı güncelleştirme için bir yeniden başlatma iletişim kutusunu görüntüleyebilir.  
@@ -137,6 +137,6 @@ Varsayılan olarak, Configuration Manager yazılım güncelleştirmelerinde imza
 Kullanılıyorsa, yazılım güncelleştirmelerini işleyen Configuration Manager konsolları üzerinde CRL denetlemesi etkinleştirilmelidir.  
 
 #### <a name="to-enable-crl-checking"></a>CRL denetimini etkinleştirmek için  
-CRL denetimini gerçekleştiren bilgisayarda, ürün DVD 'sinden aşağıdaki komutu çalıştırın: **\\\smssetup\bin\x64**<*Language*>**\UpdDwnldCfg.exe/checkrevocation**.  
+CRL denetimini gerçekleştiren bilgisayarda, ürün DVD 'sinden aşağıdaki komutu çalıştırın: **\smssetup\bin\x64 \\ ** < *Language* > **\UpdDwnldCfg.exe/checkrevocation**.  
 
 Örneğin, Ingilizce (US) için **\Smssetup\bin\x64\00000409\upddwnldcfg.exe/checkrevocation** çalıştırın  

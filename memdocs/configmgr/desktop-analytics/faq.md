@@ -10,16 +10,17 @@ ms.assetid: e0db3311-2303-4013-a906-76b408172d3c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 29f063da47dc26789493b2a83ad8e0cfa6885270
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.reviewer: acabello
+ms.openlocfilehash: d1f18c135f200b2a9e40b970871c73a0d98893a2
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693301"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429843"
 ---
 # <a name="desktop-analytics-faq"></a>Desktop Analytics hakkında SSS
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 ### <a name="can-i-use-cloud-enabled-analytics-with-intune-managed-devices"></a><a name="bkmk_intune"></a>Intune ile yönetilen cihazlarla bulut özellikli çözümlemeler kullanabilir miyim?
 
@@ -51,6 +52,10 @@ Evet, aşağıdaki işlemi kullanın:
 
 - **Masaüstü Analizi bağlantısı** sekmesinde, **hedef koleksiyonu** değiştirin veya ek koleksiyonları yönetin.
 
+<!-- 7130169 -->
+> [!Note]
+> Ek koleksiyonlar listesine 20 ' den fazla koleksiyon eklemeyin. Her koleksiyondaki toplam cihaz sayısı hakkında dikkatli olun. Her zaman [küresel pilot ekleme ve hariç tutma koleksiyonlarını](deploy-pilot.md#bkmk_GlobalPilot)ekleyin.  
+
 > [!IMPORTANT]  
 > Configuration Manager, hedef koleksiyondaki cihazları yapılandırmak için bir ayar İlkesi kullanır. Bu ilke, cihazların Microsoft 'a veri göndermesini sağlamak için tanılama verileri ayarlarını içerir. Hedef koleksiyonun değiştirilmesi, artık hedef koleksiyonda olmayan cihazlarda ayarlar ilkesini geri almaz. Cihazların tanılama verilerini göndermeye devam etmesini istemiyorsanız, [cihazları yeniden yapılandırın](account-close.md#reconfigure-clients).
 
@@ -64,7 +69,7 @@ Daha fazla bilgi için bkz. [var olan bir bilgisayarı yeni bir Windows sürüm�
 
 ### <a name="can-i-change-from-bios-to-uefi-when-upgrading-windows"></a>Windows 'U yükseltirken BIOS 'tan UEFı 'ye değişebilir miyim?
 
-Evet. Daha fazla bilgi için bkz. [yerinde yükseltme SıRASıNDA BIOS 'TAN UEFI 'ye dönüştürme](../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+Evet. Daha fazla bilgi için bkz. [yerinde yükseltme SıRASıNDA BIOS 'TAN UEFI 'ye dönüştürme](../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ### <a name="can-i-use-desktop-analytics-with-windows-10-ltsc"></a>Masaüstü analizlerini Windows 10 LTSC ile kullanabilir miyim?
 

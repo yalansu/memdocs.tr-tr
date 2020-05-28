@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 24c3a72eacea6446fb82785a25b0318d8cad0471
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3c52008089a6d23d5c4efe44f0970bb186eb334a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711598"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904644"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager için desteklenen SQL Server sürümleri
 
@@ -65,7 +65,7 @@ Birden çok sitesi olan bir hiyerarşide, farklı siteler, site veritabanını b
 - Kullandığınız SQL Server sürümleri Microsoft tarafından destede kalır.
 - SQL Server iki SQL Server sürümü arasında çoğaltmayı destekler. Daha fazla bilgi için bkz. [çoğaltma geri uyumluluğu SQL Server](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility).
 
-SQL Server 2016 ve öncesi için, her SQL sürümü ve hizmet paketi için destek, [Microsoft yaşam döngüsü ilkesini](https://aka.ms/sqllifecycle)izler. Belirli bir SQL Server hizmet paketine yönelik destek, temel hizmet paketi sürümüne geriye dönük uyumluluğu bırakmadığı müddetçe toplu güncelleştirmeleri içerir. SQL Server 2017 ' den başlayarak, hizmet paketleri, [modern bir hizmet modelini](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/)takip eden bir şekilde yayınlanmayacak. SQL Server ekibi, kullanılabilir hale geldiğinde [toplu güncelleştirmelerin devam eden ve proaktif yüklemesini](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/) öneriyor.
+SQL Server 2016 ve öncesi için, her SQL sürümü ve hizmet paketi için destek, [Microsoft yaşam döngüsü ilkesini](https://aka.ms/sqllifecycle)izler. Belirli bir SQL Server hizmet paketine yönelik destek, temel hizmet paketi sürümüne geriye dönük uyumluluğu bırakmadığı müddetçe toplu güncelleştirmeleri içerir. SQL Server 2017 ' den başlayarak, hizmet paketleri, [modern bir hizmet modelini](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server)takip eden bir şekilde yayınlanmayacak. SQL Server ekibi, kullanılabilir hale geldiğinde [toplu güncelleştirmelerin devam eden ve proaktif yüklemesini](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism) öneriyor.
 
 Aksi belirtilmediği takdirde, aşağıdaki SQL Server sürümleri tüm Configuration Manager etkin sürümleriyle desteklenir. Yeni bir SQL Server sürümü için destek eklenirse, bu desteği ekleyen Configuration Manager sürümü belirtilmiştir. Benzer şekilde, destek kullanım dışı ise, Configuration Manager etkilenen sürümleri hakkında ayrıntılı bilgi için bkz..
 
@@ -109,7 +109,7 @@ SQL Server sürüm 2019 şu hatayı günlüğe kaydeder:
 
 `Microsoft SQL Server reported SQL message 596, severity 21: [HY000][596][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot continue the execution because the session is in the kill state.`
 
-Ayrıca, varsayılan olarak olan günlük dizininde`.mdump` SQL 'den kilitlenme dökümünü (dosyalar) görürsünüz `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`.
+Ayrıca, `.mdump` Varsayılan olarak olan günlük DIZININDE SQL 'den kilitlenme dökümünü (dosyalar) görürsünüz `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log` .
 
 ### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017: Standart, kurumsal
 

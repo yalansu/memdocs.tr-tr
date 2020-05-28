@@ -10,12 +10,12 @@ ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3729bdc28cce961bd081ddb461d3d1da45d6c017
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 909f9fa603f6b979b283593da79730a97fcb9fc9
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718724"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904165"
 ---
 # <a name="pki-certificate-requirements-for-configuration-manager"></a>Configuration Manager için PKI sertifikası gereksinimleri
 
@@ -23,11 +23,7 @@ ms.locfileid: "81718724"
 
 Configuration Manager için gerekli olabilecek ortak anahtar altyapısı (PKI) sertifikaları aşağıdaki tablolarda listelenmiştir. Bu bilgi, PKI sertifikalarına dair temel bilgileri varsayar. Daha fazla bilgi için bkz. [Configuration Manager IÇIN PKI sertifikalarının adım adım örnek dağıtımı: Windows Server 2008 sertifika yetkilisi](example-deployment-of-pki-certificates.md).
 
-Active Directory Sertifika Hizmetleri hakkında daha fazla bilgi için aşağıdaki belgelere bakın:  
-
-- Windows Server 2012 için: [Active Directory Sertifika Hizmetleri'ne Genel Bakış](https://go.microsoft.com/fwlink/p/?LinkId=286744)  
-
-- Windows Server 2008 için: [Windows Server 2008’de Active Directory Sertifika Hizmetleri](https://go.microsoft.com/fwlink/p/?LinkId=115018)
+Active Directory Sertifika Hizmetleri hakkında daha fazla bilgi için bkz. [Active Directory Sertifika hizmetlerine genel bakış](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)).
 
 Şifreleme API 'SI kullanma hakkında bilgi için, Configuration Manager ile yeni nesil (CNG) sertifikaları, bkz. [CNG sertifikalarına genel bakış](cng-certificates-overview.md).
 

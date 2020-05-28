@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2028974c166e060f445b255db6c5af707725a3f4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1365aec90093ee24ad967e1d68e7c414b4efa254
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712928"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906658"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>Configuration Manager yapılandırma temelleri oluşturma
 
@@ -23,6 +23,9 @@ ms.locfileid: "81712928"
 
 
 Configuration Manager içindeki yapılandırma temelleri, önceden tanımlanmış yapılandırma öğelerini ve isteğe bağlı olarak diğer yapılandırma temellerini içerir. Yapılandırma temeli oluşturduktan sonra, bir koleksiyona dağıtarak söz konusu koleksiyondaki cihazların yapılandırma temelini indirmesini ve uyumluluklarını değerlendirmesini sağlayabilirsiniz.  
+
+> [!TIP]
+> Configuration Manager istemcisinin bir taban çizgisinde yapılandırma öğelerini değerlendiren sırayı belirtmenin bir yolu yoktur. Belirleyici değildir.<!-- MEMDocs#175 -->
 
 ## <a name="configuration-baselines"></a>Yapılandırma temelleri
 
@@ -38,7 +41,7 @@ Configuration Manager içindeki yapılandırma temelleri, önceden tanımlanmı�
 
 **Yapılandırma temeli oluştur** iletişim kutusunu kullanarak yapılandırma temeli oluşturmak için aşağıdaki yordamı kullanın:  
 
-1. Configuration Manager konsolunda, **varlıklar ve uyumluluk** > **Uyumluluk ayarları** > **yapılandırma temelleri**' ne tıklayın.  
+1. Configuration Manager konsolunda, **varlıklar ve uyumluluk**  >  **Uyumluluk ayarları**  >  **yapılandırma temelleri**' ne tıklayın.  
 
 2. **Giriş** sekmesindeki **Oluştur** grubunda, **Yapılandırma Temeli Oluştur**'a tıklayın.  
 
@@ -46,7 +49,7 @@ Configuration Manager içindeki yapılandırma temelleri, önceden tanımlanmı�
 
 4. **Yapılandırma verileri** bu yapılandırma temeline dahil edilen tüm yapılandırma öğelerini veya yapılandırma temellerini görüntüler. Listeye yeni bir yapılandırma öğesi veya yapılandırma temeli eklemek için **Ekle** ’ye tıklayın. Aşağıdaki öğeler arasından seçim yapabilirsiniz:  
 
-   - **Varlıklar ve Uyumluluk**  
+   - **Yapılandırma öğeleri**  
 
    - **Yazılım güncelleştirmeleri**  
 
@@ -95,19 +98,19 @@ Uyumluluk ilkesi değerlendirmesinin bir parçası olarak özel yapılandırma t
 
 Kullanıcı, **Uyumluluk ilkesi değerlendirmesi içinde yapılandırılmış taban çizgilerini**içeren bir uyumluluk ilkesiyle hedeflenen bir koleksiyonun parçası olduğunda, kullanıcıya dağıtılan veya Kullanıcı cihazının uyumluluk **değerlendirmesi için bu temeli, uyumluluk Ilkesi değerlendirmesi kapsamında değerlendir** seçeneğinin seçili olduğu taban çizgileri. Örneğin:
 
-- `User1`parçasıdır `User Collection 1`.
-- `User1`, `Device1`ve `Device Collection 1` `Device Collection 2`içinde olan kullanır.
-- `Compliance Policy 1`**Uyumluluk ilkesi değerlendirmesi kural koşulunda yapılandırılmış taban çizgilerini içerir** ve öğesine `User Collection 1`dağıtılır.
-- `Configuration Baseline 1`, seçilen ve dağıtıldığı **Uyumluluk ilkesi değerlendirmesi kapsamında bu temeli değerlendirmiştir** `Device Collection 1`.
-- `Configuration Baseline 2`, seçilen ve dağıtıldığı **Uyumluluk ilkesi değerlendirmesi kapsamında bu temeli değerlendirmiştir** `Device Collection 2`.
+- `User1`parçasıdır `User Collection 1` .
+- `User1``Device1`, ve içinde olan kullanır `Device Collection 1` `Device Collection 2` .
+- `Compliance Policy 1`**Uyumluluk ilkesi değerlendirmesi kural koşulunda yapılandırılmış taban çizgilerini içerir** ve öğesine dağıtılır `User Collection 1` .
+- `Configuration Baseline 1`, seçilen ve dağıtıldığı **Uyumluluk ilkesi değerlendirmesi kapsamında bu temeli değerlendirmiştir** `Device Collection 1` .
+- `Configuration Baseline 2`, seçilen ve dağıtıldığı **Uyumluluk ilkesi değerlendirmesi kapsamında bu temeli değerlendirmiştir** `Device Collection 2` .
 
-Bu senaryoda `Compliance Policy 1` , `User1` `Device1`kullanımı değerlendirirken, her ikisi de `Configuration Baseline 1` `Configuration Baseline 2` olarak değerlendirilir.
+Bu senaryoda, `Compliance Policy 1` `User1` kullanımı değerlendirirken `Device1` , her ikisi de olarak `Configuration Baseline 1` `Configuration Baseline 2` değerlendirilir.
 
-- `User1`Bazen kullanır `Device2`.
-- `Device2`, `Device Collection 2` ve `Device Collection 3`üyesidir.
-- `Device Collection 3`kendisine `Configuration Baseline 3` dağıtıldı, ancak **Uyumluluk ilkesi değerlendirmesi kapsamında bu temeli değerlendir** seçili değildir.
+- `User1`Bazen kullanır `Device2` .
+- `Device2`, `Device Collection 2` ve üyesidir `Device Collection 3` .
+- `Device Collection 3``Configuration Baseline 3`kendisine dağıtıldı, ancak **Uyumluluk ilkesi değerlendirmesi kapsamında bu temeli değerlendir** seçili değildir.
 
-`User1` Kullandığında `Device2`, yalnızca `Configuration Baseline 2` `Compliance Policy 1` değerlendirirken değerlendirilir.
+`User1`Kullandığında `Device2` , yalnızca `Configuration Baseline 2` değerlendirirken değerlendirilir `Compliance Policy 1` .
 
 > [!NOTE]
 ><!--5582516-->

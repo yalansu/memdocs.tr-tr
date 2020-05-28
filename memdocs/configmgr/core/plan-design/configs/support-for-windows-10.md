@@ -2,7 +2,7 @@
 title: Windows 10 için destek
 titleSuffix: Configuration Manager
 description: Configuration Manager ile istemci veya OSD için desteklenen Windows 10 sürümleri hakkında bilgi edinin
-ms.date: 04/01/2020
+ms.date: 05/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7241db0220bf4adf9b55341514afb03de33c2589
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a67a22f788af39dacb9f3a39e91e0f28444c6988
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709631"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879069"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager 'de Windows 10 için destek  
 
@@ -53,11 +53,12 @@ Aşağıdaki tabloda, farklı Configuration Manager sürümleriyle istemci olara
 | **Kurumsal 2015 LTSB** <!--10/14/2025-->   | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
 | **Kurumsal 2016 LTSB** <!--10/13/2026-->   | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
 | **Kurumsal LTSC 2019** <!--01/09/2029-->   | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
-| **1709**<br>(10.0.16299)   <!--04/14/2020-->   | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
+| **1709**<br>(10.0.16299)   <!--10/13/2020-->   | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
 | **1803**<br>(10.0.17134)   <!--11/10/2020-->   | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
 | **1809**<br>(10.0.17763)   <!--05/11/2021-->   | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
 | **1903**<br>(10.0.18362)   <!--12/08/2020-->   | ![Desteklenmiyor](media/Red_X.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
-| **1909**<br>(10.0.18363)   <!--05/11/2021-->   | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
+| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
+| **2004**<br>(10.0.19041)   <!--??/??/2021-->   | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Destekleniyor](media/green_check.png) |
 
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
@@ -65,8 +66,8 @@ Windows yaşam döngüsü hakkında daha fazla bilgi için bkz. [Windows yaşam 
 
 | Anahtar |
 |--|
-| ![](media/green_check.png) = **Desteklenen destekleniyor**  |
-| ![](media/Red_X.png) = **Desteklenmeyen desteklenmez** |
+| ![Desteklenen ](media/green_check.png)  =  **Supported** destekleniyor  |
+| ![Desteklenmeyen desteklenmez ](media/Red_X.png)  =  **Not supported** |
 
 ### <a name="windows-10-client-support-notes"></a><a name="bkmk_win10-notes"></a>Windows 10 istemci destek notları
 
@@ -93,7 +94,7 @@ Windows Insider hakkında geri bildirim sağlamak için [Geri Bildirim Hub 'ın�
 
 ## <a name="windows-10-adk"></a>Windows 10 ADK
 
-İşletim sistemlerini Configuration Manager dağıtırken, Windows ADK gerekli bir dış bağımlılığıdır. Daha fazla bilgi için aşağıdaki makalelere bakın:
+İşletim sistemlerini Configuration Manager dağıtırken, Windows ADK gerekli bir dış bağımlılığıdır. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 - [İşletim sistemi dağıtımı için altyapı gereksinimleri](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#windows-adk-for-windows-10)
 
@@ -112,12 +113,13 @@ Aşağıdaki tabloda, farklı Configuration Manager sürümleriyle kullanabilece
 | **1803**<br>(10.1.17134) | ![Geriye dönük uyumlu](media/blue_compat.png) | ![Geriye dönük uyumlu](media/blue_compat.png) | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) |
 | **1809**<br>(10.1.17763) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Geriye dönük uyumlu](media/blue_compat.png) | ![Geriye dönük uyumlu](media/blue_compat.png) | ![Desteklenmiyor](media/Red_X.png) |
 | **1903**<br>(10.1.18362) | ![Desteklenmiyor](media/Red_X.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
+| **2004**<br>(10.1.19041) | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Destekleniyor](media/green_check.png) |
 
 |Anahtar|
 |--|
-| ![](media/green_check.png) = **Desteklenen destekleniyor** <br/> Bu tabloda yalnızca Configuration Manager sürümüyle ilgili olarak Windows ADK desteklenebilirliği gösterilmektedir. Microsoft, dağıttığınız Windows sürümüyle eşleşen Windows ADK kullanılmasını önerir. En son Windows 10 sürümünü dağıttığınızda en son Windows ADK sürümünü kullanın. En son Windows ADK sürümü, Windows 8.1 gibi eski işletim sistemi sürümlerinin dağıtımını destekleyebilir.<!-- SCCMDocs issue 1229 --> Windows ADK bileşeni desteklenebilirliği hakkında daha fazla bilgi için bkz. [DISM desteklenen platformlar](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) ve [USMT gereksinimleri](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
-| ![Geriye dönük](media/blue_compat.png)  = uyumlu**geriye dönük uyumlu** <br/> Bu bileşim test değildir ancak çalışmalıdır. Bilinen tüm sorunları veya uyarıları belgeliyoruz. |
-| ![](media/Red_X.png) = **Desteklenmeyen desteklenmez** |
+| ![Desteklenen ](media/green_check.png)  =  **Supported** destekleniyor <br/> Bu tabloda yalnızca Configuration Manager sürümüyle ilgili olarak Windows ADK desteklenebilirliği gösterilmektedir. Microsoft, dağıttığınız Windows sürümüyle eşleşen Windows ADK kullanılmasını önerir. En son Windows 10 sürümünü dağıttığınızda en son Windows ADK sürümünü kullanın. En son Windows ADK sürümü, Windows 8.1 gibi eski işletim sistemi sürümlerinin dağıtımını destekleyebilir.<!-- SCCMDocs issue 1229 --> Windows ADK bileşeni desteklenebilirliği hakkında daha fazla bilgi için bkz. [DISM desteklenen platformlar](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) ve [USMT gereksinimleri](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
+| ![Geriye dönük uyumlu ](media/blue_compat.png)   =  **geriye dönük uyumlu** <br/> Bu bileşim test değildir ancak çalışmalıdır. Bilinen tüm sorunları veya uyarıları belgeliyoruz. |
+| ![Desteklenmeyen desteklenmez ](media/Red_X.png)  =  **Not supported** |
 
 ### <a name="windows-10-adk-support-notes"></a><a name="bkmk_adk-notes"></a>Windows 10 ADK destek notları
 

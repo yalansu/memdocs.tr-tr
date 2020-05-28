@@ -10,12 +10,12 @@ ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4375867e70cb7f2989b78572c7fc8e005f95be73
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c9e8e40a6bdfa129a03e6042985e4956ffb21b5c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713453"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906328"
 ---
 # <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-configuration-manager"></a>Configuration Manager ' de UNIX ve Linux sunuculara istemci dağıtma
 
@@ -36,7 +36,7 @@ Configuration Manager ile bir Linux veya UNIX sunucusunu yönetebilmeniz için �
  İstemcisini yükledikten sonra, istemci aracısını Windows tabanlı istemcilerle aynı şekilde yapılandırmak için Configuration Manager konsolundaki Istemci ayarlarını belirtirsiniz. Daha fazla bilgi için bkz.  [Linux ve UNIX Sunucuları istemci ayarları](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU).  
 
 ##  <a name="about-client-installation-packages-and-the-universal-agent"></a><a name="BKMK_AboutInstallPackages"></a>İstemci yükleme paketleri ve Universal Agent hakkında  
- Belirli bir platformda Linux ve UNIX için istemciyi yüklemek istiyorsanız istemciyi yüklediğiniz bilgisayar için uygun istemci yükleme paketini kullanmalısınız. [Microsoft İndirme Merkezi](https://go.microsoft.com/fwlink/?LinkID=525184)’nden gerçekleştirilen her istemci indirmesine uygun istemci yükleme paketleri dahil edilir. İstemci indirmesi, istemci yükleme paketlerine ek olarak istemcinin her bilgisayara yüklenmesini yöneten **install** betiğini içerir.  
+ Belirli bir platformda Linux ve UNIX için istemciyi yüklemek istiyorsanız istemciyi yüklediğiniz bilgisayar için uygun istemci yükleme paketini kullanmalısınız. [Microsoft İndirme Merkezi](https://www.microsoft.com/download/details.aspx?id=47719)’nden gerçekleştirilen her istemci indirmesine uygun istemci yükleme paketleri dahil edilir. İstemci indirmesi, istemci yükleme paketlerine ek olarak istemcinin her bilgisayara yüklenmesini yöneten **install** betiğini içerir.  
 
  Bir istemciyi yüklediğinizde, kullandığınız istemci yükleme paketinden bağımsız olarak aynı işlem ve komut satırı özelliklerini kullanabilirsiniz.  
 
@@ -69,7 +69,7 @@ Her istemci yükleme paketi, istemci yüklemesini gerçekleştirmek için gerekl
 
 ###  <a name="to-install-the-configuration-manager-client-on-linux-and-unix-servers"></a><a name="BKMK_ToInstallLnUClinent"></a>Configuration Manager istemcisini Linux ve UNIX sunuculara yüklemek için  
 
-1.  Bir Windows bilgisayara yönetmek istediğiniz [Linux veya UNIX sunucusu için uygun istemci dosyasını](https://go.microsoft.com/fwlink/?LinkID=525184) indirin.  
+1.  Bir Windows bilgisayara yönetmek istediğiniz [Linux veya UNIX sunucusu için uygun istemci dosyasını](https://www.microsoft.com/download/details.aspx?id=47719) indirin.  
 
 2.  Yükleme betiğini ve istemci yükleme .tar dosyasını ayıklamak için Windows bilgisayarda kendiliğinden çalışan .exe dosyasını çalıştırın.  
 
@@ -90,7 +90,7 @@ Her istemci yükleme paketi, istemci yüklemesini gerçekleştirmek için gerekl
  Aşağıdaki özellikler, Install betiğinin davranışını değiştirmek için kullanılabilir:  
 
 > [!NOTE]  
->  Desteklenen özellikler listesini `-h` göstermek için özelliğini kullanın.  
+>  `-h`Desteklenen özellikler listesini göstermek için özelliğini kullanın.  
 
 -   `-mp <server FQDN>`  
 
@@ -100,7 +100,7 @@ Her istemci yükleme paketi, istemci yüklemesini gerçekleştirmek için gerekl
     >  Bu özellik, istemcinin yükleme sonrasında atandığı yönetim noktasını belirtmez.  
 
     > [!NOTE]  
-    >  Yalnızca HTTPS istemci bağlantılarını `-mp` kabul edecek şekilde yapılandırılmış bir yönetim noktası belirtmek için özelliğini kullandığınızda `-UsePKICert` özelliğini de kullanmanız gerekir.  
+    >  `-mp`Yalnızca HTTPS istemci bağlantılarını kabul edecek şekilde yapılandırılmış bir yönetim noktası belirtmek için özelliğini kullandığınızda özelliğini de kullanmanız gerekir `-UsePKICert` .  
 
 -   `-sitecode <sitecode>`  
 
@@ -134,20 +134,20 @@ Her istemci yükleme paketi, istemci yüklemesini gerçekleştirmek için gerekl
 
      İsteğe bağlı. Bir X.509 PKI sertifikasının tam yolunu ve dosya adını Public Key Certificate Standard (PKCS#12) biçiminde belirtir. Bu sertifika, istemci kimlik doğrulaması için kullanılır. Yükleme sırasında bir sertifika belirtilmediyse ve bir sertifika eklemeniz ya da bir sertifikayı değiştirmeniz gerekiyorsa **certutil** yardımcı programını kullanın. Daha fazla bilgi için bkz. [Linux ve UNIX için istemcideki sertifikaları yönetme](../manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts).  
 
-     Kullandığınızda `-UsePKICert`, `-certpw` komut satırı parametresini kullanarak PKCS # 12 dosyasıyla ilişkili parolayı da sağlamanız gerekir.  
+     Kullandığınızda `-UsePKICert` , komut satırı parametresini kullanarak PKCS # 12 dosyasıyla ilişkili parolayı da sağlamanız gerekir `-certpw` .  
 
      Bu özelliği bir PKI sertifikası belirtmek için kullanmıyorsanız, istemci otomatik olarak imzalanan bir sertifika kullanır ve site sistemlerine yapılan tüm iletişimler HTTP üzerinden gerçekleştirilir.  
 
      İstemci yükleme komut satırında geçersiz bir sertifika belirtirseniz hata döndürülmez. Sertifika doğrulama, istemci yüklendikten sonra oluşur. İstemci başladığında, sertifikalar yönetim noktasıyla onaylanır. Bir sertifika doğrulanamazsa, **scxcm. log**dosyasında şu ileti görünür: **Yönetim noktası için sertifika doğrulanamadı**. Varsayılan günlük dosyası konumu:  **/var/opt/microsoft/scxcm.log**.  
 
      > [!NOTE]  
-     > Bir istemciyi yüklerken bu özelliği belirtmeniz ve yalnızca HTTPS istemci bağlantılarını kabul etmek `-mp` üzere yapılandırılan bir yönetim noktası belirtmek için özelliğini kullanmanız gerekir.  
+     > Bir istemciyi yüklerken bu özelliği belirtmeniz ve `-mp` yalnızca HTTPS istemci bağlantılarını kabul etmek üzere yapılandırılan bir yönetim noktası belirtmek için özelliğini kullanmanız gerekir.  
 
      Örnek: `-UsePKICert <full path and filename> -certpw <password>`  
 
 -   `-certpw <parameter>`  
 
-     İsteğe bağlı. `-UsePKICert` Özelliğini kullanarak belirttiğiniz PKCS # 12 dosyası ile ilişkili parolayı belirtir.  
+     İsteğe bağlı. Özelliğini kullanarak belirttiğiniz PKCS # 12 dosyası ile ilişkili parolayı belirtir `-UsePKICert` .  
 
      Örnek: `-UsePKICert <full path and filename> -certpw <password>`  
 
@@ -201,7 +201,7 @@ Her istemci yükleme paketi, istemci yüklemesini gerçekleştirmek için gerekl
 
      Sitelerinizin yönetim noktaları tarafından güvenilen bir kök CA sertifikasına zincirsiz olmayan PKI istemci sertifikaları kullanıyorsanız bu seçeneği kullanın. İstemci sertifikası sitenin sertifika verenler listesinde güvenilen bir kök sertifikaya zincir oluşturmaz yönetim noktaları istemciyi reddeder.  
 
-     Bu seçeneği kullanmazsanız, Linux ve UNIX istemcisi güven hiyerarşisini yalnızca `-UsePKICert` seçeneğinde bulunan sertifikayı kullanarak doğrular.  
+     Bu seçeneği kullanmazsanız, Linux ve UNIX istemcisi güven hiyerarşisini yalnızca seçeneğinde bulunan sertifikayı kullanarak doğrular `-UsePKICert` .  
 
      Örnek: `-rootcerts <full path and file name>,<full path and file name>`  
 

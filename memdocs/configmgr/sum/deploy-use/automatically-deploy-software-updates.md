@@ -5,17 +5,17 @@ description: Otomatik dağıtım kuralları (ADR) kullanarak yazılım güncelle
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: eca3227a023561a099804ef0928bfee7a7aff2c6
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: bf172c4cb34a17ac793ea5568b0505505baf97a0
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110449"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709443"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Yazılım güncelleştirmelerini otomatik dağıtma  
 
@@ -49,7 +49,7 @@ ADR kullanarak yazılım güncelleştirmelerini otomatik olarak onaylayın ve da
 
          - **Office 365 Istemci güncelleştirmeleri** şablonu, Office 365 Pro Plus istemcileri için güncelleştirmeleri dağıtırken kullanılacak genel ayarları sağlar.
              > [!Note]
-             > 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. ADRs 'niz "title" özelliğini kullanıyorsa, 9 Haziran 2020 ' den itibaren düzenlemeniz gerekir. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)`yeni başlığa bir örnektir. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change).
+             > 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. ADRs 'niz "title" özelliğini kullanıyorsa, 9 Haziran 2020 ' den itibaren düzenlemeniz gerekir. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)`yeni başlığa bir örnektir. Başlık değişikliği için ADRs 'nizi değiştirme hakkında daha fazla bilgi için bkz. [Microsoft 365 uygulamaları için kanalları güncelleştirme](manage-office-365-proplus-updates.md#bkmk_channel). Ad değişikliği hakkında daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change).
 
          - **SCEP ve Windows Defender virüsten koruma güncelleştirmeleri** şablonu, Endpoint Protection tanım güncelleştirmelerini dağıtırken kullanılacak genel ayarları sağlar.  
 
@@ -85,7 +85,7 @@ ADR kullanarak yazılım güncelleştirmelerini otomatik olarak onaylayın ve da
 
      - ADR’deki yazılım güncelleştirme limiti 1000 yazılım güncelleştirmesidir.  
 
-     - Gerekirse, otomatik dağıtım kurallarında yazılım güncelleştirmeleri için içerik boyutunu filtreleyin. Daha fazla bilgi için, bkz. [Configuration Manager ve Basitleştirilmiş Windows Bakımı alt düzey işletim sistemleri](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).  
+     - Gerekirse, otomatik dağıtım kurallarında yazılım güncelleştirmeleri için içerik boyutunu filtreleyin. Daha fazla bilgi için, bkz. [Configuration Manager ve Basitleştirilmiş Windows Bakımı alt düzey işletim sistemleri](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056).  
 
      - Sürüm 1910 ' den başlayarak, otomatik dağıtım kurallarınız için bir güncelleştirme filtresi olarak **dağıtılan** ' ı kullanabilirsiniz. Bu filtre, pilot veya test koleksiyonlarınız için dağıtılması gerekebilecek yeni güncelleştirmeleri tanımlamanızı sağlar. Yazılım güncelleştirme filtresi, eski güncelleştirmelerin yeniden dağıtılmasını önlemeye de yardımcı olabilir. 
          - Bir filtre olarak **dağıtılan** kullanırken, güncelleştirmeyi bir pilot veya test koleksiyonu gibi başka bir koleksiyona zaten dağıtmış olabilirsiniz. <!--4852033-->
@@ -187,7 +187,7 @@ ADR kullanarak yazılım güncelleştirmelerini otomatik olarak onaylayın ve da
 
         -  **Açıklama**: Dağıtım paketiyle ilgili bilgi sağlayan bir açıklama belirtin. İsteğe bağlı Açıklama 127 karakterle sınırlıdır.  
 
-        -  **Paket kaynağı**: Yazılım güncelleştirmesi kaynak dosyalarının konumunu belirtir. Kaynak konumu için bir ağ yolu yazın (örneğin `\\server\sharename\path`,) veya ağ konumunu bulmak için **Araştır** ' a tıklayın. Sonraki sayfaya geçmeden önce dağıtım paketi kaynak dosyaları için paylaşılan klasör oluşturun.  
+        -  **Paket kaynağı**: Yazılım güncelleştirmesi kaynak dosyalarının konumunu belirtir. Kaynak konumu için bir ağ yolu yazın (örneğin,) `\\server\sharename\path` veya ağ konumunu bulmak Için **Araştır** ' a tıklayın. Sonraki sayfaya geçmeden önce dağıtım paketi kaynak dosyaları için paylaşılan klasör oluşturun.  
 
             - Belirtilen konumu başka bir yazılım dağıtım paketinin kaynağı olarak kullanamazsınız.  
 
@@ -211,7 +211,7 @@ ADR kullanarak yazılım güncelleştirmelerini otomatik olarak onaylayın ve da
 
     -   **Yazılım güncelleştirmelerini İnternet 'Ten indir**: yazılım güncelleştirmelerini İnternet 'teki belirli bir konumdan indirmek için bu ayarı seçin. Bu ayar, varsayılan olarak etkinleştirilmiştir.  
 
-    -   **Yazılım güncelleştirmelerini yerel ağdaki bir konumdan indir**: Yazılım güncelleştirmelerini yerel bir dizinden veya paylaşılan ağ klasöründen indirmek için bu ayarı kullanın. Bu ayar, Sihirbazı çalıştıran bilgisayarın İnternet erişimi olmadığında yararlıdır. İnternet erişimi olan herhangi bir bilgisayar, yazılım güncelleştirmelerini indirebilir indirebilir. Ardından, bunları, Sihirbazı çalıştıran bilgisayardan erişilebilen yerel ağda bir yerde saklayın.  
+    -   **Yazılım güncelleştirmelerini yerel ağdaki bir konumdan indir**: Yazılım güncelleştirmelerini yerel bir dizinden veya paylaşılan ağ klasöründen indirmek için bu ayarı kullanın. Bu ayar, Sihirbazı çalıştıran bilgisayarın İnternet erişimi olmadığında yararlıdır. İnternet erişimi olan herhangi bir bilgisayar, yazılım güncelleştirmelerini indirebilir indirebilir. Ardından, bunları, Sihirbazı çalıştıran bilgisayardan erişilebilen yerel ağda bir yerde saklayın. System Center Updates Publisher veya üçüncü taraf düzeltme eki uygulama çözümü aracılığıyla yayınlanan içeriği indirirken başka bir senaryo olabilir. Üst düzey yazılım güncelleştirme noktasındaki WSUS içerik paylaşma, ' den indirilecek ağ konumu olarak girilebilir `\\server\WsusContent` . <!--memdocs-issue-211-->
 
 14. **Dil seçimi** sayfasında, sitenin seçili yazılım güncelleştirmelerini indirdiği dilleri seçin. Site yalnızca seçili dillerde kullanılabiliyorsa bu güncelleştirmeleri indirir. Dile özgü olmayan yazılım güncelleştirmeleri her zaman indirilir. Varsayılan olarak, sihirbaz, yazılım güncelleştirme noktası özelliklerinde yapılandırdığınız dilleri seçer. Sonraki sayfaya geçmeden önce en az bir dil seçilmelidir. Yalnızca bir yazılım güncelleştirmesinin desteklemediği dilleri seçtiğinizde, güncelleştirme için indirme başarısız olur.  
 

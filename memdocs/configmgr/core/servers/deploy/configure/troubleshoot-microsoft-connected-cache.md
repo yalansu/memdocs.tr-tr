@@ -10,19 +10,19 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5be6158a2ed7d79af2bee72c81a462e4d83b68e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a8c975798c506339a981e8648003387dc1e9838
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718290"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878110"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 'de Microsoft bağlı önbelleği sorunlarını giderme
 
 Bu makalede, Configuration Manager 'de Microsoft bağlı önbelleği hakkında teknik ayrıntılar sağlanmaktadır. Ortamınızda bulunan sorunları gidermeye yardımcı olması için bu uygulamayı kullanın. Nasıl çalıştığı ve nasıl kullanılacağı hakkında daha fazla bilgi için, bkz. [Microsoft bağlı önbelleği Configuration Manager](../../../plan-design/hierarchy/microsoft-connected-cache.md).
 
 > [!NOTE]
-> Sürüm 1910 ' den başlayarak, bu özellik artık **Microsoft bağlı önbelleği**olarak adlandırılmaktadır. Daha önce teslim Iyileştirmesi-ağ önbelleği (DOıNC) olarak bilinirdi.
+> Sürüm 1910 ' den başlayarak, bu özellik artık **Microsoft bağlı önbelleği**olarak adlandırılmaktadır. Daha önce teslim Iyileştirmesi-ağ önbelleği olarak bilinirdi.
 
 ## <a name="verify"></a>Doğrulama
 
@@ -70,18 +70,18 @@ ExpireOn                    : 9/6/2019 8:36:19 AM
 IsPinned                    : False
 ```
 
-`BytesFromCacheServer` Özniteliğin sıfır olmadığına dikkat edin.
+Özniteliğin sıfır olmadığına dikkat edin `BytesFromCacheServer` .
 
 İstemci doğru yapılandırılmamışsa veya önbellek sunucusu doğru şekilde yüklenmemişse, teslim Iyileştirme istemcisi özgün bulut kaynağına geri döner. Sonra BytesFromCacheServer özniteliği sıfır olur.
 
 ### <a name="verify-on-the-server"></a><a name="bkmk_verify-server"></a>Sunucuda doğrulama
 
-İlk olarak, kayıt defteri özelliklerinin doğru şekilde yapılandırıldığını doğrulayın `HKLM\SOFTWARE\Microsoft\Delivery Optimization In-Network Cache`:. Örneğin, sürücü önbelleği konumu `PrimaryDrivesInput\DOINC-E77D08D0-5FEA-4315-8C95-10D359D59294`, burada `PrimaryDrivesInput` gibi birden çok sürücü olabilir. `C,D,E`
+İlk olarak, kayıt defteri özelliklerinin doğru şekilde yapılandırıldığını doğrulayın: `HKLM\SOFTWARE\Microsoft\Delivery Optimization In-Network Cache` . Örneğin, sürücü önbelleği konumu, burada gibi `PrimaryDrivesInput\DOINC-E77D08D0-5FEA-4315-8C95-10D359D59294` `PrimaryDrivesInput` birden çok sürücü olabilir `C,D,E` .
 
 Ardından, zorunlu üstbilgiler ile sunucuya bir istemci indirme isteğinin benzetimini yapmak için aşağıdaki yöntemi kullanın.
 
 1. Yönetici olarak 64 bitlik bir PowerShell penceresi açın.
-2. Aşağıdaki komutu çalıştırın ve sunucunuzun adını veya IP adresini değiştirin `<DoincServer>`:
+2. Aşağıdaki komutu çalıştırın ve sunucunuzun adını veya IP adresini değiştirin `<DoincServer>` :
 
 ```PowerShell
 Invoke-WebRequest -URI "http://<DoincServer>/mscomtest/wuidt.gif" -Headers @{"Host"="b1.download.windowsupdate.com"}

@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a23f6106a8c922b3ff4e8306fb76aec4fd26b148
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 216c61a671d7d06e434fa399bb3bae12e12f7275
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711612"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905159"
 ---
 # <a name="set-up-a-configuration-manager-lab"></a>Configuration Manager Laboratuvarı ayarlama
 
@@ -31,9 +31,9 @@ Bu konudaki yönergelerin ardından, Configuration Manager benzetimli gerçek za
 
 -   **Laboratuvar ortamı, Configuration Manager yükleyeceğiniz Windows Server 2012 R2 'yi kullanır**.  
 
-     Windows Server 2012 R2 'nin değerlendirme sürümünü [TechNet Değerlendirme Merkezi](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012)' nden indirebilirsiniz.  
+     [Değerlendirme merkezinden](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012)Windows Server 2012 R2 'nin değerlendirme sürümünü indirebilirsiniz.  
 
-     Bu alýþtýrmalar boyunca başvurulan indirmelere daha kolay erişebilmek için Internet Explorer Artırılmış güvenlik yapılandırmasını değiştirmeyi veya devre dışı bırakmayı göz önünde bulundurun. WCF ile ilgili ek bilgi için [Internet Explorer: Artırılmış Güvenlik Yapılandırması](https://technet.microsoft.com/library/dd883248\(v=ws.10\).aspx) .  
+     Bu alýþtýrmalar boyunca başvurulan indirmelere daha kolay erişebilmek için Internet Explorer Artırılmış güvenlik yapılandırmasını değiştirmeyi veya devre dışı bırakmayı göz önünde bulundurun. Daha fazla bilgi için bkz. [Internet Explorer: Artırılmış Güvenlik Yapılandırması](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).  
 
 -   **SQL Server 2012 SP2** kullanır.  
 
@@ -45,7 +45,7 @@ Bu konudaki yönergelerin ardından, Configuration Manager benzetimli gerçek za
 
     -   **SQL_Latin1_General_CP1_CI_AS** , **SQL Harmanlama** sınıfı olarak kullanılır.  
 
-    -   **Windows kimlik doğrulaması**, [SQL kimlik doğrulaması](https://technet.microsoft.com/library/ms144284.aspx)yerine tercih edilir.  
+    -   **Windows kimlik doğrulaması**, [SQL kimlik doğrulaması](https://docs.microsoft.com/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15)yerine tercih edilir.  
 
     -   Adanmış bir **SQL Server örneği** gereklidir.  
 
@@ -61,11 +61,11 @@ Bu konudaki yönergelerin ardından, Configuration Manager benzetimli gerçek za
 
 -   **Etki alanı denetleyicisi, Active Directory Domain Services yüklü Windows Server 2008 R2 'yi kullanır** . Etki alanı denetleyicisi aynı zamanda, DHCP ve DNS sunucuları için tam etki alanı adıyla kullanılmak üzere ana bilgisayar olarak çalışır.  
 
-     Daha fazla bilgi için Active Directory Domain Services bu [genel bakışı](https://technet.microsoft.com/library/hh831484)gözden geçirin.  
+     Daha fazla bilgi için bkz. [Active Directory Domain Services genel bakış](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831484(v=ws.11)).  
 
 -   Hyper-V, bu alıştırmalarda uygulanan yönetim adımlarının beklendiği gibi çalıştığını doğrulamak için **birkaç sanal makineyle kullanılır** . Windows 10 yüklü olan en az üç sanal makine önerilir.  
 
-     Daha fazla bilgi için bu [Hyper-V genel bakışını](https://technet.microsoft.com/library/hh831531.aspx)inceleyin.  
+     Daha fazla bilgi için bkz. [Hyper-V ' e genel bakış](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).  
 
 -   **yönetici izinleri** gereklidir.  
 
@@ -95,7 +95,7 @@ Bu bileşenlerin tümünü yükledikten sonra, Windows ortamınızı Configurati
 Configuration Manager istemcilerinin site kaynaklarını bulmak için Active Directory Domain Services sorgulamasını sağlamak için gereken sonraki adımlar, sonraki yordamlarda listelenir.  
 
 ##  <a name="create-the-system-management-container"></a><a name="BKMK_CreateSysMgmtLab"></a> Sistem Yönetimi kapsayıcısını oluşturma  
- Configuration Manager, şema genişletildiğinde Active Directory Domain Services gerekli sistem yönetimi kapsayıcısını otomatik olarak oluşturmaz. Bu nedenle bunu, laboratuvarınız için kendiniz oluşturursunuz. Bu adımda [ADSI Düzenleyicisi yüklemeniz](https://technet.microsoft.com/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)gerekir.  
+ Configuration Manager, şema genişletildiğinde Active Directory Domain Services gerekli sistem yönetimi kapsayıcısını otomatik olarak oluşturmaz. Bu nedenle bunu, laboratuvarınız için kendiniz oluşturursunuz. Bu adım, [ADSI düzenleme yüklemenizi](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10))gerektirir.
 
  Active Directory Etki Alanı Hizmetleri'nde **Sistem** Kapsayıcısı’nda **Tüm Bağımlı Nesneleri Oluştur** iznine sahip bir hesapla oturum açmalısınız.  
 
@@ -103,7 +103,7 @@ Configuration Manager istemcilerinin site kaynaklarını bulmak için Active Dir
 
 1.  **ADSI Düzenleyicisi**'ni çalıştırın ve site sunucusunun bulunduğu etki alanına bağlanın.  
 
-2.  **Etki alanı&lt;bilgisayar tam etki alanı adını\>** genişletin, **<ayırt edici\>ad**' ı genişletin **, CN = System**' **e**sağ tıklayın ve ardından **nesne**' ye tıklayın.  
+2.  **Etki alanı &lt; bilgisayar tam etki alanı adını \> **genişletin, **<ayırt edici \> ad**' ı genişletin, **CN = System**' **e**sağ tıklayın ve ardından **nesne**' ye tıklayın.  
 
 3.  **Nesne Oluştur** iletişim kutusunda, **Kapsayıcı**'yı seçin ve ardından **İleri**'ye tıklayın.  
 
@@ -119,7 +119,7 @@ Configuration Manager istemcilerinin site kaynaklarını bulmak için Active Dir
 
 #### <a name="to-set-security-permissions-for-the-system-management-container"></a>Sistem Yönetimi kapsayıcısı için güvenlik izinleri ayarlamak için:  
 
-1.  Konsol bölmesinde, **site sunucusunun etki alanını**genişletin, **DC =&lt;sunucu ayırt edici adı\>**' nı genişletin ve sonra **CN = System**' i genişletin. **CN=System Management**'a sağ tıkladıktan sonra **Özellikler**'e tıklayın.  
+1.  Konsol bölmesinde, **site sunucusunun etki alanını**genişletin, **DC = &lt; sunucu ayırt edici adı \> **' nı genişletin ve sonra **CN = System**' i genişletin. **CN=System Management**'a sağ tıkladıktan sonra **Özellikler**'e tıklayın.  
 
 2.  **CN=System Management Properties** iletişim kutusunda, **Güvenlik** sekmesine tıkladıktan sonra **Ekle** 'ye tıklayarak site sunucusu bilgisayar hesabını ekleyin. Hesaba **Tam Denetim** izinleri verin.  
 
@@ -129,7 +129,7 @@ Configuration Manager istemcilerinin site kaynaklarını bulmak için Active Dir
 
 5.  **Tamam** 'a tıklayarak **ADSI Düzenleyicisi** konsolunu kapatın ve yordamı tamamlayın.  
 
-     Bu yordam hakkında daha fazla bilgi için lütfen [Configuration Manager Active Directory şemayı genişletmeyi](../../core/plan-design/network/extend-the-active-directory-schema.md) inceleyin  
+     Daha fazla bilgi için bkz [. Configuration Manager için Active Directory Şemayı genişletme](../../core/plan-design/network/extend-the-active-directory-schema.md)  
 
 ##  <a name="extend-the-active-directory-schema-using-extadschexe"></a><a name="BKMK_ExtADSchLab"></a> extadsch.exe kullanarak Active Directory şemasını genişletme  
  Bu laboratuvar için Active Directory şemasını genişletecaksınız çünkü bu, tüm Configuration Manager özellikleri ve işlevleri en az yönetim yüküyle kullanmanıza olanak sağlar. Active Directory şemasının genişletilmesi, her orman için bir kez yapılan orman çapında bir yapılandırmadır. Şemanın genişletilmesi, temel Active Directory yapılandırmanızdaki sınıf ve öznitelik kümelerini kalıcı olarak değiştirir. Bu eylem geri alınamaz. Şemayı genişletmek Configuration Manager, Laboratuvar ortamınızda en verimli şekilde çalışmasını sağlayan bileşenlere erişmesini sağlar.  
@@ -139,7 +139,7 @@ Configuration Manager istemcilerinin site kaynaklarını bulmak için Active Dir
 
 #### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>extadsch.exe kullanarak Active Directory şemasını genişletmek için:  
 
-1.  Şema yöneticisi etki alanı denetleyicisinin sistem durumunun bir yedeğini oluşturun. Ana etki alanı denetleyicisini yedekleme hakkında daha fazla bilgi için lütfen [Windows Server Yedekleme](https://technet.microsoft.com/library/cc770757.aspx)konusunu gözden geçirin.  
+1.  Şema yöneticisi etki alanı denetleyicisinin sistem durumunun bir yedeğini oluşturun. Ana etki alanı denetleyicisini yedekleme hakkında daha fazla bilgi için bkz. [Windows Server yedekleme](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770757(v=ws.11))  
 
 2.  Yükleme medyasında **\SMSSETUP\BIN\X64** konumuna gidin.  
 
@@ -147,7 +147,7 @@ Configuration Manager istemcilerinin site kaynaklarını bulmak için Active Dir
 
 4.  Sistem sürücüsünün kök klasöründe bulunan **extadsch.log** dosyasını inceleyerek şema genişletmenin başarılı olup olmadığını doğrulayın.  
 
-     Bu yordam hakkında daha fazla bilgi için lütfen [Configuration Manager Active Directory şemasını genişletin](../../core/plan-design/network/extend-the-active-directory-schema.md).  
+     Daha fazla bilgi için bkz. [Configuration Manager için Active Directory şemasını genişletme](../../core/plan-design/network/extend-the-active-directory-schema.md).  
 
 ##  <a name="other-required-tasks"></a><a name="BKMK_OtherTasksLab"></a> Diğer gerekli görevler  
  Yüklemeden önce şu görevleri de tamamlamanız gerekir.  
@@ -158,7 +158,7 @@ Configuration Manager istemcilerinin site kaynaklarını bulmak için Active Dir
 
  **.NET yükleme ve Windows Communication Foundation’ı etkinleştirme**  
 
- İki .NET Framework sürümü yüklemeniz gerekir: Önce .NET 3.5.1 ve sonra .NET 4.5.2+. Ayrıca Windows Communication Foundation’ı etkinleştirmeniz gerekir. WCF; dağıtılmış bilgi işlem, kapsamlı birlikte çalışılabilirlik ve hizmet yönlendirmesi için doğrudan desteğe yönelik yönetilebilir bir yaklaşım sunmak üzere tasarlanmıştır ve hizmet odaklı bir programlama modeli aracılığıyla bağlı uygulamaların geliştirilmesini kolaylaştırır. WCF ile ilgili ek bilgi için [Windows Communication Foundation Nedir?](https://technet.microsoft.com/subscriptions/ms731082\(v=vs.90\).aspx) konusunu gözden geçirin.  
+ İki .NET Framework sürümü yüklemeniz gerekir: Önce .NET 3.5.1 ve sonra .NET 4.5.2+. Ayrıca Windows Communication Foundation’ı etkinleştirmeniz gerekir. WCF; dağıtılmış bilgi işlem, kapsamlı birlikte çalışılabilirlik ve hizmet yönlendirmesi için doğrudan desteğe yönelik yönetilebilir bir yaklaşım sunmak üzere tasarlanmıştır ve hizmet odaklı bir programlama modeli aracılığıyla bağlı uygulamaların geliştirilmesini kolaylaştırır. Daha fazla bilgi için bkz. [Windows Communication Foundation nedir?](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms731082(v=vs.90)).
 
 #### <a name="to-install-net-and-activate-windows-communication-foundation"></a>.NET yüklemek ve Windows Communication Foundation’ı etkinleştirmek için:  
 
@@ -198,27 +198,15 @@ Configuration Manager istemcilerinin site kaynaklarını bulmak için Active Dir
 
 10. .NET’in temel yüklemesi tamamlandıktan sonra .NET Framework 4.5.2’nin web yükleyicisini edinmek için [Microsoft Yükleme Merkezi](https://www.microsoft.com/download/details.aspx?id=42643) ’ne gidin. **İndir** düğmesine tıklayıp yükleyiciyi **Çalıştırın** . Bu işlem, gerekli bileşenleri seçtiğiniz dilde otomatik olarak algılayıp yükler.  
 
-Bu .NET Framework sürümlerinin neden gerektiğiyle ilgili ek bilgi için lütfen şu makaleleri gözden geçirin:  
-
--   [.NET Framework Sürümleri ve Bağımlılıkları](https://technet.microsoft.com/library/bb822049.aspx)  
-
--   [.NET Framework 4 RTM Uygulama Uyumluluğu İçin İzlenecek Yol](https://technet.microsoft.com/library/dd889541.aspx)  
-
--   [Nasıl yapılır? ASP.NET Web Uygulamasını ASP.NET 4’e yükseltme](https://technet.microsoft.com/library/dd483478\(VS.100\).aspx)  
-
--   [Microsoft .NET Framework Destek Ömrü İlkesi SSS](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
-
--   [CLR Içinde Işlem içi yan yana](https://msdn.microsoft.com/magazine/ee819091.aspx)  
-
 **BITS, IIS ve RDC’yi etkinleştirme**  
 
-Bir istemci ve sunucu arasında dosyaları zaman uyumsuz olarak aktarması gereken uygulamalar için [Arka Plan Akıllı Aktarım Hizmeti (BITS)](https://technet.microsoft.com/library/dn282296.aspx) kullanılır. BITS, ön ve arka plandaki aktarım akışını ölçerek diğer ağ uygulamalarının yanıt hızlarını korur. Ayrıca bir aktarım oturumu kesintiye uğrarsa dosya aktarımına otomatik olarak devam eder.  
+Bir istemci ve sunucu arasında dosyaları zaman uyumsuz olarak aktarması gereken uygulamalar için [Arka Plan Akıllı Aktarım Hizmeti (BITS)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282296(v=ws.11)) kullanılır. BITS, ön ve arka plandaki aktarım akışını ölçerek diğer ağ uygulamalarının yanıt hızlarını korur. Ayrıca bir aktarım oturumu kesintiye uğrarsa dosya aktarımına otomatik olarak devam eder.  
 
 Bu site sunucusu yönetim noktası olarak da kullanılacağından bu laboratuvar için BITS’i yüklersiniz.  
 
 Internet Information Services (IIS), web’deki herhangi bir şeyi barındırmak için kullanılabilen esnek, ölçeklenebilir bir web sunucusudur. Birçok site sistemi rolü için Configuration Manager tarafından kullanılır. IIS hakkında daha fazla bilgi için [site sistemi sunucuları Için Web sitelerini](../../core/plan-design/network/websites-for-site-system-servers.md)gözden geçirin.  
 
-[Uzaktan Değişiklikleri Sıkıştırma (RDC)](https://technet.microsoft.com/library/cc754372.aspx) , uygulamaların, belirli bir dosya kümesinde herhangi bir değişiklik yapılıp yapılmadığını tespit etmek üzere kullanabileceği bir API kümesidir. RDC, uygulamanın dosyanın yalnızca değişmiş bölümlerini çoğaltmasını sağlayarak ağ trafiğini en düşük düzeyde tutar.  
+[Uzaktan Değişiklikleri Sıkıştırma (RDC)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754372(v=ws.11)) , uygulamaların, belirli bir dosya kümesinde herhangi bir değişiklik yapılıp yapılmadığını tespit etmek üzere kullanabileceği bir API kümesidir. RDC, uygulamanın dosyanın yalnızca değişmiş bölümlerini çoğaltmasını sağlayarak ağ trafiğini en düşük düzeyde tutar.  
 
 #### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>BITS, IIS ve RDC site sunucusu rollerini etkinleştirmek için:  
 
@@ -330,7 +318,7 @@ Internet Information Services (IIS), web’deki herhangi bir şeyi barındırmak
 
 7.  **Yükle** ’ye tıklayın ve **Sunucu Yöneticisi** ’nin **Bildirimler**bölmesinden yüklemenin düzgün bir şekilde tamamlanıp tamamlanmadığını doğrulayın.  
 
-Varsayılan olarak IIS, çeşitli dosya uzantısı türlerine ve konumlarına HTTP veya HTTPS iletişimi tarafından erişilmesini engeller. Bu dosyaların istemci sistemlerine dağıtılmasına izin vermek için dağıtım noktanızda IIS için istek filtrelemeyi yapılandırmanız gerekir. Daha fazla bilgi için lütfen [IIS Request Filtering for distribution points](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering)konusunu gözden geçirin.  
+Varsayılan olarak IIS, çeşitli dosya uzantısı türlerine ve konumlarına HTTP veya HTTPS iletişimi tarafından erişilmesini engeller. Bu dosyaların istemci sistemlerine dağıtılmasına izin vermek için dağıtım noktanızda IIS için istek filtrelemeyi yapılandırmanız gerekir. Daha fazla bilgi için bkz. [dağıtım noktaları Için IIS Istek filtreleme](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering).  
 
 #### <a name="to-configure-iis-filtering-on-distribution-points"></a>Dağıtım noktalarında IIS filtrelemesini yapılandırmak için:  
 

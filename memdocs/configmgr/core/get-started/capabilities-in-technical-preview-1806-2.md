@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 426767b65e0fd770a9a41ce9463948007a524c41
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b7643c73d2e9dad00e926bdc3db905016c45860a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078762"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905212"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-configuration-manager"></a>Configuration Manager için Technical Preview 1806,2 ' deki yetenekler
 
@@ -60,7 +60,7 @@ Sitenizi zaten güncelleştirdiyseniz, otomatik istemci yükseltmesi ve istemci 
 Technical Preview sürüm 1806,2 sitenize yeni bir istemci yüklüyorsanız, bu işlemi kullanın. 
 
 > [!Important]  
-> Bu senaryoda `/MP` komut satırı parametresini kullanmayın. Bu parametre, üzerinden `/source` önceliklidir ve CCMSetup 'ın istemci içeriğini yönetim noktasından veya dağıtım noktasından indirmesini sağlar.
+> `/MP`Bu senaryoda komut satırı parametresini kullanmayın. Bu parametre, üzerinden önceliklidir `/source` ve CCMSetup 'ın istemci içeriğini yönetim noktasından veya dağıtım noktasından indirmesini sağlar.
 > 
 > SMSSITEKODU veya CCMLOGLEVEL gibi komut satırı özelliklerinin kullanımı, ancak var olan bir istemciyi yükseltirken gerekli olmaması gerekir. 
 
@@ -147,11 +147,11 @@ Aşamalı dağıtım oluşturup bir aşamayı el ile yapılandırdığınızda, 
 <!--1357427-->
 Configuration Manager artık yeni Windows 10 uygulama paketi (. msix) ve uygulama paketi (. msixdemeti) biçimlerinin dağıtımını desteklemektedir. En son [Windows Insider Preview](https://insider.windows.com/) derlemeleri Şu anda bu yeni biçimleri desteklemektedir.
 
-MALTıYA genel bakış için [maltıya daha yakından](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/)bakın.
+MALTıYA genel bakış için [maltıya daha yakından](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix)bakın.
 
 Yeni bir MSIX uygulaması oluşturma hakkında bilgi için bkz. [Insider Build 17682 ' de sunulan Msix desteği](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 - En az Windows Insider Preview derleme 17682 çalıştıran bir Windows 10 istemcisi
 - MSIX biçimindeki bir Windows uygulama paketi
 
@@ -159,7 +159,7 @@ Yeni bir MSIX uygulaması oluşturma hakkında bilgi için bkz. [Insider Build 1
 Görevleri tamamlamayı deneyin. Daha sonra nasıl çalıştığını bize bildirmek için [geri bildirim](capabilities-in-technical-preview-1804.md#bkmk_feedback) gönderin.
 
 1. Configuration Manager konsolunda [bir uygulama oluşturun](../../apps/deploy-use/create-applications.md). 
-2. **Windows\*uygulama paketi (. appx, \*. appxdemeti, \*. msix, \*. msixdemeti)** olarak uygulama yükleme dosya **türünü** seçin.
+2. **Windows uygulama paketi ( \* . appx, \* . appxdemeti, \* . msix, \* . msixdemeti)** olarak uygulama yükleme dosya **türünü** seçin.
 3. En son Windows Insider Preview yapısını çalıştıran istemciye [uygulamayı dağıtın](../../apps/deploy-use/deploy-applications.md) .
 
 
@@ -214,7 +214,7 @@ Windows masaüstü uygulamalarını dağıtmak için Configuration Manager kulla
 
 Bu iş yükünü geçirdikten sonra, Intune 'dan dağıtılan kullanılabilir uygulamalar Şirket Portalı kullanılabilir. Configuration Manager 'ten dağıttığınız uygulamalar yazılım merkezi 'nde kullanılabilir. 
 
-Daha fazla bilgi için aşağıdaki makalelere bakın:  
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:  
 
 - [Windows 10 cihazları için ortak yönetim](../../comanage/overview.md)  
 
@@ -253,7 +253,7 @@ Eş kaynak istemcisinde birden fazla IP adresi (IPv4, IPv6 veya her ikisi) varsa
 Bu sürüm, [UserVoice geri bildirimlerinizin](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co)bir sonucu olarak üçüncü taraf yazılım güncelleştirmeleri desteğiyle daha da yinelenir. [Technical Preview sürüm 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate) , yazılım satıcılarından kayıtlı kataloglar olan *iş ortağı katalogları*için destek sağlamıştır. Sağladığınız kataloglar, Microsoft 'a kaydolmayan *özel kataloglar*olarak adlandırılır. Configuration Manager konsoluna özel kataloglar ekleyin.  
 
 
-### <a name="prerequisites"></a>Önkoşullar 
+### <a name="prerequisites"></a>Ön koşullar 
 
 - [Üçüncü taraf yazılım güncelleştirmelerini](capabilities-in-technical-preview-1806.md#bkmk-3pupdate)ayarlayın. 1. Aşama: özelliği etkinleştirin ve ayarlayın.   
 
@@ -303,7 +303,7 @@ Bir kataloğun aboneliğini kaldırmak için, listeden istediğiniz kataloğu se
 
 
 ### <a name="known-issue"></a>Bilinen sorun
-Özel kataloglarda silme eylemi gri renkte, bu nedenle özel katalogları konsolundan silemezsiniz. Bu soruna geçici bir çözüm olarak, site sunucusunda **WBEMTest** aracını kullanın. Ad veya indirme URL 'siyle silmek istediğiniz örnek için sorgu. Örneğin: `select * from SMS_ISVCatalog where DownloadURL="http://www.contoso.com/catalog.cab"`. Sorgu sonucu penceresinde, nesneyi seçin ve **Sil**' e tıklayın.<!--518676-->  
+Özel kataloglarda silme eylemi gri renkte, bu nedenle özel katalogları konsolundan silemezsiniz. Bu soruna geçici bir çözüm olarak, site sunucusunda **WBEMTest** aracını kullanın. Ad veya indirme URL 'siyle silmek istediğiniz örnek için sorgu. Örneğin: `select * from SMS_ISVCatalog where DownloadURL="http://www.contoso.com/catalog.cab"` . Sorgu sonucu penceresinde, nesneyi seçin ve **Sil**' e tıklayın.<!--518676-->  
 
 
 

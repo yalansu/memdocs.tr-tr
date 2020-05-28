@@ -2,7 +2,7 @@
 title: Yardım bulma
 titleSuffix: Configuration Manager
 description: Configuration Manager hakkında daha fazla bilgi için kaynakları bulun.
-ms.date: 04/01/2020
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6610e86c12b6f7704b65dc11c476fa09e8f2ae63
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7bae98a8df1d8b8ff843bd333083c4c6ad68848c
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722910"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343193"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>Configuration Manager kullanmaya yönelik yardım bulun
 
@@ -81,7 +81,7 @@ Configuration Manager 2002 ' den başlayarak, **gülümseme gönderdiğinizde** 
    - Başarılı bir gönderim için 53900 ileti KIMLIĞI.
    - Başarısız bir gönderim için 53901 ileti KIMLIĞI.
 
-**İzleme** > **sistem durumu** > **durum iletisi sorgularının**durum iletilerini görüntüleyin. **Tüm durum iletileri** sorgusuna başlayın ve zaman çerçevesini seçin. İletiler yüklendiğinde **Iletileri filtrele** düğmesine tıklayın ve ileti kimliği 53900 veya 53901 için filtre uygulayın.
+**İzleme**  >  **sistem durumu**  >  **durum iletisi sorgularının**durum iletilerini görüntüleyin. **Tüm durum iletileri** sorgusuna başlayın ve zaman çerçevesini seçin. İletiler yüklendiğinde **Iletileri filtrele** düğmesine tıklayın ve ileti kimliği 53900 veya 53901 için filtre uygulayın.
 
 [Daha sonra gönderilmek üzere kaydettiğiniz geri bildirimleri gönderirseniz](find-help.md#BKMK_NoInternet)durum iletileri oluşturulmaz.
 
@@ -127,13 +127,20 @@ Configuration Manager 2002 ' den başlayarak, **gülümseme gönderdiğinizde** 
         - `-s --silent`Konsolda günlüğe kaydetme yok (--verbose ile birleştirilemez)
         - `-v, --verbose`Konsola ayrıntılı günlük kaydı çıkar (--Silent ile birleştirilemez)
         - `--help`Yardım ekranını görüntüler
+    
+    - Sürüm 1910 ' den başlayarak, UploadOfflineFeedback yardımcı programı bir proxy sunucu kullanımını destekler. Aşağıdaki parametreleri belirtebilirsiniz:
+        - `-x, --proxy`İnternet 'e bağlanmak için bir proxy sunucusu belirtir.
+        - `-o, --port`İnternet 'e bağlanacak ara sunucu bağlantı noktasını belirtir.
+        - `-u, --user`İnternet 'e bağlanmak için proxy sunucusu kullanıcı adını belirtir.
+        - `-w, --password`İnternet 'e bağlanmak için proxy sunucusu parolasını belirtir. Parola istemi oluşturmak için bir yıldız işareti (&#42;) yazın. Parolayı parola istemine yazdığınızda bu parola görüntülenmez. Komut satırında düz metin daha az güvenli olduğundan parola girişi için bir istem oluşturmak üzere bir yıldız işareti (&#42;) kullanmanız önemle önerilir.
+        - `-i`Bağlantı denetimini atla: ağ bağlantısı denetimini atlar, yalnızca belirtilen ayarlarla geri bildirim yükler.
 
 ## <a name="confirmation-of-console-feedback"></a><a name="bkmk_feedbackid"></a>Konsol geri bildirimi onayı
 
 <!--3556010-->
 Sürüm 1902 ' den başlayarak, Configuration Manager konsolu veya UploadOfflineFeedback. exe aracılığıyla geri bildirim gönderdiğinizde, bir onay iletisi gösterir. Bu ileti, izleme tanımlayıcısı olarak Microsoft 'a verebileceğiniz bir **geri BILDIRIM kimliği**içerir.
 
-- **Geri bildirim kimliğini**kopyalamak için, kimliğin yanındaki Kopyala simgesini seçin veya **CTRL** + **C** tuş kısayolunu kullanın.
+- **Geri bildirim kimliğini**kopyalamak için, kimliğin yanındaki Kopyala simgesini seçin veya **CTRL**  +  **C** tuş kısayolunu kullanın.
   - Bu KIMLIK bilgisayarınızda depolanmaz, bu nedenle pencereyi kapatmadan önce kopyayı kopyalamadığınızdan emin olun.
 - **Bu iletiyi bir daha gösterme** ' ye tıkladığınızda iletişim kutusu bastırılır ve gelecekte görünmesini önlenir.
 
@@ -165,7 +172,7 @@ Configuration Manager yeni özellik fikirlerini Oylamak için [UserVoice sayfas�
 Configuration Manager mühendislik ve iş ortağı takımları, size Configuration Manager ve ilgili teknolojiler hakkında teknik bilgiler ve diğer haberleri sağlamak için [Enterprise Mobility + Security blogu](https://cloudblogs.microsoft.com/enterprisemobility/?product=system-center-configuration-manager) kullanır. Web günlüğü postalarımız ürün belgelerini tamamlar ve bilgileri destekler.  
 
 
-##  <a name="support-options-and-community-resources"></a><a name="BKMK_SupportOptions"></a>Destek seçenekleri ve topluluk kaynakları  
+##  <a name="support-options-and-community-resources"></a><a name="BKMK_SupportOptions"></a> Destek seçenekleri ve topluluk kaynakları  
 
 Aşağıdaki bağlantılar destek seçenekleri ve topluluk kaynakları hakkında bilgi sağlar:  
 

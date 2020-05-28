@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 918df2cded3fad48352fff6a2617b1133540c0eb
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bb770a559904421f6bf01616504331dbebb9b549
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712431"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268088"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Öğretici: mevcut Configuration Manager istemcileri için ortak yönetimi etkinleştirme
 
@@ -38,7 +38,7 @@ Bu öğreticide, zaten Configuration Manager kayıtlı olan Windows 10 cihazlar�
 > * Intune 'U cihazları otomatik kaydedecek şekilde yapılandırma  
 > * Configuration Manager içinde ortak yönetimi etkinleştirme  
 
-## <a name="prerequisites"></a>Önkoşullar  
+## <a name="prerequisites"></a>Ön koşullar  
 
 ### <a name="azure-services-and-environment"></a>Azure hizmetleri ve ortamı
 
@@ -64,9 +64,10 @@ Ortamınızda henüz yoksa, bu öğreticide şunları yapmanız gerekir:
 
 Bu öğreticide, görevleri gerçekleştirmek için aşağıdaki izinleri kullanın:
 
-- Azure Active Directory *genel yönetici* olan bir hesap (Azure AD) 
 - Şirket içi altyapınızda *etki alanı yöneticisi* olan bir hesap  
 - Configuration Manager içindeki *Tüm* kapsamlar için *tam yönetici* olan bir hesap
+- Azure Active Directory *genel yönetici* olan bir hesap (Azure AD)
+   - Kiracınızda oturum açmak için kullandığınız hesaba bir Intune lisansı atadığınızdan emin olun. Aksi takdirde, oturum açma "Kullanıcı tanınmıyor" hata iletisiyle başarısız olur. <!--mem issue 169-->
 
 ## <a name="set-up-hybrid-azure-ad"></a>Hibrit Azure AD’yi ayarlama
 
@@ -120,7 +121,7 @@ Etki alanına katılmış Windows cihazları için karma Azure AD JOIN 'i tamaml
 
 Configuration Manager istemcilerini Azure AD 'ye otomatik olarak kaydedecek şekilde yapılandırmak için Istemci ayarlarını kullanın.  
 
-1. **Configuration Manager konsolu** > **yönetimine** > **genel bakış** > **istemci ayarlarını**açın ve **varsayılan istemci ayarlarını**düzenleyin.  
+1. **Configuration Manager konsolu**  >  **yönetimine**  >  **genel bakış**  >  **istemci ayarlarını**açın ve **varsayılan istemci ayarlarını**düzenleyin.  
 
 2. **Cloud Services**seçin.  
 
@@ -134,7 +135,7 @@ Daha sonra, Intune ile cihazların otomatik kaydını ayarlayacağız. Otomatik 
 
 Otomatik kayıt, kullanıcıların Windows 10 cihazlarını Intune 'a kaydetmelerini de sağlar. Cihazlar, bir Kullanıcı kendi iş hesabını kişisel cihazına eklediğinde veya şirkete ait bir cihaz Azure Active Directory katıldığında kaydeder.  
 
-1. [Azure Portal](https://portal.azure.com/) oturum açın ve **Azure Active Directory** > **Mobility (MDM ve MAM)** > **Microsoft Intune**öğesini seçin.  
+1. [Azure Portal](https://portal.azure.com/) oturum açın ve **Azure Active Directory**  >  **Mobility (MDM ve MAM)**  >  **Microsoft Intune**öğesini seçin.  
 
 2. **MDM Kullanıcı kapsamını**yapılandırın. Hangi kullanıcıların cihazlarının Microsoft Intune tarafından yönetileceğini yapılandırmak için aşağıdakilerden birini belirtin ve URL değerleri için varsayılanları kabul edin.  
 

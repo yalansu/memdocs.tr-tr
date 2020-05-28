@@ -2,7 +2,7 @@
 title: Sürüm notları
 titleSuffix: Configuration Manager
 description: Üründe henüz düzeltilmeyen veya Microsoft Desteği Bilgi Bankası makalesinde kapsanan acil sorunlar hakkında bilgi edinin.
-ms.date: 04/08/2020
+ms.date: 05/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: da0b9fc5600a957680ad22e54edc176c892527a6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 131b6104d5724c8a4eeb0bb68c4afd9a5319abb7
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718136"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83823971"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager için sürüm notları
 
@@ -33,6 +33,8 @@ Farklı sürümlerle sunulan yeni özellikler hakkında daha fazla bilgi için a
 - [Sürüm 1910’daki yenilikler](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [Sürüm 1906’daki yenilikler](../../../plan-design/changes/whats-new-in-version-1906.md)  
 - [Sürüm 1902’deki yenilikler](../../../plan-design/changes/whats-new-in-version-1902.md)
+
+Masaüstü analizlerinin yeni özellikleri hakkında daha fazla bilgi için bkz. [Masaüstü analizteki yenilikler](../../../../desktop-analytics/whats-new.md).
 
 > [!Tip]  
 > Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın:`https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
@@ -105,9 +107,9 @@ Configuration Manager konsolunu dilin Isveççe, Macarca veya Japonca olan bir I
 
 `Unable to get certificate for Powershell`
 
-Bu hata, bir `scripts` klasör Isveççe, Macarca veya Japonca `AdminConsole\bin` diller için dizin altında bulunmadığından oluşur. Betikler klasörü bu işletim sistemi dillerinde yerelleştirilir.
+Bu hata `scripts` , bir klasör `AdminConsole\bin` Isveççe, Macarca veya Japonca diller için dizin altında bulunmadığından oluşur. Betikler klasörü bu işletim sistemi dillerinde yerelleştirilir.
 
-Bu sorunu geçici olarak çözmek için `scripts` `AdminConsole\bin` dizinde adlı bir klasör oluşturun. Yerelleştirilmiş klasörünüzdeki dosyaları yeni oluşturulan `scripts` klasöre kopyalayın. Dosyalar kopyalandıktan sonra Microsoft Edge, sürüm 77 ve üstünü dağıtın.
+Bu sorunu geçici olarak çözmek için dizinde adlı bir klasör oluşturun `scripts` `AdminConsole\bin` . Yerelleştirilmiş klasörünüzdeki dosyaları yeni oluşturulan `scripts` klasöre kopyalayın. Dosyalar kopyalandıktan sonra Microsoft Edge, sürüm 77 ve üstünü dağıtın.
 
 ## <a name="os-deployment"></a>İşletim sistemi dağıtımı
 
@@ -166,6 +168,15 @@ Daha fazla bilgi için bkz. [özel güvenlik rolleri oluşturma](../configure/co
 
 ## <a name="desktop-analytics"></a>Desktop Analytics
 
+### <a name="an-extended-security-update-for-windows-7-causes-them-to-show-as-unable-to-enroll"></a><a name="dawin7-diagtrack"></a>Windows 7 için genişletilmiş bir güvenlik güncelleştirmesi, **kaydedemeyecek** gibi gösterilmelerine neden olur
+
+<!-- 7283186 -->
+_Uygulama hedefi: 1902, 1906, 1910 ve 2002 Configuration Manager sürümleri_
+
+Windows 7 için Nisan 2020 Genişletilmiş Güvenlik Güncelleştirmesi (ESU), en düşük gerekli olan diagtrack. dll sürümünü 10586 ' den 10240 ' ye değiştirdi. Bu değişiklik, Windows 7 cihazlarının masaüstü Analizi **bağlantı durumu** panosuna **kayıt yapılamıyor** olarak gösterilmesini sağlar. Bu durum için cihaz görünümü detayına indığınızda, **diagtrack hizmeti yapılandırma** özelliği aşağıdaki durumu gösterir:`Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
+
+Bu sorun için geçici çözüm gerekmez. Nisan ESU 'yi kaldırmayın. Aksi halde doğru yapılandırılmamışsa, Windows 7 cihazları tanılama verilerini hala masaüstü Analizi hizmetine bildirir ve portalda görünmeye devam eder.
+
 ### <a name="if-you-use-hardware-inventory-for-distributed-views-you-cant-onboard-to-desktop-analytics"></a>Dağıtılmış görünümler için donanım envanteri kullanıyorsanız, masaüstü analizine ekleyemezsiniz
 
 <!-- 4950335 -->
@@ -209,7 +220,7 @@ Azure hizmetine bir bağlantı oluşturur ve **Azure ortamını** kamu bulutuna 
 Select Environment, Name, TenantID From AAD_Tenant_Ex
 ```
 
-Kamu Bulutu için, bu sorgunun `2` sonucu belirli bir kiracıya yöneliktir.
+Kamu Bulutu için, bu sorgunun sonucu `2` belirli bir kiracıya yöneliktir.
 
 ### <a name="cant-download-content-from-a-cloud-management-gateway-enabled-for-tls-12"></a>TLS 1,2 için etkinleştirilen bir bulut yönetimi ağ geçidiyle içerik indirilemiyor
 

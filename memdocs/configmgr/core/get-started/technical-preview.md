@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9fd1e0bb45972bb9b3ba2a3e0bbfbb3d0509c4a8
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: bfcdd74b7b5c31e3f3ab6bb38a7ea96de9d05eec
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729287"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905155"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager için teknik önizleme
 
@@ -25,7 +25,7 @@ Bu makale, Configuration Manager aylık Technical Preview dalı hakkında ayrın
 
 Bu sürüm teknik bir önizleme olduğundan, Ayrıntılar ve işlevler değişebilir.
 
-Bu bilgiler Configuration Manager Technical Preview dalının tüm sürümleri için geçerlidir. Bu makalede, her yeni özellik, ilk görüntülenen Technical Preview sürümü ile birlikte listelenir. Örneğin, 2020 (`20`) için sürüm **2001** (`01`). Her bir önizleme sürümü için ayrılmış makalelerin ayrı ayrı özelliklerini ayrıntılarıyla ayırın.
+Bu bilgiler Configuration Manager Technical Preview dalının tüm sürümleri için geçerlidir. Bu makalede, her yeni özellik, ilk görüntülenen Technical Preview sürümü ile birlikte listelenir. Örneğin, 2020 () için sürüm **2001** () `01` `20` . Her bir önizleme sürümü için ayrılmış makalelerin ayrı ayrı özelliklerini ayrıntılarıyla ayırın.
 
 Configuration Manager *geçerli dalındaki* yenilikler hakkında daha fazla bilgi için bkz. [Configuration Manager artımlı sürümlerindeki](../plan-design/changes/whats-new-incremental-versions.md)yenilikler.
 
@@ -74,7 +74,7 @@ Configuration Manager Technical Preview dalı aşağıdaki ürünleri ve teknolo
 - Site, desteklenen herhangi bir [istemci işletim sistemi sürümünü](../plan-design/configs/supported-operating-systems-for-clients-and-devices.md)çalıştıran en fazla 10 istemciyi destekler.<!-- SCCMDocs#1656 -->
 
 > [!Note]
-> Bu ürünlerin bu içerik dahil edilmesi, destek yaşam döngüsünün ötesinde bir sürüm için destek uzantısı göstermez. Configuration Manager, destek yaşam döngüsünün ötesinde olan ürünleri desteklemez. Daha fazla bilgi için bkz. [Microsoft yaşam döngüsü ilkesi](https://go.microsoft.com/fwlink/p/?LinkId=208270).
+> Bu ürünlerin bu içerik dahil edilmesi, destek yaşam döngüsünün ötesinde bir sürüm için destek uzantısı göstermez. Configuration Manager, destek yaşam döngüsünün ötesinde olan ürünleri desteklemez. Daha fazla bilgi için bkz. [Microsoft yaşam döngüsü ilkesi](https://support.microsoft.com/lifecycle).
 
 ## <a name="install-and-update"></a><a name="bkmk_install"></a>Yükleyip Güncelleştir
 
@@ -95,7 +95,7 @@ Sürümünden sonraki bir yıla kadar bir temel sürümü yükler. Yeni bir Tech
 
 - **Technical Preview sürüm 2002**: Configuration Manager Technical Preview dalı sürüm 2002, hem konsol içi güncelleştirme hem de yeni bir temel sürüm olarak sunulmaktadır.
 
-[TechNet Değerlendirme Merkezi](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)' nden bir temel sürüm indirin.
+[Değerlendirme merkezinden](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)bir temel sürüm indirin.
 
 ## <a name="providing-feedback"></a><a name="BKMK_TPFeedback"></a>Geri bildirim sağlama
 
@@ -188,7 +188,7 @@ Aşağıdaki özellikler Configuration Manager Technical Preview dalının önce
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-Daha fazla bilgi için aşağıdaki makalelere bakın:
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 - [Configuration Manager’ı laboratuvarda değerlendirme](evaluate-with-lab-environment.md)
 - [Configuration Manager artımlı sürümlerindeki yenilikler](../plan-design/changes/whats-new-incremental-versions.md)

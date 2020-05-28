@@ -10,12 +10,13 @@ ms.assetid: 8e0e8496-136b-461f-8239-cc19c6b78c3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8c42576f35d285fc7285466c4208d7ccaf370daa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: ac9b5ddd85904c90709a9450d6d2a9ffd379ddb9
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723708"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268768"
 ---
 # <a name="how-to-create-deployment-plans-in-desktop-analytics"></a>Masaüstü Analizi 'nde dağıtım planları oluşturma
 
@@ -94,7 +95,7 @@ Cihazlarınızın Windows Update sürücüleri almasını yapılandırın. Bu de
 
 ### <a name="windows-applications"></a>Windows uygulamaları
 
-Masaüstü analizinin en önemli olarak göstereceği uygulamalar, düşük yüklemesi sayısı eşiğini *temel alır.* Dağıtım planının hazırlık kurallarında bu eşiği ayarlayın. Varsayılan olarak, bu eşik **% 2,0**' dir. Değerini `0.0` olarak `10.0`değiştirebilirsiniz.
+Masaüstü analizinin en önemli olarak göstereceği uygulamalar, düşük yüklemesi sayısı eşiğini *temel alır.* Dağıtım planının hazırlık kurallarında bu eşiği ayarlayın. Varsayılan olarak, bu eşik **% 2,0**' dir. Değerini `0.0` olarak değiştirebilirsiniz `10.0` .
 
 
 ## <a name="next-steps"></a>Sonraki adımlar

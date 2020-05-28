@@ -37,7 +37,7 @@ Yüksek etkili bir dağıtım için Software Center 'ın görüntülediği ileti
 
 Bu penceredeki iletiyi özelleştirme hakkında daha fazla bilgi için bkz. [yüksek riskli dağıtımlar için özel bildirim oluşturma](../deploy-use/manage-task-sequences-to-automate-tasks.md#create-a-custom-notification-for-high-risk-deployments).
 
-Ayrıca, pencerenin üst kısmındaki kuruluş adını da özelleştirebilirsiniz. (Yukarıdaki örnek, varsayılan değerini gösterir `IT Organization`). **Bilgisayar Aracısı** grubundaki **kuruluş adı** istemci ayarını değiştirin. Daha fazla bilgi için bkz. [istemci ayarları hakkında](../../core/clients/deploy/about-client-settings.md#computer-agent).
+Ayrıca, pencerenin üst kısmındaki kuruluş adını da özelleştirebilirsiniz. (Yukarıdaki örnek, varsayılan değerini gösterir `IT Organization` ). **Bilgisayar Aracısı** grubundaki **kuruluş adı** istemci ayarını değiştirin. Daha fazla bilgi için bkz. [istemci ayarları hakkında](../../core/clients/deploy/about-client-settings.md#computer-agent).
 
 <!--
 optional vs required
@@ -48,7 +48,7 @@ Daha fazla bilgi için bkz. [Windows 'u ağ üzerinden dağıtmak Için yazılı
 
 ## <a name="pxe"></a>PXE
 
-Farklı donanım modelleriyle PXE için farklı deneyimler vardır. Ağı önyüklemek için, UEFı tabanlı cihazlar genellikle `Enter` anahtarı KULLANıR ve BIOS tabanlı cihazlar bu `F12` anahtarı kullanır.
+Farklı donanım modelleriyle PXE için farklı deneyimler vardır. Ağı önyüklemek için, UEFı tabanlı cihazlar genellikle `Enter` anahtarı kullanır ve BIOS tabanlı cihazlar bu `F12` anahtarı kullanır.
 
 Aşağıdaki örnek, Hyper-V Gen1 (BIOS) PXE deneyimini göstermektedir:
 
@@ -97,7 +97,7 @@ Bir başlatma öncesi komutu çalıştırmak için görev dizisi medyası veya �
 
 Başlatma öncesi komutu, bir komut dosyası veya program ile belirttiğiniz bir komut satırdır. Kullanıcı deneyimi, bu betik veya program için benzersizdir.
 
-Daha fazla bilgi için aşağıdaki makalelere bakın:
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 - [Görev dizisi ortamı için başlatma öncesi komutları](prestart-commands-for-task-sequence-media.md)
 - [Önyükleme görüntülerini yönetme](../get-started/manage-boot-images.md#customization)
@@ -111,12 +111,12 @@ Görev sırası çalıştırıldığında, **yükleme ilerleme durumu** penceres
 
 - Bu pencere her zaman en üstte; taşıyabilirsiniz, ancak onu kapatabilir veya en aza indirmiş olursunuz.
 
-- Pencerenin üst kısmında kuruluş adını özelleştirebilirsiniz. (Yukarıdaki örnek, varsayılan değerini gösterir `IT Organization`). **Bilgisayar Aracısı** grubundaki **kuruluş adı** istemci ayarını değiştirin. Daha fazla bilgi için bkz. [istemci ayarları hakkında](../../core/clients/deploy/about-client-settings.md#computer-agent).
+- Pencerenin üst kısmında kuruluş adını özelleştirebilirsiniz. (Yukarıdaki örnek, varsayılan değerini gösterir `IT Organization` ). **Bilgisayar Aracısı** grubundaki **kuruluş adı** istemci ayarını değiştirin. Daha fazla bilgi için bkz. [istemci ayarları hakkında](../../core/clients/deploy/about-client-settings.md#computer-agent).
 
     > [!TIP]
     > Görev sırası bu değeri salt- [_SMSTSOrgName](task-sequence-variables.md#SMSTSOrgName)değişkeni içinde depolar.
 
-- Alt başlığı özelleştirebilirsiniz. (Yukarıdaki örnek, varsayılan değeri gösterir `Running: <task sequence name>`.) Görev dizisinin özelliklerinde, ilerleme durumu bildirim metni için **özel metin kullanma** seçeneğini belirleyin. En fazla 255 karakter sağlar.
+- Alt başlığı özelleştirebilirsiniz. (Yukarıdaki örnek, varsayılan değeri gösterir `Running: <task sequence name>` .) Görev dizisinin özelliklerinde, ilerleme durumu bildirim metni için **özel metin kullanma** seçeneğini belirleyin. En fazla 255 karakter sağlar.
 
 - **Çalıştırma eylemi**: ilk satır, geçerli görev dizisi adımının adını gösterir. Aşağıdaki ilerleme çubuğu, görev dizisinin genel tamamlanmasını gösterir.
 

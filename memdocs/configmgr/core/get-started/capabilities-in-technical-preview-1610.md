@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6402205ae694d719845492b1af37000a0b9335c5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cee161747d5c0b462836b7c3a44e1460173b124c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721475"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905653"
 ---
 # <a name="capabilities-in-technical-preview-1610-for-configuration-manager"></a>Configuration Manager için Technical Preview 1610 ' deki yetenekler
 
@@ -29,7 +29,7 @@ Bu makalede, sürüm 1610 Configuration Manager için Technical Preview 'da kull
 
 **Aşağıda, bu sürümle deneyebilmeniz için kullanabileceğiniz yeni özellikler verilmiştir.**  
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>Otomatik dağıtım kurallarında içerik boyutuna göre filtrele
-Artık otomatik dağıtım kurallarında yazılım güncelleştirmeleri için içerik boyutuna filtre uygulayabilirsiniz. Örneğin, yalnızca MB 'tan küçük yazılım güncelleştirmelerini indirmek için **Içerik boyutu (KB)** filtresini **< 2048** olarak ayarlayabilirsiniz. Bu filtrenin kullanılması, büyük yazılım güncelleştirmelerinin, ağ bant genişliği sınırlı olduğunda Basitleştirilmiş Windows alt düzey bakımını daha iyi destekleyecek şekilde otomatik olarak indirilmesine engel olur. Ayrıntılar için bkz. [Configuration Manager ve Basitleştirilmiş Windows Bakımı alt düzey Işletim sistemleri](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).
+Artık otomatik dağıtım kurallarında yazılım güncelleştirmeleri için içerik boyutuna filtre uygulayabilirsiniz. Örneğin, yalnızca MB 'tan küçük yazılım güncelleştirmelerini indirmek için **Içerik boyutu (KB)** filtresini **< 2048** olarak ayarlayabilirsiniz. Bu filtrenin kullanılması, büyük yazılım güncelleştirmelerinin, ağ bant genişliği sınırlı olduğunda Basitleştirilmiş Windows alt düzey bakımını daha iyi destekleyecek şekilde otomatik olarak indirilmesine engel olur. Ayrıntılar için bkz. [Configuration Manager ve Basitleştirilmiş Windows Bakımı alt düzey Işletim sistemleri](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056).
 
 #### <a name="to-configure-the-content-size-field"></a>Içerik boyutu alanını yapılandırmak için
 **Içerik boyutu (KB)** alanını yapılandırmak IÇIN, ADR oluştururken otomatik dağıtım kuralı oluşturma Sihirbazı ' nda **yazılım güncelleştirmeleri** sayfasına gidin veya var olan bir ADR Için Özellikler ' de **yazılım güncelleştirmeleri** sekmesine gidin.
@@ -64,7 +64,7 @@ Bir uygulama tarafından onaylanan isteği reddetmek için:
 1. Configuration Manager konsolunda, onay gerektiren [bir uygulama oluşturun ve dağıtın](../../apps/deploy-use/create-applications.md) .
 2. İstemci bilgisayarda, yazılım merkezi 'ni açın ve uygulama için bir istek gönderebilirsiniz.
 3. Configuration Manager konsolunda, uygulama isteğini onaylayın.
-4. Onaylanan uygulama isteğini reddetme: Configuration Manager konsolunda, **yazılım kitaplığı** > **'na genel bakış** > **uygulama yönetimi** > **onay istekleri** ' ne gidin ve reddetmek istediğiniz uygulama isteğini seçin.  Şeritte **Reddet**' e tıklayın.
+4. Onaylanan uygulama isteğini reddetme: Configuration Manager konsolunda, **yazılım kitaplığı**  >  **'na genel bakış**  >  **uygulama yönetimi**  >  **onay istekleri** ' ne gidin ve reddetmek istediğiniz uygulama isteğini seçin.  Şeritte **Reddet**' e tıklayın.
 
 ## <a name="exclude-clients-from-automatic-upgrade"></a>İstemcileri otomatik yükseltmeden hariç tut
 Technical Preview 1610, bir istemci koleksiyonunun güncelleştirilmiş istemci sürümlerini otomatik olarak yüklemesini hariç tutmak için kullanabileceğiniz yeni bir ayar sunar.  Bu, otomatik yükseltme ve yazılım güncelleştirme tabanlı yükseltme, oturum açma betikleri ve Grup İlkesi gibi diğer yöntemler için de geçerlidir. Bu, istemciyi yükseltirken daha fazla dikkatli gereksinim duyulan bir bilgisayar koleksiyonu için kullanılabilir. Dışlanan bir koleksiyonda bulunan bir istemci, güncelleştirilmiş istemci yazılımını yüklemek için istekleri yoksayar.
@@ -126,7 +126,7 @@ Artık Configuration Manager konsolundaki yapılandırma öğelerini kullanarak 
 
 ### <a name="try-it-out"></a>Deneyin!
 
-1. Configuration Manager konsolunda, **varlıklar ve uyum** > **genel bakış** > **Uyumluluk ayarları** > **yapılandırma öğeleri**' ne gidin ve yeni bir **yapılandırma öğesi**oluşturun.
+1. Configuration Manager konsolunda, **varlıklar ve uyum**  >  **genel bakış**  >  **Uyumluluk ayarları**  >  **yapılandırma öğeleri**' ne gidin ve yeni bir **yapılandırma öğesi**oluşturun.
 2. Bir ad girin ve **Configuration Manager istemcisi olmadan yönetilen cihazlar Için ayarlar** altında **Windows 8.1 ve Windows 10** ' u seçin ve **İleri**' ye tıklayın.
 3. **Desteklenen platformlar** sayfasında **tüm windows 10 (64-bit)** ve **tüm Windows 10 (32-bit)** ' ın seçili olduğundan emin olun ve ardından **İleri**' ye tıklayın.
 4. **Windows Defender** ayar grubunu seçin ve ardından **İleri**' ye tıklayın.
@@ -143,7 +143,7 @@ Artık Configuration Manager konsolundan bir mobil cihaz için bir ilke eşitlem
 
 ### <a name="try-it-out"></a>Deneyin!
 
-1. Configuration Manager konsolunda, **varlıklar ve uyum** > **genel bakış** > cihazlar ' a gidin.
+1. Configuration Manager konsolunda, **varlıklar ve uyum**  >  **genel bakış** > cihazlar ' a gidin.
 2. **Uzak cihaz eylemleri** menüsünde, **eşitleme isteği gönder**' i seçin.
 
 Eşitleme beş ila on dakika sürebilir. İlkedeki değişiklikler cihazla eşitlenir. Eşitleme isteğinin durumunu **cihazlar** görünümündeki **uzak eşitleme durumu** sütununda veya cihazın **Özellikler** iletişim kutusunda izleyebilirsiniz.

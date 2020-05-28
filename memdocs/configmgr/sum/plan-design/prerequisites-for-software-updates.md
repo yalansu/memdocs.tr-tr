@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: 138ff268f42dae1c15e11b34c92e6c7a3044705b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a870d2bf18b9e7f064e914f450aee0f5e3e2e545
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078456"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906710"
 ---
 # <a name="prerequisites-for-software-updates-in-configuration-manager"></a>Configuration Manager 'de yazılım güncelleştirmeleri için Önkoşullar
 
@@ -68,7 +68,7 @@ Yazılım güncelleştirme noktası uzak bir site sistem sunucusunda olduğunda 
 ### <a name="client-settings-for-software-updates"></a>Yazılım güncelleştirmeleri için istemci ayarları  
 Yazılım güncelleştirmeleri varsayılan olarak istemciler için etkinleştirilmiştir. İstemcilerin yazılım güncelleştirmelerinin uyumluluğunu nasıl ve ne zaman değerlendirmekte olduğunu ve yazılım güncelleştirmelerinin nasıl yükleneceğini kontrol eden başka kullanılabilir ayarlar vardır.  
 
- Daha fazla bilgi için aşağıdaki makalelere bakın:  
+ Daha fazla bilgi için aşağıdaki makaleleri inceleyin:  
 
 - [Yazılım güncelleştirmeleri için istemci ayarları](../get-started/manage-settings-for-software-updates.md#BKMK_ClientSettings)   
 
@@ -83,7 +83,7 @@ WSUS 6,2 ve 6,3 ' de **yükseltmeler** sınıflandırmasını eşitlemek için i
 
 - **Yükseltmeler** sınıflandırmasını eşitlemeden önce yazılım güncelleştirme noktalarınıza ve site sunucularınıza 2015 Ekim ' de yayınlanan [KB 3095113](https://support.microsoft.com/kb/3095113)sürümünü yüklemelisiniz.
   - Bu güncelleştirme, **yükseltmeler** sınıflandırmasını sunar.
-- Windows 10 sürüm 1607 ve üzeri Hizmetleri için [KB 3159706](https://support.microsoft.com/en-us/help/3159706)' yi yükleyip yapılandırmanız gerekir. KB 3159706 Mayıs 2016 ' de yayımlandı.
+- Windows 10 sürüm 1607 ve üzeri Hizmetleri için [KB 3159706](https://support.microsoft.com/help/3159706)' yi yükleyip yapılandırmanız gerekir. KB 3159706 Mayıs 2016 ' de yayımlandı.
   - Bu güncelleştirme, WSUS 'nin Windows 10 sürüm 1607 ve üstünü yükseltmek için kullanılan dosyaların yerel olarak şifresini çözmesine olanak sağlar.
 
 >[!IMPORTANT]
@@ -95,7 +95,7 @@ Bu bölümde açıklanan güncelleştirmeler ve sorunlar yalnızca Windows Serve
 
 ### <a name="historical-information-about-kb-3095113"></a>KB 3095113 hakkında geçmiş bilgileri
 
- [KB 3095113](https://support.microsoft.com/kb/3095113) , WSUS 'e Windows 10 yükseltmeleri için destek eklemek üzere 2015 Ekim 'de [bir düzeltme olarak yayımlanmıştır](https://blogs.technet.microsoft.com/wsus/2015/12/03/important-update-for-wsus-4-0-kb-3095113/) . Güncelleştirme, WSUS 'nin Windows 10 için **yükseltmeler** sınıflandırmasında güncelleştirmeleri eşitlemesini ve dağıtmasını sağlar.
+ [KB 3095113](https://support.microsoft.com/kb/3095113) , WSUS 'e Windows 10 yükseltmeleri için destek eklemek üzere 2015 Ekim 'de [bir düzeltme olarak yayımlanmıştır](https://docs.microsoft.com/archive/blogs/wsus/important-update-for-wsus-4-0-kb-3095113) . Güncelleştirme, WSUS 'nin Windows 10 için **yükseltmeler** sınıflandırmasında güncelleştirmeleri eşitlemesini ve dağıtmasını sağlar.
 
 Önce [KB 3095113](https://support.microsoft.com/kb/3095113)yüklenmeden herhangi bir yükseltmeyi EŞITLERSENIZ, WSUS veritabanını (SUSDB) kullanılamayan verilerle doldurursunuz. Yükseltmelerin düzgün bir şekilde dağıtılması için önce bu verilerin temizlenmesi gerekir. Bu durumdaki Windows 10 yükseltmeleri yazılım güncelleştirmelerini Indirme Sihirbazı kullanılarak indirilemiyor.
 
@@ -115,15 +115,15 @@ ERROR: DownloadContentFiles() failed with hr=0x80073633
 # This log is truncated for readability.
 ```
 
-Tarihsel olarak, bu hatalar oluştuğunda, [WSUS için çözüm adımlarının](https://blogs.technet.microsoft.com/wsus/2016/01/29/how-to-delete-upgrades-in-wsus/)değiştirilmiş bir sürümü çalıştırılarak çözümlenirler. Bu adımlar, KB 3159706 yüklemesinden sonra gereken adımları el ile yapmamız için çözünürlüğe benzer olduğundan, her iki adım kümesini aşağıdaki bölümde tek bir çözünürlükte birleştirdik:
+Tarihsel olarak, bu hatalar oluştuğunda, [WSUS için çözüm adımlarının](https://docs.microsoft.com/archive/blogs/wsus/how-to-delete-upgrades-in-wsus)değiştirilmiş bir sürümü çalıştırılarak çözümlenirler. Bu adımlar, KB 3159706 yüklemesinden sonra gereken adımları el ile yapmamız için çözünürlüğe benzer olduğundan, her iki adım kümesini aşağıdaki bölümde tek bir çözünürlükte birleştirdik:
 
 - [Kb 3095113 veya kb 3159706 ' ü yüklemeden önce yükseltmeleri eşitlemeden kurtarmak için](#bkmk_fix-upgrades).
 
 ### <a name="historical-information-about-kb-3159706"></a>KB 3159706 hakkında geçmiş bilgileri
 
-KB 3148812, Windows 10 paketlerini yükseltmek için kullanılan. ESD dosyalarının yerel olarak şifresini çözmesine olanak tanımak üzere başlangıçta 2016 Nisan 'da yayımlanmıştır. [Kb 3148812 bazı müşteriler için sorun oluşmasına neden oldu](https://blogs.technet.microsoft.com/wsus/2016/05/05/the-long-term-fix-for-kb3148812-issues/) ve [KB 3159706](https://support.microsoft.com/en-us/help/3159706)ile değiştirilmiştir. Windows 10 sürüm 1607 ve üzeri cihazlara hizmet vermeden önce, KB 3159706 ' nin tüm yazılım güncelleştirme noktalarınızda ve site sunucularınızda yüklü olması gerekir. Bununla birlikte, KB 'yi fark etmezseniz sorunlar ortaya çıkabilir, yüklemeden sonra aşağıdaki el ile gerçekleştirilecek adımlar gerekir:
+KB 3148812, Windows 10 paketlerini yükseltmek için kullanılan. ESD dosyalarının yerel olarak şifresini çözmesine olanak tanımak üzere başlangıçta 2016 Nisan 'da yayımlanmıştır. [Kb 3148812 bazı müşteriler için sorun oluşmasına neden oldu](https://docs.microsoft.com/archive/blogs/wsus/the-long-term-fix-for-kb3148812-issues) ve [KB 3159706](https://support.microsoft.com/help/3159706)ile değiştirilmiştir. Windows 10 sürüm 1607 ve üzeri cihazlara hizmet vermeden önce, KB 3159706 ' nin tüm yazılım güncelleştirme noktalarınızda ve site sunucularınızda yüklü olması gerekir. Bununla birlikte, KB 'yi fark etmezseniz sorunlar ortaya çıkabilir, yüklemeden sonra aşağıdaki el ile gerçekleştirilecek adımlar gerekir:
 
-1. Yükseltilmiş bir komut isteminden çalıştırın `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`.
+1. Yükseltilmiş bir komut isteminden çalıştırın `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing` .
 1. WSUS hizmetini tüm WSUS sunucularında yeniden başlatın.
 
 KB 3159706 ' nin yükleme sonrasında el ile adımlar olduğunu fark etmezseniz veya KB 3159706 ' yi yüklemeden önce Windows 10 1607 ' ye yükseltme ile eşitledikten sonra, WSUS konsoluna bağlanma ve yükseltmeyi dağıtma sorunlarıyla karşılaşırsınız. İstemci, yükseltme dosyasını indirdiği zaman, bir [ **0Xc1800118** hata kodu](https://support.microsoft.com/help/3194588/0xc1800118-error-when-you-push-windows-10-version-1607-by-using-wsus)alır.
@@ -143,7 +143,7 @@ KB 3159706 ' nin yükleme sonrasında el ile adımlar olduğunu fark etmezseniz 
       Get-WsusClassification | Where-Object -FilterScript {$_.Classification.Title -Eq "Upgrades"} | Set-WsusClassification -Disable
       ```  
      - WSUS veritabanını birden çok WSUS sunucusu arasında paylaşırsanız, her veritabanı için yalnızca bir kez **yükseltmeler** seçeneğinin işaretini kaldırmanız gerekir.  
-1. Her WSUS sunucusunda, yükseltilmiş bir komut isteminden şunu çalıştırın: `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`. Ardından WSUS hizmetini WSUS sunucusunda yeniden başlatın.
+1. Her WSUS sunucusunda, yükseltilmiş bir komut isteminden şunu çalıştırın: `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing` . Ardından WSUS hizmetini WSUS sunucusunda yeniden başlatın.
    -  WSUS, hizmet verme 'nin gerekli olup olmadığını kontrol etmeden önce veritabanını [tek kullanıcı moduna](https://docs.microsoft.com/sql/relational-databases/databases/set-a-database-to-single-user-mode) koyar. Hizmet, denetim sonuçlarına göre çalışır veya çalışmaz. Daha sonra, veritabanı birden çok kullanıcı moduna geri konur. 
    - WSUS veritabanını birden çok WSUS sunucusu arasında paylaşırsanız, bu hizmeti her bir veritabanı için yalnızca bir kez yapmanız gerekir.
 1. Yönetici olarak çalışan PowerShell ıSE 'yi kullanarak her WSUS veritabanından tüm Windows 10 yükseltmelerini silin.

@@ -2,7 +2,7 @@
 title: Endpoint Analytics önizlemesi
 titleSuffix: Configuration Manager
 description: Endpoint Analytics önizlemesi için yönergeler.
-ms.date: 04/30/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: e7dbb53833c29aae442eec4ca3c8402b99cde237
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
-ms.translationtype: HT
+ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693229"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764246"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a>Endpoint Analytics önizlemesi
 
@@ -24,6 +24,9 @@ ms.locfileid: "82693229"
 > Bu bilgiler, ticari olarak yayınlanmadan önce önemli ölçüde değiştirilebilen bir önizleme özelliğiyle ilgilidir. Burada verilen bilgilerle ilgili olarak Microsoft açık veya zımni hiçbir garanti vermez. 
 >
 > Endpoint Analytics 'teki değişiklikler hakkında daha fazla bilgi için bkz. [Endpoint Analytics 'teki](whats-new-endpoint-analytics.md)yenilikler. 
+>
+>Endpoint Analytics için özel önizlemeye katmak istiyorsanız lütfen ayrıntıları [Bu biçimde](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR9-ZzmlTlbJMh03eDDHtO81UOERLUkMzNFZKSlBaNFNFUVhFSlE0MzNYMS4u)girin. Kiracılar, önizlemesinin genişledikçe uçucaktır.
+
 
 ## <a name="endpoint-analytics-overview"></a>Endpoint Analytics genel bakış
 
@@ -64,7 +67,7 @@ Cihazları Intune ile kaydetmek için bu önizleme şunları gerektirir:
 Configuration Manager aracılığıyla cihazları kaydetmek için bu önizleme şunları gerektirir:
 - Configuration Manager sürüm 2002 veya daha yenisi
 - 2002 veya daha yeni bir sürüme yükseltilen istemciler
-- [Microsoft Endpoint Manager kiracı iliştirme](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) Kuzey Amerika bir Azure kiracı konumuyla etkinleştirildi (yakında diğer bölgelere genişletireceğiz)
+- [Microsoft Endpoint Manager kiracı iliştirme](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) Kuzey Amerika veya Avrupa 'nın Azure kiracı konumuyla etkinleştirildi (yakında diğer bölgelere genişletireceğiz)
 
 Cihazların Intune veya Configuration Manager aracılığıyla kaydedilip edilmeyeceğini, [**proaktif düzeltme komut dosyası oluşturma**](#bkmk_uea_prs) aşağıdaki gereksinimlere sahiptir:
 - Cihazların Azure AD 'ye katılmış veya hibrit Azure AD 'ye katılmış olması ve aşağıdaki koşullardan birini karşılaması gerekir:
@@ -99,8 +102,38 @@ Salt okunurdur bir Kullanıcı yalnızca **cihaz yapılandırmalarının** ve **
 
 Öngörülü düzeltmeler için, kullanıcının **cihaz yapılandırması** kategorisi altında rollerine uygun izinlere ihtiyacı vardır.  Kullanıcı yalnızca proaktif düzeltmeler kullanıyorsa, **Endpoint Analytics** kategorisindeki izinler gerekli değildir.
 
+Önceden proaktif düzeltmeler kullanmadan önce, lisans gereksinimlerini onaylamak için bir [Intune Hizmet Yöneticisi](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) gerekir.
 
 ## <a name="start-gathering-data"></a><a name="bkmk_uea_start"></a>Veri toplamaya başla
+- Yalnızca Intune tarafından yönetilen cihazları kaydediyorsanız [Endpoint Analytics portalında](#bkmk_uea_onboard) ekleme bölümüne atlayın.
+
+- Configuration Manager tarafından yönetilen cihazları kaydediyorsanız, aşağıdaki adımları gerçekleştirmeniz gerekir:
+   - [Configuration Manager 'da Endpoint Analytics veri toplamayı etkinleştir](#bkmk_uea_cm_enroll)
+   - [Configuration Manager ' de karşıya veri yüklemeyi etkinleştir](#bkmk_uea_cm_upload)
+   - [Endpoint Analytics portalına ekleme](#bkmk_uea_onboard)  
+
+### <a name="enroll-devices-managed-by-configuration-manager"></a><a name="bkmk_uea_cm_enroll"></a>Configuration Manager tarafından yönetilen cihazları kaydetme
+<!--6051638, 5924760-->
+Configuration Manager cihazları kaydetmeden önce, [Microsoft Endpoint Manager kiracı ekleme](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions)'yi etkinleştirme dahil olmak üzere [önkoşulları](#bkmk_uea_prereq) doğrulayın. 
+
+#### <a name="enable-endpoint-analytics-data-collection-in-configuration-manager"></a><a name="bkmk_uea_cm_enable"></a>Configuration Manager 'da Endpoint Analytics veri toplamayı etkinleştir
+
+1. Configuration Manager konsolunda, **Yönetim**  >  **istemci ayarları**  >  **varsayılan istemci ayarları**' na gidin.
+1. Sağ tıklayın ve **Özellikler** ' i seçin ve ardından **Bilgisayar Aracısı** ayarları ' nı seçin.
+1. **Endpoint Analytics veri toplamayı etkinleştir** ayarını **Evet**olarak belirleyin.
+   > [!Important] 
+   > Cihazlarınıza dağıtılan mevcut bir özel istemci Aracısı ayarınız varsa, bu özel ayarda **Endpoint Analytics veri toplamayı etkinleştir** seçeneğini güncelleştirmeniz ve ardından bu özel ayar için makinelerinize yeniden dağıtmanız gerekir.
+
+#### <a name="enable-data-upload-in-configuration-manager"></a><a name="bkmk_uea_cm_upload"></a>Configuration Manager ' de karşıya veri yüklemeyi etkinleştir
+
+1. Configuration Manager konsolunda **Yönetim**  >  **Cloud Services**  >  **ortak yönetim**' e gidin.
+1. **CoMgmtSettingsProd** ve ardından **Özellikler**' i seçin.
+1. **Karşıya yüklemeyi Yapılandır** sekmesinde, **Microsoft Endpoint Manager 'A yüklenen cihazlarda Endpoint Analytics 'i etkinleştirme** seçeneğini işaretleyin
+
+   :::image type="content" source="media/6051638-configure-upload-configmgr.png" alt-text="Microsoft Endpoint Manager 'a yüklenen cihazlarda Endpoint Analytics 'i etkinleştirme" lightbox="media/6051638-configure-upload-configmgr.png":::
+
+### <a name="onboard-in-the-endpoint-analytics-portal"></a><a name="bkmk_uea_onboard"></a>Endpoint Analytics portalına ekleme
+Hem Configuration Manager hem de Intune tarafından yönetilen cihazlar için Endpoint Analytics portalından ekleme gerekir.
 
 1. Şuraya gidin: `https://endpoint.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
 1. **Başlat**'a tıklayın. Bu, tüm uygun cihazlardan önyükleme performansı verilerini toplamak üzere otomatik olarak bir yapılandırma profili atar. [Atanan cihazları](#bkmk_uea_profile) daha sonra değiştirebilirsiniz. Başlangıç performansı verilerinin, yeniden başlatıldıktan sonra Intune kayıtlı cihazlarınızdan doldurulması 24 saate kadar sürebilir.
@@ -207,7 +240,7 @@ Belirli bir cihaza tıkladığınızda, önyükleme ve oturum açma geçmişini 
 **Başlangıç performansı** sayfasında, içgörüler için aşağıdakiler dahil olmak üzere destek sağlayan raporlama sekmeleri bulunur:
 1. **Model performansı**. Bu sekme, cihaz modeline göre önyükleme ve oturum açma performansını görmenizi sağlar. Bu, performans sorunlarının belirli modellere yalıtılmış olup olmadığını belirlemenize yardımcı olabilir.
 1. **Cihaz performansı**. Bu sekme, tüm cihazlarınız için önyükleme ve oturum açma ölçümleri sağlar. Sorun gidermeye yardımcı olmak üzere hangi cihazların en kötü puanları olduğunu görmek için belirli bir ölçüye göre (örneğin, GP oturum açma zamanı) sıralama yapabilirsiniz. Ayrıca, bir cihazı adına göre de arayabilirsiniz. Bir cihaza tıkladığınızda, ön yükleme ve oturum açma geçmişini görebilirsiniz. Bu, son bir gerileme olup olmadığını belirlemenize yardımcı olabilir
-1. **Başlangıç işlemi**. Bu sekme (görünür durumdaysa), bu özelliği geliştirdiğimiz sürece yalnızca sizin için bu özelliği geliştirdik. Bu özellik, hangi işlemlerin "yanıt veren masaüstü süresi" aşamasının hangi işlemlerde etkilendiğini gösterecektir. Bu, masaüstü işlendikten sonra CPU 'YU %50 oranında tutuyor.
+1. **Başlangıç işlemi**. Başlangıç işlemi, kullanıcıların masaüstünün yanıt vermesini beklemek zorunda kalacağı süreyi artırarak Kullanıcı deneyimini olumsuz etkileyebilir. Bu sekme (görünür durumdaysa), bu özelliği geliştirdiğimiz sürece yalnızca sizin için bu özelliği geliştirdik. Bu özellik, hangi işlemlerin "yanıt veren masaüstü süresi" aşamasının hangi işlemlerde etkilendiğini gösterecektir. Bu, masaüstü işlendikten sonra CPU 'YU %50 oranında tutuyor. Tabloda yalnızca kiracınızdaki en az 10 cihaz etkileyen süreçler listelenir.  
 
 ## <a name="proactive-remediations"></a><a name="bkmk_uea_prs"></a>Proaktif düzeltmeler
 
@@ -218,7 +251,7 @@ Her betik paketi bir algılama betiği, bir düzeltme betiği ve meta veriler i�
 ### <a name="get-the-detection-and-remediation-scripts"></a><a name="bkmk_uea_prs_ps1"></a>Algılama ve düzeltme betiklerini alma
 
 1. [PowerShell betikleri](#bkmk_uea_ps_scripts) bölümünde Bu makalenin altındaki betikleri kopyalayın.
-    - Adları ile `det` başlayan betik dosyaları algılama betikleridir. Düzeltme betikleri ile `rem`başlar.
+    - Adları ile başlayan betik dosyaları `det` algılama betikleridir. Düzeltme betikleri ile başlar `rem` .
     - Betiklerin açıklaması için bkz. [betik açıklamaları](#bkmk_uea_scripts).
 1. Her betiği, belirtilen adı kullanarak kaydedin. Ad aynı zamanda her bir betiğin üst kısmındaki açıklamalardır.
     - Farklı bir betik adı kullanabilirsiniz, ancak [betik açıklamaları](#bkmk_uea_scripts) bölümünde listelenen adla eşleşmez.
@@ -232,7 +265,7 @@ Her betik paketi bir algılama betiği, bir düzeltme betiği ve meta veriler i�
      [![Endpoint Analytics proaktif düzeltmeler sayfası. Oluştur bağlantısını seçin.](media/proactive-remediations-create.png)](media/proactive-remediations-create.png#lightbox)
 1. **Temel bilgiler** adımında, betik paketine bir **ad** ve isteğe bağlı olarak bir **Açıklama**verin. **Yayımcı** alanı düzenlenebilir, ancak varsayılan olarak kiracı adınızı alabilir. **Sürüm** düzenlenemiyor. 
 1. **Ayarlar** adımında, indirdiğiniz betiklerdeki metni **algılama betiği** ve **Düzeltme betiği** alanlarına kopyalayın. 
-   - Aynı pakette olması için karşılık gelen algılama ve düzeltme betiğinin olması gerekir. Örneğin, `Detect_stale_Group_Policies.ps1` algılama betiği `Remediate_stale_GroupPolicies.ps1` düzeltme betiğine karşılık gelir.
+   - Aynı pakette olması için karşılık gelen algılama ve düzeltme betiğinin olması gerekir. Örneğin, `Detect_stale_Group_Policies.ps1` algılama betiği `Remediate_stale_GroupPolicies.ps1` Düzeltme betiğine karşılık gelir.
        [![Endpoint Analytics proaktif düzeltmeleri betik ayarları sayfası.](media/proactive-remediations-script-settings.png)](media/proactive-remediations-script-settings.png#lightbox)
 1. **Ayarlar** sayfasındaki seçenekleri önerilen yapılandırmalara göre son yapın:
    - **Bu betiği, oturum açma kimlik bilgilerini kullanarak çalıştırın**: Bu, betiğe bağımlıdır. Daha fazla bilgi için bkz. [betik açıklamaları](#bkmk_uea_scripts).
@@ -241,7 +274,7 @@ Her betik paketi bir algılama betiği, bir düzeltme betiği ve meta veriler i�
 1. **İleri** ' ye tıklayın ve ihtiyacınız olan tüm **kapsam etiketlerini** atayın.
 1. **Atamalar** adımında, komut dosyası paketini dağıtmak istediğiniz cihaz gruplarını seçin.
 1. Dağıtımınız için **İnceleme ve oluşturma** adımını doldurun.
-1. **Raporlama** > **Endpoint Analytics-proaktif**düzeltmeler altında, algılama ve düzeltme durumunuz için bir genel bakış görebilirsiniz.
+1. **Raporlama**  >  **Endpoint Analytics-proaktif**düzeltmeler altında, algılama ve düzeltme durumunuz için bir genel bakış görebilirsiniz.
        [![Endpoint Analytics proaktif düzeltmelere ilişkin rapor, genel bakış sayfası.](media/proactive-remediations-report-overview.png)](media/proactive-remediations-report-overview.png#lightbox)
 1. Dağıtımınızdaki her bir cihaz için durum ayrıntılarını almak üzere **cihaz durumu** ' na tıklayın.
        [![Endpoint Analytics proaktif düzeltmelere cihaz durumu.](media/proactive-remediations-device-status.png)](media/proactive-remediations-device-status.png#lightbox)
@@ -310,7 +343,7 @@ Bu sorunların yakında çıkacak Configuration Manager bağlayıcısından gele
 İkincisi, sorun giderme için hızlı bir denetim listesi aşağıda verilmiştir:
 1. Performans verilerini istediğiniz tüm cihazlara hedeflenmiş Windows sistem durumu Izleme profiline sahip olduğunuzdan emin olun. Bu profil için uç nokta Analizi ayar sayfasından bir bağlantı bulabilir veya diğer Intune profilinde olduğu gibi bu profile gidebilirsiniz. Beklenen cihaz kümesine atandığından emin olmak için atama sekmesine bakın. 
 1. Veri toplama için hangi cihazların başarıyla yapılandırıldığını göz atalım. Ayrıca, bu bilgileri profillere Genel Bakış sayfasında de görebilirsiniz.  
-   - Müşterilerin, etkilenen cihazların hata kodunu göstereceği profil atama hatalarını görebileceği bilinen bir sorun vardır `-2016281112 (Remediation failed)`. Bu sorunu etkin bir şekilde araştırıyoruz.
+   - Müşterilerin, etkilenen cihazların hata kodunu göstereceği profil atama hatalarını görebileceği bilinen bir sorun vardır `-2016281112 (Remediation failed)` . Bu sorunu etkin bir şekilde araştırıyoruz.
 1. Veri toplama etkinleştirildikten sonra veri toplama için başarıyla yapılandırılmış cihazların yeniden başlatılması gerekir ve cihazın cihaz performansı sekmesinde gösterilmesi için 24 saate kadar beklemeniz gerekir.
 1. Cihazınız veri toplama için başarılı bir şekilde yapılandırıldıysa, daha sonra yeniden başlatılırsa ve 24 saat sonra hala görmüyorsanız, cihazın koleksiyon uç noktalarımıza ulaşamamakta olması olabilir. Şirketiniz bir ara sunucu kullanıyorsa ve uç noktaların proxy 'de etkinleştirilmemiş olması durumunda bu sorun oluşabilir. Daha fazla bilgi için bkz. [sorun giderme uç noktaları](#bkmk_uea_endpoints).
 
@@ -350,7 +383,7 @@ Cihazları, oturum açmış kullanıcının proxy kimlik doğrulaması bağlamı
 - Kullanıcıların, veri paylaşım uç noktalarına erişmek için proxy iznine sahip olduğundan emin olun. Bu seçenek, cihazların proxy izinlerine sahip konsol kullanıcılarına sahip olmasını gerektirir, bu nedenle bu yöntemi gözetimsiz cihazlarla kullanamazsınız.
 
 > [!IMPORTANT]
-> Kullanıcı proxy kimlik doğrulama yaklaşımı, Microsoft Defender Gelişmiş tehdit koruması kullanımıyla uyumlu değildir. Bu davranış, bu kimlik doğrulamanın **Disableenterpriseauthproxy** kayıt defteri anahtarını olarak `0`ayarlanmış olması, Microsoft Defender ATP 'nin olarak `1`ayarlanmasını gerektirmesidir. Daha fazla bilgi için bkz. [Microsoft Defender ATP 'de makine proxy ve internet bağlantısı ayarlarını yapılandırma](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
+> Kullanıcı proxy kimlik doğrulama yaklaşımı, Microsoft Defender Gelişmiş tehdit koruması kullanımıyla uyumlu değildir. Bu davranış, bu kimlik doğrulamanın **Disableenterpriseauthproxy** kayıt defteri anahtarını olarak ayarlanmış olması `0` , Microsoft Defender ATP 'nin olarak ayarlanmasını gerektirmesidir `1` . Daha fazla bilgi için bkz. [Microsoft Defender ATP 'de makine proxy ve internet bağlantısı ayarlarını yapılandırma](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
 #### <a name="device-proxy-authentication"></a>Cihaz proxy kimlik doğrulaması
 
@@ -372,7 +405,7 @@ Bu yaklaşım en karmaşıktır çünkü aşağıdaki yapılandırmalarda gerekl
 
   - Saydam proxy
 
-  - Aşağıdaki Grup İlkesi ayarını kullanarak cihaz genelinde Winınet proxy yapılandırın: **makine başına proxy ayarları yap (Kullanıcı başına değil)** (proxysettingsperuser = `1`)
+  - Aşağıdaki Grup İlkesi ayarını kullanarak cihaz genelinde Winınet proxy yapılandırın: **makine başına proxy ayarları yap (Kullanıcı başına değil)** (proxysettingsperuser = `1` )
 
   - Yönlendirilmiş bağlantı veya ağ adresi çevirisi (NAT) kullanan
 
@@ -380,6 +413,10 @@ Bu yaklaşım en karmaşıktır çünkü aşağıdaki yapılandırmalarda gerekl
 
 
 ## <a name="frequently-asked-questions"></a><a name="bkmk_uea_faq"></a>Sık sorulan sorular
+
+### <a name="will-my-endpoint-analytics-data-migrate-if-i-move-my-intune-tenant-to-a-different-tenant-location"></a>Intune kiracımı farklı bir kiracı konumuna taşıdığımda Endpoint Analytics veri geçişi yapılsın mı?
+
+Intune kiracınızı farklı bir konuma geçirirseniz, geçiş sırasında Endpoint Analytics çözümünüzdeki tüm veriler kaybedilir. Uç noktalar uç nokta analizine sürekli olarak rapor ettiğinden, geçiş sonrası oluşan tüm olaylar otomatik olarak yeni kiracı konumunuza ve raporlarınıza yeniden yükleme, cihazların düzgün şekilde kaydedilmeye başlayacağı kabul edilir. 
 
 ### <a name="why-are-the-scripts-exiting-with-a-code-of-1"></a>Betikler neden 1 kodla çıkıyor?
 
@@ -391,14 +428,14 @@ Betiklerin, düzeltme olması gerektiğini Intune 'a bildirmek için 1 koduyla �
 
 ## <a name="script-descriptions"></a><a name="bkmk_uea_scripts"></a>Betik açıklamaları
 
-Bu tabloda betik adları, açıklamalar, algılamalar, düzeltmeler ve yapılandırılabilir öğeler gösterilmektedir. Adları ile `Detect` başlayan betik dosyaları algılama betikleridir. Düzeltme betikleri ile `Remediate`başlar. Bu betikler, bu makaledeki sonraki bölümden kopyalanabilir.
+Bu tabloda betik adları, açıklamalar, algılamalar, düzeltmeler ve yapılandırılabilir öğeler gösterilmektedir. Adları ile başlayan betik dosyaları `Detect` algılama betikleridir. Düzeltme betikleri ile başlar `Remediate` . Bu betikler, bu makaledeki sonraki bölümden kopyalanabilir.
 
 |Betik adı|Açıklama|
 |---|---|
-|**Eski grup Ilkelerini Güncelleştir** </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Son grup ilkesi yenilemenin ne zaman `7 days` önce daha büyük olup olmadığını algılar.  </br>Algılama betiğinin değerini `$numDays` değiştirerek 7 günlük eşiğini özelleştirin. </br></br>Ve çalıştıran `gpupdate /target:computer /force``gpupdate /target:user /force`  </br> </br>, Sertifikalar ve yapılandırmalara grup ilkesi aracılığıyla teslim edildiğinde ağ bağlantısıyla ilgili destek çağrılarını azaltmaya yardımcı olabilir. </br> </br> **Oturum açma kimlik bilgilerini kullanarak betiği çalıştırın**: Evet|
+|**Eski grup Ilkelerini Güncelleştir** </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Son grup ilkesi yenilemenin ne zaman önce daha büyük olup olmadığını algılar `7 days` .  </br>Algılama betiğinin değerini değiştirerek 7 günlük eşiğini özelleştirin `$numDays` . </br></br>`gpupdate /target:computer /force`Ve çalıştıran`gpupdate /target:user /force`  </br> </br>, Sertifikalar ve yapılandırmalara grup ilkesi aracılığıyla teslim edildiğinde ağ bağlantısıyla ilgili destek çağrılarını azaltmaya yardımcı olabilir. </br> </br> **Oturum açma kimlik bilgilerini kullanarak betiği çalıştırın**: Evet|
 |**Office Tıkla-Çalıştır hizmetini yeniden Başlat** </br> `Detect_Click_To_Run_Service_State.ps1` </br> `Remediate_Click_To_Run_Service_State.ps1`| Tıkla-Çalıştır hizmetinin otomatik olarak başlayacak şekilde ayarlandığını ve hizmetin durdurulup durdurulduğunu algılar. </br> </br> Hizmeti otomatik olarak başlayacak ve durdurulmuş ise hizmeti başlatmaya ayarlayarak düzeltme yapın. </br></br> , Tıkla-Çalıştır hizmeti durdurulduğu için Win32 Microsoft 365 uygulamalarının Çalıştırılmayabileceği sorunları gidermeye yardımcı olur. </br> </br> **Oturum açma kimlik bilgilerini kullanarak betiği çalıştırın**: Hayır|
-|**Ağ sertifikalarını denetle** </br>`Detect_Expired_Issuer_Certificates.ps1` </br>`Remediate_Expired_Issuer_Certificates.ps1`|Makinenin veya kullanıcının süresi dolduğundan veya süresi dolmak üzere olan bir CA tarafından verilen sertifikaları algılar. </br> Algılama betiğinin değerini `$strMatch` değiştirerek CA 'yı belirtin. Süresi dolmak `$expiringDays` üzere olan sertifikaları bulmak için 0 veya süre sonu yakın olan sertifikaların bulunacağı başka bir gün sayısını belirtin.  </br></br>Kullanıcıya bir bildirim göndererek düzeltme yaparak düzeltme. </br> İleti başlığı `$Title` ve `$msgText` kullanıcıların görmesini istediğiniz metni içeren ve değerlerini belirtin. </br> </br> Kullanıcılara, yenilenmesi gerekebilecek, son kullanma izni veren sertifikaları bildirir. </br> </br> **Oturum açma kimlik bilgilerini kullanarak betiği çalıştırın**: Hayır|
-|**Eski sertifikaları temizle** </br>`Detect_Expired_User_Certificates.ps1` </br> `Remediate_Expired_User_Certificates.ps1`| Geçerli kullanıcının kişisel deposunda bir CA tarafından verilen süre aşımına uğradı sertifikaları algılar. </br> Algılama betiğinin değerini `$certCN` değiştirerek CA 'yı belirtin. </br> </br> Geçerli kullanıcının kişisel mağazasından bir CA tarafından verilen süre dolan sertifikaları silerek düzeltme. </br> Düzeltme `$certCN` betikindeki değerini değiştirerek CA 'yı belirtin. </br> </br> Geçerli kullanıcının kişisel mağazasından bir CA tarafından verilen süre dolma sertifikalarını bulur ve siler. </br> </br> **Oturum açma kimlik bilgilerini kullanarak betiği çalıştırın**: Evet|
+|**Ağ sertifikalarını denetle** </br>`Detect_Expired_Issuer_Certificates.ps1` </br>`Remediate_Expired_Issuer_Certificates.ps1`|Makinenin veya kullanıcının süresi dolduğundan veya süresi dolmak üzere olan bir CA tarafından verilen sertifikaları algılar. </br> Algılama betiğinin değerini değiştirerek CA 'yı belirtin `$strMatch` . `$expiringDays`Süresi dolmak üzere olan sertifikaları bulmak için 0 veya süre sonu yakın olan sertifikaların bulunacağı başka bir gün sayısını belirtin.  </br></br>Kullanıcıya bir bildirim göndererek düzeltme yaparak düzeltme. </br> `$Title` `$msgText` İleti başlığı ve kullanıcıların görmesini istediğiniz metni içeren ve değerlerini belirtin. </br> </br> Kullanıcılara, yenilenmesi gerekebilecek, son kullanma izni veren sertifikaları bildirir. </br> </br> **Oturum açma kimlik bilgilerini kullanarak betiği çalıştırın**: Hayır|
+|**Eski sertifikaları temizle** </br>`Detect_Expired_User_Certificates.ps1` </br> `Remediate_Expired_User_Certificates.ps1`| Geçerli kullanıcının kişisel deposunda bir CA tarafından verilen süre aşımına uğradı sertifikaları algılar. </br> Algılama betiğinin değerini değiştirerek CA 'yı belirtin `$certCN` . </br> </br> Geçerli kullanıcının kişisel mağazasından bir CA tarafından verilen süre dolan sertifikaları silerek düzeltme. </br> Düzeltme betikindeki değerini değiştirerek CA 'yı belirtin `$certCN` . </br> </br> Geçerli kullanıcının kişisel mağazasından bir CA tarafından verilen süre dolma sertifikalarını bulur ve siler. </br> </br> **Oturum açma kimlik bilgilerini kullanarak betiği çalıştırın**: Evet|
 
 ## <a name="powershell-scripts"></a><a name="bkmk_uea_ps_scripts"></a>PowerShell betikleri
 
@@ -770,7 +807,7 @@ Ortalama gecikme süresi yaklaşık 12 saat ve günlük işleme yapmak için ger
   - **gpLogonDurationInMilliseconds**: grup ilkelerinin işlemesi için zaman
   - **desktopShownDurationInMilliseconds:** Masaüstü (Explorer. exe) yüklenecek zaman
   - **desktopUsableDurationInMilliseconds:** Masaüstü (Explorer. exe) için zaman kullanılabilir
-  - **Topsüreçler:** Ön yükleme sırasında, CPU kullanım istatistikleri ve uygulama ayrıntıları (ad, Yayımcı, sürüm) ile önyükleme sırasında yüklenen işlemlerin listesi. Örneğin, *{\"ProcessName\":\"Svchost\",\"CPUusage\": 43,\"processfullpath\":\"C:\\\\Windows\\\\system32\\\\Svchost. exe\",\"ProductName\":\"Microsoft&reg; Windows&reg; işletim sistemi\",\"Publisher\":\"Microsoft Corporation\",\"ProductVersion\":\"10.0.18362.1\"}*
+  - **Topsüreçler:** Ön yükleme sırasında, CPU kullanım istatistikleri ve uygulama ayrıntıları (ad, Yayımcı, sürüm) ile önyükleme sırasında yüklenen işlemlerin listesi. Örneğin, *{ \" ProcessName \" : \" svchost \" , \" CPUusage \" : 43, \" processfullpath \" : \" C: \\ \\ Windows \\ \\ system32 \\ \\ svchost. exe \" , \" ProductName \" : \" Microsoft &reg; Windows &reg; işletim sistemi \" , \" Publisher \" : \" Microsoft Corporation \" , \" ProductVersion \" : \" 10.0.18362.1 \" }*
 - Bir cihaz veya kullanıcıya bağlı olmayan cihaz verileri (bu veriler bir cihaz veya kullanıcıya bağlıysa Intune bunlara tanımlanan verilere olduğu gibi davranır)
   - **Kimliği:** Windows Update tarafından kullanılan benzersiz cihaz KIMLIĞI
   - **YerelKimliği:** Cihaz için yerel olarak tanımlanan benzersiz KIMLIK. Bu, insan tarafından okunabilen cihaz adı değildir. Büyük olasılıkla Hklm\software\microsoft\sqmclient\machineıdyolunda depolanan değere eşittir.

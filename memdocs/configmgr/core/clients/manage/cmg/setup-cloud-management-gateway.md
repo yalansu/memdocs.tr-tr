@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 36d256e674a0fe973eca4bc692a244af034d5cc1
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 8c585473ec80ad4c6dfe49d22e527e99175bfbb4
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076773"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877425"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configuration Manager için bulut yönetimi ağ geçidi ayarlama
 
@@ -41,7 +41,7 @@ Bir CMG oluşturmak için gerekli bilgilere ve önkoşullara sahip olduğunuzdan
 
     - **Bulut yönetimi**IÇIN [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) ile tümleştirme. Azure AD Kullanıcı keşfi gerekli değildir.  
 
-    - **Microsoft. classiccompute** & **Microsoft. Storage** kaynak sağlayıcılarının Azure aboneliği içinde kayıtlı olması gerekir. Daha fazla bilgi için bkz. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
+    - **Microsoft. classiccompute**  &  **Microsoft. Storage** kaynak sağlayıcılarının Azure aboneliği içinde kayıtlı olması gerekir. Daha fazla bilgi için bkz. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
 
     - Abonelik yöneticisinin oturum açması gerekir.  
 
@@ -87,7 +87,7 @@ Bu yordamı en üst düzey sitede yapın. Bu site tek başına bir birincil site
 6. Sihirbazın Ayarlar sayfasında, önce **Araştır** ' ı seçin ve öğesini seçin. CMG sunucusu kimlik doğrulama sertifikası için PFX dosyası. Bu sertifikadaki ad, gerekli **hizmet FQDN 'si** ve **hizmet adı** alanlarını doldurur.  
 
    > [!NOTE]  
-   > CMG sunucusu kimlik doğrulama sertifikası joker karakterleri destekler. Joker karakter sertifikası kullanıyorsanız, **hizmet FQDN 'si** alanındaki yıldız işaretini`*`() CMG için istenen konak adı ile değiştirin.<!--491233-->  
+   > CMG sunucusu kimlik doğrulama sertifikası joker karakterleri destekler. Joker karakter sertifikası kullanıyorsanız, `*` **hizmet FQDN 'si** alanındaki yıldız işaretini () CMG için istenen konak adı ile değiştirin.<!--491233-->  
 
 7. Bu CMG için Azure bölgesini seçmek üzere **bölge** açılan listesini seçin.  
 
@@ -199,6 +199,43 @@ Bu komut, istemcinin bildiği herhangi bir internet tabanlı yönetim noktasın�
 > [!Note]  
 > CMG istemci trafiği sorunlarını gidermek için **CMGHttpHandler. log**, **cmgservice. log**ve **SMS_Cloud_ProxyConnector. log**kullanın. Daha fazla bilgi için bkz. [günlük dosyaları](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
+### <a name="install-off-premises-clients-using-a-cmg"></a>CMG kullanarak şirket içi istemcileri yükler
+
+İstemci aracısını Şu anda intranetinize bağlı olmayan sistemlere yüklemek için aşağıdaki koşullardan biri doğru olmalıdır. Her durumda, hedef sistemlerdeki bir yerel yönetici hesabı gereklidir.
+
+1. Configuration Manager site, istemci kimlik doğrulaması için PKI sertifikaları kullanacak şekilde doğru şekilde yapılandırılmıştır. Ayrıca, istemci sistemlerinin her biri, daha önce kendisine verilen geçerli, benzersiz ve güvenilir bir istemci kimlik doğrulama sertifikasına sahiptir.
+
+2. Sistemler Azure AD etki alanına katılmış veya karma Azure AD etki alanına katılmış.
+
+3. Site, sürüm 2002 veya sonraki bir sürümü Configuration Manager çalışıyor.
+
+1 ve 2. seçenekler için, **CCMSetup. exe**' yi çağırırken CMG 'nin URL 'sini belirtmek için **/MP** parametresini kullanın. Daha fazla bilgi için bkz. [istemci yükleme parametreleri ve özellikleri hakkında](../../deploy/about-client-installation-properties.md#mp).
+
+Seçenek 3 ' ten itibaren Configuration Manager sürüm 2002 ' den başlayarak, istemci aracısını toplu kayıt belirteci kullanarak intranetinize bağlı olmayan sistemlere yükleyebilirsiniz. Bu yöntem hakkında daha fazla bilgi için bkz. [toplu kayıt belirteci oluşturma](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
+
+### <a name="configure-off-premises-clients-for-cmg"></a>CMG için şirket dışı istemcileri yapılandırma
+
+Aşağıdaki koşulların doğru olduğu durumlarda, son yapılandırılmış bir CMG 'ye sistemleri bağlayabilirsiniz:  
+
+- Sistemlerde Configuration Manager istemci Aracısı zaten yüklü.
+
+- Sistemler bağlı değil ve intranetinize bağlanamaz.
+
+- Sistemler aşağıdaki koşullardan birini karşılar:
+
+  - Her birinin önceden kendisine verilmiş geçerli, benzersiz ve güvenilir bir istemci kimlik doğrulama sertifikası vardır.
+
+  - Azure AD etki alanına katılmış
+
+  - Karma Azure AD etki alanına katılmış.
+
+- Mevcut istemci aracısını tamamen yeniden yüklemeniz gerekmez.
+
+- Bir makine kayıt defteri değerini değiştirme ve yerel yönetici hesabı kullanarak **SMS Aracısı ana bilgisayar** hizmetini yeniden başlatma yönteminiz vardır.
+
+Bu sistemlerde bağlantıyı zorlamak için, **Hklm\software\microsoft\ccm**altında **cmgfqdn** (tür REG_SZ) kayıt defteri değerini oluşturun. Bu değeri CMG 'nin URL 'SI olarak ayarlayın (örneğin, `https://contoso-cmg.contoso.com` ). Ayarladıktan sonra, istemci sisteminde **SMS Aracısı ana bilgisayar** hizmetini yeniden başlatın.
+
+Configuration Manager istemcisinde kayıt defterinde ayarlanmış geçerli bir CMG veya internet 'e yönelik bir yönetim noktası yoksa, **Cmgfqdn** kayıt defteri değerini otomatik olarak denetler. Bu denetim, **SMS aracı ana bilgisayar** hizmeti başlatıldığında veya bir ağ değişikliği algıladığında her 25 saatte bir gerçekleşir. İstemci sitesine bağlanıp bir CMG öğrendiğinde, bu değeri otomatik olarak güncelleştirir.
 
 ## <a name="modify-a-cmg"></a>CMG 'yi değiştirme
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-ms.openlocfilehash: c857997bdbeed51286e874dcbecf00b414dfe6a0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bd384edafd6464073b33a593a56bc88ba2fb0b87
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717646"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906758"
 ---
 # <a name="introduction-to-software-updates-in-configuration-manager"></a>Configuration Manager yazılım güncelleştirmelerine giriş
 
@@ -275,7 +275,7 @@ Ortamınızdaki yazılım güncelleştirmelerini nasıl dağıtabileceğinizi g�
  Yazma filtrelerini kullanan katıştırılmış cihazları Configuration Manager nasıl yönettiği hakkında daha fazla bilgi için bkz. [Windows Embedded cihazlarına istemci dağıtımını planlama](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
 ##  <a name="extend-software-updates-in-configuration-manager"></a><a name="BKMK_ExtendSoftwareUpdates"></a> Configuration Manager'da yazılım güncelleştirmelerini genişletme  
- Microsoft Update kullanılamayan yazılım güncelleştirmelerini yönetmek için System Center Updates Publisher kullanın. Yazılım güncelleştirmelerini güncelleştirme sunucusuna yayımladıktan ve Configuration Manager yazılım güncelleştirmelerini eşitledikten sonra, yazılım güncelleştirmelerini Configuration Manager istemcilerine dağıtabilirsiniz. Updates Publisher hakkında daha fazla bilgi için bkz. [Updates publisher 2011](https://go.microsoft.com/fwlink/p/?LinkId=252947).  
+ Microsoft Update kullanılamayan yazılım güncelleştirmelerini yönetmek için System Center Updates Publisher kullanın. Yazılım güncelleştirmelerini güncelleştirme sunucusuna yayımladıktan ve Configuration Manager yazılım güncelleştirmelerini eşitledikten sonra, yazılım güncelleştirmelerini Configuration Manager istemcilerine dağıtabilirsiniz. Updates Publisher hakkında daha fazla bilgi için bkz. [Updates publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 ## <a name="next-steps"></a>Sonraki adımlar
 [Yazılım güncelleştirmelerini planlama](../plan-design/plan-for-software-updates.md)

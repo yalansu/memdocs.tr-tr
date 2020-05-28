@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 30cd61240b09f821d8b18c37e6accc7450f35817
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 35379aed71544a25a98ec4dfa421be70c1bae851
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718850"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427699"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Configuration Manager için bulut dağıtım noktası yükler
 
@@ -65,7 +65,7 @@ Bulut dağıtım noktası oluşturmak için gerekli bilgilere ve önkoşullara s
     > [!TIP]  
     > Bu hizmet adını kullanan sunucu kimlik doğrulama sertifikasını istenmeden önce, istenen Azure etki alanı adının benzersiz olduğunu doğrulayın. Örneğin, *WallaceFalls.cloudapp.net*.
     >
-    > 1. [Azure Portal](https://portal.azure.com) oturum açın.
+    > 1. [Azure portalında](https://portal.azure.com) oturum açın.
     > 1. **Tüm kaynaklar**' ı ve ardından **Ekle**' yi seçin.
     > 1. **Bulut hizmeti**araması yapın. **Oluştur**’u seçin.
     > 1. **DNS adı** alanına istediğiniz öneki yazın, örneğin *Wallacedüşerse*. Arabirim, etki alanı adının kullanılabilir olduğunu veya başka bir hizmet tarafından zaten kullanımda olduğunu yansıtır.
@@ -132,7 +132,7 @@ Bu yordamı, bu bulut dağıtım noktasını [tasarımınız](../../../plan-desi
     - **Sertifika dosyası**: **Araştır** ' ı seçin ve öğesini seçin. Bu bulut dağıtım noktasının sunucu kimlik doğrulama sertifikası için PFX dosyası. Bu sertifikadaki ortak ad, gerekli **hizmet FQDN 'si** ve **hizmet adı** alanlarını doldurur.  
 
         > [!NOTE]  
-        > Bulut dağıtım noktası sunucu kimlik doğrulama sertifikası joker karakterleri destekler. Joker karakter sertifikası kullanıyorsanız, **hizmet FQDN 'si** alanındaki yıldız işaretini`*`() hizmet için istenen ana bilgisayar adıyla değiştirin.  
+        > Bulut dağıtım noktası sunucu kimlik doğrulama sertifikası joker karakterleri destekler. Joker karakter sertifikası kullanıyorsanız, `*` **hizmet FQDN 'si** alanındaki yıldız işaretini () hizmet için istenen ana bilgisayar adıyla değiştirin.  
 
 5. **Uyarılar** sayfasında, depolama kotaları, aktarım kotaları ve bu kotaların ne yüzdesinden Configuration Manager uyarı oluşturmasını istediğinizi belirleyin. Ardından **İleri**' yi seçin.  
 
@@ -169,11 +169,11 @@ Aşağıdaki yöntemleri kullanarak bulut dağıtım noktası yüklemesinin tama
 If you issue the server authentication certificate from your PKI, you may directly specify the Azure **Service name**. For example, `WallaceFalls.cloudapp.net`. When you specify this certificate in the Create Cloud Distribution Point Wizard, both the **Service FQDN** and **Service name** properties are the same. In this scenario, you don't need to configure DNS. The name that clients receive from the management point is the same name as the service in Azure.  
 -->
 
-Sunucu kimlik doğrulama sertifikası ortak adı, etki alanı adınızı içermelidir. Bu ad, bir ortak sağlayıcıdan bir sertifika satın aldığınızda gereklidir. Bu sertifika, PKI 'ınızdan yayınlandığınızda önerilir. Örneğin, `WallaceFalls.contoso.com`. Bu sertifikayı bulut dağıtım noktası oluşturma Sihirbazı 'nda belirttiğinizde, ortak ad **HIZMET FQDN** özelliğini (`WallaceFalls.contoso.com`) doldurur. **Hizmet adı** aynı ana bilgisayar adını (`WallaceFalls`) alır ve Azure etki alanı adına ekler. `cloudapp.net` Bu senaryoda istemcilerin, etki alanının **hizmet FQDN** 'sini (`WallaceFalls.contoso.com`) Azure **hizmet adı** (`WallaceFalls.cloudapp.net`) olarak çözümlemesi gerekir. Bu adları eşlemek için bir CNAME diğer adı oluşturun.
+Sunucu kimlik doğrulama sertifikası ortak adı, etki alanı adınızı içermelidir. Bu ad, bir ortak sağlayıcıdan bir sertifika satın aldığınızda gereklidir. Bu sertifika, PKI 'ınızdan yayınlandığınızda önerilir. Örneğin, `WallaceFalls.contoso.com`. Bu sertifikayı bulut dağıtım noktası oluşturma Sihirbazı 'nda belirttiğinizde, ortak ad **HIZMET FQDN** özelliğini ( `WallaceFalls.contoso.com` ) doldurur. **Hizmet adı** aynı ana bilgisayar adını ( `WallaceFalls` ) alır ve Azure etki alanı adına ekler `cloudapp.net` . Bu senaryoda istemcilerin, etki alanının **HIZMET FQDN** 'sini () `WallaceFalls.contoso.com` Azure **hizmet adı** () olarak çözümlemesi gerekir `WallaceFalls.cloudapp.net` . Bu adları eşlemek için bir CNAME diğer adı oluşturun.
 
 ### <a name="create-cname-alias"></a>CNAME diğer adı oluştur
 
-Kuruluşunuzun genel, internet 'e yönelik DNS 'de kurallı bir ad kaydı (CNAME) oluşturun. Bu kayıt, istemcilerin aldığı bulut dağıtım noktasının **HIZMET FQDN** özelliği Için Azure **hizmet adına**bir diğer ad oluşturur. Örneğin, `WallaceFalls.contoso.com` için `WallaceFalls.cloudapp.net`için yeni bir CNAME kaydı oluşturun.  
+Kuruluşunuzun genel, internet 'e yönelik DNS 'de kurallı bir ad kaydı (CNAME) oluşturun. Bu kayıt, istemcilerin aldığı bulut dağıtım noktasının **HIZMET FQDN** özelliği Için Azure **hizmet adına**bir diğer ad oluşturur. Örneğin, için için yeni bir CNAME kaydı oluşturun `WallaceFalls.contoso.com` `WallaceFalls.cloudapp.net` .  
 
 ### <a name="client-name-resolution-process"></a>İstemci adı çözümleme işlemi
 
@@ -216,6 +216,8 @@ Varsayılan istemci ayarları, istemcilerin bulut dağıtım noktalarını kulla
 
 Bulut dağıtım noktasına dağıttığınız içeriği diğer şirket içi dağıtım noktalarıyla aynı şekilde izleyin. Daha fazla bilgi için bkz. [Içeriği izleme](monitor-content-you-have-distributed.md).
 
+Konsolunda bulut dağıtım noktalarının listesini görüntülediğinizde, listeye ek sütunlar ekleyebilirsiniz. Örneğin, **veri çıkış** sütunu, son 30 gün içinde hizmetten indirilen veri istemcilerinin miktarını gösterir.<!-- SCCMDocs#755 -->
+
 ### <a name="alerts"></a><a name="bkmk_alerts"></a>Larınız  
 
 Configuration Manager Azure hizmetini düzenli olarak denetler. Hizmet etkin değilse ya da abonelik veya sertifika sorunları varsa Configuration Manager bir uyarı oluşturur.
@@ -234,7 +236,7 @@ Yükleme sırasında her bir bulut dağıtım noktası için eşikler belirtin v
 > [!NOTE]  
 > Bulut dağıtım noktası uyarıları, Azure 'un kullanım istatistiklerine bağlıdır ve bu da kullanılabilir hale gelir ve 24 saat sürebilir. Azure Depolama Analizi hakkında daha fazla bilgi için bkz. [depolama Analizi](https://docs.microsoft.com/rest/api/storageservices/storage-analytics).  
 
-Saatlik bir döngüde, bulut dağıtım noktasını izleyen birincil site işlem verilerini Azure 'dan indirir. Bu işlem verilerini site sunucusundaki `CloudDP-<ServiceName>.log` dosyasında depolar. Configuration Manager, bu bilgileri her bir bulut dağıtım noktası için depolama ve aktarım kotalarıyla karşılaştırarak değerlendirir. Verilerin aktarımı, uyarılar veya kritik uyarılar için belirtilen birime ulaştığında ya da bu verileri aştığında, uygun uyarıyı üretir Configuration Manager.  
+Saatlik bir döngüde, bulut dağıtım noktasını izleyen birincil site işlem verilerini Azure 'dan indirir. Bu işlem verilerini `CloudDP-<ServiceName>.log` site sunucusundaki dosyasında depolar. Configuration Manager, bu bilgileri her bir bulut dağıtım noktası için depolama ve aktarım kotalarıyla karşılaştırarak değerlendirir. Verilerin aktarımı, uyarılar veya kritik uyarılar için belirtilen birime ulaştığında ya da bu verileri aştığında, uygun uyarıyı üretir Configuration Manager.  
 
 > [!WARNING]  
 > Site, Azure 'dan her saat veri aktarımlarıyla ilgili bilgileri indirdiği için, Configuration Manager verilere erişebilmeleri ve bir uyarı oluşturmadan önce kullanım bir uyarı veya kritik eşiği aşabilir.  

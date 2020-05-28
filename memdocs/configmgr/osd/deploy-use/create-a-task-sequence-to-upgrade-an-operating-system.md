@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b11e0a1747cb8303c14f5971b98d337ae7b2a834
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8d87b2cde9a9fadb7326939b7fe473ba2a757e91
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723008"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83430127"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Configuration Manager işletim sistemini yükseltmek için görev dizisi oluşturma
 
@@ -24,7 +24,7 @@ ms.locfileid: "81723008"
 Hedef bilgisayarda bir işletim sistemini otomatik olarak yükseltmek için Configuration Manager görev dizilerini kullanın. Bu yükseltme, Windows 7 veya sonraki bir sürümü Windows 10 ' dan veya Windows Server 2012 veya sonraki bir sürümünden Windows Server 2016 ' e olabilir. İşletim sistemi yükseltme paketine ve uygulamalar veya yazılım güncelleştirmeleri gibi yüklenecek diğer içeriklere başvuran bir görev dizisi oluşturun. İşletim sistemini yükseltmek için görev dizisi, [yükseltme pencerelerinin en son sürüm](upgrade-windows-to-the-latest-version.md) senaryosuna bir parçasıdır.  
 
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Görev dizisini oluşturmadan önce, aşağıdaki gereksinimlerin yerinde olması gerekir:
 
@@ -63,7 +63,7 @@ Görev dizisini oluşturmadan önce, aşağıdaki gereksinimlerin yerinde olmas�
 
     - **Sürüm dizini**: pakette birden çok işletim sistemi sürümü dizini varsa, istenen sürüm dizinini seçin. Varsayılan olarak, sihirbaz ilk dizini seçer.  
 
-    - **Ürün anahtarı**: işletim sisteminin yüklenmesi için Windows ürün anahtarını belirtin. Kodlanmış toplu lisans anahtarlarını veya standart ürün anahtarlarını belirtin. Standart bir ürün anahtarı kullanırsanız, beş karakter grubunu her bir tire (`-`) ile ayırın. Örneğin: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`. Yükseltme bir toplu lisans sürümü için olduğunda, ürün anahtarı gerekli olmayabilir.  
+    - **Ürün anahtarı**: işletim sisteminin yüklenmesi için Windows ürün anahtarını belirtin. Kodlanmış toplu lisans anahtarlarını veya standart ürün anahtarlarını belirtin. Standart bir ürün anahtarı kullanırsanız, beş karakter grubunu her bir tire () ile ayırın `-` . Örneğin: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`. Yükseltme bir toplu lisans sürümü için olduğunda, ürün anahtarı gerekli olmayabilir.  
 
         > [!Note]  
         > Bu ürün anahtarı birden çok etkinleştirme anahtarı (MAK) veya bir genel toplu lisanslama anahtarı (GVLK) olabilir. Bir GVLK, anahtar yönetimi hizmeti (KMS) istemci kurulum anahtarı olarak da adlandırılır. Daha fazla bilgi için bkz. [toplu etkinleştirme planı](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). KMS istemci kurulum anahtarlarının bir listesi için, bkz. Windows Server etkinleştirme kılavuzunun [ek a](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) .
@@ -136,7 +136,7 @@ Windows 10 ' un bu sürümü ile uyumlu olmayan sürücüleri kaldırmak için b
 
 Virüsten koruma gibi üçüncü taraf güvenlik programlarını kaldırmak veya askıya almak için bu gruba adımlar ekleyin.  
 
-Üçüncü taraf bir disk şifreleme programı kullanıyorsanız, `/ReflectDrivers` [komut satırı seçeneğiyle](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#reflectdrivers)Windows kurulumu için şifreleme sürücüsünü belirtin. Bu gruptaki görev dizisine bir [görev dizisi değişkeni ayarlama](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) adımı ekleyin. Görev sırası değişkenini **Osdsetupadditionalupgradeoptions**olarak ayarlayın. Değerini, sürücü yoluyla `/ReflectDrivers` olarak ayarlayın. Bu [görev dizisi değişkeni](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) , görev sırası tarafından kullanılan Windows kurulumu komut satırını ekler. Bu işlemle ilgili ek yönergeler için yazılım satıcınıza başvurun.  
+Üçüncü taraf bir disk şifreleme programı kullanıyorsanız, `/ReflectDrivers` [komut satırı seçeneğiyle](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#reflectdrivers)Windows kurulumu için şifreleme sürücüsünü belirtin. Bu gruptaki görev dizisine bir [görev dizisi değişkeni ayarlama](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) adımı ekleyin. Görev sırası değişkenini **Osdsetupadditionalupgradeoptions**olarak ayarlayın. Değerini, `/ReflectDrivers` sürücü yoluyla olarak ayarlayın. Bu [görev dizisi değişkeni](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) , görev sırası tarafından kullanılan Windows kurulumu komut satırını ekler. Bu işlemle ilgili ek yönergeler için yazılım satıcınıza başvurun.  
 
 ### <a name="download-package-content-task-sequence-step"></a>Paket Içeriğini indir görev dizisi adımı  
 
@@ -147,7 +147,7 @@ Aşağıdaki senaryolarda **Işletim sistemini yükseltme** adımından önce [p
 - Uygun bir sürücü paketini dinamik olarak indirmek için, her bir sürücü paketine uygun donanım türünü algılamaya yönelik koşulları içeren iki adet **Paket İçeriğini İndirme** adımı kullanın. Her bir **paket Içeriğini indirme** adımını aynı değişkeni kullanacak şekilde yapılandırın. Ardından, **Işletim sistemini yükseltme** adımının sürücüler bölümündeki **hazırlanmış içerik** değeri için bu değişkeni kullanın.  
 
     > [!NOTE]  
-    > Configuration Manager Bu değişken adına sayısal bir sonek ekler. Örneğin, özel bir değişken olarak `%mycontent%` belirtirseniz, istemci başvurulan tüm içeriği bu konumda depolar. **Işletim sistemini yükseltme**gibi sonraki bir adımda değişkenine başvurduğunuzda, değişkeni sayısal bir sonek ile kullanın. Bu örnekte, `%mycontent01%` veya `%mycontent02%`numarası, **paket içeriğini indir** adımının bu belirli içeriği listeleyen sıraya karşılık gelir.  
+    > Configuration Manager Bu değişken adına sayısal bir sonek ekler. Örneğin, `%mycontent%` özel bir değişken olarak belirtirseniz, istemci başvurulan tüm içeriği bu konumda depolar. **Işletim sistemini yükseltme**gibi sonraki bir adımda değişkenine başvurduğunuzda, değişkeni sayısal bir sonek ile kullanın. Bu örnekte, `%mycontent01%` veya `%mycontent02%` numarası, **paket içeriğini indir** adımının bu belirli içeriği listeleyen sıraya karşılık gelir.  
 
 
 ## <a name="recommended-task-sequence-steps-for-post-processing"></a>İşlem sonrası için önerilen görev sırası adımları
@@ -261,12 +261,12 @@ Daha fazla bilgi için bkz. [işletim sistemini yükseltme](../understand/task-s
 
 ### <a name="convert-from-bios-to-uefi"></a>BIOS 'tan UEFı 'ye Dönüştür
 
-Bu görev sırası sırasında cihazı BIOS 'tan UEFı 'ye değiştirmek istiyorsanız, [yerinde yükseltme SıRASıNDA BIOS 'TAN UEFI 'ye dönüştürme](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade)bölümüne bakın.  
+Bu görev sırası sırasında cihazı BIOS 'tan UEFı 'ye değiştirmek istiyorsanız, [yerinde yükseltme SıRASıNDA BIOS 'TAN UEFI 'ye dönüştürme](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu)bölümüne bakın.  
 
 ### <a name="manage-bitlocker"></a>seçin,
 
 <!--SCCMDocs issue #494-->
-BitLocker disk şifrelemesi kullanıyorsanız, varsayılan olarak Windows Kurulumu yükseltme sırasında otomatik olarak askıya alır. Windows 10 sürüm 1803 ' den başlayarak, Windows Kurulumu bu `/BitLocker` davranışı denetlemek için komut satırı parametresini içerir. Güvenlik gereksinimleriniz, etkin disk şifrelemesini her zaman gerektirdiğinde, **yükseltme Için hazırla** grubunda `/BitLocker TryKeepActive` **Osdsetupadditionalupgradeoptions** [görev dizisi değişkenini](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) kullanın. Daha fazla bilgi için bkz. [Windows kurulumu komut satırı seçenekleri](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
+BitLocker disk şifrelemesi kullanıyorsanız, varsayılan olarak Windows Kurulumu yükseltme sırasında otomatik olarak askıya alır. Windows 10 sürüm 1803 ' den başlayarak, Windows Kurulumu `/BitLocker` Bu davranışı denetlemek için komut satırı parametresini içerir. Güvenlik gereksinimleriniz, etkin disk şifrelemesini her zaman gerektirdiğinde, **yükseltme Için hazırla** grubunda **Osdsetupadditionalupgradeoptions** [görev dizisi değişkenini](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) kullanın `/BitLocker TryKeepActive` . Daha fazla bilgi için bkz. [Windows kurulumu komut satırı seçenekleri](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
 
 ### <a name="remove-default-apps"></a>Varsayılan uygulamaları Kaldır
 

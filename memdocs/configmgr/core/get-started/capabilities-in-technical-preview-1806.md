@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 522e01b0d811d768d4f239bc917c2e3db08e05ef
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 2168f844f1c9ef98ea21da68b73531bca7aad999
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210086"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905184"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Configuration Manager için Technical Preview 1806 ' deki yetenekler
 
@@ -68,23 +68,23 @@ Bu sürüm, [UserVoice geri bildirimlerinizin](https://configurationmanager.user
 
 Aşağıdaki üçüncü taraf yazılım güncelleştirme katalogları bu sürümde sunulmaktadır:
 
- | Yayımcı | Katalog adı |
+ | Publisher | Katalog adı |
  |--------|---------------------|
  | HP | HP Istemci güncelleştirmeleri Kataloğu |
 
 SCUP, diğer katalogları ve senaryoları desteklemeye devam etmektedir. Configuration Manager konsolunun üçüncü taraf yazılım güncelleştirme katalogları düğümündeki katalogların listesi dinamiktir ve ek kataloglar kullanılabilir ve desteklenir olarak güncelleştirilir.
 
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 - HTTPS etkin bir yazılım güncelleştirme noktasıyla yazılım güncelleştirmeleri yönetimini ayarlayın. Daha fazla bilgi için bkz. [yazılım güncelleştirme yönetimi Için hazırlanma](../../sum/get-started/prepare-for-software-updates-management.md).  
   - Bu sürümdeki bu özellik için yazılım güncelleştirme noktası site sunucusunda olmalıdır. <!--515810--> 
 
     > [!Tip]  
     > Yazılım güncelleştirme noktası, imzalama sertifikalarını işlemek için kullanılan WSUS API 'Leri için bir gereksinim olduğundan, HTTPS gerektirir. İstemcilerin da HTTPS etkin olması gerekmez. WSUS üzerinde HTTPS 'yi etkinleştirme hakkında daha fazla bilgi için, yardım için aşağıdaki makalelere bakın:  
-    > - [WSUS’u Güvenli Yuva Katmanı Protokolü ile güvenli hale getirme](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
-    > - [WSUS desteği blog gönderisi](https://blogs.technet.microsoft.com/sus/2011/05/09/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names/)
+    > - [WSUS’u Güvenli Yuva Katmanı Protokolü ile güvenli hale getirme](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
+    > - [WSUS desteği blog gönderisi](https://docs.microsoft.com/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
 
-- Yazılım güncelleştirme noktası, sunucusundaki WSUSContent klasöründe, üçüncü taraf yazılım güncelleştirmeleri için kaynak ikili içeriğini depolamak için yeterli disk alanı. Gerekli depolama alanı, satıcıya, güncelleştirme türlerine ve dağıtım için yayımladığınız belirli güncelleştirmelere göre farklılık gösterir. Sunucusundaki WSUSContent klasörünü daha fazla boş alana sahip başka bir sürücüye taşımanız gerekiyorsa, WSUS destek ekibi Web günlüğü gönderisine [WSUS 'nin güncelleştirmeleri yerel olarak depoladığı konumu nasıl değiştirileceği](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/)konusuna bakın.  
+- Yazılım güncelleştirme noktası, sunucusundaki WSUSContent klasöründe, üçüncü taraf yazılım güncelleştirmeleri için kaynak ikili içeriğini depolamak için yeterli disk alanı. Gerekli depolama alanı, satıcıya, güncelleştirme türlerine ve dağıtım için yayımladığınız belirli güncelleştirmelere göre farklılık gösterir. Sunucusundaki WSUSContent klasörünü daha fazla boş alana sahip başka bir sürücüye taşımanız gerekiyorsa, WSUS destek ekibi Web günlüğü gönderisine [WSUS 'nin güncelleştirmeleri yerel olarak depoladığı konumu nasıl değiştirileceği](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally)konusuna bakın.  
 
 - İstemci ayarını etkinleştirin ve dağıtın **yazılım güncelleştirmeleri** grubundaki [üçüncü taraf yazılım güncelleştirmelerini etkinleştirin](../clients/deploy/about-client-settings.md#enable-third-party-software-updates) .  
 
@@ -149,7 +149,7 @@ Abone olmak istediğiniz her bir *üçüncü taraf kataloğu* için aşağıdaki
 
 
 ### <a name="monitoring-progress-of-third-party-software-updates"></a>Üçüncü taraf yazılım güncelleştirmelerinin ilerlemesini izleme
-Üçüncü taraf yazılım güncelleştirmelerinin eşitlenmesi, site sunucusundaki SMS_ISVUPDATES_SYNCAGENT bileşeni tarafından gerçekleştirilir. Bu bileşenden durum iletilerini görüntüleyebilir veya SMS_ISVUPDATES_SYNCAGENT. log dosyasında daha ayrıntılı durumu görebilirsiniz. Bu günlük, site yükleme dizininin **Günlükler** alt klasöründeki site sunucusudur. Varsayılan olarak bu yol olur `C:\Program Files\Microsoft Configuration Manager\Logs`. Genel yazılım güncelleştirme yönetimi sürecini izleme hakkında daha fazla bilgi için bkz. [yazılım güncelleştirmelerini izleme](../../sum/deploy-use/monitor-software-updates.md).
+Üçüncü taraf yazılım güncelleştirmelerinin eşitlenmesi, site sunucusundaki SMS_ISVUPDATES_SYNCAGENT bileşeni tarafından gerçekleştirilir. Bu bileşenden durum iletilerini görüntüleyebilir veya SMS_ISVUPDATES_SYNCAGENT. log dosyasında daha ayrıntılı durumu görebilirsiniz. Bu günlük, site yükleme dizininin **Günlükler** alt klasöründeki site sunucusudur. Varsayılan olarak bu yol olur `C:\Program Files\Microsoft Configuration Manager\Logs` . Genel yazılım güncelleştirme yönetimi sürecini izleme hakkında daha fazla bilgi için bkz. [yazılım güncelleştirmelerini izleme](../../sum/deploy-use/monitor-software-updates.md).
 
 
 ### <a name="known-issues"></a>Bilinen sorunlar
@@ -191,9 +191,6 @@ Ayrıca yeni bir genel koşul da vardır. Bu, **cihazda Intune tarafından yöne
 <!--1357861-->
 Paket Dönüştürme Yöneticisi artık eski Configuration Manager 2007 paketlerini güncel dal uygulamalarına Configuration Manager dönüştürmenize olanak sağlayan tümleşik bir araçtır. Daha sonra bağımlılıklar, gereksinim kuralları ve Kullanıcı cihaz benzeşimi gibi uygulamaların özelliklerini kullanabilirsiniz.
 
-> [!Tip]  
-> Paket Dönüştürme Yöneticisi 'ndeki mevcut işlevlere yönelik eski belgeler [TechNet](https://technet.microsoft.com/library/hh531519.aspx)'te bulunabilir. İlgili bilgiler, docs.microsoft.com kitaplığına geçiş yapmak için kullanılır.
-
 ### <a name="try-it-out"></a>Deneyin!
  Görevleri tamamlamayı deneyin. Daha sonra nasıl çalıştığını bize bildirmek için [geri bildirim](capabilities-in-technical-preview-1804.md#bkmk_feedback) gönderin.
 
@@ -206,7 +203,6 @@ Paket Dönüştürme Yöneticisi artık eski Configuration Manager 2007 paketler
      - **Paketi Dönüştür**: bazı paketler, bu eylemle kolayca uygulamalara dönüştürülebilir.
      - **Düzeltme ve dönüştürme**: bazı paketler, uygulamalara dönüştürmeden önce sorunların düzeltilmesi gerekir.  
 
-   Bu eylemler hakkında daha fazla bilgi için bkz. [paketleri çözümleme ve dönüştürme](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh846244%28v%3dtechnet.10%29).  
 
 3. **İzleme** çalışma alanına gidin ve **paket dönüştürme durumu**' nu seçin. Bu yeni panoda, sitedeki paketlerin genel analiz ve dönüştürme durumu gösterilmektedir. Yeni bir arka plan görevi, analiz verilerini otomatik olarak özetler.  
 
@@ -237,8 +233,8 @@ Artık yazılım güncelleştirmelerini, yazılım güncelleştirme içeriğini 
 <!--1358149-->
 Office özelleştirme aracı artık Configuration Manager konsolundaki Office 365 yükleyicisiyle tümleşiktir. Office 365 için bir dağıtım oluştururken, artık en son Office yönetilebilirlik ayarlarını dinamik olarak yapılandırabilirsiniz. Office Özelleştirme Aracı, yeni Office 365 Derlemeleriyle aynı anda güncelleştirilir. Artık kullanılabilir oldukları anda Office 365 ' deki yeni yönetilebilirlik ayarlarından yararlanabilirsiniz. 
 
-### <a name="prerequisites"></a>Önkoşullar
-- Configuration Manager konsolunu çalıştıran bilgisayarda HTTPS bağlantı noktası 443 üzerinden internet erişimi gerekir. Office 365 Istemci Yükleme Sihirbazı, açmak https://config.office.comIçin bir Windows standart Web tarayıcısı API 'si kullanır. Bir internet proxy 'si kullanılıyorsa, Kullanıcı bu URL 'ye erişebilmelidir.
+### <a name="prerequisites"></a>Ön koşullar
+- Configuration Manager konsolunu çalıştıran bilgisayarda HTTPS bağlantı noktası 443 üzerinden internet erişimi gerekir. Office 365 Istemci Yükleme Sihirbazı, açmak için bir Windows standart Web tarayıcısı API 'SI kullanır https://config.office.com . Bir internet proxy 'si kullanılıyorsa, Kullanıcı bu URL 'ye erişebilmelidir.
 
 ### <a name="try-it-out"></a>Deneyin!
  Görevleri tamamlamayı deneyin. Daha sonra nasıl çalıştığını bize bildirmek için [geri bildirim](capabilities-in-technical-preview-1804.md#bkmk_feedback) gönderin.

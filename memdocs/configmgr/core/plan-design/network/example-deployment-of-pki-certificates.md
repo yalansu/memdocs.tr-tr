@@ -10,12 +10,12 @@ ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 994ee2916020ecc4e6d9d3c35f41fe24d5a31405
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 45ef103645630b8e203710ec0ff36a71b3cef4cf
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718780"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904244"
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-configuration-manager-windows-server-2008-certification-authority"></a>Configuration Manager için PKI sertifikalarının adım adım örnek dağıtımı: Windows Server 2008 sertifika yetkilisi
 
@@ -52,7 +52,7 @@ Aşağıdaki tablo, Configuration Manager için gerekebilecek PKI sertifikaları
 |Sertifika Gereksinimi|Sertifika Açıklaması|  
 |-----------------------------|-----------------------------|  
 |IIS çalıştıran site sistemleri için Web sunucusu sertifikası|Bu sertifika, verileri şifrelemek ve sunucuların istemcilere yetki doğrulamasını yapmak için kullanılır. Internet Information Services (IIS) çalıştıran ve HTTPS kullanacak şekilde Configuration Manager ayarlanan site sistemleri sunucularındaki Configuration Manager dışarıdan yüklenmelidir.<br /><br /> Bu sertifikayı ayarlama ve kurma adımları için, bkz. bu konuda [IIS çalıştıran site sistemleri için Web sunucusu sertifikasını dağıtma](#BKMK_webserver2008_cm2012) .|  
-|Bulut tabanlı dağıtım noktalarına bağlanmak için istemcilere yönelik hizmet sertifikası|Bu sertifikayı yapılandırma ve yüklemeye yönelik adımlar için, bkz. bu konuda [bulut tabanlı dağıtım noktaları için hizmet sertifikası dağıtma](#BKMK_clouddp2008_cm2012) .<br /><br /> **Önemli** : Bu sertifika Windows Azure yönetim sertifikası ile birlikte kullanılır. Yönetim sertifikası hakkında daha fazla bilgi için, MSDN Kitaplığı 'nın Windows Azure platformu bölümünde [Yönetim sertifikası oluşturma](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate) ve [Windows Azure aboneliğine yönetim sertifikası ekleme](https://docs.microsoft.com/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate) bölümüne bakın.|  
+|Bulut tabanlı dağıtım noktalarına bağlanmak için istemcilere yönelik hizmet sertifikası|Bu sertifikayı yapılandırma ve yüklemeye yönelik adımlar için, bkz. bu konuda [bulut tabanlı dağıtım noktaları için hizmet sertifikası dağıtma](#BKMK_clouddp2008_cm2012) .<br /><br /> **Önemli** : Bu sertifika Windows Azure yönetim sertifikası ile birlikte kullanılır. Yönetim sertifikası hakkında daha fazla bilgi için bkz. [Yönetim sertifikası oluşturma](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate) ve [Windows Azure aboneliğine yönetim sertifikası ekleme](https://docs.microsoft.com/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate).|  
 |Windows bilgisayarlar için istemci sertifikası|Bu sertifika, HTTPS kullanacak şekilde ayarlanan site sistemlerine Configuration Manager istemci bilgisayarlarının kimliğini doğrulamak için kullanılır. Aynı zamanda, HTTPS kullanmak üzere ayarlandıklarında işletimsel durumlarını izlemek amacıyla yönetim noktaları ve durum geçiş noktaları için de kullanılabilir. Bilgisayarların Configuration Manager dışarıdan yüklenmesi gerekir.<br /><br /> Bu sertifikayı ayarlama ve yüklemeye yönelik adımlar için bu konudaki [Windows bilgisayarları için istemci sertifikasını dağıtma](#BKMK_client2008_cm2012) bölümüne bakın.|  
 |Dağıtım noktaları için istemci sertifikası|Bu sertifika iki amaca sahiptir:<br /><br /> Bu sertifika, dağıtım noktası durum iletileri göndermeden önce HTTPS etkin bir yönetim noktasına dağıtım noktasının kimliğini doğrulamak amacıyla kullanılır.<br /><br /> **İstemciler için PXE desteğini etkinleştir** dağıtım noktası seçeneği seçildiğinde, sertifika, işletim sisteminin dağıtımı sırasında bir HTTPS etkin yönetim noktasına bağlanabilmeleri için PXE önyüklemesi gerçekleştiren bilgisayarlara gönderilir.<br /><br /> Bu sertifikayı ayarlama ve kurma adımları için bu konudaki [dağıtım noktaları için istemci sertifikasını dağıtma](#BKMK_clientdistributionpoint2008_cm2012) bölümüne bakın.|  
 |Mobil aygıtlar için kayıt sertifikası|Bu sertifika, HTTPS kullanacak şekilde ayarlanan site sistemlerine Configuration Manager mobil cihaz istemcilerinin kimliğini doğrulamak için kullanılır. Configuration Manager mobil cihaz kaydının bir parçası olarak yüklenmelidir ve yapılandırılmış sertifika şablonunu bir mobil aygıt istemci ayarı olarak seçersiniz.<br /><br /> Bu sertifikayı ayarlama adımları için bu konudaki [mobil cihazlar için kayıt sertifikasını dağıtma](#BKMK_mobiledevices2008_cm2012) bölümüne bakın.|  
@@ -354,7 +354,7 @@ Sertifika dağıtımı aşağıdaki yordamlara sahiptir:
 
 4.  Sonuçlar bölmesinde, **bağlı Grup İlkesi nesneleri** sekmesinde, yeni Grup İlkesi sağ tıklatın ve ardından **Düzenle**' yi seçin.  
 
-5.  **Grup İlkesi Yönetimi Düzenleyicisi**, **bilgisayar yapılandırması**altında **ilkeler** ' i genişletin ve ardından **Windows ayarları** / **güvenlik ayarları** / **ortak anahtar ilkeleri**' ne gidin.  
+5.  **Grup İlkesi Yönetimi Düzenleyicisi**, **bilgisayar yapılandırması**altında **ilkeler** ' i genişletin ve ardından **Windows ayarları**  /  **güvenlik ayarları**  /  **ortak anahtar ilkeleri**' ne gidin.  
 
 6.  **Sertifika Hizmetleri istemcisi-otomatik kayıt**adlı nesne türüne sağ tıklayın ve ardından **Özellikler**' i seçin.  
 

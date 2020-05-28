@@ -10,12 +10,12 @@ ms.assetid: b1751e3c-a60c-4ab7-a943-2595df1eb612
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d6be23adc7ac082545bffeef59ed52d3455d9931
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 588bccc533909f2438dc61d6f25b39c3a582c71b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720306"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879020"
 ---
 # <a name="about-log-files-in-configuration-manager"></a>Configuration Manager 'de günlük dosyaları hakkında
 
@@ -41,7 +41,7 @@ Tüm Configuration Manager günlük dosyaları düz metinlerdir, böylece bunlar
 
 ### <a name="cmtrace"></a>CMTrace
 
-Günlükleri görüntülemek için Configuration Manager günlük Görüntüleyici aracı **CMTrace**' i kullanın. Configuration Manager kaynak ortamının `\SMSSetup\Tools` klasöründe bulunur. CMTrace Aracı, yazılım kitaplığı 'na eklenen tüm önyükleme görüntülerine eklenir. CMTrace günlük görüntüleme aracı, Configuration Manager istemcisiyle birlikte otomatik olarak yüklenir.<!--1357971--> Daha fazla bilgi için bkz. [CMTrace](../../support/cmtrace.md).
+Günlükleri görüntülemek için Configuration Manager günlük Görüntüleyici aracı **CMTrace**' i kullanın. `\SMSSetup\Tools`Configuration Manager kaynak ortamının klasöründe bulunur. CMTrace Aracı, yazılım kitaplığı 'na eklenen tüm önyükleme görüntülerine eklenir. CMTrace günlük görüntüleme aracı, Configuration Manager istemcisiyle birlikte otomatik olarak yüklenir.<!--1357971--> Daha fazla bilgi için bkz. [CMTrace](../../support/cmtrace.md).
 
 ### <a name="onetrace"></a>OneTrace
 
@@ -132,7 +132,7 @@ Kayıt defteri ayarları bileşene bağlı olarak değişir:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Logging\@Global`
 
-|Adı  |Değerler  |Açıklama  |
+|Name  |Değerler  |Açıklama  |
 |---------|---------|---------|
 |LogLevel|`0`: Verbose<br>`1`: Varsayılan<br>`2`: Uyarılar ve hatalar<br>`3`: Yalnızca hatalar|Günlük dosyalarına yazılacak ayrıntı düzeyi.|
 |LogMaxHistory|Sıfırdan büyük veya sıfıra eşit herhangi bir tamsayı, örneğin:<br>`0`: Geçmiş yok<br>`1`: Varsayılan|Bir günlük dosyası en büyük boyuta ulaştığında, istemci onu bir yedekleme olarak yeniden adlandırır ve yeni bir günlük dosyası oluşturur. Kaç tane eski sürümü tutulacağını belirtin.|
@@ -145,7 +145,7 @@ Gelişmiş hata ayıklama için bu **REG_SZ** değerini aşağıdaki Windows kay
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Logging\DebugLogging`
 
-|Adı  |Değerler  |Açıklama  |
+|Name  |Değerler  |Açıklama  |
 |---------|---------|---------|
 |Etkin | `True`: hata ayıklama günlüklerini etkinleştir<br>`False`: hata ayıklama günlüklerini devre dışı bırak |Sorun giderme amacıyla günlüğe hata ayıklama desteği sunar.|
 
@@ -159,7 +159,7 @@ Aşağıdaki Windows kayıt defteri anahtarı altında bu değerleri yapılandı
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing`
 
-|Adı  |Değerler  |Tür  |Açıklama
+|Name  |Değerler  |Tür  |Açıklama
 |---------|---------|---------|---------|
 |SqlEnabled| `1`: SQL izlemeyi etkinleştir<br> `0`: SQL izlemeyi devre dışı bırak |REG_DWORD|Tüm site sunucusu günlüklerine SQL izleme günlüğü ekleyin.|
 |ArchiveEnabled| `1`: günlük arşivlerini etkinleştir<br> `0`: günlük arşivlerini devre dışı bırak | REG_DWORD |Site sunucusu günlüklerini geçmiş koruma için ayrı bir konuma arşivleyebilirsiniz.|
@@ -174,7 +174,7 @@ Belirli bir sunucu bileşeni için günlük seçeneklerini yapılandırmak için
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\<ComponentName>`
 
-|Adı  |Değerler  |Açıklama  |
+|Name  |Değerler  |Açıklama  |
 |---------|---------|---------|
 |LoggingLevel|`0`: Verbose<br>`1`: Varsayılan<br>`2`: Uyarılar ve hatalar<br>`3`: Yalnızca hatalar|Günlük dosyalarına yazılacak ayrıntı düzeyi.|
 |LogMaxHistory|Sıfırdan büyük veya sıfıra eşit herhangi bir tamsayı, örneğin:<br>`0`: Geçmiş yok<br>`1`: Varsayılan|Günlük dosyası en büyük boyuta ulaştığında, sunucu onu bir yedekleme olarak yeniden adlandırır ve yeni bir günlük dosyası oluşturur. Kaç tane eski sürümü tutulacağını belirtin.|
@@ -198,7 +198,7 @@ Belirli bir sunucu bileşeni için günlük seçeneklerini yapılandırmak için
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP\Logging`
 
-|Adı  |Değerler  |Açıklama  |
+|Name  |Değerler  |Açıklama  |
 |---------|---------|---------|
 |LogLevel|`0`: Verbose<br>`1`: Varsayılan<br>`2`: Uyarılar ve hatalar<br>`3`: Yalnızca hatalar|Günlük dosyalarına yazılacak ayrıntı düzeyi.|
 |LogMaxHistory|Sıfırdan büyük veya sıfıra eşit herhangi bir tamsayı, örneğin:<br>`0`: Geçmiş yok<br>`1`: Varsayılan|Günlük dosyası en büyük boyuta ulaştığında, sunucu onu bir yedekleme olarak yeniden adlandırır ve yeni bir günlük dosyası oluşturur. Kaç tane eski sürümü tutulacağını belirtin.|
@@ -211,11 +211,14 @@ Belirli bir sunucu bileşeni için günlük seçeneklerini yapılandırmak için
 
 Configuration Manager konsolunun AdminUI. log öğesinin ayrıntı düzeyini değiştirmek için aşağıdaki yordamı kullanın:
 
-1. **Microsoft. ConfigurationManagement. exe. config**konsol yapılandırma dosyasını Not defteri gıbı bir XML düzenleyicisinde açın. Varsayılan yapılandırma dosyası şu konumdadır:`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+1. **Microsoft. ConfigurationManagement. exe. config**konsol yapılandırma dosyasını Not defteri gıbı bir XML düzenleyicisinde açın. Varsayılan yapılandırma dosyası şu konumdadır:`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
 
-1. **System. Diagnostics** > **kaynakları** > **kaynak** öğesi altında **switchValue** özniteliğini `Error` olarak `Verbose`değiştirin. Örneğin:
+    > [!IMPORTANT]
+    > Sürüm 1910 ' den başlayarak, bu yol klasörü kullanacak şekilde değiştirilmiştir `Microsoft Endpoint Manager` . Dosyanın başka bir klasörde mevcut olabilecek eski bir sürümünü kullandığınızdan emin olun.
 
-    Özgün: `<source name="SmsAdminUISnapIn" switchValue="Error">` yeni:`<source name="SmsAdminUISnapIn" switchValue="Verbose" >`
+1. **System. Diagnostics**  >  **kaynakları**  >  **kaynak** öğesi altında **switchValue** özniteliğini `Error` olarak değiştirin `Verbose` . Örneğin:
+
+    Özgün: `<source name="SmsAdminUISnapIn" switchValue="Error">` Yeni:`<source name="SmsAdminUISnapIn" switchValue="Verbose" >`
 
 1. Dosyayı kaydedin ve konsolunu yeniden başlatın.
 
@@ -240,15 +243,15 @@ Aşağıdaki konumlar varsayılan değerdir. Ortamınızda yükleme dizinlerini 
 - İstemcilerinin`C:\Windows\CCM\logs`
 - Server`C:\Program Files\Microsoft Configuration Manager\Logs`
 - Yönetim noktası:`C:\SMS_CCM\Logs`
-- Configuration Manager konsolu:`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog`
+- Configuration Manager konsolu:`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog`
 - ISS`C:\inetpub\logs\logfiles\w3svc1`
 
 ### <a name="task-sequence-log-locations"></a>Görev sırası günlük konumları
 
 Görev dizisi günlük dosyası **Smsts. log** dosyasının konumu, görev dizisinin aşamasına bağlı olarak değişir:
 
-- [Biçimlendirme ve disk bölümleme](../../../osd/understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk) adımından önce Windows PE 'de `X:\Windows\temp\smstslog\smsts.log` : (X, Windows PE RAM sürücüsüdür)
-- **Biçim ve Bölüm diski** adımından sonra Windows PE 'de `X:\smstslog\smsts.log`:, sürücü için `C:\_SMSTaskSequence\Logs\smstslog\smsts.log`
+- [Biçimlendirme ve disk bölümleme](../../../osd/understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk) adımından önce Windows PE 'de: `X:\Windows\temp\smstslog\smsts.log` (X, Windows PE RAM sürücüsüdür)
+- **Biçim ve Bölüm diski** adımından sonra Windows PE 'de: `X:\smstslog\smsts.log` , sürücü için `C:\_SMSTaskSequence\Logs\smstslog\smsts.log`
 - İstemci yüklenmeden önce yeni Windows işletim sistemi:`C:\_SMSTaskSequence\Logs\smstslog\smsts.log`
 - İstemci yüklendikten sonra Windows 'ta:`C:\Windows\CCM\Logs\smstslog\smsts.log`
 - Görev dizisi tamamlandıktan sonra Windows 'ta:`C:\Windows\CCM\Logs\smsts.log`

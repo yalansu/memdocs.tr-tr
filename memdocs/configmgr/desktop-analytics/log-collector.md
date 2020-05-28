@@ -1,5 +1,5 @@
 ---
-title: Günlük toplayıcısı
+title: Günlük toplayıcı
 titleSuffix: Configuration Manager
 description: Masaüstü Analizi sorunlarını gidermeye yardımcı olması için Günlükler toplayıcı aracını kullanma
 ms.date: 07/26/2019
@@ -10,19 +10,20 @@ ms.assetid: 349b2a69-af46-481f-afb2-24d98774e852
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c101e45eb794ff73599e9612a5aec991be01ae6c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 8782913e40bffdcbe5a151fac8821f05b7e7fece
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718885"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268581"
 ---
 # <a name="desktop-analytics-log-collector"></a>Masaüstü Analizi Günlük Toplayıcısı
 
 Configuration Manager sürüm 1906 ' den başlayarak, masaüstü Analizi cihaz kayıt sorunlarını gidermeye yardımcı olması için Configuration Manager install dizininden **DesktopAnalyticsLogsCollector. ps1** aracını kullanın. Bazı temel sorun giderme adımlarını çalıştırır ve ilgili günlükleri tek bir çalışma dizininde toplar. Bu içeriği Microsoft desteği ile paylaşabilirsiniz.
 
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Windows 10, Windows 8.1 veya Windows 7 Service Pack 1 çalıştıran bir masaüstü Analizi istemcisi
 

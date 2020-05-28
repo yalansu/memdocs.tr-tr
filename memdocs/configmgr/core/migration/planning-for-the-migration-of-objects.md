@@ -10,12 +10,12 @@ ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9777fb12a2d63a990587386ac33cb2749bf19a4e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 93c3887307c32ea636a6dbb064cda13f4b9130c6
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719655"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905123"
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-configuration-manager-current-branch"></a>Configuration Manager nesnelerinin geçerli dala Configuration Manager geçişini planlayın
 
@@ -123,7 +123,7 @@ Desteklenen bir kaynak hiyerarşisindeki aşağıdaki işletim sistemi dağıtı
 Yapılandırma öğelerini ve yapılandırma temellerini geçirebilirsiniz.  
 
 > [!NOTE]  
->  Configuration Manager 2007 kaynak hiyerarşilerinden yorumlanan yapılandırma öğeleri geçiş için desteklenmiyor. Bu yapılandırma öğelerini hedef hiyerarşiye geçiremez veya içeri aktaramazsınız. Yorumlanmamış yapılandırma öğeleri hakkında daha fazla bilgi için Configuration Manager 2007 belge kitaplığındaki [Istenen yapılandırma yönetimi konusundaki yapılandırma öğeleri hakkında](https://go.microsoft.com/fwlink/?LinkId=103846) bölümüne bakın.  
+>  Configuration Manager 2007 kaynak hiyerarşilerinden yorumlanan yapılandırma öğeleri geçiş için desteklenmiyor. Bu yapılandırma öğelerini hedef hiyerarşiye geçiremez veya içeri aktaramazsınız. Yorumlanmamış yapılandırma öğeleri hakkında daha fazla bilgi için Configuration Manager 2007 belge kitaplığındaki [Istenen yapılandırma yönetimi konusundaki yapılandırma öğeleri hakkında](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item) bölümüne bakın.  
 
 Configuration Manager 2007 yapılandırma paketini içeri aktarabilirsiniz. İçeri aktarma işlemi, yapılandırma paketlerini otomatik olarak Configuration Manager geçerli Dalla uyumlu olacak şekilde dönüştürür.  
 

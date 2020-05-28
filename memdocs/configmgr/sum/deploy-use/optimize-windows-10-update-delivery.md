@@ -2,7 +2,7 @@
 title: Windows 10 güncelleştirme teslimini en iyi duruma getirme
 titleSuffix: Configuration Manager
 description: Windows 10 ' da güncel kalmasını sağlamak üzere güncelleştirme içeriğini yönetmek için Configuration Manager nasıl kullanacağınızı öğrenin.
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f7edd05a7b1ce105e81fd4f594d95c9dfb45f472
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 835dcd0c86244c1731cb6c6e040d577160759614
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771365"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83267799"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Configuration Manager ile Windows 10 güncelleştirme teslimini iyileştirin
 
@@ -125,13 +125,13 @@ Daha büyük boyutlu güncelleştirmelerin sunucu tarafı avantajları hızlı d
 
 Windows Update Aracısı (WUA) öncelikle içerik Express 'i ister. Hızlı güncelleştirme yüklenemediğinde, tam dosya güncelleştirmesine geri dönebilirler.  
 
-1. Configuration Manager istemcisi WUA 'nin güncelleştirme içeriğini indirmesini söyler. WUA bir hızlı indirmeyi başlattığında, öncelikle Express paketinin bir parçası olan bir saplaması ( `Windows10.0-KB1234567-<platform>-express.cab`Örneğin,) indirir.  
+1. Configuration Manager istemcisi WUA 'nin güncelleştirme içeriğini indirmesini söyler. WUA bir hızlı indirmeyi başlattığında, öncelikle Express paketinin bir parçası olan bir saplaması (örneğin, `Windows10.0-KB1234567-<platform>-express.cab` ) indirir.  
 
 2. WUA bu saplamaya Windows Update yükleyicisi, bileşen tabanlı hizmet (CBS) geçirir. CBS, bir yerel sayım yapmak için saplama kullanır ve bu, cihazdaki dosyanın değişimleri öğesini, sunulan dosyanın en son sürümüne ulaşmak için gereken şekilde karşılaştırır.  
 
 3. CBS daha sonra WUA 'dan gerekli aralıkları bir veya daha fazla Express. PSF dosyasından indirmesini ister.  
 
-4. Teslim Iyileştirme Configuration Manager ile koordinatları, varsa yerel bir dağıtım noktasındaki veya eşlerdeki aralıkları indirir. Teslim Iyileştirme devre dışıysa, Arka Plan Akıllı Aktarım Hizmeti (BITS) Configuration Manager koordine eden eş önbellek kaynaklarıyla aynı şekilde kullanılır. Teslim Iyileştirme veya BITS, aralıkları WUA 'ye geçirir ve bu da, CBS 'nin uygulayıp yüklemesine olanak sağlar.  
+4. Teslim Iyileştirme etkinse ve eşler gerekli aralıklara sahip olacak şekilde bulunursa, istemci, eşler tarafından ConfigMgr istemcisinden bağımsız olarak indirilir. Teslim Iyileştirme devre dışıysa veya hiçbir eş gerekli aralıklara sahip değilse, ConfigMgr istemcisi bu aralıkları yerel bir dağıtım noktasından (veya bir eş veya Microsoft Update) indirir. Aralıklar, aralıkları uygulamak için CBS tarafından kullanılabilir hale getiren Windows Update aracısına geçirilir.
 
 
 #### <a name="why-are-the-express-files-psf-so-large-when-stored-on-configuration-manager-peer-sources-in-the-ccmcache-folder"></a>Ccmcache klasöründe Configuration Manager eş kaynakları üzerinde depolandığında hızlı dosyalar (. PSF) neden çok büyük?

@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: c38230b44f7f18e3f60cb4c88b31a03e10a37d30
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d52725e0127f7129a3962cd3ef178d2540bb785a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721643"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905746"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-configuration-manager"></a>Configuration Manager için Technical Preview 1605 ' deki yetenekler
 
@@ -97,13 +97,13 @@ Artık **varlıklar ve uyum** çalışma alanından erişilen **uzak cihaz eylem
 
 1.  Azure Active Directory, Configuration Manager bir "Web uygulaması ve/veya Web API" yönetim aracı olarak kaydettirin. Bu, daha sonra ihtiyacınız olacak bir istemci KIMLIĞI sağlar.  
 
-    1.  Active Directory düğümünde [https://manage.windowsazure.com](https://manage.windowsazure.com), Azure Active Directory seçin ve ardından **uygulamalar** > **Ekle**' ye tıklayın.  
+    1.  Active Directory düğümünde [https://manage.windowsazure.com](https://manage.windowsazure.com) , Azure Active Directory seçin ve ardından **uygulamalar**  >  **Ekle**' ye tıklayın.  
 
     2.  **Kuruluşumun geliştirmekte olduğu bir uygulama ekle**' ye tıklayın.  
 
     3.  Uygulama için bir ad girin, **Web uygulaması** ve/veya **Web API 'si**seçin ve ardından **İleri** okuna tıklayın.  
 
-    4.  **Oturum açma URL** 'Si ve **uygulama kimliği URI**'si için aynı URL 'yi girin. URL herhangi bir şey olabilir ve gerçek bir adrese çözülmesi gerekmez. Örneğin, **https://&lt;EtkiAlanınız>/SCCM**girebilirsiniz.  
+    4.  **Oturum açma URL** 'Si ve **uygulama kimliği URI**'si için aynı URL 'yi girin. URL herhangi bir şey olabilir ve gerçek bir adrese çözülmesi gerekmez. Örneğin, **https:// &lt; EtkiAlanınız>/SCCM**girebilirsiniz.  
 
     5.  Sihirbazı tamamlayın.  
 
@@ -115,7 +115,7 @@ Artık **varlıklar ve uyum** çalışma alanından erişilen **uzak cihaz eylem
 
 3.  Iş için Windows Mağazası 'nda, Configuration Manager depolama yönetimi aracı olarak yapılandırın.  
 
-    1.  İstenirse [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/managementtools) açın ve oturum açın.  
+    1.  [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/managementtools)İstenirse açın ve oturum açın.  
 
     2.  Gerekirse kullanım koşullarını kabul edin.  
 
@@ -163,7 +163,7 @@ Artık **varlıklar ve uyum** çalışma alanından erişilen **uzak cihaz eylem
 
     2.  2.  Dağıtmak istediğiniz uygulamayı seçin, sonra **giriş** sekmesinde, **Oluştur** grubunda, **uygulama oluştur**' a tıklayın.  
 
--   Configuration Manager konsolundaki toplu satın alınan uygulamalara yönelik bir Apple VPP belirtecini almak ve yüklemek için kullandığınız konum değişmiştir. Bunu artık **Cloud Services** > **Apple Volume Purchase program belirteçleri** düğümü altındaki **yönetici** çalışma alanında yapabilirsiniz.  
+-   Configuration Manager konsolundaki toplu satın alınan uygulamalara yönelik bir Apple VPP belirtecini almak ve yüklemek için kullandığınız konum değişmiştir. Bunu artık **Admin** **Cloud Services**  >  **Apple Volume Purchase program belirteçleri** düğümü altındaki yönetici çalışma alanında yapabilirsiniz.  
 
 ##  <a name="enterprise-data-protection-edp"></a><a name="BKMK_VPP"></a>Kurumsal veri koruma (EDP)  
  Kurumsal veri koruma (EDP) ilkelerinizi dağıtmanıza olanak sağlayan yapılandırma öğeleri oluşturabilirsiniz, bu da korumalı uygulamalarınızı, EDP koruma düzeyinizi ve ağ üzerinde kurumsal verilerin nasıl bulunacağını seçmenizi sağlar. EDP hakkında daha fazla bilgi için aşağıdaki konulara bakın:  
@@ -192,7 +192,7 @@ Bu teknik önizlemede, Şirket Portalı 15 dakikadan uzun bir süre açık ise, 
 
 #### <a name="general-prerequisites"></a>Genel önkoşullar  
 
--   [Şirket Içi mobil cihaz yönetimi Için hazırlık adımlarını](https://technet.microsoft.com/library/mt613153.aspx) tamamladığınızdan ve [cihazlarınızı](https://technet.microsoft.com/library/mt627870.aspx)kaydetmiş olduğunuzdan emin olun.  
+-   [Şirket ıçı MDM Için hazırlık adımlarını](../../mdm/plan-design/plan-on-premises-mdm.md) tamamladığınızdan ve [cihazlarınızı](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)kaydettiniz.  
 
 -   Şirket Portalı kullanırken en iyi uygulama yüklemesi deneyimi için Configuration Manager Microsoft Intune etkin bir bağlantısına sahip olduğundan emin olun.  
 
@@ -236,7 +236,7 @@ Bu teknik önizlemede, Şirket Portalı 15 dakikadan uzun bir süre açık ise, 
 
    2. **Set-executionPolicy RemoteSigned** Çalıştır  
 
-   3. ** &lt;SCCM yükleme\>dizini \CD. latest\smssetup\tools\mdm** Çalıştır klasöründen **.\configurationscript.exe**  
+   3. ** &lt; SCCM yükleme dizini \> \CD. Latest\smssetup\tools\mdm** Çalıştır klasöründen **.\configurationscript.exe**  
 
       Yapılandırma betiği şunları yapar:  
 
@@ -261,7 +261,7 @@ Bu teknik önizlemede, Şirket Portalı 15 dakikadan uzun bir süre açık ise, 
 
 2.  Kullanıcılar daha sonra Şirket Portalı uygulamalara gözatabilir ve yükleyebilir.  
 
-     Şirket Portalı açtıktan sonra, oturum açmak için kullanıcının Active Directory kimlik bilgilerini ( user@domain veya etki alanı \ Kullanıcı biçiminde) belirten **Configuration Manager** adlı bir kimlik doğrulama iletişim kutusu görüntülenir.  
+     Şirket Portalı açtıktan sonra, oturum açmak için kullanıcının Active Directory kimlik bilgilerini ( **Configuration Manager** user@domain veya etki alanı \ Kullanıcı biçiminde) belirten Configuration Manager adlı bir kimlik doğrulama iletişim kutusu görüntülenir.  
 
 ##  <a name="new-tabs-for-updates-and-operating-systems-in-software-center"></a><a name="BKMK_SW1"></a>Yazılım Merkezi 'nde güncelleştirmeler ve Işletim sistemleri için yeni sekmeler  
  Bu sürümde, Yazılım Merkezi uygulamasının yerleşimini geliştirmek için aşağıdaki değişiklikler yapılmıştır:  
@@ -284,7 +284,7 @@ Bu teknik önizlemede, Şirket Portalı 15 dakikadan uzun bir süre açık ise, 
 
 #### <a name="to-create-a-collection-for-a-server-group"></a>Bir sunucu grubu için koleksiyon oluşturmak için  
 
-1.  Sunucu grubundaki bilgisayarları içeren [bir cihaz koleksiyonu oluşturun](https://technet.microsoft.com/library/gg712295.aspx) .  
+1.  Sunucu grubundaki bilgisayarları içeren [bir cihaz koleksiyonu oluşturun](../clients/manage/collections/create-collections.md) .  
 
 2.  **Varlıklar ve uyum** çalışma alanında, **Cihaz Koleksiyonları**' na tıklayın, sunucu grubundaki bilgisayarları içeren koleksiyona sağ tıklayın ve ardından **Özellikler**' e tıklayın.  
 
@@ -325,9 +325,9 @@ Bu teknik önizlemede, Şirket Portalı 15 dakikadan uzun bir süre açık ise, 
 
 #### <a name="to-deploy-software-updates-to-the-server-group-and-monitor-status"></a>Yazılım güncelleştirmelerini sunucu grubuna dağıtmak ve durumu izlemek için  
 
-1.  [Yazılım güncelleştirmelerini](https://technet.microsoft.com/library/gg712304.aspx) sunucu grubu koleksiyonuna dağıtın.  
+1.  [Yazılım güncelleştirmelerini](../../sum/deploy-use/deploy-software-updates.md) sunucu grubu koleksiyonuna dağıtın.  
 
-2.  [Yazılım güncelleştirme dağıtımını izleyin](https://technet.microsoft.com/library/gg712304.aspx). Yazılım güncelleştirmeleri dağıtımı için standart izleme görünümlerine ek olarak, istemci yazılım güncelleştirmelerini yüklemeyi beklerken yeni bir durum açıklaması görüntülenir. Bu yeni durum için **Kilit bekleniyor** görüntülenir.  
+2.  [Yazılım güncelleştirme dağıtımını izleyin](../../sum/deploy-use/monitor-software-updates.md). Yazılım güncelleştirmeleri dağıtımı için standart izleme görünümlerine ek olarak, istemci yazılım güncelleştirmelerini yüklemeyi beklerken yeni bir durum açıklaması görüntülenir. Bu yeni durum için **Kilit bekleniyor** görüntülenir.  
 
 #### <a name="to-clear-the-deployment-locks-for-computers-in-a-server-group"></a>Bir sunucu grubundaki bilgisayarlar için dağıtım kilitlerini temizlemek için  
 
@@ -366,7 +366,7 @@ Bu teknik önizlemede, Şirket Portalı 15 dakikadan uzun bir süre açık ise, 
 
 ##### <a name="onboard-devices-for-microsoft-defender-atp"></a>Microsoft Defender ATP için cihazları ekleme  
 
-1. Configuration Manager konsolunda, **varlıklar ve uyum** > **genel bakış** > **Endpoint Protection** > **Windows Defender ATP ilkeleri** ' ne gidin ve **Windows Defender ATP İlkesi Oluştur**' a tıklayın. Microsoft Defender ATP Ilkesi Sihirbazı açılır.  
+1. Configuration Manager konsolunda, **varlıklar ve uyum**  >  **genel bakış**  >  **Endpoint Protection**  >  **Windows Defender ATP ilkeleri** ' ne gidin ve **Windows Defender ATP İlkesi Oluştur**' a tıklayın. Microsoft Defender ATP Ilkesi Sihirbazı açılır.  
 
 2. Microsoft Defender ATP ilkesi için **ad** ve **Açıklama** yazın ve **ekleme**' yi seçin. İleri'ye tıklayın.  
 
@@ -386,7 +386,7 @@ Bu teknik önizlemede, Şirket Portalı 15 dakikadan uzun bir süre açık ise, 
 
 ##### <a name="monitor-microsoft-defender-atp"></a>Microsoft Defender ATP 'yi izleme  
 
-1.  Configuration Manager konsolunda, **izleme** > **genel bakış** > **güvenlik** ' e gidin ve ardından **Windows Defender ATP**' ye tıklayın.  
+1.  Configuration Manager konsolunda, **izleme**  >  **genel bakış**  >  **güvenlik** ' e gidin ve ardından **Windows Defender ATP**' ye tıklayın.  
 
 2.  Microsoft Defender Gelişmiş tehdit koruması panosunu gözden geçirin.  
 
@@ -408,7 +408,7 @@ Bu teknik önizlemede, Şirket Portalı 15 dakikadan uzun bir süre açık ise, 
 ### <a name="enable-health-attestation-for-on-premises-devices"></a>Şirket içi cihazlarda sistem durumu kanıtlamasını etkinleştirme  
  1605 ' de, 1604 Technical Preview 'da bulunan birkaç hata düzeltildi.  Denemek için, istemci Aracısı ayarlarını kullanarak şirket içi sistem durumu kanıtlama hizmetini yapılandırın.  
 
-1.  Configuration Manager konsolunda, **Yönetim** > **genel bakış** > **istemci ayarları**' na gidin ve şirket **içi sistem durumu kanıtlama hizmetini kullan** ' ı **Evet**olarak ayarlayın.  
+1.  Configuration Manager konsolunda, **Yönetim**  >  **genel bakış**  >  **istemci ayarları**' na gidin ve şirket **içi sistem durumu kanıtlama hizmetini kullan** ' ı **Evet**olarak ayarlayın.  
 
 2.  **Şirket içi Sistem Durumu Kanıtlama Hizmeti URL'si**belirtin ve **Tamam**’a tıklayın.  
 
@@ -429,7 +429,7 @@ Bu teknik önizlemede, Şirket Portalı 15 dakikadan uzun bir süre açık ise, 
 
 ##### <a name="pre-declare-corporate-owned-devices-with-imei-or-ios-serial-number"></a>Şirkete ait cihazları IMEI veya iOS seri numarası ile önceden bildirme  
 
-1. Configuration Manager konsolunda, **varlıklar ve uyumluluk** > **' e genel bakış** > **şirkete ait tüm cihazlar** > **önceden tanımlanmış cihazlar**' a gidin ve ardından **önceden tanımlanmış cihazlar oluştur**' a tıklayın. Önceden tanımlanmış cihazlar Sihirbazı açılır.  
+1. Configuration Manager konsolunda, **varlıklar ve uyumluluk**'  >  **e genel bakış**  >  **şirkete ait tüm cihazlar**  >  **önceden tanımlanmış cihazlar**' a gidin ve ardından **önceden tanımlanmış cihazlar oluştur**' a tıklayın. Önceden tanımlanmış cihazlar Sihirbazı açılır.  
 
 2. Cihaz bilgilerini nasıl eklemek istediğinizi belirtin:  
 
@@ -439,7 +439,7 @@ Bu teknik önizlemede, Şirket Portalı 15 dakikadan uzun bir süre açık ise, 
 
 3. Karşıya yüklenen dosyalar için şirkete ait cihazları önceden bildirmek üzere bilgileri içeren. csv dosyasına gidin. Dosya, üst satırı dışlayarak aşağıdaki biçimde olmalıdır (yalnızca rehberlik için verilmiştir):  
 
-   |**IMEı #**|**iOS seri**|**İşletim Sistemi**|**Bilgileri**|
+   |**IMEı #**|**iOS seri**|**İşletim Sistemi**|**Ayrıntılar**|
    |---|---|---|---|
    |123456789012345||PENCERELERIN|Şirkete ait Windows cihazı|
    |123456789012|A0BCD0EFGH0J|IOS|Şirkete ait iOS cihazlar|

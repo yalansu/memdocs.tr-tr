@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7476f27c050a7870cd8f860f2e1b6bfa3d68a7e9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b3849f360b2f22f2f48bbe49159b610399158b29
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715028"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427773"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>Configuration Manager 'da Windows bilgisayarlar için istemcileri yükseltme
 
@@ -39,7 +39,7 @@ Dışlama koleksiyonu belirterek istemcileri yükseltmeden hariç tutun. Daha fa
 > Sunucu altyapınızı Configuration Manager önceki bir sürümünden yükseltiyorsanız, Configuration Manager istemcilerini yükseltmeden önce sunucu yükseltmelerini doldurun. Bu işlem, tüm geçerli dal güncelleştirmelerini yüklemeyi içerir. En son geçerli dal güncelleştirmesi istemcinin en son sürümünü içerir. Tüm Configuration Manager güncelleştirmelerini yükledikten sonra istemcileri yükseltin.
 
 > [!NOTE]
-> Yükseltme sırasında site istemcilerini yeniden atamayı planlıyorsanız, `SMSSITECODE` Client. msi özelliğini kullanarak yeni siteyi belirtin. `AUTO` İçin değerini kullanıyorsanız `SMSSITECODE`, ayrıca öğesini de belirtin `SITEREASSIGN=TRUE`. Bu özellik, yükseltme sırasında otomatik site yeniden atamaya izin verir. Daha fazla bilgi için bkz. [istemci yükleme özellikleri-SMSSITEKODU](../../deploy/about-client-installation-properties.md#smssitecode).
+> Yükseltme sırasında site istemcilerini yeniden atamayı planlıyorsanız, `SMSSITECODE` Client. msi özelliğini kullanarak yeni siteyi belirtin. İçin değerini kullanıyorsanız `AUTO` `SMSSITECODE` , ayrıca öğesini de belirtin `SITEREASSIGN=TRUE` . Bu özellik, yükseltme sırasında otomatik site yeniden atamaya izin verir. Daha fazla bilgi için bkz. [istemci yükleme özellikleri-SMSSITEKODU](../../deploy/about-client-installation-properties.md#smssitecode).
 
 ## <a name="about-automatic-client-upgrade"></a><a name="bkmk_autoupdate"></a>Otomatik istemci yükseltme hakkında
 
@@ -97,7 +97,7 @@ CA 'larda otomatik istemci yükseltmesini yapılandırmak için aşağıdaki yor
 İstemciler bir dahaki sefere ilkeyi indirdiklerinde bu ayarları alırlar.
 
 > [!NOTE]
-> İstemci yükseltmeleri, yapılandırdığınız tüm Configuration Manager bakım pencerelerini dikkate almaz.
+> İstemci yükseltmeleri, yapılandırdığınız tüm Configuration Manager bakım pencerelerini dikkate almaz. Execmgr thread yalnızca bir bakım penceresi sırasında istemci Kurulum önyükleme programını (CCMSetup. exe) çalıştırır. Cihaz, yazma filtresiyle bir Windows sürümü çalıştırıyorsa, CCMSetup aynı anda indirme ve yüklemeyi dener. Aksi takdirde, CCMSetup içeriğin indirileceği rastgele bir zaman alır. İçeriği indirdikten ve yerel ilkeyi derledikten sonra, Execmgr bir sonraki bakım penceresi sırasında istemci yükseltmesini zamanlar.<!-- SCCMDocs#896 -->
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

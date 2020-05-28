@@ -10,12 +10,12 @@ ms.assetid: 47118499-3d26-4c25-bfde-b129de7eaa59
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f109e4ea4bee4a1de767508d62bc3f080d24f625
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 49f9f7972d5e48b0ec646568d85376027bf278c3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715609"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906806"
 ---
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn"></a>Uygulama başına VPN için bir paket aile adı (PFN) bulma
 
@@ -26,7 +26,7 @@ Uygulama başına VPN’yi yapılandırabilmek için bir PFN bulmanın iki yolu 
 
 ## <a name="find-a-pfn-for-an-app-thats-installed-on-a-windows-10-computer"></a>Windows 10 bilgisayarında yüklü bir uygulama için PFN bulma
 
-Üzerinde çalıştığınız uygulama zaten bir Windows 10 bilgisayarında yüklüyse, PFN’yi almak için [Get-AppxPackage](https://technet.microsoft.com/library/hh856044.aspx) PowerShell cmdlet’ini kullanabilirsiniz.
+Üzerinde çalıştığınız uygulama zaten bir Windows 10 bilgisayarında yüklüyse, PFN’yi almak için [Get-AppxPackage](https://docs.microsoft.com/powershell/module/appx/get-appxpackage?view=win10-ps) PowerShell cmdlet’ini kullanabilirsiniz.
 
 Get-AppxPackage cmdlet’inin söz dizimi:
 
@@ -73,7 +73,7 @@ OneNote için şu bilgiler alınır:
 1. Şuraya gidin: https://www.microsoft.com/store/apps
 2. Arama çubuğuna uygulamanın adını girin. Bizim örneğimizde, OneNote için arama yapın.
 3. Uygulamanın bağlantısına tıklayın. Eriştiğiniz URL’nin sonunda bir dizi harf olduğuna dikkat edin. Örneğimizde URL şöyle görünür:`https://www.microsoft.com/store/apps/onenote/9wzdncrfhvjl`
-4. Farklı bir sekmede, aşağıdaki URL `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`'yi yapıştırın ve adım 3 ' `<app id>` te URL 'nin sonundaki bu dizi harften https://www.microsoft.com/store/apps aldığınız uygulama kimliğiyle değiştirin. Bizim Outlook örneğimizde, şunu yapıştırırsınız: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
+4. Farklı bir sekmede, aşağıdaki URL 'yi yapıştırın ve `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata` `<app id>` https://www.microsoft.com/store/apps Adım 3 ' te URL 'nin sonundaki bu dizi harften aldığınız uygulama kimliğiyle değiştirin. Bizim Outlook örneğimizde, şunu yapıştırırsınız: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
 Microsoft Edge’de istediğiniz bilgi görüntülenir; Internet Explorer’da bilgileri görmek için **Aç**’a tıklayın. PFN değeri ilk satırda verilir. Bizim örneğimizde sonuçlar şöyle görünür:
 

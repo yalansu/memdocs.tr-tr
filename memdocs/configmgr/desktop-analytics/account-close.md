@@ -10,18 +10,19 @@ ms.assetid: 6e7d2850-b0af-497e-bbc1-bfc2a7420a7a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e1d031588100f3930bf5bf25970f544b91017d77
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: e24c2ee19093dd12af6e87280a31851a1f593782
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722525"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268479"
 ---
 # <a name="how-to-close-your-account"></a>Hesabınızı kapatma
 
 Ortamınızda masaüstü analizlerini ayarlayıp kaldırmanız gerekiyorsa, hesabınızı kapatmak için bu işlemi kullanın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Azure portal hesabı yalnızca bir **genel yönetici** kapatabilir veya yeniden etkinleştirebilir.
 
@@ -53,7 +54,7 @@ Genel yönetici, hesabı 90 gün içinde yeniden etkinleştirebilir. Kuruluşunu
 
 1. Masaüstü Analizi çalışma alanınızın adı için **tüm kaynaklarda** arama yapın. Bu ad, hizmete kaydolurken oluşturduğunuz şeydir.
 
-1. Çözüm `Microsoft365Analytics(YourWorkspaceName)` türü silme **Solution**.
+1. `Microsoft365Analytics(YourWorkspaceName)` **Çözüm**türü silme.
 
 Masaüstü Analizi verileri çalışma alanı için veri bekletme ilkenize göre yaşılır. Aynı çalışma alanında diğer çözümleri kullanmaya devam edebilirsiniz.
 
@@ -112,7 +113,7 @@ Cihazların tanılama verilerini göndermeye devam etmesini istemiyorsanız:
 
 Aşağıdaki yöntemlerden birini kullanarak bu değerleri ayarlayın:
 
-- Grup ilkesi, **bilgisayar yapılandırması** > **Yönetim Şablonları** > **Windows bileşenleri** > **veri toplama ve önizleme yapıları**
+- Grup ilkesi, **bilgisayar yapılandırması**  >  **Yönetim Şablonları**  >  **Windows bileşenleri**  >  **veri toplama ve önizleme yapıları**
 - [Microsoft Intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry) gibi mobil cihaz YÖNETIMI (MDM)
 
 Daha fazla bilgi için bkz. [Kuruluşunuzda Windows tanılama verilerini yapılandırma](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization).

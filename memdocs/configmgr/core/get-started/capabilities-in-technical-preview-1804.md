@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b30386745244900e7f525f8f45b25a598628bf43
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b709d6ec0c0cda188502c314d945a70e8de71288
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078745"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905244"
 ---
 # <a name="capabilities-in-technical-preview-1804-for-configuration-manager"></a>Configuration Manager için Technical Preview 1804 ' deki yetenekler
 
@@ -68,7 +68,7 @@ Bu uzak içerik kitaplığı, [site sunucusu rolü yüksek kullanılabilirliği]
 > [!Note]  
 > Bu eylem yalnızca site sunucusundaki içerik kitaplığını hareket ettirir. Dağıtım noktalarındaki içerik kitaplığının konumunu etkilemez. 
 
-### <a name="prerequisites"></a>Önkoşullar  
+### <a name="prerequisites"></a>Ön koşullar  
 - Site sunucusu bilgisayar hesabının, içerik kitaplığını taşıdığınız ağ yoluna **okuma** ve **yazma** izinleri olması gerekir. Uzak sistemde yüklü bileşen yok. 
 
 ### <a name="try-it-out"></a>Deneyin!
@@ -80,7 +80,7 @@ Bu uzak içerik kitaplığı, [site sunucusu rolü yüksek kullanılabilirliği]
 
 3. **Bir ağ paylaşımında** seçin ve geçerli bir ağ yolu girin. Bu yol, sitenin içerik kitaplığını taşıdıkları konumdur. **Tamam**'a tıklayın.  
 
-4. Ayrıntılar bölmesindeki Içerik kitaplığı sütununda **Status** özelliğini aklınızda edin. Sitenin, içerik kitaplığını taşırken ilerlemesini göstermek için güncelleştirir. Devam ederken, tamamlanma yüzdesini görüntüler. Bir hata durumu varsa, hatayı görüntüler. Yaygın hatalar şunlardır `access denied` `disk full`. Tamamlandığında, görüntülenir `OK`. Ayrıntılar için **Distmgr. log dosyasına** bakın. Daha fazla bilgi için bkz. [site sunucusu ve site sistemi sunucu günlükleri](../plan-design/hierarchy/log-files.md#BKMK_SiteSiteServerLog).  
+4. Ayrıntılar bölmesindeki Içerik kitaplığı sütununda **Status** özelliğini aklınızda edin. Sitenin, içerik kitaplığını taşırken ilerlemesini göstermek için güncelleştirir. Devam ederken, tamamlanma yüzdesini görüntüler. Bir hata durumu varsa, hatayı görüntüler. Yaygın hatalar şunlardır `access denied` `disk full` . Tamamlandığında, görüntülenir `OK` . Ayrıntılar için **Distmgr. log dosyasına** bakın. Daha fazla bilgi için bkz. [site sunucusu ve site sistemi sunucu günlükleri](../plan-design/hierarchy/log-files.md#BKMK_SiteSiteServerLog).  
 
 İçerik kitaplığını site sunucusuna geri taşımanız gerekiyorsa, bu işlemi tekrarlayın, ancak **site sunucusuna yerel**seçeneğini belirleyin.  
 
@@ -134,8 +134,6 @@ Bu veriler, tanılama ve kullanım verilerimizin koleksiyonuyla tutarlıdır. Da
 
 İstemci sorunlarını giderme, gerçek zamanlı günlük görüntüleme veya Configuration Manager istemci bilgisayarının durumunu daha sonra analiz edilmek üzere yakalama için destek merkezi 'ni kullanın. Destek Merkezi, birçok yönetici sorun giderme aracını birleştiren tek bir araçtır. Destek Merkezi 'nin en son sürümünün hata düzeltmeleri, iyileştirmeleri ve yeni günlük görüntüleyicimizin önizlemesi, Technical Preview 'da sunulmaktadır. Site sunucusunda, **CD. latest\SMSSETUP\Tools\SupportCenter** klasöründe bulunan destek merkezi yükleyicisini bulun.
 
- > [!Tip]  
- > Destek Merkezi 'ndeki mevcut işlevlere yönelik eski belgeler [TechNet](https://technet.microsoft.com/library/dn688621.aspx)'te bulunabilir. İlgili bilgiler, docs.microsoft.com kitaplığına geçiş yapmak için kullanılır.  
 
 ### <a name="new-support-center-features"></a>Yeni Destek Merkezi özellikleri  
 
@@ -196,7 +194,7 @@ Bazı istemci ve sunucu araçları, başlatılırken beklenmedik şekilde çıka
 
 Bir uygulama için onayı iptal ettiğinizde davranış değişmiştir. Artık uygulama isteğini reddetmeniz durumunda, istemci uygulamayı kullanıcının cihazından kaldırır. 
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 - **Cihaz başına Kullanıcı için uygulama Isteklerini Onayla**özelliğini etkinleştirin.
 
 ### <a name="try-it-out"></a>Deneyin!
@@ -304,7 +302,7 @@ Mimari ölçütlerini ekledikten sonra, otomatik dağıtım kuralı Özellikler 
   > Değişkenler ve değerleri, görev dizisiyle XML olarak kaydedilir ve veritabanında karıştırılmış şekilde işlenir. İstemci, yönetim noktasından bir görev sırası ilkesi istediğinde, aktarım sırasında ve istemcide depolandığında şifrelenir. Ancak, tüm değişken değerleri, istemci üzerinde çalışma zamanı sırasında bellekteki görev dizisi ortamında düz metindir. Görev sırası, değişkenin değerini çıkış için bir adım içeriyorsa, bu çıkış düz metin biçiminde olur. Bu davranış, yönetici tarafından görev dizisine böyle bir adım eklemek için açık bir eylem gerektirir. 
 
 
-- [Görev dizisinin komut adımını Çalıştır sırasında program adını maskele](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): büyük olasılıkla hassas verilerin görüntülenmesini veya günlüğe kaydedilmesini engellemek Için **Osddonotlogcommand** görev sırası değişkenini olarak `TRUE`ayarlayın. Bu değişken, [komut satırını Çalıştır](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) görev dizisi adımı sırasında Smsts. log dosyasındaki program adını maskeler. <!--1358493-->  
+- [Görev dizisinin komut adımını Çalıştır sırasında program adını maskele](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): büyük olasılıkla hassas verilerin görüntülenmesini veya günlüğe kaydedilmesini engellemek Için **Osddonotlogcommand** görev sırası değişkenini olarak ayarlayın `TRUE` . Bu değişken, [komut satırını Çalıştır](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) görev dizisi adımı sırasında Smsts. log dosyasındaki program adını maskeler. <!--1358493-->  
 
 
 

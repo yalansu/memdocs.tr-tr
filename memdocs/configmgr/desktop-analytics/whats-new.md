@@ -2,7 +2,7 @@
 title: Masaüstü Analizinizdeki yenilikler
 titleSuffix: Configuration Manager
 description: Masaüstü Analizi bulut hizmeti 'nin en son aylık sürümündeki yeni özelliklerin özeti.
-ms.date: 03/12/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ce882f6bfc7a0d724688d5df59051dae17d54498
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.reviewer: acabello
+ms.openlocfilehash: 1d45d115f279603fa74e143c603c116146278ffe
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693150"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268173"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Masaüstü Analizinizdeki yenilikler
 
@@ -26,6 +27,16 @@ Her ay masaüstü analizinden nelerin yeni olduğunu öğrenin.
 
 Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="may-2020"></a>Mayıs 2020
+
+### <a name="reduce-the-number-of-apps-for-review"></a>Gözden geçirilecek uygulama sayısını azaltın
+
+<!-- 5542186 -->
+
+Portalda varlıklar sayfasında gösterilen uygulama sayısını birleştirmeye ve azaltmaya yardımcı olmak için artık aynı ad ve yayımcıya sahip tüm uygulama sürümlerini birleştirir. Önemli **uygulamalar** kutucuğunda uygulama sayısı bu ayarı yansıtır. Örneğin, Microsoft Edge 'in yüzlerce örneğini listelemek yerine, tüm sürümler için bir örnek vardır. Tüm sürümler için kararları bir kez daha yapabilirsiniz. Uygulamanın belirli sürümleriyle ilgili kararlar almanız gerekiyorsa, bu davranış yapılandırılabilir.
+
+Daha fazla bilgi için bkz. [varlıklar-uygulamalar hakkında](about-assets.md#apps).
 
 ## <a name="march-2020"></a>Mart 2020
 
@@ -41,7 +52,7 @@ Artık birden çok Configuration Manager hiyerarşilerini masaüstü analizi iç
 > [!NOTE]
 > Birden çok hiyerarşi için destek, Configuration Manager sürüm 1910 veya üstünü gerektirir.
 
-Daha fazla bilgi için aşağıdaki makalelere bakın:
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 - [Küresel pilot](deploy-pilot.md#bkmk_GlobalPilot)
 - [Dağıtım planları oluşturma](create-deployment-plans.md)

@@ -10,12 +10,12 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 253de522937e48fa1f3939c7303faf7e43e4e047
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d7432b3522d5292e2c2afc1dac6b8db3382cca12
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720901"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343176"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>Configuration Manager içerik kitaplığı
 
@@ -85,11 +85,13 @@ Uzak içerik kitaplığı, [site sunucusu yüksek kullanılabilirliği](../../se
 >
 > İçerik kitaplığını paket kaynaklarınızla aynı depolama birimine taşırsanız, bu birimi yinelenen verileri kaldırma için işaretleyemezsiniz. İçerik kitaplığı yinelenen verileri kaldırma 'yı desteklese de, paket kaynakları birimi tarafından desteklenmez. Daha fazla bilgi için bkz. [yinelenen verileri kaldırma](../configs/support-for-windows-features-and-networks.md#bkmmk_datadedup).<!--SCCMDOcs issue #831-->  
 
-### <a name="prerequisites"></a>Önkoşullar  
+### <a name="prerequisites"></a>Ön koşullar  
 
 - Site sunucusu bilgisayar hesabının, içerik kitaplığını taşıdığınız ağ yolu için **tam denetim** izinlerine sahip olması gerekir. Bu izin hem paylaşma hem de dosya sistemi için geçerlidir. Uzak sistemde yüklü bileşen yok.
 
 - Site sunucusunun dağıtım noktası rolü olamaz. Dağıtım noktası ayrıca içerik kitaplığını kullanır ve bu rol, uzak bir içerik kitaplığını desteklemez. İçerik kitaplığını taşıdıktan sonra, dağıtım noktası rolünü site sunucusuna ekleyemezsiniz.  
+
+- İçerik kitaplığının uzak sisteminin güvenilen bir etki alanında olması gerekir.
 
 > [!Important]  
 > Birden çok site arasında paylaşılan ağ konumunu yeniden kullanmayın. Örneğin, hem bir merkezi yönetim sitesi hem de bir alt birincil site için aynı yolu kullanmayın. Bu yapılandırmanın içerik kitaplığını bozma olasılığı vardır ve yeniden oluşturmanız gerekir.<!--SCCMDocs-pr issue 2764-->  
@@ -105,14 +107,14 @@ Uzak içerik kitaplığı, [site sunucusu yüksek kullanılabilirliği](../../se
 
 3. Şeritte **Içerik kitaplığını Yönet** ' i seçin.  
 
-4. Içerik kitaplığını Yönet penceresinde, **geçerli konum** alanı yerel sürücü ve yolu gösterir. **Yeni konum**için geçerli bir ağ yolu girin. Bu yol, sitenin içerik kitaplığını taşıdıkları konumdur. Paylaşımda zaten var olan bir klasör adı içermesi gerekir, örneğin, `\\server\share\folder`. **Tamam**’ı seçin.  
+4. Içerik kitaplığını Yönet penceresinde, **geçerli konum** alanı yerel sürücü ve yolu gösterir. **Yeni konum**için geçerli bir ağ yolu girin. Bu yol, sitenin içerik kitaplığını taşıdıkları konumdur. Paylaşımda zaten var olan bir klasör adı içermesi gerekir, örneğin, `\\server\share\folder` . **Tamam**’ı seçin.  
 
 5. Ayrıntılar bölmesinin Özet sekmesindeki Içerik kitaplığı sütunundaki **durum** değerini aklınızda edin. Sitenin, içerik kitaplığını taşırken ilerlemesini göstermek için güncelleştirir.  
 
    - **Devam**ederken, **taşıma ilerlemesi (%)** değeri tamamlanma yüzdesini gösterir.  
 
         > [!Note]  
-        > Büyük bir içerik kitaplığınız varsa, konsolunda bir süre boyunca ilerleme `0%` durumunu görebilirsiniz. Örneğin, 1 TB kitaplığı ile, başlamadan önce 10 GB kopyalaması gerekir `1%`. Kopyalanan dosya ve bayt sayısını gösteren **Distmgr. log**dosyasını gözden geçirin. Sürüm 1810 ' den başlayarak, günlük dosyasında kalan tahmini süre de gösterilir.
+        > Büyük bir içerik kitaplığınız varsa, `0%` konsolunda bir süre boyunca ilerleme durumunu görebilirsiniz. Örneğin, 1 TB kitaplığı ile, başlamadan önce 10 GB kopyalaması gerekir `1%` . Kopyalanan dosya ve bayt sayısını gösteren **Distmgr. log**dosyasını gözden geçirin. Sürüm 1810 ' den başlayarak, günlük dosyasında kalan tahmini süre de gösterilir.
 
    - Bir hata durumu varsa, durum hatayı görüntüler. Genel hatalar **erişim engellendi** veya **disk dolu**' i içerir.  
 
@@ -128,7 +130,7 @@ Site aslında içerik kitaplığı dosyalarını uzak konuma *kopyalar* . Bu iş
 
 Sürüm 1810 ' den başlayarak, kopyalama işlemi sırasında, **despooler** ve **distribution Manager** bileşenleri yeni paketleri işlemez. Bu eylem, taşırken içeriğin kitaplığa eklenmediğinden emin olmanızı sağlar. Ne olursa olsun, bu değişikliği sistem bakımı sırasında zamanlayın.
 
-İçerik kitaplığını site sunucusuna geri taşımanız gerekiyorsa, bu işlemi tekrarlayın, ancak **Yeni konum**için yerel bir sürücü ve yol girin. Sürücüde zaten var olan bir klasör adı içermesi gerekir, örneğin, `D:\SCCMContentLib`. Özgün içerik hala mevcut olduğunda, işlem yapılandırmayı hızla site sunucusuna yerel konuma taşımakta.
+İçerik kitaplığını site sunucusuna geri taşımanız gerekiyorsa, bu işlemi tekrarlayın, ancak **Yeni konum**için yerel bir sürücü ve yol girin. Sürücüde zaten var olan bir klasör adı içermesi gerekir, örneğin, `D:\SCCMContentLib` . Özgün içerik hala mevcut olduğunda, işlem yapılandırmayı hızla site sunucusuna yerel konuma taşımakta.
 
 > [!Tip]  
 > İçeriği site sunucusundaki başka bir sürücüye taşımak için, **Içerik kitaplığı aktarma** aracını kullanın. Daha fazla bilgi için bkz. [Içerik kitaplığı aktarım aracı](../../support/content-library-transfer.md).  
@@ -154,11 +156,11 @@ Varsayılan olarak, içerik kitaplığı **Sccmcontentlib**adlı bir klasördeki
 
 ### <a name="package-library"></a>Paket kitaplığı
 
-Paket kitaplığı klasörü, **PkgLib**, dağıtım noktasına dağıtılan her bir paket için bir dosya içerir. Dosya adı paket KIMLIĞIDIR, örneğin, `ABC00001.INI`. Bu dosyada, `[Packages]` bölümünde, paketin parçası olan içerik kimliklerinin yanı sıra sürüm gibi diğer bilgiler yer alan bir listesidir. Örneğin, **ABC00001** sürüm **1**' deki eski bir pakettir. Bu dosyadaki içerik KIMLIĞI `ABC00001.1`.
+Paket kitaplığı klasörü, **PkgLib**, dağıtım noktasına dağıtılan her bir paket için bir dosya içerir. Dosya adı paket KIMLIĞIDIR, örneğin, `ABC00001.INI` . Bu dosyada, `[Packages]` bölümünde, paketin parçası olan Içerik kimliklerinin yanı sıra sürüm gibi diğer bilgiler yer alan bir listesidir. Örneğin, **ABC00001** sürüm **1**' deki eski bir pakettir. Bu dosyadaki içerik KIMLIĞI `ABC00001.1` .
 
 ### <a name="data-library"></a>Veri kitaplığı
 
-Veri kitaplığı klasörü, oturum **bağlantısı**, her paketteki içerik için bir dosya ve bir klasör içerir. Örneğin, bu dosya ve klasör sırasıyla ve `ABC00001.1.INI` `ABC00001.1`olarak adlandırılır. Dosya, doğrulama bilgilerini içerir. Klasör, özgün paketten klasör yapısını yeniden oluşturur.
+Veri kitaplığı klasörü, oturum **bağlantısı**, her paketteki içerik için bir dosya ve bir klasör içerir. Örneğin, bu dosya ve klasör `ABC00001.1.INI` sırasıyla ve olarak adlandırılır `ABC00001.1` . Dosya, doğrulama bilgilerini içerir. Klasör, özgün paketten klasör yapısını yeniden oluşturur.
 
 Veri kitaplığındaki dosyalar, paketteki orijinal dosyanın adı ile birlikte ıNı dosyaları ile değiştirilmiştir. Örneğin, `MyFile.exe.INI`. Bu dosyalar, özgün dosya hakkında boyut, değiştirilme saati ve karma gibi bilgileri içerir. Dosya kitaplığındaki orijinal dosyayı bulmak için Karmadaki ilk dört karakteri kullanın. Örneğin, dosyam. exe. INI içindeki karma **DEF98765**ve ilk dört karakter **DEF9**' dir.
 
@@ -168,7 +170,7 @@ Veri kitaplığındaki dosyalar, paketteki orijinal dosyanın adı ile birlikte 
 
 Veri kitaplığında bulunan Karmadaki ilk dört karakteri kullanarak belirli bir dosyayı bulun. Dosya kitaplığı klasörünün içinde, her biri dört karakterli bir ada sahip birçok klasör vardır. Karmadan ilk dört karakterle eşleşen klasörü bulun. Bu klasörü bulduktan sonra, bir veya daha fazla üç dosya kümesi içerir. Bu dosyalar aynı adı paylaşır, ancak biri ıNı uzantısına sahiptir, biri bir uzantıya sahiptir ve birinin dosya uzantısı yoktur. Özgün dosya, adı veri kitaplığındaki karmaya eşit olan uzantısı olmayan bir uzantıdır.
 
-Örneğin, **DEF9** klasörü, `DEF98765.INI` `DEF98765.SIG`ve `DEF98765`içerir. `DEF98765`özgün `MyFile.exe`. INı dosyası, aynı dosyayı paylaşan "kullanıcılar" veya içerik kimliklerinin bir listesini içerir. Bu içeriklerin tümü de kaldırılmadığı takdirde site bir dosyayı kaldırmaz.
+Örneğin, **DEF9** klasörü `DEF98765.INI` , ve içerir `DEF98765.SIG` `DEF98765` . `DEF98765`özgün `MyFile.exe` . INı dosyası, aynı dosyayı paylaşan "kullanıcılar" veya içerik kimliklerinin bir listesini içerir. Bu içeriklerin tümü de kaldırılmadığı takdirde site bir dosyayı kaldırmaz.
 
 ### <a name="drive-spanning"></a>Sürücü yayma
 
@@ -180,7 +182,7 @@ Sürücüleri seçerken, birincil ve ikincil bir sürücü seçin. Site tüm met
 
 Yapılandırma sırasında bir yedek alan miktarı belirtirsiniz. Configuration Manager en iyi kullanılabilir diskte yalnızca bu yedek alan miktarı boş bırakılır. Her yeni sürücü kullanım için seçildiğinde, en fazla kullanılabilir boş alana sahip olan sürücü seçilir.
 
-Bir dağıtım noktasının belirli bir küme hariç tüm sürücüleri kullanması gerektiğini belirtemezsiniz. Adlı `NO_SMS_ON_DRIVE.SMS`sürücünün kökünde boş bir dosya oluşturarak bu davranışı önleyin. Bu dosyayı, kullanım için sürücüyü seçmeden Configuration Manager önce yerleştirin. Configuration Manager bu dosyayı sürücünün kökünde algılarsa, içerik kitaplığı sürücüsünü kullanmaz.
+Bir dağıtım noktasının belirli bir küme hariç tüm sürücüleri kullanması gerektiğini belirtemezsiniz. Adlı sürücünün kökünde boş bir dosya oluşturarak bu davranışı önleyin `NO_SMS_ON_DRIVE.SMS` . Bu dosyayı, kullanım için sürücüyü seçmeden Configuration Manager önce yerleştirin. Configuration Manager bu dosyayı sürücünün kökünde algılarsa, içerik kitaplığı sürücüsünü kullanmaz.
 
 
 ## <a name="troubleshooting"></a>Sorun giderme
@@ -196,3 +198,5 @@ Aşağıdaki ipuçları, içerik kitaplığıyla ilgili sorunları gidermenize y
 - Karma uyuşmazlıkları olup olmadığını görmek için Configuration Manager konsolundan paketi doğrulayın.  
 
 - Son seçenek olarak, içeriği yeniden dağıtır. Bu eylem çoğu sorunu çözmelidir.  
+
+Daha ayrıntılı bilgi için bkz. [Configuration Manager içerik dağıtımını anlama ve sorun giderme](https://support.microsoft.com/help/4482728/understand-troubleshoot-content-distribution-in-configuration-manager).

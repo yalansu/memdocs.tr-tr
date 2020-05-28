@@ -10,12 +10,12 @@ ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7ba1f41af778602fb95d268c071b5f0d1dde158c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ad92e4906c45b5c720ab35efc055449a27cc0850
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712998"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906215"
 ---
 # <a name="security-and-privacy-for-migration-to-configuration-manager-current-branch"></a>Güncel dala Configuration Manager geçişe yönelik güvenlik ve Gizlilik
 
@@ -48,9 +48,9 @@ Bir kaynak siteden hedef siteye veri geçirdiğinizde, kaynak hiyerarşideki tü
 
  Güvenlik ve gizlilik bilgileri hakkında daha fazla bilgi için aşağıdaki konulardan birine bakın:  
 
--   Configuration Manager 2007 gizlilik bilgileri hakkında daha fazla bilgi için Configuration Manager 2007 belge kitaplığındaki [Configuration Manager 2007 Için güvenlik ve gizlilik](https://go.microsoft.com/fwlink/p/?LinkId=216450) bölümüne bakın.  
+-   Configuration Manager 2007 gizlilik bilgileri hakkında daha fazla bilgi için Configuration Manager 2007 belge kitaplığındaki [Configuration Manager 2007 Için güvenlik ve gizlilik](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680768(v=technet.10)) bölümüne bakın.  
 
--   System Center 2012 Configuration Manager gizlilik bilgileri hakkında daha fazla bilgi için System Center 2012 Configuration Manager belge kitaplığı 'nda [System center 2012 Configuration Manager Için güvenlik ve gizlilik](https://technet.microsoft.com/library/gg682033.aspx) bölümüne bakın.  
+-   System Center 2012 Configuration Manager gizlilik bilgileri hakkında daha fazla bilgi için System Center 2012 Configuration Manager belge kitaplığı 'nda [System center 2012 Configuration Manager Için güvenlik ve gizlilik](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682033(v=technet.10)) bölümüne bakın.  
 
 -   Configuration Manager gizlilik bilgileri hakkında daha fazla bilgi için bkz. [Configuration Manager Için güvenlik ve gizlilik](../../core/plan-design/security/security-and-privacy.md).  
 

@@ -2,7 +2,7 @@
 title: Sürüm 2002’deki yenilikler
 titleSuffix: Configuration Manager
 description: Geçerli dalın Configuration Manager sürüm 2002 ' de tanıtılan değişiklikler ve yeni yetenekler hakkında ayrıntılı bilgi alın.
-ms.date: 04/01/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f760e70b1896700fa08bdb27c68794d2dec8c192
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1aca9058b0f095b7f25b345c15eed1446dcf61d2
+ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719298"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83381562"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 2002 ' deki yenilikler
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
-Configuration Manager geçerli dalı için güncelleştirme 2002, konsol içi bir güncelleştirme olarak sunulmaktadır. Sürüm 1806 veya üstünü çalıştıran sitelerde bu güncelleştirmeyi uygulayın. <!-- baseline only statement:-->Yeni bir site yüklerken, taban çizgisi sürümü olarak da kullanılabilir. Bu makalede Configuration Manager, sürüm 2002 ' deki değişiklikler ve yeni özellikler özetlenmektedir.
+Configuration Manager geçerli dalı için güncelleştirme 2002, konsol içi bir güncelleştirme olarak sunulmaktadır. Sürüm 1810 veya üstünü çalıştıran sitelerde bu güncelleştirmeyi uygulayın. <!-- baseline only statement:-->Yeni bir site yüklerken, taban çizgisi sürümü olarak da kullanılabilir. Bu makalede Configuration Manager, sürüm 2002 ' deki değişiklikler ve yeni özellikler özetlenmektedir.
 
 Bu güncelleştirmeyi yüklemek için her zaman en son denetim listesini gözden geçirin. Daha fazla bilgi için bkz. [güncelleştirme 2002 yükleme denetim listesi](../../servers/manage/checklist-for-installing-update-2002.md). Bir siteyi güncelleştirdikten sonra [güncelleştirme sonrası denetim listesini](../../servers/manage/checklist-for-installing-update-2002.md#post-update-checklist)de gözden geçirin.
 
@@ -280,7 +280,7 @@ Daha fazla bilgi için bkz. [işletim sistemi dağıtımı Için kullanıcı den
 
 Bu sürüm, işletim sistemi dağıtımına yönelik aşağıdaki geliştirmeleri içerir:
 
-- Görev sırası ortamı, `_TSSecureBoot`yeni bir salt okunurdur değişkeni içerir.<!--5842295--> UEFı özellikli bir cihazda güvenli önyükleme durumunu öğrenmek için bu değişkeni kullanın. Daha fazla bilgi için bkz. [_TSSecureBoot](../../../osd/understand/task-sequence-variables.md#TSSecureBoot).
+- Görev sırası ortamı, yeni bir salt okunurdur değişkeni içerir `_TSSecureBoot` .<!--5842295--> UEFı özellikli bir cihazda güvenli önyükleme durumunu öğrenmek için bu değişkeni kullanın. Daha fazla bilgi için bkz. [_TSSecureBoot](../../../osd/understand/task-sequence-variables.md#TSSecureBoot).
 
 - **Komut satırı Çalıştır** ve **PowerShell betik adımlarını Çalıştır** için kullanıcı bağlamını yapılandırmak üzere görev dizisi değişkenlerini ayarlayın.<!-- 5573175 --> Daha fazla bilgi için bkz. [SMSTSRunCommandLineAsUser](../../../osd/understand/task-sequence-variables.md#SMSTSRunCommandLineAsUser) and [SMSTSRunPowerShellAsUser](../../../osd/understand/task-sequence-variables.md#SMSTSRunPowerShellAsUser).
 
@@ -411,9 +411,9 @@ Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişi
 
 Yönetim hizmeti REST API değişiklikler hakkında daha fazla bilgi için bkz. [Yönetim hizmeti sürüm notları](../../../develop/adminservice/release-notes.md#bkmk_2002).
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/nnnnn).
+Bu sürüm, yeni özelliklerden başlayarak hata düzeltmeleri gibi ek değişiklikler de içerir. Daha fazla bilgi için bkz. [Configuration Manager geçerli daldaki değişikliklerin özeti, sürüm 2002](https://support.microsoft.com/help/4556203).
 
+<!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 
 -->
@@ -433,8 +433,9 @@ The following additional hotfixes are available to address specific issues:
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Şu anda sürüm 2002, erken güncelleştirme halkası için yayımlanmıştır. Bu güncelleştirmeyi yüklemek için kabul etmeniz gerekir. Daha fazla bilgi için bkz. [erken güncelleştirme halkası](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring).
-<!-- As of December 20, 2019, version 2002 is globally available for all customers to install. -->
+<!-- At this time, version 2002 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring). -->
+
+11 Mayıs 2020 itibariyle, sürüm 2002 tüm müşterilerin yüklemesi için genel kullanıma sunulmuştur.
 
 Bu sürümü yüklemeye hazırsanız, [güncelleştirme 2002 ' i yüklemek için](../../servers/manage/checklist-for-installing-update-2002.md) [Configuration Manager güncelleştirmeleri](../../servers/manage/updates.md) ve denetim listesini yükleme bölümüne bakın.
 

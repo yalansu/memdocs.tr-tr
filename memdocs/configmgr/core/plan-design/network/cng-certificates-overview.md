@@ -10,12 +10,12 @@ ms.assetid: dba904ae-7c44-46db-ae63-999b9821cb46
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4574b7ae97e8200da248a0b798677eacadb6229f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: deb3108d492a955eb0ec6b1635e306dcb85e0062
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719837"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904210"
 ---
 # <a name="cng-certificates-overview"></a>CNG sertifikalarına genel bakış
 <!-- 1356191 --> 
@@ -23,7 +23,7 @@ ms.locfileid: "81719837"
 Configuration Manager şifreleme: yeni nesil (CNG) sertifikaları için sınırlı destek içerir. Configuration Manager istemcileri, CNG Anahtar depolama sağlayıcısında (KSP) özel anahtarla PKI istemci kimlik doğrulama sertifikasını kullanabilir. KSP desteğiyle Configuration Manager istemcileri, PKI istemci kimlik doğrulama sertifikaları için TPM KSP gibi donanım tabanlı özel anahtarı destekler.
 
 ## <a name="supported-scenarios"></a>Desteklenen senaryolar
-[Şifreleme API 'si: yeni nesil (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) sertifika şablonlarını aşağıdaki senaryolar için kullanabilirsiniz:
+[Şifreleme API 'si: yeni nesil (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) sertifika şablonlarını aşağıdaki senaryolar için kullanabilirsiniz:
 
 - Bir HTTPS yönetim noktasıyla istemci kaydı ve iletişim   
 - HTTPS dağıtım noktasıyla yazılım dağıtımı ve uygulama dağıtımı   

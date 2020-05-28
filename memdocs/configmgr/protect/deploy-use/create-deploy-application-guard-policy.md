@@ -10,12 +10,12 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 241e7ed9a2195e178cc1aac2ee2a146eea60b093
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b691004742def4c126ba82b07cad1651cbe822f8
+ms.sourcegitcommit: 13ceb4e1cc8c2a10bfa199e301bf9bada8ceb268
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721748"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82923420"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Windows Defender Application Guard ilkesi oluşturma ve dağıtma
 
@@ -23,14 +23,14 @@ ms.locfileid: "81721748"
 <!-- 1351960 -->  
 Configuration Manager Endpoint Protection 'ı kullanarak [Windows Defender Application Guard (Application Guard)](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) ilkeleri oluşturabilir ve dağıtabilirsiniz. Bu ilkeler, güvenilir olmayan Web sitelerini, işletim sisteminin diğer bölümleri tarafından erişilemeyen güvenli bir yalıtılmış kapsayıcıda açarak kullanıcılarınızı korumanıza yardımcı olur.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-Windows Defender Application Guard İlkesi oluşturup dağıtmak için Windows 10 Fall oluşturucunun (1709) güncelleştirmesini kullanmanız gerekir. İlkeyi dağıttığınız Windows 10 cihazlarının bir ağ yalıtımı ilkesiyle yapılandırılması gerekir. Daha fazla bilgi için bkz. [Windows Defender Application Guard 'a genel bakış](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview).
+Windows Defender Application Guard İlkesi oluşturup dağıtmak için Windows 10 Fall oluşturucunun (1709) güncelleştirmesini kullanmanız gerekir. İlkeyi dağıttığınız Windows 10 cihazlarının bir [ağ yalıtımı ilkesiyle](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard#network-isolation-settings)yapılandırılması gerekir. Daha fazla bilgi için bkz. [Windows Defender Application Guard 'a genel bakış](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview).
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>İlke oluşturma ve kullanılabilir ayarlara gözatmaya yönelik
 
 1. Configuration Manager konsolunda, **varlıklar ve uyumluluk**' i seçin.
-2. **Varlıklar ve uyum** çalışma alanında,**Windows Defender Application Guard****Endpoint Protection** >  **genel bakış** > ' ı seçin.
+2. **Varlıklar ve uyum** çalışma alanında, **Overview**  >  **Endpoint Protection**  >  **Windows Defender Application Guard**Endpoint Protection genel bakış ' ı seçin.
 3. **Giriş** sekmesinde, **Oluştur** grubunda, **Windows Defender Application Guard İlkesi Oluştur**' a tıklayın.
 4. [Makaleyi](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard) başvuru olarak kullanarak, kullanılabilir ayarlara gözatıp yapılandırabilmeniz gerekir. Configuration Manager, belirli ilke ayarlarını ayarlamanıza izin verir:
    - [Konak etkileşim ayarları](#bkmk_HIS)

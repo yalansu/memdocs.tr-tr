@@ -5,17 +5,17 @@ description: Configuration Manager, güncelleştirmeleri istemcilere dağıtmak 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 4967b8b289d54a6355cb0a1e6454d5fac469a733
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 09d8f0a37e9ed4308c5c8ffcf005c788612be235
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110415"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709511"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Configuration Manager ile Office 365 ProPlus’ı yönetme
 
@@ -58,18 +58,18 @@ Office 365 Istemci yönetimi panosundan Office 365 yükleyicisini ilk Office 365
 ### <a name="deploy-office-365-apps-using-configuration-manager-version-1806-or-higher"></a>Configuration Manager sürüm 1806 veya üstünü kullanarak Office 365 uygulamalarını dağıtın: 
 Configuration Manager 1806 ' den başlayarak Office Özelleştirme Aracı, Configuration Manager konsolundaki Office 365 yükleyicisi ile tümleşiktir. Office 365 için bir dağıtım oluştururken, en yeni Office yönetilebilirlik ayarlarını dinamik olarak yapılandırabilirsiniz. <!--1358149-->
 
-1. Configuration Manager konsolunda, **yazılım kitaplığı** > **genel bakış** > **Office 365 istemci yönetimi**' ne gidin.
+1. Configuration Manager konsolunda, **yazılım kitaplığı**  >  **genel bakış**  >  **Office 365 istemci yönetimi**' ne gidin.
 2. Sağ üst bölmedeki **Office 365 yükleyicisi** ' ne tıklayın. Office 365 Istemci Yükleme Sihirbazı açılır.
 3. **Uygulama ayarları** sayfasında, uygulama için bir ad ve açıklama sağlayın, dosyalar için karşıdan yükleme konumunu girin ve ardından **İleri**' ye tıklayın. Konumun &#92;&#92;*server*&#92;*Share*olarak belirtilmesi gerekir.
 4. **Office ayarları** sayfasında **Office özelleştirme aracına git ' e**tıklayın. Bu, tıkla- [Çalıştır Için Office Özelleştirme Aracı](https://config.office.com)açılır.
 5. Office 365 yüklemeniz için istenen ayarları yapılandırın. Yapılandırmayı tamamladığınızda sayfanın sağ üst kısmındaki **Gönder** ' e tıklayın. 
-6. **Dağıtım** sayfasında, şimdi mi yoksa daha sonra mı dağıtmak istediğinizi saptayın. Daha sonra dağıtmayı seçerseniz, uygulamayı **yazılım kitaplığı** > **uygulama yönetimi** > **uygulamalarında**bulabilirsiniz.  
+6. **Dağıtım** sayfasında, şimdi mi yoksa daha sonra mı dağıtmak istediğinizi saptayın. Daha sonra dağıtmayı seçerseniz, uygulamayı **yazılım kitaplığı**  >  **uygulama yönetimi**  >  **uygulamalarında**bulabilirsiniz.  
 7. **Özet** sayfasında ayarları onaylayın. 
 8. **İleri** ' ye tıkladıktan sonra Office 365 Istemci Yükleme Sihirbazı tamamlandıktan sonra **Kapat** ' a tıklayın. 
 
 ### <a name="deploy-office-365-apps-using-configuration-manager-version-1802-and-prior"></a>Configuration Manager sürüm 1802 ve öncesi ile Office 365 uygulamalarını dağıtın:
 
-1. Configuration Manager konsolunda, **yazılım kitaplığı** > **genel bakış** > **Office 365 istemci yönetimi**' ne gidin.
+1. Configuration Manager konsolunda, **yazılım kitaplığı**  >  **genel bakış**  >  **Office 365 istemci yönetimi**' ne gidin.
 2. Sağ üst bölmedeki **Office 365 yükleyicisi** ' ne tıklayın. Office 365 Istemci Yükleme Sihirbazı açılır.
 3. **Uygulama ayarları** sayfasında, uygulama için bir ad ve açıklama sağlayın, dosyalar için karşıdan yükleme konumunu girin ve ardından **İleri**' ye tıklayın. Konumun &#92;&#92;*server*&#92;*Share*olarak belirtilmesi gerekir.
 4. **Istemci ayarlarını Içeri aktar** sayfasında, mevcut bir XML yapılandırma dosyasından Office 365 istemci ayarlarını içeri aktarıp aktarmayacağını veya ayarları el ile belirtmek için seçin. İşiniz bittiğinde **İleri** ' ye tıklayın.  
@@ -83,7 +83,7 @@ Configuration Manager 1806 ' den başlayarak Office Özelleştirme Aracı, Confi
 7. **Dağıtım** sayfasında, uygulamayı dağıtıp dağıtmeyeceğinizi seçin ve ardından **İleri**' ye tıklayın. <br/>Paketi sihirbazda dağıtmamalıdır seçeneğini belirlerseniz adım 9 ' a atlayın.
 8. Sihirbaz sayfalarının geri kalanını tipik bir uygulama dağıtımında yaptığınız gibi yapılandırın. Ayrıntılar için bkz. [uygulama oluşturma ve dağıtma](../../apps/get-started/create-and-deploy-an-application.md).
 9. Sihirbazı tamamlayın.
-10. Uygulamayı **yazılım kitaplığı** > **'na genel bakış** > **uygulama yönetimi** > **uygulamalarından**dağıtabilir veya düzenleyebilirsiniz.    
+10. Uygulamayı **yazılım kitaplığı**  >  **'na genel bakış**  >  **uygulama yönetimi**  >  **uygulamalarından**dağıtabilir veya düzenleyebilirsiniz.    
 
 Office 365 yükleyicisini kullanarak Office 365 uygulamaları oluşturup dağıttıktan sonra, Configuration Manager Office güncelleştirmelerini varsayılan olarak yönetmez. Office 365 istemcilerinin Configuration Manager güncelleştirmeleri almasını etkinleştirmek için, bkz. [Configuration Manager Ile office 365 güncelleştirmelerini dağıtma](#deploy-office-365-updates).
 
@@ -96,7 +96,7 @@ Office 365 uygulamalarını dağıttıktan sonra, uygulamaları sürdürmek içi
 
 Hangi cihazların belirli bir Office 365 yazılım güncelleştirmesi gerektirdiğini görmek için uyumluluk istatistikleri detayına gidebilirsiniz. Cihaz listesini görüntülemek için, cihazların ait olduğu güncelleştirmeleri ve koleksiyonları görüntülemek için izninizin olması gerekir. Cihaz listesinin detayına gitmek için:
 
-1. **Yazılım kitaplığı** > **Office 365 istemci yönetimi** > **Office 365 güncelleştirmeleri**' ne gidin.
+1. **Yazılım kitaplığı**  >  **Office 365 istemci yönetimi**  >  **Office 365 güncelleştirmeleri**' ne gidin.
 1. En az bir cihaz için gerekli olan herhangi bir güncelleştirmeyi seçin.
 1. **Özet** sekmesine bakın ve **İstatistikler**altında Pasta grafiğini bulun.
 1. Cihaz listesinin detayına gitmek için pasta grafiğinin yanındaki **gereken köprüyü görüntüle** ' yi seçin.
@@ -114,7 +114,7 @@ Configuration Manager ile Office 365 güncelleştirmelerini dağıtmak için aş
 
     **Yöntem 1**: Configuration Manager sürüm 1606 ' den başlayarak, Office 365 istemci aracısını yönetmek için Configuration Manager istemci ayarını kullanabilirsiniz. Bu ayarı yapılandırdıktan ve Office 365 güncelleştirmelerini dağıttıktan sonra, Configuration Manager istemci Aracısı, güncelleştirmeleri bir dağıtım noktasından indirmek ve onları yüklemek için Office 365 istemci aracısıyla iletişim kurar. Configuration Manager, Office 365 ProPlus Istemci ayarlarının envanterini alır.    
 
-      1. Configuration Manager konsolunda **Yönetim** > **genel bakış** > **istemci ayarları**' na tıklayın.  
+      1. Configuration Manager konsolunda **Yönetim**  >  **genel bakış**  >  **istemci ayarları**' na tıklayın.  
 
       2. İstemci aracısını etkinleştirmek için uygun cihaz ayarlarını açın. Varsayılan ve özel istemci ayarları hakkında daha fazla bilgi için bkz. [istemci ayarlarını yapılandırma](../../core/clients/deploy/configure-client-settings.md).  
 
@@ -125,7 +125,7 @@ Configuration Manager ile Office 365 güncelleştirmelerini dağıtmak için aş
 4. [Office 365 güncelleştirmelerini Istemcilere dağıtın](deploy-software-updates.md) .
 
 > [!Important]
-> - Configuration Manager sürüm 1706 ' den başlayarak Office 365 istemci güncelleştirmeleri **Office 365 istemci yönetimi** >**Office 365 Updates** düğümüne taşınmıştır. Bu taşıma geçerli ADR yapılandırmanızı etkilemez. 
+> - Configuration Manager sürüm 1706 ' den başlayarak Office 365 istemci güncelleştirmeleri **Office 365 istemci yönetimi**  > **Office 365 Updates** düğümüne taşınmıştır. Bu taşıma geçerli ADR yapılandırmanızı etkilemez. 
 > - Configuration Manager sürüm 1610 ' den önce, güncelleştirmeleri Office 365 istemcilerinde yapılandırılmış aynı dillerde indirmeniz ve dağıtmanız gerekir. Örneğin, en-US ve de aynı dillerde yapılandırılmış bir Office 365 istemciniz olduğunu varsayalım. Site sunucusunda, geçerli bir Office 365 güncelleştirmesi için yalnızca en-US içeriğini indirip dağıtırsınız. Kullanıcı bu güncelleştirme için yazılım merkezi 'nden yüklemeyi başlattığında güncelleştirme, içeriği de karşıdan yüklerken askıda kalır. 
 
 > [!NOTE]  
@@ -184,7 +184,7 @@ Merkezi yönetim sitesindeki veya tek başına birincil sitedeki yazılım günc
 > Ek Office 365 güncelleştirme dillerini yapılandırmak site genelinde bir ayardır. Aşağıdaki yordamı kullanarak dilleri ekledikten sonra, tüm Office 365 güncelleştirmeleri bu dillerde indirilir, ayrıca yazılım güncelleştirmelerini Indir veya yazılım güncelleştirmelerini dağıtma sihirbazları 'ndaki **Dil seçimi** sayfasında seçtiğiniz diller de bulunur.
 
 1. Bir komut isteminden, Windows Yönetim Araçları test ediciyi açmak için yönetici kullanıcı olarak *WBEMTest* yazın.
-2. **Bağlan**' a tıklayın ve *root\sms\&lt;Site_ sitekodu&gt;* yazın.
+2. **Bağlan**' a tıklayın ve *root\sms\ Site_ &lt; sitekodu &gt; *yazın.
 3. **Sorgu**' ya tıklayın ve ardından şu sorguyu çalıştırın: *&#42; SMS_SCI_Component WHERE ComponentName = "SMS_WSUS_CONFIGURATION_MANAGER"*  
    ![WMI sorgusu](../media/1-wmiquery.png)
 4. Sonuçlar bölmesinde, merkezi yönetim sitesi veya tek başına birincil site için site kodu ile nesneye çift tıklayın.
@@ -193,11 +193,11 @@ Merkezi yönetim sitesindeki veya tek başına birincil sitedeki yazılım günc
 6. İlk sorgu sonucundan başlayarak, **PropertyName** özelliği için **AdditionalUpdateLanguagesForO365** ile bulana kadar her bir nesneyi açın.
 7. **Değer2** öğesini seçin ve **özelliği Düzenle**' ye tıklayın.  
    ![Değer2 özelliğini Düzenle](../media/3-queryresult.png)
-8. **Değer2** özelliğine ek diller ekleyin ve **özelliği kaydet**' e tıklayın. <br/> Örneğin, pt-pt (Portekizce-Portekiz için), AF-za (Afriveçce-Güney Afrika için), NN-No (Norveççe (Nynorsk)-Norveç vb. gibi. Örnek dilleri yazmanız `pt-pt,af-za,nn-no` gerekir. Diller arasında boşluk kullanmayın.
+8. **Değer2** özelliğine ek diller ekleyin ve **özelliği kaydet**' e tıklayın. <br/> Örneğin, pt-pt (Portekizce-Portekiz için), AF-za (Afriveçce-Güney Afrika için), NN-No (Norveççe (Nynorsk)-Norveç vb. gibi. `pt-pt,af-za,nn-no`Örnek dilleri yazmanız gerekir. Diller arasında boşluk kullanmayın.
  
    ![Özellik Düzenleyicisi 'nde dil ekleme](../media/4-props.png)  
 9. **Kapat**' a tıklayın, **Kapat**' a tıklayın, **özelliği kaydet**' e tıklayın ve **nesneyi kaydet** ' e tıklayın (burada **Kapat** ' a tıkladığınızda değerler atılır). **Kapat**' a tıklayın ve ardından Windows Yönetim Araçları sınayıcıdan çıkmak için **Çıkış** ' a tıklayın.
-10. Configuration Manager konsolunda, **yazılım kitaplığı** > **genel bakış** > **Office 365 istemci yönetimi** > **Office 365 güncelleştirmeler**' e gidin.
+10. Configuration Manager konsolunda, **yazılım kitaplığı**  >  **genel bakış**  >  **Office 365 istemci yönetimi**  >  **Office 365 güncelleştirmeler**' e gidin.
 11. Artık Office 365 güncelleştirmelerini indirdiğinizde güncelleştirmeler, sihirbazda seçtiğiniz dillerde indirilir ve bu yordamda yapılandırılır. Güncelleştirmelerin doğru dillerde indirildiğini doğrulamak için, güncelleştirmenin paket kaynağına gidin ve dosya adında dil koduna sahip dosyaları arayın.  
     ![Ek dillere sahip dosya adları](../media/5-verification.png)
 
@@ -207,7 +207,7 @@ Office 365 güncelleştirmelerini yüklemek için [yazılım güncelleştirmeler
 Güncelleştirme kanalının dağıtılan güncelleştirmelerin düzgün algılanabilmesi için ayarlandığından emin olmak için aşağıdaki yöntemlerden birini kullanın:
 
 **Yöntem 1:**
-1. Aynı Office 365 ProPlus sürümüne sahip bir makinede Görev Zamanlayıcı (Taskschd. msc) öğesini açın ve Office 365 otomatik güncelleştirmeler görevini yapın. Genellikle,**Microsoft**>**Office** **Görev Zamanlayıcı Kitaplığı** >altında bulunur.
+1. Aynı Office 365 ProPlus sürümüne sahip bir makinede Görev Zamanlayıcı (Taskschd. msc) öğesini açın ve Office 365 otomatik güncelleştirmeler görevini yapın. Genellikle, **Task Scheduler Library**  > **Microsoft** > **Office**Görev Zamanlayıcı Kitaplığı altında bulunur.
 2. Otomatik Güncelleştirmeler görevine sağ tıklayın ve **Özellikler**' i seçin.
 3. **Eylemler** sekmesine gidin ve **Düzenle**' ye tıklayın. Komutu ve tüm bağımsız değişkenleri kopyalayın. 
 4. Configuration Manager konsolunda, görev dizinizi düzenleyin.
@@ -216,7 +216,7 @@ Güncelleştirme kanalının dağıtılan güncelleştirmelerin düzgün algıla
 7. **Tamam**'a tıklayın. 
 
 **Yöntem 2:**
-1. Aynı Office 365 ProPlus sürümüne sahip bir makinede Görev Zamanlayıcı (Taskschd. msc) öğesini açın ve Office 365 otomatik güncelleştirmeler görevini yapın. Genellikle,**Microsoft**>**Office** **Görev Zamanlayıcı Kitaplığı** >altında bulunur.
+1. Aynı Office 365 ProPlus sürümüne sahip bir makinede Görev Zamanlayıcı (Taskschd. msc) öğesini açın ve Office 365 otomatik güncelleştirmeler görevini yapın. Genellikle, **Task Scheduler Library**  > **Microsoft** > **Office**Görev Zamanlayıcı Kitaplığı altında bulunur.
 2. Configuration Manager konsolunda, görev dizinizi düzenleyin.
 3. Görev dizisindeki **yazılım güncelleştirmelerini yükler** adımından önce yeni bir **komut satırı Çalıştır** adımı ekleyin. Office 365 ProPlus aynı görev dizisinin bir parçası olarak yüklenirse, Office yüklendikten sonra bu adımın çalıştığından emin olun.
 4. Komut satırı alanına, zamanlanmış görevi çalıştıracak komut satırını girin. Tırnak içindeki dizenin, adım 1 ' de tanımlanan görevin yolu ve adıyla eşleştiğinden emin olmak için aşağıdaki örneğe bakın.  
@@ -224,7 +224,33 @@ Güncelleştirme kanalının dağıtılan güncelleştirmelerin düzgün algıla
     Örnek: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates 2.0"`
 5. **Tamam**'a tıklayın. 
 
-## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a><a name="bkmk_channel"></a>Office 365 istemcilerinin Configuration Manager güncelleştirmeleri almasını etkinleştirdikten sonra güncelleştirme kanalını değiştirme
+## <a name="update-channels-for-microsoft-365-apps"></a><a name="bkmk_channel"></a>Microsoft 365 uygulamalar için kanalları güncelleştirme
+<!--6298093-->
+Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldığında güncelleştirme kanalları da yeniden adlandırıldı. Güncelleştirmeleri dağıtmak için bir otomatik dağıtım kuralı (ADR) kullanıyorsanız, ADRs 'de **başlık** özelliğini kullanan değişiklikler yapmanız gerekir. Çünkü Microsoft Update katalogdaki güncelleştirme paketlerinin adı değişiyor.
+
+Şu anda, Office 365 ProPlus için bir güncelleştirme paketinin başlığı aşağıdaki örnekte görüldüğü gibi "Office 365 Istemci güncelleştirmesi" ile başlar:
+
+&nbsp;&nbsp;Office 365 Istemci güncelleştirmesi-x64 tabanlı sürüm Için yarı yıllık kanal sürüm 1908 (derleme 11929,20648)
+
+9 Haziran 'dan sonra ve sonrasında yayınlanan güncelleştirme paketleri için, başlık aşağıdaki örnekte görüldüğü gibi "Microsoft 365 Apps Update" ile başlar:
+
+&nbsp;&nbsp;Microsoft 365 Apps Update-x64 tabanlı sürüm Için yarı yıllık kanal sürüm 1908 (derleme 11929,50000)
+</br>
+</br>
+
+|Yeni kanal adı|Önceki kanal adı|
+|--|--|
+|Yarı yıllık kurumsal kanal|Yarı Yıllık Kanal|
+|Yarı yıllık kurumsal kanal (Önizleme)|Yarı Yıllık Kanal (Hedefli)|
+|Aylık kurumsal kanal|NA|
+|Geçerli kanal|Aylık Kanal|
+|Geçerli kanal (Önizleme)|Aylık kanal (hedefli)|
+|Beta kanalı|'Dan|
+
+ADRs 'nizi değiştirme hakkında daha fazla bilgi için bkz. [yazılım güncelleştirmelerini otomatik olarak dağıtma](automatically-deploy-software-updates.md). Ad değişikliği hakkında daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change).
+
+
+## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a>Office 365 istemcilerinin Configuration Manager güncelleştirmeleri almasını etkinleştirdikten sonra güncelleştirme kanalını değiştirme
 
 Office 365 ProPlus 'ı dağıttıktan sonra, güncelleştirme kanalını grup ilkesi veya Office dağıtım aracı (ODT) ile değiştirebilirsiniz. Örneğin, bir cihazı yarı yıllık kanaldan yarı yıllık kanala (hedefli) taşıyabilirsiniz. Kanal değiştirilirken, Office, tam sürümü yeniden yüklemek veya indirmek zorunda kalmadan otomatik olarak güncelleştirilir. Daha fazla bilgi için bkz. [kuruluşunuzdaki cihazlar Için Office 365 ProPlus güncelleştirme kanalını değiştirme](https://docs.microsoft.com//deployoffice/change-update-channels).
 

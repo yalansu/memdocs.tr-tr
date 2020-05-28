@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: df951bfb44313cfec8dacb8c0df34abb7beb0c56
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f3f38de1d7440ffd0293bde359deeb6be3bbeffb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720299"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906202"
 ---
 # <a name="recommended-antivirus-exclusions-for-configuration-manager"></a>Configuration Manager için önerilen antivirüs dışlamaları
 
@@ -83,7 +83,7 @@ Bu tür sorunları engellemek için aşağıdaki gerçek zamanlı koruma dışla
 
 ### <a name="folder-exclusions-for-clients"></a>İstemciler için klasör dışlamaları
 
-- *İstemci yükleme klasörü*\\\*. sdf
+- *Istemci yükleme klasörü* \\ \* . sdf
 - *Istemci yükleme klasörü*\Servicedata
 - C:\Windows\CCMCache
 - C:\Windows\CCMSetup
@@ -114,10 +114,10 @@ Bu tür sorunları engellemek için aşağıdaki gerçek zamanlı koruma dışla
 
 Virüsten koruma dışlamaları hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-[Configuration Manager Güncel Dalı antivirüs dışlamaları-System Center Premier alan Mühendisi blogu](https://blogs.technet.microsoft.com/systemcenterpfe/2017/05/24/configuration-manager-current-branch-antivirus-update/)
+[Configuration Manager Güncel Dalı antivirüs dışlamaları-System Center Premier alan Mühendisi blogu](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/configuration-manager-current-branch-antivirus-exclusions/ba-p/884831)
 
-[OSD ve önyükleme görüntüleri hakkında daha fazla ayrıntı içeren System Center 2012 Configuration Manager virüsten koruma dışlamaları güncelleştirildi](https://blogs.technet.microsoft.com/systemcenterpfe/2013/01/11/updated-system-center-2012-configuration-manager-antivirus-exclusions-with-more-details-on-osd-and-boot-images-etc/)
+[OSD ve önyükleme görüntüleri hakkında daha fazla ayrıntı içeren System Center 2012 Configuration Manager virüsten koruma dışlamaları güncelleştirildi](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/updated-system-center-2012-configuration-manager-antivirus/ba-p/884371)
 
-[SQL Server çalıştıran bilgisayarlarda çalıştırılacak virüsten koruma yazılımı seçme](https://support.microsoft.com/en-us/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server)
+[SQL Server çalıştıran bilgisayarlarda çalıştırılacak virüsten koruma yazılımı seçme](https://support.microsoft.com/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server)
 
-[Windows 'un şu anda desteklenen sürümlerini çalıştıran kurumsal bilgisayarlara yönelik virüs tarama önerileri](https://support.microsoft.com/en-us/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)
+[Windows 'un şu anda desteklenen sürümlerini çalıştıran kurumsal bilgisayarlara yönelik virüs tarama önerileri](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)

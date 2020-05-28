@@ -10,12 +10,12 @@ ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d948452da54a41e35095b01cb0e942e02a7a597f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ff2d5c6df0da6b25395858a55ef1ee8a3c0da00b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718073"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906533"
 ---
 # <a name="reference-for-configuration-manager-setup"></a>Configuration Manager Kurulum başvurusu
 
@@ -73,4 +73,4 @@ Veri toplama şu üç düzeyi içerir:
 
 Her düzey tarafından toplanan ayrıntıların açıklanması dahil olmak üzere daha fazla bilgi için bkz. [Configuration Manager Için tanılama ve kullanım verileri](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
-Çevrimiçi Configuration Manager gizlilik bildirimini görüntülemek için adresine gidin [https://go.microsoft.com/fwlink/?LinkID=626527](https://go.microsoft.com/fwlink/?LinkID=626527).
+Daha fazla bilgi için bkz. [Microsoft gizlilik bildirimi](https://privacy.microsoft.com/privacystatement).

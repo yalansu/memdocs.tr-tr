@@ -10,17 +10,17 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e3f835f3fb583569cf0f2701188a787f1ce2715a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 33c383484e79032e6b86035013538b1990322d27
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712963"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268020"
 ---
 # <a name="learn-more-about-available-updates-for-configuration-manager"></a>Configuration Manager için kullanılabilir güncelleştirmeler hakkında daha fazla bilgi edinin
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
-Configuration Manager sürümü kullanıyorsanız [, bkz. yenilikler](https://technet.microsoft.com/library/mt622084.aspx)  
+Configuration Manager sürümü kullanıyorsanız, [bkz. yenilikler](../plan-design/changes/what-has-changed-from-configuration-manager-2012.md).
 
- Configuration Manager Technical Preview sürümünü kullanıyorsanız, bkz. [Configuration Manager Için Teknik Önizleme](https://technet.microsoft.com/library/mt595861.aspx)
+Configuration Manager Technical Preview sürümünü kullanıyorsanız, [Configuration Manager için bkz. Teknik Önizleme](../get-started/technical-preview.md).

@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0174cea761da15cc57eeb55fba26070fe664bb76
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: add0d17205cc82b30f3a88558c690a813239b92a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710968"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906925"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Windows to go 'Yu Configuration Manager ile dağıtma
 
@@ -23,7 +23,7 @@ ms.locfileid: "81710968"
 
 Bu konuda, Configuration Manager Windows to go sağlama adımları sağlanmaktadır. Windows To Go, Windows 8'in, bilgisayarda çalıştırılan işletim sisteminden bağımsız olarak, Windows 7 veya Windows 8 sertifika gereksinimlerini karşılayan bilgisayarlarda bir USB bağlantılı harici sürücüden önyüklenebilecek bir Windows To Go çalışma alanının oluşturulmasını sağlayan bir kurum özelliğidir. Windows To Go çalışma alanları, kurumların masaüstü ve dizüstü bilgisayarları için kullandığı görüntünün aynısını kullanabilir ve aynı şekilde yönetilebilir.  
 
- Windows to go hakkında daha fazla bilgi için bkz. [Windows to go özelliğine genel bakış](https://go.microsoft.com/fwlink/p/?LinkId=263433).  
+ Windows to go hakkında daha fazla bilgi için bkz. [Windows to go özelliğine genel bakış](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
 
 ## <a name="provision-windows-to-go"></a>Windows To Go Sağlama  
  Windows To Go, USB bağlantılı harici sürücüde depolanan bir işletim sistemidir. Windows To Go sürücüsünü, diğer işletim sistemi dağıtımlarını sağladığınıza çok benzer şekilde sağlayabilirsiniz. Ancak, Windows To Go, kullanıcı odaklı ve yüksek mobiliteli bir çözüm olacak şekilde tasarlandığından, bu sürücüleri sağlamak için biraz daha farklı bir yaklaşım sergilemelisiniz.  
@@ -105,7 +105,7 @@ Bu konuda, Configuration Manager Windows to go sağlama adımları sağlanmaktad
 
    -   **Açıklama**: Medyanın hangi amaçla kullanıldığına ilişkin benzersiz bir açıklama belirtin.  
 
-   -   **Medya dosyası**: Çıkış dosyalarının adını ve yolunu belirtin. Sihirbaz çıkış dosyalarını bu konuma yazar. Örneğin: ** \\\SunucuAdı \ KlasörAdı \ OutputFile.exe**  
+   -   **Medya dosyası**: Çıkış dosyalarının adını ve yolunu belirtin. Sihirbaz çıkış dosyalarını bu konuma yazar. Örneğin: ** \\ \SunucuAdı \ KlasörAdı \ OutputFile.exe**  
 
 7. **Güvenlik** sayfasında, aşağıdaki bilgileri belirtin ve **İleri**'yi tıklatın.  
 
@@ -311,7 +311,7 @@ Bu konuda, Configuration Manager Windows to go sağlama adımları sağlanmaktad
 
     1.  **Ad**: Komut satırı için **Enable BitLocker for Windows To Go**gibi bir ad belirtin.  
 
-    2.  **Komut satırı**: i386 \ osdbitlocker_wtg. exe/Enable/pwd: < *none&#124;ad*>  
+    2.  **Komut satırı**: i386 \ osdbitlocker_wtg. exe/Enable/pwd: < *none & #124; AD*>  
 
          Parametreler:  
 

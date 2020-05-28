@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ced1cc1347167451d4efb789b40746ff849710ee
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9178b595ba67723c623979b4c29290e42fe5f6ac
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709967"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877745"
 ---
 # <a name="technical-reference-for-the-package-conversion-manager-plug-in-configuration-xml"></a>Paket Dönüştürme Yöneticisi eklenti yapılandırması XML 'SI için teknik başvuru
 
@@ -44,7 +44,10 @@ Aşağıdaki tabloda, Paket Dönüştürme Yöneticisi eklentisiyle ilgili Confi
 ## <a name="sample-configuration-xml"></a>Örnek yapılandırma XML 'i
 
 Bu bölüm, **Microsoft. ConfigurationManagement. exe. config**Configuration Manager yapılandırma dosyasında paket dönüştürme YÖNETICISI yapılandırma XML öğelerine bir örnek sağlar. Varsayılan olarak, bu dosya şu yolda bulunur:  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+
+> [!IMPORTANT]
+> Sürüm 1910 ' den başlayarak, bu yol klasörü kullanacak şekilde değiştirilmiştir `Microsoft Endpoint Manager` . Dosyanın başka bir klasörde mevcut olabilecek eski bir sürümünü kullandığınızdan emin olun. 
 
 Örnekte, Paket Dönüştürme Yöneticisi ile ilgili öğeler aşağıdaki öğenin içindedir:`Microsoft.ConfigurationManagement.UserCentric.Workflow.Properties.Settings`
 

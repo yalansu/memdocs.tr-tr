@@ -10,12 +10,12 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a00f77a5a902728a7c41905314511cffcfa81a5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7680c8f955773f169d56f36eb9bbe6507d2d7ce6
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714097"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427815"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Configuration Manager 'de istemci bildirimi
 
@@ -129,7 +129,7 @@ En son cihaz sistem durumunu denetlemek ve göndermek için Windows 10 istemcile
 
 Sürüm 1810 ' den başlayarak, lan 'da uyandırma paketini göndermek için aynı alt ağdaki diğer cihazları kullanarak uyandırma, LAN 'da uyandırma 'yı destekleyecek şekilde yapılandırılmış olan cihazları tetikler. Daha fazla bilgi için bkz. [LAN 'Da uyandırma yapılandırma](../deploy/configure-wake-on-lan.md).
 
-### <a name="restart"></a>Yeniden Başlatma
+### <a name="restart"></a>Yeniden başlat
 
 Seçilen cihazları yeniden başlatmak için tetikleyin. Daha fazla bilgi için bkz. [Istemcileri yeniden başlatma](manage-clients.md#restart-clients).
 
@@ -153,6 +153,9 @@ Sürüm 1910 ' den başlayarak, Configuration Manager konsolundaki **Istemci tan
 Bu ayarlar hakkında daha fazla bilgi için bkz. [günlük dosyaları hakkında](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-client).
 
 İstemcideki **Tanılama. log** dosyasında görevin durumunu izleyin. İstemci günlükleri toplandığında, daha fazla bilgi, site sunucusundaki yönetim noktasında ve **Sinvproc. log** dosyasında **MP_SinvCollFile. log dosyasına** kaydedilir.
+
+> [!Tip]
+> Toplanan istemci günlükleri, yazılım envanteri dosya koleksiyonu ayarlarına göre saklanır. Dosyalar, site sunucusunda **ınboxes\sinv\nbox\filecol** dizininde depolanır. Sürüm sayısında tanımlı bir sınır yoktur. [Eski toplanan dosyaları sil](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-collected-files) site bakım görevi, varsayılan olarak her 90 günde bir zamanlamaya göre dosyaları siler.
 
 ### <a name="prerequisites---client-diagnostics"></a>Önkoşullar-Istemci tanılama
 

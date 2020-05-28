@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 518954457ba58656aeb1986689a3cf74ce918c02
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6ccfb523cc1abc3a64d396f32d55a4dc4551987c
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713152"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428606"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Configuration Manager içindeki istemci yükleme parametreleri ve özellikleri hakkında
 
@@ -36,9 +36,9 @@ CCMSetup. exe komutu, istemciyi bir yönetim noktasından veya kaynak konumdan y
 > [!NOTE]
 > Client. msi dosyasını doğrudan yükleyemezsiniz.  
 
-CCMSetup. exe, yüklemeyi özelleştirmek için komut satırı *parametreleri* sağlar. Parametrelere bir eğik çizgi (`/`) eklenir ve kural, küçük harfe göre yapılır. Bir parametresinin değerini, hemen ardından değeri olan bir iki nokta üst üste`:`() kullanmak için belirtirsiniz. Daha fazla bilgi için bkz. [CCMSetup. exe komut satırı parametreleri](#ccmsetupexe-command-line-parameters).
+CCMSetup. exe, yüklemeyi özelleştirmek için komut satırı *parametreleri* sağlar. Parametrelere bir eğik çizgi () eklenir `/` ve kural, küçük harfe göre yapılır. Bir parametresinin değerini, `:` hemen ardından değeri olan bir iki nokta üst üste () kullanmak için belirtirsiniz. Daha fazla bilgi için bkz. [CCMSetup. exe komut satırı parametreleri](#ccmsetupexe-command-line-parameters).
 
-Ayrıca, CCMSetup. exe komut satırında *Özellikler* sunarak Client. msi davranışını değiştirebilirsiniz. Özellikler kurala göre büyük bir durumdur. Bir özellik için değeri, hemen ardından değer gelen eşittir işareti (`=`) kullanarak belirtirsiniz. Daha fazla bilgi için bkz. [Client. msi özellikleri](#clientMsiProps).
+Ayrıca, CCMSetup. exe komut satırında *Özellikler* sunarak Client. msi davranışını değiştirebilirsiniz. Özellikler kurala göre büyük bir durumdur. Bir özellik için değeri `=` , hemen ardından değer gelen eşittir işareti () kullanarak belirtirsiniz. Daha fazla bilgi için bkz. [Client. msi özellikleri](#clientMsiProps).
 
 > [!IMPORTANT]  
 > Client. msi için özellikleri belirlemeden önce CCMSetup parametrelerini belirtin.  
@@ -109,15 +109,15 @@ Bu parametre Ayrıca bir bulut yönetimi ağ geçidinin (CMG) URL 'sini de belir
 - Şu komutu çalıştırın:
 
     ```PowerShell
-    (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP`
+    (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP
     ```
 
-- /MP parametresiyle `https://` kullanılacak ön eki ekleyin. **/mp**
+- `https://` **/MP** parametresiyle kullanılacak ön eki ekleyin.
 
 Bulut yönetimi ağ geçidi URL 'sini kullandığınız zaman için örnek:`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
 > [!Important]
-> **/MP** parametresi için bir bulut yönetimi ağ geçidinin URL 'sini belirtirken, ile `https://`başlaması gerekir.
+> **/MP** parametresi için bir bulut yönetimi ağ geçidinin URL 'sini belirtirken, ile başlaması gerekir `https://` .
 
 ### <a name="regtoken"></a>/regtoken
 
@@ -218,19 +218,19 @@ Bir istemcinin, bir PKI sertifikasıyla HTTPS üzerinden iletişim kurduğunda s
 
 Bu parametre, istemci yükleme özelliklerini listeleyen bir metin dosyasını belirtir.
 
-- CCMSetup bir hizmet olarak çalışıyorsa, bu dosyayı CCMSetup sistem klasörüne yerleştirin: `%Windir%\Ccmsetup`.
+- CCMSetup bir hizmet olarak çalışıyorsa, bu dosyayı CCMSetup sistem klasörüne yerleştirin: `%Windir%\Ccmsetup` .
 
 - [**/Noservice**](#noservice) parametresini belirtirseniz, bu dosyayı CCMSetup. exe ile aynı klasöre yerleştirin.
 
 Örnek: `CCMSetup.exe /config:"configuration file name.txt"`
 
-Doğru dosya biçimini sağlamak için, site sunucusundaki Configuration Manager yükleme dizinindeki `\bin\<platform>` klasöründe **mobileclienttemplate. tcf** dosyasını kullanın. Bu dosya, bölümler ve bunların nasıl kullanılacağı hakkında açıklamalar içerir. Aşağıdaki metinden sonra, `[Client Install]` bölümünde istemci yükleme özelliklerini belirtin:. `Install=INSTALL=ALL`
+Doğru dosya biçimini sağlamak için, site sunucusundaki Configuration Manager yükleme dizinindeki klasöründe **mobileclienttemplate. tcf** dosyasını kullanın `\bin\<platform>` . Bu dosya, bölümler ve bunların nasıl kullanılacağı hakkında açıklamalar içerir. `[Client Install]`Aşağıdaki metinden sonra, bölümünde istemci yükleme özelliklerini belirtin: `Install=INSTALL=ALL` .
 
 Örnek `[Client Install]` bölüm girdisi:`Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
 ### <a name="skipprereq"></a>/önkoşuluatla
 
-Bu parametre CCMSetup. exe ' nin belirtilen önkoşulu yüklememediğini belirtir. Birden çok değer girebilirsiniz. Her bir değeri ayırmak için`;`noktalı virgül karakterini () kullanın.
+Bu parametre CCMSetup. exe ' nin belirtilen önkoşulu yüklememediğini belirtir. Birden çok değer girebilirsiniz. Her bir değeri ayırmak için noktalı virgül karakterini ( `;` ) kullanın.
 
 Örnekler:
 
@@ -272,7 +272,7 @@ Aşağıdaki özellikler CCMSetup. msi ' nin yükleme davranışını değiştir
 
 ### <a name="ccmsetupcmd"></a>CCMSETUPCMD
 
-Bu CCMSetup 'ı kullanın. ek komut satırı parametreleri ve özellikleri CCMSetup 'a geçirmek için *MSI* özelliği. *exe*. Diğer parametreleri ve özellikleri tırnak işaretleri (`"`) içine ekleyin. Configuration Manager istemcisini [ıNTUNE MDM yükleme yöntemiyle önyüklediğinizde](plan/client-installation-methods.md#microsoft-intune-mdm-installation)bu özelliği kullanın.
+Bu CCMSetup 'ı kullanın. ek komut satırı parametreleri ve özellikleri CCMSetup 'a geçirmek için *MSI* özelliği. *exe*. Diğer parametreleri ve özellikleri tırnak işaretleri () içine ekleyin `"` . Configuration Manager istemcisini [ıNTUNE MDM yükleme yöntemiyle önyüklediğinizde](plan/client-installation-methods.md#microsoft-intune-mdm-installation)bu özelliği kullanın.
 
 Örnek: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.contoso.com"`
 
@@ -323,7 +323,7 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 
 ### <a name="ccmadmins"></a>CCMADMINS  
 
-İstemci ayarlarına ve ilkelerine erişim verilecek bir veya daha fazla Windows kullanıcı hesabını veya grubunu belirtir. İstemci bilgisayarda yerel yönetici kimlik bilgileriniz olmadığında bu özellik faydalıdır. Noktalı virgüllerle (`;`) ayrılan hesapların bir listesini belirtin.
+İstemci ayarlarına ve ilkelerine erişim verilecek bir veya daha fazla Windows kullanıcı hesabını veya grubunu belirtir. İstemci bilgisayarda yerel yönetici kimlik bilgileriniz olmadığında bu özellik faydalıdır. Noktalı virgüllerle () ayrılan hesapların bir listesini belirtin `;` .
 
 Örnek: `CCMSetup.exe CCMADMINS="domain\account1;domain\group1"`
 
@@ -338,7 +338,7 @@ Gerekirse, istemci yüklemesinden sonra bilgisayarın sessizce yeniden başlatı
 
 ### <a name="ccmalwaysinf"></a>CCMALWAYSINF
 
-İstemcisinin her zaman internet tabanlı olduğunu ve intranete hiçbir zaman bağlanmayacağını belirtmek için bu özellik değerini olarak `1`ayarlayın. İstemcinin bağlantı türü **İnternet**görüntüler.  
+İstemcisinin her zaman internet tabanlı olduğunu ve intranete hiçbir zaman bağlanmayacağını belirtmek için bu özellik değerini olarak ayarlayın `1` . İstemcinin bağlantı türü **İnternet**görüntüler.  
 
 İnternet tabanlı yönetim noktasının FQDN 'sini belirtmek için bu özelliği [**CCMHOSTNAME**](#ccmhostname) ile birlikte kullanın. Ayrıca, CCMSetup parametresi [**/UsePKICert**](#usepkicert) ve site kodu ([**smssitekodu**](#smssitecode)) ile birlikte kullanın.
 
@@ -350,12 +350,12 @@ Internet tabanlı istemci yönetimi hakkında daha fazla bilgi için bkz. [İnte
 
 Sertifika verenler listesini belirtmek için bu özelliği kullanın. Bu liste, Configuration Manager sitesinin güvendiği güvenilen kök sertifika yetkilileri (CA) için sertifika bilgilerini içerir.  
 
-Bu değer, kök CA sertifikasındaki konu öznitelikleri için büyük/küçük harfe duyarlı bir eşleşmedir. Öznitelikleri virgül (`,`) veya noktalı virgül (`;`) ile ayırın. Bir ayırıcı çubuk (`|`) kullanarak birden fazla kök CA sertifikası belirtin.
+Bu değer, kök CA sertifikasındaki konu öznitelikleri için büyük/küçük harfe duyarlı bir eşleşmedir. Öznitelikleri virgül ( `,` ) veya noktalı virgül () ile ayırın `;` . Bir ayırıcı çubuk () kullanarak birden fazla kök CA sertifikası belirtin `|` .
 
 Örnek: `CCMCERTISSUERS="CN=Contoso Root CA; OU=Servers; O=Contoso, Ltd; C=US | CN=Litware Corporate Root CA; O=Litware, Inc."`
 
 > [!TIP]
-> Site için **MobileClient. tcf** dosyasındaki **certificateverenler** özniteliğinin değerini kullanın. Bu dosya, site sunucusundaki `\bin\<platform>` Configuration Manager yükleme dizininin alt klasörüdür.
+> Site için **MobileClient. tcf** dosyasındaki **certificateverenler** özniteliğinin değerini kullanın. Bu dosya, `\bin\<platform>` site sunucusundaki Configuration Manager yükleme dizininin alt klasörüdür.
 
 Sertifika verenler listesi ve istemcilerin sertifika seçimi işlemi sırasında bunu nasıl kullanacağı hakkında daha fazla bilgi için bkz., [PKI istemci sertifikası seçimini planlama](../../plan-design/security/plan-for-security.md#BKMK_PlanningForClientCertificateSelection).
 
@@ -370,17 +370,17 @@ Sertifika konu adı veya konu diğer adını aramak için aşağıdaki anahtar s
 
 Örnekler:
 
-- `CCMCERTSEL="Subject:computer1.contoso.com"`: Konu adı veya konu alternatif adı içindeki bilgisayar adıyla `computer1.contoso.com` tam olarak eşleşen bir sertifika arayın.
+- `CCMCERTSEL="Subject:computer1.contoso.com"`: `computer1.contoso.com` Konu adı veya konu alternatif adı içindeki bilgisayar adıyla tam olarak eşleşen bir sertifika arayın.
 
-- `CCMCERTSEL="SubjectStr:contoso.com"`: Konu adı veya konu diğer adı `contoso.com` içinde içeren bir sertifika arayın.
+- `CCMCERTSEL="SubjectStr:contoso.com"`: `contoso.com` Konu adı veya konu diğer adı içinde içeren bir sertifika arayın.
 
 Konu adı veya konu diğer adı içinde nesne tanımlayıcısı (OID) veya ayırt edici ad özniteliklerini aramak için **SubjectAttr** anahtar sözcüğünü kullanın.
 
 Örnekler:
 
-- `CCMCERTSEL="SubjectAttr:2.5.4.11 = Computers"`: Bir nesne tanımlayıcısı ve adı `Computers`olarak ifade edilen kuruluş birimi özelliğini arayın.
+- `CCMCERTSEL="SubjectAttr:2.5.4.11 = Computers"`: Bir nesne tanımlayıcısı ve adı olarak ifade edilen kuruluş birimi özelliğini arayın `Computers` .
 
-- `CCMCERTSEL="SubjectAttr:OU = Computers"`: Bir ayırt edici ad olarak ifade edilen ve adlı `Computers`kuruluş birimi özniteliği için arama yapın.
+- `CCMCERTSEL="SubjectAttr:OU = Computers"`: Bir ayırt edici ad olarak ifade edilen ve adlı kuruluş birimi özniteliği için arama yapın `Computers` .
 
 > [!IMPORTANT]
 > Konu adını kullanırsanız, **Subject** anahtar sözcüğü büyük/küçük harfe duyarlıdır ve **SubjectStr** anahtar sözcüğü büyük/küçük harfe duyarsızdır.
@@ -389,7 +389,7 @@ Konu adı veya konu diğer adı içinde nesne tanımlayıcısı (OID) veya ayır
 
 Sertifika seçimi için kullanabileceğiniz özniteliklerin tüm listesi için bkz. [PKI sertifika seçim ölçütleri Için desteklenen öznitelik değerleri](#BKMK_attributevalues).
 
-Aramayla birden fazla sertifika eşleşiyorsa ve [**Ccmfirstcert**](#ccmfirstcert) `1`' ı ayarlarsanız, istemci yükleyicisi en uzun geçerlilik süresine sahip sertifikayı seçer.
+Aramayla birden fazla sertifika eşleşiyorsa ve [**Ccmfirstcert**](#ccmfirstcert) ' ı ayarlarsanız, `1` istemci yükleyicisi en uzun geçerlilik süresine sahip sertifikayı seçer.
 
 ### <a name="ccmcertstore"></a>CCMCERTSTORE
 
@@ -425,7 +425,7 @@ Daha fazla bilgi için bkz. [günlük dosyaları hakkında](../../plan-design/hi
 
 ### <a name="ccmevalinterval"></a>CCMEVALINTERVAL
 
-İstemci sistem durumu değerlendirme aracının (ccmeval. exe) çalışma süresi (dakika cinsinden). Öğesinden öğesinden `1` bir tamsayı değeri belirtin `1440`. Varsayılan olarak, ccmeval günde bir kez çalışır (1440 dakika).
+İstemci sistem durumu değerlendirme aracının (ccmeval. exe) çalışma süresi (dakika cinsinden). Öğesinden öğesinden bir tamsayı değeri `1` belirtin `1440` . Varsayılan olarak, ccmeval günde bir kez çalışır (1440 dakika).
 
 Örnek: `CCMSetup.exe CCMEVALINTERVAL=1440`
 
@@ -433,13 +433,13 @@ Daha fazla bilgi için bkz. [günlük dosyaları hakkında](../../plan-design/hi
 
 ### <a name="ccmevalhour"></a>CCMEVALHOUR
 
-İstemci sistem durumu değerlendirme aracının (ccmeval. exe) çalıştırıldığı günün saati. (Gece yarısı) ile `0` `23` (11:00 PM) arasında bir tamsayı değeri belirtin. Varsayılan olarak, ccmeval gece yarısı çalışır.
+İstemci sistem durumu değerlendirme aracının (ccmeval. exe) çalıştırıldığı günün saati. `0`(Gece yarısı) ile `23` (11:00 PM) arasında bir tamsayı değeri belirtin. Varsayılan olarak, ccmeval gece yarısı çalışır.
 
 İstemci sistem durumu değerlendirmesi hakkında daha fazla bilgi için bkz. [Istemcileri izleme](../manage/monitor-clients.md#bkmk_health).
 
 ### <a name="ccmfirstcert"></a>CCMFIRSTCERT
 
-Bu özelliği olarak `1`ayarlarsanız, istemci en uzun geçerlilik SÜRESINE sahip PKI sertifikasını seçer.
+Bu özelliği olarak ayarlarsanız `1` , istemci en uzun geçerlilik süresine sahıp PKI sertifikasını seçer.
 
 Örnek: `CCMSetup.exe /UsePKICert CCMFIRSTCERT=1`
 
@@ -466,23 +466,23 @@ Bu özellik, bir bulut yönetimi ağ geçidinin (CMG) adresini belirtebilir. Bu 
 Örneğin, `ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
 > [!Important]
-> **CCMHOSTNAME** özelliği için bir CMG adresi belirttiğinizde, gibi bir ön ek eklemeyin `https://`. Bu öneki yalnızca bir CMG 'nin **/MP** URL 'siyle kullanın.
+> **CCMHOSTNAME** özelliği için bir CMG adresi belirttiğinizde, gibi bir ön ek eklemeyin `https://` . Bu öneki yalnızca bir CMG 'nin **/MP** URL 'siyle kullanın.
 
 ### <a name="ccmhttpport"></a>CCMHTTPPORT
 
-HTTP üzerinden site sistem sunucularıyla iletişim kurarken kullanılacak istemci bağlantı noktasını belirtir. Varsayılan olarak, bu değer `80`.
+HTTP üzerinden site sistem sunucularıyla iletişim kurarken kullanılacak istemci bağlantı noktasını belirtir. Varsayılan olarak, bu değer `80` .
 
 Örnek: `CCMSetup.exe CCMHTTPPORT=80`
 
 ### <a name="ccmhttpsport"></a>CCMHTTPSPORT
 
-HTTPS üzerinden site sistem sunucularıyla iletişim kurarken kullanılacak istemci bağlantı noktasını belirtir. Varsayılan olarak, bu değer `443`.
+HTTPS üzerinden site sistem sunucularıyla iletişim kurarken kullanılacak istemci bağlantı noktasını belirtir. Varsayılan olarak, bu değer `443` .
 
 Örnek: `CCMSetup.exe /UsePKICert CCMHTTPSPORT=443`
 
 ### <a name="ccminstalldir"></a>CCMINSTALLDIR
 
-Configuration Manager istemci dosyalarını yükleyecek klasörü ayarlamak için bu özelliği kullanın. Varsayılan olarak, kullanır `%WinDir%\CCM`.
+Configuration Manager istemci dosyalarını yükleyecek klasörü ayarlamak için bu özelliği kullanın. Varsayılan olarak, kullanır `%WinDir%\CCM` .
 
 > [!TIP]
 > İstemci dosyalarını yüklediğiniz yere bakılmaksızın, her zaman **Ccmcore. dll** dosyasını `%WinDir%\System32` klasörüne yükler. 64 bitlik bir IŞLETIM sisteminde, Ccmcore. dll ' nin bir kopyasını `%WinDir%\SysWOW64` klasöre yükler. Bu dosya, Configuration Manager SDK 'dan istemci API 'Lerinin 32 bit sürümünü kullanan 32 bitlik uygulamaları destekler.
@@ -506,7 +506,7 @@ Daha fazla bilgi için bkz. [günlük dosyaları hakkında](../../plan-design/hi
 
 ### <a name="ccmlogmaxhistory"></a>CCMLOGMAXHISTORY
 
-Bir Configuration Manager günlük dosyası en büyük boyuta ulaştığında, istemci onu bir yedekleme olarak yeniden adlandırır ve yeni bir günlük dosyası oluşturur. Bu özellik, günlük dosyasının kaç tane önceki sürümünün tutulacağını belirtir. Varsayılan değer: `1`. Değerini olarak `0`ayarlarsanız, istemci herhangi bir günlük dosyası geçmişini tutar.
+Bir Configuration Manager günlük dosyası en büyük boyuta ulaştığında, istemci onu bir yedekleme olarak yeniden adlandırır ve yeni bir günlük dosyası oluşturur. Bu özellik, günlük dosyasının kaç tane önceki sürümünün tutulacağını belirtir. Varsayılan değer: `1`. Değerini olarak ayarlarsanız `0` , istemci herhangi bir günlük dosyası geçmişini tutar.
 
 Örnek: `CCMSetup.exe CCMLOGMAXHISTORY=5`
 
@@ -520,7 +520,7 @@ Bu özellik, en fazla günlük dosyası boyutunu bayt cinsinden belirtir. Bir g�
 
 ### <a name="disablesiteopt"></a>DISABLESITEOPT
 
-Yöneticilerin Configuration Manager Denetim Masası `TRUE` 'ndaki atanmış siteyi değiştirmesini engellemek için bu özelliği olarak ayarlayın.
+`TRUE`Yöneticilerin Configuration Manager Denetim Masası 'ndaki atanmış siteyi değiştirmesini engellemek için bu özelliği olarak ayarlayın.
 
 Örnek: **CCMSetup.exe DISABLESITEOPT=TRUE**
 
@@ -554,7 +554,7 @@ Daha fazla bilgi için, bkz. [geri dönüş durum noktası](plan/determine-the-s
 
 ### <a name="ignoreappvversioncheck"></a>IGNOREAPPVVERSIONCHECK
 
-Bu özelliği olarak ayarlarsanız, istemci `TRUE`yükleyicisi Microsoft Application Virtualization (App-V) için gereken en düşük sürümü denetlemez.
+Bu özelliği olarak ayarlarsanız `TRUE` , istemci yükleyicisi Microsoft Application Virtualization (App-V) için gereken en düşük sürümü denetlemez.
 
 > [!IMPORTANT]  
 > Configuration Manager istemcisini App-V yüklemeden yüklerseniz, [sanal uygulamaları dağıtamazsınız](../../../apps/get-started/deploying-app-v-virtual-applications.md).
@@ -581,9 +581,9 @@ Aşağıdaki işlemi kullanın:
 
 1. Uygulamaları yüklemek, yazılım güncelleştirmelerini yüklemek ve ayarları yapılandırmak için [işletim sistemi olmayan dağıtım görev dizisi oluşturun](../../../osd/deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md) .
 
-1. [Bu görev dizisini](../../../osd/deploy-use/deploy-a-task-sequence.md) yeni yerleşik koleksiyona, **tüm sağlama cihazlarına**dağıtın. Örneğin `PRI20001`, görev DIZISI dağıtım kimliğini aklınızda yapın.
+1. [Bu görev dizisini](../../../osd/deploy-use/deploy-a-task-sequence.md) yeni yerleşik koleksiyona, **tüm sağlama cihazlarına**dağıtın. Örneğin, görev dizisi dağıtım KIMLIĞINI aklınızda yapın `PRI20001` .
 
-1. [Configuration Manager istemcisini](deploy-clients-to-windows-computers.md#BKMK_Manual) bir cihaza yükleyip şu özelliği ekleyin: `PROVISIONTS=PRI20001`. Bu özelliğin değerini görev sırası dağıtım KIMLIĞI olarak ayarlayın.
+1. [Configuration Manager istemcisini](deploy-clients-to-windows-computers.md#BKMK_Manual) bir cihaza yükleyip şu özelliği ekleyin: `PROVISIONTS=PRI20001` . Bu özelliğin değerini görev sırası dağıtım KIMLIĞI olarak ayarlayın.
 
     - İstemciyi ortak yönetim kaydı sırasında Intune 'dan yüklüyorsanız bkz. [İnternet tabanlı cihazları ortak yönetim için hazırlama](../../../comanage/how-to-prepare-Win10.md).
 
@@ -606,7 +606,7 @@ Aşağıdaki işlemi kullanın:
 
 ### <a name="smscachedir"></a>SMSCACHEDIR
 
-İstemci bilgisayarda istemci önbellek klasörünün konumunu belirtir. Varsayılan olarak, önbellek konumu olur `%WinDir%\ccmcache`.
+İstemci bilgisayarda istemci önbellek klasörünün konumunu belirtir. Varsayılan olarak, önbellek konumu olur `%WinDir%\ccmcache` .
 
 Örnek: `CCMSetup.exe SMSCACHEDIR="C:\Temp"`  
 
@@ -614,7 +614,7 @@ Aşağıdaki işlemi kullanın:
 
 ### <a name="smscacheflags"></a>SMSCACHEFLAGS
 
-İstemci önbellek klasörü için diğer yükleme ayrıntılarını belirtmek için bu özelliği kullanın. **SMSCACHEFLAGS** özelliklerini tek tek veya noktalı virgülle (`;`) ayırarak birlikte kullanabilirsiniz.
+İstemci önbellek klasörü için diğer yükleme ayrıntılarını belirtmek için bu özelliği kullanın. **SMSCACHEFLAGS** özelliklerini tek tek veya noktalı virgülle () ayırarak birlikte kullanabilirsiniz `;` .
 
 Bu özelliği eklemezseniz:
 
@@ -628,7 +628,7 @@ Var olan bir istemciyi yükselttiğinizde, istemci yükleyicisi bu özelliği yo
 
 - **Percentdiskspace**: önbellek boyutunu *Toplam* disk alanının yüzdesi olarak ayarlayın. Bu özelliği belirtirseniz, [**SMSCachesize**](#smscachesize) öğesini de bir yüzde değerine ayarlayın.
 
-- **Yüztfreediskspace**: önbellek boyutunu *boş* disk alanının yüzdesi olarak ayarlayın. Bu özelliği belirtirseniz, [**SMSCachesize**](#smscachesize) değerini yüzde değeri olarak da ayarlayın. Örneğin, diskte 10 MB boş yer vardır ve bunu belirtirsiniz `SMSCACHESIZE=50`. İstemci yükleyicisi önbellek boyutunu 5 MB olarak ayarlar. Bu özelliği **Percentdiskspace** özelliğiyle kullanamazsınız.
+- **Yüztfreediskspace**: önbellek boyutunu *boş* disk alanının yüzdesi olarak ayarlayın. Bu özelliği belirtirseniz, [**SMSCachesize**](#smscachesize) değerini yüzde değeri olarak da ayarlayın. Örneğin, diskte 10 MB boş yer vardır ve bunu belirtirsiniz `SMSCACHESIZE=50` . İstemci yükleyicisi önbellek boyutunu 5 MB olarak ayarlar. Bu özelliği **Percentdiskspace** özelliğiyle kullanamazsınız.
 
 - **Maxdrive**: önbelleği, kullanılabilir en büyük diske yükler. [**Smscachedir**](#smscachedir) özelliği ile bir yol belirtirseniz, istemci yükleyicisi bu değeri yoksayar.
 
@@ -668,7 +668,7 @@ Var olan bir istemciyi yükselttiğinizde, istemci yükleyicisi bu ayarı yoksay
 
 - `U`: Yüklü istemciyi daha yeni bir sürüme yükseltin ve atanan site kodunu kullanın.
 
-Varsayılan olarak, istemci yükleyicisi kullanır `PU`. Önce yükleme özelliklerini (`P`) ve ardından var olan ayarları (`U`) denetler.  
+Varsayılan olarak, istemci yükleyicisi kullanır `PU` . Önce yükleme özelliklerini ( `P` ) ve ardından var olan ayarları ( `U` ) denetler.  
 
 Örnek: `CCMSetup.exe SMSCONFIGSOURCE=RP`
 
@@ -693,7 +693,7 @@ Example: `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`
 Configuration Manager istemcisinin kullanması için bir başlangıç yönetim noktası belirtir.  
 
 > [!IMPORTANT]  
-> Yönetim noktası yalnızca HTTPS üzerinden istemci bağlantılarını kabul ediyorsa, yönetim noktası adını ile `https://`önek yapın.
+> Yönetim noktası yalnızca HTTPS üzerinden istemci bağlantılarını kabul ediyorsa, yönetim noktası adını ile önek yapın `https://` .
 
 Örnekler:
 
@@ -724,10 +724,10 @@ Site sunucusunda, dışarıya aktarılmış otomatik olarak imzalanan sertifikan
 
 ### <a name="smssitecode"></a>SMSSITECODE
 
-Bu özellik, istemciyi atadığınız bir Configuration Manager sitesini belirtir. Bu değer üç karakterli bir site kodu veya kelime `AUTO`olabilir. Bu özelliği belirtirseniz `AUTO`veya belirtmezseniz, istemci, Active Directory Domain Services veya belirtilen bir yönetim noktasından site atamasını saptamaya çalışır. İstemci yükseltmelerini `AUTO` etkinleştirmek için, Ayrıca, [Sıtereassign = true](#sitereassign)olarak ayarlayın.
+Bu özellik, istemciyi atadığınız bir Configuration Manager sitesini belirtir. Bu değer üç karakterli bir site kodu veya kelime olabilir `AUTO` . `AUTO`Bu özelliği belirtirseniz veya belirtmezseniz, istemci, Active Directory Domain Services veya belirtilen bir yönetim noktasından site atamasını saptamaya çalışır. `AUTO`İstemci yükseltmelerini etkinleştirmek için, Ayrıca, [Sıtereassign = true](#sitereassign)olarak ayarlayın.
 
 > [!NOTE]  
-> Ayrıca, [**CCMHOSTNAME**](#ccmhostname) özelliğine sahip bir internet tabanlı yönetim noktası belirtirseniz, **smssitekodu**ile kullanmayın `AUTO` . Site kodunu belirterek istemciyi doğrudan sitesine atayın.
+> Ayrıca, [**CCMHOSTNAME**](#ccmhostname) özelliğine sahip bir internet tabanlı yönetim noktası belirtirseniz, `AUTO` **smssitekodu**ile kullanmayın. Site kodunu belirterek istemciyi doğrudan sitesine atayın.
 
 Örnek: `CCMSetup.exe SMSSITECODE=XZY`
 

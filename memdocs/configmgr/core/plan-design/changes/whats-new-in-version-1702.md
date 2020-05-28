@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bd9475a72ef8d2b25f026ab76e124c8217ed7ee9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: eacf64245f4cfc779dc92be73e8d7e387b34f909
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073951"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427933"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Sürüm 1702 ' deki yenilikler&#39;Configuration Manager
 
@@ -28,8 +28,8 @@ Geçerli dalın Configuration Manager güncelleştirme 1702, daha önce yüklü 
 > Yeni bir site yüklemek için Configuration Manager temel bir sürümünü kullanmanız gerekir.  
 >
 > Aşağıdakiler hakkında daha fazla bilgi edinin:    
-> - [Yeni siteleri yükleme](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Sitelere güncelleştirme yükleme](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Yeni siteleri yükleme](../../servers/deploy/install/installing-sites.md)  
+> - [Sitelere güncelleştirme yükleme](../../servers/manage/updates.md)  
 > - [Temel ve güncelleştirme sürümleri](../../servers/manage/updates.md#bkmk_Baselines)
 
 Aşağıdaki bölümlerde, Configuration Manager sürüm 1702 ' de tanıtılan değişiklikler ve yeni yetenekler hakkında ayrıntılı bilgi sağlanmaktadır.  
@@ -71,7 +71,7 @@ Doğrudan geliştirme ekibine geri bildirim göndermek için konsol içi geri bi
 - Konsolda herhangi bir nesneye sağ tıkladığınızda.   
    ![Righ-tıklama seçeneği](./media/feedback-option.png)   
 
-  **Geri bildirim** seçme, tarayıcınızı [Configuration Manager UserVoice geri bildirim Web sitesinde](https://go.microsoft.com/fwlink/?linkid=617029)açar.
+  **Geri bildirim** seçme, tarayıcınızı [Configuration Manager UserVoice geri bildirim Web sitesinde](https://configurationmanager.uservoice.com/forums/300492-ideas)açar.
 
 
 ###  <a name="changes-for-updates-and-servicing"></a>Güncelleştirmeler ve bakım için değişiklikler
@@ -191,7 +191,7 @@ Artık bir görev dizisini çalıştırdığınızda ve bir hata olduğunda önc
 Sürüm 1702 ' den başlayarak, Görev sıralarının kullanılabilir dağıtımları için ön önbellek içeriğini kullanmayı seçebilirsiniz. Ön önbellek içeriği, istemcinin yalnızca dağıtım aldığı anda ilgili içeriği indirmesine izin verme seçeneğini sunar. Bu nedenle, Kullanıcı yazılım merkezi 'nde **yükleme** ' ye tıkladığında içerik hazırlayın ve içerik yerel sabit sürücüde olduğundan yükleme işlemi hızlı bir şekilde başlatılır. Ayrıntılar için bkz. [ön önbellek Içeriğini yapılandırma](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#configure-pre-cache-content).
 
 ### <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>Yerinde yükseltme sırasında BIOS 'tan UEFı 'ye dönüştürme
-Windows 10 Creators Update, işlemi UEFı etkin donanımlar için sabit diski yeniden bölümlemek ve dönüştürme aracını Windows 10 yerinde yükseltme işlemine tümleştiren bir basit dönüştürme aracı sunuyor. Bu aracı işletim sistemi yükseltme görev diziniz ve bellenimi BIOS 'tan UEFı 'ye dönüştüren OEM aracı ile birleştirdiğinizde, Windows 10 Creators Update 'e yerinde yükseltme sırasında bilgisayarlarınızı BIOS 'tan UEFı 'e dönüştürebilirsiniz. Ayrıntılar için bkz. [BIOS 'TAN UEFI dönüştürmeyi yönetmeye yönelik görev dizisi adımları](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+Windows 10 Creators Update, işlemi UEFı etkin donanımlar için sabit diski yeniden bölümlemek ve dönüştürme aracını Windows 10 yerinde yükseltme işlemine tümleştiren bir basit dönüştürme aracı sunuyor. Bu aracı işletim sistemi yükseltme görev diziniz ve bellenimi BIOS 'tan UEFı 'ye dönüştüren OEM aracı ile birleştirdiğinizde, Windows 10 Creators Update 'e yerinde yükseltme sırasında bilgisayarlarınızı BIOS 'tan UEFı 'e dönüştürebilirsiniz. Ayrıntılar için bkz. [BIOS 'TAN UEFI dönüştürmeyi yönetmeye yönelik görev dizisi adımları](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ### <a name="improvements-to-the-install-applications-task-sequence-step"></a>Uygulamaları yüklemek görev dizisi adımındaki geliştirmeler
 Bu sürüm aşağıdaki geliştirmeleri getirdi:
@@ -275,13 +275,13 @@ Artık, lisanslanan uygulamaları cihazlara ve kullanıcılara dağıtabilirsini
 |-|-|-|-|
 |Configuration Manager sürümü|Uygulama, cihaz lisansını destekliyor mu?|Dağıtım koleksiyonu türü|Talep edilen lisans|
 |1702 öncesi|Yes|Kullanıcı|Kullanıcı Lisansı|
-|1702 öncesi|Hayır|Kullanıcı|Kullanıcı Lisansı|
+|1702 öncesi|No|Kullanıcı|Kullanıcı Lisansı|
 |1702 öncesi|Yes|Cihaz|Kullanıcı Lisansı|
-|1702 öncesi|Hayır|Cihaz|Kullanıcı Lisansı|
+|1702 öncesi|No|Cihaz|Kullanıcı Lisansı|
 |1702 ve üzeri|Yes|Kullanıcı|Kullanıcı Lisansı|
-|1702 ve üzeri|Hayır|Kullanıcı|Kullanıcı Lisansı|
+|1702 ve üzeri|No|Kullanıcı|Kullanıcı Lisansı|
 |1702 ve üzeri|Yes|Cihaz|Cihaz lisansı|
-|1702 ve üzeri|Hayır|Cihaz|Kullanıcı Lisansı|
+|1702 ve üzeri|No|Cihaz|Kullanıcı Lisansı|
 
 ### <a name="support-for-ios-volume-purchase-program-for-education"></a>Eğitim için iOS toplu satın alma programı desteği
 

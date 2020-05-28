@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c7ad4e96d9afba7e52d2ff2e5dd3f4f6be0b9a98
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2db1a719aaf1cb79973f1af8e2de3c1bbb91d605
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078711"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879082"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1906 ' deki yenilikler
 
@@ -186,7 +186,7 @@ Daha fazla bilgi için bkz. [Istemci veri kaynakları panosu](../../servers/depl
 ### <a name="use-your-distribution-point-as-an-in-network-cache-server-for-delivery-optimization"></a>Dağıtım Iyileştirmeye yönelik bir ağ önbelleği sunucusu olarak dağıtım noktanızı kullanın
 
 <!--3555764-->
-Dağıtım noktalarınıza artık teslim Iyileştirmesi-ağ önbelleği (DOıNC) sunucusunu yükleyebilirsiniz. Bu içeriği şirket içinde önbelleğe alarak istemcileriniz teslim Iyileştirme özelliğinden yararlanabilir, ancak WAN bağlantılarını korumaya yardımcı olabilirsiniz.
+Dağıtım noktalarınıza artık teslim Iyileştirmesi için ağ önbellek sunucusu yükleyebilirsiniz. Bu içeriği şirket içinde önbelleğe alarak istemcileriniz teslim Iyileştirme özelliğinden yararlanabilir, ancak WAN bağlantılarını korumaya yardımcı olabilirsiniz.
 
 Bu önbellek sunucusu teslim Iyileştirmesi tarafından indirilen içerik için isteğe bağlı bir saydam önbellek işlevi görür. Bu sunucunun yalnızca yerel Configuration Manager sınır grubunun üyelerine sunulmakta olduğundan emin olmak için istemci ayarlarını kullanın.
 
@@ -306,7 +306,7 @@ Bu sürüm, uygulama onayları için aşağıdaki geliştirmeleri içerir:
 
 - Bir uygulama onay isteğini kaldırmak için yeni bir WMI yöntemi olan **DeleteInstance** vardır. Bu eylem cihazdaki uygulamayı kaldırmaz. Henüz yüklenmemişse, Kullanıcı uygulamayı Yazılım Merkezi 'nden yükleyemez.
 
-- Bir cihazda uygulama için önceden onaylanmış bir istek oluşturmak için **Createapproisteyiste istek** API 'sini çağırın. Uygulamayı istemcide otomatik olarak yüklemeyi engellemek için, otomatik **yükleme** parametresini olarak `FALSE`ayarlayın. Kullanıcı uygulamayı Yazılım Merkezi 'nde görür, ancak otomatik olarak yüklenmez.
+- Bir cihazda uygulama için önceden onaylanmış bir istek oluşturmak için **Createapproisteyiste istek** API 'sini çağırın. Uygulamayı istemcide otomatik olarak yüklemeyi engellemek için, otomatik **yükleme** parametresini olarak ayarlayın `FALSE` . Kullanıcı uygulamayı Yazılım Merkezi 'nde görür, ancak otomatik olarak yüklenmez.
 
 Daha fazla bilgi için bkz. [uygulamaları onaylama](../../../apps/deploy-use/app-approval.md).
 
@@ -432,7 +432,7 @@ Yazılım merkezini belirli bir sekmeye açmak için aşağıdaki URL biçimini 
 
 `softwarecenter:page=CustomTab1`
 
-Dize `CustomTab1` , sırayla ilk özel sekmedir.
+Dize, `CustomTab1` sırayla ilk özel sekmedir.
 
 Örneğin, bu URL 'YI Windows **çalıştırma** penceresine yazın.
 
@@ -501,9 +501,9 @@ Artık belirli bir yazılım güncelleştirmesi gerektiren cihazları görmek i�
 
 **Gerekli görünüm** Köprüsü aşağıdaki konumlarda kullanılabilir:
 
-   - **Yazılım Kitaplığı** > **yazılımı** > **tüm yazılım güncelleştirmelerini** güncelleştirir
-   - **Yazılım Kitaplığı** > **Windows 10** > **tüm Windows 10 güncelleştirmelerine** bakım
-   - **Yazılım Kitaplığı** > **Office 365 istemci yönetimi** > **Office 365 güncelleştirmeleri**
+   - **Yazılım kitaplığı**  >  **Yazılım güncelleştirmeleri**  >  **Tüm yazılım güncelleştirmeleri**
+   - **Yazılım kitaplığı**  >  **Windows 10 Bakımı**  >  **Tüm Windows 10 güncelleştirmeleri**
+   - **Yazılım kitaplığı**  >  **Office 365 Istemci yönetimi**  >  **Office 365 güncelleştirmeleri**
 
 Daha fazla bilgi için bkz. [yazılım güncelleştirmelerini izleme](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Windows 'u hizmet olarak yönetme](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)ve [Office 365 ProPlus güncelleştirmelerini yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md#drill-through-required-office-365-updates).
 

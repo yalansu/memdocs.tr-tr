@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1435c1ab6be8c80178566ae9d354084fddebb22a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 127ed43fded6c66bc4395ae4d69a28ae8c9eddd5
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771348"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877518"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Configuration Manager istemci ayarları hakkında
 
@@ -206,7 +206,7 @@ Aşağıdaki üç ayar hakkında daha fazla bilgi için bkz. [Gerekli dağıtım
 > [!Important]  
 > Uygulama kataloğunun Silverlight Kullanıcı deneyimi, güncel dal sürümü 1806 ' den itibaren desteklenmez. Sürüm 1906 ' den başlayarak, güncelleştirilmiş istemciler Kullanıcı tarafından kullanılabilen uygulama dağıtımları için yönetim noktasını otomatik olarak kullanır. Ayrıca yeni uygulama kataloğu rolleri yükleyemezsiniz. Sürüm 1910 ile uygulama kataloğu rolleri için destek sona erer.  
 >
-> Daha fazla bilgi için aşağıdaki makalelere bakın:
+> Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 >
 > - [Yazılım merkezini yapılandırma](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Kaldırılan ve kullanım dışı bırakılan özellikler](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -218,7 +218,7 @@ Configuration Manager, bu ayarı kullanıcıları Yazılım Merkezi 'nden Uygula
 > [!Important]  
 > Uygulama kataloğunun Silverlight Kullanıcı deneyimi, güncel dal sürümü 1806 ' den itibaren desteklenmez. Sürüm 1906 ' den başlayarak, güncelleştirilmiş istemciler Kullanıcı tarafından kullanılabilen uygulama dağıtımları için yönetim noktasını otomatik olarak kullanır. Ayrıca yeni uygulama kataloğu rolleri yükleyemezsiniz. Sürüm 1910 ile uygulama kataloğu rolleri için destek sona erer.  
 >
-> Daha fazla bilgi için aşağıdaki makalelere bakın:
+> Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 >
 > - [Yazılım merkezini yapılandırma](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Kaldırılan ve kullanım dışı bırakılan özellikler](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -325,9 +325,9 @@ Sanal Masaüstü Altyapısı (VDı) senaryolarında bu gecikme, birden çok sana
 
 ### <a name="grace-period-for-enforcement-after-deployment-deadline-hours"></a>Dağıtım son tarihinden sonra zorlama için yetkisiz kullanım süresi (saat)
 
-Kullanıcılardan gerekli uygulama veya yazılım güncelleştirme dağıtımlarını son tarihin ötesinde daha fazla zaman vermek istiyorsanız, bu seçeneği **Evet**olarak ayarlayın. Bu yetkisiz kullanım süresi, bir bilgisayarın uzun süre kapalı olması için, kullanıcının birçok uygulama veya güncelleştirme dağıtımı yüklemesi gerekir. Örneğin, bu ayar Kullanıcı tatilden döndürüldüğünde ve istemci vadesi geçmiş uygulama dağıtımlarını yüklerken uzun süre beklemek zorunda olduğunda yararlıdır.
+Kullanıcılara gerekli uygulama veya yazılım güncelleştirme dağıtımlarını son tarihin ötesinde daha fazla zaman vermek istiyorsanız, bu seçenek için bir değer ayarlayın. Bu yetkisiz kullanım süresi, bir bilgisayarın uzun süre kapalı olması için, kullanıcının birçok uygulama veya güncelleştirme dağıtımı yüklemesi gerekir. Örneğin, bu ayar Kullanıcı tatilden döndürüldüğünde ve istemci vadesi geçmiş uygulama dağıtımlarını yüklerken uzun süre beklemek zorunda olduğunda yararlıdır.
 
-Yetkisiz kullanım süresini 1-120 saat olarak ayarlayın. Bu ayarı, **kullanıcı tercihlerine göre bu dağıtımın uygulanması için**dağıtım özelliği ile birlikte kullanın. Daha fazla bilgi için bkz. [uygulamaları dağıtma](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
+Yetkisiz kullanım süresini 0 olarak 120 saat olarak ayarlayın. Bu ayarı, **kullanıcı tercihlerine göre bu dağıtımın uygulanması için**dağıtım özelliği ile birlikte kullanın. Daha fazla bilgi için bkz. [uygulamaları dağıtma](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
 
 
 ## <a name="computer-restart"></a>Bilgisayar yeniden başlatma
@@ -363,7 +363,7 @@ Bakım pencereleri hakkında daha fazla bilgi için bkz. [bakım pencerelerini k
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Teslim Iyileştirme grubu KIMLIĞI için Configuration Manager sınır grupları kullanma
 
-Sınır grubu tanımlayıcısını istemcideki teslim Iyileştirme grubu tanımlayıcısı olarak uygulamak için **Evet** ' i seçin. İstemci, teslim Iyileştirme bulut hizmeti ile iletişim kurduğunda, istenen içeriğe sahip eşleri bulmak için bu tanımlayıcıyı kullanır.
+Sınır grubu tanımlayıcısını istemcideki teslim Iyileştirme grubu tanımlayıcısı olarak uygulamak için **Evet** ' i seçin. İstemci, teslim Iyileştirme bulut hizmeti ile iletişim kurduğunda, istenen içeriğe sahip eşleri bulmak için bu tanımlayıcıyı kullanır. Bu ayarı etkinleştirmek, teslim Iyileştirme indirme modunu hedeflenen istemcilerde grup (2) seçeneğine de ayarlar.
 
 > [!Note]
 > Microsoft, istemcinin bu ayarı Grup ilkesi yerine yerel ilke aracılığıyla yapılandırmasına izin vermesini önerir. Bu, sınır grubu tanımlayıcısının istemcide teslim Iyileştirme grubu tanımlayıcısı olarak ayarlanalmasına izin verir. Daha fazla bilgi için bkz. [teslim iyileştirmesi](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).
@@ -509,13 +509,12 @@ Bu ayar için aşağıdaki seçeneklerden birini belirleyin:
 
     - Gerekli dağıtımlar (yükleme son tarihine ulaşıldığında)  
 
-    > [!IMPORTANT]  
-    > İstemci, tarifeli internet bağlantısı ayarlarından bağımsız olarak yazılım merkezinden yazılım yüklemelerine her zaman izin verir.  
-
     İstemci Tarifeli İnternet bağlantısı için veri aktarım sınırına ulaşırsa, istemci artık Configuration Manager sitelerle iletişim kurmayı dener.  
 
 - **Engelle**: Configuration Manager istemci tarifeli bir internet bağlantısı olduğunda Configuration Manager sitelerle iletişim kurmayı denemez. Bu seçenek varsayılandır.  
 
+> [!IMPORTANT]  
+> İstemci, tarifeli internet bağlantısı ayarlarından bağımsız olarak yazılım merkezinden yazılım yüklemelerine her zaman izin verir. Cihaz tarifeli bir ağda olduğunda Kullanıcı yazılım yüklemesi isterse, yazılım merkezi kullanıcının amacını alır.<!-- MEMDocs#285 -->
 
 
 ## <a name="power-management"></a>Güç yönetimi  
@@ -777,9 +776,9 @@ Envantere kaydedilecek dosya türlerini belirtmek istiyorsanız, **türleri ayar
 
 - Stoğa yeni bir dosya türü eklemek için **Yeni** ' yi seçin. Sonra **envantere kaydedilmiş dosya özellikleri** iletişim kutusunda aşağıdaki bilgileri belirtin:  
 
-    - **Ad**: envantere eklemek istediğiniz dosya için bir ad girin. Herhangi bir metin dizesini`*`temsil etmek için bir yıldız işareti () joker karakteri ve herhangi bir tek`?`karakteri temsil eden bir soru işareti () kullanın. Örneğin,. doc uzantılı tüm dosyaları envantere eklemek istiyorsanız, dosya adını `*.doc`belirtin.  
+    - **Ad**: envantere eklemek istediğiniz dosya için bir ad girin. `*`Herhangi bir metin dizesini temsil etmek için bir yıldız işareti () joker karakteri ve `?` herhangi bir tek karakteri temsil eden bir soru işareti () kullanın. Örneğin,. doc uzantılı tüm dosyaları envantere eklemek istiyorsanız, dosya adını belirtin `*.doc` .  
 
-    - **Konum**: **Ayarla** ' yı seçerek **yol özellikleri** iletişim kutusunu açın. Yazılım envanterini, belirtilen dosya için tüm istemci sabit disklerini arayacak, belirtilen bir yolu arayacak ( `C:\Folder`Örneğin,) veya belirtilen değişkeni (örneğin, `%windir%`) arayacak şekilde yapılandırın. Ayrıca, belirtilen yolun altındaki tüm alt klasörleri arayabilirsiniz.  
+    - **Konum**: **Ayarla** ' yı seçerek **yol özellikleri** iletişim kutusunu açın. Yazılım envanterini, belirtilen dosya için tüm istemci sabit disklerini arayacak, belirtilen bir yolu arayacak (örneğin,) `C:\Folder` veya belirtilen değişkeni (örneğin,) arayacak şekilde yapılandırın `%windir%` . Ayrıca, belirtilen yolun altındaki tüm alt klasörleri arayabilirsiniz.  
 
     - **Şifrelenmiş ve sıkıştırılmış dosyaları dışarıda bırak**: Bu seçeneği belirlediğinizde, sıkıştırılan veya şifrelenen tüm dosyalar envantere aktarılmaz.  
 
@@ -798,9 +797,9 @@ Envantere kaydedilecek dosya türlerini belirtmek istiyorsanız, **türleri ayar
 
 - **Toplanan Dosya Özellikleri** iletişim kutusunda, şu bilgileri sağlayın:  
 
-    - **Ad**: toplamak istediğiniz dosya için bir ad sağlayın. Herhangi bir metin dizesini`*`temsil etmek için bir yıldız işareti () joker karakteri ve herhangi bir tek`?`karakteri temsil eden bir soru işareti () kullanın.  
+    - **Ad**: toplamak istediğiniz dosya için bir ad sağlayın. `*`Herhangi bir metin dizesini temsil etmek için bir yıldız işareti () joker karakteri ve `?` herhangi bir tek karakteri temsil eden bir soru işareti () kullanın.  
 
-    - **Konum**: **Ayarla** ' yı seçerek **yol özellikleri** iletişim kutusunu açın. Yazılım envanterini, toplamak istediğiniz dosya için tüm istemci sabit disklerini aramak, belirtilen bir yolu aramak (örneğin, `C:\Folder`) veya belirtilen değişkeni (örneğin, `%windir%`) aramak üzere yapılandırın. Ayrıca, belirtilen yolun altındaki tüm alt klasörleri arayabilirsiniz.  
+    - **Konum**: **Ayarla** ' yı seçerek **yol özellikleri** iletişim kutusunu açın. Yazılım envanterini, toplamak istediğiniz dosya için tüm istemci sabit disklerini aramak, belirtilen bir yolu aramak (örneğin, `C:\Folder` ) veya belirtilen değişkeni (örneğin,) aramak üzere yapılandırın `%windir%` . Ayrıca, belirtilen yolun altındaki tüm alt klasörleri arayabilirsiniz.  
 
     - **Şifrelenmiş ve sıkıştırılmış dosyaları dışarıda bırak**: Bu seçeneği belirlediğinizde, sıkıştırılan veya şifrelenen dosyalar toplanmaz.  
 

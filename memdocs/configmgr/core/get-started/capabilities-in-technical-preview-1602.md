@@ -42,7 +42,7 @@ Bu makalede, sürüm 1602 Configuration Manager için Technical Preview 'da kull
 ##  <a name="improvements-to-software-center-in-version-1602"></a><a name="BKMK_SC1601"></a>Sürüm 1602 ' de yazılım merkezi geliştirmeleri  
 
 ### <a name="refresh-pc-machine-and-user-policy-from-software-center"></a>Yazılım Merkezi 'nden bılgısayar makinesi ve kullanıcı ilkesini yenileme  
- Yazılım Merkezi 'nin**bilgisayar bakım** **sayfasına,** > bilgisayar Configuration Manager makine ve kullanıcı ilkesini yenilemeye neden olan yeni bir seçenek, **eşitleme ilkesi** eklenmiştir.  
+ **Options**Yazılım merkezi 'nin **Sync Policy**  >  **bilgisayar bakım** sayfasına, bilgisayar Configuration Manager makine ve kullanıcı ilkesini yenilemeye neden olan yeni bir seçenek, eşitleme ilkesi eklenmiştir.  
 
 ##  <a name="improvements-to-windows-10-servicing"></a><a name="BKMK_Win10Servicing"></a>Windows 10 Bakımı geliştirmeleri  
  1602 Technical Preview sürümünde Windows 10 bakımı için aşağıdaki iyileştirmeler ekledik:  
@@ -51,6 +51,6 @@ Bu makalede, sürüm 1602 Configuration Manager için Technical Preview 'da kull
 
 -   Yazılım güncelleştirmeleri eşitlemesi için **yükseltmeler** sınıflandırması ' nı SEÇTIĞINIZDE, WSUS [Düzeltme 3095113](https://support.microsoft.com/kb/3095113) ' nin, yazılım güncelleştirmelerini başarıyla eşitlemek Için ve Windows 10 hizmetinin düzgün çalışması için gerekli olduğunu bildiren bir uyarı iletişim kutusu görüntülenir.  İletişim kutusunda Düzeltme için Bilgi Bankası makalesine gidebilirsiniz.  
 
--   Kullanılabilir Windows 10 yükseltmeleri artık yalnızca Configuration Manager konsolunun **Windows 10 Bakımı** \ **tüm Windows 10 güncelleştirmeleri** düğümünde görüntülenir. Bu güncelleştirmeler artık **yazılım güncelleştirmeleri** \ **tüm yazılım güncelleştirmeleri** düğümünde görüntülenmez.  
+-   Kullanılabilir Windows 10 yükseltmeleri artık yalnızca Configuration Manager konsolunun **Windows 10 Bakımı**  \  **tüm Windows 10 güncelleştirmeleri** düğümünde görüntülenir. Bu güncelleştirmeler artık **yazılım güncelleştirmeleri**  \  **tüm yazılım güncelleştirmeleri** düğümünde görüntülenmez.  
 
 -   Windows 10 yükseltme paketi Başlatan son kullanıcılara, işletim sistemlerini yükselteceğimizi bildirmek üzere bir iletişim kutusu istenir.  

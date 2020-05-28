@@ -2,7 +2,7 @@
 title: 2002 için denetim listesi
 titleSuffix: Configuration Manager
 description: Configuration Manager sürüm 2002 ' e güncelleştirmeden önce gerçekleştirilecek eylemler hakkında bilgi edinin.
-ms.date: 04/01/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2993032a-1204-4bd8-b5af-17a980bb0649
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a7f2abac1810b5ab40e3c253b6aee7aa970174d9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 63293c103cf8a19d006bd700cac6c370ba5e7391
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723540"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268955"
 ---
 # <a name="checklist-for-installing-update-2002-for-configuration-manager"></a>Configuration Manager için güncelleştirme 2002 yükleme denetim listesi
 
@@ -33,7 +33,7 @@ Hiyerarşiniz güncelleştirme paketini Microsoft 'tan indirdikten sonra, konsol
 
   - DMPDownloader. log, DMPDownloader işleminin güncelleştirmeleri denetlemeden önce bir Aralık beklediğini işaret ediyor olabilir. Güncelleştirmenin yeniden dağıtım dosyalarını indirmeyi yeniden başlatmak için, site sunucusunda **SMS_Executive** hizmetini yeniden başlatın.
 
-  - Proxy sunucu ayarları, `silverlight.dlservice.microsoft.com` `download.microsoft.com`ve `go.microsoft.com`' den indirmelere engel olduğunda başka bir yaygın yükleme sorunu oluşur.
+  - Proxy sunucu ayarları, ve ' den indirmelere engel olduğunda başka bir yaygın yükleme sorunu oluşur `silverlight.dlservice.microsoft.com` `download.microsoft.com` `go.microsoft.com` .
 
 Güncelleştirmeleri yükleme hakkında daha fazla bilgi için bkz. [konsol içi güncelleştirmeler ve bakım](updates.md#bkmk_inconsole).
 
@@ -68,33 +68,35 @@ Güncelleştirme tamamlandıktan sonra Configuration Manager konsolunu ilk kez k
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of December 20, 2019, version 2002 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
- -->
+11 Mayıs 2020 itibariyle, sürüm 2002 tüm müşterilerin yüklemesi için genel kullanıma sunulmuştur. Erken güncelleştirme halkasını daha önce tercih ediyorsanız, bu güncel dal sürümüne yönelik bir güncelleştirme izleyin.
 
-Şu anda sürüm 2002, erken güncelleştirme halkası için yayımlanmıştır. Bu güncelleştirmeyi yüklemek için kabul etmeniz gerekir. Aşağıdaki PowerShell betiği, hiyerarşinizi veya tek başına birincil sitenizi sürüm 2002 için erken güncelleştirme halkasını ekler:
+<!--
+At this time, version 2002 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2002:
 
-[Sürüm 2002 katılım betiği](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2002 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
-Microsoft, betiği dijital olarak imzalar ve onu imzalı kendiliğinden ayıklanan bir yürütülebilir dosya içinde paketler.
+<!--
+Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!Note]  
-> Sürüm 2002 güncelleştirmesi yalnızca 1810 veya üzeri sürümleri çalıştıran sitelerde geçerlidir.
+> The version 2002 update is only applicable to sites running version 1810 or later.
 
-Erken güncelleştirme halkasını kabul etmek için:
+To opt-in to the early update ring:
 
-1. Windows PowerShell 'i açın ve **yönetici olarak çalıştırın**
-1. Aşağıdaki sözdizimini kullanarak **EnableEarlyUpdateRing2002. ps1** betiğini çalıştırın:
+1. Open Windows PowerShell and **Run as administrator**
+1. Run the **EnableEarlyUpdateRing2002.ps1** script, using the following syntax:
 
     `EnableEarlyUpdateRing2002.ps1 <SiteServer_Name> | SiteServer_IP>`
 
-    , `SiteServer` Merkezi yönetim sitesine veya tek başına birincil site sunucusuna başvurur. Örneğin, `EnableEarlyUpdateRing2002.ps1 cmprimary01`
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2002.ps1 cmprimary01`
 
-1. Güncelleştirmeleri denetleyin. Daha fazla bilgi için bkz. [kullanılabilir güncelleştirmeleri edinme](install-in-console-updates.md#get-available-updates).
+1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md#get-available-updates).
 
-Sürüm 2002 güncelleştirmesi artık konsolunda kullanılabilir olmalıdır.
+The version 2002 update should now be available in the console.
 
 > [!Important]  
-> Bu betik, yalnızca sitenizi sürüm 2002 için erken güncelleştirme halkası 'e ekler. Kalıcı bir değişiklik değildir.
+> This script only adds your site to the early update ring for version 2002. It's not a permanent change.
+ -->
 
 ## <a name="checklist"></a>Denetim Listesi
 
@@ -190,7 +192,7 @@ Güncelleştirmeyi yüklemeden önce güncelleştirme işleminin etkin olduğu s
 
 Bir site veritabanı bakım görevi güncelleştirme yüklemesi sırasında çalıştığında güncelleştirme yüklemesi başarısız olabilir. Bir görevi devre dışı bırakmadan önce, güncelleştirme yüklendikten sonra yapılandırmasını geri yükleyebilmek için görevin zamanlamasını kaydedin.
 
-Daha fazla bilgi için bkz [. bakım görevleri](maintenance-tasks.md) ve [bakım görevleri için başvuru](reference-for-maintenance-tasks.md).
+Daha fazla bilgi [için bkz. bakım görevleri](maintenance-tasks.md)   ve [bakım görevleri için başvuru](reference-for-maintenance-tasks.md).
 
 ### <a name="temporarily-stop-any-antivirus-software"></a>Tüm virüsten koruma yazılımlarını geçici olarak durdurma
 
@@ -206,13 +208,13 @@ Daha fazla bilgi için bkz. [yedekleme ve kurtarma](backup-and-recovery.md).
 
 Siz veya bir üçüncü taraf ürünü Configuration Manager yapılandırma dosyalarını özelleştirçalışıyorsa, özelleştirmelerinizin bir kopyasını kaydedin.
 
-Örneğin, Configuration Manager yükleme dizininizin `bin\X64` klasöründeki **osdinjection. xml** dosyasına özel girişler eklersiniz. Configuration Manager güncelleştirdikten sonra, bu özelleştirmeler kalıcı olmaz. Özelleştirmelerinizi yeniden uygulamanız gerekir.
+Örneğin, Configuration Manager yükleme dizininizin klasöründeki **osdinjection. xml** dosyasına özel girişler eklersiniz `bin\X64` . Configuration Manager güncelleştirdikten sonra, bu özelleştirmeler kalıcı olmaz. Özelleştirmelerinizi yeniden uygulamanız gerekir.
 
 ### <a name="plan-for-client-piloting"></a>İstemci pilot uygulaması için plan
 
 Ayrıca istemcisini güncelleştiren bir site güncelleştirmesi yüklediğinizde, tüm üretim istemcilerini güncelleştirmeden önce bu yeni istemci güncelleştirmesini üretim öncesi ' de test edin. Bu seçeneği kullanmak için, güncelleştirmeyi yüklemeye başlamadan önce sitenizi, ön üretim öncesi için Otomatik yükseltmeleri destekleyecek şekilde yapılandırın.
 
-Daha fazla bilgi için bkz. [istemcileri](../../clients/manage/upgrade/upgrade-clients.md) yükseltme ve [bir ön üretim koleksiyonundaki istemci yükseltmelerini test etme](../../clients/manage/upgrade/test-client-upgrades.md).
+Daha fazla bilgi için bkz. [Istemcileri yükseltme](../../clients/manage/upgrade/upgrade-clients.md)   ve [bir ön üretim koleksiyonundaki istemci yükseltmelerini test etme](../../clients/manage/upgrade/test-client-upgrades.md).
 
 ### <a name="plan-to-use-service-windows"></a>Hizmet pencerelerini kullanmayı planlayın
 
@@ -237,7 +239,7 @@ Konsolundan bir önkoşul denetimi çalıştırmak için, **Yönetim** çalışm
 Daha fazla bilgi için, [konsol içi bir güncelleştirmeyi yüklemeden önce](install-in-console-updates.md#bkmk_beforeinstall) **bir güncelleştirmeyi yüklemeden önce Önkoşul denetleyicisini çalıştırma** bölümüne bakın.
 
 > [!IMPORTANT]  
-> Önkoşul denetleyicisi çalıştırıldığında, işlem, site bakım görevlerinde kullanılan bazı ürün kaynak dosyalarını güncelleştirir. Bu nedenle, Önkoşul denetleyicisini çalıştırdıktan sonra ancak güncelleştirmeyi yüklemeden önce, bir site bakım görevi gerçekleştirmeniz gerekirse, CD 'den **setupwpf. exe dosyasını** (Configuration Manager Kurulum) çalıştırın. Site sunucusundaki en son klasör.
+> Önkoşul denetleyicisi çalıştırıldığında, işlem, site bakım görevlerinde kullanılan bazı ürün kaynak dosyalarını güncelleştirir. Bu nedenle, Önkoşul denetleyicisini çalıştırdıktan sonra ancak güncelleştirmeyi yüklemeden önce, bir site bakım görevi gerçekleştirmeniz gerekirse, CD 'den **setupwpf. exe dosyasını**   (Configuration Manager Kurulum) çalıştırın. Site sunucusundaki en son klasör.
 
 ### <a name="update-sites"></a>Siteleri Güncelleştir
 
@@ -265,7 +267,7 @@ Configuration Manager konsolunda, durumu görüntülemek ve çoğaltmanın etkin
 
 - **İzleme** çalışma alanı, **veritabanı çoğaltma** düğümü  
 
-Daha fazla bilgi için aşağıdaki makalelere bakın:  
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:  
 
 - [Hiyerarşi ve çoğaltma altyapısını izleme](monitor-hierarchy.md)
 - [Çoğaltma Bağlantısı Çözümleyicisi hakkında](monitor-replication.md#BKMK_RLA)  

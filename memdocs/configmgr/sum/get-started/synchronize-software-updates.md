@@ -2,7 +2,7 @@
 title: Yazılım güncelleştirmeleri eşitlemesini yönetme
 titleSuffix: Configuration Manager
 description: Yazılım güncelleştirmeleri eşitlemesini zamanlamak, yazılım güncelleştirmeleri eşitlemesini el ile başlatmak ve yazılım güncelleştirmeleri eşitlemesini izlemek için bu adımları kullanın.
-ms.date: 12/20/2018
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,12 +10,12 @@ ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: d1b47965fa5cc36b0c0eb6d47c2214d1dceb8ee8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d36c6a02868b8ccde9538a286135b2ad1ce08f43
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712683"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269057"
 ---
 #  <a name="synchronize-software-updates"></a><a name="BKMK_SUMSync"></a>Yazılım güncelleştirmelerini eşitler
 
@@ -56,7 +56,7 @@ Yazılım güncelleştirmeleri eşitlemesini el ile başlatmak için üst düzey
 
 2. Yazılım Kitaplığı çalışma alanında **Yazılım Güncelleştirmeleri** ’ni genişletin ve **Tüm Yazılım Güncelleştirmeleri** veya **Yazılım Güncelleştirme Grupları**’na tıklayın.  
 
-3. **Giriş** sekmesinde, **Oluştur** grubunda, **Yazılım Güncelleştirmeleri Eşitle**’ye tıklayın. İletişim kutusunda **Evet** ’e tıklayarak eşitleme işlemini başlatmak istediğinizi onaylayın.  
+3. **Giriş** sekmesinde, **tüm yazılım güncelleştirmeleri** grubunda, **yazılım güncelleştirmelerini eşitler**' ı tıklatın. İletişim kutusunda **Evet** ’e tıklayarak eşitleme işlemini başlatmak istediğinizi onaylayın.  
 
    Yazılım güncelleştirme noktasında eşitleme işlemini başlattıktan sonra, hiyerarşinizdeki tüm yazılım güncelleştirme noktaları için Configuration Manager konsolundan eşitleme işlemini izleyebilirsiniz. Yazılım güncelleştirmeleri eşitlemesini izlemek için aşağıdaki prosedürü kullanın.  
 

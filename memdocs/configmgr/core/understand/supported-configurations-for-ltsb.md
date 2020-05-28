@@ -10,12 +10,12 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 39039347361076ae7c8491f95419187d0af9da85
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7de7d562131f97ac21d1c394b176d3b7f4ce7747
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722623"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906446"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager uzun vadeli bakım dalı için desteklenen konfigürasyonlar
 
@@ -25,9 +25,9 @@ Configuration Manager uzun süreli bakım dalı (LTSB) tarafından desteklenen i
 Bu veya LTSB 'e özgü konularda aksi belirtilmedikçe, 1606 sürümü Güncel Dalı için uygulanan aynı yapılandırma ve sınırlamalar LTSB için de geçerlidir.  Çakışmalar oluştuğunda, kullanmakta olduğunuz sürüm için geçerli olan bilgileri kullanın. Genellikle, LTSB, Güncel Dalı kıyasla daha sınırlıdır.
 
 ## <a name="general-statement-of-support"></a>Genel destek beyanı
-Aşağıdaki ürünler ve teknolojiler bu Configuration Manager Dalı tarafından desteklenir. Ancak, bu içeriğe dahil edilmesi, ürünün bireysel destek yaşam döngüsünün ötesinde herhangi bir ürün veya sürüm için bir destek uzantısı göstermez. Destek yaşam döngüsünün ötesinde ürünlerin Configuration Manager kullanımı desteklenmez. Daha fazla bilgi için [Microsoft desteği yaşam döngüsü](https://go.microsoft.com/fwlink/p/?LinkId=208270) Web sitesini ziyaret edin ve [Microsoft desteği yaşam döngüsü ilkesi SSS](https://go.microsoft.com/fwlink/p/?LinkId=31976)makalesini okuyun.
+Aşağıdaki ürünler ve teknolojiler bu Configuration Manager Dalı tarafından desteklenir. Ancak, bu içeriğe dahil edilmesi, ürünün bireysel destek yaşam döngüsünün ötesinde herhangi bir ürün veya sürüm için bir destek uzantısı göstermez. Destek yaşam döngüsünün ötesinde ürünlerin Configuration Manager kullanımı desteklenmez. Daha fazla bilgi için [Microsoft desteği yaşam döngüsü](https://support.microsoft.com/lifecycle) Web sitesini ziyaret edin ve Microsoft desteği yaşam döngüsü ilkesi SSS makalesini okuyun.
 
-Ayrıca, aşağıdaki konularda listelenmeyen ürünler ve ürün sürümleri [Enterprise Mobility + Security blogda](https://blogs.technet.microsoft.com/enterprisemobility/)duyurulmamışsa desteklenmez.
+Ayrıca, aşağıdaki konularda listelenmeyen ürünler ve ürün sürümleri [Enterprise Mobility + Security blogda](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity)duyurulmamışsa desteklenmez.
 
 **Gelecekteki destek Için sınırlamalar:** LTSB, gelecekteki sunucu ve istemci işletim sistemleri ve ürün bağımlılıkları için sınırlı destek içerir. LTSB 'nin platformlar listesi, yayın ömrü için düzeltildi:
 
@@ -72,7 +72,7 @@ Aşağıdaki Windows bilgisayar işletim sistemlerini Configuration Manager dahi
 - Windows Server 2012 (x64) sunucu çekirdeği yüklemesi (Note 2)
 
 **(Note 1)** Veri merkezi sürümleri desteklenir ancak Configuration Manager için sertifikalı değildir.  
-**(Note 2)** İstemci gönderme yüklemesini desteklemek için, bu işletim sistemi sürümünü çalıştıran bilgisayarın dosya ve Depolama Hizmetleri sunucu rolü için dosya sunucusu rol hizmetini çalıştırması gerekir. Windows özelliklerini bir sunucu çekirdeği bilgisayara yükleme hakkında bilgi için, bkz. Windows Server 2012 TechNet Kitaplığı 'nda sunucu [rollerini ve özellikleri sunucu çekirdeği sunucusuna yükleme](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx) .
+**(Note 2)** İstemci gönderme yüklemesini desteklemek için, bu işletim sistemi sürümünü çalıştıran bilgisayarın dosya ve Depolama Hizmetleri sunucu rolü için dosya sunucusu rol hizmetini çalıştırması gerekir. Windows özelliklerini bir sunucu çekirdeği bilgisayara yükleme hakkında daha fazla bilgi için bkz. sunucu [rollerini ve özellikleri sunucu çekirdeği sunucusuna yükleme](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11)).
 
 ### <a name="windows-embedded"></a>Windows Embedded
 İstemci yazılımını cihaza yükleyerek, LTSB 'yi kullanarak aşağıdaki Windows Embedded cihazlarını yönetebilirsiniz.  Daha fazla bilgi için bkz. [Windows Embedded cihazlarına istemci dağıtımını planlama](../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).
@@ -131,7 +131,7 @@ Aşağıdaki Windows bilgisayar işletim sistemlerini Configuration Manager dahi
 ### <a name="mac-computers"></a>Mac bilgisayarlar  
  Mac için Configuration Manager istemcisiyle Mac OS X bilgisayarları yönetmek için LTSB 'yi kullanabilirsiniz.
 
-Mac istemcisi yükleme paketi Configuration Manager medyası ile birlikte sağlanmaz. Bunu, [Microsoft Indirme merkezi](https://go.microsoft.com/fwlink/?LinkID=525184)'Nden "ek işletim sistemleri için istemciler" indirmenin bir parçası olarak indirebilirsiniz.  
+Mac istemcisi yükleme paketi Configuration Manager medyası ile birlikte sağlanmaz. Bunu, [Microsoft Indirme merkezi](https://www.microsoft.com/download/details.aspx?id=47719)'Nden "ek işletim sistemleri için istemciler" indirmenin bir parçası olarak indirebilirsiniz.  
 
 Mac işletim sistemleri için destek, bu bölümde listelenenler ile sınırlıdır. Destek, Güncel Dalı için Mac istemci yükleme paketlerine gelecek bir güncelleştirme tarafından desteklenen ek işletim sistemleri içermez.
 
@@ -145,7 +145,7 @@ Daha fazla bilgi için bkz. [Mac 'e istemci dağıtma](../clients/deploy/deploy-
 ## <a name="linux-and-unix-servers"></a>Linux ve UNIX sunucuları
 Linux ve UNIX için Configuration Manager istemcisiyle Linux ve UNIX sunucularını yönetmek için LTSB 'yi kullanabilirsiniz.
 
-Linux ve UNIX istemci yükleme paketleri Configuration Manager medyayla birlikte sağlanmaz. Bunları, [Microsoft Indirme merkezi](https://go.microsoft.com/fwlink/?LinkID=525184)'Nden "ek işletim sistemleri için istemciler" indirmesi bir parçası olarak indirebilirsiniz. İstemci indirmesi, istemci yükleme paketlerine ek olarak istemcinin her bilgisayara yüklenmesini yöneten install betiğini içerir.
+Linux ve UNIX istemci yükleme paketleri Configuration Manager medyayla birlikte sağlanmaz. Bunları, [Microsoft Indirme merkezi](https://www.microsoft.com/download/details.aspx?id=47719)'Nden "ek işletim sistemleri için istemciler" indirmesi bir parçası olarak indirebilirsiniz. İstemci indirmesi, istemci yükleme paketlerine ek olarak istemcinin her bilgisayara yüklenmesini yöneten install betiğini içerir.
 
 Linux ve UNIX işletim sistemleri için destek, bu bölümde listelenenler ile sınırlıdır. Destek, Güncel Dalı için Linux ve UNIX istemci paketlerine gelecekteki bir güncelleştirme tarafından desteklenen ek işletim sistemleri içermez.
 
@@ -163,95 +163,95 @@ Aşağıdaki sürümler belirtilen. tar dosyası kullanılarak desteklenir.
 
 |Sürüm|Dosya|  
 |-|-|  
-|Sürüm 5,3 (güç)|CCM-Aix53ppc. &lt;Build\>. tar|  
-|Sürüm 6,1 (güç)|CCM-Aix61ppc. &lt;Build\>. tar|  
-|Sürüm 7,1 (güç)|CCM-Aix71ppc. &lt;Build\>. tar|  
+|Sürüm 5,3 (güç)|CCM-Aix53ppc. &lt; Build \> . tar|  
+|Sürüm 6,1 (güç)|CCM-Aix61ppc. &lt; Build \> . tar|  
+|Sürüm 7,1 (güç)|CCM-Aix71ppc. &lt; Build \> . tar|  
 
 ### <a name="centos"></a>CentOS  
 
 |Sürüm|Dosya|  
 |-|-|  
-|Sürüm 5 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 5 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 6 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 6 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 7 x64|CCM-Universalx64. &lt;Build\>. tar|  
+|Sürüm 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 6 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 6 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 7 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 ### <a name="debian"></a>Debian  
 
 |Sürüm|Dosya|    
 |-|-|  
-|Sürüm 5 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 5 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 6x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 6 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 7 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 7 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 8 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 8 x64|CCM-Universalx64. &lt;Build\>. tar|  
+|Sürüm 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 6x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 6 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 7 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 7 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 8 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 8 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 ### <a name="hp-ux"></a>HP-UX  
 
 |Sürüm|Dosya|  
 |-|-|  
-|Sürüm 11iv2 ıA64|CCM-HpuxB. 11.23 i64. &lt;Build\>. tar|  
-|Sürüm 11iv2 PA-RıSC|CCM-HpuxB. 11.23 PA. &lt;Build\>. tar|  
-|Sürüm 11iv3 ıA64|CCM-HpuxB. 11.31 i64. &lt;Build\>. tar|  
-|Sürüm 11iv3 PA-RıSC|CCM-HpuxB. 11.31 PA. &lt;Build\>. tar|  
+|Sürüm 11iv2 ıA64|CCM-HpuxB. 11.23 i64. &lt; Build \> . tar|  
+|Sürüm 11iv2 PA-RıSC|CCM-HpuxB. 11.23 PA. &lt; Build \> . tar|  
+|Sürüm 11iv3 ıA64|CCM-HpuxB. 11.31 i64. &lt; Build \> . tar|  
+|Sürüm 11iv3 PA-RıSC|CCM-HpuxB. 11.31 PA. &lt; Build \> . tar|  
 
 ### <a name="oracle-linux"></a>Oracle Linux  
 
 |Sürüm|Dosya|    
 |-|-|  
-|Sürüm 5 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 5 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 6 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 6 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 7 x64|CCM-Universalx64. &lt;Build\>. tar|  
+|Sürüm 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 6 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 6 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 7 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 ### <a name="red-hat-enterprise-linux-rhel"></a>Red Hat Enterprise Linux (RHEL)  
 
 |Sürüm|Dosya|  
 |-|-|  
-|Sürüm 4 x86|CCM-RHEL4x86. &lt;Build\>. tar|  
-|Sürüm 4 x64|CCM-RHEL4x64. &lt;Build\>. tar|  
-|Sürüm 5 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 5 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 6 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 6 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 7 x64|CCM-Universalx64. &lt;Build\>. tar|  
+|Sürüm 4 x86|CCM-RHEL4x86. &lt; Build \> . tar|  
+|Sürüm 4 x64|CCM-RHEL4x64. &lt; Build \> . tar|  
+|Sürüm 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 6 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 6 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 7 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 ### <a name="solaris"></a>Solaris  
 
 |Sürüm|Dosya|   
 |-|-|  
-|Sürüm 9 SPARC|CCM-Sol9sparc. &lt;Build\>. tar|  
-|Sürüm 10 x86|CCM-Sol10x86. &lt;Build\>. tar|  
-|Sürüm 10 SPARC|CCM-Sol10sparc. &lt;Build\>. tar|  
-|Sürüm 11 x86|CCM-Sol11x86. &lt;Build\>. tar|  
-|Sürüm 11 SPARC|CCM-Sol11sparc. &lt;Build\>. tar|  
+|Sürüm 9 SPARC|CCM-Sol9sparc. &lt; Build \> . tar|  
+|Sürüm 10 x86|CCM-Sol10x86. &lt; Build \> . tar|  
+|Sürüm 10 SPARC|CCM-Sol10sparc. &lt; Build \> . tar|  
+|Sürüm 11 x86|CCM-Sol11x86. &lt; Build \> . tar|  
+|Sürüm 11 SPARC|CCM-Sol11sparc. &lt; Build \> . tar|  
 
 ### <a name="suse-linux-enterprise-server-sles"></a>SUSE Linux Enterprise Server (SLES)  
 
 |Sürüm|Dosya|  
 |-|-|  
-|Sürüm 9 x86|CCM-SLES9x86. &lt;Build\>. tar|  
-|Sürüm 10 SP1 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 10 SP1 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 11 SP1 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 11 SP1 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 12 x64|CCM-Universalx64. &lt;Build\>. tar|  
+|Sürüm 9 x86|CCM-SLES9x86. &lt; Build \> . tar|  
+|Sürüm 10 SP1 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 10 SP1 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 11 SP1 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 11 SP1 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 12 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 ### <a name="ubuntu"></a>Ubuntu  
 
 |Sürüm|Dosya|    
 |-|-|  
-|Sürüm 10,04 LTS x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 10,04 LTS x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 12,04 LTS x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 12,04 LTS x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 14,04 LTS x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 14,04 LTS x64|CCM-Universalx64. &lt;Build\>. tar|  
+|Sürüm 10,04 LTS x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 10,04 LTS x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 12,04 LTS x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 12,04 LTS x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 14,04 LTS x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 14,04 LTS x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 ### <a name="exchange-server-connector"></a>Exchange Server bağlayıcısı
  LTSB, istemci yazılımı yüklemeden Exchange Server örneğinize bağlanan cihazların sınırlı yönetimini destekler. Daha fazla bilgi için bkz. [Configuration Manager ve Exchange ile mobil cihazları yönetme](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).

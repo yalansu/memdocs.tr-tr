@@ -2,7 +2,7 @@
 title: Yönetim içgörüleri
 titleSuffix: Configuration Manager
 description: Configuration Manager konsolunda bulunan yönetim öngörüleri işlevselliği hakkında bilgi edinin.
-ms.date: 04/01/2020
+ms.date: 05/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9aae1da48deabd0cc339cd25055827caf07354b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 69b2533dd5c86124a6aff9feac7306ecf16c6e5a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713740"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268972"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Configuration Manager 'de Yönetim öngörüleri
 
@@ -146,13 +146,13 @@ Sürüm 1902 ' den başlayarak, koleksiyonları yönetmeye yönelik önerilerle 
 
 - **Aynı yeniden değerlendirme başlangıç saatine sahip koleksiyonlar**: Bu koleksiyonlar, diğer koleksiyonlarla aynı yeniden değerlendirme zamanına sahiptir. Yeniden değerlendirme süresini, çakışmayan bir şekilde değiştirin.  
 
-- **Sorgu süresi iki saniye üzerinde olan koleksiyonlar**: Bu koleksiyonun sorgu kurallarını gözden geçirin. Koleksiyonu değiştirmeyi veya silmeyi düşünün.
+- **Sorgu süresi 5 dakikadan fazla olan koleksiyonlar**: Bu koleksiyonun sorgu kurallarını gözden geçirin. Koleksiyonu değiştirmeyi veya silmeyi düşünün.
 
 - Aşağıdaki kurallar, sitede gereksiz yüke neden olabilecek konfigürasyonları içerir. Bu koleksiyonları gözden geçirin, sonra silin ya da kural değerlendirmesini devre dışı bırakın:  
 
   - **Sorgu kuralları ve artımlı güncelleştirmeler etkin olmayan Koleksiyonlar**  
 
-  - **Sorgu kuralları olmayan ve zamanlanan veya artımlı değerlendirme için etkinleştirilen Koleksiyonlar**  
+  - **Sorgu kuralları olmayan ve herhangi bir zamanlama için etkin olan Koleksiyonlar**  
 
   - **Sorgu kuralları olmayan koleksiyonlar ve tam değerlendirme zamanlaması seçildi**  
 

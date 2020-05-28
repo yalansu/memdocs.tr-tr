@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 88234bb3117850bc3280242671ae459308a5262e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d8c1cd6610bd09b2714951d8a755770b6347b2f6
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714846"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905240"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-configuration-manager"></a>Configuration Manager için Technical Preview 1805 ' deki yetenekler
 
@@ -97,7 +97,7 @@ Configuration Manager var olan klasik bulut dağıtım noktalarını Azure Resou
 > Bu özellik, Azure bulut hizmeti sağlayıcıları (CSP) için desteği etkinleştirmez. Azure Resource Manager ile bulut dağıtım noktası dağıtımı, CSP 'nin desteklemediği klasik bulut hizmetini kullanmaya devam eder. Daha fazla bilgi için bkz. [Azure CSP 'de kullanılabilir Azure hizmetleri](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
 
-### <a name="prerequisites"></a>Önkoşullar  
+### <a name="prerequisites"></a>Ön koşullar  
 - [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md)ile tümleştirme. Azure AD Kullanıcı keşfi gerekli değildir.  
 
 - Azure Yönetim sertifikası haricinde [bir bulut dağıtım noktası için aynı gereksinimler](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_requirements).  
@@ -164,10 +164,8 @@ Bu iş yükünü geçirdiğinde, Intune 'un cihaz yapılandırma yetkilisi olmas
 
 Windows düşük ekstra gecikmeli arka plan taşıması (LEDBAT), arka plan ağ aktarımlarının yönetilmesine yardımcı olmak için Windows Server 'ın bir özelliğidir. Desteklenen Windows Server sürümlerinde çalışan dağıtım noktaları için, ağ trafiğini ayarlamanıza yardımcı olacak bir seçenek belirleyebilirsiniz. İstemciler yalnızca kullanılabilir olduğunda ağ bant genişliğini kullanır. 
 
-Windows LEDBAT hakkında daha fazla bilgi için [yeni aktarım](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/) geliştirmeleri blog gönderisine bakın.
 
-
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 - Windows Server, sürüm 1709 üzerinde bir dağıtım noktası.  
 
 - İstemci önkoşulu yok.<!--SCCMDocs issue 699-->  
@@ -192,7 +190,7 @@ Aşağıdaki ekran görüntüsü, kullanılabilir kutucukların ikisini göstere
 Bu özellik ayrıca sorun gidermeye yardımcı olmak üzere gerçek zamanlı doğrulama için **CMG bağlantı çözümleyici** 'yi içerir. Konsol içi yardımcı programı hizmetin geçerli durumunu ve CMG bağlantı noktası üzerinden gelen iletişim kanalını CMG trafiğine izin veren herhangi bir yönetim noktasına denetler.
 
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 - Internet tabanlı istemciler tarafından kullanılan etkin bir [bulut yönetimi ağ geçidi](../clients/manage/cmg/plan-cloud-management-gateway.md) .  
 
 - Site, bulut yönetimi için [Azure hizmetlerine](../servers/deploy/configure/azure-services-wizard.md) eklendi.  
@@ -248,7 +246,7 @@ Belirli bir cihaza sağ tıklandığında, belirli bir cihazın görünümünü 
 - Etkin bağlantılar
 - Eksik güncelleştirmeler
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 - Hedef istemciler en son sürüme güncelleştirilmeleri gerekir.  
 
 - Configuration Manager yöneticisinin betikleri çalıştırmak için izinleri olması gerekir. Daha fazla bilgi için bkz. [betikler Için güvenlik rolleri](../../apps/deploy-use/create-deploy-scripts.md#bkmk_ScriptRoles).  
@@ -298,7 +296,7 @@ Bir çalışma grubu veya Azure AD 'ye katılmış istemci, HTTP için yapıland
 Azure AD Kullanıcı oturumu olmayan bir Azure AD 'ye katılmış veya [hibrit Azure AD cihazı](/azure/active-directory/devices/concept-azure-ad-join-hybrid) , atanan sitesiyle güvenli bir şekilde iletişim kurabilir. Bulut tabanlı cihaz kimliği artık CMG ve yönetim noktasıyla kimlik doğrulaması için yeterlidir.  
 
 
-### <a name="prerequisites"></a>Önkoşullar  
+### <a name="prerequisites"></a>Ön koşullar  
 
 - HTTP istemci bağlantıları için yapılandırılmış bir yönetim noktası. Bu seçeneği, site sistemi rolü özelliklerinin **genel** sekmesinde ayarlayın.  
 
@@ -345,12 +343,12 @@ Bu sürümde, Configuration Manager sitesinin sertifikayı otomatik olarak yapı
 
 SCUP aracının genel kullanımı hakkında daha fazla bilgi için bkz. [System Center Updates Publisher](../../sum/tools/updates-publisher.md).
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 - İstemci ayarını etkinleştirin ve dağıtın **yazılım güncelleştirmeleri** grubundaki **üçüncü taraf yazılım güncelleştirmelerini etkinleştirin** .
 - WSUS, yazılım güncelleştirme noktasındaki ayrı bir sunucu üzerinde bulunuyorsa, uzak WSUS sunucusunda aşağıdaki seçeneklerden birini yapmanız gerekir:
     - Windows 'da uzak kayıt defteri hizmetini etkinleştirme  
-    or
-    - Kayıt defteri anahtarında `HKLM\Software\Microsoft\Update Services\Server\Setup`, bir değeri olan **Enableselfsignedcertificates** adlı yeni bir DWORD oluşturun `1`. 
+    veya
+    - Kayıt defteri anahtarında `HKLM\Software\Microsoft\Update Services\Server\Setup` , bir değeri olan **Enableselfsignedcertificates** ADLı yeni bir DWORD oluşturun `1` . 
 
 ### <a name="try-it-out"></a>Deneyin!
 Görevleri tamamlamayı deneyin. Daha sonra nasıl çalıştığını bize bildirmek için [geri bildirim](capabilities-in-technical-preview-1804.md#bkmk_feedback) gönderin.
@@ -390,7 +388,7 @@ Windows 10 yerinde yükseltme için varsayılan görev sırası şablonu, yükse
 ## <a name="cmtrace-installed-with-client"></a>İstemci ile CMTrace yüklendi
 <!--1357971-->
 
-CMTrace günlük görüntüleme aracı artık Configuration Manager istemcisiyle birlikte otomatik olarak yüklenir. Bu, varsayılan olarak olan istemci yükleme dizinine eklenir `%WinDir%\ccm\cmtrace.exe`.
+CMTrace günlük görüntüleme aracı artık Configuration Manager istemcisiyle birlikte otomatik olarak yüklenir. Bu, varsayılan olarak olan istemci yükleme dizinine eklenir `%WinDir%\ccm\cmtrace.exe` .
 
 > [!Note]  
 > CMTrace,. log dosya uzantısını açmak için Windows 'a otomatik olarak kayıtlı *değildir* .
@@ -414,10 +412,10 @@ Bu sürüm, Configuration Manager konsolundaki Yeni [görüş](capabilities-in-t
 
 - Geri bildirim iletişim kutusu artık, seçilen seçenekler ve e-posta adresiniz gibi önceki ayarları anımsar.  
 
-- Artık çevrimdışı geri bildirimi desteklemektedir. Konsolunuzun geri bildiriminizi kaydedin ve ardından İnternet 'e bağlı bir sistemden Microsoft 'a yükleyin. İçinde `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe`bulunan yeni çevrimdışı geri bildirim yükleyicisi aracını kullanın. Kullanılabilir ve gerekli komut satırı seçeneklerini görmek için aracını `--help` seçeneğiyle çalıştırın. Bağlı sistemin **petrol.Office.Microsoft.com**için erişimi olması gerekir.
+- Artık çevrimdışı geri bildirimi desteklemektedir. Konsolunuzun geri bildiriminizi kaydedin ve ardından İnternet 'e bağlı bir sistemden Microsoft 'a yükleyin. İçinde bulunan yeni çevrimdışı geri bildirim yükleyicisi aracını kullanın `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe` . Kullanılabilir ve gerekli komut satırı seçeneklerini görmek için aracını `--help` seçeneğiyle çalıştırın. Bağlı sistemin **petrol.Office.Microsoft.com**için erişimi olması gerekir.
 
 ### <a name="known-issues"></a>Bilinen sorunlar
-İnternet bağlantısı olan bir makinede bir **gülümseme Gönder** veya konsolundan bir **kaş çatma Gönder** ' i kullanırken şu iletiyle birlikte dönebilir: "geri bildirim gönderme hatası." **Daha fazla ayrıntıya**tıkladığınızda şu metni gösterir: `{"Message":""}`. Bu hata, arka uç geri bildirim sisteminden gelen yanıttaki bilinen bir sorundan kaynaklanır. Hatayı kapatabilirsiniz. Microsoft geri bildirimlerinizi hala aldı. (Ayrıntılar farklı bir ileti görüntüleriz, geri bildirimlerinizi daha sonra göndermeyi yeniden denemek için çevrimdışı geri bildirim seçeneğini kullanın.)
+İnternet bağlantısı olan bir makinede bir **gülümseme Gönder** veya konsolundan bir **kaş çatma Gönder** ' i kullanırken şu iletiyle birlikte dönebilir: "geri bildirim gönderme hatası." **Daha fazla ayrıntıya**tıkladığınızda şu metni gösterir: `{"Message":""}` . Bu hata, arka uç geri bildirim sisteminden gelen yanıttaki bilinen bir sorundan kaynaklanır. Hatayı kapatabilirsiniz. Microsoft geri bildirimlerinizi hala aldı. (Ayrıntılar farklı bir ileti görüntüleriz, geri bildirimlerinizi daha sonra göndermeyi yeniden denemek için çevrimdışı geri bildirim seçeneğini kullanın.)
 
 
 

@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 926d1483739b85f787ebc9e2a992ea7ed39633c2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
-ms.translationtype: HT
+ms.openlocfilehash: 2523d06034f4a7effe769235cb5a4ede4df7e167
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722217"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764127"
 ---
 # <a name="plan-for-bitlocker-management"></a>BitLocker yönetimi için planlama
 
@@ -70,11 +70,11 @@ Anahtar dönüşü ve BitLocker ile ilgili diğer destek de dahil olmak üzere, 
 
 Kullanıcıların, BitLocker şifreli bir cihazın kilidini açmak için tek kullanılan bir anahtarla yardım almasına izin verin. Bu anahtar kullanıldığında, cihaz için yeni bir anahtar oluşturur.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Bir BitLocker yönetim ilkesi oluşturmak için, Configuration Manager ' de **tam yönetici** rolüne sahip olmanız gerekir.
 
-- BitLocker kurtarma hizmeti, yapılandırma istemcisini yönetim noktasıyla ağ genelinde kurtarma anahtarlarını şifrelemek için HTTPS gerektirir. İki seçenek vardır:
+- BitLocker kurtarma hizmeti, ağ üzerindeki kurtarma anahtarlarını Configuration Manager istemcisinden yönetim noktasına şifrelemek için HTTPS gerektirir. İki seçenek vardır:
 
   - HTTPS-kurtarma hizmetini barındıran yönetim noktasında IIS Web sitesini etkinleştirin. Bu seçenek yalnızca Configuration Manager sürüm 2002 için geçerlidir.<!-- 5925660 -->
 
@@ -96,7 +96,7 @@ Kullanıcıların, BitLocker şifreli bir cihazın kilidini açmak için tek kul
 
 - Portal yükleyici betiğini çalıştıran kullanıcı hesabı, site veritabanı sunucusunda SQL **sysadmin** haklarına sahip olmalıdır. Kurulum işlemi sırasında, betik Web sunucusu makine hesabı için oturum açma, Kullanıcı ve SQL rol haklarını ayarlar. Self Servis portalı ve yönetim ve izleme Web sitesinin kurulumunu tamamladıktan sonra bu kullanıcı hesabını sysadmin rolünden kaldırabilirsiniz.
 
-- BitLocker Yönetimi sanal makinelerde (VM) desteklenmez. Bu nedenle, bazı özellikler sanal makinelerde beklendiği gibi çalışmayabilir. Örneğin, BitLocker Yönetimi, sanal makinelerin sabit sürücülerinde şifrelemeyi başlatmayacak. Sanal makinelerde ek sabit sürücüler, şifrelenmemesine rağmen uyumlu olarak gösterilebilir.
+- BitLocker Yönetimi sanal makinelerde (VM) veya sunucu oları üzerinde desteklenmez. Bu nedenle, bazı özellikler sanal makinelerde veya sunucu oları 'nda beklendiği gibi çalışmayabilir. Örneğin, sanal makinelerde BitLocker Yönetimi, sanal makinelerin sabit sürücülerinde şifrelemeyi başlatmayacak. Ayrıca, sanal makinelerde sabit sürücüler şifrelenmese de uyumlu olarak gösterilebilir.
 
 > [!TIP]
 > Varsayılan olarak, **BitLocker 'ı etkinleştir** görev dizisi adımı yalnızca sürücüdeki *kullanılan alanı* şifreler. BitLocker Yönetimi *tam disk* şifrelemesi kullanır. **Tam disk şifrelemesi kullanma**seçeneğini etkinleştirmek için bu görev dizisi adımını yapılandırın. Daha fazla bilgi için bkz. [görev dizisi adımları-BitLocker 'ı etkinleştirme](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).

@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3af6f2883ebf17ab19f57762b8b3bf26e3716262
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 9e59d850a78a8f45f93769003e7a1de99e5634b3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075736"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906396"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Configuration Manager Windows uygulamaları oluşturma
 
@@ -27,7 +27,7 @@ ms.locfileid: "82075736"
 
 Configuration Manager, Windows 8.1 ve Windows 10 cihazları için Windows uygulama paketi (. appx) ve uygulama paketi (. appxdemeti) biçimlerinin dağıtımını destekler.
 
-Configuration Manager konsolunda bir uygulama oluşturduğunuzda, uygulama yükleme dosya **türünü** **Windows uygulama paketi (\*. appx \*,. AppxPackage, \*. maltı, \*. msixdemeti)** olarak seçin. Genel olarak uygulama oluşturma hakkında daha fazla bilgi için bkz. [uygulama oluşturma](../deploy-use/create-applications.md). MSIX biçimi hakkında daha fazla bilgi için bkz. [MSIX biçimi desteği](#bkmk_msix).
+Configuration Manager konsolunda bir uygulama oluşturduğunuzda, uygulama yükleme dosya **türünü** **Windows uygulama paketi ( \* . appx, \* . AppxPackage, \* . maltı, \* . msixdemeti)** olarak seçin. Genel olarak uygulama oluşturma hakkında daha fazla bilgi için bkz. [uygulama oluşturma](../deploy-use/create-applications.md). MSIX biçimi hakkında daha fazla bilgi için bkz. [MSIX biçimi desteği](#bkmk_msix).
 
 > [!Note]  
 > Yeni Configuration Manager özelliklerinden yararlanmak için önce istemcileri en son sürüme güncelleştirin. Site ve konsolu güncelleştirdiğinizde Configuration Manager konsolunda yeni işlevsellik göründüğünde, istemci sürümü de en son olana kadar, tüm senaryo işlevsel değildir.<!--SCCMDocs issue 646-->  
@@ -58,7 +58,7 @@ Bu özellik için bir Windows uygulama dağıtım türü yapılandırmak için, 
 
 Configuration Manager, Windows 10 uygulama paketi (. msix) ve uygulama paketi (. msixdemeti) biçimlerini destekler. Windows 10 sürüm 1809 veya üzeri bu biçimleri destekler.
 
-- MALTıYA genel bakış için [maltıya daha yakından](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/)bakın.  
+- MALTıYA genel bakış için [maltıya daha yakından](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix)bakın.  
 
 - Yeni bir MSIX uygulaması oluşturma hakkında bilgi için bkz. [Insider Build 17682 ' de sunulan Msix desteği](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).  
 
@@ -79,7 +79,7 @@ Mevcut Windows Installer (. msi) uygulamalarınızı MSIX biçimine dönüştür
 
   - Microsoft Store 'ten [Msix paketleme aracını](https://www.microsoft.com/store/productId/9N5LW3JBCXKF) yükler  
 
-  - [Msix paketleme aracı sürücüsünü](/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers) yükler<!--SCCMDocs-pr issue #3091-->  
+  - [Msix paketleme aracı sürücüsünü](https://docs.microsoft.com/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers) yükler<!--SCCMDocs-pr issue #3091-->  
 
 Bu cihaza başka herhangi bir uygulama veya hizmet yüklemeyin. Bu, başvuru sistemdir.
 
@@ -104,7 +104,7 @@ Sihirbaz tamamlandığında, MSIX paketleme aracı sihirbazda belirttiğiniz kon
 
 Bu MALTıDAN bu uygulamayı kullanmak için önce, istemcilerin ona güvenmesi için dijital olarak imzalamanız gerekir. Bu işlemle ilgili daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [MSIX – Maltıpaketleme aracı – MSIX paketi imzalanıyor](https://blogs.msdn.microsoft.com/sgern/2018/09/06/msix-the-msix-packaging-tool-signing-the-msix-package/)
+- [MSIX – Maltıpaketleme aracı – MSIX paketi imzalanıyor](https://docs.microsoft.com/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
 - [SignTool kullanarak uygulama paketini imzalama](https://docs.microsoft.com/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
 
 Uygulamayı imzalamadan sonra, Configuration Manager uygulamada yeni bir dağıtım türü oluşturun. Daha fazla bilgi için bkz. [uygulama için dağıtım türleri oluşturma](../deploy-use/create-applications.md#bkmk_create-dt).
@@ -168,7 +168,7 @@ Mobil uygulama paketlerini imzalamak için, kullanılacak kod imzalama sertifika
 
 ## <a name="deploy-windows-installer-apps-to-mdm-enrolled-windows-10-devices"></a><a name="bkmk_mdm-msi"></a>MDM 'ye kayıtlı Windows 10 cihazlarına Windows Installer uygulamalarını dağıtma  
 
-**MDM (\*. msi) dağıtım türü aracılığıyla Windows Installer** , Windows 10 çalıştıran MDM 'ye kayıtlı cihazlara Windows Installer tabanlı uygulamalar oluşturmanıza ve dağıtmanıza olanak tanır.  
+**MDM ( \* . msi) dağıtım türü aracılığıyla Windows Installer** , WINDOWS 10 çalıştıran MDM 'ye kayıtlı cihazlara Windows Installer tabanlı uygulamalar oluşturmanıza ve dağıtmanıza olanak tanır.  
 
 Bu dağıtım türünü kullandığınızda, aşağıdaki noktaları göz önünde bulundurun:
 

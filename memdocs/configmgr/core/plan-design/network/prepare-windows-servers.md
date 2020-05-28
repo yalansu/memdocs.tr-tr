@@ -10,12 +10,12 @@ ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8889c0ee306eaaf682563b2e8e72d5482054d1c7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7e4e84b55c929dd878cb0720b3f61dfceedcf449
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710793"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904087"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>Windows Server'ı, Configuration Manager’ı destekleyecek şekilde hazırlama
 
@@ -98,7 +98,7 @@ Aşağıdaki Windows rolleri, yazılım güncelleştirmeleri ve işletim sistemi
 ##  <a name="iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a>Dağıtım noktaları için IIS istek filtreleme  
 Varsayılan olarak IIS, çeşitli dosya adı uzantılarına ve klasör konumlarına HTTP veya HTTPS iletişimleri aracılığıyla erişimi engellemek için istek filtreleme kullanır. Dağıtım noktasında bu, istemcilerin engellenen uzantıları veya klasör konumlarını içeren paketleri indirmelerini engeller.  
 
-Paket kaynak dosyalarınız, istek filtreleme yapılandırmanız tarafından IIS 'de engellenen uzantılara sahip olduğunda, izin vermek için istek filtrelemeyi ayarlamanız gerekir. Bu, dağıtım noktası bilgisayarlarınızdaki IIS Yöneticisi 'nde [istek filtreleme özelliği düzenlenerek](https://technet.microsoft.com/library/hh831621.aspx) yapılır.  
+Paket kaynak dosyalarınız, istek filtreleme yapılandırmanız tarafından IIS 'de engellenen uzantılara sahip olduğunda, izin vermek için istek filtrelemeyi ayarlamanız gerekir. Bu, dağıtım noktası bilgisayarlarınızdaki IIS Yöneticisi 'nde [istek filtreleme özelliği düzenlenerek](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) yapılır.  
 
 Ayrıca, aşağıdaki dosya adı uzantıları, paketler ve uygulamalar için Configuration Manager tarafından kullanılır. İstek filtreleme yapılandırmalarınızın bu dosya uzantılarını engellemediğinden emin olun:  
 
@@ -136,4 +136,4 @@ Ayrıca, aşağıdaki dosya adı uzantıları, paketler ve uygulamalar için Con
 - HEAD
 - PROPFIND
 
-Daha fazla bilgi için bkz. [IIS 'de istek filtrelemeyi yapılandırma](https://technet.microsoft.com/library/hh831621.aspx#Verbs). 
+Daha fazla bilgi için bkz. [IIS 'de istek filtrelemeyi yapılandırma](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs). 

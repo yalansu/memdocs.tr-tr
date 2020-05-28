@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: 08baf595199bdda121f897d507de97cb7e93e620
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f9b9c49bde16754b7a60112905f14da2cd5e48eb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715070"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906285"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Configuration Manager Surface cihaz panosu
 
@@ -31,8 +31,8 @@ Surface cihaz panosunu açmak için aşağıdaki adımları kullanın:
 2. **İzleme** düğümüne tıklayın. 
 3. Panoyu yüklemek için **yüzey cihazları**' na tıklayın.
 
-**Surface cihaz panosu**
-![Surface cihaz panosu](media/Surface-device-dashboard.PNG)
+**Surface cihaz panosu** 
+ ![ Surface cihaz panosu](media/Surface-device-dashboard.PNG)
 
 
 
@@ -57,11 +57,9 @@ Surface cihaz panosu, ortamınız için üç grafik gösterir.
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-Surface cihazları hakkında daha fazla bilgi için bkz.:
-- [Surface]( https://go.microsoft.com/fwlink/?linkid=861998) Web sitesi.
+Surface cihazları hakkında daha fazla bilgi için [Surface](https://www.microsoft.com/surface) Web sitesine bakın.
 
-Surface bellenim güncelleştirmelerini Configuration Manager dağıtma hakkında daha fazla bilgi için, bkz.:
-- [Configuration Manager 'de Surface sürücü güncelleştirmelerini yönetme]( https://support.microsoft.com/help/4098906).
+Surface bellenim güncelleştirmelerini Configuration Manager dağıtma hakkında daha fazla bilgi için bkz. [Surface sürücü güncelleştirmelerini yönetme](https://support.microsoft.com/help/4098906).
 
 
 

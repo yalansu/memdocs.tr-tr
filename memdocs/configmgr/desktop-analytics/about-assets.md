@@ -2,7 +2,7 @@
 title: Masaüstü analizinden varlıklar
 titleSuffix: Configuration Manager
 description: Masaüstü Analizi 'nde cihazlar, sürücüler ve uygulamalar hakkında bilgi edinin.
-ms.date: 01/16/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: d07198cf-49bb-4712-8c63-063b4302cc11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fe1338781cbb16a8485de050a294e34e487a2ecc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: d5900fd4cb4fdebea23e626ffbe17c5289712b31
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722553"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268921"
 ---
 # <a name="assets-in-desktop-analytics"></a>Masaüstü analizinden varlıklar
 
@@ -41,6 +42,10 @@ Bir dağıtım planında, cihazlar hakkında daha fazla ayrıntı vardır. Daha 
 
 En **önemli uygulamalar,** kayıtlı cihazların %2 ' inden fazlasına yüklendi.
 
+**Uygulama sürümleri ayrıntıları** ayarı varsayılan olarak kapalıdır, bu nedenle bu sekme, tüm uygulama sürümlerini aynı ad ve yayımcıya birleştirir.<!-- 5542186 --> Varsayılan davranış, gördüğünüz toplam uygulama sayısını azaltmaya yardımcı olur ve bu da uygulamalara açıklama ekleme çabalarınızı azaltmaya yardımcı olur. Önemli **uygulamalar** kutucuğunda uygulama sayısı da bu ayarı yansıtır. Örneğin, Microsoft Edge 'in yüzlerce örneğini listelemek yerine, tüm sürümler için bir örnek vardır. Tüm sürümler için kararları bir kez daha yapabilirsiniz. Bir uygulamanın belirli sürümleri hakkında kararlar almanız gerekiyorsa, bu ayarı açın. Bu ayarı, bir dağıtım planıyla çalışırken da yapılandırabilirsiniz. Daha fazla bilgi için bkz. [varlıkları planlayın](about-deployment-plans.md#plan-assets).
+
+Listeden uygulamayı seçin ve **Düzenle**' yi seçin. Bu eylem, uygulamanın ayrıntılarını görüntüler. **Önem** açılan menüsünü seçin ve bir değer ayarlayın. Ayrıca, bir **sahip**atayabilirsiniz. Herhangi bir değişiklik yaparsanız **Kaydet**' i seçin.
+
 Aşağıdaki kategorilerden birini ayarlayarak uygulamaların **önemini** yapılandırın:
 
 - Kritik
@@ -49,7 +54,7 @@ Aşağıdaki kategorilerden birini ayarlayarak uygulamaların **önemini** yapı
 - Gözden geçirilmedi
 - Önemli değil<!-- 3587232 -->
 
-Listeden uygulamayı seçin ve **Düzenle**' yi seçin. Bu eylem, uygulamanın ayrıntılarını görüntüler. **Önem** açılan menüsünü seçin ve bir değer ayarlayın. Ayrıca, bir **sahip**atayabilirsiniz. Herhangi bir değişiklik yaparsanız **Kaydet**' i seçin.
+**Uygulama sürümleri ayrıntıları** ayarı kapalıyken, uygulama ayrıntıları bölmesi, birleştirilagösterdiği uygulama sürümlerinin ve dillerin sayısını gösterir. Uygulama ayrıntılarına değişiklikler kaydederseniz, tüm sürümler için geçerlidir. Örneğin, **önem derecesini** veya **sahibini**ayarlayın. Bazı değerlerde "çoklu" görüntülenir, bu da tüm sürümlerde tutarlı bir değer olmadığı anlamına gelir.
 
 ### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" />Sistem ve Mağaza uygulamalarının otomatik yükseltme kararı
 
@@ -70,7 +75,7 @@ Masaüstü Analizi iş akışındaki tüm önemli uygulamalarda **önem** ve **y
 >    - Mağaza uygulamaları için **türü** **modern** olarak filtrele
 >    - Sistem uygulamaları için **kategoriyi** **arka plan işlemi** veya **Windows bileşeni** olarak filtreleyin
 
-Bir dağıtım planında, **yükseltme kararlarını**da ayarlayabilirsiniz. Daha fazla bilgi için bkz. [varlıkları planlayın](about-deployment-plans.md#plan-assets)
+Bir dağıtım planında, **yükseltme kararlarını**da ayarlayabilirsiniz. Daha fazla bilgi için bkz. [varlıkları planlayın](about-deployment-plans.md#plan-assets).
 
 ### <a name="usage"></a>Kullanım
 

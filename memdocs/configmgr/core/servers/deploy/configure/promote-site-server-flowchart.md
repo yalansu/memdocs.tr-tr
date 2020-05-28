@@ -21,7 +21,7 @@ ms.locfileid: "81718402"
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
-Bu akış çizelgesi diyagramı, pasif moddaki bir site sunucusunun etkin modda site sunucusuna yükseltilme sürecini gösterir. Bu örnekte, yönetici yükseltme işlemini planlıyor. Her iki sunucu da çevrimiçi ve tam işlevseldir. Daha fazla bilgi için aşağıdaki makalelere bakın:  
+Bu akış çizelgesi diyagramı, pasif moddaki bir site sunucusunun etkin modda site sunucusuna yükseltilme sürecini gösterir. Bu örnekte, yönetici yükseltme işlemini planlıyor. Her iki sunucu da çevrimiçi ve tam işlevseldir. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:  
 - [Site sunucusu yüksek kullanılabilirliği](site-server-high-availability.md)  
 - [Akış çizelgesi-pasif modda bir site sunucusu ayarlama](passive-site-server-flowchart.md)
 

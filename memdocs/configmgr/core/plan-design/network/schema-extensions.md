@@ -10,12 +10,12 @@ ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c78bb5876455e68292e4a69d86a256fa9e5172d0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1ace560130e43fd5675b51b6d507e84043c01407
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718710"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904084"
 ---
 # <a name="schema-extensions-for-configuration-manager"></a>Configuration Manager için şema uzantıları
 
@@ -25,7 +25,7 @@ Active Directory şemasını Configuration Manager destekleyecek şekilde geniş
 
 -   Active Directory şemasını genişletmek iyi bir fikirdir, ancak gerekli değildir.  
 
-[Active Directory şemasını genişletmeden](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema) önce Active Directory Etki alanı Hizmetleri’ni tanımanız ve [Active Directory şemasını değiştirme](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx) işlemini kolaylıkla yapabilmeniz gerekir.  
+[Active Directory şemasını genişletmeden](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema) önce Active Directory Etki alanı Hizmetleri’ni tanımanız ve [Active Directory şemasını değiştirme](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)) işlemini kolaylıkla yapabilmeniz gerekir.  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Configuration Manager için Active Directory şemasını genişletmeyle ilgili konular  
 
@@ -70,7 +70,7 @@ Active Directory şemasını Configuration Manager destekleyecek şekilde geniş
 
     -   **İstemcileri el Ile yükleme** ve CCMSetup yükleme komut satırı özelliklerini kullanarak istemci yükleme özelliklerini sağlama. Bu durum şunları içermelidir:  
 
-        -   Bilgisayarın, istemci yüklemesi sırasında CCMSetup komut satırında **/MP: =&lt;yönetim noktası adı bilgisayar adı\> ** veya **/Source:&lt;istemci kaynak dosyalarının\> yolunu** kullanarak yükleme dosyalarını indirebileceği bir yönetim noktası veya kaynak yolu belirtin.  
+        -   Bilgisayarın, istemci yüklemesi sırasında CCMSetup komut satırında **/MP: = &lt; Yönetim noktası adı bilgisayar adı \> ** veya **/Source: &lt; istemci kaynak dosyalarının \> yolunu** kullanarak yükleme dosyalarını indirebileceği bir yönetim noktası veya kaynak yolu belirtin.  
 
         -   İstemcinin siteye atayabilmesi ve ardından istemci ilkesi ile site ayarlarını indirmesi için kullanacağı ilk yönetim noktalarının bir listesini belirtin. Bunu gerçekleştirmek için CCMSetup Client.msi SMSMP özelliğini kullanın.  
 

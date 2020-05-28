@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fc38d0cbd70faa23f67c7089944b8b4c2cd0f7fc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2e398795a14f5073141f103d93ccd82e61d4d7a8
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078728"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904891"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Sürüm 1602 ' deki yenilikler&#39;Configuration Manager
 
@@ -42,9 +42,9 @@ Configuration Manager için 1602 güncelleştirmesi yalnızca, 1511 sürümünü
 > [!WARNING]  
 >  Windows Server 2012 R2’ye yükseltmeden önce sunucudan WSUS 3.2’yi kaldırmalısınız .  
 >   
->  Bu kritik adım hakkında daha fazla bilgi için Windows Server belgelerindeki [Windows Server Update Services genel bakış](https://technet.microsoft.com/library/hh852345.aspx)konusunun "yeni ve değiştirilmiş işlevsellik" bölümüne bakın.  
+>  Bu kritik adım hakkında daha fazla bilgi için, [Windows Server Update Services genel bakış](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality)konusunun "yeni ve değiştirilmiş işlevsellik" bölümüne bakın.  
 
- Bir sunucuyu yükseltmek için, Windows Server 2012 R2 yükseltme yordamlarını kullanın. Yükseltmeden sonra bir Configuration Manager site sunucusu geri yüklemesi çalıştırmanız gerekmez. Yükseltme yordamları için bkz. Windows Server belgelerindeki [Windows Server 2012 R2 için Yükseltme Seçenekleri](https://technet.microsoft.com/library/dn303416.aspx).  
+ Bir sunucuyu yükseltmek için, Windows Server 2012 R2 yükseltme yordamlarını kullanın. Yükseltmeden sonra bir Configuration Manager site sunucusu geri yüklemesi çalıştırmanız gerekmez. Yükseltme yordamları için bkz. Windows Server belgelerindeki [Windows Server 2012 R2 için Yükseltme Seçenekleri](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)).  
 
 ###  <a name="sql-server-alwayson-availability-groups"></a><a name="bkmk_AOAG"></a>AlwaysOn kullanılabilirlik grupları SQL Server  
  Birincil sitelerde site veritabanını barındırmak için SQL Server AlwaysOn kullanılabilirlik gruplarını ve merkezi yönetim sitesini bir yüksek kullanılabilirlik ve olağanüstü durum kurtarma çözümü olarak kullanın.  
@@ -60,7 +60,7 @@ Configuration Manager için 1602 güncelleştirmesi yalnızca, 1511 sürümünü
 
 -   Yazılım güncelleştirmeleri eşitlemesi için **yükseltmeler** sınıflandırmasını seçtiğinizde bir uyarı görüntülenir. Bu uyarı, yazılım güncelleştirmelerini başarıyla eşitleyebilmeniz ve Windows 10 hizmetinin düzgün çalışması için Windows Server Update Services (WSUS) 4,0 için [düzeltme 3095113](https://support.microsoft.com/kb/3095113) ' nin gerekli olduğunu bilmenizi sağlar. Uyarı iletisinden ilişkili Bilgi Bankası makalesine gidebilirsiniz.  
 
--   Kullanılabilir Windows 10 yükseltmeleri artık yalnızca Configuration Manager konsolunun **Windows 10 Bakımı** \ **tüm Windows 10 güncelleştirmeleri** düğümünde görüntülenir. Bu güncelleştirmeler artık **yazılım güncelleştirmeleri** \ konsolunun**tüm yazılım güncelleştirmeleri** düğümünde görüntülenmez.  
+-   Kullanılabilir Windows 10 yükseltmeleri artık yalnızca Configuration Manager konsolunun **Windows 10 Bakımı**  \  **tüm Windows 10 güncelleştirmeleri** düğümünde görüntülenir. Bu güncelleştirmeler artık **yazılım güncelleştirmeleri**  \  konsolunun**tüm yazılım güncelleştirmeleri** düğümünde görüntülenmez.  
 
 -   Bakım planı yüksek riskli dağıtım olarak kabul edilir ve **Koleksiyon Seç** penceresinde yalnızca sitenin özelliklerinde yapılandırılmış dağıtım doğrulama ayarlarını karşılayan özel koleksiyonlar görüntülenir. Daha fazla bilgi için bkz. [Configuration Manager için yüksek riskli dağıtımları yönetme ayarları](../../servers/manage/settings-to-manage-high-risk-deployments.md).  
 
@@ -142,7 +142,7 @@ Bu uygulamaları Configuration Manager konsolunun **uygulamalar** düğümünde 
  Ayrıntılar için bkz. [istemcileri izleme](../../../core/clients/manage/monitor-clients.md).  
 
 ### <a name="refresh-pc-machine-and-user-policy-from-software-center"></a>Yazılım Merkezi 'nden bılgısayar makinesi ve kullanıcı ilkesini yenileme  
- Yazılım Merkezi 'nin **Options** > **bilgisayar bakım** sayfasına, bilgisayar Configuration Manager makine ve kullanıcı ilkesini yenilemeye neden olan yeni bir seçenek, **eşitleme ilkesi**eklenmiştir.  
+ **Options**Yazılım merkezi 'nin **Sync Policy**  >  **bilgisayar bakım** sayfasına, bilgisayar Configuration Manager makine ve kullanıcı ilkesini yenilemeye neden olan yeni bir seçenek, eşitleme ilkesi eklenmiştir.  
 
 ### <a name="software-center-branding-changes"></a>Yazılım Merkezi marka değişiklikleri  
  Yazılım Merkezi 'nde görünen rengi, kuruluş adını ve simgeyi değiştirebilirsiniz. Bu ayarlar aşağıdaki kurallara göre uygulanır:  

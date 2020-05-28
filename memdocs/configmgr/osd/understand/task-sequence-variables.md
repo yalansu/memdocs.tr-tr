@@ -10,18 +10,18 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e2c8b369b69bd5fcddd2f52b875b5089d82ebb0e
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
-ms.translationtype: HT
+ms.openlocfilehash: b3ddd1a4b59ba750e9fca5f8386762b4a5dddb13
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605143"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429799"
 ---
 # <a name="task-sequence-variables"></a>Görev dizisi değişkenleri
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
-Bu makale, tüm kullanılabilir değişkenler için alfabetik sırada bir başvurudur. Belirli bir değişkeni bulmak için tarayıcı **bul** işlevini (genellikle **CTRL** + **F**) kullanın. Değişken, belirli bir adıma özgü ise notlar. [Görev dizisi adımındaki](task-sequence-steps.md) makale her bir adıma özgü değişkenlerin listesini içerir.
+Bu makale, tüm kullanılabilir değişkenler için alfabetik sırada bir başvurudur. Belirli bir değişkeni bulmak için tarayıcı **bul** işlevini (genellikle **CTRL**  +  **F**) kullanın. Değişken, belirli bir adıma özgü ise notlar. [Görev dizisi adımındaki](task-sequence-steps.md) makale her bir adıma özgü değişkenlerin listesini içerir.
 
 Daha fazla bilgi için bkz. [görev dizisi değişkenlerini kullanma](using-task-sequence-variables.md).
 
@@ -106,11 +106,11 @@ Bilgisayar tarafından kullanılan varsayılan ağ geçitlerini belirtir.
 
 ### <a name="_smstsdownloadondemand"></a><a name="SMSTSDownloadOnDemand"></a>_SMSTSDownloadOnDemand
 
-Geçerli görev dizisi isteğe bağlı indirme modunda çalışıyorsa, bu değişken olur `true`. İsteğe bağlı indirme modu, görev dizisi yöneticisinin içeriği yalnızca içeriğe erişmesi gerektiğinde yerel olarak indirdiği anlamına gelir.
+Geçerli görev dizisi isteğe bağlı indirme modunda çalışıyorsa, bu değişken olur `true` . İsteğe bağlı indirme modu, görev dizisi yöneticisinin içeriği yalnızca içeriğe erişmesi gerektiğinde yerel olarak indirdiği anlamına gelir.
 
 ### <a name="_smstsinwinpe"></a><a name="SMSTSInWinPE"></a>_SMSTSInWinPE
 
-Geçerli görev dizisi adımı Windows PE 'de çalışırken, bu değişken olur `true`. Geçerli işletim sistemi ortamını öğrenmek için bu görev dizisi değişkenini test edin.
+Geçerli görev dizisi adımı Windows PE 'de çalışırken, bu değişken olur `true` . Geçerli işletim sistemi ortamını öğrenmek için bu görev dizisi değişkenini test edin.
 
 ### <a name="_smstsipaddresses"></a><a name="SMSTSIPAddresses"></a>_SMSTSIPAddresses
 
@@ -132,9 +132,9 @@ Bilgisayar tarafından kullanılan IP adreslerini belirtir.
 
 ### <a name="_smstslastactionsucceeded"></a><a name="SMSTSLastActionSucceeded"></a>_SMSTSLastActionSucceeded
 
-- Son adım başarılı olursa bu değişken olur `true`.  
+- Son adım başarılı olursa bu değişken olur `true` .  
 
-- Son adım başarısız olduysa, bu `false`.  
+- Son adım başarısız olduysa, bu `false` .  
 
 - Görev dizisi son eylemi atladığında, adım devre dışı bırakıldığından veya ilişkili koşul **false**olarak değerlendirildiğinden, bu değişken sıfırlanmaz. Yine de önceki eyleme ait değeri barındırır.  
 
@@ -177,7 +177,7 @@ Bilgisayarın markasını belirtir.
 
 ### <a name="_smstsmdatapath"></a><a name="SMSTSMDataPath"></a>_SMSTSMDataPath
 
-[SMSTSLocalDataDrive](#SMSTSLocalDataDrive) değişkeni tarafından tanımlanan yolu belirtir. Görev dizisi başlamadan önce SMSTSLocalDataDrive tanımladığınızda, örneğin bir koleksiyon değişkenini ayarlayarak Configuration Manager, görev sırası başladıktan sonra _SMSTSMDataPath değişkenini tanımlar.
+[SMSTSLocalDataDrive](#SMSTSLocalDataDrive) değişkeni tarafından tanımlanan yolu belirtir. Bu yol, görev dizisinin çalışırken hedef bilgisayardaki geçici önbellek dosyalarını nerede depoladığını belirtir. Görev dizisi başlamadan önce SMSTSLocalDataDrive tanımladığınızda, örneğin bir koleksiyon değişkenini ayarlayarak Configuration Manager, görev sırası başladıktan sonra _SMSTSMDataPath değişkenini tanımlar.
 
 ### <a name="_smstsmediatype"></a><a name="SMSTSMediaType"></a>_SMSTSMediaType
 
@@ -229,7 +229,7 @@ Yalnızca uyumluluk taraması tamamlandığında, hata veya başarı çıkış k
 
 ### <a name="_smstsrunfromdp"></a><a name="SMSTSRunFromDP"></a>_SMSTSRunFromDP
 
-Geçerli görev `true` sırası, çalıştırma-dağıtım noktası modunda çalışıyorsa olarak ayarlayın. Bu mod, görev dizisi yöneticisinin gerekli paket paylaşımlarını dağıtım noktasından alacağı anlamına gelir.
+`true`Geçerli görev sırası, çalıştırma-dağıtım noktası modunda çalışıyorsa olarak ayarlayın. Bu mod, görev dizisi yöneticisinin gerekli paket paylaşımlarını dağıtım noktasından alacağı anlamına gelir.
 
 ### <a name="_smstsserialnumber"></a><a name="SMSTSSerialNumber"></a>_SMSTSSerialNumber
 
@@ -239,7 +239,7 @@ Bilgisayarın seri numarasını belirtir.
 
 ### <a name="_smstssetuprollback"></a><a name="SMSTSSetupRollback"></a>_SMSTSSetupRollback
 
-Windows Kurulumu yerinde yükseltme sırasında geri alma işlemi gerçekleştirip gerçekleştirmediğini belirtir. Değişken değerleri veya `true` `false`olabilir.
+Windows Kurulumu yerinde yükseltme sırasında geri alma işlemi gerçekleştirip gerçekleştirmediğini belirtir. Değişken değerleri `true` veya olabilir `false` .
 
 ### <a name="_smstssitecode"></a><a name="SMSTSSiteCode"></a>_SMSTSSiteCode
 
@@ -274,7 +274,7 @@ Görev sırası, yönetim noktasıyla iletişim kurmak için HTTPS kullandığı
 
 ### <a name="_smstsuserstarted"></a><a name="SMSTSUserStarted"></a>_SMSTSUserStarted
 
-Bir kullanıcının görev dizisini başlatılıp başlatılamayacağını belirtir. Bu değişken, yalnızca görev dizisi yazılım merkezi 'nden başlatılmışsa ayarlanır. Örneğin, [_SMSTSLaunchMode](#SMSTSLaunchMode) olarak `SMS`ayarlanmışsa.
+Bir kullanıcının görev dizisini başlatılıp başlatılamayacağını belirtir. Bu değişken, yalnızca görev dizisi yazılım merkezi 'nden başlatılmışsa ayarlanır. Örneğin, [_SMSTSLaunchMode](#SMSTSLaunchMode) olarak ayarlanmışsa `SMS` .
 
 Bu değişken aşağıdaki değerlere sahip olabilir:  
 
@@ -284,7 +284,7 @@ Bu değişken aşağıdaki değerlere sahip olabilir:
 
 ### <a name="_smstsusessl"></a><a name="SMSTSUseSSL"></a>_SMSTSUseSSL
 
-Görev dizisinin Configuration Manager yönetim noktasıyla iletişim kurmak için SSL kullanıp kullanmadığını belirtir. Site sistemlerinizi HTTPS için yapılandırırsanız, değer olarak `true`ayarlanır.
+Görev dizisinin Configuration Manager yönetim noktasıyla iletişim kurmak için SSL kullanıp kullanmadığını belirtir. Site sistemlerinizi HTTPS için yapılandırırsanız, değer olarak ayarlanır `true` .
 
 ### <a name="_smstsuuid"></a><a name="SMSTSUUID"></a>_SMSTSUUID
 
@@ -301,84 +301,84 @@ Bilgisayarın Windows To Go cihazı olarak çalışıp çalışmadığını beli
 *2002 sürümünden başlayarak* <!--6005561-->  
 *[Hazırlık denetimi](task-sequence-steps.md#BKMK_CheckReadiness) adımını uygular.*
 
-**Minimum bellek (MB)** denetiminin true (`1`) veya false (`0`) döndürdüğünden emin olup olmadığı için salt okunurdur. Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
+**Minimum bellek (MB)** denetiminin true ( `1` ) veya false () döndürdüğünden emin olup olmadığı için salt okunurdur `0` . Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
 
 ### <a name="_ts_crspeed"></a><a name="TSCRSPEED"></a>_TS_CRSPEED
 
 *2002 sürümünden başlayarak* <!--6005561-->  
 *[Hazırlık denetimi](task-sequence-steps.md#BKMK_CheckReadiness) adımını uygular.*
 
-**Minimum işlemci hızı (MHz)** denetiminin true (`1`) veya false (`0`) döndürdüğünden emin olup olmadığı için salt okunurdur. Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
+**Minimum işlemci hızı (MHz)** denetiminin true ( `1` ) veya false () döndürdüğünden emin olup olmadığı için salt okunurdur `0` . Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
 
 ### <a name="_ts_crdisk"></a><a name="TSCRDISK"></a>_TS_CRDISK
 
 *2002 sürümünden başlayarak* <!--6005561-->  
 *[Hazırlık denetimi](task-sequence-steps.md#BKMK_CheckReadiness) adımını uygular.*
 
-**Minimum boş disk alanı (MB)** denetiminin true (`1`) veya false (`0`) olarak döndürülüp döndürülmeyeceğini bir salt okunurdur. Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
+**Minimum boş disk alanı (MB)** denetiminin true ( `1` ) veya false () olarak döndürülüp döndürülmeyeceğini bir salt okunurdur `0` . Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
 
 ### <a name="_ts_crostype"></a><a name="TSCROSTYPE"></a>_TS_CROSTYPE
 
 *2002 sürümünden başlayarak* <!--6005561-->  
 *[Hazırlık denetimi](task-sequence-steps.md#BKMK_CheckReadiness) adımını uygular.*
 
-**Geçerli işletim sisteminin yenilenmesinin** true (`1`) veya false (`0`) olarak döndürüldüğünden emin olmak için salt okunurdur bir değişken. Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
+**Geçerli işletim sisteminin yenilenmesinin** true ( `1` ) veya false () olarak döndürüldüğünden emin olmak için salt okunurdur bir değişken `0` . Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
 
 ### <a name="_ts_crarch"></a><a name="TSCRARCH"></a>_TS_CRARCH
 
 *2002 sürümünden başlayarak* <!--6005561-->  
 *[Hazırlık denetimi](task-sequence-steps.md#BKMK_CheckReadiness) adımını uygular.*
 
-**Geçerli işletim sistemi denetiminin mimarisinin** true (`1`) veya false (`0`) döndürdüğünden bağımsız olarak salt okunurdur bir değişken. Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
+**Geçerli işletim sistemi denetiminin mimarisinin** true ( `1` ) veya false () döndürdüğünden bağımsız olarak salt okunurdur bir değişken `0` . Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
 
 ### <a name="_ts_crminosver"></a><a name="TSCRMINOSVER"></a>_TS_CRMINOSVER
 
 *2002 sürümünden başlayarak* <!--6005561-->  
 *[Hazırlık denetimi](task-sequence-steps.md#BKMK_CheckReadiness) adımını uygular.*
 
-**En düşük işletim sistemi sürümü** denetiminin true (`1`) veya false (`0`) döndürülüp döndürülmeyeceğini bir salt okunurdur. Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
+**En düşük işletim sistemi sürümü** denetiminin true ( `1` ) veya false () döndürülüp döndürülmeyeceğini bir salt okunurdur `0` . Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
 
 ### <a name="_ts_crmaxosver"></a><a name="TSCRMAXOSVER"></a>_TS_CRMAXOSVER
 
 *2002 sürümünden başlayarak* <!--6005561-->  
 *[Hazırlık denetimi](task-sequence-steps.md#BKMK_CheckReadiness) adımını uygular.*
 
-**En yüksek işletim sistemi sürümü** denetiminin true (`1`) veya false (`0`) döndürülüp döndürülmeyeceğini bir salt okunurdur. Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
+**En yüksek işletim sistemi sürümü** denetiminin true ( `1` ) veya false () döndürülüp döndürülmeyeceğini bir salt okunurdur `0` . Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
 
 ### <a name="_ts_crclientminver"></a><a name="TSCRCLIENTMINVER"></a>_TS_CRCLIENTMINVER
 
 *2002 sürümünden başlayarak* <!--6005561-->  
 *[Hazırlık denetimi](task-sequence-steps.md#BKMK_CheckReadiness) adımını uygular.*
 
-**En düşük istemci sürümü** denetiminin true (`1`) veya false (`0`) döndürülüp döndürülmeyeceğini bir salt okunurdur. Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
+**En düşük istemci sürümü** denetiminin true ( `1` ) veya false () döndürülüp döndürülmeyeceğini bir salt okunurdur `0` . Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
 
 ### <a name="_ts_croslanguage"></a><a name="TSCROSLANGUAGE"></a>_TS_CROSLANGUAGE
 
 *2002 sürümünden başlayarak* <!--6005561-->  
 *[Hazırlık denetimi](task-sequence-steps.md#BKMK_CheckReadiness) adımını uygular.*
 
-**Geçerli işletim sistemi denetiminin dilin** true (`1`) veya false (`0`) döndürdüğünden emin olup olmadığı için salt okunurdur. Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
+**Geçerli işletim sistemi denetiminin dilin** true ( `1` ) veya false () döndürdüğünden emin olup olmadığı için salt okunurdur `0` . Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
 
 ### <a name="_ts_cracpower"></a><a name="TSCRACPOWER"></a>_TS_CRACPOWER
 
 *2002 sürümünden başlayarak* <!--6005561-->  
 *[Hazırlık denetimi](task-sequence-steps.md#BKMK_CheckReadiness) adımını uygular.*
 
-**AC güç takılı** denetiminin true (`1`) veya false (`0`) döndürdüğünden emin olmak için salt okunurdur. Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
+**AC güç takılı** denetiminin true ( `1` ) veya false () döndürdüğünden emin olmak için salt okunurdur `0` . Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
 
 ### <a name="_ts_crnetwork"></a><a name="TSCRNETWORK"></a>_TS_CRNETWORK
 
 *2002 sürümünden başlayarak* <!--6005561-->  
 *[Hazırlık denetimi](task-sequence-steps.md#BKMK_CheckReadiness) adımını uygular.*
 
-**Ağ bağdaştırıcısı bağlı** denetiminin true (`1`) veya false (`0`) döndürdüğünden, salt okunurdur. Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
+**Ağ bağdaştırıcısı bağlı** denetiminin true ( `1` ) veya false () döndürdüğünden, salt okunurdur `0` . Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
 
 ### <a name="_ts_crwired"></a><a name="TSCRWIRED"></a>_TS_CRWIRED
 
 *2002 sürümünden başlayarak* <!--6005561-->  
 *[Hazırlık denetimi](task-sequence-steps.md#BKMK_CheckReadiness) adımını uygular.*
 
-**Ağ bağdaştırıcısının kablosuz denetim olmadığında** true (`1`) veya false (`0`) döndürülmeyeceğini bir salt okunurdur. Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
+**Ağ bağdaştırıcısının kablosuz denetim olmadığında** true ( `1` ) veya false () döndürülmeyeceğini bir salt okunurdur `0` . Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
 
 ### <a name="_tsappinstallstatus"></a><a name="TSAppInstallStatus"></a>_TSAppInstallStatus
 
@@ -422,15 +422,15 @@ Bu ayar zorunludur. Olası değerler: `True` veya `False`. Örneğin:
 
 #### <a name="osdadapter0ipaddresslist"></a>Osdadapter0ıpaddresslist: bağdaştırıcı
 
-Bağdaştırıcının IP adreslerinin virgülle ayrılmış listesi. **EnableDHCP** , olarak `false`ayarlanmadığı takdirde bu özellik yoksayılır. Bu ayar zorunludur.
+Bağdaştırıcının IP adreslerinin virgülle ayrılmış listesi. **EnableDHCP** , olarak ayarlanmadığı takdirde bu özellik yoksayılır `false` . Bu ayar zorunludur.
 
 #### <a name="osdadapter0subnetmask"></a>OSDAdapter0SubnetMask
 
-Alt ağ maskelerinin virgülle ayrılmış listesi. **EnableDHCP** , olarak `false`ayarlanmadığı takdirde bu özellik yoksayılır. Bu ayar zorunludur.
+Alt ağ maskelerinin virgülle ayrılmış listesi. **EnableDHCP** , olarak ayarlanmadığı takdirde bu özellik yoksayılır `false` . Bu ayar zorunludur.
 
 #### <a name="osdadapter0gateways"></a>OSDAdapter0Gateways
 
-IP ağ geçidi adreslerinin virgülle ayrılmış listesi. **EnableDHCP** , olarak `false`ayarlanmadığı takdirde bu özellik yoksayılır. Bu ayar zorunludur.
+IP ağ geçidi adreslerinin virgülle ayrılmış listesi. **EnableDHCP** , olarak ayarlanmadığı takdirde bu özellik yoksayılır `false` . Bu ayar zorunludur.
 
 #### <a name="osdadapter0dnsdomain"></a>Osdadapter0dnsdomain: bağdaştırıcı
 
@@ -442,27 +442,27 @@ Bağdaştırıcı için DNS sunucularının virgülle ayrılmış listesi. Bu ay
 
 #### <a name="osdadapter0enablednsregistration"></a>OSDAdapter0EnableDNSRegistration
 
-Bağdaştırıcısının IP `true` adresini DNS 'de kaydetmek için olarak ayarlayın.
+`true`BAĞDAŞTıRıCıSıNıN IP ADRESINI DNS 'de kaydetmek için olarak ayarlayın.
 
 #### <a name="osdadapter0enablefulldnsregistration"></a>OSDAdapter0EnableFullDNSRegistration
 
-DNS 'deki `true` bağdaştırıcının IP adresini bilgisayar IÇIN tam DNS adı altında kaydetmek üzere olarak ayarlayın.
+`true`DNS 'deki BAĞDAŞTıRıCıNıN IP adresini bilgisayar için tam DNS adı altında kaydetmek üzere olarak ayarlayın.
 
 #### <a name="osdadapter0enableipprotocolfiltering"></a>Osdadapter0enableıpprotocolfiltering: bağdaştırıcıda
 
-Bağdaştırıcısında IP `true` Protokolü filtrelemeyi etkinleştirmek için olarak ayarlayın.
+`true`BAĞDAŞTıRıCıSıNDA IP protokolü filtrelemeyi etkinleştirmek için olarak ayarlayın.
 
 #### <a name="osdadapter0ipprotocolfilterlist"></a>Osdadapter0ıpprotocolfilterlist
 
-IP üzerinden çalışmasına izin verilen protokollerin virgülle ayrılmış listesi. **EnableIPProtocolFiltering** değeri olarak `false`ayarlandıysa bu özellik yoksayılır.
+IP üzerinden çalışmasına izin verilen protokollerin virgülle ayrılmış listesi. **EnableIPProtocolFiltering** değeri olarak ayarlandıysa bu özellik yoksayılır `false` .
 
 #### <a name="osdadapter0enabletcpfiltering"></a>OSDAdapter0EnableTCPFiltering
 
-Bağdaştırıcı için `true` TCP bağlantı noktası filtrelemeyi etkinleştirmek üzere olarak ayarlayın.
+`true`Bağdaştırıcı IÇIN TCP bağlantı noktası filtrelemeyi etkinleştirmek üzere olarak ayarlayın.
 
 #### <a name="osdadapter0tcpfilterportlist"></a>OSDAdapter0TCPFilterPortList
 
-TCP için erişim izinleri verilecek bağlantı noktalarının virgülle ayrılmış listesi. **EnableTCPFiltering** ayarı olarak `false`ayarlandıysa bu özellik yoksayılır.
+TCP için erişim izinleri verilecek bağlantı noktalarının virgülle ayrılmış listesi. **EnableTCPFiltering** ayarı olarak ayarlandıysa bu özellik yoksayılır `false` .
 
 #### <a name="osdadapter0tcpipnetbiosoptions"></a>OSDAdapter0TcpipNetbiosOptions
 
@@ -474,11 +474,11 @@ TCP/IP üzerinden NetBIOS seçenekleri. Olası değerler aşağıdaki gibidir:
 
 #### <a name="osdadapter0enablewins"></a>Osdadapter0enablewıns
 
-Ad çözümlemesi `true` için WINS kullanmak üzere olarak ayarlayın.
+`true`Ad çözümlemesi IÇIN WINS kullanmak üzere olarak ayarlayın.
 
 #### <a name="osdadapter0winsserverlist"></a>Osdadapter0wınsserverlist
 
-WINS sunucusu IP adreslerinin virgülle ayrılmış listesi. **Enablewins** , olarak `true`ayarlanmadığı takdirde bu özellik yoksayılır.
+WINS sunucusu IP adreslerinin virgülle ayrılmış listesi. **Enablewins** , olarak ayarlanmadığı takdirde bu özellik yoksayılır `true` .
 
 #### <a name="osdadapter0macaddress"></a>OSDAdapter0MacAddress
 
@@ -582,7 +582,7 @@ Sürüm 1906 ' den başlayarak, korumanın sürdürülme sayısını ayarlamak i
 
 #### <a name="valid-values"></a>Geçerli değerler
 
-İle `1` `15`arasında bir tamsayı.
+İle arasında bir `1` tamsayı `15` .
 
 ### <a name="osdbitlockerrebootcountoverride"></a><a name="OSDBitLockerRebootCountOverride"></a>OSDBitLockerRebootCountOverride
 
@@ -593,7 +593,7 @@ Sürüm 1906 ' den başlayarak, bu değeri, Step veya [Osdbitlockerrebootcount](
 
 #### <a name="valid-values"></a>Geçerli değerler
 
-İle `0` `15`arasında bir tamsayı.
+İle arasında bir `0` tamsayı `15` .
 
 ### <a name="osdbitlockerrecoverypassword"></a><a name="OSDBitLockerRecoveryPassword"></a>OSDBitLockerRecoveryPassword
 
@@ -651,7 +651,7 @@ Hedef bilgisayarın adını belirtir.
 
 *[Windows ayarlarını yakala](task-sequence-steps.md#BKMK_CaptureWindowsSettings) adımı için geçerlidir.*
 
-Bilgisayarın NetBIOS adına ayarlanır. Değer, yalnızca [Osdmigratecomputername](#OSDMigrateComputerName) değişkeni olarak `true`ayarlandıysa ayarlanır.
+Bilgisayarın NetBIOS adına ayarlanır. Değer, yalnızca [Osdmigratecomputername](#OSDMigrateComputerName) değişkeni olarak ayarlandıysa ayarlanır `true` .
 
 ### <a name="osdconfigfilename"></a><a name="OSDConfigFileName"></a>OSDConfigFileName
 
@@ -723,9 +723,9 @@ Hedef bilgisayarın katıldığı kuruluş biriminin (OU) RFC 1779 biçim adın�
 
 (giriş)
 
-Büyük olasılıkla hassas verilerin görüntülenmesini veya günlüğe kaydedilmesini engellemek için, bu değişkeni olarak `TRUE`ayarlayın. Bu değişken, bir **paket yüklemesi** sırasında **Smsts. log** dosyasındaki program adını maskeler.
+Büyük olasılıkla hassas verilerin görüntülenmesini veya günlüğe kaydedilmesini engellemek için, bu değişkeni olarak ayarlayın `TRUE` . Bu değişken, bir **paket yüklemesi** sırasında **Smsts. log** dosyasındaki program adını maskeler.
 
-Sürüm 1902 ' den başlayarak, bu değişkeni olarak `TRUE`ayarlarsanız, komut satırını günlük dosyasındaki **komut satırı Çalıştır** adımından da gizler.<!--3654172-->
+Sürüm 1902 ' den başlayarak, bu değişkeni olarak ayarlarsanız `TRUE` , komut satırını günlük dosyasındaki **komut satırı Çalıştır** adımından da gizler.<!--3654172-->
 
 ### <a name="osdenabletcpipfiltering"></a><a name="OSDEnableTCPIPFiltering"></a>OSDEnableTCPIPFiltering
 
@@ -825,7 +825,7 @@ Hedef bilgisayarın katılacağı Active Directory etki alanının adını belir
 
 (giriş)
 
-Hedef bilgisayarın katıldığı kuruluş biriminin (OU) RFC 1779 biçim adını belirtir. Belirtilmişse değerin tam yolu içermesi gerekir. OU adının uzunluğu 0 ile 32.767 karakter arasında olmalıdır. [Osdjointype](#OSDJoinType) değişkeni (çalışma grubuna katıl) olarak `1` ayarlandıysa bu değer ayarlanır.
+Hedef bilgisayarın katıldığı kuruluş biriminin (OU) RFC 1779 biçim adını belirtir. Belirtilmişse değerin tam yolu içermesi gerekir. OU adının uzunluğu 0 ile 32.767 karakter arasında olmalıdır. [Osdjointype](#OSDJoinType) değişkeni `1` (çalışma grubuna katıl) olarak ayarlandıysa bu değer ayarlanır.
 
 #### <a name="example"></a>Örnek
 
@@ -840,7 +840,7 @@ Hedef bilgisayarın katıldığı kuruluş biriminin (OU) RFC 1779 biçim adın�
 
 (giriş)
 
-Hedef bilgisayarın Active Directory etki alanına katılması için kullandığı [Osdjoinaccount](#OSDJoinAccount) için parolayı belirtir. Görev dizisi ortamı bu değişkeni içermiyorsa Windows Kurulumu boş bir parola dener. [Osdjointype](#OSDJoinType) değişkeni, (etki alanına katılarak) `0` olarak ayarlandıysa bu değer gereklidir.
+Hedef bilgisayarın Active Directory etki alanına katılması için kullandığı [Osdjoinaccount](#OSDJoinAccount) için parolayı belirtir. Görev dizisi ortamı bu değişkeni içermiyorsa Windows Kurulumu boş bir parola dener. [Osdjointype](#OSDJoinType) değişkeni, `0` (etki alanına katılarak) olarak ayarlandıysa bu değer gereklidir.
 
 ### <a name="osdjoinskipreboot"></a><a name="OSDJoinSkipReboot"></a>OSDJoinSkipReboot
 
@@ -963,7 +963,7 @@ Bilgisayar adının geçirilip geçirilmeyeceğini belirtir.
 
 (giriş)
 
-Kullanıcı profillerinin yakalanmasını denetlemek için kullanılan yapılandırma dosyalarını belirtir. Bu değişken, yalnızca [OSDMigrateMode](#OSDMigrateMode) olarak `Advanced`ayarlandığında kullanılır. Bu virgülle ayrılmış liste değeri, özelleştirilmiş kullanıcı profili geçişi işlemini gerçekleştirmek için ayarlanır.
+Kullanıcı profillerinin yakalanmasını denetlemek için kullanılan yapılandırma dosyalarını belirtir. Bu değişken, yalnızca [OSDMigrateMode](#OSDMigrateMode) olarak ayarlandığında kullanılır `Advanced` . Bu virgülle ayrılmış liste değeri, özelleştirilmiş kullanıcı profili geçişi işlemini gerçekleştirmek için ayarlanır.
 
 #### <a name="example"></a>Örnek
 
@@ -1030,7 +1030,7 @@ Yerel bilgisayar hesabının geri yüklenip yüklenmeyeceğini belirtir.
 
 (giriş)
 
-[OSDMigrateLocalAccounts](#OSDMigrateLocalAccounts) değişkeni ise `true`, bu değişkenin *Tüm* geçirilmiş yerel hesaplara atanan parolayı içermesi gerekir. USMT, geçirilen tüm yerel hesaplara aynı parolayı atar. Bu parolayı geçici olarak değerlendirin ve daha sonra başka bir yöntemle değiştirin.
+[OSDMigrateLocalAccounts](#OSDMigrateLocalAccounts) değişkeni ise `true` , bu değişkenin *Tüm* geçirilmiş yerel hesaplara atanan parolayı içermesi gerekir. USMT, geçirilen tüm yerel hesaplara aynı parolayı atar. Bu parolayı geçici olarak değerlendirin ve daha sonra başka bir yöntemle değiştirin.
 
 ### <a name="osdmigratemode"></a><a name="OSDMigrateMode"></a>OSDMigrateMode ayarlandığında
 
@@ -1123,19 +1123,19 @@ Bu adımın sabit diskte oluşturduğu *ilk* bölümün özelliklerini tanımlam
 
 #### <a name="osdpartitions0type"></a>OSDPartitions0Type
 
-Bölüm türünü belirtir. Bu özellik gereklidir. Geçerli değerler `Primary`, `Extended` `Logical`, ve. `Hidden`
+Bölüm türünü belirtir. Bu özellik gereklidir. Geçerli değerler `Primary` ,, `Extended` `Logical` ve `Hidden` .
 
 #### <a name="osdpartitions0filesystem"></a>OSDPartitions0FileSystem
 
-Bölüm biçimlendirilirken kullanılacak dosya sistemi türünü belirtir. Bu özellik isteğe bağlıdır. Bir dosya sistemi belirtmezseniz, adım bölümü biçimlendirmez. Geçerli değerler ve `FAT32` ' `NTFS`dir.
+Bölüm biçimlendirilirken kullanılacak dosya sistemi türünü belirtir. Bu özellik isteğe bağlıdır. Bir dosya sistemi belirtmezseniz, adım bölümü biçimlendirmez. Geçerli değerler `FAT32` ve ' dir `NTFS` .
 
 #### <a name="osdpartitions0bootable"></a>Osdpartitions0bootable: bölümün
 
-Bölümün önyüklenebilir olup olmadığını belirtir. Bu özellik gereklidir. Bu değer MBR diskleri için olarak `TRUE` ayarlandıysa, adım bu bölümü etkin olarak işaretler.
+Bölümün önyüklenebilir olup olmadığını belirtir. Bu özellik gereklidir. Bu değer `TRUE` MBR diskleri için olarak ayarlandıysa, adım bu bölümü etkin olarak işaretler.
 
 #### <a name="osdpartitions0quickformat"></a>OSDPartitions0QuickFormat
 
-Kullanılan biçim türünü belirtir. Bu özellik gereklidir. Bu değer olarak `TRUE`ayarlanırsa, adım hızlı bir biçim gerçekleştirir. Aksi takdirde, adım tam bir biçim gerçekleştirir.
+Kullanılan biçim türünü belirtir. Bu özellik gereklidir. Bu değer olarak ayarlanırsa `TRUE` , adım hızlı bir biçim gerçekleştirir. Aksi takdirde, adım tam bir biçim gerçekleştirir.
 
 #### <a name="osdpartitions0volumename"></a>OSDPartitions0VolumeName
 
@@ -1147,7 +1147,7 @@ Bölümün boyutunu belirtir. Bu özellik isteğe bağlıdır. Bu özellik belir
 
 #### <a name="osdpartitions0sizeunits"></a>OSDPartitions0SizeUnits
 
-Adım **: OSDPartitions0Size** değişkenini yorumlamak için bu birimleri kullanır. Bu özellik isteğe bağlıdır. Geçerli değerler şunlardır `MB` (varsayılan), `GB`, ve `Percent`.
+Adım **: OSDPartitions0Size** değişkenini yorumlamak için bu birimleri kullanır. Bu özellik isteğe bağlıdır. Geçerli değerler şunlardır `MB` (varsayılan), `GB` , ve `Percent` .
 
 #### <a name="osdpartitions0volumelettervariable"></a>OSDPartitions0VolumeLetterVariable
 
@@ -1200,7 +1200,7 @@ Yeni işletim sistemindeki varsayılan kayıtlı kuruluş adını belirtir. Beli
 
 *[Windows ayarlarını yakala](task-sequence-steps.md#BKMK_CaptureWindowsSettings) adımı için geçerlidir.*
 
-Bilgisayarın kayıtlı kuruluş adına ayarlanır. Değer yalnızca [osdmigrateregistrationınfo](#OSDMigrateRegistrationInfo) değişkeni olarak `true`ayarlandıysa ayarlanır.
+Bilgisayarın kayıtlı kuruluş adına ayarlanır. Değer yalnızca [osdmigrateregistrationınfo](#OSDMigrateRegistrationInfo) değişkeni olarak ayarlandıysa ayarlanır `true` .
 
 ### <a name="osdregisteredusername"></a><a name="OSDRegisteredUserName"></a>OSDRegisteredUserName
 
@@ -1311,13 +1311,13 @@ Başvuru bilgisayarında yüklü işletim sisteminin Windows dizini yolunu belir
 
 Yeni işletim sisteminde kullanılan varsayılan saat dilimi ayarını belirtir.
 
-Bu değişkenin değerini saat diliminin dil sabit adı olarak ayarlayın. Örneğin, aşağıdaki kayıt defteri anahtarı altındaki bir `Std` saat dilimi değerindeki dizeyi kullanın: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`.
+Bu değişkenin değerini saat diliminin dil sabit adı olarak ayarlayın. Örneğin, `Std` aşağıdaki kayıt defteri anahtarı altındaki bir saat dilimi değerindeki dizeyi kullanın: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones` .
 
 ### <a name="osdtimezone-output"></a><a name="OSDTimeZone-output"></a>OSDTimeZone (çıkış)
 
 *[Windows ayarlarını yakala](task-sequence-steps.md#BKMK_CaptureWindowsSettings) adımı için geçerlidir.*
 
-Bilgisayarın saat dilimine ayarlanır. Değer, yalnızca [OSDMigrateTimeZone](#OSDMigrateTimeZone) değişkeni olarak `true`ayarlandıysa ayarlanır.
+Bilgisayarın saat dilimine ayarlanır. Değer, yalnızca [OSDMigrateTimeZone](#OSDMigrateTimeZone) değişkeni olarak ayarlandıysa ayarlanır `true` .
 
 ### <a name="osdwindowssettingsinputlocale"></a><a name="OSDWindowsSettingsInputLocale"></a>Osdwindowssettingsınputlocale
 
@@ -1527,7 +1527,7 @@ Bir görev dizisinin kullanıcıları hedef bilgisayar ile nasıl ilişkilendird
 <!--512358-->
 Bağlantısı kesik senaryolarda, görev dizisi altyapısı, yönetim noktasına sürekli olarak durum iletileri göndermeyi dener. Bu senaryoda bu davranış, görev dizisi işlemede gecikmelere neden olur.
 
-Bu değişkeni olarak `true` ayarlayın ve görev dizisi altyapısı, ilk ileti gönderilmediğinde durum iletilerini göndermeye çalışmaz. Bu ilk denemede birden çok yeniden deneme vardır.
+Bu değişkeni olarak ayarlayın `true` ve görev dizisi altyapısı, ilk ileti gönderilmediğinde durum iletilerini göndermeye çalışmaz. Bu ilk denemede birden çok yeniden deneme vardır.
 
 Görev sırası yeniden başlatıldığında, bu değişkenin değeri devam ettirir. Ancak, görev sırası bir başlangıç durum iletisi göndermeye çalışır. Bu ilk denemede birden çok yeniden deneme vardır. Başarılı olursa, görev dizisi, bu değişkenin değerinden bağımsız olarak durum göndermeye devam eder. Durum gönderemezse, görev sırası bu değişkenin değerini kullanır.
 
@@ -1540,7 +1540,7 @@ Görev sırası yeniden başlatıldığında, bu değişkenin değeri devam etti
 
 (giriş)
 
-Varsayılan olarak, 64 bitlik bir IŞLETIM sisteminde görev sırası, WOW64 dosya sistemi yeniden yönlendiricisi kullanarak programı bulur ve komut satırından çalıştırır. Bu davranış, komutun işletim sistemi programlarının ve DLL 'lerin 32 bitlik sürümlerini bulmasına olanak tanır. Bu değişken, WOW64 `true` dosya sistemi yeniden yönlendiricisinin kullanımını devre dışı bırakmak için ayarlanıyor. Komutu, işletim sistemi programlarının ve DLL 'lerin yerel 64 bit sürümlerini bulur. Bu değişken, 32 bitlik bir IŞLETIM sisteminde çalışırken etkisizdir.
+Varsayılan olarak, 64 bitlik bir IŞLETIM sisteminde görev sırası, WOW64 dosya sistemi yeniden yönlendiricisi kullanarak programı bulur ve komut satırından çalıştırır. Bu davranış, komutun işletim sistemi programlarının ve DLL 'lerin 32 bitlik sürümlerini bulmasına olanak tanır. Bu değişken `true` , WOW64 dosya sistemi yeniden yönlendiricisinin kullanımını devre dışı bırakmak için ayarlanıyor. Komutu, işletim sistemi programlarının ve DLL 'lerin yerel 64 bit sürümlerini bulur. Bu değişken, 32 bitlik bir IŞLETIM sisteminde çalışırken etkisizdir.
 
 ### <a name="smstsdownloadabortcode"></a><a name="SMSTSDownloadAbortCode"></a>SMSTSDownloadAbortCode
 
@@ -1592,9 +1592,9 @@ Bir görev dizisinde bir hata oluştuğunda, hata içeren bir iletişim kutusu g
 
 ### <a name="smstslocaldatadrive"></a><a name="SMSTSLocalDataDrive"></a>SMSTSLocalDataDrive
 
-Görev dizisinin, çalışırken hedef bilgisayardaki geçici dosyaları nerede depoladığını belirtir.
+Görev dizisinin, çalışırken hedef bilgisayarda geçici önbellek dosyalarını nerede depoladığını belirtir.
 
-Bu değişkeni, görev dizisi başlamadan önce, örneğin bir koleksiyon değişkenini ayarlayarak ayarlayın. Görev sırası başladıktan sonra, Configuration Manager görev sırası başladıktan sonra [_SMSTSMDataPath](#SMSTSMDataPath) değişkenini tanımlar.
+Bu değişkeni, görev dizisi başlamadan önce, örneğin bir koleksiyon değişkenini ayarlayarak ayarlayın. Görev sırası başladıktan sonra, Configuration Manager SMSTSLocalDataDrive değişkeninin ne şekilde tanımlandığına göre [_SMSTSMDataPath](#SMSTSMDataPath) değişkenini tanımlar.
 
 ### <a name="smstsmp"></a><a name="SMSTSMP"></a>SMSTSMP
 
@@ -1609,9 +1609,9 @@ Configuration Manager yönetim noktasının URL 'sini veya IP adresini belirtmek
 
 (giriş)
 
-İstemci intranette değilse, istemciyi yenilemek için tekrarlanan MPList isteklerini etkinleştirmek üzere bu değişkeni kullanın. Varsayılan olarak, bu değişken olarak `True`ayarlanır.
+İstemci intranette değilse, istemciyi yenilemek için tekrarlanan MPList isteklerini etkinleştirmek üzere bu değişkeni kullanın. Varsayılan olarak, bu değişken olarak ayarlanır `True` .
 
-İstemciler Internet üzerinde olduğunda, gereksiz gecikmelerden kaçınmak için bu `False` değişkeni olarak ayarlayın.
+İstemciler Internet üzerinde olduğunda, `False` gereksiz gecikmelerden kaçınmak için bu değişkeni olarak ayarlayın.
 
 ### <a name="smstsmplistrequesttimeout"></a><a name="SMSTSMPListRequestTimeout"></a>SMSTSMPListRequestTimeout
 
@@ -1622,11 +1622,11 @@ Configuration Manager yönetim noktasının URL 'sini veya IP adresini belirtmek
 
 (giriş)
 
-Görev sırası, konum hizmetlerinden yönetim noktası listesini (MPList) alamadığında, bu değişken adımı yeniden denemeden önce kaç milisaniye bekleyeceğini belirtir. Varsayılan olarak, görev sırası yeniden denemeden `60000` önce milisaniye (60 saniye) bekler. En fazla üç kez yeniden dener.
+Görev sırası, konum hizmetlerinden yönetim noktası listesini (MPList) alamadığında, bu değişken adımı yeniden denemeden önce kaç milisaniye bekleyeceğini belirtir. Varsayılan olarak, görev sırası `60000` yeniden denemeden önce milisaniye (60 saniye) bekler. En fazla üç kez yeniden dener.
 
 ### <a name="smstspeerdownload"></a><a name="SMSTSPeerDownload"></a>SMSTSPeerDownload
 
-İstemcinin Windows PE Eş Önbelleği kullanmasını sağlamak için bu değişkeni kullanın. Bu işlevi sağlamak için `true` bu değişkeni ayarlama.
+İstemcinin Windows PE Eş Önbelleği kullanmasını sağlamak için bu değişkeni kullanın. Bu işlevi sağlamak için bu değişkeni ayarlama `true` .
 
 ### <a name="smstspeerrequestport"></a><a name="SMSTSPeerRequestPort"></a>SMSTSPeerRequestPort
 
@@ -1638,7 +1638,7 @@ Görev dizisi önbelleğindeki içeriği geçici olarak devam ettirmek için bu 
 
 ### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a>SMSTSPostAction
 
-Görev dizisi tamamlandıktan sonra çalıştırılan bir komutu belirtir. Örneğin, görev dizisi `shutdown.exe /r /t 30 /f` tamamlandıktan sonra bilgisayarı 30 saniye yeniden başlatmak istediğinizi belirtin.
+Görev dizisi tamamlandıktan sonra çalıştırılan bir komutu belirtir. Örneğin, `shutdown.exe /r /t 30 /f` görev dizisi tamamlandıktan sonra bilgisayarı 30 saniye yeniden başlatmak istediğinizi belirtin.
 
 ### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a>SMSTSPreferredAdvertID
 
@@ -1646,7 +1646,7 @@ Görev dizisini hedef bilgisayarda belirli bir hedeflenen dağıtımı çalışt
 
 ### <a name="smstspreservecontent"></a><a name="SMSTSPreserveContent"></a>SMSTSPreserveContent
 
-Bu değişken, görev dizisindeki içeriği dağıtımdan sonra Configuration Manager istemci önbelleğinde tutulacak şekilde işaretler. Bu değişken, yalnızca görev dizisi süresinin içeriğini tutan [SMSTSPersistContent seçeneğinin](#SMSTSPersistContent)öğesinden farklıdır. SMSTSPersistContent seçeneğinin, görev sırası önbelleğini kullanır, SMSTSPreserveContent Configuration Manager istemci önbelleğini kullanır. Bu işlevi etkinleştirmek `true` için SMSTSPreserveContent olarak ayarlayın.
+Bu değişken, görev dizisindeki içeriği dağıtımdan sonra Configuration Manager istemci önbelleğinde tutulacak şekilde işaretler. Bu değişken, yalnızca görev dizisi süresinin içeriğini tutan [SMSTSPersistContent seçeneğinin](#SMSTSPersistContent)öğesinden farklıdır. SMSTSPersistContent seçeneğinin, görev sırası önbelleğini kullanır, SMSTSPreserveContent Configuration Manager istemci önbelleğini kullanır. `true`Bu işlevi etkinleştirmek Için SMSTSPreserveContent olarak ayarlayın.
 
 ### <a name="smstsrebootdelay"></a><a name="SMSTSRebootDelay"></a>SMSTSRebootDelay
 
@@ -1665,7 +1665,7 @@ Sürüm 1906 ' den başlayarak, bu değişkeni var olan [SMSTSRebootDelay](task-
 
 #### <a name="example"></a>Örnek
 
-Kullanıcılara Windows 10 yerinde yükseltme görev dizisinin başlangıcında 60 dakikalık bir yeniden başlatma bildirimi vermek istiyorsunuz. Bu ilk uzun zaman aşımından sonra, yalnızca 60 saniye olması için ek zaman aşımları isteyeceksiniz. SMSTSRebootDelay to `3600`ve SMSTSRebootDelayNext to `60`olarak ayarlayın.  
+Kullanıcılara Windows 10 yerinde yükseltme görev dizisinin başlangıcında 60 dakikalık bir yeniden başlatma bildirimi vermek istiyorsunuz. Bu ilk uzun zaman aşımından sonra, yalnızca 60 saniye olması için ek zaman aşımları isteyeceksiniz. SMSTSRebootDelay to `3600` ve SMSTSRebootDelayNext to olarak ayarlayın `60` .  
 
 
 ### <a name="smstsrebootmessage"></a><a name="SMSTSRebootMessage"></a>SMSTSRebootMessage
@@ -1685,7 +1685,7 @@ Geçerli görev dizisi adımı tamamlandıktan sonra bir yeniden başlatma iste�
 
 ### <a name="smstsretryrequested"></a><a name="SMSTSRetryRequested"></a>SMSTSRetryRequested
 
-Geçerli görev dizisi adımı tamamlandıktan sonra bir yeniden deneme isteğinde bulunur. Bu görev dizisi değişkeni ayarlandıysa, [SMSTSRebootRequested](#SMSTSRebootRequested) değişkenini olarak `true`da ayarlayın. Bilgisayar yeniden başlatıldıktan sonra, görev dizisi Yöneticisi aynı görev dizisi adımını yeniden çalıştırır.
+Geçerli görev dizisi adımı tamamlandıktan sonra bir yeniden deneme isteğinde bulunur. Bu görev dizisi değişkeni ayarlandıysa, [SMSTSRebootRequested](#SMSTSRebootRequested) değişkenini olarak da ayarlayın `true` . Bilgisayar yeniden başlatıldıktan sonra, görev dizisi Yöneticisi aynı görev dizisi adımını yeniden çalıştırır.
 
 ### <a name="smstsruncommandlineasuser"></a><a name="SMSTSRunCommandLineAsUser"></a>SMSTSRunCommandLineAsUser
 
@@ -1694,9 +1694,9 @@ Geçerli görev dizisi adımı tamamlandıktan sonra bir yeniden deneme isteğin
 
 **Komut satırını Çalıştır** adımı için kullanıcı bağlamını yapılandırmak üzere görev dizisi değişkenlerini kullanın. [SMSTSRunCommandLineUserName](task-sequence-variables.md#SMSTSRunCommandLineUserName) ve [SMSTSRunCommandLineUserPassword](task-sequence-variables.md#SMSTSRunCommandLineUserPassword) değişkenlerini kullanmak için bir yer tutucu hesabıyla **komut satırı Çalıştır** adımını yapılandırmanız gerekmez.
 
-Aşağıdaki `SMSTSRunCommandLineAsUser` değerlerden biriyle yapılandırın:
+`SMSTSRunCommandLineAsUser`Aşağıdaki değerlerden biriyle yapılandırın:
 
-- `true`: Başka **çalışan komut satırı** adımları içinde `SMSTSRunCommandLineUserName`belirtilen kullanıcı bağlamında çalışır.
+- `true`: Başka **çalışan komut satırı** adımları içinde belirtilen kullanıcı bağlamında çalışır `SMSTSRunCommandLineUserName` .
 
 - `false`: Başka **çalışan komut satırı** adımları, adımda yapılandırdığınız bağlamda çalışır.
 
@@ -1730,9 +1730,9 @@ Görev sırası farklı çalıştır hesabı hakkında daha fazla bilgi için bk
 
 **PowerShell Betiği Çalıştır** adımının kullanıcı bağlamını yapılandırmak için görev dizisi değişkenlerini kullanın. [SMSTSRunPowerShellUserName](task-sequence-variables.md#SMSTSRunPowerShellUserName) ve [SMSTSRunPowerShellUserPassword](task-sequence-variables.md#SMSTSRunPowerShellUserPassword) değişkenlerini kullanmak için **PowerShell Betiği Çalıştır** adımını bir yer tutucu hesapla yapılandırmanız gerekmez.
 
-Aşağıdaki `SMSTSRunPowerShellAsUser` değerlerden biriyle yapılandırın:
+`SMSTSRunPowerShellAsUser`Aşağıdaki değerlerden biriyle yapılandırın:
 
-- `true`: Diğer tüm **çalışan PowerShell betiği** adımları içinde `SMSTSRunPowerShellUserName`belirtilen kullanıcı bağlamında çalışır.
+- `true`: Diğer tüm **çalışan PowerShell betiği** adımları içinde belirtilen kullanıcı bağlamında çalışır `SMSTSRunPowerShellUserName` .
 
 - `false`: Diğer tüm **çalışan PowerShell betiği** adımları, adımda yapılandırdığınız bağlamda çalışır.
 
@@ -1767,7 +1767,7 @@ Bu adım sırasında yazılım güncelleştirmeleri taraması için zaman aşım
 
 ### <a name="smstsudausers"></a><a name="SMSTSUDAUsers"></a>SMSTSUDAUsers
 
-Hedef bilgisayarın birincil kullanıcılarını şu biçimi kullanarak belirtir: `<DomainName>\<UserName>`. Birden çok kullanıcıyı virgülle (`,`) ayırarak ayırın. Daha fazla bilgi için bkz. [kullanıcıları bir hedef bilgisayarla ilişkilendirme](../get-started/associate-users-with-a-destination-computer.md).
+Hedef bilgisayarın birincil kullanıcılarını şu biçimi kullanarak belirtir: `<DomainName>\<UserName>` . Birden çok kullanıcıyı virgülle () ayırarak ayırın `,` . Daha fazla bilgi için bkz. [kullanıcıları bir hedef bilgisayarla ilişkilendirme](../get-started/associate-users-with-a-destination-computer.md).
 
 #### <a name="example"></a>Örnek
 
@@ -1783,7 +1783,7 @@ Bu isteğe bağlı görev dizisi değişkeni, bir yazılım güncelleştirmesi y
 
 Bilgisayar yeniden başlatılırken bu adımda görev dizisinin ne kadar süre duraklayacağını belirtmek için SMSTSWaitForSecondReboot değerini saniye cinsinden ayarlayın. İkinci bir yeniden başlatma durumunda yeterli zamana izin verin.
 
-Örneğin, SMSTSWaitForSecondReboot olarak `600`ayarlarsanız, görev sırası ek adımlar çalıştırılmadan önce yeniden başlatmanın ardından 10 dakika boyunca duraklatılır. Bu değişken, tek bir yazılım güncelleştirmelerini yükleme görev dizisi adımı yüzlerce yazılım güncelleştirmesini yüklediğinde yararlı olur.
+Örneğin, SMSTSWaitForSecondReboot olarak ayarlarsanız `600` , görev sırası ek adımlar çalıştırılmadan önce yeniden başlatmanın ardından 10 dakika boyunca duraklatılır. Bu değişken, tek bir yazılım güncelleştirmelerini yükleme görev dizisi adımı yüzlerce yazılım güncelleştirmesini yüklediğinde yararlı olur.
 
 > [!Note]
 > Bu değişken yalnızca işletim sistemi dağıtan bir görev dizisi için geçerlidir. Özel bir görev dizisinde çalışmaz. <!-- 2839998 -->
@@ -1791,14 +1791,14 @@ Bilgisayar yeniden başlatılırken bu adımda görev dizisinin ne kadar süre d
 ### <a name="tsdebugmode"></a><a name="TSDebugMode"></a>TSDebugMode
 
 <!--3612274-->
-Sürüm 1906 ' den başlayarak, bu değişkeni görev `TRUE` dizisinin dağıtıldığı bir koleksiyon veya bilgisayar nesnesi üzerinde olarak ayarlayın. Bu değişken kümesine sahip herhangi bir cihaz, kendisine dağıtılan herhangi bir görev dizisini hata ayıklama moduna koyar.
+Sürüm 1906 ' den başlayarak, bu değişkeni `TRUE` görev dizisinin dağıtıldığı bir koleksiyon veya bilgisayar nesnesi üzerinde olarak ayarlayın. Bu değişken kümesine sahip herhangi bir cihaz, kendisine dağıtılan herhangi bir görev dizisini hata ayıklama moduna koyar.
 
 Daha fazla bilgi için bkz. [görev dizisinde hata ayıklama](../deploy-use/debug-task-sequence.md).
 
 ### <a name="tsdebugonerror"></a><a name="TSDebugOnError"></a>Tsdebughata
 
 <!-- 5012536 -->
-Sürüm 1910 ' den başlayarak, görev dizisi hata `TRUE` döndürdüğünde [görev sırası hata ayıklayıcısını](../deploy-use/debug-task-sequence.md) otomatik olarak başlatmak için bu değişkeni olarak ayarlayın.
+Sürüm 1910 ' den başlayarak, `TRUE` görev dizisi hata döndürdüğünde [görev sırası hata ayıklayıcısını](../deploy-use/debug-task-sequence.md) otomatik olarak başlatmak için bu değişkeni olarak ayarlayın.
 
 Bu değişkeni kullanarak ayarla:
 
@@ -1821,7 +1821,7 @@ Görev sırasının son kullanıcılara ilerlemeyi ne zaman görüntüleyeceğin
 
 (giriş)
 
-Bu adım sırasında görev sırası altyapısının algılanan bir uyarıyı hata olarak kabul etmediğini belirtin. Görev sırası bir veya daha [_TSAppInstallStatus](#TSAppInstallStatus) fazla uygulama ya `Warning` da gerekli bağımlılık, bir gereksinimi karşılayamadığı için yüklenemediği zaman _TSAppInstallStatus değişkenini ayarlar. Bu değişkeni olarak `True`ayarlarsanız ve görev dizisi **_TSAppInstallStatus** olarak `Warning`ayarlandığında, sonuç bir hatadır. Değeri `False` varsayılan davranıştır.
+Bu adım sırasında görev sırası altyapısının algılanan bir uyarıyı hata olarak kabul etmediğini belirtin. Görev sırası bir [_TSAppInstallStatus](#TSAppInstallStatus) `Warning` veya daha fazla uygulama ya da gerekli bağımlılık, bir gereksinimi karşılayamadığı için yüklenemediği zaman _TSAppInstallStatus değişkenini ayarlar. Bu değişkeni olarak ayarlarsanız `True` ve görev dizisi **_TSAppInstallStatus** olarak ayarlandığında `Warning` , sonuç bir hatadır. Değeri `False` varsayılan davranıştır.
 
 ### <a name="tsprogressinfolevel"></a><a name="TSProgressInfoLevel"></a>TSProgressInfoLevel
 
@@ -1832,6 +1832,10 @@ Görev sırası ilerleme penceresinin görüntülediği bilgi türünü denetlem
 - `1`: İlerleme metnine geçerli adımı ve toplam adımları ekleyin. Örneğin, **2/10**.
 - `2`: Geçerli adımı, toplam adımları ve tamamlanan yüzdeyi dahil edin. Örneğin, **2/10 (tamamlanan %20)**.
 - `3`: Tamamlanan yüzdeyi dahil et. Örneğin, **(%20 Tamam)**.
+
+### <a name="tsuefidrive"></a><a name="TSUEFIDrive"></a>Tsuefıdrive
+
+**Değişken** ALANıNDAKI bir FAT32 bölümünün özelliklerinde kullanın. Görev dizisi bu değişkeni algıladığında, bilgisayarı yeniden başlatılmadan önce diski UEFı 'ye geçişe hazırlar. Daha fazla bilgi için bkz. [BIOS 'TAN UEFI dönüştürmeyi yönetmeye yönelik görev dizisi adımları](../deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md).
 
 ### <a name="workingdirectory"></a><a name="WorkingDirectory"></a>WorkingDirectory
 
@@ -1864,7 +1868,7 @@ Aşağıdaki değişkenler kullanım dışıdır:
 >
 > Bir işletim sistemi dağıtımı sırasında, varsayılan olarak Windows Kurulumu kullanılacak en iyi sürücü harfini belirler (genellikle C:).
 
-*Önceki davranış*: bir görüntü uygulanırken, Osdprevervesürücüharfi değişkeni, görev dizisinin görüntü dosyasında (WIM) yakalanan sürücü harfini kullanıp kullanmadığını belirler. Bu değişkenin `false` değerini, **işletim sistemini Uygula** görev dizisi adımında **hedef** ayarı için belirttiğiniz konumu kullanacak şekilde ayarlayın. Daha fazla bilgi için bkz. [OS görüntüsünü uygulama](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage).
+*Önceki davranış*: bir görüntü uygulanırken, Osdprevervesürücüharfi değişkeni, görev dizisinin görüntü dosyasında (WIM) yakalanan sürücü harfini kullanıp kullanmadığını belirler. Bu değişkenin değerini, `false` **Işletim sistemini Uygula** görev dizisi adımında **hedef** ayarı için belirttiğiniz konumu kullanacak şekilde ayarlayın. Daha fazla bilgi için bkz. [OS görüntüsünü uygulama](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage).
 
 
 ## <a name="see-also"></a>Ayrıca bkz.

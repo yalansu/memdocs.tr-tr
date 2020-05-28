@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6a9770dca209669659abf6e4fc9c23d5e6972981
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2a3b322f868c5c203114de4d974ba6682272c5d7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073560"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906259"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1810 ' deki yenilikler
 
@@ -43,7 +43,7 @@ Yeni Configuration Manager özelliklerinden yararlanmak için önce istemcileri 
 
 14 Ağustos 2018 ' den başlayarak, karma mobil cihaz yönetimi özelliği kullanım dışıdır. Daha fazla bilgi için bkz. [karma MDM 'ye ne oldu](../../../mdm/understand/what-happened-to-hybrid.md).<!--Intune feature 2683117-->  
 
-Mac ve Linux için System Center Endpoint Protection (SCEP) desteği (tüm sürümler) 31 Aralık 2018 tarihinde sona erer. Mac için SCEP için yeni virüs tanımlarının kullanılabilirliği ve Linux için SCEP, destek sonuna kadar sonlandırılabilir. Daha fazla bilgi için bkz. [Destek Web günlüğü gönderisinin sonu](https://go.microsoft.com/fwlink/?linkid=870182).
+Mac ve Linux için System Center Endpoint Protection (SCEP) desteği (tüm sürümler) 31 Aralık 2018 tarihinde sona erer. Mac için SCEP için yeni virüs tanımlarının kullanılabilirliği ve Linux için SCEP, destek sonuna kadar sonlandırılabilir. Daha fazla bilgi için bkz. [Destek Web günlüğü gönderisinin sonu](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257).
 
 Azure 'da klasik hizmet dağıtımları artık Configuration Manager kullanım dışıdır. Bulut yönetimi ağ geçidi ve bulut dağıtım noktası için Azure Resource Manager dağıtımlarını kullanmaya başlayın. Daha fazla bilgi için [plan for CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager)konusuna bakın.
 
@@ -395,7 +395,7 @@ Aşağıdaki performans ve sorun giderme geliştirmeleri, hem CMPivot hem de bet
 
 - Sorun giderme için ek Günlükler  
 
-Daha fazla bilgi için aşağıdaki makalelere bakın:  
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:  
 
 - [Configuration Manager konsolundan PowerShell betikleri oluşturun ve çalıştırın](../../../apps/deploy-use/create-deploy-scripts.md)  
 
@@ -435,11 +435,11 @@ Aşağıdaki güncelleştirme paketi (4488598) konsolunda 25 Mart 2019 tarihinde
 
 Aşağıdaki ek düzeltmeler belirli sorunları ele almak için kullanılabilir:
 
-| Kimlik | Başlık | Tarih | Konsol içi |
+| ID | Başlık | Tarih | Konsol içi |
 |---------|---------|---------|---------|
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune bağlayıcı sertifikası Configuration Manager yenilemez | 18 Ocak 2019 | Yes |
 | [4490434](https://support.microsoft.com/help/4490434) | Configuration Manager içinde yinelenen Kullanıcı keşfi sütunları oluşturuldu | 22 Şubat 2019 | Yes |
-| [4490575](https://support.microsoft.com/help/4490575) | Güncelleştirme yüklemeleri yanıt vermeyi durdurur veya Configuration Manager, sürüm 1810 ' de hiçbir şekilde tamamlanmayı göstermez | 22 Şubat 2019 | Yes |
+| [4490575](https://support.microsoft.com/help/4490575) | Güncelleştirme yüklemeleri yanıt vermeyi durdurur veya Configuration Manager, sürüm 1810 ' de hiçbir şekilde tamamlanmayı göstermez | 22 Şubat 2019 | Evet |
 
 
 ## <a name="next-steps"></a>Sonraki adımlar

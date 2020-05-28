@@ -10,12 +10,12 @@ ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 0896204fa994643064676b55b20d63d349c4098b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3352f8aa719e93210124d164d89791214eb20bf5
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710121"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905855"
 ---
 # <a name="management-tasks-for-configuration-manager-applications"></a>Configuration Manager uygulamalar için yönetim görevleri
 
@@ -29,7 +29,7 @@ Uygulamalar ve dağıtım türleri oluşturma konusunda yardım için bkz. [uygu
 >  Uygulamanın veya dağıtım türünün türüne bağlı olarak bazı yönetim seçenekleri kullanılamayabilir.  
 
 ##  <a name="manage-applications"></a>Uygulamaları yönetme  
- **Yazılım kitaplığı** çalışma alanında **uygulama yönetimi** > **uygulamaları**' nı genişletin, yönetilecek uygulamayı seçin ve ardından bir yönetim görevi seçin.  
+ **Yazılım kitaplığı** çalışma alanında **uygulama yönetimi**  >  **uygulamaları**' nı genişletin, yönetilecek uygulamayı seçin ve ardından bir yönetim görevi seçin.  
 
 |Görev|Ayrıntılar|  
 |----------|-------------|  
@@ -40,10 +40,10 @@ Uygulamalar ve dağıtım türleri oluşturma konusunda yardım için bkz. [uygu
 |**Istatistikleri Güncelleştir**|**İzleme** çalışma alanının **Dağıtımlar** düğümünde görüntülenen bu uygulamanın dağıtımları hakkındaki bilgileri güncelleştirir.<br /><br /> Bkz. [Configuration Manager konsolundan uygulamaları izleme](../../apps/deploy-use/monitor-applications-from-the-console.md).|  
 |**Yeniden uygulamaya koy**|**Devre dışı bırakma** yönetim görevi kullanılarak kullanımdan kaldırılan bir uygulamayı tekrar belirtir.|  
 |**Devre dışı bırak**|Bir uygulamayı devre dışı bırakırsanız, artık dağıtım için kullanılamaz, ancak uygulamanın uygulaması ve dağıtımları silinmez. Bu uygulamanın istemci bilgisayarlarında yüklü olan mevcut kopyaları kaldırılmayacak. Uygulama için tüm düzeltmeler 60 gün sonra Configuration Manager'dan silinir. Ancak, uygulamanın yüklü kopyaları kaldırılmaz.<br /><br /> Bir uygulamayı silmek için, öncelikle uygulamayı devre dışı bırakmanız, tüm dağıtımları silmeniz, diğer dağıtımlar tarafından uygulamaya yapılan başvuruları kaldırmanız ve ardından uygulamanın tüm düzeltmelerini silmeniz gerekir.<br /><br /> Bkz. [uygulamaları gözden geçirme ve değiştirme](../../apps/deploy-use/revise-and-supersede-applications.md).|  
-|**Dışarı aktar**|Seçilen uygulamaları, daha sonra arşivleyebileceğiniz veya başka bir siteye yükleyebileceğiniz bir. zip dosyasına aktarmanızı sağlayan **Uygulama Verme Sihirbazı** ' nı açar. Uygulama içeriğini dışa aktarmayı seçerseniz, içeriğe sahip bir klasör oluşturulur.<br /><br /> Ayrıca uygulama bağımlılıklarını, yerine geçme ilişkilerini ve koşulları ve uygulama için içeriği ve bağımlılıklarını dışarı aktarabilirsiniz.<br /><br /> Windows PowerShell cmdlet 'i **dışarı aktarma-Cmappu**, aynı işlevi yapar. Daha fazla bilgi için Microsoft System Center 2012 Configuration Manager SP1 cmdlet başvurusu belgelerindeki [Export-Cmappu](https://go.microsoft.com/fwlink/p/?LinkID=258880) bölümüne bakın.|  
+|**Dışarı aktar**|Seçilen uygulamaları, daha sonra arşivleyebileceğiniz veya başka bir siteye yükleyebileceğiniz bir. zip dosyasına aktarmanızı sağlayan **Uygulama Verme Sihirbazı** ' nı açar. Uygulama içeriğini dışa aktarmayı seçerseniz, içeriğe sahip bir klasör oluşturulur.<br /><br /> Ayrıca uygulama bağımlılıklarını, yerine geçme ilişkilerini ve koşulları ve uygulama için içeriği ve bağımlılıklarını dışarı aktarabilirsiniz.<br /><br /> Windows PowerShell cmdlet 'i **dışarı aktarma-Cmappu**, aynı işlevi yapar. Daha fazla bilgi için bkz. [Export-Cmappte](https://docs.microsoft.com/powershell/module/configurationmanager/export-cmapplication?view=sccm-ps).|  
 |**Sil**|Şu anda seçili olan uygulamayı siler.<br /><br /> Diğer uygulamaların bağımlılığının bulunduğu, etkin bir dağıtımının olduğu veya bağımlı görev dizilerinin olduğu durumlarda bir uygulamayı silemezsiniz.|  
 |**Dağıtımı Benzet**|Bir uygulamayı yüklemeden veya kaldırmadan uygulama dağıtımının sonuçlarını sınayabileceğiniz **Uygulama Dağıtımını Benzetme Sihirbazı** 'nı açar.<br /><br /> Bkz. [uygulama dağıtımlarının benzetimini](../../apps/deploy-use/simulate-application-deployments.md)yapma.|  
-|**Dağıt**|Seçilen uygulamayı hiyerarşinizdeki bilgisayar koleksiyonlarına dağıtabileceğiniz **Yazılım Dağıtma Sihirbazı** 'nı açar.<br /><br /> Bkz. [uygulamaları dağıtma](../../apps/deploy-use/deploy-applications.md).|  
+|**Dağıtma**|Seçilen uygulamayı hiyerarşinizdeki bilgisayar koleksiyonlarına dağıtabileceğiniz **Yazılım Dağıtma Sihirbazı** 'nı açar.<br /><br /> Bkz. [uygulamaları dağıtma](../../apps/deploy-use/deploy-applications.md).|  
 |**İçeriği Dağıt**|Seçilen uygulamanın içeriğini hiyerarşinizdeki dağıtım noktalarına kopyalayabileceğiniz **İçerik Dağıtma Sihirbazı** 'nı açar.<br /><br /> Bkz. [içeriği ve içerik altyapısını yönetme](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).|  
 |**İlişkileri Görüntüle**|Seçilen uygulamaların diğer uygulamalara ilişkilerinin grafik diyagramını gösterir. Aşağıdakilerden birini seçin:<br><br><ul><li>**Bağımlılık** – seçilen uygulamaya bağımlı uygulamaları ve Seçilen uygulamanın bağımlı olduğu uygulamaları gösterir.</li><li>**Yerine geçme** : Seçili uygulamanın yerine geçen uygulamaları ve Seçili uygulamanın yerine geçen uygulamaları gösterir.</li><li>**Genel koşullar** – bu uygulama tarafından başvurulan genel koşulları gösterir.</li></ol><br /> Bkz. [uygulamaları gözden geçirme ve değiştirme](../../apps/deploy-use/revise-and-supersede-applications.md) ve [genel koşullar oluşturma](../../apps/deploy-use/create-global-conditions.md).|  
 |**Uygulamaları Kopyala**|Yeni bir tane oluşturmak için uygulamaları kopyalayın veya çoğaltın Configuration Manager. Bu eylem, bir şeyi test etmek veya benzer bir uygulama oluşturmanız gerektiğinde faydalıdır. Site, adlı yeni bir uygulama oluşturur ve bu ada **kopya** eklenir. Site meta verilerin çoğunu yeni uygulamaya kopyalarken, hiçbir dağıtımı kopyalamaz.|

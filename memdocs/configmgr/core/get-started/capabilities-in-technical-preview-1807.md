@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 398f16b8f75d894030d76406807f74bdaa4be9d5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ace27e9035af6696e455382a32365be0e3824d65
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714790"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905193"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Configuration Manager Technical Preview sürüm 1807 ' deki yetenekler 
 
@@ -78,11 +78,11 @@ Kullanılabilir bir öğe hakkında daha fazla ayrıntı görmek için hub 'da t
 - **Geri bildirim**: Configuration Manager [UserVoice sitesini](https://configurationmanager.uservoice.com/) görüntüler  
 
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 
 - İstemci IŞLETIM sisteminde Configuration Manager konsolunu kullanın.  
 
-    - Alternatif olarak, ancak önerilmemiştir: bir sunucu IŞLETIM sisteminde [Internet Explorer: Artırılmış Güvenlik Yapılandırması](https://go.microsoft.com/fwlink/?LinkId=253461)'nı devre dışı bırakın.  
+    - Alternatif olarak, ancak önerilmemiştir: bir sunucu IŞLETIM sisteminde [Internet Explorer: Artırılmış Güvenlik Yapılandırması](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10))'nı devre dışı bırakın.
 
 - Konsola sahip olan bilgisayar için internet erişimi ve aşağıdaki sitelerle bağlantı gerekir:  
     - `https://aka.ms`  
@@ -112,7 +112,7 @@ Görevleri tamamlamayı deneyin. Daha sonra bu özelliği kullanarak düşüncel
 
 Varsayılan olarak, bu ayar **otomatiktir**. Bu değerle Configuration Manager yüklendiği sürücüyü seçer. 
 
-Çevrimdışı bakım sırasında, Configuration Manager geçici dosyaları klasöründe depolar `<drive>:\ConfigMgr_OfflineImageServicing`. Ayrıca, işletim sistemi görüntülerini bu klasöre bağlar. 
+Çevrimdışı bakım sırasında, Configuration Manager geçici dosyaları klasöründe depolar `<drive>:\ConfigMgr_OfflineImageServicing` . Ayrıca, işletim sistemi görüntülerini bu klasöre bağlar. 
 
 **Offlineservicingmgr. log** günlük dosyasını gözden geçirin. 
 
@@ -169,7 +169,7 @@ Yazılım Merkezi 'nde kullanıcıların uygulamayı **onarması** için yeni d�
 Uygulama onay istekleri için e-posta bildirimlerini yapılandırın. Bir Kullanıcı bir uygulama istediğinde, bir e-posta alırsınız. Configuration Manager konsolu gerekmeden isteği onaylamak veya reddetmek için e-postadaki bağlantılar ' a tıklayın.
 
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 
 #### <a name="to-send-email-notifications"></a>E-posta bildirimleri göndermek için
 - [İsteğe bağlı özelliği](../servers/manage/install-in-console-updates.md#bkmk_options) **cihaz başına Kullanıcı için uygulama isteklerini Onayla**' yı etkinleştirin.  
@@ -191,7 +191,7 @@ Bu önkoşulları yapılandırmazsanız site, isteği onaylama veya reddetme ba�
 
     - Azure AD 'de bu yerel uygulama için aşağıdaki ayarları el ile yapılandırın:  
 
-        - **Yeniden yönlendirme URI 'si**: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`. Bulut yönetimi ağ geçidi (CMG) hizmetinin tam etki alanı adını (FQDN) kullanın, örneğin, GraniteFalls.Contoso.com.   
+        - **Yeniden yönlendirme URI 'si**: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth` . Bulut yönetimi ağ geçidi (CMG) hizmetinin tam etki alanı adını (FQDN) kullanın, örneğin, GraniteFalls.Contoso.com.   
 
         - **Manifest**: **oauth2AllowImplicitFlow** değerini true olarak ayarlayın:`"oauth2AllowImplicitFlow": true,`  
 

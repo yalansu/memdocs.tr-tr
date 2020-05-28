@@ -10,12 +10,13 @@ ms.assetid: 3e82cd96-0ce0-474a-a597-d65fceadc95a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2456f530444fa5d9514247edd77cbe7b02f62c38
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.reviewer: acabello
+ms.openlocfilehash: b991c2ddd0ea121251eb19afbdb032844be8738d
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126012"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268207"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Öğretici: pilot 'a Windows 10 dağıtma
 
@@ -35,7 +36,7 @@ Masaüstü analizi, Azure aboneliğinizde bir *Log Analytics çalışma alanı* 
 
 
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Bu öğreticiye başlamadan önce aşağıdaki önkoşullara sahip olduğunuzdan emin olun:  
 
@@ -243,7 +244,7 @@ Masaüstü Analizi 'nde bir dağıtım planı oluşturmak için bu yordamı kull
 
         - **Bilgisayarlarım Windows Update sürücüleri otomatik olarak alır**: varsayılan ayar **kapalı**olur ve Configuration Manager ile dağıtıldığında önerilir.  
 
-        - **Uygulamalarınız için düşük bir Install Count eşiği tanımlayın**: varsayılan ayar `2%`. Bu eşiğin altındaki uygulamalar otomatik olarak *düşük yüklemesi sayısı*olarak ayarlanır. Masaüstü analizi, pilot sırasında bu eklentileri doğrulamaz.  
+        - **Uygulamalarınız için düşük bir Install Count eşiği tanımlayın**: varsayılan ayar `2%` . Bu eşiğin altındaki uygulamalar otomatik olarak *düşük yüklemesi sayısı*olarak ayarlanır. Masaüstü analizi, pilot sırasında bu eklentileri doğrulamaz.  
 
             Bir uygulama bu eşikten daha yüksek bir bilgisayar yüzdesine yüklenirse, dağıtım planı uygulamayı en *önemli şekilde işaretler*. Ardından, Pilot aşaması sırasında test etmek için önem derecesine karar verebilirsiniz.  
 

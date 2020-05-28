@@ -10,12 +10,12 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c191debd77502f7d594a77eb3bd0c50cd6854f66
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84cb878de3eea56dc68180a83fd4b6a32b2d1073
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722588"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906416"
 ---
 # <a name="use-cloud-services-with-configuration-manager"></a>Bulut hizmetlerini Configuration Manager ile birlikte kullanma
 
@@ -36,7 +36,7 @@ Bulut kaynaklarının sağlanması Configuration Manager dağıtmadan önce yapm
 
 -   Bulut tabanlı dağıtım noktaları hakkında bilgi için bkz. [bulut tabanlı dağıtım noktalarını Install](../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md).
 
--   Azure hakkında daha fazla bilgi için bkz. MSDN Kitaplığı 'nda [Azure](https://go.microsoft.com/fwlink/p/?LinkId=262965) .  
+-   Azure hakkında daha fazla bilgi için bkz. [Azure nedir?](https://azure.microsoft.com/overview/what-is-azure/)
 
 ### <a name="azure-virtual-machines-for-cloud-based-infrastructure"></a>Azure sanal makineleri (bulut tabanlı altyapı için)  
  Configuration Manager, Azure 'daki sanal makinelerde çalışan bilgisayarların, fiziksel kurumsal ağınızda şirket içinde çalıştığı şekilde kullanılmasını destekler. Azure sanal makinelerini aşağıdaki senaryolarda kullanabilirsiniz:  
@@ -78,12 +78,4 @@ Bu ek yetenekler için bir Azure aboneliğinizin olması gerekmez. Bulutta belir
 ##  <a name="security-for-cloud-based-services"></a><a name="BKMK_CloudSec"></a>Bulut tabanlı hizmetler için güvenlik  
  Configuration Manager Azure 'da içeriğinizi sağlamak ve bu içeriklerinize erişmek ve kullandığınız hizmetleri yönetmek için sertifikaları kullanır. Configuration Manager, Azure 'da depoladığınız verileri şifreler, ancak Azure 'un sağladıkları dışında ek güvenlik veya veri denetimleri sunmaz.  
 
- Daha fazla bilgi için, bulut tabanlı farklı kaynak senaryolarının ayrıntılarına bakın. Ayrıca, Azure güvenliği için aşağıdaki konuları da görüntüleyebilirsiniz:  
-
--   [Azure: Azure 'da güvenlik hesabı yönetimini anlama](https://go.microsoft.com/fwlink/p/?LinkId=262968)  
-
--   [Azure güvenliğine genel bakış](https://go.microsoft.com/fwlink/p/?LinkId=262970)  
-
--   [Bulut Geçişinizdeki Güvenlik Dönüm Noktalarını Aşın](https://go.microsoft.com/fwlink/p/?LinkId=262971)  
-
--   [Azure 1.Kısımdaki Veri Güvenliği](https://go.microsoft.com/fwlink/p/?LinkId=262974)  
+ Daha fazla bilgi için, bulut tabanlı farklı kaynak senaryolarının ayrıntılarına bakın. Ayrıca bkz. [Azure Güvenlik 'e giriş](https://docs.microsoft.com/azure/security/fundamentals/overview).

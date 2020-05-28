@@ -63,7 +63,7 @@ Paket ve program dağıtımları için dağıtım durumu toplanmaz.
 
 ## <a name="monitor-the-state-of-an-application-in-the-configuration-manager-console"></a>Configuration Manager konsolundaki bir uygulamanın durumunu izleme  
 
-1.  Configuration Manager konsolunda, **izleme** > **dağıtımları**' nı seçin.  
+1.  Configuration Manager konsolunda, **izleme**  >  **dağıtımları**' nı seçin.  
 
 3.  Her uyumluluk durumu ve bu durumda bulunan cihazların dağıtım ayrıntılarını gözden geçirmek için bir dağıtım seçin, sonra **giriş** sekmesinde, **dağıtım** grubunda, **durumu görüntüle** ' yi seçerek **dağıtım durumu** bölmesini açın. Bu bölmede, her bir uyumluluk durumu ile varlıkları görüntüleyebilirsiniz. Söz konusu varlığa dağıtım durumu hakkında daha ayrıntılı bilgi görüntülemek için herhangi bir varlık seçin.  
 
@@ -80,7 +80,7 @@ Paket ve program dağıtımları için dağıtım durumu toplanmaz.
 
 **Özet** sekmesinde ve **dağıtım türleri** sekmesinde gösterilen veriler, **dağıtım durumu** bölmesinde gösterilen verilerle eşleşmiyorsa, bu sekmelerdeki verileri güncelleştirmek için **Özetlemeyi Çalıştır** ' ı seçin. Varsayılan uygulama dağıtımı özetleme aralığını şu şekilde yapılandırabilirsiniz:  
 
-1. Configuration Manager konsolunda, **Yönetim** > **Site yapılandırması** > **siteler**' i seçin.
+1. Configuration Manager konsolunda, **Yönetim**  >  **Site yapılandırması**  >  **siteler**' i seçin.
 
 2. **Siteler** listesinden, özetleme aralığını yapılandırmak istediğiniz siteyi seçin ve **giriş** sekmesinde, **Ayarlar** grubunda, **durum hazırlayıcıları**' yi seçin.
 

@@ -10,12 +10,12 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d604095ec3097581289a05cd306b865dbd7da99a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8bfb45ba835851c33d6017f7f0a884bd2c1e9421
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720012"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429334"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-configuration-manager"></a>Windows Configuration Manager ile en son sürüme yükseltme
 
@@ -85,7 +85,7 @@ Aşağıdaki görevler yerinde yükseltme ile uyumlu değildir. Geleneksel işle
 
   - Disk bölümlerini değiştirme
   - Sistem mimarisini x86 'dan x64 'e değiştirme
-  - UEFı uygulama. (Olası bir seçenek hakkında daha fazla bilgi için bkz. [yerinde yükseltme SıRASıNDA BIOS 'TAN UEFI 'ye dönüştürme](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).)
+  - UEFı uygulama. (Olası bir seçenek hakkında daha fazla bilgi için bkz. [yerinde yükseltme SıRASıNDA BIOS 'TAN UEFI 'ye dönüştürme](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).)
   - Temel işletim sistemi dilini değiştirme  
 
 - Özel bir temel görüntü kullanma, üçüncü taraf disk şifrelemeyi kullanma veya WinPE çevrimdışı işlemleri gerektirme dahil olmak üzere özel gereksinimleriniz vardır.  

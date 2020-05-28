@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6891a46050bb83e54fb34b97d9129fcb5873785
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f877de32c9915f91d1e2d7f2d90b9b40ab69df11
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718675"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906584"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Configuration Manager gizliliği hakkında ek bilgiler
 
@@ -91,6 +91,6 @@ Daha fazla bilgi için bkz. [Endpoint Protection](../../../protect/deploy-use/en
 
 Configuration Manager konsolunda, **izleme** çalışma alanına gidin, **site hiyerarşisi** düğümünü seçin ve **coğrafi görünüme**geçin. Bu görünüm, Microsoft Bing Haritalar 'ın Configuration Manager fiziksel sunucu topolojinizi görüntülemek için sağladığı haritaları kullanmanıza olanak sağlar. Bu özelliği etkinleştirmek için sağladığınız konum bilgileri, sunucunuzdaki Bing Haritalar Web hizmetine gönderilir.
 
-Microsoft bu bilgileri Microsoft Bing Haritalar'ı ve diğer Microsoft siteleri ve hizmetlerini işletmek ve geliştirmek için kullanır. Daha fazla bilgi için bkz. [Microsoft gizlilik bildirimi](https://go.microsoft.com/fwlink/?LinkId=823548).
+Microsoft bu bilgileri Microsoft Bing Haritalar'ı ve diğer Microsoft siteleri ve hizmetlerini işletmek ve geliştirmek için kullanır. Daha fazla bilgi için bkz. [Microsoft gizlilik bildirimi](https://privacy.microsoft.com/privacystatement).
 
 Site Hiyerarşisi'nden Coğrafi Görünüm'ü kullanmamayı seçebilirsiniz. Varsayılan hiyerarşi Diyagramı görünümü hiyerarşiyi görmenizi sağlar ve Bing Haritalar hizmetini kullanmaz.

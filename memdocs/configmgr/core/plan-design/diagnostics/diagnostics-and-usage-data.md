@@ -10,12 +10,12 @@ ms.assetid: 88ac4e55-d47b-4c94-b9c3-704c6a48b845
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6fff68eaad52f753d27971562a4bbfaa47a6cf6e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ffa50d2cfb3095eb136128c09b74e9ee6a4eb501
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711570"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904394"
 ---
 # <a name="diagnostics-and-usage-data-for-configuration-manager"></a>Configuration Manager için tanılama ve kullanım verileri
 
@@ -28,7 +28,7 @@ Her Configuration Manager hiyerarşisi tanılama ve kullanım verilerini sunar. 
 > [!NOTE]  
 > Configuration Manager yalnızca sitenin SQL Server veritabanından veri toplar ve doğrudan istemcilerden veya site sunucularından veri toplamaz.  
 
-Daha fazla bilgi için bkz. [Microsoft gizlilik bildirimi](https://go.microsoft.com/fwlink/?LinkID=626527).  
+Daha fazla bilgi için bkz. [Microsoft gizlilik bildirimi](https://privacy.microsoft.com/privacystatement).  
 
 > [!div class="nextstepaction"]
 > [Microsoft’un tanılama ve kullanım bilgilerini kullanma şekli](how-diagnostics-and-usage-data-is-used.md)

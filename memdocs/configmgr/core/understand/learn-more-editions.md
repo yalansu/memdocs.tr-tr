@@ -10,12 +10,12 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f18ed2180f1d526e2afa4872e8fa9018c7e18721
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 04ed335c65369840085fe44ba2f1b81d7806a0e3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722714"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906043"
 ---
 # <a name="licensing-and-branches-for-configuration-manager"></a>Configuration Manager için lisanslama ve dallar
 
@@ -32,7 +32,7 @@ Configuration Manager ile kullanılabilen yükleme seçenekleri için lisans ger
 
 Configuration Manager lisanslarında etkin yazılım güvencesi (SA) olan müşterilerimiz veya 1 Ekim 2016 itibariyle eşit abonelik haklarıyla, Configuration Manager 'ın 2016 Ekim 1606 sürümünü kullanma hakkı vardır. 1 Ekim 2016 ' de veya sonrasında Configuration Manager hakları olan müşteriler, yükleme sonrasında iki lisanslı seçenek bulur: geçerli dal ve uzun süreli bakım dalı (LTSB).
 
-Microsoft Toplu Lisanslama programları aracılığıyla satın aldığınız ürünlerin tüm hüküm ve koşulları için bkz. [Lisans hüküm ve belgeleri](https://go.microsoft.com/fwlink/?LinkId=800052).
+Microsoft Toplu Lisanslama programları aracılığıyla satın aldığınız ürünlerin tüm hüküm ve koşulları için bkz. [Lisans hüküm ve belgeleri](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1).
 
 
 ## <a name="licensed-branches"></a>Lisanslı dallar
@@ -117,7 +117,7 @@ Configuration Manager için sürüm 1606 temel ortamının 2016 Ekim sürümünd
 
 - [VLSC 'ye Genel Bakış](https://www.microsoft.com/Licensing/existing-customer/vlsc-training-and-resources.aspx)
 
-- [Microsoft Toplu Lisanslama Ürün Koşulları](https://go.microsoft.com/fwlink/?LinkId=800052)
+- [Microsoft Toplu Lisanslama Ürün Koşulları](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1)
 
 - Toplu lisans müşterileri, [Toplu Lisans Hizmet Merkezi](https://www.microsoft.com/Licensing/servicecenter/default.aspx)' nden lisanslarının bir özetini alabilir. **Lisanslar** menüsüne gidin ve **lisanslar Özeti**' ni seçin.
 

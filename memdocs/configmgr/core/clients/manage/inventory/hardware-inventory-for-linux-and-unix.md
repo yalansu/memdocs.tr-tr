@@ -10,12 +10,12 @@ ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1bdfb8c6d528c12581f05f86111a1a76d2259faa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84f4b822475111352c5dcf23f4868a1fa43ec3a7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714426"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906264"
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-configuration-manager"></a>Configuration Manager 'de Linux ve UNIX için donanım envanteri
 
@@ -105,7 +105,7 @@ Donanım envanteri eylemleri **scxcm.log**adlı istemci günlük dosyasına giri
 ###  <a name="create-a-custom-hardware-inventory-provider-for-linux-and-unix-computers"></a><a name="BKMK_LinuxProvider"></a> Linux ve UNIX bilgisayarlar için özel bir donanım envanteri oluşturun:  
  Linux ve UNIX için Configuration Manager istemcisi için özel bir donanım envanteri sağlayıcısı oluşturmak için **OMI kaynağı-v. 1.0.6** kullanın ve OMI Başlangıç Kılavuzu 'ndaki yönergeleri izleyin. Bu işlem yeni sağlayıcının şemasını tanımlayan bir Yönetilen Nesne Biçimi (MOF) dosyası oluşturmayı içerir. Daha sonra, yeni özel envanter sınıfının desteğini etkinleştirmek için Configuration Manager MOF dosyasını içeri aktarırsınız.  
 
- Hem OMI Kaynağı - v.1.0.6 hem de OMI Başlangıç Kılavuzu [Açık Grup](https://github.com/microsoft/omi/blob/master/README.md) web sitesinden indirilebilir. Bu indirmeleri OpenGroup.org web sitesinde aşağıdaki web sayfasında bulunan **Belgeler** sekmesine yerleştirebilirsiniz: [Açık Yönetim Altyapısı (OMI)](https://go.microsoft.com/fwlink/p/?LinkId=286805).  
+ Hem OMI Kaynağı - v.1.0.6 hem de OMI Başlangıç Kılavuzu [Açık Grup](https://github.com/microsoft/omi/blob/master/README.md) web sitesinden indirilebilir. Bu indirmeleri OpenGroup.org web sitesinde aşağıdaki web sayfasında bulunan **Belgeler** sekmesine yerleştirebilirsiniz: [Açık Yönetim Altyapısı (OMI)](https://collaboration.opengroup.org/omi/).  
 
 ###  <a name="configure-each-computer-that-runs-linux-or-unix-with-the-custom-hardware-inventory-provider"></a><a name="BKMK_AddProvidertoLinux"></a> Özel donanım envanteri sağlayıcısı ile Linux veya UNIX çalıştıran her bilgisayarı yapılandırın:  
  Özel bir envanter sağlayıcısı oluşturduktan sonra, toplanacak envanteri içeren her bir bilgisayarda sağlayıcı kitaplık dosyasını kopyalamanız ve ardından kaydetmeniz gerekir.  

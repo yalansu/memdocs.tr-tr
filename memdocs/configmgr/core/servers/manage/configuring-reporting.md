@@ -10,12 +10,12 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4ba67fee260867494302e49b7c9d3a97480e236b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b7ada6f54a7642817a321937a4d7128994d5538
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723764"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83823988"
 ---
 # <a name="configure-reporting-in-configuration-manager"></a>Configuration Manager raporlamayı yapılandırma
 
@@ -70,7 +70,7 @@ SQL Server Raporlama Hizmetleri'nin doğru şekilde yüklenip çalıştığını
 
 3. Değer verilerini düzenlemek için **ReportBuilderApplicationManifestName** anahtarını açın.  
 
-4. Değerini olarak `ReportBuilder_3_0_0_0.application`değiştirin ve ardından kaydetmek için **Tamam** ' ı seçin.
+4. Değerini olarak değiştirin `ReportBuilder_3_0_0_0.application` ve ardından kaydetmek Için **Tamam** ' ı seçin.
 
 5. Windows Kayıt Defteri Düzenleyiciyi kapatın.  
 
@@ -114,7 +114,7 @@ Site sistemlerini yapılandırma hakkında daha fazla bilgi için bkz. [site sis
 
 1. **Raporlama Hizmetleri noktası** sayfasında, aşağıdaki ayarları yapılandırın:  
 
-    - **Site veritabanı sunucu adı**: Configuration Manager site veritabanını barındıran sunucunun adını belirtin. Sihirbaz genellikle sunucu için tam etki alanı adını (FQDN) alır. Bir veritabanı örneği belirtmek için, &lt; *sunucu adı*>\&, lt; biçimini kullanın. *örnek adı*>. Örneğin, `sqlserver\named1`.
+    - **Site veritabanı sunucu adı**: Configuration Manager site veritabanını barındıran sunucunun adını belirtin. Sihirbaz genellikle sunucu için tam etki alanı adını (FQDN) alır. Bir veritabanı örneği belirtmek için, &lt; *sunucu adı*, > \& lt;* biçimini kullanın. örnek adı*>. Örneğin, `sqlserver\named1`.
 
     - **Veritabanı adı**: Configuration Manager site veritabanı adını belirtin. Sihirbazın site veritabanına erişimi olduğunu doğrulamak için **Doğrula** ' yı seçin.  
 
@@ -130,7 +130,7 @@ Site sistemlerini yapılandırma hakkında daha fazla bilgi için bkz. [site sis
 
     - **Raporlama Hizmetleri noktası hesabı**: **Ayarla**' yı seçin ve ardından kullanılacak hesabı seçin. Raporlama Hizmetleri noktasındaki SQL Server Reporting Services, Configuration Manager site veritabanına bağlanmak için bu hesabı kullanır. Bu bağlantı, bir rapor için verileri almak içindir. Daha önce Configuration Manager hesabı olarak yapılandırdığınız bir Windows Kullanıcı hesabını belirtmek için **Mevcut hesap** ' ı seçin. Şu anda kullanılmak üzere yapılandırılmamış bir Windows Kullanıcı hesabı belirtmek için **Yeni hesap** ' ı seçin. Configuration Manager, belirtilen kullanıcının site veritabanına erişimini otomatik olarak verir.  
 
-        Raporlama Hizmetleri 'ni çalıştıran hesap, etki alanı yerel güvenlik grubu **Windows yetkilendirme erişim grubuna**ait olmalıdır. Ayrıca **Read TokenGroupsGlobalAndUniversal** Izninin **izin ver**olarak ayarlanmış olması gerekir. Raporlama Hizmetleri noktası hesabından farklı bir etki alanındaki kullanıcılar, raporları başarıyla çalıştırmak için etki alanları arasında çift yönlü bir güvene ihtiyaç duyar.
+        Raporlama Hizmetleri 'ni çalıştıran hesap, etki alanı yerel güvenlik grubu **Windows yetkilendirme erişim grubuna**ait olmalıdır. Bu, hesap, etki alanı içindeki tüm Kullanıcı nesneleri için **TokenGroupsGlobalAndUniversal** özniteliğinde **Okuma izinlerine izin** verir. Raporlama Hizmetleri noktası hesabından farklı bir etki alanındaki kullanıcılar, raporları başarıyla çalıştırmak için etki alanları arasında çift yönlü bir güvene ihtiyaç duyar.
 
         Belirtilen Windows kullanıcı hesabı ve parolası şifrelenir ve Raporlama Hizmetleri veritabanında saklanır. Raporlama Hizmetleri bu hesabı ve parolayı kullanarak raporlarla ilgili verileri site veritabanından alır.  
 
@@ -187,7 +187,7 @@ Configuration Manager, raporlama hizmetleri noktasını yüklemek ve Raporlama H
 
 - **ConfigMgr rapor kullanıcıları** ve **ConfigMgr rapor yöneticileri** güvenlik rollerini Raporlama Hizmetleri 'ne ekleyin.  
 
-- Alt klasörler oluşturun ve site sunucusundan Raporlama Hizmetleri 'ne `%ProgramFiles%\SMS_SRSRP` Configuration Manager raporlarını dağıtın.  
+- Alt klasörler oluşturun ve `%ProgramFiles%\SMS_SRSRP` site sunucusundan Raporlama Hizmetleri 'ne Configuration Manager raporlarını dağıtın.  
 
 - Raporlama Hizmetleri 'ndeki **ConfigMgr rapor kullanıcıları** rolünü, Configuration Manager **site okuma** haklarına sahip tüm Kullanıcı hesaplarının kök klasörlerine ekleyin.  
 
@@ -232,9 +232,9 @@ Belirli durum iletilerine ve günlük dosyası girişlerine bakarak Raporlama Hi
 
 ### <a name="verify-installation-by-log-file"></a>Yüklemeyi günlük dosyasına göre doğrula
 
-Configuration Manager yükleme yolunun **logs** dizininde bulunan **Srsrp. log** dosyasını açın. Dizeyi `Installation was successful`bulun.
+Configuration Manager yükleme yolunun **logs** dizininde bulunan **Srsrp. log** dosyasını açın. Dizeyi bulun `Installation was successful` .
 
-Bu günlük dosyasında, Raporlama Hizmetleri noktasının başarıyla yüklendiği zamandan itibaren ilerleyin. Rapor klasörlerinin oluşturulduğunu, raporların dağıtıldığını ve her klasördeki güvenlik ilkesinin onaylandığını doğrulayın. Güvenlik ilkesi teyitlerinin son satırından sonra, dizeyi `Successfully checked that the SRS web service is healthy on server`arayın.  
+Bu günlük dosyasında, Raporlama Hizmetleri noktasının başarıyla yüklendiği zamandan itibaren ilerleyin. Rapor klasörlerinin oluşturulduğunu, raporların dağıtıldığını ve her klasördeki güvenlik ilkesinin onaylandığını doğrulayın. Güvenlik ilkesi teyitlerinin son satırından sonra, dizeyi arayın `Successfully checked that the SRS web service is healthy on server` .  
 
 ## <a name="configure-a-certificate-to-author-reports"></a>Raporları yazmak için bir sertifika yapılandırma
 

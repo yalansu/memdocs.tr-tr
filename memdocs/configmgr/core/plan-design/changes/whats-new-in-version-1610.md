@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d154dc0ba681a37ebb2155bfa1bcdb6d8734965f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b3e1a2feaddb7384d76790249152c89dfa8ee2d3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073968"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904808"
 ---
 # <a name="what39s-new-in-version-1610-of-configuration-manager"></a>Sürüm 1610 ' deki yenilikler&#39;Configuration Manager
 
@@ -29,8 +29,8 @@ Geçerli dalın Configuration Manager güncelleştirme 1610, daha önce yüklü 
 > Yeni bir site yüklemek için Configuration Manager temel bir sürümünü kullanmanız gerekir.  
 >
 > Aşağıdakiler hakkında daha fazla bilgi edinin:    
-> - [Yeni siteleri yükleme](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Sitelere güncelleştirme yükleme](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Yeni siteleri yükleme](../../servers/deploy/install/installing-sites.md)  
+> - [Sitelere güncelleştirme yükleme](../../servers/manage/updates.md)  
 > - [Temel ve güncelleştirme sürümleri](../../servers/manage/updates.md#bkmk_Baselines)
 
 Aşağıdaki bölümlerde, Configuration Manager sürüm 1610 ' de tanıtılan değişiklikler ve yeni yetenekler hakkında ayrıntılı bilgi sağlanmaktadır.  
@@ -156,7 +156,7 @@ Daha fazla bilgi için:
 - [İstemci ayarlarını yapılandırma](../../clients/deploy/configure-client-settings.md)
 
 ## <a name="software-updates-dashboard"></a>Yazılım güncelleştirmeleri panosu
-Kuruluşunuzdaki cihazların geçerli uyumluluk durumunu görüntülemek için yeni yazılım güncelleştirmeleri panosunu kullanın ve hangi cihazların risk altında olduğunu görmek için verileri hızlıca çözümleyin. Panoyu görüntülemek için **izleme** > **genel bakış** > **güvenlik** > **yazılım güncelleştirmeleri panosuna**gidin.
+Kuruluşunuzdaki cihazların geçerli uyumluluk durumunu görüntülemek için yeni yazılım güncelleştirmeleri panosunu kullanın ve hangi cihazların risk altında olduğunu görmek için verileri hızlıca çözümleyin. Panoyu görüntülemek için **izleme**  >  **genel bakış**  >  **güvenlik**  >  **yazılım güncelleştirmeleri panosuna**gidin.
 
 Ayrıntılar için bkz. [yazılım güncelleştirmelerini izleme](../../../sum/deploy-use/monitor-software-updates.md).
 
@@ -168,7 +168,7 @@ Bu eylem, uygulamanın herhangi bir cihazdan kaldırılmasına neden olmaz. Anca
 
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>Otomatik dağıtım kurallarında içerik boyutuna göre filtrele
 Artık otomatik dağıtım kurallarında yazılım güncelleştirmeleri için içerik boyutuna filtre uygulayabilirsiniz. Örneğin, yalnızca 2 MB 'tan küçük yazılım güncelleştirmelerini indirmek için, **Içerik boyutu (KB)** filtresini **< 2048**olarak ayarlayabilirsiniz. Bu filtrenin kullanılması, büyük yazılım güncelleştirmelerinin otomatik olarak indirilmesini engeller, bu da ağ bant genişliği sınırlı olduğunda Basitleştirilmiş Windows alt düzey bakımını daha iyi destekler. Ayrıntılar için bkz.
-- [Alt düzey Işletim sistemlerinde Configuration Manager ve Basitleştirilmiş Windows Bakımı](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)
+- [Alt düzey Işletim sistemlerinde Configuration Manager ve Basitleştirilmiş Windows Bakımı](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056)
 - [Yazılım güncelleştirmelerini otomatik dağıtma](../../../sum/deploy-use/automatically-deploy-software-updates.md)
 
 **Içerik boyutu (KB)** alanını yapılandırmak için aşağıdakilerden birini yapın:
@@ -176,7 +176,7 @@ Artık otomatik dağıtım kurallarında yazılım güncelleştirmeleri için i�
 - Mevcut bir otomatik dağıtım kuralının Özellikler bölümünde, **yazılım güncelleştirmeleri** sekmesine gidin.
 
 ## <a name="office-365-client-management-dashboard"></a>Office 365 Istemci yönetimi panosu
-Office 365 Istemci yönetimi panosu artık Configuration Manager konsolunda kullanılabilir. Panoyu görüntülemek için, **yazılım kitaplığı** > **'na genel bakış** > **Office 365 istemci yönetimi**' ne gidin.
+Office 365 Istemci yönetimi panosu artık Configuration Manager konsolunda kullanılabilir. Panoyu görüntülemek için, **yazılım kitaplığı**  >  **'na genel bakış**  >  **Office 365 istemci yönetimi**' ne gidin.
 
 Panoda aşağıdakiler için grafikler görüntülenir:
 

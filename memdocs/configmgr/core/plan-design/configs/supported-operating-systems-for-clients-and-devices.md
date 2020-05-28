@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 57c60fcdadf3e58b59d33ecf2753789122a38ecc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e9e0ec6df5f80b318cb78ed8cddc986b613230e1
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078694"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904543"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager için istemciler ve cihazlar için desteklenen işletim sistemi sürümleri
 
@@ -54,7 +54,7 @@ Bu senaryoda Kullanıcı ilkesine ihtiyacınız varsa ve olası performans etkis
 
 - Sürüm 1910 ve sonrasında [istemci ayarları](../../clients/deploy/configure-client-settings.md)' nı kullanın. **Istemci ilkesi** grubunda, aşağıdaki ayarı yapılandırın: **birden çok Kullanıcı oturumu Için kullanıcı ilkesini etkinleştirin**.<!-- 4737447 -->
 
-- Sürüm 1906 ' de, [SMS_PolicyAgentConfig sunucusu WMI sınıfıyla](../../../develop/reference/core/clients/config/sms_policyagentconfig-server-wmi-class.md)Configuration Manager SDK 'sını kullanın. Yeni `PolicyEnableUserPolicyOnTS` özelliğini olarak `true`ayarlayın.
+- Sürüm 1906 ' de, [SMS_PolicyAgentConfig sunucusu WMI sınıfıyla](../../../develop/reference/core/clients/config/sms_policyagentconfig-server-wmi-class.md)Configuration Manager SDK 'sını kullanın. Yeni `PolicyEnableUserPolicyOnTS` özelliğini olarak ayarlayın `true` .
 
 > [!Note]  
 > Windows 10 Enterprise çoklu oturum çalıştıran bir istemciyle birlikte ortak yönetimi kullanamazsınız. <!-- SCCMDocs-pr#3950 -->
@@ -209,7 +209,7 @@ Daha fazla bilgi için bkz. [Mac 'e istemci dağıtma](../../clients/deploy/depl
 > [!Important]  
 > Configuration Manager sürüm 1902, Linux ve UNIX için istemci olarak desteği bırakır. [Sürüm 1802](../changes/whats-new-in-version-1802.md#deprecation-announcement-for-linux-and-unix-client-support)ile kullanımdan kaldırma duyurulmuştur. Linux sunucularının yönetilmesi için Microsoft Azure yönetimini göz önünde bulundurun. Azure çözümlerinde, Linux için uçtan uca düzeltme eki yönetimi de dahil olmak üzere çoğu durumda Configuration Manager işlevselliği aşılacağından kapsamlı Linux desteği vardır.
 
-Linux ve UNIX istemci yükleme paketleri Configuration Manager medyayla birlikte sağlanmaz. **Ek Işletim sistemleri Için Istemcileri** [Microsoft İndirme Merkezi](https://go.microsoft.com/fwlink/?LinkID=525184)' nden indirin. İstemci indirmesi, istemci yükleme paketlerine ek olarak, her bilgisayarda istemcinin yüklenmesini yöneten betiği de içerir.  
+Linux ve UNIX istemci yükleme paketleri Configuration Manager medyayla birlikte sağlanmaz. **Ek Işletim sistemleri Için Istemcileri** [Microsoft İndirme Merkezi](https://www.microsoft.com/download/details.aspx?id=47719)' nden indirin. İstemci indirmesi, istemci yükleme paketlerine ek olarak, her bilgisayarda istemcinin yüklenmesini yöneten betiği de içerir.  
 
 ### <a name="requirements-and-limitations"></a>Gereksinimler ve sınırlamalar
 
@@ -229,89 +229,89 @@ Aşağıdaki sürümler belirtilen. tar dosyası kullanılarak desteklenir.
 
 |Sürüm|IK dosyası|  
 |-|-|  
-|Sürüm 6,1 (güç)|CCM-Aix61ppc. &lt;Build\>. tar|  
-|Sürüm 7,1 (güç)|CCM-Aix71ppc. &lt;Build\>. tar|  
+|Sürüm 6,1 (güç)|CCM-Aix61ppc. &lt; Build \> . tar|  
+|Sürüm 7,1 (güç)|CCM-Aix71ppc. &lt; Build \> . tar|  
 
 #### <a name="centos"></a>CentOS  
 
 |Sürüm|IK dosyası|  
 |-|-|  
-|Sürüm 5 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 5 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 6 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 6 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 7 x64|CCM-Universalx64. &lt;Build\>. tar|  
+|Sürüm 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 6 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 6 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 7 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 #### <a name="debian"></a>Debian  
 
 |Sürüm|IK dosyası|  
 |-|-|  
-|Sürüm 5 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 5 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 6 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 6 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 7 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 7 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 8 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 8 x64|CCM-Universalx64. &lt;Build\>. tar|  
+|Sürüm 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 6 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 6 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 7 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 7 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 8 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 8 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 #### <a name="hp-ux"></a>HP-UX  
 
 |Sürüm|IK dosyası|  
 |-|-|  
-|Sürüm 11iv3 ıA64|CCM-HpuxB. 11.31 i64. &lt;Build\>. tar|  
+|Sürüm 11iv3 ıA64|CCM-HpuxB. 11.31 i64. &lt; Build \> . tar|  
 
 #### <a name="oracle-linux"></a>Oracle Linux  
 
 |Sürüm|IK dosyası|  
 |-|-|  
-|Sürüm 5 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 5 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 6 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 6 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 7 x64|CCM-Universalx64. &lt;Build\>. tar|  
+|Sürüm 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 6 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 6 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 7 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 #### <a name="red-hat-enterprise-linux-rhel"></a>Red Hat Enterprise Linux (RHEL)  
 
 |Sürüm|IK dosyası|  
 |-|-|  
-|Sürüm 5 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 5 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 6 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 6 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 7 x64|CCM-Universalx64. &lt;Build\>. tar|  
+|Sürüm 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 6 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 6 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 7 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 #### <a name="solaris"></a>Solaris  
 
 |Sürüm|IK dosyası|  
 |-|-|  
-|Sürüm 10 x86|CCM-Sol10x86. &lt;Build\>. tar|  
-|Sürüm 10 SPARC|CCM-Sol10sparc. &lt;Build\>. tar|  
-|Sürüm 11 x86|CCM-Sol11x86. &lt;Build\>. tar|  
-|Sürüm 11 SPARC|CCM-Sol11sparc. &lt;Build\>. tar|  
+|Sürüm 10 x86|CCM-Sol10x86. &lt; Build \> . tar|  
+|Sürüm 10 SPARC|CCM-Sol10sparc. &lt; Build \> . tar|  
+|Sürüm 11 x86|CCM-Sol11x86. &lt; Build \> . tar|  
+|Sürüm 11 SPARC|CCM-Sol11sparc. &lt; Build \> . tar|  
 
 #### <a name="suse-linux-enterprise-server-sles"></a>SUSE Linux Enterprise Server (SLES)  
 
 |Sürüm|IK dosyası|  
 |-|-|  
-|Sürüm 10 SP1 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 10 SP1 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 11 SP1 x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 11 SP1 x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 12 x64|CCM-Universalx64. &lt;Build\>. tar|  
+|Sürüm 10 SP1 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 10 SP1 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 11 SP1 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 11 SP1 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 12 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 #### <a name="ubuntu"></a>Ubuntu  
 
 |Sürüm|IK dosyası|  
 |-|-|  
-|Sürüm 10,04 LTS x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 10,04 LTS x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 12,04 LTS x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 12,04 LTS x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 14,04 LTS x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 14,04 LTS x64|CCM-Universalx64. &lt;Build\>. tar|  
-|Sürüm 16,04 LTS x86|CCM-Universalx86. &lt;Build\>. tar|  
-|Sürüm 16,04 LTS x64|CCM-Universalx64. &lt;Build\>. tar|  
+|Sürüm 10,04 LTS x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 10,04 LTS x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 12,04 LTS x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 12,04 LTS x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 14,04 LTS x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 14,04 LTS x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Sürüm 16,04 LTS x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Sürüm 16,04 LTS x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 
 ## <a name="on-premises-mdm"></a><a name="bkmk_OnpremOS"></a>Şirket içi MDM

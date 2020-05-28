@@ -2,7 +2,7 @@
 title: Uygulamaları gözden geçirme ve değiştirme
 titleSuffix: Configuration Manager
 description: Configuration Manager uygulama sürümleriyle çalışmayı ve uygulamaları değiştirmeyi öğrenin.
-ms.date: 10/06/2016
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 87804ee2a76dea918cebb964a3672ab61bf6de8d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6afed00b8207edb338b2a6dc62e083a5267fa47e
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710072"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343142"
 ---
 # <a name="revise-and-supersede-applications-in-configuration-manager"></a>Configuration Manager uygulamaları gözden geçirme ve değiştirme
 
@@ -28,7 +28,7 @@ Bu konu başlığında Configuration Manager uygulama sürümleriyle çalışmay
 
 ### <a name="to-display-an-application-revision-history"></a>Bir uygulama düzeltme geçmişini görüntülemek için  
 
-1.  Configuration Manager konsolunda, **yazılım kitaplığı** > **uygulama yönetimi** > **uygulamaları**' nı seçin ve ardından istediğiniz uygulamayı seçin.  
+1.  Configuration Manager konsolunda, **yazılım kitaplığı**  >  **uygulama yönetimi**  >  **uygulamaları**' nı seçin ve ardından istediğiniz uygulamayı seçin.  
 
 3.  **Giriş** sekmesinde, **uygulama** grubunda, **değişiklik geçmişi** ' ni seçerek **uygulama düzeltme geçmişi** iletişim kutusunu açın.  
 
@@ -59,8 +59,8 @@ Bu konu başlığında Configuration Manager uygulama sürümleriyle çalışmay
 >  Geçerli uygulama düzeltmesini yalnızca, uygulama kullanımdan kalkmışsa ve başvuru yoksa silebilirsiniz.  
 
 ##  <a name="application-supersedence"></a> Uygulamanın yerine geçme  
- Configuration Manager 'de uygulama yönetimi, bir yerine geçme ilişkisi kullanarak mevcut uygulamaları yükseltmenize veya değiştirmenize olanak sağlar. Bir uygulamayı yenisiyle değiştirdiğinizde, yerine geçilen uygulamanın dağıtım türünü değiştirmek üzere yeni bir dağıtım türü belirtebilir ve ayrıca yerine geçen uygulama yüklenmeden önce yerine geçilen uygulamayı yükseltip yükseltmemeye karar verebilirsiniz.  
-
+ Configuration Manager 'de uygulama yönetimi, bir yerine geçme ilişkisi kullanarak mevcut uygulamaları yükseltmenize veya değiştirmenize olanak sağlar. Bir uygulamayı yenisiyle değiştirdiğinizde, yerine geçilen uygulamanın dağıtım türünü değiştirmek üzere yeni bir dağıtım türü belirtebilir ve ayrıca yerine geçen uygulama yüklenmeden önce yerine geçilen uygulamayı yükseltip yükseltmemeye karar verebilirsiniz. Genel anlamda, yerine geçme zincirlerinin en fazla beş düzey derinlikte sınırlanmasını öneririz.
+ 
 > [!IMPORTANT]  
 >  Yerine geçilen dağıtım türünü kaldırma seçeneği belirlendiğinde, bir dağıtım türünün yerine, farklı bir koleksiyon türüne dağıtılan bir dağıtım türü geçirilemez.  Örneğin, yerine geçirilen dağıtım türünü kaldırma seçeneği belirlendiğinde, bir cihaz koleksiyonuna dağıtılan dağıtım türünün yerini, bir kullanıcı koleksiyonuna dağıtılan dağıtım türü alamaz.  
 
@@ -94,11 +94,11 @@ Bu konu başlığında Configuration Manager uygulama sürümleriyle çalışmay
 
 ### <a name="to-specify-a-supersedence-relationship"></a>Yerine geçme ilişkisi belirtmek için  
 
-1.  Configuration Manager konsolunda, **yazılım kitaplığı** > **uygulama yönetimi** > **uygulamaları**' nı seçin ve ardından başka bir uygulamanın yerine geçen uygulamayı seçin.  
+1.  Configuration Manager konsolunda, **yazılım kitaplığı**  >  **uygulama yönetimi**  >  **uygulamaları**' nı seçin ve ardından başka bir uygulamanın yerine geçen uygulamayı seçin.  
 
 3.  **Giriş** sekmesinde, **Özellikler** grubunda, **Özellikler** ' i seçerek uygulama adı **Özellikler** iletişim kutusunu açın.  
 
-4.  *<uygulama adı\> * **Özellikler** iletişim kutusunun **yerine geçme** sekmesinde **Ekle**' yi seçin.  
+4.  *<uygulama adı \> * **Özellikler** iletişim kutusunun **yerine geçme** sekmesinde **Ekle**' yi seçin.  
 
 5.  **Yerine Geçen İlişki Belirt** iletişim kutusunda, **Gözat**'a tıklayın.  
 
@@ -111,7 +111,7 @@ Bu konu başlığında Configuration Manager uygulama sürümleriyle çalışmay
 
 8.  **Yerine geçme Ilişkisini belirt** iletişim kutusunu kapatmak için **Tamam ' ı** seçin.  
 
-9. *<uygulama adı\> * **Özellikler** iletişim kutusunu kapatmak için **Tamam ' ı** seçin.  
+9. *<uygulama adı \> * **Özellikler** iletişim kutusunu kapatmak için **Tamam ' ı** seçin.  
 
 ### <a name="to-display-applications-that-supersede-the-current-application"></a>Geçerli uygulamanın yerine geçen uygulamaları görüntülemek için  
 
@@ -119,8 +119,8 @@ Bu konu başlığında Configuration Manager uygulama sürümleriyle çalışmay
 
 2.  **Yazılım kitaplığı** çalışma alanında **uygulama yönetimi**' ni genişletin, **uygulamalar**' ı seçin ve ardından istediğiniz uygulamayı seçin.  
 
-3.  **Giriş** sekmesinde, **Özellikler** grubunda, **Özellikler** ' i seçerek *<uygulama adı\> * **Özellikler** iletişim kutusunu açın.  
+3.  **Giriş** sekmesinde, **Özellikler** grubunda, **Özellikler** ' i seçerek *<uygulama adı \> * **Özellikler** iletişim kutusunu açın.  
 
-4.  *\><uygulama adı* **Özellikler** iletişim kutusunun **Başvurular** sekmesinde, **Bu uygulamanın yerine geçen uygulamalar** **ilişki türü** açılan listesinden seçin.  
+4.  * \><uygulama adı* **Özellikler** iletişim kutusunun **Başvurular** sekmesinde, **Bu uygulamanın yerine geçen uygulamalar** **ilişki türü** açılan listesinden seçin.  
 
-5.  Seçili uygulamanın yerini alan uygulamaların listesini gözden geçirin ve ardından **Tamam** ' ı seçerek *<uygulama adı\> * **Özellikler** iletişim kutusunu kapatın.  
+5.  Seçili uygulamanın yerini alan uygulamaların listesini gözden geçirin ve ardından **Tamam** ' ı seçerek *<uygulama adı \> * **Özellikler** iletişim kutusunu kapatın.  

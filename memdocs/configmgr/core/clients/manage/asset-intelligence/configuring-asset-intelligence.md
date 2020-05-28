@@ -10,12 +10,12 @@ ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 56a65a0a4e1dd9a96e5725ea8c68cc435947bb08
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1a5c89d3fdd82bfa654f806c6931bde2621e714b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713957"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906603"
 ---
 # <a name="configure-asset-intelligence-in-configuration-manager"></a>Configuration Manager Varlık Yönetim Bilgileri yapılandırma
 
@@ -39,7 +39,7 @@ Varlık Yönetim Bilgileri envanterler ve yazılım lisansı kullanımını yön
 
 ##### <a name="to-enable-asset-intelligence-hardware-inventory-reporting-classes-from-the-asset-intelligence-home-page"></a>Varlık Yönetim Bilgileri donanım envanteri raporlama sınıflarını Varlık Yönetim Bilgileri giriş sayfasından etkinleştirmek için  
 
-1.  Configuration Manager konsolunda **varlık ve uyumluluk** > **varlık yönetim bilgileri**' nı seçin.  
+1.  Configuration Manager konsolunda **varlık ve uyumluluk**  >  **varlık yönetim bilgileri**' nı seçin.  
 
 3.  **Giriş** sekmesinde, **varlık yönetim bilgileri** grubunda, **envanter sınıflarını Düzenle**' yi seçin.   
 
@@ -51,13 +51,13 @@ Varlık Yönetim Bilgileri envanterler ve yazılım lisansı kullanımını yön
 
 ##### <a name="to-enable-asset-intelligence-hardware-inventory-reporting-classes-from-client-settings-properties"></a>Varlık Yönetim Bilgileri donanım envanteri raporlama sınıflarını istemci ayarları özelliklerinden etkinleştirmek için  
 
-1.  Configuration Manager konsolunda, **Yönetim** >  **istemci ayarları** > **varsayılan istemci Aracısı ayarları**' nı seçin. Özel istemci ayarları oluşturduysanız, bunun yerine bunları seçebilirsiniz.  
+1.  Configuration Manager konsolunda, **Yönetim**  >   **istemci ayarları**  >  **varsayılan istemci Aracısı ayarları**' nı seçin. Özel istemci ayarları oluşturduysanız, bunun yerine bunları seçebilirsiniz.  
 
 3.  **Giriş** sekmesinde > **Özellikler** grubunda, **Özellikler**' i seçin.   
 
-4.  **Donanım envanteri** > **kümesi sınıflarını**seçin. .  
+4.  **Donanım envanteri**  >  **kümesi sınıflarını**seçin. .  
 
-5.   >  **Kategoriye göre filtrele****varlık yönetim bilgileri raporlama sınıfları**' nı seçin. Sınıf listesi yalnızca Varlık Yönetim Bilgileri donanım envanteri raporlama sınıflarıyla yenilenir.  
+5.  **Kategoriye göre filtrele**  >  **varlık yönetim bilgileri raporlama sınıfları**' nı seçin. Sınıf listesi yalnızca Varlık Yönetim Bilgileri donanım envanteri raporlama sınıflarıyla yenilenir.  
 
 6.  Listeden en az bir raporlama sınıfı seçin.  
 
@@ -73,7 +73,7 @@ Varlık Yönetim Bilgileri eşitleme noktası, yeni Varlık Yönetim Bilgileri k
 
 ##### <a name="to-install-an-asset-intelligence-synchronization-point-site-system-role"></a>Varlık Yönetim Bilgileri eşitleme noktası site sistemi rolü yüklemek için  
 
-1.  Configuration Manager konsolunda, **Yönetim**> **Site yapılandırması** > **sunucuları ve site sistem rolleri**' ni seçin.  
+1.  Configuration Manager konsolunda, **Yönetim** >  **Site yapılandırması**  >  **sunucuları ve site sistem rolleri**' ni seçin.  
 
 3.  Varlık Yönetim Bilgileri eşitleme noktası site sistemi rolünü yeni veya var olan bir site sistemi sunucusuna ekleyin:  
 
@@ -110,7 +110,7 @@ Varlık Yönetim Bilgileri eşitleme noktası, yeni Varlık Yönetim Bilgileri k
 
 ##### <a name="to-enable-success-logon-event-logging-by-using-a-local-security-policy"></a>Başarılı oturum açma olaylarını günlüğe kaydetmeyi yerel güvenlik ilkesi kullanarak etkinleştirmek için  
 
-1.  Configuration Manager istemci bilgisayarında,**Yönetim Araçları** > **yerel güvenlik ilkesi**'ni **Başlat** > ' ı seçin.  
+1.  Configuration Manager istemci bilgisayarında, **Start**  >  **Yönetim Araçları**  >  **yerel güvenlik ilkesi**'ni Başlat ' ı seçin.  
 
 2.  **Yerel güvenlik ilkesi** iletişim kutusunda, **güvenlik ayarları**altında **Yerel ilkeler**' i genişletin ve sonra **Denetim ilkesi**' ni seçin.  
 
@@ -139,7 +139,7 @@ Varlık Yönetim Bilgileri eşitleme noktası, yeni Varlık Yönetim Bilgileri k
 4.  **İçeri Aktarma** sayfasında, içeri aktardığınız dosyanın Microsoft Toplu Lisanslama (MVLS) dosyası (.xml veya .csv) veya Genel Lisans Beyanı dosyası (.csv) olduğunu belirtin. Genel Lisans Beyanı dosyası oluşturma hakkında daha fazla bilgi almak için bu konunun ilerleyen kısımlarındaki [Create a general license statement information file for import](#BKMK_CreateGeneralLicenseStatement) başlığına bakın.  
 
     > [!WARNING]  
-    >  Varlık Yönetim Bilgileri kataloğuna aktarabileceğiniz bir MVLS dosyasını .csv biçiminde indirmek için bkz. [Microsoft Toplu Lisanslama Hizmet Merkezi](https://go.microsoft.com/fwlink/p/?LinkId=226547). Bu bilgilere erişebilmek için web sitesinde kayıtlı bir hesabınızın olması gerekir. MVLS dosyanızı .xml biçiminde alma hakkında bilgi edinmek için Microsoft hesabı temsilcinize başvurmanız gerekir.  
+    >  Varlık Yönetim Bilgileri kataloğuna aktarabileceğiniz bir MVLS dosyasını .csv biçiminde indirmek için bkz. [Microsoft Toplu Lisanslama Hizmet Merkezi](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Bu bilgilere erişebilmek için web sitesinde kayıtlı bir hesabınızın olması gerekir. MVLS dosyanızı .xml biçiminde alma hakkında bilgi edinmek için Microsoft hesabı temsilcinize başvurmanız gerekir.  
 
 5.  Lisans beyanı dosyasının UNC yolunu girin veya ağda paylaşılan bir klasör ve dosya seçmek için **Araştır** ' ı seçin.  
 
@@ -192,17 +192,17 @@ Varlık Yönetim Bilgileri, genel lisans beyanında belirttiğiniz ürünleri e�
 
 |Sütun adı|Veri türü|Gerekli|Örnek|  
 |-----------------|---------------|--------------|-------------|  
-|Adı|En fazla 255 karakter|Yes|Yazılım başlığı|  
-|Yayımcı|En fazla 255 karakter|Yes|Yazılım yayımcısı|  
+|Name|En fazla 255 karakter|Yes|Yazılım başlığı|  
+|Publisher|En fazla 255 karakter|Yes|Yazılım yayımcısı|  
 |Sürüm|En fazla 255 karakter|Yes|Yazılım başlığı sürümü|  
 |Dil|En fazla 255 karakter|Yes|Yazılım başlığı dili|  
 |EffectiveQuantity|Tamsayı değeri|Yes|Satın alınan lisans sayısı|  
-|PONumber|En fazla 255 karakter|Hayır|Satın alma siparişi bilgileri|  
-|ResellerName|En fazla 255 karakter|Hayır|Satıcı bilgileri|  
-|DateOfPurchase|Şu biçimdeki tarih değeri: GG/AA/YYYY|Hayır|Lisans satın alma tarihi|  
-|SupportPurchased|Bit değeri|Hayır|0 veya 1: Evet için 0, Hayır için 1 yazın|  
-|SupportExpirationDate|Şu biçimdeki tarih değeri: GG/AA/YYYY|Hayır|Satın alınan destek bitiş tarihi|  
-|Açıklamalar|En fazla 255 karakter|Hayır|İsteğe bağlı yorumlar|  
+|PONumber|En fazla 255 karakter|No|Satın alma siparişi bilgileri|  
+|ResellerName|En fazla 255 karakter|No|Satıcı bilgileri|  
+|DateOfPurchase|Şu biçimdeki tarih değeri: GG/AA/YYYY|No|Lisans satın alma tarihi|  
+|SupportPurchased|Bit değeri|No|0 veya 1: Evet için 0, Hayır için 1 yazın|  
+|SupportExpirationDate|Şu biçimdeki tarih değeri: GG/AA/YYYY|No|Satın alınan destek bitiş tarihi|  
+|Yorumlar|En fazla 255 karakter|No|İsteğe bağlı yorumlar|  
 
 ###  <a name="configure-asset-intelligence-maintenance-tasks"></a><a name="BKMK_ConfigureMaintenanceTasks"></a> Configure Asset Intelligence maintenance tasks  
  Varlık Yönetim Bilgileri için aşağıdaki bakım görevleri kullanılabilir:  
@@ -213,7 +213,7 @@ Varlık Yönetim Bilgileri, genel lisans beyanında belirttiğiniz ürünleri e�
 
 ##### <a name="to-configure-asset-intelligence-maintenance-tasks"></a>Varlık Yönetim Bilgileri bakım görevlerini yapılandırmak için  
 
-1.  Configuration Manager konsolunda, **Yönetim** > **Site yapılandırması** > **siteler**' i seçin.  
+1.  Configuration Manager konsolunda, **Yönetim**  >  **Site yapılandırması**  >  **siteler**' i seçin.  
 
 3.  Varlık Yönetim Bilgileri bakım görevinin yapılandırılacağı siteyi seçin.  
 

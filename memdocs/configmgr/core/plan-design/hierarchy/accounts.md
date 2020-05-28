@@ -2,20 +2,20 @@
 title: Kullanılan hesaplar
 titleSuffix: Configuration Manager
 description: Configuration Manager ' de kullanılan Windows gruplarını, hesaplarını ve SQL nesnelerini tanımlayabilir ve yönetin.
-ms.date: 10/23/2019
+ms.date: 05/08/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.technology: Configuration Manager-core
 ms.topic: conceptual
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a6808fed9fa9aaf894e3975066eb7707880b7948
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5bd1284b96e1739126b8d6ee19f20699d47e5880
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073424"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268003"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Configuration Manager kullanılan hesaplar
 
@@ -24,14 +24,14 @@ ms.locfileid: "82073424"
 Configuration Manager, kullanıldıkları ve tüm gereksinimlerin kullanıldığı Windows gruplarını, hesaplarını ve SQL nesnelerini belirlemek için aşağıdaki bilgileri kullanın.  
 
 - [Configuration Manager’ın oluşturduğu ve kullandığı Windows grupları](#bkmk_groups)  
-  - [ConfigMgr_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
-  - [ConfigMgr_DViewAccess](#configmgr_dviewaccess)  
-  - [ConfigMgr Uzaktan Denetim Kullanıcıları](#configmgr-remote-control-users)  
+  - [Yapılandırma Manager_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
+  - [Yapılandırma Manager_DViewAccess](#configmgr_dviewaccess)  
+  - [Uzaktan denetim kullanıcılarını Configuration Manager](#configmgr_rcusers)  
   - [SMS Yöneticileri](#sms-admins)  
-  - [SMS_SiteSystemToSiteServerConnection_MP_&lt;sitekodu\>](#bkmk_remotemp)  
-  - [SMS_SiteSystemToSiteServerConnection_SMSProv_&lt;sitekodu\>](#bkmk_remoteprov)  
-  - [SMS_SiteSystemToSiteServerConnection_Stat_&lt;sitekodu\>](#bkmk_remotestat)  
-  - [SMS_SiteToSiteConnection_&lt;sitekodu\>](#bkmk_filerepl)  
+  - [SMS_SiteSystemToSiteServerConnection_MP_ &lt; sitekodu\>](#bkmk_remotemp)  
+  - [SMS_SiteSystemToSiteServerConnection_SMSProv_ &lt; sitekodu\>](#bkmk_remoteprov)  
+  - [SMS_SiteSystemToSiteServerConnection_Stat_ &lt; sitekodu\>](#bkmk_remotestat)  
+  - [SMS_SiteToSiteConnection_ &lt; sitekodu\>](#bkmk_filerepl)  
 
 - [Configuration Manager'ın kullandığı hesaplar](#bkmk_accounts)
   - [Active Directory grubu bulma hesabı](#active-directory-group-discovery-account)  
@@ -96,7 +96,7 @@ Configuration Manager otomatik olarak oluşturulur ve birçok durumda aşağıda
 > Configuration Manager, etki alanı üyesi olan bir bilgisayarda bir grup oluşturduğunda, Grup bir yerel güvenlik grubudur. Bilgisayar bir etki alanı denetleyicisiyse, Grup bir etki alanı yerel grubudur. Bu grup türü, etki alanındaki tüm etki alanı denetleyicileri arasında paylaşılır.  
 
 
-### <a name="configmgr_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a>ConfigMgr_CollectedFilesAccess
+### <a name="configuration-manager_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a>Yapılandırma Manager_CollectedFilesAccess
 
 Configuration Manager, yazılım envanteri tarafından toplanan dosyaları görüntülemeye erişim vermek için bu grubu kullanır.  
 
@@ -114,14 +114,14 @@ Configuration Manager, Grup üyeliğini otomatik olarak yönetir. Üyelik, atanm
 Varsayılan olarak, bu grubun site sunucusundaki şu klasörde **okuma** izni vardır:`C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`  
 
 
-### <a name="configmgr_dviewaccess"></a><a name="configmgr_dviewaccess"></a>ConfigMgr_DViewAccess  
+### <a name="configuration-manager_dviewaccess"></a><a name="configmgr_dviewaccess"></a>Yapılandırma Manager_DViewAccess  
 
 Bu grup, bir alt birincil sitenin site veritabanı sunucusunda veya veritabanı çoğaltma sunucusunda Configuration Manager oluşturduğu bir yerel güvenlik grubudur. Site, bir hiyerarşideki siteler arasında veritabanı çoğaltması için dağıtılmış görünümleri kullandığınızda onu oluşturur. Bu, merkezi yönetim sitesinin site sunucusunu ve SQL Server bilgisayar hesaplarını içerir.
 
 Daha fazla bilgi için bkz. [siteler arasındaki veri aktarımları](data-transfers-between-sites.md).
 
 
-### <a name="configmgr-remote-control-users"></a>ConfigMgr Uzaktan Denetim Kullanıcıları  
+### <a name="configuration-manager-remote-control-users"></a><a name="configmgr_rcusers"></a>Uzaktan denetim kullanıcılarını Configuration Manager  
 
 Configuration Manager uzak Araçlar, **Izin verilen görüntüleyiciler** listesinde ayarladığınız hesapları ve grupları depolamak için bu grubu kullanır. Site bu listeyi her bir istemciye atar.  
 
@@ -161,12 +161,12 @@ Bir siteyi kaldırdığınızda, bu grup otomatik olarak kaldırılmaz. Bir site
 Configuration Manager, Grup üyeliğini otomatik olarak yönetir. Varsayılan olarak, bir hiyerarşideki ve site sunucusu bilgisayar hesabındaki her yönetici kullanıcı, bir sitedeki her bir SMS sağlayıcısı bilgisayarında **SMS yöneticileri** grubunun üyesidir.
 
 #### <a name="permissions"></a>İzinler
-SMS yöneticileri grubu için hakları ve izinleri **WMI denetimi** MMC ek bileşeninde görüntüleyebilirsiniz. Varsayılan olarak, bu gruba `Root\SMS` WMI ad alanında **hesabı etkinleştir** ve **Uzaktan Etkinleştir** izni verilir. Kimliği doğrulanmış kullanıcıların **çalıştırma yöntemleri**, **sağlayıcı yazma**ve **etkinleştirme hesabı**vardır.
+SMS yöneticileri grubu için hakları ve izinleri **WMI denetimi** MMC ek bileşeninde görüntüleyebilirsiniz. Varsayılan olarak, bu gruba WMI ad alanında **hesabı etkinleştir** ve **Uzaktan Etkinleştir** izni verilir `Root\SMS` . Kimliği doğrulanmış kullanıcıların **çalıştırma yöntemleri**, **sağlayıcı yazma**ve **etkinleştirme hesabı**vardır.
 
 Uzak bir Configuration Manager konsolu kullandığınızda, hem site sunucusu bilgisayarında hem de SMS sağlayıcısında **Uzaktan etkinleştirme** DCOM izinlerini yapılandırın. Bu hakları **SMS yöneticileri** grubuna verin. Bu eylem, bu hakları doğrudan kullanıcılara veya gruplara vermek yerine yönetimi basitleştirir. Daha fazla bilgi için bkz. [uzaktan Configuration Manager konsolları IÇIN DCOM Izinlerini yapılandırma](../../servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole). 
 
 
-### <a name="sms_sitesystemtositeserverconnection_mp_ltsitecode"></a><a name="bkmk_remotemp"></a>SMS_SiteSystemToSiteServerConnection_MP_&lt;sitekodu\>  
+### <a name="sms_sitesystemtositeserverconnection_mp_ltsitecode"></a><a name="bkmk_remotemp"></a>SMS_SiteSystemToSiteServerConnection_MP_ &lt; sitekodu\>  
  
 Site sunucusundan uzakta olan yönetim noktaları, site veritabanına bağlanmak için bu grubu kullanır. Bu grup, site sunucusunda ve site veritabanındaki gelen kutusu klasörlerine bir yönetim noktası erişimi sağlar.  
 
@@ -179,10 +179,10 @@ Bir siteyi kaldırdığınızda, bu grup otomatik olarak kaldırılmaz. Bir site
 Configuration Manager, Grup üyeliğini otomatik olarak yönetir. Varsayılan olarak, üyelik, site için bir yönetim noktasına sahip uzak bilgisayarların bilgisayar hesaplarını içerir.
 
 #### <a name="permissions"></a>İzinler
-Varsayılan olarak, bu grubun site sunucusundaki şu klasörde **okuma**, **okuma & yürütme**ve **klasör içeriğini listeleme** izni vardır: `C:\Program Files\Microsoft Configuration Manager\inboxes`. Bu grup, yönetim noktasının istemci verilerini yazdığı **gelen kutularındaki**alt klasörlere **yazma** ek iznine sahiptir.
+Varsayılan olarak, bu grubun site sunucusundaki şu klasörde **okuma**, **okuma & yürütme**ve **klasör içeriğini listeleme** izni vardır: `C:\Program Files\Microsoft Configuration Manager\inboxes` . Bu grup, yönetim noktasının istemci verilerini yazdığı **gelen kutularındaki**alt klasörlere **yazma** ek iznine sahiptir.
 
 
-### <a name="sms_sitesystemtositeserverconnection_smsprov_ltsitecode"></a><a name="bkmk_remoteprov"></a>SMS_SiteSystemToSiteServerConnection_SMSProv_&lt;sitekodu\>  
+### <a name="sms_sitesystemtositeserverconnection_smsprov_ltsitecode"></a><a name="bkmk_remoteprov"></a>SMS_SiteSystemToSiteServerConnection_SMSProv_ &lt; sitekodu\>  
  
 Uzak SMS sağlayıcısı bilgisayarları, site sunucusuna bağlanmak için bu grubu kullanır.  
 
@@ -195,19 +195,19 @@ Bir siteyi kaldırdığınızda, bu grup otomatik olarak kaldırılmaz. Bir site
 Configuration Manager, Grup üyeliğini otomatik olarak yönetir. Varsayılan olarak, üyelik bilgisayar hesabı veya bir etki alanı kullanıcı hesabı içerir. Her bir uzak SMS sağlayıcısından site sunucusuna bağlanmak için bu hesabı kullanır.
 
 #### <a name="permissions"></a>İzinler
-Varsayılan olarak, bu grubun site sunucusundaki şu klasörde **okuma**, **okuma & yürütme**ve **klasör içeriğini listeleme** izni vardır: `C:\Program Files\Microsoft Configuration Manager\inboxes`. Bu grup, gelen kutularının altındaki alt klasörlere **yazma** ve **değiştirme** ek izinlerine sahiptir. SMS sağlayıcısının bu klasörlere erişmesi gerekir.
+Varsayılan olarak, bu grubun site sunucusundaki şu klasörde **okuma**, **okuma & yürütme**ve **klasör içeriğini listeleme** izni vardır: `C:\Program Files\Microsoft Configuration Manager\inboxes` . Bu grup, gelen kutularının altındaki alt klasörlere **yazma** ve **değiştirme** ek izinlerine sahiptir. SMS sağlayıcısının bu klasörlere erişmesi gerekir.
 
-Bu grubun Ayrıca, **Read** aşağıdaki `C:\Program Files\Microsoft Configuration Manager\OSD\Bin`site sunucusundaki alt klasörlerde okuma izni vardır. 
+Bu grubun Ayrıca, aşağıdaki site sunucusundaki alt klasörlerde **okuma** izni vardır `C:\Program Files\Microsoft Configuration Manager\OSD\Bin` . 
 
-Ayrıca aşağıdaki alt klasörler için aşağıdaki izinlere sahiptir `C:\Program Files\Microsoft Configuration Manager\OSD\boot`:
-- **Okuma**  
+Ayrıca aşağıdaki alt klasörler için aşağıdaki izinlere sahiptir `C:\Program Files\Microsoft Configuration Manager\OSD\boot` :
+- **Okuyamaz**  
 - **& yürütmeyi oku**  
 - **Klasör içeriğini Listele**  
-- **Yazma**  
+- **Yazarken**  
 - **Değiştir**   
 
 
-### <a name="sms_sitesystemtositeserverconnection_stat_ltsitecode"></a><a name="bkmk_remotestat"></a>SMS_SiteSystemToSiteServerConnection_Stat_&lt;sitekodu\>  
+### <a name="sms_sitesystemtositeserverconnection_stat_ltsitecode"></a><a name="bkmk_remotestat"></a>SMS_SiteSystemToSiteServerConnection_Stat_ &lt; sitekodu\>  
 
 Configuration Manager uzak site sistem bilgisayarları üzerindeki dosya gönderme Yöneticisi bileşeni, site sunucusuna bağlanmak için bu grubu kullanır.  
 
@@ -220,12 +220,12 @@ Bir siteyi kaldırdığınızda, bu grup otomatik olarak kaldırılmaz. Bir site
 Configuration Manager, Grup üyeliğini otomatik olarak yönetir. Varsayılan olarak, üyelik bilgisayar hesabını veya etki alanı kullanıcı hesabını içerir. Dosya gönderme Yöneticisi 'ni çalıştıran her bir uzak site sisteminden site sunucusuna bağlanmak için bu hesabı kullanır.
 
 #### <a name="permissions"></a>İzinler
-Varsayılan olarak, bu grubun site sunucusundaki şu klasörde ve alt klasörlerinde **okuma**, **okuma & yürütme**ve **klasör içeriğini listeleme** izni vardır: `C:\Program Files\Microsoft Configuration Manager\inboxes`. 
+Varsayılan olarak, bu grubun site sunucusundaki şu klasörde ve alt klasörlerinde **okuma**, **okuma & yürütme**ve **klasör içeriğini listeleme** izni vardır: `C:\Program Files\Microsoft Configuration Manager\inboxes` . 
 
-Bu grup, site sunucusunda aşağıdaki klasöre **yazma** ve **değiştirme** ek izinlerine sahiptir: `C:\Program Files\Microsoft Configuration Manager\inboxes\statmgr.box`.
+Bu grup, site sunucusunda aşağıdaki klasöre **yazma** ve **değiştirme** ek izinlerine sahiptir: `C:\Program Files\Microsoft Configuration Manager\inboxes\statmgr.box` .
 
 
-### <a name="sms_sitetositeconnection_ltsitecode"></a><a name="bkmk_filerepl"></a>SMS_SiteToSiteConnection_&lt;sitekodu\>  
+### <a name="sms_sitetositeconnection_ltsitecode"></a><a name="bkmk_filerepl"></a>SMS_SiteToSiteConnection_ &lt; sitekodu\>  
 Configuration Manager, bir hiyerarşideki siteler arasında dosya tabanlı çoğaltmayı etkinleştirmek için bu grubu kullanır. Bu siteye doğrudan dosya aktaran her bir uzak site için, bu grubun bir **dosya çoğaltma hesabı**olarak ayarlanmış hesapları vardır.  
 
 #### <a name="type-and-location"></a>Tür ve konum
@@ -237,7 +237,7 @@ Yeni bir siteyi başka bir sitenin alt öğesi olarak yüklediğinizde, Configur
 Bir siteyi kaldırdığınızda, bu grup otomatik olarak kaldırılmaz. Bir siteyi kaldırdıktan sonra el ile silin.
 
 #### <a name="permissions"></a>İzinler
-Varsayılan olarak, bu grup aşağıdaki klasöre **tam denetime** sahiptir: `C:\Program Files\Microsoft Configuration Manager\inboxes\despoolr.box\receive`.
+Varsayılan olarak, bu grup aşağıdaki klasöre **tam denetime** sahiptir: `C:\Program Files\Microsoft Configuration Manager\inboxes\despoolr.box\receive` .
 
 
 
@@ -245,6 +245,8 @@ Varsayılan olarak, bu grup aşağıdaki klasöre **tam denetime** sahiptir: `C:
 
 Configuration Manager için aşağıdaki hesapları ayarlayabilirsiniz.  
 
+> [!TIP]
+> `%`Configuration Manager konsolunda belirttiğiniz hesaplara ilişkin parolada yüzde karakterini () kullanmayın. Hesap kimlik doğrulaması başarısız olur.<!-- SCCMDocs#1032 -->
 
 ### <a name="active-directory-group-discovery-account"></a>Active Directory grubu bulma hesabı  
 
@@ -382,7 +384,7 @@ Daha fazla bilgi için bkz. [Windows 'u ağ üzerinden dağıtmak için çok nok
 
 Bir Configuration Manager istemci, ilk olarak içerik indirmek için bilgisayar hesabını kullanmayı dener. Başarısız olursa, ağ erişim hesabını otomatik olarak dener.  
 
-Sürüm 1806 ' den başlayarak, bir çalışma grubu veya Azure AD 'ye katılmış istemci, ağ erişim hesabına gerek olmadan dağıtım noktalarından içeriğe güvenli bir şekilde erişebilir. Bu davranış, önyükleme medyasından, PXE 'den veya yazılım merkezi 'nden çalışan bir görev sırası ile işletim sistemi dağıtım senaryolarını içerir. Daha fazla bilgi için bkz. [GELIŞMIŞ http](enhanced-http.md).<!--1358228,1358278-->
+Siteyi HTTPS veya [GELIŞMIŞ http](enhanced-http.md)için yapılandırırsanız, bir çalışma grubu veya Azure AD 'ye katılmış istemci, ağ erişim hesabına gerek olmadan dağıtım noktalarından içeriğe güvenli bir şekilde erişebilir. Bu davranış, önyükleme medyasından, PXE 'den veya yazılım merkezi 'nden çalışan bir görev sırası ile işletim sistemi dağıtım senaryolarını içerir.<!--1358228,1358278--> Daha fazla bilgi için bkz. [istemciden yönetim noktası iletişimi](communications-between-endpoints.md#bkmk_client2mp).<!-- SCCMDocs#1345 -->
 
 > [!Note]  
 > Ağ erişim hesabı gerektirmeyen **GELIŞMIŞ http** 'yi etkinleştirirseniz, dağıtım noktasının Windows Server 2012 veya sonraki bir sürümü çalıştırması gerekir. <!--SCCMDocs-pr issue #2696-->
@@ -458,7 +460,7 @@ SQL Server Reporting Services, site veritabanından Configuration Manager raporl
 > Belirttiğiniz hesabın, SQL Raporlama Hizmetleri veritabanını barındıran bilgisayarda **yerel oturum** açma izinlerine sahip olması gerekir.
 
 > [!NOTE]  
-> Hesap, ConfigMgr veritabanındaki smsschm_users SQL veritabanı rolüne eklendikten sonra tüm gerekli hakların otomatik olarak verilmesini sağlar.
+> Hesaba, Configuration Manager veritabanındaki smsschm_users SQL veritabanı rolüne eklendikten sonra tüm gerekli haklar otomatik olarak verilir.
 
 Daha fazla bilgi için bkz. [raporlamaya giriş](../../servers/manage/introduction-to-reporting.md).
 
@@ -643,41 +645,41 @@ Bu nesne, SQL Raporlama yürütmelerini çalıştırmak için kullanılır.  Şu
 
 ## <a name="database-roles-that-configuration-manager-uses-in-sql"></a><a name="bkmk_sqlroles"></a>Configuration Manager SQL 'de kullanan veritabanı rolleri
 <!--SCCMDocs issue #1160-->
-Configuration Manager, SQL 'de aşağıdaki rol nesnelerini otomatik olarak oluşturur ve korur. Bu roller, verileri almak veya ConfigMgr veritabanına veri eklemek için her rolün gerekli eylemlerini gerçekleştirmek üzere belirli saklı yordamlara, tablolara, görünümlere ve işlevlere erişim sağlar. Bu nesneler, güvenlik/roller/veritabanı rolleri altındaki Configuration Manager veritabanı içinde bulunur.
+Configuration Manager, SQL 'de aşağıdaki rol nesnelerini otomatik olarak oluşturur ve korur. Bu roller, verileri almak veya Configuration Manager veritabanına veri eklemek için her rolün gerekli eylemlerini gerçekleştirmek üzere belirli saklı yordamlara, tablolara, görünümlere ve işlevlere erişim sağlar. Bu nesneler, güvenlik/roller/veritabanı rolleri altındaki Configuration Manager veritabanı içinde bulunur.
 
 > [!IMPORTANT]  
-> Bu nesneleri değiştirme veya kaldırma Configuration Manager ortamda çok fazla soruna neden olabilir.  Bu nesnelerde değişiklik yapmanızı öneririz.
+> Bu nesneleri değiştirme veya kaldırma Configuration Manager ortamda çok fazla soruna neden olabilir. Bu nesneleri değiştirmeyin. Aşağıdaki liste yalnızca bilgi amaçlıdır.
 
 ### <a name="smsdbrole_aitool"></a>smsdbrole_AITool
 
-Varlık Yönetim Bilgileri toplu lisanslar içeri aktarma. ConfigMgr, Varlık Yönetim Bilgileri ile kullanılacak toplu lisansın içeri aktarabilmesi için RBA erişimini temel alan kullanıcı hesaplarına bu izni verir.  Bu hesap, tam yönetici rolü veya bir varlık Yöneticisi rolü tarafından eklenebilir.
+Varlık Yönetim Bilgileri toplu lisanslar içeri aktarma. Configuration Manager, RBA erişimini temel alan kullanıcı hesaplarına, Varlık Yönetim Bilgileri birlikte kullanılacak toplu lisansı içeri aktarabilecek şekilde izin verir.  Bu hesap, tam yönetici rolü veya bir varlık Yöneticisi rolü tarafından eklenebilir.
 
 ### <a name="smsdbrole_aius"></a>smsdbrole_AIUS
 
-Güncelleştirme eşitlemesini Varlık Yönetim Bilgileri. ConfigMgr, Varlık Yönetim Bilgileri proxy verilerini almak ve karşıya yüklenmek üzere bekleyen AI verilerini görüntülemek için Varlık Yönetim Bilgileri eşitleme noktası hesabı erişimini barındıran bilgisayar hesabına izin verir.
+Güncelleştirme eşitlemesini Varlık Yönetim Bilgileri. Configuration Manager, Varlık Yönetim Bilgileri proxy verilerini almak ve karşıya yüklenmek üzere bekleyen AI verilerini görüntülemek için Varlık Yönetim Bilgileri eşitleme noktası hesabı erişimini barındıran bilgisayar hesabına izin verir.
 
 ### <a name="smsdbrole_amtsp"></a>smsdbrole_AMTSP
 
 Bant dışı yönetim. Bu rol, Intel AMT 'yi destekleyen cihazlarda verileri almak için Configuration Manager AMT rolü tarafından kullanılır.
 
 > [!NOTE]  
-> Bu rol ConfigMgr 'ın daha yeni sürümlerinde kullanımdan kaldırılmıştır.
+> Bu rol Configuration Manager daha yeni sürümlerinde kullanımdan kaldırılmıştır.
 
 ### <a name="smsdbrole_crp"></a>smsdbrole_CRP
 
-Sertifika kayıt noktası System Center Endpoint Protection (SCEP) desteği. ConfigMgr, sertifika imzalama ve yenileme için SCEP desteği için sertifika kayıt noktasını destekleyen site sisteminin bilgisayar hesabına izin verir.
+Basit Sertifika Kayıt Protokolü (SCEP) desteklemek için sertifika kayıt noktası. Configuration Manager, sertifika imzalama ve yenileme için SCEP desteği için sertifika kayıt noktasını destekleyen site sisteminin bilgisayar hesabına izin verir.
 
 ### <a name="smsdbrole_crppfx"></a>smsdbrole_CRPPfx
 
-Sertifika kayıt noktası PFX desteği. ConfigMgr, imzalama ve yenileme için PFX desteği için yapılandırılmış sertifika kayıt noktasını destekleyen site sisteminin bilgisayar hesabına izin verir.
+Sertifika kayıt noktası PFX desteği. Configuration Manager, imzalama ve yenileme için PFX desteği için yapılandırılmış sertifika kayıt noktasını destekleyen site sisteminin bilgisayar hesabına izin verir.
 
 ### <a name="smsdbrole_dmp"></a>smsdbrole_DMP
 
-Cihaz yönetim noktası. ConfigMgr, "mobil cihazların ve Mac bilgisayarın bu yönetim noktasını kullanmasına Izin ver" seçeneğini içeren bir yönetim noktası için bilgisayar hesabı iznini, MDM 'ye kayıtlı cihazlar için destek sağlama yeteneğini verir.
+Cihaz yönetim noktası. Configuration Manager, "mobil cihazların ve Mac bilgisayarın bu yönetim noktasını kullanmasına Izin ver" seçeneğini içeren bir yönetim noktası için bilgisayar hesabına izin verir, MDM kaydı yapılmış cihazlara destek sağlama olanağı sunar.
 
 ### <a name="smsdbrole_dmpconnector"></a>smsdbrole_DmpConnector
 
-Hizmet bağlantı noktası. ConfigMgr, telemetri verilerini almak ve sağlamak, bulut hizmetlerini yönetmek ve hizmet güncelleştirmelerini almak için hizmet bağlantı noktasını barındıran bilgisayar hesabına bu izni verir.
+Hizmet bağlantı noktası. Configuration Manager, telemetri verilerini almak ve sağlamak, bulut hizmetlerini yönetmek ve hizmet güncelleştirmelerini almak için hizmet bağlantı noktasını barındıran bilgisayar hesabına bu izni verir.
 
 ### <a name="smsdbrole_dviewaccess"></a>smsdbrole_DViewAccess
 
@@ -685,11 +687,11 @@ Dağıtılmış görünümler. Configuration Manager, çoğaltma bağlantısı �
 
 ### <a name="smsdbrole_dwss"></a>smsdbrole_DWSS
 
-Veri ambarı. ConfigMgr, veri ambarı rolünü barındıran bilgisayar hesabına bu izni verir.
+Veri ambarı. Configuration Manager, veri ambarı rolünü barındıran bilgisayar hesabına bu izni verir.
 
 ### <a name="smsdbrole_enrollsvr"></a>smsdbrole_EnrollSvr
 
- Kayıt noktası. ConfigMgr, MDM aracılığıyla cihaz kaydına izin vermek için kayıt noktasını barındıran bilgisayar hesabına bu izni verir.
+ Kayıt noktası. Configuration Manager, MDM aracılığıyla cihaz kaydına izin vermek için kayıt noktasını barındıran bilgisayar hesabına bu izni verir.
 
 ### <a name="smsdbrole_extract"></a>smsdbrole_extract
 
@@ -697,26 +699,26 @@ Tüm genişletilmiş şema görünümlerine erişim sağlar.
 
 ### <a name="smsdbrole_hmsuser"></a>smsdbrole_HMSUser
 
-Hiyerarşi Yöneticisi hizmeti. ConfigMgr, bu hesabın yük devretme durum iletilerini ve bir hiyerarşideki siteler arasında SQL Server Aracı işlemlerini yönetmesini sağlamak için izin verir.
+Hiyerarşi Yöneticisi hizmeti. Configuration Manager, bu hesabın yük devretme durum iletilerini ve SQL Server Aracı işlemlerini, bir hiyerarşideki siteler arasında yönetmesine izin verir.
 
 > [!NOTE]  
 > Smdbrole_WebPortal rolü, varsayılan olarak bu rolün bir üyesidir.
 
 ### <a name="smsdbrole_mcs"></a>smsdbrole_MCS
 
-Çok noktaya yayın hizmeti. ConfigMgr, çok noktaya yayını destekleyen dağıtım noktasının bilgisayar hesabına bu izni verir.
+Çok noktaya yayın hizmeti. Configuration Manager, bu izni çok noktaya yayını destekleyen dağıtım noktasının bilgisayar hesabına verir.
 
 ### <a name="smsdbrole_mp"></a>smsdbrole_MP
 
-Yönetim noktası. ConfigMgr, ConfigMgr istemcileri için destek sağlamak üzere yönetim noktası rolünü barındıran bilgisayar hesabına bu izni verir.
+Yönetim noktası. Configuration Manager, Configuration Manager istemcileri için destek sağlamak üzere yönetim noktası rolünü barındıran bilgisayar hesabına bu izni verir.
 
 ### <a name="smsdbrole_mpmbam"></a>smsdbrole_MPMBAM
 
-Yönetim noktası Microsoft BitLocker Yönetimi ve Izleme. ConfigMgr, bir ortam için MBAD 'yi yöneten yönetim noktasını barındıran bilgisayar hesabına bu izni verir.
+Yönetim noktası Microsoft BitLocker Yönetimi ve Izleme. Configuration Manager, bir ortam için MBAD 'yi yöneten yönetim noktasını barındıran bilgisayar hesabına bu izni verir.
 
 ### <a name="smsdbrole_mpusersvc"></a>smsdbrole_MPUserSvc
 
-Yönetim noktası uygulama Isteği. ConfigMgr, Kullanıcı tabanlı uygulama isteklerini desteklemek için yönetim noktasını barındıran bilgisayar hesabına bu izni verir.
+Yönetim noktası uygulama Isteği. Configuration Manager, Kullanıcı tabanlı uygulama isteklerini desteklemek için yönetim noktasını barındıran bilgisayar hesabına bu izni verir.
 
 ### <a name="smsdbrole_siteprovider"></a>smsdbrole_siteprovider
 
@@ -724,16 +726,37 @@ SMS sağlayıcısı. Configuration Manager, SMS sağlayıcısı rolünü barınd
 
 ### <a name="smsdbrole_siteserver"></a>smsdbrole_siteserver
 
-Site sunucusu. ConfigMgr, birincil veya CAS sitesini barındıran bilgisayar hesabına bu izni verir.
+Site sunucusu. Configuration Manager, birincil veya CAS sitesini barındıran bilgisayar hesabına bu izni verir.
 
 ### <a name="smsdbrole_sup"></a>smsdbrole_SUP
 
-Yazılım güncelleştirme noktası. ConfigMgr, üçüncü taraf güncelleştirmeleriyle çalışmak için yazılım güncelleştirme noktasını barındıran bilgisayar hesabına bu izni verir.
+Yazılım güncelleştirme noktası. Configuration Manager, üçüncü taraf güncelleştirmeleriyle çalışmak için yazılım güncelleştirme noktasını barındıran bilgisayar hesabına bu izni verir.
 
 ### <a name="smsdbrole_webportal"></a>smsdbrole_WebPortal
 
-Uygulama Kataloğu web sitesi noktası. ConfigMgr, Kullanıcı tabanlı uygulama dağıtımı sağlamak için Uygulama Kataloğu web sitesi noktasını barındıran bilgisayar hesabına izin verir.
+Uygulama Kataloğu web sitesi noktası. Configuration Manager, Kullanıcı tabanlı uygulama dağıtımı sağlamak için Uygulama Kataloğu web sitesi noktasını barındıran bilgisayar hesabına izin verir.
 
 ### <a name="smsschm_users"></a>smsschm_users
 
-Kullanıcı raporlama erişimi. ConfigMgr, Raporlama Hizmetleri noktası hesabı için kullanılan hesaba, Configuration Manager raporlama verilerinin görüntülenmesini sağlamak üzere SMS raporlama görünümlerine erişim izni verir.  Veriler RBA kullanımıyla daha fazla kısıtlanmıştır.
+Kullanıcı raporlama erişimi. Configuration Manager, Raporlama Hizmetleri noktası hesabı için kullanılan hesaba, Configuration Manager raporlama verilerinin görüntülenmesini sağlamak üzere SMS raporlama görünümlerine erişim izni verir.  Veriler RBA kullanımıyla daha fazla kısıtlanmıştır.
+
+## <a name="elevated-permissions"></a>Yükseltilmiş izinler
+
+<!-- SCCMDocs#405 -->
+
+Configuration Manager, bazı hesapların devam eden işlemler için yükseltilmiş izinlere sahip olmasını gerektirir. Örneğin, [birincil site yükleme önkoşulları](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri)konusuna bakın. Aşağıdaki liste, bu izinleri ve bunların neden gerekli oldukları nedenleri özetler.
+
+- Birincil site sunucusunun bilgisayar hesabı ve merkezi yönetim site sunucusu şunları gerektirir:
+
+  - Tüm site sistemi sunucularındaki yerel yönetici hakları. Bu izin, sistem hizmetlerini yönetmek, yüklemek ve kaldırmak için kullanılır. Ayrıca, site sunucusu rolleri eklediğinizde veya kaldırdığınızda site sistemindeki yerel grupları da güncelleştirir.
+
+  - Site veritabanının SQL örneğine sysadmin erişimi. Bu izin, site için SQL 'i yapılandırmak ve yönetmek içindir. SQL ile sıkı bir şekilde tümleşen Configuration Manager, yalnızca bir veritabanı değil.
+
+- Tam yönetici rolündeki Kullanıcı hesapları şunları gerektirir:
+
+  - Tüm site sunucularındaki yerel yönetici hakları. Bu izin, sistem hizmetlerini, kayıt defteri anahtarlarını ve değerlerini ve WMI nesnelerini görüntüleme, düzenleme, kaldırma ve yüklemeye yönelik izindir.
+
+  - Site veritabanının SQL örneğine sysadmin erişimi. Bu izin, kurulum veya kurtarma sırasında veritabanını yüklemek ve güncellemek için kullanılır. SQL bakım ve işlemler için de gereklidir. Örneğin, yeniden dizin oluşturma ve istatistikleri güncelleştirme.
+
+    > [!NOTE]
+    > Bazı kuruluşlar sysadmin erişimini kaldırmayı seçebilir ve yalnızca gerektiğinde bu izni verebilir. Bu davranış bazen "tam zamanında (JıT) erişim" olarak adlandırılır. Bu durumda, tam yönetici rolüne sahip kullanıcılar, Configuration Manager veritabanında saklı yordamları okumak, güncelleştirmek ve yürütmek için hala erişime sahip olmalıdır. Bu izinler, tam sysadmin erişimi olmadan çoğu sorunu gidermelerine izin verir.

@@ -2,7 +2,7 @@
 title: Yönetim noktası veritabanı çoğaltmaları
 titleSuffix: Configuration Manager
 description: Yönetim noktaları tarafından site veritabanı sunucusuna yerleştirilmiş CPU yükünü azaltmak için bir veritabanı çoğaltması kullanın.
-ms.date: 10/06/2016
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8d413221f7dc4ea905844ad3b2dbe08826314a54
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3daf23f17719e111dacd45e6176c5f697a3d3224
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720992"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343125"
 ---
 # <a name="database-replicas-for-management-points-for-configuration-manager"></a>Configuration Manager için yönetim noktaları için veritabanı çoğaltmaları
 
@@ -57,7 +57,7 @@ Configuration Manager birincil siteler, istemcilerden gelen istekleri hizmet ede
 
     -   Site veritabanı, veritabanı çoğaltmasını **yayımlamalıdır** ve her uzak veritabanı çoğaltma sunucusu yayımlanan verilere **abone** olmalıdır.  
 
-    -   Hem site veritabanını barındıran hem de bir veritabanı çoğaltması barındıran SQL Server, 2 GB’lik **En Büyük Metin Çoğaltma Boyutu** ’nu destekleyecek şekilde yapılandırılmalıdır. Bunun SQL Server 2012 için nasıl yapılandırılacağına dair bir örnek için, bkz. [En büyük metin çoğaltma boyutu Sunucu Yapılandırma Seçeneğini yapılandırma](https://go.microsoft.com/fwlink/p/?LinkId=273960).  
+    -   Hem site veritabanını barındıran hem de bir veritabanı çoğaltması barındıran SQL Server, 2 GB’lik **En Büyük Metin Çoğaltma Boyutu** ’nu destekleyecek şekilde yapılandırılmalıdır. Bunun SQL Server 2012 için nasıl yapılandırılacağına dair bir örnek için, bkz. [En büyük metin çoğaltma boyutu Sunucu Yapılandırma Seçeneğini yapılandırma](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15).  
 
 -   **Otomatik olarak imzalanan sertifika:** Bir veritabanı çoğaltmasını yapılandırmak için, veritabanı çoğaltması sunucusunda otomatik olarak imzalanan bir sertifika oluşturmalı ve bu sertifikayı veritabanı çoğaltması sunucusunu kullanacak yönetim noktalarının her biri için kullanılabilir hale getirebilirsiniz.  
 
@@ -82,6 +82,8 @@ Configuration Manager birincil siteler, istemcilerden gelen istekleri hizmet ede
 -   **Güncel dala Configuration Manager yükseltmeler**: bir siteyi yükseltmeden önce, System Center 2012 Configuration Manager güncel dalı Configuration Manager veya geçerli dalı son sürüme güncelleştiren Configuration Manager, yönetim noktaları için veritabanı çoğaltmalarını devre dışı bırakmanız gerekir.  Siteniz yükseltildikten sonra yönetim noktalarının veritabanı çoğaltmalarını yeniden yapılandırabilirsiniz.  
 
 -   **Tek bir SQL Server birden çok çoğaltma:**  Bir veritabanı çoğaltma sunucusunu yönetim noktaları için birden çok veritabanı çoğaltmasını barındıracak şekilde yapılandırırsanız (her çoğaltma ayrı bir örnekte olmalıdır), bu sunucuda daha önce yapılandırılmış veritabanı çoğaltmalarının kullanıldığı otomatik olarak imzalanan sertifikanın üzerine yazılmasını engellemek için, değiştirilen bir yapılandırma betiği (aşağıdaki bölümde 4. adımdan) kullanmanız gerekir.  
+
+- Yazılım merkezindeki Kullanıcı dağıtımları bir SQL çoğaltması kullanarak yönetim noktasına karşı çalışmaz. <!--sccmdocs-1011-->
 
 ##  <a name="configure-database-replicas"></a><a name="BKMK_DBReplica_Config"></a> Veritabanı çoğaltmalarını yapılandırma  
 Bir veritabanı çoğaltmasını yapılandırmak için aşağıdaki adımlar gereklidir:  
@@ -172,7 +174,7 @@ Windows Server 2008 R2 bilgisayarında site veritabanı çoğaltması sunucusunu
         -   SQL Server Aracısı farklı bir hesap kullanılarak çalıştırılıyorsa, **Aşağıdaki Windows hesabı altında çalıştır**’ı seçip, ardından o hesabı yapılandırın. Bir Windows hesabı veya SQL Server hesabı belirleyebilirsiniz.  
 
         > [!IMPORTANT]  
-        >  Dağıtım Aracısını çalıştıran hesaba yayıncıya abonelik çekme izinlerini vermelisiniz. Bu izinleri yapılandırmak hakkında bilgi almak için SQL Server TechNet Kitaplığı’nda [Dağıtım Aracısı Güvenliği](https://go.microsoft.com/fwlink/p/?LinkId=238463) konusuna bakın.  
+        >  Dağıtım Aracısını çalıştıran hesaba yayıncıya abonelik çekme izinlerini vermelisiniz. Bu izinleri yapılandırma hakkında daha fazla bilgi için bkz. [Dağıtım Aracısı güvenliği](https://docs.microsoft.com/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15).  
 
       - **Dağıtıcıya Bağlan**için, **İşlem hesabı kimliğine bürünerek**seçeneğini belirleyin.  
 
@@ -421,43 +423,43 @@ Bir yönetim noktası için veritabanı çoğaltmasıyla istemci bildirimini des
 
 ##### <a name="to-configure-the-service-broker-for-a-database-replica"></a>Bir veritabanı çoğaltması için hizmet aracısını yapılandırmak için  
 
-1. Veritabanı çoğaltma sunucusu veritabanına bağlanmak için **SQL Server Management Studio** kullanın ve ardından veritabanı çoğaltma sunucusunda hizmet Aracısı etkinleştirmek için aşağıdaki sorguyu çalıştırın: **ALTER DATABASE &lt;Replication\> Database Name SET enable_broker, WITH Rollback ımwith HONOR_BROKER_PRIORITY**  
+1. Veritabanı çoğaltma sunucusu veritabanına bağlanmak için **SQL Server Management Studio** kullanın ve ardından veritabanı çoğaltma sunucusunda hizmet Aracısı etkinleştirmek için aşağıdaki sorguyu çalıştırın: **ALTER DATABASE &lt; replication Database Name \> set enable_broker, WITH Rollback ımwith HONOR_BROKER_PRIORITY**  
 
 2. Ardından, veritabanı çoğaltma sunucusunda, Hizmet Aracısı'nı istemci bildirimi için yapılandırın ve Hizmet Aracısı sertifikasını dışarı aktarın. Bunu yapmak için, tek bir eylem Hizmet Aracısı'nı yapılandıran ve sertifikayı dışarı aktaran bir SQL Server saklı yordamını çalıştırın. Saklı yordamı çalıştırdığınızda, veritabanı çoğaltma sunucusunun FQDN'sini, veritabanı çoğaltmaları veritabanının adını belirtmeniz ve sertifika dosyasının dışarı aktarılacağı konumu belirtmeniz gerekir.  
 
-    Veritabanı Çoğaltma sunucusunda gerekli ayrıntıları yapılandırmak ve veritabanı çoğaltma sunucusunun sertifikasını dışarı aktarmak için aşağıdaki sorguyu çalıştırın: **Exec sp_BgbConfigSSBForReplicaDB&lt;' çoğaltma SQL Server FQDN\>', '&lt;çoğaltma veritabanı adı\>', '&lt;sertifika yedekleme dosyası yolu '\>**  
+    Veritabanı Çoğaltma sunucusunda gerekli ayrıntıları yapılandırmak ve veritabanı çoğaltma sunucusunun sertifikasını dışarı aktarmak için aşağıdaki sorguyu çalıştırın: **EXEC sp_BgbConfigSSBForReplicaDB ' &lt; çoğaltma SQL Server FQDN \> ', ' &lt; çoğaltma veritabanı adı \> ', ' &lt; sertifika yedekleme dosyası yolu \> '**  
 
    > [!NOTE]  
-   >  Veritabanı çoğaltma sunucusu varsayılan SQL Server örneğinde değilse, bu adım için çoğaltma veritabanı adından başka örnek adını da belirtmeniz gerekir. Bunu yapmak için, ** &lt;\> çoğaltma veritabanı adı** ' nı ** &lt;örnek adı\\çoğaltma veritabanı adıyla\>** değiştirin.  
+   >  Veritabanı çoğaltma sunucusu varsayılan SQL Server örneğinde değilse, bu adım için çoğaltma veritabanı adından başka örnek adını da belirtmeniz gerekir. Bunu yapmak için, ** &lt; çoğaltma veritabanı adı \> ** ' nı ** &lt; örnek adı \\ çoğaltma veritabanı adıyla \> **değiştirin.  
 
     Veritabanı çoğaltma sunucusundan sertifikayı dışarı aktardıktan sonra, sertifikanın bir kopyasını birincil siteler veritabanı sunucusuna yerleştirin.  
 
 3. Birincil site veritabanına bağlanmak için **SQL Server Management Studio** 'yu kullanın. Birincil siteler veritabanına bağlandıktan sonra, sertifikayı içeri aktaracak ve veritabanı çoğaltma sunucunda kullanılan Hizmet Aracısı'nı, veritabanı çoğaltma sunucusunun FQDN'sini ve veritabanı çoğaltmaları veritabanının adını belirtecek bir sorgu çalıştırın. Bu, birincil site veritabanlarını, veritabanı çoğaltma sunucusunun veritabanıyla iletişim kurmak üzere Hizmet Aracısı'nı kullanacak şekilde yapılandırır.  
 
-    Sertifikayı veritabanı çoğaltma sunucusundan almak ve gerekli ayrıntıları belirtmek için aşağıdaki sorguyu çalıştırın: **Exec sp_BgbConfigSSBForRemoteService ' çoğaltma ',&lt;' SQL Hizmet Aracısı bağlantı noktası\>', '&lt;sertifika dosyası yolu\>', '&lt;çoğaltma SQL Server FQDN\>', '&lt;çoğaltma veritabanı adı '\>**  
+    Sertifikayı veritabanı çoğaltma sunucusundan almak ve gerekli ayrıntıları belirtmek için aşağıdaki sorguyu çalıştırın: **EXEC sp_BgbConfigSSBForRemoteService ' çoğaltma ', ' &lt; SQL Hizmet Aracısı bağlantı noktası \> ', ' &lt; sertifika dosyası yolu \> ', ' &lt; çoğaltma SQL Server FQDN \> ', ' &lt; çoğaltma veritabanı adı \> '**  
 
    > [!NOTE]  
-   >  Veritabanı çoğaltma sunucusu varsayılan SQL Server örneğinde değilse, bu adım için çoğaltma veritabanı adından başka örnek adını da belirtmeniz gerekir. Bunu yapmak için, ** &lt;çoğaltma veritabanı adını\> ** **\ınstance Name\\çoğaltma veritabanı adıyla\>** değiştirin.  
+   >  Veritabanı çoğaltma sunucusu varsayılan SQL Server örneğinde değilse, bu adım için çoğaltma veritabanı adından başka örnek adını da belirtmeniz gerekir. Bunu yapmak için, ** &lt; çoğaltma veritabanı adını \> ** **\ınstance Name \\ çoğaltma veritabanı adıyla \> **değiştirin.  
 
-4. Ardından, site veritabanı sunucusunda, site veritabanı sunucusunun sertifikasını dışarı aktarmak için aşağıdaki komutu çalıştırın: **EXEC sp_BgbCreateAndBackupSQLCert '&lt;sertifika yedekleme dosyası\>yolu '**  
+4. Ardından, site veritabanı sunucusunda, site veritabanı sunucusunun sertifikasını dışarı aktarmak için aşağıdaki komutu çalıştırın: **EXEC sp_BgbCreateAndBackupSQLCert ' &lt; sertifika yedekleme dosyası yolu \> '**  
 
     Site veritabanı sunucusundan sertifikayı dışarı aktardıktan sonra, sertifikanın bir kopyasını veritabanı çoğaltma sunucusuna yerleştirin.  
 
 5. Veritabanı çoğaltma sunucusu veritabanına bağlanmak için **SQL Server Management Studio** 'yu kullanın. Veritabanı çoğaltma sunucusu veritabanına bağlandıktan sonra, sertifikayı içeri aktaracak ve birincil sitenin site kodunu ve site veritabanı sunucusunda kullanılan Hizmet Aracısı bağlantı noktasını belirtecek bir sorgu çalıştırın. Bu, veritabanı çoğaltma sunucusunu, birincil sitenin veritabanıyla iletişim kurmak üzere Hizmet Aracısı'nı kullanacak şekilde yapılandırır.  
 
-    Sertifikayı site veritabanı sunucusundan içeri aktarmak için şu sorguyu çalıştırın: **&lt;exec sp_BgbConfigSSBForRemoteService ' site kodu\>', '&lt;SQL Hizmet Aracısı bağlantı noktası\>', '&lt;sertifika dosyası yolu '\>**  
+    Sertifikayı site veritabanı sunucusundan içeri aktarmak için şu sorguyu çalıştırın: **EXEC sp_BgbConfigSSBForRemoteService ' &lt; site kodu \> ', ' &lt; SQL Hizmet Aracısı bağlantı noktası \> ', ' &lt; sertifika dosyası yolu \> '**  
 
    Site veritabanının ve veritabanı çoğaltma veritabanının yapılandırmasını tamamladıktan birkaç dakika sonra, birincil sitedeki bildirim yöneticisi birincil site veritabanından veritabanı çoğaltmaya istemci bildirimi için Hizmet Aracısı sohbeti ayarlar.  
 
 ###  <a name="supplemental-script-for-additional-database-replicas-on-a-single-sql-server"></a><a name="bkmk_supscript"></a> Tek bir SQL Server üzerinde ek veritabanı çoğaltmaları için ek komut dosyası  
  Kullanmaya devam etmeyi planladığınız bir veritabanı çoğaltmasına zaten sahip olan bir SQL Server veritabanı çoğaltması sunucusu için otomatik olarak imzalanan bir sertifika yapılandırmak üzere adım 4 ' teki komut dosyasını kullandığınızda, özgün betiğin değiştirilmiş bir sürümünü kullanmanız gerekir. Aşağıdaki değişiklikler, komut dosyasının sunucuda var olan bir sertifikayı silmesini engeller ve benzersiz Kolay adlarla sonraki sertifikaları oluşturur.  Özgün komut dosyasını aşağıdaki gibi düzenleyin:  
 
--   Komut dosyası girişleri arasındaki her bir satır için açıklama (çalıştırmayı engelle) **# var olan sertifikayı Sil** ve **# yeni sertifikayı oluştur**. Bunu yapmak için, geçerli her **#** satırın ilk karakteri olarak bir ekleyin.  
+-   Komut dosyası girişleri arasındaki her bir satır için açıklama (çalıştırmayı engelle) **# var olan sertifikayı Sil** ve **# yeni sertifikayı oluştur**. Bunu yapmak için, **#** geçerli her satırın ilk karakteri olarak bir ekleyin.  
 
 -   Yapılandırmak üzere bu komut dosyasını kullandığınız sonraki her veritabanı çoğaltması için sertifikanın Kolay adını güncelleştirin.  Bunu yapmak için $enrollment satırı düzenleyin **. CertificateFriendlyName = "ConfigMgr SQL Server kimlik sertifikası"** ve **ConfigMgr SQL Server kimlik sertifikasını** **ConfigMgr SQL Server tanımlama Certificate1**gibi yeni bir adla değiştirin.  
 
 ##  <a name="manage-database-replica-configurations"></a><a name="BKMK_DBReplicaOps"></a>Veritabanı çoğaltması yapılandırmasını yönetme  
- Bir sitede veritabanı çoğaltması kullandığınızda, bir veritabanı çoğaltmasını kaldırma, veritabanı çoğaltması kullanan bir siteyi kaldırma veya site veritabanını yeni bir SQL Server yüklemesine taşıma sürecine katkı olarak aşağıdaki bölümlerde verilen bilgileri kullanın. Yayınları silmek üzere aşağıdaki bölümlerde verilen bilgileri kullanırken, veritabanı çoğaltması için kullandığınız SQL Server sürümü için işlem çoğaltmasını silme yönergelerini kullanın. Örneğin, SQL Server 2008 R2 kullanıyorsanız bkz. [nasıl yapılır: yayın silme (Replication Transact-SQL Programming)](https://go.microsoft.com/fwlink/p/?LinkId=273934).  
+ Bir sitede veritabanı çoğaltması kullandığınızda, bir veritabanı çoğaltmasını kaldırma, veritabanı çoğaltması kullanan bir siteyi kaldırma veya site veritabanını yeni bir SQL Server yüklemesine taşıma sürecine katkı olarak aşağıdaki bölümlerde verilen bilgileri kullanın. Yayınları silmek üzere aşağıdaki bölümlerde verilen bilgileri kullanırken, veritabanı çoğaltması için kullandığınız SQL Server sürümü için işlem çoğaltmasını silme yönergelerini kullanın. Daha fazla bilgi için bkz. [yayını silme](https://docs.microsoft.com/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15).  
 
 > [!NOTE]  
 >  Veritabanı çoğaltmaları için yapılandırılmış bir site veritabanını geri yükledikten sonra, veritabanı çoğaltmalarını kullanabilmek için her veritabanı çoğaltmasını yeniden yapılandırarak hem yayımları hem de abonelikleri tekrar oluşturmanız gerekir.  

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 503bb6d2293b4b5efb1d84980225a9d7052e1656
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3dd4c3f22a0f2c24153e6d26be2e3098511c5dc4
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721300"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905317"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-configuration-manager"></a>Configuration Manager için Technical Preview 1710 ' deki yetenekler
 
@@ -35,7 +35,7 @@ Bu makalede, sürüm 1710 Configuration Manager için Technical Preview 'da kull
 - **Pasif modda bir site sunucunuz varsa yeni bir önizleme sürümüne güncelleştirme başarısız olur**. [Pasif modda birincil site sunucusuna](capabilities-in-technical-preview-1706.md#site-server-role-high-availability)sahip bir önizleme sürümü çalıştırdığınızda, önizleme sitenizi bu yeni önizleme sürümüne başarıyla güncelleştirebilmeniz için Pasif mod site sunucusunu kaldırmanız gerekir. Siteniz güncelleştirmeyi tamamladıktan sonra Pasif mod site sunucusunu yeniden yükleyebilirsiniz.
 
   Pasif mod site sunucusunu kaldırmak için:
-  1. Konsolunda **Yönetim** > **genel bakış** > **Site yapılandırması** > **sunucuları ve site sistem rolleri**' ne gidin ve Pasif mod site sunucusunu seçin.
+  1. Konsolunda **Yönetim**  >  **genel bakış**  >  **Site yapılandırması**  >  **sunucuları ve site sistem rolleri**' ne gidin ve Pasif mod site sunucusunu seçin.
   2. **Site sistemi rolleri** bölmesinde, **site sunucusu** rolüne sağ tıklayın ve ardından **rolü kaldır**' ı seçin.
   3. Pasif mod site sunucusuna sağ tıklayın ve ardından **Sil**' i seçin.
   4. Site sunucusu kaldırıldıktan sonra, etkin birincil site sunucusunda hizmeti **CONFIGURATION_MANAGER_UPDATE**yeniden başlatın.
@@ -99,18 +99,18 @@ Exploit Guard ilke dağıtımına yönelik uyumluluk verileri Configuration Mana
 
 Exploit Guard ve belirli bileşenler ve kurallar hakkında daha fazla bilgi için Windows belge kitaplığı 'nda [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) bölümüne bakın.
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 Yönetilen cihazların Windows 10 1709 Fall Creators Update veya sonrasını çalıştırması ve yapılandırılan bileşenlere ve kurallara bağlı olarak aşağıdaki gereksinimleri karşılamalıdır:
 
 |Exploit Guard bileşeni |Ek önkoşullar|
 |------------------------|------------------------|
 | Saldırı Yüzeyini Azaltma  | Cihazlarda [Windows Defender av gerçek zamanlı korumanın]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) etkinleştirilmiş olması gerekir.  |
 | Denetlenen klasör erişimi  | Cihazlarda [Windows Defender av gerçek zamanlı korumanın]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) etkinleştirilmiş olması gerekir.   |
-| Exploit protection  | Hiçbiri  |
+| Exploit protection  | Yok  |
 | Ağ koruması  |  Cihazlarda [Windows Defender av gerçek zamanlı korumanın]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) etkinleştirilmiş olması gerekir.  |
 
 ### <a name="create-an-exploit-guard-policy----1355468---"></a>Exploit Guard ilkesi oluşturma  <!--1355468 -->
-1. Configuration Manager konsolunda **varlıklar ve uyumluluk** > **Endpoint Protection**' ne gidin ve ardından **Windows Defender Exploit Guard**' ı tıklatın.
+1. Configuration Manager konsolunda **varlıklar ve uyumluluk**  >  **Endpoint Protection**' ne gidin ve ardından **Windows Defender Exploit Guard**' ı tıklatın.
 2. **Giriş** sekmesinde, **Oluştur** grubunda, **Exploit İlkesi Oluştur**' a tıklayın.
 3. **Yapılandırma Öğesi Oluştur Sihirbazı** ’nın **Genel**sayfasında, yapılandırma öğesi için bir ad ve isteğe bağlı bir açıklama belirtin.
 4. Ardından, bu ilkeyle yönetmek istediğiniz Exploit Guard bileşenlerini seçin. Seçtiğiniz her bir bileşen için, daha sonra ek ayrıntılar yapılandırabilirsiniz.
@@ -121,11 +121,11 @@ Yönetilen cihazların Windows 10 1709 Fall Creators Update veya sonrasını ça
 5. Daha sonra cihazlara dağıtabileceğiniz ilkeyi oluşturmak için Sihirbazı doldurun.
 
 ### <a name="deploy-an-exploit-guard-policy"></a>Exploit Guard İlkesi dağıtma     
-Exploit Guard ilkeleri oluşturduktan sonra, bunları dağıtmak için Exploit Guard Koruma Ilkesini Dağıtma Sihirbazı 'nı kullanın. Bunu yapmak için Configuration Manager konsolunu **varlıklar ve uyum** > **Endpoint Protection**açın ve ardından **Exploit Guard ilkesini dağıt**' a tıklayın.
+Exploit Guard ilkeleri oluşturduktan sonra, bunları dağıtmak için Exploit Guard Koruma Ilkesini Dağıtma Sihirbazı 'nı kullanın. Bunu yapmak için Configuration Manager konsolunu **varlıklar ve uyum**  >  **Endpoint Protection**açın ve ardından **Exploit Guard ilkesini dağıt**' a tıklayın.
 
 ## <a name="limited-support-for-cng-certificates"></a>CNG sertifikaları için sınırlı destek
 <!-- 1356191 -->
-Bu sürümden itibaren, artık aşağıdaki senaryolar için [şifreleme API 'si: yeni nesil (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) sertifika şablonları kullanabilirsiniz:
+Bu sürümden itibaren, artık aşağıdaki senaryolar için [şifreleme API 'si: yeni nesil (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) sertifika şablonları kullanabilirsiniz:
 
 - Bir HTTPS yönetim noktasıyla istemci kaydı ve iletişim.   
 - Bir HTTPS dağıtım noktasıyla yazılım dağıtımı ve uygulama dağıtımı.   
@@ -202,7 +202,7 @@ Windows Defender Application Guard hakkındaki temel bilgileri anlamak için [bl
 
 Bir ilke oluşturmak ve kullanılabilir ayarlara gitmek için:
 1. **Configuration Manager** konsolunda, **varlıklar ve uyumluluk**' i seçin.
-2. **Varlıklar ve uyum** çalışma alanında,**Windows Defender Application Guard****Endpoint Protection** >  **genel bakış** > ' ı seçin.
+2. **Varlıklar ve uyum** çalışma alanında, **Overview**  >  **Endpoint Protection**  >  **Windows Defender Application Guard**Endpoint Protection genel bakış ' ı seçin.
 3. **Giriş** sekmesinde, **Oluştur** grubunda, **Windows Defender Application Guard İlkesi Oluştur**' a tıklayın.
 4. Blog gönderisini başvuru olarak kullanarak, özelliği denemek için kullanılabilir ayarları gözden geçirin ve yapılandırabilirsiniz.
 5. Bu sürümde, sihirbaza yeni ağ tanımı sayfasını ekledik. Burada, kurumsal kimlik ' i belirtin ve kurumsal ağ sınırınızı tanımlayın.

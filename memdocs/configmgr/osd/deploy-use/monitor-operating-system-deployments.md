@@ -2,7 +2,7 @@
 title: İşletim sistemi dağıtımlarını izleme
 titleSuffix: Configuration Manager
 description: İşletim sistemi dağıtım nesnelerini izlemenize yardımcı olması için Configuration Manager konsolu, uyarılar, raporlar ve çeşitli durum göstergeleri sağlar.
-ms.date: 10/06/2016
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 08085d94-295c-432f-b5e3-9736bce0193b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9d0a430a1010611bc6a7e0871e8c59ca3d1f8de7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7afab9fbbb443b2f9fb4af15a3805c0b7df7a014
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723834"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802175"
 ---
 # <a name="monitor-operating-system-deployments-in-configuration-manager"></a>Configuration Manager işletim sistemi dağıtımlarını izleme
 
@@ -45,6 +45,9 @@ Configuration Manager konsolu, işletim sistemi dağıtım nesnelerini izlemeniz
 3.  Dağıtım durumunu izlemek istediğiniz görev dizisini tıklatın.  
 
 4.  **Giriş** sekmesinde **Dağıtım** grubunda, **Durumu Görüntüle**'yi tıklatın.  
+
+> [!NOTE]  
+> Bir yükseltme başlatıldığında, durum iletisi 52200 oluşturulur. Bu, yükseltmeyi yapan kullanıcıyı içerir.  
 
 ##  <a name="operating-system-deployment-reports"></a><a name="BKMK_TSReports"></a> İşletim sistemi dağıtım raporları  
  Çok sayıda önceden tanımlanmış işletim sistemi dağıtımı raporu bulunur. Bunlar, çeşitli kategorilerde organize edilmiştir ve durum geçişi ile görev dizisi dağıtımına ilişkin belirli bilgileri raporlamak için kullanılabilir. Önceden yapılandırılmış raporları kullanmanın yanı sıra, kurumunuzun ihtiyaçlarına göre özel yazılım güncelleştirme raporları da oluşturabilirsiniz. Daha fazla bilgi için bkz. [Raporlama Için işlemler ve bakım](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  

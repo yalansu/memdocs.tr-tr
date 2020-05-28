@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 184c836a601378fcb8e58f78debb80a3cd48857c
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: 40eda7184d7be5010bf51e3ac0d30d6d9442203c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693113"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905058"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager için kaldırılan ve kullanım dışı bırakılan özellikler
 
@@ -29,7 +29,7 @@ Bu bilgiler gelecek sürümlerde değiştirilebilir. Kullanım dışı bırakıl
 
 Aşağıdaki özellikler kullanım dışıdır. Artık bunları kullanmaya devam edebilirsiniz, ancak Microsoft bu desteği daha sonra bitirmek için planlar.
 
-|Özellik|İlk duyurulan kullanımdan kaldırma|Destek&nbsp;kaldırıldı|
+|Özellik|İlk duyurulan kullanımdan kaldırma|Destek &nbsp; kaldırıldı|
 |-----------|---|--------------|
 | Cihaz kaydı ve güvenlik güncelleştirmeleri için **son verileri görüntülemek** üzere masaüstü Analizi seçeneği.<!-- 7080949 --> Daha fazla bilgi için bkz. [veri gecikmesi](../../../../desktop-analytics/troubleshooting.md#data-latency).|Mayıs 2020|2020 Temmuz|
 |Azure 'dan içerik paylaşmaya yönelik uygulama değişti. İçerik etkinleştirilmiş bir bulut yönetimi ağ geçidi kullanın. Gelecekte geleneksel bir bulut dağıtım noktası oluşturamayacak.|Şubat 2019|TBD<sup>[Note 1](#bkmk_note1)</sup>|
@@ -43,14 +43,14 @@ Belirli bir zaman çerçevesi belirlenir (TBD). Microsoft, yeni süreç veya öz
 
 Aşağıdaki özellikler artık desteklenmiyor. Bazı durumlarda, bunlar üründe artık yoktur.
 
-|Özellik|İlk duyurulan kullanımdan kaldırma|Destek&nbsp;kaldırıldı|  
+|Özellik|İlk duyurulan kullanımdan kaldırma|Destek &nbsp; kaldırıldı|  
 |-----------|---|--------------|  
 | Windows Analytics ve Yükseltme Hazırlığı tümleştirme. Daha fazla bilgi için bkz. [KB 4521815: Windows Analytics emekli on 31 ocak 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement). | 14 Ekim 2019 | 31 Ocak 2020 |
 | Koşullu erişim uyumluluk ilkeleri için cihaz sistem durumu kanıtlama değerlendirmesi <!--1235616 aka 3608202--> Daha fazla bilgi için bkz. [karma MDM 'ye ne oldu](../../../../mdm/understand/what-happened-to-hybrid.md).| 3 Temmuz 2019 | Sürüm 1910 |
 | Configuration Manager Şirket Portalı uygulaması | 21 Mayıs 2019 | Sürüm 1910 |
 | Uygulama Kataloğu, her iki site sistem rolü de dahil: Uygulama Kataloğu web sitesi noktası ve Web hizmet noktası. Daha fazla bilgi için bkz. [uygulama kataloğunu kaldırma](../../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat). | 21 Mayıs 2019 | Sürüm 1910 |
 |Configuration Manager 'de Iş için Windows Hello ayarları ile sertifika tabanlı kimlik doğrulaması<br>Daha fazla bilgi için bkz. [iş Için Windows Hello ayarları](../../../../protect/deploy-use/windows-hello-for-business-settings.md).|Aralık 2017|Sürüm 1910|
-|Mac ve Linux için System Center Endpoint Protection<br>Daha fazla bilgi için bkz. [Destek Web günlüğü gönderisinin sonu](https://go.microsoft.com/fwlink/?linkid=870182).|Ekim 2018|31 Aralık 2018|
+|Mac ve Linux için System Center Endpoint Protection<br>Daha fazla bilgi için bkz. [Destek Web günlüğü gönderisinin sonu](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257).|Ekim 2018|31 Aralık 2018|
 |Şirket içi koşullu erişim<br>Daha fazla bilgi için bkz. [karma MDM 'ye ne oldu](../../../../mdm/understand/what-happened-to-hybrid.md).|30 Ocak 2019|1 Eylül 2019|
 |Karma mobil cihaz yönetimi (MDM)<br>Daha fazla bilgi için bkz. [karma MDM 'ye ne oldu](../../../../mdm/understand/what-happened-to-hybrid.md).<br><br>1902 Intune hizmet sürümünden itibaren, 2019 Şubat sonunda, yeni müşteriler yeni bir karma bağlantı oluşturamaz.<!--Intune feature 2683117-->|14 Ağustos 2018|1 Eylül 2019|
 |Güvenlik Içeriği Otomasyon Protokolü (SCAP) uzantıları. <!--3607889--><br>Önceki sertifikalı sürüm, [Microsoft Indirme merkezi](https://www.microsoft.com/download/details.aspx?id=48741)' nde hala kullanılabilir.|Eylül 2018|Sürüm 1810|
@@ -80,7 +80,7 @@ Configuration Manager, Configuration Manager konsolunun içinden AMT tabanlı bi
 
 Configuration Manager ağ erişim koruması desteğini kaldırdı. Özellik Windows Server 2012 R2 'de kullanımdan kaldırılmıştır ve Windows 10 ' dan kaldırılmıştır.  
 
-Ağ erişimi koruması alternatifleri için [Ağ İlkesi ve Erişim Hizmetlerine Genel Bakış](https://technet.microsoft.com/library/hh831683.aspx) konusundaki *Devre dışı bırakılan işlevsellik* bölümüne bakın.
+Ağ erişimi koruması alternatifleri için [Ağ İlkesi ve Erişim Hizmetlerine Genel Bakış](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)) konusundaki *Devre dışı bırakılan işlevsellik* bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

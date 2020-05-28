@@ -10,12 +10,13 @@ ms.assetid: 637fbd8e-b8ea-4c7e-95ee-a60a323c496e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7a14da1505e89dfd61a3dc4f13385fbf5c21d41
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 0a7ffe8eea1048e696ce7dd254d58364226efc58
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723659"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268802"
 ---
 # <a name="how-to-deploy-to-production-with-desktop-analytics"></a>Masaüstü analizi ile üretime dağıtım
 
@@ -87,7 +88,7 @@ Pilot koleksiyonuna bir masaüstü analizi ile tümleşik tek dağıtım oluştu
 Pilot dağıtımda olduğu gibi, masaüstü analizi de üretim dağıtımı sırasında ilgilenmeniz gereken herhangi bir sorun olduğunu size önerir. Masaüstü Analizi ' nde dağıtım planına gidin ve sol menüden **dağıtım durumu** ' nu seçin. Dağıtım durumu görünümü aşağıdaki kategorilerdeki cihazları listeler:  
 
 - Başlamadı
-- Devam ediyor
+- Sürüyor
 - Tamamlandı
 - Dikkat edilmesi gereken (cihaz adına göre sıralanmış) cihazlar
 - Dikkat edilmesi gereken noktalar (sorun türüne göre sıralanmış)

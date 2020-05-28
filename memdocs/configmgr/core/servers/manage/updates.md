@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f38b8662d4d7b5e7897d0c43560a5e2a4672eee6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ffee9d851f00bcac5ed7ba562bdc9db8e0fa2767
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720747"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903933"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Configuration Manager için güncelleştirmeler ve bakım
 
@@ -60,11 +60,13 @@ Aşağıdaki desteklenen Configuration Manager sürümleri temel, bir güncelle�
 
 | Sürüm | Kullanılabilirlik tarihi | [Destek bitiş tarihi](current-branch-versions-supported.md) | Taban çizgisi | Konsol içi güncelleştirme |  
 |-------------|-----------|------------|--------------|------------------------|  
-| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | Mayıs 2020 | 1 Ekim 2021 | Evet<sup>[1](#bkmk_note1)</sup> | Yes |
+| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 1 Nisan 2020 | 1 Ekim 2021 | Evet<sup>[1](#bkmk_note1)</sup> | Yes |
 | [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | 29 Kasım 2019 | 29 Mayıs 2021 | Hayır | Yes |
 | [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | 26 Temmuz 2019 | 26 Ocak 2021 | Hayır | Yes |
 | [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | 27 Mart 2019 | 27 Eylül 2020 | Evet<sup>[1](#bkmk_note1)</sup> | Yes |
 | [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | 27 Kasım 2018 | 1 Aralık 2020 | Hayır | Yes |
+
+**Kullanılabilirlik tarihi** , [erken güncelleştirme halkasının](checklist-for-installing-update-2002.md#early-update-ring) Yayınlanma tarihidir. Güncelleştirme genel kullanıma alındıktan sonra toplu lisans hizmet merkezi 'nde temel medya kullanılabilir olacaktır.
 
 <a name="bkmk_note1"></a>
 
@@ -75,7 +77,7 @@ Aşağıdaki desteklenen Configuration Manager sürümleri temel, bir güncelle�
 > - System Center 2016 Datacenter
 > - System Center 2016 standart  
 >
-> Örneğin VLSC 'de için `System Center Config Mgr (current branch)`arama yapın. Dosya listesindeki temel medyayı bulun ve bu sürüm için indirin.  
+> Örneğin VLSC 'de için arama yapın `System Center Config Mgr (current branch)` . Dosya listesindeki temel medyayı bulun ve bu sürüm için indirin.  
 
 #### <a name="historical-versions"></a>Geçmiş sürümler
 

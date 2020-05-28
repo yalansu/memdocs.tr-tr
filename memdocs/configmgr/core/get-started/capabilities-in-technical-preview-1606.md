@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05e7bbe6373ed91de5a2bb8e99a8425e733274f2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0513c1908b1360a50653931dda57e5d148055240
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721622"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905667"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Configuration Manager için Technical Preview 1606 ' deki yetenekler
 
@@ -50,7 +50,7 @@ Microsoft Intune ile Configuration Manager kullanırken cihazları otomatik olar
 
 ### <a name="associate-a-collection-with-a-device-category"></a>Bir koleksiyonu bir cihaz kategorisiyle ilişkilendir
 Bir koleksiyonu bir cihaz kategorisiyle ilişkilendirdiğinizde, belirttiğiniz kategoride bulunan tüm cihazlar bu koleksiyona eklenir.
-1.  Bir cihaz koleksiyonunun **Özellikler** iletişim kutusunda **kural** > **cihaz kategorisi kuralı**Ekle ' ye tıklayın.
+1.  Bir cihaz koleksiyonunun **Özellikler** iletişim kutusunda **kural**  >  **cihaz kategorisi kuralı**Ekle ' ye tıklayın.
 2.  **Cihaz kategorisi üyelik kuralı oluştur** iletişim kutusunda koleksiyondaki tüm cihazlara uygulanacak kategoriyi seçin.
 3.  **Cihaz kategorisi üyelik kuralı oluştur** iletişim kutusunu ve koleksiyon özellikleri iletişim kutusunu kapatın.
 
@@ -80,9 +80,9 @@ Yazılım güncelleştirmeleri dağıtım sihirbazına, otomatik dağıtım kura
 
 Device Guard, cihazda çalışmasına izin verilen öğeleri tamamen denetlemek için donanım ve yazılım özelliklerini kullanan bir Windows 10 özelliğidir.
 
-Cihaz korumasının ne yaptığını ve [Bu TechNet makalesinde](https://technet.microsoft.com/itpro/windows/whats-new/device-guard-overview)nasıl çalıştığını ayrıntılı bir genel bakış edinebilirsiniz.
+Daha fazla bilgi için bkz. [Device Guard 'A giriş](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
 
-Bu sürümde, Configuration Manager ile dağıtılan yürütülebilir ve DLL dosyalarının yönetilen bir yükleyiciden geldiği şekilde otomatik olarak güvenilir olması için, Configuration Manager Device Guard ve [Windows AppLocker](https://technet.microsoft.com/library/dd723678(v=ws.10).aspx) ile birlikte çalışabilir, yani hedef cihazda çalışmasına izin verilecek ve diğer yazılım, açıkça diğer AppLocker kuralları tarafından çalışmasına izin verilmediği sürece çalışmasına izin verilmeyecektir.  
+Bu sürümde, Configuration Manager ile dağıtılan yürütülebilir ve DLL dosyalarının yönetilen bir yükleyiciden geldiği şekilde otomatik olarak güvenilir olması için, Configuration Manager Device Guard ve [Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) ile birlikte çalışabilir, yani hedef cihazda çalışmasına izin verilecek ve diğer yazılım, açıkça diğer AppLocker kuralları tarafından çalışmasına izin verilmediği sürece çalışmasına izin verilmeyecektir.  
 
 Mevcut olduğunda, bu özellik Configuration Manager konsolundan yapılandırılamaz. İlkeyi yapılandırmak için, her istemcide bir kayıt defteri anahtarı yapılandırıp istemci üzerinde Windows hizmetlerini yapılandırmanız gerekir.
 Bu işlem tamamlandıktan sonra, AppLocker ilke dosyasını yapılandırın. İlke dosyasını yapılandırdıktan sonra, herhangi bir uyumlu istemci cihazına dağıtabilirsiniz.
@@ -93,24 +93,22 @@ Tüm AppLocker ilkeleri gibi, yönetilen yükleyici kuralları olan ilkeler iki 
 - Denetim modu – uygulamaların, notların çalışması engellenir, ancak engellenmiş olabilecek tüm uygulamalar bir günlük dosyasında bildirilir (Bu, Configuration Manager sonraki bir sürümünde desteklenecektir).
 - Zorlama etkin – uygulamaların çalışması engellenir.
 
-Configuration Manager ile Device Guard 'ın nasıl kullanılacağı hakkında daha fazla bilgi için [Enterprise Mobility and Security blogda](https://blogs.technet.microsoft.com/enterprisemobility/2016/06/20/configmgr-as-a-managed-installer-with-win10)bulunabilir.
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
-Daha fazla okuma:
+- [Device Guard tanıtımı](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [Device Guard tanıtımı](https://technet.microsoft.com/itpro/windows/keep-secure/introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies)
-- [Cihaz koruyucu sertifikası ve uyumluluğu](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance)
-- [Device Guard dağıtım kılavuzu](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
+- [Windows Defender uygulama denetimi dağıtım işlemini Planlama ve kullanmaya başlama](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
   ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a>Şirket içi mobil cihaz yönetimi için birden çok cihaz yönetim noktası  
-  Technical Preview 1606 ile,\-şirket Içi mobil cihaz YÖNETIMI (MDM), kayıtlı bir cihazı, kullanılabilir birden fazla cihaz yönetim noktasına sahip olacak şekilde otomatik olarak yapılandıran, Windows 10 yıldönümü güncelleştirmesi 'nde yeni bir özelliği destekler. Bu özellik, normal kullandığı bir cihaz kullanılabilir olmadığında cihazın başka bir cihaz yönetim noktasına geri yüklenmesine izin verir. Bu özellik yalnızca Windows 10 yıldönümü güncelleştirmesi yüklü olan bilgisayarlarda kullanılabilir.  
+  Technical Preview 1606 ile, \- Şirket Içi mobil cihaz yönetimi (MDM), kayıtlı bir cihazı, kullanılabilir birden fazla cihaz yönetim noktasına sahip olacak şekilde otomatik olarak yapılandıran, Windows 10 yıldönümü güncelleştirmesi 'nde yeni bir özelliği destekler. Bu özellik, normal kullandığı bir cihaz kullanılabilir olmadığında cihazın başka bir cihaz yönetim noktasına geri yüklenmesine izin verir. Bu özellik yalnızca Windows 10 yıldönümü güncelleştirmesi yüklü olan bilgisayarlarda kullanılabilir.  
 
 ### <a name="try-it-out"></a>Deneyin!  
 
 1.  Hiyerarşinize birden fazla cihaz yönetim noktası yükler.  
 
-2.  \-Şirket Içi mobil cihaz yönetimi Için bir Windows 10 yıldönümü güncelleştirme cihazı kaydedin.  
+2.  Şirket içi mobil cihaz yönetimi için bir Windows 10 yıldönümü güncelleştirme cihazı kaydedin \- .  
 
-\-Şirket Içi mobil cihaz yönetimi için sitenizi hazırlama ve cihazları kaydetme hakkında bilgi için bkz. Şirket [içi altyapıyla mobil cihazları yönetme](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
+Şirket içi mobil cihaz yönetimi için sitenizi hazırlama ve cihazları kaydetme hakkında bilgi için \- bkz. Şirket [içi altyapıyla mobil cihazları yönetme](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
 ## <a name="cloud-proxy-service-for-managing-clients-on-the-internet"></a><a name="cloud_proxy"></a>Internet 'te istemcileri yönetmeye yönelik bulut proxy hizmeti
 
@@ -221,10 +219,10 @@ Hizmet ve roller tamamen yapılandırıldıktan sonra, iç istemciler bulut prox
 
 Technical Preview 1606 ' den itibaren, Office 365 istemcilerinin Configuration Manager güncelleştirmelerini almasını sağlamak için Grup ilkesi yerine bir Configuration Manager istemci Aracısı ayarı kullanabilirsiniz. Bu ayarı yapılandırdıktan ve Office 365 güncelleştirmelerini dağıttıktan sonra, Configuration Manager istemci Aracısı, Office 365 güncelleştirmelerini bir dağıtım noktasından indirmek ve onları yüklemek için Office 365 istemci aracısında iletişim kurar. Configuration Manager, istemci Aracısı ayarının envanterini de alır.
 
-Daha fazla bilgi için bkz. [Office 365 ProPlus güncelleştirmelerini yönetme](https://technet.microsoft.com/library/mt741983.aspx).
+Daha fazla bilgi için bkz. [Office 365 ProPlus güncelleştirmelerini yönetme](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>Office 365 istemci Aracısı 'nı yönetmek için Configuration Manager istemci ayarını ayarlayın
-1.  Configuration Manager konsolunda **Yönetim** > **genel bakış** > **istemci ayarları**' na tıklayın.
+1.  Configuration Manager konsolunda **Yönetim**  >  **genel bakış**  >  **istemci ayarları**' na tıklayın.
 2. İstemci aracısını etkinleştirmek için uygun cihaz ayarlarını açın. Varsayılan ve özel istemci ayarları hakkında daha fazla bilgi için bkz. [istemci ayarlarını yapılandırma](../../core/clients/deploy/configure-client-settings.md).
 3. **Yazılım güncelleştirmeleri** ' ne tıklayın ve **Office 365 istemci Aracısı ayarının yönetimini etkinleştirmek** için **Evet** ' i seçin.  
 

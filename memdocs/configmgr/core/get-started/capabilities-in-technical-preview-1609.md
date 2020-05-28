@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7e803dd1cbacbbd65a5f2968e217656b088d281
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 51a974247d7281d6134b699a5865f801d1ed6094
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721538"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905717"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Configuration Manager için Technical Preview 1609 ' deki yetenekler
 
@@ -51,7 +51,6 @@ Etkinleştirilirse, Apple 'ın Kurulum Yardımcısı bu hizmeti cihaz etkinleşt
 
 Upgrade Analytics, daha kolay ve daha sorunsuz yükseltmeler sağlamak için cihaz hazırlığını değerlendirmenizi ve Windows 10 ile uyumluluğunu incelemenize olanak sağlar. Upgrade Analytics Configuration Manager ile tümleştirmeyle, Configuration Manager yönetim konsolundaki yükseltme uyumluluğu verilerine erişebilir ve sonra cihaz listesinden, yükseltme veya düzeltme için hedef cihazları kullanabilirsiniz.
 
-Upgrade Analytics hakkında daha fazla bilgi edinmek için [Upgrade Analytics kullanmaya başlama](https://technet.microsoft.com/itpro/windows/deploy/upgrade-analytics-get-started)makalesini okuyun.
 
 ## <a name="native-connection-types-for-windows-10-vpn-hybrid-profiles"></a>Windows 10 VPN karma profilleri için yerel bağlantı türleri
 
@@ -72,7 +71,7 @@ Bu sürümde, bu yeni özelliklerle [iş Için Windows Mağazası tümleştirmes
 #### <a name="purchase-and-sync-a-paid-online-licensed-app"></a>Ücretli bir çevrimiçi lisanslı uygulamayı satın alıp eşitleyin
 
 1. Iş için Windows Mağazası 'ndan ücretli bir çevrimiçi lisanslı uygulama satın alın.
-2. Configuration Manager konsolunun **Yönetim** çalışma alanında, **Cloud Services** > **güncelleştirmeler** > ' e tıklayın ve**iş için Windows Mağazası**' na bakım yapın.
+2. Configuration Manager konsolunun **Yönetim** çalışma alanında, **Cloud Services**güncelleştirmeler ' e tıklayın  >  **ve**  >  **iş için Windows Mağazası**' na bakım yapın.
 3. **Giriş** sekmesinde, **Eşitle** grubunda, **Şimdi Eşitle**' ye tıklayın.
 4. Daha sonra, satın aldığınız uygulama, **uygulama yönetimi** çalışma alanının **Mağaza uygulamaları için lisans bilgileri** düğümünde görünür.
 
@@ -83,7 +82,7 @@ Bu sürümde, bu yeni özelliklerle [iş Için Windows Mağazası tümleştirmes
 
 #### <a name="modify-the-client-secret-key-from-azure-active-directory"></a>Azure Active Directory istemci gizli anahtarını değiştirme
 
-1. Configuration Manager konsolunun **Yönetim** çalışma alanında, **Cloud Services** > **güncelleştirmeler** > ' e tıklayın ve**iş için Windows Mağazası**' na bakım yapın.
+1. Configuration Manager konsolunun **Yönetim** çalışma alanında, **Cloud Services**güncelleştirmeler ' e tıklayın  >  **ve**  >  **iş için Windows Mağazası**' na bakım yapın.
 2. Iş için Windows Mağazası hesabınızı seçin ve ardından **Özellikler**' e tıklayın.
 3. **İş Için Windows Mağazası hesap özellikleri** iletişim kutusunda, **istemci gizli anahtarı** alanına yeni bir anahtar girin ve ardından **Doğrula**' ya tıklayın. Doğrulandıktan sonra **Uygula**' ya tıklayın ve iletişim kutusunu kapatın.
 
@@ -239,7 +238,7 @@ Aşağıdaki bölümlerde, bu önizleme ile tanıtılan değişiklikler, yeni mo
 ### <a name="changes-in-ui-and-behavior-for-boundary-groups-and-content-locations"></a>Sınır grupları ve içerik konumları için Kullanıcı arabirimi ve davranıştaki değişiklikler
 Sınır gruplarında yapılan önemli değişiklikler ve istemcilerin içerik bulma yöntemleri aşağıda verilmiştir. Bu değişikliklerin ve kavramların birçoğu birlikte çalışır.
 - **Hızlı veya yavaş yapılandırma işlemleri kaldırılır:** Artık tek tek dağıtım noktalarını hızlı veya yavaş olacak şekilde yapılandıramazsınız.  Bunun yerine, bir sınır grubuyla ilişkilendirilmiş her site sistemi aynı şekilde değerlendirilir. Bu değişiklik nedeniyle, sınır grubu özelliklerinin **Başvurular** sekmesi artık hızlı veya yavaş yapılandırmayı desteklememektedir.
-- **Her sitede yeni varsayılan sınır grubu:**  Her birincil sitenin ***Default-site-sınır-Group\<sitekodu>*** adlı yeni bir varsayılan sınır grubu vardır.  İstemci, bir sınır grubuna atanan bir ağ konumunda olmadığında, bu istemci, atanmış sitesinden varsayılan grupla ilişkili site sistemlerini kullanır. Bu sınır grubunu, geri dönüş içerik konumu kavramının yerini alarak kullanmayı planlayın.    
+- **Her sitede yeni varsayılan sınır grubu:**  Her birincil sitenin ***Default-site-sınır-Group \< sitekodu>*** adlı yeni bir varsayılan sınır grubu vardır.  İstemci, bir sınır grubuna atanan bir ağ konumunda olmadığında, bu istemci, atanmış sitesinden varsayılan grupla ilişkili site sistemlerini kullanır. Bu sınır grubunu, geri dönüş içerik konumu kavramının yerini alarak kullanmayı planlayın.    
   -  **' İçerik için geri dönüş kaynak konumlarına Izin ver '** kaldırıldı: artık geri dönüş için kullanılacak bir dağıtım noktasını açıkça yapılandırmayın ve bunu ayarlama seçenekleri kullanıcı arabiriminden kaldırılır.
 
   Ayrıca, istemcilerin uygulama için dağıtım türündeki **içerik için bir geri dönüş kaynak konumu kullanmasına Izin ver** ayarının sonucu değişmiştir. Dağıtım türündeki bu ayar artık istemcinin varsayılan site sınır grubunu içerik kaynağı konumu olarak kullanmasına olanak sağlar.
@@ -318,8 +317,8 @@ Farklı komşu grupları, belirli dağıtım noktalarının bir içerik kaynağ�
 
 ### <a name="update-existing-boundary-groups-to-the-new-model"></a><a name="bkmk_update"></a>Mevcut sınır gruplarını yeni modele Güncelleştir
 Sürüm 1609 ' i yüklediğinizde ve sitenizi güncelleştirdiğinizde, aşağıdaki konfigürasyonlar otomatik olarak yapılır. Bunlar, yeni sınır grupları ve ilişkiler yapılandırılana kadar geçerli geri dönüş davranışının kullanılabilir kalmasını sağlamak için tasarlanmıştır.  
-- Bir sitedeki korumasız dağıtım noktaları, söz konusu sitenin sınır grubuna *>varsayılan site\<sınır grubu site koduna* eklenir.
-- Bir kopya, yavaş bağlantıyla yapılandırılmış bir site sunucusu içeren her bir mevcut sınır grubundan oluşur. Yeni grubun adı *** \<orijinal sınır grubu adı>-yavaş-tmp***:  
+- Bir sitedeki korumasız dağıtım noktaları, söz konusu sitenin sınır grubuna *>varsayılan site sınır grubu site \< koduna* eklenir.
+- Bir kopya, yavaş bağlantıyla yapılandırılmış bir site sunucusu içeren her bir mevcut sınır grubundan oluşur. Yeni grubun adı *** \< orijinal sınır grubu adı>-yavaş-tmp***:  
   -   Hızlı bağlantısı olan site sistemleri orijinal sınır grubunda bırakılır.
   -   Sınır grubunun kopyasına yavaş bağlantısı olan site sistemlerinin bir kopyası eklenir. Yavaş olarak yapılandırılan özgün site sistemleri geriye dönük uyumluluk için özgün sınır grubunda kalır, ancak bu sınır grubundan kullanılmaz.
   -   Bu sınır grubu kopyasında kendisiyle ilişkili sınırlar yok. Ancak, özgün grup ve geri dönüş süresi sıfır olan yeni sınır grubu kopyası arasında bir geri dönüş bağlantısı oluşturulur.
@@ -338,7 +337,7 @@ Seçilmedi | Seçildi |   **Normal geri dönüş** -geçerli sınır grubundaki 
 
 
 ## <a name="office-365-client-management-dashboard"></a>Office 365 Istemci yönetimi panosu  
-Configuration Manager 1609 Technical Preview, yeni bir pano sunar. Panoyu görüntülemek için Configuration Manager konsolunda **yazılım kitaplığı** > **'na genel bakış** > **Office 365 istemci yönetimi**' ne gidin.
+Configuration Manager 1609 Technical Preview, yeni bir pano sunar. Panoyu görüntülemek için Configuration Manager konsolunda **yazılım kitaplığı**  >  **'na genel bakış**  >  **Office 365 istemci yönetimi**' ne gidin.
 >[!NOTE]
 >Configuration Manager konsolundaki **Yenilikler çalışma alanında, yeni Pano** **Office 365 bakım panosu**yanlış biçimde adlandırılmaktadır.
 
@@ -348,7 +347,7 @@ Panoda aşağıdakiler için grafikler görüntülenir:
 - Office 365 istemci sürümleri
 - Office 365 istemci dilleri
 - Office 365 istemci kanalları     
-Daha fazla bilgi için bkz. [Office 365 ProPlus güncelleştirme kanallarına genel bakış](https://technet.microsoft.com/library/mt455210.aspx).
+Daha fazla bilgi için bkz. [Office 365 ProPlus güncelleştirme kanallarına genel bakış](https://docs.microsoft.com/deployoffice/overview-update-channels).
 - Kullanılabilir ürünler kümesinde Office 365 Istemcisinin seçtiği otomatik dağıtım kuralları.
 
 Panoda aşağıdaki eylemleri gerçekleştirebilirsiniz:
@@ -368,7 +367,7 @@ Bu sürümde, Office 365 Istemci yönetimi panosundan Office 365 yükleyicisi 'n
 - Office 365 uygulama yüklemesi Sihirbazı 'nda mevcut istemci ayarlarını (XML) içeri aktarmaya çalıştığınızda sorunlarla karşılaşabilirsiniz. İstemci ayarlarını bir sorun olmadan el ile yapılandırabilirsiniz.
 
 #### <a name="to-deploy-office-365-apps-to-clients"></a>Office 365 uygulamalarını istemcilere dağıtmak için
-1. Configuration Manager konsolunda, **yazılım kitaplığı** > **genel bakış** > **Office 365 istemci yönetimi**' ne gidin.
+1. Configuration Manager konsolunda, **yazılım kitaplığı**  >  **genel bakış**  >  **Office 365 istemci yönetimi**' ne gidin.
 2. Sağ üst bölmedeki **Office 365 yükleyicisi** ' ne tıklayın. Office 365 Istemci Yükleme Sihirbazı açılır.
 3. **Uygulama ayarları** sayfasında, uygulama için bir ad ve açıklama sağlayın, dosyalar için karşıdan yükleme konumunu girin ve ardından **İleri**' ye tıklayın. Konumun &#92;&#92;*server*&#92;*paylaşımında*belirtilmesi gerektiğini unutmayın.
 4. **Istemci ayarlarını Içeri aktar** sayfasında, mevcut bir XML yapılandırma dosyasından Office 365 istemci ayarlarını içeri aktarıp aktarmayacağını seçin veya ayarları el Ile belirtip **İleri**' ye tıklayın.
@@ -383,7 +382,7 @@ Varolan bir yapılandırma dosyanız varsa, dosyanın konumunu girin ve 7. adım
 Paketi sihirbazda dağıtmamalıdır seçeneğini belirlerseniz adım 9 ' a atlayın.
 8. Sihirbaz sayfalarının geri kalanını tipik bir uygulama dağıtımında yaptığınız gibi yapılandırın. Daha fazla bilgi için bkz. [uygulama oluşturma ve dağıtma](../../apps/get-started/create-and-deploy-an-application.md).
 9. Sihirbazı tamamlayın.
-10. Uygulamayı, **yazılım kitaplığı** > **'na genel bakış** > **uygulama yönetimi** > **uygulamalarından**Configuration Manager içindeki diğer uygulamalarla aynı şekilde dağıtabilir veya düzenleyebilirsiniz.
+10. Uygulamayı, **yazılım kitaplığı**  >  **'na genel bakış**  >  **uygulama yönetimi**  >  **uygulamalarından**Configuration Manager içindeki diğer uygulamalarla aynı şekilde dağıtabilir veya düzenleyebilirsiniz.
 
 >[!NOTE]
 >Office 365 uygulamalarını dağıttıktan sonra, uygulamaları sürdürmek için otomatik dağıtım kuralları oluşturabilirsiniz. Office 365 uygulamaları için bir ADR oluşturmak üzere **ADR oluştur**' a tıklayın ve ürünü seçerken **Office 365 istemcisi** ' ni seçin. Daha fazla bilgi için bkz. [yazılım güncelleştirmelerini otomatik olarak dağıtma](../../sum/deploy-use/automatically-deploy-software-updates.md).
@@ -417,7 +416,7 @@ Bir işletim sistemini yüklemek için var olan bir görev dizisinde, BIOS 'TAN 
 Bu sürümde, Configuration Manager konsolundaki **izleme çalışma alanı** altındaki yeni grafikleri kullanarak cihazların genel uyumluluğuna ve en önemli nedenlere ilişkin hızlı bir bakış edinebilirsiniz.
 
 #### <a name="to-view-the-intune-compliance-charts"></a>Intune uyumluluk grafiklerini görüntülemek için
-1. Configuration Manager konsolunda, **izleme** > **genel bakış** > **Uyumluluk ayarları**' na gidin.
+1. Configuration Manager konsolunda, **izleme**  >  **genel bakış**  >  **Uyumluluk ayarları**' na gidin.
 2. **Genel cihaz uyumluluk** grafiği görüntülenir.
 3. **Genel cihaz uyumluluğu** ve **en iyi uyumsuzluk nedenleri** grafiklerini görüntülemek için **uyumluluk ilkeleri** düğümüne tıklayın.
 
@@ -437,7 +436,7 @@ Aşağıdaki bölümleri sırasıyla doldurun:
 
 #### <a name="check-the-top-non-compliance-reasons-chart"></a>En yüksek uyumsuzluk nedenleri grafiğini denetle
 5. **En üst uyumsuzluk nedenleri** grafiğini kontrol edin. Bu grafik uyumsuzluk için en iyi 5 nedeni listeler, ancak yalnızca iki uyumluluk ayarı ilke genelinde ayarlandığında yalnızca ilk 2 uyumsuzluk nedeni görüntülenir.
-6. Grafikteki bölümlerden birine tıklayın. Her iki cihaz de **varlıklar ve uyumluluk** > **genel bakış** > **cihazı**altında filtrelenmiş görünümde görünmelidir.
+6. Grafikteki bölümlerden birine tıklayın. Her iki cihaz de **varlıklar ve uyumluluk**  >  **genel bakış**  >  **cihazı**altında filtrelenmiş görünümde görünmelidir.
 
 #### <a name="make-devices-compliant-and-check-the-charts"></a>Cihazları uyumlu hale getirme ve grafikleri denetleme
 7. Cihazlardan birini ilkelerden biriyle uyumlu hale getirin. **Genel cihaz uyumluluk** grafiğini yeniden kontrol edin. Grafik, uyumlu bir cihaz ve uyumlu olmayan bir cihaz görüntülemelidir.

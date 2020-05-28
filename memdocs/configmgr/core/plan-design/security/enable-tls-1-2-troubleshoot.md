@@ -77,7 +77,7 @@ Bu sorunu çözmek için şu adımları izleyin:
 
 1. [.NET Framework güncelleştirin](enable-tls-1-2-client.md#bkmk_net)ve ilgili tüm bilgisayarlarda güçlü şifrelemeyi etkinleştirin.
 
-1. Uygulama Kataloğu `%WinDir%\System32\InetSrv` sunucusunun klasöründe aşağıdaki içeriğe sahip bir **W2SP. exe. config** dosyası oluşturun:
+1. `%WinDir%\System32\InetSrv`Uygulama Kataloğu sunucusunun klasöründe aşağıdaki içeriğe sahip bir **W2SP. exe. config** dosyası oluşturun:
 
     ``` XML
     <?xml version="1.0" encoding="utf-8" ?>

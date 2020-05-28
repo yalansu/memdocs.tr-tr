@@ -10,12 +10,12 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 58b66639094a602206114cd75a724504618ad38c
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: ac5b3ca8e8e2231bb421838fa56b20253ddfcb74
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110041"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878368"
 ---
 # <a name="how-to-use-the-configuration-manager-console"></a>Configuration Manager konsolunu kullanma
 
@@ -27,7 +27,7 @@ Yöneticiler, Configuration Manager ortamını yönetmek için Configuration Man
 
 Configuration Manager konsolu her zaman her site sunucusuna yüklenir. Ayrıca, diğer bilgisayarlara da yükleyebilirsiniz. Daha fazla bilgi için [Configuration Manager konsolunu yüklemeye](../deploy/install/install-consoles.md)bakın.
 
-Konsolunu bir Windows 10 bilgisayarında açmak için en basit yöntem, **Başlat** ' a basın ve yazmaya `Configuration Manager console`başlayın. En iyi eşleşmeyi bulmak için Windows 'un tüm dizesini yazmanız gerekebilir.
+Konsolunu bir Windows 10 bilgisayarında açmak için en basit yöntem, **Başlat** ' a basın ve yazmaya başlayın `Configuration Manager console` . En iyi eşleşmeyi bulmak için Windows 'un tüm dizesini yazmanız gerekebilir.
 
 Başlat menüsüne gözattığınızda, **Microsoft Endpoint Manager** grubunda **Configuration Manager konsolu** simgesini arayın.
 
@@ -50,7 +50,7 @@ Farklı bir site sunucusuna bağlanmak için aşağıdaki adımları kullanın:
 
     ![Site bağlantısı penceresinde, site sunucusunun FQDN 'sini girin](media/site-server-fqdn.png)  
 
-3. **Bağlan**’ı seçin.  
+3. **Bağlan**'ı seçin.  
 
 Sürüm 1810 ' den başlayarak, yöneticilerin Configuration Manager sitelere erişmesi için en düşük kimlik doğrulama düzeyini belirtebilirsiniz. Bu özellik, yöneticilerin Windows 'da gerekli düzeyiyle oturum açmasını zorlar. Daha fazla bilgi için bkz. [plan for SMS Provider](../../plan-design/hierarchy/plan-for-the-sms-provider.md#bkmk_auth). <!--1357013-->  
 
@@ -58,7 +58,7 @@ Sürüm 1810 ' den başlayarak, yöneticilerin Configuration Manager sitelere er
 
 Konsolun bazı bölgeleri, atanan güvenlik rolüne bağlı olarak görünür olmayabilir. Roller hakkında daha fazla bilgi için bkz. [rol tabanlı yönetimin temelleri](../../understand/fundamentals-of-role-based-administration.md).
 
-### <a name="workspaces"></a>Çalışma Alanları
+### <a name="workspaces"></a>Çalışma alanları
 
 Configuration Manager konsolunun dört **çalışma alanı**vardır:  
 
@@ -163,7 +163,7 @@ Sürüm 1902 ' den başlayarak, Configuration Manager konsolunun en son bağlant
 
 Sürüm 1910 ' den başlayarak, Microsoft ekipleri ' nı kullanarak **konsol bağlantıları** düğümünden diğer Configuration Manager yöneticilerine ileti gönderebilirsiniz. **Microsoft ekiplerinin** bir yönetici Ile sohbet başlamasını seçtiğinizde, Microsoft ekipleri başlatılır ve kullanıcıyla bir sohbet açılır.
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 
 - Bir yönetici ile sohbet başlatmak için, sohbet etmek istediğiniz hesabın [Azure AD veya ad Kullanıcı keşfi](../deploy/configure/about-discovery-methods.md#bkmk_aboutUser)ile bulunması gerekir.
 - Konsolunu çalıştırdığınız cihaza yüklü Microsoft ekipleri.
@@ -172,7 +172,7 @@ Not
 
 ### <a name="start-microsoft-teams-chat"></a>Microsoft ekipleri sohbetini Başlat
 
-1. **Yönetim** > **Security**güvenlik > **konsolu bağlantıları**' na gidin.
+1. **Yönetim**  >  **güvenlik**  >  **konsolu bağlantıları**' na gidin.
 1. Kullanıcının konsol bağlantısına sağ tıklayın ve **Microsoft ekipleri sohbetini Başlat**' ı seçin.
     - Seçilen yönetici için Kullanıcı asıl adı bulunmazsa, **Microsoft ekipleri sohbeti** ' nı başlatın.
     - Konsolu çalıştırdığınız cihazda Microsoft ekipleri yüklü değilse, indirme bağlantısı dahil bir hata iletisi görüntülenir.
@@ -228,7 +228,7 @@ Aşağıdaki bildirimler, en çok Technical Preview dalı için geçerlidir:
 - Konsol sürümü uyumsuzluğu (kritik): konsol sürümü site sürümüyle eşleşmiyor  
 - Site yükseltme kullanılabilir (uyarı): yeni bir güncelleştirme paketi var  
 
-Daha fazla bilgi ve sorun giderme yardımı için konsol bilgisayarındaki **Smsadminuı. log** dosyasına bakın. Varsayılan olarak, bu günlük dosyası şu yolda olur: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog\SmsAdminUI.log`.
+Daha fazla bilgi ve sorun giderme yardımı için konsol bilgisayarındaki **Smsadminuı. log** dosyasına bakın. Varsayılan olarak, bu günlük dosyası şu yolda olur: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog\SmsAdminUI.log` .
 
 
 ## <a name="in-console-documentation-dashboard"></a><a name="bkmk_doc-dashboard"></a>Konsol içi belge panosu
@@ -391,7 +391,7 @@ Varsayılan olmayan bir sütunun nasıl gösterileceği hakkında daha fazla bil
 <!-- 3614690 -->
 Sürüm 1806 ' den başlayarak, bir cihaz koleksiyonunda arama yaparken, anahtar sözcüğü tüm nesne özellikleriyle aramaz. Ne arayacağını bilmiyorsanız, aşağıdaki dört Özellik genelinde arama yapar:
 
-- Adı
+- Name
 - Birincil Kullanıcı (ler)
 - Şu anda oturum açmış Kullanıcı
 - Son oturum açma Kullanıcı adı
@@ -419,9 +419,9 @@ Bu davranış, özellikle büyük bir ortamda ada göre arama yapmak için gerek
 
 1. Configuration Manager konsolunda aşağıdaki yerlerden birine gidin:
 
-   - **Yazılım Kitaplığı** > **yazılımı** > **tüm yazılım güncelleştirmelerini** güncelleştirir
-   - **Yazılım Kitaplığı** > **Windows 10** > **tüm Windows 10 güncelleştirmelerine** bakım
-   - **Yazılım Kitaplığı** > **Office 365 istemci yönetimi** > **Office 365 güncelleştirmeleri**
+   - **Yazılım kitaplığı**  >  **Yazılım güncelleştirmeleri**  >  **Tüm yazılım güncelleştirmeleri**
+   - **Yazılım kitaplığı**  >  **Windows 10 Bakımı**  >  **Tüm Windows 10 güncelleştirmeleri**
+   - **Yazılım kitaplığı**  >  **Office 365 Istemci yönetimi**  >  **Office 365 güncelleştirmeleri**
 
 1. En az bir cihaz için gerekli olan herhangi bir güncelleştirmeyi seçin.
 1. **Özet** sekmesine bakın ve **İstatistikler**altında Pasta grafiğini bulun.

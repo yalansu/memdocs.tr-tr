@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 8c91ba1c2b4b5ef7072c030eddd9b97dd69933e5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 928ef8a8ebc90807912f22901743725df9aa67e7
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075719"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842232"
 ---
 # <a name="co-management-workloads"></a>Ortak yönetim iş yükleri
 
@@ -75,16 +75,15 @@ Endpoint Protection iş yükü Windows Defender 'ın kötü amaçlı yazılımda
 - Windows Defender Uygulama Denetimi  
 - Windows Defender Güvenlik Merkezi  
 - Windows Defender Gelişmiş tehdit koruması (şimdi Microsoft Defender tehdit koruması olarak bilinirdi)
-- Windows Bilgi Koruması  
 
 Intune özelliği hakkında daha fazla bilgi için bkz. [Microsoft Intune Endpoint Protection](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
 
 > [!Note]  
 > Bu iş yükünü değiştirdiğinizde, Intune ilkeleri üzerlerine gelene kadar Configuration Manager ilkeleri cihazda kalır. Bu davranış, cihazın geçiş sırasında koruma ilkelerine hala sahip olduğundan emin olur.
 >
-> Endpoint Protection iş yükü Ayrıca cihaz yapılandırmasının bir parçasıdır. [Cihaz yapılandırma](#device-configuration) iş yükünü değiştirdiğinizde aynı davranış geçerlidir.<!-- SCCMDocs.nl-nl issue #4 -->
+> Endpoint Protection iş yükü Ayrıca cihaz yapılandırmasının bir parçasıdır. [Cihaz yapılandırma](#device-configuration) iş yükünü değiştirdiğinizde aynı davranış geçerlidir.<!-- SCCMDocs.nl-nl issue #4 --> Cihaz yapılandırma iş yükünü değiştirdiğinizde, ayrıca Endpoint Protection iş yüküne dahil olmayan Windows Information Protection özelliğine yönelik ilkeler de bulunur.<!-- 4184095 -->
 >
-> Intune cihaz yapılandırması için cihaz kısıtlamaları profil türünün parçası olan Microsoft Defender virüsten koruma ayarları, Endpoint Protection kaydırıcısının kapsamına dahil edilmez. Endpoint Protection kaydırıcısının etkin olduğu ortak yönetilen cihazlar için Microsoft Defender virüsten koruma 'yı yönetmek üzere **Microsoft Endpoint Manager Yönetim Merkezi** > **uç nokta güvenlik** > **Virüsten**koruma ' daki yeni virüsten koruma ilkelerini kullanın. Yeni ilke türü yeni ve geliştirilmiş seçeneklere sahiptir ve cihaz kısıtlamaları profilinde sunulan tüm ayarları destekler. <!--6609171-->
+> Intune cihaz yapılandırması için cihaz kısıtlamaları profil türünün parçası olan Microsoft Defender virüsten koruma ayarları, Endpoint Protection kaydırıcısının kapsamına dahil edilmez. Endpoint Protection kaydırıcısının etkin olduğu ortak yönetilen cihazlar için Microsoft Defender virüsten koruma 'yı yönetmek üzere **Microsoft Endpoint Manager Yönetim Merkezi**  >  **uç nokta güvenlik**  >  **Virüsten**koruma ' daki yeni virüsten koruma ilkelerini kullanın. Yeni ilke türü yeni ve geliştirilmiş seçeneklere sahiptir ve cihaz kısıtlamaları profilinde sunulan tüm ayarları destekler. <!--6609171-->
 >
 > Windows şifreleme özelliği BitLocker yönetimini içerir. Bu özelliğin ortak yönetim ile davranışı hakkında daha fazla bilgi için bkz. deploy The [BitLocker Management](../protect/deploy-use/bitlocker/deploy-management-agent.md#co-management-and-intune).<!-- SCCMDocs#2321 -->
 
@@ -97,6 +96,9 @@ Cihaz yapılandırma iş yükü, kuruluşunuzdaki cihazlar için yönettiğiniz 
 Intune 'un cihaz yapılandırma yetkilisi olmasına rağmen Configuration Manager ayarları ortak yönetilen cihazlara dağıtmaya devam edebilirsiniz. Bu özel durum, kuruluşunuzun gerektirdiği ancak henüz Intune 'da kullanılamadığı ayarları yapılandırmak için kullanılabilir. Bu özel durumu bir [Configuration Manager yapılandırma temeli](../compliance/deploy-use/create-configuration-baselines.md)üzerinde belirtin. Temeli oluştururken **ortak yönetilen istemciler için bu temeli her zaman Uygula** seçeneğini etkinleştirin. Daha sonra varolan bir taban çizgisinin özelliklerinin **genel** sekmesinde değiştirebilirsiniz.  
 
 Intune özelliği hakkında daha fazla bilgi için, bkz. [Microsoft Intune bir cihaz profili oluşturma](https://docs.microsoft.com/intune/device-profile-create).  
+
+> [!NOTE]
+> Cihaz yapılandırma iş yükünü değiştirdiğinizde, ayrıca Endpoint Protection iş yüküne dahil olmayan Windows Information Protection özelliğine yönelik ilkeler de bulunur.<!-- 4184095 -->
 
 ## <a name="office-click-to-run-apps"></a>Office Tıkla-Çalıştır uygulamaları
 
@@ -139,13 +141,13 @@ Endpoint Protection iş yükü Intune 'a taşındığında, istemci yine de Conf
 
 Bu sorunu geçici olarak çözmek için, aşağıdaki adımları kullanarak istemci tarafından Intune ilkeleri alındıktan sonra ConfigSecurityPolicy. exe ' yi kullanarak CleanUpPolicy. xml ' i uygulayın:
 
-1. Aşağıdaki metni kopyalayın ve olarak `CleanUpPolicy.xml`kaydedin.
+1. Aşağıdaki metni kopyalayın ve olarak kaydedin `CleanUpPolicy.xml` .
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
    <SecurityPolicy xmlns="http://forefront.microsoft.com/FEP/2010/01/PolicyData" Name="FEP clean-up policy"><PolicySection Name="FEP.AmPolicy"><LocalGroupPolicySettings><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware"/><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Windows Defender"/></LocalGroupPolicySettings></PolicySection></SecurityPolicy>
    ```
-1. İçin `ConfigSecurityPolicy.exe`yükseltilmiş bir komut istemi açın. Genellikle bu yürütülebilir dosya aşağıdaki dizinlerden biridir:
+1. İçin yükseltilmiş bir komut istemi açın `ConfigSecurityPolicy.exe` . Genellikle bu yürütülebilir dosya aşağıdaki dizinlerden biridir:
    - C:\Program Files\Windows Defender
    - C:\Program Files\Microsoft güvenlik Istemcisi
 1. Komut isteminden, ilkeyi temizlemek için XML dosyasını geçirin. Örneğin, `ConfigSecurityPolicy.exe C:\temp\CleanUpPolicy.xml`.  

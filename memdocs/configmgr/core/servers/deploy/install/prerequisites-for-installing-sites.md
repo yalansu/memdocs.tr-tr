@@ -10,12 +10,12 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8362dbf5cf7264c19f683ce5a224f1e0ec348b36
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a7f7853b006d4ac8b11a30217d1b05b1eedd69dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718150"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268989"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>Configuration Manager siteleri yükleme önkoşulları
 
@@ -49,6 +49,9 @@ Bir merkezi yönetim sitesini bir hiyerarşi genişletmesinin parçası olarak y
 
         > [!IMPORTANT]  
         > Configuration Manager Kurulum tamamlandığında, site sunucusu bilgisayar hesabı, SQL Server için sysadmin haklarını korumalıdır. Bu hesaptan SQL sysadmin haklarını kaldırmayın.  
+
+    > [!NOTE]
+    > Kurulum tamamlandıktan sonra bu izinlerin ihtiyacı hakkında daha fazla bilgi için bkz. [yükseltilmiş izinler](../../../plan-design/hierarchy/accounts.md#elevated-permissions).
 
 - Birincil site yüklüyorsanız, aşağıdaki ek haklara sahip olmanız gerekir:  
 
@@ -134,7 +137,7 @@ Siteyi genişlettikten sonra, aşağıdaki Azure hizmetlerini Configuration Mana
 - [Iş için Microsoft Store](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 - [Bulut yönetimi ağ geçidi](../../../clients/manage/cmg/plan-cloud-management-gateway.md)
 
-Sürüm 1806 ve sonrasında Azure Active Directory kiracı gizli anahtarını yenileyin. Daha fazla bilgi için bkz. [gizli anahtarı yenileme](../configure/azure-services-wizard.md#bkmk_renew).
+En kolay yöntem Azure Active Directory kiracı gizli anahtarını yenilemeyecektir. Daha fazla bilgi için bkz. [gizli anahtarı yenileme](../configure/azure-services-wizard.md#bkmk_renew).
 
 Alternatif olarak, bu hizmete bağlantıyı kaldırıp yeniden oluşturun:
 

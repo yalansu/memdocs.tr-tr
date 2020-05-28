@@ -5,17 +5,17 @@ description: Configuration Manager ve Microsoft Intune yeni Internet tabanlı Wi
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 05/14/2020
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 75016e8028dde29c83ae7e7f5a23a1f6dbb4417f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 67d86850dc0440481916984af8635d9e005044c6
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712718"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428614"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Öğretici: yeni internet tabanlı cihazlar için ortak yönetimi etkinleştirme
 
@@ -40,7 +40,7 @@ Bu öğreticide, Windows 10 cihazlarının hem Azure Active Directory (AD) hem d
 > * Configuration Manager içinde ortak yönetimi etkinleştirme
 > * Intune 'U Configuration Manager istemcisini yükleyecek şekilde yapılandırma
 
-## <a name="prerequisites"></a>Önkoşullar  
+## <a name="prerequisites"></a>Ön koşullar  
 
 ### <a name="azure-services-and-environment"></a>Azure hizmetleri ve ortamı
 
@@ -96,7 +96,7 @@ Bu sertifika hakkında:
 
 ### <a name="identify-a-unique-name-for-your-cloud-management-gateway-in-azure"></a>Azure 'da bulut yönetimi ağ geçidiniz için benzersiz bir ad belirler
 
-CMG sunucusu kimlik doğrulama sertifikasını istediğinizde, Azure 'da *bulut hizmetinizi (klasik)* tanımlamak için benzersiz bir ad olması gerektiğini belirtirsiniz. Varsayılan olarak, Azure genel bulutu *cloudapp.net*kullanır ve CMG, cloudapp.net etki alanı içinde * \<YourUniqueDnsName>. cloudapp.net*olarak barındırılır.  
+CMG sunucusu kimlik doğrulama sertifikasını istediğinizde, Azure 'da *bulut hizmetinizi (klasik)* tanımlamak için benzersiz bir ad olması gerektiğini belirtirsiniz. Varsayılan olarak, Azure genel bulutu *cloudapp.net*kullanır ve cmg, cloudapp.net etki alanı içinde * \< YourUniqueDnsName>. cloudapp.net*olarak barındırılır.  
 
 > [!TIP]  
 > Bu öğreticide, **CMG sunucusu kimlik doğrulama sertifikası** *contoso.com*ile biten bir FQDN kullanır.  CMG 'yi oluşturduktan sonra, kuruluşunuzun ortak DNS 'si içinde kurallı bir ad kaydı (CNAME) yapılandıracağız. Bu kayıt, CMG için ortak sertifikada kullandığımız adla eşleşen bir diğer ad oluşturur.  
@@ -206,9 +206,9 @@ Birincil site sunucusundan aşağıdaki yordamı çalıştırın.
 
    - **Uygulama adı**: uygulama Için *bulut yönetimi Web uygulaması*gibi bir kolay ad belirtin.  
 
-   - **Giriş sayfası URL 'si**: bu değer Configuration Manager tarafından kullanılmaz, ancak Azure AD için gereklidir. Varsayılan olarak, bu değer `https://ConfigMgrService`.  
+   - **Giriş sayfası URL 'si**: bu değer Configuration Manager tarafından kullanılmaz, ancak Azure AD için gereklidir. Varsayılan olarak, bu değer `https://ConfigMgrService` .  
 
-   - **Uygulama kimliği URI 'si**: Bu DEĞERIN Azure AD kiracınızda benzersiz olması gerekir. Hizmete erişim istemek için Configuration Manager istemcisi tarafından kullanılan erişim belirtecidir. Varsayılan olarak, bu değer `https://ConfigMgrService`.  
+   - **Uygulama kimliği URI 'si**: Bu DEĞERIN Azure AD kiracınızda benzersiz olması gerekir. Hizmete erişim istemek için Configuration Manager istemcisi tarafından kullanılan erişim belirtecidir. Varsayılan olarak, bu değer `https://ConfigMgrService` .  
 
    Sonra **oturum aç**' ı seçin ve bır Azure AD Genel yönetici hesabı belirtin. Bu kimlik bilgileri Configuration Manager tarafından kaydedilmez. Bu kişi, Configuration Manager izin gerektirmez ve Azure Hizmetleri Sihirbazı 'Nı çalıştıran hesap için aynı hesaba gerek kalmaz.
 
@@ -220,7 +220,7 @@ Birincil site sunucusundan aşağıdaki yordamı çalıştırın.
 
    - **Uygulama adı**: uygulama Için *bulut yönetimi yerel istemci uygulaması*gibi bir kolay ad belirtin.
 
-   - **Yanıt URL 'si**: bu değer Configuration Manager tarafından kullanılmaz, ancak Azure AD tarafından gerekli değildir. Varsayılan olarak, bu değer `https://ConfigMgrClient`.
+   - **Yanıt URL 'si**: bu değer Configuration Manager tarafından kullanılmaz, ancak Azure AD tarafından gerekli değildir. Varsayılan olarak, bu değer `https://ConfigMgrClient` .
    Sonra **oturum aç**' ı seçin ve bır Azure AD Genel yönetici hesabı belirtin. Web uygulaması gibi, bu kimlik bilgileri kaydedilmez ve Configuration Manager izinler gerektirmez.
 
    Oturum açtıktan sonra sonuçlar görüntülenir. Istemci uygulaması oluştur iletişim kutusunu kapatmak ve uygulama özellikleri sayfasına dönmek için **Tamam ' ı** seçin. Sonra, devam etmek için **İleri** ' yi seçin.
@@ -237,11 +237,11 @@ Birincil site sunucusundan aşağıdaki yordamı çalıştırın.
 
    1. Oluşturduğunuz Web uygulamasını seçin.
 
-   2. **Ayarlar > gerekli izinler**' e gidin, **izin ver**' i seçin ve ardından **Evet**' i seçin.  
+   2. **API izinleri** ' ne gidin > **yönetici onayı ver** <your tenant> ' i seçin ve ardından **Evet**' i seçin.  
 
    3. Oluşturduğunuz yerel Istemci uygulamasını seçin.
 
-   4. **Ayarlar > gerekli izinler**' e gidin, **izin ver**' i seçin ve ardından **Evet**' i seçin.  
+   4. **API izinleri** ' ne gidin > **yönetici onayı ver** <your tenant> ' i seçin ve ardından **Evet**' i seçin.
 
 9. Configuration Manager konsolunda, **yönetim > genel bakış > > Cloud Services Azure Hizmetleri ' ne**gidin ve Azure hizmetinizi seçin. Ardından **Azure Active Directory Kullanıcı bul** ' a sağ tıklayın ve **tam bulmayı Şimdi Çalıştır**' ı seçin. Eylemi onaylamak için **Evet** ' i seçin.  
 
@@ -323,7 +323,7 @@ Siteyi gelişmiş HTTP 'yi destekleyecek şekilde yapılandırın.
 
 3. Artık **yönetim > genel bakış > site yapılandırması > sunucular ve site sistemi rolleri ' ne** gidin ve bulut yönetimi ağ geçidi bağlantı noktasını yüklemek istediğiniz yönetim noktası olan sunucuyu seçin.  
 
-4. **Site sistemi rolleri ekle**' yi ve ardından **İleri**> ' yi**seçin.**  
+4. **Site sistemi rolleri ekle**' yi ve ardından **İleri**' yi seçin >  **Next**.  
 
 5. **Bulut yönetimi ağ geçidi bağlantı noktasını** seçin ve ardından devam etmek için **İleri** ' yi seçin.  
 
@@ -351,7 +351,7 @@ Configuration Manager istemcilerini CMG ile iletişim kuracak şekilde yapıland
 
    - **Bulut dağıtım noktasına erişime izin ver**
 
-4. **İstemci ilkesi** sayfasında, =  **İnternet istemcilerinden gelen Kullanıcı ilkesi isteklerini etkinleştir****Evet**olarak ayarlayın.
+4. **İstemci ilkesi** sayfasında, **İnternet istemcilerinden gelen Kullanıcı ilkesi isteklerini etkinleştir**  =  **Evet**olarak ayarlayın.
 
 5. Bu yapılandırmayı kaydetmek için **Tamam**’ı seçin.
 
@@ -383,11 +383,11 @@ Daha sonra, daha önce yönetilmeyen bir Windows 10 cihazı Intune 'a kaydoldukt
 
 ### <a name="create-an-intune-app-to-install-the-configuration-manager-client"></a>Configuration Manager istemcisini yüklemek için bir Intune uygulaması oluşturma
 
-1. Birincil site sunucusundan [Azure Portal](https://portal.azure.com/) oturum açın ve **Intune > Istemci uygulamaları > uygulamalar > Ekle**' ye gidin.
+1. Birincil site sunucusundan [Microsoft Endpoint Manager Yönetim Merkezi](https://endpoint.microsoft.com) ' nde oturum açın ve tüm **uygulamalar**  >  **All Apps**  >  **Ekle**' ye gidin.
 
-2. **Uygulama türü**için: **iş kolu uygulaması**' nı seçin.
+2. Uygulama türü için, **diğer**bölümünde **iş kolu uygulaması** ' nı seçin.
 
-3. **Uygulama paketi dosyası**' nı seçin ve ardından **CCMSetup. msi**Configuration Manager dosyasının konumuna gidin ve ardından **Aç > Tamam**' ı seçin.
+3. **Uygulama paketi dosyası**için, **CCMSetup. msi**Configuration Manager dosyasının konumuna gidin ve ardından **Aç > Tamam**' ı seçin.
 Örneğin, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup.msi*
 
 4. **Uygulama bilgileri**' ni seçin ve ardından aşağıdaki ayrıntıları belirtin:
@@ -412,11 +412,11 @@ Daha sonra, daha önce yönetilmeyen bir Windows 10 cihazı Intune 'a kaydoldukt
 
 Aşağıdaki yordam, önceki yordamda oluşturduğunuz Configuration Manager istemcisini yüklemek için uygulamayı dağıtır.
 
-1. [Azure Portal](https://portal.azure.com/) oturum açın.  **Tüm hizmetler > ıntune > istemci uygulamaları > uygulamalar**' ı seçin ve ardından, Configuration Manager istemcisini dağıtmak için oluşturduğunuz uygulamayı **ConfigMgr istemci kurulumu önyüklemesi**' ni seçin.  
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://endpoint.microsoft.com)oturum açın. **Uygulamalar**  >  **tüm uygulamalar** ' ı seçin ve ardından Configuration Manager istemcisini dağıtmak için oluşturduğunuz uygulamayı **ConfigMgr istemci kurulumu önyüklemesi**' ni seçin.  
 
-2. **Grup ekle > atamalar**' ı seçin.  **Atama türünü** **gerekli**olarak ayarlayın ve ardından **dahil edilen grupları** ve **Dışlanan grupları** kullanarak, ortak yönetime KATıLMASıNı istediğiniz kullanıcı ve cihazların bulunduğu Azure Active Directory (ad) gruplarını ayarlayın.  
+2. **Özellikler** ' e tıklayın, ardından **atamalar**için **düzenleyin** . Ortak yönetime katılmasını istediğiniz kullanıcıların ve cihazların bulunduğu Azure Active Directory (AD) gruplarını ayarlamak için **gerekli** atamalar altında **Grup Ekle** ' yi seçin.  
 
-3. **Tamam** ' ı seçin ve ardından yapılandırmayı **kaydedin** .
+3. **Gözden geçir + kaydet** ' i seçin ve ardından yapılandırmayı **kaydedin** .
 Uygulama artık sizin atadığınız kullanıcılar ve cihazlar için gereklidir. Uygulama bir cihaza Configuration Manager istemcisini yükledikten sonra ortak yönetim tarafından yönetilir.
 
 ## <a name="summary"></a>Özet

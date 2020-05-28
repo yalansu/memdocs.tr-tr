@@ -2,7 +2,7 @@
 title: Uyumluluk değerlendirmesi
 titleSuffix: Configuration Manager
 description: Masaüstü Analizi 'nde Windows Uygulamaları ve sürücüleri için uyumluluk değerlendirmesi hakkında bilgi edinin.
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eedd33999ce17417122b2403c777a0b560e5f197
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.reviewer: acabello
+ms.openlocfilehash: 7b2bff4f8365693c86540c9b0578307340f13a49
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110007"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268904"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Masaüstü Analizi 'nde uyumluluk değerlendirmesi
 
@@ -29,7 +30,7 @@ Masaüstü Analizi aşağıdaki uyumluluk değerlendirmesi kategorilerini kullan
 
 - **Yüksek**: uygulama, yükseltme sırasında veya sonrasında başarısız olarak neredeyse belli olur. Düzeltilmesi gerekebilir.
 
-- **Bilinmiyor**: uygulama değerlendirilmedi. *MS bilinen sorunlar*gibi başka Öngörüler bulunmamaktadır.
+- **Bilinmiyor**: uygulama değerlendirilmedi. *MS bilinen sorunlar* veya *Windows için hazırlanma*gibi başka Öngörüler bulunmamaktadır.
 
 Dağıtım planındaki uygulama veya sürücü varlıkları listesinde, **uyumluluk riski** sütunundaki her bir varlık için bu değeri görürsünüz.
 
@@ -40,9 +41,13 @@ Dağıtım planındaki uygulama veya sürücü varlıkları listesinde, **uyumlu
 Masaüstü analizinin uygulamalar için değerlendirme derecelendirmesi oluşturmak üzere kullandığı birkaç kaynak vardır:
 
 - [Microsoft 'un bilinen sorunları](#microsoft-known-issues)
+- [Windows için hazırlanıyor](#ready-for-windows)
 - [Gelişmiş Öngörüler](#advanced-insights)
 
 Uygulama üzerinde her bir kaynağın değerlendirmesini, masaüstü Analizi ' nde bulabilirsiniz. Bir dağıtım planındaki uygulama varlıkları listesinde, tek bir uygulamayı seçerek Özellikler açılan penceresini açın. Genel bir öneri ve değerlendirme düzeyi görürsünüz. **Uyumluluk riski faktörleri** bölümünde, bu değerlendirmelerin ayrıntıları gösterilmektedir.
+
+> [!TIP]
+> Uygulama ayrıntıları bölmesinde uyumluluk değerlendirmesi gösterilmezse, bunun nedeni **uygulama sürümleri ayrıntıları** ayarının kapalı olması olabilir. Varsayılan olarak kapalıdır ve tüm uygulama sürümlerini aynı ad ve yayımcı ile birleştirir. Hizmet, her sürüm için uyumluluk risk değerlendirmesi de yapar. Belirli bir uygulama sürümünün uyumluluk risk değerlendirmesini görmek için **uygulama sürümleri ayrıntılarını** etkinleştirin. Daha fazla bilgi için bkz. [varlıkları planlayın](about-deployment-plans.md#plan-assets).
 
 ## <a name="microsoft-known-issues"></a>Microsoft 'un bilinen sorunları
 
@@ -120,7 +125,7 @@ Windows Uyumluluk verileri bazı uygulamaları ve sürücüleri bir *güvenlik �
 
 1. Menüden **varlıkları planla** ' yı seçin ve **uygulamalar** sekmesine geçin.
 
-1. Sözcüğü `Safeguard`içeren değerleri olan öğeleri göstermek için ad sütununu filtreleyin. Daha fazla bilgi görmek için sonucu seçin.
+1. Sözcüğü içeren değerleri olan öğeleri göstermek için ad sütununu filtreleyin `Safeguard` . Daha fazla bilgi görmek için sonucu seçin.
 
     > [!NOTE]
     > Bu giriş, cihazlarınızda yüklü olan gerçek bir uygulama değildir. Bu, ortamınızdaki uygulamaları veya sürücüleri korumaya yönelik uyumluluk etiketiyle tanımanıza yardımcı olan bir yer tutucudur.
@@ -130,6 +135,28 @@ Windows Uyumluluk verileri bazı uygulamaları ve sürücüleri bir *güvenlik �
 1. Geçerli yayımlanmış listeyi ortamınızdaki varlıkların listesiyle karşılaştırın. Uyumlu bir sürüme güncelleştirerek sorunlu olabilecek uygulamaları veya sürücüleri düzeltin.
 
 [![Masaüstü analizinden koruma uygulamasının ekran görüntüsü](media/5746559-safeguards.png)](media/5746559-safeguards.png#lightbox)
+
+## <a name="ready-for-windows"></a>Windows için hazırlanıyor
+
+Benimseme durumu, Microsoft ile veri paylaşan ticari cihazlardan gelen bilgileri temel alır. Durum, yazılım satıcılarından destek deyimleriyle tümleşiktir.
+
+Masaüstü analizi, ticari cihazlarda bulunan bir varlığın her sürümü için benimseme durumu sağlar. Bu durum, tüketici cihazlarından veya veri paylaşmeyen cihazlardan veri içermez. Durum, tüm Windows 10 cihazlarında benimseme oranını temsil edemeyebilir.
+
+Olası kategoriler şunlardır:
+
+- **Son derece benimseme**: en az 100.000 ticari Windows 10 cihaz bu uygulamayı yükledi.
+
+- **Benimseme**: en az 10.000 ticari Windows 10 cihaz bu uygulamayı yükledi.
+
+- **Yetersiz veri**: çok az sayıda ticari Windows 10 cihaz, Microsoft 'un benimsemesi için bu uygulamayla ilgili bilgileri paylaşıyor.
+
+- **Geliştiriciye başvurun**: uygulamanın bu sürümünde uyumluluk sorunları olabilir. Microsoft daha fazla bilgi edinmek için yazılım sağlayıcısına başvurmayı önerir.
+
+- **Bilinmiyor**: Bu uygulamanın bu sürümü için kullanılabilir bilgi yok. Bilgiler, uygulamanın diğer sürümleri için kullanılabilir olabilir.
+
+### <a name="support-statement"></a>Support bildirisi
+
+Yazılım sağlayıcısı Windows 10 ' da bu uygulamanın bir veya daha fazla sürümünü destekliyorsa, bu bildiriyi uygulama özellikleri bölmesinde görürsünüz. Uyumluluk risk faktörleri bölümünde, **destek bildirimine**bakın.
 
 ## <a name="advanced-insights"></a>Gelişmiş Öngörüler
 

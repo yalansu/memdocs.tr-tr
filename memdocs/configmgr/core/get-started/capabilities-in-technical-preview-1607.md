@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7ec5802a8931bc4397eaf302920f09d8597802fe
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 73aac9e1bfb7b902a7db28ba4be00a2a02277324
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721615"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905691"
 ---
 # <a name="capabilities-in-technical-preview-1607-for-configuration-manager"></a>Configuration Manager için Technical Preview 1607 ' deki yetenekler
 
@@ -62,15 +62,15 @@ Yazılım Merkezi için özel marka aşağıdaki kurallara göre uygulanır:
 ## <a name="use-the-same-network-adapter-for-multiple-pxe-initiated-deployments"></a>Birden çok PXE tarafından başlatılan dağıtımlar için aynı ağ bağdaştırıcısını kullan
 Technical Preview sürüm 1607 ' de, birden çok cihazı (örneğin, birden çok cihazda kullandığınız USB Ethernet bağdaştırıcısı gibi) görüntülemek için bir Ethernet bağdaştırıcısı kullandığınızda, Ethernet bağdaştırıcıları için donanım tanımlayıcıları girmenize izin veren yeni bir ayarı etkinleştirebilirsiniz. Configuration Manager, PXE yüklemesi gerçekleştirirken ve istemci kaydı için listedeki donanım tanımlayıcılarını yoksayar.
 
-Bu sorun hakkında daha fazla bilgi için bkz. [OSD destek ekibi blogu Configuration Manager](https://blogs.technet.microsoft.com/system_center_configuration_manager_operating_system_deployment_support_blog/2015/08/27/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in-system-center-configuration-manger-osd/).  
+Bu sorun hakkında daha fazla bilgi için bkz. [OSD destek ekibi blogu Configuration Manager](https://techcommunity.microsoft.com/t5/configuration-manager-archive/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in/ba-p/273721).  
 
 ### <a name="enable-the-feature-to-manage-duplicate-hardware-identifiers"></a>Yinelenen donanım tanımlayıcılarını yönetmek için özelliği etkinleştirin  
-1. Configuration Manager konsolunda, **Yönetim** > **genel bakış** > **Cloud Services** > **güncelleştirmeler ve bakım** > **özellikleri**' ne gidin.
+1. Configuration Manager konsolunda, **Yönetim**  >  **genel bakış**  >  **Cloud Services**  >  **güncelleştirmeler ve bakım**  >  **özellikleri**' ne gidin.
 2. Görüntü bölmesinde, **yinelenen donanım tanımlayıcılarını Yönet**' i seçin.
 3. **Giriş** sekmesinde, **Özellikler** grubunda, **Aç**' a tıklayın.
 
 ### <a name="add-hardware-identifiers-for-configuration-manager-to-ignore"></a>Yoksayılacak Configuration Manager için donanım tanımlayıcıları ekleyin  
-1. Configuration Manager konsolunda **Yönetim** > **genel bakış** > **Site yapılandırması** > **siteler**' e gidin.
+1. Configuration Manager konsolunda **Yönetim**  >  **genel bakış**  >  **Site yapılandırması**  >  **siteler**' e gidin.
 2. **Giriş** sekmesinde, **Siteler** grubunda, **Hiyerarşi Ayarları**'nı tıklatın.
 3. **Istemci onayı ve çakışan kayıtlar** sekmesine gidin.
 4. Yeni donanım tanımlayıcıları eklemek için **yinelenen donanım tanımlayıcıları** bölümünde **Ekle** ' ye tıklayın.

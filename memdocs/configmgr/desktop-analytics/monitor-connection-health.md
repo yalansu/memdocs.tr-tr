@@ -10,12 +10,13 @@ ms.assetid: 1f4e26f7-42f2-40c8-80cf-efd405349c6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 37555c6b60b0d2c18096c2778e9a077baeb9143f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: fdc15860f2d093a4c9c61b787ba0b780051d3f3d
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714545"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864880"
 ---
 # <a name="monitor-connection-health"></a>Bağlantı durumunu izleme
 
@@ -103,6 +104,9 @@ Cihaz aşağıdaki özniteliklere sahiptir:
 Configuration Manager, cihaz kaydını engelleyen bir veya daha fazla engelleyici sorunu algılar. Daha fazla bilgi için [Configuration Manager Içindeki masaüstü Analizi cihaz özellikleri](#bkmk_config-issues)listesine bakın.  
 
 Örneğin, Configuration Manager istemcisi en az sürüm 1902 (5.0.8790) değil. İstemciyi en son sürüme güncelleştirin. Configuration Manager sitesi için otomatik istemci yükseltmesini etkinleştirmeyi düşünün. Daha fazla bilgi için bkz. [Istemcileri yükseltme](../core/clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade).  
+
+> [!TIP]
+> Windows 7 için Nisan 2020 genişletilmiş güvenlik güncelleştirmesinde (ESU), cihazların bu hatayı hatalı rapor etmesine neden olan bilinen bir sorun vardır. Daha fazla bilgi için bkz. [sürüm notları](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
 
 Sürüm 2002 ' den başlayarak, istemci proxy yapılandırma sorunlarını iki alanda daha kolay bir şekilde tanımlayabilirsiniz:
 
@@ -192,7 +196,7 @@ Günlük dosyasında aşağıdakine benzer hatalar görürsünüz:
 
 `Error 407: Can't connect to Microsoft %s. Check your network/proxy settings`
 
-`%s` , Gerekli bir uç noktanın URL 'sidir.
+`%s`, Gerekli bir uç noktanın URL 'sidir.
 
 Ayrıca, cihazlar kayıt sorunlarıyla karşılaşana kadar dikkat gerektirmeyen belirleyici olmayan hata iletileri de görebilirsiniz. Örneğin:
 
@@ -213,7 +217,7 @@ Aksi takdirde, aşağıdaki hatalardan birini gösterebilir:
 
 - Cihaz uygulama uyumluluk verileri koleksiyonu yapılandırılamıyor (Setrequestallappraerversions). Özel durum ayrıntıları için günlükleri denetleyin  
 
-- Requestallappraerversions kayıt defteri anahtarına `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser`yazılamıyor. İzinleri denetle  
+- Requestallappraerversions kayıt defteri anahtarına yazılamıyor `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser` . İzinleri denetle  
 
 Bu kayıt defteri anahtarındaki izinleri denetleyin. Yerel sistem hesabının, Configuration Manager istemcisinin ayarlaması için bu anahtara erişebildiğinizden emin olun.  
 
@@ -228,7 +232,7 @@ En son uyumluluk güncelleştirmesini yükler. Daha fazla bilgi için bkz. [Uyum
 
 ### <a name="appraiser-version"></a>Appraiser sürümü
 
-Bu özellik cihazdaki Appraiser bileşeninin geçerli sürümünü görüntüler. Üzerinde `%windir%\System32\appraiser.dll`, ondalık noktaları olmadan dosya sürümü gösterilir. Örneğin, dosya sürümü 10.0.17763 10017763 olarak görüntülenir.
+Bu özellik cihazdaki Appraiser bileşeninin geçerli sürümünü görüntüler. Üzerinde `%windir%\System32\appraiser.dll` , ondalık noktaları olmadan dosya sürümü gösterilir. Örneğin, dosya sürümü 10.0.17763 10017763 olarak görüntülenir.
 
 ### <a name="last-successful-full-run-of-appraiser"></a>Son başarılı tam Appraiser çalıştırması
 
@@ -248,7 +252,7 @@ Başarılı olmazsa, aşağıdaki hatalardan birini gösterebilir:
 
 Daha fazla bilgi için istemcide M365AHandler. log dosyasına bakın.
 
-Şu dosyayı denetleyin: `%windir%\System32\CompatTelRunner.exe`. Mevcut değilse, gerekli [uyumluluk güncelleştirmelerini](enroll-devices.md#update-devices)yeniden yükleyin. Grup İlkesi veya kötü amaçlı yazılımdan koruma hizmeti gibi başka bir sistem bileşeninin bu dosyayı kaldırmakta olmadığından emin olun.
+Şu dosyayı denetleyin: `%windir%\System32\CompatTelRunner.exe` . Mevcut değilse, gerekli [uyumluluk güncelleştirmelerini](enroll-devices.md#update-devices)yeniden yükleyin. Grup İlkesi veya kötü amaçlı yazılımdan koruma hizmeti gibi başka bir sistem bileşeninin bu dosyayı kaldırmakta olmadığından emin olun.
 
 İstemcideki M365AHandler. log dosyası aşağıdaki hatalardan birini içeriyorsa:
 
@@ -299,7 +303,7 @@ Başarılı olmazsa, aşağıdaki hatalardan birini gösterebilir:
 
 Daha fazla bilgi için istemcide M365AHandler. log dosyasına bakın.
 
-Şu dosyayı denetleyin: `%windir%\System32\DeviceCensus.exe`. Mevcut değilse, gerekli [uyumluluk güncelleştirmelerini](enroll-devices.md#update-devices)yeniden yükleyin. Grup İlkesi veya kötü amaçlı yazılımdan koruma hizmeti gibi başka bir sistem bileşeninin bu dosyayı kaldırmakta olmadığından emin olun.
+Şu dosyayı denetleyin: `%windir%\System32\DeviceCensus.exe` . Mevcut değilse, gerekli [uyumluluk güncelleştirmelerini](enroll-devices.md#update-devices)yeniden yükleyin. Grup İlkesi veya kötü amaçlı yazılımdan koruma hizmeti gibi başka bir sistem bileşeninin bu dosyayı kaldırmakta olmadığından emin olun.
 
 ### <a name="windows-diagnostic-endpoint-connectivity"></a>Windows Tanılama uç noktası bağlantısı
 
@@ -356,9 +360,9 @@ Bu denetim başarılı olursa cihaz, ticari KIMLIK ile düzgün şekilde yapıla
 
 Aksi takdirde, aşağıdaki hatalardan biri gösterilebilir:
 
-- Ticari kimlik kayıt defteri anahtarına `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`yazılamıyor. İzinleri denetle  
+- Ticari kimlik kayıt defteri anahtarına yazılamıyor `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection` . İzinleri denetle  
 
-- Kayıt defteri anahtarındaki `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`ticari kimlik güncelleştirilemez. Özel durum ayrıntıları için günlükleri denetleyin  
+- Kayıt defteri anahtarındaki ticari kimlik güncelleştirilemez `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection` . Özel durum ayrıntıları için günlükleri denetleyin  
 
 - Doğru ticari kimlik değerini sağlayın`HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`  
 
@@ -393,7 +397,7 @@ Aksi takdirde, aşağıdaki hatalardan biri gösterilebilir:
 
 - Windows Tanılama verilerinin bir parçası olarak Microsoft 'a gönderilecek cihaz adı denetlenemiyor. Özel durum ayrıntıları için günlükleri denetleyin  
 
-- AllowDeviceNameInTelemetry kayıt defteri anahtarına `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`yazılamıyor. İzinleri denetle  
+- AllowDeviceNameInTelemetry kayıt defteri anahtarına yazılamıyor `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection` . İzinleri denetle  
 
 Daha fazla bilgi için istemcide M365AHandler. log dosyasına bakın.  
 
@@ -409,6 +413,9 @@ Bu denetim başarılı olursa, DiagTrack bileşeni cihazda düzgün şekilde yap
 Aksi takdirde, aşağıdaki hatalardan birini gösterebilir:
 
 - Bağlı kullanıcı deneyimi ve telemetri (diagtrack. dll) bileşeni güncel değil. Gereksinimleri denetle  
+
+    > [!TIP]
+    > Windows 7 için Nisan 2020 genişletilmiş güvenlik güncelleştirmesinde (ESU), cihazların bu hatayı hatalı rapor etmesine neden olan bilinen bir sorun vardır. Daha fazla bilgi için bkz. [sürüm notları](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
 
 - Bağlı kullanıcı deneyimi ve telemetri (diagtrack. dll) bileşeni bulunamıyor. Gereksinimleri denetle  
 
@@ -426,7 +433,7 @@ Cihazdaki **bağlı kullanıcı deneyimlerinin ve telemetri** hizmetinin çalı�
 
 ### <a name="diagtrack-version"></a>DiagTrack sürümü
 
-Bu özellik, cihazda bağlı kullanıcı deneyiminin ve telemetri bileşeninin geçerli sürümünü görüntüler. Üzerinde `%windir%\System32\diagtrack.dll`, ondalık noktaları olmadan dosya sürümü gösterilir. Örneğin, dosya sürümü 10.0.10586 10010586 olarak görüntülenir.
+Bu özellik, cihazda bağlı kullanıcı deneyiminin ve telemetri bileşeninin geçerli sürümünü görüntüler. Üzerinde `%windir%\System32\diagtrack.dll` , ondalık noktaları olmadan dosya sürümü gösterilir. Örneğin, dosya sürümü 10.0.10586 10010586 olarak görüntülenir.
 
 ### <a name="sqm-id-retrieval"></a>SQM KIMLIĞI alımı
 

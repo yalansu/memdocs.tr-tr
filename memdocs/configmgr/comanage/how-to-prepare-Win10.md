@@ -5,17 +5,17 @@ description: Windows 10 Internet tabanlı cihazlarınızı ortak yönetim için 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/24/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 59ca1006d8700e52b3f3fb703f8896ce9fa8b9b7
-ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
+ms.openlocfilehash: e6582599a02f4a8196ee739ca875df4d158a993e
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82137924"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427804"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>İnternet tabanlı cihazları ortak yönetim için hazırlama
 
@@ -104,13 +104,13 @@ Daha fazla bilgi için bkz. [istemci yükleme özellikleri](../core/clients/depl
 
 ### <a name="create-the-app-in-intune"></a>Uygulamayı Intune 'da oluşturma
 
-1. [Azure Portal](https://portal.azure.com)gidin ve ardından Intune sayfasını açın.  
+1. [Microsoft Endpoint Manager yönetim merkezine](https://endpoint.microsoft.com)gidin ve sol gezinti bölmesini genişletin.  
 
-2. **İstemci uygulamaları** > **uygulamaları** > **Ekle**' yi seçin.  
+2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.  
 
 3. **Diğer**altında, **iş kolu uygulaması**' nı seçin.  
 
-4. **CCMSetup. msi** uygulama paketi dosyasını karşıya yükleyin. Bu dosyayı Configuration Manager site sunucusundaki şu klasörde bulabilirsiniz: `<ConfigMgr installation directory>\bin\i386`.  
+4. **CCMSetup. msi** uygulama paketi dosyasını karşıya yükleyin. Bu dosyayı Configuration Manager site sunucusundaki şu klasörde bulabilirsiniz: `<ConfigMgr installation directory>\bin\i386` .  
 
     > [!Tip]  
     > Siteyi güncelleştirdiğinizde bu uygulamayı Intune 'da da güncelleştirdiğinizden emin olun.  

@@ -23,7 +23,7 @@ ms.locfileid: "81709645"
 
 Her Configuration Manager dağıtımında en fazla sayıda site, site sistem rolü ve destekleyebileceği cihaz vardır. Bu sayılar, hiyerarşi yapısına, hangi tür ve kullandığınız sitelere ve dağıttığınız site sistem rollerine bağlı olarak farklılık gösterir. Bu makaledeki bilgiler, yönetmek istediğiniz cihazları desteklemek için ihtiyacınız olan site sistemi rollerinin ve sitelerinin sayısını belirlemenize yardımcı olabilir.
 
-Daha fazla bilgi için aşağıdaki makalelere bakın:
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 - [Önerilen donanım](recommended-hardware.md)
 - [Site sistem sunucuları için desteklenen işletim sistemleri](supported-operating-systems-for-site-system-servers.md)  
@@ -57,7 +57,7 @@ Bu destek numaraları Configuration Manager için önerilen donanımın kullanı
 > [!Important]
 > Uygulama kataloğunun Silverlight Kullanıcı deneyimi, güncel dal sürümü 1806 ' den itibaren desteklenmez. Sürüm 1906 ' den başlayarak, güncelleştirilmiş istemciler Kullanıcı tarafından kullanılabilen uygulama dağıtımları için yönetim noktasını otomatik olarak kullanır. Ayrıca yeni uygulama kataloğu rolleri yükleyemezsiniz. Sürüm 1910 ile uygulama kataloğu rolleri için destek sona erer.  
 >
-> Daha fazla bilgi için aşağıdaki makalelere bakın:
+> Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 >
 > - [Yazılım merkezini yapılandırma](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Kaldırılan ve kullanım dışı bırakılan özellikler](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -69,7 +69,7 @@ Bu destek numaraları Configuration Manager için önerilen donanımın kullanı
 > [!Important]
 > Uygulama kataloğunun Silverlight Kullanıcı deneyimi, güncel dal sürümü 1806 ' den itibaren desteklenmez. Sürüm 1906 ' den başlayarak, güncelleştirilmiş istemciler Kullanıcı tarafından kullanılabilen uygulama dağıtımları için yönetim noktasını otomatik olarak kullanır. Ayrıca yeni uygulama kataloğu rolleri yükleyemezsiniz. Sürüm 1910 ile uygulama kataloğu rolleri için destek sona erer.  
 >
-> Daha fazla bilgi için aşağıdaki makalelere bakın:
+> Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 >
 > - [Yazılım merkezini yapılandırma](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Kaldırılan ve kullanım dışı bırakılan özellikler](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  

@@ -2,7 +2,7 @@
 title: Proxy sunucu desteği
 titleSuffix: Configuration Manager
 description: Configuration Manager site sistem sunucularının proxy sunucularını nasıl kullandığını öğrenin.
-ms.date: 04/01/2020
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5581214dd786bdefd29d0e4d2626de536ad26ace
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 89a2f76f394d3bdf8fd6785429ae0ae60302537a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718717"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802098"
 ---
 # <a name="proxy-server-support-in-configuration-manager"></a>Configuration Manager 'de proxy sunucu desteği
 
@@ -50,6 +50,10 @@ Bu yapılandırma için birincil site sunucusu:
 - Varsayılan olarak, bağlantıyı kurmak için bilgisayarın **sistem** hesabını kullanır. Ayrıca, gerekirse, site sistemi proxy sunucusu hesabını da kullanabilir.  
 
 - Windows Web tarayıcısı API 'Lerini kullanır.  
+
+### <a name="cloud-management-gateway-connection-point"></a>Bulut yönetimi ağ geçidi bağlantı noktası
+
+Bulut yönetimi ağ geçidi (CMG) bağlantı noktası, Azure 'daki CMG hizmetiyle iletişim kuran şirket içi bir roldür. Daha fazla bilgi için bkz. [CMG Için plan](../../clients/manage/cmg/plan-cloud-management-gateway.md).
 
 ### <a name="distribution-point"></a>Dağıtım noktası
 
@@ -111,3 +115,7 @@ Configuration Manager sürüm 2002 ' den başlayarak, aşağıdaki özellikler [
     - **Proxy sunucusuna bağlanmak için kimlik bilgilerini kullan**: birçok proxy sunucusu, bir kullanıcının kimlik doğrulamasını gerektirir. Varsayılan olarak, site sistem sunucusu, proxy sunucusuna bağlanmak için bilgisayar hesabını kullanır. Gerekirse, bu seçeneği etkinleştirin, **Ayarla**' yı tıklatın ve ardından mevcut bir **hesabı** seçin veya yeni bir **Hesap**belirtin. Bu kimlik bilgileri, **site sistemi proxy sunucu hesabıdır**.  Daha fazla bilgi için bkz. [Configuration Manager kullanılan hesaplar](../hierarchy/accounts.md).  
 
 4. Yeni proxy sunucusu yapılandırmasını kaydetmek için **Tamam ' ı** seçin.  
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+Kuruluşunuz ağ iletişimini bir güvenlik duvarı veya ara cihaz kullanarak internet ile kısıtlarsa, İnternet uç noktalarına erişime izin vermeniz gerekir. Daha fazla bilgi için bkz. [İnternet erişimi gereksinimleri](internet-endpoints.md).

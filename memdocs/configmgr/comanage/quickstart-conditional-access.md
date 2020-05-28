@@ -10,12 +10,12 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d35f36b6578359f62f21b4e2208a70ace22cf0d9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 94f002ecd12d08ffd5f3d4767e315e0d83714929
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711507"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764059"
 ---
 # <a name="conditional-access-with-co-management"></a>Ortak yönetim ile koşullu erişim
 
@@ -108,7 +108,7 @@ ATP tümleştirmesi hakkında daha fazla bilgi için bkz. [Microsoft Defender AT
 
 Koşullu erişimi kullanma hakkında daha fazla bilgi için aşağıdaki makalelere bakın: 
 
-- [Azure AD’de koşullu erişim](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)  
+- [Azure AD 'de koşullu erişim](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)  
 
 - [Intune cihaz uyumluluk ilkeleri](https://docs.microsoft.com/intune/device-compliance)  
 

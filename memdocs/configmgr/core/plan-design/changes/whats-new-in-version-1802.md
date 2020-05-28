@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 11066470347db0f3ffbfadda9897aed92baa645b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e7bc30c4350d96654a0f6a6ae548d63c2928e791
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073611"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904649"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Configuration Manager sürüm 1802 ' deki yenilikler
 
@@ -124,7 +124,7 @@ Configuration Manager 1802 ' de aşağıdaki Öngörüler mevcuttur:
 
 - Bu sürümden itibaren, **bulut yönetimi ağ geçidi** artık yayın öncesi bir özellik değildir.  
 
-- Özellik belgeleri düzeltilir ve geliştirilmiştir. Daha fazla bilgi için aşağıdaki makalelere bakın:
+- Özellik belgeleri düzeltilir ve geliştirilmiştir. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
     - [Bulut yönetimi ağ geçidini planlayın](../../clients/manage/cmg/plan-cloud-management-gateway.md)
     - [Bulut yönetimi ağ geçidi boyutu ve ölçek numaraları](../configs/size-and-scale-numbers.md#bkmk_cmg)
     - [Bulut yönetimi ağ geçidi için güvenlik ve gizlilik](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md)
@@ -143,7 +143,7 @@ Microsoft, Linux ve UNIX istemci desteğini bundan böyle Configuration Manager 
 
 ### <a name="surface-device-dashboard"></a>Surface cihazı panosu
 <!--1355788-->
-Surface cihaz panosu, ortamınızda bulunan yüzey cihazları hakkında bilgi sağlar. Konsolunda, **izleme** > **yüzeyi cihazları**' na gidin. Öğeleri görüntüleyebilirsiniz:
+Surface cihaz panosu, ortamınızda bulunan yüzey cihazları hakkında bilgi sağlar. Konsolunda, **izleme**  >  **yüzeyi cihazları**' na gidin. Öğeleri görüntüleyebilirsiniz:
 - Yüzey yüzdesi
 - Yüzey modellerinin yüzdesi
 - En popüler beş bellenim sürümü
@@ -169,7 +169,7 @@ Bu sürümden itibaren ortak yönetim hakkında bilgi içeren bir panoyu görün
 
 ### <a name="microsoft-edge-browser-policies"></a>Microsoft Edge tarayıcı ilkeleri
 <!-- 1357310 -->
-Windows 10 istemcilerinde [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) Web tarayıcısını kullanan müşteriler için, birkaç Microsoft Edge ayarını yapılandırmak üzere bir Configuration Manager uyumluluk ayarları ilkesi oluşturun. Daha fazla bilgi için bkz. [Microsoft Edge tarayıcı profili oluşturma](../../../compliance/deploy-use/browser-profiles.md). 
+Windows 10 istemcilerinde [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) Web tarayıcısını kullanan müşteriler için, birkaç Microsoft Edge ayarını yapılandırmak üzere bir Configuration Manager uyumluluk ayarları ilkesi oluşturun. Daha fazla bilgi için bkz. [Microsoft Edge tarayıcı profili oluşturma](../../../compliance/deploy-use/browser-profiles.md). 
 
 
 

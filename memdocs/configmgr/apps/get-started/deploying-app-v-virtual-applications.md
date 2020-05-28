@@ -10,12 +10,12 @@ ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bea7c2ef5c3d77932fcd91ca8d4d2b8baa62edd2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: df6f550b21523e365055f6a4cdafadca7603c4bf
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710478"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906379"
 ---
 # <a name="deploy-app-v-virtual-applications-with-configuration-manager"></a>Configuration Manager ile App-V sanal uygulamalarını dağıtma
 
@@ -31,7 +31,7 @@ Sanal uygulamaları yönetmek için Configuration Manager kullandığınızda, a
 
 -   Sanal uygulamaları desteklemek için işletim sistemi dağıtımı, yazılım ve donanım envanteri, yazılım ölçümü ve varlık yönetim bilgileri  
 
-Microsoft Application Virtualization (App-V) ile uygulama oluşturma ve sıralama hakkında daha fazla bilgi için bkz. TechNet kitaplığındaki [Application Virtualization](https://technet.microsoft.com/library/cc843848.aspx) .  
+Microsoft Application Virtualization (App-V) ile uygulama oluşturma ve sıralama hakkında daha fazla bilgi için bkz. [Application Virtualization 4 belgeleri](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v4/).  
 
 Bir uygulama oluşturmaya yönelik diğer Configuration Manager gereksinimleri ve yordamlarına ek olarak, sanal uygulama oluştururken ve dağıtırken aşağıdaki noktaları dikkate almanız gerekir:
 
@@ -49,7 +49,7 @@ Bir uygulama oluşturmaya yönelik diğer Configuration Manager gereksinimleri v
 
 -   Configuration Manager ' de sanal uygulamaları dağıtmak için, istemci bilgisayarlarda minimum App-V 4,6 SP1 veya istemcinin sonraki bir sürümü yüklü olmalıdır.  
 
--   Sanal uygulamaları başarıyla dağıtabilmeniz için önce App-V Istemcisini, Bilgi Bankası makalesi [2645225](https://support.microsoft.com/kb/2645225)' de açıklanan düzeltmeyle güncelleştirmeniz gerekir.  
+-   Sanal uygulamaları başarıyla dağıtabilmeniz için önce App-V istemcisini en son düzeltmeyle güncelleştirin. Daha fazla bilgi için bkz. [App-v 4,5 ve App-v 4,6 dosya sürümlerinin geçerli listesi](https://support.microsoft.com/help/2950945/current-list-of-app-v-4-5-and-app-v-4-6-file-versions).
 
 -   App-V 5,0 ' de bağlantı gruplarını kullandığınızda, dağıtılmış sanal uygulamalarınız istemci bilgisayarlarda aynı dosya sistemini ve kayıt defterini paylaşabilir. Standart sanal uygulamalardan farklı olarak, bu uygulamalar birbiriyle veri paylaşabilir. Bu ek olarak, bağlantı grupları içerdikleri uygulamalar için kullanıcı ayarlarını korurlar. Configuration Manager içindeki App-V sanal ortamları, istemci bilgisayarlarda bağlantı grupları kurmak için kullanılır. Sanal ortamlar, uygulama yüklendiğinde veya sonraki istemciler yüklü uygulamalarını değerlendirdiğinde istemci bilgisayarlarda oluşturulur veya değiştirilir. Bu uygulamaları, birden fazla uygulama bir dosya sistemini veya kayıt defteri değerini değiştirmeye çalıştığında en yüksek önceliğe sahip uygulama öncelikli olarak biçimde öncelik sırasına koyabilirsiniz. Daha fazla bilgi için bkz. [App-V sanal ortamları oluşturma](../../apps/deploy-use/create-app-v-virtual-environments.md).  
 
@@ -58,16 +58,16 @@ Bir uygulama oluşturmaya yönelik diğer Configuration Manager gereksinimleri v
 
 -   **App-v 4,6**: Configuration Manager sanal uygulamaları kullanmak için, Istemci bilgisayarlarda App-v 4,6 SP1, App-v 4,6 SP2 veya App-v 4,6 SP3 istemcisinin yüklü olması gerekir.  
 
-     Sanal uygulamaları başarıyla dağıtabilmeniz için, App-V 4,6 SP1 istemcisini Ayrıca Bilgi Bankası makalesi [2645225](https://go.microsoft.com/fwlink/p/?LinkId=237322)' de açıklanan düzeltmeyle güncelleştirmeniz gerekir.  
+     Sanal uygulamaları başarıyla dağıtabilmeniz için önce App-V 4,6 istemcisini en son düzeltmeyle güncelleştirin. Daha fazla bilgi için bkz. [App-v 4,5 ve App-v 4,6 dosya sürümlerinin geçerli listesi](https://support.microsoft.com/help/2950945/current-list-of-app-v-4-5-and-app-v-4-6-file-versions).  
 
--   **App-v 5, App-v 5,0 SP1, App-v 5,0 SP2, App-v 5,0 SP3 ve App-v 5,1**: App-v 5,0 SP2 Için [düzeltme paketi 5](https://support.microsoft.com/en-us/kb/2963211) ' i yüklemeli veya App-v 5,0 SP3 kullanmanız gerekir.  
+-   **App-v 5, App-v 5,0 SP1, App-v 5,0 SP2, App-v 5,0 SP3 ve App-v 5,1**: App-v 5,0 SP2 Için [düzeltme paketi 5](https://support.microsoft.com/help/2963211) ' i yüklemeli veya App-v 5,0 SP3 kullanmanız gerekir.  
 -   **App-V 5,2**: Bu, Windows 10 eğitimi (1607 ve üzeri), Windows 10 Enterprise (1607 ve üzeri) ve windows Server 2016 içinde yerleşiktir.
 
 Windows 10 ' da App-V hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
-- [App-V ' d a yenilikler](https://technet.microsoft.com/itpro/windows/manage/appv-about-appv)
-- [Windows 10 için App-V ile çalışmaya başlama](https://technet.microsoft.com/itpro/windows/manage/appv-getting-started)
-- [Mevcut bir yüklemeden Windows 10 için App-V ' d e yükseltme](https://technet.microsoft.com/itpro/windows/manage/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
+- [App-V ' d a yenilikler](https://docs.microsoft.com/windows/application-management/app-v/appv-about-appv)
+- [Windows 10 için App-V ile çalışmaya başlama](https://docs.microsoft.com/windows/application-management/app-v/appv-getting-started)
+- [Mevcut bir yüklemeden Windows 10 için App-V ' d e yükseltme](https://docs.microsoft.com/windows/application-management/app-v/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
 
 ##  <a name="steps-to-manage-app-v-virtual-applications"></a>App-V sanal uygulamalarını yönetme adımları  
  App-V sanal uygulamalarını yönetmek için aşağıdaki adımları izleyin:  
@@ -147,7 +147,7 @@ Bu özelliği Configuration Manager birlikte kullanabilmeniz için her iki paket
 App-V Dynamic Suite Composition hakkında daha fazla bilgi edinmek için App-V belgelerinize bakın.  
 
 ##  <a name="converting-app-v-46-applications-to-app-v-5-applications"></a> App-V 4.6 uygulamalarını App-V 5 uygulamalarına dönüştürme  
-App-V 4.6 ve App-V 5 arasındaki uygulama paket biçimi değişmiştir. App-V 4.6 kullanılarak sıralanmış olan uygulamalar artık desteklenmez. Ancak App-V 5, uygulamaları dönüştürmek için kullanabileceğiniz bir paket dönüştürücü aracına sahiptir. Daha fazla bilgi edinmek için [App-V 5 belgelerinize](https://technet.microsoft.com/library/jj713472.aspx)bakın.  
+App-V 4.6 ve App-V 5 arasındaki uygulama paket biçimi değişmiştir. App-V 4.6 kullanılarak sıralanmış olan uygulamalar artık desteklenmez. Ancak App-V 5, uygulamaları dönüştürmek için kullanabileceğiniz bir paket dönüştürücü aracına sahiptir. Daha fazla bilgi için bkz. [App-V ' nin önceki bir sürümünde oluşturulan paketi dönüştürme](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/how-to-convert-a-package-created-in-a-previous-version-of-app-v).  
 
 App-V 4.6 uygulamalarını App-V 5 uygulamalarına dönüştürmek için aşağıdaki adımları kullanın:  
 
@@ -178,7 +178,7 @@ Dağıtım yapılandırma dosyası, kayıt defteri ayarları gibi, bilgisayara u
 
 App-V 5 sanal uygulamalarını Configuration Manager dağıtmak istiyorsanız, App-V 5 dağıtım türünü oluşturduğunuzda üç dosyanın tümünün aynı klasörde mevcut olması gerekir. Klasörde birden fazla dosya varsa Configuration Manager en güncel olanı kullanır.  
 
-Daha fazla bilgi edinmek için [App-V 5 belgelerinize](https://technet.microsoft.com/library/jj713466.aspx)bakın.  
+Daha fazla bilgi için [App-V 5,0 dinamik yapılandırma hakkında](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50-dynamic-configuration)bölümüne bakın.  
 
 ##  <a name="app-v-local-interaction"></a>App-V yerel etkileşimi  
 Bazı uygulama dağıtım senaryolarında, uygulamalar istemci bilgisayarlarına yerel olarak yüklenir ve diğer uygulamalar aynı istemci bilgisayarına sanal uygulamalar olarak dağıtılır. Varsayılan olarak, yerel olarak yüklenen uygulamalar sanal uygulamaları doğrudan görüntüleyemez veya bağlanamaz. Bu, App-V tarafından sağlanan uygulama yalıtımının amaçlanan davranışıdır. Yerel etkileşim, bir App-V Istemcisinin, bir istemci bilgisayarda çalışan yerel olarak yüklenen uygulamalara, sanallaştırılmış uygulamalarla ilgili ve iletişim kurmasına izin vermek için etkinleştirebilen bir özelliktir. Configuration Manager ve App-V yerel etkileşimi tam olarak destekler.  
@@ -186,7 +186,7 @@ Bazı uygulama dağıtım senaryolarında, uygulamalar istemci bilgisayarlarına
 App-V yerel etkileşim özelliği hakkında daha fazla bilgi için App-V belgelerinize bakın.  
 
 ##  <a name="app-v-5-shared-content-store"></a> App-V 5 Paylaşılan İçerik Deposu  
-Configuration Manager App-V 5 paylaşılan Içerik depolama özelliğini destekler. Daha fazla bilgi için bkz. [App-V 5.0 Paylaşılan İçerik Deposu (SCS) Planlaması](https://technet.microsoft.com/library/jj713431.aspx).  
+Configuration Manager App-V 5 paylaşılan Içerik depolama özelliğini destekler. Daha fazla bilgi için bkz. [App-V 5.0 Paylaşılan İçerik Deposu (SCS) Planlaması](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/planning-for-the-app-v-50-sequencer-and-client-deployment#planning-for-the-app-v-50-shared-content-store-scs).  
 
 ##  <a name="monitoring-virtual-applications"></a>Sanal uygulamaları izleme  
 

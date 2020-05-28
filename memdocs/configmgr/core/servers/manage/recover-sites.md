@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 14f319cfa1d09cf21cc5da5ed4a9fde9b9b9799b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b17c8c9ed0c1f6f9a5aeb487e07ad3d3dc66cbae
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723869"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903952"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Bir Configuration Manager sitesini kurtarma
 
@@ -50,7 +50,7 @@ Var olan bir sunucuyu temizlemek için aşağıdaki yordamlardan birini kullanı
 #### <a name="clean-an-existing-server-for-site-server-recovery-only"></a>Var olan bir sunucuyu yalnızca site sunucusu kurtarması için temizle
 
 1. SMS kayıt defteri anahtarlarını silme:`HKLM\Software\Microsoft\SMS`
-2. İle `SMS` başlayan tüm kayıt defteri girdilerini silin `HKLM\System\CurrentControlSet\Services`. Örneğin:
+2. İle başlayan tüm kayıt defteri girdilerini `SMS` silin `HKLM\System\CurrentControlSet\Services` . Örneğin:
     - SMS_DISCOVERY_DATA_MANAGER
     - SMS_EXECUTIVE
     - SMS_INBOX_MONITOR
@@ -193,7 +193,7 @@ Configuration Manager site veritabanı sunucusunda bir veri kaybı oluşmadığ�
 
 Configuration Manager, SQL Server site veritabanı için değişiklik izleme imkanı sunar. Değişiklik izleme, zaman içinde önceki bir noktadan sonra veritabanı tablolarında yapılan değişiklikler hakkında bilgi için sorguya Configuration Manager olanak tanır. Saklama süresi, değişiklik izleme bilgilerinin ne kadar süreyle tutulacağını belirtir. Varsayılan olarak, site veritabanı beş günlük bir bekletme dönemine sahip olacak şekilde yapılandırılmıştır. Bir site veritabanını kurtardığınızda, yedeklemenin tutma süresi içinde veya dışında olmasına bağlı olarak kurtarma işlemi farklı şekilde devam eder. Örneğin, SQL sunucunuz başarısız olursa ve son yedeklemeniz yedi gün daha eski ise, bu, bekletme döneminin dışındadır.
 
-SQL Server değişiklik izleme iç işlevleri hakkında daha fazla bilgi için, SQL Server ekibinin şu blog gönderilerine bakın: [değişiklik izleme temizleme-Bölüm 1](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1/) ve [değişiklik izleme temizleme-Bölüm 2](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2).
+SQL Server değişiklik izleme iç işlevleri hakkında daha fazla bilgi için, SQL Server ekibinin şu blog gönderilerine bakın: [değişiklik izleme temizleme-Bölüm 1](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) ve [değişiklik izleme temizleme-Bölüm 2](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-2).
 
 ### <a name="reinitialization-of-site-or-global-data"></a>Siteyi veya genel verileri yeniden başlatma
 
@@ -263,7 +263,7 @@ Site sunucunuzu ve site veritabanınızı kurtarmanıza yardımcı olması için
 
 1. Katılımsız yükleme komut dosyasını site kurtarması için gereken seçenekler için hazırlayın. Daha fazla bilgi için bkz. [Katılımsız Site Recovery](unattended-recovery.md).  
 
-2. Configuration Manager Kurulum 'u `/script` komut satırı seçeneğini kullanarak çalıştırın. Örneğin, **ConfigMgrUnattend. ini**Kurulum başlatma dosyası oluşturursunuz. Bu dosyayı, kurulumu çalıştırdığınız `C:\Temp` bilgisayarın dizinine kaydedersiniz. Aşağıdaki komutu kullanın:  
+2. Configuration Manager Kurulum 'u `/script` komut satırı seçeneğini kullanarak çalıştırın. Örneğin, **ConfigMgrUnattend. ini**Kurulum başlatma dosyası oluşturursunuz. Bu dosyayı `C:\Temp` , kurulumu çalıştırdığınız bilgisayarın dizinine kaydedersiniz. Aşağıdaki komutu kullanın:  
 
     `setup.exe /script C:\temp\ConfigMgrUnattend.ini`  
 
@@ -284,7 +284,7 @@ Sitenizi kurtardıktan sonra, Site Recovery 'nin tamamlanabilmesi için göz ön
 
 ### <a name="reenter-user-account-passwords"></a>Kullanıcı hesabı parolalarını yeniden girin
 
-Bir site sunucusu kurtarmasından sonra, sitedeki herhangi bir kullanıcı hesabının parolalarını yeniden girin. Bu parolalar, Site Recovery sırasında sıfırlanır. Hesaplar, Site Recovery tamamlandıktan sonra Kurulum sihirbazının **bitti** sayfasında listelenir. Liste ayrıca kurtarılan site sunucusuna da `C:\ConfigMgrPostRecoveryActions.html` kaydedilir.
+Bir site sunucusu kurtarmasından sonra, sitedeki herhangi bir kullanıcı hesabının parolalarını yeniden girin. Bu parolalar, Site Recovery sırasında sıfırlanır. Hesaplar, Site Recovery tamamlandıktan sonra Kurulum sihirbazının **bitti** sayfasında listelenir. Liste ayrıca `C:\ConfigMgrPostRecoveryActions.html` Kurtarılan site sunucusuna da kaydedilir.
 
 #### <a name="reenter-user-account-passwords-after-site-recovery"></a>Site kurtarmasından sonra Kullanıcı hesabı parolalarını yeniden girin
 
@@ -370,7 +370,7 @@ IIS çalıştıran ve HTTPS için yapılandırdığınız site sistemlerini kurt
 
 ### <a name="reinstall-hotfixes"></a>Düzeltmeleri yeniden yükle
 
-Site kurtarmasından sonra, site sunucusuna uygulanan tüm [bant dışı düzeltmeleri](updates.md#bkmk_outofband) yeniden yüklemeniz gerekir. Site kurtarmasından sonra, Kurulum sihirbazının **bitti** sayfasında, daha önce yüklenmiş düzeltmelerin listesini görüntüleyin. Bu liste, kurtarılan site sunucusuna `C:\ConfigMgrPostRecoveryActions.html` da kaydedilir.
+Site kurtarmasından sonra, site sunucusuna uygulanan tüm [bant dışı düzeltmeleri](updates.md#bkmk_outofband) yeniden yüklemeniz gerekir. Site kurtarmasından sonra, Kurulum sihirbazının **bitti** sayfasında, daha önce yüklenmiş düzeltmelerin listesini görüntüleyin. Bu liste, `C:\ConfigMgrPostRecoveryActions.html` Kurtarılan site sunucusuna da kaydedilir.
 
 ### <a name="recover-custom-reports"></a>Özel raporları kurtarma
 
@@ -380,7 +380,7 @@ Bazı müşteriler SQL Server Reporting Services özel raporlar oluşturur. Bu b
 
 Site veritabanı, site sunucusunun içerik dosyalarını nerede depoladığını izler. İçerik dosyaları yedekleme ve kurtarma sürecinin bir parçası olarak yedeklenmez veya geri yüklenmez. İçerik dosyalarını tamamen kurtarmak için, içerik kitaplığı ve paket kaynak dosyalarını özgün konuma geri yükleyin. İçerik dosyalarınızı kurtarmaya yönelik çeşitli yöntemler vardır. En kolay yöntem, dosyaları site sunucusunun bir dosya sistemi yedeğinden geri yüklemektir.
 
-Paket kaynak dosyaları için bir dosya sistemi yedeğiniz yoksa, bunları el ile kopyalayın veya indirin. Bu işlem, paketi ilk oluşturduğunuzda ile benzerdir. Tüm paketler ve uygulamalar için paket kaynağı konumunu bulmak üzere SQL Server aşağıdaki sorguyu çalıştırın: `SELECT * FROM v_Package`. Paket KIMLIĞININ ilk üç karakterine bakarak paket kaynak sitesini belirler. Örneğin, paket kimliği CEN00001 ise kaynak sitenin site kodu CEN’dir. Paket kaynak dosyalarını geri yüklediğinizde bunlar arızadan önce bulundukları konuma geri yüklenmelidir.
+Paket kaynak dosyaları için bir dosya sistemi yedeğiniz yoksa, bunları el ile kopyalayın veya indirin. Bu işlem, paketi ilk oluşturduğunuzda ile benzerdir. Tüm paketler ve uygulamalar için paket kaynağı konumunu bulmak üzere SQL Server aşağıdaki sorguyu çalıştırın: `SELECT * FROM v_Package` . Paket KIMLIĞININ ilk üç karakterine bakarak paket kaynak sitesini belirler. Örneğin, paket kimliği CEN00001 ise kaynak sitenin site kodu CEN’dir. Paket kaynak dosyalarını geri yüklediğinizde bunlar arızadan önce bulundukları konuma geri yüklenmelidir.
 
 İçerik kitaplığını içeren bir dosya sistemi yedeğiniz yoksa, aşağıdaki geri yükleme seçenekleriniz vardır:  
 
@@ -396,7 +396,7 @@ System Center Updates Publisher veritabanı dosyalarını yedekleme planınıza 
 
 1. Updates Publisher 'ı kurtarılan bilgisayara yeniden yükleyin.  
 
-2. **Scupdb. sdf** veritabanı dosyasını yedekleme hedefinizden `%USERPROFILE%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\` , Updates Publisher 'ı çalıştıran bilgisayara kopyalayın.  
+2. **Scupdb. sdf** veritabanı dosyasını yedekleme hedefinizden, `%USERPROFILE%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\` Updates Publisher 'ı çalıştıran bilgisayara kopyalayın.  
 
 3. Bilgisayar üzerinde Updates Publisher 'ı birden fazla Kullanıcı çalıştırıyorsa, her veritabanı dosyasını ilgili Kullanıcı profili konumuna kopyalayın.  
 
@@ -406,7 +406,7 @@ Durum geçiş noktası özellikleri kapsamında, Kullanıcı durumu verilerini d
 
 ### <a name="regenerate-the-certificates-for-distribution-points"></a>Dağıtım noktaları için sertifikaları yeniden oluşturma
 
-Bir siteyi geri yükledikten sonra, **Distmgr. log** bir veya daha fazla dağıtım noktası için şu girdiyi listeleyebilir: `Failed to decrypt cert PFX data`. Bu giriş, dağıtım noktası sertifika verilerinin, site tarafından çözülemediğini belirtir. Bu sorunu çözmek için sertifikayı etkilenen dağıtım noktaları için yeniden oluşturun veya yeniden içeri aktarın. [Set-CMDistributionPoint](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmdistributionpoint) PowerShell cmdlet 'ini kullanın.
+Bir siteyi geri yükledikten sonra, **Distmgr. log** bir veya daha fazla dağıtım noktası için şu girdiyi listeleyebilir: `Failed to decrypt cert PFX data` . Bu giriş, dağıtım noktası sertifika verilerinin, site tarafından çözülemediğini belirtir. Bu sorunu çözmek için sertifikayı etkilenen dağıtım noktaları için yeniden oluşturun veya yeniden içeri aktarın. [Set-CMDistributionPoint](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmdistributionpoint) PowerShell cmdlet 'ini kullanın.
 
 ### <a name="update-certificates-used-for-cloud-based-distribution-points"></a>Bulut tabanlı dağıtım noktaları için kullanılan sertifikaları güncelleştirme
 

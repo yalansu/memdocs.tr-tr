@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1166d4c674207ed3590901465ca90a98ce3ae78f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4403c8d0c57fba8fb63e3df729fb8a48ff123362
+ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075073"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732882"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Configuration Manager ile önyükleme görüntülerini yönetme
 
@@ -25,7 +25,7 @@ Configuration Manager bir önyükleme görüntüsü, işletim sistemi dağıtım
 
 ## <a name="default-boot-images"></a><a name="BKMK_BootImageDefault"></a>Varsayılan önyükleme görüntüleri
 
-Configuration Manager iki varsayılan önyükleme görüntüsü sağlar: biri x86 platformlarını ve diğeri de x64 platformlarını destekler. Bu görüntüler, site sunucusunda aşağıdaki paylaşımdaki *x64* veya *I386* klasörlerinde depolanır: `\\<SiteServerName>\SMS_<sitecode>\osd\boot\`. Varsayılan önyükleme görüntüleri, aldığınız eyleme göre güncelleştirilir veya yeniden oluşturulur.
+Configuration Manager iki varsayılan önyükleme görüntüsü sağlar: biri x86 platformlarını ve diğeri de x64 platformlarını destekler. Bu görüntüler, site sunucusunda aşağıdaki paylaşımdaki *x64* veya *I386* klasörlerinde depolanır: `\\<SiteServerName>\SMS_<sitecode>\osd\boot\` . Varsayılan önyükleme görüntüleri, aldığınız eyleme göre güncelleştirilir veya yeniden oluşturulur.
 
 Varsayılan önyükleme görüntüleri için açıklanan eylemlerden herhangi biri için aşağıdaki davranışları göz önünde bulundurun:
 
@@ -40,7 +40,7 @@ Varsayılan önyükleme görüntüleri için açıklanan eylemlerden herhangi bi
 - Özelleştirilmiş/varsayılan önyükleme görüntülerinizin otomatik olarak güncelleştirilmesini istemiyorsanız, bunları varsayılan konumda saklamayın.  
 
 > [!NOTE]
-> Configuration Manager günlük Aracı (**CMTrace**), **yazılım kitaplığındaki**tüm önyükleme görüntülerine eklenir. Windows PE 'de çalışırken komut isteminden yazarak `cmtrace` aracı başlatın.
+> Configuration Manager günlük Aracı (**CMTrace**), **yazılım kitaplığındaki**tüm önyükleme görüntülerine eklenir. Windows PE 'de çalışırken komut isteminden yazarak aracı başlatın `cmtrace` .
 >
 > CMTrace, Windows PE 'de günlük dosyaları için varsayılan görüntüleyiciye sahiptir.
 
@@ -86,7 +86,7 @@ Site yüklemesi sırasında Configuration Manager, bir WinPE sürümünü temel 
 | Configuration Manager konsolundan özelleştirilebilen önyükleme görüntüleri için Windows PE sürümleri | Windows PE 10 |
 | Configuration Manager konsolundan *özelleştirilemeyen* önyükleme görüntüleri Için desteklenen Windows PE sürümleri | -Windows PE 3,1<sup>[Note 1](#bkmk_note1)</sup> <br> -Windows PE 5 |
 
-Örneğin, Windows 10 için Windows ADK 'den Windows PE 10 tabanlı önyükleme görüntülerini özelleştirmek için Configuration Manager konsolunu kullanın. Windows PE 5 tabanlı bir önyükleme görüntüsü için, Windows 8 için Windows ADK 'den DıSM sürümünü kullanarak farklı bir bilgisayardan özelleştirin. Ardından, Özel önyükleme görüntüsünü Configuration Manager konsoluna ekleyin. Daha fazla bilgi için aşağıdaki makalelere bakın:
+Örneğin, Windows 10 için Windows ADK 'den Windows PE 10 tabanlı önyükleme görüntülerini özelleştirmek için Configuration Manager konsolunu kullanın. Windows PE 5 tabanlı bir önyükleme görüntüsü için, Windows 8 için Windows ADK 'den DıSM sürümünü kullanarak farklı bir bilgisayardan özelleştirin. Ardından, Özel önyükleme görüntüsünü Configuration Manager konsoluna ekleyin. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 - [Önyükleme görüntülerini özelleştirme](customize-boot-images.md)
 - [Windows 10 ADK desteği](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk)
@@ -188,7 +188,7 @@ Görüntüye aygıt sürücüleri ekleyin veya kaldırın ya da önyükleme gör
 - Görev dizisi çalıştırılmadan önce çalıştırılacak komutu belirtmek için **başlatma öncesi komutlarını etkinleştir** seçeneğini belirleyin. Bu seçeneği etkinleştirdiğinizde, çalıştırılacak komut satırını ve komut için gereken destek dosyalarını da belirtin.  
 
     > [!WARNING]  
-    > Komut `cmd /c` satırının başlangıcına ekleyin. Belirtmezseniz `cmd /c`, komut çalıştıktan sonra kapanmaz. Dağıtım, komutun bitmesini beklemeye devam eder ve yapılandırılmış diğer komut veya eylemleri başlatmayacaktır.  
+    > `cmd /c`Komut satırının başlangıcına ekleyin. Belirtmezseniz `cmd /c` , komut çalıştıktan sonra kapanmaz. Dağıtım, komutun bitmesini beklemeye devam eder ve yapılandırılmış diğer komut veya eylemleri başlatmayacaktır.  
 
     > [!TIP]  
     > Görev sırası medya oluşturma sırasında, sihirbaz paket KIMLIĞINI ve başlatma öncesi komut satırını **CreateTsMedia. log** dosyasına yazar. Bu bilgiler, herhangi bir görev dizisi değişkeni için değer içerir. Bu günlük Configuration Manager konsolunu çalıştıran bilgisayarda bulunur. Görev dizisi değişkenlerinin değerlerini doğrulamak için bu günlük dosyasını gözden geçirin.  
@@ -201,13 +201,8 @@ Görüntüye aygıt sürücüleri ekleyin veya kaldırın ya da önyükleme gör
 
 - **WinPE 'de varsayılan klavye düzeni ayarla**: <!--4910348-->Sürüm 1910 ' den başlayarak, önyükleme görüntüsü için varsayılan klavye yerleşimini yapılandırın. En-US dışında bir dil seçerseniz Configuration Manager, kullanılabilir giriş yerel ayarları 'nda hala en-US ' i içerir. Cihazda, ilk klavye düzeni seçili yerel ayar olur, ancak gerekirse Kullanıcı cihazı en-US ' a değiştirebilir.
 
-    > [!Tip]
-    > [Set-Cmbootımage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) PowerShell cmdlet 'i artık yeni bir parametre içerir `-InputLocale`. Örneğin:
-    >
-    > ```PowerShell
-    > # Set boot image keyboard layout to Russian (Russia)
-    > Set-CMBootimage -Id "CM100004" -InputLocale "ru-ru"`
-    > ```
+> [!Tip]
+> Bu ayarları bir betikten yapılandırmak için [set-Cmbootımage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) PowerShell cmdlet 'ini kullanın.
 
 #### <a name="optional-components"></a>İsteğe bağlı bileşenler
 

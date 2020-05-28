@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1355b6d670e94d985717dfb32386f579cba42a0
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: cb91e62c4ffce37068b2de5e125865e28ff8c53b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078677"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878948"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager 'de içerik yönetimi için temel kavramlar
 
@@ -108,7 +108,7 @@ Configuration Manager, aynı ağdaki eş cihazlar arasında içerik yönetmeye y
 
 Aşağıdaki tabloyu kullanarak bu teknolojilerin önemli özelliklerini karşılaştırın:
 
-| Özellik  | Eş&nbsp;önbellek  | Teslim&nbsp;iyileştirme  | BranchCache  |
+| Özellik  | Eş &nbsp; önbellek  | Teslim &nbsp; iyileştirme  | BranchCache  |
 |---------|---------|---------|---------|
 | Alt ağlar arasında | Yes | Yes | Hayır |
 | Bant genişliğini kısıtlama | Evet (BITS) | Evet (yerel) | Evet (BITS) |
@@ -156,7 +156,7 @@ Teslim Iyileştirme, Windows 10 kalite güncelleştirmeleri için hızlı yükle
 Sürüm 1906 ' den başlayarak dağıtım noktalarınıza Microsoft bağlı önbellek sunucusu yükleyebilirsiniz. Bu içeriği şirket içinde önbelleğe alarak istemcileriniz teslim Iyileştirme özelliğinden yararlanabilir, ancak WAN bağlantılarını korumaya yardımcı olabilirsiniz.
 
 > [!NOTE]
-> Sürüm 1910 ' den başlayarak, bu özellik artık **Microsoft bağlı önbelleği**olarak adlandırılmaktadır. Daha önce teslim Iyileştirmesi-ağ önbelleği (DOıNC) olarak bilinirdi.
+> Sürüm 1910 ' den başlayarak, bu özellik artık **Microsoft bağlı önbelleği**olarak adlandırılmaktadır. Daha önce teslim Iyileştirmesi-ağ önbelleği olarak bilinirdi.
 
 Bu önbellek sunucusu teslim Iyileştirmesi tarafından indirilen içerik için isteğe bağlı bir saydam önbellek işlevi görür. Bu sunucunun yalnızca yerel Configuration Manager sınır grubunun üyelerine sunulmakta olduğundan emin olmak için istemci ayarlarını kullanın.
 

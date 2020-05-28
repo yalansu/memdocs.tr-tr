@@ -10,12 +10,13 @@ ms.assetid: 637fbd8e-b8ea-4c7e-95ee-a60a323c496e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b0e939b51c464215ac1d4feea539ceb5677a01a6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 0e90855949f5c8f249db6b2f4305c71b8ee4e768
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723687"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824027"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>Masaüstü analiziyle pilot 'a dağıtım
 
@@ -100,7 +101,12 @@ Windows 'u dağıtabilmeniz için önce Configuration Manager ' de yazılım nes
 
 ## <a name="deploy-to-pilot-devices"></a>Pilot cihazlara dağıtma
 
-Configuration Manager, pilot ve üretim dağıtımları için Koleksiyonlar oluşturmak üzere masaüstü analizinden gelen verileri kullanır. Cihazların her dağıtım aşamasından sonra sağlıklı olduğundan emin olmak için, masaüstü analizi ile tümleşik aşamalı dağıtım oluşturmak için aşağıdaki yordamı kullanın:
+Configuration Manager, pilot ve üretim dağıtımları için Koleksiyonlar oluşturmak üzere masaüstü analizinden gelen verileri kullanır. Bu koleksiyonlar **varlıklar ve uyum** çalışma alanında, **Cihaz Koleksiyonları** düğümünde, **dağıtım planları** klasöründedir.
+
+> [!IMPORTANT]
+> Bu koleksiyonlar, masaüstü Analizi dağıtım planları için Configuration Manager tarafından yönetilir. El ile yapılan değişiklikler desteklenmez.
+
+Cihazların her dağıtım aşamasından sonra sağlıklı olduğundan emin olmak için, masaüstü analizi ile tümleşik aşamalı dağıtım oluşturmak için aşağıdaki yordamı kullanın:
 
 1. Configuration Manager konsolunda, **yazılım kitaplığı**' na gidin, **Masaüstü Analizi Bakımı**' nı genişletin ve **dağıtım planları** düğümünü seçin.  
 
@@ -113,9 +119,9 @@ Configuration Manager, pilot ve üretim dağıtımları için Koleksiyonlar olu�
 
 4. Dağıtım için bir ad girin ve kullanılacak görev sırasını seçin. **Varsayılan iki aşamalı dağıtımı otomatik olarak oluşturmak**ve ardından aşağıdaki koleksiyonları yapılandırmak için seçeneğini kullanın:  
 
-    - **Ilk koleksiyon**: Bu dağıtım planı için **pilot** koleksiyonu bulun ve seçin. Bu koleksiyon için standart adlandırma kuralı `<deployment plan name> (Pilot)`.
+    - **Ilk koleksiyon**: Bu dağıtım planı için **pilot** koleksiyonu bulun ve seçin. Bu koleksiyon için standart adlandırma kuralı `<deployment plan name> (Pilot)` .
 
-    - **Ikinci koleksiyon**: Bu dağıtım planı için **Üretim** koleksiyonunu bulun ve seçin. Bu koleksiyon için standart adlandırma kuralı `<deployment plan name> (Production)`.
+    - **Ikinci koleksiyon**: Bu dağıtım planı için **Üretim** koleksiyonunu bulun ve seçin. Bu koleksiyon için standart adlandırma kuralı `<deployment plan name> (Production)` .
 
     > [!Note]  
     > Masaüstü Analizi tümleştirmesiyle, Configuration Manager dağıtım planı için otomatik olarak pilot ve üretim koleksiyonları oluşturur. Bunları kullanabilmeniz için, bu koleksiyonların eşitlenmesi zaman alabilir. Daha fazla bilgi için bkz. [sorun giderme-veri gecikmesi](troubleshooting.md#data-latency).<!-- 4984639 -->
@@ -171,7 +177,7 @@ Hataları veya diğer sorunları bildiren tüm cihazlar da sağdaki pilot ayrın
 **Dağıtım durumu** sayfası aşağıdaki kategorilerdeki cihazları listeler:
 
 - Başlamadı
-- Devam ediyor
+- Sürüyor
 - Tamamlandı
 - İlgilenilmesi gerekiyor-cihazlar
 - Dikkat edilmesi gereken noktalar-sorunlar

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0a10726062d679666d14cbbb0b87510af5dfe30c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3259bd1b20740046e70b1ef53281b0ff235a3896
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078813"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905474"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Configuration Manager için Technical Preview 1705 ' deki yetenekler
 
@@ -57,14 +57,14 @@ Konsol içi bir güncelleştirme henüz yüklenmemişse ve hatalı durumdaysa bu
 
 Aracı çalıştırdığınızda, belirttiğiniz güncelleştirmede karşı çalışır. Araç, varsayılan olarak, başarıyla yüklenen veya indirilen güncelleştirmeleri silmez.  
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 Aracı çalıştırmak için kullandığınız hesap aşağıdaki izinleri gerektirir:
 -   Merkezi yönetim sitesinin ve hiyerarşinizdeki her birincil sitenin site veritabanı için **okuma** ve **yazma** izinleri. Bu izinleri ayarlamak için, Kullanıcı hesabını **db_datawriter** bir üyesi olarak ekleyebilir ve her bir sitenin Configuration Manager veritabanına **db_datareader** [sabit veritabanı rolleri](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles) ekleyebilirsiniz. Araç ikincil sitelerle etkileşime girmiyor.
 -   Hiyerarşinizin en üst düzey sitesinde **yerel yönetici** .
 -   Hizmet bağlantı noktasını barındıran bilgisayarda **yerel yönetici** .
 
 Sıfırlamak istediğiniz güncelleştirme paketinin GUID 'sine ihtiyacınız olacak. GUID 'yi almak için:
--   Konsolunda, **Yönetim** > **güncelleştirmeleri ve bakım** ' a gidin ve ardından görüntü bölmesinde sütunlardan birinin başlığına ( **durum**gibi) sağ tıklayın ve ardından **paket GUID**' yi seçin. Bu sütun, görüntülenecek sütunu ekler ve sütunda güncelleştirme paketi GUID 'SI gösterilir.
+-   Konsolunda, **Yönetim**  >  **güncelleştirmeleri ve bakım** ' a gidin ve ardından görüntü bölmesinde sütunlardan birinin başlığına ( **durum**gibi) sağ tıklayın ve ardından **paket GUID**' yi seçin. Bu sütun, görüntülenecek sütunu ekler ve sütunda güncelleştirme paketi GUID 'SI gösterilir.
 
 > [!TIP]  
 > GUID 'yi kopyalamak için, sıfırlamak istediğiniz güncelleştirme paketinin satırını seçin ve ardından CTRL + C tuşlarını kullanarak bu satırı kopyalayın. Kopyalanmış seçiminizi bir metin düzenleyicisine yapıştırırsanız, aracı çalıştırdığınızda yalnızca bir komut satırı parametresi olarak kullanılacak GUID 'yi kopyalayabilirsiniz.
@@ -85,10 +85,10 @@ Araç çalıştıktan sonra:
 
 |                        Parametre                         |                                                            Açıklama                                                            |
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| **-S &lt;en üst katman sitenizin SQL Server FQDN 'si>** | *Gerekli* <br> Hiyerarşinizin üst katman sitesi için site veritabanını barındıran SQL Server FQDN belirtmeniz gerekir. |
-|                **-D &lt;veritabanı adı>**                 |                             *Gerekli* <br> Üst katman siteleri veritabanının adını belirtmeniz gerekir.                             |
-|                 **-P &lt;paketi GUID>**                 |                        *Gerekli* <br> Sıfırlamak istediğiniz güncelleştirme paketi için GUID 'YI belirtmeniz gerekir.                        |
-|           **-I &lt;SQL Server örnek adı>**           |                   *İsteğe Bağlı* <br> Site veritabanını barındıran SQL Server örneğini tanımlamak için bunu kullanın.                   |
+| **-S &lt; en üst katman sitenizin SQL Server FQDN 'si>** | *Gerekli* <br> Hiyerarşinizin üst katman sitesi için site veritabanını barındıran SQL Server FQDN belirtmeniz gerekir. |
+|                **-D &lt; veritabanı adı>**                 |                             *Gerekli* <br> Üst katman siteleri veritabanının adını belirtmeniz gerekir.                             |
+|                 **-P &lt; PAKETI guıd>**                 |                        *Gerekli* <br> Sıfırlamak istediğiniz güncelleştirme paketi için GUID 'YI belirtmeniz gerekir.                        |
+|           **-I &lt; SQL Server örnek adı>**           |                   *İsteğe Bağlı* <br> Site veritabanını barındıran SQL Server örneğini tanımlamak için bunu kullanın.                   |
 |                       **-FDELETE**                       |                      *İsteğe Bağlı* <br> Başarıyla indirilen bir güncelleştirme paketinin silinmesini zorlamak için bunu kullanın.                      |
 
  **Örnekler**  
@@ -99,7 +99,7 @@ Araç çalıştıktan sonra:
 ### <a name="test-the-tool-with-the-technical-preview"></a>Teknik Önizleme ile aracı test edin  
 Bu aracı Teknik Önizleme sürümleri 1606 veya sonrası ile birlikte kullanabilirsiniz. Bu geriye doğru destek, aracın daha fazla sayıda teknik önizleme güncelleştirme senaryolarıyla kullanılabilmesi için, sonraki Technical Preview sürümü kullanılabilir olana kadar beklemek zorunda kalmadan sağlanır.
 
-Bu güncelleştirme önkoşul denetimini tamamlamadan önce teknik önizleme için bir güncelleştirme paketinde aracı çalıştırın. Tamamlanmış bir önkoşul denetimi durumu, **Yönetim** > **güncelleştirmeleri ve bakımı**'ndaki paket için aşağıdaki durum ile tanımlanır:  
+Bu güncelleştirme önkoşul denetimini tamamlamadan önce teknik önizleme için bir güncelleştirme paketinde aracı çalıştırın. Tamamlanmış bir önkoşul denetimi durumu, **Yönetim**  >  **güncelleştirmeleri ve bakımı**'ndaki paket için aşağıdaki durum ile tanımlanır:  
 -   **Önkoşul denetimi başarılı**
 -   **Önkoşul denetimi uyarıyla geçti**
 -   **Önkoşul denetimi başarısız oldu**
@@ -121,12 +121,12 @@ Bu sürümle birlikte, artık Configuration Manager kullandığınız SQL Server
 
 - Bu sürüm, site veritabanınız olarak zaman uyumsuz tamamlama çoğaltmasını kullanmak için yük devretmeyi desteklemez.
   > [!CAUTION]  
-  > Configuration Manager, zaman uyumsuz tamamlama çoğaltmasının durumunu doğrulamak için geçerli olduğundan emin olmak için, bu [tür bir çoğaltma eşitlenmemiş](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes)olabilir ve site veritabanı, site veritabanının bütünlüğünü ve verilerinizi riske koyabildiğinden zaman uyumsuz bir çoğaltma çoğaltmasının kullanımını eşzamanlı hale getirebilirsiniz.  
+  > Configuration Manager, zaman uyumsuz tamamlama çoğaltmasının durumunu doğrulamak için geçerli olduğundan emin olmak için, bu [tür bir çoğaltma eşitlenmemiş](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes)olabilir ve site veritabanı, site veritabanının bütünlüğünü ve verilerinizi riske koyabildiğinden zaman uyumsuz bir çoğaltma çoğaltmasının kullanımını eşzamanlı hale getirebilirsiniz.  
 
 - Bir kullanılabilirlik grubunda, kullandığınız SQL Server sürümü tarafından desteklenen aynı sayıda ve türde çoğaltmaları kullanabilirsiniz.   (Önceki destek iki eşzamanlı kayıt çoğaltmalarıyla sınırlandırılmıştır.)
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Zaman uyumsuz bir kayıt çoğaltması yapılandırma
-[Configuration Manager ile kullandığınız bir kullanılabilirlik grubuna](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)zaman uyumsuz bir çoğaltma eklemek için, zaman uyumlu çoğaltma yapılandırmak için gereken yapılandırma betiklerini çalıştırmanız gerekmez. (Bunun nedeni, site veritabanı olarak o zaman uyumsuz çoğaltmanın kullanılması desteklenmez.) Kullanılabilirlik gruplarına ikincil çoğaltmalar ekleme hakkında bilgi edinmek için [SQL Server belgelerine](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot)) bakın.
+[Configuration Manager ile kullandığınız bir kullanılabilirlik grubuna](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)zaman uyumsuz bir çoğaltma eklemek için, zaman uyumlu çoğaltma yapılandırmak için gereken yapılandırma betiklerini çalıştırmanız gerekmez. (Bunun nedeni, site veritabanı olarak o zaman uyumsuz çoğaltmanın kullanılması desteklenmez.) Daha fazla bilgi için bkz. [kullanılabilirlik grubuna ikincil çoğaltma ekleme](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014).
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Sitenizi kurtarmak için zaman uyumsuz çoğaltmayı kullanın
 Site veritabanınızı kurtarmak için zaman uyumsuz bir çoğaltma kullanmadan önce, site veritabanına ek yazmaları engellemek için etkin birincil siteyi durdurmanız gerekir. Siteyi durdurduktan sonra, [el ile kurtarılan bir veritabanını](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered)kullanmak yerine zaman uyumsuz bir çoğaltma kullanabilirsiniz.
@@ -139,7 +139,7 @@ Siteyi durdurma, site sunucusundaki SMS_Executive hizmeti tarafından izlenen Si
 ## <a name="improved-user-notifications-for-office-365-updates"></a>Office 365 güncelleştirmeleri için geliştirilmiş Kullanıcı bildirimleri
 Bir istemci Office 365 güncelleştirmesi yüklediğinde Office Tıkla-Çalıştır Kullanıcı deneyiminden yararlanmak için geliştirmeler yapılmıştır. Bu, açılır ve uygulama içi bildirimleri ve geri sayım deneyimini içerir. Bu sürümden önce, bir istemciye Office 365 güncelleştirmesi gönderildiğinde, açık olan Office uygulamaları uyarı vermeden otomatik olarak kapatılır. Bu güncelleştirmeden sonra Office uygulamaları artık beklenmedik şekilde kapanmayacaktır.
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 Bu güncelleştirme, Office 365 ProPlus istemcileri için geçerlidir.
 
 ### <a name="known-issues"></a>Bilinen sorunlar
@@ -170,7 +170,7 @@ Windows Defender Application Guard hakkındaki temel bilgileri anlamak için blo
 Bir ilke oluşturmak ve kullanılabilir ayarlara gitmek için:
 
 1.  Configuration Manager konsolunda, **varlıklar ve uyumluluk**' i seçin.
-2.  **Varlıklar ve uyum** çalışma alanında,**Windows Defender Application Guard****Endpoint Protection** >  **genel bakış** > ' ı seçin.
+2.  **Varlıklar ve uyum** çalışma alanında, **Overview**  >  **Endpoint Protection**  >  **Windows Defender Application Guard**Endpoint Protection genel bakış ' ı seçin.
 3.  **Giriş** sekmesinde, **Oluştur** grubunda, **Windows Defender Application Guard İlkesi Oluştur**' a tıklayın.
 4.  Blog gönderisini başvuru olarak kullanarak, özelliği denemek için kullanılabilir ayarları gözden geçirin ve yapılandırabilirsiniz.
 5.  İşiniz bittiğinde Sihirbazı doldurun ve ilkeyi bir veya daha fazla Windows 10 cihazına dağıtın.
@@ -246,7 +246,7 @@ Bu noktada, Configuration Manager sitenizi Azure AD 'ye bağladınız.
 Başlamadan önce, istemci yükleme kaynak dosyalarının istemcisini yüklemek istediğiniz cihazda yerel olarak depolandığından emin olun.
 Ardından, aşağıdaki yükleme komut satırını kullanarak [Istemcileri Windows bilgisayarlarına dağıtma](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual) bölümündeki yönergeleri kullanın (örnekteki değerleri kendi değerlerinizle değiştirin):
 
-**CCMSetup. exe/NoCrlCheck/Source: C:\CLIENT CCMHOSTNAME = SCCMPROXYCONTOSO. CLOUDAPP. NET/CCM_Proxy_ServerAuth/72457598037527932 Smssitekodu = HEC AADTENANTıD = 780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME = contoso AADCLIENTAPPıD =\<GUID> AADRESOURCEURI =<https://contososerver>**
+**CCMSetup. exe/NoCrlCheck/Source: C:\CLIENT CCMHOSTNAME = SCCMPROXYCONTOSO. CLOUDAPP. NET/CCM_Proxy_ServerAuth/72457598037527932 Smssitekodu = HEC AADTENANTıD = 780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME = contoso AADCLIENTAPPıD = \< guıd > AADRESOURCEURI =<https://contososerver>**
 
 - **/NoCRLCheck**: yönetim noktanız veya bulut yönetimi ağ geçidiniz ortak olmayan bir sunucu sertifikası kullanıyorsa, istemci CRL konumuna ulaşamayacak olabilir.
 - **/Source**: yerel klasör: istemci yükleme dosyalarının konumu.
@@ -276,7 +276,7 @@ OMS bağlantısını yapılandırma önkoşulları [, güncel dalı sürüm 1702
 
 ### <a name="use-the-azure-services-wizard-to-configure-the-connection-to-oms"></a>OMS bağlantısını yapılandırmak için Azure Hizmetleri Sihirbazı 'Nı kullanın
 
-1.  Konsolunda, **Yönetim** > **genel bakış** > **Cloud Services** > **Azure hizmetleri**' ne gidin ve ardından Şeritteki **giriş** sekmesinden **Azure hizmetlerini yapılandır** ' ı seçerek **Azure Hizmetleri Sihirbazı 'nı**başlatın.
+1.  Konsolunda, **Yönetim**  >  **genel bakış**  >  **Cloud Services**  >  **Azure hizmetleri**' ne gidin ve ardından Şeritteki **giriş** sekmesinden **Azure hizmetlerini yapılandır** ' ı seçerek **Azure Hizmetleri Sihirbazı 'nı**başlatın.
 
 2.  **Azure hizmetleri** sayfasında, Operation Management Suite Bulut hizmetini seçin. **Azure hizmet adı** ve isteğe bağlı bir açıklama için kolay bir ad girin ve ardından **İleri**' ye tıklayın.
 

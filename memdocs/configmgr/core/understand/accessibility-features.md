@@ -2,7 +2,7 @@
 title: Erişilebilirlik
 titleSuffix: Configuration Manager
 description: Configuration Manager herkes için erişilebilir hale getirme özellikleri hakkında bilgi edinin.
-ms.date: 03/27/2019
+ms.date: 05/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2ff86df999ab744d590b1ca120a8b566d18f446b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1b25b0137e24212cbad2ba688735e45d9fe9aac0
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718563"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556039"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Configuration Manager erişilebilirlik özellikleri
 
@@ -45,7 +46,7 @@ Bir çalışma alanına erişmek için aşağıdaki klavye kısayollarını kull
 |Ctrl + 4|  Yönetim|
 
 
-### <a name="other-keyboard-shortcuts"></a>Diğer klavye kısayolları
+### <a name="other-console-shortcuts"></a>Diğer konsol kısayolları
 
 |Klavye kısayolu|  Amaç|
 |--------|--------|  
@@ -56,6 +57,14 @@ Bir çalışma alanına erişmek için aşağıdaki klavye kısayollarını kull
 |CTRL + D|Varsa, odağı Ayrıntılar bölmesine ayarlayın.|
 |Alt     |Şeridin içindeki ve çıkan odayı değiştirin.|
 
+### <a name="cmpivot-shortcuts"></a><a name="bkmk_cmpshortcuts"></a>CMPivot kısayolları
+
+Çoğu [Web tarayıcısı klavye kısayolu](https://support.microsoft.com/help/17456/windows-internet-explorer-ease-of-access-options) CMPivot içinde çalışacaktır.
+
+|Klavye kısayolu|Amaç|
+|--------|--------|  
+|CTRL + 1|İlk sekmede odağı ayarlayın.|
+|Alt +&lt;|Adrese geri dönmek için|
 
 
 ## <a name="other-accessibility-features"></a>Diğer erişilebilirlik özellikleri
@@ -85,9 +94,9 @@ Bir çalışma alanına erişmek için aşağıdaki klavye kısayollarını kull
 ## <a name="see-also"></a>Ayrıca bkz.
 
 Configuration Manager kullanıcı arabirimlerine gidilme temelleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
-- [Configuration Manager konsolunu kullanma](../servers/manage/admin-console.md)  
+- [Configuration Manager konsolunu kullanma](../servers/manage/admin-console.md)
 - [Yazılım Merkezi kullanıcı kılavuzu](software-center.md)
 
 > [!NOTE]  
-> Bu makaledeki bilgiler yalnızca Birleşik Devletler Microsoft ürünlerini lisanslayan kullanıcılar için geçerlidir. Bu ürünü Birleşik Devletler dışında aldıysanız, yazılım paketinizle birlikte gelen yan kuruluş bilgi kartını kullanabilir veya Microsoft Destek Hizmetleri 'ne yönelik iletişim bilgileri için [Microsoft Erişilebilirlik Web sitesini](https://go.microsoft.com/fwlink/?LinkId=8431) ziyaret edebilirsiniz. Bu bölümde açıklanan ürün ve hizmet türlerinin bölgenizde kullanılabilir olup olmadığını öğrenmek için yan kuruluşuna başvurabilirsiniz. Erişilebilirlik hakkında bilgiler Japonca ve Fransızca'nın dahil olduğu farklı dillerde mevcuttur.  
+> Bu makaledeki bilgiler yalnızca Birleşik Devletler Microsoft ürünlerini lisanslayan kullanıcılar için geçerlidir. Bu ürünü Birleşik Devletler dışında aldıysanız, yazılım paketinizle birlikte gelen yan kuruluş bilgi kartını kullanabilir veya Microsoft Destek Hizmetleri 'ne yönelik iletişim bilgileri için [Microsoft Erişilebilirlik Web sitesini](https://www.microsoft.com/accessibility/) ziyaret edebilirsiniz. Bu bölümde açıklanan ürün ve hizmet türlerinin bölgenizde kullanılabilir olup olmadığını öğrenmek için yan kuruluşuna başvurabilirsiniz. Erişilebilirlik hakkında bilgiler Japonca ve Fransızca'nın dahil olduğu farklı dillerde mevcuttur.  
 

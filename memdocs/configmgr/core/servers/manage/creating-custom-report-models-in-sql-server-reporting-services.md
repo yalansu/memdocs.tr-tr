@@ -10,12 +10,12 @@ ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 590f3adec168fe6d7f4718505bd6f7d6b9f7c25f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fe570eeedc2c050bdaf27903d30ddffff63109d9
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712536"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879157"
 ---
 # <a name="creating-custom-report-models-for-configuration-manager-in-sql-server-reporting-services"></a>SQL Server Reporting Services Configuration Manager için özel rapor modelleri oluşturma
 
@@ -68,7 +68,7 @@ ms.locfileid: "81712536"
 
 4.  **Bağlantı Yöneticisi** iletişim kutusunda veri kaynağı için aşağıdaki bağlantı özelliklerini belirleyin:  
 
-    -   **Sunucu adı**: Configuration Manager site veritabanı sunucunuzun adını yazın veya listeden seçin. Varsayılan örnek yerine adlandırılmış bir örnekle çalışıyorsanız,> &lt; *veritabanı sunucusu*>\\&lt;*örnek adı* yazın.  
+    -   **Sunucu adı**: Configuration Manager site veritabanı sunucunuzun adını yazın veya listeden seçin. Varsayılan örnek yerine adlandırılmış bir örnekle çalışıyorsanız, &lt;> *veritabanı sunucusu* > \\ &lt; *örnek adı* yazın.  
 
     -   **Windows Kimlik Doğrulaması Kullan**'ı seçin.  
 
@@ -100,7 +100,7 @@ ms.locfileid: "81712536"
     > [!TIP]  
     >  **Kullanılabilir nesneler** listesinde görünümleri bulmayı kolaylaştırmak için, listenin başındaki **Ad** başlığına tıklayarak nesneleri alfabetik olarak sıralayın.  
 
-5.  Görünümü seçtikten sonra, nesneyi **>** **dahil edilen nesneler** listesine aktarmak için öğesine tıklayın.  
+5.  Görünümü seçtikten sonra, **>** nesneyi **dahil edilen nesneler** listesine aktarmak için öğesine tıklayın.  
 
 6.  **Ad Eşleştirme** sayfası görüntülenirse, varsayılan seçimleri kabul edip, **İleri**'ye tıklayın.  
 
@@ -136,17 +136,17 @@ ms.locfileid: "81712536"
 
 ###  <a name="to-deploy-the-custom-report-model-to-configuration-manager"></a><a name="BKMK_DeployReportModel"></a>Özel rapor modelini Configuration Manager dağıtmak için  
 
-1. Rapor modeli projesini oluşturduğunuz klasörü bulun. Örneğin,%*USERPROFILE*% \ Studio 2008 \ Projects\\*&lt;proje adı\>.*  
+1. Rapor modeli projesini oluşturduğunuz klasörü bulun. Örneğin,%*USERPROFILE*% \ Studio 2008 \ Projects \\ * &lt; Proje adı \> .*  
 
 2. Aşağıdaki dosyaları rapor modeli proje klasöründen bilgisayarınızda bir geçici klasöre kopyalayın.  
 
-   -   *Model adı\> &lt;* **.dsv**  
+   -   * &lt; Model adı \> * **. dsv**  
 
-   -   *Model adı\> &lt;* **.smdl**  
+   -   * &lt; Model adı \> * **. smdl**  
 
 3. Not Defteri gibi bir metin düzenleyici kullanarak yukarıdaki dosyaları açın.  
 
-4. Dosya _ &lt;modeli adı\>_**. dsv**'de, dosyanın ilk satırını bulun ve aşağıdaki gibi okur:  
+4. Dosya _ &lt; modeli adı \> _**. dsv**'de, dosyanın ilk satırını bulun ve aşağıdaki gibi okur:  
 
     `<DataSourceView xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`
 
@@ -156,9 +156,9 @@ ms.locfileid: "81712536"
 
 5. Dosyanın tüm içeriğini Windows Panosuna kopyalayın.  
 
-6. Dosya _ &lt;modeli adı\>_**. dsv**dosyasını kapatın.  
+6. Dosya _ &lt; modeli adı \> _**. dsv**dosyasını kapatın.  
 
-7. _ &lt;Ad\>_**. smdl**dosya modelinde, dosyanın aşağıdaki gibi görünen son üç satırını bulun:  
+7. _ &lt; Ad \> _**. smdl**dosya modelinde, dosyanın aşağıdaki gibi görünen son üç satırını bulun:  
 
     `</Entity>`  
 
@@ -166,11 +166,11 @@ ms.locfileid: "81712536"
 
     `</SemanticModel>`  
 
-8. Dosya _ &lt;modeli adı\>_**. dsv** içeriğini dosyanın son satırından (**&lt;SemanticModel\>**) doğrudan yapıştırın.  
+8. Dosya _ &lt; modeli adı \> _**. dsv** içeriğini dosyanın son satırından (** &lt; SemanticModel \> **) doğrudan yapıştırın.  
 
-9. Dosya _ &lt;modeli adı\>_**. smdl**dosyasını kaydedin ve kapatın.  
+9. Dosya _ &lt; modeli adı \> _**. smdl**dosyasını kaydedin ve kapatın.  
 
-10. **. Smdl** dosya _ &lt;modeli\>adını_Configuration Manager site sunucusundaki *% ProgramFiles%* \Microsoft Configuration Manager \adminconsole\xmlstorage\other klasörüne kopyalayın.  
+10. **. Smdl** dosya _ &lt; modeli \> adını_Configuration Manager site sunucusundaki *% ProgramFiles%* \Microsoft Configuration Manager \adminconsole\xmlstorage\other klasörüne kopyalayın.  
 
     > [!IMPORTANT]  
     >  Rapor modeli dosyasını Configuration Manager site sunucusuna kopyaladıktan sonra, rapor **oluşturma Sihirbazı**' nda rapor modelini kullanabilmeniz için Configuration Manager konsolundan çıkmanız ve yeniden başlatmanız gerekir.  
@@ -213,7 +213,7 @@ ms.locfileid: "81712536"
 
 4.  **Bağlantı Yöneticisi** iletişim kutusunda veri kaynağı için aşağıdaki bağlantı özelliklerini belirleyin:  
 
-    -   **Sunucu adı**: Configuration Manager site veritabanı sunucunuzun adını yazın veya listeden seçin. Varsayılan örnek yerine adlandırılmış bir örnekle çalışıyorsanız,> &lt; *veritabanı sunucusu*>\\&lt;*örnek adı* yazın.  
+    -   **Sunucu adı**: Configuration Manager site veritabanı sunucunuzun adını yazın veya listeden seçin. Varsayılan örnek yerine adlandırılmış bir örnekle çalışıyorsanız, &lt;> *veritabanı sunucusu* > \\ &lt; *örnek adı* yazın.  
 
     -   **Windows Kimlik Doğrulaması Kullan**'ı seçin.  
 
@@ -246,7 +246,7 @@ ms.locfileid: "81712536"
 
    - **v_GS_OPERATING_SYSTEM (dbo)**  
 
-     Her görünümü seçtikten sonra, nesneyi **>** **dahil edilen nesneler** listesine aktarmak için öğesine tıklayın.  
+     Her görünümü seçtikten sonra, **>** nesneyi **dahil edilen nesneler** listesine aktarmak için öğesine tıklayın.  
 
    > [!TIP]  
    >  **Kullanılabilir nesneler** listesinde görünümleri bulmayı kolaylaştırmak için, listenin başındaki **Ad** başlığına tıklayarak nesneleri alfabetik olarak sıralayın.  
@@ -379,17 +379,17 @@ ms.locfileid: "81712536"
 
 #### <a name="to-deploy-the-custom-report-model-to-configuration-manager"></a>To deploy the custom report model to Configuration Manager  
 
-1. Rapor modeli projesini oluşturduğunuz klasörü bulun. Örneğin,%*USERPROFILE*% \ Studio 2008 \ Projects\\*&lt;proje adı\>.*  
+1. Rapor modeli projesini oluşturduğunuz klasörü bulun. Örneğin,%*USERPROFILE*% \ Studio 2008 \ Projects \\ * &lt; Proje adı \> .*  
 
 2. Aşağıdaki dosyaları rapor modeli proje klasöründen bilgisayarınızda bir geçici klasöre kopyalayın.  
 
-   -   *Model adı\> &lt;* **.dsv**  
+   -   * &lt; Model adı \> * **. dsv**  
 
-   -   *Model adı\> &lt;* **.smdl**  
+   -   * &lt; Model adı \> * **. smdl**  
 
 3. Not Defteri gibi bir metin düzenleyici kullanarak yukarıdaki dosyaları açın.  
 
-4. Dosya _ &lt;modeli adı\>_**. dsv**'de, dosyanın ilk satırını bulun ve aşağıdaki gibi okur:  
+4. Dosya _ &lt; modeli adı \> _**. dsv**'de, dosyanın ilk satırını bulun ve aşağıdaki gibi okur:  
 
     `<DataSourceView xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`
 
@@ -399,9 +399,9 @@ ms.locfileid: "81712536"
 
 5. Dosyanın tüm içeriğini Windows Panosuna kopyalayın.  
 
-6. Dosya _ &lt;modeli adı\>_**. dsv**dosyasını kapatın.  
+6. Dosya _ &lt; modeli adı \> _**. dsv**dosyasını kapatın.  
 
-7. _ &lt;Ad\>_**. smdl**dosya modelinde, dosyanın aşağıdaki gibi görünen son üç satırını bulun:  
+7. _ &lt; Ad \> _**. smdl**dosya modelinde, dosyanın aşağıdaki gibi görünen son üç satırını bulun:  
 
     `</Entity>`  
 
@@ -409,11 +409,11 @@ ms.locfileid: "81712536"
 
     `</SemanticModel>`  
 
-8. Dosya _ &lt;modeli adı\>_**. dsv** içeriğini dosyanın son satırından (**&lt;SemanticModel\>**) doğrudan yapıştırın.  
+8. Dosya _ &lt; modeli adı \> _**. dsv** içeriğini dosyanın son satırından (** &lt; SemanticModel \> **) doğrudan yapıştırın.  
 
-9. Dosya _ &lt;modeli adı\>_**. smdl**dosyasını kaydedin ve kapatın.  
+9. Dosya _ &lt; modeli adı \> _**. smdl**dosyasını kaydedin ve kapatın.  
 
-10. _ &lt;Ad\>_**. smdl** dosya modelini Configuration Manager site sunucusundaki *% ProgramFiles%* \Microsoft Configuration manager\adminconsole\xmlstorage\other klasörüne kopyalayın.  
+10. _ &lt; Ad \> _**. smdl** dosya modelini Configuration Manager site sunucusundaki *% ProgramFiles%* \Microsoft Endpoint manager\adminconsole\xmlstorage\other klasörüne kopyalayın.  
 
     > [!IMPORTANT]  
     >  Rapor modeli dosyasını Configuration Manager site sunucusuna kopyaladıktan sonra, rapor **oluşturma Sihirbazı**' nda rapor modelini kullanabilmeniz için Configuration Manager konsolundan çıkmanız ve yeniden başlatmanız gerekir.  

@@ -10,12 +10,13 @@ ms.assetid: 2ea18d09-c957-47f7-8e54-c6f2b3c74347
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e9cca066d389ea8d3847737651f4994977a5e2f5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 22b5461df3a560449316009471ea029967118f5d
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723617"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864919"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Masaüstü Analizi 'nde cihazları kaydetme
 
@@ -36,10 +37,10 @@ Aşağıdaki tabloda desteklenen işletim sistemi sürümlerindeki her bir bile�
 | İşletim sistemi sürümü | Appraiser | DiagTrack |
 | --------------| ----------------------- | -------------------|
 | Windows 10 1909 | Dahil edilen <sup> [notta 1](#bkmk_note1)</sup> | [En son birikimli güncelleştirme](https://support.microsoft.com/help/4529964) |
-| Windows 10 1903 | Dahil | [En son birikimli güncelleştirme](https://support.microsoft.com/help/4498140) |
-| Windows 10 1809 | Dahil | [En son birikimli güncelleştirme](https://support.microsoft.com/help/4464619) |
-| Windows 10 1803 | Dahil | [En son birikimli güncelleştirme](https://support.microsoft.com/help/4099479) |
-| Windows 10 1709 | Dahil | [En son birikimli güncelleştirme](https://support.microsoft.com/help/4043454) |
+| Windows 10 1903 | Dahil edilen <sup> [notta 1](#bkmk_note1)</sup> | [En son birikimli güncelleştirme](https://support.microsoft.com/help/4498140) |
+| Windows 10 1809 | Dahil edilen <sup> [notta 1](#bkmk_note1)</sup> | [En son birikimli güncelleştirme](https://support.microsoft.com/help/4464619) |
+| Windows 10 1803 | Dahil edilen <sup> [notta 1](#bkmk_note1)</sup> | [En son birikimli güncelleştirme](https://support.microsoft.com/help/4099479) |
+| Windows 10 1709 | Dahil edilen <sup> [notta 1](#bkmk_note1)</sup> | [En son birikimli güncelleştirme](https://support.microsoft.com/help/4043454) |
 | Windows 8.1 | [KB 2976978](https://support.microsoft.com/help/2976978) <sup> [Note 2](#bkmk_note2)</sup> | [En son aylık toplu](https://support.microsoft.com/help/4009470) |
 | Windows 7 SP1 | [KB 2952664](https://support.microsoft.com/help/2952664) <sup> [Note 3](#bkmk_note3)</sup> | [En son aylık toplu](https://support.microsoft.com/help/4009469) |
 
@@ -50,7 +51,7 @@ Aşağıdaki tabloda desteklenen işletim sistemi sürümlerindeki her bir bile�
 
 ### <a name="note-1-windows-10"></a><a name="bkmk_note1"></a>Note 1: Windows 10
 
-Windows 10 varsayılan olarak bu bileşenleri içerdiğinde, Windows 10 cihazlarında masaüstü analizinin tüm işlevlerini almak için en son birikimli güncelleştirme gerekir. Örneğin, cihazı en son işletim sistemi sürümüne karşı uyumluluğu değerlendirmek ve dağıtımlar ve kayıt durumu hakkında neredeyse gerçek zamanlı bilgileri almak için.
+Windows 10 varsayılan olarak bu bileşenleri içerdiğinde, Windows 10 cihazları en son işletim sistemi sürümüne karşı uyumluluk için cihazı değerlendirmek gibi masaüstü analizlerinin tüm işlevlerini almak üzere en son toplu güncelleştirmeyi gerektirir.
 
 ### <a name="note-2-windows-81"></a><a name="bkmk_note2"></a>2. nota: Windows 8.1
 
@@ -125,7 +126,7 @@ Bu seçeneği yapılandırmak için masaüstü analizlerinin Configuration Manag
 
 Genel olarak, masaüstü Analizi ayarlarını ve kaydını hedeflemek için Configuration Manager koleksiyonları kullanın. Cihazları koleksiyona dahil etmek veya hariç tutmak için doğrudan üyeliği veya sorguları kullanın. Daha fazla bilgi için bkz. [koleksiyonlar oluşturma](../core/clients/manage/collections/create-collections.md).
 
-Configuration Manager yalnızca bir değer yoksa, Windows ayarlarını yapılandırır. Benzersiz bir cihaz grubu için farklı ayarlar yapılandırmanız gerekiyorsa, [Grup İlkesi](group-policy-settings.md)kullanabilirsiniz. Grup İlkesi tarafından hedeflenen ayarlar Configuration Manager ayarlarından önceliklidir.
+Configuration Manager yalnızca bir değer yoksa, Windows ayarlarını yapılandırır. Benzersiz bir cihaz grubu için farklı ayarlar yapılandırmanız gerekiyorsa, [Grup İlkesi](group-policy-settings.md)kullanabilirsiniz. Grup İlkesi tarafından hedeflenen ayarlar Configuration Manager ayarlarından önceliklidir. Grup İlkesi tarafından hedeflenen cihazlar, [bağlantı durumu](monitor-connection-health.md) panosundaki durumu doğru şekilde yansıtmayabilir.
 
 Tanılama veri düzeyini yapılandırırken, cihazın üst sınırını ayarlarsınız. Varsayılan olarak, Windows 10, sürüm 1803 ve üzeri sürümlerde, kullanıcılar daha düşük bir düzey ayarlamayı seçebilirler. Bu davranışı Grup İlkesi ayarını kullanarak denetleyebilir, **telemetri katılım ayarı Kullanıcı arabirimini yapılandırın**. Daha fazla bilgi için bkz. [Masaüstü Analizi Için Grup İlkesi ayarları](group-policy-settings.md).
 

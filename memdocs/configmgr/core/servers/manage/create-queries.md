@@ -10,12 +10,12 @@ ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05b77fa181da67858c30f48fc8045c20384953ce
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 63f815394414167ad4f887c5970538eab22c931a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720096"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906153"
 ---
 # <a name="create-queries-in-configuration-manager"></a>Configuration Manager sorgu oluşturma
 
@@ -42,23 +42,23 @@ Bu makalede, Configuration Manager sorguları oluşturma ve içeri aktarma işle
     |**User Kaynağı**|Kullanıcı adları, Kullanıcı grubu adları ve güvenlik grubu adları gibi tipik Kullanıcı bilgilerini aramak için kullanın.|  
     |**Dağıtım**|Dağıtım adı, zamanlama ve dağıtıldığı koleksiyon gibi tipik bir dağıtım özniteliklerini aramak için kullanın.|  
 
-6.  Sorgu adı\> **ifade özellikleri** iletişim kutusunu açmak &lt;için **sorgu ifadesini düzenle ' yi** seçin.  
+6.  Sorgu **Edit Query Statement** &lt; adı \> **ifade özellikleri** Iletişim kutusunu açmak için sorgu ifadesini düzenle ' yi seçin.  
 
-7.  &lt;Sorgu adı\> **ifade özellikleri** iletişim kutusunun **genel** sekmesinde, sorgunun döndürdüğü öznitelikleri ve bunların nasıl görüntüleneceğini belirtin. Yeni bir öznitelik eklemek için **Yeni** simgesini seçin. Sorguyu doğrudan WMI Sorgu Dili (WQL) içinde girmek veya düzenlemek için **sorgu dilini göster** ' i de seçebilirsiniz. WMI sorgularının örnekleri için, bu makaledeki [örnek wql sorguları](#BKMK_Example) bölümüne bakın.  
+7.  **General** &lt; Sorgu adı \> **ifade özellikleri** iletişim kutusunun Genel sekmesinde, sorgunun döndürdüğü öznitelikleri ve bunların nasıl görüntüleneceğini belirtin. Yeni bir öznitelik eklemek için **Yeni** simgesini seçin. Sorguyu doğrudan WMI Sorgu Dili (WQL) içinde girmek veya düzenlemek için **sorgu dilini göster** ' i de seçebilirsiniz. WMI sorgularının örnekleri için, bu makaledeki [örnek wql sorguları](#BKMK_Example) bölümüne bakın.  
 
     > [!TIP]  
     > Kendi WQL sorgularınızı oluşturmanıza yardımcı olması için aşağıdaki başvuru belgelerini kullanabilirsiniz:  
     >   
-    > -   [WQL (WMI için SQL)](https://go.microsoft.com/fwlink/p/?LinkId=256653)  
-    > -   [WHERE yan tümcesi](https://go.microsoft.com/fwlink/p/?LinkId=256654)  
-    > -   [WQL İşleçleri](https://go.microsoft.com/fwlink/p/?LinkId=256655)  
+    > -   [WQL (WMI için SQL)](https://docs.microsoft.com/windows/win32/wmisdk/wql-sql-for-wmi)  
+    > -   [WHERE yan tümcesi](https://docs.microsoft.com/windows/win32/wmisdk/where-clause)  
+    > -   [WQL İşleçleri](https://docs.microsoft.com/windows/win32/wmisdk/wql-operators)  
 
-8.  &lt;Sorgu adı\> **ifade özellikleri** iletişim kutusunun **ölçütler** sekmesinde, sorgunun sonuçlarını iyileştirmek için kullanılan ölçütleri belirtin. Örneğin, yalnızca **xyz**site koduna sahip olan kaynakları döndürebilirsiniz. Bir sorgu için birden çok ölçüt yapılandırabilirsiniz.  
+8.  **Criteria** &lt; Sorgu adı \> **ifade özellikleri** iletişim kutusunun ölçütler sekmesinde, sorgunun sonuçlarını iyileştirmek için kullanılan ölçütleri belirtin. Örneğin, yalnızca **xyz**site koduna sahip olan kaynakları döndürebilirsiniz. Bir sorgu için birden çok ölçüt yapılandırabilirsiniz.  
 
     > [!IMPORTANT]  
     > Hiçbir ölçüt içermeyen bir sorgu oluşturursanız, sorgu **Tüm Sistemler** koleksiyonundaki tüm cihazları döndürür.  
 
-9. &lt;Sorgu adı\> **ifade özellikleri** iletişim kutusunun **birleşimler** sekmesinde, iki farklı öznitelikten verileri Sorgu sonuçlarınızda birleştirebilirsiniz. Sorgu sonucunuz için farklı öznitelikler seçtiğinizde Configuration Manager otomatik olarak sorgu birleştirmeleri oluştursa da, **birleştirmeler** sekmesi daha gelişmiş seçenekler sağlar. Configuration Manager Bu öznitelik sınıflarını destekler:  
+9. **Joins** &lt; Sorgu adı \> **ifade özellikleri** iletişim kutusunun birleşimler sekmesinde, iki farklı öznitelikten verileri Sorgu sonuçlarınızda birleştirebilirsiniz. Sorgu sonucunuz için farklı öznitelikler seçtiğinizde Configuration Manager otomatik olarak sorgu birleştirmeleri oluştursa da, **birleştirmeler** sekmesi daha gelişmiş seçenekler sağlar. Configuration Manager Bu öznitelik sınıflarını destekler:  
 
     |Katılım türü|Açıklama|  
     |---------------|-----------------|  
@@ -69,7 +69,7 @@ Bu makalede, Configuration Manager sorguları oluşturma ve içeri aktarma işle
 
      JOIN işlemlerini kullanma hakkında daha fazla bilgi için SQL Server belgelerine bakın.  
 
-10. Sorgu adı\> **ifade özellikleri** iletişim kutusunu kapatmak için Tamam ' ı seçin. **OK** &lt;  
+10. **OK** &lt; Sorgu adı \> **ifade özellikleri** Iletişim kutusunu kapatmak için Tamam ' ı seçin.  
 
 11. **Sorgu oluşturma Sihirbazı**' nın **genel** sekmesinde, sorgunun sonuçlarının bir koleksiyonun üyeleriyle sınırlı olmadığından, belirtilen bir koleksiyonun üyeleriyle sınırlı olduğunu veya sorgunun her çalıştırılışında bir koleksiyon isteminin göründüğünü belirtin.  
 
@@ -91,7 +91,7 @@ Bu makalede, Configuration Manager sorguları oluşturma ve içeri aktarma işle
 Bu bölüm, hiyerarşinizde kullanabileceğiniz veya başka amaçlarla değiştirebileceğiniz örnek WQL sorgularını içerir. Bu sorguları kullanmak için **sorgu ekstresi özellikleri** Iletişim kutusunda **sorgu dilini göster** ' i seçin. Sonra sorguyu kopyalayıp **sorgu ekstresi** alanına yapıştırın.  
 
 > [!TIP]  
-> Herhangi bir karakter dizesini belirtmek için `%` joker karakterini kullanın. Örneğin, Microsoft Office `%Visio%` Visio 2010 ' i döndürür.  
+> Herhangi bir karakter dizesini belirtmek için `%` joker karakterini kullanın. Örneğin, `%Visio%` Microsoft Office Visio 2010 ' i döndürür.  
 
 ### <a name="computers-that-run-windows-10"></a>Windows 10 çalıştıran bilgisayarlar
 
@@ -106,7 +106,7 @@ SMS_R_System.OperatingSystemNameandVersion like "%Workstation 10%"
 
 ### <a name="computers-with-a-specific-software-package-installed"></a>Belirli bir yazılım paketinin yüklü olduğu bilgisayarlar  
 
-Belirli bir yazılım paketinin yüklü olduğu tüm bilgisayarların NetBIOS adını ve yazılım paketi adını döndürmek için aşağıdaki sorguyu kullanın. Bu örnek, bir Microsoft Visio sürümü yüklü olan tüm bilgisayarları döndürür. Sorgulamak `Microsoft%Visio%` istediğiniz yazılım paketi ile değiştirin.  
+Belirli bir yazılım paketinin yüklü olduğu tüm bilgisayarların NetBIOS adını ve yazılım paketi adını döndürmek için aşağıdaki sorguyu kullanın. Bu örnek, bir Microsoft Visio sürümü yüklü olan tüm bilgisayarları döndürür. `Microsoft%Visio%`Sorgulamak istediğiniz yazılım paketi ile değiştirin.  
 
 > [!TIP]  
 > Bu sorgu, Windows Denetim Masası'ndaki programlar listesinde görüntülenen adları kullanarak yazılım paketini arar.  
@@ -122,7 +122,7 @@ SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName like "Microsoft%Visio%"
 
 ### <a name="computers-in-a-specific-active-directory-domain-services-organizational-unit"></a>Belirli bir Active Directory Domain Services kuruluş birimindeki bilgisayarlar
 
-Belirtilen bir OU 'daki tüm bilgisayarların NetBIOS adını ve kuruluş birimi (OU) adını döndürmek için aşağıdaki sorguyu kullanın. Metni `OU Name` , sorgulamak istediğiniz OU adı ile değiştirin.  
+Belirtilen bir OU 'daki tüm bilgisayarların NetBIOS adını ve kuruluş birimi (OU) adını döndürmek için aşağıdaki sorguyu kullanın. Metni, `OU Name` sorgulamak ISTEDIĞINIZ OU adı ile değiştirin.  
 
 ``` WQL
 select SMS_R_System.NetbiosName,
@@ -133,7 +133,7 @@ SMS_R_System.SystemOUName = "OU Name"
 
 ### <a name="computers-with-a-specific-netbios-name"></a>Belirli bir NetBIOS adına sahip bilgisayarlar
 
-Belirli bir karakter dizesi ile başlayan tüm bilgisayarların NetBIOS adını döndürmek için aşağıdaki sorguyu kullanın. Bu örnekte sorgu, ile `ABC`başlayan bir NetBIOS adı olan tüm bilgisayarları döndürür.  
+Belirli bir karakter dizesi ile başlayan tüm bilgisayarların NetBIOS adını döndürmek için aşağıdaki sorguyu kullanın. Bu örnekte sorgu, ile başlayan bir NetBIOS adı olan tüm bilgisayarları döndürür `ABC` .  
 
 ``` WQL
 select SMS_R_System.NetbiosName from
@@ -148,7 +148,7 @@ Cihaz türleri, kaynak sınıfı **SMS_R_System** ve öznitelik adı **sistem**a
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = <Device ID>  
 ```  
 
-Cihaz KIMLIĞI &lt;\>için şu değerlerden birini kullanın:  
+Cihaz KIMLIĞI için şu değerlerden birini kullanın &lt; \> :  
 
 |Cihaz Türü|AgentEdition değeri|  
 |-----------------|---------------------------|  

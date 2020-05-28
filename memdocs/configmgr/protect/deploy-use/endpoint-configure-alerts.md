@@ -39,12 +39,12 @@ ms.locfileid: "82074869"
     > [!NOTE]
     >  Kullanıcı koleksiyonları için uyarılar yapılandıramasınız.
 
-4.  _<koleksiyonu adı\> _ **Özellikler** iletişim kutusunun **Uyarılar** sekmesinde, bu koleksiyonun kötü amaçlı yazılımdan koruma işlemlerine ilişkin ayrıntıları Configuration Manager konsolunun **izleme** çalışma alanında görüntülemek istiyorsanız, **Endpoint Protection panosunda bu koleksiyonu görüntüle** ' yi seçin.
+4.  _<koleksiyonu adı \> _ **Özellikler** iletişim kutusunun **Uyarılar** sekmesinde, bu koleksiyonun kötü amaçlı yazılımdan koruma işlemlerine ilişkin ayrıntıları Configuration Manager konsolunun **izleme** çalışma alanında görüntülemek istiyorsanız, **Endpoint Protection panosunda bu koleksiyonu görüntüle** ' yi seçin.
 
     > [!NOTE]
     >  Bu seçenek **Tüm Sistemler** koleksiyonu için kullanılamaz.
 
-5.  _<koleksiyonu adı\> _ **Özellikler** iletişim kutusunun **Uyarılar** sekmesinde **Ekle**' ye tıklayın.
+5.  _<koleksiyonu adı \> _ **Özellikler** iletişim kutusunun **Uyarılar** sekmesinde **Ekle**' ye tıklayın.
 
 6.  **Yeni koleksiyon uyarıları Ekle** iletişim kutusundaki **Bu koşullar geçerli olduğunda uyarı oluştur** bölümünde, belirtilen Endpoint Protection olayları gerçekleştiğinde Configuration Manager oluşturmasını istediğiniz uyarıları seçin ve ardından **Tamam**' a tıklayın.
 
@@ -83,13 +83,13 @@ ms.locfileid: "82074869"
 
         -   **Algılama aralığı (saat):** Kötü amaçlı yazılım algılama sayısının oluşması gereken bir algılama aralığı (saat cinsinden) belirtin. **1** ile **168**arasında bir sayı belirtin.
 
-9. _<koleksiyonu adı\> _ **Özellikler** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
+9. _<koleksiyonu adı \> _ **Özellikler** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
 
 ## <a name="alert-for-outdated-malware-client"></a>Güncel olmayan kötü amaçlı yazılım istemcisi için uyarı
 
-Configuration Manager sürüm 1702 ' den başlayarak, Endpoint Protection istemcilerinin güncel olmamasını sağlamak için bir uyarı yapılandırabilirsiniz. Artık herhangi bir cihaz koleksiyonundan aşağıdaki özniteliklerin **kötü amaçlı yazılımdan koruma Istemci sürümü** ve **Endpoint Protection dağıtım durumu**için listeye sütun ekleyebilirsiniz. Örneğin, konsolunda **varlıklar ve uyum** > **genel bakış** > **Cihaz Koleksiyonları** > **Tüm masaüstleri ve sunucu istemcileri**' ne gidin. Sütun başlığına sağ tıklayın ve eklenecek sütunları seçin. Bir uyarıyı denetlemek için **izleme** çalışma alanındaki **uyarıları** görüntüleyin. Yönetilen istemcilerin %20 ' si bir kötü amaçlı yazılımdan koruma yazılımının süresi dolmuşsa, kötü amaçlı yazılımdan koruma istemcisi sürümü güncel değildir. Bu uyarı, **izleme** > **genel bakış** sekmesinde görünmez. Zaman aşımına uğradı istemcileri güncelleştirmek için kötü amaçlı yazılımdan koruma istemcileri için yazılım güncelleştirmelerini etkinleştirin.
+Configuration Manager sürüm 1702 ' den başlayarak, Endpoint Protection istemcilerinin güncel olmamasını sağlamak için bir uyarı yapılandırabilirsiniz. Artık herhangi bir cihaz koleksiyonundan aşağıdaki özniteliklerin **kötü amaçlı yazılımdan koruma Istemci sürümü** ve **Endpoint Protection dağıtım durumu**için listeye sütun ekleyebilirsiniz. Örneğin, konsolunda **varlıklar ve uyum**  >  **genel bakış**  >  **Cihaz Koleksiyonları**  >  **Tüm masaüstleri ve sunucu istemcileri**' ne gidin. Sütun başlığına sağ tıklayın ve eklenecek sütunları seçin. Bir uyarıyı denetlemek için **izleme** çalışma alanındaki **uyarıları** görüntüleyin. Yönetilen istemcilerin %20 ' si bir kötü amaçlı yazılımdan koruma yazılımının süresi dolmuşsa, kötü amaçlı yazılımdan koruma istemcisi sürümü güncel değildir. Bu uyarı, **izleme**  >  **genel bakış** sekmesinde görünmez. Zaman aşımına uğradı istemcileri güncelleştirmek için kötü amaçlı yazılımdan koruma istemcileri için yazılım güncelleştirmelerini etkinleştirin.
 
-Uyarının oluşturulduğu yüzdeyi yapılandırmak için, **izleme** > **uyarıları** > **tüm uyarılar**' ı genişletin, **kötü amaçlı yazılımdan koruma istemcileri güncel** değil ' e çift tıklayın ve **bir kötü amaçlı yazılımdan koruma istemcisinin güncel olmayan sürümüne sahip yönetilen istemcilerin yüzdesi seçeneğinden fazla olursa oluştur uyarısını** değiştirin.
+Uyarının oluşturulduğu yüzdeyi yapılandırmak için, **izleme**  >  **uyarıları**  >  **tüm uyarılar**' ı genişletin, **kötü amaçlı yazılımdan koruma istemcileri güncel** değil ' e çift tıklayın ve **bir kötü amaçlı yazılımdan koruma istemcisinin güncel olmayan sürümüne sahip yönetilen istemcilerin yüzdesi seçeneğinden fazla olursa oluştur uyarısını** değiştirin.
 
 > [!div class="button"]
 > [Sonraki adım >](endpoint-definition-updates.md)

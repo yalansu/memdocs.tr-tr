@@ -10,12 +10,12 @@ ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9389f407f8bdbafd057770ff63ed9b139e6600b5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a8eed671b723091f2a43350f42ca82d90e0d9da3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720712"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906128"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-configuration-manager"></a>Configuration Manager güncelleştirmelerini yüklemek için düzeltme yükleyicisini kullanın
 
@@ -75,24 +75,24 @@ Configuration Manager her güncelleştirme paketi, güncelleştirmeyi Configurat
 
 |Dosya|Ayrıntılar|  
 |----------|-------------|  
-|&lt;Ürün sürümü\>-QFE-KB&lt;KB Makale No\>-&lt;Platform\>-&lt;Language\>. exe|Bu, güncelleştirme dosyasıdır. Bu dosyanın komut satırı Updatesetup.exe tarafından yönetilir.<br /><br /> Örneğin:<br />CM1511RTM-QFE-KB123456-X64-ENU. exe|  
+|&lt;Ürün sürümü \> -QFE-KB &lt; KB Makale No \> - &lt; Platform \> - &lt; Language \> . exe|Bu, güncelleştirme dosyasıdır. Bu dosyanın komut satırı Updatesetup.exe tarafından yönetilir.<br /><br /> Örneğin:<br />CM1511RTM-QFE-KB123456-X64-ENU. exe|  
 |Updatesetup.exe|Bu .msi sarmalayıcı, güncelleştirme paketinin yüklemesini yönetir.<br /><br /> Güncelleştirmeyi çalıştırdığınızda, Updatesetup.exe çalıştığı bilgisayarın görüntüleme dilini saptar. Güncelleştirme için kullanıcı arayüzü varsayılan olarak İngilizce'dir Ancak, görüntüleme dili desteklendiğinde, kullanıcı arayüzü bilgisayarın yerel dilini görüntüler.|  
 |License_&lt;language\>.rtf|Uygun olduğunda her güncelleştirme desteklenen diller için bir veya daha çok lisans dosyası içerir.|  
-|&lt;Ürün&güncelleştirme türü>-&lt;ürün sürümü\>-&lt;KB Makale No\>-&lt;Platform\>. msp|Güncelleştirme, Configuration Manager konsolu veya istemcileri için geçerli olduğunda, güncelleştirme paketi ayrı Windows Installer Patch (. msp) dosyalarını içerir.<br /><br /> Örneğin:<br /><br /> **Configuration Manager konsol güncelleştirmesi:** ConfigMgr1511-AdminUI-KB1234567-i386.msp<br /><br /> **İstemci güncelleştirmesi:** ConfigMgr1511-client-KB1234567-i386. msp<br />ConfigMgr1511-client-KB1234567-x64. msp|  
+|&lt;Ürün&güncelleştirme türü>- &lt; ürün sürümü \> - &lt; KB Makale No \> - &lt; Platform \> . msp|Güncelleştirme, Configuration Manager konsolu veya istemcileri için geçerli olduğunda, güncelleştirme paketi ayrı Windows Installer Patch (. msp) dosyalarını içerir.<br /><br /> Örneğin:<br /><br /> **Configuration Manager konsol güncelleştirmesi:** ConfigMgr1511-AdminUI-KB1234567-i386.msp<br /><br /> **İstemci güncelleştirmesi:** ConfigMgr1511-client-KB1234567-i386. msp<br />ConfigMgr1511-client-KB1234567-x64. msp|  
 
 Güncelleştirme paketi varsayılan olarak eylemlerinin günlüğünü site sunucusunda bir .log dosyasında tutar. Günlük dosyası, güncelleştirme paketiyle aynı ada sahiptir ve **%SystemRoot%/Temp** klasörüne yazılır.  
 
-Güncelleştirme paketini çalıştırdığınızda, güncelleştirme paketiyle aynı ada sahip bir dosyayı bilgisayarda geçici bir klasörde genişletir ve ardından Updatesetup.exe uygulamasını çalıştırır. Updatesetup. &lt;exe, Configuration Manager ürün sürümü\> &lt;KB numarası\> Sihirbazı için yazılım güncelleştirmesini başlatır.  
+Güncelleştirme paketini çalıştırdığınızda, güncelleştirme paketiyle aynı ada sahip bir dosyayı bilgisayarda geçici bir klasörde genişletir ve ardından Updatesetup.exe uygulamasını çalıştırır. Updatesetup. exe, Configuration Manager &lt; ürün sürümü \> &lt; KB numarası Sihirbazı için yazılım güncelleştirmesini başlatır \> .  
 
 Sihirbaz, güncelleştirmenin kapsamına uygun olarak, site sunucusundaki Configuration Manager yükleme klasörü altında bir dizi klasör oluşturur. Klasör yapısı şuna benzer:   
-**\>\\&lt;\>\\\>\>Sunucu adı\>\ SMS_&lt;site kodu \ düzeltme&lt;KB numarası\\güncelleştirme türü&lt;platformu. \\ \\ &lt;**  
+** \\ \\ &lt; Sunucu adı \> \ SMS_ &lt; site kodu \ \> Düzeltme \\ &lt; KB numarası \> \\ &lt; güncelleştirme türü \> \\ &lt; platformu \> **.  
 
 Aşağıdaki tabloda klasör yapısındaki klasörler hakkındaki ayrıntılar verilmektedir:  
 
 |Klasör adı|Daha fazla bilgi|  
 |-----------------|----------------------|  
 |&lt;Sunucu adı\>|Bu, güncelleştirme paketini çalıştırdığınız site sunucusuyla aynı ada sahiptir.|  
-|SMS_&lt;site kodu\>|Bu, Configuration Manager yükleme klasörünün paylaşma adıdır.|  
+|SMS_ &lt; site kodu\>|Bu, Configuration Manager yükleme klasörünün paylaşma adıdır.|  
 |&lt;KB Numarası\>|Bu, söz konusu güncelleştirme paketi için Bilgi Bankası makalesinin kimlik numarasıdır.|  
 |&lt;Güncelleştirme türü\>|Bunlar Configuration Manager güncelleştirme türleridir. Sihirbaz, güncelleştirme paketinde bulunan her bir güncelleştirme tipi için ayrı bir klasör oluşturur. Klasör adı güncelleştirme tiplerini temsil eder. Bunlar aşağıdakileri içerir:<br /><br /> **Sunucu**: site sunucuları, site veritabanı SUNUCULARı ve SMS sağlayıcısını çalıştıran bilgisayarlar için güncelleştirmeleri içerir.<br /><br /> **İstemci**: Configuration Manager istemcisine yönelik güncelleştirmeleri içerir.<br /><br /> **AdminConsole**: Configuration Manager konsolundaki güncelleştirmeleri içerir<br /><br /> Yukarıdaki güncelleştirme türlerine ek olarak, sihirbaz **SCUP**adlı bir klasör oluşturur. Bu klasör bir güncelleştirme türünü temsil etmez ancak bunun yerine Updates Publisher’ın .cab dosyasını içerir.|  
 |&lt;Platform\>|Bu, platforma özgü bir klasördür. İşlemci türüne özgü güncelleştirme dosyalarını içerir.  Bu klasörler şunları içerir:<br /><br />-x64<br /><br /> -I386|  
@@ -161,7 +161,7 @@ Site sunucusuna güncelleştirme paketini yüklediğinizde site veritabanını o
 
 4.  Önceki adımlarda durdurulan hizmetleri yeniden başlatın.  
 
-5.  Güncelleştirme paketi yüklediğinde, **Update. SQL** dosyasını site sunucusunda şu konuma ayıklar: ** \\ \\ &lt;\>sunucu adı \ SMS_&lt;site kodu\>\ düzeltme\\&lt;KB numarası\>\Update.exe. SQL**  
+5.  Güncelleştirme paketi yüklediğinde, **Update. SQL** dosyasını site sunucusunda şu konuma ayıklar: ** \\ \\ &lt; sunucu adı \> \ SMS_ &lt; site kodu \ \> Düzeltme \\ &lt; KB numarası \> \Update.exe. SQL**  
 
 ####  <a name="update-a-computer-that-runs-the-sms-provider"></a><a name="bkmk_provider"></a>SMS sağlayıcısı 'nı çalıştıran bir bilgisayarı güncelleştirme  
 SMS sağlayıcısına yönelik güncelleştirmeleri içeren bir güncelleştirme paketini yükledikten sonra, güncelleştirmeyi SMS sağlayıcısı 'nı çalıştıran her bilgisayara dağıtmanız gerekir. Bunun tek özel durumu, güncelleştirme paketini yüklediğiniz site sunucusuna daha önce yüklenen SMS Sağlayıcısı örneğidir. Site sunucusundaki SMS sağlayıcısının yerel örneği, güncelleştirme paketini yüklediğinizde güncelleştirilir.  
@@ -169,7 +169,7 @@ SMS sağlayıcısına yönelik güncelleştirmeleri içeren bir güncelleştirme
 SMS Sağlayıcıyı bir bilgisayara kaldırıp yeniden yüklerseniz, SMS sağlayıcısı güncelleştirmesini o bilgisayara yeniden yüklemeniz gerekir.  
 
 ###  <a name="update-clients"></a><a name="BKMK_clients"></a>İstemcileri Güncelleştir  
-Configuration Manager istemcisi için güncelleştirmeleri içeren bir güncelleştirme yüklediğinizde, istemcileri güncelleştirme yüklemesiyle otomatik olarak yükseltme veya istemcileri daha sonra el ile yükseltme seçeneği sunulur. Otomatik istemci yükseltme hakkında daha fazla bilgi için bkz. [Windows bilgisayarları için istemcileri yükseltme](https://technet.microsoft.com/library/mt627885.aspx).  
+Configuration Manager istemcisi için güncelleştirmeleri içeren bir güncelleştirme yüklediğinizde, istemcileri güncelleştirme yüklemesiyle otomatik olarak yükseltme veya istemcileri daha sonra el ile yükseltme seçeneği sunulur. Otomatik istemci yükseltme hakkında daha fazla bilgi için bkz. [Windows bilgisayarları için istemcileri yükseltme](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
 Güncelleştirmeleri Updates Publisher veya bir yazılım dağıtım paketi ile dağıtabilirsiniz veya güncelleştirmeyi her istemciye elle yüklemeyi tercih edebilirsiniz. Güncelleştirmeleri yüklemek için dağıtımları kullanma hakkında daha fazla bilgi için bu konudaki [Configuration Manager için güncelleştirmeleri dağıtma](#BKMK_Deploy) bölümüne bakın.  
 
@@ -178,7 +178,7 @@ Güncelleştirmeleri Updates Publisher veya bir yazılım dağıtım paketi ile 
 
 İstemci güncelleştirmesini her bir Configuration Manager istemcisinde el ile yüklemek için **msiexec. exe** ' yi çalıştırmanız ve platforma özgü istemci güncelleştirmesi. msp dosyasına başvurmanız gerekir.  
 
-Örneğin, bir istemci güncelleştirmesi için aşağıdaki komut satırını kullanabilirsiniz. Bu komut satırı istemci bilgisayarda MSIEXEC 'i çalıştırır ve güncelleştirme paketinin site sunucusunda ayıkladığı. msp dosyasına başvurur: ** \\ \\ &lt;MSIEXEC. exe/p ServerName\>\ SMS_&lt;sitekodu\>\ düzeltme\\&lt;KB numarası\>\İstemci\\&lt;platformu\>\\&lt;msp\> /l\*v &lt;logfile\>REINSTALLMODE = ünlü yeniden yükleme = tümü**  
+Örneğin, bir istemci güncelleştirmesi için aşağıdaki komut satırını kullanabilirsiniz. Bu komut satırı istemci bilgisayarda MSIEXEC 'i çalıştırır ve güncelleştirme paketinin site sunucusunda ayıkladığı. msp dosyasına başvurur: **MSIEXEC. exe/p \\ \\ &lt; ServerName \> \ SMS_ &lt; sitekodu \ \> Düzeltme \\ &lt; KB numarası \> \İstemci \\ &lt; platformu \> \\ &lt; msp \> /l \* v &lt; logfile \> REINSTALLMODE = ünlü yeniden yükleme = tümü**  
 
 ###  <a name="update-configuration-manager-consoles"></a><a name="BKMK_console"></a>Configuration Manager konsolları güncelleştirme  
 Configuration Manager konsolunu güncelleştirmek için, konsol yüklemesi tamamlandıktan sonra güncelleştirmeyi, konsolu çalıştıran bilgisayara yüklemeniz gerekir.  
@@ -194,7 +194,7 @@ Güncelleştirmeniz gereken bilgisayar Configuration Manager istemcisini çalı�
 
 - Güncelleştirmeleri tüm bilgisayarlara elle yükleyebilirsiniz. Configuration Manager konsolu güncelleştirmesini Configuration Manager konsolunu çalıştıran her bilgisayara el ile yüklemek için Msiexec. exe ' yi çalıştırabilir ve Configuration Manager Console Update. msp dosyasına başvurabilirsiniz.  
 
-Örneğin, bir Configuration Manager konsolunu güncelleştirmek için aşağıdaki komut satırını kullanabilirsiniz. Bu komut satırı bilgisayarda MSIEXEC 'i çalıştırır ve güncelleştirme paketinin site sunucusunda ayıkladığı. msp dosyasına başvurur: ** \\ \\ &lt;MSIEXEC. exe/p ServerName\>\ SMS_&lt;sitekodu\>\ düzeltme\\&lt;KB numarası\>\adminkonsol\\&lt;platformu\>\\&lt;msp\> /l\*v logfile\> &lt;**  
+Örneğin, bir Configuration Manager konsolunu güncelleştirmek için aşağıdaki komut satırını kullanabilirsiniz. Bu komut satırı bilgisayarda MSIEXEC 'i çalıştırır ve güncelleştirme paketinin site sunucusunda ayıkladığı. msp dosyasına başvurur: **MSIEXEC. exe/p \\ \\ &lt; ServerName \> \ SMS_ &lt; sitekodu \ \> Düzeltme \\ &lt; KB numarası \> \adminkonsol \\ &lt; platformu \> \\ &lt; msp \> /l \* v &lt; logfile \> **  
 
 ##  <a name="deploy-updates-for-configuration-manager"></a><a name="BKMK_Deploy"></a> Configuration Manager için güncelleştirmeleri dağıtma  
 Güncelleştirme paketini bir site sunucusuna yükledikten sonra, güncelleştirmeleri ek bilgisayarlara dağıtmak için aşağıdaki üç yöntemden birini kullanabilirsiniz.  
@@ -202,12 +202,12 @@ Güncelleştirme paketini bir site sunucusuna yükledikten sonra, güncelleştir
 ###  <a name="use-updates-publisher-2011-to-install-updates"></a><a name="BKMK_DeploySCUP"></a>Güncelleştirmeleri yüklemek için Publisher 2011 güncelleştirmelerini kullanın  
 Güncelleştirme paketini bir site sunucusuna yüklediğinizde, Yükleme Sihirbazı Updates Publisher için, güncelleştirmeleri ilgili bilgisayarlara dağıtmak için kullanabileceğiniz bir katalog dosyası oluşturur. **Bu güncelleştirmeyi dağıtmak için paket ve program kullan**seçeneğini belirlediğinizde bile sihirbaz her zaman bu kataloğu oluşturur.  
 
-Updates Publisher için Katalog, **SCUPCatalog. cab** olarak adlandırılır ve güncelleştirme paketinin çalıştırıldığı bilgisayardaki şu konumda bulunabilir: ** \\ \\ &lt;ServerName\>\ SMS_&lt;\>sitekodu \ düzeltme\\&lt;KB numarası \SCUP\SCUPCatalog.cab\>**  
+Updates Publisher için Katalog, **SCUPCatalog. cab** olarak adlandırılır ve güncelleştirme paketinin çalıştırıldığı bilgisayardaki şu konumda bulunabilir: ** \\ \\ &lt; ServerName \> \ SMS_ &lt; sitekodu \> \ düzeltme \\ &lt; KB numarası \> \SCUP\SCUPCatalog.cab**  
 
 > [!IMPORTANT]  
 > SCUPCatalog. cab dosyası, güncelleştirme paketinin yüklü olduğu site sunucusuna özgü yollar kullanılarak oluşturulduğundan, diğer site sunucularında kullanılamaz.  
 
-Sihirbaz tamamlandıktan sonra, kataloğu Updates Publisher 'a aktarabilir ve ardından güncelleştirmeleri dağıtmak için Configuration Manager yazılım güncelleştirmelerini kullanabilirsiniz. Updates Publisher hakkında daha fazla bilgi için bkz. System Center 2012 için TechNet Kitaplığı 'ndaki [publisher 2011](https://go.microsoft.com/fwlink/p/?LinkID=83449) ' ı güncelleştirme.  
+Sihirbaz tamamlandıktan sonra, kataloğu Updates Publisher 'a aktarabilir ve ardından güncelleştirmeleri dağıtmak için Configuration Manager yazılım güncelleştirmelerini kullanabilirsiniz. Updates Publisher hakkında daha fazla bilgi için bkz. [Updates publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 SCUPCatalog. cab dosyasını Updates Publisher 'a aktarmak ve güncelleştirmeleri yayımlamak için aşağıdaki yordamı kullanın.  
 
@@ -253,8 +253,8 @@ Belirli güncelleştirmeleri geçerli istemcilere dağıtabilirsiniz. Aşağıda
 |Merkezi yönetim sitesi sunucusu|Bir doğrudan üyelik sorgusu oluşturun ve merkezi yönetim site sunucusu bilgisayarını ekleyin.|  
 |Tüm birincil site sunucuları|Bir doğrudan üyelik sorgusu oluşturun ve tüm birincil site sunucusu bilgisayarlarını ekleyin.|  
 |Tüm ikincil site sunucuları|Bir doğrudan üyelik sorgusu oluşturun ve tüm ikincil site sunucusu bilgisayarlarını ekleyin.|  
-|Tüm x86 istemciler|Aşağıdaki sorgu ölçütleriyle bir koleksiyon oluşturun:<br /><br /> **SMS_G_System_SYSTEM \* SMS_R_System iç birleşim SMS_G_System_SYSTEM arasından seçim yapın. RESOURCEID = SMS_R_System. RESOURCEID, SMS_G_System_SYSTEM. SystemType = "x86 tabanlı bılgısayar"**|  
-|Tüm x64 istemciler|Aşağıdaki sorgu ölçütleriyle bir koleksiyon oluşturun:<br /><br /> **SMS_G_System_SYSTEM \* SMS_R_System iç birleşim SMS_G_System_SYSTEM arasından seçim yapın. RESOURCEID = SMS_R_System. RESOURCEID, SMS_G_System_SYSTEM. SystemType = "x64 tabanlı bılgısayar"**|  
+|Tüm x86 istemciler|Aşağıdaki sorgu ölçütleriyle bir koleksiyon oluşturun:<br /><br /> **\*SMS_G_System_SYSTEM SMS_R_System iç birleşim SMS_G_System_SYSTEM arasından seçim yapın. RESOURCEID = SMS_R_System. RESOURCEID, SMS_G_System_SYSTEM. SystemType = "x86 tabanlı bılgısayar"**|  
+|Tüm x64 istemciler|Aşağıdaki sorgu ölçütleriyle bir koleksiyon oluşturun:<br /><br /> **\*SMS_G_System_SYSTEM SMS_R_System iç birleşim SMS_G_System_SYSTEM arasından seçim yapın. RESOURCEID = SMS_R_System. RESOURCEID, SMS_G_System_SYSTEM. SystemType = "x64 tabanlı bılgısayar"**|  
 |Configuration Manager konsolunu çalıştıran tüm bilgisayarlar|Bir doğrudan üyelik sorgusu oluşturun ve tüm bilgisayarları ekleyin.|  
 |SMS Sağlayıcısının bir örneğini çalıştıran uzak bilgisayarlar|Bir doğrudan üyelik sorgusu oluşturun ve tüm bilgisayarları ekleyin.|  
 

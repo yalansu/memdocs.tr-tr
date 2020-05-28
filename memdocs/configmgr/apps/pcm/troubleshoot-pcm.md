@@ -10,12 +10,12 @@ ms.assetid: cb616925-bb94-4b7c-a867-b3d95aef4d5e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f9d2a7d4a16f85e9a5f78dd6251754d86527da87
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 05110714d3aa8ca48ff9384f0116338b0092fde1
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709897"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877631"
 ---
 # <a name="troubleshoot-package-conversion-manager"></a>Paket Dönüştürme Yöneticisi sorunlarını giderme
 
@@ -58,10 +58,13 @@ Configuration Manager konsolundaki **paketler** düğümünün Ayrıntılar böl
 
 ### <a name="enable-logging"></a>Günlü kaydını etkinleştir
 
-Paket Dönüştürme Yöneticisi için günlük kaydını etkinleştirdiğinizde, tüm eylemlerini, özel durumlarını ve hatalarını günlüğe kaydeder. 
+Paket Dönüştürme Yöneticisi için günlük kaydını etkinleştirdiğinizde, tüm eylemlerini, özel durumlarını ve hatalarını günlüğe kaydeder.
 
 Configuration Manager Bu bileşen için günlüğe kaydetmeyi etkinleştirmek üzere **Microsoft. ConfigurationManagement. exe. config dosyasını**değiştirin. Varsayılan olarak, bu yapılandırma dosyası şu yolda bulunur:  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+
+> [!IMPORTANT]
+> Sürüm 1910 ' den başlayarak, bu yol klasörü kullanacak şekilde değiştirilmiştir `Microsoft Endpoint Manager` . Dosyanın başka bir klasörde mevcut olabilecek eski bir sürümünü kullandığınızdan emin olun.
 
 Aşağıdaki **anahtarları** ve **Trace** XML öğelerini, son **kaynaklar** öğesinden sonra **System. Diagnostics** öğesine ekleyin:
 
@@ -83,7 +86,7 @@ Aşağıdaki **anahtarları** ve **Trace** XML öğelerini, son **kaynaklar** ö
 Bu örnek **PCMtrace. log**dosyasını kullanır. Bu günlük Configuration Manager konsolunu çalıştıran bilgisayarda aşağıdaki yolda bulunur:  
 `%UserProfile%\AppData\Local\Temp`
 
-Ayrıntı düzeyini yapılandırmak için **PcmLogging** izleme anahtarı ayarını değiştirin. Bu değeri, en az Detailed (`1`) ile en ayrıntılı (`4`) arasında dört ayrıntı düzeyine ayarlayın.
+Ayrıntı düzeyini yapılandırmak için **PcmLogging** izleme anahtarı ayarını değiştirin. Bu değeri, en az Detailed ( `1` ) ile en ayrıntılı () arasında dört ayrıntı düzeyine ayarlayın `4` .
 
 
 ### <a name="smsprovlog"></a>SMSProv.log

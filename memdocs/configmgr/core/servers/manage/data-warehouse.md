@@ -44,7 +44,7 @@ Sürüm 1810 ' den başlayarak, site veritabanından veri ambarına daha fazla t
 
 
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Veri ambarı site sistemi rolü yalnızca hiyerarşinizin üst katman sitesinde desteklenir. Örneğin, bir merkezi yönetim sitesi veya tek başına birincil site.  
 
@@ -265,4 +265,4 @@ Sertifikaları yapılandırmak için aşağıdaki adımları kullanın:
 |--------|----------|  
 | **A**  | Yerleşik raporları kullanarak bir kullanıcı veri ister. Bu istek, raporlama hizmet noktasına SQL Server Reporting Services kullanılarak geçirilir. |  
 | **B**  | Çoğu rapor güncel bilgiler içindir ve bu istekler site veritabanına karşı çalıştırılır. |  
-| **C**  | Bir rapor **veri ambarı** *kategorisi* içeren raporlardan birini kullanarak geçmiş verileri istediğinde, istek veri ambarı veritabanına göre çalışır. |  
+| **,**  | Bir rapor **veri ambarı** *kategorisi* içeren raporlardan birini kullanarak geçmiş verileri istediğinde, istek veri ambarı veritabanına göre çalışır. |  

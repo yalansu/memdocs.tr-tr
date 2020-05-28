@@ -2,7 +2,7 @@
 title: Microsoft Bağlı Önbellek
 titleSuffix: Configuration Manager
 description: Teslim Iyileştirme için Configuration Manager dağıtım noktanızı yerel bir önbellek sunucusu olarak kullanma
-ms.date: 03/20/2019
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e718e62f097a9fec20d7b29deb9f03453931188a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4dead573e1744a5c8b84ff954e85be43af644486
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714972"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878487"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 'de Microsoft bağlı önbelleği
 
@@ -26,7 +26,7 @@ ms.locfileid: "81714972"
 Sürüm 1906 ' den başlayarak dağıtım noktalarınıza Microsoft bağlı önbellek sunucusu yükleyebilirsiniz. Bu içeriği şirket içinde önbelleğe alarak istemcileriniz teslim Iyileştirme özelliğinden yararlanabilir, ancak WAN bağlantılarını korumaya yardımcı olabilirsiniz.
 
 > [!NOTE]
-> Sürüm 1910 ' den başlayarak, bu özellik artık **Microsoft bağlı önbelleği**olarak adlandırılmaktadır. Daha önce teslim Iyileştirmesi-ağ önbelleği (DOıNC) olarak bilinirdi.
+> Sürüm 1910 ' den başlayarak, bu özellik artık **Microsoft bağlı önbelleği**olarak adlandırılmaktadır. Daha önce teslim Iyileştirmesi-ağ önbelleği olarak bilinirdi.
 
 Bu önbellek sunucusu teslim Iyileştirmesi tarafından indirilen içerik için isteğe bağlı bir saydam önbellek işlevi görür. Bu sunucunun yalnızca yerel Configuration Manager sınır grubunun üyelerine sunulmakta olduğundan emin olmak için istemci ayarlarını kullanın.
 
@@ -99,15 +99,29 @@ Bu önbellek Configuration Manager dağıtım noktası içeriğinden ayrıdır. 
 
 ### <a name="note-1-about-drive-selection"></a><a name="bkmk_note1"></a>Note 1: sürücü seçimi hakkında
 
-**Otomatik**' i seçerseniz, Configuration Manager bağlı önbellek bileşenini yüklediğinde, **no_sms_on_drive. SMS** dosyasını kabul eder. Örneğin, dağıtım noktası dosyasına `C:\no_sms_on_drive.sms`sahiptir. C: sürücüsü en fazla boş alana sahip olsa bile Configuration Manager bağlı önbelleği, önbelleği için başka bir sürücü kullanacak şekilde yapılandırır.
+**Otomatik**' i seçerseniz, Configuration Manager bağlı önbellek bileşenini yüklediğinde, **no_sms_on_drive. SMS** dosyasını kabul eder. Örneğin, dağıtım noktası dosyasına sahiptir `C:\no_sms_on_drive.sms` . C: sürücüsü en fazla boş alana sahip olsa bile Configuration Manager bağlı önbelleği, önbelleği için başka bir sürücü kullanacak şekilde yapılandırır.
 
-Zaten **no_sms_on_drive. SMS** dosyası olan belirli bir sürücü seçerseniz Configuration Manager dosyayı yoksayar. Bağlı önbelleği bu sürücüyü kullanacak şekilde yapılandırmak açık bir amaç. Örneğin, dağıtım noktası dosyasına `F:\no_sms_on_drive.sms`sahiptir. Dağıtım noktası özelliklerini **f:** sürücüsünü kullanacak şekilde açıkça yapılandırdığınızda, Configuration Manager bağlı önbelleği önbelleğinin f: sürücüsünü kullanacak şekilde yapılandırır.
+Zaten **no_sms_on_drive. SMS** dosyası olan belirli bir sürücü seçerseniz Configuration Manager dosyayı yoksayar. Bağlı önbelleği bu sürücüyü kullanacak şekilde yapılandırmak açık bir amaç. Örneğin, dağıtım noktası dosyasına sahiptir `F:\no_sms_on_drive.sms` . Dağıtım noktası özelliklerini **f:** sürücüsünü kullanacak şekilde açıkça yapılandırdığınızda, Configuration Manager bağlı önbelleği önbelleğinin f: sürücüsünü kullanacak şekilde yapılandırır.
 
 Bağlı önbelleği yükledikten sonra sürücüyü değiştirmek için:
 
 - Dağıtım noktası özelliklerini belirli bir sürücü harfini kullanacak şekilde el ile yapılandırın.
 
 - Otomatik olarak ayarlandıysa, önce **no_sms_on_drive. SMS** dosyasını oluşturun. Ardından, bir yapılandırma değişikliğini tetiklemek için dağıtım noktası özelliklerinde bazı değişiklikler yapın.
+
+### <a name="automation"></a>Otomasyon
+
+<!-- SCCMDocs#1911 -->
+
+Bir dağıtım noktasındaki Microsoft bağlı önbellek ayarlarının yapılandırılmasını otomatikleştirmek için Configuration Manager SDK 'sını kullanabilirsiniz. Tüm site rolleri için olduğu gibi, [SMS_SCI_SYSRESUSE WMI sınıfını](../../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md)kullanın. Daha fazla bilgi için bkz. [Site rollerini programlama](../../../develop/osd/about-operating-system-deployment-site-role-configuration.md#programming-the-site-roles).
+
+Dağıtım noktası için **SMS_SCI_SysResUse** örneğini güncelleştirdiğinizde, aşağıdaki özellikleri ayarlayın:
+
+- **AgreeDOINCLicense**: `1` Lisans koşullarını kabul edecek şekilde ayarlayın.
+- **Bayraklar**: Etkinleştir `|= 4` , devre dışı bırak`&= ~4`
+- **DiskSpaceDOINC**: veya olarak ayarla `Percentage``GB`
+- **RetainDOINCCache**: veya olarak ayarla `0``1`
+- **Localdrivedoınc**: `Automatic` olarak, veya gibi belirli bir sürücü harfini ayarla `C:``D:`
 
 ## <a name="verify"></a>Doğrulama
 
@@ -134,7 +148,7 @@ Daha ayrıntılı bilgi için bkz. [Configuration Manager Microsoft bağlı önb
 
 Sürüm 1910 ' den başlayarak, Configuration Manager dağıtım noktalarınızdaki bağlı önbelleği etkinleştirdiğinizde, bu kişiler Microsoft Intune Win32 uygulamalarını ortak yönetilen istemcilere sunabilir.
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 
 #### <a name="client"></a>İstemci
 
@@ -158,7 +172,7 @@ Sürüm 1910 ' den başlayarak, Configuration Manager dağıtım noktalarınızd
 
 - **Ortak yönetilen cihazlar için**yayın öncesi özelliği istemci uygulamalarını etkinleştirin. Daha fazla bilgi için bkz. [yayın öncesi Özellikler](../../servers/manage/pre-release-features.md).
 
-- Ortak Yönetimi etkinleştirin ve **istemci uygulamaları** Iş yükünü **pilot Intune** veya **Intune**'a geçirin. Daha fazla bilgi için aşağıdaki makalelere bakın:
+- Ortak Yönetimi etkinleştirin ve **istemci uygulamaları** Iş yükünü **pilot Intune** veya **Intune**'a geçirin. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
   - [İş yükleri-Istemci uygulamaları](../../../comanage/workloads.md#client-apps)
   - [Ortak yönetimi etkinleştirme](../../../comanage/how-to-enable.md)

@@ -2,7 +2,7 @@
 title: Önkoşul denetimleri
 titleSuffix: Configuration Manager
 description: Configuration Manager güncelleştirmeleri için belirli önkoşul denetimlerinin başvurusu.
-ms.date: 04/01/2020
+ms.date: 05/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d8fc9abfc9fc09bc3011a3fee30b258023d04c8a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9f0ed1d5913154d90242d1aa2a47efbcf7d22282
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718199"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943799"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Configuration Manager için önkoşul denetimleri listesi
 
@@ -727,7 +727,7 @@ Configuration Manager, site sunucusu yüklemesi için Active Directory şema uza
 
 *Uygulama hedefi: merkezi yönetim sitesi, birincil site*
 
-Paketler, gibi, paylaşma adında geçersiz karakterler içermez `#`.
+Paketler, gibi, paylaşma adında geçersiz karakterler içermez `#` .
 
 ### <a name="site-system-to-sql-server-communication"></a>SQL Server iletişim için site sistemi
 
@@ -741,7 +741,7 @@ Site veritabanı örneği için SQL Server hizmetini çalıştırmak üzere yap�
 
 Sürüm 1810 ' den başlayarak, site veritabanının SQL değişiklik izleme verileri biriktirme listesine sahip olup olmadığını denetleyin.<!--SCCMDocs-pr issue 3023-->  
 
-Site veritabanında bir tanılama saklı yordamı çalıştırarak bu denetimi el ile doğrulayın. İlk olarak, site veritabanınıza bir [Tanılama bağlantısı](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) oluşturun. En kolay yöntem SQL Server Management Studio Veritabanı Altyapısı sorgu düzenleyicisini kullanmak ve ' a bağlanmak `admin:<instance name>`.
+Site veritabanında bir tanılama saklı yordamı çalıştırarak bu denetimi el ile doğrulayın. İlk olarak, site veritabanınıza bir [Tanılama bağlantısı](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) oluşturun. En kolay yöntem SQL Server Management Studio Veritabanı Altyapısı sorgu düzenleyicisini kullanmak ve ' a bağlanmak `admin:<instance name>` .
 
 Adanmış yönetici bağlantısı sorgu penceresinde aşağıdaki komutları çalıştırın:
 
@@ -771,9 +771,9 @@ SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 
 Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden dağıtılabilir bir bileşen olarak SQL Server Native Client yükler. Site yüklendikten sonra Configuration Manager SQL Server Native Client yükseltmez. SQL Server Native Client güncelleştirme, site yüklemesi işlemini etkileyebilecek bir yeniden başlatma gerektirebilir.
 
-Bu denetim, sitenin SQL Native Client desteklenen bir sürümüne sahip olduğundan emin olur. Sürüm 1810 ' den başlayarak, en düşük sürüm SQL 2012 SP4 (`11.*.7001.0`) olur.
+Bu denetim, site sunucusunun SQL Native Client desteklenen bir sürümüne sahip olduğundan emin olmanızı sağlar. Önkoşul denetimi, uzak site sistemlerindeki SQL Native Client sürümünü doğrulamaz.
 
-Bu SQL Native Client sürümü TLS 1,2 ' i destekler. Daha fazla bilgi için aşağıdaki makalelere bakın:
+En düşük sürüm SQL 2012 SP4 () ' dir `11.*.7001.0` . Bu SQL Native Client sürümü TLS 1,2 ' i destekler. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 - [Microsoft SQL Server için TLS 1,2 desteği](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
 

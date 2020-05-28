@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3a05c10d1f73fa0817febdd591190f6bc2ff0a0e
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: c6b33027d67329b883f401168795c1b466ded1a7
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587278"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709412"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Bulut yönetimi ağ geçidi için belirteç tabanlı kimlik doğrulaması
 
@@ -25,7 +25,7 @@ ms.locfileid: "82587278"
 
 Bulut yönetimi ağ geçidi (CMG) birçok tür istemciyi destekler, ancak [GELIŞMIŞ http](../../plan-design/hierarchy/enhanced-http.md)ile birlikte bu istemciler [istemci kimlik doğrulama sertifikası](../manage/cmg/certificates-for-cloud-management-gateway.md#for-internet-based-clients-communicating-with-the-cloud-management-gateway)gerektirir. Bu sertifika gereksinimi, genellikle dahili ağa bağlanmayan, Azure Active Directory (Azure AD) kalamamayan ve PKI tarafından verilen bir sertifika yüklemek için bir yönteme sahip olmayan Internet tabanlı istemcilere sağlanması zor olabilir.
 
-Sürüm 2002 ' den başlayarak, Configuration Manager cihaz desteğini aşağıdaki yöntemlerle genişletir:
+Sürüm 2002 ' den başlayarak bu zorlukları aşmak için Configuration Manager cihaz desteğini aşağıdaki yöntemlerle genişletir:
 
 - Benzersiz bir belirteç için iç ağa kaydolun
 
@@ -54,7 +54,7 @@ Site bu davranışı varsayılan olarak sunar.
 
 1. Yönetici olarak bir komut istemi açın.
 
-1. Aracı, site sunucusundaki Configuration Manager `\bin\X64` yükleme dizininin klasöründen çalıştırın: `BulkRegistrationTokenTool.exe`. `/new` Parametresiyle yeni bir belirteç oluşturun. Örneğin, `BulkRegistrationTokenTool.exe /new`. Daha fazla bilgi için bkz. [toplu kayıt belirteci aracı kullanımı](#bulk-registration-token-tool-usage).
+1. Aracı, `\bin\X64` site sunucusundaki Configuration Manager yükleme dizininin klasöründen çalıştırın: `BulkRegistrationTokenTool.exe` . Parametresiyle yeni bir belirteç oluşturun `/new` . Örneğin, `BulkRegistrationTokenTool.exe /new`. Daha fazla bilgi için bkz. [toplu kayıt belirteci aracı kullanımı](#bulk-registration-token-tool-usage).
 
 1. Belirteci kopyalayın ve güvenli bir konuma kaydedin.
 
@@ -71,7 +71,7 @@ Pasif modda site sunucusu olan bir sitede toplu kayıt belirteci oluşturamazsı
 
 ### <a name="bulk-registration-token-tool-usage"></a>Toplu kayıt belirteci aracı kullanımı
 
-`BulkRegistrationTokenTool.exe` Araç, site sunucusundaki Configuration Manager `\bin\X64` yükleme dizininin klasöründedir. Site sunucusunda oturum açın ve yönetici olarak çalıştırın. Aşağıdaki komut satırı parametrelerini destekler:
+`BulkRegistrationTokenTool.exe`Araç, `\bin\X64` site sunucusundaki Configuration Manager yükleme dizininin klasöründedir. Site sunucusunda oturum açın ve yönetici olarak çalıştırın. Aşağıdaki komut satırı parametrelerini destekler:
 
 - `/?`
 - `/new`
@@ -99,9 +99,31 @@ Belirteç istemcide veya sitede depolanmaz. Belirteci komut isteminden kopyalama
 
 #### <a name="lifetime"></a>/Lifetime
 
-Belirtecin belirteç `/new` geçerlilik süresini belirtmek için parametresiyle birlikte kullanın. Dakikalar içinde bir tamsayı değeri belirtin. Varsayılan değer 4.320 ' dir (üç gün). En büyük değer 10.080 ' dir (yedi gün).
+`/new`Belirtecin belirteç geçerlilik süresini belirtmek için parametresiyle birlikte kullanın. Dakikalar içinde bir tamsayı değeri belirtin. Varsayılan değer 4.320 ' dir (üç gün). En büyük değer 10.080 ' dir (yedi gün).
 
-Örnek: `BulkRegistrationTokenTool.exe /lifetime:4320`
+Örnek: `BulkRegistrationTokenTool.exe /lifetime 4320`
+
+## <a name="bulk-registration-token-management"></a>Toplu kayıt belirteci yönetimi
+
+Daha önce oluşturulan toplu kayıt belirteçlerini ve bunların yaşam sürelerini Configuration Manager konsolunda görebilir ve gerekirse kullanımlarını engelleyebilirsiniz. Ancak, site veritabanı toplu kayıt belirteçlerini depolar.
+
+#### <a name="to-review-a-bulk-registration-token"></a>Toplu kayıt belirtecini gözden geçirmek için
+
+1. Configuration Manager konsolunda, **Yönetim**’e tıklayın.
+
+2. Yönetim çalışma alanında, **güvenlik**' i genişletin ve **Sertifikalar**' a tıklayın. Konsol, site ile ilgili tüm sertifikaları ve toplu kayıt belirteçlerini Ayrıntılar bölmesinde listeler.
+
+3. Gözden geçirilecek toplu kayıt belirtecini seçin.
+
+GUID 'lerine göre belirli toplu kayıt belirteçlerini tanımlayabilirsiniz. Toplu kayıt belirteçleri için GUID 'Ler, belirteç oluşturma zamanında görüntülenir. Ayrıca, gerekirse **tür** sütununu filtreleyebilir veya sıralayabilirsiniz.
+
+#### <a name="to-block-a-bulk-registration-token"></a>Toplu kayıt belirtecini engellemek için
+
+1. Configuration Manager konsolunda, **Yönetim**’e tıklayın.
+
+2. Yönetim çalışma alanında, **güvenlik**' i genişletin, **Sertifikalar**' a tıklayın ve engellenecek toplu kayıt belirtecini seçin.
+
+3. Şerit çubuğunun **giriş** sekmesinde veya sağ tıklama Içeriği menüsünde **Engelle**' yi seçin. Buna karşılık, şerit çubuğunun **giriş** sekmesinde veya sağ tıklama Içeriği menüsünde **Engellemeyi kaldır** ' ı seçerek daha önce engellenen toplu kayıt belirteçlerini engellemeyi kaldırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

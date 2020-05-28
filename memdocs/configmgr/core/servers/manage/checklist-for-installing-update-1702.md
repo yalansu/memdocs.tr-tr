@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d3ae44892cd46a438113fb54dad0e290b8fb148e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 556ddb10f0ba25fc1c3cf4b215d5058d3221c7fe
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723316"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906458"
 ---
 # <a name="checklist-for-installing-update-1702-for-configuration-manager"></a>Configuration Manager için güncelleştirme 1702 yükleme denetim listesi
 
@@ -35,7 +35,7 @@ Sürüm 1702 güncelleştirmesini almak için, hiyerarşinizin en üst düzey si
 
     -   DMPDownloader. log, DMPDownloader işleminin uyku modunda olduğunu ve güncelleştirmeleri denetlemeden önce bir Aralık bekleyip bekdiğini gösteriyorsa, güncelleştirme yeniden dağıtım dosyalarının indirilmesini yeniden başlatmak için site sunucusunda **SMS_Executive** hizmetini yeniden başlatabilirsiniz.
 
-    -   Proxy sunucu ayarları, ve ' `silverlight.dlservice.microsoft.com` `download.microsoft.com`den indirmelere engel olduğunda başka bir yaygın yükleme sorunu oluşur.
+    -   Proxy sunucu ayarları, ve ' den indirmelere engel olduğunda başka bir yaygın yükleme sorunu oluşur `silverlight.dlservice.microsoft.com` `download.microsoft.com` .
 
 Güncelleştirmeleri yükleme hakkında daha fazla bilgi için bkz. [konsol içi güncelleştirmeler ve bakım](updates.md#bkmk_inconsole).
 
@@ -89,7 +89,7 @@ Daha fazla bilgi için bkz. [Site ve site sistem önkoşulları](../../plan-desi
 
 Windows **10 Için Windows değerlendirme ve dağıtım seti 'nin (ADK) sürümünü gözden geçirin** Windows 10 ADK sürüm 1607 veya üzeri olmalıdır. ADK 'yi güncelleştirmeniz gerekiyorsa, Configuration Manager güncelleştirmeye başlamadan önce bunu yapın. Bu, varsayılan önyükleme görüntülerinin Windows PE 'nin en son sürümüne otomatik olarak güncelleştirilmesini sağlar. (Özel önyükleme görüntülerinin el ile güncelleştirilmeleri gerekir.)
 
-Bu siteyi ADK 'yi güncelleştirmeden önce güncelleştirirseniz, önyükleme görüntülerini yeniden oluşturmak için kullanılabilecek bir betik için blog [Configuration Manager ve Windows 10 Için WINDOWS ADK sürüm 1607 '](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/09/configuration-manager-and-the-windows-adk-for-windows-10-version-1607/) e bakın.
+Bu siteyi ADK 'yi güncelleştirmeden önce güncelleştirirseniz, önyükleme görüntülerini yeniden oluşturmak için kullanılabilecek bir betik için blog [Configuration Manager ve Windows 10 Için WINDOWS ADK sürüm 1607 '](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-the-windows-adk-for-windows-10-version/ba-p/274047) e bakın.
 
 **Siteyi ve hiyerarşi durumunu gözden geçirin ve çözülmemiş hiçbir sorun kalmadığından emin olun** : Bir siteyi güncelleştirmeden önce site sunucusunun, site veritabanı sunucusunun ve uzak bilgisayarlara yüklü site sistem rollerinin tüm çalışma sorunlarını çözün. Bir site güncelleştirmesi mevcut çalışma sorunları nedeniyle başarısız olabilir.
 
@@ -99,7 +99,7 @@ Daha fazla bilgi için bkz. [Configuration Manager uyarıları ve durum sistemin
 Siteler arasında dosya ve veritabanı çoğaltmasının çalışır durumda ve güncel olduğundan emin olun. Her iki durumda da gecikme veya biriktirme listesi sorunsuz, başarılı bir güncelleştirmeyi engelleyebilir.
 Veritabanı çoğaltmasında, güncelleştirmeyi başlatmadan önce sorunları çözmeye yardımcı olması için Çoğaltma Bağlantısı Analizcisi’ni kullanabilirsiniz.
 
-Daha fazla bilgi için bkz. [veritabanı çoğaltmasını](monitor-replication.md) izleme konusunda [Çoğaltma Bağlantısı Çözümleyicisi](monitor-replication.md#BKMK_RLA) .
+Daha fazla bilgi için bkz [Replication Link Analyzer](monitor-replication.md#BKMK_RLA)   . [veritabanı çoğaltmasını izleme](monitor-replication.md)   konusunda çoğaltma bağlantısı Çözümleyicisi.
 
 **Siteyi, site veritabanı sunucusunu ve uzak site sistemi rollerini barındıran bilgisayarlara işletim sistemleri için geçerli tüm kritik güncelleştirmeleri yükler:** Configuration Manager için bir güncelleştirme yüklemeden önce, ilgili her site sistemi için tüm kritik güncelleştirmeleri yükleyebilirsiniz. Yüklediğiniz bir güncelleştirme yeniden başlatma gerektirirse, yükseltmeyi başlatmadan önce ilgili bilgisayarları yeniden başlatın.
 
@@ -184,7 +184,7 @@ Daha fazla bilgi için bkz. [Configuration Manager güncelleştirmeleri](updates
 
 ## <a name="post-update-checklist"></a>Güncelleştirme sonrası denetim listesi
 Güncelleştirme yüklemesi tamamlandıktan sonra gerçekleştirilecek aşağıdaki eylemleri gözden geçirin.
-1. Siteden siteye çoğaltmanın etkin olduğundan emin olun. Konsolunda, **izleme** > **sitesi hiyerarşisini**görüntüleyin ve çoğaltma bağlantılarının etkin olduğu sorun veya onay göstergeleri için**veritabanı çoğaltmasını** **izleme** > .
+1. Siteden siteye çoğaltmanın etkin olduğundan emin olun. Konsolunda, **izleme**  >  **sitesi hiyerarşisini**görüntüleyin ve **Monitoring**  >  çoğaltma bağlantılarının etkin olduğu sorun veya onay göstergeleri için**veritabanı çoğaltmasını** izleme.
 2. Her site sunucusu ve site sistemi rolünün 1702 sürümüne güncelleştirildiğinden emin olun. Konsolunda, **siteler** ve **dağıtım noktaları**dahil bazı düğümlerin görüntüsüne isteğe bağlı sütun **sürümünü** ekleyebilirsiniz.
 
    Gerektiğinde, bir site sistem rolü yeni sürüme güncelleştirmek için otomatik olarak yeniden yüklenir. Başarıyla güncelleştirmayan uzak site sistemlerini yeniden başlatmayı düşünün.

@@ -10,12 +10,12 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b74a8c1daff31a8ffca8a38e6449aeeef1bb9b2d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5bdfd566682156e39e1dbed7c55af85b20a78671
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715651"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906672"
 ---
 # <a name="endpoint-protection"></a>Uç Nokta Koruma
 
@@ -92,7 +92,7 @@ Endpoint Protection, önceden Windows Defender ATP olarak bilinen Microsoft Defe
 ## <a name="endpoint-protection-client-for-mac-computers-and-linux-servers"></a>Mac Bilgisayarlar ve Linux Sunucuları için Endpoint Protection İstemcisi  
 
 > [!Important]  
-> Mac ve Linux için System Center Endpoint Protection (SCEP) desteği (tüm sürümler) 31 Aralık 2018 tarihinde sona erer. Mac için SCEP için yeni virüs tanımlarının kullanılabilirliği ve Linux için SCEP, destek sonuna kadar sonlandırılabilir. Daha fazla bilgi için bkz. [Destek Web günlüğü gönderisinin sonu](https://go.microsoft.com/fwlink/?linkid=870182).  
+> Mac ve Linux için System Center Endpoint Protection (SCEP) desteği (tüm sürümler) 31 Aralık 2018 tarihinde sona erer. Mac için SCEP için yeni virüs tanımlarının kullanılabilirliği ve Linux için SCEP, destek sonuna kadar sonlandırılabilir. Daha fazla bilgi için bkz. [Destek Web günlüğü gönderisinin sonu](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257).  
 
  System Center Endpoint Protection, Linux ve Mac bilgisayarlar için bir Endpoint Protection istemcisi içerir. Bu istemciler Configuration Manager ile sağlanmaz. [Microsoft Toplu Lisanslama Hizmet Merkezi](https://www.microsoft.com/licensing/servicecenter/default.aspx)' nden aşağıdaki ürünleri indirin:  
 

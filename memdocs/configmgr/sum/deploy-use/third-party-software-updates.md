@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f430979a2189494e977c501a36f9f039f860ca7a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: f5461f888bfa2b749061eef4000f0d7c5f756b84
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771439"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906740"
 ---
 # <a name="enable-third-party-updates"></a>Üçüncü taraf güncelleştirmelerini etkinleştirme 
 
@@ -27,10 +27,10 @@ Sürüm 1806 ' den başlayarak, Configuration Manager konsolundaki **üçüncü 
 > Configuration Manager Bu özelliği varsayılan olarak etkinleştirmez. Kullanmadan önce, **istemcilerde üçüncü taraf güncelleştirme desteğini etkinleştirmek**için isteğe bağlı özelliği etkinleştirin. Daha fazla bilgi için, bkz. [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
 
 
-## <a name="prerequisites"></a>Önkoşullar 
+## <a name="prerequisites"></a>Ön koşullar 
 - Üçüncü taraf yazılım güncelleştirmeleri için kaynak ikili içeriğini depolamak üzere en üst düzey yazılım güncelleştirme noktasının sunucusundaki WSUSContent klasöründe yeterli disk alanı.
     - Gerekli depolama alanı, satıcıya, güncelleştirme türlerine ve dağıtım için yayımladığınız belirli güncelleştirmelere göre farklılık gösterir.
-    - Sunucusundaki WSUSContent klasörünü daha fazla boş alana sahip başka bir sürücüye taşımanız gerekiyorsa, [WSUS tarafından güncelleştirmelerin yerel olarak nasıl değiştirileceği](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/) blog gönderisine bakın.
+    - Sunucusundaki WSUSContent klasörünü daha fazla boş alana sahip başka bir sürücüye taşımanız gerekiyorsa, [WSUS tarafından güncelleştirmelerin yerel olarak nasıl değiştirileceği](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally) blog gönderisine bakın.
 - Üçüncü taraf yazılım güncelleştirme eşitleme hizmeti için internet erişimi gerekir.
     - İş ortağı katalogları listesi için HTTPS bağlantı noktası 443 üzerinden download.microsoft.com gerekir. 
     -  Üçüncü taraf kataloglara Internet erişimi ve içerik dosyalarını güncelleştirme. 443 dışındaki ek bağlantı noktaları gerekebilir.
@@ -40,7 +40,7 @@ Sürüm 1806 ' den başlayarak, Configuration Manager konsolundaki **üçüncü 
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>Üst düzey site sunucusundan SUP uzakta olduğunda ek gereksinimler 
 
 1. Uzakta olduğunda, SSL 'nin SUP üzerinde etkinleştirilmesi gerekir. Bu, bir iç sertifika yetkilisinden veya bir genel sağlayıcı aracılığıyla oluşturulan bir sunucu kimlik doğrulama sertifikası gerektirir.
-    - [WSUS üzerinde SSL 'yi yapılandırma](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
+    - [WSUS üzerinde SSL 'yi yapılandırma](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
         - WSUS üzerinde SSL yapılandırdığınızda, bazı Web Hizmetleri ve sanal dizinlerin her zaman HTTP ve HTTPS değil olduğunu not edin. 
         - Configuration Manager, WSUS içerik dizininden yazılım güncelleştirme paketleri için üçüncü taraf içeriği HTTP üzerinden indirir.   
     - [SUP üzerinde SSL yapılandırma](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
@@ -51,7 +51,7 @@ Sürüm 1806 ' den başlayarak, Configuration Manager konsolundaki **üçüncü 
 
 
 3. Configuration Manager site sunucusunda aşağıdaki kayıt defteri anahtarını oluşturun: 
-    - `HKLM\Software\Microsoft\Update Services\Server\Setup`, bir değeri olan **Enableselfsignedcertificates** adlı yenı bir DWORD oluşturun `1`. 
+    - `HKLM\Software\Microsoft\Update Services\Server\Setup`, bir değeri olan **Enableselfsignedcertificates** adlı yenı bir DWORD oluşturun `1` . 
 
 4. Otomatik olarak imzalanan WSUS imzalama sertifikasını, uzak SUP sunucusundaki Güvenilen Yayımcılar ve güvenilen kök depolarına yüklemeyi etkinleştirmek için:
    - **WSUS sunucusu bağlantı hesabı** , SUP sunucusunda uzaktan yönetim izinlerine sahip olmalıdır.
@@ -75,7 +75,7 @@ Bu seçeneği etkinleştirirseniz, Configuration Manager konsolundaki üçüncü
 Otomatik olarak imzalanan bir sertifika kullanarak üçüncü taraf WSUS imzalama sertifikasını otomatik olarak yönetmesini mi yoksa sertifikayı el ile yapılandırmanız mı gerektiğini Configuration Manager belirlemeniz gerekir. 
 
 ### <a name="automatically-manage-the-wsus-signing-certificate"></a>WSUS imza sertifikasını otomatik olarak yönetme
-PKI sertifikalarını kullanma gerekliliği yoksa, üçüncü taraf güncelleştirmeler için imza sertifikalarını otomatik olarak yönetmeyi tercih edebilirsiniz. WSUS sertifika yönetimi, eşitleme döngüsünün bir parçası olarak yapılır ve oturum açar `wsyncmgr.log`. 
+PKI sertifikalarını kullanma gerekliliği yoksa, üçüncü taraf güncelleştirmeler için imza sertifikalarını otomatik olarak yönetmeyi tercih edebilirsiniz. WSUS sertifika yönetimi, eşitleme döngüsünün bir parçası olarak yapılır ve oturum açar `wsyncmgr.log` . 
 
 1. Configuration Manager konsolunda **Yönetim** çalışma alanına gidin. **Site yapılandırması**' nı genişletin ve **siteler** düğümünü seçin.
 2. Hiyerarşide en üst düzey siteyi seçin. Şeritte, **site bileşenlerini Yapılandır**' a tıklayın ve **yazılım güncelleştirme noktası**' nı seçin.
@@ -92,7 +92,7 @@ Sertifikayı bir PKI sertifikası kullanma gereksinimi gibi el ile yapılandırm
 
 
 ## <a name="enable-third-party-updates-on-the-clients"></a>İstemcilerde üçüncü taraf güncelleştirmelerini etkinleştirme
-İstemci ayarlarındaki istemcilerde üçüncü taraf güncelleştirmelerini etkinleştirin. Bu ayar, [Intranet Microsoft güncelleştirme hizmeti konumu için imzalı güncelleştirmelere Izin ver](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location)için Windows Update aracı ilkesini ayarlar. Bu istemci ayarı, WSUS imzalama sertifikasını istemcideki güvenilen yayımcı deposuna da yüklenir. Sertifika yönetimi günlüğü, istemcilerde ' de `updatesdeployment.log` görülür.  Üçüncü taraf güncelleştirmeler için kullanmak istediğiniz her özel istemci ayarı için bu adımları çalıştırın. Daha fazla bilgi için bkz. [istemci ayarları hakkında](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates) makalesi.
+İstemci ayarlarındaki istemcilerde üçüncü taraf güncelleştirmelerini etkinleştirin. Bu ayar, [Intranet Microsoft güncelleştirme hizmeti konumu için imzalı güncelleştirmelere Izin ver](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location)için Windows Update aracı ilkesini ayarlar. Bu istemci ayarı, WSUS imzalama sertifikasını istemcideki güvenilen yayımcı deposuna da yüklenir. Sertifika yönetimi günlüğü, istemcilerde ' de görülür `updatesdeployment.log` .  Üçüncü taraf güncelleştirmeler için kullanmak istediğiniz her özel istemci ayarı için bu adımları çalıştırın. Daha fazla bilgi için bkz. [istemci ayarları hakkında](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates) makalesi.
 
 1. Configuration Manager konsolunda, **Yönetim** çalışma alanına gidin ve **istemci ayarları** düğümünü seçin.
 2. Mevcut bir özel istemci ayarı seçin veya yeni bir tane oluşturun. 
@@ -234,7 +234,7 @@ Artık üçüncü taraf güncelleştirme kataloglarının eşitlenmesi üzerinde
 -  Configuration Manager, Katalog cab dosyası biçimi için yeni bir sürüme sahiptir. Yeni sürüm, satıcının ikili dosyalarının sertifikalarını içerir. Bu sertifikalar, kataloğa onayladıktan ve güvendikten sonra **Yönetim** çalışma alanındaki **güvenlik** altındaki **Sertifikalar** düğümüne eklenir.  
      - İndirme URL 'SI https olduğu ve güncelleştirmeler imzalandığı sürece eski Katalog cab dosyası sürümünü kullanmaya devam edebilirsiniz. İkili dosyalar için sertifikalar cab dosyasında olmadığından ve zaten onaylanmış olduğundan içerik yayımlanamaz. **Sertifika düğümündeki sertifikayı** bularak, onun engellemesini kaldırarak ve güncelleştirmeyi yeniden yayımlayarak bu soruna geçici bir çözüm bulabilirsiniz. Farklı sertifikalarla imzalanmış birden çok güncelleştirme yayımlıyorsanız, kullanılan her bir sertifikanın engellemesini kaldırmanız gerekir.
      - Daha fazla bilgi için aşağıdaki durum iletisi tablosunda 11523 ve 11524 durum iletileri bölümüne bakın.
--  Üst düzey yazılım güncelleştirme noktasındaki üçüncü taraf yazılım güncelleştirme eşitleme hizmeti internet erişimi için bir proxy sunucu gerektirdiğinde, dijital imza denetimleri başarısız olabilir. Bu sorunu azaltmak için, site sisteminde WinHTTP proxy ayarlarını yapılandırın. Daha fazla bilgi için bkz. [WinHTTP Için Netsh komutları](https://go.microsoft.com/fwlink/p/?linkid=199086).
+-  Üst düzey yazılım güncelleştirme noktasındaki üçüncü taraf yazılım güncelleştirme eşitleme hizmeti internet erişimi için bir proxy sunucu gerektirdiğinde, dijital imza denetimleri başarısız olabilir. Bu sorunu azaltmak için, site sisteminde WinHTTP proxy ayarlarını yapılandırın. Daha fazla bilgi için bkz. [WinHTTP Için Netsh komutları](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10)).
 - İçerik depolaması için bir CMG kullanırken, kullanılabilir [istemci ayarı](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) etkinleştirildiğinde **Delta içeriğini indir** , üçüncü taraf güncelleştirmeler için içerik istemcilere indirmez. <!--6598587-->
 
 ## <a name="status-messages"></a>Durum iletileri

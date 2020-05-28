@@ -10,12 +10,12 @@ ms.assetid: d5bfab4f-c55e-4545-877c-5c8db8bc1891
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 380ba550a6edb0f639644280df74c500663e19f4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 39e88debf5c25fb3a033c322e37663549ead29fd
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714419"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427720"
 ---
 # <a name="how-to-extend-hardware-inventory-in-configuration-manager"></a>Configuration Manager 'de donanım envanterini genişletme
 
@@ -36,134 +36,163 @@ Configuration. mof dosyası, istemci üzerindeki donanım envanteri tarafından 
 > Ancak, bu bölüm Configuration Manager tarafından değiştirilmek üzere ayrıldığından, bu bölümün üstündeki herhangi bir şeyi değiştirmemelidir. Özel Configuration.mof dosyanızın bir yedeğini şurada bulabilirsiniz:  
 > **<CM Install dir\>\data\hinvarchive\\**.  
 
-|Yöntem|Daha fazla bilgi|  
-|------------|----------------------|  
-|Mevcut envanter sınıflarını etkinleştirme veya devre dışı bırakma|Varsayılan envanter sınıflarını etkinleştirin veya devre dışı bırakın ya da belirtilen istemci koleksiyonlarından farklı donanım envanteri sınıfları toplamanıza imkan tanıyan özel istemci ayarları oluşturun. Bu makaledeki [Mevcut envanter sınıflarını etkinleştirmek veya devre dışı bırakmak için](#BKMK_Enable) bölümüne bakın.|  
-|Yeni envanter sınıfı ekleme|Başka bir cihazın WMI ad alanından yeni bir envanter sınıfı ekleyin. Bu makaledeki [yeni envanter sınıfı ekleme](#BKMK_Add) yordamına bakın.|  
-|Donanım envanteri sınıflarını içeri ve dışarı aktarma|Configuration Manager konsolundan envanter sınıflarını içeren Yönetilen Nesne Biçimi (MOF) dosyalarını içeri ve dışarı aktarın. Bu makaledeki [Donanım envanter sınıflarını içeri aktarmak](#BKMK_Import) ve [donanım envanteri sınıflarını dışarı aktarmak](#BKMK_Export) için bölümüne bakın.|  
-|NOIDMIF Dosyaları Oluşturma|Configuration Manager tarafından envantere alınmayan istemci cihazları hakkında bilgi toplamak için NOıDMıF dosyalarını kullanın. Örneğin, yalnızca cihaz üzerindeki bir etikette bulunan cihaz varlık numarası bilgilerini toplamak isteyebilirsiniz. NOIDMIF envanteri, toplandığı istemci cihaz ile otomatik olarak ilişkilendirilir. Bu makaledeki [NOıDMıF dosyaları oluşturmak için](#BKMK_NOIDMIF) bölümüne bakın.|  
-|IDMIF Dosyaları Oluşturma|Kuruluşunuzdaki varlıklar hakkında bilgi toplamak için ıDMıF dosyalarını kullanın, örneğin projektörler, fotokopi makineleri ve ağ yazıcıları gibi Configuration Manager istemcisiyle ilişkilendirilmemiş. Bu makalede [ıDMıF dosyaları oluşturmak için](#BKMK_IDMIF) bölümüne bakın.|  
+## <a name="methods"></a>Yöntemler
 
-## <a name="procedures-to-extend-hardware-inventory"></a>Donanım envanterini genişletme yordamları  
-Bu yordamlar donanım envanteri için varsayılan istemci ayarlarını yapılandırmanıza yardımcı olur ve hiyerarşinizdeki tüm istemciler için geçerlidir. Bu ayarların yalnızca bazı istemcilere uygulanmasını istiyorsanız özel bir istemci cihaz ayarı oluşturun ve belirli bir istemci koleksiyonuna atayın. Bkz. [istemci ayarlarını yapılandırma](../../../../core/clients/deploy/configure-client-settings.md).  
+### <a name="enable-or-disable"></a>Etkinleştir veya devre dışı bırak
 
-###  <a name="to-enable-or-disable-existing-inventory-classes"></a><a name="BKMK_Enable"></a> Mevcut envanter sınıflarını etkinleştirmek veya devre dışı bırakmak için  
+İstemcide zaten var olan bir sınıfın tüm özniteliklerini etkinleştirin veya devre dışı bırakın. Bu eylem, donanım envanteri aracısının istemcileri üzerinde toplamasını ister. Bu eylemi varsayılan istemci ayarları veya özel cihaz istemci ayarları ' nda yapabilirsiniz. Daha fazla bilgi için bkz. [Mevcut envanter sınıflarını etkinleştirme veya devre dışı bırakma](#BKMK_Enable).
 
-1.  Configuration Manager konsolunda, **Yönetim** > **istemci ayarları** > **varsayılan istemci ayarları**' nı seçin.  
+### <a name="add"></a>Ekle
 
-4.  **Giriş** sekmesinde, **Özellikler** grubunda, **Özellikler**' i seçin.  
+İstemcide bir WMI sınıfı varsa ve site tarafından biliniyorsa, bu eylem bunu olası donanım envanteri sınıfları kümesine dahil eder. Başka bir cihazın WMI ad alanından yeni bir envanter sınıfı ekleyebilirsiniz. Bu eylem yalnızca varsayılan istemci ayarları ' dır. Daha fazla bilgi için bkz. [Yeni bir envanter sınıfı ekleme](#BKMK_Add).
 
-5.  **Varsayılan Istemci ayarları** Iletişim kutusunda **donanım envanteri**' ni seçin.  
+### <a name="extend"></a>Genişletme
 
-6.  **Cihaz Ayarları** listesinde **Sınıfları Ayarla**’ya tıklayın.  
+İstemciye yeni bir WMI sınıfı ekleyin. Donanım envanterini el ile genişletmek için üst düzey sitede Configuration. mof ' yi düzenleyin.<!-- SCCMDocs#1073 -->
 
-7.  **Donanım Envanteri Sınıfları** iletişim kutusunda, donanım envanteri tarafından toplanacak sınıfları ve sınıf özelliklerini seçin ya da seçimi kaldırın. Bir sınıftaki belirli özellikleri seçmek ya da seçimini kaldırmak üzere sınıfları genişletebilirsiniz. Belirli sınıfları aramak için **Envanter sınıflarını ara** alanını kullanın.  
+WMI sınıfı zaten istemcide yoksa, WMI şemasını genişletmeniz gerekir:
+
+1. Üst düzey sitede Configuration. mof ' i düzenleyin. Sitenin ekleme sitesini görmek için **veri günlüğü Dr. log** ' yı gözden geçirin.
+
+1. Bir istemcide ilkeyi yenileyin ve yeni sınıfın derlenmesi için bekleyin.
+
+1. Yeni sınıfı donanım envanterine [eklemek](#add) için varsayılan istemci ayarlarını kullanın. Varsayılan istemci ayarlarında bu sınıfı etkinleştirmeniz gerekmez. Bunu, özel bir cihaz istemci ayarında etkinleştirebilirsiniz.
+
+### <a name="import-and-export"></a>İçeri ve dışarı aktarma
+
+Envanter sınıflarını içeren Yönetilen Nesne Biçimi (MOF) dosyalarını içeri ve dışarı aktarmak için Configuration Manager konsolunu kullanın. Daha fazla bilgi için bkz. [donanım envanteri sınıflarını içeri](#BKMK_Import) aktarma ve [donanım envanteri sınıflarını dışa aktarma](#BKMK_Export).
+
+### <a name="create-noidmif-files"></a>NOIDMIF Dosyaları Oluşturma
+
+Configuration Manager stokunuzun istemci cihazları hakkında bilgi toplamak için NOıDMıF dosyalarını kullanın. Örneğin, yalnızca cihazda bir etiket olarak bulunan cihaz varlık numarası bilgilerini toplayın. NOIDMIF envanteri, toplandığı istemci cihaz ile otomatik olarak ilişkilendirilir. Daha fazla bilgi için bkz. [NOıDMıF dosyaları oluşturma](#BKMK_NOIDMIF).
+
+### <a name="create-idmif-files"></a>IDMIF Dosyaları Oluşturma
+
+Kuruluşunuzda bir Configuration Manager istemcisiyle ilişkili olmayan varlıklar hakkında bilgi toplamak için ıDMıF dosyalarını kullanın. Örneğin, projektörler, fotokopi makineleri ve ağ yazıcıları. Daha fazla bilgi için bkz. [ıDMıF dosyaları oluşturma](#BKMK_IDMIF).
+
+## <a name="procedures-to-extend-hardware-inventory"></a>Donanım envanterini genişletme yordamları
+
+Bu yordamlar donanım envanteri için varsayılan istemci ayarlarını yapılandırmanıza yardımcı olur ve hiyerarşinizdeki tüm istemciler için geçerlidir. Bu ayarların yalnızca bazı istemcilere uygulanmasını istiyorsanız özel bir istemci cihaz ayarı oluşturun ve belirli bir istemci koleksiyonuna atayın. Daha fazla bilgi için bkz. [istemci ayarlarını yapılandırma](../../../../core/clients/deploy/configure-client-settings.md).  
+
+### <a name="enable-or-disable-existing-inventory-classes"></a><a name="BKMK_Enable"></a>Mevcut envanter sınıflarını etkinleştirme veya devre dışı bırakma  
+
+1. Configuration Manager konsolunda, **Yönetim**  >  **istemci ayarları**  >  **varsayılan istemci ayarları**' nı seçin.  
+
+1. **Giriş** sekmesinde, **Özellikler** grubunda, **Özellikler**' i seçin.  
+
+1. **Varsayılan Istemci ayarları** Iletişim kutusunda **donanım envanteri**' ni seçin.  
+
+1. **Cihaz ayarları** listesinde **sınıfları ayarla**' yı seçin.  
+
+1. **Donanım Envanteri Sınıfları** iletişim kutusunda, donanım envanteri tarafından toplanacak sınıfları ve sınıf özelliklerini seçin ya da seçimi kaldırın. Bir sınıftaki belirli özellikleri seçmek ya da seçimini kaldırmak üzere sınıfları genişletebilirsiniz. Belirli sınıfları aramak için **Envanter sınıflarını ara** alanını kullanın.  
 
     > [!IMPORTANT]  
     >  Configuration Manager donanım envanterine yeni sınıflar eklediğinizde, toplanan ve site sunucusuna gönderilen envanter dosyasının boyutu artar. Bu durum ağınızın ve Configuration Manager sitenizin performansını olumsuz etkileyebilir. Yalnızca toplamak istediğiniz envanter sınıflarını etkinleştirin.  
 
+### <a name="add-a-new-inventory-class"></a><a name="BKMK_Add"></a>Yeni bir envanter sınıfı Ekle  
 
-###  <a name="to-add-a-new-inventory-class"></a><a name="BKMK_Add"></a> Yeni envanter sınıfı eklemek için  
+Varsayılan istemci ayarlarını değiştirerek hiyerarşinin en üst düzey sunucusundan envanter sınıfları ekleyebilirsiniz. Bu seçenek özel cihaz ayarları oluşturduğunuzda kullanılamaz.
 
-Varsayılan istemci ayarlarını değiştirerek yalnızca hiyerarşinin en üst düzey sunucusundan envanter sınıfları ekleyebilirsiniz. Bu seçenek özel cihaz ayarları oluşturduğunuzda kullanılamaz.
+1. Configuration Manager konsolunda, **Yönetim**  >  **istemci ayarları**  >  **varsayılan istemci ayarları**' nı seçin.  
 
-1. Configuration Manager konsolunda, **Yönetim** > **istemci ayarları** > **varsayılan istemci ayarları**' nı seçin.  
+1. **Giriş** sekmesinde, **Özellikler** grubunda, **Özellikler**' i seçin.  
 
-2. **Giriş** sekmesinde, **Özellikler** grubunda, **Özellikler**' i seçin.  
+1. **Varsayılan Istemci ayarları** Iletişim kutusunda **donanım envanteri**' ni seçin.  
 
-3. **Varsayılan Istemci ayarları** Iletişim kutusunda **donanım envanteri**' ni seçin.  
+1. **Cihaz ayarları** listesinde **sınıfları ayarla**' yı seçin.  
 
-4. **Cihaz ayarları** listesinde **sınıfları ayarla**' yı seçin.  
+1. **Donanım envanteri sınıfları** Iletişim kutusunda **Ekle**' yi seçin.  
 
-5. **Donanım envanteri sınıfları** Iletişim kutusunda **Ekle**' yi seçin.  
+1. **Donanım envanteri sınıfı Ekle** Iletişim kutusunda **Bağlan**' ı seçin.  
 
-6. **Donanım Envanteri Sınıfı Ekle** iletişim kutusunda **Bağlan**’a tıklayın.  
+1. **Windows Yönetim Araçları Bağlan (WMI)** iletişim kutusunda, WMI sınıflarını alacağınız bilgisayarın adını ve sınıfları almak IÇIN kullanılacak WMI ad alanını belirtin. Belirttiğiniz WMI ad alanının altındaki tüm sınıfları almak isterseniz **özyinelemeli**' i seçin. Bağlanmakta olduğunuz bilgisayar yerel bilgisayar değilse, uzak bilgisayardaki WMI 'ya erişim iznine sahip olan bir hesabın kimlik bilgilerini sağlayın.
 
-7. **Windows Yönetim Araçları’na (WMI) Bağlan** iletişim kutusunda WMI sınıflarını alacağınız bilgisayarın adını ve sınıfları almak için kullanılacak WMI ad alanını belirtin. Belirttiğiniz WMI ad alanının altındaki tüm sınıfları almak isterseniz **Özyinelemeli**’ye tıklayın. Bağlanmakta olduğunuz bilgisayar yerel bilgisayar değilse, uzak bilgisayardaki WMI’ya erişim iznine sahip bir hesap için oturum açma kimlik bilgilerini sağlayın.  
+1. **Bağlan**’ı seçin.  
 
-8. **Bağlan**’ı seçin.  
+1. **Donanım envanteri sınıfı Ekle** Iletişim kutusundaki **envanter sınıfları** listesinde, donanım ENVANTERINI Configuration Manager eklemek istediğiniz WMI sınıflarını seçin.  
 
-9. **Donanım envanteri sınıfı Ekle** Iletişim kutusundaki **envanter sınıfları** listesinde, donanım ENVANTERINI Configuration Manager eklemek istediğiniz WMI sınıflarını seçin.  
+1. Seçili WMI sınıfıyla ilgili bilgileri düzenlemek istiyorsanız, **Düzenle**' yi seçin ve **Sınıf niteleyicileri** iletişim kutusunda aşağıdaki bilgileri sağlayın:  
 
-10. Seçili WMI sınıfıyla ilgili bilgileri düzenlemek istiyorsanız, **Düzenle**' yi seçin ve **Sınıf niteleyicileri** iletişim kutusunda aşağıdaki bilgileri sağlayın:  
+    - **Görünen ad**: Bu ad, kaynak Gezgini görüntülenecektir.  
 
-    - **Görünen ad** -bu ad, kaynak Gezgini görüntülenecektir.  
+    - **Özellikler**: WMI sınıfının her bir özelliğinin gösterileceği birimleri belirtin.  
 
-    - **Özellikler** -WMI sınıfının her bir özelliğinin gösterileceği birimleri belirtin.  
+      Ayrıca, sınıfın her örneğini benzersiz bir şekilde tanımlamak için özellikleri anahtar özellik olarak ayarlayabilirsiniz. Sınıf için bir anahtar tanımlanmamışsa ve istemciden sınıfın birden çok örneği bildirilirse, yalnızca bulunan en son örnek veritabanına depolanır.  
 
-      Ayrıca sınıfın her bir örneğini benzersiz bir biçimde tanımlamak için özellikleri anahtar özellik olarak belirleyebilirsiniz. Sınıf için bir anahtar tanımlanmamışsa ve istemciden sınıfın birden çok örneği bildirilirse, yalnızca bulunan en son örnek veritabanına depolanır.  
+      Özellikleri yapılandırmayı tamamladığınızda, **Sınıf niteleyicileri** iletişim kutusunu ve diğer açık iletişim kutularını kapatmak için **Tamam** ' ı seçin.
 
-      Özellikleri yapılandırmayı tamamladığınızda, **Sınıf niteleyicileri** iletişim kutusunu ve diğer açık iletişim kutularını kapatmak için **Tamam** ' ı tıklatın. 
-
-###  <a name="to-import-hardware-inventory-classes"></a><a name="BKMK_Import"></a> Donanım envanteri sınıflarını içeri aktarmak için  
+### <a name="import-hardware-inventory-classes"></a><a name="BKMK_Import"></a>Donanım envanteri sınıflarını içeri aktar
 
 Varsayılan istemci ayarlarını değiştirdiğinizde yalnızca envanter sınıflarını içeri aktarabilirsiniz. Ancak, bir şema değişikliği içermeyen bilgileri içeri aktarmak için, mevcut bir sınıfın **true** olan özelliğini **false**olarak değiştirme gibi özel istemci ayarlarını da kullanabilirsiniz.  
 
-1.  Configuration Manager konsolunda, **Yönetim** >  **istemci ayarları** > **varsayılan istemci ayarları**' nı seçin.  
+1. Configuration Manager konsolunda, **Yönetim**  >   **istemci ayarları**  >  **varsayılan istemci ayarları**' nı seçin.
 
-4.  **Giriş** sekmesinde, **Özellikler** grubunda, **Özellikler**' i seçin.  
+1. **Giriş** sekmesinde, **Özellikler** grubunda, **Özellikler**' i seçin.  
 
-5.  **Varsayılan Istemci ayarları** Iletişim kutusunda **donanım envanteri**' ni seçin.  
+1. **Varsayılan Istemci ayarları** Iletişim kutusunda **donanım envanteri**' ni seçin.  
 
-6.  **Cihaz ayarları** listesinde **sınıfları ayarla**' yı seçin.  
+1. **Cihaz ayarları** listesinde **sınıfları ayarla**' yı seçin.  
 
-7.  **Donanım envanteri sınıfları** Iletişim kutusunda **içeri aktar**' ı seçin.  
+1. **Donanım envanteri sınıfları** Iletişim kutusunda **içeri aktar**' ı seçin.  
 
-8.  **Içeri aktar** iletişim kutusunda içeri aktarmak istediğiniz YÖNETILEN nesne BIÇIMI (MOF) dosyasını seçin ve ardından **Tamam**' ı seçin. İçeri aktarılacak öğeleri gözden geçirin ve ardından **Içeri aktar**' a tıklayın.  
+1. **Içeri aktar** iletişim kutusunda içeri aktarmak istediğiniz YÖNETILEN nesne BIÇIMI (MOF) dosyasını seçin ve ardından **Tamam**' ı seçin. İçeri aktarılacak öğeleri gözden geçirin ve ardından **Içeri aktar**' ı seçin.  
 
-###  <a name="to-export-hardware-inventory-classes"></a><a name="BKMK_Export"></a> Donanım envanteri sınıflarını dışarı aktarmak için  
+### <a name="export-hardware-inventory-classes"></a><a name="BKMK_Export"></a>Donanım envanteri sınıflarını dışarı aktar  
 
-1.  Configuration Manager konsolunda, **Yönetim** > **istemci ayarları** > **varsayılan istemci ayarları**' nı seçin.  
+1. Configuration Manager konsolunda, **Yönetim**  >  **istemci ayarları**  >  **varsayılan istemci ayarları**' nı seçin.  
 
-4.  **Giriş** sekmesinde, **Özellikler** grubunda, **Özellikler**' i seçin.  
+1. **Giriş** sekmesinde, **Özellikler** grubunda, **Özellikler**' i seçin.  
 
-5.  **Varsayılan Istemci ayarları** Iletişim kutusunda **donanım envanteri**' ni seçin.  
+1. **Varsayılan Istemci ayarları** Iletişim kutusunda **donanım envanteri**' ni seçin.  
 
-6.  **Cihaz ayarları** listesinde **sınıfları ayarla**' yı seçin.  
+1. **Cihaz ayarları** listesinde **sınıfları ayarla**' yı seçin.  
 
-7.  **Donanım envanteri sınıfları** Iletişim kutusunda **dışarı aktar**' ı seçin.  
+1. **Donanım envanteri sınıfları** Iletişim kutusunda **dışarı aktar**' ı seçin.  
 
     > [!NOTE]  
-    >  Sınıfları dışarı aktardığınızda o anda seçili tüm sınıflar dışarı aktarılır.  
+    > Sınıfları dışarı aktardığınızda o anda seçili tüm sınıflar dışarı aktarılır.  
 
-8.  **Dışarı aktar** iletişim kutusunda sınıfları dışarı aktarmak istediğiniz YÖNETILEN nesne BIÇIMI (MOF) dosyasını belirtin ve ardından **Kaydet**' i seçin.  
+1. **Dışarı aktar** iletişim kutusunda sınıfları dışarı aktarmak istediğiniz YÖNETILEN nesne BIÇIMI (MOF) dosyasını belirtin ve ardından **Kaydet**' i seçin.  
 
 ### <a name="configure-hardware-inventory-to-collect-strings-larger-than-255-characters"></a><a name="bkmk_GreaterThan255"></a>Donanım envanterini 255 karakterden daha büyük dizeler toplayacak şekilde yapılandırma
-Configuration Manager 1802 ' den başlayarak, donanım envanteri özellikleri için en fazla 255 karakterden daha fazla olan dizelerin uzunluğunu belirtebilirsiniz. Bu değişiklik yalnızca yeni eklenen sınıflar ve anahtarlar olmayan donanım envanteri özellikleri için geçerlidir. <!-- 1357389 -->
 
-1. **Yönetim** çalışma alanında, **istemci ayarları** ' na tıklayın, düzenlemek için istemci cihaz ayarını vurgulayın, sağ tıklayın ve ardından **Özellikler**' i seçin.
+Donanım envanteri özellikleri için 255 karakterden daha büyük olacak dizelerin uzunluğunu belirtebilirsiniz. Bu eylem yalnızca yeni eklenen sınıflar ve anahtarlar olmayan donanım envanteri özellikleri için geçerlidir. <!-- 1357389 -->
 
-2. **Donanım envanterini**seçin, sonra **sınıfları ayarlayın**ve **ekleyin**.
+1. **Yönetim** çalışma alanında **istemci ayarları**' nı seçin. Düzenlenecek bir istemci cihaz ayarı seçin ve ardından **Özellikler**' i seçin.
 
-3. **Bağlan** düğmesine tıklayın.
+1. **Donanım envanterini**seçin, sonra **sınıfları ayarlayın**ve **ekleyin**.
 
-4. **Bilgisayar adı**, **WMI ad alanı**' nı doldurup gerekirse **özyinelemeli** ' i seçin. Bağlanmak gerekirse kimlik bilgilerini sağlayın. Ad alanı sınıflarını görüntülemek için **Bağlan** ' a tıklayın.
+1. **Bağlan**'ı seçin.
 
-5. Yeni bir sınıf seçin ve ardından **Düzenle**' ye tıklayın.
+1. **Bilgisayar adı**, **WMI ad alanı**' nı doldurup gerekirse **özyinelemeli** ' i seçin. Bağlanmak gerekirse kimlik bilgilerini sağlayın. Ad alanı sınıflarını görüntülemek için **Bağlan** ' ı seçin.
 
-6. Anahtar dışındaki bir dize olan, özelliğin **uzunluğunu** 255 ' dan büyük olacak şekilde değiştirin. **Tamam**'a tıklayın. 
+1. Yeni bir sınıf seçin ve ardından **Düzenle**' yi seçin.
 
-7. **Donanım envanteri sınıfı Ekle** için düzenlenmiş özelliğin seçildiğinden emin olun ve **Tamam**' a tıklayın. 
+1. Anahtarınızın **uzunluğu** , anahtar dışındaki bir dize, 255 ' den büyük olacak şekilde değiştirin. **Tamam**’ı seçin.
 
+1. **Donanım envanteri sınıfı Ekle**için düzenlenmiş özelliğin seçildiğinden emin olun ve **Tamam**' ı seçin.
 
-## <a name="how-to-use-management-information-files-mif-files-to-extend-hardware-inventory"></a>Donanım envanterini genişletmek için Yönetim Bilgi Dosyaları’nı (MIF Dosyaları) Kullanma  
- Configuration Manager tarafından istemcilerden toplanan donanım envanteri bilgilerini genişletmek için yönetim bilgisi biçimi (MIF) dosyalarını kullanın. Donanım envanteri sırasında MIF dosyalarına depolanan bilgiler, istemci envanter raporuna eklenir ve verileri varsayılan istemci envanteri verilerini kullandığınız şekilde kullanabileceğiniz site veritabanına depolanır. İki tür MIF dosyası vardır, NOıDMıF ve ıDMıF.
+## <a name="use-mif-files-to-extend-hardware-inventory"></a>Donanım envanterini genişletmek için MIF dosyalarını kullanma
 
-> [!IMPORTANT]  
->  MIF dosyalarından Configuration Manager veritabanına bilgi eklemeden önce bunlar için sınıf bilgileri oluşturmanız veya içeri aktarmanız gerekir. Daha fazla bilgi için, bu makaledeki [Yeni bir envanter sınıfı eklemek](#BKMK_Add) ve [donanım envanteri sınıflarını içeri aktarmak](#BKMK_Import) için bölümlerine bakın.  
-
-###  <a name="to-create-noidmif-files"></a><a name="BKMK_NOIDMIF"></a> NOIDMIF dosyaları oluşturmak için  
- NOıDMıF dosyaları, normalde Configuration Manager tarafından toplanamayacak ve belirli bir istemci cihazından ilişkili bir istemci donanım envanterine bilgi eklemek için kullanılabilir. Örneğin, birçok şirket kuruluştaki her bilgisayarı bir varlık numarasıyla etiketleyip bu numaraları el ile kataloglayın. Bir NOıDMıF dosyası oluşturduğunuzda, bu bilgiler Configuration Manager veritabanına eklenebilir ve sorgular ve raporlama için kullanılabilir. NOıDMıF dosyaları oluşturma hakkında daha fazla bilgi için Configuration Manager SDK belgelerine bakın.  
+Configuration Manager tarafından istemcilerden toplanan donanım envanteri bilgilerini genişletmek için yönetim bilgisi biçimi (MIF) dosyalarını kullanın. Donanım envanteri sırasında MIF dosyalarına depolanan bilgiler, istemci envanter raporuna eklenir ve verileri varsayılan istemci envanteri verilerini kullandığınız şekilde kullanabileceğiniz site veritabanına depolanır. İki tür MIF dosyası vardır: NOıDMıF ve ıDMıF.
 
 > [!IMPORTANT]  
->  Bir NOıDMıF dosyası oluşturduğunuzda, bu dosyanın ANSI kodlamalı bir biçimde kaydedilmesi gerekir. UTF-8 ile kodlanmış biçimde kaydedilen NOıDMıF dosyaları Configuration Manager tarafından okunamaz.  
+> MIF dosyalarından Configuration Manager veritabanına bilgi eklemeden önce bunlar için sınıf bilgileri oluşturmanız veya içeri aktarmanız gerekir. Daha fazla bilgi için, bu makaledeki [Yeni bir envanter sınıfı eklemek](#BKMK_Add) ve [donanım envanteri sınıflarını içeri aktarmak](#BKMK_Import) için bölümlerine bakın.  
 
- Bir NOıDMıF dosyası oluşturduktan sonra, bu dosyayı her istemcideki _% windir%_**\Ccm\ınventory\noıdmıfs** klasöründe saklayın. Configuration Manager, bir sonraki zamanlanmış donanım envanteri çevrimi sırasında bu klasördeki NODMıF dosyalarından bilgi toplar.  
+### <a name="create-noidmif-files"></a><a name="BKMK_NOIDMIF"></a>NOıDMıF dosyaları oluşturma
 
-###  <a name="to-create-idmif-files"></a><a name="BKMK_IDMIF"></a> IDMIF dosyaları oluşturmak için  
- IDMıF dosyaları, normalde Configuration Manager tarafından envantere alınmayan ve belirli bir istemci cihazı ile ilişkili olmayan varlıklar hakkında Configuration Manager veritabanına bilgi eklemek için kullanılabilir. Örneğin, projektörler, DVD oynatıcılar, fotokopi makineleri veya Configuration Manager istemcisine sahip olmayan diğer donanımlar hakkında bilgi toplamak için ıDMıFS kullanabilirsiniz. IDMıF dosyaları oluşturma hakkında daha fazla bilgi için Configuration Manager SDK belgelerine bakın.  
+NOıDMıF dosyaları, normalde Configuration Manager tarafından toplanamayacak ve belirli bir istemci cihazından ilişkili bir istemci donanım envanterine bilgi eklemek için kullanılabilir. Örneğin, birçok şirket kuruluştaki her bilgisayarı bir varlık numarasıyla etiketleyip bu numaraları el ile kataloglayın. Bir NOıDMıF dosyası oluşturduğunuzda, bu bilgiler Configuration Manager veritabanına eklenebilir ve sorgular ve raporlama için kullanılabilir. NOıDMıF dosyaları oluşturma hakkında daha fazla bilgi için Configuration Manager SDK belgelerine bakın.  
 
- IDMıF dosyasını oluşturduktan sonra, istemci bilgisayarlardaki _% windir%_**\Ccm\ınventory\ıdmıfs** klasöründe saklayın. Configuration Manager, bir sonraki zamanlanmış donanım envanteri çevrimi sırasında bu dosyadan bilgi toplar. Dosyalarda bulunan bilgiler için ekleme veya içeri aktarma yoluyla yeni sınıflar bildirmeniz gerekir.  
+> [!IMPORTANT]  
+> Bir NOıDMıF dosyası oluşturduğunuzda, bu dosyanın ANSI kodlamalı bir biçimde kaydedilmesi gerekir. UTF-8 ile kodlanmış biçimde kaydedilen NOıDMıF dosyaları Configuration Manager tarafından okunamaz.  
+
+Bir NOıDMıF dosyası oluşturduktan sonra, bu dosyayı `%Windir%\CCM\Inventory\Noidmifs` her bir istemcideki klasöründe saklayın. Configuration Manager, bir sonraki zamanlanmış donanım envanteri çevrimi sırasında bu klasördeki NODMıF dosyalarından bilgi toplar.  
+
+### <a name="create-idmif-files"></a><a name="BKMK_IDMIF"></a>IDMıF dosyaları oluşturma
+
+IDMıF dosyaları, normalde Configuration Manager tarafından envantere alınmayan ve belirli bir istemci cihazı ile ilişkili olmayan varlıklar hakkında Configuration Manager veritabanına bilgi eklemek için kullanılabilir. Örneğin, projektörler, DVD oynatıcılar, fotokopi makineleri veya Configuration Manager istemcisine sahip olmayan diğer donanımlar hakkında bilgi toplamak için ıDMıFS kullanabilirsiniz. IDMıF dosyaları oluşturma hakkında daha fazla bilgi için Configuration Manager SDK belgelerine bakın.  
+
+Bir ıDMıF dosyası oluşturduktan sonra, bunu `%Windir%\CCM\Inventory\Idmifs` istemci bilgisayarlarındaki klasöründe saklayın. Configuration Manager, bir sonraki zamanlanmış donanım envanteri çevrimi sırasında bu dosyadan bilgi toplar. Dosyaları ekleyerek veya içeri aktararak dosyada yer alan bilgiler için yeni sınıflar bildirin.  
 
 > [!NOTE]
 > MIF dosyaları büyük miktarlarda veri içerebilir ve bu verilerin toplanması sitenizin performansını olumsuz etkileyebilir. MIF toplamayı yalnızca gerekli olduğunda etkinleştirin ve donanım envanteri ayarlarında **en büyük özel MIF dosyası boyutu (KB)** seçeneğini yapılandırın. Daha fazla bilgi için bkz. [Donanım envanterine giriş](introduction-to-hardware-inventory.md).

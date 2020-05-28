@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f32eaffe673324699e20fc7c579ea1ac9b38c479
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 337b494bdce24463c19dd22ae975af5e99d6d895
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076348"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905841"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Configuration Manager için Technical Preview 1511 ' deki yetenekler
 
@@ -34,7 +34,7 @@ WUfB aracılığıyla bağlanan bilgisayarlar için Configuration Manager uyumlu
 
 -   Windows 10 Desktop Pro veya Windows 10 Enterprise Edition Sürüm 1511 veya üzeri  
 
--   [Windows Update for Business](https://technet.microsoft.com/library/mt622730\(v=vs.85\).aspx) üzerinden yönetilecek bilgisayarlar.  
+-   [Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb) üzerinden yönetilecek bilgisayarlar.  
 
 ### <a name="try-it-out"></a>Deneyin!  
  Aşağıdaki görevi tamamlamayı deneyin ve nasıl çalıştığını bize bildirmek için bu konunun en üstündeki geri bildirim bilgilerini kullanın:  
@@ -67,7 +67,7 @@ Microsoft, Windows Server Updates Services (WSUS) için yeni bir Office 365 Masa
 
 4. Konsol içi izleme veya raporları kullanarak Office 365 güncelleştirmeleri için uyumluluğu doğrulayabilirsiniz.  
 
-   Ayrıntılı adımlar için bkz. [Configuration Manager Technical Preview Ile Office 365 istemci güncelleştirmelerini yönetme](https://technet.microsoft.com/library/mt628083.aspx).  
+   Ayrıntılı adımlar için bkz. [Configuration Manager Technical Preview Ile Office 365 istemci güncelleştirmelerini yönetme](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a>Yüksek oranda kullanılabilir veritabanları için SQL Server AlwaysOn desteği  
  Configuration Manager artık site veritabanını barındırmak için SQL Server AlwaysOn kullanılabilirlik grupları kullanmayı desteklemektedir.  Yeni bir site yüklediğinizde, kurulumu normal bir SQL Server örneği yerine kullanılabilirlik grubu kullanacak şekilde yönlendirebilirsiniz.  
@@ -110,7 +110,7 @@ Aşağıdaki görevleri tamamlamayı deneyin ve daha sonra bu konunun en üstün
  Önce kullanılabilirlik grubunu oluşturup yapılandırmak için aşağıdaki yordamları kullanın ve ardından kullanılabilirlik grubunu kullanan yeni bir Configuration Manager sitesini yüklemeniz gerekir.  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>SQL Server AlwaysOn kullanılabilirlik grubu oluşturmak için  
-[SQL Server kullanılabilirlik grubu oluşturma](https://technet.microsoft.com/library/ff878265\(v=sql.120\).aspx) işlemi SQL Server belge kitaplığında belgelenmiştir.  Kullanılabilirlik grubunu oluşturduğunuzda, Configuration Manager ile kullanım için aşağıdaki gereksinimlerin karşılandığından emin olun:  
+[SQL Server kullanılabilirlik grubu oluşturma](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) işlemi SQL Server belge kitaplığında belgelenmiştir.  Kullanılabilirlik grubunu oluşturduğunuzda, Configuration Manager ile kullanım için aşağıdaki gereksinimlerin karşılandığından emin olun:  
 
 -   En fazla üç üye:  
 
@@ -131,7 +131,7 @@ SQL Server kullanılabilirlik grubu kullanan bir site yüklemek için:
 
 1.  Configuration Manager Kurulum tarafından istendiğinde aşağıdakini değiştirin:  
 
-    -   **SQL Server adı**: kullanılabilirlik grubunu oluştururken yapılandırdığınız uç noktanın sanal adını girin. Sanal ad, ** &lt;endpointserver\>. fabrikam.com**gibi bir tam DNS adı olmalıdır.  
+    -   **SQL Server adı**: kullanılabilirlik grubunu oluştururken yapılandırdığınız uç noktanın sanal adını girin. Sanal ad, ** &lt; endpointserver \> . fabrikam.com**gibi bir tam DNS adı olmalıdır.  
 
     -   **Örnek**: Bu değer boş kalmalıdır. Bu yapılandırmada örnek yok.  
 
@@ -165,7 +165,7 @@ Aşağıdaki görevi tamamlamayı deneyin ve nasıl çalıştığını bize bild
 
 #### <a name="to-create-a-collection-for-a-server-cluster"></a>Sunucu kümesine yönelik bir koleksiyon oluşturmak için  
 
-1.  Kümedeki sunucuları içeren [bir cihaz koleksiyonu oluşturun](https://technet.microsoft.com/library/gg712295.aspx) .  
+1.  Kümedeki sunucuları içeren [bir cihaz koleksiyonu oluşturun](../clients/manage/collections/create-collections.md) .  
 
 2.  **Varlıklar ve uyum** çalışma alanında, **Cihaz Koleksiyonları**' na tıklayın, kümedeki sunucuları içeren koleksiyona sağ tıklayın ve ardından **Özellikler**' e tıklayın.  
 
@@ -200,6 +200,6 @@ Aşağıdaki görevi tamamlamayı deneyin ve nasıl çalıştığını bize bild
 
 #### <a name="to-deploy-software-updates-to-the-server-cluster"></a>Yazılım güncelleştirmelerini sunucu kümesine dağıtmak için  
 
-1.  [Yazılım güncelleştirmelerini](https://technet.microsoft.com/library/gg712304.aspx) sunucu kümesi koleksiyonuna dağıtın.  
+1.  [Yazılım güncelleştirmelerini](../../sum/deploy-use/deploy-software-updates.md) sunucu kümesi koleksiyonuna dağıtın.  
 
-2.  [Yazılım güncelleştirme dağıtımını izleyin](https://technet.microsoft.com/library/gg712304.aspx).  
+2.  [Yazılım güncelleştirme dağıtımını izleyin](../../sum/deploy-use/monitor-software-updates.md).  

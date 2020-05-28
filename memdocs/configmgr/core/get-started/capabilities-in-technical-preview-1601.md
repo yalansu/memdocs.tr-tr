@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2ae184400a3de0d7ab27fffc1ce1e6287593b1ae
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ed3f53b6e2e9557def20fc459dfcf4641b0e396d
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076314"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905834"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Configuration Manager için Technical Preview 1601 ' deki yetenekler
 
@@ -83,7 +83,7 @@ Bu makalede, sürüm 1601 Configuration Manager için Technical Preview 'da kull
 
     -   **Belirli bir gün sayısından daha eski bir son tarihe sahip tüm gerekli güncelleştirmeler:** Bu kural, kullanıcının cihazında, sizin belirttiğiniz son tarih ve yetkisiz kullanım süresi içinde gerekli tüm güncelleştirmelerin ( **gerekli otomatik güncelleştirmeler** kuralında belirtilir) olup olmadığını denetler ve bekleyen gerekli güncelleştirmeleri otomatik olarak yükler.  
 
-    -   **BitLocker Sürücü Şifrelemesi gerektir:** Bu, cihazdaki birincil sürücünün (ör. C:\\) BitLocker şifreli olup olmadığını görmek için bir denetledir. Birincil cihazda BitLocker şifresi etkin değilse, e-posta ve SharePoint Online hizmetlerine erişim engellenir.  
+    -   **BitLocker Sürücü Şifrelemesi gerektir:** Bu, cihazdaki birincil sürücünün (ör. C:) BitLocker şifreli olup olmadığını görmek için bir denetledir \\ . Birincil cihazda BitLocker şifresi etkin değilse, e-posta ve SharePoint Online hizmetlerine erişim engellenir.  
 
     -   **Kötü amaçlı yazılımdan koruma gerektir:** Bu, kötü amaçlı yazılımdan koruma yazılımının (yalnızca System Center Endpoint Protection veya Windows Defender) etkinleştirilip etkinleştirilmediğini ve çalıştığını görmek için bir denetdir.  
          Etkin değilse, e-posta ve SharePoint hizmetlerine erişim engellenir.  
@@ -136,11 +136,11 @@ Technical Preview 1601 ' den başlayarak, bir istemcinin Configuration Manager k
 |![istemciler için çevrimdışı durum simgesi](media/offline-status-icon.png)|İstemci çevrimdışı.|  
 |![istemciler için bilinmeyen durum simgesi](media/unknown-status-icon.png)|İstemci durumu bilinmiyor.|  
 
-### <a name="prerequisites"></a>Önkoşullar  
+### <a name="prerequisites"></a>Ön koşullar  
  İstemci çevrimiçi durumunun önkoşulları yok. Teknik Önizleme 1601 Configuration Manager yüklendiği anda kullanmaya başlayabilirsiniz.  
 
 ### <a name="limitations"></a>Sınırlamalar  
- İstemci çevrimiçi durumu yalnızca Configuration Manager istemcisinin yüklendiği Windows bilgisayarlarda kullanılabilir. İstemci çevrimiçi durumu, Mac bilgisayarlar, Linux veya UNIX bilgisayar ya da\-şirket Içi mobil cihaz yönetimi ile yönetilen cihazlar için desteklenmez.  
+ İstemci çevrimiçi durumu yalnızca Configuration Manager istemcisinin yüklendiği Windows bilgisayarlarda kullanılabilir. İstemci çevrimiçi durumu, Mac bilgisayarlar, Linux veya UNIX bilgisayar ya da \- Şirket Içi mobil cihaz yönetimi ile yönetilen cihazlar için desteklenmez.  
 
 ### <a name="to-view-client-online-status"></a>İstemci çevrimiçi durumunu görüntülemek için  
 
@@ -164,7 +164,6 @@ Technical Preview 1601 ' den başlayarak, bir istemcinin Configuration Manager k
 
  Configuration Manager, lisans bilgilerini uygulama mağazasından içeri aktararak ve kaç lisansın kullanıldığını izleyerek böyle bir program aracılığıyla satın aldığınız uygulamaları yönetmenize yardımcı olur.  
 
- Ayrıntılar için bkz. [Configuration Manager ile toplu satın alma programı aracılığıyla satın aldığınız uygulamaları yönetme](https://technet.microsoft.com/library/mt627954.aspx).  
 
 ### <a name="ios---app-configuration-for-applicationsbr-hybrid"></a>iOS-Uygulamalar için uygulama yapılandırması<br />Hibrit  
  Bazı iOS uygulamaları, uygulamanın bağlanması gereken sunucu veya veritabanı gibi ayarları önceden yapılandırmayı destekler. Configuration Manager artık, uygulamanın bu bilgileri bilmeleri gerekmeden uygulamayı hemen kullanmasını sağlayan cihaza uygulama yapılandırma ilkelerinin dağıtılmasını desteklemektedir. Geliştiricilerin uygulamalarında bu işlevselliği etkinleştirmesi gerekir.  

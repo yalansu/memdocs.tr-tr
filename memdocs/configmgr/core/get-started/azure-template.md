@@ -10,16 +10,16 @@ ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd2a8b3bfb7c4b8af277616c7eaed329bc143bb7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 23cc7d0c642637a310f53280bafed6a2a28d2834
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711605"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406683"
 ---
 # <a name="create-a-configuration-manager-lab-in-azure"></a>Azure 'da Configuration Manager Laboratuvarı oluşturma
 
-*Uygulama hedefi: Configuration Manager (Technical Preview dalı)*
+*Uygulama hedefi: Configuration Manager (güncel dal, Technical Preview dalı)*
 
 <!--3556017-->
 
@@ -32,15 +32,15 @@ Daha fazla bilgi için bkz. [Azure 'da Configuration Manager](../understand/conf
 
 
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Bu işlem, aşağıdaki nesneleri oluşturabileceğiniz bir Azure aboneliği gerektirir: 
-- Etki alanı contoller ve MP & DP rolleri için iki Standard_B2s sanal makine.
+- Etki alanı denetleyicisi, yönetim noktası ve dağıtım noktası için iki Standard_B2s sanal makine.
 - Birincil site sunucusu ve SQL veritabanı sunucusu için bir Standard_B2ms sanal makine.
 - Standard_LRS depolama hesabı
 
 > [!Tip]  
-> Olası maliyetleri belirlemede yardımcı olması için bkz. [Azure Fiyatlandırma hesaplayıcısı](https://azure.microsoft.com/pricing/calculator/) .  
+> Olası maliyetleri belirlemede yardımcı olması için bkz. [Azure Fiyatlandırma hesaplayıcısı](https://azure.microsoft.com/pricing/calculator/).  
 
 
 
@@ -71,9 +71,9 @@ Bu işlem, aşağıdaki nesneleri oluşturabileceğiniz bir Azure aboneliği ger
     > [!Important]  
     > Azure için aşağıdaki ayarlar gereklidir. Varsayılan değerleri kullanın. Bu değerleri değiştirmeyin.  
     > 
-    > - yapıt konumu: Bu şablon için betiklerin konumu ** \_** <!-- https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sccm-technicalpreview/ -->  
+    > - ** \_ yapıt konumu**: Bu şablon için betiklerin konumu <!-- https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sccm-technicalpreview/ -->  
     >
-    > - yapıt konumu SAS belirteci: yapıt konumuna erişmek için sastoken gereklidir ** \_**  
+    > - ** \_ yapıt konumu SAS belirteci**: yapıt konumuna erişmek için sastoken gereklidir  
     > 
     > - **Konum**: tüm kaynakların konumu
 
@@ -84,9 +84,9 @@ Azure, ayarları doğrular ve ardından dağıtıma başlar. Azure portal dağı
 > [!NOTE]
 > İşlem, 2-4 saat sürebilir. Azure portal başarılı dağıtımı gösterdiği zaman bile, yapılandırma betikleri çalışmaya devam eder. İşlem sırasında VM 'Leri yeniden başlatmayın.
 
-Yapılandırma betiklerinin durumunu görmek için `<prefix>PS1` sunucuya bağlanın ve şu dosyayı görüntüleyin:. `%windir%\TEMP\ProvisionScript\PS1.json` Tüm adımları tamamlandı olarak gösteriyorsa, işlem yapılır.
+Yapılandırma betiklerinin durumunu görmek için `<prefix>PS1` sunucuya bağlanın ve şu dosyayı görüntüleyin: `%windir%\TEMP\ProvisionScript\PS1.json` . Tüm adımları tamamlandı olarak gösteriyorsa, işlem yapılır.
 
-VM 'lere bağlanmak için öncelikle her bir VM 'nin genel IP adreslerini Azure portal alın. SANAL makineye bağlandığınızda, etki alanı adı olur `contoso.com`. Dağıtım şablonunda belirttiğiniz kimlik bilgilerini kullanın. Daha fazla bilgi için bkz. [Windows çalıştıran bir Azure sanal makinesine bağlanma ve oturum](https://docs.microsoft.com/azure/virtual-machines/windows/connect-logon)açma.
+VM 'lere bağlanmak için öncelikle her bir VM 'nin genel IP adreslerini Azure portal alın. SANAL makineye bağlandığınızda, etki alanı adı olur `contoso.com` . Dağıtım şablonunda belirttiğiniz kimlik bilgilerini kullanın. Daha fazla bilgi için bkz. [Windows çalıştıran bir Azure sanal makinesine bağlanma ve oturum](https://docs.microsoft.com/azure/virtual-machines/windows/connect-logon)açma.
 
 
 
@@ -96,13 +96,13 @@ VM 'lere bağlanmak için öncelikle her bir VM 'nin genel IP adreslerini Azure 
 - 150 GB disk alanı
 - Hem ortak hem de özel IP adresi. Genel IP 'Ler, yalnızca TCP bağlantı noktası 3389 üzerinde Uzak Masaüstü bağlantılarına izin veren bir ağ güvenlik grubudur. 
 
-Dağıtım şablonunda belirttiğiniz ön ek VM adı önekidir. Örneğin, ön ek olarak "contoso" değerini ayarlarsanız, etki alanı denetleyicisi makine adı olur `contosoDC`.
+Dağıtım şablonunda belirttiğiniz ön ek VM adı önekidir. Örneğin, ön ek olarak "contoso" değerini ayarlarsanız, etki alanı denetleyicisi makine adı olur `contosoDC` .
 
 
 ### `<prefix>DC01`
 
 - Active Directory etki alanı denetleyicisi
-- İki CPU ve 4 GB bellek içeren Standard_B2s
+- İki işlemciyi ve 4 GB belleği olan Standard_B2s
 - Windows Server 2019 Datacenter Edition
 
 #### <a name="windows-features-and-roles"></a>Windows özellikleri ve rolleri
@@ -113,7 +113,7 @@ Dağıtım şablonunda belirttiğiniz ön ek VM adı önekidir. Örneğin, ön e
 
 ### `<prefix>PS01`
 
-- İki CPU ve 8 GB bellek içeren Standard_B2ms
+- İki işlemciyi ve 8 GB belleği olan Standard_B2ms
 - Windows Server 2016 Datacenter Edition
 - SQL Server
 - Windows PE ile Windows 10 ADK 
@@ -127,7 +127,7 @@ Dağıtım şablonunda belirttiğiniz ön ek VM adı önekidir. Örneğin, ön e
 
 ### `<prefix>DPMP01`
 
-- İki CPU ve 4 GB bellek içeren Standard_B2s
+- İki işlemciyi ve 4 GB belleği olan Standard_B2s
 - Windows Server 2019 Datacenter Edition
 - Dağıtım noktası
 - Yönetim noktası

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d06bda9d07a53e022de27afc68f40f9ce706867f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: fb13844dd05049b9186909884aa0c457a8cfacd9
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076161"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428420"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Configuration Manager için Technical Preview 1703 ' deki yetenekler
 
@@ -35,13 +35,13 @@ Artık, lisanslanan uygulamaları cihazlara ve kullanıcılara dağıtabilirsini
 |-|-|-|-|
 |Configuration Manager sürümü|Uygulama, cihaz lisansını destekliyor mu?|Dağıtım koleksiyonu türü|Talep edilen lisans|
 |1702 öncesi|Yes|Kullanıcı|Kullanıcı Lisansı|
-|1702 öncesi|Hayır|Kullanıcı|Kullanıcı Lisansı|
+|1702 öncesi|No|Kullanıcı|Kullanıcı Lisansı|
 |1702 öncesi|Yes|Cihaz|Kullanıcı Lisansı|
-|1702 öncesi|Hayır|Cihaz|Kullanıcı Lisansı|
+|1702 öncesi|No|Cihaz|Kullanıcı Lisansı|
 |1702 ve üzeri|Yes|Kullanıcı|Kullanıcı Lisansı|
-|1702 ve üzeri|Hayır|Kullanıcı|Kullanıcı Lisansı|
+|1702 ve üzeri|No|Kullanıcı|Kullanıcı Lisansı|
 |1702 ve üzeri|Yes|Cihaz|Cihaz lisansı|
-|1702 ve üzeri|Hayır|Cihaz|Kullanıcı Lisansı|
+|1702 ve üzeri|No|Cihaz|Kullanıcı Lisansı|
 
 
 ## <a name="direct-links-to-applications-in-software-center"></a>Yazılım Merkezi 'nde uygulamaların doğrudan bağlantıları
@@ -97,7 +97,7 @@ Azure Active Directory, Configuration Manager bir Web uygulaması veya Web API '
 
 ### <a name="use-the-wizard-to-configure-the-wsfb-cloud-service"></a>WSfB bulut hizmetini yapılandırmak için Sihirbazı kullanın
 
-1. Konsolunda **Yönetim** > **genel bakış** > **Cloud Services yönetim** > **Azure** > **Azure hizmetleri**' ne gidin ve Azure Hizmetleri **Sihirbazı**' nı başlatmak için **Azure hizmetlerini yapılandır** ' ı seçin.
+1. Konsolunda **Yönetim**  >  **genel bakış**  >  **Cloud Services yönetim**  >  **Azure**  >  **Azure hizmetleri**' ne gidin ve Azure Hizmetleri **Sihirbazı**' nı başlatmak için **Azure hizmetlerini yapılandır** ' ı seçin.
 
 2. **Azure hizmetleri** sayfasında, yapılandırmak istediğiniz hizmeti seçin ve ardından **İleri**' ye tıklayın. Bu önizleme ile yalnızca WSfB yapılandırılabilir.
 
@@ -127,10 +127,10 @@ Artık, Iş için Windows Mağazası uygulamalarını eşitlemeniz, oluşturup d
 ### <a name="modify-a-cloud-service-configuration"></a>Bulut hizmeti yapılandırmasını değiştirme
 Yapılandırmayı değiştirmek için bir bulut hizmetinin özelliklerini görüntüleyebilir ve düzenleyebilirsiniz.
 
-Konsolunda **Yönetim** > **genel bakış** > **Cloud Services yönetim** > **Azure** > **Azure hizmetleri**' ne gidin ve ardından **Azure hizmetlerini yapılandır**' ı seçin, bir bulut hizmeti seçin ve ardından **Özellikler**' i seçin.
+Konsolunda **Yönetim**  >  **genel bakış**  >  **Cloud Services yönetim**  >  **Azure**  >  **Azure hizmetleri**' ne gidin ve ardından **Azure hizmetlerini yapılandır**' ı seçin, bir bulut hizmeti seçin ve ardından **Özellikler**' i seçin.
 
 ## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>Yerinde yükseltme sırasında BIOS 'tan UEFı 'ye dönüştürme
-Windows 10 Creators Update, işlemi UEFı etkin donanımlar için sabit diski yeniden bölümlemek ve dönüştürme aracını Windows 10 yerinde yükseltme işlemine tümleştiren bir basit dönüştürme aracı sunuyor. Bu aracı işletim sistemi yükseltme görev diziniz ve bellenimi BIOS 'tan UEFı 'ye dönüştüren OEM aracı ile birleştirdiğinizde, Windows 10 Creators Update 'e yerinde yükseltme sırasında bilgisayarlarınızı BIOS 'tan UEFı 'e dönüştürebilirsiniz. Ayrıntılar için bkz. [BIOS 'TAN UEFI dönüştürmeyi yönetmeye yönelik görev dizisi adımları](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+Windows 10 Creators Update, işlemi UEFı etkin donanımlar için sabit diski yeniden bölümlemek ve dönüştürme aracını Windows 10 yerinde yükseltme işlemine tümleştiren bir basit dönüştürme aracı sunuyor. Bu aracı işletim sistemi yükseltme görev diziniz ve bellenimi BIOS 'tan UEFı 'ye dönüştüren OEM aracı ile birleştirdiğinizde, Windows 10 Creators Update 'e yerinde yükseltme sırasında bilgisayarlarınızı BIOS 'tan UEFı 'e dönüştürebilirsiniz. Ayrıntılar için bkz. [BIOS 'TAN UEFI dönüştürmeyi yönetmeye yönelik görev dizisi adımları](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ## <a name="collapsible-task-sequence-groups"></a>Daraltılabilir görev dizisi grupları
 Bu sürüm, görev dizisi gruplarını genişletme ve daraltma özelliğini tanıtır. Tek tek grupları genişletebilir veya daraltabilir veya aynı anda tüm grupları genişletebilir veya daraltabilirsiniz.
@@ -139,11 +139,11 @@ Bu sürüm, görev dizisi gruplarını genişletme ve daraltma özelliğini tan�
 ## <a name="client-settings-to-configure-windows-analytics-for-upgrade-readiness"></a>Yükseltme Hazırlığı için Windows analizlerini yapılandırmak için istemci ayarları
 Bu sürümden itibaren, Configuration Manager Yükseltme Hazırlığı gibi Windows Analytics çözümlerini kullanmak için gereken Windows Tanılama verilerinin yapılandırılmasını basitleştirmek üzere cihaz istemci ayarlarını kullanabilirsiniz. Configuration Manager, Windows Analytics 'ten, istemci bilgisayarlarınız tarafından bildirilen Windows Tanılama verilerine dayalı olarak ortamınızın geçerli durumu hakkında değerli Öngörüler sağlayabilen verileri alabilir. Windows Tanılama verileri, istemci bilgisayarlar tarafından Windows Tanılama hizmetine bildirilir ve ardından ilgili veriler daha sonra kuruluşunuzun OMS çalışma alanlarından birinde barındırılan Windows Analytics çözümlerine aktarılır. Yükseltme Hazırlığı, yönetilen cihazlarınız için Windows yükseltmeleriyle ilgili kararları önceliklendirmenize yardımcı olabilecek bir Windows Analytics çözümüdür.
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 - Sitenizi Yükseltme Hazırlığı bulut hizmetini kullanacak şekilde yapılandırmış olmanız gerekir.
 
 ### <a name="configure-windows-analytics-client-settings"></a>Windows Analytics istemci ayarlarını yapılandırma
-Windows Analytics 'i yapılandırmak için, Configuration Manager konsolunda **Yönetim** > **istemci ayarları**' na gidin, **özel cihaz istemci ayarları oluştur** ' a çift tıklayın ve ardından **Windows Analytics**' i işaretleyin.  
+Windows Analytics 'i yapılandırmak için, Configuration Manager konsolunda **Yönetim**  >  **istemci ayarları**' na gidin, **özel cihaz istemci ayarları oluştur** ' a çift tıklayın ve ardından **Windows Analytics**' i işaretleyin.  
 
 Ardından, **Windows Analytics** ayarları sekmesine gitmeden sonra aşağıdakileri yapılandırın:
 - **Ticari KIMLIK**  

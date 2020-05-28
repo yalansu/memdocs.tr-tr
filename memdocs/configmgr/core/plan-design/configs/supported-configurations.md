@@ -10,12 +10,12 @@ ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 09618acc1c0950c3eaae79cca59fcf71dc7ef61e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 66770ea14c3ae53bad8e6df61b54c7c5e2d2aaa0
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709575"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904568"
 ---
 # <a name="supported-configurations-for-configuration-manager"></a>Configuration Manager için desteklenen yapılandırmalar
 
@@ -27,12 +27,12 @@ Bu ve aşağıdaki konularda yer alan bilgiler temel yapılandırma, gereksiniml
 
 Bir Configuration Manager özelliği veya özelliği daha belirli yapılandırmalar gerektirdiğinde, bu bilgiler özelliğe özgü belgelere dahil edilir ve daha genel yapılandırma ayrıntılarına ek olarak sunulur.  
 
- Aşağıdaki konularda açıklanan ürün ve teknolojiler Configuration Manager tarafından desteklenir. Ancak, bu içeriğe dahil edilmesi, ürünün bireysel destek yaşam döngüsünün ötesinde herhangi bir ürünün destek uzantısını göstermez. Destek yaşam döngüsünün ötesinde ürünlerin, [genişletilmiş güvenlik güncelleştirmeleri (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) programı kapsamında yer alan ürünler dahil olmak üzere Configuration Manager ile kullanılması desteklenmez. Microsoft Destek Yaşam Döngüleri hakkında daha fazla bilgi için [Microsoft Destek Yaşam Döngüleri](https://go.microsoft.com/fwlink/p/?LinkId=208270) web sitesini ziyaret edin. Configuration Manager 'de genişletilmiş güvenlik güncelleştirmeleri hakkında daha fazla bilgi için, bkz. [istemciler ve cihazlar Için desteklenen işletim sistemi sürümleri Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
+ Aşağıdaki konularda açıklanan ürün ve teknolojiler Configuration Manager tarafından desteklenir. Ancak, bu içeriğe dahil edilmesi, ürünün bireysel destek yaşam döngüsünün ötesinde herhangi bir ürünün destek uzantısını göstermez. Destek yaşam döngüsünün ötesinde ürünlerin, [genişletilmiş güvenlik güncelleştirmeleri (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) programı kapsamında yer alan ürünler dahil olmak üzere Configuration Manager ile kullanılması desteklenmez. Microsoft Destek Yaşam Döngüleri hakkında daha fazla bilgi için [Microsoft Destek Yaşam Döngüleri](https://support.microsoft.com/lifecycle) web sitesini ziyaret edin. Configuration Manager 'de genişletilmiş güvenlik güncelleştirmeleri hakkında daha fazla bilgi için, bkz. [istemciler ve cihazlar Için desteklenen işletim sistemi sürümleri Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
 
 > [!NOTE]  
->  Microsoft destek yaşam döngüsü ilkesi hakkında daha fazla bilgi için, [Microsoft desteği yaşam döngüsü ILKESI SSS](https://go.microsoft.com/fwlink/p/?LinkId=31976)adresindeki Microsoft desteği yaşam döngüsü destek ilkesi SSS Web sitesine gidin.  
+>  Microsoft destek yaşam döngüsü ilkesi hakkında daha fazla bilgi için, [Microsoft desteği yaşam döngüsü ILKESI SSS](https://support.microsoft.com/lifecycle)adresindeki Microsoft desteği yaşam döngüsü destek ilkesi SSS Web sitesine gidin.  
 
- Ayrıca, aşağıdaki konularda listelenmeyen ürünler ve ürün sürümleri, [Enterprise Mobility and Security bloglarında](https://blogs.technet.microsoft.com/enterprisemobility/)duyurulmadığı müddetçe Configuration Manager desteklenmez.  Her zaman, bu blogdaki içerik bu belge gövdesinde bir güncelleştirmeden önce gelir.
+ Ayrıca, aşağıdaki konularda listelenmeyen ürünler ve ürün sürümleri, [Enterprise Mobility and Security bloglarında](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity)duyurulmadığı müddetçe Configuration Manager desteklenmez.  Her zaman, bu blogdaki içerik bu belge gövdesinde bir güncelleştirmeden önce gelir.
 
 
 -  [Boyut ve ölçek sayıları](../../../core/plan-design/configs/size-and-scale-numbers.md)  

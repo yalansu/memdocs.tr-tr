@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 04981e944b838f89af2383678c94e620aaefd7f0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a52b70b0a753036c506e5d515cbac048d6771295
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719326"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879049"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1910 ' deki yenilikler
 
@@ -46,7 +46,7 @@ Aşağıdaki Microsoft yönetim çözümleri artık Microsoft Endpoint Manager m
 - [Intune](https://docs.microsoft.com/intune)
 - [Desktop Analytics](../../../desktop-analytics/overview.md)
 - [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
-- [Cihaz yönetimi yönetici konsolundaki](https://go.microsoft.com/fwlink/?linkid=2109094) diğer özellikler
+- [Cihaz yönetimi yönetici konsolundaki](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760) diğer özellikler
 
 Daha fazla bilgi için, Microsoft Kurumsal Başkan Yardımcısı Microsoft 365 atacan Anderson 'tan aşağıdaki gönderilere bakın:
 
@@ -123,7 +123,7 @@ Configuration Manager dağıtım noktalarınız üzerinde Microsoft bağlı önb
 Daha fazla bilgi için bkz. [Microsoft bağlı önbelleği Configuration Manager](../hierarchy/microsoft-connected-cache.md#bkmk_intune).
 
 > [!NOTE]
-> Geliştirme aşamasında olan Windows Server 'da yüklü olan, geçerli dal sürümü 1906 dahil [dağıtım iyileştirmesi olan ağ önbelleği](../hierarchy/microsoft-connected-cache.md) (doınc) Configuration Manager. Geçerli dal sürüm 1910 ' den başlayarak, bu özellik artık Microsoft bağlı önbelleği olarak adlandırılmaktadır.
+> Geçerli dal sürümü 1906, Windows Server 'da yüklü olan ve hala geliştirmede bulunan bir uygulama olan [ağ üzerinde dağıtım iyileştirmesi](../hierarchy/microsoft-connected-cache.md)dahil Configuration Manager. Geçerli dal sürüm 1910 ' den başlayarak, bu özellik artık Microsoft bağlı önbelleği olarak adlandırılmaktadır.
 >
 > Bağlı önbelleği bir Configuration Manager dağıtım noktasına yüklediğinizde, teslim Iyileştirme hizmeti trafiğini yerel kaynaklara yükler. Bağlı önbellek, içeriği bayt aralığı düzeyinde verimli bir şekilde önbelleğe alarak bu davranışı yapar.
 

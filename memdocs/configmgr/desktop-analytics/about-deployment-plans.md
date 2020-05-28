@@ -2,7 +2,7 @@
 title: Masaüstü analizinden dağıtım planları
 titleSuffix: Configuration Manager
 description: Masaüstü analizinden dağıtım planları hakkında bilgi edinin.
-ms.date: 01/14/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: 0f369f3a-f251-4f34-9302-1bdc6ea5d139
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c14eb9127b096f7fc4e4680735867913ea877f54
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: ccc325ac4b8e02142a1442862ad661a77b0561f2
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722539"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268496"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Masaüstü analizinden dağıtım planları hakkında
 
@@ -47,8 +48,6 @@ Varsayılan olarak, masaüstü Analizi dağıtım planı verilerini günlük ola
 
 Masaüstü analizlerini Configuration Manager 'e bağladıktan sonra dağıtım planlarındaki koleksiyonlarınızı seçin. Bu tümleştirme daha sonra Windows 'u masaüstü Analizi verilerine göre bir koleksiyona dağıtmanıza olanak tanır.
 
-
-
 ## <a name="readiness-rules"></a>Hazırlık kuralları
 
 Aşağıdaki hazırlık kuralları dağıtım planlarında kullanılabilir:
@@ -56,7 +55,6 @@ Aşağıdaki hazırlık kuralları dağıtım planlarında kullanılabilir:
 - Cihazlarınızın Windows Update otomatik olarak sürücü alıp almamayacağı. Cihazlar Windows Update sürücü güncelleştirmelerini alıyorsa, hazırlık değerlendirmesinin bir parçası olarak tanımlanan tüm sürücü sorunları otomatik olarak **hazır**olarak işaretlenir.  
 
 - Windows uygulamalarınız için düşük yüklemesi sayısı eşiği. Bir uygulama bu eşikten daha yüksek bir bilgisayar yüzdesine yüklenirse, dağıtım planı uygulamayı en **önemli şekilde işaretler**. Bu etiket, pilot aşamada uygulamanın ne kadar önemli olduğuna karar vermenize olanak sağlar.  
-
 
 ## <a name="plan-assets"></a>Varlıkları planla
 
@@ -76,14 +74,14 @@ Dağıtım planındaki her bir cihaz için **Windows yükseltme kararına** bak�
 - Sistemdeki bir önyükleme kritik bileşeni engellenmiş bir sürücüye sahip
 - Belirli bir marka ve model yükseltilemiyor
 - Aşağıdaki özniteliklere sahip bir sürücü bloğuna sahip bir görüntüleme sınıfı bileşeni vardır:
-    - Geçersiz kılmazsınız
-    - Yeni işletim sistemi sürümünde sürücü yok
-    - Zaten açık Windows Update
+  - Geçersiz kılmazsınız
+  - Yeni işletim sistemi sürümünde sürücü yok
+  - Zaten açık Windows Update
 - Sistemde yükseltmeyi engelleyen başka bir eklenti ve yürütme bileşeni var
 - XP ile öykünülmüş bir sürücü kullanan bir kablosuz bileşen var
 - Etkin bağlantısı olan bir ağ bileşeni, sürücüsünü kaybeder. Diğer bir deyişle, yükseltmeden sonra ağ bağlantısı kaybolabilir.
 
-**Yeniden yüklemeye** yönelik Windows yükseltme kararı, yükseltmenin yerinde yükseltmenin aksine yeniden yükleme gerektireceğini gösterir. 
+**Yeniden yüklemeye** yönelik Windows yükseltme kararı, yükseltmenin yerinde yükseltmenin aksine yeniden yükleme gerektireceğini gösterir.
 
 **Engellenen** bir Windows yükseltme kararı aşağıdaki nedenlerden kaynaklanıyor olabilir:
 
@@ -102,11 +100,13 @@ Masaüstü analizinin, dağıtım planının hazırlık kuralları için düşü
    > [!Tip]
    > "Önemli değil" uygulama kategorisi hakkında daha fazla bilgi için bkz. [sistem ve Mağaza uygulamalarının otomatik yükseltme kararı](about-assets.md#bkmk_plan-autoapp). <!-- 3587232 -->
 
+**Uygulama sürümleri ayrıntıları** ayarı varsayılan olarak kapalıdır, bu nedenle bu sekme, tüm uygulama sürümlerini aynı ad ve yayımcıya birleştirir.<!-- 5542186 --> Varsayılan davranış, gördüğünüz toplam uygulama sayısını azaltmaya yardımcı olur ve bu da uygulamalara açıklama ekleme çabalarınızı azaltmaya yardımcı olur. Önemli **uygulamalar** kutucuğunda uygulama sayısı da bu ayarı yansıtır. Örneğin, Microsoft Edge 'in yüzlerce örneğini listelemek yerine, tüm sürümler için bir örnek vardır. Tüm sürümler için kararları bir kez daha yapabilirsiniz. Bir uygulamanın belirli sürümleri hakkında kararlar almanız gerekiyorsa, bu ayarı açın. Bu ayarı, genel varlıklar düzeyinde çalışırken de yapılandırabilirsiniz. Daha fazla bilgi için bkz. [varlıklar-uygulamalar hakkında](about-assets.md#apps).
+
+**Uygulama sürümleri ayrıntıları** ayarı kapalıyken, uygulama ayrıntıları bölmesi, birleştirilagösterdiği uygulama sürümlerinin ve dillerin sayısını gösterir. Uygulama ayrıntılarına değişiklikler kaydederseniz, tüm sürümler için geçerlidir. Örneğin, **yükseltme kararı** veya **önem derecesi**' ni ayarlayın. Bazı değerlerde "çoklu" görüntülenir, bu da tüm sürümlerde tutarlı bir değer olmadığı anlamına gelir. Hizmet, her sürüm için uyumluluk risk değerlendirmesi de yapar. Belirli bir uygulama sürümünün uyumluluk risk değerlendirmesini görmek için **uygulama sürümleri ayrıntılarını** etkinleştirin.
 
 ### <a name="drivers"></a>Sürücüler
 
 Bu dağıtım planına dahil edilen sürücü listesine bakın. **Yükseltme kararlarını**ayarlayın, Microsoft 'un önerisini inceleyin ve uyumluluk risk faktörleri ' ne bakın.
-
 
 ## <a name="importance"></a>Önem
 
@@ -116,18 +116,13 @@ Bir uygulama, hedeflenen cihazların %2 ' den daha düşük bir sürümüne yük
 
 Uygulamalar için **kritik**, **önemli**veya **önemli**bir önem derecesi seçin. Bir tane kritik veya önemli olarak işaretlerseniz, masaüstü analizine bu uygulamayla birlikte pilot dağıtımı dahildir. Hizmet, kritik bir uygulamanın pilot daha fazla örneğine dahildir. Bir uygulamayı önemli değil olarak işaretlerseniz, masaüstü Analizi otomatik olarak **yükseltme Için hazırlık**yapar.
 
-
-
 ## <a name="pilot-devices"></a>Pilot cihazlar
 
 Masaüstü analizi, önemli bilgilerinizi küresel pilot ayarlarıyla birleştirir. Daha sonra, hangi cihazların pilot dağıtım kapsamında olması gerektiğine yönelik bir öneri oluşturur. Önerilen pilot dağıtım, farklı donanım yapılandırmalarına sahip olan cihazları ve tüm kritik ve önemli uygulamaların bir veya daha fazla örneğini içerir. Bir uygulama kritik olarak işaretlenmişse, hizmet pilot ortamında bu uygulamayla daha fazla cihaz önerir.
 
-
-
 ## <a name="deployment-plans-in-configuration-manager"></a>Configuration Manager 'de dağıtım planları
 
 Bir dağıtım planı oluşturduktan sonra, ürünleri dağıtmak için Configuration Manager kullanın. Dağıtım başladıktan sonra, masaüstü Analizi plandaki ayarları temel alarak dağıtımı izler.
-
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

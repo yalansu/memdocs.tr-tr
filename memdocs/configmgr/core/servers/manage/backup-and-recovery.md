@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 824eaeb939249e1bcc2ed21d5815a0a72dc54797
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 46d2af2d89e41e931add0f77931b442b68835235
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717870"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906474"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Bir Configuration Manager sitesinin yedeğini alma
 
@@ -71,7 +71,7 @@ Yedekleme işlemini basitleştirmek için, bir **AfterBackup. bat** dosyası olu
 
 Bir merkezi yönetim sitesini ve birincil siteyi yedekleyebilirsiniz. İkincil siteler veya site sistem sunucuları yedekleme görevlerine sahip değildir.
 
-Configuration Manager yedekleme hizmeti çalıştığında, yedekleme denetim dosyasında tanımlanan talimatları izler: `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box\Smsbkup.ctl`. Yedekleme hizmetinin davranışını değiştirmek için yedekleme kontrol dosyasını değiştirebilirsiniz.  
+Configuration Manager yedekleme hizmeti çalıştığında, yedekleme denetim dosyasında tanımlanan talimatları izler: `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box\Smsbkup.ctl` . Yedekleme hizmetinin davranışını değiştirmek için yedekleme kontrol dosyasını değiştirebilirsiniz.  
 > [!NOTE]
 > **Smsdk. ctl** ' nin değişiklikleri, SITE sunucusundaki bir hizmetin yeniden başlatıldıktan sonra uygulanacak SMS_SITE_VSS_WRITER.
 
@@ -86,7 +86,7 @@ Site yedekleme durum bilgileri **Smsbkup.log** dosyasına yazılır. Bu dosya, S
 
 4.  **Site Sunucusunu Yedekle** görevini seçin ve **Düzenle**' ye tıklayın.  
 
-5.  **Bu görevi etkinleştirme**seçeneğini belirleyin. Yedekleme hedefini belirtmek için **yolları ayarla** ' ya tıklayın. Aşağıdaki seçenekleriniz vardır:  
+5.  **Bu görevi etkinleştirme**seçeneğini belirleyin. Yedekleme hedefini belirtmek için **yolları ayarla** ' ya tıklayın. Aşağıdaki seçenekler mevcuttur:  
 
     > [!IMPORTANT]  
     >  Yedekleme dosyalarında değişiklik yapılmasını önlemeye yardımcı olmak için dosyaları güvenli bir yerde saklayın. En güvenli yedekleme yolu yerel bir sürücüdür, bu sayede klasörde NTFS dosya izinleri ayarlayabilirsiniz. Configuration Manager, yedekleme yolunda saklanan yedekleme verilerini şifrelemez.  
@@ -116,7 +116,7 @@ Site yedekleme durum bilgileri **Smsbkup.log** dosyasına yazılır. Bu dosya, S
 
 -   Yedekleme görevini başarısız olduğunda bir uyarı oluşturacak şekilde yapılandırdığınızda, **izleme** çalışma alanının **Uyarılar** düğümünde yedekleme hatası uyarıları ' nı arayın.  
 
--   Site sunucusunda Windows Gezgini ' ni açın ve konumuna `<ConfigMgrInstallationFolder>\Logs`gidin. Uyarılar ve hatalar için **Smsdk. log dosyasına** bakın. Site yedeklemesi başarıyla tamamlandığında, günlük ileti KIMLIĞI `Backup completed` `STATMSG: ID=5035`ile gösterilir.  
+-   Site sunucusunda Windows Gezgini ' ni açın ve konumuna gidin `<ConfigMgrInstallationFolder>\Logs` . Uyarılar ve hatalar için **Smsdk. log dosyasına** bakın. Site yedeklemesi başarıyla tamamlandığında, günlük `Backup completed` ILETI kimliği ile gösterilir `STATMSG: ID=5035` .  
 
     > [!TIP]  
     >  Yedekleme bakım görevi başarısız olduğunda, **SMS_SITE_BACKUP** Windows hizmetini durdurup yeniden başlatarak yedekleme görevini yeniden başlatın.  
@@ -137,7 +137,7 @@ Aşağıdaki nedenlerle yedekleme anlık görüntüsünün birden çok arşivini
 
 
 ## <a name="using-the-afterbackupbat-file"></a>AfterBackup.bat dosyasını kullanma  
-Siteyi başarıyla yedekledikten sonra, yedekleme görevi **AfterBackup. bat**adlı bir betiği çalıştırmayı otomatik olarak dener. AfterBackup. bat dosyasını ' de `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box`site sunucusunda el ile oluşturun. Bir AfterBackup. bat dosyası doğru klasörde mevcutsa, yedekleme görevi tamamlandıktan sonra otomatik olarak çalışır.
+Siteyi başarıyla yedekledikten sonra, yedekleme görevi **AfterBackup. bat**adlı bir betiği çalıştırmayı otomatik olarak dener. AfterBackup. bat dosyasını ' de site sunucusunda el ile oluşturun `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box` . Bir AfterBackup. bat dosyası doğru klasörde mevcutsa, yedekleme görevi tamamlandıktan sonra otomatik olarak çalışır.
 
 AfterBackup. bat dosyası her yedekleme işleminin sonunda yedekleme anlık görüntüsünü arşivlemenize imkan tanır. Site Sunucusunu Yedekle bakım görevinin parçası olmayan diğer yedekleme sonrası görevleri otomatik olarak gerçekleştirebilir. AfterBackup.bat dosyası arşive ve yedekleme işlemlerini bütünleştirir, böylece her yeni yedekleme anlık görüntüsünün arşivlenmesini sağlar.
 
@@ -172,7 +172,7 @@ Configuration Manager içerik kitaplığı tüm yazılım dağıtımları için 
 
 -   İçeriği dağıtım noktalarına yeniden dağıtabilmeniz için içerik kitaplığı geri yüklenmelidir. İçerik yeniden dağıtımı başlattığınızda, Configuration Manager dosyaları site sunucusunun içerik kitaplığından dağıtım noktalarına kopyalar. Daha fazla bilgi için bkz. [içerik kitaplığı](../../plan-design/hierarchy/the-content-library.md).  
 
--   Dağıtım noktalarındaki içeriği güncelleştirebilmeniz için önce paket kaynak dosyaları geri yüklenmelidir. Bir içerik güncelleştirmesini başlattığınızda, yeni veya değiştirilmiş dosyaları paket kaynağından içerik kitaplığına kopyalar Configuration Manager. Ardından dosyaları ilişkili dağıtım noktalarına kopyalar. Tüm paketler ve uygulamalar için paket kaynağı konumunu bulmak üzere site veritabanında aşağıdaki SQL Server sorguyu çalıştırın: `SELECT * FROM v_Package`. Paket kimliğinin ilk üç karakterine bakarak paket kaynak sitesini tanımlayabilirsiniz. Örneğin, paket kimliği CEN00001 ise kaynak sitenin site kodu CEN’dir. Paket kaynak dosyalarını geri yüklediğinizde, bunlar hatadan önce oldukları konuma geri yüklenmelidir.  
+-   Dağıtım noktalarındaki içeriği güncelleştirebilmeniz için önce paket kaynak dosyaları geri yüklenmelidir. Bir içerik güncelleştirmesini başlattığınızda, yeni veya değiştirilmiş dosyaları paket kaynağından içerik kitaplığına kopyalar Configuration Manager. Ardından dosyaları ilişkili dağıtım noktalarına kopyalar. Tüm paketler ve uygulamalar için paket kaynağı konumunu bulmak üzere site veritabanında aşağıdaki SQL Server sorguyu çalıştırın: `SELECT * FROM v_Package` . Paket kimliğinin ilk üç karakterine bakarak paket kaynak sitesini tanımlayabilirsiniz. Örneğin, paket kimliği CEN00001 ise kaynak sitenin site kodu CEN’dir. Paket kaynak dosyalarını geri yüklediğinizde, bunlar hatadan önce oldukları konuma geri yüklenmelidir.  
 
 Site sunucusu için dosya sistemi yedeğine hem içerik kitaplığını hem de paket kaynak dosyalarını dahil ettiğini doğrulayın.  
 
@@ -183,12 +183,12 @@ Updates Publisher veritabanını yedeklemek için aşağıdaki yordamı kullanı
 
 #### <a name="back-up-the-updates-publisher-database"></a>Updates Publisher veritabanını yedekleme  
 
-1.  Updates Publisher çalıştıran bilgisayarda, içindeki `%USERPROFILE%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\` **scupdb. sdf** Updates Publisher veritabanı dosyasına gidin. Updates Publisher çalıştıran her kullanıcı için farklı bir veritabanı dosyası vardır.  
+1.  Updates Publisher çalıştıran bilgisayarda, içindeki **Scupdb. sdf** Updates Publisher veritabanı dosyasına gidin `%USERPROFILE%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\` . Updates Publisher çalıştıran her kullanıcı için farklı bir veritabanı dosyası vardır.  
 
-2.  Veritabanı dosyasını yedekleme hedefinize kopyalayın. Örneğin, yedekleme hedefinizin olması `E:\ConfigMgr_Backup`halinde, Updates Publisher veritabanı dosyasını uygulamasına `E:\ConfigMgr_Backup\SCUP`kopyalayabilirsiniz.  
+2.  Veritabanı dosyasını yedekleme hedefinize kopyalayın. Örneğin, yedekleme hedefinizin olması halinde, `E:\ConfigMgr_Backup` Updates Publisher veritabanı dosyasını uygulamasına kopyalayabilirsiniz `E:\ConfigMgr_Backup\SCUP` .  
 
     > [!TIP]  
-    >  Bir bilgisayarda birden çok veritabanı dosyası olduğunda, dosyayı veritabanı dosyasıyla ilişkili kullanıcı profilini gösteren bir alt klasöre depolamayı düşünün. Örneğin, içinde bir veritabanı dosyanız `E:\ConfigMgr_Backup\SCUP\User1` ve içindeki `E:\ConfigMgr_Backup\SCUP\User2`başka bir veritabanı dosyası olabilir.  
+    >  Bir bilgisayarda birden çok veritabanı dosyası olduğunda, dosyayı veritabanı dosyasıyla ilişkili kullanıcı profilini gösteren bir alt klasöre depolamayı düşünün. Örneğin, içinde bir veritabanı dosyanız `E:\ConfigMgr_Backup\SCUP\User1` ve içindeki başka bir veritabanı dosyası olabilir `E:\ConfigMgr_Backup\SCUP\User2` .  
 
 
 
@@ -213,7 +213,7 @@ SMS Yazıcı, yedekleme işlemi sırasında Windows Birim Gölge Kopyası Hizmet
 ### <a name="process"></a>İşleme  
 1. SMS Yazıcı, VSS hizmetine kaydolur ve bu hizmetin arabirimleri ile olaylarını bağlar. 
 2. VSS olayları yayınladığında veya SMS Yazıcıya belirli bildirimleri gönderdiğinde, SMS Yazıcı bildirime yanıt verir ve uygun tedbiri alır. 
-3. SMS Yazıcı, içinde `<ConfigMgrInstallationPath>\inboxes\smsbkup.box`bulunan **smsdk. ctl** yedekleme denetim dosyasını okur ve yedeklenecek dosyaları ve verileri belirler. 
+3. SMS Yazıcı, içinde bulunan **smsdk. ctl** yedekleme denetim dosyasını okur `<ConfigMgrInstallationPath>\inboxes\smsbkup.box` ve yedeklenecek dosyaları ve verileri belirler. 
 4. SMS Yazıcı, SMS kayıt defteri anahtarından ve alt anahtarlarından belirli veriler de dahil olmak üzere çeşitli bileşenlerden oluşan meta verileri oluşturur. 
     a. İstendiğinde meta verileri VSS 'ye gönderir. 
     b. VSS daha sonra, Configuration Manager Yedekleme Yöneticisi olan istek yapan uygulamaya verileri gönderir. 
@@ -231,7 +231,7 @@ SMS yazıcısının yazıcı KIMLIĞI **03ba67dd-dc6d-4729-a038-251f7018463b**.
 SMS Yazıcı hizmeti Yerel Sistem hesabı altında çalışmalıdır.  
 
 ### <a name="volume-shadow-copy-service"></a>Birim Gölge Kopyası hizmeti  
-VSS, bir sistemdeki uygulamalar birimlere yazmayı sürdürürken, birim yedeklemelerinin yapılmasına olanak veren bir çerçeveyi uygulayan COM API kümesidir. VSS, disk üzerindeki verileri güncelleştiren kullanıcı uygulamaları (SMS Yazıcı hizmeti) ile yedekleme uygulamaları (Yedekleme Yöneticisi hizmeti) arasında eşgüdüme olanak tanıyan tutarlı bir arayüz sağlar. Daha fazla bilgi için [birim gölge kopyası hizmeti](https://go.microsoft.com/fwlink/p/?LinkId=241968)bakın.  
+VSS, bir sistemdeki uygulamalar birimlere yazmayı sürdürürken, birim yedeklemelerinin yapılmasına olanak veren bir çerçeveyi uygulayan COM API kümesidir. VSS, disk üzerindeki verileri güncelleştiren kullanıcı uygulamaları (SMS Yazıcı hizmeti) ile yedekleme uygulamaları (Yedekleme Yöneticisi hizmeti) arasında eşgüdüme olanak tanıyan tutarlı bir arayüz sağlar. Daha fazla bilgi için [birim gölge kopyası hizmeti](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service)bakın.  
 
 
 

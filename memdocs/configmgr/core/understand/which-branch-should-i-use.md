@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7a505296fe51aae996d429fe7da2033d3a787ff
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 542069b82ea4c68a48ccc47b79007fd2fa25322a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722567"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906021"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>Configuration Manager’ın hangi dalını kullanmalıyım?
 
@@ -47,7 +47,7 @@ Microsoft, her yıl Configuration Manager geçerli dal için güncelleştirmeler
 
 Geçerli dalı yeni bir site olarak yüklemek için, [temel medyayı](../servers/manage/updates.md#bkmk_Baselines)kullanın. Ayrıca, System Center 2012 Configuration Manager Service Pack 2 veya System Center 2012 R2 Configuration Manager Service Pack 1 ' den yükseltmek için temel medyayı kullanın. Bu medyaya erişim, kuruluşunuzun Configuration Manager lisanslarına bağlıdır.
 
-Ayrıca, geçerli dalın değerlendirme sürümü olan yeni bir site yüklemek için temel medyayı de kullanabilirsiniz. Değerlendirme sürümü için bir lisans gerekmez. Değerlendirme sürümünü 180 gün boyunca kullanabilirsiniz. Geçerli dalın lisanslı bir sürümüne yükseltmeyi destekler. Yalnızca bir değerlendirme sürümünü yüklemek için [TechNet Değerlendirme Merkezi](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)' nden alın.
+Ayrıca, geçerli dalın değerlendirme sürümü olan yeni bir site yüklemek için temel medyayı de kullanabilirsiniz. Değerlendirme sürümü için bir lisans gerekmez. Değerlendirme sürümünü 180 gün boyunca kullanabilirsiniz. Geçerli dalın lisanslı bir sürümüne yükseltmeyi destekler. Yalnızca bir değerlendirme sürümünü yüklemek için [değerlendirme merkezi](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)'nden alın.
 
 > [!NOTE]
 > Yeni bir Configuration Manager hiyerarşisi için site yüklemek üzere temel medyayı kullanın. Daha önce bir temel sürümü yüklediyseniz, sitelerinizi yeni bir sürüme güncelleştirmek için konsol içi güncelleştirmeleri kullanın.  
@@ -87,9 +87,9 @@ LTSB 'yi yeni bir site olarak veya desteklenen bir System Center 2012 Configurat
 > [!TIP]  
 > System Center 2016 hakkında bilgi edinmek için bkz. [System center 2016 belgeleri](https://docs.microsoft.com/system-center/index). Bu belgede Ayrıca, bir Microsoft Lisans Sözleşmesi veya benzer haklar gerektiren System Center 2016 'nin nasıl alınacağı de tanımlanmaktadır.  
 >  
-> Toplu Lisanslama hizmeti Merkezi 'nde (VLSC) Configuration Manager sürüm 1606 ' yı bulmak için, [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx)'nin `System Center 2016` **indirmeler ve anahtarlar** sekmesine gidin, arama yapın ve ardından **system Center 2016 Datacenter** veya **System Center 2016 Standard**' ı seçin.  
+> Toplu Lisanslama hizmeti Merkezi 'nde (VLSC) Configuration Manager sürüm 1606 ' yı bulmak için, [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx)'nin **indirmeler ve anahtarlar** sekmesine gidin, arama `System Center 2016` yapın ve ardından **System center 2016 Datacenter** veya **System Center 2016 Standard**' ı seçin.  
 >  
-> Ayrıca, [TechNet Değerlendirme Merkezi](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview)'Nden System Center 2016 değerlendirme sürümünü edinebilirsiniz.  
+> Ayrıca, [değerlendirme merkezinden](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview)System Center 2016 değerlendirme sürümünü edinebilirsiniz.  
 
 ### <a name="features-of-the-ltsb"></a>LTSB özellikleri
 
@@ -116,7 +116,7 @@ LTSB, geçerli şube 1606 sürümünü temel alır ve aşağıdaki sınırlamala
 
 - LTSB yüklemenizi geçerli bir dal yüklemesine dönüştürebilirsiniz. Geçerli dala dönüştürme işlemi, LTSB süresi dolmadan önce veya sonra desteklenir.
 
-  Dönüştürmek için, Microsoft ile etkin bir yazılım güvencesi anlaşmanız olması gerekir. Daha fazla bilgi için aşağıdaki makalelere bakın:
+  Dönüştürmek için, Microsoft ile etkin bir yazılım güvencesi anlaşmanız olması gerekir. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
   - [Uzun süreli bakım dalını geçerli dala yükseltme](convert-to-current-branch.md)
   - [Configuration Manager için lisanslama ve dallar](learn-more-editions.md)
@@ -166,6 +166,6 @@ Sitenizin sürümünü denetlemek için konsolun sol üst köşesindeki **Config
 
 ### <a name="branch"></a>Dal
 
-Sitenizin dalını onaylamak için, konsolunda **Yönetim** > **Site yapılandırması** > **siteler**' e gidin ve **Hiyerarşi ayarları**' nı açın. Geçerli dala dönüştürmek için etkin bir seçenek varsa, site LTSB sürümünü çalıştırır. Site geçerli dalı çalıştırdığında, konsol bu seçeneği devre dışı bırakır.
+Sitenizin dalını onaylamak için, konsolunda **Yönetim**  >  **Site yapılandırması**  >  **siteler**' e gidin ve **Hiyerarşi ayarları**' nı açın. Geçerli dala dönüştürmek için etkin bir seçenek varsa, site LTSB sürümünü çalıştırır. Site geçerli dalı çalıştırdığında, konsol bu seçeneği devre dışı bırakır.
 
 Configuration Manager farklı sürümleri hakkında daha fazla bilgi için bkz. [temel ve güncelleştirme sürümleri](../servers/manage/updates.md#bkmk_Baselines).

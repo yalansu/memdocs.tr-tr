@@ -10,12 +10,13 @@ ms.assetid: 38b2bed2-20dd-4ce1-abc0-219343d2c4b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6710170d6c86f59b1626285c618f3108f8947974
-ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
+ms.reviewer: acabello
+ms.openlocfilehash: b280661c4de9282d3907b7d480477fc67f6a8dc5
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619449"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824073"
 ---
 # <a name="what-is-desktop-analytics"></a>Desktop Analytics nedir?
 
@@ -62,7 +63,7 @@ Masaüstü Analizi aşağıdaki avantajları sağlar:
 
 - **Configuration Manager tümleştirme**: hizmet bulutu-mevcut şirket içi altyapınızı mümkün. Windows 'u cihazlarınızda dağıtmak ve yönetmek için bu verileri ve çözümlemeyi kullanın.  
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Masaüstü analizlerini kullanmak için ortamınızın aşağıdaki önkoşulları karşıladığından emin olun.
 
@@ -93,7 +94,7 @@ Masaüstü analizlerini kullanmak için ortamınızın aşağıdaki önkoşullar
     > Masaüstü analizi, tek bir Azure AD kiracısına rapor veren birden çok Configuration Manager hiyerarşiyi destekler.<!-- 4814075 --> Ortamınızda birden çok hiyerarşinizi varsa, aşağıdaki seçeneklere sahip olursunuz:
     >
     > - Farklı ticari kimlikler ve Azure AD kiracılarını kullanın.
-    > - Her iki hiyerarşiyi de Azure AD kiracısı ve Masaüstü Analizi örneğini paylaşmak için aynı ticari KIMLIĞI kullanacak şekilde yapılandırın.
+    > - Her iki hiyerarşiyi de Azure AD kiracısı ve Masaüstü Analizi örneğini paylaşmak için aynı ticari KIMLIĞI kullanacak şekilde yapılandırın. Her hiyerarşiyi bağlamak için [farklı uygulamalar](connect-configmgr.md#bkmk_connect) kullanın. Portalın değişiklikleri yansıtması için bir hiearchy bağlantısı kesildikten sonra 30 güne kadar zaman alabilir. 
 
 - Windows 7, Windows 8.1 veya Windows 10 çalıştıran cihazlar  
 
@@ -106,7 +107,7 @@ Masaüstü analizlerini kullanmak için ortamınızın aşağıdaki önkoşullar
     >
     > Masaüstü analizi, yerinde yükseltme senaryosunu en iyi şekilde destekleyecek şekilde tasarlanmıştır. 32 bitlik mimari-64-bit mimarisine gibi büyük değişiklikler yapmanız gerekiyorsa, bir görüntüleme senaryosu kullanın. Bu klasik işletim sistemi dağıtım senaryolarında masaüstü Analizi öngörüleri hâlâ değerlidir, ancak yerinde yükseltmeye özgü Kılavuzu yoksayabilirsiniz. Daha fazla bilgi için bkz. [Configuration Manager ile kurumsal işletim sistemlerini dağıtma senaryoları](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md).
 
-- Windows Tanılama verileri. Daha fazla bilgi için aşağıdaki makalelere bakın:  
+- Windows Tanılama verileri. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:  
 
     - [Tanılama veri düzeyleri](enable-data-sharing.md#diagnostic-data-levels)  
 

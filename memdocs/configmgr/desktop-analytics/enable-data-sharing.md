@@ -10,12 +10,13 @@ ms.assetid: be680198-4cea-4378-a686-d52f382ba483
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7610b0e60f3ea02918c9dd98858a3b2bfd7c712
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 0811c695acba4859bf32de535a28ea55cf8eee07
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723638"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268751"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Masaüstü analizi için veri paylaşımını etkinleştirme
 
@@ -74,6 +75,9 @@ Veri paylaşımını etkinleştirmek için Proxy sunucunuzu aşağıdaki Interne
 > Gizlilik ve veri bütünlüğü için Windows, tanılama veri uç noktaları ile iletişim kurarken bir Microsoft SSL sertifikası (sertifika sabitleme) olup olmadığını denetler. SSL yakalamasyonu ve incelemesi mümkün değildir. Masaüstü analizlerini kullanmak için bu uç noktaları SSL incelemeden hariç tutun.<!-- BUG 4647542 -->
 
 Sürüm 2002 ' den başlayarak, Configuration Manager site bir bulut hizmeti için gerekli uç noktalara bağlanamazsa, kritik bir durum ileti KIMLIĞI 11488 oluşturur. Hizmete bağlanamadığınızda SMS_SERVICE_CONNECTOR bileşen durumu kritik olarak değişir. Configuration Manager konsolunun [Bileşen durumu](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) düğümünde ayrıntılı durumu görüntüleyin.<!-- 5566763 -->
+
+> [!NOTE]
+> Microsoft IP adresi aralıkları hakkında daha fazla bilgi için bkz. [Microsoft genel IP alanı](https://www.microsoft.com/download/details.aspx?id=53602). Bu adresler düzenli olarak güncelleştirin. Hizmete göre ayrıntı düzeyi yoktur, bu aralıklardaki IP adresleri kullanılabilir.
 
 ### <a name="server-connectivity-endpoints"></a>Sunucu bağlantısı uç noktaları
 
@@ -136,7 +140,7 @@ Cihazları, oturum açmış kullanıcının proxy kimlik doğrulaması bağlamı
 - Kullanıcıların tanılama veri uç noktalarına erişmek için proxy iznine sahip olduğundan emin olun. Bu seçenek, cihazların proxy izinlerine sahip konsol kullanıcılarına sahip olmasını gerektirir, bu nedenle bu yöntemi gözetimsiz cihazlarla kullanamazsınız.
 
 > [!IMPORTANT]
-> Kullanıcı proxy kimlik doğrulama yaklaşımı, Microsoft Defender Gelişmiş tehdit koruması kullanımıyla uyumlu değildir. Bu davranış, bu kimlik doğrulamanın **Disableenterpriseauthproxy** kayıt defteri anahtarını olarak `0`ayarlanmış olması, Microsoft Defender ATP 'nin olarak `1`ayarlanmasını gerektirmesidir. Daha fazla bilgi için bkz. [Microsoft Defender ATP 'de makine proxy ve internet bağlantısı ayarlarını yapılandırma](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
+> Kullanıcı proxy kimlik doğrulama yaklaşımı, Microsoft Defender Gelişmiş tehdit koruması kullanımıyla uyumlu değildir. Bu davranış, bu kimlik doğrulamanın **Disableenterpriseauthproxy** kayıt defteri anahtarını olarak ayarlanmış olması `0` , Microsoft Defender ATP 'nin olarak ayarlanmasını gerektirmesidir `1` . Daha fazla bilgi için bkz. [Microsoft Defender ATP 'de makine proxy ve internet bağlantısı ayarlarını yapılandırma](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
 ### <a name="device-proxy-authentication"></a>Cihaz proxy kimlik doğrulaması
 
@@ -158,7 +162,7 @@ Bu yaklaşım en karmaşıktır çünkü aşağıdaki yapılandırmalarda gerekl
 
   - Saydam proxy
 
-  - Aşağıdaki Grup İlkesi ayarını kullanarak cihaz genelinde Winınet proxy yapılandırın: **makine başına proxy ayarları yap (Kullanıcı başına değil)** (proxysettingsperuser = `1`)
+  - Aşağıdaki Grup İlkesi ayarını kullanarak cihaz genelinde Winınet proxy yapılandırın: **makine başına proxy ayarları yap (Kullanıcı başına değil)** (proxysettingsperuser = `1` )
 
   - Yönlendirilmiş bağlantı veya ağ adresi çevirisi (NAT) kullanan
 

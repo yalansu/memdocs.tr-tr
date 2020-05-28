@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df289c284774a4e0bb3a379853f31f8d6f5bd44d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 623a8dab52e13c4674b961e825033430d34a8f88
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720600"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906554"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Şifreleme denetimleri teknik başvurusu
 
@@ -260,5 +260,5 @@ Configuration Manager istemcileriniz ve sunucularınızın güvenliğini artırm
 - SSL 3,0, TLS 1,0 ve TLS 1,1 'ı devre dışı bırakın 
 - TLS ile ilgili şifre paketlerini yeniden sıralama 
 
-Daha fazla bilgi için bkz. [Schannel. dll ' de belirli şifreleme algoritmalarının ve protokollerin kullanımını kısıtlama](https://support.microsoft.com/en-us/kb/245030/) ve [Schannel şifre paketlerinin önceliklerini belirleme](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx). Bu yordamlar Configuration Manager işlevselliğini etkilemez.
+Daha fazla bilgi için bkz. [Schannel. dll ' de belirli şifreleme algoritmalarının ve protokollerin kullanımını kısıtlama](https://support.microsoft.com/help/245030/) ve [Schannel şifre paketlerinin önceliklerini belirleme](https://docs.microsoft.com/windows/win32/secauthn/prioritizing-schannel-cipher-suites). Bu yordamlar Configuration Manager işlevselliğini etkilemez.
 

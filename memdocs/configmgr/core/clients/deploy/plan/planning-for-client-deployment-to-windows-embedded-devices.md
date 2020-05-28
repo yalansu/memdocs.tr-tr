@@ -10,12 +10,12 @@ ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 623125ad64c7ed421ea209137eb68f17891d7a81
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7848e3c0c38391ab61d10ad46cbb772c812539c7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714020"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906650"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-configuration-manager"></a>Configuration Manager 'da Windows Embedded cihazlarına istemci dağıtımını planlama
 
@@ -46,11 +46,11 @@ ms.locfileid: "81714020"
 
  Configuration Manager, aşağıdaki yazma filtresi türlerini yönetmeyi destekler:  
 
-- Dosya tabanlı yazma Filtresi (FBWF)-daha fazla bilgi Için [dosya tabanlı yazma Filtresi](https://go.microsoft.com/fwlink/?LinkID=204717)konusuna bakın.  
+- Dosya tabanlı yazma Filtresi (FBWF)-daha fazla bilgi Için [dosya tabanlı yazma Filtresi](https://docs.microsoft.com/previous-versions/windows/embedded/aa940926(v=winembedded.5))konusuna bakın.  
 
-- Gelişmiş Yazma filtresi (EWF) RAM-daha fazla bilgi Için [Gelişmiş Yazma filtresi](https://go.microsoft.com/fwlink/?LinkId=204718)konusuna bakın.  
+- Gelişmiş Yazma filtresi (EWF) RAM-daha fazla bilgi Için [Gelişmiş Yazma filtresi](https://docs.microsoft.com/previous-versions/windows/embedded/ms912906(v=winembedded.5))konusuna bakın.  
 
-- Birleşik Yazma filtresi (UWF)-daha fazla bilgi Için bkz. [Birleşik Yazma filtresi](https://go.microsoft.com/fwlink/?LinkId=309236).  
+- Birleşik Yazma filtresi (UWF)-daha fazla bilgi Için bkz. [Birleşik Yazma filtresi](https://docs.microsoft.com/windows-hardware/customize/enterprise/unified-write-filter).  
 
   Configuration Manager, Windows Embedded cihazı EWF RAM reg modundayken yazma Filtresi işlemlerini desteklemez.  
 
@@ -59,7 +59,7 @@ ms.locfileid: "81714020"
 > 
 > **Yalnızca FBWF kullanan cihazlar için:** Cihaz yeniden başlatmaları arasında istemci durumu ve envanter verilerini kalıcı hale getirmek için aşağıdaki özel durumları yapılandırın:  
 > 
-> - CCMıNSTALLDIR\\*. sdf  
+> - CCMıNSTALLDIR \\ *. sdf  
 >   -   CCMINSTALLDIR\ServiceData  
 >   -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 > 

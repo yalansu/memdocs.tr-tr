@@ -2,7 +2,7 @@
 title: İçerik dağıtma
 titleSuffix: Configuration Manager
 description: Configuration Manager için dağıtım noktalarını yükledikten sonra, bunlara içerik dağıtmaya nasıl başlayabileceğiniz aşağıda verilmiştir.
-ms.date: 10/06/2016
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7478eff1a14eeffd4d12b1539df7c5573c6a7cb6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: df26fe91f009a1a4f5d3c5a4f4adb5fe45bbd245
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722980"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343159"
 ---
 # <a name="deploy-and-manage-content-for-configuration-manager"></a>Configuration Manager için içerik dağıtma ve yönetme
 
@@ -24,7 +24,7 @@ ms.locfileid: "81722980"
 Configuration Manager için dağıtım noktalarını yükledikten sonra, bunlara içerik dağıtmaya başlayabilirsiniz. Genellikle içerik, ağ genelindeki dağıtım noktalarına aktarılır, ancak dağıtım noktalarına içerik almak için diğer seçenekler vardır. İçerik bir dağıtım noktasına aktarımdıktan sonra, bu içeriği dağıtım noktalarında güncelleştirebilir, yeniden dağıtabilir, kaldırabilir ve doğrulayabilirsiniz.  
 
 ##  <a name="distribute-content"></a><a name="bkmk_distribute"></a>İçeriği dağıt  
-Genellikle, içeriği dağıtım noktalarına dağıtarak istemci bilgisayarlar için kullanılabilir hale gelir. (Bunun özel durumu, belirli bir dağıtım için isteğe bağlı içerik dağıtımını kullandığınızda olur.)  İçeriği dağıttığınızda, Configuration Manager içerik dosyalarını bir pakette depolar ve ardından paketi dağıtım noktasına dağıtır. Dağıtabileceğiniz içerik türleri şunları içerir:  
+Genellikle, içeriği dağıtım noktalarına dağıtarak istemci bilgisayarlar için kullanılabilir hale gelir. (Bunun özel durumu, belirli bir dağıtım için isteğe bağlı içerik dağıtımını kullandığınızda olur.) İçeriği dağıttığınızda, Configuration Manager içerik dosyalarını bir pakette depolar ve ardından paketi dağıtım noktasına dağıtır. Paketin içeriği, site sunucusunun içerik kitaplığından çekilir. Dağıtabileceğiniz içerik türleri şunları içerir:  
 
 - Uygulama dağıtım türleri  
 
@@ -52,21 +52,21 @@ Uygulama dağıtım türü veya dağıtım paketi gibi kaynak dosyaları içeren
 
 2.  **Yazılım kitaplığı** çalışma alanında, dağıtmak istediğiniz içerik türü için aşağıdaki adımlardan birini seçin:  
 
-    - **Uygulamalar**: **uygulama yönetimi** > **uygulamaları**' nı genişletin ve ardından dağıtmak istediğiniz uygulamaları seçin.  
+    - **Uygulamalar**: **uygulama yönetimi**  >  **uygulamaları**' nı genişletin ve ardından dağıtmak istediğiniz uygulamaları seçin.  
 
-    - **Paketler**: **uygulama yönetim** >  **paketleri**' ni genişletin ve ardından dağıtmak istediğiniz paketleri seçin.  
+    - **Paketler**: **uygulama yönetim**  >   **paketleri**' ni genişletin ve ardından dağıtmak istediğiniz paketleri seçin.  
 
-    - **Dağıtım paketleri**: **yazılım güncelleştirmeleri** >  **dağıtım paketleri**' ni genişletin ve ardından dağıtmak istediğiniz dağıtım paketlerini seçin.  
+    - **Dağıtım paketleri**: **yazılım güncelleştirmeleri**  >   **dağıtım paketleri**' ni genişletin ve ardından dağıtmak istediğiniz dağıtım paketlerini seçin.  
 
-    - **Sürücü paketleri**: **işletim sistemleri** >  **sürücü paketleri**' ni genişletin ve ardından dağıtmak istediğiniz sürücü paketlerini seçin.  
+    - **Sürücü paketleri**: **işletim sistemleri**  >   **sürücü paketleri**' ni genişletin ve ardından dağıtmak istediğiniz sürücü paketlerini seçin.  
 
-    - **İşletim sistemi görüntüleri**: **işletim sistemleri** >  **işletim sistemi görüntüleri**' ni genişletin ve ardından dağıtmak istediğiniz işletim sistemi görüntülerini seçin.  
+    - **İşletim sistemi görüntüleri**: **işletim sistemleri**  >   **işletim sistemi görüntüleri**' ni genişletin ve ardından dağıtmak istediğiniz işletim sistemi görüntülerini seçin.  
 
-    - **İşletim sistemi yükleyicileri**: **işletim sistemleri** > **işletim sistemi yükleyicileri**' ni genişletin ve ardından dağıtmak istediğiniz işletim sistemi yükleyicilerini seçin.  
+    - **İşletim sistemi yükleyicileri**: **işletim sistemleri**  >  **işletim sistemi yükleyicileri**' ni genişletin ve ardından dağıtmak istediğiniz işletim sistemi yükleyicilerini seçin.  
 
-    - **Önyükleme görüntüleri**: **işletim sistemleri** >  **önyükleme görüntüleri**' ni genişletin ve ardından dağıtmak istediğiniz önyükleme görüntülerini seçin.  
+    - **Önyükleme görüntüleri**: **işletim sistemleri**  >   **önyükleme görüntüleri**' ni genişletin ve ardından dağıtmak istediğiniz önyükleme görüntülerini seçin.  
 
-    - **Görev dizileri**: **işletim sistemleri** >  **görev dizileri**' ni genişletin ve ardından dağıtmak istediğiniz görev sırasını seçin. Görev dizileri içerik içermese de, dağıtılan ilişkili içerik bağımlılıkları vardır.  
+    - **Görev dizileri**: **işletim sistemleri**  >   **görev dizileri**' ni genişletin ve ardından dağıtmak istediğiniz görev sırasını seçin. Görev dizileri içerik içermese de, dağıtılan ilişkili içerik bağımlılıkları vardır.  
 
       > [!NOTE]  
       > Görev sırasını değiştirirseniz, içeriği yeniden dağıtmanız gerekir.  
@@ -252,18 +252,18 @@ Configuration Manager konsolunda seçtiğiniz içerik için dosyaları ve ilişk
 
 1.  Önceden hazırlanan içerik dosyasını içeriği ayıklamak istediğiniz bilgisayara kopyalayın.  
 
-2.  İçerik Ayıkla komut satırı aracını &lt; *configmgrınstallationpath*> \Bin\\&lt;*Platform*> ' dan önceden hazırlanan içerik dosyasını ayıklamak istediğiniz bilgisayara kopyalayın.  
+2.  İçerik Ayıkla komut satırı aracını &lt; *configmgrınstallationpath*> \Bin \\ &lt; *Platform*> ' dan önceden hazırlanan içerik dosyasını ayıklamak istediğiniz bilgisayara kopyalayın.  
 
 3.  Komut istemi ' ni açın ve önceden hazırlanan içerik dosyası ve Içerik Ayıkla aracının klasör konumuna gidin.  
 
     > [!NOTE]  
     > Bir site sunucusu, ikincil site sunucusu veya dağıtım noktasındaki bir veya daha fazla önceden hazırlanan içerik dosyasını ayıklayabilirsiniz.  
 
-4.  Tek bir dosyayı içeri aktarmak için **ExtractContent/p:**&lt;*PrestagedFileLocation*>**\\**&lt;*PrestagedFileName*> **/s** yazın.  
+4.  **extractcontent /P:** &lt; *PrestagedFileLocation* > **\\** &lt; *PrestagedFileName* >  **/S** Tek bir dosyayı içeri aktarmak için ExtractContent/p: PrestagedFileLocation PrestagedFileName/s yazın.  
 
-    Önceden hazırlanan tüm dosyaları belirtilen klasöre aktarmak için **ExtractContent/p:**&lt;*PrestagedFileLocation*> **/s** yazın.  
+    **extractcontent /P:** &lt; *PrestagedFileLocation* >  Önceden hazırlanan tüm dosyaları belirtilen klasöre aktarmak için ExtractContent/p: PrestagedFileLocation **/s** yazın.  
 
-    Örneğin, **ExtractContent/p: D:\PrestagedFiles\MyPrestagedFile.pkgx/s** yazın; burada `D:\PrestagedFiles\` PrestagedFileLocation `MyPrestagedFile.pkgx` , önceden hazırlanan dosya adıdır ve `/S` yalnızca dağıtım noktasındaki mevcut olan içerik dosyalarını ayıklamak için Configuration Manager bildirir.  
+    Örneğin, **ExtractContent/p: D:\PrestagedFiles\MyPrestagedFile.pkgx/s** yazın; burada `D:\PrestagedFiles\` PrestagedFileLocation, `MyPrestagedFile.pkgx` önceden hazırlanan dosya adıdır ve `/S` yalnızca dağıtım noktasındaki mevcut olan içerik dosyalarını ayıklamak için Configuration Manager bildirir.  
 
     Önceden hazırlanan içerik dosyasını bir site sunucusuna ayıkladığınızda, içerik dosyaları site sunucusundaki içerik kitaplığına eklenir ve ardından içerik kullanılabilirliği site sunucusu veritabanına kaydedilir. Önceden hazırlanan içerik dosyasını bir dağıtım noktasına aktardığınızda, içerik dosyaları dağıtım noktasındaki içerik kitaplığına eklenir, dağıtım noktası ana birincil site sunucusuna bir durum iletisi gönderir ve ardından içerik kullanılabilirliği site veritabanına kaydedilir.  
 
@@ -311,7 +311,7 @@ Dağıtım noktası önceden hazırlanan içerik için etkin olmadığında veya
 
 ### <a name="update-content"></a>İçeriği Güncelleştir
 Dağıtım için kaynak dosya konumu yeni dosyalar eklenerek veya mevcut dosyaları daha yeni bir sürüme göre güncelleştirilerek, dağıtım noktalarını **Güncelleştir** veya **içeriği** Güncelleştir eylemini kullanarak dağıtım noktalarındaki içerik dosyalarını güncelleştirebilirsiniz:  
-- İçerik dosyaları, kaynak dosya yolundan paket içerik kaynağına sahip olan sitedeki içerik kitaplığına kopyalanır  
+- İçerik dosyaları, özgün paket kaynak konumundan paket içerik kaynağına sahip olan sitedeki içerik kitaplığına kopyalanır
 - Paket sürümü artırılır  
 - Site sunucularındaki ve dağıtım noktalarındaki içerik kitaplığının her örneği yalnızca değişmiş olan dosyalarla güncelleştirilir  
 
@@ -324,19 +324,19 @@ Dağıtım için kaynak dosya konumu yeni dosyalar eklenerek veya mevcut dosyala
 
 2.  **Yazılım kitaplığı** çalışma alanında, dağıtmak istediğiniz içerik türü için aşağıdaki adımlardan birini seçin:  
 
-    - **Uygulamalar**: **uygulama yönetimi** > **uygulamaları**' nı genişletin ve ardından dağıtmak istediğiniz uygulamaları seçin. **Dağıtım türleri** sekmesine tıklayın ve ardından güncelleştirmek istediğiniz dağıtım türünü seçin.  
+    - **Uygulamalar**: **uygulama yönetimi**  >  **uygulamaları**' nı genişletin ve ardından dağıtmak istediğiniz uygulamaları seçin. **Dağıtım türleri** sekmesine tıklayın ve ardından güncelleştirmek istediğiniz dağıtım türünü seçin.  
 
-    - **Paketler**: **uygulama yönetim** > **paketleri**' ni genişletin ve ardından güncelleştirmek istediğiniz paketleri seçin.  
+    - **Paketler**: **uygulama yönetim**  >  **paketleri**' ni genişletin ve ardından güncelleştirmek istediğiniz paketleri seçin.  
 
-    - **Dağıtım paketleri**: **yazılım güncelleştirmeleri** > **dağıtım paketleri**' ni genişletin ve sonra güncelleştirmek istediğiniz dağıtım paketlerini seçin.  
+    - **Dağıtım paketleri**: **yazılım güncelleştirmeleri**  >  **dağıtım paketleri**' ni genişletin ve sonra güncelleştirmek istediğiniz dağıtım paketlerini seçin.  
 
-    - **Sürücü paketleri**: **işletim sistemleri** > **sürücü paketleri**' ni genişletin ve sonra güncelleştirmek istediğiniz sürücü paketlerini seçin.  
+    - **Sürücü paketleri**: **işletim sistemleri**  >  **sürücü paketleri**' ni genişletin ve sonra güncelleştirmek istediğiniz sürücü paketlerini seçin.  
 
-    - **İşletim sistemi görüntüleri**: **işletim sistemleri** > **işletim sistemi görüntüleri**' ni genişletin ve ardından güncelleştirmek istediğiniz işletim sistemi görüntülerini seçin.  
+    - **İşletim sistemi görüntüleri**: **işletim sistemleri**  >  **işletim sistemi görüntüleri**' ni genişletin ve ardından güncelleştirmek istediğiniz işletim sistemi görüntülerini seçin.  
 
-    - **İşletim sistemi yükleyicileri**: **işletim sistemleri** > **işletim sistemi yükleyicileri**' ni genişletin ve ardından güncelleştirmek istediğiniz işletim sistemi yükleyicilerini seçin.  
+    - **İşletim sistemi yükleyicileri**: **işletim sistemleri**  >  **işletim sistemi yükleyicileri**' ni genişletin ve ardından güncelleştirmek istediğiniz işletim sistemi yükleyicilerini seçin.  
 
-    - **Önyükleme görüntüleri**: **işletim sistemleri** >  **önyükleme görüntüleri**' ni genişletin ve ardından güncelleştirmek istediğiniz önyükleme görüntülerini seçin.  
+    - **Önyükleme görüntüleri**: **işletim sistemleri**  >   **önyükleme görüntüleri**' ni genişletin ve ardından güncelleştirmek istediğiniz önyükleme görüntülerini seçin.  
 
 3.  **Giriş** sekmesinde, **dağıtım** grubunda, **dağıtım noktalarını güncelleştir**' i tıklatın ve ardından içeriği güncelleştirmek istediğinizi onaylamak için **Tamam** ' ı tıklatın.  
 
@@ -362,19 +362,19 @@ Paketteki içerik dosyalarını onarmak veya başlangıç dağıtımı başarıs
 
 2.  **Yazılım kitaplığı** çalışma alanında, dağıtmak istediğiniz içerik türü için aşağıdaki adımlardan birini seçin:  
 
-    - **Uygulamalar**: **uygulama yönetimi** >  **uygulamaları**' nı genişletin ve ardından yeniden dağıtmak istediğiniz uygulamayı seçin.  
+    - **Uygulamalar**: **uygulama yönetimi**  >   **uygulamaları**' nı genişletin ve ardından yeniden dağıtmak istediğiniz uygulamayı seçin.  
 
-    - **Paketler**: **uygulama yönetim** > **paketleri**' ni genişletin ve ardından yeniden dağıtmak istediğiniz paketi seçin.  
+    - **Paketler**: **uygulama yönetim**  >  **paketleri**' ni genişletin ve ardından yeniden dağıtmak istediğiniz paketi seçin.  
 
-    - **Dağıtım paketleri**: **yazılım güncelleştirmeleri** >  **dağıtım paketleri**' ni genişletin ve ardından yeniden dağıtmak istediğiniz dağıtım paketini seçin.  
+    - **Dağıtım paketleri**: **yazılım güncelleştirmeleri**  >   **dağıtım paketleri**' ni genişletin ve ardından yeniden dağıtmak istediğiniz dağıtım paketini seçin.  
 
-    - **Sürücü paketleri**: **işletim sistemleri** > **sürücü paketleri**' ni genişletin ve ardından yeniden dağıtmak istediğiniz sürücü paketini seçin.  
+    - **Sürücü paketleri**: **işletim sistemleri**  >  **sürücü paketleri**' ni genişletin ve ardından yeniden dağıtmak istediğiniz sürücü paketini seçin.  
 
-    - **İşletim sistemi görüntüleri**: **işletim sistemleri** > **işletim sistemi görüntüleri**' ni genişletin ve ardından yeniden dağıtmak istediğiniz işletim sistemi görüntüsünü seçin.  
+    - **İşletim sistemi görüntüleri**: **işletim sistemleri**  >  **işletim sistemi görüntüleri**' ni genişletin ve ardından yeniden dağıtmak istediğiniz işletim sistemi görüntüsünü seçin.  
 
-    - **İşletim sistemi yükleyicileri**: **işletim sistemleri** > **işletim sistemi yükleyicileri**' ni genişletin ve ardından yeniden dağıtmak istediğiniz işletim sistemi yükleyicisini seçin.  
+    - **İşletim sistemi yükleyicileri**: **işletim sistemleri**  >  **işletim sistemi yükleyicileri**' ni genişletin ve ardından yeniden dağıtmak istediğiniz işletim sistemi yükleyicisini seçin.  
 
-    - **Önyükleme görüntüleri**: **işletim sistemleri** >  **önyükleme görüntüleri**' ni genişletin ve ardından yeniden dağıtmak istediğiniz önyükleme görüntüsünü seçin.  
+    - **Önyükleme görüntüleri**: **işletim sistemleri**  >   **önyükleme görüntüleri**' ni genişletin ve ardından yeniden dağıtmak istediğiniz önyükleme görüntüsünü seçin.  
 
 3.  **Giriş** sekmesinde, **Özellikler** grubunda, **Özellikler**'e tıklayın.  
 
@@ -409,7 +409,7 @@ Dağıtım Yöneticisi 'nin içeriği kaynak konumdan içerik kitaplığına kop
 
 Bu yöntemi yalnızca, içeriğin normal çoğaltmasıyla ilgili sorunlar olduktan sonra içeriği yeniden dağıtmanız gerektiğinde çoğaltmaya zorlamak için kullanın (genellikle konsolun Izleme düğümü kullanılarak onaylanır).   
 
-Bu SDK seçeneği hakkında daha fazla bilgi için, MSDN 'de [SMS_CM_UpdatePackages sınıfında Retrycontentreplication yöntemi](https://msdn.microsoft.com/library/mt762092(CMSDK.16).aspx) bölümüne bakın. Microsoft.com.
+Bu SDK seçeneği hakkında daha fazla bilgi için, [SMS_CM_UpdatePackages sınıfında Retrycontentreplication yöntemi](../../../../develop/reference/sum/retrycontentreplication-method-in-class-sms_cm_updatepackages.md)bölümüne bakın.
 
 ### <a name="remove-content"></a>İçeriği kaldır
 Dağıtım noktalarınız üzerinde artık içerik gerekmiyorsa, dağıtım noktasındaki içerik dosyalarını kaldırabilirsiniz.  
@@ -426,19 +426,19 @@ Ancak, içerik aynı dağıtım noktasına dağıtılan başka bir paketle iliş
 
 2.  **Yazılım kitaplığı** çalışma alanında, silmek istediğiniz içerik türü için aşağıdaki adımlardan birini seçin:  
 
-    - **Uygulamalar**: **uygulama yönetimi** > **uygulamaları**' nı genişletin ve ardından kaldırmak istediğiniz uygulamayı seçin.  
+    - **Uygulamalar**: **uygulama yönetimi**  >  **uygulamaları**' nı genişletin ve ardından kaldırmak istediğiniz uygulamayı seçin.  
 
-    - **Paketler**: **uygulama yönetim** > **paketleri**' ni genişletin ve ardından kaldırmak istediğiniz paketi seçin.  
+    - **Paketler**: **uygulama yönetim**  >  **paketleri**' ni genişletin ve ardından kaldırmak istediğiniz paketi seçin.  
 
-    - **Dağıtım paketleri**: **yazılım güncelleştirmeleri** > **dağıtım paketleri**' ni genişletin ve ardından kaldırmak istediğiniz dağıtım paketini seçin.  
+    - **Dağıtım paketleri**: **yazılım güncelleştirmeleri**  >  **dağıtım paketleri**' ni genişletin ve ardından kaldırmak istediğiniz dağıtım paketini seçin.  
 
-    - **Sürücü paketleri**: **işletim sistemleri** > **sürücü paketleri**' ni genişletin ve ardından kaldırmak istediğiniz sürücü paketini seçin.  
+    - **Sürücü paketleri**: **işletim sistemleri**  >  **sürücü paketleri**' ni genişletin ve ardından kaldırmak istediğiniz sürücü paketini seçin.  
 
-    - **İşletim sistemi görüntüleri**: **işletim sistemleri** > **işletim sistemi görüntüleri**' ni genişletin ve ardından kaldırmak istediğiniz işletim sistemi görüntüsünü seçin.  
+    - **İşletim sistemi görüntüleri**: **işletim sistemleri**  >  **işletim sistemi görüntüleri**' ni genişletin ve ardından kaldırmak istediğiniz işletim sistemi görüntüsünü seçin.  
 
-    - **İşletim sistemi yükleyicileri**: **işletim sistemleri** > **işletim sistemi yükleyicileri**' ni genişletin ve ardından kaldırmak istediğiniz işletim sistemi yükleyicisini seçin.  
+    - **İşletim sistemi yükleyicileri**: **işletim sistemleri**  >  **işletim sistemi yükleyicileri**' ni genişletin ve ardından kaldırmak istediğiniz işletim sistemi yükleyicisini seçin.  
 
-    - **Önyükleme görüntüleri**: **işletim sistemleri** > **önyükleme görüntüleri**' ni genişletin ve ardından kaldırmak istediğiniz önyükleme görüntüsünü seçin.  
+    - **Önyükleme görüntüleri**: **işletim sistemleri**  >  **önyükleme görüntüleri**' ni genişletin ve ardından kaldırmak istediğiniz önyükleme görüntüsünü seçin.  
 
 3.  **Giriş** sekmesinde, **Özellikler** grubunda, **Özellikler**'e tıklayın.  
 
@@ -491,19 +491,19 @@ Ancak, içerik aynı dağıtım noktasına dağıtılan başka bir paketle iliş
 
 2.  **Yazılım kitaplığı** çalışma alanında, doğrulamak istediğiniz içerik türü için aşağıdaki adımlardan birini seçin:  
 
-    - **Uygulamalar**: **uygulama yönetimi** > **uygulamaları**' nı genişletin ve ardından doğrulamak istediğiniz uygulamayı seçin.  
+    - **Uygulamalar**: **uygulama yönetimi**  >  **uygulamaları**' nı genişletin ve ardından doğrulamak istediğiniz uygulamayı seçin.  
 
-    - **Paketler**: **uygulama yönetim** > **paketleri**' ni genişletin ve ardından doğrulamak istediğiniz paketi seçin.  
+    - **Paketler**: **uygulama yönetim**  >  **paketleri**' ni genişletin ve ardından doğrulamak istediğiniz paketi seçin.  
 
-    - **Dağıtım paketleri**: **yazılım güncelleştirmeleri** > **dağıtım paketleri**' ni genişletin ve ardından doğrulamak istediğiniz dağıtım paketini seçin.  
+    - **Dağıtım paketleri**: **yazılım güncelleştirmeleri**  >  **dağıtım paketleri**' ni genişletin ve ardından doğrulamak istediğiniz dağıtım paketini seçin.  
 
-    - **Sürücü paketleri**: **işletim sistemleri** > **sürücü paketleri**' ni genişletin ve ardından doğrulamak istediğiniz sürücü paketini seçin.  
+    - **Sürücü paketleri**: **işletim sistemleri**  >  **sürücü paketleri**' ni genişletin ve ardından doğrulamak istediğiniz sürücü paketini seçin.  
 
-    - **İşletim sistemi görüntüleri**: **işletim sistemleri** > **işletim sistemi görüntüleri**' ni genişletin ve ardından doğrulamak istediğiniz işletim sistemi görüntüsünü seçin.  
+    - **İşletim sistemi görüntüleri**: **işletim sistemleri**  >  **işletim sistemi görüntüleri**' ni genişletin ve ardından doğrulamak istediğiniz işletim sistemi görüntüsünü seçin.  
 
-    - **İşletim sistemi yükleyicileri**: **işletim sistemleri** >  **işletim sistemi yükleyicileri**' ni genişletin ve ardından doğrulamak istediğiniz işletim sistemi yükleyicisini seçin.  
+    - **İşletim sistemi yükleyicileri**: **işletim sistemleri**  >   **işletim sistemi yükleyicileri**' ni genişletin ve ardından doğrulamak istediğiniz işletim sistemi yükleyicisini seçin.  
 
-    - **Önyükleme görüntüleri**: **işletim sistemleri** > **önyükleme görüntüleri**' ni genişletin ve ardından önceden hazırlamak istediğiniz önyükleme görüntüsünü seçin.  
+    - **Önyükleme görüntüleri**: **işletim sistemleri**  >  **önyükleme görüntüleri**' ni genişletin ve ardından önceden hazırlamak istediğiniz önyükleme görüntüsünü seçin.  
 
 3.  **Giriş** sekmesinde, **Özellikler** grubunda, **Özellikler**'e tıklayın.  
 

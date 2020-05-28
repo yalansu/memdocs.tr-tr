@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a72ff9947f6ca31ce2158c5c763602b34948a15c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b012dd1e7da0d6a3efb4d1cc33b8a79ef319bc0a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075668"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269006"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>İstemcilerin Configuration Manager için site kaynaklarını ve hizmetleri nasıl bulkullandığını öğrenin
 
@@ -62,7 +62,7 @@ Bir istemci birincil siteye ilk atandığında, bu site için varsayılan bir y�
 
 Tercih edilen yönetim noktalarını kullanabilirsiniz. Tercih edilen yönetim noktaları, istemcinin atanmış sitesinden, istemcinin site sistem sunucularını bulmak için kullandığı bir sınır grubuyla ilişkilendirilmiş yönetim noktalarıdır. Site sistemi sunucusu olarak bir sınır grubuyla tercih edilen bir yönetim noktasının ilişkilendirmesi, dağıtım noktalarının veya durum geçiş noktalarının bir sınır grubuyla ilişkilendirilmesiyle benzerdir. Bir istemci atanan sitesinden bir yönetim noktası kullanırken hiyerarşi için tercih edilen yönetim noktalarını etkinleştirirseniz, atanan sitesinden diğer yönetim noktalarını kullanmadan önce tercih edilen bir yönetim noktasını kullanmayı dener.  
 
-Yönetim noktası benzeşimini yapılandırmak için TechNet.com üzerindeki [Yönetim noktası benzeşimi](https://blogs.technet.com/b/jchalfant/archive/2014/09/22/management-point-affinity-added-in-configmgr-2012-r2-cu3.aspx) bloguna ait bilgileri de kullanabilirsiniz. Yönetim noktası benzeşimi, atanmış yönetim noktalarının varsayılan davranışını geçersiz kılar ve istemcinin bir veya daha fazla belirli yönetim noktası kullanmasına izin verir.  
+Yönetim noktası benzeşimini yapılandırmak için [Yönetim noktası benzeşimi](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) blogundan bilgileri de kullanabilirsiniz. Yönetim noktası benzeşimi, atanmış yönetim noktalarının varsayılan davranışını geçersiz kılar ve istemcinin bir veya daha fazla belirli yönetim noktası kullanmasına izin verir.  
 
 İstemcinin bir yönetim noktasıyla iletişim kurabilmesi her seferinde, Windows Yönetim Araçları (WMI) ' de yerel olarak depoladığı MP listesini denetler. İstemci, yüklendiğinde bir başlangıç MP listesi oluşturur. İstemci daha sonra listeyi hiyerarşideki her bir yönetim noktasıyla ilgili ayrıntılarla düzenli olarak güncelleştirir.  
 
@@ -131,12 +131,12 @@ Bir istemci bir yönetim noktasıyla iletişim kurduktan sonra, şu kadar aynı 
 İstemci daha sonra kullanılacak yeni bir yönetim noktasını rastgele seçer.  
 
 ##  <a name="active-directory"></a><a name="bkmk_ad"></a>Active Directory  
-Etki alanı ile birleşik istemciler hizmet konumu için AD DS kullanabilir. Bu, sitelerin [verileri Active Directory'ye yayımlamasını](https://technet.microsoft.com/library/hh696543.aspx)gerektirir.  
+Etki alanı ile birleşik istemciler hizmet konumu için AD DS kullanabilir. Bu, sitelerin [verileri Active Directory'ye yayımlamasını](../../servers/deploy/configure/publish-site-data.md)gerektirir.  
 
 İstemci, aşağıdaki koşulların tümü doğru olduğunda hizmet konumu için AD DS kullanabilir:  
 
-- Active Directory [şeması genişletildi](https://technet.microsoft.com/library/mt345589.aspx) veya System Center 2012 Configuration Manager için genişletildi.  
-- [Active Directory ormanı yayımlama için yapılandırılmıştır](https://technet.microsoft.com/library/hh696542.aspx)ve Configuration Manager siteleri yayımlamak üzere yapılandırılır.  
+- Active Directory [şeması genişletildi](../network/extend-the-active-directory-schema.md) veya System Center 2012 Configuration Manager için genişletildi.  
+- [Active Directory ormanı yayımlama için yapılandırılmıştır](../../servers/deploy/configure/publish-site-data.md)ve Configuration Manager siteleri yayımlamak üzere yapılandırılır.  
 - İstemci bilgisayarı, bir Active Directory etki alanının üyesi olduğunda ve bir genel katalog sunucusuna erişebildiğinde.  
 
 İstemci, AD DS hizmet konumu için kullanmak üzere bir yönetim noktası bulamazsa DNS kullanmaya çalışır.  
@@ -148,7 +148,7 @@ Aşağıdaki koşullardan herhangi biri doğruysa, hizmet konumu için DNS kulla
 - AD DS şeması Configuration Manager desteklemek için genişletilmedi.
 - İntranetteki istemciler, Configuration Manager yayımlama için etkinleştirilmemiş bir ormanda yer alır.  
 - Çalışma grubu bilgisayarlarında istemcileriniz var ve bu istemciler yalnızca İnternet istemci yönetimi için yapılandırılmamış. (İnternet için yapılandırılmış bir çalışma grubu istemcisi, yalnızca İnternet 'e yönelik yönetim noktalarıyla iletişim kurar ve hizmet konumu için DNS kullanmaz.)  
-- [İstemcileri yönetim noktalarından DNS bulmak için yapılandırabilirsiniz](https://technet.microsoft.com/library/gg682055).  
+- [İstemcileri yönetim noktalarından DNS bulmak için yapılandırabilirsiniz](../../clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md).  
 
 Bir site, aşağıdaki durumlarda yönetim noktaları için hizmet konumu kayıtlarını DNS'te yayımlar:  
 
@@ -183,7 +183,7 @@ Configuration Manager, hizmet konumu kayıtları için RFC 2782 ' ü destekler. 
 
 Configuration Manager bir yönetim noktası yayımlamak için, aşağıdaki değerleri belirtin:  
 
-- **_Service**: **_mssms_mp**_&lt;sitekodu\>girin; &lt;burada\> sitekodu yönetim noktasının site kodudur.  
+- **_Service**: **_mssms_mp**_ &lt; sitekodu girin \> ; burada &lt; sitekodu \> yönetim noktasının site kodudur.  
 - **._Proto**: **._tcp**belirtin.  
 - **.Name**: Yönetim noktasının DNS son ekini girin, örneğin **contoso.com**.  
 - **TTL**: Dört saat anlamına gelen **14400**girin.  
@@ -201,7 +201,7 @@ Windows Server DNS'i kullanırsanız, intranet yönetim noktaları için bu DNS 
 
 ##### <a name="to-configure-automatic-publishing"></a>Otomatik yayımlamayı yapılandırmak için:  
 
-1.  Configuration Manager konsolunda, **Yönetim** > **Site yapılandırması** > **siteler**' i genişletin.  
+1.  Configuration Manager konsolunda, **Yönetim**  >  **Site yapılandırması**  >  **siteler**' i genişletin.  
 
 2.  Sitenizi seçin ve ardından **site bileşenlerini Yapılandır**' ı seçin.  
 
@@ -226,7 +226,7 @@ Windows Server DNS'i kullanırsanız, intranet yönetim noktaları için bu DNS 
 4.  **Yeni diğer kayıtlar** seçeneğini kullanarak, **kaynak kaydı türü** iletişim kutusunda **hizmet konumu (SRV)** öğesini seçin, **kayıt oluştur**' u seçin, aşağıdaki bilgileri girin ve **bitti**' yi seçin:  
 
     - **Etki Alanı**: Gerekirse, yönetim noktasının DNS sonekini girin, örneğin **contoso.com**.  
-    - **Hizmet**: **_mssms_mp**_&lt;sitekodu\>yazın; &lt;burada\> sitekodu yönetim noktasının site kodudur.  
+    - **Hizmet**: **_mssms_mp**_ &lt; sitekodu yazın \> ; burada &lt; sitekodu \> yönetim noktasının site kodudur.  
     - **Protokol**: **_tcp**yazın.  
     - **Öncelik**: Configuration Manager bu alanı kullanmaz.  
     - **Ağırlık**: Configuration Manager bu alanı kullanmaz.  

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a4fa056c9c0708d2cecc0ca5f244e134e22ad10b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a8a4ce1c3d54311db18decc85f57d3e03298d339
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073718"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904689"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Sürüm 1706 ' deki yenilikler&#39;Configuration Manager
 
@@ -28,8 +28,8 @@ Geçerli dalın Configuration Manager güncelleştirme 1706, daha önce yüklü 
 > Yeni bir site yüklemek için Configuration Manager temel bir sürümünü kullanmanız gerekir.  
 >
 > Aşağıdakiler hakkında daha fazla bilgi edinin:    
-> - [Yeni siteleri yükleme](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Sitelere güncelleştirme yükleme](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Yeni siteleri yükleme](../../servers/deploy/install/installing-sites.md)  
+> - [Sitelere güncelleştirme yükleme](../../servers/manage/updates.md)  
 > - [Temel ve güncelleştirme sürümleri](../../servers/manage/updates.md#bkmk_Baselines)  
 
 Aşağıdaki bölümlerde, Configuration Manager sürüm 1706 ' de tanıtılan değişiklikler ve yeni yetenekler hakkında ayrıntılı bilgi sağlanmaktadır.  
@@ -211,7 +211,7 @@ Bu sürümde, Hızlı güncelleştirmeler için indirme süresini önemli ölç�
 Artık, Microsoft Surface sürücü güncelleştirmelerini yönetmek için Configuration Manager kullanabilirsiniz.    
 
 
-#### <a name="prerequisites"></a>Önkoşullar
+#### <a name="prerequisites"></a>Ön koşullar
 - Tüm yazılım güncelleştirme noktalarında Windows Server 2016 çalışmalıdır.    
 - Bu, kullanılabilir olması için açmanız gereken bir ön sürüm özelliğidir. Daha fazla bilgi için bkz. [Güncelleştirmelerden yayın öncesi sürüm özelliklerini kullanma](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
@@ -223,7 +223,7 @@ Artık, Microsoft Surface sürücü güncelleştirmelerini yönetmek için Confi
 
 ### <a name="configure-windows-update-for-business-deferral-policies"></a>Iş erteleme ilkeleri için Windows Update yapılandırma
 <!-- 1290890 -->
-Artık Windows 10 için Windows 10 özellik güncelleştirmeleri veya kalite güncelleştirmeleri için erteleme ilkelerini, doğrudan Windows Update Iş tarafından yönetilen Windows 10 cihazları için yapılandırabilirsiniz. **Yazılım kitaplığı** > **Windows 10 Bakımı**altındaki **iş için yeni Windows Update ilke** düğümünde erteleme ilkelerini yönetebilirsiniz.
+Artık Windows 10 için Windows 10 özellik güncelleştirmeleri veya kalite güncelleştirmeleri için erteleme ilkelerini, doğrudan Windows Update Iş tarafından yönetilen Windows 10 cihazları için yapılandırabilirsiniz. **Yazılım kitaplığı**Windows 10 bakımı altındaki **iş için yeni Windows Update ilke** düğümünde erteleme ilkelerini yönetebilirsiniz  >  **Windows 10 Servicing**.
 
 Ayrıntılar için bkz. [Windows 10 ' da iş için Windows Update tümleştirme](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
 

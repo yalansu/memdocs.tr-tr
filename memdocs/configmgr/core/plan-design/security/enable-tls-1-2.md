@@ -23,7 +23,7 @@ ms.locfileid: "81720523"
 
 Güvenli Yuva Katmanı (SSL) gibi Aktarım Katmanı Güvenliği (TLS), bir ağ üzerinden aktarılırken verilerin güvende tutulması amaçlanan bir şifreleme protokolüdür. Bu makaleler, Configuration Manager güvenli iletişimin TLS 1,2 protokolünü kullandığından emin olmak için gerekli adımları anlatmaktadır. Bu makaleler Ayrıca yaygın olarak kullanılan bileşenlere yönelik güncelleştirme gereksinimlerini ve sık karşılaşılan sorunları gidermeye yöneliktir.
 
-## <a name="enabling-tls-12"></a>TLS 1,2 etkinleştiriliyor
+## <a name="enabling-tls-12"></a>TLS 1.2'yi etkinleştirme
 
 Configuration Manager, güvenli iletişim için bir dizi farklı bileşeni kullanır. Belirli bir bağlantı için kullanılan protokol, hem istemci hem de sunucu tarafında ilgili bileşenlerin özelliklerine bağlıdır. Herhangi bir bileşen güncel değilse veya düzgün yapılandırılmamışsa, iletişim daha eski, daha az güvenli bir protokol kullanabilir. Configuration Manager tüm güvenli iletişimler için TLS 1,2 ' i destekleyecek şekilde etkinleştirmek için tüm gerekli bileşenler için TLS 1,2 ' i etkinleştirmeniz gerekir. Gerekli bileşenler ortamınıza ve kullandığınız Configuration Manager özelliklere bağımlıdır.
 

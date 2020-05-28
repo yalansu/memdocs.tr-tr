@@ -2,7 +2,7 @@
 title: Uygulamaları onaylama
 titleSuffix: Configuration Manager
 description: Configuration Manager ' de uygulama onayına yönelik ayarlar ve davranışlar hakkında bilgi edinin.
-ms.date: 04/30/2020
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fac75f0f13141c86b29d0213b3c7b06b9f603062
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: f725c1b7dc380a84cd94e666b98dbd309df3744c
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643236"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802064"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Configuration Manager uygulamaları onaylama
 
@@ -99,7 +99,7 @@ Birden fazla uyarı varsa, hangi uyarının hangi dağıtıma gideceğini belirl
 
 Kullanıcılar, yazılım merkezi 'nden isteğe bir yorum ekleyebilir. Bu açıklama Configuration Manager konsolundaki uygulama isteğini gösterir. Sürüm 1902 ' den başlayarak, bu açıklama e-postada de görüntülenir. Bu yorumu e-postaya eklemek, onaylayanlara isteği onaylama veya reddetme konusunda daha iyi bir karar vermesini sağlar.<!--3594063-->
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 
 #### <a name="to-send-email-notifications-and-take-action-on-internal-network"></a>E-posta bildirimleri göndermek ve iç ağ üzerinde işlem gerçekleştirmek için
 
@@ -108,6 +108,9 @@ Bu önkoşullara sahip alıcılar, istek bildirimi içeren bir e-posta alır. Bu
 - [İsteğe bağlı özelliği](../../core/servers/manage/install-in-console-updates.md#bkmk_options) **cihaz başına Kullanıcı için uygulama isteklerini Onayla**' yı etkinleştirin.  
 
 - [Uyarılar için e-posta bildirimini](../../core/servers/manage/use-alerts-and-the-status-system.md#to-configure-email-notification-for-alerts)yapılandırın.  
+
+    > [!NOTE]
+    > Uygulamayı dağıtan yönetici kullanıcının bir uyarı ve abonelik oluşturma izni vardır. Bu kullanıcının bu izinleri yoksa, **Yazılım Dağıtma Sihirbazı**'nın sonunda bir hata görür: "Bu işlemi gerçekleştirmek için güvenlik haklarınız yok."<!-- 2810283 -->
 
 - Birincil sitede bir sertifika kullanmak için SMS sağlayıcısı 'nı etkinleştirin.<!--SCCMDocs-pr issue 3135--> Aşağıdaki seçeneklerden birini kullanın:  
 
@@ -127,39 +130,39 @@ Bu ek isteğe bağlı önkoşullara sahip olan alıcılar, internet erişimi ola
 
 - Bulut yönetimi ağ geçidi aracılığıyla SMS Sağlayıcısı yönetim hizmetini etkinleştirin. Configuration Manager konsolunda **Yönetim** çalışma alanına gidin, **Site yapılandırması**' nı genişletin ve **sunucular ve site sistemi rolleri** düğümünü seçin. SMS sağlayıcı rolüyle sunucuyu seçin. Ayrıntılar bölmesinde, **SMS sağlayıcı** rolünü seçin ve site rolü sekmesindeki şeritte **Özellikler** ' i seçin. **Yönetim hizmeti için bulut yönetimi ağ geçidi trafiğine izin Configuration Manager verme**seçeneğini belirleyin.  
 
-  - SMS sağlayıcısı, **.NET 4.5.2** veya üstünü gerektirir.  
+- SMS sağlayıcısı, **.NET 4.5.2** veya üstünü gerektirir.  
 
-- [Bulut yönetimi ağ geçidi](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)  
+- [Bulut yönetimi ağ geçidi](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)ayarlayın.
 
-- Siteyi **bulut yönetimi** için [Azure hizmetlerine](../../core/servers/deploy/configure/azure-services-wizard.md) ekleme  
+- Siteyi **bulut yönetimi**için [Azure hizmetlerine](../../core/servers/deploy/configure/azure-services-wizard.md) ekleyin.
 
-  - [Azure AD Kullanıcı bulmayı](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc) etkinleştir  
+- [Azure AD Kullanıcı bulmayı](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc)etkinleştirin.
 
-  - Azure AD 'de ayarları el ile yapılandır:  
+- Azure AD 'de ayarları el ile yapılandır:  
 
-        1. *Genel yönetici* izinlerine sahip bir kullanıcı olarak [Azure Portal](https://portal.azure.com) gidin. **Azure Active Directory**gidin ve **uygulama kayıtları**' i seçin.  
+    1. *Genel yönetici* izinlerine sahip bir kullanıcı olarak [Azure Portal](https://portal.azure.com) gidin. **Azure Active Directory**gidin ve **uygulama kayıtları**' i seçin.  
 
-        2. Configuration Manager **bulut yönetimi** tümleştirmesi için oluşturduğunuz uygulamayı seçin.  
+    1. Configuration Manager **bulut yönetimi** tümleştirmesi için oluşturduğunuz uygulamayı seçin.  
 
-        3. **Yönet** menüsünde **kimlik doğrulaması**' nı seçin.  
+    1. **Yönet** menüsünde **kimlik doğrulaması**' nı seçin.  
 
-            1. **Yeniden yönlendirme URI 'leri** bölümünde aşağıdaki yolu yapıştırın:`https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
+        1. **Yeniden yönlendirme URI 'leri** bölümünde aşağıdaki yolu yapıştırın:`https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
 
-            2. Bulut `<CMG FQDN>` yönetimi ağ geçidi (CMG) hizmetinizin tam etki alanı adı (FQDN) ile değiştirin. Örneğin, GraniteFalls.Contoso.com.  
+        1. `<CMG FQDN>`Bulut yönetimi ağ geçidi (CMG) hizmetinizin tam etki alanı adı (FQDN) ile değiştirin. Örneğin, GraniteFalls.Contoso.com.  
 
-            3. Sonra **Kaydet**' i seçin.  
+        1. Sonra **Kaydet**' i seçin.  
 
-        4. **Yönet** menüsünde, **bildirim**' ı seçin.  
+    1. **Yönet** menüsünde, **bildirim**' ı seçin.  
 
-            1. Bildirim Düzenleme bölmesinde **oauth2AllowImplicitFlow** özelliğini bulun.  
+        1. Bildirim Düzenleme bölmesinde **oauth2AllowImplicitFlow** özelliğini bulun.  
 
-            2. Değerini **true**olarak değiştirin. Örneğin, tüm satır aşağıdaki satıra benzer görünmelidir:`"oauth2AllowImplicitFlow": true,`  
+        1. Değerini **true**olarak değiştirin. Örneğin, tüm satır aşağıdaki satıra benzer görünmelidir:`"oauth2AllowImplicitFlow": true,`  
 
-            3. **Kaydet**’i seçin.  
+        1. **Kaydet**’i seçin.  
 
 ### <a name="configure-email-approval"></a>E-posta onayını yapılandırma
 
-1. Configuration Manager konsolunda, bir uygulamayı bir kullanıcı koleksiyonuna kullanılabilir olarak [dağıtın](deploy-applications.md) . **Dağıtım ayarları** sayfasında, onay için etkinleştirin. Ardından, bildirim almak için bir veya daha fazla e-posta adresi girin. E-posta adreslerini noktalı virgül (`;`) ile ayırın.  
+1. Configuration Manager konsolunda, bir uygulamayı bir kullanıcı koleksiyonuna kullanılabilir olarak [dağıtın](deploy-applications.md) . **Dağıtım ayarları** sayfasında, onay için etkinleştirin. Ardından, bildirim almak için bir veya daha fazla e-posta adresi girin. E-posta adreslerini noktalı virgül () ile ayırın `;` .  
 
      > [!Note]  
      > Azure AD kuruluşunuzda e-postayı alan herkes isteği onaylayabilir. İşlem yapmak istemediğiniz müddetçe e-postayı başkalarına iletmeyin.  
