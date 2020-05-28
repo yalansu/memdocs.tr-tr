@@ -2,7 +2,7 @@
 title: Sürüm 2002’deki yenilikler
 titleSuffix: Configuration Manager
 description: Geçerli dalın Configuration Manager sürüm 2002 ' de tanıtılan değişiklikler ve yeni yetenekler hakkında ayrıntılı bilgi alın.
-ms.date: 05/11/2020
+ms.date: 05/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1aca9058b0f095b7f25b345c15eed1446dcf61d2
-ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
+ms.openlocfilehash: afdcc608133d306042c9c6dc817396bb2fc3f387
+ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83381562"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84126490"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 2002 ' deki yenilikler
 
@@ -328,6 +328,15 @@ Daha fazla bilgi için bkz. [Office 365 güncelleştirmelerini bağlantısı kes
 
 <!-- 5229962 -->
 Configuration Manager, cihazları Microsoft Defender ATP 'ye ekleme desteğini genişletti. Daha fazla bilgi için bkz. [Microsoft Defender Gelişmiş tehdit koruması](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices).
+
+## <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a>Microsoft Endpoint Manager Yönetim Merkezi aracılığıyla Microsoft Defender ATP 'ye Configuration Manager istemcileri ekleme
+<!--5691658-->
+Artık, yönetilen istemcileri Configuration Manager için Microsoft Defender ATP uç noktası algılama ve yanıt (EDR) ekleme ilkelerini dağıtabilirsiniz. Bu istemciler Azure AD veya MDM kaydı gerektirmez ve ilke, Azure AD grupları yerine ConfigMgr koleksiyonlarına hedeflenmiş olur.
+
+Bu özellik, müşterilerin hem Intune Configuration Manager MDM 'yi hem de istemci EDR/ATP ekleme 'yi tek bir yönetim deneyiminden yönetmesine olanak tanır-Microsoft Uç Nokta Yöneticisi Yönetim Merkezi. Daha fazla bilgi için bkz. [Intune 'da Endpoint Security Için Endpoint Detection ve yanıt ilkesi](../../../../intune/protect/endpoint-security-edr-policy.md).
+
+> [!Important]
+> Bu özellik için ortamınızda yüklü olan [KB4563473](https://support.microsoft.com/help/4563473)düzeltme toplaması gerekir.
 
 ### <a name="improvements-to-bitlocker-management"></a>BitLocker yönetimine yönelik iyileştirmeler
 
