@@ -27,7 +27,7 @@ Bir işletim sistemi görüntüsünü bir hedef bilgisayara otomatik olarak yük
 
 Ortamınızdaki bilgisayarlara bir işletim sistemi dağıtmak için birden çok senaryo vardır. Çoğu durumda, görev dizisi oluşturma Sihirbazı 'nda bir görev dizisi oluşturun ve **var olan bir görüntü paketini yükler** ' i seçin. Bu seçenek, işletim sistemini yükleyen, Kullanıcı ayarlarını geçirirken, yazılım güncelleştirmelerini uygulayan ve Uygulamaları yükleyen bir görev sırası oluşturur.
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 
 Bir işletim sistemini yüklemek için bir görev dizisi oluşturmadan önce, aşağıdaki gereksinimlerin yerinde olması gerekir:
 
@@ -70,7 +70,7 @@ Bir işletim sistemini yüklemek için bir görev dizisi oluşturmadan önce, a�
 
     - **İşletim sistemini yükleyen hedef bilgisayarı bölümle ve biçimlendirin**: görev dizisinin işletim sistemini yüklemeden önce hedef bilgisayarı bölümleyip biçimlendirmesini isteyip istemediğinizi belirtin.  
 
-    - **Ürün anahtarı**: gerekirse Windows ürün anahtarını belirtin. Kodlanmış toplu lisans anahtarlarını ve standart ürün anahtarlarını belirtebilirsiniz. Kodsuz bir ürün anahtarı kullanırsanız, beş karakterlik her grup bir tire (`-`) ile ayrılmalıdır. Örneğin: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
+    - **Ürün anahtarı**: gerekirse Windows ürün anahtarını belirtin. Kodlanmış toplu lisans anahtarlarını ve standart ürün anahtarlarını belirtebilirsiniz. Kodsuz bir ürün anahtarı kullanırsanız, beş karakterlik her grup bir tire () ile ayrılmalıdır `-` . Örneğin: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
     - **Sunucu lisanslama modu**: Sunucu lisansının **Bilgisayar başına**, **Sunucu başına**olup olmadığını veya lisans belirtilmediğini belirtir. Sunucu lisansı **Sunucu başına**ise maksimum sunucu bağlantısı sayısını da belirtin.  
 

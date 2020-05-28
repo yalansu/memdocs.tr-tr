@@ -29,7 +29,7 @@ Configuration Manager site sistem rollerinin çoğu yapılandırma seçeneği ke
 > [!Important]
 > Uygulama kataloğunun Silverlight Kullanıcı deneyimi, güncel dal sürümü 1806 ' den itibaren desteklenmez. Sürüm 1906 ' den başlayarak, güncelleştirilmiş istemciler Kullanıcı tarafından kullanılabilen uygulama dağıtımları için yönetim noktasını otomatik olarak kullanır. Ayrıca yeni uygulama kataloğu rolleri yükleyemezsiniz. Sürüm 1910 ile uygulama kataloğu rolleri için destek sona erer.  
 >
-> Daha fazla bilgi için aşağıdaki makalelere bakın:
+> Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 >
 > - [Yazılım merkezini yapılandırma](../../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Kaldırılan ve kullanım dışı bırakılan özellikler](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -42,7 +42,7 @@ Uygulama Kataloğu web sitesi noktasını ayarlama hakkında daha fazla bilgi i�
 > [!Important]
 > Uygulama kataloğunun Silverlight Kullanıcı deneyimi, güncel dal sürümü 1806 ' den itibaren desteklenmez. Sürüm 1906 ' den başlayarak, güncelleştirilmiş istemciler Kullanıcı tarafından kullanılabilen uygulama dağıtımları için yönetim noktasını otomatik olarak kullanır. Ayrıca yeni uygulama kataloğu rolleri yükleyemezsiniz. Sürüm 1910 ile uygulama kataloğu rolleri için destek sona erer.  
 >
-> Daha fazla bilgi için aşağıdaki makalelere bakın:
+> Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 >
 > - [Yazılım merkezini yapılandırma](../../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Kaldırılan ve kullanım dışı bırakılan özellikler](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -74,7 +74,7 @@ Site sunucusuna yüklenen dağıtım noktaları için, site sistemi yükleme hes
 
 ## <a name="enrollment-point"></a><a name="BKMK_Enrollment_Point"></a>Kayıt noktası  
 
-Kayıt noktaları, macOS bilgisayarlarını yüklemek ve şirket içi mobil cihaz yönetimi ile yönettiğiniz cihazları kaydetmek için kullanılır. Daha fazla bilgi için aşağıdaki makalelere bakın:  
+Kayıt noktaları, macOS bilgisayarlarını yüklemek ve şirket içi mobil cihaz yönetimi ile yönettiğiniz cihazları kaydetmek için kullanılır. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:  
 
 - [Mac bilgisayarlara istemci dağıtma](../../../clients/deploy/deploy-clients-to-macs.md)  
 

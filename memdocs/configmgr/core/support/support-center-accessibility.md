@@ -43,27 +43,27 @@ Ayrıca, Destek Merkezi, Destek Merkezi Görüntüleyicisi ve günlük Görünt�
 |Görev  |Klavye kısayolu  |
 |---------|---------|
 |Uygulama yapılandırma seçeneklerini aç |**F4**|
-|Çık     |**Alt** + **F4**|
+|Çıkış     |**Alt**  +  **F4**|
 |İstemci ayrıntılarını yükleme veya yenileme<br>(Destek Merkezi **Istemci ayrıntıları** sekmesinde)|**F5**|
 |Seçili ilke görünümünü yükle<br>(Destek Merkezi **Istemci ilkesi** sekmesinde)|**F5**|
 |İlkeyi yenileme<br>(bir ilke seçildikten sonra Destek Merkezi **Istemci ilkesi** sekmesinde)|**F5** |
-|MOF olarak Kopyala<br>(Destek Merkezi **Istemci ilkesi** sekmesinde, ilke seçtikten sonra, WMI olayları için de kullanılabilir)|**CTRL** + **Shift**SHIFT + **C** |
-|İlkeyi yerel istemci MOF olarak Kopyala<br>(bir ilke seçildikten sonra Destek Merkezi **Istemci ilkesi** sekmesinde)|**CTRL** + **Shift**SHIFT + **X** |
-|İlke iste<br>(Destek Merkezi **Istemci ilkesi** sekmesinde)|**CTRL** + **R** |
-|İlkeyi değerlendirme<br>(Destek Merkezi **Istemci ilkesi** sekmesinde)|**CTRL** + **E** |
+|MOF olarak Kopyala<br>(Destek Merkezi **Istemci ilkesi** sekmesinde, ilke seçtikten sonra, WMI olayları için de kullanılabilir)|**CTRL**  +  **SHIFT**  +  **C** |
+|İlkeyi yerel istemci MOF olarak Kopyala<br>(bir ilke seçildikten sonra Destek Merkezi **Istemci ilkesi** sekmesinde)|**CTRL**  +  **SHIFT**  +  **X** |
+|İlke iste<br>(Destek Merkezi **Istemci ilkesi** sekmesinde)|**CTRL**  +  **R** |
+|İlkeyi değerlendirme<br>(Destek Merkezi **Istemci ilkesi** sekmesinde)|**CTRL**  +  **E** |
 |İçerik görünümünü yükle veya Yenile<br>(Destek Merkezi **içeriği** sekmesinde)|**F5** |
 |Envanter yükle<br>(Destek Merkezi **Envanter** sekmesinde)|**F5** |
 |Sorun gidermeye başla<br>(Destek Merkezi **sorun giderme** sekmesinde)|**F5** |
-|Veri paketi aç<br>(Destek Merkezi Görüntüleyicisi **giriş** sekmesinde)|**CTRL** + **O** |
-|Günlük dosyalarını aç<br>(Destek Merkezi **günlükleri** sekmesinde ve günlük Görüntüleyici penceresinde)|**CTRL** + **O** |
-|Günlük dosyalarını geçerli görünümde aç<br>(Destek Merkezi **günlükleri** sekmesinde ve günlük Görüntüleyici penceresinde)|**CTRL** + **Shift**Shift + **O** |
-|Günlük dosyalarını yeni bir günlük Görüntüleyici penceresinde aç<br>(Destek Merkezi **günlükleri** sekmesinde ve günlük Görüntüleyici penceresinde)|**CTRL** + **N** |
-|Tüm günlük dosyalarını kapat<br>(Destek Merkezi **günlükleri** sekmesinde ve **günlük Görüntüleyici** penceresinde)|**CTRL** + **W** |
-|Günlük dosyalarında ara| - **CTRL** + **F**: arama dizesi girmek için **bul** iletişim kutusunu açar<br> - **F3**: sonraki eşleşmeyi bul<br> - **SHIFT** + **F3**: önceki eşleşmeyi bul|
-|Bir hata kodu arama<br>( **Günlükler** sekmesinde ve **günlük Görüntüleyici** penceresinde)|**CTRL** + **L** |
-|Bir günlük dosyasından Kopyala| - **CTRL** + **C**: günlük dosyası metnini kopyalar<br> - **CTRL** + **Shift**SHIFT + **C**: günlük girişini biçimlendirme olmadan kopyalar|
-|Günlük dosyası metnini kullanarak hızlı filtre<br>( **Günlükler** sekmesinde ve **günlük Görüntüleyici** penceresinde)|**CTRL** + **Shift**SHIFT + **C** |
-|Günlük dosyasına not ekleme<br>( **Günlükler** sekmesinde ve **günlük Görüntüleyici** penceresinde)|**CTRL** + **Shift**SHIFT + **N** <sup>[Note 1](#bkmk_note1)</sup>|
+|Veri paketi aç<br>(Destek Merkezi Görüntüleyicisi **giriş** sekmesinde)|**CTRL**  +  **O** |
+|Günlük dosyalarını aç<br>(Destek Merkezi **günlükleri** sekmesinde ve günlük Görüntüleyici penceresinde)|**CTRL**  +  **O** |
+|Günlük dosyalarını geçerli görünümde aç<br>(Destek Merkezi **günlükleri** sekmesinde ve günlük Görüntüleyici penceresinde)|**CTRL**  +  **SHIFT**  +  **O** |
+|Günlük dosyalarını yeni bir günlük Görüntüleyici penceresinde aç<br>(Destek Merkezi **günlükleri** sekmesinde ve günlük Görüntüleyici penceresinde)|**CTRL**  +  **N** |
+|Tüm günlük dosyalarını kapat<br>(Destek Merkezi **günlükleri** sekmesinde ve **günlük Görüntüleyici** penceresinde)|**CTRL**  +  **W** |
+|Günlük dosyalarında ara| - **CTRL**  +  **F**: arama dizesi girmek için **bul** iletişim kutusunu açar<br> - **F3**: sonraki eşleşmeyi bul<br> - **SHIFT**  +  **F3**: önceki eşleşmeyi bul|
+|Bir hata kodu arama<br>( **Günlükler** sekmesinde ve **günlük Görüntüleyici** penceresinde)|**CTRL**  +  **L** |
+|Bir günlük dosyasından Kopyala| - **CTRL**  +  **C**: günlük dosyası metnini kopyalar<br> - **CTRL**  +  **SHIFT**  +  **C**: günlük girişini biçimlendirme olmadan kopyalar|
+|Günlük dosyası metnini kullanarak hızlı filtre<br>( **Günlükler** sekmesinde ve **günlük Görüntüleyici** penceresinde)|**CTRL**  +  **SHIFT**  +  **C** |
+|Günlük dosyasına not ekleme<br>( **Günlükler** sekmesinde ve **günlük Görüntüleyici** penceresinde)|**CTRL**  +  **SHIFT**  +  **N** <sup>[Note 1](#bkmk_note1)</sup>|
 |Yardım 'ı aç|**F1**|
 
 

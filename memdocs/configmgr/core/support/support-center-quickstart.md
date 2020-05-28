@@ -27,11 +27,11 @@ Destek Merkezi, sorun giderme ve gerçek zamanlı günlük görüntüleme gibi g
 
 
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Configuration Manager istemcisinde yerel yönetici hakları  
 
-- Destek Merkezi Yükleyicisi. Bu dosya, adresindeki `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi`site sunucusudur. Daha fazla bilgi için bkz. [Destek Merkezi-yüklemesi](support-center.md#install).  
+- Destek Merkezi Yükleyicisi. Bu dosya, adresindeki site sunucusudur `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi` . Daha fazla bilgi için bkz. [Destek Merkezi-yüklemesi](support-center.md#install).  
 
 
 
@@ -43,7 +43,7 @@ Destek Merkezi, sorun giderme ve gerçek zamanlı günlük görüntüleme gibi g
 
 3.  Şeridin Giriş sekmesinde, **seçili verileri topla**' yı seçin. Varsayılan olarak, destek merkezi yalnızca en düşük veri kümesini toplar: günlük dosyaları, istemci yapılandırması ve işletim sistemi.  
 
-4.  Sorun giderme paketi dosyasını (. zip) bilgisayardaki bir klasöre kaydedin. Varsayılan olarak, dosya adı aşağıdaki örneğe benzer: `Support_c885cdfed3c7482bba4f9e662978ec07.zip`.  
+4.  Sorun giderme paketi dosyasını (. zip) bilgisayardaki bir klasöre kaydedin. Varsayılan olarak, dosya adı aşağıdaki örneğe benzer: `Support_c885cdfed3c7482bba4f9e662978ec07.zip` .  
 
 
 

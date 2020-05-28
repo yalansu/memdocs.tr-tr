@@ -10,12 +10,12 @@ ms.assetid: 69550b35-bcdb-4b47-bbec-b3c8bc92bb7b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 96cce5d4aaa352177b1c24ff78cf15e90ea6e823
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4a9ae791582911f91e5f76b841248ad5085d8170
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713712"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879812"
 ---
 # <a name="monitor-database-replication"></a>Veritabanı çoğaltmasını izleme
 
@@ -122,7 +122,10 @@ RLA 'yı Configuration Manager konsolunda veya bir komut isteminde çalıştır�
 
 - Configuration Manager konsolunda çalıştırmak için: **izleme** çalışma alanına gidin ve **veritabanı çoğaltması** düğümünü seçin. Çözümlemek istediğiniz çoğaltma bağlantısını seçin ve ardından şeritte **Çoğaltma Bağlantısı Çözümleyicisi**' yi seçin.  
 
-- Komut isteminde çalıştırmak için aşağıdaki komutu yazın:`%ProgramFiles(x86)%\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+- Komut isteminde çalıştırmak için aşağıdaki komutu yazın:`%ProgramFiles(x86)%\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+
+    > [!IMPORTANT]
+    > Sürüm 1910 ' den başlayarak, bu yol klasörü kullanacak şekilde değiştirilmiştir `Microsoft Endpoint Manager` . Dosyanın başka bir klasörde mevcut olabilecek eski bir sürümünü kullandığınızdan emin olun.
 
 RLA çalıştırdığınızda, bir dizi tanı kuralını ve denetimini kullanarak sorunları algılar. Aracın tanımladığı sorunları görüntüleyebilirsiniz. Bir sorunu çözmeye yönelik yönergeler olduğunda, bunları görüntüler. RLA bir sorunu otomatik olarak düzeltebiliyorsa, size bu seçeneği sunar.
 

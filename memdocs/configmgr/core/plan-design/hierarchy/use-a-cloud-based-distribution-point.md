@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7a14b79a9e7fd91b6470836b4271a669725065bd
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 52c2b70d2b094d5a89d80aafa61f1db67a53816f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771160"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83987721"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Configuration Manager bir bulut dağıtım noktası kullanın
 
@@ -174,7 +174,9 @@ Hiyerarşinizde bir bulut dağıtım noktası kullandığınızda, yedekleme ve 
 
 ### <a name="deployment-settings"></a>Dağıtım ayarları
 
-- **Görev dizisini çalıştırarak içeriği gerektiğinde yerel olarak indirme**seçeneğiyle bir görev dizisi dağıttığınızda, yönetim noktası bir bulut dağıtım noktasını içerik konumu olarak içermez. İstemcilerin bir bulut dağıtım noktası kullanabilmesi için **görev sırasını başlatmadan önce tüm içeriği yerel olarak indirme** seçeneğiyle birlikte görev sırasını dağıtın.  
+- **Çalışan görev dizisi için gerektiğinde içeriği yerel olarak indirin**. Sürüm 1910 ' den başlayarak, görev dizisi altyapısı, içerik etkinleştirilmiş bir CMG veya bulut dağıtım noktasından isteğe bağlı paket indirebilir. Bu değişiklik, Internet tabanlı cihazlara Windows 10 yerinde yükseltme dağıtımlarınızla ek esneklik sağlar.
+
+- **Görev sırasını başlatmadan önce tüm içeriği yerel olarak indirin**. Configuration Manager sürüm 1906 ve önceki sürümlerde, **çalışan görev sırası için gerektiğinde içeriği yerel olarak indir** gibi diğer seçenekler bu senaryoda çalışmaz. Görev sırası altyapısı, bir bulut kaynağından içerik indiremez. Configuration Manager istemci, görev dizisini başlatmadan önce bulut kaynağındaki içeriği indirmelidir. Gereksinimlerinizi karşılamak için gerekliyse, sürüm 1910 ' de bu seçeneği kullanmaya devam edebilirsiniz.
 
 - Bulut dağıtım noktası, **dağıtım noktasından program çalıştırma**seçeneğiyle paket dağıtımlarını desteklemez. Dağıtım **noktasından Içerik indirmek ve yerel olarak çalıştırmak**için dağıtım seçeneğini kullanın.  
 

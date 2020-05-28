@@ -40,15 +40,15 @@ OneTrace, şöyle birçok günlük dosyası türüyle çalışmaktadır:
 - Windows 10 ' da ETW günlük dosyası Windows Update
 - Windows 7 & Windows Update günlük dosyası Windows 8.1
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - .NET Framework sürüm 4,6 veya üzeri
 
 ## <a name="install"></a>Yükleme
 
-OneTrace, Destek Merkezi ile yüklenir. Site sunucusunda aşağıdaki yolda bulunan destek merkezi yükleyicisini bulun: `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi`.
+OneTrace, Destek Merkezi ile yüklenir. Site sunucusunda aşağıdaki yolda bulunan destek merkezi yükleyicisini bulun: `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi` .
 
-Varsayılan olarak, OneTrace uygulaması konumunda `C:\Program Files (x86)\Configuration Manager Support Center\CMPowerLogViewer.exe`yüklüdür.
+Varsayılan olarak, OneTrace uygulaması konumunda yüklüdür `C:\Program Files (x86)\Configuration Manager Support Center\CMPowerLogViewer.exe` .
 
 > [!Note]  
 > Destek Merkezi ve OneTrace Windows Presentation Foundation (WPF) kullanır. Bu bileşen Windows PE 'de kullanılamaz. Görev sırası dağıtımlarıyla önyükleme görüntülerinde CMTrace 'i kullanmaya devam edin.  
@@ -69,7 +69,7 @@ Günlük gruplarını göstermek için **Görünüm** menüsüne gidin ve **gün
 
 ### <a name="customize-log-groups"></a>Günlük gruplarını Özelleştir
 
-Bu grupları, varsayılan olarak aşağıdaki yolda olan yapılandırma XML 'sini değiştirerek özelleştirebilirsiniz: `C:\Program Files (x86)\Configuration Manager Support Center\LogGroups.xml`.
+Bu grupları, varsayılan olarak aşağıdaki yolda olan yapılandırma XML 'sini değiştirerek özelleştirebilirsiniz: `C:\Program Files (x86)\Configuration Manager Support Center\LogGroups.xml` .
 
 Aşağıdaki örnek, varsayılan yapılandırma dosyasının bir parçasıdır:
 
@@ -89,13 +89,13 @@ Aşağıdaki örnek, varsayılan yapılandırma dosyasının bir parçasıdır:
 </LogGroups>
 ```
 
-`GroupType` Özelliği aşağıdaki değerleri kabul eder:
+`GroupType`Özelliği aşağıdaki değerleri kabul eder:
 
 - `0`: Bilinmiyor veya diğer
 - `1`: Configuration Manager istemci günlükleri
 - `2`: Configuration Manager sunucusu günlükleri
 
-`GroupFilePath` Özelliği, günlük dosyaları için açık bir yol içerebilir. Boşsa OneTrace, Grup türü için kayıt defteri yapılandırmasına bağımlıdır. Örneğin, ayarlarsanız `GroupType=1`, varsayılan olarak OneTrace, gruptaki günlüklere otomatik olarak bakar `C:\Windows\CCM\Logs` . Bu örnekte, belirtmeniz `GroupFilePath`gerekmez.
+`GroupFilePath`Özelliği, günlük dosyaları için açık bir yol içerebilir. Boşsa OneTrace, Grup türü için kayıt defteri yapılandırmasına bağımlıdır. Örneğin, ayarlarsanız `GroupType=1` , varsayılan olarak OneTrace, gruptaki günlüklere otomatik olarak bakar `C:\Windows\CCM\Logs` . Bu örnekte, belirtmeniz gerekmez `GroupFilePath` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -43,23 +43,23 @@ Bu işlem, Web sunucusuna bu bileşenleri yüklemek için MBAMWebSiteInstaller. 
 
 - `-SqlInstanceName <InstanceName>`: Birincil site veritabanı için SQL Server örnek adı. SQL varsayılan örneği kullanıyorsa bu parametreyi eklemeyin.
 
-- `-SqlDatabaseName <DatabaseName>`(gerekli): birincil site veritabanının adı (örneğin `CM_ABC`,).
+- `-SqlDatabaseName <DatabaseName>`(gerekli): birincil site veritabanının adı (örneğin,) `CM_ABC` .
 
 - `-ReportWebServiceUrl <ReportWebServiceUrl>`: Birincil sitenin raporlama hizmet noktasının Web hizmeti URL 'SI. **Reporting Services Configuration Manager** **Web hizmeti URL 'si** değeridir.
 
     > [!NOTE]
     > Bu parametre, yönetim ve izleme Web sitesinden bağlantılı **Kurtarma denetim raporunu** yüklemektir. Varsayılan olarak Configuration Manager diğer BitLocker yönetim raporlarını içerir.
 
-- `-HelpdeskUsersGroupName <DomainUserGroup>`: Örneğin, `contoso\BitLocker help desk users`. Üyeleri yönetim ve izleme Web sitesinin **TPM** ve **sürücü kurtarma** alanlarında erişimi olan bir etki alanı kullanıcı grubu. Bu seçenekleri kullanırken, bu rolün, kullanıcının etki alanı ve hesap adı da dahil olmak üzere tüm alanları doldurması gerekir.
+- `-HelpdeskUsersGroupName <DomainUserGroup>`: Örneğin, `contoso\BitLocker help desk users` . Üyeleri yönetim ve izleme Web sitesinin **TPM** ve **sürücü kurtarma** alanlarında erişimi olan bir etki alanı kullanıcı grubu. Bu seçenekleri kullanırken, bu rolün, kullanıcının etki alanı ve hesap adı da dahil olmak üzere tüm alanları doldurması gerekir.
 
-- `-HelpdeskAdminsGroupName <DomainUserGroup>`: Örneğin, `contoso\BitLocker help desk admins`. Üyeleri yönetim ve izleme Web sitesinin tüm kurtarma bölgelerine erişimi olan bir etki alanı kullanıcı grubu. Kullanıcıların sürücülerinin kurtarılmasına yardımcı olurken, bu rolün yalnızca kurtarma anahtarını girmesi gerekir.
+- `-HelpdeskAdminsGroupName <DomainUserGroup>`: Örneğin, `contoso\BitLocker help desk admins` . Üyeleri yönetim ve izleme Web sitesinin tüm kurtarma bölgelerine erişimi olan bir etki alanı kullanıcı grubu. Kullanıcıların sürücülerinin kurtarılmasına yardımcı olurken, bu rolün yalnızca kurtarma anahtarını girmesi gerekir.
 
-- `-MbamReportUsersGroupName <DomainUserGroup>`: Örneğin, `contoso\BitLocker report users`. Üyeleri yönetim ve izleme Web sitesinin **raporlar** alanına salt okuma erişimi olan bir etki alanı kullanıcı grubu.
+- `-MbamReportUsersGroupName <DomainUserGroup>`: Örneğin, `contoso\BitLocker report users` . Üyeleri yönetim ve izleme Web sitesinin **raporlar** alanına salt okuma erişimi olan bir etki alanı kullanıcı grubu.
 
     > [!NOTE]
     > Yükleyici betiği, **-helpdeskusersgroupname**, **-helpdeskadminsgroupname**ve **-mbamreportusersgroupname** parametrelerinde belirttiğiniz etki alanı kullanıcı gruplarını oluşturmaz. Betiği çalıştırmadan önce, bu grupları seçtiğinizden emin olun.
     >
-    > **-Helpdeskusersgroupname**, **-helpdeskadminsgroupname**ve **-mbamreportusersgroupname** parametrelerini belirttiğinizde, hem etki alanı adını hem de grup adını belirttiğinizden emin olun. `"domain\user_group"` biçimini kullanın. Etki alanı adını dışmayın. Etki alanı adı veya grup adı boşluk veya özel karakterler içeriyorsa, parametreyi tırnak işaretleri (`"`) içine alın.
+    > **-Helpdeskusersgroupname**, **-helpdeskadminsgroupname**ve **-mbamreportusersgroupname** parametrelerini belirttiğinizde, hem etki alanı adını hem de grup adını belirttiğinizden emin olun. `"domain\user_group"` biçimini kullanın. Etki alanı adını dışmayın. Etki alanı adı veya grup adı boşluk veya özel karakterler içeriyorsa, parametreyi tırnak işaretleri () içine alın `"` .
 
 - `-SiteInstall Both`: Hangi bileşenlerin yükleneceğini belirtin. Geçerli seçenekler şunlardır:
   - `Both`: Her iki bileşeni de yükler
@@ -68,7 +68,7 @@ Bu işlem, Web sunucusuna bu bileşenleri yüklemek için MBAMWebSiteInstaller. 
 
 - `-IISWebSite`: Betiğin MBAMWEB uygulamalarını yüklediği Web sitesi. Varsayılan olarak, IIS varsayılan Web sitesini kullanır. Bu parametreyi kullanmadan önce özel Web sitesini oluşturun.
 
-- `-InstallDirectory`: Betiğin Web uygulaması dosyalarını yüklediği yol. Varsayılan olarak, bu yol olur `C:\inetpub`. Bu parametreyi kullanmadan önce özel dizini oluşturun.
+- `-InstallDirectory`: Betiğin Web uygulaması dosyalarını yüklediği yol. Varsayılan olarak, bu yol olur `C:\inetpub` . Bu parametreyi kullanmadan önce özel dizini oluşturun.
 
 - `-Uninstall`: BitLocker yönetim yardım masası/Self Servis Web portalı sitelerini daha önce yüklenmiş oldukları bir Web sunucusunda kaldırır.
 
@@ -80,7 +80,7 @@ Hedef Web sunucusunda, aşağıdaki işlemleri yapın:
 > [!NOTE]
 > Sitenizin tasarımına bağlı olarak, betiği birden çok kez çalıştırmanız gerekebilir. Örneğin, yönetim ve izleme Web sitesini yüklemek için betiği yönetim noktasında çalıştırın. Sonra Self Servis Portalı 'nı yüklemek için tek başına bir Web sunucusunda yeniden çalıştırın.
 
-1. Aşağıdaki dosyaları `SMSSETUP\BIN\X64` , site sunucusundaki Configuration Manager yükleme klasöründen hedef sunucudaki bir yerel klasöre kopyalayın:
+1. Aşağıdaki dosyaları, `SMSSETUP\BIN\X64` site sunucusundaki Configuration Manager yükleme klasöründen hedef sunucudaki bir yerel klasöre kopyalayın:
 
     - `MBAMWebSite.cab`
     - `MBAMWebSiteInstaller.ps1`

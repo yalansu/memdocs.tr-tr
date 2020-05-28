@@ -26,7 +26,7 @@ Bu makale, Configuration Manager tanılama ve kullanım verileri hakkında sık 
 
 ## <a name="can-i-turn-off-diagnostic-and-usage-data"></a><a name="bkmk_off"></a>Tanılama ve kullanım verilerini kapatabilir miyim?
 
-Sitenin veri gönderdiği zaman yönetimine yardımcı olmak için, hizmet bağlantı noktasını çevrimdışı modda kullanın. Ardından, verileri el ile göndermek için hizmet bağlantı aracını kullanın. Daha fazla bilgi için aşağıdaki makalelere bakın:
+Sitenin veri gönderdiği zaman yönetimine yardımcı olmak için, hizmet bağlantı noktasını çevrimdışı modda kullanın. Ardından, verileri el ile göndermek için hizmet bağlantı aracını kullanın. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 - [Hizmet bağlantı noktası hakkında](../../servers/deploy/configure/about-the-service-connection-point.md)
 - [Hizmet bağlantısı aracını kullanma](../../servers/manage/use-the-service-connection-tool.md)

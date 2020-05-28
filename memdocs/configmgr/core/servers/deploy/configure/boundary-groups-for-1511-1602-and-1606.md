@@ -41,7 +41,7 @@ Sınır gruplarını ayarlarken, sınır grubuna bir veya daha fazla sınır ekl
 
 #### <a name="to-create-a-boundary-group"></a>Sınır grubu oluşturmak için  
 
-1.  Configuration Manager konsolunda, **Yönetim** > **hiyerarşisi yapılandırması** >  **sınır grupları**' nı seçin.  
+1.  Configuration Manager konsolunda, **Yönetim**  >  **hiyerarşisi yapılandırması**  >   **sınır grupları**' nı seçin.  
 
 2.  **Giriş** sekmesinde, **Oluştur** grubunda, **sınır grubu oluştur**' u seçin.  
 
@@ -51,7 +51,7 @@ Sınır gruplarını ayarlarken, sınır grubuna bir veya daha fazla sınır ekl
 
 #### <a name="to-set-up-a-boundary-group"></a>Sınır grubu ayarlamak için  
 
-1.  Configuration Manager konsolunda, **Yönetim** > **hiyerarşisi yapılandırması** >  **sınır grupları**' nı seçin.  
+1.  Configuration Manager konsolunda, **Yönetim**  >  **hiyerarşisi yapılandırması**  >   **sınır grupları**' nı seçin.  
 
 2.  Değiştirmek istediğiniz sınır grubunu seçin.  
 
@@ -87,7 +87,7 @@ Sınır gruplarını ayarlarken, sınır grubuna bir veya daha fazla sınır ekl
 
 #### <a name="to-associate-a-content-deployment-server-or-management-point-with-a-boundary-group"></a>Bir içerik dağıtım sunucusunu veya yönetim noktasını bir sınır grubuyla ilişkilendirmek için  
 
-1.  Configuration Manager konsolunda, **Yönetim** > **hiyerarşisi yapılandırması** >  **sınır grupları**' nı seçin.  
+1.  Configuration Manager konsolunda, **Yönetim**  >  **hiyerarşisi yapılandırması**  >   **sınır grupları**' nı seçin.  
 
 2.  Değiştirmek istediğiniz sınır grubunu seçin.  
 
@@ -101,7 +101,7 @@ Sınır gruplarını ayarlarken, sınır grubuna bir veya daha fazla sınır ekl
 
 #### <a name="to-enable-use-of-preferred-management-points"></a>Tercih edilen yönetim noktalarının kullanımını etkinleştirmek için  
 
-1.  Configuration Manager konsolunda, **Yönetim** > **Site yapılandırması** > **siteler**' i seçin ve ardından **giriş** sekmesinde **Hiyerarşi ayarları**' nı seçin.  
+1.  Configuration Manager konsolunda, **Yönetim**  >  **Site yapılandırması**  >  **siteler**' i seçin ve ardından **giriş** sekmesinde **Hiyerarşi ayarları**' nı seçin.  
 
 2.  **Hiyerarşi ayarları**'nın **genel** sekmesinde **istemciler sınır gruplarında belirtilen yönetim noktalarını kullanmayı tercih eder**' i seçin.  
 
@@ -109,7 +109,7 @@ Sınır gruplarını ayarlarken, sınır grubuna bir veya daha fazla sınır ekl
 
 #### <a name="to-set-up-a-fallback-site-for-automatic-site-assignment"></a>Otomatik site ataması için bir geri dönüş sitesi ayarlamak için  
 
-1. Configuration Manager konsolunda, **Yönetim** > **Site yapılandırması** >  **siteler**' i seçin.  
+1. Configuration Manager konsolunda, **Yönetim**  >  **Site yapılandırması**  >   **siteler**' i seçin.  
 
 2. **Giriş** sekmesinde, **siteler** grubunda, **Hiyerarşi ayarları**' nı seçin.  
 
