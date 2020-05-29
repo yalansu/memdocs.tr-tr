@@ -6,7 +6,7 @@ keywords: Intune Veri Ambarı
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6127b365a04ad48a9cbaa98bdef821c4d1334181
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f095c011f85ea280b6bf1c37140152ac27ef8817
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79325574"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165218"
 ---
 # <a name="reference-for-user-device-association-entity"></a>Kullanıcı Cihaz İlişkisi varlığı için başvuru
 
@@ -32,7 +32,7 @@ ms.locfileid: "79325574"
 ## <a name="userdeviceassociations"></a>userDeviceAssociations
 
 
-|        Adı        |                                           Açıklama                                            |        Örnek         |
+|        Name        |                                           Açıklama                                            |        Örnek         |
 |--------------------|--------------------------------------------------------------------------------------------------|------------------------|
 |      userKey       |              Kullanıcının veri ambarındaki benzersiz tanımlayıcısı. (Yedek anahtar).               |          123           |
 |     deviceKey      |                      Cihazın veri ambarındaki benzersiz tanımlayıcısı.                      |          123           |

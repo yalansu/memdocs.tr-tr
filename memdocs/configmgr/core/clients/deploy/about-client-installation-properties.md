@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ccfb523cc1abc3a64d396f32d55a4dc4551987c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 12fee834e4f384cc180658a8e58cf3920a907831
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428606"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153447"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Configuration Manager içindeki istemci yükleme parametreleri ve özellikleri hakkında
 
@@ -80,6 +80,8 @@ CCMSetup. exe için kullanılabilir komut satırı parametrelerini gösterir.
 
 Dosya yükleme konumunu belirtir. Yerel veya UNC yolunu kullanın. Cihaz, sunucu ileti bloğu (SMB) protokolünü kullanarak dosyaları indirir. **/Source**kullanmak için, istemci yüklemesine yönelik Windows Kullanıcı hesabının konum üzerinde **okuma** izinleri olması gerekir.
 
+CCMSetup 'ın içeriği nasıl indirdiği hakkında daha fazla bilgi için bkz. [sınır grupları-istemci yüklemesi](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). Ayrıca, bu makalede hem **/MP** hem de **/Source** parametreleri kullanırsanız CCMSetup davranışının ayrıntıları da yer almaktadır.
+
 > [!TIP]  
 > Alternatif indirme konumlarını belirtmek için, komut satırında **/Source** parametresini birden çok kez kullanabilirsiniz.  
 
@@ -88,6 +90,8 @@ Dosya yükleme konumunu belirtir. Yerel veya UNC yolunu kullanın. Cihaz, sunucu
 ### <a name="mp"></a>/MP
 
 Bilgisayarların bağlanacağı bir kaynak yönetim noktası belirtir. Bilgisayarlar, yükleme dosyaları için en yakın dağıtım noktasını bulmak üzere bu yönetim noktasını kullanır. Dağıtım noktası yoksa veya bilgisayarlar dosyaları dağıtım noktalarından dört saatten sonra indiremez, dosyaları belirtilen yönetim noktasından indirirler.  
+
+CCMSetup 'ın içeriği nasıl indirdiği hakkında daha fazla bilgi için bkz. [sınır grupları-istemci yüklemesi](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). Ayrıca, bu makalede hem **/MP** hem de **/Source** parametreleri kullanırsanız CCMSetup davranışının ayrıntıları da yer almaktadır.
 
 > [!IMPORTANT]  
 > Bu parametre, bilgisayarların bir indirme kaynağını bulması için bir başlangıç yönetim noktası belirtir ve herhangi bir sitede herhangi bir yönetim noktası olabilir. İstemciyi belirtilen yönetim noktasına *atamaz* .

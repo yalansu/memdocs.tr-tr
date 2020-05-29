@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0412f15912ac9017ebc49f974ec621d86f8b6c0e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b87b2528dce4d007f2a2031a11fd69ea774c2033
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989086"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165915"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Microsoft Graph’ta Intune API’lerine erişmek için Azure AD kullanma
 
@@ -143,7 +143,7 @@ Daha fazlasını öğrenin:
 Microsoft Graph’a izin verdiğinizde, Intune özelliklerine erişimi denetlemek için aşağıdaki kapsamları belirtebilirsiniz: Intune API’si izin kapsamları aşağıdaki tabloda özetlenmiştir.  İlk sütun özelliğin adını Azure portalında görüntülenen şekliyle gösterir ve ikinci sütun izin kapsam adını sağlar.
 
 _Erişimi Etkinleştir_ ayarı | Kapsam adı
-:--|:--
+:--|---
 __Microsoft Intune cihazlarında kullanıcıları etkileyen uzak eylemler gerçekleştirme__ | [DeviceManagementManagedDevices. PrivilegedOperations. All](#mgd-po)
 __Microsoft Intune cihazlarını okuma ve yazma__ | [DeviceManagementManagedDevices. ReadWrite. All](#mgd-rw)
 __Microsoft Intune cihazlarını okuma__ | [DeviceManagementManagedDevices.Read.All](#mgd-ro)

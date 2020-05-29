@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 05/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca3ec1605bd4d63c182511c32297da0bdb503d8b
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 5578a6652c9d8216c0b7726c4ff59cd82a591446
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824175"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165932"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -54,7 +54,19 @@ ms.locfileid: "83824175"
 
 <!-- ########################## -->
 
+## <a name="week-of-may-25-2020"></a>25 Mayıs 2020 haftası
+
+### <a name="app-management"></a>Uygulama yönetimi
+
+#### <a name="windows-company-portal-app-icon---7114635---"></a>Windows Şirket Portalı uygulaması simgesi<!-- 7114635 -->
+Windows Şirket Portalı uygulamasının simgesi güncelleştirildi. Şirket Portalı hakkında daha fazla bilgi için bkz. [Intune şirket portalı uygulamalar, Şirket portalı Web sitesi ve Intune uygulaması nasıl özelleştirilir](../apps/company-portal-app.md).
+
 ## <a name="week-of-may-18-2020"></a>18 Mayıs 2020 haftası
+
+### <a name="app-management"></a>Uygulama yönetimi  
+
+#### <a name="update-to-icons-in-company-portal-app-for-iosipados-and-macos--6057697---"></a>İOS/ıpados ve macOS için Şirket Portalı App 'teki simgelere güncelleştirme<!--6057697 -->
+Çift ekran cihazlarda desteklenen ve Microsoft akıcı tasarım sistemiyle hizalanan daha modern bir görünüm oluşturmak için Şirket Portalı simgeleri güncelleştirdik. Güncelleştirilmiş simgeleri görmek için [Intune son kullanıcı uygulamaları Için Kullanıcı Arabirimi güncelleştirmeleri](./whats-new-app-ui.md)' ne gidin. 
 
 ### <a name="device-security"></a>Cihaz güvenliği
 

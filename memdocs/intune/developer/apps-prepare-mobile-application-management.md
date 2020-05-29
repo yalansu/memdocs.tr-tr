@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 05/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 863e6e540fcb79ff18accc40142a8e50c1406943
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: cc180b4a554ceec19fb0815b028d875c32da37bf
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078082"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166034"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>İş kolu uygulamalarını uygulama koruma ilkelerine hazırlama
 
@@ -50,8 +50,8 @@ Intune’a kayıtlı olmayan cihazlarda uygulama koruma ilkeleri uygulamak için
 
 |**Uygulama Sarmalama Aracı** | **Xamarin** |**Cordova** |
 |------|----|----|
-|**iOS** |Yes|Yes|
-|**Android**|Hayır - [Intune Uygulaması SDK Xamarin Bağlamalarını](app-sdk-xamarin.md) kullan.|Yes|
+|**iOS** |Evet|Evet|
+|**Android**|Hayır - [Intune Uygulaması SDK Xamarin Bağlamalarını](app-sdk-xamarin.md) kullan.|Evet|
 
 ## <a name="intune-app-sdk"></a>Intune Uygulama SDK'sı
 
@@ -82,7 +82,7 @@ Intune SDK geliştirme ekibi, yerel Android, iOS (obj-C, Swift), Xamarin ve Xama
 
 Bu tablo, uygulama SDK 'sını veya uygulama sarmalama aracını kullanıyorsa etkinleştirilen ayarları listeler. Bazı özellikler, uygulama geliştiricilerinin Intune SDK 'Sı ile temel tümleştirme dışında bazı Logic uygulamalarını ve bu nedenle uygulama sarmalama aracı 'nı kullanıyorsa etkin olmadığını gerektirir. 
 
-|Özellik|Uygulama SDK'sı|Uygulama Sarmalama Aracı|
+|Öne çıkan özelliği|Uygulama SDK'sı|Uygulama Sarmalama Aracı|
 |-----------|---------------------|-----------|
 |Web içeriğini kurumsal olarak yönetilen bir tarayıcıda görüntülemek üzere kısıtlayın|X|X|
 |Android, iTunes veya iCloud yedeklemelerini engelle|X|X|

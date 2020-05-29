@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 05/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c0dab3c84e3a87048a8071c591722c63d89ad69
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 69a694ab9da7987271214bc6919cd3b676f9814e
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078133"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166068"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Intune Uygulama Sarmalama Aracı ile Android uygulamalarını uygulama koruma ilkelerine hazırlama
 
@@ -54,7 +54,7 @@ Aracı çalıştırmadan önce bkz. [Uygulama Sarmalama Aracını çalıştırma
     > [!NOTE]
     > Intune Uygulama Sarmalama Aracı uygulama imzalama için Google'ın v2 ve yakında çıkacak v3 imza düzenlerini desteklemiyor. Intune Uygulama Sarmalama Aracı'nı kullanarak .apk uygulamasını sarmaladıktan sonra, [Google'ın sağladığı Apksigner aracının]( https://developer.android.com/studio/command-line/apksigner) kullanılması önerilir. Bu sayede uygulama son kullanıcıların cihazlarına ulaştığında Android standartları tarafından düzgün başlatılabilir. 
 
-- Seçim Bazen bir uygulama, sarmalama sırasında eklenen Intune MAM SDK sınıfları nedeniyle Dalvik çalıştırılabilir (DEX) boyut sınırına ulaşmayabilir. DEX dosyaları, Android uygulamaları derlemesinin bir parçasıdır. Intune uygulama sarmalama aracı, en düşük API düzeyi 21 veya daha yüksek olan uygulamalar için ( [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)itibariyle), dizin oluşturma sırasında otomatik olarak Dex dosyası taşmasını işler. En iyi API düzeyi < 21 olan uygulamalar için en iyi yöntem, sarmalayıcı `-UseMinAPILevelForNativeMultiDex` bayrağını kullanarak en düşük API düzeyini artırmalıdır. Müşterilerin, uygulamanın en düşük API düzeyini artıramasından dolayı aşağıdaki DEX overflow geçici çözümleri kullanılabilir. Bazı kuruluşlarda bu, uygulamayı (IE. app Build ekibi) derleyen ile çalışmayı gerektirebilir:
+- Seçim Bazen bir uygulama, sarmalama sırasında eklenen Intune MAM SDK sınıfları nedeniyle Dalvik çalıştırılabilir (DEX) boyut sınırına ulaşmayabilir. DEX dosyaları, Android uygulamaları derlemesinin bir parçasıdır. Intune uygulama sarmalama aracı, en düşük API düzeyi 21 veya daha yüksek olan uygulamalar için ( [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)itibariyle), dizin oluşturma sırasında otomatik olarak Dex dosyası taşmasını işler. En iyi API düzeyi < 21 olan uygulamalar için en iyi yöntem, sarmalayıcı bayrağını kullanarak en düşük API düzeyini artırmalıdır `-UseMinAPILevelForNativeMultiDex` . Müşterilerin, uygulamanın en düşük API düzeyini artıramasından dolayı aşağıdaki DEX overflow geçici çözümleri kullanılabilir. Bazı kuruluşlarda bu, uygulamayı (IE. app Build ekibi) derleyen ile çalışmayı gerektirebilir:
 
   - Uygulamanın birincil DEX dosyasından kullanılmayan sınıf başvurularını ortadan kaldırmak için ProGuard 'ı kullanın.
   - Android Gradle eklentisinin v 3.1.0 veya üstünü kullanan müşteriler için [D8 Dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html)'yi devre dışı bırakın.  
@@ -88,13 +88,13 @@ Aracı yüklediğiniz klasörü not edin. Varsayılan konum: C:\Program Files (x
 
 |Özellik|Bilgi|Örnek|
 |-------------|--------------------|---------|
-|**-Inputpath**&lt;dizesi&gt;|Kaynak Android uygulamasının (.apk) yolu.| |
- |**-OutputPath**&lt;dizesi&gt;|Çıktı Android uygulamasının yolu. Bu dizin yolu InputPath ile aynıysa paket oluşturma başarısız olur.| |
-|**-Keystorepath**&lt;dizesi&gt;|İmzalama için ortak/özel anahtar çiftini içeren anahtar deposu dosyasının yolu.|Varsayılan olarak anahtar deposu dosyaları "C:\Program Files (x86)\Java\jreX.X.X_XX\bin" konumunda saklanır. |
-|**-KeyStorePassword**&lt;SecureString&gt;|Anahtar deposunun şifresini çözmek için kullanılan parola. Android, tüm uygulama paketlerinin (.apk) imzalanmasını gerektirir. KeyStorePassword üretmek için Java keytool kullanın. Java [KeyStore](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html) hakkında daha fazla bilgiyi burada bulabilirsiniz.| |
-|**-Keyalıas**&lt;dizesi&gt;|İmzalama için kullanılacak anahtarın adı.| |
-|**-KeyPassword**&lt;SecureString&gt;|İmzalama için kullanılan özel anahtarın şifresini çözmek için kullanılan parola.| |
-|**-Sigalg**&lt;SecureString&gt;| (İsteğe bağlı) İmzalama için kullanan imza algoritmasının adı. Algoritma, özel anahtar ile uyumlu olmalıdır.|Örnekler: SHA256withRSA, SHA1withRSA|
+|**-Inputpath** &lt; Dizisinde&gt;|Kaynak Android uygulamasının (.apk) yolu.| |
+ |**-OutputPath** &lt; Dizisinde&gt;|Çıktı Android uygulamasının yolu. Bu dizin yolu InputPath ile aynıysa paket oluşturma başarısız olur.| |
+|**-Keystorepath** &lt; Dizisinde&gt;|İmzalama için ortak/özel anahtar çiftini içeren anahtar deposu dosyasının yolu.|Varsayılan olarak anahtar deposu dosyaları "C:\Program Files (x86)\Java\jreX.X.X_XX\bin" konumunda saklanır. |
+|**-KeyStorePassword** &lt; SecureString&gt;|Anahtar deposunun şifresini çözmek için kullanılan parola. Android, tüm uygulama paketlerinin (.apk) imzalanmasını gerektirir. KeyStorePassword üretmek için Java keytool kullanın. Java [KeyStore](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html) hakkında daha fazla bilgiyi burada bulabilirsiniz.| |
+|**-Keyala IAS** &lt; Dizisinde&gt;|İmzalama için kullanılacak anahtarın adı.| |
+|**-KeyPassword** &lt; SecureString&gt;|İmzalama için kullanılan özel anahtarın şifresini çözmek için kullanılan parola.| |
+|**-Sigalg** &lt; SecureString&gt;| (İsteğe bağlı) İmzalama için kullanan imza algoritmasının adı. Algoritma, özel anahtar ile uyumlu olmalıdır.|Örnekler: SHA256withRSA, SHA1withRSA|
 |**-UseMinAPILevelForNativeMultiDex**| Seçim Kaynak Android uygulamasının en düşük API düzeyini 21 ' e yükseltmek için bu bayrağı kullanın. Bu bayrak, bu uygulamayı kimlerin yükleyebilen ile sınırlı olacağı için onay isteyecek. Kullanıcılar "-Onayla: $false" parametresini PowerShell komutuna ekleyerek onay iletişim kutusunu atlayabilir. Bayrak yalnızca, DEX taşma hataları nedeniyle başarıyla kaydıramayan en az API < 21 olan uygulamalardaki müşteriler tarafından kullanılmalıdır. | |
 | **&lt;CommonParameters&gt;** | (İsteğe bağlı) Komut, ayrıntılı ve hata ayıklama gibi ortak PowerShell parametrelerini destekler. |
 

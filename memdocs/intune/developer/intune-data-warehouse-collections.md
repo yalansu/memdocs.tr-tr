@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 997a2db8917da1443531d8446176c21db3a5dbf6
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: 7b58a24340741621a4034ed4f77ad1298251a692
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709460"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165881"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune Veri Ambarı Koleksiyonları
 
@@ -33,7 +33,7 @@ Aşağıdaki Intune Veri Ambarı koleksiyonları, Veri Ambarı API’si varlıkl
 **Apprevision** varlığı, tüm uygulama sürümlerini listeler.
 
 |          Özellik          |                                      Açıklama                                      |                Örnek               |
-|:--------------------------:|:-------------------------------------------------------------------------------------:|:------------------------------------:|
+|----------------------------|---------------------------------------------------------------------------------------|--------------------------------------|
 | AppKey                     | Uygulamanın benzersiz tanımlayıcısı.                                                         | 123                                  |
 | ApplicationID              | Uygulamanın benzersiz tanımlayıcısı - AppKey’e benzerdir ancak doğal bir anahtardır.        | b66bc706-ffff-7437-0340-032819502773 |
 | Revizyon                   | İkili dosya karşıya yüklenirken yönetici tarafından bahsedilen sürüm.                   | 2                                    |
@@ -54,7 +54,7 @@ Aşağıdaki Intune Veri Ambarı koleksiyonları, Veri Ambarı API’si varlıkl
 **appTypes** varlığı, bir uygulamanın yükleme kaynağını listeler.
 
 |   Özellik  |        Açıklama        |
-|:-----------:|:-------------------------:|
+|-------------|---------------------------|
 | AppTypeID   | Tür kimliği           |
 | AppTypeKey  | Anahtar için yedek anahtar |
 | AppTypeName | Uygulama türü                  |
@@ -62,7 +62,7 @@ Aşağıdaki Intune Veri Ambarı koleksiyonları, Veri Ambarı API’si varlıkl
 ### <a name="example"></a>Örnek
 
 | AppTypeID |                Name               |                     Açıklama                     |
-|:---------:|:---------------------------------:|:---------------------------------------------------:|
+|-----------|-----------------------------------|-----------------------------------------------------|
 | 0         | Android mağazası uygulaması               | Bir Android mağazası uygulaması.                             |
 | 1         | Android LOB uygulaması                 | Bir Android iş kolu uygulaması.                  |
 | 2         | Yönetilen Android mağazası uygulaması (MAM) | Yönetimi etkin bir Android mağazası uygulaması. |
@@ -81,7 +81,7 @@ Aşağıdaki Intune Veri Ambarı koleksiyonları, Veri Ambarı API’si varlıkl
 Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu özetler. Ve her bir uyumluluk durumunda bulunan cihaz sayısını listeler.
 
 |    Özellik   |                                                                                      Açıklama                                                                                     |  Örnek |
-|:-------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------:|
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | DateKey       | Uyumluluk ilkesi için özet oluşturulduğu ana ait tarih anahtarı.                                                                                                                   | 20161204 |
 | Bilinmiyor       | Çevrimdışı olan veya Intune ya da Azure AD ile başka bir nedenle iletişim kuramayan cihaz sayısı.                                                                           | 5        |
 | NotApplicable | Yönetici tarafından hedeflenen cihaz uyumluluk ilkelerinin uygulanabilir olmadığı cihaz sayısı.                                                                                     | 201      |
@@ -94,7 +94,7 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu özetler. Ve
 Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başına ve ilke türü başına olacak şekilde özetler. Ve her atanmış uyumluluk ilkesi için her bir uyumluluk durumunda bulunan cihaz sayısını listeler.
 
 |      Özellik     |                                                                                      Açıklama                                                                                     |  Örnek |
-|:-----------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------:|
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | DateKey           | Uyumluluk ilkesi için özet oluşturulduğu ana ait tarih anahtarı.                                                                                                                   | 20161219 |
 | PolicyKey         | Özetin oluşturulduğu uyumluluk ilkesi için anahtar.                                                                                                                   | 10178    |
 | PolicyPlatformKey | Özetin oluşturulduğu uyumluluk ilkesinin platform türü için anahtar.                                                                                            | 5        |
@@ -107,7 +107,7 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 ## <a name="compliancestates"></a>complianceStates
 
 |      Özellik      |                       Açıklama                      |
-|:------------------:|:------------------------------------------------------:|
+|--------------------|--------------------------------------------------------|
 | complianceStatus   | mdmStatusKey sahibi cihazların uyumluluk durumu       |
 | complianceStateKey | Cihaz ve uyumluluk durumuyla eşleşen uyumluluk anahtarı |
 | complianceStateID  | Bu uyumluluk durumuyla eşleşen kimlik                |
@@ -115,7 +115,7 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 ### <a name="example"></a>Örnek
 
 |  complianceStatus  |                       Açıklama                      |
-|:------------------:|:------------------------------------------------------:|
+|--------------------|--------------------------------------------------------|
 |    Bilinmiyor         |    Bilinmeyen.                                                                        |
 |    Uyumlu       |    Uyumlu.                                                                      |
 |    Uyumsuz    |       Cihazın durumu uyumsuz ve şirket kaynaklarına erişimi engelli.             |
@@ -128,7 +128,7 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 **Date** varlığı, birden çok veri ambarı varlığında başvurulan tarihleri temsil eder.
 
 |     Özellik    |                       Açıklama                      |    Örnek    |
-|:---------------:|:------------------------------------------------------:|:-------------:|
+|-----------------|--------------------------------------------------------|---------------|
 | DateKey         | Veri ambarında bu tarihin benzersiz tanımlayıcısı. | 20160703      |
 | FullDate        | Bu tarihin tam Tarih/Saat biçiminde temsili.        | 3.7.2016 0:00 |
 | DayOfWeek       | Haftanın kaçıncı günü olduğu                                            | 1             |
@@ -151,7 +151,7 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 ## <a name="devicecategories"></a>deviceCategories
 
 |      Özellik      |                                    Açıklama                                   |                Örnek               |
-|:------------------:|:--------------------------------------------------------------------------------:|:------------------------------------:|
+|--------------------|----------------------------------------------------------------------------------|--------------------------------------|
 | deviceCategoryID   | Cihaz kategorisi için benzersiz tanımlayıcı.                                       | fb415ba2-7c08-41f6-a5e5-685b50da2c4c |
 | deviceCategoryKey  | Veri ambarındaki cihaz kategorisinin benzersiz tanımlayıcısı - vekil anahtar | 1                                    |
 | deviceCategoryName | Cihaz kategorisi için görünen ad.                                            | Smartphones                          |
@@ -160,7 +160,7 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 **DeviceConfigurationProfileDeviceActivity** varlığı, başarılı, beklemede, başarısız veya hata durumundaki cihazların günlük sayısını listeler. Bu sayı, varlığa atanmış Cihaz Yapılandırma Profillerini gösterir. Örneğin, bir cihaz kendisine atanan tüm ilkeler için başarılı durumunda ise ilgili gün için başarılı sayacı bir artar. Cihaza biri başarılı diğeri hata durumunda olmak üzere iki profil atanmışsa varlık, başarılı sayacını artırır ve cihazı hata durumuna geçirir. Varlık, son 30 gün içindeki belirli bir gün için kaç cihazın hangi durumda olduğunu listeler.
 
 |  Özellik |                                          Açıklama                                          |  Örnek |
-|:---------:|:---------------------------------------------------------------------------------------------:|:--------:|
+|-----------|-----------------------------------------------------------------------------------------------|----------|
 | DateKey   | Cihaz Yapılandırma Profilinin iade işleminin, veri ambarına kaydedildiği zamanı belirten Tarih Anahtarı. | 20160703 |
 | Beklemede   | Bekleme durumundaki benzersiz cihazların sayısı.                                                    | 123      |
 | Başarılı oldu | Başarı durumundaki benzersiz cihazların sayısı.                                                    | 12       |
@@ -181,7 +181,7 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
 |          Özellik          |                                                                                      Açıklama                                                                                     |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DateKey                    | Günü gösteren tarih tablosuna başvuru.                                                                                                                                          |
 | DeviceKey                  | Veri ambarındaki cihazın benzersiz tanımlayıcısı - vekil anahtar. Bu, Intune cihaz kimliğini barındıran Cihaz tablosuna bir başvurudur.                               |
 | DeviceName                 | Cihaz adlandırmaya izin veren platformlardaki cihaz adı. Buna izin vermeyen platformlarda ise Intune, diğer özelliklerden bir ad oluşturur. Bu öznitelik tüm cihazlarda kullanılamaz. |
@@ -199,7 +199,7 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 **DeviceRegistrationState** varlığı, diğer veri ambarı koleksiyonları tarafından başvurulan kayıt türünü temsil eder. 
 
 |           Özellik          |                                     Açıklama                                     |
-|:---------------------------:|:-----------------------------------------------------------------------------------:|
+|-----------------------------|-------------------------------------------------------------------------------------|
 | deviceRegistrationStateID   | Kayıt durumu için benzersiz tanımlayıcı                                            |
 | deviceRegistrationStateKey  | Veri ambarındaki kayıt durumunun benzersiz tanımlayıcısı - vekil anahtar |
 | deviceRegistrationStateName | Kayıt durumu                                                                  |
@@ -216,7 +216,7 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 **Device** varlığı, yönetime kaydedilen tüm cihazları ve bunlara karşılık gelen özellikleri listeler.
 
 |          Özellik          |                                                                                       Açıklama                                                                                      |
-|:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DeviceKey                  | Veri ambarındaki cihazın benzersiz tanımlayıcısı - vekil anahtar.                                                                                                               |
 | DeviceId                   | Cihazın benzersiz tanımlayıcısı.                                                                                                                                                     |
 | DeviceName                 | Cihaz adlandırmaya izin veren platformlardaki cihaz adı. Diğer platformlarda ise Intune, diğer özelliklerden bir ad oluşturur. Bu öznitelik tüm cihazlarda kullanılamaz. |
@@ -257,7 +257,7 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 **deviceType** varlığı, diğer veri ambarı varlıkları tarafından başvurulan cihaz türünü temsil eder. Cihaz türü genellikle cihaz modelini, üreticisini veya her ikisini de belirtir.
 
 |    Özellik    |                                  Açıklama                                 |
-|:--------------:|:----------------------------------------------------------------------------:|
+|----------------|------------------------------------------------------------------------------|
 | DeviceTypeID   | Cihaz türünün benzersiz tanımlayıcısı                                       |
 | DeviceTypeKey  | Veri ambarındaki cihaz türünün benzersiz tanımlayıcısı - vekil anahtar |
 | DeviceTypeName | Cihaz türü                                                                |
@@ -265,7 +265,7 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 ### <a name="example"></a>Örnek
 
 | deviceTypeID |        Name       |                      Açıklama                      |
-|:------------:|:-----------------:|:-----------------------------------------------------:|
+|--------------|-------------------|-------------------------------------------------------|
 | -1           | Kullanılamıyor   | Cihaz türü kullanılamıyor.                     |
 | 0            | Masaüstü           | Windows Masaüstü cihaz                              |
 | 1            | Windows           | Windows cihaz                                      |
@@ -294,7 +294,7 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 **deviceEnrollmentType** varlığı, bir cihazın nasıl kaydedildiğini gösterir. Kayıt türü, kayıt yöntemini yakalar. Örnekler, farklı kayıt türlerini ve bunların ne anlama geldiğini listeler.
 
 |         Özellik         |                                    Açıklama                                    |
-|:------------------------:|:---------------------------------------------------------------------------------:|
+|--------------------------|-----------------------------------------------------------------------------------|
 | deviceEnrollmentTypeID   | Kayıt türünün benzersiz tanımlayıcısı.                                       |
 | deviceEnrollmentTypeKey  | Veri ambarındaki kayıt türünün benzersiz tanımlayıcısı - vekil anahtar. |
 | deviceEnrollmentTypeName | Kayıt türü adı.                                                           |
@@ -302,7 +302,7 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 ### <a name="example"></a>Örnek
 
 | enrollmentTypeID |                Name                |                                        Açıklama                                       |
-|:----------------:|:----------------------------------:|:----------------------------------------------------------------------------------------:|
+|------------------|------------------------------------|------------------------------------------------------------------------------------------|
 | 0                | Bilinmiyor                            | Kayıt türü toplanmadı                                                      |
 | 1                | UserEnrollment                     | KCG kanalı üzerinden kullanıcı yoluyla kayıt.                                           |
 | 2                | DeviceEnrollmentManager            | Cihaz kayıt yöneticisi hesabıyla kullanıcı kaydı.                              |
@@ -406,7 +406,7 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 **Intunemanagementextension** , gün başına her Windows 10 cihazında **ıntunemanagementextension** sistem durumunu listeler. Son 60 günün verileri alınır.
 
 |       Özellik      |                          Açıklama                          | Örnek |
-|:-------------------:|:-------------------------------------------------------------:|:-------:|
+|---------------------|---------------------------------------------------------------|---------|
 | DateKey             | Tarihin benzersiz tanımlayıcısı.                                | 123     |
 | TenantKey           | Kiracının benzersiz tanımlayıcısı.                              | 456     |
 | DeviceKey           | Cihazın benzersiz tanımlayıcısı.                              | 789     |
@@ -417,7 +417,7 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 **Intunemanagemenısionhealthstate** , **ıntunemanagementextension**'ın tüm olası sistem durumlarını listeler.
 
 |      Özellik     |                   Açıklama                  | Örnek |
-|:-----------------:|:----------------------------------------------:|:-------:|
+|-------------------|------------------------------------------------|---------|
 | ExtensionStateKey | Sistem durumunun benzersiz tanımlayıcısı.           | 2       |
 | ExtensionState    | Bir IntuneManagementExtension uzantısının durumu. | Sağlam |
 
@@ -425,7 +425,7 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 **Intunemanagemenbir Sionversion** varlığı, **ıntunemanagementextension**tarafından kullanılan tüm sürümleri listeler.
 
 |       Özellik      |                          Açıklama                          | Örnek |
-|:-------------------:|:-------------------------------------------------------------:|:-------:|
+|---------------------|---------------------------------------------------------------|---------|
 | ExtensionVersionKey | IntuneManagementExtension sürümünün benzersiz tanımlayıcısı. | 1       |
 | ExtensionVersion    | 4 basamaklı sürüm numarası.                                   | 1.0.2.0 |
 
@@ -512,7 +512,7 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 **managementAgentType** varlığı, bir cihazı yönetmek için kullanılan aracıları temsil eder.
 
 |         Özellik        |                                       Açıklama                                       |
-|:-----------------------:|:---------------------------------------------------------------------------------------:|
+|-------------------------|-----------------------------------------------------------------------------------------|
 | ManagementAgentTypeID   | Yönetim aracısı türünün benzersiz tanımlayıcısı.                                         |
 | ManagementAgentTypeKey  | Veri ambarındaki yönetim aracısı türünün benzersiz tanımlayıcısı - vekil anahtar. |
 | ManagementAgentTypeName | Cihazı yönetmek için ne tür bir aracı kullanıldığını gösterir.                              |
@@ -520,7 +520,7 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 ### <a name="example"></a>Örnek
 
 | ManagementAgentTypeID |                Name               |                                  Açıklama                                 |
-|:---------------------:|:---------------------------------:|:----------------------------------------------------------------------------:|
+|-----------------------|-----------------------------------|------------------------------------------------------------------------------|
 | 1                     | EAS                               | Cihaz, Exchange Active Sync yoluyla yönetiliyor                         |
 | 2                     | MDM                               | Cihaz, bir MDM aracısı kullanılarak yönetiliyor                                   |
 | 3                     | EasMdm                            | Cihaz, Exchange Active Sync ve bir MDM aracısıyla yönetiliyor        |
@@ -537,7 +537,7 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 **ManagementState** varlığı, cihazın durumu hakkında ayrıntılar sağlar. Ayrıntılar; uzak eylemlerin uygulandığı, cihaza jailbreak uygulandığı veya cihazın kökünün belirtildiği durumlarda faydalı olabilir.
 
 |       Özellik      |                                     Açıklama                                    |
-|:-------------------:|:----------------------------------------------------------------------------------:|
+|---------------------|------------------------------------------------------------------------------------|
 | managementStateID   | Yönetim durumunun benzersiz tanımlayıcısı.                                       |
 | managementStateKey  | Veri ambarındaki yönetim durumunun benzersiz tanımlayıcısı - vekil anahtar. |
 | managementStateName | Cihaza uygulanan uzak eylemin durumunu gösterir.                 |
@@ -545,7 +545,7 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 ### <a name="example"></a>Örnek
 
 | managementStateID |      Name      |                                                   Açıklama                                                   |
-|:-----------------:|:--------------:|:---------------------------------------------------------------------------------------------------------------:|
+|-------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
 | 0                 | Yönetilen        | Hiçbir bekleyen uzak eylem olmadan yönetilir.                                                                       |
 | 1                 | RetirePending  | Cihaz için bekleyen bir devre dışı bırakma komutu var.                                                             |
 | 2                 | RetireFailed   | Devre dışı bırakma komutu cihazda başarısız oldu.                                                                      |
@@ -563,7 +563,7 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 MobileAppInstallState varlığı, bir mobil uygulama cihaz, kullanıcı veya her ikisini de içeren bir gruba atandıktan sonra uygulamanın yükleme durumunu temsil eder.
 
 |       Özellik      |                        Açıklama                       |
-|:-------------------:|:--------------------------------------------------------:|
+|---------------------|----------------------------------------------------------|
 | AppInstallStateKey  | Hesabınız için uygulama yükleme durumunun benzersiz kimliği. |
 | AppInstallState     | Uygulama yükleme durumunun Enum değeri.                     |
 | AppInstallStateName | Uygulama yükleme durumunun adı.                           |
@@ -572,7 +572,7 @@ MobileAppInstallState varlığı, bir mobil uygulama cihaz, kullanıcı veya her
 Microsoft Intune yoluyla Mobil Uygulama Yönetimini kullanarak bir hedef cihaz türü için mobil uygulama yükleme durumunu temsil eder.
 
 |      Özellik      |                                                          Açıklama                                                          |
-|:------------------:|:-----------------------------------------------------------------------------------------------------------------------------:|
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------|
 | DateKey            | Uygulama yükleme durumunun kaydedildiği tarihin anahtarı.                                                                     |
 | AppKey             | AppRevision örneğini tanımlamak için kullanılan mobil uygulamanın anahtarı.                                                          |
 | DeviceTypeKey      | Mobil Uygulama ile ilişkili Cihaz Türü anahtarı.                                                              |
@@ -584,7 +584,7 @@ Microsoft Intune yoluyla Mobil Uygulama Yönetimini kullanarak bir hedef cihaz t
 **ownerType** varlığı; bir cihazın sahipliğinin şirket, kişisel veya bilinmeyen olduğunu gösterir.
 
 |    Özellik   |                                                                                     Açıklama                                                                                    |           Örnek          |
-|:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
+|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
 | ownerTypeID   | Sahip türünün benzersiz tanımlayıcısı.                                                                                                                                               |                            |
 | ownerTypeKey  | Veri ambarındaki sahip türünün benzersiz tanımlayıcısı - vekil anahtar.                                                                                                       |                            |
 | ownerTypeName | Cihazların sahip türünü temsil eder: Kurumsal cihaz kuruluşa aittir.  Kişisel - Cihaz kişiye aittir (KCG).   Bilinmiyor - Bu cihazda bilgi yok. | Şirket kişisel bilinmiyor |
@@ -596,7 +596,7 @@ Microsoft Intune yoluyla Mobil Uygulama Yönetimini kullanarak bir hedef cihaz t
 **İlke** varlığı, cihaz yapılandırma profillerini, uygulama yapılandırma profillerini ve uyumluluk ilkelerini listeler. Kuruluşunuzda bir gruba Mobil Cihaz Yönetimi (MDM) ilkeleri atayabilirsiniz.
 
 |          Özellik          |                                                                       Açıklama                                                                      |                Örnek               |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 | PolicyKey                  | Veri ambarında ilkeyi temsil eden Benzersiz Anahtar.                                                                                              | 123                                  |
 | PolicyId                   | İlkenin veri ambarındaki benzersiz tanımlayıcısı.                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
 | PolicyName                 | İlkenin Adı.                                                                                                                                    | "Windows 10 Temel"                |
@@ -610,7 +610,7 @@ Microsoft Intune yoluyla Mobil Uygulama Yönetimini kullanarak bir hedef cihaz t
 Aşağıdaki tablo; başarılı, beklemede, başarısız veya hata durumundaki cihazların günlük sayısını listeler. Bu sayı, İlke Türü profillerindeki verileri yansıtır. Örneğin, bir cihaz kendisine atanan tüm ilkeler için başarılı durumunda ise ilgili gün için başarılı sayacı bir artar. Cihaza biri başarılı diğeri hata durumunda olmak üzere iki profil atanmışsa varlık, başarılı sayacını artırır ve cihazı hata durumuna geçirir. **policyDeviceActivity** varlığı, son 30 gün içindeki belirli bir gün için kaç cihazın hangi durumda olduğunu listeler.
 
 |  Özellik |                                           Açıklama                                           |        Örnek        |
-|:---------:|:-----------------------------------------------------------------------------------------------:|:---------------------:|
+|-----------|-------------------------------------------------------------------------------------------------|-----------------------|
 | DateKey   | Cihaz Yapılandırma Profilinin iade işleminin, veri ambarına kaydedildiği zamanı belirten Tarih Anahtarı. | 20160703              |
 | Beklemede   | Bekleme durumundaki benzersiz cihazların sayısı.                                                    | 123                   |
 | Başarılı oldu | Başarı durumundaki benzersiz cihazların sayısı.                                                    | 12                    |
@@ -621,7 +621,7 @@ Aşağıdaki tablo; başarılı, beklemede, başarısız veya hata durumundaki c
 ## <a name="policyplatformtypes"></a>policyPlatformTypes
 
 |        Özellik        |                      Açıklama                      |     Örnek    |
-|:----------------------:|:-----------------------------------------------------:|:--------------:|
+|------------------------|-------------------------------------------------------|----------------|
 | PolicyPlatformTypeKey  | İlke platform türü için benzersiz anahtar.        | 20170519       |
 | PolicyPlatformTypeId   | İlke platform türü için benzersiz tanımlayıcı. | 1              |
 | PolicyPlatformTypeName | İlke platform türünün adı.              | AndroidForWork |
@@ -630,7 +630,7 @@ Aşağıdaki tablo; başarılı, beklemede, başarısız veya hata durumundaki c
 **PolicyTypeActivity** varlığı, başarılı, beklemede, başarısız veya hata durumundaki cihazların toplam sayısını listeler. Bu durumları cihazın yapılandırma profiline, uygulama yapılandırma profiline veya uyumluluk ilkesine göre günlük olarak listeler.
 
 |    Özellik   |                                          Açıklama                                          |           Örnek           |
-|:-------------:|:---------------------------------------------------------------------------------------------:|:---------------------------:|
+|---------------|-----------------------------------------------------------------------------------------------|-----------------------------|
 | DateKey       | Cihaz Yapılandırma Profilinin iade işleminin, veri ambarına kaydedildiği zamanı belirten Tarih Anahtarı. | 20160703                    |
 | PolicyKey     | İlke Anahtarı, İlke ile birleştirilerek policyName elde edilebilir.                                | Windows 10 temel         |
 | PolicyTypeKey | İlke Anahtarı türü, İlke Türü ile birleştirilerek ilke türü adı elde edilebilir.             | Windows 10 Uyumluluk İlkesi |
@@ -643,7 +643,7 @@ Aşağıdaki tablo; başarılı, beklemede, başarısız veya hata durumundaki c
 **PolicyType** varlığı, cihaz yapılandırma profillerini, uygulama yapılandırma profillerini ve Uyumluluk ilkeleri türlerini listeler. Kuruluşunuzda bir gruba Mobil Cihaz Yönetimi (MDM) ilkeleri atayabilirsiniz.
 
 |    Özellik    |                       Açıklama                      |            Örnek            |
-|:--------------:|:------------------------------------------------------:|:-----------------------------:|
+|----------------|--------------------------------------------------------|-------------------------------|
 | PolicyTypeId   | İlkenin kaynak sistemindeki benzersiz tanımlayıcısı.  | 123                           |
 | PolicyTypeKey  | İlkenin veri ambarındaki benzersiz tanımlayıcısı. | 1                             |
 | PolicyTypeName | İlke türünün adı.                               | Windows 10 Uyumluluk ilkesi. |
@@ -652,7 +652,7 @@ Aşağıdaki tablo; başarılı, beklemede, başarısız veya hata durumundaki c
 Aşağıdaki tablo; başarılı, beklemede, başarısız veya hata durumundaki kullanıcıların günlük sayısını listeler. Bu sayı, İlke Türü profillerindeki verileri yansıtır. Örneğin, bir kullanıcı kendisine atanan tüm ilkeler için başarılı durumunda ise ilgili gün için başarılı sayacı bir artar. Bir kullanıcıya biri başarılı diğeri hata durumunda olmak üzere iki profil atanmışsa, kullanıcı hata durumunda olarak değerlendirilir. **PolicyUserActivity** varlığı, son 30 gün içindeki belirli bir gün için kaç kullanıcının hangi durumda olduğunu listeler.
 
 |  Özellik |                                          Açıklama                                          |       Örnek       |
-|:---------:|:---------------------------------------------------------------------------------------------:|:-------------------:|
+|-----------|-----------------------------------------------------------------------------------------------|---------------------|
 | DateKey   | Cihaz Yapılandırma Profilinin iade işleminin, veri ambarına kaydedildiği zamanı belirten Tarih Anahtarı. | 20160703            |
 | Beklemede   | Bekleme durumundaki benzersiz cihazların sayısı.                                                    | 123                 |
 | Başarılı oldu | Başarı durumundaki benzersiz cihazların sayısı.                                                    | 12                  |
@@ -680,7 +680,7 @@ Aşağıdaki tablo; başarılı, beklemede, başarısız veya hata durumundaki k
 **UserDeviceAssociation** varlığı kuruluşunuzdaki kullanıcı cihaz ilişkilerini içerir.
 
 |        Name        |                                             Açıklama                                            |     Örnek     |
-|:------------------:|:--------------------------------------------------------------------------------------------------:|:---------------:|
+|--------------------|----------------------------------------------------------------------------------------------------|-----------------|
 | UserKey            | Kullanıcının veri ambarındaki benzersiz tanımlayıcısı.   (Yedek anahtar).                            | 123             |
 | DeviceKey          | Cihazın veri ambarındaki benzersiz tanımlayıcısı.                                             | 123             |
 | CreatedDateTimeUTC | Kullanıcı cihaz ilişkisinin oluşturulduğu tarih ve saat. UTC biçimini kullanır.                     | 23.11.2016 0:00 |
@@ -693,7 +693,7 @@ Aşağıdaki tablo; başarılı, beklemede, başarısız veya hata durumundaki k
 **Kullanıcı** varlık koleksiyonu, kullanıcı verilerini içerir. Bu kayıtlar, kullanıcı kaldırıldıysa dahi, veri toplama döneminde kullanıcı durumlarını içerir. Örneğin, bir kullanıcı Intune'a eklenebilir ve son bir ay içerisinde kaldırılabilir. Bu kullanıcı, raporun olduğu saatte bulunmasa da kullanıcı ve durum, önceki ayın verilerinde bulunuyor. Kullanıcının verilerinizdeki varlığının süresini gösterecek bir rapor oluşturabilirsiniz.
 
 |          Özellik          |                                                                                                           Açıklama                                                                                                          |                Örnek               |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 | UserKey                    | Veri ambarındaki kullanıcının benzersiz tanımlayıcısı - vekil anahtar.                                                                                                                                                         | 123                                  |
 | UserId                     | Kullanıcının benzersiz tanımlayıcısı - UserKey’e benzerdir ancak doğal bir anahtardır.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail                  | Kullanıcının e-posta adresi.                                                                                                                                                                                                     | John@constoso.com                    |
@@ -718,7 +718,7 @@ Aşağıdaki tablo; başarılı, beklemede, başarısız veya hata durumundaki k
 **vppProgramType** varlığı, bir uygulama için olası VPP program türlerini listeler.
 
 |      Özellik      |          Açıklama         |
-|:------------------:|:----------------------------:|
+|--------------------|------------------------------|
 | VppProgramTypeID   | Tür kimliği.           |
 | VppProgramTypeKey  | Anahtar için vekil anahtar. |
 | VppProgramTypeName | VPP Program türü.          |
@@ -726,7 +726,7 @@ Aşağıdaki tablo; başarılı, beklemede, başarısız veya hata durumundaki k
 ### <a name="example"></a>Örnek
 
 |             VppProgramID             |         Name        | Açıklama                |
-|:------------------------------------:|:-------------------:|----------------------------|
+|--------------------------------------|---------------------|----------------------------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft           | Microsoft’un VPP programı. |
 | 00000000-0000-0000-0000-000000000000 | Henüz Kullanılamıyor | Varsayılan değer, VPP Yok.   |
 | B54814E0-68EA-4BA4-8088-B5AAB58E737B | Apple               | Apple’ın VPP programı.     |

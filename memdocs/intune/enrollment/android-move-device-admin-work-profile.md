@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd9741cfa8cf9edd03d723e63ed1936e1c986d08
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 685f2a51c7a2bfacbc95fb2a7615f0e459b97245
+ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989052"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84126524"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Android cihazlarını cihaz yöneticisinden iş profili yönetimine taşıma
 
@@ -72,10 +72,10 @@ Kullanıcılar bu nedenle uyumsuz olduklarını görtiklerinde, **Çözümle**' 
       - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
       - ABD kamu için bu bağlantıyı şu şekilde kullanabilirsiniz: `https://portal.manage.microsoft.us/UpdateSettings.aspx` .
   
-    > [!NOTE]
-    > - Tabii ki, kullanıcılarla iletişiminizdeki bağlantılar için Kullanıcı dostu hiper metin kullanabilirsiniz. Ancak, bu şekilde değiştirildiyse bağlantılar çalışamadığı için URL-kısa kullanım belirteçleri kullanmayın.
-    > - Android Şirket Portalı açıksa ve arka planda, Kullanıcı bağlantıya dokunduğunda bunun yerine açıldıkları son sayfaya gidebilirler.
-    > - Kullanıcılar bir Android cihazında bağlantıya dokunmalıdır. Bunun yerine bir tarayıcıya yapıştırdıysanız, Android Şirket Portalı başlatılmaz. 
+      > [!NOTE]
+      > - Tabii ki, kullanıcılarla iletişiminizdeki bağlantılar için Kullanıcı dostu hiper metin kullanabilirsiniz. Ancak, bu şekilde değiştirildiyse bağlantılar çalışamadığı için URL-kısa kullanım belirteçleri kullanmayın.
+      > - Android Şirket Portalı açıksa ve arka planda, Kullanıcı bağlantıya dokunduğunda bunun yerine açıldıkları son sayfaya gidebilirler.
+      > - Kullanıcılar bir Android cihazında bağlantıya dokunmalıdır. Bunun yerine bir tarayıcıya yapıştırdıysanız, Android Şirket Portalı başlatılmaz. 
 
     **İleri**’yi seçin.
 

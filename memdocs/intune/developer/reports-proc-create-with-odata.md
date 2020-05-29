@@ -6,7 +6,7 @@ keywords: Intune Veri Ambarı
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/03/2019
+ms.date: 05/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87c1a63ffdfc0b923f636159536f6d6cf6420db9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 08e1cb09a673d4c74685e694b7489a9ad0cf2167
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331766"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165745"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>OData akışından Power BI ile bir Intune raporu oluşturma
 
@@ -57,8 +57,8 @@ En yeni Power BI Desktop sürümünü yükleyin. Power BI Desktop’ı şu adres
 1. [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)'da oturum açın.
 2. **Microsoft Intune-genel bakış** dikey penceresinin sağ tarafındaki **diğer görevler** altında bulunan veri ambarı bağlantısını seçerek **Intune veri ambarı** bölmesini açın.
 3. Özel akış URL’sini kopyalayın. Örneğin, `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
-4. Power BI Desktop’ı açın.
-5. MenüÇubuğu ' ndan **Dosya** > **veri** > Al**OData akışı**' nı seçin.
+4. Power BI Desktop'ı açın.
+5. MenüÇubuğu ' ndan **Dosya**  >  **veri al**  >  **OData akışı**' nı seçin.
 6. Önceki adımdan kopyaladığınız özel akış URL 'sini **OData akış** penceresindeki URL kutusuna yapıştırın.
 7. **Temel**'i seçin.
 
@@ -69,7 +69,7 @@ En yeni Power BI Desktop sürümünü yükleyin. Power BI Desktop’ı şu adres
 
     ![Kuruluş hesabı kimlik bilgileri](./media/reports-proc-create-with-odata/reports-create-02-org-account.png)
 
-10. **Bağlan**’ı seçin. Gezgin açılacak ve size Intune Veri Ambarı’ndaki tabloların listesini gösterecektir.
+10. **Bağlan**'ı seçin. Gezgin açılacak ve size Intune Veri Ambarı’ndaki tabloların listesini gösterecektir.
 
     ![Gezgin 'in ekran görüntüsü-veri ambarı tablolarının listesi](./media/reports-proc-create-with-odata/reports-create-02-loadentities.png)
 
@@ -94,9 +94,9 @@ Ağaç Haritası grafiği, hiyerarşik verileri kutular içindeki kutular olarak
 
 1. **Görsel öğeler** bölmesinde, **ağaç Haritası**' nı bulup seçin. **Treemap** grafiği rapor tuvaline eklenecektir.
 2. **Alanlar** bölmesinde, `devices` tabloyu bulun.
-3. `devices` Tabloyu genişletin ve `manufacturer` veri alanını seçin.
-4. `manufacturer` Veri alanını rapor tuvaline sürükleyin ve **treemap** grafiğine bırakın.
-5. `devices` Tablodaki `deviceKey` veri alanını, **görsel öğeler** bölmesine sürükleyin ve **veri alanı Ekle**etiketli kutudaki **değerler** bölümünün altına bırakın.  
+3. Tabloyu genişletin `devices` ve `manufacturer` veri alanını seçin.
+4. `manufacturer`Veri alanını rapor tuvaline sürükleyin ve **treemap** grafiğine bırakın.
+5. `deviceKey`Tablodaki veri alanını, `devices` **görsel öğeler** bölmesine sürükleyin ve **veri alanı Ekle**etiketli kutudaki **değerler** bölümünün altına bırakın.  
 
 Artık kuruluşunuzdaki cihaz üreticileri dağılımını gösteren bir görseliniz var.
 
@@ -106,12 +106,12 @@ Artık kuruluşunuzdaki cihaz üreticileri dağılımını gösteren bir görsel
 
 Uygulamanızı kullanarak ilave sorular yanıtlayabilmek için ağaç haritanıza bir filtre ekleyebilirsiniz.
 
-1. Filtre eklemek için, rapor tuvali ' ni seçin ve ardından **görsel öğeler**altında **dilimleyici simgesini** (![veri modeli ve desteklenen ilişkilerle](./media/reports-proc-create-with-odata/reports-create-slicer.png)ağaç Haritası) seçin. Boş **dilimleyici** görselleştirmesi tuvalde görünür.
+1. Filtre eklemek için, rapor tuvali ' ni seçin ve ardından görsel öğeler altında **dilimleyici simgesini** ( ![ veri modeli ve desteklenen ilişkilerle ağaç Haritası ](./media/reports-proc-create-with-odata/reports-create-slicer.png) ) seçin **Visualizations**. Boş **dilimleyici** görselleştirmesi tuvalde görünür.
 2. **Alanlar** bölmesinde, `ownerTypes` tabloyu bulun.
-3. `ownerTypes` Tabloyu genişletin ve `ownerTypeName` veri alanını seçin.
-4. `ownerTypes` Tablodaki `onwerTypeName` veri alanını **Filtreler** bölmesine sürükleyin ve **Bu sayfadaki filtreler** altında **veri alanları Ekle**etiketli kutuda bu sayfaya bırakın.  
+3. Tabloyu genişletin `ownerTypes` ve `ownerTypeName` veri alanını seçin.
+4. `onwerTypeName`Tablodaki veri alanını `ownerTypes` **Filtreler** bölmesine sürükleyin ve **Bu sayfadaki filtreler** altında **veri alanları Ekle**etiketli kutuda bu sayfaya bırakın.  
 
-   `OwnerTypes` Tabloda, bir cihazın şirkete ait veya kişisel olup olmadığı `OwnerTypeKey`gibi bir veri içeren adlı bir veri alanı bulunur. Bu filtrede kolay adlar göstermek istiyorsanız, `ownerTypes` tabloya bakın ve **ownerTypeName** öğesini dilimleyiciye sürükleyin. Bu örnek, veri modelinin tablolar arasındaki ilişkiyi nasıl desteklediğini gösterir.
+   `OwnerTypes`Tabloda, bir `OwnerTypeKey` cihazın şirkete ait veya kişisel olup olmadığı gibi bir veri içeren adlı bir veri alanı bulunur. Bu filtrede kolay adlar göstermek istiyorsanız, `ownerTypes` tabloya bakın ve **ownerTypeName** öğesini dilimleyiciye sürükleyin. Bu örnek, veri modelinin tablolar arasındaki ilişkiyi nasıl desteklediğini gösterir.
 
 ![Filter ile treemap-tablolar arasındaki ilişkileri destekler](./media/reports-proc-create-with-odata/reports-create-08_ownertype.png)
 

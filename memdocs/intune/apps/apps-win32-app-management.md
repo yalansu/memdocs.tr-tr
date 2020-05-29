@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70cb3e2f8baf89be5e77867b385788cb04181ba1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ecf8d5b17f19110e6f2428aaf07a37b1216a9411
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986027"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165711"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Tek başına Intune-Win32 uygulama yönetimi
 
@@ -66,7 +66,7 @@ GitHub 'dan [Microsoft Win32 Içerik hazırlığı aracını](https://go.microso
 ### <a name="available-command-line-parameters"></a>Kullanılabilir komut satırı parametreleri 
 
 |    **Komut satırı parametresi**    |    **Açıklama**    |
-|:------------------------------:|:----------------------------------------------------------:|
+|--------------------------------|------------------------------------------------------------|
 |    `-h`     |    Yardım    |
 |    `-c <setup_folder>`     |    Tüm kurulum dosyalarının klasörü. Bu klasördeki tüm dosyalar *. ıntunewin* dosyasına sıkıştırılacaktır.    |
 |    `-s <setup_file>`     |    Kurulum dosyası (*setup.exe* veya *setup.msi* gibi).    |
@@ -76,7 +76,7 @@ GitHub 'dan [Microsoft Win32 Içerik hazırlığı aracını](https://go.microso
 ### <a name="example-commands"></a>Örnek komutlar
 
 |    **Örnek komut**    |    **Açıklama**    |
-|:-----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `IntuneWinAppUtil -h`    |    Bu komut aracın kullanım bilgilerini gösterir.    |
 |    `IntuneWinAppUtil -c c:\testapp\v1.0 -s c:\testapp\v1.0\setup.exe -o c:\testappoutput\v1.0 -q`    |    Bu komut, belirtilen kaynak klasörden ve kurulum dosyasından `.intunewin` dosyasını oluşturur. MSI kurulum dosyası için, bu araç Intune'a gereken bilgileri alır. `-q` belirtilirse, komut sessiz modda çalıştırılır ve çıkış dosyası zaten varsa, bu dosyanın üzerine yazılır. Ayrıca, çıkış klasörü yoksa otomatik olarak oluşturulur.    |
 

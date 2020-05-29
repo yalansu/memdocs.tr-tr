@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 05/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 373a5e55a28c6fab740a86a3ad2ad69c5fa08848
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 424778a86ebf3bac750e17359204ef6be3aaa71c
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078150"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166051"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Intune Uygulama Sarmalama Aracı ile iOS uygulamalarını uygulama koruma ilkelerine hazırlama
 
@@ -198,9 +198,9 @@ Aşağıdaki komut satırı parametrelerini Uygulama Sarmalama Aracı ile birlik
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**| Uygulama Sarmalama Aracı için kullanılabilir komut satırı özellikleri hakkında ayrıntılı kullanım bilgilerini gösterir. |
-|**-aa**|Seçim `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>` yani `login.windows.net/common` |
-|**-AC**|Seçim `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` Bu GUID, istemci kimliği alanındaki GUID 'In uygulama kaydı dikey penceresindeki uygulamanızın listelemesi ' dir. |
-|**-Ar**|Seçim `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` Bu, uygulama kaydlarınızın yapılandırdığı yeniden yönlendirme URI 'sidir. Genellikle, Microsoft Authenticator uygulamanın aracılı kimlik doğrulamasından sonra geri döndürdüğü uygulamanın URL protokolü olur. |
+|**-aa**|(İsteğe bağlı) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>` Yani `login.windows.net/common` |
+|**-AC**|(İsteğe bağlı) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` Bu GUID, Istemci KIMLIĞI alanındaki GUID 'in uygulama kaydı dikey penceresindeki uygulamanızın listelemesi ' dir. |
+|**-Ar**|(İsteğe bağlı) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` Bu, uygulama kaydlarınızın yapılandırdığı yeniden yönlendirme URI 'sidir. Genellikle, Microsoft Authenticator uygulamanın aracılı kimlik doğrulamasından sonra geri döndürdüğü uygulamanın URL protokolü olur. |
 |**-v**| (İsteğe bağlı) Konsola ayrıntılı ileti çıkışı yapar. Bu bayrağın hataları ayıklamak için kullanılması önerilir. |
 |**-e**| (İsteğe bağlı) Uygulama Sarmalama Aracının uygulamayı işlerken eksik yetkilendirmeleri kaldırmasını sağlamak için bu bayrağı kullanın. Daha fazla ayrıntı için [uygulama yetkilendirmelerini ayarlama](#setting-app-entitlements) bölümüne bakın.|
 |**-xe**| (İsteğe bağlı) Uygulamadaki iOS uzantıları hakkında bilgi ve bunları kullanmak için hangi yetkilendirmelerin gerektiğini yazdırır. Daha fazla ayrıntı için [uygulama yetkilendirmelerini ayarlama](#setting-app-entitlements) bölümüne bakın. |
@@ -215,7 +215,7 @@ Uygulama Sarmalama Aracı’nı çalıştırmanın kolay bir yolu, tüm komut sa
 
 IntuneMAMPackager/Contents/MacOS klasöründe, `Parameters.plist` öğesini (boş bir plist şablonu), bir metin düzenleyici veya Xcode ile açın. Aşağıdaki anahtarlar için bağımsız değişkenlerinizi girin:
 
-| Plist anahtarı | Tür |  Varsayılan Değer | Notlar |
+| Plist anahtarı | Tür |  Varsayılan değer | Notlar |
 |------------------|-----|--------------|-----|
 | Giriş Uygulama Paketi Yolu |Dize|empty| -i ile aynı|
 | Çıkış Uygulama Paketi Yolu |Dize|empty| -o ile aynı|
@@ -319,7 +319,7 @@ Tam işlevsellik garantisi için iOS için Uygulama Sarmalama Aracında karşıl
 |---------------|-----------|
 |iOS sağlama profili|Sağlama profilini dahil etmeden önce, geçerli olduğundan emin olun. Uygulama Sarmalama Aracı, bir iOS uygulamasını işlerken sağlama profilinin geçerlilik süresinin dolup dolmadığını denetlemez. Süresi dolmuş bir sağlama profili belirtilirse, uygulama sarmalama aracı süresi dolmuş sağlama profilini içerir ve uygulamanın bir iOS cihazına yüklenemediğini fark edene kadar bir sorun olduğunu anlayamazsınız.|
 |iOS imzalama sertifikası|İmzalama sertifikasını belirtmeden önce, geçerli olduğundan emin olun. Araç, iOS uygulamalarını işlerken bir sertifikanın süresinin dolup dolmadığını denetlemez. Süresi dolmuş bir sertifika için karma sağlanırsa, araç uygulamayı işler ve imzalar, ancak uygulama cihazlara yüklenemez.<br /><br />Sarmalanan uygulamayı imzalamak için sağlanan sertifikanın, sağlama profilinde bir eşleşmeye sahip olduğundan emin olun. Araç, sağlama profilinin sarmalanan uygulamayı imzalamak için sağlanan sertifikaya yönelik bir eşleşme içerip içermediğini doğrulamaz.|
-|Kimlik doğrulaması|Şifrelemenin çalışması için cihazın PIN’e sahip olması gerekir. Sarmalanan uygulama dağıtılan cihazlarda durum çubuğuna dokunma, kullanıcının iş veya okul hesabıyla yeniden oturum açmasını gerektirir. Sarmalanan bir uygulamada varsayılan ilke, *yeniden başlatma sırasında kimlik doğrulaması* şeklindedir. iOS tüm dış bildirimleri (bir telefon araması gibi) uygulamadan çıkıp uygulamayı yeniden başlatarak işler.
+|Kimlik Doğrulaması|Şifrelemenin çalışması için cihazın PIN’e sahip olması gerekir. Sarmalanan uygulama dağıtılan cihazlarda durum çubuğuna dokunma, kullanıcının iş veya okul hesabıyla yeniden oturum açmasını gerektirir. Sarmalanan bir uygulamada varsayılan ilke, *yeniden başlatma sırasında kimlik doğrulaması* şeklindedir. iOS tüm dış bildirimleri (bir telefon araması gibi) uygulamadan çıkıp uygulamayı yeniden başlatarak işler.
 
 ## <a name="setting-app-entitlements"></a>Uygulama yetkilendirmelerini ayarlama
 

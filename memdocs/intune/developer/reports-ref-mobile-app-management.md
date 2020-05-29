@@ -6,7 +6,7 @@ keywords: Intune Veri Ambarı
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 428ee1ce93b4f6fe21c4b0180a9df222f3e23e09
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6813c3420684613b257dc2edb942248382f19654
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331686"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165320"
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Mobil Uygulama Yönetimi (MAM) varlıkları için başvuru
 
@@ -67,7 +67,7 @@ ms.locfileid: "79331686"
 |        createdDate         |                                                                 Bu MAM uygulama örneği kaydının oluşturulduğu tarih. Değer null olabilir.                                                                 |        23/11/2016 00:00:00        |
 |          platform          |                                                                          MAM uygulamasının yüklü olduğu cihazın platformu.                                                                           |                  2                   |
 |      platformVersion       |                                                                      Bu MAM uygulamasının yüklü olduğu cihazın platform sürümü.                                                                       |                 2,2                  |
-|         SDK sürümü         |                                                                            Bu MAM uygulamasını sarmalayan MAM SDK sürümü.                                                                            |                 3,2                  |
+|         SDK sürümü         |                                                                            Bu MAM uygulamasını sarmalayan MAM SDK sürümü.                                                                            |                 3.2                  |
 | Mamdeviceıd | MAM uygulama örneğinin ilişkilendirildiği cihazın cihaz KIMLIĞI.   | 23/11/2016 00:00:00   |
 | mamDeviceType | MAM uygulama örneğinin ilişkilendirildiği cihazın cihaz türü.   | 23/11/2016 00:00:00   |
 | Mamaygıtadı | MAM uygulama örneğinin ilişkilendirildiği cihazın cihaz adı.   | 23/11/2016 00:00:00   |
@@ -126,6 +126,6 @@ ms.locfileid: "79331686"
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
 |        ; platformKey ile         |     Veri ambarındaki platformun benzersiz tanımlayıcısı - vekil anahtar.      |                           123                           |
 |          platform          | Platformun benzersiz tanımlayıcısı; PlatformKey ile benzer ancak doğal bir anahtardır. |                           123                           |
-|        platformName        |                                   Platform adı                                   | Kullanılamaz <br>Hiçbiri <br>Windows <br>IOS <br>Android. |
+|        platformName        |                                   Platform adı                                   | Kullanılamaz <br>Yok <br>Windows <br>IOS <br>Android. |
 | rowLastModifiedDateTimeUtc | Bu platformun veri ambarında son değiştirildiği tarih ve UTC diliminde saat.  |                 23/11/2016 00:00:00                  |
 

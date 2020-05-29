@@ -10,12 +10,12 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7680c8f955773f169d56f36eb9bbe6507d2d7ce6
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: cb7cc71618ad0f86abce3ab76d6344e0d23bfc58
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427815"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153432"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Configuration Manager 'de istemci bildirimi
 
@@ -140,7 +140,7 @@ Sürüm 1910 ' den başlayarak, Configuration Manager konsolundaki **Istemci tan
 
 - **Ayrıntılı günlüğü etkinleştir**: CCM bileşeni için genel günlük düzeyini Verbose olarak değiştirin ve hata ayıklama günlüğünü etkinleştirin.
 - **Ayrıntılı günlüğe kaydetmeyi devre dışı bırak**: genel günlük düzeyini varsayılana değiştirin ve hata ayıklama günlüğünü devre dışı bırakın.
-- **Istemci günlükleri topla** (2002 'den başlayarak): CCM günlüklerini toplamak için seçilen istemcilere bir istemci bildirim iletisi gönderilir. Günlükler, yazılım envanteri dosya koleksiyonu kullanılarak döndürülür. <!--4226618-->
+- **Istemci günlüklerini topla** (2002 'den başlayarak): SITE, CCM günlüklerini toplamak için seçili istemcilere bir istemci bildirim iletisi gönderir. İstemci, günlükleri yazılım envanteri dosya koleksiyonuyla aynı kanalı kullanarak yönetim noktasına gönderir. <!--4226618--> İstemci ayarlarında yazılım envanterini etkinleştirmeniz gerekmez.<!-- MEMDocs#305 -->
    - Sıkıştırılmış istemci günlükleri için boyut sınırı 100 MB 'tır. <!--6366098-->
    - Bu dosyaları yönetmek ve görüntülemek [Kaynak Gezgini](inventory/use-resource-explorer-to-view-software-inventory.md#bkmk_diag) kullanın.
 

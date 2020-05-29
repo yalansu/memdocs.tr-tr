@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/08/2020
+ms.date: 05/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17213a29d5182176fe2fd8e5802e5ca03587d8f7
-ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
+ms.openlocfilehash: efa965bc3dff2436a98602e3cb9dda96a1fe580d
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82991821"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166201"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune son kullanıcı uygulamaları arabirimlerinde yapılan güncelleştirmeler
 
@@ -34,6 +34,19 @@ Microsoft Intune uygulamalarına yönelik en son güncelleştirmeler hakkında b
 
 Bir çalışan ya da öğrenciyseniz, Şirket Portalı yardım belgelerinin ekran görüntülerini ve bağlantılarını kontrol ettiğinizden emin olun. Şirket Portalı uygulamasının nasıl kullanılacağı hakkında daha fazla bilgi için, [Şirket portalı Kullanıcı Yardım belgelerine](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done)bakın.  
 
+
+
+## <a name="week-of-may-18-2020"></a>18 Mayıs 2020 haftası  
+### <a name="update-to-icons-in-company-portal-app-for-iosipados-and-macos---6057697---"></a>İOS/ıpados ve macOS için Şirket Portalı App 'teki simgelere güncelleştirme <!--6057697 -->  
+Çift ekran cihazlarda desteklenen ve Microsoft akıcı tasarım sistemiyle hizalanan daha modern bir görünüm oluşturmak için Şirket Portalı simgeleri güncelleştirdik.
+
+|İOS/ıpados için güncelleştirildi|Daha önce iOS/ıpados için|   
+|---|---|   
+|![İOS/ıpados için Şirket Portalı görüntüsü, alt menüdeki güncelleştirilmiş simgeleri vurgular.](./media/whats-new-app-ui/company-portal-ios-icons-after-2005.png)|![İOS için Şirket Portalı, eski simgeleri vurgulayan görüntü.](./media/whats-new-app-ui/company-portal-ios-icons-before-2005.png)| 
+
+|MacOS için güncelleştirildi|  
+|---|
+|![MacOS, cihazlar sekmesi için Şirket Portalı görüntüsü, güncelleştirilmiş simgeleri vurgulaması.](./media/whats-new-app-ui/company-portal-macos-icons-after-2005.png)|  
 
 
 ## <a name="week-of-may-4-2020"></a>4 Mayıs 2020 haftası  
@@ -126,7 +139,7 @@ Android için Microsoft Intune uygulaması aşağıdaki geliştirmelerle güncel
 ![Şirket Portalı Web sitesi, yüklü uygulamalar sayfasının ekran görüntüsü.](./media/whats-new-app-ui/intune-installed-apps-1907.png)     
 
 ### <a name="new-view-lets-app-users-see-all-managed-apps-installed-on-device----2352913---"></a>Yeni görünüm, uygulama kullanıcılarının cihazda yüklü olan tüm yönetilen uygulamaları görmesini sağlar <!-- 2352913 -->
-Windows için Şirket Portalı uygulaması artık bir kullanıcının cihazında yüklü olan tüm yönetilen uygulamaları (hem gerekli hem de kullanılabilir) listeler. Kullanıcılar ayrıca, denenen ve bekleyen uygulama yüklemelerini ve bunların geçerli durumlarını görebilir. Kullanıcılarınız için gerekli olan veya kullanıcılarınızın kullanabildiği uygulamalar yapmadıysanız, hiçbir şirket uygulaması yüklenmediğini açıklayan bir ileti görür. Yeni görünümü görmek için şirket portalı gezinti bölmesine gidin ve **uygulamalar** > **yüklü uygulamalar**' ı seçin.   
+Windows için Şirket Portalı uygulaması artık bir kullanıcının cihazında yüklü olan tüm yönetilen uygulamaları (hem gerekli hem de kullanılabilir) listeler. Kullanıcılar ayrıca, denenen ve bekleyen uygulama yüklemelerini ve bunların geçerli durumlarını görebilir. Kullanıcılarınız için gerekli olan veya kullanıcılarınızın kullanabildiği uygulamalar yapmadıysanız, hiçbir şirket uygulaması yüklenmediğini açıklayan bir ileti görür. Yeni görünümü görmek için şirket portalı gezinti bölmesine gidin ve **uygulamalar**  >  **yüklü uygulamalar**' ı seçin.   
 
 ![Windows 10 için Şirket Portalı uygulamasının yüklü uygulamalar sayfasında örnek ekran görüntüsü. ](./media/whats-new-app-ui/installed-apps-cp-1906.png)  
 
@@ -297,7 +310,7 @@ Android için Şirket Portalı uygulamasını, Android'in [Materyal Tasarım](ht
 İOS/ıpados için Şirket Portalı App 'teki cihaz kurulumu iş akışını geliştirdik. Dil artık daha kullanıcı dostu ve mümkün olan yerlerde ekranları birleştirdik. Ayrıca kurulum metninde şirket adınızı kullanarak dilinizi firmanıza özel hale getirdik.
 
 > [!NOTE]
-> **Microsoft Intune** > **istemci uygulamaları** > **Şirket portalı marka** > **Şirket adı**' nda Azure portalında ayarlamış olduğunuz şirket adını kullanırız. Bu değeri görmüyorsanız, **Azure Active Directory** > **Özellikler** > **adında**ayarlanan kiracı adını kullanacağız. Şirket Portalı markasında bir şirket adı ayarlamazsanız ve kiracı adınızın görüntülenmesini istemiyorsanız, şirket adını Şirket Portalı marka sekmesinden ayarlamanızı öneririz. Bu dizenin Şirket Portalı üst bilgide görünmesini istemiyorsanız, "logo 'nin yanında şirket adını göster" onay kutusunun işaretini kaldırabilirsiniz.
+> **Microsoft Intune**  >  **istemci uygulamaları**  >  **Şirket portalı marka**  >  **Şirket adı**' nda Azure portalında ayarlamış olduğunuz şirket adını kullanırız. Bu değeri görmüyorsanız, **Azure Active Directory**  >  **Özellikler**  >  **adında**ayarlanan kiracı adını kullanacağız. Şirket Portalı markasında bir şirket adı ayarlamazsanız ve kiracı adınızın görüntülenmesini istemiyorsanız, şirket adını Şirket Portalı marka sekmesinden ayarlamanızı öneririz. Bu dizenin Şirket Portalı üst bilgide görünmesini istemiyorsanız, "logo 'nin yanında şirket adını göster" onay kutusunun işaretini kaldırabilirsiniz.
 
 |Önce|Sonra|
 |---|---|
@@ -464,7 +477,7 @@ __Başka bir cihazdan oturum aç__ bağlantısına dokunun.
 
 ![İş bilgisayarınızdan benzersiz bir geçiş kodu ile aka.ms/devicelogin sayfasına gidip oturum açmak için bu kodu kullanmaya ilişkin yönergeler sağlanır.](./media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_003.png)
 
-Bir tarayıcı başlatın ve adresine gidin [https://aka.ms/devicelogin](https://aka.ms/devicelogin).
+Bir tarayıcı başlatın ve adresine gidin [https://aka.ms/devicelogin](https://aka.ms/devicelogin) .
 
 ![Kullanıcının Şirket Portalı uygulamasındaki tarayıcı yerine iş bilgisayarındaki tarayıcısının bir resmi. Görüntülenen "Cihaz oturum açma" sayfası kullanıcıdan Şirket Portalı uygulamasından aldığı kodu girmesini ister.](./media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 

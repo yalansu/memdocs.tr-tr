@@ -6,7 +6,7 @@ keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 05/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 299eba5cfd07edac44db35d3b3eb6b97e5242973
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f44bd52d12753ae25b8828d6c41d3055721a1fd6
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989999"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166000"
 ---
 # <a name="intune-reports"></a>Intune raporları
 Microsoft Intune raporları, kuruluşunuzdaki uç noktaların sistem durumunu ve etkinliğini daha etkili ve verimli bir şekilde izlemenize olanak tanır ve ayrıca Intune genelinde diğer raporlama verileri sağlar. Örneğin, cihaz uyumluluğu, cihaz sistem durumu ve cihaz eğilimleri hakkındaki raporları görebileceksiniz. Ayrıca, daha belirli verileri almak için özel raporlar da oluşturabilirsiniz. 

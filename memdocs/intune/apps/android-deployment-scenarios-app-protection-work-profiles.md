@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/13/2019
+ms.date: 05/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -15,12 +15,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ea67d432f3f418b4ecc592462d93e7d4da3676f6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 80a26e10a3c05436699d3cafb3c4564e73099c07
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327410"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165847"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Intune 'da Android kurumsal cihazlarda uygulama koruma ilkeleri ve iş profilleri
 
@@ -102,7 +102,7 @@ Bir APP-WE senaryosunda ve yönetilen cihazlarda iş profillerine sahip olan bir
 
 ### <a name="control-multi-identity-behavior-in-work-profiles"></a>İş profillerinde çoklu kimlik davranışını denetleme
 
-Outlook ve OneDrive gibi Office uygulamalarında "çoklu kimlik" davranışı vardır. Uygulamanın bir örneği içinde, Son Kullanıcı birden çok farklı hesaba veya bulut depolama konumuna bağlantı ekleyebilir. Uygulama içinde, bu konumlardan alınan veriler ayrı veya birleştirilebilir. Ve Kullanıcı, kişisel kimlikler (user@outlook.com) ve kuruluş kimlikleri (user@contoso.com) arasında geçiş yapabilir.
+Outlook ve OneDrive gibi Office uygulamalarında "çoklu kimlik" davranışı vardır. Uygulamanın bir örneği içinde, Son Kullanıcı birden çok farklı hesaba veya bulut depolama konumuna bağlantı ekleyebilir. Uygulama içinde, bu konumlardan alınan veriler ayrı veya birleştirilebilir. Ve Kullanıcı, kişisel kimlikler ( user@outlook.com ) ve kuruluş kimlikleri () arasında geçiş yapabilir user@contoso.com .
 
 İş profillerini kullanırken, bu çoklu kimlik davranışını devre dışı bırakmak isteyebilirsiniz. Devre dışı bıraktığınızda, iş profilindeki uygulamanın bozuk örnekleri yalnızca bir kuruluş kimliğiyle yapılandırılabilir. Office Android uygulamalarını desteklemek için Izin verilen hesaplar uygulama yapılandırma ayarını kullanın.
 

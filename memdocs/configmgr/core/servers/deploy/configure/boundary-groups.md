@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ce77c43f49556b3a60e36f05127f82d4d135762a
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: c9567cc441636bbda31262e0857e2fc6484c2af7
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643256"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153409"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Configuration Manager için sınır grupları yapılandırma
 
@@ -103,7 +103,7 @@ Sürüm 2002 ' den başlayarak, sınır gruplarıyla cihaz davranışlarını da
 
 ### <a name="the-default-site-boundary-group"></a>Varsayılan site sınır grubu
 
-Kendi sınır gruplarınızı oluşturabilirsiniz ve her sitenin Configuration Manager oluşturduğu varsayılan bir site sınır grubu vardır. Bu grup **varsayılan-site-sınır-grup&lt;sitekodu>** olarak adlandırılmıştır. Örneğin, ABC sitesi grubu **varsayılan-site-sınır-&lt;grubu ABC>** olarak adlandırılır.
+Kendi sınır gruplarınızı oluşturabilirsiniz ve her sitenin Configuration Manager oluşturduğu varsayılan bir site sınır grubu vardır. Bu grup **varsayılan-site-sınır-grup &lt; sitekodu>** olarak adlandırılmıştır. Örneğin, ABC sitesi grubu **varsayılan-site-sınır-grubu &lt; ABC>** olarak adlandırılır.
 
 Oluşturduğunuz her sınır grubu için, Configuration Manager hiyerarşideki her bir varsayılan site sınırı grubuna otomatik olarak örtülü bir bağlantı oluşturur.  
 
@@ -154,8 +154,16 @@ Bir istemci bir dağıtım noktasının konumunu istediğinde, Configuration Man
 
 ### <a name="client-installation"></a><a name="bkmk_ccmsetup"></a>İstemci yüklemesi
 
+CCMSetup Configuration Manager istemci yükleyicisi, bir yerel kaynaktan veya bir yönetim noktası aracılığıyla yükleme içeriği alabilir. İlk davranışı, istemciyi yüklemek için kullandığınız komut satırı parametrelerine bağlıdır:<!-- MEMDocs#286 -->
+
+- **/MP** veya **/Source** parametreleri kullanmazsanız, CCMSETUP Active Directory veya DNS 'den yönetim noktalarının bir listesini almayı dener.
+- Yalnızca **/Source**belirtirseniz, yükleme işlemini belirtilen yoldan zorlar. Yönetim noktalarını bulamaz. Belirtilen yolda CCMSetup. cab dosyası bulamazsa CCMSetup başarısız olur.
+- Hem **/MP** hem de **/Source**belirtirseniz, belirtilen yönetim noktalarını denetler ve tüm bunları bulur. Geçerli bir yönetim noktası bulamazsa, belirtilen kaynak yoluna geri döner.
+
+Bu CCMSetup parametreleri hakkında daha fazla bilgi için bkz. [istemci yükleme parametreleri ve özellikleri](../../../clients/deploy/about-client-installation-properties.md).
+
 <!--1358840-->
-Configuration Manager istemcisi yüklenirken, CCMSetup işlemi, gerekli içeriğin yerini bulmak için yönetim noktasıyla iletişim kurar. Yönetim noktası, sınır grubu yapılandırmasına bağlı olarak dağıtım noktaları döndürür. Sınır grubunda ilişkiler tanımlarsanız, yönetim noktası dağıtım noktalarını aşağıdaki sırada döndürür:
+CCMSetup, gerekli içeriği bulmak için yönetim noktasıyla iletişim kurduğunda, yönetim noktası sınır grubu yapılandırmasına göre dağıtım noktaları döndürür. Sınır grubunda ilişkiler tanımlarsanız, yönetim noktası dağıtım noktalarını aşağıdaki sırada döndürür:
 
 1. Geçerli sınır grubu  
 2. Komşu sınır grupları  
@@ -241,16 +249,16 @@ Bu seçeneği etkinleştirmeye yönelik yaygın senaryolar:
 
 - Tüm uzak Office konumları için tek bir büyük sınır grubunuz vardır. Bu seçeneği etkinleştirin ve istemciler, konumlar arasında içerik paylaşımı yapmak yerine yalnızca uzak ofis konumundaki alt ağ içindeki içeriği paylaşır.
 
-Sürüm 2002 ' den başlayarak ağınızın yapılandırmasına bağlı olarak, belirli alt ağları eşleştirme için dışlayabilirsiniz. Örneğin, bir sınır eklemek, ancak belirli bir VPN alt ağını dışlamak istiyorsunuz. Varsayılan olarak, Configuration Manager varsayılan Teredo alt ağını (`2001:0000:%`) dışlar.<!--3555777-->
+Sürüm 2002 ' den başlayarak ağınızın yapılandırmasına bağlı olarak, belirli alt ağları eşleştirme için dışlayabilirsiniz. Örneğin, bir sınır eklemek, ancak belirli bir VPN alt ağını dışlamak istiyorsunuz. Varsayılan olarak, Configuration Manager varsayılan Teredo alt ağını ( `2001:0000:%` ) dışlar.<!--3555777-->
 
 > [!NOTE]
 > Sürüm 2002 ' de, [tek başına bir birincil siteyi](../install/prerequisites-for-installing-sites.md#bkmk_expand) bir merkezi yönetim SITESI (CAS) eklemek üzere genişlettiğinizde, alt ağ dışlama listesi varsayılana geri döner. Bu sorunu geçici olarak çözmek için, site genişletmesinden sonra CA 'daki alt ağ dışlama listesini özelleştirmek üzere PowerShell betiğini çalıştırın.<!-- 6309068 -->
 
-Alt ağ dışlama listenizi, virgülle ayrılmış bir alt ağ dizesi olarak içeri aktarın. Yüzde işaretini (`%`) joker karakter olarak kullanın. Üst düzey site sunucusunda, **SMS_SCI_Component** sınıfındaki **SMS_HIERARCHY_MANAGER** bileşeni Için **Subnetexclusıonlist** Embedded özelliğini ayarlayın veya okuyun. Daha fazla bilgi için bkz. [SMS_SCI_Component sunucusu WMI sınıfı](../../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md).
+Alt ağ dışlama listenizi, virgülle ayrılmış bir alt ağ dizesi olarak içeri aktarın. Yüzde işaretini ( `%` ) joker karakter olarak kullanın. Üst düzey site sunucusunda, **SMS_SCI_Component** sınıfındaki **SMS_HIERARCHY_MANAGER** bileşeni Için **Subnetexclusıonlist** Embedded özelliğini ayarlayın veya okuyun. Daha fazla bilgi için bkz. [SMS_SCI_Component sunucusu WMI sınıfı](../../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md).
 
 ##### <a name="sample-powershell-script-to-update-the-subnet-exclusion-list"></a>Alt ağ dışlama listesini güncelleştirmek için örnek PowerShell betiği
 
-Aşağıdaki betik, bu değeri değiştirmenin örnek bir yoludur. Sonrasında `2001:0000:%,172.16.16.0`alt ağlarınızı **PropertyValue** değişkenine ekleyin. Bu, virgülle ayrılmış bir dizedir. Bu betiği hiyerarşinizdeki üst düzey site sunucusunda çalıştırın.
+Aşağıdaki betik, bu değeri değiştirmenin örnek bir yoludur. Sonrasında alt ağlarınızı **PropertyValue** değişkenine ekleyin `2001:0000:%,172.16.16.0` . Bu, virgülle ayrılmış bir dizedir. Bu betiği hiyerarşinizdeki üst düzey site sunucusunda çalıştırın.
 
 ```PowerShell
 $PropertyValue = "2001:0000:%,172.16.16.0"
@@ -469,7 +477,7 @@ Artık tek tek dağıtım noktalarını hızlı veya yavaş olacak şekilde yap�
 
 ### <a name="new-default-boundary-group-at-each-site"></a>Her sitede yeni varsayılan sınır grubu
 
-Her birincil sitenin **Default-site-sınır-Group&lt;sitekodu>** adlı yeni bir varsayılan sınır grubu vardır. Bir istemci, bir sınır grubuna atanan bir ağ konumunda olmadığında, atanmış sitesinden varsayılan grupla ilişkili site sistemlerini kullanır. Bu sınır grubunu, geri dönüş içerik konumu kavramının yerini alarak kullanmayı planlayın.
+Her birincil sitenin **Default-site-sınır-Group &lt; sitekodu>** adlı yeni bir varsayılan sınır grubu vardır. Bir istemci, bir sınır grubuna atanan bir ağ konumunda olmadığında, atanmış sitesinden varsayılan grupla ilişkili site sistemlerini kullanır. Bu sınır grubunu, geri dönüş içerik konumu kavramının yerini alarak kullanmayı planlayın.
 
 #### <a name="allow-fallback-source-locations-for-content-is-removed"></a>**İçerik için geri dönüş kaynak konumlarına Izin ver** kaldırıldı
 

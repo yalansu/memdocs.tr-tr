@@ -6,7 +6,7 @@ keywords: Intune Veri Ambarı
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 05/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ec35681b6e81eb28c114733cc7913dd90875bfd
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 402285b871db6c3ff18e8f89ec0553a51dab9c13
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023325"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165558"
 ---
 # <a name="reference-for-application-entities"></a>Uygulama varlıkları için başvuru
 
@@ -69,7 +69,7 @@ ms.locfileid: "82023325"
 
 ### <a name="example"></a>Örnek
 
-| AppTypeID  | Adı | Açıklama |
+| AppTypeID  | Name | Açıklama |
 |---------|------------|--------|
 | 0 |Android mağazası uygulaması | Bir Android mağazası uygulaması. |
 | 1 |Android LOB uygulaması | Bir Android iş kolu uygulaması. |
@@ -98,7 +98,7 @@ ms.locfileid: "82023325"
 
 ### <a name="example"></a>Örnek
 
-| VppProgramID  | Adı | Açıklama |
+| VppProgramID  | Name | Açıklama |
 |---------|------------|--------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft | Microsoft’un VPP programı. |
 | 00000000-0000-0000-0000-000000000000 | Henüz kullanılamıyor | Varsayılan değer, No VPP. |

@@ -6,7 +6,7 @@ keywords: Intune Veri Ambarı
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6dfba55c8e516e2e689513f063d56f5a43d52d9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c6cd61a7a59f87e93d79d7761f9ccb5238b0be43
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331726"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165507"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Power BI ile Veri Ambarına bağlanma
 
@@ -66,7 +66,7 @@ Power BI [Intune uyumluluk (veri ambarı)](https://aka.ms/intune/datawarehouseap
 
 Alternatif olarak, uygulamayı Intune portalından da yükleyebilirsiniz:
 
-1. Azure Portal oturum açın ve**Intune** **izleme ve yönetim** > ' ı seçin. Ayrıca Intune için kaynak araması da yapabilirsiniz.
+1. Azure Portal oturum açın ve Intune **izleme ve yönetim**' ı seçin  >  **Intune**. Ayrıca Intune için kaynak araması da yapabilirsiniz.
 2. **Intune Veri Ambarı Ayarlama** dikey penceresini açın.
 3. Kiracınız için önceden oluşturulmuş olan Power BI raporlarına tarayıcıda erişmek ve bunları paylaşmak için **Power BI Uygulamasını edinin**'i seçin.
 4. Yukarıdaki 2-10 adımlarını izleyin.
@@ -79,8 +79,8 @@ Azure AD’de istemci kimliği doğrulandığı zaman OData URL’si, Veri Ambar
 2. Genel Bakış dikey penceresinin sağ tarafındaki **diğer görevler** bölümünde **Intune veri ambarını ayarla** ' ya tıklayın. **Intune veri ambarı** dikey penceresi görüntülenir.
 3. Raporlama dikey penceresinden özel akış URL 'sini alın, örneğin:<br>
     `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
-4. **Power BI Desktop**’ı açın.
-5. **Dosya** > **Al veri al**seçeneğini belirleyin. **OData akışı**’nı seçin.
+4. **Power BI Desktop**'ı açın.
+5. **Dosya**  >  **Al veri al**seçeneğini belirleyin. **OData akışı**’nı seçin.
 6. **Temel**’i seçin.
 7. URL kutusuna **OData URL’sini** yazın veya yapıştırın.
 8. **Tamam**’ı seçin.
@@ -88,7 +88,7 @@ Azure AD’de istemci kimliği doğrulandığı zaman OData URL’si, Veri Ambar
     1. **Kuruluş hesabını** seçin.  
     2. Kullanıcı adınızı ve parolanızı yazın.  
     3. **Oturum aç '** ı seçin.  
-    4. **Bağlan**’ı seçin.  
+    4. **Bağlan**'ı seçin.  
 10. **Yükle**’yi seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar

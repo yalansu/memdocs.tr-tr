@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 8251e21c7eccb87b764af75e883018bdc894ca37
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 4536adad3114b944baa6c75ac4e246ecddf4a2d2
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268683"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153435"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>Masaüstü analizi için Grup İlkesi ayarları
 
@@ -80,7 +80,7 @@ Aşağıdaki tabloda yer alan Grup İlkesi ayarları, masaüstü analizine kayde
 | **Ticari KIMLIĞI yapılandırma** | Commercialıd | Bu ilkeyi farklı bir değere ayarlarsanız, Configuration Manager tarafından ayarlanan ticari KIMLIĞI geçersiz kılar. Aynı KIMLIK yoksa, yapılandırılmış cihazlar masaüstü Analizi 'nde görünmeyebilir. |
 | **Telemetriye izin ver** | Allowtelemetri | Bu ilkeyi farklı bir değere ayarlarsanız, hedef koleksiyon için Configuration Manager ayarladığınız genel tanılama veri düzeyini geçersiz kılar. |
 | **Gelişmiş tanılama verilerini Windows Analytics için gereken en düşük düzeyde sınırlayın** | LimitEnhancedDiagnosticDataWindowsAnalytics | Bu ilke, önceki Allowtelemetri ayarına bağımlıdır. Configuration Manager veya Grup İlkesi ile ayarladığınız düzeye bağlı olarak, bu ilke cihazdaki tanılama veri düzeyini **Gelişmiş** veya **Gelişmiş (sınırlı)** olarak değiştirebilir. Bu ilke yalnızca Allowtelemetri `2` (**Gelişmiş**) olarak ayarlandıysa geçerlidir. |
-| **Windows Tanılama verilerinde cihaz adının gönderilmesine izin ver** | AllowDeviceNameInTelemetry | Configuration Manager cihaz adlarını göndermeyi tercih ediyorsanız, bu ilkeyi devre dışı olarak yapılandırmak b 'yi geçersiz kılabilirsiniz. Bu ayarı devre dışı bıraktığınızda, masaüstü analizinden cihaz adları "bilinmiyor" olarak görünür. Daha fazla bilgi için bkz. [Cihaz adı](enroll-devices.md#device-name). |
+| **Windows Tanılama verilerinde cihaz adının gönderilmesine izin ver** | AllowDeviceNameInTelemetry | Configuration Manager cihaz adlarını göndermeyi tercih ederseniz, bu ilkeyi devre dışı olarak yapılandırarak geçersiz kılabilirsiniz. Bu ayarı devre dışı bıraktığınızda, masaüstü analizinden cihaz adları "bilinmiyor" olarak görünür. Daha fazla bilgi için bkz. [Cihaz adı](enroll-devices.md#device-name). |
 | **Bağlı kullanıcı deneyimi ve telemetri hizmeti için kimliği doğrulanmış ara sunucu kullanımını yapılandırma** | DisableEnterpriseAuthProxy | Configuration Manager cihazlarını Kullanıcı tarafından kimliği doğrulanmış ara sunucu () kullanmak üzere yapılandırırsanız `0` , bu Ilkeyi **kimliği doğrulanmış proxy kullanımını devre dışı bırakacak** şekilde yapılandırırsanız, `1` Cihaz kullanıcının bağlamı yerine sistem bağlamında Tanılama verileri gönderir. Cihazı sistem bağlamında bir ara sunucu ile yapılandırmazsanız veya cihaz ara sunucuda kimlik doğrulayamıyorsanız, Windows, tanılama verilerini masaüstü Analizi 'ne gönderemez. |
 
 > [!NOTE]

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 05/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94592505806ec005fcc5abf6aead04ec89422d6e
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: 88b79cc3f149af025b4cb2c757017355bc9b4786
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881086"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166017"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>Intune Veri Ambarı hesabı verilerinizi taşıma 
 
@@ -43,16 +43,16 @@ Veri Ambarı verilerinizi yedeklemek için Veri Ambarı verilerinizi, Veri Ambar
 Azure portalı görünümünüzdeki bazı eğilim grafikleri sıfırlanacaktır. **Graph**’ta şu betiği çalıştırarak bu grafikleri yedekleyebilirsiniz:   
 
 ### <a name="terms--conditions-acceptance-reports"></a>Hüküm ve Koşulların Kabulü raporları
-1. Azure Portal, **Microsoft Intune** -> **cihaz kayıt** -> **Koşulları & koşullara**gidin.
+1. Azure Portal, **Microsoft Intune**  ->  **cihaz kayıt**  ->  **Koşulları & koşullara**gidin.
 2. Her bir **Hüküm ve Koşullar** öğesi için **Kabul Raporu** ve ardından **Dışarı Aktar**’ı seçin.
 3. Raporu yerel olarak kaydedin.
  
 ### <a name="app-protection-reports"></a>Uygulama Koruma raporları  
-1. Azure Portal, **Microsoft Intune** -> **istemci uygulamaları** -> **Uygulama koruma durumu**' na gidin.
+1. Azure Portal, **Microsoft Intune**  ->  **istemci uygulamaları**  ->  **Uygulama koruma durumu**' na gidin.
 2. Her bir raporu kaydetmek için indirme simgesine ( ⤓ ) tıklayın.
 
 ### <a name="device-configuration-charts"></a>Cihaz Yapılandırma grafikleri 
-1. Azure Portal, **Microsoft Intune** -> **deviceconfiguration**' a gidin.
+1. Azure Portal, **Microsoft Intune**  ->  **deviceconfiguration**' a gidin.
 2. Microsoft [Graph Gezgini](https://developer.microsoft.com/graph/graph-explorer)’ni kullanarak grafiklerdeki verileri indirin. 
     - Tüm cihazlardaki cihaz yapılandırma profillerinin dağıtım durumları için bkz. [Cihaz dağıtım durumu](https://graph.microsoft.com/beta/reports/deviceConfigurationDeviceActivity/content).
 
@@ -64,7 +64,7 @@ Azure portalı görünümünüzdeki bazı eğilim grafikleri sıfırlanacaktır.
     > Cihaz yapılandırması ve dağıtım durumu bilgilerine erişmek için geçerli bir kimlik doğrulaması belirteciniz olmalıdır.
 
 ## <a name="device-enrollment-charts"></a>Cihaz Kayıt grafikleri
-1. Azure Portal, **Microsoft Intune** -> **devicekaydına**gidin.
+1. Azure Portal, **Microsoft Intune**  ->  **devicekaydına**gidin.
 2. Microsoft [Graph Gezgini](https://developer.microsoft.com/graph/graph-explorer)’ni kullanarak grafiklerdeki verileri indirin.
     - Kayıt durumu için bu [kayıt durumu sorgusunu](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentFailureTrends()/content) kopyalayın ve [Graph Gezgini](https://developer.microsoft.com/graph/graph-explorer)’ne yapıştırın.
     - Bu haftanın en sık görülen kayıt hataları için bu [kayıt hataları sorgusunu](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentTopFailures(period=null)/content) kopyalayın ve [Graph Gezgini](https://developer.microsoft.com/graph/graph-explorer)’ne yapıştırın.

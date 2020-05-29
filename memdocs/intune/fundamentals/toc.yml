@@ -157,6 +157,10 @@
               href: intune-endpoints.md
             - name: Intune ABD kamu uç noktaları
               href: intune-us-government-endpoints.md
+            - name: Çin uç noktaları
+              href: china-endpoints.md
+            - name: Çin'de 21Vianet tarafından çalıştırılan Intune
+              href: china.md
         - name: Intune'da oturum açma
           href: account-sign-up.md
         - name: Etki alanlarını yapılandırma

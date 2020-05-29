@@ -6,7 +6,7 @@ keywords: Intune Veri Ambarı
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ad156e49444679bbf7b15c53e87f504b07897bd
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: bc01428430eb665dc609cff84ee322f28e3b7d79
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709375"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165439"
 ---
 # <a name="reference-for-devices-entities"></a>Cihaz varlıkları için başvuru
 
@@ -226,7 +226,7 @@ Kayıtsahibi **türü** varlığı, bir cihazın kurumsal, kişisel veya bilinme
 **Cihazlar** varlığı, yönetim altındaki tüm kayıtlı cihazları ve bunlara karşılık gelen özellikleri listeler.
 
 |          Özellik          |                                                                                       Açıklama                                                                                      |
-|:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | deviceKey                  | Veri ambarındaki cihazın benzersiz tanımlayıcısı - vekil anahtar.                                                                                                               |
 | deviceId                   | Cihazın benzersiz tanımlayıcısı.                                                                                                                                                     |
 | deviceName                 | Cihaz adlandırmaya izin veren platformlardaki cihaz adı. Diğer platformlarda ise Intune, diğer özelliklerden bir ad oluşturur. Bu öznitelik tüm cihazlarda kullanılamaz. |
@@ -274,7 +274,7 @@ Kayıtsahibi **türü** varlığı, bir cihazın kurumsal, kişisel veya bilinme
 **Devicepropertyhistory** varlığı, cihazlar tablosuyla aynı özelliklere ve son 90 gün boyunca her bir cihaz kaydının günlük anlık görüntülerine sahiptir. DateKey sütunu, her satır için günü gösterir.
 
 |          Özellik          |                                                                                      Açıklama                                                                                     |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | dateKey                    | Günü gösteren tarih tablosuna başvuru.                                                                                                                                          |
 | deviceKey                  | Veri ambarındaki cihazın benzersiz tanımlayıcısı-vekil anahtar. Bu, Intune cihaz kimliğini barındıran Cihaz tablosuna bir başvurudur.                               |
 | deviceName                 | Cihaz adlandırmaya izin veren platformlardaki cihaz adı. Buna izin vermeyen platformlarda ise Intune, diğer özelliklerden bir ad oluşturur. Bu öznitelik tüm cihazlarda kullanılamaz. |

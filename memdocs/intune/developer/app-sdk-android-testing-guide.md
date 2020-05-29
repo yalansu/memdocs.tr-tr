@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce008c21cefeb3920182a09547db091547681401
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6875dc873d44b77a24fe68f637d9329c9f5e1d9c
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79326554"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165609"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-testing-guide"></a>Android için uygulama SDK 'Sı test Kılavuzu Microsoft Intune
 
@@ -55,7 +55,7 @@ Aşağıdaki test çalışmaları yapılandırma ve onay adımları sağlar. Int
 2. Aşağıdaki koşulları onaylayın:
     - Uygulama başlatma, PIN girişi veya Şirket Portalı kayıt sırasında kullanılan üretim kullanıcısı için bir istem sunmalıdır.
     - Geçerli bir oturum açma istemi sunamaması, özellikle Azure Active Directory kimlik doğrulaması kitaplığı (ADAL) Tümleştirmesi (SkipBroker, ClientID ve Authority) için değerler olarak yanlış yapılandırılmış bir Android bildiriminin nedeni olabilir.
-    - Herhangi bir istem sunma hatası, yanlış tümleşik `MAMActivity` bir değerden kaynaklanıyor olabilir. Hakkında `MAMActivity`daha fazla bilgi için bkz. [Android için uygulama SDK 'sı Geliştirici Kılavuzu Microsoft Intune](app-sdk-android.md).
+    - Herhangi bir istem sunma hatası, yanlış tümleşik bir değerden kaynaklanıyor olabilir `MAMActivity` . Hakkında daha fazla bilgi için `MAMActivity` bkz. [Android için uygulama SDK 'sı geliştirici kılavuzu Microsoft Intune](app-sdk-android.md).
 
 > [!NOTE] 
 > Önceki test çalışmıyorsa, aşağıdaki testler de başarısız olur. [SDK](app-sdk-android.md#sdk-integration) ve [adal](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal) tümleştirmesini gözden geçirin.
@@ -104,11 +104,11 @@ Yönetilen uygulamaları, şirket e-posta ve belgelerinin bulunduğu bir şekild
 1. Azure portal, [silme](../apps/apps-selective-wipe.md)işlemi yapın.
 2. Uygulamanız herhangi bir silme işleyicisine kaydolmazsa, aşağıdaki koşulları onaylayın:
     - Uygulamanın tam temizleme işlemi gerçekleşir.
-3. Uygulamanız veya `WIPE_USER_DATA` `WIPE_USER_AUXILARY_DATA`için kaydedilmişse, aşağıdaki koşulları onaylayın:
+3. Uygulamanız veya için kaydedilmişse `WIPE_USER_DATA` `WIPE_USER_AUXILARY_DATA` , aşağıdaki koşulları onaylayın:
     - Yönetilen içerik uygulamadan kaldırılır. Daha fazla bilgi için bkz. [Android Için Intune uygulama SDK 'sı Geliştirici Kılavuzu-seçmeli silme](app-sdk-android.md#selective-wipe).
 
 ### <a name="multi-identity-support"></a>Çoklu kimlik desteği
-[Çoklu kimlik desteğini](app-sdk-android.md#multi-identity-optional) tümleştirme, kapsamlı bir şekilde test olması gereken yüksek riskli bir değişiklik. En yaygın sorunlar, kimliği (bağlam ve tehdit düzeyi) ve izleme dosyalarını (`MAMFileProtectionManager`) yanlış ayarlamadığı için oluşur.
+[Çoklu kimlik desteğini](app-sdk-android.md#multi-identity-optional) tümleştirme, kapsamlı bir şekilde test olması gereken yüksek riskli bir değişiklik. En yaygın sorunlar, kimliği (bağlam ve tehdit düzeyi) ve izleme dosyalarını () yanlış ayarlamadığı için oluşur `MAMFileProtectionManager` .
 
 En düşük düzeyde, aşağıdakileri onaylayın:
 

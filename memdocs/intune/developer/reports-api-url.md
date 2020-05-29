@@ -6,7 +6,7 @@ keywords: Intune Veri Ambarı
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04521681ee6e262f4634cfc96560a5922ce1b8c0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ef0ba25d697bca6d6a6af7aad3565e6c2c70841e
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331834"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165949"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Intune Veri Ambarı API uç noktası
 
@@ -64,7 +64,7 @@ Beta sürümünü kullanarak Veri Ambarı’nın en son işlevlerini deneyebilir
 
 ## <a name="odata-query-options"></a>OData sorgu seçenekleri
 
-Geçerli sürüm, aşağıdaki OData sorgu parametrelerini destekler `$filter`:, `$select` `$skip,` ve. `$top` ' `$filter`De, `DateKey` yalnızca `RowLastModifiedDateTimeUTC` sütunlar geçerliyse veya bazı özellikler hatalı bir istek tetikleyeceğinden desteklenir.
+Geçerli sürüm, aşağıdaki OData sorgu parametrelerini destekler: `$filter` , `$select` `$skip,` ve `$top` . `$filter`' De, `DateKey` yalnızca `RowLastModifiedDateTimeUTC` sütunlar geçerliyse veya bazı özellikler hatalı bir istek tetikleyeceğinden desteklenir.
 
 ## <a name="datekey-range-filters"></a>DateKey Aralık Filtreleri
 
@@ -78,10 +78,10 @@ Geçerli sürüm, aşağıdaki OData sorgu parametrelerini destekler `$filter`:,
 > [!NOTE]
 > Filtre örnekleri bugün 2/21/2019 olduğunu varsayar.
 
-|                             Filtre                             |           Performans İyileştirme           |                                          Açıklama                                          |
-|:--------------------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------------------------------------------:|
+|                             Filtrele                             |           Performans İyileştirme           |                                          Açıklama                                          |
+|----------------------------------------------------------------|----------------------------------------------|-----------------------------------------------------------------------------------------------|
 |    `maxhistorydays=7`                                            |    Tam                                      |    `DateKey` ile 20180214 ve 20180221 arasında veri döndürülür.                                     |
 |    `$filter=DateKey eq 20180214`                                 |    Tam                                      |    `DateKey` ile 20180214’e eşit veri döndürülür.                                                    |
 |    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Tam                                      |    `DateKey` ile 20180214 ve 20180220 arasında veri döndürülür.                                     |
 |    `maxhistorydays=7&$filter=DateKey eq 20180214`                |    Tam                                      |    `DateKey` ile 20180214’e eşit veri döndürülür. `maxhistorydays` yoksayılır.                            |
-|    `$filter=RowLastModifiedDateTimeUTC ge 2018-02-21T23:18:51.3277273Z`                                |    Tam                                       |    İle `RowLastModifiedDateTimeUTC` döndürülen veriler şuna eşit veya daha büyük`2018-02-21T23:18:51.3277273Z`                             |
+|    `$filter=RowLastModifiedDateTimeUTC ge 2018-02-21T23:18:51.3277273Z`                                |    Tam                                       |    İle döndürülen veriler `RowLastModifiedDateTimeUTC` Şuna eşit veya daha büyük`2018-02-21T23:18:51.3277273Z`                             |
