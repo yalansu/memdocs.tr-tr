@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5578a6652c9d8216c0b7726c4ff59cd82a591446
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 67a0ad9eeb7e5ced358a44b17fd8f1c0b05fa2b8
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165932"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223663"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -57,6 +57,9 @@ ms.locfileid: "84165932"
 ## <a name="week-of-may-25-2020"></a>25 Mayıs 2020 haftası
 
 ### <a name="app-management"></a>Uygulama yönetimi
+
+#### <a name="windows-32-bit-x86-apps-on-arm64-devices---5477661---"></a>ARM64 cihazlarda Windows 32-bit (x86) uygulamaları<!-- 5477661 -->
+ARM64 cihazlara sunulan olarak dağıtılan Windows 32-bit (x86) uygulamaları artık Şirket Portalı görüntülenecektir. Windows 32-bit uygulamaları hakkında daha fazla bilgi için bkz. [Win32 uygulama yönetimi](../apps/apps-win32-app-management.md).
 
 #### <a name="windows-company-portal-app-icon---7114635---"></a>Windows Şirket Portalı uygulaması simgesi<!-- 7114635 -->
 Windows Şirket Portalı uygulamasının simgesi güncelleştirildi. Şirket Portalı hakkında daha fazla bilgi için bkz. [Intune şirket portalı uygulamalar, Şirket portalı Web sitesi ve Intune uygulaması nasıl özelleştirilir](../apps/company-portal-app.md).
@@ -649,7 +652,7 @@ Aşağıda, önizleme aşamasında olan yeni ilke türleri ve bunların kullanı
   - MacOS
     - **FileVault**
   - Windows 10 ve üzeri:
-    - **Kurulumu**
+    - **BitLocker**
 - **Güvenlik Duvarı (Önizleme)**:
   - MacOS
     - **macOS güvenlik duvarı**

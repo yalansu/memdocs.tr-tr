@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune - Azure’da cihaz uyumluluk ilkeleri | Microsoft Docs
-description: Cihaz uyumluluk ilkelerini kullanma, durum ve önem düzeylerine genel bakış, Yetkisizkullanımsüresinde durumunu kullanma, koşullu erişimle çalışma ve cihazları atanan bir ilke olmadan işleme ile çalışmaya başlayın.
+description: Uyumluluk ilkesi ayarları ve Microsoft Intune yönelik cihaz uyumluluk ilkeleri de dahil olmak üzere uyumluluk ilkelerini kullanmaya başlayın.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 05/28/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,108 +16,146 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 559d9a704f0b33e3fda3adf628626b56ff263de3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 227a44436f4490c9b3e2188609a9714a0e842149
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989729"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206324"
 ---
-# <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Intune'u kullanarak kuruluşunuzdaki kaynaklara erişim izni verme amacıyla cihazlarda kural oluşturun
+# <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>Intune ile yönettiğiniz cihazların kurallarını ayarlamak için uyumluluk ilkelerini kullanma
 
-Çoğu mobil cihaz yönetimi (MDM) çözümü, kullanıcıların ve cihazların bazı gereksinimleri karşılamasını şart koşarak kuruluş verilerin korunmasına yardımcı olmaktadır. Intune'da bu özellik "uyumluluk ilkeleri" olarak adlandırılır. Uyumluluk ilkeleri, kullanıcıların ve cihazların uyumlu olmak için karşılaması gereken kuralları ve ayarları tanımlar. Yönetici, koşullu erişim ile birleştirildiğinde, kuralları karşılamayan kullanıcıları ve cihazları engelleyebilirler.
+Intune gibi mobil cihaz yönetimi (MDM) çözümleri, kullanıcıların ve cihazların bazı gereksinimleri karşılamasına gerek kalmadan kurumsal verilerin korunmasına yardımcı olabilir. Intune 'da bu özelliğe *uyumluluk ilkeleri*adı verilir.
 
-Örneğin bir Intune yöneticisi şunları gerekli kılabilir:
+Intune 'da uyumluluk ilkeleri:
 
-- Son kullanıcıların mobil cihazlarındaki kuruluş verilerine erişebilmesi için parola kullanması
-- Cihazda jailbreak uygulanmamış veya kök erişim izni verilmemiş olması
-- Cihazdaki işletim sistemi sürümü için alt veya üst sınır
-- Cihazın belirli bir tehdit düzeyinde veya altında olması
+- Kullanıcıların ve cihazların uyumlu olması için uyması gereken kuralları ve ayarları tanımlayın.
+- Uyumsuz cihazlara uygulanan eylemleri dahil edin. Uyumsuzluğa yönelik eylemler, kullanıcılara uyumsuz cihazlarda uyumsuzluk ve verileri koruma koşullarına göre uyarı verebilir.
+- , Kuralları karşılamayan kullanıcıları ve cihazları engelleyebilen [koşullu erişimle birleştirilebilir](#integrate-with-conditional-access).
 
-Bu özelliği, kuruluşunuzdaki cihazların uyumluluk durumunu izlemek için de kullanabilirsiniz.
+Intune 'da uyumluluk ilkelerinin iki bölümü vardır:
 
-> [!IMPORTANT]
-> Intune, cihazdaki tüm uyumluluk değerlendirmeleri için cihaz iade zamanlamasını kullanır. [İlke ve profil yenileme döngüleri](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) tahmini yenileme zamanlarını listeler.
+- **Uyumluluk ilkesi ayarları** – her cihazın aldığı yerleşik uyumluluk ilkesi gibi kiracı genelindeki ayarlar. Uyumluluk ilkesi ayarları, herhangi bir cihaz uyumluluk ilkesi almamış cihazların uyumlu veya uyumsuz olup olmadığı dahil olmak üzere, uyumluluk ilkesinin Intune ortamınızda nasıl çalıştığı için bir taban çizgisi ayarlar.
 
-<!---### Actions for noncompliance
+- **Cihaz uyumluluk ilkesi** – Kullanıcı veya cihaz gruplarına yapılandırıp dağıtabileceğiniz platforma özgü kurallar.  Bu kurallar, en düşük işletim sistemleri veya disk şifrelemesi kullanımı gibi cihazlara yönelik gereksinimleri tanımlar. Cihazların uyumlu kabul edilmesi için bu kuralları karşılaması gerekir.
 
-You can specify what needs to happen when a device is determined as noncompliant. This can be a sequence of actions during a specific time.
-When you specify these actions, Intune will automatically initiate them in the sequence you specify. See the following example of a sequence of
-actions for a device that continues to be in the noncompliant status for
-a week:
+Diğer Intune ilkeleri gibi, cihaz için uyumluluk ilkesi değerlendirmeleri, cihaz Intune ile iade edildiğinde ve [ilke ve profil yenileme döngülerine](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)bağlı olarak değişir.
 
-- When the device is first determined to be noncompliant, an email with noncompliant notification is sent to the user.
+## <a name="compliance-policy-settings"></a>Uyumluluk ilkesi ayarları
 
-- 3 days after initial noncompliance state, a follow up reminder is sent to the user.
+*Uyumluluk ilkesi ayarları* , Intune 'un uyumluluk hizmeti 'nin cihazlarınızla nasıl etkileşime gireceğini sağlayan kiracı genelindeki bir ayarlardır. Bu ayarlar, bir cihaz uyumluluk ilkesinde yapılandırdığınız ayarlardan farklıdır.
 
-- 5 days after initial noncompliance state, a final reminder with a notification that access to company resources will be blocked on the device in 2 days if the compliance issues are not remediated is sent to the user.
+Uyumluluk ilkesi ayarlarını yönetmek için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve **uç nokta güvenlik**  >  **cihaz uyumluluğu**  >  **Uyumluluk ilkesi ayarları**' na gidin.
 
-- 7 days after initial noncompliance state, access to company resources is blocked. This requires that you have Conditional Access policy that specifies that access from noncompliant devices should    be blocked for services such as Exchange and SharePoint.
+Uyumluluk ilkesi ayarları aşağıdaki ayarları içerir:
 
-### Grace Period
+- **Uyumluluk ilkesi atanmamış cihazları işaretle**
 
-This is the time between when a device is first determined as
-noncompliant to when access to company resources on that device is blocked. This time allows for time that the user has to resolve
-compliance issues on the device. You can also use this time to create your action sequences to send notifications to the user before their access is blocked.
+  Bu ayar, Intune 'un cihaz uyumluluk ilkesi atanmamış cihazlara nasıl davrandığını belirler. Bu ayar iki değere sahiptir:
+  - **Uyumlu** (*varsayılan*): Bu güvenlik özelliği kapalıdır. Bir cihaz uyumluluk ilkesi gönderilmemiş cihazlar *uyumlu*kabul edilir.
+  - **Uyumlu değil**: Bu güvenlik özelliği açık. Bir cihaz uyumluluk ilkesi almamış cihazlar uyumsuz olarak kabul edilir.
 
-Remember that you need to implement Conditional Access policies in addition to compliance policies in order for access to company resources to be blocked.--->
+  Cihaz uyumluluk ilkelerinizle koşullu erişim kullanırsanız, yalnızca uyumlu olarak onaylanan cihazların kaynaklarınıza erişebildiğinden emin olmak için bu ayarı **uyumlu değil** olarak değiştirmeniz önerilir.
 
-## <a name="device-compliance-policies-work-with-azure-ad"></a>Cihaz uyumluluk ilkeleri Azure AD ile birlikte çalışır
+  Bir ilke kendisine atanmadığı için bir son kullanıcı uyumlu değilse, [Şirket portalı uygulama](../apps/company-portal-app.md) hiçbir uyumluluk ilkesi atanmadığını gösterir.
 
-Intune, uyumluluğu zorunlu kılmak için [koşullu erişim](../protect/conditional-access.md) kullanır. Koşullu Erişim, bir Azure Active Directory (Azure AD) teknolojisidir.
+- **Gelişmiş jailbreak algılama** (*yalnızca IOS/ıpados için geçerlidir*)
 
-Bir cihaz Intune'a kaydedildiğinde Azure AD kayıt işlemi başlar ve Azure AD'deki cihaz bilgileri güncelleştirilir. En önemli bilgilerden biri, cihaz uyumluluk durumudur. Bu uyumluluk durumu, e-posta ve diğer kuruluş kaynaklarına erişimi engellemek veya erişime izin vermek için koşullu erişim ilkeleri tarafından kullanılır.
+  Bu ayar yalnızca jailbreak uygulanmış cihazlarını engelleyen bir cihaz uyumluluk ilkesiyle hedeflediğiniz cihazlarla kullanılabilir.  (Bkz. iOS/ıpados için [cihaz durumu](compliance-policy-create-ios.md#device-health) ayarları).
 
-Koşullu erişim ve Intune hakkında bilgi edinin:
+  Bu ayar iki değere sahiptir:
 
-- [Intune ile koşullu erişim kullanmanın yaygın yolları](conditional-access-intune-common-ways-use.md)
+  - **Devre dışı** (*varsayılan*): Bu güvenlik özelliği kapalıdır. Bu ayarın, jailbreak uygulanmış cihazlarını engelleyen cihaz Uyumluluk ilkesini alan cihazlarınızda hiçbir etkisi yoktur.
+  - **Etkin**: Bu güvenlik özelliği açık. Jailbreak uygulanmış cihazlarını engellemek için cihaz uyumluluk ilkesi alan cihazlar, gelişmiş jailbreak algılamayı kullanır.
 
-Azure AD belgelerinde koşullu erişim hakkında bilgi edinin:
-  - [Koşullu erişim nedir?](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
-  - [Cihaz kimliği nedir?](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
+  Geçerli bir iOS/ıpados cihazında etkinleştirildiğinde cihaz:
 
-## <a name="ways-to-use-device-compliance-policies"></a>Cihaz uyumluluk ilkelerini kullanma yolları
+  - İşletim sistemi düzeyinde konum hizmetleri 'ni sunar.
+  - Her zaman Şirket Portalı konum hizmetlerini kullanmasına izin verir.
+  - , Arka planda jailbreak algılamasını daha sık tetiklemek için konum hizmetlerini kullanır. Kullanıcı konum verileri, Intune tarafından depolanmaz.
 
-### <a name="with-conditional-access"></a>Koşullu erişimle
+  Gelişmiş jailbreak algılama, şu durumlarda bir değerlendirme çalıştırır:
 
-İlke kurallarıyla uyumlu olan cihazlar için, bu cihazlara e-posta ve diğer kuruluş kaynaklarına erişim izni verebilirsiniz. Cihazlar ilke kurallarıyla uyumlu değilse, kuruluş kaynaklarına erişemez. Bu koşullu erişimdir.
+  - Şirket Portalı uygulama açılır
+  - Cihaz, yaklaşık olarak 500 ölçüm veya daha fazla olan önemli bir mesafeyi büyük ölçüde taşımıştır. Intune, denetimin bir cihazın ağ bağlantısına bağlı olması halinde, her önemli konum değişikliğinin bir jailbreak algılama denetimi ile sonuçlanabileceğini garanti edemez.
 
-### <a name="without-conditional-access"></a>Koşullu erişim olmadan
+  İOS 13 ve üzerinde, bu özellik, cihazın arka planda konumunu kullanmasına izin Şirket Portalı vermeye devam etmek için kullanıcıların *her zaman Izin vermeyi* seçmesini gerektirir. Kullanıcılar her zaman konum erişimine izin vermediğinde ve bu ayarı yapılandırılmış bir ilkeye sahip değilse, cihazları uyumsuz olarak işaretlenir.
 
-Cihaz uyumluluk ilkelerini koşullu erişim olmadan da kullanabilirsiniz. Uyumluluk ilkelerini bağımsız olarak kullandığınızda, hedeflenen cihazlar değerlendirilir ve uyumluluk durumları raporlanır. Örneğin, kaç cihazın şifrelenmediği ya da hangi cihazlarda işletim sistemi engellemelerinin kaldırıldığı veya kök erişim izni verildiği konusunda bir rapor alabilirsiniz. Uyumluluk ilkelerini koşullu erişim olmadan kullandığınızda, kuruluş kaynaklarına hiçbir erişim kısıtlaması yoktur.
+- **Uyumluluk durumu geçerlilik süresi (gün)**
 
-## <a name="ways-to-deploy-device-compliance-policies"></a>Cihaz uyumluluk ilkelerini dağıtma yolları
+  Cihazların tüm alınan uyumluluk ilkelerine başarıyla rapor alması gereken bir süre belirtin. Bir cihaz geçerlilik süresi dolmadan bir ilkenin uyumluluk durumunu raporlamazsa, cihaz uyumsuz olarak kabul edilir.
 
-Kullanıcı gruplarındaki kullanıcılara veya cihaz gruplarındaki cihazlara uyumluluk ilkesi dağıtabilirsiniz. Bir uyumluluk ilkesi kullanıcıya dağıtıldığında, kullanıcının tüm cihazlarında uyumluluk denetimi yapılır. Bu senaryoda cihaz gruplarını kullanmak, uyumluluk raporlamasına yardımcı olur.
+  Varsayılan olarak, dönem 30 gün olarak ayarlanır. 1 ile 120 gün arasında bir dönem yapılandırabilirsiniz.
 
-Intune ayrıca bir dizi yerleşik uyumluluk ilkesi ayarına da sahiptir. Aşağıdaki yerleşik ilkeler, Intune'a kaydedilen tüm cihazlarda değerlendirilir:
+  Geçerlilik süresi ayarı ile cihaz uyumluluğuyla ilgili ayrıntıları görüntüleyebilirsiniz. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve **cihazlar**  >  **izleyici**  >  **ayarı uyumluluğu**' na gidin. Bu ayar, *ayar* sütununda **etkin** bir ada sahiptir.  Bu ve ilgili uyumluluk durumu görünümleri hakkında daha fazla bilgi için bkz. [Cihaz uyumluluğunu izleme](compliance-policy-monitor.md).
 
-- **Cihazları uyumluluk ilkesi atanmamış olarak işaretle**: Bu, uyumsuzluk için varsayılan bir eylemdir. Bu özelliğin iki değeri vardır:
+## <a name="device-compliance-policies"></a>Cihaz uyumluluğu ilkeleri
 
-  - **Uyumlu** (*varsayılan*): güvenlik özelliği kapalı
-  - **Uyumlu değil**: güvenlik özelliği açık
+Intune cihaz uyumluluk ilkeleri:
 
-  Bir cihaza bir uyumluluk ilkesi atanmamışsa, bu cihaz varsayılan olarak uyumlu olarak değerlendirilir. Uyumluluk ilkeleriyle koşullu erişim kullanıyorsanız, varsayılan ayarı **uyumlu değil**olarak değiştirmeniz önerilir. Bir ilke atanmadığı için son kullanıcı uyumsuzsa, [Şirket Portalı](../apps/company-portal-app.md)`No compliance policies have been assigned` ifadesine yer verir.
+- Kullanıcıların ve yönetilen cihazların uyumlu olması için uyması gereken kuralları ve ayarları tanımlayın. Kuralların örnekleri şunlardır: cihazların en düşük işletim sistemi sürümünü çalıştırmasını, caıl olmayan veya kökü belirtilmemiş olduğunu ve Intune ile tümleştirmiş olduğunuz tehdit yönetimi yazılımıyla belirtilen *tehdit düzeyinde* ya da bu düzeyin altında olmasını gerektirir.
+- Uyumluluk kurallarınızı karşılamayan cihazlar için uygulanan işlemleri destekler. Eylemlere örnek olarak uzaktan kilitleme veya cihaz durumu hakkında cihaz Kullanıcı e-postası gönderme dahil olmak üzere, bunları çözebilmeleri gerekir.
+- Cihaz gruplarındaki Kullanıcı gruplarında veya cihazlarda kullanıcılara dağıtın. Bir uyumluluk ilkesi bir kullanıcıya dağıtıldığında tüm kullanıcı cihazlarının uyumluluk denetimi yapılır. Bu senaryoda cihaz gruplarını kullanmak, uyumluluk raporlamasına yardımcı olur.
 
-- **Gelişmiş jailbreak algılama** (*IOS/ıpados için geçerlidir*): etkinleştirildiğinde, bu ayar jailbreak uygulanmış cihaz durumunun iOS/ıpados cihazlarında daha sık oluşmasına neden olur. Bu ayar yalnızca jailbreak uygulanmış cihazlarını engelleyen bir uyumluluk ilkesiyle hedeflenen cihazları etkiler. Bu özelliği etkinleştirmek, cihazın konum hizmetlerini kullanır ve pil kullanımını etkileyebilir. Kullanıcı konumu verileri Intune tarafından depolanmaz ve yalnızca arka planda jailbreak algılamayı daha sık tetiklemek için kullanılır. 
+Koşullu erişim kullanırsanız, koşullu erişim ilkeleriniz, uyumsuz cihazlardan kaynaklara erişimi engellemek için cihaz uyumluluk sonuçlarınızı kullanabilir.
 
-  Bu ayarın etkinleştirilmesi, cihazlarda şunları gerektirir:
-  - Konum hizmetlerinin işletim sistemi düzeyinde etkinleştirilmesi.
-  - Şirket Portalı konum hizmetlerini kullanmasına her zaman izin verin.
+Bir cihaz uyumluluk ilkesinde belirtebileceğiniz kullanılabilir ayarlar, ilke oluştururken seçtiğiniz platform türüne bağlıdır. Farklı cihaz platformları farklı ayarları destekler ve her platform türü ayrı bir ilke gerektirir.  
 
-  Gelişmiş algılama, konum hizmetleri aracılığıyla çalışmaktadır. Değerlendirme, Şirket Portalı uygulaması açılarak veya cihazı fiziksel olarak yaklaşık 500 ölçüm veya daha fazla mesafede hareket ettirilerek tetiklenir. İOS 13 ve üzerinde, bu özellik, cihazın arka planda konumunu kullanmasına izin Şirket Portalı vermeye devam etmek için kullanıcıların her zaman Izin vermeyi seçmesini gerektirir. Kullanıcılar her zaman konum erişimine izin vermediğinde ve bu ayarı yapılandırılmış bir ilkeye sahip değilse, cihazları uyumsuz olarak işaretlenir. Intune 'un, her önemli konum değişikliğinin, bir cihazın ağ bağlantısına bağlı olarak bir jailbreak algılama denetimini güvence altına aldığından emin olamayacağını unutmayın.
+Aşağıdaki konular, cihaz yapılandırma ilkesinin farklı yönleri için adanmış makalelere bağlantı sağlar.
 
-- **Uyumluluk durumu geçerlilik süresi (gün)**: Alınan tüm uyumluluk ilkeleri için cihazların durum rapor etme süresini girin. Bu süre içinde durum döndürmeyen cihazlar uyumsuz olarak kabul edilir. Varsayılan değer 30 gündür. Maksimum değer 120 gündür. En küçük değer 1 gündür.
+- [**Uyumsuzluk eylemleri**](actions-for-noncompliance.md) -her cihaz uyumluluk ilkesi, uyumsuzluk için bir veya daha fazla eylem içerir. Bu eylemler, ilkede ayarladığınız koşullara uymayan cihazlara uygulanan kurallardır.
 
-  Bu ayar, **etkin** varsayılan uyumluluk ilkesi (**cihazlar**  >  **izleyici**  >  **ayarı uyumluluğu**) olarak gösterilir. Bu ilke için arka plan görevi günde bir kez çalışır.
+  Varsayılan olarak, her cihaz uyumluluk ilkesi bir ilke kuralına uyamazsa cihazı uyumsuz olarak işaretleme eylemini içerir. İlke daha sonra, bu eylemler için ayarladığınız zamanlamalara göre, daha sonra yapılandırdığınız uyumsuzluğa yönelik ek eylemler için geçerlidir.
 
-Bu ayarları izlemek için bu yerleşik ilkeleri kullanabilirsiniz. Intune ayrıca cihaz platformuna göre belirlenen farklı aralıklarla [yenileme yapar veya güncelleştirmeleri denetler](create-compliance-policy.md#refresh-cycle-times). [Microsoft Intune'daki cihaz ilkeleri ve profiller hakkında yaygın sorular, sorunlar ve çözümler](../configuration/device-profile-troubleshoot.md) sayfası iyi bir kaynaktır.
+  Uyumsuzluğa yönelik eylemler, cihazları cihaz uyumlu olmadığında veya bir cihazda olabilecek verileri korumak için kullanıcılara uyarı verebilir. Eylemlere örnek olarak şunlar verilebilir:
 
-Uyumluluk raporları, cihazların durumunu denetlemek için harika bir yoldur. [Uyumluluk ilkelerini izleme](compliance-policy-monitor.md) sayfasında da yardımcı bilgiler bulunur.
+  - Uyumlu olmayan cihazla ilgili ayrıntılarla kullanıcılara ve gruplara **e-posta uyarıları gönderme** . İlkeyi, uyumsuz olarak işaretlendikten hemen sonra bir e-posta gönderecek şekilde yapılandırabilir ve ardından, cihaz uyumlu olana kadar düzenli aralıklarla bir e-posta gönderilir.
+  - Bir süredir uyumsuz olan **cihazları uzaktan kilitleyin** .
+  - Cihazları bir süre uyumsuz olduktan sonra **devre dışı bırakın** . Bu eylem, cihazı Intune yönetiminden kaldırır ve cihazdaki tüm şirket verilerini kaldırır.
 
-## <a name="non-compliance-and-conditional-access-on-the-different-platforms"></a>Farklı platformlarda uyumsuzluk ve koşullu erişim
+- [**Ağ konumlarını yapılandırma**](use-network-locations.md) -Android cihazlar tarafından desteklenen *ağ konumlarını* yapılandırabilir ve ardından bu konumları cihaz uyumluluk kuralı olarak kullanabilirsiniz. Bu tür bir kural, belirtilen bir ağın dışında veya ayrıldığında bir cihazı uyumsuz olarak işaret edebilir. Bir konum kuralı belirlemeden önce, ağ konumlarını yapılandırmanız gerekir.
+
+- [**Ilke oluşturma**](create-compliance-policy.md) – bu makaledeki bilgilerle önkoşulları gözden geçirebilir, kuralları yapılandırmak için seçenekler aracılığıyla çalışabilir, uyumsuzluk için Eylemler belirtebilir ve ilkeyi gruplara atayabilirsiniz. Bu makale ayrıca ilke yenileme süreleri hakkında bilgiler içerir.
+
+  Farklı cihaz platformları için cihaz uyumluluk ayarlarını görüntüleyin:
+
+  - [Android](compliance-policy-create-android.md)
+  - [Android Kurumsal](compliance-policy-create-android-for-work.md)
+  - [iOS](compliance-policy-create-ios.md)
+  - [macOS](compliance-policy-create-mac-os.md)
+  - [Windows 10 Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
+  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
+  - [Windows 8.1 ve üzeri](compliance-policy-create-windows-8-1.md)
+  - [Windows 10 ve üzeri](compliance-policy-create-windows.md)
+
+## <a name="monitor-compliance-status"></a>Uyumluluk durumunu izleme
+
+Intune, cihazların uyumluluk durumunu izlemek ve daha fazla bilgi için ilkeler ve cihazlarda detaya gitmek üzere kullandığınız bir cihaz uyumluluk panosu içerir. Bu Pano hakkında daha fazla bilgi edinmek için bkz. [Cihaz uyumluluğunu izleme](compliance-policy-monitor.md).
+
+## <a name="integrate-with-conditional-access"></a>Koşullu erişimle tümleştirin
+
+Koşullu erişim kullandığınızda, koşullu erişim ilkelerinizi, hangi cihazların kurumsal kaynaklarınıza erişebileceğini belirleyebilmek için cihaz uyumluluk ilkelerinizin sonuçlarını kullanacak şekilde yapılandırabilirsiniz. Bu erişim denetimi, cihaz uyumluluk ilkelerine dahil ettiğiniz uyumsuzluğa ek olarak ve eylemlerden ayrı olarak yapılır.
+
+Bir cihaz Intune 'A kaydedildiğinde Azure AD 'ye kaydolur. Cihazların uyumluluk durumu Azure AD 'ye bildirilir. Koşullu erişim ilkeleriniz, *cihazın uyumlu olarak Işaretlenmesini gerektir*olarak ayarlanmış erişim denetimlerine sahipseniz, koşullu erişim, e-postaya ve diğer kuruluş kaynaklarına erişim izni verip vermeyeceğinizi öğrenmek için bu uyumluluk durumunu kullanır.
+
+Koşullu erişim ilkeleriyle cihaz uyumluluk durumunu kullanacaksanız, kiracınızın, uyumluluk ilkesi [ayarları](#compliance-policy-settings)altında yönettiğiniz *Uyumluluk Ilkesi atanmamış şekilde işaretleme cihazlarını*nasıl yapılandırdığınıza bakın.
+
+Cihaz uyumluluk ilkelerinizle koşullu erişimi kullanma hakkında daha fazla bilgi için bkz. [cihaz tabanlı koşullu erişim](conditional-access-intune-common-ways-use.md#device-based-conditional-access)
+
+Azure AD belgelerinde koşullu erişim hakkında daha fazla bilgi edinin:
+
+- [Koşullu erişim nedir?](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+- [Cihaz kimliği nedir?](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
+
+### <a name="reference-for-non-compliance-and-conditional-access-on-the-different-platforms"></a>Farklı platformlarda uyumsuzluk ve koşullu erişim için başvuru
 
 Aşağıdaki tabloda, bir uyumluluk ilkesi koşullu erişim ilkesi ile kullanıldığında uyumlu olmayan ayarların nasıl yönetildiği açıklanır.
+
+- **Düzeltildi**: cihaz işletim sistemi uyumluluğu zorluyor. Örneğin, kullanıcı bir PIN ayarlamaya zorlanır.
+
+- **Karantinaya alındı**: cihaz işletim sistemi uyumluluğu zorlamaz. Örneğin Android ve Android Kurumsal cihazlar kullanıcıyı cihazı şifrelemeye zorlamaz. Cihaz uyumsuz olduğunda aşağıdaki işlemler yapılır:
+  - Kullanıcı için bir koşullu erişim ilkesi geçerliyse cihaz engellenir.
+  - Şirket Portalı uygulaması, tüm uyumluluk sorunları hakkında kullanıcıya bildirim gönderir.
 
 ---------------------------
 
@@ -133,25 +171,10 @@ Aşağıdaki tabloda, bir uyumluluk ilkesi koşullu erişim ilkesi ile kullanıl
 
 ---------------------------
 
-**Düzeltildi**: cihaz işletim sistemi uyumluluğu zorluyor. Örneğin, kullanıcı bir PIN ayarlamaya zorlanır.
-
-**Karantinaya alındı**: cihaz işletim sistemi uyumluluğu zorlamaz. Örneğin Android ve Android Kurumsal cihazlar kullanıcıyı cihazı şifrelemeye zorlamaz. Cihaz uyumsuz olduğunda aşağıdaki işlemler yapılır:
-
-- Kullanıcı için bir koşullu erişim ilkesi geçerliyse cihaz engellenir.
-- Şirket Portalı uygulaması, tüm uyumluluk sorunları hakkında kullanıcıya bildirim gönderir.
-
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [İlke oluşturun](create-compliance-policy.md) ve önkoşulları görüntüleyin.
-- Farklı cihaz platformlarına özgü uyumluluk ayarlarını görüntüleyin:
-
-  - [Android](compliance-policy-create-android.md)
-  - [Android Kurumsal](compliance-policy-create-android-for-work.md)
-  - [iOS](compliance-policy-create-ios.md)
-  - [macOS](compliance-policy-create-mac-os.md)
-  - [Windows 10 Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
-  - [Windows 8.1 ve üzeri](compliance-policy-create-windows-8-1.md)
-  - [Windows 10 ve üzeri](compliance-policy-create-windows.md)
-
-- [İlke varlıkları için başvuru](../developer/reports-ref-policy.md) sayfasında Intune Veri Ambarı ilke varlıkları hakkında bilgiler yer almaktadır.
+- Android cihazlarla kullanılmak üzere [konumları yapılandırma](../protect/use-network-locations.md)
+- [Ilke oluşturma ve dağıtma](../protect/create-compliance-policy.md) ve önkoşulları gözden geçirme
+- [Cihaz uyumluluğunu izleme](../protect/compliance-policy-monitor.md)
+- [Microsoft Intune 'deki cihaz ilkeleri ve profillerle ilgili yaygın sorular, sorunlar ve çözümler](../configuration/device-profile-troubleshoot.md)
+- [İlke varlıkları Için başvuru](../developer/reports-ref-policy.md) , Intune veri ambarı ilke varlıkları hakkında bilgiler içerir

@@ -2,7 +2,7 @@
 title: Teknik Önizleme sürümleri
 titleSuffix: Configuration Manager
 description: Configuration Manager ' de yeni işlevsellik ve özellikleri test etmek için teknik önizleme dalı hakkında bilgi edinin.
-ms.date: 04/30/2020
+ms.date: 05/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bfcdd74b7b5c31e3f3ab6bb38a7ea96de9d05eec
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e4c0842a3e23eb8503c945073a4be35db5173086
+ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905155"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84226254"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager için teknik önizleme
 
@@ -116,20 +116,28 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2003.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2005.md) <!--ID-->
 
 Aşağıdaki özellikler en son Configuration Manager Technical Preview sürümü ile sunulmaktadır:
 
-### <a name="technical-preview-version-2004"></a>Technical Preview sürüm 2004
+### <a name="technical-preview-version-2005"></a>Technical Preview sürüm 2005
 
-- [Microsoft Uç Nokta Yöneticisi kiracı iliştirme: ConfigMgr istemci ayrıntıları](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
-- [Microsoft 'un bildirimleri](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
-- [Keşif verilerini konsolundan kopyalama](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
-- [CMPivot geliştirmeleri](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
-- [PowerShell sürüm 7 desteği](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
-- [Disk biçimlendirme ve bölümleme için geliştirme görev dizisi adımı](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
-- [İşletim sistemi dağıtımı için yönetim öngörüleri kuralları](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
-- [Görev sırası dağıtım türleri için PowerShell cmdlet 'leri](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
+- [Kiracı iliştirme: Yönetim merkezinde cihaz zaman çizelgesi](2020/technical-preview-2005.md#bkmk_timeline) <!--7141381-->
+- [Kiracı iliştirme: yönetim merkezinden bir uygulama yükler](2020/technical-preview-2005.md#bkmk_apps) <!--6024389-->
+- [Kiracı iliştirme: yönetim merkezinden CMPivot](2020/technical-preview-2005.md#bkmk_cmpivot) <!--6024392-->
+- [Kiracı iliştirme: yönetim merkezinden betikleri çalıştırma](2020/technical-preview-2005.md#bkmk_scripts) <!--6234688-->
+- [VPN sınır türü](2020/technical-preview-2005.md#bkmk_vpn) <!--7020519-->
+- [Yazılım Merkezi 'nde Azure AD kimlik doğrulaması](2020/technical-preview-2005.md#bkmk_availapp) <!--6935376-->
+- [Tarifeli bir bağlantıda istemciyi yükleyip yükseltin](2020/technical-preview-2005.md#bkmk_meter) <!--6976145-->
+- [Bulut tabanlı içerik için görev dizisi medya desteği](2020/technical-preview-2005.md#bkmk_tsmedia) <!--6209223-->
+- [Bulut yönetimi ağ geçidi cmdlet 'leri geliştirmeleri](2020/technical-preview-2005.md#bkmk_pwshcmg) <!--6978300-->
+- [Topluluk hub 'ı ve GitHub](2020/technical-preview-2005.md#community-hub-and-github) <!--3555935-->
+- [Enterprise için Microsoft 365 uygulamalar](2020/technical-preview-2005.md#bkmk_365_apps) <!--6298093-->
+- [Microsoft 'a kurulum ve yükseltme başarısızlıklarını bildir](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) <!--5622909-->
+- [Azure AD uygulama gizli anahtarı süre sonu bildirimi](2020/technical-preview-2005.md#bkmk_alertkey) <!--6386392-->
+- [BitLocker için geliştirmeler görev dizisi adımları](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
+- [İçerik kitaplığı Temizleme aracında geliştirmeler](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
+- [Windows 10 yerinde yükseltme sırasında komut istemi 'ni kaldırma](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
 
 > [!NOTE]
 > Technical Preview 'un önceki bir sürümünde kullanılabilen özellikler sonraki sürümlerde de kullanılabilir durumda kalır. Benzer şekilde, geçerli dala eklenen Configuration Manager özellikler, Technical Preview dalında kullanılabilir kalır.
@@ -146,6 +154,17 @@ When there's a new CB, add any features not in that CB to the table in H2 "Featu
 
 > [!TIP]
 > Yeni bir geçerli dal sürümü kullanılabilir olduğunda, bu sürümde kullanılabilen özellikler en son *Yenilikler* makalesinde listelenmiştir. Daha fazla bilgi için bkz. [artımlı sürümlerindeki](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)yenilikler.
+
+### <a name="technical-preview-version-2004"></a>Technical Preview sürüm 2004
+
+- [Microsoft Uç Nokta Yöneticisi kiracı iliştirme: ConfigMgr istemci ayrıntıları](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
+- [Microsoft 'un bildirimleri](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
+- [Keşif verilerini konsolundan kopyalama](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
+- [CMPivot geliştirmeleri](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
+- [PowerShell sürüm 7 desteği](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
+- [Disk biçimlendirme ve bölümleme için geliştirme görev dizisi adımı](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
+- [İşletim sistemi dağıtımı için yönetim öngörüleri kuralları](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
+- [Görev sırası dağıtım türleri için PowerShell cmdlet 'leri](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
 
 ### <a name="technical-preview-version-2003"></a>Technical Preview Sürüm 2003
 
@@ -169,7 +188,7 @@ With each CB release, review and remove from this list for anything that's now a
 
 Aşağıdaki özellikler Configuration Manager Technical Preview dalının önceki sürümleriyle yayımlanmıştır. Bu özellikler sonraki sürümlerde kullanılabilir kalır, ancak henüz geçerli dalda kullanılabilir değildir.
 
-| Özellik        | Technical Preview sürümü |
+| Öne çıkan özelliği        | Technical Preview sürümü |
 |----------------|---------------------------|
 | Geri bildirime dosya iliştirme <!--3556011--> | [Teknik Önizleme 1910](2019/technical-preview-1910.md#attach-files-to-feedback) |
 | Çok noktaya yayın özellikli dağıtım noktalarında iyileştirmeler <!--3785535--> | [Teknik Önizleme 1908,2](2019/technical-preview-1908-2.md#bkmk_multicast) |

@@ -4,7 +4,7 @@ description: Microsoft 365 Kurumsal, Microsoft Intune'u içerir. Intune 'un kuru
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 05/28/2020
 ms.topic: overview
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44f9446299bb20bd73890a67ec33c3d8e7a36e48
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 540faaca71d3694b95d32a24c947a977989a3223
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988134"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223635"
 ---
 # <a name="device-management-overview"></a>Cihaz yönetimine genel bakış
 
@@ -56,6 +56,16 @@ Intune ile, her kişi için birden çok cihazı ve iOS/ıpados, macOS, Android v
 - Kişisel cihazları kurumsal kaynaklara erişmek için kullanma
 
 Intune hakkında daha fazla bilgi için bkz. [Intune nedir](what-is-intune.md).
+
+## <a name="co-management"></a>Ortak yönetim
+
+Birçok kuruluş, masaüstleri ve sunucular dahil olmak üzere cihazları yönetmek için şirket içi Configuration Manager kullanır. Şirket içi Configuration Manager Microsoft Intune için buluta ekleyebilirsiniz. Bulut iliştirmeye alışdığınızda, [koşullu erişim](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-conditional-access), [uzak eylemler çalıştırma](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-remote-actions), [Windows Autopilot](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-autopilot)ve daha fazlası dahil olmak üzere Intune ve bulutun avantajlarından yararlanabilirsiniz.
+
+[Microsoft Uç Nokta Yöneticisi](https://docs.microsoft.com/mem/endpoint-manager-overview) , çeşitli hizmetleri birleştiren bir çözüm platformudur. Bulut tabanlı cihaz yönetimi için [Microsoft Intune](what-is-intune.md) ve bulut-ekleme cihaz yönetimi için [Configuration Manager + Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview) ' u içerir.
+
+Configuration Manager kullanıyorsanız ve bazı görevleri buluta taşımaya hazırsanız, bu durumda ortak yönetim yanıtınız olur.
+
+Bulut-Configuration Manager iliştirme hakkında daha fazla bilgi için bkz. [ortak yönetim](https://docs.microsoft.com/mem/configmgr/comanage/overview)nedir.
 
 ## <a name="integration-with-secure-and-protect-services"></a>Güvenli tutma ve koruma hizmetleri ile tümleştirme
 

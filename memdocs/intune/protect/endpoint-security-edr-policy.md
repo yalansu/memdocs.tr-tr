@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 05/29/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ac8f82396571a7ae39df43662000f9f3f17d0430
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d0ba328f1976d0463c6be042dfd6f8a7570d6dac
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990869"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206341"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Intune 'da uç nokta güvenliği için uç nokta algılama ve yanıt ilkesi
 
@@ -38,13 +38,13 @@ EDR ilkeleri, Intune ile yönettiğiniz Azure Active Directory (Azure AD) cihaz 
 
 [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nin **uç nokta güvenlik** düğümünde, EDR için uç nokta güvenlik ilkelerini bulun. *Manage*
 
-[Uç nokta algılama ve yanıt profillerinin ayarlarını](../protect/endpoint-security-edr-profile-settings.md)görüntüleyin.
+[Uç nokta algılama ve yanıt profillerinin ayarlarını](endpoint-security-edr-profile-settings.md)görüntüleyin.
 
 ## <a name="prerequisites-for-edr-policies"></a>EDR ilkeleri önkoşulları
 
 **Genel**:
 
-- **Microsoft Defender Gelişmiş tehdit koruması Için kiracı** -EDR ilkeleri oluşturabilmeniz IÇIN Defender ATP kiracınız Microsoft Endpoint Manager kiracınızla (Intune aboneliğiniz) tümleştirilemelidir. Bkz. Intune belgelerinde [Microsoft Defender ATP kullanma](../protect/advanced-threat-protection.md) .
+- **Microsoft Defender Gelişmiş tehdit koruması Için kiracı** -EDR ilkeleri oluşturabilmeniz IÇIN Defender ATP kiracınız Microsoft Endpoint Manager kiracınızla (Intune aboneliğiniz) tümleştirilemelidir. Bkz. Intune belgelerinde [Microsoft Defender ATP kullanma](advanced-threat-protection.md) .
 
 **Configuration Manager cihazları desteklemek için**:
 
@@ -67,7 +67,7 @@ Configuration Manager cihazlarla EDR ilkelerini kullanmayı desteklemek için, C
 
 ## <a name="edr-profiles"></a>EDR profilleri
 
-Aşağıdaki platformlar ve profiller için yapılandırabileceğiniz [ayarları görüntüleyin](../protect/endpoint-security-edr-profile-settings.md) .
+Aşağıdaki platformlar ve profiller için yapılandırabileceğiniz [ayarları görüntüleyin](endpoint-security-edr-profile-settings.md) .
 
 **Intune** – Intune ile yönettiğiniz cihazlar için aşağıdakiler desteklenir:
 
@@ -138,7 +138,7 @@ Ortak yönetimi etkinleştirmeyi planlıyorsanız, ortak yönetimi, önkoşullar
 
       Bu seçenek belirlendiğinde, sihirbaz ortak yönetim kurulumunu tamamlamaya yönelik ek sayfalar sunar. Daha fazla bilgi için bkz. Configuration Manager içerikte [ortak yönetimi etkinleştirme](../../configmgr/comanage/how-to-enable.md) .
 
-     ![Kiracı eklemeyi Yapılandır](./media/endpoint-security-edr-policy/tenant-onboarding.png)
+     ![Kiracı eklemeyi Yapılandır](media/endpoint-security-edr-policy/tenant-onboarding.png)
 
 4. **AAD uygulaması oluştur** bildirimini kabul etmek için **İleri** ' ye ve ardından **Evet** ' e tıklayın. Bu eylem, bir hizmet sorumlusu sağlar ve koleksiyonların Microsoft Endpoint Manager yönetim merkezine eşitlenmesini kolaylaştırmak için bir Azure AD uygulama kaydı oluşturur.
 
@@ -159,7 +159,7 @@ Ortak yönetimi etkinleştirmeyi planlıyorsanız, ortak yönetimi, önkoşullar
 3. **Karşıya yüklemeyi Yapılandır** sekmesinde, **Microsoft Endpoint Manager yönetim merkezine yükle**' yi seçin. **Uygula**’ya tıklayın.
    - Cihaz yükleme için varsayılan ayar, **Microsoft uç nokta Configuration Manager tarafından yönetilen tüm cihazlardır**. Yapılandırmanızı bir veya birkaç cihaz koleksiyonu ile sınırlandırmayı da tercih edebilirsiniz.
 
-     ![Ortak yönetim özellikleri sekmesini görüntüleme](./media/endpoint-security-edr-policy/configure-upload.png)
+     ![Ortak yönetim özellikleri sekmesini görüntüleme](media/endpoint-security-edr-policy/configure-upload.png)
 
 4. İstendiğinde *genel yönetici* hesabınızla oturum açın.
 
@@ -195,7 +195,7 @@ Koleksiyonları Microsoft Endpoint Manager yönetim merkezine eşitlenecek şeki
 
    - Configuration Manager hiyerarşiniz kiracı ekli değilse bu seçeneği seçemezsiniz.
   
-   ![Bulut eşitlemesini yapılandırma](./media/endpoint-security-edr-policy/cloud-sync.png)
+   ![Bulut eşitlemesini yapılandırma](media/endpoint-security-edr-policy/cloud-sync.png)
 
 3. Yapılandırmayı kaydetmek için **Tamam ' ı** seçin.
 
@@ -258,11 +258,17 @@ Microsoft Endpoint Manager Yönetim merkezinde dağıttığınız EDR ilkeleriyl
 
 - **Windows 10 ve üzeri** platformu (Intune) hedefleyen ilkeler için, ilkeye uyumluluğa bir genel bakış görürsünüz. Ayrıca, ilkeyi alan cihazların listesini görüntülemek için grafiği ve daha fazla ayrıntı için ayrı cihazlarda detaya gitmeyi seçebilirsiniz.
 
+  **ATP algılayıcı grafiği olan cihazlar** yalnızca **Windows 10 ve üzeri** profil kullanılarak Defender ATP 'ye başarıyla eklenen cihazları görüntüler. Bu grafikteki cihazlarınızın tam gösterimine sahip olduğunuzdan emin olmak için, ekleme profilini tüm cihazlarınıza dağıtın. Grup ilkesi veya PowerShell gibi dış yollarla Defender ATP 'ye eklenen cihazlar **ATP algılayıcısı olmadan cihaz**olarak sayılır.
+
 - **Windows 10 ve Windows Server** platformunu (Configuration Manager) hedefleyen ilkeler için, ilkeye yönelik uyumluluğa bir genel bakış görürsünüz, ancak ek ayrıntıları görüntülemek için ayrıntıya gidebilirsiniz. Yönetim Merkezi, ilkenin Configuration Manager cihazlara dağıtımını yöneten Configuration Manager 'dan sınırlı durum ayrıntılarını aldığından görünüm sınırlıdır.
 
-Hem platformlar hem de profiller için yapılandırabileceğiniz [ayarları görüntüleyin](../protect/endpoint-security-edr-profile-settings.md) .
+
+
+
+
+Hem platformlar hem de profiller için yapılandırabileceğiniz [ayarları görüntüleyin](endpoint-security-edr-profile-settings.md) .
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Uç nokta güvenlik ilkelerini yapılandırma](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+- [Uç nokta güvenlik ilkelerini yapılandırma](endpoint-security-policy.md#create-an-endpoint-security-policy)
 - Microsoft Defender ATP belgelerindeki [uç nokta algılama ve yanıt](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) hakkında daha fazla bilgi edinin.

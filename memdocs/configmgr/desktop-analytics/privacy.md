@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: dd970dc1517a6fcc197b2bf39a141871b4999a02
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 82c8495391dcc22aa2784657bc1461887e412577
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268428"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223641"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Masaüstü Analizi veri gizliliği
 
@@ -55,7 +55,7 @@ Aşağıdaki çizimde, tanılama verilerinin tanılama veri hizmeti, geçici dep
 
     4. Uyumluluk güncelleştirmelerini tüm hedef cihazlara dağıtırsınız.  
 
-3. Cihazlar, tanılama verilerini Windows için Microsoft Tanılama Veri Yönetimi hizmetine gönderir. Bu hizmet Birleşik Devletler barındırılır.  
+3. Cihazlar, tanılama verilerini Windows için Microsoft Tanılama Veri Yönetimi hizmetine gönderir. Tüm Tanılama verileri HTTPS üzerinden şifrelenir ve cihazdan bu hizmete aktarım sırasında sertifika sabitleme kullanır. Microsoft Veri Yönetimi hizmeti Birleşik Devletler barındırılır.
 
 4. Her gün Microsoft, BT odaklı öngörülerin bir anlık görüntüsünü üretir. Bu anlık görüntü, Windows 'daki tanılama verilerini kayıtlı cihazların girişinde birleştirir. Bu işlem yalnızca masaüstü Analizi tarafından kullanılan geçici depolamada gerçekleşir. Geçici depolama, Birleşik Devletler Microsoft veri merkezlerinde barındırılır. Tüm veriler SSL (HTTPS) ile şifrelenmiş bir kanal üzerinden gönderilir. Anlık görüntüler ticari KIMLIĞE göre ayrılmış.  
 

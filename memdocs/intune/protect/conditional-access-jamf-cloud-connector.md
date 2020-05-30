@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 05/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f86b418df46069b2a33dd56d06e0e82dbbbf8090
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 734a1361d8889ca1463e8d8986239e088b90cd09
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81538406"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206375"
 ---
 # <a name="use-the-jamf-cloud-connector-with-microsoft-intune"></a>JAMF bulut bağlayıcısını Microsoft Intune ile kullanma
 
@@ -49,7 +49,7 @@ Bulut bağlayıcısının kullanımı isteğe bağlıdır:
 
 JAMF bulut Bağlayıcısı hakkında daha fazla bilgi için, docs.jamf.com adresindeki [bulut bağlayıcısını kullanarak macOS Intune tümleştirmesini yapılandırma](https://docs.jamf.com/technical-papers/jamf-pro/microsoft-intune/10.17.0/Configuring_the_macOS_Intune_Integration_using_the_Cloud_Connector.html) konusuna bakın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 **Ürünler ve hizmetler**:  
 - JAMF Pro 10,18 veya üzeri
@@ -99,7 +99,7 @@ JAMF Pro ve Intune arasında daha önce bir bağlantı ayarlanmamışsa veya zat
 
 1. JAMF Pro konsolunda oturum açın.
 
-2. **Ayarlar** ' ı (sağ üst köşedeki dişli simgesi) seçin ve ardından **küresel yönetim** > **koşullu erişimi**' ne gidin.
+2. **Ayarlar** ' ı (sağ üst köşedeki dişli simgesi) seçin ve ardından **küresel yönetim**  >  **koşullu erişimi**' ne gidin.
 
    ![Koşullu erişime git](./media/conditional-access-jamf-cloud-connector/navigate-jamf-console-1.png)
 
@@ -109,13 +109,13 @@ JAMF Pro ve Intune arasında daha önce bir bağlantı ayarlanmamışsa veya zat
 
    Bu ayarı kaldırdığınızda, bağlantıyı devre dışı bırakır, ancak yapılandırmanız kaydedilir.
 
-5. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve **kiracı yönetim** > **ortağı cihaz yönetimi**' ne gidin.
+5. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve **kiracı yönetim**  >  **ortağı cihaz yönetimi**' ne gidin.
 
    **Iş ortağı cihaz yönetimi** düğümünde, **jamf IÇIN Azure Active Directory uygulama kimliğini BELIRTIN** alanında **uygulama kimliğini** silin ve ardından **Kaydet**' i seçin.
 
    Uygulama KIMLIĞI, JAMF Pro 'da el ile tümleştirme ayarladığınızda Azure 'da oluşturulan Azure Enterprise uygulamasının KIMLIĞIDIR.
 
-6. [Azure Portal](https://portal.azure.com/) , genel yönetici izinlerine sahip bir hesapla oturum açın ve **Azure Active Directory** > **kurumsal uygulamalara**gidin.
+6. [Azure Portal](https://portal.azure.com/) , genel yönetici izinlerine sahip bir hesapla oturum açın ve **Azure Active Directory**  >  **kurumsal uygulamalara**gidin.
 
    İki JAMF uygulaması bulun ve silin. Yeni uygulamalar, bir sonraki yordamda JAMF bulut bağlayıcısını yapılandırdığınızda otomatik olarak oluşturulacaktır.
 
@@ -140,7 +140,7 @@ JAMF bulut bağlayıcısını, JAMF Pro Microsoft Intune 'Yu bütünleştirmek �
 
 1. JAMF Pro konsolunda oturum açın.
 
-2. **Ayarlar** ' ı (sağ üst köşedeki dişli simgesi) seçin ve ardından **küresel yönetim** > **koşullu erişimi**' ne gidin.
+2. **Ayarlar** ' ı (sağ üst köşedeki dişli simgesi) seçin ve ardından **küresel yönetim**  >  **koşullu erişimi**' ne gidin.
 
    ![Koşullu erişime git](./media/conditional-access-jamf-cloud-connector/navigate-jamf-console-1.png)
 
@@ -157,14 +157,16 @@ JAMF bulut bağlayıcısını, JAMF Pro Microsoft Intune 'Yu bütünleştirmek �
 
    ![JAMF Pro konsolundaki bulut bağlayıcısını seçin](./media/conditional-access-jamf-cloud-connector/select-cloud-connector.png)
 
-6. **Sogeign Cloud** açılır menüsünde, Microsoft 'Tan Sovereign bulutunuzun konumunu seçin.
+6. **Sogeign Cloud** açılır menüsünde, Microsoft 'Tan Sovereign bulutunuzun konumunu seçin. Önceki tümleştirmenizi JAMF Cloud Connector ile değiştiriyorsanız, konum belirtilmişse bu adımı atlayabilirsiniz.
 
 7. Microsoft Azure tarafından tanınmayan bilgisayarlar için aşağıdaki giriş sayfası seçeneklerinden birini seçin:
    - **Varsayılan JAMF Pro cihaz kayıt sayfası** -MacOS cihazının durumuna bağlı olarak, bu seçenek kullanıcıları JAMF Pro cihaz kayıt portalına (JAMF Pro 'ya kaydolmak için) veya Intune Şirket Portalı uygulamasına (Azure AD 'ye kaydolmak için) yönlendirir.
    - **Erişim engellendi sayfası**
    - **Özel URL**
-
-8. **Bağlan**’ı seçin. JAMF Pro uygulamalarını Azure 'a kaydetmeye yönlendirilirsiniz.
+  
+   Önceki tümleştirmenizi JAMF Cloud Connector ile değiştiriyorsanız, giriş sayfası belirtilmişse bu adımı atlayabilirsiniz.
+  
+8. **Bağlan**'ı seçin. JAMF Pro uygulamalarını Azure 'a kaydetmeye yönlendirilirsiniz.
 
    İstendiğinde, Microsoft Azure kimlik bilgilerinizi belirtin ve istenen izinleri vermek için ekrandaki yönergeleri izleyin. **Bulut bağlayıcısı**ve ardından **bulut bağlayıcısı Kullanıcı kaydı uygulaması**için izinler verirsiniz. Her iki uygulama da kurumsal uygulamalar olarak Azure 'a kaydedilir.
 
@@ -174,7 +176,7 @@ JAMF bulut bağlayıcısını, JAMF Pro Microsoft Intune 'Yu bütünleştirmek �
 
    ![Uygulama Kimliği](./media/conditional-access-jamf-cloud-connector/copy-application-id.png)
 
-   *Uygulama kimliği* , sonraki adımda kullanılmak üzere sistem panonuza kopyalanır ve *Microsoft Endpoint Manager Yönetim Merkezi* 'ndeki **iş ortağı cihaz yönetimi** düğümü açılır. (**Kiracı yönetim** > **ortağı cihaz yönetimi**).
+   *Uygulama kimliği* , sonraki adımda kullanılmak üzere sistem panonuza kopyalanır ve *Microsoft Endpoint Manager Yönetim Merkezi* 'ndeki **iş ortağı cihaz yönetimi** düğümü açılır. (**Kiracı Yönetimi**  >  **Iş ortağı cihaz yönetimi**).
 
 10. **Iş ortağı cihaz yönetimi** düğümünde, IÇINDEKI **uygulama kimliğini** **JAMF için Azure Active Directory uygulama kimliğini belirtin** alanına *yapıştırın* ve **Kaydet**' i seçin.
 
@@ -202,7 +204,7 @@ Intune ve JAMF arasındaki tümleştirmeyi yapılandırdıktan sonra, [JAMF tara
 
 JAMF Pro tümleştirmesini Intune ile kaldırmanız gerekir, bağlantıyı JAMF Pro konsolundan kaldırmak için aşağıdaki adımları kullanın. Bu bilgiler hem bulut bağlayıcısı hem de el ile yapılandırılmış bir tümleştirme için geçerlidir.
 
-1. JAMF Pro 'da **küresel yönetim** > **koşullu erişimi**' ne gidin. **MacOS Intune tümleştirmesi** sekmesinde **Düzenle**' yi seçin.
+1. JAMF Pro 'da **küresel yönetim**  >  **koşullu erişimi**' ne gidin. **MacOS Intune tümleştirmesi** sekmesinde **Düzenle**' yi seçin.
 
 2. **MacOS Için Intune tümleştirmesini etkinleştir** onay kutusunu temizleyin.
 
@@ -210,7 +212,7 @@ JAMF Pro tümleştirmesini Intune ile kaldırmanız gerekir, bağlantıyı JAMF 
 
 4. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-5. Durumun şimdi **sonlandırıldığını**doğrulamak için **Kiracı Yönetimi** > **bağlayıcıları ve belirteçleri** > **iş ortağı cihaz yönetimi** ' ni seçin.
+5. **Tenant administration**  >  Durumun şimdi sonlandırıldığını doğrulamak için Kiracı Yönetimi**bağlayıcıları ve belirteçleri**  >  **iş ortağı cihaz yönetimi** ' **Terminated**ni seçin.
 
    > [!NOTE]
    > Kuruluşunuzun Mac cihazları konsolunda gösterilen tarihte (3 ay) kaldırılacaktır.
@@ -283,6 +285,10 @@ Evet. Bağlantı türünü el ile olarak değiştirebilir ve el ile kurulum adı
 ### <a name="permissions-were-modified-on-one-or-both-required-apps-cloud-connector-and-cloud-connector-user-registration-app-and-registration-is-not-working-is-this-supported"></a>Gerekli uygulamalarda veya her ikisinde de izinler değiştirildi (*bulut bağlayıcısı* ve *bulut bağlayıcısı Kullanıcı kaydı uygulaması*) ve kayıt çalışmıyor, bu destekleniyor mu?
 
 Uygulamalarda izinlerin değiştirilmesi desteklenmez.
+
+### <a name="is-there-a-log-file-in-jamf-pro-that-shows-if-the-connection-type-has-been-changed"></a>JAMF Pro 'da bağlantı türünün değiştirilip değiştirilmediğini gösteren bir günlük dosyası var mı?
+
+Evet, değişiklikler JAMFChangeManagement. log dosyasına kaydedilir. Değişiklik yönetimi günlüklerini görüntülemek için JAMF Pro 'da oturum açın, **Ayarlar**  >  **sistem ayarları**  >  **değişiklik yönetimi**  >  **günlükleri**' ne gidin, **koşullu erişim**için **nesne türü** arama yapın ve ardından değişiklikleri görüntülemek için **Ayrıntılar** ' a tıklayın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
