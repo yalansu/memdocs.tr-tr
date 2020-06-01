@@ -264,6 +264,8 @@
       items:
         - name: Teknik Önizlemeye genel bakış
           href: get-started/technical-preview.md
+        - name: 2005 özellikleri
+          href: get-started/2020/technical-preview-2005.md
         - name: 2004 özellikleri
           href: get-started/2020/technical-preview-2004.md
         - name: 2003 özellikleri
@@ -272,10 +274,6 @@
           href: get-started/2020/technical-preview-2002-2.md
         - name: 2002 özellikleri
           href: get-started/2020/technical-preview-2002.md
-        - name: 2001.2 özellikleri
-          href: get-started/2020/technical-preview-2001-2.md
-        - name: 2001 özellikleri
-          href: get-started/2020/technical-preview-2001.md
     - name: Hiyerarşiler arasında veri geçirme
       items:
         - name: Geçişe genel bakış
@@ -470,6 +468,8 @@
       href: servers/manage/management-insights.md
     - name: CMPivot
       items:
+        - name: CMPivot’a genel bakış
+          href: servers/manage/cmpivot-overview.md
         - name: CMPivot'u kullanma
           href: servers/manage/cmpivot.md
         - name: CMPivot sorunlarını giderme
