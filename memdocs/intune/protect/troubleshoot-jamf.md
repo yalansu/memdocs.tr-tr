@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 06/01/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49749ec3a839b11062b1cc2655a1cca4e3d6cfb0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 78f69edbc38bc41863783010a0e795290b7762c5
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81525721"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270931"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>JAMF Pro ile Microsoft Intune tümleştirme sorunlarını giderme
 
@@ -31,7 +31,7 @@ Bu makale, Intune yöneticilerinin macOS for macOS için Intune ile tümleştirm
 > [!TIP]  
 > Bu makaledeki bilgilerin çoğu, support.microsoft.com üzerindeki [Microsoft Intune JAMF ile tümleştirdiğinizde sorun giderme sorunları giderilir](https://support.microsoft.com/help/4519171/troubleshoot-problems-when-integrating-jamf-with-microsoft-intune) .
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Sorun gidermeye başlamadan önce, sorunu açıklığa kavuşturmak ve çözüm bulma süresini azaltmak için bazı temel bilgileri toplayın. Örneğin, JAMF-Intune tümleştirmesiyle ilgili bir sorunla karşılaştığınızda, her zaman önkoşulların karşılandığından emin olun. Sorun gidermeye başlamadan önce aşağıdaki konuları gözden geçirin:
 
@@ -78,7 +78,7 @@ Aşağıdaki bilgiler, Intune ve JAMF Pro tümleştirmesini ayarladıktan sonra 
   - Belirteç yenilemesi 24 saat veya daha uzun bir sürede başarısız olduğunda, JAMF Pro cihazı yanıt vermeyen olarak işaretler.  
   - Azure belirtecinin süresi dolarsa, kullanıcılardan yeni bir belirteç almak için Azure 'da oturum açması istenir. Her yedi günde bir Azure erişimi için yenileme belirteci oluşturulur.
 
-**Çözünürlük**  
+**Çözünürlüğüne**  
 Bir cihaz JAMF Pro *yanıt vermiyor* olarak işaretlendikten sonra, cihazın kayıtlı kullanıcısının yanıt vermeyen durumunu düzeltmek için oturum açması gerekir. Bu, kullanıcının oturum açma anahtarlığışı içinde Intune 'dan kimliğe sahip olduğu hesaba katılmış olan kullanıcı olmalıdır.
 
 
@@ -114,14 +114,14 @@ Mac cihazlarının kaydedemeyecek bazı yaygın nedenleri vardır.
 
   Uygulamayı Azure 'da oluşturduğunuzda, tüm varsayılan API izinlerini kaldırmalı ve ardından Intune 'A *update_device_attributes*tek bir izin atamalısınız. 
 
-  **Çözünürlük**  
+  **Çözünürlüğüne**  
   JAMF uygulamasının izinlerini gözden geçirin ve gerekirse düzeltin. JAMF Pro bulut bağlayıcısını kullanıyorsanız, bu uygulama sizin için oluşturulmuştur. Tümleştirmeyi el ile yapılandırdıysanız, uygulamayı Azure AD 'de oluşturdunuz. Uygulama izinleri için bkz. [Azure AD 'de JAMF için uygulama oluşturma](conditional-access-integrate-jamf.md#create-an-application-in-azure-active-directory)yordamına bakın.
 
 #### <a name="cause-2"></a>Neden 2  
 
 ****JAMF Native macOS bağlayıcı** uygulaması, Azure AD kiracınızda oluşturulmamış veya bağlayıcı için onay onayı, genel yönetici haklarına sahip olmayan bir hesap tarafından imzalandı**  
 
-  **Çözünürlük**  
+  **Çözünürlüğüne**  
   Docs.jamf.com üzerinde [Microsoft Intune tümleştirmede](https://docs.jamf.com/10.13.0/jamf-pro/administrator-guide/Integrating_with_Microsoft_Intune.html) *MacOS Intune tümleştirmesini yapılandırma* bölümüne bakın.
 
 #### <a name="cause-3"></a>Neden 3
@@ -135,7 +135,7 @@ Mac cihazlarının kaydedemeyecek bazı yaygın nedenleri vardır.
     Check your Microsoft Intune Integration configuration.
   ```  
 
-  **Çözünürlük**
+  **Çözünürlüğüne**
   - JAMF lisansı: JAMF için yeni bir lisans edinme yardımı için JAMF ile Iletişim kurun.  
   - Intune lisansı: kullanıcıya geçerli bir lisans atayın veya geçerli bir lisansın nasıl alınacağı hakkında bilgi için Microsoft veya Iş ortağınız ile iletişim kurun.
 
@@ -155,7 +155,7 @@ Cihazın kaydetmek ve kaydetmek için kullandığı hizmeti öğrenmek için cih
    WelcomeViewController.swift: 253 (startLogin()) Portal launched without WPJ only arg while account is under partner management
 ```
 
-**Çözünürlük**  
+**Çözünürlüğüne**  
 Kayıt kaynağını Intune 'dan JAMF 'ye değiştirmek için:
 1. [MacOS cihazının Intune kaydını](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos)silme. Intune 'dan tamamen kaldırılmamış cihazların daha karmaşıklıkları önlemek için, bu nedenler listesinde 6 ' ya [*neden*](#cause-6) oldu konusuna bakın.  
 
@@ -183,7 +183,7 @@ Intune tümleştirmesi kapalıysa, kullanıcılar bir cihazı kaydetmeye çalı�
 
 JAMF Pro sunucusu, Intune 'un tümleştirme devre dışı bırakıldığını bildiren bir tümleştirme devre dışı bırakıldığında, Intune sunucularına bir Pulse gönderir. 
 
-**Çözünürlük**  
+**Çözünürlüğüne**  
 JAMF Pro içinde Intune tümleştirmesini yeniden etkinleştirin. Tümleştirmeyi nasıl yapılandırdığınıza bağlı olarak aşağıdakilere bakın:
 
 - [JAMF Pro 'Yu Intune ile tümleştirme için JAMF bulut bağlayıcısını kullanın](conditional-access-jamf-cloud-connector.md)
@@ -195,7 +195,7 @@ JAMF Pro içinde Intune tümleştirmesini yeniden etkinleştirin. Tümleştirmey
 
 Bir cihazın JAMF 'den kaydı kaldırılırsa ancak Intune 'dan doğru şekilde kaldırılmadıysa veya birkaç kayıt girişimi yapıldığında, portalda aynı cihazın birden çok örneğini görebilirsiniz. Bu, JAMF kaydının başarısız olmasına neden olur.
 
-**Çözünürlük**  
+**Çözünürlüğüne**  
 1. Mac üzerinde, **terminali**başlatın.
 2. **Sudo JAMF removemdmprofile**komutunu çalıştırın.
 3. **Sudo JAMF removeFramework 'ü**çalıştırın.
@@ -205,14 +205,13 @@ Bir cihazın JAMF 'den kaydı kaldırılırsa ancak Intune 'dan doğru şekilde 
    - /Library/Application Support desteği/com. Microsoft. CompanyPortal. UserContext. INFO
    - /Library/Application Support desteği/com. Microsoft. CompanyPortal
    - /Library/Application Support desteği/com. jamfsoftware. selfservice. Mac
-   - /Library/Saved uygulaması
-   - Eyalet/com. jamfsoftware. selfservice. Mac. savedState
+   - /Library/Saved uygulama durumu/com. jamfsoftware. selfservice. Mac. savedState
    - /Library/Saved uygulama durumu/com. Microsoft. CompanyPortal. savedState
    - /Library/Preferences/com.microsoft.CompanyPortal.plist
    - /Library/Preferences/com.jamfsoftware.selfservice.mac.plist
    - /Library/Preferences/com.jamfsoftware.management.jamfAAD.plist
-   - /Users/<username>/Library/Cookies/com.Microsoft.CompanyPortal.binarycookies
-   - /Users/<username>/Library/Cookies/com.JAMF.Management.jamfAAD.binarycookies
+   - /Users/ \<*username*> /Library/Cookies/com.Microsoft.CompanyPortal.binarycookies
+   - /Users/ \<*username*> /Library/Cookies/com.JAMF.Management.jamfAAD.binarycookies
    - com. Microsoft. CompanyPortal
    - com. Microsoft. CompanyPortal. HockeySDK
    - enterpriseregistration.windows.net
@@ -228,7 +227,7 @@ Bir cihazın JAMF 'den kaydı kaldırılırsa ancak Intune 'dan doğru şekilde 
    - Tür: uygulama parolası; Hesap: com. Microsoft. workplacejoın. parmak izi
    - Tür: uygulama parolası; Hesap: com. Microsoft. workplacejoın. registeredUserPrincipalName
    - Tür: sertifika; Veren: MS-Kuruluş-erişim
-   - Tür: Kimlik tercihi; Ad (varsa ADFS STS URL 'SI):https://adfs\<DNSName>.com/adfs/ls
+   - Tür: Kimlik tercihi; Ad (varsa ADFS STS URL 'SI): https://adfs \<DNSName> . com/adfs/ls
    - Tür: Kimlik tercihi; Ada`https://enterpriseregistration.windows.net`
    - Tür: Kimlik tercihi; Ada`https://enterpriseregistration.windows.net/`
 9. Mac cihazını yeniden başlatın.
@@ -250,7 +249,7 @@ Kayıt sırasında, macOS cihazının kullanıcısı anahtar anahtarlarından bi
    To allow this, enter the "login" keychain password
 ```
 
-**Çözünürlük**  
+**Çözünürlüğüne**  
 Cihazı Azure AD 'ye başarıyla kaydetmek için JAMF kullanıcının hesap parolasını sağlamasını ve **Izin ver**' i seçmesini gerektirir.
 
 Bu istek, bu makalenin önceki kısımlarında yer aldığı [bir uygulamayı açtığınızda Anahtarlık oturum açma Için Mac cihazlarına](#mac-devices-prompt-for-keychain-sign-in-when-you-open-an-app)yönelik isteğe benzerdir.  
@@ -262,7 +261,7 @@ Bu istek, bu makalenin önceki kısımlarında yer aldığı [bir uygulamayı a�
 - Cihaz doğru kaydettirilmemiş.  
 - Cihaz, gerekli temizlik olmadan birden çok kez kaydedildi.
 
-**Çözünürlük**  
+**Çözünürlüğüne**  
 Bu sorunu çözmek için, bu makalenin önceki kısımlarında yer aldığı *cihazların* [*6. nedenine*](#cause-6) yönelik çözümü izleyin. 
 
 
@@ -272,14 +271,14 @@ Bu sorunu çözmek için, bu makalenin önceki kısımlarında yer aldığı *ci
 
 Bir cihaz Intune ve JAMF Pro tümleştirmesinden kaldırıldığında, bazı veriler arka arkaya kalabilir ve bu da sonraki kayıtlar yinelenen girişler oluşturulmasına neden olabilir.  
 
-**Çözünürlük**  
+**Çözünürlüğüne**  
 Bu sorunu çözmek için, bu makalenin önceki kısımlarında yer aldığı *cihazların* [*6. nedenine*](#cause-6) yönelik çözümü izleyin.
 
 ### <a name="compliance-policy-fails-to-evaluate-the-device"></a>Uyumluluk ilkesi cihazı değerlendiremiyor  
 
 **Neden**: Intune ile JAMF tümleştirmesi, cihaz gruplarını hedefleyen Uyumluluk ilkesini desteklemez.
 
-**Çözünürlük**  
+**Çözünürlüğüne**  
 MacOS cihazlarının Uyumluluk ilkesini Kullanıcı gruplarına atanacak şekilde değiştirin.
 
 ### <a name="could-not-retrieve-the-access-token-for-microsoft-graph-api"></a>Microsoft Graph API 'SI için erişim belirteci alınamadı
@@ -295,9 +294,9 @@ Bu hatanın kaynağı aşağıdakilerden biri olabilir:
 JAMF Pro uygulamasını Azure 'a kaydederken aşağıdaki koşullardan biri oluştu:
 
 - Uygulama birden fazla izin aldı.
-- ** * \<Şirketiniz* için yönetici onayı verme>** seçeneği seçilmemiş.  
+- **Yönetici onayı *\<your company>* verme** seçeneği seçilmemiş.  
 
-**Çözünürlük**  
+**Çözünürlüğüne**  
 Bu makalenin önceki bölümlerinde yer aldığı [cihazların](#devices-fail-to-register)1. nedeni için çözüm bölümüne bakın.
 
 #### <a name="a-license-required-for-jamf-intune-integration-has-expired"></a>JAMF-Intune tümleştirmesi için gereken bir lisansın süresi doldu

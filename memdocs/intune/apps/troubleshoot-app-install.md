@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 06/01/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c98de99eb8f72840080ca720465559c462bc77f
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 2cc40eb4a8b094cd933a6bb3f4f8c7fdae927f7b
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023376"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270900"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Uygulama yükleme sorunlarını giderme
 
@@ -107,6 +107,18 @@ Günlük dosyalarını toplamak için izlenmesi gereken belirli gereksinimler va
 - Win32 uygulama yükleme günlüğü koleksiyonu, gerekli, kullanılabilir ve kaldırma uygulama atama hedefini karşılayan uygulamalar için etkinleştirilir.
 - Saklanan Günlükler, günlüklerde yer alan kişisel bilgileri korumak için şifrelenir.
 - Win32 uygulama hataları için destek biletlerini açarken, yukarıda belirtilen adımları kullanarak ilgili hata günlüklerini iliştirin.
+
+## <a name="app-types-supported-on-arm64-devices"></a>ARM64 cihazlarında desteklenen uygulama türleri
+
+ARM64 cihazlarında desteklenen uygulama türleri şunlardır:
+- Managed Browser 'ın açılmasını gerektirmeyen Web Apps. 
+- `.appx`Aşağıdaki ve öğelerinden herhangi biriyle iş uygulamaları veya Windows UNIVERSAL LOB uygulamaları () için Microsoft Store `TargetDeviceFamily` `ProcessorArchitectures` :
+  - `TargetDeviceFamily`Masaüstü uygulamaları, evrensel uygulamalar ve Windows8x uygulamaları içerir. Windows8x uygulamaları yalnızca Iş uygulamaları için çevrimiçi Microsoft Store olarak geçerlidir.
+  - `ProcessorArchitecture`x86 uygulamaları, ARM uygulamaları, ARM64 uygulamaları ve bağımsız uygulamalar içerir.
+- Windows Mağazası uygulamaları
+- Mobil MSI LOB uygulamaları
+- 32 bitlik gereksinim kuralına sahip Win32 uygulamaları.
+- 32 bit veya x86 mimarisi seçildiyse Windows Office Tıkla-Çalıştır uygulamaları.
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Microsoft Mağazası'ndan uygulama sorunlarını giderme
 

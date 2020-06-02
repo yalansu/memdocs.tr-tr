@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8d75208de7cc6697699d79e3a52df742f605fdb
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 529d7a7da1257b9ebce1e1ab3cec706e8f100403
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990722"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270948"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Intune 'da Windows 10 cihazlarında PowerShell betikleri kullanma
 
@@ -68,7 +68,7 @@ Intune yönetim uzantısında aşağıdaki Önkoşullar bulunur. Önkoşullar ka
     
     - Kullanıcı, Azure AD hesabını kullanarak cihazda oturum açar ve ardından Intune 'da kaydolur.
 
-  - Configuration Manager ve Intune kullanan ortak yönetilen cihazlar. **Uygulamalar** Iş yükünün **pilot Intune** veya **Intune**olarak ayarlandığından emin olun. Rehberlik için aşağıdaki makalelere bakın: 
+  - Configuration Manager ve Intune kullanan ortak yönetilen cihazlar. Win32 uygulamaları yüklerken, **uygulamalar** Iş yükünün **pilot Intune** veya **Intune**olarak ayarlandığından emin olun. **Uygulamalar** iş yükü **Configuration Manager**olarak ayarlanmış olsa bile, PowerShell betikleri çalıştırılır. Cihaza bir PowerShell betiği hedefliyorsanız, Intune yönetim uzantısı bir cihaza dağıtılır. Ancak, yukarıda belirtildiği gibi, cihazın bir Azure AD veya karma Azure AD 'ye katılmış bir cihaz olması ve Windows 10 sürüm 1607 veya üstünü çalıştırması gerekir. Rehberlik için aşağıdaki makalelere bakın: 
   
     - [Ortak yönetim nedir?](https://docs.microsoft.com/configmgr/comanage/overview) 
     - [İstemci uygulamaları iş yükü](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
@@ -97,7 +97,7 @@ Intune yönetim uzantısında aşağıdaki Önkoşullar bulunur. Önkoşullar ka
 
       | Betiği 64-bit PS konağında Çalıştır | İstemci mimarisi | Yeni PS betiği | Mevcut ilke PS betiği |
       | --- | --- | --- | --- | 
-      | No | 32 bit  | 32-bit PS Konağı destekleniyor | Yalnızca 32 bit ve 64 bit mimarilerinde çalışan 32-bit PS ana bilgisayarında çalışır. |
+      | Hayır | 32 bit  | 32-bit PS Konağı destekleniyor | Yalnızca 32 bit ve 64 bit mimarilerinde çalışan 32-bit PS ana bilgisayarında çalışır. |
       | Yes | 64 bit | 64-bit mimariler için 64-bit PS konağında betiği çalıştırır. 32 bit üzerinde çalıştırıldığında, betik bir 32 bit PS konağında çalışır. | Betiği 32 bit PS ana bilgisayarında çalıştırır. Bu ayar 64 bit olarak değişirse, betik bir 64 bit PS konağında açılır (çalışmaz) ve sonuçları raporlar. 32 bit üzerinde çalıştırıldığında, betik 32-bit PS ana bilgisayarında çalışır. |
 
 5. **Kapsam etiketlerini**seçin. Kapsam etiketleri isteğe bağlıdır. [Dağıtım için rol tabanlı erişim denetimi (RBAC) ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md) daha fazla bilgi içerir.

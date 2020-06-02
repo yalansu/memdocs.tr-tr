@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 06/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ecf8d5b17f19110e6f2428aaf07a37b1216a9411
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 8814e1a2c6b1af48d71a0a82c02492e48b44dda9
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165711"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84271016"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Tek başına Intune-Win32 uygulama yönetimi
 
@@ -456,7 +456,7 @@ Yukarıdaki PowerShell komutunda, öğesini `<path to binary file>` Dosya yolunu
 - İşletim sistemi sürümünü denetleyin – Windows 10 1607 veya üzeri.  
 - Windows 10 SKU'sunu denetleyin - Windows 10 S veya S modu etkinleştirilmiş olarak çalışan Windows sürümleri MSI yüklemesini desteklemez.
 
-Win32 uygulamalarında sorun giderme hakkında daha fazla bilgi için bkz. [Win32 uygulama yükleme sorunlarını giderme](troubleshoot-app-install.md#win32-app-installation-troubleshooting).
+Win32 uygulamalarında sorun giderme hakkında daha fazla bilgi için bkz. [Win32 uygulama yükleme sorunlarını giderme](troubleshoot-app-install.md#win32-app-installation-troubleshooting). ARM64 cihazlarında uygulama türleri hakkında daha fazla bilgi için bkz. [ARM64 cihazlarında desteklenen uygulama türleri](../apps/troubleshoot-app-install.md#app-types-supported-on-arm64-devices).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

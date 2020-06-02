@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 9e59d850a78a8f45f93769003e7a1de99e5634b3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: ddd01055ac6edf2872854c93cc5172b396052ad2
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906396"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270863"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Configuration Manager Windows uygulamaları oluşturma
 
@@ -39,7 +39,7 @@ Cihazdaki tüm kullanıcılar için Windows uygulama paketi ile bir uygulama sa�
 > [!Important]  
 > Aynı Windows uygulama paketinin farklı sürümlerini yükleme, sağlama ve güncelleştirme konusunda dikkatli olun, bu durum beklenmedik sonuçlara neden olabilir. Bu davranış, uygulamayı sağlamak için Configuration Manager kullanılırken ve sonra kullanıcıların uygulamayı Microsoft Store güncelleştirmesine izin verirken meydana gelebilir. Daha fazla bilgi için bkz. [iş için Microsoft Store uygulamaları yönetirken](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps)sonraki adım Kılavuzu.  
 
-Configuration Manager, çevrimdışı lisanslı bir uygulamayı sağlarken, Windows 'un Microsoft Store otomatik olarak güncelleştirmesine izin vermez.  
+Configuration Manager istemcisi ile Windows 10 cihazlarına çevrimdışı uygulamalar dağıttığınızda, kullanıcıların Configuration Manager dağıtımlar dışındaki uygulamaları güncelleştirmesine izin vermez. Çevrimdışı uygulamalardaki güncelleştirmelerin denetimi, özellikle sınıfsallar gibi çok kullanıcılı ortamlarda önemlidir. Daha fazla bilgi için bkz. [Configuration Manager Ile iş ve eğitim için Microsoft Store uygulamaları yönetme](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps).<!-- MEMDocs#316 -->
 
 Configuration Manager, Windows 10 ' un tüm desteklenen sürümlerinde uygulama sağlamayı destekler.<!--SCCMDocs-pr issue 2762-->
 

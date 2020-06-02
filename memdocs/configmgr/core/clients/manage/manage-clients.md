@@ -10,12 +10,12 @@ ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d7697f8b5a2017aa732c52512bf31598c070fbc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7b9111e3be82424425561e0a664fee955d73ee63
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714881"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270829"
 ---
 # <a name="how-to-manage-clients-in-configuration-manager"></a>Configuration Manager istemcileri yönetme
 
@@ -91,9 +91,9 @@ Aynı cihaza birden çok istemci ayarı dağıttığınızda, ayarların önceli
 
 Daha fazla bilgi için bkz. [istemci ayarlarını yapılandırma](../deploy/configure-client-settings.md).
 
-### <a name="start"></a>Başlat
+### <a name="start"></a>Başlangıç
 
-- Donanım ve yazılım envanteri bilgilerini bir Windows istemcisinden görmek için **Kaynak Gezgini** çalıştırın. Daha fazla bilgi için aşağıdaki makalelere bakın:
+- Donanım ve yazılım envanteri bilgilerini bir Windows istemcisinden görmek için **Kaynak Gezgini** çalıştırın. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
   - [Donanım envanterini görüntülemek için Kaynak Gezgini’ni kullanma](inventory/use-resource-explorer-to-view-hardware-inventory.md)
 
@@ -103,7 +103,7 @@ Daha fazla bilgi için bkz. [istemci ayarlarını yapılandırma](../deploy/conf
 
 ### <a name="approve"></a>Onaylama
 
-İstemci, HTTP ve otomatik olarak imzalanan bir sertifika kullanarak site sistemleriyle iletişim kurduğunda, bu istemcileri güvenilen bilgisayar olarak tanımlamak için onaylamanız gerekir. Varsayılan olarak, site yapılandırması istemcileri aynı Active Directory ormanı ve güvenilen ormanlardan otomatik olarak onaylar. Bu varsayılan davranış, her istemciyi el ile onaylamanız gerekmediği anlamına gelir. Güvendiğiniz çalışma grubu bilgisayarlarını ve güvendiğiniz diğer onaylanmamış bilgisayarları el ile onaylayın.
+İstemci, HTTP ve otomatik olarak imzalanan bir sertifika kullanarak site sistemleriyle iletişim kurduğunda, bu istemcileri güvenilen bilgisayar olarak tanımlamak için onaylamanız gerekir. Varsayılan olarak, site yapılandırması istemcileri aynı Active Directory ormanı, güvenilen ormanları ve bağlı Azure Active Directory (Azure AD) kiracılarından otomatik olarak onaylar<!-- MEMDocs#318 -->. Bu varsayılan davranış, her istemciyi el ile onaylamanız gerekmediği anlamına gelir. Güvendiğiniz çalışma grubu bilgisayarlarını ve güvendiğiniz diğer onaylanmamış bilgisayarları el ile onaylayın.
 
 > [!IMPORTANT]  
 > Bazı yönetim işlevleri onaylanmamış istemciler için çalışabilse de Configuration Manager için desteklenmeyen bir senaryodur.  
@@ -310,7 +310,7 @@ CCMSetup. exe için bu komut satırı özelliklerinin nasıl kullanılacağı ha
 
 1. İstemci bilgisayarda **Configuration Manager** denetim masasını açın.  
 
-2. **Önbellek** sekmesine geçin. boşluk ve konum özelliklerini ayarlayın. Varsayılan konum `%windir%\ccmcache`.  
+2. **Önbellek** sekmesine geçin. boşluk ve konum özelliklerini ayarlayın. Varsayılan konum `%windir%\ccmcache` .  
 
 3. Önbellek klasöründeki dosyaları silmek için **dosyaları sil**' i seçin.  
 
@@ -333,7 +333,7 @@ Configuration Manager istemci yazılımını bir bilgisayardan, **CCMSetup. exe*
 > [!TIP]  
 > Kaldırma işlemi, ekranda sonuç görüntülemez. İstemcinin başarıyla yüklemesini doğrulamak için şu günlük dosyasına bakın:`%windir%\ccmsetup\logs\CCMSetup.log`  
 >
-> Kaldırma işleminin başka bir şey yapmadan önce tamamlanmasını beklemeniz gerekiyorsa, PowerShell 'de çalıştırın `Wait-Process CCMSetup` . Bu komut, CCMSetup işlemi tamamlanana kadar bir betiği duraklatabilir.
+> Kaldırma işleminin başka bir şey yapmadan önce tamamlanmasını beklemeniz gerekiyorsa, `Wait-Process CCMSetup` PowerShell 'de çalıştırın. Bu komut, CCMSetup işlemi tamamlanana kadar bir betiği duraklatabilir.
 
 
 ## <a name="manage-conflicting-records"></a><a name="BKMK_ConflictingRecords"></a>Çakışan kayıtları yönetme

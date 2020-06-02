@@ -10,12 +10,12 @@ ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e4922502b49ab2da9ce393fab809e4dc583fd962
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84ef4e37ddf756f04101c9cdec0ec7a4ed91688d
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714013"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270846"
 ---
 # <a name="security-and-privacy-for-configuration-manager-clients"></a>Configuration Manager istemcileri için güvenlik ve Gizlilik
 
@@ -32,7 +32,7 @@ Configuration Manager site, Configuration Manager istemcisini çalıştıran cih
 
 - Bir site özelliği olarak, **Site sistem ayarları**'nı **Yalnızca HTTPS** kullanacak şekilde yapılandırın.  
 
-- `UsePKICert` CCMSetup özelliği ile istemcileri yükleme.  
+- `UsePKICert`CCMSetup özelliği ile istemcileri yükleme.  
 
 - Bir sertifika iptal listesi (CRL) kullanın ve istemcilerin ve iletişim sunucularının buna daima erişebilmesini sağlayın.  
 
@@ -48,7 +48,7 @@ PKI kimlik doğrulamasını kullandığınızda, onay Configuration Manager tara
 - Güvenilir etki alanlarındaki bilgisayarlar için otomatik
 - Tüm bilgisayarlar için otomatik  
 
-En güvenli onay yöntemi, güvenilen etki alanlarının üyesi olan istemcileri otomatik olarak onaylamaktır. Ardından diğer tüm bilgisayarları el ile kontrol edin ve onaylayın. Güvenilir olmayan bilgisayarların ağınıza erişmesini engellemek için başka erişim denetimleriniz yoksa, tüm istemcilerin otomatik olarak onaylanması önerilmez.  
+En güvenli onay yöntemi, güvenilen etki alanlarının üyesi olan istemcileri otomatik olarak onaylamaktır. Bu seçenek, bağlı Azure Active Directory (Azure AD) kiracılarından bulut etki alanına katılmış istemcileri içerir.<!-- MEMDocs#318 --> Ardından diğer tüm bilgisayarları el ile kontrol edin ve onaylayın. Güvenilir olmayan bilgisayarların ağınıza erişmesini engellemek için başka erişim denetimleriniz yoksa, tüm istemcilerin otomatik olarak onaylanması önerilmez.  
 
 Bilgisayarların el ile nasıl onaylanacağı hakkında daha fazla bilgi için bkz. [Cihazlar düğümünden Istemcileri yönetme](../../manage/manage-clients.md#BKMK_ManagingClients_DevicesNode).  
 

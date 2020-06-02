@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7244872fa888aaee164187e62a2355a94f793499
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4209c461877786000e01dd03e4e0dea9f76a6e84
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985188"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270965"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Mobil cihaz yönetimi yetkilisini ayarlayın
 
@@ -36,9 +36,9 @@ Olası yapılandırmalar şunlardır:
 
 - **Intune ortak yönetim** -Intune bulut çözümünün Windows 10 cihazları için Configuration Manager ile tümleştirilmesi. Configuration Manager konsolunu kullanarak Intune’u siz yapılandırırsınız. [Cihazların otomatik kaydını Intune 'A yapılandırın](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
-- **Office 365 için Mobil Cihaz Yönetimi** - Office 365’in Intune bulut çözümüyle tümleştirmesi. Intune’u Microsoft 365 yönetim merkezinden siz yapılandırırsınız. Intune Tek Başına ile sağlanan özelliklerin bir alt kümesini içerir. Bkz. [Office 365 ' de mobil cihaz yönetimi (MDM) ayarlama](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)
+- **Office Için mobil cihaz yönetimi 365** -365 OFFICE için MDM 'yi ETKINLEŞTIRDIYSENIZ, MDM yetkilisini "Office 365" olarak ayarlamış olursunuz. Intune 'u kullanmaya başlamak istiyorsanız, Intune lisansı satın almanız gerekir.
 
-- **Office 365 MDM** birlikte kullanımı Aynı anda kiracınızda Office ve Intune için MDM 'yi etkinleştirebilir ve kullanabilir ve her bir kullanıcının MDM 'ye kayıtlı cihazlarını yönetmek için hangi hizmetin kullanılacağını dikte etmek üzere yönetim yetkilisini her bir kullanıcı için Intune veya MDM olarak ayarlayabilirsiniz. Her bir kullanıcının yönetim yetkilisi kullanıcıya atanan lisansa göre tanımlanır: kullanıcının yalnızca bir Microsoft 365 temel veya standart lisansı varsa, cihazları Office için MDM tarafından yönetilir. Kullanıcının bir lisans entitling Intune 'u varsa, cihazları Intune tarafından yönetilir. Office için MDM tarafından daha önce yönetilen bir kullanıcıya Intune entitling lisans eklerseniz, cihazları Intune yönetimine geçiş yapılır. Kullanıcılara Intune 'a geçiş yapmadan önce Office için MDM 'yi değiştirmek üzere kullanıcılara atanmış Intune yapılandırmalarının olduğundan emin olun, aksi takdirde cihazları Office yapılandırması için MDM 'yi kaybeder ve Intune 'dan herhangi bir değişiklik almaz.
+- **Office 365 MDM** birlikte kullanımı-365 OFFICE için MDM 'yi zaten kullanıyorsanız ve yönetim yetkilisini her bir kullanıcı için MDM kayıtlı cihazlarını yönetmek üzere hangi hizmetin kullanılacağını dikte etmek üzere ıntune veya 365 OFFICE için MDM olarak ayarlarsanız, kiracınıza Intune ekleyebilirsiniz. Her bir kullanıcının yönetim yetkilisi kullanıcıya atanan lisansa göre tanımlanır: kullanıcının yalnızca bir Microsoft 365 temel veya standart lisansı varsa, cihazları Office için MDM tarafından yönetilir. Kullanıcının bir lisans entitling Intune 'u varsa, cihazları Intune tarafından yönetilir. Office için MDM tarafından daha önce yönetilen bir kullanıcıya Intune entitling lisans eklerseniz, cihazları Intune yönetimine geçiş yapılır. Kullanıcılara Intune 'a geçiş yapmadan önce Office için MDM 'yi değiştirmek üzere kullanıcılara atanmış Intune yapılandırmalarının olduğundan emin olun, aksi takdirde cihazları Office yapılandırması için MDM 'yi kaybeder ve Intune 'dan herhangi bir değişiklik almaz.
 
 ## <a name="set-mdm-authority-to-intune"></a>MDM yetkilisini Intune olarak ayarlama
 

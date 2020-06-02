@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b9e2e4e85d9fb6a1ab34af8760e0ac61d6e4fab4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 79e83a7ba111b1d7f96fb623914ffe8e11f22f3d
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718304"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270880"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager ile Always on kullanılabilirlik grupları SQL Server kullanmaya hazırlanma
 
@@ -45,7 +45,7 @@ Configuration Manager ile kullanılabilirlik gruplarının kullanılması için 
 - [Site veritabanını bir kullanılabilirlik grubunun dışına, tek başına SQL Server varsayılan veya adlandırılmış bir örneğine taşıyın](configure-aoag.md#bkmk_stop)  
 
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Aşağıdaki Önkoşullar tüm senaryolar için geçerlidir. Belirli bir senaryoya ek önkoşullar uygulandıklarında, bu senaryoya göre ayrıntılandırılmıştır.
 
@@ -106,7 +106,7 @@ Her çoğaltmanın veritabanını aşağıdaki ayarlarla yapılandırın:
 
     Daha fazla bilgi için bkz. [clr tümleştirmesi](https://docs.microsoft.com/sql/relational-databases/clr-integration/clr-integration-enabling).  
 
-- **En büyük metin REPL boyutunu** ayarla `2147483647`:  
+- **En büyük metin REPL boyutunu** ayarla `2147483647` :  
 
     ``` SQL
     EXECUTE sp_configure 'max text repl size (B)', 2147483647
@@ -264,6 +264,8 @@ Kurulum tamamlandıktan sonra, Configuration Manager için aşağıdaki bağlant
 
 Bu yapılandırmalarda özel bağlantı noktalarını kullanabilirsiniz. Uç nokta ve kullanılabilirlik grubundaki tüm çoğaltmalarda aynı özel bağlantı noktalarını kullanın.
 
+SQL 'in siteler arasında veri çoğaltması için, Azure Yük dengeleyicideki her bağlantı noktası için bir yük dengeleme kuralı oluşturun. Daha fazla bilgi için bkz. [bir iç yük dengeleyici Için yüksek kullanılabilirlik bağlantı noktalarını yapılandırma](https://docs.microsoft.com/azure/load-balancer/load-balancer-configure-ha-ports).<!-- MEMDocs#252 -->
+
 #### <a name="listener"></a>Dinleyici
 
 Kullanılabilirlik grubunun en az bir *kullanılabilirlik grubu dinleyicisi*olmalıdır. Kullanılabilirlik grubundaki site veritabanını kullanmak üzere Configuration Manager yapılandırdığınızda, bu dinleyicinin sanal adını kullanır. Bir kullanılabilirlik grubu birden çok dinleyici içerebilse de Configuration Manager yalnızca birini kullanabilir. Daha fazla bilgi için bkz. [SQL Server kullanılabilirlik grubu dinleyicisi oluşturma veya yapılandırma](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server).
@@ -280,11 +282,11 @@ Bu dosya yolu, ikincil çoğaltma sunucularına yalnızca kullanılabilirlik gru
 
 - Üç SQL Server kullanan bir kullanılabilirlik grubu oluşturursunuz.  
 
-- Birincil çoğaltma sunucunuz, SQL Server 2014’ün yeni bir yüklemesi olsun. Varsayılan olarak, veritabanını depolar. MDF ve. İçindeki `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA`ldf dosyaları.  
+- Birincil çoğaltma sunucunuz, SQL Server 2014’ün yeni bir yüklemesi olsun. Varsayılan olarak, veritabanını depolar. MDF ve. İçindeki LDF dosyaları `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA` .  
 
-- İkincil çoğaltma sunucularınızın her ikisini de önceki sürümlerden SQL Server 2014 sürümüne yükselttiniz. Bu sunucular, yükseltme ile veritabanı dosyalarını depolamak için özgün dosya yolunu tutar: `C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA`.  
+- İkincil çoğaltma sunucularınızın her ikisini de önceki sürümlerden SQL Server 2014 sürümüne yükselttiniz. Bu sunucular, yükseltme ile veritabanı dosyalarını depolamak için özgün dosya yolunu tutar: `C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA` .  
 
-- Site veritabanını bu kullanılabilirlik grubuna taşımadan önce, her bir ikincil çoğaltma sunucusunda şu dosya yolunu oluşturun: `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA`. Bu yol, ikincil çoğaltmalar bu dosya konumunu kullanmasa bile, birincil Çoğaltmada kullanılan yolun bir yinelemesi olur.  
+- Site veritabanını bu kullanılabilirlik grubuna taşımadan önce, her bir ikincil çoğaltma sunucusunda şu dosya yolunu oluşturun: `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA` . Bu yol, ikincil çoğaltmalar bu dosya konumunu kullanmasa bile, birincil Çoğaltmada kullanılan yolun bir yinelemesi olur.  
 
 - Ardından, her bir ikincil çoğaltmada SQL Server hizmet hesabına, bu sunucudaki yeni oluşturulan dosya konumuna tam denetim erişimi verirsiniz.  
 
