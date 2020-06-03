@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20c552ff879574edc0ed497b5c99b45b8092918a
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: f469d9646fad3b247743b6017f0ecbc7917f2cdf
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864913"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311195"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Windows 10 (ve üzeri) cihaz ayarları
 
@@ -200,7 +200,7 @@ Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [Enterprisecloudprin
   - **Gizlilik**: **blok** cihazdaki ayarlar uygulamasının gizlilik alanına erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
   - **Update ve Security**: **Block** , cihazdaki ayarlar uygulamasının Update & Security alanına erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
-## <a name="display"></a>Ekran
+## <a name="display"></a>Göster
 
 Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [görüntüleme ILKESI CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-display)'sini kullanır.
 
@@ -668,7 +668,7 @@ Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [kablolu Lessdisplay
 
   [System/TelemetryProxy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-telemetryproxy)
 
-## <a name="search"></a>Arama
+## <a name="search"></a>Arayın
 
 Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [arama ILKESI CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search)'sini kullanır.
 
@@ -1095,7 +1095,8 @@ Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [Defender Ilke CSP](
 - İstenmeyebilecek **uygulamaları Algıla**: Bu özellik, istenmeyebilecek UYGULAMALARı (pua), ağınıza indirme ve yükleme konusunda tanımlar ve engeller. Bu uygulamalar virüsler, kötü amaçlı yazılım veya diğer tehdit türleri olarak kabul edilmez. Ancak, performans veya kullanımını etkileyebilecek uç noktalar üzerinde eylemler çalıştırabilir. Windows PUAs algıladığında koruma düzeyini seçin. Seçenekleriniz şunlardır:
 
   - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, Microsoft Defender bu özelliği devre dışı bırakabilir.
-  - **Engelle**: Microsoft Defender PUAs algılar ve algılanan öğeler engellenir. Bu öğeler, diğer tehditlerle birlikte geçmiş olarak gösterilir.
+  - **Kapalı**: Pua koruması kapalı.
+  - **Etkinleştir**: Microsoft Defender PUAs 'i algılar ve algılanan öğeler engellenir. Bu öğeler, diğer tehditlerle birlikte geçmiş olarak gösterilir.
   - **Denetim**: Microsoft Defender PUAs 'i algılar, ancak hiçbir işlem gerçekleşmez. Microsoft Defender 'ın işlem yapması için gereken uygulamalarla ilgili bilgileri gözden geçirebilirsiniz. Örneğin, Olay Görüntüleyicisi Microsoft Defender tarafından oluşturulan olayları arayın.
 
   İstenmeyebilecek uygulamalar hakkında daha fazla bilgi için bkz. istenmeyebilecek [uygulamaları algılama ve engelleme](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
@@ -1119,7 +1120,7 @@ Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [Defender Ilke CSP](
   - **Temizlenemedi**
   - **Karantina**
   - **Kaldır**
-  - **Açılmasına**
+  - **İzin Ver**
   - **Kullanıcı tanımlı**
   - **Engelleyin**
 

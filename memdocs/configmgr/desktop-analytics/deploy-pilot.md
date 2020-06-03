@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0e90855949f5c8f249db6b2f4305c71b8ee4e768
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 3aa722415248ad9275c6ad065f0120bfe78d3ce4
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824027"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311229"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>Masaüstü analiziyle pilot 'a dağıtım
 
@@ -104,7 +104,7 @@ Windows 'u dağıtabilmeniz için önce Configuration Manager ' de yazılım nes
 Configuration Manager, pilot ve üretim dağıtımları için Koleksiyonlar oluşturmak üzere masaüstü analizinden gelen verileri kullanır. Bu koleksiyonlar **varlıklar ve uyum** çalışma alanında, **Cihaz Koleksiyonları** düğümünde, **dağıtım planları** klasöründedir.
 
 > [!IMPORTANT]
-> Bu koleksiyonlar, masaüstü Analizi dağıtım planları için Configuration Manager tarafından yönetilir. El ile yapılan değişiklikler desteklenmez.
+> Bu koleksiyonlar, masaüstü Analizi dağıtım planları için Configuration Manager tarafından yönetilir. El ile yapılan değişiklikler desteklenmez. Bu koleksiyonlardan birini silerseniz, masaüstü Analizi çalışmaz ve [Configuration Manager yeniden bağlanmanız](connect-configmgr.md) gerekir.<!--7208090-->
 
 Cihazların her dağıtım aşamasından sonra sağlıklı olduğundan emin olmak için, masaüstü analizi ile tümleşik aşamalı dağıtım oluşturmak için aşağıdaki yordamı kullanın:
 
@@ -140,7 +140,7 @@ Cihazların her dağıtım aşamasından sonra sağlıklı olduğundan emin olma
 > [!Important]  
 > Bu koleksiyonlar, üyelik değişiklikleri olarak eşitlemeye devam eder. Örneğin, bir varlıkla ilgili bir sorun tespit ederseniz ve bunu **yapılamıyor**olarak işaretlerseniz, söz konusu varlığa sahip cihazlar artık *ücretsiz ölçütleri* karşılamaz. Bu cihazlar üretim dağıtım koleksiyonundan bırakılır.
 
-## <a name="monitor"></a>İzleme
+## <a name="monitor"></a>İzleyici
 
 ### <a name="configuration-manager-console"></a>Configuration Manager konsolu
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 06/2/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a69dbec2b8f3b169934f8547c8bae97e95f1d668
-ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
+ms.openlocfilehash: 8ee0603a96d7276e9e1ef0fb9bff60ac44a3ef84
+ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206358"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84301393"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>İlke ve profillerin ve Intune 'da sorun giderme
 
@@ -37,7 +37,7 @@ Bu makalede bazı yaygın sorun giderme teknikleri listelenmekte ve karşılaşa
 
 ## <a name="use-built-in-troubleshooting"></a>Yerleşik sorun giderme kullanın
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nde **sorun giderme + Destek**' i seçin:
+1. [Microsoft Uç Nokta Yöneticisi Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **sorun giderme + Destek**sorunlarını giderme ' yi seçin  >  **Troubleshoot**:
 
     :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png" alt-text="Endpoint Management Yönetim Merkezi ve Intune 'da sorun giderme ve destek bölümüne gidin.":::
 
@@ -123,7 +123,7 @@ Bu makalede bazı yaygın sorun giderme teknikleri listelenmekte ve karşılaşa
 
 - [İOS/ıpados veya Android ilkeleri cihazlara uygulanmıyor](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (başka bir Microsoft sitesi açar) sorun giderme
 - [Windows 10 Intune ilkesi hatalarında sorun giderme](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (bir blog açar)
-- [Windows 10 IÇIN CSP özel ayarları sorunlarını giderme](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (başka bir Microsoft sitesi açar)
+- [Windows 10 IÇIN CSP özel ayarları sorunlarını giderme](https://support.microsoft.com/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (başka bir Microsoft sitesi açar)
 - [Windows 10 Grup İlkesi vs ıNTUNE MDM ilkesi](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (başka bir Microsoft sitesini açar)
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Uyarı: Erişim Kuralları Exchange’e Kaydedilemedi

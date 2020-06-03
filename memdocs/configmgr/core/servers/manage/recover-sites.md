@@ -2,7 +2,7 @@
 title: Site kurtarma
 titleSuffix: Configuration Manager
 description: Configuration Manager ' de sitelerinizi kurtarmayı öğrenin.
-ms.date: 08/23/2019
+ms.date: 06/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b17c8c9ed0c1f6f9a5aeb487e07ad3d3dc66cbae
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 37e4db2ad801c5923ba3db54554af0bb13968048
+ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82903952"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84301444"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Bir Configuration Manager sitesini kurtarma
 
@@ -347,6 +347,10 @@ PXE 'yi destekleyen diğer tüm şirket içi dağıtım noktaları için bu işl
     - **PowerShell betiğini Çalıştır**: **Bu adımı aşağıdaki hesap olarak çalıştırmak**Için seçeneğini kullanırsanız, **Ayarla**' yı seçin. Parolayı girip onaylayın ve **Doğrula**' yı seçin.
 
 Tüm görev dizileri için bu işlemi tekrarlayın.
+
+### <a name="recreate-bootable-media-and-prestaged-media-in-non-pki-environments"></a>PKI olmayan ortamlarda önyüklenebilir medyayı ve önceden hazırlanan medyayı yeniden oluşturma
+
+PKI olmayan ortamlarda, önyüklenebilir medyada ve önceden hazırlanmış medyada otomatik olarak imzalanan sertifikalar, medyanın oluşturulduğu sunucunun makine anahtarlarına dayanır. Bu nedenle, donanım değişirse veya bir kurtarmanın parçası olarak işletim sistemi yeniden yüklenirse, bu sunucuda oluşturulan önyüklenebilir medya ve önceden hazırlanmış medyanın yeniden oluşturulması gerekir. Önyüklenebilir medya ve önceden hazırlanmış medya oluşturma hakkında daha fazla bilgi için bkz. [önyüklenebilir medya oluşturma](../../../osd/deploy-use/create-bootable-media.md) ve [önceden hazırlanmış medya oluşturma](../../../osd/deploy-use/create-prestaged-media.md).
 
 ### <a name="reenter-sideloading-keys"></a>Dışarıdan yükleme anahtarlarını yeniden girin
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/12/2020
+ms.date: 06/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2227face347e6d82cf7807bea241eda4856c1d67
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 2a38c445018200d9fe80db19142f123aba783b60
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988683"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311192"
 ---
 # <a name="deploy-multiple-oemconfig-profiles-to-zebra-devices-in-microsoft-intune"></a>Microsoft Intune 'de birden çok OEMConfig profilini Zeköşeli cihazlara dağıtma
 
@@ -38,13 +38,15 @@ OEMConfig hakkında daha fazla bilgi edinmek için neler yaptığı ve nasıl ku
 
 Bu makalede, Zeköşeli cihazlara OEMConfig birden çok profili dağıtma, sıralamayı açıklar ve Microsoft Intune içindeki raporlama özellikleri kullanılarak açıklanmaktadır.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bir [Oemconfig yapılandırma profili](android-oem-configuration-overview.md)oluşturun.
 
 ## <a name="use-multiple-profiles"></a>Birden çok profil kullanma
 
-Zeköşeli cihazlarda, her cihazda aynı anda birçok profil bulunabilir. Bu özellik, Zeköşeli OEMConfig ayarlarınızı daha küçük profillere böetmenize olanak tanır. Ze, OEMConfig şeması da **eylemleri**kullanır. Eylemler, cihazda çalışan işlemlerdir. Ayarları yapılandırmaz. Dosya indirmeyi tetiklemek, Panoyu temizlemek ve daha fazlasını yapmak için bu eylemleri kullanın. Desteklenen eylemlerin tam listesi için bkz. [zeköşeli belgeleri](https://techdocs.zebra.com/oemconfig/10-0/about/) (zetaya 'nın Web sitesini açar).
+Zeköşeli cihazlarda, her cihazda aynı anda birçok profil bulunabilir. Bu özellik, Zeköşeli OEMConfig ayarlarınızı daha küçük profillere böetmenize olanak tanır. Örneğin, tüm cihazları etkileyen bir temel profil oluşturun. Daha sonra, bir cihaza özgü ayarları yapılandıran daha fazla profil oluşturun.
+
+Ze, OEMConfig şeması da **eylemleri**kullanır. Eylemler, cihazda çalışan işlemlerdir. Ayarları yapılandırmaz. Dosya indirmeyi tetiklemek, Panoyu temizlemek ve daha fazlasını yapmak için bu eylemleri kullanın. Desteklenen eylemlerin tam listesi için bkz. [zeköşeli belgeleri](https://techdocs.zebra.com/oemconfig/10-0/about/) (zetaya 'nın Web sitesini açar).
 
 Örneğin, cihaza bazı ayarlar uygulayan bir Zeköşeli OEMConfig profili oluşturursunuz. Başka bir Zeköşeli OEMConfig profili, Panoyu temizleyen bir eylem içerir. İlk profili bir Zeköşeli cihazlar grubuna atarsınız. Daha sonra bu cihazlarda panoyu temizlemeniz gerekir. İkinci profili, ilk profili değiştirmeden aynı aygıtlar grubuna atarsınız. Cihaz panosu, ilk profilde oluşturulan yapılandırma ayarlarını yeniden göndermeden veya etkilemeden temizlenir.
 
@@ -52,20 +54,26 @@ Başka bir örnekte, bazı Zeköşeli cihaz ayarlarını yapılandıran bir OEMC
 
 ## <a name="ordering"></a>Sıralama
 
-Her cihazda birden fazla profille, profillerin dağıtıldığı sıra garanti edilmez. Bu davranış Google Play kısıtlamadır. İşlemleri sırayla çalıştırmak için [Zeköşeli işlem özelliğini](https://techdocs.zebra.com/oemconfig/9-1/mc/) kullanabilirsiniz (Zela 'nın Web sitesini açar). Şimdi örneği inceleyelim.
+Her cihazda birden fazla profille, profillerin dağıtıldığı sıra garanti edilmez. Bu davranış Google Play kısıtlamadır. İşlemleri sırayla çalıştırmak için [zeköşeli 'ın Işlem adımı özelliğini](https://techdocs.zebra.com/oemconfig/10-0/mc/) kullanabilirsiniz (Zela 'nın Web sitesini açar). 
 
-İki profil vardır:
+Özetlemek gerekirse, Eğer önemli bir sıralama ise [Zeköşeli Işlem adımı özelliğini](https://techdocs.zebra.com/oemconfig/10-0/mc/) kullanın (Zela 'nın Web sitesini açar). Sıralama ne olursa olsun, birden çok Intune profili kullanın. 
 
-- **Profil 1**: Bluetooth 'u açar. Bu profil Pazartesi günü **tüm cihazlar** grubuna atanır.
-- **Profil 2**: başka bir ayar yapılandırır. Bu profil, **tüm cihazlar** grubuna Salı günü atanır.
+Bazı örneklere bakalım:
 
-Diğer ayar yapılandırıldıktan sonra Bluetooth 'un açık olması gerekir.
+- Bu cihazlarda başka bir ayarı yapılandırmadan önce, tüm yeni kaydedilmiş Zeköşeli cihazlar için Bluetooth 'u açmak istiyorsunuz. İşlemleri sırayla çalıştırmak için Zeköşeli şeması 'ndaki **adımlar** özelliğini kullanın.
 
-Çarşamba 'da, Intune ile 10 yeni Zeköşeli cihaz kaydeder. Profil 1 ve profil 2 **tüm cihazlar** grubuna atanır. Yeni cihazlar Intune ile eşitlendikten sonra profilleri alırlar. Bu cihazlar profil 1 ' den önce profil 2 alabilir.
+  İki Işlem adımını içeren bir Intune profili oluşturun. İlk adım Bluetooth ayarlarını içerir ve ikinci adım diğer ayarı yapılandırır. Zeucin OEMConfig uygulaması profili aldığında, adımları sırasıyla çalıştırır.
 
-İşlemlerin sırayla çalıştırıldığını onaylamak için Zeköşeli şeması 'ndaki **adımlar** özelliğini kullanın. Bu durumda, iki Işlem adımını içeren bir profil oluşturursunuz. İlk adım Bluetooth ayarlarını içerir ve ikinci adım diğer ayarı yapılandırır. Zeucin OEMCong uygulaması profili aldığında, bu adımları, Zeköşeli tarafından garanti edilen sırayla çalıştırır.
+  Daha fazla bilgi için bkz. [zeköşeli işlem adımları](https://techdocs.zebra.com/oemconfig/10-0/mc/) (Zela 'nın Web sitesini açar).
 
-Daha fazla bilgi için bkz. [zeköşeli işlem adımları](https://techdocs.zebra.com/oemconfig/9-1/mc/) (Zela 'nın Web sitesini açar).
+- Tüm Zeköşeli cihazların saati 24 saat biçiminde görüntülemesini istiyorsunuz. Bu cihazların bazıları için kamerayı devre dışı bırakmak istiyorsunuz. Zaman ve kamera ayarları birbirlerine bağlı değildir.
+
+  İki Intune profili oluşturun:
+
+  - **Profil 1**: saati 24 saat biçiminde görüntüler. Pazartesi günü, bu profil **Tüm Zeköşeli AE cihazları** grubuna atanır.
+  - **Profil 2**: kamerayı kapatır. Salı günü, bu profil **Zeköşeli AE Factory cihazları** grubuna atanır.
+
+  Çarşamba 'da, Intune ile 10 yeni Zeköşeli cihaz kaydeder. Profil 1 ve profil 2 atanır. Yeni cihazlar Intune ile eşitlendikten sonra profilleri alırlar. Cihazlar profil 1 ' i almadan önce profil 2 alabilir.
 
 ## <a name="enhanced-reporting"></a>Gelişmiş raporlama
 
