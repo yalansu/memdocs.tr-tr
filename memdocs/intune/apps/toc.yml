@@ -145,6 +145,8 @@
               href: app-configuration-policies-outlook.md
             - name: Android için Google Chrome’u yapılandırma
               href: apps-configure-chrome-android.md
+            - name: Android Enterprise için VPN yapılandırma
+              href: app-configuration-vpn-ae.md
         - name: Toplu satın alınan uygulamalar ve kitaplar
           items:
             - name: Toplu satın almaya genel bakış
