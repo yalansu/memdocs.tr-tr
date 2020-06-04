@@ -10,12 +10,12 @@ ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d3cd21fe4b1d53ecbb0bc60818405cb795a4f289
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b2fc0dfe37ad51ce1a549545c3eaa716395438d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710765"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347123"
 ---
 # <a name="introduction-to-application-management-in-configuration-manager"></a>Configuration Manager 'de uygulama yönetimine giriş
 
@@ -95,7 +95,7 @@ Bir uygulama veya dağıtım türü üzerinde *düzeltmeler* yaptığınızda, C
 - Uygulamanın önceki bir sürümünü geri yükleme
 - Eski sürümü Sil
 
-Daha fazla bilgi için bkz. [uygulamaları güncelleştirme ve devre dışı bırakma](../deploy-use/update-and-retire-applications.md).  
+Daha fazla bilgi için bkz. [uygulamaları gözden geçirme](../deploy-use/revise-and-supersede-applications.md#application-revisions).  
 
 ### <a name="detection-method"></a>Algılama yöntemi
 
@@ -159,7 +159,7 @@ Ayrıca, Configuration Manager [Şirket içi cihaz yönetimi](../../mdm/understa
 
 Configuration Manager uygulamalar durum tabanlı izleme kullanır. Kullanıcılar ve cihazlar için son uygulama dağıtım durumunu izleyebilirsiniz. Durum iletileri ayrı aygıtlar hakkındaki bilgileri gösterir. Örneğin, bir uygulamayı bir kullanıcı koleksiyonuna dağıtırsanız, dağıtımın uyumluluk durumunu ve Configuration Manager konsolundaki dağıtım amacını görüntüleyebilirsiniz. Configuration Manager konsolundaki **izleme** çalışma alanından tüm yazılımların dağıtımını izleyin. Daha fazla bilgi için bkz. [uygulamaları izleme](../deploy-use/monitor-applications-from-the-console.md).  
 
-Configuration Manager istemci, uygulama dağıtımlarını düzenli olarak yeniden değerlendirin. Örneğin:  
+Configuration Manager istemci, uygulama dağıtımlarını düzenli olarak yeniden değerlendirin. Örnek:  
 
 - Kullanıcı dağıtılan bir uygulamayı kaldırır. Sonraki değerlendirme döngüsünün Configuration Manager uygulamanın mevcut olmadığını algılar. İstemci daha sonra uygulamayı otomatik olarak yeniden yükler.  
 
@@ -183,7 +183,7 @@ Yazılım Merkezi, Configuration Manager istemcisiyle yüklenmiş bir Windows uy
 - Uzaktan denetim ayarlarını yapılandırma
 - Güç yönetimini ayarlama
 
-Daha fazla bilgi için aşağıdaki makalelere bakın:  
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:  
 
 - [Uygulama yönetimini planlama ve yapılandırma](../plan-design/plan-for-and-configure-application-management.md)
 - [Yazılım Merkezini planlama](../plan-design/plan-for-software-center.md)

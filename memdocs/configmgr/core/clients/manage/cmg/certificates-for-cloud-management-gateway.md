@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 33e4ecbac965206ec4043f5adf91d2dbfb9602d8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7e9602ef5ea784dd3e97578d5ff585f2ca662c1e
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714083"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347211"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Bulut yönetimi ağ geçidi için sertifikalar
 
@@ -65,9 +65,9 @@ CMG, internet tabanlı istemcilerin bağlandığı bir HTTPS hizmeti oluşturur.
 
 Bu sertifika, Azure 'da hizmeti belirlemek için genel olarak benzersiz bir ad gerektirir. Bir sertifika istenmeden önce, istediğiniz Azure etki alanı adının benzersiz olduğunu doğrulayın. Örneğin, *GraniteFalls.cloudapp.net*.
 
-1. [Azure Portal](https://portal.azure.com) oturum açın.
+1. [Azure portalında](https://portal.azure.com) oturum açın.
 1. **Tüm kaynaklar**' ı ve ardından **Ekle**' yi seçin.
-1. **Bulut hizmeti**araması yapın. **Oluştur**’u seçin.
+1. **Bulut hizmeti**araması yapın. **Oluştur**'u seçin.
 1. **DNS adı** alanına istediğiniz öneki yazın, örneğin, *granteden*. Arabirim, etki alanı adının kullanılabilir olduğunu veya başka bir hizmet tarafından zaten kullanımda olduğunu yansıtır.
 
     > [!Important]  
@@ -78,7 +78,7 @@ Ayrıca, CMG 'yi içerik için etkinleştirecektir, CMG hizmeti adının de benz
 - **Depolama hesabı** ara
 - Adınızı **depolama hesabı adı** alanında test edin
 
-DNS adı ön eki, örneğin *Granıse*, 3 ile 24 karakter uzunluğunda olmalı ve yalnızca alfasayısal karakterler kullanmalıdır. Tire (`-`) gibi özel karakterler kullanmayın.<!-- SCCMDocs#1080 -->
+DNS adı ön eki, örneğin *Granıse*, 3 ile 24 karakter uzunluğunda olmalı ve yalnızca alfasayısal karakterler kullanmalıdır. Tire () gibi özel karakterler kullanmayın `-` .<!-- SCCMDocs#1080 -->
 
 ### <a name="cmg-trusted-root-certificate-to-clients"></a><a name="bkmk_cmgroot"></a>CMG güvenilen kök sertifikayı istemcilere
 
@@ -238,15 +238,16 @@ Bu tablolar, istemci ve site sürümünün türüne bağlı olarak yönetim nokt
 
 #### <a name="legend-of-terms"></a>Koşulların göstergesi
 
-- *Çalışma grubu*: cihaz bir etki alanına veya Azure AD 'ye katılmamış, ancak [istemci kimlik doğrulama sertifikasına](#bkmk_clientauth) sahip  
-- *Ad etki alanına katılmış*: cihazı şirket içi Active Directory etki alanına katabilirsiniz  
-- *Azure AD 'ye katılmış*: bulut etki alanına katılmış olarak da bilinen, cihazı bir Azure Active Directory kiracısına birleştirmelisiniz  
-- *Karma-birleştirilmiş*: cihazı hem Active Directory etki alanına hem de Azure AD kiracısına katabilirsiniz  
-- *Http*: yönetim noktası özelliklerinde, Istemci bağlantılarını **http** olarak ayarlarsınız  
-- *Https*: yönetim noktası özelliklerinde, Istemci bağlantılarını **https** olarak ayarlarsınız  
-- *E-http*: site özellikleri, **istemci bilgisayar iletişimi** sekmesinde, site SISTEM ayarlarını **https veya http**olarak ayarlar ve **http site sistemleri için Configuration Manager tarafından oluşturulan sertifikaları kullanma**seçeneğini etkinleştirirsiniz. Http yönetim noktası http için yönetim noktasını yapılandırırsanız http ve HTTPS iletişimi (belirteç kimlik doğrulama senaryoları) için de kullanılır.  
+- *Çalışma grubu*: cihaz bir etki alanına veya Azure AD 'ye katılmamış, ancak [istemci kimlik doğrulama sertifikasına](#bkmk_clientauth)sahip.
+- *Ad etki alanına katılmış*: cihazı şirket içi Active Directory etki alanına katabilirsiniz.
+- *Azure AD 'ye katılmış*: bulut etki alanına katılmış olarak da bilinen, cihazı bir Azure Active Directory kiracısına birleştirmelisiniz. Daha fazla bilgi için bkz. [Azure AD 'ye katılmış cihazlar](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join).
+- *Karma olarak katıldı*: cihazı şirket içi Active Directory birleştirir ve Azure Active Directory kaydedebilirsiniz. Daha fazla bilgi için bkz. [karma Azure AD 'ye katılmış cihazlar](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+- *Http*: yönetim noktası özelliklerinde, Istemci bağlantılarını **http**olarak ayarlarsınız.
+- *Https*: yönetim noktası özelliklerinde, Istemci bağlantılarını **https**olarak ayarlarsınız.
+- *E-http*: site özellikleri, **istemci bilgisayar iletişimi** sekmesinde, site SISTEM ayarlarını **https veya http**olarak ayarlar ve **http site sistemleri için Configuration Manager tarafından oluşturulan sertifikaları kullanma**seçeneğini etkinleştirirsiniz. Http yönetim noktası http için yönetim noktasını yapılandırırsanız http ve HTTPS iletişimi (belirteç kimlik doğrulama senaryoları) için de kullanılır.
+
     > [!Note]
-    > Sürüm 1906 ' den başlayarak bu sekmeye **Iletişim güvenliği**denir.<!-- SCCMDocs#1645 -->  
+    > Sürüm 1906 ' den başlayarak bu sekmeye **Iletişim güvenliği**denir.<!-- SCCMDocs#1645 -->
 
 ## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a>Azure Yönetim sertifikası
 

@@ -2,7 +2,7 @@
 title: Windows 'da istemcileri yükseltme
 titleSuffix: Configuration Manager
 description: Configuration Manager Windows bilgisayarlarda istemcileri yükseltin.
-ms.date: 08/27/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b3849f360b2f22f2f48bbe49159b610399158b29
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8b0a69b07a3be633434203f93b0724cec4ea88a3
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427773"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347159"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>Configuration Manager 'da Windows bilgisayarlar için istemcileri yükseltme
 
@@ -59,9 +59,6 @@ Aşağıdaki senaryolarda bir istemci otomatik olarak yükseltilebilir:
 > Hiyerarşinizdeki Configuration Manager istemcisinin farklı sürümlerini tanımlamak için, **site-Istemci bilgileri**rapor klasöründe **istemci sürümlerine göre Configuration Manager istemcilerinin rapor sayısını** kullanın.  
 
 Configuration Manager, varsayılan olarak bir yükseltme paketi oluşturur. Paket, hiyerarşideki tüm dağıtım noktalarına otomatik olarak gönderilir. CA 'larda istemci paketinde değişiklik yaparsanız, Configuration Manager paketi otomatik olarak güncelleştirir ve yeniden dağıtır. Bir istemci dil paketi eklediğinizde örnek bir değişiklik olur. Otomatik istemci yükseltmesini etkinleştirirseniz, her istemci yeni istemci dili paketini otomatik olarak yüklenir.
-
-> [!NOTE]  
-> Configuration Manager, istemci yükseltme paketini bulut tabanlı dağıtım noktalarına Configuration Manager otomatik olarak göndermez.  
 
 Hiyerarşiniz genelinde otomatik istemci yükseltmesini etkinleştirin. Bu yapılandırma, istemcilerinizi daha az çabayla güncel tutar.  
 

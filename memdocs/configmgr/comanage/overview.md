@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: e06dc0d40eb6359d11ef31045989d7ed398b3687
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 86bd566e9582c7dd7c83f93c22430edcc8ea0d0d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711325"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347194"
 ---
 # <a name="what-is-co-management"></a>Ortak yönetim nedir?
 
@@ -100,9 +100,9 @@ Ortak yönetimin etkinleştirilmesi, sitenizi Azure AD 'ye eklemenizi gerektirme
 
 ### <a name="azure-ad"></a>Azure AD
 
-- Windows 10 cihazlarının Azure AD 'ye katılması gerekir. Bunlar aşağıdaki türlerden biri olabilir:  
+- Windows 10 cihazlarının Azure AD 'ye bağlı olması gerekir. Bunlar aşağıdaki türlerden biri olabilir:  
 
-  - Cihazın şirket içi Active Directory katıldığı ve Azure Active Directory katıldığı [karma Azure AD 'ye katılmış](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).  
+  - Cihazın şirket içi Active Directory katıldığı ve Azure Active Directory kaydettiğiniz [karma Azure AD 'ye katılmış](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
 
   - [Azure AD-yalnızca birleştirilmiş](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan) . (Bu tür bazen "bulut etki alanına katılmış" olarak adlandırılır)<!--SCCMDocs issue 605-->  
 

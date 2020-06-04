@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 127ed43fded6c66bc4395ae4d69a28ae8c9eddd5
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 21e837d5d97c42f095159a87e015f181c5e53419
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877518"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347177"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Configuration Manager istemci ayarları hakkında
 
@@ -98,7 +98,7 @@ Configuration Manager istemcileri için [Eş Önbelleği](../../plan-design/hier
 Sürüm 1906 ' den başlayarak, önbelleğe alınmış içeriği tutmak için Configuration Manager istemcisinin en düşük süresini belirtin. Bu istemci ayarı, daha fazla alana ihtiyaç duyulmanız durumunda Configuration Manager aracısının önbellekten içerik kaldırabilmesi için bekleyeceği en az süreyi tanımlar.
 
 Bu değer varsayılan olarak 1.440 dakikadır (24 saat).
-Bu ayar için en yüksek değer 10.080 dakikadır (1 hafta).
+Bu ayar için en yüksek değer 10.080 dakikadır (bir hafta).
 
 Bu ayar, farklı türde cihazlarda istemci önbelleği üzerinde daha fazla denetim sağlar. Küçük sabit sürücüleri olan istemcilerdeki değeri azaltabilir ve başka bir dağıtım çalıştırılmadan önce var olan içerikleri tutmanız gerekmez.
 
@@ -114,7 +114,7 @@ Aşağıdaki Configuration Manager istemcilerinin istemci ilkesini ne sıklıkta
 - Mac bilgisayarlar  
 - Linux veya UNIX ile çalışan bilgisayarlar  
 
-Bu değer varsayılan olarak 60 dakikadır. Bu değerin azaltılması, istemcilerin siteyi daha sık yoklamasına neden olur. Çok sayıda istemci sayesinde, bu davranışın site performansı üzerinde olumsuz bir etkisi olabilir. [Boyut ve ölçek Kılavuzu](../../plan-design/configs/size-and-scale-numbers.md) , varsayılan değere göre belirlenir. Bu değerin artırılması, istemcilerin siteyi daha az sıklıkta yoklamasına neden olur. Yeni dağıtımlar da dahil olmak üzere istemci ilkelerine yapılan tüm değişiklikler istemcilerin indirmesi ve işlemesi için daha uzun sürer.<!-- SCCMDocs issue 823 -->
+Bu değer varsayılan olarak 60 dakikadır. Bu değerin azaltılması, istemcilerin siteyi daha sık yoklamasına neden olur. Birçok istemci ile, bu davranışın site performansı üzerinde olumsuz bir etkisi olabilir. [Boyut ve ölçek Kılavuzu](../../plan-design/configs/size-and-scale-numbers.md) , varsayılan değere göre belirlenir. Bu değerin artırılması, istemcilerin siteyi daha az sıklıkta yoklamasına neden olur. Yeni dağıtımlar da dahil olmak üzere istemci ilkelerine yapılan tüm değişiklikler istemcilerin indirmesi ve işlemesi için daha uzun sürer.<!-- SCCMDocs issue 823 -->
 
 ### <a name="enable-user-policy-on-clients"></a>İstemcilerde kullanıcı ilkesini etkinleştir
 
@@ -276,7 +276,7 @@ Kullanıcıların yazılımları, yazılım güncelleştirmelerini ve görev diz
 
 Bilgisayarlar BitLocker PIN girişi gerektiriyorsa, bu seçenek bir yazılım yüklemesinden sonra bilgisayar yeniden başlatıldığında PIN girme gereksinimini atlar.  
 
-- **Her zaman**: Configuration Manager, bir yeniden başlatma gerektiren yazılım yükledikten ve bilgisayarın yeniden başlatılmasını başlatduktan sonra, BitLocker 'ı geçici olarak askıya alır. Bu ayar yalnızca Configuration Manager tarafından başlatılan bir bilgisayar yeniden başlatması için geçerlidir. Bu ayar, kullanıcı bilgisayarı yeniden başlattığında BitLocker PIN 'ini girme gereksinimini askıya almaz. BitLocker PIN girişi gereksinimi Windows başlangıcından sonra devam eder.
+- **Her zaman**: Configuration Manager, bir yeniden başlatma gerektiren yazılım yükledikten sonra BitLocker 'ı geçici olarak askıya alır ve bilgisayarı yeniden başlatır. Bu ayar yalnızca Configuration Manager bilgisayarı yeniden başlattığında geçerlidir. Bu ayar, kullanıcı bilgisayarı yeniden başlattığında BitLocker PIN 'ini girme gereksinimini askıya almaz. BitLocker PIN girişi gereksinimi Windows başlangıcından sonra devam eder.
 
 - **Hiçbir**şekilde: Configuration Manager, yeniden başlatma gerektiren yazılımları yükledikten sonra BitLocker 'ı askıya almaz. Bu senaryoda, Kullanıcı standart başlangıç işlemini tamamlayıp Windows 'u yüklemek üzere PIN girene kadar yazılım yüklemesi tamamlanamaz.
 
@@ -329,29 +329,11 @@ Kullanıcılara gerekli uygulama veya yazılım güncelleştirme dağıtımları
 
 Yetkisiz kullanım süresini 0 olarak 120 saat olarak ayarlayın. Bu ayarı, **kullanıcı tercihlerine göre bu dağıtımın uygulanması için**dağıtım özelliği ile birlikte kullanın. Daha fazla bilgi için bkz. [uygulamaları dağıtma](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
 
-
 ## <a name="computer-restart"></a>Bilgisayar yeniden başlatma
 
-Aşağıdaki ayarlar, bilgisayara uygulanan en kısa bakım penceresinden daha kısa sürede olmalıdır:
+Bu ayarlar hakkında daha fazla bilgi için bkz. [cihaz yeniden başlatma bildirimleri](device-restart-notifications.md).<!-- 7182335 -->
 
-- **Kullanıcıya, Kullanıcı oturumu kapatmadan veya bilgisayar yeniden başlatılmadan önceki aralığı belirten geçici bir bildirim göster (dakika)**
-- **Kullanıcı oturumu kapatmadan veya bilgisayar yeniden başlatılmadan önceki geri sayım aralığını gösteren, kullanıcının kapatamayacağı bir iletişim kutusu görüntüler (dakika)**
-
-
-Bakım pencereleri hakkında daha fazla bilgi için bkz. [bakım pencerelerini kullanma](../manage/collections/use-maintenance-windows.md).
-
-- **Bilgisayar yeniden başlatma geri sayım bildirimleri (dakika) için erteleme süresini belirtin** (sürüm 1906 ' den başlayarak)<!--3976435-->
-  - Varsayılan değer 240 dakikadır.
-  - Erteleme süresi değeri, geçici bildirim değerinden daha az olmalıdır ve kullanıcının kapatamıyorum bildirimin değeri eksi değer olmalıdır.
-  - Daha fazla bilgi için bkz. [cihaz yeniden başlatma bildirimleri](device-restart-notifications.md).
-
-**Bir dağıtım yeniden başlatma gerektirdiğinde, bildirim yerine kullanıcıya bir iletişim kutusu penceresi gösterin**<!--3555947-->: Sürüm 1902 ' den başlayarak, bu ayarı **Evet** olarak yapılandırmak, Kullanıcı deneyimini daha zorbir şekilde değiştirir. Bu ayar tüm uygulamaların, Görev sıralarının ve yazılım güncelleştirmelerinin tüm dağıtımları için geçerlidir. Daha fazla bilgi için bkz. [plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact).
-
-> [!IMPORTANT]
-> Configuration Manager 1902 ' de, bazı durumlarda iletişim kutusu bildirim bildirimlerini değiştirmez. Bu sorunu çözmek için [Configuration Manager sürüm 1902 için güncelleştirme paketini](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902)yükledikten sonra. <!--4404715-->
-
-
-## <a name="delivery-optimization"></a>Teslim Iyileştirme 
+## <a name="delivery-optimization"></a>Teslim Iyileştirme
 
 <!-- 1324696 -->
 Şirket ağınızda ve Uzak ofislerde içerik dağıtımını tanımlamak ve düzenlemek için Configuration Manager sınır gruplarını kullanırsınız. [Windows teslim iyileştirme](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) , Windows 10 cihazları arasında içerik paylaşmak için bulut tabanlı ve eşler arası bir teknolojidir. Dağıtım Iyileştirmesini, içerik eşleri arasında paylaşırken sınır gruplarınızı kullanacak şekilde yapılandırın.
@@ -363,7 +345,7 @@ Bakım pencereleri hakkında daha fazla bilgi için bkz. [bakım pencerelerini k
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Teslim Iyileştirme grubu KIMLIĞI için Configuration Manager sınır grupları kullanma
 
-Sınır grubu tanımlayıcısını istemcideki teslim Iyileştirme grubu tanımlayıcısı olarak uygulamak için **Evet** ' i seçin. İstemci, teslim Iyileştirme bulut hizmeti ile iletişim kurduğunda, istenen içeriğe sahip eşleri bulmak için bu tanımlayıcıyı kullanır. Bu ayarı etkinleştirmek, teslim Iyileştirme indirme modunu hedeflenen istemcilerde grup (2) seçeneğine de ayarlar.
+Sınır grubu tanımlayıcısını istemcideki teslim Iyileştirme grubu tanımlayıcısı olarak uygulamak için **Evet** ' i seçin. İstemci, teslim Iyileştirme bulut hizmeti ile iletişim kurduğunda, içerik ile eşleri bulmak için bu tanımlayıcıyı kullanır. Bu ayarı etkinleştirmek, teslim Iyileştirme indirme modunu hedeflenen istemcilerde grup (2) seçeneğine de ayarlar.
 
 > [!Note]
 > Microsoft, istemcinin bu ayarı Grup ilkesi yerine yerel ilke aracılığıyla yapılandırmasına izin vermesini önerir. Bu, sınır grubu tanımlayıcısının istemcide teslim Iyileştirme grubu tanımlayıcısı olarak ayarlanalmasına izin verir. Daha fazla bilgi için bkz. [teslim iyileştirmesi](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).
@@ -411,7 +393,7 @@ Endpoint Protection istemcisi yüklendikten sonra bilgisayarın yeniden başlat�
 
 ### <a name="allowed-period-of-time-users-can-postpone-a-required-restart-to-complete-the-endpoint-protection-installation-hours"></a>Endpoint Protection yüklemesini tamamlaması için gereken yeniden başlatmayı kullanıcının erteleyebilmesi için izin verilen süre (saat)
 
-Endpoint Protection istemcisi yüklendikten sonra bir yeniden başlatma gerekiyorsa, bu ayar kullanıcıların gerekli yeniden başlatmayı erteleyene saat sayısını belirtir. Bu ayar, **Endpoint Protection istemcisi yüklendikten sonra gereken bilgisayar yeniden başlatmalarının** ayarlanmasını **gerektirir.**  
+Endpoint Protection istemcisi yüklendikten sonra bir yeniden başlatma gerekiyorsa, bu ayar kullanıcıların gerekli yeniden başlatmayı erteleyene saat sayısını belirtir. Bu ayar, aşağıdaki ayarı devre dışı bırakmanızı gerektirir: **Endpoint Protection istemcisi yüklendikten sonra gereken bilgisayar yeniden başlatmalarının görüntülenmesini engelle**.
 
 ### <a name="disable-alternate-sources-such-as-microsoft-windows-update-microsoft-windows-server-update-services-or-unc-shares-for-the-initial-definition-update-on-client-computers"></a>İstemci bilgisayarlardaki ilk tanım güncelleştirmesi için alternatif kaynakları (Microsoft Windows Update, Microsoft Windows Server Update Services veya UNC paylaşımları gibi) devre dışı bırak
 
@@ -423,7 +405,7 @@ Configuration Manager istemci bilgisayarlara yalnızca ilk tanım güncelleştir
 
 ### <a name="polling-interval-for-mobile-device-legacy-clients"></a>Mobil cihaz eski istemcileri için yoklama aralığı
 
-Eski mobil cihazların ilke için yoklama süresini dakika veya saat olarak belirlemek için **aralığı ayarla** ' yı seçin. Bu cihazlar Windows CE, Mac OS X ve UNIX ya da Linux gibi platformları içerir.
+Eski mobil cihazların ilke için yoklama süresini dakika veya saat olarak belirlemek için **aralığı ayarla** ' yı seçin. Bu cihazlar Windows CE, macOS ve UNIX ya da Linux gibi platformları içerir.
 
 ### <a name="polling-interval-for-modern-devices-minutes"></a>Modern cihazlar için yoklama aralığı (dakika)
 
@@ -529,7 +511,7 @@ Yazılım Merkezi kullanıcılarının bilgisayarlarını yapılandırılmış t
 
 ### <a name="allow-network-wake-up"></a>Ağ Uyandırma için izin ver
 
-1810 'ye eklendi. **Enable**olarak ayarlandığında, ağ bağdaştırıcısının cihazı uyandırmasına izin vermek için ağ bağdaştırıcısında güç ayarlarını yapılandırır. **Devre dışı**olarak ayarlandığında, ağ bağdaştırıcısındaki güç ayarları ağ bağdaştırıcısının cihazı uyandırmasına izin vermiyor olarak yapılandırılır.
+Bu ayarı etkinleştirdiğinizde, istemci, ağ bağdaştırıcısının cihazı uyandırmasına izin vermek üzere bilgisayardaki güç ayarlarını yapılandırır. Bu ayarı devre dışı bırakırsanız, bilgisayarın ağ bağdaştırıcısı cihazı uyandıramaz.
 
 ### <a name="enable-wake-up-proxy"></a>Uyandırma proxy'sini etkinleştir
 
@@ -549,7 +531,7 @@ Ardından, gerektiğinde aşağıdaki ek ayarları yapılandırın:
     > [!IMPORTANT]  
     > Bu numara, site **Özellikleri**'ndeki numara ile aynı olmalıdır. Bu numarayı tek bir yerde değiştirirseniz, diğer yerde otomatik olarak güncellenmez.  
 
-- **Uyandırma proxy 'si Için Windows Defender güvenlik duvarı özel durumu**: Configuration Manager Istemcisi, Windows Defender güvenlik duvarı 'nı çalıştıran cihazlarda uyandırma proxy bağlantı noktası numarasını otomatik olarak yapılandırır. İstenen Güvenlik Duvarı profillerini belirtmek için **Yapılandır** ' ı seçin.  
+- **Uyandırma proxy 'si Için Windows Defender güvenlik duvarı özel durumu**: Configuration Manager Istemcisi, Windows Defender güvenlik duvarı 'nı çalıştıran cihazlarda uyandırma proxy bağlantı noktası numarasını otomatik olarak yapılandırır. Güvenlik Duvarı profillerini belirtmek için **Yapılandır** ' ı seçin.  
 
     İstemcileri farklı bir güvenlik duvarı çalıştırıyorsanız, **uyandırma proxy 'si bağlantı noktası numarasına (UDP)** izin vermek için el ile yapılandırın.  
 
@@ -671,7 +653,7 @@ Bu seçeneği etkinleştirdiğinizde, onay gerektiren Kullanıcı tarafından ku
 
 ### <a name="hide-installed-applications-in-software-center"></a><a name="bkmk_HideInstalled"></a>Yüklü uygulamaları yazılım merkezi 'nde gizle
 
-Bu seçeneği etkinleştirdiğinizde, zaten yüklü olan uygulamalar artık Uygulamalar sekmesinde gösterilmez. Configuration Manager 1802 ' ye yüklediğinizde veya yükselttiğinizde Bu seçenek varsayılan olarak ayarlanır. Yüklenen uygulamalar, yükleme durumu sekmesi altında hala gözden geçirilmek üzere kullanılabilir. <!--1357592-->
+Bu seçeneği etkinleştirdiğinizde, zaten yüklü olan uygulamalar artık Uygulamalar sekmesinde gösterilmez. Configuration Manager yüklediğinizde veya sürümüne yükselttiğinizde Bu seçenek varsayılan olarak ayarlanır. Yüklenen uygulamalar, yükleme durumu sekmesi altında hala gözden geçirilmek üzere kullanılabilir. <!--1357592-->
 
 ### <a name="hide-application-catalog-link-in-software-center"></a><a name="bkmk_HideAppCat"></a>Yazılım Merkezi 'nde Uygulama Kataloğu bağlantısını gizle
 
@@ -694,9 +676,9 @@ Kullanılabilir sekmeler:
 - **Yükleme durumu**
 - **Cihaz Uyumluluğu**
 - **Seçenekler**
-- **Sekme Ekle** düğmesine tıklayarak 5 ' e kadar özel sekme ekleyin.
+- **Sekme Ekle** düğmesine tıklayarak beş adede kadar özel sekme ekleyin.
   - Özel sekme için **sekme adı** ve **içerik URL 'si** belirtin.
-  - Özel bir sekmeyi kaldırmak için **Sil sekmesine** tıklayın.  
+  - Özel bir sekmeyi kaldırmak için **Sil sekmesini** seçin.  
 
   >[!Important]  
   > - Bazı Web sitesi özellikleri, yazılım merkezi 'nde özel bir sekme olarak kullanılırken çalışmayabilir. Bunu istemcilere dağıtılmadan önce sonuçları test ettiğinizden emin olun. <!--519659-->
@@ -731,9 +713,9 @@ Aşağıdaki sekmeleri yazılım merkezi 'nde görünür yapmak için bu gruptak
 
   - Software Center her zaman varsayılan ayarınızı kullanır. Kullanıcılar bu filtreyi değiştirebilir, ancak yazılım merkezi 'nin tercih etmesi devam etmez.  
 
-- **Varsayılan uygulama görünümünü** **kutucuk görünümü** veya **liste görünümü**olarak ayarlayın. 
+- **Varsayılan uygulama görünümünü** **kutucuk görünümü** veya **liste görünümü**olarak ayarlayın.
 
-  - Bir Kullanıcı bu yapılandırmayı değiştirirse, yazılım merkezi kullanıcının gelecekte tercih ettiği tercihi sürdürür. 
+  - Bir Kullanıcı bu yapılandırmayı değiştirirse, yazılım merkezi kullanıcının gelecekte tercih ettiği tercihi sürdürür.
 
 
 ## <a name="software-deployment"></a>Yazılım dağıtımı  
@@ -854,9 +836,9 @@ Configuration Manager istemcilerde yazılım güncelleştirmelerini etkinleştir
 
 ### <a name="software-update-scan-schedule"></a>Yazılım güncelleştirmesi tarama zamanlaması
 
-İstemcinin bir uyumluluk değerlendirmesi taramasını ne sıklıkta başlattığını belirtmek için **zamanlama** ' yı seçin. Bu tarama, istemcideki yazılım güncelleştirmelerinin durumunu belirler (örneğin, gerekli veya yüklü). Uyumluluk değerlendirmesi hakkında daha fazla bilgi için bkz. [Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance).  
+İstemcinin uyumluluk değerlendirmesi taramasını ne sıklıkta başlatadığına yönelik **zamanlamayı** seçin. Bu tarama, istemcideki yazılım güncelleştirmelerinin durumunu belirler (örneğin, gerekli veya yüklü). Uyumluluk değerlendirmesi hakkında daha fazla bilgi için bkz. [Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance).  
 
-Varsayılan olarak, bu tarama her yedi günde bir başlatmak için basit bir zamanlama kullanır. Özel bir zamanlama oluşturabilirsiniz. Tam bir başlangıç günü ve saati belirtebilir, Evrensel Eşgüdümlü saat (UTC) veya yerel saati kullanabilir ve haftanın belirli bir günü için yineleme aralığını yapılandırabilirsiniz.  
+Varsayılan olarak, bu tarama her yedi günde bir başlamak için basit bir zamanlama kullanır. Özel bir zamanlama oluşturabilirsiniz. Tam bir başlangıç günü ve saati belirtebilir, Evrensel Eşgüdümlü saat (UTC) veya yerel saati kullanabilir ve haftanın belirli bir günü için yineleme aralığını yapılandırabilirsiniz.  
 
 > [!NOTE]  
 > Bir günden daha az bir Aralık belirtirseniz Configuration Manager otomatik olarak bir gün olur.  
@@ -868,14 +850,14 @@ Varsayılan olarak, bu tarama her yedi günde bir başlatmak için basit bir zam
 
 Yazılım güncelleştirmeleri istemci aracısının, Configuration Manager istemci bilgisayarlarındaki yükleme durumu için yazılım güncelleştirmelerini yeniden değerlendirme sıklığını yapılandırmak için **zamanla** ' yı seçin. Daha önce yüklenmiş yazılım güncelleştirmeleri artık istemcilerde yer kalmadığında ancak hala gerekliyse, istemci yazılım güncelleştirmelerini yeniden yükler.
 
-Bu zamanlamayı, yazılım güncelleştirme uyumluluğu için şirket ilkesine göre ve kullanıcıların yazılım güncelleştirmelerini kaldırıp kaldıramayacağı şekilde ayarlayın. Her dağıtım yeniden değerlendirme çevrimi, ağ ve istemci bilgisayar işlemcisi etkinliğine neden olur. Varsayılan olarak, bu ayar, her yedi günde bir dağıtım yeniden değerlendirme taraması başlatmak için basit bir zamanlama kullanır.  
+Bu zamanlamayı, yazılım güncelleştirme uyumluluğu için şirket ilkesine göre ve kullanıcıların yazılım güncelleştirmelerini kaldırıp kaldıramayacağı şekilde ayarlayın. Her dağıtım yeniden değerlendirme çevrimi, ağ ve istemci bilgisayar işlemcisi etkinliğine neden olur. Varsayılan olarak, bu ayar her yedi günde bir dağıtım yeniden değerlendirme taraması başlatmak için basit bir zamanlama kullanır.  
 
 > [!NOTE]  
 > Bir günden daha az bir Aralık belirtirseniz Configuration Manager otomatik olarak bir gün olur.  
 
 ### <a name="when-any-software-update-deployment-deadline-is-reached-install-all-other-software-update-deployments-with-deadline-coming-within-a-specified-period-of-time"></a>Yazılım güncelleştirme dağıtım son tarihine ulaşıldığında, belirli bir süre içinde süresi dolacak tüm diğer yazılım güncelleştirme dağıtımlarını yükler
 
-Belirli bir süre içinde gerçekleşen son tarihleri olan gerekli dağıtımlardan tüm yazılım güncelleştirmelerini yüklemek için bu seçeneği **Evet** olarak ayarlayın. Gerekli bir yazılım güncelleştirme dağıtımı bir son tarihe ulaştığında, istemci Dağıtımdaki yazılım güncelleştirmeleri için yükleme işlemini başlatır. Bu ayar, belirtilen süre içinde son tarih olan diğer gerekli dağıtımlardan yazılım güncelleştirmelerinin yüklenip yüklenmeyeceğini belirler.  
+Belirli bir süre içinde gerçekleşen son tarihleri olan gerekli dağıtımlardan tüm yazılım güncelleştirmelerini yüklemek için bu seçeneği **Evet** olarak ayarlayın. Gerekli bir yazılım güncelleştirme dağıtımı bir son tarihe ulaştığında, istemci Dağıtımdaki yazılım güncelleştirmeleri için yüklemeyi başlatır. Bu ayar, belirtilen süre içinde son tarih olan diğer gerekli dağıtımlardan yazılım güncelleştirmelerinin yüklenip yüklenmeyeceğini belirler.  
 
 Gerekli yazılım güncelleştirmeleri için yüklemeyi hızlandırmak üzere bu ayarı kullanın. Bu ayar ayrıca, istemci güvenliğini artırmak, kullanıcıya yönelik bildirimleri azaltmak ve istemci yeniden başlatmaları azaltmak için de potansiyel olarak bulunur. Varsayılan seçenek olarak bu ayar **Hayır**olarak ayarlanmıştır.  
 
@@ -911,7 +893,7 @@ Bu seçeneği **Evet**olarak belirlediğinizde, Office 365 yükleme ayarlarını
 
 ### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a>"Yazılım güncelleştirmesi" bakım penceresi kullanılabilir olduğunda "tüm dağıtımlar" bakım penceresinde yazılım güncelleştirmelerinin yüklenmesini etkinleştir
 
-Sürüm 1810 ' den başlayarak, bu seçeneği **Evet** olarak belirlediğinizde ve istemcide en az bir "yazılım güncelleştirmesi" bakım penceresi tanımlanmışsa, yazılım güncelleştirmeleri "tüm dağıtımlar" bakım penceresi sırasında yüklenir.
+Bu seçeneği **Evet**olarak belirlediğinizde ve istemcide en az bir "yazılım güncelleştirmesi" bakım penceresi tanımlanmışsa, yazılım güncelleştirmeleri "tüm dağıtımlar" bakım penceresi sırasında yüklenir.
 
 Varsayılan seçenek olarak bu ayar **Hayır**olarak ayarlanmıştır. Bu değer, daha önce olduğu gibi aynı davranışı kullanır: her iki tür de varsa, pencereyi yoksayar. <!--2839307-->
 
@@ -943,7 +925,7 @@ Bu istemci ayarı aşağıdaki seçenekleri sağlar:
 
     - `/Priority Normal` [Windows kurulumu komut satırı seçeneğiyle](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)cihazdaki setupconfig. ini dosyasını yapılandırır.
 
-- **Düşük**: cihaz, arka planda indirildiğinde ve güncelleştirmelerde çalışmaya devam edebilirsiniz. Toplam yükleme süresi daha uzundur, ancak kullanıcının kesintisi daha kısadır. Bu seçeneği kullanırken bir zaman aşımını önlemek için en fazla çalışma süresini artırmanız gerekebilir.  
+- **Düşük**: cihaz, arka planda indirildiğinde ve güncelleştirmelerde çalışmaya devam edebilirsiniz. Toplam yükleme süresi daha uzundur, ancak kullanıcının kesintisi daha kısadır. Bu seçeneği kullandığınızda zaman aşımını önlemek için en fazla çalışma süresini artırmanız gerekebilir.  
 
     - `/Priority` [Windows kurulumu komut satırı seçeneğini](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) setupconfig. ini dosyasından kaldırır.
 

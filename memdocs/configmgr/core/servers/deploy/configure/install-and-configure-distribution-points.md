@@ -2,7 +2,7 @@
 title: Dağıtım noktalarını yönet
 titleSuffix: Configuration Manager
 description: Dağıtım noktalarını, aygıtlara ve kullanıcılara dağıttığınız içeriği barındırmak için kullanın.
-ms.date: 12/03/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1cc931bd0e02be66f608db11e0052fde571a427
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d1d93dd446a65fda0b259bb10e0c944780d41059
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718857"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347100"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>Configuration Manager dağıtım noktalarını yükleyip yapılandırma
 
@@ -307,12 +307,16 @@ Aşağıdaki ayarlar, site sistemi sunucusu oluşturma Sihirbazı 'nın **dağı
     - Güncelleştirme paketi ile Configuration Manager sürüm 1806 (4462978) veya üzeri  
 
         - Windows Server, sürüm 1709 veya üzeri
-        - KB4132216 ve KB4284833 güncelleştirmeleri ile Windows Server 2016
+        - Windows Server 2016 aşağıdaki güncelleştirmelerle:
+           - Toplu güncelleştirme KB4132216, 21 Haziran 2018 veya sonraki bir toplu güncelleştirmedir.
+           - Hizmet yığını güncelleştirme KB4284833, 18 Mayıs 2018 veya sonraki bir hizmet yığını güncelleştirmesi yayınlandı.
 
     - Configuration Manager sürüm 1810 veya üzeri:
 
         - Windows Server, sürüm 1709 veya üzeri
-        - KB4132216 ve KB4284833 güncelleştirmeleri ile Windows Server 2016
+        - Windows Server 2016 aşağıdaki güncelleştirmelerle:
+           - Toplu güncelleştirme KB4132216, 21 Haziran 2018 veya sonraki bir toplu güncelleştirmedir.
+           - Hizmet yığını güncelleştirme KB4284833, 18 Mayıs 2018 veya sonraki bir hizmet yığını güncelleştirmesi yayınlandı.
         - Windows Server 2019  
 
 - **Önceden hazırlanan içerik için bu dağıtım noktasını etkinleştir**: Bu ayar, yazılımı dağıtmadan önce sunucuya içerik eklemenizi sağlar. İçerik dosyaları zaten içerik kitaplığında olduğundan, yazılımı dağıtırken ağ üzerinden aktarılmaz. Daha fazla bilgi için bkz. [önceden hazırlanan içerik](../../../plan-design/hierarchy/manage-network-bandwidth.md#BKMK_PrestagingContent).  

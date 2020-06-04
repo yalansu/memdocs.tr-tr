@@ -2,7 +2,7 @@
 title: Bulmayı yapılandırma
 titleSuffix: Configuration Manager
 description: Ağınızı, Active Directory ve Azure Active Directory yönetilecek kaynakları bulmak için bulma yöntemlerini yapılandırın.
-ms.date: 04/01/2020
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3bd03cb15ae1633d8ddfc8c2f26a741d2679b083
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cfda27df7df537ededb1f103afdd6107354af786
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721048"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347296"
 ---
 # <a name="configure-discovery-methods-for-configuration-manager"></a>Configuration Manager için bulma yöntemlerini yapılandırma
 
@@ -148,7 +148,7 @@ Bu bulma yöntemlerinin her biri diğerlerinden bağımsız olsa da benzer seçe
 
 ### <a name="configure-active-directory-system-discovery"></a><a name="bkmk_config-adsd"></a>Active Directory sistem bulmayı yapılandırma  
 
-1. Active Directory sistem keşfi Özellikler penceresi **genel** sekmesinde yeni bir Active Directory kapsayıcısı belirtmek ![](media/Disc_new_Icon.gif) için yeni **simgesini yeni simgesini seçin** . **Active Directory kapsayıcı** iletişim kutusunda aşağıdaki konfigürasyonları izleyin:  
+1. Active Directory sistem keşfi Özellikler penceresi **genel** sekmesinde yeni bir Active Directory kapsayıcısı belirtmek için yeni **simgesini yeni simgesini seçin** ![ ](media/Disc_new_Icon.gif) . **Active Directory kapsayıcı** iletişim kutusunda aşağıdaki konfigürasyonları izleyin:  
 
     1. **Yol**için bir konum yazın veya gidin. Bu değer, bir kapsayıcı veya kuruluş birimi (OU) için geçerli bir LDAP yoludur. Site bu yolu kaynaklar için sorgular. Örneğin, `LDAP://CN=Computers,DC=contoso,DC=com`  
 
@@ -183,7 +183,7 @@ Bu bulma yöntemlerinin her biri diğerlerinden bağımsız olsa da benzer seçe
 
 ### <a name="configure-active-directory-user-discovery"></a><a name="bkmk_config-adud"></a>Active Directory Kullanıcı bulmayı yapılandırma  
 
-1. Active Directory Kullanıcı keşfi Özellikler penceresi **genel** **sekmesinde yeni bir** Active Directory kapsayıcısı belirtmek için yeni simge ![yeni simgesini](media/Disc_new_Icon.gif) seçin. **Active Directory kapsayıcı** iletişim kutusunda aşağıdaki konfigürasyonları izleyin:  
+1. Active Directory Kullanıcı keşfi Özellikler penceresi **genel** **sekmesinde yeni** ![ ](media/Disc_new_Icon.gif) bir Active Directory kapsayıcısı belirtmek için yeni simge yeni simgesini seçin. **Active Directory kapsayıcı** iletişim kutusunda aşağıdaki konfigürasyonları izleyin:  
 
     1. Aranacak bir veya daha fazla konum belirtin.  
 
@@ -265,7 +265,7 @@ Azure AD 'den bu grupların Kullanıcı gruplarını ve üyelerini bulabilirsini
 
 ### <a name="limitations"></a>Sınırlamalar
 
-Azure AD Kullanıcı grubu bulma için Delta Keşfi Şu anda devre dışı.
+Azure AD Kullanıcı grubu bulma için Delta Keşfi 1906 sürümünde devre dışı bırakıldı. Configuration Manager sürüm 1910 ' den başlayarak başlatabilirsiniz.
 
 ### <a name="log-files"></a>Günlük dosyaları
 
@@ -415,7 +415,7 @@ Ağ bulma, **ağ bulma özellikleri** Iletişim kutusundaki **DHCP** sekmesinde 
     - **Alt ağlar** sekmesinde, **yerel alt ağları ara** seçeneğini belirleyin.  
 
       > [!TIP]  
-      > Ağınızı oluşturan belirli alt ağları biliyorsanız, **yerel alt ağları ara** onay kutusunun işaretini kaldırın. Sonra **Yeni** simge ![yeni simgesini](media/Disc_new_Icon.gif)seçin ve aramak istediğiniz belirli alt ağları ekleyin. Büyük ağlarda, ağ bant genişliği kullanımını en aza indirmek için tek seferde yalnızca bir veya iki alt ağ arayın.  
+      > Ağınızı oluşturan belirli alt ağları biliyorsanız, **yerel alt ağları ara** onay kutusunun işaretini kaldırın. Sonra **Yeni** simge ![ Yeni simgesini seçin ](media/Disc_new_Icon.gif) ve aramak istediğiniz belirli alt ağları ekleyin. Büyük ağlarda, ağ bant genişliği kullanımını en aza indirmek için tek seferde yalnızca bir veya iki alt ağ arayın.  
 
     - **Etki alanları** sekmesinde, **yerel etki alanı arama**seçeneğini belirleyin.  
 
@@ -424,7 +424,7 @@ Ağ bulma, **ağ bulma özellikleri** Iletişim kutusundaki **DHCP** sekmesinde 
       > [!TIP]  
       > Ağ topolojinizi ilk kez eşlediğinizde, ağ bant genişliği kullanımını en aza indirmek için yalnızca birkaç yönlendirici atlaması yapılandırın.  
 
-4. **Zamanlama** sekmesinde **Yeni** simge ![yeni simgesini](media/Disc_new_Icon.gif)seçin ve bulma işlemini çalıştırmak için bir zamanlama ayarlayın.  
+4. **Zamanlama** sekmesinde **Yeni** simge ![ Yeni simgesini seçin ](media/Disc_new_Icon.gif) ve bulma işlemini çalıştırmak için bir zamanlama ayarlayın.  
 
     > [!NOTE]  
     > Ayrı ağ bulma zamanlamalarına farklı bir keşif yapılandırması atayamazsınız. Ağ bulma her çalıştığında, geçerli bulma yapılandırmasını kullanır.  
@@ -451,7 +451,7 @@ Ağ bulma, **ağ bulma özellikleri** Iletişim kutusundaki **DHCP** sekmesinde 
 
     - Belirli bir alt ağı aramak için alt ağın **Aranacak alt ağlarda** listelendiğinden ve **arama** değerinin **etkin**olduğundan emin olun:  
 
-      1. Alt ağ listelenmiyorsa **Yeni** simge ![yeni simgesini](media/Disc_new_Icon.gif)seçin. **Yeni alt ağ ataması** iletişim kutusunda, **alt ağ** ve **maske** bilgilerini girin ve ardından **Tamam**' ı seçin. Varsayılan olarak, arama için yeni bir alt ağ etkinleştirilmiştir.  
+      1. Alt ağ listelenmiyorsa **Yeni** simge ![ Yeni simgesini seçin ](media/Disc_new_Icon.gif) . **Yeni alt ağ ataması** iletişim kutusunda, **alt ağ** ve **maske** bilgilerini girin ve ardından **Tamam**' ı seçin. Varsayılan olarak, arama için yeni bir alt ağ etkinleştirilmiştir.  
 
       2. Listelenen alt ağın **arama** değerini değiştirmek için listeden seçin. Sonra **Değiştir** simgesini seçerek değeri **devre dışı** ve **etkin**arasında değiştirin.  
 
@@ -461,21 +461,21 @@ Ağ bulma, **ağ bulma özellikleri** Iletişim kutusundaki **DHCP** sekmesinde 
 
     - Belirli bir etki alanını aramak için, etki **alanının etki alanında listelendiğinden ve bir** **arama** değerinin **etkin**olduğundan emin olun:  
 
-      1. Etki alanı listede yoksa **Yeni** simge ![yeni simgesini](media/Disc_new_Icon.gif)seçin. **Etki alanı özellikleri** iletişim kutusunda, **etki alanı** bilgilerini girin ve ardından **Tamam**' ı seçin. Varsayılan olarak, arama için yeni bir etki alanı etkinleştirilmiştir.  
+      1. Etki alanı listede yoksa **Yeni** simge ![ Yeni simgesini seçin ](media/Disc_new_Icon.gif) . **Etki alanı özellikleri** iletişim kutusunda, **etki alanı** bilgilerini girin ve ardından **Tamam**' ı seçin. Varsayılan olarak, arama için yeni bir etki alanı etkinleştirilmiştir.  
 
       2. Listelenen bir etki alanının **arama** değerini değiştirmek için listeden seçin. Sonra **Değiştir** simgesini seçerek değeri **devre dışı** ve **etkin**arasında değiştirin.  
 
 7. Bulma 'yı SNMP cihazları için belirli SNMP topluluk adlarını arayacak şekilde yapılandırmak için **SNMP** sekmesine geçin. Sonra aşağıdaki seçeneklerden birini veya birkaçını yapılandırın:  
 
-    - SNMP topluluk **adları**listesine SNMP topluluk adı eklemek için **Yeni** simge ![yeni simgesini seçin](media/Disc_new_Icon.gif). **Yenı SNMP topluluk adı** iletişim kutusunda, SNMP topluluğunun **adını** belirtin ve ardından **Tamam**' ı seçin.  
+    - SNMP topluluk **adları**listesine SNMP topluluk adı eklemek için **Yeni** simge yeni simgesini seçin ![ ](media/Disc_new_Icon.gif) . **Yenı SNMP topluluk adı** iletişim kutusunda, SNMP topluluğunun **adını** belirtin ve ardından **Tamam**' ı seçin.  
 
-    - SNMP topluluk adını kaldırmak için topluluk adını seçin ve ![sonra **simgeyi Sil simgesini Sil simgesini** ](media/Disc_delete_Icon.gif)seçin.  
+    - SNMP topluluk adını kaldırmak için topluluk adını seçin ve **sonra simgeyi Sil simgesini Sil** simgesini seçin ![ ](media/Disc_delete_Icon.gif) .  
 
-    - SNMP topluluk adlarının arama sırasını ayarlamak için listeden bir topluluk adı seçin. Sonra **öğeyi yukarı** ![Taşı simgesini](media/Disc_moveUp_Icon.gif) veya **öğeyi aşağı** ![Taşı simgesini seçin simge aşağı taşı simgesi](media/Disc_moveDown_Icon.gif). Bulma çalıştığında, topluluk adları yukarıdan aşağıya doğru bir düzende aranır. 
+    - SNMP topluluk adlarının arama sırasını ayarlamak için listeden bir topluluk adı seçin. Sonra **öğeyi yukarı** Taşı simgesini ![ ](media/Disc_moveUp_Icon.gif) veya **öğeyi aşağı** Taşı simgesini seçin simge aşağı taşı simgesi ![ ](media/Disc_moveDown_Icon.gif) . Bulma çalıştığında, topluluk adları yukarıdan aşağıya doğru bir düzende aranır. 
 
     - SNMP aramaları tarafından kullanılmak üzere en fazla yönlendirici atlama sayısını yapılandırmak için, **en fazla atlama** sayısı açılan listesinden atlama sayısını seçin.  
 
-8. SNMP cihazını yapılandırmak için **SNMP cihazları** sekmesine geçin. Cihaz listede yoksa **Yeni** simge ![yeni simgesini](media/Disc_new_Icon.gif)seçin. **Yenı SNMP aygıtı** ILETIŞIM kutusunda SNMP cihazının IP adresini veya cihaz adını belirtin ve ardından **Tamam**' ı seçin.  
+8. SNMP cihazını yapılandırmak için **SNMP cihazları** sekmesine geçin. Cihaz listede yoksa **Yeni** simge ![ Yeni simgesini seçin ](media/Disc_new_Icon.gif) . **Yenı SNMP aygıtı** ILETIŞIM kutusunda SNMP cihazının IP adresini veya cihaz adını belirtin ve ardından **Tamam**' ı seçin.  
 
     > [!NOTE]  
     > Bir cihaz adı belirtirseniz, Configuration Manager NetBIOS adını bir IP adresine çözümleyebilmelidir.  
@@ -487,12 +487,12 @@ Ağ bulma, **ağ bulma özellikleri** Iletişim kutusundaki **DHCP** sekmesinde 
       > [!NOTE]  
       > Bu seçeneği kullanmak için sunucu bir DHCP sunucusundan IP adresini kiramalıdır ve statik bir IP adresi kullanamaz.  
 
-    - Belirli bir DHCP sunucusunu sorgulamak için **Yeni** simge ![yeni simgesini](media/Disc_new_Icon.gif)seçin. **Yenı DHCP sunucusu** iletişim kutusunda, DHCP sunucusunun IP adresini veya sunucu adını belirtin ve ardından **Tamam**' ı seçin.  
+    - Belirli bir DHCP sunucusunu sorgulamak için **Yeni** simge ![ Yeni simgesini seçin ](media/Disc_new_Icon.gif) . **Yenı DHCP sunucusu** iletişim kutusunda, DHCP sunucusunun IP adresini veya sunucu adını belirtin ve ardından **Tamam**' ı seçin.  
 
       > [!NOTE]  
       > Bir sunucu adı belirtirseniz, Configuration Manager NetBIOS adını bir IP adresine çözümleyebilmelidir.  
 
-10. Bulmanın ne zaman çalışacağını yapılandırmak için **zamanlama** sekmesine geçin. Sonra, ağ bulmayı çalıştırmaya ![yönelik bir](media/Disc_new_Icon.gif) zamanlama ayarlamak için **Yeni** simge yeni simgesini seçin. Birden çok yinelenen zamanlamayı ve tekrarsız birden çok zamanlamayı yapılandırabilirsiniz.  
+10. Bulmanın ne zaman çalışacağını yapılandırmak için **zamanlama** sekmesine geçin. Sonra, **New** ![ ](media/Disc_new_Icon.gif) Ağ bulmayı çalıştırmaya yönelik bir zamanlama ayarlamak için yeni simge yeni simgesini seçin. Birden çok yinelenen zamanlamayı ve tekrarsız birden çok zamanlamayı yapılandırabilirsiniz.  
 
     > [!NOTE]  
     > **Zamanlama** sekmesi aynı anda birden fazla zamanlama gösteriyorsa, ağ bulma işlemi zamanlamada belirtilen sürede yapılandırıldığı sırada tüm zamanlamalar için çalışır. Bu davranış yinelenen zamanlamalar için de geçerlidir.  
