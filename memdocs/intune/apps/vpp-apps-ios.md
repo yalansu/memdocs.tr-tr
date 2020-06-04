@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 06/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c145a4b7fa150a9d42c9bf20eca4f85f6356acf8
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 2e386d382ceb785d886dfb931bb26222bd82b1a0
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988515"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347330"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Microsoft Intune ile Apple Volume Purchase Program aracılığıyla satın alınan iOS ve macOS uygulamalarını yönetme
 
@@ -64,7 +64,7 @@ Apple Business Manager kullanarak ortak ve özel uygulamalar satın alabilir ve 
 - **Mağaza uygulamaları:** Apple Business Manager 'ı kullanarak, Içerik yöneticileri App Store 'da bulunan ücretsiz ve ücretli uygulamaları satın alabilir.
 - **Özel uygulamalar:** Apple Business Manager 'ı kullanarak, Içerik yöneticileri kuruluşunuza özel olarak sunulan özel uygulamalar da satın alabilir. Bu uygulamalar, doğrudan çalıştığınız geliştiriciler tarafından kuruluşunuzun özel ihtiyaçlarına göre tasarlanmıştır. [Özel uygulamaları dağıtma](https://developer.apple.com/business/custom-apps/)hakkında daha fazla bilgi edinin.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 - Kuruluşunuz için bir [Apple Business Manager](https://business.apple.com/) veya [Apple Okul Yöneticisi](https://school.apple.com/) hesabı. 
 - Bir veya daha fazla konum belirtece atanan uygulama lisansları satın alındı. 
 - Konum belirteçleri indirildi. 
@@ -158,7 +158,7 @@ Son kullanıcı, birkaç senaryoda VPP uygulama yüklemesi için istem alır. A�
 
 Belirli bir cihaz, Kullanıcı veya uygulamayı temel alan tüm ilişkili iOS/ıpados veya macOS toplu satın alma programı (VPP) uygulama lisanslarını iptal edebilirsiniz.  Ancak iOS/ıpados ve macOS platformları arasında bazı farklılıklar vardır. 
 
-|  | iOS/iPadOS | macOS |
+|  | iOS/iPadOS | Mac OS |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Uygulama atamasını Kaldır | Bir kullanıcıya atanmış bir uygulamayı kaldırdığınızda, Intune kullanıcı veya cihaz lisansını geri kazanır ve uygulamayı cihazdan kaldırır. | Bir kullanıcıya atanmış bir uygulamayı kaldırdığınızda, Intune kullanıcı veya cihaz lisansını geri kazanır. Uygulama cihazdan kaldırılmadı. |
 | Uygulama lisansını iptal et | Kullanıcı veya cihazdan uygulama lisansını geri kazanır bir uygulama lisansını iptal etme. Uygulamayı cihazdan kaldırmak için atamayı **kaldırmak** üzere değiştirmeniz gerekir. | Kullanıcı veya cihazdan uygulama lisansını geri kazanır bir uygulama lisansını iptal etme. İptal edilen lisans olan macOS uygulaması cihazda kullanılabilir durumda kalır, ancak bir lisans Kullanıcı veya cihaza yeniden atanana kadar güncelleştirilemez. Apple 'a göre, bu gibi uygulamalar 30 günlük yetkisiz kullanım süresinden sonra kaldırılır. Ancak, Apple atama kaldırma eylemini kullanarak Intune 'un uygulamayı kaldırması için bir yol sağlamaz. |
@@ -180,7 +180,13 @@ Belirli bir VPP belirteci için tüm VPP uygulamalarının lisansını iptal etm
 
 ## <a name="renewing-app-licenses"></a>Uygulama lisanslarını yenileme
 
-Apple Business Manager veya Apple Okul Yöneticisi 'nden yeni bir belirteç indirerek ve Intune 'da var olan belirteci güncelleştirerek bir Apple VPP belirtecini yenileyebilirsiniz.
+Apple [Business Manager](https://business.apple.com/) veya [Apple Okul Yöneticisi](https://school.apple.com/) 'nden yeni bir belirteç indirerek ve Intune 'da var olan BELIRTECI güncelleştirerek bir Apple VPP belirtecini yenileyebilirsiniz. 
+
+Bir Apple VPP belirtecini yenilemek için aşağıdaki adımları kullanın:
+
+1. [Apple Business Manager](https://business.apple.com/) veya [Apple Okul Yöneticisi](https://school.apple.com/)' ne gidin.
+2. **Ayarlar**uygulamalar ve sunucu belirteçlerimi Kitaplar ' ı seçerek **Apple Business (veya okul) Manager**'daki yeni belirteci indirin  >  **Apps and Books**  >  **My Server Tokens**.
+3. **Kiracı Yönetimi**bağlayıcıları ' nı seçip [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **Connectors and tokens**  >  **Apple VPP belirteçlerini**belirteçlerini Microsoft Endpoint Manager Yönetim Merkezi ' nde belirteci güncelleştirin. Ardından, belirteci el ile karşıya yükleyin.
 
 ## <a name="deleting-a-vpp-app"></a>VPP uygulamasını silme
 
@@ -190,7 +196,7 @@ Apple Business Manager veya Apple Okul Yöneticisi 'nden yeni bir belirteç indi
 
 Apple VPP belirteçlerine ve VPP uygulamalarına erişim, Intune 'daki özel yönetici rollerine atanan izinler kullanılarak bağımsız olarak denetlenebilir.
 
-* Intune özel rolünün, **uygulamalar**Apple VPP belirteçleri altında Apple VPP belirteçlerini yönetmesine izin vermek için  >  **Apple VPP tokens**, **yönetilen uygulamalar**için izin atayın.
+* Intune özel rolünün Apple VPP belirteçlerini yönetmesine izin vermek için, Microsoft Endpoint Manager Yönetim Merkezi ' nde **Kiracı Yönetimi**bağlayıcıları ' nı  >  **ve belirteçleri**  >  **Apple VPP belirteçlerini**seçin, **yönetilen uygulamalar**için izin atayın.
 * Intune özel rolünün, **uygulamalar**tüm uygulamalar altındaki iOS/ıpados VPP belirteçleri kullanılarak satın alınan uygulamaları yönetmesine izin vermek için  >  **All apps**, **mobil uygulamalar**için izin atayın. 
 
 ## <a name="additional-information"></a>Ek bilgiler

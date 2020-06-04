@@ -77,10 +77,6 @@
           href: deploy-use/create-app-v-virtual-environments.md
         - name: Uygulamaları içeri ve dışarı aktarma
           href: deploy-use/import-export-applications.md
-    - name: Uygulamaları güncelleştirme ve devre dışı bırakma
-      items:
-        - name: Uygulamaları güncelleştirme ve devre dışı bırakma
-          href: deploy-use/update-and-retire-applications.md
         - name: Uygulamaları gözden geçirme ve değiştirme
           href: deploy-use/revise-and-supersede-applications.md
         - name: Uygulama kaldırma

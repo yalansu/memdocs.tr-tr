@@ -1,5 +1,5 @@
 ---
-title: Microsoft Intune ile Lookout tümleştirmenizi ayarlama
+title: Kurulum, mobil uç nokta güvenliğini Microsoft Intune ile Yedekle
 titleSuffix: Microsoft Intune
 description: Şirket kaynaklarınıza mobil cihaz erişimini denetlemek için mobil bir tehdit savunması çözümü olarak Intune 'u mobil uç nokta güvenliği ile tümleştirme hakkında bilgi edinin.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4951db457c6a49179dd38ca24463dda292b227e5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 89d9e8d168175d841a4fb202836ce24df37b5615
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988128"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84331027"
 ---
 # <a name="set-up-lookout-mobile-endpoint-security-integration-with-intune"></a>Intune ile mobil uç nokta güvenliği tümleştirmesini ayarlama
 [Önkoşulları](lookout-mobile-threat-defense-connector.md#prerequisites)karşılayan bir ortam sayesinde, mobil uç nokta güvenliğini Intune ile tümleştirebilirsiniz. Bu makaledeki bilgiler, Intune ile kullanım için, tümleştirme ayarlama ve önemli ayarları yapılandırma konusunda size kılavuzluk eder.  

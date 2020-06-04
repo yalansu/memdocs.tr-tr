@@ -1,5 +1,5 @@
 ---
-title: Microsoft Intune ile Lookout MTD bağlayıcısı
+title: Microsoft Intune ile mobil uç nokta Integreate ği
 titleSuffix: Microsoft Intune
 description: Şirket kaynaklarınıza mobil cihaz erişimini kontrol etmek için Lookout Mobile Threat Defense’i (MTD) Intune ile tümleştirme hakkında bilgi edinin.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c3ca25ce4bf4f6520e7ef5f7e3aaaff958060a2
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1083e195cee20c3df9572db94395d462f9531a39
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990811"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330959"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Intune ile mobil uç nokta güvenlik bağlayıcısını gevle
 
@@ -57,7 +57,7 @@ Aşağıdaki platformlar Intune'da kayıtlıysa Lookout için desteklenir:
 
 Platform ve dil desteği hakkında daha fazla bilgi için, [GEVME Web sitesini](https://personal.support.lookout.com/hc/articles/114094140253)ziyaret edin.  
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Lookout Mobil Uç Nokta Güvenliği kurumsal aboneliği  
 - Microsoft Intune aboneliği

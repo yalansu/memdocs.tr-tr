@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc180b4a554ceec19fb0815b028d875c32da37bf
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 739ebebe18628279e5242ab227cf0f43993eff08
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166034"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330874"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>İş kolu uygulamalarını uygulama koruma ilkelerine hazırlama
 
@@ -50,8 +50,8 @@ Intune’a kayıtlı olmayan cihazlarda uygulama koruma ilkeleri uygulamak için
 
 |**Uygulama Sarmalama Aracı** | **Xamarin** |**Cordova** |
 |------|----|----|
-|**iOS** |Evet|Evet|
-|**Android**|Hayır - [Intune Uygulaması SDK Xamarin Bağlamalarını](app-sdk-xamarin.md) kullan.|Evet|
+|**iOS** |Yes|Yes|
+|**Android**|Hayır - [Intune Uygulaması SDK Xamarin Bağlamalarını](app-sdk-xamarin.md) kullan.|Yes|
 
 ## <a name="intune-app-sdk"></a>Intune Uygulama SDK'sı
 
@@ -71,8 +71,8 @@ SDK hakkında daha fazla bilgi edinmek için bkz. [Genel bakış](app-sdk.md). S
 
 |**Intune uygulama SDK 'Sı** |**Xamarin** |**Cordova**
 |------|----|----|
-|**iOS**|Evet – [Intune Uygulaması SDK Xamarin Bağlamalarını](app-sdk-xamarin.md) kullan.|Hayır|
-|**Android**| Evet- [Intune uygulama SDK 'Sı Xamarin bağlamalarını](app-sdk-xamarin.md)kullanın.|Hayır|
+|**iOS**|Evet – [Intune Uygulaması SDK Xamarin Bağlamalarını](app-sdk-xamarin.md) kullan.|No|
+|**Android**| Evet- [Intune uygulama SDK 'Sı Xamarin bağlamalarını](app-sdk-xamarin.md)kullanın.|No|
 
 ## <a name="not-using-an-app-development-platform-listed-above"></a>Yukarıda listelenen bir uygulama geliştirme platformu kullanmıyor musunuz?
 
@@ -121,7 +121,6 @@ Bu tablo, uygulama SDK 'sını veya uygulama sarmalama aracını kullanıyorsa e
 |Kuruluş hesapları için uygulama bildirim içeriğini yapılandırma|X|X|
 |Onaylanan Klavye kullanımını gerektir (yalnızca Android)|X|X|
 |Uygulama koruma ilkesi gerektir (koşullu erişim)|X||
-|Onaylanan istemci uygulaması gerektir (koşullu erişim)|X||
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
