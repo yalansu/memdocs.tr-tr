@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 69694fa39375daf436abf59fcd48edda41a9fc62
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: cfd329b7edb695c1e7316323555bfc18a2fd479e
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268258"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428573"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Desktop Analytics sorunlarını giderme
 
@@ -68,7 +68,7 @@ Masaüstü Analizi aşağıdaki uygulamaları Azure AD 'nize ekler:
 
 - **MALogAnalyticsReader**: günlük anlık görüntünün başarıyla kopyalandığından emin olmak için Azure Log Analytics çalışma alanınızı izler. Daha fazla bilgi için bkz. [MALogAnalyticsReader uygulama rolü](#bkmk_MALogAnalyticsReader).  
 
-- **Office365 Istemci Yöneticisi**: Masaüstü analizinden dağıtım planı bilgilerinin ve cihaz hazırlık durumunun Configuration Manager alınmasına izin vermez.
+- **Masaüstü Analizi**: Masaüstü analizinden dağıtım planı bilgilerinin ve cihaz hazırlık durumunun Configuration Manager alınmasına izin vermez.
 
 Kurulumu tamamladıktan sonra bu uygulamaları sağlamanız gerekiyorsa, **bağlı hizmetler** bölmesine gidin. **Kullanıcılar ve uygulamalar erişimini yapılandır**' ı seçin ve uygulamaları sağlayın.  
 
@@ -181,7 +181,7 @@ Kurulum sırasında bu işlemle ilgili bir sorun varsa, bu izni el ile eklemek i
 
     - Şunu **seçin**: **MALogAnalyticsReader**  
 
-4. **Kaydet**’i seçin.
+4. **Kaydet**'i seçin.
 
 Portal, rol atamasını eklediği bir bildirim gösterir.
 

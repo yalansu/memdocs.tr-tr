@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 7ddcb1ade6f39d1fc2cb824470c33d39496bcbf1
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764246"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428673"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a>Endpoint Analytics önizlemesi
 
@@ -347,8 +347,11 @@ Bu sorunların yakında çıkacak Configuration Manager bağlayıcısından gele
 1. Veri toplama etkinleştirildikten sonra veri toplama için başarıyla yapılandırılmış cihazların yeniden başlatılması gerekir ve cihazın cihaz performansı sekmesinde gösterilmesi için 24 saate kadar beklemeniz gerekir.
 1. Cihazınız veri toplama için başarılı bir şekilde yapılandırıldıysa, daha sonra yeniden başlatılırsa ve 24 saat sonra hala görmüyorsanız, cihazın koleksiyon uç noktalarımıza ulaşamamakta olması olabilir. Şirketiniz bir ara sunucu kullanıyorsa ve uç noktaların proxy 'de etkinleştirilmemiş olması durumunda bu sorun oluşabilir. Daha fazla bilgi için bkz. [sorun giderme uç noktaları](#bkmk_uea_endpoints).
 
+### <a name="data-collection-for-intune-managed-devices"></a>Intune tarafından yönetilen cihazlar için veri toplama
 
-### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a>Noktalarının
+Endpoint Analytics, Intune tarafından yönetilen cihazlardan verileri toplamak için Windows 10 ve Windows Server bağlantılı kullanıcı deneyimleri ve telemetri bileşeni (DiagTrack) kullanır. Cihazdaki **bağlı kullanıcı deneyimlerinin ve telemetri** hizmetinin çalıştığından emin olun.
+
+#### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a>Noktalarının
 
 Cihazları Endpoint Analytics 'e kaydetmek için, gerekli işlevsel verileri Microsoft 'a göndermelidir. Ortamınız bir ara sunucu kullanıyorsa, proxy 'yi yapılandırmaya yardımcı olması için bu bilgileri kullanın.
 
@@ -364,15 +367,15 @@ Cihazları Endpoint Analytics 'e kaydetmek için, gerekli işlevsel verileri Mic
 | `https://*.manage.microsoft.com` | Endpoint Analytics ile cihaz toplamayı ve cihazlarını eşitleme için kullanılır (yalnızca Configuration Manager sunucu rolünde). Daha fazla bilgi için bkz. [bir site sistemi sunucusu için proxy yapılandırma](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
 
 
-### <a name="proxy-server-authentication"></a>Proxy sunucusu kimlik doğrulaması
+#### <a name="proxy-server-authentication"></a>Proxy sunucusu kimlik doğrulaması
 
 Kuruluşunuz internet erişimi için proxy sunucu kimlik doğrulamasını kullanıyorsa, kimlik doğrulama nedeniyle verileri engellemediğinden emin olun. Proxy 'niz cihazların bu verileri göndermesini izin vermezse, masaüstü Analizi 'nde gösterilmez.
 
-#### <a name="bypass-recommended"></a>Atla (önerilir)
+##### <a name="bypass-recommended"></a>Atla (önerilir)
 
 Proxy sunucularınızı, veri paylaşımı uç noktalarına giden trafik için proxy kimlik doğrulaması gerektirecek şekilde yapılandırın. Bu seçenek en kapsamlı çözümdür. Tüm Windows 10 sürümleri için geçerlidir.  
 
-#### <a name="user-proxy-authentication"></a>Kullanıcı proxy kimlik doğrulaması
+##### <a name="user-proxy-authentication"></a>Kullanıcı proxy kimlik doğrulaması
 
 Cihazları, oturum açmış kullanıcının proxy kimlik doğrulaması bağlamını kullanacak şekilde yapılandırın. Bu yöntem aşağıdaki konfigürasyonları gerektirir:
 
@@ -385,7 +388,7 @@ Cihazları, oturum açmış kullanıcının proxy kimlik doğrulaması bağlamı
 > [!IMPORTANT]
 > Kullanıcı proxy kimlik doğrulama yaklaşımı, Microsoft Defender Gelişmiş tehdit koruması kullanımıyla uyumlu değildir. Bu davranış, bu kimlik doğrulamanın **Disableenterpriseauthproxy** kayıt defteri anahtarını olarak ayarlanmış olması `0` , Microsoft Defender ATP 'nin olarak ayarlanmasını gerektirmesidir `1` . Daha fazla bilgi için bkz. [Microsoft Defender ATP 'de makine proxy ve internet bağlantısı ayarlarını yapılandırma](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
-#### <a name="device-proxy-authentication"></a>Cihaz proxy kimlik doğrulaması
+##### <a name="device-proxy-authentication"></a>Cihaz proxy kimlik doğrulaması
 
 Bu yaklaşım aşağıdaki senaryoları destekler:
 
@@ -430,7 +433,7 @@ Betiklerin, düzeltme olması gerektiğini Intune 'a bildirmek için 1 koduyla �
 
 Bu tabloda betik adları, açıklamalar, algılamalar, düzeltmeler ve yapılandırılabilir öğeler gösterilmektedir. Adları ile başlayan betik dosyaları `Detect` algılama betikleridir. Düzeltme betikleri ile başlar `Remediate` . Bu betikler, bu makaledeki sonraki bölümden kopyalanabilir.
 
-|Betik adı|Açıklama|
+|Betik adı|Description|
 |---|---|
 |**Eski grup Ilkelerini Güncelleştir** </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Son grup ilkesi yenilemenin ne zaman önce daha büyük olup olmadığını algılar `7 days` .  </br>Algılama betiğinin değerini değiştirerek 7 günlük eşiğini özelleştirin `$numDays` . </br></br>`gpupdate /target:computer /force`Ve çalıştıran`gpupdate /target:user /force`  </br> </br>, Sertifikalar ve yapılandırmalara grup ilkesi aracılığıyla teslim edildiğinde ağ bağlantısıyla ilgili destek çağrılarını azaltmaya yardımcı olabilir. </br> </br> **Oturum açma kimlik bilgilerini kullanarak betiği çalıştırın**: Evet|
 |**Office Tıkla-Çalıştır hizmetini yeniden Başlat** </br> `Detect_Click_To_Run_Service_State.ps1` </br> `Remediate_Click_To_Run_Service_State.ps1`| Tıkla-Çalıştır hizmetinin otomatik olarak başlayacak şekilde ayarlandığını ve hizmetin durdurulup durdurulduğunu algılar. </br> </br> Hizmeti otomatik olarak başlayacak ve durdurulmuş ise hizmeti başlatmaya ayarlayarak düzeltme yapın. </br></br> , Tıkla-Çalıştır hizmeti durdurulduğu için Win32 Microsoft 365 uygulamalarının Çalıştırılmayabileceği sorunları gidermeye yardımcı olur. </br> </br> **Oturum açma kimlik bilgilerini kullanarak betiği çalıştırın**: Hayır|

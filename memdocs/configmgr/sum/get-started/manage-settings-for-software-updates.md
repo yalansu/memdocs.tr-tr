@@ -2,7 +2,7 @@
 title: Yazılım güncelleştirmesi ayarlarını yönetme
 titleSuffix: Configuration Manager
 description: Yazılım güncelleştirme noktasını yükledikten sonra sitenizdeki yazılım güncelleştirmeleri için uygun olan istemci ayarları hakkında bilgi edinin.
-ms.date: 03/30/2020
+ms.date: 06/04/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,12 +10,12 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 0a2a45ff866ea02aacc83c42109c8cba4020ed4e
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2b851c03424af0ba0f826716b401705879338855
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906794"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436678"
 ---
 #  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a>Yazılım güncelleştirmeleri için ayarları yönetme  
 
@@ -113,13 +113,13 @@ Yazılım güncelleştirme özelliklerinde, yazılım güncelleştirmesi hakkın
 Özellikler kısmında yazılım güncelleştirme ayarlarını bir veya daha fazla yazılım güncelleştirmesi için yapılandırabilirsiniz. Çoğu yazılım güncelleştirme ayarını sadece merkezi yönetim sitesinden veya bağımsız birincil siteden yapılandırabilirsiniz. Aşağıdaki bölümler, yazılım güncelleştirmeleri ayarlarını yapılandırmanıza yardımcı olur.  
 
 ####  <a name="set-maximum-run-time"></a><a name="BKMK_SetMaxRunTime"></a>Maksimum çalışma süresini ayarla  
-**Maksimum Çalıştırma Süresi** sekmesinde, bir yazılım güncelleştirmesinin istemci bilgisayarlarda tamamlanması için ayrılan maksimum süre miktarını belirleyin. Güncelleştirme en uzun çalışma süresi değerinden uzun sürerse, Configuration Manager bir durum mesajı oluşturur ve yazılım güncelleştirmeleri yüklemesi için dağıtımı izlemeyi durduruyor. Bu ayarı sadece merkezi yönetim sitesinde veya bağımsız birincil sitede yapılandırabilirsiniz.  
+**Maksimum Çalıştırma Süresi** sekmesinde, bir yazılım güncelleştirmesinin istemci bilgisayarlarda tamamlanması için ayrılan maksimum süre miktarını belirleyin. Güncelleştirme en uzun çalışma süresi değerinden uzun sürerse, Configuration Manager bir durum mesajı oluşturur ve yazılım güncelleştirmeleri yüklemesini sonlandırır. Bu ayarı sadece merkezi yönetim sitesinde veya bağımsız birincil sitede yapılandırabilirsiniz.  
 
 Configuration Manager ayrıca, yazılım güncelleştirme yüklemesinin yapılandırılmış bir bakım penceresi içinde başlatılıp başlatılmayacağını anlamak için bu ayarı kullanır. Maksimum çalıştırma süresi, bakım penceresinde mevcut kalan süreden fazlaysa, yazılım güncelleştirme yüklemesi bir sonraki bakım penceresinin başlatılmasına kadar ertelenir. İstemci bilgisayarda yapılandırılmış bakım penceresiyle (zaman çerçevesi) yüklenecek birden fazla yazılım güncelleştirmesi olduğunda, önce en düşük maksimum çalıştırma süresine sahip yazılım güncelleştirmesi yüklenir, ardından bir sonraki en düşük maksimum çalıştırma süresi olan yazılım güncelleştirmesi yüklenir ve bu biçimde devam eder. İstemci, her yazılım güncelleştirmesini yüklemeden önce, mevcut bakım penceresinin yazılım güncelleştirmesini yüklemek için yeterli zaman sağlayacağını doğrular. Yazılım güncelleştirmesi yüklenmeye başladıktan sonra, yükleme bakım penceresinin bitimini aşsa bile yüklenmeye devam eder. Bakım pencereleri hakkında daha fazla bilgi için bkz. [bakım pencerelerini kullanma](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 **Çalışma Zamanı Üst Sınırı** sekmesinde aşağıdaki ayarları görüntüleyebilir ve yapılandırabilirsiniz:  
 
-- **En fazla çalışma süresi**: yükleme artık Configuration Manager tarafından izlenmediği için, bir yazılım güncelleştirme yüklemesinin tamamlaması için ayrılan en fazla dakika sayısını belirtir. Bu ayar, ayrıca bakım penceresi sonlanmadan önce güncelleştirmeyi yüklemek için yeterli zaman kalıp kalmadığını belirlemek için kullanılır. Varsayılan ayar, hizmet paketleri için 60 dakikadır. Daha önceki bir sürümden yükseltme yaptığınızda, diğer yazılım güncelleştirme türleri için varsayılan değer 10 dakikadır. Configuration Manager sürüm 1511 veya daha yüksek bir sürümü ve 5 dakika. Değerler 5 ila 9999 dakika arasında değişebilir.  
+- **En fazla çalışma süresi**: yükleme Configuration Manager tarafından durdurulmadan önce, bir yazılım güncelleştirme yüklemesinin tamamlaması için ayrılan en fazla dakika sayısını belirtir. Bu ayar, ayrıca bakım penceresi sonlanmadan önce güncelleştirmeyi yüklemek için yeterli zaman kalıp kalmadığını belirlemek için kullanılır. Varsayılan ayar, hizmet paketleri için 60 dakikadır. Daha önceki bir sürümden yükseltme yaptığınızda, diğer yazılım güncelleştirme türleri için varsayılan değer 10 dakikadır. Configuration Manager sürüm 1511 veya daha yüksek bir sürümü ve 5 dakika. Değerler 5 ila 9999 dakika arasında değişebilir.  
 
 > [!IMPORTANT]  
 >  Maksimum çalıştırma süresi değerini yapılandırılan bakım penceresi süresinden daha küçük bir değere ayarladığınızdan emin olun veya bakım penceresi süresini maksimum çalışma zamanından daha büyük bir değere yükseltin. Aksi takdirde, yazılım güncelleştirme yüklemesi hiç başlamaz.  

@@ -2,7 +2,7 @@
 title: Windows istemci dağıtımı önkoşulları
 titleSuffix: Configuration Manager
 description: Configuration Manager istemcisini Windows bilgisayarlarına dağıtmaya yönelik önkoşullar hakkında bilgi edinin.
-ms.date: 11/29/2019
+ms.date: 06/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1d4cd7ffe38f7191a5361ad2e89817ea80f9f093
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2aa375d0521e6088904ebe9a1f10af83f4bc261f
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713978"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428565"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>Configuration Manager 'da Windows bilgisayarlarına istemci dağıtmak için Önkoşullar
 
@@ -28,18 +28,20 @@ Configuration Manager istemcisi için en düşük donanım ve işletim sistemi g
 > [!NOTE]  
 > Bu makalede gösterilen yazılım sürüm numaraları yalnızca gerekli minimum sürüm numaralarıdır.  
 
-
 ## <a name="prerequisites-for-windows-clients"></a><a name="BKMK_prereqs_computers"></a>Windows istemcileri için Önkoşullar  
 
 Windows cihazlarına Configuration Manager istemcisini yüklerken önkoşulları öğrenmek için aşağıdaki bilgileri kullanın.  
 
-### <a name="dependencies-external-to-configuration-manager"></a>Bağımlılıklar dış Configuration Manager  
+### <a name="dependencies-external-to-configuration-manager"></a>Bağımlılıklar dış Configuration Manager
 
-|Bileşen|Açıklama|  
-|---|---|  
-|Windows Installer sürüm 3.1.4000.2435|Paketler ve yazılım güncellemeleri için Windows Installer güncelleme (.msp) dosyalarının kullanımını desteklemek için gereklidir.|  
-|Microsoft Arka Plan Akıllı Aktarım Hizmeti (BITS) sürüm 2.5|İstemci bilgisayar ile Configuration Manager site sistemleri arasında kısıtlanan veri aktarımına izin vermek için gereklidir. BITS, istemci yüklemesi sırasında otomatik olarak indirilmez. Bilgisayarlarda BITS yüklendiğinde, yüklemenin tamamlanabilmesi için genellikle yeniden başlatma gerekir.<br /><br /> Çoğu işletim sistemi BITS içerir. Aksi takdirde, Configuration Manager istemcisini yüklemeden önce BITS 'yi yükler.|  
-|Microsoft Görev Zamanlayıcısı|İstemci yüklemesinin tamamlanabilmesi için istemcide bu hizmeti etkinleştirin.|  
+Bu bileşenlerin birçoğu, Windows 'un varsayılan olarak izin veren hizmetler veya özelliklerdir. Configuration Manager istemcilerinde bu bileşenleri devre dışı bırakın.
+
+|Bileşen|Description|
+|---|---|
+|Windows Installer|Uygulamalar ve yazılım güncelleştirmeleri için Windows Installer dosyalarının kullanımını desteklemek için gereklidir.|
+|Microsoft Arka Plan Akıllı Aktarım Hizmeti (BITS)|İstemci bilgisayar ile Configuration Manager site sistemleri arasında kısıtlanan veri aktarımına izin vermek için gereklidir.|
+|Microsoft Görev Zamanlayıcısı|Configuration Manager istemcisinin sistem durumunu düzenli olarak değerlendirmek gibi istemci işlemleri için gereklidir.|
+|Microsoft Uzaktan Değişiklikleri Sıkıştırma (RDC)|Ağ üzerinden veri iletimini en uygun hale getirmek için gereklidir.|
 |SHA-2 kod imzalama desteği|Sürüm 1906 ' den başlayarak, istemciler SHA-2 kod imzalama algoritması için destek gerektirir. Daha fazla bilgi için bkz. [SHA-2 kod imzalama desteği](#bkmk_sha2).|
 
 #### <a name="sha-2-code-signing-support"></a><a name="bkmk_sha2"></a>SHA-2 kod imzalama desteği
@@ -64,24 +66,21 @@ Güncelleştirilmemiş bir Windows sürümünde veya yukarıda listelenen sürü
 
 Configuration Manager istemcisinde dış bağımlılıklar vardır. Bu bağımlılıklar, istemci bilgisayardaki işletim sistemi sürümüne ve yüklü yazılıma bağlıdır.  
 
-İstemci bu bağımlılıkları yüklemeyi tamamlaması gerekiyorsa, otomatik olarak yüklenir.  
+İstemci bu bağımlılıkları yüklemeyi tamamlaması gerekiyorsa, otomatik olarak yüklenir.
 
-|Bileşen|Açıklama|  
-|---|---|  
-|Windows Update Aracı sürüm 7.0.6000.363|Güncelleme belirlemesi ve dağıtımını desteklemek için Windows'ta gereklidir.|  
-|Microsoft Çekirdek XML Hizmetleri (MSXML) sürüm 6.20.5002 veya daha üstü|Windows'ta XML belgelerinin işlenmesini desteklemek için gereklidir.|  
-|Microsoft Uzaktan Değişiklikleri Sıkıştırma (RDC)|Ağ üzerinden veri iletimini en uygun hale getirmek için gereklidir.|  
-|Microsoft Visual C++ 2013 Yeniden Dağıtılabilir sürüm 12.0.21005.1|İstemci işlemlerini desteklemek için gereklidir. Bu güncelleştirmeyi istemci bilgisayarlara yüklediğinizde, yüklemenin tamamlanabilmesi için yeniden başlatma gerekebilir.|  
-|Microsoft Visual C++ 2005 Yeniden Dağıtılabilir sürüm 8.0.50727.42|Sürüm 1606 ve önceki sürümlerde Microsoft SQL Server Compact işlemleri desteklemek için gereklidir.|  
-|Windows Imaging API'ları 6.0.6001.18000|Configuration Manager Windows görüntü (. wim) dosyalarını yönetmesine izin vermek için gereklidir.|  
-|Microsoft Policy Platform 1.2.3514.0|İstemcilerin uygunluk ayarlarını değerlendirmelerini sağlamak için gereklidir.|  
-|Microsoft .NET Framework sürüm 4.5.2.|İstemci işlemlerini desteklemek için gereklidir. Microsoft .NET Framework sürüm 4,5 veya sonraki bir sürümü yüklü değilse, istemci bilgisayara otomatik olarak yüklenir. Daha fazla bilgi için bkz. [Microsoft .NET Framework sürüm 4.5.2 hakkında ek ayrıntılar](#dotNet).|  
+|Bileşen|Description|
+|---|---|
+|Microsoft Core XML Services (MSXML) sürüm 6.20.5002 veya üzeri ( `msxml6.msi` )|Windows'ta XML belgelerinin işlenmesini desteklemek için gereklidir.|
+|Microsoft Visual C++ 2013 yeniden dağıtılabilir sürüm 12.0.40660.0 ( `vcredist_x*.exe` )|İstemci işlemlerini desteklemek için gereklidir. Bu güncelleştirmeyi istemci bilgisayarlara yüklediğinizde, yüklemenin tamamlanabilmesi için yeniden başlatma gerekebilir.|<!-- SCCMDocs#1526 -->
+|Windows görüntüleme API 'Leri 'ları 6.0.6001.18000 veya üzeri ( `wimgapi.msi` )|Configuration Manager Windows görüntü (. wim) dosyalarını yönetmesine izin vermek için gereklidir.|
+|Microsoft Policy Platform 1.2.3514.0 veya üzeri ( `MicrosoftPolicyPlatformSetup.msi` )|İstemcilerin uygunluk ayarlarını değerlendirmelerini sağlamak için gereklidir.|  
+|Microsoft .NET Framework sürüm 4.5.2 veya üzeri ( `NDP452-KB2901907-x86-x64-AllOS-ENU.exe` )|İstemci işlemlerini desteklemek için gereklidir. Microsoft .NET Framework sürüm 4,5 veya sonraki bir sürümü yüklü değilse, istemci bilgisayara otomatik olarak yüklenir. Daha fazla bilgi için bkz. [Microsoft .NET Framework sürüm 4.5.2 hakkında ek ayrıntılar](#dotNet).|  
 |Microsoft SQL Server Compact 4,0 SP1 bileşenleri|İstemci işlemleriyle ilgili bilgileri saklamak için gereklidir.|  
 
 > [!Important]
 > Uygulama kataloğunun Silverlight Kullanıcı deneyimi, güncel dal sürümü 1806 ' den itibaren desteklenmez. Sürüm 1906 ' den başlayarak, güncelleştirilmiş istemciler Kullanıcı tarafından kullanılabilen uygulama dağıtımları için yönetim noktasını otomatik olarak kullanır. Ayrıca yeni uygulama kataloğu rolleri yükleyemezsiniz. Sürüm 1910 ile uygulama kataloğu rolleri için destek sona erer.  
 >
-> Daha fazla bilgi için aşağıdaki makalelere bakın:
+> Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 >
 > - [Yazılım merkezini yapılandırma](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Kaldırılan ve kullanım dışı bırakılan özellikler](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -107,7 +106,7 @@ Microsoft .NET Framework sürüm 4.5.2, yüklemenin tamamlanabilmesi için yenid
 
 Daha fazla bilgi için bkz. [istemciler için site sistemi rollerini belirleme](plan/determine-the-site-system-roles-for-clients.md).  
 
-|Bileşen|Açıklama|  
+|Bileşen|Description|  
 |---|---|  
 |Yönetim noktası|Configuration Manager istemcisini dağıtmak için bir yönetim noktası gerekmez. İstemciler, site ile bilgi aktarmak için bir yönetim noktası gerektirir. Bir yönetim noktası olmadan istemci bilgisayarları yönetemezsiniz.|  
 |Dağıtım noktası|Dağıtım noktası isteğe bağlıdır, ancak istemci dağıtımı ve yönetimi için önerilen site sistem rolüdür. Tüm dağıtım noktaları, istemci kaynak dosyalarını barındırır. İstemciler, istemci dağıtımı veya güncelleştirmesi sırasında kaynak dosyaların indirileceği en yakın dağıtım noktasını bulur. Sitenin bir dağıtım noktası yoksa, bilgisayarlar istemci kaynak dosyalarını yönetim noktasından indirir.|  
@@ -120,7 +119,7 @@ Aşağıdaki önkoşullar, çeşitli istemci yükleme yöntemlerine özgüdür.
 
 #### <a name="client-push-installation"></a>Client push yüklemesi  
 
-- Site, istemciyi yüklemek için bilgisayarlara bağlanmak üzere istemci anında yükleme hesapları kullanır. Istemci gönderme yüklemesi özelliklerinin **hesaplar** sekmesinde bu hesapları belirtin. Hesap, hedef bilgisayarda yerel yöneticiler grubunun bir üyesi olmalıdır.  
+- Site, istemciyi yüklemek için bilgisayarlara bağlanmak üzere istemci anında yükleme hesapları kullanır. Istemci gönderme yüklemesi özelliklerinin **hesaplar** sekmesinde bu hesapları belirtin. Hesap, hedef bilgisayarda yerel Yöneticiler grubunun bir üyesi olmalıdır.  
 
     İstemci anında yükleme hesabı belirtmezseniz, site sunucusu bilgisayar hesabını kullanır.  
 
