@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5562ef1eaa1cc98e3f5a654e90e4779e228768b6
-ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
+ms.openlocfilehash: 90039e9bb75bcf7c266ac033408f87d37e27ef8d
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84311212"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436763"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Microsoft Intune için geliştirme aşamasında
 
@@ -105,7 +105,7 @@ MacOS cihazlarında, içerik önbelleğe almayı yapılandıran bir yapılandır
 
 Şu anda yapılandırabileceğiniz ayarları görmek için [Intune 'Da MacOS cihaz özelliği ayarları](../configuration/macos-device-features-settings.md)' na gidin.
 
-Şunlara uygulanır:
+Aşağıdakiler cihazlar için geçerlidir:
 - Mac OS
 
 ### <a name="new-vpn-settings-for-windows-10-and-newer-devices---6602122----"></a>Windows 10 ve daha yeni cihazlar için yeni VPN ayarları<!-- 6602122  -->
@@ -116,7 +116,7 @@ Ikev2 bağlantı türünü kullanarak bir VPN profili oluşturduğunuzda yapıla
 
 Yapılandırabileceğiniz ayarları görmek için, [Intune kullanarak VPN bağlantıları eklemek üzere Windows cihaz ayarları](../configuration/vpn-settings-windows-10.md)' na gidin.
 
-Şunlara uygulanır:
+Aşağıdakiler cihazlar için geçerlidir:
 - Windows 10 ve üzeri
 
 ### <a name="block-shared-ipad-temporary-sessions-on-shared-ipad-devices---6613794---"></a>Paylaşılan iPad cihazlarda paylaşılan iPad geçici oturumlarını engelle<!-- 6613794 -->
@@ -124,7 +124,7 @@ Intune 'da, paylaşılan iPad cihazlarında geçici oturumları engelleyen, payl
 
 Yapılandırabileceğiniz ayarlar hakkında daha fazla bilgi için bkz. [iOS ve ıpados cihaz ayarları, özelliklere izin vermek veya kısıtlamak için](../configuration/device-restrictions-ios.md).
 
-Şunlara uygulanır:
+Aşağıdakiler cihazlar için geçerlidir:
 - İOS/ıpados 13,4 ve daha yeni çalıştıran paylaşılan iPad cihazları
 
 ### <a name="use-microsoft-launcher-as-the-default-launcher-for-fully-managed-android-enterprise-devices---4927976----"></a>Tam olarak yönetilen Android Kurumsal cihazları için varsayılan başlatıcı olarak Microsoft başlatıcısı 'nı kullanın<!-- 4927976  -->
@@ -134,7 +134,7 @@ Ayrıca, **cihaz deneyimine**yeniden adlandırılmakta olan **adanmış cihazlar
 
 Kısıtlayabilecek tüm ayarları görmek için bkz. [Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak Için Android kurumsal cihaz ayarları](../configuration/device-restrictions-android-for-work.md). 
 
-Şunlara uygulanır:
+Aşağıdakiler cihazlar için geçerlidir:
 - Android kurumsal cihaz sahibi tam olarak yönetilen cihazlar (COBO)
 
 ### <a name="add-new-schema-settings-and-search-for-existing-schema-settings-using-oemconfig-on-android-enterprise---6394386----"></a>Android Enterprise üzerinde OEMConfig kullanarak yeni şema ayarları ekleme ve mevcut şema ayarlarını arama<!-- 6394386  -->
@@ -144,7 +144,7 @@ Intune 'da, Android kurumsal cihazlarındaki ayarları yönetmek için oemconfig
 
 Intune 'daki OEMConfig profilleri hakkında daha fazla bilgi için, bkz. [Microsoft Intune 'de oemconfig Ile Android Kurumsal cihazları kullanma ve yönetme](../configuration/android-oem-configuration-overview.md).
 
-Şunlara uygulanır:
+Aşağıdakiler cihazlar için geçerlidir:
 - Android Kurumsal
 
 <!-- ***********************************************-->
@@ -161,7 +161,7 @@ Intune 'daki OEMConfig profilleri hakkında daha fazla bilgi için, bkz. [Micros
 - Cihazların durumunu gördüğünüz genel bakış sayfasına, kaldırılan bir Apple Business Manager cihazı sayısı eklenecektir.
 
 ### <a name="bring-your-own-devices-can-use-vpn-to-deploy--5015344---"></a>Kendi cihazlarını getir, dağıtmak için VPN kullanabilir<!--5015344 -->
-Bu özellik gecikebilir.
+Yeni Autopilot profili **etki alanı bağlantısını atla onay** geçişi, üçüncü taraf Win32 VPN istemcinizi kullanarak kurumsal ağınıza erişim olmadan karma Azure AD JOIN cihazlarını dağıtmanıza olanak tanır. Yeni geçişi görmek için [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **cihazlar**   >  **Windows**  >  **Windows kayıt**  >  **dağıtım profilleri**  >  **profil oluşturma**öncesi  >  **deneyim (OOBE)** bölümüne gidin.
 
 ### <a name="shared-ipads-for-business--6367326---"></a>Iş için paylaşılan IPad 'ler<!--6367326 -->
 Birden çok çalışanın cihazları paylaşabilmesi için Intune ve Apple Business Manager 'ı kullanarak paylaşılan iPad 'i kolayca ve güvenli bir şekilde ayarlayabilirsiniz. Apple 'ın [paylaşılan iPad](https://developer.apple.com/education/shared-ipad/) 'i, Kullanıcı verilerini korurken birden çok kullanıcı için kişiselleştirilmiş bir deneyim sağlar. Yönetilen bir Apple KIMLIĞI kullanarak, kullanıcılar kuruluşlarındaki paylaşılan iPad 'de oturum açtıktan sonra uygulamalarına, verilerine ve ayarlarına erişebilirler. Paylaşılan iPad, Federasyon kimlikleriyle birlikte çalışmaktadır.

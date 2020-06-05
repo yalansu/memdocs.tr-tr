@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da78e0f80df31f5cb0f6236c4f85f93c05f0320a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f01baaf8ca48229242b6f65d10ef28a294a632bc
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989491"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428632"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Microsoft Intune’a uygulama ekleme 
 
@@ -169,7 +169,7 @@ Uygulamayı Intune’a eklediğinizde, size istediğiniz kategoriyi belirtme se�
     - Bir kategori eklemek için **Kategori ekle** bölmesinde **Ekle**’yi seçin ve kategori için bir ad girin.  
     Adlar tek bir dilde girilebilir ve Intune tarafından çevrilmez.
     - Bir kategoriyi düzenlemek için kategorinin yanındaki üç nokta simgesini (**...**) seçin ve daha sonra **Panoya sabitle** veya **Sil**’e tıklayın.
-6. **Oluştur**’u seçin.
+6. **Oluştur**'u seçin.
 
 ## <a name="apps-that-are-added-automatically-by-intune"></a>Intune tarafından otomatik olarak eklenen uygulamalar
 
@@ -187,6 +187,25 @@ Intune bu işlemi şu koşullara dayalı olarak gerçekleştirir:
 - Gerekli bir uygulamanın yüklemesi başarısız olursa veya uygulama bir şekilde cihazda bulunmuyorsa Intune, uyumluluğu değerlendirir ve bu zamanlama geçtikten sonra uygulamayı yeniden yükler.  
 - Yönetici, bir uygulamayı bir kullanıcı grubuna hedefler ve son kullanıcı bunu cihazda Şirket Portalı’ndan yükler. Daha sonra yönetici, uygulamayı v1’den v2’ye güncelleştirir. Bu durumda Intune, cihazda uygulamanın önceki herhangi bir sürümü mevcutsa bu zamanlama geçtikten sonra uygulamayı güncelleştirir.
 - Yönetici kaldırma amacını dağıttığı halde uygulama cihazda mevcut olup kaldırılamamışsa Intune, uyumluluğu değerlendirir ve bu zamanlama geçtikten sonra uygulamayı kaldırır.   
+
+## <a name="uninstall-an-app"></a>Uygulamayı kaldırma
+
+Bir uygulamayı kullanıcının cihazlarından kaldırmanız gerektiğinde aşağıdaki adımları kullanın.
+
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
+2. **Uygulamalar**  >  **tüm uygulamalar**' ı seçin  >  *uygulama*  >  **atamaları**  >  **Grup Ekle**' ye tıklayın.
+3. **Grup Ekle** bölmesinde **Kaldır**' ı seçin.
+4. Bu uygulama atamasından etkilenen Kullanıcı gruplarını seçmek için **dahil edilen gruplar** ' ı seçin.
+5. Kaldırma atamasını uygulamak istediğiniz grupları seçin.
+6. **Grupları seçin** bölmesinde **Seç** ' e tıklayın.
+7. Atamayı ayarlamak için **ata** bölmesinde **Tamam** ' a tıklayın.
+8. Herhangi bir kullanıcı grubunun bu uygulama atamasından etkilenmesini istemiyorsanız, **Grupları Dışla**'yı seçin.
+9. Herhangi bir grubu dışlamayı seçtiyseniz, **Grupları seçin** alanında **Seç** düğmesini seçin.
+10. **Grup Ekle** bölmesinde **Tamam ' ı** seçin.
+11. Uygulama **atamaları** bölmesinde **Kaydet** ' i seçin.
+
+> [!IMPORTANT]
+> Uygulamayı başarılı bir şekilde kaldırmak için, bunları kaldırılmak üzere atamadan önce yükleme için üye veya grup atamasını kaldırdığınızdan emin olun. Bir gruba bir uygulama yüklemek ve uygulamayı kaldırmak için bir grup atanmışsa, uygulama kalır ve kaldırılmaz.
 
 ## <a name="app-installation-errors"></a>Uygulama yükleme hataları
 
