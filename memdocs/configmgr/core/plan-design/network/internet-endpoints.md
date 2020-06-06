@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 58afaf564a8afaba4569755575fcc7c1757c5529
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 8423af8d4c743965f627a94a07f587fd97d45bdf
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110143"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454979"
 ---
 # <a name="internet-access-requirements"></a>İnternet erişimi gereksinimleri
 
@@ -34,11 +34,11 @@ Hizmet bağlantı noktası hakkında daha fazla bilgi için bkz. [hizmet bağlan
 Diğer Configuration Manager özellikleri, hizmet bağlantı noktasından ek uç noktalar gerektirebilir. Daha fazla bilgi için bu makaledeki diğer bölümlere bakın.
 
 > [!TIP]  
-> Hizmet bağlantı noktası, `go.microsoft.com` veya `manage.microsoft.com`' a bağlanırken Microsoft Intune hizmetini kullanır. Tedarikçinin bağlayıcının, Baltimore CyberTrust kök sertifikası yüklü değilse, kullanım dolmuşsa veya hizmet bağlantı noktasında bozulması durumunda bağlantı sorunlarıyla karşılaşdığı bilinen bir sorun vardır. Daha fazla bilgi için bkz. [KB 3187516: hizmet bağlantı noktası güncelleştirmeleri indirmiyor](https://support.microsoft.com/help/3187516).  
+> Hizmet bağlantı noktası, veya ' a bağlanırken Microsoft Intune hizmetini kullanır `go.microsoft.com` `manage.microsoft.com` . Tedarikçinin bağlayıcının, Baltimore CyberTrust kök sertifikası yüklü değilse, kullanım dolmuşsa veya hizmet bağlantı noktasında bozulması durumunda bağlantı sorunlarıyla karşılaşdığı bilinen bir sorun vardır. Daha fazla bilgi için bkz. [KB 3187516: hizmet bağlantı noktası güncelleştirmeleri indirmiyor](https://support.microsoft.com/help/3187516).  
 
 Sürüm 2002 ' den başlayarak, Configuration Manager site bir bulut hizmeti için gerekli uç noktalara bağlanamazsa, kritik bir durum ileti KIMLIĞI 11488 oluşturur. Hizmete bağlanamadığınızda SMS_SERVICE_CONNECTOR bileşen durumu kritik olarak değişir. Configuration Manager konsolunun [Bileşen durumu](../../servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) düğümünde ayrıntılı durumu görüntüleyin.<!-- 5566763 -->
 
-### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"/>Güncelleştirmeler ve bakım
+### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"></a>Güncelleştirmeler ve bakım
 
 Bu işlev hakkında daha fazla bilgi için bkz. [güncelleştirmeler ve bakım Configuration Manager](../../servers/manage/updates.md).
 
@@ -87,6 +87,18 @@ Windows 10 cihazlarını ortak yönetim için Microsoft Intune kaydederseniz, bu
 
 [İş için Microsoft Store](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)Configuration Manager tümleştirirseniz, hizmet bağlantı noktasının ve hedeflenen cihazların bulut hizmetine erişebildiğinden emin olun. Daha fazla bilgi için bkz. [iş proxy yapılandırması için Microsoft Store](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
 
+## <a name="delivery-optimization"></a>Teslim iyileştirme
+
+Teslim iyileştirme kullanıyorsanız, istemcilerin bulut hizmetiyle iletişim kurması gerekir:`*.do.dsp.mp.microsoft.com`
+
+Microsoft bağlı önbelleğini destekleyen dağıtım noktaları da bu uç noktaları gerektirir.
+
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
+
+- [Teslim iyileştirme hakkında SSS](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
+- [Configuration Manager 'de içerik yönetimi için temel kavramlar](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
+- [Configuration Manager 'de Microsoft bağlı önbelleği](../hierarchy/microsoft-connected-cache.md)
+
 ## <a name="cloud-services"></a><a name="bkmk_cloud"></a>Bulut Hizmetleri
 
 <!-- SCCMDocs-pr #3402 -->
@@ -106,9 +118,9 @@ CMG/CDP hizmet dağıtımı için **hizmet bağlantı noktasının** erişimi ol
 
 - Hizmet yönetimi uç noktası:`https://management.core.windows.net/`  
 
-- Depolama uç noktası `<name>.blob.core.windows.net` : ve`<name>.table.core.windows.net`
+- Depolama uç noktası: `<name>.blob.core.windows.net` ve`<name>.table.core.windows.net`
 
-    Burada `<name>` CMG 'NIZ veya CDP 'nizin bulut hizmeti adıdır. Örneğin, CMG 'niz ise `GraniteFalls.CloudApp.Net`, izin verilecek ilk depolama uç noktası olur. `GraniteFalls.blob.core.windows.net`<!-- SCCMDocs#2288 -->
+    Burada `<name>` CMG 'niz veya CDP 'nizin bulut hizmeti adıdır. Örneğin, CMG 'niz ise `GraniteFalls.CloudApp.Net` , izin verilecek ilk depolama uç noktası olur `GraniteFalls.blob.core.windows.net` .<!-- SCCMDocs#2288 -->
 
 **Configuration Manager konsolu** ve **ISTEMCISI**tarafından Azure AD belirteci alımı için:
 

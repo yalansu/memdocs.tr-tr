@@ -3,13 +3,13 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 05/26/2020
-ms.openlocfilehash: ad725a2aeb01984d8bce71f66307792e8d1691ee
-ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
+ms.date: 06/05/2020
+ms.openlocfilehash: 3672127798b66d857b4a1dbd5014c02dfed8a7ee
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226667"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84466962"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
@@ -128,7 +128,6 @@ Varlıklar, istemciden sorgulanabilen nesnelerdir. Şu anda şu varlıkları des
 |Protectedvolumeınformation|Korumalı birim bilgileri|
 |Protokol|Protokol|
 |QuickFixEngineering|Hızlı düzelme Mühendisliği|
-|Kayıt defteri ()|Belirli bir kayıt defteri anahtarı için tüm değerler|
 |SCSIController|SCSI denetleyicisi|
 |SerialPortConfiguration|Seri bağlantı noktası yapılandırması|
 |Seri bağlantı noktaları|Seri bağlantı noktaları|
@@ -219,7 +218,7 @@ Aşağıdaki tabloda işleçler özetlenmektedir:
 |! StartsWith|RHS, LHS 'in bir başlangıç alt dizisi değildir|`'abc' !startswith 'bc'`|
 |EndsWith|RHS, LHS 'in bir kapanış alt sırasıdır|`'abc' endswith 'bc'`|
 |! EndsWith|RHS, LHS 'in bir kapanış alt dizisi değildir|`'abc' !endswith 'a'`|
-|and|Yalnızca RHS ve LHS true ise doğru|`(1 == 1) and (2 == 2)`|
+|ve|Yalnızca RHS ve LHS true ise doğru|`(1 == 1) and (2 == 2)`|
 |veya|Yalnızca RHS veya LHS true ise doğru|`(1 == 1) or (1 == 2)`|
 
 ## <a name="aggregation-functions"></a>Toplama işlevleri
@@ -270,4 +269,5 @@ Skaler işlevler ifadelerde kullanılabilir. Şu anda aşağıdaki skaler işlev
 |Varlık|FileContent ()|Belirli bir dosyanın içeriği|
 |Varlık|NAPClient|NAP Istemcisi|
 |Varlık|NAPSystemHealthAgent|NAP sistem durumu Aracısı|
+|Varlık|Kayıt defteri ()|Belirli bir kayıt defteri anahtarı için tüm değerler<!--7371183-->|
 |Table işleci|işlenecek|Sonuçları grafik çıkış olarak işler|

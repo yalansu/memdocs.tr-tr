@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 36ab89f1e9988adc167bf69ff7d9f53b02bbe10f
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 11efada9eaf7e16a68902d7d6d78fb6708916d05
+ms.sourcegitcommit: e618ea7cb864635c838b672bc71a1e926bf7c047
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166555"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84458143"
 ---
 # <a name="log-file-reference"></a>Günlük dosyası başvurusu
 
@@ -75,13 +75,13 @@ Aşağıdaki bölümler, size sunulan farklı günlük dosyaları hakkında ayr�
 
   - [Desktop Analytics](#desktop-analytics)
 
-  - [Bulma](#BKMK_DiscoveryLog)  
+  - [Keşfini](#BKMK_DiscoveryLog)  
 
   - [Endpoint Protection](#BKMK_EPLog)  
 
-  - [Uzantıları](#BKMK_Extensions)  
+  - [Uzantılar](#BKMK_Extensions)  
 
-  - [Envanter](#BKMK_InventoryLog)  
+  - [Sayım](#BKMK_InventoryLog)  
 
   - [Geçiş](#BKMK_MigrationLog)  
 
@@ -167,13 +167,13 @@ Aşağıdaki tabloda Configuration Manager istemcisinde bulunan günlük dosyala
 |PolicySdk.log|İlke sistemi SDK arabirimleriyle ilgili etkinlikleri kaydeder.|  
 |Pwrmgmt.log|Uyandırma proxy'si istemci ayarlarını etkinleştirme veya devre dışı bırakma ve yapılandırma ile ilgili bilgileri kaydeder.|  
 |PwrProvider.log|WMI hizmetinde barındırılan güç yönetimi sağlayıcısının (Pwrınvprovider) etkinliklerini kaydeder. Windows'un tüm desteklenen sürümlerinde, sağlayıcı, donanım envanter kaydı sırasında bilgisayarlardaki geçerli ayarların listesini oluşturur ve güç planı ayarlarını uygular.|  
-|SCClient_&lt;*etki*\>@alanı&lt;*Kullanıcı*adı\>_1. log|İstemci bilgisayardaki belirtilen kullanıcı için Yazılım Merkezi'ndeki etkinliği kaydeder.|  
-|SCClient_&lt;*etki*\>@alanı&lt;*Kullanıcı*adı\>_2. log|İstemci bilgisayardaki belirtilen kullanıcı için Yazılım Merkezi'ndeki etkinlik geçmişini kaydeder.|  
+|SCClient_ &lt; *etki alanı* \> @ &lt; *Kullanıcı adı* \> _1. log|İstemci bilgisayardaki belirtilen kullanıcı için Yazılım Merkezi'ndeki etkinliği kaydeder.|  
+|SCClient_ &lt; *etki alanı* \> @ &lt; *Kullanıcı adı* \> _2. log|İstemci bilgisayardaki belirtilen kullanıcı için Yazılım Merkezi'ndeki etkinlik geçmişini kaydeder.|  
 |Scheduler.log|Tüm istemci işlemlerine yönelik zamanlanmış görevlerin etkinliklerini kaydeder.|  
-|SCNotify_&lt;*etki*\>@alanı&lt;*Kullanıcı*adı\>_1. log|Belirtilen kullanıcıya yönelik yazılımları kullanıcılara bildirme etkinliğini kaydeder.|  
-|SCNotify_&lt;*etki alanı*\>@\>&lt;*date_time* Kullanıcı adı _1-date_time>. log*username*&lt;|Belirtilen kullanıcıya yönelik yazılımları kullanıcılara bildirmeye yönelik geçmiş bilgileri kaydeder.|  
+|SCNotify_ &lt; *etki alanı* \> @ &lt; *Kullanıcı adı* \> _1. log|Belirtilen kullanıcıya yönelik yazılımları kullanıcılara bildirme etkinliğini kaydeder.|  
+|SCNotify_ &lt; *etki alanı* \> @ &lt; *Kullanıcı adı* \> _1- &lt; *date_time*>. log|Belirtilen kullanıcıya yönelik yazılımları kullanıcılara bildirmeye yönelik geçmiş bilgileri kaydeder.|  
 |setuppolicyevaluator.log|WMI'de yapılandırma ve envanter ilkesi oluşturma bilgilerini kaydeder.|  
-|SleepAgent_&lt;*etki alanı*\>@SYSTEM_0.log|Uyandırma proxy 'si için ana günlük dosyası.|  
+|SleepAgent_ &lt; *etki alanı*\>@SYSTEM_0.log|Uyandırma proxy 'si için ana günlük dosyası.|  
 |smscliui.log|Denetim Masası 'nda Configuration Manager istemcisinin kullanımını kaydeder.|  
 |SrcUpdateMgr.log|Geçerli dağıtım noktası kaynağı konumlarıyla güncelleştirilen yüklü Windows Installer uygulamalarına yönelik etkinliği kaydeder.|  
 |StatusAgent.log|İstemci bileşenleri tarafından oluşturulan durum iletilerini kaydeder.|  
@@ -210,7 +210,7 @@ Linux ve UNIX için Configuration Manager istemcisi, bilgileri aşağıdaki gün
 |Günlük adı|Ayrıntılar|
 |-------------------|-----------------------------------------------------------------|
 |Scxcm. log| Linux ve UNIX için Configuration Manager istemcisinin çekirdek hizmetine yönelik günlük dosyası (Ccmexec. bin). Bu günlük dosyası, ccmexec.bin'in yüklenmesi ve devam eden işlemleri ile ilgili bilgileri içerir. Varsayılan olarak, bu günlük dosyası **/var/opt/microsoft/scxcm.log**adresinde bulunur. Günlük dosyasının konumunu değiştirmek için **/opt/microsoft/configmgr/etc/scxcm.conf** yolunu düzenleyin ve **YOL** alanını değiştirin. Değişikliğin etkili olması için istemci bilgisayarı veya hizmeti yeniden başlatmanız gerekmez. Günlük düzeyini dört farklı ayarlardan birine ayarlayabilirsiniz. |
-| Scxcmprovider. log |Linux ve UNIX için Configuration Manager istemcisinin CıM hizmetine yönelik günlük dosyası (omiserver. bin). Bu günlük dosyası, nwserver.bin'in devam eden işlemleri ile ilgili bilgiler içerir. Bu günlük konumunda `/var/opt/microsoft/configmgr/scxcmprovider.log`bulunur. Günlük dosyasının konumunu değiştirmek için **/opt/microsoft/omi/etc/scxcmprovider.conf** dosyasını düzenleyin ve **YOL** alanını değiştirin. Değişikliğin etkili olması için istemci bilgisayarı veya hizmeti yeniden başlatmanız gerekmez. Günlük düzeyini üç ayarlardan birine ayarlayabilirsiniz.|
+| Scxcmprovider. log |Linux ve UNIX için Configuration Manager istemcisinin CıM hizmetine yönelik günlük dosyası (omiserver. bin). Bu günlük dosyası, nwserver.bin'in devam eden işlemleri ile ilgili bilgiler içerir. Bu günlük konumunda bulunur `/var/opt/microsoft/configmgr/scxcmprovider.log` . Günlük dosyasının konumunu değiştirmek için **/opt/microsoft/omi/etc/scxcmprovider.conf** dosyasını düzenleyin ve **YOL** alanını değiştirin. Değişikliğin etkili olması için istemci bilgisayarı veya hizmeti yeniden başlatmanız gerekmez. Günlük düzeyini üç ayarlardan birine ayarlayabilirsiniz.|
 
 Her iki günlük dosyası da birkaç günlük tutma düzeyini destekler:  
 
@@ -248,10 +248,10 @@ Mac bilgisayarlar için Configuration Manager istemcisi, Mac bilgisayardaki aşa
 
 |Günlük adı|Ayrıntılar|Konum|
 |--------------|-------------|-------------|
-|Ccmclient-&lt;*date_time*>. log|Uygulama yönetimi, envanter ve hata günlüğü dahil olmak üzere Mac istemci işlemleriyle ilgili etkinlikleri kaydeder.| `/Library/Application Support/Microsoft/CCM/Logs`|  
-|Ccmagent-&lt;*date_time*>. log|Kullanıcı oturum açma ve oturumu kapatma işlemleri ve Mac bilgisayar etkinliği dahil olmak üzere istemci işlemleriyle ilgili bilgileri kaydeder.| `~/Library/Logs`|  
-|Ccmnotifications-&lt;*date_time*>. log|Mac bilgisayarda görüntülenen Configuration Manager bildirimleriyle ilgili etkinlikleri kaydeder.| `~/Library/Logs`|  
-|Ccmprefpane-&lt;*date_time*>. log|Mac bilgisayardaki Configuration Manager tercihleri iletişim kutusuyla ilgili etkinlikleri kaydeder; bu, genel durum ve hata günlüğü içerir.| `~/Library/Logs`|  
+|CCMClient- &lt; *date_time*>. log|Uygulama yönetimi, envanter ve hata günlüğü dahil olmak üzere Mac istemci işlemleriyle ilgili etkinlikleri kaydeder.| `/Library/Application Support/Microsoft/CCM/Logs`|  
+|CCMAgent- &lt; *date_time*>. log|Kullanıcı oturum açma ve oturumu kapatma işlemleri ve Mac bilgisayar etkinliği dahil olmak üzere istemci işlemleriyle ilgili bilgileri kaydeder.| `~/Library/Logs`|  
+|CCMNotifications- &lt; *date_time*>. log|Mac bilgisayarda görüntülenen Configuration Manager bildirimleriyle ilgili etkinlikleri kaydeder.| `~/Library/Logs`|  
+|CCMPrefPane- &lt; *date_time*>. log|Mac bilgisayardaki Configuration Manager tercihleri iletişim kutusuyla ilgili etkinlikleri kaydeder; bu, genel durum ve hata günlüğü içerir.| `~/Library/Logs`|  
 
 Site sistem sunucusundaki **SMS_DM. log** dosyası, Mac bilgisayarlar ve mobil cihazlar ve Mac bilgisayarlar için ayarlanan yönetim noktası arasındaki iletişimi de kaydeder.  
 
@@ -438,7 +438,7 @@ Aşağıdaki tabloda, yazılım güncelleştirme noktasıyla ilgili bilgiler iç
 |Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |objreplmgr.log|Yazılım güncelleştirme bildirim dosyalarının üst siteden alt sitelere çoğaltılmasıyla ilgili ayrıntıları kaydeder.|Site sunucusu|  
-|PatchDownloader.log|Yazılım güncelleştirmelerinin güncelleştirme kaynağından site sunucusundaki indirme hedefine indirilmesi işlemiyle ilgili ayrıntıları kaydeder.|Güncelleştirmeleri el ile indirdiğinizde, bu dosya, konsolunu kullandığınız `%temp%` bilgisayardaki dizininizde bulunur. Otomatik dağıtım kuralları için, Configuration Manager istemcisi site sunucusunda yüklüyse, bu dosya içindeki `%windir%\CCM\Logs`site sunucusudur.|  
+|PatchDownloader.log|Yazılım güncelleştirmelerinin güncelleştirme kaynağından site sunucusundaki indirme hedefine indirilmesi işlemiyle ilgili ayrıntıları kaydeder.|Güncelleştirmeleri el ile indirdiğinizde, bu dosya, `%temp%` konsolunu kullandığınız bilgisayardaki dizininizde bulunur. Otomatik dağıtım kuralları için, Configuration Manager istemcisi site sunucusunda yüklüyse, bu dosya içindeki site sunucusudur `%windir%\CCM\Logs` .|  
 |ruleengine.log|Tanımlama, içerik indirme ve yazılım güncelleştirme grubu ve dağıtım oluşturmaya yönelik otomatik dağıtım kurallarıyla ilgili ayrıntıları kaydeder.|Site sunucusu|
 |SMS_ISVUPDATES_SYNCAGENT. log| Üçüncü taraf yazılım güncelleştirmelerinin eşitlenmesi için günlük dosyası.| Configuration Manager hiyerarşisindeki üst düzey yazılım güncelleştirme noktası.|
 |SUPSetup.log|Yazılım güncelleştirme noktası yüklemesiyle ilgili ayrıntıları kaydeder. Yazılım güncelleştirme noktası yüklemesi tamamlandığında, bu günlük dosyasına **Yükleme başarılıydı** yazılır.|Site sistemi sunucusu|  
@@ -481,6 +481,7 @@ Aşağıdaki tabloda, uygulama yönetimiyle ilgili bilgiler içeren günlük dos
 |SMSdpmon.log|Dağıtım noktasında yapılandırılmış dağıtım noktası durumunu izleme zamanlanmış göreviyle ilgili ayrıntıları kaydeder.|Site sunucusu|  
 |SoftwareCatalogUpdateEndpoint.log|Yazılım Merkezi 'nde gösterilen Uygulama Kataloğu için URL 'YI yönetmeye yönelik etkinlikleri kaydeder.|İstemci|  
 |SoftwareCenterSystemTasks.log|Software Center Önkoşul bileşen doğrulaması ile ilgili etkinlikleri kaydeder.|İstemci|  
+|TSDTHandler. log|Görev sırası dağıtım türü için. İşlem, görev dizisinin başlatılması için uygulama zorlamadaki (yükleme veya kaldırma) işlemi günlüğe kaydeder. Bunu AppEnforce. log ve Smsts. log ile birlikte kullanın.|İstemci|<!-- MEMDocs#336 -->
 
 #### <a name="packages-and-programs"></a>Paketler ve programlar
 
@@ -572,7 +573,7 @@ Aşağıdaki tabloda, bulut yönetimi ağ geçidiyle ilgili bilgiler içeren gü
 
 #### <a name="note-1-logs-synchronized-from-azure"></a><a name="bkmk_note1"></a>Note 1: Azure 'dan eşitlenen Günlükler
 
-Bunlar, bulut Service Manager 'ın her beş dakikada bir Azure depolama 'dan eşitlendiği yerel Configuration Manager günlük dosyalarıdır. Bulut yönetimi ağ geçidi, günlükleri her beş dakikada bir Azure depolama 'ya gönderir. Bu nedenle en fazla gecikme 10 dakikadır. Ayrıntılı anahtarlar hem yerel hem de uzak günlükleri etkiler. Gerçek dosya adları, hizmet adını ve rol örneği tanımlayıcısını içerir. Örneğin, CMG-*ServiceName*-*roleınstanceıd*-cmgsetup. log
+Bunlar, bulut Service Manager 'ın her beş dakikada bir Azure depolama 'dan eşitlendiği yerel Configuration Manager günlük dosyalarıdır. Bulut yönetimi ağ geçidi, günlükleri her beş dakikada bir Azure depolama 'ya gönderir. Bu nedenle en fazla gecikme 10 dakikadır. Ayrıntılı anahtarlar hem yerel hem de uzak günlükleri etkiler. Gerçek dosya adları, hizmet adını ve rol örneği tanımlayıcısını içerir. Örneğin, CMG-*ServiceName* - *roleınstanceıd*-cmgsetup. log
 
 ### <a name="compliance-settings-and-company-resource-access"></a><a name="BKMK_CompSettingsLog"></a>Uyumluluk ayarları ve şirket kaynağı erişimi
 
@@ -602,7 +603,7 @@ Aşağıdaki tabloda, içerik yönetimiyle ilgili bilgiler içeren günlük dosy
 
 |Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
-|CloudDP-&lt;Guid\>. log|Depolama ve içerik erişimi hakkındaki bilgiler dahil olmak üzere belirli bir bulut tabanlı dağıtım noktasıyla ilgili ayrıntıları kaydeder.|Site sistemi sunucusu|  
+|CloudDP- &lt; Guid \> . log|Depolama ve içerik erişimi hakkındaki bilgiler dahil olmak üzere belirli bir bulut tabanlı dağıtım noktasıyla ilgili ayrıntıları kaydeder.|Site sistemi sunucusu|  
 |CloudMgr.log|İçerik sağlama, depolama ve bant genişliği istatistiklerinin toplanması ve bulut tabanlı dağıtım noktası çalıştıran bulut hizmetini durdurmak veya başlatmak için yönetici tarafından başlatılan eylemler hakkındaki ayrıntıları kaydeder.|Site sistemi sunucusu|  
 |DataTransferService.log|İlke veya paket erişimine ilişkin tüm BITS iletişimini kaydeder. Bu günlük, çekme dağıtım noktaları tarafından içerik yönetimi için de kullanılır.|Çekme dağıtım noktası olarak yapılandırılan bilgisayar|  
 |PullDP.log|Çekme dağıtım noktasının kaynak dağıtım noktalarından aktardığı içerikle ilgili ayrıntıları kaydeder.|Çekme dağıtım noktası olarak yapılandırılan bilgisayar|  
@@ -615,8 +616,8 @@ Aşağıdaki tabloda, içerik yönetimiyle ilgili bilgiler içeren günlük dosy
 
 Configuration Manager ile tümleştirilmiş masaüstü analiziyle ilgili sorunları gidermeye yardımcı olması için aşağıdaki günlük dosyalarını kullanın.
 
-Hizmet bağlantı noktasındaki günlük dosyaları şu dizinde: `%ProgramFiles%\Configuration Manager\Logs\M365A`.
-Configuration Manager istemcisindeki günlük dosyaları şu dizinde: `%WinDir%\CCM\logs`.
+Hizmet bağlantı noktasındaki günlük dosyaları şu dizinde: `%ProgramFiles%\Configuration Manager\Logs\M365A` .
+Configuration Manager istemcisindeki günlük dosyaları şu dizinde: `%WinDir%\CCM\logs` .
 
 | Günlük | Açıklama |Günlük dosyası içeren bilgisayar|
 |---------|---------|---------|
@@ -855,7 +856,7 @@ Aşağıdaki tabloda yazılım güncelleştirmeleriyle ilgili bilgileri içeren 
 Aşağıdaki tabloda LAN'da Uyandırma kullanımı ile ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
 > [!NOTE]  
-> LAN'da Uyandırma, uyandırma proxy 'sini kullanarak eklediğinizde, bu etkinlik istemcide günlüğe kaydedilir. Örneğin, bu makalenin [istemci işlemleri](#BKMK_ClientOpLogs) bölümünde yer alan Ccmexec. log ve SleepAgent_<*etki alanı* \> @SYSTEM_0.log ' na bakın.  
+> LAN'da Uyandırma, uyandırma proxy 'sini kullanarak eklediğinizde, bu etkinlik istemcide günlüğe kaydedilir. Örneğin, *domain* \> @SYSTEM_0.log Bu makalenin [istemci işlemleri](#BKMK_ClientOpLogs) bölümünde yer alan Ccmexec. log ve SleepAgent_<etki alanı ' na bakın.  
 
 |Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
@@ -871,7 +872,7 @@ Bakım, yazılım güncelleştirmeleriyle aynı altyapıyı ve işlemi kullanır
 |--------------|-----------------|----------------------------|  
 |CBS. log|Windows güncelleştirmeleri veya rolleri ve özellikleri değişiklikleriyle ilgili olarak bakım başarısızlıklarını kaydeder.|İstemci|
 |DıSM. log|DıSM kullanarak tüm eylemleri kaydeder. Gerekirse, daha fazla ayrıntı için DıSM. log dosyası CBS. log dosyasına işaret eder.|İstemci|
-|Setupact. log|Windows yükleme işlemi sırasında oluşan hataların çoğu için birincil günlük dosyası. Günlük dosyası% Windir%\$Windows. ~ BT\sources\panther klasöründe bulunur.|İstemci|
+|Setupact. log|Windows yükleme işlemi sırasında oluşan hataların çoğu için birincil günlük dosyası. Günlük dosyası% Windir% \$ Windows. ~ BT\sources\panther klasöründe bulunur.|İstemci|
 
 Daha fazla bilgi için bkz. [çevrimiçi hizmet Ile Ilgili günlük dosyaları](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
 

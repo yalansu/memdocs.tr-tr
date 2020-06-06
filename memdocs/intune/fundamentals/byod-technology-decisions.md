@@ -15,12 +15,12 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5d0e809e834a82f192128263742bc2b9b0024a2
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 9a264b9a3b8f0ba15debe7e7323c106f09fa12c6
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079289"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455251"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>KCG'yi Microsoft Enterprise Mobility + Security (EMS) ile etkinleştirmeye yönelik teknoloji kararları
 
@@ -72,14 +72,14 @@ Yine de birçok kuruluşun ilgilendikleri belirli riskleri vardır.  Aşağıdak
 |Ele geçirilen kullanıcı hesabı | Yüksek riskli kullanıcıları engelleme | Yüksek riskli kullanıcıları engelleme |
 |Ele geçirilen kullanıcı hesabı | Cihaz PIN'i | Uygulama PIN'i |
 | | | |
-| Güvenliği aşılmış cihaz veya uygulama | Uyumlu cihaz gerektirir | Uygulama başlatmada kaçış denetimi |
+| Güvenliği aşılmış cihaz veya uygulama | Uyumlu cihaz gerektirir | Uygulama başlatıldığında jailbreak/kök denetimi |
 | Güvenliği aşılmış cihaz veya uygulama | Cihaz verilerini şifreleme | Uygulama verilerini şifreleme |
 | | | |
 |Kayıp veya çalınan cihaz | Tüm cihaz verilerini kaldırma | Tüm uygulama verilerini kaldırma|
 | | | |
-| Verileri yanlışlıkla paylaşma veya güvenli olmayan konumlara kaydetme | Cihaz verileri yedeklemesini kısıtlama | Kesme/kopyalama/yapıştırma işlemlerini kısıtlama|
+| Verileri yanlışlıkla paylaşma veya güvenli olmayan konumlara kaydetme | Cihaz verileri yedeklemesini kısıtlama | Kuruluş verilerinin yedeklemelerini kısıtla |
 | Verileri yanlışlıkla paylaşma veya güvenli olmayan konumlara kaydetme | Farklı kaydetme işlemini kısıtlama | Farklı kaydetme işlemini kısıtlama |
-|Verileri yanlışlıkla paylaşma veya güvenli olmayan konumlara kaydetme | Yazdırmayı devre dışı bırak | yok|
+|Verileri yanlışlıkla paylaşma veya güvenli olmayan konumlara kaydetme | Yazdırmayı devre dışı bırak | Kuruluş verilerinin yazdırılmasını devre dışı bırak |
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Artık cihaz yönetimine, uygulama yönetimine veya ikisinin birleşimine odaklanarak kuruluşunuzda BYOD 'yi etkinleştirip etkinleştirmemeye karar vereceğiz. Nasıl hayata geçireceğiniz konusunda kararı siz verirsiniz ve bu arada da Azure AD'de sağlanan kimlik ve güvenlik özelliklerinin yine sağlanacağından emin olabilirsiniz.  

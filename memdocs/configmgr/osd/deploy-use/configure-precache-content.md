@@ -10,12 +10,12 @@ ms.assetid: 9d1e8252-99e3-48aa-bfa5-0cf4cd6637b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 184bdc58ac6dc0e311875cc1ddab8c605d8eec32
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ec465f3dee33ca311aec120e74a2994a81a90ec9
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720628"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455234"
 ---
 # <a name="configure-pre-cache-content-for-task-sequences"></a>Görev dizileri için ön önbellek içeriğini yapılandırma
 
@@ -68,7 +68,7 @@ Belirli donanım modelleri için [sürücü paketleri](../get-started/manage-dri
 Ön belleğe alma sırasında indirilen sürücü paketini öğrenmek için, istemci modeli **Win32_ComputerSystemProduct** WMI sınıfının **Name** özelliğine göre değerlendirir.
 
 > [!TIP]
-> Asıl sorgu joker karakter içeren `LIKE` bir ifade kullanır: `select * from win32_computersystemproduct where name like "%yourstring%"`. Örneğin, model olarak belirtirseniz `Surface` , sorgu bu dizeyi içeren tüm modellerle eşleşir.<!-- 6315551 -->
+> Asıl sorgu `LIKE` joker karakter içeren bir ifade kullanır: `select * from win32_computersystemproduct where name like "%yourstring%"` . Örneğin, `Surface` model olarak belirtirseniz, sorgu bu dizeyi içeren tüm modellerle eşleşir.<!-- 6315551 -->
 
 #### <a name="package"></a>Paket
 
@@ -101,7 +101,6 @@ Farklı diller ve mimarilere yönelik koşullu adımları veya sürücü paketle
 >
 > Önce **Işletim sistemi dil** koşulunu seçerek dili ekleyin. Ardından, mimari yan tümcesini içerecek şekilde WMI sorgusunu düzenleyin.
 
-
 ### <a name="3-deploy-the-task-sequence"></a><a name="bkmk_deploy"></a>3. görev dizisini dağıtma
 
 [Görev sırasını dağıtın](deploy-a-task-sequence.md). Ön önbellek özelliği için aşağıdaki ayarları yapılandırın:  
@@ -115,17 +114,15 @@ Farklı diller ve mimarilere yönelik koşullu adımları veya sürücü paketle
 - **Dağıtım noktaları** sekmesinde, **dağıtım seçenekleri** ayarlarını yapılandırın. Bir Kullanıcı yüklemeyi başlamadan önce içerik önceden önbelleğe alınmamışsa, istemci bu ayarları kullanır.  
 
     > [!Important]  
-    > İşletim sistemi görüntüsü yükleyen bir görev sırası için, **çalışan görev dizisi için gerektiğinde içeriği yerel olarak indirmek**için dağıtım seçeneğini kullanmayın. Görev dizisi, işletim sistemi görüntüsünü uygulamadan önce diski temizler, istemci önbelleğini kaldırır. İçerik kaybolduğundan, görev sırası başarısız olur.<!-- SCCMDocs-PR #1338 -->
+    > İşletim sistemi görüntüsü yükleyen bir görev sırası için, **çalışan görev dizisi için gerektiğinde içeriği yerel olarak indirmek**için dağıtım seçeneğini kullanmayın. Görev dizisi, işletim sistemi görüntüsünü uygulamadan önce diski temizler, istemci önbelleğini kaldırır. İçerik kaybolduğundan, görev sırası başarısız olur.<!-- SCCMDocs-PR #1338 --> Bu dağıtım seçenekleri, dağıtım için belirlediğiniz diğer seçeneklere göre dinamiktir. Daha fazla bilgi için, bkz. [Deploy a task sequence](deploy-a-task-sequence.md#bkmk_deploy-options).<!-- MEMDocs#328, SCCMDocs#2114 -->
 
-
-## <a name="user-experience"></a>Kullanıcı deneyimleri
+## <a name="user-experience"></a>Kullanıcı deneyimi
 
 - İstemci dağıtım ilkesini aldığında, dağıtımın kullanılabilir zamanından sonra içeriği önceden önbelleğe alma başlar. Bu içerik, tüm başvurulan paketleri içerir, ancak yalnızca paketteki mimari ve dil öznitelikleriyle eşleşen işletim sistemi yükseltme paketidir.  
 
 - İstemci, dağıtımı kullanıcılar için kullanılabilir hale geldiğinde, kullanıcıları yeni dağıtım hakkında bilgilendirmek için bir bildirim görüntülenir. Artık görev dizisi yazılım merkezi 'nde görünür. Kullanıcı yazılım merkezi 'ne gidebilir ve yüklemeyi başlatmak için **yükleme** ' ye tıklayabilir.  
 
 - Kullanıcı görev sırasını yüklediğinde istemci içeriği tam olarak önceden önbelleğe mamışsa, istemci, dağıtımın **dağıtım seçeneği** sekmesinde belirttiğiniz ayarları kullanır.  
-
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

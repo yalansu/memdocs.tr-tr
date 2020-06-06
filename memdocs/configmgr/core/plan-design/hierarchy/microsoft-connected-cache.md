@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4dead573e1744a5c8b84ff954e85be43af644486
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 70d4930da712eccff8bdb1f1986a68aa5fe77644
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878487"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455285"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 'de Microsoft bağlı önbelleği
 
@@ -63,7 +63,7 @@ Bu önbellek Configuration Manager dağıtım noktası içeriğinden ayrıdır. 
 
   - IIS [uygulama Isteği yönlendirme](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) özelliğini önceden yüklemeyin. Bağlı önbellek, ARR 'yi yüklüyor ve ayarlarını yapılandırır. Microsoft, bağlı önbelleğin ARR yapılandırmasının bu özelliği de kullanan sunucudaki diğer uygulamalarla çakışmamasını garanti edemez.
 
-  - Dağıtım noktası, Microsoft bulutuna internet erişimi gerektirir. Belirli URL 'Ler, bulut özellikli belirli içeriklere göre farklılık gösterebilir. Daha fazla bilgi için bkz. [Internet erişimi gereksinimleri](../network/internet-endpoints.md).
+  - Dağıtım noktası, Microsoft bulutuna internet erişimi gerektirir. Belirli URL 'Ler, bulut özellikli belirli içeriklere göre farklılık gösterebilir. Teslim iyileştirme için uç noktalara de izin vermeyi unutmayın. Daha fazla bilgi için bkz. [Internet erişimi gereksinimleri](../network/internet-endpoints.md).
 
   - Sürüm 2002 ' den başlayarak, bağlı önbellek uygulaması internet erişimi için kimliği doğrulanmamış bir ara sunucu kullanabilir. Daha fazla bilgi için bkz. [bir site sistemi sunucusu için proxy yapılandırma](../network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server).<!-- 5856396 -->
 

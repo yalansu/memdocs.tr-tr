@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 06/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f39681bf954e84376e5d8e3862354a2a10b1003a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 10c715bcff63e6ec5a9ec9002926f6ee6608360e
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988100"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455081"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Uygulama koruma ilkelerini izleme
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Kullanıcılara uyguladığınız uygulama koruma ilkelerinin durumunu, [Azure Portal](https://portal.azure.com)Intune uygulama koruması bölmesinden izleyebilirsiniz. Ayrıca, uygulama koruma ilkelerinden etkilenen kullanıcılar hakkında bilgiler, ilke uyumluluk durumu ve kullanıcılarınızın karşılaşmış olabileceği sorunlar hakkında bilgi edinebilirsiniz.
+Kullanıcılara uyguladığınız uygulama koruma ilkelerinin durumunu Intune 'da Intune uygulama koruması bölmesinden izleyebilirsiniz. Ayrıca, uygulama koruma ilkelerinden etkilenen kullanıcılar hakkında bilgiler, ilke uyumluluk durumu ve kullanıcılarınızın karşılaşmış olabileceği sorunlar hakkında bilgi edinebilirsiniz.
 
 Uygulama koruma ilkelerini izlemek için üç farklı yer vardır:
 - Özet görünümü
@@ -43,10 +43,9 @@ Uygulama koruma verileri için bekletme süresi 90 gündür. Son 90 gün içinde
 ## <a name="summary-view"></a>Özet görünümü
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-3. **Apps**  >  **Monitor**  >  **Uygulama koruma durumunu**izlemek için uygulamalar ' ı seçin.
+2. **Apps**  >  **Monitor**  >  **Uygulama koruma durumunu**izlemek için uygulamalar ' ı seçin.
 
-   ![Intune mobil uygulama yönetimi bölmesindeki Özet kutucuğunun ekran görüntüsü](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
-
+Aşağıdaki listede uygulama koruma durumu hakkında ayrıntılar verilmiştir: 
 - **Atanan kullanıcılar**: şirketinizde, bir iş bağlamındaki ilkeyle ilişkili olan ve korunmayan ve lisanslanmış olan atanan kullanıcıların yanı sıra korumalı ve lisanslanan bir uygulama kullanan atanan kullanıcıların toplam sayısı.
 - **Bayraklı kullanıcılar**: cihazlarıyla ilgili sorun yaşayan Kullanıcı sayısı. Jailbreak uygulanmış (iOS/ıpados) ve kökü belirtilmiş (Android) cihazlar **bayraklı kullanıcılar**altında raporlanır. Ayrıca, Google SafetyNet cihaz kanıtlama denetimi (BT Yöneticisi tarafından açıldıysa) tarafından işaretlenen cihazlara sahip kullanıcılar burada raporlanır. 
 - **Zararlı olabilecek uygulamalara sahip kullanıcılar**: Android cihazlarında Google Play koruma tarafından algılanan zararlı bir uygulamaya sahip olabilecek Kullanıcı sayısı. 

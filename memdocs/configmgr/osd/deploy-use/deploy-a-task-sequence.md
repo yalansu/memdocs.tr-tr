@@ -10,12 +10,12 @@ ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c2347275ffdc194e73cf792d6f83ffa75732f8c4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 13c16e89cc75bff1ccecd03a98cd12782c419a40
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711416"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455214"
 ---
 # <a name="deploy-a-task-sequence"></a>Görev dizisini dağıtma
 
@@ -146,7 +146,7 @@ Görev sırasını koleksiyondaki bilgisayarlara dağıtmak için aşağıdaki p
 
     - **Windows Embedded cihazlar için filtre Işleme yaz**: Bu ayar, yazma filtresiyle etkinleştirilen Windows Embedded cihazlarındaki yükleme davranışını denetler. Yükleme son tarihinde veya bakım penceresi sırasında değişiklikleri Yürüt seçeneğini belirleyin. Bu seçeneği belirlediğinizde, yeniden başlatma gerekir ve değişiklikler cihazda kalır. Aksi takdirde, uygulama geçici bir katmana yüklenir ve daha sonra kaydedilir. Windows Embedded cihazına bir görev sırası dağıttığınızda, cihazın yapılandırılmış bakım penceresine sahip bir koleksiyonun üyesi olduğundan emin olun.  
 
-    - **Görev dizisinin Internet 'te istemci için çalışmasına Izin ver**: görev dizisinin İnternet tabanlı bir istemcide çalışmasına izin verilip verilmeyeceğini belirtin. Bir işletim sistemi yüklemesi gibi Önyükleme medyası gerektiren işlemler bu ayarla desteklenmez. Bu seçeneği yalnızca standart IŞLETIM sisteminde işlem gerçekleştiren genel yazılım yüklemeleri veya betik tabanlı görev dizileri için kullanın.  
+    - **Görev dizisinin Internet 'te istemci için çalışmasına Izin ver**: görev dizisinin İnternet tabanlı bir istemcide çalışmasına izin verilip verilmeyeceğini belirtin. Bir işletim sistemi yüklemesi gibi Önyükleme medyası gerektiren işlemler bu ayarla desteklenmez. Bu seçeneği yalnızca standart IŞLETIM sisteminde işlemleri çalıştıran genel yazılım yüklemeleri veya komut dosyası tabanlı görev sıraları için kullanın.  
 
         - Bu ayar, bulut yönetimi ağ geçidi aracılığıyla Internet tabanlı istemcilere Windows 10 yerinde yükseltme görev dizisinin dağıtımları için desteklenir. Daha fazla bilgi için bkz. [CMG aracılığıyla Windows 10 yerinde yükseltme dağıtımı](#deploy-windows-10-in-place-upgrade-via-cmg).  
 
@@ -154,19 +154,7 @@ Görev sırasını koleksiyondaki bilgisayarlara dağıtmak için aşağıdaki p
 
 9. **Dağıtım Noktaları** sayfasında aşağıdaki bilgileri belirtin:  
 
-    - **Dağıtım seçenekleri**: Aşağıdaki seçeneklerden birini belirtebilirsiniz:  
-
-        > [!NOTE]  
-        > Bir işletim sistemini dağıtmak için çok noktaya yayın kullandığınızda, içeriği gerektiğinde veya görev sırası çalıştırılmadan önce bilgisayarlara indirin.  
-
-        - **Çalışan görev dizisi için gerektiğinde içeriği yerel olarak indir**: istemcilerin, görev dizisinin gerektirdiği içeriği dağıtım noktasından indirmesini belirtin. İstemci görev dizisini başlatır. Görev dizisindeki bir adım içerik gerektirdiğinde, adım çalışmadan önce indirilir.  
-
-        - **Görev sırasını başlatmadan önce tüm içeriği yerel olarak indir**: istemcilerin, görev sırası çalıştırılmadan önce dağıtım noktasından tüm içeriği indirmelerini belirtin. Görev sırasını, **dağıtım ayarları** sayfasında PXE ve önyükleme medya dağıtımları için kullanılabilir hale getirmek için bu seçenek gösterilmez.  
-
-        - **Çalışan görev sırası için ihtiyaç duyduğunda, içeriğe doğrudan bir dağıtım noktasından erişin**: istemcilerin içeriği dağıtım noktasından çalıştırmasını belirtin. Bu seçenek yalnızca, görev dizisiyle ilişkili tüm paketleri dağıtım noktasında bir paket paylaşımının kullanması için etkinleştirdiğinizde kullanılabilir. İçeriği paket paylaşımı kullanmak üzere etkinleştirmek için, her paket için **Özellikler** 'deki **Veri Erişimi** sekmesine bakın.  
-
-            > [!IMPORTANT]  
-            > En yüksek güvenlik için, **çalışan görev dizisi için gerektiğinde içeriği yerel olarak indirme** seçeneklerini belirleyin veya **görev dizisini başlatmadan önce tüm Içeriği yerel olarak indirin**. Bu seçeneklerden birini belirlediğinizde, paket bütünlüğünü sağlamak için paketi karma Configuration Manager. **Çalışan görev sırası için gerektiğinde bir dağıtım noktasından içeriğe doğrudan erişme**seçeneğini belirlediğinizde, Configuration Manager belirtilen programı çalıştırmadan önce paket karmasını doğrulamaz. Site paket bütünlüğünü sağladığından, yönetici haklarına sahip kullanıcıların paket içeriğiyle değişiklik yapmak veya onu değiştirmesine olanak sağlamak mümkündür.  
+    - **Dağıtım seçenekleri**: daha fazla bilgi için bkz. [dağıtım seçenekleri](#bkmk_deploy-options).
 
     - **Kullanılabilir yerel dağıtım noktası olmadığında uzak bir dağıtım noktası kullan**: istemcilerin, görev dizisinin gerektirdiği içeriği indirmek için bir komşu sınır grubundan dağıtım noktalarını kullanıp kullanamayacağını belirtin.  
 
@@ -178,6 +166,63 @@ Görev sırasını koleksiyondaki bilgisayarlara dağıtmak için aşağıdaki p
 10. Bu ayarları yeniden kullanmak üzere kaydetmek için **Özet** sekmesinde **şablon olarak kaydet**' i seçin. Şablon için bir ad sağlayın ve kaydedilecek ayarları seçin.  
 
 11. Sihirbazı tamamlayın.  
+
+### <a name="deployment-options"></a><a name="bkmk_deploy-options"></a>Dağıtım seçenekleri
+
+<!-- MEMDocs#328, SCCMDocs#2114 -->
+
+Bu seçenekler, görev sırası dağıtımının **dağıtım noktaları** sekmesindedir. Bunlar, görev dizisinin dağıtım ve özniteliklerinde diğer seçimlere göre dinamik olarak belirlenir. Her zaman tüm seçenekleri görmeyebilirsiniz.
+
+> [!NOTE]  
+> Bir işletim sistemini dağıtmak için çok noktaya yayın kullandığınızda, içeriği gerektiğinde veya görev sırası çalıştırılmadan önce bilgisayarlara indirin.  
+
+- **Çalışan görev dizisi için gerektiğinde içeriği yerel olarak indir**: istemcilerin, görev dizisinin gerektirdiği içeriği dağıtım noktasından indirmesini belirtin. İstemci görev dizisini başlatır. Görev dizisindeki bir adım içerik gerektirdiğinde, adım çalışmadan önce indirilir.  
+
+- **Görev sırasını başlatmadan önce tüm içeriği yerel olarak indir**: istemcilerin, görev sırası çalıştırılmadan önce dağıtım noktasından tüm içeriği indirmelerini belirtin. Görev sırasını, **dağıtım ayarları** sayfasında PXE ve önyükleme medya dağıtımları için kullanılabilir hale getirmek için bu seçenek gösterilmez.  
+
+- **Çalışan görev sırası için ihtiyaç duyduğunda, içeriğe doğrudan bir dağıtım noktasından erişin**: istemcilerin içeriği dağıtım noktasından çalıştırmasını belirtin. Bu seçenek yalnızca, görev dizisiyle ilişkili tüm paketleri dağıtım noktasında bir paket paylaşımının kullanması için etkinleştirdiğinizde kullanılabilir. İçeriği paket paylaşımı kullanmak üzere etkinleştirmek için, her paket için **Özellikler** 'deki **Veri Erişimi** sekmesine bakın.  
+
+> [!IMPORTANT]  
+> En yüksek güvenlik için, **çalışan görev dizisi için gerektiğinde içeriği yerel olarak indirme** seçeneklerini belirleyin veya **görev dizisini başlatmadan önce tüm Içeriği yerel olarak indirin**. Bu seçeneklerden birini belirlediğinizde, paket bütünlüğünü sağlamak için paketi karma Configuration Manager. **Çalışan görev sırası için gerektiğinde bir dağıtım noktasından içeriğe doğrudan erişme**seçeneğini belirlediğinizde, Configuration Manager belirtilen programı çalıştırmadan önce paket karmasını doğrulamaz. Site paket bütünlüğünü sağladığından, yönetici haklarına sahip kullanıcıların paket içeriğiyle değişiklik yapmak veya onu değiştirmesine olanak sağlamak mümkündür.  
+
+#### <a name="example-1-one-deployment-option"></a>Örnek 1: bir dağıtım seçeneği
+
+Diski temizler ve bir görüntü uyguladığı bir işletim sistemi dağıtımı görev dizisi dağıtırsınız. **Dağıtım ayarları** sayfasında, medyayı medya ve PXE içeren bir seçenek için kullanılabilir hale getirebilirsiniz:
+
+:::image type="content" source="media/deploy-setting-make-available.png" alt-text="Görev sırasını dağıt, aşağıdakiler için kullanılabilir yap":::
+
+**Dağıtım noktaları** sayfasında, yalnızca bir dağıtım seçeneği vardır:
+
+- **Çalışan görev dizisi için gerektiğinde içeriği yerel olarak indir**
+
+:::image type="content" source="media/deploy-option-1.png" alt-text="Görev sırasını dağıt, bir dağıtım seçeneği":::
+
+Dağıtım medya ve PXE için kullanılabilir hale getirilmediğinden, **görev sırasını başlatmadan önce tüm içeriği yerel olarak indirme** seçeneği kullanılamaz.
+
+**Çalışan görev dizisinin gerek duyduğu bir dağıtım noktasından içeriğe doğrudan erişme** seçeneği kullanılamaz. Başvurulan içeriğin hepsi bir paket paylaşma kullanmaz.
+
+#### <a name="example-2-two-deployment-options"></a>Örnek 2: Iki dağıtım seçeneği
+
+Diski temizler ve bir görüntü uyguladığı bir işletim sistemi dağıtımı görev dizisi dağıtırsınız. **Dağıtım ayarları** sayfasında, onu **yalnızca Configuration Manager istemcileri**için kullanılabilir hale getirebilirsiniz. **Dağıtım noktaları** sayfasında, kullanılabilecek iki dağıtım seçeneği vardır:
+
+- **Çalışan görev dizisi için gerektiğinde içeriği yerel olarak indir**
+- **Görev sırasını başlatmadan önce tüm içeriği yerel olarak indir**
+
+:::image type="content" source="media/deploy-option-2.png" alt-text="Dağıtım görev sırası, iki dağıtım seçeneği":::
+
+**Çalışan görev dizisinin gerek duyduğu bir dağıtım noktasından içeriğe doğrudan erişme** seçeneği kullanılamaz. Başvurulan içeriğin hepsi bir paket paylaşma kullanmaz.
+
+#### <a name="example-3-three-deployment-options"></a>Örnek 3: üç dağıtım seçeneği
+
+Yönetici betiklerine ve ilişkili içeriğe sahip birkaç paketleriniz vardır. Paket özelliklerinin **veri erişimi** sekmesinde, tüm bunları, **Bu paketteki içeriği dağıtım noktalarındaki bir paket paylaşımında kopyalayacak**şekilde yapılandırırsınız.
+
+Bu betik paketleri için yalnızca birkaç **paket paketi** içeren bir görev dizisi oluşturur ve dağıtın. **Dağıtım ayarları** sayfasında, tek seçenek **yalnızca Configuration Manager istemcileri**için kullanılabilir hale getirmek içindir. Bu seçenek kullanılabilir tek seçenektir. Görev sırası, kendisiyle ilişkili bir önyükleme görüntüsü olmadığından, işletim sistemi dağıtımı için değil. **Dağıtım noktaları** sayfasında, üç dağıtım seçeneği mevcuttur:
+
+- **Çalışan görev dizisi için gerektiğinde içeriği yerel olarak indir**
+- **Görev sırasını başlatmadan önce tüm içeriği yerel olarak indir**
+- **Çalışan görev sırası için gerektiğinde doğrudan bir dağıtım noktasından içeriğe erişin**
+
+:::image type="content" source="media/deploy-option-3.png" alt-text="Görev sırasını dağıt, üç dağıtım seçeneği":::
 
 ## <a name="deploy-windows-10-in-place-upgrade-via-cmg"></a>CMG aracılığıyla Windows 10 yerinde yükseltme dağıtımı
 

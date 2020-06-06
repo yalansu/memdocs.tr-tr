@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6b33027d67329b883f401168795c1b466ded1a7
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: 5054d44371fd3114a9644f90d37dabf1e81d1997
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709412"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455030"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Bulut yönetimi ağ geçidi için belirteç tabanlı kimlik doğrulaması
 
@@ -60,10 +60,16 @@ Site bu davranışı varsayılan olarak sunar.
 
 1. Configuration Manager istemcisini Internet tabanlı bir cihaza yükler. İstemci yükleme parametresini ekleyin: [**/regtoken**](about-client-installation-properties.md#regtoken). Aşağıdaki örnek komut satırı, gerekli diğer kurulum parametrelerini ve özelliklerini içerir:
 
-    `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com /regtoken:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik9Tbzh2Tmd5VldRUjlDYVh5T2lacHFlMDlXNCJ9.eyJTQ0NNVG9rZW5DYXRlZ29yeSI6IlN7Q01QcmVBdXRoVG9rZW4iLCJBdXRob3JpdHkiOiJTQ0NNIiwiTGljZW5zZSI6IlNDQ00iLCJUeXBlIjoiQnVsa1JlZ2lzdHJhdGlvbiIsIlRlbmFudElkIjoiQ0RDQzVFOTEtMEFERi00QTI0LTgyRDAtMTk2NjY3RjFDMDgxIiwiVW5pcXVlSWQiOiJkYjU5MWUzMy1wNmZkLTRjNWItODJmMy1iZjY3M2U1YmQwYTIiLCJpc3MiOiJ1cm46c2NjbTpvYXV0aDI6Y2RjYzVlOTEtMGFkZi00YTI0LTgyZDAtMTk2NjY3ZjFjMDgxIiwiYXVkIjoidXJuOnNjY206c2VydmljZSIsImV4cCI6MTU4MDQxNbUwNSwibmJmIjoxNTgwMTU2MzA1fQ.ZUJkxCX6lxHUZhMH_WhYXFm_tbXenEdpgnbIqI1h8hYIJw7xDk3wv625SCfNfsqxhAwRwJByfkXdVGgIpAcFshzArXUVPPvmiUGaxlbB83etUTQjrLIk-gvQQZiE5NSgJ63LCp5KtqFCZe8vlZxnOloErFIrebjFikxqAgwOO4i5ukJdl3KQ07YPRhwpuXmwxRf1vsiawXBvTMhy40SOeZ3mAyCRypQpQNa7NM3adCBwUtYKwHqiX3r1jQU0y57LvU_brBfLUL6JUpk3ri-LSpwPFarRXzZPJUu4-mQFIgrMmKCYbFk3AaEvvrJienfWSvFYLpIYA7lg-6EVYRcCAA`
+    `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC /regtoken:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik9Tbzh2Tmd5VldRUjlDYVh5T2lacHFlMDlXNCJ9.eyJTQ0NNVG9rZW5DYXRlZ29yeSI6IlN7Q01QcmVBdXRoVG9rZW4iLCJBdXRob3JpdHkiOiJTQ0NNIiwiTGljZW5zZSI6IlNDQ00iLCJUeXBlIjoiQnVsa1JlZ2lzdHJhdGlvbiIsIlRlbmFudElkIjoiQ0RDQzVFOTEtMEFERi00QTI0LTgyRDAtMTk2NjY3RjFDMDgxIiwiVW5pcXVlSWQiOiJkYjU5MWUzMy1wNmZkLTRjNWItODJmMy1iZjY3M2U1YmQwYTIiLCJpc3MiOiJ1cm46c2NjbTpvYXV0aDI6Y2RjYzVlOTEtMGFkZi00YTI0LTgyZDAtMTk2NjY3ZjFjMDgxIiwiYXVkIjoidXJuOnNjY206c2VydmljZSIsImV4cCI6MTU4MDQxNbUwNSwibmJmIjoxNTgwMTU2MzA1fQ.ZUJkxCX6lxHUZhMH_WhYXFm_tbXenEdpgnbIqI1h8hYIJw7xDk3wv625SCfNfsqxhAwRwJByfkXdVGgIpAcFshzArXUVPPvmiUGaxlbB83etUTQjrLIk-gvQQZiE5NSgJ63LCp5KtqFCZe8vlZxnOloErFIrebjFikxqAgwOO4i5ukJdl3KQ07YPRhwpuXmwxRf1vsiawXBvTMhy40SOeZ3mAyCRypQpQNa7NM3adCBwUtYKwHqiX3r1jQU0y57LvU_brBfLUL6JUpk3ri-LSpwPFarRXzZPJUu4-mQFIgrMmKCYbFk3AaEvvrJienfWSvFYLpIYA7lg-6EVYRcCAA`
 
     > [!TIP]
     > Bu komut satırı hakkında daha fazla bilgi için bkz. [Azure AD kimlik kullanarak Istemciyi yükleyip kaydetme](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity). Bu işlem benzerdir, yalnızca Azure AD özelliklerini kullanmaz.
+
+Doğrulamak için, benzer bir giriş için aşağıdaki günlük dosyasını gözden geçirin:<!-- bug 7357499 -->
+
+```ClientLocation.log
+Rotating internet management point, new management point [1] is: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 (0) with capabilities: <Capabilities SchemaVersion ="1.0"><Property Name="SSL" Version="1" /></Capabilities>
+```
 
 ### <a name="known-issues"></a>Bilinen sorunlar
 
@@ -107,26 +113,26 @@ Belirteç istemcide veya sitede depolanmaz. Belirteci komut isteminden kopyalama
 
 Daha önce oluşturulan toplu kayıt belirteçlerini ve bunların yaşam sürelerini Configuration Manager konsolunda görebilir ve gerekirse kullanımlarını engelleyebilirsiniz. Ancak, site veritabanı toplu kayıt belirteçlerini depolar.
 
-#### <a name="to-review-a-bulk-registration-token"></a>Toplu kayıt belirtecini gözden geçirmek için
+### <a name="review-a-bulk-registration-token"></a>Toplu kayıt belirtecini gözden geçirme
 
-1. Configuration Manager konsolunda, **Yönetim**’e tıklayın.
+1. Configuration Manager konsolunda **Yönetim** çalışma alanına gidin.
 
-2. Yönetim çalışma alanında, **güvenlik**' i genişletin ve **Sertifikalar**' a tıklayın. Konsol, site ile ilgili tüm sertifikaları ve toplu kayıt belirteçlerini Ayrıntılar bölmesinde listeler.
+2. **Güvenlik**' i genişletin ve **Sertifikalar** düğümünü seçin. Konsol, site ile ilgili tüm sertifikaları ve toplu kayıt belirteçlerini Ayrıntılar bölmesinde listeler.
 
 3. Gözden geçirilecek toplu kayıt belirtecini seçin.
 
-GUID 'lerine göre belirli toplu kayıt belirteçlerini tanımlayabilirsiniz. Toplu kayıt belirteçleri için GUID 'Ler, belirteç oluşturma zamanında görüntülenir. Ayrıca, gerekirse **tür** sütununu filtreleyebilir veya sıralayabilirsiniz.
+**Tür** sütununu filtreleyebilir veya sıralayabilirsiniz. GUID 'lerine göre belirli toplu kayıt belirteçlerini belirler. Toplu kayıt belirteci oluşturduğunuzda araç, GUID 'YI görüntüler.
 
-#### <a name="to-block-a-bulk-registration-token"></a>Toplu kayıt belirtecini engellemek için
+### <a name="block-a-bulk-registration-token"></a>Toplu kayıt belirtecini engelle
 
-1. Configuration Manager konsolunda, **Yönetim**’e tıklayın.
+1. Configuration Manager konsolunda **Yönetim** çalışma alanına gidin.
 
-2. Yönetim çalışma alanında, **güvenlik**' i genişletin, **Sertifikalar**' a tıklayın ve engellenecek toplu kayıt belirtecini seçin.
+2. **Güvenlik**' i genişletin, **Sertifikalar** düğümünü seçin ve engellenecek toplu kayıt belirtecini seçin.
 
-3. Şerit çubuğunun **giriş** sekmesinde veya sağ tıklama Içeriği menüsünde **Engelle**' yi seçin. Buna karşılık, şerit çubuğunun **giriş** sekmesinde veya sağ tıklama Içeriği menüsünde **Engellemeyi kaldır** ' ı seçerek daha önce engellenen toplu kayıt belirteçlerini engellemeyi kaldırabilirsiniz.
+3. Şerit çubuğunun **giriş** sekmesinde veya sağ tıklama bağlam menüsünde **Engelle**' yi seçin. Daha önce engellenen toplu kayıt belirteçlerini kaldırmak için **Engellemeyi kaldır** eylemini seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bulut yönetimi ağ geçidini planlayın](../manage/cmg/plan-cloud-management-gateway.md)
+- [Bulut yönetimi ağ geçidi için planlama](../manage/cmg/plan-cloud-management-gateway.md)
 
 - [Kimlik doğrulaması için Azure AD 'yi kullanarak Configuration Manager Windows 10 istemcileri yükleyip atama](deploy-clients-cmg-azure.md)

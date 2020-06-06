@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 089303b76f674d47767afdff72341d09f7f227d4
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 78cc6182cf8682935ecaa6c319e30ee8261fc2fb
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431332"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455268"
 ---
 # <a name="settings-for-the-windows-security-experience-profile-in-microsoft-intune"></a>Microsoft Intune Windows Güvenlik deneyimi profili için ayarlar
 
@@ -43,7 +43,7 @@ Bir [uç nokta güvenlik ilkesinin](../protect/endpoint-security-policy.md)parç
   - **Evet** -Windows Güvenlik uygulamasındaki virüs ve tehdit koruması alanı son kullanıcılardan gizlenir. Virüs ve tehdit koruması ile ilgili bildirimler bastırılır.
 
   - **Windows Güvenlik uygulamasında fidye yazılımı veri kurtarma seçeneğini gizle**  
-    'SINI[](https://go.microsoft.com/fwlink/?linkid=873664)
+    CSP: [Hideransomwaredatarecovery](https://go.microsoft.com/fwlink/?linkid=873664)
 
   - **Yapılandırılmadı** (*varsayılan*)-ayar, kullanıcı erişimine ve bildirimlere izin vermek olan istemci varsayılan değerini döndürür.
   - **Evet** -Windows Güvenlik uygulamasındaki fidye yazılımı veri kurtarma alanı son kullanıcılardan gizlenir. Fidye yazılımı ile ilgili bildirimler bastırılır.
@@ -85,7 +85,7 @@ Bir [uç nokta güvenlik ilkesinin](../protect/endpoint-security-policy.md)parç
   - **Evet** -Windows Güvenlik uygulamasındaki aile seçenekleri alanı son kullanıcılardan gizlenir. Ayrıca, Aile seçenekleriyle ilgili bildirimler bastırılır.
 
 - **Windows güvenlik uygulaması bildirimleri**  
-  'SINI[](https://go.microsoft.com/fwlink/?linkid=873675)
+  CSP: [DisableNotifications](https://go.microsoft.com/fwlink/?linkid=873675)
 
   Bu ayarı, önceki özellik ayarlarına yönelik olarak kullanıcılarınıza Windows Güvenlik bildirimlerini engellemek için kullanın. Alternatif olarak, devam ayarlarını kullanarak özellik başına Windows güvenlik uygulaması bildirimlerini yönetebilirsiniz.
 

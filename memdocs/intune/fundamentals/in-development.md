@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90039e9bb75bcf7c266ac033408f87d37e27ef8d
-ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
+ms.openlocfilehash: 5fb4bfba0dbcdfe28b2fbce8123b0e2e919fd308
+ms.sourcegitcommit: e618ea7cb864635c838b672bc71a1e926bf7c047
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/05/2020
-ms.locfileid: "84436763"
+ms.locfileid: "84458109"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Microsoft Intune için geliştirme aşamasında
 
@@ -81,14 +81,7 @@ Microsoft Endpoint Manager 'da Şirket portalı Asam içinde olacak şekilde yap
 ## <a name="device-configuration"></a>Cihaz yapılandırması
 
 ### <a name="set-device-compliance-state-from-third-party-mdm-partners---6361689-----"></a>Üçüncü taraf MDM iş ortaklarından cihaz uyumluluk durumunu ayarlama<!-- 6361689   -->
-Yakında, üçüncü taraf mobil cihaz yönetimi (MDM) iş ortakları tarafından yönetilen iOS veya Android cihazlarının uyumluluk durumunun Azure Active Directory (Azure AD) içinde ayarlanabileceksiniz.
-
-Intune iş ortağı uyumluluğu için yapılandırıldığında, üçüncü taraf MDM iş ortağı tarafından yönetilen cihazlar için uyumluluk verileri, uyumluluk değerlendirmesi için Intune 'a gönderilir. Daha sonra sonuçlar, bu cihazlar için koşullu erişim ilkelerinizi zorlamak üzere uyumluluk verilerinin kullanıldığı Azure AD 'ye geçirilir.
-
-Destek yakında aşağıdaki iş ortakları bulunur:
-- VMware çalışma alanı bir (daha önce AirWatch olarak biliniyordu)
-
-Bir cihaz uyumluluk ortağını etkinleştirmek için Microsoft Endpoint Manager Yönetim merkezinde yeni bir düğüm kullanacaksınız: uyumluluk ortağı Ekle ' yi seçtiğiniz **kiracı yönetim**  >  **bağlayıcıları ve belirteçleri**  >  **iş ortağı Uyumluluk Yönetimi** . **Add Compliance Partner**
+Üçüncü taraf MDM çözümlerine sahip olan Microsoft 365 müşteriler, Microsoft Intune cihaz uyumluluk hizmeti ile tümleştirme yoluyla iOS ve Android üzerinde Microsoft 365 uygulamalar için koşullu erişim ilkelerini zorlayabilir. Üçüncü taraf MDM satıcısı, Intune cihaz uyumluluk hizmetinden yararlanarak cihaz uyumluluk verilerini Intune 'a gönderir. Daha sonra Intune, cihazın güvenilir olup olmadığını ve Azure AD 'de koşullu erişim özniteliklerini ayarlamanızı sağlayacak şekilde değerlendirilir.  Müşterilerin, Microsoft Endpoint Manager yönetim merkezi veya Azure AD portalı içinden Azure AD koşullu erişim ilkeleri ayarlaması gerekecektir.  
 
 ### <a name="add-a-link-to-your-company-portal-support-website-to-emails-for-noncompliance---7225498------"></a>Uyumsuzluk için e-postalara Şirket Portalı Destek Web sitenizin bağlantısını ekleyin<!-- 7225498    -->
 E-posta bildirim şablonuna, uyumlu olmayan cihazların kullanıcılarına gönderilen e-posta bildirimlerine Şirket portalı Web sitenizin bağlantısını ekleyecek yeni bir ayar ekliyoruz. (**Uç nokta güvenliği**  >  **Cihaz uyumluluğu**  >  **Bildirimler**  >  **Bildirim oluştur**).  Uyumsuz bir cihaza sahip olması nedeniyle bir e-posta alan kullanıcılar, cihazlarının neden uyumlu olmadığı hakkında daha fazla bilgi edinmek için bir Web sitesi açmak üzere bağlantıyı kullanabilir.

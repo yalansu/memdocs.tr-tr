@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 7ddcb1ade6f39d1fc2cb824470c33d39496bcbf1
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: da8c52dabf27ddf0992d9f405400b3ac984f2ecc
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428673"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455132"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a>Endpoint Analytics önizlemesi
 
@@ -56,7 +56,7 @@ Endpoint Analytics 'i kullanmaya başlamak için önkoşulları doğrulayıp ver
 
 Bu önizleme için Configuration Manager veya Microsoft Intune aracılığıyla cihazları kaydedebilirsiniz. 
 
-Cihazları Intune ile kaydetmek için bu önizleme şunları gerektirir:
+#### <a name="to-enroll-devices-via-intune-this-preview-requires"></a><a name="bkmk_uea__intune_prereq"></a>Cihazları Intune ile kaydetmek için bu önizleme şunları gerektirir:
 - Windows 10 çalıştıran Intune kayıtlı cihazlar
 - Başlangıç performansı öngörüleri yalnızca, Windows 10 Enterprise (Home ve Pro sürümleri) sürümü 1903 veya üzeri sürümleri çalıştıran cihazlarda kullanılabilir ve cihazların Azure AD 'ye katılmış veya hibrit Azure AD 'ye katılmış olması gerekir. Çalışma alanına katılmış makineler Şu anda desteklenmiyor.
 - Cihazlardan Microsoft genel bulutuna ağ bağlantısı. Daha fazla bilgi için bkz. [uç noktalar](#bkmk_uea_endpoints).
@@ -64,11 +64,12 @@ Cihazları Intune ile kaydetmek için bu önizleme şunları gerektirir:
    - **Başlat**' a tıklayarak, müşteri verilerinizin Microsoft Intune kiracınızı sağladığınızda seçtiğiniz konumun dışında depolanabileceğini kabul etmiş ve kabul etmiş olursunuz.
    - Verileri toplamak için **Başlat** 'a tıkladıktan sonra, diğer salt okunurdur roller verileri görüntüleyebilir.
 
-Configuration Manager aracılığıyla cihazları kaydetmek için bu önizleme şunları gerektirir:
+#### <a name="to-enroll-devices-via-configuration-manager-this-preview-requires"></a><a name="bkmk_uea__cm_prereq"></a>Configuration Manager aracılığıyla cihazları kaydetmek için bu önizleme şunları gerektirir:
 - Configuration Manager sürüm 2002 veya daha yenisi
 - 2002 veya daha yeni bir sürüme yükseltilen istemciler
 - [Microsoft Endpoint Manager kiracı iliştirme](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) Kuzey Amerika veya Avrupa 'nın Azure kiracı konumuyla etkinleştirildi (yakında diğer bölgelere genişletireceğiz)
 
+#### <a name="proactive-remediation-scripting-requires"></a><a name="bkmk_uea__prs_prereq"></a>Proaktif düzeltme betiği şunları gerektirir:
 Cihazların Intune veya Configuration Manager aracılığıyla kaydedilip edilmeyeceğini, [**proaktif düzeltme komut dosyası oluşturma**](#bkmk_uea_prs) aşağıdaki gereksinimlere sahiptir:
 - Cihazların Azure AD 'ye katılmış veya hibrit Azure AD 'ye katılmış olması ve aşağıdaki koşullardan birini karşılaması gerekir:
 - Intune tarafından yönetilen bir Windows 10 Enterprise, Professional veya eğitim cihazı
@@ -433,7 +434,7 @@ Betiklerin, düzeltme olması gerektiğini Intune 'a bildirmek için 1 koduyla �
 
 Bu tabloda betik adları, açıklamalar, algılamalar, düzeltmeler ve yapılandırılabilir öğeler gösterilmektedir. Adları ile başlayan betik dosyaları `Detect` algılama betikleridir. Düzeltme betikleri ile başlar `Remediate` . Bu betikler, bu makaledeki sonraki bölümden kopyalanabilir.
 
-|Betik adı|Description|
+|Betik adı|Açıklama|
 |---|---|
 |**Eski grup Ilkelerini Güncelleştir** </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Son grup ilkesi yenilemenin ne zaman önce daha büyük olup olmadığını algılar `7 days` .  </br>Algılama betiğinin değerini değiştirerek 7 günlük eşiğini özelleştirin `$numDays` . </br></br>`gpupdate /target:computer /force`Ve çalıştıran`gpupdate /target:user /force`  </br> </br>, Sertifikalar ve yapılandırmalara grup ilkesi aracılığıyla teslim edildiğinde ağ bağlantısıyla ilgili destek çağrılarını azaltmaya yardımcı olabilir. </br> </br> **Oturum açma kimlik bilgilerini kullanarak betiği çalıştırın**: Evet|
 |**Office Tıkla-Çalıştır hizmetini yeniden Başlat** </br> `Detect_Click_To_Run_Service_State.ps1` </br> `Remediate_Click_To_Run_Service_State.ps1`| Tıkla-Çalıştır hizmetinin otomatik olarak başlayacak şekilde ayarlandığını ve hizmetin durdurulup durdurulduğunu algılar. </br> </br> Hizmeti otomatik olarak başlayacak ve durdurulmuş ise hizmeti başlatmaya ayarlayarak düzeltme yapın. </br></br> , Tıkla-Çalıştır hizmeti durdurulduğu için Win32 Microsoft 365 uygulamalarının Çalıştırılmayabileceği sorunları gidermeye yardımcı olur. </br> </br> **Oturum açma kimlik bilgilerini kullanarak betiği çalıştırın**: Hayır|

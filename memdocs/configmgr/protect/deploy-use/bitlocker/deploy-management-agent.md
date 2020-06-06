@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ebd847e44c1acd87c316514ec9919f8a6690a647
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: e33ba8df84239b4a438ff0c526bb255c5b7d0052
+ms.sourcegitcommit: e618ea7cb864635c838b672bc71a1e926bf7c047
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428584"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84458160"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker yönetimini dağıtma
 
@@ -126,7 +126,7 @@ Birden fazla ilke oluşturduğunuzda, onun göreli önceliğini yapılandırabil
 
 1. Cihazın sürücüleri istediğiniz zaman şifrelemesine veya şifresini çözmesine istiyorsanız **bakım penceresi dışında düzeltmeye Izin ver**seçeneğini belirleyin. Koleksiyonda herhangi bir bakım penceresi varsa, bu BitLocker ilkesini yine de düzeltir.
 
-1. **Basit** veya **özel** bir zamanlama yapılandırın. Varsayılan olarak, istemci her 12 saatte bir bu ilkeyle uyumluluğunu değerlendirir.
+1. **Basit** veya **özel** bir zamanlama yapılandırın. İstemci, zamanlamada belirtilen ayarlara göre uyumluluğunu değerlendirir.
 
 1. İlkeyi dağıtmak için **Tamam ' ı** seçin.
 

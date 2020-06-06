@@ -2,7 +2,7 @@
 title: Masaüstü Analizinizdeki yenilikler
 titleSuffix: Configuration Manager
 description: Masaüstü Analizi bulut hizmeti 'nin en son aylık sürümündeki yeni özelliklerin özeti.
-ms.date: 05/11/2020
+ms.date: 06/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 1d45d115f279603fa74e143c603c116146278ffe
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 5265ee88cbe6dc119d6d14dadd3fadad6a52b253
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268173"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454962"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Masaüstü Analizinizdeki yenilikler
 
@@ -27,6 +27,12 @@ Her ay masaüstü analizinden nelerin yeni olduğunu öğrenin.
 
 Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="june-2020"></a>Haziran 2020
+
+### <a name="improvement-to-prerequisites"></a>Önkoşullardan iyileştirme
+
+Masaüstü Analizi artık Azure Active Directory (Azure AD) kiracınızda bir Office 365 hizmeti dağıtmanızı gerektirmez. Azure AD 'de **Office 365 istemci Yöneticisi** uygulaması, hizmetten bilgi ve durum bilgilerinin Configuration Manager alınmasını sağlamak Için artık **Masaüstü Analizi** uygulamasıdır.
 
 ## <a name="may-2020"></a>Mayıs 2020
 
