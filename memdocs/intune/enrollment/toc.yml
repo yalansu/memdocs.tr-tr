@@ -93,10 +93,13 @@
       items:
         - name: Otomatik Cihaz Kaydı
           href: device-enrollment-program-enroll-ios.md
-        - name: iOS/iPadOS Kullanıcı Kaydını Ayarlama
-          href: ios-user-enrollment.md
-        - name: Kullanıcı Kaydını destekleyen eylemler ve seçenekler
-          href: ios-user-enrollment-supported-actions.md
+          displayName: dep; ade; bulk enroll
+        - name: Kullanıcı ve Cihaz kayıt anlaşması
+          items:
+            - name: Profili oluşturma
+              href: ios-user-enrollment.md
+            - name: Kullanıcı kayıt anlaşmasını destekleyen eylemler
+              href: ios-user-enrollment-supported-actions.md
         - name: Apple School Manager
           href: apple-school-manager-set-up-ios.md
         - name: Apple Configurator
