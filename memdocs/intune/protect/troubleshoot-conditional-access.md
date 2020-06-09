@@ -8,6 +8,7 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 07/23/2019
 ms.topic: troubleshooting
+ms.subservice: protect
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d56d3982a036ace198ceae9bf2d01a8c12de6d5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 95c4397a6f8a7c11d14cabfb9e38ee44b54fa5d1
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079153"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531766"
 ---
 # <a name="troubleshoot-conditional-access"></a>Koşullu erişim sorunlarını giderme
 Bu makalede, kullanıcılarınız koşullu erişimle korunan kaynaklara erişim izni alamazsanız veya kullanıcılar korumalı kaynaklara erişebiliyorsa ve engellenmesi gereken durumlarda ne yapılacağını açıklar.
@@ -42,7 +43,7 @@ Koşullu erişimin çalışması için aşağıdaki gereksinimlerin karşılanma
 
 - Gerek kullanıcı, gerekse cihaz, atanan Intune ilkeleriyle uyumlu olmalıdır.
 
-- Kullanıcıya varsayılan olarak bir cihaz uyumluluk ilkesi atanmış olmalıdır. Bu, Intune yönetim portalındaki **cihaz uyumluluk** > **uyumluluğu ilke ayarları** altında olan **Uyumluluk ilkesi atanmamış olan ayar işareti cihazlarının** yapılandırmasına bağlıdır.
+- Kullanıcıya varsayılan olarak bir cihaz uyumluluk ilkesi atanmış olmalıdır. Bu, Intune yönetim portalındaki **cihaz uyumluluk**uyumluluğu ilke ayarları altında olan **Uyumluluk ilkesi atanmamış olan ayar işareti cihazlarının** yapılandırmasına bağlıdır  >  **Compliance Policy Settings** .
 
 - Kullanıcı Outlook yerine cihazın yerel posta istemcisini kullanıyorsa, cihazda Exchange ActiveSync etkinleştirilmelidir. Bu, iOS/ıpados, Windows Phone ve Android Knox cihazları için otomatik olarak gerçekleşir.
 

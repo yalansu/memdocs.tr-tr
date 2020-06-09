@@ -10,12 +10,12 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9143c224082f00b882d3cb557b47b737012393fa
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f0a26d02770ff8460787ee9897bdc8f1218a2c12
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906333"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506171"
 ---
 # <a name="get-started-with-compliance-settings-in-configuration-manager"></a>Configuration Manager uyumluluk ayarları ile çalışmaya başlama
 
@@ -103,11 +103,8 @@ Sürüm yükseltme ilkesi, belirli Windows 10 sürümlerini çalıştıran cihaz
 
 Daha fazla bilgi için bkz [. Windows cihazlarını sürüm yükseltme Ilkesiyle yükseltme](../deploy-use/upgrade-windows-version.md)
 
-
-
-## <a name="microsoft-edge-browser-profiles"></a>Microsoft Edge tarayıcı profilleri
+## <a name="microsoft-edge-legacy-browser-profiles"></a>Microsoft Edge eski tarayıcı profilleri
 <!-- 1357310 -->
-Sürüm 1802 ' den başlayarak, Windows 10 istemcilerinde [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) Web tarayıcısını kullanan müşteriler için, birkaç Microsoft Edge ayarını yapılandırmak üzere bir uyumluluk ayarları ilkesi oluşturun. 
+Windows 10 istemcilerinde [Microsoft Edge eski](https://docs.microsoft.com/microsoft-edge/deploy/) Web tarayıcısını kullanan müşteriler için, tarayıcı ayarlarını yapılandırmak üzere bir Configuration Manager uyumluluk ilkesi oluşturun.
 
-Daha fazla bilgi için bkz. [Microsoft Edge tarayıcı profilleri](../deploy-use/browser-profiles.md).
-
+Daha fazla bilgi için bkz. [Microsoft Edge eski tarayıcı profilleri](../deploy-use/browser-profiles.md).

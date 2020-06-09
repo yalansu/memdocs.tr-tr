@@ -10,12 +10,12 @@ ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8186b45a0b0c74840582052f9c585c0557180493
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 1987ba504630ab1d4b23cdb54710f0cbaa3db28a
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721951"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506268"
 ---
 # <a name="create-configuration-items-for-windows-devices-with-on-premises-mdm-in-configuration-manager"></a>Configuration Manager 'de şirket içi MDM ile Windows cihazları için yapılandırma öğeleri oluşturma
 
@@ -60,7 +60,7 @@ Configuration Manager uyumluluk ayarları hakkında daha fazla genel bilgi için
 
     - **Bilgi**
 
-    - **Warning**
+    - **Uyarı**
 
     - **Kritik**
 
@@ -89,8 +89,8 @@ Bu ayarlar yalnızca Windows 10 ve üzeri sürümleri çalıştıran cihazlar i�
 - **Hatırlanan parola sayısı**: önceden kullanılan parolaların yeniden kullanılmasını önler.
 - **Cihaz temizlenmeden önce başarısız oturum açma denemesi sayısı**: Bu sayıda oturum açma denemesi başarısız olursa, MDM cihazı siler
 - **Cihazın kilitlenmesinden önce boşta kalma süresi**: bir cihazın kilitlenmeden önce boşta kalabileceği süreyi belirtin. Kullanıcı girişi olmadığında cihaz boşta kalır.
-- **Parola karmaşıklığı**: gibi sayısal bir PIN belirtip belirtmeyeceğinizi ya `1234`da güçlü bir parola sağlamanız gerekip gerekmediğini seçin.
-  - **Parolada gereken karmaşık karakter kümesi sayısı**: parola karmaşıklığı **güçlü**ise, parolanın kaç tane karakter türünü gerektirdiğini seçin: büyük harfler, küçük harfler, rakamlar veya semboller. Varsayılan olarak, bu değer `2`.
+- **Parola karmaşıklığı**: gibi sayısal bir PIN belirtip belirtmeyeceğinizi `1234` ya da güçlü bir parola sağlamanız gerekip gerekmediğini seçin.
+  - **Parolada gereken karmaşık karakter kümesi sayısı**: parola karmaşıklığı **güçlü**ise, parolanın kaç tane karakter türünü gerektirdiğini seçin: büyük harfler, küçük harfler, rakamlar veya semboller. Varsayılan olarak, bu değer `2` .
 - **Parola kurtarma PIN'ini Exchange Server'a gönder**
 
 ### <a name="device"></a>Cihaz
@@ -136,7 +136,7 @@ Bu ayarlar yalnızca Windows 10 ve üzeri sürümleri çalıştıran cihazlar i�
 - **Uygulama içi satın almalar**: kullanıcıların uygulama içi satın alımlar yapmasına izin verin veya yasakla.
 - **Mağaza kaynaklı uygulama başlatma**: cihazda önceden yüklenmiş olan veya Microsoft Store yüklü olan tüm uygulamaları devre dışı bırakın.
 - **Mağaza 'dan uygulamaları otomatik güncelleştir**: Microsoft Store yüklenen uygulamaların otomatik olarak güncelleştirilmesini sağlar veya yasakla.
-- **Uygulamaları sistem sürücüsüne yükler**: cihazın sistem sürücüsüne, genellikle `C:` sürücü olan uygulamaları yüklemesine izin verin veya bunu yasakla.
+- **Uygulamaları sistem sürücüsüne yükler**: cihazın sistem sürücüsüne, genellikle sürücü olan uygulamaları yüklemesine izin verin veya bunu yasakla `C:` .
 - **Uygulama verilerini sistem birimine yükler**: uygulamaların sistem sürücüsünde veri depolamasına izin vermek için bu seçeneği etkinleştirin.
 - **Yalnızca özel mağazayı kullan**: kullanıcıların özel deponuzdan uygulama indirmesini gerektir.
 - **Oyun DVR**: Windows oyun kaydını ve yayını devre dışı bırakma
@@ -164,7 +164,7 @@ Bu ayarlar, yalnızca Windows 8.1 ve Windows 10 çalıştıran cihazlara yöneli
 - **Güvenilen siteler bölgesi Için güvenlik düzeyi**: güvenilir siteler bölgesi için güvenlik düzeyini ayarlayın: yüksek, orta-yüksek, orta, orta-düşük veya düşük.
 - **Yasak siteler bölgesi Için güvenlik düzeyi**: Yasak siteler bölgesi için güvenlik düzeyini ayarlayın: yüksek.
 - **İntranet bölgesi Için ad alanları**: Web sitelerini intranet bölgesine eklemek veya buradan kaldırmak için yapılandırın.
-- **Tek sözcük girişi için intranet sitesine gidin**: Kullanıcı, önceki bir protokol olmadan geçerli bir site adı girerse, Internet Explorer 'ın bir intranet sitesine otomatik olarak gitmesini sağlar veya yasakla, örneğin `https://`.
+- **Tek sözcük girişi için intranet sitesine gidin**: Kullanıcı, önceki bir protokol olmadan geçerli bir site adı girerse, Internet Explorer 'ın bir intranet sitesine otomatik olarak gitmesini sağlar veya yasakla, örneğin `https://` .
 - **Kuruluş modu menü seçeneği**: kullanıcıların Internet Explorer **Araçlar** menüsünden kuruluş modunu etkinleştirmesine ve devre dışı bırakmasına olanak sağlar.
   - **Rapor konumu günlüğe kaydediliyor (URL)**: kuruluş modu etkin olduğunda, ziyaret edilen Web sitelerini günlüğe kaydetmek IÇIN bir URL belirtin.
 - **Kuruluş modu Site listesi konumu (URL)**: kuruluş modu etkin olduğunda, onu kullanan Web sitelerinin listesini belirtin.
@@ -321,13 +321,13 @@ Bu ayarlar yalnızca Windows 10 Team çalıştıran cihazlar içindir.
 - **Karşılama ekranında görüntülenen toplantı bilgileri**: **hoş geldiniz** ekranının **toplantılar** kutucuğunda cihazın görüntülediği bilgi türünü seçin:
   - **Yalnızca düzenleyeni ve saati göster**
   - **Düzenleyeni, saati ve konuyu göster (özel toplantılar için konu gizlidir)**
-- **Kilit ekranı arka plan resmi URL 'si**: bir Windows 10 Team cihazının **hoş geldiniz** ekranında özel bir arka plan göstermek için bir URL belirtin. URL 'YI ile `https://` başlatın ve PNG biçimini kullanın.
+- **Kilit ekranı arka plan resmi URL 'si**: bir Windows 10 Team cihazının **hoş geldiniz** ekranında özel bir arka plan göstermek için bir URL belirtin. URL 'YI ile başlatın `https://` ve PNG biçimini kullanın.
 
 ### <a name="windows-information-protection"></a>Windows Bilgi Koruması  
 
 Configuration Manager ile kurumsal veri korumayı yapılandırma hakkında daha fazla bilgi için bkz. [Windows Information Protection (WIP) kullanarak kurumsal verilerinizi koruma](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
-### <a name="microsoft-edge"></a>Microsoft Edge
+### <a name="microsoft-edge-legacy"></a>Microsoft Edge eski
 
 Bu ayarlar yalnızca Windows 10 ve üzeri sürümleri çalıştıran cihazlar içindir.  
 
@@ -342,7 +342,7 @@ Bu ayarlar yalnızca Windows 10 ve üzeri sürümleri çalıştıran cihazlar i�
 - **Uzantılar**: kenar uzantılarına izin verin veya yasak.
 - **InPrivate Gözatma**: geçmiş veya tanımlama bilgilerini Depolayameyen InPrivate gözatmaya izin verin veya yasakla.
 - **WebRTC localhost IP adresi**: Kullanıcı Web RTC protokolünü kullanarak telefon araması yaptığında CIHAZıN localhost IP adresinin görüntülenmesini sağlar veya yasakla.
-- **About: Flags öğesine erişimi engelle**: kullanıcının, geliştirici ve deneysel ayarları içeren `about:flags` sayfaya erişmesine Izin verin veya bunu engelleyin.
+- **About: Flags öğesine erişimi engelle**: kullanıcının, `about:flags` Geliştirici ve deneysel ayarları içeren sayfaya erişmesine izin verin veya bunu engelleyin.
 - **Dosyalar Için SmartScreen istemi geçersiz kılma**: kullanıcının kötü amaçlı olabilecek dosyaları Indirme hakkında SmartScreen Filtresi uyarılarını atlamasına izin verin veya bunu yasakla.
 - **SmartScreen Prompt geçersiz kılma**: kullanıcının potansiyel olabilecek kötü amaçlı Web siteleri hakkında SmartScreen Filtresi uyarılarını atlamasına izin verin veya bunu yasakla.
 - **İlk çalıştırma URL 'si**: bir Kullanıcı Ilk kez kenar açtığında görüntülenecek bir Web sitesi belirtin.
@@ -376,7 +376,7 @@ Bu ayarlar yalnızca Windows 10 ve üzeri sürümleri çalıştıran cihazlar i�
 - İstenmeyebilecek **uygulama algılaması**: cihazın, Defender tarafından olası istenmeyen olarak sınıflandırılan yazılımları çalıştırmaya karşı koruma sağlar. Çalıştıran bu uygulamalara karşı koruyabilirsiniz veya Kullanıcı, istenmeyebilecek bir uygulama yüklediğinde raporlamak için denetleme modunu kullanabilirsiniz.
 - **Dosya ve klasör dışlamaları**: dışlamalar listesine bir veya daha fazla dosya ve klasör ekleyin. Örneğin `C:\Path` veya `%ProgramFiles%\Path\filename.exe` olabilir. Defender bu dosya ve klasörleri gerçek zamanlı veya zamanlanmış taramalara dahil etmez.
 - **Dosya Uzantısı dışlamaları**: dışlamalar listesine bir veya daha fazla dosya uzantısı ekleyin. Örneğin `java` veya `exe` olabilir. Defender, hiçbir gerçek zamanlı veya zamanlanmış taramalarda bu uzantılara sahip herhangi bir dosya içermez.
-- **İşlem Dışlamaları**: özel işlemleri dışlamalar listesine ekleyin. Örneğin, `C:\path\myproc.exe`. Bu dışlama türü yalnızca aşağıdaki uzantıları destekler: `exe`, `com`, veya. `scr` Defender, bu süreçler gerçek zamanlı veya zamanlanmış taramalara dahil etmez.
+- **İşlem Dışlamaları**: özel işlemleri dışlamalar listesine ekleyin. Örneğin, `C:\path\myproc.exe`. Bu dışlama türü yalnızca aşağıdaki uzantıları destekler: `exe` , `com` , veya `scr` . Defender, bu süreçler gerçek zamanlı veya zamanlanmış taramalara dahil etmez.
 
 ### <a name="additional-settings"></a>Ek ayarlar
 

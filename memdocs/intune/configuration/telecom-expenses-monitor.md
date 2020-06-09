@@ -6,7 +6,7 @@ keywords: Saaswedo
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 06/08/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0db0c43d60b2b42d35e397924c8555b1ac3d64a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c3267bf4e59d6745e480a81f8bdc39cfa2827ea4
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988618"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506341"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Intune'da telekom gider yönetimi hizmeti ayarlama
 
@@ -46,9 +46,6 @@ Datalert hizmetini Intune ile kullanmak için, Datalert ve Intune 'da bazı yap�
 ## <a name="supported-platforms"></a>Desteklenen platformlar
 
 - Android Cihaz Yöneticisi 4,4 ve Knox özellikli daha yeni cihazlar (Samsung)
-
-  [Knox destekleyen Android sürümleri](https://seap.samsung.com/faq/what-versions-android-support-knox-standard-and-knox-premium-sdks-0) (Samsung 'in Web sitesini açar) Knox tarafından desteklenen sürümleri listeler.
-
 - iOS 8,0 ve üzeri
 - ıpados 13,0 ve üzeri
 

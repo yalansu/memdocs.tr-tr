@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 06/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfa830f1e7bfd87c20c1aed78b933f81e96b8dca
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 35cf4b3afb766d8729d3438d2d8c61e1d79f4791
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988656"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531749"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Intune 'da SCEP sertifika profilleri oluşturma ve atama
 
@@ -50,7 +50,7 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
 
       3. Android kurumsal adanmış cihazlarda, SCEP sertifika profilleri yalnızca Wi-Fi ağ yapılandırması ve kimlik doğrulaması için desteklenir.  Android kurumsal adanmış cihazlarda SCEP sertifika profilleri VPN veya uygulama kimlik doğrulaması için desteklenmez.
 
-4. **Oluştur**’u seçin.
+4. **Oluştur**'u seçin.
 
 5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
    - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı *şirketin tamamına ait SCEP profilidir*.
@@ -226,7 +226,17 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
 
    - **SCEP sunucu URL 'leri**:
 
-     SCEP aracılığıyla sertifika veren NDES sunucuları için bir veya daha fazla URL girin. Örneğin `https://ndes.contoso.com/certsrv/mscep/mscep.dll` gibi bir URI girebilirsiniz. URL 'Ler, profille cihaza rastgele gönderildiğinden, yük dengeleme için gereken ek SCEP URL 'Leri ekleyebilirsiniz. SCEP sunucularından biri kullanılamıyorsa, SCEP isteği başarısız olur ve daha sonraki cihaz iadelerinde, sertifika isteği aşağı doğru aynı sunucuya göre yapılabilir.
+     SCEP aracılığıyla sertifika veren NDES sunucuları için bir veya daha fazla URL girin. Örneğin `https://ndes.contoso.com/certsrv/mscep/mscep.dll` gibi bir URI girebilirsiniz.
+
+     Gerektiğinde yük dengeleme için ek SCEP URL 'Leri ekleyebilirsiniz. Cihazlar NDES sunucusuna üç ayrı çağrı yapar; sunucu yeteneklerini almak için, bir ortak anahtar alın ve ardından bir imzalama isteği gönderebilirsiniz. Birden çok URL kullandığınızda, Yük Dengeleme bir NDES sunucusuna sonraki çağrılar için farklı bir URL kullanılmasına neden olabilir. Aynı istek sırasında sonraki bir çağrı için farklı bir sunucuya bağlantı kurulursa, istek başarısız olur.
+
+     NDES sunucu URL 'sini yönetme davranışı her bir cihaz platformuna özgüdür:
+
+     - **Android**: CIHAZ, SCEP Ilkesinde alınan URL 'lerin listesini rasgeleleştirir ve sonra ERIŞILEBILIR bir NDES sunucusu bulunana kadar liste aracılığıyla çalışacaktır. Daha sonra cihaz, işlemin tamamında aynı URL 'yi ve sunucuyu kullanmaya devam eder. Cihaz NDES sunucularının hiçbirine erişemezse, işlem başarısız olur.
+     - **iOS/ıpados**: Intune, URL 'leri rasgeleleştirir ve bir cihaza tek bir URL sağlar. Cihaz NDES sunucusuna erişemezse SCEP isteği başarısız olur.
+     - **Windows**: NDES URL 'lerinin listesi rasgeledir ve ardından Windows cihazına geçirilir ve bu, kullanılabilir olana kadar bunları alınan sırayla dener. Cihaz NDES sunucularının hiçbirine erişemezse, işlem başarısız olur.
+
+     Bir cihaz NDES sunucusuna yapılan üç çağrının herhangi biri sırasında aynı NDES sunucusuna başarıyla ulaşamazsa, SCEP isteği başarısız olur. Örneğin, bu, bir yük dengeleme çözümü NDES sunucusuna ikinci veya üçüncü çağrı için farklı bir URL sağlıyorsa veya NDES için sanallaştırılmış bir URL 'yi temel alan farklı bir gerçek NDES sunucusu sağlıyorsa meydana gelebilir. Başarısız bir istekten sonra cihaz, NDES URL 'Lerinin rastgele listesi (veya iOS/ıpados için tek URL) ile başlayarak sonraki ilke döngüsündeki işlemi yeniden dener.  
 
 8. **İleri**’yi seçin.
 

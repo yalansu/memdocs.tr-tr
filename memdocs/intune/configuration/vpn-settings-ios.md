@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74e889419dcaaa75c2a31fe16931dddd84d1a967
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2e4bf8a9327f43efc613c7210370e29c46551182
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086530"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506205"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune 'de iOS ve ıpados cihazlarına VPN ayarları ekleme
 
@@ -49,7 +49,7 @@ Aşağıdaki satıcı listesinden VPN bağlantı türünü seçin:
 - **Cisco (IPSec)**
 - **Citrix VPN**
 - **Citrix SSO**
-- **Zscaler**: koşullu erişimi kullanmak veya kullanıcıların Zscaler oturum açma ekranını atlamasına izin vermek Için, Zscaler özel erişimini (ZPA) Azure AD hesabınızla tümleştirmeniz gerekir. Ayrıntılı adımlar için bkz. [Zscaler belgeleri](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad). 
+- **Zscaler**: koşullu erişimi kullanmak veya kullanıcıların Zscaler oturum açma ekranını atlamasına izin vermek Için, Zscaler özel erişimini (ZPA) Azure AD hesabınızla tümleştirmeniz gerekir. Ayrıntılı adımlar için bkz. [Zscaler belgeleri](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad).
 - **Ikev2**: [Ikev2 ayarları](#ikev2-settings) (Bu makalede) özelliklerini açıklar.
 - **Özel VPN**
 
@@ -106,7 +106,7 @@ Aşağıdaki listede gösterilen ayarlar, seçtiğiniz VPN bağlantı türüne g
 
 ## <a name="ikev2-settings"></a>Ikev2 ayarları
 
-Bu ayarlar,**Ikev2** **bağlantı türünü** > seçtiğinizde geçerlidir.
+Bu ayarlar, Ikev2 **bağlantı türünü**seçtiğinizde geçerlidir  >  **IKEv2**.
 
 - **Her zaman-on VPN**: **Enable** VPN ISTEMCISINI otomatik olarak bağlanıp VPN 'ye yeniden bağlanacak şekilde ayarlar. Her Zaman Açık VPN bağlantıları; kullanıcı cihazı kilitlediğinde, cihaz yeniden başlatıldığında veya kablosuz ağ değiştiğinde bağlı durumda kalır veya hemen bağlanır. **Devre dışı** (varsayılan) olarak ayarlandığında, tüm VPN istemcileri için her zaman VPN devre dışı bırakılır. Etkinleştirildiğinde, şunları da yapılandırın:
 
@@ -133,7 +133,7 @@ Bu ayarlar,**Ikev2** **bağlantı türünü** > seçtiğinizde geçerlidir.
     - **Evet, belirli uygulamalar**: trafiği VPN 'yi ATLAYABILECEĞI CN uygulamalarının bir listesini **ekleyin** . CN uygulamasının paket tanımlayıcılarını girin. Örneğin, `com.contoso.app.id.package` girin.
 
   - **Captive Web sayfası uygulamasından dış VPN 'den geçiş yapmak Için trafik**: captive Web sayfası, captive oturum açma 'yı işleyen yerleşik bir web tarayıcısıdır. **Etkinleştir** ayarı, tarayıcı uygulama trafiğinin VPN 'i atlamasına izin verir. **Devre dışı bırak** (varsayılan) Web sayfası trafiğini her zaman açık VPN 'yi kullanacak şekilde zorlar. Varsayılan değer en güvenli seçenektir.
-  - **Ağ adresi çevirisi (NAT) canlı tutma aralığı (saniye)**: VPN 'ye bağlı kalmak için, cihaz ağ paketlerini etkin kalacak şekilde gönderir. Bu paketlerin ne sıklıkta gönderileceğini, 20-1440 adresinden saniye cinsinden bir değer girin. Örneğin, ağ paketlerini her 60 saniyede `60` bir VPN 'ye göndermek için bir değer girin. Varsayılan olarak, bu değer saniye olarak `110` ayarlanır.
+  - **Ağ adresi çevirisi (NAT) canlı tutma aralığı (saniye)**: VPN 'ye bağlı kalmak için, cihaz ağ paketlerini etkin kalacak şekilde gönderir. Bu paketlerin ne sıklıkta gönderileceğini, 20-1440 adresinden saniye cinsinden bir değer girin. Örneğin, `60` ağ paketlerini her 60 saniyede BIR VPN 'ye göndermek için bir değer girin. Varsayılan olarak, bu değer saniye olarak ayarlanır `110` .
   - **Cihaz uykuda olduğunda NAT KeepAlive 'ı donanıma devretmek**: bir cihaz uykuda olduğunda, cihazın VPN 'ye bağlı KALMASı için NAT 'ın sürekli canlı tutma paketleri göndermesini **sağlar** . **Devre dışı bırak ayarı** bu özelliği kapatır.
 
 - **Uzak tanımlayıcı**: Ikev2 sunucusunun ağ IP ADRESINI, FQDN 'Sini, userfqdn 'SINI veya ASN1DN girin. Örneğin `10.0.0.3` veya `vpn.contoso.com` girin. Genellikle [**bağlantı adı**](#base-vpn-settings) ile aynı değeri girersiniz (Bu makalede). Ancak, Ikev2 Sunucu ayarlarınıza göre değişir.
@@ -164,8 +164,8 @@ Bu ayarlar,**Ikev2** **bağlantı türünü** > seçtiğinizde geçerlidir.
   - **Orta** (varsayılan): 10 dakikada bir canlı tutma iletisi gönderir.
   - **Yüksek**: her 60 saniyede bir KeepAlive iletisi gönderir.
 
-- **TLS sürüm aralığı en az**: kullanılacak en düşük TLS sürümünü girin. , `1.0` `1.1`Veya `1.2`girin. Boş bırakılırsa varsayılan değeri `1.0` kullanılır.
-- **En yüksek TLS sürüm aralığı**: kullanılacak en fazla TLS sürümünü girin. , `1.0` `1.1`Veya `1.2`girin. Boş bırakılırsa varsayılan değeri `1.2` kullanılır.
+- **TLS sürüm aralığı en az**: kullanılacak en düşük TLS sürümünü girin. `1.0`, `1.1` Veya girin `1.2` . Boş bırakılırsa varsayılan değeri `1.0` kullanılır.
+- **En yüksek TLS sürüm aralığı**: kullanılacak en fazla TLS sürümünü girin. `1.0`, `1.1` Veya girin `1.2` . Boş bırakılırsa varsayılan değeri `1.2` kullanılır.
 
 > [!NOTE]
 > Kullanıcı kimlik doğrulaması ve sertifikaları kullanılırken en düşük ve en yüksek TLS sürüm aralığı ayarlanmalıdır.
@@ -187,8 +187,8 @@ Bu ayarlar,**Ikev2** **bağlantı türünü** > seçtiğinizde geçerlidir.
     - SHA2-256 (varsayılan)
     - SHA2-384
     - SHA2-512
-  - **Diffie-Hellman grubu**: istediğiniz grubu seçin. Varsayılan grup `2`.
-  - **Yaşam süresi** (dakika): anahtarlar döndürülünceye kadar güvenlik ilişkisinin ne kadar süreyle etkin kalacağını seçin. Ve `10` `1440` arasında bir tam değer girin (1440 dakika 24 saat). `1440` varsayılan değerdir.
+  - **Diffie-Hellman grubu**: istediğiniz grubu seçin. Varsayılan grup `2` .
+  - **Yaşam süresi** (dakika): anahtarlar döndürülünceye kadar güvenlik ilişkisinin ne kadar süreyle etkin kalacağını seçin. Ve arasında bir tam değer `10` girin `1440` (1440 dakika 24 saat). `1440` varsayılan değerdir.
 
 - **Alt güvenlik ilişkilendirmeleri için ayrı bir parametre kümesi yapılandırın**: IOS/ıPADOS, Ike bağlantısı için ayrı parametreleri ve tüm alt bağlantıları yapılandırmanıza olanak tanır. 
 
@@ -206,8 +206,8 @@ Bu ayarlar,**Ikev2** **bağlantı türünü** > seçtiğinizde geçerlidir.
     - SHA2-256 (varsayılan)
     - SHA2-384
     - SHA2-512
-  - **Diffie-Hellman grubu**: istediğiniz grubu seçin. Varsayılan grup `2`.
-  - **Yaşam süresi** (dakika): anahtarlar döndürülünceye kadar güvenlik ilişkisinin ne kadar süreyle etkin kalacağını seçin. Ve `10` `1440` arasında bir tam değer girin (1440 dakika 24 saat). `1440` varsayılan değerdir.
+  - **Diffie-Hellman grubu**: istediğiniz grubu seçin. Varsayılan grup `2` .
+  - **Yaşam süresi** (dakika): anahtarlar döndürülünceye kadar güvenlik ilişkisinin ne kadar süreyle etkin kalacağını seçin. Ve arasında bir tam değer `10` girin `1440` (1440 dakika 24 saat). `1440` varsayılan değerdir.
 
 ## <a name="automatic-vpn-settings"></a>Otomatik VPN ayarları
 

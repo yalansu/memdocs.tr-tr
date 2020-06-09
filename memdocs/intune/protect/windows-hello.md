@@ -1,12 +1,12 @@
 ---
 title: İş için Windows Hello ile Microsoft Intune tümleştirmesi
 titleSuffix: Microsoft Intune
-description: Yönetilen cihazlarda İş İçin Windows Hello kullanımını denetlemeye yönelik bir ilke oluşturmayı öğrenin."
+description: Cihaz kaydı sırasında yönetilen cihazlarda Iş için Windows Hello kullanımını denetlemeye yönelik bir ilke oluşturmayı öğrenin. "
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 06/08/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,27 +17,25 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 00f617d91541c1a580f6dec0b6b844abfc8d0d97
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 64a76911725e5d596a80ecc67e42f088666017de
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990934"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531902"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>İş için Windows Hello ile Microsoft Intune tümleştirmesi  
 
-İş için Windows Hello (önceki adıyla İş İçin Microsoft Passport) ile Microsoft Intune’u tümleştirebilirsiniz.
+Iş için Windows Hello 'Yu (eski adıyla İş için Microsoft Passport), cihaz kaydı sırasında Microsoft Intune tümleştirebilirsiniz.
 
- İş İçin Hello bir parolayı, akıllı kartı ya da sanal akıllı kartı değiştirmek için Active Directory veya bir Azure Active Directory hesabı kullanan alternatif bir oturum açma yöntemidir. Oturum açmak için parola yerine bir *kullanıcı hareketi* kullanmanıza imkan tanır. Kullanıcı hareketi bir PIN, Windows Hello gibi Biyometri kimlik doğrulaması veya parmak izi okuyucu gibi harici bir cihaz olabilir.
+İş İçin Hello bir parolayı, akıllı kartı ya da sanal akıllı kartı değiştirmek için Active Directory veya bir Azure Active Directory hesabı kullanan alternatif bir oturum açma yöntemidir. Oturum açmak için parola yerine bir *kullanıcı hareketi* kullanmanıza imkan tanır. Kullanıcı hareketi bir PIN, Windows Hello gibi Biyometri kimlik doğrulaması veya parmak izi okuyucu gibi harici bir cihaz olabilir.
 
 Intune, İş İçin Hello ile iki şekilde tümleşir:
 
-- **Cihaz kaydı** altında bir Intune ilkesi oluşturulabilir. Bu ilke, tüm kuruluşu hedefler (kiracı genelinde). Windows AutoPilot ilk çalıştırma deneyimini (OOBE) destekler ve bir cihaz kaydedildiğinde uygulanır. 
-- **Cihaz yapılandırması** altında bir kimlik koruma profili oluşturulabilir. Bu profil, atanmış kullanıcı ve cihazları hedefler ve iade etme sırasında uygulanır. 
+- **Kiracı genelinde**: *cihaz kaydı*altında bir Intune ilkesi oluşturulabilir. Bu ilke, tüm kuruluşu hedefler (kiracı genelinde). Windows AutoPilot ilk çalıştırma deneyimini (OOBE) destekler ve bir cihaz kaydedildiğinde uygulanır.
+- **Ayrık gruplar**: Iş Için Windows Hello 'Yu, Intune 'a kayıtlı cihazlara dağıtabilirsiniz. Windows Hello 'Yu yönetebilen ilke türleri, *cihaz yapılandırması*, çeşitli *güvenlik temelleri*ve uç nokta güvenlik *hesabı koruma* profilleri altında oluşturduğunuz *kimlik koruma* profillerini içerir. Bu profil türleri, atanan kullanıcıları veya cihazları hedefleyin ve iade sırasında uygulanır.
 
 Tüm kuruluşunuzu hedefleyen bir varsayılan İş İçin Windows Hello ilkesi oluşturmak için bu makaleden yararlanın. Seçili kullanıcı ve cihaz gruplarına uygulanacak bir kimlik koruma profili oluşturmak için bkz. [Kimlik koruma profili oluşturma](identity-protection-configure.md).  
-
-<!--- - You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Secure resource access with certificate profiles in Microsoft Intune](secure-resource-access-with-certificate-profiles.md). --->
 
 > [!IMPORTANT]
 > Yıldönümü Güncelleştirmesi’nden önceki Windows 10 masaüstü ve mobil sürümlerinde, kaynaklarda kimlik doğrulama için kullanılabilen iki farklı PIN ayarlayabilirsiniz:
@@ -59,8 +57,10 @@ Tüm kuruluşunuzu hedefleyen bir varsayılan İş İçin Windows Hello ilkesi o
 
 3. **İş Için Windows Hello 'Yu yapılandırmak**için aşağıdaki seçenekler arasından seçim yapın:
 
-    - **Devre dışı**. İş İçin Windows Hello’yu kullanmak istemiyorsanız, bu ayarı seçin. Devre dışı bırakılırsa, kullanıcılar, sağlama gerekebilecek mobil telefonlar Azure Active Directory dahil olmak üzere Iş için Windows Hello sağlayamaz.
-    - **Etkin**. İş İçin Windows Hello ayarlarını yapılandırmak istiyorsanız bu ayarı seçin.  *Etkin*' i seçtiğinizde, WINDOWS Hello için ek ayarlar görünür hale gelir.
+     - **Etkin**. İş İçin Windows Hello ayarlarını yapılandırmak istiyorsanız bu ayarı seçin.  *Etkin*' i seçtiğinizde, Windows Hello için ek ayarlar görünür ve cihazlar için yapılandırılabilir.
+
+    - **Devre dışı**. Cihaz kaydı sırasında Iş için Windows Hello 'Yu etkinleştirmek istemiyorsanız, bu seçeneği seçin. Devre dışı bırakıldığında, kullanıcılar, sağlama gerekebilecek mobil telefonlar Azure Active Directory dahil olmak üzere Iş için Windows Hello sağlayamaz. *Devre dışı*olarak ayarlandığında, bu ilke Iş Için Windows Hello 'yu Etkinleştiremese de Iş Için Windows Hello için sonraki ayarları yine de yapılandırabilirsiniz.
+
     - **Yapılandırılmadı**. Intune’un İş İçin Windows Hello ayarlarını denetlemesini istemiyorsanız bu ayarı seçin. Windows 10 cihazlarında mevcut Iş için Windows Hello ayarları değiştirilmez. Bölmedeki diğer ayarlardan hiçbiri kullanılamaz.
 
 4. Önceki adımda **Etkin**’i seçtiyseniz, tüm kayıtlı Windows 10 ve Windows 10 Mobile cihazlarına uygulanacak olan gerekli ayarları yapılandırın. Bu ayarları yapılandırdıktan sonra **Kaydet**' i seçin.

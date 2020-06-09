@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ac4050e6113eba2a34099a627bf6141049d8454
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 099643f1e55c6f3e58c0cd685c2339abf00dd7dc
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333050"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506222"
 ---
 # <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune 'de iOS ve ıpados cihazları için e-posta ayarları ekleme
 
@@ -45,14 +45,14 @@ Bu makalede iOS/ıpados çalıştıran cihazlarda kullanılabilen tüm e-posta a
   - **sAM Hesap Adı**: Etki alanı gerektirir; örneğin `domain\user1`. Şunları da girin:  
     - **Kullanıcı etki alanı adı kaynağı**: **AAD** (Azure Active Directory) veya **Özel**’i seçin.
       - **AAD**: Azure AD 'den öznitelikleri alın. Şunları da girin:
-        - **AAD 'den Kullanıcı etki alanı adı özniteliği**: kullanıcının **tam etki alanı adını** (`contoso.com`) veya **NetBIOS Name** (`contoso`) özniteliğini almayı seçin.
+        - **AAD 'Den Kullanıcı etki alanı adı özniteliği**: kullanıcının **tam etki alanı adını** ( `contoso.com` ) veya **NetBIOS Name** ( `contoso` ) özniteliğini almayı seçin.
 
       - **Özel**: özel bir etki alanı adından öznitelikleri alın. Şunları da girin:
-        - **Kullanılacak özel etki alanı adı**: Intune 'un `contoso.com` veya `contoso`gibi etki alanı adı için kullandığı bir değer girin.
+        - **Kullanılacak özel etki alanı adı**: Intune 'un veya gibi etki alanı adı için kullandığı bir değer girin `contoso.com` `contoso` .
 
 - **AAD’den e-posta adresi özniteliği**: Kullanıcı için e-posta adresinin nasıl oluşturulacağını seçin. Seçenekleriniz şunlardır:
-  - **Kullanıcı asıl adı**: `user1@contoso.com` veya `user1`gibi, e-posta adresi olarak tam asıl adı kullanın.
-  - **BIRINCIL SMTP adresi**: Exchange 'de oturum açmak IÇIN birincil SMTP adresini kullanın `user1@contoso.com`.
+  - **Kullanıcı asıl adı**: veya gibi, e-posta adresi olarak tam asıl adı kullanın `user1@contoso.com` `user1` .
+  - **BIRINCIL SMTP adresi**: Exchange 'de oturum açmak IÇIN birincil SMTP adresini kullanın `user1@contoso.com` .
 - **Kimlik doğrulama yöntemi**: kullanıcıların e-posta sunucusunda kimliklerini nasıl doğrulayacağını seçin. Seçenekleriniz şunlardır:
   - **Sertifika**: Exchange bağlantısının kimliğini doğrulamak için daha önce oluşturduğunuz istemci SCEP veya PKCS sertifika profilini seçin. Bu seçenek, kullanıcılarınız için en güvenli ve sorunsuz deneyim sağlar.
   - Kullanıcı adı **ve parola**: kullanıcılardan Kullanıcı adını ve parolasını girmesi istenir.
@@ -64,7 +64,7 @@ Bu makalede iOS/ıpados çalıştıran cihazlarda kullanılabilen tüm e-posta a
 - **SSL**: **Etkinleştir** olarak belirlenirse e-posta gönderirken, alırken ve Exchange sunucusuyla iletişim kurulurken Güvenli Yuva Katmanı (SSL) iletişimi kullanılır.
 - **OAuth**: **Etkinleştir** olarak belirlenirse e-posta gönderirken, alırken ve Exchange ile iletişim kurulurken Open Authorization (OAuth) iletişimi kullanılır. OAuth sunucunuz sertifika kimlik doğrulaması kullanıyorsa, **Kimlik doğrulama yöntemi** olarak **Sertifika**’yı belirleyin ve sertifikayı profile ekleyin. Diğer durumlarda **Kimlik doğrulama yöntemi** olarak **Kullanıcı adı ve parola**’yı belirleyin. OAuth kullanılırken şunları yaptığınızdan emin olun:
 
-  - Bu profili kullanıcılarınıza hedeflemeden önce e-posta çözümünüzün OAuth standardını desteklediğini onaylayın. Office 365 Exchange Online, OAuth standardını destekler. Şirket içi Exchange ve diğer iş ortağı veya üçüncü taraf çözümler ise OAuth’u desteklemeyebilir. Şirket içi Exchange, Modern Kimlik Doğrulaması için yapılandırılabilir ([Şirket İçi Exchange için Karma Modern Kimlik Doğrulaması Duyurusu](https://blogs.technet.microsoft.com/exchange/2017/12/06/announcing-hybrid-modern-authentication-for-exchange-on-premises/) blog gönderisine bakın).
+  - Bu profili kullanıcılarınıza hedeflemeden önce e-posta çözümünüzün OAuth standardını desteklediğini onaylayın. Office 365 Exchange Online, OAuth standardını destekler. Şirket içi Exchange ve diğer iş ortağı veya üçüncü taraf çözümler ise OAuth’u desteklemeyebilir. Şirket içi Exchange, modern kimlik doğrulaması için yapılandırılabilir. Daha fazla bilgi için bkz. [Şirket Içi Skype Kurumsal ve Exchange sunucuları Için karma modern kimlik doğrulamasına genel bakış ve Önkoşullar](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
 
     E-posta profili OAuth kullanıyorsa ancak e-posta hizmeti bunu desteklemiyorsa, **Parolayı yeniden gir** seçeneği bozuk görünür. Örneğin kullanıcı Apple’ın cihaz ayarlarında **Parolayı yeniden gir**’i seçerse hiçbir şey olmaz.
 

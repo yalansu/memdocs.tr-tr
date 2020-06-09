@@ -1,80 +1,108 @@
 ---
 title: Microsoft Edge ayarlarını yapılandırma
 titleSuffix: Configuration Manager
-description: Windows 10 istemcilerinde Microsoft Edge Web tarayıcısının ayarlarını yapılandırma
+description: Windows 10 istemcilerinde Microsoft Edge eski Web tarayıcısının ayarlarını yapılandırma
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
-ms.topic: conceptual
+ms.date: 06/02/2020
+ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 4ed49ed3623b34bfb51fd66fafa858ae3951a5af
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 898d5240046655ca3d13037f74c92e730ab1993e
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906355"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506154"
 ---
-# <a name="configure-microsoft-edge-settings-in-configuration-manager"></a>Configuration Manager 'de Microsoft Edge ayarlarını yapılandırma
+# <a name="configure-microsoft-edge-legacy-settings-in-configuration-manager"></a>Configuration Manager 'de Microsoft Edge eski ayarlarını yapılandırma
+
+> [!IMPORTANT]
+> Microsoft Edge sürüm 77 veya üstünü kullanıyorsanız ve ayarlar bölmesini açmaya çalışıyorsanız, `edge://settings/profiles` Arama yerine tarayıcının adres çubuğuna yazın. Daha fazla bilgi için bkz. [Microsoft Edge](https://support.microsoft.com/help/17171/microsoft-edge-get-to-know)'i öğrenin.
+>
+> Bu makale BT uzmanlarının Microsoft uç nokta Configuration Manager ile Microsoft Edge eski ayarlarını yönetmesine yöneliktir.
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
 <!-- 1357310 -->
-Sürüm 1802 ' den başlayarak, Windows 10 istemcilerinde [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) Web tarayıcısını kullanan müşteriler için, birkaç Microsoft Edge ayarını yapılandırmak üzere bir Configuration Manager uyumluluk ayarları ilkesi oluşturun. 
+Windows 10 istemcilerinde [Microsoft Edge eski](https://docs.microsoft.com/microsoft-edge/deploy/) Web tarayıcısını kullanan müşteriler için, tarayıcı ayarlarını yapılandırmak üzere bir Configuration Manager uyumluluk ilkesi oluşturun.
 
-Bu ilke yalnızca Windows 10, sürüm 1703 veya sonraki sürümlerde istemciler için geçerlidir. <!--511552-->
+Bu ilke yalnızca Windows 10, sürüm 1703 veya sonraki sürümlerde istemciler ve Microsoft Edge eski sürüm 45 ve önceki sürümleri için geçerlidir. <!--511552-->
 
+Microsoft Edge sürüm 77 veya üstünü Configuration Manager ile yönetme hakkında daha fazla bilgi için bkz. [Microsoft Edge, sürüm 77 ve sonraki sürümleri dağıtma](../../apps/deploy-use/deploy-edge.md). Microsoft Edge sürüm 77 veya üzeri için ilkeleri yapılandırma hakkında daha fazla bilgi için bkz. [Microsoft Edge-policies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies).
 
 ## <a name="policy-settings"></a>İlke ayarları
+
 Bu ilke şu anda aşağıdaki ayarları içerir:
+
 - **Microsoft Edge tarayıcısını varsayılan olarak ayarla**: Web tarayıcısı için Windows 10 varsayılan uygulama ayarını Microsoft Edge olarak yapılandırır
-- **Adres çubuğu açılır öğesine Izin ver**: Windows 10, sürüm 1703 veya üstünü gerektirir. Daha fazla bilgi için bkz. [Allowaddressbardropı tarayıcı ilkesi](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
-- **Microsoft tarayıcıları arasında sık kullanılanlara eşitlemeye Izin ver**: Windows 10, sürüm 1703 veya üstünü gerektirir. Daha fazla bilgi için bkz. [Syncfavoritesbetweenıeandmicrosoftedge Browser ilkesi](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
-- **Çıkışta tarama verilerini temizlemeye Izin ver**: Windows 10, sürüm 1703 veya üstünü gerektirir. Daha fazla bilgi için bkz. [Clearbrowsingdataonexit Browser ilkesi](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
-- **Üst bilgileri Izlememe Izin ver**: daha fazla bilgi için bkz. [allowdonottrack tarayıcı ilkesi](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
-- **Otomatik doldurmaya Izin ver**: daha fazla bilgi için bkz. [allowotomatik doldurma tarayıcı ilkesi](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
-- **Tanımlama bilgilerine Izin ver**: daha fazla bilgi için bkz. [AllowCookies tarayıcı ilkesi](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
-- **Açılır pencere engelleyiciye Izin ver**: daha fazla bilgi için bkz. [allowpopup Browser Policy](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
-- **Adres çubuğunda arama önerilerine Izin ver**: daha fazla bilgi için bkz. [Allowsearchmülationsınaddressbar tarayıcı ilkesi](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
-- **Internet Explorer 'a intranet trafiği gönderilmesine Izin ver**: daha fazla bilgi için bkz. [SendIntranetTraffictoInternetExplorer Browser Policy](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
-- **Parola Yöneticisi 'Ne Izin ver**: daha fazla bilgi için bkz. [allowpasswordmanager tarayıcı ilkesi](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
-- **Geliştirici Araçları Izin ver**: daha fazla bilgi için bkz. [AllowDeveloperTools Browser Policy](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
-- **Uzantılara Izin ver**: daha fazla bilgi için bkz. [AllowExtensions tarayıcı ilkesi](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
 
+- **Adres çubuğu açılır öğesine Izin ver**: Windows 10, sürüm 1703 veya üstünü gerektirir. Daha fazla bilgi için bkz. [Allowaddressbardropı tarayıcı ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
 
-### <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge"></a>Microsoft Edge için Windows Defender SmartScreen ayarlarını yapılandırma
+- **Microsoft tarayıcıları arasında sık kullanılanlara eşitlemeye Izin ver**: Windows 10, sürüm 1703 veya üstünü gerektirir. Daha fazla bilgi için bkz. [Syncfavoritesbetweenıeandmicrosoftedge Browser ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
+
+- **Çıkışta tarama verilerini temizlemeye Izin ver**: Windows 10, sürüm 1703 veya üstünü gerektirir. Daha fazla bilgi için bkz. [Clearbrowsingdataonexit Browser ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
+
+- **Üst bilgileri Izlememe Izin ver**: daha fazla bilgi için bkz. [allowdonottrack tarayıcı ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
+
+- **Otomatik doldurmaya Izin ver**: daha fazla bilgi için bkz. [allowotomatik doldurma tarayıcı ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
+
+- **Tanımlama bilgilerine Izin ver**: daha fazla bilgi için bkz. [AllowCookies tarayıcı ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
+
+- **Açılır pencere engelleyiciye Izin ver**: daha fazla bilgi için bkz. [allowpopup Browser Policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
+
+- **Adres çubuğunda arama önerilerine Izin ver**: daha fazla bilgi için bkz. [Allowsearchmülationsınaddressbar tarayıcı ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
+
+- **Internet Explorer 'a intranet trafiği gönderilmesine Izin ver**: daha fazla bilgi için bkz. [SendIntranetTraffictoInternetExplorer Browser Policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
+
+- **Parola Yöneticisi 'Ne Izin ver**: daha fazla bilgi için bkz. [allowpasswordmanager tarayıcı ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
+
+- **Geliştirici Araçları Izin ver**: daha fazla bilgi için bkz. [AllowDeveloperTools Browser Policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
+
+- **Uzantılara Izin ver**: daha fazla bilgi için bkz. [AllowExtensions tarayıcı ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
+
+> [!TIP]
+> Bu ve diğer ayarları yapılandırmak için Grup İlkesi kullanma hakkında daha fazla bilgi için bkz. [Microsoft Edge eski grup ilkeleri](https://docs.microsoft.com/microsoft-edge/deploy/group-policies/).
+
+### <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge-legacy"></a>Microsoft Edge için Windows Defender SmartScreen ayarlarını yapılandırın eski
 <!--1353701-->
-Sürüm 1806 ' den başlayarak, bu ilke [Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview)için üç ayar ekler. İlke artık **SmartScreen ayarları** sayfasında aşağıdaki ek ayarları içerir:
+Bu ilke, [Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview)için üç ayar ekler. İlke artık **SmartScreen ayarları** sayfasında aşağıdaki ek ayarları içerir:
 
 - **SmartScreen 'e Izin ver**: Windows Defender SmartScreen 'e izin verilip verilmeyeceğini belirtir. Daha fazla bilgi için bkz. [Allowsmartscreen tarayıcı ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
+
 - **Kullanıcılar siteler Için SmartScreen istemlerini geçersiz kılabilir**: kullanıcıların olası kötü amaçlı Web siteleri hakkındaki Windows Defender SmartScreen Filtresi uyarılarını geçersiz kılıp kılamayacağını belirtir. Daha fazla bilgi için [PreventSmartScreenPromptOverride Browser ilkesine](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)bakın.
+
 - **Kullanıcılar dosyalar Için SmartScreen istemlerini geçersiz kılabilir**: kullanıcıların, doğrulanmamış dosyaları Indirme hakkındaki Windows Defender SmartScreen Filtresi uyarılarını geçersiz kılıp kılamayacağını belirtir. Daha fazla bilgi için [PreventSmartScreenPromptOverrideForFiles Browser ilkesine](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)bakın.
 
+## <a name="create-the-browser-profile"></a>Tarayıcı profili oluşturma
 
+1. Configuration Manager konsolunda **varlıklar ve uyum** çalışma alanına gidin. **Uyumluluk ayarları** ' nı genişletin ve **Microsoft Edge tarayıcı profilleri** düğümünü seçin. Şeritte **Microsoft Edge profili oluştur**' u seçin.
 
-## <a name="create-the-microsoft-edge-browser-profile"></a>Microsoft Edge tarayıcı profili oluşturma
+2. İlke için bir **ad** belirtin, isteğe bağlı olarak bir **Açıklama**girin ve **İleri**' yi seçin.
 
-1. Configuration Manager konsolunda **varlıklar ve uyum** çalışma alanına gidin. **Uyumluluk ayarları** ' nı genişletin ve **Microsoft Edge tarayıcı profilleri** düğümünü seçin. **Microsoft Edge profili oluşturmak**için şerit seçeneğine tıklayın.
-2. İlke için bir **ad** belirtin, isteğe bağlı olarak bir **Açıklama**girin ve **İleri**' ye tıklayın.
-3. **Genel ayarlar** sayfasında, bu ilkeye dahil edilecek ayarlar için **yapılandırılan** değeri değiştirin ve **İleri**' ye tıklayın. **Edge tarayıcısını ayarlama** ayarı, devam etmek için yapılandırılmış olmalıdır.
-4. Sürüm 1806 ve sonrasında, **SmartScreen ayarları** sayfasında ayarları yapılandırın ve ardından **İleri**' ye tıklayın. 
-5. **Desteklenen platformlar** sayfasında, bu ilkenin geçerli olduğu işletim sistemi sürümlerini ve mimarilerini seçin ve **İleri**' ye tıklayın. 
+3. **Genel ayarlar** sayfasında, ayarlar için bu ilkeye dahil edilecek **şekilde değeri** değiştirin. Sihirbaza devam etmek için, **sınır tarayıcısını varsayılan olarak ayarlamak**için ayarı yapılandırmayı unutmayın.
+
+4. **SmartScreen ayarları** sayfasında ayarları yapılandırın.
+
+5. **Desteklenen platformlar** sayfasında, bu ilkenin uygulanacağı işletim sistemi sürümlerini ve mimarilerini seçin.
+
 6. Sihirbazı tamamlayın.
-
-
 
 ## <a name="deploy-the-policy"></a>İlkeyi dağıtma
 
-1. İlkenizi seçin ve **dağıtmak**için şerit seçeneğine tıklayın.
-2. İlkenin dağıtılacağı Kullanıcı veya cihaz koleksiyonunu seçmek için, **Araştır** ' a tıklayın. 
-3. Gereken ek seçenekleri seçin.  
-     a. İlke uyumlu olmadığında uyarılar oluşturun.  
-     b. İstemcinin bu ilkeyle cihazın uyumluluğunu değerlendiren zamanlamayı ayarlayın. 
-4. Dağıtımı oluşturmak için **Tamam** ' ı tıklatın.
+1. İlkenizi seçin ve şeritte **Dağıt**' ı seçin.
 
+2. İlkenin dağıtılacağı Kullanıcı veya cihaz koleksiyonunu seçmek için **gidin** .
 
+3. Gereken ek seçenekleri seçin:
+
+    1. İlke uyumlu olmadığında uyarılar oluşturun.
+
+    2. İstemcinin bu ilkeyle cihazın uyumluluğunu değerlendiren zamanlamayı ayarlayın.
+
+4. Dağıtımı oluşturmak için **Tamam ' ı** seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

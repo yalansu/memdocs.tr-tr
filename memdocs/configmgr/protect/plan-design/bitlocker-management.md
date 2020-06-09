@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2523d06034f4a7effe769235cb5a4ede4df7e167
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 2c03d5d06dc6b49ceff6af8ce862eb19cb4a517a
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764127"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531477"
 ---
 # <a name="plan-for-bitlocker-management"></a>BitLocker yönetimi için planlama
 
@@ -23,7 +23,7 @@ ms.locfileid: "83764127"
 
 <!-- 3601034 -->
 
-Sürüm 1910 ' den başlayarak, şirket içi Windows istemcileri için BitLocker Sürücü Şifrelemesi (BDE) yönetmek üzere Configuration Manager kullanın. Microsoft BitLocker yönetim ve Izleme (MBAD) kullanımını değiştirecek tam BitLocker yaşam döngüsü yönetimi sağlar.
+Sürüm 1910 ' den başlayarak, Active Directory katılmış şirket içi Windows istemcileri için BitLocker Sürücü Şifrelemesi (BDE) yönetmek üzere Configuration Manager kullanın. Azure Active Directory birleştirilmiş veya çalışma grubu istemcileri desteklenmez. Microsoft BitLocker yönetim ve Izleme (MBAD) kullanımını değiştirecek tam BitLocker yaşam döngüsü yönetimi sağlar.
 
 > [!Note]  
 > Configuration Manager varsayılan olarak bu isteğe bağlı özelliği etkinleştirmez. Bu özelliği kullanmadan önce etkinleştirmeniz gerekir. Daha fazla bilgi için, bkz. [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
@@ -92,7 +92,7 @@ Kullanıcıların, BitLocker şifreli bir cihazın kilidini açmak için tek kul
     > [!NOTE]
     > Yalnızca Self Servis Portalı 'nı ve yönetim ve izleme Web sitesini bir birincil site veritabanıyla birlikte yükler. Bir hiyerarşide, her birincil site için bu Web sitelerini yükler.
 
-- Self Servis portalını barındıracak Web sunucusunda, [MICROSOFT ASP.NET MVC 4,0](https://docs.microsoft.com/aspnet/mvc/mvc4)' yi yükler.
+- Self Servis portalını barındıracak Web sunucusunda, yüklemeye başlamadan önce [MICROSOFT ASP.NET MVC 4,0](https://docs.microsoft.com/aspnet/mvc/mvc4) ve .NET Framework 3,5 özelliğini yükledikten sonra. Portal yükleme işlemi sırasında, diğer gerekli Windows Server rolleri ve özellikleri otomatik olarak yüklenir.
 
 - Portal yükleyici betiğini çalıştıran kullanıcı hesabı, site veritabanı sunucusunda SQL **sysadmin** haklarına sahip olmalıdır. Kurulum işlemi sırasında, betik Web sunucusu makine hesabı için oturum açma, Kullanıcı ve SQL rol haklarını ayarlar. Self Servis portalı ve yönetim ve izleme Web sitesinin kurulumunu tamamladıktan sonra bu kullanıcı hesabını sysadmin rolünden kaldırabilirsiniz.
 

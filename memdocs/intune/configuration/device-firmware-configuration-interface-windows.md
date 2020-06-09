@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 05/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: dagerrit
@@ -15,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f598a73275e257fca3ff4024641fce54c3dabd2
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: cb45550f8c38237bebcc54db5531ab244ab10d84
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983846"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531528"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Windows cihazlarında cihaz üretici yazılımı yapılandırma arabirimi profillerini Microsoft Intune (Genel Önizleme) kullanma
 
@@ -82,7 +83,7 @@ Bu profil, yapılandırdığınız DFCı ayarlarını içerir.
     - **Platform**: **Windows 10 ve üzeri** seçeneğini belirleyin.
     - **Profil**: **cihaz üretici yazılımı yapılandırma arabirimini**seçin.
 
-4. **Oluştur**’u seçin.
+4. **Oluştur**'u seçin.
 5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
     - **Ad**: profil için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı **Windows: Windows cihazlarında dfcı ayarlarını yapılandırın**.

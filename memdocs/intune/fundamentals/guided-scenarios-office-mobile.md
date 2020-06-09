@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: dagerrit
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7aabc09e276c723e9aeaed4ec8eb3dd4c0332b4e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: faf63bd4d738278e41e90fe54e696f83e727a58d
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79332534"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531851"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Kılavuzlu senaryo-güvenli Microsoft Office mobil uygulamalar
 
@@ -38,7 +39,7 @@ Etkinleştirdiğiniz uygulama koruması aşağıdaki eylemleri uygular:
 - Cihaz 720 dakika boyunca çevrimdışıysa, çalışma dosyalarına erişimi engelleyin.
 - Cihaz 90 gün boyunca çevrimdışı ise iş dosyalarını kaldırın.
 
-## <a name="background"></a>Arka plan
+## <a name="background"></a>Arka Plan
 
 Office Mobile Apps 'in yanı sıra mobil için Microsoft Edge, ikili kimlik desteği. Çift kimlik, uygulamaların iş dosyalarını kişisel dosyalardan ayrı olarak yönetmesine olanak tanır. 
 
@@ -59,7 +60,7 @@ Bu örnekte, yönetici Outlook uygulamasına uygulama koruma ilkeleri uygulamı�
 
 ![Outlook uygulaması koşullu erişim işlem akışı](./media/guided-scenarios-office-mobile/guided-scenarios-office-mobile-02.png)
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Intune yönetici izinlerini takip etmeniz gerekir:
 
@@ -109,7 +110,7 @@ Uygulamaları seçtikten **sonra ileri**' ye tıklayın.
 
 Bu adımda, bu uygulamalardaki kurumsal dosyalara ve e-postalara erişmek ve bunları paylaşmak için gereksinimleri yapılandırmanız gerekir. Varsayılan olarak, kullanıcılar kuruluşunuzun OneDrive ve SharePoint hesaplarına veri kaydedebilir.
 
-| Ayar | Açıklama | Varsayılan Değer |
+| Ayar | Description | Varsayılan değer |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
 | PIN türü | Sayısal PIN 'Ler tüm numaralardan oluşur. Passcodes, alfasayısal karakterlerden ve özel karakterlerden oluşur.  İOS/ıpados 'ta, "geçiş kodu" türünü yapılandırmak için, uygulamanın Intune SDK sürüm 7.1.12 veya üstüne sahip olmasını gerektirir. Sayısal türlerde Intune SDK sürümü kısıtlaması yoktur. | Sayısal |
 | En düşük PIN uzunluğunu seçin | PIN dizisindeki basamak sayısı alt sınırını belirtin. | 6 |

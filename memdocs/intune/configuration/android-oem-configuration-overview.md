@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8eaa636659cb9e2382f61fb668d8aec2ecd75f7a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5ee1f3b68a6c78ee1099f8adcbfc935d9fa61103
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990184"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506273"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Microsoft Intune 'de OEMConfig ile Android kurumsal cihazlarını kullanma ve yönetme
 
@@ -89,7 +89,7 @@ Cihazın OEMConfig 'i desteklediğinden emin olun, Intune 'a doğru OEMConfig uy
     - **Platform**: **Android kurumsal**' i seçin.
     - **Profil**: **oemconfig**' i seçin.
 
-4. **Oluştur**’u seçin.
+4. **Oluştur**'u seçin.
 5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
     - **Ad**: Yeni profil için açıklayıcı bir ad girin.
@@ -162,6 +162,7 @@ OEMConfig Apps, standart uygulamalarla karşılaştırıldığında, Google tara
 | HMDGlobal-7,2 | com. hmdglobal. app. oemconfig. n7_2 | 
 | HMDGlobal-4,2 | com. hmdglobal. app. oemconfig. n4_2 | 
 | Kyocera | JP. Kyocera. enterprisedeviceconfig |  |
+| Panasonic | com. Panasonic. Mobile. oemconfig | |
 | Samsung | com. Samsung. Android. Knox. kpu | [Knox hizmeti eklentisi Yönetici Kılavuzu](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
 | Seuic | com. seuic. seuicoemconfig | |
 | Spectralink-barkodlar | com. spectralınk. Barcode. Service |  |

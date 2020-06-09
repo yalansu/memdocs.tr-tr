@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 235a79f644bf15b82eb9e8750f04519238760aca
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: f52c3bced4d08d32082b424a1ee0e90a338d07a5
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551936"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506290"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune 'da ortak iOS/ıpados özelliklerini kullanmak için iOS ve ıpados cihaz ayarları
 
@@ -78,6 +78,11 @@ Bu özellik şu platformlarda geçerlidir:
 - ıpados 13,0 ve üzeri
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
+
+> [!NOTE]
+> Yalnızca bir uygulamayı yerleştirme, sayfa veya sayfadaki bir klasöre ekleyin. Aynı uygulamayı her yerde eklemek, uygulamanın cihazlarda gösterilmesini engeller ve raporlama hatalarını gösterebilir.
+>
+> Örneğin, Kamera uygulamasını bir dock 'a ve bir sayfaya eklerseniz, kamera uygulaması gösterilmez ve raporlama ilke için bir hata gösterebilir. Kamera uygulamasını ana ekran düzenine eklemek için yalnızca Dock veya Page ' i seçin, her ikisini birden değil.
 
 ### <a name="dock"></a>Dock
 
