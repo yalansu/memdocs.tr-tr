@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/30/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: b82efd77bd1d9df9df1e5d0efd41a0f540a97b3f
-ms.sourcegitcommit: e618ea7cb864635c838b672bc71a1e926bf7c047
+ms.openlocfilehash: 22dc48a60d03a0cc6bc10e04bc3facbf36983ff9
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84458108"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84637573"
 ---
 Bu bildirimler, gelecekteki Intune değişiklik ve özelliklerine hazırlanmanıza yardımcı olabilecek önemli bilgiler sağlar.
 
@@ -31,6 +31,9 @@ Hangi cihazların veya kullanıcıların etkilendiğini görmek için Intune rap
 Eski PC yönetimi, 15 Ekim 2020 ' de destek altına geçiyor. Cihazları Windows 10 ' a yükseltin ve Intune tarafından yönetilmek üzere bunları mobil cihaz yönetimi (MDM) cihazları olarak yeniden kaydedin.
 
 [Daha fazla bilgi](https://go.microsoft.com/fwlink/?linkid=2107122)
+
+### <a name="move-to-the-microsoft-endpoint-manager-admin-center-for-all-your-intune-management"></a>Tüm Intune yöneti, Microsoft Endpoint Manager yönetim merkezine gidin
+MC208118 son Mart sürümünde, Microsoft Endpoint Manager için yeni ve basit bir URL sunuyoruz – Intune yönetimi: [https://endpoint.microsoft.com](https://endpoint.microsoft.com) . Microsoft Uç Nokta Yöneticisi, Microsoft Intune ve Configuration Manager içeren Birleşik bir platformdur. **1 ağustos 2020**' den itibaren, ' de Intune yönetimini kaldıracağız [https://portal.azure.com](https://portal.azure.com) ve bunun yerine [https://endpoint.microsoft.com](https://endpoint.microsoft.com) tüm uç nokta yönetiminiz için kullanmanızı öneririz. 
 
 
 ### <a name="decreasing-support-for-android-device-administrator--7371518--"></a>Android Cihaz Yöneticisi desteğini azaltma<!--7371518-->
@@ -115,3 +118,8 @@ Bu noktada, Kullanıcı bu eylemleri tamamladıktan sonra, Samsung tarafından �
 - [Google 'ın Cihaz Yöneticisi kullanımdan kaldırılması hakkında bilmeniz gerekenler hakkında](https://www.blog.google/products/android-enterprise/da-migration/)
 - [Google 'ın cihaz yöneticisinden Android kuruluşa geçiş kılavuzu](http://static.googleusercontent.com/media/android.com/en/enterprise/static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)
 - [Google 'ın kullanım dışı Cihaz Yöneticisi API 'Leri belgeleri](https://developers.google.com/android/work/device-admin-deprecation)
+
+
+### <a name="plan-for-change-intune-enrollment-flow-update-for-apples-automated-device-enrollment-for-iosipados"></a>Değişiklik planı: Apple 'ın iOS/ıpados için otomatik cihaz kaydına yönelik Intune kayıt akışı güncelleştirmesi
+Temmuz Şirket Portalı sürümünde, Apple 'ın otomatik cihaz kaydı (eski adıyla DEP) için iOS/ıpados kayıt akışını değiştireceksiniz. Kayıt akışı değişikliğine yalnızca "Kullanıcı benzeşimi ile kaydetme" akışı sırasında karşılaşıldı. Daha önce, "Install Şirket Portalı" öğesini yapılandırmanızın bir parçası olarak "Hayır" olarak ayarlarsanız, kullanıcılar Şirket Portalı uygulamayı mağazadan yüklemeye devam edebilir ve kullanıcının uygun seri numarasına eklemesi için kayıt tetikleyebiliyordu. Yakında bu Şirket Portalı piyasaya çıkmasıyla ilgili seri numarası onay ekranını kaldıracağız. Bunun yerine, kullanıcıların başarıyla kayıt yapabilmesi veya yapılandırmanızın bir parçası olarak "Install Şirket Portalı" ayarını "Evet" olarak ayarlayabilmesi için Şirket Portalı birlikte göndermek üzere ilgili bir uygulama yapılandırma ilkesi oluşturmanız gerekir. 
+ - Daha fazla bilgi için [buraya](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-enrollment-flow-update-for-apple-s-automated-device/ba-p/1431629) gönderin bölümüne bakın.
