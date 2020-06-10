@@ -5,17 +5,17 @@ description: Panoyu kullanarak yüzey cihazları hakkındaki bilgileri gözden g
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 06/09/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: f9b9c49bde16754b7a60112905f14da2cd5e48eb
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 7e6a98c25fabff31d3eae688edf89540c1ab71a7
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906285"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84613949"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Configuration Manager Surface cihaz panosu
 
@@ -59,7 +59,7 @@ Surface cihaz panosu, ortamınız için üç grafik gösterir.
 
 Surface cihazları hakkında daha fazla bilgi için [Surface](https://www.microsoft.com/surface) Web sitesine bakın.
 
-Surface bellenim güncelleştirmelerini Configuration Manager dağıtma hakkında daha fazla bilgi için bkz. [Surface sürücü güncelleştirmelerini yönetme](https://support.microsoft.com/help/4098906).
+Surface bellenim güncelleştirmelerini Configuration Manager dağıtma hakkında daha fazla bilgi için bkz. [Surface sürücü güncelleştirmelerini yönetme](../../../sum/deploy-use/surface-drivers.md).
 
 
 

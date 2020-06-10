@@ -2,7 +2,7 @@
 title: CAS 'yi kaldır
 titleSuffix: Configuration Manager
 description: Configuration Manager altyapınızı tek bir tek başına birincil siteye kolaylaştırmak için merkezi yönetim sitesini (CAS) kaldırın.
-ms.date: 04/01/2020
+ms.date: 06/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 16975644-8dfa-4f22-b45a-c54a9250dbd2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6704075d707306f55a50a937185c9bdd28b18cc5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 237c326c4420aec13ad6c9ca9b07d9f5304b6945
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718115"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84613983"
 ---
 # <a name="remove-the-central-administration-site"></a>Merkezi yönetim sitesini kaldırma
 
@@ -34,7 +34,7 @@ Sürüm 2002 ' den başlayarak, hiyerarşi merkezi yönetim sitesinden (CAS) ve 
 > - Büyük/küçük harf önem derecesini değiştiremezsiniz.
 > - Microsoft Desteği, bu danışmanlık çalışmalarına normal, hafta içi iş saatlerinde yardımcı olacaktır.
 
-## <a name="plan"></a>Plan
+## <a name="plan"></a>Planlama
 
 - Hiyerarşinin CAS ve tek bir alt birincil siteden oluşması gerekir. Birincil site ikincil sitelere sahip olabilir. Diğer alt birincil siteleri hiyerarşiden kaldırmak için, [bir birincil siteyi kaldırmak](uninstall-sites-and-hierarchies.md#bkmk_primary)üzere planlama adımlarını ve önkoşulları gözden geçirin.
 
@@ -93,9 +93,9 @@ Sürüm 2002 ' den başlayarak, hiyerarşi merkezi yönetim sitesinden (CAS) ve 
 
     - **Başlat** menüsünde **Configuration Manager Kurulum**' u seçin.
 
-    - Configuration Manager *yükleme medyası*dizininde öğesini açın `\SMSSETUP\BIN\X64\setup.exe`. Bu sürümün site sürümüyle aynı olduğundan emin olun.
+    - Configuration Manager *yükleme medyası*dizininde öğesini açın `\SMSSETUP\BIN\X64\setup.exe` . Bu sürümün site sürümüyle aynı olduğundan emin olun.
 
-    - Configuration Manager *yüklendiği*dizinde açın `\BIN\X64\setup.exe`.
+    - Configuration Manager *yüklendiği*dizinde açın `\BIN\X64\setup.exe` .
 
 1. **Başlamadan önce** sayfasındaki bilgileri gözden geçirin.
 
@@ -143,7 +143,7 @@ CAS 'yi kaldırdıktan sonra, ortamınız için uygulanan aşağıdaki adımlar�
 
 - Configuration Manager [Azure izleyici](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=configmgr/core/context/core-context)ile bağlanıyorsanız, bağlantıyı sıfırlamanız gerekir. Sorunları çözecek ilk adım [gizli anahtarı yenilemeyecektir](../configure/azure-services-wizard.md#bkmk_renew). Bu sorunu çözmezse, bağlantıyı yeniden oluşturun.<!-- 5584635 -->
 
-- Sürüm 2002 ' de yüzey sürücülerinin eşitlenmesini etkinleştirirseniz, CA 'ları kaldırdıktan sonra bu özelliği yeniden yapılandırın. Daha fazla bilgi için bkz. [Microsoft Surface sürücülerini ve bellenim güncelleştirmelerini içerme](../../../../sum/get-started/configure-classifications-and-products.md#bkmk_Surface).<!-- 5728727 -->
+- Sürüm 2002 ' de yüzey sürücülerinin eşitlenmesini etkinleştirirseniz, CA 'ları kaldırdıktan sonra bu özelliği yeniden yapılandırın. Daha fazla bilgi için bkz. [Microsoft Surface Drivers ve bellenim Updates](../../../../sum/deploy-use/surface-drivers.md).<!-- 5728727 -->
 
 - Üçüncü taraf yazılım güncelleştirmelerini yönetiyorsanız:
 

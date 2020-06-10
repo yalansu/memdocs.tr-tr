@@ -5,17 +5,17 @@ description: Configuration Manager konsolunda eşitlenmek üzere yazılım günc
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 7e2cc1c2dc52a0bb6eb8d0dd143cbb2d005dc6e9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4f13ff305ba5fc2b5c5080bafb6fed2412ff8366
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078473"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84614075"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>Sınıflandırmaları ve eşitlenmek üzere ürünleri yapılandırma  
 
@@ -28,7 +28,7 @@ Yazılım güncelleştirme meta verileri, yazılım güncelleştirme noktası bi
 
 ## <a name="to-configure-classifications-and-products-to-synchronize"></a>Eşitlenecek sınıflandırmaları ve ürünleri yapılandırmak için  
 
-1. **Configuration Manager** konsolunda, **Yönetim** > **Site yapılandırması** > **siteler**' e gidin.
+1. **Configuration Manager** konsolunda, **Yönetim**  >  **Site yapılandırması**  >  **siteler**' e gidin.
 
 2. Merkezi yönetim sitesini veya tek başına birincil siteyi seçin.  
 
@@ -47,9 +47,9 @@ Yazılım güncelleştirme meta verileri, yazılım güncelleştirme noktası bi
      - **Güncelleştirme paketleri**: kolay dağıtım için bir test edilmiş, toplu düzeltmeler, güvenlik güncelleştirmeleri, kritik güncelleştirmeler ve birlikte paketlenmiş güncelleştirmeleri belirtir. Güncelleştirme paketi genellikle güvenlik veya ürün bileşeni gibi belirli bir alana yöneliktir.  
      - **Güncelleştirmeler**: belirli bir sorun için yaygın olarak yayınlanan bir sorunu belirtir. Güncelleştirme, kritik olmayan ve güvenlikle ilgili olmayan bir hataya yöneliktir.  
      - **Yükseltme**: Windows 10 özellikleri ve işlevselliği için bir yükseltme belirtir. **Yükseltme** sınıflandırmasını almak için yazılım güncelleştirme noktalarınız ve siteleriniz, [3095113 düzeltmesini](https://support.microsoft.com/kb/3095113) içeren en az WSUS 6,2 çalıştırmalıdır. Bu güncelleştirmeyi ve **yükseltmeler**için diğer güncelleştirmeleri yükleme hakkında daha fazla bilgi için bkz. [yazılım güncelleştirmeleri için Önkoşullar](../plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012).
-
+    
     > [!NOTE]
-    > Microsoft Surface sürücülerini eşleştirmek için **Microsoft Surface sürücülerini ve bellenim güncelleştirmelerini dahil et** onay kutusunu seçebilirsiniz.<!--1098490--> Daha fazla bilgi için [Microsoft Surface sürücülerini ve bellenim güncelleştirmelerini ekleme](#bkmk_Surface) bölümüne bakın.
+    > Microsoft Surface sürücülerini eşleştirmek için **Microsoft Surface sürücülerini ve bellenim güncelleştirmelerini dahil et** onay kutusunu seçebilirsiniz.<!--1098490--> Surface sürücülerini başarıyla eşitlemeniz için tüm yazılım güncelleştirme noktalarının Windows Server 2016 veya üstünü çalıştırması gerekir. Windows Server 2012 çalıştıran bir bilgisayarda bir yazılım güncelleştirme noktasını etkinleştirirseniz yüzey sürücülerini etkinleştirdikten sonra, sürücü güncelleştirmelerinin tarama sonuçları doğru olmaz. Bu, Configuration Manager konsolunda ve Configuration Manager raporlarında, yanlış uyumluluk verilerinin görüntülenmesine neden olur. Daha fazla bilgi için bkz. [Configuration Manager yüzey sürücülerini yönetme](../deploy-use/surface-drivers.md).
 
 5. **Ürünler** sekmesinde, yazılım güncelleştirmelerini eşitlemek istediğiniz ürünleri belirtin ve ardından **Kapat**’a tıklayın.  
 
@@ -67,13 +67,6 @@ Yazılım güncelleştirme meta verileri, yazılım güncelleştirme noktası bi
     > - **Windows 10** ürününü Içeren [Otomatik dağıtım kuralları](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process) **, Windows 10, sürüm 1903 ve üstünü**içerecek şekilde güncelleştirilecektir.
     > - [Bakım planları](../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow) , **Windows 10, sürüm 1903 ve sonraki** bir ürünü içerecek şekilde güncelleştirilir.
 
-## <a name="include-microsoft-surface-drivers-and-firmware-updates"></a><a name="bkmk_Surface"></a>Microsoft Surface sürücülerini ve bellenim güncelleştirmelerini dahil et
-
-Microsoft Surface sürücülerini eşleştirmek için **Microsoft Surface sürücülerini ve bellenim güncelleştirmelerini dahil et** onay kutusunu seçebilirsiniz.<!--1098490--> Surface sürücülerini başarıyla eşleştirmek için, tüm yazılım güncelleştirme noktalarının toplu güncelleştirme [KB4025339](https://support.microsoft.com/help/4025339) veya üzeri yüklü Windows Server 2016 ' i çalıştırması gerekir. Windows Server 2012 çalıştıran bir bilgisayarda bir yazılım güncelleştirme noktasını etkinleştirirseniz yüzey sürücülerini etkinleştirdikten sonra, sürücü güncelleştirmelerinin tarama sonuçları doğru olmaz. Bu, Configuration Manager konsolunda ve Configuration Manager raporlarında, yanlış uyumluluk verilerinin görüntülenmesine neden olur.  
-
-- Bu özellik ilk olarak sürüm 1706 ' de [yayın öncesi özelliği](../../core/servers/manage/pre-release-features.md)olarak sunulmuştur. Sürüm 1710 ' den başlayarak, bu özellik artık yayın öncesi bir özellik değildir.  
-- Configuration Manager varsayılan olarak bu isteğe bağlı özelliği etkinleştirmez. Bu özelliği kullanmadan önce etkinleştirmeniz gerekir. Daha fazla bilgi için, bkz. [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
-- ARM cihazları için sürücüler eşitleme için desteklenmez.
 
 ## <a name="configuring-products-for-versions-of-windows-10"></a>Windows 10 sürümleri için ürünleri yapılandırma
 
@@ -98,7 +91,7 @@ Windows 10, sürüm 1909 için özellik güncelleştirmelerini onayladığınız
   - Etkinleştirme paketinin önkoşulları şunlardır:
     - 8 Ekim 2019 ' de yayınlanan en düşük toplu [KB4517389](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4517389)güncelleştirmesi.
     - 24 Eylül 2019 ' de yayınlanan [KB4520390](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4520390)'in en düşük bakım yığını güncelleştirmesi.
-  - Bu güncelleştirme, diğer tüm özellik güncelleştirmeleri gibi, ' den `https:\\catalog.update.microsoft.com`içeri aktarma için kullanılamaz.
+  - Bu güncelleştirme, diğer tüm özellik güncelleştirmeleri gibi, ' den içeri aktarma için kullanılamaz `https:\\catalog.update.microsoft.com` .
   - Eşitleme için **Windows 10, sürüm 1903 ve sonraki** ürün ve **yükseltmeler** SıNıFLANDıRMASıNA sahipseniz güncelleştirme WSUS ile otomatik olarak eşitlenir.
   - Configuration Manager konsolunda, **yazılım kitaplığı** çalışma alanına gidin, **Windows 10 Bakımı**' nı genişletin ve **tüm Windows 10 güncelleştirmeleri** düğümünü seçin. "Etkinleştirme" veya "4517245" terimlerini arayın.
 
@@ -143,7 +136,7 @@ Configuration Manager 'de Windows Insider desteği hakkında daha fazla bilgi i�
 
 Windows Insider yükseltmeleri ve güncelleştirmeleri için ürünleri ve sınıflandırmaları etkinleştirmeniz gerekir. Windows Insider için özellik güncelleştirmeleri, toplu güncelleştirmeler ve diğer güncelleştirmeler **Windows Insider ön sürüm** ürün kategorisidir.
 
-1. **Configuration Manager** konsolunda, **Yönetim** > **Site yapılandırması** > **siteler**' e gidin.
+1. **Configuration Manager** konsolunda, **Yönetim**  >  **Site yapılandırması**  >  **siteler**' e gidin.
 2. Merkezi yönetim sitesini veya tek başına birincil siteyi seçin.  
 3. **Giriş** sekmesindeki **Ayarlar** grubunda **Site Bileşenlerini Yapılandır**’a, ardından da **Yazılım Güncelleştirme Noktası**’na tıklayın.
 4. **Ürünler** sekmesinde, aşağıdaki ürünlerin eşitleme için seçildiğinden emin olun:
@@ -157,7 +150,7 @@ Windows Insider yükseltmeleri ve güncelleştirmeleri için ürünleri ve sın�
 
 ### <a name="upgrading-windows-insider-devices"></a>Windows Insider cihazlarını yükseltme
 
-Windows Insider 'lar için yükseltmeler eşitlendikten sonra, bunları **yazılım kitaplığı** > **Windows 10** > ' dan**tüm Windows 10 güncelleştirmelerine**hizmet olarak görebilirsiniz.
+Windows Insider 'lar için yükseltmeler eşitlendikten sonra, bunları **yazılım kitaplığı**  >  **Windows 10**' dan  >  **tüm Windows 10 güncelleştirmelerine**hizmet olarak görebilirsiniz.
 
 ![Windows 10 bakımı için Windows Insiders özelliği güncelleştirmeleri](media/3556023-windows-insiders-pre-release-feature-update.png)
 
