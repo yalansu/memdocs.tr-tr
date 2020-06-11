@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e48ba131d97e68570f1d6cb85b285ddc3198971c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: a4f4ef6bab42f2f1b97c32a422d92247a3e564f7
+ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429758"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84680413"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune'u kullanarak özelliklere izin vermeyi veya bunları kısıtlamayı sağlayan macOS cihaz ayarları
 
@@ -190,7 +190,7 @@ Bu özellik şu platformlarda geçerlidir:
 
   - **Kod gereksinimi**: uygulama veya işlem için kod imzasını girin.
 
-    Bir uygulama veya ikili bir geliştirici sertifikası tarafından imzalandığında bir kod imzası oluşturulur. Atamasını bulmak için, `codesign` komutu Terminal uygulamasında el ile çalıştırın: `codesign --display -r -/path/to/app/binary` . Kod imzası, sonrasında görüntülenen şeydir `=>` .
+    Bir uygulama veya ikili bir geliştirici sertifikası tarafından imzalandığında bir kod imzası oluşturulur. Atamasını bulmak için, `codesign` komutu Terminal uygulamasında el ile çalıştırın: `codesign --display -r - /path/to/app/binary` . Kod imzası, sonrasında görüntülenen şeydir `=>` .
 
   - **Statik kod doğrulamasını etkinleştir**: uygulama veya işlemin kod gereksinimini statik olarak doğrulaması için **Evet** ' i seçin. **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 

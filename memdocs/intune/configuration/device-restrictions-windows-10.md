@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f469d9646fad3b247743b6017f0ecbc7917f2cdf
-ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
+ms.openlocfilehash: bc06434a082ffa801d014eafe9dfd64c6bfec3bf
+ms.sourcegitcommit: 1d8bf691780b94a945e94945115d4d1df4242808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84311195"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663355"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Windows 10 (ve üzeri) cihaz ayarları
 
@@ -322,6 +322,9 @@ Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [mesajlaşma ILKESI 
 ## <a name="microsoft-edge-browser"></a>Microsoft Edge Tarayıcısı
 
 Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [tarayıcı ILKESI CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser)'sini kullanır.
+
+> [!NOTE]
+> Tarayıcı ilkesi CSP, Microsoft Edge sürüm 45 ve önceki sürümleri için geçerlidir. Microsoft Edge Enterprise sürüm 77 ve üzeri için bkz. [Microsoft Edge ilke ayarlarını Microsoft Intune Ile yapılandırma](/DeployEdge/configure-edge-with-intune).
 
 ### <a name="use-microsoft-edge-kiosk-mode"></a>Microsoft Edge bilgi noktası modunu kullan
 
@@ -668,7 +671,7 @@ Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [kablolu Lessdisplay
 
   [System/TelemetryProxy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-telemetryproxy)
 
-## <a name="search"></a>Arayın
+## <a name="search"></a>Arama
 
 Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [arama ILKESI CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search)'sini kullanır.
 
@@ -1135,7 +1138,7 @@ Dışlama listelerini değiştirerek, belirli dosyaları Microsoft Defender vir�
 > [!WARNING]
 > **Dışlamaları tanımlama, Microsoft Defender virüsten koruma tarafından sunulan korumayı düşürür**. Dışlamaları uygulamayla ilişkili riskleri her zaman değerlendirin. Yalnızca kötü amaçlı olmayan bildiğiniz dosyaları hariç tutun.
 
-- **Taramaların ve gerçek zamanlı korumanın dışında tutulacak dosya ve klasörler**: dışlamalar listesine **C:\path** veya **%ProgramFiles%\yol\filename.exe** gibi bir veya daha fazla dosya ve klasör ekler. Bu dosya ve klasörler gerçek zamanlı veya zamanlanmış hiçbir taramaya katılmaz.
+- **Taramaların ve gerçek zamanlı korumanın dışında tutulacak dosya ve klasörler**: dışlamalar listesine **C:\path** veya **% ProgramFiles% \Path\filename.exe** gibi bir veya daha fazla dosya ve klasör ekler. Bu dosya ve klasörler gerçek zamanlı veya zamanlanmış hiçbir taramaya katılmaz.
 - **Taramaların ve gerçek zamanlı korumanın dışında tutulacak dosya uzantıları**: dışlamalar listesine **jpg** veya **txt** gibi bir veya daha fazla dosya uzantısı ekleyin. Bu uzantılara sahip tüm dosyalar gerçek zamanlı veya zamanlanmış taramalara dahil değildir.
 - **Taramaların ve gerçek zamanlı korumanın dışında tutulacak süreçler**: dışlamalar listesine **. exe**, **. com**veya **. scr** türünde bir veya daha fazla işlem ekleyin. Bu süreçler gerçek zamanlı veya zamanlanmış taramalara dahil değildir.
 
