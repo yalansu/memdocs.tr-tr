@@ -2,7 +2,7 @@
 title: Topluluk hub 'ı ve GitHub
 titleSuffix: Configuration Manager
 description: Configuration Manager 'de topluluk hub 'ını etkinleştirme ve kullanma
-ms.date: 06/02/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d3dd8f8af7a3add38d8003da12078d393041631d
-ms.sourcegitcommit: 5e339c07001e911cf75ef922e6c66a7efdeab6f1
+ms.openlocfilehash: 606c9490e56d932176b17eef95ea4ed0c956770e
+ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84637733"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84680430"
 ---
 # <a name="community-hub-and-github"></a>Topluluk hub 'ı ve GitHub
 <!--3555935, 3555936-->
@@ -34,12 +34,13 @@ Topluluk hub 'ı aşağıdaki nesneleri destekler:
 - Uygulamalar
 - Yapılandırma öğeleri  
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-- Hub 'a erişmek için kullanılan Configuration Manager konsolunu çalıştıran cihaz aşağıdaki öğelere ihtiyaç duyuyor:
-   - Windows 10 derleme 17110 veya üzeri
+- Topluluk hub 'ına erişmek için kullanılan Configuration Manager konsolunu çalıştıran cihaz aşağıdaki öğelere ihtiyaç duyuyor:
    - .NET Framework sürüm 4,6 veya üzeri
-
+   - Windows 10 derleme 17110 veya üzeri
+      - Windows Server desteklenmez, bu nedenle Configuration Manager konsolunun site sunucusundan ayrı bir Windows 10 cihazına yüklenmesi gerekir.
+   - Oturum açan kullanıcı hesabı yerleşik yönetici hesabı olamaz
 
 - Raporları indirmek için, içeri aktardığınız sitedeki **http site sistemleri için Configuration Manager tarafından oluşturulan sertifikaları kullan** seçeneğini açmanız gerekir. Daha fazla bilgi için bkz. [GELIŞMIŞ http](/sccm/core/plan-design/hierarchy/enhanced-http).
    1. **Yönetim**  >  **sitesi yapılandırma**  >  **siteleri**' ne gidin.

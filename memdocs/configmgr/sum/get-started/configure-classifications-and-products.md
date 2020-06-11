@@ -126,7 +126,7 @@ Windows 10, sürüm 1903 istemcilerinde Configuration Manager 1902 kullanıyorsa
 
 Configuration Manager 'de Windows Insider desteği hakkında daha fazla bilgi için bkz. [Windows 10 Için destek](../../core/plan-design/configs/support-for-windows-10.md#bkmk_WIfB-support).
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 
 - Configuration Manager sürüm 1906 veya üzeri, [yazılım güncelleştirme yönetimi](../plan-design/plan-for-software-updates.md)için yapılandırıldı.
 - [Windows Insider Preview derlemesi](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-get-started)çalıştıran Windows 10 cihazları.
@@ -160,7 +160,7 @@ Windows Insider için özellik güncelleştirmelerini, diğer tüm yükseltmeler
 - Lisans koşulları varsa, dağıtımınızın yüklenmek üzere koşulları kabul etmesi gerekir.
 - [İstemci ayarlarında iş parçacığı önceliğini](../../core/clients/deploy/about-client-settings.md#bkmk_thread-priority)kullanmayı göz önünde bulundurun.
 - Dinamik güncelleştirme, en son toplu güncelleştirme de dahil olmak üzere kritik güncelleştirmeleri doğrudan Microsoft Update otomatik olarak yüklüyor. Bu davranış, Windows 10 sürüm 1903 için özellik güncelleştirmeleriyle başlatıldı. 
-  - [İstemci ayarlarında dinamik güncelleştirmeyi](../../core/clients/deploy/about-client-settings.md#bkmk_du) veya bir [setupconfig. ini dosyası](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)ile açıkça devre dışı bırakabilirsiniz. 
+  - İstemci ayarları 'nda veya bir [setupconfig.ini dosyası](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)Ile [dinamik güncelleştirmeyi açıkça devre dışı](../../core/clients/deploy/about-client-settings.md#bkmk_du) bırakabilirsiniz. 
   - Daha fazla bilgi için [Windows 10 dinamik güncelleştirme](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) blog gönderisine bakın.
 
 Yükseltmeleri dağıtma hakkında daha fazla bilgi için bkz. [Windows 'u hizmet olarak yönetme](../../osd/deploy-use/manage-windows-as-a-service.md).
