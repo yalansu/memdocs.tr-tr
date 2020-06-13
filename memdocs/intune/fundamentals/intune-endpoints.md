@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8fea0e1de6389083f09c51c5cf73196290693a56
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 88140f54067607e11f3b24c3ca8d196067dda50e
+ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84614053"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721848"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Microsoft Intune için ağ uç noktaları  
 
@@ -126,3 +126,7 @@ Teslim Iyileştirme meta verileri için:
 |World Wide Web, iTunes Mağazası, macOS App Store, iCloud, mesajlaşma vb. erişim dahil çeşitli işlevler |phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 veya 443   |
 
 Daha fazla bilgi için bkz. [Apple yazılım ürünleri tarafından kullanılan Apple 'ın TCP ve UDP bağlantı noktaları](https://support.apple.com/HT202944), [MacOS, IOS/ıpados ve iTunes Server ana bilgisayar bağlantıları ve iTunes arka plan Işlemleriyle Ilgili](https://support.apple.com/HT201999), [MacOS ve IOS/ıpados istemcileriniz Apple anında iletme bildirimleri almıyorsanız](https://support.apple.com/HT203609).  
+
+## <a name="android-port-information"></a>Android bağlantı noktası bilgileri
+
+Android bağlantı noktaları hakkında daha fazla bilgi için bkz. Google 'ın [FCM bağlantı noktaları ve güvenlik duvarınız](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).

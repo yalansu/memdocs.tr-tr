@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e386d382ceb785d886dfb931bb26222bd82b1a0
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 750bc9411e93ac09f857518a1e794f8d69d8575c
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347330"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746621"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Microsoft Intune ile Apple Volume Purchase Program aracılığıyla satın alınan iOS ve macOS uygulamalarını yönetme
 
@@ -64,7 +64,7 @@ Apple Business Manager kullanarak ortak ve özel uygulamalar satın alabilir ve 
 - **Mağaza uygulamaları:** Apple Business Manager 'ı kullanarak, Içerik yöneticileri App Store 'da bulunan ücretsiz ve ücretli uygulamaları satın alabilir.
 - **Özel uygulamalar:** Apple Business Manager 'ı kullanarak, Içerik yöneticileri kuruluşunuza özel olarak sunulan özel uygulamalar da satın alabilir. Bu uygulamalar, doğrudan çalıştığınız geliştiriciler tarafından kuruluşunuzun özel ihtiyaçlarına göre tasarlanmıştır. [Özel uygulamaları dağıtma](https://developer.apple.com/business/custom-apps/)hakkında daha fazla bilgi edinin.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 - Kuruluşunuz için bir [Apple Business Manager](https://business.apple.com/) veya [Apple Okul Yöneticisi](https://school.apple.com/) hesabı. 
 - Bir veya daha fazla konum belirtece atanan uygulama lisansları satın alındı. 
 - Konum belirteçleri indirildi. 
@@ -134,7 +134,6 @@ Seçilen bir belirteç için **Eşitle** ' yi seçerek, Intune 'da satın alına
 > [!NOTE]  
 > Intune (veya bu konuyla ilgili diğer MDM), VPP uygulamalarını gerçekten yüklemez. Bunun yerine, Intune, VPP hesabınıza bağlanır ve Apple 'ın hangi cihaza atanacağını belirtir. Buradan, tüm gerçek yükleme Apple ile cihaz arasında işlenir.
 > 
-> [Apple MDM protokol başvurusu, sayfa 135](https://developer.apple.com/business/documentation/MDM-Protocol-Reference.pdf)
 
 ## <a name="end-user-prompts-for-vpp"></a>VPP için Son Kullanıcı İstemleri
 
@@ -142,11 +141,11 @@ Son kullanıcı, birkaç senaryoda VPP uygulama yüklemesi için istem alır. A�
 
 | # | Senaryo                                | Bir Apple VPP programına davet                              | Uygulama yükleme istemi | Apple kimliği istemi |
 |---|--------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------------------|
-| 1 | KCG – kullanıcı lisanslı (Kullanıcı kayıt cihazı değil)                             | Y                                                                                               | Y                                           | Y                                 |
-| 2 | Şirket – kullanıcı lisanslı (denetimsiz cihaz)     | Y                                                                                               | Y                                           | Y                                 |
-| 3 | Şirket – kullanıcı lisanslı (denetimli cihaz)         | Y                                                                                               | N                                           | Y                                 |
-| 4 | KCG – cihaz lisanslı                           | N                                                                                               | Y                                           | N                                 |
-| 5 | ŞİRKET – cihaz lisanslı (denetimsiz cihaz)                           | N                                                                                               | Y                                           | N                                 |
+| 1 | KCG – kullanıcı lisanslı (Kullanıcı kayıt cihazı değil)                             | E                                                                                               | E                                           | E                                 |
+| 2 | Şirket – kullanıcı lisanslı (denetimsiz cihaz)     | E                                                                                               | E                                           | E                                 |
+| 3 | Şirket – kullanıcı lisanslı (denetimli cihaz)         | E                                                                                               | N                                           | E                                 |
+| 4 | KCG – cihaz lisanslı                           | N                                                                                               | E                                           | N                                 |
+| 5 | ŞİRKET – cihaz lisanslı (denetimsiz cihaz)                           | N                                                                                               | E                                           | N                                 |
 | 6 | ŞİRKET – cihaz lisanslı (denetimli cihaz)                           | N                                                                                               | N                                           | N                                 |
 | 7 | Bilgi noktası modu (denetimli cihaz) – cihaz lisanslı | N                                                                                               | N                                           | N                                 |
 | 8 | Bilgi noktası modu (denetimli cihaz) – kullanıcı lisanslı   | --- | ---                                          | ---                                |
@@ -187,6 +186,9 @@ Bir Apple VPP belirtecini yenilemek için aşağıdaki adımları kullanın:
 1. [Apple Business Manager](https://business.apple.com/) veya [Apple Okul Yöneticisi](https://school.apple.com/)' ne gidin.
 2. **Ayarlar**uygulamalar ve sunucu belirteçlerimi Kitaplar ' ı seçerek **Apple Business (veya okul) Manager**'daki yeni belirteci indirin  >  **Apps and Books**  >  **My Server Tokens**.
 3. **Kiracı Yönetimi**bağlayıcıları ' nı seçip [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **Connectors and tokens**  >  **Apple VPP belirteçlerini**belirteçlerini Microsoft Endpoint Manager Yönetim Merkezi ' nde belirteci güncelleştirin. Ardından, belirteci el ile karşıya yükleyin.
+
+>[!NOTE]
+>Apple Business Manager 'dan yeni bir Apple VPP veya konum belirteci indirmeniz ve Intune içindeki mevcut belirteci güncelleştirmeniz gerekir. Bu, Apple Business Manager 'da belirteci ayarlarken, parolasını veya Kullanıcı Apple Business Manager kuruluşunuzu bırakır. Yenilenmeyen belirteçler, Intune 'da "geçersiz" durumunu gösterir.
 
 ## <a name="deleting-a-vpp-app"></a>VPP uygulamasını silme
 

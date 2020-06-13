@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33c57e5641934200120839ad48a9a4c8b8d0a8fa
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 93ff5ba088b04af155ea05e69c7d1f25deb33419
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988890"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746655"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Kayıt durumu sayfası ayarlama
  
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
  
-Kayıt durumu sayfası (ESP) ilk cihaz kaydı sırasında Windows 10 cihazları (sürüm 1803 ve üzeri) hakkındaki yükleme bilgilerini görüntüler. Örneğin:
+Kayıt durumu sayfası (ESP) ilk cihaz kaydı sırasında Windows 10 cihazları (sürüm 1803 ve üzeri) hakkındaki yükleme bilgilerini görüntüler. Örnek:
 - [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) kullanırken 
 - ya da bir kayıt durumu sayfası ilkesi uygulandıktan sonra yönetilen bir cihaz ilk kez başlatılır. 
 
@@ -41,7 +41,7 @@ Kayıt durumu sayfası, kullanıcıların cihaz kurulumu sırasında cihazının
 Ayrıca, her bir profilin öncelik sırasını aynı kullanıcıya yönelik çakışan profil atamalarını hesaba atayabilirsiniz.
 
 > [!NOTE]
-> Kayıt durumu sayfası yalnızca atanan bir gruba ait olan bir kullanıcıyı hedefleyebilir ve ilkeyi, cihazı kullanan tüm kullanıcılar için kayıt sırasında ayarlar.  Kayıt durumu sayfası profillerinin cihaz hedeflemesi şu anda desteklenmiyor.
+> Kayıt durumu sayfası yalnızca atanan bir gruba ait olan bir kullanıcıyı hedefleyebilir ve ilkeyi, cihazı kullanan tüm kullanıcılar için kayıt sırasında ayarlar.  Kayıt durumu sayfası profillerinin cihaz hedeflemesi şu anda desteklenmiyor. Autopilot White ya da kendi kendine Dağıtım modunu kullanıyorsanız, varsayılan ESP ilkesinin (' tüm kullanıcılar ve tüm cihazlar ' adlı) aşağıdaki tablodaki ilk ayara göre etkinleştirildiğinden emin olun.
 
 ## <a name="available-settings"></a>Kullanılabilir ayarlar
 
@@ -56,7 +56,7 @@ Ayrıca, her bir profilin öncelik sırasını aynı kullanıcıya yönelik çak
 <tr><td>Yükleme hatası oluşursa kullanıcıların cihazı kullanmasına izin ver<td>Yükleme hatası varsa <b>yine de devam et</b> düğmesi görüntülenir.<td>Yükleme hatası varsa <b>devam et</b> düğmesi gösterilmez.
 <tr><td>Yükleme belirtilen dakika sayısından daha uzun sürerse zaman aşımı hatası göster<td colspan="2">Yüklemenin tamamlanmasını beklemek için beklenecek dakika sayısını belirtin. Varsayılan 60 dakikalık bir değer girilir.
 <tr><td>Bir hata oluştuğunda özel iletiyi göster<td>Bir yükleme hatası oluşursa görüntülenecek özel bir ileti belirtebileceğiniz bir metin kutusu sağlanır.<td>Varsayılan ileti görüntülenir: <br><b>Yükleme, kuruluşunuz tarafından ayarlanan zaman sınırını aştı. Yardım almak için yeniden deneyin veya BT destek sorumlunuza başvurun.<b>
-<tr><td>Kullanıcıların yükleme hatalarıyla ilgili günlükleri toplamasına izin ver<td>Yükleme hatası varsa, bir biriktirme <b>günlüğü</b> düğmesi görüntülenir. <br>Kullanıcı bu düğmeye tıkladığında, <b>Mdmdiagreport. cab</b> günlük dosyasını kaydetmek için bir konum seçmesi istenir<td>Yükleme hatası varsa <b>günlükleri topla</b> düğmesi gösterilmez.
+<tr><td>Kullanıcıların yükleme hatalarıyla ilgili günlükleri toplamasına izin ver<td>Yükleme hatası varsa, bir biriktirme <b>günlüğü</b> düğmesi görüntülenir. <br>Kullanıcı bu düğmeye tıkladığında, günlük dosyasının kaydedileceği bir konum seçmesi istenir <b>MDMDiagReport.cab</b><td>Yükleme hatası varsa <b>günlükleri topla</b> düğmesi gösterilmez.
 <tr><td>Bu gerekli uygulamalar kullanıcıya/cihaza atanırsa yüklenene kadar cihaz kullanımını engelle<td colspan="2"><b>Tümü</b> veya <b>Seçili</b>öğesini seçin. <br><br><b>Seçili</b> seçilirse, cihazı etkinleştirmeden önce hangi uygulamaların yüklü olması gerektiğini seçmenize olanak sağlayan bir <b>uygulamalar seçin</b> düğmesi görüntülenir.
 </table>
 

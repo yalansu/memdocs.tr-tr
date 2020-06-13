@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 06/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46333ab8826c6e10bfea8126079dd665ba0eef81
-ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
+ms.openlocfilehash: 46d440f070f8fcc726cb3978eee3e34358ac0907
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84680447"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740818"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -53,6 +53,18 @@ ms.locfileid: "84680447"
 ### Monitor and troubleshoot
 
 <!-- ########################## -->
+
+
+## <a name="week-of-june-8-2020"></a>8 Haziran 2020 haftası   
+
+### <a name="app-management"></a>Uygulama yönetimi  
+
+#### <a name="updates-to-informational-screen-in-company-portal-for-iosipados---7032452---"></a>İOS/ıpados için Şirket Portalı bilgi ekranı güncelleştirmeleri <!--7032452 -->
+İOS/ıpados için Şirket Portalı bir bilgilendirici ekran, yöneticinin cihazları neleri görebileceğini ve ne yapabileceğini daha iyi açıklamak için güncelleştirilmiştir. Bu açıklamalar yalnızca şirkete ait cihazlar içindir. Yalnızca metin güncelleştirildi, yöneticinin Kullanıcı cihazlarını neleri görebileceklerini veya yapabileceğini hiçbir gerçek değişiklik yapılmadı. Güncelleştirilmiş ekranları görmek için [Intune son kullanıcı uygulamaları Için Kullanıcı Arabirimi güncelleştirmeleri](./whats-new-app-ui.md)' ne gidin.
+
+#### <a name="android-company-portal-user-experience---5736084---"></a>Android Şirket Portalı Kullanıcı deneyimi<!-- 5736084 -->
+Android Şirket Portalı 2006 sürümünde, 2005 sürümündeki güncelleştirmelerde derleme yapan değişiklikler vardır. 2005 ' de, bir uygulama koruma ilkesi tarafından uyarı veren, blok veya temizleme yapan son Android cihaz kullanıcılarının, uyarı, blok veya silme nedeninizi ve sorunları düzeltmek için gereken adımları açıklayan bir tam sayfa mesajı görürsünüz. 2006 ' de, uygulama erişiminin engellenmesine neden olan sorunları düzeltmek için bir uygulama koruma ilkesi atanan Android uygulamalarının ilk kullanıcıları, kılavuzlu bir akış aracılığıyla alınacaktır. 
+
 
 ## <a name="week-of-may-25-2020"></a>25 Mayıs 2020 haftası
 
@@ -96,6 +108,7 @@ Configuration Manager cihazlar için ilkeyi kullanmak üzere, [EDR ilkesini dest
 - *Kiracı iliştirme*için Configuration Manager 'ı yapılandırın.
 - EDR ilkeleri desteğini etkinleştirmek için Configuration Manager için konsol içi bir güncelleştirme yükler. Bu güncelleştirme yalnızca *kiracı iliştirme*'yi etkinleştirilen Hiyerarşiler için geçerlidir.
 - Cihaz koleksiyonlarınızı, hiyerarşinizi Microsoft Uç Nokta Yöneticisi Yönetim Merkezi olarak bir biçimde eşitler.
+
 
 
 ## <a name="week-of-may-11-2020-2005-service-release"></a>11 Mayıs 2020 (2005 hizmet sürümü) haftası

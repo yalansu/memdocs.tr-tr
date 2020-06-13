@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: efa965bc3dff2436a98602e3cb9dda96a1fe580d
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 11aba38d63621472b5e8513b066b96120d649c31
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166201"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740901"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune son kullanıcı uygulamaları arabirimlerinde yapılan güncelleştirmeler
 
@@ -34,6 +34,14 @@ Microsoft Intune uygulamalarına yönelik en son güncelleştirmeler hakkında b
 
 Bir çalışan ya da öğrenciyseniz, Şirket Portalı yardım belgelerinin ekran görüntülerini ve bağlantılarını kontrol ettiğinizden emin olun. Şirket Portalı uygulamasının nasıl kullanılacağı hakkında daha fazla bilgi için, [Şirket portalı Kullanıcı Yardım belgelerine](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done)bakın.  
 
+
+## <a name="week-of-june-8-2020"></a>8 Haziran 2020 haftası 
+
+### <a name="updates-to-informational-screen-in-company-portal-for-iosipados----7032452---"></a>İOS/ıpados için Şirket Portalı bilgi ekranı güncelleştirmeleri <!-- 7032452 -->
+Bir yöneticinin cihazları neleri görebileceğini ve ne yapabileceğini daha iyi açıklamak için iOS/ıpados için Şirket Portalı bir bilgilendirici ekran güncelleştirdik. Bu açıklamalar yalnızca şirkete ait cihazlar içindir. Yalnızca metin güncelleştirildi, yöneticinin Kullanıcı cihazlarını neleri görebileceklerini veya yapabileceğini hiçbir gerçek değişiklik yapılmadı. Bir yöneticiye nelerin görünebileceği hakkında daha fazla bilgi için bkz. [cihazımı kaydettiğimde Kuruluşum neleri görebilir?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
+
+
+[![Güncelleştirilmiş metni gösteren Şirket Portalı bilgilendirici ekranının ekran görüntüsü.](./media/whats-new-app-ui/device-management-privacy-2005-02.png)](./media/whats-new-app-ui/device-management-privacy-2005-03.png#lightbox)
 
 
 ## <a name="week-of-may-18-2020"></a>18 Mayıs 2020 haftası  
@@ -62,12 +70,6 @@ Kullanıcılar ayrıca soldaki Şirket Portalı çekmecede yeni bir **uygulamala
 Bu yeni ve geliştirilmiş deneyimlere yönelik bir yöntem oluşturmak için, aşağıdaki görüntüde gösterilen **uygulamalar** sekmesi kaldırılmıştır.  
 
 ![Şimdi kaldırılan Şirket Portalı, uygulamalar sekmesinin örnek görüntüsü.](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
-
-
-
-
-
-
 
 ## <a name="week-of-march-2-2020"></a>2 Mart 2020 haftası   
 ### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Android için Şirket Portalı 'de geliştirilmiş oturum açma deneyimi   

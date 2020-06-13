@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f52c3bced4d08d32082b424a1ee0e90a338d07a5
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: 936375f55c61e719657ee1e770d05834739a4f6f
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506290"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746638"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune 'da ortak iOS/ıpados özelliklerini kullanmak için iOS ve ıpados cihaz ayarları
 
@@ -319,6 +319,10 @@ Bu özellik şu platformlarda geçerlidir:
 - **Paylaşılan cihaz modu** (yalnızca Microsoft Azure AD): Azure AD 'nin paylaşılan cihaz modu özelliği Için yapılandırılmış IOS/ıpados cihazlarına MICROSOFT Enterprise SSO eklentisini dağıtıyorsanız **Etkinleştir** ' i seçin. Paylaşılan moddaki cihazlar birçok kullanıcının paylaşılan cihaz modunu destekleyen uygulamaların genel olarak oturum açmasını ve çıkmasına izin verir. **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, iOS/ıpados cihazları birden çok kullanıcı arasında paylaşılmak üzere tasarlanmamıştır.
 
   Paylaşılan cihaz modu ve bu aygıtın nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. iOS cihazları için [paylaşılan cihaz moduna](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) ve [paylaşılan cihaz moduna](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices)genel bakış.  
+
+  Bu özellik şu platformlarda geçerlidir:
+  
+  - iOS/ıpados 13,5 ve üzeri
 
 - **UZANTı kimliği** (yeniden yönlendirme ve kimlik bilgisi): SSO uygulama uzantınızı tanımlayan paket tanımlayıcısını (gibi) girin `com.apple.extensiblesso` .
 

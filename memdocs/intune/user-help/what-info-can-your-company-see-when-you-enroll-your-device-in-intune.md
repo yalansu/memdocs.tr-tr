@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 06/11/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: 028a568b9a588697139f97f292c70c50347217f3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 696969c2d80519d0c0aac2f33c72756aff700f14
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882074"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740782"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Cihazımı kaydettiğimde kuruluşum hangi bilgileri görebilir?
 
@@ -64,6 +64,6 @@ Bir cihazı Microsoft Intune’a kaydettiğinizde kuruluşunuz kişisel bilgiler
 
 - Telefon numarası: şirkete ait cihazlar Için, tam telefon numaranız görünebilirler. Kişisel cihazlarda ise numaranızın yalnızca son dört hanesi kuruluşunuz tarafından görülebilir. Her bir aygıtın sahiplik türünü, **cihaz ayrıntıları** sayfasında görebilirsiniz.
 - Cihaz depolama alanı: Gerekli bir uygulamayı yükleyemiyorsanız kuruluşunuz, yeterli alan olup olmadığını anlamak için cihazınızın depolama alanına bakabilir.  
-- Konum: kayıp, denetimli bir iOS cihazını kurtarmanız gerekmiyorsa kuruluşunuz cihazınızın konumunu hiçbir şekilde göremez. Denetimli cihazlar hakkında daha fazla bilgi edinmek için [Apple iOS belgelerini](https://go.microsoft.com/fwlink/?linkid=853816) ziyaret edin.  
-- Uygulama envanteri ayrıntıları: Kuruluşunuz mobil tehdit savunması kullanıyorsa, iOS cihazınızda bulunan uygulamalarla ilgili ayrıntıları görüntüleyebilecektir. [Mobil Tehdit Savunması](set-up-mobile-threat-defense.md) hakkında daha fazla bilgi edinin. Kişisel bir cihazınız varsa, kuruluşunuz yalnızca yönetilen uygulama envanterinizi görebilir. Şirkete ait bir cihazınız varsa, kuruluşunuz tüm uygulama envanterinizi görebilir.
+- Konum: şirkete ait cihazlarda, kuruluşunuz kayıp bir cihazın konumunu görebilir. Şirkete ait cihazlar için, kayıp, denetimli bir iOS cihazı bulmaya çalışmadıkça kuruluşunuz hiçbir şekilde cihaz konumunu göremez. Denetimli cihazlar hakkında daha fazla bilgi edinmek için [Apple iOS belgelerini](https://go.microsoft.com/fwlink/?linkid=853816) ziyaret edin.  
+- Uygulama envanteri ayrıntıları: Kuruluşunuz mobil tehdit savunması kullanıyorsa, iOS cihazınızda bulunan uygulamalarla ilgili ayrıntıları görüntüleyebilecektir. [Mobil Tehdit Savunması](set-up-mobile-threat-defense.md) hakkında daha fazla bilgi edinin. Aksi halde, kişisel cihazlarda kuruluşunuz yalnızca yönetilen uygulama envanterinizi görebilir. Şirkete ait cihazlar için kuruluşunuz tüm uygulama envanterinizi görebilir.
 - Ağ bilgisi: Android cihazlar için ağ bağlantılarıyla ilgili bazı bilgiler kuruluşunuzun destek birimi tarafından görülebilir. Örneğin kuruluşunuz cihazların belli bir bina içerisinde kalmasını gerektiriyorsa cihazınız, bağlı olduğu şebekeyi tanımlar. 

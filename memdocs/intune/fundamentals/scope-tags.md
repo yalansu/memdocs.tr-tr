@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c447c9187696a8e918886117847dde6421b4014
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 665b88932c88f523b19fec596bfd969bb93ecdd4
+ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990735"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721916"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Dağıtılmış BT için rol tabanlı erişim denetimi (RBAC) ve kapsam etiketleri kullanma
 
@@ -81,7 +81,6 @@ Kapsam etiketleriyle çalışırken bu ayrıntıları unutmayın:
 - Kiracıda bu nesnenin birden fazla sürümüne (rol atamaları veya uygulamalar gibi) sahip olması durumunda, bir Intune nesne türüne kapsam etiketleri atayabilirsiniz.
   Aşağıdaki Intune nesneleri, bu kural için özel durumlardır ve şu anda kapsam etiketlerini desteklememektedir:
     - Windows ESP profilleri
-    - Cihaz kategorileri
     - Kayıt kısıtlamaları
     - Corp cihaz tanımlayıcıları
     - Autopilot cihazlar
