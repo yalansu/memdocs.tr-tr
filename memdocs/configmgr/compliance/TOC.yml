@@ -56,7 +56,7 @@
       href: deploy-use/create-remote-connection-profiles.md
     - name: Windows cihazlarını yeni bir sürüme yükseltme
       href: deploy-use/upgrade-windows-version.md
-    - name: Microsoft Edge ayarlarını yapılandırma
+    - name: Microsoft Edge Eski ayarlarını yapılandırma
       href: deploy-use/browser-profiles.md
     - name: Uyumluluk ayarlarını izleme
       href: deploy-use/monitor-compliance-settings.md
