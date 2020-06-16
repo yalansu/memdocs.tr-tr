@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d277b47b2d753b5068e871fe33ce0cab48cfb1e4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f4e98a9c25121bacf1759dc73464e3a51dfe61d9
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79330950"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795695"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Mobil cihaz yönetimi kullanım örneği senaryolarını belirleme
 
@@ -52,7 +52,7 @@ Her kullanım örneği senaryosunun alt kullanım örnekleri de içerip içermed
 
 Kullanım örneği ve alt kullanım örneği senaryolarına birkaç örnek aşağıda verilmiştir:
 
-| **Uygulama alanları** | **Alt kullanım örnekleri** |
+| **Kullanım örnekleri** | **Alt kullanım örnekleri** |
 |:---:|:---:|
 | Kurumsal | Bilgi çalışanı |              
 | Kurumsal | Yöneticiler |           
@@ -60,17 +60,16 @@ Kullanım örneği ve alt kullanım örneği senaryolarına birkaç örnek aşa�
 | KCG | Bilgi çalışanı |           
 | KCG | Yöneticiler |
 
-Kuruluşunuzun kullanım örneği ve alt kullanım örneği senaryolarını girmek için [Yukarıdaki tablonun bir şablonunu indirebilirsiniz](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) .
 
 ## <a name="organizational-groups-for-your-scenarios"></a>Senaryolarınız için kuruluş grupları
 
-Şimdi, her bir kullanım örneği ve alt kullanım örneği senaryosu ile ilişkili kuruluş gruplarını tanımlamanız gerekir. Örneğin:
+Şimdi, her bir kullanım örneği ve alt kullanım örneği senaryosu ile ilişkili kuruluş gruplarını tanımlamanız gerekir. Örnek:
 
-| **Uygulama alanları** | **Alt kullanım örnekleri** | **Kuruluş grupları** |
+| **Kullanım örnekleri** | **Alt kullanım örnekleri** | **Kuruluş grupları** |
 |:---:|:---:|:---:|
 | Kurumsal | Bilgi çalışanı | İK, Finans |               
 | Kurumsal | Yönetici | İK, Finans |            
-| Kurumsal | Bilgi noktası | Perakende |
+| Kurumsal | Bilgi noktası | Retail |
 | KCG | Bilgi çalışanı | Pazarlama, Satış |            
 | KCG | Yönetici | Pazarlama, Satış |
 
@@ -81,11 +80,11 @@ Sonraki adım, her bir kullanım örneği senaryosuyla ilişkili mobil cihaz pla
 
 Örneğin, kurumsal kullanım örneği senaryonuz iOS/ıpados ve Android Samsung KNOX cihaz platformlarını destekleyebilir. KCG ilkeniz Android (Samsung Knox olmayan) ve Windows 10 Mobile gibi ek mobil cihaz platformları için destek içerebilir. Önceki örnekleri temel alarak mobil her kullanım örneği senaryosu ile cihaz platformları ilişkilendirdik.
 
-| **Uygulama alanları** | **Alt kullanım örnekleri** | **Gruplar** | **Cihaz platformları** |   
+| **Kullanım örnekleri** | **Alt kullanım örnekleri** | **Gruplar** | **Cihaz platformları** |   
 |:---:|:---:|:---:|:---:|
 | Kurumsal | Bilgi çalışanı | İK, Finans | iOS/iPadOS |                                                           
 | Kurumsal | Yöneticiler | İK, Finans | iOS/iPadOS |                                                           
-| Kurumsal | Bilgi noktası | Perakende | Android |
+| Kurumsal | Bilgi noktası | Retail | Android |
 | KCG | Bilgi çalışanı | Pazarlama, Satış | iOS/iPadOS |                                                           
 | KCG | Yöneticiler | Pazarlama, Satış | iOS/iPadOS |
 

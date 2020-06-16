@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 06/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c8b8599c7b207900d6e4a14b7580a324a238dfe
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 27d31e64e99e8dc796b0436052f7220260ab1029
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989914"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795678"
 ---
 # <a name="see-device-details-in-intune"></a>Intune'da cihaz ayrıntılarına bakın
 
@@ -48,7 +48,7 @@ Bu makalede, tüm cihazlarınızı ve özelliklerini Azure portalında nasıl g�
       - [Autopilot sıfırlaması](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (yalnızca Windows)
       - [Hızlı tarama](../configuration/device-restrictions-windows-10.md) (yalnızca Windows 10)
       - [Tam tarama](../configuration/device-restrictions-windows-10.md) (yalnızca Windows 10)
-      - Windows Defender güvenlik zekası 'nı güncelleştirme
+      - [Windows Defender güvenlik zekası 'nı güncelleştirme](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/manage-protection-updates-microsoft-defender-antivirus)
       - [BitLocker anahtar döndürme](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
       - [Cihazı yeniden adlandırma](device-rename.md)
       - [Yeni Uzaktan Yardım oturumu](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)

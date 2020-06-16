@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 9c2e6f742610eb8f2f526c6fc7a5afabfbadcbbf
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8b56d902980c9e4b51ccbb62e84b4eccd9eb6395
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990860"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776914"
 ---
 # <a name="manage-device-security-with-endpoint-security-policies-in-microsoft-intune"></a>Microsoft Intune uç nokta güvenlik ilkeleriyle cihaz güvenliğini yönetme
 
@@ -39,7 +39,7 @@ Her uç nokta güvenlik ilkesi türünün kısa açıklamaları aşağıda veril
 
 - [Disk şifrelemesi](../protect/endpoint-security-disk-encryption-policy.md) -uç nokta güvenlik diski şifreleme profilleri, yalnızca bir cihaz yerleşik Şifreleme yöntemiyle ilgili olan, filekasası veya BitLocker gibi ayarları odaklamaktadır. Bu odak, güvenlik yöneticilerinin, ilişkisiz ayarların bulunduğu bir konakta gezinmek gerekmeden disk şifreleme ayarlarını yönetmesini kolaylaştırır.
 
-- [Güvenlik duvarı](../protect/endpoint-security-firewall-policy.md) -MacOS ve Windows 10 çalıştıran cihazlar için yerleşik bir güvenlik duvarı yapılandırmak üzere Intune 'daki uç nokta güvenliği güvenlik duvarı ilkesini kullanın. Yerleşik güvenlik duvarları, Windows cihazları için BitLocker ve macOS için dosya Kasası ' nı içerir.
+- [Güvenlik duvarı](../protect/endpoint-security-firewall-policy.md) -MacOS ve Windows 10 çalıştıran cihazlar için yerleşik bir güvenlik duvarı yapılandırmak üzere Intune 'daki uç nokta güvenliği güvenlik duvarı ilkesini kullanın. 
 
 - [Uç nokta algılama ve yanıt](../protect/endpoint-security-edr-policy.md) -Defender ATP 'yi Intune ile tümleştirdiğinizde, EDR ayarlarını yönetmek ve CIHAZLARı Defender ATP 'ye eklemek için uç nokta algılama ve yanıt (EDR) için uç nokta güvenlik ilkelerini kullanın.
 
@@ -63,11 +63,11 @@ Aşağıdaki bölümler tüm uç nokta güvenlik ilkeleri için geçerlidir.
 
 3. Aşağıdaki özellikleri girin:
    - **Platform**: ilke oluşturmakta olduğunuz platformu seçin. Kullanılabilir seçenekler, seçtiğiniz ilke türüne bağlıdır:
-     - macOS
+     - Mac OS
      - Windows 10 ve üzeri
    - **Profil**: seçtiğiniz platform için kullanılabilir profiller arasından seçim yapın. Profiller hakkında daha fazla bilgi için, seçtiğiniz ilke türü için bu makaledeki adanmış bölümüne bakın.
 
-4. **Oluştur**’u seçin.
+4. **Oluştur**'u seçin.
 
 5. **Temel bilgiler** sayfasında, profil için bir ad ve açıklama girin ve ardından **İleri**' yi seçin.
 

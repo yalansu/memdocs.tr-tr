@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/16/2019
+ms.date: 06/12/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cd8c57dcaede1331838946d93c4fce16801651b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9463ece47884770e09c82d6227931ef51b541c54
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990505"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795610"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Intune’da macOS cihazların kaydını ayarlama
 
@@ -48,8 +48,8 @@ macOS cihaz kaydını ayarlamadan önce, aşağıdaki önkoşulları tamamlayın
 ## <a name="user-owned-macos-devices-byod"></a>Kullanıcıya ait macOS cihazları (KCG)
 
 Kullanıcıların kendi kişisel cihazlarını Intune yönetimine kaydetmelerini sağlayabilirsiniz. Bu, "kendi cihazını getir" veya KCG olarak bilinir. Önkoşulları ve atanan kullanıcı lisanslarını tamamladıktan sonra, kullanıcılarınız cihazlarını şu şekilde kaydedebilir:
-- [Şirket Portalı web sitesine](https://portal.manage.microsoft.com) gidebilir veya
-- [aka.MS/EnrollMyMac](https://aka.ms/EnrollMyMac)adresindeki Mac Şirket portalı uygulaması indiriliyor.
+- [Şirket portalı Web sitesine](https://portal.manage.microsoft.com) veya
+- [Aka.MS/EnrollMyMac](https://aka.ms/EnrollMyMac)adresindeki Mac Şirket portalı uygulaması indiriliyor.
 
 Kullanıcılarınıza çevrimiçi kayıt adımları için bir bağlantı da gönderebilirsiniz: [macOS cihazınızı Intune 'A kaydetme](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
 

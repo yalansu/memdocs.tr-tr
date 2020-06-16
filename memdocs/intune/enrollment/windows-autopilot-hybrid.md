@@ -18,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9983eb211b816ae05a1f9d180a7dbb68e3fac505
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 23eecaea3db452dc873eeb69c3bf36959dff6d0f
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428670"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795559"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Intune ve Windows Autopilot kullanarak karma Azure AD 'ye katılmış cihazları dağıtma
 Karma Azure Active Directory (Azure AD) ile birleştirilmiş cihazları ayarlamak için Intune ve Windows Autopilot kullanabilirsiniz. Bunu yapmak için bu makaledeki adımları izleyin.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 [Hibrit Azure AD 'ye katılmış cihazlarınız](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)başarıyla yapılandırılır. Get-MsolDevice cmdlet 'ini kullanarak [cihaz kaydınızı doğruladığınızdan](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) emin olun.
 
@@ -111,20 +111,18 @@ Active Directory için Intune Bağlayıcısı, Windows Server 2016 veya üstün�
 
 Intune Bağlayıcısı, [Intune ile aynı uç noktaları](../fundamentals/intune-endpoints.md)gerektirir.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **Devices**  >  **Windows**  >  Active Directory Ekle için cihazlar Windows**Windows kaydı**  >  **Intune Bağlayıcısı**  >  **Add**' nı seçin. 
-2. Bağlayıcıyı indirmek için yönergeleri izleyin.
-3. Bağlayıcıyı yüklemek için, yüklenen bağlayıcı kurulum dosyasını *Odjconnectorbootstrapper. exe*' yi açın.
-4. Kurulumun sonunda **Yapılandır**' ı seçin.
-5. **Oturum aç '** ı seçin.
-6. Kullanıcı genel yöneticisi veya Intune yönetici rolü kimlik bilgilerini girin.  
+1. IE artırılmış güvenlik yapılandırmasını devre dışı bırakın. Varsayılan olarak, Windows Server 'da Internet Explorer Artırılmış Güvenlik Yapılandırması açıktır. Active Directory için Intune bağlayıcısında oturum açamıyor ve ardından, yönetici için IE artırılmış güvenlik yapılandırmasını devre dışı bırakabilirsiniz. [Internet Explorer Artırılmış güvenlik yapılandırmasını devre dışı](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)bırakma. 
+2. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **Devices**  >  **Windows**  >  Active Directory Ekle için cihazlar Windows**Windows kaydı**  >  **Intune Bağlayıcısı**  >  **Add**' nı seçin. 
+3. Bağlayıcıyı indirmek için yönergeleri izleyin.
+4. Bağlayıcıyı yüklemek için indirilen bağlayıcı kurulum dosyasını *ODJConnectorBootstrapper.exe*açın.
+5. Kurulumun sonunda **Yapılandır**' ı seçin.
+6. **Oturum aç '** ı seçin.
+7. Kullanıcı genel yöneticisi veya Intune yönetici rolü kimlik bilgilerini girin.  
    Kullanıcı hesabının atanmış bir Intune lisansı olmalıdır.
-7. Active Directory için **cihazlar**  >  **Windows**  >  **Windows kaydı**  >  **Intune Bağlayıcısı**' na gidin ve ardından bağlantı durumunun **etkin**olduğunu doğrulayın.
+8. Active Directory için **cihazlar**  >  **Windows**  >  **Windows kaydı**  >  **Intune Bağlayıcısı**' na gidin ve ardından bağlantı durumunun **etkin**olduğunu doğrulayın.
 
 > [!NOTE]
 > Bağlayıcıya oturum açtıktan sonra, [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)görünmesi birkaç dakika sürebilir. Yalnızca Intune hizmetiyle başarıyla iletişim kurabiliyorsa görünür.
-
-### <a name="turn-off-ie-enhanced-security-configuration"></a>IE artırılmış güvenlik yapılandırmasını kapatma
-Varsayılan olarak, Windows Server 'da Internet Explorer Artırılmış Güvenlik Yapılandırması açıktır. Active Directory için Intune bağlayıcısında oturum açamıyor ve ardından, yönetici için IE artırılmış güvenlik yapılandırmasını devre dışı bırakabilirsiniz. [Internet Explorer Artırılmış güvenlik yapılandırmasını kapatma](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)
 
 ### <a name="configure-web-proxy-settings"></a>Web proxy ayarlarını yapılandırma
 
@@ -147,7 +145,7 @@ Ağ ortamınızda bir Web proxy 'niz varsa, Active Directory Intune bağlayıcı
     - Intune 'un Grup etiketi alanı, Azure AD cihazlarındaki OrderID özniteliğiyle eşlenir. Belirli bir grup etiketi (OrderID) ile tüm Autopilot cihazlarınızı içeren bir grup oluşturmak istiyorsanız şunu yazmanız gerekir:`(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Belirli bir satın alma siparişi KIMLIĞINE sahip tüm Autopilot cihazlarınızı içeren bir grup oluşturmak için, girin `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")` .
     
-1. **Kaydet**'i seçin.
+1. **Kaydet**’i seçin.
 
 1. **Oluştur**'u seçin.  
 
@@ -208,7 +206,7 @@ Cihaz profili durumunun *atama* ve, son olarak *atanan* *olarak değiştirilmesi
 1. **Kayıt durumu sayfası** bölmesinde **varsayılan**  >  **Ayarlar**' ı seçin.
 1. **Uygulama ve profil yükleme ilerleme durumunu göster** kutusunda **Evet**' i seçin.
 1. Diğer seçenekleri gerektiği şekilde yapılandırın.
-1. **Kaydet**'i seçin.
+1. **Kaydet**’i seçin.
 
 ## <a name="create-and-assign-a-domain-join-profile"></a>Etki Alanına Katılım profili oluşturma ve atama
 

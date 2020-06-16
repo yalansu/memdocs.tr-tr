@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 228c6758feca348d2caed4eb3b54207cadf7a037
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 09ebf7fde0cedb907e105e42abe7338237d231af
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985852"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795712"
 ---
 # <a name="configure-microsoft-launcher"></a>Microsoft Launcher’ı yapılandırma
 
@@ -70,7 +70,7 @@ Aşağıdaki tabloda, Microsoft başlatıcısı kullanılabilir yapılandırma a
 |    Akış etkinleştir    |    Boole    |    True    |    Kullanıcı ana ekranda sağa doğru geldiğinde, cihazda Başlatıcı akışını etkinleştirmenizi sağlar.<ul><li>**True**olarak ayarlanırsa akış etkinleştirilir.</li><li>**False**olarak ayarlanırsa akış devre dışı bırakılır.</li></ul><br>JSON anahtar adı:<br>`com.microsoft.launcher.Feed.Enabled`    |
 |    Akış etkinleştirme kullanıcı değişikliğine Izin verildi    |    Boole    |    True    |     **Akış etkinleştirme** ayarının Son Kullanıcı tarafından değiştirilip değiştirilemeyeceğini belirtmenize olanak tanır.<ul><li>**True**olarak ayarlanırsa, akış yalnızca ilk dağıtım için zorlanır. Daha sonra, Kullanıcı yapmış olabileceği değişikliklere göre ilke zorlanmaz.</li><li>**False**olarak ayarlanırsa, akış her eşitlemede zorlanır.</li></ul><br>JSON anahtar adı:`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
 |    Arama çubuğu yerleşimi   |    Dize    |    Alt    |  Giriş ekranında **arama çubuğunun yerleşimini** belirtmenize olanak tanır. <ul><li>**Alt**olarak ayarlanırsa, arama çubuğu ana ekranın alt kısmında yer alır.</li><li>**Üst**olarak ayarlanırsa, arama çubuğu ana ekranın üst kısmında yer alır.</li><li>**Gizle**olarak ayarlanırsa, arama çubuğu ana ekrandan kaldırılır.</li></ul><br>JSON anahtar adı:<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
-|    Arama çubuğu yerleşimi kullanıcı değişikliğine Izin verildi   |    Bool    |    True    |  **Arama çubuğu yerleştirme** ayarının Son Kullanıcı tarafından değiştirilip değiştirilemeyeceğini belirtmenize olanak tanır. <ul><li>**True**olarak ayarlanırsa, arama çubuğu yerleşimi yalnızca ilk dağıtım için zorlanır. Daha sonra, Kullanıcı yapmış olabileceği değişikliklere göre ilke zorlanmaz.</li><li>**False**olarak ayarlanırsa, arama çubuğunun yerleştirilmesi her eşitlemede zorlanır.</li></ul><br>JSON anahtar adı:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`    |
+|    Arama çubuğu yerleşimi kullanıcı değişikliğine Izin verildi   |    Bool    |    True    |  **Arama çubuğu yerleştirme** ayarının Son Kullanıcı tarafından değiştirilip değiştirilemeyeceğini belirtmenize olanak tanır. <ul><li>**True**olarak ayarlanırsa, arama çubuğu yerleşimi yalnızca ilk dağıtım için zorlanır. Daha sonra, Kullanıcı yapmış olabileceği değişikliklere göre ilke zorlanmaz.</li><li>**False**olarak ayarlanırsa, arama çubuğunun yerleştirilmesi her eşitlemede zorlanır.</li></ul><br>JSON anahtar adı:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`<p>**Note:** Microsoft başlatıcısı v 6,2 ve üzeri için bu ayar artık zorunlu olmayacaktır. Bu nedenle, bu değerin olarak ayarlanması `True` hiçbir etkiye sahip olmayacaktır. Son Kullanıcılarınız, kendi cihazındaki arama çubuğu yerleşiminin konumunu özelleştiremeyecektir.    |
 |    Yerleştirme modu  |    Dize    |    Göster    | Kullanıcı giriş ekranında sola doğru geldiğinde cihazdaki yerleştirmeyi etkinleştirmenizi sağlar.<ul><li>**Göstermek**için ayarlanırsa, yuva etkinleştirilir.</li><li>**Gizle**olarak ayarlanırsa, yerleştirme ana ekrandan gizlenir, ancak gerektiğinde Kullanıcı onu görüntüleyebilir.</li><li>**Devre dışı**olarak ayarlanırsa, Dock devre dışı bırakılır.</li></ul><br>JSON anahtar adı:<br>`com.microsoft.launcher.Dock.Mode`    |
 |   Yerleştirme modu kullanıcı değişikliğine Izin verildi   |    Dize    |    True    |  Yuva modu ayarının Son Kullanıcı tarafından değiştirilip değiştirilemeyeceğini belirtmenize olanak tanır.<ul><li>**True**olarak ayarlanırsa, yerleştirme modu ayarı yalnızca ilk dağıtım için zorlanır. Daha sonra, Kullanıcı yapmış olabileceği değişikliklere göre ilke zorlanmaz.</li><li>**False**olarak ayarlanırsa, yerleştirme modu ayarı her eşitlemede zorlanır.</li></ul><br>JSON anahtar adı:<br>`com.microsoft.launcher.Dock.Mode.UserChangeAllowed`    |
 

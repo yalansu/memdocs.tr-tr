@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: f98d7a30d219aee63e38a63a74d8f1713deb198a
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: aa518036aa99d5de003fbc56f99748267f3cc87b
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431296"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776880"
 ---
 # <a name="firewall-policy-for-endpoint-security-in-intune"></a>Intune 'da uç nokta güvenliği için güvenlik duvarı ilkesi
 
-MacOS ve Windows 10 çalıştıran cihazlar için yerleşik bir güvenlik duvarı yapılandırmak üzere Intune 'daki uç nokta güvenliği güvenlik duvarı ilkesini kullanın. Yerleşik güvenlik duvarları, Windows cihazları için BitLocker ve macOS için dosya Kasası ' nı içerir.
+MacOS ve Windows 10 çalıştıran cihazlar için yerleşik bir güvenlik duvarı yapılandırmak üzere Intune 'daki uç nokta güvenliği güvenlik duvarı ilkesini kullanın.
 
 Cihaz yapılandırması için Endpoint Protection profillerini kullanarak aynı güvenlik duvarı ayarlarını yapılandırabilmeniz da, cihaz yapılandırma profilleri ek ayar kategorileri içerir. Bu ek ayarlar güvenlik duvarları ile ilgisiz değildir ve ortamınız için yalnızca güvenlik duvarı ayarlarını yapılandırma görevini karmaşıklaştırabilir.
 
@@ -60,11 +60,11 @@ Yalnızca bir ilke kullanarak bir cihaza uygulanacak güvenlik duvarı ilkelerin
 
 **Microsoft Defender güvenlik duvarı kuralları** profillerini kullandığınızda, aynı cihaza birden çok kural profili uygulayabilirsiniz. Ancak, farklı yapılandırmalara sahip aynı şey için farklı kurallar varsa, her ikisi de cihaza gönderilir ve bu cihazda bir çakışma oluşturur.
 
-- Örneğin, bir kural güvenlik duvarı aracılığıyla *takımlar. exe* ' yi engelliyorsa ve ikinci bir kural *takımlar. exe*' ye izin veriyorsa, her iki kural de istemciye dağıtılır. Bu sonuç, güvenlik duvarı ayarları için diğer ilkeler kullanılarak oluşturulan çakışmalarla farklıdır.
+- Örneğin, bir kural güvenlik duvarı üzerinden *Teams.exe* engelliyorsa ve ikinci bir kural *Teams.exe*izin veriyorsa, her iki kural da istemciye dağıtılır. Bu sonuç, güvenlik duvarı ayarları için diğer ilkeler kullanılarak oluşturulan çakışmalarla farklıdır.
 
 Birden çok kural profilinden gelen kurallar birbirleriyle çakışmadığı zaman, cihazlar her bir profildeki kuralları birleştirerek cihazda birleştirilmiş bir güvenlik duvarı kuralı yapılandırması oluşturur. Bu davranış, her bir profilin bir cihaza desteklediği 150 kurallarından fazlasını dağıtmanıza olanak sağlar.
 
-- Örneğin, iki Microsoft Defender güvenlik duvarı kuralı profilleriniz vardır. İlk profil, güvenlik duvarı üzerinden *takımlar. exe* ' ye izin verir. İkinci profil, güvenlik duvarı üzerinden *Outlook. exe* ' ye izin verir. Bir cihaz her iki profili de aldığında, cihaz her iki uygulama için de güvenlik duvarından geçmesine izin verecek şekilde yapılandırılır.
+- Örneğin, iki Microsoft Defender güvenlik duvarı kuralı profilleriniz vardır. İlk profil güvenlik duvarından *Teams.exe* izin verir. İkinci profil güvenlik duvarından *Outlook.exe* izin verir. Bir cihaz her iki profili de aldığında, cihaz her iki uygulama için de güvenlik duvarından geçmesine izin verecek şekilde yapılandırılır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

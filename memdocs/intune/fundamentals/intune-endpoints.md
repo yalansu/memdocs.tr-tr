@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88140f54067607e11f3b24c3ca8d196067dda50e
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: 473f356f4f867cdb7a03c6b419f4e789b8301f80
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721848"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795576"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Microsoft Intune için ağ uç noktaları  
 
@@ -129,4 +129,16 @@ Daha fazla bilgi için bkz. [Apple yazılım ürünleri tarafından kullanılan 
 
 ## <a name="android-port-information"></a>Android bağlantı noktası bilgileri
 
-Android bağlantı noktaları hakkında daha fazla bilgi için bkz. Google 'ın [FCM bağlantı noktaları ve güvenlik duvarınız](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).
+Android cihazlarını yönetmeyi seçme seçeneğine bağlı olarak, Google Android kurumsal bağlantı noktalarını ve/veya Android anında iletme bildirimini açmanız gerekebilir. Desteklenen Android yönetim yöntemleri hakkında daha fazla bilgi için bkz. [Android kayıt belgeleri](https://docs.microsoft.com/mem/intune/enrollment/android-enroll). 
+
+[!NOTE]
+Google Mobile Services Çin 'de kullanılamadığından, Çin 'deki cihazlarda Intune tarafından yönetilen cihazlar Google Mobile Services gerektiren özellikleri kullanamaz. Bu özellikler şunlardır Google Play: SafetyNet cihaz kanıtlama gibi özellikleri koruma, uygulamaları Google Play Store, Android kurumsal özelliklerinden yönetme (Bu [Google belgelerine](https://support.google.com/work/android/answer/6270910)bakın). Ayrıca, Android Intune Şirket Portalı uygulaması Microsoft Intune hizmetiyle iletişim kurmak için Google Mobile Services kullanır. Çin 'de Google Play hizmetleri kullanılamadığından, bazı görevlerin tamamlanabilmesi için 8 saate kadar süre gerekebilir. Daha fazla bilgi için bu [makaleye](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)bakın.
+
+### <a name="google-android-enterprise"></a>Google Android kurumsal 
+
+Google, bu belgenin **güvenlik duvarı** bölümü altında, [Android kurumsal Bluebook](https://static.googleusercontent.com/media/www.android.com/en//static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)'ta gerekli ağ bağlantı noktaları ve hedef ana bilgisayar adları için belgeler sağlar. 
+
+### <a name="android-push-notification"></a>Android anında iletme bildirimi
+
+Intune, cihaz eylemleri ve iadelerinin tetiklenmesi için anında iletme bildirimi için Google Firebase Cloud Messaging (FCM) kullanır. Bu, hem Android Cihaz Yöneticisi hem de Android Enterprise için gereklidir. FCM ağ gereksinimleri hakkında bilgi için bkz. Google 'ın [FCM bağlantı noktaları ve güvenlik duvarınız](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).
+

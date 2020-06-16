@@ -19,16 +19,16 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 27bf115e6382b429d6555a19f655f0d5ba554ce7
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4120e73c803085fafda755d5bf845befb1ead046
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881808"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776939"
 ---
 # <a name="sync-your-ios-device-manually"></a>iOS cihazınızı el ile eşitleme
 
-Bazen bir uygulamanın Şirket Portalı’ndan indirme işlemini gerçekleştirmesi uzun zaman alabilir. Bu durumda cihazınızı el ile eşitlemeyi deneyin. Bu işlem, cihazınızın indiremediği bilgileri almaya çalışacaktır.
+Bazen bir uygulamanın Şirket Portalı karşıdan yüklenmesi çok uzun sürebilir. Bu durumda cihazınızı el ile eşitlemeyi deneyin. Bu işlem, cihazınızın indiremediği bilgileri almaya çalışacaktır.
 
 1. Şirket Portalı uygulamasını açın.
 
