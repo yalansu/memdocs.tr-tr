@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 06/16/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -17,18 +17,18 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07612080f170c5f2bef448aa616a4422508218d1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 97e837d99ee6f3558a408c443e32eb86fd803de6
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326932"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814874"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune 'de iOS/ıpados cihaz kaydı sorunlarını giderme
 
 Bu makalede, Intune 'da iOS/ıpados cihazlarını kaydetme sırasında Intune yöneticilerinin sorunları anlamasına ve sorunlarını gidermenize yardımcı olur.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Sorun gidermeye başlamadan önce bazı temel bilgilerin toplanması önemlidir. Bu bilgiler sorunu daha iyi anlamanıza ve çözüm bulma süresini azaltmanıza yardımcı olabilir.
 
@@ -52,7 +52,7 @@ Sorunla ilgili olarak aşağıdaki bilgileri toplayın:
 #### <a name="resolution"></a>Çözüm
 
 1. Aşağıdaki adımlarda veri kaybını engellemek için (iOS/ıpados geri yüklenirken cihazdaki tüm veriler silinir), verilerinizi yedeklediğinizden emin olun.
-2. Cihazı kurtarma moduna alın ve geri yükleyin. Bunu yeni bir cihaz olarak ayarladığınızdan emin olun. İOS/ıpados cihazlarını geri yükleme hakkında daha fazla bilgi için bkz [https://support.apple.com/HT201263](https://support.apple.com/HT201263)..
+2. Cihazı kurtarma moduna alın ve geri yükleyin. Bunu yeni bir cihaz olarak ayarladığınızdan emin olun. İOS/ıpados cihazlarını geri yükleme hakkında daha fazla bilgi için bkz [https://support.apple.com/HT201263](https://support.apple.com/HT201263) ..
 3. Cihazı yeniden kaydedin.
 
 ### <a name="profile-installation-failed-connection-to-the-server-could-not-be-established"></a>Profil yüklemesi başarısız oldu. Sunucuyla bağlantı kurulamadı.
@@ -62,35 +62,16 @@ Sorunla ilgili olarak aşağıdaki bilgileri toplayın:
 #### <a name="resolution"></a>Çözüm
 1. Azure Portal’da oturum açın.
 2. **Diğer hizmetler**' i seçin, Intune ' u arayın ve ardından **Intune**' u seçin.
-3. **Cihaz kaydı** > **Kayıt kısıtlamaları**' nı seçin.
-4. **Cihaz türü kısıtlamaları**' nın altında, ayarlamak istediğiniz kısıtlamayı seçin > **Özellikler** > **platformları seçin** > **iOS**için **izin ver** ' i seçin ve ardından **Tamam**' a tıklayın.
+3. **Cihaz kaydı**  >  **Kayıt kısıtlamaları**' nı seçin.
+4. **Cihaz türü kısıtlamaları**' nın altında, ayarlamak istediğiniz kısıtlamayı seçin > **Özellikler**  >  **platformları seçin** > **iOS**için **izin ver** ' i seçin ve ardından **Tamam**' a tıklayın.
 5. **Platformları Yapılandır**' ı seçin, kişisel IOS/ıpados cihazlarına **izin ver** ' i seçin ve ardından **Tamam**' a tıklayın.
 6. Cihazı yeniden kaydedin.
-
-**Neden:** DNS 'de gerekli CNAME kayıtları yok.
-
-#### <a name="resolution"></a>Çözüm
-Şirketinizin etki alanı için CNAME DNS kaynak kayıtları oluşturun. Örneğin, şirketinizin etki alanı contoso.com ise, DNS 'de EnterpriseEnrollment.contoso.com EnterpriseEnrollment-s.manage.microsoft.com 'e yönlendiren bir CNAME oluşturun.
-
-CNAME DNS girişlerini oluşturma isteğe bağlı olmakla birlikte, CNAME kayıtları kullanıcılar için kaydolmayı kolaylaştırır. CNAME kaydı bulunamazsa, kullanıcıların MDM sunucu adını (enrollment.manage.microsoft.com) el ile girmesi istenir.
-
-Birden fazla doğrulanan etki alanı varsa, her etki alanı için bir CNAME kaydı oluşturun. CNAME kaynak kayıtları, aşağıdaki bilgileri içermelidir:
-
-|TÜR|Konak adı|Şunu gösterir:|TTL|
-|------|------|------|------|
-|CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com|1 sa|
-|CNAME|EnterpriseRegistration.company_domain.com|EnterpriseRegistration.windows.net|1 sa|
-
-Şirketiniz kullanıcı kimlik bilgileri için birden fazla etki alanı kullanıyorsa, her etki alanı için bir CNAME kaydı oluşturun.
-
-> [!NOTE]
-> DNS kaydındaki değişikliklerin yaygınlaştırılması 72 saat kadar sürebilir. DNS kaydı yayılıncaya kadar DNS değişikliğini Intune'da doğrulayamazsınız.
 
 **Neden:** Daha önce farklı bir kullanıcı hesabıyla kaydedilmiş bir cihazı kaydeder ve önceki Kullanıcı Intune 'dan uygun şekilde kaldırılmadı.
 
 #### <a name="resolution"></a>Çözüm
 1. Geçerli profil yüklemesini iptal edin.
-2. Safari [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) 'de açın.
+2. [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com)Safari 'de açın.
 3. Cihazı yeniden kaydedin.
 
 > [!NOTE]
@@ -136,10 +117,10 @@ Birden fazla doğrulanan etki alanı varsa, her etki alanı için bir CNAME kayd
 **Neden:** Kullanıcı cihaz kayıt sınırından daha fazla cihaz kaydetmeye çalışır.
 
 #### <a name="resolution"></a>Çözüm
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **tüm cihazlar**' ı seçin ve kullanıcının kaydolduğu cihaz sayısını denetleyin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **tüm cihazlar**' ı seçin ve kullanıcının kaydolduğu cihaz sayısını denetleyin.
     > [!NOTE]
     > Ayrıca, etkilenen kullanıcının [Intune kullanıcı portalında](https://portal.manage.microsoft.com/) oturum açmasını ve kaydolmuş cihazları kontrol etmeniz gerekir. Intune [Kullanıcı portalında](https://portal.manage.microsoft.com/) görünen ancak [Intune yönetim portalında](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview)yer alan cihazlar olabilir, bu da cihaz kayıt sınırına doğru sayılır.
-2. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde cihaz kayıt > **kısıtlamaları** ' **nı seçin >** cihaz kayıt sınırı ' nı işaretleyin. Varsayılan olarak, sınır 15 olarak ayarlanır. 
+2. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde cihaz kayıt kısıtlamaları ' **nı seçin**  >  **Enrollment restrictions** > cihaz kayıt sınırı ' nı işaretleyin. Varsayılan olarak, sınır 15 olarak ayarlanır. 
 3. Kaydedilen cihazların sayısı sınıra ulaştıysa, gereksiz cihazları kaldırın veya cihaz kayıt sınırını artırın. Kayıtlı her cihaz bir Intune lisansı kullandığından, önce gereksiz cihazları her zaman kaldırmanız önerilir.
 4. Cihazı yeniden kaydedin.
 
@@ -157,8 +138,8 @@ Birden fazla doğrulanan etki alanı varsa, her etki alanı için bir CNAME kayd
 **Neden:** Cihazı kaydetmeye çalışan kullanıcının geçerli bir Intune lisansı yok.
 
 #### <a name="resolution"></a>Çözüm
-1. [Microsoft 365 yönetim merkezine](https://admin.microsoft.com)gidin ve ardından **Kullanıcılar** > **etkin kullanıcılar**' ı seçin.
-2. Etkilenen Kullanıcı hesabını > **ürün lisansları** > **Düzenle**' yi seçin.
+1. [Microsoft 365 yönetim merkezine](https://admin.microsoft.com)gidin ve ardından **Kullanıcılar**  >  **etkin kullanıcılar**' ı seçin.
+2. Etkilenen Kullanıcı hesabını > **ürün lisansları**  >  **Düzenle**' yi seçin.
 3. Bu kullanıcıya geçerli bir Intune lisansının atandığını doğrulayın.
 4. Cihazı yeniden kaydedin.
 
@@ -166,8 +147,8 @@ Birden fazla doğrulanan etki alanı varsa, her etki alanı için bir CNAME kayd
 
 **Neden:** Cihazı kaydetmeye çalışan kullanıcının geçerli bir Intune lisansı yok.
 
-1. [Microsoft 365 yönetim merkezine](https://admin.microsoft.com)gidin ve ardından **Kullanıcılar** > **etkin kullanıcılar**' ı seçin.
-2. Etkilenen Kullanıcı hesabını seçin ve ardından **ürün lisansları** > **Düzenle**' yi seçin.
+1. [Microsoft 365 yönetim merkezine](https://admin.microsoft.com)gidin ve ardından **Kullanıcılar**  >  **etkin kullanıcılar**' ı seçin.
+2. Etkilenen Kullanıcı hesabını seçin ve ardından **ürün lisansları**  >  **Düzenle**' yi seçin.
 3. Bu kullanıcıya geçerli bir Intune lisansının atandığını doğrulayın.
 4. Cihazı yeniden kaydedin.
 
@@ -177,7 +158,7 @@ Birden fazla doğrulanan etki alanı varsa, her etki alanı için bir CNAME kayd
 
 #### <a name="resolution"></a>Çözüm
 
-1. **General**Genel > **cihaz yönetimi**> iOS/ıpados cihazında **ayarları** açın.
+1. **Settings** **Genel**  >  **cihaz yönetimi**> iOS/ıpados cihazında ayarları açın.
 2. Var olan yönetim profiline dokunun ve **yönetimi kaldır**' a dokunun.
 3. Cihazı yeniden kaydedin.
 
@@ -229,7 +210,7 @@ Kayıt profili atanan bir ADE tarafından yönetilen Cihazı açtığınızda, I
 #### <a name="resolution"></a>Çözüm
 
 1. Kayıt profilini düzenleyin. Profilde herhangi bir değişiklik yapabilirsiniz. Amaç, profilin değiştirilme saatini güncelleştirmedir.
-2. Ade ile yönetilen cihazları eşitleme: [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **cihazlar** > **iOS** > **iOS kaydı** > **kayıt programı belirteçleri** ' ni seçin > bir belirteç > **Şimdi Eşitle**' yi seçin. Apple'a bir eşitleme isteği gönderilir.
+2. Ade ile yönetilen cihazları eşitleme: [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **cihazlar**  >  **iOS**  >  **iOS kaydı**  >  **kayıt programı belirteçleri** ' ni seçin > bir belirteç > **Şimdi Eşitle**' yi seçin. Apple'a bir eşitleme isteği gönderilir.
 
 ### <a name="ade-enrollment-stuck-at-user-login"></a>Kullanıcı oturum açmada ADE kaydı takıldı
 Kayıt profili atanan bir ADE ile yönetilen bir cihazı açtığınızda, kimlik bilgilerini girdikten sonra ilk kurulum açılır.

@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 99ac1e069386c69011543ac40878dd62a0d50527
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e3ab2e31aa8a35ef04c150972cd7bb7650e46040
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990833"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879703"
 ---
 # <a name="manage-endpoint-security-in-microsoft-intune"></a>Microsoft Intune uç nokta güvenliğini yönetme
 
@@ -31,15 +31,15 @@ Uç nokta güvenlik düğümü, Intune aracılığıyla cihazları güvenli tutm
 
 - **Tüm yönetilen cihazlarınızın durumunu gözden geçirin**. Cihaz uyumluluğunu yüksek bir düzeyden görüntüleyebileceğiniz [tüm cihazlar](#manage-devices) görünümünü kullanın ve ardından bunları çözebilmeniz için hangi uyumluluk ilkelerinin karşılanmadığını anlamak üzere belirli cihazlara gidebilirsiniz.
 
-- **Cihazlar için en iyi yöntem güvenlik yapılandırmalarının temelini oluşturan güvenlik temellerini dağıtın**. Intune, Windows cihazlarına yönelik [güvenlik temellerini](#manage-security-baselines) ve Microsoft Defender Gelişmiş tehdit koruması (Defender ATP) ve Microsoft Edge gibi büyüyen bir uygulamalar listesi içerir. Güvenlik temelleri, bilinen bir ayar grubunu ve ilgili güvenlik ekiplerinin önermediği varsayılan değerleri uygulamanıza yardımcı olan önceden yapılandırılmış Windows ayarları gruplarıdır.
+- **Cihazlar için en iyi yöntem güvenlik yapılandırmalarının temelini oluşturan güvenlik temellerini dağıtın**. Intune, Windows cihazlarına yönelik [güvenlik temellerini](#manage-security-baselines) ve Microsoft Defender Gelişmiş tehdit koruması (MICROSOFT Defender ATP) ve Microsoft Edge gibi büyüyen bir uygulamalar listesi içerir. Güvenlik temelleri, bilinen bir ayar grubunu ve ilgili güvenlik ekiplerinin önermediği varsayılan değerleri uygulamanıza yardımcı olan önceden yapılandırılmış Windows ayarları gruplarıdır.
 
-- **Cihazlarda sıkı odaklı ilkeler aracılığıyla güvenlik yapılandırmalarının yönetimini yönetin**.  Her [uç nokta güvenlik ilkesi](#use-policies-to-manage-device-security) , virüsten koruma, disk şifreleme, güvenlik duvarları ve Defender ATP ile tümleştirme aracılığıyla kullanılabilir hale getirilen çeşitli alanlarla ilgili cihaz güvenliğinin yönlerine odaklanır.
+- **Cihazlarda sıkı odaklı ilkeler aracılığıyla güvenlik yapılandırmalarının yönetimini yönetin**.  Her [uç nokta güvenlik ilkesi](#use-policies-to-manage-device-security) , virüsten koruma, disk şifreleme, güvenlik duvarları ve MICROSOFT Defender ATP ile tümleştirme aracılığıyla sunulan çeşitli alanlarla ilgili cihaz güvenliğinin yönlerine odaklanır.
 
 - **Uyumluluk ilkesi aracılığıyla cihaz ve Kullanıcı gereksinimleri oluşturun**. [Uyumluluk ilkeleriyle](../protect/device-compliance-get-started.md), cihazların ve kullanıcıların uyumlu kabul edilmesi için uyması gereken kuralları ayarlarsınız. Kurallar, işletim sistemi sürümlerini, parola gereksinimlerini, cihaz tehdit düzeylerini ve daha fazlasını içerebilir.
 
   Uyumluluk ilkelerini zorlamak için Azure Active Directory (Azure AD) [koşullu erişim ilkeleriyle](#configure-conditional-access) tümleştirdiğinizde, hem yönetilen cihazların hem de yönetilmeyen cihazların şirket kaynaklarına erişmesini sağlayabilirsiniz.
 
-- **Intune 'U Microsoft Defender ATP ekibiniz Ile tümleştirin**. [Defender ATP ile tümleştirerek](#set-up-integration-with-defender-atp) [güvenlik görevlerine](#review-security-tasks-from-defender-atp)erişim elde edersiniz. Güvenlik görevleri, güvenlik takımınızın risk altında olan cihazları tanımlamasına ve daha sonra işlem yapacak olan Intune yöneticilerine yönelik ayrıntılı düzeltme adımlarını belirlemesine yardımcı olmak için, Defender ATP ve Intune 'U birbirine yakından bağlayın.
+- **Intune 'U Microsoft Defender ATP ekibiniz Ile tümleştirin**. [Microsoft Defender ATP ile tümleştirerek](#set-up-integration-with-microsoft-defender-atp) [güvenlik görevlerine](#review-security-tasks-from-microsoft-defender-atp)erişim elde edersiniz. Güvenlik görevleri, güvenlik ekibinizin risk altında olan cihazları tanımlamasına ve daha sonra işlem yapacak olan Intune yöneticilerine yönelik ayrıntılı düzeltme adımlarını belirlemesine yardımcı olmak için Microsoft Defender ATP ve Intune 'U birlikte yakından ele alabilir.
 
 Bu makalenin aşağıdaki bölümlerinde, Yönetim Merkezi 'nin uç nokta güvenlik düğümünden gerçekleştirebileceğiniz farklı görevler ve bunları kullanmak için gereken rol tabanlı erişim denetimi (RBAC) izinleri ele alınmaktadır.
 
@@ -61,13 +61,13 @@ Daha fazla bilgi için bkz. [Intune 'Da Windows 10 cihazlarını yapılandırmak
 
 Güvenlik temelleri, cihazlarda ayarları yapılandırmak için Intune 'daki çeşitli yöntemlerden biridir. Ayarları yönetirken, ortamınızda hangi diğer yöntemlerin kullanımda olduğunu anlamak önemlidir. böylece, çakışmaları önlemek için cihazlarınızı yapılandırabilirler. Bu makalenin ilerleyen kısımlarında [İlke çakışmalarını önleyin](#avoid-policy-conflicts) bölümüne bakın.
 
-## <a name="review-security-tasks-from-defender-atp"></a>Defender ATP 'den güvenlik görevlerini gözden geçirme
+## <a name="review-security-tasks-from-microsoft-defender-atp"></a>Microsoft Defender ATP 'den güvenlik görevlerini gözden geçirme
 
-Intune 'u Microsoft Defender Gelişmiş tehdit koruması (Defender ATP) ile tümleştirdiğinizde, Intune 'da risk altında olan cihazları belirleyen ve bu riski azaltmak için gereken adımları sağlayan *güvenlik görevlerini* gözden geçirebilirsiniz. Daha sonra bu riskler başarıyla azaltıldığında Defender ATP 'ye geri raporlamak için görevleri kullanabilirsiniz.
+Intune 'U Microsoft Defender Gelişmiş tehdit koruması (Microsoft Defender ATP) ile tümleştirdiğinizde, Intune 'da risk altında olan cihazları belirleyen ve bu riski azaltmak için gereken adımları sağlayan *güvenlik görevlerini* gözden geçirebilirsiniz. Daha sonra bu riskler başarıyla azaltıldığında, görevleri Microsoft Defender ATP 'ye geri bildirmek için kullanabilirsiniz.
 
-- Defender ATP ekibi, hangi cihazların risk altında olduğunu ve bu bilgileri Intune ekibinize bir güvenlik görevi olarak geçitirsiniz. Birkaç tıklamayla, Intune için risk altındaki cihazları tanımlayan bir güvenlik görevi ve güvenlik açığı oluşturur ve bu riski hafifletmek için yönergeler sağlar.
+- Microsoft Defender ATP ekibiniz, hangi cihazların risk altında olduğunu ve bu bilgileri Intune ekibinize bir güvenlik görevi olarak iletmektir. Birkaç tıklamayla, Intune için risk altındaki cihazları tanımlayan bir güvenlik görevi ve güvenlik açığı oluşturur ve bu riski hafifletmek için yönergeler sağlar.
 
-- Intune yöneticileri güvenlik görevlerini gözden geçirdikten sonra bu görevleri düzeltmek için Intune içinde hareket ederler. Bu durum azaltıldıktan sonra, bu durumu Defender ATP ekibine geri ileten görevi tamamlanmış olarak ayarlar.
+- Intune yöneticileri güvenlik görevlerini gözden geçirdikten sonra bu görevleri düzeltmek için Intune içinde hareket ederler. Bu durum azaltıldıktan sonra, bu durumu Microsoft Defender ATP ekibine geri ileten görevi tamamlanmış olarak ayarlar.
 
 Güvenlik görevleri aracılığıyla her iki takım da risk altında olan cihazlar ve bu risklerin nasıl ve ne zaman düzeltildiğinde eşitlenmiş olarak kalır.
 
@@ -93,7 +93,7 @@ Cihazların ve kullanıcıların ağınıza ve şirket kaynaklarına erişmesine
 
 - Cihazların en düşük veya belirli bir işletim sistemi sürümünü çalıştırmasını isteme
 - Parola gereksinimlerini ayarlama
-- Defender ATP veya başka bir mobil tehdit savunma iş ortağı tarafından belirlendiği şekilde izin verilen en fazla cihaz tehdit düzeyini belirtme
+- Microsoft Defender ATP veya başka bir Mobile Threat Defense iş ortağı tarafından belirlendiği şekilde izin verilen en fazla cihaz tehdit düzeyini belirtme
 
 İlke kurallarına ek olarak, uyumluluk ilkeleri şunları destekler:
 
@@ -119,18 +119,18 @@ Intune ile koşullu erişim kullanmanın iki yaygın yöntemi aşağıda verilmi
 
 Intune ile koşullu erişim kullanma hakkında daha fazla bilgi edinmek için bkz. [koşullu erişim ve Intune hakkında bilgi edinin](../protect/conditional-access.md).
 
-## <a name="set-up-integration-with-defender-atp"></a>Defender ATP ile tümleştirmeyi ayarlama
+## <a name="set-up-integration-with-microsoft-defender-atp"></a>Microsoft Defender ATP ile tümleştirmeyi ayarlama
 
-Microsoft Defender Gelişmiş tehdit koruması 'nı (Defender ATP) Intune ile tümleştirdiğinizde, riskleri tanımanıza ve bunlara yanıt vermeye yönelik bir özellik geliştirebilirsiniz.
+Microsoft Defender ATP 'yi Intune ile tümleştirdiğinizde, riskleri tanımlamak ve bunlara yanıt vermek için bu özelliği geliştirebilirsiniz.
 
-Intune çeşitli [Mobile Threat Defense ortaklarıyla](../protect/mobile-threat-defense.md)tümleştirilmesine karşın, Defender ATP kullandığınızda, Defender ATP ve Intune arasında derin cihaz koruma seçeneklerine erişimi olan ve aşağıdakiler dahil sıkı bir tümleştirme elde edersiniz:
+Intune çeşitli [Mobile Threat Defense iş ortaklarıyla](../protect/mobile-threat-defense.md)tümleştirilmesine karşın, MICROSOFT Defender ATP kullandığınızda MICROSOFT Defender ATP ile Intune arasında kapsamlı bir tümleştirme elde edersiniz ve aşağıdakiler dahil olmak üzere derin cihaz koruma seçeneklerine erişimi vardır:
 
 - Güvenlik görevleri: ATP ve Intune yöneticileri arasında, risk altındaki cihazlar ve bu riskler azaltıldığında yapılan onay ile sorunsuz iletişim.
-- İstemcilerde Defender ATP için kolaylaştırılmış ekleme.
+- İstemcilerde Microsoft Defender ATP için kolaylaştırılmış ekleme.
 - Intune uyumluluk ilkelerinde ATP cihaz risk sinyalleri kullanımı.
 - Yetkisiz *koruma* özelliklerine erişim.
 
- Intune ile Defender ATP kullanma hakkında daha fazla bilgi edinmek için bkz. [Intune 'Da koşullu erişimle Microsoft Defender ATP için uyumluluğu zorlama](../protect/advanced-threat-protection.md).
+ Intune ile Microsoft Defender ATP kullanma hakkında daha fazla bilgi edinmek için bkz. [Intune 'Da koşullu erişim Ile Microsoft Defender ATP için uyumluluğu zorlama](../protect/advanced-threat-protection.md).
 
 ## <a name="role-based-access-control-requirements"></a>Rol tabanlı erişim denetimi gereksinimleri
 
@@ -158,7 +158,7 @@ Microsoft Endpoint Manager Yönetim merkezinde aşağıdaki izin listesini, **ki
   - Oluştur
   - Sil
   - Okuma
-  - Güncelleştir
+  - Güncelleştirme
   - Raporları görüntüle
 - **Cihaz yapılandırmaları**
   - Okuma
@@ -178,7 +178,7 @@ Microsoft Endpoint Manager Yönetim merkezinde aşağıdaki izin listesini, **ki
   - Sil
   - Okuma
   - Birincil kullanıcıyı ayarla
-  - Güncelleştir
+  - Güncelleştirme
 - **Mobil uygulamalar**
   - Okuma
 - **Kuruluş**
@@ -196,10 +196,10 @@ Microsoft Endpoint Manager Yönetim merkezinde aşağıdaki izin listesini, **ki
   - Oluştur
   - Sil
   - Okuma
-  - Güncelleştir
+  - Güncelleştirme
 - **Güvenlik görevleri**
   - Okuma
-  - Güncelleştir
+  - Güncelleştirme
 - **Telekom giderleri**
   - Okuma
 - **Hüküm ve koşullar**
@@ -230,4 +230,4 @@ Yapılandırma
 - [Güvenlik temelleri](../protect/security-baselines.md)
 - [Uyumluluk ilkeleri](../protect/device-compliance-get-started.md)
 - [Koşullu erişim ilkeleri](#configure-conditional-access)
-- [Defender ATP ile tümleştirme](../protect/advanced-threat-protection.md)
+- [Microsoft Defender ATP ile tümleştirme](../protect/advanced-threat-protection.md)

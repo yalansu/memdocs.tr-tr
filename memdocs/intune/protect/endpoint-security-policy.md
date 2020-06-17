@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 8b56d902980c9e4b51ccbb62e84b4eccd9eb6395
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 071cab69b652193b835282603e187e4f3d0c7b0d
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776914"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879724"
 ---
 # <a name="manage-device-security-with-endpoint-security-policies-in-microsoft-intune"></a>Microsoft Intune uç nokta güvenlik ilkeleriyle cihaz güvenliğini yönetme
 
@@ -35,13 +35,13 @@ Bu ilkeleri [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.c
 
 Her uç nokta güvenlik ilkesi türünün kısa açıklamaları aşağıda verilmiştir. Her biri için kullanılabilir profiller dahil olmak üzere bunlar hakkında daha fazla bilgi edinmek için, her ilke türüne adanmış içeriklere yönelik bağlantıları izleyin:
 
-- [Virüsten](../protect/endpoint-security-antivirus-policy.md) koruma ilkeleri güvenlik yöneticilerinin, yönetilen cihazlar için ayrı virüsten koruma ayarları grubunu yönetmeye odaklanmasına yardımcı olur. Virüsten koruma ilkesini kullanmak için, Intune 'U Microsoft Defender Gelişmiş tehdit koruması (Defender ATP) ile bir mobil tehdit savunma çözümü olarak tümleştirin.
+- [Virüsten](../protect/endpoint-security-antivirus-policy.md) koruma ilkeleri güvenlik yöneticilerinin, yönetilen cihazlar için ayrı virüsten koruma ayarları grubunu yönetmeye odaklanmasına yardımcı olur. Virüsten koruma ilkesini kullanmak için, Intune 'U Microsoft Defender Gelişmiş tehdit koruması (Microsoft Defender ATP) ile bir mobil tehdit savunması çözümü olarak tümleştirin.
 
 - [Disk şifrelemesi](../protect/endpoint-security-disk-encryption-policy.md) -uç nokta güvenlik diski şifreleme profilleri, yalnızca bir cihaz yerleşik Şifreleme yöntemiyle ilgili olan, filekasası veya BitLocker gibi ayarları odaklamaktadır. Bu odak, güvenlik yöneticilerinin, ilişkisiz ayarların bulunduğu bir konakta gezinmek gerekmeden disk şifreleme ayarlarını yönetmesini kolaylaştırır.
 
 - [Güvenlik duvarı](../protect/endpoint-security-firewall-policy.md) -MacOS ve Windows 10 çalıştıran cihazlar için yerleşik bir güvenlik duvarı yapılandırmak üzere Intune 'daki uç nokta güvenliği güvenlik duvarı ilkesini kullanın. 
 
-- [Uç nokta algılama ve yanıt](../protect/endpoint-security-edr-policy.md) -Defender ATP 'yi Intune ile tümleştirdiğinizde, EDR ayarlarını yönetmek ve CIHAZLARı Defender ATP 'ye eklemek için uç nokta algılama ve yanıt (EDR) için uç nokta güvenlik ilkelerini kullanın.
+- [Uç nokta algılama ve yanıt](../protect/endpoint-security-edr-policy.md) -MICROSOFT Defender ATP 'yi Intune ile tümleştirdiğinizde, EDR ayarlarını yönetmek ve cihazları MICROSOFT Defender ATP 'ye eklemek için uç nokta algılama ve yanıt (EDR) için uç nokta güvenlik ilkelerini kullanın.
 
 - [Saldırı yüzeyi azaltma](../protect/endpoint-security-asr-policy.md) -Defender virüsten koruma Windows 10 cihazlarınızda kullanılırken, cihazlarınız için bu ayarları yönetmek üzere saldırı yüzeyi azaltma için Intune uç nokta güvenlik ilkelerini kullanın.
 

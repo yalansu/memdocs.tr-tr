@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 936375f55c61e719657ee1e770d05834739a4f6f
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: 32d46374186596e8c8721b77510738caadcf78b8
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746638"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814956"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune 'da ortak iOS/ıpados özelliklerini kullanmak için iOS ve ıpados cihaz ayarları
 
@@ -215,7 +215,7 @@ Bu özellik şu platformlarda geçerlidir:
 
 - **Kilit ekranı dipnotu**: cihazlar kaybolur veya çalınırsa, cihazın döndürülmesini sağlamaya yardımcı olabilecek bir durum girin. İstediğiniz herhangi bir metin girebilirsiniz. Örneğin `If found, call Contoso at ...` gibi bir URI girebilirsiniz.
 
-  Cihaz belirteçleri, bu alanlara cihaza özgü bilgiler eklemek için de kullanılabilir. Örneğin, seri numarasını göstermek için girin `Serial Number: {{serialnumber}}` . Kilit ekranında metin şuna benzer şekilde görünür `Serial Number 123456789ABC` . Değişken girerken, küme ayraçları kullandığınızdan emin olun `{{ }}` . [Uygulama yapılandırma belirteçleri](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) , kullanılabilecek değişkenlerin bir listesini içerir. Ayrıca, `deviceName` herhangi bir cihaza özgü değeri de kullanabilirsiniz.
+  Cihaz belirteçleri, bu alanlara cihaza özgü bilgiler eklemek için de kullanılabilir. Örneğin, seri numarasını göstermek için `Serial Number: {{serialnumber}}` veya girin `Device ID: {{DEVICEID}}` . Kilit ekranında metin şuna benzer şekilde görünür `Serial Number 123456789ABC` . Değişken girerken, küme ayraçları kullandığınızdan emin olun `{{ }}` . [Uygulama yapılandırma belirteçleri](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) , kullanılabilecek değişkenlerin bir listesini içerir. Ayrıca, `DEVICENAME` herhangi bir cihaza özgü değeri de kullanabilirsiniz.
 
   > [!NOTE]
   > Değişkenler kullanıcı arabiriminde doğrulanmaz ve büyük/küçük harfe duyarlıdır. Sonuç olarak, yanlış girişle kaydedilmiş profiller görebilirsiniz. Örneğin, `{{DeviceID}}` `{{deviceid}}` ya da ' {{DeviceID}} ' yerine girerseniz, CIHAZıN benzersiz kimliği yerine değişmez dize gösterilir. Doğru bilgileri girdiğinizden emin olun. Tüm küçük harfler veya tüm büyük harfler desteklenir, ancak bir karışımı değildir. 

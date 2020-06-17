@@ -16,20 +16,20 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d0ba328f1976d0463c6be042dfd6f8a7570d6dac
-ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
+ms.openlocfilehash: ae95fb48296f778fb98affa2270ba763d79fb766
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206341"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879665"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Intune 'da uç nokta güvenliği için uç nokta algılama ve yanıt ilkesi
 
-Microsoft Defender Gelişmiş tehdit koruması 'nı (Defender ATP) Intune ile tümleştirdiğinizde, EDR ayarlarını yönetmek ve cihazları Defender ATP 'ye eklemek için uç nokta algılama ve yanıt (EDR) için uç nokta güvenlik ilkeleri kullanabilirsiniz.
+Microsoft Defender Gelişmiş tehdit koruması 'nı (Microsoft Defender ATP) Intune ile tümleştirdiğinizde, EDR ayarlarını yönetmek ve cihazları Microsoft Defender ATP 'ye eklemek için uç nokta algılama ve yanıt (EDR) için uç nokta güvenlik ilkeleri kullanabilirsiniz.
 
-Defender ATP uç nokta algılama ve yanıtının özellikleri, gerçek zamanlı ve eyleme dönüştürülebilir gelişmiş saldırı algılamalarını sağlar. Güvenlik analistleri uyarıları etkin bir şekilde önceliklendirebilir, ihlalin tam kapsamına yönelik görünürlük elde edebilir ve tehditleri düzeltmek için yanıt işlemleri gerçekleştirebilir.
+Microsoft Defender ATP uç noktası algılama ve yanıtının özellikleri, gerçek zamanlı ve eyleme dönüştürülebilir gelişmiş saldırı algılamalarını sağlar. Güvenlik analistleri uyarıları etkin bir şekilde önceliklendirebilir, ihlalin tam kapsamına yönelik görünürlük elde edebilir ve tehditleri düzeltmek için yanıt işlemleri gerçekleştirebilir.
 
-EDR ilkeleri, EDR ayarlarını yönetmek için platforma özel profiller içerir. Profiller, Defender ATP için bir *ekleme paketi* otomatik olarak içerir. Ekleme paketleri, cihazların Defender ATP ile çalışacak şekilde nasıl yapılandırıldığı. Bir cihaz ontahtalarından sonra, bu cihazdan tehdit verilerini kullanmaya başlayabilirsiniz.
+EDR ilkeleri, EDR ayarlarını yönetmek için platforma özel profiller içerir. Profiller, Microsoft Defender ATP için bir *ekleme paketini* otomatik olarak içerir. Ekleme paketleri, cihazların Microsoft Defender ATP ile çalışacak şekilde nasıl yapılandırıldığı. Bir cihaz ontahtalarından sonra, bu cihazdan tehdit verilerini kullanmaya başlayabilirsiniz.
 
 EDR ilkeleri, Intune ile yönettiğiniz Azure Active Directory (Azure AD) cihaz gruplarına ve Windows Server 'lar dahil Configuration Manager ile yönettiğiniz şirket içi cihazların koleksiyonlarına dağıtılır. Farklı yönetim yolları için EDR ilkeleri farklı ekleme paketleri gerektirir. Bu nedenle, yönettiğiniz farklı cihaz türleri için ayrı bir EDR ilkesi oluşturacaksınız.
 
@@ -44,7 +44,7 @@ EDR ilkeleri, Intune ile yönettiğiniz Azure Active Directory (Azure AD) cihaz 
 
 **Genel**:
 
-- **Microsoft Defender Gelişmiş tehdit koruması Için kiracı** -EDR ilkeleri oluşturabilmeniz IÇIN Defender ATP kiracınız Microsoft Endpoint Manager kiracınızla (Intune aboneliğiniz) tümleştirilemelidir. Bkz. Intune belgelerinde [Microsoft Defender ATP kullanma](advanced-threat-protection.md) .
+- **Microsoft Defender Gelişmiş tehdit koruması Için kiracı** – EDR ilkeleri oluşturabilmeniz Için MICROSOFT Defender ATP kiracınız Microsoft Endpoint Manager kiracınızla (Intune aboneliğiniz) tümleştirilemelidir. Bkz. Intune belgelerinde [Microsoft Defender ATP kullanma](advanced-threat-protection.md) .
 
 **Configuration Manager cihazları desteklemek için**:
 
@@ -156,7 +156,7 @@ Ortak yönetimi etkinleştirmeyi planlıyorsanız, ortak yönetimi, önkoşullar
 
 2. Ortak yönetim ayarlarınıza sağ tıklayıp **Özellikler**' i seçin.
 
-3. **Karşıya yüklemeyi Yapılandır** sekmesinde, **Microsoft Endpoint Manager yönetim merkezine yükle**' yi seçin. **Uygula**’ya tıklayın.
+3. **Karşıya yüklemeyi Yapılandır** sekmesinde, **Microsoft Endpoint Manager yönetim merkezine yükle**' yi seçin. **Uygula**'ya tıklayın.
    - Cihaz yükleme için varsayılan ayar, **Microsoft uç nokta Configuration Manager tarafından yönetilen tüm cihazlardır**. Yapılandırmanızı bir veya birkaç cihaz koleksiyonu ile sınırlandırmayı da tercih edebilirsiniz.
 
      ![Ortak yönetim özellikleri sekmesini görüntüleme](media/endpoint-security-edr-policy/configure-upload.png)
@@ -179,7 +179,7 @@ Kiracı iliştirme yapılandırıldığında eşitlenecek koleksiyonları seçeb
 
 2. Ortak yönetim ayarlarınıza sağ tıklayıp **Özellikler**' i seçin.
 
-3. **Karşıya yüklemeyi Yapılandır** sekmesinde, **Microsoft Endpoint Manager yönetim merkezine yükle**' yi seçin. **Uygula**’ya tıklayın.
+3. **Karşıya yüklemeyi Yapılandır** sekmesinde, **Microsoft Endpoint Manager yönetim merkezine yükle**' yi seçin. **Uygula**'ya tıklayın.
 
    Cihaz yükleme için varsayılan ayar, **Microsoft uç nokta Configuration Manager tarafından yönetilen tüm cihazlardır**. Yapılandırmanızı bir veya birkaç cihaz koleksiyonu ile sınırlandırmayı da tercih edebilirsiniz.
 
@@ -225,7 +225,7 @@ Microsoft Defender ATP aboneliğiniz Intune ile tümleşikse, EDR ilkeleri oluş
      - Platform: **Windows 10 ve Windows Server**
      - Profil: **Endpoint Detection ve yanıt (ConfigMgr) (Önizleme)**
 
-4. **Oluştur**’u seçin.
+4. **Oluştur**'u seçin.
 
 5. **Temel bilgiler** sayfasında, profil için bir ad ve açıklama girin ve ardından **İleri**' yi seçin.
 
@@ -258,12 +258,9 @@ Microsoft Endpoint Manager Yönetim merkezinde dağıttığınız EDR ilkeleriyl
 
 - **Windows 10 ve üzeri** platformu (Intune) hedefleyen ilkeler için, ilkeye uyumluluğa bir genel bakış görürsünüz. Ayrıca, ilkeyi alan cihazların listesini görüntülemek için grafiği ve daha fazla ayrıntı için ayrı cihazlarda detaya gitmeyi seçebilirsiniz.
 
-  **ATP algılayıcı grafiği olan cihazlar** yalnızca **Windows 10 ve üzeri** profil kullanılarak Defender ATP 'ye başarıyla eklenen cihazları görüntüler. Bu grafikteki cihazlarınızın tam gösterimine sahip olduğunuzdan emin olmak için, ekleme profilini tüm cihazlarınıza dağıtın. Grup ilkesi veya PowerShell gibi dış yollarla Defender ATP 'ye eklenen cihazlar **ATP algılayıcısı olmadan cihaz**olarak sayılır.
+  **ATP algılayıcı grafiği olan cihazlar** yalnızca **Windows 10 ve üzeri** PROFIL kullanılarak Microsoft Defender ATP 'ye başarıyla eklenen cihazları görüntüler. Bu grafikteki cihazlarınızın tam gösterimine sahip olduğunuzdan emin olmak için, ekleme profilini tüm cihazlarınıza dağıtın. Grup ilkesi veya PowerShell gibi dış yollarla, Microsoft Defender 'a eklenen cihazlar **ATP algılayıcısı olmadan cihaz**olarak sayılır.
 
 - **Windows 10 ve Windows Server** platformunu (Configuration Manager) hedefleyen ilkeler için, ilkeye yönelik uyumluluğa bir genel bakış görürsünüz, ancak ek ayrıntıları görüntülemek için ayrıntıya gidebilirsiniz. Yönetim Merkezi, ilkenin Configuration Manager cihazlara dağıtımını yöneten Configuration Manager 'dan sınırlı durum ayrıntılarını aldığından görünüm sınırlıdır.
-
-
-
 
 
 Hem platformlar hem de profiller için yapılandırabileceğiniz [ayarları görüntüleyin](endpoint-security-edr-profile-settings.md) .

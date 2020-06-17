@@ -16,18 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 2f3a378cdb3b5e24371edb2fd6dc240962f80342
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: bfefdee7e949faf9e484ea20e7fc203ee72a9784
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431384"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879652"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Intune 'da uç nokta güvenliği için virüsten koruma ilkesi
 
-Intune Endpoint Security virüsten koruma ilkeleri, güvenlik yöneticilerinin yönetilen cihazlar için ayrı virüsten koruma ayarları grubunu yönetmeye odaklanmasına yardımcı olabilir. Virüsten koruma ilkesini kullanmak için, Intune 'U Microsoft Defender Gelişmiş tehdit koruması (Defender ATP) ile bir mobil tehdit savunma çözümü olarak tümleştirin.
+Intune Endpoint Security virüsten koruma ilkeleri, güvenlik yöneticilerinin yönetilen cihazlar için ayrı virüsten koruma ayarları grubunu yönetmeye odaklanmasına yardımcı olabilir. Virüsten koruma ilkesini kullanmak için, Intune 'U Microsoft Defender Gelişmiş tehdit koruması (Microsoft Defender ATP) ile bir mobil tehdit savunması çözümü olarak tümleştirin.
 
-Virüsten koruma ilkesi çeşitli profiller içerir. Her profil, yalnızca macOS, Windows 10 veya Windows 10 cihazlarında Windows Güvenlik uygulamasındaki kullanıcı deneyimi için Defender ATP virüsten koruma için uygun olan ayarları içerir.
+Virüsten koruma ilkesi çeşitli profiller içerir. Her profil, yalnızca macOS, Windows 10 için Microsoft Defender ATP Antivirus veya Windows 10 cihazlarında Windows Güvenlik uygulamasındaki kullanıcı deneyimi için uygun olan ayarları içerir.
 
 [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nin uç nokta güvenlik düğümünde, **Yönetim** altındaki virüsten koruma ilkelerini bulacaksınız.
 
@@ -37,10 +37,10 @@ Virüsten koruma ilkeleri, *uç nokta koruma* veya cihaz [yapılandırma](../con
 
 - **macOS**
   - Tüm desteklenen macOS sürümleri
-  - Intune 'un bir cihazdaki virüsten koruma ayarlarını yönetmesi için, Defender ATP 'nin bu cihaza yüklenmesi gerekir. Bakýn. [MacOS Için Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (Defender ATP belgelerinde)
+  - Intune 'un bir cihazdaki virüsten koruma ayarlarını yönetmesi için, bu cihaza Microsoft Defender ATP 'nin yüklü olması gerekir. Bakýn. [MacOS Için Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (MICROSOFT Defender ATP belgeleri)
 
 - **Windows 10 ve üzeri**
-  - Intune 'un bir cihazdaki virüsten koruma ayarlarını yönetmesi için, Defender ATP 'nin bu cihaza yüklenmesi gerekir. Intune belgelerinde, [Windows Için Microsoft Defender ATP](../protect/advanced-threat-protection.md)bölümüne bakın.
+  - Intune 'un bir cihazdaki virüsten koruma ayarlarını yönetmesi için, bu cihaza Microsoft Defender ATP 'nin yüklü olması gerekir. Intune belgelerinde, [Windows Için Microsoft Defender ATP](../protect/advanced-threat-protection.md)bölümüne bakın.
   - Windows güvenlik uygulaması, Windows 10 çalıştıran tüm cihazlara yüklenir ve ek önkoşul gerekmez.
 
 ## <a name="antivirus-profiles"></a>Virüsten koruma profilleri
