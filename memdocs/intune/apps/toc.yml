@@ -141,8 +141,12 @@
               href: configure-microsoft-launcher.md
             - name: Microsoft Edge’i yapılandırma
               href: manage-microsoft-edge.md
+            - name: Office’i yapılandırma
+              href: manage-microsoft-office.md
             - name: Outlook’u yapılandırma
               href: app-configuration-policies-outlook.md
+            - name: Microsoft Teams’i yapılandırma
+              href: manage-microsoft-teams.md
             - name: Android için Google Chrome’u yapılandırma
               href: apps-configure-chrome-android.md
             - name: Android Enterprise için VPN yapılandırma
