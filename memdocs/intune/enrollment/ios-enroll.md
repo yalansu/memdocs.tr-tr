@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf413dc551d8be8fd646a03826fb3e5507f4d272
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ba44cca323dd2a3fbf756b86743dea403ce0b156
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988946"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093056"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Intune 'da iOS/ıpados cihazlarını kaydetme
 
@@ -61,7 +61,7 @@ Ayrıca, şirkete ait iOS/ıpados cihazlarını bir [Cihaz Kayıt Yöneticisi](d
 
 ## <a name="automated-device-enrollment"></a>Otomatik Cihaz Kaydı
 
-Kuruluşlar, Apple 'ın otomatik cihaz kaydı (ADE) aracılığıyla iOS/ıpados cihazları satın alabilir. ADE, cihazları yönetime getirmek için bir kayıt profilini "hava üzerinden" dağıtmanızı sağlar. Daha fazla bilgi için bkz. [aygıt kayıt programı](device-enrollment-program-enroll-ios.md).
+Kuruluşlar, Apple 'ın otomatik cihaz kaydı (ADE) aracılığıyla iOS/ıpados cihazları satın alabilir. ADE, cihazları yönetime getirmek için bir kayıt profilini "hava üzerinden" dağıtmanızı sağlar. Daha fazla bilgi için bkz. [Apple 'ın otomatik cihaz kaydı Ile iOS/ıpados cihazlarını otomatik olarak kaydetme](device-enrollment-program-enroll-ios.md).
 
 ## <a name="user-enrollment"></a>Kullanıcı kaydı
 Kullanıcı kaydı, yöneticilere diğer kayıt yöntemleriyle karşılaştırıldığında yönetim seçeneklerinin bir alt kümesini sağlar. Daha fazla bilgi için, bkz. [Kullanıcı kaydı desteklenen eylemler, parolalar ve diğer seçenekler](ios-user-enrollment-supported-actions.md) ve [IOS/ıpados ve ıpados Kullanıcı kaydını ayarlama](ios-user-enrollment.md).

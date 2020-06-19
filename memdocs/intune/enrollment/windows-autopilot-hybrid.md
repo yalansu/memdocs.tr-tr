@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23eecaea3db452dc873eeb69c3bf36959dff6d0f
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: be9a4257fec357c3dc124318fda98807df6c26b7
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795559"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093484"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Intune ve Windows Autopilot kullanarak karma Azure AD 'ye katılmış cihazları dağıtma
 Karma Azure Active Directory (Azure AD) ile birleştirilmiş cihazları ayarlamak için Intune ve Windows Autopilot kullanabilirsiniz. Bunu yapmak için bu makaledeki adımları izleyin.
@@ -191,12 +191,13 @@ Autopilot dağıtım profilleri, Autopilot cihazlarını yapılandırmak için k
 4. **İleri**’yi seçin.
 5. **Kullanıma hazır deneyim (OOBE)** sayfasında, **dağıtım modu**için **Kullanıcı odaklı**' ı seçin.
 6. **Azure AD 'ye katıl** kutusunda **karma Azure AD 'ye katılmış**' i seçin.
-7. **Kullanıma hazır deneyim (OOBE)** sayfasında yer alan diğer seçenekleri gerektiği şekilde yapılandırın.
-8. **İleri**’yi seçin.
-9. **Kapsam etiketleri** sayfasında bu profil için [kapsam etiketleri](../fundamentals/scope-tags.md) ' ni seçin.
-10. **İleri**’yi seçin.
-11. **Atamalar** sayfasında, **dahil etmek istediğiniz grupları seçin** > seçin **ve > cihaz grubunu seçin.**
-12. **İleri**  >  **Oluştur**' u seçin.
+7. Cihazları VPN desteğiyle kuruluşun ağı dışına dağıtıyorsanız, **etki alanı bağlantısını atla onay** seçeneğini **Evet**olarak ayarlayın.  Ek bilgi için bkz. [karma Azure Active Directory sanal VPN üzerinden katılması Için Kullanıcı odaklı mod](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven#user-driven-mode-for-hybrid-azure-active-directory-join-with-VPN-support) .
+8. **Kullanıma hazır deneyim (OOBE)** sayfasında yer alan diğer seçenekleri gerektiği şekilde yapılandırın.
+9. **İleri**’yi seçin.
+10. **Kapsam etiketleri** sayfasında bu profil için [kapsam etiketleri](../fundamentals/scope-tags.md) ' ni seçin.
+11. **İleri**’yi seçin.
+12. **Atamalar** sayfasında, **dahil etmek istediğiniz grupları seçin** > seçin **ve > cihaz grubunu seçin.**
+13. **İleri**  >  **Oluştur**' u seçin.
 
 Cihaz profili durumunun *atama* ve, son olarak *atanan* *olarak değiştirilmesi* yaklaşık 15 dakika sürer.
 

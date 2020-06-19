@@ -1,5 +1,5 @@
 ---
-title: Kayıt durumu sayfası ayarlama
+title: Kayıt durumu sayfasını ayarlama
 titleSuffix: Microsoft Intune
 description: Windows 10 cihazlarını kaydeden kullanıcılar için karşılama sayfası ayarlayın.
 keywords: ''
@@ -18,34 +18,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93ff5ba088b04af155ea05e69c7d1f25deb33419
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: 4f8991b772f5562538403492735f1f4c2fdc87e8
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746655"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093445"
 ---
-# <a name="set-up-an-enrollment-status-page"></a>Kayıt durumu sayfası ayarlama
+# <a name="set-up-the-enrollment-status-page"></a>Kayıt durumu sayfasını ayarlama
  
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
  
-Kayıt durumu sayfası (ESP) ilk cihaz kaydı sırasında Windows 10 cihazları (sürüm 1803 ve üzeri) hakkındaki yükleme bilgilerini görüntüler. Örnek:
-- [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) kullanırken 
-- ya da bir kayıt durumu sayfası ilkesi uygulandıktan sonra yönetilen bir cihaz ilk kez başlatılır. 
+Kayıt durumu sayfası (ESP), yeni bir cihazın kaydolmasından ve yeni kullanıcıların cihazda oturum açarken sağlama ilerlemesini görüntüler.  Bu, BT yöneticilerinin, tam olarak sağlanana kadar cihaza erişimi engellemeyi (engellemek), aynı zamanda kullanıcılara sağlama sürecinde kalan görevler hakkında bilgi verirken aynı anda izin vermeyi sağlar.
 
-Kayıt durumu sayfası, kullanıcıların cihaz kurulumu sırasında cihazının durumunu anlamalarına yardımcı olur. Birden çok kayıt durumu sayfası profili oluşturabilir ve bunları, kullanıcıları içeren farklı gruplara uygulayabilirsiniz. Profiller, şunları yapacak şekilde ayarlanabilir:
-- Yüklemenin ilerleme durumunu görüntüleme.
-- Yükleme tamamlanana kadar kullanımı engelleme.
-- Cihaz kurulumu başarısız olursa kullanıcının ne yapabileceğini belirtme.
+ESP, herhangi bir [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) sağlama senaryosunun parçası olarak kullanılabilir ve aynı zamanda Windows Autopilot 'den ayrı olarak, Azure AD 'ye yönelik varsayılan kullanıma hazır deneyım (OOBE) kapsamında ve cihazda ilk kez oturum açan tüm yeni kullanıcılar için de kullanılabilir.
 
-Ayrıca, her bir profilin öncelik sırasını aynı kullanıcıya yönelik çakışan profil atamalarını hesaba atayabilirsiniz.
+Şunları belirten farklı yapılandırmalara sahip birden fazla kayıt durumu sayfası profili oluşturabilirsiniz:
 
-> [!NOTE]
-> Kayıt durumu sayfası yalnızca atanan bir gruba ait olan bir kullanıcıyı hedefleyebilir ve ilkeyi, cihazı kullanan tüm kullanıcılar için kayıt sırasında ayarlar.  Kayıt durumu sayfası profillerinin cihaz hedeflemesi şu anda desteklenmiyor. Autopilot White ya da kendi kendine Dağıtım modunu kullanıyorsanız, varsayılan ESP ilkesinin (' tüm kullanıcılar ve tüm cihazlar ' adlı) aşağıdaki tablodaki ilk ayara göre etkinleştirildiğinden emin olun.
+- Yükleme ilerleme durumunu gösterme
+- Sağlama işlemi tamamlanana kadar erişimi engelleme
+- Zaman sınırları
+- İzin verilen sorun giderme işlemleri
+
+Bu profiller öncelik sırasına göre belirtilmiştir; geçerli olan en yüksek öncelik kullanılacaktır.  Her bir ESP profili, cihazları veya kullanıcıları içeren grupları hedefleyebilir.  Hangi profilin kullanılacağını belirlerken, aşağıdaki ölçütler izlenir:
+
+- Önce cihaza hedeflenen en yüksek öncelikli profil kullanılacaktır.
+- Cihaza hedeflenmiş bir profil yoksa, geçerli kullanıcıya hedeflenen en yüksek öncelik profili kullanılacaktır.  (Bu yalnızca bir kullanıcının bulunduğu senaryolarda geçerlidir. Teknik İnceleme ve kendi kendine dağıtım senaryolarında yalnızca cihaz hedefleme kullanılabilir.)
+- Belirli grupları hedefleyen bir profil yoksa varsayılan ESP profili kullanılacaktır.
 
 ## <a name="available-settings"></a>Kullanılabilir ayarlar
 
- Aşağıdaki ayarlar, kayıt durumu sayfasının davranışını özelleştirmek için yapılandırılabilir:
+Aşağıdaki ayarlar, kayıt durumu sayfasının davranışını özelleştirmek için yapılandırılabilir:
 
 <table>
 <th align="left">Ayar<th align="left">Yes<th align="left">Hayır
@@ -80,7 +83,7 @@ Kayıt durumu sayfasını açmak için aşağıdaki adımları izleyin.
 
 ## <a name="set-the-enrollment-status-page-priority"></a>Kayıt durumu sayfası önceliğini ayarlama
 
-Bir kullanıcı birçok grupta olabilir ve birçok kayıt durumu sayfası profili bulunabilir. Bu tür çakışmaları işlemek için her bir profilin önceliklerini ayarlayabilirsiniz. Kaydetme sırasında, birisinin birden fazla kayıt durumu sayfası profili varsa, kaydolan cihaza yalnızca en yüksek öncelikli profil uygulanır.
+Bir cihaz veya Kullanıcı birçok grupta olabilir ve hedeflenen birden fazla kayıt durumu sayfası profili bulunabilir. İlk olarak hangi profillerin kabul edileceğini denetlemek için, her bir profilin önceliklerini ayarlayabilirsiniz; daha yüksek önceliklere sahip olanlar ilk olarak değerlendirilir.
 
 1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar**  >  **Windows**  >  **Windows kayıt**  >  **kayıt durumu sayfası**' nı seçin.
 2. Listede profilin üzerine gelin.
@@ -88,7 +91,7 @@ Bir kullanıcı birçok grupta olabilir ve birçok kayıt durumu sayfası profil
 
 ## <a name="block-access-to-a-device-until-a-specific-application-is-installed"></a>Belirli bir uygulama yüklenene kadar cihaz erişimini engelleme
 
-Kullanıcının masaüstüne erişebilmesi için yüklenmesi gereken uygulamaları belirtebilirsiniz.
+Kayıt durumu sayfası (ESP) tamamlanmadan önce hangi uygulamaların yüklü olması gerektiğini belirtebilirsiniz.
 
 1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar**  >  **Windows**  >  **Windows kayıt**  >  **kayıt durumu sayfası**' nı seçin.
 2. Bir profil seçip **Ayarlar**'a tıklayın.
@@ -99,7 +102,7 @@ Kullanıcının masaüstüne erişebilmesi için yüklenmesi gereken uygulamalar
 
 Bu listede yer alan uygulamalar, engelleme olarak kabul edilmesi gereken listeyi filtrelemek için Intune tarafından kullanılır.  Hangi uygulamaların yükleneceğini belirtmez.  Örneğin, bu listeyi "uygulama 1", "uygulama 2" ve "uygulama 3" ve "uygulama 3" ve "App 4", cihaza veya kullanıcıya hedeflenmiş olarak yapılandırırsanız, kayıt durumu sayfası yalnızca "uygulama 3" i izler.  "App 4" yine de yüklenecek, ancak kayıt durumu sayfası işlemin tamamlanmasını bekleyemez.
 
-En fazla 25 uygulama belirtilebilir.
+En fazla 100 uygulama belirtilebilir.
 
 ## <a name="enrollment-status-page-tracking-information"></a>Kayıt durumu sayfası izleme bilgileri
 
@@ -108,14 +111,16 @@ Kayıt durumu sayfasının bilgileri izlediği üç aşama vardır; cihaz hazır
 ### <a name="device-preparation"></a>Cihaz hazırlığı
 
 Cihaz hazırlığı için, kayıt durumu sayfası şunları izler:
-- Güvenilir Platform Modülü (TPM) Key belirlediğimizi karşıladığımızı (varsa)
-- birleştirme sırasında ilerleme Azure Active Directory
-- Intune 'a kaydolma
-- Intune yönetim uzantılarının yüklemesi
+
+- Güvenilir Platform Modülü (TPM) anahtar kanıtlama (uygun olduğunda)
+- Azure Active Directory JOIN işlemi
+- Intune (MDM) kaydı
+- Intune yönetim uzantılarının yüklemesi (Win32 uygulamalarını yüklemek için kullanılır)
 
 ### <a name="device-setup"></a>Cihaz kurulumu
 
-Kayıt durumu sayfası, aşağıdaki cihaz kurulum öğelerini izler (tüm cihazlara veya kaydolan cihazın üye olduğu bir cihaz grubuna atanırsa):
+Kayıt durumu sayfası aşağıdaki cihaz kurulum öğelerini izler:
+
 - Güvenlik ilkeleri
   - Tüm kayıtlar için tek bir yapılandırma hizmeti sağlayıcısı (CSP).
   - Intune tarafından yapılandırılan gerçek CSP’ler burada izlenmez.
@@ -129,7 +134,9 @@ Kayıt durumu sayfası, aşağıdaki cihaz kurulum öğelerini izler (tüm cihaz
 - **Tüm Cihazlar**’a atanmış sertifika profilleri veya kaydedilen cihazın üyesi olduğu bir cihaz grubu (yalnızca Autopilot cihazları için)
 
 ### <a name="account-setup"></a>Hesap kurulumu
+
 Hesap kurulumu için, kayıt durumu sayfası şu anda oturum açmış olan kullanıcıya atanırsa aşağıdaki öğeleri izler:
+
 - Güvenlik ilkeleri
   - Tüm kayıtlar için tek CSP.
   - Intune tarafından yapılandırılan gerçek CSP’ler burada izlenmez.
@@ -147,7 +154,8 @@ Hesap kurulumu için, kayıt durumu sayfası şu anda oturum açmış olan kulla
   - Tüm Kullanıcılar veya cihazı kaydeden kullanıcının üyesi olduğu bir kullanıcı grubuna atanan sertifika profilleri.
 
 ### <a name="troubleshooting"></a>Sorun giderme
-Sorun giderme için sık sorulan sorular.
+
+Aşağıda, kayıt durumu sayfasıyla ilgili sorunları gidermeye yönelik genel sorular verilmiştir.
 
 - Uygulamalarım neden yüklenmedi ve kayıt durumu sayfası kullanılarak izlenmiyor?
   - Uygulamaların, kayıt durumu sayfası kullanılarak yüklenip izlendiğinden emin olmak için şunları yapın:
@@ -193,14 +201,16 @@ Sorun giderme için sık sorulan sorular.
       ```
 
 ### <a name="known-issues"></a>Bilinen sorunlar
-Aşağıda bilinen sorunlar verilmiştir. 
+
+Kayıt durumu sayfasıyla ilgili bilinen sorunlar aşağıda verilmiştir.
+
 - ESP profilini devre dışı bırakmak cihazlardan ESP ilkesini kaldırmaz ve kullanıcılar cihazda ilk kez oturum açtıklarında yine de ESP almaya devam eder. ESP profili devre dışı bırakıldığında ilke kaldırılmaz. ESP 'yi devre dışı bırakmak için OMA-URI ' i dağıtmanız gerekir. OMA-URI kullanarak ESP 'yi devre dışı bırakma hakkında yönergeler için bkz. Yukarıdaki. 
 - Cihaz kurulumu sırasında yeniden başlatma işlemi, kullanıcıyı hesap kurulum aşamasına geçmeden önce kimlik bilgilerini girmeye zorlar. Kullanıcı kimlik bilgileri, yeniden başlatma sırasında korunmaz. Kullanıcının kimlik bilgilerini girmesini sağlamak için kayıt durumu sayfası devam edebilir. 
 - Kayıt durumu sayfası, 1903 ' den küçük Windows 10 sürümlerinde iş ve okul hesabı kaydı ekleme sırasında her zaman zaman aşımına uğrar. Kayıt durumu sayfası, Azure AD kaydının tamamlanmasını bekler. Sorun Windows 10 sürüm 1903 ve daha yeni sürümlerde düzeltildi.  
 - ESP ile hibrit Azure AD Autopilot dağıtımı, ESP profilinde tanımlanan zaman aşımı süresinden daha uzun sürer. Karma Azure AD Autopilot dağıtımlarında, ESP, ESP profilinde ayarlanan değerden 40 dakika daha uzun sürer. Bu gecikme, şirket içi AD bağlayıcısının yeni cihaz kaydını Azure AD 'ye oluşturması için zaman kazandırır. 
 - Windows oturum açma sayfası, Autopilot kullanıcı denetimli modundaki Kullanıcı adı ile önceden doldurulmuyor. ESP 'nin cihaz kurulumu aşamasında bir yeniden başlatma işlemi varsa:
-    - Kullanıcı kimlik bilgileri korunmaz
-    - Cihaz kurulum aşamasından hesap kurulum aşamasına geçmeden önce kullanıcının kimlik bilgilerini tekrar girmesi gerekir
+  - Kullanıcı kimlik bilgileri korunmaz
+  - Cihaz kurulum aşamasından hesap kurulum aşamasına geçmeden önce kullanıcının kimlik bilgilerini tekrar girmesi gerekir
 - ESP uzun bir süre takılmış veya "tanımlama" aşamasını hiçbir zaman tamamlıyor. Intune, tanımlama aşamasında ESP ilkelerini hesaplar. Geçerli kullanıcıya bir Intune lisansı atanmış değilse bir cihaz, ESP ilkelerini hesaplama hiçbir şekilde tamamlanmayabilir.  
 - Microsoft Defender uygulama denetimi 'nin yapılandırılması, Autopilot sırasında yeniden başlatma istemi oluşmasına neden olur. Microsoft Defender uygulamasının (AppLocker CSP) yapılandırılması için yeniden başlatma gerekir. Bu ilke yapılandırıldığında, Autopilot sırasında cihazın yeniden başlatılmasına neden olabilir. Şu anda, yeniden başlatmayı bastırmayı veya ertelemeyi yapmanın bir yolu yoktur.
 - DeviceLock ilkesi ( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) BIR ESP profilinin bir parçası olarak etkinleştirildiğinde, iki nedenden dolayı OOBE veya Kullanıcı Masaüstü otomatik oturum açma işlemi unexpectantly hatası verebilir.
@@ -208,4 +218,5 @@ Aşağıda bilinen sorunlar verilmiştir.
   - Kullanıcı Azure AD kimlik bilgilerini girdikten sonra, ancak ESP cihaz kurulum aşamasından çıkmadan önce yeniden oturum açma işlemi başarısız olur. Bu hata, ESP cihaz Kurulum aşaması hiç tamamlanmadığından oluşur. Geçici çözüm, cihazı sıfırlamadır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
+
 Windows kayıt sayfalarını ayarladıktan sonra, Windows cihazlarını nasıl yöneteceğinizi öğrenin. Daha fazla bilgi için bkz. [Microsoft Intune cihaz yönetimi nedir?](../remote-actions/device-management.md)

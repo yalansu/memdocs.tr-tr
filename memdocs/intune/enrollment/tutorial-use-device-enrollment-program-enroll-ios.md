@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3a949738056c9acf33ef09e28f7664690dfd77f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 47f249d105fbc2481dd1d66956032c91d5006834
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078915"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093522"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-iosipados-devices-in-intune"></a>Öğretici: Intune 'da iOS/ıpados cihazlarını kaydetmek için Apple Business Manager 'daki (ABD) Apple 'ın kurumsal cihaz kayıt özelliklerini kullanma
 Apple Business Manager 'daki cihaz kayıt özellikleri cihazların kaydedilmesini basitleştirir. Intune, Apple 'ın eski Aygıt Kayıt Programı (DEP) portalını da destekler, ancak Apple Business Manager ile yeni bir başlangıç yapmanız önerilir. Microsoft Intune ve Apple Kurumsal cihaz kaydı ile, Kullanıcı cihazı ilk kez açtığında cihazlar otomatik olarak güvenli bir şekilde kaydedilir. Bu nedenle, her bir cihazı ayrı ayrı ayarlamanıza gerek kalmadan cihazları birçok kullanıcıya gönderebilirsiniz. 
@@ -34,7 +34,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 Intune aboneliğiniz yoksa [ücretsiz deneme hesabı için kaydolun](../fundamentals/free-trial-sign-up.md).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 - [Apple Business Manager](https://business.apple.com) veya [Apple 'ın aygıt kayıt programı](http://deploy.apple.com) satın alınan cihazlar
 - [Mobil cihaz yönetimi yetkilisini](../fundamentals/mdm-authority-set.md) ayarlama
 - [Apple MDM anında iletme sertifikası](apple-mdm-push-certificate-get.md) alın
@@ -44,7 +44,7 @@ Intune aboneliğiniz yoksa [ücretsiz deneme hesabı için kaydolun](../fundamen
 
 Bir cihaz kayıt belirteci oluşturmak için Apple portalını kullanırsınız. Ayrıca portalları, yönetim için Intune 'a cihaz atamak üzere de kullanabilirsiniz.
 
-1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **cihazlar** > **iOS** > **iOS kayıt** > **kayıt programı belirteçleri** > **Ekle**' yi seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **iOS/ıpados**  >  **iOS/ıpados kayıt**  >  **kayıt programı belirteçleri**  >  **Ekle**' yi seçin.
 
 2. **Onaylıyorum**’u seçerek Microsoft’un Apple’a kullanıcı ve cihaz bilgilerini göndermesine izin verin.
 
@@ -62,7 +62,7 @@ Bir cihaz kayıt belirteci oluşturmak için Apple portalını kullanırsınız.
 
 6. **Ekle &lt;ServerName&gt;** iletişim kutusu açılır ve **Ortak Anahtarınızı Yükleyin** ifadesi yazar. **Dosya Seç…** öğesini seçin. .pem dosyasını karşıya yükleyin ve ardından **İleri**'yi seçin.
 
-6. **Dağıtım programları** > **aygıt kayıt programı** > **cihazları yönet**' e gidin.
+6. **Dağıtım programları**  >  **aygıt kayıt programı**  >  **cihazları yönet**' e gidin.
 7. **Cihazları seçin**' ın altında **seri numarası**' nı seçin. <!--ask Tiffany about this-->
 
 8. **Eylem Seç** işlemi için **Sunucuya Ata**’yı ve Microsoft Intune için belirtilen &lt;ServerName&gt; öğesini belirleyip **Tamam**'ı seçin. Apple portalı, belirtilen cihazları Intune sunucusunda yönetilmek üzere bu sunucuya atar ve **Atama Tamamlandı** ifadesini görüntüler.
@@ -80,9 +80,9 @@ Bir cihaz kayıt belirteci oluşturmak için Apple portalını kullanırsınız.
 ## <a name="create-an-apple-enrollment-profile"></a>Apple kayıt profili oluşturma
 Belirtecinizi yüklemişseniz, şirkete ait iOS/ıpados cihazları için bir kayıt profili oluşturabilirsiniz. Bir cihaz kayıt profili, kayıt sırasında bir grup cihaza uygulanan ayarları tanımlar.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **iOS** > **iOS kaydı** > **kayıt programı belirteçleri**' ni seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **iOS/ıpados**  >  **iOS kayıt**  >  **kayıt programı belirteçleri**' ni seçin.
 
-2. Yeni yüklediğiniz belirteci seçin, **profiller** > **profil** > oluştur**iOS**' u seçin.
+2. Yeni yüklediğiniz belirteci seçin, **profiller**  >  iOS**profili oluştur**  >  **iOS/ıpados**' ı seçin.
 
 3. **Temel bilgiler** sayfasında, **Açıklama**Için, *iOS/ıpados CIHAZLARı için* **ad** ve test ata için *testprofile* yazın. Kullanıcılar bu ayrıntıları göremez.
 
@@ -114,19 +114,19 @@ Belirtecinizi yüklemişseniz, şirkete ait iOS/ıpados cihazları için bir kay
 
 16. Cihaz etkinleştirme sırasında çeşitli ekranları **gösterebilir** veya **gizleyebilirsiniz** . En sorunsuz kayıt deneyimi için tüm ekranları **Gizle**olarak ayarlayın.
 
-17. **İleri ' yi** seçerek **gözden geçir + oluştur** sayfasına gidin. **Oluştur**’u seçin.
+17. **İleri ' yi** seçerek **gözden geçir + oluştur** sayfasına gidin. **Oluştur**'u seçin.
 
 ## <a name="sync-managed-devices-to-intune"></a>Yönetilen cihazları Intune 'a eşitleme
 
 Abe, ASM veya ADE portalı ile bir kayıt programı belirteci ayarladıktan ve MDM sunucusuna cihaz atadıktan sonra, bu cihazların Intune hizmetine eşitlenmesini bekleyebilir veya el ile bir eşitleme gönderebilirsiniz. El ile eşitleme olmadan cihazların Azure portal görünmesi 24 saate kadar sürebilir.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **iOS** > **iOS kaydı** > **kayıt programı belirteçleri** ' ni seçin > listeden bir belirteç seçin > **cihazlar** > **eşitleme**' yi seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **iOS/ıpados**  >  **iOS kayıt**  >  **kayıt programı belirteçleri** ' ni seçin >, **cihazlar**eşitleme > listede bir belirteç seçin  >  **Sync**.
 
 ## <a name="assign-an-enrollment-profile-to-iosipados-devices"></a>İOS/ıpados cihazlarına bir kayıt profili atama
 
 Cihazların kaydedilmesi için bunlara bir kayıt programı profili atamalısınız. Bu cihazlar Apple 'dan Intune 'a eşitlenir ve Abe, ASM veya ADE portalındaki doğru MDM sunucu belirtecine atanmalıdır.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **iOS** > **iOS kaydı** > **kayıt programı belirteçleri** ' ni seçin > listeden belirtecinizi seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **iOS/ıpados**  >  **iOS kayıt**  >  **kayıt programı belirteçleri** ' ni seçin > listeden belirtecinizi seçin.
 2. **Cihazlar** > listeden cihazları seçin > **Profil ata**’yı seçin.
 3. **Profil ata**'nın altında cihazlar için bir profil seçin > **Ata**’ya tıklayın.
 

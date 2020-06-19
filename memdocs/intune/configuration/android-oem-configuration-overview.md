@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/12/2020
+ms.date: 06/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ee1f3b68a6c78ee1099f8adcbfc935d9fa61103
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: 47cf8819c29a3e766a5f475acdd9bbbf5bf7d584
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506273"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093599"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Microsoft Intune 'de OEMConfig ile Android kurumsal cihazlarını kullanma ve yönetme
 
@@ -116,6 +116,8 @@ Cihazın OEMConfig 'i desteklediğinden emin olun, Intune 'a doğru OEMConfig uy
       - Birçok ayar OEM tarafından sağlanan varsayılan değerlere sahiptir. Varsayılan bir değer olup olmadığını görmek için, ayarın yanındaki bilgi simgesinin üzerine gelin. Araç ipucu, bu ayar (varsa) için varsayılan değerleri ve OEM tarafından sağlanmış diğer ayrıntıları gösterir.
 
       - **Temizle** ' ye tıkladığınızda profilden bir ayar silinir. Bir ayar profilde değilse, profil uygulandığında cihazdaki değeri değişmez.
+      
+      - Ayarları aramak için **bul** düğmesini kullanın. Yan bölmede, tüm ilgili ayarları ve açıklamalarını görmek için bir anahtar sözcük yazın. Ayarı zaten yoksa yapılandırma Tasarımcısı ağacına otomatik olarak eklemek için herhangi bir ayarı seçin. Ayrıca, ayarı görmek için ağacı otomatik olarak açar. 
 
       - Yapılandırma tasarımcısında boş (yapılandırılmamış) bir paket oluşturursanız, JSON düzenleyicisine geçildiğinde silinir.
 

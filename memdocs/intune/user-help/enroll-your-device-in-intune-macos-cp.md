@@ -5,7 +5,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/16/2019
+ms.date: 06/18/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,27 +19,27 @@ ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2f3fe39285542199cf214c4b5bf505a176663657
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: fe405b66892ec7777d8d1572b2fb6ab6ce1aaa91
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882428"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094210"
 ---
 # <a name="enroll-your-macos-device-using-the-company-portal-app"></a>Şirket Portalı uygulamasını kullanarak macOS cihazınızı kaydetme  
 
 İş veya okul e-postanıza, dosyalarınıza ve uygulamalarınıza güvenli erişim kazanmak için macOS cihazınızı Intune Şirket Portalı uygulamasına kaydedin.
 
-Kuruluşlar, özel verilere erişebilmek için genellikle cihazınızı kaydetmeniz gerekir. Cihazınız kaydedildikten sonra, *yönetilen*hale gelir. Kuruluşunuz, Intune gibi bir mobil cihaz yönetimi (MDM) sağlayıcısı aracılığıyla cihaza ilkeler ve uygulamalar atayabilir. Cihazınızdaki iş veya okul bilgilerine sürekli erişim sağlamak için cihazınızı kuruluşunuzun ilke ayarlarıyla eşleşecek şekilde yapılandırmanız gerekir.  
+Kuruluşlar, özel verilere erişebilmek için genellikle cihazınızı kaydetmeniz gerekir. Cihazınız kaydedildikten sonra, *yönetilen*hale gelir. Kuruluşunuz, Intune gibi bir mobil cihaz yönetimi (MDM) sağlayıcısı aracılığıyla cihaza ilkeler ve uygulamalar atayabilir. Cihazınızdaki iş veya okul bilgilerine sürekli erişim sağlamak için cihazınızı kuruluşunuzun ilke ayarlarıyla eşleşecek şekilde ayarlamanız gerekir.  
 
-Bu makalede, macOS için Şirket Portalı uygulamasının, kuruluşunuzun gereksinimlerini karşılamanız için cihazınızı kaydetmek, yapılandırmak ve sürdürmek üzere nasıl kullanılacağı açıklanır.  
+Bu makalede, macOS için Şirket Portalı uygulamasının, kuruluşunuzun gereksinimlerini karşılayacak şekilde cihazınızı ayarlamak ve sürdürmek üzere nasıl kullanılacağı açıklanır.  
 
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Şirket Portalı uygulamasından bekleyebilecekleriniz
 
 İlk kurulum sırasında Şirket Portalı uygulama oturum açmanızı ve kuruluşunuzla kimlik doğrulamasından geçmesini gerektirir. Şirket Portalı, kuruluşunuzun gereksinimlerini karşılamak için yapılandırmanız gereken cihaz ayarlarını size bildirir. Örneğin kuruluşlar genellikle uymanız gereken en düşük veya en yüksek karakterli parola gereksinimleri ayarlar.    
 
-Cihazınızı kaydettikten sonra, Şirket Portalı cihazın kuruluşunuzun gereksinimlerine göre korunduğundan her zaman emin olur. Örneğin, güvenilir olmayan bir kaynaktan bir uygulama yüklerseniz, Şirket Portalı sizi uyarır ve kuruluşunuzun kaynaklarına erişimi kısıtlayabilir. Bunun gibi uygulama koruma ilkeleri yaygın bir uygulamadır. Erişimi yeniden kazanmak için, büyük olasılıkla güvenilmeyen uygulamayı kaldırmanız gerekecektir. 
+Cihazınızı kaydettikten sonra, Şirket Portalı cihazın kuruluşunuzun gereksinimlerine göre korunduğundan her zaman emin olur. Örneğin, güvenilir olmayan bir kaynaktan uygulama yüklüyorsanız Şirket Portalı sizi uyarır ve kuruluşunuzun kaynaklarına erişimi kısıtlayabilir. Bunun gibi uygulama koruma ilkeleri yaygın bir uygulamadır. Erişimi yeniden kazanmak için büyük olasılıkla uygulamayı kaldırmanız gerekecektir. 
 
 Kayıt sonrasında, kuruluşunuz Multi-Factor Authentication gibi yeni bir güvenlik gereksinimini zorlarsa Şirket Portalı sizi uyarır. Cihazınızla çalışmaya devam edebilmek için bazı değişiklikler yapmaya vaktiniz olur.  
 
@@ -67,19 +67,20 @@ MacOS cihazınızı kuruluşunuza kaydetmek için aşağıdaki adımları kullan
 
 1. İş veya okul hesabınızla Şirket Portalı için oturum açın.  
 2. Uygulama açıldığında **Başlat**' ı seçin.  
-3. Kuruluşunuzun kayıtlı cihazınızda neleri görebileceğini ve neleri görebileceklerini gözden geçirin. Daha sonra **Devam** seçeneğini belirleyin.
-4.  İstenirse, **Yönetim profili yüklemesi** ekranında cihaz parolanızı girin.
+3. Kuruluşunuzun kayıtlı cihazınızda [neleri görebileceğini ve neleri görebileceklerini](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) gözden geçirin. Daha sonra **Devam** seçeneğini belirleyin.
+4. **Yönetim profilini yükle** ekranında **profil indir**' i seçin.  
 
-    ![Şirket Portalı örnek ekran görüntüsü, yönetim profilini yükler ekranı, parola istemi 'ni vurgular.](./media/install-management-profile-macos-1912.PNG)   
-5. **Cihaz yönetimini Onayla** ekranında **sistem tercihlerini aç**' ı seçin.  
+    ![Şirket Portalı örnek ekran görüntüsü, yönetim profilini yükler ekranı, parola istemi 'ni vurgular.](./media/install-management-profile-macos-2006.png)   
 
-    ![Cihaz yönetimini Onayla ekranının örnek ekran görüntüsü, "sistem tercihlerini aç" düğmesini vurgulıyorum.](./media/confirm-device-management-macos-1912.PNG)  
-6. Cihazınızın sistem tercihleri açılır. Cihaz profilleri listesinden **Yönetim profili** ' ni seçin ve ardından onaylamayı **Onayla ' yı seçin**  >  **Approve**.  
-    ![Sistem Tercihleri, Yönetim profili ekranının, "Onayla" düğmesinin örnek ekran görüntüsü.](./media/management-profile-approve-macos-1912.PNG)   
-1. Şirket Portalı dönün ve **devam**' ı seçin.    
-2. Kuruluşunuz, cihaz ayarlarınızı güncelleştirmenizi gerektirebilir. Ayarları güncelleştirmeyi tamamladığınızda **ayarları denetle**' yi seçin.  
+5. Cihazınızın sistem tercihleri açılır.  
+    a. **Yüklemeyi** seçin ve sonra yeniden **Kur** ' u seçin.  
+    b. İstenirse, cihaz parolanızı girin.   
+6. Profil yüklendikten sonra, **Yönetim profili**altındaki profiller listesinde görünür.
+    ![Sistem Tercihleri, Yönetim profili ekranının, "Onayla" düğmesinin örnek ekran görüntüsü.](./media/management-profile-approve-macos-2006.png)   
+7. Şirket Portalı dön.    
+8. Kuruluşunuz, cihaz ayarlarınızı güncelleştirmenizi gerektirebilir. Ayarları güncelleştirmeyi tamamladığınızda **yeniden dene**' yi seçin.  
 
-    ![Şirket Portalı örnek ekran görüntüsü, cihaz ayarlarını güncelleştirme ekranının "ayarları denetle" düğmesinin vurgulanması.](./media/update-settings-mac-1911.PNG)  
+    ![Şirket Portalı örnek ekran görüntüsü, cihaz ayarlarını güncelleştirme ekranının, yeniden deneme düğmesini vurgulanması.](./media/update-settings-mac-2006.png)  
 9. Kurulum tamamlandığında **bitti**' yi seçin.  
 
 

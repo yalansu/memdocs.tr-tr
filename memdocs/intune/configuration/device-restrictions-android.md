@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5fc11d7302c30dd53314eb2312d37842b081a6b3
-ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
+ms.openlocfilehash: 02e07ec75b7c0d07a81a9c6f555cf119310a9a9f
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82862369"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093690"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Intune 'da Android ve Samsung KNOX Standard cihaz kısıtlama ayarları listeleri
 
@@ -63,17 +63,17 @@ Bu makalede, Android çalıştıran cihazlar için yapılandırabileceğiniz tü
     > [!NOTE]
     > Samsung Knox cihazlar, MDM kaydı sırasında otomatik olarak 4 basamaklı bir PIN gerektirir. Yerel Android cihazlar, koşullu erişimle uyumlu hale gelmesi için otomatik olarak bir PIN gerektirebilir.
 
-- **Minimum parola uzunluğu**: 4-16 adresinden gereken en az karakter sayısını girin. Örneğin, parola uzunluğu `6` için en az altı sayı veya karakter gerektirmek için girin.
-- **Ekran kilitlenmeden önce geçen işlem yapılmayan dakika sayısı**: ekran otomatik olarak kilitlenmeden önce cihazın boşta kalması gereken süreyi girin. Örneğin, 5 dakika `5` çalıştıktan sonra cihazları kilitlemek için yazın. Değer boş olduğunda veya **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Minimum parola uzunluğu**: 4-16 adresinden gereken en az karakter sayısını girin. Örneğin, `6` parola uzunluğu için en az altı sayı veya karakter gerektirmek için girin.
+- **Ekran kilitlenmeden önce geçen işlem yapılmayan dakika sayısı**: ekran otomatik olarak kilitlenmeden önce cihazın boşta kalması gereken süreyi girin. Örneğin, `5` 5 dakika çalıştıktan sonra cihazları kilitlemek için yazın. Değer boş olduğunda veya **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
-  Bir cihazda, kullanıcılar profilde yapılandırılan süreden daha büyük bir zaman değeri ayarlayamamakta. Kullanıcılar, daha düşük bir saat değeri ayarlayabilir. Örneğin, profil dakikalar olarak `15` ayarlandıysa, kullanıcılar değeri 5 dakikaya ayarlayabilirler. Kullanıcılar değeri 30 dakika olarak ayarlayamıyorum.
+  Bir cihazda, kullanıcılar profilde yapılandırılan süreden daha büyük bir zaman değeri ayarlayamamakta. Kullanıcılar, daha düşük bir saat değeri ayarlayabilir. Örneğin, profil dakikalar olarak ayarlandıysa `15` , kullanıcılar değeri 5 dakikaya ayarlayabilirler. Kullanıcılar değeri 30 dakika olarak ayarlayamıyorum.
 
 - **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihazların temizlenmeden önce izin verilen hatalı parola sayısını 4-11 adresinden girin. `0`(sıfır) cihaz temizleme işlevini devre dışı bırakabilir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
-- **Parola kullanım süresi (gün)**: cihaz parolasının, 1-365 adresinden değiştirilinceye kadar gün sayısını girin. Örneğin, 90 gün `90` sonra parolanın süresini dolacak şekilde girin. Parola geçerlilik süresi dolduğunda kullanıcıların yeni bir parola oluşturması istenir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Parola kullanım süresi (gün)**: cihaz parolasının, 1-365 adresinden değiştirilinceye kadar gün sayısını girin. Örneğin, `90` 90 gün sonra parolanın süresini dolacak şekilde girin. Parola geçerlilik süresi dolduğunda kullanıcıların yeni bir parola oluşturması istenir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Gerekli parola türü**: gerekli parola karmaşıklığı düzeyini ve biyometrik cihazların kullanılıp kullanılamayacağını girin. Seçenekleriniz şunlardır:
   - **Cihaz varsayılanı**
   - **Düşük güvenlik Biyometri**: [güçlü ve zayıf Biyometri](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (Android 'in Web sitesini açar)
-  - **En az sayısal**: gibi sayısal karakterler içerir `123456789`.
+  - **En az sayısal**: gibi sayısal karakterler içerir `123456789` .
   - **Sayısal karmaşık**: "1111" veya "1234" gibi yinelenen veya ardışık numaralara izin verilmez. Bu ayarı cihazlara atamadan önce, Şirket Portalı uygulamasını bu cihazlarda en son sürüme güncelleştirdiğinizden emin olun.
 
     **Sayısal karmaşık**olarak ayarlandığında ve ayarı 5,0 ' den önceki bir Android sürümünü çalıştıran cihazlara atarsanız, aşağıdaki davranış geçerlidir:
@@ -85,7 +85,7 @@ Bu makalede, Android çalıştıran cihazlar için yapılandırabileceğiniz tü
   - En **az alfasayısal**: büyük harfler, küçük harfler ve sayısal karakterler içerir.
   - **Semboller ile en az alfasayısal**: büyük harfler, küçük harfler, sayısal karakterler, noktalama işaretleri ve semboller içerir.
 
-- **Önceki parolaların yeniden kullanılmasını engelle**: kullanıcıların daha önce kullanılan parolaları oluşturmasını kısıtlamak için bu ayarı kullanın. 1-24 adresinden, daha önce kullanılmış olan parolaların sayısını girin. Örneğin, kullanıcıların geçerli `5` parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Önceki parolaların yeniden kullanılmasını engelle**: kullanıcıların daha önce kullanılan parolaları oluşturmasını kısıtlamak için bu ayarı kullanın. 1-24 adresinden, daha önce kullanılmış olan parolaların sayısını girin. Örneğin, `5` kullanıcıların geçerli parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Parmak iziyle kilit açma (yalnızca Samsung KNOX)**: **blok** cihazların kilidini açmak için parmak izi kullanımını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların bir parmak izi kullanarak cihazların kilidini açmaya izin verebilir.
 - **Akıllı kilit ve diğer güven aracıları**: **blok** akıllı kilit veya diğer güven aracılarının kilit ekranı ayarlarını değiştirmesine engel olur. Cihaz güvenilir bir konumdayken, güven aracısı olarak da bilinen bu özellik, cihaz kilit ekranı parolasını devre dışı bırakmanıza veya atlamanıza izin verir. Örneğin, cihazlar belirli bir Bluetooth cihazına bağlıyken veya cihazlar bir NFC etiketine yakın olduğunda bu özelliği kullanın. Bu ayarı kullanıcıların Akıllı Kilitleme’yi yapılandırmasını önlemek için kullanabilirsiniz.
 
@@ -98,7 +98,7 @@ Bu makalede, Android çalıştıran cihazlar için yapılandırabileceğiniz tü
 - **Şifreleme**: cihazdaki dosyaların şifrelenmesi için **gerektir** ' i seçin. Tüm cihazlar şifrelemeyi desteklemez. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Bu ayarı yapılandırmak ve uyumluluğu doğru şekilde raporlamak için aşağıdakileri de yapılandırın:
   1. **Password**: **gerektir**olarak ayarlayın.
   2. **Gerekli parola türü**: **en az sayısal**olarak ayarlanır.
-  3. **Minimum parola uzunluğu**: en az `4`olarak ayarlanır.
+  3. **Minimum parola uzunluğu**: en az olarak ayarlanır `4` .
 
   > [!NOTE]
   > Bir şifreleme ilkesi uygulanırsa Samsung Knox cihazlar, kullanıcıların cihaz parolası olarak 6 karakterli karmaşık bir parola ayarlamasını gerektirir.
@@ -116,12 +116,12 @@ Cihazlarda belirli uygulamalara izin vermek veya bunları engellemek için bu ay
 - **Onaylanan uygulamalar**: Kullanıcıların yüklemesine izin verilen uygulamaları listeleyin. Uyumluluğun korunması için kullanıcılar diğer uygulamaları yüklememelidir.  Şirket Portalı uygulaması da dahil olmak üzere Intune tarafından yönetilen uygulamalara otomatik olarak izin verilir.
 - **Uygulamalar listesi**: uygulamanızı **ekleyin** :
   - **Uygulama PAKETI kimliği**: uygulama paket kimliğini girin.
-  - **App Store URL 'si**: istediğiniz uygulamanın Google Play Store URL 'sini girin. Örneğin, Android için Microsoft Uzak Masaüstü uygulamasını eklemek için girin `https://play.google.com/store/apps/details?id=com.microsoft.rdc.android`.
+  - **App Store URL 'si**: istediğiniz uygulamanın Google Play Store URL 'sini girin. Örneğin, Android için Microsoft Uzak Masaüstü uygulamasını eklemek için girin `https://play.google.com/store/apps/details?id=com.microsoft.rdc.android` .
 
     Bir uygulamanın URL 'sini bulmak için [Google Play Store](https://play.google.com/store/apps)' u açın ve uygulamayı arayın. Örneğin `Microsoft Remote Desktop Play Store` veya `Microsoft Planner` için arama yapın. Uygulamayı seçin ve URL'sini kopyalayın.
   
   - **Uygulama adı**: istediğiniz adı girin. Bu ad kullanıcılara gösterilir.
-  - **Yayımcı** (isteğe bağlı): uygulamanın yayımcısını (gibi) girin `Microsoft`.
+  - **Yayımcı** (isteğe bağlı): uygulamanın yayımcısını (gibi) girin `Microsoft` .
 
 Ayrıca, URL de dahil olmak üzere uygulamayla ilgili ayrıntılarla bir CSV dosyasını **Içeri aktarabilirsiniz** . <App *url*> <*uygulama adı*>, <*uygulama yayımcısı*> biçimini kullanın. Veya, kısıtlanmış uygulamalar listesini içeren mevcut bir listeyi aynı biçimde **dışarı aktarın** .
 
@@ -193,4 +193,4 @@ Bilgi noktası ayarları yalnızca Samsung Knox Standard cihazlarda ve Intune il
 
 [Profili atama](device-profile-assign.md) ve [durumunu izleme](device-profile-monitor.md).
 
-Ayrıca, [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) ve [Windows 10](kiosk-settings.md) cihazları için bilgi noktası profilleri oluşturabilirsiniz.
+Ayrıca, [Android Enterprise](device-restrictions-android-for-work.md#device-experience) ve [Windows 10](kiosk-settings.md) cihazları için bilgi noktası profilleri oluşturabilirsiniz.

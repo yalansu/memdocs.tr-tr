@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 06/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5562199d3490085aca26517170745802a0aef489
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 6fef418394a37f0074ddb17cc170a61603b1d7f8
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989506"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093102"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Microsoft Intune için destek alma
 
@@ -41,9 +41,6 @@ Intune yöneticisi olarak, Azure portalında Intune için bir çevrimiçi destek
 Intune için yardım ve destek deneyimi, [Microsoft Endpoint Manager yönetim merkezinden](https://go.microsoft.com/fwlink/?linkid=2109431) ve Azure Portal Intune altında bulunan tüm dikey pencereler (veya sayfalar) tarafından kullanılabilir.
 
 *Yardım ve destek* deneyimi, [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com/)görülen deneyimle benzerdir ve Azure 'daki diğer hizmetlerin yerinde kalan önceki *Yardım + desteğinin*yerini alır.
-
-> [!TIP]
-> 18 Kasım 2019 ' den itibaren, yardım ve destek almak için güncelleştirilmiş ve kolaylaştırılmış bir konsol deneyimi kiracılara gönderilir. Henüz bu yeni deneyim yoksa, yakında sunulacaktır.
 
 ### <a name="options-to-access-help-and-support"></a>Yardım ve desteğe erişme seçenekleri
 
@@ -66,16 +63,21 @@ Bu sorun, yeni kiracı hesabınızı üzerinde **M365 Yönetim Merkezi** https:/
 
 - **Microsoft Endpoint Manager yönetim merkezinden**
 
-  - Microsoft Endpoint Manager Yönetim Merkezi 'ndeki herhangi bir düğümden öğesini **seçin.** simgesine tıklayın ve sonra da yardım almak istediğiniz yönetim türünü seçmek için açılan listesini kullanın. Microsoft Endpoint Manager Yönetim Merkezi aşağıdaki yönetim türlerini destekler ve Intune gibi yardım almak istediğinizi seçmeniz gerekir:
+  - Microsoft Endpoint Manager Yönetim Merkezi 'ndeki herhangi bir düğümden öğesini **seçin.** **Yardım** bölmesini açmak için portalın sağ üst köşesindeki simge. **Yönetim türü seç** sayfasını açmak için **Yardım + Destek** ' i seçin.
 
-    - Configuration Manager (Masaüstü analizlerini içerir)
+    > [!div class="mx-imgBorder"]
+    > ![Yönetim türü seçimi sayfasını açın](./media/get-support/management-types.png)
+
+    Yardım almak istediğiniz yönetim türünü seçmek için açılan eklentiyi kullanın, bu, ilgili yardım ve destek sayfasını açar. Microsoft Endpoint Manager Yönetim Merkezi aşağıdaki yönetim türlerini destekler ve Intune gibi yardım almak istediğinizi seçmeniz gerekir:
+
+    - Configuration Manager
     - Intune
-    - Ortak yönetim  
+    - Ortak yönetim
 
     > [!div class="mx-imgBorder"]
     > ![Yönetim türünü seçin](./media/get-support/select-management-type.png)
 
-    Bir yönetim türü seçtikten sonra, *Yardım ve destek* sayfası açılır ve burada belirli bir sorunun [çözümlerini bulmak](#find-solutions) için ayrıntıları belirtebilirsiniz. Ayrıntılar, seçtiğiniz yönetim türüne göre filtrelenir.
+    Bir yönetim türü seçtikten sonra, ilgili *Yardım ve destek* sayfası açılır ve burada belirli bir sorun için [çözüm bulma](#find-solutions) ayrıntılarını belirtebilirsiniz. Ayrıntılar, seçtiğiniz yönetim türüne göre filtrelenir.
 
      Doğru yönetim türü seçilmemişse **(1)**, Yönetim türü seçimi açılır öğesine dönmek için *Yönetim türü seç* **(2)** seçeneğine tıklayın:
 

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae89a939e35f68f55d2e63e7495a9b743cc0fa34
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: bc3ef945351529ce0db3e40108fef135414c4fab
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791760"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093615"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Intune 'da bilgi noktası olarak çalıştırılacak Windows 10 ve üzeri cihaz ayarları
 
@@ -116,7 +116,7 @@ Cihazda yalnızca bir uygulama çalıştırır.
 
 ## <a name="multi-app-kiosk"></a>Çoklu uygulama bilgi noktası
 
-Bu modda uygulamalar Başlat menüsünde sağlanır. Bu uygulamalar, yalnızca kullanıcıların açabildiği uygulamalardır. Bir uygulamanın başka bir uygulamaya bağımlılığı varsa, her ikisi de izin verilen uygulamalar listesine eklenmelidir. Örneğin, Internet Explorer 64 bit Internet Explorer 32 bit 'e bağımlıdır, bu nedenle hem "C:\Program Files\explorer\iexplore.exe" hem de "C:\Program Files (x86) \Internet Explorer\iexplore.exe" için izin vermelisiniz. 
+Bu modda uygulamalar Başlat menüsünde sağlanır. Bu uygulamalar, yalnızca kullanıcıların açabildiği uygulamalardır. Bir uygulamanın başka bir uygulamaya bağımlılığı varsa, her ikisi de izin verilen uygulamalar listesine eklenmelidir. Örneğin, Internet Explorer 64 bit, Internet Explorer 32 bit 'e bağımlıdır. bu nedenle hem "C:\Program Files\explorer\iexplore.exe" hem de "C:\Program Files (x86) \Internet Explorer\iexplore.exe" için izin vermelisiniz. 
 
 - **Bilgi noktası modu seçin**: **çok uygulama bilgi noktası**' nı seçin.
 
@@ -213,6 +213,6 @@ Bu modda uygulamalar Başlat menüsünde sağlanır. Bu uygulamalar, yalnızca k
 
 [Profili atayın](device-profile-assign.md)ve [durumunu izleyin](device-profile-monitor.md).
 
-[Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)ve [Windows holographic for Business](kiosk-settings-holographic.md) cihazları için bilgi noktası profilleri de oluşturabilirsiniz.
+[Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience)ve [Windows holographic for Business](kiosk-settings-holographic.md) cihazları için bilgi noktası profilleri de oluşturabilirsiniz.
 
 Ayrıca bkz. [tek uygulama bilgi noktası ayarlama](https://docs.microsoft.com/windows/configuration/kiosk-single-app) veya Windows kılavuzunda [birden çok uygulama bilgi noktası](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) ayarlama.

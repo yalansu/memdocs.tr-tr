@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74e365e50d73bb14f20376c92b43061b12d00003
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 886f572212a1af3e38fd5ea10afa21ce24c23411
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988455"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093300"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Microsoft Intune’da cihaz profili oluşturma
 
-Cihaz profillerini kullanarak ayar ekleyip yapılandırabilir ve daha sonra bu ayarları kuruluşunuzdaki cihazlara gönderebilirsiniz. [Cihaz profillerini kullanarak cihazlarınıza özellik ve ayar uygulama](device-profiles.md) sayfasında yapabileceğiniz işlemlerle ilgili ayrıntılı bilgilere yer verilmiştir.
+Cihaz profillerini kullanarak ayar ekleyip yapılandırabilir ve daha sonra bu ayarları kuruluşunuzdaki cihazlara gönderebilirsiniz. Ne yapabileceğiniz hakkında daha fazla bilgi için bkz. [Cihaz profillerini kullanarak cihazlarınızda özellikleri ve ayarları uygulama](device-profiles.md).
 
 Bu makalede:
 
@@ -84,6 +84,7 @@ Ardından profil türünü seçin. Seçtiğiniz platforma bağlı olarak, yapıl
 - [Güvenilir sertifika](../protect/certificates-configure.md)
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
+- [Kablolu ağlar (macOS)](wired-network-settings-macos.md)
 
 Örneğin, platform için **iOS/ıpados** ' ı seçerseniz, profil seçenekleriniz aşağıdaki profile benzer şekilde görünür:
 
@@ -97,7 +98,7 @@ Kapsam etiketleri ve yapabilecekleriniz hakkında daha fazla bilgi için bkz. [D
 
 ## <a name="applicability-rules"></a>Uygulanabilirlik kuralları
 
-Şunlara uygulanır:
+Aşağıdakiler cihazlar için geçerlidir:
 
 - Windows 10 ve üzeri
 
@@ -178,7 +179,7 @@ Profiller oluştururken aşağıdaki önerileri göz önünde bulundurun:
 
   :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Kullanıcı ve cihazlar için geçerli olan Intune yönetici şablonu.":::
 
-- Her kısıtlayıcı ilke oluşturduğunuzda, bu değişikliği kullanıcılarınıza iletişim kurun. Örneğin, geçiş kodu gereksinimini 4 karakterden 6 karaktere değiştiriyorsanız, ilke atamadan önce kullanıcılarınızın bunu bilmesini sağlayın.
+- Her kısıtlayıcı ilke oluşturduğunuzda, bu değişikliği kullanıcılarınıza iletişim kurun. Örneğin, geçiş kodu gereksinimini dört (4) karakterden altı (6) karaktere değiştiriyorsanız, ilkeyi atamadan önce kullanıcılarınıza haberdar olursunuz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

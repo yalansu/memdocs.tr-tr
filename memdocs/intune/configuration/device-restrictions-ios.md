@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2020
+ms.date: 06/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: kakyker
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49ecd2a1aaa5408a721b06264703720be601c73c
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: aa3cf14b6afd8504a0918b5d61d2a7cae0c308b9
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269023"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093670"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için iOS ve ıpados cihaz ayarları
 
@@ -72,7 +73,7 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
   - iOS 9,3 ve üzeri
   - ıpados 13,0 ve üzeri
 
-- **Sınıf uygulamasına göre istem dışı ekran izleme**: **izin ver** , öğretmenlere öğrenci bilgisi olmadan ders uygulamasını kullanarak öğrencilerin iOS/ıpados cihazlarının ekranını sessizce gözlemlemeye olanak tanır. Sınıf uygulamasını kullanan bir sınıfa kayıtlı öğrenci cihazları otomatik olarak bu kurs öğretme için izin verir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği önleyebilir.
+- **Sınıf uygulamasına göre sorulmadan ekran izleme**: **izin ver** , öğretmenleri bilmeden ders uygulamasını kullanarak öğrencilerinin iOS/ıpados ekranlarını sessizce gözlemlemeye olanak tanır. Sınıf uygulamasını kullanan bir sınıfa kayıtlı öğrenci cihazları otomatik olarak bu kurs öğretme için izin verir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği önleyebilir.
 
   Bu ayarı kullanmak için **ekran yakalama** ayarını **Engelle**olarak ayarlayın.
 
@@ -198,7 +199,7 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
   - **10**: 10 dakikalık bir işlem yapılmadan sonra ekran kilitleniyor.
   - **15**: 15 dakika etkin olmadığında ekran kilitleri.
 
-  Bir değer iOS ve ıpados için uygulanmazsa, Apple en yakın *En düşük* değeri kullanır. Örneğin, `4` dakika girerseniz, ıpados cihazları `2` dakika kullanır. `10`Dakikalar girerseniz, iOS cihazlarının `5` dakikaları kullanılır. Bu bir Apple kısıtlamasıdır.
+  Bir değer iOS ve ıpados için uygulanmazsa, Apple en yakın *En düşük* değeri kullanır. Örneğin, `4` dakika girerseniz, ıpados cihazları `2` dakika kullanır. `10`Dakikalar girerseniz, iOS cihazlarının `5` dakikaları kullanılır. Bu davranış bir Apple kısıtlamasıdır.
   
   > [!NOTE]
   > Bu ayar için Intune kullanıcı arabirimi iOS ve ıpados tarafından desteklenen değerleri birbirinden ayırır. Kullanıcı arabirimi gelecek bir sürümde güncelleştirilmiş olabilir.
@@ -429,6 +430,25 @@ Bu listelere uygulama eklemek için şunları yapabilirsiniz:
 > [!IMPORTANT]
 > Kısıtlı uygulama ayarlarını kullanan cihaz profilleri kullanıcı gruplarına atanmalıdır.
 
+## <a name="shared-ipad"></a>Paylaşılan iPad
+
+Bu özellik şu platformlarda geçerlidir:
+
+- ıpados 13,4 ve üzeri
+- Paylaşılan iPad
+
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
+
+- **Paylaşılan iPad geçici oturumlarını engelle**: geçici oturumlar kullanıcıların Konuk olarak oturum açmasını sağlar ve kullanıcıların yönetilen BIR Apple kimliği veya parola girmesi gerekmez.
+
+  **Evet**olarak ayarlandığında:
+
+  - Paylaşılan iPad kullanıcıları geçici oturumları kullanamaz.
+  - Kullanıcıların cihazda yönetilen Apple KIMLIĞI ve parolası ile oturum açması gerekir.
+  - Konuk hesabı seçeneği cihazlarda kilit ekranında gösterilmez.
+
+  **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, paylaşılan bir iPad kullanıcısına Konuk hesabıyla cihazda oturum açmasını sağlar. Kullanıcı oturumu kapattığında, kullanıcının verilerinin hiçbiri iCloud 'a kaydedilmez veya eşitlenmez.
+
 ## <a name="show-or-hide-apps"></a>Uygulamaları gösterme veya gizleme
 
 Bu özellik şu platformlarda geçerlidir:
@@ -599,12 +619,17 @@ Uygulamaları eklemek için şunları yapabilirsiniz:
 
 İOS/ıpados cihazlarını, otonom tek uygulama modunda (ASAM) belirli uygulamaları çalıştıracak şekilde yapılandırmak için bu ayarları kullanın. Bu mod yapılandırıldığında ve kullanıcılar yapılandırılmış uygulamalardan birini başlatdıklarında, cihaz bu uygulamaya kilitlenir. Uygulama/görev değiştirme, kullanıcılar izin verilen uygulamadan çıkana kadar devre dışı bırakıldı.
 
-Örneğin, okul veya üniversite ortamında, kullanıcıların cihazda bir test geçirmesine imkan tanıyan bir uygulama ekleyin. Ya da, Kullanıcı kimlik doğrulamasından çıkana kadar cihazı Şirket Portalı uygulamasına kilitleyin. Uygulamalar eylemleri kullanıcılar tarafından tamamlandığında veya bu ilkeyi kaldırdığınızda cihaz normal durumuna geri döner.
+- Örneğin, okul veya üniversite ortamında, kullanıcıların cihazda bir test geçirmesine imkan tanıyan bir uygulama ekleyin. Ya da, Kullanıcı kimlik doğrulamasından çıkana kadar cihazı Şirket Portalı uygulamasına kilitleyin. Uygulamalar eylemleri kullanıcılar tarafından tamamlandığında veya bu ilkeyi kaldırdığınızda cihaz normal durumuna geri döner.
 
-> [!NOTE]
-> Tüm uygulamalar otonom tek uygulama modunu desteklemez. Bir uygulamayı otonom tek uygulama modunda yerleştirmek için, bir paket KIMLIĞI veya bir uygulama yapılandırma ilkesi tarafından teslim edilen anahtar değer çifti genellikle gereklidir. Daha fazla bilgi için Apple MDM belgelerindeki [ `autonomousSingleAppModePermittedAppIDs` kısıtlamaya](https://developer.apple.com/documentation/devicemanagement/restrictions) bakın. Yapılandırmakta olduğunuz uygulama için gereken belirli ayarlar hakkında daha fazla bilgi için satıcı belgelerine bakın.
+- Tüm uygulamalar otonom tek uygulama modunu desteklemez. Bir uygulamayı otonom tek uygulama modunda yerleştirmek için, bir paket KIMLIĞI veya bir uygulama yapılandırma ilkesi tarafından teslim edilen anahtar değer çifti genellikle gereklidir. Daha fazla bilgi için Apple MDM belgelerindeki [ `autonomousSingleAppModePermittedAppIDs` kısıtlamaya](https://developer.apple.com/documentation/devicemanagement/restrictions) bakın. Yapılandırmakta olduğunuz uygulama için gereken belirli ayarlar hakkında daha fazla bilgi için satıcı belgelerine bakın.
 
-Örneğin, ölçek odalarını otonom tek uygulama modunda yapılandırmak için, yakınlaştırma paket KIMLIĞINI kullanmak üzere diyor `us.zoom.zpcontroller` . Bu örnekte, yakınlaştırma web portalında da bir değişiklik yaparsınız. Daha fazla bilgi için bkz. [zoom yardım merkezi](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
+  Örneğin, ölçek odalarını otonom tek uygulama modunda yapılandırmak için, yakınlaştırma paket KIMLIĞINI kullanmak üzere diyor `us.zoom.zpcontroller` . Bu örnekte, yakınlaştırma web portalında da bir değişiklik yaparsınız. Daha fazla bilgi için bkz. [zoom yardım merkezi](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
+
+- İOS/ıpados cihazlarında Şirket Portalı uygulaması ASAM 'yi destekler. Şirket Portalı uygulaması ASAM 'da olduğunda, Kullanıcı kimlik doğrulamasından çıkana kadar cihaz Şirket Portalı uygulamada kilitlenir. Kullanıcılar Şirket Portalı uygulamasında oturum açtıklarında, cihazdaki diğer uygulamaları ve giriş ekranı düğmesini kullanabilirler. Şirket Portalı uygulamasında oturum açtıklarında, cihaz tek uygulama moduna geri döner ve Şirket Portalı uygulamasındaki kilitler.
+
+  Şirket Portalı uygulamayı bir ' oturum aç/oturumu Kapat ' uygulamasına açmak için (ASAM 'yı etkinleştirin), `Microsoft Intune Company Portal` Bu ayarlarda, ve paket kimliği () gibi şirket portalı uygulama adını girin `com.microsoft.CompanyPortal` . Bu profil atandıktan sonra, kullanıcıların oturum açmasını ve oturumunuzu açmasını sağlamak üzere uygulamayı kilitlemek için Şirket Portalı uygulamasını açmanız gerekir.
+  
+  Cihaz yapılandırma profili kaldırıldığında ve Kullanıcı oturumu kapattığında, cihaz Şirket Portalı uygulamasında kilitlenmez.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 

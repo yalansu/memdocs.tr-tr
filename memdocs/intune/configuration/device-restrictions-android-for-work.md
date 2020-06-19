@@ -5,23 +5,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 06/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
-ms.reviewer: chmaguir, chrisbal
+ms.reviewer: chmaguir, chrisbal, priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b81686f645d9fce610c39266feb2675fd35cc280
-ms.sourcegitcommit: 6f67c864cf71b4a6a316f4d04a6cc43cf28b4277
+ms.openlocfilehash: 88843cfa1c4f98d87e5eaaefdc0dcd87daf8cb68
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84257044"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093703"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Android kurumsal cihaz ayarları
 
@@ -87,93 +87,124 @@ Bu ayarlar, Intune 'un Android kurumsal tam olarak yönetilen veya adanmış cih
 
 - **Uygulamalarda tehdit taraması**: **gerektir** (varsayılan), uygulamaları yüklenmeden önce ve sonra taraması için Google Play koruma sağlar. Tehdit algılarsa, uygulamayı cihazdan kaldırmak için kullanıcıları uyarabilir. **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi uygulamaları taramak için Google Play koruyamayabilir veya çalıştırmayabilir.
 
-### <a name="dedicated-devices"></a>Adanmış cihazlar
+### <a name="device-experience"></a>Cihaz deneyimi
 
-Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak için bu ayarları kullanın. Cihazları tek bir uygulamayı çalıştıracak veya birçok uygulama çalıştıracak şekilde yapılandırabilirsiniz. Cihaz bilgi noktası moduyla ayarlandığında, yalnızca eklediğiniz uygulamalar kullanılabilir. Bu ayarlar Android kurumsal adanmış cihazlara uygulanır. Android kurumsal tam yönetilen cihazlara uygulanmaz.
+Adanmış cihazlarınızda veya tam olarak yönetilen cihazlarda bilgi noktası stili bir deneyim yapılandırmak için bu ayarları kullanın. Cihazları tek bir uygulamayı çalıştıracak veya birçok uygulama çalıştıracak şekilde yapılandırabilirsiniz. Cihaz bilgi noktası moduyla ayarlandığında, yalnızca eklediğiniz uygulamalar kullanılabilir.
 
-**Bilgi noktası modu**: cihazın bir uygulama çalıştırmasını veya birden çok uygulamayı çalıştırmasını seçin.
+**Kayıt profili türü**: cihazlarınızda Microsoft başlatıcısı 'Nı veya Microsoft tarafından yönetilen giriş ekranını yapılandırmaya başlamak için bir kayıt profili türü seçin. Seçenekleriniz şunlardır:
 
-- **Yapılandırılmadı**: Intune bu ayarı değiştirmez veya güncelleştirmez.
-- **Tek uygulama**: kullanıcılar cihazdaki tek bir uygulamaya yalnızca erişebilir. Cihaz başlatıldığında yalnızca belirli bir uygulama başlatılır. Kullanıcılar yeni uygulamalar açamaz veya çalışan uygulamayı değiştiremez.
+- **Yapılandırılmadı**: Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, kullanıcılar cihazın varsayılan giriş ekranı deneyimini görebilirler.
+- **Adanmış cihaz**: adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırın. Bu ayarları yapılandırmadan önce, cihazlarda istediğiniz uygulamaları [eklediğinizden](../apps/apps-add-android-for-work.md) ve [atamadığınızdan](../apps/apps-deploy.md) emin olun.
 
-  - **Yönetilen bir uygulama seçin**: listeden yönetilen Google Play uygulamasını seçin.
+  - **Bilgi noktası modu**: cihazın bir uygulama çalıştırmasını veya birden çok uygulamayı çalıştırmasını seçin. Seçenekleriniz şunlardır:
 
-    Listelenen uygulamalarınız yoksa cihaza [bazı Android uygulamaları ekleyin](../apps/apps-add-android-for-work.md) . [Uygulamayı adanmış cihazlarınız için oluşturulan cihaz grubuna atadığınızdan](../apps/apps-deploy.md)emin olun.
+    - **Yapılandırılmadı**: Intune bu ayarı değiştirmez veya güncelleştirmez.
+    - **Tek uygulama**: kullanıcılar cihazdaki tek bir uygulamaya yalnızca erişebilir. Cihaz başlatıldığında yalnızca belirli bir uygulama başlatılır. Kullanıcılar yeni uygulamalar açamaz veya çalışan uygulamayı değiştiremez.
 
-  > [!IMPORTANT]
-  > Tek uygulama bilgi noktası modu kullanılırken, çevirici/telefon uygulamaları düzgün çalışmayabilir.
+      - **Bilgi noktası modu için kullanılacak bir uygulama seçin**: listeden yönetilen Google Play uygulamasını seçin.
+
+      > [!IMPORTANT]
+      > Tek uygulama bilgi noktası modu kullanılırken, çevirici/telefon uygulamaları düzgün çalışmayabilir.
   
-- **Çoklu uygulama**: kullanıcılar cihazdaki sınırlı bir uygulama kümesine erişebilir. Cihaz başlatıldığında yalnızca eklediğiniz uygulamalar başlatılır. Ayrıca, kullanıcıların açabilme bazı Web bağlantıları ekleyebilirsiniz. İlke uygulandığında, kullanıcılar giriş ekranında izin verilen uygulamalar için simgeler görür.
+    - **Çoklu uygulama**: kullanıcılar cihazdaki sınırlı bir uygulama kümesine erişebilir. Cihaz başlatıldığında yalnızca eklediğiniz uygulamalar başlatılır. Ayrıca, kullanıcıların açabilme bazı Web bağlantıları ekleyebilirsiniz. İlke uygulandığında, kullanıcılar giriş ekranında izin verilen uygulamalar için simgeler görür.
 
-  > [!IMPORTANT]
-  > Çok uygulamayla ayrılmış cihazlarda, Google Play [yönetilen giriş ekranı uygulamasının](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) şu **olması gerekir**:
-  >   - Intune 'da [istemci uygulaması olarak eklendi](../apps/apps-add-android-for-work.md)
-  >   - Adanmış cihazlarınız için oluşturulan [cihaz grubuna atandı](../apps/apps-deploy.md)
-  >
-  > **Yönetilen giriş ekranı** uygulamasının yapılandırma profilinde olması gerekmez, ancak istemci uygulaması olarak eklenmesi gerekir. **Yönetilen giriş ekranı** uygulaması bir istemci uygulaması olarak eklendiğinde, yapılandırma profiline eklediğiniz diğer uygulamalar **yönetilen giriş ekranı** uygulamasında simgeler olarak gösterilir.
-  >
-  > Birden çok uygulama bilgi noktası modu kullanılırken, çevirici/telefon uygulamaları düzgün çalışmayabilir. 
+      > [!IMPORTANT]
+      > Çok uygulamayla ayrılmış cihazlarda, Google Play [yönetilen giriş ekranı uygulamasının](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) şu **olması gerekir**:
+      >   - [Intune 'A eklendi](../apps/apps-add-android-for-work.md)
+      >   - Adanmış cihazlarınız için oluşturulan [cihaz grubuna atandı](../apps/apps-deploy.md)
+      >
+      > **Yönetilen giriş ekranı** uygulamasının yapılandırma profilinde olması gerekmez, ancak uygulama olarak eklenmesi gerekir. **Yönetilen giriş ekranı** uygulaması eklendiğinde, yapılandırma profiline eklediğiniz diğer uygulamalar **yönetilen giriş ekranı** uygulamasında simgeler olarak gösterilir.
+      >
+      > Birden çok uygulama bilgi noktası modu kullanılırken, çevirici/telefon uygulamaları düzgün çalışmayabilir. 
 
-  - **Ekle**: listeden uygulamalarınızı seçin.
+      - **Ekle**: listeden uygulamalarınızı seçin.
 
-    **Yönetilen giriş ekranı** uygulaması listede yoksa [Google Play ekleyin](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Uygulamayı adanmış cihazlarınız için oluşturulan cihaz grubuna [atadığınızdan](../apps/apps-deploy.md) emin olun.
+        **Yönetilen giriş ekranı** uygulaması listede yoksa [Google Play ekleyin](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Uygulamayı adanmış cihazlarınız için oluşturulan cihaz grubuna [atadığınızdan](../apps/apps-deploy.md) emin olun.
 
-    Ayrıca, kuruluşunuz tarafından oluşturulan diğer [Android uygulamalarını](../apps/apps-add-android-for-work.md) ve [Web uygulamalarını](../apps/web-app.md) cihaza ekleyebilirsiniz. [Uygulamayı adanmış cihazlarınız için oluşturulan cihaz grubuna atadığınızdan](../apps/apps-deploy.md)emin olun.
+        Ayrıca, kuruluşunuz tarafından oluşturulan diğer [Android uygulamalarını](../apps/apps-add-android-for-work.md) ve [Web uygulamalarını](../apps/web-app.md) cihaza ekleyebilirsiniz. [Uygulamayı adanmış cihazlarınız için oluşturulan cihaz grubuna atadığınızdan](../apps/apps-deploy.md)emin olun.
 
-  - **Sanal giriş düğmesi**: kullanıcıların uygulamalar arasında geçiş yapabilmesi Için kullanıcıları yönetilen giriş ekranına döndüren bir yazılım tuşu düğmesi. Seçenekleriniz şunlardır:
+      - **Sanal giriş düğmesi**: kullanıcıların uygulamalar arasında geçiş yapabilmesi Için kullanıcıları yönetilen giriş ekranına döndüren bir yazılım tuşu düğmesi. Seçenekleriniz şunlardır:
+        - **Yapılandırılmadı** (varsayılan): Giriş düğmesi gösterilmez. Kullanıcıların, uygulamalar arasında geçiş yapmak için geri düğmesini kullanmaları gerekir.
+        - **Yukarı çek**: bir giriş düğmesi, bir kullanıcının cihazda ne zaman yüzümü gösterdiğini gösterir.
+        - **Kayan**: cihazda kalıcı, kayan bir giriş düğmesi gösterir.
 
-    - **Yapılandırılmadı** (varsayılan): Giriş düğmesi gösterilmez. Kullanıcıların, uygulamalar arasında geçiş yapmak için geri düğmesini kullanmaları gerekir.
-    - **Yukarı çek**: bir giriş düğmesi, bir kullanıcının cihazda ne zaman yüzümü gösterdiğini gösterir.
-    - **Kayan**: cihazda kalıcı, kayan bir giriş düğmesi gösterir.
-
-  - **Bilgi noktası modundan çıkma**: **Etkinleştir** ayarı, yöneticilerin cihazı güncelleştirmek için bilgi noktası modunu geçici olarak duraklatmasını sağlar. Bu özelliği kullanmak için yönetici:
+      - **Bilgi noktası modundan çıkma**: **Etkinleştir** ayarı, yöneticilerin cihazı güncelleştirmek için bilgi noktası modunu geçici olarak duraklatmasını sağlar. Bu özelliği kullanmak için yönetici:
   
-    1. **Çıkış bilgi noktası** düğmesi gösterilene kadar geri düğmesini seçmeye devam eder. 
-    2. **Bilgi noktası çıkış** düğmesini seçer ve **bilgi noktası modu kod** PIN 'ini girer.
-    3. İşiniz bittiğinde, **yönetilen giriş ekranı** uygulamasını seçin. Bu adım, cihazı çok uygulama bilgi noktası moduna yeniden kilitler.
+        1. **Çıkış bilgi noktası** düğmesi gösterilene kadar geri düğmesini seçmeye devam eder. 
+        2. **Bilgi noktası çıkış** düğmesini seçer ve **bilgi noktası modu kod** PIN 'ini girer.
+        3. İşiniz bittiğinde, **yönetilen giriş ekranı** uygulamasını seçin. Bu adım, cihazı çok uygulama bilgi noktası moduna yeniden kilitler.
 
-      **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi yöneticilerin bilgi noktası modunu duraklatmasını önleyebilir. Yönetici geri düğmesini seçip, **bilgi noktası çıkışı** düğmesini seçerse bir ileti geçiş kodunun gerekli olduğunu belirtir.
+        **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi yöneticilerin bilgi noktası modunu duraklatmasını önleyebilir. Yönetici geri düğmesini seçip, **bilgi noktası çıkışı** düğmesini seçerse bir ileti geçiş kodunun gerekli olduğunu belirtir.
 
-    - **Bilgi noktası modu kodunu bırak**: 4-6 basamaklı sayısal bir PIN girin. Yönetici bilgi noktası modunu geçici olarak duraklatmak için bu PIN 'ı kullanır.
+      - **Bilgi noktası modu kodunu bırak**: 4-6 basamaklı sayısal bir PIN girin. Yönetici bilgi noktası modunu geçici olarak duraklatmak için bu PIN 'ı kullanır.
 
-  - **Özel URL arka planı ayarla**: adanmış cihazda arka plan ekranını özelleştirmek IÇIN bir URL girin. Örneğin, `http://contoso.com/backgroundimage.jpg` girin.
+      - **Özel URL arka planı ayarla**: adanmış cihazda arka plan ekranını özelleştirmek IÇIN bir URL girin. Örneğin, `http://contoso.com/backgroundimage.jpg` girin.
 
-    > [!NOTE]
-    > Çoğu durumda, en az aşağıdaki boyutlardaki görüntülerle başlamasını öneririz:
-    >
-    > - Telefon: 1080x1920 px
-    > - Tablet: 1920x1080 px
-    >
-    > En iyi deneyim ve ayrıntılı Ayrıntılar için, görüntüleme belirtimlerine cihaz başına görüntü varlıkları oluşturulması önerilir.
-    >
-    > Modern görüntüler, daha yüksek piksel yoğunluklarını ve eşdeğer 2K/4K tanım görüntülerini görüntüleyebilir.
+        > [!NOTE]
+        > Çoğu durumda, en az aşağıdaki boyutlardaki görüntülerle başlamasını öneririz:
+        >
+        > - Telefon: 1080x1920 px
+        > - Tablet: 1920x1080 px
+        >
+        > En iyi deneyim ve ayrıntılı Ayrıntılar için, görüntüleme belirtimlerine cihaz başına görüntü varlıkları oluşturulması önerilir.
+        >
+        > Modern görüntüler, daha yüksek piksel yoğunluklarını ve eşdeğer 2K/4K tanım görüntülerini görüntüleyebilir.
 
-  - **Wi-Fi yapılandırması**: **Etkinleştir** ayarı, yönetilen giriş ekranında Wi-Fi denetimini gösterir ve kullanıcıların cihazı farklı WiFi ağlarına bağlanmasına izin verir. Bu özelliği etkinleştirmek Ayrıca cihaz konumunu da etkinleştirir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, yönetilen giriş ekranında Wi-Fi denetimini göstermeyebilir. Kullanıcıların, yönetilen giriş ekranını kullanırken Wi-Fi ağlarına bağlanmasını engeller.
+      - **Wi-Fi yapılandırması**: **Etkinleştir** ayarı, yönetilen giriş ekranında Wi-Fi denetimini gösterir ve kullanıcıların cihazı farklı WiFi ağlarına bağlanmasına izin verir. Bu özelliği etkinleştirmek Ayrıca cihaz konumunu da etkinleştirir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, yönetilen giriş ekranında Wi-Fi denetimini göstermeyebilir. Kullanıcıların, yönetilen giriş ekranını kullanırken Wi-Fi ağlarına bağlanmasını engeller.
 
-  - **Bluetooth yapılandırması**: **Etkinleştir** ayarı, yönetilen giriş ekranında Bluetooth denetimini gösterir ve kullanıcıların cihazları Bluetooth üzerinden eşleştirmesine olanak tanır. Bu özelliği etkinleştirmek Ayrıca cihaz konumunu da etkinleştirir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi yönetilen giriş ekranında Bluetooth denetimini göstermeyebilir. Yönetilen giriş ekranını kullanırken kullanıcıların Bluetooth ve eşleme cihazlarını yapılandırmalarını engeller.
+      - **Bluetooth yapılandırması**: **Etkinleştir** ayarı, yönetilen giriş ekranında Bluetooth denetimini gösterir ve kullanıcıların cihazları Bluetooth üzerinden eşleştirmesine olanak tanır. Bu özelliği etkinleştirmek Ayrıca cihaz konumunu da etkinleştirir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi yönetilen giriş ekranında Bluetooth denetimini göstermeyebilir. Yönetilen giriş ekranını kullanırken kullanıcıların Bluetooth ve eşleme cihazlarını yapılandırmalarını engeller.
 
-  - **El feneri erişimi**: **Enable** , yönetilen giriş ekranında el feneri denetimini gösterir ve kullanıcıların el feneri 'i açmasına veya kapamesine olanak tanır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, yönetilen giriş ekranında el feneri denetimini göstermeyebilir. Yönetilen giriş ekranını kullanırken kullanıcıların el feneri kullanmasını engeller.
+      - **El feneri erişimi**: **Enable** , yönetilen giriş ekranında el feneri denetimini gösterir ve kullanıcıların el feneri 'i açmasına veya kapamesine olanak tanır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, yönetilen giriş ekranında el feneri denetimini göstermeyebilir. Yönetilen giriş ekranını kullanırken kullanıcıların el feneri kullanmasını engeller.
 
-  - **Media Volume Control**: **Enable** ayarı, yönetilen giriş ekranında medya birimi denetimini gösterir ve kullanıcıların bir kaydırıcı kullanarak cihazın medya birimini ayarlamasına olanak tanır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, yönetilen giriş ekranında medya birimi denetimini göstermeyebilir. Kullanıcıların, donanım düğmeleri onu desteklemediği sürece, yönetilen giriş ekranını kullanırken cihazın medya hacmini değiştirmesini engeller.
+      - **Media Volume Control**: **Enable** ayarı, yönetilen giriş ekranında medya birimi denetimini gösterir ve kullanıcıların bir kaydırıcı kullanarak cihazın medya birimini ayarlamasına olanak tanır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, yönetilen giriş ekranında medya birimi denetimini göstermeyebilir. Kullanıcıların, donanım düğmeleri onu desteklemediği sürece, yönetilen giriş ekranını kullanırken cihazın medya hacmini değiştirmesini engeller.
 
-  - **Ekran koruyucu modu**: **Etkinleştir** , cihaz kilitlendiğinde veya zaman aşımına uğrarsa yönetilen giriş ekranında bir ekran koruyucu gösterir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, yönetilen giriş ekranında bir ekran koruyucu gösterme gösterebilir.
+      - **Ekran koruyucu modu**: **Etkinleştir** , cihaz kilitlendiğinde veya zaman aşımına uğrarsa yönetilen giriş ekranında bir ekran koruyucu gösterir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, yönetilen giriş ekranında bir ekran koruyucu gösterme gösterebilir.
 
-    Etkinleştirildiğinde, şunları da yapılandırın:
+        Etkinleştirildiğinde, şunları da yapılandırın:
 
-    - **Özel ekran koruyucu görüntüsünü ayarla**: özel bir PNG, jpg, JPEG, GIF, BMP, WEBP veya ııMAGE URL 'sini girin. Örneğin şunu girin: 
+        - **Özel ekran koruyucu görüntüsünü ayarla**: özel bir PNG, jpg, JPEG, GIF, BMP, WEBP veya ııMAGE URL 'sini girin. Bir URL girmezseniz, varsayılan bir görüntü varsa cihazın varsayılan görüntüsü kullanılır. 
+        
+          Örneğin şunu girin: 
 
-      - `http://www.contoso.com/image.jpg`
-      - `www.contoso.com/image.bmp`
-      - `https://www.contoso.com/image.webp`
+          - `http://www.contoso.com/image.jpg`
+          - `www.contoso.com/image.bmp`
+          - `https://www.contoso.com/image.webp`          
 
-      Bir URL girmezseniz, varsayılan bir görüntü varsa cihazın varsayılan görüntüsü kullanılır.
+          > [!TIP]
+          > Bit eşlemde açılabilir herhangi bir dosya kaynağı URL 'SI desteklenir.
 
-      > [!TIP]
-      > Bit eşlemde açılabilir herhangi bir dosya kaynağı URL 'SI desteklenir.
+        - **Cihazın ekranı kapatmadan önce ekran koruyucuyu gösterdiği saniye sayısı**: cihazın ekran koruyucuyu ne kadar süreyle gösterdüğüne seçin. 0-9999999 saniye arasında bir değer girin. Varsayılan değer `0` saniyedir. Boş bırakıldığında veya sıfır () olarak ayarlandığında `0` , Kullanıcı cihazla etkileşime gelinceye kadar ekran koruyucusu etkin olur.
+        - **Ekran koruyucuyu göstermeden önce cihazın etkin olmadığı saniye sayısı**: ekran koruyucuyu göstermeden önce cihazın ne kadar süreyle boşta kalacağını seçin. 1-9999999 saniye arasında bir değer girin. Varsayılan değer `30` saniyedir. Sıfırdan büyük bir sayı girmeniz gerekir ( `0` ).
+        - **Ekran koruyucuyu başlatmadan önce medyayı Algıla**: cihazda ses veya video yürütülıyorsa, **Etkinleştir** (varsayılan) ekran koruyucuyu göstermez. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, ses veya video oynatılsa bile ekran koruyucuyu gösterebilir.
 
-    - **Cihazın ekranı kapatmadan önce ekran koruyucuyu gösterdiği saniye sayısı**: cihazın ekran koruyucuyu ne kadar süreyle gösterdüğüne seçin. 0-9999999 saniye arasında bir değer girin. Varsayılan değer `0` saniyedir. Boş bırakıldığında veya sıfır () olarak ayarlandığında `0` , Kullanıcı cihazla etkileşime gelinceye kadar ekran koruyucusu etkin olur.
-    - **Ekran koruyucuyu göstermeden önce cihazın etkin olmadığı saniye sayısı**: ekran koruyucuyu göstermeden önce cihazın ne kadar süreyle boşta kalacağını seçin. 1-9999999 saniye arasında bir değer girin. Varsayılan değer `30` saniyedir. Sıfırdan büyük bir sayı girmeniz gerekir ( `0` ).
-    - **Ekran koruyucuyu başlatmadan önce medyayı Algıla**: cihazda ses veya video yürütülıyorsa, **Etkinleştir** (varsayılan) ekran koruyucuyu göstermez. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, ses veya video oynatılsa bile ekran koruyucuyu gösterebilir.
+- **Tam olarak yönetilen**: tam olarak yönetilen cihazlarda Microsoft Başlatıcı uygulamasını yapılandırır.
+
+  - **Microsoft başlatıcısı 'nı varsayılan Başlatıcı yap**: **Enable** Microsoft başlatıcısı 'nı ana ekranda varsayılan başlatıcı olarak ayarlar. Başlatıcısı varsayılan olarak yaparsanız, kullanıcılar başka bir başlatıcı kullanamaz. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, Microsoft Başlatıcısı varsayılan başlatıcı olarak zorunlu değildir.
+
+<!-- The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
+
+  - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
+    - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
+    - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
+  - **Enable launcher feed**: **Enable** turns on the launcher feed, which shows calendars, documents, and recent activities. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, this feed isn't shown.
+    - **Allow user to enable/disable feed**: **Enable** lets users enable or disable the launcher feed. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the launcher feed settings.
+  - **Dock presence**: The dock gives users quick access to their apps and tools. Your options:
+    - **Not configured** (default): Intune doesn't change or update this setting.
+    - **Show**: The dock is shown on devices.
+    - **Hide**: The dock is hidden. Users must swipe up to access the dock.
+    - **Disabled**: The dock isn't shown on devices, and users are prevented from showing it.
+
+  - **Allow user to change dock presence**: **Enable** allows users to show or hide the dock. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users aren't allowed to change the device dock configuration.
+
+  - **Search bar replacement**: Choose where to put the search bar. Your options:
+    - **Not configured** (default): Intune doesn't change or update this setting.
+    - **Top**: Search bar is shown at the top of devices.
+    - **Bottom**: Search bar is shown at the bottom of devices.
+    - **Hide**: Search bar is hidden.
+
+  - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
+
+End of comment -->
 
 ### <a name="password"></a>Parola
 
@@ -298,8 +329,9 @@ Bu ayarlar, Intune 'un yalnızca bir kişisel veya kendi cihazındaki (BYOD) And
 
 - **İş ve kişisel profiller arasında kopyalama ve yapıştırma**: **blok** , iş ve kişisel uygulamalar arasında kopyalama ve yapıştırmayı önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, kullanıcıların kişisel profildeki uygulamalarla Kopyala ve yapıştır işlemlerini kullanarak veri paylaşmasına izin verebilir.
 - **İş ve kişisel profiller arasında veri paylaşımı**: iş profilindeki uygulamaların kişisel profildeki uygulamalarla paylaşıp paylaşabilmesini seçin. Örneğin, uygulamalar içinde paylaşım eylemlerini (paylaşım gibi) denetleyebilirsiniz **...** seçeneği gibi uygulamalardaki paylaşma eylemlerini denetler. Bu ayar, kopyala/yapıştır pano davranışında geçerli değildir. Seçenekleriniz şunlardır:
-  - **Cihaz varsayılanı**: cihaz, Android sürümüne bağlı olarak farklılık gösteren varsayılan paylaşım davranışıdır. Kişisel profilden iş profiline paylaşmaya varsayılan olarak izin verilir. Buna karşın iş profilinden kişisel profile paylaşma varsayılan olarak engellenir. Bu ayar, iş profilinden kişisel profile veri paylaşılmasını önler. Sürüm 6.0 ve üzerini çalıştıran cihazlarda Google kişisel profilden iş profiline paylaşımı engellemez.
-  - **Sınırlar arasında tüm paylaşımları engelle**: iş ve kişisel profiller arasında paylaşmayı engeller.
+  - **Cihaz varsayılanı**: cihazın varsayılan paylaşım davranışı, Android sürümüne bağlı olarak farklılık gösterir:
+    - Android 6,0 ve üzeri sürümlerde çalışan cihazlarda, iş profilinden kişisel profile paylaşım engellenir. Kişisel profilden iş profiline paylaşıma izin verilir.
+    - Android 5,0 ve üzeri sürümleri çalıştıran cihazlarda, iş profili ve kişisel profil arasında paylaşım her iki yönde de engellenir.
   - **İş profilindeki uygulamalar kişisel profilden gelen paylaşım isteklerini işleyebilir**: Kişisel profilden iş profiline paylaşıma izin veren yerleşik Android özelliğini etkinleştirir. Etkinleştirildiğinde, kişisel profildeki bir uygulamadan gelen bir paylaşım isteği, iş profilindeki uygulamalarla paylaşım kullanabilir. Bu ayar, 6.0 öncesi sürümleri çalıştıran Android cihazlarının varsayılan davranışıdır.
   - **Paylaşımda kısıtlama yok**: iş profili sınırları genelinde her iki yönde paylaşımı mümkün değildir. Bu ayarı seçtiğinizde, iş profilinizdeki uygulamalar kişisel profildeki rozetsiz uygulamalar ile veri paylaşabilir. Bu ayar iş profilindeki yönetilen uygulamaların cihazın yönetilmeyen kısmındaki uygulamalarla paylaşmasına izin verir. Bu nedenle bu ayarı dikkatli kullanın.
 

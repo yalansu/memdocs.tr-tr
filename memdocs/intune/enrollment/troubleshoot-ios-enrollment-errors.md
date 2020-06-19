@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97e837d99ee6f3558a408c443e32eb86fd803de6
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: 2b0c65e12349f8b4c887b5a633a1cd94c272ca5a
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814874"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093357"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune 'de iOS/ıpados cihaz kaydı sorunlarını giderme
 
@@ -220,6 +220,16 @@ Kayıt profili atanan bir ADE ile yönetilen bir cihazı açtığınızda, kimli
 #### <a name="resolution"></a>Çözüm
 MFA 'yı devre dışı bırakın ve ardından cihazı yeniden kaydedin.
 
+### <a name="authentication-doesnt-redirect-to-the-government-cloud"></a>Kimlik doğrulaması kamu bulutuna yönlendirmedi 
+
+Başka bir cihazdan oturum açan kamu kullanıcıları kamu bulutu yerine kimlik doğrulaması için genel buluta yönlendirilir. 
+
+**Neden:** Azure AD, başka bir cihazdan oturum açarken kamu bulutuna yeniden yönlendirmeyi henüz desteklememektedir. 
+
+#### <a name="resolution"></a>Çözüm 
+Kamu kullanıcılarına yönelik kimlik doğrulamasını kamu bulutuna yönlendirmek için **Ayarlar** uygulamasındaki IOS Şirket portalı **bulutu** ayarını kullanın. Varsayılan olarak, **bulut** ayarı **otomatik** olarak ayarlanır Şirket portalı ve kimlik doğrulamasını cihaz tarafından otomatik olarak algılanan buluta (kamu veya kamu gibi) yönlendirir. Başka bir cihazdan oturum açan kamu kullanıcılarının kimlik doğrulaması için kamu bulutunu el ile seçmeniz gerekir. 
+
+**Ayarlar** uygulamasını açın ve Şirket Portalı ' yi seçin. Şirket Portalı Ayarları ' nda **bulut**' u seçin. **Bulutu** kamu olarak ayarlayın.  
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

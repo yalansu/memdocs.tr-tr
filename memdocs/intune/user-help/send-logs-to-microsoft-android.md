@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/12/2018
+ms.date: 06/16/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7a842e97e0c276926c07f615a7f9089a64132b50
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: f83b5ae8cc621a6fab813267216900638ff27269
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881037"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094115"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-android-devices"></a>Günlükleri, Android cihazları için Şirket Portalı geliştiricilerine gönderme
 
@@ -43,6 +43,9 @@ Günlükleri Microsoft’a göndermek için:
     > **Menü**, Android cihazınızın türüne bağlı olarak bir yazılım düğmesi veya donanım düğmesi olabilir.
 
 3. **Yalnızca Günlük Yükle**’ye dokunun.
+
+    > [!NOTE]
+    > Bir Sovereign bulut ortamı kullanıyorsanız, Şirket Portalı gönderme günlüğü işlevleri sizin için kullanılabilir olmayacaktır. Günlükleri e-posta ile göndermeniz gerekir. 
 
 4. Karşıya yükleme tamamlandıktan sonra bir olay kimliği alırsınız. Kayıtlarınız için bu kimliği saklayın.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea4b196a6b2fade8ca926d13c3436207cb4b764e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: ee6ccebc9610f74f9f34c08bc8204e652e0a01db
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429764"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85092882"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Intune’da Windows 10 ve üzeri cihazlar için Wi-Fi ayarları ekleme
 
@@ -34,6 +34,8 @@ Bu makalede bu ayarlar açıklanır.
 [Cihaz profili oluşturma](wi-fi-settings-configure.md).
 
 ## <a name="basic-profile"></a>Temel profil
+
+Temel veya kişisel profiller, cihazlarda Wi-Fi bağlantısını güvenli hale getirmek için WPA/WPA2 kullanır. Genellikle, WPA/WPA2, ev ağlarında veya kişisel ağlarda kullanılır. Ayrıca, bağlantının kimliğini doğrulamak için önceden paylaşılan bir anahtar ekleyebilirsiniz.
 
 - **Wi-Fi türü**: **Temel**’i seçin. 
 
@@ -70,6 +72,8 @@ Bu makalede bu ayarlar açıklanır.
   - **Otomatik Yapılandır**: proxy otomatik yapılandırma (PAC) betiğine işaret eden URL 'yi girin. Örneğin, `http://proxy.contoso.com/proxy.pac` girin.
 
 ## <a name="enterprise-profile"></a>Kurumsal profil
+
+Kurumsal profiller, Wi-Fi bağlantılarının kimliğini doğrulamak için Genişletilebilir Kimlik Doğrulama Protokolü (EAP) kullanır. EAP, sertifikaların kimliğini doğrulamak ve güvenli hale getirmek için sertifikaları kullanabilir ve daha fazla güvenlik seçeneği yapılandırabilmek için genellikle kuruluşlar tarafından kullanılır.
 
 - **Wi-Fi türü**: **Kurumsal**’ı seçin.
 
@@ -116,7 +120,7 @@ Bu makalede bu ayarlar açıklanır.
     **EAP-TLS, EAP-TTLS ve PEAP ek ayarları**:
 
     > [!NOTE]
-    > Şu anda, EAP türünü kullanırken yalnızca SCEP sertifika profilleri destekleniyor. PKCS sertifika profilleri desteklenmiyor. Kullanıcıdan her sertifika girişi istendiğinde, bir SCEP sertifikası seçtiğinizden emin olun.
+    > Bir EAP türü kullanılırken SCEP ve PKCS sertifika profilleri desteklenir.
 
     - **Sunucu Güveni**  
 

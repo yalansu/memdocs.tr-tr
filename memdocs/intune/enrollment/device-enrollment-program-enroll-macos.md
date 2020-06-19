@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 196fc4f551596a6146513d25166b1b167aa44186
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: bfcc4a8e867041e0053697bbee605f9798e45bec
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986678"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093927"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>MacOS cihazlarını Apple Business Manager veya Apple Okul Yöneticisi ile otomatik olarak kaydetme
 
@@ -46,7 +46,7 @@ Apple Business Manager kaydı veya Apple Okul Yöneticisi, [cihaz kayıt yöneti
 -->
 ## <a name="prerequisites"></a>Ön koşullar
 
-- [Apple School Manager](https://school.apple.com/) veya [Apple Aygıt Kayıt Programı](http://deploy.apple.com) ile satın alınan cihazlar
+- [Apple Okul Yöneticisi](https://school.apple.com/) veya [Apple 'ın otomatik cihaz kaydında](http://deploy.apple.com) satın alınan cihazlar
 - Seri numarası listesi veya satın alma sipariş numarası.
 - [MDM yetkilisi](../fundamentals/mdm-authority-set.md)
 - [Apple MDM anında Iletme sertifikası](../enrollment/apple-mdm-push-certificate-get.md)
@@ -62,24 +62,25 @@ Belirteci oluşturmak için Apple portalını kullanabilirsiniz. Cihazları yön
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Adım 1. Belirteci oluşturmak için gereken Intune ortak anahtar sertifikasını indirin
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **MacOS**  >  **MacOS kaydı**  >  **kayıt programı belirteçleri**  >  **Ekle**' yi seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **MacOS**  >  **MacOS kaydı**' nı seçin. 
+> **Kayıt programı belirteçleri**  >  **Ekleyin**.
 
-    ![Bir kayıt programı belirteci alın.](./media/device-enrollment-program-enroll-macos/image01.png)
+    ![Get an enrollment program token.](./media/device-enrollment-program-enroll-macos/image01.png)
 
 2. **Onaylıyorum**’u seçerek Microsoft’un Apple’a kullanıcı ve cihaz bilgilerini göndermesine izin verin.
 
-   ![Apple Sertifikaları çalışma alanındaki Kayıt Programı Belirteci panelinde bulunan ortak anahtarı indirme öğesinin ekran görüntüsü.](./media/device-enrollment-program-enroll-macos/add-enrollment-program-token-pane.png)
+   ![Apple Sertifikaları çalışma alanındaki Kayıt Programı Belirteci panelinde bulunan ortak anahtarı indirme öğesinin ekran görüntüsü.](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
 3. Şifreleme dosyasını (.pem) indirmek ve yerel olarak kaydetmek için **Ortak anahtarınızı indirin** öğesini seçin. .pem dosyası Apple portalından güven ilişkisi sertifikası istemek için kullanılır.
 
 ### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>Adım 2. Apple 'dan bir belirteç indirmek için anahtarınızı kullanın
 
-1. **Apple'ın Aygıt Kayıt Programı için belirteç oluştur** veya **Apple School Manager ile belirteç oluştur** seçeneklerinden birini belirleyerek ilgili Apple portalını açın ve şirketinize ait Apple kimliğiyle oturum açın. Belirtecinizi yenilemek için de bu Apple kimliğini kullanabilirsiniz.
+1. Apple **Business Manager aracılığıyla bir belirteç oluştur** ' u seçin veya **Apple Okul Yöneticisi 'ni kullanarak bir belirteç oluşturun** ve uygun Apple portalını açın ve şirketinizin Apple kimliğiyle oturum açın. Belirtecinizi yenilemek için de bu Apple kimliğini kullanabilirsiniz.
 2. DEP için Apple portalında **Kullanmaya Başlayın**, **Aygıt Kayıt Programı** > **Sunucuları Yönet** > **MDM Sunucusu Ekle** yolunu izleyin.
 3. Apple Okul yönetimi için, Apple portalında **MDM sunucuları**  >  **MDM sunucusu Ekle**' yi seçin.
 4. **MDM Sunucu Adı**'nı girin ve ardından **İleri**'yi seçin. Sunucu adı, mobil cihaz yönetimi (MDM) sunucusunu tanımlarken kullanmanız içindir. Microsoft Intune sunucusunun adı veya URL'si değildir.
 
-5. **Ekle &lt;ServerName&gt;** iletişim kutusu açılır ve **Ortak Anahtarınızı Yükleyin** ifadesi yazar. **Dosya Seç…** öğesini seçin .pem dosyasını karşıya yükleyin ve ardından **İleri**'yi seçin.
+5. **Ekle &lt;ServerName&gt;** iletişim kutusu açılır ve **Ortak Anahtarınızı Yükleyin** ifadesi yazar. **Dosya Seç…** öğesini seçin. .pem dosyasını karşıya yükleyin ve ardından **İleri**'yi seçin.
 
 6. **Dağıtım Programları** &gt; **Cihaz Kayıt Programı** &gt; **Cihazları Yönet**'e gidin.
 7. **Cihazları Şuna Göre Seç:** öğesinin altında cihazların nasıl tanımlanacağını belirtin:
@@ -95,7 +96,7 @@ Belirteci oluşturmak için Apple portalını kullanabilirsiniz. Cihazları yön
 
 [Microsoft Uç Nokta Yöneticisi Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), daha sonra başvurmak üzere Apple kimliğini sağlayın.
 
-![Kayıt programı belirtecini oluşturmak için kullanılan Apple kimliğini belirtme ve kayıt programı belirtecine gözatma işleminin ekran görüntüsü.](./media/device-enrollment-program-enroll-macos/image03.png)
+![Kayıt programı belirtecini oluşturmak için kullanılan Apple kimliğini belirtme ve kayıt programı belirtecine gözatma işleminin ekran görüntüsü.](./media/device-enrollment-program-enroll-ios/image03.png)
 
 ### <a name="step-4-upload-your-token"></a>4. Adım. Belirtecinizi karşıya yükleme
 **Apple belirteci** kutusunda sertifika (.pem) dosyasına gözatın, **Aç**’ı ve daha sonra **Oluştur**’u seçin. Anında iletme sertifikasıyla, Intune ilkeyi kayıtlı cihazlara ileterek macOS cihazlarını kaydedebilir ve yönetebilir. Intune, kayıt programı hesabınızı görmek için Apple ile otomatik olarak eşitlenir.
@@ -109,24 +110,28 @@ Belirtecinizi yüklediğinize göre, cihazlar için kayıt profili oluşturabili
 
     ![Profil oluşturma ekran görüntüsü.](./media/device-enrollment-program-enroll-macos/image04.png)
 
-3. **Profil Oluştur**’un altında, yönetim amaçları doğrultusunda profil için bir **Ad** ve **Açıklama** girin. Kullanıcılar bu ayrıntıları göremez. Azure Active Directory’de dinamik bir grup oluşturmak için **Ad** alanını kullanabilirsiniz. enrollmentProfileName parametresini, bu kayıt profiliyle cihazlara atamak amacıyla tanımlamak için profil adını kullanın. [Azure Active Directory dinamik grupları](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) hakkında daha fazla bilgi edinin.
+3. **Temel bilgiler** sayfasında, yönetim amaçları için profil Için bir **ad** ve **Açıklama** girin. Kullanıcılar bu ayrıntıları göremez. Azure Active Directory’de dinamik bir grup oluşturmak için **Ad** alanını kullanabilirsiniz. enrollmentProfileName parametresini, bu kayıt profiliyle cihazlara atamak amacıyla tanımlamak için profil adını kullanın. [Azure Active Directory dinamik grupları](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) hakkında daha fazla bilgi edinin.
 
     ![Profil adı ve açıklaması.](./media/device-enrollment-program-enroll-macos/createprofile.png)
 
 4. **Platform** olarak **macOS** seçin.
 
-5. **Kullanıcı Benzeşimi** için bu profile sahip cihazların atanan kullanıcıyla mı yoksa atanan kullanıcı olmadan mı kaydedilmesi gerektiğini seçin.
+5. **İleri ' yi** seçerek **yönetim ayarları** sayfasına gidin.
+
+6. **Kullanıcı Benzeşimi** için bu profile sahip cihazların atanan kullanıcıyla mı yoksa atanan kullanıcı olmadan mı kaydedilmesi gerektiğini seçin.
     - **Kullanıcı Benzeşimi ile kaydet** - Uygulamaları yükleme gibi hizmetler için Şirket Portalı uygulamasını kullanmak isteyen kullanıcılara ait cihazlar için bu seçeneği belirtin. ADFS kullanılıyorsa kullanıcı benzeşimi, [WS-Trust 1.3 Kullanıcı adı/Karma uç noktası](https://technet.microsoft.com/library/adfs2-help-endpoints) gerektirir. [Daha fazla bilgi edinin](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint). Çok faktörlü kimlik doğrulaması, Kullanıcı benzeşimi olan macOS ADE cihazları için desteklenmez.
 
     - **Kullanıcı Benzeşimi Olmadan Kaydetme** - Tek bir kullanıcıyla bağlantılı olmayan cihazlar için bu seçeneği seçin. Yerel kullanıcı verilerine erişmeden görevleri yerine getiren cihazlar için bunu kullanın. Şirket Portalı uygulama gibi uygulamalar çalışmaz.
 
-6. **Cihaz Yönetim Ayarları**’nı seçin ve bu profili kullanan cihazlar için kilitli kayıt isteyip istemediğinizi belirtin. **Kilitli kayıt**, yönetim profilinin **Sistem Tercihleri** menüsünden veya **Terminal** aracılığıyla kaldırılmasını sağlayan macOS ayarlarını devre dışı bırakır. Cihazı kaydettikten sonra cihazı silmeden bu ayarı değiştiremezsiniz.
+6. **Kullanıcı benzeşimi Ile kaydet**' i seçerseniz, **kimlik doğrulama yöntemi** altında, **modern kimlik doğrulamasıyla** **Kurulum Yardımcısı (eski)** veya Kurulum Yardımcısı ' nı seçin.
 
-    ![Cihaz Yönetimi Ayarları ekran görüntüsü.](./media/device-enrollment-program-enroll-macos/devicemanagementsettingsblade-macos.png)
+7. **Kilitli kayıt**için, bu profili kullanan cihazlar için kilitli kayıt isteyip istemediğinizi seçin. **Evet** seçeneği, yönetim profilinin **Sistem Tercihleri** menüsünden veya **Terminal**aracılığıyla kaldırılmasına izin veren MacOS ayarlarını devre dışı bırakır. Cihazı kaydettikten sonra cihazı silmeden bu ayarı değiştiremezsiniz.
 
-7. **Tamam ' ı**seçin.
+8. **İleri ' yi** seçerek **Kurulum Yardımcısı** sayfasına gidin.
 
-8. Şu profil ayarlarını yapılandırmak için **Kurulum Yardımcısı Ayarları**’nı seçin: ![Kurulum Yardımcısı Özelleştirme.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
+9. **Kurulum Yardımcısı** sayfasında, aşağıdaki profil ayarlarını yapılandırın:
+
+    ![Kurulum Yardımcısı özelleştirme.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
     | Departman ayarları | Açıklama |
     |---|---|
@@ -139,34 +144,36 @@ Belirtecinizi yüklediğinize göre, cihazlar için kayıt profili oluşturabili
 
     | Kurulum Yardımcısı ekran ayarları | **Göster**'i seçerseniz, kurulum sırasında cihaz... |
     |------------------------------------------|------------------------------------------|
-    | <strong>Geçiş kodu</strong> | Kullanıcıdan geçiş kodu ister. Cihazın güvenliği sağlanmayacaksa veya erişim denetimi başka bir yolla (cihazı tek uygulamayla sınırlandıran bilgi noktası modu) uygulanmayacaksa her zaman geçiş kodu gerektirir. |
-    | <strong>Konum Hizmetleri</strong> | Kullanıcıdan konum ister. |
-    | <strong>Geri Yükleme</strong> | Uygulamalar & veri ekranını görüntüleyin. Bu ekran kullanıcıya cihazı kurarken iCloud Backup'tan verileri geri yükleme veya aktarma seçeneği sağlar. |
-    | <strong>iCloud ve Apple Kimliği</strong> | Kullanıcıya **Apple Kimliği** ile oturum açma ve **iCloud**'u kullanma seçenekleri sağlar.                         |
-    | <strong>Hüküm ve Koşullar</strong> | Kullanıcının Apple'ın hüküm ve koşullarını kabul etmesini gerektirir. |
-    | <strong>Touch ID</strong> | Kullanıcıya cihaz için parmak izi tanımlama özelliğini ayarlama seçeneği sağlar. |
-    | <strong>Apple Pay</strong> | Kullanıcıya cihazda Apple Pay ayarlama seçeneği sağlar. |
-    | <strong>Zoom</strong> | Kullanıcıya cihazı ayarlarken ekranı yakınlaştırma seçeneği sağlar. |
-    | <strong>Siri</strong> | Kullanıcıya Siri'yi ayarlama seçeneği sağlar. |
-    | <strong>Tanılama Verileri</strong> | Kullanıcıya Tanılama ekranını görüntüler. Bu ekran kullanıcıya Apple'a tanılama verileri gönderme seçeneği sağlar. |
-    | <strong>FileVault</strong> | Kullanıcıya FileVault şifrelemesini ayarlama seçeneği sağlar. |
-    | <strong>iCloud Tanılaması</strong> | Kullanıcıya Apple'a iCloud tanılama verileri gönderme seçeneği sağlar. |
-    | <strong>iCloud Depolama</strong> | Kullanıcıya iCloud depolamayı kullanma seçeneği sağlar. |    
-    | <strong>Görüntü Tonu</strong> | Kullanıcıya Görüntü Tonunu açma seçeneği sunar. |
-    | <strong>Görünüm</strong> | Kullanıcıya Görünüm ekranını gösterir. |
-    | <strong>Kayıt</strong>| Kullanıcının cihazı kaydetmesini gerektirir. |
-    | <strong>Gizlilik</strong>| Kullanıcıya Gizlilik ekranını gösterir. |
-    | <strong>Ekran Süresi</strong>| Kullanıcıya ekran zaman ekranını görüntüleyin. |
+    | <strong>Geçiş kodu</strong> | Kullanıcıdan geçiş kodu ister. Güvenliği sağlanmayan veya erişim denetimi başka bir yolla (cihazı tek uygulamayla sınırlandıran bilgi noktası modu gibi) sağlanan cihazlar için her zaman geçiş kodu isteyin. İOS/ıpados 7,0 ve üzeri için. |
+    | <strong>Konum Hizmetleri</strong> | Kullanıcıdan konum ister. MacOS 10,11 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
+    | <strong>Geri Yükleme</strong> | Uygulamalar & veri ekranını görüntüleyin. Bu ekran kullanıcıya cihazı kurarken iCloud Backup'tan verileri geri yükleme veya aktarma seçeneği sağlar. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
+    | <strong>Apple KIMLIĞI</strong> | Kullanıcıya Apple Kimliği ile oturum açma ve iCloud'u kullanma seçenekleri sağlar. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için.   |
+    | <strong>Hüküm ve Koşullar</strong> | Kullanıcının Apple'ın hüküm ve koşullarını kabul etmesini gerektirir. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
+    | <strong>Touch ID</strong> | Kullanıcıya cihaz için parmak izi tanımlama özelliğini ayarlama seçeneği sağlar. MacOS 10.12.4 ve üzeri ve iOS/ıpados 8,1 ve üzeri için. |
+    | <strong>Apple Pay</strong> | Kullanıcıya cihazda Apple Pay ayarlama seçeneği sağlar. MacOS 10.12.4 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
+    | <strong>Zoom</strong> | Kullanıcıya cihazı ayarlarken ekranı yakınlaştırma seçeneği sağlar. İOS/ıpados 8,3 ve üzeri için. |
+    | <strong>Siri</strong> | Kullanıcıya Siri'yi ayarlama seçeneği sağlar. MacOS 10,12 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
+    | <strong>Tanılama Verileri</strong> | Kullanıcıya Tanılama ekranını görüntüler. Bu ekran kullanıcıya Apple'a tanılama verileri gönderme seçeneği sağlar. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
+    | <strong>FileVault</strong> | Kullanıcının dosya Kasası 2 şifreleme ekranını görüntüleyin. MacOS 10,10 ve üzeri için. |
+    | <strong>iCloud tanılama</strong> | Kullanıcıya iCloud Analytics ekranını görüntüleyin. MacOS 10.12.4 ve üzeri için. |
+    | <strong>iCloud Depolama</strong> | Kullanıcıya iCloud belgelerini ve masaüstü ekranını görüntüleyin. MacOS 10.13.4 ve üzeri için. |
+    | <strong>Görüntü Tonu</strong> | Kullanıcıya Görüntü Tonunu açma seçeneği sunar. MacOS 10.13.6 ve üzeri ve iOS/ıpados 9.3.2 ve üzeri için. |
+    | <strong>Görünüm</strong> | Kullanıcıya Görünüm ekranını gösterir. MacOS 10,14 ve üzeri ve iOS/ıpados 13,0 ve üzeri için. |
+    | <strong>Kayıt</strong> | Kullanıcının kayıt ekranını görüntüleyin. MacOS 10,9 ve üzeri için. |
+    | <strong>Ekran Süresi</strong> | Ekran Süresi ekranını görüntüler. MacOS 10,15 ve üzeri ve iOS/ıpados 12,0 ve üzeri için. |
+    | <strong>Gizlilik</strong> | Kullanıcıya Gizlilik ekranını gösterir. MacOS 10.13.4 ve üzeri ve iOS/ıpados 11,3 ve üzeri için. |
+    
+10. **İleri ' yi** seçerek **gözden geçir + oluştur** sayfasına gidin.
 
-9. **Tamam ' ı**seçin.
-
-10. Profili kaydetmek için **Oluştur**’u seçin.
+11. Profili kaydetmek için **Oluştur**’u seçin.
 
 ## <a name="sync-managed-devices"></a>Yönetilen cihazları eşitleme
 
 Artık Intune’a cihazlarınızı yönetme izni verildiğine göre, yönetilen cihazlarınızı Intune’da Azure portalında görmek için Intune’u Apple ile eşitleyebilirsiniz.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **MacOS** > **MacOS kaydı** > **kayıt programı belirteçleri** ' ni seçin > > **cihazlar** eşitleme listesinde bir belirteç seçin > **Sync**. ![ Kayıt programı cihazları düğümünün seçili olduğu ve eşitleme bağlantısının seçildiği ekran görüntüsü.](./media/device-enrollment-program-enroll-macos/image06.png)
+1. [Microsoft Uç Nokta Yöneticisi Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **cihazlar**  >  **MacOS**  >  **MacOS kaydı**  >  **kayıt programı belirteçleri**' ni seçin.
+
+2. Cihaz eşitleme > listede bir belirteç seçin **Devices** > **Sync**. ![ Kayıt programı cihazları düğümünün seçili olduğu ve eşitleme bağlantısının seçildiği ekran görüntüsü.](./media/device-enrollment-program-enroll-macos/image06.png)
 
    Intune 'un kabul edilebilir kayıt programı trafiği koşullarına uymak için, Intune aşağıdaki kısıtlamaları uygular:
    - Tam eşitleme en sık yedi günde bir çalıştırılabilir. Tam eşitleme sırasında Intune, Intune’a bağlı Apple MDM sunucusuna atanan seri numaraların tam güncelleştirilmiş bir listesini alır. Bir kayıt programı cihazının Apple portalında Apple MDM sunucusundan atanmamış olması gerekmeden, Intune portalından silindikten sonra, tam eşitleme çalıştırılıncaya kadar Intune 'a yeniden içeri aktarılmaz.   
@@ -201,10 +208,10 @@ Apple ve Intune arasında eşitlemeyi ve yönetimi etkinleştirdiniz ve cihazlar
 
 4. **Sunucu Belirteciniz**’i seçin.  
 5. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **cihaz kaydı**  >  **Apple kaydı**  >  **kayıt programı belirteçleri** ' ni seçin > belirteci seçin.
-    ![Kayıt programı belirteçlerinin ekran görüntüsü.](./media/device-enrollment-program-enroll-macos/enrollmentprogramtokens.png)
+    ![Kayıt programı belirteçlerinin ekran görüntüsü.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
 6. **Belirteci yenile**’yi seçin ve orijinal belirteci oluşturmak için kullanılan Apple kimliğini girin.  
-    ![Yeni belirteç oluşturma ekran görüntüsü.](./media/device-enrollment-program-enroll-macos/renewtoken.png)
+    ![Yeni belirteç oluşturma ekran görüntüsü.](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
 7. Yeni indirilen belirteci karşıya yükleyin.  
 8. **Belirteci yenile**’yi seçin. Belirtecin yenilendiğine dair onayı görürsünüz.

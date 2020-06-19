@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac29e27c85ad43ccc078c54dd9d5b8b659206f57
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e8f400c946f26de272b782194df3f1b1930ab0b4
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81397773"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093509"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Microsoft Intune cihaz kaydı sorunlarını giderme
 
@@ -57,15 +57,15 @@ Bu sorunlar, tüm cihaz platformlarında oluşabilir.
 ### <a name="device-cap-reached"></a>Cihaz sınırına ulaşıldı
 **Sorun:** Kullanıcı kayıt sırasında bir hata alıyor ( **Şirket portalı geçici olarak kullanılamıyor**).
 
-**Çözünürlüğüne**
+**Çözüm:**
 
 #### <a name="check-number-of-devices-enrolled-and-allowed"></a>Kaydedilen ve izin verilen cihazların sayısını denetleme
 
 Aşağıdaki adımları izleyerek kullanıcıya cihaz sayısı üst sınırını aşan sayıda cihaz atanıp atanmadığını denetleyin:
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar** > **Kayıt kısıtlamaları** > **cihaz sınırı kısıtlamaları**' nı seçin. **Cihaz sınırı** sütunundaki değeri not alın.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar**  >  **Kayıt kısıtlamaları**  >  **cihaz sınırı kısıtlamaları**' nı seçin. **Cihaz sınırı** sütunundaki değeri not alın.
 
-2. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **Kullanıcılar** > **tüm kullanıcılar** ' ı seçin > Kullanıcı > **cihazları**seçin. Cihaz sayısını not alın.
+2. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **Kullanıcılar**  >  **tüm kullanıcılar** ' ı seçin > Kullanıcı > **cihazları**seçin. Cihaz sayısını not alın.
 
 3. Kullanıcının kayıtlı cihazlarının sayısı şimdiden cihaz sınırı kısıtlamasına eşitse, aşağıdakilerden biri gerçekleşene kadar başka kaydedemez:
     - [Mevcut cihazlar kaldırılır](../remote-actions/devices-wipe.md) veya
@@ -82,11 +82,11 @@ Cihaz sınırlarına ulaşmaktan kaçınmak için, eski cihaz kayıtlarını kal
 ### <a name="company-portal-temporarily-unavailable"></a>Şirket Portalı Geçici Olarak Devre Dışı
 **Sorun:** Kullanıcılar, cihazlarında **Şirket Portalı Geçici Olarak Devre Dışı** hatası alıyor.
 
-**Çözünürlüğüne**
+**Çözüm:**
 
 1. Intune Şirket Portalı uygulamasını cihazınızdan kaldırın.
 
-2. Cihazda, tarayıcıyı açın, [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com)bir Kullanıcı oturumu açmayı deneyin ve oturum açın.
+2. Cihazda, tarayıcıyı açın, [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) bir Kullanıcı oturumu açmayı deneyin ve oturum açın.
 
 3. Kullanıcı oturum açamazsa, başka bir ağ denemelidir.
 
@@ -97,7 +97,7 @@ Cihaz sınırlarına ulaşmaktan kaçınmak için, eski cihaz kayıtlarını kal
 ### <a name="mdm-authority-not-defined"></a>MDM yetkilisi tanımlı değil
 **Sorun:** Bir kullanıcı, **MDM yetkilisi tanımlı değil** hatası alıyor.
 
-**Çözünürlüğüne**
+**Çözüm:**
 
 1. MDM Yetkilisinin [uygun şekilde ayarlandığını](../fundamentals/mdm-authority-set.md) doğrulayın.
     
@@ -159,7 +159,7 @@ Kullanıcılarınız Şirket Portalı uygulamasını el ile başlatmalarını s�
 
 **Çözüm #2:**
 
-Kullanıcılarınıza cihazlarını Android 6.0 sürümüne yükseltmeyi denemelerini söyleyin. Devre dışı bırakma sorunu Android 6.0 cihazlarda yoktur. Bir güncelleştirmenin kullanılabilir olup olmadığını denetlemek için **Ayarlar** > **cihaz** > **indirme güncelleştirmeleri el ile** ' ye gidin > istemleri izleyin.
+Kullanıcılarınıza cihazlarını Android 6.0 sürümüne yükseltmeyi denemelerini söyleyin. Devre dışı bırakma sorunu Android 6.0 cihazlarda yoktur. Bir güncelleştirmenin kullanılabilir olup olmadığını denetlemek için **Ayarlar**  >  **cihaz**  >  **indirme güncelleştirmeleri el ile** ' ye gidin > istemleri izleyin.
 
 **Çözüm #3:**
 
@@ -193,7 +193,7 @@ Kullanıcılarınıza cihazlarını Android 6.0 sürümüne yükseltmeyi denemel
 ### <a name="profile-installation-failed"></a>Profil yüklemesi başarısız oldu
 **Sorun:** Bir kullanıcı, bir Android cihazında **Profil yüklemesi başarısız oldu** hatasını alıyor.
 
-**Çözünürlüğüne**
+**Çözüm:**
 
 1. Kullanıcıya Intune hizmetinin kullandığınız sürümü için uygun bir lisans atandığını doğrulayın.
 
@@ -219,19 +219,19 @@ Sertifika hatasının nedeni, Android cihazlarında [SSL Sunucu selamlamasına](
 
 Sorunu düzeltmek için AD FS sunucusunda veya proxy’lerdeki Bilgisayar Kişisel Sertifikaları’na sertifikaları aşağıdaki gibi içeri aktarın:
 
-1. ADFS ve proxy sunucularında, yerel makine sertifika yönetimi konsolunu **başlatmak için** > **Run** > **Certlm. msc** Çalıştır ' a sağ tıklayın.
+1. ADFS ve proxy sunucularında, **Start**  >  **Run**  >  yerel makine sertifika yönetimi konsolunu başlatmak için**Certlm. msc** Çalıştır ' a sağ tıklayın.
 2. **Kişisel**’i genişletip **Sertifikalar**’ı seçin.
 3. AD FS hizmeti iletişiminizin sertifikasını (ortak olarak imzalanmış bir sertifika) bulun ve özelliklerini görüntülemek için çift tıklayın.
 4. Sertifikanın üst sertifikası/s ' nı görmek için **sertifika yolu** sekmesini seçin.
 5. Her üst sertifikada, **Sertifikayı Görüntüle**’yi seçin.
-6. **Ayrıntıları** > **Dosyaya Kopyala...** seçeneğini belirleyin.
+6. **Ayrıntıları**  >  **Dosyaya Kopyala...** seçeneğini belirleyin.
 7. Üst sertifikanın ortak anahtarını istediğiniz dosya konumuna dışarı aktarmak veya kaydetmek için sihirbaz yönergelerini izleyin.
-8. **Sertifikalar** > **Tüm görevler** > **içeri aktar**' a sağ tıklayın.
+8. **Sertifikalar**  >  **Tüm görevler**  >  **içeri aktar**' a sağ tıklayın.
 9. Üst sertifikaları **Yerel Bilgisayar\Kişisel\Sertifikalar** konumuna içeri aktarmak için sihirbazdaki istemleri izleyin.
 10. AD FS sunucularını yeniden başlatın.
 11. Tüm AD FS ve proxy sunucularınızda yukarıdaki adımları yineleyin.
 
-Uygun bir sertifika yüklemesini doğrulamak için, ' de [https://www.digicert.com/help/](https://www.digicert.com/help/)bulunan Tanılama aracını kullanabilirsiniz. **Sunucu adresi** kutusuna ADFS sunucunuzun FQDN 'SINI (ıe: STS.contso.com) girin ve **sunucuyu denetle**' ye tıklayın.
+Uygun bir sertifika yüklemesini doğrulamak için, ' de bulunan Tanılama aracını kullanabilirsiniz [https://www.digicert.com/help/](https://www.digicert.com/help/) . **Sunucu adresi** kutusuna ADFS sunucunuzun FQDN 'SINI (ıe: STS.contso.com) girin ve **sunucuyu denetle**' ye tıklayın.
 
 **Sertifikanın düzgün yüklendiğini doğrulamak için**:
 
@@ -310,7 +310,7 @@ Daha fazla bilgi için bkz. [Active Directory Federasyon Hizmetleri’nin güven
 
 3. Cihazın zaten yüklü bir yönetim profili olmadığını doğrulayın.
 
-4. [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) ' A gidin ve istendiğinde profili yüklemeyi deneyin.
+4. ' A gidin [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) ve istendiğinde profili yüklemeyi deneyin.
 
 5. İOS/ıpados için Safari 'nin varsayılan tarayıcı olduğunu ve tanımlama bilgilerinin etkinleştirildiğini doğrulayın.
 
@@ -339,7 +339,7 @@ Bu sorun şu koşullarda oluşabilir:
 4. Kullanıcıya kayıt işlemini yeniden başlatmasını söyleyin.
 
 #### <a name="determine-if-theres-something-wrong-with-the-vpp-token"></a>VPP belirtecinde bir şeyin yanlış gidip gitmediğini belirleyin
-1. [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **iOS** > **iOS kayıt** > **kayıt programı belirteçleri** > belirteç adı > **profiller** > profil adı > **Yönet** > ' i**seçin.**
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **iOS/ıpados**  >  **iOS kayıt**  >  **kayıt programı belirteçleri** > belirteç adı > **profiller** > profil adı > **yönetme**  >  **özellikleri**.
 2. Aşağıdaki gibi bir hata olup olmadığını görmek özellikleri gözden geçirin:
     - Bu belirtecin süresi sona erdi.
     - Bu belirtecin Şirket Portalı lisansları bitti.
@@ -349,13 +349,13 @@ Bu sorun şu koşullarda oluşabilir:
 3. Belirtecin sorunlarını giderin.
 
 #### <a name="identify-which-devices-are-blocked-by-the-vpp-token"></a>VPP belirteci tarafından engellenen cihazları belirleme
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar** > **iOS**k > **iOS kayıt** > **kayıt programı belirteçleri** > belirteç adı > **cihazları**' nı seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **iOS/ıpados**k > **iOS kayıt**  >  **kayıt programı belirteçleri** > belirteç adı > **cihazları**' nı seçin.
 2. **Profil durumu** sütununu **Engellendi**'ye göre filtreleyin.
 3. **Engellenen** tüm cihazların seri numaralarını not edin.
 
 #### <a name="remotely-wipe-the-blocked-devices"></a>Engellenen cihazları uzaktan silme
 VPP belirteciyle ilgili sorunları düzelttikten sonra, engellenen cihazları silmelisiniz.
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **tüm cihazlar** > **sütunları** > **seri numarası** > **Uygula**' yı seçin. 
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **tüm cihazlar**  >  **sütunları**  >  **seri numarası**  >  **Uygula**' yı seçin. 
 2. Engellenen her cihazı **Tüm cihazlar** listesinde seçin, ardından **Sil** > **Evet**'i seçin.
 
 #### <a name="tell-the-users-to-restart-the-enrollment-process"></a>Kullanıcılara kayıt işlemini yeniden başlatmalarını söyleyin
@@ -380,7 +380,7 @@ Engellenen cihazları sildikten sonra kullanıcılara kayıt işlemini yeniden b
 - Cihaz hala Intune’da başka bir kullanıcıya atanmış durumdaysa, eski kullanıcı Şirket Portalı uygulamasını kullanarak cihazı kaldırmamış veya sıfırlamamış demektir. Eski cihaz kaydını Intune’dan kaldırmak için:  
 
     1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), yönetici kimlik bilgilerinizle oturum açın.
-    2. **Cihazlar** > **tüm cihazlar**' ı seçin.  
+    2. **Cihazlar**  >  **tüm cihazlar**' ı seçin.  
     3. Kayıt sorunu yaşayan cihazı bulun. Sonuçları daraltmak için cihaz adına veya MAC/Donanım Adresine göre arayın.
     4. Cihazı seçin > **Sil**’e tıklayın. Cihazla ilişkili diğer tüm girişleri silin.  
 
@@ -400,10 +400,10 @@ Bu hata bilgisayarda şu koşullarda oluşabilir:
 - daha önce kaydedilmiş bir bilgisayarın kopyalanmış bir görüntüsünü içeriyordur.
 Önceki hesabın hesap sertifikası hala bilgisayarda duruyordur.
 
-**Çözünürlüğüne**
+**Çözüm:**
 
 1. **Başlangıç** menüsünde, **Çalıştır** -> **MMC** yazın.
-1. **Dosya** > **Ekle/Kaldır ek bileşenlerini**seçin.
+1. **Dosya**  >  **Ekle/Kaldır ek bileşenlerini**seçin.
 1. **Sertifikalar**’a çift tıklayın, **Bilgisayar hesabı** > **İleri**’yi ve sonra **Yerel Bilgisayar**’ı seçin.
 1. **Sertifikalar (Yerel bilgisayar)** seçeneğine çift tıklayın ve **Kişisel/ Sertifikalar**’ı seçin.
 1. Sc_Online_Issuing tarafından verilen Intune sertifikasını arayın ve bulursanız silin.

@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune - Azure ile uyumsuzluk iletisi ve eylemleri | Microsoft Docs
-description: Uyumlu olmayan cihazlara gönderilmek üzere bir bildirim e-postası oluşturun. Cihaz uyumlu değil olarak işaretlendikten sonraki eylemleri ekleyin. Örneğin uyumluluğu sağlamak için bir yetkisiz kullanım süresi ekleyebilir veya cihaz uyumlu duruma gelene kadar erişimi engellemek için bir zamanlama oluşturabilirsiniz. Bunu yapmak için Azure'da Microsoft Intune’u kullanın.
+description: Uyumlu olmayan cihazlara gönderilmek üzere bir bildirim e-postası oluşturun. Uyumluluk ilkelerinizi karşılamayan cihazlara uygulanacak eylemleri ekleyin. İşlemler, uyumluluk sağlamak, ağ kaynaklarına erişimi engellemek veya uyumsuz cihazı devre dışı bırakmak için bir yetkisiz kullanım süresi içerebilir.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fff21eac61f7b68e00989aefc1f9ea6dc3ad7c0a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 330dd566599d6bdb1fa667d8797878ea8c92f098
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989320"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093738"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Intune 'da uyumsuz cihazlar için eylemleri yapılandırma
 
@@ -29,11 +29,11 @@ Uyumluluk ilkelerinizi veya kurallarınızı karşılamayan cihazlarda **uyumsuz
 
 ## <a name="overview"></a>Genel Bakış
 
-Varsayılan olarak, her uyumluluk ilkesi, sıfır gün (**0**) zamanlamasıyla **uyumsuz olarak işaretle cihaz** uyumsuzluğu için eylemi içerir. Bu varsayılan değer, Intune 'un bir cihazın uyumlu olmadığını algıladığında, Intune 'un cihazı uyumsuz olarak işaretlediği bir sonucudur. Daha sonra, Azure Active Directory (AD) [koşullu erişim](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) cihazı engelleyebilir.
+Varsayılan olarak, her uyumluluk ilkesi, sıfır gün (**0**) zamanlamasıyla **uyumsuz olarak işaretle cihaz** uyumsuzluğu için eylemi içerir. Bu varsayılan değer, Intune 'un bir cihazın uyumlu olmadığını algıladığında, Intune 'un cihazı uyumsuz olarak işaretlediği bir sonucudur. Bir cihaz uyumsuzluk olarak işaretlendikten sonra, Azure Active Directory (AD) [koşullu erişim](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) cihazı engelleyebilir.
 
 **Uyumsuzluk Için eylemler** yapılandırarak, uyumlu olmayan cihazlarla ilgili ne yapacağınıza karar verme esnekliği elde edersiniz ve ne zaman yapılacağını belirleyin. Örneğin, cihazı hemen engellememeyi ve kullanıcıya uyumlu hale gelmesi için bir yetkisiz kullanım süresi vermenizi tercih edebilirsiniz.
 
-Ayarlayabileceğiniz her bir eylem için, cihazın uyumsuz olarak işaretlenme gün sayısına göre ne zaman geçerli olacağını belirleyen bir zamanlama yapılandırabilirsiniz. Ayrıca, bir eylemin birden çok örneğini yapılandırabilirsiniz. Bir ilkede bir eylemin birden çok örneğini ayarladığınızda, cihaz uyumsuz olarak kalırsa eylem daha sonra zamanlanan saatte yeniden çalışır.
+Ayarladığınız her eylem için, eylemin ne zaman geçerli olacağını belirleyen bir zamanlama yapılandırabilirsiniz. Zamanlama, cihaz uyumsuz olarak işaretlendikten sonra geçen gün sayısıdır. Ayrıca, bir eylemin birden çok örneğini yapılandırabilirsiniz. Bir ilkede bir eylemin birden çok örneğini ayarladığınızda, cihaz uyumsuz olarak kalırsa eylem daha sonra zamanlanan saatte yeniden çalışır.
 
 Tüm platformlar için tüm eylemler kullanılamaz.
 
@@ -48,7 +48,7 @@ Uyumsuzluk için kullanılabilir eylemler aşağıda verilmiştir. Aksi belirtil
 - **Son kullanıcıya e-posta gönder**: Bu eylem kullanıcıya bir e-posta bildirimi gönderir.
 Bu eylemi etkinleştirdiğinizde:
 
-  - Bu eylemin gönderdiği bir *bildirim iletisi şablonu* seçin. Bu eyleme bir tane atayabilmeniz için önce [bir bildirim iletisi şablonu oluşturmanız](#create-a-notification-message-template) gerekir. Özel bildirimi oluşturduğunuzda, konuyu, ileti gövdesini özelleştirip şirket logosu, şirket adı ve ek iletişim bilgilerini de ekleyebilirsiniz.
+  - Bu eylemin gönderdiği bir *bildirim iletisi şablonu* seçin. Bu eyleme bir tane atayabilmeniz için önce [bir bildirim iletisi şablonu oluşturursunuz](#create-a-notification-message-template) . Özel bildirimi oluşturduğunuzda, konuyu, ileti gövdesini özelleştirip şirket logosu, şirket adı ve ek iletişim bilgilerini de ekleyebilirsiniz.
   - Azure AD gruplarınızı bir veya daha fazla seçerek iletiyi ek alıcılara göndermek için seçin.
 
 E-posta gönderildiğinde, Intune e-posta bildiriminde uyumsuz cihaz hakkındaki ayrıntıları içerir.
@@ -62,7 +62,7 @@ E-posta gönderildiğinde, Intune e-posta bildiriminde uyumsuz cihaz hakkındaki
     - Android kurumsal Iş profili
     - Android kurumsal bilgi noktası cihazları
   - iOS/iPadOS
-  - macOS
+  - Mac OS
   - Windows 10 Mobile
   - Windows Phone 8.1 ve üzeri
 
@@ -74,7 +74,7 @@ E-posta gönderildiğinde, Intune e-posta bildiriminde uyumsuz cihaz hakkındaki
     - Android kurumsal cihaz sahibi
     - Android kurumsal Iş profili
   - iOS/iPadOS
-  - macOS
+  - Mac OS
   - Windows 10 Mobile
   - Windows Phone 8.1 ve üzeri
 
@@ -100,12 +100,12 @@ E-posta gönderildiğinde, Intune e-posta bildiriminde uyumsuz cihaz hakkındaki
   
   Örneğin, ilk eylemi sıfır gün boyunca zamanlayabilir ve sonra bir eylem kümesinin ikinci bir örneğini üç güne ekleyebilirsiniz. İkinci bildirimden önceki bu gecikme, kullanıcıya sorunu çözmek için birkaç gün ve ikinci bildirimden kaçının.
 
-  Çok sayıda yinelenen ileti içeren kullanıcıların istenmeyen harcamasını engellemek için, uyumsuzluk için bir anında iletme bildirimi içeren uyumluluk ilkelerini gözden geçirin ve kolaylaştırın ve aynı sorun için çok sık gönderilen bildirimleri ortadan kaldırmak üzere zamanlamaları gözden geçirin.
+  Çok sayıda yinelenen ileti içeren kullanıcıların istenmeyen harcamasını önlemek için, uyumluluk ilkelerine yönelik bir anında iletme bildirimi içeren uyumluluk ilkelerini gözden geçirin ve kolaylaştırın ve aynı sıklıkla aynı sıklıkta tekrarlamaları önlemek için zamanlamaları gözden geçirin.
 
   Aşağıdakileri dikkate alın:
   - Aynı gün için bir anında iletme bildirimi kümesinin birden çok örneğini içeren tek bir ilke için, o gün için yalnızca tek bir bildirim gönderilir.
 
-  - Birden çok uyumluluk ilkesi aynı uyumluluk koşullarını içerir ve aynı zamanlamaya sahip anında iletme bildirimi eylemini dahil ettiğinizde, aynı günde aynı cihaza birden çok bildirim gönderilir.
+  - Birden çok uyumluluk ilkesi aynı uyumluluk koşullarını içerir ve aynı zamanlamaya sahip anında iletme bildirimi eylemini dahil ettiğinizde, Intune aynı günde aynı cihaza birden fazla bildirim gönderir.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -126,22 +126,22 @@ Bir cihaz uyumluluk ilkesi oluşturmak için platforma özgü aşağıdaki kıla
 Kullanıcılarınıza e-posta göndermek için bir bildirim iletisi şablonu oluşturun. Cihazın uyumsuz olması durumunda, şablona girdiğiniz ayrıntılar kullanıcılarınıza gönderilen e-postada görüntülenir.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz**  >  **uyumluluk ilkeleri**  >  **bildirimleri**  >  **Oluştur bildirim oluştur**' u seçin.
+2. **Endpoint Security**  >  **cihaz uyumluluk**  >  **bildirimleri**  >  **oluşturma bildirimi**' ni seçin.
 3. *Temel bilgiler*altında, aşağıdaki bilgileri belirtin:
 
    - **Adı**
    - **Konu**
    - **İleti**
 
-4. Ayrıca, *temel bilgiler*altında, tüm varsayılan olarak *etkinleştirilecek*olan bildirim için aşağıdaki seçenekleri yapılandırın:
+4. Ayrıca, *temel bilgiler*altında, bildirim için aşağıdaki seçenekleri yapılandırın:
 
-   - **E-posta üst bilgisi – Şirket logosunu ekleyin**
-   - **E-posta alt bilgisi – Şirket adını ekleyin**
-   - **E-posta alt bilgisi – İletişim bilgilerini ekleyin**
+   - **E-posta üst bilgisi – Şirket logosunu dahil et** (varsayılan = *Etkinleştir*)-e-posta şablonları için şirket portalı markasının bir parçası olarak karşıya yüklediğiniz logo kullanılır. Şirket Portalı markası hakkında daha fazla bilgi için bkz. [Şirket kimliği marka özelleştirme](../apps/company-portal-app.md#customizing-the-user-experience).
+   - **E-posta altbilgisi – şirket adını Ekle** (varsayılan = *Etkinleştir*)
+   - **E-posta altbilgisi – iletişim bilgilerini ekle** (varsayılan = *Etkinleştir*)
+   - **Şirket portalı Web sitesi bağlantısı** (varsayılan = *devre dışı*)- *Etkinleştir*olarak ayarlandığında, e-posta Şirket portalı Web sitesinin bağlantısını içerir.
 
-   Şirket Portalı markasının bir parçası olarak karşıya yüklediğiniz logo, e-posta şablonları için kullanılır. Şirket Portalı markası hakkında daha fazla bilgi için bkz. [Şirket kimliği marka özelleştirme](../apps/company-portal-app.md#customizing-the-user-experience).
-
-   ![Intune'da örnek uyumluluk bildirimi iletisi](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
+   > [!div class="mx-imgBorder"]
+   > ![Intune'da örnek uyumluluk bildirimi iletisi](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
    Devam etmek için **İleri**’yi seçin.
 
@@ -185,7 +185,7 @@ Bir uyumluluk ilkesi oluşturduğunuzda veya mevcut bir ilkeyi güncelleştirdi�
 
    Uyumluluk ilkenizde, örneğin, kullanıcıya bildirme de isteyebilirsiniz. **Son kullanıcıya e-posta gönder** eylemini ekleyebilirsiniz. Bu **e-posta gönder** eyleminde **zamanlamayı** iki güne ayarlarsınız. Cihaz veya son kullanıcı hala ikinci gün uyumlu değil olarak değerlendiriliyorsa, e-postanız ikinci gün gönderilir. Uyumsuzluğu 5. günde bir kez daha e-postayla gönderin ve sonra başka bir eylem ekleyin ve **zamanlamayı** beş güne ayarlayın.
 
-  Uyumluluk ve yerleşik eylemler hakkında daha fazla bilgi için bkz. [uyumluluğa genel bakış](device-compliance-get-started.md).
+   Uyumluluk ve yerleşik eylemler hakkında daha fazla bilgi için bkz. [uyumluluğa genel bakış](device-compliance-get-started.md).
 
 6. İşiniz bittiğinde, **Add**  >  değişikliklerinizi kaydetmek için**Tamam** Ekle ' yi seçin.
 

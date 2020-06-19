@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 06/11/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3437a1b9fe3c663844d366bbfda6c0bcb463c3ab
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5bf114edf17fa1f8959b5f26b83c771b711b83f5
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983811"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093180"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune'daki cihaz profillerini kullanarak cihazlarınıza özellik ve ayar uygulama
 
@@ -41,7 +41,7 @@ Bu makalede oluşturabileceğiniz profil türlerine genel bir bakış sağlanmak
 
 ## <a name="administrative-templates"></a>Yönetim şablonları
 
-[Yönetim şablonları](administrative-templates-windows.md) Internet Explorer, OneDrive, uzak masaüstü, Word, Excel ve diğer Office programları için yapılandırabileceğiniz yüzlerce ayarı içerir.
+[Yönetim Şablonları](administrative-templates-windows.md) , Internet Explorer, Microsoft Edge, OneDrive, Uzak Masaüstü, Word, Excel ve diğer Office programları için yapılandırabileceğiniz yüzlerce ayarı içerir.
 
 Yöneticiler, bu şablonlar sayesinde grup ilkelerine benzeyen ancak tamamen bulut tabanlı olan basitleştirilmiş bir görünüme sahip olur.
 
@@ -58,7 +58,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- macOS
+- Mac OS
 - Windows Phone 8.1
 - Windows 8.1
 - Windows 10 ve üzeri
@@ -72,7 +72,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- macOS
+- Mac OS
 - Windows Phone 8.1
 
 ## <a name="delivery-optimization"></a>Teslim iyileştirme
@@ -101,7 +101,7 @@ Bu özellik şunları destekler:
 Bu özellik şunları destekler:
 
 - iOS/iPadOS
-- macOS
+- Mac OS
 
 ## <a name="device-firmware-configuration-interface"></a>Cihaz üretici yazılımı yapılandırma arabirimi
 
@@ -120,7 +120,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- macOS
+- Mac OS
 - Windows 10 ve üzeri
 - Windows 10 Team
 
@@ -132,7 +132,7 @@ Bu özellik şunları destekler:
 
 - Windows 10 ve üzeri
 
-## <a name="edition-upgrade"></a>Sürüm yükseltme
+## <a name="edition-upgrade-and-mode-switch"></a>Sürüm yükseltme ve mod değiştirme
 
 [Windows 10 sürüm yükseltmeleri](edition-upgrade-configure-windows-10.md), Windows 10'un bazı sürümlerini çalıştıran cihazları otomatik olarak yeni bir sürüme yükseltmenizi sağlar.
 
@@ -166,7 +166,7 @@ Microsoft Intune ile Microsoft Defender Gelişmiş tehdit koruması (WDADTP) ekl
 
 Bu özellik şunları destekler:
 
-- macOS
+- Mac OS
 - Windows 10 ve üzeri
 
 ## <a name="esim-cellular---public-preview"></a>eSIM hücresel - Genel önizleme
@@ -183,7 +183,7 @@ Bu özellik şunları destekler:
 
 Bu özellik şunları destekler:
 
-- macOS
+- Mac OS
 
 ## <a name="identity-protection"></a>Kimlik koruması
 
@@ -202,7 +202,15 @@ Bu özellik şunları destekler:
 
 - Windows 10 ve üzeri
 
-Bilgi noktası ayarları, [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)ve [iOS/ıpados](device-restrictions-ios.md#kiosk)için cihaz kısıtlamaları olarak da kullanılabilir.
+Bilgi noktası ayarları, [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience)ve [iOS/ıpados](device-restrictions-ios.md#kiosk)için cihaz kısıtlamaları olarak da kullanılabilir.
+
+## <a name="mx-profile-zebra"></a>MX profili (Zeköşeli)
+
+[Mobility uzantıları (MX)](android-zebra-mx-overview.md) , yerleşik Intune ayarları ' nı genişleterek zeköşeli cihazlara özgü daha fazla ayar özelleştirin veya ekleyin. Zeköşeli cihazlar genellikle fabrika katlarında ve perakende ortamlarda kullanılır. Yüzlerce veya binlerce Zeköşeli cihaza sahipseniz bu cihazları yapılandırmak ve yönetmek için Intune 'u kullanabilirsiniz.
+
+Bu özellik şunları destekler:
+
+- Android cihaz yöneticisi
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
@@ -214,7 +222,7 @@ Bu özellik şunları destekler:
 
 ## <a name="oemconfig"></a>OEMConfig
 
-[OEMConfig](android-oem-configuration-overview.md), OEM'lerin (orijinal ekipman üreticileri) ve EMM'lerin (kurumsal mobil yönetim), OEM'e özgü özellikleri Android Kurumsal cihazlarda standart bir şekilde geliştirme ve destekleme imkanı sunan bir standarttır. OEMConfig ile bir OEM, OEM'e özgü yönetim özelliklerini tanımlayan bir şema oluşturur ve bunu Google Play'e yüklenen bir uygulamaya ekler. Intune, uygulamadaki şemayı okur ve Intune yöneticilerinin şemada bu ayarları yapılandırmasını sağlar.
+Android kurumsal cihazlarda, [Oemconfig](android-oem-configuration-overview.md) , OEM 'lerin (özgün donanım üreticileri) ve EMMS 'nin (Enterprise Mobility Management), OEM 'e özgü özellikleri standartlaştırılmış bir şekilde oluşturup desteklememesini sağlayan bir standarttır. OEMConfig ile bir OEM, OEM'e özgü yönetim özelliklerini tanımlayan bir şema oluşturur ve bunu Google Play'e yüklenen bir uygulamaya ekler. Intune, uygulamadaki şemayı okur ve Intune yöneticilerinin şemadaki ayarları yapılandırmasına izin verir.
 
 Bu özellik şunları destekler:
 
@@ -222,7 +230,7 @@ Bu özellik şunları destekler:
 
 ## <a name="powershell-scripts"></a>PowerShell komut dosyaları
 
-[Windows 10 cihazlarında PowerShell betikleri](../apps/intune-management-extension.md) , Intune 'da PowerShell betiklerinizi karşıya yüklemek Için Intune yönetim uzantısını kullanır ve ardından bu betikleri cihazlarınızda çalıştırır. Ayrıca, uzantıyı kullanmak için gerekenleri, Intune 'a nasıl ekleneceğini ve diğer önemli bilgileri görün.
+[PowerShell betikleri](../apps/intune-management-extension.md) Intune 'da PowerShell betiklerinizi karşıya yüklemek Için Intune yönetim uzantısını kullanır ve ardından bu betikleri cihazlarınızda çalıştırır. Ayrıca, uzantıyı kullanmak için gerekenleri, Intune 'a nasıl ekleneceğini ve diğer önemli bilgileri görün.
 
 Bu özellik şunları destekler:
 
@@ -235,7 +243,7 @@ MacOS cihazlarındaki [tercih dosyaları](preference-file-settings-macos.md) , u
 
 Bu özellik şunları destekler:
 
-- macOS
+- Mac OS
 
 ## <a name="shared-multi-user-device"></a>Paylaşılan çok kullanıcılı cihaz
 
@@ -269,7 +277,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- macOS
+- Mac OS
 - Windows Phone 8.1
 - Windows 8.1
 - Windows 10 ve üzeri
@@ -278,14 +286,24 @@ Bu özellik şunları destekler:
 
 [Wi-Fi ayarları](wi-fi-settings-configure.md), kullanıcılar ve cihazlar için kablosuz ağ ayarları atar. Bir Wi-Fi profili atadığınızda, kullanıcılar kurumsal Wi-Fi ağınıza, ağı kendileri yapılandırmak zorunda kalmadan erişim elde eder. 
 
-Bu özellik şunları destekler: 
+Bu özellik şunları destekler:
 
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- macOS
+- Mac OS
 - Windows 8.1 (yalnızca içeri aktarma)
 - Windows 10 ve üzeri
+
+## <a name="wired-networks"></a>Kablolu ağlar
+
+[Kablolu ağlar](wired-networks-configure.md) , MacOS masaüstü bilgisayarları için 802.1 x kablolu bağlantıları oluşturmanıza ve yönetmenize olanak sağlar. Profilinizde, ağ arabirimini seçersiniz, kabul edilen EAP türlerini seçersiniz ve PKCS ve SCEP sertifikaları dahil sunucu güven ayarlarını girersiniz.
+
+Profili atadığınızda macOS masaüstü kullanıcıları, kendisini yapılandırmak zorunda kalmadan şirket kablolu ağınıza erişim sağlar.
+
+Bu özellik şunları destekler:
+
+- Mac OS
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra Mobility Uzantıları (MX)
 

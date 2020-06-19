@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aef549cc01ba0e45d61c16eb8489f8926f92276b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 617c6b89bfc52d926e2ddb422c36db39edec6908
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990525"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093042"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Microsoft Intune uygulama yönetimi nedir?
 
@@ -51,16 +51,16 @@ Intune MAM iki yapılandırmayı destekler:
 
 Intune, ihtiyacınız olan uygulamaları çalıştırmak istediğiniz cihazlara almanıza yardımcı olacak çeşitli özellikler sunar. Aşağıdaki tablo, uygulama yönetimi özelliklerinin bir özetini sağlar.
 
-|  | Android/Android Kurumsal | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
+|  | Android/Android Kurumsal | iOS/iPadOS | Mac OS | Windows 10 | Windows Phone 8.1 |
 |-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
 | Cihazlara ve kullanıcılara uygulamaları ekleme ve atama | Yes | Yes | Yes | Yes | Yes |
 | Intune’a kayıtlı olmayan cihazlara uygulamaları atama | Yes | Yes | Hayır | Hayır | Hayır |
 | Uygulamaların başlangıç davranışını denetlemek için uygulama yapılandırma ilkelerini kullanma | Yes | Yes | Hayır | Hayır | Hayır |
-| Süresi dolan uygulamaları yenilemek için mobil uygulama sağlama ilkelerini kullanma | No | Yes | Hayır | Hayır | Hayır |
-| Uygulama koruma ilkeleriyle uygulamalardaki şirket verilerini koruma | Yes | Yes | No | Hayır <sup>1</sup> | No |
-| Yüklü uygulamadan yalnızca şirket verilerini kaldırma (uygulama seçmeli silme) | Yes | Yes | No | Yes | Yes |
+| Süresi dolan uygulamaları yenilemek için mobil uygulama sağlama ilkelerini kullanma | Hayır | Evet | Hayır | Hayır | Hayır |
+| Uygulama koruma ilkeleriyle uygulamalardaki şirket verilerini koruma | Yes | Yes | Hayır | Hayır <sup>1</sup> | Hayır |
+| Yüklü uygulamadan yalnızca şirket verilerini kaldırma (uygulama seçmeli silme) | Yes | Yes | Hayır | Yes | Yes |
 | Uygulama atamalarını izleme | Yes | Yes | Yes | Yes | Yes |
-| Uygulama mağazasından toplu satın alınan uygulamaları atama ve izleme | Hayır | Hayır | Hayır | Yes | No |
+| Uygulama mağazasından toplu satın alınan uygulamaları atama ve izleme | Hayır | Hayır | Hayır | Evet | Hayır |
 | Cihazlara uygulamaları zorunlu yükleme (gerekli) <sup>2</sup> | Yes | Yes | Yes | Yes | Yes |
 | Şirket Portalı’ndan cihazlara isteğe bağlı yükleme (kullanılabilir yükleme) | Evet <sup>3</sup> | Yes | Yes | Yes | Yes |
 | Web’deki bir uygulamanın kısayolunu yükleme (web bağlantısı) | Evet <sup>4</sup> | Yes | Yes | Yes | Yes |
@@ -71,7 +71,7 @@ Intune, ihtiyacınız olan uygulamaları çalıştırmak istediğiniz cihazlara 
 <sup>1</sup> Windows 10 çalıştıran cihazlarda uygulamaları korumak için [Windows Bilgi Koruması](../protect/windows-information-protection-configure.md)’nu kullanmayı göz önüne alabilirsiniz.<br>
 <sup>2</sup> Yalnızca Intune tarafından yönetilen cihazlar için geçerlidir.<br>
 <sup>3</sup> Intune, Android Kurumsal cihazlarda Yönetilen Google Play mağazasında kullanılabilen uygulamaları destekler.<br>
-<sup>4</sup> Intune, standart Android Kurumsal cihazlarda web bağlantısı biçiminde uygulama kısayolu yüklenmesi seçeneğini sunmaz. Ancak web bağlantısı desteği [çoklu uygulama için ayrılmış Android Kurumsal cihazlarında](../configuration/device-restrictions-android-for-work.md#dedicated-devices) desteklenir. 
+<sup>4</sup> Intune, standart Android Kurumsal cihazlarda web bağlantısı biçiminde uygulama kısayolu yüklenmesi seçeneğini sunmaz. Ancak web bağlantısı desteği [çoklu uygulama için ayrılmış Android Kurumsal cihazlarında](../configuration/device-restrictions-android-for-work.md#device-experience) desteklenir. 
 
 
 ## <a name="get-started"></a>başlarken
@@ -96,7 +96,7 @@ Uygulama iş yükü gezinti menüsünün en üst kısmında, yaygın olarak kull
 - **Platforma göre**: kullanılabilir uygulamaları platforma göre görüntülemek için bu platformları seçin.
     - Windows
     - iOS
-    - macOS
+    - Mac OS
     - Android
 - **İlke**:
     - **Uygulama koruma ilkeleri**: Ayarları uygulamayla ilişkilendirmek ve kullandığı şirket verilerini korumaya yardımcı olmak için bu seçeneği seçin. Örneğin, bir uygulamanın diğer uygulamalarla iletişim kurma özelliklerini kısıtlayabilir veya kullanıcının şirket uygulamasına erişmek için PIN girmesini isteyebilirsiniz. Daha fazla bilgi için bkz. [Uygulama koruma ilkeleri](app-protection-policies.md).

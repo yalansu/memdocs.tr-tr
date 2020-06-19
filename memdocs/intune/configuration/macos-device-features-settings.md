@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/05/2020
+ms.date: 06/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d7929fcd01a4e105b26b856ee4031a450bd47a1
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: 91bf09a122031b7186840bc17cd44cc5738b2ffe
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746536"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093548"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Intune 'da macOS cihaz özelliği ayarları
 
@@ -106,11 +106,114 @@ Bu özellik şu platformlarda geçerlidir:
 > [!TIP]
 > MacOS cihazınızda sorun gidermek için **Sistem Tercihleri**  >  **profilleri**' ni açın. Oluşturduğunuz profilin cihaz profilleri listesinde olduğunu onaylayın. Listeleniyorsa, **Ilişkili etki alanı yapılandırmasının** profilde olduğundan emin olun ve doğru uygulama kimliği ve etki alanlarını içerir.
 
+## <a name="content-caching"></a>İçerik önbelleğe alma
+
+İçerik önbelleğe alma, içeriğin yerel bir kopyasını kaydeder. Bu bilgiler, Internet 'e bağlanmadan diğer Apple cihazları tarafından alınabilir. Bu önbelleğe alma, yazılım güncelleştirmelerini, uygulamaları, fotoğrafları ve diğer içerikleri ilk İndirildiklerinde kaydederek İndirmeleri hızlandırır. Uygulamalar bir kez indirildiğinden ve diğer cihazlara paylaşıldığından, çok sayıda cihazı olan okullar ve kuruluş bant genişliğini kaydeder.
+
+> [!NOTE]
+> Bu ayarlar için yalnızca bir profil kullanın. Bu ayarlarla birden çok profil atarsanız bir hata oluşur.
+>
+> İçerik önbelleği izleme hakkında daha fazla bilgi için bkz. [içerik önbelleğe alma günlüklerini ve Istatistiklerini görüntüleme](https://support.apple.com/guide/mac-help/view-content-caching-logs-statistics-mac-mchl0d8533cd/10.15/mac/10.15) (Apple 'ın Web sitesini açar).
+
+Bu özellik şu platformlarda geçerlidir:
+
+- macOS 10.13.4 ve üzeri
+
+### <a name="settings-apply-to-all-enrollment-types"></a>Ayarlar için geçerlidir: tüm kayıt türleri
+
+Bu ayarlar hakkında daha fazla bilgi için bkz. [Content Caching yük ayarları](https://support.apple.com/guide/mdm/content-caching-mdm163612d39/1/web/1) (Apple 'ın Web sitesini açar).
+
+**İçerik önbelleğe almayı etkinleştir**: **Evet** , içerik önbelleğe almayı açar ve kullanıcılar bunu devre dışı bırakamıyorum. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kapatabilir.
+
+- **Önbelleğe eklenecek Içerik türü**: seçenekleriniz:
+  - **Tüm içerikler**: iCloud içeriğini ve paylaşılan içeriği önbelleğe alır.
+  - **Yalnızca Kullanıcı içeriği**: kullanıcıların fotoğraflar ve belgeler de dahil olmak üzere iCloud içeriğini önbelleğe alır.
+  - **Yalnızca paylaşılan içerik**: uygulamaları ve yazılım güncelleştirmelerini önbelleğe alır.
+
+- **En büyük önbellek boyutu**: içeriği önbelleğe almak için kullanılan maksimum disk alanı miktarını (bayt cinsinden) girin. Boş bırakılırsa (varsayılan), Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu değeri sıfır () bayt olarak ayarlayabilir, bu da `0` önbelleğe sınırsız disk alanı sağlar.
+
+  Cihazlarda bulunan alanı aşmayın emin olun. Cihaz depolama kapasitesi hakkında daha fazla bilgi için bkz. [iOS ve macOS rapor depolama kapasitesi](https://support.apple.com/HT201402) (Apple 'ın Web sitesini açar).
+
+- **Önbellek konumu**: önbelleğe alınan içeriğin depolandığı yolu girin. Varsayılan konum `/Library/Application Support/Apple/AssetCache/Data` . Bu konumu değiştirmemenizi öneririz.
+
+  Bu ayarı değiştirirseniz, önbelleğe alınan içeriğiniz yeni konuma taşınmaz. Otomatik olarak taşımak için, kullanıcıların cihazdaki konumu değiştirmesi gerekir (**Sistem Tercihleri**  >  **Paylaşım**  >  **içeriği önbelleğe alma**).
+
+- **Bağlantı noktası**: 0-65535 ' dan itibaren, önbelleğin indirme ve karşıya yükleme isteklerini kabul etmesi IÇIN cihazlarda TCP bağlantı noktası numarasını girin. `0`Hangi bağlantı noktasının kullanılabilir olduğunu kullanmak için sıfır () (varsayılan) girin.
+- **İnternet bağlantısı ve önbellek içerik paylaşımını engelleyin**: tethered önbelleğe alma olarak da bilinir. **Evet** , Internet bağlantısı paylaşımını engeller ve IOS/ıpados cihazları USB ile Mac 'e bağlı olarak önbelleğe alınmış içerik paylaşımını önler. Kullanıcılar bu özelliği etkinleştiremez. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
+- **Internet bağlantı paylaşımını etkinleştir**: tethered önbelleği olarak da bilinir. **Evet** seçeneği, Internet bağlantısı paylaşımına izin verir ve IOS/ıpados cihazları USB ile Mac 'e bağlı olarak önbelleğe alınmış içeriği paylaşmaya izin verir. Kullanıcılar bu özelliği devre dışı bırakamıyorum. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu devre dışı kalabilir.
+
+  Bu özellik şu platformlarda geçerlidir:
+
+  - macOS 10.15.4 ve üzeri
+
+- **İstemci ayrıntılarını günlüğe kaydetmek için önbelleği etkinleştir**: **Evet** , içerik isteyen cihazların IP adresini ve bağlantı noktası numarasını günlüğe kaydeder.Cihaz sorunlarını giderirken, bu günlük dosyası size yardımcı olabilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu bilgileri günlüğe içermemelidir.
+
+- **Sistem diğer uygulamalar için disk alanına ihtiyaç duyduğunda bile, her zaman önbellekten içerik tut**: **Evet** , önbellek içeriğini korur ve disk alanı azaldığında bile hiçbir şeyin silinmemesine neden olur. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi diğer uygulamalar için depolama alanı gerektiğinde otomatik olarak önbellekten içerik temizedebilir.
+
+  Bu özellik şu platformlarda geçerlidir:
+
+  - macOS 10,15 ve üzeri
+
+- **Durum uyarılarını göster**: **Evet** , sistem bildirimleri olarak uyarı olarak gösterilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, IŞLETIM sistemi bu uyarıları sistem bildirimleri olarak göstermeyebilir.
+
+  Bu özellik şu platformlarda geçerlidir:
+
+  - macOS 10,15 ve üzeri
+
+- **Önbelleğe alma açıkken Cihazın uyumasını engelleyin**: **Evet** seçeneği, önbelleğe alma açık olduğunda bilgisayarın uyku moduna geçmesini önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazın uyku moduna geçmesine izin verebilir.
+
+  Bu özellik şu platformlarda geçerlidir:
+
+  - macOS 10,15 ve üzeri
+
+- **Önbelleğe eklenecek cihazlar**: içeriği önbelleğe alabilir cihazları seçin. Seçenekleriniz şunlardır:
+  - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez. 
+  - **Aynı yerel ağı kullanan cihazlar**: içerik önbelleği aynı anlık yerel ağdaki cihazlara içerik sunar. Diğer ağlardaki cihazlara, içerik önbelleği tarafından erişilebilen cihazlar da dahil olmak üzere hiçbir içerik sunulmaz.
+  - **Aynı genel IP adresini kullanan cihazlar**: içerik önbelleği, aynı genel IP adresini kullanarak cihazlara içerik sunar. Diğer ağlardaki cihazlara, içerik önbelleği tarafından erişilebilen cihazlar da dahil olmak üzere hiçbir içerik sunulmaz.
+  - **Özel yerel ağlar kullanan cihazlar**: içerik önbelleği, girdiğiniz IP aralıklarında cihazlara içerik sağlar.
+    - **İstemci dinleme aralıkları**: içerik ÖNBELLEĞINI alabilen IP adresleri aralığını girin.
+  - **Geri dönüş ile özel yerel ağlar kullanan cihazlar**: içerik önbelleği, dinleme aralıklarında, eş dinleme aralıklarından ve üst öğe IP adreslerindeki cihazlara içerik sağlar.
+    - **İstemci dinleme aralıkları**: içerik ÖNBELLEĞINI alabilen IP adresleri aralığını girin.
+
+- **Özel genel IP adresleri**: bir dızı genel IP adresi girin. Bulut sunucuları, istemci cihazlarını önbellekler ile eşleştirmek için bu aralığı kullanır.
+
+- **İçeriği diğer önbellekler Ile paylaşma**: Ağınızda birden fazla içerik önbelleği olduğunda, diğer cihazlardaki içerik önbellekleri otomatik olarak eşler haline gelir. Bu cihazlar, önbelleğe alınmış yazılımlara danışmayı ve bunları paylaşabilir. 
+
+  Bir içerik önbelleğinde istenen bir öğe yoksa, öğenin eşlerini denetler. Öğe kullanılabiliyorsa, eş cihazdaki içerik önbelleğinden indirilir. Hala kullanılamıyorsa, içerik önbelleği öğeyi şuradan indirir:
+
+  - Varsa, bir üst IP adresi
+  
+    VEYA
+    
+  - Apple 'dan Internet üzerinden
+
+  Birden çok içerik önbelleği kullanılabilir olduğunda, cihazlar doğru içerik önbelleğini otomatik olarak seçer. 
+
+  Seçenekleriniz şunlardır:
+
+  - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez.
+  - **Aynı yerel ağları kullanan içerik önbellekleri**: içerik önbelleği yalnızca aynı anlık yerel ağdaki diğer içerik önbelleğiyle eşler.
+  - **Aynı genel IP adresini kullanan içerik önbellekleri**: içerik önbelleği yalnızca aynı genel IP adresindeki diğer içerik önbelleğiyle eşler.
+  - **Özel yerel ağlar kullanarak içerik önbellekleri**: yalnızca içerik önbelleği, girdiğiniz IP adresi dinleme aralığındaki diğer içerik önbelleğiyle eşler şunlardır:
+
+    - **Eş dinleme aralıkları**: aralığınız için IPv4 veya IPv6 başlangıç ve bitiş IP adreslerini girin. İçerik önbelleği yalnızca girdiğiniz IP adresi aralıklarında içerik Önbelleklerinden gelen eş önbellek isteklerine yanıt verir.
+    - **Eş filtresi aralıkları**: aralığınız için IPv4 veya IPv6 başlangıç ve bitiş IP adreslerini girin. İçerik önbelleği, girdiğiniz IP adresi aralıklarını kullanarak eşler listesini filtreler.
+
+- **Üst IP adresleri**: üst önbellek olarak eklenecek başka bir içerik ÖNBELLEĞININ yerel IP adresini girin. Önbelleğiniz, Apple ile doğrudan karşıya yüklemek/indirmek yerine bu önbelleklere içerik yükler ve indirir. Yalnızca bir üst IP adresini bir kez ekleyin.
+- **Üst seçim ilkesi**: çok sayıda üst önbellek olduğunda, üst IP adresinin nasıl seçili olduğunu seçin. Seçenekleriniz şunlardır:
+  - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez.
+  - **Hepsini bir kez deneme**: üst IP adreslerini sırasıyla kullanın. Bu seçenek, Yük Dengeleme senaryolarında iyidir.
+  - **İlk kullanılabilir**: her zaman listedeki Ilk kullanılabilir IP adresini kullanın.
+  - **Karma**: istenen URL 'nin yol bölümü için bir karma değer oluşturur. Bu seçenek aynı URL için her zaman aynı üst IP adresinin kullanıldığından emin olur.
+  - **Rastgele**: listede rastgele bir IP adresi kullanın. Bu seçenek, Yük Dengeleme senaryolarında iyidir.
+  - **Yapışkan kullanılabilir**: her zaman LISTEDEKI ilk IP adresini kullanın. Kullanılabilir değilse, listede ikinci IP adresini kullanın. Mevcut olmadığından ikinci IP adresini kullanmaya devam edin, vb.
+
 ## <a name="login-items"></a>Oturum açma öğeleri
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Ayarlar için geçerlidir: tüm kayıt türleri
 
-- **Oturum açma sırasında başlatılacak dosyaları, klasörleri ve özel uygulamaları ekleyin**: kullanıcılar cihazlarında oturum açtıklarında açmak istediğiniz bir dosya, klasör, özel uygulama veya sistem uygulamasının yolunu **ekleyin** . Şunları da girin:
+- **Oturum açma sırasında başlatılacak dosyaları, klasörleri ve özel uygulamaları ekleme**: kullanıcılar cihazlarında oturum açtığında açılan bir dosya, klasör, özel uygulama veya sistem uygulamasının yolunu **ekleyin** . Şunları da girin:
 
   - **Öğenin yolu**: dosya, klasör veya uygulamanın yolunu girin. Kuruluşunuz için oluşturulmuş veya özelleştirilmiş olan sistem uygulamaları veya uygulamalar genellikle `Applications` klasöründe, şuna benzer bir yol ile yapılır `/Applications/AppName.app` .
 
@@ -124,7 +227,7 @@ Bu özellik şu platformlarda geçerlidir:
     Herhangi bir uygulama, klasör veya dosya eklerken doğru yolu girdiğinizden emin olun. Tüm öğeler `Applications` klasörde değil. Kullanıcılar bir öğeyi bir konumdan diğerine taşıdıysanız yol değişir. Bu taşınan öğe, Kullanıcı oturum açtığında açılmaz.
 
   - **Gizle**: uygulamayı göstermeyi veya gizlemeyi seçin. Seçenekleriniz şunlardır:
-    - **Yapılandırılmadı**: bu varsayılandır. Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcılar & gruplar oturum açma öğeleri listesindeki öğeleri gizleme seçeneği işaretsiz olarak gösterir.
+    - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcılar & gruplar oturum açma öğeleri listesindeki öğeleri gizleme seçeneği işaretsiz olarak gösterebilir.
     - **Evet**: kullanıcılar & gruplar oturum açma öğeleri listesinde uygulamayı gizler.
 
 ## <a name="login-window"></a>Oturum açma penceresi
@@ -186,7 +289,7 @@ Bu özellik şu platformlarda geçerlidir:
 - **URL 'ler** (yalnızca yeniden yönlendir): kimlik SAĞLAYıCıLARıNıZıN URL öneklerini girin adına yeniden yönlendirme uygulama uzantısı SSO kullanır. Kullanıcılar bu URL 'lere yeniden yönlendirildiğinde, SSO uygulama uzantısı müdahale eder ve SSO istemlerini ister.
 
   - Intune çoklu oturum açma uygulama uzantısı profillerindeki tüm URL 'Lerin benzersiz olması gerekir. Farklı türlerde SSO uygulama uzantıları kullanıyor olsanız bile, hiçbir SSO uygulama uzantısı profilinde bir etki alanını tekrarlayabilirsiniz.
-  - URL 'Lerin http://veya https://ile başlaması gerekir.
+  - URL 'Ler veya ile başlamalıdır `http://` `https://` .
 
 - **Ek yapılandırma** (yeniden yönlendirme ve kimlik bilgileri): SSO uygulama uzantısına geçirilecek uzantıya özgü ek veriler girin:
   - **Anahtar**: eklemek istediğiniz öğenin adını girin, örneğin `user name` .
@@ -214,8 +317,8 @@ Bu özellik şu platformlarda geçerlidir:
 - **Parola eşitleme** (yalnızca Kerberos): kullanıcılarınızın yerel PAROLALARıNı Azure AD 'ye eşitlemek için **Etkinleştir** ' i seçin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Azure AD 'ye parola eşitlemeyi devre dışı bırakabilir. Bu ayarı, SSO için alternatif veya yedekleme olarak kullanın. Kullanıcılar bir Apple mobil hesabıyla oturum açmışsa bu ayar çalışmaz.
 - **Windows Server Active Directory parola karmaşıklığı** (yalnızca Kerberos): kullanıcı parolalarının Active Directory parola karmaşıklığı gereksinimlerini karşılamasına zorlamak için **gerektir** ' i seçin. Daha fazla bilgi için bkz. [parolanın karmaşıklık gereksinimlerini karşılaması gerekir](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların Active Directory parola gereksinimini karşılamasını gerektirmeyebilir.
 - **Minimum parola uzunluğu** (yalnızca Kerberos): kullanıcıların parolalarını yapabilirler en az karakter sayısını girin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcılara en az parola uzunluğu zorlayamayabilir.
-- **Parola yeniden kullanım sınırı** (yalnızca Kerberos): etki alanında önceki bir parolanın yeniden kullanılabilmesi için kullanılması gereken yeni parola sayısını 1-24 ' dan girin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi parola yeniden kullanım sınırını zorlayamayabilir.
-- **En az parola yaşı** (yalnızca Kerberos): kullanıcıların değiştirebilmesi için, etki alanında bir parolanın kullanılması gereken gün sayısını girin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi değiştirilebilmesi için en az bir parola yaşı zorlamayamayabilir.
+- **Parola yeniden kullanım sınırı** (yalnızca Kerberos): etki alanında önceki bir parolanın yeniden kullanılabilmesi için kullanılan yeni parola sayısını 1-24 ' dan girin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi parola yeniden kullanım sınırını zorlayamayabilir.
+- **En az parola yaşı** (yalnızca Kerberos): kullanıcıların değiştirebilmesi için, etki alanında bir parolanın kullanıldığı gün sayısını girin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi değiştirilebilmesi için en az bir parola yaşı zorlamayamayabilir.
 - **Parola süre sonu bildirimi** (yalnızca Kerberos): parolanın süresi dolmadan önce kullanıcıların parolasının süresinin dolacağını belirten gün sayısını girin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi günleri kullanabilir `15` .
 - **Parola kullanım süresi** (yalnızca Kerberos): cihaz parolasının değiştirilmesi gereken gün sayısını girin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sisteminin hiç bir parola süre sonu yoktur.
 - **Parola değiştirme URL 'si** (yalnızca Kerberos): kullanıcılar bir Kerberos parolası değişikliği başlatdığındaki AÇıLAN URL 'yi girin.
@@ -227,7 +330,7 @@ Bu özellik şu platformlarda geçerlidir:
   
 - **Active Directory site kodu** (yalnızca Kerberos): Kerberos uzantısının kullanması gereken Active Directory sitenin adını girin. Kerberos uzantısı Active Directory site kodunu otomatik olarak bulagerekebilmeniz için bu değeri değiştirmeniz gerekebilir.
 - **Önbellek adı** (yalnızca Kerberos): Kerberos önbelleğinin genel güvenlik HIZMETLERI (GSS) adını girin. Büyük olasılıkla bu değeri ayarlamanız gerekmez.  
-- **Parola gereksinimleri iletisi** (yalnızca Kerberos): kuruluşunuzun, kullanıcılara gösterilen parola gereksinimlerinin bir metin sürümünü girin. İleti, Active Directory parola karmaşıklığı gereksinimlerine gerek duymuyorsanız veya en az parola uzunluğu girmezseniz görüntülenir.  
+- **Parola gereksinimleri iletisi** (yalnızca Kerberos): kuruluşunuzun, kullanıcılara gösterilen parola gereksinimlerinin bir metin sürümünü girin. İleti, Active Directory parola karmaşıklığı gereksinimlerine ihtiyaç duymuyorsanız veya en az parola uzunluğu girmezseniz gösterir.  
 - **Uygulama paketi kimlikleri** (yalnızca Kerberos): cihazlarınızda çoklu oturum açma kullanması gereken uygulama paketi tanımlayıcılarını **ekleyin** . Bu uygulamalara Kerberos bilet verme bileti ve kimlik doğrulama bileti erişimi verilir. Uygulamalar, kullanıcıların erişim yetkisi oldukları hizmetler için de kimlik doğrular.
 - **Etki alanı bölge eşlemesi** (yalnızca Kerberos): bölge ile eşleşmesi gereken etkı alanı DNS soneklerini **ekleyin** . Ana bilgisayarların DNS adları bölge adıyla eşleşmezse bu ayarı kullanın. Büyük olasılıkla bu özel etki alanı/bölge eşlemesini oluşturmanız gerekmez.
 - **PKINIT sertifikası** (yalnızca Kerberos): Kerberos kimlik doğrulaması Için kullanılabilecek Ilk kimlik doğrulaması (PKI) sertifikası Için ortak anahtar şifrelemesini **seçin** . Intune 'A eklediğiniz [PKCS](../protect/certficates-pfx-configure.md) veya [SCEP](../protect/certificates-scep-configure.md) sertifikaları arasından seçim yapabilirsiniz. Sertifikalar hakkında daha fazla bilgi için bkz. [Microsoft Intune kimlik doğrulaması için sertifikaları kullanma](../protect/certificates-configure.md).

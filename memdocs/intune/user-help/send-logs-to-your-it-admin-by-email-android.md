@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 06/16/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8094f9739f05a7e7c0ffc10e9b4835c67c5539b3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 83a00368c7f47568497669c940e3c2904a479372
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881988"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094037"
 ---
 # <a name="upload-and-email-logs"></a>Günlükleri karşıya yükleme ve e-posta ile gönderme  
 
@@ -34,6 +34,8 @@ Gerçek hata ayrıntıları, cihazınızda _tanılama günlüğü_adlı özel bi
 
 > [!Note]
 > Şirketinizin destek alanının sorunun nedenini bulmasını kolaylaştırmak için Şirket Portalı _ayrıntılı günlüğü_ açın. Microsoft Intune uygulamasını kullanıyorsanız **günlük ayrıntısı düzeyini** **verbose**olarak ayarlayın. Ayrıntılı günlük kaydı, bir hata hakkında tüm ayrıntıları kaydeder ve bunları rapora işler. [Ayrıntılı günlük kaydı özelliğinin nasıl açılacağını buradan](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md) öğrenin.  
+>
+> Bir Sovereign bulut ortamı kullanıyorsanız, Şirket Portalı gönderme günlüğü işlevleri sizin için kullanılabilir olmayacaktır. Günlükleri e-posta ile göndermeniz gerekir. 
 
 ## <a name="upload-and-email-logs-from-company-portal"></a>Şirket Portalı karşıya yükleme ve e-posta günlükleri  
 

@@ -1,11 +1,11 @@
 ---
-title: Android için uygulama SDK 'Sı test Kılavuzu Microsoft Intune
+title: Android için uygulama SDK 'Sı geliştirici test Kılavuzu Microsoft Intune
 description: Android için Microsoft Intune uygulama SDK 'Sı test Kılavuzu, Intune ile yönetilen Android uygulamanızı test etmenize yardımcı olur.
 keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,20 +17,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6875dc873d44b77a24fe68f637d9329c9f5e1d9c
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: dd4ece62215d48f3481923e099feecc992d7aa6d
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165609"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093374"
 ---
-# <a name="microsoft-intune-app-sdk-for-android-testing-guide"></a>Android için uygulama SDK 'Sı test Kılavuzu Microsoft Intune
+# <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Android için Microsoft Intune uygulama SDK 'Sı geliştiriciler test Kılavuzu
 
-Bu kılavuz, geliştiricilerin Intune tarafından yönetilen Android uygulamalarını test etmesine yardımcı olur.  
+Android için Microsoft Intune uygulama SDK 'Sı test Kılavuzu, Intune ile yönetilen Android uygulamanızı test etmenize yardımcı olmak için tasarlanmıştır.
 
-## <a name="prerequisite-test-accounts"></a>Önkoşul test hesapları
-Önceden oluşturulmuş verilerle veya olmadan yeni hesaplar oluşturabilirsiniz. Yeni bir hesap oluşturmak için:
-1. [Microsoft gösterileri](https://demos.microsoft.com/environments/create/tenant) sitesine gidin. 
+## <a name="demo-tenant-setup"></a>Tanıtım kiracı kurulumu
+Şirketiniz ile zaten bir kiracınız yoksa önceden oluşturulmuş verilerle veya olmadan bir tanıtım kiracısı oluşturabilirsiniz. Microsoft CDX erişimi için bir [Microsoft iş ortağı](https://partner.microsoft.com/en-us/business-opportunities/why-microsoft) olarak kaydolmanız gerekir. Yeni bir hesap oluşturmak için:
+1. [Microsoft CDX kiracı oluşturma sitesine](https://cdx.transform.microsoft.com/my-tenants/create-tenant) gidin ve bir Microsoft 365 Kurumsal kiracı oluşturun.
 2. [Intune](../fundamentals/setup-steps.md) 'u mobil cihaz YÖNETIMI (MDM) etkinleştirecek şekilde ayarlayın.
 3. [Kullanıcı oluşturun](../fundamentals/users-add.md).
 4. [Grupları oluşturun](../fundamentals/groups-add.md).
@@ -41,11 +41,11 @@ Bu kılavuz, geliştiricilerin Intune tarafından yönetilen Android uygulamalar
 [Azure Portal Intune dikey](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview)penceresinde [Uygulama koruma ilkeleri oluşturun ve atayın](../apps/app-protection-policies.md) . Ayrıca, Intune dikey penceresinde [uygulama yapılandırma ilkenizi](../apps/app-configuration-policies-overview.md) oluşturup atayabilirsiniz.
 
 > [!NOTE]
-> Uygulamanız Azure portal listelenmemişse, **diğer uygulamalar** seçeneğini belirleyerek ve metin kutusunda paket adını sağlayarak bu ilkeyi bir ilkeyle hedefleyebilirsiniz.
+> Uygulamanız Azure portal listelenmemişse, **daha fazla uygulama** seçeneğini belirleyerek ve metin kutusunda paket adını sağlayarak bu ilkeyi bir ilkeyle hedefleyebilirsiniz.
 
-## <a name="test-cases"></a>Test çalışmaları
+## <a name="test-cases"></a>Test Çalışmaları
 
-Aşağıdaki test çalışmaları yapılandırma ve onay adımları sağlar. Intune tarafından yönetilen Android uygulama sorunlarını gidermeye yardımcı olması için bu kılavuzu kullanın.
+Aşağıdaki test çalışmaları yapılandırma ve onay adımları sağlar. Yeni tümleşik Android uygulamanızı doğrulamak için bu testleri kullanın.
 
 ### <a name="required-pin-and-corporate-credentials"></a>Gerekli PIN ve şirket kimlik bilgileri
 
@@ -64,11 +64,30 @@ Aşağıdaki test çalışmaları yapılandırma ve onay adımları sağlar. Int
 Kurumsal yönetilen uygulamalar arasında veri aktarımını şu şekilde denetleyebilirsiniz:
 
 1. **Uygulamanın diğer uygulamalara veri aktarmasına Izin ver** **ilkesini ilkeyle yönetilen uygulamalar**olarak ayarlayın.
-2. **Uygulamanın diğer uygulamalardan tüm uygulamalara veri almasına Izin ver** ' **All apps**i ayarlayın. Amaç ve içerik sağlayıcılarının kullanımı, bu ilkelerden etkilenir.
+2. **Uygulamanın diğer uygulamalardan tüm uygulamalara veri almasına Izin ver** ' **All apps**i ayarlayın. 
+
+Amaç ve içerik sağlayıcılarının kullanımı, bu ilkelerden etkilenir.
 3. Aşağıdaki koşulları onaylayın:
     - Yönetilmeyen bir uygulamadan uygulama işlevlerinizi doğru açma.
-    - Yönetilen uygulamalar arasında içerik paylaşımına izin verilir.
-    - Yönetilen uygulamalardan Yönetilemeyen uygulamalara (örneğin, Chrome) paylaşılması engellenir.
+    - Uygulamanız ve yönetilen uygulamalar arasında içerik paylaşımına izin verilir.
+    - Uygulamanızdan Yönetilemeyen uygulamalara (örneğin, Chrome) paylaşım engellenir.
+
+
+#### <a name="restrict-receiving-data-from-other-apps"></a>Diğer uygulamalardan veri almayı kısıtla
+
+1. **Kuruluş verilerini diğer uygulamalara** **tüm uygulamalara**Gönder ' i ayarlayın.
+2. Diğer uygulamalardan **ilkeyle yönetilen uygulamalara** **veri al** ' a ayarlayın. 
+3. Aşağıdaki koşulları onaylayın:
+    - Uygulama işlevinizden yönetilmeyen bir uygulamaya doğru gönderme.
+    - Uygulamanız ve yönetilen uygulamalar arasında içerik paylaşımına izin verilir.
+    - Yönetilmeyen uygulamalardan (örneğin, Chrome) uygulamanıza paylaşılması engellenir.
+
+Uygulamanız [Tümleşik ' açık ' denetimleri](app-sdk-android.md#opening-data-from-a-local-or-cloud-storage-location)gerektiriyorsa, **açma** işlevini aşağıdaki şekilde denetleyebilirsiniz:
+
+1. Diğer uygulamalardan **ilkeyle yönetilen uygulamalara** **veri al** ' a ayarlayın. 
+2. Açık verileri, **engellemek**için **kuruluş belgelerine** ayarlayın. 
+3. Aşağıdaki koşulları onaylayın:
+    - Açmak yalnızca uygun yönetilen konumlara kısıtlıdır.
 
 ### <a name="restrict-cut-copy-and-paste"></a>Kesme, kopyalama ve yapıştırmayı kısıtla
 Sistem panosunu yönetilen uygulamalarla kısıtlamak için aşağıdaki adımları kullanabilirsiniz:
@@ -78,9 +97,9 @@ Sistem panosunu yönetilen uygulamalarla kısıtlamak için aşağıdaki adımla
     - Uygulamanızdan yönetilmeyen bir uygulamaya (örneğin, Iletiler) metin kopyalama engellenir.
 
 ### <a name="prevent-save"></a>Kaydetmeyi engelle
-Farklı **Kaydet** işlevlerini aşağıdaki şekilde denetleyebilirsiniz:
+Uygulamanız [Tümleşik farklı kaydet denetimleri](app-sdk-android.md#example-data-transfer-between-apps-and-device-or-cloud-storage-locations)gerektiriyorsa, farklı **Kaydet** işlevlerini aşağıdaki şekilde denetleyebilirsiniz:
 
-1. Uygulamanız [Tümleşik farklı kaydet denetimleri](app-sdk-android.md#example-determine-if-saving-to-device-or-cloud-storage-is-permitted)gerektiriyorsa, **' farklı Kaydet '** seçeneğini **Evet**olarak belirleyin.
+1. **' Farklı Kaydet '** ayarını **Evet**olarak belirleyin.
 2. Aşağıdaki koşulları onaylayın:
     - Kaydet yalnızca uygun yönetilen konumlara kısıtlıdır.
 
@@ -98,8 +117,8 @@ Uygulama yedeklemesini aşağıdaki şekilde kontrol edebilirsiniz:
 2. Aşağıdaki koşulları onaylayın:
     - Yedeklemeler kısıtlıdır.
 
-### <a name="unenrollment"></a>Kayıt kaldırmaya
-Yönetilen uygulamaları, şirket e-posta ve belgelerinin bulunduğu bir şekilde uzaktan temizleyebilirsiniz ve artık yönetilmediğinde kişisel verilerin şifresi çözülür. Bunu yapmak için:
+### <a name="wipe"></a>Silme
+Yönetilen uygulamaları, şirket e-posta ve belgelerinin bulunduğu yerden uzaktan silebilirsiniz. Kişisel verilerin şifresi artık yönetildiğinde çözülür. Bunu yapmak için:
 
 1. Azure portal, [silme](../apps/apps-selective-wipe.md)işlemi yapın.
 2. Uygulamanız herhangi bir silme işleyicisine kaydolmazsa, aşağıdaki koşulları onaylayın:
@@ -108,7 +127,7 @@ Yönetilen uygulamaları, şirket e-posta ve belgelerinin bulunduğu bir şekild
     - Yönetilen içerik uygulamadan kaldırılır. Daha fazla bilgi için bkz. [Android Için Intune uygulama SDK 'sı Geliştirici Kılavuzu-seçmeli silme](app-sdk-android.md#selective-wipe).
 
 ### <a name="multi-identity-support"></a>Çoklu kimlik desteği
-[Çoklu kimlik desteğini](app-sdk-android.md#multi-identity-optional) tümleştirme, kapsamlı bir şekilde test olması gereken yüksek riskli bir değişiklik. En yaygın sorunlar, kimliği (bağlam ve tehdit düzeyi) ve izleme dosyalarını () yanlış ayarlamadığı için oluşur `MAMFileProtectionManager` .
+[Çoklu kimlik desteğini](app-sdk-android.md#multi-identity-optional) tümleştirme, kapsamlı bir şekilde test olması gereken yüksek riskli bir değişiklik. En yaygın sorunlar, etkin kimliğin ( `Context` iş parçacığı düzeyi) veya düzgün bir şekilde izleme dosya kimliklerinin () düzgün bir şekilde ayarlanması nedeniyle oluşur `MAMFileProtectionManager` .
 
 En düşük düzeyde, aşağıdakileri onaylayın:
 
@@ -116,11 +135,9 @@ En düşük düzeyde, aşağıdakileri onaylayın:
 - Kopyalama ve yapıştırma kısıtlamaları, yönetilene doğru şekilde uygulanır.
 - Yalnızca yönetilen kimliğe ait veriler şifrelenir ve kişisel dosyalar değiştirilmez.
 - Kayıt kaldırma sırasında seçmeli Temizleme yalnızca yönetilen kimlik verilerini kaldırır.
-- Yönetilmeyen bilgisayardan yönetilen bir hesaba (yalnızca ilk kez) değiştirirken kullanıcıdan koşullu başlatma yapması istenir.
+- Yönetilmeyen bilgisayardan yönetilen bir hesaba (yalnızca ilk kez) değiştirilirken, son kullanıcıdan koşul başlatması istenir.
 
 ### <a name="app-configuration-optional"></a>Uygulama yapılandırması (isteğe bağlı)
 Yönetilen uygulamaların davranışını yapılandırabilirsiniz. Uygulamanız herhangi bir uygulama yapılandırma ayarını kullanıyorsa, uygulamanızın sizin (yönetici olarak) ayarlayabileceğiniz tüm değerleri doğru bir şekilde işlediğini test etmelisiniz. Intune 'da [uygulama yapılandırma ilkeleri](../apps/app-configuration-policies-overview.md) oluşturabilir ve atayabilirsiniz.
 
-## <a name="next-steps"></a>Sonraki adımlar
 
-- [Microsoft Intune’a bir Android iş kolu uygulaması ekleme](../apps/lob-apps-android.md)
