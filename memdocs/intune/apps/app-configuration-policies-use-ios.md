@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65ecc658b0a63b943a1008c879ae63cfc2c4e8a1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 15c1e1e943d9fd03476c0605c4d41cd417354fce
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988734"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973035"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Yönetilen iOS/ıpados cihazları için uygulama yapılandırma ilkeleri ekleme
 
@@ -106,7 +106,7 @@ Microsoft Intune, bir uygulamaya özgü yapılandırma ayarları sağlar. Micros
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Çok kimlikli uygulamalarda yalnızca yapılandırılmış kuruluş hesaplarına izin verme 
 
-Microsoft Intune Yöneticisi olarak, yönetilen cihazlarda hangi kullanıcı hesaplarının Microsoft uygulamalarına ekleneceğini denetleyebilirsiniz. Erişimi yalnızca izin verilen kullanıcı hesaplarıyla sınırlayabilecek ve kayıtlı cihazlarda kişisel hesapları engelleyebilirsiniz. İOS/ıpados cihazları için aşağıdaki anahtar/değer çiftlerini kullanın:
+Microsoft Intune Yöneticisi olarak, yönetilen cihazlarda Microsoft uygulamalarına hangi iş veya okul hesaplarının ekleneceğini denetleyebilirsiniz. Erişimi yalnızca izin verilen kullanıcı hesaplarıyla sınırlayabilecek ve kayıtlı cihazlarda kişisel hesapları engelleyebilirsiniz. İOS/ıpados cihazlarında, yönetilen cihazlar uygulama yapılandırma ilkesinde aşağıdaki anahtar/değer çiftlerini kullanın:
 
 | **Anahtar** | **Değerler** |
 |----|----|

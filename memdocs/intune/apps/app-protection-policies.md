@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abd34733bd27ec150a92bf20cecbf7edc02c2bd6
-ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
+ms.openlocfilehash: e6f7b84015c8aef62f5b4db1e4f9fbbcca499739
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84331010"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973018"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Uygulama koruma ilkelerini oluşturma ve atama
 
@@ -190,7 +190,7 @@ Bu ilkeleri oluşturmak için Intune konsolunda **uygulamalar**  >  **Uygulama k
 
 Android 'de, Android cihazlar hangi cihaz türünün seçildiğine bakılmaksızın Intune Şirket Portalı uygulamasını yüklemeyi ister. Örneğin, ' Android Enterprise ' seçeneğini belirlerseniz, yönetilmeyen Android cihazlara sahip olan kullanıcılara yine de sorulur.
 
-İOS/ıpados için, ' cihaz türü ' seçiminin ' yönetilmeyen ' cihazlara zorlanması için ek uygulama yapılandırma ayarları gereklidir. Bu yapılandırma, belirli bir uygulamanın yönetildiği ve uygulama ayarlarının uygulanmayacak APP Service ile iletişim kurar:
+İOS/ıpados için, ' cihaz türü ' seçiminin Intune tarafından yönetilen cihazlara zorlanması için ek uygulama yapılandırma ayarları gereklidir. Bu yapılandırma, belirli bir uygulamanın yönetildiği ve uygulama ayarlarının uygulanmayacak APP Service ile iletişim kurar:
 
 - MDM ile yönetilen tüm uygulamalarda **IntuneMAMUPN** yapılandırılmalıdır. Daha fazla bilgi için bkz. [Microsoft Intune Içindeki iOS/ıpados uygulamaları arasında veri aktarımını yönetme](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - **Intunemamdeviceıd** , tüm üçüncü taraf ve Iş kolu MDM ile yönetilen uygulamalar için yapılandırılmalıdır. **IntuneMAMDeviceID**, cihaz kimliği belirtecinde yapılandırılmalıdır. Örneğin, `key=IntuneMAMDeviceID, value={{deviceID}}`. Daha fazla bilgi için bkz. [yönetilen iOS/ıpados cihazları için uygulama yapılandırma Ilkeleri ekleme](app-configuration-policies-use-ios.md).

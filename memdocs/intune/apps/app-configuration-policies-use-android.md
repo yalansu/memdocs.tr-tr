@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb376e9574dcbbbefca3c089dc4180356b1d5a89
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0edb497b2dd9e4853f3fbc378992158c0757e1f6
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988750"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973103"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Yönetilen Android Kurumsal cihazları için uygulama yapılandırma ilkeleri ekleme
 
@@ -76,7 +76,7 @@ Microsoft Intune içindeki uygulama yapılandırma ilkeleri, yönetilen Android 
 
 Uygulama yapılandırma ayarlarını destekleyecek şekilde tasarlandıysa, yönetilen Google Play uygulamalar için yapılandırma tasarımcısını kullanabilirsiniz. Yapılandırma, Intune 'a kayıtlı cihazlar için geçerlidir. Tasarımcı, uygulama tarafından sunulan ayarlar için belirli yapılandırma değerlerini yapılandırmanızı sağlar.
 
-1. **Add (Ekle)** seçeneğini belirleyin. Uygulama için girmek istediğiniz yapılandırma ayarları listesini seçin.
+1. **Ekle**'yi seçin. Uygulama için girmek istediğiniz yapılandırma ayarları listesini seçin.
 
     E-posta uygulamanız için GMail veya dokuz Iş kullanıyorsanız, bu ayarlarla ilgili daha fazla bilgi için [e-postayı yapılandırmak üzere Android kurumsal cihaz ayarları](../configuration/email-settings-android-enterprise.md) ' na bakın.
 
@@ -103,7 +103,7 @@ Yapılandırma değeri olarak değişken seçerseniz şunlar arasından seçim y
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Çok kimlikli uygulamalarda yalnızca yapılandırılmış kuruluş hesaplarına izin verme 
 
-Microsoft Intune Yöneticisi olarak, yönetilen cihazlarda hangi kullanıcı hesaplarının Microsoft uygulamalarına ekleneceğini denetleyebilirsiniz. Erişimi yalnızca izin verilen kullanıcı hesaplarıyla sınırlayabilecek ve kayıtlı cihazlarda kişisel hesapları engelleyebilirsiniz. Android cihazlarda aşağıdaki anahtar/değer çiftlerini kullanın:
+Microsoft Intune Yöneticisi olarak, yönetilen cihazlarda Microsoft uygulamalarına hangi iş veya okul hesaplarının ekleneceğini denetleyebilirsiniz. Erişimi yalnızca izin verilen kullanıcı hesaplarıyla sınırlayabilecek ve kayıtlı cihazlarda kişisel hesapları engelleyebilirsiniz. Android cihazlarda, yönetilen cihazlar uygulama yapılandırma ilkesinde aşağıdaki anahtar/değer çiftlerini kullanın:
 
 | **Anahtar** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|
