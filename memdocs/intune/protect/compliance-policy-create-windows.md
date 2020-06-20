@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/09/2019
+ms.date: 06/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfcedebf32c8f08450e3eaa87c99f9bc11dd7431
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 972596cd3973c84c4f00409464f2fe621efc1369
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906892"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107427"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Cihazları Intune ile uyumlu veya uyumsuz olarak işaretlemek için Windows 10 ve üzeri ayarları
 
@@ -46,13 +46,12 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
 - **BitLocker gerektir**:  
    Windows BitLocker Sürücü Şifrelemesi, Windows işletim sistemi biriminde depolanan tüm verileri şifreler. BitLocker, Windows işletim sistemini ve Kullanıcı verilerini korumaya yardımcı olmak için Güvenilir Platform Modülü (TPM) kullanır. Ayrıca, sol tarafta bırakılmış, kayıp veya çalınmış olsa bile bir bilgisayarın üzerinde oynanmadığını doğrulamanıza yardımcı olur. Bilgisayar TPM ile donatılmışsa, BitLocker TPM’yi verileri koruyan şifreleme anahtarlarını kilitlemek için kullanır. Sonuç olarak, TPM bilgisayarın durumunu doğrulana kadar anahtarlara erişilemez.  
 
-   - **Yapılandırılmadı** (*varsayılan*)-Bu ayar uyumluluk veya uyumsuzluk için değerlendirilmez.
-   - **Gerektir** -cihaz, sistem kapalı veya hazırda bekleme durumunda sürücüde depolanan verileri yetkisiz erişimden koruyabilir.  
-
+  - **Yapılandırılmadı** (*varsayılan*)-Bu ayar uyumluluk veya uyumsuzluk için değerlendirilmez.
+  - **Gerektir** -cihaz, sistem kapalı veya hazırda bekleme durumunda sürücüde depolanan verileri yetkisiz erişimden koruyabilir.  
 
 - **Cihazda güvenli önyüklemenin etkinleştirilmesini gerektir**:  
-    - **Yapılandırılmadı** (*varsayılan*)-Bu ayar uyumluluk veya uyumsuzluk için değerlendirilmez.
-    - **Gerektir** -sistem, fabrikada güvenilen bir duruma önyükleme yapılmasını zorlanmıştır. Makineyi önyüklemek için kullanılan çekirdek bileşenleri, cihazı üreten kuruluşun güvendiği doğru şifreleme imzalarına sahip olmalıdır. UEFI üretici yazılımı, makinenin başlatılmasına izin vermeden önce imzayı doğrular. Herhangi bir dosya üzerinde değişiklik yapılmışsa ve imzasını kesen sistem önyükleme yapmaz.
+  - **Yapılandırılmadı** (*varsayılan*)-Bu ayar uyumluluk veya uyumsuzluk için değerlendirilmez.
+  - **Gerektir** -sistem, fabrikada güvenilen bir duruma önyükleme yapılmasını zorlanmıştır. Makineyi önyüklemek için kullanılan çekirdek bileşenleri, cihazı üreten kuruluşun güvendiği doğru şifreleme imzalarına sahip olmalıdır. UEFI üretici yazılımı, makinenin başlatılmasına izin vermeden önce imzayı doğrular. Herhangi bir dosya üzerinde değişiklik yapılmışsa ve imzasını kesen sistem önyükleme yapmaz.
 
   > [!NOTE]
   > **Cihazda güvenli önyüklemenin etkinleştirilmesini gerektir** AYARı bazı TPM 1,2 ve 2,0 cihazlarda desteklenir. TPM 2.0 ve sonrasını desteklemeyen cihazlarda ilke durumu Intune'da **Uyumsuz** olarak gösterilir. Desteklenen sürümler hakkında daha fazla bilgi için bkz. [cihaz sistem durumu kanıtlama](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
@@ -60,7 +59,7 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
 - **Kod bütünlüğü gerektir**:  
   Kod bütünlüğü, bir sürücünün veya sistem dosyasının belleğe her yüklendiğinde bütünlüğünü doğrulayan bir özelliktir.
   - **Yapılandırılmadı** (*varsayılan*)-Bu ayar uyumluluk veya uyumsuzluk için değerlendirilmez.
-  -  **Gerektir** -bir imzalanmamış sürücü veya sistem dosyasının çekirdeğe yüklenip yüklenmediğini algılayan kod bütünlüğü gerektir. Ayrıca, bir sistem dosyasının kötü amaçlı yazılım tarafından değiştirilip değiştirilmediğini algılar veya yönetici ayrıcalıklarına sahip bir kullanıcı hesabı tarafından çalıştırılabilir.
+  - **Gerektir** -bir imzalanmamış sürücü veya sistem dosyasının çekirdeğe yüklenip yüklenmediğini algılayan kod bütünlüğü gerektir. Ayrıca, bir sistem dosyasının kötü amaçlı yazılım tarafından değiştirilip değiştirilmediğini algılar veya yönetici ayrıcalıklarına sahip bir kullanıcı hesabı tarafından çalıştırılabilir.
 
 Daha fazla kaynak:
 
@@ -104,7 +103,7 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
 
 - **Configuration Manager cihaz uyumluluğunu gerektir**:  
   - **Yapılandırılmadı** (*varsayılan*)-ıntune, uyumluluk için Configuration Manager ayarlarından herhangi birini denetlemez.
-  - **Gerektir** -Configuration Manager için tüm ayarların (yapılandırma öğeleri) uyumlu olmasını gerektir.  
+  - **Gerektir** -Configuration Manager için tüm ayarların (yapılandırma öğeleri) uyumlu olmasını gerektir.
 
     Örneğin, tüm yazılım güncelleştirmelerinin cihazlarda yüklü olmasını gerektirirsiniz. Configuration Manager, bu gereksinimin "yüklü" durumu vardır. Cihazdaki herhangi bir program bilinmeyen bir durumdaysa, cihaz Intune 'da uyumlu değildir.
 
@@ -128,7 +127,7 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
   
   *Alfasayısal*olarak ayarlandığında aşağıdaki ayarlar kullanılabilir:  
   - **Parola karmaşıklığı**:  
-    Seçenekleriniz şunlardır: 
+    Seçenekleriniz şunlardır:
     - **Rakamlar ve küçük harfler gerektir** (*varsayılan*)
     - **Rakamlar, küçük harfler ve büyük harfler iste**
     - **Rakamlar, küçük harfler, büyük harfler ve özel karakterler iste**
@@ -172,7 +171,7 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
 
 - **Güvenlik duvarı**:  
   - **Yapılandırılmadı** (*varsayılan*)-Intune, Microsoft Defender güvenlik duvarını denetlemez ve var olan ayarları değiştirmez.
-  - **Gerektir** -Microsoft Defender güvenlik duvarını açın ve kullanıcıların bunu kapatmasını engelleyin.  
+  - **Gerektir** -Microsoft Defender güvenlik duvarını açın ve kullanıcıların bunu kapatmasını engelleyin.
 
   [Güvenlik Duvarı CSP 'si](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
 
@@ -181,27 +180,21 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
 
 - **Güvenilir Platform Modülü (TPM)**:  
   - **Yapılandırılmadı** (*varsayılan*)-ıNTUNE, cihazı bir TPM yonga sürümü için denetlemez.
-  - **Gerektir** -Intune, uyumluluk için TPM yonga sürümünü denetler. TPM yonga sürümü **0** ' dan büyükse cihaz uyumludur (sıfır). Cihazda TPM sürümü yoksa cihaz uyumlu değildir.  
+  - **Gerektir** -Intune, uyumluluk için TPM yonga sürümünü denetler. TPM yonga sürümü **0** ' dan büyükse cihaz uyumludur (sıfır). Cihazda TPM sürümü yoksa cihaz uyumlu değildir.
 
   [DeviceStatus CSP-DeviceStatus/TPM/SpecificationVersion düğümü](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
   
 - **Virüsten koruma**:  
-  - **Yapılandırılmadı** (*varsayılan*)-Intune, cihazda yüklü olan herhangi bir virüsten koruma çözümünü denetlemez. 
+  - **Yapılandırılmadı** (*varsayılan*)-Intune, cihazda yüklü olan herhangi bir virüsten koruma çözümünü denetlemez.
   - **Require** Symantec ve Microsoft Defender gibi [Windows Güvenlik Merkezi](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)'ne kayıtlı virüsten koruma çözümlerini kullanarak uyumluluğu kontrol edin.
-  
-  [DeviceStatus CSP-DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
-  > [!NOTE]
-  > Virüsten koruma için DeviceStatus CSP, *Windows 10 Home* için desteklenmez ve *geçerli olmayan*bir durum bildirir. Intune ekibi bir çözüm üzerinde çalışmaktadır. Bu kısıtlamayı geçici olarak çözmek için, cihaz uyumluluk ilkenizde [Windows Defender](#defender) ayarlarını kullanmayı düşünün. Windows Defender ayarları Windows 10 Home ile desteklenir.  
+  [DeviceStatus CSP-DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
 - **Casus yazılımdan koruma**:  
   - **Yapılandırılmadı** (*varsayılan*)-Intune, cihazda yüklü olan herhangi bir casus yazılımdan koruma çözümünü denetlemez.
-  - **Require** Symantec ve Microsoft Defender gibi [Windows Güvenlik Merkezi](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)'ne kayıtlı casus yazılımdan koruma çözümlerini kullanarak uyumluluğu kontrol edin.  
-  
-  [DeviceStatus CSP-DeviceStatus/antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  - **Require** Symantec ve Microsoft Defender gibi [Windows Güvenlik Merkezi](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)'ne kayıtlı casus yazılımdan koruma çözümlerini kullanarak uyumluluğu kontrol edin.
 
-  > [!NOTE]
-  > Casus yazılımdan koruma için DeviceStatus CSP, *Windows 10 Home* için desteklenmez ve *geçerli olmayan*bir durum bildirir. Intune ekibi bir çözüm üzerinde çalışmaktadır. Bu kısıtlamayı geçici olarak çözmek için, cihaz uyumluluk ilkenizde [Windows Defender](#defender) ayarlarını kullanmayı düşünün. Windows Defender ayarları Windows 10 Home ile desteklenir. 
+  [DeviceStatus CSP-DeviceStatus/antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
 ### <a name="defender"></a>Defender
 
@@ -212,7 +205,7 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
   - **Gerektir** -Microsoft Defender kötü amaçlı yazılımdan koruma hizmetini etkinleştirin ve kullanıcıların bunu kapatmasını engelleyin.
 
 - **Microsoft Defender kötü amaçlı yazılımdan koruma en düşük sürümü**:  
-  Microsoft Defender kötü amaçlı yazılımdan koruma hizmeti 'nin izin verilen en düşük sürümünü girin. Örneğin, `4.11.0.0` girin. Boş bırakılırsa, Microsoft Defender kötü amaçlı yazılımdan koruma hizmeti 'nin herhangi bir sürümü kullanılabilir.  
+  Microsoft Defender kötü amaçlı yazılımdan koruma hizmeti 'nin izin verilen en düşük sürümünü girin. Örneğin, `4.11.0.0` girin. Boş bırakılırsa, Microsoft Defender kötü amaçlı yazılımdan koruma hizmeti 'nin herhangi bir sürümü kullanılabilir.
 
   *Varsayılan olarak, sürüm yapılandırılmaz*.
 
@@ -245,12 +238,11 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
   
   Microsoft Defender ATP 'yi (Gelişmiş tehdit koruması) Savunma tehdidi hizmeti olarak ayarlamak için bkz. [Microsoft Defender ATP 'Yi koşullu erişim Ile etkinleştirme](advanced-threat-protection.md).
 
-
 ## <a name="windows-holographic-for-business"></a>Windows 10 Holographic for Business
 
 Windows Holographic for Business, **Windows 10 ve sonrası** platformları kullanır. Windows Holographic for Business, aşağıdaki ayarı destekler:
 
-- **System Security** > **Encryption** > **Cihazdaki veri depolamanın**sistem güvenlik şifrelemesi şifrelemesi.
+- **Sistem güvenliği**  >  **Şifreleme**  >  **Cihazda veri depolama şifreleme**.
 
 Microsoft HoloLens’te cihaz şifrelemesini doğrulamak için bkz. [Cihaz şifrelemesini doğrulama](https://docs.microsoft.com/hololens/hololens-encryption#verify-device-encryption).
 

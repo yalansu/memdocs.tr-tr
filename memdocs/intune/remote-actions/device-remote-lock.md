@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f6cafadbecbb0e0f0287b8a6ac4db5a1168e5e84
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0ac6a5d848a0d02b72a4f7275a6b6df47b2cd834
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983093"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107329"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>Intune ile cihazları uzaktan kilitleme
 
@@ -37,7 +37,7 @@ ms.locfileid: "83983093"
 - Android kurumsal bilgi noktası cihazları
 - Android kurumsal iş profili cihazlar
 - iOS
-- macOS
+- Mac OS
 - Windows 10 Mobile
 - Windows Phone 8.1 ve üzeri
 
@@ -45,7 +45,7 @@ ms.locfileid: "83983093"
 - Windows 10 masaüstü
 
 > [!NOTE]
-> macOS cihazlar için 6 basamaklı bir kurtarma PIN’i ayarlarsınız. Cihaz kilitliyken, **Cihaz genel bakışı** başka bir cihaz eylemi gönderilene kadar PIN’i görüntüler. Lütfen, uzak kilitleme komutu gönderildikten sonra yalnızca 7 gün boyunca kullanılabilir olacağı için PIN 'i yazdığınızdan emin olun. 7 günden sonra Intune artık PIN 'e sahip olmayacaktır. Ayrıca, cihazın kilidini başarıyla açmak için özgün PIN kullanılana kadar bu komutu aynı cihaz için yeniden başlatmayın. Bu komutu göndermeniz, PIN 'i yazmanız ve macOS cihazına başarıyla ulaşmak için bu komutu kullanana kadar, bu komutu aynı cihaza yeniden göndermemelisiniz.  
+> macOS cihazlar için 6 basamaklı bir kurtarma PIN’i ayarlarsınız. Cihaz kilitliyken, **Cihaz genel bakışı** başka bir cihaz eylemi gönderilene kadar PIN’i görüntüler. Lütfen PIN 'i yazdığınızdan emin olun çünkü yalnızca, uzaktan kilitleme komutu gönderildikten sonra 30 gün boyunca kullanılabilir olacak. 30 günden sonra Intune artık PIN 'e sahip olmayacaktır. Ayrıca, cihazın kilidini başarıyla açmak için özgün PIN kullanılana kadar bu komutu aynı cihaz için yeniden başlatmayın. Bu komutu göndermeniz, PIN 'i yazmanız ve macOS cihazına başarıyla ulaşmak için bu komutu kullanana kadar, bu komutu aynı cihaza yeniden göndermemelisiniz.  
 
 
 ## <a name="remote-lock-a-device"></a>Cihazı uzaktan kilitleme

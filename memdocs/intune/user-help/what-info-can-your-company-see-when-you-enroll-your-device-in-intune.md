@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: 696969c2d80519d0c0aac2f33c72756aff700f14
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: 740d9b68a0101e04e6bf690d09ecce7eaff4509e
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740782"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107317"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Cihazımı kaydettiğimde kuruluşum hangi bilgileri görebilir?
 
@@ -55,7 +55,7 @@ Bir cihazı Microsoft Intune’a kaydettiğinizde kuruluşunuz kişisel bilgiler
  
  > [!NOTE]
  > Uygulama, aşağıdaki yollarla yüklendiğinde **yönetilen uygulama** olarak kabul edilir:
- > 1. Bir Kullanıcı, Intune Yöneticisi tarafından **kullanılabilir** olarak yayımlandıktan sonra uygulamayı şirket portalı uygulamasından yükler.
+ > 1. Bir Kullanıcı, Intune Yöneticisi tarafından **kullanılabilir** olarak yayımlandıktan sonra uygulamayı şirket portalı uygulamasından yüklerse.
  > 2. Uygulama, Intune Yöneticisi tarafından **gerekli** olduğu gibi yayımlanır ve cihaza yüklenir. 
  >
  > Kuruluşunuzdaki bir BT yöneticisiyseniz veya destek sorumlusu varsa ve Intune 'da uygulama yönetimi hakkında daha fazla bilgi istiyorsanız bkz. [yönetilmeyen uygulamaların, yönetilen uygulamaların ve Mam uygulamaların yeteneklerini anlama](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/understanding-the-capabilities-of-unmanaged-apps-managed-apps/ba-p/249164).
