@@ -83,7 +83,7 @@
 ### [Şirket Portalı’nı kullanarak cihazınızı sıfırlarsanız ne olur?](effects-of-device-reset-company-portal-ios.md)
 ### [Cihazınızın kaydını silme](unenroll-your-device-from-intune-ios.md)
 #### [Cihazınızın kaydını sildiğinizde ne olur?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
-### [Cihazınızı el ile eşitleme](sync-your-device-manually-ios.md)
+### [iOS cihazını el ile eşitleme](sync-your-device-manually-ios.md)
 
 ### [iOS cihazınızdaki yaygın sorunları çözme](troubleshoot-your-device-iOS.md)
 #### [Ele geçirilen bir iOS cihazı yeniden bağlama](how-to-reconnect-a-compromised-ios-device.md)
@@ -115,6 +115,7 @@
 ### [macOS cihazınızı kaydetme](enroll-your-device-in-intune-macos-cp.md)
 ### [Kuruluş tarafından sağlanan macOS cihazınızı kaydetme](enroll-company-device-macos.md)  
 ### [macOS cihazınızın kaydını kaldırma](unenroll-your-device-from-intune-macos.md)  
+### [macOs cihazını el ile eşitleme](sync-your-device-manually-macos.md)
 ### [macOS cihazındaki yaygın sorunları çözme](troubleshoot-your-device-macos.md)
 #### [Kullandığım macOS sürümü henüz desteklenmiyor](your-macos-version-isnt-yet-supported.md)
 #### [macOS cihazınızı güncelleştirme](you-need-to-update-your-macos-device.md)
