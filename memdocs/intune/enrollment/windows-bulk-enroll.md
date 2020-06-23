@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ecbde2f6e6a40379cd37a6ddebe09fa9dab8e3b1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 7894e2648b58b1afd313250dc9724f117fe6c93a
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988927"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216544"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Windows cihazlar için toplu kayıt
 
@@ -37,7 +37,7 @@ Azure AD kullanıcıları, bu cihazlarda standart kullanıcılardır ve atanan I
 
 ## <a name="create-a-provisioning-package"></a>Sağlama paketi oluşturma
 
-1. Microsoft Mağazası'ndan [Windows Yapılandırma Tasarımcısı (WCD)](https://www.microsoft.com/store/apps/9nblggh4tx22) uygulamasını indirin.
+1. Microsoft Mağazası'ndan [Windows Yapılandırma Tasarımcısı (WCD)](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22) uygulamasını indirin.
    ![Windows Yapılandırma Tasarımcısı uygulama mağazasının ekran görüntüsü](./media/windows-bulk-enroll/bulk-enroll-store.png)
 
 2. **Windows Yapılandırma Tasarımcısı** uygulamasını açın ve **Masaüstü cihazları sağla** seçeneğini belirleyin.
@@ -67,7 +67,7 @@ Azure AD kullanıcıları, bu cihazlarda standart kullanıcılardır ve atanan I
 
 10. İsteğe bağlı olarak, **Uygulama ekleyebilir** ve **Sertifika ekleyebilirsiniz**. Bu uygulamalar ve sertifikalar cihazda sağlanır.
 
-11. İsteğe bağlı olarak, sağlama paketinizi parola ile koruyabilirsiniz.  **Oluştur**' a tıklayın.
+11. İsteğe bağlı olarak, sağlama paketinizi parola ile koruyabilirsiniz.  **Oluştur**'a tıklayın.
     ![Windows Yapılandırma Tasarımcısı uygulamasında paket koruması ekran görüntüsü](./media/windows-bulk-enroll/bulk-enroll-create.png)
 
 ## <a name="provision-devices"></a>Cihaz sağlama

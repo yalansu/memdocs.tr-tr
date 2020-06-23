@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 473f356f4f867cdb7a03c6b419f4e789b8301f80
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: 13623f92ac68855aefbd1900c5040004acba1f09
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795576"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216510"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Microsoft Intune için ağ uç noktaları  
 
@@ -67,7 +67,6 @@ Aşağıdaki tabloda Intune istemcisinin eriştiği bağlantı noktaları ve hiz
 |fef.msua05.manage.microsoft.com|138.91.244.151|
 |fef.msua06.manage.microsoft.com|13.78.185.97|
 |fef.msub01.manage.microsoft.com|137.135.128.214|
-|fef.msub02.manage.microsoft.com|137.135.130.29|
 |fef.msub03.manage.microsoft.com|52.169.82.238|
 |fef.msub05.manage.microsoft.com|23.97.166.52|
 |fef.msuc03.manage.microsoft.com|23.101.0.100|

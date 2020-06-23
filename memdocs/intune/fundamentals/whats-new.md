@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e6e9ec3e5f97d48bda63f66bbbd39dd1f23b870
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: ed51e7ace2f12d68c1f31e5616b5fa33732f5673
+ms.sourcegitcommit: d76731f1b54aef6184e240292516561ce5c5c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107546"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133320"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -202,7 +202,7 @@ Kullanıcı arabirimi Apple 'ın Aygıt Kayıt Programı Apple terminolojisini y
 MacOS cihaz uzaktan kilitleme PIN 'lerinin kullanılabilirliği 7 günden 30 güne yükselmiştir.
 
 #### <a name="change-primary-user-on-co-managed-devices--7319183----"></a>Ortak yönetilen cihazlarda birincil kullanıcıyı değiştirme<!--7319183  -->
-Bir cihazın birincil kullanıcısını, ortak yönetilen Windows cihazları için değiştirebilirsiniz. Bunu bulma ve değiştirme hakkında daha fazla bilgi için bkz. [Intune cihazının birincil kullanıcısını bulma](../remote-actions/find-primary-user.md).
+Bir cihazın birincil kullanıcısını, ortak yönetilen Windows cihazları için değiştirebilirsiniz. Bunu bulma ve değiştirme hakkında daha fazla bilgi için bkz. [Intune cihazının birincil kullanıcısını bulma](../remote-actions/find-primary-user.md). Bu özellik önümüzdeki birkaç hafta içinde kademeli olarak kullanıma sunulacaktır.
 
 #### <a name="setting-the-intune-primary-user-also-sets-the-azure-ad-owner-property--7319227---"></a>Intune birincil kullanıcı ayarı da Azure AD Owner özelliğini ayarlar<!--7319227 -->
 Bu yeni özellik, yeni kaydedilen karma Azure AD 'ye katılmış cihazlarda sahip özelliğini Intune birincil kullanıcısının ayarlandığı anda otomatik olarak ayarlar. Birincil Kullanıcı hakkında daha fazla bilgi için bkz. [Intune cihazının birincil kullanıcısını bulma](../remote-actions/find-primary-user.md).

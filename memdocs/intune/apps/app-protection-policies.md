@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 06/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6f7b84015c8aef62f5b4db1e4f9fbbcca499739
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: d4beb6c5a91f9f379006df482ff10066831389b6
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973018"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216408"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Uygulama koruma ilkelerini oluşturma ve atama
 
@@ -183,7 +183,7 @@ Bu ilkeleri oluşturmak için Intune konsolunda **uygulamalar**  >  **Uygulama k
 
 ### <a name="device-types"></a>Cihaz türleri
 
-- **Yönetilmeyen**: yönetilmeyen cihazlar, Intune MDM yönetiminin algılanmadığı cihazlardır. Bu, üçüncü taraf MDM satıcıları tarafından yönetilen cihazları içerir.
+- **Yönetilmeyen**: IOS/ıpados cihazlarında, yönetilmeyen cihazlar, Intune MDM yönetiminin veya bir 3. taraf MDM/EMM çözümünün anahtarı geçirmediğinden herhangi bir cihazlardır `IntuneMAMUPN` . Android cihazlarda, yönetilmeyen cihazlar, Intune MDM yönetiminin algılanmadığı cihazlardır. Bu, üçüncü taraf MDM satıcıları tarafından yönetilen cihazları içerir.
 - **Intune tarafından yönetilen cihazlar**: yönetilen cihazlar, Intune MDM tarafından yönetilir.
 - **Android Cihaz Yöneticisi**: Android CIHAZ yönetim API 'sini kullanan Intune tarafından yönetilen cihazlar.
 - **Android Enterprise**: Android kurumsal iş profilleri veya Android kurumsal tam cihaz yönetimi kullanan Intune tarafından yönetilen cihazlar.

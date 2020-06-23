@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/10/2020
+ms.date: 06/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc06434a082ffa801d014eafe9dfd64c6bfec3bf
-ms.sourcegitcommit: 1d8bf691780b94a945e94945115d4d1df4242808
+ms.openlocfilehash: 96b547c50cda0ef623370bae20d347d4ccf1976b
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663355"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216493"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Windows 10 (ve üzeri) cihaz ayarları
 
@@ -141,6 +141,10 @@ Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [Bluetooth ILKESI CS
 - **Bluetooth reklamcılık**: **blok** cihazın Bluetooth tanıtımları göndermesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazın Bluetooth tanıtımları göndermesini sağlayabilir.
 
   [Bluetooth/AllowAdvertising CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+
+- **Bluetooth proxde bağlantılar**: **blok** bir cihaz kullanıcısının Swift çiftini ve diğer yakınlık tabanlı senaryoları kullanmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazın Bluetooth tanıtımları göndermesini sağlayabilir.
+
+  [Bluetooth/AllowPromptedProximalConnections CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 
 - **Bluetooth izin verilen hizmetler**: Izin verilen Bluetooth hizmetleri ve profillerinin bir listesini gibi onaltılık dizeler olarak **ekleyin** `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}` .
 
@@ -671,7 +675,7 @@ Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [kablolu Lessdisplay
 
   [System/TelemetryProxy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-telemetryproxy)
 
-## <a name="search"></a>Arama
+## <a name="search"></a>Arayın
 
 Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [arama ILKESI CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search)'sini kullanır.
 
