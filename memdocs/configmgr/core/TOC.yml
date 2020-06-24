@@ -584,6 +584,8 @@
               href: servers/manage/introduction-to-reporting.md
             - name: Power BI Rapor Sunucusu ile tümleştirme
               href: servers/manage/powerbi-report-server.md
+            - name: Power BI örnek raporlarını yükleme
+              href: servers/manage/powerbi-sample-reports.md
             - name: Raporlama planı
               items:
                 - name: Raporlama planı
