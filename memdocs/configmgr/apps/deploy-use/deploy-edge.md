@@ -10,12 +10,12 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2c3a542355dfa01e5f4f5be12f7b1bac10f30250
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 141a60a72038156fff2579419e92e558dab5a9b8
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710275"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776948"
 ---
 # <a name="microsoft-edge-management"></a>Microsoft Edge yönetimi
 
@@ -126,7 +126,7 @@ Aşağıdaki özellikleri, Microsoft Edge Yönetim Panosu için aşağıdaki [do
 - **Varsayılan tarayıcı (SMS_DefaultBrowser)**
    - Tarayıcı program KIMLIĞI
 
-- **SMS_BrowserUsage (SMS_BrowserUsage)**
+- **Tarayıcı kullanımı (SMS_BrowserUsage)**
    - BrowserName
    - UsagePercentage
 

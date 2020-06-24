@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 06/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77f0df858f94f3d0b8d6c3a4ee2b251e6b917da6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 43107ce98ee1c9d002b07470c224b2291819069b
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333178"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264116"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Microsoft Intune’da Android cihazlar için özel ayarlar kullanma
 
@@ -35,6 +35,7 @@ Android özel profilleri, Open Mobile Alliance Tekdüzen Kaynak Tanımlayıcıs�
 - [Önceden paylaşılan anahtar ile Wi-Fi profili oluşturma](/intune/wi-fi-profile-shared-key)
 - [Uygulama başına VPN profili oluşturma](/intune/android-pulse-secure-per-app-vpn)
 - [Samsung Knox Standard cihazlarında uygulamalara izin verme veya bunları engelleme](/intune/samsung-knox-apps-allow-block)
+- [Android için Microsoft Defender Gelişmiş tehdit koruması 'nda Web korumasını yapılandırma](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android)
 
 >[!IMPORTANT]
 > Yalnızca listelenen ayarlar bir özel profil tarafından yapılandırılabilir. Android cihazları, yapılandırabileceğiniz OMA-URI ayarlarının tam bir listesini sunmaz. Diğer ayarları görmek istiyorsanız, [Intune Uservoice sitesinde](https://microsoftintune.uservoice.com/forums/291681-ideas) diğer ayarlar için oy verin.
@@ -44,7 +45,7 @@ Bu makale, Android cihazlar için özel profil oluşturma işlemini gösterir.
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki ayarları girin:
 
     - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı **Android özel profilidir**.
@@ -72,7 +73,7 @@ Bu makale, Android cihazlar için özel profil oluşturma işlemini gösterir.
     Bazı ayarları ekledikten sonra **Dışarı Aktar**’ı seçebilirsiniz. **Dışarı Aktar**, virgülle ayrılmış değerler (.csv) dosyasına eklediğiniz tüm değerlerin listesini oluşturur.
 
 5. Değişikliklerinizi kaydetmek için **Tamam**’ı seçin. Gerekirse diğer ayarları eklemeye devam edin.
-6. İşiniz bittiğinde, Intune profilini oluşturmak için **Tamam** > **Oluştur** ' u seçin. Bu tamamlandığında, profiliniz **cihazlar-yapılandırma profilleri** listesinde gösterilir.
+6. İşiniz bittiğinde, **OK**  >  Intune profilini oluşturmak için Tamam**Oluştur** ' u seçin. Bu tamamlandığında, profiliniz **cihazlar-yapılandırma profilleri** listesinde gösterilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

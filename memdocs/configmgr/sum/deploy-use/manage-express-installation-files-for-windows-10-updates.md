@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
-ms.openlocfilehash: 4093eafe9f8a337ce322165a529f630a759b365f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ff018bc81ecdb3d11ebb71f1850804a5679c67f7
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718647"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746587"
 ---
 # <a name="manage-express-installation-files-for-windows-10-updates"></a>Windows 10 güncelleştirmeleri için hızlı yükleme dosyalarını yönetme
 
@@ -59,7 +59,9 @@ Windows 10 Express yükleme dosyaları için meta verileri eşitlemeye başlamak
 3. Uygun istemci ayarlarını seçin ve Şeritteki **Özellikler** ' e tıklayın.  
 
 4. **Yazılım güncelleştirmeleri** grubunu seçin. **Istemcilerde hızlı güncelleştirme yüklemeyi etkinleştirme**ayarını **Evet** olarak yapılandırın. İstemci üzerindeki HTTP dinleyicisi tarafından kullanılan bağlantı noktasıyla **hızlı güncelleştirme için içerik indirmek için kullanılan bağlantı noktasını** yapılandırın.
+    - Sürüm 1902 ' de, **Istemcilerde hızlı güncelleştirme yüklemesini etkinleştir** ayarı, **istemcilerin kullanılabilir olduğunda Delta Içerik yüklemelerine izin verecek**şekilde değiştirilmiştir.
     - Sürüm 1902 ' de, **Hızlı güncelleştirmeler için içerik indirmek için kullanılan bağlantı noktası** , **istemcilerin Delta içerik isteklerini almak Için kullandığı bağlantı noktası**olarak değiştirilmiştir.
+    
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

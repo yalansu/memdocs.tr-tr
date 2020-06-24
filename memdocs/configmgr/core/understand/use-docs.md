@@ -10,12 +10,12 @@ ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d694f9985e6d1e5118f2620e5cbd556de249788a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 31f9b1cb083400abd36858a177e87804a916362c
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771325"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746533"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>Configuration Manager belgelerini kullanma
 
@@ -34,11 +34,11 @@ Bu makalede Configuration Manager belge kitaplığı kullanımı için kaynaklar
 
 İhtiyacınız olan bilgileri bulmanıza yardımcı olması için aşağıdaki arama ipuçlarını kullanın:
 
-- Configuration Manager için içerik bulmak üzere tercih ettiğiniz arama altyapısını kullanırken, arama anahtar `ConfigMgr` kelimelerinizle birlikte dahil edin.
+- Configuration Manager için içerik bulmak üzere tercih ettiğiniz arama altyapısını kullanırken, `ConfigMgr` arama anahtar kelimelerinizle birlikte dahil edin.
 
-  - Configuration Manager geçerli dalı `docs.microsoft.com/configmgr` için sonuçları arayın. `docs.microsoft.com/previous-versions` Sonuçları eski ürün sürümleri içindir.
+  - `docs.microsoft.com/mem/configmgr`Configuration Manager geçerli dalı için sonuçları arayın. Sonuçları `docs.microsoft.com/previous-versions` eski ürün sürümleri içindir.
 
-  - Arama sonuçlarını geçerli içerik kitaplığına daha fazla odaklanmak için, arama altyapısının kapsamına `site:docs.microsoft.com` ekleyin.
+  - Arama sonuçlarını geçerli içerik kitaplığına daha fazla odaklanmak için, `site:docs.microsoft.com` arama altyapısının kapsamına ekleyin.
 
 - Kullanıcı arabirimindeki ve çevrimiçi belgelerdeki terminoloji ile eşleşen arama terimlerini kullanın. Topluluk içeriğinde görebileceğiniz resmi olmayan terimlerin veya kısaltmaların önüne kaçının. Örneğin şunu arayın:
 
@@ -46,13 +46,13 @@ Bu makalede Configuration Manager belge kitaplığı kullanımı için kaynaklar
   - "DT" yerine "dağıtım türü"
   - "SUM" yerine "yazılım güncelleştirmeleri"
 
-- Geçerli makale içinde arama yapmak için tarayıcınızın **bul** özelliğini kullanın. Modern Web tarayıcıları sayesinde, **CTRL**+**F** tuşlarına basın ve arama terimlerinizi girin.
+- Geçerli makale içinde arama yapmak için tarayıcınızın **bul** özelliğini kullanın. Modern Web tarayıcıları sayesinde, **CTRL** + **F** tuşlarına basın ve arama terimlerinizi girin.
 
-- Üzerindeki `docs.microsoft.com` her makale, içerik aramasına yardımcı olmak için aşağıdaki alanları içerir:
+- Üzerindeki her makale `docs.microsoft.com` , içerik aramasına yardımcı olmak için aşağıdaki alanları içerir:
 
   - Sağ üst köşedeki **arama** yapın. Tüm makalelere aramak için bu alana terimler girin. Configuration Manager kitaplığındaki makaleler, `ConfigMgr` yalnızca bu belge kitaplığını aramak için kapsamı otomatik olarak içerir.
 
-  - Sol içindekiler tablosunun üzerine **başlığa göre filtreleyin** . Geçerli içerik tablosunu aramak için bu alana terimler girin. Bu alan yalnızca geçerli düğümün makale başlıklarında görüntülenen terimlerle eşleşir. Örneğin, **çekirdek altyapı** (`docs.microsoft.com/configmgr/core`) veya **uygulama yönetimi** (`docs.microsoft.com/configmgr/apps`).
+  - Sol içindekiler tablosunun üzerine **başlığa göre filtreleyin** . Geçerli içerik tablosunu aramak için bu alana terimler girin. Bu alan yalnızca geçerli düğümün makale başlıklarında görüntülenen terimlerle eşleşir. Örneğin, **çekirdek altyapı** ( `docs.microsoft.com/configmgr/core` ) veya **uygulama yönetimi** ( `docs.microsoft.com/configmgr/apps` ).
 
 - Bir şeyi bulmada sorun mu yaşıyorsunuz? [Dosya geri bildirimi!](#bkmk_docfeedback) Sorunu dosyalayarak, kullanmakta olduğunuz arama altyapısını, denediğiniz anahtar sözcükleri ve hedef makaleyi sağlayın. Bu geribildirim, Microsoft 'un içeriği daha iyi arama için iyileştirilmesine yardımcı olur.
 
@@ -133,7 +133,7 @@ Katkıda bulunmak istiyorsanız ancak nereden başlayabileceğinizi bilmiyorsan�
 
     Microsoft yazarları bu etiketleri, topluluk katkısı için iyi adaylar olan sorunlara atar.
 
-- Doğruluk için bir makaleyi gözden geçirin. Ardından biçimi `mm/dd/yyyy` kullanarak **MS. Date** meta verilerini güncelleştirin. Bu katkı, içeriğin yeni kalmasına yardımcı olur.
+- Doğruluk için bir makaleyi gözden geçirin. Ardından biçimi kullanarak **MS. Date** meta verilerini güncelleştirin `mm/dd/yyyy` . Bu katkı, içeriğin yeni kalmasına yardımcı olur.
 
 - Deneyiminize göre açıklamalar, örnekler veya rehberlik ekleyin. Bu katkı, bilgi paylaşmak için topluluğun gücünü kullanır.
 

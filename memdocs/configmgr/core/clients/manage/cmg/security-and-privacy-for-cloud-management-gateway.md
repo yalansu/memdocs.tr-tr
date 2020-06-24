@@ -5,17 +5,17 @@ description: Bulut yönetimi ağ geçidiyle güvenlik ve gizlilik hakkındaki re
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7304730b-b517-4c76-aadd-4cbd157dc971
-ms.openlocfilehash: 93427cb34b2216bf16f713818481e69573a4b0de
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1dd64404905df1452e45beda8610932db237410d
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712893"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715297"
 ---
 # <a name="security-and-privacy-for-the-cloud-management-gateway"></a>Bulut yönetimi ağ geçidi için güvenlik ve Gizlilik
 
@@ -25,27 +25,42 @@ Bu makale Configuration Manager bulut yönetim ağ geçidi (CMG) için güvenlik
 
 ## <a name="cmg-security-details"></a>CMG güvenlik ayrıntıları
 
-- CMG, CMG bağlantı noktalarından gelen bağlantıları kabul eder ve yönetir. Sertifikaları ve bağlantı kimliklerini kullanarak karşılıklı SSL kimlik doğrulamasını kullanır.
-- CMG aşağıdaki yöntemleri kullanarak istemci isteklerini kabul eder ve iletir:
-    - PKI tabanlı istemci kimlik doğrulama sertifikası veya Azure AD ile karşılıklı SSL kullanarak bağlantıların ön kimlik doğrulamasını yapın.
-      - CMG sanal makine örneklerinde IIS, CMG 'ye yüklenen güvenilen kök sertifika (ler) e göre sertifika yolunu doğrular.
-      - VM örneğindeki IIS, etkinleştirilirse istemci sertifikası iptalini de doğrular. Daha fazla bilgi için bkz. [sertifika iptal listesini yayımlama](#bkmk_crl).
-    - Sertifika güven listesi, istemci kimlik doğrulama sertifikasının kökünü denetler. Ayrıca, istemci için yönetim noktasıyla aynı doğrulamayı gerçekleştirir. Daha fazla bilgi için bkz. [sitenin Sertifika güven listesindeki girdileri gözden geçirme](#bkmk_ctl).
-    - Herhangi bir CMG bağlantı noktasının isteği denetleyebilir olup olmadığını denetlemek için istemci isteklerini (URL 'Ler) doğrular ve filtreler.  
-    - Her yayımlama uç noktası için içerik uzunluğunu denetler.
-    - Aynı sitedeki CMG bağlantı noktalarının yükünü dengelemek için hepsini bir kez deneme davranışı kullanır.
-- CMG bağlantı noktası aşağıdaki yöntemleri kullanır:
-    - CMG 'nin tüm sanal makine örneklerine tutarlı bir HTTPS/TCP bağlantısı oluşturur. Bu bağlantıları her dakikada denetler ve korur.
-    - Sertifikaları kullanarak CMG ile karşılıklı SSL kimlik doğrulamasını kullanır.
-    - İstemci isteklerini URL eşlemelerine göre iletir.
-    - Konsolunda hizmet sistem durumunu göstermek için bağlantı durumunu raporlar.
-    - Her beş dakikada bir uç nokta başına trafiği rapor edin.
+CMG, CMG bağlantı noktalarından gelen bağlantıları kabul eder ve yönetir. Sertifikaları ve bağlantı kimliklerini kullanarak karşılıklı kimlik doğrulaması kullanır.
+
+CMG aşağıdaki yöntemleri kullanarak istemci isteklerini kabul eder ve iletir:
+
+- PKI tabanlı istemci kimlik doğrulama sertifikası veya Azure AD ile karşılıklı HTTPS kullanarak bağlantıların ön kimlik doğrulamasını yapın.
+
+  - CMG sanal makine örneklerinde IIS, CMG 'ye yüklediğiniz Güvenilen Kök sertifikalara göre sertifika yolunu doğrular.
+
+  - Sertifika iptali etkinleştirirseniz, sanal makine örneğindeki IIS de istemci sertifikası iptalini doğrular. Daha fazla bilgi için bkz. [sertifika iptal listesini yayımlama](#bkmk_crl).
+
+- Sertifika güven listesi (CTL), istemci kimlik doğrulama sertifikasının kökünü denetler. Ayrıca, istemci için yönetim noktasıyla aynı doğrulamayı yapar. Daha fazla bilgi için bkz. [sitenin Sertifika güven listesindeki girdileri gözden geçirme](#bkmk_ctl).
+
+- Herhangi bir CMG bağlantı noktasının isteği denetleyebilir olup olmadığını denetlemek için istemci isteklerini (URL 'Ler) doğrular ve filtreler.  
+
+- Her yayımlama uç noktası için içerik uzunluğunu denetler.
+
+- Aynı sitedeki CMG bağlantı noktalarının yükünü dengelemek için hepsini bir kez deneme davranışı kullanır.
+
+CMG bağlantı noktası aşağıdaki yöntemleri kullanır:
+
+- CMG 'nin tüm sanal makine örneklerine tutarlı bir HTTPS/TCP bağlantısı oluşturur. Bu bağlantıları her dakikada denetler ve korur.
+
+- Sertifikaları kullanarak CMG ile karşılıklı kimlik doğrulama kullanır.
+
+- İstemci isteklerini URL eşlemelerine göre iletir.
+
+- Konsolunda hizmet sistem durumunu göstermek için bağlantı durumunu raporlar.
+
+- Her beş dakikada bir uç nokta başına trafiği rapor edin.
 
 ### <a name="configuration-manager-client-facing-roles"></a>Configuration Manager istemciye yönelik roller
 
 Yönetim noktası ve yazılım güncelleştirme noktası, istemci isteklerine hizmet vermek için IIS 'de ana bilgisayar uç noktaları. CMG tüm iç uç noktaları kullanıma sunmuyor. CMG 'de yayınlanan her uç noktanın bir URL eşlemesi vardır.
 
 - Dış URL, istemcinin CMG ile iletişim kurmak için kullandığı bir URL 'dir.
+
 - İç URL, istekleri iç sunucuya iletmek için kullanılan CMG bağlantı noktasıdır.
 
 #### <a name="url-mapping-example"></a>URL eşleme örneği
@@ -56,20 +71,22 @@ URL her yönetim noktası için benzersizdir. Configuration Manager istemcisi da
 `<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>`  
 Site yayımlanan tüm dış URL 'Leri otomatik olarak CMG 'ye yükler. Bu davranış, CMG 'nin URL Filtresi yapmasına izin verir. Tüm URL eşlemeleri CMG bağlantı noktasına çoğaltılır. Daha sonra, istemci isteğinden dış URL 'ye göre iletişimi iç sunucularla iletir.
 
-
 ## <a name="security-guidance-for-cmg"></a>CMG için Güvenlik Kılavuzu
 
 <a name="bkmk_crl"></a>
 
 ### <a name="publish-the-certificate-revocation-list"></a>Sertifika iptal listesini yayımlama
 
-Internet tabanlı istemcilerin erişmesi için PKI 'nın sertifika iptal listesini (CRL) yayımlayın. PKI kullanarak bir CMG dağıttığınızda, Ayarlar sekmesinde **istemci sertifikası iptalini doğrulamak** için hizmeti yapılandırın. Bu ayar, hizmeti yayınlanmış bir sertifika iptal listesi (CRL) kullanacak şekilde yapılandırır. Daha fazla bilgi için bkz. [plan for PKI sertifikası iptali](../../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).
+Internet tabanlı istemcilerin erişmesi için PKI 'nın sertifika iptal listesini (CRL) yayımlayın. PKI kullanarak bir CMG dağıttığınızda, Ayarlar sekmesinde **istemci sertifikası Iptalini doğrulamak** için hizmeti yapılandırın. Bu ayar, hizmeti yayınlanmış bir sertifika iptal listesi (CRL) kullanacak şekilde yapılandırır. Daha fazla bilgi için bkz. [plan for PKI sertifikası iptali](../../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).
 
 Bu CMG seçeneği, istemci kimlik doğrulama sertifikasını doğrular.
 
 - İstemci Azure AD kimlik doğrulamasını kullanıyorsa, CRL bu şekilde değildir.
+
 - PKI kullanıyorsanız ve CRL 'YI dışarıdan yayımladığınızda bu seçeneği etkinleştirin (önerilir).
+
 - PKI kullanıyorsanız, CRL 'yi yayımlamayın, ardından bu seçeneği devre dışı bırakın.
+
 - Bu seçeneği yanlış yapılandırırsanız, istemcilerden CMG 'ye ek trafiğe neden olabilir. Bu ek trafik Azure çıkış verilerini artırabilir ve bu da Azure maliyetlerinizi artırabilir.<!-- SCCMDocs#1434 -->
 
 <a name="bkmk_ctl"></a>
@@ -77,10 +94,10 @@ Bu CMG seçeneği, istemci kimlik doğrulama sertifikasını doğrular.
 ### <a name="review-entries-in-the-sites-certificate-trust-list"></a>Sitenin Sertifika güven listesindeki girdileri gözden geçirme
 
 <!--503739-->
-Her Configuration Manager sitesi, güvenilen kök sertifika yetkililerinin, sertifika güven listesinin (CTL) bir listesini içerir. Yönetim çalışma alanına gidip site yapılandırması ' nı genişleterek ve siteler ' i seçerek listeyi görüntüleyin ve değiştirin. Bir site seçin ve Şeritteki Özellikler ' e tıklayın. **Istemci bilgisayar iletişimi** sekmesine geçin ve ardından güvenilen kök sertifika yetkilileri altında **Ayarla** ' ya tıklayın.
+Her Configuration Manager sitesi, güvenilen kök sertifika yetkililerinin, sertifika güven listesinin (CTL) bir listesini içerir. **Yönetim** çalışma alanına gidip **Site yapılandırması**' nı genişleterek ve **siteler**' i seçerek listeyi görüntüleyin ve değiştirin. Bir site seçin ve ardından şeritte **Özellikler** ' i seçin. **Iletişim güvenliği** sekmesine geçin ve ardından güvenilen kök sertifika yetkilileri altında **Ayarla** ' yı seçin.
 
 > [!Note]
-> Sürüm 1906 ' den başlayarak bu sekmeye **Iletişim güvenliği**denir.<!-- SCCMDocs#1645 -->  
+> Sürüm 1902 ve önceki sürümlerde bu sekmeye **Istemci bilgisayar iletişimi**adı verilir.<!-- SCCMDocs#1645 -->
 
 PKI istemci kimlik doğrulamasını kullanan bir CMG ile bir site için daha kısıtlayıcı bir CTL kullanın. Aksi takdirde, yönetim noktasında zaten mevcut olan herhangi bir güvenilir kök tarafından verilen istemci kimlik doğrulama sertifikaları olan istemciler, istemci kaydı için otomatik olarak kabul edilir.
 
@@ -92,12 +109,9 @@ Bu alt küme, yöneticilere güvenlik üzerinde daha fazla denetim sağlar. CTL,
 
 Sürüm 1906 ' den başlayarak, **TLS 1,2**' yi zorlamak için CMG ayarını kullanın. Yalnızca Azure bulut hizmeti VM 'si için geçerlidir. Şirket içi Configuration Manager site sunucuları veya istemcileri için uygulanmaz. TLS 1,2 hakkında daha fazla bilgi için bkz. [tls 1,2 'yi etkinleştirme](../../../plan-design/security/enable-tls-1-2.md).
 
+### <a name="use-token-based-authentication"></a>Belirteç tabanlı kimlik doğrulaması kullan
 
-<!--486209-->
-
-
-<!-- ## Privacy information for CMG -->
-
+Sürüm 2002 ' den başlayarak,<!--5686290--> Configuration Manager, genellikle dahili ağa bağlanmayan, Azure AD 'ye katılmadan ve PKI tarafından verilen bir sertifika yüklemek için bir yönteme sahip olmayan Internet tabanlı cihazlara yönelik desteğini uzatır. Site, iç ağa kaydolma cihazları için belirteçleri otomatik olarak yayımlar. Internet tabanlı cihazlar için toplu kayıt belirteci oluşturabilirsiniz. Daha fazla bilgi için bkz. [CMG Için belirteç tabanlı kimlik doğrulaması](../../deploy/deploy-clients-cmg-token.md).<!-- SCCMDocs#2331 -->
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -5,17 +5,17 @@ description: Bulut yönetimi ağ geçidi ile ilgili sık sorulan soruları yanı
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/05/2019
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
-ms.openlocfilehash: 2bd3824df18ecdf426720a99db8720ef4b678733
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bd846b0155a0baddad76d6027ffbd239d7dbf26f
+ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714076"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721899"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>Bulut yönetimi ağ geçidi hakkında sık sorulan sorular
 
@@ -23,13 +23,11 @@ ms.locfileid: "81714076"
 
 Bu makale, bulut yönetimi ağ geçidi hakkında sık sorulan sorularınızı yanıtlar. Daha fazla bilgi için bkz. [bulut yönetimi ağ geçidini planlayın](plan-cloud-management-gateway.md).
 
-
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 
 ### <a name="what-certificates-do-i-need"></a>Hangi sertifikalara ihtiyacım var?
 
 Daha ayrıntılı bilgi için bkz. [bulut yönetimi ağ geçidi için sertifikalar](certificates-for-cloud-management-gateway.md).
-
 
 ### <a name="do-i-need-azure-expressroute"></a>Azure ExpressRoute 'a ihtiyacım var mı?
 
@@ -41,30 +39,42 @@ Hayır. [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) , ş
 
 Bakım gerekli değildir. Bulut yönetimi ağ geçidinin tasarımı bir hizmet olarak Azure platformu (PaaS) kullanır. Sağladığınız aboneliği kullanarak, Configuration Manager gerekli sanal makineleri (VM 'Ler), depolamayı ve ağı oluşturur. Azure, sanal makinenin güvenliğini sağlar ve güncelleştirir. Bu VM 'Ler, hizmet olarak altyapı (IaaS) gibi durumlarda şirket içi ortamınızın bir parçası değildir. Bulut yönetimi ağ geçidi, Configuration Manager ortamınızı buluta genişleten bir PaaS 'dir. Daha fazla bilgi için bkz. [PaaS dağıtımlarını güvenli hale getirme](/azure/security/security-paas-deployments).
 
-
 ### <a name="how-can-i-ensure-service-continuity-during-service-updates"></a>Hizmet güncelleştirmeleri sırasında hizmet devamlılığını nasıl güvence altına alabilirim?
 
 CMG 'yi iki veya daha fazla örnek içerecek şekilde ölçeklendirerek, Azure 'daki güncelleştirme etki alanlarından otomatik olarak yararlanabilirsiniz. Bkz. [bulut hizmetini güncelleştirme](/azure/cloud-services/cloud-services-update-azure-service).
-
 
 ### <a name="im-already-using-ibcm-if-i-add-cmg-how-do-clients-behave"></a>Zaten IBCM kullanıyorum. CMG 'yi eksem istemciler nasıl davranır?
 
 Zaten [Internet tabanlı istemci yönetimini](../plan-internet-based-client-management.md) (ibcm) dağıttıysanız, bulut yönetimi ağ geçidini de dağıtabilirsiniz. İstemciler her iki hizmet için de ilke alır. İnternet üzerinde dolaşırken, bu internet tabanlı hizmetlerden birini rastgele seçip kullanın.
 
-
-### <a name="do-the-user-accounts-have-to-be-in-the-same-azure-ad-tenant-as-the-tenant-associated-with-the-subscription-that-hosts-the-cmg-cloud-service"></a>Kullanıcı hesaplarının CMG bulut hizmetini barındıran abonelikle ilişkili kiracı ile aynı Azure AD kiracısında olması gerekir mi?
+### <a name="do-the-user-accounts-have-to-be-in-the-same-azure-ad-tenant-as-the-tenant-associated-with-the-subscription-that-hosts-the-cmg-cloud-service"></a><a name="bkmk_tenant"></a>Kullanıcı hesaplarının CMG bulut hizmetini barındıran abonelikle ilişkili kiracı ile aynı Azure AD kiracısında olması gerekir mi?
 <!--SCCMDocs-pr issue #2873-->
-Ortamınızda birden fazla abonelik varsa, CMG 'yi Azure bulut hizmetleri 'ni barındırabilirler herhangi bir aboneliğe dağıtabilirsiniz. 
+Hayır, CMG 'yi Azure bulut hizmetleri 'ni barındırabilmeniz gereken herhangi bir aboneliğe dağıtabilirsiniz.
+
+Koşulları açıklığa kavuşturmak için:
+
+- _Kiracı_ , Kullanıcı hesaplarının ve uygulama kayıtlarının dizinidir. Bir kiracının birden çok aboneliği olabilir.
+- _Abonelik_ , kaynakları ve hizmetleri birbirinden ayırır. Tek bir kiracı ile ilişkilendirilir.
 
 Bu soru, aşağıdaki senaryolarda ortaktır:  
 
-- Farklı test ve üretim Active Directory ve Azure AD ortamlarınız, ancak tek bir merkezi Azure barındırma aboneliği olduğunda  
+- Farklı test ve üretim Active Directory ve Azure AD ortamlarınız, ancak tek bir merkezi Azure barındırma aboneliğiniz olduğunda.
 
-- Azure kullanımı, farklı ekipler genelinde dağıtılır  
+- Azure kullanımı, farklı ekipler genelinde dağıtılır
 
 Kaynak Yöneticisi dağıtımı kullanırken, abonelikle ilişkili Azure AD kiracısını ekleyin. Bu bağlantı, Configuration Manager CMG oluşturmak, dağıtmak ve yönetmek için Azure 'da kimlik doğrulamasına olanak tanır.  
 
 CMG üzerinden yönetilen kullanıcılar ve cihazlar için Azure AD kimlik doğrulaması kullanıyorsanız, bu Azure AD kiracısını ekleyin. Bulut yönetimi için Azure hizmetleri hakkında daha fazla bilgi için bkz. [Azure hizmetlerini yapılandırma](../../../servers/deploy/configure/azure-services-wizard.md). Her bir Azure AD kiracısını eklediğinizde, tek bir CMG, barındırma konumundan bağımsız olarak birden çok kiracı için Azure AD kimlik doğrulaması sağlayabilir.
+
+#### <a name="example-1-one-tenant-with-multiple-subscriptions"></a>Örnek 1: birden çok aboneliğe sahip bir kiracı
+
+Kullanıcı kimlikleri, cihaz kayıtları ve uygulama kayıtları aynı kiracıda bulunur. CMG 'nin hangi abonelikte kullanacağını seçebilirsiniz. Birden çok CMG hizmetini bir siteden ayrı aboneliklere dağıtabilirsiniz. Sitenin kiracı ile bire bir ilişkisi vardır. Faturalandırma veya mantıksal ayırma gibi çeşitli nedenlerle hangi aboneliklerin kullanılacağına karar verirsiniz.
+
+#### <a name="example-2-multiple-tenants"></a>Örnek 2: birden çok kiracı
+
+Diğer bir deyişle, ortamınızda birden çok Azure AD vardır. Her iki kiracıda Kullanıcı ve cihaz kimliklerini desteklemeniz gerekiyorsa, siteyi her kiracıya bağlamanız gerekir. Bu işlem, bu Kiracıdaki uygulama kayıtlarını oluşturmak için her kiracıdan bir yönetim hesabı gerektirir. Bir site daha sonra CMG hizmetlerini birden fazla kiracıda barındırabilir. Kiracıda herhangi bir kullanılabilir abonelikte CMG oluşturabilirsiniz. Azure AD 'ye katılmış veya karma cihazlar bir CMG kullanabilir.
+
+Kullanıcı ve cihaz kimlikleri tek bir kiracıda ise, ancak CMG 'nin aboneliği başka bir kiracıda varsa, siteyi her iki kiracıya bağlamanız gerekir. Teknik olarak, istemci uygulaması yalnızca CMG hizmetine sahip ikinci kiracı için gerekli değildir. İstemci uygulaması yalnızca CMG hizmetini kullanan istemciler için Kullanıcı ve cihaz kimlik doğrulaması sağlar.<!-- SCCMDocs#1902 -->
 
 ### <a name="how-does-cmg-affect-my-clients-connected-via-vpn"></a>CMG, istemcilerimin VPN üzerinden bağlı olduğunu nasıl etkiler?
 

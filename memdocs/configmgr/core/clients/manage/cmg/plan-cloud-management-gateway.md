@@ -2,7 +2,7 @@
 title: Bulut yönetimi ağ geçidi planlama
 titleSuffix: Configuration Manager
 description: Internet tabanlı istemcilerin yönetimini basitleştirmek için bulut yönetimi ağ geçidini (CMG) planlayın ve tasarlayın.
-ms.date: 04/21/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 67b6fc51493dce4ee1718586cbf454da91883409
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 136e11f97849e5fd8a27d9f83ea1bd44791c492e
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254631"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715654"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Configuration Manager 'de bulut yönetimi ağ geçidini planlayın
 
@@ -85,9 +85,12 @@ CMG 'nin dağıtımı ve işlemi aşağıdaki bileşenleri içerir:
 
 - [**Hizmet bağlantı noktası**](../../../servers/deploy/configure/about-the-service-connection-point.md) site sistemi rolü, tüm CMG dağıtım görevlerini işleyen Cloud Service Manager bileşenini çalıştırır. Ayrıca, Azure AD 'den hizmet durumu ve günlüğe kaydetme bilgilerini izler ve raporlar. Hizmet bağlantı noktanız [çevrimiçi modda](../../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes)olduğundan emin olun.  
 
-- **Yönetim noktası** site sistemi Rol Hizmetleri istemci isteklerini normal başına ister.  
+- **Yönetim noktası** site sistemi Rol Hizmetleri istemci isteklerini normal başına ister.
 
-- **Yazılım güncelleştirme noktası** site sistemi Rol Hizmetleri istemci isteklerini normal başına ister.  
+- **Yazılım güncelleştirme noktası** site sistemi Rol Hizmetleri istemci isteklerini normal başına ister.
+
+    > [!NOTE]
+    > Yönetim noktaları ve yazılım güncelleştirme noktaları için boyutlandırma Kılavuzu, şirket içi veya internet tabanlı istemcilere hizmet verip etmeyeceklerini değiştirmez. Daha fazla bilgi için bkz. [boyut ve ölçek numaraları](../../../plan-design/configs/size-and-scale-numbers.md#management-point).
 
 - **Internet tabanlı istemciler** , CMG 'ye bağlanarak şirket içi Configuration Manager bileşenlerine erişir.
 
@@ -151,15 +154,33 @@ Dördüncü kahve, bir şirket içi veri merkezinde Seattle 'daki merkezi yönet
 > [!TIP]
 > Coğrafi konum amacıyla birden fazla bulut yönetim ağ geçidi dağıtmanız gerekmez. Configuration Manager istemci, coğrafi olarak uzak zaman bile, bulut hizmeti ile oluşabilen hafif gecikme süresinden daha etkilenmemiştir.
 
+### <a name="test-environments"></a>Test ortamları
+<!-- SCCMDocs#1225 -->
+Birçok kuruluşun üretim, test, geliştirme veya kalite güvencesi için ayrı ortamları vardır. CMG dağıtımınızı planlarken, aşağıdaki soruları göz önünde bulundurun:
+
+- Kuruluşunuz kaç Azure AD kiracısın?
+  - Test için ayrı bir kiracı var mı?
+  - Kullanıcı ve cihaz kimlikleri aynı kiracıda mı?
+
+- Her kiracıda kaç abonelik var?
+  - Test için özel abonelikler var mı?
+
+**Bulut yönetimi** için Azure hizmeti Configuration Manager birden çok kiracıyı destekler. Birden çok Configuration Manager site aynı kiracıya bağlanabilir. Tek bir site, farklı aboneliklerde birden çok CMG hizmetini dağıtabilir. Birden çok site CMG hizmetlerini aynı aboneliğe dağıtabilir. Configuration Manager ortamınıza ve iş gereksinimlerinize bağlı olarak esneklik sağlar.
+
+Daha fazla bilgi için aşağıdaki SSS bölümüne bakın: [Kullanıcı hesaplarının CMG bulut hizmetini barındıran abonelikle ilişkili kiracı ile aynı Azure AD kiracısında olması gerekir mi?](cloud-management-gateway-faq.md#bkmk_tenant)
+
 ## <a name="requirements"></a>Gereksinimler
 
 - CMG 'yi barındırmak için bir **Azure aboneliği** .
+
+    > [!IMPORTANT]
+    > CMG, bir Azure bulut hizmeti sağlayıcısı (CSP) ile abonelikleri desteklemez.<!-- MEMDocs#320 -->
 
 - Kullanıcı hesabınızın Configuration Manager bir **tam yönetici** veya **Altyapı Yöneticisi** olması gerekir.<!-- SCCMDocs#2146 -->
 
 - Bir **Azure yöneticisinin** , tasarımınıza bağlı olarak belirli bileşenlerin ilk oluşturmaya katılması gerekir. Bu kişi, Configuration Manager yöneticisiyle aynı veya ayrı olabilir. Ayrı ise, Configuration Manager izin gerektirmez.
 
-  - CMG 'yi dağıtmak için bir **Abonelik Yöneticisi** gerekir
+  - CMG 'yi dağıtmak için **abonelik sahibine** ihtiyacınız vardır
   - Siteyi Azure Resource Manager kullanarak CMG dağıtmaya yönelik Azure AD ile tümleştirmek için **genel yönetici** gerekir
 
 - **CMG bağlantı noktasını**barındırmak için en az bir şirket içi Windows Server. Bu rolü diğer Configuration Manager site sistem rolleriyle birlikte kullanabilirsiniz.  
@@ -193,7 +214,7 @@ Dördüncü kahve, bir şirket içi veri merkezinde Seattle 'daki merkezi yönet
 
 - Ağ Yük dengeleyici kullanan yazılım güncelleştirme noktaları CMG ile çalışmaz. <!--505311-->  
 
-- Azure kaynak modeli kullanılarak gerçekleştirilen CMG dağıtımları, Azure bulut hizmeti sağlayıcıları (CSP) için desteği etkinleştirmez. Azure Resource Manager ile CMG dağıtımı, CSP 'nin desteklemediği klasik bulut hizmetini kullanmaya devam eder. Daha fazla bilgi için bkz. [Azure CSP 'de kullanılabilir Azure hizmetleri](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)  
+- Azure kaynak modeli kullanılarak gerçekleştirilen CMG dağıtımları, Azure bulut hizmeti sağlayıcıları (CSP) için desteği etkinleştirmez. Azure Resource Manager ile CMG dağıtımı, CSP 'nin desteklemediği klasik bulut hizmetini kullanmaya devam eder. Daha fazla bilgi için bkz. [Azure CSP programında bulunan Azure hizmetleri](https://docs.microsoft.com/partner-center/azure-plan-available).
 
 ### <a name="support-for-configuration-manager-features"></a>Configuration Manager özellikleri için destek
 
@@ -202,7 +223,7 @@ Aşağıdaki tabloda Configuration Manager özellikleri için CMG desteği liste
 |Özellik  |Destek  |
 |---------|---------|
 | Yazılım güncelleştirmeleri     | ![Destekleniyor](media/green_check.png) |
-| Endpoint protection     | ![Desteklenen](media/green_check.png) <sup>[notta 1](#bkmk_note1)</sup> |
+| Endpoint protection     | ![Desteklenen ](media/green_check.png) <sup> [notta 1](#bkmk_note1)</sup> |
 | Donanım ve yazılım envanteri     | ![Destekleniyor](media/green_check.png) |
 | İstemci durumu ve bildirimleri     | ![Destekleniyor](media/green_check.png) |
 | Betikleri Çalıştır     | ![Destekleniyor](media/green_check.png) |
@@ -231,7 +252,7 @@ Aşağıdaki tabloda Configuration Manager özellikleri için CMG desteği liste
 |Anahtar|
 |--|
 |![Destekleniyor](media/green_check.png) = Bu özellik tüm desteklenen Configuration Manager sürümleriyle CMG ile desteklenir  |
-|![Desteklenen](media/green_check.png) (*yymm*) = Bu özellik, Configuration Manager *yymm* sürümü ile başlayarak CMG ile desteklenir  |
+|![Desteklenen ](media/green_check.png) (*yymm*) = bu özellik, Configuration Manager *yymm* sürümü ile başlayarak CMG ile desteklenir  |
 |![Desteklenmiyor](media/Red_X.png) = Bu özellik CMG ile desteklenmiyor |
 
 #### <a name="note-1-support-for-endpoint-protection"></a><a name="bkmk_note1"></a>Note 1: Endpoint Protection için destek
@@ -333,6 +354,9 @@ Aşağıdaki diyagram CMG için temel ve kavramsal bir veri akışıdır:
 
 3. İstemci, HTTPS bağlantı noktası 443 üzerinden CMG 'ye bağlanır. Azure AD veya istemci kimlik doğrulama sertifikası kullanarak kimlik doğrular.  
 
+    > [!NOTE]
+    > CMG 'yi içeriğe sunabilir veya bir bulut dağıtım noktası kullanmak üzere etkinleştirirseniz, istemci HTTPS bağlantı noktası 443 üzerinden doğrudan Azure Blob depolamaya bağlanır. Daha fazla bilgi için bkz. [bulut tabanlı dağıtım noktası kullanma](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_dataflow).<!-- SCCMDocs#2332 -->
+
 4. CMG, istemci iletişimini mevcut bağlantı üzerinden şirket içi CMG bağlantı noktasına iletir. Herhangi bir gelen güvenlik duvarı bağlantı noktasını açmanıza gerek yoktur.  
 
 5. CMG bağlantı noktası, istemci iletişimini şirket içi yönetim noktasına ve yazılım güncelleştirme noktasına iletir.  
@@ -343,13 +367,14 @@ Azure 'da içerik barındırdığınızda daha fazla bilgi için bkz. [bulut tab
 
 Bu tabloda gerekli ağ bağlantı noktaları ve protokoller listelenmektedir. *İstemci* , bağlantıyı başlatan cihazdır ve giden bağlantı noktası gerektirir. *Sunucu* , bağlantıyı kabul eden ve bir gelen bağlantı noktası gerektiren cihazdır.
 
-| İstemci | Protokol | Bağlantı noktası | Sunucu | Açıklama |
+| İstemci | Protokol | Bağlantı noktası | Sunucu | Description |
 |--------|----------|------|--------|-------------|
 | Hizmet bağlantı noktası | HTTPS | 443 | Azure | CMG dağıtımı |
 | CMG bağlantı noktası | TCP-TLS | 10140-10155 | CMG hizmeti | CMG kanalı oluşturmak için tercih edilen protokol <sup> [nonote 1](#bkmk_port-note1)</sup> |
 | CMG bağlantı noktası | HTTPS | 443 | CMG hizmeti | CMG kanalını yalnızca bir VM örneğine derlemek için geri dönüş Protokolü <sup> [Note 2](#bkmk_port-note2)</sup> |
 | CMG bağlantı noktası | HTTPS | 10124-10139 | CMG hizmeti | CMG kanalını iki veya daha fazla VM örneğine derlemek için geri dönüş Protokolü <sup> [Note 3](#bkmk_port-note3)</sup> |
 | İstemci | HTTPS | 443 | CMG | Genel istemci iletişimi |
+| İstemci | HTTPS | 443 | Blob depolama | Bulut tabanlı içeriği indirme |
 | CMG bağlantı noktası | HTTPS veya HTTP | 443 veya 80 | Yönetim noktası | Şirket içi trafik, bağlantı noktası yönetim noktası yapılandırmasına bağımlıdır |
 | CMG bağlantı noktası | HTTPS veya HTTP | 443 veya 80 | Yazılım güncelleştirme noktası | Şirket içi trafik, bağlantı noktası yazılım güncelleştirme noktası yapılandırmasına bağlıdır |
 

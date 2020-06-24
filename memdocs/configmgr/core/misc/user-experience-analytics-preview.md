@@ -2,7 +2,7 @@
 title: Endpoint Analytics önizlemesi
 titleSuffix: Configuration Manager
 description: Endpoint Analytics önizlemesi için yönergeler.
-ms.date: 05/11/2020
+ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: da8c52dabf27ddf0992d9f405400b3ac984f2ecc
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: f33f79d1a2fb6144e25d6153c48caa90d86006e6
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455132"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879753"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a>Endpoint Analytics önizlemesi
 
@@ -67,7 +67,7 @@ Bu önizleme için Configuration Manager veya Microsoft Intune aracılığıyla 
 #### <a name="to-enroll-devices-via-configuration-manager-this-preview-requires"></a><a name="bkmk_uea__cm_prereq"></a>Configuration Manager aracılığıyla cihazları kaydetmek için bu önizleme şunları gerektirir:
 - Configuration Manager sürüm 2002 veya daha yenisi
 - 2002 veya daha yeni bir sürüme yükseltilen istemciler
-- [Microsoft Endpoint Manager kiracı iliştirme](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) Kuzey Amerika veya Avrupa 'nın Azure kiracı konumuyla etkinleştirildi (yakında diğer bölgelere genişletireceğiz)
+- [Microsoft Endpoint Manager kiracı iliştirme](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) etkin.
 
 #### <a name="proactive-remediation-scripting-requires"></a><a name="bkmk_uea__prs_prereq"></a>Proaktif düzeltme betiği şunları gerektirir:
 Cihazların Intune veya Configuration Manager aracılığıyla kaydedilip edilmeyeceğini, [**proaktif düzeltme komut dosyası oluşturma**](#bkmk_uea_prs) aşağıdaki gereksinimlere sahiptir:
@@ -136,9 +136,13 @@ Configuration Manager cihazları kaydetmeden önce, [Microsoft Endpoint Manager 
 ### <a name="onboard-in-the-endpoint-analytics-portal"></a><a name="bkmk_uea_onboard"></a>Endpoint Analytics portalına ekleme
 Hem Configuration Manager hem de Intune tarafından yönetilen cihazlar için Endpoint Analytics portalından ekleme gerekir.
 
-1. Şuraya gidin: `https://endpoint.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
+1. Şuraya gidin: `https://aka.ms/endpointanalytics`
 1. **Başlat**'a tıklayın. Bu, tüm uygun cihazlardan önyükleme performansı verilerini toplamak üzere otomatik olarak bir yapılandırma profili atar. [Atanan cihazları](#bkmk_uea_profile) daha sonra değiştirebilirsiniz. Başlangıç performansı verilerinin, yeniden başlatıldıktan sonra Intune kayıtlı cihazlarınızdan doldurulması 24 saate kadar sürebilir.
-   - Yaygın sorunlar hakkında daha fazla bilgi için bkz. [Başlangıç performansı cihaz kaydı sorunlarını giderme](#bkmk_uea_enrollment_tshooter).
+
+> [!Important]  
+> **Tüm kuruluşların (ortanca)** temelini güncel tutmak için tüm kayıtlı kuruluşların puanlarını Anonimleştir ve topladık. İstediğiniz zaman [veri toplamayı durdurabilirsiniz](#bkmk_uea_stop) .
+
+   - Yaygın sorunlar hakkında daha fazla bilgi için bkz. [cihaz kaydı ve başlatma performansı sorunlarını giderme](#bkmk_uea_enrollment_tshooter).
 
 ## <a name="overview-page"></a>Genel Bakış sayfası
 
@@ -151,8 +155,6 @@ Verileriniz hazırlandıktan sonra **genel bakış** sayfasında daha ayrıntıl
    - Temel işaretçiler, genel puan ve alt puanlarınız için gösterilir. Puanlardan herhangi biri, seçili taban çizgisinden yapılandırılabilir eşikten daha fazla olursa, puan kırmızı olarak görüntülenir ve en üst düzey puan dikkat edilmesi gereken şekilde işaretlenir.
   - **Yetersiz veri** durumu, anlamlı bir puan sağlamak üzere rapor veren yeterli cihaz olmadığı anlamına gelir. Şu anda en az beş cihaz gereklidir.
 
-- **Filtreler** , bir cihaz veya Kullanıcı alt kümesinde puanınızı görüntülemenize imkan tanır. Ancak, filtre işlevselliği bu önizlemede etkin değildir.
-
 - **Öngörüler ve öneriler** puanınızı geliştirmek için öncelikli bir listesidir. **En iyi yöntemlere** veya **Önerilen yazılıma**gittiğinizde bu liste alt düğümün bağlamına filtrelenir.
 
 [![Endpoint Analytics genel bakış sayfası](media/overview-page.png)](media/overview-page.png#lightbox)
@@ -160,7 +162,7 @@ Verileriniz hazırlandıktan sonra **genel bakış** sayfasında daha ayrıntıl
 ## <a name="recommended-software"></a><a name="bkmk_uea_rs"></a>Önerilen yazılım
 
 > [!Important]  
-> Endpoint Analytics, Endpoint Analytics 'e kaydedilip kaydedilmediğine bakılmaksızın tüm Intune yönetilen cihazlarınızın **yazılım benimseme** Puanını hesaplar.
+> Endpoint Analytics, Intune [veri toplama ilkesiyle](#bkmk_uea_profile) yapılandırılıp yapılandırılmadığını bağımsız olarak tüm Intune ve ortak yönetilen cihazlarınızın **yazılım benimseme** Puanını hesaplar. Configuration Manager yönetilen cihazlarda, puanlar yalnızca [Kayıtlı cihazlar](#bkmk_uea_cm_enroll) için hesaplanır 
 
 Belirli yazılımlar, düşük düzeyli sistem durumu ölçümlerinden bağımsız olarak son kullanıcı deneyimini geliştirmek için bilinmektedir. Örneğin, Windows 10, Windows 7 ' den çok daha yüksek bir Net Promoter Puanı elde etti. **Yazılım benimseme** puanı, önerilen çeşitli yazılımları dağıtan cihazların yüzdesinin ağırlıklı ortalamasını temsil eden 0 ile 100 arasında bir sayıdır. Kullanıcılar bunlarla daha sık etkileşimde bulunduğundan, geçerli ağırlık, Windows için diğer ölçümler için daha yüksektir. Ölçümler aşağıda açıklanmıştır: 
 
@@ -192,9 +194,11 @@ Microsoft-Intune yönetilen cihazlarınız zaten Azure AD 'ye kayıtlı. Configu
 
 ### <a name="cloud-management"></a><a name="bkmk_uea_intune"></a>Bulut yönetimi
 
-Microsoft Intune, kullanıcılara Kurumsal ağdan uzakta olduklarında bile kurumsal kaynaklara erişimi etkinleştirme dahil olmak üzere çeşitli verimlilik avantajları sağlar ve grup ilkesi gereksinimini ve performans ek yükünü ortadan kaldırır, daha iyi bir son kullanıcı deneyimi elde edilir. Bu ölçüm Microsoft Intune kayıtlı bilgisayarların yüzdesini ölçer. [Microsoft 'un çalışanlarınız için bunu nasıl etkinleştirçalıştığını](https://www.microsoft.com/en-us/itshowcase/managing-windows-10-devices-with-microsoft-intune)görün.
+Configuration Manager ve Intune, kuruluş genelinde uç noktalar ve uygulamalar sağlamak, dağıtmak, yönetmek ve güvenli hale getirmek için tümleşik bulut destekli yönetim araçları ve benzersiz ortak yönetim seçenekleri sağlar. Bulut yönetiminin gücüyle birlikte, kurumsal ağdan uzakta olduklarında bile kurumsal kaynaklara erişimi etkinleştirmek ve grup ilkesi gereksinimini ortadan kaldırmak ve daha iyi bir son kullanıcı deneyimi elde etmek dahil olmak üzere çeşitli verimlilik avantajları elde edebilirsiniz. 
 
-Intune 'A henüz kaydolmamış Configuration Manager tarafından yönetilen cihazlar için önerilen düzeltme eylemi, [bunları ortak olarak yönetmektedir](../../comanage/overview.md).
+Bu ölçüm, ek yeteneklerin kilidini açmak için Microsoft 365 buluta eklenmiş bilgisayarların yüzdesini ölçer. [Microsoft 'un çalışanlarınız için bunu nasıl etkinleştirçalıştığını](https://www.microsoft.com/en-us/itshowcase/managing-windows-10-devices-with-microsoft-intune)görün.
+
+Intune 'A henüz kaydolmamış Configuration Manager tarafından yönetilen cihazlar için önerilen eylem, koşullu erişim gibi ek bulut destekli yeteneklerin kilidini açmak üzere [bunları birlikte yönetmektedir](../../comanage/overview.md) .
 
 ### <a name="no-commercial-median"></a><a name="bkmk_uea_np"></a>Ticari ortanca yok
 
@@ -203,7 +207,7 @@ Intune 'A henüz kaydolmamış Configuration Manager tarafından yönetilen ciha
 ## <a name="startup-performance"></a><a name="bkmk_uea_bp"></a>Başlangıç performansı
 
 > [!NOTE]
-> Tüm cihazlarınızdan başlangıç performansı verilerini görmüyorsanız lütfen bkz. [Başlangıç performansı cihaz kaydında sorun giderme](#bkmk_uea_enrollment_tshooter).
+> Tüm cihazlarınızdan başlangıç performansı verilerini görmüyorsanız lütfen bkz. [cihaz kaydı ve başlatma performansı sorunlarını giderme](#bkmk_uea_enrollment_tshooter).
 
 Başlangıç performansı puanı, kullanıcıların uzun önyükleme ve oturum açma gecikmeleri olmadan hızla verimliliğine hızlı bir şekilde yararlanmasının sağlanmasına yardımcı olur. **Başlangıç puanı** 0 ile 100 arasında bir sayıdır. Bu puan, aşağıdaki gibi hesaplanan **önyükleme puanı** ve **oturum açma** puanının ağırlıklı ortalamasıdır:
 
@@ -330,45 +334,52 @@ Bir taban çizgisi ayarlayarak, geçerli puanlarınızı ve alt puanlarını di�
 
 Aşağıdaki bölümler, karşılaşabileceğiniz sorunları gidermeye yardımcı olmak için kullanılabilir.
 
-### <a name="troubleshooting-startup-performance-device-enrollment"></a><a name="bkmk_uea_enrollment_tshooter"></a>Başlangıç performansı cihaz kaydı sorunlarını giderme
+### <a name="troubleshooting-device-enrollment-and-startup-performance"></a><a name="bkmk_uea_enrollment_tshooter"></a>Cihaz kaydı ve başlangıç performansı sorunlarını giderme
 
 Genel Bakış sayfasında, verilerin beklendiğini gösteren bir başlık ile birlikte bir başlangıç performansı puanı gösterilirse veya başlangıç performansının cihaz performansı sekmesi beklediğinizden daha az cihaz gösteriyorsa, sorunu gidermek için gerçekleştirebileceğiniz bazı adımlar vardır.
 
-İlk olarak, başlangıç performansı veri toplamaya yönelik kısıtlamaların hızlı bir özeti aşağıda verilmiştir:
-1. Cihazların Windows 10 sürüm 1903 veya üzeri olması gerekir.
-2. Cihazların Azure AD 'ye katılmış olması gerekir. Şu anda çalışma alanına katılmış cihazları desteklemiyoruz, ancak bu işlevselliği Windows 'a eklemenin etkin bir şekilde araştırılmaktadır.
-3. Cihazlar Windows 10 Enterprise Edition olmalıdır. Windows 10 Home ve Professional Şu anda desteklenmemektedir, ancak bu işlevselliği Windows 'a eklemenin etkin bir şekilde araştırılmaktadır.
+İlk olarak, cihazların [Teknik önkoşulları](#technical-prerequisites) karşıladığından emin olun
 
-Bu sorunların yakında çıkacak Configuration Manager bağlayıcısından gelen verilere uygulanmadığını unutmayın; sürüm, sürüm veya dizin yapılandırmasından bağımsız olarak, herhangi bir Configuration Manager istemci BILGISAYARDAN veri toplayabilecektir.
-
-İkincisi, sorun giderme için hızlı bir denetim listesi aşağıda verilmiştir:
-1. Performans verilerini istediğiniz tüm cihazlara hedeflenmiş Windows sistem durumu Izleme profiline sahip olduğunuzdan emin olun. Bu profil için uç nokta Analizi ayar sayfasından bir bağlantı bulabilir veya diğer Intune profilinde olduğu gibi bu profile gidebilirsiniz. Beklenen cihaz kümesine atandığından emin olmak için atama sekmesine bakın. 
-1. Veri toplama için hangi cihazların başarıyla yapılandırıldığını göz atalım. Ayrıca, bu bilgileri profillere Genel Bakış sayfasında de görebilirsiniz.  
+Intune ve Intune veri toplama ilkesiyle yapılandırılmış ortak yönetilen cihazlar için:
+1. [Intune veri toplama](#bkmk_uea_profile) ilkesinin, performans verilerini görmek istediğiniz tüm cihazları içerdiğinden emin olun. Beklenen cihaz kümesine atandığından emin olmak için atama sekmesine bakın. 
+1. Veri toplama için başarıyla yapılandırılmamış cihazları arayın. Ayrıca, bu bilgileri profillere Genel Bakış sayfasında de görebilirsiniz.  
    - Müşterilerin, etkilenen cihazların hata kodunu göstereceği profil atama hatalarını görebileceği bilinen bir sorun vardır `-2016281112 (Remediation failed)` . Bu sorunu etkin bir şekilde araştırıyoruz.
-1. Veri toplama etkinleştirildikten sonra veri toplama için başarıyla yapılandırılmış cihazların yeniden başlatılması gerekir ve cihazın cihaz performansı sekmesinde gösterilmesi için 24 saate kadar beklemeniz gerekir.
-1. Cihazınız veri toplama için başarılı bir şekilde yapılandırıldıysa, daha sonra yeniden başlatılırsa ve 24 saat sonra hala görmüyorsanız, cihazın koleksiyon uç noktalarımıza ulaşamamakta olması olabilir. Şirketiniz bir ara sunucu kullanıyorsa ve uç noktaların proxy 'de etkinleştirilmemiş olması durumunda bu sorun oluşabilir. Daha fazla bilgi için bkz. [sorun giderme uç noktaları](#bkmk_uea_endpoints).
+1. Veri toplama etkinleştirildikten sonra veri toplama için başarıyla yapılandırılmış cihazların yeniden başlatılması gerekir ve cihazın cihaz performansı sekmesinde gösterilmesi için 25 saate kadar beklemeniz gerekir. Bkz. [veri akışı](#data-flow)
+1. Cihazınız veri toplama için başarılı bir şekilde yapılandırıldıysa, daha sonra yeniden başlatılırsa ve 25 saat sonra yine de görmüyorsanız, cihaz gerekli uç noktalarla iletişim kuramayabilir. Bkz. [proxy yapılandırması](#bkmk_uea_endpoints).
 
-### <a name="data-collection-for-intune-managed-devices"></a>Intune tarafından yönetilen cihazlar için veri toplama
+Configuration Manager yönetilen cihazlar için:
+1. Performans verilerini görmek istediğiniz tüm cihazların [kayıtlı](#bkmk_uea_cm_enroll) olduğundan emin olun
+1. Site sunucusundaki **Uxanalticsuploadworker. log** dosyasında hata iletilerine bakarak, Configuration Manager 'Den ağ geçidine olan verileri karşıya yükleme işleminin başarılı olup olmadığını denetleyin.
+1. Yöneticinin istemci ayarları için özel geçersiz kılmalara sahip olup olmadığını denetleyin.  Configuration Manager konsolunda, **cihazlar** çalışma alanına gidin, hedef cihazları bulun ve **istemci ayarları** grubunda, **sonuç istemci ayarları**' nı seçin. Endpoint Analytics devre dışıysa, geçersiz kılan istemci ayarları vardır. Geçersiz kılan istemci ayarlarını bulun ve Endpoint Analytics 'i etkinleştirin.  
+1. İstemci cihazlarda bulunan **Sensorendpoint. log** dosyasını inceleyerek, eksik istemci cihazların site sunucusuna veri gönderdiğini denetleyin `C:\Windows\CCM\Logs\` . *İleti gönderilen* iletileri arayın.
+1. İstemci cihazlarda bulunan **Sensormanagedprovider. log** dosyasını inceleyerek önyükleme olaylarının işlenmesi sırasında oluşan tüm hataları kontrol edin ve çözün `C:\Windows\CCM\Logs\` .
 
-Endpoint Analytics, Intune tarafından yönetilen cihazlardan verileri toplamak için Windows 10 ve Windows Server bağlantılı kullanıcı deneyimleri ve telemetri bileşeni (DiagTrack) kullanır. Cihazdaki **bağlı kullanıcı deneyimlerinin ve telemetri** hizmetinin çalıştığından emin olun.
 
-#### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a>Noktalarının
+### <a name="proxy-configuration"></a><a name="bkmk_uea_endpoints"></a>Ara sunucu yapılandırması
 
-Cihazları Endpoint Analytics 'e kaydetmek için, gerekli işlevsel verileri Microsoft 'a göndermelidir. Ortamınız bir ara sunucu kullanıyorsa, proxy 'yi yapılandırmaya yardımcı olması için bu bilgileri kullanın.
+Ortamınız bir ara sunucu kullanıyorsa, Proxy sunucunuzu aşağıdaki uç noktalara izin verecek şekilde yapılandırın:
 
-İşlevsel veri paylaşımını etkinleştirmek için Proxy sunucunuzu aşağıdaki uç noktalara izin verecek şekilde yapılandırın:
+#### <a name="endpoints-required-for-configuration-manager-managed-devices"></a>Configuration Manager yönetilen cihazlar için gereken uç noktalar
+
+Configuration Manager yönetilen cihazlar, Configuration Manager rolündeki bağlayıcı aracılığıyla Intune 'a veri gönderir ve doğrudan Microsoft genel bulutuna erişimine gerek kalmaz.
+
+| Uç Nokta  | İşlev  |
+|-----------|-----------|
+| `https://graph.windows.net` | Hiyerarşinizi Configuration Manager sunucusu rolünde Endpoint Analytics 'e eklerken otomatik olarak ayarları almak için kullanılır. Daha fazla bilgi için bkz. [bir site sistemi sunucusu için proxy yapılandırma](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
+| `https://*.manage.microsoft.com` | Yalnızca Configuration Manager sunucu rolündeki Endpoint Analytics ile cihaz toplamayı ve cihazları eşitleme için kullanılır. Daha fazla bilgi için bkz. [bir site sistemi sunucusu için proxy yapılandırma](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
+
+#### <a name="endpoints-required-for-intune-managed-devices"></a>Intune tarafından yönetilen cihazlar için gereken uç noktalar
+
+Cihazları Endpoint Analytics 'e kaydetmek için, gerekli işlevsel verileri Microsoft genel buluta göndermelidir. Endpoint Analytics, Intune tarafından yönetilen cihazlardan verileri toplamak için Windows 10 ve Windows Server bağlantılı kullanıcı deneyimleri ve telemetri bileşeni (DiagTrack) kullanır. Cihazdaki **bağlı kullanıcı deneyimlerinin ve telemetri** hizmetinin çalıştığından emin olun.
+
+| Uç Nokta  | İşlev  |
+|-----------|-----------|
+| `https://*.events.data.microsoft.com` | Intune tarafından yönetilen cihazlar tarafından, [gerekli işlevsel verileri](#bkmk_uea_datacollection) Intune veri toplama uç noktasına göndermek için kullanılır. |
 
 > [!Important]  
 > Gizlilik ve veri bütünlüğü için Windows, gerekli işlevsel veri paylaşımı uç noktalarıyla iletişim kurarken bir Microsoft SSL sertifikası (sertifika sabitleme) olup olmadığını denetler. SSL yakalamasyonu ve incelemesi mümkün değildir. Endpoint Analytics 'i kullanmak için bu uç noktaları SSL incelemeden hariç tutun.<!-- BUG 4647542 -->
 
-| Uç Nokta  | İşlev  |
-|-----------|-----------|
-| `https://*.events.data.microsoft.com` | [Gerekli işlevsel verileri](#bkmk_uea_datacollection) Intune veri toplama uç noktasına göndermek için kullanılır. |
-| `https://graph.windows.net` | Hiyerarşinizi Endpoint Analytics 'e iliştirirken ayarları otomatik olarak almak için kullanılır (Configuration Manager sunucu rolünde). Daha fazla bilgi için bkz. [bir site sistemi sunucusu için proxy yapılandırma](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
-| `https://*.manage.microsoft.com` | Endpoint Analytics ile cihaz toplamayı ve cihazlarını eşitleme için kullanılır (yalnızca Configuration Manager sunucu rolünde). Daha fazla bilgi için bkz. [bir site sistemi sunucusu için proxy yapılandırma](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
-
-
-#### <a name="proxy-server-authentication"></a>Proxy sunucusu kimlik doğrulaması
+##### <a name="proxy-server-authentication"></a>Proxy sunucusu kimlik doğrulaması
 
 Kuruluşunuz internet erişimi için proxy sunucu kimlik doğrulamasını kullanıyorsa, kimlik doğrulama nedeniyle verileri engellemediğinden emin olun. Proxy 'niz cihazların bu verileri göndermesini izin vermezse, masaüstü Analizi 'nde gösterilmez.
 
@@ -434,7 +445,7 @@ Betiklerin, düzeltme olması gerektiğini Intune 'a bildirmek için 1 koduyla �
 
 Bu tabloda betik adları, açıklamalar, algılamalar, düzeltmeler ve yapılandırılabilir öğeler gösterilmektedir. Adları ile başlayan betik dosyaları `Detect` algılama betikleridir. Düzeltme betikleri ile başlar `Remediate` . Bu betikler, bu makaledeki sonraki bölümden kopyalanabilir.
 
-|Betik adı|Açıklama|
+|Betik adı|Description|
 |---|---|
 |**Eski grup Ilkelerini Güncelleştir** </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Son grup ilkesi yenilemenin ne zaman önce daha büyük olup olmadığını algılar `7 days` .  </br>Algılama betiğinin değerini değiştirerek 7 günlük eşiğini özelleştirin `$numDays` . </br></br>`gpupdate /target:computer /force`Ve çalıştıran`gpupdate /target:user /force`  </br> </br>, Sertifikalar ve yapılandırmalara grup ilkesi aracılığıyla teslim edildiğinde ağ bağlantısıyla ilgili destek çağrılarını azaltmaya yardımcı olabilir. </br> </br> **Oturum açma kimlik bilgilerini kullanarak betiği çalıştırın**: Evet|
 |**Office Tıkla-Çalıştır hizmetini yeniden Başlat** </br> `Detect_Click_To_Run_Service_State.ps1` </br> `Remediate_Click_To_Run_Service_State.ps1`| Tıkla-Çalıştır hizmetinin otomatik olarak başlayacak şekilde ayarlandığını ve hizmetin durdurulup durdurulduğunu algılar. </br> </br> Hizmeti otomatik olarak başlayacak ve durdurulmuş ise hizmeti başlatmaya ayarlayarak düzeltme yapın. </br></br> , Tıkla-Çalıştır hizmeti durdurulduğu için Win32 Microsoft 365 uygulamalarının Çalıştırılmayabileceği sorunları gidermeye yardımcı olur. </br> </br> **Oturum açma kimlik bilgilerini kullanarak betiği çalıştırın**: Hayır|
@@ -443,7 +454,7 @@ Bu tabloda betik adları, açıklamalar, algılamalar, düzeltmeler ve yapıland
 
 ## <a name="powershell-scripts"></a><a name="bkmk_uea_ps_scripts"></a>PowerShell betikleri
 
-### <a name="detect_stale_group_policiesps1"></a>Detect_stale_Group_Policies. ps1
+### <a name="detect_stale_group_policiesps1"></a>Detect_stale_Group_Policies.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -482,7 +493,7 @@ catch {
 }
 ```
 
-### <a name="remediate_stale_grouppoliciesps1"></a>Remediate_stale_GroupPolicies. ps1
+### <a name="remediate_stale_grouppoliciesps1"></a>Remediate_stale_GroupPolicies.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -505,7 +516,7 @@ catch{
 }
 ```
 
-### <a name="detect_click_to_run_service_stateps1"></a>Detect_Click_To_Run_Service_State. ps1
+### <a name="detect_click_to_run_service_stateps1"></a>Detect_Click_To_Run_Service_State.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -552,7 +563,7 @@ Else{
 }
 ```
 
-### <a name="remediate_click_to_run_service_stateps1"></a>Remediate_Click_To_Run_Service_State. ps1
+### <a name="remediate_click_to_run_service_stateps1"></a>Remediate_Click_To_Run_Service_State.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -614,7 +625,7 @@ Catch{
 Return $curSvcStat
 ```
 
-### <a name="detect_expired_issuer_certificatesps1"></a>Detect_Expired_Issuer_Certificates. ps1
+### <a name="detect_expired_issuer_certificatesps1"></a>Detect_Expired_Issuer_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -656,7 +667,7 @@ catch{
 }
 ```
 
-### <a name="remediate_expired_issuer_certificatesps1"></a>Remediate_Expired_Issuer_Certificates. ps1
+### <a name="remediate_expired_issuer_certificatesps1"></a>Remediate_Expired_Issuer_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -700,7 +711,7 @@ $toast = New-Object Windows.UI.Notifications.ToastNotification $xml
 [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier($APP_ID).Show($toast)
 ```
 
-### <a name="detect_expired_user_certificatesps1"></a>Detect_Expired_User_Certificates. ps1
+### <a name="detect_expired_user_certificatesps1"></a>Detect_Expired_User_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -737,7 +748,7 @@ catch{
 }
 ```
 
-### <a name="remediate_expired_user_certificatesps1"></a>Remediate_Expired_User_Certificates. ps1
+### <a name="remediate_expired_user_certificatesps1"></a>Remediate_Expired_User_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -767,27 +778,30 @@ catch{
 
 ### <a name="data-flow"></a>Veri akışı
 
-Aşağıdaki çizimde, veri hizmetlerimiz, geçici depolama ve kiracınız aracılığıyla her bir cihazdan, gereken işlevsel verilerin nasıl akabileceği gösterilmektedir. Veriler, Windows Tanılama verilerine güvenmeksizin mevcut kurumsal işlem hatlarımızla akar.
+Aşağıdaki çizimde, veri hizmetlerimiz, geçici depolama ve kiracınız aracılığıyla her bir cihazdan, gereken işlevsel verilerin nasıl akabileceği gösterilmektedir. 
 
-[![Kullanıcı deneyimi veri akışı diyagramı](media/dataflow.png)](media/dataflow.png#lightbox)
+[![Kullanıcı deneyimi veri akışı diyagramı](media/endpoint-analytics-dataflow.png)](media/endpoint-analytics-dataflow.png#lightbox)
 
-1. Kayıtlı cihazlar için **Intune veri toplama** ilkesini yapılandırın. Bu ilke varsayılan olarak, Endpoint Analytics 'i **başlattığınızda** "tüm cihazlar" a atanır. Ancak, herhangi bir zamanda atamayı istediğiniz zaman bir cihaz alt kümesiyle [değiştirebilir](#bkmk_uea_set) veya hiç cihaz kullanamazsınız.
+1. Bir [Intune Hizmet Yöneticisi rolü](../../../intune/fundamentals/role-based-access-control.md) [veri toplamaya başlar](#bkmk_uea_start).
 
-2. Cihazlar gerekli işlevsel verileri gönderiyor.
+    - Intune tarafından yönetilen cihazlarda, bu adım **Intune veri toplama** ilkesini yapılandırır. Bu ilke, varsayılan olarak "tüm cihazlar" a atanır. Atamayı dilediğiniz zaman bir cihaz alt kümesine veya hiç cihaz olmadan [değiştirebilirsiniz](#bkmk_uea_set) .
 
-    - Atanmış ilkeye sahip Intune cihazları için, veriler Intune yönetim uzantısından gönderilir. Daha fazla bilgi için bkz. [gereksinimler](#bkmk_uea_prereq).
-    - Configuration Manager yönetilen cihazlarda, veriler ConfigMgr Bağlayıcısı aracılığıyla Microsoft uç nokta yönetimine de akabilir. ConfigMgr Bağlayıcısı buluta eklenmiş. Yalnızca bir Intune kiracısına bağlantı gerektirir, ortak yönetimi açık hale gelir.
+    - Configuration Manager yönetilen cihazlar için [Endpoint Analytics veri toplamayı etkinleştirin ve cihazları kaydedin](#bkmk_uea_cm_enroll).
+
+1. Cihazlar gerekli işlevsel verileri gönderiyor.
+
+    - Atanmış ilkeye sahip Intune ve ortak yönetilen cihazlar için, cihazların neredeyse gerçek zamanlı olarak işlenen Microsoft genel bulutundaki Microsoft uç nokta Yönetimi hizmetine işlevsel veriler ihtiyacı vardır. Daha fazla bilgi için bkz. [Intune ile yönetilen cihazlar için gereken uç noktalar](#bkmk_uea_endpoints).
+
+    - Configuration Manager yönetilen cihazlarda, veriler ConfigMgr Bağlayıcısı aracılığıyla Microsoft uç nokta yönetimine akar. Cihazların Microsoft genel bulutuna doğrudan erişmesi gerekmez, ancak ConfigMgr Bağlayıcısı buluta eklenir ve bir Intune kiracısına bağlantı gerektirir. Cihazlar, her 24 saatte bir Configuration Manager sunucu rolüne veri gönderiyor ve Configuration Manager Bağlayıcısı her saat ağ geçidi hizmetine veri gönderiyor.
+
+1. Microsoft uç nokta yönetimi hizmeti her bir cihaz için verileri işler ve MS Graph API 'Lerini kullanarak yönetim konsolundaki tek tek cihazlar ve kuruluş toplamaları için sonuçları yayımlar. En uzun gecikme süresi 25 saattir ve içgörüler ve öneriler için günlük işlem yapmak için gereken süreye göre işlenir.
 
 > [!Note]  
-> Bir cihazın başlangıç Puanını hesaplamak için gereken veriler önyükleme zamanında oluşturulur. Güç ayarlarına ve kullanıcı davranışına bağlı olarak, bir cihaz, yönetici konsolunda başlangıç Puanını göstermek için ilkeyi doğru bir şekilde atadıktan sonra hafta sürebilir.  
-
-3. Microsoft uç nokta yönetimi hizmeti her bir cihaz için verileri işler ve MS Graph API 'Lerini kullanarak yönetim konsolundaki tek tek cihazlar ve kuruluş toplamaları için sonuçları yayımlar.
-
-Ortalama gecikme süresi yaklaşık 12 saat ve günlük işleme yapmak için gereken süre ile biter. Veri akışının diğer tüm bölümleri neredeyse gerçek zamanlı.
+> Endpoint Analytics 'i ilk kez ayarladığınızda veya yeni bir koleksiyon için [cihaz yüklemeyi etkinleştirirseniz](../../tenant-attach/device-sync-actions.md#enable-device-upload) [, Endpoint](#bkmk_uea_profile)Analytics portalındaki Raporlar tüm verileri hemen göstermez. Bir cihazın başlangıç Puanını hesaplamak için gereken veriler önyükleme zamanında oluşturulur. Güç ayarlarına ve kullanıcı davranışına bağlı olarak, yönetim konsolunda başlangıç Puanını göstermek üzere bir cihaz kaydedildikten sonra hafta sürebilir.
 
 ### <a name="data-collection"></a><a name="bkmk_uea_datacollection"></a>Veri toplama
 
-Şu anda, Endpoint Analytics 'in temel işlevselliği, [tanımlanan](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#identified-data) ve [sözde](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#pseudonymized-data) olmayan kategorilerle ilgili olan önyükleme performansı kayıtlarıyla ilişkili bilgileri toplar. Zaman içinde ek işlevler eklediğimiz için, toplanan veriler gerektiği şekilde değişir. Şu anda toplanan ana veri noktaları:
+Şu anda, Endpoint Analytics 'in temel işlevselliği, [tanımlanan](../../../intune/protect/privacy-data-collect.md#identified-data) ve [sözde](../../../intune/protect/privacy-data-collect.md#pseudonymized-data) olmayan kategorilerle ilgili olan önyükleme performansı kayıtlarıyla ilişkili bilgileri toplar. Zaman içinde ek işlevler eklediğimiz için, toplanan veriler gerektiği şekilde değişir. Şu anda toplanan ana veri noktaları:
 
 #### <a name="identified-data"></a>Tanımlanan veriler
 
@@ -809,9 +823,9 @@ Ortalama gecikme süresi yaklaşık 12 saat ve günlük işleme yapmak için ger
   - **Totalboottimeınmilliseconds:** Toplam önyükleme süresi
   - **Updatetimeınmilliseconds:** İşletim sistemi güncelleştirmelerinin tamamlanacağı süre
   - **gpLogonDurationInMilliseconds**: grup ilkelerinin işlemesi için zaman
-  - **desktopShownDurationInMilliseconds:** Masaüstü (Explorer. exe) yüklenecek zaman
-  - **desktopUsableDurationInMilliseconds:** Masaüstü (Explorer. exe) için zaman kullanılabilir
-  - **Topsüreçler:** Ön yükleme sırasında, CPU kullanım istatistikleri ve uygulama ayrıntıları (ad, Yayımcı, sürüm) ile önyükleme sırasında yüklenen işlemlerin listesi. Örneğin, *{ \" ProcessName \" : \" svchost \" , \" CPUusage \" : 43, \" processfullpath \" : \" C: \\ \\ Windows \\ \\ system32 \\ \\ svchost. exe \" , \" ProductName \" : \" Microsoft &reg; Windows &reg; işletim sistemi \" , \" Publisher \" : \" Microsoft Corporation \" , \" ProductVersion \" : \" 10.0.18362.1 \" }*
+  - **desktopShownDurationInMilliseconds:** Masaüstü (explorer.exe) yüklenecek zaman
+  - **desktopUsableDurationInMilliseconds:** Masaüstü (explorer.exe) için zaman kullanılabilir
+  - **Topsüreçler:** Ön yükleme sırasında, CPU kullanım istatistikleri ve uygulama ayrıntıları (ad, Yayımcı, sürüm) ile önyükleme sırasında yüklenen işlemlerin listesi. Örneğin, *{ \" ProcessName \" : \" svchost \" , \" CPUusage \" : 43, \" processfullpath \" : \" C: \\ \\ Windows \\ \\ system32 \\ \\svchost.exe\" , \" ProductName \" : \" Microsoft &reg; Windows &reg; işletim sistemi \" , \" Publisher \" : \" Microsoft Corporation \" , \" ProductVersion \" : \" 10.0.18362.1 \" }*
 - Bir cihaz veya kullanıcıya bağlı olmayan cihaz verileri (bu veriler bir cihaz veya kullanıcıya bağlıysa Intune bunlara tanımlanan verilere olduğu gibi davranır)
   - **Kimliği:** Windows Update tarafından kullanılan benzersiz cihaz KIMLIĞI
   - **YerelKimliği:** Cihaz için yerel olarak tanımlanan benzersiz KIMLIK. Bu, insan tarafından okunabilen cihaz adı değildir. Büyük olasılıkla Hklm\software\microsoft\sqmclient\machineıdyolunda depolanan değere eşittir.
@@ -819,8 +833,25 @@ Ortalama gecikme süresi yaklaşık 12 saat ve günlük işleme yapmak için ger
   - **OrgID:** Microsoft O365 kiracısı temsil eden benzersiz GUID
   
 > [!Important]  
-> Veri işleme ilklerimiz [Microsoft Intune Gizlilik bildiriminde](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement)açıklanmaktadır. Yalnızca sizin imzaladığınız hizmetleri sağlamak için müşteri verilerinizi kullanıyoruz. Ekleme işlemi sırasında açıklandığı gibi, ana öğeleri güncel tutmak için tüm kayıtlı kuruluşların puanlarını Anonimleştir ve topladık.
+> Veri işleme ilklerimiz [Microsoft Intune Gizlilik bildiriminde](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement)açıklanmaktadır. Yalnızca sizin imzaladığınız hizmetleri sağlamak için müşteri verilerinizi kullanıyoruz. Ekleme sürecinde açıklandığı gibi, **Tüm kuruluşların (ortanca)** temelini güncel tutmak için tüm kayıtlı kuruluşların puanlarını Anonimleştir ve topladık.
 
+### <a name="stop-gathering-data"></a><a name="bkmk_uea_stop"></a>Veri toplamayı durdur
+
+- Yalnızca Intune tarafından yönetilen cihazları kaydediyorsanız, kayıt sırasında oluşturulan [Intune veri toplama ilkesini](#bkmk_uea_gen) silin.
+
+- Configuration Manager tarafından yönetilen cihazları kaydediyorsanız Configuration Manager verileri karşıya yüklemeyi devre dışı bırakmak için aşağıdaki adımları gerçekleştirmeniz gerekir:
+
+   1. Configuration Manager konsolunda **Yönetim**  >  **Cloud Services**  >  **ortak yönetim**' e gidin.
+   1. **CoMgmtSettingsProd** ve ardından **Özellikler**' i seçin.
+   1. **Karşıya yüklemeyi Yapılandır** sekmesinde, **Microsoft Endpoint Manager 'A yüklenen cihazlarda Endpoint Analytics 'i etkinleştirme**seçeneğinin işaretini kaldırın.
+
+- Configuration Manager 'de Endpoint Analytics veri toplamayı devre dışı bırak (isteğe bağlı):
+
+   1. Configuration Manager konsolunda, **Yönetim**  >  **istemci ayarları**  >  **varsayılan istemci ayarları**' na gidin.
+   1. Sağ tıklayın ve **Özellikler** ' i seçin ve ardından **Bilgisayar Aracısı** ayarları ' nı seçin.
+   1. **Endpoint Analytics veri toplamayı etkinleştir** **olarak ayarlayın**.
+   > [!Important]
+   > Cihazlarınıza dağıtılan mevcut bir özel istemci Aracısı ayarınız varsa, bu özel ayarda **Endpoint Analytics veri toplamayı etkinleştir** seçeneğini güncelleştirmeniz ve ardından bu özel ayar için makinelerinize yeniden dağıtmanız gerekir.
 
 ### <a name="resources"></a>Kaynaklar
 

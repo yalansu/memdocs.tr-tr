@@ -1,5 +1,5 @@
 ---
-title: Microsoft Uç Nokta Yöneticisi kiracı iliştirme
+title: Microsoft Endpoint Manager kiracısı ekleme
 titleSuffix: Configuration Manager
 description: Configuration Manager cihazlarınızı bulut hizmetine yükleyin ve yönetim merkezinden işlem yapın.
 ms.date: 04/10/2020
@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: e2b8c07a64265d33ade0b1c2c08c2d9c4096b741
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: be1c938cfcf332edb37e24e4094567f88f363560
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693461"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795627"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Microsoft Uç Nokta Yöneticisi kiracı iliştirme: cihaz eşitleme ve cihaz eylemleri
 <!--3555758 live 3/4/2020-->
@@ -25,7 +25,7 @@ Microsoft Uç Nokta Yöneticisi, tüm cihazlarınızı yönetmek için tümleşi
 
 Configuration Manager sürüm 2002 ' den başlayarak, Configuration Manager cihazlarınızı bulut hizmetine yükleyebilir ve yönetim merkezindeki **cihazlar** dikey penceresinden eylemler gerçekleştirebilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Bu değişiklik uygulanırken oturum açmak için *genel yönetici* olan bir hesap. Daha fazla bilgi için bkz. [Azure Active Directory (Azure AD) yönetici rolleri](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
    - Ekleme, Azure AD kiracınızda üçüncü taraf bir uygulama ve birinci taraf hizmet sorumlusu oluşturur.
@@ -39,10 +39,7 @@ Configuration Manager sürüm 2002 ' den başlayarak, Configuration Manager ciha
 ## <a name="internet-endpoints"></a>Internet uç noktaları
 
 - `https://aka.ms/configmgrgateway`
-- `https://gateway.configmgr.manage.microsoft.com`
-- `https://us.gateway.configmgr.manage.microsoft.com`
-- `https://eu.gateway.configmgr.manage.microsoft.com`
-
+- `https://*.manage.microsoft.com` <!--7424742-->
 
 ## <a name="enable-device-upload"></a>Cihaz yüklemeyi etkinleştir
 
@@ -55,9 +52,9 @@ Configuration Manager sürüm 2002 ' den başlayarak, Configuration Manager ciha
 
 Ortak yönetim Şu anda etkinleştirilmişse, aşağıdaki yönergeleri kullanarak cihaz karşıya yüklemeyi etkinleştirmek için ortak yönetim özelliklerini düzenleyin:
 
-1. Configuration Manager yönetim konsolunda, **Yönetim** > **genel bakış** > **Cloud Services** > **ortak yönetim**' e gidin.
+1. Configuration Manager yönetim konsolunda, **Yönetim**  >  **genel bakış**  >  **Cloud Services**  >  **ortak yönetim**' e gidin.
 1. Ortak yönetim ayarlarınıza sağ tıklayıp **Özellikler**' i seçin.
-1. **Karşıya yüklemeyi Yapılandır** sekmesinde, **Microsoft Endpoint Manager yönetim merkezine yükle**' yi seçin. **Uygula**’ya tıklayın.
+1. **Karşıya yüklemeyi Yapılandır** sekmesinde, **Microsoft Endpoint Manager yönetim merkezine yükle**' yi seçin. **Uygula**'ya tıklayın.
    - Cihaz yükleme için varsayılan ayar, **Microsoft uç nokta Configuration Manager tarafından yönetilen tüm cihazlardır**. Gerekirse, karşıya yüklemeyi tek bir cihaz koleksiyonuna sınırlayabilirsiniz.
 
    [![Ortak yönetim Yapılandırma Sihirbazı](./media/3555758-configure-upload.png)](./media/3555758-configure-upload.png#lightbox)
@@ -69,7 +66,7 @@ Ortak yönetim Şu anda etkinleştirilmişse, aşağıdaki yönergeleri kullanar
 ### <a name="use-the-configure-co-management-wizard-to-enable-device-upload"></a><a name="bkmk_config"></a>Cihaz yüklemeyi etkinleştirmek için ortak yönetim Yapılandırma Sihirbazı 'nı kullanın
 Ortak yönetim özelliği etkinleştirilmemişse, cihaz yüklemeyi etkinleştirmek için **ortak yönetim yapılandırma** Sihirbazı 'nı kullanın. Ortak yönetim için otomatik kayıt veya Intune 'a geçiş iş yüklerini etkinleştirmek zorunda kalmadan cihazlarınızı karşıya yükleyebilirsiniz. Aşağıdaki yönergeleri kullanarak cihaz karşıya yüklemeyi etkinleştirin:
 
-1. Configuration Manager yönetim konsolunda, **Yönetim** > **genel bakış** > **Cloud Services** > **ortak yönetim**' e gidin.
+1. Configuration Manager yönetim konsolunda, **Yönetim**  >  **genel bakış**  >  **Cloud Services**  >  **ortak yönetim**' e gidin.
 1. Şeritte, Sihirbazı açmak için **ortak yönetimi yapılandırma** ' ya tıklayın.
 1. **Kiracı ekleme** sayfasında, ortamınız için **AzurePublicCloud** ' yi seçin. Azure Kamu Bulutu desteklenmez.
 1. **Oturum Aç**’a tıklayın. Oturum açmak için *genel yönetici* hesabınızı kullanın.
@@ -86,9 +83,9 @@ Ortak yönetim özelliği etkinleştirilmemişse, cihaz yüklemeyi etkinleştirm
 
 ## <a name="review-your-upload"></a><a name="bkmk_review"></a>Karşıya yüklemeyi gözden geçirin
 
-1. &lt;ConfigMgr yükleme dizininden **Cmgatewaysyncuploadworker. log** dosyasını açın> \logs.
-1. Sonraki eşitleme zamanı, şuna benzer günlük girdileri tarafından belirtilir `Next run time will be at approximately: 02/28/2020 16:35:31`.
-1. Cihaz yüklemeleri için şuna benzer günlük girdilerine bakın `Batching N records`. **N** , buluta yüklenen cihazların sayısıdır. 
+1. ConfigMgr yükleme dizininden **Cmgatewaysyncuploadworker. log** &lt; dosyasını açın> \logs.
+1. Sonraki eşitleme zamanı, şuna benzer günlük girdileri tarafından belirtilir `Next run time will be at approximately: 02/28/2020 16:35:31` .
+1. Cihaz yüklemeleri için şuna benzer günlük girdilerine bakın `Batching N records` . **N** , buluta yüklenen cihazların sayısıdır. 
 1. Karşıya yükleme, değişiklikler için 15 dakikada bir gerçekleşir. Değişiklikler karşıya yüklendikten sonra, istemci değişikliklerinin **Microsoft Endpoint Manager Yönetim merkezinde**görünmesi 5 ila 10 dakika sürebilir.
 
 ## <a name="perform-device-actions"></a>Cihaz eylemlerini gerçekleştirme

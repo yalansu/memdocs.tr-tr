@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: d5900fd4cb4fdebea23e626ffbe17c5289712b31
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: f87c4cc1bcbe8039acb5876dc8e26ac597f12e59
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268921"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107297"
 ---
 # <a name="assets-in-desktop-analytics"></a>Masaüstü analizinden varlıklar
 
@@ -56,7 +56,7 @@ Aşağıdaki kategorilerden birini ayarlayarak uygulamaların **önemini** yapı
 
 **Uygulama sürümleri ayrıntıları** ayarı kapalıyken, uygulama ayrıntıları bölmesi, birleştirilagösterdiği uygulama sürümlerinin ve dillerin sayısını gösterir. Uygulama ayrıntılarına değişiklikler kaydederseniz, tüm sürümler için geçerlidir. Örneğin, **önem derecesini** veya **sahibini**ayarlayın. Bazı değerlerde "çoklu" görüntülenir, bu da tüm sürümlerde tutarlı bir değer olmadığı anlamına gelir.
 
-### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" />Sistem ve Mağaza uygulamalarının otomatik yükseltme kararı
+### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp"> </a> Sistem ve Mağaza uygulamalarının otomatik yükseltme kararı
 
 <!-- 3587232 -->
 Masaüstü Analizi iş akışındaki tüm önemli uygulamalarda **önem** ve **yükseltme kararının** belirlenmesi önemlidir. Bu uygulamalara not ekleme çabalarınızı azaltmaya yardımcı olmak için bazı uygulama türleri otomatik olarak *önemli değildir*olarak işaretlenir. Bu uygulamalar için dağıtım planı yükseltme kararı Ayrıca, *hazırlık*olarak işaretlenir. Aşağıdaki uygulamalar uyumludur ve Windows yükseltildikten sonra çalışmaya devam etmelidir:

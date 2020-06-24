@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0811c695acba4859bf32de535a28ea55cf8eee07
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 7403dc26f5fe1789fcda6b3eddf30136a4cd6e68
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268751"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795661"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Masaüstü analizi için veri paylaşımını etkinleştirme
 
@@ -35,8 +35,8 @@ Masaüstü analizinin temel işlevselliği **temel** [Tanılama veri düzeyinde]
 
 - Uygulama kullanımı
 - [Ek uygulama öngörüleri](compat-assessment.md#additional-insights)
-- Dağıtım durumu verileri
-- Sistem durumu izleme verileri
+- [Dağıtım durumu verileri](deploy-prod.md#address-deployment-alerts)
+- [Sistem durumu izleme verileri](health-status-monitoring.md)
 
 Microsoft, bundan elde edeceğiniz avantajları en üst düzeye çıkarmak için, **Gelişmiş (sınırlı)** tanılama veri düzeyini masaüstü analiziyle etkinleştirmenizi önerir.
 

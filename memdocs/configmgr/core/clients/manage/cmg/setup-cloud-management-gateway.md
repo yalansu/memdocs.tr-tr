@@ -5,17 +5,17 @@ description: Bir bulut yönetimi ağ geçidi (CMG) ayarlamak için bu adım adı
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 8c585473ec80ad4c6dfe49d22e527e99175bfbb4
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 0960637f534bfe1361b55b2d63be87abc7894d7b
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877425"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715246"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configuration Manager için bulut yönetimi ağ geçidi ayarlama
 
@@ -25,7 +25,6 @@ Bu işlem, bir bulut yönetimi ağ geçidi (CMG) ayarlamak için gerekli olan ad
 
 > [!Note]  
 > Configuration Manager varsayılan olarak bu isteğe bağlı özelliği etkinleştirmez. Bu özelliği kullanmadan önce etkinleştirmeniz gerekir. Daha fazla bilgi için, bkz. [Enable optional features from updates](../../../servers/manage/install-in-console-updates.md#bkmk_options).
-
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -39,11 +38,11 @@ Bir CMG oluşturmak için gerekli bilgilere ve önkoşullara sahip olduğunuzdan
 
 - CMG 'nin [Azure Resource Manager](plan-cloud-management-gateway.md#azure-resource-manager) dağıtımı için aşağıdaki gereksinimlere ihtiyacınız vardır:  
 
-    - **Bulut yönetimi**IÇIN [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) ile tümleştirme. Azure AD Kullanıcı keşfi gerekli değildir.  
+  - **Bulut yönetimi**IÇIN [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) ile tümleştirme. Azure AD Kullanıcı keşfi gerekli değildir. Siteyi Azure Resource Manager kullanarak CMG dağıtmak üzere Azure AD ile tümleştirmek için **genel yönetici**gerekir.
 
-    - **Microsoft. classiccompute**  &  **Microsoft. Storage** kaynak sağlayıcılarının Azure aboneliği içinde kayıtlı olması gerekir. Daha fazla bilgi için bkz. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
+  - **Microsoft. classiccompute**  &  **Microsoft. Storage** kaynak sağlayıcılarının Azure aboneliği içinde kayıtlı olması gerekir. Daha fazla bilgi için bkz. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
 
-    - Abonelik yöneticisinin oturum açması gerekir.  
+  - Bir **Abonelik sahibinin** CMG 'yi dağıtmak için oturum açması gerekir.
 
 - Hizmet için genel olarak benzersiz bir ad. Bu ad [CMG sunucusu kimlik doğrulama sertifikasıdır](certificates-for-cloud-management-gateway.md#bkmk_serverauth).  
 
@@ -60,10 +59,9 @@ Bir CMG oluşturmak için gerekli bilgilere ve önkoşullara sahip olduğunuzdan
     >
     > Configuration Manager sürüm 1902 ' den başlayarak, bulut yönetimi ağ geçidinin yeni örnekleri için tek dağıtım mekanizmasıdır Azure Resource Manager.<!-- 3605704 -->
 
-    - Azure abonelik KIMLIĞI  
+  - Azure abonelik KIMLIĞI  
 
-    - Azure Yönetim sertifikası  
-
+  - Azure Yönetim sertifikası  
 
 ## <a name="set-up-a-cmg"></a>CMG 'yi ayarlama
 
@@ -73,7 +71,7 @@ Bu yordamı en üst düzey sitede yapın. Bu site tek başına bir birincil site
 
 2. Şeritte **bulut yönetimi ağ geçidi oluştur** ' u seçin.  
 
-3. Sihirbazın Genel sayfasında **oturum aç**' ı seçin. Azure abonelik yönetici hesabıyla kimlik doğrulaması yapın. Sihirbaz, kalan alanları Azure AD tümleştirme önkoşulu sırasında depolanan bilgilerden otomatik olarak doldurur. Birden çok aboneliğiniz varsa, kullanılacak istenen aboneliğin **ABONELIK kimliğini** seçin.
+3. Sihirbazın Genel sayfasında **oturum aç**' ı seçin. Azure **abonelik sahibi** hesabıyla kimlik doğrulaması yapın. Sihirbaz, kalan alanları Azure AD tümleştirme önkoşulu sırasında depolanan bilgilerden otomatik olarak doldurur. Birden çok aboneliğiniz varsa, kullanmak istediğiniz aboneliğin **ABONELIK kimliğini** seçin.
 
     > [!Note]  
     > Sürüm 1810 ' den başlayarak, Azure 'daki klasik hizmet dağıtımları Configuration Manager kullanım dışıdır. Sürüm 1902 ve önceki sürümlerde, CMG dağıtım yöntemi olarak **Azure Resource Manager dağıtımı** ' nı seçin.
@@ -92,7 +90,7 @@ Bu yordamı en üst düzey sitede yapın. Bu site tek başına bir birincil site
 7. Bu CMG için Azure bölgesini seçmek üzere **bölge** açılan listesini seçin.  
 
 8. Bir **kaynak grubu** seçeneği belirleyin.
-   1. **Mevcut olanı kullan**' ı seçerseniz, açılan listeden var olan bir kaynak grubunu seçin. Seçili kaynak grubu, adım 7 ' de seçtiğiniz bölgede zaten var olmalıdır. Var olan bir kaynak grubunu seçerseniz ve bu bölge daha önce seçilen bölgeden farklı bir bölgedeyse CMG sağlanması başarısız olur.
+   1. **Mevcut olanı kullan**' ı seçerseniz, açılan listeden var olan bir kaynak grubunu seçin. Seçili kaynak grubu, adım 7 ' de seçtiğiniz bölgede zaten var olmalıdır. Var olan bir kaynak grubunu seçerseniz ve daha önce seçilen bölgeden farklı bir bölgedeyse CMG sağlama başarısız olur.
    2. **Yeni oluştur**' u seçerseniz, yeni kaynak grubu adını girin.
 
 9. **VM örneği** alanında, bu hizmet için VM sayısını girin. Varsayılan değer bir, ancak CMG başına 16 VM 'ye kadar ölçeklendirebilirsiniz.  
@@ -100,7 +98,7 @@ Bu yordamı en üst düzey sitede yapın. Bu site tek başına bir birincil site
 10. İstemci güvenilen kök sertifikaları eklemek için **Sertifikalar** ' ı seçin. Güven zincirindeki tüm sertifikaları ekleyin.  
 
     > [!Note]  
-    > Sürüm 1806 ' den başlayarak, bir CMG oluşturduğunuzda, artık ayarlar sayfasında güvenilen bir kök sertifikası sağlamanız gerekmez. İstemci kimlik doğrulaması için Azure Active Directory (Azure AD) kullanılırken bu sertifika gerekli değildir, ancak sihirbazda gerekli olması için kullanılır. PKI istemci kimlik doğrulama sertifikaları kullanıyorsanız, yine de CMG 'ye bir güvenilen kök sertifika eklemeniz gerekir.<!--SCCMDocs-pr issue #2872-->  
+    > İstemci kimlik doğrulaması için Azure Active Directory (Azure AD) kullanılırken güvenilen bir kök sertifika gerekli değildir. PKI istemci kimlik doğrulama sertifikaları kullanıyorsanız, CMG 'ye bir güvenilen kök sertifika eklemeniz gerekir.<!--SCCMDocs-pr issue #2872-->
     >
     > Sürüm 1902 ve önceki sürümlerde yalnızca iki güvenilen kök CA ve dört ara (alt) CA ekleyebilirsiniz.<!-- SCCMDocs-pr#4022 -->
 
@@ -108,7 +106,7 @@ Bu yordamı en üst düzey sitede yapın. Bu site tek başına bir birincil site
 
 12. Sürüm 1906 ' den başlayarak **TLS 1,2**' yi zorlayabilirsiniz. Bu ayar yalnızca Azure bulut hizmeti VM 'si için geçerlidir. Şirket içi Configuration Manager site sunucuları veya istemcileri için uygulanmaz. TLS 1,2 hakkında daha fazla bilgi için bkz. [tls 1,2 'yi etkinleştirme](../../../plan-design/security/enable-tls-1-2.md).<!-- SCCMDocs-pr#4021 -->
 
-13. Sürüm 1806 ' den başlayarak, sihirbaz varsayılan olarak aşağıdaki seçeneği sağlar: **CMG 'nin bulut dağıtım noktası olarak çalışmasına Izin verin ve Azure depolama 'dan içerik sunar**. Artık bir CMG, istemcilere içerik de sunabilir. Bu işlevsellik, Azure VM 'lerinin gerekli sertifikalarını ve maliyetini azaltır.  
+13. Sihirbaz varsayılan olarak aşağıdaki seçeneği sağlar: **CMG 'nin bulut dağıtım noktası olarak çalışmasına Izin verin ve Azure depolama 'dan içerik sunar**. Bir CMG, istemcilere içerik de sunabilir. Bu işlevsellik, Azure VM 'lerinin gerekli sertifikalarını ve maliyetini azaltır.
 
 14. **İleri**’yi seçin.  
 
@@ -116,9 +114,8 @@ Bu yordamı en üst düzey sitede yapın. Bu site tek başına bir birincil site
 
 16. Ayarları gözden geçirin ve **İleri**' yi seçin. Configuration Manager hizmeti ayarlamaya başlar. Sihirbazı kapattıktan sonra, hizmetin Azure 'da tamamen sağlanması beş ila 15 dakika sürer. Hizmetin ne zaman hazırlanmadığını öğrenmek için yeni CMG 'nin **durum** sütununu kontrol edin.  
 
-    > [!Note]  
+    > [!NOTE]
     > CMG dağıtımlarının sorunlarını gidermek için **CloudMgr. log** ve **cmgsetup. log**kullanın. Daha fazla bilgi için bkz. [günlük dosyaları](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
-
 
 ## <a name="configure-primary-site-for-client-certificate-authentication"></a>Birincil siteyi istemci sertifikası kimlik doğrulaması için yapılandırma
 
@@ -128,23 +125,21 @@ Bu yordamı en üst düzey sitede yapın. Bu site tek başına bir birincil site
 
 2. İnternet tabanlı istemcilerinizin atandığı birincil siteyi seçin ve **Özellikler**' i seçin.  
 
-3. Birincil site Özellik sayfasının **Istemci bilgisayar iletişimi** sekmesine geçin, **kullanılabilir olduğunda PKI istemci sertifikası (istemci kimlik doğrulaması) kullan**' ı işaretleyin.  
+3. Birincil site Özellik sayfasının **Iletişim güvenliği** sekmesine geçin, **kullanılabilir olduğunda PKI istemci sertifikası (istemci kimlik doğrulaması) kullan**' ı işaretleyin.  
 
-    > [!Note]
-    > Sürüm 1906 ' den başlayarak bu sekmeye **Iletişim güvenliği**denir.<!-- SCCMDocs#1645 -->  
+    > [!NOTE]
+    > Sürüm 1902 ve önceki sürümlerde bu sekmeye **Istemci bilgisayar iletişimi**adı verilir.<!-- SCCMDocs#1645 -->
 
 4. Bir CRL yayımlamazsanız, **istemciler site sistemleri için sertifika iptal listesini (CRL) denetleme**seçeneğinin işaretini kaldırın.  
-
 
 ## <a name="add-the-cmg-connection-point"></a>CMG bağlantı noktasını ekleme
 
 CMG bağlantı noktası, CMG ile iletişim kurmak için site sistem rolüdür. CMG bağlantı noktasını eklemek için, [site sistemi rollerini yüklemek](../../../servers/deploy/configure/install-site-system-roles.md)üzere genel yönergeleri izleyin. Site sistemi rolü Ekleme Sihirbazı ' nın sistem rolü seçimi sayfasında, **bulut yönetimi ağ geçidi bağlantı noktası**' nı seçin. Sonra bu sunucunun bağlandığı **bulut yönetimi ağ geçidi adını** seçin. Sihirbaz seçili CMG 'nin bölgesini gösterir.
 
-> [!Important]
+> [!IMPORTANT]
 > CMG bağlantı noktası, bazı senaryolarda [istemci kimlik doğrulama sertifikasına](certificates-for-cloud-management-gateway.md#bkmk_clientauth) sahip olmalıdır.
 
 CMG hizmet durumu sorunlarını gidermek için **Cmgservice. log** ve **SMS_Cloud_ProxyConnector. log**kullanın. Daha fazla bilgi için bkz. [günlük dosyaları](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
-
 
 ## <a name="configure-client-facing-roles-for-cmg-traffic"></a>CMG trafiği için istemciye yönelik rolleri yapılandırma
 
@@ -162,7 +157,6 @@ Yönetim noktası ve yazılım güncelleştirme noktası site sistemlerini CMG t
 
 Gerektiğinde ek yönetim noktaları ve tüm yazılım güncelleştirme noktaları için bu adımları yineleyin.
 
-
 ## <a name="configure-boundary-groups"></a>Sınır gruplarını yapılandırma
 
 <!--3640932-->
@@ -172,17 +166,16 @@ Sınır grupları hakkında daha fazla bilgi için bkz. [sınır gruplarını ya
 
 [Bir sınır grubu oluşturduğunuzda veya yapılandırdığınızda](../../../servers/deploy/configure/boundary-group-procedures.md), **Başvurular** sekmesinde bir bulut yönetimi ağ geçidi ekleyin. Bu eylem CMG 'yi bu sınır grubuyla ilişkilendirir.
 
-
 ## <a name="configure-clients-for-cmg"></a>CMG için istemcileri yapılandırma
 
-CMG ve site sistem rolleri çalışırken istemciler, CMG hizmetinin konumunu bir sonraki konum isteğinde otomatik olarak alır. [Kimlik doğrulaması Için Azure AD 'yi kullanarak Windows 10 istemcileri yükleyip atamadığınız](../../deploy/deploy-clients-cmg-azure.md)müddetçe, istemcilerin CMG hizmetinin konumunu alabilmesi için intranette olması gerekir. Konum istekleri için yoklama döngüsünün her 24 saati vardır. Normal olarak zamanlanmış konum isteğini beklemek istemiyorsanız, bilgisayarda SMS Aracısı ana bilgisayar hizmeti 'ni (Ccmexec. exe) yeniden başlatarak isteği zorlayabilirsiniz.  
+CMG ve site sistem rolleri çalışırken istemciler, CMG hizmetinin konumunu bir sonraki konum isteğinde otomatik olarak alır. [Kimlik doğrulaması Için Azure AD 'yi kullanarak Windows 10 istemcileri yükleyip atamadığınız](../../deploy/deploy-clients-cmg-azure.md)müddetçe, istemcilerin CMG hizmetinin konumunu alabilmesi için intranette olması gerekir. Konum istekleri için yoklama döngüsünün her 24 saati vardır. Normal olarak zamanlanmış konum isteğini beklemek istemiyorsanız, isteği zorlayabilirsiniz. İsteği zorlamak için bilgisayarda SMS Aracısı ana bilgisayar hizmeti 'ni (ccmexec.exe) yeniden başlatın.
 
-> [!Note]
+> [!NOTE]
 > Varsayılan olarak tüm istemciler CMG ilkesi alır. Bu davranışı istemci ayarıyla denetleyin, [İstemcilerin bir bulut yönetimi ağ geçidini kullanmasına izin](../../deploy/about-client-settings.md#enable-clients-to-use-a-cloud-management-gateway)vermez.
 
 Configuration Manager istemcisi, intranet veya Internet üzerinde olup olmadığını otomatik olarak belirler. İstemci bir etki alanı denetleyicisiyle veya şirket içi bir yönetim noktasıyla iletişim kurabildiğinden, bağlantı türünü **Şu anda intranet**olarak ayarlar. Aksi takdirde, **Şu anda Internet**'e geçer ve sitesiyle iletişim kurmak için CMG hizmetinin konumunu kullanır.
 
->[!NOTE]
+> [!NOTE]
 > İstemci, intranet veya internet 'te olsun etmeksizin her zaman CMG 'yi kullanmaya zorlayabilirsiniz. Bu yapılandırma, test amacıyla veya her zaman CMG 'yi kullanmaya zorlamak istediğiniz istemciler için yararlıdır. İstemcide aşağıdaki kayıt defteri anahtarını ayarlayın:
 >
 > `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Security, ClientAlwaysOnInternet = 1`
@@ -191,17 +184,20 @@ Configuration Manager istemcisi, intranet veya Internet üzerinde olup olmadığ
 >
 > Bu ayar, istemci sınır grubu yapılandırmalarının yerel kaynaklardan yararlanabilecek bir konuma gezinse bile her zaman uygulanır.
 
+İstemcilerin CMG 'yi belirten ilkeye sahip olduğunu doğrulamak için, istemci bilgisayarda yönetici olarak bir Windows PowerShell komut istemi açın ve aşağıdaki komutu çalıştırın:
 
-İstemcilerin CMG 'yi belirten ilkeye sahip olduğunu doğrulamak için, istemci bilgisayarda yönetici olarak bir Windows PowerShell komut istemi açın ve aşağıdaki komutu çalıştırın:`Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}`
+```powershell
+Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}`
+```
 
 Bu komut, istemcinin bildiği herhangi bir internet tabanlı yönetim noktasını görüntüler. CMG Teknik olarak Internet tabanlı bir yönetim noktası olmadığından, istemciler onu bir olarak görüntüler.
 
-> [!Note]  
+> [!NOTE]  
 > CMG istemci trafiği sorunlarını gidermek için **CMGHttpHandler. log**, **cmgservice. log**ve **SMS_Cloud_ProxyConnector. log**kullanın. Daha fazla bilgi için bkz. [günlük dosyaları](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
 ### <a name="install-off-premises-clients-using-a-cmg"></a>CMG kullanarak şirket içi istemcileri yükler
 
-İstemci aracısını Şu anda intranetinize bağlı olmayan sistemlere yüklemek için aşağıdaki koşullardan biri doğru olmalıdır. Her durumda, hedef sistemlerdeki bir yerel yönetici hesabı gereklidir.
+Şu anda intranetinize bağlı olmayan sistemlere Configuration Manager istemcisini yüklemek için aşağıdaki koşullardan biri doğru olmalıdır. Her durumda, hedef sistemlerdeki bir yerel yönetici hesabı gereklidir.
 
 1. Configuration Manager site, istemci kimlik doğrulaması için PKI sertifikaları kullanacak şekilde doğru şekilde yapılandırılmıştır. Ayrıca, istemci sistemlerinin her biri, daha önce kendisine verilen geçerli, benzersiz ve güvenilir bir istemci kimlik doğrulama sertifikasına sahiptir.
 
@@ -209,35 +205,37 @@ Bu komut, istemcinin bildiği herhangi bir internet tabanlı yönetim noktasın�
 
 3. Site, sürüm 2002 veya sonraki bir sürümü Configuration Manager çalışıyor.
 
-1 ve 2. seçenekler için, **CCMSetup. exe**' yi çağırırken CMG 'nin URL 'sini belirtmek için **/MP** parametresini kullanın. Daha fazla bilgi için bkz. [istemci yükleme parametreleri ve özellikleri hakkında](../../deploy/about-client-installation-properties.md#mp).
+Seçenekler 1 ve 2 ' de **ccmsetup.exe**çalıştırdığınızda, CMG 'nin URL 'sini belirtmek için **/MP** parametresini kullanın. Daha fazla bilgi için bkz. [istemci yükleme parametreleri ve özellikleri hakkında](../../deploy/about-client-installation-properties.md#mp).
 
-Seçenek 3 ' ten itibaren Configuration Manager sürüm 2002 ' den başlayarak, istemci aracısını toplu kayıt belirteci kullanarak intranetinize bağlı olmayan sistemlere yükleyebilirsiniz. Bu yöntem hakkında daha fazla bilgi için bkz. [toplu kayıt belirteci oluşturma](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
+Seçenek 3 ' ten itibaren Configuration Manager sürüm 2002 ' den başlayarak, istemciyi, toplu kayıt belirteci kullanarak intranetinize bağlı olmayan sistemlere yükleyebilirsiniz. Bu yöntem hakkında daha fazla bilgi için bkz. [toplu kayıt belirteci oluşturma](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
 
 ### <a name="configure-off-premises-clients-for-cmg"></a>CMG için şirket dışı istemcileri yapılandırma
 
 Aşağıdaki koşulların doğru olduğu durumlarda, son yapılandırılmış bir CMG 'ye sistemleri bağlayabilirsiniz:  
 
-- Sistemlerde Configuration Manager istemci Aracısı zaten yüklü.
+- Sistemlerde Configuration Manager istemcisi zaten yüklü.
 
 - Sistemler bağlı değil ve intranetinize bağlanamaz.
 
 - Sistemler aşağıdaki koşullardan birini karşılar:
 
-  - Her birinin önceden kendisine verilmiş geçerli, benzersiz ve güvenilir bir istemci kimlik doğrulama sertifikası vardır.
+  - Her birinin önceden kendisine verilen geçerli, benzersiz ve güvenilir bir istemci kimlik doğrulama sertifikası vardır
 
   - Azure AD etki alanına katılmış
 
-  - Karma Azure AD etki alanına katılmış.
+  - Karma Azure AD etki alanına katılmış
 
-- Mevcut istemci aracısını tamamen yeniden yüklemeniz gerekmez.
+- Mevcut istemciyi tamamen yeniden yüklemeniz gerekmez.
 
 - Bir makine kayıt defteri değerini değiştirme ve yerel yönetici hesabı kullanarak **SMS Aracısı ana bilgisayar** hizmetini yeniden başlatma yönteminiz vardır.
 
-Bu sistemlerde bağlantıyı zorlamak için, **Hklm\software\microsoft\ccm**altında **cmgfqdn** (tür REG_SZ) kayıt defteri değerini oluşturun. Bu değeri CMG 'nin URL 'SI olarak ayarlayın (örneğin, `https://contoso-cmg.contoso.com` ). Ayarladıktan sonra, istemci sisteminde **SMS Aracısı ana bilgisayar** hizmetini yeniden başlatın.
+Bu sistemlerde bağlantıyı zorlamak için anahtarda **REG_SZ** kayıt defteri girişi oluşturun `CMGFQDNs` `HKLM\Software\Microsoft\CCM` . Değerini CMG 'nin URL 'SI olarak ayarlayın, örneğin, `https://contoso-cmg.contoso.com` . Ardından, cihazda **SMS Aracısı ana bilgisayar** Windows hizmetini yeniden başlatın.
 
-Configuration Manager istemcisinde kayıt defterinde ayarlanmış geçerli bir CMG veya internet 'e yönelik bir yönetim noktası yoksa, **Cmgfqdn** kayıt defteri değerini otomatik olarak denetler. Bu denetim, **SMS aracı ana bilgisayar** hizmeti başlatıldığında veya bir ağ değişikliği algıladığında her 25 saatte bir gerçekleşir. İstemci sitesine bağlanıp bir CMG öğrendiğinde, bu değeri otomatik olarak güncelleştirir.
+Configuration Manager istemcisinde kayıt defterinde ayarlanmış geçerli bir CMG veya internet 'e yönelik yönetim noktası yoksa, `CMGFQDNs` kayıt defteri değerini otomatik olarak denetler. Bu denetim, **SMS aracı ana bilgisayar** hizmeti başlatıldığında veya bir ağ değişikliği algıladığında her 25 saatte bir gerçekleşir. İstemci sitesine bağlanıp bir CMG öğrendiğinde, bu değeri otomatik olarak güncelleştirir.
 
 ## <a name="modify-a-cmg"></a>CMG 'yi değiştirme
+
+### <a name="cmg-properties"></a>CMG özellikleri
 
 Bir CMG oluşturduktan sonra bazı ayarlarından bazılarını değiştirebilirsiniz. Configuration Manager konsolundaki CMG 'yi seçin ve **Özellikler**' i seçin. Aşağıdaki sekmelerde ayarları yapılandırın:  
 
@@ -255,12 +253,11 @@ Bir CMG oluşturduktan sonra bazı ayarlarından bazılarını değiştirebilirs
 
 - **Istemci sertifikası Iptalini doğrulama**: Bu ayarı ilk olarak CMG oluştururken etkinleştirmediyseniz, CRL 'yi yayımladıktan sonra daha sonra etkinleştirebilirsiniz. Daha fazla bilgi için bkz. [sertifika iptal listesini yayımlama](security-and-privacy-for-cloud-management-gateway.md#bkmk_crl).  
 
-- **CMG 'nin bulut dağıtım noktası olarak çalışmasına Izin verin ve Azure depolama 'dan içerik sunabilir**: 1806 sürümünden başlayarak, bu yeni seçenek varsayılan olarak etkindir. Artık bir CMG, istemcilere içerik de sunabilir. Bu işlevsellik, Azure VM 'lerinin gerekli sertifikalarını ve maliyetini azaltır.<!--1358651-->  
+- **CMG 'nin bulut dağıtım noktası olarak çalışmasına Izin verin ve Azure depolama 'dan içerik sunabilir**: Bu seçenek varsayılan olarak etkindir. Bir CMG, istemcilere içerik de sunabilir. Bu işlevsellik, Azure VM 'lerinin gerekli sertifikalarını ve maliyetini azaltır.<!--1358651-->
 
 #### <a name="alerts"></a>Uyarılar
 
-CMG 'yi oluşturduktan sonra her zaman uyarıları yeniden yapılandırın.
-
+CMG 'yi oluşturduktan sonra istediğiniz zaman uyarıları yeniden yapılandırın.
 
 ### <a name="redeploy-the-service"></a>Hizmeti yeniden dağıtın
 
@@ -272,7 +269,7 @@ Aşağıdaki yapılandırma gibi daha önemli değişiklikler, hizmetin yeniden 
 - Genel PKI 'ya özel
 - Bölge
 
-Internet tabanlı istemciler için en az bir etkin CMG 'yi her zaman güncel tutun. Internet tabanlı istemciler, kaldırılan bir CMG ile iletişim kuramaz. İstemciler, intranete geri dolaşılana kadar yeni bir tane hakkında bilgi sahibi değildir. İlk olarak silmek için ikinci bir CMG örneği oluştururken başka bir CMG bağlantı noktası da oluşturun.
+Internet tabanlı istemciler için en az bir etkin CMG 'yi her zaman güncel tutun. Internet tabanlı istemciler, kaldırılan bir CMG ile iletişim kuramaz. İstemciler, intranete geri dolaşılana kadar yeni bir tane hakkında bilgi sahibi değildir. İlk olarak silinecek ikinci bir CMG örneği oluştururken başka bir CMG bağlantı noktası da oluşturun.
 
 İstemciler ilkeyi varsayılan olarak her 24 saatte bir yeniler, bu nedenle eskisini silmeden önce yeni bir CMG oluşturduktan sonra en az bir gün bekleyin. İstemcileri kapalıysa veya bir internet bağlantısı yoksa, daha uzun süre beklemeniz gerekebilir.
 
@@ -296,7 +293,7 @@ Klasik dağıtım yönteminde mevcut bir CMG varsa, Azure Resource Manager dağ�
 
     4. Klasik CMG 'yi silin.  
 
-> [!Tip]  
+> [!TIP]
 > Bir CMG 'nin geçerli dağıtım modelini öğrenmek için:<!--SCCMDocs issue #611-->  
 >
 > 1. Configuration Manager konsolunda, **Yönetim** çalışma alanına gidin, **Cloud Services**' i genişletin ve **bulut yönetimi ağ geçidi** düğümünü seçin.  
@@ -307,12 +304,11 @@ Klasik dağıtım yönteminde mevcut bir CMG varsa, Azure Resource Manager dağ�
 
 ### <a name="modifications-in-the-azure-portal"></a>Azure portal değişiklikler
 
-Yalnızca Configuration Manager konsolundan CMG 'yi değiştirin. Hizmette veya temel alınan VM 'Lerde doğrudan Azure 'da değişiklik yapma desteklenmez. Hiçbir değişiklik yapılmadan kaybolmuş olabilir. Her PaaS 'de olduğu gibi, hizmet VM 'Leri dilediğiniz zaman yeniden oluşturabilir. Bu yeniden uygulama, arka uç donanım bakımı için veya VM işletim sistemine güncelleştirmelerin uygulanması olabilir.
+Yalnızca Configuration Manager konsolundan CMG 'yi değiştirin. Hizmette veya temel alınan VM 'Lerde doğrudan Azure 'da değişiklik yapma desteklenmez. Hiçbir değişiklik yapılmadan kaybolmuş olabilir. Her PaaS 'de olduğu gibi, hizmet VM 'Leri istediğiniz zaman yeniden oluşturabilir. Bu yeniden uygulama, arka uç donanım bakımı için veya VM işletim sistemine güncelleştirmelerin uygulanması olabilir.
 
 ### <a name="delete-the-service"></a>Hizmeti Sil
 
 CMG 'yi silmeniz gerekiyorsa Configuration Manager konsolundan da bunu yapın. Azure 'daki tüm bileşenleri el ile kaldırmak sistemin tutarsız olmasına neden olur. Bu durum yalnız bırakılmış bilgileri bırakır ve beklenmeyen davranışlar ortaya çıkabilir.
-
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

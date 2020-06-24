@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: fdc15860f2d093a4c9c61b787ba0b780051d3f3d
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: db70eab54f319197f267173fe857d0fb147a7eba
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864880"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746570"
 ---
 # <a name="monitor-connection-health"></a>Bağlantı durumunu izleme
 
@@ -217,7 +217,7 @@ Aksi takdirde, aşağıdaki hatalardan birini gösterebilir:
 
 - Cihaz uygulama uyumluluk verileri koleksiyonu yapılandırılamıyor (Setrequestallappraerversions). Özel durum ayrıntıları için günlükleri denetleyin  
 
-- Requestallappraerversions kayıt defteri anahtarına yazılamıyor `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser` . İzinleri denetle  
+- Requestallappraerversions kayıt defteri anahtarına yazılamıyor `HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Appraiser` . İzinleri denetle  
 
 Bu kayıt defteri anahtarındaki izinleri denetleyin. Yerel sistem hesabının, Configuration Manager istemcisinin ayarlaması için bu anahtara erişebildiğinizden emin olun.  
 
@@ -226,7 +226,7 @@ Daha fazla bilgi için istemcide M365AHandler. log dosyasına bakın.
 ### <a name="minimum-compatibility-update"></a>En düşük uyumluluk güncelleştirmesi
 
 <!--18,19,32-->
-Uyumluluk Güncelleştirmesi (Appraiser. dll), cihazda yüklü değil veya güncel değil. Masaüstü analizi, 10.0.17763 için en düşük gereksinimden daha eski.
+Uyumluluk Güncelleştirmesi (appraiser.dll) cihazda yüklü değil veya güncel değil. Masaüstü analizi, 10.0.17763 için en düşük gereksinimden daha eski.
 
 En son uyumluluk güncelleştirmesini yükler. Daha fazla bilgi için bkz. [Uyumluluk güncelleştirmeleri](enroll-devices.md#update-devices).
 
@@ -248,7 +248,7 @@ Başarılı olmazsa, aşağıdaki hatalardan birini gösterebilir:
 
 - Uygulama uyumluluğu verileri toplanamıyor (RunAppraiser). Ayrıntılar için günlüklere bakın  
 
-- Uygulama uyumluluğu veri toplama (CompatTelRunner. exe) bir hata koduyla sona erdi  
+- Uygulama uyumluluğu veri toplama (CompatTelRunner.exe) bir hata koduyla sona erdi  
 
 Daha fazla bilgi için istemcide M365AHandler. log dosyasına bakın.
 
@@ -299,7 +299,7 @@ Başarılı olmazsa, aşağıdaki hatalardan birini gösterebilir:
 
 - Cihaz ve yapılandırması (RunCensus) hakkında veri toplanamıyor. Özel durum ayrıntıları için günlükleri denetleyin  
 
-- Cihaz ve yapılandırma verileri toplama aracı (devicecensus. exe) bulunamadı  
+- Cihaz ve yapılandırma verileri toplama aracı (devicecensus.exe) bulunamadı  
 
 Daha fazla bilgi için istemcide M365AHandler. log dosyasına bakın.
 
@@ -343,7 +343,7 @@ DisableEnterpriseAuthProxy ayarı, Windows 7 için varsayılan olarak etkindir. 
 
 Bu özellik aşağıdaki hataları gösterebilir:
 
-- Kimlik doğrulama proxy 'si etkin. DisableEnterpriseAuthProxy 'yi içinde 0 olarak ayarla`HKLM\Software\Policies\Microsoft\Windows\DataCollection`
+- Kimlik doğrulama proxy 'si etkin. DisableEnterpriseAuthProxy 'yi içinde 0 olarak ayarla`HKLM:\Software\Policies\Microsoft\Windows\DataCollection`
 
 - Kimlik doğrulama proxy 'si durumu denetlenemiyor. Özel durum ayrıntıları için günlükleri denetleyin
 
@@ -412,12 +412,12 @@ Bu denetim başarılı olursa, DiagTrack bileşeni cihazda düzgün şekilde yap
 
 Aksi takdirde, aşağıdaki hatalardan birini gösterebilir:
 
-- Bağlı kullanıcı deneyimi ve telemetri (diagtrack. dll) bileşeni güncel değil. Gereksinimleri denetle  
+- Bağlı kullanıcı deneyimi ve telemetri (diagtrack.dll) bileşeni güncel değildir. Gereksinimleri denetle  
 
     > [!TIP]
     > Windows 7 için Nisan 2020 genişletilmiş güvenlik güncelleştirmesinde (ESU), cihazların bu hatayı hatalı rapor etmesine neden olan bilinen bir sorun vardır. Daha fazla bilgi için bkz. [sürüm notları](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
 
-- Bağlı kullanıcı deneyimi ve telemetri (diagtrack. dll) bileşeni bulunamıyor. Gereksinimleri denetle  
+- Bağlı kullanıcı deneyimi ve telemetri (diagtrack.dll) bileşeni bulunamıyor. Gereksinimleri denetle  
 
 - Microsoft 'a veri göndermek için bağlı kullanıcı deneyimlerini ve telemetri hizmetini etkinleştirin ve başlatın  
 

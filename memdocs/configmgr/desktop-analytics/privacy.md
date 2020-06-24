@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 82c8495391dcc22aa2784657bc1461887e412577
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 34005a63b372198bbc2e3079f8ab560ef6b2b791
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223641"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795655"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Masaüstü Analizi veri gizliliği
 
@@ -57,6 +57,8 @@ Aşağıdaki çizimde, tanılama verilerinin tanılama veri hizmeti, geçici dep
 
 3. Cihazlar, tanılama verilerini Windows için Microsoft Tanılama Veri Yönetimi hizmetine gönderir. Tüm Tanılama verileri HTTPS üzerinden şifrelenir ve cihazdan bu hizmete aktarım sırasında sertifika sabitleme kullanır. Microsoft Veri Yönetimi hizmeti Birleşik Devletler barındırılır.
 
+      - Uygulama hataları, çekirdek hataları, yanıt vermeyen uygulamalar ve uygulamaya özgü diğer sorunlar, uygulamaya özgü sorun raporlarını Microsoft 'a göndermek için Windows Hata Bildirimi API kullanır. Bu veri akışı hakkında özel ayrıntılar için [wer kullanma](https://docs.microsoft.com/windows/win32/wer/using-wer) bölümüne bakın.
+      
 4. Her gün Microsoft, BT odaklı öngörülerin bir anlık görüntüsünü üretir. Bu anlık görüntü, Windows 'daki tanılama verilerini kayıtlı cihazların girişinde birleştirir. Bu işlem yalnızca masaüstü Analizi tarafından kullanılan geçici depolamada gerçekleşir. Geçici depolama, Birleşik Devletler Microsoft veri merkezlerinde barındırılır. Tüm veriler SSL (HTTPS) ile şifrelenmiş bir kanal üzerinden gönderilir. Anlık görüntüler ticari KIMLIĞE göre ayrılmış.  
 
 5. Anlık görüntüler daha sonra Azure Log Analytics çalışma alanınıza kopyalanır. Bu veri aktarımı, Log Analytics bir özelliği olan Web kancası alma protokolü aracılığıyla HTTPS üzerinden yapılır. Masaüstü analizlerinin Log Analytics depolama alanınızı okuma veya yazma izni yoktur. Masaüstü analizi, paylaşılan erişim imzası (SAS) URI 'SI ile Web kancası API 'sini çağırır. Ardından Log Analytics, HTTPS üzerinden depolama tablolarından verileri alır.
@@ -78,6 +80,8 @@ Gizlilik açısından ilgili sık sorulan sorular için bkz. [gızlılık SSS](f
 - [Windows 10, sürüm 1809 temel düzey Windows Tanılama olayları ve alanları](https://docs.microsoft.com/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
 
 - [Masaüstü Analizi tarafından kullanılan Windows 10, sürüm 1709 Geliştirilmiş tanılama veri olayları ve alanları](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
+
+- [Windows Kurulumu hata bildirimi](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting)
 
 - [Tanılama veri görüntüleyicisine genel bakış](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
 

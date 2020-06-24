@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cbd7c516515718cca96bff9b1715233964cb2aa5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 53fc4f694579fb8c53a4aea1054cf49dff21e1d2
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717366"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715688"
 ---
 # <a name="set-up-bitlocker-portals"></a>BitLocker portallarını ayarlama
 
@@ -28,7 +28,7 @@ Aşağıdaki BitLocker yönetim bileşenlerini Configuration Manager kullanmak i
 - Kullanıcı self servis portalı
 - Yönetim ve izleme Web sitesi (yardım masası portalı)
 
-Portalları, IIS ile var olan bir site sunucusuna yükleyebilir veya tek başına bir Web sunucusu kullanarak bunları barındırabilirsiniz.
+Portalları, IIS yüklü olan mevcut bir site sunucusuna veya site sistemi sunucusuna yükleyebilir veya tek başına bir Web sunucusu kullanarak bunları barındırabilirsiniz.
 
 > [!NOTE]
 > Yalnızca Self Servis Portalı 'nı ve yönetim ve izleme Web sitesini bir birincil site veritabanıyla birlikte yükler. Bir hiyerarşide, her birincil site için bu Web sitelerini yükler.
@@ -37,7 +37,7 @@ Başlamadan önce, bu bileşenlere ilişkin [önkoşulları](../../plan-design/b
 
 ## <a name="script-usage"></a>Betik kullanımı
 
-Bu işlem, Web sunucusuna bu bileşenleri yüklemek için MBAMWebSiteInstaller. ps1 PowerShell betiğini kullanır. Aşağıdaki parametreleri kabul eder:
+Bu işlem, Web sunucusuna bu bileşenleri yüklemek için MBAMWebSiteInstaller.ps1 bir PowerShell betiği kullanır. Aşağıdaki parametreleri kabul eder:
 
 - `-SqlServerName <ServerName>`(gerekli): birincil site veritabanı sunucusunun tam etki alanı adı.
 

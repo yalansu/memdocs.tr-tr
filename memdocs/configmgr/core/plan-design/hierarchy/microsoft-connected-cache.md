@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 70d4930da712eccff8bdb1f1986a68aa5fe77644
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 5bea4fab3b32464cc0d03469d4966fe3611d2f76
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455285"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814918"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 'de Microsoft bağlı önbelleği
 
@@ -37,7 +37,7 @@ Bu önbellek Configuration Manager dağıtım noktası içeriğinden ayrıdır. 
 
 ## <a name="how-it-works"></a>Nasıl çalışır?
 
-İstemcileri bağlı önbellek sunucusunu kullanacak şekilde yapılandırdığınızda, artık internet 'ten Microsoft tarafından yönetilen bir içerik isteğinde bulunmaz. İstemciler bu içeriği dağıtım noktasında yüklü olan önbellek sunucusundan ister. Şirket içi sunucu, uygulama Isteği yönlendirme (ARR) için IIS özelliğini kullanarak bu içeriği önbelleğe alır. Ardından, önbellek sunucusu aynı içerik için gelecekteki istekleri hızlıca yanıtlayabilir. Bağlı önbellek sunucusu kullanılamıyorsa veya içerik henüz önbelleğe alınmamışsa, istemciler içeriği internet 'ten indirir. İstemciler teslim Iyileştirmesini de kullanır, bu nedenle içeriğin bölümlerini ağdaki eşlerden indirin.
+İstemcileri bağlı önbellek sunucusunu kullanacak şekilde yapılandırdığınızda, artık internet 'ten Microsoft tarafından yönetilen bir içerik isteğinde bulunmaz. İstemciler bu içeriği dağıtım noktasında yüklü olan önbellek sunucusundan ister. Şirket içi sunucu, uygulama Isteği yönlendirme (ARR) için IIS özelliğini kullanarak bu içeriği önbelleğe alır. Ardından, önbellek sunucusu aynı içerik için gelecekteki istekleri hızlıca yanıtlayabilir. Bağlı önbellek sunucusu kullanılamıyorsa veya içerik henüz önbelleğe alınmamışsa, istemciler içeriği internet 'ten indirir. İstemciler, içeriğin bölümlerini ağdaki eşlerden indirmek için teslim Iyileştirmesi da kullanır.
 
 ![Bağlı önbelleğin nasıl çalıştığına ilişkin diyagram](media/3555764-microsoft-connected-cache.png)
 

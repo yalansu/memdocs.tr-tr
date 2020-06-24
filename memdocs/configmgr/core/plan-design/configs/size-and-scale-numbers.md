@@ -10,12 +10,12 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0861bb73769beb6c7595b896afc8d0e156eef94d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5109ababd00011784618f9c989e1d2b756a322d9
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709645"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715637"
 ---
 # <a name="size-and-scale-numbers-for-configuration-manager"></a>Configuration Manager için boyut ve ölçek numaraları
 
@@ -136,6 +136,9 @@ Daha fazla bilgi için bkz. CMG [performansı ve ölçeği](../../clients/manage
 
 Bir yönetim noktasının destekleyebileceği istemci ve cihaz sayısı hakkında daha fazla bilgi için [Yönetim noktaları](#bkmk_mp) bölümüne bakın.  
 
+> [!NOTE]
+> Yönetim noktasını bir [bulut yönetimi ağ geçidini](../../clients/manage/cmg/plan-cloud-management-gateway.md)destekleyecek şekilde etkinleştirirseniz, BT Hizmetleri normal başına internet tabanlı istemci isteklerini destekler. Bir yönetim noktası için boyutlandırma Kılavuzu, şirket içi veya internet tabanlı istemciler için BT hizmetleri arasında değişiklik yapmaz.
+
 ### <a name="software-update-point"></a>Yazılım güncelleştirme noktası  
 
 Aşağıdaki önerileri temel olarak kullanın. Bu taban çizgisi, kuruluşunuza uygun yazılım güncelleştirmeleri kapasite planlaması bilgilerini belirlemenize yardımcı olur. Gerçek kapasite gereksinimleri, aşağıdaki kriterlere bağlı olarak, bu makalede listelenen önerilerden farklı olabilir:
@@ -144,6 +147,9 @@ Aşağıdaki önerileri temel olarak kullanın. Bu taban çizgisi, kuruluşunuza
 - Yazılım güncelleştirme noktası site sistemini barındırmak için kullandığınız donanım
 - Yönetilen istemci sayısı
 - Sunucuda yüklü olan diğer site sistem rolleri  
+
+> [!NOTE]
+> Yazılım güncelleştirme noktasını bir [bulut yönetimi ağ geçidini](../../clients/manage/cmg/plan-cloud-management-gateway.md)destekleyecek şekilde etkinleştirirseniz, BT Hizmetleri normal başına internet tabanlı istemci isteklerini destekler. Yazılım güncelleştirme noktası için boyutlandırma Kılavuzu, BT hizmetleri şirket içi veya internet tabanlı istemciler olup olmadığını değiştirmez.
 
 #### <a name="capacity-planning-for-the-software-update-point"></a><a name="BKMK_SUMCapacity"></a> Yazılım güncelleştirme noktası için kapasite planlaması  
 

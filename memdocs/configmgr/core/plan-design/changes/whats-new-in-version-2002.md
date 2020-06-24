@@ -2,7 +2,7 @@
 title: Sürüm 2002’deki yenilikler
 titleSuffix: Configuration Manager
 description: Geçerli dalın Configuration Manager sürüm 2002 ' de tanıtılan değişiklikler ve yeni yetenekler hakkında ayrıntılı bilgi alın.
-ms.date: 05/26/2020
+ms.date: 06/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: afdcc608133d306042c9c6dc817396bb2fc3f387
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: 4100f8747418bff769a7830fa63383ce545895ce
+ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126490"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721865"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 2002 ' deki yenilikler
 
@@ -329,7 +329,7 @@ Daha fazla bilgi için bkz. [Office 365 güncelleştirmelerini bağlantısı kes
 <!-- 5229962 -->
 Configuration Manager, cihazları Microsoft Defender ATP 'ye ekleme desteğini genişletti. Daha fazla bilgi için bkz. [Microsoft Defender Gelişmiş tehdit koruması](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices).
 
-## <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a>Microsoft Endpoint Manager Yönetim Merkezi aracılığıyla Microsoft Defender ATP 'ye Configuration Manager istemcileri ekleme
+### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a>Microsoft Endpoint Manager Yönetim Merkezi aracılığıyla Microsoft Defender ATP 'ye Configuration Manager istemcileri ekleme
 <!--5691658-->
 Artık, yönetilen istemcileri Configuration Manager için Microsoft Defender ATP uç noktası algılama ve yanıt (EDR) ekleme ilkelerini dağıtabilirsiniz. Bu istemciler Azure AD veya MDM kaydı gerektirmez ve ilke, Azure AD grupları yerine ConfigMgr koleksiyonlarına hedeflenmiş olur.
 
@@ -386,6 +386,16 @@ Daha fazla bilgi için bkz. [ürün geri bildirimi](../../understand/find-help.m
 <!--5891241-->
 
 Önceki sürümlerde geliştirmelere benzer şekilde, artık **yapılandırma öğeleri** ve **yapılandırma temelleri** düğümlerinden **tüm alt klasörler** arama seçeneğini kullanabilirsiniz.
+
+### <a name="community-hub"></a>Topluluk merkezi
+
+<!--3555935, 3555936-->
+
+_İlk tanıtılan Haziran 2020_
+
+BT Yöneticisi topluluğu, yıllar boyunca çok fazla bilgi geliştirmiştir. Komut dosyaları ve raporlar gibi öğeleri sıfırdan yeniden oluşturmanız yerine, birbirleriyle paylaşabileceğiniz bir Configuration Manager **Community hub** 'ı oluşturduk. Başkalarının çalışmasını izleyerek iş saatlerini tasarrufu sağlayabilirsiniz. Topluluk hub 'ı, diğerlerinin çalışmasına ve diğer kişilerin kendi üzerinde derlenerek yaratıcıkilerin oluşturulmasını ister. GitHub zaten, paylaşım için tasarlanmış sektör genelinde işlemlere ve araçlara sahiptir. Artık topluluk hub 'ı, bu yeni topluluğu yönlendiren temel parçalar halinde doğrudan Configuration Manager konsolundaki bu araçlardan faydalanır.
+
+Daha fazla bilgi için bkz. [Community hub ve GitHub](../../servers/manage/community-hub.md).
 
 ## <a name="tools"></a><a name="bkmk_tools"></a>Aracı
 

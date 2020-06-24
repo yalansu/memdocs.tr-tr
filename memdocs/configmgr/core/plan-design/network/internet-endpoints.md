@@ -2,7 +2,7 @@
 title: İnternet erişimi gereksinimleri
 titleSuffix: Configuration Manager
 description: Configuration Manager özelliklerinin tam işlevselliğine izin vermek için İnternet uç noktaları hakkında bilgi edinin.
-ms.date: 04/21/2020
+ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8423af8d4c743965f627a94a07f587fd97d45bdf
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: fb965ec6547ff1c06586464780b6db224b943000
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454979"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740784"
 ---
 # <a name="internet-access-requirements"></a>İnternet erişimi gereksinimleri
 
@@ -77,7 +77,8 @@ Bu işlev hakkında daha fazla bilgi için bkz. [Windows 'u hizmet olarak yönet
 
 Bu işlev hakkında daha fazla bilgi için bkz. [Azure hizmetlerini Configuration Manager ile kullanım Için yapılandırma](../../servers/deploy/configure/azure-services-wizard.md).
 
-- `management.azure.com`  
+- `management.azure.com`(Azure genel bulutu)
+- `management.usgovcloudapi.net`(Azure ABD kamu bulutu)
 
 ## <a name="co-management"></a>Ortak yönetim
 
@@ -110,31 +111,66 @@ Bu bölüm aşağıdaki özellikleri içerir:
 - Azure Active Directory (Azure AD) Tümleştirmesi
 - Azure AD tabanlı bulma
 
-CMG/CDP hizmet dağıtımı için **hizmet bağlantı noktasının** erişimi olması gerekir:
+CMG hakkında daha fazla bilgi için bkz. [plan for CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md).
 
-- Belirli Azure uç noktaları, yapılandırmaya bağlı olarak ortam başına farklıdır. Configuration Manager bu uç noktaları site veritabanında depolar. Azure uç noktaları listesi için SQL Server **AzureEnvironments** tablosunu sorgulayın.  
+Aşağıdaki bölümlerde, uç noktalar role göre listelenmektedir. Bazı uç noktalar `<name>` , CMG veya CDP 'nin bulut hizmeti adı olan bir hizmete başvurur. Örneğin, CMG 'niz ise `GraniteFalls.CloudApp.Net` gerçek depolama uç noktası olur `GraniteFalls.blob.core.windows.net` .<!-- SCCMDocs#2288 -->
 
-**CMG bağlantı noktasının** aşağıdaki hizmet uç noktalarına erişmesi gerekir:
+### <a name="service-connection-point"></a>Hizmet bağlantı noktası
+
+CMG/CDP hizmet dağıtımı için hizmet bağlantı noktasının erişimi olması gerekir:
+
+- Belirli Azure uç noktaları, yapılandırmaya bağlı olarak ortam başına farklıdır. Configuration Manager bu uç noktaları site veritabanında depolar. Azure uç noktaları listesi için SQL Server **AzureEnvironments** tablosunu sorgulayın.
+
+- [Azure hizmetleri](#azure-services)
+
+- Azure AD Kullanıcı keşfi için:
+
+  - Sürüm 1902 ve üzeri: Microsoft Graph uç noktası`https://graph.microsoft.com/`
+
+  - Sürüm 1810 ve önceki sürümler: Azure AD Graph uç noktası`https://graph.windows.net/`  
+
+### <a name="cmg-connection-point"></a>CMG bağlantı noktası
+
+CMG bağlantı noktasının aşağıdaki hizmet uç noktalarına erişmesi gerekir:
+
+- Bulut hizmeti adı (CMG veya CDP için):
+  - `<name>.cloudapp.net`(Azure genel bulutu)
+  - `<name>.usgovcloudapp.net`(Azure ABD kamu bulutu)
 
 - Hizmet yönetimi uç noktası:`https://management.core.windows.net/`  
 
-- Depolama uç noktası: `<name>.blob.core.windows.net` ve`<name>.table.core.windows.net`
+- Depolama uç noktası (içerik etkinleştirilmiş CMG veya CDP için):
+  - `<name>.blob.core.windows.net`(Azure genel bulutu)
+  - `<name>.blob.core.usgovcloudapi.net`(Azure ABD kamu bulutu)
+<!--  and `<name>.table.core.windows.net` per DC, only used internally -->
 
-    Burada `<name>` CMG 'niz veya CDP 'nizin bulut hizmeti adıdır. Örneğin, CMG 'niz ise `GraniteFalls.CloudApp.Net` , izin verilecek ilk depolama uç noktası olur `GraniteFalls.blob.core.windows.net` .<!-- SCCMDocs#2288 -->
+CMG bağlantı noktası site sistemi, bir Web proxy 'si kullanmayı destekler. Bu rolü bir proxy için yapılandırma hakkında daha fazla bilgi için bkz. [proxy sunucu desteği](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). CMG bağlantı noktasının yalnızca CMG hizmet uç noktalarına bağlanması gerekir. Diğer Azure uç noktalarına erişmesi gerekmez.
 
-**Configuration Manager konsolu** ve **ISTEMCISI**tarafından Azure AD belirteci alımı için:
+### <a name="configuration-manager-client"></a>Configuration Manager istemcisi
 
-- ActiveDirectoryEndpoint`https://login.microsoftonline.com/`  
+- Bulut hizmeti adı (CMG veya CDP için):
+  - `<name>.cloudapp.net`(Azure genel bulutu)
+  - `<name>.usgovcloudapp.net`(Azure ABD kamu bulutu)
 
-Azure AD Kullanıcı keşfi için **hizmet bağlantı noktasının** erişimi olması gerekir:
+- Depolama uç noktası (içerik etkinleştirilmiş CMG veya CDP için):
+  - `<name>.blob.core.windows.net`(Azure genel bulutu)
+  - `<name>.blob.core.usgovcloudapi.net`(Azure ABD kamu bulutu)
 
-- Sürüm 1810 ve önceki sürümler: Azure AD Graph uç noktası`https://graph.windows.net/`  
+- Azure AD belirteç alımı için Azure AD uç noktası:
+  - `login.microsoftonline.com`(Azure genel bulutu)
+  - `login.microsoftonline.us`(Azure ABD kamu bulutu)
 
-- Sürüm 1902 ve üzeri: Microsoft Graph uç noktası`https://graph.microsoft.com/`
+### <a name="configuration-manager-console"></a>Configuration Manager konsolu
 
-Bulut yönetim noktası (CMG) bağlantı noktası site sistemi, bir Web proxy kullanımını destekler. Bu rolü bir proxy için yapılandırma hakkında daha fazla bilgi için bkz. [proxy sunucu desteği](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). CMG bağlantı noktasının yalnızca CMG hizmet uç noktalarına bağlanması gerekir. Diğer Azure uç noktalarına erişmesi gerekmez.
+- Azure AD belirteç alımı için Azure AD uç noktası:
 
-CMG hakkında daha fazla bilgi için bkz. [plan for CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md).
+  - Azure genel bulutu
+    - `login.microsoftonline.com`
+    - `aadcdn.msauth.net`<!-- MEMDocs#351 -->
+    - `aadcdn.msftauth.net`
+
+  - Azure ABD kamu bulutu
+    - `login.microsoftonline.us`
 
 ## <a name="software-updates"></a><a name="bkmk_sum"></a>Yazılım güncelleştirmeleri
 
@@ -204,18 +240,23 @@ Configuration Manager konsoluna sahip bilgisayarlar belirli özellikler için a�
 
 Bu özellik hakkında daha fazla bilgi için bkz. [ürün geri bildirimi](../../understand/find-help.md#product-feedback).
 
-### <a name="community-workspace-documentation-node"></a>Topluluk çalışma alanı, belge düğümü
+### <a name="community-workspace"></a>Topluluk çalışma alanı
+
+#### <a name="documentation-node"></a>Belge düğümü
+
+Bu konsol düğümü hakkında daha fazla bilgi için, bkz. [Configuration Manager konsolunu kullanma](../../servers/manage/admin-console.md).
 
 - `https://aka.ms`
 
 - `https://raw.githubusercontent.com`
 
-Bu konsol düğümü hakkında daha fazla bilgi için, bkz. [Configuration Manager konsolunu kullanma](../../servers/manage/admin-console.md).
+#### <a name="community-hub"></a>Topluluk merkezi
 
-<!-- 
-Community Hub
-when in current branch, get details from SCCMDocs-pr #3403 
- -->
+Bu özellik hakkında daha fazla bilgi için bkz. [Community hub](../../servers/manage/community-hub.md).
+
+- `https://github.com`
+
+- `https://communityhub.microsoft.com`
 
 ### <a name="monitoring-workspace-site-hierarchy-node"></a>İzleme çalışma alanı, site hiyerarşisi düğümü
 

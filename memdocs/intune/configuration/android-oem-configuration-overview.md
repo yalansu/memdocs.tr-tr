@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 47cf8819c29a3e766a5f475acdd9bbbf5bf7d584
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 68f8eb2ab3b7e348daa99e982e640e9bd28692d8
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093599"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264133"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Microsoft Intune 'de OEMConfig ile Android kurumsal cihazlarını kullanma ve yönetme
 
@@ -157,16 +157,23 @@ OEMConfig Apps, standart uygulamalarla karşılaştırıldığında, Google tara
 
 | OEM | Paket Kimliği | OEM belgeleri (varsa) |
 | --- | --- | ---|
+| Archos | com. archos. oemconfig | |
 | Ascom | com. Ascom. Myco. oemconfig | |
+| Bluebird | com. Bluebird. Android. oemconfig | |
 | Cipherlab | com. cipherlab. oemconfig | |
 | Dataloi | com. datalobir. Settings. oemconfig | |
-| Honeywell | com. Honeywell. oemconfig |  |
+| Honeywell | com. Honeywell. oemconfig | |
 | HMDGlobal-7,2 | com. hmdglobal. app. oemconfig. n7_2 | 
-| HMDGlobal-4,2 | com. hmdglobal. app. oemconfig. n4_2 | 
+| HMDGlobal-4,2 | com. hmdglobal. app. oemconfig. n4_2 |
+| HMDGlobal-5,3 | com. hmdglobal. app. oemconfig. n5_3 |
+| Lenovo | com. Lenovo. oemconfig. rel | |
+| LG | com. lge. Android. oemconfig | |
 | Kyocera | JP. Kyocera. enterprisedeviceconfig |  |
 | Panasonic | com. Panasonic. Mobile. oemconfig | |
+| Point Mobile | Device. Apps. emkitagent | |
 | Samsung | com. Samsung. Android. Knox. kpu | [Knox hizmeti eklentisi Yönetici Kılavuzu](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
 | Seuic | com. seuic. seuicoemconfig | |
+| Sosyal mobil | com. rhinomobility. oemconfig | |
 | Spectralink-barkodlar | com. spectralınk. Barcode. Service |  |
 | Spectralink-düğmeler | com. spectralınk. düğmeler |  |
 | Spectralink-cihaz | com. Spectralink. slnkdevicesettings  |  |

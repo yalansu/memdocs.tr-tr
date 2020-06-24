@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78fcd976642ad7aa4c5cb62c0f66ed80461686aa
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: c43b74b6ca20fa3f140ad688be49daa928c54b5f
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531868"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264048"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Kılavuzlu senaryo-bulutta yönetilen modern masaüstü
 
@@ -127,5 +127,5 @@ Kullanıcı cihazı Azure Active Directory katıldıktan sonra cihaza aşağıda
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- Microsoft Defender Gelişmiş tehdit algılama kullanıyorsanız, Defender tehdit analizinin uyumluluğu karşılaması için bir [Intune uyumluluk ilkesi](../protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy) oluşturun.
+- Microsoft Defender Gelişmiş tehdit algılama kullanıyorsanız, Defender tehdit analizinin uyumluluğu karşılaması için bir [Intune uyumluluk ilkesi](../protect/advanced-threat-protection.md#create-and-assign-compliance-policy-to-set-device-risk-level) oluşturun.
 - Cihaz Intune uyumluluğunu karşılamıyorsa, erişimi engellemek için [cihaz tabanlı bir koşullu erişim ilkesi](../protect/advanced-threat-protection.md#create-a-conditional-access-policy) oluşturun.

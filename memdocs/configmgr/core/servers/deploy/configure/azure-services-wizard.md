@@ -2,7 +2,7 @@
 title: Azure hizmetlerini yapılandırma
 titleSuffix: Configuration Manager
 description: Configuration Manager ortamınızı bulut yönetimi, Iş için Microsoft Store ve Log Analytics Azure hizmetleriyle bağlayın.
-ms.date: 07/31/2019
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f36da59c6924f6d2f71d882f601c6dd563840d73
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 6ca5307de5c7df54c3cf7924bc91b0175b1bfa39
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022543"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715331"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Azure hizmetlerini Configuration Manager ile kullanım için yapılandırma
 
@@ -23,22 +23,21 @@ ms.locfileid: "82022543"
 
 Configuration Manager ile kullandığınız Azure bulut hizmetlerini yapılandırma işlemini basitleştirmek için **Azure Hizmetleri Sihirbazı 'nı** kullanın. Bu sihirbaz Azure Active Directory (Azure AD) Web uygulaması kayıtlarını kullanarak ortak bir yapılandırma deneyimi sağlar. Bu uygulamalar, abonelik ve yapılandırma ayrıntılarını sağlar ve Azure AD ile iletişimin kimliğini doğrular. Uygulama, Azure ile yeni bir Configuration Manager bileşeni veya hizmeti her ayarlarken aynı bilgilerin girilmesini yerine koyar.
 
-
 ## <a name="available-services"></a>Kullanılabilir hizmetler
 
 Bu Sihirbazı kullanarak aşağıdaki Azure hizmetlerini yapılandırın:  
 
 - **Bulut yönetimi**: Bu hizmet, site ve ISTEMCILERIN Azure ad kullanarak kimlik doğrulaması yapmasına olanak sağlar. Bu kimlik doğrulaması, aşağıdaki gibi diğer senaryolara izin vermez:  
 
-    - [Kimlik doğrulaması için Azure AD 'yi kullanarak Configuration Manager Windows 10 istemcileri yükleyip atama](../../../clients/deploy/deploy-clients-cmg-azure.md)  
+  - [Kimlik doğrulaması için Azure AD 'yi kullanarak Configuration Manager Windows 10 istemcileri yükleyip atama](../../../clients/deploy/deploy-clients-cmg-azure.md)  
 
-    - [Azure AD Kullanıcı bulmayı yapılandırma](configure-discovery-methods.md#azureaadisc)  
+  - [Azure AD Kullanıcı bulmayı yapılandırma](configure-discovery-methods.md#azureaadisc)  
 
-    - [Azure AD Kullanıcı grubu bulmayı yapılandırma](configure-discovery-methods.md#bkmk_azuregroupdisco)
+  - [Azure AD Kullanıcı grubu bulmayı yapılandırma](configure-discovery-methods.md#bkmk_azuregroupdisco)
 
-    - Belirli [bulut yönetimi ağ geçidi senaryolarını](../../../clients/manage/cmg/plan-cloud-management-gateway.md#scenarios) destekleme  
+  - Belirli [bulut yönetimi ağ geçidi senaryolarını](../../../clients/manage/cmg/plan-cloud-management-gateway.md#scenarios) destekleme  
 
-    - [Uygulama onayı e-postası bildirimleri](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
+  - [Uygulama onayı e-postası bildirimleri](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 
 - **Log Analytics Bağlayıcısı**: [Azure Log Analytics 'a bağlanın](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm). Koleksiyon verilerini Log Analytics ile eşitleyin.  
 
@@ -51,7 +50,7 @@ Bu Sihirbazı kullanarak aşağıdaki Azure hizmetlerini yapılandırın:
 
 Aşağıdaki tabloda her bir hizmetin ayrıntıları listelenmektedir.  
 
-- **Kiracılar**: yapılandırabilmeniz için hizmet örneklerinin sayısı. Her örnek ayrı bir Azure kiracısı olmalıdır.  
+- **Kiracılar**: yapılandırabilmeniz için hizmet örneklerinin sayısı. Her örnek ayrı bir Azure AD kiracısı olmalıdır.  
 
 - **Bulutlar**: tüm hizmetler küresel Azure bulutunu destekler, ancak tüm HIZMETLER Azure ABD kamu bulutu gibi özel bulutları desteklemez.  
 
@@ -64,7 +63,7 @@ Aşağıdaki tabloda her bir hizmetin ayrıntıları listelenmektedir.
 |Hizmet  |Kiracılar  |Bulutlar  |Web uygulaması  |Yerel uygulama  |Eylemler  |
 |---------|---------|---------|---------|---------|---------|
 |İle bulut yönetimi<br>Azure AD bulma | Birden çok | Ortak, özel | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | İçeri aktarma, oluşturma |
-|Log Analytics Bağlayıcısı | Bir | Ortak, özel | ![Destekleniyor](media/green_check.png) | ![Desteklenmiyor](media/Red_X.png) | İçeri Aktarma |
+|Log Analytics Bağlayıcısı | Bir | Ortak, özel | ![Destekleniyor](media/green_check.png) | ![Desteklenmiyor](media/Red_X.png) | İçeri Aktar |
 |İçin Microsoft Store<br>İş | Bir | Ortak | ![Destekleniyor](media/green_check.png) | ![Desteklenmiyor](media/Red_X.png) | İçeri aktarma, oluşturma |
 
 ### <a name="about-azure-ad-apps"></a>Azure AD uygulamaları hakkında
@@ -84,7 +83,6 @@ Azure uygulamaları hakkında daha fazla bilgi için aşağıdaki makalelerle ba
 - [Azure AD 'de uygulama kaydetmenin temelleri](/azure/active-directory/develop/authentication-scenarios)  
 - [Uygulamanızı Azure Active Directory kiracınızla kaydetme](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration)
 
-
 ## <a name="before-you-begin"></a>Başlamadan önce
 
 Bağlanmak istediğiniz hizmete karar verdikten sonra, [Hizmet Ayrıntıları](#service-details)' nda tabloya bakın. Bu tablo, Azure hizmet Sihirbazı 'Nı tamamlaması için gereken bilgileri sağlar. Azure AD yöneticinizle birlikte önceden bir tartışma yapın. Aşağıdaki eylemlerden hangisini kullanacağınıza karar verin:
@@ -96,7 +94,6 @@ Bağlanmak istediğiniz hizmete karar verdikten sonra, [Hizmet Ayrıntıları](#
 Bazı hizmetler, Azure AD uygulamalarının belirli izinlere sahip olmasını gerektirir. Tüm gerekli izinleri öğrenmek için her hizmet için bilgileri gözden geçirin. Örneğin, bir Web uygulamasını içeri aktarabilmeniz için önce bir Azure Yöneticisi tarafından [Azure Portal](https://portal.azure.com)oluşturmanız gerekir.
 
 Log Analytics bağlayıcısını yapılandırırken, ilgili çalışma alanını içeren kaynak grubunda yeni kayıtlı Web uygulamasına *katkıda* bulunan izin verin. Bu izin, Configuration Manager Bu çalışma alanına erişmesine izin verir. İzin atarken, Azure portal **Kullanıcı Ekle** alanında uygulama kaydı adını arayın. Bu işlem, [Log Analytics izinlerle Configuration Manager sağlamaya](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics)benzer. Uygulamayı Configuration Manager içeri aktarmadan önce bir Azure Yöneticisi bu izinleri atamalıdır.
-
 
 ## <a name="start-the-azure-services-wizard"></a>Azure Hizmetleri Sihirbazı 'nı başlatma
 
@@ -113,7 +110,6 @@ Log Analytics bağlayıcısını yapılandırırken, ilgili çalışma alanını
     3. Configuration Manager bağlamak istediğiniz Azure hizmetini seçin.  
 
 4. Azure hizmetleri sihirbazının [Azure uygulama özellikleri](#azure-app-properties) sayfasına devam etmek için **İleri ' yi** seçin.  
-
 
 ## <a name="azure-app-properties"></a>Azure uygulama özellikleri
 
@@ -151,15 +147,18 @@ Bir Web uygulaması seçtikten, aldıktan veya oluşturduktan sonra, sunucu uygu
 
 Sunucu uygulaması iletişim kutusundan veya Azure hizmetleri sihirbazının uygulama sayfasında **Içeri aktar** ' ı seçtiğinizde, uygulamaları içeri aktar iletişim kutusunu açar. Bu sayfa, Azure portal zaten oluşturulmuş bir Azure AD Web uygulaması hakkında bilgi girmenize olanak sağlar. Bu Web uygulaması hakkındaki meta verileri Configuration Manager içine aktarır. Aşağıdaki bilgileri belirtin:
 
-- **Azure AD kiracı adı**
-- **Azure AD Kiracı Kimliği**
-- **Uygulama adı**: uygulama için kolay bir ad.
-- **İstemci KIMLIĞI**
-- **Gizli anahtar**
+- **Azure AD kiracı adı**: Azure AD kiracınızın adı.
+- **Azure AD KIRACı kimliği**: Azure AD KIRACıNıZıN GUID 'si.
+- **Uygulama adı**: uygulamanın kolay adı, uygulama kaydında görünen ad.
+- **ISTEMCI kimliği**: uygulama kaydının **uygulama (istemci) kimliği** değeri. Biçim standart bir GUID 'dir.
+- **Gizli anahtar**: uygulamayı Azure AD 'ye kaydettiğinizde gizli anahtarı kopyalamanız gerekir.
 - **Gizli anahtar süre sonu**: takvimden gelecek bir tarih seçin.
-- **Uygulama kimliği URI 'si**: Bu DEĞERIN Azure AD kiracınızda benzersiz olması gerekir. Hizmete erişim istemek için Configuration Manager istemcisi tarafından kullanılan erişim belirtecidir. Varsayılan olarak bu `https://ConfigMgrService` değerine ayarlanır.  
+- **Uygulama kimliği URI 'si**: Bu DEĞERIN Azure AD kiracınızda benzersiz olması gerekir. Hizmete erişim istemek için Configuration Manager istemcisi tarafından kullanılan erişim simgesindeki. Değer, Azure AD portalındaki uygulama kayıt girişinin **uygulama kimliği URI 'sidir** . Biçimi ile benzerdir `https://ConfigMgrService` .
 
 Bilgileri girdikten sonra **Doğrula**' yı seçin. Ardından **Tamam** ' ı seçerek Uygulamaları İçeri Aktar iletişim kutusunu kapatın. Bu eylem, Azure hizmetleri sihirbazının [uygulama sayfasına](#azure-app-properties) veya [sunucu uygulaması iletişim kutusuna](#server-app-dialog)geri döner.
+
+> [!TIP]
+> Uygulamayı Azure AD 'ye kaydettiğinizde, aşağıdaki **yeniden YÖNLENDIRME URI**'sini el ile belirtmeniz gerekebilir: `ms-appx-web://Microsoft.AAD.BrokerPlugin/<ClientID>` . Uygulamanın istemci KIMLIĞI GUID 'sini belirtin, örneğin: `ms-appx-web://Microsoft.AAD.BrokerPlugin/a26a653e-17aa-43eb-ab36-0e36c7d29f49` .<!-- SCCMDocs#1135 -->
 
 #### <a name="create-server-application-dialog"></a>Sunucu uygulaması oluştur iletişim kutusu
 
@@ -167,7 +166,7 @@ Sunucu uygulaması iletişim kutusunda **Oluştur** ' u seçtiğinizde sunucu uy
 
 - **Uygulama adı**: uygulama için kolay bir ad.
 - **Giriş sayfası URL 'si**: bu değer Configuration Manager tarafından kullanılmaz, ancak Azure AD tarafından gerekli değildir. Varsayılan olarak bu `https://ConfigMgrService` değerine ayarlanır.  
-- **Uygulama kimliği URI 'si**: Bu DEĞERIN Azure AD kiracınızda benzersiz olması gerekir. Hizmete erişim istemek için Configuration Manager istemcisi tarafından kullanılan erişim belirtecidir. Varsayılan olarak bu `https://ConfigMgrService` değerine ayarlanır.  
+- **Uygulama kimliği URI 'si**: Bu DEĞERIN Azure AD kiracınızda benzersiz olması gerekir. Hizmete erişim istemek için Configuration Manager istemcisi tarafından kullanılan erişim simgesindeki. Varsayılan olarak bu `https://ConfigMgrService` değerine ayarlanır.  
 - **Gizli anahtar geçerlilik süresi**: açılan listeden **1 yıl** veya **2 yıl** seçeneklerinden birini belirleyin. Bir yıl, varsayılan değerdir.
 
 Azure 'da yönetici kullanıcı olarak kimlik doğrulaması gerçekleştirmek için **oturum aç '** ı seçin. Bu kimlik bilgileri Configuration Manager tarafından kaydedilmez. Bu kişi Configuration Manager izinleri gerektirmez ve Azure Hizmetleri Sihirbazı 'Nı çalıştıran aynı hesapla aynı olmalıdır. Azure 'da başarıyla kimlik doğrulamasından geçtikten sonra, sayfada başvuru için **Azure AD kiracı adı** gösterilir.
@@ -202,7 +201,7 @@ Yerel bir uygulamayı seçip içeri aktardıktan veya oluşturduktan sonra, Iste
 Istemci uygulaması iletişim kutusundan **Içeri aktar** ' ı seçtiğinizde, uygulamaları içeri aktar iletişim kutusunu açar. Bu sayfa, Azure portal zaten oluşturulmuş bir Azure AD yerel uygulaması hakkında bilgi girmenize olanak sağlar. Bu yerel uygulamayla ilgili meta verileri Configuration Manager içine aktarır. Aşağıdaki bilgileri belirtin:
 
 - **Uygulama adı**: uygulama için kolay bir ad.
-- **İstemci KIMLIĞI**
+- **ISTEMCI kimliği**: uygulama kaydının **uygulama (istemci) kimliği** değeri. Biçim standart bir GUID 'dir.
 
 Bilgileri girdikten sonra **Doğrula**' yı seçin. Ardından **Tamam** ' ı seçerek Uygulamaları İçeri Aktar iletişim kutusunu kapatın. Bu eylem, [Istemci uygulaması iletişim kutusuna](#client-app-dialog)geri döner.
 
@@ -229,11 +228,7 @@ Uygulamalar sayfasında Web ve yerel uygulamaları belirttikten sonra, bağland�
 
 Son olarak, Azure Hizmetleri Sihirbazı ' nı Özet, Ilerleme ve tamamlama sayfalarından tamamlayabilirsiniz. Configuration Manager ' de bir Azure hizmeti yapılandırmasını tamamladınız. Diğer Azure hizmetlerini yapılandırmak için bu işlemi tekrarlayın.
 
-
 ## <a name="renew-secret-key"></a><a name="bkmk_renew"></a>Gizli anahtarı Yenile
-
-> [!Note]
-> Sürüm 1802 ve önceki sürümlerde bir Azure uygulamasının gizli anahtarını yenilemek için uygulamayı yeniden oluşturmanız gerekir.
 
 ### <a name="renew-key-for-created-app"></a>Oluşturulan uygulama için anahtarı Yenile
 
@@ -247,16 +242,14 @@ Son olarak, Azure Hizmetleri Sihirbazı ' nı Özet, Ilerleme ve tamamlama sayfa
 
 Azure uygulamasını Configuration Manager içeri aktardıysanız yenilemek için Azure portal kullanın. Yeni gizli anahtar ve sona erme tarihini dikkate alın. Bu bilgileri **gizli anahtarı Yenile** sihirbazına ekleyin.  
 
-> [!Note]  
+> [!NOTE]
 > Azure uygulama özellikleri **anahtar** sayfasını kapatmadan önce gizli anahtarı kaydedin. Sayfayı kapattığınızda bu bilgiler kaldırılır.
-
 
 ## <a name="view-the-configuration-of-an-azure-service"></a>Azure hizmetinin yapılandırmasını görüntüleme
 
 Kullanım için yapılandırdığınız bir Azure hizmetinin özelliklerini görüntüleyin. Configuration Manager konsolunda **Yönetim** çalışma alanına gidin, **Cloud Services**' i genişletin ve **Azure hizmetleri**' ni seçin. Görüntülemek veya düzenlemek istediğiniz hizmeti seçin ve ardından **Özellikler**' i seçin.
 
 Bir hizmet seçip Şeritteki **Sil** ' i seçerseniz, bu eylem Configuration Manager bağlantıyı siler. Azure AD 'de uygulamayı kaldırmaz. Azure yöneticinizden uygulamayı artık gerekli olmadığında silmesini isteyin. Ya da uygulamayı içeri aktarmak için Azure hizmet Sihirbazı 'Nı çalıştırın.<!--483440-->
-
 
 ## <a name="cloud-management-data-flow"></a>Bulut yönetimi veri akışı
 

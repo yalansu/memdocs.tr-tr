@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 361f0ff36b78daddd08954953744f3f95191d4f3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5c4b06e8c81e04e067156929dfe7637cf04fb9d1
+ms.sourcegitcommit: bc8c9d957dac46d95070c433d3a83408e5e48d82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990602"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289470"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Windows Autopilot kullanarak Windows cihazlarını Intune 'A kaydetme  
 Windows Autopilot, cihazların Intune 'A kaydedilmesini basitleştirir. Özelleştirilmiş işletim sistemi görüntülerinin derlenmesi ve bakımı çok zaman alan bir işlemdir. Ayrıca bu özel işletim sistemi görüntülerini, yeni cihazları son kullanıcılarınıza vermeden önce kullanıma hazırlamak amacıyla cihazlara uygulamak için de zaman harcayabilirsiniz. Microsoft Intune ve Autopilot ile cihazlarda özel işletim sistemi görüntüleri oluşturmanıza, bu görüntüleri cihazlara uygulamanıza ve bunların bakımını yapmanıza gerek kalmadan son kullanıcılarınıza yeni cihazlar verebilirsiniz. Autopilot cihazlarını yönetmek için Intune kullandığınızda, kaydolduktan sonra ilkeleri, profilleri, uygulamaları ve diğer nesneleri yönetebilirsiniz. Faydalara, senaryolara ve önkoşullara genel bir bakış için bkz. [Windows Autopilot’a genel bakış](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -83,7 +83,7 @@ Bilgilerini içeren CSV dosyasını içeri aktararak Windows Autopilot cihazlar�
 3. Önceki adımda **Üyelik türü** olarak **Atanan**'ı seçtiyseniz, **Gruplar** dikey penceresinde **Üyeler**'i seçin ve gruba Autopilot cihazları ekleyin.
     Henüz kaydedilmemiş Autopilot cihazları, adın cihaz seri numarası olduğu cihazlardır.
 4. Yukarıda **Üyelik türü** olarak **Dinamik Cihazlar**’ı seçtiyseniz **Gruplar** dikey penceresinde **Dinamik cihaz üyeleri**’ni seçin ve **Gelişmiş kural** kutusuna aşağıdaki kodlardan birini yazın. Yalnızca Autopilot cihazları tarafından sahip olan öznitelikleri hedeflerse, yalnızca Autopilot cihazları bu kurallar tarafından toplanır. Autopilot olmayan öznitelikleri temel alan bir grup oluşturmak, grupta yer alan cihazların gerçekten Autopilot 'e kaydolduğundan emin olmaz.
-    - Tüm Autopilot cihazlarınızı içeren bir grup oluşturmak istiyorsanız şunu yazın:`(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`
+    - Tüm Autopilot cihazlarınızı içeren bir grup oluşturmak istiyorsanız şunu yazın:`(device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))`
     - Intune 'un Grup etiketi alanı, Azure AD cihazlarındaki OrderID özniteliğiyle eşlenir. Belirli bir grup etiketi (Azure AD cihaz OrderID) ile tüm Autopilot cihazlarınızı içeren bir grup oluşturmak istiyorsanız şunu yazmanız gerekir:`(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Belirli bir Satın Alma Sipariş Kimliğine sahip tüm Autopilot cihazlarınızı içeren bir grup oluşturmak istiyorsanız `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")` yazın
     
@@ -222,7 +222,7 @@ Mobil cihaz yönetimi ile ilgilenmiyorsanız, Autopilot'ı diğer portallarda ku
 
 ## <a name="windows-autopilot-for-existing-devices"></a>Mevcut cihazlar için Windows Autopilot
 
-Configuration Manager aracılığıyla [mevcut cihazlar için Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) kullanarak kaydederken Windows cihazlarını, ilişkilendirici kimliğine göre gruplayabilirsiniz. İlişkilendirici kimliği, Autopilot yapılandırma dosyasının bir parametresidir. [Azure Active Directory cihaz özniteliği enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices), otomatik olarak “OfflineAutopilotprofile-\<correlator ID\>” şeklinde ayarlanır. Bu, enrollmentprofileName özniteliği kullanılarak elde edilen ilişkilendirici kimliğine göre rastgele Azure Active Directory dinamik grupları oluşturulmasını sağlar.
+Configuration Manager aracılığıyla [mevcut cihazlar için Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) kullanarak kaydederken Windows cihazlarını, ilişkilendirici kimliğine göre gruplayabilirsiniz. İlişkilendirici kimliği, Autopilot yapılandırma dosyasının bir parametresidir. [Azure AD cihaz özniteliği enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) değeri, “OfflineAutopilotprofile-\<correlator ID\>” değerine eşit olacak şekilde otomatik olarak ayarlanır. Bu, enrollmentprofileName özniteliği kullanılarak elde edilen ilişkilendirici kimliğine göre rastgele Azure Active Directory dinamik grupları oluşturulmasını sağlar.
 
 >[!WARNING] 
 > İlişkilendirici kimliği Intune’da önceden listelenmediğinden, cihaz herhangi bir ilişkilendirici kimliğini raporlayabilir. Kullanıcı, bir Autopilot veya Apple ADE profili adıyla eşleşen bir ilişkilendirici KIMLIĞI oluşturursa, cihaz, KayıtAdı özniteliğini temel alarak herhangi bir dinamik Azure AD cihaz grubuna eklenir. Bu çakışmayı önlemek için:

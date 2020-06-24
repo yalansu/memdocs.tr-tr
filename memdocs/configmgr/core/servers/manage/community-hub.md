@@ -2,7 +2,7 @@
 title: Topluluk hub 'ı ve GitHub
 titleSuffix: Configuration Manager
 description: Configuration Manager 'de topluluk hub 'ını etkinleştirme ve kullanma
-ms.date: 06/10/2020
+ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 606c9490e56d932176b17eef95ea4ed0c956770e
-ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
+ms.openlocfilehash: e0ef065cce691ce6f0b251d70ea8c4bd08904071
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84680430"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740801"
 ---
 # <a name="community-hub-and-github"></a>Topluluk hub 'ı ve GitHub
 <!--3555935, 3555936-->
@@ -46,6 +46,8 @@ Topluluk hub 'ı aşağıdaki nesneleri destekler:
    1. **Yönetim**  >  **sitesi yapılandırma**  >  **siteleri**' ne gidin.
    1. Siteyi seçin ve şeritte **Özellikler** ' i seçin.
    1. **Iletişim güvenliği** SEKMESINDE, **http site sistemleri için Configuration Manager tarafından oluşturulan sertifikaları kullanma**seçeneğini belirleyin.
+
+- Kuruluşunuz ağ iletişimini bir güvenlik duvarı veya ara cihaz kullanarak internet ile kısıtlarsa, Configuration Manager konsolunun İnternet uç noktalarına erişmesine izin vermeniz gerekir. Daha fazla bilgi için bkz. [Internet erişimi gereksinimleri](../../plan-design/network/internet-endpoints.md#community-hub).
 
 ## <a name="permissions"></a>İzinler
 

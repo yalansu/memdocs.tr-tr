@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 27994107c32fac87a465240f07b68d57fddfc140
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d481976a6c86da67670871690ba16985a67c80d8
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983814"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746468"
 ---
 # <a name="paths-to-co-management"></a>Ortak yönetim yolları
 
@@ -60,6 +60,5 @@ Ayarlamanız gerekenler şunlardır:
 3. [Yönetim noktasını ve istemcileri bulut yönetimi ağ geçidini kullanacak şekilde yapılandırma](../core/clients/manage/cmg/setup-cloud-management-gateway.md)  
 4. [Configuration Manager istemcisini dağıtmak için Intune 'U kullanma](how-to-prepare-Win10.md)  
 
-> [!Note]  
-> Bu yola yönelik bir öğretici yakında sunulacak.
+Bu yol hakkında bir öğretici için bkz. [öğretici: yeni internet tabanlı cihazlar için ortak yönetimi etkinleştirme](tutorial-co-manage-new-devices.md).
 

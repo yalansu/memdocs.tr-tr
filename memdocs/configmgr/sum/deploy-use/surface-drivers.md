@@ -5,17 +5,17 @@ description: Configuration Manager Surface cihazlarına dağıtım için yüzey 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 06/18/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
-ms.openlocfilehash: 6428b6e1992af6dbb1f6d49b9ef1eac3010dd833
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 04793a053e85be051ce9ffafd2f15d274cf166f0
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84614986"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973086"
 ---
 # <a name="manage-surface-drivers-with-configuration-manager"></a>Configuration Manager ile yüzey sürücülerini yönetme
 
@@ -85,28 +85,27 @@ Surface sürücülerinin eşitlenmesini etkinleştirmek için aşağıdaki adım
 
 ## <a name="surface-models"></a><a name="bkmk_models"></a>Yüzey modelleri
 
-Aşağıdaki tablo, Configuration Manager sürücüleri yükleyebilecekleri Windows 10 ' un yüzey modellerini ve sürümlerini içerir. Surface sürücü güncelleştirmeleri, Microsoft Update kataloğunda yayımlandıkları gün Configuration Manager kullanılamaz. Configuration Manager, hangi yüzey sürücülerinin içeri aktarılacağını kendi listesini tutar. Bu liste düzenli aralıklarla yayımlanır ve belirli bir tarihte veya bu tarihten önce yayımlanan sürücüleri içerir. Windows 10 S ürünleri gerektiren cihazlar belirtilmiştir.
+Aşağıdaki tablo, Configuration Manager sürücüleri yükleyebilecekleri Windows 10 ' un yüzey modellerini ve sürümlerini içerir. Surface sürücü güncelleştirmeleri, Microsoft Update kataloğunda yayımlandıkları gün Configuration Manager kullanılamaz. Configuration Manager, hangi yüzey sürücülerinin içeri aktarılacağını kendi listesini tutar. Windows 10 S ürünleri gerektiren cihazlar belirtilmiştir. Microsoft amaçlar, yüzey sürücülerinin ikinci Salı günü, Configuration Manager eşitlemeye uygun hale getirmek için her ay Salı ve daha sonra izin verilenler listesine eklenmesini sağlar. Daha fazla bilgi için bkz. [sık sorulan sorular](#bkmk_faq).
 
-**9 haziran 2020 ' de veya daha önce yayınlanan yüzey sürücüleri Configuration Manager ' de kullanılabilir**. 
-
+</br>
 
 |Yüzey modeli|Windows 10 1709| Windows 10 1803|Windows 10 1809|Windows 10 1903|Windows 10 1909|
 |----|----|----|----|----|----|
 |Surface Pro 3|Yes| Yes| Yes |Yes|Yes|
 |Surface Pro 4|Yes| Yes| Yes |Yes|Yes|
-|Surface Pro 6|YOK| Yes| Yes |Yes|Yes|
-|Surface Pro 7|YOK| YOK| YOK |Yes|Yes|
-|Surface Pro X|YOK| YOK| YOK |Yes|Yes|
+|Surface Pro 6|Yok| Yes| Yes |Yes|Yes|
+|Surface Pro 7|Yok| Yok| Yok |Yes|Yes|
+|Surface Pro X|Yok| Yok| Yok |Yes|Yes|
 |Surface Book|Yes| Yes| Yes |Yes|Yes|
 |Surface Book 2|Yes| Yes| Yes |Yes|Yes|
-|Surface Book 3|YOK| YOK| YOK |YOK|Yes|
+|Surface Book 3|Yok| Yok| Yok |Yes|Yes|
 |Yüzey dizüstü bilgisayar|Evet, "Windows 10 S sürüm 1709 ve üzeri bakım sürücüleri" seçiliyken seçili| Evet, "Windows 10 S sürüm 1803 ve üzeri bakım sürücüleri" seçiliyken seçili|Evet, "Windows 10 S sürüm 1809 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|Evet, "Windows 10 S sürüm 1903 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|Evet, "Windows 10 S sürüm 1903 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|
-|Yüzey dizüstü 2|Yes| Yes |Yes|Yes|Yes|
-|Yüzey dizüstü 3|YOK| YOK|YOK|Yes |Yes|
-|Yüzey go|YOK| Evet, "Windows 10 S sürüm 1803 ve üzeri bakım sürücüleri" seçiliyken seçili|Evet, "Windows 10 S sürüm 1809 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|Evet, "Windows 10 S sürüm 1903 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|Evet, "Windows 10 S sürüm 1903 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|
-|Yüzey git 2|YOK| Yes| Yes |Yes|Evet, "Windows 10 S sürüm 1903 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|
+|Yüzey dizüstü 2|Yok| Yes |Yes|Yes|Yes|
+|Yüzey dizüstü 3|Yok| Yok|Yok|Yes |Yes|
+|Yüzey go|Yok| Evet, "Windows 10 S sürüm 1803 ve üzeri bakım sürücüleri" seçiliyken seçili|Evet, "Windows 10 S sürüm 1809 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|Evet, "Windows 10 S sürüm 1903 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|Evet, "Windows 10 S sürüm 1903 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|
+|Yüzey git 2|Yok| Yok| Yes |Yes|Evet, "Windows 10 S sürüm 1903 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|
 |Surface Studio|Yes| Yes| Yes |Yes|Yes|
-|Surface Studio 2|YOK| Yes| Yes |Yes|Yes|
+|Surface Studio 2|Yok| Yes| Yes |Yes|Yes|
 
 ## <a name="verify-the-configuration"></a>Yapılandırmayı doğrulama
 
@@ -137,42 +136,25 @@ Yazılım güncelleştirme noktasının doğru şekilde yapılandırıldığın�
    Bu giriş, şu anda yazılım güncelleştirme noktası sunucunuz tarafından eşitlenmiş olan her ürün grubunu ve sınıflandırmayı listeleyen bir XML öğesidir. Seçtiğiniz ürünleri bulamıyorsanız, yazılım güncelleştirme noktasının ürünleri, Çift denetimi kaydedilir.
 1. Bir sonraki eşitleme bitene kadar de bekleyebilirsiniz. Daha sonra yüzey sürücüsü ve bellenim güncelleştirmelerinin Configuration Manager konsolundaki yazılım güncelleştirmelerinde listelenip listelenmediğini denetleyin. Örneğin, konsol şu bilgileri görüntüleyebilir: ![ Configuration Manager konsolunda eşitlenmiş yüzey sürücüleri](media/synchronized-surface-drivers.png)
 
-## <a name="frequently-asked-questions-faq"></a>Sık sorulan sorular (SSS)
+##  <a name="frequently-asked-questions-faq"></a><a name="bkmk_faq"></a>Sık sorulan sorular (SSS)
 
 ### <a name="after-i-follow-the-steps-in-this-article-my-surface-drivers-are-still-not-synchronized-why"></a>Bu makaledeki adımları izledikten sonra yüzey Sürücülerim hala eşitlenmedi. Neden mi?
 
 Microsoft Update yerine yukarı akış Windows Server Update Services (WSUS) sunucusundan eşitlerseniz, yukarı akış WSUS sunucusunun yüzey sürücü güncelleştirmelerini destekleyecek ve eşitleyeceği şekilde yapılandırıldığından emin olun. Tüm aşağı akış sunucuları, yukarı akış WSUS sunucu veritabanında bulunan güncelleştirmelerle sınırlıdır.
 
-### <a name="after-i-follow-the-steps-in-this-article-some-surface-drivers-are-synchronized-but-not-the-expected-drivers-why"></a>Bu makaledeki adımları izledikten sonra bazı yüzey sürücüleri eşitlenir, ancak beklenen sürücüler desteklenmez. Neden mi?
+WSUS 'de sürücü olarak sınıflandırılan 68.000 'den fazla güncelleştirme vardır. Surface olmayan ilgili sürücülerin Configuration Manager eşitlenmesini engellemek için, Microsoft, sürücü eşitlemesini izin verilenler listesine göre filtreler. Yeni izin verilenler listesi yayımlandıktan ve Configuration Manager ' ye eklendikten sonra, yeni sürücüler sonraki eşitlemeden sonra konsola eklenir. Microsoft amaçlar, yüzey sürücülerinin ikinci Salı günü, Configuration Manager eşitlemeye uygun hale getirmek için her ay Salı ve daha sonra izin verilenler listesine eklenmesini sağlar.
 
-Sürücüleri test etmek ve WSUS ve Configuration Manager ile dağıtım için bunları onaylamak için işleme süresi değişir. Bu nedenle, Surface sürücü güncelleştirmeleri hem el ile yükleme hem de Configuration Manager konsol dağıtımı için aynı günde kullanılabilir değildir.
+Configuration Manager ortamınız çevrimdışıysa, [bakım güncelleştirmelerini](../../core/servers/manage/use-the-service-connection-tool.md) Configuration Manager her içeri aktardığınızda yeni bir izin verilenler listesi içeri aktarılır. Ayrıca, güncelleştirmeler Configuration Manager konsolunda görüntülenmeden önce sürücüleri içeren [Yeni BIR WSUS kataloğunu](../get-started/synchronize-software-updates-disconnected.md) içeri aktarmanız gerekir. Tek başına bir WSUS ortamı Configuration Manager SUP 'den daha fazla sürücü içerdiğinden, çevrimiçi yeteneklere sahip bir Configuration Manager ortamı oluşturmanızı ve bunu yüzey sürücülerini eşitleyecek şekilde yapılandırmanızı öneririz. Bu, çevrimdışı ortama benzeyen daha küçük bir WSUS dışarı aktarımı sağlar.
 
-Ayrıca, WSUS 'de sürücü olarak sınıflandırılan 68.000 'den fazla güncelleştirme vardır. Surface olmayan ilgili sürücülerin Configuration Manager eşitlenmesini engellemek için, Microsoft, sürücü eşitlemesini izin verilenler listesine göre filtreler. Yüzey sürücüleri, bu listeye eklenmeden önce ek testlerin ardından gelmelidir. Yeni izin verilenler listesi yayımlandıktan ve Configuration Manager ' ye eklendikten sonra, yeni sürücüler sonraki eşitlemeden sonra konsola eklenir.
+Configuration Manager ortamınız çevrimiçiyse ve yeni güncelleştirmeleri algılayabiliyorsa, listedeki güncelleştirmeleri otomatik olarak alırsınız. Beklenen sürücüleri görmüyorsanız, lütfen tüm eşitleme hatalarıyla ilgili WCM. log ve WsyncMgr. log ' u gözden geçirin.
 
-### <a name="is-the-driver-allow-list-published-is-it-downloadable"></a>Sürücü izin verilenler listesi yayımlanmış mi? İndirimidir?
+### <a name="my-configuration-manager-environment-is-offline-can-i-manually-import-surface-drivers-into-wsus"></a>Configuration Manager ortamım çevrimdışı, Surface sürücülerini el ile WSUS 'a aktarabilir miyim?
 
-Surface sürücü izin verilenler listesi çevrimiçi olarak yayınlanmıyor. Bu liste, güncelleştirme ve bakım kanalları aracılığıyla Configuration Manager teslim edilir. Configuration Manager ortamınız çevrimiçiyse ve yeni güncelleştirmeleri algılayabiliyorsa, listedeki güncelleştirmeleri otomatik olarak alırsınız.
+Hayır. Güncelleştirme WSUS 'e aktarılsa bile, güncelleştirme izin verilenler listesinde listelenmemişse dağıtım için Configuration Manager konsoluna aktarılmaz. İzin verilenler listesini güncelleştirmek için [hizmet bağlantı aracını](../../core/servers/manage/use-the-service-connection-tool.md) , Configuration Manager hizmet güncelleştirmelerini içeri aktarmak üzere kullanmanız gerekir.
 
-Configuration Manager ortamınız çevrimdışıysa, bakım güncelleştirmelerini Configuration Manager her içeri aktardığınızda yeni bir izin verilenler listesi içeri aktarılır. Ayrıca, güncelleştirmeler Configuration Manager konsolunda görüntülenmeden önce sürücüleri içeren yeni bir WSUS kataloğunu içeri aktarmanız gerekir. Tek başına bir WSUS ortamı Configuration Manager yazılım güncelleştirme noktasına göre daha fazla sürücü içerdiğinden, çevrimiçi yeteneklere sahip bir Configuration Manager ortamı oluşturmanızı ve bunu yüzey sürücülerini eşitleyecek şekilde yapılandırmanızı öneririz. Bu, çevrimdışı ortama benzeyen daha küçük bir WSUS dışarı aktarımı sağlar.
+### <a name="what-alternative-methods-do-i-have-to-deploy-surface-driver-and-firmware-updates"></a>Surface sürücü ve üretici yazılımı güncelleştirmelerini hangi alternatif yöntemlerle dağıtmalıyım?
 
-Başka bir çözüm de Surface sürücü ve bellenim güncelleştirmelerini dağıtmak için [Alternatif Yöntemler](#bkmk_alt) kullanmaktır.
-
-### <a name="i-require-the-latest-firmware-update-and-i-cant-wait-for-it-to-be-approved-for-import-into-configuration-manager-can-i-manually-import-the-driver-into-wsus"></a>En son üretici yazılımı güncelleştirmesine ihtiyacım yok ve bu işlemin Configuration Manager içeri aktarmaya yönelik onaylanmıyorum. Sürücüyü el ile WSUS 'e aktarabilir miyim? 
-
-Hayır. Güncelleştirme WSUS 'e aktarılsa bile, güncelleştirme izin verilenler listesinde listelenmemişse dağıtım için Configuration Manager konsoluna aktarılmaz.
-
-Başka bir çözüm de Surface sürücü ve bellenim güncelleştirmelerini dağıtmak için [Alternatif Yöntemler](#bkmk_alt) kullanmaktır.
-
-### <a name="can-i-manually-add-a-driver-to-the-allow-list"></a>İzin verilenler listesine el ile bir sürücü ekleyebilir miyim? 
-
-Hayır. Liste Configuration Manager veritabanında depolanır. CAB dosyası bir sonraki işlendiği sırada listedeki tüm değişikliklerin üzerine yazılır.
-
-
-### <a name="what-alternative-methods-do-i-have-to-deploy-surface-driver-and-firmware-updates"></a><a name="bkmk_alt"></a>Surface sürücü ve üretici yazılımı güncelleştirmelerini hangi alternatif yöntemlerle dağıtmalıyım?
-
-Farklı kanallar aracılığıyla yüzey sürücüsü ve bellenim güncelleştirmelerinin nasıl dağıtılacağı hakkında bilgi için bkz. [Surface sürücü ve bellenim güncelleştirmelerini yönetme](https://docs.microsoft.com/surface/manage-surface-pro-3-firmware-updates).
-
-. Msi veya. exe dosyasını indirmek ve sonra geleneksel yazılım dağıtım kanalları aracılığıyla dağıtmak istiyorsanız, bkz. [Surface üretici yazılımının Configuration Manager Ile güncelleştirilmesini koruma](https://blogs.technet.microsoft.com/thejoncallahan/2016/06/20/keeping-surface-firmware-updated-with-configuration-manager/).
+Farklı kanallar aracılığıyla yüzey sürücüsü ve bellenim güncelleştirmelerinin nasıl dağıtılacağı hakkında bilgi için bkz. [Surface sürücü ve bellenim güncelleştirmelerini yönetme](https://docs.microsoft.com/surface/manage-surface-driver-and-firmware-updates). . Msi veya. exe dosyasını indirmek ve sonra geleneksel yazılım dağıtım kanalları aracılığıyla dağıtmak istiyorsanız, bkz. [Surface üretici yazılımının Configuration Manager Ile güncelleştirilmesini koruma](https://docs.microsoft.com/archive/blogs/thejoncallahan/keeping-surface-firmware-updated-with-configuration-manager).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

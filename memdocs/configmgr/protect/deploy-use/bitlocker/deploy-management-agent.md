@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e33ba8df84239b4a438ff0c526bb255c5b7d0052
-ms.sourcegitcommit: e618ea7cb864635c838b672bc71a1e926bf7c047
+ms.openlocfilehash: 4a050ab523730adbfdd2ecf541557fabbf95081b
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84458160"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715705"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker yönetimini dağıtma
 
@@ -173,7 +173,7 @@ Daha fazla bilgi için bkz. [kurtarma verilerini şifreleme](encrypt-recovery-da
 Şu anda Microsoft BitLocker yönetim ve Izleme (MBAD) kullanıyorsanız, yönetimi Configuration Manager 'e sorunsuzca geçirebilirsiniz. BitLocker yönetim ilkelerini Configuration Manager dağıtırken istemciler, kurtarma anahtarlarını ve paketleri Configuration Manager kurtarma hizmetine otomatik olarak yükler.
 
 > [!IMPORTANT]
-> Tek başına MBAK 'dan Configuration Manager BitLocker yönetimine geçiş yaptığınızda, tek başına MBAE 'nin mevcut işlevselliğine ihtiyaç duyuyorsanız, tek başına mbaı sunucularını veya bileşenlerini Configuration Manager BitLocker Yönetimi ile birlikte yeniden kullanmayın. Bu sunucuları yeniden kullanırsanız, Configuration Manager BitLocker Yönetimi bileşenlerini bu sunuculara yüklediğinde tek başına MBAD çalışmayı durdurur. Tek başına MBAD sunucularında BitLocker portallarını ayarlamak için MBAMWebSiteInstaller. ps1 betiğini çalıştırmayın. Configuration Manager BitLocker yönetimini ayarlarken ayrı sunucular kullanın.
+> Tek başına MBAK 'dan Configuration Manager BitLocker yönetimine geçiş yaptığınızda, tek başına MBAE 'nin mevcut işlevselliğine ihtiyaç duyuyorsanız, tek başına mbaı sunucularını veya bileşenlerini Configuration Manager BitLocker Yönetimi ile birlikte yeniden kullanmayın. Bu sunucuları yeniden kullanırsanız, Configuration Manager BitLocker Yönetimi bileşenlerini bu sunuculara yüklediğinde tek başına MBAD çalışmayı durdurur. Tek başına MBAD sunucularında BitLocker portallarını ayarlamak için MBAMWebSiteInstaller.ps1 betiğini çalıştırmayın. Configuration Manager BitLocker yönetimini ayarlarken ayrı sunucular kullanın.
 
 ### <a name="group-policy"></a>Grup İlkesi
 
@@ -191,7 +191,7 @@ Daha fazla bilgi için bkz. [kurtarma verilerini şifreleme](encrypt-recovery-da
 
 Configuration Manager zaten BitLocker Sürücü Şifrelemesi korunan sürücüleri yeniden şifrelemez. Sürücünün geçerli korumasıyla eşleşmeyen bir BitLocker yönetim ilkesi dağıtırsanız, uyumlu değil olarak rapor edin. Sürücü hala korunuyor.
 
-Örneğin, sürücü PIN koruması olmadan şifrelemek için MBAM kullandınız, ancak Configuration Manager ilkesi bir PIN gerektirir. Sürücü şifrelense de, sürücü ilkeyle uyumlu değil.
+Örneğin, sürücüyü AES-XTS 128 şifreleme algoritması ile şifrelemek için MBAM kullandınız, ancak Configuration Manager ilkesi AES-XTS 256 gerektirir. Sürücü şifrelense de, sürücü ilkeyle uyumlu değil.
 
 Bu davranışı geçici olarak çözmek için, önce cihazda BitLocker 'ı devre dışı bırakın. Ardından yeni ayarlarla yeni bir ilke dağıtın.
 
@@ -201,7 +201,7 @@ Bu davranışı geçici olarak çözmek için, önce cihazda BitLocker 'ı devre
 
 BitLocker için Configuration Manager istemci işleyicisi ortak yönetilebiliyor. Cihaz ortak yönetilmiyorsa ve [Endpoint Protection iş yükünü](../../../comanage/workloads.md#endpoint-protection) Intune 'a geçerseniz, Configuration Manager istemci BitLocker ilkesini yoksayar. Cihaz, Intune 'dan Windows şifreleme ilkesini alır.
 
-Şifreleme yönetimi yetkililerini değiştirdiğinizde, [yeniden şifrelemeyi](#re-encryption)planlayın.
+Şifreleme yönetimi yetkililerini değiştirdiğinizde ve istenen şifreleme algoritması da değişirse, [yeniden şifrelemeyi](#re-encryption) planlamanız gerekir.
 
 BitLocker 'ı Intune ile yönetme hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 

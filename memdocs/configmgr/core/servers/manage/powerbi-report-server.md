@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c596ba410adc979b92a000c28d815e89695a9b0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f4089f52d912491b3b1396906fe391c5c334e061
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713670"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814898"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Power BI Rapor Sunucusu ile tümleştirme
 
@@ -27,7 +27,7 @@ Sürüm 2002 ' den başlayarak, [Power BI Rapor Sunucusu](https://docs.microsoft
 
 Power BI Desktop rapor dosyalarını Kaydet (. PBIX) ve Power BI Rapor Sunucusu dağıtın. Bu işlem, SQL Server Reporting Services rapor dosyalarıyla benzerdir (. RDL). Raporları tarayıcıda doğrudan Configuration Manager konsolundan da başlatabilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Power BI Rapor Sunucusu Lisansı. Daha fazla bilgi için bkz. [lisanslama Power BI rapor sunucusu](https://docs.microsoft.com/power-bi/report-server/get-started#licensing-power-bi-report-server).
 
@@ -43,6 +43,8 @@ Power BI Desktop rapor dosyalarını Kaydet (. PBIX) ve Power BI Rapor Sunucusu 
     > - Yalnızca [ **Power BI rapor sunucusu Için iyileştirildiğini**belirten Power BI Desktop](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop)bir sürümünü kullanın.
 
 - Power BI tümleştirme, raporlama için aynı rol tabanlı yönetimi kullanır.
+    > [!NOTE]
+    > Power BI Rapor Sunucusu RBAC özellikli raporları desteklemez Bu nedenle, kendilerine atanan kapsamlarından bağımsız olarak, raporların tüm görüntüleyicilerinin aynı sonuçları görür.
 
 ## <a name="configure-the-reporting-services-point"></a>Raporlama Hizmetleri noktasını yapılandırma
 
