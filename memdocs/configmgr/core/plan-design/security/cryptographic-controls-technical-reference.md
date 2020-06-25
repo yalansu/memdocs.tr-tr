@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 623a8dab52e13c4674b961e825033430d34a8f88
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: fe50aad3cb35ab5908f604560f4dcd22800919a5
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906554"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353454"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Şifreleme denetimleri teknik başvurusu
 
@@ -24,7 +24,7 @@ Configuration Manager, Configuration Manager hiyerarşisindeki cihazların yöne
 
  Configuration Manager imza için kullanılan birincil karma algoritması SHA-256 ' dir. İki Configuration Manager sitesi birbirleriyle iletişim kurduğunda, SHA-256 ile iletişimlerini imzalarlar. Configuration Manager uygulanan birincil şifreleme algoritması 3DES 'dir. Bu, Configuration Manager veritabanında ve istemci HTTP iletişimi için veri depolamak için kullanılır. HTTPS üzerinden istemci iletişimini kullandığınızda, ortak anahtar altyapınızı (PKI), [PKI sertifika gereksinimleri](../network/pki-certificate-requirements.md)' nde belgelenen maksimum karma algoritmalarla ve anahtar uzunluklarına sahip RSA sertifikalarını kullanacak şekilde yapılandırabilirsiniz.  
 
- Windows tabanlı işletim sistemlerine yönelik çoğu şifreleme işlemi için Configuration Manager, Windows Cryptoapı kitaplığı Rsaenh. dll dosyasından SHA-2, 3DES ve AES ve RSA algoritmalarını kullanır.  
+ Windows tabanlı işletim sistemlerine yönelik çoğu şifreleme işlemi için Configuration Manager, Windows Cryptoapı kitaplığı rsaenh.dll SHA-2, 3DES ve AES ve RSA algoritmalarını kullanır.  
 
 > [!IMPORTANT]  
 >  SSL güvenlik açıklarına yanıt olarak önerilen değişiklikler için [About SSL Vulnerabilities](#about-ssl-vulnerabilities)içindeki bilgilere bakın.  
@@ -70,7 +70,7 @@ Site sunucusundaki dağıtım yöneticisi hizmeti tüm paketler için içerik do
  Her işletim sistemi dağıtım paketi için paket çok noktaya yayın kullanılarak bilgisayarlara aktarıldığında şifrelemeyi etkinleştirebilirsiniz. Şifreleme, Gelişmiş Şifreleme Standardı (AES) kullanır. Şifrelemeyi etkinleştirirseniz ek bir sertifika yapılandırması gerekmez. Çok noktaya yayın özelliği etkinleştirilmiş dağıtım noktası, paketi şifrelemek için simetrik anahtarları otomatik olarak oluşturur. Her pakette farklı bir şifreleme anahtarı mevcuttur. Anahtar, standart Windows API'ları kullanarak çok noktaya yayın özelliği etkinleştirilmiş dağıtım noktasına depolanır. İstemci çok noktaya yayın oturumuna bağlandığında PKI ile verilen istemci kimlik doğrulaması sertifikası (istemci HTTPS kullandığında) veya otomatik imzalı sertifika (istemci HTTP kullandığında) ile şifrelenmiş bir kanal üzerinden anahtar değişimi gerçekleştirilir. İstemci, anahtarı yalnızca çok noktaya yayın oturumu süresince belleğe depolar.  
 
 ### <a name="encryption-for-media-to-deploy-operating-systems"></a>İşletim sistemlerini dağıtmak için medya şifreleme  
- İşletim sistemlerine dağıtmak üzere medya kullandığınızda ve medyayı korumak için bir parola belirttiğinizde, ortam değişkenleri Gelişmiş Şifreleme Standardı (AES) kullanılarak şifrelenir. Medya üzerindeki paketler ve uygulama içerikleri dahil diğer veriler şifrelenmez.  
+ İşletim sistemlerini dağıtmak için medya kullandığınızda ve medyayı korumak için bir parola belirttiğinizde, ortam değişkenleri 128 bit anahtar boyutuyla Gelişmiş Şifreleme Standardı (AES) kullanılarak şifrelenir. Medya üzerindeki paketler ve uygulama içerikleri dahil diğer veriler şifrelenmez.  
 
 ### <a name="encryption-for-content-that-is-hosted-on-cloud-based-distribution-points"></a>Bulut tabanlı dağıtım noktalarında barındırılan içerik için şifreleme  
  System Center 2012 Configuration Manager SP1 'den itibaren, bulut tabanlı dağıtım noktaları kullandığınızda, bu dağıtım noktalarına yüklediğiniz içerik 256 bit anahtar boyutuyla Gelişmiş Şifreleme Standardı (AES) kullanılarak şifrelenir. İçerik her güncelleştirdiğinizde yeniden şifrelenir. İstemciler içeriği indirdiklerinde HTTPS bağlantısıyla şifrelenip korunur.  
@@ -260,5 +260,5 @@ Configuration Manager istemcileriniz ve sunucularınızın güvenliğini artırm
 - SSL 3,0, TLS 1,0 ve TLS 1,1 'ı devre dışı bırakın 
 - TLS ile ilgili şifre paketlerini yeniden sıralama 
 
-Daha fazla bilgi için bkz. [Schannel. dll ' de belirli şifreleme algoritmalarının ve protokollerin kullanımını kısıtlama](https://support.microsoft.com/help/245030/) ve [Schannel şifre paketlerinin önceliklerini belirleme](https://docs.microsoft.com/windows/win32/secauthn/prioritizing-schannel-cipher-suites). Bu yordamlar Configuration Manager işlevselliğini etkilemez.
+Daha fazla bilgi için bkz. [Schannel.dll' de belirli şifreleme algoritmalarının ve protokollerin kullanımını kısıtlama](https://support.microsoft.com/help/245030/) ve [Schannel şifre paketlerinin önceliklerini belirleme](https://docs.microsoft.com/windows/win32/secauthn/prioritizing-schannel-cipher-suites). Bu yordamlar Configuration Manager işlevselliğini etkilemez.
 

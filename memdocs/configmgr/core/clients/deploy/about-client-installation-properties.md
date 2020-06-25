@@ -2,7 +2,7 @@
 title: İstemci yükleme parametreleri ve özellikleri
 titleSuffix: Configuration Manager
 description: Configuration Manager istemcisini yüklemek için CCMSetup komut satırı parametreleri ve özellikleri hakkında bilgi edinin.
-ms.date: 04/01/2020
+ms.date: 06/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,40 +10,40 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fda1e877f8e0bc211b36e288af13de204305cc5a
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 4065f320ec27f53e50c64bc7ca0c97d3f6923853
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455047"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353284"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Configuration Manager içindeki istemci yükleme parametreleri ve özellikleri hakkında
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
-Configuration Manager istemcisini yüklemek için CCMSetup. exe komutunu kullanın. Komut satırında istemci yükleme *parametreleri* sağlarsanız, yükleme davranışını değiştirirler. Komut satırında istemci yükleme *özellikleri* sağlarsanız, yüklü istemci aracısının ilk yapılandırmasını değiştirir.
+Configuration Manager istemcisini yüklemek için CCMSetup.exe komutunu kullanın. Komut satırında istemci yükleme *parametreleri* sağlarsanız, yükleme davranışını değiştirirler. Komut satırında istemci yükleme *özellikleri* sağlarsanız, yüklü istemci aracısının ilk yapılandırmasını değiştirir.
 
 ## <a name="about-ccmsetupexe"></a><a name="aboutCCMSetup"></a> CCMSetup.exe hakkında
 
-CCMSetup. exe komutu, istemciyi bir yönetim noktasından veya kaynak konumdan yüklemek için gerekli dosyaları indirir. Bu dosyalar şunları içerebilir:  
+CCMSetup.exe komutu istemciyi bir yönetim noktasından veya kaynak konumdan yüklemek için gerekli dosyaları indirir. Bu dosyalar şunları içerebilir:  
 
-- İstemci yazılımını yükleyen Client. msi Windows Installer paketi
+- İstemci yazılımını yükleyen client.msi Windows Installer paketi
 
 - İstemci önkoşulları
 
 - Configuration Manager istemcisi için güncelleştirmeler ve düzeltmeler
 
 > [!NOTE]
-> Client. msi dosyasını doğrudan yükleyemezsiniz.  
+> client.msi doğrudan yükleyemezsiniz.  
 
-CCMSetup. exe, yüklemeyi özelleştirmek için komut satırı *parametreleri* sağlar. Parametrelere bir eğik çizgi () eklenir `/` ve kural, küçük harfe göre yapılır. Bir parametresinin değerini, `:` hemen ardından değeri olan bir iki nokta üst üste () kullanmak için belirtirsiniz. Daha fazla bilgi için bkz. [CCMSetup. exe komut satırı parametreleri](#ccmsetupexe-command-line-parameters).
+CCMSetup.exe, yüklemeyi özelleştirmek için komut satırı *parametreleri* sağlar. Parametrelere bir eğik çizgi () eklenir `/` ve kural, küçük harfe göre yapılır. Bir parametresinin değerini, `:` hemen ardından değeri olan bir iki nokta üst üste () kullanmak için belirtirsiniz. Daha fazla bilgi için bkz. [CCMSetup.exe komut satırı parametreleri](#ccmsetupexe-command-line-parameters).
 
-Ayrıca, CCMSetup. exe komut satırında *Özellikler* sunarak Client. msi davranışını değiştirebilirsiniz. Özellikler kurala göre büyük bir durumdur. Bir özellik için değeri `=` , hemen ardından değer gelen eşittir işareti () kullanarak belirtirsiniz. Daha fazla bilgi için bkz. [Client. msi özellikleri](#clientMsiProps).
+Ayrıca, client.msi davranışını değiştirmek için CCMSetup.exe komut satırına *Özellikler* sağlayabilirsiniz. Kurala göre özellikler büyük bir durumdur. Bir özellik için değeri `=` , hemen ardından değer gelen eşittir işareti () kullanarak belirtirsiniz. Daha fazla bilgi için bkz. [Client.msi özellikleri](#clientMsiProps).
 
 > [!IMPORTANT]  
-> Client. msi için özellikleri belirlemeden önce CCMSetup parametrelerini belirtin.  
+> client.msi özelliklerini belirttıklamadan önce CCMSetup parametrelerini belirtin.  
 
-CCMSetup. exe ve destekleyici dosyalar site sunucusunda Configuration Manager yükleme klasörünün **istemci** klasöründe bulunur. Configuration Manager, bu klasörü site paylaşımı altındaki ağa paylaşır. Örneğin, `\\SiteServer\SMS_ABC\Client`.
+CCMSetup.exe ve destekleyici dosyalar, site sunucusunda Configuration Manager yükleme klasörünün **istemci** klasöründe bulunur. Configuration Manager, bu klasörü site paylaşımı altındaki ağa paylaşır. Örneğin, `\\SiteServer\SMS_ABC\Client`.
 
 Komut satırında, CCMSetup.exe komutu aşağıdaki biçimi kullanır:  
 
@@ -68,11 +68,11 @@ Bu örnek aşağıdaki işlemleri yapar:
 
 Configuration Manager için Active Directory şemasını genişletirseniz, site Active Directory Domain Services çok sayıda istemci yükleme özelliği yayımlar. Configuration Manager istemcisi bu özellikleri otomatik olarak okur. Daha fazla bilgi için bkz. [Active Directory Domain Services yayımlanan istemci yükleme özellikleri hakkında](about-client-installation-properties-published-to-active-directory-domain-services.md)  
 
-## <a name="ccmsetupexe-command-line-parameters"></a>CCMSetup. exe komut satırı parametreleri
+## <a name="ccmsetupexe-command-line-parameters"></a>Komut satırı parametrelerini CCMSetup.exe
 
 ### <a name=""></a><a name="bkmk_help"></a> /?
 
-CCMSetup. exe için kullanılabilir komut satırı parametrelerini gösterir.  
+ccmsetup.exe için kullanılabilir komut satırı parametrelerini gösterir.  
 
 Örnek: `ccmsetup.exe /?`
 
@@ -142,13 +142,13 @@ Aşağıdaki örnek komut satırı, gerekli diğer kurulum parametrelerini ve ö
 
 ### <a name="retry"></a>/retry
 
-CCMSetup. exe dosyası yükleme dosyalarını indirilemezse, yeniden deneme aralığını dakika olarak belirtmek için bu parametreyi kullanın. CCMSetup, [**/DownloadTimeout**](#downloadtimeout) parametresinde belirtilen sınıra ulaşana kadar yeniden denemeye devam eder.
+CCMSetup.exe yükleme dosyalarını indirilemezse, yeniden deneme aralığını dakika olarak belirtmek için bu parametreyi kullanın. CCMSetup, [**/DownloadTimeout**](#downloadtimeout) parametresinde belirtilen sınıra ulaşana kadar yeniden denemeye devam eder.
 
 Örnek: `ccmsetup.exe /retry:20`  
 
 ### <a name="noservice"></a>/noservice
 
-Bu parametre, CCMSetup 'ın varsayılan olarak yaptığı bir hizmet olarak çalışmasını önler. CCMSetup bir hizmet olarak çalıştığında, bilgisayarın yerel sistem hesabı bağlamında çalışır. Bu hesap, yükleme için gereken ağ kaynaklarına erişmek için yeterli haklara sahip olmayabilir. **/Noservice**ile CCMSetup. exe, yüklemeyi başlatmak için kullandığınız kullanıcı hesabı bağlamında çalışır.
+Bu parametre, CCMSetup 'ın varsayılan olarak yaptığı bir hizmet olarak çalışmasını önler. CCMSetup bir hizmet olarak çalıştığında, bilgisayarın yerel sistem hesabı bağlamında çalışır. Bu hesap, yükleme için gereken ağ kaynaklarına erişmek için yeterli haklara sahip olmayabilir. **/Noservice**ile CCMSetup.exe, yüklemeyi başlatmak için kullandığınız kullanıcı hesabının bağlamında çalışır.
 
 Örnek: `ccmsetup.exe /noservice`  
 
@@ -157,7 +157,7 @@ Bu parametre, CCMSetup 'ın varsayılan olarak yaptığı bir hizmet olarak çal
 CCMSetup 'ın yerel sistem hesabını kullanan bir hizmet olarak çalışması gerektiğini belirtir.  
 
 > [!TIP]
-> CCMSetup. exe dosyasını **/Service** parametresiyle çalıştırmak için bir betik kullanıyorsanız, CCMSetup. exe dosyası hizmet başladıktan sonra çıkış yapar. Yükleme ayrıntılarını betiğe doğru şekilde bildiremeyebilir.
+> **/Service** parametresiyle CCMSetup.exe çalıştırmak için bir komut dosyası kullanıyorsanız, hizmet başladıktan sonra CCMSetup.exe çıkar. Yükleme ayrıntılarını betiğe doğru şekilde bildiremeyebilir.
 
 Örnek: `ccmsetup.exe /service`  
 
@@ -224,7 +224,7 @@ Bu parametre, istemci yükleme özelliklerini listeleyen bir metin dosyasını b
 
 - CCMSetup bir hizmet olarak çalışıyorsa, bu dosyayı CCMSetup sistem klasörüne yerleştirin: `%Windir%\Ccmsetup` .
 
-- [**/Noservice**](#noservice) parametresini belirtirseniz, bu dosyayı CCMSetup. exe ile aynı klasöre yerleştirin.
+- [**/Noservice**](#noservice) parametresini belirtirseniz, bu dosyayı CCMSetup.exe aynı klasöre yerleştirin.
 
 Örnek: `CCMSetup.exe /config:"configuration file name.txt"`
 
@@ -234,7 +234,7 @@ Doğru dosya biçimini sağlamak için, site sunucusundaki Configuration Manager
 
 ### <a name="skipprereq"></a>/önkoşuluatla
 
-Bu parametre CCMSetup. exe ' nin belirtilen önkoşulu yüklememediğini belirtir. Birden çok değer girebilirsiniz. Her bir değeri ayırmak için noktalı virgül karakterini ( `;` ) kullanın.
+Bu parametre CCMSetup.exe belirtilen önkoşulu yüklememediğini belirtir. Birden çok değer girebilirsiniz. Her bir değeri ayırmak için noktalı virgül karakterini ( `;` ) kullanın.
 
 Örnekler:
 
@@ -246,20 +246,35 @@ Bu parametre CCMSetup. exe ' nin belirtilen önkoşulu yüklememediğini belirti
 
 ### <a name="forceinstall"></a>/forceinstall
 
-CCMSetup. exe ' nin var olan bir istemciyi kaldırmasını ve yeni bir istemci yüklemesini belirtin.  
+CCMSetup.exe var olan tüm istemcileri kaldırmasını ve yeni bir istemci yüklemesini belirtin.  
 
 ### <a name="excludefeatures"></a>/ExcludeFeatures
 
-Bu parametre, CCMSetup. exe ' nin belirtilen özelliği yüklememediğini belirtir.
+Bu parametre CCMSetup.exe belirtilen özelliği yüklememediğini belirtir.
 
 Örnek: `CCMSetup.exe /ExcludeFeatures:ClientUI` Istemciye yazılım merkezi yüklenmez.  
 
 > [!NOTE]  
 > `ClientUI`, **/Excludefeatem** parametresinin desteklediği tek değerdir.
 
-## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a>CCMSetup. exe dönüş kodları
+### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
 
-CCMSetup. exe komutu aşağıdaki dönüş kodlarını sağlar. Sorunu gidermek için, `%WinDir%\ccmsetup\ccmsetup.log` bağlam için istemciyi ve dönüş kodları hakkında ek ayrıntıları gözden geçirin.
+Bu parametre, [**otomatik istemci yükseltmesini**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate)etkinleştirdiğinizde bir istemcinin otomatik olarak yükseltilmesi gerekip gerekmediğini belirtir.
+
+Desteklenen değerler:
+
+- `TRUE`: İstemci otomatik olarak yükseltilmez
+- `FALSE`: İstemci otomatik olarak yükseltir (varsayılan)
+
+Örneğin:  
+
+`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
+
+Daha fazla bilgi için bkz. [genişletilmiş birlikte çalışabilirlik istemcisi](../../understand/interoperability-client.md).
+
+## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a>CCMSetup.exe dönüş kodları
+
+CCMSetup.exe komutu aşağıdaki dönüş kodlarını sağlar. Sorunu gidermek için, `%WinDir%\ccmsetup\ccmsetup.log` bağlam için istemciyi ve dönüş kodları hakkında ek ayrıntıları gözden geçirin.
 
 |Dönüş kodu|Anlamı|  
 |-----------|-------|  
@@ -270,9 +285,9 @@ CCMSetup. exe komutu aşağıdaki dönüş kodlarını sağlar. Sorunu gidermek 
 |9|Önkoşul değerlendirme hatası|  
 |10|Kurulum bildirim karma doğrulama hatası|  
 
-## <a name="ccmsetupmsi-properties"></a><a name="ccmsetupMsiProps"></a>CCMSetup. msi özellikleri
+## <a name="ccmsetupmsi-properties"></a><a name="ccmsetupMsiProps"></a>Ccmsetup.msi özellikleri
 
-Aşağıdaki özellikler CCMSetup. msi ' nin yükleme davranışını değiştirebilir.
+Aşağıdaki özellikler ccmsetup.msi yükleme davranışını değiştirebilir.
 
 ### <a name="ccmsetupcmd"></a>CCMSETUPCMD
 
@@ -283,9 +298,9 @@ Bu CCMSetup 'ı kullanın. ek komut satırı parametreleri ve özellikleri CCMSe
 > [!Tip]
 > Microsoft Intune komut satırını 1024 karakterle sınırlandırır.
 
-## <a name="clientmsi-properties"></a><a name="clientMsiProps"></a>Client. msi özellikleri
+## <a name="clientmsi-properties"></a><a name="clientMsiProps"></a>Client.msi özellikleri
 
-Aşağıdaki özellikler, CCMSetup. exe ' nin yüklediği Client. msi ' nin yükleme davranışını değiştirebilir. [Client Push yükleme yöntemini](plan/client-installation-methods.md#client-push-installation)kullanırsanız, bu özellikleri Configuration Manager konsolundaki **Client Push Yükleme özelliklerinin** **istemci** sekmesinde belirtin.
+Aşağıdaki özellikler, ccmsetup.exe yüklenen client.msi yükleme davranışını değiştirebilir. [Client Push yükleme yöntemini](plan/client-installation-methods.md#client-push-installation)kullanırsanız, bu özellikleri Configuration Manager konsolundaki **Client Push Yükleme özelliklerinin** **istemci** sekmesinde belirtin.
 
 ### <a name="aadclientappid"></a>AADCLIENTAPPıD
 
@@ -429,7 +444,7 @@ Daha fazla bilgi için bkz. [günlük dosyaları hakkında](../../plan-design/hi
 
 ### <a name="ccmevalinterval"></a>CCMEVALINTERVAL
 
-İstemci sistem durumu değerlendirme aracının (ccmeval. exe) çalışma süresi (dakika cinsinden). Öğesinden öğesinden bir tamsayı değeri `1` belirtin `1440` . Varsayılan olarak, ccmeval günde bir kez çalışır (1440 dakika).
+İstemci sistem durumu değerlendirme aracının (ccmeval.exe) çalışma süresi (dakika). Öğesinden öğesinden bir tamsayı değeri `1` belirtin `1440` . Varsayılan olarak, ccmeval günde bir kez çalışır (1440 dakika).
 
 Örnek: `CCMSetup.exe CCMEVALINTERVAL=1440`
 
@@ -437,7 +452,7 @@ Daha fazla bilgi için bkz. [günlük dosyaları hakkında](../../plan-design/hi
 
 ### <a name="ccmevalhour"></a>CCMEVALHOUR
 
-İstemci sistem durumu değerlendirme aracının (ccmeval. exe) çalıştırıldığı günün saati. `0`(Gece yarısı) ile `23` (11:00 PM) arasında bir tamsayı değeri belirtin. Varsayılan olarak, ccmeval gece yarısı çalışır.
+İstemci sistem durumu değerlendirme aracının (ccmeval.exe) çalıştırıldığı günün saati. `0`(Gece yarısı) ile `23` (11:00 PM) arasında bir tamsayı değeri belirtin. Varsayılan olarak, ccmeval gece yarısı çalışır.
 
 İstemci sistem durumu değerlendirmesi hakkında daha fazla bilgi için bkz. [Istemcileri izleme](../manage/monitor-clients.md#bkmk_health).
 
@@ -489,7 +504,7 @@ HTTPS üzerinden site sistem sunucularıyla iletişim kurarken kullanılacak ist
 Configuration Manager istemci dosyalarını yükleyecek klasörü ayarlamak için bu özelliği kullanın. Varsayılan olarak, kullanır `%WinDir%\CCM` .
 
 > [!TIP]
-> İstemci dosyalarını yüklediğiniz yere bakılmaksızın, her zaman **Ccmcore. dll** dosyasını `%WinDir%\System32` klasörüne yükler. 64 bitlik bir IŞLETIM sisteminde, Ccmcore. dll ' nin bir kopyasını `%WinDir%\SysWOW64` klasöre yükler. Bu dosya, Configuration Manager SDK 'dan istemci API 'Lerinin 32 bit sürümünü kullanan 32 bitlik uygulamaları destekler.
+> İstemci dosyalarını yüklediğiniz yere bakılmaksızın, **ccmcore.dll** dosyayı her zaman `%WinDir%\System32` klasörüne yükler. 64 bitlik bir IŞLETIM sisteminde, klasöre bir ccmcore.dll kopyası yüklenir `%WinDir%\SysWOW64` . Bu dosya, Configuration Manager SDK 'dan istemci API 'Lerinin 32 bit sürümünü kullanan 32 bitlik uygulamaları destekler.
 
 Örnek: `CCMSetup.exe CCMINSTALLDIR="C:\ConfigMgr"`
 

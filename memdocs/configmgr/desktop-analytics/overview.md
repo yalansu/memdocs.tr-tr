@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: a2829c5bd86192c4f2421550af9f27aef64aa353
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 774e77f62ee31daa89eeb4273f3c1e7db68a374d
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428646"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353488"
 ---
 # <a name="what-is-desktop-analytics"></a>Desktop Analytics nedir?
 
@@ -63,7 +63,7 @@ Masaüstü Analizi aşağıdaki avantajları sağlar:
 
 - **Configuration Manager tümleştirme**: hizmet bulutu-mevcut şirket içi altyapınızı mümkün. Windows 'u cihazlarınızda dağıtmak ve yönetmek için bu verileri ve çözümlemeyi kullanın.  
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Masaüstü analizlerini kullanmak için ortamınızın aşağıdaki önkoşulları karşıladığından emin olun.
 
@@ -81,7 +81,7 @@ Masaüstü analizlerini kullanmak için ortamınızın aşağıdaki önkoşullar
 
     - Ekleme işleminden sonra portala erişmek için şunlar gerekir:
 
-      - Çalışma alanının oluşturulduğu kaynak grubunda [**Masaüstü Analizi yönetici**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) rolü ve [**sahibi**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)ya da [**katkıda bulunan**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) izinleri.
+      - Log Analytics çalışma alanında [**Masaüstü Analizi yönetici**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) rolü ve [**sahibi**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)ya da [**katkıda bulunan**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) izinleri.
 
 - Configuration Manager, sürüm 1902 güncelleştirme paketi (4500571) veya üzeri. Daha fazla bilgi için bkz. [güncelleştirme Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 

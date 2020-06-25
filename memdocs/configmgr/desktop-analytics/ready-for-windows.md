@@ -12,16 +12,34 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 75dd74e3c1019c9819b44a0ffa8936eeb9eee366
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 18e703691696a2cfc02a5b9715fb6062360229e2
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268360"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353471"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Modern masaüstü kullanımdan kaldırma hakkında SSS
 
 <!-- placeholder -->
+
+## <a name="ready-for-windows-adoption-status"></a>Windows benimseme durumu için hazırlanma
+
+Benimseme durumu, Microsoft ile veri paylaşan ticari cihazlardan gelen bilgileri temel alır. Durum, yazılım satıcılarından destek deyimleriyle tümleşiktir.
+
+Masaüstü analizi, ticari cihazlarda bulunan bir varlığın her sürümü için benimseme durumu sağlar. Bu durum, tüketici cihazlarından veya veri paylaşmeyen cihazlardan veri içermez. Durum, tüm Windows 10 cihazlarında benimseme oranını temsil edemeyebilir.
+
+Olası kategoriler şunlardır:
+
+- **Son derece benimseme**: en az 100.000 ticari Windows 10 cihaz bu uygulamayı yükledi.
+
+- **Benimseme**: en az 10.000 ticari Windows 10 cihaz bu uygulamayı yükledi.
+
+- **Yetersiz veri**: çok az sayıda ticari Windows 10 cihaz, Microsoft 'un benimsemesi için bu uygulamayla ilgili bilgileri paylaşıyor.
+
+- **Geliştiriciye başvurun**: uygulamanın bu sürümünde uyumluluk sorunları olabilir. Microsoft daha fazla bilgi edinmek için yazılım sağlayıcısına başvurmayı önerir.
+
+- **Bilinmiyor**: Bu uygulamanın bu sürümü için kullanılabilir bilgi yok. Bilgiler, uygulamanın diğer sürümleri için kullanılabilir olabilir.
 
 ## <a name="general"></a>Genel
 
@@ -96,7 +114,7 @@ Destek deyimleriniz, varlıklarla doğru şekilde ilişkilendirilmemişse, Micro
 
 Geliştirici Merkezi aracılığıyla sistem durumu ve ölçüm raporlarıyla çözümlerinizi performansını değerlendirin: 
 
-- [Windows Mağazası](https://docs.microsoft.com/windows/uwp/publish/health-report)
+- [Microsoft Store](https://docs.microsoft.com/windows/uwp/publish/health-report)
 - [Masaüstü](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)
 - [Office Eklentileri](https://docs.microsoft.com/office/dev/store/update-unpublish-and-view-metrics) 
 

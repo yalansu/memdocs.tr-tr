@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e2ace9e8a0fb8ba9e9071a2dc9db09434fe5279e
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 0e38f35f49e827893be5e7763a52dd3b5a901bf7
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84613960"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353539"
 ---
 <!-- 
 - Feature 1357546
@@ -107,12 +107,10 @@ Configuration Manager bileşenlerinde ve özelliklerde sorun gidermeye yardımc�
 
 ## <a name="new-and-updated-support-articles"></a>Yeni ve güncelleştirilmiş destek makaleleri
 
-20 Mart, 15 Mayıs 2020 arasında yeni veya güncelleştirilmiş makaleleri destekler.
+16 Mayıs ve 22 Haziran 2020 arasında yeni veya güncelleştirilmiş makaleleri destekler.
 
-- [KB 4561494 Microsoft Edge uygulaması oluşturma Configuration Manager başarısız oluyor](https://support.microsoft.com/help/4561494)
-- [KB 4551059 uzak Configuration Manager konsolu her 10 dakikada bir 20 saniye askıda kalıyor](https://support.microsoft.com/help/4551059)
-- [KB 4556203 Microsoft uç noktasındaki değişikliklerin özeti geçerli dal, sürüm 2002 Configuration Manager](https://support.microsoft.com/help/4556203)
-- [KB 4553501 Microsoft uç noktası Configuration Manager sürüm 2002 için güncelleştirme, erken güncelleştirme halkası](https://support.microsoft.com/help/4553501)
-- [KB 4561945 "arka plandaki bağlantı kapatıldı" hatası, hizmet bağlantı aracı ConfigMgr. Adminuiconkatlanmış. cab dosyasını indirdiğinde](https://support.microsoft.com/help/4561945)
+- [KB 4564442 Windows 10 dağıtımları, BIOS türünde üretici yazılımı bulunan bilgisayarlarda Microsoft dağıtım araç seti ile başarısız oluyor](https://support.microsoft.com/help/4564442)
+- [KB 4563473 Configuration Manager sürüm 2002 kiracı iliştirme sorunları için güncelleştirme paketi](https://support.microsoft.com/help/4563473)
+- [KB 4567007 PXE önyükleme hatalarının veya güncel dalı Configuration Manager, sürüm 2002 ' ye güncelleştirildikten sonra görev sırası gecikmeleri](https://support.microsoft.com/help/4567007)
 
 Yeni Configuration Manager Destek makalelerinin atom veya RSS bildirimine abone olmak için bkz. [içerik güncelleştirmelerini destekleme](https://support.microsoft.com/help/4089498/) ve **Microsoft uç nokta Configuration Manager**seçme.  

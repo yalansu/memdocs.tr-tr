@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 385a7222b33275951de294554a870d8e490a5ddc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 114a0a18b3eb5d416b45379ccb3ac68128e529c5
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719095"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353607"
 ---
 # <a name="task-sequence-steps"></a>Görev dizisi adımları
 
@@ -148,7 +148,7 @@ Gerekli cihaz sürücülerini içeren sürücü paketini belirtin. **Bir paket s
 
 #### <a name="install-driver-package-via-running-dism-with-recurse-option"></a>Recurse seçeneği ile DıSM çalıştırmayı kullanarak sürücü paketini yükler
 
-Windows sürücü paketini uygularken, `/recurse` parametreyi DISM komut satırına eklemek için bu seçeneği belirleyin.
+`/recurse`Windows sürücü paketini uygularken, PARAMETREYI DISM komut satırına eklemek için bu seçeneği belirleyin.
 
 Bu seçeneği etkinleştirdiğinizde, ek DıSM komut satırı parametreleri de belirtebilirsiniz. Daha fazla seçenek dahil etmek için [Osdınstalldriversaddıtionaloptions](task-sequence-variables.md#OSDInstallDriversAdditionalOptions) görev dizisi değişkenini kullanın. Daha fazla bilgi için bkz. [Windows 10 DISM komut satırı seçenekleri](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).<!-- SCCMDocs#2125 -->
 
@@ -215,11 +215,11 @@ Hedef bilgisayarın belirtilen çalışma grubuna katılmasını sağlamak için
 
 #### <a name="join-a-domain"></a>Bir etki alanına katılma
 
-Hedef bilgisayarın belirtilen etki alanına katılmasını sağlamak için bu seçeneği belirleyin. (Gibi) etki alanını belirtin veya gösterin `fabricam.com`. Bir kuruluş birimi için Basit Dizin Erişim Protokolü (LDAP) yolunu belirtin veya buraya gidin. Örneğin: `LDAP//OU=computers, DC=Fabricam.com, C=com`.  
+Hedef bilgisayarın belirtilen etki alanına katılmasını sağlamak için bu seçeneği belirleyin. (Gibi) etki alanını belirtin veya gösterin `fabricam.com` . Bir kuruluş birimi için Basit Dizin Erişim Protokolü (LDAP) yolunu belirtin veya buraya gidin. Örneğin: `LDAP//OU=computers, DC=Fabricam.com, C=com`.  
 
 #### <a name="account"></a>Hesap
 
-Bilgisayarı etki alanına katmak için gerekli izinlere sahip bir hesap belirtmek üzere **Ayarla** ' yı seçin. **Windows Kullanıcı hesabı** iletişim kutusunda, Kullanıcı adını şu biçimde girin: `Domain\User`. Daha fazla bilgi için bkz. [etki alanına katılma hesabı](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account).
+Bilgisayarı etki alanına katmak için gerekli izinlere sahip bir hesap belirtmek üzere **Ayarla** ' yı seçin. **Windows Kullanıcı hesabı** iletişim kutusunda, Kullanıcı adını şu biçimde girin: `Domain\User` . Daha fazla bilgi için bkz. [etki alanına katılma hesabı](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account).
 
 #### <a name="adapter-settings"></a>Bağdaştırıcı ayarları
 
@@ -274,25 +274,25 @@ Bu adım, bir işletim sistemi görüntüsü veya bir işletim sistemi yükseltm
 
 **Işletim sistemi görüntüsünü Uygula** adımı bir işletim sistemi görüntüsü kullanırken aşağıdaki eylemleri gerçekleştirir:  
 
-1. SMSTSUserStatePath değişkeni tarafından belirtilen klasördeki dosyalar hariç, Hedeflenen birimdeki tüm içeriği silin. ** \_**  
+1. ** \_ SMSTSUserStatePath** değişkeni tarafından belirtilen klasördeki dosyalar hariç, Hedeflenen birimdeki tüm içeriği silin.  
 
 2. Belirtilen. wim dosyasının içeriğini belirtilen hedef bölüme ayıklayın.  
 
 3. Yanıt dosyasını hazırlama:  
 
-    1. Dağıtılan işletim sistemi için yeni bir varsayılan Windows Kurulumu yanıt dosyası (Sysprep. inf veya Unattend. xml) oluşturun.  
+    1. Dağıtılan işletim sistemi için yeni bir varsayılan Windows Kurulumu yanıt dosyası (Sysprep. inf veya unattend.xml) oluşturun.  
 
     2. Kullanıcı tarafından sağlanan yanıt dosyasındaki tüm değerleri birleştirin.  
 
 4. Windows önyükleme yükleyicilerini etkin bölüme kopyalayın.  
 
-5. Yeni yüklenen işletim sistemine başvurmak için Boot. ini veya önyükleme yapılandırma veritabanı 'nı (BCD) ayarlayın.  
+5. Yeni yüklenen işletim sistemine başvurmak için boot.ini veya önyükleme yapılandırma veritabanı 'nı (BCD) ayarlayın.  
 
 #### <a name="os-upgrade-package-actions"></a>İşletim sistemi yükseltme paketi eylemleri
 
 **Işletim sistemi görüntüsünü Uygula** adımı bir işletim sistemi yükseltme paketi kullanırken aşağıdaki eylemleri gerçekleştirir:  
 
-1. SMSTSUserStatePath değişkeni tarafından belirtilen klasördeki dosyalar hariç, Hedeflenen birimdeki tüm içeriği silin. ** \_**  
+1. ** \_ SMSTSUserStatePath** değişkeni tarafından belirtilen klasördeki dosyalar hariç, Hedeflenen birimdeki tüm içeriği silin.  
 
 2. Yanıt dosyasını hazırlama:  
 
@@ -321,10 +321,10 @@ Bir işletim sistemi yükseltme paketi kullanarak bir işletim sistemi yükleme,
 
 #### <a name="use-an-unattended-or-sysprep-answer-file-for-a-custom-installation"></a>Özel bir yükleme için katılımsız veya sysprep yanıt dosyası kullanın
 
-İşletim sistemi sürümüne ve yükleme yöntemine bağlı olarak bir Windows kurulumu yanıt dosyası (**Unattend. xml**, **Unattend. txt**veya **Sysprep. inf**) sağlamak için bu seçeneği kullanın. Belirttiğiniz dosya Windows yanıt dosyaları tarafından desteklenen standart yapılandırma seçeneklerinden herhangi birini içerebilir. Örneğin, varsayılan Internet Explorer giriş sayfasını belirtmek için kullanabilirsiniz. Yanıt dosyasını içeren paketi ve paketteki dosyanın ilişkili yolunu belirtin.  
+İşletim sistemi sürümüne ve yükleme yöntemine bağlı olarak bir Windows kurulumu yanıt dosyası (**unattend.xml**, **unattend.txt**veya **Sysprep. inf**) sağlamak için bu seçeneği kullanın. Belirttiğiniz dosya Windows yanıt dosyaları tarafından desteklenen standart yapılandırma seçeneklerinden herhangi birini içerebilir. Örneğin, varsayılan Internet Explorer giriş sayfasını belirtmek için kullanabilirsiniz. Yanıt dosyasını içeren paketi ve paketteki dosyanın ilişkili yolunu belirtin.  
 
 > [!NOTE]  
-> Sağladığınız Windows kurulumu yanıt dosyası, formun `%varname%`gömülü görev dizisi değişkenleri içerebilir, burada *varname* değişkenin adıdır. **Windows 'u ve ConfigMgr 'Yi Kur** adımı, değişkenin gerçek değeri için değişken dize kullanır. Bu katıştırılmış görev dizisi değişkenlerini bir Unattend. xml yanıt dosyasındaki yalnızca sayısal alanlarda kullanamazsınız.  
+> Sağladığınız Windows kurulumu yanıt dosyası, formun gömülü görev dizisi değişkenleri içerebilir `%varname%` , burada *varname* değişkenin adıdır. **Windows 'u ve ConfigMgr 'Yi Kur** adımı, değişkenin gerçek değeri için değişken dize kullanır. Bu katıştırılmış görev dizisi değişkenlerini unattend.xml yanıt dosyasındaki yalnızca sayısal alanlarda kullanamazsınız.  
 
 Bir Windows kurulumu yanıt dosyası belirtmezseniz, görev sırası otomatik olarak bir yanıt dosyası oluşturur.  
 
@@ -450,7 +450,7 @@ Aşağıdaki ayarları yapılandırın:
 Bu Windows kurulumu yanıt dosyası değerleri hakkında daha fazla bilgi için bkz. [Microsoft-Windows-International-Core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
 
 > [!NOTE]
-> Özel bir Windows kurulumu yanıt dosyası (Unattend. xml) oluşturursanız, bu adım varolan tüm değerlerin üzerine yazar. Bu ayarlar için dinamik bir işlemi otomatik hale getirmek üzere ilgili görev dizisi değişkenlerini kullanın. Örneğin, [Osdwindowssettingsınputlocale](task-sequence-variables.md#OSDWindowsSettingsInputLocale). 
+> Özel bir Windows kurulumu yanıt dosyası (unattend.xml) oluşturursanız, bu adım varolan değerlerin üzerine yazar. Bu ayarlar için dinamik bir işlemi otomatik hale getirmek üzere ilgili görev dizisi değişkenlerini kullanın. Örneğin, [Osdwindowssettingsınputlocale](task-sequence-variables.md#OSDWindowsSettingsInputLocale). 
 
 ## <a name="auto-apply-drivers"></a><a name="BKMK_AutoApplyDrivers"></a>Sürücüleri otomatik olarak Uygula
 
@@ -620,7 +620,7 @@ Bu adımın **Özellikler** sekmesinde, bu bölümde açıklanan ayarları yapı
 
 Yakalanan işletim sistemi görüntüsünü depolarken Configuration Manager kullandığı konumun dosya sistemi yolu.  
 
-#### <a name="description"></a>Açıklama  
+#### <a name="description"></a>Description  
 
 Yansıma dosyasında depolanan yakalanan işletim sistemi görüntüsünün isteğe bağlı kullanıcı tanımlı bir açıklaması.  
 
@@ -628,7 +628,7 @@ Yansıma dosyasında depolanan yakalanan işletim sistemi görüntüsünün iste
 
 Yakalanan işletim sistemi görüntüsüne atanacak, Kullanıcı tanımlı isteğe bağlı bir sürüm numarası. Bu değer, harflerin ve sayıların herhangi bir birleşimi olabilir. Görüntü dosyasında depolanır.  
 
-#### <a name="created-by"></a>Oluşturan  
+#### <a name="created-by"></a>Oluşturan:  
 
 İşletim sistemi görüntüsünü oluşturan kullanıcının isteğe bağlı adı. Görüntü dosyasında depolanır.  
 
@@ -704,7 +704,7 @@ Kullanıcı profillerini yakalamak için kullanmak istediğiniz USMT paketindeki
 
 #### <a name="enable-verbose-logging"></a>Ayrıntılı günlük kaydını etkinleştir
 
-Daha ayrıntılı günlük dosyası bilgileri oluşturmak için bu seçeneği etkinleştirin. Durum yakalarken, görev sırası varsayılan olarak görev dizisi günlük klasöründe **Scanstate. log** ' u `%WinDir%\ccm\logs`oluşturur.  
+Daha ayrıntılı günlük dosyası bilgileri oluşturmak için bu seçeneği etkinleştirin. Durum yakalarken, görev sırası varsayılan olarak görev dizisi günlük klasöründe **Scanstate. log** ' u oluşturur `%WinDir%\ccm\logs` .  
 
 #### <a name="skip-files-using-encrypted-file-system"></a>Şifrelenmiş dosya sistemi kullanan dosyaları atla
 
@@ -856,7 +856,7 @@ Sürüm 2002 ' den başlayarak, geçerli işletim sisteminin belirtilen sürümd
 
 #### <a name="minimum-client-version"></a>En düşük istemci sürümü
 
-Sürüm 2002 ' den başlayarak, Configuration Manager istemci sürümünün en azından belirtilen sürüme sahip olduğunu doğrulayın. İstemci sürümünü şu biçimde belirtin: `5.00.8913.1005`.
+Sürüm 2002 ' den başlayarak, Configuration Manager istemci sürümünün en azından belirtilen sürüme sahip olduğunu doğrulayın. İstemci sürümünü şu biçimde belirtin: `5.00.8913.1005` .
 
 #### <a name="language-of-current-os"></a>Geçerli işletim sisteminin dili
 
@@ -1019,7 +1019,7 @@ Paketi aşağıdaki konumlardan birine kaydetmeyi seçin:
 
 - **Görev dizisi çalışma dizini**: Bu konum, görev sırası önbelleği olarak da adlandırılır.  
 
-- **İstemci önbelleği Configuration Manager**: içeriği istemci önbelleğinde depolamak için bu seçeneği kullanın. Varsayılan olarak, bu yol olur `%WinDir%\ccmcache`.  
+- **İstemci önbelleği Configuration Manager**: içeriği istemci önbelleğinde depolamak için bu seçeneği kullanın. Varsayılan olarak, bu yol olur `%WinDir%\ccmcache` .  
 
 - **Özel yol**: görev sırası altyapısı ilk olarak paketi görev dizisi çalışma dizinine indirir. Daha sonra içeriği belirttiğiniz bu yola taşıdıkça. Görev sırası altyapısı, yolu paket KIMLIĞIYLE ekler.  
 
@@ -1027,7 +1027,7 @@ Paketi aşağıdaki konumlardan birine kaydetmeyi seçin:
 
 Paketin yolunu özel bir görev dizisi değişkenine kaydedin. Daha sonra bu değişkeni başka bir görev dizisi adımında kullanın.
 
-Configuration Manager, değişken adına sayısal bir sonek ekler. Örneğin, bir değişkeni özel değişken `%MyContent%` olarak belirtirsiniz. Bu, görev dizisinin, bu adım için başvurulan tüm içeriği depoladığı bir köküdür. Bu içerik birden çok paket içerebilir. Değişkenine başvurduğunuzda sayısal bir sonek ekleyin. İlk paket için bölümüne bakın `%MyContent01%`. Örneğin, **Işletim sistemini yükseltme**gibi sonraki adımlarda değişkenine başvurduğunuzda, veya `%MyContent02%` `%MyContent03%`' i kullanın; burada, sayı, **paket içeriğini indirme** adımının paketleri listeleyen sıraya karşılık gelir.  
+Configuration Manager, değişken adına sayısal bir sonek ekler. Örneğin, bir değişkeni `%MyContent%` özel değişken olarak belirtirsiniz. Bu, görev dizisinin, bu adım için başvurulan tüm içeriği depoladığı bir köküdür. Bu içerik birden çok paket içerebilir. Değişkenine başvurduğunuzda sayısal bir sonek ekleyin. İlk paket için bölümüne bakın `%MyContent01%` . Örneğin, **Işletim sistemini yükseltme**gibi sonraki adımlarda değişkenine başvurduğunuzda, `%MyContent02%` veya `%MyContent03%` ' i kullanın; burada, sayı, **paket içeriğini indirme** adımının paketleri listeleyen sıraya karşılık gelir.  
 
 #### <a name="if-a-package-download-fails-continue-downloading-other-packages-in-the-list"></a>Bir paketin indirmesi başarısız olursa listedeki diğer paketleri indirmeye devam et
 
@@ -1189,7 +1189,7 @@ Biçimlendirilecek diskin türü. Açılır listeden belirlenebilecek iki seçen
 
 Aşağıdaki öznitelikler de dahil olmak üzere, görev dizisinin oluşturduğu bölüm veya birim hakkında belirli bilgiler:  
 
-- Adı  
+- Name  
 - Kalan disk alanı  
 
 Yeni bir bölüm oluşturmak için **bölüm özellikleri** iletişim kutusunu başlatmak üzere **Yeni** ' yi seçin. Bölüm türü ve boyutunu ve bir önyükleme bölümüyse belirtin. Mevcut bir bölümü değiştirmek için, değiştirilecek bölümü seçin ve ardından **Özellikler** düğmesini seçin. Sabit sürücü bölümlerinin nasıl yapılandırılacağı hakkında daha fazla bilgi için aşağıdaki makalelerden birine bakın:  
@@ -1530,7 +1530,7 @@ Hedef bilgisayarın belirtilen etki alanına katılmasını sağlamak için bu s
 
 #### <a name="enter-the-account-which-has-permission-to-join-the-domain"></a>Etki alanına katılmak için yeterli izne sahip olan hesabı belirtin
 
-Etki alanına ekleme izinleri olan bir hesabın kullanıcı adını ve parolasını girmek için **Ayarla** ' yı seçin. Hesabı şu biçimde girin: `Domain\account`. Görev sırası etki alanına katılma hesabı hakkında daha fazla bilgi için bkz. [hesaplar](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account).  
+Etki alanına ekleme izinleri olan bir hesabın kullanıcı adını ve parolasını girmek için **Ayarla** ' yı seçin. Hesabı şu biçimde girin: `Domain\account` . Görev sırası etki alanına katılma hesabı hakkında daha fazla bilgi için bkz. [hesaplar](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account).  
 
 
 
@@ -1861,13 +1861,19 @@ USMT bazı dosyaları geri yüklemeseler bile Kullanıcı durumu ve ayarlarını
 
 #### <a name="enable-verbose-logging"></a>Ayrıntılı günlük kaydını etkinleştir
 
-Daha ayrıntılı günlük dosyası bilgileri oluşturmak için bu seçeneği etkinleştirin. Durum geri yüklenirken, görev sırası varsayılan olarak görev dizisi günlük klasöründe **LoadState. log** ' u `%WinDir%\ccm\logs`oluşturur.  
+Daha ayrıntılı günlük dosyası bilgileri oluşturmak için bu seçeneği etkinleştirin. Durum geri yüklenirken, görev sırası varsayılan olarak görev dizisi günlük klasöründe **LoadState. log** ' u oluşturur `%WinDir%\ccm\logs` .  
 
 
 
 ## <a name="run-command-line"></a><a name="BKMK_RunCommandLine"></a>Komut satırını Çalıştır
 
 Belirtilen komut satırını çalıştırmak için bu adımı kullanın.  
+
+Çalıştırılan komut aşağıdaki ölçütlere uymalıdır:  
+
+- Bu masaüstü ile etkileşimde bulunmamalıdır. Komutun sessizce veya katılımsız modda çalışması gerekir.  
+
+- Kendi başına bir yeniden başlatma işlemi gerçekleştirmemelidir. Komutun standart yeniden başlatma kodu olan 3010 kullanılarak yeniden başlatma istemesi gerekir. Bu davranış, görev dizisinin yeniden başlatmayı doğru bir şekilde işlemesini sağlar. Komut bir 3010 çıkış kodu getirmezse, görev sırası altyapısı bilgisayarı yeniden başlatır. Yeniden başladıktan sonra görev dizisi otomatik olarak devam eder.
 
 Bu adım tam işletim sisteminde veya Windows PE 'de çalıştırılabilir.
 
@@ -1901,7 +1907,7 @@ Bu adımın **Özellikler** sekmesinde, bu bölümde açıklanan ayarları yapı
 
 Görev dizisinin çalıştırıldığı komut satırını belirtir. Bu alan gereklidir. Dosya adı uzantılarını ekleyin, örneğin. vbs ve. exe. Tüm gerekli ayar dosyalarını ve komut satırı seçeneklerini dahil edin.  
 
-Dosya adı uzantısını belirtmezseniz, Configuration Manager. com,. exe ve. bat ' yi dener. Dosya adının bir yürütülebilir tür olmayan bir uzantısı varsa Configuration Manager, yerel bir ilişkilendirme uygulamaya çalışır. Örneğin, komut satırı Readme. gif ise, Configuration Manager. gif dosyalarını açmak için hedef bilgisayarda belirtilen uygulamayı başlatır.  
+Dosya adı uzantısını belirtmezseniz, Configuration Manager. com,. exe ve. bat ' yi dener. Dosya adının bir yürütülebilir tür olmayan bir uzantısı varsa Configuration Manager, yerel bir ilişkilendirme uygulamaya çalışır. Örneğin, komut satırı readme.gif ise, Configuration Manager. gif dosyalarını açmak için hedef bilgisayarda belirtilen uygulamayı başlatır.  
 
 Örnekler:  
 
@@ -1910,7 +1916,7 @@ Dosya adı uzantısını belirtmezseniz, Configuration Manager. com,. exe ve. ba
 `cmd.exe /c copy Jan98.dat c:\sales\Jan98.dat`  
 
 > [!NOTE]  
-> Başarılı bir şekilde çalıştırmak için komut satırı eylemlerinden önce **cmd. exe/c** komutunu yazın. Bu eylemlere örnek olarak çıktı yeniden yönlendirme, boru ve kopyalama komutları dahildir.  
+> Başarılı bir şekilde çalıştırmak için komut satırı eylemleriyle **cmd.exe/c** komutuyla önüne geçin. Bu eylemlere örnek olarak çıktı yeniden yönlendirme, boru ve kopyalama komutları dahildir.  
 
 #### <a name="output-to-task-sequence-variable"></a>Çıkış görev dizisi değişkeni
 
@@ -1976,6 +1982,12 @@ Betikten, adımın başarılı olarak değerlendirilmesi gereken diğer çıkı�
 ## <a name="run-powershell-script"></a><a name="BKMK_RunPowerShellScript"></a>PowerShell betiğini Çalıştır
 
 Belirtilen Windows PowerShell betiğini çalıştırmak için bu adımı kullanın.  
+
+Betiğin aşağıdaki ölçütlere uyması gerekir:  
+
+- Bu masaüstü ile etkileşimde bulunmamalıdır. Betiğin sessizce veya katılımsız modda çalışması gerekir.  
+
+- Kendi başına bir yeniden başlatma işlemi gerçekleştirmemelidir. Sscript, standart yeniden başlatma kodu olan 3010 kullanılarak yeniden başlatma istemesi gerekir. Bu davranış, görev dizisinin yeniden başlatmayı doğru bir şekilde işlemesini sağlar. Betik bir 3010 çıkış kodu döndürmezse, görev sırası altyapısı bilgisayarı yeniden başlatır. Yeniden başladıktan sonra görev dizisi otomatik olarak devam eder.
 
 Bu adım tam işletim sisteminde veya Windows PE 'de çalıştırılabilir. Bu adımı Windows PE 'de çalıştırmak için önyükleme görüntüsünde PowerShell 'i etkinleştirin. WinPE-PowerShell bileşenini, önyükleme görüntüsünün özelliklerinde **Isteğe bağlı bileşenler** sekmesinden etkinleştirin. Önyükleme görüntüsünü değiştirme hakkında daha fazla bilgi için bkz. [önyükleme görüntülerini yönetme](../get-started/manage-boot-images.md).  
 
@@ -2050,11 +2062,11 @@ Aşağıdaki örnek, geçersiz parametreleri içerir. İlk iki öğe Windows Pow
 `-NoLogo -ExecutionPolicy Unrestricted -File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2`
 
 <!-- SCCMDocs-pr issue 3561 -->
-Bir parametre değeri özel bir karakter içeriyorsa, değer etrafında tek tırnak işaretleri (`'`) kullanın. Çift tırnak işaretleri (`"`) kullanmak, görev dizisi adımının parametreyi yanlış işlemesini sağlayabilir.
+Bir parametre değeri özel bir karakter içeriyorsa, değer etrafında tek tırnak işaretleri ( `'` ) kullanın. Çift tırnak işaretleri () kullanmak, `"` görev dizisi adımının parametreyi yanlış işlemesini sağlayabilir.
 
 Örneğin, `-Arg1 '%TSVar1%' -Arg2 '%TSVar2%'`
 
-Sürüm 2002 ' den başlayarak bu özelliği bir değişken olarak ayarlayın.<!-- 5690481 --> Örneğin, öğesini belirtirseniz `%MyScriptVariable%`, görev dizisi betiği çalıştırdığında, bu özel değişkenin değerini PowerShell komut satırına ekler.
+Sürüm 2002 ' den başlayarak bu özelliği bir değişken olarak ayarlayın.<!-- 5690481 --> Örneğin, `%MyScriptVariable%` öğesini belirtirseniz, görev dizisi betiği çalıştırdığında, bu özel değişkenin değerini PowerShell komut satırına ekler.
 
 #### <a name="powershell-execution-policy"></a>PowerShell yürütme ilkesi
 
@@ -2223,7 +2235,7 @@ Görev dizisinde kullanım için dinamik bir değişken ayarlamak üzere bir kur
 
 - **Marka ve model**: bir bilgisayarın marka ve model değerlerini değerlendirin. Kuralın doğru olarak değerlendirilebilmesi için hem marka hem de model doğru olarak değerlendirilmelidir.
 
-    Joker karakter karakteri olarak`*`bir yıldız işareti ()`?`ve soru işareti () belirtin. Yıldız işareti birden çok karakterle eşleşir ve soru işareti tek bir karakterle eşleşir. Örneğin, dize `DELL*900?` hem hem de `DELL-ABC-9001` ile eşleşir `DELL9009`.  
+    `*`Joker karakter karakteri olarak bir yıldız işareti () ve soru işareti ( `?` ) belirtin. Yıldız işareti birden çok karakterle eşleşir ve soru işareti tek bir karakterle eşleşir. Örneğin, dize hem hem `DELL*900?` de ile `DELL-ABC-9001` eşleşir `DELL9009` .  
 
 - **Görev dizisi değişkeni**: değerlendirilecek bir görev dizisi değişkeni, koşul ve değer ekleyin. Değişken için ayarlanan değer belirtilen koşulu karşılıyorsa kural doğru olarak değerlendirilir.  
 
@@ -2282,7 +2294,7 @@ Görev sırası değişkenlerinde depolanan hassas verileri maskelemek için bu 
 
 #### <a name="value"></a>Değer  
 
-Görev sırası, değişkeni bu değere ayarlar. Bu görev dizisi değişkenini söz dizimi `%varname%`ile başka bir görev dizisi değişkeninin değerine ayarlayın.  
+Görev sırası, değişkeni bu değere ayarlar. Bu görev dizisi değişkenini söz dizimi ile başka bir görev dizisi değişkeninin değerine ayarlayın `%varname%` .  
 
 
 
@@ -2292,7 +2304,7 @@ Windows PE 'den yeni işletim sistemine geçişi gerçekleştirmek için bu adı
 
 Bu adım, görev dizisinin Windows PE 'den tam işletim sistemine geçişini sağlamaktan sorumludur. Bu geçiş nedeniyle, bu adım hem Windows PE 'de hem de tam işletim sisteminde çalışır. Ancak, geçiş Windows PE 'de başladığından, bu, yalnızca görev dizisinin Windows PE bölümü sırasında eklenebilir.  
 
-Bu adım, Windows PE yükleme diziniyle `%WINDIR%` ve `%ProgramFiles%`gibi Sysprep. inf veya Unattend. xml dizin değişkenlerinin yerini alır. `X:\Windows` Görev sırası, bu ortam değişkenleri kullanılarak belirtilen değişkenleri yoksayar.  
+Bu adım, `%WINDIR%` `%ProgramFiles%` Windows PE yükleme diziniyle ve gibi Sysprep. inf veya unattend.xml Dizin değişkenlerinin yerini alır `X:\Windows` . Görev sırası, bu ortam değişkenleri kullanılarak belirtilen değişkenleri yoksayar.  
 
 Bu adımı görev sırası düzenleyicisine eklemek için **Ekle**, **görüntü**Seç ' i seçin ve **Windows 'u ve ConfigMgr 'yi ayarla**' yı seçin.
 
@@ -2302,7 +2314,7 @@ Bu adım aşağıdaki eylemleri gerçekleştirir:
 
 #### <a name="preliminaries-windows-pe"></a>Başlangıç kuralları: Windows PE  
 
-1. Unattend. xml dosyasında görev dizisi değişkenlerini değiştirin.  
+1. unattend.xml dosyadaki görev sırası değişkenlerini değiştirin.  
 
 2. Configuration Manager istemcisini içeren paketi indirin. Paketi dağıtılan görüntüye ekleyin.  
 
@@ -2316,7 +2328,7 @@ Bu adım aşağıdaki eylemleri gerçekleştirir:
 
     3. Dağıtılan işletim sistemine yeniden başlatın.  
 
-    4. Windows Mini Kurulum, önceden belirtilen tüm son kullanıcı etkileşimini gizlenen Sysprep. inf veya Unattend. xml yanıt dosyasını kullanarak çalışır. Bir etki alanına katmak için **ağ ayarlarını uygula** adımını kullanırsanız, bu bilgiler yanıt dosyasında bulunur. Windows Mini Kurulum, bilgisayarı etki alanına birleştirir.  
+    4. Windows Mini Kurulum, önceden belirtilen Sysprep. inf ' i veya tüm son kullanıcı etkileşimini gizlenen unattend.xml yanıt dosyasını kullanarak çalışır. Bir etki alanına katmak için **ağ ayarlarını uygula** adımını kullanırsanız, bu bilgiler yanıt dosyasında bulunur. Windows Mini Kurulum, bilgisayarı etki alanına birleştirir.  
 
 - Setup.exe tabanlı yükleme. Normal Windows kurulum işlemi gerçekleştiren Setup.exe dosyasını çalıştırır:  
 
@@ -2324,7 +2336,7 @@ Bu adım aşağıdaki eylemleri gerçekleştirir:
 
     2. Yeni dağıtılan işletim sistemine yeniden başlatın.  
 
-    3. Windows Mini Kurulum, önceden belirtilen tüm Kullanıcı arabirimi ayarlarını gizlenen Sysprep. inf veya Unattend. xml yanıt dosyasını kullanarak çalışır. Bir etki alanına katmak için **ağ ayarlarını uygula** adımını kullanırsanız, bu bilgiler yanıt dosyasında bulunur. Windows Mini Kurulum, bilgisayarı etki alanına birleştirir.  
+    3. Windows Mini Kurulum, önceden belirtilen Sysprep. inf veya tüm Kullanıcı arabirimi ayarlarını gizlenen unattend.xml yanıt dosyasını kullanarak çalışır. Bir etki alanına katmak için **ağ ayarlarını uygula** adımını kullanırsanız, bu bilgiler yanıt dosyasında bulunur. Windows Mini Kurulum, bilgisayarı etki alanına birleştirir.  
 
 #### <a name="set-up-the-configuration-manager-client"></a>Configuration Manager istemcisini ayarlama  
 
@@ -2375,7 +2387,7 @@ Kullanılabilir bir ön üretim istemci paketi varsa ve bilgisayar, pilot koleks
 
 Görev sırası adımı otomatik olarak site atamasını ve varsayılan yapılandırmayı belirler. İstemcisini yüklerken kullanılacak ek yükleme özelliklerini belirtmek için bu alanı kullanın. Birden çok yükleme özelliği belirtmek için boşlukla ayırın.  
 
-İstemci yüklemesi sırasında kullanılacak komut satırı seçeneklerini belirtin. Örneğin, CCMSetup `/skipprereq: silverlight.exe` . exe ' ye Microsoft Silverlight önkoşulunu yüklememesini bildirmek için yazın. CCMSetup. exe için kullanılabilir komut satırı seçenekleri hakkında daha fazla bilgi için bkz. [istemci yükleme özellikleri hakkında](../../core/clients/deploy/about-client-installation-properties.md).  
+İstemci yüklemesi sırasında kullanılacak komut satırı seçeneklerini belirtin. Örneğin, `/skipprereq: silverlight.exe` CCMSetup.exe Microsoft Silverlight önkoşulu yüklememeyi bildirmek için yazın. CCMSetup.exe için kullanılabilir komut satırı seçenekleri hakkında daha fazla bilgi için bkz. [istemci yükleme özellikleri hakkında](../../core/clients/deploy/about-client-installation-properties.md).  
 
 ### <a name="options-for-setup-windows-and-configmgr"></a>Windows ve ConfigMgr kurulum seçenekleri
 
@@ -2424,9 +2436,9 @@ Yükseltme için kullanılacak Windows 10 işletim sistemi yükseltme paketini b
 
 #### <a name="source-path"></a>Kaynak yol
 
-Windows Kurulumu kullandığı Windows 10 medyası için yerel veya ağ yolunu belirtir. Bu ayar Windows Kurulumu komut satırı seçeneğine `/InstallFrom`karşılık gelir.
+Windows Kurulumu kullandığı Windows 10 medyası için yerel veya ağ yolunu belirtir. Bu ayar Windows Kurulumu komut satırı seçeneğine karşılık gelir `/InstallFrom` .
 
-`%MyContentPath%` Veya `%DPC01%`gibi bir değişken de belirtebilirsiniz. Kaynak yolu için bir değişken kullandığınızda, değerini görev dizisinde daha önce ayarlayın. Örneğin, işletim sistemi yükseltme paketi konumu için bir değişken belirtmek üzere [paket Içeriğini indir](#BKMK_DownloadPackageContent) adımını kullanın. Daha sonra bu değişkeni, bu adımın kaynak yolu için kullanın.  
+Veya gibi bir değişken de belirtebilirsiniz `%MyContentPath%` `%DPC01%` . Kaynak yolu için bir değişken kullandığınızda, değerini görev dizisinde daha önce ayarlayın. Örneğin, işletim sistemi yükseltme paketi konumu için bir değişken belirtmek üzere [paket Içeriğini indir](#BKMK_DownloadPackageContent) adımını kullanın. Daha sonra bu değişkeni, bu adımın kaynak yolu için kullanın.  
 
 #### <a name="edition"></a>Sürüm
 
@@ -2438,7 +2450,7 @@ Yükseltme işlemine uygulanacak ürün anahtarını belirtin.
 
 #### <a name="provide-the-following-driver-content-to-windows-setup-during-upgrade"></a>Yükseltme sırasında Windows Kurulumu’na aşağıdaki sürücü içeriklerini sağlayın
 
-Yükseltme işlemi sırasında hedef bilgisayara sürücü ekleyin. Sürücülerin Windows 10 ile uyumlu olmaları gerekir. Bu ayar Windows Kurulumu komut satırı seçeneğine `/InstallDriver`karşılık gelir. Daha fazla bilgi için bkz. [Windows kurulumu komut satırı seçenekleri](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers).
+Yükseltme işlemi sırasında hedef bilgisayara sürücü ekleyin. Sürücülerin Windows 10 ile uyumlu olmaları gerekir. Bu ayar Windows Kurulumu komut satırı seçeneğine karşılık gelir `/InstallDriver` . Daha fazla bilgi için bkz. [Windows kurulumu komut satırı seçenekleri](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers).
 
 Aşağıdaki seçeneklerden birini belirtin:  
 
@@ -2459,7 +2471,7 @@ Configuration Manager Bu adımın başarısız olması için geçmesi gereken da
 
 #### <a name="perform-windows-setup-compatibility-scan-without-starting-upgrade"></a>Windows Kurulumu uyumluluk taramasını yükseltmeyi başlatmadan gerçekleştir
 
-Yükseltme işlemini başlatmadan Windows Kurulumu uyumluluk taramasını gerçekleştirin. Bu ayar Windows Kurulumu komut satırı seçeneğine `/Compat ScanOnly`karşılık gelir. Tüm işletim sistemi yükseltme paketini bu seçenekle dağıtın.
+Yükseltme işlemini başlatmadan Windows Kurulumu uyumluluk taramasını gerçekleştirin. Bu ayar Windows Kurulumu komut satırı seçeneğine karşılık gelir `/Compat ScanOnly` . Tüm işletim sistemi yükseltme paketini bu seçenekle dağıtın.
 
 <!--SCCMDocs-pr issue 2812-->
 Bu seçeneği etkinleştirdiğinizde, bu adım Configuration Manager istemcisini sağlama moduna yerleştirmez. Windows Kurulumu arka planda sessizce çalışır ve istemci normal şekilde çalışmaya devam eder. Daha fazla bilgi için bkz. [sağlama modu](provisioning-mode.md).
@@ -2478,11 +2490,11 @@ Bu parametre hakkında daha fazla bilgi için bkz. [Windows kurulumu komut satı
 
 #### <a name="ignore-any-dismissible-compatibility-messages"></a>Atlanabilir tüm uyumluluk iletilerini yok say
 
-Kurulumun, hiçbir türlü uyumluluk iletilerini yoksayarak yüklemeyi tamamladığını belirtir. Bu ayar Windows Kurulumu komut satırı seçeneğine `/Compat IgnoreWarning`karşılık gelir.  
+Kurulumun, hiçbir türlü uyumluluk iletilerini yoksayarak yüklemeyi tamamladığını belirtir. Bu ayar Windows Kurulumu komut satırı seçeneğine karşılık gelir `/Compat IgnoreWarning` .  
 
 #### <a name="dynamically-update-windows-setup-with-windows-update"></a>Windows Kurulumu’nu Windows Update ile dinamik olarak güncelleştir
 
-Kurulum 'u arama, indirme ve yükleme gibi dinamik güncelleştirme işlemleri gerçekleştirmek için etkinleştirin. Bu ayar Windows Kurulumu komut satırı seçeneğine `/DynamicUpdate`karşılık gelir. Bu ayar Configuration Manager yazılım güncelleştirmeleriyle uyumlu değildir. Tek başına Windows Server Update Services (WSUS) veya Iş için Windows Update güncelleştirmeleri yönetirken bu seçeneği etkinleştirin.  
+Kurulum 'u arama, indirme ve yükleme gibi dinamik güncelleştirme işlemleri gerçekleştirmek için etkinleştirin. Bu ayar Windows Kurulumu komut satırı seçeneğine karşılık gelir `/DynamicUpdate` . Bu ayar Configuration Manager yazılım güncelleştirmeleriyle uyumlu değildir. Tek başına Windows Server Update Services (WSUS) veya Iş için Windows Update güncelleştirmeleri yönetirken bu seçeneği etkinleştirin.  
 
 #### <a name="override-policy-and-use-default-microsoft-update"></a>İlkeyi geçersiz kıl ve varsayılan Microsoft Update kullan
 
