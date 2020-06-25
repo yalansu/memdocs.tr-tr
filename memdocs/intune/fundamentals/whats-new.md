@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/23/2020
+ms.date: 06/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87cf4d9fc21b951386c496e49fe482810febcda3
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 3ddfb0b2d7c8fa0b185416fc493bde5da8f0a475
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85263963"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353658"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -59,6 +59,9 @@ ms.locfileid: "85263963"
 ## <a name="week-of-june-22-2020"></a>22 Haziran 2020 haftası
 
 ### <a name="monitor-and-troubleshoot"></a>İzleme ve sorun giderme
+
+#### <a name="use-endpoint-analytics-to-improve-user-productivity-and-reduce-it-support-costs---5653063---"></a>Kullanıcı üretkenliğini artırmak ve BT destek maliyetlerini azaltmak için Endpoint Analytics 'i kullanın<!-- 5653063 --> 
+Sonraki hafta boyunca bu özellik kullanıma sunulacaktır. Kullanıcı üretkenliğini geliştirmek ve Kullanıcı deneyimine yönelik Öngörüler sunarak BT destek maliyetlerini azaltmak için Endpoint Analytics amaçlar. İçgörüler, BT 'nin son kullanıcı deneyimini öngörülü destekle en uygun hale getirmesine ve yapılandırma değişikliklerinin Kullanıcı etkisini değerlendirerek Kullanıcı deneyimine yönelik gerilemeleri algılamasına olanak tanır. Daha fazla bilgi için bkz. [Endpoint Analytics önizlemesi](https://aka.ms/uea).
 
 #### <a name="proactively-remediate-end-user-device-issues-using-script-packages---5933328---"></a>Komut dosyası paketlerini kullanarak Son Kullanıcı cihaz sorunlarını önceden düzelt<!-- 5933328 -->
 Kuruluşunuzdaki en önemli destek sorunlarını önceden bulmak ve gidermek için, Son Kullanıcı cihazlarında betik paketleri oluşturup çalıştırabilirsiniz. Betik paketlerinin dağıtımı, destek çağrılarını azaltmanıza yardımcı olur. Kendi betik paketlerinizi oluşturmayı seçin veya yazdığımız ve destek biletlerini azaltmak için ortamımızda kullandığımız komut dosyası paketlerinden birini dağıtın. Intune, dağıtılan betik paketlerinizin durumunu görmenizi ve algılama ve düzeltme sonuçlarını izlemenizi sağlar. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **raporlar**  >  **Endpoint Analytics**  >  **proaktif**düzeltmeler ' i seçin. Daha fazla bilgi için bkz. [proaktif](https://aka.ms/uea_prs)düzeltmeler.

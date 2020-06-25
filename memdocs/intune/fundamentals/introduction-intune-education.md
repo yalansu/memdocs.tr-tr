@@ -16,20 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57878ee1f87d53c05ad7eddd39714a5fc5a8ae08
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1b3c3485496b6f72bd51241d47c12de3990a6802
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331402"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353556"
 ---
 # <a name="how-is-intune-for-education-different-from-the-full-device-management-experience-in-intune"></a>Eğitim için Intune ile Intune'daki tam cihaz yönetimi deneyimi arasında ne fark vardır?
 
-Eğitim için Intune, okulunuzun verilerini korurken öğretmen ve öğrencilerinizin üretken olmalarını sağlar. Intune, Eğitim için Intune’un temelini oluşturan bir bulut tabanlı Enterprise Mobility yönetim (EMM) hizmetidir.
+Eğitim için Intune, okulunuzun verilerini korurken öğretmen ve öğrencilerinizin üretken olmalarını sağlar. Eğitim için Intune, bulut tabanlı bir Enterprise Mobility Management (EMM) hizmeti olan Microsoft 'un Intune hizmeti tarafından desteklenmektedir.
 
 ![Eğitim için Intune konsolu ile Intune konsolunun karşılaştırması.](./media/introduction-intune-education/intune-azure-vs-intuneEDU.png)
 
-Eğitim için Intune, Intune 'da bulunan tam MDM yeteneklerini kullanarak Windows 10 ve iOS/ıpados cihazlarını yönetmenizi sağlar. Tam cihaz yönetimi deneyimi, Windows, iOS/ıpados ve Android cihazlarını yönetmenizi sağlar.  
+Eğitim için Intune, Intune 'da bulunan tam MDM yeteneklerini kullanarak Windows 10 ve iOS/ıpados cihazlarını yönetmenizi sağlar. Tam cihaz yönetimi deneyimi, Windows, iOS/ıpados ve Android cihazlarını yönetmenizi sağlar. 
 
 Eğitim için Intune tek başına veya [Intune’da bulunan tam cihaz yönetimi deneyimi](what-is-intune.md) ile uyumlu bir şekilde kullanılabilir. Ayrıca, Eğitim için Intune’u Microsoft’un sunduğu diğer faydalı eğitim araçlarıyla birlikte kullanmanızı kolaylaştıran [Microsoft Education](https://microsoft.com/education) içinde bulunan diğer araçlarla birlikte kullanılabilir.  
 

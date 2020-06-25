@@ -5,7 +5,7 @@ keywords: Intune nedir?
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/14/2019
+ms.date: 06/23/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,16 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a10709972b0387681d00c8fe848079807c6293a
-ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
+ms.openlocfilehash: 28a5bc7a1ee00e9595c50d274605af1b33c1ea90
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538089"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332810"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune, cihazlarınız için MDM ve MAM sağlayıcısıdır
 
-Microsoft Intune, mobil cihaz yönetimine (MDM) ve mobil uygulama yönetimine (MAM) odaklanan bulut tabanlı bir hizmettir. Intune, Microsoft 'un [Enterprise Mobility + Security (EMS) Suite](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)'e dahil edilmiştir ve kuruluşunuzun verilerinin korunmasını sağlarken kullanıcıların üretken olmalarını sağlar. Kimlerin erişebileceğini ve ne erişimleri olduğunu denetlemek için Microsoft 365 ve Azure Active Directory (Azure AD) dahil diğer hizmetlerle tümleştirilir ve veri koruma için Azure Information Protection. Microsoft 365 ile birlikte kullandığınızda, iş gücünüzün tüm cihazlarında üretken olmasını sağlayarak kuruluşunuzun bilgilerini korumalı hale getirebilirsiniz.
+Microsoft Intune, mobil cihaz yönetimine (MDM) ve mobil uygulama yönetimine (MAM) odaklanan bulut tabanlı bir hizmettir. Cep telefonları, tabletler ve dizüstü bilgisayarlar dahil kuruluşunuzun cihazlarının nasıl kullanıldığını kontrol edersiniz. Ayrıca, uygulamaları denetlemek için belirli ilkeleri yapılandırabilirsiniz. Örneğin, e-postaların kuruluşunuz dışındaki kişilere gönderilmesini engelleyebilirsiniz. Intune Ayrıca kuruluşunuzdaki kişilerin okul veya çalışma için kişisel cihazlarını kullanmasına de olanak tanır. Intune, kişisel cihazlarda kuruluşunuzun verilerinin korunduğundan emin olmaya yardımcı olur ve kuruluş verilerini kişisel verilerden yalıtabilir.
+
+Intune, Microsoft 'un [Enterprise Mobility + Security (EMS) paketinin](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)bir parçasıdır. Intune, kimlerin erişebileceğini ve neleri erişebileceğini denetlemek için Azure Active Directory (Azure AD) ile tümleşir. Ayrıca veri koruma için Azure Information Protection ile tümleşir. Microsoft 365 ürün paketiyle birlikte kullanılabilir. Örneğin, Microsoft ekipleri, OneNote ve diğer Microsoft 365 uygulamalarını cihazlara dağıtabilirsiniz. Bu özellik, kuruluşunuzdaki kişilerin, oluşturduğunuz ilkelerle korunan bilgilerini korurken tüm cihazlarında üretken olmalarını sağlar.
 
 [![Intune mimarisi görüntüsü](./media/what-is-intune/intunearch_sm.png )](./media/what-is-intune/intunearchitecture.svg#lightbox)
 

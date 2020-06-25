@@ -258,6 +258,8 @@
               href: troubleshoot-scep-certificate-delivery.md
             - name: Sertifikası dağıtımına ilişkin raporlama
               href: troubleshoot-scep-certificate-reporting.md
+        - name: PKCS sertifika profillerinin sorunlarını giderme
+          href: troubleshoot-pkcs-certificate-profiles.md
         - name: Exchange bağlayıcısı sorunlarını giderme
           items:
             - name: Exchange bağlayıcısı sorunlarını giderme

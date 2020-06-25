@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cb6b4df9e3834ce447b176b5dfab158deb0d543
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 8fe0b1748a40858bca55cc66b250c96725bfd9f1
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85094062"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332875"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS/iPadOS cihazlarını Apple’ın Otomatik Cihaz Kayıt Anlaşması ile otomatik olarak kaydetme
 
@@ -69,7 +69,7 @@ Apple, iOS/ıpados 5 ' te Denetimli mod sunmuştur. Denetimli modda bulunan bir 
 - Belirteç başına en fazla kayıt profili: 1.000  
 - Profil başına maksimum otomatik cihaz kayıt cihazları: sınır yok (belirteç başına en fazla cihaz sayısı içinde)
 - Intune hesabı başına en fazla otomatik cihaz kaydı belirteçleri: 2.000
-- Belirteç başına en yüksek otomatik cihaz kayıt cihazları: 75.000
+- Belirteç başına en yüksek otomatik cihaz kayıt cihazları: ilk eşitlemede olan sınır 75000-80000 cihazlarıdır. Intune, her seferinde başka bir 80.000 cihaz eklemek için her 12 saat iadede ABM veya ASM ile eşitlemeye devam edecektir. İle el ile eşitleme, başka bir ek 80.000 cihaz de ekler. Eşitlemeler gerçekleşmeye devam eder ve cihazlar 75000-80000 cihaz toplu işleri ' nde Intune 'a kadar ABM/ASM ile eşitlenmiş olmaya devam edecektir. 
 
 ## <a name="get-an-apple-ade-token"></a>Apple ADE belirteci al
 
@@ -233,7 +233,7 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
 17. **Kurulum Yardımcısı özelleştirmesi** sayfasında, aşağıdaki profil ayarlarını yapılandırın: ![ Kurulum Yardımcısı özelleştirmesi.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
-    | Departman ayarları | Açıklama |
+    | Departman ayarları | Description |
     |---|---|
     | <strong>Bölüm Adı</strong> | Kullanıcı, etkinleştirme sırasında <strong>Yapılandırma Hakkında</strong> öğesine dokunduğunda görüntülenir. |
     |    <strong>Departman Telefonu</strong>     | Kullanıcı, etkinleştirme sırasında <strong>Yardım Gerekli</strong> düğmesine dokunduğunda görüntülenir. |

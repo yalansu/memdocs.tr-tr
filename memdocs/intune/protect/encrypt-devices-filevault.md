@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 06/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 99facc87d068239962ab0d40874aa081f5e19189
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1f2a6955a430427fe3f4e2791da6bbaecdd90523
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989680"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353589"
 ---
 # <a name="use-filevault-disk-encryption-for--macos-with-intune"></a>Intune ile macOS için dosya Kasası disk şifrelemesini kullanma
 
@@ -30,18 +30,18 @@ Intune, macOS Filekasadisk şifrelemesini destekler. Filekasası, macOS ile birl
 
 Yönetilen cihazlarınızda Filekasasını yapılandırmak için aşağıdaki ilke türlerinden birini kullanın:
 
-- **[MacOS Filekasası Için uç nokta güvenlik ilkesi](#create-an-endpoint-security-policy-for-filevault)**. *Uç nokta güvenliği* Içindeki filekasası profili, filekasasını yapılandırmak için ayrılmış olan odaklanmış bir ayar grubudur.
+- **[MacOS Filekasası Için uç nokta güvenlik ilkesi](#create-endpoint-security-policy-for-filevault)**. *Uç nokta güvenliği* Içindeki filekasası profili, filekasasını yapılandırmak için ayrılmış olan odaklanmış bir ayar grubudur.
 
   [Disk şifreleme ilkesi için profillerde bulunan dosya Kasası ayarlarını](../protect/endpoint-security-disk-encryption-profile-settings.md)görüntüleyin.
 
-- **[MacOS Filekasası için Endpoint Protection cihaz yapılandırma profili](#create-an-endpoint-security-policy-for-filevault)**. Filekasası ayarları, macOS Endpoint Protection için kullanılabilir ayar kategorilerinden biridir. Cihaz yapılandırma profili kullanma hakkında daha fazla bilgi için bkz. [ınunte cihaz profili oluşturma](../configuration/device-profile-create.md).
+- **[MacOS Filekasası için Endpoint Protection cihaz yapılandırma profili](#create-endpoint-security-policy-for-filevault)**. Filekasası ayarları, macOS Endpoint Protection için kullanılabilir ayar kategorilerinden biridir. Cihaz yapılandırma profili kullanma hakkında daha fazla bilgi için bkz. [ınunte cihaz profili oluşturma](../configuration/device-profile-create.md).
 
   [Cihaz yapılandırma ilkesi için Endpoint Protection profillerinde bulunan dosya Kasası ayarlarını](../protect/endpoint-protection-macos.md#filevault)görüntüleyin.
 
 Windows 10 için BitLocker 'ı yönetmek için bkz. [BitLocker Ilkesini yönetme](../protect/encrypt-devices.md).
 
 > [!TIP]
-> tüm yönetilen cihazlarınızda cihazların şifreleme durumu hakkında ayrıntılı bilgi sunan [şifreleme raporu](encryption-monitor.md) .
+> Intune, cihazların şifreleme durumu hakkındaki ayrıntıları, tüm yönetilen cihazlarınızda sunan yerleşik bir [şifreleme raporu](encryption-monitor.md) sağlar.
 
 Cihazları dosya kasası ile şifrelemek için bir ilke oluşturduktan sonra, ilke iki aşamada cihazlara uygulanır. İlk olarak cihaz, Intune 'un kurtarma anahtarını alıp yedeklemesini sağlamak için hazır hale getirilir. Bu eyleme Emanet denir. Anahtar alındıktan sonra, disk şifrelemesi başlayabilir.
 
@@ -60,17 +60,15 @@ Aşağıda, **uzak görevler** kategorisinin bir parçası olan ve izin veren ye
 - **Filekasa anahtarını döndür**
   - Yardım Masası Işleci
 
-## <a name="create-and-deploy-policy"></a>İlke oluşturma ve dağıtma
-
-### <a name="create-an-endpoint-security-policy-for-filevault"></a>Filekasası için uç nokta güvenlik ilkesi oluşturma
+## <a name="create-endpoint-security-policy-for-filevault"></a>Filekasası için uç nokta güvenlik ilkesi oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
 2. **Endpoint Security**  >  **disk şifrelemesi**  >  **ilke oluştur**' u seçin.
 
 3. **Temel bilgiler** sayfasında, aşağıdaki özellikleri girin ve ardından **İleri**' yi seçin.
-   1. **Platform**: MacOS
-   2. **Profil**: dosya Kasası
+   - **Platform**: MacOS
+   - **Profil**: dosya Kasası
 
    ![Filekasa profilini seçin](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
 
@@ -94,33 +92,49 @@ Aşağıda, **uzak görevler** kategorisinin bir parçası olan ve izin veren ye
 
 8. **Gözden geçir + oluştur** sayfasında, Işiniz bittiğinde **Oluştur**' u seçin. Oluşturduğunuz profilin ilke türünü seçtiğinizde yeni profil listede görüntülenir.
 
-### <a name="create-a-device-configuration-policy-for-filevault"></a>Filekasası için cihaz yapılandırma ilkesi oluşturma
+## <a name="create-device-configuration-policy-for-filevault"></a>Filekasası için cihaz yapılandırma ilkesi oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
 2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 
-3. Aşağıdaki seçenekleri ayarlayın:
-   1. **Platform**: MacOS
-   2. **Profil**: Endpoint Protection
+3. **Profil oluştur** sayfasında, aşağıdaki seçenekleri ayarlayın ve ardından **Oluştur**' a tıklayın:
+   - **Platform**: MacOS
+   - **Profil**: Endpoint Protection
 
    ![Filekasa profilini seçin](./media/encrypt-devices-filevault/select-macos-filevault-dc.png)
 
-4. **Ayarlar**  >  **Dosya Kasası**' nı seçin.
+4. **Temel bilgiler** sayfasında, aşağıdaki özellikleri girin:
 
-   ![Dosya Kasası ayarları](./media/encrypt-devices-filevault/filevault-settings.png)
+   - **Ad**: ilke için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir ilke adı profil türünü ve platformunu içerebilir.
 
-5. *Filekasası*için **Etkinleştir**' i seçin.
+   - **Açıklama**: ilke için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
 
-6. *Kurtarma anahtarı türü*Için yalnızca **kişisel anahtar** desteklenir.
+5. **Yapılandırma ayarları** sayfasında, kullanılabilir ayarları genişletmek Için **Dosya Kasası** ' nı seçin:
 
-   Kullanıcılara cihazlarıyla ilgili kurtarma anahtarını alma hakkında yardım almak için bir ileti eklemeyi düşünün. Bu bilgiler, kişisel kurtarma anahtarı döndürme ayarını kullandığınızda kullanıcılarınız için yararlı olabilir. Bu, düzenli aralıklarla otomatik olarak yeni bir kurtarma anahtarı oluşturabilen bir cihaz için kullanılabilir.
+   > [!div class="mx-imgBorder"]
+   > ![Dosya Kasası ayarları](./media/encrypt-devices-filevault/filevault-settings.png)
 
-   Örneğin: kayıp veya son döndürülen kurtarma anahtarını almak Için herhangi bir cihazdan Intune Şirket Portalı Web sitesinde oturum açın. Portalda *cihazlar* ' a gidin ve filekasasının etkinleştirildiği cihazı seçin ve ardından *Kurtarma anahtarını al*' ı seçin. Geçerli kurtarma anahtarı görüntülenir.
+6. Aşağıdaki ayarları yapılandırın:
+  
+   - *Dosya kasasını etkinleştir*için **Evet**' i seçin.
 
-7. Kalan [Filekasası ayarlarını](endpoint-protection-macos.md#filevault) iş gereksinimlerinizi karşılayacak şekilde yapılandırın ve ardından **Tamam**' ı seçin.
+   - *Kurtarma anahtarı türü*için **kişisel anahtar**' ı seçin.
 
-8. Ek ayarların yapılandırmasını tamamladıktan sonra profili kaydedin.
+   - *Kişisel kurtarma anahtarının Emanet konumu açıklaması*için, kullanıcılara cihazının kurtarma anahtarını alma hakkında rehberlik eden bir ileti ekleyin. Bu bilgiler, kişisel kurtarma anahtarı döndürme ayarını kullandığınızda kullanıcılarınız için yararlı olabilir. Bu, düzenli aralıklarla otomatik olarak yeni bir kurtarma anahtarı oluşturabilen bir cihaz için kullanılabilir.
+
+     Örneğin: kayıp veya son döndürülen kurtarma anahtarını almak Için herhangi bir cihazdan Intune Şirket Portalı Web sitesinde oturum açın. Portalda *cihazlar* ' a gidin ve filekasasının etkinleştirildiği cihazı seçin ve ardından *Kurtarma anahtarını al*' ı seçin. Geçerli kurtarma anahtarı görüntülenir.
+
+   Kalan [Filekasası ayarlarını](endpoint-protection-macos.md#filevault) iş gereksinimlerinizi karşılayacak şekilde yapılandırın ve ardından **İleri**' yi seçin.
+
+7. Scope **(Etiketler)** sayfasında kapsam etiketleri **Seç** ' i seçerek profile kapsam etiketleri atayın.
+
+   Devam etmek için **İleri**’yi seçin.
+
+8. **Atamalar** sayfasında, bu profili alacak grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. Kullanıcı ve cihaz profilleri atama.
+**İleri**’yi seçin.
+
+9. **Gözden geçir + oluştur** sayfasında, Işiniz bittiğinde **Oluştur**' u seçin. Oluşturduğunuz profilin ilke türünü seçtiğinizde yeni profil listede görüntülenir.
 
 ## <a name="manage-filevault"></a>Dosya kasasını yönetme
 

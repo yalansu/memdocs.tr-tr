@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0739b27d5b2b6bb21809b2a9f109c894765ea7e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 17f1d045d89df3ad5bb37d85957e872ec6692b7e
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988570"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353505"
 ---
 # <a name="enroll-android-devices"></a>Android cihazlarını kaydetme
 
@@ -39,6 +39,8 @@ Bir Intune Yöneticisi olarak, Android cihazlarını aşağıdaki yollarla kayde
 ## <a name="prerequisites"></a>Ön koşullar
 
 Mobil cihazların yönetimine hazırlık olarak, **Microsoft Intune**’a mobil cihaz yönetimi (MDM) yetkilisi ayarlamanız gerekir. Yönergeler için bkz. [MDM yetkilisini ayarlama](../fundamentals/mdm-authority-set.md). Bu öğeyi yalnızca mobil cihaz yönetimi için Intune’u ilk defa kurduğunuzda ayarlayabilirsiniz.
+
+Android Enterprise için, Android Enterprise 'ın ülkenizde veya bölgenizde kullanılabilir olduğundan emin olmak için Google 'daki aşağıdaki destek makalesine bakın:https://support.google.com/work/android/answer/6270910
 
 Zeköşeli teknolojiler tarafından üretilen cihazlarda, belirli bir cihazın özelliklerine bağlı olarak Şirket Portalı ek izinler vermeniz gerekebilir. [Zeköşeli cihazlarda Mobility uzantılarında](../configuration/android-zebra-mx-overview.md) daha fazla ayrıntı vardır.
 

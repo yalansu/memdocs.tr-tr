@@ -4,7 +4,7 @@ description: Microsoft 365 Kurumsal, Microsoft Intune'u içerir. Intune 'un kuru
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 06/24/2020
 ms.topic: overview
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 540faaca71d3694b95d32a24c947a977989a3223
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 0dedb4746c40ff1cc2f5a2f166b1e0277997cb88
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223635"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353624"
 ---
 # <a name="device-management-overview"></a>Cihaz yönetimine genel bakış
 
-Her Yönetici'nin başlıca görevlerinden biri kuruluşun kaynaklarının ve verilerinin güvenliğini sağlamaktır. Bu görev *cihaz yönetimi*. Kullanıcıların kişisel dosyaları açıp paylaştığı, Web sitelerini ziyaret eden ve uygulamaları ve oyunları yükleyen birçok cihazı vardır. Aynı kullanıcılar aynı zamanda çalışanlar ve öğrencilerlerdir. E-posta ve OneNote gibi iş ve okul kaynaklarına erişmek için cihazlarını kullanmak ister.
+Herhangi bir yöneticinin önemli bir görevi, kuruluşlarındaki Kullanıcı cihazlarındaki bir kuruluşun kaynaklarını ve verilerini korumak ve güvence altına almak için kullanılır. Bu görev **cihaz yönetimi**. Kullanıcılar kişisel hesaplardan e-posta alıp gönderir, ev ve restoran 'dan Web sitelerine gözatabilir ve uygulamaları ve oyunları yükler. Bu kullanıcılar ayrıca çalışanlar ve öğrencilerlerdir. Cihazlarında, e-posta ve OneNote gibi iş ve okul kaynaklarına erişmek ve bunlara hızlıca erişmek ister. Yönetici olarak, Hedefiniz bu kaynakları korumaktır ve kullanıcılar için birçok cihaz genelinde kolayca aynı anda erişim sağlar.
 
 Cihaz yönetimi, kuruluşların kaynaklarını ve verilerini ve farklı cihazlardan korunmasını ve güvenliğini sağlar.
 
