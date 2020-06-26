@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4441fdaf8c3fb8bfb6613805df9eca27cc3ebf0c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e5de1268b8b04c98ac7a9cfa96d42349fc0f8890
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990386"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383215"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Microsoft Intune kimlik doğrulaması için sertifikaları kullanma
 
@@ -84,7 +84,7 @@ Bir Microsoft sertifika yetkilisi (CA) kullandığınızda:
 | Android Kurumsal <br> -Adanmış (cihaz sahibi)   | ![Destekleniyor](./media/certificates-configure/green-check.png)  |   | ![Destekleniyor](./media/certificates-configure/green-check.png)  |   |
 | Android Kurumsal <br> -İş profili    | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) |
 | iOS/iPadOS                   | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) |
-| macOS                 | ![Destekleniyor](./media/certificates-configure/green-check.png) |  ![Destekleniyor](./media/certificates-configure/green-check.png) |![Destekleniyor](./media/certificates-configure/green-check.png)|![Destekleniyor](./media/certificates-configure/green-check.png)|
+| Mac OS                 | ![Destekleniyor](./media/certificates-configure/green-check.png) |  ![Destekleniyor](./media/certificates-configure/green-check.png) |![Destekleniyor](./media/certificates-configure/green-check.png)|![Destekleniyor](./media/certificates-configure/green-check.png)|
 | Windows Phone 8.1     |![Destekleniyor](./media/certificates-configure/green-check.png)  |  | ![Destekleniyor](./media/certificates-configure/green-check.png)| ![Destekleniyor](./media/certificates-configure/green-check.png) |
 | Windows 8.1 ve üzeri |![Destekleniyor](./media/certificates-configure/green-check.png)  |  |![Destekleniyor](./media/certificates-configure/green-check.png) |   |
 | Windows 10 ve üzeri  | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) | ![Destekleniyor](./media/certificates-configure/green-check.png) |
@@ -105,6 +105,11 @@ SCEP sertifika profilleri doğrudan bir güvenilen sertifika profiline başvurur
 
 Desteklemek istediğiniz her cihaz platformu için, SCEP, PKCS ve PKCS içeri aktarılan sertifika profillerinde yaptığınız gibi ayrı bir güvenilen sertifika profili oluşturun.
 
+> [!IMPORTANT]
+> Platform *Windows 10 ve üzeri*için oluşturduğunuz güvenilen kök profiller, Microsoft Endpoint Manager Yönetim merkezinde Platform *Windows 8.1 ve üzeri*için profiller olarak görüntülenir. 
+>
+> Bu, güvenilen sertifika profilleri için platform sunumuyla ilgili bilinen bir sorundur. Profil bir Windows 8.1 platformunu ve daha sonrasını görüntülediğinde, Windows 10 ve üzeri sürümlerde çalışır.
+
 ### <a name="to-create-a-trusted-certificate-profile"></a>Güvenilen bir sertifika profili oluşturmak için
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
@@ -117,7 +122,7 @@ Desteklemek istediğiniz her cihaz platformu için, SCEP, PKCS ve PKCS içeri ak
    - **Platform**: Bu profili alacak cihazların platformunu seçin.
    - **Profil**: **Güvenilen sertifika** seçin
   
-4. **Oluştur**’u seçin.
+4. **Oluştur**'u seçin.
 
 5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
    - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı *şirketin tamamına yönelik güvenilen sertifika profilidir*.

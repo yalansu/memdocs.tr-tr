@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41b85299057f172fec224873607509aaaec60024
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 5d23eaeee839122bad46cd9619a790b9ca6332a6
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84977243"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383266"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>İOS ve Android için Office kullanarak işbirliği deneyimlerini Microsoft Intune ile yönetin
 
@@ -108,7 +108,13 @@ Bu ayarlar, cihaz kayıt durumundan bağımsız olarak uygulamaya dağıtılabil
 
 ### <a name="manage-file-transfers"></a>Dosya aktarımlarını yönetme
 
-Varsayılan olarak, Office kullanıcıların dosyaları yakındaki kullanıcılarla paylaşmasına ve dosyaları masaüstü sistemlerine aktarmasına olanak sağlar.
+Varsayılan olarak, iOS ve Android için Office, kullanıcıların çeşitli mekanizmalar kullanarak içerik paylaşmasını sağlar:
+
+- Dosya OneDrive veya SharePoint 'te barındırılıyorsa, kullanıcılar doğrudan dosya içinde bir Share isteği başlatabilir.
+- Kullanıcılar dosyaları **aktarma** eylemini kullanarak masaüstü sistemlerine dosya aktarabilir.
+- Kullanıcılar **yakında paylaşma** eylemini kullanarak yakındaki mobil cihazlara dosya paylaşabilir.
+
+**Dosya aktarma** ve **yakın işlemleri paylaşma** yalnızca medya, yerel dosyalar ve bir uygulama koruma ilkesi tarafından korunmayan dosyalarla çalışır. 
 
 |    Anahtar    |    Değer    |
 |-------------------------------------------------------------------|-------------|
