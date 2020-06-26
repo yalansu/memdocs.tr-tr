@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4065f320ec27f53e50c64bc7ca0c97d3f6923853
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 02a281b800c1156cf8492e8a897a5cf1b412006e
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353284"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383045"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Configuration Manager içindeki istemci yükleme parametreleri ve özellikleri hakkında
 
@@ -271,6 +271,13 @@ Desteklenen değerler:
 `CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
 
 Daha fazla bilgi için bkz. [genişletilmiş birlikte çalışabilirlik istemcisi](../../understand/interoperability-client.md).
+
+> [!NOTE]  
+> **/Alwaysexcludeupgrade** parametresini kullanırken otomatik yükseltme yine de çalışır. Ancak, CCMSetup yükseltmeyi gerçekleştirmeye çalıştığında, **/Alwaysexcludeupgrade** parametresinin ayarlandığını ve **CCMSetup. log**dosyasında şu satırı günlüğe yacağını unutmayın:
+>
+> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
+>
+> CCMSetup hemen çıkış yapar ve yükseltme gerçekleştirmez.
 
 ## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a>CCMSetup.exe dönüş kodları
 

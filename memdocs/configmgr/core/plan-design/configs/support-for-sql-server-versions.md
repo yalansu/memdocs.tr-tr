@@ -2,7 +2,7 @@
 title: Desteklenen SQL Server sürümleri
 titleSuffix: Configuration Manager
 description: Configuration Manager site veritabanını barındırmak için SQL Server sürümü ve yapılandırma gereksinimleri alın.
-ms.date: 04/03/2020
+ms.date: 06/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c52008089a6d23d5c4efe44f0970bb186eb334a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: b30380f4e272050b7224b52d092f39aa8ab5bad4
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904644"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383181"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager için desteklenen SQL Server sürümleri
 
@@ -74,7 +74,7 @@ Aksi belirtilmediği takdirde, aşağıdaki SQL Server sürümleri tüm Configur
 
 ### <a name="sql-server-2019-standard-enterprise"></a>SQL Server 2019: Standart, kurumsal
 
-Configuration Manager sürüm 1910 ' den başlayarak, toplu güncelleştirme sürümünüz SQL yaşam döngüsü tarafından desteklendiği sürece bu sürümü herhangi bir toplu güncelleştirme ile kullanabilirsiniz.
+Configuration Manager sürüm 1910 ' den başlayarak, toplu güncelleştirme 5 ' i (CU5) veya sonraki bir sürümünü kullanarak, toplu güncelleştirme sürümünüz SQL yaşam döngüsü tarafından desteklendiği sürece bu sürümü kullanabilirsiniz. CU5, [SKALAR UDF](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining)ile ilgili bir sorunu çözen SQL Server 2019 için en düşük gereksinimdir.
 
 Bu SQL sürümü aşağıdaki siteler için kullanılabilir:
 
@@ -82,19 +82,20 @@ Bu SQL sürümü aşağıdaki siteler için kullanılabilir:
 - Birincil site
 - İkincil site
 
-#### <a name="known-issue-with-sql-server-2019"></a>SQL Server 2019 ile ilgili bilinen sorun
+<!--
+#### Known issue with SQL Server 2019
 
-Bilinen bir sorun var<!--6436234--> SQL 2019 ' deki yeni [SKALER UDF](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) özelliği ile. Bu sorunu geçici olarak çözmek ve UDF 'yi devre dışı bırakmak için, SQL 2019 sunucusunda aşağıdaki betiği çalıştırın:
+There's a known issue<!--6436234 with the new [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF  
 ```
 
-Her zaman gerekli olmasa da, bu betiği çalıştırdıktan sonra SQL Server 'ı yeniden başlatmanız gerekebilir. Daha fazla bilgi için bkz. [uyumluluk düzeyini değiştirmeden SKALER UDF girişi devre dışı bırakılıyor](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
+While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
 
-Configuration Manager kullanmadığından, site veritabanı sunucusu için bu SQL özelliğini güvenle devre dışı bırakabilirsiniz.
+You can safely disable this SQL feature for the site database server because Configuration Manager doesn't use it.
 
-SQL 2019 ' de skaler UDF 'yi devre dışı bırakmazsanız, site sunucusu rastgele olarak site veritabanını sorgulayamaz. Örneğin, **HMAN. log**dosyasında şu hataları görürsünüz:
+If you don't disable scalar UDF inlining in SQL 2019, the site server will randomly fail to query the site database. For example, you'll see the following errors in **hman.log**:
 
 ```hman.log
 *** [HY000][0][Microsoft][SQL Server Native Client 11.0]Unspecified error occurred on SQL Server. Connection may have been terminated by the server.
@@ -103,13 +104,14 @@ SQL 2019 ' de skaler UDF 'yi devre dışı bırakmazsanız, site sunucusu rastge
 Failed to execute SQL command select dbo.fnGetSiteMode(dbo.fnGetSiteCode())
 ```
 
-**Smsadminui. log**gibi başka günlüklerde de benzer hatalar görebilirsiniz.
+You may see similar errors in other logs, such as **SmsAdminUI.log**.
 
-SQL Server sürüm 2019 şu hatayı günlüğe kaydeder:
+SQL Server version 2019 logs the following error:
 
 `Microsoft SQL Server reported SQL message 596, severity 21: [HY000][596][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot continue the execution because the session is in the kill state.`
 
-Ayrıca, `.mdump` Varsayılan olarak olan günlük DIZININDE SQL 'den kilitlenme dökümünü (dosyalar) görürsünüz `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log` .
+You'll also see crash dumps (`.mdump` files) from SQL in its log directory, which by default is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`.
+-->
 
 ### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017: Standart, kurumsal
 

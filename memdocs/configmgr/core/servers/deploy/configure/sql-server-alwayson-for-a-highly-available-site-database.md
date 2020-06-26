@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79e83a7ba111b1d7f96fb623914ffe8e11f22f3d
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 576f909be15a35f4c29e803236c220cdde33c0ac
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270880"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383164"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager ile Always on kullanılabilirlik grupları SQL Server kullanmaya hazırlanma
 
@@ -256,11 +256,7 @@ Configuration Manager Kurulum 'un her bir çoğaltmaya bağlanması gerekiyor. A
 
 - TCP üzerinden SQL: **tcp 1433**
 
-Kurulum tamamlandıktan sonra, Configuration Manager için aşağıdaki bağlantı noktalarının açık kalması gerekir:  
-
-- SQL Server Hizmet Aracısı: **TCP 4022**  
-
-- TCP üzerinden SQL: **tcp 1433**  
+Kurulum tamamlandıktan sonra, bu bağlantı noktalarının Configuration Manager ve çoğaltma bağlantısı Çözümleyicisi için açık kalması gerekir.<!-- MEMDocs#375 -->
 
 Bu yapılandırmalarda özel bağlantı noktalarını kullanabilirsiniz. Uç nokta ve kullanılabilirlik grubundaki tüm çoğaltmalarda aynı özel bağlantı noktalarını kullanın.
 

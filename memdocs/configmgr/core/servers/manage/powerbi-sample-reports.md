@@ -1,8 +1,8 @@
 ---
-title: Power BI örnek raporlarını yükler
+title: Power BI örnek raporlarını yükleme
 titleSuffix: Configuration Manager
 description: Power BI örnek raporlarının Configuration Manager nasıl yükleneceğini öğrenin
-ms.date: 06/23/2020
+ms.date: 06/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: 7e9bc22c-67ac-4a86-b613-944a4928e583
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 340f10a486594f78053dcfd0febde40bb5a6697f
-ms.sourcegitcommit: c5c17af545fd9df94f9b99fd44b56f10ff1f695e
+ms.openlocfilehash: 39bec7e8b01b35a8411400399a74eb352406c023
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85310661"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383198"
 ---
-# <a name="install-power-bi-sample-reports"></a>Power BI örnek raporlarını yükler
+# <a name="install-power-bi-sample-reports"></a>Power BI örnek raporlarını yükleme
 <!--5679791-->
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
@@ -34,9 +34,12 @@ Sürüm 2002 ' den başlayarak, [Power BI Rapor Sunucusu](https://docs.microsoft
 
 ## <a name="download-the-sample-reports"></a>Örnek raporları indirin
 
+> [!IMPORTANT]
+> Örnek raporlar Şu anda indirimıyordur. Bunlar, bildirilen sorunları çözmek için geçici olarak kaldırılmıştır.
+
 Örnek raporları indirmek için:
 
-1. Power BI örnek raporlarını [Microsoft Indirme merkezi](https://www.microsoft.com/download/details.aspx?id=101452)' nden indirin.
+1. Power BI örnek raporlarını indirin<!-- from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=101452)-->.
 1. `ConfigMgrSamplePowerBIReports.exe` dosyasını kaydedin. 
 1. Dosyayı farklı bir cihazdan indirdiyseniz Microsoft Power BI Desktop (Power BI Rapor Sunucusu için Iyileştirilmiş) yüklü bir bilgisayara taşıyın.
 1. `ConfigMgrSamplePowerBIReports.exe`. Pbit dosyalarını ayıklamak için dosyayı çalıştırın.
