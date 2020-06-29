@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 136e11f97849e5fd8a27d9f83ea1bd44791c492e
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 2d6165678331811f4b04e8b1f540f3dcbb7f015d
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715654"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502264"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Configuration Manager 'de bulut yönetimi ağ geçidini planlayın
 
@@ -227,15 +227,16 @@ Aşağıdaki tabloda Configuration Manager özellikleri için CMG desteği liste
 | Donanım ve yazılım envanteri     | ![Destekleniyor](media/green_check.png) |
 | İstemci durumu ve bildirimleri     | ![Destekleniyor](media/green_check.png) |
 | Betikleri Çalıştır     | ![Destekleniyor](media/green_check.png) |
+| CMPivot     | ![Destekleniyor](media/green_check.png) |
 | Uyumluluk ayarları     | ![Destekleniyor](media/green_check.png) |
-| İstemci yüklemesi<br>(Azure AD tümleştirmesi ile)     | ![Destekleniyor](media/green_check.png) |
+| İstemci yüklemesi<br>( [Azure AD tümleştirmesi](../../deploy/deploy-clients-cmg-azure.md)ile) | ![Destekleniyor](media/green_check.png) |
+| İstemci yüklemesi<br>( [belirteç kimlik doğrulaması](../../deploy/deploy-clients-cmg-token.md)ile) | ![Destekleniyor](media/green_check.png) (2002) |
 | Yazılım dağıtımı (cihaz hedefli)     | ![Destekleniyor](media/green_check.png) |
 | Yazılım dağıtımı (kullanıcı hedefli, gerekli)<br>(Azure AD tümleştirmesi ile)     | ![Destekleniyor](media/green_check.png) |
 | Yazılım dağıtımı (kullanıcı hedefli, kullanılabilir)<br>([tüm gereksinimler](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Destekleniyor](media/green_check.png) |
-| Windows 10 yerinde yükseltme görev dizisi      | ![Destekleniyor](media/green_check.png) |
-| Önyükleme görüntülerini kullanmayan ve bir seçenekle dağıtılan görev dizileri: **görev sırasını başlatmadan önce tüm içeriği yerel olarak indir**      | ![Destekleniyor](media/green_check.png) |
-| Önyükleme görüntülerini kullanmayan görev dizileri  | ![Destekleniyor](media/green_check.png) (1910)|
-| CMPivot     | ![Destekleniyor](media/green_check.png) |
+| Windows 10 [yerinde yükseltme görev dizisi](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) | ![Destekleniyor](media/green_check.png) |
+| Önyükleme görüntülerini kullanmayan ve bir seçenekle dağıtılan görev dizileri: **görev sırasını başlatmadan önce tüm içeriği yerel olarak indir** | ![Destekleniyor](media/green_check.png) |
+| [Yükleme seçeneği](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg) ile önyükleme görüntülerini kullanmayan görev dizileri | ![Destekleniyor](media/green_check.png) (1910)|
 | Diğer herhangi bir görev sırası senaryosu     | ![Desteklenmiyor](media/Red_X.png) |
 | İstemci gönderme     | ![Desteklenmiyor](media/Red_X.png) |
 | Otomatik site ataması     | ![Desteklenmiyor](media/Red_X.png) |
@@ -367,7 +368,7 @@ Azure 'da içerik barındırdığınızda daha fazla bilgi için bkz. [bulut tab
 
 Bu tabloda gerekli ağ bağlantı noktaları ve protokoller listelenmektedir. *İstemci* , bağlantıyı başlatan cihazdır ve giden bağlantı noktası gerektirir. *Sunucu* , bağlantıyı kabul eden ve bir gelen bağlantı noktası gerektiren cihazdır.
 
-| İstemci | Protokol | Bağlantı noktası | Sunucu | Description |
+| İstemci | Protokol | Bağlantı noktası | Sunucu | Açıklama |
 |--------|----------|------|--------|-------------|
 | Hizmet bağlantı noktası | HTTPS | 443 | Azure | CMG dağıtımı |
 | CMG bağlantı noktası | TCP-TLS | 10140-10155 | CMG hizmeti | CMG kanalı oluşturmak için tercih edilen protokol <sup> [nonote 1](#bkmk_port-note1)</sup> |

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02e07ec75b7c0d07a81a9c6f555cf119310a9a9f
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 62348a4e551112a93f960388d6e21b398c447dfc
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093690"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502383"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Intune 'da Android ve Samsung KNOX Standard cihaz kısıtlama ayarları listeleri
 
@@ -178,7 +178,7 @@ Her ayar için uygulamalarınızı ekleyin:
 
 Bilgi noktası ayarları yalnızca Samsung Knox Standard cihazlarda ve Intune ile yönettiğiniz uygulamalarda geçerlidir.
 
-- Cihaz bilgi noktası modundayken çalıştırmak istediğiniz uygulamaları ekleyin. Bilgi noktası modunda, yalnızca eklediğiniz uygulamalar çalışır; eklenmemiş uygulamalar çalışmaz. Cihaz bilgi noktası modunda olduğunda, önceden yüklenmiş tarayıcılar uygulama olarak çalışmaz. Bir tarayıcı gerekliyse [Managed Browser](../apps/app-configuration-managed-browser.md) kullanabilirsiniz.
+- Cihaz bilgi noktası modundayken çalıştırmak istediğiniz uygulamaları ekleyin. Bilgi noktası modunda, yalnızca eklediğiniz uygulamalar çalışır; eklenmemiş uygulamalar çalışmaz. Cihaz bilgi noktası modunda olduğunda, önceden yüklenmiş tarayıcılar uygulama olarak çalışmaz. Bir tarayıcı gerekliyse [Managed Browser](../apps/manage-microsoft-edge.md) kullanabilirsiniz.
 
   Uygulama seçenekleriniz:
 

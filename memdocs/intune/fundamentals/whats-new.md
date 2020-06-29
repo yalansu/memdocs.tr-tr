@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ddfb0b2d7c8fa0b185416fc493bde5da8f0a475
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 89703c8aec11517417f9459391c431b9db75456c
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353658"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502298"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -58,6 +58,17 @@ ms.locfileid: "85353658"
 
 ## <a name="week-of-june-22-2020"></a>22 Haziran 2020 haftası
 
+### <a name="app-management"></a>Uygulama yönetimi
+
+#### <a name="newly-available-protected-apps-for-intune---7248952---"></a>Intune için yeni kullanılabilir korumalı uygulamalar<!-- 7248952 -->
+Aşağıdaki korumalı uygulamalar artık kullanılabilir:
+- BlueJeans görüntülü konferans
+- Intune için Cisco Jabber
+- Intune için Tableau Mobile
+- Intune için sıfır
+
+Korumalı uygulamalar hakkında daha fazla bilgi için bkz. [Microsoft Intune korumalı uygulamalar](../apps/apps-supported-intune-apps.md).
+
 ### <a name="monitor-and-troubleshoot"></a>İzleme ve sorun giderme
 
 #### <a name="use-endpoint-analytics-to-improve-user-productivity-and-reduce-it-support-costs---5653063---"></a>Kullanıcı üretkenliğini artırmak ve BT destek maliyetlerini azaltmak için Endpoint Analytics 'i kullanın<!-- 5653063 --> 
@@ -68,11 +79,11 @@ Kuruluşunuzdaki en önemli destek sorunlarını önceden bulmak ve gidermek iç
 
 ### <a name="device-security"></a>Cihaz güvenliği
 
-### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>Android için uyumluluk ilkelerinde Microsoft Defender ATP kullanma<!-- 4425686  -->
+#### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>Android için uyumluluk ilkelerinde Microsoft Defender ATP kullanma<!-- 4425686  -->
 
 Artık Intune 'U [Android cihazları Microsoft Defender Gelişmiş tehdit koruması](../protect/advanced-threat-protection.md#onboard-android-devices) (MICROSOFTDEFENDER ATP) uygulamasına eklemek için kullanabilirsiniz. Kayıtlı cihazlarınız eklendi olduktan sonra, Android için uyumluluk ilklarınız Microsoft Defender ATP 'den *tehdit düzeyi* sinyallerini kullanabilir. Bunlar, daha önce Windows 10 cihazlarında kullanabileceğiniz sinyallerdir.
 
-### <a name="configure-defender-atp-web-protection-for-android-devices---6185563-wnready---"></a>Android cihazlar için Defender ATP Web korumasını yapılandırma<!-- 6185563 WNReady -->
+#### <a name="configure-defender-atp-web-protection-for-android-devices---6185563-wnready---"></a>Android cihazlar için Defender ATP Web korumasını yapılandırma<!-- 6185563 WNReady -->
 
 Android cihazlar için Microsoft Defender Gelişmiş tehdit koruması 'nı (Microsoft Defender ATP) kullandığınızda, [Microsoft Defender ATP Web koruması](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android) 'nı, kimlik avı taraması özelliğini devre dışı bırakmak için yapılandırabilir veya taramanın VPN kullanmasını engelleyebilirsiniz.
 

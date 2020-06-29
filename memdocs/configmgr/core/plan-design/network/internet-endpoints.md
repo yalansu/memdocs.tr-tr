@@ -2,7 +2,7 @@
 title: İnternet erişimi gereksinimleri
 titleSuffix: Configuration Manager
 description: Configuration Manager özelliklerinin tam işlevselliğine izin vermek için İnternet uç noktaları hakkında bilgi edinin.
-ms.date: 06/12/2020
+ms.date: 06/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fb965ec6547ff1c06586464780b6db224b943000
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: 78958809aeed5db9d2a36d960b91572b91eafe05
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740784"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502366"
 ---
 # <a name="internet-access-requirements"></a>İnternet erişimi gereksinimleri
 
@@ -230,6 +230,8 @@ Microsoft 365 uygulamalarını kurumsal olarak dağıtmak ve güncelleştirmek i
 
 - `config.office.com`kurumsal dağıtımlar için Microsoft 365 uygulamalar için özel yapılandırma oluşturma
 
+- `contentstorage.osi.office.net`Office eklentisi hazırlığını desteklemek için<!-- MEMDocs#410 -->
+
 ## <a name="configuration-manager-console"></a>Configuration Manager konsolu
 
 Configuration Manager konsoluna sahip bilgisayarlar belirli özellikler için aşağıdaki Internet uç noktalarına erişim gerektirir:
@@ -267,6 +269,10 @@ Bu özellik hakkında daha fazla bilgi için bkz. [Community hub](../../servers/
 ## <a name="desktop-analytics"></a>Desktop Analytics
 
 Masaüstü Analizi bulut hizmeti için gerekli uç noktalar hakkında daha fazla bilgi için bkz. [veri paylaşımını etkinleştirme](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+
+## <a name="tenant-attach"></a>Kiracı ekleme
+
+Kiracı iliştirme özellikleri için gerekli uç noktalar hakkında daha fazla bilgi için bkz. [kiracı eklemeyi etkinleştirme](../../../tenant-attach/device-sync-actions.md#internet-endpoints).
 
 ## <a name="microsoft-public-ip-addresses"></a>Microsoft genel IP adresleri
 

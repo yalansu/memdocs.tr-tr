@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
-ms.openlocfilehash: bd846b0155a0baddad76d6027ffbd239d7dbf26f
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: ecc91168cc90af58c40903ea3d288eeaa82be7a0
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721899"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502247"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>Bulut yönetimi ağ geçidi hakkında sık sorulan sorular
 
@@ -87,6 +87,16 @@ Bir CMG üzerinden gönderilen hassas trafiğin güvenliğini sağlamak için bi
 Bir CMG dağıtmayı tercih ederseniz ve CMG etkin yönetim noktasında HTTPS iletişimi için PKI sertifikaları kullanıyorsanız, yönetim noktası özelliklerindeki **yalnızca İnternet Istemcilerine Izin verme** seçeneğini belirleyin. Bu ayar, iç istemcilerin ortamınızda HTTP yönetim noktalarını kullanmaya devam etmelerini sağlar.
 
 Gelişmiş HTTP kullanıyorsanız, bu ayarı yapılandırmanız gerekmez. İstemciler, doğrudan CMG etkin yönetim noktasıyla iletişim kurarken HTTP kullanmaya devam eder. Daha fazla bilgi için bkz. [GELIŞMIŞ http](../../../plan-design/hierarchy/enhanced-http.md).
+
+### <a name="what-are-the-differences-with-client-authentication-between-azure-ad-and-certificates"></a>Azure AD ve sertifikaları arasında istemci kimlik doğrulaması farkları nelerdir?
+<!-- MEMDocs#277 -->
+CMG hizmetinde kimlik doğrulaması yapmak için Azure AD veya cihazlar için bir [istemci kimlik doğrulama sertifikası](certificates-for-cloud-management-gateway.md#bkmk_clientauth) kullanabilirsiniz.
+
+Geleneksel Windows istemcilerini Active Directory etki alanına katılmış kimlik ile yönetiyorsanız, iletişim kanalının güvenliğini sağlamak için PKI sertifikalarına ihtiyacı vardır. Bu istemciler Windows 8.1 ve Windows 10 ' da bulunabilir. Tüm CMG destekli özellikleri kullanabilirsiniz, ancak yazılım dağıtımı yalnızca cihazlarla sınırlıdır. Cihazın İnternet 'e gezinme veya 2002 veya sonraki bir sürümü ile birlikte Configuration Manager istemcisini yükleyerek belirteç kimlik doğrulaması kullanın.
+
+Ayrıca, Azure AD 'ye karma veya saf bulut etki alanına katılmış olan modern kimlik ile Windows 10 istemcilerini yönetebilirsiniz. İstemciler, PKI sertifikaları yerine kimlik doğrulaması yapmak için Azure AD kullanır. Azure AD 'nin kullanılması daha basit PKI sistemlerini kurmak, yapılandırmak ve sürdürmek için daha basittir. Aynı yönetim etkinliklerini ve kullanıcıya yazılım dağıtımını yapabilirsiniz. Ayrıca, istemciyi uzak bir cihaza yüklemek için ek yöntemler de sağlar.
+
+Microsoft, cihazların Azure AD 'ye katılmasını öneriyor. Internet tabanlı cihazlar Configuration Manager kimlik doğrulaması yapmak için Azure AD kullanabilir. Ayrıca, cihazın İnternet üzerinde veya iç ağa bağlı olup olmadığı hem cihaz hem de Kullanıcı senaryolarına olanak sağlar. Daha fazla bilgi için bkz. [Azure AD kimlik kullanarak Istemciyi yükleyip kaydetme](../../deploy/deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

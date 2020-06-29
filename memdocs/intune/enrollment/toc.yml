@@ -88,6 +88,20 @@
         - name: Samsung Knox Mobil Kayıt
           href: android-samsung-knox-mobile-enroll.md
           displayName: kda; kme
+        - name: Android Enterprise güvenlik yapılandırma altyapısı
+          items:
+            - name: Android Enterprise güvenlik yapılandırma altyapısı
+              href: android-configuration-framework.md
+            - name: Altyapı dağıtım metodolojisi
+              href: framework-deployment-methodology.md
+            - name: Cihaz kayıt anlaşması kısıtlamaları
+              href: device-enrollment-restrictions.md
+            - name: Uygulama yapılandırma ilkelerini ayarlama
+              href: android-app-configuration-policies.md
+            - name: Android iş profili güvenlik ayarları
+              href: android-work-profile-security-settings.md
+            - name: Android tam olarak yönetilen güvenlik ayarları
+              href: android-fully-managed-security-settings.md
     - name: iOS/iPadOS kaydını ayarlama
       href: ios-enroll.md
       items:

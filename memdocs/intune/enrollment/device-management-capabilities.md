@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de83a021343b733816330bc9be94c57a57afd9f1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 43d412fda772fd36710895496087e97d782b8dba
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989847"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502638"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Microsoft Intune’un kayıtlı cihaz yönetimi özellikleri
 
@@ -55,7 +55,7 @@ Kullanıcılar uygulamaları yüklemek, cihazlarını kaydetmek veya kaydı kald
 |Mobil uygulama yönetimi|Mobil uygulama yönetimini kullanarak, hem Intune tarafından yönetilen hem de yönetilmeyen tüm cihazlarda uygulamalar için kısıtlamaları yapılandırır. Kopyalama ve yapıştırma, verilerin dış yedeklemesi ve uygulamalar arasında veri aktarımı gibi işlemleri kısıtlayarak şirket verilerinizin güvenliğini artırabilirsiniz.|[Configure and deploy mobile application management policies in the Microsoft Intune console (Microsoft Intune konsolunda mobil uygulama yönetimi ilkelerini yapılandırma ve dağıtma)](../developer/app-wrapper-prepare-android.md)|
 |iOS mobil uygulama yapılandırması|, Kullanıcı uygulamayı çalıştırdığında gerekli olabilecek iOS/ıpados uygulamalarına yönelik ayarları sağlamak için mobil uygulama yapılandırma ilkelerini kullanır. Örneğin, uygulama kullanıcının bağlantı noktası numarasını veya oturum açma bilgilerini belirtmesini isteyebilir. Uygulama yapılandırmasını daha kolay hale getirebilirsiniz ve destek çağrılarının sayısını azaltabilirsiniz.|[İOS/ıpados uygulamalarını Microsoft Intune 'de mobil uygulama yapılandırma ilkeleriyle yapılandırma](../apps/app-configuration-policies-use-ios.md)|
 |iOS/ıpados mobil uygulama sağlama profilleri|, Süresi dolmak üzere olan iOS/ıpados uygulamalarına sağlama profilleri dağıtmanıza yardımcı olur. |[Uygulamalarınızın süresinin dolmasını engellemek için iOS/ıpados mobil sağlama profili ilkelerini kullanın](../apps/app-provisioning-profile-ios.md)|
-|Yönetilen tarayıcı|Cihaz kullanıcılarının ziyaret edebileceği web sitelerini denetlemek için yönetilen tarayıcı profilleri yapılandırır. Ayrıca, yönetilen tarayıcıya mobil uygulama yönetimi ilkeleri de uygulayabilirsiniz.|[Microsoft Intune ile yönetilen tarayıcı ilkelerini kullanarak Internet erişimini yönetme](../apps/app-configuration-managed-browser.md)|
+|Yönetilen tarayıcı|Cihaz kullanıcılarının ziyaret edebileceği web sitelerini denetlemek için yönetilen tarayıcı profilleri yapılandırır. Ayrıca, yönetilen tarayıcıya mobil uygulama yönetimi ilkeleri de uygulayabilirsiniz.|[Microsoft Intune ile yönetilen tarayıcı ilkelerini kullanarak Internet erişimini yönetme](../apps/manage-microsoft-edge.md)|
 |İş İçin Windows Hello|Parolaları, akıllı kartları ya da sanal akıllı kartları değiştirmek için Windows 10’da şirket içi Active Directory’nin veya Azure Active Directory’nin kullanıldığı alternatif bir oturum açma yöntemi olan İş İçin Windows Hello’yu tümleştirmenize olanak tanır.|[Microsoft Intune ile cihazlarda İş İçin Windows Hello ayarlarını denetleme](../protect/windows-hello.md)|
 |Toplu satın alınan uygulamalar|Bir toplu satın alma programı aracılığıyla lisans bilgilerini uygulama mağazasından içeri aktararak, kaç lisans kullandığınızı izleyerek ve sahip olduğunuzdan fazla uygulama kopyası yüklemenizi önleyerek satın aldığınız uygulamaları yönetmenize yardımcı olur.|[Microsoft Intune kullanarak toplu satın alınan uygulamaları yönetme](../apps/vpp-apps.md)|
 
