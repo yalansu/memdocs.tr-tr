@@ -3,12 +3,12 @@ title: Microsoft Endpoint Configuration Manager belgeleri
 summary: 'Microsoft Endpoint Manager’ın şu bileşenlerine yönelik resmi ürün belgeleri: Configuration Manager, ortak yönetim ve Desktop Analytics'
 metadata:
   ms.topic: hub-page
-  ms.openlocfilehash: f3251366204ef8954b87bcd630117f341844554b
-  ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+  ms.openlocfilehash: 3c668312b27017fa499914cee74597aae0f19bba
+  ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 06/08/2020
-  ms.locfileid: "84506240"
+  ms.lasthandoff: 07/01/2020
+  ms.locfileid: "85590941"
 highlightedContent:
   items:
   - title: Yenilikler
@@ -173,11 +173,11 @@ conceptualContent:
       url: ./compliance/index.yml
   - title: Koruma
     links:
-    - text: Windows Defender
+    - text: Endpoint protection
       url: ./protect/deploy-use/endpoint-protection.md
       itemType: overview
-    - text: WDATP
-      url: ./protect/deploy-use/windows-defender-advanced-threat-protection.md
+    - text: Microsoft Defender Gelişmiş Tehdit Koruması
+      url: ./protect/deploy-use/defender-advanced-threat-protection.md
       itemType: how-to-guide
     - text: BitLocker yönetimi
       url: ./protect/plan-design/bitlocker-management.md
