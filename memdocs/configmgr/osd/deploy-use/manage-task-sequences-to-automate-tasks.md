@@ -10,12 +10,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b38b0c8f28645fa0aae66058b0c93bd8beffc470
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: f79829b7cd6ec70764a20fb05f4438176c41b470
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078490"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591043"
 ---
 # <a name="manage-task-sequences-to-automate-tasks"></a>Görevleri otomatikleştirmek için görev dizilerini yönetme
 
@@ -190,7 +190,8 @@ Görev sırası başladığında Çoğu senaryoda şu anda etkin olan güç plan
 
 <!-- 5554928 -->
 
-Yüksek performans için bu ayarı etkinleştirmek veya devre dışı bırakmak üzere yeni bir görev dizisi dağıtımı oluşturmanız gerekir. Yeni ayar mevcut dağıtımlarda görüntülenir, ancak geçerli değildir.<!-- SCCMDocs#2107 -->
+Genellikle, görev dizisi özelliklerindeki ayarları değiştirdiğinizde, mevcut tüm dağıtımları günceller. Görev sırası özelliklerindeki bu performans ayarını değiştirdiğinizde, görev dizisinin mevcut dağıtımlarını etkilemez. Yüksek performans için bu ayarı etkinleştirmek veya devre dışı bırakmak üzere yeni bir görev dizisi dağıtımı oluşturun.
+<!-- MEMDocs#437, SCCMDocs#2107 -->
 
 ## <a name="distribute-referenced-content"></a><a name="BKMK_DistributeTS"></a>Başvurulan içeriği dağıtma  
 
@@ -313,7 +314,7 @@ Görev dizilerini, görev sırasını seçtiğinizde ek eylemleri kullanarak yö
 
 Daha fazla bilgi için bkz. [görev dizisi düzenleyicisini kullanma](../understand/task-sequence-editor.md#bkmk_edit).
 
-### <a name="enable"></a>Etkinleştirme
+### <a name="enable"></a>Etkinleştir
 
 İstemcilerin çalıştırabilmeleri için görev dizisini etkinleştirilir. Etkinleştirildikten sonra bir görev sırasını yeniden dağıtmanız gerekmez.  
 

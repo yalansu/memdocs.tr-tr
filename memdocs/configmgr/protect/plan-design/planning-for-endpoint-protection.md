@@ -9,12 +9,12 @@ ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 720b5060c913ff3157624c4b6060802af396d221
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2c733ef03482ddfc1f3e6502d7f5fe8ae0d20b76
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722175"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590516"
 ---
 # <a name="planning-for-endpoint-protection-in-configuration-manager"></a>Configuration Manager Endpoint Protection planlaması
 
@@ -81,7 +81,7 @@ Configuration Manager Endpoint Protection Endpoint Protection istemci yapıland�
 
 ## <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender Gelişmiş Tehdit Koruması
 
-Configuration Manager (geçerli dal) sürüm 1606 ' den başlayarak, Endpoint Protection daha önce Windows Defender ATP olarak bilinen Microsoft Defender Gelişmiş tehdit koruması 'nı (ATP) yönetmenize ve izlemenize yardımcı olabilir. Microsoft Defender ATP, kuruluşların ağlarında gelişmiş saldırıları algılamasına, araştırmasına ve yanıt vermesine yardımcı olacak bir hizmettir. Bkz. [Microsoft Defender Gelişmiş tehdit koruması](../deploy-use/windows-defender-advanced-threat-protection.md).
+Configuration Manager (geçerli dal) sürüm 1606 ' den başlayarak, Endpoint Protection daha önce Windows Defender ATP olarak bilinen Microsoft Defender Gelişmiş tehdit koruması 'nı (ATP) yönetmenize ve izlemenize yardımcı olabilir. Microsoft Defender ATP, kuruluşların ağlarında gelişmiş saldırıları algılamasına, araştırmasına ve yanıt vermesine yardımcı olacak bir hizmettir. Bkz. [Microsoft Defender Gelişmiş tehdit koruması](../deploy-use/defender-advanced-threat-protection.md).
 
 ## <a name="endpoint-protection-workflow"></a>Endpoint Protection İş Akışı  
  Configuration Manager hiyerarşinizde Endpoint Protection uygulamak üzere iş akışını anlamanıza yardımcı olması için aşağıdaki diyagramı kullanın.  

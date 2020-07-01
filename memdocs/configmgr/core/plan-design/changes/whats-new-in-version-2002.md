@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4100f8747418bff769a7830fa63383ce545895ce
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: 58819d764f69ab7e1cc928e14189e01470deb73b
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721865"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590448"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 2002 ' deki yenilikler
 
@@ -325,9 +325,9 @@ Daha fazla bilgi için bkz. [Office 365 güncelleştirmelerini bağlantısı kes
 ## <a name="protection"></a><a name="bkmk_protect"></a>Korunmasına
 
 ### <a name="expand-microsoft-defender-advanced-threat-protection-atp-onboarding"></a>Microsoft Defender Gelişmiş tehdit koruması (ATP) ekleme 'yi Genişlet
-
+ 
 <!-- 5229962 -->
-Configuration Manager, cihazları Microsoft Defender ATP 'ye ekleme desteğini genişletti. Daha fazla bilgi için bkz. [Microsoft Defender Gelişmiş tehdit koruması](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices).
+Configuration Manager, cihazları Microsoft Defender ATP 'ye ekleme desteğini genişletti. Daha fazla bilgi için bkz. [Microsoft Defender Gelişmiş tehdit koruması](../../../protect/deploy-use/defender-advanced-threat-protection.md).
 
 ### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a>Microsoft Endpoint Manager Yönetim Merkezi aracılığıyla Microsoft Defender ATP 'ye Configuration Manager istemcileri ekleme
 <!--5691658-->

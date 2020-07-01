@@ -10,12 +10,12 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5bdfd566682156e39e1dbed7c55af85b20a78671
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 0a7ee54e3bfa4a4231d0d57b48caa49cf9869b76
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906672"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591111"
 ---
 # <a name="endpoint-protection"></a>Uç Nokta Koruma
 
@@ -80,7 +80,7 @@ Windows 10 ve Windows Server 2016 bilgisayarlarıyla başlayarak, Windows Defend
 
 ## <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender Gelişmiş Tehdit Koruması
 
-Endpoint Protection, önceden Windows Defender ATP olarak bilinen Microsoft Defender Gelişmiş tehdit koruması 'nı (ATP) yönetip izler. Microsoft Defender ATP hizmeti, kuruluşların kurumsal ağdaki gelişmiş saldırıları algılamasına, araştırmasına ve yanıt vermesine yardımcı olur. Daha fazla bilgi için bkz. [Microsoft Defender Gelişmiş tehdit koruması](windows-defender-advanced-threat-protection.md).
+Endpoint Protection, önceden Windows Defender ATP olarak bilinen Microsoft Defender Gelişmiş tehdit koruması 'nı (ATP) yönetip izler. Microsoft Defender ATP hizmeti, kuruluşların kurumsal ağdaki gelişmiş saldırıları algılamasına, araştırmasına ve yanıt vermesine yardımcı olur. Daha fazla bilgi için bkz. [Microsoft Defender Gelişmiş tehdit koruması](defender-advanced-threat-protection.md).
 
 ## <a name="endpoint-protection-workflow"></a>Endpoint Protection İş Akışı  
  Configuration Manager hiyerarşinizde Endpoint Protection uygulamak üzere iş akışını anlamanıza yardımcı olması için aşağıdaki diyagramı kullanın.  

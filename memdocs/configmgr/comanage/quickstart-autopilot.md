@@ -10,12 +10,12 @@ ms.assetid: e3e3c97f-5945-49ab-a622-9f6fe6b9737e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b97f9bb6be00129e0b88dc3943af1de166a801d4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 91b938b5ab64616a35773406cd18b54de80b40e7
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711290"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590406"
 ---
 # <a name="windows-autopilot-with-co-management"></a>Ortak yönetim ile Windows Autopilot
 
@@ -41,7 +41,7 @@ Aşağıdaki videoda, üst düzey Program Yöneticisi Danny Gullory ve Principal
 
 
 
-## <a name="benefits"></a>Avantajlar
+## <a name="benefits"></a>Yararları
 
 Ortak yönetimi ve Autopilot birlikte kullandığınızda, ağınızı girerken yeni cihazların aynı yönetim durumunda olduğundan emin olun. Bu kurulumda, cihazlar Intune 'A kaydedilir ve bir Configuration Manager istemcisine sahiptir.  Yeni Windows 10 sağlama modelini kullanmanızı sağlar ve özel işletim sistemi görüntülerini oluşturma, bakımını yapma ve güncelleştirme ihtiyacını ortadan kaldırmanıza yardımcı olur. 
 
@@ -77,9 +77,9 @@ Autopilot ile, artık kendi kendine Dağıtım modunu kullanarak cihazlara veya 
 
 ## <a name="case-study"></a>Örnek olay incelemesi
 
-Almanya lojistik ve kıl navlun şirketi DB Kıenker, çalışan üretkenliğini artırmak ve BT ekiplerinin günlük destek görevlerinde çalışmasını sağlamak için Autopilot kullanır. Kıenker geleneksel görüntü merkezinden uzağa taşındı ve bulut aracılığıyla sağlama ile değiştirildi. Artık yeni cihazları hızla çalışır duruma getirmek için Azure AD-JOIN ve Intune 'U kullanır. 
+Almanya lojistik ve Kııl nakliye şirketi DB Schenker, çalışan üretkenliğini artırmak ve BT ekiplerinin günlük destek görevlerinde çalışmasını sağlamak için Autopilot kullanır. DB Schenker geleneksel görüntü merkezinden uzağa taşındı ve bulut aracılığıyla sağlama ile değiştirildi. Artık yeni cihazları hızla çalışır duruma getirmek için Azure AD-JOIN ve Intune 'U kullanır. 
 
-Kendi uzak çalışanları, BT Hizmetleri ile bir konuma seyahat etmek yerine, şimdi Windows Autopilot kullanmaktadır. Çalışanların donanımını doğrudan üreticiden yerel alan ofisine sevk ederler. Çalışan, yeni cihazı internet 'e bağlar ve Azure AD kimlik bilgileriyle oturum açtıklarında. Daha sonra cihaz, Schenker 'ın BT departmanı kullanıcının bireysel profiline atadığı uygulamalara ve hizmetlere bağlanır.
+Kendi uzak çalışanları, BT Hizmetleri ile bir konuma seyahat etmek yerine, DB Schenker artık Windows Autopilot kullanmaktadır. Çalışanların donanımını doğrudan üreticiden yerel alan ofisine sevk ederler. Çalışan, yeni cihazı internet 'e bağlar ve Azure AD kimlik bilgileriyle oturum açtıklarında. Daha sonra cihaz, DB Schenker 'ın BT departmanı kullanıcının bireysel profiline atadığı uygulamalara ve hizmetlere bağlanır.
 
 Daha fazla bilgi için bkz. [küresel lojistik firması merkezileştirme, modern dijital çalışma alanıyla çalışanları tek tek](https://customers.microsoft.com/story/db-schenker-travel-transportation-windows-10).
 
@@ -93,7 +93,7 @@ Kullanıcılarınız için daha iyi bir kullanıcı deneyimi oluşturarak kurulu
 
 ## <a name="configure"></a>Yapılandırma
 
-Daha fazla bilgi için aşağıdaki makalelere bakın:
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 [Intune kullanarak Windows Autopilot profilleri oluşturma](https://docs.microsoft.com/intune/enrollment-autopilot)
 

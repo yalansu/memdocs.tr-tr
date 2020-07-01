@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cb91e62c4ffce37068b2de5e125865e28ff8c53b
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: ffd6487297bb682ef9bda7c5bf5ee9cb3beede15
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878948"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590465"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager 'de içerik yönetimi için temel kavramlar
 
@@ -110,7 +110,7 @@ Aşağıdaki tabloyu kullanarak bu teknolojilerin önemli özelliklerini karşı
 
 | Özellik  | Eş &nbsp; önbellek  | Teslim &nbsp; iyileştirme  | BranchCache  |
 |---------|---------|---------|---------|
-| Alt ağlar arasında | Yes | Yes | Hayır |
+| Alt ağlar arasında | Yes | Evet | Hayır |
 | Bant genişliğini kısıtlama | Evet (BITS) | Evet (yerel) | Evet (BITS) |
 | Kısmi içerik | Yes | Yes | Yes |
 | Diskte denetim önbelleği boyutu | Yes | Yes | Yes |
@@ -147,7 +147,7 @@ Daha fazla bilgi için bkz. [Windows BranchCache Için destek](../configs/suppor
 <!-- 1324696 -->
 Şirket ağınızda ve Uzak ofislerde içerik dağıtımını tanımlamak ve düzenlemek için Configuration Manager sınır gruplarını kullanırsınız. [Windows teslim iyileştirme](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) , Windows 10 cihazları arasında içerik paylaşmak için bulut tabanlı ve eşler arası bir teknolojidir. Dağıtım Iyileştirmesini, içerik eşleri arasında paylaşırken sınır gruplarınızı kullanacak şekilde yapılandırın. İstemci ayarları, sınır grubu tanımlayıcısını istemcide teslim Iyileştirme grubu tanımlayıcısı olarak uygular. İstemci, teslim Iyileştirme bulut hizmeti ile iletişim kurduğunda, içerik ile eşleri bulmak için bu tanımlayıcıyı kullanır. Daha fazla bilgi için bkz. [teslim iyileştirme](../../clients/deploy/about-client-settings.md#delivery-optimization) istemci ayarları.
 
-Teslim Iyileştirme, Windows 10 kalite güncelleştirmeleri için hızlı yükleme dosyalarının Windows 10 güncelleştirme teslimini iyileştirmek için önerilen teknolojiden oluşur. Configuration Manager sürüm 1910 ' den başlayarak, dağıtım Iyileştirmesi bulut hizmetine yönelik Deliveryınternet erişimi, eşler arası işlevselliğini kullanmak için bir gereksinimdir. Gerekli Internet uç noktaları hakkında daha fazla bilgi için bkz. [dağıtım iyileştirmesi hakkında sık sorulan sorular](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). En iyi duruma getirme, tüm Windows güncelleştirmeleri için kullanılabilir. Daha fazla bilgi için bkz. [Windows 10 güncelleştirme teslimini iyileştirme](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
+Teslim Iyileştirme, Windows 10 kalite güncelleştirmeleri için hızlı yükleme dosyalarının Windows 10 güncelleştirme teslimini iyileştirmek için önerilen teknolojiden oluşur. Configuration Manager sürüm 1910 ' den başlayarak, teslim Iyileştirme bulut hizmetine Internet erişimi, eşler arası işlevselliğini kullanmak için bir gereksinimdir. Gerekli Internet uç noktaları hakkında daha fazla bilgi için bkz. [dağıtım iyileştirmesi hakkında sık sorulan sorular](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). En iyi duruma getirme, tüm Windows güncelleştirmeleri için kullanılabilir. Daha fazla bilgi için bkz. [Windows 10 güncelleştirme teslimini iyileştirme](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
 
 
 ## <a name="microsoft-connected-cache"></a>Microsoft Bağlı Önbellek

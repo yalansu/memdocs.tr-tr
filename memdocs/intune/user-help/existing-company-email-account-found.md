@@ -1,11 +1,11 @@
 ---
-title: Bir mevcut şirket e-posta hesabı bulundu | Microsoft Docs
-description: İş veya okul e-posta hesabınıza yeniden erişebilmeniz için cihazınıza güncelleştirme uygulama yöntemleri anlatılmaktadır.
+title: Mevcut iş e-posta hesabı bulundu | Microsoft Docs
+description: İş veya okul e-postanıza yeniden erişebilmek için cihazınızı nasıl güncelleşbileceğinizi açıklar.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/17/2018
+ms.date: 06/29/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,29 +15,28 @@ ms.assetid: 74c51f7b-7bd8-45cf-99bd-02d1972267cb
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: chrisgre
+ms.reviewer: samyada
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: c6917c2ad2650ae093293ba172934661a4f9863f
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 78beb08555a9c276bec79a65bb10bb9dad816926
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881282"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590992"
 ---
-# <a name="an-existing-company-email-account-was-found"></a>Bir mevcut şirket e-posta hesabı bulundu
+# <a name="an-existing-email-account-was-found"></a>Var olan bir e-posta hesabı bulundu
 
-Cihazınızın yönetilebilmesi için iş veya okul e- *posta hesabınıza mobil* cihaz erişimi almış olabilirsiniz. Cihazınız artık yönetilmiyorsa şunları yapmanızı öneririz:
+Kayıt öncesinde cihazınızda iş e-postanızı ayarlarsanız, kuruluşunuz kaldırmanız gerekebilir. 
 
-* Mevcut iş e-posta hesabının cihazınızdan bağlantısını kesin.
-* Şirket Portalı uygulamasından cihaz ayarlarını yeniden eşitleyin.  
+Bunu yapmak, kuruluşunuzun ağ ve güvenlik gereksinimlerini karşılayan bir e-posta profiliyle ayarlamanıza olanak sağlar. Bağlantıyı kestikten sonra yalnızca cihazınızı eşitlemeniz gerekir ve e-postanıza yeniden erişim elde edersiniz. 
 
-Bu adımlar, cihazınızın şirketinizin güvenlik gereksinimlerini karşıladığından ve e-postalarınızın güvende kalmasını sağlayacaktır.
+Var olan hesabın bağlantısını kesmek ve cihaz ayarlarını güncelleştirmek için aşağıdaki adımları izleyin. Bu adımları tamamlamazsanız, iş hesabınıza yönelik mobil erişiminizi kaybedebilir veya bunlarla sınırlı olabilirsiniz.
 
-1. Cihazınızda **Ayarlar** ' a gidin ve bağlı hesaplarınızı bulun. İOS 11 + cihazında, örneğin, **parola & hesapları**' nı seçin.
+1. Cihazınızda **Ayarlar** ' a gidin ve bağlı hesaplarınızı bulun. İOS 11 + cihazında, örneğin, **Password & hesapları**' nı seçersiniz.
  
-2. İş e-posta hesabınızı seçin ve kaldırın.
+2. İş e-postanıza bağladığınız hesabı seçin ve kaldırın. 
 
 3. Cihazınızda Şirket Portalı uygulamasını açın.  
 
@@ -45,6 +44,8 @@ Bu adımlar, cihazınızın şirketinizin güvenlik gereksinimlerini karşılad�
 
 5. **Ayarları denetle**' yi seçin. Birkaç dakika içinde cihazınız yeni e-posta ayarlarınızı eşitler.
 
-6. İş veya okul e-posta hesabınızda oturum açın.
+6. E-posta hesabınızda oturum açın. 
+
+## <a name="next-steps"></a>Sonraki adımlar
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

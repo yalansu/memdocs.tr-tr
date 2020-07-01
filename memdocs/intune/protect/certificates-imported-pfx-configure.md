@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 06/29/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13824c82b426e1efb00dce2db7c9f4a2dd5bb9ee
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9bf55564cabce9a060c15100ad974c59bf858b15
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990341"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591128"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Intune ile içeri aktarılan PKCS sertifikalarını yapılandırma ve kullanma
 
@@ -46,7 +46,7 @@ Intune, aşağıdaki platformlar için PFX sertifikalarının içeri aktarımın
 - Android kurumsal-tam yönetilen
 - Android kurumsal Iş profili
 - iOS/iPadOS
-- macOS
+- Mac OS
 - Windows 10
 
 ## <a name="requirements"></a>Gereksinimler
@@ -95,7 +95,7 @@ Bir kullanıcıya **içeri aktarılan BIR PFX sertifikasını** dağıtmak için
 
 3. *Microsoft Intune Için PFX Sertifika bağlayıcısını* , bağlayıcıyı yükleyeceğiniz sunucudan erişilebilen bir konuma indirmek için yönergeleri izleyin.
 
-4. İndirme tamamlandıktan sonra, sunucusunda oturum açın ve yükleyiciyi (PfxCertificateConnectorBootstrapper. exe) çalıştırın.  
+4. İndirme tamamlandıktan sonra, sunucusunda oturum açın ve yükleyiciyi çalıştırın (PfxCertificateConnectorBootstrapper.exe).  
    - Varsayılan yükleme konumunu kabul ettiğinizde, bağlayıcı ' a yüklenir `Program Files\Microsoft Intune\PFXCertificateConnector` .
    - Bağlayıcı hizmeti yerel sistem hesabının altında çalışır. İnternet erişimi için bir proxy gerekliyse, yerel hizmet hesabının sunucudaki proxy ayarlarına erişediğini doğrulayın.
 
@@ -227,7 +227,7 @@ Sertifikaları Intune’da içeri aktardıktan sonra bir **PKCS içeri aktarılm
    - **Platform**: cihazlarınızın platformunu seçin.
    - **Profil**: **PKCS içeri aktarılan sertifikası** seçin
 
-4. **Oluştur**’u seçin.
+4. **Oluştur**'u seçin.
 
 5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
    - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, *tüm şirket Için PKCS içeri aktarılmış sertifika profilidir*.
@@ -271,6 +271,12 @@ Aşağıdaki iş ortakları, PFX sertifikalarını Intune 'a aktarmak için kull
 DigiCert PKI platform hizmetini kullanıyorsanız, PFX sertifikalarını Intune 'a aktarmak için, **Intune S/MIME sertifikaları Için DigiCert Içeri aktarma aracını** kullanabilirsiniz. Bu aracın kullanımı, bu makalenin önceki kısımlarında açıklandığı şekilde [PFX sertifikalarını Intune 'A aktarma](#import-pfx-certificates-to-intune) bölümündeki yönergeleri izlemeye yönelik gereksinimi değiştirir.
 
 Aracının nasıl edinileceği dahil olmak üzere DigiCert Içeri aktarma aracı hakkında daha fazla bilgi için bkz https://knowledge.digicert.com/tutorials/microsoft-intune.html . DigiCert Bilgi Bankası 'nda.
+
+### <a name="keytalk"></a>KeyTalk
+
+KeyTalk hizmetini kullanıyorsanız, hizmetini PFX sertifikalarını Intune 'a aktaracak şekilde yapılandırabilirsiniz. Tümleştirmeyi tamamladıktan sonra, bu makalenin önceki kısımlarında açıklandığı üzere [PFX sertifikalarını Intune 'A Içeri aktarma](#import-pfx-certificates-to-intune) bölümündeki yönergeleri izlemeniz gerekmez.
+
+KeyTalk 'in Intune ile tümleştirmesi hakkında daha fazla bilgi edinmek için bkz https://keytalk.com/support . keytalk Bilgi Bankası 'nda.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: Configuration Manager ile tümleştirilmiş masaüstü Analizi hizmetine genel bakış.
-ms.date: 03/03/2020
+ms.date: 06/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 774e77f62ee31daa89eeb4273f3c1e7db68a374d
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 3a1aa67c51998de62f6390db848a458876327ea7
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353488"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590924"
 ---
 # <a name="what-is-desktop-analytics"></a>Desktop Analytics nedir?
 
@@ -49,7 +49,7 @@ Derinlemesine bir demo için 10:00 'e atlayın.
 >
 > Windows Analytics 'in özellikleri, masaüstü Analizi hizmetinde birleştirilir. Ayrıca, masaüstü Analizi Configuration Manager ile daha sıkı bir şekilde tümleşiktir. Daha fazla bilgi için bkz. [Windows Analytics müşterileri Için SSS](faq.md#existing-windows-analytics-customers).
 
-## <a name="benefits"></a>Avantajlar
+## <a name="benefits"></a>Yararları
 
 Birçok müşteri, Windows 10 ' da mevcut olan ve güncel bir sorun ile karşılaşıyor. Birincil zorluk, uygulamaları test ediyor. Bu işlem genellikle el ile yapılır. BT yöneticileri ve uygulama sahiplerinin mevcut uygulamaları sürekli analiz etmesine yönelik zaman alıcı bir işlemdir. Sonra ortaya çıkan tüm sorunları düzeltin.
 
@@ -63,13 +63,16 @@ Masaüstü Analizi aşağıdaki avantajları sağlar:
 
 - **Configuration Manager tümleştirme**: hizmet bulutu-mevcut şirket içi altyapınızı mümkün. Windows 'u cihazlarınızda dağıtmak ve yönetmek için bu verileri ve çözümlemeyi kullanın.  
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Masaüstü analizlerini kullanmak için ortamınızın aşağıdaki önkoşulları karşıladığından emin olun.
 
 ### <a name="technical"></a>Teknik
 
 - [Genel yönetici](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) izinlerine sahip etkin bir genel Azure aboneliği. [Microsoft hesapları](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) desteklenmez.  
+
+    > [!IMPORTANT]
+    > Masaüstü analizi, Azure genel 'de barındırılan ve Windows tanılama verilerini kullanan bir Windows hizmetidir. Azure genel hizmeti ABD kamu müşterileri tarafından kullanılabilir, ancak [ABD devlet topluluğu uyumluluk (GCC)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) özniteliklerini karşılamıyor. Microsoft ürün ve hizmetlerinin uyumluluk tekliflerinin bir listesi için bkz. [Microsoft Güven Merkezi](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide). Masaüstü analizi, GCC High veya ABD Savunma Bakanlığı (DOD) müşterileri için kullanılamaz. Masaüstü Analizi çalışma alanlarını barındırmak için Azure Kamu aboneliklerinin kullanılması desteklenmez.
 
     - Çalışma alanınızı ve aşağıdaki rolleri **ayarlamak**Için **çalışma alanı sahibi** izinleri:  
 

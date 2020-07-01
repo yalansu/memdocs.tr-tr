@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4298a6a66d60d79d05f8b5cdc9ff8caa0e7f4426
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 070c616ed8411bcd90b2d3edb12b04edd57241e1
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074036"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590482"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Sürüm 1606 ' deki yenilikler&#39;Configuration Manager
 
@@ -198,7 +198,7 @@ Configuration Manager, Etkinleştirme Kilidi’ni yönetmenize iki şekilde yard
 
 Endpoint Protection, Microsoft Defender Gelişmiş tehdit koruması 'nı (ATP) yönetmenize ve izlemenize yardımcı olabilir. Microsoft Defender ATP, kuruluşların ağlarında gelişmiş saldırıları algılamasına, araştırmasına ve yanıt vermesine yardımcı olacak yeni bir hizmettir. Configuration Manager ilkeleri, Windows 10, sürüm 1607 (derleme 14328) veya sonraki sürümleri çalıştıran yönetilen bilgisayarları eklemenize ve izlemenize yardımcı olabilir.
 
-Ayrıntılar için bkz. [Microsoft Defender Gelişmiş tehdit koruması](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md).
+Ayrıntılar için bkz. [Microsoft Defender Gelişmiş tehdit koruması](../../../protect/deploy-use/defender-advanced-threat-protection.md).
 
 ### <a name="device-categories"></a>Cihaz kategorileri
 Microsoft Intune ile Configuration Manager kullanırken cihazları cihaz koleksiyonlarına otomatik olarak yerleştirmek için kullanılabilecek cihaz kategorileri oluşturabilirsiniz. Daha sonra kullanıcıların Intune 'A cihaz kaydettiğinde bir cihaz kategorisi seçmesi gerekir. Ayrıca, Configuration Manager konsolundan bir cihazın kategorisini de değiştirebilirsiniz.
