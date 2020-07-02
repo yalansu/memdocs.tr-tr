@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b34235f5e8a2badd61e39f43f8a5cc724f64dbd9
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 60147f6b54ce608183914e00b65317abe0a580b6
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383283"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85820044"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>iOS için Microsoft Intune Uygulama SDK’sı geliştirici kılavuzu
 
@@ -120,17 +120,17 @@ Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin
      ![Intune Uygulama SDK'sı iOS: Paket kaynaklarını kopyalama](./media/app-sdk-ios/intune-app-sdk-ios-copy-bundle-resources.png)
          
 2. Aşağıdaki iOS çerçevelerini projeye ekleyin:  
--  MessageUI.framework  
--  Security.framework  
--  CoreServices. Framework  
--  SystemConfiguration.framework  
--  libsqlite3.tbd  
--  libc++.tbd  
--  ImageIO.framework  
--  LocalAuthentication.framework  
--  AudioToolbox.framework  
--  QuartzCore.framework  
--  WebKit.framework
+   -  MessageUI.framework  
+   -  Security.framework  
+   -  CoreServices. Framework  
+   -  SystemConfiguration.framework  
+   -  libsqlite3.tbd  
+   -  libc++.tbd  
+   -  ImageIO.framework  
+   -  LocalAuthentication.framework  
+   -  AudioToolbox.framework  
+   -  QuartzCore.framework  
+   -  WebKit.framework
 
 3. Her bir proje hedefinde **Özellikler**’i seçip **Anahtar Zinciri Paylaşımı** anahtarını etkinleştirerek anahtar zinciri paylaşımını etkinleştirin (önceden etkinleştirilmemişse). Anahtarlık paylaşımı, sonraki adıma devam edebilmeniz için gereklidir.
 
@@ -496,13 +496,14 @@ Uygulamalar `isSaveToAllowedForLocation` veya `isOpenFromAllowedForLocation` API
 * IntuneMAMSaveLocationOneDriveForBusiness
 * IntuneMAMSaveLocationSharePoint
 * IntuneMAMSaveLocationLocalDrive
+* IntuneMAMSaveLocationCameraRoll
 * Intunemamsavelocationaccountdocument
 
 Uygulamalar, OneDrive İş gibi “yönetilen” veya “kişisel” olarak kabul edilen konumlara veri kaydedilip kaydedilemeyeceğini denetlemek için `isSaveToAllowedForLocation` içindeki sabitleri kullanmalıdır. Ayrıca uygulama bir konumun “yönetilen” veya “kişisel” olup olmadığını denetleyemiyorsa API kullanılmalıdır.
 
-Uygulama yerel cihazdaki herhangi bir konuma veri kaydediyorsa `IntuneMAMSaveLocationLocalDrive` sabiti kullanılmalıdır.
+Uygulama yerel cihazdaki herhangi bir konuma veri kaydediyorsa `IntuneMAMSaveLocationLocalDrive` sabiti kullanılmalıdır. Benzer şekilde, `IntuneMAMSaveLocationCameraRoll` uygulama kamera rulosına bir fotoğraf kaydediyorsunuz sabiti kullanılmalıdır.
 
-Hedef konum için hesap bilinmiyorsa, `nil` geçirilmesi gerekir. `IntuneMAMSaveLocationLocalDrive`Konum her zaman bir `nil` Hesapla eşleştirilmelidir.
+Hedef konum için hesap bilinmiyorsa, `nil` geçirilmesi gerekir. `IntuneMAMSaveLocationLocalDrive`Ve `IntuneMAMSaveLocationCameraRoll` konumları her zaman bir `nil` Hesapla eşleştirilmelidir.
 
 ### <a name="supported-open-locations"></a>Desteklenen açık konumlar
 
