@@ -2,7 +2,7 @@
 title: Masaüstü Analizinizdeki yenilikler
 titleSuffix: Configuration Manager
 description: Masaüstü Analizi bulut hizmeti 'nin en son aylık sürümündeki yeni özelliklerin özeti.
-ms.date: 06/04/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 5265ee88cbe6dc119d6d14dadd3fadad6a52b253
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: ec554d755b92d1c710def580a34fdbbddc7b4d45
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454962"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85819992"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Masaüstü Analizinizdeki yenilikler
 
@@ -27,6 +27,28 @@ Her ay masaüstü analizinden nelerin yeni olduğunu öğrenin.
 
 Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="july-2020"></a>2020 Temmuz
+
+### <a name="windows-10-version-2004-now-available-in-desktop-analytics"></a>Windows 10, sürüm 2004, artık Masaüstü Analizi 'nde kullanılabilir
+
+<!-- 7370207 -->
+
+Masaüstü Analizi portalında, güvenlik ve özellik güncelleştirmelerini izlerken artık Windows 10, sürüm 2004 ' i görürsünüz. Bir dağıtım planı oluşturduğunuzda, hedef sürüm olarak Windows 10, sürüm 2004 ' i seçebilirsiniz.
+
+### <a name="improved-support-for-viewing-the-portal-from-any-device"></a>Portalı herhangi bir cihazdan görüntülemek için geliştirilmiş destek
+
+<!-- 6270240 -->
+
+Artık, Microsoft Endpoint Manager Yönetim merkezinde masaüstü Analizi portalını çeşitli cihaz türlerinden görüntüleyebilirsiniz. Artık, 320 x 256 piksel kadar düşük bir ekran çözünürlüğü için Web Içeriği erişilebilirlik yönergeleri (WCAG) 2,1 ' i karşılar. Örneğin, aşağıdaki görüntü, Apple iPhone 8 ' den portalın bir örneğidir:
+
+:::image type="content" source="media/dashboard-iphone8.png" alt-text="İPhone 8 ' de masaüstü Analizi portalı":::
+
+### <a name="notifications-for-service-impacting-events"></a>Hizmet tarafından etkileyen olaylar için bildirimler
+
+<!-- 4982509 -->
+
+Artık, masaüstü Analizi portalı bildirim başlık başlıklarını görüntüleyebilir. Bu bildirimler Microsoft 'un önemli olaylar ve sorunlar hakkında sizinle iletişim kurmasına olanak tanır. Örneğin, hizmetle ilgili bilinen sorunlar, veri gecikmesi veya yeni önkoşulları. Daha fazla bilgi için bkz. [hizmet bildirimleri](troubleshooting.md#service-notifications).
 
 ## <a name="june-2020"></a>Haziran 2020
 

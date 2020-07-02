@@ -2,7 +2,7 @@
 title: Desktop Analytics sorunlarını giderme
 titleSuffix: Configuration Manager
 description: Masaüstü analiziyle ilgili sorunları gidermenize yardımcı olacak teknik ayrıntılar.
-ms.date: 04/01/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: cfd329b7edb695c1e7316323555bfc18a2fd479e
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 68506ba11e356a1e9f14d58880a80bdf3cfcb5f4
+ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428573"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85828984"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Desktop Analytics sorunlarını giderme
 
@@ -53,7 +53,7 @@ Sürüm 2002 ' den başlayarak, Configuration Manager site bir bulut hizmeti iç
 
 Daha fazla bilgi için bkz. [Masaüstü Analizi Için günlük dosyaları](../core/plan-design/hierarchy/log-files.md#desktop-analytics)
 
-Configuration Manager sürüm 1906 ' den başlayarak, Configuration Manager install dizininden masaüstü Analizi sorunlarını gidermeye yardımcı olması için **DesktopAnalyticsLogsCollector. ps1** aracını kullanın. Bazı temel sorun giderme adımlarını çalıştırır ve ilgili günlükleri tek bir çalışma dizininde toplar. Daha fazla bilgi için bkz. [Günlükler toplayıcısı](log-collector.md).
+Configuration Manager sürüm 1906 ' den başlayarak, masaüstü Analizi sorunlarını gidermeye yardımcı olması için Configuration Manager install dizinindeki **DesktopAnalyticsLogsCollector.ps1** aracını kullanın. Bazı temel sorun giderme adımlarını çalıştırır ve ilgili günlükleri tek bir çalışma dizininde toplar. Daha fazla bilgi için bkz. [Günlükler toplayıcısı](log-collector.md).
 
 ### <a name="enable-verbose-logging"></a>Ayrıntılı günlük kaydını etkinleştir
 
@@ -181,7 +181,7 @@ Kurulum sırasında bu işlemle ilgili bir sorun varsa, bu izni el ile eklemek i
 
     - Şunu **seçin**: **MALogAnalyticsReader**  
 
-4. **Kaydet**'i seçin.
+4. **Kaydet**’i seçin.
 
 Portal, rol atamasını eklediği bir bildirim gösterir.
 
@@ -205,7 +205,7 @@ Masaüstü Analizi portalı 'nda iki tür veri vardır: **yönetici verileri** v
 
 - **Tanılama verileri** , istemci cihazlarından Microsoft 'a yüklenen sistem meta verilerini ifade eder. Bu veri, masaüstü analizlerini güçlendirir. Cihaz envanteri ve güvenlik ve özellik güncelleştirme durumu gibi öznitelikleri içerir.
 
-Varsayılan olarak, masaüstü Analizi portalındaki tüm veriler her gün otomatik olarak yenilenir. Bu yenileme, tanılama verilerinde ve yapılandırmada yaptığınız değişikliklerle (Yönetici verileri) yapılan değişiklikleri içerir. Bu, masaüstü Analizi portalında her gün 08:00 saat UTC 'ye kadar görünür olmalıdır.
+Varsayılan olarak, masaüstü Analizi portalındaki tüm veriler her gün otomatik olarak yenilenir. Bu yenileme, iki günden daha önce tanılama verilerinde yapılan değişiklikleri ve yapılandırmada yaptığınız tüm değişiklikleri içerir (Yönetici verileri). Bu, masaüstü Analizi portalında her gün 08:00 saat UTC 'ye kadar görünür olmalıdır.
 
 Yönetici verilerinde değişiklik yaptığınızda, çalışma alanınızdaki yönetici verilerinin talep üzerine yenilenmesini tetikleyebilirsiniz. Masaüstü Analizi portalındaki herhangi bir sayfadan, veri para birimi açılır öğesini açın:
 
@@ -221,3 +221,39 @@ Yukarıda belirtilen zaman kareleri içinde güncelleştirilmiş değişiklikler
 
 > [!IMPORTANT]
 > **Son verileri görüntülemek** Için masaüstü Analizi seçeneği kullanım dışıdır. Bu eylem, daha sonraki bir masaüstü Analizi hizmeti sürümünde kaldırılacaktır. Daha fazla bilgi için bkz. [kullanımdan kaldırılan özellikler](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!--7080949-->  
+
+## <a name="service-notifications"></a>Hizmet bildirimleri
+
+<!-- 4982509 -->
+
+Masaüstü Analizi portalı, yöneticilere bildirim başlıkları gösterebilir. Bu bildirimler Microsoft 'un önemli olaylar ve sorunlar hakkında sizinle iletişim kurmasına olanak tanır. Aşağıdaki bölümler, görebileceğiniz bildirimleri ayrıntılandırır.
+
+### <a name="see-whats-new-this-month-in-desktop-analytics"></a>Bkz. Masaüstü analizinden bu ayın yenilikleri
+
+Bu bilgi bildirimi, hizmette yapılan değişiklikleri farkında olmanızı sağlar. Daha fazla bilgi için bkz. [Masaüstü Analizi 'ndeki](whats-new.md) yenilikler ( `https://aka.ms/danews` ).
+
+### <a name="there-are-new-prerequisites-to-continue-using-desktop-analytics-review-the-new-requirements"></a>Yeni Önkoşullar vardır. Masaüstü analizlerini kullanmaya devam etmek için yeni gereksinimleri gözden geçirin
+
+Bu bilgi bildirimi, önkoşullara yapılan değişiklikleri farkında olmanızı sağlar. Örneğin, yeni bir internet uç noktası veya yazılım güncelleştirmesi. Daha fazla bilgi için bkz. [Önkoşullar](overview.md#prerequisites) ( `https://aka.ms/daprereqs` ).
+
+### <a name="were-investigating-an-issue-that-impacts-desktop-analytics"></a>Masaüstü analizinden etkilenen bir sorunu araştırıyoruz
+
+Bu uyarı bildirimi, Microsoft 'un masaüstü Analizi hizmetini etkileyen bir sorundan haberdar olduğunu gösterir. Sorun genellikle anlık görüntü oluşturma ile yapılır. Bu bildirimi gördüğünüzde, Microsoft, etki kapsamını ve etkisini belirleme sorununu araştırmaktadır. Microsoft Desteği başvurmanız gerekmez. Daha fazla bilgi için bkz. [veri akışı](privacy.md#data-flow).
+
+### <a name="were-investigating-an-issue-with-data-latency-if-you-enrolled-new-devices-or-changed-any-assets-in-the-last-24-hours-they-may-not-appear-right-away"></a>Veri Gecikmede bir sorun araştırıyoruz. Yeni cihazları kaydettiyseniz veya son 24 saat içindeki tüm varlıkları değiştirdiyseniz, bunlar hemen görünmeyebilir
+
+Bu uyarı bildirimi, Microsoft 'un masaüstü Analizi hizmetini etkileyen bir sorundan haberdar olduğunu gösterir. Microsoft, tüm bileşenlerin anlık görüntülerini doğru zamanlarda güncelleştirdiğini onaylamak için hizmeti sürekli olarak izler. Bu izleme sırasında, bu bileşenlerden biri beklendiği gibi tamamlanmadı. Bu bildirimi gördüğünüzde Microsoft bu sorunu araştırmaktadır. Microsoft Desteği başvurmanız gerekmez. Daha fazla bilgi için bkz. [veri akışı](privacy.md#data-flow).
+
+Son zamanlarda cihazları veya değiştirilen [varlıkları](about-assets.md) [kaydettiyseniz](enroll-devices.md) , Microsoft sorunu çözene kadar bekleyin. Herhangi bir eylemi tekrarlamanız gerekmez.
+
+### <a name="weve-resolved-a-temporary-issue-with-data-latency-daily-refresh-of-portal-data-is-delayed"></a>Veri Gecikmede geçici bir sorunu çöztik. Portal verilerinin günlük yenilemesi gecikiyor
+
+Bu bildirim, veri Gecikmede bir sorun olduğunu bilmenizi sağlar. Hizmet, anlık görüntüyü işlemeye devam ediyor ve verilerin yenilenmesi gecikiyor. Daha fazla bilgi için bkz. [veri gecikmesi](#data-latency).
+
+### <a name="weve-resolved-an-issue-with-data-latency-if-you-enrolled-new-devices-or-changed-any-assets-in-the-last-24-hours-they-may-not-appear-right-away"></a>Veri Gecikmede bir sorun çözüldü. Yeni cihazları kaydettiyseniz veya son 24 saat içindeki tüm varlıkları değiştirdiyseniz, bunlar hemen görünmeyebilir
+
+Bu bildirim, Microsoft 'un, veri Gecikmede daha önce bildirilen bir sorunu çözdüğü hakkında bilgi almanızı sağlar. Yarın anlık görüntüsü için eski verileri görebilirsiniz. Son 24 saat içinde [cihazları kaydettiyseniz](enroll-devices.md) veya cihaz yapılandırma değişikliği yaptıysanız, bunları portalda hemen görmezsiniz. [Varlıkları](about-assets.md) kategorilere ayırmak ve [dağıtım planlarını](about-deployment-plans.md)hazırlamak için masaüstü Analizi 'ni kullanmaya devam edebilirsiniz. Bu eylemler önceki anlık görüntüdeki verileri kullanabilir.
+
+### <a name="weve-resolved-an-issue-with-desktop-analytics-daily-refresh-of-the-portal-data-is-on-track"></a>Masaüstü analiziyle ilgili bir sorunu çöztik. Portal verilerinin günlük yenilemesi izde
+
+Bu bildirim, Microsoft 'un işlem sırasında çalışmayı durduran bir anlık görüntü bileşeni tanımladıkları hakkında bilgi verir. Microsoft, bir bileşeni yeniden başlattıktan sonra, anlık görüntüyü işlemek zaman alır. Microsoft, tüm bileşenlerin anlık görüntülerini doğru zamanlarda güncelleştirdiğini onaylamak için hizmeti sürekli olarak izler.
