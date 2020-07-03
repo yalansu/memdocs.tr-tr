@@ -2,7 +2,7 @@
 title: Ürün ve lisanslama hakkında SSS
 titleSuffix: Configuration Manager
 description: Configuration Manager için ortak ürün ve lisans sorularının yanıtlarını bulun.
-ms.date: 02/12/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63e53c502e67d2bfbfc5f8a706006c6ec14f8fcd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7b2c785fb41fa78ea0bd5d480560d45a3a7a7eda
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722686"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854431"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager dalları ve lisanslama hakkında sık sorulan sorular
 
@@ -68,19 +68,54 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 > [!IMPORTANT]
 > Configuration Manager [Microsoft 365 iş](https://www.microsoft.com/microsoft-365/business) planına dahil değildir.
 
-### <a name="does-anything-change-with-the-rebrand-to-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a>Microsoft Uç Nokta Yöneticisi ile her şeyi değiştirsin mi?
+### <a name="what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a>Microsoft Endpoint Manager 'da ortak yönetim için lisanslamayla ilgili değişiklikler nelerdir?
 
-Evet. 1 Aralık 2019 ' de geçerli Configuration Manager, zaten lisanslandıysanız, ayrıca Windows bilgisayarlarını [ortak yönetime](../../comanage/overview.md)kaydetmek için Intune için otomatik olarak lisanslanır. Bu değişiklik, Microsoft Endpoint Manager ile Windows cihazlarını yönetmenizi kolaylaştırır.
+<!-- 7202432 -->
 
-Yazılım Güvencesi kapsamındaki müşterilerin, ortak yönetim için ek bir Intune lisansı satın almak zorunda kalmadan Intune bılgısayar yönetim haklarına sahip Configuration Manager olanak sağlayan yeni bir lisans kullanıma sunulmuştur. Artık kullanıcılara bireysel Intune lisansları satın alıp atamanız gerekmez.
+Ortak Yönetim Lisansı, Yazılım Güvencesine sahip müşterilerin kullanıcılara bireysel Intune lisansları satın alıp atamak zorunda kalmadan Intune bılgısayar yönetim haklarına sahip Configuration Manager sağlar. Bu lisans, Microsoft Endpoint Manager ile Windows cihazlarını yönetmenizi kolaylaştırır.
 
-- Configuration Manager tarafından yönetilen ve ortak yönetime kaydedilen cihazlar, tek başına Intune ile yönetilen bir BILGISAYAR ile neredeyse aynı haklara sahiptir. Ancak, sıfırlandıktan sonra AutopIlot kullanılarak yeniden sağlanamazlar.
+- Ortak yönetim için Intune 'a kaydolmamış Configuration Manager tarafından zaten yönetilen cihazların, tek başına Intune ile yönetilen bir bılgısayarla neredeyse aynı haklara sahip olması gerekir. Bu cihazda Windows 'u sıfırlarsanız, Windows Autopilot ile sağlayamazsınız. Autopilot tam bir Intune lisansı gerektirir.
 
-- Diğer yollarla Intune 'a kayıtlı Windows 10 cihazları tam Intune lisansları gerektirir.
+- Bir Windows 10 cihazını Intune 'a başka yollarla kaydederseniz, bunun yine de tam bir Intune lisansı gerekir. Örneğin, bir cihaz sağlamak için Autopilot kullandığınızda veya bir Kullanıcı self servis kaydını el ile yapar.
 
-- İOS, Android veya macOS cihazlarını yönetmek için Intune 'u kullanmak istiyorsanız, tek başına Intune lisansı, Enterprise Mobility + Security (EMS) veya Microsoft 365 aracılığıyla uygun Intune aboneliğine ihtiyacınız vardır.
+- Mevcut Configuration Manager yönetilen cihazların, Kullanıcı etkileşimi olmadan ortak yönetim için Intune 'a kaydedilmesi için, ortak yönetim, Windows 10 otomatik kaydı adlı bir Azure Active Directory (Azure AD) özelliği kullanır. Otomatik kayıt, Microsoft Endpoint Manager 'dan ayrı bir Azure AD Premium (AADP1) lisansı gerektirir. Ortak yönetiminin bu senaryoda çalışması için, her bir kullanıcıya hem bir AADP1 hem de bir Intune lisansı atamanızı gerektirmek için kullanılır. Ortak Yönetim Lisansı 1 Aralık 2019 ' den itibaren değişti. Artık bu senaryo için ayrı Intune lisansları atamanız gerekmez, ancak bunlar yine de diğer kayıt senaryolarında gereklidir. AADP1 lisanslama gereksinimi, otomatik kayıt ve ortak yönetiminin çalışması için aynı kalır.
+
+- İOS, Android veya macOS cihazlarını yönetmek için Intune 'u kullanmak istiyorsanız, tek başına bir Intune lisansı, Enterprise Mobility + Security (EMS) veya Microsoft 365 aracılığıyla uygun Intune aboneliğine ihtiyacınız vardır.
+
+- Intune ile ilgili herhangi bir abonelik planınız yoksa, ortak yönetimi desteklemek için en az bir Intune lisansı satın almanız gerekir. Bu lisans, bir yöneticinin Microsoft Endpoint Manager yönetim merkezine erişiminin olması içindir.
+
+- Microsoft 365 yerleşik [temel taşınabilirlik ve güvenliği](https://support.microsoft.com/office/capabilities-of-built-in-mobile-device-management-for-microsoft-365-a1da44e5-7475-4992-be91-9ccec25905b0)kullanıyorsanız, temel taşınabilirlik ve güvenlik tarafından yönetilen cihazlara sahip olan bir kullanıcı için yeni ortak yönetim lisansını kullanamazsınız. Kullanıcının Configuration Manager tarafından yönetilen cihaz için ortak yönetim lisansını kullanmak için aşağıdaki eylemlerden birini yapın:
+
+  - Kullanıcıya tam bir Intune lisansı atayın ve cihazlarını Intune aracılığıyla yönetin.
+  - Temel taşınabilirlik ve güvenlik aygıtlarından cihazların kaydını kaldırın.
 
 - Daha önce System Center Configuration Manager sahip olduğunuz lisanslama, Microsoft uç nokta Configuration Manager için de geçerlidir. Yeni bir site yüklüyorsanız, mevcut ürün anahtarlarını kullanın.
+
+|Özellik | Ortak Yönetim Lisansı | Tam Intune lisansı |
+|---------|---------|---------|
+|Windows 10 kaydı|Evet (yalnızca var olan ConfigMgr tarafından yönetilen cihazlar için)|Yes|
+|iOS, Android, macOS kaydı|Hayır|Evet|
+|Autopilot|Hayır|Evet|
+|Mobil uygulama yönetimi (MAM)|Hayır|Evet|
+|Koşullu erişim<br>(ek AADP1 gerekir)|Yes|Yes|
+|Cihaz profilleri|Yes|Yes|
+|Yazılım güncelleştirme yönetimi|Yes|Yes|
+|Sayım|Yes|Yes|
+|Uygulama yönetimi|Yes|Yes|
+|Uzaktan yardım<br>(TeamViewer lisansı gereklidir)|Yes|Yes|
+|Masaüstü Analizi<br>(Windows Abonelik lisansları gereklidir|Yes|Yok|
+|Kiracı ekleme|Yes|Yok|
+|Uç nokta analizi|Yes|Yes|
+
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
+
+- [Ortak yönetim önkoşulları](../../comanage/overview.md#prerequisites)
+- [Windows Autopilot gereksinimleri](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
+- [Masaüstü Analizi önkoşulları](../../desktop-analytics/overview.md#prerequisites)
+- [Kiracı iliştirme önkoşulları](../../tenant-attach/device-sync-actions.md#prerequisites)
+- [Endpoint Analytics lisanslama önkoşulları](../../../analytics/overview.md#licensing-prerequisites)
+- [Intune ile koşullu erişim kullanma](../../../intune/protect/conditional-access.md#use-conditional-access-with-intune)
+- [TeamViewer önkoşulları](../../../intune/remote-actions/teamviewer-support.md#prerequisites)
 
 ### <a name="i-have-enterprise-mobility--security-and-it-expired-what-must-i-do-now"></a><a name="bkmk_ems-expires"></a>Enterprise Mobility + Security ve bu süre doldum, şimdi ne yapmam gerekir?  
 

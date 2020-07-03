@@ -2,7 +2,7 @@
 title: Microsoft Edge, sürüm 77 ve üstünü dağıtma ve güncelleştirme
 titleSuffix: Configuration Manager
 description: Configuration Manager ile Microsoft Edge, sürüm 77 ve üstünü dağıtma ve güncelleştirme
-ms.date: 04/01/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 141a60a72038156fff2579419e92e558dab5a9b8
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 2061a6701bf40233593e2e5d683e36f2814d3978
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776948"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914566"
 ---
 # <a name="microsoft-edge-management"></a>Microsoft Edge yönetimi
 
@@ -33,6 +33,8 @@ Microsoft Edge dağıtımıyla hedeflenen istemciler için:
 
 - PowerShell [yürütme Ilkesi](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) kısıtlı olarak ayarlanamaz.
   - Yüklemeyi gerçekleştirmek için PowerShell yürütülür.
+
+- Microsoft Edge yükleyicisi ve [CMPivot](../../core/servers/manage/cmpivot.md) , **Microsoft kod imzalama** sertifikasıyla imzalanır. Bu sertifika, **Güvenilen Yayımcılar** deposunda listelenmemişse, eklemeniz gerekir. Aksi halde, PowerShell yürütme ilkesi **AllSigned**olarak ayarlandığında Microsoft Edge yükleyicisi ve CMPivot çalışmaz. <!--7585106-->
 
 Configuration Manager konsolunu çalıştıran cihazın aşağıdaki uç noktalara erişmesi gerekir:
 
@@ -135,6 +137,22 @@ Aşağıdaki özellikleri, Microsoft Edge Yönetim Panosu için aşağıdaki [do
 Panoyu görmek için, **yazılım kitaplığı** çalışma alanında **Microsoft Edge yönetimi** ' ne tıklayın. **Araştır** ' a tıklayıp başka bir koleksiyon seçerek Grafik verilerinin koleksiyonunu değiştirin. Varsayılan olarak, beş en büyük koleksiyonunuz açılan listede bulunur. Listede olmayan bir koleksiyon seçtiğinizde, yeni seçilen koleksiyon, aşağı açılan listenizde en alttaki noktayı alır.
 
 [![Microsoft Edge Yönetim Panosu](./media/3871913-microsoft-edge-dashboard.png)](./media/3871913-microsoft-edge-dashboard.png#lightbox)
+
+## <a name="known-issues"></a>Bilinen sorunlar
+
+### <a name="hardware-inventory-may-fail-to-process"></a>Donanım envanteri işlem gerçekleştiremeyebilir
+<!--7535675-->
+Cihazlar için donanım envanteri işleyemeyebilir. Aşağıdakine benzer hatalar, veri bağlantısı \ Dr. log dosyasında görünebilir:
+
+```text
+Begin transaction: Machine=<machine>
+*** [23000][2627][Microsoft][SQL Server Native Client 11.0][SQL Server]Violation of PRIMARY KEY constraint 'BROWSER_USAGE_HIST_PK'. Cannot insert duplicate key in object 'dbo.BROWSER_USAGE_HIST'. The duplicate key value is (XXXX, Y). : dbo.dBROWSER_USAGE_DATA
+ERROR - SQL Error in
+ERROR - is NOT retyrable.
+Rollback transaction: XXXX
+```
+
+**Risk azaltma:** Bu sorunu geçici olarak çözmek için, tarayıcı kullanımı (SMS_BrowerUsage) donanım envanteri sınıfı koleksiyonunu devre dışı bırakın. Bu sınıf şu anda yararlanılabilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

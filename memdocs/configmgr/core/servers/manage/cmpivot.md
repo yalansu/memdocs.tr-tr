@@ -2,7 +2,7 @@
 title: Gerçek zamanlı veriler için CMPivot
 titleSuffix: Configuration Manager
 description: Configuration Manager 'de CMPivot kullanarak istemcileri gerçek zamanlı olarak sorgulama hakkında bilgi edinin.
-ms.date: 04/08/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: dcd441c7f35748f42adc8824c68ec703291a13e0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7bf9d6018acb74ccd1a33b6101d5cceb119ca982
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719144"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914632"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>Configuration Manager içindeki gerçek zamanlı veriler için CMPivot
 
@@ -46,6 +46,7 @@ CMPivot kullanmak için aşağıdaki bileşenler gereklidir:
   - Komutunu
   - SMBConfig
 
+- CMPivot ve [Microsoft Edge](../../../apps/deploy-use/deploy-edge.md) yükleyicisi, **Microsoft kod imzalama** sertifikasıyla imzalanır. Bu sertifika, **Güvenilen Yayımcılar** deposunda listelenmemişse, eklemeniz gerekir. Aksi halde, PowerShell yürütme ilkesi **AllSigned**olarak ayarlandığında CMPivot ve Microsoft Edge yükleyicisi çalışmaz. <!--7585106-->
 
 - CMPivot için izinler:
   - **SMS betikleri** nesnesinde **Oku** izni
@@ -56,6 +57,8 @@ CMPivot kullanmak için aşağıdaki bileşenler gereklidir:
 
 >[!NOTE]
 > **Çalıştırma betikleri** , **Run CMPivot** izninin bir süper kümesidir.
+
+CMPivot ve Edge yükleyicisi, **Microsoft kod imzalama** sertifikasıyla imzalanır. Bu sertifika, **Güvenilen Yayımcılar** deposunda listelenmemişse, eklemeniz gerekir. Aksi halde, PowerShell yürütme ilkesi **AllSigned**olarak ayarlandığında CMPivot ve Edge yükleyicisi çalışmaz.
  
 ## <a name="limitations"></a>Sınırlamalar
 
@@ -129,7 +132,7 @@ CMPivot penceresi aşağıdaki öğeleri içerir:
 
     - Sorgu bölmesinde içeriği kesin, Kopyala veya Yapıştır.  
     <!-- markdownlint-disable MD038 -->
-    - Varsayılan olarak, bu bölme IntelliSense kullanır. Örneğin, yazmaya `D`başladıysanız, IntelliSense Bu harfle başlayan tüm varlıkları önerir. Bir seçenek belirleyin ve eklemek için SEKME tuşuna basın. Bir kanal karakteri ve bir boşluk `| `yazıp IntelliSense tüm tablo işleçlerini önerir. Bir `summarize` boşluk ekleyin ve yazın ve IntelliSense tüm toplama işlevlerini önerir. Bu işleçler ve işlevler hakkında daha fazla bilgi için CMPivot içindeki **giriş** sekmesine tıklayın.  
+    - Varsayılan olarak, bu bölme IntelliSense kullanır. Örneğin, yazmaya başladıysanız `D` , IntelliSense Bu harfle başlayan tüm varlıkları önerir. Bir seçenek belirleyin ve eklemek için SEKME tuşuna basın. Bir kanal karakteri ve bir boşluk yazıp `| ` IntelliSense tüm tablo işleçlerini önerir. `summarize`Bir boşluk ekleyin ve yazın ve IntelliSense tüm toplama işlevlerini önerir. Bu işleçler ve işlevler hakkında daha fazla bilgi için CMPivot içindeki **giriş** sekmesine tıklayın.  
 
     - Sorgu bölmesi aşağıdaki seçenekleri de sağlar:  
 
@@ -217,7 +220,7 @@ Tüm cihazları çoklu seç, seçime sağ tıklayın ve **Betiği Çalıştır**
 
 ### <a name="example-2-proactively-resolve-application-failures"></a>Örnek 2: uygulama başarısızlıklarını önceden çözümleme  
 
-İşlem Bakımı ile proaktif olmak için, yönettiğiniz bir sunucu koleksiyonuna karşı CMPivot çalıştırırsanız ve **APPCRASH** varlığındaki **Tümünü sorgula** ' yı seçin. **Dosya adı** sütununa sağ tıklayıp **artan düzende sırala**' yı seçin. Bir cihaz, sqlsqm. exe için her gün yaklaşık 03:00 zaman damgasıyla yedi sonuç döndürür. Dosya adını satırlardan birinde seçin, sağ tıklayın ve **Bing BT**' i seçin. Arama sonuçlarına göz atma Web tarayıcısında, daha fazla bilgi ve çözümleme ile ilgili bu sorun için bir Microsoft Destek makalesi bulabilirsiniz. 
+İşlem Bakımı ile proaktif olmak için, yönettiğiniz bir sunucu koleksiyonuna karşı CMPivot çalıştırırsanız ve **APPCRASH** varlığındaki **Tümünü sorgula** ' yı seçin. **Dosya adı** sütununa sağ tıklayıp **artan düzende sırala**' yı seçin. Bir cihaz her gün 03:00 zaman damgasıyla sqlsqm.exe için yedi sonuç döndürür. Dosya adını satırlardan birinde seçin, sağ tıklayın ve **Bing BT**' i seçin. Arama sonuçlarına göz atma Web tarayıcısında, daha fazla bilgi ve çözümleme ile ilgili bu sorun için bir Microsoft Destek makalesi bulabilirsiniz. 
 
 
 ### <a name="example-3-bios-version"></a>Örnek 3: BIOS sürümü
@@ -369,7 +372,7 @@ CMPivot, aşağıdaki skaler işleçleri içerir:
 |!=|Eşit değildir|`"abc" != "ABC"`|
 |Like|LHS, RHS için bir eşleşme içerir|`"FabriKam" like "%Brik%"`|
 |! Beğen|LHS, RHS için eşleşme içermiyor|`"Fabrikam" !like "%xyz%"`|
-|içerir|RHS bir LHS alt sırası olarak gerçekleşir|`"FabriKam" contains "BRik"`|
+|şunu içerir|RHS bir LHS alt sırası olarak gerçekleşir|`"FabriKam" contains "BRik"`|
 |! Contains|LHS 'te RHS gerçekleşmiyor|`"Fabrikam" !contains "xyz"`|
 |StartsWith|RHS bir başlangıç alt dizisi olan LHS|`"Fabrikam" startswith "fab"`|
 |! StartsWith|RHS, LHS 'in bir başlangıç alt dizisi değildir|`"Fabrikam" !startswith "kam"`|
@@ -385,15 +388,15 @@ CMPivot penceresinin alt kısmındaki **Sorgu Özeti** sekmesini seçin. Bu duru
 
 ### <a name="cmpivot-audit-status-messages"></a>CMPivot denetim durumu iletileri
 
-Sürüm 1810 ' den başlayarak, CMPivot çalıştırdığınızda **messageıd 40805**ile bir denetim durumu iletisi oluşturulur. Durum iletilerini **izleme** > **sistem durumu** > **durum iletisi sorguları**' na giderek görüntüleyebilirsiniz. Belirli **bir Kullanıcı Için tüm denetim durum iletilerini**, **belirli bir site için tüm denetim durum iletilerini**çalıştırabilir veya kendi durum iletisi sorgunuzu oluşturabilirsiniz.
+Sürüm 1810 ' den başlayarak, CMPivot çalıştırdığınızda **messageıd 40805**ile bir denetim durumu iletisi oluşturulur. Durum iletilerini **izleme**  >  **sistem durumu**  >  **durum iletisi sorguları**' na giderek görüntüleyebilirsiniz. Belirli **bir Kullanıcı Için tüm denetim durum iletilerini**, **belirli bir site için tüm denetim durum iletilerini**çalıştırabilir veya kendi durum iletisi sorgunuzu oluşturabilirsiniz.
 
 İleti için aşağıdaki biçim kullanılır:
 
-MessageID 40805: Kullanıcı &lt;kullanıcı adı> komut &lt;dosyası betiği çalıştı-Guid> &lt;karma betiği-kimliği> toplama &lt;>.
+MessageID 40805: Kullanıcı &lt; Kullanıcı adı> komut dosyası &lt; betiği çalıştı-Guid> karma &lt; betiği- &lt; kimliği> toplama>.
 
 - 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14, CMPivot için komut dosyası GUID 'Sidir.
 - Betik karması, istemcinin betikleri. log dosyasında görülebilir.
-- İstemcinin komut dosyası deposunda depolanan karmayı da görebilirsiniz. İstemcideki dosya adı &lt;komut dosyası-GUID>_&lt;betik-karma>.
+- İstemcinin komut dosyası deposunda depolanan karmayı da görebilirsiniz. İstemcideki dosya adı &lt; komut dosyası-guıd>_ &lt; betik-karma>.
     - Örnek dosya adı: C:\Windows\CCM\ScriptStore\7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14_abc1d23e45678901fabc123d456ce789fa1b2cd3e456789123fab4c56789d0123. PS
    
 
@@ -476,7 +479,7 @@ Artık ek aritmetik işleçleri, aggregators 'lar ve kayıt defteri ve dosya kul
 
 #### <a name="table-operators"></a>Tablo işleçleri
 
-|Tablo işleçleri| Açıklama|
+|Tablo işleçleri| Description|
 |-----|-----|
 | [ayrılma](https://docs.microsoft.com/azure/kusto/query/joinoperator)| Aynı cihazla eşleşen satıra göre yeni bir tablo oluşturmak için iki tablo satırını birleştirin|
 |işlenecek|Sonuçları grafik çıkış olarak işler|
@@ -501,14 +504,14 @@ Render işleci CMPivot içinde zaten var. Birden çok seri ve **WITH** ifadesiyl
 
 #### <a name="aggregation-functions"></a>Toplama işlevleri
 
-|İşlev| Açıklama|
+|İşlev| Description|
 |-----|-----|
 | yüzdebirlik ()| Ifadenin belirttiği popülasyon için belirtilen en yakın derecelendirme yüzdelik değeri için bir tahmin döndürür|
 | sumif() | Koşulun true olarak değerlendirilen bir Ifade toplamı döndürür|
 
 #### <a name="scalar-functions"></a>Skaler işlevler
 
-|İşlev| Açıklama|
+|İşlev| Description|
 |-----|-----|
 | case()| Koşulların bir listesini değerlendirir ve koşulu karşılanan ilk sonuç ifadesini döndürür |
 | FF () | İlk bağımsız değişkeni değerlendirir ve koşulun doğru (ikinci) ya da yanlış (üçüncü) olarak değerlendirildiğine bağlı olarak ikinci veya üçüncü bağımsız değişkenlerin değerini döndürür|
@@ -566,7 +569,7 @@ CMPivot 'in gücünden birini, yardım masası veya güvenlik yöneticileri gibi
 #### <a name="install-cmpivot-standalone"></a>CMPivot tek başına yükleme
 
 1. CMPivot çalıştırmak için gereken izinleri ayarlayın. Daha fazla bilgi için bkz. [Önkoşullar](#prerequisites). İzinler kullanıcıya uygunsa [Güvenlik Yöneticisi rolünü](#bkmk_cmpivot_secadmin1906) de kullanabilirsiniz.
-2. Aşağıdaki yolda CMPivot uygulama yükleyicisini bulun: `<site install path>\tools\CMPivot\CMPivot.msi`. Bu yoldan çalıştırabilir veya başka bir konuma kopyalayabilirsiniz.
+2. Aşağıdaki yolda CMPivot uygulama yükleyicisini bulun: `<site install path>\tools\CMPivot\CMPivot.msi` . Bu yoldan çalıştırabilir veya başka bir konuma kopyalayabilirsiniz.
 3. CMPivot tek başına uygulamasını çalıştırdığınızda bir siteye bağlanmanız istenir. Merkezi Yönetim veya birincil site sunucusunun tam etki alanı adını ya da bilgisayar adını belirtin.
    - Tek başına CMPivot her açışınızda bir site sunucusuna bağlanmanız istenir.
 4. CMPivot çalıştırmak istediğiniz koleksiyona gidin ve sorgunuzu çalıştırın.
@@ -617,7 +620,7 @@ CMPivot iyileştirmeleri, CMPivot sorgularını çalıştırmak için gereken a�
    | project Device, MalwareFound = iif( isnull(FileName), 'No', 'Yes')
    ```
 
-### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a>WinEvent (\<günlük adı>, [\<TimeSpan>])
+### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a>WinEvent ( \<logname> , [ \<timespan> ])
 
 Bu varlık olay günlüklerinden ve olay izleme günlük dosyalarından olayları almak için kullanılır. Varlık, Windows olay günlüğü teknolojisi tarafından oluşturulan olay günlüklerinden verileri alır. Varlık Ayrıca, Windows için olay Izleme tarafından oluşturulan günlük dosyalarındaki olayları alır (ETW). WinEvent, son 24 saat içinde varsayılan olarak gerçekleşen olaylara bakar. Ancak, 24 saatlik varsayılan değer bir TimeSpan eklenerek geçersiz kılınabilir.
 
@@ -627,7 +630,7 @@ WinEvent('Microsoft-Windows-HelloForBusiness/Operational', 1d)
 | summarize count() by Device
 ```
 
-### <a name="filecontentfilename"></a><a name="bkmk_File"></a>Dosya Içeriği (\<filename>)
+### <a name="filecontentfilename"></a><a name="bkmk_File"></a>FileContent ( \<filename> )
 
 Dosya Içeriği, bir metin dosyasının içeriğini almak için kullanılır.
 
@@ -637,7 +640,7 @@ FileContent('c:\\windows\\SMSCFG.ini')
 | project Device, SMSId= substring(Content,22)
 ```
 
-### <a name="processmoduleprocessname"></a><a name="bkmk_ProcessModule"></a>ProcessModule (\<processname>)  
+### <a name="processmoduleprocessname"></a><a name="bkmk_ProcessModule"></a>ProcessModule ( \<processname> )  
 
 Bu varlık, belirli bir işlem tarafından yüklenen modülleri (dll 'ler) numaralandırmak için kullanılır. ProcessModule, meşru işlemlerde gizlemekte olan kötü amaçlı yazılımlara yönelik arama yaparken yararlıdır.  
 
@@ -682,7 +685,7 @@ Configuration Manager konsolunun dışında CMPivot kullanırken, Configuration 
 
 ### <a name="other-enhancements"></a><a name="bkmk_Other"></a>Diğer geliştirmeler
 
-- Yeni `like` işleci kullanarak normal ifade türü sorguları yapabilirsiniz. Örneğin:<!--3056858-->
+- Yeni işleci kullanarak normal ifade türü sorguları yapabilirsiniz `like` . Örneğin:<!--3056858-->
   
    ```kusto
    //Find BIOS manufacture that contains any word like Micro, such as Microsoft

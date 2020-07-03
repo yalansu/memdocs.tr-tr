@@ -5,17 +5,17 @@ description: Configuration Manager ve Microsoft Intune kullanarak Windows 10 cih
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 07/01/2020
 ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 86bd566e9582c7dd7c83f93c22430edcc8ea0d0d
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: a7f38f48946244deb6026d040c44159d0384f7b1
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347194"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854448"
 ---
 # <a name="what-is-co-management"></a>Ortak yönetim nedir?
 
@@ -45,7 +45,7 @@ Ortak yönetime ulaşmak için iki ana yol vardır:
 
 Yollar hakkında daha fazla bilgi için bkz. [ortak yönetime yönelik yollar](quickstart-paths.md).
 
-## <a name="benefits"></a>Avantajlar
+## <a name="benefits"></a>Yararları
 
 Mevcut Configuration Manager istemcilerini ortak yönetime kaydettiğinizde aşağıdaki hemen değeri elde edersiniz:  
 
@@ -88,7 +88,7 @@ Ortak yönetim aşağıdaki alanlarda önkoşulları içerir:
     > [!Tip]
     > Kiracınızda oturum açmak için kullandığınız hesaba bir Intune lisansı atadığınızdan emin olun. Aksi takdirde, oturum açma "Kullanıcı tanınmıyor" hata iletisiyle başarısız olur.
     >
-    > Artık kullanıcılarınıza tek tek Intune veya EMS lisansı satın almanız ve atamanız gerekmez. Daha fazla bilgi için bkz. [ürün ve lisanslama hakkında SSS](../core/understand/product-and-licensing-faq.md#bkmk_mem).
+    > Kullanıcılarınıza tek tek Intune veya EMS lisansı satın almanız ve atamanız gerekmez. Daha fazla bilgi için bkz. [ürün ve lisanslama hakkında SSS](../core/understand/product-and-licensing-faq.md#bkmk_mem).
 
 ### <a name="configuration-manager"></a>Configuration Manager
 

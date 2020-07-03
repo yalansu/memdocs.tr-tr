@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 02a281b800c1156cf8492e8a897a5cf1b412006e
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 388a051f899369aa6a7754f94b0a7727f943f0ec
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383045"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854414"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Configuration Manager içindeki istemci yükleme parametreleri ve özellikleri hakkında
 
@@ -601,7 +601,11 @@ Daha fazla bilgi için bkz. [istemci durumunu yapılandırma](configure-client-s
 
 Sürüm 2002 ' den başlayarak, bu özelliği kullanarak, bir istemcide siteye başarıyla kaydolduktan sonra bir görev sırası başlatın.
 
+> [!NOTE]
+> Görev dizisi yazılım güncelleştirmelerini veya uygulamaları yüklerse, istemcilerin geçerli bir istemci kimlik doğrulama sertifikasına ihtiyacı vardır. Belirteç kimlik doğrulaması tek başına çalışmaz. Daha fazla bilgi için bkz. [sürüm notları-işletim sistemi dağıtımı](../../servers/deploy/install/release-notes.md#os-deployment).<!--7527072-->
+      
 Örneğin, Windows Autopilot ile yeni bir Windows 10 cihaz sağlacaksınız, Microsoft Intune için otomatik olarak kaydedin ve sonra ortak yönetim için Configuration Manager istemcisini yükleyebilirsiniz. Bu yeni seçeneği belirtirseniz, yeni sağlanan istemci daha sonra bir görev dizisi çalıştırır. Bu işlem, uygulamaları ve yazılım güncelleştirmelerini yüklemek veya ayarları yapılandırmak için ek esneklik sağlar.
+
 
 Aşağıdaki işlemi kullanın:
 
@@ -617,6 +621,8 @@ Aşağıdaki işlemi kullanın:
       > Bu yöntem ek önkoşullara sahip olabilir. Örneğin, siteyi Azure Active Directory kaydetme veya içerik etkinleştirilmiş bir bulut yönetimi ağ geçidi oluşturma.
 
 İstemci yüklenip siteye doğru şekilde kaydolduktan sonra, başvurulan görev dizisini başlatır. İstemci kaydı başarısız olursa, görev dizisi başlatılmaz.
+
+
 
 ### <a name="resetkeyinformation"></a>RESETKEYINFORMATION
 

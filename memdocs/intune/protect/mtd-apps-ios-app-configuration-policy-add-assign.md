@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03dbdccd1626db5ad97bc230a3d6b9a82060ee2e
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 4782c2a8f2c8791929ca4e585dab96031bf550fa
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590499"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914616"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Intune ile Mobile Threat Defense (MTD) uygulamaları ekleme ve atama
 
@@ -136,21 +136,21 @@ Better Mobile iOS uygulama yapılandırma ilkesini eklemek için [iOS için Micr
 - **Android**
   - Sorulduğunda aşağıdaki bilgileri kullanarak Wandera Android uygulama yapılandırma ilkesini eklemek için [Android için Microsoft Intune uygulama yapılandırma ilkeleri kullanma](../apps/app-configuration-policies-use-android.md) yönergelerine bakın.
 
-1. **Radar bir portalda**, **yapılandırma ayarları** biçimi altındaki **Ekle +** düğmesine tıklayın.
+1. **Radar bir portalda**, **yapılandırma ayarları** biçimi altında **Ekle** düğmesine tıklayın.
 2. **Yapılandırma anahtarları**listesinden **etkinleştirme profili URL 'sini** seçin. **Tamam**'a tıklayın.
-3. **Etkinleştirme profili URL 'si** için **değer türü** menüsünden **dize** ' yi seçin, ardından **paylaşılabilir bağlantı URL 'sini** , tercih edilen etkinleştirme profilinden kopyalayın ve sürükleyin.
-4. **Ayarlar**bölümünde yapılandırma ayarlarını tanımlayın **> yapılandırma tasarımcısını kullanın** ve aşağıdaki adımları izleyin.
+3. **Etkinleştirme profili URL 'si** için **değer türü** menüsünden **dize** ' yi seçin ve ardından, **paylaşılabilir bağlantı URL 'sini** radar içindeki istenen etkinleştirme profilinden kopyalayın.
+4. **Intune yönetici konsolu uygulama yapılandırması Kullanıcı arabiriminde**, **Ayarlar**' ı seçin, **yapılandırma ayarlarını tanımlayın > yapılandırma TASARıMCıSıNı kullanın** ve **paylaşılabilir bağlantı URL**'sini yapıştırın.  
 
 > [!NOTE] 
-> İOS 'ın aksine, her bir Wandera etkinleştirme profili için benzersiz bir Android kurumsal uygulama yapılandırma ilkesi tanımlamanız gerekir. Birden çok Wandera etkinleştirme profili gerekmiyorsa, tüm hedef cihazlar için tek bir Android uygulama yapılandırması kullanabilirsiniz. Wandera 'da etkinleştirme profilleri oluştururken, Wandera 'nın cihazı UıEM Connect aracılığıyla Microsoft Endpoint Manager ile eşitlemesini sağlamak için Ilişkili Kullanıcı Yapılandırması altında "Azure Active Directory" öğesini seçtiğinizden emin olun.
+> İOS 'ın aksine, her bir Wandera etkinleştirme profili için benzersiz bir Android kurumsal uygulama yapılandırma ilkesi tanımlamanız gerekir. Birden çok Wandera etkinleştirme profili gerekmiyorsa, tüm hedef cihazlar için tek bir Android uygulama yapılandırması kullanabilirsiniz. Wandera 'da etkinleştirme profilleri oluştururken, Wandera 'nın cihazı UıEM Connect aracılığıyla Intune ile eşitlemesini sağlamak için Ilişkili Kullanıcı Yapılandırması altında "Azure Active Directory" seçeneğini belirlediğinizden emin olun.
 
 - **iOS**
   - İstendiğinde aşağıdaki bilgileri kullanarak Wandera iOS uygulama yapılandırma ilkesini eklemek için [iOS için Microsoft Intune uygulama yapılandırma ilkeleri kullanma](../apps/app-configuration-policies-use-ios.md) yönergelerine bakın.
 
 1. **Radar**bölümünde, **cihazlar > etkinleştirmeleri** ' a gidin ve herhangi bir etkinleştirme profili seçin. **Yönetilen cihazlar > > Microsoft Intune dağıtım stratejileri** ' ne tıklayın ve **iOS uygulama yapılandırma ayarlarını**bulun.  
 2. İOS uygulama yapılandırması XML 'sini göstermek ve sistem panonuza kopyalamak için kutuyu genişletin.  
-3. **Ayarlar '** da, **yapılandırma ayarları BIÇIMINI tanımlayın > XML verisi girin** ve aşağıdaki adımları izleyin:
-4. XML 'i Microsoft Endpoint Manager 'daki uygulama yapılandırma metin kutusuna yapıştırın.
+3. **Intune yönetici konsolu uygulama yapılandırması kullanıcı arabirimi ayarları ' nda,** **yapılandırma ayarları BIÇIMINI tanımlayın > XML verisi girin**. 
+4. XML 'yi uygulama yapılandırması metin kutusuna yapıştırın.
 
 > [!NOTE]
 > Tek bir iOS yapılandırma ilkesi, Wandera ile sağlanacak tüm cihazlarda kullanılabilir.  
