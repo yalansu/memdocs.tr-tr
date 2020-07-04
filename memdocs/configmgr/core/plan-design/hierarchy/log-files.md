@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63f8ad6827a1aa72c3aaa51e21fecbf639fbb405
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 0f69b42ce0396148c67eaade967ef4fd87dea7bb
+ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715586"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946904"
 ---
 # <a name="log-file-reference"></a>Günlük dosyası başvurusu
 
@@ -79,7 +79,7 @@ Aşağıdaki bölümler, size sunulan farklı günlük dosyaları hakkında ayr�
 
   - [Endpoint Protection](#BKMK_EPLog)  
 
-  - [Uzantılar](#BKMK_Extensions)  
+  - [Uzantıları](#BKMK_Extensions)  
 
   - [Sayım](#BKMK_InventoryLog)  
 
@@ -117,7 +117,7 @@ Aşağıdaki bölümlerde, istemci işlemleriyle ve istemci yüklemesiyle ilgili
 
 Aşağıdaki tabloda Configuration Manager istemcisinde bulunan günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|  
+|Günlük adı|Açıklama|  
 |--------------|-----------------|  
 |ADALOperationProvider. log|Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ile istemci kimlik doğrulama belirteci istekleri hakkında bilgi.|
 |BitLockerManagementHandler. log|BitLocker yönetim ilkeleriyle ilgili bilgileri kaydeder.|
@@ -188,7 +188,7 @@ Aşağıdaki tabloda Configuration Manager istemcisinde bulunan günlük dosyala
 
 Aşağıdaki tabloda, Configuration Manager istemcisinin yüklenmesiyle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|  
+|Günlük adı|Açıklama|  
 |--------------|-----------------|  
 |ccmsetup.log|İstemci kurulumu, istemci yükseltmesi ve istemci kaldırma için ccmsetup.exe görevleri kaydeder. İstemci yükleme sorunlarını gidermek için kullanılabilir.|  
 |ccmsetup-ccmeval.log|İstemci durumu ve düzeltme için ccmsetup.exe görevleri kaydeder.|  
@@ -263,7 +263,7 @@ Aşağıdaki bölümlerde, site sunucusunda bulunan veya belirli site sistemi ro
 
 Aşağıdaki tabloda, Configuration Manager site sunucusunda ve site sistemi sunucularında bulunan günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |adctrl.log|Kayıt işleme etkinliğini kaydeder.|Site sunucusu|  
 |ADForestDisc.log|Active Directory Orman Saptama eylemlerini kaydeder.|Site sunucusu|  
@@ -350,7 +350,7 @@ Aşağıdaki tabloda, Configuration Manager site sunucusunda ve site sistemi sun
 
 Aşağıdaki tabloda, site yüklemeyle ilgili bilgileri içeren günlük dosyaları listelenmiştir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |ConfigMgrPrereq.log|Önkoşul bileşen değerlendirmesi ve yükleme etkinliklerini kaydeder.|Site sunucusu|  
 |ConfigMgrSetup.log|Site sunucusu kurulumundan ayrıntılı çıktıyı kaydeder.|Site Sunucusu|  
@@ -362,7 +362,7 @@ Aşağıdaki tabloda, site yüklemeyle ilgili bilgileri içeren günlük dosyala
 
 Aşağıdaki tabloda, veri ambarı hizmet noktasıyla ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |DWSSMSı. log|Veri ambarı hizmet noktası yüklemesi tarafından oluşturulan iletileri kaydeder.|Site sistemi sunucusu|  
 |DWSSSetup. log|Veri ambarı hizmet noktası yüklemesi tarafından oluşturulan iletileri kaydeder.|Site sistemi sunucusu|  
@@ -372,7 +372,7 @@ Aşağıdaki tabloda, veri ambarı hizmet noktasıyla ilgili bilgiler içeren g�
 
 Aşağıdaki tabloda, geri dönüş durum noktasıyla ilgili bilgileri içeren günlük dosyaları listelenmiştir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |FspIsapi|Eski mobil cihaz istemcilerinden ve istemci bilgisayarlardan geri dönüş durum noktasına yapılan iletişimlerle ilgili ayrıntıları kaydeder.|Site sistemi sunucusu|  
 |fspMSI.log|Geri dönüş durum noktasının yüklenmesiyle oluşturulan iletileri kaydeder.|Site sistemi sunucusu|  
@@ -382,7 +382,7 @@ Aşağıdaki tabloda, geri dönüş durum noktasıyla ilgili bilgileri içeren g
 
 Aşağıdaki tabloda, yönetim noktasıyla ilgili bilgileri içeren günlük dosyaları listelenmiştir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |CcmIsapi.log|Uç noktadaki istemci mesajlaşma etkinliğini kaydeder.|Site sistemi sunucusu|
 |CCM_STS. log|Azure Active Directory veya site tarafından verilen istemci belirteçlerinden kimlik doğrulama belirteçleri için etkinlikleri kaydeder.|Site sistemi sunucusu|
@@ -412,7 +412,7 @@ Aşağıdaki tabloda, yönetim noktasıyla ilgili bilgileri içeren günlük dos
 
 Aşağıdaki tabloda hizmet bağlantı noktasıyla ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |CertMgr.log|Sertifika ve proxy hesabı bilgilerini kaydeder.|Site sunucusu|  
 |CollEval.log|Koleksiyonların Koleksiyon Değerlendiricisi tarafından oluşturulduğu, değiştirildiği ve silindiği zamana dair ayrıntıları kaydeder.|Birincil site ve merkezi yönetim sitesi|  
@@ -427,6 +427,7 @@ Aşağıdaki tabloda hizmet bağlantı noktasıyla ilgili bilgiler içeren günl
 |objreplmgr.log|İlke ve atama işlemeyi kaydeder.|Birincil site sunucusu|  
 |PolicyPV.log|Tüm ilkelerin ilke oluşturmasını kaydeder.|Site sunucusu|  
 |outgoingcontentmanager.log|Microsoft Intune karşıya yüklenen içeriği kaydeder.|Hizmet bağlantı noktası ile bilgisayar|  
+|ServiceConnectionTool. log|[Hizmet bağlantı aracının](../../servers/manage/use-the-service-connection-tool.md) kullanımıyla ilgili ayrıntıları, kullandığınız parametreye göre kaydeder. Aracı her çalıştırdığınızda, var olan herhangi bir günlük dosyasının yerini alır.|Araçla aynı konum|
 |Sitecomp.log|Hizmeti bağlantı noktası yüklemesinin ayrıntılarını kaydeder.|Site sunucusu|  
 |SmsAdminUI.log|Konsol etkinliğine Configuration Manager kaydeder.|Configuration Manager konsolunu çalıştıran bilgisayar|  
 |SMS_CLOUDCONNECTION. log|Bulut hizmetleriyle ilgili bilgileri kaydeder.|Hizmet bağlantı noktası ile bilgisayar|
@@ -438,7 +439,7 @@ Aşağıdaki tabloda hizmet bağlantı noktasıyla ilgili bilgiler içeren günl
 
 Aşağıdaki tabloda, yazılım güncelleştirme noktasıyla ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |objreplmgr.log|Yazılım güncelleştirme bildirim dosyalarının üst siteden alt sitelere çoğaltılmasıyla ilgili ayrıntıları kaydeder.|Site sunucusu|  
 |PatchDownloader.log|Yazılım güncelleştirmelerinin güncelleştirme kaynağından site sunucusundaki indirme hedefine indirilmesi işlemiyle ilgili ayrıntıları kaydeder.|Güncelleştirmeleri el ile indirdiğinizde, bu dosya, `%temp%` konsolunu kullandığınız bilgisayardaki dizininizde bulunur. Otomatik dağıtım kuralları için, Configuration Manager istemcisi site sunucusunda yüklüyse, bu dosya içindeki site sunucusudur `%windir%\CCM\Logs` .|  
@@ -459,7 +460,7 @@ Aşağıdaki bölümlerde Configuration Manager işlevlerle ilgili günlük dosy
 
 Aşağıdaki tabloda, uygulama yönetimiyle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |AppIntentEval.log|Uygulamaların mevcut ve amaçlanan durumları, uygulanabilirlikleri, gereksinimlerin karşılanıp karşılanmadığı, dağıtım türleri ve bağımlılıklar hakkındaki ayrıntıları kaydeder.|İstemci|  
 |AppDiscovery.log|İstemci bilgisayarlardaki uygulamaların bulunması veya algılanması hakkındaki ayrıntıları kaydeder.|İstemci|  
@@ -490,7 +491,7 @@ Aşağıdaki tabloda, uygulama yönetimiyle ilgili bilgiler içeren günlük dos
 
 Aşağıdaki tabloda, paketlerin ve programların dağıtımıyla ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |colleval.log|Koleksiyonların Koleksiyon Değerlendiricisi tarafından oluşturulduğu, değiştirildiği ve silindiği zamana dair ayrıntıları kaydeder.|Site sunucusu|  
 |execmgr.log|Çalışan paketler ve görev dizileri hakkındaki ayrıntıları kaydeder.|İstemci|  
@@ -499,7 +500,7 @@ Aşağıdaki tabloda, paketlerin ve programların dağıtımıyla ilgili bilgile
 
 Aşağıdaki tabloda, Varlık Yönetim Bilgileri ile ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük Adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük Adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |AssetAdvisor.log|Varlık Yönetim Bilgileri envanter eylemleri etkinliklerini kaydeder.|İstemci|  
 |aikbmgr.log|Varlık Yönetim Bilgileri kataloğunu güncelleştirmek için gelen kutusundaki XML dosyalarının işlenmesiyle ilgili ayrıntıları kaydeder.|Site sunucusu|  
@@ -513,7 +514,7 @@ Aşağıdaki tabloda, Varlık Yönetim Bilgileri ile ilgili bilgiler içeren gü
 
 Aşağıdaki tabloda, site sıfırlamaları ve SMS sağlayıcısı 'nda yapılan değişiklikler dahil olmak üzere yedekleme ve kurtarma eylemleriyle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |ConfigMgrSetup.log|Configuration Manager bir siteyi yedeklemeden kurtardığında kurulum ve kurtarma görevleriyle ilgili bilgileri kaydeder.|Site sunucusu|  
 |Smsbkup.log|Site yedekleme etkinliğiyle ilgili ayrıntıları kaydeder.|Site sunucusu|  
@@ -524,7 +525,7 @@ Aşağıdaki tabloda, site sıfırlamaları ve SMS sağlayıcısı 'nda yapılan
 
 Aşağıdaki tabloda, sertifika kaydıyla ilgili bilgileri içeren Configuration Manager günlük dosyaları listelenmektedir. Sertifika kaydı, ağ cihazı kayıt hizmeti 'ni (NDES) çalıştıran sunucuda sertifika kayıt noktasını ve Configuration Manager Ilkesi modülünü kullanır.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |Crp.log|Kayıt etkinliklerini kaydeder.|Sertifika kayıt noktası|  
 |Crpctrl.log|Sertifika kayıt noktasının işletimsel durumunu kaydeder.|Sertifika kayıt noktası|  
@@ -549,7 +550,7 @@ Ayrıca, aşağıdaki günlük dosyalarını da kullanabilirsiniz:
 
 Aşağıdaki tabloda, istemci bildirimiyle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |bgbmgr.log|İstemci bildirim görevleriyle ilgili site sunucusu etkinlikleri ve çevrimiçi ve görev durumu dosyalarını işleme hakkındaki ayrıntıları kaydeder.|Site sunucusu|  
 |BGBServer.log|Bildirim sunucusunun, istemci-sunucu iletişimi ve görevleri istemcilere iletme gibi etkinliklerini kaydeder. Ayrıca site sunucusuna gönderilecek çevrimiçi ve görev durumu dosyalarının üretilmesi hakkındaki bilgileri kaydeder.|Yönetim noktası|  
@@ -562,7 +563,7 @@ Aşağıdaki tabloda, istemci bildirimiyle ilgili bilgiler içeren günlük dosy
 
 Aşağıdaki tabloda, bulut yönetimi ağ geçidiyle ilgili bilgiler içeren günlük dosyaları listelenmektedir.
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|
 |--------------|-----------------|----------------------------|  
 |CloudMgr.log|Bulut yönetimi Ağ Geçidi hizmetini dağıtma, devam eden hizmet durumu ve hizmetle ilişkili verileri kullanma hakkındaki ayrıntıları kaydeder. Günlüğe kaydetme düzeyini yapılandırmak için aşağıdaki kayıt defteri anahtarındaki **günlük düzeyi** değerini düzenleyin:`HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER`|Birincil site sunucusunda veya CA 'larda *InstallDir* klasörü.|
 |CMGSetup. log <sup> [nonote 1](#bkmk_note1)</sup>|Bulut yönetimi ağ geçidi dağıtımının ikinci aşamasına ilişkin ayrıntıları kaydeder (Azure 'da yerel dağıtım). Günlüğe kaydetme düzeyini yapılandırmak için, **Azure portalı \ bulut Hizmetleri Yapılandırması** sekmesinde **izleme düzeyi** (**bilgi** (varsayılan), **ayrıntılı**, **hata**) ayarını kullanın.|Azure sunucunuzdaki **%AppRoot%\logs** veya site SISTEM sunucusundaki SMS/logs klasörü|
@@ -582,7 +583,7 @@ Bunlar, bulut Service Manager 'ın her beş dakikada bir Azure depolama 'dan eş
 
 Aşağıdaki tabloda, uyumluluk ayarları ve şirket kaynağı erişimiyle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |CIAgent.log|Uyumluluk ayarları, yazılım güncelleştirmeleri ve uygulama yönetimine ilişkin düzeltme ve uyumluluk işlemiyle ilgili ayrıntıları kaydeder.|İstemci|  
 |CITaskManager.log|Yapılandırma öğesi görev zamanlamasıyla ilgili bilgileri kaydeder.|İstemci|  
@@ -594,7 +595,7 @@ Aşağıdaki tabloda, uyumluluk ayarları ve şirket kaynağı erişimiyle ilgil
 
 Aşağıdaki tabloda Configuration Manager konsoluyla ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |ConfigMgrAdminUISetup.log|Configuration Manager konsolunun yüklemesini kaydeder.|Configuration Manager konsolunu çalıştıran bilgisayar|  
 |SmsAdminUI.log|Configuration Manager konsolunun işlemi hakkındaki bilgileri kaydeder.|Configuration Manager konsolunu çalıştıran bilgisayar|  
@@ -604,7 +605,7 @@ Aşağıdaki tabloda Configuration Manager konsoluyla ilgili bilgiler içeren g�
 
 Aşağıdaki tabloda, içerik yönetimiyle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |CloudDP- &lt; Guid \> . log|Depolama ve içerik erişimi hakkındaki bilgiler dahil olmak üzere belirli bir bulut tabanlı dağıtım noktasıyla ilgili ayrıntıları kaydeder.|Site sistemi sunucusu|  
 |CloudMgr.log|İçerik sağlama, depolama ve bant genişliği istatistiklerinin toplanması ve bulut tabanlı dağıtım noktası çalıştıran bulut hizmetini durdurmak veya başlatmak için yönetici tarafından başlatılan eylemler hakkındaki ayrıntıları kaydeder.|Site sistemi sunucusu|  
@@ -622,7 +623,7 @@ Configuration Manager ile tümleştirilmiş masaüstü analiziyle ilgili sorunla
 Hizmet bağlantı noktasındaki günlük dosyaları şu dizinde: `%ProgramFiles%\Configuration Manager\Logs\M365A` .
 Configuration Manager istemcisindeki günlük dosyaları şu dizinde: `%WinDir%\CCM\logs` .
 
-| Günlük | Description |Günlük dosyası içeren bilgisayar|
+| Günlük | Açıklama |Günlük dosyası içeren bilgisayar|
 |---------|---------|---------|
 | M365ADeploymentPlanWorker. log | Masaüstü Analizi bulut hizmetinden şirket içi Configuration Manager dağıtım planı eşitlemesi hakkında bilgi |Hizmet bağlantı noktası|
 | M365ADeviceHealthWorker. log | Configuration Manager 'den Microsoft buluta cihaz durumu yüklemesi hakkında bilgi |Hizmet bağlantı noktası|
@@ -634,7 +635,7 @@ Configuration Manager istemcisindeki günlük dosyaları şu dizinde: `%WinDir%\
 
 Aşağıdaki tabloda, bulma ile ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |adsgdis.log|Active Directory Güvenlik Grubu Saptama eylemlerini kaydeder.|Site sunucusu|  
 |adsysdis.log|Active Directory Sistem Saptama eylemlerini kaydeder.|Site sunucusu|  
@@ -648,7 +649,7 @@ Aşağıdaki tabloda, bulma ile ilgili bilgiler içeren günlük dosyaları list
 
 Aşağıdaki tabloda, Uç Nokta Koruma ile ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |EndpointProtectionAgent.log|Uç Nokta Koruma istemcisinin yüklenmesi ve kötü amaçlı yazılımdan koruma ilkesinin o istemciye uygulanmasıyla ilgili ayrıntıları kaydeder.|İstemci|  
 |EPCtrlMgr.log|Kötü amaçlı yazılım tehdit bilgilerinin Endpoint Protection rol sunucusundan Configuration Manager veritabanıyla eşitlenmesi hakkındaki ayrıntıları kaydeder.|Site sistemi sunucusu|  
@@ -659,7 +660,7 @@ Aşağıdaki tabloda, Uç Nokta Koruma ile ilgili bilgiler içeren günlük dosy
 
 Aşağıdaki tabloda, uzantılarla ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |AdminUI.ExtensionInstaller.log|Microsoft'tan uzantıların indirilmesi ile tüm uzantıların yüklenmesi ve kaldırılması hakkındaki bilgileri kaydeder.|Configuration Manager konsolunu çalıştıran bilgisayar|  
 |FeatureExtensionInstaller.log|Configuration Manager konsolunda etkinleştirildiklerinde veya devre dışı bırakıldığında tek tek uzantıların yüklenmesi ve kaldırılması hakkındaki bilgileri kaydeder.|Configuration Manager konsolunu çalıştıran bilgisayar|  
@@ -669,7 +670,7 @@ Aşağıdaki tabloda, uzantılarla ilgili bilgiler içeren günlük dosyaları l
 
 Aşağıdaki tabloda, envanter verilerinin işlenmesiyle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |dataldr.log|Configuration Manager veritabanındaki MIF dosyalarının ve donanım envanterinin işlenmesiyle ilgili bilgileri kaydeder.|Site sunucusu|  
 |invproc.log|MIF dosyalarının ikincil siteden üst siteye iletilmesini kaydeder.|İkincil site sunucusu|  
@@ -679,7 +680,7 @@ Aşağıdaki tabloda, envanter verilerinin işlenmesiyle ilgili bilgiler içeren
 
 Aşağıdaki tabloda, ölçümle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |mtrmgr.log|Tüm yazılım kullanım ölçümü işlemlerini izler.|İstemci|  
 |SWMTRReportGen.log|Ölçüm Aracısı tarafından toplanan kullanım verileri raporunu oluşturur. Bu veriler Mtrmgr.log günlüğüne kaydedilir.|İstemci|
@@ -689,7 +690,7 @@ Aşağıdaki tabloda, ölçümle ilgili bilgiler içeren günlük dosyaları lis
 
 Aşağıdaki tabloda, geçişle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |migmctrl.log|Geçiş işlerini, paylaşılan dağıtım noktalarını ve dağıtım noktası yükseltmelerini içeren geçiş eylemleriyle ilgili bilgileri kaydeder.|Configuration Manager hiyerarşisindeki üst düzey site ve her alt birincil site. Çok birincil siteli bir hiyerarşide, merkezi yönetim sitesinde oluşturulan günlük dosyasını kullanın.|  
 
@@ -701,7 +702,7 @@ Aşağıdaki bölümlerde, mobil cihazların yönetimiyle ilgili bilgiler içere
 
 Aşağıdaki tabloda, mobil cihaz kaydıyla ilgili bilgiler içeren günlükler listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |DMPRP.log|Mobil cihazlar için etkinleştirilmiş yönetim noktalarıyla yönetim noktası uç noktaları arasındaki iletişimi kaydeder.|Site sistemi sunucusu|  
 |dmpmsi.log|Mobil cihazlar için etkinleştirilen yönetim noktasının yapılandırılmasıyla ilgili Windows Installer verilerini kaydeder.|Site sistemi sunucusu|  
@@ -716,7 +717,7 @@ Aşağıdaki tabloda, mobil cihaz kaydıyla ilgili bilgiler içeren günlükler 
 
 Aşağıdaki Günlükler Exchange Server Bağlayıcısı ile ilgili bilgiler içerir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |easdisc.log|Exchange Server bağlayıcısının etkinliklerini ve durumunu kaydeder.|Site sunucusu|  
 
@@ -724,7 +725,7 @@ Aşağıdaki Günlükler Exchange Server Bağlayıcısı ile ilgili bilgiler iç
 
 Aşağıdaki tabloda, mobil cihaz eski istemcisiyle ilgili bilgiler içeren günlükler listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |DmCertEnroll.log|Mobil cihaz eski istemcilerindeki sertifika kaydı verileriyle ilgili ayrıntıları kaydeder.|İstemci|  
 |DMCertResp.htm|Mobil cihaz eski istemci kaydedici programı bir PKI sertifikası istediğinde sertifika sunucusundan gelen HTML yanıtını kaydeder.|İstemci|  
@@ -749,7 +750,7 @@ Aşağıdaki tabloda, mobil cihaz eski istemcisiyle ilgili bilgiler içeren gün
 
 Aşağıdaki tabloda, işletim sistemi dağıtımıyla ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |CAS.log|Başvurulan içerik için dağıtım noktaları bulunduğunda ayrıntıları kaydeder.|İstemci|  
 |ccmsetup.log|İstemci kurulumu, istemci yükseltmesi ve istemci kaldırma için ccmsetup görevlerini kaydeder. İstemci yükleme sorunlarını gidermek için kullanılabilir.|İstemci|  
@@ -787,7 +788,7 @@ Aşağıdaki tabloda, işletim sistemi dağıtımıyla ilgili bilgiler içeren g
 
 Aşağıdaki tabloda, güç yönetimiyle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |pwrmgmt.log|İstemci bilgisayardaki güç yönetimi etkinlikleriyle ilgili ayrıntıları, izleme ve ayarları güç yönetimi Istemci Aracısı tarafından zorlama dahil kaydeder.|İstemci|  
 
@@ -795,7 +796,7 @@ Aşağıdaki tabloda, güç yönetimiyle ilgili bilgiler içeren günlük dosyal
 
 Aşağıdaki tabloda, uzaktan denetimle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |CMRcViewer.log|Uzaktan denetim görüntüleyicinin etkinliğiyle ilgili ayrıntıları kaydeder.|Uzaktan denetim görüntüleyicisini çalıştıran bilgisayarda,% Temp% klasöründe.|  
 
@@ -803,7 +804,7 @@ Aşağıdaki tabloda, uzaktan denetimle ilgili bilgiler içeren günlük dosyala
 
 Aşağıdaki tabloda, raporlamayla ilgili bilgiler içeren Configuration Manager günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |srsrp.log|Raporlama hizmetleri noktasının etkinliği ve durumuyla ilgili bilgileri kaydeder.|Site sistemi sunucusu|  
 |srsrpMSI.log|MSI çıktısından raporlama hizmetleri noktası yükleme işleminin ayrıntılı sonuçlarını kaydeder.|Site sistemi sunucusu|  
@@ -813,7 +814,7 @@ Aşağıdaki tabloda, raporlamayla ilgili bilgiler içeren Configuration Manager
 
 Aşağıdaki tabloda, rol tabanlı yönetimi yönetmekle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |hman.log|Site yapılandırma değişiklikleriyle ilgili bilgileri ve site bilgilerinin Active Directory Domain Services yayımlamasını kaydeder.|Site sunucusu|  
 |SMSProv.log|WMI sağlayıcısı erişimini site veritabanına kaydeder.|SMS Sağlayıcısı'nın bulunduğu bilgisayar|  
@@ -822,7 +823,7 @@ Aşağıdaki tabloda, rol tabanlı yönetimi yönetmekle ilgili bilgiler içeren
 
 Aşağıdaki tabloda, yazılım kullanım ölçümü ile ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |mtrmgr.log|Tüm yazılım kullanım ölçümü işlemlerini izler.|Site sunucusu|  
 
@@ -830,7 +831,7 @@ Aşağıdaki tabloda, yazılım kullanım ölçümü ile ilgili bilgiler içeren
 
 Aşağıdaki tabloda yazılım güncelleştirmeleriyle ilgili bilgileri içeren günlük dosyaları listelenmiştir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |AlternateHandler. log|İstemci Office Tıkla-Çalıştır COM arabirimini çağırdığında, Kurumsal istemci güncelleştirmelerine yönelik Microsoft 365 uygulamalarını indirip yüklerken ayrıntıları kaydeder. Windows güncelleştirmelerini indirmek ve yüklemek üzere Windows Update Agent API 'sini çağırdığında WuaHandler kullanımı benzerdir.<!-- SCCMDocs#888 -->|İstemci|
 |ccmperf.log|İstemci performans sayaçlarıyla ilgili verilerin bakımı ve yakalanmasıyla ilgili etkinlikleri kaydeder.|İstemci|
@@ -861,7 +862,7 @@ Aşağıdaki tabloda LAN'da Uyandırma kullanımı ile ilgili bilgiler içeren g
 > [!NOTE]  
 > LAN'da Uyandırma, uyandırma proxy 'sini kullanarak eklediğinizde, bu etkinlik istemcide günlüğe kaydedilir. Örneğin, *domain* \> @SYSTEM_0.log Bu makalenin [istemci işlemleri](#BKMK_ClientOpLogs) bölümünde yer alan Ccmexec. log ve SleepAgent_<etki alanı ' na bakın.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |wolcmgr.log|Hangi istemcilere uyandırma paketi gönderilmesi gerektiği, gönderilen uyandırma paketi sayısı ve yeniden denenen uyandırma paketi sayısıyla ilgili ayrıntıları kaydeder.|Site sunucusu|  
 |wolmgr.log|Uyandırma yordamlarıyla ilgili ayrıntıları (LAN'da Uyandırma için yapılandırılan dağıtımların ne zaman uyandırılacağı gibi) kaydeder.|Site sunucusu|  
@@ -871,7 +872,7 @@ Aşağıdaki tabloda LAN'da Uyandırma kullanımı ile ilgili bilgiler içeren g
 Aşağıdaki tabloda, Windows 10 Bakımı ile ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 Bakım, yazılım güncelleştirmeleriyle aynı altyapıyı ve işlemi kullanır. Hizmet senaryosu için geçerli olan diğer Günlükler için bkz. [yazılım güncelleştirmeleri](#BKMK_SU_NAPLog).
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |CBS. log|Windows güncelleştirmeleri veya rolleri ve özellikleri değişiklikleriyle ilgili olarak bakım başarısızlıklarını kaydeder.|İstemci|
 |DıSM. log|DıSM kullanarak tüm eylemleri kaydeder. Gerekirse, daha fazla ayrıntı için DıSM. log dosyası CBS. log dosyasına işaret eder.|İstemci|
@@ -883,7 +884,7 @@ Daha fazla bilgi için bkz. [çevrimiçi hizmet Ile Ilgili günlük dosyaları](
 
 Aşağıdaki tabloda, Windows Update Aracısı ile ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Windows Update aracısının WSUS sunucusuna ne zaman bağlanacağı ve uyumluluk değerlendirmesi için yazılım güncelleştirmelerini aldığı ve aracı bileşenlerinde güncelleştirmeler olup olmadığı hakkındaki ayrıntıları kaydeder.|İstemci|  
 
@@ -893,7 +894,7 @@ Daha fazla bilgi için bkz. [Windows Update günlük dosyaları](https://docs.mi
 
 Aşağıdaki tabloda, WSUS sunucusuyla ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-|Günlük adı|Description|Günlük dosyası içeren bilgisayar|  
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
 |Change.log|Değiştirilen WSUS sunucusu veritabanı bilgileriyle ilgili ayrıntıları kaydeder.|WSUS sunucusu|  
 |SoftwareDistribution.log|Yapılandırılan güncelleştirme kaynağından WSUS sunucusu veritabanına eşitlenen yazılım güncelleştirmeleriyle ilgili ayrıntıları kaydeder.|WSUS sunucusu|  

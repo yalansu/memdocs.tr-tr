@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: aa518036aa99d5de003fbc56f99748267f3cc87b
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 5b33be56975713c801d2ad3fdea17e6303687274
+ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776880"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946921"
 ---
 # <a name="firewall-policy-for-endpoint-security-in-intune"></a>Intune 'da uç nokta güvenliği için güvenlik duvarı ilkesi
 
@@ -56,7 +56,7 @@ Yalnızca bir ilke kullanarak bir cihaza uygulanacak güvenlik duvarı ilkelerin
 
 - Bu ilke çakışması biçimi, diğer Microsoft Defender güvenlik duvarı profilleriyle çakışabilecek **Microsoft Defender güvenlik** duvarı profili veya cihaz yapılandırması gibi farklı bir ilke türü tarafından sunulan bir güvenlik duvarı yapılandırması için geçerlidir.
 
-  Microsoft *Defender Güvenlik Duvarı profilleri* , *Microsoft Defender güvenlik duvarı kuralları* profilleriyle çakışmaz.
+  *Microsoft Defender Güvenlik Duvarı profilleri* , *Microsoft Defender güvenlik duvarı kuralları* profilleriyle çakışmaz.
 
 **Microsoft Defender güvenlik duvarı kuralları** profillerini kullandığınızda, aynı cihaza birden çok kural profili uygulayabilirsiniz. Ancak, farklı yapılandırmalara sahip aynı şey için farklı kurallar varsa, her ikisi de cihaza gönderilir ve bu cihazda bir çakışma oluşturur.
 

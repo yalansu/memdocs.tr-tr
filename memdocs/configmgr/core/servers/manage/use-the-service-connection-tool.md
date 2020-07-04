@@ -2,7 +2,7 @@
 title: Hizmet bağlantı aracı
 titleSuffix: Configuration Manager
 description: Kullanım bilgilerini el ile karşıya yüklemek için Configuration Manager bulut hizmetine bağlanmanızı sağlayan bu araç hakkında bilgi edinin.
-ms.date: 09/06/2017
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,180 +10,250 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e535653e0f31e186a6bdbde8da77750f2afdfdb0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 48aa08f3318aaa4629691bfb30b60580cd3e25f0
+ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710821"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946853"
 ---
 # <a name="use-the-service-connection-tool-for-configuration-manager"></a>Configuration Manager için hizmet bağlantısı aracını kullanma
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
-Hizmet bağlantı noktanız çevrimdışı modda olduğunda veya Configuration Manager site sistem sunucularınız Internet 'e bağlı olmadığında **hizmet bağlantı aracını** kullanın. Araç, Configuration Manager en son güncelleştirmeleriyle sitenizi güncel tutmaya yardımcı olabilir.  
+Hizmet bağlantı noktanız çevrimdışı modda olduğunda **hizmet bağlantı aracını** kullanın. Ayrıca, Configuration Manager site sistem sunucularınız internet 'e bağlı olmadığında da kullanabilirsiniz. Araç, Configuration Manager en son güncelleştirmeleriyle sitenizi güncel tutmanıza yardımcı olabilir.
 
-Çalıştırıldığında, araç, hiyerarşinizin kullanım bilgilerini karşıya yüklemek ve güncelleştirmeleri indirmek için Configuration Manager bulut hizmetine el ile bağlanır. Kullanım verilerinin karşıya yüklenmesi, bulut hizmetinin dağıtımınız için doğru güncelleştirmeleri sağlaması için gereklidir.  
+Aracı çalıştırdığınızda, Configuration Manager bulut hizmetine bağlanır, hiyerarşiniz için kullanım bilgilerini karşıya yükler ve güncelleştirmeleri indirir. Kullanım verilerinin karşıya yüklenmesi, bulut hizmetinin ortamınız için doğru güncelleştirmeleri sağlamasını sağlamak için gereklidir.
 
-## <a name="prerequisites-for-using-the-service-connection-tool"></a>Hizmet bağlantı aracını kullanma önkoşulları
-Önkoşullar ve bilinen sorunlar aşağıda verilmiştir.
+## <a name="prerequisites"></a>Önkoşullar
 
-**Kaynakları**
+- Sitenin bir hizmet bağlantı noktası vardır ve bunu **çevrimdışı, isteğe bağlı bir bağlantı**için yapılandırırsınız.
 
-- Yüklü bir hizmet bağlantı noktanız var ve **Çevrimdışı, isteğe bağlı bağlantı**olarak ayarlanmış.  
+- Aracı bir komut isteminden yönetici olarak çalıştırın. Kullanıcı arabirimi yok.
 
-- Aracın bir komut isteminden çalıştırılması gerekir.  
+- Aracı, hizmet bağlantı noktasından ve internet 'e bağlanabilecek bir bilgisayardan çalıştırırsınız. Bu bilgisayarların her birinin x64 bit işletim sistemi olması ve aşağıdaki bileşenlere sahip olması gerekir:
 
-- Aracın çalıştığı her bilgisayarda (hizmet bağlantı noktası bilgisayarı ve İnternet’e bağlı olan bilgisayar) x64 bit işletim sistemi ve aşağıdakilerin yüklü olması gerekir:  
+  - **Visual C++ Yeniden Dağıtılabilir** x86 ve x64 dosyaları. Varsayılan olarak, Configuration Manager, hizmet bağlantı noktasını barındıran bilgisayara x64 sürümünü yüklenir. Bu bileşeni indirmek için, bkz. [Visual Studio 2013 Için yeniden dağıtılabilir paketler Visual C++](https://www.microsoft.com/download/details.aspx?id=40784).
 
-  - **Visual C++ Yeniden Dağıtılabilir** x86 ve x64 dosyaları.   Varsayılan olarak, Configuration Manager, hizmet bağlantı noktasını barındıran bilgisayara x64 sürümünü yüklenir.  
+  - **.NET Framework 4.5.2** veya üzeri
 
-    Visual C++ dosyalarının bir kopyasını indirmek için, Microsoft İndirme Merkezi’ndeki [Visual Studio 2013 için Visual C++ Yeniden Dağıtılabilir Paketleri](https://www.microsoft.com/download/details.aspx?id=40784) sayfasını ziyaret edin.  
+- Aracı çalıştırmak için kullandığınız hesap şu izinlere ihtiyaç duyuyor:
 
-  - .NET Framework 4.5.2 veya üzeri.  
+  - Hizmet bağlantı noktasını barındıran bilgisayarda **yerel yönetici**
 
-- Aracı çalıştırmak için kullandığınız hesabın şunlara sahip olması gerekir:
-  - Hizmet bağlantı noktasını barındıran (aracın çalıştığı) bilgisayarda**yerel yönetici** izinleri.
-  - Site veritabanına**Okuma** izinleri.  
+  - Site veritabanı için **okuma** izinleri
 
+- Internet erişimi ve hizmet bağlantı noktası olan bilgisayar arasında dosyaları aktarmak için bir yönteme ihtiyacınız vardır. Örneğin, dosyaları ve güncelleştirmeleri depolamak için yeterli boş alana sahip bir USB sürücü.
 
+## <a name="overview"></a>Genel Bakış
 
-- Hizmet bağlantı noktası bilgisayarı ile İnternet bağlantısı olan bilgisayar arasında dosya aktarmak için, dosya ve güncelleştirmeleri depolamaya yetecek boş alana sahip bir USB sürücüye veya başka bir yönteme ihtiyacınız vardır. (Bu senaryoda, site ve yönetilen bilgisayarlarınızın doğrudan İnternet bağlantısı olmadığı varsayılır.)  
+1. **Hazırla**: Aracı hizmet bağlantı noktasında çalıştırın. Kullanım verilerinizi, belirttiğiniz konumdaki bir. cab dosyasına yerleştirir. Veri dosyasını Internet bağlantısı olan bilgisayara kopyalayın.
 
+2. **Bağlan**: bilgisayarda bir internet bağlantısı olan aracı çalıştırın. Kullanım verilerinizi karşıya yükler ve ardından Configuration Manager güncelleştirmeleri indirir. İndirilen güncelleştirmeleri hizmet bağlantı noktasına kopyalayın.
 
+    Tek seferde birden çok veri dosyasını, her biri farklı bir hiyerarşiden karşıya yükleyebilirsiniz. Proxy sunucusu için bir ara sunucu ve Kullanıcı da belirtebilirsiniz.
 
-## <a name="use-the-service-connection-tool"></a>Hizmet bağlantısı aracını kullanma  
+3. **Içeri aktar**: Aracı hizmet bağlantı noktasında çalıştırın. Güncelleştirmeleri içeri aktarır ve sitenize ekler. Daha sonra [Bu güncelleştirmeleri](install-in-console-updates.md) Configuration Manager konsolunda görüntüleyebilir ve yükleyebilirsiniz.
 
- Hizmet bağlantı aracını (**serviceconnectiontool. exe**), Configuration Manager yükleme medyasında **%Path%\smssetup\tools\serviceconnectiontool** klasöründe bulabilirsiniz. Her zaman kullandığınız Configuration Manager sürümüyle eşleşen hizmet bağlantı aracını kullanın.
+### <a name="upload-multiple-data-files"></a>Birden çok veri dosyasını karşıya yükleme
 
+- Ayrı Hiyerarşilerden tüm aktarılmış veri dosyalarını aynı klasöre yerleştirin. Her dosyaya benzersiz bir ad verin. Gerekirse, bunları el ile yeniden adlandırabilirsiniz.
 
- Bu yordamda, komut satırı örnekleri aşağıdaki dosya adlarını ve klasör konumlarını kullanmaktadır (bu yollar ile dosya adlarını kullanmanız gerekmez ve bunlar yerine ortamınız ve tercihlerinizle eşleşen alternatifler kullanabilirsiniz):  
+- Microsoft 'a veri yüklemek için aracı çalıştırdığınızda, veri dosyalarını içeren klasörü belirtirsiniz.
 
-- Sunucular arasında aktarılmak üzere verilerin depolandığı USB Çubuğu’nun yolu: **D:\USB\\**  
+- Verileri içeri aktarmak için aracı çalıştırdığınızda, araç yalnızca söz konusu hiyerarşinin verilerini içeri aktarır.
 
-- Sitenizden dışarı aktarılan verileri içeren.cab dosyasının adı: **UsageData.cab**  
+### <a name="specify-a-proxy-server"></a>Proxy sunucusu belirtin
 
-- Sunucular arasında aktarılmak üzere indirilen Configuration Manager güncelleştirmelerinin depolanacağı boş klasörün adı: **UpdatePacks**  
+Internet bağlantısı olan bilgisayar bir ara sunucu gerektiriyorsa, araç temel bir proxy yapılandırmasını destekler. **-Proxyserveruri** ve **-ProxyUserName**isteğe bağlı parametrelerini kullanın. Daha fazla bilgi için bkz. [komut satırı parametreleri](#bkmk_cmd).
 
-Hizmet bağlantı noktasını barındıran bilgisayarda:  
+### <a name="specify-the-type-of-updates-to-download"></a>İndirilecek güncelleştirmelerin türünü belirtin
 
-- Yönetici ayrıcalıklarıyla bir komut istemi açın ve ardından dizin değiştirerek **serviceconnectiontool.exe**aracını içeren konuma gidin.  
+Araç, hangi dosyaları indirdiklerinizi denetlemek için seçenekleri destekler. Varsayılan olarak, araç yalnızca sitenizin sürümü için geçerli olan en son güncelleştirmeleri indirir. Düzeltmeleri indirmez.
 
-  Varsayılan olarak, bu aracı **%Path%\smssetup\tools\serviceconnectiontool** klasöründe Configuration Manager yükleme medyasında bulabilirsiniz. Hizmet bağlantı aracının çalışması için bu klasördeki tüm dosyaların aynı klasörde olması gerekir.  
+Bu davranışı değiştirmek için, indirdiği dosyaları değiştirmek üzere aşağıdaki parametrelerden birini kullanın:
 
-Aşağıdaki komutu çalıştırdığınızda, araç, kullanım bilgileri içeren bir .cab dosyası hazırlar ve dosyayı belirttiğiniz konuma kopyalar. Bu .cab dosyasındaki veriler, sitenizin toplamak üzere yapılandırıldığı tanılama kullanım verileri düzeyini temel alır. ( [Configuration Manager Için tanılama ve kullanım verilerine](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)bakın).  .cab dosyasını oluşturmak için aşağıdaki komutu çalıştırın:  
+- **-downloadall**: sitenizin sürümü ne olursa olsun, güncelleştirmeler ve düzeltmeler de dahil olmak üzere tüm güncelleştirmeleri indirin.
+- **-downloadhotfix**: sitenizin sürümüne her şeyi olan tüm düzeltmeleri indirin.
+- **-downloadsiteversion**: güncelleştirmeleri ve düzeltmeleri sitenizin sürümünden daha sonraki bir sürümle indirir.
 
-- **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+    > [!IMPORTANT]
+    > Configuration Manager sürüm 2002 ' deki bilinen bir sorundan dolayı varsayılan davranış beklendiği gibi çalışmaz. Sürüm 2002 için gerekli güncelleştirmeleri indirmek üzere **-downloadsiteversion** parametresini kullanın.<!-- 7594517 -->
 
-Ayrıca, ServiceConnectionTool klasörünü tüm içindekilerle birlikte USB sürücüsüne kopyalamanız veya 3. ve 4. adımlar için kullanacağınız bilgisayardan bu klasöre erişebilmeniz gerekir.  
+Daha fazla bilgi için bkz. [komut satırı parametreleri](#bkmk_cmd).
 
-### <a name="overview"></a>Genel Bakış
-#### <a name="there-are-three-primary-steps-to-using-the-service-connection-tool"></a>Hizmet bağlantı aracının kullanılmasına yönelik başlıca üç adım vardır  
+> [!TIP]
+> Araç, sitenizin veri dosyasından sürümünü belirler. Sürümü doğrulamak için, site sürümüyle adlı metin dosyası için. cab dosyasına bakın.
 
-1.  **Hazırlama**: Bu adım, hizmet bağlantı noktasını barındıran bilgisayarda çalışır. Araç çalıştırıldığında, kullanım verilerinizi bir. cab dosyasına koyar ve bir USB sürücüde (veya belirttiğiniz alternatif aktarım konumunda) depolar.  
+## <a name="use-the-tool"></a>Aracı kullanma  
 
-2.  **Bağlan**: Bu adım için, aracı Internet 'e bağlanan uzak bir bilgisayarda çalıştırarak kullanım verilerinizi karşıya yükleyebilir ve sonra güncelleştirmeleri indirebilirsiniz.  
+Hizmet bağlantı aracı, aşağıdaki yolda Configuration Manager yükleme medyasında bulunur: `SMSSETUP\TOOLS\ServiceConnectionTool\ServiceConnectionTool.exe` . Her zaman kullandığınız Configuration Manager sürümüyle eşleşen hizmet bağlantı aracını kullanın. Hizmet bağlantı aracının çalışması için bu dosyaların tümünün aynı klasörde olması gerekir.
 
-3.  **Içeri aktarma**: Bu adım, hizmet bağlantı noktasını barındıran bilgisayarda çalışır. Çalıştırdığınızda araç, indirdiğiniz güncelleştirmeleri içeri aktarır ve bu güncelleştirmeleri Configuration Manager konsolundan görüntüleyip yükleyebilmeniz için sitenize ekler.  
+**Serviceconnectiontool** klasörünü tüm içeriğiyle birlikte internet bağlantısı olan bilgisayara kopyalayın.
 
-Sürüm 1606’dan başlayarak, Microsoft’a bağlandığınızda bir kerede birden çok .cab dosyasını karşıya yükleyebilir (her biri farklı hiyerarşiden), proxy sunucunu ve proxy sunucusu için kullanıcıyı belirtebilirsiniz.   
+Bu yordamda, komut satırı örnekleri aşağıdaki dosya adlarını ve klasör konumlarını kullanır. Bu yolları ve dosya adlarını kullanmanız gerekmez. Ortamınız ve tercihlerinizle eşleşen alternatifleri kullanabilirsiniz.
 
-#### <a name="to-upload-multiple-cab-files"></a>Birden çok. cab dosyasını karşıya yüklemek için
-- Ayrı hiyerarşilerden dışarı aktardığınız her .cab dosyasını aynı klasöre yerleştirin. Her dosyanın adı benzersiz olmalıdır; gerekirse bunları kendiniz yeniden adlandırabilirsiniz.
-- Ardından, verileri Microsoft’a yükleme komutunu çalıştırdığınızda .cab dosyalarını içeren klasörü belirtirsiniz. (Güncelleştirme 1606’dan önce, bir kerede tek bir hiyerarşiden verileri karşıya yükleyebiliyordunuz ve araç, klasörde .cab dosyasının adını belirtmenizi istiyordu.)
-- Daha sonra, hiyerarşinin hizmet bağlantı noktasında içeri aktarma görevini çalıştırdığınızda, araç otomatik olarak yalnızca o hiyerarşinin verilerini içeri aktarır.  
+- Hizmet bağlantı noktasındaki Configuration Manager yükleme medyası kaynak dosyalarının yolu:`C:\Source`
 
-#### <a name="to-specify-a-proxy-server"></a>Proxy sunucusu belirtmek için
-Proxy sunucusunu belirtmek için aşağıdaki isteğe bağlı parametreleri kullanabilirsiniz. (Bu konunun Komut satırı parametreleri bölümünde bu parametreleri kullanma hakkında daha fazla bilgi bulabilirsiniz):
-- **-proxyserveruri [FQDN_of_proxy_server]**  Bu bağlantı için kullanılacak proxy sunucusunu belirtmek için bu parametreyi kullanın.
-- **-proxyusername [kullanıcıadı]**  Proxy sunucusu için kullanıcı belirtmeniz gerektiğinde bu parametreyi kullanın.
+- Bilgisayarlar arasında aktarılacak verileri depoladığınız USB sürücüsünün yolu:`D:\USB\`
 
-#### <a name="specify-the-type-of-updates-to-download"></a>İndirilecek güncelleştirmelerin türünü belirtin
-Sürüm 1706 ' den başlayarak, araçların varsayılan indirme davranışı değişmiştir ve araç, indirdiklerinizi hangi dosyaları kontrol etmek için seçenekleri destekler.
-- Varsayılan olarak, araç yalnızca sitenizin sürümü için geçerli olan en son güncelleştirmeleri indirir. Düzeltmeleri indirmez.
+- Siteden dışarı verdiğiniz veri dosyasının adı:`UsageData.cab`
 
-Bu davranışı değiştirmek için, hangi dosyaların indirileceğini değiştirmek üzere aşağıdaki parametrelerden birini kullanın. 
+- Aracın Configuration Manager için indirilen güncelleştirmeleri depoladığı boş klasörün adı:`UpdatePacks`
 
-> [!NOTE]
-> Sitenizin sürümü, araç çalıştırıldığında karşıya yüklenen. cab dosyasındaki verilerden belirlenir.
->
-> . Cab dosyasının içindeki *Siteversion*. txt dosyasını arayarak sürümü doğrulayabilirsiniz.
+### <a name="prepare"></a>Hazırlama
 
-- **-downloadall**  Bu seçenek, sitenizin sürümünden bağımsız olarak, güncelleştirmeler ve düzeltmeler de dahil olmak üzere her şeyi indirir.
-- **-downloadhotfix**  Bu seçenek, sitenizin sürümünden bağımsız olarak tüm düzeltmeleri indirir.
-- **-downloadsiteversion**  Bu seçenek, sitenizin sürümünden daha yüksek bir sürüme sahip olan güncelleştirmeleri ve düzeltmeleri indirir.
+1. Hizmet bağlantı noktasını barındıran bilgisayarda yönetici olarak bir komut istemi açın ve dizini araç konumuyla değiştirin. Örneğin:
 
-*-Downloadsiteversion*kullanan örnek komut satırı:
-- **serviceconnectiontool. exe-Connect *-downloadsiteversion* -usagedatasrc d:\usb-updatepackdest D:\USB\UpdatePacks**
+    `cd C:\Source\SMSSETUP\TOOLS\ServiceConnectionTool\`
 
+1. Veri dosyasını hazırlamak için aşağıdaki komutu çalıştırın:
 
+    `ServiceConnectionTool.exe -prepare -usagedatadest D:\USB\UsageData.cab`
 
+    > [!NOTE]
+    > Aynı anda birden fazla hiyerarşiden veri dosyası yükleyeceksiniz, her veri dosyasına benzersiz bir ad verin. Gerekirse dosyaları daha sonra yeniden adlandırabilirsiniz.
 
-### <a name="to-use-the-service-connection-tool"></a>Hizmet bağlantı aracını kullanmak için  
+    Dosyadaki veriler, site için yapılandırdığınız tanılama ve kullanım verileri düzeyini temel alır. Daha fazla bilgi için bkz. [Tanılama ve kullanım verilerine genel bakış](../../plan-design/diagnostics/diagnostics-and-usage-data.md). İçeriğini görüntülemek için, bir CSV dosyasına verileri dışarı aktarmak için aracını kullanabilirsiniz. Daha fazla bilgi için bkz. [-dışarı aktarma](#-export).
 
-1. Hizmet bağlantı noktasını barındıran bilgisayarda:  
+1. Araç kullanım verilerini dışarı aktarmayı tamamladıktan sonra, veri dosyasını internet erişimi olan bir bilgisayara kopyalayın.
 
-   - Yönetici ayrıcalıklarıyla bir komut istemi açın ve ardından dizin değiştirerek **serviceconnectiontool.exe**aracını içeren konuma gidin.   
+### <a name="connect"></a>Bağlan
 
-2. Aracın, kullanım bilgileri içeren bir .cab dosyası hazırlamasını ve dosyayı belirttiğiniz konuma kopyalamasını sağlamak için aşağıdaki komutu çalıştırın:  
+1. İnternet erişimi olan bilgisayarda, yönetici olarak bir komut istemi açın ve dizini araç konumuyla değiştirin. Bu konum, **Serviceconnectiontool** klasörünün tamamının bir kopyasıdır. Örneğin:
 
-   - **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+    `cd D:\USB\ServiceConnectionTool\`
 
-   Birden çok hiyerarşiden .cab dosyalarını bir kerede karşıya yükleyecekseniz, klasördeki her .cab dosyasının adı benzersiz olmalıdır. Dosyaları klasöre eklerken el ile yeniden adlandırabilirsiniz.
+1. Veri dosyasını karşıya yüklemek ve Configuration Manager güncelleştirmelerini indirmek için aşağıdaki komutu çalıştırın:
 
-   Configuration Manager bulut hizmetine yüklenmek üzere toplanan kullanım bilgilerini görüntülemek istiyorsanız, aşağıdaki komutu çalıştırarak aynı verileri .csv dosyası olarak dışarı aktarın (bu dosyayı Excel gibi bir uygulamada görüntüleyebilirsiniz):  
+    `ServiceConnectionTool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks`
 
-   - **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
+    Daha fazla örnek için bkz. [komut satırı parametreleri](#bkmk_cmd).
 
-3. Hazırlama adımı tamamlandıktan sonra, USB sürücüsünü İnternet erişimi olan bir bilgisayara taşıyın (veya dışarı aktarılan verileri farklı bir şekilde aktarın).  
+    > [!NOTE]  
+    > Bu komut satırını çalıştırdığınızda, aşağıdaki hatayı görebilirsiniz:
+    >
+    > **İşlenmeyen özel durum: System. UnauthorizedAccessException: ' C:\Users\jqpublic\AppData\Local\Temp\extractmanifestcab\95F8A562.sql ' yoluna erişim reddedildi.**
+    >
+    > Bu hatayı güvenle yoksayabilirsiniz. Devam etmek için hata penceresini kapatın.
 
-4. İnternet erişimi olan bilgisayarda, yönetici ayrıcalıklarıyla bir komut istemi açın ve ardından dizin değiştirerek  **serviceconnectiontool.exe** aracını ve bu klasördeki diğer dosyaların kopyasını içeren konuma gidin.  
+1. Araç güncelleştirmeleri indirmeyi tamamladıktan sonra, bunları hizmet bağlantı noktasına kopyalayın.
 
-5. Configuration Manager için kullanım bilgilerini karşıya yükleme ve güncelleştirmeleri indirme işlemine başlamak için aşağıdaki komutu çalıştırın:  
+### <a name="import"></a>İçeri Aktar
 
-   - **serviceconnectiontool. exe-Connect-usagedatasrc D:\USB-updatepackdest D:\USB\UpdatePacks**
+1. Hizmet bağlantı noktasını barındıran bilgisayarda yönetici olarak bir komut istemi açın ve dizini araç konumuyla değiştirin. Örneğin:
 
-   Bu komut satırıyla ilgili diğer örnekler için, bu konunun devamındaki [Komut satırı seçenekleri](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd) bölümüne bakın.
+    `cd C:\Source\SMSSETUP\TOOLS\ServiceConnectionTool\`
 
-   > [!NOTE]  
-   >  Configuration Manager bulut hizmetine bağlanmak için komut satırını çalıştırdığınızda, aşağıdakine benzer bir hata oluşabilir:  
-   >   
-   > - İşlenmemiş Özel Durum: System.UnauthorizedAccessException:  
-   >   
-   >      'C:\  
-   >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql' yoluna erişim reddedildi.  
-   >   
-   > Bu hata güvenli bir şekilde yok sayılabilir ve hata penceresini kapatarak devam edebilirsiniz.  
+1. Güncelleştirmeleri içeri aktarmak için aşağıdaki komutu çalıştırın:
 
-6. Configuration Manager güncelleştirmelerini indirme işlemi tamamlandıktan sonra, USB sürücüsünü hizmet bağlantı noktasını barındıran bilgisayara taşıyın (veya dışarı aktarılan verileri farklı bir şekilde aktarın).  
+    `ServiceConnectionTool.exe -import -updatepacksrc D:\USB\UpdatePacks`
 
-7. Hizmet bağlantı noktasını barındıran bilgisayarda, yönetici ayrıcalıklarıyla bir komut istemi açın, dizin değiştirerek **serviceconnectiontool.exe**aracını içeren konuma gidin ve ardından şu komutu çalıştırın:  
+1. İçeri aktarma işlemi tamamlandıktan sonra komut istemi ' ni kapatın. Yalnızca ilgili hiyerarşinin güncelleştirmelerini içeri aktarır.
 
-   - **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
+1. Configuration Manager konsolunda, **Yönetim** çalışma alanına gidin ve **güncelleştirmeler ve bakım** düğümünü seçin. İçeri aktarılan güncelleştirmeler artık yüklenebilir. Daha fazla bilgi için bkz. [konsol içi güncelleştirmeleri yüklemeyi](install-in-console-updates.md).
 
-8. İçeri aktarma işlemi tamamlandıktan sonra komut istemini kapatabilirsiniz. (Yalnızca geçerli hiyerarşi için güncelleştirmeler içeri aktarılır).  
+## <a name="log-files"></a>Günlük dosyaları
 
-9. Configuration Manager konsolunu açın ve **Yönetim** > **güncelleştirmeleri ve bakım '** a gidin. İçeri aktarılan güncelleştirmeler artık yüklenebilir. (Sürüm 1702 ' den önce, güncelleştirmeler ve bakım, **Yönetim** > **Cloud Services**altındadır.)
+- **Serviceconnectiontool. log**: hizmet bağlantı aracını her çalıştırdığınızda, bu günlük dosyasına yazar. Günlük dosyasının yolu, araç ile her zaman aynı konumdur. Bu günlük dosyası, kullandığınız parametrelere göre araç kullanımı hakkında basit ayrıntılar sağlar. Aracı her çalıştırdığınızda, araç var olan herhangi bir günlük dosyasının yerini alır.
 
-   Güncelleştirmeleri yükleme hakkında daha fazla bilgi için bkz. [Configuration Manager için konsol içi güncelleştirmeleri yükleme](../../../core/servers/manage/install-in-console-updates.md).  
+- **ConfigMgrSetup. log**: [bağlantı](#connect) aşamasında, araç sistem sürücüsünün kökündeki bu günlük dosyasına yazar. Bu günlük dosyası daha ayrıntılı bilgi sağlar. Örneğin, aracın indirdiği dosyalar ve karma denetimleri başarılı olursa.
 
-## <a name="log-files"></a><a name="bkmk_cmd"></a>Günlük dosyaları
+## <a name="command-line-parameters"></a><a name="bkmk_cmd"></a>Komut satırı parametreleri
 
-**ServiceConnectionTool. log**
+Bu bölüm, hizmet bağlantı aracı için tüm kullanılabilir parametrelerin alfabetik sırasını alfabetik olarak listeler.
 
-Hizmet bağlantı aracını her çalıştırdığınızda, **Serviceconnectiontool. log**adlı araçla aynı konumda bir günlük dosyası oluşturulur.  Bu günlük dosyası, hangi komutların kullanıldığına bağlı olarak aracın yürütülmesi hakkında basit ayrıntılar sağlar.  Aracı her çalıştırdığınızda var olan bir günlük dosyası değişir.
+### <a name="-connect"></a>-Bağlan
 
-**ConfigMgrSetup. log**
+İnternet erişimi olan bilgisayardaki [bağlanma](#connect) aşamasında kullanın. Veri dosyasını karşıya yüklemek ve güncelleştirmeleri indirmek için Configuration Manager bulut hizmetine bağlanır.
 
-Güncelleştirmeleri bağlamak ve indirmek için araç kullanırken, **ConfigMgrSetup. log**adlı sistem sürücüsünün kökünde bir günlük dosyası oluşturulur.  Bu günlük dosyası, hangi dosyaların indirileceği, ayıklandığı ve karma denetimlerin başarılı olup olmadığı gibi daha ayrıntılı bilgiler sağlar.
+Aşağıdaki parametreleri gerektirir:
 
-## <a name="command-line-options"></a><a name="bkmk_cmd"></a> Komut satırı seçenekleri  
-Hizmet bağlantı noktası aracına yönelik yardım bilgilerini görüntülemek için, aracı içeren klasöre ait komut satırını açın ve şu komutu çalıştırın:  **serviceconnectiontool.exe**.  
+- **-usagedatasrc**: karşıya yüklenecek veri dosyasının konumu
+- **-updatepackdest**: indirilen güncelleştirmeler için bir yol
 
+Aşağıdaki isteğe bağlı parametreleri de kullanabilirsiniz:
 
-|Komut satırı seçenekleri|Ayrıntılar|  
-|---------------------------|-------------|  
-|**-prepare -usagedatadest [drive:][path][filename.cab]**|Bu komut, geçerli kullanım verilerini bir .cab dosyasında depolar.<br /><br /> Bu komutu, hizmet bağlantı noktasını barındıran sunucuda **yerel yönetici** olarak çalıştırın.<br /><br /> Örnek:   **-prepare -usagedatadest D:\USB\Usagedata.cab**|    
-|**-connect -usagedatasrc [sürücü:][yol] -updatepackdest [sürücü:][yol] -proxyserveruri [proxy sunucusu FQDN’si] -proxyusername [kullanıcıadı]** <br /> <br /> Configuration Manager’ın 1606’dan önceki bir sürümünü kullanıyorsanız, .cab dosyasının adını belirtmeniz gerekir ve proxy sunucusu seçeneklerini kullanamazsınız.  Desteklenen komutu parametreleri: <br /> **-connect -usagedatasrc [sürücü:][yol][dosyaadı] -updatepackdest [sürücü:][yol]** |Bu komut, belirtilen konumdan kullanım verileri .cab dosyalarını karşıya yüklemek ve sağlanan güncelleştirme paketleriyle konsol içeriğini indirmek için Configuration Manager bulut hizmetine bağlanır. Proxy sunucularına yönelik seçenekler isteğe bağlıdır.<br /><br /> Bu komutu, İnternet’e bağlanabilen bilgisayarda **yerel yönetici** olarak çalıştırın.<br /><br /> Proxy sunucusu olmadan bağlanma örneği: **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> Proxy sunucusu kullanırken bağlanma örneği: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> 1606’dan önceki bir sürümü kullanıyorsanız, .cab dosyası için dosya adını belirtmeniz gerekir ve proxy sunucusu belirtemezsiniz. Aşağıdaki örnek komut satırını kullanın: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      
-|**-import -updatepacksrc [drive:][path]**|Bu komut, daha önce Configuration Manager konsolunuza indirdiğiniz güncelleştirme paketlerini ve konsol içeriğini içeri aktarır.<br /><br /> Bu komutu, hizmet bağlantı noktasını barındıran sunucuda **yerel yönetici** olarak çalıştırın.<br /><br /> Örnek:  **-import -updatepacksrc D:\USB\UpdatePacks**|  
-|**-export -dest [drive:][path][filename.csv]**|Bu komut, kullanım verilerini daha sonra görüntüleyebileceğiniz bir .csv dosyasına dışarı aktarır.<br /><br /> Bu komutu, hizmet bağlantı noktasını barındıran sunucuda **yerel yönetici** olarak çalıştırın.<br /><br /> Örnek: **-export -dest D:\USB\usagedata.csv**|  
+- **-proxyserveruri**: proxy sunucusunun FQDN 'si
+- **-ProxyUserName**: proxy sunucu için bir Kullanıcı adı
+- **-downloadall**: sitenizin sürümü ne olursa olsun, güncelleştirmeler ve düzeltmeler de dahil olmak üzere her şeyi indirin.
+- **-downloadhotfix**: sitenizin sürümünü her ne olursa olsun tüm düzeltmeleri indirin.
+- **-downloadsiteversion**: sitenizin sürümünden daha sonraki bir sürüme sahip güncelleştirmeleri ve düzeltmeleri indirin.
+
+#### <a name="example-of-connect-without-a-proxy-server"></a>Proxy sunucusu olmadan bağlanma örneği
+
+`ServiceConnectionTool.exe -connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks`
+
+#### <a name="example-of-connect-with-a-proxy-server"></a>Proxy sunucusu ile bağlanma örneği
+
+`ServiceConnectionTool.exe -connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itproxy.contoso.com -proxyusername jqpublic`
+
+#### <a name="example-of-connect-to-download-only-site-version-applicable-updates"></a>Yalnızca site sürümü uygulanabilir güncelleştirmeleri indirmek için Bağlan örneği
+
+`ServiceConnectionTool.exe -connect -downloadsiteversion -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks`
+
+### <a name="-dest"></a>-dest
+
+Dışarı aktarılacak CSV dosyasının yolunu ve dosya adını belirtmek için **-Export** parametresine sahip gerekli bir parametre. Daha fazla bilgi için bkz. [-dışarı aktarma](#-export).
+
+### <a name="-downloadall"></a>-downloadall
+
+Sitenizin sürümü ne olursa olsun, güncelleştirmeler ve düzeltmeler de dahil olmak üzere her şeyi indirmek için **-Connect** parametresine sahip isteğe bağlı bir parametre. Daha fazla bilgi için bkz. [-Connect](#connect).
+
+### <a name="-downloadhotfix"></a>-downloadhotfix
+
+Sitenizin sürümü ne olursa olsun, yalnızca tüm düzeltmeleri indirmek için **-Connect** parametresine sahip isteğe bağlı bir parametre. Daha fazla bilgi için bkz. [-Connect](#-connect).
+
+### <a name="-downloadsiteversion"></a>-downloadsiteversion
+
+Yalnızca sitenizin sürümünden daha sonraki bir sürüme sahip güncelleştirmeleri ve düzeltmeleri indirmek için **-Connect** parametresine sahip isteğe bağlı bir parametre. Daha fazla bilgi için bkz. [-Connect](#-connect).
+
+### <a name="-export"></a>-dışarı aktarma
+
+Kullanım verilerini bir CSV dosyasına aktarmak için [hazırlama](#prepare) aşamasında kullanın. Hizmet bağlantı noktasında yönetici olarak çalıştırın. Bu eylem, Microsoft 'a yüklemeden önce kullanım verilerinin içeriğini incelemenizi sağlar. CSV dosyasının konumunu belirtmek için **-dest** parametresini gerektirir.
+
+#### <a name="example-of-export"></a>Dışarı aktarma örneği
+
+`-export -dest D:\USB\usagedata.csv`
+
+### <a name="-import"></a>-İçeri Aktar
+
+Güncelleştirmeleri siteye aktarmak için hizmet bağlantı noktasındaki [Içeri aktarma](#import) aşamasında öğesini kullanın. İndirilen güncelleştirmelerin konumunu belirtmek için **-updatepacksrc** parametresini gerektirir.
+
+#### <a name="example-of-import"></a>İçeri aktarma örneği
+
+`ServiceConnectionTool.exe -import -updatepacksrc D:\USB\UpdatePacks`
+
+### <a name="-prepare"></a>-hazırlama
+
+Siteden kullanım verilerini dışarı aktarmak için hizmet bağlantı noktasındaki [hazırlama](#prepare) aşamasında ' ı kullanın. Bu, **-usagedatadest** parametresinin, dışarıya aktarılmış veri dosyasının konumunu belirtmesini gerektirir.
+
+#### <a name="example-of-prepare"></a>Hazırlama örneği
+
+`ServiceConnectionTool.exe -prepare -usagedatadest D:\USB\UsageData.cab`
+
+### <a name="-proxyserveruri"></a>-proxyserveruri
+
+Ara sunucunuzun FQDN 'sini belirtmek için **-Connect** parametresine sahip isteğe bağlı bir parametre. Daha fazla bilgi için bkz. [-Connect](#-connect).
+
+### <a name="-proxyusername"></a>-ProxyUserName
+
+Proxy sunucunuz ile kimlik doğrulaması yapılacak Kullanıcı adını belirtmek için **-Connect** parametresine sahip isteğe bağlı bir parametre. Daha fazla bilgi için bkz. [-Connect](#-connect).
+
+### <a name="-updatepackdest"></a>-updatepackdest
+
+İndirilen güncelleştirmeler için bir yol belirtmek üzere **-Connect** parametresine sahip gerekli bir parametre. Daha fazla bilgi için bkz. [-Connect](#-connect).
+
+### <a name="-updatepacksrc"></a>-updatepacksrc
+
+İndirilen güncelleştirmelerin yolunu belirtmek için **-import** parametresine sahip gerekli bir parametre. Daha fazla bilgi için bkz. [-içeri aktarma](#-import).
+
+### <a name="-usagedatadest"></a>-usagedatadest
+
+İçe aktarılmış veri dosyasının yolunu ve dosya adını belirtmek için **-Prepare** parametresine sahip gerekli bir parametre. Daha fazla bilgi için bkz. [-hazırlama](#-prepare).
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+[Konsol güncelleştirmelerini yükleyin](install-in-console-updates.md)
+
+[Tanılama ve kullanım verilerini görüntüleme](../../plan-design/diagnostics/view-diagnostics-and-usage-data.md)
