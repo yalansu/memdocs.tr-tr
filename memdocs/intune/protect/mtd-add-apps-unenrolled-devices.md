@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 06/26/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6eea60eec6f36a5ab8a97b5e4402d75b4a8eb54b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
-ms.translationtype: MT
+ms.openlocfilehash: f667b6ad9ba9f7c353d89b4d3fc4ff749499bfaf
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991147"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972053"
 ---
 # <a name="add-mobile-threat-defense-apps-to-unenrolled-devices"></a>Kayıtlı olmayan cihazlara mobil tehdit savunma uygulamaları ekleme
 
@@ -37,9 +36,10 @@ Son kullanıcılar, mobil cihazlarında bir tehdit tanımlandığında ve tehdit
 > Bu makale, uygulama koruma ilkelerini destekleyen tüm Mobile Threat Defense iş ortakları için geçerlidir:
 >
 > - Daha iyi mobil (Android, iOS/ıpados)
-> - Zyium (Android, iOS/ıpados)
 > - Lookout for Work (Android, iOS/ıpados)
->
+> - Wandera (Android, iOS/ıpados)
+> - Zyium (Android, iOS/ıpados)
+
 > Kayıtlı olmayan cihazlar için, Intune ile kullandığınız iOS uygulaması için mobil tehdit savunması 'nı ayarlayan **bir iOS uygulama yapılandırma ilkesine ihtiyacınız yoktur** . Bu, Intune 'a kayıtlı cihazlara kıyasla önemli bir farktır.
 
 ## <a name="configure-microsoft-authenticator-for-ios-via-intune-optional"></a>İOS için Microsoft Authenticator Intune aracılığıyla yapılandırma (isteğe bağlı)
@@ -57,8 +57,8 @@ Intune uygulama koruma ilkelerini Mobile Threat Defense ile birlikte kullanırke
 
 Ancak, uygulamayı Intune Şirket Portalı aracılığıyla son kullanıcılar için kullanılabilir hale getirmek istemeniz gerekir, [Azure Portal](https://portal.azure.com/)aşağıdaki adımları izleyebilirsiniz. İşlemini öğrendiğinizden emin olun:
 
-- [Intune’a uygulama ekleme](../apps/apps-add.md).
-- [Intune ile uygulama atama](../apps/apps-deploy.md).
+- [Intune 'a uygulama ekleme](../apps/apps-add.md)
+- [Intune ile uygulama atama](../apps/apps-deploy.md)
 
 ### <a name="making-lookout-for-work-available-to-end-users"></a>Lookout for Work son kullanıcılara kullanılabilir hale getirme
 
@@ -101,22 +101,22 @@ Ancak, uygulamayı Intune Şirket Portalı aracılığıyla son kullanıcılar i
 - **Android**
   - Yönergeler için bkz. [Microsoft Intune'a Android mağazası uygulamaları ekleme](../apps/store-apps-android.md). **Uygulama bilgilerini Yapılandır** bölümünü tamamlarken bu [etkin Shield-Play Store URL 'sini](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) kullanın.
 
-<!-- - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield - App Store URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) when completing the **Configure app information** section. -->
+- **iOS**
+  - Yönergeler için bkz. [Microsoft Intune'a iOS mağazası uygulamaları ekleme](../apps/store-apps-ios.md). **Uygulama bilgilerini Yapılandır** bölümünü tamamlarken bu [ActiveShield-App Store URL 'sini](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) kullanın.
 
 <!-- ### Making Sophos available to end users
 - **Android**
   - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Sophos - Play Store URL](https://play.google.com/store/apps/details?id=com.sophos.smsec) when completing the **Configure app information** section.
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield - App Store URL](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) when completing the **Configure app information** section.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield - App Store URL](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) when completing the **Configure app information** section.  -->
 
-### Making Wandera available to end users
+### <a name="making-wandera-available-to-end-users"></a>Wandera, son kullanıcılar için kullanılabilir hale getirme
 - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Wandera Mobile - Play Store URL](https://play.google.com/store/apps/details?id=com.wandera.android) when completing the **Configure app information** section. For **Minimum operating system**, select **Android 5.0**.
+  - Yönergeler için bkz. [Microsoft Intune'a Android mağazası uygulamaları ekleme](../apps/store-apps-android.md). **Uygulama bilgilerini Yapılandır** bölümünü tamamlarken bu [Wandera Mobile-Play Store URL 'sini](https://play.google.com/store/apps/details?id=com.wandera.android) kullanın.
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Wandera Mobile - - App Store URL](https://itunes.apple.com/app/wandera/id605469330) when completing the **Configure app information** section. -->
+  - Yönergeler için bkz. [Microsoft Intune'a iOS mağazası uygulamaları ekleme](../apps/store-apps-ios.md). **Uygulama bilgilerini Yapılandır** bölümünü tamamlarken bu [Wandera Mobile-App Store URL 'sini](https://itunes.apple.com/app/wandera/id605469330) kullanın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

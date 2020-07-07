@@ -5,7 +5,7 @@ description: Microsoft Defender Gelişmiş tehdit koruması 'nı yönetmek için
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: 330a4387ef1a079b2a0f691bfb0b887117dd9e4b
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
-ms.translationtype: MT
+ms.openlocfilehash: 8046318c55e2a9791f01fca4a5a54de3f1487782
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429349"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022203"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -291,7 +290,7 @@ Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları
 
   Bu ilke, dış DMA özellikli cihazlara karşı ek güvenlik sağlayabilir. DMA yeniden eşleme/cihaz belleği yalıtımı ve korumalı alana alma ile uyumsuz olan dış DMA özellikli cihazların numaralandırılması üzerinde daha fazla denetim sağlar.
   
-  Bu ilke, yalnızca çekirdek DMA koruması desteklenirken ve Sistem bellenimi tarafından etkinleştirildiğinde devreye girer. Çekirdek DMA koruması, üretim sırasında sistem tarafından desteklenmesi gereken bir platform özelliğidir. Sistemin çekirdek DMA korumasını destekleyip desteklemediğini denetlemek için, MSINFO32. exe ' nin Özet sayfasındaki çekirdek DMA koruması alanını kontrol edin.
+  Bu ilke, yalnızca çekirdek DMA koruması desteklenirken ve Sistem bellenimi tarafından etkinleştirildiğinde devreye girer. Çekirdek DMA koruması, üretim sırasında sistem tarafından desteklenmesi gereken bir platform özelliğidir. Sistemin çekirdek DMA korumasını destekleyip desteklemediğini denetlemek için MSINFO32.exe Özet sayfasındaki çekirdek DMA koruması alanını denetleyin.
 
   - **Yapılandırılmadı** -(*varsayılan*)
   - **Tümünü engelle**
@@ -317,7 +316,7 @@ Aşağıdaki ayarlar hakkında daha fazla bilgi için Windows belgelerindeki [Wi
   - **Evet** (*varsayılan*)
   - **Yapılandırılmadı**
 
-## <a name="firewall"></a>Güvenlik duvarı
+## <a name="firewall"></a>Güvenlik Duvarı
 
 Daha fazla bilgi için Windows belgelerindeki [güvenlik DUVARı CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) bölümüne bakın.
 
@@ -806,13 +805,13 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
   - **Engelle** (*varsayılan*)-bir USB sürücüsünden çalıştırılan güvenilmeyen ve imzasız süreçler engellenir.
   - **Denetim modu** -Windows olayları engelleme yerine oluşturulur.
 
-- **Windows yerel güvenlik yetkilisi alt sisteminden (Lsass. exe) kimlik bilgisi çalınmasını engelleyin**  
+- **Windows yerel güvenlik yetkilisi alt sisteminden kimlik bilgisi çalınmasını engelle (lsass.exe)**  
   [Cihazları kötüye bilgisayarlardan koruyun](https://go.microsoft.com/fwlink/?linkid=874499)
 
   Bu ASR kuralı şu GUID aracılığıyla denetlenir: 9e6c4e1f-7d60-472F-ba1a-a39ef669e4b2
   - **Yapılandırılmadı** -Bu ayar, devre dışı olan Windows varsayılan öğesine döner.
   - **Kullanıcı tanımlı**
-  - **Etkinleştir** (*varsayılan*)-Lsass. exe aracılığıyla kimlik bilgilerini çalmaya yönelik girişimler engellenir.
+  - **Etkinleştir** (*varsayılan*)-lsass.exe aracılığıyla kimlik bilgilerini çalmaya çalışır.
   - **Denetim modu** -kullanıcılar tehlikeli etki alanlarından engellenmez ve bunun yerine Windows olayları tetiklenir.
 
 - **E-posta ve Web postasından istemcilerinden yürütülebilir içerik indirmeyi engelle**  
@@ -859,9 +858,9 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
 - **Kullanıcıların SmartScreen uyarılarını yoksaymalarını engelleyin**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-   Bu ayar, ' uygulamalar ve dosyalar için SmartScreen 'i zorla ' ayarının etkinleştirilmesini gerektirir.
-  - **Evet** (*varsayılan*)-SmartScreen, kullanıcının uyarıyı yok saymalarını ve uygulamayı çalıştırmasını sağlayacak bir seçenek sunmaz. Uyarı sunulacaktır, ancak kullanıcı onu atlayabilir.
-  - **Yapılandırılmadı** -Windows varsayılan ayarı, kullanıcının geçersiz kılınmasına izin verir.
+   Bu ayar ' Windows SmartScreen 'i aç ' ayarının Evet olarak ayarlanmasını gerektirir.
+  - **Evet** (*varsayılan*)-SmartScreen etkin ve kullanıcılar dosyalar veya kötü amaçlı uygulamalar için uyarıları atlayamaz.
+  - **Yapılandırılmadı** -kullanıcılar, dosyalar ve kötü amaçlı uygulamalar için SmartScreen uyarılarını yok sayabilir.
 
 - **Yalnızca mağaza 'dan uygulama gerektir**  
 

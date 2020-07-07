@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
+ms.date: 06/26/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 132ac14dfcdb9cde21925911b438798a2c63260a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
-ms.translationtype: MT
+ms.openlocfilehash: 92d57fe2c63789c6e9f97c8ec835f6ded784ebad
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991135"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972122"
 ---
 # <a name="create-mobile-threat-defense-app-protection-policy-with-intune"></a>Intune ile Mobile Threat Defense uygulama koruma ilkesi oluşturma
 
@@ -33,8 +32,9 @@ Mobile Threat Defense (MTD) ile Intune, tehditleri algılamanıza ve mobil cihaz
 > Bu makale, uygulama koruma ilkelerini destekleyen tüm Mobile Threat Defense iş ortakları için geçerlidir:
 >
 > - Daha iyi mobil (Android, iOS/ıpados)
+> - Lookout for Work (Android, iOS/ıpados)
+> - Wandera (Android, iOS/ıpados)
 > - Zyium (Android, iOS/ıpados)
-> - Lookout for Work (Android, iOS/ıpados).
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 

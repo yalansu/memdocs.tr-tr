@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
+ms.date: 06/26/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6c762aafbc1d82e7e51746806f8ba15cc5ad83c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
-ms.translationtype: MT
+ms.openlocfilehash: 933810cb079ac405d15a18a26efd07fb69a6e3f1
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984933"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972054"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>Kayıtlı olmayan cihazlar için Intune 'da Mobile Threat Defense bağlayıcısını etkinleştirme
 
@@ -33,8 +32,9 @@ Mobile Threat Defense (MTD) kurulumu sırasında, Mobile Threat Defense iş orta
 > Bu makale, uygulama koruma ilkelerini destekleyen tüm Mobile Threat Defense iş ortakları için geçerlidir:
 >
 > - Daha iyi mobil (Android, iOS/ıpados)
-> - Zyium (Android, iOS/ıpados)
 > - Lookout for Work (Android, iOS/ıpados)
+> - Wandera (Android, iOS/ıpados)
+> - Zyium (Android, iOS/ıpados)
 
 ## <a name="classic-conditional-access-policies-for-mtd-apps"></a>MTD uygulamaları için klasik koşullu erişim ilkeleri
 
@@ -74,9 +74,9 @@ Kuruluşunuzun gereksinimlerine göre hangi MTD geçiş seçeneklerini etkinleş
 
 **Uygulama koruma Ilkesi ayarları**
 
-- **4,4 ve üzeri sürüm Android cihazlarını, uygulama koruma ilkesi değerlendirmesi için * \<>MTD Iş ortağı adına* bağlayın**: Bu seçeneği etkinleştirdiğinizde, cihaz tehdit düzeyi kuralını kullanan uygulama koruma ilkeleri, bu bağlayıcıdaki veriler de dahil olmak üzere cihazları değerlentirecektir.
+- **Sürüm 4,4 ve üzeri Android cihazlarını *\<MTD partner name>* Uygulama koruma ilkesi değerlendirmesi için bağlama**: Bu seçeneği etkinleştirdiğinizde, cihaz tehdit düzeyi kuralını kullanan uygulama koruma ilkeleri, bu bağlayıcının verileri dahil olmak üzere cihazları değerlendirir.
 
-- **İOS cihazları sürüm 11 ve üstünü, uygulama koruma ilkesi değerlendirmesi için * \<>MTD Iş ortağı adına* bağlayın**: Bu seçeneği etkinleştirdiğinizde, cihaz tehdit düzeyi kuralını kullanan uygulama koruma ilkeleri, bu bağlayıcıdaki veriler dahil olmak üzere cihazları değerlentirecektir.
+- ** *\<MTD partner name>* Uygulama koruma ilkesi değerlendirmesi için iOS cihazları sürüm 11 ve üstünü bağlayın**: Bu seçeneği etkinleştirdiğinizde, cihaz tehdit düzeyi kuralını kullanan uygulama koruma ilkeleri, bu bağlayıcının verileri dahil olmak üzere cihazları değerlendirir.
 
 **Ortak paylaşılan ayarlar**
 

@@ -17,12 +17,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c544109b170d25f4d9a2999a11bc47d4b4a090c5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
-ms.translationtype: MT
+ms.openlocfilehash: 81ba50c9822ff5672fd52bab1d89f444aafdb402
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989969"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022339"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>MAM ve uygulama koruma hakkında sık kullanılan sorular
 
@@ -79,7 +78,7 @@ Daha fazla bilgi için bkz. [Uygulama koruma ilkelerini izleme](app-protection-p
 Intune SDK geliştirme ekibi, yerel Android, iOS/ıpados (obj-C, Swift), Xamarin ve Xamarin. Forms platformları ile oluşturulmuş uygulamalar için desteği etkin bir şekilde sınar ve bakımını sağlar. Bazı müşteriler, bir Kullanıcı ve NativeScript gibi diğer platformlarla Intune SDK tümleştirmesi ile başarılı olmuş olsa da, desteklenen platformlarımızdan başka herhangi bir şeyi kullanarak uygulama geliştiricileri için açık rehberlik veya eklentiler sağlamayız.
 
 **Intune uygulama SDK 'Sı Microsoft kimlik doğrulama kitaplığı 'nı (MSAL) destekliyor mu?**<br></br>
-Intune uygulama SDK 'sı, kimlik doğrulama ve koşullu başlatma senaryoları için Azure Active Directory kimlik doğrulama kitaplığını ya da Microsoft kimlik doğrulama kitaplığını kullanabilir. Ayrıca, Kullanıcı kimliğini cihaz kayıt senaryoları olmadan yönetim için MAM hizmetine kaydetmek için ADAL/MSAL kullanır.
+Intune uygulama SDK 'sı, kimlik doğrulama ve koşullu başlatma senaryolarında Microsoft kimlik doğrulama kitaplığını kullanabilir. Ayrıca, Kullanıcı kimliğini cihaz kayıt senaryoları olmadan yönetim için MAM hizmetine kaydetmek için MSAL kullanır.
 
 **[Outlook mobil uygulamasını](https://products.office.com/outlook) kullanmak için ek gereksinimler nelerdir?**
 

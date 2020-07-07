@@ -1,5 +1,5 @@
 ---
-title: Çin 'de 21Vianet tarafından işletilen Intune
+title: Çin'de 21Vianet tarafından çalıştırılan Intune
 titleSuffix: ''
 description: Çin 'de 21Vianet tarafından işletilen Intune.
 keywords: ''
@@ -17,14 +17,13 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 879cb5d1659b886a01e564574452bd9e5370664c
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
-ms.translationtype: MT
+ms.openlocfilehash: f82664cbc9f6970d494945cfdf6fc72e8d95ae8b
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126803"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022356"
 ---
-# <a name="intune-operated-by-21vianet-in-china"></a>Çin 'de 21Vianet tarafından işletilen Intune  
+# <a name="intune-operated-by-21vianet-in-china"></a>Çin'de 21Vianet tarafından çalıştırılan Intune  
 
 21Vianet tarafından işletilen Intune, Çin 'de güvenli, güvenilir ve ölçeklenebilir bulut hizmetleri gereksinimlerini karşılayacak şekilde tasarlanmıştır. Hizmet olarak Intune, Microsoft Azure üzerine kurulmuştur. 21Vianet tarafından çalıştırılan Microsoft Azure, Çin 'de bulunan bulut hizmetleri 'nin fiziksel olarak ayrılmış bir örneğidir. Bu, 21Vianet tarafından bağımsız olarak çalıştırılır ve işlem yapılır. Bu hizmet, Microsoft 'un 21Vianet 'e lisansladığı teknolojide desteklenir.
 
@@ -50,7 +49,7 @@ Microsoft, hizmetin kendisini işlemez. 21Vianet, hizmetin teslimini sağlar, sa
 - Android için Intune Şirket Portalı uygulaması, Microsoft Intune hizmetiyle iletişim kurmak için Google Mobile Services kullanır. Çin 'de Google Play hizmetleri kullanılamadığından, bazı görevlerin tamamlanabilmesi için 8 saate kadar süre gerekebilir. Daha fazla bilgi için bu [makaleye](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)bakın. 
 - Yerel düzenlemeleri izlemek ve gelişmiş işlevsellik sağlamak için, Intune istemci deneyimi (Şirket Portalı uygulaması) Çin 'de farklılık gösterebilir.
 - Sınırlama kullanılamıyor.
-- Mobil uygulama yönetimi (MAM) kullanılabilirliği, ana kara Çin 'de mevcut olan uygulamalarda koşullu bir uygulamadır.
+- Mobil uygulama yönetimi (MAM) kullanılabilirliği, Çin Halk Cumhuriyeti 'nde mevcut olan uygulamalar üzerinde şartlı bir uygulamadır.
 
 ## <a name="you-control-customer-data"></a>Müşteri verilerini kontrol edersiniz
 

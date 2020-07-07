@@ -19,12 +19,11 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 82272fd4239b50657b887bf6c310b280eeecae7a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
-ms.translationtype: MT
+ms.openlocfilehash: 2ef0cf3909442cec818fd775bef4f848d6be5a83
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880076"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022322"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Cihazınızı Şirket Portalı kaydetme  
 Şirket e-postasına, uygulamalarına ve verilerine güvenli erişim sağlamak için kişisel veya şirkete ait Android cihazınızı kaydedin. Şirket Portalı, Android 4,4 ve üstünü çalıştıran Samsung KNOX dahil Android cihazlarını destekler.  
@@ -35,7 +34,7 @@ ms.locfileid: "83880076"
 > Samsung KNOX, belirli Samsung cihazlarının, yerel Android 'in sağladığı her yerde ek koruma için kullandığı bir güvenlik türüdür. Samsung KNOX cihazınız olup olmadığını denetlemek için > cihaz **ayarları**' na gidin  >  **About device**. Burada listelenen **Knox sürümünü** görmüyorsanız, yerel bir Android cihazınız vardır.
 
 ## <a name="enroll-device"></a>Cihaz kaydetme  
-Intune Şirket Portalı uygulamayı [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)yüklediğinizden emin olun. Uygulamayı ana kara Çin 'de sunan mağazaların bir listesi için bkz. [ana kara Çin 'de Şirket portalı uygulama yüklemesi](install-company-portal-android-china.md) .    
+Intune Şirket Portalı uygulamayı [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)yüklediğinizden emin olun. , Uygulamayı Çin Halk Cumhuriyeti ' nde sunan mağazaların listesi için bkz. [Çin halk cumhuriyeti Şirket portalı App](install-company-portal-android-china.md) for the Install.
 
 Kayıt sırasında cihazınızı nasıl kullanacağınızı en iyi açıklayan bir kategori seçmeniz istenebilir. Şirketinizin destek, erişiminiz olan uygulamaları denetlemek için yanıtınızı kullanır.  
 

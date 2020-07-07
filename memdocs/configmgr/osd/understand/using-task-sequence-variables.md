@@ -10,12 +10,11 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c043cfabc411dbd5ae4984110fc2904d37669300
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
-ms.translationtype: MT
+ms.openlocfilehash: 1cf428b479e9311c92f6d14d9c376817ee5e3ab5
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717828"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022271"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Configuration Manager 'de görev dizisi değişkenlerini kullanma
 
@@ -51,9 +50,9 @@ Görev dizisi, her adımdan önce bazı değişkenleri değerlendirir. Örneğin
 
 Görev dizisi eylem değişkenleri, tek bir görev dizisi adımının kullandığı yapılandırma ayarlarını belirtir. Varsayılan olarak, adım, çalıştırılmadan önce ayarlarını başlatır. Bu ayarlar yalnızca ilişkili görev dizisi adımı çalışırken kullanılabilir. Görev dizisi, adımı çalıştırmadan önce eylem değişkeni değerini ortama ekler. Ardından, adım çalıştıktan sonra değeri ortamdan kaldırır.
 
-Örneğin, **komut satırını Çalıştır** adımını bir görev dizisine eklersiniz. Bu adım bir **Başlangıç** özelliği içerir. Görev sırası, bu özellik için `WorkingDirectory` değişken olarak varsayılan bir değer depolar. Görev sırası, **komut satırını Çalıştır** adımını çalıştırmadan önce bu değeri başlatır. Bu adım çalışırken, `WorkingDirectory` değerden **Başlangıç** özellik değerine erişin. Adım tamamlandıktan sonra görev dizisi, `WorkingDirectory` değişkenin değerini ortamdan kaldırır. Görev sırası başka bir **Çalıştır komut satırı** adımını içeriyorsa, yeni `WorkingDirectory` bir değişken başlatır. Bu sırada, görev sırası değişkeni geçerli adım için başlangıç değerine ayarlar. Daha fazla bilgi için bkz. [WorkingDirectory](task-sequence-variables.md#WorkingDirectory).  
+Örneğin, **komut satırını Çalıştır** adımını bir görev dizisine eklersiniz. Bu adım bir **Başlangıç** özelliği içerir. Görev sırası, bu özellik için değişken olarak varsayılan bir değer depolar `WorkingDirectory` . Görev sırası, **komut satırını Çalıştır** adımını çalıştırmadan önce bu değeri başlatır. Bu adım çalışırken, değerden **Başlangıç** özellik değerine erişin `WorkingDirectory` . Adım tamamlandıktan sonra görev dizisi, `WorkingDirectory` değişkenin değerini ortamdan kaldırır. Görev sırası başka bir **Çalıştır komut satırı** adımını içeriyorsa, yeni bir `WorkingDirectory` değişken başlatır. Bu sırada, görev sırası değişkeni geçerli adım için başlangıç değerine ayarlar. Daha fazla bilgi için bkz. [WorkingDirectory](task-sequence-variables.md#WorkingDirectory).  
 
-Bir eylem değişkeni için *varsayılan* değer, adım çalıştığında vardır. *Yeni* bir değer ayarlarsanız, görev dizisinde birden çok adım vardır. Varsayılan bir değeri geçersiz kılarsınız, yeni değer ortamda kalır. Bu yeni değer, görev dizisindeki diğer adımlar için varsayılan değeri geçersiz kılar. Örneğin, görev dizisinin ilk adımı olarak bir **Ayarla görev sırası değişkeni** adımı eklersiniz. Bu adım `WorkingDirectory` değişkenini olarak `C:\`ayarlar. Görev dizisindeki herhangi bir **Çalıştır komut satırı** adımı, yeni başlangıç dizini değerini kullanır.  
+Bir eylem değişkeni için *varsayılan* değer, adım çalıştığında vardır. *Yeni* bir değer ayarlarsanız, görev dizisinde birden çok adım vardır. Varsayılan bir değeri geçersiz kılarsınız, yeni değer ortamda kalır. Bu yeni değer, görev dizisindeki diğer adımlar için varsayılan değeri geçersiz kılar. Örneğin, görev dizisinin ilk adımı olarak bir **Ayarla görev sırası değişkeni** adımı eklersiniz. Bu adım `WorkingDirectory` değişkenini olarak ayarlar `C:\` . Görev dizisindeki herhangi bir **Çalıştır komut satırı** adımı, yeni başlangıç dizini değerini kullanır.  
 
 Bazı görev sırası adımları belirli eylem değişkenlerini *Çıkış*olarak işaretler. Görev dizisinin ilerleyen adımları bu çıktı değişkenlerini okur.
 
@@ -66,11 +65,11 @@ Bu değişkenler Configuration Manager oluşturmaz. Koşul olarak, komut satırl
 
 Yeni bir görev dizisi değişkeni için bir ad belirttiğinizde aşağıdaki yönergeleri izleyin:  
 
-- Görev sırası değişken adı harf, sayı, alt çizgi karakteri (`_`) ve kısa çizgi (`-`) içerebilir.  
+- Görev sırası değişken adı harf, sayı, alt çizgi karakteri ( `_` ) ve kısa çizgi ( `-` ) içerebilir.  
 
 - Görev dizisi değişken adları, en az bir karakter uzunluğunda ve en fazla 256 karakter uzunluğunda olabilir.  
 
-- Kullanıcı tanımlı değişkenlerin bir harfle başlaması gerekir (`A-Z` veya `a-z`).  
+- Kullanıcı tanımlı değişkenlerin bir harfle başlaması gerekir ( `A-Z` veya `a-z` ).  
 
 - Kullanıcı tanımlı değişken adları alt çizgi karakteriyle başlayamaz. Yalnızca salt okuma görev dizisi değişkenlerine alt çizgi karakteri gelir.  
 
@@ -82,9 +81,9 @@ Oluşturabileceğiniz görev sırası değişkenlerinin sayısı için bir sın�
 
 ### <a name="read-only-variables"></a><a name="bkmk_read-only"></a>Salt okuma değişkenleri
 
-Salt okunurdur bazı değişkenlerin değerini değiştiremezsiniz. Genellikle ad bir alt çizgi karakteriyle (`_`) başlar. Görev sırası bunları işlemleri için kullanır. Salt okuma değişkenleri, görev dizisi ortamında görünür.
+Salt okunurdur bazı değişkenlerin değerini değiştiremezsiniz. Genellikle ad bir alt çizgi karakteriyle () başlar `_` . Görev sırası bunları işlemleri için kullanır. Salt okuma değişkenleri, görev dizisi ortamında görünür.
 
-Bu değişkenler betiklerin veya komut satırlarındaki yararlı olur. Örneğin, bir komut satırı çalıştırma ve çıktıyı diğer günlük dosyalarıyla içindeki `_SMSTSLogPath` bir günlük dosyasına boru.
+Bu değişkenler betiklerin veya komut satırlarındaki yararlı olur. Örneğin, bir komut satırı çalıştırma ve çıktıyı diğer günlük dosyalarıyla içindeki bir günlük dosyasına boru `_SMSTSLogPath` .
 
 > [!NOTE]  
 > Salt okuma görev dizisi değişkenleri, bir görev dizisindeki adımlarla okunabilir, ancak bunlar ayarlanamaz. Örneğin, komut **satırı Çalıştır** adımı için komut satırının parçası olarak salt okunurdur bir değişken kullanın. **Görev sırası değişkenini ayarla** adımını kullanarak salt okunurdur bir değişken ayarlayamazsınız.  
@@ -126,7 +125,7 @@ Aynı değişkeni farklı yöntemlerle ayarlarsanız, görev sırası altyapıs�
 
 - Görev dizisi değişken değerleri 4.000 karakterden uzun olamaz.  
 
-- Salt okunurdur bir görev sırası değişkenini değiştiremezsiniz. Salt okuma değişkenlerinde bir alt çizgi karakteriyle (`_`) başlayan adlar vardır.  
+- Salt okunurdur bir görev sırası değişkenini değiştiremezsiniz. Salt okuma değişkenlerinde bir alt çizgi karakteriyle () başlayan adlar vardır `_` .  
 
 - Görev dizisi değişken değerleri, değerin kullanımına bağlı olarak büyük/küçük harfe duyarlı olabilir. Çoğu durumda, görev dizisi değişken değerleri büyük/küçük harfe duyarlı değildir. Bir parola içeren bir değişken büyük/küçük harfe duyarlıdır.  
 
@@ -157,7 +156,7 @@ Bu adımla ilgili daha fazla bilgi için bkz. [PowerShell betiğini çalıştır
 
 #### <a name="example-scenario-with-run-powershell-script-step"></a>PowerShell Betiği Çalıştır adımını içeren örnek senaryo
 
-Ortamınızda birden çok ülkede kullanıcılar vardır. bu nedenle, işletim sistemi dilini, birden çok dile özgü **uygulama** için bir koşul olarak ayarlanacak şekilde sorgulamak istemeniz gerekir.
+Ortamınızda birden çok ülkede/bölgede kullanıcılar vardır. bu nedenle işletim sistemi dilini, dile özgü birden çok **uygulama** için bir koşul olarak ayarlanacak şekilde sorgulamak istemeniz gerekir.
 
 1. **İşletim sistemi adımlarını uygulamadan** önce görev dizisine **Çalıştır PowerShell betiğini** bir örnek ekleyin.
 
@@ -169,7 +168,7 @@ Ortamınızda birden çok ülkede kullanıcılar vardır. bu nedenle, işletim s
 
     Cmdlet hakkında daha fazla bilgi için bkz. [Get-Culture](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-culture). İki harfli ISO dili adları hakkında daha fazla bilgi için bkz. [ıso 639-1 kodlarının listesi](https://wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
-1. **Görev dizisi değişkenine çıkış**seçeneği için, belirtin `CurrentOSLanguage`.
+1. **Görev dizisi değişkenine çıkış**seçeneği için, belirtin `CurrentOSLanguage` .
 
     ![PowerShell betiği çalıştırma adımının örnek görüntüsü](media/run-powershell-script-example-language.png)
 
@@ -182,7 +181,7 @@ Ortamınızda birden çok ülkede kullanıcılar vardır. bu nedenle, işletim s
 
 1. Görev sırasını kaydedin ve dağıtın.
 
-**PowerShell Betiği Çalıştır** adımı, Windows 'un İngilizce dil sürümü olan bir cihazda çalıştırıldığında, komut değeri `en`döndürür. Daha sonra bu değeri özel değişkenine kaydeder. Ingilizce dil görüntüsü için **işletim sistemi Uygula** adımı aynı cihazda çalıştırıldığında, koşul true olarak değerlendirilir. Farklı diller için **işletim sistemi Uygula** adımının birden çok örneği varsa, görev sırası, işletim sistemi diliyle eşleşen adımı dinamik olarak çalıştırır.
+**PowerShell Betiği Çalıştır** adımı, Windows 'un İngilizce dil sürümü olan bir cihazda çalıştırıldığında, komut değeri döndürür `en` . Daha sonra bu değeri özel değişkenine kaydeder. Ingilizce dil görüntüsü için **işletim sistemi Uygula** adımı aynı cihazda çalıştırıldığında, koşul true olarak değerlendirilir. Farklı diller için **işletim sistemi Uygula** adımının birden çok örneği varsa, görev sırası, işletim sistemi diliyle eşleşen adımı dinamik olarak çalıştırır.
 
 ### <a name="collection-and-device-variables"></a><a name="bkmk_set-coll-var"></a>Koleksiyon ve cihaz değişkenleri
 
@@ -273,7 +272,7 @@ Görev dizisi ortamındaki değişken değerlerine erişmek için aşağıdaki y
   
 ### <a name="use-in-a-step"></a><a name="bkmk_access-step"></a>Bir adımda kullanma
 
-Bir görev dizisi adımındaki ayar için bir değişken değeri belirtin. Görev sırası düzenleyicisinde, adımı düzenleyin ve alan değeri olarak değişken adını belirtin. Değişken adını yüzde işaretleri (`%`) içine alın.
+Bir görev dizisi adımındaki ayar için bir değişken değeri belirtin. Görev sırası düzenleyicisinde, adımı düzenleyin ve alan değeri olarak değişken adını belirtin. Değişken adını yüzde işaretleri () içine alın `%` .
 
 Örneğin, **komut satırı Çalıştır** adımının **komut satırı** alanının parçası olarak değişken adını kullanın. Aşağıdaki komut satırı, bilgisayar adını bir metin dosyasına yazar.
 
@@ -331,7 +330,7 @@ $tsenv.Value("startTime") = (Get-Date -Format HH:mm:ss) + ".000+000"
 
 ### <a name="windows-setup-answer-file"></a><a name="bkmk_access-answer"></a>Windows kurulumu yanıt dosyası
 
-Sağladığınız Windows kurulumu yanıt dosyasında katıştırılmış görev sırası değişkenleri olabilir. Formunu `%varname%`kullanın, burada *varname* değişkenin adıdır. **Windows 'u ve ConfigMgr 'Yi Kur** adımı, gerçek değişken değeri için değişken adı dizesinin yerini alır. Bu katıştırılmış görev sırası değişkenleri, bir Unattend. xml yanıt dosyasındaki yalnızca sayısal alanlarda kullanılamaz.
+Sağladığınız Windows kurulumu yanıt dosyasında katıştırılmış görev sırası değişkenleri olabilir. Formunu kullanın `%varname%` , burada *varname* değişkenin adıdır. **Windows 'u ve ConfigMgr 'Yi Kur** adımı, gerçek değişken değeri için değişken adı dizesinin yerini alır. Bu katıştırılmış görev sırası değişkenleri bir unattend.xml yanıt dosyasındaki yalnızca sayısal alanlarda kullanılamaz.
 
 Daha fazla bilgi için, bkz. [Setup Windows and ConfigMgr](task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr).
 

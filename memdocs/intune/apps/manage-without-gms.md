@@ -18,12 +18,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5aa91a84b2fe5d8870afc93022ab5a468b30e0db
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
-ms.translationtype: MT
+ms.openlocfilehash: 7955afb2aef88e3787546843cc477bce22369a4d
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074801"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022390"
 ---
 # <a name="how-to-use-intune-in-environments-without-google-mobile-services"></a>Intune 'u Google Mobile Services olmayan ortamlarda kullanma
 
@@ -31,13 +30,13 @@ Microsoft Intune, Android cihazlarını yönetirken Microsoft Intune şirket por
 
 ## <a name="install-the-intune-company-portal-app-without-access-to-the-google-play-store"></a>Intune Şirket Portalı uygulamasını Google Play Store erişimi olmadan yüklemesi 
 
-### <a name="for-users-outside-of-mainland-china"></a>Ana kara Çin dışındaki kullanıcılar için 
+### <a name="for-users-outside-of-peoples-republic-of-china"></a>Çin Halk Cumhuriyeti dışındaki kullanıcılar için
 
 Google Play kullanılamıyorsa, Android cihazlar [Android için Microsoft Intune şirket portalı](https://www.microsoft.com/en-us/download/details.aspx?id=49140) indirebilir ve uygulamayı dışarıdan yükleyebilir. Uygulama bu şekilde yüklendiğinde güncelleştirmeleri veya düzeltmeleri otomatik olarak almaz. Uygulamayı düzenli olarak güncelleştirdiğinizden ve düzeltme ekinin el ile düzeltmeniz gerekir. 
 
-### <a name="for-users-in-mainland-china"></a>Ana kara Çin 'deki kullanıcılar için 
+### <a name="for-users-in-peoples-republic-of-china"></a>Çin Halk Cumhuriyeti kullanıcıları için
 
-Google Play Store şu anda ana kara Çin 'de kullanılamadığından, Android cihazlarının uygulamaları Çince uygulama marketlerinden edinmeleri gerekir. Daha fazla bilgi için, bkz. [Şirket Portalı uygulamasını ana kara Çin 'de yüklemesi](../user-help/install-company-portal-android-china.md).
+Google Play Store şu anda Çin Halk Cumhuriyeti 'nde kullanılamadığından, Android cihazlarının uygulamaları Çince uygulama marketlerinden alması gerekir. Daha fazla bilgi için, bkz. [Çin halk cumhuriyeti Şirket Portalı uygulamasını](../user-help/install-company-portal-android-china.md)öğrenin.
 
 ## <a name="limitations-of-intune-device-administrator-management-when-gms-is-unavailable"></a>GMS kullanılamadığında Intune Cihaz Yöneticisi yönetiminin sınırlamaları 
 

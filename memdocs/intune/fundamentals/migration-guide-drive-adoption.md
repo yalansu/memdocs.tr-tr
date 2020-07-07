@@ -17,12 +17,11 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da332528854af2b53879d30d6de90c927b49a889
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
-ms.translationtype: MT
+ms.openlocfilehash: 4998dab72196d904e2530e85481b0498c8e23c21
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331210"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022220"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Microsoft Intune koşullu erişimle Son Kullanıcı benimsemesini sürücü olarak
 
@@ -73,7 +72,7 @@ Aşağıdaki seçeneklerden birini belirleyin:
 
 - [SharePoint Online için uygulama tabanlı koşullu erişim ilkeleri ayarlama](../protect/app-based-conditional-access-intune-create.md)
 
-- [Modern kimlik doğrulaması kullanılmayan uygulamaları engelleme (ADAL)](../protect/app-modern-authentication-block.md)
+- [Modern kimlik doğrulaması kullanmayan uygulamaları engelleme (ADAL veya MSAL)](../protect/app-modern-authentication-block.md) 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

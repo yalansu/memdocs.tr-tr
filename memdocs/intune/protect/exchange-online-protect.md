@@ -18,12 +18,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8746a6dee0b35dec7886a596d0448874dfb04f16
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
-ms.translationtype: MT
+ms.openlocfilehash: f9669625225f8ad3960ece39e2a6b04849421ce6
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79329306"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022202"
 ---
 # <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Cihaz yönetimi gerektirmeden Office 365 Exchange Online’ı koruma
 
@@ -36,7 +35,7 @@ Bir cihaz yönetim sistemi ayarlamak istiyorsanız, bu da mümkündür. Bu tür 
 1. [Koşullu erişim hakkında bilgi edinin](conditional-access.md). 
 2. [Uygulama tabanlı koşullu erişim hakkında bilgi edinin](app-based-conditional-access-intune.md).
 3. [Exchange Online için uygulama tabanlı koşullu erişim Ilkeleri ayarlayın](app-based-conditional-access-intune-create.md).
-4. [Yönetilemeyen uygulamaları engelleyin](app-modern-authentication-block.md), özellikle Azure Active Directory Authentication Library (ADAL) kullanmayanları.
+4. [Yönetilmeyen](app-modern-authentication-block.md)uygulamaları, özellikle de Azure Active Directory kimlik doğrulaması KITAPLıĞı (ADAL) veya Microsoft kimlik doğrulama kitaplığı 'Nı (msal) kullanmayan uygulamaları engelleyin.
 5. Seçim [SharePoint Online için uygulama tabanlı koşullu erişim Ilkeleri ayarlayın](app-based-conditional-access-intune-create.md). Bu ilkeler, yönetilemeyen ve güvende olmayan uygulamalardan şirket verilerinize erişimi engeller. Ayrıca SharePoint Mobile’dan erişimi de sınırlar. 
 
 ## <a name="what-to-tell-employees-and-students"></a>Çalışanlara ve öğrencilere söylenecekler

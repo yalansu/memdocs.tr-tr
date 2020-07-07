@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a90345bef46161911bcb1c1072b6ae4af41f16e
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
-ms.translationtype: MT
+ms.openlocfilehash: 1fa3f6e96b46b27be4f6cbbe475d03eed007b0d4
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864965"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022424"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>REST istemcisi ile Intune Veri Ambarı API’sinden veri alma
 
@@ -41,37 +40,28 @@ REST istemcisi ile API’yi yetkilendirme ve buna erişmeyi öğrenmek için aş
 
 Azure’da yerel bir uygulama oluşturun. Bu yerel uygulama, istemci uygulamadır. Yerel makinenizde çalışan istemci, yerel istemci kimlik bilgileri istediğinde Intune Veri Ambarı API’sine başvurur.
 
-1. Kiracınız için Azure portalında oturum açın. **Azure Active Directory**  >  **Uygulama kayıtları** bölmesini açmak için Azure Active Directory**uygulama kayıtları** seçin.
-2. **Yeni uygulama kaydı**’nı seçin.
-3. Uygulama ayrıntılarını yazın.
-    1. **Ad** kısmına, Intune Veri Ambarı İstemcisi gibi kolay bir ad yazın.
-    2. **Uygulama türü** için **Yerel**’i seçin.
-    3. **Oturum açma URL’si** için bir URL girin. Oturum açma URL’si belirli bir senaryoya bağlıdır ancak Postman kullanmayı planlıyorsanız `https://www.getpostman.com/oauth2/callback` yazın. Azure AD’de kimlik doğrularken istemci kimlik doğrulaması adımı için geri aramayı kullanacaksınız.
-4. **Oluştur**’u seçin.
-
-     ![Intune veri ambarı istemci uygulaması](./media/reports-proc-data-rest/reports-get_rest_data_client_overview.png)
-
-5. Bu uygulamanın **Uygulama kimliğini** not edin. Bu kimliği sonraki bölümde kullanacaksınız.
+1. [Azure Active Directory Yönetim merkezinde](https://aad.portal.azure.com/)oturum açın.
+2. **Azure Active Directory**  >  **Uygulama kayıtları** bölmesini açmak için Azure Active Directory**uygulama kayıtları** seçin.
+3. **Yeni uygulama kaydı**’nı seçin.
+4. Uygulama ayrıntılarını yazın.
+    1. **Ad**için bir kolay ad yazın (örneğin, ' Intune veri ambarı istemcisi ').
+    2. **Desteklenen hesap türleri**için **yalnızca bu kuruluş dizininde (yalnızca Microsoft-tek kiracı) hesaplar '** ı seçin.
+    3. **Yeniden YÖNLENDIRME URI**'si için bir URL yazın. Yeniden yönlendirme URI 'SI belirli senaryoya bağlı olacaktır, ancak Postman kullanmayı planlıyorsanız, yazın `https://www.getpostman.com/oauth2/callback` . Azure AD’de kimlik doğrularken istemci kimlik doğrulaması adımı için geri aramayı kullanacaksınız.
+5. **Kaydol**’u seçin.
+6. Bu uygulamanın **uygulama (istemci) kimliğine** göz önünde. Bu kimliği sonraki bölümde kullanacaksınız.
 
 ## <a name="grant-the-client-app-access-to-the-microsoft-intune-api"></a>İstemci uygulamasına Microsoft Intune API erişimi verme
 
 Artık Azure’da tanımlanan bir uygulamanız var. Yerel uygulamadan Microsoft Intune API’sine erişim verin.
 
-1. Yerel uygulamaya tıklayın. Uygulamayı **Intune veri ambarı istemcisi**gibi bir şey olarak adlandırmış olursunuz.
-2. **Ayarlar** bölmesinde **Gerekli izinler**’i seçin
-3. **Gerekli izinler** bölmesinde **Ekle**’yi seçin.
-4. **Bir API seçin**'i belirleyin.
-5. Web uygulaması adını aratın. Bu uygulamanın adı **Microsoft Intune API’sidir**.
-6. Listeden uygulamaya tıklayın.
-7. **Seç**’i seçin.
-8. **Microsoft Intune’dan veri ambarı bilgileri almak** için **Temsilcili İzinler**’e tıklayın.
-
-    ![Access-Microsoft Intune API 'sini etkinleştir](./media/reports-proc-data-rest/reports-get_rest_data_client_access.png)
-
-9. **Seç**’i seçin.
-10. **Done** (Bitti) öğesini seçin.
-11. İsteğe bağlı olarak Gerekli izinler bölmesinde **İzin Ver**’i seçin. Böylece geçerli dizindeki tüm hesaplara erişim verirsiniz. Bu, kiracıdaki her kullanıcı için bir onay iletişim kutusu oluşturmayı önler. Daha fazla bilgi için bkz. [Uygulamaları Azure Active Directory ile tümleştirme](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
-12. **Evet**' i seçin.
+1. [Azure Active Directory Yönetim merkezinde](https://aad.portal.azure.com/)oturum açın.
+2. **Azure Active Directory**  >  **Uygulama kayıtları** bölmesini açmak için Azure Active Directory**uygulama kayıtları** seçin.
+3. Erişim vermek için gereken uygulamayı seçin. Uygulamayı **Intune veri ambarı istemcisi**gibi bir şey olarak adlandırmış olursunuz.
+4. **API izinlerini**seçin  >  **izin Ekle**.
+5. Intune API 'sini bulun ve seçin. Bu uygulamanın adı **Microsoft Intune API’sidir**.
+6. **Temsilci izinleri** kutusunu seçin ve **Microsoft Intune veri ambarı bilgilerini al** kutusundan tıklayın.
+7. **Izin Ekle**' ye tıklayın.
+8. İsteğe bağlı olarak, yapılandırılmış izinler bölmesinde **Microsoft için yönetici Izni ver** ' i seçin ve ardından **Evet**' i seçin. Böylece geçerli dizindeki tüm hesaplara erişim verirsiniz. Bu, kiracıdaki her kullanıcı için bir onay iletişim kutusu oluşturmayı önler. Daha fazla bilgi için bkz. [Uygulamaları Azure Active Directory ile tümleştirme](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
 
 ## <a name="get-data-from-the-microsoft-intune-api-with-postman"></a>Microsoft Intune API’sinden Postman ile veri alma
 
@@ -95,9 +85,9 @@ Postman kullanarak REST araması yapmak için aşağıdaki bilgilere ihtiyacın�
 
 Uç nokta da gerekir. Veri Ambarı uç noktanızı almak için özel akış URL’si gereklidir. OData uç noktasını Veri Ambarı bölmesinden alabilirsiniz.
 
-1. [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)'da oturum açın.
-3. **Microsoft Intune-genel bakış** dikey penceresinin sağ tarafındaki **diğer görevler** altında bulunan veri ambarı bağlantısını seçerek **Intune veri ambarı** bölmesini açın.
-4. **Üçüncü taraf raporlama hizmetleri kullan** altında özel akış URL’sini kopyalayın. Bu, şuna benzer olmalıdır: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
+3. **Raporlar**veri ambarı ' nı seçerek **veri ambarı** bölmesini açın  >  **Data warehouse**.
+4. **Raporlama hizmeti Için OData akışı**altındaki özel akış URL 'sini kopyalayın. Bu, şuna benzer olmalıdır: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 
 Uç nokta aşağıdaki biçimi izler:`https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`
 
@@ -149,13 +139,13 @@ Postman için yeni bir erişim belirteci almak üzere Azure AD yetkilendirme URL
 
 ## <a name="create-a-rest-client-c-to-get-data-from-the-intune-data-warehouse"></a>Intune Veri Ambarı API’sinden veri almak için bir REST istemcisi (C#) oluşturma
 
-Aşağıdaki örnek, bir basit REST istemcisi içerir. Kod, .Net kitaplığından **httpClient** sınıfını kullanır. İstemci, Azure AD kimlik bilgilerini aldıktan sonra Veri ambarı API’sinden tarihler varlığını almak için bir GET REST araması oluşturur.
+Aşağıdaki örnek, bir basit REST istemcisi içerir. Kod, .NET kitaplığından **HttpClient** sınıfını kullanır. İstemci, Azure AD kimlik bilgilerini aldıktan sonra Veri ambarı API’sinden tarihler varlığını almak için bir GET REST araması oluşturur.
 
 > [!Note]  
 > Aşağıdaki kod [örneğine GitHub’dan](https://github.com/Microsoft/Intune-Data-Warehouse/blob/master/Samples/CSharp/Program.cs) ulaşabilirsiniz. Örnekteki son değişiklikler ve güncelleştirmeler için GitHub deposuna başvurun.
 
 1. **Microsoft Visual Studio**’yu açın.
-2. **Dosya**  >  **Yeni proje**' yi seçin. **Visual C#**’yi genişletin ve **Konsol Uygulaması (.Net Framework)** öğesini seçin.
+2. **Dosya**  >  **Yeni proje**' yi seçin. **Visual C#**' ı genişletin ve **konsol uygulaması (.NET Framework)** seçeneğini belirleyin.
 3. Projeyi `IntuneDataWarehouseSamples` olarak adlandırın, projeyi kaydetmek istediğiniz konuma göz atın ve **Tamam**’a tıklayın.
 4. Çözüm Gezgini’nde çözümün adına sağ tıklayın ve daha sonra **Çözüm için NuGet Paketlerini Yönetme**’ye tıklayın. **Gözat**’a tıklayın, daha sonra arama kutusuna `Microsoft.IdentityModel.Clients.ActiveDirectory` yazın.
 5. Paketi seçin, Çözümünüz için Paketleri Yönetme altında **IntuneDataWarehouseSamples**’a tıklayın ve daha sonra **Yükle**’yi seçin.

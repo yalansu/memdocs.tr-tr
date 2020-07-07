@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 7f200e5cb5bb4aa0f29cbd3adc0f177bb14e5476
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
-ms.translationtype: MT
+ms.openlocfilehash: ac5b4685249ffa46be63e9ad55ca6067edec1b03
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431320"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022407"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Intune 'da Endpoint Security için saldırı yüzeyi Azaltma ilkesi ayarları
 
@@ -92,7 +91,7 @@ Desteklenen platformlar ve profiller:
 - **Application Guard Yerel yazıcılara yazdırmaya izin ver**  
 
   - **Yapılandırılmadı** (*varsayılan*)
-  - **Evet** -yazdırma yazdırmaya Yerel yazıcılara izin ver.
+  - **Evet** -Yerel yazıcılara yazdırmaya izin ver.
 
 - **Application Guard ağ yazıcılarına yazdırmaya izin ver**  
 
@@ -114,7 +113,7 @@ Desteklenen platformlar ve profiller:
   - **Yapılandırılmadı** (*varsayılan*)
   - **Evet** -Windows ağ yalıtımı ilkesini yapılandırın.  
   
-  *Yapılandırma*olarak ayarlandığında, aşağıdaki ayarları yapılandırabilirsiniz.
+  *Evet*olarak ayarlandığında, aşağıdaki ayarları yapılandırabilirsiniz.
 
   - **IP aralıkları**  
     Açılan listeyi genişletin, **Ekle**' yi seçin ve daha sonra bir *daha* daha daha sonra bir *üst*adres belirtin.
@@ -186,9 +185,9 @@ Desteklenen platformlar ve profiller:
 - **Kullanıcıların SmartScreen uyarılarını yoksaymalarını engelleyin**  
   [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  Bu ayar, ' uygulamalar ve dosyalar için SmartScreen 'i zorla ' ayarının etkinleştirilmesini gerektirir.
-  - **Yapılandırılmadı** (*varsayılan*)-ayarı, kullanıcının geçersiz kılınmasına izin veren Windows varsayılan öğesine döndürür.
-  - **Evet** --SmartScreen, kullanıcının uyarıyı görmezden ve uygulamayı çalıştırmasına yönelik bir seçenek sunmaz. Uyarı görüntülenir, ancak Kullanıcı Bunu atlayamaz.
+  - **Yapılandırılmadı** (*varsayılan*)-kullanıcılar, dosyalar ve kötü amaçlı uygulamalar için SmartScreen uyarılarını yok sayabilir.
+  - **Evet** -SmartScreen etkin ve kullanıcılar dosyalar veya kötü amaçlı uygulamalar için uyarıları atlayamaz.
+
 
 - **Windows SmartScreen 'i açma**  
   CSP: [SmartScreen/Enablesmartscreenınshell](https://go.microsoft.com/fwlink/?linkid=872784)
@@ -200,14 +199,14 @@ Desteklenen platformlar ve profiller:
 
 ### <a name="attack-surface-reduction-rules"></a>Saldırı yüzeyi azaltma kuralları
 
-- **Windows yerel güvenlik yetkilisi alt sisteminden (Lsass. exe) kimlik bilgisi çalınmasını engelleyin**  
+- **Windows yerel güvenlik yetkilisi alt sisteminden kimlik bilgisi çalınmasını engelle (lsass.exe)**  
   <!-- Defender ATP security baseline, Device configuration Endpoint protection profile -->
   [Cihazları kötüye bilgisayarlardan koruyun](https://go.microsoft.com/fwlink/?linkid=874499)
 
   Bu saldırı yüzeyi azaltma (ASR) kuralı şu GUID aracılığıyla denetlenir: 9e6c4e1f-7d60-472F-ba1a-a39ef669e4b2
   - **Yapılandırılmadı** (*varsayılan*)-ayar, kapalı olan Windows varsayılan öğesine geri döner.
   - **Kullanıcı tanımlı**
-  - **Etkinleştir** -Lsass. exe aracılığıyla kimlik bilgilerini çalmaya yönelik girişimler engellenir.
+  - **Etkinleştir** -lsass.exe aracılığıyla kimlik bilgilerini çalmaya çalışır.
   - **Denetim modu** -kullanıcılar tehlikeli etki alanlarından engellenmez ve bunun yerine Windows olayları tetiklenir.
 
 - **Adobe Reader 'ın alt işlem oluşturmasını engelleyin**  

@@ -5,7 +5,7 @@ description: Şirket içi Microsoft Intune Exchange Connector için sık karşı
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 07/06/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55f51f94cf26aa2486ef390d5fbb668eaf013e10
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
-ms.translationtype: MT
+ms.openlocfilehash: 57f8b8193fd2f4e871f744743b768ec6248ae0b9
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79328878"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972139"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Intune Exchange Connector ile ilgili yaygın sorunları çözme
  
@@ -68,13 +67,13 @@ E-posta bildirim sorunlarını gidermek için aşağıdaki bölümleri gözden g
 
    1. Komut isteminde *nslookup*yazın.
 
-   2. *Autodiscover.SMTPdomain.com*girin. Çıktının aşağıdaki görüntüye benzer olması gerekir: ![nslookup sonuçları](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
+   2. *Autodiscover.SMTPdomain.com*girin. Çıktının aşağıdaki görüntüye benzer olması gerekir: ![ nslookup sonuçları](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
       )
 
-   Ayrıca, otomatik bulma hizmetini adresinden https://testconnectivity.microsoft.cominternetten test edebilirsiniz. Ya da Microsoft bağlantı çözümleyici aracını kullanarak yerel bir etki alanından test edin. Daha fazla bilgi için bkz. [Microsoft bağlantı çözümleyici aracı](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
+   Ayrıca, otomatik bulma hizmetini adresinden internetten test edebilirsiniz https://testconnectivity.microsoft.com . Ya da Microsoft bağlantı çözümleyici aracını kullanarak yerel bir etki alanından test edin. Daha fazla bilgi için bkz. [Microsoft bağlantı çözümleyici aracı](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
 
 
-### <a name="check-autodiscovery"></a>Otomatik bul denetimi
+### <a name="check-autodiscover"></a>Otomatik bulma denetimi
 
 Otomatik bulma başarısız olursa, aşağıdaki adımları deneyin:
 
@@ -82,9 +81,9 @@ Otomatik bulma başarısız olursa, aşağıdaki adımları deneyin:
 
 2. Intune Exchange Connector yapılandırma dosyasında EWS URL 'sini sabit kodlayın:
 
-   1. EWS URL 'sini belirleme. Exchange için varsayılan EWS URL 'si `https://<mailServerFQDN>/ews/exchange.asmx`, ancak URL 'niz farklılık gösterebilir. Ortamınız için doğru URL 'YI doğrulamak üzere Exchange yöneticisine başvurun.
+   1. EWS URL 'sini belirleme. Exchange için varsayılan EWS URL 'si `https://<mailServerFQDN>/ews/exchange.asmx` , ancak URL 'niz farklılık gösterebilir. Ortamınız için doğru URL 'YI doğrulamak üzere Exchange yöneticisine başvurun.
 
-   2. *OnPremisesExchangeConnectorServiceConfiguration. xml* dosyasını düzenleyin. Varsayılan olarak, dosya Exchange bağlayıcısını çalıştıran bilgisayardaki *%ProgramData%\Microsoft\Windows Intune Exchange Bağlayıcısı* ' nda bulunur. Dosyayı bir metin düzenleyicisinde açın ve ardından aşağıdaki satırı, ortamınız için EWS URL 'sini yansıtacak şekilde değiştirin:`<ExchangeWebServiceURL>https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
+   2. *OnPremisesExchangeConnectorServiceConfiguration.xml* dosyasını düzenleyin. Varsayılan olarak, dosya Exchange bağlayıcısını çalıştıran bilgisayardaki *%ProgramData%\Microsoft\Windows Intune Exchange Bağlayıcısı* ' nda bulunur. Dosyayı bir metin düzenleyicisinde açın ve ardından aşağıdaki satırı, ortamınız için EWS URL 'sini yansıtacak şekilde değiştirin:`<ExchangeWebServiceURL>https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
 
 3. Dosyayı kaydedin ve ardından bilgisayarı yeniden başlatın veya Exchange Connector hizmetini Microsoft Intune yeniden başlatın.
 

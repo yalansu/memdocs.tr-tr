@@ -17,12 +17,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13623f92ac68855aefbd1900c5040004acba1f09
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
-ms.translationtype: MT
+ms.openlocfilehash: b57d6112b8a1467eb068f04e4e3041f91ceeb8a7
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216510"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86021880"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Microsoft Intune için ağ uç noktaları  
 
@@ -67,7 +66,6 @@ Aşağıdaki tabloda Intune istemcisinin eriştiği bağlantı noktaları ve hiz
 |fef.msua05.manage.microsoft.com|138.91.244.151|
 |fef.msua06.manage.microsoft.com|13.78.185.97|
 |fef.msub01.manage.microsoft.com|137.135.128.214|
-|fef.msub03.manage.microsoft.com|52.169.82.238|
 |fef.msub05.manage.microsoft.com|23.97.166.52|
 |fef.msuc03.manage.microsoft.com|23.101.0.100|
 |fef.amsua0502.manage.microsoft.com|13.85.68.142|
@@ -141,3 +139,6 @@ Google, bu belgenin **güvenlik duvarı** bölümü altında, [Android kurumsal 
 
 Intune, cihaz eylemleri ve iadelerinin tetiklenmesi için anında iletme bildirimi için Google Firebase Cloud Messaging (FCM) kullanır. Bu, hem Android Cihaz Yöneticisi hem de Android Enterprise için gereklidir. FCM ağ gereksinimleri hakkında bilgi için bkz. Google 'ın [FCM bağlantı noktaları ve güvenlik duvarınız](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).
 
+## <a name="endpoint-analytics"></a>Uç nokta analizi
+
+Endpoint Analytics için gerekli uç noktalar hakkında daha fazla bilgi için bkz. [Endpoint Analytics proxy yapılandırması](https://docs.microsoft.com/mem/analytics/troubleshoot#bkmk_endpoints).

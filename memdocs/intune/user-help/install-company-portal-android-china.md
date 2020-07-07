@@ -1,5 +1,5 @@
 ---
-title: Intune şirket portalı uygulamasını ana kara Çin 'e yükler | Microsoft Docs
+title: Intune Şirket Portalı uygulamayı Çin Halk Cumhuriyeti ' ne yüklensin | Microsoft Docs
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,16 +19,15 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 39aa0108d160aea74e1ac47b19877763a9ffefa5
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
-ms.translationtype: MT
+ms.openlocfilehash: 58ba595b65ade57fee0ff3fe40242b27a2ff8ba4
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332765"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86021846"
 ---
-# <a name="install-company-portal-app-in-mainland-china"></a>Şirket Portalı uygulamasını ana kara Çin 'e yükler   
+# <a name="install-company-portal-app-in-peoples-republic-of-china"></a>Şirket Portalı uygulamasını, Çin Halk Cumhuriyeti 'ne yükler
 
-Android cihazınızdan okul veya iş kaynaklarına erişmek için Intune Şirket Portalı uygulamasını yüklemek. Uygulama ana kara Çin 'de kullanılabilir ve aşağıdaki uygulama mağazalarından yüklenebilir: 
+Android cihazınızdan okul veya iş kaynaklarına erişmek için Intune Şirket Portalı uygulamasını yüklemek. Uygulama, Çin Halk Cumhuriyeti 'nde kullanılabilir ve aşağıdaki uygulama mağazalarından yüklenebilir: 
 
 
 * [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947) 

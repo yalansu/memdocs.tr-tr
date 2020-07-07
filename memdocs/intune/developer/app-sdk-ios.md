@@ -17,12 +17,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60147f6b54ce608183914e00b65317abe0a580b6
-ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
-ms.translationtype: MT
+ms.openlocfilehash: 95a2eb50a77d70164f4895bd7bc8266c61a5a186
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85820044"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022288"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>iOS için Microsoft Intune Uygulama SDK’sı geliştirici kılavuzu
 
@@ -135,7 +134,7 @@ Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin
 3. Her bir proje hedefinde **Özellikler**’i seçip **Anahtar Zinciri Paylaşımı** anahtarını etkinleştirerek anahtar zinciri paylaşımını etkinleştirin (önceden etkinleştirilmemişse). Anahtarlık paylaşımı, sonraki adıma devam edebilmeniz için gereklidir.
 
    > [!NOTE]
-   > Sağlama profilinizin, yeni anahtarlık paylaşımı değerlerini desteklemesi gerekir. Anahtarlık erişim grupları bir joker karakteri desteklemelidir. Bunu,. mobileprovision dosyasını bir metin düzenleyicisinde açıp **Anahtarlık erişim grupları**araması yaparak ve bir joker karakter olmasını sağlayarak denetleyebilirsiniz. Örneğin:
+   > Sağlama profilinizin, yeni anahtarlık paylaşımı değerlerini desteklemesi gerekir. Anahtarlık erişim grupları bir joker karakteri desteklemelidir. Bunu,. mobileprovision dosyasını bir metin düzenleyicisinde açıp **Anahtarlık erişim grupları**araması yaparak ve bir joker karakter olmasını sağlayarak denetleyebilirsiniz. Örnek:
    >
    >  ```xml
    >  <key>keychain-access-groups</key>
@@ -154,7 +153,7 @@ Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin
     
       ![Intune Uygulama SDK’sı iOS: Anahtarlık paylaşımı](./media/app-sdk-ios/intune-app-sdk-ios-keychain-sharing.png)
     
-    d. Anahtarlık erişim gruplarını oluşturmak için yukarıda gösterilen Xcode UI'ı kullanmak yerine doğrudan yetkilendirme dosyalarını düzenliyorsanız, anahtarlık erişim gruplarını `$(AppIdentifierPrefix)` öğesinin önüne ekleyin (Xcode bunu otomatik olarak işler). Örneğin:
+    d. Anahtarlık erişim gruplarını oluşturmak için yukarıda gösterilen Xcode UI'ı kullanmak yerine doğrudan yetkilendirme dosyalarını düzenliyorsanız, anahtarlık erişim gruplarını `$(AppIdentifierPrefix)` öğesinin önüne ekleyin (Xcode bunu otomatik olarak işler). Örnek:
     
       - `$(AppIdentifierPrefix)com.microsoft.intune.mam`
       - `$(AppIdentifierPrefix)com.microsoft.adalcache`
@@ -177,6 +176,9 @@ Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin
 '-o' parametresi belirtilmezse, giriş dosyası yerinde değiştirilir. Araç bir kez etkilidir ve uygulamanın Info.plist dosyası her değiştirildiğinde veya yetkilendirmeler yapıldığında yeniden çalıştırılmalıdır. En son sürümde Info.plist yapılandırma gereksinimlerinin değişmesi durumunda, Intune SDK'sını güncelleştirirken de aracın en son sürümünü indirmeniz ve çalıştırmanız gerekir.
 
 ## <a name="configure-adalmsal"></a>ADAL/MSAL yapılandırma
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 Intune uygulama SDK 'sı, kimlik doğrulama ve koşullu başlatma senaryoları için [Azure Active Directory kimlik doğrulama kitaplığını](https://github.com/AzureAD/azure-activedirectory-library-for-objc) ya da [Microsoft kimlik doğrulama kitaplığını](https://github.com/AzureAD/microsoft-authentication-library-for-objc) kullanabilir. Ayrıca, Kullanıcı kimliğini cihaz kayıt senaryoları olmadan yönetim için MAM hizmetine kaydetmek için ADAL/MSAL kullanır.
 
@@ -287,6 +289,9 @@ Intune uygulama koruma ilkesini almak için, uygulamaların Intune MAM hizmetiyl
 > İOS için Intune uygulama SDK 'Sı, uygulama koruma Ilkeleri tarafından şifreleme etkinleştirildiğinde 256 bitlik şifreleme anahtarlarını kullanır. Korunan veri paylaşımına izin vermek için tüm uygulamaların geçerli bir SDK sürümüne sahip olması gerekir.
 
 ### <a name="apps-that-already-use-adal-or-msal"></a>Zaten ADAL veya MSAL kullanan uygulamalar
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 Zaten ADAL veya MSAL kullanan uygulamalar, `registerAndEnrollAccount` `IntuneMAMEnrollmentManager` Kullanıcı başarıyla doğrulandıktan sonra örnekteki yöntemi çağırmalıdır:
 
@@ -546,7 +551,7 @@ Sürüm 8.0.2'den başlayarak, yalnızca Intune tarafından yönetilen paylaşı
 
 Ve aracılığıyla belge paylaşırken `UIActivityViewController` `UIDocumentInteractionController` , iOS, paylaşılan belgeyi açmayı destekleyen her uygulama Için ' Kopyala ' eylemlerini görüntüler. Uygulamalar, Info.plist dosyalarındaki `CFBundleDocumentTypes` ayarı yoluyla destekledikleri belge türlerini bildirir. İlke yönetilmeyen uygulamalara paylaşımı yasaklarsa, bu paylaşım türü artık kullanılabilir olmaz. Bunun yerine kullanıcı, kullanıcı arabirimi olmayan Eylem uzantısını ekleyip bunu Intune Uygulama SDK’sına bağlamak zorunda kalır. Eylem uzantısı, yalnızca bir saplamadır. SDK, dosya paylaşım davranışını uygular. Aşağıdaki adımları izleyin:
 
-1. Uygulamanız, kendi Info. plist altında, onun karşılığına göre tanımlanmış en az bir ıgnmeurl içermelidir `CFBundleURLTypes` `-intunemam` . Örneğin:
+1. Uygulamanız, kendi Info. plist altında, onun karşılığına göre tanımlanmış en az bir ıgnmeurl içermelidir `CFBundleURLTypes` `-intunemam` . Örnek:
     ```objc
     <key>CFBundleURLSchemes</key>
     <array>

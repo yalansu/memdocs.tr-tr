@@ -17,12 +17,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3c83859d56b23974e95299c76b0d65512da0a0e
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
-ms.translationtype: MT
+ms.openlocfilehash: cda39ad145e6293b94a1551c47b964cbceef4f40
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455098"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022458"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Microsoft Graph’ta Intune API’lerine erişmek için Azure AD kullanma
 
@@ -81,6 +80,10 @@ Uygulamaları Microsoft Graph API kullanmak üzere kaydetmek için:
     2. **Uygulama türü** ve **Yeniden yönlendirme URI'si** değerleri.
 
         Bunlar, gereksinimlerinize göre farklılık gösterir. Örneğin, Azure AD [Kimlik Doğrulama Kitaplığı](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) kullanıyorsanız **Uygulama Türü**’nü `Native` ve **Yeniden Yönlendirme URI'sini**`urn:ietf:wg:oauth:2.0:oob` olarak ayarlayın.
+
+        > [!NOTE]
+        > Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 
         <img src="../media/azure-ad-app-new.png" width="209" height="140" alt="New app properties and values" />
 
@@ -342,6 +345,10 @@ Bu örnek, Intune hesabınızla ilişkili cihazların bir listesini almak için 
     <img src="../media/aad-auth-cpp-new-console.png" width="624" height="433" alt="Creating a C# console app project in Visual Studio"  />
 
 3. Microsoft ADAL NuGet paketini projeye eklemek için Çözüm Gezgini’ni kullanın.
+
+  > [!NOTE]
+  > Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 
     1. Çözüm Gezgini’ne sağ tıklayın.
     2. **NuGet Paketlerini Yönet...**’i seçin &gt;**İnceleyin**.

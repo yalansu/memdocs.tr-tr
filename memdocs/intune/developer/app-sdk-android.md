@@ -17,12 +17,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 163a0d231192277f27c69d7bcf983e817393d526
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
-ms.translationtype: MT
+ms.openlocfilehash: a222a1f4adfd2f73731c40946169338989162e5e
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383130"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022373"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Android için Microsoft Intune Uygulama SDK’sı geliştirici kılavuzu
 
@@ -79,7 +78,10 @@ Ayrıca **Microsoft.Intune.MAM.SDK.Support.XXX.jar** kitaplıkları, ilgili `and
 
 Bir derleme adımı olarak [ProGuard](http://proguard.sourceforge.net/) (veya başka bir daraltma/gizleme mekanizması) kullanılırsa, SDK'nın dahil edilmesi gereken ek yapılandırma kuralları vardır. Dahil olmak üzere. Yapımızda AAR, kurallarımız Proguard adımla otomatik olarak tümleştirilir ve gerekli sınıf dosyaları tutulur.
 
-Azure Active Directory Authentication Library’lerin (ADAL) kendi ProGuard kısıtlamaları olabilir. Uygulamanız ADAL ile tümleştiriliyorsa, bu kısıtlamalarla ilgili olarak ADAL belgelerine bakmalısınız.
+[Microsoft kimlik doğrulama kitaplığı (msal)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview#languages-and-frameworks) kendi Proguard kısıtlamalarına sahip olabilir. Uygulamanız MSAL tümleştirirse, bu kısıtlamaların MSAL belgelerini izlemeniz gerekir.
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 ### <a name="policy-enforcement"></a>İlke zorlama
 Intune Uygulama SDK'sı, uygulamanızın Intune ilkelerini yaptırmasını desteklemeyi ve buna katılımda bulunmayı sağlayan bir Android kitaplığıdır. 
@@ -92,7 +94,7 @@ Otomatik olarak zorlanan ilkeler için, uygulamaların MAM eşdeğerlerine devra
 ### <a name="build-tooling"></a>Derleme araçları
 SDK, derleme araçları (Gradle derlemeleri için bir eklenti ve Gradle derlemeleri için bir komut satırı aracı) ile otomatik olarak MAM eşdeğer değişiklikler gerçekleştirir. Bu araçlar, Java derlemesi tarafından üretilen sınıf dosyalarını dönüştürür ve asıl kaynak kodu değiştirmez.
 
-Araçlar yalnızca [doğrudan değiştirme](#class-and-method-replacements) işlemleri gerçekleştirir. [Farklı Kaydetme İlkesi](#enable-features-that-require-app-participation), [Çoklu Kimlik](#multi-identity-optional), [Uygulama WE kaydı](#app-protection-policy-without-device-enrollment), [AndroidManifest değişiklikleri](#manifest-replacements) veya [ADAL yapılandırması](#configure-azure-active-directory-authentication-library-adal) gibi başka hiçbir karmaşık SDK tümleştirmesi yapmadığından, uygulamanızın tam olarak Intune özellikli hale gelmesi önce bunların tamamlanması gerekir. Uygulamanızı ilgilendiren tümleştirmeye ilişkin noktalar için lütfen belgelerin geri kalanını dikkatle inceleyin.
+Araçlar yalnızca [doğrudan değiştirme](#class-and-method-replacements) işlemleri gerçekleştirir. [Farklı kaydet ilkesi](#enable-features-that-require-app-participation), [çok kimlikli](#multi-identity-optional), [App-we kaydı](#app-protection-policy-without-device-enrollment)veya [AndroidManifest değişiklikleri](#manifest-replacements)gibi daha karmaşık SDK tümleştirmelerini gerçekleştirmez. bu nedenle, uygulamanız tam Intune etkinleştirilmeden önce bu işlemleri tamamlamalıdır. Uygulamanızı ilgilendiren tümleştirmeye ilişkin noktalar için lütfen belgelerin geri kalanını dikkatle inceleyin.
 
 > [!NOTE]
 > Aracın, MAM SDK'sının kısmı veya tam kaynak tümleştirmesi daha önce elle yapılan değiştirmelerle gerçekleştirilmiş bir projede çalıştırılmasında bir sorun yoktur. Ancak MAM SDK'sının yine de projenizde bir bağımlılık olarak listelenmesi gerekir.
@@ -178,11 +180,11 @@ Her iki soruyu da 'evet' ile yanıtlıyorsanız, bu kitaplığı `includeExterna
 
 | Senaryo | Dahil edilsin mi? |
 |--|--|
-| Uygulamanıza bir PDF görüntüleyici kitaplığı dahil ediyor ve görüntüleyicinin `Activity` sınıfını kullanıcılarınız PDF'leri görüntülemeye çalıştığında uygulamanızda kullanıyorsunuz | Yes |
-| Gelişmiş Web performansı için bir HTTP kitaplığını uygulamanıza dahil ediyorsunuz | No |
-| `Activity`, `Application` ve `Fragment` sınıflarından türetilmiş sınıfları olan React Native gibi bir kitaplığı dahil ediyor ve bu sınıfları uygulamanızda kullanıyor veya bunlardan başka sınıflar türetiyorsunuz | Yes |
-| `Activity`, `Application` ve `Fragment` sınıflarından türetilmiş sınıflar içeren React Native gibi bir kitaplığı dahil ediyor, ancak yalnızca statik yardımcıları veya hizmet sınıflarını kullanıyorsunuz | No |
-| `TextView` sınıfından türetilmiş görünüm sınıfları içeren bir kitaplığı dahil ediyor ve bu sınıfları uygulamanızda kullanıyor veya bunlardan başka sınıflar türetiyorsunuz | Yes |
+| Uygulamanıza bir PDF görüntüleyici kitaplığı dahil ediyor ve görüntüleyicinin `Activity` sınıfını kullanıcılarınız PDF'leri görüntülemeye çalıştığında uygulamanızda kullanıyorsunuz | Evet |
+| Gelişmiş Web performansı için bir HTTP kitaplığını uygulamanıza dahil ediyorsunuz | Hayır |
+| `Activity`, `Application` ve `Fragment` sınıflarından türetilmiş sınıfları olan React Native gibi bir kitaplığı dahil ediyor ve bu sınıfları uygulamanızda kullanıyor veya bunlardan başka sınıflar türetiyorsunuz | Evet |
+| `Activity`, `Application` ve `Fragment` sınıflarından türetilmiş sınıflar içeren React Native gibi bir kitaplığı dahil ediyor, ancak yalnızca statik yardımcıları veya hizmet sınıflarını kullanıyorsunuz | Hayır |
+| `TextView` sınıfından türetilmiş görünüm sınıfları içeren bir kitaplığı dahil ediyor ve bu sınıfları uygulamanızda kullanıyor veya bunlardan başka sınıflar türetiyorsunuz | Evet |
 
 #### <a name="reporting"></a>Raporlama
 Yapı eklentisi, yaptığı değişikliklerin HTML raporunu oluşturabilir. Bu raporun oluşturulmasını istemek için `report = true` yapılandırma bloğunda ' i belirtin `intunemam` . Oluşturulduysa, rapor `outputs/logs` derleme dizinine yazılır.
@@ -420,6 +422,9 @@ Intune uygulama SDK'sı, tümleştirildiği uygulamalarda üç [Android sistem i
 * `android.permission.USE_CREDENTIALS`
 
 Bu izinler, Azure Active Directory Kimlik Doğrulama Kitaplığı ([ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/)) tarafından aracılık edilen kimlik doğrulaması gerçekleştirmek üzere istenir. Bu izinler uygulamaya sağlanmazsa veya kullanıcı tarafından kaldırılırsa, aracı (Şirket Portalı uygulaması) gerektiren kimlik doğrulama akışları devre dışı bırakılır.
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 ## <a name="logging"></a>Günlüğe Kaydetme
 
@@ -886,6 +891,9 @@ Uygulamanızın alıcısı döndüğünde, artık şifreleme anahtarlarına eri�
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>Azure Active Directory Kimlik Doğrulama Kitaplığı'nı (ADAL) Yapılandırma
 
+> [!NOTE]
+> Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 İlk olarak, lütfen [GitHub’da ADAL deposu](https://github.com/AzureAD/azure-activedirectory-library-for-android) konusunda bulunan ADAL tümleştirme yönergelerini okuyun.
 
 SDK; [kimlik doğrulaması](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) ve koşullu başlatma senaryolarında, uygulamaların [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/) ile yapılandırılmasını gerektiren [ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) özelliğini kullanır. Yapılandırma değerleri, AndroidManifest meta verileri üzerinden SDK’ya iletilir.
@@ -989,6 +997,9 @@ Uygulama ayrıca, kayıtlı bir kullanıcının durumunu Intune Uygulama SDK’s
 
 Uygulamanın, SDK adına Azure Active Directory Authentication Library’den (ADAL) uygun erişim belirtecini almak için bir geri çağırma sağlaması gerekir. Uygulamanın kimlik doğrulaması yapmak ve kendi erişim belirteçlerini almak için zaten ADAL kullandığı varsayılır.
 
+> [!NOTE]
+> Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 Uygulama bir hesabı tamamen kaldırdığında, uygulamanın söz konusu kullanıcı için artık ilke uygulamayacağını belirtmek üzere o hesabın kaydını kaldırmalıdır. Kullanıcı MAM hizmetine kaydedilmişse, kullanıcının kaydı kaldırılır ve uygulama temizlenir.
 
 
@@ -1064,6 +1075,9 @@ void updateToken(String upn, String aadId, String resourceId, String token);
 
 1. SDK’nın verili kullanıcı ve kaynak kimliği için ADAL isteğinde bulunmasına olanak tanımak üzere uygulama `MAMServiceAuthenticationCallback` gerçekleştirmelidir. `registerAuthenticationCallback()` yöntemi çağrılarak `MAMEnrollmentManager` için geri çağırma örneği sağlanmalıdır. Kayıt yeniden denemeleri ve uygulama koruma ilkesi yenileme iadeleri için uygulama yaşam döngüsünün erken bir aşamasında belirteç gerekebilir; dolayısıyla geri çağırma kaydı için ideal konum, uygulamanın `MAMApplication` alt sınıfının `onMAMCreate()` yöntemidir.
 
+  > [!NOTE]
+  > Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 2. `acquireToken()` yöntemi, verili kullanıcının istenen kaynak kimliği için erişim belirtecini almalıdır. İstenen belirteci almazsa, null değeri döndürmelidir.
 
     > [!NOTE]
@@ -1099,6 +1113,9 @@ Result getRegisteredAccountStatus(String upn);
 2. AAD kimlik doğrulaması gerektiğinden Kullanıcı hesabını kaydetmek için en iyi zaman, Kullanıcı uygulamada oturum açtıktan ve ADAL kullanılarak başarıyla doğrulanır. Kullanıcının AAD KIMLIĞI ve kiracı KIMLIĞI, ADAL kimlik doğrulama çağrısından nesnenin bir parçası olarak döndürülür [`AuthenticationResult`](https://github.com/AzureAD/azure-activedirectory-library-for-android) .
     * Kiracı kimliği `AuthenticationResult.getTenantID()` yönteminden gelir.
     * Kullanıcı hakkındaki bilgiler `AuthenticationResult.getUserInfo()` çağrısından gelen `UserInfo` türündeki bir alt nesnede bulunur ve AAD kullanıcı kimliği `UserInfo.getUserId()` çağrısı yapılarak o nesneden alınır.
+
+  > [!NOTE]
+  > Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 3. Intune yönetiminden bir hesabın kaydını kaldırmak için, uygulamanın `unregisterAccountForMAM()` yöntemini çağırması gerekir. Hesap başarıyla kaydedilmiş ve yönetilmişse, SDK hesabın kaydını kaldırır ve verilerini temizler. Hesap için düzenli aralıklarla yapılan kayıt yeniden denemeleri durdurulur. SDK, bildirim aracılığıyla kayıt kaldırma isteğinin durumunu zaman uyumsuz olarak sağlar.
 
@@ -1136,9 +1153,12 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 
 ### <a name="important-implementation-notes"></a>Önemli uygulama notları
 
-#### <a name="authentication"></a>Kimlik Doğrulaması
+#### <a name="authentication"></a>Kimlik Doğrulama
 
 * Uygulama `registerAccountForMAM()` çağrısı yaptığında, bundan kısa süre sonra farklı bir iş parçacığında `MAMServiceAuthenticationCallback` arabiriminde bir geri çağırma alabilir. İdeal olarak, uygulama, istenen belirtecin alımını hızlandırmak için hesabı kaydetmeden önce ADAL 'dan kendi belirtecini almış. Uygulama geri aramadan geçerli bir belirteç döndürürse, kayıt devam eder ve uygulama bir bildirim aracılığıyla nihai sonucu alır.
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 * Uygulama geçerli bir AAD belirteci döndürmezse, kayıt girişiminin nihai sonucu `AUTHORIZATION_NEEDED` olur. Uygulama bu sonucu bildirim aracılığıyla alırsa, daha önceden istenen kullanıcı ve kaynak için belirteci alarak kayıt işlemini hızlandırmak `acquireToken()` ve `updateToken()` kayıt işlemini yeniden başlatmak için yöntemi çağırmak önemle önerilir.
 
@@ -1204,6 +1224,9 @@ ADAL kitaplığı, uygulamayı bir belirteç alma hatasının uygulama yönetimi
 
 > [!NOTE]
 > Bu yeni hata kodu ve Ilke güvencesi içeren uygulama CA 'sı için diğer destek, ADAL kitaplığı 'nın sürüm 1.15.0 (veya üstü) gerektirir.
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 ### <a name="mamcompliancemanager"></a>Mamkarmaşıancemanager
 
@@ -1465,7 +1488,7 @@ Uygulamanız `Service` amaçları başlatmak için bir bağlam kullanıyorsa, i�
 Veya ile Kullanıcı arabirimi kimliğini güncelleştirirken özel durumları işlemek için `setUIPolicyIdentity` `switchMAMIdentity` her iki yöntemde de bir değer kümesi geçirilebilir `IdentitySwitchOption` .
 
 * `IGNORE_INTENT`: Geçerli etkinlikle ilişkili amacı yoksayması gereken bir kimlik anahtarı istiyorsa kullanın.
-  Örneğin:
+  Örnek:
 
   1. Uygulamanız yönetilen bir belge içeren yönetilen bir kimlikle bir amaç alır ve uygulamanız belgeyi görüntüler.
   2. Kullanıcı kendi kişisel kimlik özelliklerine geçiş yaptığında, uygulamanız bir kullanıcı arabirimi kimlik anahtarı ister. Kişisel kimlik ' te, uygulamanız artık belgeyi görüntülemediğinden, `IGNORE_INTENT` kimlik anahtarını istenirken kullanmanız gerekir.
@@ -1634,7 +1657,7 @@ Bu, zaman uyumsuz işlem bir dosyaya şirket verileri yazabileceği veya diğer 
 
 #### <a name="mamasynctask"></a>MAMAsyncTask
 
-Kullanmak için `MAMAsyncTask` , yalnızca öğesinden devralmalı ve `AsyncTask` ile geçersiz kılmaları ve `doInBackground` ile değiştirin `onPreExecute` `doInBackgroundMAM` `onPreExecuteMAM` . `MAMAsyncTask` oluşturucusu bir etkinlik bağlamı alır. Örneğin:
+Kullanmak için `MAMAsyncTask` , yalnızca öğesinden devralmalı ve `AsyncTask` ile geçersiz kılmaları ve `doInBackground` ile değiştirin `onPreExecute` `doInBackgroundMAM` `onPreExecuteMAM` . `MAMAsyncTask` oluşturucusu bir etkinlik bağlamı alır. Örnek:
 
 ```java
 AsyncTask<Object, Object, Object> task = new MAMAsyncTask<Object, Object, Object>(thisActivity) {
@@ -2067,6 +2090,9 @@ Aşağıdakiler; otomatik bir APP-WE hizmet kaydı (buna bu bölümde **varsayı
 Aşağıdaki adımlarla varsayılan kaydı etkinleştirin:
 
 1. Uygulamanız ADAL 'yi tümleştirirse veya SSO 'yu etkinleştirmeniz gerekiyorsa, [ortak adal yapılandırma](#common-adal-configurations) #2 takıp eden [adal 'ı yapılandırın](#configure-azure-active-directory-authentication-library-adal) . Aksi takdirde, bu adımı atlayabilirsiniz.
+
+  > [!NOTE]
+  > Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
    
 2. Aşağıdaki değeri etiketi altında bulunan bildirime ekleyerek varsayılan kaydı etkinleştirin `<application>` :
 

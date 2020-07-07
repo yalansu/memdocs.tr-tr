@@ -16,12 +16,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: a8eeb8263e337fa7427818c05f183fdea3c9dbea
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
-ms.translationtype: MT
+ms.openlocfilehash: 3e01e54eb6e74c8139c266d677a6406554119273
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353641"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972088"
 ---
 # <a name="disk-encryption-policy-for-endpoint-security-in-intune"></a>Intune 'da uç nokta güvenliği için disk şifreleme ilkesi
 
@@ -29,7 +28,7 @@ Endpoint Security disk şifreleme profilleri, yalnızca bir cihaz yerleşik Şif
 
 Cihaz yapılandırması için *Endpoint Protection* profillerini kullanarak aynı cihaz ayarlarını yapılandırabilmeniz durumunda, cihaz yapılandırma profilleri ek ayar kategorileri içerir. Bu ek ayarlar disk şifrelemesi ile ilgisiz değildir ve yalnızca disk şifrelemesini yapılandırma görevini karmaşıklaştırabilir.
 
-[Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nin **uç nokta güvenlik** düğümünde *Yönetim altındaki disk* şifreleme ilkeleri için uç nokta güvenlik ilkelerini bulun.
+[Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nin **uç nokta güvenlik** düğümünde *Yönet* altında disk şifrelemesi için uç nokta güvenlik ilkelerini bulun.
 
 ## <a name="prerequisites-for-disk-encryption-policy"></a>Disk şifreleme ilkesi önkoşulları
 
