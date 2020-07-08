@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8fe0b1748a40858bca55cc66b250c96725bfd9f1
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 299b09c57f0cff44c465102d85628c8f2605adea
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332875"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088505"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS/iPadOS cihazlarını Apple’ın Otomatik Cihaz Kayıt Anlaşması ile otomatik olarak kaydetme
 
@@ -69,7 +69,7 @@ Apple, iOS/ıpados 5 ' te Denetimli mod sunmuştur. Denetimli modda bulunan bir 
 - Belirteç başına en fazla kayıt profili: 1.000  
 - Profil başına maksimum otomatik cihaz kayıt cihazları: sınır yok (belirteç başına en fazla cihaz sayısı içinde)
 - Intune hesabı başına en fazla otomatik cihaz kaydı belirteçleri: 2.000
-- Belirteç başına en yüksek otomatik cihaz kayıt cihazları: ilk eşitlemede olan sınır 75000-80000 cihazlarıdır. Intune, her seferinde başka bir 80.000 cihaz eklemek için her 12 saat iadede ABM veya ASM ile eşitlemeye devam edecektir. İle el ile eşitleme, başka bir ek 80.000 cihaz de ekler. Eşitlemeler gerçekleşmeye devam eder ve cihazlar 75000-80000 cihaz toplu işleri ' nde Intune 'a kadar ABM/ASM ile eşitlenmiş olmaya devam edecektir. 
+- Belirteç başına en yüksek otomatik cihaz kayıt cihazları: ilk eşitlemede olan sınır 75000-80000 cihazlarıdır. Intune, her seferinde daha fazla cihaz eklemek için her 12 saat iadede ABM veya ASM ile eşitlemeye devam edecektir. El ile eşitleme (15 dakikada bir tetiklenebilir), Intune 'a başka bir cihaz toplu işi de ekler. Eşitlemeler gerçekleşmeye devam eder ve cihazlar, büyük miktarlarda Intune 'a kadar ABM/ASM ile eşitlenmiş olmaya devam edecektir. 
 
 ## <a name="get-an-apple-ade-token"></a>Apple ADE belirteci al
 
@@ -233,7 +233,7 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
 17. **Kurulum Yardımcısı özelleştirmesi** sayfasında, aşağıdaki profil ayarlarını yapılandırın: ![ Kurulum Yardımcısı özelleştirmesi.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
-    | Departman ayarları | Description |
+    | Departman ayarları | Açıklama |
     |---|---|
     | <strong>Bölüm Adı</strong> | Kullanıcı, etkinleştirme sırasında <strong>Yapılandırma Hakkında</strong> öğesine dokunduğunda görüntülenir. |
     |    <strong>Departman Telefonu</strong>     | Kullanıcı, etkinleştirme sırasında <strong>Yardım Gerekli</strong> düğmesine dokunduğunda görüntülenir. |
@@ -247,7 +247,7 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
     |------------------------------------------|------------------------------------------|
     | <strong>Geçiş kodu</strong> | Kullanıcıdan geçiş kodu ister. Güvenliği sağlanmayan veya erişim denetimi başka bir yolla (cihazı tek uygulamayla sınırlandıran bilgi noktası modu gibi) sağlanan cihazlar için her zaman geçiş kodu isteyin. İOS/ıpados 7,0 ve üzeri için. |
     | <strong>Konum Hizmetleri</strong> | Kullanıcıdan konum ister. MacOS 10,11 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
-    | <strong>Geri Yükleme</strong> | Uygulamalar & veri ekranını görüntüleyin. Bu ekran kullanıcıya cihazı kurarken iCloud Backup'tan verileri geri yükleme veya aktarma seçeneği sağlar. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
+    | <strong>Geri yükleme</strong> | Uygulamalar & veri ekranını görüntüleyin. Bu ekran kullanıcıya cihazı kurarken iCloud Backup'tan verileri geri yükleme veya aktarma seçeneği sağlar. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
     | <strong>iCloud ve Apple Kimliği</strong> | Kullanıcıya Apple Kimliği ile oturum açma ve iCloud'u kullanma seçenekleri sağlar. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için.   |
     | <strong>Hüküm ve Koşullar</strong> | Kullanıcının Apple'ın hüküm ve koşullarını kabul etmesini gerektirir. MacOS 10,9 ve üzeri ve iOS/ıpados 7,0 ve üzeri için. |
     | <strong>Touch ID</strong> | Kullanıcıya cihaz için parmak izi tanımlama özelliğini ayarlama seçeneği sağlar. MacOS 10.12.4 ve üzeri ve iOS/ıpados 8,1 ve üzeri için. |

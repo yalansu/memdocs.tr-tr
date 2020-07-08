@@ -17,11 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b57d6112b8a1467eb068f04e4e3041f91ceeb8a7
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 74152e28d1c78ea911b1f4e2cca31d6382283c19
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86021880"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088488"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Microsoft Intune için ağ uç noktaları  
 
@@ -128,8 +129,8 @@ Daha fazla bilgi için bkz. [Apple yazılım ürünleri tarafından kullanılan 
 
 Android cihazlarını yönetmeyi seçme seçeneğine bağlı olarak, Google Android kurumsal bağlantı noktalarını ve/veya Android anında iletme bildirimini açmanız gerekebilir. Desteklenen Android yönetim yöntemleri hakkında daha fazla bilgi için bkz. [Android kayıt belgeleri](https://docs.microsoft.com/mem/intune/enrollment/android-enroll). 
 
-[!NOTE]
-Google Mobile Services Çin 'de kullanılamadığından, Çin 'deki cihazlarda Intune tarafından yönetilen cihazlar Google Mobile Services gerektiren özellikleri kullanamaz. Bu özellikler şunlardır Google Play: SafetyNet cihaz kanıtlama gibi özellikleri koruma, uygulamaları Google Play Store, Android kurumsal özelliklerinden yönetme (Bu [Google belgelerine](https://support.google.com/work/android/answer/6270910)bakın). Ayrıca, Android Intune Şirket Portalı uygulaması Microsoft Intune hizmetiyle iletişim kurmak için Google Mobile Services kullanır. Çin 'de Google Play hizmetleri kullanılamadığından, bazı görevlerin tamamlanabilmesi için 8 saate kadar süre gerekebilir. Daha fazla bilgi için bu [makaleye](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)bakın.
+> [!NOTE]
+> Google Mobile Services Çin 'de kullanılamadığından, Çin 'deki cihazlarda Intune tarafından yönetilen cihazlar Google Mobile Services gerektiren özellikleri kullanamaz. Bu özellikler şunlardır Google Play: SafetyNet cihaz kanıtlama gibi özellikleri koruma, uygulamaları Google Play Store, Android kurumsal özelliklerinden yönetme (Bu [Google belgelerine](https://support.google.com/work/android/answer/6270910)bakın). Ayrıca, Android Intune Şirket Portalı uygulaması Microsoft Intune hizmetiyle iletişim kurmak için Google Mobile Services kullanır. Çin 'de Google Play hizmetleri kullanılamadığından, bazı görevlerin tamamlanabilmesi için 8 saate kadar süre gerekebilir. Daha fazla bilgi için bu [makaleye](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)bakın.
 
 ### <a name="google-android-enterprise"></a>Google Android kurumsal 
 

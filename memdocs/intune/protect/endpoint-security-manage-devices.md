@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 8171eb3cf484c61e2b99046b36553a633d92044e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 55a73806e343ac23525dbd2a28950d46285bf9a3
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431248"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088539"
 ---
 # <a name="manage-devices-with-endpoint-security-in-microsoft-intune"></a>Microsoft Intune uç nokta güvenliği olan cihazları yönetme
 
@@ -66,6 +66,8 @@ Aşağıdaki alanları göz önünde bulundurun:
     Ortak yönetim sayesinde, hangi yönlerinin Configuration Manager veya Intune tarafından yönetildiğini belirlemek için [farklı ortak yönetim iş yüklerini seçersiniz](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) . Bu seçimler, cihazın hangi ilkelere uygulanacağını ve uyumluluk verilerinin yönetim merkezine nasıl raporlanacağı ile ilgilidir.
 
     Örneğin, virüsten koruma, güvenlik duvarı ve şifreleme için ilkeyi yapılandırmak üzere Intune 'u kullanabilirsiniz. Bu ilke türleri *Endpoint Protection*ilke olarak değerlendirilir. Ortak yönetilen bir cihazın Configuration Manager ilkelerini değil Intune ilkelerini kullanması için, Endpoint Protection için ortak yönetim kaydırıcısını *Intune* veya *pilot Intune*olarak ayarlayın. Kaydırıcı Configuration Manager olarak ayarlandıysa, cihaz bunun yerine Configuration Manager ilkeleri ve ayarları kullanır.
+
+  - **Çalışma alanı tek** -bu cihazlar üçüncü taraf cihaz uyumluluk ortağı ve çalışma alanı tarafından yönetilir. Daha fazla bilgi için bkz. [cihaz uyumluluk iş ortakları](../protect/device-compliance-partners.md).
 
 - **Uyumluluk**: uyumluluk, cihaza atanan uyumluluk ilkelerine göre değerlendirilir. Bu ilkelerin kaynağı ve konsolundaki bilgiler cihazın yönetilme yöntemine bağlıdır; Intune, Configuration Manager veya ortak yönetim. Ortak yönetilen cihazlarda uyumluluğu raporlamak üzere cihaz uyumluluğu için ortak yönetim kaydırıcısını Intune veya pilot Intune olarak ayarlayın.  
 

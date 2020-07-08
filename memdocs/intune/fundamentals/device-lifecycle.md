@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c65235caa7e53dbe8dee4605803a6e58d6ab31a0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b9580a5cb99192f81fc83f8d61119f5368f0a5ee
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79326874"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088403"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Microsoft Intune mobil cihaz yönetimi (MDM) yaşam döngüsüne genel bakış
 
-Yönettiğiniz tüm cihazlarda *yaşam döngüsü* adı verilen bir unsur vardır. Intune, kayıt işleminden başlanarak, yapılandırma ve korumadan tutun artık gerekli olmadığında cihazın kullanımdan kaldırılmasına kadarki süreçte bu yaşam döngüsünü yönetmenize yardımcı olabilir.
+Yönettiğiniz tüm cihazlarda *yaşam döngüsü* adı verilen bir unsur vardır. Intune, kayıt işleminden başlanarak, yapılandırma ve korumadan tutun artık gerekli olmadığında cihazın kullanımdan kaldırılmasına kadarki süreçte bu yaşam döngüsünü yönetmenize yardımcı olabilir. İşte bir örnek: şirketiniz tarafından satın alınan bir iPad, şirketinizin onu yönetmesine izin vermek için Microsoft Intune hesabınızla kaydolmalıdır; ardından, şirketinizin sizin için yapılandırılmış olması gerekir; daha sonra, üzerinde depolanan verilerin bir kullanıcı tarafından korunması gerekir; son olarak, iPad 'e artık gerek duyulmadığında, üzerinde tüm hassas verileri [devre dışı bırakmanız veya](https://docs.microsoft.com/mem/intune/remote-actions/devices-wipe) silmelisiniz.
 
 ![Cihaz yaşam döngüsü](./media/device-lifecycle/device-lifecycle.png "Intune cihaz yaşam döngüsü")
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 07/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,16 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d26040c5a009a9c3877abbc25512e317f584f114
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 6629f416dbbc9555514dfc305db8f224f6b76526
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502876"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088454"
 ---
 # <a name="android-enterprise-device-enrollment-restrictions"></a>Android kurumsal cihaz kaydı kısıtlamaları
 
-[Android kurumsal güvenlik yapılandırma çerçevesi]()için cihazları kaydetmeden önce, kuruluşların uygun kısıtlamaları yapılandırması gerekir. Bu kısıtlamalar, kullanıcıların yalnızca kayıt açabildiğinden emin olmanızı
+[Android kurumsal güvenlik yapılandırma çerçevesi](android-configuration-framework.md)için cihazları kaydetmeden önce, kuruluşların uygun kısıtlamaları yapılandırması gerekir. Bu kısıtlamalar, kullanıcıların yalnızca kayıt açabildiğinden emin olmanızı
+
 - onaylanan cihazlar.
 - Belirtilen sayıda cihaz.
 - Belirtilen platformlarla cihazlar.
@@ -42,19 +43,24 @@ Android kurumsal iş profili temel güvenliği (düzey 1) için aşağıdaki cih
 
 | Tür | Platform | Sürüm | Kişisel cihazlara izin verir |
 |--------|--------|--------|--------|
-| Android Kurumsal | İzin Ver | Android 5,0 ve üzeri.<p>Microsoft, en düşük Android ana sürümünün Microsoft uygulamaları için desteklenen Android sürümleriyle eşleşecek şekilde yapılandırılmasını önerir. Android kurumsal gereksinimleri olan OEM 'Ler ve cihazlar, geçerli sevkiyat sürümü + bir mektup yükseltmesi desteklemelidir.   Android, bilgi çalışanları için Android 8,0 ve üstünü öneriyor. Daha fazla bilgi için bkz. [Android Enterprise önerilen gereksinimleri](https://www.android.com/enterprise/recommended/requirements/). | Yes |
-| Android cihaz yöneticisi| Blok | Tüm sürümler | Yes |
+| Android Kurumsal | İzin Ver | Android 5,0 ve üzeri.<p>Microsoft, en düşük Android ana sürümünün Microsoft uygulamaları için desteklenen Android sürümleriyle eşleşecek şekilde yapılandırılmasını önerir. Android kurumsal gereksinimleri olan OEM 'Ler ve cihazlar, geçerli sevkiyat sürümü + bir mektup yükseltmesi desteklemelidir.   Android, bilgi çalışanları için Android 8,0 ve üstünü öneriyor. Daha fazla bilgi için bkz. [Android Enterprise önerilen gereksinimleri](https://www.android.com/enterprise/recommended/requirements/). | Evet |
+| Android cihaz yöneticisi| Blok | Tüm sürümler | Evet |
 
 ## <a name="work-profile-high-level-3-security-restrictions"></a>İş profili yüksek (düzey 3) güvenlik kısıtlamaları
 Android kurumsal iş profili yüksek güvenlik (düzey 3) için aşağıdaki cihaz kısıtlamalarının uygulanması gerekir:
 
 | Tür | Platform | Sürüm | Kişisel cihazlara izin verir |
 |--------|--------|--------|--------|
-| Android Kurumsal | İzin Ver | Android 8,0 ve üzeri | Yes |
-| Android cihaz yöneticisi| Blok | Tüm sürümler | Yes |
+| Android Kurumsal | İzin Ver | Android 8,0 ve üzeri | Evet |
+| Android cihaz yöneticisi| Blok | Tüm sürümler | Evet |
 
 ## <a name="fully-managed-security-restrictions"></a>Tam olarak yönetilen güvenlik kısıtlamaları
-Android kurumsal tam olarak yönetilen kaydı inceleyerek kuruluşun Android kurumsal tam olarak yönetilen cihaz kaydını desteklediğinden emin olun. 
+Kuruluşun, [tam olarak yönetilen cihazları kaydetmeyi](android-fully-managed-enroll.md#enroll-the-fully-managed-devices)Inceleyerek Android kurumsal tam olarak yönetilen cihaz kaydını desteklediğinden emin olun. 
+
+## <a name="conditional-access-policies"></a>Koşullu erişim ilkeleri
+Kuruluşlar, kullanıcıların yalnızca kayıtlı Android cihazlarda iş veya okul içeriğine erişebilmesini sağlamak için Azure AD koşullu erişim ilkelerini kullanabilir. Bunu yapmak için tüm olası kullanıcıları hedefleyen bir koşullu erişim ilkesine ihtiyacınız olacaktır. Bu ilkeyi oluşturma hakkındaki ayrıntılar, [bulut uygulaması için yönetilen cihazlar Için koşullu erişimle erişim gerektir](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices)bölümünde bulunabilir. 
+
+Senaryodaki adımları izleyin [: iOS ve Android cihazlar için cihaz kaydı gerektir](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices)ve yalnızca uyumlu olan kayıtlı mobil cihazların Office 365 uç noktalarına bağlanabilmesini sağlar.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

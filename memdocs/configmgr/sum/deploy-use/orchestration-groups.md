@@ -2,7 +2,7 @@
 title: Düzenleme grupları
 titleSuffix: Configuration Manager
 description: Düzenleme grupları oluşturun ve bunlara güncelleştirmeleri dağıtın.
-ms.date: 04/28/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cddbebea-b418-4839-b0a8-7809486c8a4c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9a307df23900abb985535b2ab59a5ff172cafb7
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 5b42a0260b347fb12444e8611e7ec02be38cc387
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254920"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088420"
 ---
 # <a name="orchestration-groups-in-configuration-manager"></a>Configuration Manager düzenleme grupları
 <!--3098816-->
@@ -40,7 +40,7 @@ Bir Orchestration grubunun üyeleri yalnızca sunucular değil Configuration Man
 - Bir düzenleme grubu oluşturur ve beş SQL sunucusunu eklersiniz. SQL yöneticileri tarafından sunulan PowerShell betiklerini kullanarak, ön ve son betik da eklersiniz.
 - Sonraki güncelleştirme çevrimi sırasında, yazılım güncelleştirmelerini oluşturup çok sayıda sunucu koleksiyonuna normal olarak dağıtırsınız. SQL yöneticileri dağıtımı çalıştırır ve düzenleme grubu sıra ve Hizmetleri otomatikleştirir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 ### <a name="site-server-and-permission-prerequisites"></a>Site sunucusu ve izin önkoşulları
 - Bu grupların tüm düzenleme gruplarını ve güncelleştirmelerini görmek için hesabınızın **tam yönetici**olması gerekir.
@@ -87,9 +87,9 @@ Bir Orchestration grubunun üyeleri yalnızca sunucular değil Configuration Man
 
    - **Bakım sırasını belirtin**ve ardından seçilen kaynakları uygun sırada sıralayın. Cihazların yazılım güncelleştirme dağıtımını Çalıştırma sırasını açıkça tanımlamak için bu ayarı kullanın.
 
-1. **Ön betik** sayfasında, dağıtım *çalıştırılmadan önce* her cihazda çalıştırılacak bir PowerShell betiği girin. Betik, başarılı veya `0` `3010` yeniden başlatma ile başarılı için bir değer döndürmelidir.
+1. **Ön betik** sayfasında, dağıtım *çalıştırılmadan önce* her cihazda çalıştırılacak bir PowerShell betiği girin. Betik, `0` başarılı veya `3010` yeniden başlatma ile başarılı için bir değer döndürmelidir.
 
-1. **Betik sonrası** sayfasında, dağıtım çalıştıktan *sonra* her cihazda çalıştırılacak bir PowerShell betiği girin. Davranış, PreScript ile aynı şekilde aynıdır.
+1. **Betik sonrası** sayfasında, dağıtım çalıştıktan *sonra* her cihazda çalıştırılacak bir PowerShell betiği girin ve gerekirse bir yeniden başlatma gerçekleşir. Davranış, PreScript ile aynı şekilde aynıdır.
 
 1. Sihirbazı tamamlayın.
 
@@ -120,10 +120,11 @@ Orchestration grubunu silmek için, seçin ve ardından Şeritteki veya sağ tı
       - **Bakım sırasını belirtin**: seçili kaynakları uygun sırada sıralayın. Cihazların yazılım güncelleştirme dağıtımını Çalıştırma sırasını açıkça tanımlamak için bu ayarı kullanın.
 
    - **Ön betik**: 
-       - Dağıtım çalışmadan *önce* her cihazda çalışan bir PowerShell betiği girin. Betik, başarılı veya `0` `3010` yeniden başlatma ile başarılı için bir değer döndürmelidir.
+       - Dağıtım çalışmadan *önce* her cihazda çalışan bir PowerShell betiği girin. Betik, `0` başarılı veya `3010` yeniden başlatma ile başarılı için bir değer döndürmelidir.
        
    - **Betik sonrası**:
-      - Dağıtım çalıştıktan *sonra* her cihazda çalıştırılacak bir PowerShell betiği girin. Betik, başarılı veya `0` `3010` yeniden başlatma ile başarılı için bir değer döndürmelidir.
+      - Dağıtım çalıştıktan *sonra* her cihazda çalıştırılacak bir PowerShell betiği girin ve gerekirse bir yeniden başlatma gerçekleşir. Betik, `0` başarılı veya `3010` yeniden başlatma ile başarılı için bir değer döndürmelidir.
+  
    > [!WARNING]
    > Önceki betiklerin ve betikleri düzenleme grupları için kullanılmadan önce test edilmiş olduğundan emin olun. Betiklerin ve son betiklerin zaman aşımı değildir ve düzenleme grubu üye zaman aşımına ulaşılana kadar çalışır.
 

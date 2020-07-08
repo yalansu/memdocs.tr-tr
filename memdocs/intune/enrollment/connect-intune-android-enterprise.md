@@ -18,18 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d70123eab1847dd1b2cd3eb7583d397d97543e1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d6e57f062a3440ea922684d7ad746060ac7788f3
+ms.sourcegitcommit: ba36a60b08bb85d592bfb8c4bbe6d02a47858b09
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986923"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052485"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>Intune hesabınızı Yönetilen Google Play hesabınıza bağlama
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 [Android Kurumsal iş profili](android-work-profile-enroll.md), [Android Kurumsal tam olarak yönetilen](android-fully-managed-enroll.md) ve [Android Kurumsal ayrılmış cihazlar](android-kiosk-enroll.md) için destek sunmak istiyorsanız Intune kiracı hesabınızı Yönetilen Google Play hesabınıza bağlamanız gerekir.  
+
+Android Enterprise 'ın ülkenizde veya bölgenizde kullanılabilir olmasını sağlamak için Google 'daki aşağıdaki destek makalesine bakın:https://support.google.com/work/android/answer/6270910
 
 Android kurumsal yönetimini yapılandırıp kullanmanızı kolaylaştırmak için Google Play 'e bağlandıktan sonra Intune, Intune yönetim konsoluna dört ortak Android kurumsal ilgili uygulamayı otomatik olarak ekler. Dört Android kurumsal uygulaması şunlardır:
 

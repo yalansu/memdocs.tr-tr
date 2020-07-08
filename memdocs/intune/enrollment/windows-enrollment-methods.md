@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: ''
-ms.openlocfilehash: a6b45cef3cc13357638753efd5b8179c5ce41f6c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f1d4e483f02cf73b2c7afe949e4145692adccc9d
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80085685"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088352"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Windows cihazları için Intune kayıt yöntemleri
 
@@ -36,7 +36,7 @@ Intune 'a kayıtlı cihazları almanın iki yolu vardır:
 
 Kullanıcılar, aşağıdaki yöntemlerden herhangi birini kullanarak Windows cihazlarını kendi kendilerine kaydedebilir:
 
-- [Kendi cihazını getir (](https://docs.microsoft.com/mem/intune/user-help/enroll-windows-10-device)KCG): kullanıcılar, cihazın **ayarlarından** **iş ve okul** hesabı bağlamayı seçerek kendi kişisel cihazlarını kaydeder. Bu işlem:
+- [Kendi cihazını getir (](https://docs.microsoft.com/mem/intune/user-help/enroll-windows-10-device)KCG): kullanıcılar, bu Işlemi **Şirket portalı uygulamayı** indirip yükleyerek kendi kişisel cihazlarını kaydetmeleri:
   - E-posta gibi kurumsal kaynağa erişim kazanmak için cihazı Azure Active Directory kaydeder.
   - Cihazı Intune 'A bir kişiye ait cihaz (KCG) olarak kaydeder.
 Bir yönetici otomatik kaydı yapılandırmışsa (Azure AD Premium abonelikleri ile kullanılabilir), kullanıcının kimlik bilgilerini yalnızca bir kez girmesi gerekir. Aksi takdirde, yalnızca MDM kaydı aracılığıyla ayrı olarak kaydolmaları ve kimlik bilgilerini yeniden girmeniz gerekir.  

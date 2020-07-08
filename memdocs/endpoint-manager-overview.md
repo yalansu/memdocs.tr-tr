@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9e3d03211907f31008b31d68c4ed5cd11ae1a6e
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: 2095fdd349437e03c673fb9f7906511c5e3af388
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "84262155"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088386"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Microsoft Endpoint Manager’a genel bakış
 
@@ -43,7 +43,6 @@ Endpoint Manager aşağıdaki hizmetleri içerir:
   Exchange veya Active Directory gibi şirket içi altyapınız varsa, Intune bağlayıcıları da kullanılabilir:
 
   - **Active Directory Intune Bağlayıcısı** , Windows Autopilot kullanarak kaydeden bilgisayarlar için şirket içi Active Directory etki alanına girişler ekler. Daha fazla bilgi için bkz. [karma Azure AD 'ye katılmış cihazları dağıtma](/mem/intune/enrollment/windows-autopilot-hybrid).
-  - **Intune Exchange Bağlayıcısı** , cihazların Intune 'a kaydolması ve ilkeleriniz ile uyumlu olması halinde Exchange sunucularınıza cihaz erişimine izin verir (veya engeller). Daha fazla bilgi için bkz. Şirket [Içi Intune Exchange bağlayıcısını ayarlama](/mem/intune/protect/exchange-connector-install).
   - **Intune sertifika Bağlayıcısı** , kimlik doğrulaması ve S/MIME e-posta şifrelemesi için sertifikaları kullanan cihazlardan gelen sertifika isteklerini işler. Daha fazla bilgi için bkz. [kimlik doğrulaması için sertifikaları kullanma](/mem/intune/protect/certificates-configure).
 
   Endpoint Manager 'ın bir parçası olarak, Intune 'u kullanarak uyumluluğu oluşturup denetleyin ve bulut kullanarak cihazlarınıza uygulamalar, Özellikler ve ayarlar dağıtın.
