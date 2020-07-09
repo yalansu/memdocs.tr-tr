@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 06/25/2020
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89703c8aec11517417f9459391c431b9db75456c
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: dda9199f8122614af3e723a37a7e7e293d8207ae
+ms.sourcegitcommit: 01c1ca337e82c5e8e92153079ed89f79e20bde9e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502298"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86157884"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -271,7 +271,7 @@ Bu destek hakkında daha fazla bilgi için Exchange belgelerindeki [iOS ve Andro
 Uyumsuzluk için e-posta bildirimleri göndermek üzere [bir bildirim iletisi şablonu yapılandırdığınızda](../protect/actions-for-noncompliance.md#create-a-notification-message-template) , Şirket portalı Web sitenizin bağlantısını otomatik olarak eklemek için yeni ayar **Şirket portalı Web sitesi bağlantısını** kullanın. Bu seçenek *etkin*olarak ayarlandığında, bu şablona dayalı e-posta alan uyumlu olmayan cihazlara sahip kullanıcılar, cihazlarının neden uyumlu olmadığı hakkında daha fazla bilgi edinmek için bir Web sitesi açmak üzere bağlantıyı kullanabilir. 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="licensing"></a>Lisanslama
+### <a name="licensing"></a>Lisans
 
 #### <a name="admins-no-longer-require-an-intune-license-to-access-microsoft-endpoint-manager-admin-console--1335430---"></a>Yöneticiler artık Microsoft Endpoint Manager Yönetici konsoluna erişmek için bir Intune lisansı gerektirmez<!--1335430 -->
 Artık, yöneticilerin MEM Yönetici Konsolu ve sorgu grafiği API 'Lerine erişmesi için Intune lisans gereksinimini kaldıran kiracı genelinde bir geçiş ayarlayabilirsiniz. Lisans gereksinimini kaldırdıktan sonra, bunu hiçbir şekilde yeniden devreye sokmanız gerekir. 

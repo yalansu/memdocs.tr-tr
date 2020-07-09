@@ -2,7 +2,7 @@
 title: İnternet erişimi gereksinimleri
 titleSuffix: Configuration Manager
 description: Configuration Manager özelliklerinin tam işlevselliğine izin vermek için İnternet uç noktaları hakkında bilgi edinin.
-ms.date: 07/01/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,18 +10,25 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 986b8d83c705be84b04a89c99d9559471c6345c4
-ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
+ms.openlocfilehash: 71f2a75d59af6f8d5c77e96d780e6d02352e5045
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85819959"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137358"
 ---
 # <a name="internet-access-requirements"></a>İnternet erişimi gereksinimleri
 
 Bazı Configuration Manager özellikleri, tüm işlevler için internet bağlantısı kullanır. Kuruluşunuz ağ iletişimini bir güvenlik duvarı veya ara cihaz kullanarak internet ile kısıtlarsa, bu uç noktalara izin vermeyi unutmayın.
 
 <!-- SCCMDocs-pr #3403 -->
+
+Configuration Manager, ürün genelinde aşağıdaki Microsoft URL iletme hizmetlerini kullanır:
+
+- `https://aka.ms`
+- `https://go.microsoft.com`
+
+Aşağıdaki bölümlerde açıkça listelenmese de, bu uç noktalara her zaman izin vermeniz gerekir.
 
 ## <a name="service-connection-point"></a><a name="bkmk_scp"></a>Hizmet bağlantı noktası
 
@@ -277,6 +284,14 @@ Kiracı iliştirme özellikleri için gerekli uç noktalar hakkında daha fazla 
 ## <a name="endpoint-analytics"></a>Uç nokta analizi
 
 Endpoint Analytics için gerekli uç noktalar hakkında daha fazla bilgi için bkz. [Endpoint Analytics proxy yapılandırması](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+
+## <a name="asset-intelligence"></a>Varlık yönetim bilgileri
+
+<!-- memdocs#470 -->
+[Varlık yönetim bilgileri](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md)kullanıyorsanız, hizmetin eşitlenmesi için aşağıdaki uç noktalara izin verin:
+
+- `https://sc.microsoft.com`
+- `https://ssu2.manage.microsoft.com`
 
 ## <a name="microsoft-public-ip-addresses"></a>Microsoft genel IP adresleri
 

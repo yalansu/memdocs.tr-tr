@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 07/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa3cf14b6afd8504a0918b5d61d2a7cae0c308b9
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 2a0e211a5cea6296f944cda517ecb6fd591291b8
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093670"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137411"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için iOS ve ıpados cihaz ayarları
 
@@ -161,6 +161,10 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
   - **Cihaz varsayılanı**
   - **Sayısal**: parola yalnızca sayı olmalıdır, örneğin 123456789.
   - **Alfasayısal**: büyük harfler, küçük harfler ve sayısal karakterler içerir.
+
+  > [!NOTE]
+  > Alfasayısal seçme, eşleştirilmiş bir Apple Watch etkileyebilir. Daha fazla bilgi için bkz. [bir Apple Watch için geçiş kodu kısıtlamalarını ayarlama](https://support.apple.com/HT204953) (Apple 'ın Web sitesini açar).
+
 - **Paroladaki alfasayısal olmayan karakter sayısı**: 1-4 adresinden, parolada bulunması gereken simge karakterlerinin sayısını girin `#` `@` . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
 - **Minimum parola uzunluğu**: parolanın, 4-16 karakterden fazla olması gereken minimum uzunluğu girin. Kullanıcı kayıtlı cihazlarda 4 ila 6 karakter uzunluğunda bir uzunluk girin.
@@ -466,7 +470,7 @@ Bu özellik şu platformlarda geçerlidir:
   
   - **Görünür uygulamalar**: kullanıcıların görüntüleyebileceği ve başlatabileceği uygulamaların bir listesini girin. Başka hiçbir uygulama görüntülenemez veya başlatılamaz.
 
-- **Uygulama URL 'si**: göstermek veya gizlemek istediğiniz uygulamanın Mağaza uygulama URL 'sini girin. Örneğin:
+- **Uygulama URL 'si**: göstermek veya gizlemek istediğiniz uygulamanın Mağaza uygulama URL 'sini girin. Örnek:
 
   - Microsoft çalışma klasörleri uygulamasını eklemek için `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` veya girin `https://apps.apple.com/us/app/work-folders/id950878067?mt=8` . 
 

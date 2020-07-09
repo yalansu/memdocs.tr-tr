@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 250c94250346eb84ad6b1661768d27b8c14fdf62
-ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
+ms.openlocfilehash: b9f6b117855430af281db7087d77f53bb0e11c61
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330993"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137424"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Symantec Endpoint Protection Mobile'ın Intune ile tümleştirmesini ayarlama
 
@@ -40,7 +40,7 @@ Symantec Endpoint Protection Mobile (SEP Mobile) çözümünü Intune ile tümle
 - Tümleştirmeyi gerçekleştirmek için Azure AD hesabının bir genel yönetici hesabı olması gerekir.
 ### <a name="network-setup"></a>Ağ Kurulumu
 
-[Yüklemeden sonra Sep Manager 'ı yapılandırma](http://techdocs.broadcom.com/content/broadcom/techdocs/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/Managing_a_Custom_Installation_3/Planning_the_Installation_0/network-architecture-considerations-v19543152-d23e65.html)adlı Symantec makalesine başvurarak, AĞıNıZıN, Sep Mobil kurulum ile tümleştirme için düzgün şekilde yapılandırıldığından emin olabilirsiniz.
+[Yüklemeden sonra Sep Manager 'ı yapılandırma](https://techdocs.broadcom.com/content/broadcom/techdocs/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/getting-up-and-running-on-for-the-first-time-v45150512-d43e1033/installing-v16194271-d23e1332/configuring-after-installation-v18374552-d23e1454.html)adlı Symantec makalesine başvurarak, AĞıNıZıN, Sep Mobil kurulum ile tümleştirme için düzgün şekilde yapılandırıldığından emin olabilirsiniz.
 
 ### <a name="full-integration-vs-read-only"></a>Tam tümleştirme ve salt okunurdur
 

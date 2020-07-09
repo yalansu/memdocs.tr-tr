@@ -52,6 +52,8 @@
       items:
         - name: Uyumluluğa genel bakış
           href: device-compliance-get-started.md
+        - name: Cihaz uyumluluğu iş ortakları
+          href: device-compliance-partners.md
         - name: İlke oluşturma
           href: create-compliance-policy.md
         - name: Konum tabanlı uyumluluk

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,11 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f82664cbc9f6970d494945cfdf6fc72e8d95ae8b
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 1c4e567c7812f53a7497f368ded47d72640443f6
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022356"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137383"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Çin'de 21Vianet tarafından çalıştırılan Intune  
 
@@ -38,6 +39,7 @@ Microsoft, hizmetin kendisini işlemez. 21Vianet, hizmetin teslimini sağlar, sa
 - 21Vianet tarafından işletilen Intune yalnızca tek başına dağıtımları destekler. System Center Configuration Manager ile ortak yönetim desteği şu anda geliştirme aşamasındadır.
 - Genel bulutlardan bağımsız bulutlarına geçiş desteklenmez. 21Vianet tarafından işletilen Intune 'a geçmeyi ilgilenen müşterilerin el ile geçirilmesi gerekir.
 - Kiracı iliştirme özelliği (bulut konsol senaryolarını desteklemek için kayıt olmadan cihazları Intune 'a eşitleme) Şu anda desteklenmiyor.
+- Türetilmiş kimlik bilgileri, 21Vianet tarafından işletilen Intune ile desteklenmez.
 - 21Vianet tarafından işletilen Intune Intune aracısını desteklemez, bu nedenle eski PC yönetimini desteklemez.
 - Windows 10 ' un yönetimi modern MDM kanalı kullanılarak desteklenir.
 - 21Vianet tarafından işletilen Intune şirket içi Exchange bağlayıcısını desteklemez.

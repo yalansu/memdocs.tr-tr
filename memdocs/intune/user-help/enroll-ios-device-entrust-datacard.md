@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 07/08/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: e24a03f3706256c1d18efb2eaebf520a4312edb1
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: e849936e7e0686af3377fd4d10182d3a4eb84458
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881539"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137431"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-entrust-datacard"></a>İOS veya ıpados cihazını Şirket Portalı ve Entrust Datacard ile ayarlama
 
@@ -51,7 +51,7 @@ Türetilmiş kimlik bilgileri şu şekilde kullanılır:
 
 Türetilmiş kimlik bilgileri, özel yayın (SP) 800-157 kapsamında türetilmiş kişisel kimlik doğrulama (PıV) kimlik bilgileri için ulusal standartlar ve Teknoloji Enstitüsü (NıST) kuralları uygulamasıdır.  
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
  Kaydı tamamlayabilmeniz için, şunları yapmanız gerekir:
 
@@ -62,7 +62,7 @@ Türetilmiş kimlik bilgileri, özel yayın (SP) 800-157 kapsamında türetilmi�
 
 
 ## <a name="enroll-device"></a>Cihaz kaydetme  
-1. Mobil cihazınızda iOS için Şirket Portalı App/ıpados ' i açın ve iş hesabınızla oturum açın.  
+1. Mobil cihazınızda iOS için Şirket Portalı App/ıpados ' ı açın ve başka bir cihazdan oturum açma seçeneğini belirleyin.  
 
 2. Ekrandaki kodu yazın.  
 
@@ -87,7 +87,7 @@ Türetilmiş kimlik bilgileri, özel yayın (SP) 800-157 kapsamında türetilmi�
 
 9. Akıllı kart etkin cihazınıza geçiş yapın ve ıdentityguard 'ı açın. 
 10. Akıllı kimlik bilgisi oturum açma alanını bulun ve oturum aç düğmesini seçin.  
-11. Bir sertifika seçmeniz istendiğinde, akıllı kart kimlik bilgilerinizi seçin. Sonra **Tamam**’ı seçin. 
+11. Bir sertifika seçmeniz istendiğinde, akıllı kart kimlik bilgilerinizi seçin. Ardından **Tamam**'ı seçin. 
 12. Akıllı kart PIN 'inizi girin.  
 13. Eylem listesinden seçim yapmanız istenir. Türetilmiş bir mobil akıllı kimlik bilgileri için kaydolmanızı sağlayan birini seçin. Bağlantı veya düğme, **türetilmiş bir mobil akıllı kart kimlik bilgisi için kaydolmak istiyorum gibi görünebilir.**  
 14. Başarılı bir şekilde indirdiğiniz ve akıllı kimlik bilgileri etkinleştirilmiş uygulamayı yüklediğinizden emin olmalısınız. Sonra bir sonraki ekrana geçin.   

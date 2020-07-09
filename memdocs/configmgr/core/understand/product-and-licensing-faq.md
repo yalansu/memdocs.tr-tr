@@ -2,7 +2,7 @@
 title: Ürün ve lisanslama hakkında SSS
 titleSuffix: Configuration Manager
 description: Configuration Manager için ortak ürün ve lisans sorularının yanıtlarını bulun.
-ms.date: 07/01/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b2c785fb41fa78ea0bd5d480560d45a3a7a7eda
-ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
+ms.openlocfilehash: 1ce9024fa610c6af19eb40ccf0da662a3e99234f
+ms.sourcegitcommit: 01c1ca337e82c5e8e92153079ed89f79e20bde9e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854431"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86157833"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager dalları ve lisanslama hakkında sık sorulan sorular
 
@@ -78,11 +78,11 @@ Ortak Yönetim Lisansı, Yazılım Güvencesine sahip müşterilerin kullanıcı
 
 - Bir Windows 10 cihazını Intune 'a başka yollarla kaydederseniz, bunun yine de tam bir Intune lisansı gerekir. Örneğin, bir cihaz sağlamak için Autopilot kullandığınızda veya bir Kullanıcı self servis kaydını el ile yapar.
 
-- Mevcut Configuration Manager yönetilen cihazların, Kullanıcı etkileşimi olmadan ortak yönetim için Intune 'a kaydedilmesi için, ortak yönetim, Windows 10 otomatik kaydı adlı bir Azure Active Directory (Azure AD) özelliği kullanır. Otomatik kayıt, Microsoft Endpoint Manager 'dan ayrı bir Azure AD Premium (AADP1) lisansı gerektirir. Ortak yönetiminin bu senaryoda çalışması için, her bir kullanıcıya hem bir AADP1 hem de bir Intune lisansı atamanızı gerektirmek için kullanılır. Ortak Yönetim Lisansı 1 Aralık 2019 ' den itibaren değişti. Artık bu senaryo için ayrı Intune lisansları atamanız gerekmez, ancak bunlar yine de diğer kayıt senaryolarında gereklidir. AADP1 lisanslama gereksinimi, otomatik kayıt ve ortak yönetiminin çalışması için aynı kalır.
+- Mevcut Configuration Manager yönetilen cihazların, Kullanıcı etkileşimi olmadan ortak yönetim için Intune 'a kaydedilmesi için, ortak yönetim, Windows 10 otomatik kaydı adlı bir Azure Active Directory (Azure AD) özelliği kullanır. Ortak yönetimiyle otomatik kayıt, hem Azure AD Premium (AADP1) hem de Intune için lisanslar gerektirir. 1 Aralık 2019 ' den itibaren, bu senaryo için ayrı ayrı Intune lisansları atamanız gerekmez. Microsoft Uç Nokta Yöneticisi artık ortak yönetim için Intune lisanslarını içerir. Ayrı AADP1 lisanslama gereksinimi, bu senaryonun çalışması için aynı kalır. Diğer kayıt senaryoları için yine de Intune lisansları atamanız gerekir.
 
 - İOS, Android veya macOS cihazlarını yönetmek için Intune 'u kullanmak istiyorsanız, tek başına bir Intune lisansı, Enterprise Mobility + Security (EMS) veya Microsoft 365 aracılığıyla uygun Intune aboneliğine ihtiyacınız vardır.
 
-- Intune ile ilgili herhangi bir abonelik planınız yoksa, ortak yönetimi desteklemek için en az bir Intune lisansı satın almanız gerekir. Bu lisans, bir yöneticinin Microsoft Endpoint Manager yönetim merkezine erişiminin olması içindir.
+- Intune ile ilgili herhangi bir abonelik planınız yoksa, ortak yönetimi desteklemek için en az bir Intune lisansı satın almanız gerekir. Bu lisans, bir yöneticinin abonelik planını etkinleştirmesi ve Microsoft Endpoint Manager yönetim merkezine erişimi alması içindir.
 
 - Microsoft 365 yerleşik [temel taşınabilirlik ve güvenliği](https://support.microsoft.com/office/capabilities-of-built-in-mobile-device-management-for-microsoft-365-a1da44e5-7475-4992-be91-9ccec25905b0)kullanıyorsanız, temel taşınabilirlik ve güvenlik tarafından yönetilen cihazlara sahip olan bir kullanıcı için yeni ortak yönetim lisansını kullanamazsınız. Kullanıcının Configuration Manager tarafından yönetilen cihaz için ortak yönetim lisansını kullanmak için aşağıdaki eylemlerden birini yapın:
 
@@ -93,19 +93,19 @@ Ortak Yönetim Lisansı, Yazılım Güvencesine sahip müşterilerin kullanıcı
 
 |Özellik | Ortak Yönetim Lisansı | Tam Intune lisansı |
 |---------|---------|---------|
-|Windows 10 kaydı|Evet (yalnızca var olan ConfigMgr tarafından yönetilen cihazlar için)|Yes|
+|Windows 10 kaydı|Evet (yalnızca var olan ConfigMgr tarafından yönetilen cihazlar için)|Evet|
 |iOS, Android, macOS kaydı|Hayır|Evet|
 |Autopilot|Hayır|Evet|
 |Mobil uygulama yönetimi (MAM)|Hayır|Evet|
-|Koşullu erişim<br>(ek AADP1 gerekir)|Yes|Yes|
-|Cihaz profilleri|Yes|Yes|
-|Yazılım güncelleştirme yönetimi|Yes|Yes|
-|Sayım|Yes|Yes|
-|Uygulama yönetimi|Yes|Yes|
-|Uzaktan yardım<br>(TeamViewer lisansı gereklidir)|Yes|Yes|
-|Masaüstü Analizi<br>(Windows Abonelik lisansları gereklidir|Yes|Yok|
-|Kiracı ekleme|Yes|Yok|
-|Uç nokta analizi|Yes|Yes|
+|Koşullu erişim<br>(ek AADP1 gerekir)|Evet|Yes|
+|Cihaz profilleri|Evet|Yes|
+|Yazılım güncelleştirme yönetimi|Evet|Yes|
+|Sayım|Evet|Yes|
+|Uygulama yönetimi|Evet|Yes|
+|Uzaktan yardım<br>(TeamViewer lisansı gereklidir)|Evet|Evet|
+|Masaüstü Analizi<br>(Windows Abonelik lisansları gereklidir|Evet|YOK|
+|Kiracı ekleme|Evet|YOK|
+|Uç nokta analizi|Evet|Evet|
 
 Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
