@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/25/2020
+ms.date: 07/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dda9199f8122614af3e723a37a7e7e293d8207ae
-ms.sourcegitcommit: 01c1ca337e82c5e8e92153079ed89f79e20bde9e
+ms.openlocfilehash: 56ab90da58091b67c403179ecd13239047e154d0
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/09/2020
-ms.locfileid: "86157884"
+ms.locfileid: "86210223"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -56,8 +56,21 @@ ms.locfileid: "86157884"
 
 <!-- ########################## -->
 
-## <a name="week-of-june-22-2020"></a>22 Haziran 2020 haftası
 
+## <a name="week-of-july-06-2020"></a>06 Temmuz 2020 haftası
+
+### <a name="app-management"></a>Uygulama yönetimi
+
+#### <a name="update-to-device-icons-in-company-portal-and-intune-apps-on-android---6057023---"></a>Android 'de Şirket Portalı ve Intune uygulamalarında cihaz simgelerine güncelleştirme<!-- 6057023 -->
+Android cihazlarda Şirket Portalı ve Intune uygulamalarındaki cihaz simgelerini, daha modern bir görünüm oluşturmak ve Microsoft 'un akıcı tasarım sistemiyle uyum sağlamak için güncelleştirdik. İlgili bilgiler için bkz. [iOS/ıpados ve macOS için şirket portalı App 'teki simgelere güncelleştirme](../fundamentals/whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-). 
+
+### <a name="device-management"></a>Cihaz yönetimi
+
+#### <a name="tenant-attach-configmgr-client-details-in-the-admin-center-preview---7552762---"></a>Kiracı iliştirme: Yönetim merkezinde ConfigMgr istemci ayrıntıları (Önizleme)<!-- 7552762 -->
+
+Artık Microsoft Endpoint Manager Yönetim Merkezi 'nde belirli bir cihaz için Koleksiyonlar, sınır grubu üyeliği ve gerçek zamanlı istemci bilgilerini içeren ConfigMgr istemci ayrıntılarını görebilirsiniz. Daha fazla bilgi için bkz. [kiracı iliştirme: ConfigMgr istemci ayrıntıları Yönetim Merkezi (Önizleme)](../../configmgr/tenant-attach/client-details.md).
+
+## <a name="week-of-june-22-2020"></a>22 Haziran 2020 haftası
 ### <a name="app-management"></a>Uygulama yönetimi
 
 #### <a name="newly-available-protected-apps-for-intune---7248952---"></a>Intune için yeni kullanılabilir korumalı uygulamalar<!-- 7248952 -->
@@ -133,7 +146,7 @@ EAP **türünü** **EAP-TLS**, **EAP-TTLS**veya **PEAP** kimlik doğrulaması ol
 Yapılandırabileceğiniz ayarlar hakkında daha fazla bilgi için, bkz. [Microsoft Intune macOS cihazları Için Wi-Fi ayarları ekleme](../configuration/wi-fi-settings-macos.md).
 
 Aşağıdakiler cihazlar için geçerlidir:
-- Mac OS
+- macOS
 
 #### <a name="use-pkcs-certificates-with-wi-fi-profiles-on-windows-10-and-newer-devices---3246388-----"></a>Windows 10 ve daha yeni cihazlarda Wi-Fi profilleriyle PKCS sertifikaları kullanma<!-- 3246388   -->
 Windows Wi-Fi profillerinin kimlik doğrulaması için SCEP sertifikaları (**cihaz yapılandırma**  >  **profilleri**  >  **Create profile**  >  **Windows 10 ve üzeri** için profil oluşturma > **Wi-Fi** for platform > **Enterprise**  >  **EAP Type**). Şimdi, Windows Wi-Fi profilleriniz ile PKCS sertifikaları kullanabilirsiniz. Bu özellik, kiracınızdaki yeni veya mevcut PKCS sertifika profillerini kullanarak Wi-Fi profillerinin kimlik doğrulamasından geçmesini sağlar. 
@@ -149,7 +162,7 @@ Kablolu ağları yapılandıran yeni bir MacOS cihaz yapılandırma profili vard
 Bu özellik hakkında daha fazla bilgi için bkz. [macOS cihazlarda kablolu ağlar](../configuration/wired-networks-configure.md).
 
 Aşağıdakiler cihazlar için geçerlidir:
-- Mac OS
+- macOS
 
 #### <a name="use-microsoft-launcher-as-the-default-launcher-for-fully-managed-android-enterprise-devices---4927976-----"></a>Tam olarak yönetilen Android Kurumsal cihazları için varsayılan başlatıcı olarak Microsoft başlatıcısı 'nı kullanın<!-- 4927976   -->
 Android kurumsal cihaz sahibi cihazlarda, Microsoft başlatıcısı 'nı tam olarak yönetilen cihazlar için varsayılan başlatıcı olarak**ayarlayabilirsiniz (cihaz**  >  **yapılandırma profilleri**,  >  **Create profile**  >  **Android Enterprise** profil > **Device owner**  >  **cihaz deneyimi**için cihaz sahibi**cihaz kısıtlamalarına** >). Diğer tüm Microsoft Başlatıcı ayarlarını yapılandırmak için [uygulama yapılandırma ilkelerini](../apps/configure-microsoft-launcher.md)kullanın. 
@@ -179,7 +192,7 @@ MacOS cihazlarında, içerik önbelleğe almayı yapılandıran bir yapılandır
 Yapılandırabileceğiniz ayarları görmek için [Intune 'Da MacOS cihaz özelliği ayarları](../configuration/macos-device-features-settings.md)' na gidin.
 
 Aşağıdakiler cihazlar için geçerlidir:
-- Mac OS
+- macOS
 
 #### <a name="add-new-schema-settings-and-search-for-existing-schema-settings-using-oemconfig-on-android-enterprise---6394386-----"></a>Android Enterprise üzerinde OEMConfig kullanarak yeni şema ayarları ekleme ve mevcut şema ayarlarını arama<!-- 6394386   -->
 Intune 'da, Android kurumsal cihazlarındaki ayarları yönetmek için oemconfig kullanabilirsiniz (**cihaz**  >  **yapılandırma profilleri**Intune için bir  >  **profil**  >  **Android Enterprise** for platform > **için bkz** .). **Yapılandırma tasarımcısını**kullandığınızda, uygulama şemasındaki özellikler gösterilir. Şimdi, **yapılandırma tasarımcısında**şunları yapabilirsiniz:
@@ -569,7 +582,7 @@ Yalnızca listedeki ilk kurala göre kabul edilir. Bu davranış sabittir ve Int
 
 Aşağıdakiler cihazlar için geçerlidir:
 - iOS/iPadOS
-- Mac OS
+- macOS
 
 VPN profilleri hakkında daha fazla bilgi için bkz. [VPN profilleri oluşturma](../configuration/vpn-settings-configure.md).
 
@@ -707,7 +720,7 @@ Yapılandırabileceğiniz ayar hakkında daha fazla bilgi için bkz. [MacOS ciha
 
 Bu özellik şu platformlarda geçerlidir:
 
-- Mac OS
+- macOS
 
 <!-- ########################## -->
 ## <a name="week-of-march-16-2020-2003-service-release"></a>16 Mart 2020 haftası (2003 hizmet sürümü)
@@ -880,7 +893,7 @@ Genel önizleme olarak, Microsoft uç nokta yönetimi Yönetim Merkezi 'nde uç 
 Aşağıda, önizleme aşamasında olan yeni ilke türleri ve bunların kullanılabilir profil türleri verilmiştir:
 
 - **Virüsten koruma (Önizleme)**:
-  - MacOS
+  - macOS:
     - **Virüsten koruma** - [Mac IÇIN Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)'Yi yönetmek üzere MacOS için [Virüsten koruma ilkesi ayarlarını](../protect/antivirus-microsoft-defender-settings-macos.md) yönetin.
 
   - Windows 10 ve üzeri:
@@ -896,12 +909,12 @@ Aşağıda, önizleme aşamasında olan yeni ilke türleri ve bunların kullanı
   - **Windows Güvenlik deneyimi** -son kullanıcıların Microsoft Defender Güvenlik Merkezi 'nde görüntüleyebilecekleri Windows güvenlik ayarlarını ve aldıkları bildirimleri yönetin. Bu ayarlar, cihaz yapılandırma Endpoint Protection profili olarak kullanılabilenlerden değiştirilmez.
 
 - **Disk şifrelemesi (Önizleme)**:
-  - MacOS
+  - macOS:
     - **FileVault**
   - Windows 10 ve üzeri:
     - **BitLocker**
 - **Güvenlik Duvarı (Önizleme)**:
-  - MacOS
+  - macOS:
     - **macOS güvenlik duvarı**
   - Windows 10 ve üzeri:
     - **Microsoft Defender güvenlik duvarı**

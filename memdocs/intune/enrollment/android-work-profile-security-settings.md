@@ -1,5 +1,5 @@
 ---
-title: Android kurumsal güvenlik yapılandırma çerçevesi
+title: Android Enterprise güvenlik yapılandırma altyapısı
 titleSuffix: Microsoft Intune
 description: Android kurumsal cihaz temel ve yüksek güvenlik için önerilen kısıtlamaları ve ayarları öğrenin.
 keywords: ''
@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 06/24/2020
-ms.topic: how-to
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23d8b972be753da2ff0c2c75d839e5a5a7e8b077
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 05d0cb3db60ed0f54a66bc4128e5528e789537a8
+ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502880"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86195710"
 ---
 # <a name="android-enterprise-work-profile-security-configurations"></a>Android kurumsal iş profili güvenlik yapılandırması
 
@@ -77,12 +77,12 @@ Düzey 1, kullanıcıların iş veya okul verilerine erişebileceği kişisel ci
 | İş profili ayarları | Cihaz kilitliyken iş profili bildirimleri | Yapılandırılmamış | Bu ayarı engellemek, iş profili bildirimlerinde önemli verilerin açığa çıkmamasını sağlar ve bu durum kullanılabilirliği etkileyebilir. |
 | İş profili ayarları | Varsayılan uygulama izinleri | Cihaz Varsayılanı | Yöneticiler, dağıttıkları uygulamalar tarafından verilen izinleri gözden geçirmeniz ve ayarlamamız gerekir. |
 | İş profili ayarları | Hesap ekleme ve kaldırma | Blok ||
-| İş profili ayarları | Bluetooth ile kişi paylaşımı | Etkinleştirme | Varsayılan olarak, iş kişilerine erişim, Bluetooth tümleştirmesi aracılığıyla otomobil gibi diğer cihazlarda kullanılamaz. Bu ayarın etkinleştirilmesi, eller ücretsiz kullanıcı deneyimlerini geliştirir. Ancak Bluetooth cihazı, ilk bağlantı sırasında kişileri önbelleğe alabilir. Kuruluşlar, bu ayarı uygularken veri koruma sorunlarını kabul eden kullanılabilirlik senaryolarına karşı dengelemelidir. |
+| İş profili ayarları | Bluetooth ile kişi paylaşımı | Etkinleştir | Varsayılan olarak, iş kişilerine erişim, Bluetooth tümleştirmesi aracılığıyla otomobil gibi diğer cihazlarda kullanılamaz. Bu ayarın etkinleştirilmesi, eller ücretsiz kullanıcı deneyimlerini geliştirir. Ancak Bluetooth cihazı, ilk bağlantı sırasında kişileri önbelleğe alabilir. Kuruluşlar, bu ayarı uygularken veri koruma sorunlarını kabul eden kullanılabilirlik senaryolarına karşı dengelemelidir. |
 | İş profili ayarları | Ekran yakalama | Blok ||
 | İş profili ayarları | Kişisel profilde iş kişisi arayan kimliğini görüntüleme | Yapılandırılmamış ||
 | İş profili ayarları | Kişisel profilden iş kişilerini ara | Yapılandırılmamış | Kullanıcıların kişisel profilden iş kişilerine erişmesini engellemek, kişisel profilde metin mesajlaşma ve çevirici deneyimleri gibi bazı kullanılabilirlik senaryolarını etkileyebilir. Kuruluşlar, bu ayarı uygularken veri koruma sorunlarını kabul eden kullanılabilirlik senaryolarına karşı dengelemelidir. |
 | İş profili ayarları | Kamera | Yapılandırılmamış ||
-| İş profili ayarları | İş profili uygulamalarından Pencere öğelerinin kullanılmasına izin ver | Etkinleştirme ||
+| İş profili ayarları | İş profili uygulamalarından Pencere öğelerinin kullanılmasına izin ver | Etkinleştir ||
 | İş profili ayarları | Iş profili parolası gerektir | Gerektirme ||
 | İş profili ayarları | Minimum parola uzunluğu | 6 | Kuruluşların bu ayarı parola ilkesiyle eşleşecek şekilde güncelleştirmesi gerekebilir. |
 | İş profili ayarları | İş profili kilitlenmeden önce geçmesi gereken işlem yapılmayan dakika sayısı| 5 | Kuruluşların bu ayarı parola ilkesiyle eşleşecek şekilde güncelleştirmesi gerekebilir. |

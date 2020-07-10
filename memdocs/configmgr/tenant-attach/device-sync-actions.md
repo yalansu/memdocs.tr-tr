@@ -2,20 +2,20 @@
 title: Microsoft Endpoint Manager kiracısı ekleme
 titleSuffix: Configuration Manager
 description: Configuration Manager cihazlarınızı bulut hizmetine yükleyin ve yönetim merkezinden işlem yapın.
-ms.date: 04/10/2020
+ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.technology: configmgr-core
 ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: be1c938cfcf332edb37e24e4094567f88f363560
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: a9e97c74e4825dc49ce628b3ae176c55f4288966
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795627"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210292"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Microsoft Uç Nokta Yöneticisi kiracı iliştirme: cihaz eşitleme ve cihaz eylemleri
 <!--3555758 live 3/4/2020-->
@@ -25,7 +25,7 @@ Microsoft Uç Nokta Yöneticisi, tüm cihazlarınızı yönetmek için tümleşi
 
 Configuration Manager sürüm 2002 ' den başlayarak, Configuration Manager cihazlarınızı bulut hizmetine yükleyebilir ve yönetim merkezindeki **cihazlar** dikey penceresinden eylemler gerçekleştirebilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Bu değişiklik uygulanırken oturum açmak için *genel yönetici* olan bir hesap. Daha fazla bilgi için bkz. [Azure Active Directory (Azure AD) yönetici rolleri](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
    - Ekleme, Azure AD kiracınızda üçüncü taraf bir uygulama ve birinci taraf hizmet sorumlusu oluşturur.
@@ -56,8 +56,9 @@ Ortak yönetim Şu anda etkinleştirilmişse, aşağıdaki yönergeleri kullanar
 1. Ortak yönetim ayarlarınıza sağ tıklayıp **Özellikler**' i seçin.
 1. **Karşıya yüklemeyi Yapılandır** sekmesinde, **Microsoft Endpoint Manager yönetim merkezine yükle**' yi seçin. **Uygula**'ya tıklayın.
    - Cihaz yükleme için varsayılan ayar, **Microsoft uç nokta Configuration Manager tarafından yönetilen tüm cihazlardır**. Gerekirse, karşıya yüklemeyi tek bir cihaz koleksiyonuna sınırlayabilirsiniz.
+1. [Endpoint](../../analytics/overview.md)Analytics 'te Son Kullanıcı deneyimini Iyileştirmek Istiyorsanız **Microsoft Endpoint Manager 'A yüklenen cihazlarda Endpoint Analytics 'i etkinleştirme** seçeneğini işaretleyin.
 
-   [![Ortak yönetim Yapılandırma Sihirbazı](./media/3555758-configure-upload.png)](./media/3555758-configure-upload.png#lightbox)
+   [![Cihazları Microsoft Endpoint Manager yönetim merkezine yükleme](../../analytics/media/6051638-configure-upload-configmgr.png)](../../analytics/media/6051638-configure-upload-configmgr.png#lightbox)
 1. İstendiğinde *genel yönetici* hesabınızla oturum açın.
 1. **AAD uygulaması oluştur** bildirimini kabul etmek için **Evet** ' e tıklayın. Bu eylem, bir hizmet sorumlusu sağlar ve eşitlemeyi kolaylaştırmak için bir Azure AD uygulama kaydı oluşturur.
 1. Değişiklik yapmayı tamamladıktan sonra ortak yönetim özelliklerinden çıkmak için **Tamam** ' ı tıklatın.
@@ -69,7 +70,7 @@ Ortak yönetim özelliği etkinleştirilmemişse, cihaz yüklemeyi etkinleştirm
 1. Configuration Manager yönetim konsolunda, **Yönetim**  >  **genel bakış**  >  **Cloud Services**  >  **ortak yönetim**' e gidin.
 1. Şeritte, Sihirbazı açmak için **ortak yönetimi yapılandırma** ' ya tıklayın.
 1. **Kiracı ekleme** sayfasında, ortamınız için **AzurePublicCloud** ' yi seçin. Azure Kamu Bulutu desteklenmez.
-1. **Oturum Aç**’a tıklayın. Oturum açmak için *genel yönetici* hesabınızı kullanın.
+1. **Oturum aç**' a tıklayın. Oturum açmak için *genel yönetici* hesabınızı kullanın.
 1. **Kiracı ekleme** sayfasında **Microsoft Endpoint Manager Yönetim Merkezi 'ne yükle** seçeneğinin seçili olduğundan emin olun.
    - Ortak yönetimi şimdi etkinleştirmek istemiyorsanız **ortak yönetim için otomatik istemci kaydını etkinleştir** seçeneğinin işaretli olmadığından emin olun. Ortak yönetimi etkinleştirmek istiyorsanız, seçeneğini belirleyin.
    - Ortak yönetimi cihaz karşıya yükleme ile birlikte etkinleştirirseniz, sihirbazın tamamlaması için ek sayfalar vermiş olursunuz. Daha fazla bilgi için bkz. [ortak yönetimi etkinleştirme](../comanage/how-to-enable.md).
@@ -77,6 +78,7 @@ Ortak yönetim özelliği etkinleştirilmemişse, cihaz yüklemeyi etkinleştirm
    [![Ortak yönetim Yapılandırma Sihirbazı](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
 1. **AAD uygulaması oluştur** bildirimini kabul etmek için **İleri** ' ye ve ardından **Evet** ' e tıklayın. Bu eylem, bir hizmet sorumlusu sağlar ve eşitlemeyi kolaylaştırmak için bir Azure AD uygulama kaydı oluşturur.
 1. **Karşıya yüklemeyi Yapılandır** sayfasında, **Microsoft uç nokta Configuration Manager tarafından yönetilen tüm Cihazlarım**için önerilen cihaz karşıya yükleme ayarını seçin. Gerekirse, karşıya yüklemeyi tek bir cihaz koleksiyonuna sınırlayabilirsiniz.
+1. [Endpoint](../../analytics/overview.md) Analytics 'te Son Kullanıcı deneyimini Iyileştirmek Istiyorsanız **Microsoft Endpoint Manager 'a yüklenen cihazlar için Endpoint Analytics 'i etkinleştirme** seçeneğini işaretleyin
 1. Seçiminizi gözden geçirmek için **Özet** ' e tıklayın ve ardından **İleri**' ye tıklayın.
 1. Sihirbaz tamamlandığında **Kapat**' a tıklayın.  
 
@@ -120,4 +122,4 @@ Hizmet bağlantı noktasında bulunan aşağıdaki günlükleri kullanın:
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Kiracı iliştirme günlük dosyaları hakkında daha fazla bilgi için bkz. [kiracı Iliştirme sorunlarını giderme](technical-reference.md).
+Kiracı iliştirme günlük dosyaları hakkında daha fazla bilgi için bkz. [kiracı Iliştirme sorunlarını giderme](troubleshoot.md).

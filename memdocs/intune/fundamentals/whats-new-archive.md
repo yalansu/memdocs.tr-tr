@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 1/28/2020
-ms.topic: archived
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cf8e493ed1318fbf1e1fee6ca8a50001a586cd6
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 9a1c47a157e4ee5bd4337d840515a340dcf1fd9c
+ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502400"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86195727"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune’daki yenilikler - önceki aylar
 
@@ -181,7 +181,7 @@ Yapılandırabileceğiniz SSO uygulama uzantısı ayarlarının tam aralığın�
 Aşağıdakiler cihazlar için geçerlidir:
 
 - iOS/iPadOS
-- Mac OS
+- macOS
 
 #### <a name="we-have-updated-two-device-restriction-settings-for-ios-and-ipados-devices-to-correct-their-behavior---5701352------"></a>İOS ve ıpados cihazları için davranışlarını düzeltmek üzere iki cihaz kısıtlama ayarını güncelleştirdik<!-- 5701352    -->
 İOS cihazları için, **Kablosuz PKI güncelleştirmelerine izin** veren cihaz kısıtlama profilleri oluşturabilir ve **USB kısıtlı modunu engeller** (**cihazlar**  >  **cihaz yapılandırma**  >  **profilleri**,  >  **Create profile**  >  profil türü için **cihaz kısıtlamaları** > platform için**iOS/ıpados** oluşturma). Bu sürümden önce, aşağıdaki ayarlar için Kullanıcı arabirimi ayarları ve açıklamaları hatalıydı ve artık düzeltildi. Bu sürümden itibaren, ayarlar davranışı aşağıdaki gibidir:
@@ -686,7 +686,7 @@ Bu güncelleştirmede, Intune portalındaki kullanılabilir ayarlar, uygulanan k
   - Otomatik cihaz kaydı (denetimli)
   - Tüm kayıt türleri
 
-- Mac OS
+- macOS
   - Kullanıcı onaylandı
   - Cihaz kaydı
   - Otomatik cihaz kaydı
@@ -916,7 +916,7 @@ Bu güncelleştirmede, Kullanıcı kayıtlı cihazda oturum açtığında hangi 
 Geçerli ayarları görmek için [Intune 'Da MacOS cihaz özelliği ayarları](../configuration/macos-device-features-settings.md)' na gidin.
 
 Aşağıdakiler cihazlar için geçerlidir:  
-- Mac OS
+- macOS
 
 #### <a name="deadlines-replace-engaged-restart-settings-for-windows-update-rings---4464404----------"></a>Son tarihler Windows Update halkalar için bağlı yeniden başlatma ayarlarını değiştirir<!-- 4464404        -->
 Intune ['un Windows 10](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1903#servicing)güncelleştirme halkaları, son [tarihleri için ayarları desteklemeye yöneliktir](../protect/windows-update-settings.md). *Son tarihler* , bir cihazın özellik ve güvenlik güncelleştirmelerini ne zaman yükleceğini belirlenir.  Windows 10 1903 veya üzerini çalıştıran cihazlarda, *son tarihleri* , ara *yeniden başlatma*yapılandırmalarının yerini alır.  Gelecekte, *son tarihleri* Windows 10 ' un önceki sürümlerinde de *bağlı yeniden başlatmanın* yerini alır.  
@@ -1077,7 +1077,7 @@ Bir uygulanabilirlik kuralı eklemek için bkz. [uygulanabilirlik kuralları](..
 
 Aşağıdakiler cihazlar için geçerlidir:
 - iOS
-- Mac OS
+- macOS
 
 #### <a name="new-configuration-designer-when-creating-an-oemconfig-profile-for-android-enterprise---3712769-----"></a>Android Enterprise için bir OEMConfig profili oluştururken yeni yapılandırma Tasarımcısı<!-- 3712769   -->
 Intune 'da, bir OEMConfig uygulaması kullanan bir cihaz yapılandırma profili oluşturabilirsiniz (cihaz yapılandırma > profilleri > > SDK için Android Enterprise > profil türü için OEMConfig). Bunu yaptığınızda bir JSON Düzenleyicisi, değiştirmeniz için bir şablon ve değerlerle açılır. 
@@ -1518,7 +1518,7 @@ Bu özellik hakkında daha fazla bilgi edinmek için [Microsoft Intune ' de OEMC
 Uygulama hedefi: Android Enterprise
 
 #### <a name="windows-update-notifications---3316758-3316782----"></a>Windows Update bildirimleri<!-- 3316758, 3316782  -->
-Intune konsolu içinden yönetebileceğiniz Windows Update halka yapılandırmalarına iki *Kullanıcı deneyimi ayarı* ekledik. Şimdi şunları yapabilirsiniz:
+Intune konsolu içinden yönetebileceğiniz Windows Update halka yapılandırmalarına iki *Kullanıcı deneyimi ayarı* ekledik. Artık şunları yapabilirsiniz:
 - Kullanıcıların [Windows güncelleştirmelerini taramasına](../protect/windows-update-settings.md)engel veya izin verir.
 - Kullanıcıların göreceği [Windows Update bildirim düzeyini](../protect/windows-update-settings.md) yönetin.
 
@@ -1773,16 +1773,16 @@ Intune, macOS cihazlarında **Changeatnextauth** ayarını zorlarken. Bu ayar, u
 Yönetici tarafından yeni veya var olan parola ilkesi değişiklikleri, son kullanıcılara parolasını güncelleştirmek üzere yeniden bir kez daha.
 
 Aşağıdakiler cihazlar için geçerlidir:  
-Mac OS
+macOS
 
 #### <a name="assign-scep-certificates-to-a-userless-macos-device---2340521------"></a>Kullanıcısız macOS cihazına SCEP sertifikaları atama<!-- 2340521    -->
 Kullanıcı benzeşimi olmayan cihazlar dahil olmak üzere macOS cihazlarına cihaz özniteliklerini kullanarak Basit Sertifika Kayıt Protokolü (SCEP) sertifikaları atayabilir ve sertifika profilini Wi-Fi veya VPN profilleriyle ilişkilendirebilirsiniz. Bu, Windows, iOS ve Android çalıştıran [Kullanıcı benzeşimi ile ve olmayan CIHAZLARA SCEP sertifikaları atamak](../protect/certificates-profile-scep.md) için zaten sahip olduğumuz desteği genişletir.  Bu güncelleştirme, macOS için bir SCEP sertifika profili yapılandırırken *cihazın* sertifika türünü seçme seçeneğini ekler.
 
 Aşağıdakiler cihazlar için geçerlidir:
-- Mac OS
+- macOS
 
 #### <a name="intune-conditional-access-ui-update---2432313-----"></a>Intune koşullu erişim kullanıcı arabirimi güncelleştirmesi<!-- 2432313   -->
-Intune konsolunda koşullu erişim için Kullanıcı arabiriminde geliştirmeler yaptık. Bu güncelleştirmeler şunlardır:
+Intune konsolunda koşullu erişim için Kullanıcı arabiriminde geliştirmeler yaptık. Bunlar:
 - Intune *koşullu erişim* dikey penceresi Azure Active Directory dikey penceresinde değiştirildi. Bu, Intune konsolunun içinden [koşullu erişime](../protect/conditional-access.md) (Azure AD teknolojisi olarak kalır) yönelik ayarların ve yapılandırmaların tam aralığına erişmenizi sağlar. 
 - *Şirket içi erişim* dikey penceresini *Exchange erişimi*olarak yeniden adlandırdık ve *Exchange hizmeti Bağlayıcısı* kurulumunu bu yeniden adlandırılmış dikey pencereye yeniden konumlandırdık.  Bu değişiklik, [Exchange Online ve şirket içi ile ilgili ayrıntıları yapılandırdığınız ve](../protect/exchange-connector-install.md)izlediğiniz yerleri birleştirir.  
 
@@ -1818,7 +1818,7 @@ Kısıtlayabilecek özellikleri ve ayarları görmek için bkz.:
 Aşağıdakiler cihazlar için geçerlidir:
 
 - iOS
-- Mac OS
+- macOS
 
 #### <a name="kiosk-devices-are-now-called-dedicated-devices-on-android-enterprise-devices---3598402-----"></a>"Bilgi noktası" cihazları artık Android kurumsal cihazlarda "adanmış cihazlar" olarak adlandırılır<!-- 3598402   -->
 Android terimlerle uyum sağlamak için, **bilgi noktası** , Android Kurumsal cihazları için **adanmış cihazlara** değiştirilmiştir (**cihaz yapılandırma**  >  **profilleri**  >  **profil oluşturma** > * * platform için Android Enterprise > **cihaz sahibi yalnızca**  >  **cihaz kısıtlamaları**  >  **adanmış cihazlar**).
@@ -2356,7 +2356,7 @@ Cihazın uyumlu olmadığı durumlarda, uyumluluk ilkesinde cihazı uzaktan kili
 Şu platformlarda desteklenir: 
 - Android
 - iOS
-- Mac OS
+- macOS
 - Windows 10 Mobile 
 - Windows Phone 8.1 ve üzeri 
 
@@ -4364,7 +4364,7 @@ Bu sürümde, Windows 10 cihaz kısıtlama profili için aşağıdaki kategorile
 - Hücresel ve bağlantı
 - Kilit ekranı deneyimi
 - Gizlilik
-- Arayın
+- Ara
 - Windows Spot
 - Microsoft Edge tarayıcısı
 

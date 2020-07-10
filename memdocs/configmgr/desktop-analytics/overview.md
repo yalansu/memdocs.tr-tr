@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 3a1aa67c51998de62f6390db848a458876327ea7
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 0ef2d09423e7bb51e94cb626bf513aa7e98992c9
+ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590924"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86195659"
 ---
 # <a name="what-is-desktop-analytics"></a>Desktop Analytics nedir?
 
@@ -49,7 +49,7 @@ Derinlemesine bir demo için 10:00 'e atlayın.
 >
 > Windows Analytics 'in özellikleri, masaüstü Analizi hizmetinde birleştirilir. Ayrıca, masaüstü Analizi Configuration Manager ile daha sıkı bir şekilde tümleşiktir. Daha fazla bilgi için bkz. [Windows Analytics müşterileri Için SSS](faq.md#existing-windows-analytics-customers).
 
-## <a name="benefits"></a>Yararları
+## <a name="benefits"></a>Avantajlar
 
 Birçok müşteri, Windows 10 ' da mevcut olan ve güncel bir sorun ile karşılaşıyor. Birincil zorluk, uygulamaları test ediyor. Bu işlem genellikle el ile yapılır. BT yöneticileri ve uygulama sahiplerinin mevcut uygulamaları sürekli analiz etmesine yönelik zaman alıcı bir işlemdir. Sonra ortaya çıkan tüm sorunları düzeltin.
 
@@ -72,7 +72,7 @@ Masaüstü analizlerini kullanmak için ortamınızın aşağıdaki önkoşullar
 - [Genel yönetici](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) izinlerine sahip etkin bir genel Azure aboneliği. [Microsoft hesapları](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) desteklenmez.  
 
     > [!IMPORTANT]
-    > Masaüstü analizi, Azure genel 'de barındırılan ve Windows tanılama verilerini kullanan bir Windows hizmetidir. Azure genel hizmeti ABD kamu müşterileri tarafından kullanılabilir, ancak [ABD devlet topluluğu uyumluluk (GCC)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) özniteliklerini karşılamıyor. Microsoft ürün ve hizmetlerinin uyumluluk tekliflerinin bir listesi için bkz. [Microsoft Güven Merkezi](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide). Masaüstü analizi, GCC High veya ABD Savunma Bakanlığı (DOD) müşterileri için kullanılamaz. Masaüstü Analizi çalışma alanlarını barındırmak için Azure Kamu aboneliklerinin kullanılması desteklenmez.
+    > Masaüstü analizi, Azure genel 'de barındırılan ve Windows tanılama verilerini kullanan bir Windows hizmetidir. Masaüstü analizi, ABD kamu müşterileri tarafından kullanılabilen bir Azure küresel hizmettir. Bu, [ABD kamu Community uyumluluk (GCC)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) özniteliklerini karşılamıyor. Microsoft ürün ve hizmetlerinin uyumluluk tekliflerinin bir listesi için bkz. [Microsoft Güven Merkezi](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide). Masaüstü analizi, GCC High veya ABD Savunma Bakanlığı (DOD) müşterileri için kullanılamaz. Masaüstü Analizi çalışma alanlarını barındırmak için Azure Kamu aboneliklerinin kullanılması desteklenmez.
 
     - Çalışma alanınızı ve aşağıdaki rolleri **ayarlamak**Için **çalışma alanı sahibi** izinleri:  
 
@@ -107,7 +107,7 @@ Masaüstü analizlerini kullanmak için ortamınızın aşağıdaki önkoşullar
     >
     > Masaüstü analizi, yerinde yükseltme senaryosunu en iyi şekilde destekleyecek şekilde tasarlanmıştır. 32 bitlik mimari-64-bit mimarisine gibi büyük değişiklikler yapmanız gerekiyorsa, bir görüntüleme senaryosu kullanın. Bu klasik işletim sistemi dağıtım senaryolarında masaüstü Analizi öngörüleri hâlâ değerlidir, ancak yerinde yükseltmeye özgü Kılavuzu yoksayabilirsiniz. Daha fazla bilgi için bkz. [Configuration Manager ile kurumsal işletim sistemlerini dağıtma senaryoları](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md).
 
-- Windows Tanılama verileri. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:  
+- Windows Tanılama verileri. Daha fazla bilgi için aşağıdaki makalelere bakın:  
 
     - [Tanılama veri düzeyleri](enable-data-sharing.md#diagnostic-data-levels)  
 

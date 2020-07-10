@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 665b88932c88f523b19fec596bfd969bb93ecdd4
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: 3a7e8d463f82bc2ef70296b713cb8dcd591b67a6
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721916"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210210"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Dağıtılmış BT için rol tabanlı erişim denetimi (RBAC) ve kapsam etiketleri kullanma
 
@@ -87,7 +87,6 @@ Kapsam etiketleriyle çalışırken bu ayrıntıları unutmayın:
     - Cihaz uyumluluk konumları
     - JAMF cihazları
 - VPP belirteciyle ilişkili VPP uygulamaları ve ebook 'lar, ilişkili VPP belirtecine atanan kapsam etiketlerini alırlar.
-- DEP belirteciyle ilişkili Aygıt Kayıt Programı (DEP) cihazlar ve DEP profilleri, ilişkili DEP belirtecine atanan kapsam etiketlerini alırlar.
 - Yönetici, Intune 'da bir nesne oluşturduğunda, bu yöneticiye atanan tüm kapsam etiketleri otomatik olarak yeni nesnesine atanır.
 - Intune RBAC Azure Active Directory rollere uygulanmaz. Bu nedenle, Intune hizmet yöneticileri ve genel Yöneticiler rollerinin, sahip oldukları kapsam etiketleri ne olduğuna bakılmaksızın Intune 'a tam yönetici erişimi vardır.
 - Bir rol atamasının kapsam etiketi yoksa, BT yöneticisi BT yöneticileri izinlerine göre tüm nesneleri görebilir. Kapsam etiketleri olmayan yöneticiler, tüm kapsam etiketlerine sahiptir.

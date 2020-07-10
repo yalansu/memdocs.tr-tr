@@ -4,11 +4,17 @@
   items:
     - name: Kiracı eklemeyi etkinleştirme
       href: device-sync-actions.md
-    - name: Cihaz eylemlerinde sorun giderme
-      href: technical-reference.md
+    - name: İstemci ayrıntıları (önizleme)
+      href: client-details.md
 - name: Kiracı ekli cihazlar için CMPivot (önizleme)
   items:
     - name: CMPivot’a genel bakış
       href: cmpivot-overview-attached.md
     - name: CMPivot örnek betikleri
       href: cmpivot-samples-attached.md
+- name: Sorun giderme
+  items:
+    - name: Kiracıya ekleme ve cihaz eylemleri
+      href: troubleshoot.md
+    - name: İstemci ayrıntıları (önizleme)
+      href: troubleshoot-client-details.md

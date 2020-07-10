@@ -10,12 +10,12 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2061a6701bf40233593e2e5d683e36f2814d3978
-ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
+ms.openlocfilehash: 423864c2c954cc67da4ef54d55d7263ae346e786
+ms.sourcegitcommit: 24ce7df7dadf2385afe364b817ec58feeb04c700
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85914566"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86212294"
 ---
 # <a name="microsoft-edge-management"></a>Microsoft Edge yönetimi
 
@@ -38,7 +38,7 @@ Microsoft Edge dağıtımıyla hedeflenen istemciler için:
 
 Configuration Manager konsolunu çalıştıran cihazın aşağıdaki uç noktalara erişmesi gerekir:
 
-|Konum|Kullanım|
+|Konum|Kullanın|
 |---|---|
 |`https://edgeupdates.microsoft.com/api/products?view=enterprise`|Microsoft Edge yayınları hakkında bilgi|
 |`http://dl.delivery.mp.microsoft.com`|Microsoft Edge yayınları için içerik|
@@ -76,7 +76,7 @@ Microsoft Edge 'in daha kolay yönetilmesini sağlayan yerleşik uygulama deneyi
 
 ### <a name="log-files-for-deployment"></a>Dağıtım için günlük dosyaları
 
-|Konum|Günlük|Kullanım|
+|Konum|Log|Kullanın|
 |---|---|---|
 | Site sunucusu|SMSProv.log|Uygulamanın veya dağıtımın oluşturulması başarısız olursa ayrıntıları gösterir.|
 | [Değişir](../../core/plan-design/hierarchy/log-files.md)|PatchDownloader.log| İçerik indirme başarısız olursa ayrıntıları gösterir|
@@ -152,7 +152,7 @@ ERROR - is NOT retyrable.
 Rollback transaction: XXXX
 ```
 
-**Risk azaltma:** Bu sorunu geçici olarak çözmek için, tarayıcı kullanımı (SMS_BrowerUsage) donanım envanteri sınıfı koleksiyonunu devre dışı bırakın. Bu sınıf şu anda yararlanılabilir.
+**Risk azaltma:** Bu sorunu geçici olarak çözmek için, tarayıcı kullanımı (SMS_BrowerUsage) donanım envanteri sınıfı koleksiyonunu devre dışı bırakın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

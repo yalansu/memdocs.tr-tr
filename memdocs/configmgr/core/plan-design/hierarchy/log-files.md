@@ -2,7 +2,7 @@
 title: Günlük dosyası başvurusu
 titleSuffix: Configuration Manager
 description: Configuration Manager istemci, sunucu ve bağımlı bileşenler için tüm günlük dosyalarına bir başvuru.
-ms.date: 06/10/2020
+ms.date: 07/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0f69b42ce0396148c67eaade967ef4fd87dea7bb
-ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
+ms.openlocfilehash: 296ac8448292b46318921cb952b5b8545a34f1fa
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85946904"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210335"
 ---
 # <a name="log-file-reference"></a>Günlük dosyası başvurusu
 
@@ -77,11 +77,13 @@ Aşağıdaki bölümler, size sunulan farklı günlük dosyaları hakkında ayr�
 
   - [Keşfini](#BKMK_DiscoveryLog)  
 
+  - [Uç nokta analizi](#bkmk_analytics)
+  
   - [Endpoint Protection](#BKMK_EPLog)  
 
-  - [Uzantıları](#BKMK_Extensions)  
+  - [Uzantılar](#BKMK_Extensions)  
 
-  - [Sayım](#BKMK_InventoryLog)  
+  - [Stok](#BKMK_InventoryLog)  
 
   - [Geçiş](#BKMK_MigrationLog)  
 
@@ -171,7 +173,10 @@ Aşağıdaki tabloda Configuration Manager istemcisinde bulunan günlük dosyala
 |SCClient_ &lt; *etki alanı* \> @ &lt; *Kullanıcı adı* \> _2. log|İstemci bilgisayardaki belirtilen kullanıcı için Yazılım Merkezi'ndeki etkinlik geçmişini kaydeder.|  
 |Scheduler.log|Tüm istemci işlemlerine yönelik zamanlanmış görevlerin etkinliklerini kaydeder.|  
 |SCNotify_ &lt; *etki alanı* \> @ &lt; *Kullanıcı adı* \> _1. log|Belirtilen kullanıcıya yönelik yazılımları kullanıcılara bildirme etkinliğini kaydeder.|  
-|SCNotify_ &lt; *etki alanı* \> @ &lt; *Kullanıcı adı* \> _1- &lt; *date_time*>. log|Belirtilen kullanıcıya yönelik yazılımları kullanıcılara bildirmeye yönelik geçmiş bilgileri kaydeder.|  
+|SCNotify_ &lt; *etki alanı* \> @ &lt; *Kullanıcı adı* \> _1- &lt; *date_time*>. log|Belirtilen kullanıcıya yönelik yazılımları kullanıcılara bildirmeye yönelik geçmiş bilgileri kaydeder.|
+|SensorWmiProvider. log|Endpoint Analytics algılayıcısı için WMI sağlayıcısının etkinliğini kaydeder.|
+|SensorEndpoint. log|Endpoint Analytics ilkesinin yürütülmesini ve istemci verilerinin site sunucusuna yüklenmesini kaydeder.|
+|SensorManagedProvider. log|Endpoint Analytics için olay ve bilgilerin toplanması ve işlenmesini kaydeder.|
 |setuppolicyevaluator.log|WMI'de yapılandırma ve envanter ilkesi oluşturma bilgilerini kaydeder.|  
 |SleepAgent_ &lt; *etki alanı*\>@SYSTEM_0.log|Uyandırma proxy 'si için ana günlük dosyası.|  
 |smscliui.log|Denetim Masası 'nda Configuration Manager istemcisinin kullanımını kaydeder.|  
@@ -344,7 +349,8 @@ Aşağıdaki tabloda, Configuration Manager site sunucusunda ve site sistemi sun
 |srsrpsetup.log|Raporlama noktası yükleme işleminin sonuçlarını kaydeder.|Site sistemi sunucusu|  
 |statesys.log|Sistem durumu iletilerinin işlenmesini kaydeder.|Site sunucusu|  
 |statmgr.log|Tüm durum iletilerinin veritabanına yazılmasını kaydeder.|Site sunucusu|  
-|swmproc.log|Ölçüm dosyalarının ve ayarların işlenmesini kaydeder.|Site sunucusu|  
+|swmproc.log|Ölçüm dosyalarının ve ayarların işlenmesini kaydeder.|Site sunucusu|
+|Uxanalticsuploadworker. log|Endpoint Analytics için hizmete veri yükleme kaydeder.|Site sunucusu|   
 
 ### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a>Site sunucusu yüklemesi
 
@@ -623,7 +629,7 @@ Configuration Manager ile tümleştirilmiş masaüstü analiziyle ilgili sorunla
 Hizmet bağlantı noktasındaki günlük dosyaları şu dizinde: `%ProgramFiles%\Configuration Manager\Logs\M365A` .
 Configuration Manager istemcisindeki günlük dosyaları şu dizinde: `%WinDir%\CCM\logs` .
 
-| Günlük | Açıklama |Günlük dosyası içeren bilgisayar|
+| Log | Açıklama |Günlük dosyası içeren bilgisayar|
 |---------|---------|---------|
 | M365ADeploymentPlanWorker. log | Masaüstü Analizi bulut hizmetinden şirket içi Configuration Manager dağıtım planı eşitlemesi hakkında bilgi |Hizmet bağlantı noktası|
 | M365ADeviceHealthWorker. log | Configuration Manager 'den Microsoft buluta cihaz durumu yüklemesi hakkında bilgi |Hizmet bağlantı noktası|
@@ -644,6 +650,15 @@ Aşağıdaki tabloda, bulma ile ilgili bilgiler içeren günlük dosyaları list
 |ddm.log|Discovery Data Manager'ın etkinliklerini kaydeder.|Site sunucusu|  
 |InventoryAgent.log|Donanım envanteri, yazılım envanteri etkinliklerini ve istemci üzerindeki sinyal bulma işlemlerini kaydeder.|İstemci|  
 |netdisc.log|Ağ Bulma eylemlerini kaydeder.|Site sunucusu|  
+
+### <a name="endpoint-analytics"></a><a name="bkmk_analytics"></a>Uç nokta Analizi
+
+|Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
+|--------------|-----------------|----------------------------|  
+|Uxanalticsuploadworker. log|Endpoint Analytics için hizmete veri yükleme kaydeder.|Site sunucusu|  
+|SensorWmiProvider. log|Endpoint Analytics algılayıcısı için WMI sağlayıcısının etkinliğini kaydeder.|İstemci|  
+|SensorEndpoint. log|Endpoint Analytics ilkesinin yürütülmesini ve istemci verilerinin site sunucusuna yüklenmesini kaydeder.|İstemci|
+|SensorManagedProvider. log|Endpoint Analytics için olay ve bilgilerin toplanması ve işlenmesini kaydeder.|İstemci|
 
 ### <a name="endpoint-protection"></a><a name="BKMK_EPLog"></a>Endpoint Protection
 
