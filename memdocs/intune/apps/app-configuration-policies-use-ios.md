@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/11/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15c1e1e943d9fd03476c0605c4d41cd417354fce
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 730a8974753575b2726d821106f7b3c937b30207
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973035"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239989"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Yönetilen iOS/ıpados cihazları için uygulama yapılandırma ilkeleri ekleme
 
@@ -108,7 +108,7 @@ Microsoft Intune, bir uygulamaya özgü yapılandırma ayarları sağlar. Micros
 
 Microsoft Intune Yöneticisi olarak, yönetilen cihazlarda Microsoft uygulamalarına hangi iş veya okul hesaplarının ekleneceğini denetleyebilirsiniz. Erişimi yalnızca izin verilen kullanıcı hesaplarıyla sınırlayabilecek ve kayıtlı cihazlarda kişisel hesapları engelleyebilirsiniz. İOS/ıpados cihazlarında, yönetilen cihazlar uygulama yapılandırma ilkesinde aşağıdaki anahtar/değer çiftlerini kullanın:
 
-| **Anahtar** | **Değerler** |
+| **Key** | **Değerler** |
 |----|----|
 | IntuneMAMAllowedAccountsOnly | <ul><li>**Enabled**: İzin verilen tek hesap, [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) anahtarıyla tanımlanan yönetilen kullanıcı hesabıdır.</li><li>**Disabled** (veya **Enabled** ile eşleşmeyen bir değer): Tüm hesaplara izin verilir.</li></ul> |
 | IntuneMAMUPN | <ul><li>Uygulamada oturum açmaya izin verilen hesabın UPN 'si.</li><li> Intune'a kayıtlı cihazlar için <code>{{userprincipalname}}</code> belirteci kayıtlı kullanıcı hesabını temsil etmek için kullanılabilir.</li></ul>  |
@@ -193,20 +193,33 @@ DEP (Apple Aygıt Kayıt Programı) kayıtları, Şirket Portalı uygulamasını
 2. **Apps**  >  Şirket portalı uygulaması için bir uygulama yapılandırma ilkesi oluşturmak üzere uygulamalar**uygulama yapılandırma ilkeleri**' ne gidin.
 3. Aşağıda XML ile bir uygulama yapılandırma ilkesi oluşturun. Uygulama yapılandırma ilkesi oluşturma hakkında daha fazla bilgi ve XML verilerinin girilmesi, [yönetilen iOS/ıpados cihazları için uygulama yapılandırma Ilkeleri ekleme](app-configuration-policies-use-ios.md)konusunda daha fazla bilgi bulunabilir.
 
-    ``` xml
-    <dict>
-        <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
-        <dict>
-            <key>IntuneDeviceId</key>
-            <string>{{deviceid}}</string>
-            <key>UserId</key>
-            <string>{{userid}}</string>
-        </dict>
-    </dict>
-    ```
+    - **Kullanıcı benzeşimi ile kaydedilmiş bir DEP cihazında Şirket Portalı kullanın:**
 
-3. Şirket Portalı, istenen gruplara hedeflenmiş uygulama yapılandırma ilkesiyle cihazlara dağıtın. İlkeyi yalnızca DEP kaydı yapılmış olan cihazların gruplarına dağıttığınızdan emin olun.
-4. Son kullanıcılara otomatik olarak yüklendiğinde Şirket Portalı uygulamasında oturum açmasını söyleyin.
+        ``` xml
+        <dict>
+            <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
+            <dict>
+                <key>IntuneDeviceId</key>
+                <string>{{deviceid}}</string>
+                <key>UserId</key>
+                <string>{{userid}}</string>
+            </dict>
+        </dict>
+        ```
+    - **Kullanıcı benzeşimi olmadan KAYDEDILEN DEP cihazında Şirket portalı kullanın**:
+
+        > [!NOTE]
+        > Şirket Portalı oturum açan kullanıcı, cihazın birincil kullanıcısı olarak ayarlanır.
+
+        ``` xml
+        <dict>
+            <key>IntuneUDAUserlessDevice</key>
+            <string>{{SIGNEDDEVICEID}}</string>
+        </dict>
+        ```     
+
+4. Şirket Portalı, istenen gruplara hedeflenmiş uygulama yapılandırma ilkesiyle cihazlara dağıtın. İlkeyi yalnızca DEP kaydı yapılmış olan cihazların gruplarına dağıttığınızdan emin olun.
+5. Son kullanıcılara otomatik olarak yüklendiğinde Şirket Portalı uygulamasında oturum açmasını söyleyin.
 
 ## <a name="monitor-iosipados--app-configuration-status-per-device"></a>Cihaz başına iOS/ıpados uygulama yapılandırma durumunu izle 
 Bir yapılandırma ilkesi atandıktan sonra, yönetilen her cihaz için iOS/ıpados uygulama yapılandırma durumunu izleyebilirsiniz. Azure portalında **Microsoft Intune**'dan **Cihazlar** > **Tüm cihazlar**'ı seçin. Yönetilen cihazlar listesinden cihaz için bir bölme göstermek üzere belirli bir cihaz seçin. Cihaz bölmesinde **uygulama yapılandırması**' nı seçin.  

@@ -5,17 +5,17 @@ description: Otomatik dağıtım kuralları (ADR) kullanarak yazılım güncelle
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: bf172c4cb34a17ac793ea5568b0505505baf97a0
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: ae1f52b0744f79f79e00e5dfe2d6a76c903cf4a4
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709443"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240040"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Yazılım güncelleştirmelerini otomatik dağıtma  
 
@@ -197,7 +197,7 @@ ADR kullanarak yazılım güncelleştirmelerini otomatik olarak onaylayın ve da
 
         -  **Gönderme önceliği**: Dağıtım paketi için gönderme önceliğini belirtin. Configuration Manager, paketi dağıtım noktalarına gönderdiğinde bu önceliği kullanır. Dağıtım paketleri öncelik sırasıyla gönderilir: yüksek, orta veya düşük. Benzer önceliklere sahip paketler oluşturulma sıralarına göre gönderilir. Biriktirme listesi yoksa, paket önceliğe bakılmaksızın hemen işlenir.  
 
-        - **İkili değişiklik çoğaltmasını etkinleştir**: siteler arasındaki ağ trafiğini en aza indirmek için bu ayarı etkinleştirin. İkili farklar çoğaltması (BDR), paket içeriğinin tamamını güncelleştirmek yerine yalnızca pakette değiştirilen içeriği güncelleştirir. Daha fazla bilgi için bkz. [ikili farklar çoğaltması](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
+        - **İkili değişiklik çoğaltmasını etkinleştir**: dağıtım paketi için ikili değişiklik çoğaltmasını kullanmak için bu ayarı etkinleştirin. Daha fazla bilgi için bkz. [ikili farklar çoğaltması](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
 
     - **Dağıtım paketi yok**: sürüm 1806 ' den başlayarak, yazılım güncelleştirmelerini, içeriği önce indirip dağıtım noktalarına dağıtmadan cihazlara dağıtın. Son derece büyük güncelleştirme içeriğiyle ilgilenirken bu ayar faydalıdır. Ayrıca, istemcilerin Microsoft Update bulut hizmetinden içerik almasını istediğiniz zaman da kullanabilirsiniz. Bu senaryodaki istemciler, gerekli içeriğe zaten sahip olan eşlerden içerik de indirebilir. Configuration Manager istemcisi içerik indirmeyi yönetmeye devam eder, bu nedenle Configuration Manager eş önbellek özelliğini veya teslim Iyileştirme gibi diğer teknolojileri kullanabilir. Bu özellik, Windows ve Office güncelleştirmeleri de dahil olmak üzere Configuration Manager yazılım güncelleştirme yönetimi tarafından desteklenen tüm güncelleştirme türlerini destekler.<!--1357933-->  
 

@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 4bb6afeb-d267-4f9b-ade2-26e5400c223b
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 52e83639029db9eeb4ef64657e70e3dc11aab8f2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 40f0fe1adc723587316dcc5f03d710ae4b31b78b
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712207"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240703"
 ---
 # <a name="common-tasks-for-creating-and-deploying-configuration-baselines-with-configuration-manager"></a>Configuration Manager ile yapılandırma temellerini oluşturmak ve dağıtmak için ortak görevler
 
@@ -34,7 +34,7 @@ Bu konu, Configuration Manager yapılandırma temellerini oluşturma ve dağıtm
 
 Bu yapılandırma öğesini dağıtıma hazırlamak için bir yapılandırma temeline nasıl ekleneceğini öğrenmek için aşağıdaki yordamı kullanın.  
 
-1. Configuration Manager konsolunda, **varlıklar ve uyumluluk** > **Uyumluluk ayarları** > **yapılandırma temelleri**' ne tıklayın.  
+1. Configuration Manager konsolunda, **varlıklar ve uyumluluk**  >  **Uyumluluk ayarları**  >  **yapılandırma temelleri**' ne tıklayın.  
 
 2. **Giriş** sekmesindeki **Oluştur** grubunda, **Yapılandırma Temeli Oluştur**'a tıklayın.  
 
@@ -42,7 +42,7 @@ Bu yapılandırma öğesini dağıtıma hazırlamak için bir yapılandırma tem
 
    -   **Ad** - **Windows 10 Parolaları** (veya tercih ettiğiniz başka bir ad) yazın  
 
-4. **Yapılandırma öğeleri** **Ekle** > ' ye tıklayın.  
+4. **Add**  >  **Yapılandırma öğeleri**Ekle ' ye tıklayın.  
 
 5. **Yapılandırma Öğesi Ekle** iletişim kutusunda, oluşturduğunuz **Windows 10 Parola Zorlama** yapılandırma öğesini seçin ve **Ekle**’ye tıklayın.  
 
@@ -55,7 +55,7 @@ Bu yapılandırma öğesini dağıtıma hazırlamak için bir yapılandırma tem
 ## <a name="deploy-the-configuration-baseline"></a>Yapılandırma temelini dağıt  
  Bu örnekte, önceki yordamda oluşturduğunuz yapılandırma temelini bir bilgisayar koleksiyonuna dağıtırsınız.  
 
-1. Configuration Manager konsolunda, **varlıklar ve uyumluluk** > **Uyumluluk ayarları** > **yapılandırma temelleri**' ne tıklayın.  
+1. Configuration Manager konsolunda, **varlıklar ve uyumluluk**  >  **Uyumluluk ayarları**  >  **yapılandırma temelleri**' ne tıklayın.  
 
 2. Yapılandırma temelleri listesinden **Windows 10 Parolaları**’nı seçin.  
 

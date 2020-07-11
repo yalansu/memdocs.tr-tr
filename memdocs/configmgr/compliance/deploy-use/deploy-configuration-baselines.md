@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 9be8aaf3-075e-4acd-abd2-7459254e16e2
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 55b559f9b16eabfe2c2096497e6f63816b400803
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 94a5d0af5636236ffba3f15c05823ead083f2948
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712340"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240278"
 ---
 # <a name="how-to-deploy-configuration-baselines-in-configuration-manager"></a>Configuration Manager içinde yapılandırma temelleri dağıtma
 
@@ -27,7 +27,7 @@ Yapılandırma temellerini dağıtımlara ekleme veya kaldırmanın yanı sıra 
 
 ## <a name="deploy-a-configuration-baseline"></a>Yapılandırma temeli dağıtma  
 
-1.  Configuration Manager konsolunda, **varlıklar ve uyumluluk** > **Uyumluluk ayarları** > **yapılandırma temelleri**' ne tıklayın.  
+1.  Configuration Manager konsolunda, **varlıklar ve uyumluluk**  >  **Uyumluluk ayarları**  >  **yapılandırma temelleri**' ne tıklayın.  
 
 3.  **Yapılandırma Temelleri** listesinde dağıtmak istediğiniz yapılandırma seçtikten sonra **Giriş** sekmesindeki **Dağıtım** grubunda **Dağıt**'a tıklayın.  
 

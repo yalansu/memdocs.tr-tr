@@ -2,7 +2,7 @@
 title: Endpoint Protection istemci sık sorulan sorular
 titleSuffix: Configuration Manager
 description: Windows Defender ve Endpoint Protection hakkında sık sorulan soruların yanıtlarını alın.
-ms.date: 12/09/2017
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3b206c1556c2e9550ade5c2322acd65ad2b19412
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 0eafa09275220cdf07f837388aa6cb848fbd5e5a
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906825"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240295"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection istemci sık sorulan sorular
 
@@ -34,7 +34,6 @@ Bu SSS, yönetilen bilgisayarlarına BT yöneticisi tarafından Windows Defender
 -   [Virüsler, casus yazılımlar ve diğer olası istenmeyen yazılımlar nereden gelir?](#where-do-viruses-spyware-and-other-potentially-unwanted-software-come-from)  
 -   [Bilmeden kötü amaçlı yazılım alabilir miyim?](#can-i-get-malicious-software-without-knowing-it)  
 -   [Yazılım yüklemeden önce lisans sözleşmelerini gözden geçirmek neden önemlidir?](#why-is-it-important-to-review-license-agreements-before-installing-software)  
--   [Endpoint Protection ve Windows Defender arasındaki fark nedir?](#whats-the-difference-between-endpoint-protection-and-windows-defender)  
 -   [Windows Defender tanımlama bilgilerini neden algılamıyor?](#why-doesnt-windows-defender-detect-cookies)  
 -   [Kötü amaçlı yazılımları nasıl önleyebilirim?](#how-can-i-prevent-malware)  
 -   [Virüs ve casus yazılım tanımları nelerdir?](#what-are-virus-and-spyware-definitions)  
@@ -132,9 +131,6 @@ Windows Defender’ın algıladığı tüm istenmeyen veya potansiyel olarak zar
 ##  <a name="why-is-it-important-to-review-license-agreements-before-installing-software"></a> Yazılım yüklemeden önce lisans sözleşmelerini gözden geçirmek neden önemlidir?  
  Web sitelerini ziyaret ettiğinizde, sitenin sunduğu her şeyi otomatik olarak indirmeyi kabul etmeyin. Dosya paylaşım programları veya ekran koruyucuları gibi ücretsiz yazılımları yüklerseniz, lisans sözleşmesini dikkatlice okuyun. Şirketten reklamlar ve açılır pencereleri kabul etmenizi zorunlu tutan veya yazılımın belirli bilgileri yazılım yayımcısına göndereceğini belirten yan tümceleri arayın.  
 
-##  <a name="whats-the-difference-between-endpoint-protection-and-windows-defender"></a> Endpoint Protection ve Windows Defender arasındaki fark nedir?  
- Endpoint Protection kötü amaçlı yazılımdan koruma yazılımıdır, yani virüsler, casus yazılım ve diğer istenmeyebilecek yazılımlar dahil çeşitli kötü amaçlı yazılımları algılamak ve bilgisayarınızı bunlara karşı korumak için tasarlanmıştır. Windows işletim sisteminizle otomatik olarak yüklenen Windows Defender, casus yazılımı algılayan ve durduran yazılımdır.  
-
 ##  <a name="why-doesnt-windows-defender-detect-cookies"></a>Windows Defender tanımlama bilgilerini neden algılamıyor?  
  Tanımlama bilgileri, Web sitelerinin siz ve tercihleriniz hakkında bilgi depolamak için bilgisayarınıza yerleştirdiği küçük metin dosyalarıdır. Web siteleri, size kişiselleştirilmiş bir deneyim sunmak ve Web sitesi kullanımı hakkında bilgi toplamak için tanımlama bilgilerini kullanır. Windows Defender, gizlilik veya bilgisayarınızın güvenliğine yönelik bir tehdit görmediğinden, tanımlama bilgilerini algılamaz. Çoğu Internet tarayıcı programı tanımlama bilgilerini engellemenize olanak tanır.  
 
@@ -200,9 +196,8 @@ Windows Defender’ın algıladığı tüm istenmeyen veya potansiyel olarak zar
 
   Windows Defender’ın izlemesini istediğiniz yazılım ve ayarları seçebilirsiniz, ancak gerçek zamanlı korumayı açmanızı ve tüm gerçek zamanlı koruma seçeneklerini belirlemenizi öneririz. Aşağıdaki tabloda kullanılabilir seçenekler açıklanmaktadır.  
 
-|||  
-|-|-|  
 |**Gerçek zamanlı koruma seçeneği**|**Amaç**|  
+|-|-|  
 |Tüm indirmeleri tara|Bu seçenek Windows Internet Explorer ve Microsoft Outlook® Express aracılığıyla otomatik olarak indirilen dosyalar dahil ActiveX® denetimleri ve yazılım yükleme programları gibi indirilen dosya ve programları izler. Bu dosyalar tarayıcı tarafından indirilebilir, yüklenebilir veya çalıştırılabilir. Bu dosyalarda virüsler, casus yazılım ve diğer istenmeyebilecek yazılımlar dahil kötü amaçlı yazılımlar bulunabilir ve bunlar bilginiz dışında yüklenebilir.<br /><br /> Gerçek zamanlı koruma seçeneğini kullandığınızda, Windows Defender bilgisayarınızı sürekli olarak izler ve indirmiş olabileceğiniz herhangi bir kötü amaçlı dosya veya program için denetler. Bu izleme özelliği, Windows Defender’ın indirmek isteyebileceğiniz dosya ve programların denetlenmesini gerektirerek gözatma veya e-posta deneyiminizi yavaşlatmayı gerektirmeyeceği anlamına gelir.|  
 |Bilgisayarınızdaki dosya ve program etkinliğini izleme|Bu seçenek bilgisayarınızda çalışmaya başlayan dosya ve programları izler ve gerçekleştirdikleri ve bunlar üzerinde gerçekleştirilen işlemler hakkında sizi uyarır. Kötü amaçlı yazılımlar bilginiz dışında kötü amaçlı veya istenmeyen yazılımları çalıştırmak için yüklediğiniz programlardaki güvenlik açıklarını kullanabileceğinden bu önemlidir. Örneğin, sık kullandığınız bir programı başlattığınızda, casus yazılım kendisini arka planda çalıştırabilir. Windows Defender, programlarınızı izler ve şüpheli etkinlik algılarsa sizi uyarır.|  
 |Davranış izlemeyi etkinleştir|Bu seçenek, geleneksel virüsten koruma algılama yöntemleri tarafından algılanmayabilen şüpheli desenler için davranış koleksiyonlarını izler.|  

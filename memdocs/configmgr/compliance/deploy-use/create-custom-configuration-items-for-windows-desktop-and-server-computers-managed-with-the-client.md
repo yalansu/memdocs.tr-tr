@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 1eb2fcaf-acac-4388-9b31-6cccafacaabe
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 63f11066918854d72af0f1160d7d7569a93d7ebe
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 24637862326b029f974843c18ccba835ee5501ba
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712389"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240431"
 ---
 # <a name="create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-configuration-manager-client"></a>Configuration Manager istemcisiyle yönetilen Windows Masaüstü ve sunucu bilgisayarları için özel yapılandırma öğeleri oluşturma
 
@@ -97,7 +97,7 @@ Configuration Manager bir algılama yöntemi, bir uygulamanın bir bilgisayarda 
 **Windows sürümünü el ile de belirtebilirsiniz**. **Ekle** ' yi seçin ve Windows yapı numarasının her bölümünü belirtin.
 
 > [!NOTE]
-> Windows Server 2016 belirtirken, seçimi Windows Server 2019 `All Windows Server 2016 and higher 64-bit)` de içerir. Yalnızca Windows Server 2016 ' i belirtmek için, **Windows sürümünü el Ile belirtmek**için seçeneğini kullanın. <!--5866480-->
+> Windows Server 2016 belirtirken, seçimi `All Windows Server 2016 and higher 64-bit)` Windows server 2019 de içerir. Yalnızca Windows Server 2016 ' i belirtmek için, **Windows sürümünü el Ile belirtmek**için seçeneğini kullanın. <!--5866480-->
 
 
 
@@ -117,7 +117,7 @@ Ayarlar, istemci cihazlarındaki uyumluluğu değerlendirmek için kullanılan i
 
     - **Ayar türü**: listede, bu ayar için kullanmak üzere aşağıdaki ayar türlerinden birini seçin ve yapılandırın:  
         - [Active Directory sorgusu](#bkmk_adquery)
-        - [Derleme](#bkmk_assembly)
+        - [Bütünleştirilmiş Kod](#bkmk_assembly)
         - [Dosya sistemi](#bkmk_file)
         - [IIS metatabanı](#bkmk_iis)
         - [Kayıt defteri anahtarı](#bkmk_regkey)
@@ -139,11 +139,11 @@ Ayarlar, istemci cihazlarındaki uyumluluğu değerlendirmek için kullanılan i
 
 ### <a name="active-directory-query"></a><a name="bkmk_adquery"></a>Active Directory sorgu
 
-- **LDAP ön eki**: istemci bilgisayarlarındaki uyumluluğu değerlendirmek için Active Directory Domain Services sorgusuna yönelik geçerli bir ön ek belirtin. Genel katalog arama yapmak için ya `LDAP://` `GC://`da kullanın.  
+- **LDAP ön eki**: istemci bilgisayarlarındaki uyumluluğu değerlendirmek için Active Directory Domain Services sorgusuna yönelik geçerli bir ön ek belirtin. Genel katalog arama yapmak için ya da kullanın `LDAP://` `GC://` .  
 
 - **Ayırt edici ad (DN)**: istemci bilgisayarlarda uyumluluk için değerlendirilen Active Directory Domain Services nesnesinin ayırt edici adını belirtin.  
 
-- **Arama filtresi**: istemci bilgisayarlarındaki uyumluluğu değerlendirmek için Active Directory Domain Services sorgusunun sonuçlarını daraltmak için isteğe bağlı bir LDAP filtresi belirtin. Sorgunun tüm sonuçlarını döndürmek için girin `(objectclass=*)`.  
+- **Arama filtresi**: istemci bilgisayarlarındaki uyumluluğu değerlendirmek için Active Directory Domain Services sorgusunun sonuçlarını daraltmak için isteğe bağlı bir LDAP filtresi belirtin. Sorgunun tüm sonuçlarını döndürmek için girin `(objectclass=*)` .  
 
 - **Arama kapsamı**: Active Directory Domain Services arama kapsamını belirtin  
 
@@ -155,14 +155,14 @@ Ayarlar, istemci cihazlarındaki uyumluluğu değerlendirmek için kullanılan i
 
 - **Özellik**: istemci bilgisayarlarındaki uyumluluğu değerlendirmek için kullanılan Active Directory Domain Services nesnesinin özelliğini belirtin.  
 
-    Örneğin, kullanıcının hatalı parola girme sayısını depolayan Active Directory özelliğini sorgulamak istiyorsanız, bu alana girin `badPwdCount` .  
+    Örneğin, kullanıcının hatalı parola girme sayısını depolayan Active Directory özelliğini sorgulamak istiyorsanız, `badPwdCount` Bu alana girin.  
 
 - **Sorgu**: **LDAP ön eki**, **ayırt edici ad (DN)**, **arama filtresi** (belirtilmişse) ve **özellik**içindeki girdilerden oluşturulan sorguyu görüntüler.  
 
 
 ### <a name="assembly"></a><a name="bkmk_assembly"></a>Derleme
 
-Bir derleme, uygulamalar arasında paylaştırılabilen bir kod parçasıdır. Derlemeler .dll veya .exe dosya adı uzantısına sahip olabilirler. Genel derleme önbelleği, istemci bilgisayarlarındaki klasördür `%SystemRoot%\Assembly` . Bu önbellek, Windows 'un tüm paylaşılan derlemeleri depoladığı yerdir.  
+Bir derleme, uygulamalar arasında paylaştırılabilen bir kod parçasıdır. Derlemeler .dll veya .exe dosya adı uzantısına sahip olabilirler. Genel derleme önbelleği, `%SystemRoot%\Assembly` istemci bilgisayarlarındaki klasördür. Bu önbellek, Windows 'un tüm paylaşılan derlemeleri depoladığı yerdir.  
 
 - **Bütünleştirilmiş kod adı**: Aramak istediğiniz bütünleştirilmiş kod nesnesinin adını belirtir. Ad aynı türdeki diğer derleme nesneleriyle aynı olamaz. Önce genel derleme önbelleğine kaydedin. Bütünleştirilmiş kod adı en çok 256 karakter uzunluğunda olabilir.  
 
@@ -174,21 +174,21 @@ Bir derleme, uygulamalar arasında paylaştırılabilen bir kod parçasıdır. D
 - **Yol**: istemci bilgisayarlarda belirtilen dosya veya klasörün yolunu belirtin. Sistem ortam değişkenlerini ve `%USERPROFILE%` ortam değişkenini yolda belirtebilirsiniz.  
 
     > [!NOTE]  
-    > `%USERPROFILE%` Ortam değişkenini **yol** veya **dosya ya da klasör adı** kutularında kullanırsanız, Configuration Manager istemcisi istemci bilgisayardaki tüm Kullanıcı profillerini arar. Bu davranış, dosya veya klasörün birden çok örneğini bulmaya neden olabilir.  
+    > `%USERPROFILE%`Ortam değişkenini **yol** veya **dosya ya da klasör adı** kutularında kullanırsanız, Configuration Manager istemcisi istemci bilgisayardaki tüm Kullanıcı profillerini arar. Bu davranış, dosya veya klasörün birden çok örneğini bulmaya neden olabilir.  
     >   
     > Uyumluluk ayarlarının belirtilen yola erişimi yoksa, bir bulma hatası oluşturulur. Ayrıca, aradığınız dosya o anda kullanımda olduğunda da bulma hatası oluşur.  
 
     > [!Tip]  
     > Ayarı başvuru bilgisayarındaki değerlerden yapılandırmak için **Araştır** ' ı seçin.   
 
-- **Dosya veya klasör adı**: arama yapılacak dosya veya klasör nesnesinin adını belirtin. Sistem ortam değişkenlerini ve `%USERPROFILE%` ortam değişkenini dosya veya klasör adında belirtebilirsiniz. Joker karakterleri `*` ve `?` dosya adını da kullanabilirsiniz.  
+- **Dosya veya klasör adı**: arama yapılacak dosya veya klasör nesnesinin adını belirtin. Sistem ortam değişkenlerini ve `%USERPROFILE%` ortam değişkenini dosya veya klasör adında belirtebilirsiniz. Joker karakterleri `*` ve dosya adını da kullanabilirsiniz `?` .  
 
     > [!NOTE]  
     > Bir dosya veya klasör adı belirtir ve joker karakterleri kullanırsanız, Bu bileşim yüksek sayıda sonuç üretebilir. Ayrıca, istemci bilgisayarda yüksek kaynak kullanımına ve sonuçları Configuration Manager bildirirken yüksek ağ trafiğine neden olabilir.  
 
 - **Alt klasörleri dahil et**: aynı zamanda belirtilen yolun altındaki tüm alt klasörlerde arama yapın.  
 
-- **Bu dosya veya klasör 64 bitlik bir uygulamayla ilişkili**: etkinleştirilirse, yalnızca 64 bit bilgisayarlarda 64 bit dosya konumları `%ProgramFiles%` arayın. Bu seçenek etkinleştirilmemişse, hem 64 bitlik konumlarda hem de 32 bit konumlarında arama yapın `%ProgramFiles(x86)%`.  
+- **Bu dosya veya klasör 64 bitlik bir uygulamayla ilişkili**: etkinleştirilirse, yalnızca 64 bit bilgisayarlarda 64 bit dosya konumları arayın `%ProgramFiles%` . Bu seçenek etkinleştirilmemişse, hem 64 bitlik konumlarda hem de 32 bit konumlarında arama yapın `%ProgramFiles(x86)%` .  
 
     > [!NOTE]  
     > Aynı 64 bit bilgisayarda 64 bit ve 32 bit sistem dosyası konumlarının her ikisinde de aynı dosya veya klasör varsa, genel koşul tarafından birden çok dosya bulunur.  
@@ -274,18 +274,18 @@ Betik tarafından döndürülen değer, genel koşula uyumluluğun değerlendirm
 
 - **Özellik**: Yukarıdaki SıNıFTA hedef WMI özelliğini belirtin.  
 
-- **Wql sorgusu where yan tümcesi**: sonuçları azaltmak için uygun bir yan tümce belirtin. Örneğin, Win32_Service sınıfında yalnızca DHCP hizmetini sorgulamak için WHERE yan tümcesi olabilir `Name = 'DHCP' and StartMode = 'Auto'`.   
+- **Wql sorgusu where yan tümcesi**: sonuçları azaltmak için uygun bir yan tümce belirtin. Örneğin, Win32_Service sınıfında yalnızca DHCP hizmetini sorgulamak için WHERE yan tümcesi olabilir `Name = 'DHCP' and StartMode = 'Auto'` .   
 
 
 ### <a name="xpath-query"></a><a name="bkmk_xpath"></a>XPath sorgusu
 
-- **Yol**: uyumluluğu değerlendirmek için kullanılan istemci bilgisayarlardaki. xml dosyasının yolunu belirtin. Configuration Manager, tüm Windows sistem ortam değişkenlerinin ve yol adındaki `%USERPROFILE%` Kullanıcı değişkeninin kullanımını destekler.  
+- **Yol**: uyumluluğu değerlendirmek için kullanılan istemci bilgisayarlardaki. xml dosyasının yolunu belirtin. Configuration Manager, tüm Windows sistem ortam değişkenlerinin ve `%USERPROFILE%` yol adındaki Kullanıcı değişkeninin kullanımını destekler.  
 
 - **XML dosyası adı**: YUKARıDAKI yolda XML sorgusunu içeren dosya adını belirtin.  
 
 - **Alt klasörleri dahil et**: belirtilen yolun altındaki tüm alt klasörlerde arama yapmak için bu seçeneği etkinleştirin.  
 
-- **Bu dosya 64 bitlik bir uygulamayla ilişkili**: Windows 'un 64 bit sürümünü çalıştıran Configuration Manager istemcilerde 32 bit sistem `%Windir%\System32` dosyası konumuna `%Windir%\Syswow64` ek olarak 64 bit sistem dosyası konumunu arayın.  
+- **Bu dosya 64 bitlik bir uygulamayla ilişkili**: `%Windir%\System32` `%Windir%\Syswow64` Windows 'un 64 bit sürümünü çalıştıran Configuration Manager istemcilerde 32 bit sistem dosyası konumuna ek olarak 64 bit sistem dosyası konumunu arayın.  
 
 - **XPath sorgusu**: geçerli BIR tam XML yol dili (XPath) sorgusu belirtin.  
 
@@ -348,9 +348,9 @@ Uyumluluk kuralları, yapılandırma öğesinin uyumluluğunu tanımlayan koşul
 - **Bu ayar örneği bulunmazsa uyumsuzluğu bildir**: Bu ayar istemci bilgisayarlarda bulunmazsa, yapılandırma öğesi için uyumsuzluğu raporlamak üzere bu seçeneği etkinleştirin.  
 
 - **Raporlar Için uyumsuzluk önem derecesi**: Bu uyumluluk kuralı başarısız olursa Configuration Manager raporlarında bildirilen önem derecesini belirtin. Aşağıdaki önem düzeyleri kullanılabilir:  
-    - **Yok**  
+    - **Hiçbiri**  
     - **Bilgi**  
-    - **Warning**  
+    - **Uyarı**  
     - **Kritik**  
     - **Kritik ve olayla**: Bu uyumluluk kuralında başarısız olan bilgisayarlar **kritik**hata önem derecesini raporlar. Bu önem düzeyi ayrıca uygulama olay günlüğünde bir Windows olayı olarak kaydedilir.  
 
@@ -367,9 +367,9 @@ Uyumluluk kuralları, yapılandırma öğesinin uyumluluğunu tanımlayan koşul
 - **Ayarın tekrarlanma sayısı:**  
 
 - **Raporlar Için uyumsuzluk önem derecesi**: Bu uyumluluk kuralı başarısız olursa Configuration Manager raporlarında bildirilen önem derecesini belirtin. Aşağıdaki önem düzeyleri kullanılabilir:  
-    - **Yok**  
+    - **Hiçbiri**  
     - **Bilgi**  
-    - **Warning**  
+    - **Uyarı**  
     - **Kritik**  
     - **Kritik ve olayla**: Bu uyumluluk kuralında başarısız olan bilgisayarlar **kritik**hata önem derecesini raporlar. Bu önem düzeyi ayrıca uygulama olay günlüğünde bir Windows olayı olarak kaydedilir.  
 
@@ -380,7 +380,7 @@ Uyumluluk kuralları, yapılandırma öğesinin uyumluluğunu tanımlayan koşul
 
 Configuration Manager sürüm 2002 ' den başlayarak, yapılandırma öğesi uyumluluk kurallarınızın **desteklenmesinden sonra düzeltme geçmişini izleyebilirsiniz** . Bu seçenek etkinleştirildiğinde, yapılandırma öğesi için istemcide gerçekleşen tüm düzeltme bir durum iletisi oluşturur. Geçmiş Configuration Manager veritabanında depolanır.
 
-Ortak görünüm **v_CIRemediationHistory**kullanarak düzeltme geçmişini görüntülemek için özel raporlar oluşturun. `RemediationDate` Sütun, UTC olarak, istemcinin düzeltmeyi çalıştırdığı süredir. , `ResourceID` Cihazı tanımlar. **V_CIRemediationHistory** görünümü ile özel raporlar oluşturmak şunları yapmanıza yardımcı olur:
+Ortak görünüm **v_CIRemediationHistory**kullanarak düzeltme geçmişini görüntülemek için özel raporlar oluşturun. `RemediationDate`Sütun, UTC olarak, istemcinin düzeltmeyi çalıştırdığı süredir. , `ResourceID` Cihazı tanımlar. **V_CIRemediationHistory** görünümü ile özel raporlar oluşturmak şunları yapmanıza yardımcı olur:
 
 - Düzeltme betiklerinizde olası sorunları belirlemek
 - Her değerlendirme döngüsünün sürekli olarak uyumsuz olduğu bir istemci gibi düzeltmelere yönelik eğilimleri bulun.

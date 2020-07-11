@@ -2,7 +2,7 @@
 title: Rol tabanlı yönetim aracı
 titleSuffix: Configuration Manager
 description: Configuration Manager ' deki güvenlik rollerini ve kapsamları modellemek ve denetlemek için rol tabanlı yönetim ve denetim aracını kullanın.
-ms.date: 07/30/2018
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6372ff17-7f56-4d7b-a21b-87fb8bdd6d3a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ff940db21711aabb5d57a45b05d90d04415639bb
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4cf9d4d3f9d1b2f439d2e87d41cc280e7af0805a
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723190"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239717"
 ---
 # <a name="role-based-administration-and-auditing-tool"></a>Rol Tabanlı Yönetim ve Denetim Aracı
 
@@ -31,7 +31,7 @@ Rol tabanlı yönetim ve Denetim Aracı [Configuration Manager araçlarından](t
 
 ## <a name="requirements"></a>Gereksinimler
 
-- Configuration Manager konsolu ile aynı bilgisayarda çalıştır  
+- Configuration Manager site sunucusuyla aynı bilgisayarda çalıştır 
 
 - **Tam yönetici**, **salt okuma analist**veya **Güvenlik Yöneticisi** rolüne sahipsiniz  
 
@@ -50,7 +50,7 @@ Rol tabanlı yönetim ve Denetim Aracı [Configuration Manager araçlarından](t
 
 Oluşturmak istediğiniz yeni bir rol için izinleri modellemek üzere aşağıdaki yordamı kullanın: 
 
-1. **Rbaviewer. exe**' yi çalıştırın.  
+1. **RBAViewer.exe**çalıştırın.  
 
 2. Üzerinde derlemek istediğiniz temel güvenlik rollerini seçin veya boş bir izin kümesinden başlayın. Gerekli izinleri seçin.  
 
@@ -66,7 +66,7 @@ Oluşturmak istediğiniz yeni bir rol için izinleri modellemek üzere aşağıd
 
 Configuration Manager ' deki tüm mevcut yönetici kullanıcılarını, koleksiyonları ve güvenlik kapsamlarını denetlemek için aşağıdaki yordamı kullanın:
 
-1. **Rbaviewer. exe**' yi çalıştırın.  
+1. **RBAViewer.exe**çalıştırın.  
 
 2. Araç çubuğundan **Denetim RBA** düğmesini seçin.  
 
@@ -79,7 +79,7 @@ Configuration Manager ' deki tüm mevcut yönetici kullanıcılarını, koleksiy
 
 Belirli bir kullanıcı için rol tabanlı yönetim yapılandırmasını denetlemek için aşağıdaki yordamı kullanın:
 
-1. **Rbaviewer. exe**' yi çalıştırın.  
+1. **RBAViewer.exe**çalıştırın.  
 
 2. Araç çubuğundaki **Farklı Çalıştır** düğmesini seçin.  
 

@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 839c08c8782a815703a19999bf1315fd65980ed8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: e2a378c1f54eb9bccbcc21f50419176bd39cb3ac
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712298"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240057"
 ---
 # <a name="monitor-compliance-settings-in-configuration-manager"></a>Configuration Manager uyumluluk ayarlarını izleme
 
@@ -31,7 +31,7 @@ Hiyerarşinizdeki cihazlara Configuration Manager yapılandırma temelleri dağ�
 
 ### <a name="view-compliance-results-in-the-configuration-manager-console"></a>Configuration Manager konsolundaki uyumluluk sonuçlarını görüntüleme  
 
-1.  Configuration Manager konsolunda, **izleme** > **dağıtımları**' nı tıklatın.  
+1.  Configuration Manager konsolunda, **izleme**  >  **dağıtımları**' nı tıklatın.  
 
 3.  **Dağıtımlar** listesinden, uyumluluk bilgilerini incelemek istediğiniz yapılandırma temeli dağıtımını seçin.  
 
@@ -56,7 +56,7 @@ Hiyerarşinizdeki cihazlara Configuration Manager yapılandırma temelleri dağ�
  Configuration Manager uyumluluk ayarları, yapılandırma öğeleri, yapılandırma temelleri ve dağıtımlar hakkındaki bilgileri izlemenize olanak sağlayan bir dizi yerleşik rapor içerir. Bu raporlar **Uyumluluk ve Ayarlar Yönetimi**rapor kategorisindedir.  
 
 > [!IMPORTANT]  
->  Uyumluluk ayarları raporlarında **Cihaz filtresi** ve**%** Kullanıcı filtresi parametrelerini kullanırken joker karakteri () kullanmanız gerekir.  
+>  **%** Uyumluluk ayarları raporlarında **Cihaz filtresi** ve Kullanıcı filtresi parametrelerini kullanırken joker karakteri () kullanmanız gerekir.  
 
  Configuration Manager raporlamayı yapılandırma hakkında daha fazla bilgi için bkz. [raporlamaya giriş](../../core/servers/manage/introduction-to-reporting.md).
 
@@ -83,7 +83,7 @@ Hiyerarşinizdeki cihazlara Configuration Manager yapılandırma temelleri dağ�
         > [!NOTE]  
         >  İstemci bilgisayarda yerel yönetici kimlik bilgileriniz varsa, hangi yapılandırma öğesinin uyumsuz durum bildirdiğini belirlemek üzere, değerlendirilen her bir yapılandırma temelinin ayrıntılarını görüntüleyebilirsiniz. Bunu yapmak için yapılandırma temelini seçin ve ardından **Raporu Görüntüle**’ye tıklayın.  
 
-4.  **Tamam**'a tıklayın.  
+4.  **Tamam** düğmesine tıklayın.  
 
 ##  <a name="create-collections-based-on-configuration-baseline-compliance"></a>Yapılandırma temeli uyumluluğuna göre koleksiyonlar oluşturma  
  Belirtilen uyumluluğa sahip cihazlara dayalı bir Configuration Manager koleksiyonu oluşturmak için aşağıdaki yordamı kullanın. Aşağıdaki uyumluluk durumlarına göre koleksiyonlar oluşturabilirsiniz:  
@@ -96,7 +96,7 @@ Hiyerarşinizdeki cihazlara Configuration Manager yapılandırma temelleri dağ�
 
 -   **Bilinmiyor**  
 
-1.  Configuration Manager konsolunda, **varlıklar ve uyumluluk** > **Uyumluluk ayarları** > **yapılandırma temelleri**' ne tıklayın.  
+1.  Configuration Manager konsolunda, **varlıklar ve uyumluluk**  >  **Uyumluluk ayarları**  >  **yapılandırma temelleri**' ne tıklayın.  
 
 3.  **Yapılandırma Temelleri** listesinde, içinden bir koleksiyon oluşturmak istediğiniz yapılandırma temelini seçin.  
 

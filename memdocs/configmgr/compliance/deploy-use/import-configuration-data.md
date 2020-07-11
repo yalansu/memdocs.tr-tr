@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 4f70a956051858fce5b4ba5f519c7e1035600793
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 3c31f97e2a494fa4b0d3e9e825a81b562859e5dd
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712312"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240363"
 ---
 # <a name="import-configuration-data-with-configuration-manager"></a>Yapılandırma verilerini Configuration Manager içeri aktarma
 
@@ -47,7 +47,7 @@ Bir yapılandırma temelini içeri aktardığınızda yapılandırma temelinde b
 
 ### <a name="import-configuration-data"></a>Yapılandırma verilerini içeri aktarma  
 
-1.  Configuration Manager konsolunda, **varlıklar ve uyumluluk** > **yapılandırma öğeleri** veya **yapılandırma temelleri** ' ne tıklayın.
+1.  Configuration Manager konsolunda, **varlıklar ve uyumluluk**  >  **yapılandırma öğeleri** veya **yapılandırma temelleri** ' ne tıklayın.
 2.  **Giriş** sekmesinde, **Oluştur** grubunda, **yapılandırma verilerini içeri aktar**' a tıklayın.  
 3.  **Yapılandırma Verilerini İçeri Aktarma Sihirbazı** ’nın **Dosya Seçin**sayfasında **Ekle**’ye tıklayıp **Aç** iletişim kutusunda içeri aktarmak istediğiniz .cab dosyalarını seçin.  
 4.  İçeri aktarılan yapılandırma verilerinin Configuration Manager konsolunda düzenlenebilir olmasını istiyorsanız **içeri aktarılan yapılandırma temelleri ve yapılandırma öğelerinin yeni bir kopyasını oluştur** onay kutusunu seçin.  

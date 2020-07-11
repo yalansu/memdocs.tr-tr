@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: c9a06e1b7c14cda02a8029925785c2109ea4204b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: f9f4e1ffe8b28efda0f59e6a252f39c95e2b7749
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712354"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240125"
 ---
 # <a name="remote-connection-profiles-in-configuration-manager"></a>Configuration Manager uzak bağlantı profilleri
 
@@ -37,10 +37,10 @@ Configuration Manager, **uzak bilgisayar bağlantısı**olan istemcilerde bir g�
 
 - Kullanıcıların Internet 'ten bağlanmasını etkinleştirmek istiyorsanız, bir Uzak Masaüstü Ağ Geçidi sunucusu yükleyip yapılandırın. Uzak Masaüstü Ağ Geçidi sunucusunun nasıl yükleneceği ve yapılandırılacağı hakkında daha fazla bilgi için, [her yerden uzak Masaüstü Hizmetleri erişim](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere)bölümüne bakın.
 
-- İstemciler ana bilgisayar tabanlı güvenlik duvarı çalıştırıyorsa, mstsc. exe programının etkinleştirilmesi gerekir. Uzak bağlantı profilini yapılandırırken **Windows etki alanlarındaki ve özel ağlardaki bağlantılarda Windows Güvenlik Duvarı özel durumuna Izin ver**ayarını etkinleştirin. Bu ayar Configuration Manager Windows güvenlik duvarını otomatik olarak yapılandırmak için izin verir.
+- İstemciler ana bilgisayar tabanlı bir güvenlik duvarı çalıştıralıyorsa, mstsc.exe programı etkinleştirmesi gerekir. Uzak bağlantı profilini yapılandırırken **Windows etki alanlarındaki ve özel ağlardaki bağlantılarda Windows Güvenlik Duvarı özel durumuna Izin ver**ayarını etkinleştirin. Bu ayar Configuration Manager Windows güvenlik duvarını otomatik olarak yapılandırmak için izin verir.
 
     > [!TIP]
-    > Windows Güvenlik Duvarını yapılandıran Grup İlkesi ayarları Configuration Manager’da ayarladığınız yapılandırmayı geçersiz kılabilir. Windows Güvenlik Duvarı 'Nı yapılandırmak için grup ilkesi kullanıyorsanız, grup ilkesi ayarlarının mstsc. exe ' yi engellemediğinden emin olun.
+    > Windows Güvenlik Duvarını yapılandıran Grup İlkesi ayarları Configuration Manager’da ayarladığınız yapılandırmayı geçersiz kılabilir. Windows Güvenlik Duvarı 'Nı yapılandırmak için grup ilkesi kullanıyorsanız grup ilkesi ayarlarının mstsc.exe engellemediğinden emin olun.
 
     İstemciler ana bilgisayar tabanlı farklı bir güvenlik duvarını çalıştıralıyorsa, bu güvenlik duvarı bağımlılığını el ile yapılandırın.  
 
@@ -80,7 +80,7 @@ Bir Kullanıcı bir iş bilgisayarına uzaktan bağlanıyorsa, bir. wsrdp dosyas
 
         - Sunucu adı 256 karakterden uzun olamaz.
         - Büyük harf, küçük harf ve sayısal karakterler içerebilir.
-        - Bölümler arasında nokta (`.`) ve bağlantı noktasından önce iki nokta (`:`) dışında, tek özel karakterler Dash (`–`) ve alt çizgi (`_`).
+        - Bölümler arasında nokta ( `.` ) ve bağlantı noktasından önce iki nokta ( `:` ) dışında, tek özel karakterler Dash ( `–` ) ve alt çizgi ( `_` ).
         - Configuration Manager, bu değer için uluslararası bir etki alanı adının kullanımını desteklemez.
 
     - **Yalnızca ağ düzeyinde kimlik doğrulama Ile uzak masaüstü çalıştıran bilgisayarlardan bağlantıya Izin ver**: varsayılan olarak etkin, bu ayar bağlantı için ek bir güvenlik düzeyi ekler. Daha fazla bilgi için bkz. [Uzak Masaüstü erişimi verme](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#why-allow-connections-only-with-network-level-authentication).
@@ -128,7 +128,7 @@ Kullanıcı oturum açtığında, istemci profili değerlendirir.
 
 Bir cihaz, uzak bağlantı profilini dağıttığınız bir koleksiyonu bırakırsa Configuration Manager cihazdaki ayarları devre dışı bırakır. Ancak, bu işlemin düzgün bir şekilde gerçekleşmesi için en az bir yapılandırma öğesi veya sitenizdeki bir yapılandırma öğesini içeren bir yapılandırma temel çizgisi dağıtmış olmanız gerekir.
 
-### <a name="conflict-resolution"></a>Çakışma çözümleme
+### <a name="conflict-resolution"></a>Çakışma çözümü
 
 Aynı cihaza çakışan ayarlarla birden fazla uzak bağlantı profili dağıtmayın. Örneğin, aynı koleksiyona farklı ayarlarla iki profil dağıtırsınız. **Desteklendiğinde uyumsuz kuralları**düzeltmek için yalnızca bir profil dağıtımı yapılandırırsınız. Bu dağıtım, diğer profildeki ayarları geçersiz kılabilir. Configuration Manager, bu tür uzak bağlantı profili dağıtımını desteklemez.
 
@@ -160,6 +160,6 @@ Herhangi bir sekmede, **varlıklar ve uyum** çalışma alanındaki **Kullanıc�
 Configuration Manager, uzak bağlantı profilleri hakkındaki bilgileri izlemek için kullanabileceğiniz yerleşik raporlar içerir. Bu raporlar **Uyumluluk ve Ayarlar Yönetimi**rapor kategorisindedir.  
 
 > [!IMPORTANT]  
-> Uyumluluk ayarları raporlarında`%` **Cihaz filtresi** ve **Kullanıcı filtresi** parametrelerini kullanırken joker karakteri () kullanın.  
+> `%`Uyumluluk ayarları raporlarında **Cihaz filtresi** ve **Kullanıcı filtresi** parametrelerini kullanırken joker karakteri () kullanın.  
 
 Configuration Manager raporlamayı yapılandırma hakkında daha fazla bilgi için bkz. [raporlamaya giriş](../../core/servers/manage/introduction-to-reporting.md).  

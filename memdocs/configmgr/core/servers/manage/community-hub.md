@@ -2,7 +2,7 @@
 title: Topluluk hub 'ı ve GitHub
 titleSuffix: Configuration Manager
 description: Configuration Manager 'de topluluk hub 'ını etkinleştirme ve kullanma
-ms.date: 06/12/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e0ef065cce691ce6f0b251d70ea8c4bd08904071
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: 8aadc391c5c0b259ab1a1736f3654f25b98dbae0
+ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740801"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86236418"
 ---
 # <a name="community-hub-and-github"></a>Topluluk hub 'ı ve GitHub
 <!--3555935, 3555936-->
@@ -28,13 +28,15 @@ BT Yöneticisi topluluğu, yıllar boyunca çok fazla bilgi geliştirmiştir. Ko
 ## <a name="about-community-hub"></a>Topluluk Merkezi hakkında
 
 Topluluk hub 'ı aşağıdaki nesneleri destekler:
+
+- CMPivot sorguları
+- Uygulamalar
+- Görev dizileri
+- Yapılandırma öğeleri
 - PowerShell Betikleri
 - Raporlar
-- Görev dizileri
-- Uygulamalar
-- Yapılandırma öğeleri  
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Topluluk hub 'ına erişmek için kullanılan Configuration Manager konsolunu çalıştıran cihaz aşağıdaki öğelere ihtiyaç duyuyor:
    - .NET Framework sürüm 4,6 veya üzeri

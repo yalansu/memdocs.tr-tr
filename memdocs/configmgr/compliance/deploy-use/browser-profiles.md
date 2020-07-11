@@ -2,20 +2,20 @@
 title: Microsoft Edge ayarlarını yapılandırma
 titleSuffix: Configuration Manager
 description: Windows 10 istemcilerinde Microsoft Edge eski Web tarayıcısının ayarlarını yapılandırma
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 06/02/2020
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 898d5240046655ca3d13037f74c92e730ab1993e
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: 57eb9bbaed39ec463afc00d12202a9829729a086
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506154"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240555"
 ---
 # <a name="configure-microsoft-edge-legacy-settings-in-configuration-manager"></a>Configuration Manager 'de Microsoft Edge eski ayarlarını yapılandırma
 

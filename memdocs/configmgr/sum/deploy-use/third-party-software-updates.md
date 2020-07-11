@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f5461f888bfa2b749061eef4000f0d7c5f756b84
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2f5aa622ca5d98f2cb5eb0b0c3154625df11a42e
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906740"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240771"
 ---
 # <a name="enable-third-party-updates"></a>Üçüncü taraf güncelleştirmelerini etkinleştirme 
 
@@ -27,7 +27,7 @@ Sürüm 1806 ' den başlayarak, Configuration Manager konsolundaki **üçüncü 
 > Configuration Manager Bu özelliği varsayılan olarak etkinleştirmez. Kullanmadan önce, **istemcilerde üçüncü taraf güncelleştirme desteğini etkinleştirmek**için isteğe bağlı özelliği etkinleştirin. Daha fazla bilgi için, bkz. [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
 
 
-## <a name="prerequisites"></a>Ön koşullar 
+## <a name="prerequisites"></a>Önkoşullar 
 - Üçüncü taraf yazılım güncelleştirmeleri için kaynak ikili içeriğini depolamak üzere en üst düzey yazılım güncelleştirme noktasının sunucusundaki WSUSContent klasöründe yeterli disk alanı.
     - Gerekli depolama alanı, satıcıya, güncelleştirme türlerine ve dağıtım için yayımladığınız belirli güncelleştirmelere göre farklılık gösterir.
     - Sunucusundaki WSUSContent klasörünü daha fazla boş alana sahip başka bir sürücüye taşımanız gerekiyorsa, [WSUS tarafından güncelleştirmelerin yerel olarak nasıl değiştirileceği](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally) blog gönderisine bakın.
@@ -35,6 +35,7 @@ Sürüm 1806 ' den başlayarak, Configuration Manager konsolundaki **üçüncü 
     - İş ortağı katalogları listesi için HTTPS bağlantı noktası 443 üzerinden download.microsoft.com gerekir. 
     -  Üçüncü taraf kataloglara Internet erişimi ve içerik dosyalarını güncelleştirme. 443 dışındaki ek bağlantı noktaları gerekebilir.
     - Üçüncü taraf güncelleştirmeleri, SUP ile aynı proxy ayarlarını kullanır.
+- 1910 ' dan önceki Configuration Manager sürümler için, **Yazılım Güncelleştirme Yöneticisi** güvenlik rolü üçüncü taraf katalogları eşitleyemez. Katalogları eşitlemek için **tam yönetici** güvenlik rolüne sahip olmanız gerekir.
 
 
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>Üst düzey site sunucusundan SUP uzakta olduğunda ek gereksinimler 
@@ -239,7 +240,7 @@ Artık üçüncü taraf güncelleştirme kataloglarının eşitlenmesi üzerinde
 
 ## <a name="status-messages"></a>Durum iletileri
 
-| Ileti       | Severity           | Açıklama | Olası nedeni| Olası çözüm
+| Ileti       | Önem Derecesi           | Açıklama | Olası nedeni| Olası çözüm
 | ------------- |-------------| -----|----|----|
 | 11516     | Hata |İçerik imzasız olduğundan "güncelleştirme KIMLIĞI" güncelleştirmesi için içerik yayımlanamadı.  Yalnızca geçerli imzalara sahip içerikler yayımlanabilir.  |Configuration Manager, imzasız güncelleştirmelerin yayımlanmasına izin vermez.| Güncelleştirmeyi alternatif bir şekilde yayımlayın. </br></br>Satıcıdan imzalı bir güncelleştirme olup olmadığını görün.|
 | 11523  | Uyarı |  "X" kataloğunda içerik imzalama sertifikaları yoktur, içerik imzalama sertifikaları eklenip onaylanana kadar bu katalogdan güncelleştirme içeriğini yayımlama girişimleri başarısız olabilir. | Bu ileti, cab dosya biçiminin eski bir sürümünü kullanan bir kataloğu içeri aktardığınızda oluşabilir.|İçerik imzalama sertifikalarını içeren güncelleştirilmiş bir katalog almak için Katalog sağlayıcısına başvurun. </br> </br> İkili dosyalar için sertifikalar cab dosyasına dahil edilmez, bu nedenle içerik yayımlayamayacak. **Sertifika düğümündeki sertifikayı** bularak, onun engellemesini kaldırarak ve güncelleştirmeyi yeniden yayımlayarak bu soruna geçici bir çözüm bulabilirsiniz. Farklı sertifikalarla imzalanmış birden çok güncelleştirme yayımlıyorsanız, kullanılan her bir sertifikanın engellemesini kaldırmanız gerekir.|

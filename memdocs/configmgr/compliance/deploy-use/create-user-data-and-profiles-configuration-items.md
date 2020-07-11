@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 9fcbcc81-cd6f-496e-b075-ef1afa2b8ccc
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 2a99384772895ff2675ade671076163b74cecee2
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.author: mstewart
+ms.openlocfilehash: 51c97ae3cd947e0bdfa82c595cb6446351412d21
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075311"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240380"
 ---
 # <a name="create-user-data-and-profiles-configuration-items-in-configuration-manager"></a>Configuration Manager 'da Kullanıcı verileri ve profilleri yapılandırma öğeleri oluşturma
 
@@ -37,7 +37,7 @@ Configuration Manager içindeki kullanıcı verileri ve profilleri yapılandırm
 ## <a name="enable-user-data-and-profiles-for-compliance-settings"></a>Uyumluluk ayarları için kullanıcı verileri ve profillerini etkinleştirme  
  Kullanıcı verileri ve profilleri uyumluluk ayarları için hiyerarşinizdeki tüm bilgisayarlara uygulanacak varsayılan istemci ayarını yapılandırmak üzere aşağıdaki yordamı kullanın. Bu ayarın yalnızca bazı bilgisayarlara uygulanmasını istiyorsanız özel bir cihaz istemci ayarı oluşturun ve kullanıcı verileri ve profilleri uyumluluk ayarlarını kullanmak istediğiniz bilgisayarları içeren bir koleksiyona atayın. Özel cihaz ayarları oluşturma hakkında daha fazla bilgi için bkz. [istemci ayarlarını yapılandırma](../../core/clients/deploy/configure-client-settings.md).  
 
-1.  Configuration Manager konsolunda, **Yönetim** > **istemci ayarları** > **varsayılan ayarlar**' a tıklayın.  
+1.  Configuration Manager konsolunda, **Yönetim**  >  **istemci ayarları**  >  **varsayılan ayarlar**' a tıklayın.  
 
 4.  **Giriş** sekmesinde, **Özellikler** grubunda, **Özellikler**'e tıklayın.  
 
@@ -49,7 +49,7 @@ Configuration Manager içindeki kullanıcı verileri ve profilleri yapılandırm
 
 ## <a name="create-a-user-data-and-profiles-configuration-item"></a>Kullanıcı verileri ve profilleri yapılandırma öğesi oluşturma  
 
-1. Configuration Manager konsolunda, **varlıklar ve uyumluluk** > **uyumluluğu ayarları** > **Kullanıcı verileri ve profiller**' e tıklayın.  
+1. Configuration Manager konsolunda, **varlıklar ve uyumluluk**  >  **uyumluluğu ayarları**  >  **Kullanıcı verileri ve profiller**' e tıklayın.  
 
 2. **Giriş** sekmesindeki **Oluştur** grubundaki **Kullanıcı Verileri ve Profilleri Yapılandırma Öğesi Oluştur**'a tıklayın.  
 
@@ -86,7 +86,7 @@ Configuration Manager içindeki kullanıcı verileri ve profilleri yapılandırm
 
 ## <a name="deploy-a-user-data-and-profiles-configuration-item"></a>Kullanıcı verileri ve profilleri yapılandırma öğesi dağıtma  
 
-1.  Configuration Manager konsolunda, **varlıklar ve uyumluluk** > **uyumluluğu ayarları** > **Kullanıcı verileri ve profiller**' e tıklayın.  
+1.  Configuration Manager konsolunda, **varlıklar ve uyumluluk**  >  **uyumluluğu ayarları**  >  **Kullanıcı verileri ve profiller**' e tıklayın.  
 
 3.  Dağıtmak istediğiniz kullanıcı verileri ve profilleri yapılandırma öğesini seçtikten sonra **Giriş** sekmesindeki **Dağıtım** grubunda **Dağıt**'a tıklayın.  
 

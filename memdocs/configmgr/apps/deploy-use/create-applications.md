@@ -2,7 +2,7 @@
 title: Uygulama oluşturma
 titleSuffix: Configuration Manager
 description: Yazılım yüklemeye yönelik dağıtım türleri, algılama yöntemleri ve gereksinimlere sahip uygulamalar oluşturun.
-ms.date: 04/01/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 33a95ae78fdc80c6c08b59cfe5ec5b2e88485a8f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 60ca31b73e31ea59b7a854f87262be7fdc4ab5c5
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074665"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240346"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Configuration Manager uygulamalar oluşturma
 
@@ -63,10 +63,10 @@ Ardından, uygulama bilgilerini otomatik olarak algıla veya el ile belirt:
 
 2. **Tür** açılan listesinde, uygulama bilgilerini algılamak için kullanmak istediğiniz uygulama yükleme dosya türünü seçin. Kullanılabilir yükleme türleri hakkında daha fazla bilgi için bkz. [Configuration Manager tarafından desteklenen dağıtım türleri](create-applications.md#bkmk_deploy-types).  
 
-3. **Konum** kutusunda, uygulama bilgilerini algılamak için kullanmak istediğiniz uygulama yükleme dosyasını belirtin. Bu konum bir ağ yolu (`\\server\share\filename`) veya bir depolama bağlantısı. Ağ yoluna ve uygulama içeriği içeren tüm alt klasörlere erişiminizin olması gerekir.  
+3. **Konum** kutusunda, uygulama bilgilerini algılamak için kullanmak istediğiniz uygulama yükleme dosyasını belirtin. Bu konum bir ağ yolu ( `\\server\share\filename` ) veya bir depolama bağlantısı. Ağ yoluna ve uygulama içeriği içeren tüm alt klasörlere erişiminizin olması gerekir.  
 
     > [!IMPORTANT]  
-    > Uygulama türü olarak **Windows Installer (\*. msi dosyası)** seçeneğini belirlediğinizde, site belirtilen klasördeki tüm dosyaları içeri aktarır. Daha sonra bu dosyaları dağıtım noktalarına gönderir. Belirtilen klasörün yalnızca uygulamayı yüklemek için gerekli dosyaları içerdiğinden emin olun. Microsoft Test Configuration Manager uygulama paketindeki en fazla 20.000 dosyayı destekler. Uygulamanızda daha fazla dosya varsa, daha az dosya içeren birden çok uygulama oluşturmayı göz önünde bulundurun.  
+    > Uygulama türü olarak **Windows Installer ( \* . msi dosyası)** seçeneğini belirlediğinizde, site belirtilen klasördeki tüm dosyaları içeri aktarır. Daha sonra bu dosyaları dağıtım noktalarına gönderir. Belirtilen klasörün yalnızca uygulamayı yüklemek için gerekli dosyaları içerdiğinden emin olun. Microsoft Test Configuration Manager uygulama paketindeki en fazla 20.000 dosyayı destekler. Uygulamanızda daha fazla dosya varsa, daha az dosya içeren birden çok uygulama oluşturmayı göz önünde bulundurun.  
 
 4. Uygulama oluşturma Sihirbazı 'nın **bilgileri Içeri aktar** sayfasında, bilgileri gözden geçirin ve ardından **İleri**' yi seçin. Gerekirse, geri dönüp hataları onarmak için **önceki** ' ni seçin.  
 
@@ -193,7 +193,7 @@ Ardından, dağıtım türü bilgilerini [otomatik olarak tanımlamak](#bkmk_aut
 
     2. **Bu dağıtım türü ile ilgili bilgileri yükleme dosyalarından otomatik olarak tanımla**' yı seçin.  
 
-    3. **Konum** kutusunda, dağıtım türü bilgilerini algılamak için kullanmak istediğiniz uygulama yükleme dosyasını belirtin. Bu konum bir ağ yolu (`\\server\share\filename`) veya bir depolama bağlantısı. Ağ yoluna ve uygulama içeriği içeren tüm alt klasörlere erişiminizin olması gerekir.  
+    3. **Konum** kutusunda, dağıtım türü bilgilerini algılamak için kullanmak istediğiniz uygulama yükleme dosyasını belirtin. Bu konum bir ağ yolu ( `\\server\share\filename` ) veya bir depolama bağlantısı. Ağ yoluna ve uygulama içeriği içeren tüm alt klasörlere erişiminizin olması gerekir.  
 
 2. Dağıtım türü oluşturma Sihirbazı 'nın **bilgileri Içeri aktar** sayfasında, bilgileri gözden geçirin ve ardından **İleri**' yi seçin. Gerekirse, geri dönüp hataları onarmak için **önceki** ' ni seçin.  
 
@@ -311,7 +311,7 @@ Bu yordam, dağıtım türünün varlığını gösteren bir algılama yöntemi 
 
         - **Dosya veya klasör adı** (gerekli): yukarıdaki yolda tespit edilecek belirli dosya veya klasör adını belirtin. İstemci cihazda bu dosyayı veya klasörü algılarsa, uygulamayı cihazda yüklü olarak kabul eder.  
 
-        - **Bu dosya veya klasör 64 bit sistemlerde 32 bitlik bir uygulamayla ilişkili**: Bu seçenek varsayılan olarak seçilidir. İstemci önce belirtilen dosya veya klasör için 32 bitlik dosya konumlarını kontrol eder. Dosya veya klasör bulunmazsa istemci, 64 bit konumları arar.  
+        - **Bu dosya veya klasör 64 bit sistemlerde 32 bitlik bir uygulamayla ilişkili**: istemci, belirtilen dosya veya klasör için ilk olarak 32-bit dosya konumlarını denetler. Dosya veya klasör bulunmazsa istemci, 64 bit konumları arar.  
 
     - **Kayıt defteri**: belirtilen bir kayıt defteri anahtarı veya kayıt defteri değerinin bir istemci cihazında mevcut olup olmadığını algıla. Bu algılama, uygulamanın yüklü olduğunu gösterir. Aşağıdaki ek ayrıntıları belirtin:  
 
@@ -343,7 +343,7 @@ Dağıtım türü için birden fazla algılama yöntemi oluşturduğunuzda, daha
     |------------|----|------------------|-----|
     |            |    | MSI ürün kodu |     |
     | Veya         | (  | FILE1. Text var|     |
-    | And        |    | dosya2. txt var | )   |
+    | And        |    | file2.txt var | )   |
 
 3. Grubu kaldırmak için gruplanmış yan tümceleri seçin ve ardından **Grubu Çöz**' ü seçin.  
 
@@ -540,7 +540,7 @@ Configuration Manager, dağıtım türünü yüklemeden önce cihazlarda bu gere
 
 3. **Koşul** açılan listesinden, kullanıcının veya cihazın yükleme gereksinimlerini karşılayıp karşılamadığını değerlendirmek için koşulu seçin. Bu listenin içeriği, seçilen kategoriye göre değişir.  
 
-4. **İşleç** açılan listesinden kullanılacak işleci seçin. Bu işleç, seçilen koşulu belirtilen değerle karşılaştırır. Kullanıcı veya cihazın yükleme gereksinimini karşılayıp karşılamadığını değerlendirir. Kullanılabilir operatörler, seçilen koşula bağlı olarak farklılık gösterir.  
+4. **İşleç** açılan listesinden kullanılacak işleci seçin. Bu işleç, seçilen koşulu belirtilen değerle karşılaştırır. Kullanıcı veya cihazın yükleme gereksinimini karşılayıp karşılamadığını değerlendirir. Kullanılabilir operatörler, seçilen koşula bağlı olarak farklılık gösterir. `One Of`İşleci kullanılırken, Values alanı her satır için bir giriş girmeniz gerektiğini doğrulamaya sahiptir.
 
     > [!Note]  
     > Kullanılabilir gereksinimler, dağıtım türünün kullandığı cihaz türüne bağlı olarak farklılık gösterir.  
@@ -587,7 +587,7 @@ Dağıtım türü tamamlandıktan sonra davranışları denetlemek için dönü�
 
 1. Dağıtım türü Özellikler penceresinin **dönüş kodları** sekmesinde **Ekle**' yi seçin.  
 
-2. Dönüş kodu Ekle penceresinde, bu dağıtım türünden bekleeceğiniz **dönüş kodu değerini** belirtin. Bu değer, ve `-2147483648` `2147483647`arasında herhangi bir pozitif veya negatif bir tamsayıdır.  
+2. Dönüş kodu Ekle penceresinde, bu dağıtım türünden bekleeceğiniz **dönüş kodu değerini** belirtin. Bu değer, ve arasında herhangi bir pozitif veya negatif bir tamsayıdır `-2147483648` `2147483647` .  
 
 3. Açılan listeden bir **kod türü** seçin. Bu ayar Configuration Manager, belirtilen dönüş kodunu bu dağıtım türünden nasıl yorumlayacağını tanımlar. Kullanılabilir türler, dağıtım türü teknolojisine göre farklılık gösterir.  
 
@@ -607,13 +607,13 @@ Dağıtım türü tamamlandıktan sonra davranışları denetlemek için dönü�
 
 #### <a name="example-non-zero-success"></a>Örnek: sıfır olmayan başarılı
 
-Başarılı bir şekilde yüklediğinde çıkış kodu `1` döndüren bir uygulama dağıtuyoruz. Varsayılan olarak, Configuration Manager sıfır olmayan geri dönüş kodunu hata olarak algılar. Dönüş kodu değerini `1`belirtin ve başarı kod türünü seçin **(yeniden başlatma yok)**. Şimdi Configuration Manager Bu dağıtım türü için bir başarı olarak döndürülen kodu yorumlar.
+Başarılı bir şekilde yüklediğinde çıkış kodu döndüren bir uygulama dağıtuyoruz `1` . Varsayılan olarak, Configuration Manager sıfır olmayan geri dönüş kodunu hata olarak algılar. Dönüş kodu değerini belirtin `1` ve başarı kod türünü seçin **(yeniden başlatma yok)**. Şimdi Configuration Manager Bu dağıtım türü için bir başarı olarak döndürülen kodu yorumlar.
 
 #### <a name="default-return-codes"></a>Varsayılan dönüş kodları
 
 Bazı dağıtım türleri oluşturduğunuzda Configuration Manager, bu teknolojide ortak olan aşağıdaki dönüş kodlarını otomatik olarak ekler:  
 
-##### <a name="windows-installer-msi-file"></a>Windows Installer (\*. msi dosyası)
+##### <a name="windows-installer-msi-file"></a>Windows Installer ( \* . msi dosyası)
 
 |Değer    |Kod türü|
 |---------|---------|
@@ -632,7 +632,7 @@ Bazı dağıtım türleri oluşturduğunuzda Configuration Manager, bu teknoloji
 |3010     |Geçici yeniden başlatma|
 |1618     |Hızlı yeniden deneme|
 
-##### <a name="windows-app-package-appx-appxbundle-msix-msixbundle"></a>Windows uygulama paketi (\*. appx, \*. appxdemeti, \*. msix, \*. msixdemeti)
+##### <a name="windows-app-package-appx-appxbundle-msix-msixbundle"></a>Windows uygulama paketi ( \* . appx, \* . appxdemeti, \* . msix, \* . msixdemeti)
 
 |Değer    |Kod türü|
 |---------|---------|
@@ -698,17 +698,17 @@ Configuration Manager, uygulamalar için aşağıdaki dağıtım türlerini dest
 
 | Dağıtım türü adı | Açıklama |
 |--------------------------|----------------------|  
-| **Windows Installer (\*. msi dosyası)** | Bir Windows Installer dosyası. |  
-| **Windows uygulama paketi (\*. appx, \*. appxdemeti, \*. msix, \*. msixdemeti)** | Bir Windows uygulama paketi dosyası (. appx), bir Windows uygulama paketi paketi (. appxdemeti), bir Windows 10 uygulama paketi (. maltı) veya Windows 10 uygulama paketi (. msixdemeti).<!--1357427--> |  
+| **Windows Installer ( \* . msi dosyası)** | Bir Windows Installer dosyası. |  
+| **Windows uygulama paketi ( \* . appx, \* . appxdemeti, \* . msix, \* . msixdemeti)** | Bir Windows uygulama paketi dosyası (. appx), bir Windows uygulama paketi paketi (. appxdemeti), bir Windows 10 uygulama paketi (. maltı) veya Windows 10 uygulama paketi (. msixdemeti).<!--1357427--> |  
 | **Windows uygulama paketi (Windows Mağazası'nda)** | Windows Mağazası 'nda uygulamanın bağlantısını belirtin veya uygulamayı seçmek için mağazaya göz atabilirsiniz.<sup>[1. nota](#bkmk_note1)</sup> |  
-| **Betik Yükleyici** | İçerik yüklemek veya bir eylem yapmak için Windows istemcilerinde çalışan bir betik veya program belirtin. Setup. exe yükleyicileri veya betik sarmalayıcıları için bu dağıtım türünü kullanın. |  
+| **Betik Yükleyici** | İçerik yüklemek veya bir eylem yapmak için Windows istemcilerinde çalışan bir betik veya program belirtin. setup.exe yükleyicileri veya betik sarmalayıcıları için bu dağıtım türünü kullanın. |  
 | **Microsoft Application Virtualization 4** | Bir Microsoft App-V v4 bildirimi. |  
 | **Microsoft Application Virtualization 5** | Bir Microsoft App-V v5 paket dosyası. |  
-| **Windows Phone uygulama paketi (\*. xap dosyası)** | Windows Phone uygulama paketi dosyası. |  
+| **Windows Phone uygulama paketi ( \* . xap dosyası)** | Windows Phone uygulama paketi dosyası. |  
 | **Windows Phone uygulama paketi (Windows Phone Mağazası'nda)** | Windows Mağazası 'nda uygulamanın bağlantısını belirtin. |  
 | **Mac OS X** | Configuration Manager istemcisini çalıştıran macOS bilgisayarları için. **CMAppUtil** aracıyla bir. cmmac dosyası oluşturun. |  
 | **Web uygulaması** | Bir Web uygulamasının bağlantısını belirtin. Bu dağıtım türü, kullanıcının cihazında Web uygulamasına bir kısayol yüklüyor. |  
-| **MDM (\*. msi) üzerinden Windows Installer** | Windows 10 cihazlarına Windows Installer tabanlı uygulamalar oluşturun ve dağıtın. Daha fazla bilgi için bkz. [MDM 'ye kayıtlı Windows 10 cihazlarına Windows Installer uygulamaları dağıtma](../get-started/creating-windows-applications.md#bkmk_mdm-msi). |
+| **MDM ( \* . msi) üzerinden Windows Installer** | Windows 10 cihazlarına Windows Installer tabanlı uygulamalar oluşturun ve dağıtın. Daha fazla bilgi için bkz. [MDM 'ye kayıtlı Windows 10 cihazlarına Windows Installer uygulamaları dağıtma](../get-started/creating-windows-applications.md#bkmk_mdm-msi). |
 | **Görev dizisi** | Sürüm 2002 ' den başlayarak, görev dizilerini kullanarak karmaşık uygulamaları yükleme veya kaldırma. Daha fazla bilgi için bkz. [görev dizisi dağıtım türü](../get-started/creating-windows-applications.md#bkmk_tsdt). <!--3555953--> |
 
 > [!NOTE]

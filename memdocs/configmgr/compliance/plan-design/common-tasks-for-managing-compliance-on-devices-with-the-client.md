@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 4e345791-74db-41ad-b472-024ce6521daf
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 1ccb0f0a042a0dd82817e030f96bbbc729e752f0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 5920229331bca8d2a47b0bf1ab663530ef63c51e
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712179"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240669"
 ---
 # <a name="common-tasks-for-managing-compliance-on-devices-with-the-configuration-manager-client"></a>Configuration Manager istemcisiyle cihazlarda uyumluluğu yönetmeye yönelik ortak görevler
 
@@ -30,7 +30,7 @@ Bu makalede, içinde karşılaşabileceğiniz bazı yaygın senaryolarda size re
 ## <a name="general-information-for-each-scenario"></a>Her senaryo için genel bilgiler  
  Her senaryoda belirli bir görevi gerçekleştiren bir yapılandırma öğesi oluşturacaksınız. Yapılandırma öğesi oluşturma Sihirbazı 'Nı açmak ve kullanmaya başlamak için şu adımları uygulayın:  
 
-1.  Configuration Manager konsolunda, **varlıklar ve uyumluluk** > **Uyumluluk ayarları** > **yapılandırma öğeleri**' ni seçin.  
+1.  Configuration Manager konsolunda, **varlıklar ve uyumluluk**  >  **Uyumluluk ayarları**  >  **yapılandırma öğeleri**' ni seçin.  
 
 1.  **Giriş** sekmesinde, **Oluştur** grubunda, **yapılandırma öğesi oluştur**' u seçin.  
 
@@ -77,25 +77,25 @@ Bu makalede, içinde karşılaşabileceğiniz bazı yaygın senaryolarda size re
 
 4. **Ayar oluştur** Iletişim kutusunun **genel** sekmesinde şu ayarları yapılandırın:  
 
-   -   **Ad** > **örnek ayarı**  
+   -   **Ad**  >  **Örnek ayar**  
 
-   -   **Ayar türü** > **kayıt defteri değeri**  
+   -   **Ayar türü**  >  **Kayıt defteri değeri**  
 
-   -   **Veri türü** > **tamsayı** (değer yalnızca bir sayı içerdiği için)  
+   -   **Veri türü**  >  **Tamsayı** (değer yalnızca bir sayı içerdiği için)  
 
-   -   **Hive** > **HKEY_LOCAL_MACHINE**  
+   -   **Hive**  >  **HKEY_LOCAL_MACHINE**  
 
-   -   **Anahtar** > **software\woodgrove\lob App\Configuration\Configuration1**  
+   -   **Anahtar**  >  **Software\woodgrove\lob App\Configuration\Configuration1**  
 
-   -   **Değer** > **1** (gerekli değer)  
+   -   **Değer**  >  **1** (gerekli değer)  
 
 5. **Ayar oluştur** Iletişim kutusunun **Uyumluluk kuralları** sekmesinde **Yeni**' yi seçin. **Kural oluştur** iletişim kutusunda şu ayarları yapılandırın:  
 
-   -   **Ad** > **örnek kuralı**  
+   -   **Ad**  >  **Örnek kural**  
 
    -   **Seçili ayar > seçili** ayarın **örnek ayar**olduğunu doğrulayın.
 
-   -   **Kural türü** > **değeri**  
+   -   **Kural türü**  >  **Değer**  
 
    -   Ayar, ayar adının doğru olduğundan emin olmak için **aşağıdaki kurala uymalıdır** > ve ayar değerinin **1**' e eşit olması gerektiğini belirtmek için seçeneğini yapılandırın.  
 
