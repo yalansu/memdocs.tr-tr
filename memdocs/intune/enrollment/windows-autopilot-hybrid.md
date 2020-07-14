@@ -18,24 +18,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be9a4257fec357c3dc124318fda98807df6c26b7
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: c26af63691fc4b198d308f39a7c1cc0d719933cb
+ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093484"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86285309"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Intune ve Windows Autopilot kullanarak karma Azure AD 'ye katılmış cihazları dağıtma
 Karma Azure Active Directory (Azure AD) ile birleştirilmiş cihazları ayarlamak için Intune ve Windows Autopilot kullanabilirsiniz. Bunu yapmak için bu makaledeki adımları izleyin.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 [Hibrit Azure AD 'ye katılmış cihazlarınız](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)başarıyla yapılandırılır. Get-MsolDevice cmdlet 'ini kullanarak [cihaz kaydınızı doğruladığınızdan](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) emin olun.
 
 Kaydedilecek cihazlar ayrıca:
 - Windows 10 v1809 veya üstünü çalıştırıyor olun.
 - [Belgelenen Windows Autopilot Network gereksinimlerini izleyerek](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements)internet erişimi vardır.
-- Bir Active Directory etki alanı denetleyicisine erişiminiz olduğundan, kuruluşun ağına bağlanması gerekir (burada, AD etki alanı ve AD etki alanı denetleyicisi için DNS kayıtlarını çözümleyebilir ve kullanıcının kimliğini doğrulamak için etki alanı denetleyicisiyle iletişim kurabilir). VPN bağlantısı şu anda desteklenmiyor).
+- Bir Active Directory etki alanı denetleyicisine erişiminiz olduğundan, kuruluşun ağına bağlanması gerekir (burada, AD etki alanı ve AD etki alanı denetleyicisi için DNS kayıtlarını çözümleyebilir ve kullanıcının kimliğini doğrulamak için etki alanı denetleyicisiyle iletişim kurabilir).
 - Katılmayı denediğiniz etki alanının etki alanı denetleyicisine ping atabiliyor.
 - Proxy kullanılıyorsa, WPAD proxy ayarları seçeneğinin etkinleştirilmesi ve yapılandırılması gerekir.
 - Kullanıma hazır deneyimin (OOBE) altına gidin.
@@ -147,7 +147,7 @@ Ağ ortamınızda bir Web proxy 'niz varsa, Active Directory Intune bağlayıcı
     
 1. **Kaydet**’i seçin.
 
-1. **Oluştur**'u seçin.  
+1. **Create**'i (Oluştur) seçin.  
 
 ## <a name="register-your-autopilot-devices"></a>Autopilot cihazlarınızı kaydetme
 

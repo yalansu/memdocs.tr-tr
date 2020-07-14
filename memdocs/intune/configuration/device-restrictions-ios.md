@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/08/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2a0e211a5cea6296f944cda517ecb6fd591291b8
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: d2c3e663b7bc5dfb263d8caad0a7c21d89ed2a93
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137411"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303445"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için iOS ve ıpados cihaz ayarları
 
@@ -418,7 +418,7 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 - **Kısıtlanmış uygulamalar listesi türü**: Kullanıcıların yüklemesine veya kullanmasına izin verilmeyen uygulamaların bir listesini oluşturun. Seçenekleriniz şunlardır:
 
   - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi atadığınız uygulamalara ve yerleşik uygulamalara erişime izin verebilir.
-  - **Yasaklanmış uygulamalar**: Kullanıcıların yüklemesine ve çalıştırmasına izin verilmeyen uygulamaları (Intune tarafından yönetilmeyen) listeleyin. Kullanıcıların yasaklanmış bir uygulamayı yüklemesi engellenmiyor. Bir Kullanıcı bu listeden bir uygulama yüklerse Intune 'da raporlanır.
+  - **Yasaklanmış uygulamalar**: Kullanıcıların yüklemesine ve çalıştırmasına izin verilmeyen uygulamaları (Intune tarafından yönetilmeyen) listeleyin. Kullanıcıların yasaklanmış bir uygulamayı yüklemesi engellenmiyor. Bir Kullanıcı bu listeden bir uygulama yüklerse cihaz, **Kısıtlanmış uygulamalar içeren cihazlarda** raporlanır ([Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **cihazları**,  >  **Monitor**  >  **kısıtlı uygulamalarla cihazları**izler). 
   - **Onaylanan uygulamalar**: Kullanıcıların yüklemesine izin verilen uygulamaları listeleyin. Uyumluluğun korunması için kullanıcılar diğer uygulamaları yüklememelidir. Şirket Portalı uygulaması da dahil olmak üzere Intune tarafından yönetilen uygulamalara otomatik olarak izin verilir. Kullanıcıların onaylı uygulamalar listesinde olmayan bir uygulamayı yüklenmesi engellenmez. Ancak bunu yaptıysanız Intune 'da raporlanır.
 
 Bu listelere uygulama eklemek için şunları yapabilirsiniz:
@@ -623,15 +623,17 @@ Uygulamaları eklemek için şunları yapabilirsiniz:
 
 İOS/ıpados cihazlarını, otonom tek uygulama modunda (ASAM) belirli uygulamaları çalıştıracak şekilde yapılandırmak için bu ayarları kullanın. Bu mod yapılandırıldığında ve kullanıcılar yapılandırılmış uygulamalardan birini başlatdıklarında, cihaz bu uygulamaya kilitlenir. Uygulama/görev değiştirme, kullanıcılar izin verilen uygulamadan çıkana kadar devre dışı bırakıldı.
 
+ASAM yapılandırmasının uygulanabilmesi için, kullanıcıların belirli uygulamayı el ile açması gerekir. Bu görev Şirket Portalı uygulaması için de geçerlidir.
+
 - Örneğin, okul veya üniversite ortamında, kullanıcıların cihazda bir test geçirmesine imkan tanıyan bir uygulama ekleyin. Ya da, Kullanıcı kimlik doğrulamasından çıkana kadar cihazı Şirket Portalı uygulamasına kilitleyin. Uygulamalar eylemleri kullanıcılar tarafından tamamlandığında veya bu ilkeyi kaldırdığınızda cihaz normal durumuna geri döner.
 
 - Tüm uygulamalar otonom tek uygulama modunu desteklemez. Bir uygulamayı otonom tek uygulama modunda yerleştirmek için, bir paket KIMLIĞI veya bir uygulama yapılandırma ilkesi tarafından teslim edilen anahtar değer çifti genellikle gereklidir. Daha fazla bilgi için Apple MDM belgelerindeki [ `autonomousSingleAppModePermittedAppIDs` kısıtlamaya](https://developer.apple.com/documentation/devicemanagement/restrictions) bakın. Yapılandırmakta olduğunuz uygulama için gereken belirli ayarlar hakkında daha fazla bilgi için satıcı belgelerine bakın.
 
   Örneğin, ölçek odalarını otonom tek uygulama modunda yapılandırmak için, yakınlaştırma paket KIMLIĞINI kullanmak üzere diyor `us.zoom.zpcontroller` . Bu örnekte, yakınlaştırma web portalında da bir değişiklik yaparsınız. Daha fazla bilgi için bkz. [zoom yardım merkezi](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
-- İOS/ıpados cihazlarında Şirket Portalı uygulaması ASAM 'yi destekler. Şirket Portalı uygulaması ASAM 'da olduğunda, Kullanıcı kimlik doğrulamasından çıkana kadar cihaz Şirket Portalı uygulamada kilitlenir. Kullanıcılar Şirket Portalı uygulamasında oturum açtıklarında, cihazdaki diğer uygulamaları ve giriş ekranı düğmesini kullanabilirler. Şirket Portalı uygulamasında oturum açtıklarında, cihaz tek uygulama moduna geri döner ve Şirket Portalı uygulamasındaki kilitler.
+- İOS/ıpados cihazlarında Şirket Portalı uygulaması ASAM 'yi destekler. Şirket Portalı uygulaması ASAM 'da olduğunda, kullanıcıların Şirket Portalı uygulamasını el ile açması gerekir. Daha sonra, Kullanıcı kimlik doğrulamasından çıkana kadar cihaz Şirket Portalı uygulamada kilitlenir. Kullanıcılar Şirket Portalı uygulamasında oturum açtıklarında, cihazdaki diğer uygulamaları ve giriş ekranı düğmesini kullanabilirler. Şirket Portalı uygulamasında oturum açtıklarında, cihaz tek uygulama moduna geri döner ve Şirket Portalı uygulamasındaki kilitler.
 
-  Şirket Portalı uygulamayı bir ' oturum aç/oturumu Kapat ' uygulamasına açmak için (ASAM 'yı etkinleştirin), `Microsoft Intune Company Portal` Bu ayarlarda, ve paket kimliği () gibi şirket portalı uygulama adını girin `com.microsoft.CompanyPortal` . Bu profil atandıktan sonra, kullanıcıların oturum açmasını ve oturumunuzu açmasını sağlamak üzere uygulamayı kilitlemek için Şirket Portalı uygulamasını açmanız gerekir.
+  Şirket Portalı uygulamayı bir ' oturum aç/oturumu Kapat ' uygulamasına açmak için (ASAM 'yı etkinleştirin), `Microsoft Intune Company Portal` Bu ayarlarda, ve paket kimliği () gibi şirket portalı uygulama adını girin `com.microsoft.CompanyPortal` . Bu profil atandıktan sonra, kullanıcıların oturum açmasını ve oturumunuzu açmasını sağlamak üzere uygulamayı kilitlemek için Şirket Portalı uygulamasını açmanız gerekir. ASAM yapılandırmasının uygulanabilmesi için, kullanıcıların Şirket Portalı uygulamasını el ile açması gerekir.
   
   Cihaz yapılandırma profili kaldırıldığında ve Kullanıcı oturumu kapattığında, cihaz Şirket Portalı uygulamasında kilitlenmez.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/30/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d5da1bcf3f36a909b513665266be1607917f1cd
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: e6304c35d93d717be13a564b5bf5dd2bdc0f84d5
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137336"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303462"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Windows 10 (ve üzeri) cihaz ayarları
 
@@ -31,7 +31,7 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve ardından W
 > [!Note]
 > Tüm Windows sürümlerinde tüm seçenekler kullanılamaz. Desteklenen sürümleri görmek için, [CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) 'lere başvurun (başka bir Microsoft Web sitesi açar).
 >  
-> Bir Windows 10 cihaz kısıtlama profilindeki yapılandırılabilir ayarların çoğu cihaz düzeyinde dağıtılır. Kullanıcı gruplarına dağıtılan ilkeler hem hedeflenen kullanıcı hem de daha sonra bu cihazda oturum açan ve Intune lisansına sahip olan diğer kullanıcılar için etkili olur.
+> Bir Windows 10 cihaz kısıtlama profilinde, yapılandırılabilir ayarların çoğu cihaz grupları kullanılarak cihaz düzeyinde dağıtılır. Kullanıcı gruplarına dağıtılan ilkeler hedeflenen kullanıcılara uygulanır ve Intune lisansına sahip kullanıcılar için geçerlidir ve bu cihazda oturum açın.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -345,7 +345,7 @@ Kullanılabilir ayarlar, seçtiğiniz seçeneğe göre değişir. Seçeneklerini
 > [!TIP]
 > Bu seçeneklerin ne yaptığı hakkında daha fazla bilgi için bkz. [Microsoft Edge bilgi noktası modu yapılandırma türleri](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
-Bu cihaz kısıtlamaları profili, [Windows bilgi noktası ayarları](kiosk-settings-windows.md)kullanılarak oluşturduğunuz bilgi noktası profiliyle doğrudan ilgilidir. Özetlersek:
+Bu cihaz kısıtlamaları profili, [Windows bilgi noktası ayarları](kiosk-settings-windows.md)kullanılarak oluşturduğunuz bilgi noktası profiliyle doğrudan ilgilidir. Özetlemek gerekirse:
 
 1. Cihazı bilgi noktası modunda çalıştırmak için [Windows bilgi noktası ayarları](kiosk-settings-windows.md) profilini oluşturun. Uygulama olarak Microsoft Edge ' i seçin ve bilgi noktası profilinde Microsoft Edge bilgi noktası modunu ayarlayın.
 2. Bu makalede açıklanan cihaz kısıtlamaları profilini oluşturun ve Microsoft Edge 'de izin verilen belirli özellikleri ve ayarları yapılandırın. Bilgi noktası profilinizde ([Windows bilgi noktası ayarları](kiosk-settings-windows.md)) seçili olan Microsoft Edge bilgi noktası modu türünü seçtiğinizden emin olun. 
@@ -677,7 +677,7 @@ Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [kablolu Lessdisplay
 
   [System/TelemetryProxy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-telemetryproxy)
 
-## <a name="search"></a>Arayın
+## <a name="search"></a>Ara
 
 Bu ayarlar, desteklenen Windows sürümlerini de listeleyen [arama ILKESI CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search)'sini kullanır.
 

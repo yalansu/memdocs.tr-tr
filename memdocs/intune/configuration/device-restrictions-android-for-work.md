@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88843cfa1c4f98d87e5eaaefdc0dcd87daf8cb68
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 7aee865b2a16ce3a9114433f9e10e185b26997f7
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093703"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303479"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Android kurumsal cihaz ayarları
 
@@ -89,7 +89,7 @@ Bu ayarlar, Intune 'un Android kurumsal tam olarak yönetilen veya adanmış cih
 
 ### <a name="device-experience"></a>Cihaz deneyimi
 
-Adanmış cihazlarınızda veya tam olarak yönetilen cihazlarda bilgi noktası stili bir deneyim yapılandırmak için bu ayarları kullanın. Cihazları tek bir uygulamayı çalıştıracak veya birçok uygulama çalıştıracak şekilde yapılandırabilirsiniz. Cihaz bilgi noktası moduyla ayarlandığında, yalnızca eklediğiniz uygulamalar kullanılabilir.
+Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak veya tam olarak yönetilen cihazlarınızda giriş ekranı deneyimlerini özelleştirmek için bu ayarları kullanın. Cihazları tek bir uygulamayı çalıştıracak veya birçok uygulama çalıştıracak şekilde yapılandırabilirsiniz. Cihaz bilgi noktası moduyla ayarlandığında, yalnızca eklediğiniz uygulamalar kullanılabilir.
 
 **Kayıt profili türü**: cihazlarınızda Microsoft başlatıcısı 'Nı veya Microsoft tarafından yönetilen giriş ekranını yapılandırmaya başlamak için bir kayıt profili türü seçin. Seçenekleriniz şunlardır:
 
