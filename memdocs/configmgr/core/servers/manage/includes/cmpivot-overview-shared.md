@@ -3,13 +3,13 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 06/05/2020
-ms.openlocfilehash: 3672127798b66d857b4a1dbd5014c02dfed8a7ee
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.date: 07/13/2020
+ms.openlocfilehash: 80302a1c369c36a08cc1a55e20cf339dbc8d2883
+ms.sourcegitcommit: 6d987bb69d0eb9955a3003202864f58d6aaa426a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84466962"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381059"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
@@ -20,7 +20,7 @@ Sorgular terimleri aramak, eğilimleri belirlemek, desenleri analiz etmek ve ver
 Aşağıdaki örnekte, varlık `CCMRecentlyUsedApplications` (son kullanılan uygulamalara bir başvurudur) ve işleci ise (kayıt başına bazı koşula göre kayıtları filtreleyerek kaydedilir):
 
 ```
-CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%'
+CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%' | project CompanyName, ExplorerFileName, LastUsedTime, LaunchCount, FolderPath
 ```
 
 ## <a name="entities"></a>Varlıklar
@@ -28,7 +28,7 @@ CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%'
 Varlıklar, istemciden sorgulanabilen nesnelerdir. Şu anda şu varlıkları destekliyoruz:
 
 
-|Varlık|Açıklama|
+|Varlık|Description|
 |---|---|
 |AadStatus|Azure Active Directory durumu|
 |Yöneticiler|Yerel Yöneticiler grubunun üyeleri|
@@ -68,7 +68,7 @@ Varlıklar, istemciden sorgulanabilen nesnelerdir. Şu anda şu varlıkları des
 |EPStatus|Bilgisayardaki kötü amaçlı yazılımdan koruma yazılımının durumu|
 |EventLog ()|Bir olay günlüğünden 24 saat içindeki olaylar (varsayılan olarak)|
 |Dosya ()|Belirli bir dosya hakkında bilgi|
-|FileShare|Etkin dosya paylaşma bilgileri|
+|Dosya Paylaşımı|Etkin dosya paylaşma bilgileri|
 |Üretici yazılımı|Üretici yazılımı|
 |Idecontroller|IDE denetleyicisi|
 |Instaltadexecutable|Yüklenen yürütülebilir|
@@ -97,7 +97,7 @@ Varlıklar, istemciden sorgulanabilen nesnelerdir. Şu anda şu varlıkları des
 |Officeproductınfo|Office ürün bilgileri|
 |Officevbarulet Ihlali|Office VBA kural Ihlali|
 |Officeveli|Office VBA tarama Özeti|
-|OperatingSystem|İşletim Sistemi|
+|OperatingSystem|Operating System|
 |OperatingSystemEx|İşletim sistemi EX|
 |OperatingSystemRecoveryConfiguration|İşletim sistemi kurtarma yapılandırması|
 |OptionalFeature|İsteğe bağlı özellik|
@@ -122,7 +122,7 @@ Varlıklar, istemciden sorgulanabilen nesnelerdir. Şu anda şu varlıkları des
 |Yazıcıyapılandırma|Yazıcı yapılandırması|
 |PrinterDevice|Yazıcı cihazı|
 |PrintJobs|Yazdırma Işleri|
-|İşleme|İşletim sisteminde bir işlem|
+|İşlem|İşletim sisteminde bir işlem|
 |ProcessModule ()|Belirtilen süreçler tarafından yüklenen modüller|
 |İşlemci|İşlemci|
 |Protectedvolumeınformation|Korumalı birim bilgileri|
@@ -165,7 +165,7 @@ Varlıklar, istemciden sorgulanabilen nesnelerdir. Şu anda şu varlıkları des
 |Kesintisiz güç kaynağı|Kesintisiz güç kaynağı|
 |USBController|USB denetleyicisi|
 |USBDevice|USB cihazı|
-|Kullanıcı|Cihaza etkin bağlantısı olan bir kullanıcı hesabı|
+|User|Cihaza etkin bağlantısı olan bir kullanıcı hesabı|
 |USMFolderRedirectionHealth|Klasör yeniden yönlendirme sistem durumu|
 |USMUserProfile|Kullanıcı profili sistem durumu|
 |VideoController|Video denetleyicisi|
@@ -181,7 +181,7 @@ Varlıklar, istemciden sorgulanabilen nesnelerdir. Şu anda şu varlıkları des
 
 Tablo işleçleri, veri akışlarını filtrelemek, özetlemek ve dönüştürmek için kullanılabilir. Şu anda aşağıdaki işleçler desteklenir:
 
-|Tablo işleçleri|Açıklama|
+|Tablo işleçleri|Description|
 |---|---|
 |count|Kayıt sayısını içeren tek bir kayıt içeren bir tablo döndürür|
 |distinct|Giriş tablosunun belirtilen sütunlarının ayrı bir birleşimini içeren bir tablo oluşturur|
@@ -189,8 +189,8 @@ Tablo işleçleri, veri akışlarını filtrelemek, özetlemek ve dönüştürme
 |sıralama ölçütü|Giriş tablosunun satırlarını bir veya daha fazla sütuna göre sıraya göre sırala|
 |proje|Dahil edilecek, yeniden adlandırılacak veya bırakılacak sütunları seçin ve yeni hesaplanmış sütunları ekleyin|
 |ölçütü|Giriş tablosunun içeriğini toplayan bir tablo oluşturur|
-|almanız|Belirtilen sayıda satıra dön|
-|üst|Belirtilen sütunlara göre sıralanan ilk N kaydı döndürür|
+|take|Belirtilen sayıda satıra dön|
+|top|Belirtilen sütunlara göre sıralanan ilk N kaydı döndürür|
 |where|Bir tabloyu bir koşula uyan satır alt kümesiyle filtreler|
 
 ## <a name="scalar-operators"></a>Skaler Işleçler
@@ -212,7 +212,7 @@ Aşağıdaki tabloda işleçler özetlenmektedir:
 |%|Mod|`2 % 1`|
 |Like|Sol taraftaki (LHS) sağ taraftaki (RHS) bir eşleşme içerir|`'abc' like '%B%'`|
 |! Beğen|LHS, RHS için eşleşme içermiyor|`'abc' !like '_d_'`|
-|içerir|RHS bir LHS alt sırası olarak gerçekleşir|`'abc' contains 'b'`|
+|contains|RHS bir LHS alt sırası olarak gerçekleşir|`'abc' contains 'b'`|
 |! Contains|LHS 'te RHS gerçekleşmiyor|`'team' !contains 'i'`|
 |StartsWith|RHS bir başlangıç alt dizisi olan LHS|`'team' startswith 'tea'`|
 |! StartsWith|RHS, LHS 'in bir başlangıç alt dizisi değildir|`'abc' !startswith 'bc'`|
@@ -265,7 +265,7 @@ Skaler işlevler ifadelerde kullanılabilir. Şu anda aşağıdaki skaler işlev
 
 |Tür|Öğe|Açıklama|
 |--|--|---|
-|Varlık|AccountSID|Hesap SID 'SI|
+|Varlık|AccountSID|Hesap SID'si|
 |Varlık|FileContent ()|Belirli bir dosyanın içeriği|
 |Varlık|NAPClient|NAP Istemcisi|
 |Varlık|NAPSystemHealthAgent|NAP sistem durumu Aracısı|

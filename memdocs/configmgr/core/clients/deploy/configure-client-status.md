@@ -2,7 +2,7 @@
 title: İstemci durumunu yapılandırma
 titleSuffix: Configuration Manager
 description: Configuration Manager istemci durumu ayarlarını seçin.
-ms.date: 04/23/2017
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,100 +10,100 @@ ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5bb77e1e9f55919a03368d549946ee4dd1cda58a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a352e53a672f7fb47416214884fe7adf0fb829cc
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713579"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384919"
 ---
 # <a name="how-to-configure-client-status-in-configuration-manager"></a>Configuration Manager istemci durumunu yapılandırma
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
-Configuration Manager istemci durumunu izleyebilmeniz ve bulunan sorunları düzeltmeden önce, sitenizi istemcileri devre dışı olarak işaretlemek için kullanılan parametreleri belirtecek şekilde yapılandırmanız ve istemci etkinliği belirtilen eşiğin altına düştüğünde sizi uyaracak seçenekleri yapılandırmanız gerekir. Ayrıca bilgisayarların, istemci durumunun bulduğu sorunları otomatik olarak yeniden çözdüğünü de devre dışı bırakabilirsiniz.  
+Configuration Manager istemcileri izleyebilmeniz ve sorunları düzeltebilmeniz için önce, sitenin istemci durumu ayarlarını yapılandırın. Bu ayarlar, sitenin istemcileri devre dışı olarak işaretlemek için kullandığı parametreleri belirtir. Ayrıca, istemci etkinliği belirtilen eşiğin altına düştüğünde sizi uyarmak için seçenekleri yapılandırın.
 
-##  <a name="to-configure-client-status"></a><a name="BKMK_1"></a>Istemci durumunu yapılandırmak için  
+## <a name="configure-client-status"></a>İstemci durumunu yapılandırma
 
-1.  Configuration Manager konsolunda, **izleme**' yi tıklatın.  
+1. Configuration Manager konsolunda, **izleme** çalışma alanına gidin ve **istemci durumu** düğümünü seçin. Şeridin **giriş** sekmesinde, **Istemci durumu** grubunda **istemci durumu ayarları**' nı seçin.
 
-2.  **İzleme** çalışma alanında **istemci durumu**' na tıklayın, ardından **giriş** sekmesinde, **istemci durumu** grubunda **istemci durumu ayarları**' na tıklayın.  
+1. Aşağıdaki ayarları yapılandırın:
 
-3.  **Istemci durumu ayarları özellikleri** iletişim kutusunda, istemci etkinliğini belirlemek için aşağıdaki değerleri belirtin:  
+    > [!NOTE]
+    > Bir istemci ayarlardan hiçbirini karşılamıyorsa, site onu etkin değil olarak işaretler.
 
-    > [!NOTE]  
-    >  Ayarlardan hiçbiri karşılanmazsa, istemci etkin değil olarak işaretlenir.  
+    - **Şu günlerde istemci ilkesi istekleri:** İstemcinin siteden ilke istemesinden itibaren geçen gün sayısını belirtin. Varsayılan değer gün değeridir `7` .
 
-    -   **Şu günlerde istemci ilkesi istekleri:** Bir istemcinin ilkeyi istemesinden itibaren geçen gün sayısını belirtin. Varsayılan değer **7** gündür.  
+      Bu değeri, istemci ayarları istemci **ilkesi** grubundaki istemci **ilkesi yoklama aralığı** ayarıyla karşılaştırın. Varsayılan değer 60 dakikadır. Diğer bir deyişle, bir istemci her saat ilke için siteyi yoklamalıdır. Bir hafta sonra ilke istemezse, site onu etkin değil olarak işaretler.
 
-    -   **Şu günlerde sinyal bulma:** İstemci bilgisayarın site veritabanına bir sinyal bulma kaydı göndermesinden itibaren geçen gün sayısını belirtin. Varsayılan değer **7** gündür.  
+    - **Şu günlerde sinyal bulma:** İstemcinin siteye bir sinyal bulma kaydı göndermesinden itibaren geçen gün sayısını belirtin. Varsayılan değer gün değeridir `7` .
 
-    -   **Şu günlerde donanım envanteri:** İstemci bilgisayarın site veritabanına donanım Envanter kaydı göndermesinden itibaren geçen gün sayısını belirtin. Varsayılan değer **7** gündür.  
+      Bu değeri [sinyal bulma yöntemi](../../servers/deploy/configure/about-discovery-methods.md)için zamanlama ile karşılaştırın. Varsayılan olarak, site sinyal bulmayı haftada bir kez çalıştırır.
 
-    -   **Şu günlerde yazılım envanteri:** İstemci bilgisayarın site veritabanına yazılım envanter kaydı göndermesinden itibaren geçen gün sayısını belirtin. Varsayılan değer **7** gündür.  
+    - **Şu günlerde donanım envanteri:** İstemcinin siteye bir donanım envanteri kaydı gönderdikten itibaren geçen gün sayısını belirtin. Varsayılan değer gün değeridir `7` .
 
-    -   **Şu günlerde durum iletileri:** İstemci bilgisayarın site veritabanına durum iletileri göndermesinden itibaren geçen gün sayısını belirtin. Varsayılan değer **7** gündür.  
+      Bu değeri, istemci ayarlarının **donanım envanteri** grubundaki **donanım envanteri zamanlama** ayarıyla karşılaştırın. Varsayılan değer yedi gündür.
 
-4.  İstemci durumu **ayarları özellikleri** iletişim kutusunda, istemci durum geçmişi verilerinin ne kadar süreyle tutulacağını belirlemek için aşağıdaki değeri belirtin:  
+    - **Şu günlerde yazılım envanteri:** İstemcinin siteye bir yazılım envanter kaydı göndermesinden itibaren geçen gün sayısını belirtin. Varsayılan değer gün değeridir `7` .
 
-    -   **İstemci durum geçmişini Şu sayıda gün boyunca sakla:** İstemci durum geçmişinin site veritabanında ne kadar süreyle kalmasını istediğinizi belirtin. Varsayılan değer **31** gündür.  
+      Bu değeri, istemci ayarlarının **yazılım envanteri** grubundaki **yazılım envanterini ve dosya toplamayı zamanla** ayarı ile karşılaştırın. Varsayılan değer yedi gündür.
 
-5.  Özellikleri kaydetmek ve **Istemci durumu ayarları özellikleri** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
+    - **Şu günlerde durum iletileri:** İstemci, siteye herhangi bir durum iletisi gönderdikten bu yana geçen gün sayısını belirtin. Varsayılan değer gün değeridir `7` . İstemci, görev dizisi çalıştırma gibi farklı türlerde etkinliklere yönelik durum iletileri gönderebilir. Site, eski durum iletilerini bakım görevinin bir parçası olarak siler, **eski durum iletilerini**siler.
 
-##  <a name="to-configure-the-schedule-for-client-status"></a><a name="BKMK_Schedule"></a>Istemci durumunun zamanlamasını yapılandırmak için  
+1. Sitenin istemci durum geçmişi verilerini ne kadar süreyle tutacağını belirlemek için aşağıdaki değeri belirtin:
 
-1.  Configuration Manager konsolunda, **izleme**' yi tıklatın.  
+    - **İstemci durum geçmişini Şu sayıda gün boyunca sakla:** Varsayılan olarak, site istemci durum bilgilerini gün boyunca tutar `31` . Bu ayarın, istemci veya site davranışı üzerinde herhangi bir etkisi yoktur. İstemci durumu geçmişi için bir bakım göreviyle benzerdir.
 
-2.  **İzleme** çalışma alanında **istemci durumu**' nu tıklatın, ardından **giriş** sekmesinde, **istemci durumu** grubunda **istemci durumu güncelleştirmesini zamanla**' yı tıklatın.  
+## <a name="configure-the-schedule"></a>Zamanlamayı yapılandırma
 
-3.  **Istemci durumu güncelleştirmesini zamanla** iletişim kutusunda, istemci durumunun güncelleştirilmesini istediğiniz aralığı yapılandırın ve ardından Tamam ' a tıklayın.  
+1. Configuration Manager konsolunda, **izleme** çalışma alanına gidin ve **istemci durumu** düğümünü seçin. Şeridin **giriş** sekmesinde, **istemci durumu** grubunda, **istemci durumu güncelleştirmesini zamanla**' yı seçin.
 
-    > [!NOTE]  
-    >  İstemci durumu güncelleştirmeleri için zamanlamayı değiştirdiğinizde güncelleştirme, bir sonraki zamanlanmış istemci durum güncelleştirmesine (daha önce yapılandırılmış zamanlama için) kadar etkili olmayacaktır.  
+1. İstemci durumunun güncelleştirilmesini istediğiniz aralığı yapılandırın.
 
-##  <a name="to-configure-alerts-for-client-status"></a><a name="BKMK_2"></a>Istemci durumu uyarılarını yapılandırmak için  
+    > [!NOTE]
+    > İstemci durumu güncelleştirmeleri için zamanlamayı değiştirdiğinizde, önceki zamanlamaya göre bir sonraki zamanlanmış istemci durumu güncelleştirmesine kadar etkili olmaz.
 
-1. Configuration Manager konsolunda, **Varlıklar ve Uyum**'u tıklatın.  
+## <a name="configure-alerts"></a>Uyarı yapılandırma
 
-2. **Varlıklar ve Uyum** çalışma alanında, **Aygıt Koleksiyonları**'nı tıklatın.  
+1. Configuration Manager konsolunda **varlıklar ve uyum** çalışma alanına gidin ve **Cihaz Koleksiyonları** düğümünü seçin.
 
-3. **Cihaz Koleksiyonları** listesinde, uyarıları yapılandırmak istediğiniz koleksiyonu seçin ve sonra **Giriş** sekmesinde, **Özellikler** grubunda **Özellikler**'i tıklatın.  
+1. Uyarılarını yapılandırmak istediğiniz koleksiyonu seçin. Şeridin **giriş** sekmesinde, **Özellikler** grubunda, **Özellikler**' i seçin.
 
-   > [!NOTE]  
-   >  Kullanıcı koleksiyonları için uyarılar yapılandıramasınız.  
+    > [!NOTE]
+    > Kullanıcı koleksiyonları için uyarıları yapılandıramazsınız.
 
-4. **Properties** <em>\>Koleksiyon adı Özellikler iletişim kutusunun uyarılar sekmesinde Ekle ' ye &lt;</em>tıklayın. **Alerts** **Add**  
+1. **Uyarılar** sekmesine geçin ve **Ekle**' yi seçin.
 
-   > [!NOTE]  
-   >  **Uyarılar** sekmesi yalnızca, ilişkilendirilmiş olduğunuz güvenlik rolünün uyarılarla ilgili izinleri varsa görünür.  
+   > [!TIP]
+   > Yalnızca güvenlik rolünüzün uyarılar için izinleri varsa **Uyarılar** sekmesini görüntüleyebilirsiniz.
 
-5. **Yeni Koleksiyon Uyarıları Ekle** iletişim kutusunda, istemci durumu eşikleri belirli bir değerin altında kaldığında oluşturulmasını istediğiniz uyarıları seçin ve **Tamam**'ı tıklatın.  
+    Sitenin istemci durum eşikleri için oluşturmasını istediğiniz uyarıları seçin ve **Tamam**' ı seçin.
 
-6. **Uyarılar** sekmesinin **Koşullar** listesinde, her istemci durumu uyarısını seçip aşağıdaki bilgileri belirtin.  
+1. **Uyarılar** sekmesinin **koşullar** listesinde, her bir istemci durum uyarısını seçin ve ardından aşağıdaki bilgileri belirtin:
 
-   -   **Uyarı adı** -varsayılan adı kabul edin veya uyarı için yeni bir ad girin.  
+    - **Uyarı adı**: varsayılan adı kabul edin veya uyarı için yeni bir ad girin.
 
-   -   **Uyarı önem derecesi** -aşağı açılan listeden Configuration Manager konsolunda görüntülenecek uyarı düzeyini seçin.  
+    - **Uyarı önem derecesi**: Configuration Manager konsolunun görüntülediği uyarı düzeyini seçin.
 
-   -   **Uyarı oluştur** -uyarı için eşik yüzdesini belirtin.  
+    - **Uyarı oluştur**: uyarı için eşik yüzdesini belirtin.
 
-7. **Properties** <em>\>Koleksiyon adı Özellikler iletişim kutusunu kapatmak için Tamam ' ı &lt;</em>tıklatın. **OK**  
+## <a name="automatic-remediation-exclusion"></a>Otomatik Düzeltme dışlaması
 
-##  <a name="to-exclude-computers-from-automatic-remediation"></a><a name="BKMK_3"></a>Bilgisayarları otomatik düzeltmeden dışlamak için  
+1. Otomatik düzeltmeyi devre dışı bırakmak istediğiniz istemci bilgisayarda, kayıt defteri düzenleyicisini açın.
 
-1. Otomatik düzeltmeyi devre dışı bırakmak istediğiniz istemci bilgisayarda kayıt defteri düzenleyicisini açın.  
+    > [!WARNING]
+    > Kayıt Defteri Düzenleyicisi 'ni yanlış kullanırsanız, Windows 'u yeniden yüklemenizi gerektirebilecek önemli sorunlara neden olabilirsiniz. Microsoft, kayıt defteri Düzenleyicisi 'nin yanlış kullanılması sonucunda oluşan sorunları çözebileceğinizi garanti edemez. Bunu sizin sorumluluğunuzdadır.
 
-   > [!WARNING]  
-   >  Kayıt Defteri Düzenleyicisi 'Ni yanlış kullanırsanız, işletim sisteminizi yeniden yüklemenizi gerektirebilecek önemli sorunlara neden olabilirsiniz. Microsoft, Kayıt Defteri Düzenleyicisi'ni yanlış kullanımınızdan kaynaklanan sorunları çözebileceğinizi garanti edemez. Kayıt Defteri Düzenleyicisi'ni kullanım riski size aittir.  
+1. **HKEY_LOCAL_MACHINE \Software\Microsoft\CCM\CcmEval**kayıt defteri anahtarına gidin.
 
-2. **HKEY_LOCAL_MACHINE \Software\Microsoft\CCM\CcmEval\NotifyOnly**konumuna gidin.  
+1. **Yalnızca notifyentry** için değeri değiştirin:
 
-3. Bu kayıt defteri anahtarı için aşağıdaki değerlerden birini girin:  
+    - `TRUE`: İstemci bulduğu sorunları otomatik olarak düzelmez. Site yine de bu istemciyle ilgili sorunlar hakkında **izleme** çalışma alanında size bildirimde bulunur.
 
-   -   **Doğru** -istemci bilgisayar, bulunan sorunları otomatik olarak düzeltmeyecektir. Ancak, bu istemciyle ilgili herhangi bir sorun hakkında **izleme** çalışma alanında yine de uyarı alırsınız.  
+    - `FALSE`: Bu ayar varsayılandır. İstemci sorunları bulduğunda sorunları otomatik olarak düzeltir ve site sizi **izleme** çalışma alanında bilgilendirir.
 
-   -   **Yanlış** -istemci bilgisayar bulunan sorunları otomatik olarak düzeltir ve **izleme** çalışma alanında uyarı alırsınız. Bu varsayılan ayardır.  
+İstemcileri yüklediğinizde, onları otomatik düzeltmeden, **yalnızca notifyonly** yükleme özelliğiyle hariç bırakabilirsiniz. Daha fazla bilgi için bkz. [istemci yükleme özellikleri hakkında](about-client-installation-properties.md).
 
-4. Kayıt defteri düzenleyicisini kapatın.  
+## <a name="next-steps"></a>Sonraki adımlar
 
-   Ayrıca, istemcileri otomatik düzeltmeden dışlamak için CCMSetup **Notifyonly** yükleme özelliğini kullanarak da yükleyebilirsiniz. Bu istemci yükleme özelliği hakkında daha fazla bilgi için bkz. [istemci yükleme özellikleri hakkında](../../../core/clients/deploy/about-client-installation-properties.md).  
+[İstemcileri izleme](../manage/monitor-clients.md)

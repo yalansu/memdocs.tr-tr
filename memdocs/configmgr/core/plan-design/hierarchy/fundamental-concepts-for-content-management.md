@@ -2,7 +2,7 @@
 title: İçerik yönetiminin temelleri
 titleSuffix: Configuration Manager
 description: Dağıttığınız içeriği yönetmek için Configuration Manager araç ve seçenekleri kullanın.
-ms.date: 12/17/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ffd6487297bb682ef9bda7c5bf5ee9cb3beede15
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: d8f29ed1e3201da139daeaa1fadca739ff44dc8e
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590465"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384953"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager 'de içerik yönetimi için temel kavramlar
 
@@ -85,7 +85,7 @@ Aşağıdaki listeler, *ikili farklar çoğaltması* (BDR) ve *Delta çoğaltma*
 - *Blok*düzeyinde farklılıklar
 - Uygulamalar için her zaman etkin
 - Eski paketlerde isteğe bağlı
-- Dağıtım noktasında zaten bir dosya varsa ve bir değişiklik varsa, site tüm dosya yerine blok düzeyinde değişikliği çoğaltmak için BDR 'yi kullanır.
+- Dağıtım noktasında zaten bir dosya varsa ve bir değişiklik varsa, site tüm dosya yerine blok düzeyinde değişikliği çoğaltmak için BDR 'yi kullanır. Bu davranış yalnızca nesneyi BDR 'yi kullanmak için etkinleştirdiğinizde geçerlidir.<!-- SCCMDocs#2026 -->
 
 #### <a name="summary-of-delta-replication"></a>Delta çoğaltma Özeti
 
@@ -220,7 +220,9 @@ Aşağıdakiler istemcilerin içeriğe erişebileceği konumlardır:
 
 ## <a name="content-source-priority"></a>İçerik kaynağı önceliği
 
-Bir istemci içeriğe ihtiyaç duyduğunda, yönetim noktasına bir içerik konumu isteği yapar. Yönetim noktası, istenen içerik için geçerli olan kaynak konumların bir listesini döndürür. Bu liste, belirli senaryoya, kullanımdaki teknolojilere, site tasarımına, sınır gruplarına ve dağıtım ayarlarına bağlı olarak değişir. Aşağıdaki listede, bir istemcinin kullanabileceği tüm olası içerik kaynak konumları, bunların öncelik sırasına göre verilmiştir:  
+Bir istemci içeriğe ihtiyaç duyduğunda, yönetim noktasına bir içerik konumu isteği yapar. Yönetim noktası, istenen içerik için geçerli olan kaynak konumların bir listesini döndürür. Bu liste, belirli senaryoya, kullanımdaki teknolojilere, site tasarımına, sınır gruplarına ve dağıtım ayarlarına bağlı olarak değişir. Örneğin, bir görev dizisi çalıştırıldığında, tam Configuration Manager istemci her zaman çalışır durumda değildir, bu nedenle davranışlar farklı olabilir.<!-- SCCMDocs#1960 -->
+
+Aşağıdaki listede, Configuration Manager istemcisinin kullanabileceği tüm olası içerik kaynak konumları, bunlara öncelik sırasına göre verilmiştir:  
 
 1. İstemciyle aynı bilgisayardaki dağıtım noktası
 2. Aynı ağ alt ağındaki eş kaynak

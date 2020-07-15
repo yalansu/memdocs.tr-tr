@@ -2,7 +2,7 @@
 title: SQL Server Always On
 titleSuffix: Configuration Manager
 description: Configuration Manager ile SQL Server Always on kullanılabilirlik grubu kullanmayı planlayın
-ms.date: 07/26/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 576f909be15a35f4c29e803236c220cdde33c0ac
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 9ce8c10d9d59d97caa53ece12dd43d90c78546bb
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383164"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384851"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager ile Always on kullanılabilirlik grupları SQL Server kullanmaya hazırlanma
 
@@ -45,7 +45,7 @@ Configuration Manager ile kullanılabilirlik gruplarının kullanılması için 
 - [Site veritabanını bir kullanılabilirlik grubunun dışına, tek başına SQL Server varsayılan veya adlandırılmış bir örneğine taşıyın](configure-aoag.md#bkmk_stop)  
 
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Aşağıdaki Önkoşullar tüm senaryolar için geçerlidir. Belirli bir senaryoya ek önkoşullar uygulandıklarında, bu senaryoya göre ayrıntılandırılmıştır.
 
@@ -247,6 +247,9 @@ Her çoğaltma üyesinin aşağıdaki yapılandırması olmalıdır:
 #### <a name="replica-member-location"></a>Çoğaltma üyesi konumu
 
 Tüm çoğaltmaları şirket içinde bir kullanılabilirlik grubunda barındırın veya Microsoft Azure tümünü barındırın. Şirket içi bir üyeyi ve Azure 'daki bir üyeyi içeren bir grup desteklenmez.
+
+> [!NOTE]
+> SQL Server için bir Azure sanal makinesi kullanıyorsanız, **kayan IP**'yi etkinleştirin. Daha fazla bilgi için bkz. [Azure sanal makinelerinde SQL Server Always on kullanılabilirlik grubu için yük dengeleyici yapılandırma](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).<!-- SCCMDocs#1928 -->
 
 Configuration Manager Kurulum 'un her bir çoğaltmaya bağlanması gerekiyor. Azure 'da bir kullanılabilirlik grubu ayarladığınızda ve grup bir iç veya dış yük dengeleyicinin arkasında olduğunda, aşağıdaki varsayılan bağlantı noktalarını açın:
 

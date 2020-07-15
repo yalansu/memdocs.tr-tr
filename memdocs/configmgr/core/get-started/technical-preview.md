@@ -2,7 +2,7 @@
 title: Teknik Önizleme sürümleri
 titleSuffix: Configuration Manager
 description: Configuration Manager ' de yeni işlevsellik ve özellikleri test etmek için teknik önizleme dalı hakkında bilgi edinin.
-ms.date: 06/25/2020
+ms.date: 07/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5dfa3b33a46166cfa4e1233eb71125696f5aa39d
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 64e784ec7313dfa778ee39f6e1f52e7c09fcfd95
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383147"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384834"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager için teknik önizleme
 
@@ -91,9 +91,10 @@ Microsoft, art arda üç sürüm kullanılabilir olana kadar her bir Technical P
 
 ### <a name="active-baseline-versions"></a>Etkin temel sürümler
 
-Sürümünden sonraki bir yıla kadar bir temel sürümü yükler. Yeni bir Technical Preview sitesi yüklediğinizde, en son temel sürümü kullanın.
+Sürümünden sonraki bir yıla kadar bir temel sürümü yükler. Yeni bir Technical Preview sitesi yüklediğinizde, en son temel sürümü kullanın. Aşağıdaki Configuration Manager Technical Preview dalı sürümleri, konsol içi güncelleştirmeler ve yeni temel sürümler olarak kullanılabilir:
 
-- **Technical Preview sürüm 2002**: Configuration Manager Technical Preview dalı sürüm 2002, hem konsol içi güncelleştirme hem de yeni bir temel sürüm olarak sunulmaktadır.
+- **Technical Preview sürüm 2007**
+- **Technical Preview sürüm 2002**
 
 [Değerlendirme merkezinden](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)bir temel sürüm indirin.
 
@@ -116,25 +117,17 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2006.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2007.md) <!--ID-->
 
 Aşağıdaki özellikler en son Configuration Manager Technical Preview sürümü ile sunulmaktadır:
 
-### <a name="technical-preview-version-2006"></a>Technical Preview sürüm 2006
+### <a name="technical-preview-version-2007"></a>Technical Preview sürüm 2007
 
-- [Ortak yönetilen cihazlarda Şirket Portalı uygulamasını kullanma](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
-- [CMG aracılığıyla kullanılabilir uygulamalarda iyileştirmeler](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
-- [Intranet istemcileri bir CMG yazılım güncelleştirme noktası kullanabilir](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
-- [CMG aracılığıyla görev dizileriyle geliştirmeler](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
-- [Uzak çalışanları iyileştirmek için yönetim öngörüleri](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
-- [VPN sınır türü geliştirmeleri](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
-- [Kiracı Iliştirme: Microsoft Endpoint Manager Yönetim Merkezi 'ndeki Configuration Manager eylemlerine yönelik Iyileştirmeler](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
-- [Endpoint Protection ilkeleri için CMG desteği](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
-- [Kiracı ekleme ekleme sırasında önceden oluşturulmuş Azure AD uygulamasını içeri aktarma](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
-- [Tarifeli bir bağlantıda istemci yükseltmesine yönelik iyileştirmeler](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
-- [Cihaz yeniden başlatmalarının yönetilmesi iyileştirmeleri](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
-- [Windows sanal masaüstü için geliştirilmiş destek](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
-- [Configuration Manager Community hub öğelerinin doğrudan bağlantıları](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
+- [Kiracı iliştirme: Microsoft Endpoint Manager Yönetim Merkezi 'nde donanım envanterini görüntüleme](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
+- [İstemci veri kaynakları panosundaki geliştirmeler](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
+- [Artık bazı konsol alanlarında kullanılan sabit genişlikli yazı tipi](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
+- [Görev sırası ilke boyutunu Yönet](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
+- [Yönetim merkezinde cihaz zaman çizelgesinde iyileştirmeler](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
 
 > [!NOTE]
 > Technical Preview 'un önceki bir sürümünde kullanılabilen özellikler sonraki sürümlerde de kullanılabilir durumda kalır. Benzer şekilde, geçerli dala eklenen Configuration Manager özellikler, Technical Preview dalında kullanılabilir kalır.
@@ -151,6 +144,22 @@ When there's a new CB, add any features not in that CB to the table in H2 "Featu
 
 > [!TIP]
 > Yeni bir geçerli dal sürümü kullanılabilir olduğunda, bu sürümde kullanılabilen özellikler en son *Yenilikler* makalesinde listelenmiştir. Daha fazla bilgi için bkz. [artımlı sürümlerindeki](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)yenilikler.
+
+### <a name="technical-preview-version-2006"></a>Technical Preview sürüm 2006
+
+- [Ortak yönetilen cihazlarda Şirket Portalı uygulamasını kullanma](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
+- [CMG aracılığıyla kullanılabilir uygulamalarda iyileştirmeler](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
+- [Intranet istemcileri bir CMG yazılım güncelleştirme noktası kullanabilir](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
+- [CMG aracılığıyla görev dizileriyle geliştirmeler](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
+- [Uzak çalışanları iyileştirmek için yönetim öngörüleri](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
+- [VPN sınır türü geliştirmeleri](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
+- [Kiracı Iliştirme: Microsoft Endpoint Manager Yönetim Merkezi 'ndeki Configuration Manager eylemlerine yönelik Iyileştirmeler](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
+- [Endpoint Protection ilkeleri için CMG desteği](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
+- [Kiracı ekleme ekleme sırasında önceden oluşturulmuş Azure AD uygulamasını içeri aktarma](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
+- [Tarifeli bir bağlantıda istemci yükseltmesine yönelik iyileştirmeler](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
+- [Cihaz yeniden başlatmalarının yönetilmesi iyileştirmeleri](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
+- [Windows sanal masaüstü için geliştirilmiş destek](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
+- [Configuration Manager Community hub öğelerinin doğrudan bağlantıları](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
 
 ### <a name="technical-preview-version-2005"></a>Technical Preview sürüm 2005
 

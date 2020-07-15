@@ -2,7 +2,7 @@
 title: Konsol içi belgeler
 titleSuffix: Configuration Manager
 description: Bu makale yalnızca Configuration Manager konsolunda görüntülenir.
-ms.date: 06/08/2020
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0e38f35f49e827893be5e7763a52dd3b5a901bf7
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 55cecac47accf6dfa2efdc3b0905497260a652e5
+ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353539"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86390883"
 ---
 <!-- 
 - Feature 1357546
@@ -27,7 +27,7 @@ ms.locfileid: "85353539"
 
 # <a name="microsoft-endpoint-configuration-manager-documentation"></a>Microsoft Endpoint Configuration Manager belgeleri
 
-*Son güncelleştirme: 8 Haziran 2020*
+*Son güncelleştirme: 14 Temmuz 2020*
 
 Bu içerik Configuration Manager öğreniyor ve desteklerken size yardımcı olabilir.
 
@@ -42,9 +42,10 @@ Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 Önemli makalelerin seçkin bir listesi.
 
-- [Microsoft Endpoint Manager kiracısı ekleme](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions)
-- [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview)
-- [Windows 10 cihazları için ortak yönetim](https://docs.microsoft.com/mem/configmgr/comanage/overview)  
+- [Microsoft Endpoint Manager kiracısı ekleme](https://docs.microsoft.com/mem/configmgr/tenant-attach/)
+- [Uç nokta analizi](https://docs.microsoft.com/mem/analytics/)
+- [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/)
+- [Windows 10 cihazları için ortak yönetim](https://docs.microsoft.com/mem/configmgr/comanage/)  
 - [CMPivot](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot)  
 - [BitLocker yönetimi için planlama](https://docs.microsoft.com/mem/configmgr/protect/plan-design/bitlocker-management)  
 - [Microsoft Edge yönetimi](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge)  
@@ -55,22 +56,22 @@ Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 ## <a name="trending"></a>Popüler
 
-1 Mayıs ve 31 Mayıs 2020 arasındaki en popüler makaleler.
+1 Haziran ve 30 Haziran 2020 arasındaki en popüler makaleler.
 
 | Sayfa görünümleri | Başlık |
 |------------|-------|
-| 22624 | [Bulut yönetimi ağ geçidi planlama](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
-| 18451 | [Sürüm 2002’deki yenilikler](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
-| 17763 | [Günlük dosyası başvurusu](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
-| 16718 | [İstemcilerde Aktarım Katmanı Güvenliği (TLS) 1,2 nasıl etkinleştirilir](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
-| 16004 | [Bağlantılar için kullanılan bağlantı noktaları](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
-| 13965 | [Aktarım katmanı güvenliğini etkinleştir (TLS) 1,2 genel bakış](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 13398 | [Güncelleştirmeler ve bakım](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates) |
-| 13279 | [Windows 10 cihazları için ortak yönetim](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
-| 13260 | [Yazılım Merkezi kullanıcı kılavuzu](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
-| 12624 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
+| 21317 | [Bulut yönetimi ağ geçidi planlama](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 19402 | [Günlük dosyası başvurusu](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
+| 18826 | [İstemcilerde Aktarım Katmanı Güvenliği (TLS) 1,2 nasıl etkinleştirilir](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
+| 16525 | [Aktarım katmanı güvenliğini etkinleştir (TLS) 1,2 genel bakış](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 16142 | [Bağlantılar için kullanılan bağlantı noktaları](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
+| 15834 | [Sürüm 2002’deki yenilikler](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
+| 13963 | [Configuration Manager nedir?](https://docs.microsoft.com/mem/configmgr/core/understand/introduction) |
+| 13727 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
+| 13603 | [Windows 10 cihazları için ortak yönetim](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
+| 13049 | [Yazılım Merkezi kullanıcı kılavuzu](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
 
-Bu zaman döneminde 34.986 sayfa görünümü alınan [Configuration Manager hub sayfası](https://docs.microsoft.com/mem/configmgr/) .
+Bu zaman döneminde 36.220 sayfa görünümü alınan [Configuration Manager hub sayfası](https://docs.microsoft.com/mem/configmgr/) .
 
 ## <a name="recently-updated"></a>Son güncelleştirilme tarihi
 
@@ -78,16 +79,16 @@ Son ve önemli güncelleştirme içeren makaleler.
 
 | Son Gözden geçirme | Başlık |
 |---------------|-------|
-| 5/29/2020 | [Technical Preview 2005](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2005) |
-| 5/27/2020 | [Windows 10 için destek](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/support-for-windows-10) |
-| 5/26/2020 | [CMPivot’a genel bakış](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot-overview) |
-| 5/26/2020 | [Kiracı ekli CMPivot genel bakış](https://docs.microsoft.com/mem/configmgr/tenant-attach/cmpivot-overview-attached) |
-| 5/26/2020 | [Kiracı ekli CMPivot örnek betikleri](https://docs.microsoft.com/mem/configmgr/tenant-attach/cmpivot-samples-attached) |
-| 5/26/2020 | [Sürüm 2002’deki yenilikler](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
-| 5/21/2020 | [Sürüm notları](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
-| 5/14/2020 | [Önerilen donanım](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/recommended-hardware) |
-| 11.05.2020 | [Masaüstü analizinden varlıklar](https://docs.microsoft.com/mem/configmgr/desktop-analytics/about-assets) |
-| 11.05.2020 | [Masaüstü Analizinizdeki yenilikler](https://docs.microsoft.com/mem/configmgr/desktop-analytics/whats-new) |
+| 6/29/2020 | [Technical Preview 2006](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2006) |
+| 25/6/2020 | [Power BI örnek raporlarını yükleme](https://docs.microsoft.com/mem/configmgr/core/servers/manage/powerbi-sample-reports) |
+| 24/6/2020 | [Desteklenen SQL Server sürümleri](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/support-for-sql-server-versions) |
+| 6/18/2020 | [Surface sürücü güncelleştirmelerini yönetme](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/surface-drivers) |
+| 6/17/2020 | [Microsoft Defender Gelişmiş Tehdit Koruması](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection) |
+| 10.06.2020 | [Bulut yönetimi ağ geçidi planlama](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 10.06.2020 | [Yazılım Merkezi kullanıcı kılavuzu](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
+| 10.06.2020 | [CMG SSS](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/cloud-management-gateway-faq) |
+| 6/5/2020 | [En iyi koleksiyonlar uygulamaları](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/best-practices-for-collections) |
+| 6/5/2020 | [Koleksiyon değerlendirme](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/collection-evaluation) |
 
 ## <a name="troubleshooting-articles"></a>Sorun giderme makaleleri
 

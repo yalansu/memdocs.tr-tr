@@ -2,7 +2,7 @@
 title: Windows cihazlarını farklı bir sürüme yükseltme
 titleSuffix: Configuration Manager
 description: Windows 10 cihazlarını farklı bir Windows sürümüne otomatik olarak yükseltmek için Configuration Manager kullanın.
-ms.date: 09/03/2019
+ms.date: 07/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 57f8c503d8a8ac54604a2435641bb29d0b4a1847
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 7a82a635eafcc0ecb5251457db9d4fbb301fce33
+ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240686"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86390849"
 ---
 # <a name="upgrade-windows-devices-to-a-new-edition-with-configuration-manager"></a>Windows cihazlarını Configuration Manager ile yeni bir sürüme yükseltme
 
@@ -37,7 +37,7 @@ Cihazları en son sürüme yükseltmeye başlamadan önce, aşağıdaki önkoşu
 
 - Windows 10 masaüstü sürümleri için: ilkeyle hedeflediğiniz tüm cihazlarda Windows 'un yeni sürümü için geçerli bir ürün anahtarı. Bu ürün anahtarı birden çok etkinleştirme anahtarı (MAK) veya bir genel toplu lisanslama anahtarı (GVLK) olabilir. Bir GVLK, anahtar yönetimi hizmeti (KMS) istemci kurulum anahtarı olarak da adlandırılır. Daha fazla bilgi için bkz. [toplu etkinleştirme planı](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). KMS istemci kurulum anahtarlarının bir listesi için, bkz. Windows Server etkinleştirme kılavuzunun [ek a](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) . <!--496871-->  
 
-- Windows 10 Mobile için: Microsoft Toplu Lisanslama Hizmet Merkezi 'nden (VLSC) bir XML Lisans dosyası. Bu dosya, ilkeyle hedeflediğiniz tüm cihazlarda Windows 'un yeni sürümü için lisanslama bilgilerini içerir.
+- Windows 10 Mobile için: Microsoft Toplu Lisanslama Hizmet Merkezi 'nden (VLSC) bir XML Lisans dosyası. Bu dosya, ilkeyle hedeflediğiniz tüm cihazlarda Windows 'un yeni sürümü için lisanslama bilgilerini içerir. Lisanslama XML 'i içeren **Windows 10 Mobile Enterprise**için ISO dosyasını indirin.<!-- SCCMDocs#2033 -->
 
 - Bu ilke türünü yönetmek için Configuration Manager **tam yönetici** güvenlik rolünde olmanız gerekir.
 

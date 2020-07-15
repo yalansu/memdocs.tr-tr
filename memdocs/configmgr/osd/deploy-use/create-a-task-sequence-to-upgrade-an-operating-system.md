@@ -2,7 +2,7 @@
 title: İşletim sistemi yükseltme görev sırasını oluşturma
 titleSuffix: Configuration Manager
 description: Windows 7 veya sonraki bir sürümü Windows 10 ' a otomatik olarak yükseltmek için bir görev dizisi kullanma
-ms.date: 07/26/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ad36978f3f3dc5207068a65d76bf8f5c7c3078c
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 84e6ea21f2bb9627ae6b40c62f8f856fb426bdaf
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383249"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384902"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Configuration Manager işletim sistemini yükseltmek için görev dizisi oluşturma
 
@@ -24,7 +24,7 @@ ms.locfileid: "85383249"
 Hedef bilgisayarda bir işletim sistemini otomatik olarak yükseltmek için Configuration Manager görev dizilerini kullanın. Bu yükseltme, Windows 7 veya sonraki bir sürümü Windows 10 ' dan veya Windows Server 2012 veya sonraki bir sürümünden Windows Server 2016 ' e olabilir. İşletim sistemi yükseltme paketine ve uygulamalar veya yazılım güncelleştirmeleri gibi yüklenecek diğer içeriklere başvuran bir görev dizisi oluşturun. İşletim sistemini yükseltmek için görev dizisi, [yükseltme pencerelerinin en son sürüm](upgrade-windows-to-the-latest-version.md) senaryosuna bir parçasıdır.  
 
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Görev dizisini oluşturmadan önce, aşağıdaki gereksinimlerin yerinde olması gerekir:
 
@@ -70,7 +70,7 @@ Görev dizisini oluşturmadan önce, aşağıdaki gereksinimlerin yerinde olmas�
 
     - **Çözümlenemeyen uyumluluk Iletilerini yoksayın**: Windows Server 2016 ' e yükseltiyorsanız Bu ayarı seçin. Bu ayarı seçmezseniz, Windows Kurulumu kullanıcının bir Windows uygulama uyumluluğu iletişim kutusunda **Onayla** ' yı seçmesini beklediği için görev sırası tamamlanamamalıdır.  
 
-6. **Güncelleştirmeleri dahil et** sayfasında, gerekli, tümü veya yazılım güncelleştirmelerinin yüklenip yüklenmeyeceğini belirtin. Ardından **İleri**' yi seçin. Yazılım güncelleştirmelerini yüklemeyi belirtirseniz Configuration Manager, yalnızca hedef bilgisayarın üye olduğu koleksiyonlara hedeflenmiş güncelleştirmeleri yükler.  
+6. **Güncelleştirmeleri dahil et** sayfasında, gerekli, tümü veya yazılım güncelleştirmelerinin yüklenip yüklenmeyeceğini belirtin. Sonra **İleri**’yi seçin. Yazılım güncelleştirmelerini yüklemeyi belirtirseniz Configuration Manager, yalnızca hedef bilgisayarın üye olduğu koleksiyonlara hedeflenmiş güncelleştirmeleri yükler.  
 
 7. **Uygulamaları yüklemek** sayfasında, hedef bilgisayara yüklenecek uygulamaları belirtin ve ardından **İleri**' yi seçin. Birden fazla uygulama seçerseniz, belirli bir uygulamanın yüklenmesi başarısız olursa görev dizisinin devam edip etmediğini de belirtin.  
 
@@ -253,13 +253,17 @@ Windows [10 yükseltme hatalarını çözmek](https://docs.microsoft.com/windows
 
     `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`
 
+    Bu komut, komut isteminin belirtilen sıfır olmayan çıkış koduyla çıkmasına neden olur ve bu da görev dizisinin bir hata olduğunu varsayar.
+
 1. **Seçenekler** sekmesinde, aşağıdaki koşulu ekleyin:
 
     `Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400`
 
-Bu dönüş kodu, hiçbir sorun olmadan başarılı bir uyumluluk taraması olan MOSETUP_E_COMPAT_SCANONLY (0xC1900210) değerinin ondalık eşdeğeridir. *Yükseltme değerlendirmesi* adımı başarılı olursa ve bu kodu döndürürse, görev sırası bu adımı atlar. Aksi takdirde, değerlendirme adımı başka bir dönüş kodu döndürürse, bu adım görev sırasını Windows Kurulumu uyumluluk taramasından döndürülen kodla başarısız olur. **_SMSTSOSUpgradeActionReturnCode**hakkında daha fazla bilgi için bkz. [görev dizisi değişkenleri](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode).
+    Bu durum, görev dizisinin yalnızca bir başarı kodu olmaması durumunda bu **komut satırını Çalıştır** adımını çalıştırdığı anlamına gelir.
 
-Daha fazla bilgi için bkz. [işletim sistemini yükseltme](../understand/task-sequence-steps.md#BKMK_UpgradeOS).  
+Dönüş kodu, `3247440400` hiçbir sorun olmadan başarılı bir uyumluluk taraması olan MOSETUP_E_COMPAT_SCANONLY (0xC1900210) değerinin ondalık eşdeğeridir. *Yükseltme değerlendirmesi* adımı başarılı olur ve dönerse `3247440400` , görev sırası bu **komut satırını Çalıştır** adımını atlar ve devam eder. Değerlendirme adımı başka bir dönüş kodu döndürürse, bu **komut satırı Çalıştır** adımı çalışır. Komut sıfır olmayan bir dönüş koduyla çıkış yaptığından, görev sırası da başarısız olur. Görev sırası günlüğü ve durum iletileri Windows Kurulumu uyumluluk taramasının dönüş kodunu içerir. **_SMSTSOSUpgradeActionReturnCode**hakkında daha fazla bilgi için bkz. [görev dizisi değişkenleri](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode).
+
+Daha fazla bilgi için [işletim sistemini yükseltme](../understand/task-sequence-steps.md#BKMK_UpgradeOS) görev dizisi adımına bakın.
 
 ### <a name="convert-from-bios-to-uefi"></a>BIOS 'tan UEFı 'ye Dönüştür
 
