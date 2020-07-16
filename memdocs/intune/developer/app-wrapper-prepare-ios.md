@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69940fc8e3f495a1738f2b7b4c6769e431821f30
-ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
+ms.openlocfilehash: c10738d20b793de2ba1adbca548290a517ca5d9e
+ms.sourcegitcommit: 764142960005ea0cb5afa00757f2b403ce5032c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84436814"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405928"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Intune Uygulama Sarmalama Aracı ile iOS uygulamalarını uygulama koruma ilkelerine hazırlama
 
@@ -193,7 +193,7 @@ Aşağıdaki komut satırı parametrelerini Uygulama Sarmalama Aracı ile birlik
 
 |Özellik|Nasıl kullanılır?|
 |---------------|--------------------------------|
-|**-ı**|`<Path of the input native iOS application file>`. Dosya adının sonunda .app veya .ipa olmalıdır. |
+|**-i**|`<Path of the input native iOS application file>`. Dosya adının sonunda .app veya .ipa olmalıdır. |
 |**-o**|`<Path of the wrapped output application>` |
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
@@ -225,7 +225,7 @@ IntuneMAMPackager/Contents/MacOS klasöründe, `Parameters.plist` öğesini (bo�
 | ADAL Istemci KIMLIĞI |Dize|empty| -AC ile aynı|
 | ADAL yanıt URI 'SI |Dize|empty| -AR ile aynı|
 | Ayrıntılı Mod Etkin |Boole|yanlış| -v ile aynı|
-| Eksik Yetkilendirmeleri Kaldır |Boole|yanlış| -c ile aynı|
+| Eksik Yetkilendirmeleri Kaldır |Boole|yanlış| -E ile aynı|
 | Varsayılan derleme güncelleştirmesini engelle |Boole|yanlış| Bağımsız değişkenler olmadan -b kullanma ile eşdeğerdir|
 | Dize Geçersiz Kılmayı Derle |Dize|empty| Sarmalanan çıkış uygulaması için özel CFBundleVersion|
 | Citrix XenMobile App SDK (yalnızca ağ varyantı) dahil et|Boole|yanlış| -Citrix ile aynı|
@@ -327,7 +327,7 @@ Uygulamanızı sarmalamadan önce, uygulamaya genellikle uygulamanın ne yapabil
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>iOS için Uygulama Sarmalama Aracı’nda desteklenen yetenekler
 
-|Özellik|Description|Önerilen yönerge|
+|Yetenek|Description|Önerilen yönerge|
 |--------------|---------------|------------------------|
 |Uygulama grupları|Birden çok uygulamanın paylaşılan kapsayıcılara erişimine ve uygulamalar arasında işlemler arası ek iletişime olanak tanımak için uygulama gruplarını kullanın.<br /><br />Uygulama gruplarını etkinleştirmek için, **Yetenekler** bölmesini açın ve **Uygulama Grupları** bölümünde **AÇIK**’a tıklayın. Uygulama grupları ekleyebilir veya var olanları seçebilirsiniz.|Uygulama Grupları’nı kullanırken, ters DNS gösterimini kullanın:<br /><br />*grup.com.şirketAdı.UygulamaGrubu*|
 |Arka plan modları|Arka plan modlarının etkinleştirilmesi, iOS uygulamanızın arka planda çalışmaya devam etmesine olanak tanır.||

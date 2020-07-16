@@ -1,0 +1,998 @@
+- name: Configuration Manager SDK belgeleri
+  href: index.yml
+- name: Genel bakış
+  items:
+    - name: Configuration Manager SDK’ye genel bakış
+      href: core/misc/system-center-configuration-manager-sdk.md
+    - name: Gizlilik bilgileri
+      href: core/misc/privacy/privacy-information.md
+    - name: SDK’deki yenilikler
+      href: core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md
+- name: Gereksinimler
+  items:
+    - name: SDK gereksinimleri hakkında
+      href: core/reqs/about-configuration-manager-sdk-requirements.md
+    - name: İstemci çalışma zamanı gereksinimleri
+      href: core/reqs/client-runtime-requirements.md
+    - name: Sunucu çalışma zamanı gereksinimleri
+      href: core/reqs/server-runtime-requirements.md
+    - name: İstemci geliştirme gereksinimleri
+      href: core/reqs/client-development-requirements.md
+    - name: Sunucu geliştirme gereksinimleri
+      href: core/reqs/server-development-requirements.md
+    - name: SDK kitaplıkları ve başlık dosyaları
+      href: core/reqs/configuration-manager-sdk-libraries-and-header-files.md
+- name: SDK örnekleri
+  href: core/understand/configuration-manager-sdk-samples.md
+- name: Programlama hakkında temel bilgiler
+  items:
+    - name: Configuration Manager programlamayı kullanmaya başlama
+      items:
+        - name: Configuration Manager programlamayı kullanmaya başlama
+          href: core/understand/getting-started-with-configuration-manager-programming.md
+        - name: Mimariye genel bakış
+          href: core/understand/architectural-overview.md
+        - name: WBEMTEST’e giriş
+          href: core/understand/introduction-to-wbemtest.md
+        - name: 'Listeleme, oluşturma, değiştirme ve silme basit örneği'
+          href: core/understand/simple-example-of-list--create--modify--and-delete.md
+    - name: Configuration Manager kod parçacıklarını çağırma
+      href: core/understand/calling-code-snippets.md
+    - name: Bir site için parolaları veya verileri şifreleme
+      href: core/understand/how-to-encrypt-passwords-or-data-for-a-site.md
+    - name: Hatalar
+      items:
+        - name: Hatalar hakkında
+          href: core/understand/about-configuration-manager-errors.md
+        - name: Yönetilen kod kullanarak zaman uyumsuz hataları işleme
+          href: core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md
+        - name: Yönetilen kod kullanarak zaman uyumlu hataları işleme
+          href: core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-managed-code.md
+        - name: WMI kullanarak zaman uyumsuz hataları işleme
+          href: core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-wmi.md
+        - name: WMI kullanarak zaman uyumlu hataları işleme
+          href: core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-wmi.md
+    - name: Nesneler
+      items:
+        - name: Nesneler hakkında
+          items:
+            - name: Nesnelere genel bakış
+              href: core/understand/configuration-manager-objects-overview.md
+            - name: Nesne güvenliği
+              href: core/understand/configuration-manager-object-security.md
+            - name: Eklenmiş nesneler
+              href: core/understand/embedded-objects.md
+            - name: İlişki sınıfları
+              href: core/understand/association-classes.md
+            - name: Tarih ve saat biçimleri
+              href: core/understand/date-and-time-formats.md
+            - name: Bit alanı özellikleri
+              href: core/understand/configuration-manager-bit-field-properties.md
+            - name: Gecikmeli özellikler
+              href: core/understand/configuration-manager-lazy-properties.md
+            - name: Genişletilmiş WMI sorgu dili
+              href: core/understand/extended-wmi-query-language.md
+            - name: Sonuç kümeleri
+              href: core/understand/result-sets.md
+            - name: Özel sorgular
+              href: core/understand/special-queries.md
+        - name: Yönetilen kodla nesneleri kullanma
+          items:
+            - name: Nesne oluşturma
+              href: core/understand/how-to-create-a-configuration-manager-object-by-using-managed-code.md
+            - name: Nesne okuma
+              href: core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md
+            - name: Nesne değiştirme
+              href: core/understand/how-to-modify-a-configuration-manager-object-by-using-managed-code.md
+            - name: Nesne silme
+              href: core/understand/how-to-delete-a-configuration-manager-object-by-using-managed-code.md
+            - name: Zaman uyumsuz sorgu gerçekleştirme
+              href: core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md
+            - name: Zaman uyumlu sorgu gerçekleştirme
+              href: core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md
+            - name: Gecikmeli özellikleri kullanma
+              href: core/understand/how-to-read-lazy-properties-by-using-managed-code.md
+            - name: Nesne sınıfı yöntemini çağırma
+              href: core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-managed-code.md
+        - name: WMI ile nesneleri kullanma
+          items:
+            - name: Nesne oluşturma
+              href: core/understand/how-to-create-a-configuration-manager-object-by-using-wmi.md
+            - name: Nesne okuma
+              href: core/understand/how-to-read-a-configuration-manager-object-by-using-wmi.md
+            - name: Nesne değiştirme
+              href: core/understand/how-to-modify-a-configuration-manager-object-by-using-wmi.md
+            - name: Nesne silme
+              href: core/understand/how-to-delete-a-configuration-manager-object-by-using-wmi.md
+            - name: Zaman uyumlu sorgu gerçekleştirme
+              href: core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-wmi.md
+            - name: Zaman uyumsuz sorgu gerçekleştirme
+              href: core/understand/how-to-perform-an-asynchronous-configuration-manager-query-by-using-wmi.md
+            - name: Gecikmeli özellikleri kullanma
+              href: core/understand/how-to-read-lazy-properties-by-using-wmi.md
+            - name: Nesne sınıfı yöntemini çağırma
+              href: core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-wmi.md
+    - name: Sorgular
+      items:
+        - name: Sorgular hakkında
+          href: core/understand/about-configuration-manager-queries.md
+        - name: Sorgu çalıştırma
+          href: core/understand/how-to-run-a-query.md
+        - name: Sorgu oluşturma
+          href: core/understand/how-to-create-a-configuration-manager-query.md
+    - name: SEDO
+      items:
+        - name: SEDO’ya genel bakış
+          href: core/understand/sedo.md
+        - name: SEDO etkin bir nesnede kilit alma
+          href: core/understand/how-to-acquire-a-lock-on-a-sedo-enabled-object.md
+        - name: SEDO etkin bir nesnede kilidi serbest bırakma
+          href: core/understand/how-to-release-a-lock-on-a-sedo-enabled-object.md
+    - name: Zamanlamalar
+      items:
+        - name: Zamanlamalar hakkında
+          href: core/understand/about-configuration-manager-schedules.md
+        - name: Zamanlama belirteci oluşturma
+          href: core/understand/how-to-create-a-schedule-token.md
+    - name: Site denetim dosyası
+      items:
+        - name: Site denetim dosyası hakkında
+          href: core/understand/about-the-configuration-manager-site-control-file.md
+        - name: Yönetilen kodla okuma ve yazma
+          href: core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md
+        - name: WMI ile okuma ve yazma
+          href: core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md
+        - name: Site denetim dosyası ekli bir özellik listesini okuma
+          href: core/understand/how-to-read-a-configuration-manager-site-control-file-embedded-property-list.md
+        - name: Site sistemi rolü dağıtma
+          href: core/understand/how-to-deploy-a-site-system-role--example---fallback-status-point-.md
+    - name: Sınıf şeması
+      items:
+        - name: Sınıf şemasına genel bakış
+          href: core/understand/configuration-manager-class-schema.md
+        - name: Tarih ve saat biçimleri
+          href: core/understand/date-and-time-formats.md
+        - name: Bit alanı özelliklerini yorumlama
+          href: core/understand/interpreting-bitfield-properties.md
+        - name: Gecikmeli özellikler
+          href: core/understand/lazy-properties.md
+        - name: SMS Sağlayıcısı alan uzunluğu kısıtlamaları
+          href: core/understand/sms-provider-field-length-restrictions.md
+    - name: Veritabanı şeması ve görünümleri
+      items:
+        - name: Veritabanı şeması hakkında
+          items:
+            - name: Şemaya genel bakış
+              href: core/understand/configuration-manager-schema-overview.md
+            - name: Şema SQL görünümleri
+              href: core/understand/configuration-manager-schema-sql-views.md
+            - name: Şema görünümü eşleme
+              href: core/understand/configuration-manager-schema-view-mapping.md
+            - name: SQL görünümü güvenliği
+              href: core/understand/sql-view-security.md
+        - name: SQL Server kullanarak bir Configuration Manager görünümüne bakma
+          href: core/understand/how-to-see-a-configuration-manager-view-by-using-sql-server.md
+        - name: SQL Server görünümlerini kullanarak özel raporlar oluşturma
+          items:
+            - name: Genel bakış
+              href: core/understand/sqlviews/create-custom-reports-using-sql-server-views.md
+            - name: SQL Server görünümleri
+              items:
+                - name: Genel bakış
+                  href: core/understand/sqlviews/sql-server-views-configuration-manager.md
+                - name: Uygulama yönetimi görünümleri
+                  href: core/understand/sqlviews/application-management-views-configuration-manager.md
+                - name: İstemci dağıtımı görünümleri
+                  href: core/understand/sqlviews/client-deployment-views-configuration-manager.md
+                - name: İstemci durumu görünümleri
+                  href: core/understand/sqlviews/client-status-views-configuration-manager.md
+                - name: Koleksiyon görünümleri
+                  href: core/understand/sqlviews/collection-views-configuration-manager.md
+                - name: Uyumluluk ayarları sayfası
+                  href: core/understand/sqlviews/compliance-settings-views-configuration-manager.md
+                - name: İçerik yönetimi görünümleri
+                  href: core/understand/sqlviews/content-management-views-configuration-manager.md
+                - name: Bulma görünümleri
+                  href: core/understand/sqlviews/discovery-views-configuration-manager.md
+                - name: Endpoint Protection görünümleri
+                  href: core/understand/sqlviews/endpoint-protection-views-configuration-manager.md
+                - name: Envanter görünümleri
+                  items:
+                    - name: Envanter görünümlerine genel bakış
+                      href: core/understand/sqlviews/inventory-views-configuration-manager.md
+                    - name: Donanım envanteri görünümleri
+                      href: core/understand/sqlviews/hardware-inventory-views-configuration-manager.md
+                    - name: Yazılım envanteri görünümleri
+                      href: core/understand/sqlviews/software-inventory-views-configuration-manager.md
+                    - name: Varlık Yönetim Bilgileri görünümleri
+                      href: core/understand/sqlviews/asset-intelligence-views-configuration-manager.md
+                - name: Geçiş görünümleri
+                  href: core/understand/sqlviews/migration-views-configuration-manager.md
+                - name: MDM görünümleri
+                  href: core/understand/sqlviews/mobile-device-management-views-configuration-manager.md
+                - name: İstemci dağıtımı görünümleri
+                  href: core/understand/sqlviews/operating-system-deployment-views-configuration-manager.md
+                - name: Güç yönetimi görünümleri
+                  href: core/understand/sqlviews/power-management-views-configuration-manager.md
+                - name: Sorgu görünümleri
+                  href: core/understand/sqlviews/query-views-configuration-manager.md
+                - name: Raporlama görünümleri
+                  href: core/understand/sqlviews/reporting-views-configuration-manager.md
+                - name: Şema görünümleri
+                  href: core/understand/sqlviews/schema-views-configuration-manager.md
+                - name: Güvenlik görünümleri
+                  href: core/understand/sqlviews/security-views-configuration-manager.md
+                - name: Site yönetimi görünümleri
+                  href: core/understand/sqlviews/site-admin-views-configuration-manager.md
+                - name: Yazılım ölçer görünümleri
+                  href: core/understand/sqlviews/software-metering-views-configuration-manager.md
+                - name: Yazılım güncelleştirme görünümleri
+                  href: core/understand/sqlviews/software-updates-views-configuration-manager.md
+                - name: Durum ve uyarı görünümleri
+                  href: core/understand/sqlviews/status-alert-views-configuration-manager.md
+                - name: LAN’da Uyandırma görünümleri
+                  href: core/understand/sqlviews/wake-lan-views-configuration-manager.md
+            - name: Raporlarla çalışma
+              items:
+                - name: Mevcut raporların değerlendirilmesi
+                  items:
+                    - name: Tüm Koleksiyonlar raporunun değerlendirilmesi
+                      href: core/understand/sqlviews/evaluation-all-collections-report-configuration-manager.md
+                    - name: Bilgisayar Bilgileri raporunun değerlendirilmesi
+                      href: core/understand/sqlviews/evaluation-computer-information-report-configuration-manager.md
+                - name: Raporlar için SQL bildirisini görüntüleme
+                  href: core/understand/sqlviews/how-to-view-sql-statement-configuration-manager-reports.md
+                - name: Rapor değiştirme
+                  href: core/understand/sqlviews/how-to-modify-configuration-manager-reports.md
+                - name: Rapor oluşturma
+                  href: core/understand/sqlviews/how-to-create-configuration-manager-reports.md
+                - name: Raporları çalıştırma
+                  href: core/understand/sqlviews/how-to-run-configuration-manager-reports.md
+                - name: Özel rapor oluşturma alıştırmaları
+                  items:
+                    - name: '1. Alıştırma: Mevcut bir raporu çalıştırma'
+                      href: core/understand/sqlviews/exercise-1-run-existing-configuration-manager-report.md
+                    - name: '2. Alıştırma: Mevcut bir raporu değiştirme'
+                      href: core/understand/sqlviews/exercise-2-modify-existing-configuration-manager-report.md
+                    - name: '3. Alıştırma: Yeni rapor oluşturma'
+                      href: core/understand/sqlviews/exercise-3-create-new-configuration-manager-report.md
+                    - name: 'İleri Düzey Alıştırma 1: Uyumluluk ayarları için yeni rapor oluşturma'
+                      href: core/understand/sqlviews/advanced-exercise-1-create-new-report-compliance-settings-configuration-manager.md
+                    - name: 'İleri Düzey Alıştırma 1: Çözüm'
+                      href: core/understand/sqlviews/advanced-exercise-1-solution-create-new-report-compliance-settings-configuration-manager.md
+                    - name: 'İleri Düzey Alıştırma 2: Donanım envanteri için yeni rapor oluşturma'
+                      href: core/understand/sqlviews/advanced-exercise-2-create-new-report-hardware-inventory-configuration-manager.md
+                    - name: 'İleri Düzey Alıştırma 2: Çözüm'
+                      href: core/understand/sqlviews/advanced-exercise-2-solution-create-new-report-hardware-inventory-configuration-manager.md
+            - name: SQL Server görünümlerine yönelik teknik başvuru
+              items:
+                - name: SQL görünümlerini kullanan örnek sorgular
+                  items:
+                    - name: Uygulama yönetimi
+                      href: core/understand/sqlviews/sample-queries-application-management-configuration-manager.md
+                    - name: İstemci dağıtımı
+                      href: core/understand/sqlviews/sample-queries-client-deployment-configuration-manager.md
+                    - name: İstemci durumu
+                      href: core/understand/sqlviews/sample-queries-client-status-configuration-manager.md
+                    - name: Koleksiyonlar
+                      href: core/understand/sqlviews/sample-queries-collections-configuration-manager.md
+                    - name: Uyumluluk ayarları
+                      href: core/understand/sqlviews/sample-queries-compliance-settings-configuration-manager.md
+                    - name: İçerik yönetimi
+                      href: core/understand/sqlviews/sample-queries-content-management-configuration-manager.md
+                    - name: Bulma
+                      href: core/understand/sqlviews/sample-queries-discovery-configuration-manager.md
+                    - name: Uç Nokta Koruma
+                      href: core/understand/sqlviews/sample-queries-endpoint-protection-configuration-manager.md
+                    - name: Envanter
+                      items:
+                        - name: Donanım Envanteri
+                          href: core/understand/sqlviews/sample-queries-hardware-inventory-configuration-manager.md
+                        - name: Yazılım Envanteri
+                          href: core/understand/sqlviews/sample-queries-software-inventory-configuration-manager.md
+                        - name: Varlık Yönetim Bilgileri
+                          href: core/understand/sqlviews/sample-queries-asset-intelligence-configuration-manager.md
+                    - name: MDM
+                      href: core/understand/sqlviews/sample-queries-mobile-device-management-configuration-manager.md
+                    - name: İşletim sistemi dağıtımı
+                      href: core/understand/sqlviews/sample-queries-operating-system-deployment-configuration-manager.md
+                    - name: Güç yönetimi
+                      href: core/understand/sqlviews/sample-queries-power-management-configuration-manager.md
+                    - name: Sorgular
+                      href: core/understand/sqlviews/sample-queries-for-queries-configuration-manager.md
+                    - name: Güvenlik
+                      href: core/understand/sqlviews/sample-queries-security-configuration-manager.md
+                    - name: Site yönetimi
+                      href: core/understand/sqlviews/sample-queries-site-administration-configuration-manager.md
+                    - name: Yazılım kullanım ölçümü
+                      href: core/understand/sqlviews/sample-queries-software-metering-configuration-manager.md
+                    - name: Yazılım güncelleştirmeleri
+                      href: core/understand/sqlviews/sample-queries-software-updates-configuration-manager.md
+                    - name: Durum ve uyarılar
+                      href: core/understand/sqlviews/sample-queries-status-alerts-configuration-manager.md
+                    - name: LAN'da Uyandırma
+                      href: core/understand/sqlviews/sample-queries-wake-lan-views-configuration-manager.md
+                - name: Configuration Manager raporları İçin SQL Server başvurusu
+                  items:
+                    - name: Raporlar için SQL deyimi başvurusu
+                      href: core/understand/sqlviews/sql-statement-reference-configuration-manager-reports.md
+                    - name: Rapor SQL deyimlerini yazmak için Sorgu Tasarımcısı’nı kullanma
+                      href: core/understand/sqlviews/use-query-designer-write-configuration-manager-report-sql-statements.md
+                    - name: Sorgu Tasarımcısı’nı kullanarak bir SQL deyimi oluşturma
+                      href: core/understand/sqlviews/how-to-create-sql-statement-using-query-designer.md
+                - name: SMS Sağlayıcısı WMI şema başvurusu
+                  items:
+                    - name: Genel bakış
+                      href: core/understand/sqlviews/sms-provider-wmi-schema-reference-configuration-manager.md
+                    - name: Raporlar için WMI ad alanları ve sınıfları
+                      href: core/understand/sqlviews/wmi-namespaces-classes-configuration-manager-reports.md
+            - name: Configuration Manager raporlar listesi
+              href: core/understand/sqlviews/reports-supplied-with-configuration-manager.md
+    - name: site veritabanı
+      items:
+        - name: SMS Sağlayıcı hakkında
+          items:
+            - name: SMS Sağlayıcısı hakkında temel bilgiler
+              href: core/understand/sms-provider-fundamentals.md
+            - name: WMI sağlayıcısı hakkında temel bilgiler
+              href: core/understand/wmi-configuration-manager-provider-fundamentals.md
+            - name: Yönetilen SMS Sağlayıcısı hakkında temel bilgiler
+              href: core/understand/managed-sms-provider-fundamentals-in-configuration-manager.md
+            - name: Configuration Manager bağlam niteleyicileri
+              href: core/understand/context-qualifiers.md
+            - name: SMS Sağlayıcısı alan uzunluğu kısıtlamaları
+              href: core/understand/sms-provider-field-length-restrictions-in-configuration-manager.md
+        - name: Yönetilen kod kullanarak SMS Sağlayıcısı’na bağlanma
+          href: core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md
+        - name: Yönetilen kod kullanarak bağlam niteleyicisi ekleme
+          href: core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-managed-code.md
+        - name: WMI kullanarak SMS Sağlayıcısı’na bağlanma
+          href: core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md
+        - name: WMI kullanarak bağlam niteleyicisi ekleme
+          href: core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md
+    - name: Configuration Manager uygulamalarının güvenliğini sağlama
+      href: core/understand/securing-configuration-manager-applications.md
+- name: Uygulama yönetimi
+  items:
+    - name: Betik dağıtım türü ile uygulama oluşturma
+      href: apps/how-to-create-an-application-with-the-script-deployment-type.md
+    - name: Uygulama onay süreci
+      href: apps/application-approval-process.md
+    - name: Uygulama yönetimi uzantısı
+      items:
+        - name: Dağıtım türü uzantısı sürüm oluşturma
+          href: apps/deployment-type-extension-versioning.md
+        - name: 'Senaryo: Uygulama yönetimini genişletme'
+          items:
+            - name: Senaryoya genel bakış
+              href: apps/extending-application-management-overview.md
+            - name: Özel SDK derlemesi oluşturma
+              items:
+                - name: Dağıtım teknolojisini tanımlama
+                  href: apps/how-to-define-the-deployment-technology.md
+                - name: Barındırma teknolojisini tanımlama
+                  href: apps/how-to-define-the-hosting-technology.md
+                - name: Yükleyici teknolojisini tanımlama
+                  href: apps/how-to-define-the-installer-technology.md
+                - name: İçeriği içeri aktarmayı tanımlama
+                  href: apps/how-to-define-the-content-importer.md
+                - name: Yükleyiciyi tanımlama
+                  href: apps/how-to-define-the-installer.md
+                - name: Kaynakları tanımlama
+                  href: apps/how-to-define-the-resources.md
+            - name: Kayıt XML dosyaları oluşturma
+              items:
+                - name: Dağıtım teknolojisi kayıt dosyasını tanımlama
+                  href: apps/how-to-define-the-deployment-technology-registration-file.md
+                - name: Barındırma teknolojisi kayıt dosyasını tanımlama
+                  href: apps/how-to-define-the-hosting-technology-registration-file.md
+                - name: Yükleyici teknolojisi kayıt dosyasını tanımlama
+                  href: apps/how-to-define-the-installer-technology-registration-file.md
+            - name: Kullanıcı arabirimi uzantısı oluşturma
+              items:
+                - name: Kullanıcı arabirimi uzantı derlemesini tanımlama
+                  href: apps/how-to-define-the-ui-extension-assembly.md
+                - name: Uygulama sihirbazı XML dosyası oluşturmayı tanımlama
+                  href: apps/how-to-define-the-create-application-wizard-xml-file.md
+                - name: Dağıtım türü sihirbazı XML dosyası oluşturmayı tanımlama
+                  href: apps/how-to-define-the-create-deployment-type-wizard-xml-file.md
+                - name: Dağıtım türü özellik sayfası XML dosyasını tanımlama
+                  href: apps/how-to-define-the-deployment-type-property-sheet-xml-file.md
+            - name: İstemci dosyaları oluşturma
+              items:
+                - name: AppSynclet MOF dosyasını tanımlama
+                  href: apps/how-to-define-the-appsynclet-mof-file.md
+                - name: İstemci tarafı işleyiciyi tanımlama
+                  href: apps/how-to-define-the-client-side-handler.md
+            - name: Uygulama yönetimi uzantısını yükleme
+              items:
+                - name: Dağıtım türü uzantı dosyası (cmdtx) oluşturma
+                  href: apps/how-to-create-the-deployment-type-extension-file-cmdtx.md
+                - name: Windows Installer (msi) dosyası oluşturma
+                  href: apps/how-to-create-the-windows-installer-file-msi.md
+            - name: Uygulama yönetimi uzantısını doğrulama
+              href: apps/verifying-the-application-management-extension.md
+- name: İstemci programlama
+  items:
+    - name: Configuration Manager istemci WMI programlama
+      items:
+        - name: WMI programlama hakkında
+          href: core/clients/programming/about-configuration-manager-wmi-programming.md
+        - name: System.Management kullanarak istemci WMI ad alanına bağlanma
+          href: core/clients/programming/how-to-connect-to-the-client-wmi-namespace.md
+        - name: System.Management kullanarak bir WMI nesnesini okuma
+          href: core/clients/programming/how-to-read-a-wmi-object-by-using-system.management.md
+        - name: System.Management kullanarak zaman uyumlu sorgu gerçekleştirme
+          href: core/clients/programming/how-to-perform-a-synchronous-query-by-using-system.management.md
+        - name: System.Management kullanarak zaman uyumsuz sorgu gerçekleştirme
+          href: core/clients/programming/how-to-perform-an-asynchronous-query-by-using-system.management.md
+        - name: System.Management kullanarak bir WMI sınıfı nesnesini çağırma
+          href: core/clients/programming/how-to-call-a-wmi-class-method-by-using-system.management.md
+    - name: İstemci kaynak koşulları
+      href: core/clients/programming/client-resource-conditions.md
+    - name: Özel istemci ayarlarını uygulama
+      href: core/clients/programming/how-to-apply-custom-client-settings.md
+- name: Koleksiyonlar
+  items:
+    - name: Dinamik koleksiyon oluşturma
+      href: core/clients/collections/how-to-create-a-dynamic-collection.md
+    - name: Statik koleksiyon oluşturma
+      href: core/clients/collections/how-to-create-a-static-collection.md
+    - name: Koleksiyon üyelerini numaralandırma
+      href: core/clients/collections/how-to-enumerate-the-members-of-a-collection.md
+    - name: Koleksiyonu değiştirme
+      href: core/clients/collections/how-to-modify-a-collection.md
+    - name: Koleksiyonu silme
+      href: core/clients/collections/how-to-delete-a-collection.md
+    - name: Koleksiyonun özelliklerini alma
+      href: core/clients/collections/how-to-get-the-properties-of-a-collection.md
+    - name: Tek seferlik üyelik değerlendirmesi başlatma
+      href: core/clients/collections/how-to-initiate-a-one-time-membership-evaluation-for-a-collection.md
+- name: Uyumluluk ayarları
+  items:
+    - name: Kurulum ve yapılandırma
+      items:
+        - name: Kurulum ve yapılandırma hakkında
+          href: compliance/about-compliance-settings--dcm--setup-and-configuration.md
+        - name: Uyumluluk ayarları aracısını etkinleştirme ve devre dışı bırakma
+          href: compliance/how-to-enable-or-disable-the-compliance-settings--dcm--agent.md
+        - name: Varsayılan uyumluluk değerlendirme zamanlamasını yapılandırma
+          href: compliance/how-to-configure-the-default-compliance-evaluation-schedule.md
+    - name: Yapılandırma temel çizgileri ve yapılandırma öğeleri
+      items:
+        - name: Yapılandırma temelleri ve öğeleri hakkında
+          href: compliance/about-configuration-baselines-and-configuration-items.md
+        - name: Yapılandırma temelleri ve öğelerini içeri aktarma
+          href: compliance/how-to-import-configuration-baselines-and-configuration-items.md
+        - name: Yapılandırma temelleri ve öğelerini dışarı aktarma
+          href: compliance/how-to-export-configuration-baselines-and-configuration-items.md
+        - name: Yapılandırma temellerini atama
+          href: compliance/how-to-assign-configuration-baselines.md
+        - name: Yapılandırma atamalarını listeleme
+          href: compliance/how-to-list-configuration-assignments.md
+    - name: Uyumluluk ayarları genişletilebilirliği
+      href: compliance/about-compliance-settings--dcm--extensibility.md
+    - name: Yapılandırma temellerini ve öğelerini yazma
+      items:
+        - name: Yapılandırma temellerini ve öğelerini yazma hakkında
+          href: compliance/about-authoring-configuration-baselines-and-configuration-items.md
+        - name: Yapılandırma temeli örneği
+          items:
+            - name: Yapılandırma temelleri hakkında
+              href: compliance/about-configuration-baselines.md
+            - name: Yapılandırma temeli örneği
+              href: compliance/configuration-baseline-example-1.md
+        - name: Uygulama yapılandırma öğesi örnekleri
+          items:
+            - name: Uygulama yapılandırma öğeleri
+              href: compliance/about-application-configuration-items.md
+            - name: Uygulama yapılandırma öğesi örneği 1
+              href: compliance/application-configuration-item-example-1.md
+            - name: Uygulama yapılandırma öğesi örneği 2
+              href: compliance/application-configuration-item-example-2.md
+        - name: İşletim sistemi yapılandırma öğesi örneği
+          items:
+            - name: İşletim sistemi yapılandırma öğeleri hakkında
+              href: compliance/about-operating-system-configuration-item-examples.md
+            - name: İşletim sistemi yapılandırma öğesi örneği
+              href: compliance/operating-system-configuration-item-example-1.md
+        - name: Genel yapılandırma öğesi örneği
+          items:
+            - name: Genel yapılandırma öğeleri hakkında
+              href: compliance/about-general-configuration-items.md
+            - name: Genel yapılandırma öğesi örneği
+              href: compliance/general-configuration-item-example-1.md
+- name: Konsol uzantıları
+  items:
+    - name: Konsol uzantıları hakkında
+      href: core/servers/console/about-configuration-manager-console-extension.md
+    - name: Konsol uzantısı mimarisi
+      href: core/servers/console/console-extension-architecture.md
+    - name: Konsol uzantısı dağıtımı
+      href: core/servers/console/console-extension-deployment.md
+    - name: Konsol eylemleri
+      items:
+        - name: Konsol eylemleri hakkında
+          items:
+            - name: Eylemler
+              href: core/servers/console/configuration-manager-actions.md
+            - name: Eylem XML’i
+              href: core/servers/console/configuration-manager-action-xml.md
+            - name: Koşullu eylemler
+              href: core/servers/console/conditional-actions.md
+            - name: Yürütülebilir eylem
+              href: core/servers/console/executable-action.md
+            - name: ShowDialog eylemi
+              href: core/servers/console/showdialog-action.md
+            - name: Rapor eylemi
+              href: core/servers/console/report-action.md
+            - name: AssemblyType eylemi
+              href: core/servers/console/assemblytype-action.md
+            - name: Grup eylemi
+              href: core/servers/console/group-action.md
+        - name: Eylem oluşturma
+          href: core/servers/console/how-to-create-a-configuration-manager-action.md
+    - name: Konsol formları
+      items:
+        - name: Konsol formları hakkında
+          href: core/servers/console/about-configuration-manager-console-forms.md
+        - name: Özellik sayfası oluşturma
+          href: core/servers/console/how-to-create-a-configuration-manager-property-sheet.md
+        - name: Özellik sayfası için form XML’i oluşturma
+          href: core/servers/console/how-to-create-form-xml-for-a-configuration-manager-property-sheet.md
+        - name: Mevcut bir özellik sayfasına özellik sayfası ekleme
+          href: core/servers/console/how-to-add-a-property-page-to-an-existing-configuration-manager-property-sheet.md
+        - name: Özellik sayfası için eylem XML’i oluşturma
+          href: core/servers/console/how-to-create-action-xml-for-a-configuration-manager-property-sheet.md
+        - name: İletişim kutusu oluşturma
+          href: core/servers/console/how-to-create-a-configuration-manager-dialog-box.md
+        - name: İletişim kutusu için form XML’i oluşturma
+          href: core/servers/console/how-to-create-form-xml-for-a-configuration-manager-dialog-box.md
+        - name: İletişim kutusu için eylem XML’i oluşturma
+          href: core/servers/console/how-to-create-action-xml-for-a-configuration-manager-dialog-box.md
+        - name: Forma geçirilen nesneleri kullanma
+          href: core/servers/console/how-to-use-objects-passed-to-a-configuration-manager-form.md
+        - name: Verileri forma bağlama
+          href: core/servers/console/how-to-bind-configuration-manager-data-to-a-form.md
+    - name: Konsol yönetim sınıfları
+      items:
+        - name: Konsol yönetim sınıfları hakkında
+          href: core/servers/console/about-configuration-manager-console-management-classes.md
+        - name: Konsol yönetim sınıfı XML’i
+          href: core/servers/console/console-management-class-xml.md
+    - name: Konsol düğümleri
+      items:
+        - name: Konsol düğümleri hakkında
+          href: core/servers/console/about-configuration-manager-console-nodes.md
+        - name: Konsol düğümü XML’i
+          href: core/servers/console/console-node-xml.md
+        - name: Konsol RootNodes öğesi
+          href: core/servers/console/console-rootnodes-element.md
+        - name: Konsol ResourceAssembly öğesi
+          href: core/servers/console/console-resourceassembly-element.md
+        - name: Konsol düğümü oluşturma
+          href: core/servers/console/how-to-create-a-configuration-manager-console-node.md
+        - name: Konsol kodu GUID’sini bulma
+          href: core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md
+    - name: Konsol görünümleri
+      items:
+        - name: Konsol görünümleri hakkında
+          href: core/servers/console/about-configuration-manager-console-views.md
+        - name: Özel görünüm oluşturma
+          href: core/servers/console/how-to-create-a-configuration-manager-console-custom-view.md
+        - name: Kılavuz görünümü için düğüm XML’i oluşturma
+          href: core/servers/console/how-to-create-node-xml-for-a-configuration-manager-console-grid-view.md
+- name: Bulma
+  items:
+    - name: Sinyal Bulmayı Yapılandırma
+      href: core/servers/configure/how-to-configure-heartbeat-discovery.md
+    - name: Ağ Bulmayı Yapılandırma
+      href: core/servers/configure/how-to-configure-network-discovery.md
+    - name: Active Directory Grup Bulmayı Yapılandırma
+      href: core/servers/configure/how-to-configure-active-directory-group-discovery.md
+    - name: Active Directory Sistem Bulmayı Yapılandırma
+      href: core/servers/configure/how-to-configure-active-directory-system-discovery.md
+    - name: Active Directory Kullanıcı Saptamayı Yapılandırma
+      href: core/servers/configure/how-to-configure-active-directory-user-discovery.md
+    - name: Kaynak bulmayı genişletme
+      items:
+        - name: Kaynak bulmadaki DDR’ları kullanma
+          items:
+            - name: DDR özellikleri hakkında
+              href: core/servers/configure/about-ddr-properties.md
+            - name: Mevcut bir kaynak örneğini güncelleştirme
+              href: core/servers/configure/about-updating-an-existing-resource-instance.md
+            - name: Veri bulma kaydı (DDR) oluşturma
+              href: core/servers/configure/about-creating-a-data-discovery-record.md
+            - name: Bir kaynağın benzersiz tanımlayıcı değeri hakkında
+              href: core/servers/configure/about-the-unique-identifier-value-for-a-resource.md
+        - name: Bir istemcinin benzersiz tanımlayıcı değerini alma
+          href: core/servers/configure/how-to-get-the-unique-identifier-value-for-a-client.md
+        - name: Mevcut bir kaynak türüne yeni özellikler ekleme
+          href: core/servers/configure/how-to-add-new-properties-to-an-existing-resource-type.md
+        - name: DDR oluşturma
+          href: core/servers/configure/how-to-create-a-data-discovery-record.md
+- name: Envanter
+  items:
+    - name: Envanter hakkında
+      href: core/clients/inventory/about-configuration-manager-inventory.md
+    - name: Donanım envanteri
+      items:
+        - name: Donanım envanterini etkinleştirme
+          href: core/clients/inventory/how-to-enable-hardware-inventory.md
+        - name: Donanım envanteri ayarlarını yapılandırma
+          href: core/clients/inventory/how-to-configure-hardware-inventory-settings.md
+        - name: IDMIF dosyalarının gereksinimleri
+          href: core/clients/inventory/requirements-of-idmif-files.md
+        - name: Donanım envanteri önbelleğini sıfırlama
+          href: core/clients/inventory/how-to-reset-the-hardware-inventory-cache.md
+    - name: Yazılım envanteri
+      items:
+        - name: Yazılım envanterini etkinleştirme
+          href: core/clients/inventory/how-to-enable-software-inventory.md
+        - name: Yazılım envanteri ayarlarını yapılandırma
+          href: core/clients/inventory/how-to-configure-software-inventory-settings.md
+        - name: Yazılım envanteri önbelleğini sıfırlama
+          href: core/clients/inventory/how-to-reset-the-software-inventory-cache.md
+    - name: Envanteri genişletmek için bir MOF dosyasını içeri aktarma
+      href: core/clients/inventory/how-to-import-a-mof-file-to-extend-inventory.md
+    - name: Varlık Yönetim Bilgileri eşitlemesini başlatma
+      href: core/clients/asset-intelligence/how-to-initiate-a-synchronization.md
+- name: MDM eski istemcisi
+  items:
+    - name: Mobil cihaz istemci aracısı ayarlarını yapılandırma
+      href: mdm/how-to-configure-mobile-device-client-agent-settings.md
+    - name: 'Mobil cihazlar için yazılım dağıtım paketleri, programları ve tanıtımları oluşturma'
+      href: mdm/how-to-create-software-distribution-packages-for-mobile-devices.md
+- name: İşletim sistemi dağıtımı
+  items:
+    - name: İşletim sistemi dağıtımı site rolü yapılandırması
+      items:
+        - name: İşletim sistemi dağıtımı site rolü yapılandırması hakkında
+          href: osd/about-operating-system-deployment-site-role-configuration.md
+        - name: Durum geçiş noktası rolü oluşturma
+          href: osd/how-to-create-a-state-migration-point-role.md
+        - name: Durum geçiş noktası rolü silme
+          href: osd/how-to-delete-a-state-migration-point-role.md
+        - name: Durum geçiş noktası klasörü ekleme
+          href: osd/how-to-add-a-state-migration-point-folder.md
+        - name: Durum geçiş noktası için salt geri yükleme modu ayarlama
+          href: osd/how-to-set-the-restore-only-mode-for-a-state-migration-point.md
+        - name: Durum geçiş noktası için silme ilkesi ayarlama
+          href: osd/how-to-set-the-deletion-policy-for-a-state-migration-point.md
+        - name: PXE etkin dağıtım noktası rolünü etkinleştirme
+          href: osd/how-to-enable-a-pxe-service-point-role.md
+        - name: PXE etkin dağıtım noktası rolünü devre dışı bırakma
+          href: osd/how-to-disable-a-pxe-service-point-role.md
+        - name: Bilinmeyen bilgisayar desteğini etkinleştirme
+          href: osd/how-to-enable-unknown-computer-support-for-a-pxe-service-point.md
+        - name: PXE isteklerine yanıt ayarlama
+          href: osd/how-to-set-the-pxe-service-point-response-to-pxe-requests.md
+        - name: PXE yanıt gecikmesini ayarlama
+          href: osd/how-to-set-the-response-delay-for-a-pxe-service-point.md
+        - name: Tüm ağ arabirimlerine PXE yanıtı ayarlama
+          href: osd/how-to-set-the-pxe-service-point-response-to-all-network-interfaces.md
+        - name: Belirli bir ağ arabirimine PXE yanıtı ayarlama
+          href: osd/how-to-set-the-pxe-service-point-response-for-a-specific-network-interface.md
+        - name: İşletim sistemi dağıtımı marka bilgilerini ayarlama
+          href: osd/how-to-set-operating-system-deployment-branding-information.md
+    - name: İşletim sistemi dağıtımı görev dizisi
+      items:
+        - name: Görev dizileri hakkında
+          items:
+            - name: Görev dizisine genel bakış
+              href: osd/operating-system-deployment-task-sequences-overview.md
+            - name: Görev dizisi nesne modeli
+              href: osd/operating-system-deployment-task-sequence-object-model.md
+        - name: Görev dizisi oluşturma
+          href: osd/how-to-create-an-operating-system-deployment-task-sequence.md
+        - name: Görev dizisi paketi oluşturma
+          href: osd/how-to-create-an-operating-system-deployment-task-sequence-package.md
+        - name: Görev dizisi paketinden bir görev dizisi okuma
+          href: osd/how-to-read-a-task-sequence-from-a-task-sequence-package.md
+        - name: Kullanılabilir görev dizilerini numaralandırma
+          href: osd/how-to-enumerate-the-available-operating-system-deployment-task-sequences.md
+        - name: Görev dizisi eylemi ekleme
+          href: osd/how-to-add-an-operating-system-deployment-task-sequence-action.md
+        - name: Görev dizisi eylemi silme
+          href: osd/how-to-delete-an-operating-system-deployment-task-sequence-action.md
+        - name: Görev dizisi adımına koşul ekleme
+          href: osd/how-to-add-a-condition-to-an-operating-system-deployment-task-sequence-step.md
+        - name: Görev dizisindeki adımları numaralandırma
+          href: osd/how-to-enumerate-the-steps-in-an-operating-system-deployment-task-sequence.md
+        - name: Görev dizisini yeniden sıralama
+          href: osd/how-to-reorder-an-operating-system-deployment-task-sequence.md
+        - name: Görev dizisi grubu oluşturma
+          href: osd/how-to-create-an-operating-system-deployment-task-sequence-group.md
+        - name: Görev dizisi grubuna adım ekleme
+          href: osd/how-to-add-a-step-to-an-operating-system-deployment-group.md
+        - name: Görev dizisi grubundan bir adımı kaldırma
+          href: osd/how-to-remove-a-step-from-an-operating-system-deployment-group.md
+        - name: Bir adımı farklı görev dizisi grubuna taşıma
+          href: osd/how-to-move-a-step-to-a-different-task-sequence-group.md
+        - name: Görev dizisi değişkenlerini kullanma
+          href: osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md
+        - name: Görev dizisi değişkenlerini ayarlama
+          href: osd/how-to-set-an-operating-system-deployment-task-sequence-variable.md
+    - name: İşletim sistemi dağıtımı bilgisayar yönetimi
+      items:
+        - name: Bilgisayar yönetimi hakkında
+          href: osd/about-computer-management.md
+        - name: Yeni bir bilgisayarı içeri aktarma
+          href: osd/how-to-import-a-new-computer-into-configuration-manager.md
+        - name: İki bilgisayar arasında ilişki oluşturma
+          href: osd/how-to-create-an-association-between-two-computers-in-configuration-manager.md
+        - name: Koleksiyon değişkeni oluşturma
+          href: osd/how-to-create-a-collection-variable.md
+        - name: Bilgisayar değişkeni oluşturma
+          href: osd/how-to-create-a-computer-variable.md
+        - name: İşletim sistemi dağıtımı geçişlerini izleme
+          href: osd/how-to-track-operating-system-deployment-migrations.md
+    - name: İşletim sistemi dağıtımı görüntü yönetimi
+      items:
+        - name: Görüntü yönetimi hakkında
+          href: osd/about-operating-system-deployment-image-management.md
+        - name: İşletim sistemi görüntü paketi ekleme
+          href: osd/how-to-add-an-operating-system-image-package-in-configuration-manager.md
+        - name: İşletim sistemi görüntü paketini güncelleştirme
+          href: osd/how-to-update-an-operating-system-image-package.md
+        - name: İşletim sistemi görüntüsünün özelliklerini görüntüleme
+          href: osd/how-to-view-the-properties-for-an-operating-system-image.md
+        - name: WIM Dosyasından önyükleme görüntüsü ekleme
+          href: osd/how-to-add-a-boot-image-from-a-wim-file.md
+        - name: İşletim sistemi yükseltme paketi ekleme
+          href: osd/how-to-add-an-operating-system-install-package.md
+        - name: Koleksiyonun PXE tanıtımını temizleme
+          href: osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-collection.md
+        - name: Kaynağın PXE tanıtımını temizleme
+          href: osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-resource.md
+    - name: İşletim sistemi dağıtımı sürücü yönetimi
+      items:
+        - name: Sürücü yönetimi hakkında
+          href: osd/about-operating-system-deployment-driver-management.md
+        - name: INF dosyası tarafından tanımlanan bir sürücüyü içeri aktarma
+          href: osd/how-to-import-a-windows-driver-described-by-an-inf-file.md
+        - name: txtsetup.oem dosyası tarafından tanımlanan bir sürücüyü içeri aktarma
+          href: osd/how-to-import-a-windows-driver-described-by-a-txtsetup-oem-file.md
+        - name: Bir sürücü için sürücü paketi oluşturma
+          href: osd/how-to-create-a-driver-package-for-a-windows-driver.md
+        - name: Önyükleme görüntüsüne sürücü ekleme
+          href: osd/how-to-add-a-windows-driver-to-a-configuration-manager-boot-image-package.md
+        - name: Önyükleme görüntüsünden sürücü kaldırma
+          href: osd/how-to-remove-a-windows-driver-from-a-boot-image-package.md
+        - name: Sürücüyü etkinleştirme veya devre dışı bırakma
+          href: osd/how-to-enable-or-disable-a-windows-driver.md
+        - name: Sürücü silme
+          href: osd/how-to-delete-a-windows-driver-from-configuration-manager.md
+        - name: Sürücü paketi silme
+          href: osd/how-to-delete-a-driver-package-in-configuration-manager.md
+        - name: Sürücü için desteklenen platformları belirtme
+          href: osd/how-to-specify-the-supported-platforms-for-a-driver.md
+        - name: Sürücüye kategori ekleme
+          href: osd/how-to-add-a-category-to-a-windows-driver.md
+        - name: Sürücüden kategori kaldırma
+          href: osd/how-to-remove-a-category-from-a-windows-driver.md
+    - name: İşletim sistemi dağıtımını genişletme
+      items:
+        - name: Configuration Manager özel eylemleri hakkında
+          href: osd/about-configuration-manager-custom-actions.md
+        - name: Özel eylem istemci uygulamaları hakkında
+          href: osd/about-configuration-manager-custom-action-client-applications.md
+        - name: Özel eylem MOF dosyaları hakkında
+          href: osd/about-configuration-manager-custom-action-mof-files.md
+        - name: Özel eylem ilerleme durumunu bildirme hakkında
+          href: osd/about-reporting-configuration-manager-custom-action-progress.md
+        - name: Özel eylem denetimi oluşturma
+          href: osd/how-to-create-a-configuration-manager-custom-action-control.md
+        - name: Özel eylem için MOF dosyası oluşturma
+          href: osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md
+        - name: Özel eylem denetimi kullanma
+          href: osd/how-to-use-a-configuration-manager-custom-action-control.md
+- name: Rol tabanlı yönetim
+  items:
+    - name: Rol tabanlı yönetime genel bakış
+      href: core/servers/configure/role-based-administration.md
+    - name: Yönetici kullanıcı yönetimi
+      items:
+        - name: Kullanıcının bir nesne için izni olup olmadığını denetleme
+          href: core/servers/configure/how-to-check-if-a-user-has-permissions-for-an-object.md
+        - name: Kullanıcının bir kaynak için izni olup olmadığını denetleme
+          href: core/servers/configure/how-to-check-if-a-user-has-permissions-for-a-resource.md
+        - name: Kullanıcı veya güvenlik grubu için yönetim atamalarını numaralandırma
+          href: core/servers/configure/how-to-enumerate-the-administrative-assignments-for-a-user-or-security-group.md
+        - name: Yeni yönetici oluşturma
+          href: core/servers/configure/how-to-create-a-new-administrator.md
+        - name: Yeni güvenlik rolü oluşturma
+          href: core/servers/configure/how-to-create-a-new-security-role.md
+    - name: Güvenlik kapsamı yönetimi
+      items:
+        - name: Yeni güvenlik kapsamı oluşturma
+          href: core/servers/configure/how-to-create-a-new-security-scope.md
+        - name: Güvenlik kapsamı silme
+          href: core/servers/configure/how-to-delete-a-security-scope.md
+        - name: Nesneyi bir güvenlik kapsamıyla ilişkilendirme
+          href: core/servers/configure/how-to-associate-an-object-with-a-security-scope.md
+        - name: Bir güvenlik kapsamı ile nesne ilişkilendirmesini kaldırma
+          href: core/servers/configure/how-to-remove-an-object-association-with-a-security-scope.md
+- name: Uzak araçlar
+  items:
+    - name: Uzak araçları etkinleştirme ve devre dışı bırakma
+      href: core/clients/remote-control/how-to-enable-and-disable-remote-tools.md
+    - name: Uzak araçların ayarlarını yapılandırma
+      href: core/clients/remote-control/how-to-configure-remote-tools-settings.md
+- name: Yazılım dağıtımı
+  items:
+    - name: Yazılım dağıtımına genel bakış
+      href: core/servers/configure/software-distribution-overview.md
+    - name: Paketler
+      items:
+        - name: Paket tanım dosyaları hakkında
+          href: core/servers/configure/about-package-definition-files.md
+        - name: Paket oluşturma
+          href: core/servers/configure/how-to-create-a-package.md
+        - name: Paket tanımı dosya şablonu kullanarak paket oluşturma
+          href: core/servers/configure/how-to-create-a-package-by-using-a-package-definition-file-template.md
+        - name: Paket özelliklerini yapılandırma
+          href: core/servers/configure/how-to-configure-package-properties.md
+        - name: Paketi ikili değişim çoğaltması kullanacak şekilde yapılandırma
+          href: core/servers/configure/how-to-configure-a-package-to-use-binary-delta-replication.md
+        - name: Paket silme
+          href: core/servers/configure/how-to-delete-a-package.md
+        - name: Dağıtım noktasına bir paket atama
+          href: core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md
+    - name: Programlar
+      items:
+        - name: Programlar hakkında
+          href: core/servers/configure/about-software-distribution-programs.md
+        - name: Program oluşturma
+          href: core/servers/configure/how-to-create-a-program.md
+        - name: Program özelliklerini değiştirme
+          href: core/servers/configure/how-to-modify-program-properties.md
+        - name: Programın en uzun çalışma süresini değiştirme
+          href: core/servers/configure/how-to-change-the-maximum-run-time-for-a-program.md
+        - name: Tüm programları ve en uzun çalışma süresi değerlerini listeleme
+          href: core/servers/configure/how-to-list-all-programs-and-their-maximum-run-time-value.md
+        - name: Program için desteklenen platformları değiştirme
+          href: core/servers/configure/how-to-modify-the-supported-platforms-for-a-program.md
+    - name: Dağıtımlar
+      items:
+        - name: Dağıtımlar hakkında
+          href: core/servers/configure/about-software-distribution-deployments.md
+        - name: Dağıtım oluşturma
+          href: core/servers/configure/how-to-create-an-advertisement.md
+        - name: Bilgisayar koleksiyonuna dağıtım atama
+          href: core/servers/configure/how-to-assign-an-advertisement-to-a-collection-of-computers.md
+        - name: Dağıtım özelliklerini değiştirme
+          href: core/servers/configure/how-to-modify-advertisement-properties.md
+        - name: Dağıtımı bakım penceresi dışından yeniden başlatmalara izin verecek şekilde yapılandırma
+          href: core/servers/configure/how-to-allow-reboots-outside-of-a-maintenance-window.md
+        - name: Dağıtımı bakım penceresini geçersiz kılacak şekilde yapılandırma
+          href: core/servers/configure/how-to-configure-an-advertisement-to-override-a-maintenance-window.md
+    - name: Bakım pencereleri
+      items:
+        - name: Bakım pencereleri hakkında
+          href: core/servers/configure/about-maintenance-windows.md
+        - name: Bakım penceresi oluşturma
+          href: core/servers/configure/how-to-create-a-maintenance-window-for-a-collection.md
+        - name: Bakım penceresi özelliklerini değiştirme
+          href: core/servers/configure/how-to-change-the-maintenance-window-properties-for-a-collection.md
+        - name: Bakım penceresi silme
+          href: core/servers/configure/how-to-delete-a-maintenance-window-for-a-collection.md
+        - name: Belirli bir koleksiyon için bakım penceresini ve özelliklerini listeleme
+          href: core/servers/configure/how-to-list-the-maintenance-windows-and-properties-for-a-specific-collection.md
+    - name: Kurulum ve yapılandırma
+      items:
+        - name: Yazılım dağıtımı kurulumu ve yapılandırması hakkında
+          href: core/servers/configure/about-software-distribution-setup-and-configuration.md
+        - name: Tanıtılan programlar istemci aracısını etkinleştirme veya devre dışı bırakma
+          href: core/servers/configure/how-to-enable-or-disable-the-advertised-programs-client-agent.md
+        - name: Tanıtılan programlar istemci aracısı ayarlarını yapılandırma
+          href: core/servers/configure/how-to-configure-advertised-programs-client-agent-settings.md
+        - name: Dağıtım marka bilgilerini özelleştirme
+          href: core/servers/configure/how-to-customize-advertisement-branding-information.md
+    - name: LAN'da Uyandırma
+      items:
+        - name: LAN’da Uyandırma için gerekli bir dağıtımı yapılandırma
+          href: core/servers/configure/how-to-configure-a-mandatory-advertisement-for-wake-on-lan.md
+        - name: İş ortağı bildirim API’sini etkinleştirme
+          href: core/servers/configure/how-to-enable-the-partner-notification-api.md
+    - name: Dağıtım noktaları
+      items:
+        - name: Bir sitenin dağıtım noktalarını listeleme
+          href: core/servers/configure/how-to-list-distribution-points-for-a-site.md
+        - name: İsteğe bağlı dağıtmak için bayrak ayarlama
+          href: core/servers/configure/how-to-set-the-distribute-on-demand-flag.md
+- name: Yazılım kullanım ölçümü
+  items:
+    - name: Yazılım kullanım ölçümünü etkinleştirme veya devre dışı bırakma
+      href: apps/how-to-enable-or-disable-software-metering.md
+    - name: Otomatik yazılım kullanım ölçümü kuralı oluşturmayı yapılandırma
+      href: apps/how-to-configure-automatic-software-metering-rule-generation.md
+    - name: Yazılım kullanım ölçümü kuralı oluşturma
+      href: apps/how-to-create-a-software-metering-rule.md
+    - name: Yazılım kullanım ölçümü kuralı silme
+      href: apps/how-to-delete-a-software-metering-rule.md
+    - name: Yazılım kullanım ölçümü kuralını etkinleştirme veya devre dışı bırakma
+      href: apps/how-to-enable-or-disable-a-software-metering-rule.md
+    - name: Dosya kullanım özeti bilgilerini görüntüleme
+      href: apps/how-to-view-file-usage-summary-information.md
+    - name: Aylık kullanım özeti bilgilerini görüntüleme
+      href: apps/how-to-view-monthly-usage-summary-information.md
+- name: Yazılım güncelleştirmeleri
+  items:
+    - name: Kurulum ve yapılandırma
+      items:
+        - name: Yazılım güncelleştirmeleri kurulumu ve yapılandırması hakkında
+          href: sum/about-software-updates-setup-and-configuration.md
+        - name: Yazılım güncelleştirme noktasını yapılandırma
+          href: sum/how-to-configure-the-software-update-point.md
+        - name: WSUS ayarlarını yapılandırma
+          href: sum/how-to-configure-the-wsus-settings.md
+        - name: Yazılım güncelleştirmeleri istemci aracısını etkinleştirme veya devre dışı bırakma
+          href: sum/how-to-enable-or-disable-the-software-updates-client-agent.md
+        - name: Yazılım güncelleştirmeleri marka bilgilerini ayarlama
+          href: sum/how-to-set-software-updates-branding-information.md
+    - name: Dağıtımlar
+      items:
+        - name: Yazılım güncelleştirme dağıtımları hakkında
+          href: sum/about-software-updates-deployments.md
+        - name: Belirli ölçütlerle eşleşen güncelleştirmeleri numaralandırma
+          href: sum/how-to-enumerate-updates-matching-a-specific-criteria.md
+        - name: Güncelleştirme listesi oluşturma
+          href: sum/how-to-create-an-update-list.md
+        - name: Dağıtım şablonu oluşturma
+          href: sum/how-to-create-a-deployment-template.md
+        - name: Dağıtım paketi oluşturma
+          href: sum/how-to-create-a-deployment-package.md
+        - name: Dağıtım paketine güncelleştirmeler ekleme
+          href: sum/how-to-add-updates-to-a-deployment-package.md
+        - name: Dağıtım paketinden güncelleştirmeleri silme
+          href: sum/how-to-delete-updates-from-a-deployment-package.md
+        - name: Güncelleştirmeleri yapılandırma ve dağıtma
+          href: sum/how-to-configure-and-deploy-updates.md
+        - name: Dağıtım paketi kaynağını değiştirme
+          href: sum/how-to-change-the-deployment-package-source.md
+    - name: Yazılım güncelleştirme noktasını eşitleme
+      items:
+        - name: Yazılım güncelleştirme noktasını eşitleme hakkında
+          href: sum/about-synchronizing-the-software-update-point.md
+        - name: Yazılım güncelleştirme noktasını eşitleme
+          href: sum/how-to-synchronize-with-the-software-update-point.md
+    - name: Yazılım güncelleştirmelerini bakım pencerelerini geçersiz kılacak şekilde yapılandırma
+      href: sum/how-to-configure-software-updates-to-override-maintenance-windows.md
+- name: Durum ve özetleyiciler
+  items:
+    - name: Configuration Manager durumu hakkında
+      items:
+        - name: Durum iletileri hakkında
+          href: core/servers/manage/about-configuration-manager-status-messages.md
+        - name: Bileşen durumu iletileri hakkında
+          href: core/servers/manage/about-configuration-manager-component-status-messages.md
+        - name: Durum iletileri oluşturmak için SMSCSTAT.DLL kullanma hakkında
+          href: core/servers/manage/about-using-smscstat.dll-to-create-status-messages.md
+        - name: İstemcilerden durum iletilerini raporlama hakkında
+          href: core/servers/manage/about-reporting-status-messages-from-configuration-manager-clients.md
+    - name: Özetleyiciler hakkında
+      items:
+        - name: Configuration Manager durum özetleyicileri hakkında
+          href: core/servers/manage/about-configuration-manager-status-summarizers.md
+        - name: Configuration Manager tally aralıkları hakkında
+          href: core/servers/manage/about-configuration-manager-tally-intervals.md
+    - name: Sitenin sistem durumunu belirleme
+      href: core/servers/manage/how-to-determine-the-health-of-a-configuration-manager-site.md
+    - name: Site için tally aralıklarını okuma
+      href: core/servers/manage/how-to-read-the-tally-intervals-for-a-configuration-manager-site.md
+    - name: Kullanıcı tarafından tanımlanan durum iletilerini okuma
+      href: core/servers/manage/how-to-read-user-defined-status-messages.md
+    - name: Kullanıcı tarafından tanımlanan durum iletilerini bildirme
+      href: core/servers/manage/how-to-report-user-defined-status-messages.md
+    - name: Durum iletilerini silme
+      href: core/servers/manage/how-to-delete-status-messages.md
+    - name: Paket durumunu belirleme
+      href: core/servers/manage/how-to-determine-package-status.md
+    - name: Tanıtım durumunu belirleme
+      href: core/servers/manage/how-to-determine-advertisement-status.md
+- name: Configuration Manager API başvurusu
+  href: reference/configuration-manager-reference.md
+- name: Yönetim hizmeti REST API’si
+  href: adminservice/index.yml

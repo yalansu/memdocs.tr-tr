@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 0960637f534bfe1361b55b2d63be87abc7894d7b
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: d1e7b2c359e21ac4a12219d27655603954702fa8
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715246"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410886"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configuration Manager için bulut yönetimi ağ geçidi ayarlama
 
@@ -246,6 +246,9 @@ Bir CMG oluşturduktan sonra bazı ayarlarından bazılarını değiştirebilirs
 #### <a name="settings"></a>Ayarlar
 
 - **Sertifika dosyası**: CMG için sunucu kimlik doğrulama sertifikasını değiştirin. Bu seçenek, sertifikanın süresi dolmadan önce güncelleştirilirken faydalıdır.  
+
+  > [!NOTE]
+  > CMG için sunucu kimlik doğrulama sertifikasını yenilediğinizde, sertifikanın ortak adı (CN) için belirtilen FQDN büyük/küçük harfe duyarlıdır.  Örneğin, kullanılmakta olan sertifikanın bir CN 'si varsa `https://contoso-cmg.contoso.com` , aynı küçük CN 'ye sahip yeni bir sertifika oluşturun. Sihirbaz, CN ile bir sertifika kabul etmez `https://CONTOSO-CMG.CONTOSO.COM` .
 
 - **VM örneği**: hizmetin Azure 'da kullandığı sanal makine sayısını değiştirin. Bu ayar, kullanım veya maliyet konularına göre hizmeti dinamik olarak ölçeklendirmenize veya değiştirmenize olanak sağlar.  
 

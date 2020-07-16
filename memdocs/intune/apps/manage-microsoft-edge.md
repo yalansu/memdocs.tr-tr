@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 07/08/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d32c496fc094879943fc15102bbb5061d830092
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: aa70da636d619a52c0ec8591a43e85e11ff7f9f2
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973069"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410904"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Microsoft Intune ile iOS ve Android için Edge kullanarak Web erişimini yönetme
 
@@ -154,7 +154,7 @@ Bu ayar, iOS ve Android için Edge için bir giriş sayfası kısayolu yapıland
 
 |    Anahtar    |    Değer    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.homepage   |    Geçerli bir URL belirtin. Hatalı URL’ler güvenlik önlemi olarak engellenir.<br>Örneğin, `https://www.bing.com`     |
+|    com.microsoft.intune.mam.managedbrowser.homepage   |    Geçerli bir URL belirtin. Hatalı URL’ler güvenlik önlemi olarak engellenir.<br>Örnek: `https://www.bing.com`     |
 
 #### <a name="multiple-top-site-shortcuts"></a>Birden çok üst site kısayolu
 
@@ -162,7 +162,7 @@ Benzer şekilde, bir giriş sayfası kısayolunu yapılandırmak için, iOS ve A
 
 |    Anahtar    |    Değer    |
 |-------------------------------------------------------------------|-------------|
-|    com. Microsoft. Intune. mam. managedbrowser. managedTopSites   |    Değer URL 'Leri kümesi belirtin. Her üst site kısayolu bir başlık ve URL 'den oluşur. Başlığı ve URL 'YI `|` karakterle ayırın.<br>Örneğin, `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
+|    com. Microsoft. Intune. mam. managedbrowser. managedTopSites   |    Değer URL 'Leri kümesi belirtin. Her üst site kısayolu bir başlık ve URL 'den oluşur. Başlığı ve URL 'YI `|` karakterle ayırın.<br>Örnek: `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
 
 #### <a name="industry-news"></a>Sektör Haberleri
 
@@ -189,7 +189,7 @@ Erişim kolaylığı için, kullanıcılarınızın iOS ve Android için Edge ku
 
 |    Anahtar    |    Değer    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Bu yapılandırmanın değeri, yer işaretlerinin bir listesidir. Her yer işareti, yer işareti başlığından ve yer işareti URL 'sinden oluşur. Başlığı ve URL 'YI `|` karakterle ayırın.<br> Örneğin, `Microsoft Bing|https://www.bing.com`<p>Birden çok yer işaretini yapılandırmak için, her çifti çift karakterle ayırın `||` .<br>Örnek:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
+|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Bu yapılandırmanın değeri, yer işaretlerinin bir listesidir. Her yer işareti, yer işareti başlığından ve yer işareti URL 'sinden oluşur. Başlığı ve URL 'YI `|` karakterle ayırın.<br> Örnek: `Microsoft Bing|https://www.bing.com`<p>Birden çok yer işaretini yapılandırmak için, her çifti çift karakterle ayırın `||` .<br>Örneğin:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
 #### <a name="my-apps-bookmark"></a>Uygulamalarım yer işareti
 
@@ -289,8 +289,8 @@ Kuruluş Ayrıca, bir Kullanıcı kısıtlı bir Web sitesine gitmeye çalışt�
 
 |Anahtar  |Değer  |
 |---------|---------|
-|com.microsoft.intune.mam.managedbrowser.AllowListURLs     |Bir anahtara karşılık gelen değer bir URL listesidir. Tek bir değer olarak izin vermek istediğiniz tüm URL 'Leri bir kanal karakteriyle ayırarak girersiniz `|` .<p>**Örnekler**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`         |
-|com.microsoft.intune.mam.managedbrowser.BlockListURLs     |Bir anahtara karşılık gelen değer bir URL listesidir. Engellemek istediğiniz tüm URL 'Leri tek bir değer olarak, bir kanal karakteriyle ayırarak girersiniz `|` .<br>**Örnekler**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`         |
+|com.microsoft.intune.mam.managedbrowser.AllowListURLs     |Bir anahtara karşılık gelen değer bir URL listesidir. Tek bir değer olarak izin vermek istediğiniz tüm URL 'Leri bir kanal karakteriyle ayırarak girersiniz `|` .<p>**Örnekler:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`         |
+|com.microsoft.intune.mam.managedbrowser.BlockListURLs     |Bir anahtara karşılık gelen değer bir URL listesidir. Engellemek istediğiniz tüm URL 'Leri tek bir değer olarak, bir kanal karakteriyle ayırarak girersiniz `|` .<br>**Örnekler:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`         |
 |com. Microsoft. Intune. mam. managedbrowser. Allowgeçişli Tiononblock     |**true** (varsayılan), IOS ve Android Edge 'in kısıtlanmış siteleri geçmesine izin verir. Kişisel hesaplar devre dışı bırakılmadıkça, kullanıcılardan kısıtlı siteyi açmak veya kişisel hesap eklemek için kişisel bağlamına geçmesi istenir. Com. Microsoft. Intune. mam. managedbrowser. Openınprivateifengellenme true olarak ayarlanırsa, kullanıcılar kısıtlanmış siteyi InPrivate bağlamda açma yeteneğine sahiptir.<p>**false** , IOS ve Android 'in kullanıcıları geçişini önler. Kullanıcılara erişmeye çalıştıkları sitenin engellendiğini bildiren bir ileti gösterilir.         |
 |com. Microsoft. Intune. mam. managedbrowser. Openınprivateifengellenme     |**doğru** , Azure AD hesabının InPrivate bağlamında kısıtlı sitelerin açılmasına izin verir. Azure AD hesabı, iOS ve Android için Edge 'de yapılandırılmış tek hesap ise, kısıtlanmış site, InPrivate bağlamda otomatik olarak açılır. Kullanıcının yapılandırılmış bir kişisel hesabı varsa, kullanıcıdan InPrivate açma veya kişisel hesaba geçiş arasında seçim yapması istenir.<p> **false** (varsayılan), kısıtlı sitenin kullanıcının kişisel hesabında açılmasını gerektirir. Kişisel hesaplar devre dışıysa, site engellenir.<p>Bu ayarın etkili olabilmesi için com. Microsoft. Intune. mam. managedbrowser. Allowgeçişli Tiononblock değeri true olarak ayarlanmalıdır.          |
 |com. Microsoft. Intune. mam. managedbrowser. durationOfOpenInPrivateSnackBar     | Kullanıcıların Snack Bar bildirimini (), InPrivate mod ile açıldı bağlantısını göreceği saniye sayısını girin. Kuruluşunuz bu içerik için InPrivate modunun kullanılmasını gerektiriyor. " Varsayılan olarak, Snack çubuğu bildirimi 7 saniye boyunca gösterilir.
@@ -343,7 +343,7 @@ Tanımlı izin verilenler listesi veya engellenenler listesi ayarlarından bağ�
 
 ### <a name="manage-proxy-configuration"></a>Ara sunucu yapılandırmasını yönetme
 
-Kullanıcılara mobil cihazlarındaki intranet sitelerine erişim sağlamak için iOS ve Android için Edge ve [Azure AD uygulama ara sunucusu](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) birlikte kullanabilirsiniz. Örnek: 
+Kullanıcılara mobil cihazlarındaki intranet sitelerine erişim sağlamak için iOS ve Android için Edge ve [Azure AD uygulama ara sunucusu](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) birlikte kullanabilirsiniz. Örneğin: 
 
 - Kullanıcı, Intune tarafından korunan Outlook mobil uygulamasını kullanıyor. Ardından, bir e-postada intranet sitesinin bağlantısına tıklamıştır ve iOS ve Android için Edge, bu intranet sitesinin kullanıcı tarafından uygulama proxy 'Si aracılığıyla sunulduğunu algılar. Kullanıcı, intranet sitesine ulaşmadan önce geçerli bir Multi-Factor Authentication ve koşullu erişim ile kimlik doğrulamak için uygulama proxy 'Si üzerinden otomatik olarak yönlendirilir. Kullanıcı artık mobil cihazlarında bile iç sitelere erişebiliyor ve Outlook 'taki bağlantı beklendiği gibi çalışıyor.
 - Kullanıcı iOS veya Android cihazında iOS ve Android için Edge 'i açar. İOS ve Android için Edge Intune ile korunuyorsa ve uygulama proxy 'Si etkinse, Kullanıcı, kullanıldıkları iç URL 'YI kullanarak bir intranet sitesine gidebilir. İOS ve Android için Edge, bu intranet sitesinin kullanıcıya uygulama proxy 'Si aracılığıyla sunulduğunu algılar. Kullanıcı, intranet sitesine ulaşmadan önce kimlik doğrulaması yapmak için uygulama proxy 'Si üzerinden otomatik olarak yönlendirilir. 
@@ -378,7 +378,7 @@ Kuruluşlar, belirli Web siteleri için NTLM kimlik bilgisi önbelleğe almayı 
 
 |Anahtar  |Değer  |
 |---------|---------|
-|com. Microsoft. Intune. mam. managedbrowser. NTLMSSOURLs     |Bir anahtara karşılık gelen değer bir URL listesidir. Tek bir değer olarak izin vermek istediğiniz tüm URL 'Leri bir kanal karakteriyle ayırarak girersiniz `|` .<p>**Örnekler**<br>`URL1|URL2`<br>`http://app.contoso.com/|https://expenses.contoso.com`<p>Desteklenen URL biçimlerinin türleri hakkında daha fazla bilgi için bkz. [izin verilen ve engellenen site listesi Için URL biçimleri](#url-formats-for-allowed-and-blocked-site-list).         |
+|com. Microsoft. Intune. mam. managedbrowser. NTLMSSOURLs     |Bir anahtara karşılık gelen değer bir URL listesidir. Tek bir değer olarak izin vermek istediğiniz tüm URL 'Leri bir kanal karakteriyle ayırarak girersiniz `|` .<p>**Örnekler:**<br>`URL1|URL2`<br>`http://app.contoso.com/|https://expenses.contoso.com`<p>Desteklenen URL biçimlerinin türleri hakkında daha fazla bilgi için bkz. [izin verilen ve engellenen site listesi Için URL biçimleri](#url-formats-for-allowed-and-blocked-site-list).         |
 |com. Microsoft. Intune. mam. managedbrowser. durationOfNTLMSSO     |Kimlik bilgilerini önbelleğe alma saati sayısı, varsayılan değer 720 saattir         |
 
 ## <a name="deploy-app-configuration-scenarios-with-microsoft-endpoint-manager"></a>Microsoft Uç Nokta Yöneticisi ile uygulama yapılandırma senaryolarını dağıtma
@@ -436,7 +436,7 @@ Yeni oluşturulan yapılandırma ilkesi, **uygulama yapılandırma** dikey pence
 2. Adres kutusuna `about:intunehelp` yazın.
 3. İOS ve Android için Edge, sorun giderme modunu başlatır.
 
-Uygulama günlüklerinde saklanan ayarların bir listesi için, bkz. [Yönetilen Tarayıcı’da uygulama koruma günlüklerini inceleyin](app-protection-policy-settings-log.md).
+Uygulama günlüklerinde saklanan ayarların bir listesi için bkz. [istemci uygulama koruma günlüklerini gözden geçirme](app-protection-policy-settings-log.md).
 
 Android cihazlarda günlükleri görüntüleme hakkında bilgi için bkz. [e-posta ile GÜNLÜKLERI BT yöneticinize gönderme](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android).
 

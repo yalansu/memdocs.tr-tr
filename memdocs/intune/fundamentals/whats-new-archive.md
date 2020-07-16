@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a1c47a157e4ee5bd4337d840515a340dcf1fd9c
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: d6c3b64bbcc9b661f5ec582f2963ceeb2e544ff8
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195727"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86411005"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune’daki yenilikler - önceki aylar
 
@@ -1623,7 +1623,7 @@ Artık bu uygulamalar için lisanslarınız varsa, Microsoft Intune kullanarak W
 **Office 365 Için Microsoft Visio Pro** , artık **Microsoft Visio Online Plan 2**olarak bilinirdi.  Microsoft Visio hakkında daha fazla bilgi için bkz. [Visio Online Plan 2](https://products.office.com/visio/visio-online-plan-2). Windows 10 cihazları için Office 365 uygulamaları hakkında daha fazla bilgi için bkz. [Microsoft Intune Ile office 365 uygulamalarını Windows 10 cihazlarına atama](../apps/apps-add-office365.md).
 
 #### <a name="intune-app-protection-policy-app-character-limit-setting---3291302----"></a>Intune uygulama koruma ilkesi (uygulama) karakter sınırı ayarı<!-- 3291302  -->
-Intune yöneticileri, Intune UYGULAMASıNıN **diğer uygulamalarla kesme, kopyalama ve yapıştırmayı kısıtla** ilke ayarıyla bir özel durum belirtebilir.  Yönetici olarak, yönetilen bir uygulamadan kesilmiş veya kopyalanmış olabilecek karakter sayısını belirtebilirsiniz. Bu ayar, "diğer uygulamalarla kesme, kopyalama ve yapıştırmayı kısıtla" ayarına bakmaksızın, belirtilen sayıda karakteri herhangi bir uygulamaya paylaşmaya izin verir. Android için Intune Şirket Portalı uygulama sürümünün sürüm 5.0.4364.0 veya üstünü gerektirdiğini unutmayın. Daha fazla bilgi için bkz. [iOS veri koruma](../apps/app-protection-policy-settings-ios.md#data-protection), [Android veri koruma](../apps/app-protection-policy-settings-android.md#data-protection)ve [Istemci uygulama koruma günlüklerini gözden geçirme](../apps/app-protection-policy-settings-log.md#app-protection-policy-settings).
+Intune yöneticileri, Intune UYGULAMASıNıN **diğer uygulamalarla kesme, kopyalama ve yapıştırmayı kısıtla** ilke ayarıyla bir özel durum belirtebilir.  Yönetici olarak, yönetilen bir uygulamadan kesilmiş veya kopyalanmış olabilecek karakter sayısını belirtebilirsiniz. Bu ayar, "diğer uygulamalarla kesme, kopyalama ve yapıştırmayı kısıtla" ayarına bakmaksızın, belirtilen sayıda karakteri herhangi bir uygulamaya paylaşmaya izin verir. Android için Intune Şirket Portalı uygulama sürümünün sürüm 5.0.4364.0 veya üstünü gerektirdiğini unutmayın. Daha fazla bilgi için bkz. [iOS veri koruma](../apps/app-protection-policy-settings-ios.md#data-protection), [Android veri koruma](../apps/app-protection-policy-settings-android.md#data-protection)ve [Istemci uygulama koruma günlüklerini gözden geçirme](../apps/app-protection-policy-settings-log.md).
 
 #### <a name="office-deployment-tool-odt-xml-for-office-proplus-deployment---3192477-----"></a>Office ProPlus dağıtımı için Office dağıtım aracı (ODT) XML<!-- 3192477   -->
 Intune yönetim konsolunda Office Pro Plus 'ın bir örneğini oluştururken Office dağıtım aracı (ODT) XML sağlayabileceksiniz. Bu, mevcut Intune kullanıcı arabirimi seçeneklerinin gereksinimlerinizi karşılamazsa daha özelleştirme daha büyük bir seçenek sağlar. Daha fazla bilgi için bkz. Office [dağıtım aracı için Microsoft Intune ve yapılandırma seçenekleriyle](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool) [Office 365 uygulamalarını Windows 10 cihazlarına atama](../apps/apps-add-office365.md) .
@@ -1710,7 +1710,7 @@ Tüm Intune verilerine salt okuma erişimi:
 
 - Güvenlik Yöneticisi
 - Güvenlik operatörü
-- Güvenlik okuyucusu
+- Güvenlik Okuyucusu
 
 Daha fazla bilgi için bkz. [rol tabanlı erişim denetimi](role-based-access-control.md).
 
@@ -1846,7 +1846,7 @@ Bu özellik şu platformlarda geçerlidir:
 #### <a name="enabling-restrictions-in-the-device-settings-is-renamed-to-screen-time-on-ios-devices---3699164-----"></a>Cihaz ayarlarında kısıtlamaları etkinleştirme, iOS cihazlarında ekran zamanına göre yeniden adlandırılır<!-- 3699164   -->
 Denetimli iOS cihazlarında **cihaz ayarlarında etkinleştirme kısıtlamalarını** yapılandırabilirsiniz (**cihaz yapılandırma**  >  **profilleri**  >  platform için**Yeni profil**  >  **iOS** > profil türü için **cihaz kısıtlamaları** > **genel**). Bu güncelleştirmede, bu ayar ekran zamanı olarak yeniden adlandırılır **(yalnızca denetimli)**.
 
-Davranış aynıdır. Daha ayrıntılı şekilde belirtmek gerekirse:
+Davranış aynıdır. Özellikle:
 
 - iOS 11.4.1 ve önceki sürümler: **Block** , son kullanıcıların cihaz ayarlarında kendi kısıtlamalarını değiştirmesini engeller. 
 - iOS 12,0 ve üzeri: **blok** , son kullanıcıların, içerik & gizlilik kısıtlamaları da dahil olmak üzere cihaz ayarları 'Nda kendi **Ekran zamanını** ayarlamalarını engeller. İOS 12,0 ' e yükseltilen cihazlar artık cihaz ayarlarındaki kısıtlamalar sekmesini görmez. Bu ayarlar **Ekran Saati** altındadır. 
@@ -3269,7 +3269,7 @@ Profil oluştur\Endpoint protection\Windows Defender Exploit Guard.
 
 #### <a name="attack-surface-reduction"></a>Saldırı Yüzeyini Azaltma
 
-|Ayar adı  |Ayar seçenekleri  |Açıklama  |
+|Ayar adı  |Ayar seçenekleri  |Description  |
 |---------|---------|---------|
 |Gelişmiş fidye yazılımı koruması|Etkin, Denetle, Yapılandırılmadı|Agresif fidye yazılımı koruması kullanır.|
 |Windows yerel güvenlik yetkilisi alt sisteminden kimlik bilgisi çalma eylemlerine bayrak ekleme|Etkin, Denetle, Yapılandırılmadı|Windows yerel güvenlik yetkilisi alt sisteminden kimlik bilgisi çalma eylemlerine bayrak ekler (lsass.exe).|
@@ -3279,7 +3279,7 @@ Profil oluştur\Endpoint protection\Windows Defender Exploit Guard.
 
 #### <a name="controlled-folder-access"></a>Denetlenen klasör erişimi
 
-|              Ayar adı               |                                                              Ayar seçenekleri                                                              | Açıklama |
+|              Ayar adı               |                                                              Ayar seçenekleri                                                              | Description |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
 | Klasör koruması (zaten uygulanmış) | Yapılandırılmamış, Etkinleştir, Yalnızca denetle (zaten uygulanmış)<br><br> <strong>Yeni</strong><br>Disk değişikliğini engelle, Disk değişikliğini denetle |             |
 
@@ -3442,7 +3442,7 @@ Surface Hub’ın toplantıdaki konferans odası olarak görünmesi için eşsiz
 
 ##### <a name="attack-surface-reduction"></a>Saldırı Yüzeyini Azaltma
 
-|Ayar adı  |Ayar seçenekleri  |Açıklama  |
+|Ayar adı  |Ayar seçenekleri  |Description  |
 |---------|---------|---------|
 |Parola korumalı yürütülebilir içeriğin e-postadan yürütülmesi|Engelle, Denetle, Yapılandırılmadı|E-posta üzerinden indirilen parola korumalı yürütülebilir dosyaların çalıştırılmasını engelleyin.|
 |Gelişmiş fidye yazılımı koruması|Etkin, Denetle, Yapılandırılmadı|Agresif fidye yazılımı koruması kullanır.|
@@ -3453,7 +3453,7 @@ Surface Hub’ın toplantıdaki konferans odası olarak görünmesi için eşsiz
 
 ##### <a name="controlled-folder-access"></a>Denetlenen klasör erişimi
 
-|              Ayar adı               |                                                              Ayar seçenekleri                                                              | Açıklama |
+|              Ayar adı               |                                                              Ayar seçenekleri                                                              | Description |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
 | Klasör koruması (zaten uygulanmış) | Yapılandırılmamış, Etkinleştir, Yalnızca denetle (zaten uygulanmış)<br><br> <strong>Yeni</strong><br>Disk değişikliğini engelle, Disk değişikliğini denetle |             |
 
@@ -4364,7 +4364,7 @@ Bu sürümde, Windows 10 cihaz kısıtlama profili için aşağıdaki kategorile
 - Hücresel ve bağlantı
 - Kilit ekranı deneyimi
 - Gizlilik
-- Ara
+- Arayın
 - Windows Spot
 - Microsoft Edge tarayıcısı
 

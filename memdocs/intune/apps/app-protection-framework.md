@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 07/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91683280a2e48d82fd145bf19228c33b432b6b49
-ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
+ms.openlocfilehash: 444fb116150cf3d7a3ab4dcfe4eb450b20119df0
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83853579"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410938"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Uygulama koruma ilkeleri kullanan veri koruma altyapısı 
 
@@ -148,8 +148,10 @@ Düzey 2 ' de zorlanan ilke ayarları, 1. düzey için önerilen tüm ilke ayarl
 |---------------|----------------------------------------------------------|-----------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Veri Aktarımı |       Kuruluş verilerini buraya Yedekle...  |          Blok  |          iOS/ıpados, Android  |                  |
 | Veri Aktarımı |       Diğer uygulamalara kuruluş verileri gönderme  |          İlke ile yönetilen uygulamalar  |          iOS/ıpados, Android  |          <p>İOS/ıpados ile, Yöneticiler bu değeri "Ilkeyle yönetilen uygulamalar", "işletim sistemi paylaşımı ile Ilke ile yönetilen uygulamalar" veya "açık/paylaşım filtresi ile Ilke ile yönetilen uygulamalar" olarak yapılandırabilir. </p><p>Cihaz Intune 'a kaydedildiğinde, işletim sistemi paylaşımıyla ilke ile yönetilen uygulamalar de kullanılabilir. Bu ayar, diğer ilkeyle yönetilen uygulamalara veri aktarımına ve Intune tarafından yönetilen diğer uygulamalara dosya aktarımlarını sağlar. </p><p>Açık/paylaşılan filtreleme ile ilke ile yönetilen uygulamalar, işletim sistemi açma/paylaşma iletişim kutularını yalnızca ilkeyle yönetilen uygulamaları görüntüleyecek şekilde filtreler. </p><p> Daha fazla bilgi için bkz. [iOS uygulama koruma ilkesi ayarları](app-protection-policy-settings-ios.md).</p> |
+| Veri Aktarımı |       Dışarıda tutulacak uygulamaları seçin  |          Varsayılan/Skype; app-Settings; calshow; itms; ıactive; itms-Apps; IMS-appss; IMS-Services;  |          iOS/iPadOS  |                  |
 | Veri Aktarımı |       Kuruluş verilerinin kopyalarını Kaydet  |          Blok  |          iOS/ıpados, Android  |                  |
 | Veri Aktarımı |       Kullanıcıların seçili hizmetlere kopya kaydetmesine izin ver  |          OneDrive Iş, SharePoint Online |          iOS/ıpados, Android  |                  |
+| Veri Aktarımı |       İletişim verilerini aktarma  |          Tüm uygulamalar |          iOS/ıpados, Android  |                  |
 | Veri Aktarımı |       Uygulamalar arasında kesme, kopyalama ve yapıştırmayı kısıtla  |          Yapıştırma seçeneğiyle ilke ile yönetilen uygulamalar  |          iOS/ıpados, Android  |                  |
 | Veri Aktarımı |       Ekran yakalama ve Google Yardımcısı  |          Blok  |          Android  |                  |
 | İşlev |       Diğer uygulamalarla Web içeriği aktarımını kısıtla  |          Microsoft Edge  |          iOS/ıpados, Android  |                  |
@@ -173,9 +175,12 @@ Düzey 3 ' te zorlanan ilke ayarları, düzey 2 için önerilen tüm ilke ayarla
 
 | Ayar | Ayar açıklaması |             Değer  |             Platform        | Notlar |
 |---------------|---------------------------------------|----------------------------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------|
+| Veri Aktarımı |       İletişim verilerini aktarma  |          İlkeyle yönetilen herhangi bir çevirici uygulaması |          Android  | Yöneticiler ayrıca, **belirli bir çevirici uygulaması** seçerek ve **ÇEVIRICI uygulama paketi kimliğini** ve **çevirici uygulama adı** değerlerini sağlayarak uygulama koruma ilkelerini desteklemeyen bir çevirici uygulaması kullanmak için bu ayarı yapılandırabilir.   |
+| Veri Aktarımı |       İletişim verilerini aktarma  |          Belirli bir çevirici uygulaması |          iOS/iPadOS  |  |
+| Veri Aktarımı |       Çevirici uygulama URL 'SI şeması  |          *replace_with_dialer_app_url_scheme* |          iOS/iPadOS  | İOS/ıpados üzerinde bu değer, kullanılmakta olan özel çevirici uygulamasının URL şeması ile değiştirilmelidir. URL düzeni bilinmiyorsa daha fazla bilgi için uygulama geliştiricisine başvurun. URL şemaları hakkında daha fazla bilgi için bkz. [uygulamanız Için özel BIR URL düzeni tanımlama](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app).|
 | Veri aktarımı |       Diğer uygulamalardan veri al  |          İlke ile yönetilen uygulamalar  |          iOS/ıpados, Android         |  |
-| Veri aktarımı |       Üçüncü taraf klavyeler  |          Blok  |          iOS/iPadOS        | İOS 'ta bu, tüm üçüncü taraf klavyelerin uygulama içinde çalışmasını engeller.  |
-| Veri aktarımı |       Onaylanan klavyeler  |          Gerektirme  |          Android        | Android ile, dağıtılan Android cihazlarınıza göre kullanılabilmesi için klavyeler seçili olmalıdır.  |
+| Veri aktarımı |       Üçüncü taraf klavyeler  |          Blok  |          iOS/iPadOS        | İOS/ıpados 'da bu, tüm üçüncü taraf klavyelerin uygulama içinde çalışmasını engeller.  |
+| Veri aktarımı |       Onaylanan klavyeler  |          Gerektirme  |          Android        |  |
 | Veri aktarımı |       Onaylanacak klavyeleri seçin  |          *Klavye ekle/kaldır*  |          Android        | Android ile, dağıtılan Android cihazlarınıza göre kullanılabilmesi için klavyeler seçili olmalıdır.  |
 | İşlev |       Kuruluş verilerini yazdırma  |          Blok  |          iOS/ıpados, Android         |  |
 

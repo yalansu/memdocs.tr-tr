@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 07/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0edb497b2dd9e4853f3fbc378992158c0757e1f6
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: da9c7b1f9a85f42b18dcba4d2349698cbb77daeb
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973103"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86411006"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Yönetilen Android Kurumsal cihazları için uygulama yapılandırma ilkeleri ekleme
 
@@ -76,7 +76,7 @@ Microsoft Intune içindeki uygulama yapılandırma ilkeleri, yönetilen Android 
 
 Uygulama yapılandırma ayarlarını destekleyecek şekilde tasarlandıysa, yönetilen Google Play uygulamalar için yapılandırma tasarımcısını kullanabilirsiniz. Yapılandırma, Intune 'a kayıtlı cihazlar için geçerlidir. Tasarımcı, uygulama tarafından sunulan ayarlar için belirli yapılandırma değerlerini yapılandırmanızı sağlar.
 
-1. **Ekle**'yi seçin. Uygulama için girmek istediğiniz yapılandırma ayarları listesini seçin.
+1. **Add (Ekle)** seçeneğini belirleyin. Uygulama için girmek istediğiniz yapılandırma ayarları listesini seçin.
 
     E-posta uygulamanız için GMail veya dokuz Iş kullanıyorsanız, bu ayarlarla ilgili daha fazla bilgi için [e-postayı yapılandırmak üzere Android kurumsal cihaz ayarları](../configuration/email-settings-android-enterprise.md) ' na bakın.
 
@@ -94,7 +94,7 @@ Yapılandırma değeri olarak değişken seçerseniz şunlar arasından seçim y
 | AAD cihaz KIMLIĞI | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
 | Hesap Kimliği | fc0dc142-71d8-4b12-bbea-bae2a8514c81 |
 | Intune Cihaz Kimliği | b9841cd9-9843-405f-be28-b2265c59ef97 |
-| Domain | contoso.com |
+| Etki alanı | contoso.com |
 | Posta | john@contoso.com |
 | Kısmi UPN | john |
 | Kullanıcı Kimliği | 3ec2c00f-b125-4519-acf0-302ac3761822 |
@@ -105,7 +105,7 @@ Yapılandırma değeri olarak değişken seçerseniz şunlar arasından seçim y
 
 Microsoft Intune Yöneticisi olarak, yönetilen cihazlarda Microsoft uygulamalarına hangi iş veya okul hesaplarının ekleneceğini denetleyebilirsiniz. Erişimi yalnızca izin verilen kullanıcı hesaplarıyla sınırlayabilecek ve kayıtlı cihazlarda kişisel hesapları engelleyebilirsiniz. Android cihazlarda, yönetilen cihazlar uygulama yapılandırma ilkesinde aşağıdaki anahtar/değer çiftlerini kullanın:
 
-| **Anahtar** | com.microsoft.intune.mam.AllowedAccountUPNs |
+| **Key** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|
 | **Değerler** | <ul><li>Bir veya daha fazla <code>;</code> ile sınırlandırılmış UPN.</li><li>Yalnızca bu anahtar ile tanımlanan yönetilen kullanıcı hesaplarına izin verilir.</li><li> Intune'a kayıtlı cihazlar için <code>{{userprincipalname}}</code> belirteci kayıtlı kullanıcı hesabını temsil etmek için kullanılabilir.</li></ul> |
 
@@ -115,6 +115,7 @@ Microsoft Intune Yöneticisi olarak, yönetilen cihazlarda Microsoft uygulamalar
    > - Office, Word, Excel, Android için PowerPoint (16.0.9327.1000 ve üzeri)
    > - Android için OneDrive (5,28 ve üzeri)
    > - Android için Outlook (2.2.222 ve üzeri)
+   > - Android için takımlar (1416/1.0.0.2020061103 ve üzeri)
 
 ## <a name="enter-json-data"></a>JSON verilerini girin
 

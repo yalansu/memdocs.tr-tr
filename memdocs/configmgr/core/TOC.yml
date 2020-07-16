@@ -232,8 +232,6 @@
           href: plan-design/security/plan-for-security.md
         - name: En iyi güvenlik yöntemleri ve gizlilik bilgileri
           href: plan-design/security/security-best-practices-and-privacy-information.md
-        - name: Gizlilik bildirimi - Configuration Manager Cmdlet Kitaplığı
-          href: plan-design/security/privacy-statement-cmdlet-library.md
         - name: Ek gizlilik bilgileri
           href: plan-design/security/additional-privacy.md
         - name: Güvenliği yapılandırma

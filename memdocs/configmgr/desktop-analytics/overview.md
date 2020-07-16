@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0ef2d09423e7bb51e94cb626bf513aa7e98992c9
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 09f829bd1695426211ff94381a63b8f23d1b4fe8
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195659"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86411023"
 ---
 # <a name="what-is-desktop-analytics"></a>Desktop Analytics nedir?
 
@@ -103,11 +103,11 @@ Masaüstü analizlerini kullanmak için ortamınızın aşağıdaki önkoşullar
     - Cihazların Ayrıca Configuration Manager Client, sürüm 1902 güncelleştirme paketi (4500571) veya sonraki bir sürüme sahip olması gerekir. Daha fazla bilgi için bkz. [güncelleştirme Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 
     > [!Note]  
-    > Masaüstü analizi, Windows 10 uzun süreli bakım kanalına (LTSC) yapılan yükseltmeleri desteklemez. Daha fazla bilgi için bkz. [hizmet olarak Windows 'a genel bakış](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+    > Masaüstü analizi, Windows 10 uzun süreli bakım kanalına (LTSC) veya bu bilgisayardan yükseltmeleri desteklemez. Daha fazla bilgi için bkz. [hizmet olarak Windows 'a genel bakış](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
     >
     > Masaüstü analizi, yerinde yükseltme senaryosunu en iyi şekilde destekleyecek şekilde tasarlanmıştır. 32 bitlik mimari-64-bit mimarisine gibi büyük değişiklikler yapmanız gerekiyorsa, bir görüntüleme senaryosu kullanın. Bu klasik işletim sistemi dağıtım senaryolarında masaüstü Analizi öngörüleri hâlâ değerlidir, ancak yerinde yükseltmeye özgü Kılavuzu yoksayabilirsiniz. Daha fazla bilgi için bkz. [Configuration Manager ile kurumsal işletim sistemlerini dağıtma senaryoları](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md).
 
-- Windows Tanılama verileri. Daha fazla bilgi için aşağıdaki makalelere bakın:  
+- Windows Tanılama verileri. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:  
 
     - [Tanılama veri düzeyleri](enable-data-sharing.md#diagnostic-data-levels)  
 

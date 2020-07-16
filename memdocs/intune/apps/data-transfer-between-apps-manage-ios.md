@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 771741ed0e07a6373c63dd2e81745fe53adc4242
-ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
+ms.openlocfilehash: cdb8ca0ca24d196bb21f9d7e484374555d6fefd2
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86236401"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410853"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Microsoft Intune’da iOS uygulamaları arasında veri aktarımını yönetme
 
 Şirket verilerini korumaya yardımcı olmak için dosya aktarımlarını yalnızca yönettiğiniz uygulamalarla kısıtlayın. iOS uygulamalarını aşağıdaki yollarla yönetebilirsiniz:
 
-- Uygulamalar için bir uygulama koruma ilkesi yapılandırarak iş veya okul hesapları için Kuruluş verilerini koruyun. *ilke ile yönetilen uygulamaları*çağırıyoruz.  [Uygulama koruma ilkesi ile yönetebileceğiniz tüm Intune ile yönetilen uygulamalara](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) bakın.
+- Uygulamalar için bir uygulama koruma ilkesi yapılandırarak iş veya okul hesapları için Kuruluş verilerini koruyun. *ilke ile yönetilen uygulamaları*çağırıyoruz.  Bkz. [Microsoft Intune korumalı uygulamalar](apps-supported-intune-apps.md).
 
 - Cihazların bir mobil cihaz yönetimi (MDM) çözümüne kaydolmasını gerektiren iOS cihaz yönetimi aracılığıyla uygulamaları dağıtın ve yönetin. Dağıttığınız uygulamalar *ilkeyle yönetilen uygulamalar* veya iOS tarafından yönetilen diğer uygulamalar olabilir.
 
@@ -40,10 +40,10 @@ Aşağıdaki yollarla şirket verilerini korumak için iOS **Açık yönetim** �
 
 - **Herhangi BIR MDM çözümü tarafından yönetilmeyen cihazlar:** Uygulama koruma ilkesi ayarlarını, diğer uygulamalarla birlikte *açma* veya *Paylaşım uzantıları*aracılığıyla veri paylaşımını denetlemek için ayarlayabilirsiniz.  Bunu yapmak için, **açık/paylaşılan filtreleme değeriyle ilke ile yönetilen uygulamalar** için **Kuruluş verilerini diğer uygulamaya gönder** ayarını yapılandırın.  *İlke ile yönetilen uygulamadaki* *Açık/paylaşım* davranışı, paylaşım seçenekleri olarak yalnızca diğer *ilkeyle yönetilen uygulamalar* sunar. 
 
-- **MDM çözümleri tarafından yönetilen cihazlar**: Intune veya üçüncü taraf MDM çözümlerine kayıtlı cihazlar için, uygulama koruma ilkelerine sahip uygulamalar ve MDM aracılığıyla dağıtılan diğer yönetilen iOS uygulamaları arasında veri paylaşımı, Intune uygulama Ilkeleri ve iOS **Açık yönetim** özelliği tarafından denetlenir. Bir MDM çözümünü kullanarak dağıttığınız uygulamaların de Intune uygulama koruma ilkeleriniz ile ilişkilendirildiğini doğrulamak için, Kullanıcı UPN ayarını aşağıdaki bölümde açıklandığı gibi yapılandırın, [Kullanıcı UPN ayarını yapılandırın](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Diğer uygulamalara veri aktarımına nasıl izin vermek istediğinizi belirtmek için, **diğer uygulamalara kuruluş verisi gönder** ' i etkinleştirin ve tercih ettiğiniz paylaşım düzeyini seçin. Uygulamanın diğer uygulamalardan veri almasına nasıl izin vermek istediğinizi belirtmek için, **diğer uygulamalardan veri al** seçeneğini etkinleştirin ve tercih ettiğiniz alan düzeyini seçin. Uygulama verilerinin alınması ve paylaşılması hakkında daha fazla bilgi için bkz. [Verileri yeniden konumlandırma ayarları](app-protection-policy-settings-ios.md#data-protection).
+- **MDM çözümleri tarafından yönetilen cihazlar**: Intune veya üçüncü taraf MDM çözümlerine kayıtlı cihazlar için, uygulama koruma ilkelerine sahip uygulamalar ve MDM aracılığıyla dağıtılan diğer yönetilen iOS uygulamaları arasında veri paylaşımı, Intune uygulama Ilkeleri ve iOS **Açık yönetim** özelliği tarafından denetlenir. Bir MDM çözümünü kullanarak dağıttığınız uygulamaların de Intune uygulama koruma ilkeleriniz ile ilişkilendirildiğini doğrulamak için, Kullanıcı UPN ayarını aşağıdaki bölümde açıklandığı gibi yapılandırın, [Kullanıcı UPN ayarını yapılandırın](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Diğer *ilkeyle yönetilen uygulamalara* ve iOS tarafından yönetilen uygulamalara veri aktarımına nasıl izin vermek istediğinizi belirtmek için, **Işletim sistemi paylaşımıyla ilke ile yönetilen uygulamalar**için **diğer uygulamalara kuruluş verileri gönder** ayarını yapılandırın. Uygulamanın diğer uygulamalardan veri almasına nasıl izin vermek istediğinizi belirtmek için, **diğer uygulamalardan veri al** seçeneğini etkinleştirin ve tercih ettiğiniz alan düzeyini seçin. Uygulama verilerinin alınması ve paylaşılması hakkında daha fazla bilgi için bkz. [Verileri yeniden konumlandırma ayarları](app-protection-policy-settings-ios.md#data-protection).
 
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Microsoft Intune veya üçüncü taraf EMM için kullanıcı UPN ayarını yapılandırma
-Kullanıcı UPN ayarını yapılandırmak, kayıtlı Kullanıcı hesabını tanımlamak için Intune veya üçüncü taraf EMM çözümü tarafından yönetilen cihazlar için **gereklidir** . UPN yapılandırması, Intune 'dan dağıttığınız uygulama koruma ilkeleriyle birlikte kullanılabilir. Aşağıdaki yordam, UPN ayarının ve elde edilen kullanıcı deneyiminin nasıl yapılandırılacağı hakkında genel bir akışdır:
+Kullanıcı UPN ayarını yapılandırmak, Intune tarafından yönetilen cihazlar veya bir üçüncü taraf EMM çözümü için, verileri iOS tarafından yönetilen bir uygulamaya aktarırken, *ilke ile yönetilen uygulama* gönderen Kullanıcı hesabını tanımlamak için **gereklidir** . UPN yapılandırması, Intune 'dan dağıttığınız uygulama koruma ilkeleriyle birlikte kullanılabilir. Aşağıdaki yordam, UPN ayarının ve elde edilen kullanıcı deneyiminin nasıl yapılandırılacağı hakkında genel bir akışdır:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)IOS/ıpados için [bir uygulama koruma ilkesi oluşturun ve atayın](app-protection-policies.md) . İlke ayarlarını şirket gereksinimlerinize göre yapılandırın ve bu ilkeye sahip olacak iOS uygulamalarını seçin.
 
@@ -70,7 +70,7 @@ Kullanıcı UPN ayarını yapılandırmak, kayıtlı Kullanıcı hesabını tan�
 
 1. Intune veya üçüncü taraf MDM sağlayıcınızın yönetici konsoluna gidin. Uygulama yapılandırma ayarlarını kayıtlı iOS cihazlarına dağıttığınız konsol bölümüne gidin.
 
-2. Uygulama Yapılandırması bölümünde aşağıdaki ayarı girin:
+2. Uygulama Yapılandırması bölümünde, iOS tarafından yönetilen uygulamalara veri aktarımı yapılacak her *ilke ile yönetilen uygulama* için aşağıdaki ayarı girin:
 
    **anahtar** = ıntunemamupn, **değer** = <username@company.com>
 
