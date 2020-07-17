@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4f92d95b4e1cc814db72b45cfb92cb989b7767c8
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 5eb1a5ef844a8dbf94cbde9d2c99986ce0634260
+ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591026"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86422795"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Configuration Manager için güncelleştirmeler ve bakım
 
@@ -60,10 +60,10 @@ Aşağıdaki desteklenen Configuration Manager sürümleri temel, bir güncelle�
 
 | Sürüm | Kullanılabilirlik tarihi | [Destek bitiş tarihi](current-branch-versions-supported.md) | Taban çizgisi | Konsol içi güncelleştirme |  
 |-------------|-----------|------------|--------------|------------------------|  
-| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 1 Nisan 2020 | 1 Ekim 2021 | Evet<sup>[1](#bkmk_note1)</sup> | Yes |
+| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 1 Nisan 2020 | 1 Ekim 2021 | Evet<sup>[1](#bkmk_note1)</sup> | Evet |
 | [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | 29 Kasım 2019 | 29 Mayıs 2021 | Hayır | Evet |
 | [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | 26 Temmuz 2019 | 26 Ocak 2021 | Hayır | Evet |
-| [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | 27 Mart 2019 | 27 Eylül 2020 | Evet<sup>[1](#bkmk_note1)</sup> | Yes |
+| [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | 27 Mart 2019 | 27 Eylül 2020 | Evet | Yes |
 | [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | 27 Kasım 2018 | 1 Aralık 2020 | Hayır | Evet |
 
 **Kullanılabilirlik tarihi** , [erken güncelleştirme halkasının](checklist-for-installing-update-2002.md#early-update-ring) Yayınlanma tarihidir. Güncelleştirme genel kullanıma alındıktan sonra toplu lisans hizmet merkezi 'nde temel medya kullanılabilir olacaktır.
@@ -86,7 +86,7 @@ Aşağıdaki tabloda, güncel dalın Configuration Manager geçmiş sürümleri 
 | Sürüm | Kullanılabilirlik tarihi | Destek bitiş tarihi | Taban çizgisi | Konsol içi güncelleştirme |  
 |-------------|-----------|------------|--------------|------------------------|  
 | **1806** <br /> (5.00.8692) | 31 Temmuz 2018 | 31 Ocak 2020 | Hayır | Evet |
-| **1802** <br /> (5.00.8634) | 22 Mart 2018 | 22 Eylül 2019 | Yes | Yes |
+| **1802** <br /> (5.00.8634) | 22 Mart 2018 | 22 Eylül 2019 | Evet | Yes |
 | **1710** <br /> (5.00.8577) | 20 Kasım 2017 | 20 Mayıs 2019 | Hayır | Evet |
 | **1706** <br /> (5.00.8540) | 31 Temmuz 2017 | 31 Temmuz 2018 | Hayır | Evet |
 | **1702** <br /> (5.00.8498) | 27 Mart 2017 | 27 Mart 2018 | Yes | Yes |

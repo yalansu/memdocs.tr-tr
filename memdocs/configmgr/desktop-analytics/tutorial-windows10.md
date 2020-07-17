@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: b991c2ddd0ea121251eb19afbdb032844be8738d
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 15cf7f3621f25a82f0e16d5275369ec93225bbf7
+ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268207"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86422835"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Öğretici: pilot 'a Windows 10 dağıtma
 
 Bu öğretici, Windows 10 ' un bir pilot grubuna dağıtılması için masaüstü Analizi ve Configuration Manager kullanır. Şirket içi ürünle Windows 'u dağıtmak için öngörüleri sunmaya yönelik bulut hizmeti tümleştirmesini vurgular. Bir pilot gruba yerleştirilecek en iyi cihazları öğrenmek için masaüstü Analizi 'ni kullanın. Ardından Configuration Manager kullanarak Windows ile güncel bir yararlanın.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:  
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:  
 
 > [!div class="checklist"]  
 > * Azure portal masaüstü analizlerini ayarlama  
@@ -36,7 +36,7 @@ Masaüstü analizi, Azure aboneliğinizde bir *Log Analytics çalışma alanı* 
 
 
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu öğreticiye başlamadan önce aşağıdaki önkoşullara sahip olduğunuzdan emin olun:  
 
@@ -94,7 +94,7 @@ Bu yordamı kullanarak, masaüstü analizine oturum açın ve aboneliğinizde ya
 
 2. **Hizmet sözleşmesini kabul et** sayfasında, hizmet sözleşmesini gözden geçirin ve **kabul et**' i seçin.  
 
-3. **Aboneliğinizi onaylayın** sayfasında, gerekli koşullara uyan lisansların listesi, masaüstü analizinin Windows cihaz sistem durumu özelliklerine yöneliktir. Devam etmek için **İleri**’yi seçin.  
+3. **Aboneliğinizi onaylayın** sayfasında, gerekli koşullara uyan lisansların listesi, masaüstü analizinin Windows cihaz sistem durumu özelliklerine yöneliktir. Devam etmek için **İleri** seçeneğini belirleyin.  
 
 4. **Kullanıcılara erişim izni** sayfasında:
 
@@ -236,11 +236,11 @@ Masaüstü Analizi 'nde bir dağıtım planı oluşturmak için bu yordamı kull
 
     - **Ad**: dağıtım planı için benzersiz bir ad, örneğin`Windows 10 pilot`  
 
-    - **Ürünler ve sürümler**: **Windows** ürününü ve sunulan en son önerilen sürümü seçin. Örneğin, **Windows 10, sürüm 1809 (önerilir)**.  
+    - **Ürünler ve sürümler**: hangi Windows 10 sürümünü dağıtacağınızı seçin. Microsoft, en son sürümü kullanan dağıtım planlarının oluşturulmasını önerir.
 
     - **Cihaz grupları**: Configuration Manager sekmesinden bir veya daha fazla grup seçin ve ardından **hedef gruplar olarak ayarla**' yı seçin. Bu gruplar Configuration Manager 'ten eşitlenen koleksiyonlardır.  
 
-    - **Hazırlık kuralları**: Bu kurallar, hangi cihazların yükseltme için uygun olduğunu belirlemenize yardımcı olur. **WINDOWS işletim sistemi** ' ni seçin ve aşağıdaki ayarları yapılandırın:  
+    - **Hazırlık kuralları**: Bu kurallar, hangi cihazların yükseltme için uygun olduğunu belirlemenize yardımcı olur. **Windows işletim sistemi** ' ni seçin ve aşağıdaki ayarları yapılandırın:  
 
         - **Bilgisayarlarım Windows Update sürücüleri otomatik olarak alır**: varsayılan ayar **kapalı**olur ve Configuration Manager ile dağıtıldığında önerilir.  
 
@@ -301,7 +301,7 @@ Configuration Manager Windows 10 ' da pilot grubuna dağıtmak için bu yordamı
 3. **Veri kaynağı** sayfasında işletim sistemi yükseltme paketinin yükleme kaynak dosyalarının ağ **yolunu** belirtin. Örneğin, `\\server\share\path`.  
 
     > [!NOTE]  
-    > Yükleme kaynak dosyaları, işletim sistemini yüklemek için Setup. exe ve diğer dosya ve klasörleri içerir.  
+    > Yükleme kaynak dosyaları, işletim sistemini yüklemek için setup.exe ve diğer dosya ve klasörleri içerir.  
 
 4. **Genel** sayfasında, işletim sistemi yükseltme paketi için benzersiz bir **ad** belirtin.  
 
@@ -363,7 +363,7 @@ Sonra, işletim sistemi yükseltme paketini dağıtım noktalarına dağıtın.
     >
     > Bu koleksiyon, masaüstü Analizi dağıtım planı cihazları için ayrılmıştır. Bu koleksiyonda el ile yapılan değişiklikler desteklenmiyor.<!-- 3866460, SCCMDocs-pr 3544 -->  
 
-5. **İçerik** sayfasında **Ekle**' yi ve ardından **dağıtım noktası**' nı seçin. Yükleme içeriğini barındırmak için kullanılabilir bir dağıtım noktası seçin ve **Tamam**' ı seçin. Ardından **İleri**' yi seçin.  
+5. **İçerik** sayfasında **Ekle**' yi ve ardından **dağıtım noktası**' nı seçin. Yükleme içeriğini barındırmak için kullanılabilir bir dağıtım noktası seçin ve **Tamam**' ı seçin. Sonra **İleri**’yi seçin.  
 
 6. **Dağıtım ayarları** sayfasında, varsayılan ayarları kabul etmek için **İleri** ' yi seçin. (Kullanılabilir bir yükleme.)  
 

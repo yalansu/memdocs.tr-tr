@@ -17,11 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a222a1f4adfd2f73731c40946169338989162e5e
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 99fa22d351d8d0672d2745f18bb70dfd096ac1d7
+ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022373"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437428"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Android için Microsoft Intune Uygulama SDK’sı geliştirici kılavuzu
 
@@ -76,7 +77,7 @@ Ayrıca **Microsoft.Intune.MAM.SDK.Support.XXX.jar** kitaplıkları, ilgili `and
 
 #### <a name="proguard"></a>ProGuard
 
-Bir derleme adımı olarak [ProGuard](http://proguard.sourceforge.net/) (veya başka bir daraltma/gizleme mekanizması) kullanılırsa, SDK'nın dahil edilmesi gereken ek yapılandırma kuralları vardır. Dahil olmak üzere. Yapımızda AAR, kurallarımız Proguard adımla otomatik olarak tümleştirilir ve gerekli sınıf dosyaları tutulur.
+Bir derleme adımı olarak [ProGuard](https://www.guardsquare.com/en/products/proguard) (veya başka bir daraltma/gizleme mekanizması) kullanılırsa, SDK'nın dahil edilmesi gereken ek yapılandırma kuralları vardır. Dahil olmak üzere. Yapımızda AAR, kurallarımız Proguard adımla otomatik olarak tümleştirilir ve gerekli sınıf dosyaları tutulur.
 
 [Microsoft kimlik doğrulama kitaplığı (msal)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview#languages-and-frameworks) kendi Proguard kısıtlamalarına sahip olabilir. Uygulamanız MSAL tümleştirirse, bu kısıtlamaların MSAL belgelerini izlemeniz gerekir.
 
@@ -962,7 +963,7 @@ Ayrıca aşağıdaki [Koşullu Erişim](#conditional-access) gereksinimlerini in
 |Gerekli ADAL parametresi| Değer |
 |--|--|
 | ClientID | Uygulamanın İstemci Kimliği (uygulama kaydedilirken Azure AD tarafından oluşturulur) |
-| SkipBroker | **Değeri** |
+| SkipBroker | **Doğru** |
 
 Gerekirse Yetkili ve NonBrokerRedirectURI belirtilebilir.
 
@@ -1153,7 +1154,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 
 ### <a name="important-implementation-notes"></a>Önemli uygulama notları
 
-#### <a name="authentication"></a>Kimlik Doğrulama
+#### <a name="authentication"></a>Kimlik doğrulama
 
 * Uygulama `registerAccountForMAM()` çağrısı yaptığında, bundan kısa süre sonra farklı bir iş parçacığında `MAMServiceAuthenticationCallback` arabiriminde bir geri çağırma alabilir. İdeal olarak, uygulama, istenen belirtecin alımını hızlandırmak için hesabı kaydetmeden önce ADAL 'dan kendi belirtecini almış. Uygulama geri aramadan geçerli bir belirteç döndürürse, kayıt devam eder ve uygulama bir bildirim aracılığıyla nihai sonucu alır.
 
@@ -1488,7 +1489,7 @@ Uygulamanız `Service` amaçları başlatmak için bir bağlam kullanıyorsa, i�
 Veya ile Kullanıcı arabirimi kimliğini güncelleştirirken özel durumları işlemek için `setUIPolicyIdentity` `switchMAMIdentity` her iki yöntemde de bir değer kümesi geçirilebilir `IdentitySwitchOption` .
 
 * `IGNORE_INTENT`: Geçerli etkinlikle ilişkili amacı yoksayması gereken bir kimlik anahtarı istiyorsa kullanın.
-  Örnek:
+  Örneğin:
 
   1. Uygulamanız yönetilen bir belge içeren yönetilen bir kimlikle bir amaç alır ve uygulamanız belgeyi görüntüler.
   2. Kullanıcı kendi kişisel kimlik özelliklerine geçiş yaptığında, uygulamanız bir kullanıcı arabirimi kimlik anahtarı ister. Kişisel kimlik ' te, uygulamanız artık belgeyi görüntülemediğinden, `IGNORE_INTENT` kimlik anahtarını istenirken kullanmanız gerekir.
@@ -1657,7 +1658,7 @@ Bu, zaman uyumsuz işlem bir dosyaya şirket verileri yazabileceği veya diğer 
 
 #### <a name="mamasynctask"></a>MAMAsyncTask
 
-Kullanmak için `MAMAsyncTask` , yalnızca öğesinden devralmalı ve `AsyncTask` ile geçersiz kılmaları ve `doInBackground` ile değiştirin `onPreExecute` `doInBackgroundMAM` `onPreExecuteMAM` . `MAMAsyncTask` oluşturucusu bir etkinlik bağlamı alır. Örnek:
+Kullanmak için `MAMAsyncTask` , yalnızca öğesinden devralmalı ve `AsyncTask` ile geçersiz kılmaları ve `doInBackground` ile değiştirin `onPreExecute` `doInBackgroundMAM` `onPreExecuteMAM` . `MAMAsyncTask` oluşturucusu bir etkinlik bağlamı alır. Örneğin:
 
 ```java
 AsyncTask<Object, Object, Object> task = new MAMAsyncTask<Object, Object, Object>(thisActivity) {
@@ -2072,9 +2073,9 @@ Aşağıda izin verilen stil özniteliklerinin, bunların denetledikleri UI öğ
 
 |Stil özniteliği | Etkilenen UI öğeleri | Öznitelik öğesi adı | Beklenen kaynak türü |
 | -- | -- | -- | -- |
-| Arka plan rengi | PIN ekranı arka plan rengi <Br>PIN kutusu dolgu rengi | background_color | Renk |
-| Ön plan rengi | Ön plan metin rengi <br> Varsayılan durumda PIN kutusu kenarlığı <br> Kullanıcı PIN girdiğinde PIN kutusundaki karakterler (gizlenmiş karakterler dahil)| foreground_color | Renk|
-| Vurgu rengi | Vurgulandığında PIN kutusu kenarlığı <br> Köprüler |accent_color | Renk |
+| Arka plan rengi | PIN ekranı arka plan rengi <Br>PIN kutusu dolgu rengi | background_color | Color (Renk) |
+| Ön plan rengi | Ön plan metin rengi <br> Varsayılan durumda PIN kutusu kenarlığı <br> Kullanıcı PIN girdiğinde PIN kutusundaki karakterler (gizlenmiş karakterler dahil)| foreground_color | Color (Renk)|
+| Vurgu rengi | Vurgulandığında PIN kutusu kenarlığı <br> Köprüler |accent_color | Color (Renk) |
 | Uygulama logosu | Intune uygulaması PIN ekranında gösterilen büyük simge | logo_image | Çizilebilir |
 
 ## <a name="default-enrollment-optional"></a>Varsayılan kayıt (isteğe bağlı)

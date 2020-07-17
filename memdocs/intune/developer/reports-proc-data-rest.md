@@ -18,11 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fa3f6e96b46b27be4f6cbbe475d03eed007b0d4
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 4f00ba5049401c07f5112061172dc3e7cda4f46c
+ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022424"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437370"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>REST istemcisi ile Intune Veri Ambarı API’sinden veri alma
 
@@ -47,7 +48,7 @@ Azure’da yerel bir uygulama oluşturun. Bu yerel uygulama, istemci uygulamadı
     1. **Ad**için bir kolay ad yazın (örneğin, ' Intune veri ambarı istemcisi ').
     2. **Desteklenen hesap türleri**için **yalnızca bu kuruluş dizininde (yalnızca Microsoft-tek kiracı) hesaplar '** ı seçin.
     3. **Yeniden YÖNLENDIRME URI**'si için bir URL yazın. Yeniden yönlendirme URI 'SI belirli senaryoya bağlı olacaktır, ancak Postman kullanmayı planlıyorsanız, yazın `https://www.getpostman.com/oauth2/callback` . Azure AD’de kimlik doğrularken istemci kimlik doğrulaması adımı için geri aramayı kullanacaksınız.
-5. **Kaydol**’u seçin.
+5. **Kaydet**’i seçin.
 6. Bu uygulamanın **uygulama (istemci) kimliğine** göz önünde. Bu kimliği sonraki bölümde kullanacaksınız.
 
 ## <a name="grant-the-client-app-access-to-the-microsoft-intune-api"></a>İstemci uygulamasına Microsoft Intune API erişimi verme
@@ -62,10 +63,11 @@ Artık Azure’da tanımlanan bir uygulamanız var. Yerel uygulamadan Microsoft 
 6. **Temsilci izinleri** kutusunu seçin ve **Microsoft Intune veri ambarı bilgilerini al** kutusundan tıklayın.
 7. **Izin Ekle**' ye tıklayın.
 8. İsteğe bağlı olarak, yapılandırılmış izinler bölmesinde **Microsoft için yönetici Izni ver** ' i seçin ve ardından **Evet**' i seçin. Böylece geçerli dizindeki tüm hesaplara erişim verirsiniz. Bu, kiracıdaki her kullanıcı için bir onay iletişim kutusu oluşturmayı önler. Daha fazla bilgi için bkz. [Uygulamaları Azure Active Directory ile tümleştirme](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
+9. **Sertifikalar & gizlilikler**  >  **+ yeni istemci parolası** ' nı seçin ve yeni bir gizli dizi oluşturun. Yeniden erişemeyeceksiniz, bu dosyayı bir yerde kaydettiğinizden emin olun.
 
 ## <a name="get-data-from-the-microsoft-intune-api-with-postman"></a>Microsoft Intune API’sinden Postman ile veri alma
 
-Postman gibi genel bir REST istemcisi kullanarak Intune Veri Ambarı API’siyle çalışabilirsiniz. Postman, API’nin özelliklerine ve altındaki OData veri modeline öngörü sağlayabilir ve API kaynaklarıyla olan bağlantınızda sorun giderebilir. Bu bölümde, yerel istemciniz için Auth2.0 belirteci oluşturma hakkında bilgi bulabilirsiniz. İstemcinin, Azure AD’de kimlik doğrulaması ve API kaynaklarına erişmesi için belirtece ihtiyacı vardır.
+Postman gibi genel bir REST istemcisi kullanarak Intune Veri Ambarı API’siyle çalışabilirsiniz. Postman, API özelliklerinin, temel alınan OData veri modelinin ve API kaynaklarıyla olan bağlantınızın sorunlarını giderebileceğiniz bir fikir sağlayabilir. Bu bölümde, yerel istemciniz için Auth2.0 belirteci oluşturma hakkında bilgi bulabilirsiniz. İstemcinin, Azure AD’de kimlik doğrulaması ve API kaynaklarına erişmesi için belirtece ihtiyacı vardır.
 
 ### <a name="information-you-will-need-to-make-the-call"></a>Aramayı yapmanız için gereken bilgiler
 
@@ -78,6 +80,7 @@ Postman kullanarak REST araması yapmak için aşağıdaki bilgilere ihtiyacın�
 | Kimlik Doğrulama URL’si         | Bu, kimlik doğrulama için kullanılan URL’dir. | https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/ |
 | Erişim Belirteci URL’si | Bu, belirteci vermek için kullanılan URL’dir.                                                                                                                                              | https://login.microsoftonline.com/common/oauth2/token |
 | İstemci Kimliği        | Bu kimliği, Azure’da yerel uygulamayı oluştururken oluşturup not etmiştiniz.                                                                                               | 4184c61a-e324-4f51-83d7-022b6a81b991                                                          |
+| İstemci Gizli Anahtarı        | Bu kimliği, Azure’da yerel uygulamayı oluştururken oluşturup not etmiştiniz.                                                                                               | Ksml3dhDJs + jfK1f8Mwc8                                                          |
 | Kapsam (İsteğe Bağlı) | Boş                                                                                                                                                                               | Bu alanı boş bırakabilirsiniz.                                                                     |
 | Veriliş Türü       | Belirteç bir yetkilendirme kodudur.                                                                                                                                                  | Yetkilendirme kodu                                                                            |
 
@@ -121,14 +124,18 @@ Postman için yeni bir erişim belirteci almak üzere Azure AD yetkilendirme URL
 
      `88C8527B-59CB-4679-A9C8-324941748BB4`
 
-11. **Yetkilendirme Kodu**’nu ve Erişim belirtecini yerel olarak iste’yi seçin.
+11. Oluşturduğunuz **Istemci gizliliğini** Azure 'da oluşturduğunuz yerel uygulama içinden ekleyin. Şunun gibi görünmelidir:  
 
-12. **Belirteç İste**’ye tıklayın.
+     `Ksml3dhDJs+jfK1f8Mwc8 `
+
+12. **Yetkilendirme kodunu** izin türü olarak seçin.
+
+13. **Belirteç İste**’ye tıklayın.
 
     ![Erişim belirteci için bilgiler](./media/reports-proc-data-rest/reports-postman_getnewtoken.png)
 
-13. Active AD yetkilendirme sayfasında kimlik bilgilerinizi girin. Postman’deki belirteçler listesinde artık `Bearer` adlı belirteç de yer alır.
-14. **Belirteç Kullan**’a tıklayın. Üst bilgiler listesi, yeni Yetkilendirme anahtar değeri ve `Bearer <your-authorization-token>` değerini barındırır.
+14. Active AD yetkilendirme sayfasında kimlik bilgilerinizi girin. Postman’deki belirteçler listesinde artık `Bearer` adlı belirteç de yer alır.
+15. **Belirteç Kullan**’a tıklayın. Üst bilgiler listesi, yeni Yetkilendirme anahtar değeri ve `Bearer <your-authorization-token>` değerini barındırır.
 
 #### <a name="send-the-call-to-the-endpoint-using-postman"></a>Postman kullanarak aramayı uç noktaya gönderme
 

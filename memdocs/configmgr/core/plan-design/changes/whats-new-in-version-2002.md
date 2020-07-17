@@ -2,7 +2,7 @@
 title: Sürüm 2002’deki yenilikler
 titleSuffix: Configuration Manager
 description: Geçerli dalın Configuration Manager sürüm 2002 ' de tanıtılan değişiklikler ve yeni yetenekler hakkında ayrıntılı bilgi alın.
-ms.date: 06/11/2020
+ms.date: 07/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 58819d764f69ab7e1cc928e14189e01470deb73b
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 3c5107ffe26c72852cbc1dbaa15eb19a990c7939
+ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590448"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86422857"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 2002 ' deki yenilikler
 
@@ -432,10 +432,7 @@ Yönetim hizmeti REST API değişiklikler hakkında daha fazla bilgi için bkz. 
 
 Bu sürüm, yeni özelliklerden başlayarak hata düzeltmeleri gibi ek değişiklikler de içerir. Daha fazla bilgi için bkz. [Configuration Manager geçerli daldaki değişikliklerin özeti, sürüm 2002](https://support.microsoft.com/help/4556203).
 
-<!--
-The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
-
--->
+Aşağıdaki güncelleştirme paketi (4560496) konsolunda 15 Temmuz 2020 tarihinden itibaren kullanılabilir: [Microsoft uç noktası Configuration Manager sürüm 2002 Için güncelleştirme paketi](https://support.microsoft.com/help/4560496).
 
 <!--
 ### Hotfixes

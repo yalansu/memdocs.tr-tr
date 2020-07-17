@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 07b24621fbf12fe7a7c513ea2daaed25abca0f4c
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: e8db4a7f877b5bd07f1aac76fc49b6efef31802e
+ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210792"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437435"
 ---
 # <a name="tenant-attach-configmgr-client-details-in-the-admin-center-preview"></a><a name="bkmk_mem"></a>Kiracı iliştirme: Yönetim merkezinde ConfigMgr istemci ayrıntıları (Önizleme)
 <!--6024387, 6374854, 6521921, intune 7552762 pubpreview July 7, 2020-->
@@ -32,7 +32,7 @@ Artık Microsoft Endpoint Manager Yönetim Merkezi 'nde belirli bir cihaz için 
 - Aşağıdaki tarayıcılardan biri:
   - Microsoft Edge, sürüm 77 ve üzeri
   - Google Chrome
-- Kullanıcı hesabı hem [Azure Active Directory (Azure AD) Kullanıcı keşfi](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) hem de [Active Directory Kullanıcı keşfi](/../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)ile keşfedilmiştir.
+- Kullanıcı hesabı hem [Azure Active Directory (Azure AD) Kullanıcı keşfi](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc) hem de [Active Directory Kullanıcı keşfi](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser)ile keşfedilmiştir.
   - Kullanıcı hesabının Azure 'da eşitlenmiş bir kullanıcı nesnesi olması gerektiği anlamına gelir.
 
 ## <a name="permissions"></a>İzinler
