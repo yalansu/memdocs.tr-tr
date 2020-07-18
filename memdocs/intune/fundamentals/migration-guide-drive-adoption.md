@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/02/2018
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,11 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4998dab72196d904e2530e85481b0498c8e23c21
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 5eb3f743e90dc4f2769b455a981676676ab43704
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022220"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462227"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Microsoft Intune koşullu erişimle Son Kullanıcı benimsemesini sürücü olarak
 
@@ -37,7 +38,7 @@ Bir geçiş kampanyasını koşullu erişimle geliştirmeyle ilgili tipik bir ya
 
 3. Geçiş tamamlandıktan sonra, Intune erişime izin verilmediği takdirde tüm koşullu erişim ilkelerini varsayılan olarak engellenecek şekilde yapılandırın.
 
-### <a name="advantages"></a>Yararları
+### <a name="advantages"></a>Avantajlar
 
 - Yeni kullanıcı hesapları veya önceki çözüm tarafından yönetilmeyen kullanıcı hesabı için erişim denetimi sağlar.
 
@@ -66,7 +67,7 @@ Aşağıdaki seçeneklerden birini belirleyin:
 
 - [Azure Active Directory Koşullu erişimi yapılandırma](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
-- [Intune ile şirket içi Exchange bağlayıcısını yükleme](../protect/exchange-connector-install.md)
+- [Karma modern kimlik doğrulamasını yapılandırma](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)
 
 - [Exchange Online için uygulama tabanlı koşullu erişim ilkeleri ayarlama](../protect/app-based-conditional-access-intune-create.md)
 

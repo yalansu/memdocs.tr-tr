@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca2a5ddd3d2b4c0aa93c7c955d0d688944ee8f95
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 594d6d776e2ad9e87dab768e015330664624a10c
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985504"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461530"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Microsoft Intune’da cihazlarınız için Wi-Fi ayarları ekleme ve kullanma
 
 Wi-Fi, ağ erişimi sağlamak için birçok mobil cihaz tarafından kullanılan bir kablosuz ağ. Microsoft Intune, kuruluşunuzdaki kullanıcılara ve cihazlara dağıtılabilecek yerleşik Wi-Fi ayarlarını içerir. Bu ayar grubu "profil" olarak adlandırılır ve farklı kullanıcılara ve gruplara atanabilir. Atandıktan sonra kullanıcılarınız, kuruluşunuzun Wi-Fi ağına kendi kendilerini yapılandırmadan erişin.
 
-Örneğin Contoso Wi-Fi adında yeni bir Wi-Fi ağı kurdunuz. Ardından, bu ağa bağlanmak için tüm iOS/ıpados cihazlarını ayarlamak istersiniz. İşlem şöyledir:
+Örneğin Contoso Wi-Fi adında yeni bir Wi-Fi ağı kurdunuz. Ardından, bu ağa bağlanmak için tüm iOS/ıpados cihazlarını ayarlamak istersiniz. Süreç şu şekildedir:
 
 1. Contoso Wi-Fi kablosuz ağına bağlanan ayarları içeren bir Wi-Fi profili oluşturun.
 2. Profili iOS/ıpados cihazlarının tüm kullanıcılarını içeren bir gruba atayın.
@@ -68,7 +68,7 @@ Wi-Fi profilleri aşağıdaki cihaz platformlarını destekler:
 
       > [!TIP]
       >
-      > - Adanmış bir cihaz (bilgi noktası) olarak çalışan **Android kurumsal** cihazlarda **yalnızca cihaz sahibi**  >  **Wi-Fi**' ı seçin.
+      > - Adanmış bir cihaz (bilgi noktası) olarak çalışan **Android kurumsal** cihazlarda, **tam olarak yönetilen, adanmış ve şirkete ait iş profili**  >  **Wi-Fi**' y i seçin.
       > - **Windows 8.1 ve daha yeni bir sürümü**için **Wi-Fi içeri aktarmayı**seçebilirsiniz. Bu seçenek, Wi-Fi ayarlarını daha önce başka cihazdan dışarı aktarmış olduğunuz bir XML dosyası olarak içeri aktarmanıza olanak tanır.
 
 4. **Oluştur**’u seçin.

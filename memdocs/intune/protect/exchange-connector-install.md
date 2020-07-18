@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,16 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 390a80f6333229a99daec9627e3810c27ca6b580
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e646ce40acaa156910f516c475cd6b0885989941
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990838"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462209"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>Şirket içi Intune Exchange bağlayıcısını ayarlama
 
+> [!IMPORTANT]
+> Bu makaledeki bilgiler bir Exchange Connector kullanımı desteklenen müşteriler için geçerlidir.
+>
+> Haziran 2020 ' den başlayarak Exchange Connector için destek kullanım dışıdır ve Exchange [karma modern kimlik doğrulaması](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) ile değiştirilmiştir.  Ortamınızda ayarlanmış bir Exchange Bağlayıcısı varsa, Intune kiracınız kullanım için desteklenir ve yapılandırmasını destekleyen Kullanıcı arabirimine erişime sahip olmaya devam edersiniz. Bağlayıcıyı kullanmaya devam edebilir veya HMA 'yı yapılandırabilir ve ardından bağlayıcınızı kaldırabilirsiniz.
+>
+>HMA kullanımı, Intune 'un Exchange bağlayıcısını kurulumunu ve kullanmasını gerektirmez. Bu değişiklik ile, aboneliğiniz ile bir Exchange Bağlayıcısı kullanmıyorsanız, Intune için Exchange bağlayıcısını yapılandırmak ve yönetmek için kullanılan Kullanıcı arabirimi Microsoft Endpoint Manager yönetim merkezinden kaldırılmıştır.
+
 Intune, Exchange 'e erişimi korumaya yardımcı olmak için Microsoft Intune Exchange Connector olarak bilinen şirket içi bir bileşeni kullanır. Bu bağlayıcıya Intune konsolunun bazı konumlarında *Exchange ActiveSync şirket içi Bağlayıcısı* da denir.
+
+> [!IMPORTANT]
+> Intune, 2007 (Temmuz) sürümünden itibaren Intune hizmetinden şirket Içi Exchange Bağlayıcı özelliği için desteği kaldıracaktır. Etkin bağlayıcı içeren mevcut müşteriler şu anda geçerli işlevselliğe devam edebilir. Etkin Bağlayıcısı olmayan yeni müşteriler ve mevcut müşteriler, artık yeni bağlayıcılar oluşturamaz veya Intune 'dan Exchange ActiveSync (EAS) cihazlarını yönetemez. Bu kiracılar için, Microsoft şirket içi Exchange 'e erişimi korumak için Exchange [karma modern kimlik doğrulamasının (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) kullanılmasını önerir. HMA hem Intune Uygulama Koruması Ilkelerini (MAM olarak da bilinir) hem de şirket içi Exchange için Outlook Mobile aracılığıyla koşullu erişim imkanı sunar.
 
 Bu makaledeki bilgiler, Intune Exchange bağlayıcısını yüklemenize ve izlemenize yardımcı olabilir. Şirket içi Exchange posta kutularına erişime izin vermek veya erişimi engellemek için bağlayıcıyı [koşullu erişim ilkelerinizle](conditional-access-exchange-create.md) birlikte kullanabilirsiniz.
 
@@ -45,6 +55,35 @@ Intune 'un Şirket içi Exchange Server ile iletişim kurmasını sağlayan bir 
 2. Şirket içi Exchange kuruluşundaki bir bilgisayarda Exchange bağlayıcısını yükleyin ve yapılandırın.
 3. Exchange bağlantısını doğrulayın.
 4. Intune 'a bağlanmak istediğiniz her ek Exchange kuruluşu için bu adımları tekrarlayın.
+
+## <a name="how-conditional-access-for-exchange-on-premises-works"></a>Şirket içi Exchange için koşullu erişim nasıl çalışır
+
+Şirket içi Exchange için koşullu erişim, Azure koşullu erişim tabanlı ilkelerden farklı şekilde çalışır. Exchange Server 'a doğrudan etkileşimde bulunmak için Intune Exchange şirket içi bağlayıcısını yüklersiniz. Intune Exchange bağlayıcısı; Intune'un Exchange Active Sync (EAS) kayıtlarını alıp bunları Intune cihaz kayıtlarına eşleyebilmesi için Exchange sunucusunda bulunan tüm EAS kayıtlarını çeker. Bu kayıtlar, Intune tarafından kaydedilmiş ve tanınan cihazlardır. Bu işlem, e-posta erişimine izin verir veya erişimi engeller.
+
+EAS kaydı yenidir ve Intune bunun farkında olmazsa, Intune, Exchange Server 'ı e-postaya erişimi engelleyecek şekilde yönlendiren bir cmdlet ("Command-Let") yayınlar. Bu işlemin nasıl çalıştığı hakkında daha fazla ayrıntı aşağıda verilmiştir:
+
+> [!div class="mx-imgBorder"]
+> ![CA akış grafiği olan şirket içi Exchange](./media/exchange-connector-install/ca-intune-common-ways-1.png)
+
+1. Kullanıcı, Exchange'de kurum içi 2010 SP1 veya sonraki bir sürümü üzerinde barındırılan kurumsal e-postalara erişmeye çalışır.
+
+2. Cihaz Intune tarafından yönetilmiyorsa, e-postaya erişim engellenir. Intune, EAS istemcisine bir blok bildirimi gönderir.
+
+3. EAS blok bildirimini alır, cihazı karantinaya alır ve kullanıcıların cihazlarını kaydedebilmesi için bağlantılar içeren düzeltme adımlarını içeren karantina e-postasını gönderir.
+
+4. Cihazın Intune tarafından yönetilmesi için ilk adım olan Çalışma alanına katılma işlemi gerçekleşir.
+
+5. Cihaz Intune'a kaydedilir.
+
+6. Intune, EAS kaydını bir cihaz kaydına eşler ve cihaz uyumluluk durumunu kaydeder.
+
+7. EAS istemci kimliği Azure AD Cihaz Kayıt işlemi tarafından kaydedilir. Bu işlem Intune cihaz kaydı ile EAS istemci kimliği arasında bir ilişki oluşturur.
+
+8. Azure AD Cihaz Kaydı, cihaz durum bilgilerini kaydeder.
+
+9. Kullanıcı koşullu erişim ilkelerini karşılıyorsa, Intune, Intune Exchange Bağlayıcısı aracılığıyla posta kutusunun eşitlenmesine izin veren bir cmdlet 'i yayınlar.
+
+10. Exchange sunucusu, kullanıcının e-postaya erişebilmesi için bildirimi EAS istemcisine gönderir.
 
 ## <a name="intune-exchange-connector-requirements"></a>Intune Exchange Connector gereksinimleri
 
@@ -98,11 +137,11 @@ Intune Exchange bağlayıcısını destekleyebilen bir Windows Server 'da:
 
 Intune Exchange bağlayıcısını yüklemek için bu adımları izleyin. Birden çok Exchange kurumınız varsa, ayarlamak istediğiniz her Exchange Connector için adımları tekrarlayın.
 
-1. Intune Exchange Connector için desteklenen bir işletim sisteminde, **Exchange_Connector_Setup. zip** içindeki dosyaları güvenli bir konuma ayıklayın.
+1. Intune Exchange Connector için desteklenen bir işletim sisteminde, **Exchange_Connector_Setup.zip** içindeki dosyaları güvenli bir konuma ayıklayın.
    > [!IMPORTANT]
    > *Exchange_Connector_Setup* klasöründeki dosyaları yeniden adlandırmayın veya taşımayın. Bu değişiklikler bağlayıcı yüklemesinin başarısız olmasına neden olur.
 
-2. Dosyalar ayıklandıktan sonra, bağlayıcıyı yüklemek için ayıklanan klasörü açın ve **Exchange_Connector_Setup. exe** ' ye çift tıklayın.
+2. Dosyalar ayıklandıktan sonra, bağlayıcıyı yüklemek için ayıklanan klasörü açın ve **Exchange_Connector_Setup.exe** çift tıklayın.
 
    > [!IMPORTANT]
    > Hedef klasör güvenli bir konum değilse, şirket içi bağlayıcılarınızı yüklemeyi bitirdiğinizde, *Microsoftınayarla. ACCOUNTCERT* sertifika dosyasını silin.
@@ -174,7 +213,7 @@ Varsayılan olarak, ek CASs 'leri bulma etkindir. Yük devretmeyi kapatmanız ge
 
 2. Bir metin düzenleyicisi kullanarak **OnPremisesExchangeConnectorServiceConfiguration.xml** dosyasını açın.
 
-3. ** \< Icasfailoverenabled>*true* \< /ıscasfailoverenabled>** , ** \< ıscasfailoverenabled>*false* \< /ıscasfailoverenabled>** olarak değiştirin.
+3. ** \<IsCasFailoverEnabled> *true* True \</IsCasFailoverEnabled> ** ** \<IsCasFailoverEnabled> *değerini*false \</IsCasFailoverEnabled> **olarak değiştirin.
 
 ## <a name="performance-tune-the-exchange-connector-optional"></a>Performans-Exchange bağlayıcısını ayarlama (isteğe bağlı)
 
@@ -188,11 +227,11 @@ Exchange Connector performansını geliştirmek için:
 
 1. Bağlayıcının yüklendiği sunucuda, bağlayıcının yükleme dizinini açın.  Varsayılan konum *C:\ProgramData\Microsoft\Windows Intune Exchange Connector*' dır.
 
-2. *OnPremisesExchangeConnectorServiceConfiguration. xml*dosyasını düzenleyin.
+2. *OnPremisesExchangeConnectorServiceConfiguration.xml*dosyasını düzenleyin.
 
 3. **Enableparallelcommandsupport** öğesini bulun ve değeri **true**olarak ayarlayın:
 
-   \<EnableParallelCommandSupport>true \< /Enableparallelcommandsupport>
+   \<EnableParallelCommandSupport>true\</EnableParallelCommandSupport>
 
 4. Dosyayı kaydedin ve ardından Microsoft Intune Exchange Connector hizmetini yeniden başlatın.
 

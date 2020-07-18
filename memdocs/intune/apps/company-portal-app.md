@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 07/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89e3111ef902b0ea0f7f66e6be6aa0c227fdb3c4
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 0ad862ff1f04558bd699db2ef0c09d4da4654e23
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239955"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461972"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune Şirket Portalı uygulamaları, Şirket Portalı Web sitesini ve Intune uygulamasını özelleştirme
 
@@ -40,7 +40,7 @@ Aşağıdaki tabloda son kullanıcı deneyimi için marka özelleştirme ayrınt
 | Alan adı | Daha fazla bilgi |
 |---|---|---|
 | **Kuruluş adı** | Bu ad, son kullanıcı deneyiminde mesajlaşma boyunca görüntülenir. Üst **bilgide göster** ayarı kullanılarak, üstbilgilere görüntülenecek şekilde ayarlanabilir. Maksimum Uzunluk 40 karakterdir. |
-| **Color** | Beş standart renkten seçmek için **Standart** ' ı seçin. Onaltılık kod değerine göre belirli bir rengi seçmek için **özel** ' i seçin. |
+| **Color (Renk)** | Beş standart renkten seçmek için **Standart** ' ı seçin. Onaltılık kod değerine göre belirli bir rengi seçmek için **özel** ' i seçin. |
 | **Tema rengi** | Son Kullanıcı deneyimine göre göstermek için tema rengini ayarlayın. Metin rengini otomatik olarak siyah veya beyaz olarak ayarlayacağız, bu sayede seçtiğiniz tema renginizdeki en üstünde görünür. |
 | **Üst bilgide göster** | Son Kullanıcı deneyimlerinde bulunan üstbilginin **kuruluş logosu ve adı**, **yalnızca kuruluş logosu**veya **yalnızca kuruluş adını**görüntülemesi gerekip gerekmediğini seçin. Aşağıdaki önizleme kutuları, adı değil yalnızca logoları gösterir.  |
 | **Tema rengi arka planı için logoyu karşıya yükle** | Seçtiğiniz Tema renginiz üzerinde göstermek istediğiniz logoyu karşıya yükleyin. En iyi görünüm için saydam bir arka plana sahip bir logo yükleyin. Bunun, ayarın altındaki Önizleme kutusunda nasıl görüneceğini görebilirsiniz.<p>Maksimum görüntü boyutu: 400 x 400 piksel<br>En büyük dosya boyutu: 750KB<br>Dosya türü: PNG, JPG veya JPEG |
@@ -108,7 +108,7 @@ Aşağıdaki tabloda kayda özgü yapılandırma ayrıntıları verilmiştir:
 
 |    Cihaz kayıt seçenekleri    |    Açıklama    |    Denetim listesi istemleri    |    Bildirim    |    Cihaz ayrıntıları durumu    |    Uygulama ayrıntıları durumu (kayıt gerektiren bir uygulama)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
-|    Kullanılabilir, istemlerle    |    Tüm olası konumlara kaydolmak için istemlerle ilgili varsayılan deneyim.    |    Evet    |    Yes    |    Yes    |    Yes    |
+|    Kullanılabilir, istemlerle    |    Tüm olası konumlara kaydolmak için istemlerle ilgili varsayılan deneyim.    |    Yes    |    Yes    |    Yes    |    Yes    |
 |    Kullanılabilir, istem yok    |    Kullanıcı, geçerli cihazlarından veya kayıt gerektiren uygulamalardan cihaz ayrıntıları ' nda durum aracılığıyla kaydedebilir.    |    Hayır    |    Hayır    |    Evet    |    Yes    |
 |    Kullanılamaz    |    Kullanıcıların kaydolmasına yol yoktur.    |    Hayır    |    Hayır    |    Hayır    |    Hayır    |
 
@@ -158,6 +158,17 @@ Aşağıdaki eylemler kullanılabilir:
 > [!NOTE]
 > Bu eylemler, Şirket Portalı uygulaması ve Web sitesindeki cihaz eylemlerini kısıtlamak ve herhangi bir cihaz kısıtlama ilkesi uygulamamayı yapmak için kullanılabilir. Kullanıcıların, ayarlardan fabrika sıfırlaması veya MDM kaldırma gerçekleştirmesini kısıtlamak için, cihaz kısıtlama ilkelerini yapılandırmanız gerekir. 
 
+## <a name="opening-web-company-portal-applications"></a>Web Şirket Portalı uygulamalarını açma
+Web Şirket Portalı uygulamalarında, son kullanıcının Şirket Portalı uygulaması yüklüyse, son kullanıcılar, tarayıcının dışında açılırken uygulamayı nasıl açmak istediğimi soran bir iletişim kutusu görür. Uygulama Şirket Portalı yolunda değilse, Şirket Portalı giriş sayfasını açar. Uygulama yolda ise, Şirket Portalı belirli uygulamayı açar. 
+
+Şirket Portalı seçildikten sonra, URI yolu aşağıdakilerden biri olduğunda Kullanıcı uygulamada ilgili sayfaya yönlendirilir:
+
+- `/apps`-Web Şirket Portalı tüm uygulamaları listeleyen uygulamalar sayfasını açar.
+- `/apps/[appID]`-Web Şirket Portalı, karşılık gelen uygulamanın ayrıntılar sayfasını açar.
+- *URI yolu farklı veya beklenmeyen* -Web Şirket Portalı giriş sayfası görüntülenir.
+
+Kullanıcının yüklü Şirket Portalı uygulaması yoksa, Kullanıcı Web Şirket Portalı alınır.
+
 ## <a name="company-portal-derived-credentials-for-iosipados-devices"></a>İOS/ıpados cihazları için türetilmiş kimlik bilgilerini Şirket Portalı
 
 Intune, kişisel kimlik doğrulama (PıV) ve ortak erişim kartı (CAC) ile birlikte gelen kimlik bilgilerini, DıŞA geçmiş kimlik bilgisi sağlayıcıları, Entrust Datacard ve ıntercede ile iş ortaklığı için destekler. Son kullanıcılar, Şirket Portalı uygulamasındaki kimliklerini doğrulamak için iOS/ıpados cihazının kayıt sonrası ek adımlara geçer. Türetilmiş kimlik bilgileri, önce kiracınız için bir kimlik bilgisi sağlayıcısı ayarlayıp, ardından kullanıcılara veya cihazlara türetilmiş kimlik bilgilerini kullanan bir profili hedefleyerek kullanıcılara etkinleştirilir.
@@ -183,7 +194,7 @@ Windows Şirket Portalı uygulamasında aşağıdaki kısayollar kullanılabilir
 |  | Giriş Sayfası | Alt+H |
 |  | Tüm uygulamalar | Alt+A |
 |  | Yüklenen uygulamalar | Alt+I |
-|  | Geri bildirim gönderme | Alt+F |
+|  | Geri bildirim gönder | Alt+F |
 |  | Profilim | Alt+U |
 |  | Ayarlar | Alt+T |
 | Giriş - Cihaz kutucuğu | Rename | F2 |

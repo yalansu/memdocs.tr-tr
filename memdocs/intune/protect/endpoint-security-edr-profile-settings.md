@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: dd53ec47435ba9dc416d2b152719b393d1647f90
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: e26719bb9bf322e3e4bf11b39911e98788707629
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824010"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460425"
 ---
 # <a name="endpoint-detection-and-response-policy-settings-for-endpoint-security-in-intune"></a>Intune 'da Endpoint Security için uç nokta algılama ve yanıt ilkesi ayarları
 
@@ -33,9 +33,7 @@ Desteklenen platformlar ve profiller:
   - Profil: **Endpoint Detection ve yanıt (MDM)**
 
 - **Windows 10 ve Windows Server**: Configuration Manager tarafından yönetilen cihazlara dağıttığınız ilke için bu platformu kullanın.
-  - Profil: **Endpoint Detection ve yanıt (ConfigMgr) (Önizleme)**
-  
-  *Bu platform ve profil genel önizlemede*.
+  - Profil: **Endpoint Detection ve yanıt (ConfigMgr)**
 
 ## <a name="endpoint-detection-and-response-mdm"></a>Uç nokta algılama ve yanıt (MDM)
 
@@ -70,7 +68,7 @@ Desteklenen platformlar ve profiller:
   - **Yapılandırılmadı** (*varsayılan*)
   - **Evet** -Microsoft Defender Gelişmiş tehdit koruması telemetri raporlama sıklığını artırın.
 
-## <a name="endpoint-detection-and-response-configmgr-preview"></a>Uç nokta algılama ve yanıt (ConfigMgr) (Önizleme)
+## <a name="endpoint-detection-and-response-configmgr"></a>Uç nokta algılama ve yanıt (ConfigMgr)
 
 **Uç nokta algılama ve yanıt**:
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35cf4b3afb766d8729d3438d2d8c61e1d79f4791
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 03e29f7c0256a5cd1c9cdabdd24394a2f390286b
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531749"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462159"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Intune 'da SCEP sertifika profilleri oluşturma ve atama
 
@@ -40,9 +40,9 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
    - **Platform**: cihazlarınızın platformunu seçin.
    - **Profil**: **SCEP sertifikası** seçin
 
-     **Android kurumsal** platformu için *profil türü* , yalnızca *cihaz sahibi* ve *yalnızca iş profili*olmak üzere iki kategoriye ayrılmıştır. Yönettiğiniz cihazlar için doğru SCEP sertifika profilini seçtiğinizden emin olun.  
+     **Android kurumsal** platformu Için, *profil türü* Iki kategoriye, *tam olarak yönetilen, adanmış ve şirkete ait Iş profiline* ve *yalnızca iş profiline*bölünmüştür. Yönettiğiniz cihazlar için doğru SCEP sertifika profilini seçtiğinizden emin olun.  
 
-     *Yalnızca cihaz sahibi* profılı için SCEP sertifika profilleri aşağıdaki sınırlamalara sahiptir:
+     *Tam olarak yönetilen, adanmış ve şirkete ait Iş profili* profılı için SCEP sertifika profilleri aşağıdaki sınırlamalara sahiptir:
 
       1. Izleme altında, sertifika raporlama cihaz sahibi SCEP sertifika profilleri için kullanılamaz.
 
@@ -50,7 +50,7 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
 
       3. Android kurumsal adanmış cihazlarda, SCEP sertifika profilleri yalnızca Wi-Fi ağ yapılandırması ve kimlik doğrulaması için desteklenir.  Android kurumsal adanmış cihazlarda SCEP sertifika profilleri VPN veya uygulama kimlik doğrulaması için desteklenmez.
 
-4. **Oluştur**'u seçin.
+4. **Oluştur**’u seçin.
 
 5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
    - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı *şirketin tamamına ait SCEP profilidir*.
@@ -112,7 +112,7 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
 
          Bu örnekte, CN ve E değişkenlerini kullanan bir konu adı biçimi ve kuruluş birimi, kuruluş, konum, durum ve ülke değerleri için dizeler bulunur. [CertStrToName işlevi](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx), bu işlevi ve desteklenen dizelerini açıklar.
          
-         \*Yalnızca Android cihaz sahibi profilleri için **CN = {{userPrincipalName}}** ayarı çalışmayacak. Android cihaz sahibi yalnızca kullanıcı olmayan cihazlar için kullanılabilir, bu profil kullanıcının Kullanıcı asıl adını alamaz. Kullanıcılar için bu seçeneğe gerçekten ihtiyaç duyuyorsanız, şu şekilde bir geçici çözüm kullanabilirsiniz: **CN = {{username}} \@ contoso.com** , Kullanıcı adı ve el ile eklediğiniz etki alanı gibijanedoe@contoso.com
+         \*Android tam olarak yönetilen, adanmış ve şirkete ait Iş profili profilleri için **CN = {{userPrincipalName}}** ayarı çalışmaz. Android tam olarak yönetilen, adanmış ve şirkete ait Iş profili profilleri kullanıcı olmayan cihazlarda kullanılabilir, bu nedenle kullanıcının Kullanıcı asıl adını alabilmesi mümkün olmayacaktır. Kullanıcılar için bu seçeneğe gerçekten ihtiyaç duyuyorsanız, şu şekilde bir geçici çözüm kullanabilirsiniz: **CN = {{username}} \@ contoso.com** , Kullanıcı adı ve el ile eklediğiniz etki alanı gibijanedoe@contoso.com
 
       - **Cihaz sertifika türü**
 

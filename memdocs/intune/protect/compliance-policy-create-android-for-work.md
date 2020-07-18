@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d419eb341d3d15a8307396d1bcf13235201606f4
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: 9897f824bb1bd13c1d12ff0c705b42cea275b9d4
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729236"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462091"
 ---
 # <a name="android-enterprise-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Intune'u kullanarak cihazları uyumlu veya uyumlu değil şeklinde işaretlemek için kullanabileceğiniz Android Kurumsal ayarları
 
@@ -42,7 +42,7 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
 [Bir uyumluluk Ilkesi oluşturun](create-compliance-policy.md#create-the-policy). **Platform**Için **Android kurumsal**' i seçin.
 
 
-## <a name="device-owner"></a>Cihaz sahibi
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Tam olarak yönetilen, adanmış ve şirkete ait Iş profili
 
 ### <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
@@ -53,7 +53,7 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
   - **Temizle**
   - **Düşük**
   - **Medium**
-  - **Geniş**
+  - **Yüksek**
 
 ### <a name="device-health"></a>Cihaz Sistem Durumu
 
@@ -67,7 +67,7 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
   - **Yüksek** -Bu seçenek, tüm tehdit düzeylerine izin verdiği için en az güvenli seçenektir. Bu çözüm, yalnızca raporlama amacıyla kullanıyorsanız kullanışlı olabilir.
   
 > [!NOTE]
-> Tüm Mobile Threat Defense (MTD) sağlayıcıları, uygulama yapılandırması kullanılarak Android kurumsal cihaz sahibi dağıtımlarında desteklenir. Intune 'da Android kurumsal cihaz sahibi platformlarını desteklemek için gereken tam yapılandırma için MTD sağlayıcınızla görüşün.
+> Tüm Mobile Threat Defense (MTD) sağlayıcıları, uygulama yapılandırması kullanılarak Android kurumsal tam olarak yönetilen, adanmış ve şirkete ait Iş profili dağıtımlarında desteklenir. Intune 'da Android kurumsal tam olarak yönetilen, adanmış ve şirkete ait Iş profili platformlarını desteklemek için gereken tam yapılandırma için MTD sağlayıcınıza danışın.
 
 #### <a name="google-play-protect"></a>Google Play Koruması
 
@@ -106,8 +106,8 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
   Parolanın yalnızca sayısal karakterlerden mi yoksa sayı ve diğer karakterlerin karışımından mı oluşacağını seçin. Seçenekleriniz şunlardır:
   - **Cihaz varsayılanı** -parola uyumluluğunu değerlendirmek Için, *cihaz varsayılanı*dışında bir parola gücü seçtiğinizden emin olun.
   - **Parola gerekli, kısıtlama yok**
-  - **Zayıf biyometrik** - [güçlü ve zayıf Biyometri](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (Android 'in Web sitesini açar)
-  - **Sayısal** (*varsayılan*): parola yalnızca sayı olmalıdır, örneğin `123456789`. Kullanıcının girmesi gereken **parolanın uzunluk alt sınırını** girin (4 ile 16 karakter arasında).
+  - **Zayıf biyometrik**  -  [Güçlü ve zayıf Biyometri](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (Android 'in Web sitesini açar)
+  - **Sayısal** (*varsayılan*): parola yalnızca sayı olmalıdır, örneğin `123456789` . Kullanıcının girmesi gereken **parolanın uzunluk alt sınırını** girin (4 ile 16 karakter arasında).
   - "1111" veya "1234" gibi **sayısal karmaşık** yinelenen veya ardışık sayılara izin verilmez. Kullanıcının girmesi gereken **parolanın uzunluk alt sınırını** girin (4 ile 16 karakter arasında).
   - Alfabede **alfabetik** harfler gereklidir. Rakamlar ve simgeler zorunlu tutulmaz. Kullanıcının girmesi gereken **parolanın uzunluk alt sınırını** girin (4 ile 16 karakter arasında).
   - **Alfasayısal** -büyük harfler, küçük harfler ve sayısal karakterler içerir. Kullanıcının girmesi gereken **parolanın uzunluk alt sınırını** girin (4 ile 16 karakter arasında).
@@ -166,7 +166,7 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
   - **Temizle**
   - **Düşük**
   - **Medium**
-  - **Geniş**
+  - **Yüksek**
 
 ### <a name="device-health---for-work-profile"></a>Cihaz Durumu- *for Work Profili*
 
@@ -259,7 +259,7 @@ Cihaz kuralda belirtilenden sonraki bir işletim sistemi sürümünü kullandı�
 
 - **Bilinmeyen kaynaklardan gelen uygulamaları engelle**  
   - **Yapılandırılmadı** (*varsayılan*)-Bu ayar uyumluluk veya uyumsuzluk için değerlendirilmez.
-  - **Blok** - **güvenlik** > **Bilinmeyen kaynakların** etkinleştirildiği kaynakları engelleyin (Android*4,0 üzerinden Android 7. x aracılığıyla desteklenir). Android 8,0 ve üzeri tarafından desteklenmez*).  
+  - **Blok** - **güvenlik**  >  **Bilinmeyen kaynakların** etkinleştirildiği kaynakları engelleyin (Android*4,0 üzerinden Android 7. x aracılığıyla desteklenir). Android 8,0 ve üzeri tarafından desteklenmez*).  
 
   Uygulamaları dışarıdan yüklemek için bilinmeyen kaynaklara izin verilmesi gerekir. Cihazlara dışarıdan Android uygulaması yüklemiyorsanız bu uyumluluk ilkesini etkinleştirmek için bu özelliği **Engelle** olarak ayarlayın.
 

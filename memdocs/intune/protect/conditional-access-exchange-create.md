@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,18 +18,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 530d6de8194a1ca74b72567c98c5d2afcb327170
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 6b0a22d24a67364df3d3aa064489db67e2c97e98
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990321"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462244"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Intune için Exchange şirket içi erişimini yapılandırma
 
 Bu makalede cihaz uyumluluğuna göre şirket içi Exchange için Koşullu erişimin nasıl yapılandırılacağı gösterilir.
 
 Ayrılmış Exchange Online ortamınız varsa ve bunun yapılandırmasının yeni mi yoksa eski mi olduğunu bulmanız gerekiyorsa, hesap yöneticinize başvurun. Şirket içi Exchange 'e veya eski Exchange Online ayrılmış ortamınıza e-posta erişimini denetlemek için, Intune 'da şirket içi Exchange 'e koşullu erişimi yapılandırın.
+
+> [!IMPORTANT]
+> Bu makaledeki bilgiler bir Exchange Connector kullanımı desteklenen müşteriler için geçerlidir.
+>
+> Haziran 2020 ' den başlayarak Exchange Connector için destek kullanım dışıdır ve Exchange [karma modern kimlik doğrulaması](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) ile değiştirilmiştir.  Ortamınızda ayarlanmış bir Exchange Bağlayıcısı varsa, Intune kiracınız kullanım için desteklenir ve yapılandırmasını destekleyen Kullanıcı arabirimine erişime sahip olmaya devam edersiniz. Bağlayıcıyı kullanmaya devam edebilir veya HMA 'yı yapılandırabilir ve ardından bağlayıcınızı kaldırabilirsiniz.
+>
+> HMA kullanımı, Intune 'un Exchange bağlayıcısını kurulumunu ve kullanmasını gerektirmez. Bu değişiklik ile, aboneliğiniz ile bir Exchange Bağlayıcısı kullanmıyorsanız, Intune için Exchange bağlayıcısını yapılandırmak ve yönetmek için kullanılan Kullanıcı arabirimi Microsoft Endpoint Manager yönetim merkezinden kaldırılmıştır.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 

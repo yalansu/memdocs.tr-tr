@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38c3c4adb7029303eaad34b1d5a9fdef774c0f00
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65b5c7c0b9cb8a587213d237854e69705b5a7f63
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086440"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461700"
 ---
 # <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Microsoft Intune 'de Android kurumsal adanmış ve tam olarak yönetilen cihazlar için Wi-Fi ayarları ekleme
 
@@ -33,14 +33,14 @@ Bu makalede bu ayarlar açıklanır. [Cihazlarınızda Wi-Fi kullanın](wi-fi-se
 
 [Cihaz profili oluşturma](wi-fi-settings-configure.md).
 
-## <a name="device-owner-only"></a>Yalnızca cihaz sahibi
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Tam olarak yönetilen, adanmış ve şirkete ait Iş profili
 
 Android kurumsal adanmış veya tam olarak yönetilen bir cihaza dağıtım yapıyorsanız bu seçeneği belirleyin.  Android kurumsal adanmış ve tam olarak yönetilen cihazlar şu anda SCEP sertifika dağıtımını destekliyor, ancak PKCS değil.
 
 ### <a name="basic"></a>Temel
 
 - **Wi-Fi türü**: **Temel**’i seçin.
-- **Ağ adı**: Bu Wi-Fi bağlantısı için bir ad girin. Son kullanıcılar, kullanılabilir Wi-FI bağlantıları için cihazına gözatarken bu adı görür. Örneğin, **contoso WiFi**girin.
+- **Ağ adı**: Bu Wi-Fi bağlantısı için bir ad girin. Son kullanıcılar, kullanılabilir Wi-Fi bağlantıları için cihazına gözatarken bu adı görür. Örneğin, **contoso WiFi**girin.
 - **SSID**: cihazların bağlandığı kablosuz ağın gerçek adı olan **hizmet kümesi tanımlayıcısını**girin. Ancak, kullanıcılar bağlantıyı seçerken yapılandırdığınız **ağ adını** görür.
 - **Gizli ağ**: Cihazdaki kullanılabilir ağlar listesinde bu ağı gizlemek için **Etkinleştir**’i seçin. SSID yayınlanmaz. Cihazdaki kullanılabilir ağlar listesinde bu ağı göstermek için **Devre dışı bırak**’ı seçin.
 - **Wi-Fi türü**: Wi-Fi ağında kimlik doğrulamak için kullanılacak güvenlik protokolünü seçin. Seçenekleriniz şunlardır:
@@ -58,15 +58,15 @@ Android kurumsal adanmış veya tam olarak yönetilen bir cihaza dağıtım yap�
 
   - **EAP-TLS**: Ayrıca şunları girin:
 
-    - **Server Trust** - Sunucu**doğrulaması için sunucu güveni kök sertifikası**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlandığı zaman, bu sertifika sunucuya sunulur ve bağlantının kimliğini doğrular.
+    - **Sunucu güveni**  -  **Sunucu doğrulaması Için kök sertifika**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlandığı zaman, bu sertifika sunucuya sunulur ve bağlantının kimliğini doğrular.
 
-    - **Client Authentication** - **İstemci kimlik doğrulaması (kimlik sertifikası) için**istemci kimlik doğrulama istemci sertifikası: Ayrıca cihaza dağıtılan SCEP istemci sertifikası profilini seçin. Bu sertifika, bağlantının kimliğini doğrulamak için cihaz tarafından sunucuya sunulan kimliktir.
+    - **Istemci kimlik doğrulaması**  -  **İstemci kimlik doğrulaması Için istemci sertifikası (kimlik sertifikası)**: CIHAZA dağıtılan SCEP istemci sertifikası profilini seçin. Bu sertifika, bağlantının kimliğini doğrulamak için cihaz tarafından sunucuya sunulan kimliktir.
 
     - **Kimlik gizliliği (dış kimlik)**: EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir, örneğin `anonymous`. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.
 
   - **EAP-TTLS**: Ayrıca şunları girin:
 
-    - **Server Trust** - Sunucu**doğrulaması için sunucu güveni kök sertifikası**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlandığı zaman, bu sertifika sunucuya sunulur ve bağlantının kimliğini doğrular.
+    - **Sunucu güveni**  -  **Sunucu doğrulaması Için kök sertifika**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlandığı zaman, bu sertifika sunucuya sunulur ve bağlantının kimliğini doğrular.
 
     - **Istemci kimlik doğrulaması**: bir **kimlik doğrulama yöntemi**seçin. Seçenekleriniz şunlardır:
 
@@ -83,14 +83,14 @@ Android kurumsal adanmış veya tam olarak yönetilen bir cihaza dağıtım yap�
 
   - **PEAP**: Ayrıca şunları girin:
 
-    - **Server Trust** - Sunucu**doğrulaması için sunucu güveni kök sertifikası**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlandığı zaman, bu sertifika sunucuya sunulur ve bağlantının kimliğini doğrular.
+    - **Sunucu güveni**  -  **Sunucu doğrulaması Için kök sertifika**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlandığı zaman, bu sertifika sunucuya sunulur ve bağlantının kimliğini doğrular.
 
     - **Istemci kimlik doğrulaması**: bir **kimlik doğrulama yöntemi**seçin. Seçenekleriniz şunlardır:
 
       - **Kullanıcı adı ve Parola**: Bağlantının kimliğini doğrulamak için kullanıcıdan bir kullanıcı adı ve parola girmesini isteyin. Şunları da girin:
         - **Kimlik doğrulaması için EAP dışı yöntem (iç kimlik)**: Bağlantının kimliğini nasıl doğrulayacağınızı seçin. Wi-Fi ağınızda yapılandırılmış olan protokolü seçtiğinizden emin olun. Seçenekleriniz şunlardır:
 
-          - **Yok**
+          - **Hiçbiri**
           - **Microsoft CHAP Sürüm 2 (MS-CHAP v2)**
 
       - **Sertifikalar**: cihaza de dağıtılan SCEP istemci sertifikası profilini seçin. Bu sertifika, bağlantının kimliğini doğrulamak için cihaz tarafından sunucuya sunulan kimliktir.
@@ -114,15 +114,15 @@ Android kurumsal adanmış veya tam olarak yönetilen bir cihaza dağıtım yap�
 
   - **EAP-TLS**: Ayrıca şunları girin:
 
-    - **Server Trust** - Sunucu**doğrulaması için sunucu güveni kök sertifikası**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlandığı zaman, bu sertifika sunucuya sunulur ve bağlantının kimliğini doğrular.
+    - **Sunucu güveni**  -  **Sunucu doğrulaması Için kök sertifika**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlandığı zaman, bu sertifika sunucuya sunulur ve bağlantının kimliğini doğrular.
 
-    - **Client Authentication** - İstemci**kimlik doğrulaması (kimlik sertifikası) için**istemci kimlik doğrulaması istemci sertifikası: Ayrıca cihaza dağıtılan SCEP veya PKCS istemci sertifikası profilini seçin. Bu sertifika, bağlantının kimliğini doğrulamak için cihaz tarafından sunucuya sunulan kimliktir.
+    - **Istemci kimlik doğrulaması**  -  **İstemci kimlik doğrulaması Için istemci sertifikası (kimlik sertifikası)**: CIHAZA dağıtılan SCEP veya PKCS istemci sertifikası profilini seçin. Bu sertifika, bağlantının kimliğini doğrulamak için cihaz tarafından sunucuya sunulan kimliktir.
 
     - **Kimlik gizliliği (dış kimlik)**: EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir, örneğin `anonymous`. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.
 
   - **EAP-TTLS**: Ayrıca şunları girin:
 
-    - **Server Trust** - Sunucu**doğrulaması için sunucu güveni kök sertifikası**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlandığı zaman, bu sertifika sunucuya sunulur ve bağlantının kimliğini doğrular.
+    - **Sunucu güveni**  -  **Sunucu doğrulaması Için kök sertifika**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlandığı zaman, bu sertifika sunucuya sunulur ve bağlantının kimliğini doğrular.
 
     - **Istemci kimlik doğrulaması**: bir **kimlik doğrulama yöntemi**seçin. Seçenekleriniz şunlardır:
 
@@ -139,14 +139,14 @@ Android kurumsal adanmış veya tam olarak yönetilen bir cihaza dağıtım yap�
 
   - **PEAP**: Ayrıca şunları girin:
 
-    - **Server Trust** - Sunucu**doğrulaması için sunucu güveni kök sertifikası**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlandığı zaman, bu sertifika sunucuya sunulur ve bağlantının kimliğini doğrular.
+    - **Sunucu güveni**  -  **Sunucu doğrulaması Için kök sertifika**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlandığı zaman, bu sertifika sunucuya sunulur ve bağlantının kimliğini doğrular.
 
     - **Istemci kimlik doğrulaması**: bir **kimlik doğrulama yöntemi**seçin. Seçenekleriniz şunlardır:
 
       - **Kullanıcı adı ve Parola**: Bağlantının kimliğini doğrulamak için kullanıcıdan bir kullanıcı adı ve parola girmesini isteyin. Şunları da girin:
         - **Kimlik doğrulaması için EAP dışı yöntem (iç kimlik)**: Bağlantının kimliğini nasıl doğrulayacağınızı seçin. Wi-Fi ağınızda yapılandırılmış olan protokolü seçtiğinizden emin olun. Seçenekleriniz şunlardır:
 
-          - **Yok**
+          - **Hiçbiri**
           - **Microsoft CHAP Sürüm 2 (MS-CHAP v2)**
 
       - **Sertifikalar**: Cihaza da dağıtılmış olan SCEP veya PKCS istemci sertifikası profilini seçin. Bu sertifika, bağlantının kimliğini doğrulamak için cihaz tarafından sunucuya sunulan kimliktir.

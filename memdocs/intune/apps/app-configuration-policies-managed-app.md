@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 07/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ed731cdb4efddaedbfcde47acce3fc24d344d80
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b493443a86d7cd1769ce6f66c77acc87063521f6
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988811"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461649"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Cihaz kaydı olmadan yönetilen uygulamalar için uygulama yapılandırma ilkeleri ekleme
 
@@ -39,11 +39,19 @@ Intune App SDK’sını destekleyen yönetilen uygulamalarla uygulama yapıland�
     - **Cihaz kayıt türü**: yönetilen uygulamalar seçilidir.
 4. Yapılandırmak istediğiniz uygulamayı seçmek için **ortak uygulamaları seçin** ya da **özel uygulamalar** ' ı seçin. Onayladığınız ve Intune ile eşitlenmiş uygulamalar listesinden uygulamayı seçin.
 5. **İleri** ' ye tıklayarak **Ayarlar** sayfasını görüntüleyin.
-6. Uygulamanın desteklediği her yapılandırma ayarı için, **adı** ve **değeri**yazın. 
+6. **Ayarlar sayfası** , yapılandırdığınız uygulamaya göre görüntülenen seçenekleri sağlar:
 
-   Intune Uygulama SDK’sı özellikli uygulamalar, anahtar/değer çiftlerinde yapılandırmaları destekler. Hangi anahtar-değer yapılandırmalarının desteklendiğini öğrenmek için uygulamaların kendi belgelerine bakın. Uygulama tarafından oluşturulan verilerle dinamik olarak doldurulacak belirteçler kullanabileceğinizi unutmayın. Daha fazla bilgi için bkz. [belirteçleri kullanmak Için yapılandırma değerleri](app-configuration-policies-managed-app.md#configuration-values-for-using-tokens). İOS/ıpados uygulama yapılandırma ilkesi ayarları için Outlook hakkında daha fazla bilgi için, bkz. [Microsoft Intune iOS Için Outlook 'u/ıpados uygulama yapılandırmasını yönetme](https://technet.microsoft.com/library/mt813789(v=exchg.150).aspx).
+    - **Genel yapılandırma ayarları** -uygulamanın desteklediği her genel yapılandırma ayarı için **adı** ve **değeri**yazın. 
+ 
+        Intune Uygulama SDK’sı özellikli uygulamalar, anahtar/değer çiftlerinde yapılandırmaları destekler. Hangi anahtar-değer yapılandırmalarının desteklendiğini öğrenmek için uygulamaların kendi belgelerine bakın. Uygulama tarafından oluşturulan verilerle dinamik olarak doldurulacak belirteçler kullanabileceğinizi unutmayın. Genel bir yapılandırma ayarını silmek için üç nokta (**...**) simgesini seçin ve **Sil**' i seçin. Daha fazla bilgi için bkz. [belirteçleri kullanmak Için yapılandırma değerleri](app-configuration-policies-managed-app.md#configuration-values-for-using-tokens). 
 
-    Bir yapılandırmayı silmek için üç nokta simgesini (**…**) seçip **Sil**’e tıklayın.  
+    - **Outlook yapılandırma ayarları** -IOS ve Android için Outlook, yöneticilere birçok uygulama içi ayar için varsayılan yapılandırmayı özelleştirme olanağı sunar. Daha fazla bilgi için bkz. [iOS ve Android Için Outlook-genel uygulama yapılandırma senaryoları](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#general-app-configuration-scenarios).
+   
+    - **S/MIME** güvenli çok amaçlı Internet posta uzantıları (s/MIME), kullanıcıların dijital imzalı ve şifrelenmiş e-posta gönderip almasına izin veren bir belirtimdir.
+        - **S/MIME 'Yi etkinleştir** -e-posta oluştururken s/MIME denetimlerinin etkinleştirilip etkinleştirilmeyeceğini belirtin. Varsayılan değer: **Yapılandırılmadı**.
+        - **Kullanıcının ayarı değiştirmesine Izin ver** -kullanıcının ayarı değiştirmesine izin verilip verilmediğini belirtin. S/MIME etkin olmalıdır. Varsayılan değer: **Evet**.
+        
+    Outlook uygulama yapılandırma ilkesi ayarları hakkında daha fazla bilgi için bkz. [iOS ve Android Için Outlook uygulama yapılandırma ayarları](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 7. **Atamalar** sayfasını göstermek için **İleri** ' ye tıklayın.
 8. **Dahil edilecek grupları seç ' e**tıklayın.

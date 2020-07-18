@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/06/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,11 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ac5b4685249ffa46be63e9ad55ca6067edec1b03
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 3ebca81f459f0e49345db08f992c288514a7331a
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022407"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461615"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Intune 'da Endpoint Security için saldırı yüzeyi Azaltma ilkesi ayarları
 
@@ -188,7 +189,6 @@ Desteklenen platformlar ve profiller:
   - **Yapılandırılmadı** (*varsayılan*)-kullanıcılar, dosyalar ve kötü amaçlı uygulamalar için SmartScreen uyarılarını yok sayabilir.
   - **Evet** -SmartScreen etkin ve kullanıcılar dosyalar veya kötü amaçlı uygulamalar için uyarıları atlayamaz.
 
-
 - **Windows SmartScreen 'i açma**  
   CSP: [SmartScreen/Enablesmartscreenınshell](https://go.microsoft.com/fwlink/?linkid=872784)
 
@@ -296,7 +296,7 @@ Desteklenen platformlar ve profiller:
 
   Bu ASR kuralı şu GUID aracılığıyla denetlenir: 01443614-CD74-433a-b99e-2ecdc07bfc25e
   - **Yapılandırılmadı** (*varsayılan*)-ayar, kapalı olan Windows varsayılan öğesine geri döner.
-  - **Engelleyin**
+  - **Block**
   - **Denetim modu** -Windows olayları engelleme yerine oluşturulur.
 
 - **E-posta ve Web postasından istemcilerinden yürütülebilir içerik indirmeyi engelle**  
@@ -312,7 +312,7 @@ Desteklenen platformlar ve profiller:
   Bu ASR kuralı şu GUID aracılığıyla denetlenir: c1db55ab-c21a-4637-bb3f-a12568109d35
   - **Yapılandırılmadı** (*varsayılan*)-ayar, kapalı olan Windows varsayılan öğesine geri döner.
   - **Kullanıcı tanımlı**
-  - **Etkinleştir**
+  - **Etkinleştirme**
   - **Denetim modu** --Windows olayları engelleme yerine oluşturulur.
 
 - **Klasör korumasını etkinleştir**  
@@ -384,7 +384,65 @@ Desteklenen platformlar ve profiller:
 
   - **Yapılandırılmadı** (*varsayılan*)-Bu ayar, çıkarılabilir sürücüleri tarayan, ancak kullanıcı bu taramayı devre dışı bırakabilen istemci varsayılan değerini döndürür.
   - **Evet** -tam tarama sırasında, çıkarılabilir sürücüler (USB flash sürücüler gibi) taranır.
-  
+
+- **Doğrudan bellek erişimini engelle**  
+  CSP: [DataProtection/AllowDirectMemoryAccess](https://go.microsoft.com/fwlink/?linkid=2067031)
+
+  Bu ilke ayarı yalnızca BitLocker veya cihaz şifrelemesi etkinleştirildiğinde zorlanır.
+
+  - **Yapılandırılmadı** (*varsayılan*)
+  - **Evet** -Kullanıcı Windows 'a oturum açana kadar, tüm ETKIN takılabilir PCI akış bağlantı noktaları için doğrudan bellek ERIŞIMINI (DMA) engelleyin. Kullanıcı oturum açtıktan sonra, Windows, ana bilgisayar eklentisi PCI bağlantı noktalarına bağlı PCI cihazlarını numaralandırır. Kullanıcı makineyi her kilitlediğinde, Kullanıcı yeniden oturum açana kadar alt cihazları olmayan hot plug PCI bağlantı noktalarında DMA engellenir. Makine kilidi açıldığında zaten numaralandırılan cihazlar, söküle kadar çalışmaya devam eder.
+
+- **Çekirdek DMA koruması ile uyumsuz dış cihazların numaralandırması**  
+  CSP: [Dmaguard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+
+  Bu ilke, dış DMA özellikli cihazlara karşı ek güvenlik sağlayabilir. DMA yeniden eşleme/cihaz belleği yalıtımı ve korumalı alana alma ile uyumsuz olan dış DMA özellikli cihazların numaralandırılması üzerinde daha fazla denetim sağlar.
+
+  Bu ilke, yalnızca çekirdek DMA koruması desteklenirken ve Sistem bellenimi tarafından etkinleştirildiğinde devreye girer. Çekirdek DMA koruması, üretim sırasında sistem tarafından desteklenmesi gereken bir platform özelliğidir. Sistemin çekirdek DMA korumasını destekleyip desteklemediğini denetlemek için MSINFO32.exe Özet sayfasındaki çekirdek DMA koruması alanını denetleyin.
+
+  - **Yapılandırılmadı** -(*varsayılan*)
+  - **Tümünü engelle**
+  - **Tümüne izin ver**
+
+- **Bluetooth bağlantılarını engelle**  
+  CSP: [Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+
+  - **Yapılandırılmadı** (*varsayılan*)
+  - **Evet** -cihaza ve cihazdan Bluetooth bağlantılarını engelleyin.
+
+- **Bluetooth bulunabilirliği engelle**  
+  CSP: [Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+
+  - **Yapılandırılmadı** (*varsayılan*)
+  - **Evet** -cihazın diğer Bluetooth özellikli cihazlar tarafından keşfedilmesini önler.
+
+- **Bluetooth ön eşleştirmesini engelle**  
+  CSP: [Bluetooth/Allowpreeşleştirmeyi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
+
+  - **Yapılandırılmadı** (*varsayılan*)
+  - **Evet** -belirli Bluetooth cihazlarının konak cihazla otomatik olarak eşleştirilmesini önler.
+
+- **Bluetooth Advertising 'i engelle**  
+  CSP: [Bluetooth/AllowAdvertising](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+
+  - **Yapılandırılmadı** (*varsayılan*)
+  - **Evet** -cihazın Bluetooth tanıtımları göndermesini engeller.  
+
+- **Bluetooth proxden bağlantıyı engelle**  
+  CSP: [Bluetooth/AllowPromptedProximalConnections](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections) , kullanıcıların Swift çiftini ve diğer yakınlık tabanlı senaryoları kullanmasını engeller
+
+  - **Yapılandırılmadı** (*varsayılan*)
+  - **Evet** -bir cihaz kullanıcısının Swift çiftini ve diğer yakınlık tabanlı senaryoları kullanmasını önler.  
+
+  [Bluetooth/AllowPromptedProximalConnections CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
+
+- **Bluetooth izin verilen hizmetler**  
+  CSP: [Bluetooth/ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist).  
+  Hizmet listesi hakkında daha fazla bilgi için bkz. [Servicesallowedlist kullanım kılavuzu](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide)
+
+  - **Ek** olarak Izin verilen Bluetooth hizmetleri ve profillerini, gibi onaltılı dizeler olarak belirtin `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}` .
+  - **Içeri aktarma** -Bluetooth hizmetleri ve profillerinin bir listesini içeren bir. csv dosyasını, örneğin`{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`
+
 ## <a name="exploit-protection-profile"></a>Exploit Protection profili
 
 ### <a name="exploit-protection"></a>Exploit protection

@@ -6,7 +6,7 @@ keywords: Intune Veri Ambarı
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 07/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,18 +18,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90d1ab0792e329616fce525cfe672c07219908b5
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: d6f460039aaff282476c3e8e3d074a332cde716f
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165864"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461224"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Intune Veri Ambarı API’si için değişiklik günlüğü
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Intune Veri Ambarı hakkında güncel bilgiler edinin.
+
+## <a name="2007"></a>2007 
+_Çıkarılan 2020 Temmuz_
+
+### <a name="v10-changes"></a>v 1.0 değişiklikleri
+
+Aşağıdaki tabloda, Intune veri ambarındaki [cihaz](../developer/intune-data-warehouse-collections.md#devices) varlığına eklenen özellik listelenmektedir.
+
+|    Koleksiyon                          |    Değiştir     |    Açıklama bilgileri                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    ethernetMacAddress    |    Eklendi    |    Bu cihazın benzersiz ağ tanımlayıcısı.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    Eklendi    |    Cihaza yüklü Office 365 sürümü.                                                                                                                                                                                                                                                                     |
+
+Aşağıdaki tabloda, Intune veri ambarındaki [Devicepropertygeçmişvarlığına](../developer/intune-data-warehouse-collections.md#devicepropertyhistories) eklenen özellik listelenmektedir.
+
+|    Koleksiyon                          |    Değiştir     |    Açıklama bilgileri                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    Physicalmemorybytes    |    Eklendi    |    Bayt cinsinden fiziksel bellek.                                                                                                                                                                                                                                                                     |
+|    totalStorageSpaceInBytes    |    Eklendi    |    Toplam depolama kapasitesi (bayt cinsinden).                                                                                                                                                                                                                                                                     |
 
 ## <a name="2004"></a>2004 
 _Yayımlanma tarihi 2020_

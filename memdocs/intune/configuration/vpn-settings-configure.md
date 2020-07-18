@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c92220fabf8d1cb2a34ac702dd4157ef848762b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c1f6edaf4a58d25f7aaa4c45039e84912fb901a3
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990267"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461751"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Intune 'da VPN sunucularına bağlanmak için VPN profilleri oluşturma
 
@@ -58,7 +58,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
 - Cisco AnyConnect
   - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
-  - Android kurumsal cihaz sahibi (tam olarak yönetilen)
+  - Android Enterprise (tam olarak yönetilen ve şirkete ait iş profili)
   - iOS/iPadOS
   - macOS
 
@@ -81,7 +81,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
 - F5 Access
   - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
-  - Android kurumsal cihaz sahibi (tam olarak yönetilen)
+  - Android Enterprise (tam olarak yönetilen ve şirkete ait iş profili)
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -106,7 +106,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
 - Pulse Secure
   - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
-  - Android kurumsal cihaz sahibi (tam olarak yönetilen)
+  - Android Enterprise (tam olarak yönetilen ve şirkete ait iş profili)
   - iOS/iPadOS
   - Windows 10
   - Windows 8.1

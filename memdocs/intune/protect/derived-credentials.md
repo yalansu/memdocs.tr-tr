@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/01/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 038dfccd49b25546b5edddc785c7ee4c86bf83a3
-ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
+ms.openlocfilehash: 25d3813d79ec20cc396c3127be6be5371c20247f
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85829001"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461197"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Microsoft Intune ' de türetilmiş kimlik bilgilerini kullan
 
-*Bu makale, 7,0 ve üzeri sürümleri çalıştıran iOS/ıpados ve Android kurumsal tam olarak yönetilen cihazlar için geçerlidir.*
+*Bu makale, 7,0 ve üzeri sürümleri çalıştıran iOS/ıpados, Android kurumsal tam yönetilen cihazlar ve Windows çalıştıran cihazlar için geçerlidir.*
 
 Akıllı kartların kimlik doğrulama veya şifreleme ve imzalama için gerekli olduğu bir ortamda, mobil cihazları kullanıcının akıllı kartından türetilmiş bir sertifikayla sağlamak için artık Intune 'u kullanabilirsiniz. Bu sertifikaya *türetilmiş kimlik bilgileri*denir. Intune, [çeşitli türetilmiş kimlik bilgileri verenler destekler](#supported-issuers), ancak her seferinde her kiracı için yalnızca tek bir veren kullanabilirsiniz.
 
@@ -37,16 +37,19 @@ Türetilmiş kimlik bilgileri, özel yayın (SP) 800-157 kapsamında türetilmi�
 - Intune Yöneticisi, kiraclarını desteklenen bir türetilmiş kimlik bilgisi verenle çalışacak şekilde yapılandırır. Türetilmiş kimlik bilgileri verenin sisteminde herhangi bir Intune 'A özgü ayarı yapılandırmanız gerekmez.
 - Intune Yöneticisi, aşağıdaki nesneler için *kimlik doğrulama yöntemi* olarak **türetilmiş kimlik bilgilerini** belirtir:
   
+  **Android kurumsal tam yönetilen cihazlar için**:
+  - Wi-Fi ve VPN gibi ortak profil türleri
+  - Uygulama kimlik doğrulaması
+
   **İOS/ıpados için**:
   - İOS/ıpados Native Mail uygulamasını içeren Wi-Fi, VPN ve e-posta gibi ortak profil türleri
   - Uygulama kimlik doğrulaması
   - S/MIME imzalama ve şifreleme
 
-  **Android kurumsal tam yönetilen cihazlar için**:
+  **Windows için**:
   - Wi-Fi ve VPN gibi ortak profil türleri
-  - Uygulama kimlik doğrulaması
   
-- Kullanıcılar, türetilmiş kimlik bilgileri verende kimlik doğrulaması yapmak için bir bilgisayardaki akıllı kartlarını kullanarak türetilmiş bir kimlik bilgisi alır. Veren, daha sonra akıllı kartlarından türetilen bir sertifika olan mobil cihaza sorun verir.
+- Android ve iOS/ıpados için, kullanıcılar türetilmiş kimlik bilgileri verende kimlik doğrulaması yapmak için bir bilgisayardaki akıllı kartlarını kullanarak türetilmiş bir kimlik bilgisi alır. Veren, daha sonra akıllı kartlarından türetilen bir sertifika olan mobil cihaza sorun verir. Windows için kullanıcılar, uygulamayı daha sonra kullanılmak üzere cihaza yükleyen türetilmiş kimlik bilgisi sağlayıcısından yükler.
 - Cihaz türetilmiş kimlik bilgilerini aldıktan sonra, uygulamalar veya kaynak erişim profilleri türetilmiş kimlik bilgisini gerektirdiğinde, kimlik doğrulaması ve S/MIME imzalama ve şifreleme için kullanılır.
 
 ## <a name="prerequisites"></a>Ön koşullar
@@ -59,6 +62,8 @@ Intune, aşağıdaki platformlarda türetilmiş kimlik bilgilerini destekler:
 
 - iOS/iPadOS
 - Android kurumsal tam yönetilen cihazlar (sürüm 7,0 ve üzeri)
+- Android kurumsal-şirkete ait iş profili
+- Windows 10 ve üzeri
 
 ### <a name="supported-issuers"></a>Desteklenen verenler
 
@@ -84,7 +89,9 @@ Intune Şirket Portalı uygulamayı türetilmiş bir kimlik bilgisi için kayded
 
 ## <a name="plan-for-derived-credentials"></a>Türetilmiş kimlik bilgilerini planlayın
 
-Türetilmiş bir kimlik bilgisi veren ayarlamadan önce aşağıdaki hususları anlayın.
+Android ve iOS/ıpados için türetilmiş bir kimlik bilgisi veren ayarlamadan önce aşağıdaki hususları anlayın.
+
+Windows cihazları için, bu makalenin devamındaki [Windows Için türetilmiş kimlik bilgileri](#derived-credentials-for-windows)bölümüne bakın.
 
 ### <a name="1-review-the-documentation-for-your-chosen-derived-credential-issuer"></a>1) seçtiğiniz türetilmiş kimlik bilgisi veren için belgeleri gözden geçirin
 
@@ -274,7 +281,7 @@ Web siteleri ve uygulamalarına sertifika tabanlı kimlik doğrulaması için t�
    - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, **Android kurumsal cihazlar profili Için türetilmiş kimlik bilgileridir**.
    - **Açıklama**: Ayara genel bir bakış sağlayan ve diğer önemli ayrıntıları veren bir açıklama girin.
    - **Platform**: **Android kurumsal**' i seçin.
-   - **Profil türü**: *yalnızca cihaz sahibi*altında, **türetilmiş kimlik bilgileri**' ni seçin.
+   - **Profil türü**: *tam olarak yönetilen, adanmış ve şirkete ait iş profili*altında, **türetilmiş kimlik bilgileri**' ni seçin.
 
 4. Değişikliklerinizi kaydetmek için **Tamam**’ı seçin.
 5. İşiniz bittiğinde, **OK**  >  Intune profilini oluşturmak için Tamam**Oluştur** ' u seçin. Bu tamamlandığında, profiliniz **cihazlar-yapılandırma profilleri** listesinde gösterilir.
@@ -282,9 +289,29 @@ Web siteleri ve uygulamalarına sertifika tabanlı kimlik doğrulaması için t�
 
 Kullanıcılar, türetilmiş kimlik bilgileri verenini ayarlarken belirttiğiniz ayarlara bağlı olarak uygulamayı veya e-posta bildirimini alır. Bildirim, kullanıcıdan türetilmiş kimlik bilgileri ilkelerinin işlenebilmesi için Şirket Portalı başlatması konusunda bilgilendirir.
 
+## <a name="derived-credentials-for-windows"></a>Windows için türetilmiş kimlik bilgileri
+
+Windows cihazlarında Wi-Fi ve VPN profilleri için bir kimlik doğrulama yöntemi olarak türetilmiş sertifikaları kullanabilirsiniz. Android ve iOS/ıpados cihazları tarafından desteklenen aynı sağlayıcılar, Windows için sağlayıcılar olarak desteklenir:
+
+- **DıŞA purebred**
+- **Entrust Datacard**
+- **Intercede**
+
+Windows için kullanıcılar, türetilmiş kimlik bilgileri olarak kullanılmak üzere bir sertifika almak için bir akıllı kart kayıt süreci aracılığıyla çalışmaz. Bunun yerine, kullanıcının türetilmiş kimlik bilgisi sağlayıcısından alınan Windows uygulamasını yüklemesi gerekir. Windows ile türetilmiş kimlik bilgilerini kullanmak için aşağıdaki konfigürasyonları doldurun:
+
+1. **Uygulamayı Windows cihazdaki türetilmiş kimlik bilgisi sağlayıcılarından yükler**.
+
+   Windows uygulamasını bir Windows aygıtındaki türetilmiş bir kimlik bilgisi sağlayıcısından yüklediğinizde, türetilen sertifika bu cihazların Windows sertifika deposu 'na eklenir. Sertifika cihaza eklendikten sonra, bu, türetilmiş bir kimlik bilgisi kimlik doğrulama yöntemi kullanmak için kullanılabilir hale gelir.
+
+   Uygulamayı seçtiğiniz sağlayıcıdan aldıktan sonra, uygulama kullanıcılara dağıtılabilir veya cihazın kullanıcısı tarafından doğrudan yüklenmiş olabilir.
+
+2. **Wi-Fi ve VPN profillerini kimlik doğrulama yöntemi olarak türetilmiş kimlik bilgilerini kullanacak şekilde yapılandırın**.
+
+   Wi-Fi veya VPN için bir Windows profilini yapılandırırken, *kimlik doğrulama yöntemi*için **türetilmiş kimlik bilgisi** ' ni seçin. Bu yapılandırmayla, profil, sağlayıcılar uygulaması yüklendiğinde cihaza yüklenen sertifikayı kullanır.
+
 ## <a name="renew-a-derived-credential"></a>Türetilmiş bir kimlik bilgisini Yenile
 
-Türetilmiş kimlik bilgileri genişletilemiyor veya yenilenemiyor. Bunun yerine, kullanıcıların, cihazları için yeni bir türetilmiş kimlik bilgisi istemek üzere kimlik bilgisi isteği iş akışını kullanmaları gerekir.
+Android veya iOS/ıpados cihazlarının türetilmiş kimlik bilgileri genişletilemez veya yenilenemez. Bunun yerine, kullanıcıların, cihazları için yeni bir türetilmiş kimlik bilgisi istemek üzere kimlik bilgisi isteği iş akışını kullanmaları gerekir. Windows cihazları için, türetilmiş kimlik bilgisi sağlayıcınızdan uygulamaya yönelik belgelere başvurun.
 
 **Bildirim türü**için bir veya daha fazla yöntem yapılandırırsanız, Intune, geçerli türetilen kimlik bilgisi kullanım ömrü boyunca %80 ' a ulaştığında kullanıcılara otomatik olarak bildirimde bulunur. Bildirim, kullanıcıların, yeni bir türetilmiş kimlik bilgisi almak için kimlik bilgisi istek işlemini gitmesini yönlendirir.
 

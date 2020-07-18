@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d533acfa60672bed3d6919116f11f43d525b6551
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a3a9ae0c697cb6cd60f0f9bddce50057bcfcd3a3
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988334"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462108"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Intune 'da Windows 10 cihazlarını yapılandırmak için güvenlik temellerini kullanma
 
@@ -75,12 +75,12 @@ Kullandığınız bir taban çizgisinin daha yeni bir sürümüne taşımaya haz
 Bir taban çizgisinin her yeni sürüm örneği, ayarları ekleyebilir veya kaldırabilir veya diğer değişiklikleri getirebilir. Örneğin, yeni Windows 10 ayarları Windows 10 ' un yeni sürümleriyle kullanılabilir hale geldiğinde, MDM güvenlik temeli en yeni ayarları içeren yeni bir sürüm örneği alabilir.
 
 [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **uç nokta güvenlik**  >  **güvenliği temelleri** altında, kullanılabilir temellerin bir listesini görürsünüz. Liste aşağıdakileri içerir:
-- taban çizgisi şablon adı
-- Bu temel türü kullanan profil sayısı
-- taban çizgisi türünün kaç ayrı örneği (sürümleri) var?
-- en son temel şablon sürümünün ne zaman kullanılabilir duruma geldiğini belirleyen *son Yayımlanma* tarihi
+- Taban çizgisi şablon adı.
+- Bu temel türü kullanan profil sayısı.
+- Taban çizgisi türünün kaç ayrı örneği (sürümleri) kullanılabilir.
+- En son temel şablon sürümünün ne zaman kullanılabilir duruma geldiğini belirleyen *son Yayımlanma* tarihi.
 
-Kullandığınız temel sürümler hakkında daha fazla bilgi görüntülemek için bir taban çizgisi seçerek *genel bakış* bölmesini açın ve ardından **sürümler**' i seçin. Intune, profilleriniz tarafından kullanılan bu taban çizgisinin sürümleriyle ilgili ayrıntıları görüntüler. Ayrıntılar en son ve geçerli temel sürümü içerir. Bu sürümü kullanan profillerle ilgili daha derin ayrıntıları görüntülemek için tek bir sürüm seçebilirsiniz.
+Kullandığınız temel sürümler hakkında daha fazla bilgi görüntülemek için *MDM güvenlik temeli* gibi bir temel türü seçerek *profiller* bölmesini açın ve ardından **sürümler**' i seçin. Intune, profilleriniz tarafından kullanılan bu taban çizgisinin sürümleriyle ilgili ayrıntıları görüntüler. Ayrıntılar en son ve geçerli temel sürümü içerir. Bu sürümü kullanan profillerle ilgili daha derin ayrıntıları görüntülemek için tek bir sürüm seçebilirsiniz.
 
 Belirli bir profille kullanılan bir taban çizgisinin [sürümünün değiştirilmesini](#change-the-baseline-version-for-a-profile) seçebilirsiniz. Sürümü değiştirdiğinizde, güncelleştirilmiş sürümlerden yararlanmak için yeni bir temel profil oluşturmanız gerekmez. Bunun yerine, bir temel profil seçebilir ve bu profilin örnek sürümünü yeni bir profille değiştirmek için yerleşik seçeneğini kullanabilirsiniz.
 
@@ -235,7 +235,7 @@ Bir temeli çoğaltdıktan sonra, yapılandırmasında değişiklik yapmak için
 1. Taban çizgisini seçin ve ardından **Özellikler**' i seçin.
 2. Taban çizgisi içindeki ayarlar kategorilerinin listesini genişletmek için **Ayarlar** ' ı seçin. Bu görünümden ayarları değiştiremezsiniz, ancak bunların nasıl yapılandırıldığını inceleyebilirsiniz.
 3. Ayarları değiştirmek için, değişiklik yapmak istediğiniz her kategori için **Düzenle** ' yi seçin:
-   - Temel Bilgiler
+   - Temel bilgiler
    - Atamalar
    - Kapsam etiketleri
    - Yapılandırma ayarları

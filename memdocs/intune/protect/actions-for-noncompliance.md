@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 330dd566599d6bdb1fa667d8797878ea8c92f098
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 9e5786289e54071d54c11fbb08790e95e54a9377
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093738"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461870"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Intune 'da uyumsuz cihazlar için eylemleri yapılandırma
 
@@ -58,11 +58,11 @@ E-posta gönderildiğinde, Intune e-posta bildiriminde uyumsuz cihaz hakkındaki
   Aşağıdaki platformlar bu eylemi destekler:
   - Android:
     - Android cihaz yöneticisi
-    - Android kurumsal cihaz sahibi
+    - Android tam olarak yönetilen, adanmış ve şirkete ait Iş profili
     - Android kurumsal Iş profili
     - Android kurumsal bilgi noktası cihazları
   - iOS/iPadOS
-  - Mac OS
+  - macOS
   - Windows 10 Mobile
   - Windows Phone 8.1 ve üzeri
 
@@ -74,7 +74,7 @@ E-posta gönderildiğinde, Intune e-posta bildiriminde uyumsuz cihaz hakkındaki
     - Android kurumsal cihaz sahibi
     - Android kurumsal Iş profili
   - iOS/iPadOS
-  - Mac OS
+  - macOS
   - Windows 10 Mobile
   - Windows Phone 8.1 ve üzeri
 
@@ -129,7 +129,7 @@ Kullanıcılarınıza e-posta göndermek için bir bildirim iletisi şablonu olu
 2. **Endpoint Security**  >  **cihaz uyumluluk**  >  **bildirimleri**  >  **oluşturma bildirimi**' ni seçin.
 3. *Temel bilgiler*altında, aşağıdaki bilgileri belirtin:
 
-   - **Adı**
+   - **Ad**
    - **Konu**
    - **İleti**
 
@@ -143,7 +143,7 @@ Kullanıcılarınıza e-posta göndermek için bir bildirim iletisi şablonu olu
    > [!div class="mx-imgBorder"]
    > ![Intune'da örnek uyumluluk bildirimi iletisi](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
-   Devam etmek için **İleri**’yi seçin.
+   Devam etmek için **İleri** seçeneğini belirleyin.
 
 5. **Gözden geçir + oluştur**altında, bildirim iletisi şablonunun kullanıma hazırsa emin olmak için yapılandırmalarınızı gözden geçirin. Bildirim oluşturmayı tamamladıktan sonra **Oluştur** ' u seçin.
 

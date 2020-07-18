@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune-Azure 'da Windows 10 VPN ayarları | Microsoft Docs
-description: Windows 10 ve Windows holographic for Business cihazlarında trafik kuralları, koşullu erişim ve DNS ve proxy ayarları dahil olmak üzere Microsoft Intune tüm kullanılabilir VPN ayarlarını ve bunların ne yaptığını öğrenin.
+description: Microsoft Intune, için kullanıldıkları ve ne yaptıkları gibi tüm kullanılabilir VPN ayarlarını öğrenin ve okuyun. Windows 10 ve Windows holographic for Business cihazlarında trafik kurallarına, koşullu erişime ve DNS ve proxy ayarlarına bakın.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbe28a6585fe9fe5cf7772b559924675ac39a30
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 25950311b5a6936340dbdba01961a5dab6f6ff91
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429484"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461361"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Intune kullanarak VPN bağlantıları eklemek için Windows 10 ve Windows holographic cihaz ayarları
 
-Microsoft Intune kullanarak aygıtlar için VPN bağlantıları ekleyebilir ve yapılandırabilirsiniz. Bu makalede, sanal özel ağlar (VPN 'Ler) oluştururken yaygın olarak kullanılan ayarlar ve özellikler listelenmiştir ve açıklanmaktadır. Bu VPN ayarları ve özellikleri, Intune 'da gönderilen veya cihazlara dağıtılan cihaz yapılandırma profillerinde kullanılır.
+Microsoft Intune kullanarak aygıtlar için VPN bağlantıları ekleyebilir ve yapılandırabilirsiniz. Bu makalede, sanal özel ağlar (VPN 'Ler) oluştururken sık kullanılan ayarlar ve özellikler listelenmiştir ve açıklanmaktadır. Bu VPN ayarları ve özellikleri, Intune 'da gönderilen veya cihazlara dağıtılan cihaz yapılandırma profillerinde kullanılır.
 
 Mobil cihaz yönetimi (MDM) çözümünüzün bir parçası olarak bu ayarları, VPN satıcısı kullanma, her zaman açık etkinleştirme, DNS kullanma, bir ara sunucu ekleme ve daha fazlası gibi özelliklere izin vermek veya devre dışı bırakmak için kullanın.
 
@@ -65,16 +65,69 @@ Seçtiğiniz ayarlara bağlı olarak, değerlerden bazıları yapılandırılama
   - **L2TP**
   - **PPTP**
 
-  VPN bağlantı türünü seçtiğinizde, aşağıdaki ayarları belirtmeniz de istenebilir:  
+  VPN bağlantı türünü seçtiğinizde, aşağıdaki ayarları belirtmeniz de istenebilir:
+
   - **Always on**: **Etkinleştir** ayarı, aşağıdaki olaylar gerçekleştiğinde otomatik olarak VPN bağlantısına bağlanır:
     - Kullanıcılar cihazlarında oturum açtığında
     - Cihazdaki ağ değiştiğinde
     - Cihaz ekranı kapandıktan sonra yeniden açıldığında
 
-  - **Kimlik doğrulama yöntemi**: Kullanıcıların VPN sunucusunda nasıl kimlik doğrulaması yapmasını istediğinizi seçin. **Sertifikaların** kullanılması sıfır temaslı deneyim, isteğe bağlı VPN ve uygulama başına VPN gibi iyileştirilmiş özellikler sağlar.
+    Ikev2 gibi cihaz tüneli bağlantıları kullanmak için bu ayarı **etkinleştirin** .
+
+  - **Kimlik doğrulama yöntemi**: Kullanıcıların VPN sunucusunda nasıl kimlik doğrulaması yapmasını istediğinizi seçin. Seçenekleriniz şunlardır:
+    - **Kullanıcı adı ve parola**: kullanıcıların, veya gibi kimlik doğrulaması için etki alanı kullanıcı adını ve parolasını girmesini gerektir `user@contoso.com` `contoso\user` .
+    - **Sertifikalar**: kullanıcının kimliğini doğrulamak için mevcut bir kullanıcı istemci sertifikası profilini seçin. Bu seçenek, sıfır dokunma deneyimi, isteğe bağlı VPN ve uygulama başına VPN gibi gelişmiş özellikler sağlar.
+
+      Intune 'da sertifika profilleri oluşturmak için bkz. [kimlik doğrulaması için sertifikaları kullanma](../protect/certificates-configure.md).
+
+    - **Makine sertifikaları** (yalnızca Ikev2): cihazın kimliğini doğrulamak için var olan bir cihaz istemci sertifikası profilini seçin.
+
+      [Cihaz tüneli bağlantıları](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config)kullanıyorsanız, bu seçeneği seçmeniz gerekir.
+
+      Intune 'da sertifika profilleri oluşturmak için bkz. [kimlik doğrulaması için sertifikaları kullanma](../protect/certificates-configure.md).
+
+    - **EAP** (yalnızca Ikev2): kimlik doğrulamak için mevcut bir Genişletilebilir Kimlik Doğrulama Protokolü (EAP) istemci sertifikası profili seçin. **EAP XML** ayarında kimlik doğrulama parametrelerini girin.
   - **Her oturum açışta kimlik bilgilerini hatırla**: Kimlik doğrulama bilgilerini önbelleğe almak için bunu seçin.
   - **Özel XML**: VPN bağlantısını yapılandıran tüm özel XML komutlarını girin.
-  - **EAP Xml**: VPN bağlantısını yapılandıran tüm EAP XML komutlarını girin
+  - **EAP XML**: VPN bağlantısını yapılandıran HERHANGI BIR EAP XML komutunu girin. Daha fazla bilgi için bkz. [EAP yapılandırması](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
+
+  - **Cihaz tüneli** (yalnızca Ikev2): **Etkinleştir** ayarı, cihazı Kullanıcı ETKILEŞIMI olmadan otomatik olarak VPN 'e bağlar veya oturum açın. Bu ayar Azure Active Directory (AD) 'ye katılmış bilgisayarlar için geçerlidir.
+
+    Bu özelliği kullanmak için aşağıdakiler gereklidir:
+
+    - **Bağlantı türü** ayarı **Ikev2**olarak ayarlanır.
+    - **Her zaman açık** ayarı **Etkinleştir**olarak ayarlanmıştır.
+    - **Kimlik doğrulama yöntemi** ayarı **makine sertifikaları**olarak ayarlanır.
+
+    Cihaz **tüneli** etkin cihaz başına yalnızca bir profil atayın.
+
+  **IKE güvenlik Ilişkisi parametreleri** (yalnızca Ikev2): Bu şifreleme ayarları, `main mode` `phase 1` Ikev2 bağlantıları için IKE güvenlik ilişkisi anlaşmaları (veya olarak da bilinir) sırasında kullanılır. Bu ayarların VPN sunucusu ayarlarıyla eşleşmesi gerekir. Ayarlar eşleşmezse, VPN profili bağlanmaz.
+
+  - **Şifreleme algoritması**: VPN sunucusunda kullanılan şifreleme algoritmasını seçin. Örneğin, VPN sunucunuz AES 128 bit kullanıyorsa, listeden **AES-128** ' i seçin.
+
+    **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
+  - **Bütünlük denetimi algoritması**: VPN sunucusunda kullanılan bütünlük algoritmasını seçin. Örneğin, VPN sunucunuz SHA1-96 kullanıyorsa listeden **SHA1-96** ' yı seçin.
+
+    **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
+  - **Diffie-Hellman grubu**: VPN sunucusunda kullanılan Diffie-Hellman hesaplama grubunu seçin. Örneğin, VPN sunucunuz grup2 (1024 bit) kullanıyorsa, listeden **2** ' yi seçin.
+
+    **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
+  **Alt güvenlik Ilişkisi parametreleri** (yalnızca Ikev2): Bu şifreleme ayarları, `quick mode` `phase 2` Ikev2 bağlantıları için alt güvenlik ilişkisi anlaşmaları (veya olarak da bilinir) sırasında kullanılır. Bu ayarların VPN sunucusu ayarlarıyla eşleşmesi gerekir. Ayarlar eşleşmezse, VPN profili bağlanmaz.
+
+  - **Şifre dönüştürme algoritması**: VPN sunucusunda kullanılan algoritmayı seçin. Örneğin, VPN sunucunuz AES-CBC 128 bit kullanıyorsa, listeden **CBC-AES-128** öğesini seçin.
+
+    **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
+  - **Kimlik doğrulama dönüştürme algoritması**: VPN sunucusunda kullanılan algoritmayı seçin. Örneğin, VPN sunucunuz AES-GCM 128 bit kullanıyorsa, listeden **GCM-AES-128** ' i seçin.
+
+    **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
+  - **Kusursuz iletme gizliliği (PFS) grubu**: VPN sunucusunda kusursuz iletme gızlılığı (PFS) Için kullanılan Diffie-Hellman hesaplama grubunu seçin. Örneğin, VPN sunucunuz grup2 (1024 bit) kullanıyorsa, listeden **2** ' yi seçin.
+
+    **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
 ### <a name="pulse-secure-example"></a>Pulse Secure örneği
 

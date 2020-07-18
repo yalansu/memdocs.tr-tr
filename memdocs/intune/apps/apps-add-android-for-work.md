@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b9cd6d0292c07b2f1a987efba6d1ad9f8d81d99
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8404c475bc5a84177abeba3a96fb613f04b9aa2b
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989571"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461955"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Intune ile Yönetilen Google Play uygulamalarını Android Kurumsal cihazlarına ekleme
 
-Yönetilen Google Play, Google 'ın kurumsal uygulama mağazası ve Android Enterprise uygulamalarının tek kaynağıdır. Intune 'u, herhangi bir Android kurumsal senaryosunda (iş profili, adanmış ve tam olarak yönetilen kayıtlar dahil) yönetilen Google Play aracılığıyla uygulama dağıtımını düzenlemek için kullanabilirsiniz. Intune 'a yönetilen Google Play uygulamalarını nasıl ekleyeceğiniz, Android uygulamalarının Android olmayan kurumsal için nasıl eklendiğine göre farklılık gösterir. Mağaza uygulamaları, iş kolu (LOB) uygulamaları ve Web uygulamaları, içinde onaylanır veya yönetilen Google Play eklenir ve ardından, Istemci uygulamaları listesinde gözükmek üzere Intune 'a eşitlenir. Istemci uygulamaları liste listesinde göründükleri Google Play her türlü uygulamayı başka bir uygulamayla aynı şekilde yönetebilirsiniz.
+Yönetilen Google Play, Google 'ın kurumsal uygulama mağazası ve Android Enterprise uygulamalarının tek kaynağıdır. Intune 'u, herhangi bir Android kurumsal senaryosunda (iş profili, adanmış, tam olarak yönetilen ve şirkete ait iş profili kayıtları dahil) yönetilen Google Play aracılığıyla uygulama dağıtımını düzenlemek için kullanabilirsiniz. Intune 'a yönetilen Google Play uygulamalarını nasıl ekleyeceğiniz, Android uygulamalarının Android olmayan kurumsal için nasıl eklendiğine göre farklılık gösterir. Mağaza uygulamaları, iş kolu (LOB) uygulamaları ve Web uygulamaları, içinde onaylanır veya yönetilen Google Play eklenir ve ardından, Istemci uygulamaları listesinde gözükmek üzere Intune 'a eşitlenir. Istemci uygulamaları liste listesinde göründükleri Google Play her türlü uygulamayı başka bir uygulamayla aynı şekilde yönetebilirsiniz.
 
 Intune kiracınızı yönetilen Google Play bağlama sırasında Android kurumsal yönetimini yapılandırıp kullanmanızı kolaylaştırmak için Intune, Intune yönetici konsoluna dört ortak Android kurumsal ilgili uygulamayı otomatik olarak ekler. Dört uygulama şunlardır:
 
@@ -64,7 +64,7 @@ Intune ile yönetilen Google Play Mağazası uygulamalarını taramak ve onaylam
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, kullanılabilir **Mağaza uygulama** türleri altında, **yönetilen Google Play uygulaması**' nı seçin.
-4. **Seç**' e tıklayın. **Yönetilen Google Play** App Store görüntülenir.
+4. **Seç**’e tıklayın. **Yönetilen Google Play** App Store görüntülenir.
 
     > [!NOTE]
     > Yönetilen Google Play Mağazası uygulamalarına gözatagöstermek için Intune kiracı hesabınızın Android Kurumsal hesabınıza bağlı olması gerekir. Daha fazla bilgi için bkz. [Intune hesabınızı yönetilen Google Play hesabınıza bağlama](../enrollment/connect-intune-android-enterprise.md).
@@ -118,11 +118,11 @@ Yönetilen Google Play LOB uygulamaları eklemenin iki yolu vardır:
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, kullanılabilir **Mağaza uygulama** türleri altında, **yönetilen Google Play uygulaması**' nı seçin.
-4. **Seç**' e tıklayın. **Yönetilen Google Play** App Store, Intune içinde görüntülenir.
+4. **Seç**’e tıklayın. **Yönetilen Google Play** App Store, Intune içinde görüntülenir.
 5. Google Play penceresinde **özel uygulamalar** ( *kilit* simgesinin yanında) seçeneğini belirleyin. 
 6. Yeni bir uygulama eklemek için sağ alt köşedeki **"+"** düğmesine tıklayın.
 7. Bir uygulama **başlığı** ekleyin ve APK uygulama paketini Ekle **' ye tıklayın** .
-8. **Oluştur**' a tıklayın.
+8. **Oluştur**’a tıklayın.
 9. Uygulama eklemeyi bitirdiğinizde, yönetilen Google Play bölmesini kapatın.
 10. Yönetilen Google Play hizmetiyle eşitlemek için **Uygulama** bölmesinde **Eşitle**'ye tıklayın. 
 
@@ -157,11 +157,11 @@ Web bağlantıları, Microsoft Edge veya dağıtmayı seçtiğiniz başka bir ta
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, kullanılabilir **Mağaza uygulama** türleri altında, **yönetilen Google Play uygulaması**' nı seçin.
-4. **Seç**' e tıklayın. **Yönetilen Google Play** App Store, Intune içinde görüntülenir.
+4. **Seç**’e tıklayın. **Yönetilen Google Play** App Store, Intune içinde görüntülenir.
 5. Google Play penceresinde **Web Apps** ( *Dünya* simgesinin yanında) seçeneğini belirleyin.
 6. Yeni bir uygulama eklemek için sağ alt köşedeki **"+"** düğmesine tıklayın.
 7. Uygulama **başlığı**, Web uygulaması **URL 'si**ekleyin, uygulamanın nasıl görüntüleneceğini seçin ve bir uygulama simgesi seçin.
-8. **Oluştur**' a tıklayın.
+8. **Oluştur**’a tıklayın.
 9. Uygulama eklemeyi bitirdiğinizde, yönetilen Google Play bölmesini kapatın.
 10. Yönetilen Google Play hizmetiyle eşitlemek için **Uygulama** bölmesinde **Eşitle**'ye tıklayın. 
 
@@ -179,7 +179,7 @@ Mağazadan bir uygulamayı onayladıysanız ve **uygulamalar** iş yükünde gö
 6. Microsoft Endpoint Manager Yönetim Merkezi 'nde **uygulamalar**  >  **tüm uygulamalar**' ı seçin.  
     Yeni eklenen Yönetilen Google Play uygulaması görüntülenir.
 
-## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices"></a>Yönetilen Google Play uygulamasını Android Kurumsal iş profili cihazlarına atama
+## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices"></a>Android kurumsal iş profiline ve şirkete ait iş profili cihazlarına yönetilen bir Google Play uygulaması atama
 
 Uygulama, **uygulamalar** iş yükü bölmesinin **uygulama lisansları** düğümünde görüntülendiğinde, uygulamayı kullanıcı gruplarına atayarak [bunu başka bir uygulamayı atadığınız gibi atayabilirsiniz](/mem/intune/apps/apps-deploy) .
 
@@ -219,7 +219,7 @@ Android kurumsal iş profili cihazlarına dağıtılan yönetilen Google Play uy
 
 ## <a name="working-with-managed-google-play-closed-testing-tracks"></a>Yönetilen Google Play kapatılan test parçalarıyla çalışma
 
-Yönetilen bir Google Play uygulamasının üretim dışı bir sürümünü bir Android kurumsal senaryosuna (**Android kurumsal Iş profili**, **tam olarak yönetilen**ve **adanmış**) kaydedilen cihazlara, test gerçekleştirmek için dağıtabilirsiniz. Intune 'da, bir uygulamanın kendisine yayımlanmış bir üretim öncesi derleme testi izlemesine sahip olup olmadığını ve bu izlemeyi AAD Kullanıcı grupları veya cihaz grupları ' na atayabilmesini sağlayabilirsiniz. Mevcut olan bir gruba üretim sürümü atamak için iş akışı, üretim dışı bir kanal atama ile aynıdır. Dağıtımdan sonra her bir izlemenin kurulum durumu, yönetilen Google Play izlemenin sürüm numarasıyla birlikte gelir. Daha fazla bilgi için bkz. [uygulama ön sürümü testi için Google Play kapalı test izleri](https://support.google.com/googleplay/android-developer/answer/3131213).
+Yönetilen bir Google Play uygulamasının üretim dışı bir sürümünü bir Android kurumsal senaryosunda (**Android kurumsal Iş profili**, **tam olarak yönetilen**, **adanmış**ve **şirkete ait iş profili**) kaydedilen cihazlara dağıtabilirsiniz. Intune 'da, bir uygulamanın kendisine yayımlanmış bir üretim öncesi derleme testi izlemesine sahip olup olmadığını ve bu izlemeyi AAD Kullanıcı grupları veya cihaz grupları ' na atayabilmesini sağlayabilirsiniz. Mevcut olan bir gruba üretim sürümü atamak için iş akışı, üretim dışı bir kanal atama ile aynıdır. Dağıtımdan sonra her bir izlemenin kurulum durumu, yönetilen Google Play izlemenin sürüm numarasıyla birlikte gelir. Daha fazla bilgi için bkz. [uygulama ön sürümü testi için Google Play kapalı test izleri](https://support.google.com/googleplay/android-developer/answer/3131213).
 
 ## <a name="delete-managed-google-play-apps"></a>Yönetilen Google Play uygulamalarını silme
 Gerektiğinde, yönetilen Google Play uygulamalarını Microsoft Intune'dan silebilirsiniz. Yönetilen bir Google Play uygulamasını silmek için, Azure Portal Microsoft Intune açın ve **uygulamalar**  >  **tüm uygulamalar**' ı seçin. Uygulama listesinden, yönetilen Google Play uygulamasının sağ tarafındaki üç noktayı (...) seçin ve görüntülenen listeden **Sil**'i seçin. Uygulama listesinden yönetilen Google Play uygulamasını sildikten sonra, yönetilen Google Play uygulamasının onayı otomatik olarak kaldırılır.

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: be850b2351de138ddacb087b2acf198e164dcd67
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 0eae6837ff2ef1d8b2e47118a20d4aa4e6b0f22b
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430088"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461292"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Microsoft Intune 'de Windows 10 Microsoft Defender virüsten koruma ilkesi ayarları
 
@@ -283,7 +283,19 @@ Daha fazlasını öğrenin
 
   İmzaları denetlemek için kullanılan aralığı sıfır ile 24 arasında (saat cinsinden) belirtin. Sıfır değeri, yeni imzalar için denetim yok sonucunu vermez. 2 değeri her iki saatte bir denetlenir ve bu şekilde devam eder.
 
-## <a name="user-experience"></a>Kullanıcı deneyimleri
+- **Tanım güncelleştirmelerini indirmek için dosya paylaşımlarını tanımlayın**  
+  CSP: [Signatureupdatefallkarşılanamayan](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
+
+  Tanım güncelleştirmelerini almak için bir indirme kaynağı konumu olarak bir UNC dosya paylaşma gibi konumları yönetin. Tanım güncelleştirmeleri belirtilen bir kaynaktan başarıyla indirildikten sonra, listedeki kalan kaynaklara başvurulmaz.
+
+  Ayrı konumlar **ekleyebilir** veya konumların bir listesini. csv dosyası olarak **içeri aktarabilirsiniz** .
+
+- **Tanım güncelleştirmelerini indirmek için kaynak sırasını tanımlayın**  
+  CSP: [Signatureupdatefilesharessources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
+
+  Tanım güncelleştirmelerini almak için belirttiğiniz kaynak konumlarına hangi sırada başvurdığınızı belirtin. Tanım güncelleştirmeleri belirtilen bir kaynaktan başarıyla indirildikten sonra, listedeki kalan kaynaklara başvurulmaz.
+
+## <a name="user-experience"></a>Kullanıcı deneyimi
 
 - **Microsoft Defender uygulamasına kullanıcı erişimine izin ver**  
   CSP: [AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043)  

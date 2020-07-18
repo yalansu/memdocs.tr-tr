@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17f1d045d89df3ad5bb37d85957e872ec6692b7e
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: d8506661c49fa4f9c8481a3caa96883c91e6d8bb
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353505"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461768"
 ---
 # <a name="enroll-android-devices"></a>Android cihazlarını kaydetme
 
@@ -33,7 +33,8 @@ Bir Intune Yöneticisi olarak, Android cihazlarını aşağıdaki yollarla kayde
 - Android Enterprise (kullanıcılara en güncel ve güvenli özellikleri sağlayan bir kayıt seçenekleri kümesi sunar):
     - [**Android kurumsal iş profili**](android-work-profile-enroll.md): kişisel cihazlara kurumsal verilere erişim izni verildi. Yöneticiler iş hesaplarını, uygulamaları ve verileri yönetebilir. Cihazdaki kişisel veriler iş verilerinden ayrı tutulur ve yöneticiler kişisel ayarları veya verileri denetlemez. 
     - [**Android kurumsal adanmış**](android-kiosk-enroll.md): dijital imza, Bilet yazdırma veya stok yönetimi gibi şirkete ait, tek kullanım cihazları için. Yöneticiler bir cihazın kullanımını sınırlı sayıda uygulama ve web bağlantısına indirger. Ayrıca kullanıcılar başka uygulama ekleyemez veya farklı eylemler gerçekleştiremez.
-    - [**Android kurumsal tam olarak yönetilen**](android-fully-managed-enroll.md): şirkete ait, tek kullanıcı cihazları için özel olarak çalışır ve kişisel kullanım için kullanılır. Yöneticiler cihazın tamamını yönetebilir ve ilke denetimlerini iş profilleri için kullanılamaz hale getirebilirsiniz. 
+    - [**Android kurumsal tam olarak yönetilen**](android-fully-managed-enroll.md): şirkete ait, tek kullanıcı cihazları için özel olarak çalışır ve kişisel kullanım için kullanılır. Yöneticiler cihazın tamamını yönetebilir ve ilke denetimlerini iş profilleri için kullanılamaz hale getirebilirsiniz.
+    - [**Android kurumsal şirkete ait iş profili**](android-corporate-owned-work-profile-enroll.md): Kurumsal ve kişisel kullanım için tasarlanan şirkete ait, tek kullanıcı cihazları için.
 - Samsung KNOX Standard cihazlar ve [Zeköşeli cihazlar](../configuration/android-zebra-mx-overview.md)dahil olmak üzere [**Android Cihaz Yöneticisi**](android-enroll-device-administrator.md). 
 
 ## <a name="prerequisites"></a>Ön koşullar

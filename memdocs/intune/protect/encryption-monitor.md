@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1199c6db96325a103394cfb53a4ca70092cd3767
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c20d2ef806df46036d3a785bb5f8603d485d3880
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989657"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460476"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Intune ile cihaz şifrelemesini izleme
 
@@ -107,7 +107,7 @@ Raporu bulmak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.mic
 
   Intune 'un rapor verebir durum ayrıntıları aşağıda verilmiştir:
 
-  **MacOS**:
+  **macOS**:
   - Kurtarma anahtarı henüz alınmadı ve henüz depolanmadı. Büyük olasılıkla, cihazın kilidi açık değil veya iade edilmedi.
 
     *Göz önünde bulundurun: Bu sonuç bir hata koşulunu temsil etmelidir, ancak cihazda, şifreleme isteği cihaza gönderilmeden önce kurtarma anahtarları için Emanet 'in ayarlanmış olması gereken, geçici bir durum olabilir. Bu durum Ayrıca cihazın kilitli kaldığını veya son zamanlarda Intune ile iade edilmedi olduğunu gösteriyor olabilir. Son olarak, bir cihaz takılıncaya kadar Filekasası şifrelemesi başlamadığı için, bir kullanıcının henüz şifrelenmeyen bir cihaz için kurtarma anahtarı alması mümkündür*.
@@ -118,7 +118,7 @@ Raporu bulmak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.mic
 
   - Cihaz zaten şifrelendi. Devam etmek için cihazın Kullanıcı tarafından şifresinin çözülmesi gerekir.
 
-    *Göz önünde bulundurun: Intune zaten şifrelenmiş bir cihazda Filekasasını ayarlayamıyorum. Bunun yerine, bir cihaz yapılandırma ilkesi ve Intune tarafından yönetilebilmesi için kullanıcının cihazının el ile şifresinin çözülmesi gerekir*.
+    *Göz önünde bulundurun: Intune zaten şifrelenmiş bir cihazda Filekasasını ayarlayamıyorum. Ancak, bir cihaz, Filekasasını etkinleştirmek üzere ilke aldıktan sonra, [Intune 'un bu cihazda şifrelemeyi yönetmesine olanak tanımak için Kullanıcı kişisel kurtarma anahtarını karşıya](../protect/encrypt-devices-filevault.md#assume-management-of-filevault-on-previously-encrypted-devices)yükleyebilir. Alternatif olarak, ancak aşağıdaki gibi bir cihaz şifrelenmemiş bir şekilde ayrılırsanız, Kullanıcı Intune ilkesi tarafından şifrelenecek şekilde cihaz şifresini el ile çözebilirler.*
 
   - Filekasasının, kullanıcının macOS Catalina ve üzeri bir yönetim profilini onaylaması gerekir.
 
@@ -174,7 +174,7 @@ Bu rapor, cihaz gruplarıyla ilgili sorunları belirlemek için kullanılabilir.
 Kurtarma anahtarlarını yönetme hakkında daha fazla bilgi için, Intune belgelerinde aşağıdakilere bakın:
 
 macOS Filekasası:
-- [Kişisel kurtarma anahtarını al](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [Kişisel kurtarma anahtarını al](../protect/encrypt-devices-filevault.md#retrieve-a-personal-recovery-key)
 - [Kurtarma anahtarlarını döndür](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
 - [Kurtarma anahtarlarını kurtar](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 

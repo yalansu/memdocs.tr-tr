@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 205c892c885682d10877aae4c92429cf59adb0ac
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a7b78cc76464ddee07b53366bbeeab4e19c54be3
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989168"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461156"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Intune kullanarak cihazlara e-posta ayarları ekleme
 
@@ -111,7 +111,7 @@ Kullanıcı zaten bir e-posta hesabı yapılandırılmışsa e-posta profili pla
 
 - **Android Samsung KNOX Standard**: e-posta adresine bağlı olarak var olan, yinelenen bir e-posta profili algılanır ve Intune profiliyle üzerine yazılır. Android, profili tanımlamak için ana bilgisayar adı kullanmaz. Farklı ana bilgisayarlarda aynı e-posta adresini kullanarak birden çok e-posta profili oluşturmayın. Profiller birbirinin üzerine yazılır.
 
-- **Android iş profilleri**: Intune, Gmail uygulaması için bir diğeri Ise dokuz iş uygulaması için olmak üzere iki Android iş e-posta profili sağlar. Bu uygulamalar Google Play Store’da mevcuttur ve cihaz iş profilinde yüklenir. Bu uygulamalar Yinelenen profiller oluşturmaz. Her iki uygulama da Exchange bağlantılarını destekler. E-posta bağlantısını kullanmak için bu e-posta uygulamalarından birini kullanıcılarınızın cihazlarına dağıtın. Ardından uygun e-posta profilini oluşturun ve dağıtın. Her iki e-posta yapılandırma türünde Sertifika profillerinin kullanılması da dahil olmak üzere hem Iş profili hem de cihaz sahibi kayıt türleri için çalışacak Gmail ve dokuz e-posta yapılandırma profillerini kullanabilirsiniz. Iş profillerinin cihaz yapılandırması altında oluşturduğunuz Gmail veya dokuz ilke cihaza uygulanmaya devam eder ve bunları uygulama yapılandırma ilkelerine taşımak gerekli değildir. Nine Work gibi e-posta uygulamaları ücretsiz olmayabilir. Uygulamanın lisanslama ayrıntılarını gözden geçirin veya herhangi bir soru ile uygulama şirketiyle iletişim kurun. 
+- **Android iş profilleri**: Intune, Gmail uygulaması için bir diğeri Ise dokuz iş uygulaması için olmak üzere iki Android iş e-posta profili sağlar. Bu uygulamalar Google Play Store’da mevcuttur ve cihaz iş profilinde yüklenir. Bu uygulamalar Yinelenen profiller oluşturmaz. Her iki uygulama da Exchange bağlantılarını destekler. E-posta bağlantısını kullanmak için bu e-posta uygulamalarından birini kullanıcılarınızın cihazlarına dağıtın. Ardından uygun e-posta profilini oluşturun ve dağıtın. Her iki e-posta yapılandırma türünde Sertifika profillerinin kullanılması da dahil olmak üzere hem Iş profili hem de tam olarak yönetilen, adanmış ve şirkete ait Iş profili kayıt türleri için çalışacak Gmail ve dokuz e-posta yapılandırma profillerini kullanabilirsiniz. Iş profillerinin cihaz yapılandırması altında oluşturduğunuz Gmail veya dokuz ilke cihaza uygulanmaya devam eder ve bunları uygulama yapılandırma ilkelerine taşımak gerekli değildir. Nine Work gibi e-posta uygulamaları ücretsiz olmayabilir. Uygulamanın lisanslama ayrıntılarını gözden geçirin veya herhangi bir soru ile uygulama şirketiyle iletişim kurun. 
 
 ## <a name="changes-to-assigned-email-profiles"></a>Atanan e-posta profillerindeki değişiklikler
 

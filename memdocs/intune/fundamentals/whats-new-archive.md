@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6c3b64bbcc9b661f5ec582f2963ceeb2e544ff8
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 8073cb1dbe872d9c7fd1ad05235707be4b969519
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411005"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461428"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune’daki yenilikler - önceki aylar
 
@@ -801,7 +801,7 @@ Android tam olarak yönetilen cihazlar için aşağıdaki desteği ekledik:
     - SCEP sertifikalarını kimlik doğrulaması için e-posta profillerine bağlama (AppConfig aracılığıyla)
 - Sistem uygulamaları, Android kurumsal cihazlarda desteklenir. Intune 'da, **istemci uygulamaları**  >  **uygulamalar**  >  **Ekle**' yi seçerek bir Android kurumsal sistem uygulaması ekleyin. **Uygulama türü** listesinde, **Android kurumsal sistem uygulaması**' nı seçin. Daha fazla bilgi için bkz. [Microsoft Intune Android kurumsal sistem uygulamaları ekleme](../apps/apps-ae-system.md). <!-- 4062195 -->
 - **Cihaz uyumluluğu**  >  **Android kurumsal**  >  **cihaz sahibi**bölümünde, Google SafetyNET kanıtlama düzeyini ayarlayan bir uyumluluk ilkesi oluşturabilirsiniz.   <!-- 4631425 -->
-- Android kurumsal tam yönetilen cihazlarda, mobil tehdit savunma sağlayıcıları desteklenir. **Cihaz uyumluluğu**  >  **Android kurumsal**  >  **cihaz sahibi**' de, kabul edilebilir tehdit düzeyi seçebilirsiniz. <!-- 4631440 --> [Intune kullanarak cihazları uyumlu veya uyumsuz olarak işaretlemek Için Android kurumsal ayarları](../protect/compliance-policy-create-android-for-work.md#device-owner) geçerli ayarları listeler.
+- Android kurumsal tam yönetilen cihazlarda, mobil tehdit savunma sağlayıcıları desteklenir. **Cihaz uyumluluğu**  >  **Android kurumsal**  >  **cihaz sahibi**' de, kabul edilebilir tehdit düzeyi seçebilirsiniz. <!-- 4631440 --> [Intune kullanarak cihazları uyumlu veya uyumsuz olarak işaretlemek Için Android kurumsal ayarları](../protect/compliance-policy-create-android-for-work.md) geçerli ayarları listeler.
 - Android kurumsal tam olarak yönetilen cihazlarda, Microsoft başlatıcı uygulaması artık tam olarak yönetilen cihazda standartlaştırılmış bir son kullanıcı deneyimine izin vermek için uygulama yapılandırma ilkeleri aracılığıyla yapılandırılabilir. Microsoft başlatıcısı uygulaması, Android cihazınızı kişiselleştirmek için kullanılabilir. Uygulamayı bir Microsoft hesabı veya iş/okul hesabıyla birlikte kullanarak, kişiselleştirilmiş akışınızdaki takvim, belgeleriniz ve son etkinliklerinize erişebilirsiniz. <!-- 5334044 -->
 
 Bu güncelleştirmeyle, Android kurumsal tam olarak yönetilen Intune desteğinin artık genel kullanıma sunulduğunu duyurmaktan mutluluk duyuyoruz.
@@ -833,7 +833,7 @@ Windows sürüm 1909 veya üstünü çalıştıran cihazlarda BitLocker için [i
 Bu ayar, bir işletim sistemi sürücüsü kurtarmasından (Bootmgr veya WinRE kullanılarak) ve bir sabit veri sürücüsünde kurtarma parolası kilidi açma işleminden sonra istemci temelli kurtarma parolası yenileme işlemini başlatır. Bu ayar, kullanılan belirli kurtarma parolasını yeniler ve birimdeki diğer kullanılmayan parolalar değişmeden kalır. Daha fazla bilgi için bkz. [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)IÇIN BitLocker CSP belgeleri.
 
 #### <a name="tamper-protection-for-windows-defender-antivirus---4705448----------"></a>Windows Defender virüsten koruma için yetkisiz koruma<!-- 4705448        -->
-Windows Defender virüsten koruma için yetkisiz *korumayı* yönetmek üzere Intune 'u kullanın. Windows 10 Endpoint Protection için cihaz yapılandırma profillerini kullanırken, Microsoft Defender güvenlik merkezi grubunda, yetkisiz [koruma ayarını](../protect/endpoint-protection-windows-10.md#microsoft-defender-security-center) bulabilirsiniz. Temper koruma kısıtlamalarını açmak için devre dışı bırakma korumasını etkinleştirmek, devre dışı bırakmak için *devre dışı* bırakmak veya cihazları güncel yapılandırmayı yerinde bırakmak için*yapılandırılmamış* *olarak ayarlamanız* gerekir.  
+Windows Defender virüsten koruma için yetkisiz *korumayı* yönetmek üzere Intune 'u kullanın. Windows 10 Endpoint Protection için cihaz yapılandırma profillerini kullanırken, Microsoft Defender güvenlik merkezi grubunda, yetkisiz [koruma ayarını](../protect/endpoint-protection-windows-10.md#microsoft-defender-security-center) bulabilirsiniz. Temper koruma kısıtlamalarını etkinleştirmek, **devre dışı bırakmak Için devre dışı** bırakmak veya cihazın geçerli yapılandırmasını bırakmak üzere **Yapılandırılmadı** olarak ayarlamak Için **etkin** duruma karşı koruma ayarlayabilirsiniz.  
 
 Daha fazla koruma hakkında daha fazla bilgi için bkz. Windows belgelerindeki [güvenlik ayarlarını önleme korumasıyla](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection) değiştirme.
 
@@ -1603,7 +1603,7 @@ Bu özellik gecikti ve gelecek bir sürüm için planlanmıştır.
 V 1.0 ilk olarak 1808 sürümünde sunulunca Beta API 'sinden bazı önemli yollarla farklıydı. 1903 ' de, bu değişiklikler Beta API sürümüne geri yansıtılır. Beta API sürümünü kullanan önemli raporlarınız varsa, değişikliklerden kaçınmak için bu raporların V 1.0 'a geçişini kesinlikle öneririz. Daha fazla bilgi için bkz. [Intune veri ambarı API 'si Için değişiklik günlüğü](../developer/reports-changelog.md#1903-part-2).
 
 #### <a name="monitor-security-baseline-status-public-preview----3082047---"></a>Güvenlik temel durumunu izleme (Genel Önizleme) <!-- 3082047 --> 
-Güvenlik temellerini izlemeye [Kategori başına bir görünüm](../protect/security-baselines-monitor.md#per-category-view) ekledik. (Güvenlik temelleri önizlemede kalır). Kategori başına görünüm, bu kategori için her bir durum grubuna giren cihazların yüzdesiyle birlikte, her bir kategoriyi taban çizgisinden görüntüler. Artık, kaç cihazın tek tek kategoriler ile eşleşip eşleşmediği, yanlış yapılandırılmış veya geçerli olmadığı hakkında bilgi alabilirsiniz.
+Güvenlik temellerini izlemeye [Kategori başına bir görünüm](../protect/security-baselines-monitor.md) ekledik. (Güvenlik temelleri önizlemede kalır). Kategori başına görünüm, bu kategori için her bir durum grubuna giren cihazların yüzdesiyle birlikte, her bir kategoriyi taban çizgisinden görüntüler. Artık, kaç cihazın tek tek kategoriler ile eşleşip eşleşmediği, yanlış yapılandırılmış veya geçerli olmadığı hakkında bilgi alabilirsiniz.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="role-based-access-control"></a>Rol tabanlı erişim denetimi
@@ -1782,7 +1782,7 @@ Aşağıdakiler cihazlar için geçerlidir:
 - macOS
 
 #### <a name="intune-conditional-access-ui-update---2432313-----"></a>Intune koşullu erişim kullanıcı arabirimi güncelleştirmesi<!-- 2432313   -->
-Intune konsolunda koşullu erişim için Kullanıcı arabiriminde geliştirmeler yaptık. Bunlar:
+Intune konsolunda koşullu erişim için Kullanıcı arabiriminde geliştirmeler yaptık. Bunlara
 - Intune *koşullu erişim* dikey penceresi Azure Active Directory dikey penceresinde değiştirildi. Bu, Intune konsolunun içinden [koşullu erişime](../protect/conditional-access.md) (Azure AD teknolojisi olarak kalır) yönelik ayarların ve yapılandırmaların tam aralığına erişmenizi sağlar. 
 - *Şirket içi erişim* dikey penceresini *Exchange erişimi*olarak yeniden adlandırdık ve *Exchange hizmeti Bağlayıcısı* kurulumunu bu yeniden adlandırılmış dikey pencereye yeniden konumlandırdık.  Bu değişiklik, [Exchange Online ve şirket içi ile ilgili ayrıntıları yapılandırdığınız ve](../protect/exchange-connector-install.md)izlediğiniz yerleri birleştirir.  
 
@@ -3269,7 +3269,7 @@ Profil oluştur\Endpoint protection\Windows Defender Exploit Guard.
 
 #### <a name="attack-surface-reduction"></a>Saldırı Yüzeyini Azaltma
 
-|Ayar adı  |Ayar seçenekleri  |Description  |
+|Ayar adı  |Ayar seçenekleri  |Açıklama  |
 |---------|---------|---------|
 |Gelişmiş fidye yazılımı koruması|Etkin, Denetle, Yapılandırılmadı|Agresif fidye yazılımı koruması kullanır.|
 |Windows yerel güvenlik yetkilisi alt sisteminden kimlik bilgisi çalma eylemlerine bayrak ekleme|Etkin, Denetle, Yapılandırılmadı|Windows yerel güvenlik yetkilisi alt sisteminden kimlik bilgisi çalma eylemlerine bayrak ekler (lsass.exe).|
@@ -3279,7 +3279,7 @@ Profil oluştur\Endpoint protection\Windows Defender Exploit Guard.
 
 #### <a name="controlled-folder-access"></a>Denetlenen klasör erişimi
 
-|              Ayar adı               |                                                              Ayar seçenekleri                                                              | Description |
+|              Ayar adı               |                                                              Ayar seçenekleri                                                              | Açıklama |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
 | Klasör koruması (zaten uygulanmış) | Yapılandırılmamış, Etkinleştir, Yalnızca denetle (zaten uygulanmış)<br><br> <strong>Yeni</strong><br>Disk değişikliğini engelle, Disk değişikliğini denetle |             |
 
@@ -3389,7 +3389,7 @@ macOS Şirket Portalı’na kaydolurken kullanıcılar, artık Cihaz Kayıt Yön
 
 Windows Defender’ın sistem durumunu anlamak, Windows bilgisayarları yönetmenin anahtarıdır.  Bu güncelleştirmeyle Intune, Windows Defender aracısının sistem durumuna yeni raporlar ve eylemler ekler. [Cihaz Uyumluluğu iş yükünde](../protect/compliance-policy-monitor.md) bir durum toplama raporu kullanarak, aşağıdakilerden herhangi birine gereksinim duyan cihazları görebilirsiniz:
 - imza güncelleştirmesi
-- Yeniden başlat
+- Yeniden Başlatma
 - el ile müdahale
 - tam tarama
 - müdahale gerektiren diğer aracı durumları
@@ -3442,7 +3442,7 @@ Surface Hub’ın toplantıdaki konferans odası olarak görünmesi için eşsiz
 
 ##### <a name="attack-surface-reduction"></a>Saldırı Yüzeyini Azaltma
 
-|Ayar adı  |Ayar seçenekleri  |Description  |
+|Ayar adı  |Ayar seçenekleri  |Açıklama  |
 |---------|---------|---------|
 |Parola korumalı yürütülebilir içeriğin e-postadan yürütülmesi|Engelle, Denetle, Yapılandırılmadı|E-posta üzerinden indirilen parola korumalı yürütülebilir dosyaların çalıştırılmasını engelleyin.|
 |Gelişmiş fidye yazılımı koruması|Etkin, Denetle, Yapılandırılmadı|Agresif fidye yazılımı koruması kullanır.|
@@ -3453,7 +3453,7 @@ Surface Hub’ın toplantıdaki konferans odası olarak görünmesi için eşsiz
 
 ##### <a name="controlled-folder-access"></a>Denetlenen klasör erişimi
 
-|              Ayar adı               |                                                              Ayar seçenekleri                                                              | Description |
+|              Ayar adı               |                                                              Ayar seçenekleri                                                              | Açıklama |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
 | Klasör koruması (zaten uygulanmış) | Yapılandırılmamış, Etkinleştir, Yalnızca denetle (zaten uygulanmış)<br><br> <strong>Yeni</strong><br>Disk değişikliğini engelle, Disk değişikliğini denetle |             |
 
@@ -3897,7 +3897,7 @@ Güvenilir olarak değerlendirilmesini istediğiniz kuruluş bulut kaynakları, 
 #### <a name="two-additional-settings-for-windows-defender-antivirus---1338409---"></a>Windows Defender Virüsten Koruma için iki ek ayar<!-- 1338409 -->  
 **Dosya engelleme düzeyi**
 
-| | |
+| Ayar | Ayrıntılar |
 |---|---|
 | Yapılandırılmadı | **Yapılandırılmadı**, varsayılan Windows Defender Virüsten Koruma engelleme düzeyini kullanır ve güvenli klasörleri algılama riskini artırmadan güçlü bir algılama sağlar. |
 | Yüksek | **Yüksek** güçlü bir algılama düzeyi sağlar.
@@ -3909,7 +3909,7 @@ Dosya engelleme düzeyini varsayılan **Yapılandırmadı** düzeyine ayarlaman�
 
 **Bulut tarafından dosya tarama için zaman aşımı uzantısı**  
 
-| | |
+| Ayar | Ayrıntı |
 |--|--|
 | Saniye sayısı (0-50) | Windows Defender Virüsten Koruma’nın buluttan sonuç beklerken bir klasörü engellemesi için geçmesi gereken en uzun süreyi belirtin. Varsayılan süre 10 saniyedir: burada belirtilen ek süre (en fazla 50 saniyeye kadar) bu 10 saniyenin üzerine eklenir. Çoğu zaman tarama, belirtilen en uzun süreden daha kısa zamanda biter. Bu süreyi artırmak, bulutun şüpheli klasörleri ayrıntılı olarak araştırmasına olanak verir. Bu ayarı etkinleştirip fazladan en az 20 saniye belirtmenizi öneririz. |
 

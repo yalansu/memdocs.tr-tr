@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e99922c920966f4f0bb1037b5fc74799cfca7c5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: eeab1155a7a0035c5e0db15c3a5402d3636edaca
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988789"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461666"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Microsoft Intune için uygulama yapılandırma ilkeleri
 
@@ -75,15 +75,15 @@ Uygulama yapılandırma ilkelerini, onu destekleyen uygulamalar için kullanabil
 
 ## <a name="android-app-configuration-policies"></a>Android uygulama yapılandırma ilkeleri
 
-Android uygulama yapılandırma ilkeleri için, uygulama yapılandırma profili oluşturmadan önce cihaz kayıt türünü seçebilirsiniz. Kayıt türünü (Iş profili veya cihaz sahibi) temel alan sertifika profilleri için hesap oluşturabilirsiniz. Bu güncelleştirme aşağıdakileri sağlar:
+Android uygulama yapılandırma ilkeleri için, uygulama yapılandırma profili oluşturmadan önce cihaz kayıt türünü seçebilirsiniz. Kayıt türünü (iş profili, tam olarak yönetilen, adanmış ve şirkete ait iş profili) temel alan sertifika profilleri için hesap oluşturabilirsiniz. Bu güncelleştirme aşağıdakileri sağlar:
 
-1. Yeni bir profil oluşturulduysa ve cihaz kayıt türü için Iş profili ve cihaz sahibi profili seçilirse, bir sertifika profilini uygulama yapılandırma ilkesiyle ilişkilendiremezsiniz.
+1. Yeni bir profil oluşturulup cihaz kayıt türü için **tüm profil türleri** seçilirse, bir sertifika profilini uygulama yapılandırma ilkesiyle ilişkilendiremeyeceksiniz.
 2. Yeni bir profil oluşturulup Iş profili yalnızca seçili ise, cihaz yapılandırması altında oluşturulan Iş profili sertifika ilkeleri kullanılabilir.
-3. Yeni bir profil oluşturulduysa ve yalnızca cihaz sahibi seçilirse, cihaz yapılandırması altında oluşturulan cihaz sahibi sertifika ilkeleri kullanılabilir. 
+3. Yeni bir profil oluşturulduysa ve **yalnızca tam olarak yönetilen, adanmış ve şirkete ait Iş profili** seçilirse, cihaz yapılandırması altında oluşturulan, **tam olarak yönetilen, adanmış ve şirkete ait iş profili** sertifika ilkeleri kullanılabilir. 
 4. Bir Kullanıcı içermeyen bir Android kurumsal adanmış cihaza Gmail veya dokuz yapılandırma profili dağıtırsanız, Intune kullanıcıyı çözümleyemediği için başarısız olur.
 
 > [!IMPORTANT]
-> Bu özelliğin yayınlanmasından önce oluşturulan mevcut ilkeler (2020 Nisan sürümü-2004) ilke kayıt türü için varsayılan olarak Iş profili ve cihaz sahibi profili olur. Ayrıca, bu özellik ile ilişkili sertifika profillerinin bulunduğu bu özelliğin yayınlanmasından önce oluşturulan mevcut ilkeler, varsayılan olarak yalnızca Iş profili ' dir.
+> Bu özelliğin yayınlanmasından önce oluşturulan mevcut ilkeler (2020 Nisan sürümü-2004), ilkeyle ilişkili herhangi bir sertifika profili olmayan, varsayılan olarak cihaz kayıt türü için **tüm profil türleri** olur. Ayrıca, bu özellik ile ilişkili sertifika profillerinin bulunduğu bu özelliğin yayınlanmasından önce oluşturulan mevcut ilkeler, varsayılan olarak yalnızca Iş profili ' dir.
 > 
 > Mevcut ilkeler yeni sertifikaları düzeltmez veya vermez.
 
@@ -114,7 +114,7 @@ Yönetilen uygulama yapılandırması için, yönetilmeyen cihazlarda **Intune t
 3. **Başlarken**' e tıklayın.
 4. **Günlükleri paylaşma**' ya tıklayın.
 5. Bilgisayarınızda görüntülenebilmeleri için günlüğü kendinize göndermek üzere seçtiğiniz posta uygulamasını kullanın. 
-6. Metin dosyası görüntüleyicinizdeki **ıntunemamdiagnostics. txt dosyasını** gözden geçirin.
+6. Metin dosyası görüntüleyicinizdeki **IntuneMAMDiagnostics.txt** gözden geçirin.
 7. `ApplicationConfiguration` arayın. Sonuçlar aşağıdaki gibi görünür:
 
     ``` JSON
@@ -158,14 +158,14 @@ Yönetilen uygulama yapılandırması için iOS/ıpados yapılandırmasını yö
 3. **Başlarken**' e tıklayın.
 4. **Günlükleri paylaşma**' ya tıklayın.
 5. Bilgisayarınızda görüntülenebilmeleri için günlüğü kendinize göndermek üzere seçtiğiniz posta uygulamasını kullanın. 
-6. Metin dosyası görüntüleyicinizdeki **ıntunemamdiagnostics. txt dosyasını** gözden geçirin.
+6. Metin dosyası görüntüleyicinizdeki **IntuneMAMDiagnostics.txt** gözden geçirin.
 7. `AppConfig` arayın. Sonuçlarınız, kiracınız için yapılandırılmış uygulama yapılandırma ilkeleriyle eşleşmelidir.
 
 ### <a name="android-configuration-on-managed-devices"></a>Yönetilen cihazlarda Android yapılandırması
 
 Yönetilen uygulama yapılandırması için, yönetilen cihazlarda **Intune tanılama günlüğü** ile Android yapılandırmasını doğrulayabilirsiniz.
 
-Android cihazından günlükleri toplamak için, siz veya son kullanıcının, bir USB bağlantısı aracılığıyla (veya cihazdaki **Dosya Gezgini** eşdeğerini) günlükleri cihazdan indirmesi gerekir. Uygulamanız gereken adımlar:
+Android cihazından günlükleri toplamak için, siz veya son kullanıcının, bir USB bağlantısı aracılığıyla (veya cihazdaki **Dosya Gezgini** eşdeğerini) günlükleri cihazdan indirmesi gerekir. Adımlar aşağıdaki gibidir:
 
 1. Android cihazını USB kablosuyla bilgisayarınıza bağlayın.
 2. Bilgisayarda, cihazınızın adına sahip bir dizini arayın. Bu dizinde öğesini bulun `Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal` .

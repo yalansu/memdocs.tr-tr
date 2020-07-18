@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcc524a69d0fb41da84a2e882b81a205fe7192cc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b51ed6653dff5b7d0aeef40892e16e2826f30204
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79332786"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461258"
 ---
 # <a name="troubleshoot-android-enterprise-device-problems-in-microsoft-intune"></a>Microsoft Intune 'de Android kurumsal cihaz sorunlarını giderme
 
@@ -59,7 +59,7 @@ Evet. Daha fazla bilgi için bkz. [yönetilen Google Play web bağlantıları](.
 
   Şirket Portalı günlüklerini toplamak için aşağıdaki adımları izleyin:
 
-  1. Rozet ile şirket portalı uygulamasında, **menü** > **Help** > **e-posta desteği**' ne dokunun, ardından **e-posta gönder & karşıya yükleme günlükleri**' ne dokunun. 
+  1. Rozet ile şirket portalı uygulamasında, **menü**  >  **Help**  >  **e-posta desteği**' ne dokunun, ardından **e-posta gönder & karşıya yükleme günlükleri**' ne dokunun. 
   2. **Yardım Isteği göndermek**isteyip istemediğiniz sorulduğunda, e-posta uygulamalarından birini seçin.
   3. BT yöneticinize, Microsoft ürün desteği 'ne sağlanacak bir olay KIMLIĞI ile bir e-posta oluşturulur.
 
@@ -76,6 +76,8 @@ Samsung, Android 8.0 + cihazlarında bu kısıtlamayı zorlamaya başladı. Micr
 
 ### <a name="wipe-factory-reset-option-isnt-available-for-work-profile-enrolled-device"></a>Sil (fabrika sıfırlaması) seçeneği, iş profili kayıtlı cihazı için kullanılamaz
 Bu beklenen bir davranıştır. İş profili senaryosunda, MDM sağlayıcısı cihaz üzerinde tam denetime sahip değildir. Kullanılabilir tek seçenek, tüm iş profilini ve tüm içeriğini kaldıran (şirket verilerini Kaldır) devre dışı.
+
+Silme işlemi, [Android kurumsal şirkete ait iş profili cihazlarında](android-corporate-owned-work-profile-enroll.md)desteklenir.
 
 ### <a name="is-device-passcode-reset-supported"></a>Cihaz geçiş kodu sıfırlaması destekleniyor mu?
 İş profili kayıtlı cihazlar için, şu durumlarda yalnızca Android 8,0 veya üzeri cihazlarda iş profili geçiş kodunu sıfırlayabilirsiniz:

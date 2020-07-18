@@ -1,7 +1,7 @@
 ---
-title: Android kurumsal adanmış cihazları veya tam olarak yönetilen cihazları Intune 'A kaydetme
+title: Android kurumsal adanmış, tam olarak yönetilen veya şirkete ait iş profili cihazlarını Intune 'A kaydetme
 titleSuffix: Microsoft Intune
-description: Android kurumsal adanmış cihazları veya tam olarak yönetilen cihazları Intune 'a kaydetmeyi öğrenin.
+description: Android kurumsal adanmış, tam olarak yönetilen veya şirkete ait iş profili cihazlarını Intune 'a kaydetmeyi öğrenin.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93cd7c7e852e3d8d8fe576cec66ce7a7020f06b7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 858d813d3df2b020a869e1f18327d35e68bde7e0
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990221"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461734"
 ---
-# <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices"></a>Android kurumsal adanmış cihazlarınızı veya tam olarak yönetilen cihazları kaydedin
+# <a name="enroll-your-android-enterprise-dedicated-fully-managed-or-corporate-owned-with-work-profile-devices"></a>Android kurumsal adanmış, tam olarak yönetilen veya şirkete ait iş profili cihazlarına kaydetme
 
-[Android kurumsal adanmış cihazlarınızı](android-kiosk-enroll.md) veya [tam olarak yönetilen cihazları](android-fully-managed-enroll.md) Intune 'da ayarladıktan sonra, cihazları kaydedebilirsiniz. Hem adanmış hem de tam olarak yönetilen cihazların Intune kaydı, fabrika sıfırlaması ile başlar. Android kurumsal cihazlarınızı kaydetme, işletim sistemine bağlıdır.
+Android kurumsal [adanmış cihazlarınızı](android-kiosk-enroll.md), [tam olarak yönetilen cihazlarınızı](android-fully-managed-enroll.md)veya [şirkete ait iş profili cihazlarınızı](android-corporate-owned-work-profile-enroll.md) Intune 'da ayarladıktan sonra, cihazları kaydedebilirsiniz. Hem adanmış hem de tam olarak yönetilen cihazların Intune kaydı, fabrika sıfırlaması ile başlar. Android kurumsal cihazlarınızı kaydetme, işletim sistemine bağlıdır.
 
 | Kayıt yöntemi | Adanmış ve tam olarak yönetilen cihazlar için en düşük Android işletim sistemi sürümü |
 | ----- | ----- |

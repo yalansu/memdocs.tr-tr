@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bf55564cabce9a060c15100ad974c59bf858b15
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: d09f3a2e734709f769aebcd4e8aab4fec774d4fc
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591128"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461836"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Intune ile içeri aktarılan PKCS sertifikalarını yapılandırma ve kullanma
 
@@ -45,8 +45,9 @@ Intune, aşağıdaki platformlar için PFX sertifikalarının içeri aktarımın
 - Android-Cihaz Yöneticisi
 - Android kurumsal-tam yönetilen
 - Android kurumsal Iş profili
+- Android kurumsal-şirkete ait iş profili
 - iOS/iPadOS
-- Mac OS
+- macOS
 - Windows 10
 
 ## <a name="requirements"></a>Gereksinimler
@@ -196,7 +197,7 @@ Anahtarı oluşturmak için kullandığınız sağlayıcıyla eşleşen anahtar 
 
 6. **Userpfxsertifika** nesnesi oluşturmak için şunu çalıştırın`$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>"`
 
-   Örneğin, `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "C:\temp\userA.pfx" $SecureFilePassword "userA@contoso.com" "Microsoft Software Key Storage Provider" "PFXEncryptionKey" "smimeEncryption"`
+   Örnek: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "C:\temp\userA.pfx" $SecureFilePassword "userA@contoso.com" "Microsoft Software Key Storage Provider" "PFXEncryptionKey" "smimeEncryption"`
 
    > [!NOTE]
    > Sertifikayı bağlayıcının yüklü olduğu sunucudan başka bir sistemden içeri aktardığınızda, Use anahtar dosya yolunu içeren aşağıdaki komutu kullanmalıdır:`$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>" "<File path to public key file>"`
@@ -227,7 +228,7 @@ Sertifikaları Intune’da içeri aktardıktan sonra bir **PKCS içeri aktarılm
    - **Platform**: cihazlarınızın platformunu seçin.
    - **Profil**: **PKCS içeri aktarılan sertifikası** seçin
 
-4. **Oluştur**'u seçin.
+4. **Oluştur**’u seçin.
 
 5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
    - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, *tüm şirket Için PKCS içeri aktarılmış sertifika profilidir*.

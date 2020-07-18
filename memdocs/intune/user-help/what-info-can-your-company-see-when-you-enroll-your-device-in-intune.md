@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: 740d9b68a0101e04e6bf690d09ecce7eaff4509e
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: bc3ff7b10d3b0ae5779db26fae711bc335c8ec62
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107317"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461683"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Cihazımı kaydettiğimde kuruluşum hangi bilgileri görebilir?
 
@@ -38,13 +38,14 @@ Bir cihazı Microsoft Intune’a kaydettiğinizde kuruluşunuz kişisel bilgiler
 - Parolalar
 - Fotoğraflar uygulamasında veya film rulosunda yer alanları da içeren resimler
 - Dosyalar
+- İş profili olan şirkete ait cihazlarda, kişisel profilinizde bulunan uygulamalar ve veriler için. 
 
 **Kuruluşunuzun her zaman görebileceği şeyler:**
 
 - Google Pixel gibi cihaz modeli
 - Cihaz üreticisi, örneğin Microsoft
 - İşletim sistemi ve sürümü, örneğin iOS 12.0.1
-- Uygulama envanteri ve Microsoft Word gibi uygulama adları. Kişisel cihazlarda, kuruluşunuz yalnızca yönetilen uygulama envanterinizi görebilir. Şirkete ait cihazlarda kuruluşunuz tüm uygulama envanterinizi görebilir.
+- Uygulama envanteri ve Microsoft Word gibi uygulama adları. Kişisel cihazlarda, kuruluşunuz yalnızca yönetilen uygulama envanterinizi görebilir. Şirkete ait tam olarak yönetilen ve ayrılmış cihazlarda, kuruluşunuz tüm uygulama envanterinizi görebilir. Bir iş profili olan şirkete ait cihazlarda, kuruluşunuz yalnızca iş profilinizde uygulama envanterini görebilir.
 - Cihaz sahibi
 - Cihaz adı
 - Cihaz seri numarası

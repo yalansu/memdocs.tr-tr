@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ae95fb48296f778fb98affa2270ba763d79fb766
-ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
+ms.openlocfilehash: b1711dad8163409d05c5299e8d3b54ad619b48ec
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879665"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462074"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Intune 'da uç nokta güvenliği için uç nokta algılama ve yanıt ilkesi
 
@@ -32,9 +32,6 @@ Microsoft Defender ATP uç noktası algılama ve yanıtının özellikleri, ger�
 EDR ilkeleri, EDR ayarlarını yönetmek için platforma özel profiller içerir. Profiller, Microsoft Defender ATP için bir *ekleme paketini* otomatik olarak içerir. Ekleme paketleri, cihazların Microsoft Defender ATP ile çalışacak şekilde nasıl yapılandırıldığı. Bir cihaz ontahtalarından sonra, bu cihazdan tehdit verilerini kullanmaya başlayabilirsiniz.
 
 EDR ilkeleri, Intune ile yönettiğiniz Azure Active Directory (Azure AD) cihaz gruplarına ve Windows Server 'lar dahil Configuration Manager ile yönettiğiniz şirket içi cihazların koleksiyonlarına dağıtılır. Farklı yönetim yolları için EDR ilkeleri farklı ekleme paketleri gerektirir. Bu nedenle, yönettiğiniz farklı cihaz türleri için ayrı bir EDR ilkesi oluşturacaksınız.
-
-> [!TIP]
-> Configuration Manager ile yönettiğiniz cihazlar için destek *genel önizlemededir*.
 
 [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nin **uç nokta güvenlik** düğümünde, EDR için uç nokta güvenlik ilkelerini bulun. *Manage*
 
@@ -74,10 +71,10 @@ Aşağıdaki platformlar ve profiller için yapılandırabileceğiniz [ayarları
 - Platform: **Windows 10 ve üzeri** -Intune, ILKEYI Azure AD gruplarınızdaki cihazlara dağıtır.
 - Profil: **Endpoint Detection ve yanıt (MDM)**
 
-**Configuration Manager** *(önizlemede)* : Configuration Manager ile yönettiğiniz cihazlarda aşağıdakiler desteklenir:
+**Configuration Manager** , Configuration Manager yönettiğiniz cihazlarda aşağıdakiler desteklenir:
 
 - Platform: **Windows 10 ve Windows Server** -Configuration Manager ilkeyi Configuration Manager Koleksiyonlarınızdaki cihazlara dağıtır.
-- Profil: **Endpoint Detection ve yanıt (ConfigMgr) (Önizleme)**
+- Profil: **Endpoint Detection ve yanıt (ConfigMgr)**
 
 ## <a name="set-up-configuration-manager-to-support-edr-policy"></a>EDR ilkesini desteklemek için Configuration Manager ayarlama
 
@@ -130,7 +127,7 @@ Ortak yönetimi etkinleştirmeyi planlıyorsanız, ortak yönetimi, önkoşullar
 1. Configuration Manager yönetim konsolunda, **Yönetim**  >  **genel bakış**  >  **Cloud Services**  >  **ortak yönetim**' e gidin.
 2. Şeritte, Sihirbazı açmak için **ortak yönetimi yapılandırma** ' ya tıklayın.
 3. **Kiracı ekleme** sayfasında, ortamınız için **AzurePublicCloud** ' yi seçin. Azure Kamu Bulutu desteklenmez.
-   1. **Oturum Aç**’a tıklayın. Oturum açmak için *genel yönetici* hesabınızı kullanın.
+   1. **Oturum aç**' a tıklayın. Oturum açmak için *genel yönetici* hesabınızı kullanın.
 
    2. **Kiracı ekleme** sayfasında **Microsoft Endpoint Manager yönetim merkezine yükle** seçeneğinin seçili olduğundan emin olun.
 
@@ -156,7 +153,7 @@ Ortak yönetimi etkinleştirmeyi planlıyorsanız, ortak yönetimi, önkoşullar
 
 2. Ortak yönetim ayarlarınıza sağ tıklayıp **Özellikler**' i seçin.
 
-3. **Karşıya yüklemeyi Yapılandır** sekmesinde, **Microsoft Endpoint Manager yönetim merkezine yükle**' yi seçin. **Uygula**'ya tıklayın.
+3. **Karşıya yüklemeyi Yapılandır** sekmesinde, **Microsoft Endpoint Manager yönetim merkezine yükle**' yi seçin. **Uygula**’ya tıklayın.
    - Cihaz yükleme için varsayılan ayar, **Microsoft uç nokta Configuration Manager tarafından yönetilen tüm cihazlardır**. Yapılandırmanızı bir veya birkaç cihaz koleksiyonu ile sınırlandırmayı da tercih edebilirsiniz.
 
      ![Ortak yönetim özellikleri sekmesini görüntüleme](media/endpoint-security-edr-policy/configure-upload.png)
@@ -179,7 +176,7 @@ Kiracı iliştirme yapılandırıldığında eşitlenecek koleksiyonları seçeb
 
 2. Ortak yönetim ayarlarınıza sağ tıklayıp **Özellikler**' i seçin.
 
-3. **Karşıya yüklemeyi Yapılandır** sekmesinde, **Microsoft Endpoint Manager yönetim merkezine yükle**' yi seçin. **Uygula**'ya tıklayın.
+3. **Karşıya yüklemeyi Yapılandır** sekmesinde, **Microsoft Endpoint Manager yönetim merkezine yükle**' yi seçin. **Uygula**’ya tıklayın.
 
    Cihaz yükleme için varsayılan ayar, **Microsoft uç nokta Configuration Manager tarafından yönetilen tüm cihazlardır**. Yapılandırmanızı bir veya birkaç cihaz koleksiyonu ile sınırlandırmayı da tercih edebilirsiniz.
 
@@ -223,9 +220,9 @@ Microsoft Defender ATP aboneliğiniz Intune ile tümleşikse, EDR ilkeleri oluş
 
    - Configuration Manager-Configuration Manager ilkeyi Configuration Manager Koleksiyonlarınızdaki cihazlara dağıtır. İlkeyi oluştururken şunları seçin:
      - Platform: **Windows 10 ve Windows Server**
-     - Profil: **Endpoint Detection ve yanıt (ConfigMgr) (Önizleme)**
+     - Profil: **Endpoint Detection ve yanıt (ConfigMgr)**
 
-4. **Oluştur**'u seçin.
+4. **Oluştur**’u seçin.
 
 5. **Temel bilgiler** sayfasında, profil için bir ad ve açıklama girin ve ardından **İleri**' yi seçin.
 
@@ -237,7 +234,7 @@ Microsoft Defender ATP aboneliğiniz Intune ile tümleşikse, EDR ilkeleri oluş
 
    **Kapsam etiketleri sayfasında,** kapsam etiketlerini profile atamak için kapsam etiketlerini **Seç** ' *i seçin.*
   
-   Devam etmek için **İleri**’yi seçin.
+   Devam etmek için **İleri** seçeneğini belirleyin.
 
 8. **Atamalar** sayfasında, bu ilkeyi alacak grupları veya koleksiyonları seçin. Seçim, seçtiğiniz platforma ve profile bağlıdır:
 

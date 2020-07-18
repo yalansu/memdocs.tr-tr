@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2019
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,17 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c8c78106125b45f52b45cb5fc6494b8e13b7a15
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9c1d4dacf29aa0c87a8356306d10bf05acbf3afb
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084945"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462176"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Intune ile koşullu erişim kullanmanın yaygın yolları nelerdir?
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 
 Intune ile kullanılan iki tür koşullu erişim vardır: Cihaz tabanlı koşullu erişim ve uygulama tabanlı koşullu erişim. Kuruluşunuzda koşullu erişim uyumluluğunu sağlamak için ilgili uyumluluk ilkelerini yapılandırmanız gerekir. Koşullu erişim, Exchange 'e erişime izin verme veya erişimi engelleme, ağa erişimi denetleme veya bir mobil tehdit savunması çözümü ile tümleştirme gibi işlemleri yapmak için yaygın olarak kullanılır.
  
@@ -113,34 +110,44 @@ Cihaz uyumluluğu ve koşullu erişim ilkeleri uygulandığında, şirket için 
 
 Cihazlar koşullar kümesini karşılamıyorsa, Son Kullanıcı cihazı kaydetme işlemi boyunca aygıtı uyumsuz hale getiren sorunu düzeltir.
 
-#### <a name="how-conditional-access-for-exchange-on-premises-works"></a>Şirket içi Exchange için koşullu erişim nasıl çalışır
+> [!NOTE]
+> Haziran 2020 ' den başlayarak Exchange Connector için destek kullanım dışıdır ve Exchange [karma modern kimlik doğrulaması](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) ile değiştirilmiştir. HMA kullanımı, Intune 'un Exchange bağlayıcısını kurulumunu ve kullanmasını gerektirmez. Bu değişiklik ile, aboneliğiniz ile bir Exchange Bağlayıcısı kullanmıyorsanız, Intune için Exchange bağlayıcısını yapılandırmak ve yönetmek için kullanılan Kullanıcı arabirimi Microsoft Endpoint Manager yönetim merkezinden kaldırılmıştır.
+>
+> Ortamınızda ayarlanmış bir Exchange Bağlayıcısı varsa, Intune kiracınız kullanım için desteklenir ve yapılandırmasını destekleyen Kullanıcı arabirimine erişime sahip olmaya devam edersiniz. Daha fazla bilgi için bkz. [Şirket Içi Exchange bağlayıcısını yüklemeye](../protect/exchange-connector-install.md) . Bağlayıcıyı kullanmaya devam edebilir veya HMA 'yı yapılandırabilir ve ardından bağlayıcınızı kaldırabilirsiniz.
+>
+> Karma modern kimlik doğrulaması, Intune için Exchange Connector tarafından daha önce sağlanan işlevselliği sağlar: bir cihaz kimliğini Exchange kaydıyla eşleme.  Bu eşleme artık, Intune 'da yaptığınız bir yapılandırmanın veya Intune bağlayıcısının Intune ve Exchange 'e köprü oluşturma gereksiniminin dışında gerçekleşir. HMA ile, ' Intune ' öğesine özgü yapılandırmayı (bağlayıcı) kullanma gereksinimi kaldırılmıştır.
 
-Şirket içi Exchange için koşullu erişim, Azure koşullu erişim tabanlı ilkelerden farklı şekilde çalışır. Exchange Server 'a doğrudan etkileşimde bulunmak için Intune Exchange şirket içi bağlayıcısını yüklersiniz. Intune Exchange bağlayıcısı; Intune'un Exchange Active Sync (EAS) kayıtlarını alıp bunları Intune cihaz kayıtlarına eşleyebilmesi için Exchange sunucusunda bulunan tüm EAS kayıtlarını çeker. Bu kayıtlar, Intune tarafından kaydedilmiş ve tanınan cihazlardır. Bu işlem, e-posta erişimine izin verir veya erişimi engeller.
 
-EAS kaydı yenidir ve Intune bunun farkında olmazsa, Intune, Exchange Server 'ı e-postaya erişimi engelleyecek şekilde yönlendiren bir cmdlet ("Command-Let") yayınlar. Bu işlemin nasıl çalıştığı hakkında daha fazla ayrıntı aşağıda verilmiştir:
+<!-- Deprecated with change from the connector to Exchange hybrid modern authentication)
 
-![CA akış grafiği olan şirket içi Exchange](./media/conditional-access-intune-common-ways-use/ca-intune-common-ways-1.png)
+#### How conditional access for Exchange on-premises works
 
-1. Kullanıcı, Exchange'de kurum içi 2010 SP1 veya sonraki bir sürümü üzerinde barındırılan kurumsal e-postalara erişmeye çalışır.
+Conditional access for Exchange on-premises works differently than Azure Conditional Access based policies. You install the Intune Exchange on-premises connector to directly interact with Exchange server. The Intune Exchange connector pulls in all the Exchange Active Sync (EAS) records that exist at the Exchange server so Intune can take these EAS records and map them to Intune device records. These records are devices enrolled and recognized by Intune. This process allows or blocks e-mail access.
 
-2. Cihaz Intune tarafından yönetilmiyorsa, e-postaya erişim engellenir. Intune, EAS istemcisine bir blok bildirimi gönderir.
+If the EAS record is new and Intune isn't aware of it, Intune issues a cmdlet (pronounced "command-let") that directs the Exchange server to block access to e-mail. Following are more details on how this process works:
 
-3. EAS blok bildirimini alır, cihazı karantinaya alır ve kullanıcıların cihazlarını kaydedebilmesi için bağlantılar içeren düzeltme adımlarını içeren karantina e-postasını gönderir.
+![Exchange on-premises with CA flow-chart](./media/conditional-access-intune-common-ways-use/ca-intune-common-ways-1.png)
 
-4. Cihazın Intune tarafından yönetilmesi için ilk adım olan Çalışma alanına katılma işlemi gerçekleşir.
+1. User tries to access corporate email, which is hosted on Exchange on-premises 2010 SP1 or later.
 
-5. Cihaz Intune'a kaydedilir.
+2. If the device is not managed by Intune, access to email will be blocked. Intune sends a block notification to the EAS client.
 
-6. Intune, EAS kaydını bir cihaz kaydına eşler ve cihaz uyumluluk durumunu kaydeder.
+3. EAS receives the block notification, moves the device to quarantine, and sends the quarantine email with remediation steps that contain links so the users can enroll their devices.
 
-7. EAS istemci kimliği Azure AD Cihaz Kayıt işlemi tarafından kaydedilir. Bu işlem Intune cihaz kaydı ile EAS istemci kimliği arasında bir ilişki oluşturur.
+4. The Workplace join process happens, which is the first step to have the device managed by Intune.
 
-8. Azure AD Cihaz Kaydı, cihaz durum bilgilerini kaydeder.
+5. The device gets enrolled into Intune.
 
-9. Kullanıcı koşullu erişim ilkelerini karşılıyorsa, Intune, Intune Exchange Bağlayıcısı aracılığıyla posta kutusunun eşitlenmesine izin veren bir cmdlet 'i yayınlar.
+6. Intune maps the EAS record to a device record, and saves the device compliance state.
 
-10. Exchange sunucusu, kullanıcının e-postaya erişebilmesi için bildirimi EAS istemcisine gönderir.
+7. The EAS client ID gets registered by the Azure AD Device Registration process, which creates a relationship between the Intune device record, and the EAS client ID.
 
+8. The Azure AD Device Registration saves the device state information.
+
+9. If the user meets the conditional access policies, Intune issues a cmdlet through the Intune Exchange connector that allows the mailbox to sync.
+
+10. Exchange server sends the notification to EAS client so the user can access e-mail.
+-->
 
 #### <a name="whats-the-intune-role"></a>Intune rolü nedir?
 
@@ -158,7 +165,5 @@ Exchange Server, cihazları karantinaya almak için API ve altyapı sağlar.
 [Azure Active Directory 'de koşullu erişimi yapılandırma](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
 [Uygulama tabanlı koşullu erişim ilkeleri ayarlama](app-based-conditional-access-intune-create.md)
-
-[Intune ile şirket Exchange bağlayıcısı nasıl yüklenir](exchange-connector-install.md).
 
 [Şirket içi Exchange için koşullu erişim ilkesi oluşturma](conditional-access-exchange-create.md)

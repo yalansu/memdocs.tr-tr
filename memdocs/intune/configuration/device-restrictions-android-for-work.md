@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 07/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7aee865b2a16ce3a9114433f9e10e185b26997f7
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: de1f1bc3b21a8e4ebd2aca6730cae68af730f94e
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303479"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461938"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Android kurumsal cihaz ayarları
 
@@ -31,9 +31,18 @@ Bu makale, Android kurumsal cihazlarda denetleyebilmeniz için farklı ayarları
 
 [Bir cihaz yapılandırma profili oluşturun](device-restrictions-configure.md).
 
-## <a name="device-owner-only"></a>Yalnızca cihaz sahibi
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Tam olarak yönetilen, adanmış ve şirkete ait Iş profili
 
-Bu ayarlar, Intune 'un Android kurumsal tam olarak yönetilen veya adanmış cihazlar gibi tüm cihazı denetlediği Android kurumsal kayıt türleri için geçerlidir.
+Bu ayarlar, Intune 'un Android kurumsal tam olarak yönetilen, adanmış ve şirkete ait iş profili aygıtları gibi tüm cihazı denetlediği Android kurumsal kayıt türleri için geçerlidir.
+
+Bazı ayarlar tüm kayıt türleri tarafından desteklenmez. Hangi ayarların hangi kayıt türleri tarafından desteklendiğini görmek için Kullanıcı arabirimine bakın. Her ayar, hangi kayıt türlerinin bu ayarı kullanacağını gösteren bir başlık altındadır.
+
+![Üst bilgiler ayarlanıyor.](./media/device-restrictions-android-for-work/setting-headers.png)
+
+Bazı ayarlar yalnızca şirkete ait cihazlar için iş profili düzeyinde iş profili ile uygulanır. Bu ayarlar, tam olarak yönetilen ve adanmış cihazlar için cihaz genelinde hala geçerlidir. Bu ayarlar Kullanıcı arabirimindeki *(iş profili düzeyi)* tanımlayıcısı ile işaretlenir.
+
+![Üst bilgiler ayarlanıyor.](./media/device-restrictions-android-for-work/work-profile-level.png)
+
 
 ### <a name="general"></a>Genel
 
@@ -115,7 +124,9 @@ Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak veya
       >
       > **Yönetilen giriş ekranı** uygulamasının yapılandırma profilinde olması gerekmez, ancak uygulama olarak eklenmesi gerekir. **Yönetilen giriş ekranı** uygulaması eklendiğinde, yapılandırma profiline eklediğiniz diğer uygulamalar **yönetilen giriş ekranı** uygulamasında simgeler olarak gösterilir.
       >
-      > Birden çok uygulama bilgi noktası modu kullanılırken, çevirici/telefon uygulamaları düzgün çalışmayabilir. 
+      > Birden çok uygulama bilgi noktası modu kullanılırken, çevirici/telefon uygulamaları düzgün çalışmayabilir.
+      >
+      > Yönetilen giriş ekranı hakkında daha fazla bilgi için bkz. [özel cihazlarda Microsoft yönetilen giriş ekranını çok uygulama bilgi noktası modunda ayarlama](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
 
       - **Ekle**: listeden uygulamalarınızı seçin.
 
@@ -123,6 +134,25 @@ Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak veya
 
         Ayrıca, kuruluşunuz tarafından oluşturulan diğer [Android uygulamalarını](../apps/apps-add-android-for-work.md) ve [Web uygulamalarını](../apps/web-app.md) cihaza ekleyebilirsiniz. [Uygulamayı adanmış cihazlarınız için oluşturulan cihaz grubuna atadığınızdan](../apps/apps-deploy.md)emin olun.
 
+      - **Klasör simgesi**: yönetilen giriş ekranında gösterilen klasör simgesinin rengini ve şeklini seçin. Seçenekleriniz şunlardır:
+        - Koyu tema dikdörtgeni
+        - Koyu tema çemberi
+        - Açık tema dikdörtgeni
+        - Açık tema çemberi
+      - **Uygulama ve klasör simge boyutu**: yönetilen giriş ekranında gösterilen klasör simgesinin boyutunu seçin. Seçenekleriniz şunlardır:
+        - Çok küçük
+        - Küçük
+        - Ortalama
+        - Büyük
+        - Çok büyük
+
+          Ekran boyutuna bağlı olarak, gerçek simge boyutu farklı olabilir.
+
+      - **Ekran yönü**: yönetilen giriş ekranının cihazlarda gösterildiği yönü seçin. Seçenekleriniz şunlardır:
+        - Dikey
+        - Yatay
+        - Oto döndür
+      - **Uygulama bildirimi rozetleri**: **Etkinleştir** , uygulama simgelerindeki yeni ve okunmamış bildirimlerin sayısını gösterir. **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
       - **Sanal giriş düğmesi**: kullanıcıların uygulamalar arasında geçiş yapabilmesi Için kullanıcıları yönetilen giriş ekranına döndüren bir yazılım tuşu düğmesi. Seçenekleriniz şunlardır:
         - **Yapılandırılmadı** (varsayılan): Giriş düğmesi gösterilmez. Kullanıcıların, uygulamalar arasında geçiş yapmak için geri düğmesini kullanmaları gerekir.
         - **Yukarı çek**: bir giriş düğmesi, bir kullanıcının cihazda ne zaman yüzümü gösterdiğini gösterir.
@@ -150,7 +180,31 @@ Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak veya
         >
         > Modern görüntüler, daha yüksek piksel yoğunluklarını ve eşdeğer 2K/4K tanım görüntülerini görüntüleyebilir.
 
+      - **Ayarlar menüsü kısayolu**: **devre dışı bırak** ayarı, yönetilen giriş ekranında yönetilen ayarlar kısayolunu gizler. Kullanıcılar, ayarlara erişmek için yine de aşağı doğru çekerek bulunabilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, yönetilen ayarlar kısayolu cihazlarda gösterilir. Kullanıcılar ayrıca bu ayarlara erişmek için aşağı doğru da çekerek bulunabilir.
+
+      - **Hata ayıklama menüsüne hızlı erişim**: Bu ayar, kullanıcıların hata ayıklama menüsüne nasıl erişdiğini denetler. Seçenekleriniz şunlardır:
+
+        - **Etkinleştir**: kullanıcılar hata ayıklama menüsüne daha kolay erişebilir. Özellikle, bir daha aşağı çekerek veya yönetilen ayarlar kısayolunu kullanabilirler. Her zaman olduğu gibi, geri düğmesini 15 kez seçerken devam edebilirler.
+        - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, hata ayıklama menüsüne kolay erişim kapalıdır. Kullanıcılar hata ayıklama menüsünü açmak için 15 kez geri düğmesini seçmelidir.
+
+        Hata ayıklama menüsünü kullanarak, kullanıcılar şunları yapabilir:
+
+        - Yönetilen giriş ekranı günlüklerine bakın ve karşıya yükleyin
+        - Google 'ın Android cihaz Ilkesi Yöneticisi uygulamasını açın
+        - [Microsoft Intune uygulamasını](https://play.google.com/store/apps/details?id=com.microsoft.intune) açın
+        - Bilgi noktası modundan çık
+
       - **Wi-Fi yapılandırması**: **Etkinleştir** ayarı, yönetilen giriş ekranında Wi-Fi denetimini gösterir ve kullanıcıların cihazı farklı WiFi ağlarına bağlanmasına izin verir. Bu özelliği etkinleştirmek Ayrıca cihaz konumunu da etkinleştirir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, yönetilen giriş ekranında Wi-Fi denetimini göstermeyebilir. Kullanıcıların, yönetilen giriş ekranını kullanırken Wi-Fi ağlarına bağlanmasını engeller.
+
+        - **Wi-Fi izin verilenler listesi**: hizmet kümesi tanımlayıcısı (SSID) olarak da bilinen geçerli bir kablosuz ağ adları listesi oluşturun. Yönetilen giriş ekranı kullanıcıları yalnızca girdiğiniz SSID 'ler ile bağlanabilir.
+
+          Boş bırakılırsa, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, tüm kullanılabilir Wi-Fi ağlarına izin verilir.
+
+          Geçerli SSID 'ler listesini içeren bir. csv dosyasını **Içeri aktarın** .
+
+          Geçerli listenizi bir. csv dosyasına **dışarı aktarın** .
+
+        - **SSID**: Ayrıca, yönetilen giriş ekranı kullanıcılarının bağlanabileceği Wi-Fi ağ ADLARıNı (SSID) da girebilirsiniz. Geçerli SSID 'leri girdiğinizden emin olun.
 
       - **Bluetooth yapılandırması**: **Etkinleştir** ayarı, yönetilen giriş ekranında Bluetooth denetimini gösterir ve kullanıcıların cihazları Bluetooth üzerinden eşleştirmesine olanak tanır. Bu özelliği etkinleştirmek Ayrıca cihaz konumunu da etkinleştirir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi yönetilen giriş ekranında Bluetooth denetimini göstermeyebilir. Yönetilen giriş ekranını kullanırken kullanıcıların Bluetooth ve eşleme cihazlarını yapılandırmalarını engeller.
 
@@ -158,17 +212,19 @@ Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak veya
 
       - **Media Volume Control**: **Enable** ayarı, yönetilen giriş ekranında medya birimi denetimini gösterir ve kullanıcıların bir kaydırıcı kullanarak cihazın medya birimini ayarlamasına olanak tanır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, yönetilen giriş ekranında medya birimi denetimini göstermeyebilir. Kullanıcıların, donanım düğmeleri onu desteklemediği sürece, yönetilen giriş ekranını kullanırken cihazın medya hacmini değiştirmesini engeller.
 
+      - **Cihaz bilgilerine hızlı erişim**: **Etkinleştir** ayarı, kullanıcıların seri numarası, oluşturma ve model numarası ve SDK düzeyi gibi yönetilen giriş ekranında cihaz bilgilerini görmesini sağlar. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, cihaz bilgileri gösterilmeyebilir.
+
       - **Ekran koruyucu modu**: **Etkinleştir** , cihaz kilitlendiğinde veya zaman aşımına uğrarsa yönetilen giriş ekranında bir ekran koruyucu gösterir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, yönetilen giriş ekranında bir ekran koruyucu gösterme gösterebilir.
 
         Etkinleştirildiğinde, şunları da yapılandırın:
 
-        - **Özel ekran koruyucu görüntüsünü ayarla**: özel bir PNG, jpg, JPEG, GIF, BMP, WEBP veya ııMAGE URL 'sini girin. Bir URL girmezseniz, varsayılan bir görüntü varsa cihazın varsayılan görüntüsü kullanılır. 
-        
+        - **Özel ekran koruyucu görüntüsünü ayarla**: özel bir PNG, jpg, JPEG, GIF, BMP, WEBP veya ııMAGE URL 'sini girin. Bir URL girmezseniz, varsayılan bir görüntü varsa cihazın varsayılan görüntüsü kullanılır.
+
           Örneğin şunu girin: 
 
           - `http://www.contoso.com/image.jpg`
           - `www.contoso.com/image.bmp`
-          - `https://www.contoso.com/image.webp`          
+          - `https://www.contoso.com/image.webp`
 
           > [!TIP]
           > Bit eşlemde açılabilir herhangi bir dosya kaynağı URL 'SI desteklenir.
@@ -180,30 +236,27 @@ Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak veya
 - **Tam olarak yönetilen**: tam olarak yönetilen cihazlarda Microsoft Başlatıcı uygulamasını yapılandırır.
 
   - **Microsoft başlatıcısı 'nı varsayılan Başlatıcı yap**: **Enable** Microsoft başlatıcısı 'nı ana ekranda varsayılan başlatıcı olarak ayarlar. Başlatıcısı varsayılan olarak yaparsanız, kullanıcılar başka bir başlatıcı kullanamaz. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, Microsoft Başlatıcısı varsayılan başlatıcı olarak zorunlu değildir.
+  - **Özel duvar kağıdını yapılandırma**: **Etkinleştir** seçeneği, kendi görüntünüzü ana ekran duvar kağıdı olarak uygulamanıza olanak sağlar ve kullanıcıların görüntüyü değiştirip değiştireseçebilmelidir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak cihaz geçerli duvar kağıdını korur.
+    - **Duvar kağıdı resminin URL 'Sini girin**: duvar KAĞıDı resminizin URL 'sini girin. Bu görüntüde cihaz giriş ekranında gösterilir. Örneğin, `http://www.contoso.com/image.jpg` girin. 
+    - **Kullanıcının duvar kağıdını değiştirmesine Izin ver**: **Etkinleştir** ayarı, kullanıcıların duvar kağıdı görüntüsünü değiştirmesine izin verir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, kullanıcıların duvar kağıdını değiştirmesi engellenir.
+  - **Başlatıcı akışını etkinleştir**: **Etkinleştir** , takvimleri, belgeleri ve en son etkinlikleri gösteren Başlatıcı akışını etkinleştirir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Bu akış varsayılan olarak gösterilmez.
+    - **Kullanıcının akışı etkinleştirmesine/devre dışı bırakmasına Izin ver**: **Etkinleştir** , kullanıcıların Başlatıcı akışını etkinleştirmesine veya devre dışı bırakmasına olanak sağlar **Etkinleştir** ayarı yalnızca profil atandığında bu ayarı zorlar. Gelecekteki tüm profil atamaları bu ayarı zorlamaz. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, kullanıcıların Başlatıcı akış ayarlarını değiştirmesi engellenir.
+  - **Takma varlığı**: yerleştirme kullanıcılara uygulamalarına ve araçlarına hızlı erişim sağlar. Seçenekleriniz şunlardır:
+    - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez.
+    - **Göster**: yerleştirme cihazlarda görüntülenir.
+    - **Gizle**: Dock gizlenir. Kullanıcıların Dock 'a erişmesi için çekme yapmanız gerekir.
+    - **Devre dışı**: yuva cihazlarda gösterilmez ve kullanıcıların bunu göstermesini engellemiş olur.
 
-<!-- The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
+  - **Kullanıcının yuva varlığını değiştirmesine Izin ver**: **Etkinleştir** ayarı, kullanıcıların yerleştirmeyi göstermesini veya gizlemesini sağlar. **Etkinleştir** ayarı yalnızca profil atandığında bu ayarı zorlar. Gelecekteki tüm profil atamaları bu ayarı zorlamaz. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, kullanıcıların cihaz yuva yapılandırmasını değiştirmesine izin verilmez.
 
-  - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
-    - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
-    - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
-  - **Enable launcher feed**: **Enable** turns on the launcher feed, which shows calendars, documents, and recent activities. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, this feed isn't shown.
-    - **Allow user to enable/disable feed**: **Enable** lets users enable or disable the launcher feed. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the launcher feed settings.
-  - **Dock presence**: The dock gives users quick access to their apps and tools. Your options:
-    - **Not configured** (default): Intune doesn't change or update this setting.
-    - **Show**: The dock is shown on devices.
-    - **Hide**: The dock is hidden. Users must swipe up to access the dock.
-    - **Disabled**: The dock isn't shown on devices, and users are prevented from showing it.
+  - **Arama çubuğu değiştirme**: arama çubuğunun nereye yerleştirileceğini seçin. Seçenekleriniz şunlardır:
+    - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez.
+    - **Üst**: arama çubuğu, cihazların en üstünde gösterilir.
+    - **Alt**: arama çubuğu cihazların en altında gösterilir.
+    - **Gizle**: arama çubuğu gizli.
 
-  - **Allow user to change dock presence**: **Enable** allows users to show or hide the dock. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users aren't allowed to change the device dock configuration.
-
-  - **Search bar replacement**: Choose where to put the search bar. Your options:
-    - **Not configured** (default): Intune doesn't change or update this setting.
-    - **Top**: Search bar is shown at the top of devices.
-    - **Bottom**: Search bar is shown at the bottom of devices.
-    - **Hide**: Search bar is hidden.
-
+<!-- MandiA (7.16.2020) The following settings may be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
   - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
-
 End of comment -->
 
 ### <a name="password"></a>Parola
@@ -240,7 +293,7 @@ End of comment -->
 - **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihaz temizlenmeden önce izin verilen hatalı parola sayısını 4-11 adresinden girin. `0`(sıfır) cihaz temizleme işlevini devre dışı bırakabilir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
   > [!NOTE]
-  > Cihaz sahibi cihazların bir parola ayarlaması istenmez. Ayarlar zorunlu kılınır ve parolayı el ile ayarlamanız gerekir. Gereksinimlerinizi karşılayan parolayı ayarlayıp, bunu uygulayan ilke başarısız olarak rapor eder.
+  > Tam olarak yönetilen, adanmış ve şirkete ait iş profili cihazlarının bir parola ayarlaması istenmez. Ayarlar zorunlu kılınır ve parolayı el ile ayarlamanız gerekir. Gereksinimlerinizi karşılayan parolayı ayarlayıp, bunu uygulayan ilke başarısız olarak rapor eder.
 
 ### <a name="power-settings"></a>Güç ayarları
 
@@ -255,7 +308,7 @@ End of comment -->
 - **Hesap değişiklikleri** (yalnızca adanmış cihazlar): **blok** kullanıcıların hesapları değiştirmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazdaki kullanıcı hesaplarını güncelleştirmesine izin verebilir.
 
   > [!NOTE]
-  > Bu ayar cihaz sahibi (tam yönetilen) cihazlarda kabul edilemez. Bu ayarı yapılandırırsanız, ayar yok sayılır ve herhangi bir etkisi yoktur.
+  > Bu ayar, tam olarak yönetilen, adanmış ve şirkete ait iş profili cihazlarında kabul edilemez. Bu ayarı yapılandırırsanız, ayar yok sayılır ve herhangi bir etkisi yoktur.
 
 - **Kullanıcı kimlik bilgilerini yapılandırabilir**: **blok** kullanıcıların cihazlara atanan sertifikaları yapılandırmalarını, hatta bir kullanıcı hesabı ile ilişkilendirilmemiş cihazları değiştirmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kullanıcıların anahtar deposunda bunlara erişirken kimlik bilgilerini yapılandırmasını veya değiştirmesini mümkün hale getirir.
 - **Kişisel Google hesapları**: **Block** , kullanıcıların kişisel Google hesabını cihaza eklemesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların kişisel Google hesabını eklemesine izin verebilir.

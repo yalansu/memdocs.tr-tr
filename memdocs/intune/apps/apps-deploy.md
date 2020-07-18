@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b80527921172201dc86c5f3241e9978525afa083
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 665e06e6aca0a4ba4f71147325eb587b1b8b4d40
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984830"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461547"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Microsoft Intune ile uygulamaları gruplara atama
 
@@ -36,16 +36,16 @@ Microsoft Intune [bir uygulama](apps-add.md) ekledikten sonra, uygulamayı kulla
 
 Aşağıdaki tabloda uygulamaları kullanıcılara ve cihazlara atamaya yönelik çeşitli seçenekler listelenir:
 
-|   | Intune’a kayıtlı cihazlar | Intune’a kayıtlı olmayan cihazlar |
+| Seçenek  | Intune’a kayıtlı cihazlar | Intune’a kayıtlı olmayan cihazlar |
 |-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
 | Kullanıcılara ata | Yes | Yes |
-| Cihazlara atama | Yes | Hayır |
+| Cihazlara atama | Evet | Hayır |
 | Sarmalanan uygulamaları veya Intune SDK’sını birleştiren uygulamaları atama (uygulama koruma ilkeleri için) | Yes | Yes |
 | Uygulamaları Kullanılabilir olarak atama | Yes | Yes |
-| Uygulamalarını Gerekli olarak atama | Yes | Hayır |
-| Uygulamaları kaldırma | Yes | Hayır |
-| Intune’dan uygulama güncelleştirmelerini alma | Yes | Hayır |
-| Son kullanıcıların Şirket Portalı uygulamasından kullanılabilir uygulamaları yüklemesi | Yes | Hayır |
+| Uygulamalarını Gerekli olarak atama | Evet | Hayır |
+| Uygulamaları kaldırma | Evet | Hayır |
+| Intune’dan uygulama güncelleştirmelerini alma | Evet | Hayır |
+| Son kullanıcıların Şirket Portalı uygulamasından kullanılabilir uygulamaları yüklemesi | Evet | Hayır |
 | Son kullanıcıların web tabanlı Şirket Portalı’ndan kullanılabilir uygulamaları yüklemesi | Yes | Yes |
 
 > [!NOTE]
@@ -122,7 +122,7 @@ Kayıtlı olmayan Kayıt Olmadan Uygulama Koruma İlkesi (APP-WE) dağıtım sen
 
 Yönetilmeyen cihazlara Yönetilen Google Play uygulaması atama adımları:
 
-1. Intune kiracınızı yönetilen Google Play'e bağlayın. Android Kurumsal iş profili, ayrılmış veya tam olarak yönetilen cihaz yönetimi amacıyla bunu daha önce yaptıysanız tekrar yapmanıza gerek yoktur.
+1. Intune kiracınızı yönetilen Google Play'e bağlayın. Android kurumsal iş profilini, adanmış, tam olarak yönetilen veya şirkete ait iş profili cihazlarını yönetmek için bunu zaten yapmadıysanız, bunu tekrar yapmanız gerekmez.
 2. Yönetilen Google Play'deki uygulamaları Intune konsolunuza ekleyin.
 3. Yönetilen Google Play uygulamalarını istediğiniz kullanıcı grubu için **Kayıtlı veya kayıtsız olarak kullanılabilir** olarak hedefleyin. **Gerekli** ve **Kaldır** ile uygulama hedefleme, kayıtlı olmayan cihazlar için desteklenmez.
 4. Kullanıcı grubuna bir Uygulama Koruma İlkesi atayın.
@@ -139,9 +139,9 @@ Ayar için varsayılan değerler, yeni atamalar için aşağıdaki gibi önceden
 |iOS uygulama türü | "Cihaz kaldırma sırasında kaldırma" için varsayılan ayar |
 |--------------------|----------------|
 | İş kolu uygulaması | Yes |
-| Mağaza uygulaması | No |
-| VPP uygulaması | No |
-| Yerleşik uygulama | No |
+| Mağaza uygulaması | Hayır |
+| VPP uygulaması | Hayır |
+| Yerleşik uygulama | Hayır |
 
 >[!NOTE]
 >**"Kullanılabilir" atama türleri:** "Kayıtlı cihazlar için kullanılabilir" veya "kayıt olmaksızın kullanılabilir" grupları için bu ayarı güncelleştiriyorsanız, zaten yönetilen uygulamaya sahip olan kullanıcılar, cihazı Intune ile eşitlemeden ve uygulamayı yeniden yüklemeden, güncelleştirilmiş ayarı almaz. 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9e65171c0eb723f338e87cdf1f7a99601c0833f
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 6884be3ef2d311ea810434d06be38d930b5ed143
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240752"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460527"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -51,24 +51,211 @@ ms.locfileid: "86240752"
 ### Device security
 ### Intune apps
 ### Monitor and troubleshoot
+### Role-based access control
 ### Scripts
 
 
 <!-- ########################## -->
+## <a name="week-of-july-13-2020--2007-service-release"></a>13 Temmuz 2020 (2007 hizmet sürümü) haftası
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Uygulama yönetimi
 
-## <a name="week-of-july-06-2020"></a>06 Temmuz 2020 haftası
+#### <a name="win32-app-installation-notifications-and-the-company-portal---7485945----"></a>Win32 uygulaması Yükleme bildirimleri ve Şirket Portalı<!-- 7485945  -->
+Son kullanıcılar artık [Microsoft Intune Web şirket portalı](https://portal.manage.microsoft.com/) gösterilen uygulamaların şirket portalı uygulama veya şirket portalı Web sitesi tarafından açılıp açılmayacağı konusunda karar verebilir. Bu seçenek yalnızca son kullanıcının yüklü Şirket Portalı uygulaması varsa ve bir Web Şirket Portalı uygulamasını tarayıcı dışında başlattığında kullanılabilir. 
 
+#### <a name="exchange-on-premises-connector-support---7138486----"></a>Exchange şirket Içi bağlayıcı desteği<!-- 7138486  -->
+Intune, 2007 (Temmuz) sürümünden itibaren Intune hizmetinden şirket Içi Exchange Bağlayıcı özelliği desteğini kaldırıyor. Etkin bağlayıcı içeren mevcut müşteriler şu anda geçerli işlevselliğe devam edebilir. Etkin Bağlayıcısı olmayan yeni müşteriler ve mevcut müşteriler, artık yeni bağlayıcılar oluşturamaz veya Intune 'dan Exchange ActiveSync (EAS) cihazlarını yönetemez. Bu müşteriler için, Microsoft şirket içi Exchange 'e erişimi korumak için Exchange [karma modern kimlik doğrulamasının (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) kullanılmasını önerir. HMA hem Intune Uygulama Koruması Ilkelerini (MAM olarak da bilinir) hem de şirket içi Exchange için Outlook Mobile aracılığıyla koşullu erişim imkanı sunar.
+
+#### <a name="smime-for-outlook-on-ios-and-android-enterprise-devices-managed-without-enrollment---6517155----"></a>İOS ve Android kurumsal cihazlarda kayıt olmadan yönetilen Outlook için S/MIME<!-- 6517155  -->
+Artık, kayıt olmadan yönetilen cihazlar için uygulama yapılandırma ilkelerini kullanarak iOS ve Android kurumsal cihazlarda Outlook için S/MIME 'yi etkinleştirebilirsiniz. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **uygulamalar**  >  **uygulama yapılandırma ilkeleri**  >  **Add**  >  **yönetilen uygulamalar**Ekle ' yi seçin. Ayrıca, kullanıcıların Outlook 'ta bu ayarı değiştirmesine izin verip vermeyeceğinizi de seçebilirsiniz. S/MIME hakkında genel bilgi için bkz. [Intune 'da e-postayı imzalamak ve şifrelemek Için s/MIME 'ye genel bakış](../protect/certificates-s-mime-encryption-sign.md). Outlook yapılandırma ayarları hakkında daha fazla bilgi için bkz. [Microsoft Outlook yapılandırma ayarları](../apps/app-configuration-policies-outlook.md) ve [cihaz kaydı olmadan yönetilen uygulamalar için uygulama yapılandırma ilkeleri ekleme](../apps/app-configuration-policies-managed-app.md). Microsoft Exchange 'e özgü S/MIME bilgileri için bkz. [s/MIME senaryoları](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios) ve [yapılandırma anahtarları-S/MIME ayarları](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>Cihaz yapılandırması
+
+#### <a name="new-vpn-settings-for-windows-10-and-newer-devices---6602122-----"></a>Windows 10 ve daha yeni cihazlar için yeni VPN ayarları<!-- 6602122   -->
+
+Ikev2 bağlantı türünü kullanarak bir VPN profili oluşturduğunuzda yapılandırabileceğiniz yeni ayarlar vardır (**cihaz**  >  **yapılandırma profilleri**profil  >  **oluşturma**  >  **Windows 10 ve sonrası** için platform > **VPN** > **temel VPN**):
+
+- **Cihaz tüneli**: cihazların Kullanıcı oturumu açma da dahil olmak üzere herhangi bir Kullanıcı ETKILEŞIMI gerekmeden VPN 'ye otomatik olarak bağlanmasına izin verir. Bu özellik **her zaman açık**' i etkinleştirmenizi ve **makine sertifikalarını** kimlik doğrulama yöntemi olarak kullanmanızı gerektirir.
+- Şifreleme paketi ayarları: istemci ve sunucu ayarlarını eşleştirmeye izin veren ıKE ve alt güvenlik ilişkilerinin güvenliğini sağlamak için kullanılan algoritmaları yapılandırın.
+
+Yapılandırabileceğiniz ayarları görmek için, [Intune kullanarak VPN bağlantıları eklemek üzere Windows cihaz ayarları](../configuration/vpn-settings-windows-10.md)' na gidin.
+
+Aşağıdakiler cihazlar için geçerlidir:
+
+- Windows 10 ve üzeri
+
+#### <a name="configure-more-microsoft-launcher-settings-in-a-device-restrictions-profile-on-android-enterprise-devices-cobo---6285001----"></a>Android kurumsal cihazlarda (COBO) cihaz kısıtlamaları profilinde daha fazla Microsoft Başlatıcı ayarı yapılandırma<!-- 6285001  -->
+
+Android kurumsal tam olarak yönetilen cihazlarda, bir cihaz kısıtlamaları profili kullanarak daha fazla Microsoft başlatıcısı ayarı**yapılandırabilirsiniz (cihaz**  >  **yapılandırma profilleri**,  >  platform için bir**profil**  >  **Android Enterprise** > **cihaz sahibi yalnızca**  >  **cihaz kısıtlamaları**cihaz  >  **deneyimi**  >  **tam olarak yönetilir**). 
+
+Bu ayarları görmek için [Android kurumsal cihaz ayarları ' na giderek özelliklere izin verin veya kısıtlayın](../configuration/device-restrictions-android-for-work.md#device-experience).
+
+Ayrıca, Microsoft Başlatıcı ayarlarını bir [uygulama yapılandırma profili](../apps/configure-microsoft-launcher.md)kullanarak da yapılandırabilirsiniz.
+
+Aşağıdakiler cihazlar için geçerlidir:
+
+- Android kurumsal cihaz sahibi tam olarak yönetilen cihazlar (COBO)
+
+#### <a name="new-features-for-managed-home-screen-on-android-enterprise-device-owner-dedicated-devices-cosu---7414175-7133328-7133720-7134873-7135184---idstaged---"></a>Android kurumsal cihaz sahibi adanmış cihazlarda (COSU) yönetilen giriş ekranı için yeni özellikler<!-- 7414175 7133328 7133720 7134873 7135184   idstaged -->
+
+Android kurumsal cihazlarda Yöneticiler, birden çok uygulama bilgi noktası modunu kullanarak adanmış cihazlarda yönetilen giriş ekranını özelleştirmek için cihaz yapılandırma profillerini kullanabilir (**cihazlar**  >  **yapılandırma profilleri**, cihaz  >  **Create profile**  >  **Android Enterprise** sahibi > cihaz **sahibine yalnızca**  >  **Device Restrictions** profil > cihaz için **Device experience**  >  **ayrılmış**cihaz  >  **Çoklu uygulaması**) cihaz kısıtlamalarına sahip olabilir.
+
+Özellikle şunları yapabilirsiniz:
+
+- Simgeleri özelleştirme, ekran yönünü değiştirme ve rozet simgelerinde uygulama bildirimlerini gösterme <!--7414175-->
+- Yönetilen ayarlar kısayolunu gizle <!--7133328-->
+- Hata ayıklama menüsüne daha kolay erişim <!--7133720-->
+- Wi-Fi ağlarının izin verilen bir listesini oluşturma <!-- 7134873-->
+- Cihaz bilgilerine daha kolay erişin <!-- 7135184-->
+
+Daha fazla bilgi için bkz. [Android kurumsal cihaz ayarları, özelliklere izin vermek veya](../configuration/device-restrictions-android-for-work.md) [Bu blogu](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060)kısıtlamak için.
+
+Aşağıdakiler cihazlar için geçerlidir:
+
+- Android kurumsal cihaz sahibi, adanmış cihazlar (COSU)
+
+#### <a name="administrative-templates-updated-for-microsoft-edge-84--7722068--"></a>Microsoft Edge 84 için güncelleştirilmiş Yönetim Şablonları<!--7722068-->
+Microsoft Edge için kullanılabilen ADMX ayarları güncelleştirildi. Son kullanıcılar artık Edge 84 ' de eklenen yeni ADMX ayarlarını yapılandırabilir ve dağıtabilir. Daha fazla bilgi için bkz. [Edge 84 sürüm notları](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#policy-updates).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-enrollment"></a>Cihaz kaydı
 
-#### <a name="ios-company-portal-will-support-apples-automated-device-enrollment-without-user-affinity---7282707---"></a>iOS Şirket Portalı, Apple 'ın Kullanıcı benzeşimi olmadan otomatik cihaz kaydını destekleyecektir<!-- 7282707 --> 
-İOS Şirket Portalı, artık Apple 'ın otomatik cihaz kaydı kullanılarak kaydedilmiş cihazlarda atanmış bir Kullanıcı gerekmeden desteklenmektedir. Son Kullanıcı iOS Şirket Portalı, cihaz benzeşimi olmadan kaydedilen bir iOS/ıpados cihazında birincil kullanıcı olarak kurmak için oturum açabilir. Otomatik cihaz kaydı hakkında daha fazla bilgi için bkz. [Apple 'ın otomatik cihaz kaydı Ile iOS/ıpados cihazlarını otomatik olarak kaydetme](../enrollment/device-enrollment-program-enroll-ios.md).
+#### <a name="corporate-owned-personally-enabled-devices-preview--4442275----"></a>Şirkete ait, kişisel olarak etkinleştirilen cihazlar (Önizleme)<!--4442275  -->
+Intune artık Android 8 ve üzeri işletim sistemi sürümleri için iş profiliyle iOS kurumsal şirkete ait cihazları desteklemektedir. İş profiline sahip şirkete ait cihazlar, Android kurumsal çözüm kümesindeki kurumsal yönetim senaryolarından biridir. Bu senaryo, kurumsal ve kişisel kullanım için tasarlanan tek Kullanıcı cihazlarına yöneliktir. Şirkete ait, kişisel olarak etkinleştirilen bu (COPE) senaryo şunları sunar:
 
+- çalışma ve kişisel profil kapsayıcılama
+- Yöneticiler için cihaz düzeyi denetimi
+- Son kullanıcılara kişisel verilerinin ve uygulamalarının özel olarak kalacağı garantisi
+
+İlk genel önizleme sürümü, genel olarak kullanılabilir sürüme dahil edilecek özelliklerin bir alt kümesini içerir. Ek özellikler, toplama temelinde eklenecektir. İlk önizlemede kullanılabilir olacak özellikler şunlardır:
+
+- Kayıt: Yöneticiler, son tarihi olmayan benzersiz belirteçlerle birden çok kayıt profili oluşturabilir. Cihaz kaydı NFC, Token entry, QR Code, Zero Touch veya Knox Mobile kaydı aracılığıyla yapılabilir.
+- Cihaz yapılandırması: mevcut, tam olarak yönetilen ve ayrılmış cihaz ayarlarının bir alt kümesi.
+- Cihaz Uyumluluğu: Şu anda tam olarak yönetilen cihazlar için kullanılabilen uyumluluk ilkeleri.
+- Cihaz eylemleri: cihazı silme (fabrika sıfırlaması), cihazı yeniden başlatma ve cihazı kilitleme.  
+- Uygulama Yönetimi: uygulama atamaları, uygulama yapılandırması ve ilişkili raporlama özellikleri 
+- Koşullu Erişim
+
+Şirkete ait iş profili önizlemesi hakkında daha fazla bilgi için bkz. [destek blogu](https://techcommunity.microsoft.com/t5/intune-customer-success/microsoft-announces-public-preview-for-android-enterprise/ba-p/1524325).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Cihaz yönetimi
+
+#### <a name="updates-to-the-remote-lock-action-for-macos-devices--7032805-----"></a>MacOS cihazları için uzaktan kilitleme eylemine yönelik güncelleştirmeler<!--7032805   -->
+MacOS cihazları için uzaktan kilitleme eyleminde yapılan değişiklikler şunları içerir:
+- Kurtarma PIN 'i silinmeden önce 30 gün boyunca görüntülenir (7 gün yerine).
+- Bir yöneticinin açık ikinci bir tarayıcısı varsa ve komutu farklı bir sekmeden ya da tarayıcıdan yeniden tetiklemeyi denediğinde, Intune komutun geçmesine izin verir. Ancak raporlama durumu, yeni bir PIN oluşturmak yerine başarısız olarak ayarlanır.
+- Önceki komut hala beklenirse veya cihaz geri ayarlanmamışsa, yöneticinin başka bir uzaktan kilitleme komutu vermesine izin verilmez.
+Bu değişiklikler, birden çok uzaktan kilitleme komutlarından sonra doğru PIN 'in üzerine yazılmasını engellemek için tasarlanmıştır.
+
+#### <a name="device-actions-report-differentiates-between-wipe-and-protected-wipe--7118901---"></a>Cihaz eylemleri silme ve korumalı silme arasındaki farklılıklar<!--7118901 -->
+**Cihaz eylemleri** raporu artık silme ve korumalı silme eylemleri arasında farklılaştırır. Raporu görmek için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **cihazlar**  >  **Monitor**  >  **cihaz eylemlerini** izleme ( **diğer**altında) bölümüne gidin.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>Cihaz güvenliği
+
+#### <a name="microsoft-defender-firewall-rule-migration-tool-preview---6423187-----"></a>Microsoft Defender güvenlik duvarı kuralı geçiş aracı önizlemesi<!-- 6423187   -->
+Genel önizleme olarak, Microsoft Defender güvenlik duvarı kurallarını geçiren bir PowerShell tabanlı araç üzerinde çalışıyoruz. Aracı yükleyip çalıştırdığınızda, Windows 10 istemcisinin geçerli yapılandırmasına dayalı olarak Intune için uç nokta güvenliği Güvenlik Duvarı kural ilkelerini otomatik olarak oluşturur. Daha fazla bilgi için bkz. [Endpoint Security güvenlik duvarı kuralı geçiş aracına genel bakış](../protect/endpoint-security-firewall-rule-tool.md).
+
+#### <a name="endpoint-detection-and-response-policy-for-onboarding-tenant-attached-devices-to-mdatp-is-generally-available---7303816-----"></a>Kiracı ekli cihazlarını MDADTP 'ye ekleme için uç nokta algılama ve yanıt ilkesi genel kullanıma sunuldu<!-- 7303816   -->
+Intune 'daki Endpoint Security 'nin bir parçası olarak, [Configuration Manager tarafından yönetilen cihazlarla kullanılmak üzere uç nokta algılama ve yanıt (EDR) ilkeleri](../protect/endpoint-security-edr-policy.md) artık *Önizleme* aşamasındadır ve *genel kullanıma sunulmuştur*.
+
+EDR ilkesini Configuration Manager desteklenen bir sürümünden cihazlarla kullanmak için, [Configuration Manager Için kiracı eklemeyi](../../configmgr/tenant-attach/device-sync-actions.md)yapılandırın. Kiracı ekleme yapılandırmasını tamamladıktan sonra, Microsoft Defender Gelişmiş tehdit koruması 'na (Microsoft Defender ATP) Configuration Manager tarafından yönetilen cihazları eklemek için EDR ilkeleri dağıtabilirsiniz.
+
+#### <a name="bluetooth-settings-are-available-in-device-control-profiles-for-endpoint-security-attack-surface-reduction-policy---7032084-----"></a>Endpoint Security saldırı yüzeyi Azaltma ilkesi için cihaz denetim profillerinde Bluetooth ayarları bulunur <!--7032084   -->
+Windows 10 cihazlarında Bluetooth 'u, *uç nokta güvenliği saldırı yüzeyi Azaltma ilkesi*için [cihaz denetim profiline](../protect/endpoint-security-asr-profile-settings.md#device-control-profile) ekledik.  Bunlar, cihaz *yapılandırması*için cihaz kısıtlama profillerinde kullanılabilir olanlarla aynı ayarlardır.
+
+#### <a name="manage-source-locations-for-definition-updates-with-endpoint-security-antivirus-policy-for-windows-10-devices---6347801-----"></a>Windows 10 cihazları için Endpoint Security virüsten koruma ilkesiyle birlikte tanım güncelleştirmelerinin kaynak konumlarını yönetme<!-- 6347801   -->  
+[Windows 10 cihazları için Endpoint Security virüsten koruma Ilkesinin](../protect/antivirus-microsoft-defender-settings-windows.md#updates) *güncelleştirmeler* kategorisine, cihazların güncelleştirme tanımlarını alma biçimini yönetmenize yardımcı olabilecek iki yeni ayar ekledik:
+
+- *Tanım güncelleştirmelerini indirmek için dosya paylaşımlarını tanımlayın*
+- *Tanım güncelleştirmelerini indirmek için kaynak sırasını tanımlayın*
+
+Yeni ayarlarla, tanım güncelleştirmeleri için kaynak konumları indirme olarak UNC dosya paylaşımları ekleyebilir ve farklı kaynak konumlarına hangi sırada bağlantı kurulacağınızı tanımlayabilirsiniz.
+
+#### <a name="improved-security-baselines-node---7433136------"></a>Geliştirilmiş güvenlik temelleri düğümü<!-- 7433136    -->
+Microsoft Endpoint Manager Yönetim merkezinde [güvenlik temeli düğümünün](../protect/security-baselines.md) kullanılabilirliğini geliştirmek için bazı değişiklikler yaptık. Artık **uç nokta güvenlik**  >  **güvenliği temelleri** detayına gidin ve ardından, **profiller** bölmesi ile sunulan MDM güvenlik temeli gibi bir güvenlik taban çizgisi türü seçin. Profiller bölmesinde, bu taban çizgisi türü için oluşturduğunuz profilleri görüntüleyin.  Daha önce konsol, her zaman ayrı profiller için raporlarda bulunan ayrıntılarla eşleşen bir toplam veri toplamasını içeren bir genel bakış bölmesi sundu.
+
+Değiştirilmeden, profiller bölmesinden, bu profil özelliklerinin yanı sıra *izleyici*altında bulunan çeşitli raporları görüntülemek için detaya gitme için bir profil seçebilirsiniz.  Benzer şekilde, profillerle aynı düzeyde, dağıttığınız bu profil türünün çeşitli sürümlerini görüntülemek için hala **sürümler** ' i seçebilirsiniz. Bir sürümde detaya gitme yaptığınızda, profil raporlarına benzer şekilde raporlara de erişebilirsiniz. 
+
+#### <a name="derived-credentials-support-for-windows---4886090-----"></a>Windows için türetilmiş kimlik bilgileri desteği<!-- 4886090   -->
+Artık Windows cihazlarınızla türetilmiş kimlik bilgilerini kullanabilirsiniz. Bu, iOS/ıpados ve Android için mevcut desteğe genişletilir ve aynı türetilmiş kimlik bilgileri sağlayıcıları için kullanılabilir olacaktır:
+- Entrust Datacard
+- Intercede
+- DıŞA purebred
+
+Tek başına desteği, Wi-Fi veya VPN profillerinin kimliğini doğrulamak için türetilmiş bir kimlik bilgisinin kullanımını içerir. Windows cihazlarında, türetilmiş kimlik bilgileri, kullandığınız türetilmiş kimlik bilgisi sağlayıcısı tarafından verilen istemci uygulamasından verilir.
+
+#### <a name="manage-filevault-encryption-for-devices-that-were-encrypted-by-the-device-user-and-not-by-intune--5239424----"></a>Intune tarafından değil, cihaz kullanıcısı tarafından şifrelenen cihazlar için dosya Kasası şifrelemesini yönetme<!--5239424  -->
+Intune artık, Intune ilkesi tarafından değil [cihaz kullanıcısı tarafından şifrelenen bir macOS cihazında dosya Kasası disk şifrelemesi yönetimini varsayabilir](../protect/encrypt-devices-filevault.md#assume-management-of-filevault-on-previously-encrypted-devices).  Bu senaryo şunları gerektirir:
+- Intune 'dan, dosya kasasını sağlayan disk şifreleme ilkesini alacak olan cihaz.
+- Cihaz kullanıcısı, şifreli cihaz için kişisel kurtarma anahtarını Intune 'a yüklemek üzere Şirket Portalı Web sitesini kullanır. Anahtarı karşıya yüklemek için şifrelenmiş macOS cihazı için *Mağaza kurtarma anahtarı* seçeneğini seçeceğiz.
+
+Kullanıcı kurtarma anahtarını karşıya yükledikten sonra, Intune geçerli olduğunu doğrulamak için anahtarı döndürür. Intune artık, cihazı doğrudan şifrelemek için ilkeyi kullandığımıza göre anahtarı ve şifrelemeyi yönetebilir. Bir kullanıcının cihazını kurtarmaları gerekir, bu, aşağıdaki konumlardan herhangi bir cihaz kullanarak kurtarma anahtarına erişebilirler:   
+- Şirket Portalı web sitesi
+- İOS için Şirket Portalı App/ıpados 
+- Android için Şirket Portalı uygulaması
+- Intune uygulaması
+
+#### <a name="hide-the-personal-recovery-key-from-a-device-user-during-macos-filevault-disk-encryption----5475632--"></a>MacOS Filekasası disk şifrelemesi sırasında bir cihaz kullanıcısının kişisel kurtarma anahtarını gizle<!--  5475632-->
+MacOS Filekasası disk şifrelemesini yapılandırmak için uç nokta güvenlik ilkesi kullandığınızda, cihaz şifrelenirken *kişisel kurtarma anahtarının* görüntülenmesini engellemek için [**Kurtarma anahtarını Gizle**](../protect/endpoint-security-disk-encryption-profile-settings.md#filevault) ayarını kullanın. Şifreleme sırasında anahtarı gizleyerek, kullanıcıların cihaz şifrelemesini beklerken daha sonra yazamayacak kadar güvenli kalmasına yardımcı olabilirsiniz. 
+
+Daha sonra, kurtarma gerekliyse, Kullanıcı Intune Şirket Portalı Web sitesi, iOS/ıpados Şirket Portalı, Android Şirket Portalı veya Intune uygulaması aracılığıyla kişisel kurtarma anahtarını görüntülemek için her zaman herhangi bir cihazı kullanabilir.
+
+#### <a name="improved-view-of-security-baseline-details-for-devices---5536846----"></a>Cihazlar için güvenlik temeli ayrıntılarının geliştirilmiş görünümü<!-- 5536846  -->
+Artık, cihaza uygulanan güvenlik temellerine yönelik ayar ayrıntılarını görüntülemek için bir cihazın ayrıntılarında ayrıntıya gidebilirsiniz. Ayarlar, ayarı kategorisi, ayar adı ve durumu içeren basit, düz bir liste içinde görüntülenir. Daha fazla bilgi için bkz. [cihaz başına Endpoint Security yapılandırmasını görüntüleme](../protect/security-baselines-monitor.md#view-endpoint-security-configurations-per-device).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="monitor-and-troubleshoot"></a>İzleme ve sorun giderme
+
+#### <a name="device-compliance-logs-now-in-english--6014904----"></a>Cihaz uyumluluk günlükleri artık Ingilizce olarak<!--6014904  -->
+Intune Devicekarmaşık kuruluş günlükleri daha önce yalnızca Karmaşıkstate, OwnerType ve DeviceHealthThreatLevel için numaralandırmalar içeriyordu. Artık bu günlüklerde sütunlarda Ingilizce bilgiler vardır.
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="role-based-access-control"></a>Rol tabanlı erişim denetimi
+
+#### <a name="assign-profile-and-update-profile-permission-changes--7177586-idready-wnready-wnstaged--"></a>Profil ata ve profili Güncelleştir izin değişiklikleri<!--7177586 idready wnready wnstaged-->
+Otomatik cihaz kayıt akışı için profil atama ve güncelleştirme profili için rol tabanlı erişim denetimi izinleri değişti:
+
+Profil ata: Yöneticiler bu izinle profiller ve otomatik cihaz kaydı için bir belirtece varsayılan bir profil atar.
+
+Güncelleştirme profili: Bu izne sahip yöneticiler, yalnızca otomatik cihaz kaydı için mevcut profilleri güncelleştirebilir.
+
+Bu rolleri görmek için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **kiracı yönetim**  >  **rolleri**  >  **tüm roller**  >  **Create**  >  **izin**  >  **rolleri**oluşturma ' ya gidin.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="scripting"></a>Betik Oluşturma
+
+#### <a name="additional-data-warehouse-v10-properties---6125732-wnready---"></a>Ek veri ambarı v 1.0 özellikleri<!-- 6125732 wnready -->
+Intune veri ambarı v 1.0 kullanılarak ek özellikler mevcuttur. Aşağıdaki özellikler artık [cihazlar](../developer/reports-ref-devices.md#devices) varlığı aracılığıyla kullanıma sunulmuştur:
+- `ethernetMacAddress`-Bu cihazın benzersiz ağ tanımlayıcısı.
+- `office365Version`-Cihaza yüklü Office 365 sürümü.
+
+Aşağıdaki özellikler artık [Devicepropertygeçmişin](../developer/reports-ref-devices.md#devicepropertyhistories) varlığı aracılığıyla kullanıma sunulmuştur:
+- `physicalMemoryInBytes`-Bayt cinsinden fiziksel bellek.
+- `totalStorageSpaceInBytes`-Bayt cinsinden toplam depolama kapasitesi.
+
+Daha fazla bilgi için bkz. [Microsoft Intune veri ambarı API 'si](../developer/reports-nav-intune-data-warehouse.md).
+
+<!-- ########################## -->
+## <a name="week-of-july-06-2020"></a>06 Temmuz 2020 haftası
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Uygulama yönetimi
 
 #### <a name="update-to-device-icons-in-company-portal-and-intune-apps-on-android---6057023---"></a>Android 'de Şirket Portalı ve Intune uygulamalarında cihaz simgelerine güncelleştirme<!-- 6057023 -->
 Android cihazlarda Şirket Portalı ve Intune uygulamalarındaki cihaz simgelerini, daha modern bir görünüm oluşturmak ve Microsoft 'un akıcı tasarım sistemiyle uyum sağlamak için güncelleştirdik. İlgili bilgiler için bkz. [iOS/ıpados ve macOS için şirket portalı App 'teki simgelere güncelleştirme](../fundamentals/whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-). 
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-enrollment"></a>Cihaz kaydı
+
+#### <a name="ios-company-portal-will-support-apples-automated-device-enrollment-without-user-affinity---7282707---"></a>iOS Şirket Portalı, Apple 'ın Kullanıcı benzeşimi olmadan otomatik cihaz kaydını destekleyecektir<!-- 7282707 --> 
+İOS Şirket Portalı, artık Apple 'ın otomatik cihaz kaydı kullanılarak kaydedilmiş cihazlarda atanmış bir Kullanıcı gerekmeden desteklenmektedir. Son Kullanıcı iOS Şirket Portalı, cihaz benzeşimi olmadan kaydedilen bir iOS/ıpados cihazında birincil kullanıcı olarak kurmak için oturum açabilir. Otomatik cihaz kaydı hakkında daha fazla bilgi için bkz. [Apple 'ın otomatik cihaz kaydı Ile iOS/ıpados cihazlarını otomatik olarak kaydetme](../enrollment/device-enrollment-program-enroll-ios.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-management"></a>Cihaz yönetimi
 
 #### <a name="tenant-attach-configmgr-client-details-in-the-admin-center-preview---7552762---"></a>Kiracı iliştirme: Yönetim merkezinde ConfigMgr istemci ayrıntıları (Önizleme)<!-- 7552762 -->
@@ -76,6 +263,8 @@ Android cihazlarda Şirket Portalı ve Intune uygulamalarındaki cihaz simgeleri
 Artık Microsoft Endpoint Manager Yönetim Merkezi 'nde belirli bir cihaz için Koleksiyonlar, sınır grubu üyeliği ve gerçek zamanlı istemci bilgilerini içeren ConfigMgr istemci ayrıntılarını görebilirsiniz. Daha fazla bilgi için bkz. [kiracı iliştirme: ConfigMgr istemci ayrıntıları Yönetim Merkezi (Önizleme)](../../configmgr/tenant-attach/client-details.md).
 
 ## <a name="week-of-june-22-2020"></a>22 Haziran 2020 haftası
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Uygulama yönetimi
 
 #### <a name="newly-available-protected-apps-for-intune---7248952---"></a>Intune için yeni kullanılabilir korumalı uygulamalar<!-- 7248952 -->
@@ -87,6 +276,7 @@ Aşağıdaki korumalı uygulamalar artık kullanılabilir:
 
 Korumalı uygulamalar hakkında daha fazla bilgi için bkz. [Microsoft Intune korumalı uygulamalar](../apps/apps-supported-intune-apps.md).
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="monitor-and-troubleshoot"></a>İzleme ve sorun giderme
 
 #### <a name="use-endpoint-analytics-to-improve-user-productivity-and-reduce-it-support-costs---5653063---"></a>Kullanıcı üretkenliğini artırmak ve BT destek maliyetlerini azaltmak için Endpoint Analytics 'i kullanın<!-- 5653063 --> 
@@ -95,13 +285,14 @@ Sonraki hafta boyunca bu özellik kullanıma sunulacaktır. Kullanıcı üretken
 #### <a name="proactively-remediate-end-user-device-issues-using-script-packages---5933328---"></a>Komut dosyası paketlerini kullanarak Son Kullanıcı cihaz sorunlarını önceden düzelt<!-- 5933328 -->
 Kuruluşunuzdaki en önemli destek sorunlarını önceden bulmak ve gidermek için, Son Kullanıcı cihazlarında betik paketleri oluşturup çalıştırabilirsiniz. Betik paketlerinin dağıtımı, destek çağrılarını azaltmanıza yardımcı olur. Kendi betik paketlerinizi oluşturmayı seçin veya yazdığımız ve destek biletlerini azaltmak için ortamımızda kullandığımız komut dosyası paketlerinden birini dağıtın. Intune, dağıtılan betik paketlerinizin durumunu görmenizi ve algılama ve düzeltme sonuçlarını izlemenizi sağlar. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **raporlar**  >  **Endpoint Analytics**  >  **proaktif**düzeltmeler ' i seçin. Daha fazla bilgi için bkz. [proaktif](https://aka.ms/uea_prs)düzeltmeler.
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-security"></a>Cihaz güvenliği
 
 #### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>Android için uyumluluk ilkelerinde Microsoft Defender ATP kullanma<!-- 4425686  -->
 
 Artık Intune 'U [Android cihazları Microsoft Defender Gelişmiş tehdit koruması](../protect/advanced-threat-protection.md#onboard-android-devices) (MICROSOFTDEFENDER ATP) uygulamasına eklemek için kullanabilirsiniz. Kayıtlı cihazlarınız eklendi olduktan sonra, Android için uyumluluk ilklarınız Microsoft Defender ATP 'den *tehdit düzeyi* sinyallerini kullanabilir. Bunlar, daha önce Windows 10 cihazlarında kullanabileceğiniz sinyallerdir.
 
-#### <a name="configure-defender-atp-web-protection-for-android-devices---6185563-wnready---"></a>Android cihazlar için Defender ATP Web korumasını yapılandırma<!-- 6185563 WNReady -->
+#### <a name="configure-defender-atp-web-protection-for-android-devices---6185563----"></a>Android cihazlar için Defender ATP Web korumasını yapılandırma<!-- 6185563  -->
 
 Android cihazlar için Microsoft Defender Gelişmiş tehdit koruması 'nı (Microsoft Defender ATP) kullandığınızda, [Microsoft Defender ATP Web koruması](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android) 'nı, kimlik avı taraması özelliğini devre dışı bırakmak için yapılandırabilir veya taramanın VPN kullanmasını engelleyebilirsiniz.
 
@@ -110,6 +301,7 @@ Android cihazınızın Intune 'a nasıl oluşturulduğuna bağlı olarak, aşağ
 - Android Cihaz Yöneticisi-Web Koruması özelliğini devre dışı bırakmak veya taramalar sırasında yalnızca VPN 'lerin kullanımını devre dışı bırakmak için özel OMA-URI ayarlarını kullanın.
 - Android kurumsal iş profili-tüm Web koruması yeteneklerini devre dışı bırakmak için bir uygulama yapılandırma profili ve yapılandırma Tasarımcısı kullanın.
 
+<!-- ########################## -->
 ## <a name="week-of-june-15-2020--2006-service-release"></a>15 Haziran 2020 (2006 hizmet sürümü) haftası
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -289,7 +481,7 @@ Bu destek hakkında daha fazla bilgi için Exchange belgelerindeki [iOS ve Andro
 Uyumsuzluk için e-posta bildirimleri göndermek üzere [bir bildirim iletisi şablonu yapılandırdığınızda](../protect/actions-for-noncompliance.md#create-a-notification-message-template) , Şirket portalı Web sitenizin bağlantısını otomatik olarak eklemek için yeni ayar **Şirket portalı Web sitesi bağlantısını** kullanın. Bu seçenek *etkin*olarak ayarlandığında, bu şablona dayalı e-posta alan uyumlu olmayan cihazlara sahip kullanıcılar, cihazlarının neden uyumlu olmadığı hakkında daha fazla bilgi edinmek için bir Web sitesi açmak üzere bağlantıyı kullanabilir. 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="licensing"></a>Lisans
+### <a name="licensing"></a>Lisanslama
 
 #### <a name="admins-no-longer-require-an-intune-license-to-access-microsoft-endpoint-manager-admin-console--1335430---"></a>Yöneticiler artık Microsoft Endpoint Manager Yönetici konsoluna erişmek için bir Intune lisansı gerektirmez<!--1335430 -->
 Artık, yöneticilerin MEM Yönetici Konsolu ve sorgu grafiği API 'Lerine erişmesi için Intune lisans gereksinimini kaldıran kiracı genelinde bir geçiş ayarlayabilirsiniz. Lisans gereksinimini kaldırdıktan sonra, bunu hiçbir şekilde yeniden devreye sokmanız gerekir. 

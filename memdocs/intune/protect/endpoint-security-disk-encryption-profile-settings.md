@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: db23ee1742934e8545c03c529d6a05c13cc59f1a
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: 3760aa9820495db6c2460bf2e6d2e9a08d705a10
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633277"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462040"
 ---
 # <a name="disk-encryption-policy-settings-for-endpoint-security-in-intune"></a>Intune 'da uç nokta güvenliği için disk şifreleme ilkesi ayarları
 
@@ -29,7 +29,7 @@ Bir [uç nokta güvenlik ilkesinin](../protect/endpoint-security-policy.md)parç
 
 Desteklenen platformlar ve profiller:
 
-- **MacOS**:
+- **macOS**:
   - Profil: **Dosya Kasası**
 - **Windows 10 ve üzeri**:
   - Profil: **BitLocker**
@@ -66,6 +66,11 @@ Desteklenen platformlar ve profiller:
     Kullanıcıdan oturum açtıklarında dosya kasasını etkinleştirdikleri isteyen kullanıcıya sorma işlemini engelleyin. Devre dışı olarak ayarlandığında, oturum kapatma istemi devre dışı bırakılır ve bunun yerine kullanıcıya oturum açtıklarında sorulur.
     - **Yapılandırılmadı** (*varsayılan*)
     - **Evet** -oturum kapatma sırasında görünen dosya kasasını etkinleştirmek için istemi devre dışı bırakın.
+
+  - **Kurtarma anahtarını gizle**  
+     Şifreleme sırasında macOS cihazının kullanıcısının kişisel kurtarma anahtarını gizleyin. Disk şifrelendikten sonra, Kullanıcı Intune Şirket Portalı Web sitesi veya şirket portalı uygulaması aracılığıyla kişisel kurtarma anahtarını görüntülemek için herhangi bir cihazı kullanabilir.
+    - **Yapılandırılmadı** (*varsayılan*)
+    - **Evet** -cihaz şifreleme sırasında kişisel kurtarma anahtarını gizleyin.
 
 ## <a name="bitlocker"></a>BitLocker
 

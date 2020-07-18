@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 077318d4b55c7e1f2a83864aba51e2282630b9fb
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: cb1d4917e94528dc64fa336df8eacc085a4d685c
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990140"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461989"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Microsoft Intune'da Zebra Mobility Uzantılarını içeren Zebra cihazlarını kullanma ve yönetme
 
@@ -117,7 +117,7 @@ StageNow'da profil oluştururken, son adımda **Export to MDM** öğesini seçin
   Öte yandan bu değişiklikleri almak için Intune'da aşağıdakiler gibi yerleşik özellikler de kullanılabilir:
 
   - Uygulamaları [eklemek](../apps/apps-add.md), [dağıtmak](../apps/apps-deploy.md), güncelleştirmek ve [izlemek](../apps/apps-monitor.md) için uygulama yönetimi özellikleri.
-  - Android Kurumsal çalıştıran cihazlarda [sistem ve uygulama güncelleştirmelerini](device-restrictions-android-for-work.md#device-owner-only) yönetme
+  - Android Kurumsal çalıştıran cihazlarda [sistem ve uygulama güncelleştirmelerini](device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile) yönetme
 
 Dosyayı test ettiğinizde, sonraki adım Intune'u kullanarak profili cihazlara dağıtmaktır.
 

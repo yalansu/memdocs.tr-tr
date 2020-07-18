@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1f2a6955a430427fe3f4e2791da6bbaecdd90523
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: cdfec1d82d68e97544172c56cecc416846b4a0f6
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353589"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460493"
 ---
 # <a name="use-filevault-disk-encryption-for--macos-with-intune"></a>Intune ile macOS için dosya Kasası disk şifrelemesini kullanma
 
@@ -45,6 +45,8 @@ Windows 10 için BitLocker 'ı yönetmek için bkz. [BitLocker Ilkesini yönetme
 
 Cihazları dosya kasası ile şifrelemek için bir ilke oluşturduktan sonra, ilke iki aşamada cihazlara uygulanır. İlk olarak cihaz, Intune 'un kurtarma anahtarını alıp yedeklemesini sağlamak için hazır hale getirilir. Bu eyleme Emanet denir. Anahtar alındıktan sonra, disk şifrelemesi başlayabilir.
 
+Bir cihazı dosya kasası ile şifrelemek için Intune ilkesi kullanmanın yanı sıra, Intune ['un cihaz Kullanıcı tarafından şifrelendiğinde dosya kasasının yönetimini varsaymasını](#assume-management-of-filevault-on-previously-encrypted-devices)sağlamak için ilkeyi yönetilen bir cihaza dağıtabilirsiniz. Bu senaryo, cihazın Intune 'dan dosya Kasası ilkesi almasını ve ardından kullanıcının kişisel kurtarma anahtarını Intune 'a yüklemesini gerektirir.
+
 Dosya kasasının bir cihazda çalışması için Kullanıcı onaylı cihaz kaydı gereklidir. Kullanıcının kaydın Kullanıcı tarafından onaylanabilmesi için sistem tercihlerinden yönetim profilini el ile onaylaması gerekir.
 
 ## <a name="permissions-to-manage-filevault"></a>Dosya kasasını yönetme izinleri
@@ -59,38 +61,6 @@ Aşağıda, **uzak görevler** kategorisinin bir parçası olan ve izin veren ye
 
 - **Filekasa anahtarını döndür**
   - Yardım Masası Işleci
-
-## <a name="create-endpoint-security-policy-for-filevault"></a>Filekasası için uç nokta güvenlik ilkesi oluşturma
-
-1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-
-2. **Endpoint Security**  >  **disk şifrelemesi**  >  **ilke oluştur**' u seçin.
-
-3. **Temel bilgiler** sayfasında, aşağıdaki özellikleri girin ve ardından **İleri**' yi seçin.
-   - **Platform**: MacOS
-   - **Profil**: dosya Kasası
-
-   ![Filekasa profilini seçin](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
-
-4. **Yapılandırma ayarları** sayfasında:
-   1. *Filekasasını etkinleştir* ayarını **Evet**olarak belirleyin.
-   2. *Kurtarma anahtarı türü*Için yalnızca **kişisel kurtarma anahtarı** desteklenir.
-   3. Gereksinimlerinizi karşılayacak ek ayarları yapılandırın.
-
-   Kullanıcılara cihazlarıyla ilgili kurtarma anahtarını alma hakkında yardım almak için bir ileti eklemeyi düşünün. Bu bilgiler, kişisel kurtarma anahtarı döndürme ayarını kullandığınızda kullanıcılarınız için yararlı olabilir. Bu, düzenli aralıklarla otomatik olarak yeni bir kurtarma anahtarı oluşturabilen bir cihaz için kullanılabilir.
-
-   Örneğin: kayıp veya son döndürülen kurtarma anahtarını almak Için herhangi bir cihazdan Intune Şirket Portalı Web sitesinde oturum açın. Portalda cihazlar ' a gidin ve Filekasasının etkinleştirildiği cihazı seçin ve ardından *Kurtarma anahtarını al*' ı seçin. Geçerli kurtarma anahtarı görüntülenir.
-
-5. Ayarları yapılandırmayı tamamladıktan **sonra ileri**' yi seçin.
-
-6. Scope **(Etiketler)** sayfasında kapsam etiketleri **Seç** ' i seçerek profile kapsam etiketleri atayın.
-
-   Devam etmek için **İleri**’yi seçin.
-
-7. **Atamalar** sayfasında, bu profili alacak grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. Kullanıcı ve cihaz profilleri atama.
-**İleri**’yi seçin.
-
-8. **Gözden geçir + oluştur** sayfasında, Işiniz bittiğinde **Oluştur**' u seçin. Oluşturduğunuz profilin ilke türünü seçtiğinizde yeni profil listede görüntülenir.
 
 ## <a name="create-device-configuration-policy-for-filevault"></a>Filekasası için cihaz yapılandırma ilkesi oluşturma
 
@@ -121,7 +91,7 @@ Aşağıda, **uzak görevler** kategorisinin bir parçası olan ve izin veren ye
 
    - *Kurtarma anahtarı türü*için **kişisel anahtar**' ı seçin.
 
-   - *Kişisel kurtarma anahtarının Emanet konumu açıklaması*için, kullanıcılara cihazının kurtarma anahtarını alma hakkında rehberlik eden bir ileti ekleyin. Bu bilgiler, kişisel kurtarma anahtarı döndürme ayarını kullandığınızda kullanıcılarınız için yararlı olabilir. Bu, düzenli aralıklarla otomatik olarak yeni bir kurtarma anahtarı oluşturabilen bir cihaz için kullanılabilir.
+   - *Kişisel kurtarma anahtarının Emanet konumu açıklaması*için, kullanıcılara cihazının [Kurtarma anahtarını alma](#retrieve-a-personal-recovery-key) hakkında rehberlik eden bir ileti ekleyin. Bu bilgiler, kişisel kurtarma anahtarı döndürme ayarını kullandığınızda kullanıcılarınız için yararlı olabilir. Bu, düzenli aralıklarla otomatik olarak yeni bir kurtarma anahtarı oluşturabilen bir cihaz için kullanılabilir.
 
      Örneğin: kayıp veya son döndürülen kurtarma anahtarını almak Için herhangi bir cihazdan Intune Şirket Portalı Web sitesinde oturum açın. Portalda *cihazlar* ' a gidin ve filekasasının etkinleştirildiği cihazı seçin ve ardından *Kurtarma anahtarını al*' ı seçin. Geçerli kurtarma anahtarı görüntülenir.
 
@@ -129,12 +99,44 @@ Aşağıda, **uzak görevler** kategorisinin bir parçası olan ve izin veren ye
 
 7. Scope **(Etiketler)** sayfasında kapsam etiketleri **Seç** ' i seçerek profile kapsam etiketleri atayın.
 
-   Devam etmek için **İleri**’yi seçin.
+   Devam etmek için **İleri** seçeneğini belirleyin.
 
 8. **Atamalar** sayfasında, bu profili alacak grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. Kullanıcı ve cihaz profilleri atama.
 **İleri**’yi seçin.
 
 9. **Gözden geçir + oluştur** sayfasında, Işiniz bittiğinde **Oluştur**' u seçin. Oluşturduğunuz profilin ilke türünü seçtiğinizde yeni profil listede görüntülenir.
+
+## <a name="create-endpoint-security-policy-for-filevault"></a>Filekasası için uç nokta güvenlik ilkesi oluşturma
+
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
+
+2. **Endpoint Security**  >  **disk şifrelemesi**  >  **ilke oluştur**' u seçin.
+
+3. **Temel bilgiler** sayfasında, aşağıdaki özellikleri girin ve ardından **İleri**' yi seçin.
+   - **Platform**: MacOS
+   - **Profil**: dosya Kasası
+
+   ![Filekasa profilini seçin](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
+
+4. **Yapılandırma ayarları** sayfasında:
+   1. *Filekasasını etkinleştir* ayarını **Evet**olarak belirleyin.
+   2. *Kurtarma anahtarı türü*Için yalnızca **kişisel kurtarma anahtarı** desteklenir.
+   3. Gereksinimlerinizi karşılayacak ek ayarları yapılandırın.
+
+   Kullanıcılara cihazlarıyla ilgili [Kurtarma anahtarını alma](#retrieve-a-personal-recovery-key) hakkında yardım almak için bir ileti eklemeyi düşünün. Bu bilgiler, kişisel kurtarma anahtarı döndürme ayarını kullandığınızda kullanıcılarınız için yararlı olabilir. Bu, düzenli aralıklarla otomatik olarak yeni bir kurtarma anahtarı oluşturabilen bir cihaz için kullanılabilir.
+
+   Örneğin: kayıp veya son döndürülen kurtarma anahtarını almak Için herhangi bir cihazdan Intune Şirket Portalı Web sitesinde oturum açın. Portalda cihazlar ' a gidin ve Filekasasının etkinleştirildiği cihazı seçin ve ardından *Kurtarma anahtarını al*' ı seçin. Geçerli kurtarma anahtarı görüntülenir.
+
+5. Ayarları yapılandırmayı tamamladıktan **sonra ileri**' yi seçin.
+
+6. Scope **(Etiketler)** sayfasında kapsam etiketleri **Seç** ' i seçerek profile kapsam etiketleri atayın.
+
+   Devam etmek için **İleri** seçeneğini belirleyin.
+
+7. **Atamalar** sayfasında, bu profili alacak grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. Kullanıcı ve cihaz profilleri atama.
+**İleri**’yi seçin.
+
+8. **Gözden geçir + oluştur** sayfasında, Işiniz bittiğinde **Oluştur**' u seçin. Oluşturduğunuz profilin ilke türünü seçtiğinizde yeni profil listede görüntülenir.
 
 ## <a name="manage-filevault"></a>Dosya kasasını yönetme
 
@@ -144,17 +146,60 @@ Intune, bir macOS cihazını dosya kasası ile ilk kez şifrele, kişisel bir ku
 
 Intune, yönetilen cihazlarda kişisel kurtarma anahtarının bir kopyasını sağlayabilir. Anahtarların Emanet, Intune yöneticilerinin cihazları korumaya yardımcı olmak için anahtarları döndürmesine ve kullanıcıların kayıp veya döndürülmüş bir kişisel kurtarma anahtarını kurtarmasına olanak sağlar.
 
-Intune, bir macOS cihazını Filekasası ile şifreledikten sonra:
+Intune, Intune ilkesi bir cihazı şifrelediği veya bir kullanıcı el ile şifrelediği cihaz için kurtarma anahtarını karşıya yükledikten sonra bir kurtarma anahtarı gerektirir.
 
-- Yöneticiler, Intune şifreleme raporunu kullanarak Filekasasını kurtarma anahtarlarını görüntüleyebilir ve yönetebilir.
-- Kullanıcılar cihazdaki Web Şirket Portalı kişisel kurtarma anahtarını görüntüleyebilir. Web Şirket Portalı içinden şifrelenmiş macOS cihazını seçin ve ardından "kurtarma anahtarını al" seçeneğini bir uzak cihaz eylemi olarak belirleyin.
+Intune tamamlandıktan sonra kişisel kurtarma anahtarı:
+
+- Yöneticiler, Intune şifreleme raporunu kullanarak yönetilen macOS cihazlarınızın dosya Kasası kurtarma anahtarlarını yönetebilir ve döndürebilir.
+- Yöneticiler, yalnızca *Şirket*olarak Işaretlenmiş yönetilen MacOS cihazları için kişisel kurtarma anahtarını görüntüleyebilir. Kişisel cihazlar için kurtarma anahtarını görüntüleyeamazlar.
+- Kullanıcılar [, kişisel kurtarma anahtarlarını desteklenen bir konumdan](#retrieve-a-personal-recovery-key)görüntüleyebilir ve alabilir. Örneğin, Şirket Portalı Web sitesinden Kullanıcı, *Kurtarma anahtarını* uzak cihaz eylemi olarak almayı seçebilir.
+
+### <a name="assume-management-of-filevault-on-previously-encrypted-devices"></a>Daha önce şifrelenen cihazlarda dosya kasasının yönetimini varsay
+
+Intune, Intune ilkeleri kullanılarak şifrelenen macOS cihazlarında dosya Kasası disk şifrelemesini yönetebilir. Intune, Intune ilkesi aracılığıyla değil, cihaz kullanıcıları tarafından şifrelenen cihazlarda dosya kasasının yönetimini de alabilir.
+
+#### <a name="prerequisites-to-assume-management-of-filevault"></a>Dosya kasasının yönetimini varsayma önkoşulları
+
+Daha önce şifrelenen aygıtın yönetimini varsaymak için aşağıdaki koşulların karşılanması gerekir:
+
+1. **Cihaza bir dosya Kasası Ilkesi dağıtın**. Daha önce şifrelenen cihaz, dosya Kasası disk şifrelemesini etkinleştiren bir Intune ilkesi almalıdır.
+
+   Bu senaryoda ilke, cihazın şifresini çözemez veya yeniden şifrelemez. Bunun yerine, ilke Intune 'un cihazda zaten etkinleştirilmiş olan dosya Kasası şifrelemesinin yönetimini varsaymasını sağlar.  Cihazları dosya kasası ile şifrelemek için uç nokta güvenlik diski şifreleme ilkesi veya cihaz yapılandırma uç nokta koruma ilkesini kullanabilirsiniz.
+
+   Bkz. [Ilke oluşturma ve dağıtma](#create-device-configuration-policy-for-filevault).
+
+2. **Kullanıcılar kişisel kurtarma anahtarını Intune 'a yükler**.  Cihaz, dosya Kasası ilkesini aldıktan sonra, kişisel kurtarma anahtarını Intune 'a yüklemek üzere cihazı şifrelenen cihaz kullanıcısını yönlendirin. Anahtar başarıyla girilirse, Intune, dosya Kasası şifrelemesinin yönetimini varsayar ve cihaz ve Kullanıcı için yeni bir kişisel kurtarma anahtarı oluşturulur.
+
+   > [!IMPORTANT]
+   > Intune, şifrelemeyi tamamlaması için kullanıcıları kişisel kurtarma anahtarını karşıya yüklemesi gerektiğini uyarmaz. Bunun yerine, normal BT iletişim kanallarınızı kullanarak macOS cihazını daha önce, kendi kişisel kurtarma anahtarını Intune 'a yüklememeleri gereken Filekasası ile şifrelenmiş kullanıcılar için uyarır.  
+   >
+   > Uyumluluk ilkenize bağlı olarak, Intune cihazdaki dosya Kasası şifrelemesini başarıyla yönetilene kadar cihazların kurumsal kaynaklara erişimi engellenebilir.
+
+#### <a name="upload-a-personal-recovery-key"></a>Kişisel kurtarma anahtarını karşıya yükle
+
+Intune 'un daha önce şifrelenen bir cihazda dosya kasasını yönetmesine olanak tanımak için, cihaz kullanıcısının cihaz için geçerli kişisel kurtarma anahtarını Intune 'a yüklemesi için Şirket Portalı Web sitesini kullanması gerekir.  Karşıya yükleme sonrasında Intune, daha sonra gerektiğinde daha sonra kurtarmak üzere Intune tarafından depolanan yeni bir kişisel kurtarma anahtarı oluşturmak için anahtarı döndürür.
+
+Şirket Portalı Web sitesinde Kullanıcı, şifreli macOS cihazını bulur ve **Mağaza kurtarma anahtarı**seçeneğini belirler. Kişisel kurtarma anahtarı girildiğinde, Intune yeni bir anahtar oluşturmak için anahtarı döndürmeye çalışır. Döndürme, girilen anahtarın o cihaz için doğru olduğunu doğrulamak için yapılır. Bu yeni anahtar daha sonra Intune tarafından ileride kullanılmak üzere depolanır ve yönetilir ve Kullanıcı cihazlarını kurtarmak zorunda olmalıdır.
+
+Anahtar döndürme başarısız olursa, cihaz dosya Kasası ilkesini işlemedi veya girilen anahtar cihaz için doğru değil.
+
+Başarılı döndürmeden sonra, Kullanıcı, [desteklenen bir konumdan yeni kişisel kurtarma anahtarlarını alabilir](#retrieve-a-personal-recovery-key).
+
+ [Kişisel kurtarma anahtarının karşıya yüklenmesi için Son Kullanıcı içeriğini](../user-help/store-recovery-key.md)görüntüleyin.
 
 > [!IMPORTANT]
-> Intune tarafından değil, kullanıcılar tarafından şifrelenen cihazlar Intune tarafından yönetilemez. Bu, Intune 'un bu cihazların kişisel kurtarmasını ve kurtarma anahtarı döndürmesini yönetemeyeceği anlamına gelir. Intune 'un cihaz için dosya kasasını ve kurtarma anahtarlarını yönetebilmesi için, kullanıcının cihazının şifresini çözmesine ve ardından Intune 'un cihazı şifrelemesine izin vermelidir.
+> Intune tarafından değil, bir kullanıcı tarafından şifrelenen bir cihaz için, Intune bu cihaz bir dosya Kasası ilkesi alıncaya ve cihaz kullanıcısı kişisel kurtarma anahtarını başarıyla karşıya yüklemeyana kadar cihazlar Filekasası şifrelemesini yönetemez.
 
-### <a name="retrieve-personal-recovery-key"></a>Kişisel kurtarma anahtarını al
+### <a name="retrieve-a-personal-recovery-key"></a>Kişisel kurtarma anahtarını alma
 
-Intune tarafından şifrelenen bir macOS cihazı için, son kullanıcılar iOS Şirket Portalı uygulamasını, Android Şirket Portalı uygulamasını veya Android Intune uygulamasını kullanarak kişisel kurtarma anahtarını (Filekasası anahtarı) alabilir.
+Intune tarafından yönetilen bir macOS cihazında, son kullanıcılar, herhangi bir cihaz kullanarak kişisel kurtarma anahtarını (Filekasası anahtarı) aşağıdaki konumlardan alabilir:
+
+- Şirket Portalı web sitesi
+- iOS/ıpados Şirket Portalı uygulaması
+- Android Şirket Portalı uygulaması
+- Intune uygulaması
+
+Yöneticiler, bir *Kurumsal* cihaz olarak Işaretlenmiş şifreli MacOS cihazları için kişisel kurtarma anahtarlarını görüntüleyebilir. Kişisel bir cihaz için kurtarma anahtarını görüntüleyemez.
 
 Kişisel kurtarma anahtarına sahip olan cihaz Intune 'a kaydolmalıdır ve Intune aracılığıyla Filekasasıyla şifrelenir. İOS Şirket Portalı uygulamasını, Android Şirket Portalı uygulamasını, Android Intune uygulamasını veya Şirket Portalı Web sitesini kullanarak, Kullanıcı Mac cihazlarına erişmek için gereken **Filekasasını** kurtarma anahtarını görebilir.
 
