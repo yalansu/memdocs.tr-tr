@@ -171,6 +171,7 @@
 
 ## [Intune Şirket Portalı web sitesini kullanma](using-the-intune-company-portal-website.md)
 ### [Uygulamaları yönetme](manage-apps-cpweb.md)  
+### [Kurtarma anahtarını depolama](store-recovery-key.md)
 ### [Kurtarma anahtarı alma](get-recovery-key-cpweb.md)
 ### [Cihazı uzaktan kilitleme](remote-lock-your-device-cpwebsite.md)  
 ### [Cihazı yeniden adlandırma](rename-your-device-cpwebsite.md)  

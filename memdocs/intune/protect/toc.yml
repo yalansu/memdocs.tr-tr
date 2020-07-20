@@ -52,8 +52,6 @@
       items:
         - name: Uyumluluğa genel bakış
           href: device-compliance-get-started.md
-        - name: Cihaz uyumluluğu iş ortakları
-          href: device-compliance-partners.md
         - name: İlke oluşturma
           href: create-compliance-policy.md
         - name: Konum tabanlı uyumluluk
@@ -93,6 +91,8 @@
               href: endpoint-security-account-protection-policy.md
         - name: Microsoft Defender ATP
           href: advanced-threat-protection.md
+        - name: Güvenlik duvarı kuralı geçişi
+          href: endpoint-security-firewall-rule-tool.md
         - name: Disk şifreleme
           items:
             - name: BitLocker ilkesini yönetme
