@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/03/2019
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3b7316cd496f7ae8ae97bd2d896695c0c11e156
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1a94fc1276f0b2c99a3faf32f88aad4bfc126a24
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990373"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491159"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>SCEP kullanarak Intune'da iş ortağı sertifika yetkilisi ekleme
 
@@ -101,10 +101,6 @@ Azure AD uygulamasını kaydetmek için gerekli izinlere sahip olduğunuzdan emi
    
    Azure AD 'de uygulama kayıt işlemi tamamlanmıştır.
 
-
-
-
-
 ### <a name="configure-and-deploy-a-scep-certificate-profile"></a>SCEP sertifika profilini yapılandırma ve dağıtma
 Yönetici olarak, kullanıcıları veya cihazları hedefleyecek bir SCEP sertifika profili oluşturun. Sonra, profili atayın.
 
@@ -119,15 +115,16 @@ Cihazın kaydını kaldırdığınızda veya cihazı temizlediğinizde, sertifik
 ## <a name="third-party-certification-authority-partners"></a>Üçüncü taraf kök sertifika yetkilisi iş ortakları
 Aşağıdaki üçüncü taraf sertifika yetkilileri Intune'u destekler:
 
+- [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
+- [EJBCA](https://www.ejbca.org/)
 - [Entrust Datacard](https://go.entrustdatacard.com/pki/intune/)
-- [EJBCA GitHub açık kaynak sürümü](https://github.com/agerbergt/intune-ejbca-connector)
 - [EverTrust](https://evertrust.fr/en/products/)
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
 - [Idnomıc](https://www.idnomic.com/)
-- [Sectıgo](https://sectigo.com/products)
-- [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
-- [Venafi](https://www.venafi.com/platform/enterprise-mobility)
 - [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/gluckkanja.scepman)
+- [Sectıgo](https://sectigo.com/products)
+- [Venafi](https://www.venafi.com/platform/enterprise-mobility)
+
 
 Ürününüzü Intune ile tümleştirmek isteyen bir üçüncü taraf CA'ysanız, API kılavuzunu gözden geçirin:
 

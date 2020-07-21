@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4d664d67041c4ef223f324d77efdbeb9e8a30db
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b9796df0da4974b860348bf52ef06db202219136
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986877"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491125"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Cihazları şirkete ait olarak tanımlama
 
@@ -49,10 +49,10 @@ Bu özellik aşağıdaki platformlar için desteklenir:
 
 | Platform | IMEı numaraları | Seri numaraları |
 |---|---|---|
-| Windows | Desteklenen (Windows Phone) | Desteklenmiyor |
-| iOS/macOS | Desteklenmiyor | Destekleniyor |
-| Cihaz Yöneticisi yönetilen Android OS ile v10 arasındaki | Desteklenmiyor | Desteklenmiyor |
-| Diğer Android | Desteklenmiyor | Destekleniyor |
+| Windows | Desteklenen (Windows Phone) | Desteklenmez |
+| iOS/macOS | Desteklenmiyor (aşağıda önemli kısmına bakın)  | Desteklenir |
+| Cihaz Yöneticisi yönetilen Android OS ile v10 arasındaki | Desteklenmez | Desteklenmez |
+| Diğer Android | Desteklenmez | Desteklenir |
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1f6edaf4a58d25f7aaa4c45039e84912fb901a3
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 1916004d8e61239d7de92a77769ee970cc7a3118
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461751"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565615"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Intune 'da VPN sunucularına bağlanmak için VPN profilleri oluşturma
 
@@ -49,6 +49,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
 - Check Point Capsule VPN
   - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
+  - Android kurumsal tam yönetilen ve şirkete ait iş profili: [uygulama yapılandırma Ilkesini](../apps/app-configuration-vpn-ae.md) kullanma
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -58,7 +59,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
 - Cisco AnyConnect
   - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
-  - Android Enterprise (tam olarak yönetilen ve şirkete ait iş profili)
+  - Android kurumsal tam yönetilen ve şirkete ait iş profili
   - iOS/iPadOS
   - macOS
 
@@ -67,8 +68,8 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
 
 - Citrix SSO
   - Android cihaz yöneticisi
-  - Android kurumsal iş profilleri: [uygulama yapılandırma Ilkesini](../apps/app-configuration-policies-use-android.md) kullanma
-  - Android kurumsal cihaz sahibi (tamamen yönetilen): [uygulama yapılandırma Ilkesini](../apps/app-configuration-policies-use-android.md) kullanma
+  - Android kurumsal iş profilleri: [uygulama yapılandırma Ilkesini](../apps/app-configuration-vpn-ae.md) kullanma
+  - Android kurumsal tam yönetilen ve şirkete ait iş profilleri: [uygulama yapılandırma Ilkesini](../apps/app-configuration-vpn-ae.md) kullanma
   - iOS/iPadOS
   - Windows 10
 
@@ -81,7 +82,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
 - F5 Access
   - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
-  - Android Enterprise (tam olarak yönetilen ve şirkete ait iş profili)
+  - Android kurumsal tam yönetilen ve şirkete ait iş profili
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -96,7 +97,8 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - Windows 10
 
 - Palo Alto Networks GlobalProtect
-  - Android kurumsal iş profilleri: [uygulama yapılandırma Ilkesini](../apps/app-configuration-policies-use-android.md) kullanma
+  - Android kurumsal iş profilleri: [uygulama yapılandırma Ilkesini](../apps/app-configuration-vpn-ae.md) kullanma
+  - Android kurumsal tam yönetilen ve şirkete ait iş profili: [uygulama yapılandırma Ilkesini](../apps/app-configuration-vpn-ae.md) kullanma
   - iOS/iPadOS
   - Windows 10
 
@@ -106,7 +108,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
 - Pulse Secure
   - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
-  - Android Enterprise (tam olarak yönetilen ve şirkete ait iş profili)
+  - Android kurumsal tam yönetilen ve şirkete ait iş profili
   - iOS/iPadOS
   - Windows 10
   - Windows 8.1
@@ -115,6 +117,7 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
 - SonicWall Mobile Connect
   - Android cihaz yöneticisi
   - Android kurumsal iş profilleri
+  - Android kurumsal tam yönetilen ve şirkete ait iş profili
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -122,7 +125,8 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - Windows Phone 8.1
 
 - Zscaler
-  - Android kurumsal iş profilleri: [uygulama yapılandırma Ilkesini](../apps/app-configuration-policies-use-android.md) kullanma
+  - Android kurumsal iş profilleri: [uygulama yapılandırma Ilkesini](../apps/app-configuration-vpn-ae.md) kullanma
+  - Android kurumsal tam yönetilen ve şirkete ait iş profili: [uygulama yapılandırma Ilkesini](../apps/app-configuration-vpn-ae.md) kullanma
   - iOS/iPadOS
 
 > [!IMPORTANT]
@@ -136,8 +140,8 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
 
     - **Platform**: cihazlarınızın platformunu seçin. Seçenekleriniz şunlardır:
       - **Android cihaz yöneticisi**
-      - **Android kurumsal**  >  **Yalnızca cihaz sahibi**
-      - **Android kurumsal**  >  **Yalnızca iş profili**
+      - **Android kurumsal**  >  **Tam olarak yönetilen, adanmış ve şirkete ait Iş profili**
+      - **Android kurumsal**  >  **İş profili**
       - **iOS/iPadOS**
       - **macOS**
       - **Windows 10 ve üzeri**

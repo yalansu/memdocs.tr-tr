@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,36 +18,48 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d7e3b5b9a169baf336b0d4e7d8d66b06af38061
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 717ad28625b5eac97c26bcd09a21ef34250a7d39
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79332198"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565725"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Microsoft Intune 'daki e-posta profilleriyle ilgili yaygın sorunlar ve çözümler
 
 Bazı genel e-posta profili sorunlarını gözden geçirin ve bunları nasıl giderebileceğiniz ve giderebilirim.
 
-## <a name="what-you-need-to-know"></a>Bilmeniz gerekenler
+## <a name="users-are-repeatedly-prompted-to-enter-their-password"></a>Kullanıcıların parolasını girmesi için sürekli olarak istenir
 
-- E-posta profilleri, cihazı kaydeden Kullanıcı için dağıtılır. Intune, e-posta profilini yapılandırmak için kayıt sırasında kullanıcının e-posta profilindeki Azure Active Directory (AD) özelliklerini kullanır. [Cihazlara e-posta ayarları eklemek](email-settings-configure.md) iyi bir kaynak olabilir.
-- Android Enterprise için, yönetilen Google Play Store kullanarak Gmail veya dokuz Iş için dağıtım yapın. [Yönetilen Google Play uygulamaları ekleme](../apps/apps-add-android-for-work.md) adımları listeler.
-- İOS için Microsoft Outlook/ıpados ve Android e-posta profillerini desteklemez. Bunun yerine, bir uygulama yapılandırma ilkesi dağıtın. Daha fazla bilgi için bkz. [Outlook yapılandırma ayarı](../apps/app-configuration-policies-outlook.md).
-- Cihaz gruplarına (Kullanıcı grupları değil) hedeflenmiş e-posta profilleri cihaza teslim edilemeyebilir. Cihazın birincil kullanıcısı varsa, cihaz hedefleme çalışmalıdır. E-posta profili Kullanıcı sertifikaları içeriyorsa, Kullanıcı gruplarını hedeflediğinizden emin olun.
-- Kullanıcıların e-posta profili için parolasını girmesi birkaç kez istenebilir. Bu senaryoda, e-posta profilinde başvurulan tüm sertifikaları kontrol edin. Sertifikalardan biri bir kullanıcıya hedeflenmemişse, Intune e-posta profilini dağıtmayı yeniden dener.
+Kullanıcıların e-posta profili için parolasını girmesi sürekli olarak istenir. Kullanıcı kimliğini doğrulamak ve yetkilendirmek için sertifikalar kullanılıyorsa, tüm Sertifika profillerinin atamalarını denetleyin. Genellikle, bu sertifika profilleri, cihaz gruplarına değil, Kullanıcı gruplarına atanır. Sertifika profillerinden biri bir kullanıcıya hedeflenmemişse, Intune e-posta profilini dağıtmayı yeniden denemeye devam eder.
+
+E-posta profili zinciri Kullanıcı gruplarına atanırsa, sertifika profillerinizin da Kullanıcı gruplarına atandığından emin olun.
+
+## <a name="profiles-deployed-to-device-groups-show-errors-and-latency"></a>Cihaz gruplarına dağıtılan profiller hataları ve gecikme süresini gösterir
+
+E-posta profilleri genellikle kullanıcı gruplarına atanır. Cihaz gruplarına atandıklarında bazı durumlar olabilir.
+
+- Örneğin, aygıtlara değil yalnızca Surface cihazlarına sertifika tabanlı bir e-posta profili dağıtmak istiyorsunuz. Bu senaryoda, cihaz grupları anlamlı hale gelebilir. Bu cihazların uyumsuz olarak gösterileceğini, hata döndürebileceklerini ve e-posta profillerinizi hemen alamıyoruz olabileceğini öğrenin.
+
+  Bu örnekte, e-posta profilini oluşturur ve profili cihaz gruplarına atarsınız. Cihaz yeniden başlatılır ve Kullanıcı oturum açmadan önce bir gecikme vardır. Bu gecikme sırasında, Kullanıcı gruplarına atanan PKCS sertifika profiliniz dağıtılır. Henüz Kullanıcı olmadığından, PKCS sertifika profili cihazın uyumlu olmasına neden olur. Olay Görüntüleyicisi cihazdaki hataları da gösterebilir.
+
+  Uyumluluk sağlamak için Kullanıcı cihazda oturum açar ve ilkeleri almak için Intune ile eşitlenir. Kullanıcılar el ile yeniden eşitleme yapabilir veya bir sonraki eşitlemeyi bekleyebilir.
+
+- Örneğin, dinamik grupları kullanıyorsunuz. Azure AD dinamik grupları hemen güncelleştirmezse, bu cihazlar uyumlu değil olarak gösterilebilir.
+
+Bu senaryolarda, cihaz gruplarını kullanmak için daha fazla önemli olup olmadığını veya tüm ilkeleri uyumlu olarak göstermek için daha fazla önemli olduğuna karar verirsiniz.
 
 ## <a name="device-already-has-an-email-profile-installed"></a>Cihazda zaten yüklü bir e-posta profili var
 
 Kullanıcılar Intune veya Office 365 MDM 'ye kaydolmadan önce bir e-posta profili oluşturmazsa, Intune tarafından dağıtılan e-posta profili beklendiği gibi çalışmayabilir:
 
-- **iOS/ıpados**: Intune, ana bilgisayar adı ve e-posta adresine dayalı mevcut, yinelenen bir e-posta profili Kullanıcı tarafından oluşturulan e-posta profili, Intune tarafından oluşturulan profilin dağıtımını engeller. Bu, iOS/ıpados kullanıcılarının tipik olarak bir e-posta profili oluşturması ve ardından kaydedilmesi gibi yaygın bir sorundur. Şirket Portalı uygulama, kullanıcının uyumlu olmadığını ve kullanıcıdan e-posta profilini kaldırmasını isteyebilir.
+- **iOS/ıpados**: Intune, ana bilgisayar adı ve e-posta adresine dayalı mevcut, yinelenen bir e-posta profili Kullanıcı tarafından oluşturulan e-posta profili, Intune tarafından oluşturulan profilin dağıtımını engeller. Bu senaryo, iOS/ıpados kullanıcıları tipik olarak bir e-posta profili oluştururken ve ardından kaydolmasına neden olan yaygın bir sorundur. Şirket Portalı uygulama, kullanıcının uyumlu olmadığını ve kullanıcıdan e-posta profilini kaldırmasını isteyebilir.
 
   Intune profilinin dağıtılması için kullanıcının e-posta profilini kaldırması gerekir. Bu sorunu engellemek için kullanıcılarınıza kaydolmasını ve Intune 'un e-posta profilini dağıtmasına izin vermesini isteyin. Ardından, kullanıcılar e-posta profilini oluşturabilir.
 
 - **Windows**: Intune, konak adına ve e-posta adresine bağlı olarak var olan ve yinelenen bir e-posta profili olduğunu algılar. Intune kullanıcı tarafından oluşturulmuş, var olan e-posta profilinin üzerine yazar.
 
-- **Samsung KNOX Standard**: Intune, e-posta adresini temel alan yinelenen bir e-posta hesabı tanımlar ve Intune profiliyle üzerine yazar. Kullanıcı bu hesabı yapılandırırsa, Intune profili tarafından yeniden yazılır. Bu durum, hesap yapılandırmasının üzerine yazılması durumunda kullanıcıya bazı karışıklık oluşmasına neden olabilir.
+- **Samsung KNOX Standard**: Intune, e-posta adresini temel alan yinelenen bir e-posta hesabı tanımlar ve Intune profiliyle üzerine yazar. Kullanıcı bu hesabı yapılandırırsa, Intune profili tarafından yeniden yazılır. Bu davranış, hesap yapılandırması geçersiz kılınmasına neden olan kullanıcıya bazı karışıklıklara neden olabilir.
 
 Samsung KNOX, profili tanımlamak için konak adı kullanmaz. Farklı konaklarda aynı e-posta adresine dağıtmak üzere birden çok e-posta profili oluşturmanıza gerek kalmaz, birbirlerinin üzerine yazılır.
 
@@ -62,8 +74,8 @@ Samsung KNOX için EAS profili yapılandırmanızı ve kaynak ilkeyi gözden ge�
 E-posta hesapları otomatik olarak yapılandırılmış kullanıcılar, cihazlarından resim veya resim gönderemez. Bu senaryo, **üçüncü taraf uygulamalardan e-posta gönderilmesine Izin ver** etkinleştirilmemişse gerçekleşebilir.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profillerini**seçin.
-3. E-posta profilinizi > **Özellikler** > **ayarları**' nı seçin.
+2. **Cihaz**  >  **yapılandırma profillerini**seçin.
+3. E-posta profilinizi > **Özellikler**  >  **ayarları**' nı seçin.
 4. **Etkinleştirmek**için **üçüncü taraf uygulamalardan e-posta gönderilmesine izin ver** ayarını belirleyin.
 
 ## <a name="next-steps"></a>Sonraki adımlar

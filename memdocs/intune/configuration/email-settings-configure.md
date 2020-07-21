@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7b78cc76464ddee07b53366bbeeab4e19c54be3
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 5bb01770909192b17f0e72b852e4094ff7ad3a04
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461156"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565657"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Intune kullanarak cihazlara e-posta ayarları ekleme
 
@@ -75,15 +75,35 @@ Bu makalede, Microsoft Intune’da e-posta profili oluşturma işlemi gösterili
 
     **İleri**’yi seçin.
 
-10. **Atamalar**' da, profilinizi alacak kullanıcıları veya grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
+10. **Atamalar**' da, profilinizi alacak olan kullanıcı veya cihaz gruplarını seçin. Profil atama hakkında daha fazla bilgi için bkz. [bilmeniz](#what-you-need-to-know) gerekenler (Bu makalede). [Kullanıcı ve cihaz profillerini](device-profile-assign.md) de bir miktar kılavuza atayın.
 
     **İleri**’yi seçin.
 
 11. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve profil atanır. İlke ayrıca profiller listesinde gösterilir.
 
+## <a name="what-you-need-to-know"></a>Bilmeniz gerekenler
+
+- E-posta profilleri, cihazı kaydeden Kullanıcı için dağıtılır. Intune, e-posta profilini yapılandırmak için kayıt sırasında kullanıcının e-posta profilindeki Azure Active Directory (AD) özelliklerini kullanır.
+
+- İOS için Microsoft Outlook/ıpados ve Android cihazları e-posta profillerini desteklemez. Bunun yerine, bir uygulama yapılandırma ilkesi dağıtın. Daha fazla bilgi için bkz. [Outlook yapılandırma ayarı](../apps/app-configuration-policies-outlook.md).
+
+  Android kurumsal cihazlarda, yönetilen Google Play Store kullanarak Gmail veya dokuz Iş için dağıtım yapın. [Yönetilen Google Play uygulamaları ekleme](../apps/apps-add-android-for-work.md) adımları listeler.
+
+- E-posta, kimlik ve Kullanıcı ayarlarını temel alır. E-posta profilleri, genellikle cihaz gruplarına değil Kullanıcı gruplarına atanır. Bazı hususlar:
+
+  - E-posta profili Kullanıcı sertifikaları içeriyorsa, e-posta profilini Kullanıcı gruplarına atayın. Atanmış birden çok kullanıcı sertifikası profiliniz olabilir. Bu birden çok profil, bir profil dağıtımları zinciri oluşturur. Bu profil zincirini Kullanıcı gruplarına dağıtın.
+
+    Bu zincirdeki bir profil bir cihaz grubuna dağıtılırsa, kullanıcılardan sürekli olarak parolasını girmesi istenebilir.
+
+  - Cihaz grupları genellikle birincil kullanıcı olmadığında veya kullanıcının kim olacağını bilmiyorsanız kullanılır. Cihaz gruplarına (Kullanıcı grupları değil) hedeflenmiş e-posta profilleri cihaza teslim edilemeyebilir.
+
+    Örneğin, e-posta profiliniz tüm iOS/ıpados cihazları grubunu hedefliyorsa, tüm bu cihazların bir kullanıcıya sahip olduğundan emin olun. Herhangi bir cihazda Kullanıcı yoksa, e-posta profili dağıtılamayabilir. Ardından, profili sınırlandırabilir ve bazı cihazları kaçırırdınız. Cihazın birincil kullanıcısı varsa, cihaz gruplarına dağıtım çalışması gerekir.
+
+    Cihaz gruplarını kullanmayla ilgili olası sorunlar hakkında daha fazla bilgi için bkz. [e-posta profilleriyle Ilgili genel sorunlar](troubleshoot-email-profiles-in-microsoft-intune.md).
+
 ## <a name="remove-an-email-profile"></a>E-posta profilini kaldırma
 
-E-posta profilleri kullanıcı gruplarına değil cihaz gruplarına atanır. Cihazda sadece bir e-posta profili olduğunda bile e-posta profilini kaldırmanın farklı yolları vardır:
+Cihazda sadece bir e-posta profili olduğunda bile e-posta profilini kaldırmanın farklı yolları vardır:
 
 - **Seçenek 1**: e-posta profilini açın (**cihaz**  >  **yapılandırma profilleri** > profilinizi seçin) ve **atamalar**' ı seçin. **Ekle** sekmesi, profil atanmış grupları gösterir. Gruba sağ tıklayın ve **Kaldır**’ı seçin. Değişikliklerinizi kaydetmek için **Kaydet**’e tıklamayı unutmayın.
 
@@ -95,7 +115,7 @@ E-posta profillerinin güvenliği sağlamaya yardımcı olmak için aşağıdaki
 
 - **Sertifikalar**: E-posta profilini oluştururken, daha önce Intune’da oluşturulan bir sertifika profilini seçersiniz. Bu sertifika, kimlik sertifikası olarak bilinir. Kullanıcının cihazının bağlanmasına izin verildiğini doğrulamak için güvenilir bir sertifika profilinde veya kök sertifikada kimlik doğrulaması gerçekleştirir. Güvenilir sertifika, e-posta bağlantısının kimliğini doğrulayan bilgisayara atanır. Bu bilgisayar genellikle yerel posta sunucusudur.
 
-  E-posta profiliniz için sertifika tabanlı kimlik doğrulaması kullanıyorsanız, her cihazın sertifika yetkilinizin yasallığını algılayabilmesi için e-posta profilini, sertifika profilini ve güvenilen kök profilini aynı gruplara dağıtın.
+  E-posta profiliniz için sertifika tabanlı kimlik doğrulaması kullanıyorsanız, e-posta profilini, sertifika profilini ve güvenilen kök profilini aynı gruplara dağıtın. Bu dağıtım, her cihazın sertifika yetkilinizin yasallığını tanıyabileceği şekilde sağlar.
 
   Intune’da sertifika profillerini oluşturma ve kullanma hakkında daha fazla bilgi için bkz. [Intune ile sertifikaları yapılandırma](../protect/certificates-configure.md).
 
@@ -111,7 +131,7 @@ Kullanıcı zaten bir e-posta hesabı yapılandırılmışsa e-posta profili pla
 
 - **Android Samsung KNOX Standard**: e-posta adresine bağlı olarak var olan, yinelenen bir e-posta profili algılanır ve Intune profiliyle üzerine yazılır. Android, profili tanımlamak için ana bilgisayar adı kullanmaz. Farklı ana bilgisayarlarda aynı e-posta adresini kullanarak birden çok e-posta profili oluşturmayın. Profiller birbirinin üzerine yazılır.
 
-- **Android iş profilleri**: Intune, Gmail uygulaması için bir diğeri Ise dokuz iş uygulaması için olmak üzere iki Android iş e-posta profili sağlar. Bu uygulamalar Google Play Store’da mevcuttur ve cihaz iş profilinde yüklenir. Bu uygulamalar Yinelenen profiller oluşturmaz. Her iki uygulama da Exchange bağlantılarını destekler. E-posta bağlantısını kullanmak için bu e-posta uygulamalarından birini kullanıcılarınızın cihazlarına dağıtın. Ardından uygun e-posta profilini oluşturun ve dağıtın. Her iki e-posta yapılandırma türünde Sertifika profillerinin kullanılması da dahil olmak üzere hem Iş profili hem de tam olarak yönetilen, adanmış ve şirkete ait Iş profili kayıt türleri için çalışacak Gmail ve dokuz e-posta yapılandırma profillerini kullanabilirsiniz. Iş profillerinin cihaz yapılandırması altında oluşturduğunuz Gmail veya dokuz ilke cihaza uygulanmaya devam eder ve bunları uygulama yapılandırma ilkelerine taşımak gerekli değildir. Nine Work gibi e-posta uygulamaları ücretsiz olmayabilir. Uygulamanın lisanslama ayrıntılarını gözden geçirin veya herhangi bir soru ile uygulama şirketiyle iletişim kurun. 
+- **Android iş profilleri**: Intune, Gmail uygulaması için bir diğeri Ise dokuz iş uygulaması için olmak üzere iki Android iş e-posta profili sağlar. Bu uygulamalar Google Play Store kullanılabilir ve cihaz iş profiline yüklenir. Bu uygulamalar Yinelenen profiller oluşturmaz. Her iki uygulama da Exchange bağlantılarını destekler. E-posta bağlantısını kullanmak için, bu e-posta uygulamalarından birini Kullanıcı cihazlarınıza dağıtın. Sonra, e-posta profilini oluşturun ve dağıtın. Iş profili için çalışan Gmail ve dokuz e-posta yapılandırma profillerini, her iki e-posta yapılandırma türündeki sertifika profillerini kullanma dahil olmak üzere, tam olarak yönetilen, adanmış ve şirkete ait Iş profili kayıt türlerini kullanabilirsiniz. Iş profillerine yönelik cihaz yapılandırmasında oluşturduğunuz Gmail veya dokuz ilke cihaza uygulanmaya devam eder. Bunları uygulama yapılandırma ilkelerine taşımak gerekli değildir. Dokuz Iş gibi e-posta uygulamaları ücretsiz olmayabilir. Uygulamanın lisanslama ayrıntılarını gözden geçirin veya herhangi bir soru ile uygulama şirketiyle iletişim kurun.
 
 ## <a name="changes-to-assigned-email-profiles"></a>Atanan e-posta profillerindeki değişiklikler
 

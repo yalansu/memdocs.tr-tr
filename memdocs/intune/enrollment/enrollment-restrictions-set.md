@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f807eabd2fabd51f7a7bb8eb43225a579784148c
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: 535def8c7504d8cd1ea1890c419c2f8b98d4f6f6
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746502"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491210"
 ---
 # <a name="set-enrollment-restrictions"></a>Kayıt kısıtlamalarını ayarlama
 
@@ -164,7 +164,7 @@ Aşağıdaki kişisel kayıt yöntemleri de engellenir:
 
 ## <a name="blocking-personal-iosipados-devices"></a>Kişisel iOS/ıpados cihazlarını engelleme
 Varsayılan olarak, Intune iOS/ıpados cihazlarını kişisel olarak sınıflandırır. Şirkete ait olarak sınıflandırılacak bir iOS/ıpados cihazı aşağıdaki koşullardan birini yerine getirmelidir:
-- Seri numarası veya ıMEı ile kaydedilir.
+- [Seri numarası Ile kaydedilir](corporate-identifiers-add.md).
 - Otomatik cihaz kaydı (eski adıyla Aygıt Kayıt Programı) kullanılarak kaydedildi
 
 
@@ -178,7 +178,7 @@ Cihaz kaydı, hem cihaz türü hem de cihaz sınırı kısıtlamaları için var
 
 Varsayılan kısıtlamalar dışındaki tüm kısıtlamaların önceliğini değiştirebilirsiniz.
 
-1. Azure Portal’da oturum açın.
+1. Azure portalında oturum açın.
 2. **Diğer Hizmetler**'i seçin, **Intune** için arama yapın ve ardından **Intune**'u seçin.
 3. **Cihaz kaydı**  >  **Kayıt kısıtlamaları**' nı seçin.
 4. Öncelik listesinde kısıtlamanın üzerine gelin.

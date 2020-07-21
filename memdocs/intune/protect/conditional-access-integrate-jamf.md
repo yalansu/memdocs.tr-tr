@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b70d1e8b64a9000d10e46a17b0d3cb6133088f5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 479dd1fede23c902d7be0f38ad0f16aa9f4917cf
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989133"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565509"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Uyumluluk için Jamf Pro’yu Intune ile tümleştirme
 
@@ -37,7 +37,7 @@ JAMF Pro, Intune ile tümleştiriliyorsa, macOS cihazlarındaki envanter veriler
 
 Tümleştirmeyi yapılandırdıktan sonra JAMF ve Intune 'u, JAMF tarafından yönetilen cihazlarda [koşullu erişimle uyumluluğu zorlamak üzere yapılandırırsınız](conditional-access-assign-jamf.md) .
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 ### <a name="products-and-services"></a>Ürünler ve hizmetler
 
@@ -102,7 +102,7 @@ Intune 'u JAMF Pro ile bağlamak için:
 
 9. **API Izinleri iste** sayfasında, **Intune**' u seçin ve ardından **Uygulama izinleri**' ni seçin. Yalnızca **update_device_attributes** onay kutusunu seçin ve yeni izni kaydedin.
 
-10. Sonra, **API izinleri** sayfasının sol üst kısmında ** _ \< kiracı>_ için yönetici onayı ver** ' i seçerek bu uygulamaya yönetici onayı verin. Yeni pencerede hesabınızın kimliğini yeniden kimlik doğrulaması yapmanız ve istemleri izleyerek uygulama erişimi vermeniz gerekebilir.  
+10. Sonra, **API izinleri** sayfasının sol üst kısmında **yönetici onayı _\<your tenant>_ ver** ' i seçerek bu uygulama için yönetici onayı verin. Yeni pencerede hesabınızın kimliğini yeniden kimlik doğrulaması yapmanız ve istemleri izleyerek uygulama erişimi vermeniz gerekebilir.  
 
 11. Sayfanın üst kısmındaki **Yenile** düğmesine tıklayarak sayfayı yenileyin. **Update_device_attributes** izni için yönetici onayı verildiğini doğrulayın. 
 
@@ -110,10 +110,10 @@ Intune 'u JAMF Pro ile bağlamak için:
 
    ![Başarılı izinler](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 
-   Azure AD 'de uygulama kayıt işlemi tamamlanmıştır.
+Azure AD 'de uygulama kayıt işlemi tamamlanmıştır.
 
-    > [!NOTE]
-    > İstemci parolasının süresi dolarsa, Azure 'da yeni bir istemci parolası oluşturmanız ve ardından JAMF Pro 'daki koşullu erişim verilerini güncelleştirmeniz gerekir. Azure, hizmet kesintilerini engellemek için hem eski gizli anahtar hem de yeni anahtarın etkin olmasını sağlar.
+> [!NOTE]
+> İstemci parolasının süresi dolarsa, Azure 'da yeni bir istemci parolası oluşturmanız ve ardından JAMF Pro 'daki koşullu erişim verilerini güncelleştirmeniz gerekir. Azure, hizmet kesintilerini engellemek için hem eski gizli anahtar hem de yeni anahtarın etkin olmasını sağlar.
 
 ### <a name="enable-intune-to-integrate-with-jamf-pro"></a>Jamf Pro ile tümleştirmek için Intune’u etkinleştirme
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74152e28d1c78ea911b1f4e2cca31d6382283c19
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 58c3db997e8ec5ec45f93ce466f2efd0792ca3cb
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088488"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565632"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Microsoft Intune için ağ uç noktaları  
 
@@ -51,7 +51,7 @@ Yönetilen cihazlar, **Tüm Kullanıcıların** güvenlik duvarları üzerinden 
 
 Aşağıdaki tabloda Intune istemcisinin eriştiği bağlantı noktaları ve hizmetler listelenir:
 
-|Etki Alanları    |IP adresi      |
+|Etki Alanları    |IP address      |
 |-----------|----------------|
 | login.microsoftonline.com <br> *. officeconfig.msocdn.com <br> config.office.com <br> graph.windows.net <br> enterpriseregistration.windows.net | Daha fazla bilgi için [Office 365 URL’leri ve IP adres aralıkları](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) |
 |portal.manage.microsoft.com<br> m.manage.microsoft.com |52.175.12.209<br>20.188.107.228<br>52.138.193.149<br>51.144.161.187<br>52.160.70.20<br>52.168.54.64 <br>13.72.226.202<br>52.189.220.232|
@@ -66,7 +66,6 @@ Aşağıdaki tabloda Intune istemcisinin eriştiği bağlantı noktaları ve hiz
 |fef.msua04.manage.microsoft.com|23.96.112.28|
 |fef.msua05.manage.microsoft.com|138.91.244.151|
 |fef.msua06.manage.microsoft.com|13.78.185.97|
-|fef.msub01.manage.microsoft.com|137.135.128.214|
 |fef.msub05.manage.microsoft.com|23.97.166.52|
 |fef.msuc03.manage.microsoft.com|23.101.0.100|
 |fef.amsua0502.manage.microsoft.com|13.85.68.142|

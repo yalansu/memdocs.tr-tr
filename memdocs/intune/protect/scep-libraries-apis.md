@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a915ffc908c985b38533a362f2a17ec561ddf6f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 16b212bde0f46861b8acb1470588b784c6f2a7fb
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79329066"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565674"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>API’leri kullanarak Intune’a SCEP için üçüncü taraf CA’ları ekleme
 
@@ -78,17 +78,17 @@ Kitaplığı ürünlerinizle tümleştirme işlemi aşağıdaki adımlardan olu�
 5. Kitaplığı, SCEP sunucunuzu oluşturan projeye ekleme
 6. SCEP Sunucusunda aşağıdaki görevleri tamamlama:
 
-    - Yöneticinin kitaplık tarafından kimlik doğrulaması için kullanılan [Azure Uygulama Tanımlayıcısı, Azure Uygulama Anahtarı ve Kiracı Kimliği](#onboard-scep-server-in-azure)’ni yapılandırmasına izin verme (bu makalede). Yöneticilerin Azure Uygulama Anahtarını güncelleştirmesine izin verilmelidir.
-    - Intune tarafından üretilen SCEP parolasını içeren SCEP isteklerini tanımlama
-    - **İstek Doğrulama API'si** kitaplığını kullanarak Intune tarafından üretilen SCEP parolalarını doğrulama
-    - Intune tarafından üretilen SCEP parolalarının bulunduğu SCEP isteklerine verilen sertifikaları Intune'a bildirmek için kitaplı bildirim API'lerini kullanma. Ayrıca, bu SCEP istekleri işlenirken oluşabilecek hataları da Intune'a bildirin.
-    - Yöneticinin sorun gidermesine yardımcı olmak için sunucunun yeterli bilgiyi günlüğe kaydettiğini onaylama
+   - Yöneticinin kitaplık tarafından kimlik doğrulaması için kullanılan [Azure Uygulama Tanımlayıcısı, Azure Uygulama Anahtarı ve Kiracı Kimliği](#onboard-scep-server-in-azure)’ni yapılandırmasına izin verme (bu makalede). Yöneticilerin Azure Uygulama Anahtarını güncelleştirmesine izin verilmelidir.
+   - Intune tarafından üretilen SCEP parolasını içeren SCEP isteklerini tanımlama
+   - **İstek Doğrulama API'si** kitaplığını kullanarak Intune tarafından üretilen SCEP parolalarını doğrulama
+   - Intune tarafından üretilen SCEP parolalarının bulunduğu SCEP isteklerine verilen sertifikaları Intune'a bildirmek için kitaplı bildirim API'lerini kullanma. Ayrıca, bu SCEP istekleri işlenirken oluşabilecek hataları da Intune'a bildirin.
+   - Yöneticinin sorun gidermesine yardımcı olmak için sunucunun yeterli bilgiyi günlüğe kaydettiğini onaylama
 
 7. [Tümleştirme testlerini ](#integration-testing) tamamlama (bu makalede) ve tüm sorunlarla ilgilenme
 8. Müşteriye aşağıdakileri açıklayan yazılı yönergeler verme:
 
-    - SCEP Sunucusunun Azure portalına nasıl eklenmesi gerektiği
-    - Kitaplığı yapılandırmak için Azure Uygulama Tanımlayıcısı ile Azure Anahtar Kimliğinin nasıl alındığı
+   - SCEP Sunucusunun Azure portalına nasıl eklenmesi gerektiği
+   - Kitaplığı yapılandırmak için Azure Uygulama Tanımlayıcısı ile Azure Anahtar Kimliğinin nasıl alındığı
 
 ### <a name="onboard-scep-server-in-azure"></a>Azure'a SCEP sunucusunu ekleme
 
@@ -108,38 +108,38 @@ Java kitaplığı, oluşturulurken bağımlılıklarını içeri çeken bir Mave
 
 ##### <a name="intunescepserviceclient-constructor"></a>IntuneScepServiceClient oluşturucusu
 
-İmza:
+**İmza**:
 
 ```java
 IntuneScepServiceClient(
     Properties configProperties)
 ```
 
-Açıklama:
+**Açıklama**:
 
 `IntuneScepServiceClient` nesnesinin örneğini oluşturur ve bu nesneyi yapılandırır.
 
-Parametreler:
+**Parametreler**:
 
-    - configProperties    İstemci yapılandırma bilgilerini içeren Properties nesnesi
+- **ConfigProperties** -istemci yapılandırma bilgilerini içeren özellikler nesnesi
 
 Yapılandırma aşağıdaki özellikleri içerir:
 
-    - AAD_APP_ID="Ekleme işlemi sırasında alınan Azure Uygulama Kimliği"
-    - AAD_APP_KEY="Ekleme işlemi sırasında alınan Azure Uygulama Anahtarı"
-    - TENANT="Ekleme işlemi sırasında alınan Kiracı Kimliği"
-    - PROVIDER_NAME_AND_VERSION="Ürününüzü ve sürümünü tanımlamak için kullanılan bilgiler"
-    
+- AAD_APP_ID="Ekleme işlemi sırasında alınan Azure Uygulama Kimliği"
+- AAD_APP_KEY="Ekleme işlemi sırasında alınan Azure Uygulama Anahtarı"
+- TENANT="Ekleme işlemi sırasında alınan Kiracı Kimliği"
+- PROVIDER_NAME_AND_VERSION="Ürününüzü ve sürümünü tanımlamak için kullanılan bilgiler"
+
 Çözümünüz kimlik doğrulaması olan veya olmayan bir proxy gerektiriyorsa, aşağıdaki özellikleri ekleyebilirsiniz:
 
-    - PROXY_HOST="Proxy'nin üzerinde barındırıldığı konak."
-    - PROXY_PORT="Proxy'nin dinlediği bağlantı noktası."
-    - PROXY_USER="Proxy temel kimlik doğrulaması kullanıyorsa, girilecek kullanıcı adı."
-    - PROXY_PASS="Proxy temel kimlik doğrulaması kullanıyorsa, girilecek parola."
+- PROXY_HOST="Proxy'nin üzerinde barındırıldığı konak."
+- PROXY_PORT="Proxy'nin dinlediği bağlantı noktası."
+- PROXY_USER="Proxy temel kimlik doğrulaması kullanıyorsa, girilecek kullanıcı adı."
+- PROXY_PASS="Proxy temel kimlik doğrulaması kullanıyorsa, girilecek parola."
 
-Oluşturulanlar:
+Şunu **oluşturur**:
 
-    - IllegalArgumentException    Oluşturucu düzgün bir özellik nesnesi olmadan yürütüldüğünde oluşturulur.
+- **Düzeneği** , uygun bir özellik nesnesi olmadan yürütülürse,
 
 > [!IMPORTANT]
 > En iyi yöntem bu sınıfın bir örneğini oluşturmak ve birden çok SCEP isteğini işlemek için bu örneği kullanmaktır. Bunun yapılması, kimlik doğrulama belirteçlerini ve hizmet konumu bilgilerini önbelleğe aldığından ek yükü azaltır.
@@ -149,7 +149,7 @@ SCEP sunucu uygulayıcısı, depolamada kalıcı olan yapılandırma özellikler
 
 ##### <a name="validaterequest-method"></a>ValidateRequest yöntemi
 
-İmza:
+**İmza**:
 
 ```java
 void ValidateRequest(
@@ -157,32 +157,32 @@ void ValidateRequest(
     String certificateRequest)
 ```
 
-Açıklama:
+**Açıklama**:
 
 SCEP sertifika isteğini doğrular.
 
-Parametreler:
+**Parametreler**:
 
-    - transactionId         SCEP İşlem Kimliği
-    - certificateRequest    Dize olarak kodlanmış DER kodlu PKCS #10 Sertifika İsteği Base64
+- **Işlem kimliği** -SCEP işlem kimliği
+- **certificateRequest** -der-encoded PKCS #10 sertifika isteği Base64 olarak kodlanmış bir dize
 
-Oluşturulanlar:
+Şunu **oluşturur**:
 
-    - IllegalArgumentException      Geçerli olmayan bir parametreyle çağrıldığında oluşturulur
-    - IntuneScepServiceException    Sertifika isteğinin geçerli olmadığı bulunduğunda oluşturulur
-    - Exception                     Beklenmedik bir hatayla karşılaşıldığında oluşturulur
+- Çağıran **Galargumentexception** -geçerli olmayan bir parametre ile çağrılırsa oluşturuldu
+- **Intunescepserviceexception** -sertifika isteğinin geçerli olmadığı bulunursa oluşturulur
+- **Özel durum** -beklenmeyen bir hatayla karşılaşılırsa oluşturuldu
 
 > [!IMPORTANT]
 > Bu yöntem tarafından oluşturulan özel durumlar sunucu tarafından günlüğe kaydedilir. `IntuneScepServiceException` özelliklerinde sertifika isteği doğrulamasının neden başarısız olduğuna ilişkin ayrıntılı bilgiler bulunduğuna dikkat edin.
 
-**Güvenlik notları**  
+**Güvenlik notları**:
 
 - Bu yöntemde özel durum oluşturulursa, SCEP sunucusunun istemciye sertifika **vermemesi gerekir**.
 - SCEP sertifika isteği doğrulaması hataları Intune altyapısında bir sorun olduğunu gösteriyor olabilir. Öte yandan bunlar bir saldırganın sertifika almaya çalıştığını gösteriyor da olabilir.
 
 ##### <a name="sendsuccessnotification-method"></a>SendSuccessNotification yöntemi
 
-İmza:
+**İmza**:
 
 ```java
 void SendSuccessNotification(
@@ -194,36 +194,36 @@ void SendSuccessNotification(
     String certIssuingAuthority)
 ```
 
-Açıklama:
+**Açıklama**:
 
 Intune'a sertifikanın bir SCEP isteğini işleme kapsamında oluşturulduğunu bildirir.
 
-Parametreler:
+**Parametreler**:
 
-    - transactionId           SCEP İşlem Kimliği
-    - certificateRequest      Dize olarak kodlanmış DER kodlu PKCS #10 Sertifika İsteği Base64
-    - Certthtrfer, sağlanan sertifikanın parmak izinin SHA1 karmasını
-    - certSerialNumber        Sağlanan sertifikanın seri numarası
-    - certExpirationDate      Sağlanan sertifikanın sona erme tarihi. Tarih saat dizesi web UTC saati (YYYY-AA-DDThh:mm:ss.sssTZD) ISO 8601 olarak biçimlendirilmelidir.
-    - certIssuingAuthority    Sertifikayı veren yetkilinin adı
+- **Işlem kimliği** -SCEP işlem kimliği
+- **certificateRequest** -der-encoded PKCS #10 sertifika isteği Base64 olarak kodlanmış bir dize
+- **Certthtrrint** -sağlanan sertifikanın parmak izinin SHA1 karması
+- **Certserialnumber** -sağlanan sertifikanın seri numarası
+- **certExpirationDate** -sağlanan sertifikanın sona erme tarihi. Tarih saat dizesi web UTC saati (YYYY-AA-DDThh:mm:ss.sssTZD) ISO 8601 olarak biçimlendirilmelidir.
+- **Certısingauthority** -sertifikayı veren yetkilinin adı
 
-Oluşturulanlar:
+Şunu **oluşturur**:
 
-    - IllegalArgumentException      Geçerli olmayan bir parametreyle çağrıldığında oluşturulur
-    - IntuneScepServiceException    Sertifika isteğinin geçerli olmadığı bulunduğunda oluşturulur
-    - Exception                     Beklenmedik bir hatayla karşılaşıldığında oluşturulur
+- Çağıran **Galargumentexception** -geçerli olmayan bir parametre ile çağrılırsa oluşturuldu
+- **Intunescepserviceexception** -sertifika isteğinin geçerli olmadığı bulunursa oluşturulur
+- **Özel durum** -beklenmeyen bir hatayla karşılaşılırsa oluşturuldu
 
 > [!IMPORTANT]
 > Bu yöntem tarafından oluşturulan özel durumlar sunucu tarafından günlüğe kaydedilir. `IntuneScepServiceException` özelliklerinde sertifika isteği doğrulamasının neden başarısız olduğuna ilişkin ayrıntılı bilgiler bulunduğuna dikkat edin.
 
-**Güvenlik notları**
+**Güvenlik notları**:
 
 - Bu yöntemde özel durum oluşturulursa, SCEP sunucusunun istemciye sertifika **vermemesi gerekir**.
 - SCEP sertifika isteği doğrulaması hataları Intune altyapısında bir sorun olduğunu gösteriyor olabilir. Öte yandan bunlar bir saldırganın sertifika almaya çalıştığını gösteriyor da olabilir.
 
 ##### <a name="sendfailurenotification-method"></a>SendFailureNotification yöntemi
 
-İmza:
+**İmza**:
 
 ```java
 void SendFailureNotification(
@@ -233,51 +233,51 @@ void SendFailureNotification(
     String errorDescription)
 ```
 
-Açıklama:
+**Açıklama**:
 
 Intune'a SCEP isteği işlenirken hata oluştuğunu bildirir. Bu yöntem, bu sınıfın yöntemleri tarafından oluşturulan özel durumlar için çağrılmamalıdır.
 
-Parametreler:
+**Parametreler**:
 
-    - transactionId         SCEP İşlem Kimliği
-    - certificateRequest    Dize olarak kodlanmış DER kodlu PKCS #10 Sertifika İsteği Base64
-    - hResult               Karşılaşılan hatayı en iyi açıklayan Win32 hata kodu. Bkz. [Win32 Hata Kodları](https://msdn.microsoft.com/library/cc231199.aspx)
-    - errorDescription      Karşılaşılan hatanın açıklaması
+- **Işlem kimliği** -SCEP işlem kimliği
+- **certificateRequest** -der-encoded PKCS #10 sertifika isteği Base64 olarak kodlanmış bir dize
+- **hResult** -karşılaşılan hatayı en iyi şekilde açıklayan Win32 hata kodu. Bkz. [Win32 Hata Kodları](https://msdn.microsoft.com/library/cc231199.aspx)
+- **ErrorDescription** -karşılaşılan hatanın açıklaması
 
-Oluşturulanlar:
+Şunu **oluşturur**:
 
-    - IllegalArgumentException      Geçerli olmayan bir parametreyle çağrıldığında oluşturulur
-    - IntuneScepServiceException    Sertifika isteğinin geçerli olmadığı bulunduğunda oluşturulur
-    - Exception                     Beklenmedik bir hatayla karşılaşıldığında oluşturulur
+- Çağıran **Galargumentexception** -geçerli olmayan bir parametre ile çağrılırsa oluşturuldu
+- **Intunescepserviceexception** -sertifika isteğinin geçerli olmadığı bulunursa oluşturulur
+- **Özel durum** -beklenmeyen bir hatayla karşılaşılırsa oluşturuldu
 
 > [!IMPORTANT]
 > Bu yöntem tarafından oluşturulan özel durumlar sunucu tarafından günlüğe kaydedilir. `IntuneScepServiceException` özelliklerinde sertifika isteği doğrulamasının neden başarısız olduğuna ilişkin ayrıntılı bilgiler bulunduğuna dikkat edin.
 
-**Güvenlik notları**
+**Güvenlik notları**:
 
 - Bu yöntemde özel durum oluşturulursa, SCEP sunucusunun istemciye sertifika **vermemesi gerekir**.
 - SCEP sertifika isteği doğrulaması hataları Intune altyapısında bir sorun olduğunu gösteriyor olabilir. Öte yandan bunlar bir saldırganın sertifika almaya çalıştığını gösteriyor da olabilir.
 
 ##### <a name="setsslsocketfactory-method"></a>SetSslSocketFactory yöntemi
 
-İmza:
+**İmza**:
 
 ```java
 void SetSslSocketFactory(
     SSLSocketFactory factory)
 ```
 
-Açıklama:
+**Açıklama**:
 
 İstemciye Intune'la iletişim kurarken belirtilen SSL yuva fabrikasını kullanması gerektiğini (varsayılan değer yerine) bildirmek için bu yöntemi kullanın.
 
-Parametreler:
+**Parametreler**:
 
-    - factory    İstemcinin HTTPS isteklerinde kullanacağı SSL yuva fabrikası
+- **Factory** -istemcinin https istekleri için kullanması gereken SSL yuva fabrikası
 
-Oluşturulanlar:
+Şunu **oluşturur**:
 
-    - IllegalArgumentException    Geçerli olmayan bir parametreyle çağrıldığında oluşturulur
+- Çağıran **Galargumentexception** -geçerli olmayan bir parametre ile çağrılırsa oluşturuldu
 
 > [!NOTE]
 > Bu sınıftaki diğer yöntemler yürütülmeden önce gerekiyorsa SSL Yuva fabrikası ayarlanmalıdır.

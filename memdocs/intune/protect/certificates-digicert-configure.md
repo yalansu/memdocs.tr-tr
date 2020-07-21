@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99cad94d0d0f56aba94e8d00a091efea914f418e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ab862efd37bfeffc392d1d18cbf1f8a2f3deb50e
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990357"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565708"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>DigiCert PKI platformu için Intune sertifika bağlayıcısını ayarlama
 
@@ -42,39 +42,41 @@ Bağlayıcı yüklü değilse ancak hem Microsoft CA hem de DigiCert CA 'sı iç
 
 Bağlayıcıyı yalnızca DigiCert CA 'sı ile kullanacaksanız, bağlayıcıyı yüklemek ve yapılandırmak için bu makaledeki yönergeleri kullanabilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - **DigiCert CA 'sında etkin bir abonelik**: DigiCert CA 'dan bir kayıt YETKILISI (ra) sertifikası almak için abonelik gerekir.
 - Microsoft Intune Sertifika Bağlayıcısı, [yönetilen cihazlarla](../fundamentals/intune-endpoints.md#access-for-managed-devices)aynı ağ gereksinimlerine sahiptir.
 
 ## <a name="install-the-digicert-ra-certificate"></a>DigiCert RA sertifikasını yükler
 
-1. Aşağıdaki kod parçacığını **CertReq. ini** adlı bir dosyaya kaydedin ve gerektiği şekilde güncelleştirin (ÖRNEĞIN: *cn biçimindeki konu adı*).
+1. Aşağıdaki kod parçacığını **certreq.ini** adlı bir dosyaya kaydedin ve gerektiği şekilde güncelleştirin (ÖRNEĞIN: *cn biçimindeki konu adı*).
 
-        [Version] 
-        Signature="$Windows NT$" 
-        
-        [NewRequest] 
-        ;Change to your,country code, company name and common name 
-        Subject = "Subject Name in CN format"
-        
-        KeySpec = 1 
-        KeyLength = 2048 
-        Exportable = TRUE 
-        MachineKeySet = TRUE 
-        SMIME = False 
-        PrivateKeyArchive = FALSE 
-        UserProtected = FALSE 
-        UseExistingKeySet = FALSE 
-        ProviderName = "Microsoft RSA SChannel Cryptographic Provider" 
-        ProviderType = 12 
-        RequestType = PKCS10 
-        KeyUsage = 0xa0 
-        
-        [EnhancedKeyUsageExtension] 
-        OID=1.3.6.1.5.5.7.3.2 ; Client Authentication  // Uncomment if you need a mutual TLS authentication
-        
-        ;----------------------------------------------- 
+   ```
+   [Version] 
+   Signature="$Windows NT$" 
+
+   [NewRequest] 
+   ;Change to your,country code, company name and common name 
+   Subject = "Subject Name in CN format"
+
+   KeySpec = 1 
+   KeyLength = 2048 
+   Exportable = TRUE 
+   MachineKeySet = TRUE 
+   SMIME = False 
+   PrivateKeyArchive = FALSE 
+   UserProtected = FALSE 
+   UseExistingKeySet = FALSE 
+   ProviderName = "Microsoft RSA SChannel Cryptographic Provider" 
+   ProviderType = 12 
+   RequestType = PKCS10 
+   KeyUsage = 0xa0 
+
+   [EnhancedKeyUsageExtension] 
+   OID=1.3.6.1.5.5.7.3.2 ; Client Authentication  // Uncomment if you need a mutual TLS authentication
+
+   ;----------------------------------------------- 
+   ```
 
 2. Yükseltilmiş bir komut istemi açın ve aşağıdaki komutu kullanarak bir sertifika imzalama isteği (CSR) oluşturun:
 
@@ -82,13 +84,14 @@ Bağlayıcıyı yalnızca DigiCert CA 'sı ile kullanacaksanız, bağlayıcıyı
 
 3. Request. CSR dosyasını Not defteri 'nde açın ve aşağıdaki biçimdeki CSR içeriğini kopyalayın:
 
-        -----BEGIN NEW CERTIFICATE REQUEST-----
-        MIID8TCCAtkCAQAwbTEMMAoGA1UEBhMDVVNBMQswCQYDVQQIDAJXQTEQMA4GA1UE
-        …
-        …
-        fzpeAWo=
-        -----END NEW CERTIFICATE REQUEST-----
-
+   ``` 
+   -----BEGIN NEW CERTIFICATE REQUEST-----
+   MIID8TCCAtkCAQAwbTEMMAoGA1UEBhMDVVNBMQswCQYDVQQIDAJXQTEQMA4GA1UE
+   …
+   …
+   fzpeAWo=
+   -----END NEW CERTIFICATE REQUEST-----
+   ```
 
 4. DigiCert CA ' da oturum açın ve görevlerden **ra sertifikası almak** için gidin.
 
@@ -114,7 +117,7 @@ Bağlayıcıyı yalnızca DigiCert CA 'sı ile kullanacaksanız, bağlayıcıyı
 
    f. **Sertifikalar** düğümüne sağ tıklayın ve **Tüm Görevler** > **İçeri aktar**’ı seçin.
 
-   g. DigiCert CA 'dan indirdiğiniz RA sertifikasının konumunu seçin ve ardından **İleri**' yi seçin.
+   örneğin: DigiCert CA 'dan indirdiğiniz RA sertifikasının konumunu seçin ve ardından **İleri**' yi seçin.
 
    h. Daha **sonra kişisel sertifika depolama alanını**seçin  >  **Next**.
 
@@ -134,9 +137,9 @@ Bağlayıcıyı yalnızca DigiCert CA 'sı ile kullanacaksanız, bağlayıcıyı
 
    f. Özel anahtar sertifikasını **Yerel bilgisayar-kişisel** mağazaya aktarmak için 5. adımdaki yordamı kullanın.
 
-   g. A kaydet RA sertifika parmak izini boşluk olmadan kopyalayın. Parmak izine bir örnek aşağıda verilmiştir:
+   örneğin: A kaydet RA sertifika parmak izini boşluk olmadan kopyalayın. Parmak izine bir örnek aşağıda verilmiştir:
 
-        RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"
+      `RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"`
 
     > [!NOTE]
     > DigiCert CA 'dan RA sertifikasını alma konusunda yardım için, [DigiCert müşteri desteği](mailto:enterprise-pkisupport@digicert.com)'ne başvurun.
@@ -177,7 +180,7 @@ Intune yönetim portalından en son Intune sertifika Bağlayıcısı sürümün�
 
    ![Bağlayıcı yazılımını indirin](./media/certificates-digicert-configure/connector-download.png)
 
-4. Bağlayıcıyı yüklemek istediğiniz sunucuda, yükseltilmiş ayrıcalıklarla **Ndesconnectorsetup. exe** ' yi çalıştırın.
+4. Bağlayıcıyı yüklemek istediğiniz sunucuda, yükseltilmiş ayrıcalıklarla **NDESConnectorSetup.exe** çalıştırın.
 
 5. **Yükleme seçenekleri** sayfasında **PFX dağıtımı**' nı seçin.
 
@@ -192,12 +195,14 @@ Intune yönetim portalından en son Intune sertifika Bağlayıcısı sürümün�
 
 Varsayılan olarak, Intune sertifika Bağlayıcısı **%ProgramFiles%\Microsoft ıntune\ndesconnectorsvc**' ye yüklenir.
 
-1. **Ndesconnectorsvc** klasöründe, Not defteri 'Nde **ndesconnector. exe. config** dosyasını açın.
+1. **Ndesconnectorsvc** klasöründe **NDESConnector.exe.config** dosyasını Not defteri 'nde açın.
 
    a. `RACertThumbprint`Anahtar değerini, önceki bölümde kopyaladığınız sertifika parmak izi değeriyle güncelleştirin. Örneğin:
 
-        <add key="RACertThumbprint"
-        value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
+      ```
+      <add key="RACertThumbprint"
+      value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
+      ```
 
    b. Dosyayı kaydedin ve kapatın.
 
@@ -214,7 +219,7 @@ Varsayılan olarak, Intune sertifika Bağlayıcısı **%ProgramFiles%\Microsoft 
 > [!TIP]
 > Intune sertifika bağlayıcısını bir Microsoft CA 'sı ile kullanıyorsanız ve DigiCert CA desteği eklemek istiyorsanız, [bir güvenilen sertifika profili oluşturmaya](#create-a-trusted-certificate-profile)devam edin.
  
-1. **%ProgramFiles%\Microsoft ıntune\ndesconnectoruı\ndesconnectorui.exe**öğesinden NDES Bağlayıcısı Kullanıcı arabirimini açın.
+1. **%Programfiles%\microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe**'Den NDES Bağlayıcısı Kullanıcı arabirimini açın.
 
 2. **Kayıt** sekmesinde **oturum aç**' ı seçin.
 
@@ -272,7 +277,7 @@ Sertifika profili OID 'si, DigiCert CA 'sında bir sertifika profili şablonuyla
 3. Kullanmak istediğiniz sertifika profilini seçin.
 4. Sertifika profili OID 'sini kopyalayın. Çıktı aşağıdaki örneğe benzer:
 
-       Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109 
+   `Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109`
 
 > [!NOTE]
 > Sertifika profili OID 'sini almak için yardıma ihtiyacınız varsa, [DigiCert müşteri desteği](mailto:enterprise-pkisupport@digicert.com)'ne başvurun.
@@ -325,7 +330,7 @@ Intune sertifika Bağlayıcısı hizmet günlükleri, NDES bağlayıcı makinesi
 | NDES Bağlayıcısı Kullanıcı arabiriminde Intune kiracı yönetici hesabıyla oturum açılamıyor. | Bu durum, şirket içi sertifika Bağlayıcısı Microsoft Endpoint Manager Yönetim Merkezi 'nde etkin olmadığında ortaya çıkabilir. Bu sorunu çözmek için: <br><br> 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın. <br> 2. **Kiracı Yönetimi**  >  **bağlayıcıları ve belirteçleri**  >  **sertifika bağlayıcıları**' nı seçin. <br> 3. sertifika bağlayıcısını bulun ve etkinleştirildiğinden emin olun. <br><br> Önceki adımları tamamladıktan sonra, NDES Bağlayıcısı Kullanıcı arabiriminde aynı Intune kiracı yönetici hesabıyla oturum açmayı deneyin. |
 | NDES Bağlayıcı Sertifikası bulunamadı. <br><br> System. ArgumentNullException: değer null olamaz. | Intune kiracı yönetici hesabı NDES Bağlayıcı Kullanıcı Arabirimi'nde hiç oturum açmadıysa, Intune Sertifika Bağlayıcı bu hatayı gösterir. <br><br> Bu hata devam ederse, Intune Service bağlayıcısını yeniden başlatın. <br><br> 1. **Services. msc**dosyasını açın. <br> 2. **Intune bağlayıcı hizmeti**' ni seçin. <br> 3. sağ tıklayın ve **Yeniden Başlat**'ı seçin.|
 | NDES Bağlayıcısı - IssuePfx- Genel Özel Durumu: <br> System.NullReferenceException: Nesne başvurusu bir nesnenin örneğine ayarlı değil. | Bu geçici bir hatadır. Intune hizmet bağlayıcısını yeniden başlatın. <br><br> 1. **Services. msc**dosyasını açın. <br> 2. **Intune bağlayıcı hizmeti**' ni seçin. <br> 3. sağ tıklayın ve **Yeniden Başlat**'ı seçin. |
-| DigiCert sağlayıcısı-DigiCert ilkesi alınamadı. <br><br>"İşlem zaman aşımına uğradı." | Intune sertifika Bağlayıcısı, DigiCert CA ile iletişim kurarken bir işlem zaman aşımı hatası aldı. Bu hata oluşmaya devam ederse, bağlantı zaman aşımı değerini artırın ve yeniden deneyin. <br><br> Bağlantı zaman aşımını artırmak için: <br> 1. NDES bağlayıcı bilgisayarına gidin. <br>2. **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config** dosyasını Not defteri 'nde açın. <br> 3. aşağıdaki parametre için zaman aşımı değerini artırın: <br><br> `CloudCAConnTimeoutInMilliseconds` <br><br> 4. Intune sertifika Bağlayıcısı hizmetini yeniden başlatın. <br><br> Sorun devam ederse, DigiCert müşteri desteği 'ne başvurun. |
+| DigiCert sağlayıcısı-DigiCert ilkesi alınamadı. <br><br>"İşlem zaman aşımına uğradı." | Intune sertifika Bağlayıcısı, DigiCert CA ile iletişim kurarken bir işlem zaman aşımı hatası aldı. Bu hata oluşmaya devam ederse, bağlantı zaman aşımı değerini artırın ve yeniden deneyin. <br><br> Bağlantı zaman aşımını artırmak için: <br> 1. NDES bağlayıcı bilgisayarına gidin. <br>2. **%programfiles%\microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config** dosyasını Not defteri 'nde açın. <br> 3. aşağıdaki parametre için zaman aşımı değerini artırın: <br><br> `CloudCAConnTimeoutInMilliseconds` <br><br> 4. Intune sertifika Bağlayıcısı hizmetini yeniden başlatın. <br><br> Sorun devam ederse, DigiCert müşteri desteği 'ne başvurun. |
 | DigiCert sağlayıcısı-istemci sertifikası alınamadı. | Intune sertifika Bağlayıcısı, kaynak yetkilendirme sertifikasını yerel makineden alamadı-kişisel sertifika deposundan alamadı. Bu sorunu çözmek için, kaynak yetkilendirme sertifikasını, özel anahtarıyla birlikte yerel makine-kişisel sertifika deposuna yükler. <br><br> Kaynak Yetkilendirme Sertifikası, DigiCert CA 'sından alınmalıdır. Daha fazla ayrıntı için, DigiCert müşteri desteği 'ne başvurun. | 
 | DigiCert sağlayıcısı-DigiCert ilkesi alınamadı. <br><br>"İstek durduruldu: SSL/TLS güvenli kanalı oluşturulamadı." | Bu hata, aşağıdaki senaryolarda oluşur: <br><br> 1. Intune sertifika Bağlayıcısı hizmeti, kaynak yetkilendirme sertifikasını yerel makine kişisel sertifika deposundan özel anahtarıyla birlikte okuma iznine sahip değil. Bu sorunu çözmek için, Connector hizmetinin çalışan bağlam hesabını Services. msc ' de denetleyin. Bağlayıcı hizmeti NT AUTHORITY\SYSTEM bağlamı altında çalışmalıdır. <br><br> 2. Intune yönetim portalındaki PKCS sertifika profili, DigiCert CA 'sı için geçersiz bir temel hizmet FQDN 'SI ile yapılandırılmış olabilir. FQDN, **pki-ws.symauth.com**ile benzerdir. Bu sorunu çözmek için, URL 'nin aboneliğiniz için doğru olup olmadığını DigiCert müşteri desteğiyle denetleyin. <br><br> 3. Intune sertifika Bağlayıcısı, özel anahtarı alamadığından, kaynak yetkilendirme sertifikası aracılığıyla DigiCert CA 'sı ile kimlik doğrulaması yapamaz. Bu sorunu çözmek için, kaynak yetkilendirme sertifikasını yerel makine-kişisel sertifika depolama alanındaki özel anahtarıyla birlikte yüklemelisiniz. <br><br> Sorun devam ederse, DigiCert müşteri desteği 'ne başvurun. |
 | DigiCert sağlayıcısı-DigiCert ilkesi alınamadı. <br><br>"İstek öğesi anlaşılmadı." | Intune sertifika Bağlayıcısı, istemci profili OID 'si Intune sertifika profiliyle eşleşmediğinden, DigiCert sertifika profili şablonunu alamadı. Başka bir durumda, Intune sertifika Bağlayıcısı, DigiCert CA 'sında istemci profili OID 'siyle ilişkili sertifika profili şablonunu bulamaz. <br><br> Bu sorunu çözmek için, DigiCert CA 'daki DigiCert sertifika şablonundan doğru Istemci profili OID 'sini edinin. Ardından, Intune yönetici portalındaki PKCS sertifika profilini güncelleştirin. <br><br> DigiCert CA 'sından istemci profili OID 'sini edinin: <br> 1. DigiCert CA yönetici portalında oturum açın. <br> 2. **sertifika profillerini Yönet**' i seçin. <br> 3. kullanmak istediğiniz sertifika profilini seçin. <br> 4. sertifika profili OID 'sini alın. Çıktı aşağıdaki örneğe benzer: <br> `Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109` <br><br> PKCS sertifika profilini doğru sertifika profili OID 'siyle güncelleştirin: <br>1. Intune yönetici portalında oturum açın. <br> 2. PKCS sertifika profiline gidin ve **Düzenle**'yi seçin. <br> 3. sertifika şablonu adı için alanındaki sertifika profili OID 'sini güncelleştirin. <br> 4. PKCS sertifika profilini kaydedin. |

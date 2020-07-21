@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de1f1bc3b21a8e4ebd2aca6730cae68af730f94e
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 7f49ba4fffd84ffae3e5b47ad74088b65d599533
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461938"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491261"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Android kurumsal cihaz ayarları
 
@@ -135,11 +135,13 @@ Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak veya
         Ayrıca, kuruluşunuz tarafından oluşturulan diğer [Android uygulamalarını](../apps/apps-add-android-for-work.md) ve [Web uygulamalarını](../apps/web-app.md) cihaza ekleyebilirsiniz. [Uygulamayı adanmış cihazlarınız için oluşturulan cihaz grubuna atadığınızdan](../apps/apps-deploy.md)emin olun.
 
       - **Klasör simgesi**: yönetilen giriş ekranında gösterilen klasör simgesinin rengini ve şeklini seçin. Seçenekleriniz şunlardır:
+        - Yapılandırılmamış 
         - Koyu tema dikdörtgeni
         - Koyu tema çemberi
         - Açık tema dikdörtgeni
         - Açık tema çemberi
       - **Uygulama ve klasör simge boyutu**: yönetilen giriş ekranında gösterilen klasör simgesinin boyutunu seçin. Seçenekleriniz şunlardır:
+        - Yapılandırılmamış 
         - Çok küçük
         - Küçük
         - Ortalama
@@ -149,6 +151,7 @@ Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak veya
           Ekran boyutuna bağlı olarak, gerçek simge boyutu farklı olabilir.
 
       - **Ekran yönü**: yönetilen giriş ekranının cihazlarda gösterildiği yönü seçin. Seçenekleriniz şunlardır:
+        - Yapılandırılmamış
         - Dikey
         - Yatay
         - Oto döndür

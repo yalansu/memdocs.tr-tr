@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08d53bd7ffedc2679fca675b88e021301d15fb62
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5259fe84b11ce5d1ec4a3110dcbc188afb2e6d3e
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989029"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565691"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Microsoft Intune'da kullanıcı ve cihaz profilleri atama
 
@@ -85,11 +85,13 @@ Bir cihaza, kim oturum açmış olduğunuza bakılmaksızın ayarları uygulamak
 
 - Bazı belirli Windows cihazlarında, cihazı kimin kullandığını fark etmeksizin her zaman bazı Microsoft Edge ayarlarını denetlemek istersiniz. Örneğin, tüm indirmeleri engellemek, tüm tanımlama bilgilerini geçerli gözatma oturumuyla sınırlamak ve gözatma geçmişini silmek isteyebilirsiniz. Bu senaryo için, bu belirli Windows cihazlarını bir cihazlar grubuna yerleştirin. Ardından, [Intune 'da bir yönetim şablonu](administrative-templates-windows.md)oluşturun, bu cihaz ayarlarını ekleyin ve ardından bu profili cihazlar grubuna atayın.
 
-Özetlemek gerekirse, cihazda oturum açmış olan kişileri veya herkesin oturum açmış olduğunu önemsemezseniz cihaz gruplarını kullanın. Ayarlarınızı her zaman cihazda olmasını istiyorsunuz.
+Özetlemek gerekirse, cihazda oturum açmış olan kişileri veya herkes oturum açarsa cihaz gruplarını kullanın. Ayarlarınızı her zaman cihazda olmasını istiyorsunuz.
 
 ### <a name="user-groups"></a>Kullanıcı grupları
 
 Kullanıcı gruplarına uygulanan profil ayarları her zaman kullanıcıya gider ve çok sayıda cihazda oturum açıldığında kullanıcıya gider. Kullanıcıların Surface Pro for Work ve bir kişisel iOS/ıpados cihazı gibi birçok cihazı olması normaldir. Ayrıca, bir kişinin e-postaya ve diğer kuruluş kaynaklarına bu cihazlardan erişmesi normaldir.
+
+Bu genel kuralı izleyin: bir özellik, e-posta veya Kullanıcı sertifikaları gibi bir kullanıcıya aitse, ardından Kullanıcı gruplarına atayın.
 
 Örneğin:
 
