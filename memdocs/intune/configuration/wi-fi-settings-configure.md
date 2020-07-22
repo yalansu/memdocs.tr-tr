@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 594d6d776e2ad9e87dab768e015330664624a10c
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 25b07dcbb76f6d4a8aae964d0123a880d179784e
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461530"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871942"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Microsoft Intune’da cihazlarınız için Wi-Fi ayarları ekleme ve kullanma
 
@@ -101,9 +101,8 @@ Wi-Fi profilleri aşağıdaki cihaz platformlarını destekler:
 > [!TIP]
 > Wi-Fi profiliniz için sertifika tabanlı kimlik doğrulaması kullanıyorsanız, her bir cihazın sertifika yetkilinizin yasallığını algılayabilmesi için Wi-Fi profilini, sertifika profilini ve güvenilen kök profilini aynı gruplara dağıtın.  Daha fazla bilgi için bkz. [Microsoft Intune sertifikaları yapılandırma](../protect/certificates-configure.md).
 
-
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Profil oluşturuldu ancak hiçbir şey yapmıyor. Sonra, [Bu profili atayın](device-profile-assign.md) ve [durumunu izleyin.](device-profile-monitor.md)
+Profil oluşturuldu, ancak hiçbir şey gerçekleştirmeyebilir. Sonra, [Bu profili atayın](device-profile-assign.md) ve [durumunu izleyin.](device-profile-monitor.md)
 
 [Intune 'Da Troubles Wi-Fi profilleri](troubleshoot-wi-fi-profiles.md).

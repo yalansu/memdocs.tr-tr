@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6884be3ef2d311ea810434d06be38d930b5ed143
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: da2f2b1155e6760d23d4ead65899b82e277fbd3e
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86460527"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891556"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -801,7 +801,7 @@ Aşağıdakiler cihazlar için geçerlidir:
 Daha önce, bir varsayılan profili silemdiniz, bu, bununla ilişkili otomatik cihaz kayıt belirtecini silememeyi amaçlıyordu. Şimdi, şu durumlarda belirteci silebilirsiniz:
 - belirtece hiçbir cihaz atanmadı
 - Varsayılan bir profil vardır, varsayılan profili silin ve ardından ilişkili belirteci silin.
-Daha fazla bilgi için bkz. [Intune 'dan BIR Ade belirtecini silme](../enrollment/device-enrollment-program-enroll-ios.md#delete-an-ade-token-from-intune).
+Daha fazla bilgi için bkz. [Intune 'dan BIR Ade belirtecini silme](../enrollment/device-enrollment-program-enroll-ios.md#delete-an-automated-device-enrollment-token-from-intune).
 
 #### <a name="scaled-up-support-for-apple-automated-device-enrollment-and-apple-configurator-2-devices-profiles-and-tokens--3542402---"></a>Apple otomatik cihaz kaydı ve Apple Configurator 2 cihazları, profilleri ve belirteçleri için ölçekli destek<!--3542402 -->
 Intune, BT departmanlarına ve kuruluşlara yardımcı olmak için, belirteç başına 1000 adede kadar kayıt profilini, her Intune hesabı için 2000 otomatik cihaz kaydı (eski adıyla DEP) belirteçlerini ve belirteç başına 75.000 cihazlarını desteklemektedir. Kayıt profili başına cihazlar için, belirteç başına en fazla cihaz sayısı altında belirli bir sınır yoktur.

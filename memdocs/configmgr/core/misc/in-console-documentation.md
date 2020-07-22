@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 55cecac47accf6dfa2efdc3b0905497260a652e5
-ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
+ms.openlocfilehash: e7d80d2f528365e7759ce7ceb50639b0d474e329
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86390883"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891471"
 ---
 <!-- 
 - Feature 1357546
@@ -108,8 +108,11 @@ Configuration Manager bileşenlerinde ve özelliklerde sorun gidermeye yardımc�
 
 ## <a name="new-and-updated-support-articles"></a>Yeni ve güncelleştirilmiş destek makaleleri
 
-16 Mayıs ve 22 Haziran 2020 arasında yeni veya güncelleştirilmiş makaleleri destekler.
+16 Mayıs ve 17 Temmuz 2020 arasında yeni veya güncelleştirilmiş makaleleri destekler.
 
+- [KB 4560496 Microsoft uç noktası Configuration Manager sürüm 2002 için güncelleştirme paketi](https://support.microsoft.com/help/4560496)
+- [KB 4569513 "bulunamadı" hatası Update Uygulama Kataloğu tablolarını düzenlemeye çalıştığınızda](https://support.microsoft.com/help/4569513)
+- [KB 4574419 Microsoft uç noktası Configuration Manager Yönetim Merkezi 'nde KB zaman aşımı hatası](https://support.microsoft.com/help/4574416)
 - [KB 4564442 Windows 10 dağıtımları, BIOS türünde üretici yazılımı bulunan bilgisayarlarda Microsoft dağıtım araç seti ile başarısız oluyor](https://support.microsoft.com/help/4564442)
 - [KB 4563473 Configuration Manager sürüm 2002 kiracı iliştirme sorunları için güncelleştirme paketi](https://support.microsoft.com/help/4563473)
 - [KB 4567007 PXE önyükleme hatalarının veya güncel dalı Configuration Manager, sürüm 2002 ' ye güncelleştirildikten sonra görev sırası gecikmeleri](https://support.microsoft.com/help/4567007)

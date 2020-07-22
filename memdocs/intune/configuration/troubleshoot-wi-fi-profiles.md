@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82706356f82008798dc8c9b9de02ad55606ee87b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 78b7a0ea6e25754e2839e1fda788b3440eaf3880
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987857"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86872061"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Microsoft Intune 'de Wi-Fi cihaz yapılandırma profillerinin sorunlarını giderme
 
@@ -177,7 +177,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 ## <a name="common-issues"></a>Genel sorunlar
 
-### <a name="issue-1-the-wi-fi-profile-isnt-deployed-to-the-device"></a>Sorun 1: Wi-Fi profili cihaza dağıtılmadı
+### <a name="the-wi-fi-profile-isnt-deployed-to-the-device"></a>Wi-Fi profili cihaza dağıtılmadı
 
 - Wi-Fi profilinin doğru gruba atandığını onaylayın:
 
@@ -248,7 +248,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
     Günlükte bir hata görürseniz hatanın zaman damgasını kopyalayın ve günlüğün filtresini kaldırın. Ardından, hatadan önce ne olduğunu görmek için zaman damgasıyla birlikte "bul" seçeneğini kullanın.
 
-### <a name="issue-2-the-wi-fi-profile-is-deployed-to-the-device-but-the-device-cant-connect-to-the-network"></a>Sorun 2: Wi-Fi profili cihaza dağıtıldı, ancak cihaz ağa bağlanamıyor
+### <a name="the-wi-fi-profile-is-deployed-to-the-device-but-the-device-cant-connect-to-the-network"></a>Wi-Fi profili cihaza dağıtıldı, ancak cihaz ağa bağlanamıyor
 
 Genellikle, bu soruna Intune dışından bir şey neden olur. Aşağıdaki görevler, bağlantı sorunlarını anlamanıza ve gidermenize yardımcı olabilir:
 
@@ -256,6 +256,22 @@ Genellikle, bu soruna Intune dışından bir şey neden olur. Aşağıdaki göre
 
   Bağlantı kurmak için, el ile yapılan bağlantıda sertifika özelliklerine bakın. Daha sonra, Intune Wi-Fi profilini aynı sertifika özellikleriyle güncelleştirin.
 - Bağlantı hataları genellikle RADIUS sunucu günlüğüne kaydedilir. Örneğin, cihazın Wi-Fi profiliyle bağlanmayı deneyip denemesinin denendiğinden, gösterilmesi gerekir.
+
+### <a name="users-dont-get-new-profile-after-changing-password-on-existing-profile"></a>Kullanıcılar, mevcut profilde parola değiştirildikten sonra yeni profil almaz
+
+Şirket Wi-Fi profili oluşturur, profili bir gruba dağıtır, parolayı değiştirir ve profili kaydedersiniz. Profil değiştiğinde, bazı kullanıcılar yeni profili alamayabilir.
+
+Bu sorunu azaltmak için konuk Wi-Fi kurulumu yapın. Şirket Wi-Fi başarısız olursa, kullanıcılar konuk Wi-Fi ile bağlanabilir. Otomatik bağlanma ayarlarının tümünü etkinleştirdiğinizden emin olun. Konuk Wi-Fi profilini tüm kullanıcılara dağıtın.
+
+Bazı ek öneriler:  
+
+- Bağlanmakta olduğunuz Wi-Fi ağı bir parola veya parola kullanıyorsa, Wi-Fi yönlendiricisine doğrudan bağlanabildiğinizden emin olun. İOS/ıpados cihazından test edebilirsiniz.
+- Bir Wi-Fi uç noktasına (Wi-Fi yönlendiricisi) başarıyla bağlandıktan sonra SSID’yi ve kullanılan kimlik bilgilerini (bu değer erişim kodu veya paroladır) not edin.
+- SSID ve kimlik bilgilerini (parola) Önceden Paylaşılan Anahtar alanına girin. 
+- Profili, tercihen yalnızca BT ekibinden oluşan, sınırlı sayıda kullanıcıları olan bir test grubuna dağıtın. 
+- İOS/ıpados cihazınızı Intune 'a eşitleyin. Henüz kaydolmadıysanız kaydolun. 
+- Aynı Wi-Fi uç noktasına bağlantıyı (ilk adımda bahsedildiği gibi) tekrar test edin.
+- Daha büyük gruplara veya sonuçta kuruluşunuzdaki tüm beklenen kullanıcılara dağıtın. 
 
 ## <a name="need-more-help"></a>Daha fazla yardım gerekiyor
 

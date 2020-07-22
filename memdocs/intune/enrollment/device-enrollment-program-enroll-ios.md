@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a7943fb33cf670eedd600db083b77e981da9029
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: fa06e5fee4658ad3c7f19ec39bd126ce69d8cd41
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240788"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891522"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS/iPadOS cihazlarını Apple’ın Otomatik Cihaz Kayıt Anlaşması ile otomatik olarak kaydetme
 
@@ -71,7 +71,7 @@ Apple, iOS/ıpados 5 ' te Denetimli mod sunmuştur. Denetimli modda bulunan bir 
 - Intune hesabı başına en fazla otomatik cihaz kaydı belirteçleri: 2.000
 - Belirteç başına en yüksek otomatik cihaz kayıt cihazları: ilk eşitlemede olan sınır 75000-80000 cihazlarıdır. Intune, her seferinde daha fazla cihaz eklemek için her 12 saat iadede ABM veya ASM ile eşitlemeye devam edecektir. El ile eşitleme (15 dakikada bir tetiklenebilir), Intune 'a başka bir cihaz toplu işi de ekler. Eşitlemeler gerçekleşmeye devam eder ve cihazlar, büyük miktarlarda Intune 'a kadar ABM/ASM ile eşitlenmiş olmaya devam edecektir. 
 
-## <a name="get-an-apple-ade-token"></a>Apple ADE belirteci al
+## <a name="get-an-apple-automated-device-enrollment-token"></a>Apple otomatik cihaz kaydı belirteci al
 
 İOS/ıpados cihazlarını ADE ile kaydedebilmeniz için önce Apple 'dan bir ADE belirteci (. p7m) dosyası gerekir. Bu belirteç, Intune 'un kuruluşunuzun sahip olduğu ADE cihazları hakkında bilgi eşitlemesini sağlar. Ayrıca Intune'un kayıt profilini Apple'a yüklemesine ve cihazları bu profillere atamasına izin verir.
 
@@ -268,7 +268,7 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
     | <strong>Hızlı dil</strong>| Kullanıcı için hızlı dil ekranını görüntüleyin. |
     | <strong>Tercih edilen dil</strong> | Kullanıcıya **tercih edilen dilini**seçme seçeneğini sunun. |
     | <strong>Cihazdan cihaza geçişe</strong> | Kullanıcıya verileri eski cihazlarından bu cihaza geçirme seçeneğini sunun. İOS/ıpados 13,0 ve üzeri için. |
-    | <strong>Kaydını</strong> | Kullanıcının kayıt ekranını görüntüleyin. MacOS 10,9 ve üzeri için. |
+    | <strong>Kayıt</strong> | Kullanıcının kayıt ekranını görüntüleyin. MacOS 10,9 ve üzeri için. |
     | <strong>FileVault</strong> | Kullanıcının dosya Kasası 2 şifreleme ekranını görüntüleyin. MacOS 10,10 ve üzeri için. |
     | <strong>iCloud tanılama</strong> | Kullanıcıya iCloud Analytics ekranını görüntüleyin. MacOS 10.12.4 ve üzeri için. |
     | <strong>iCloud Depolama</strong> | Kullanıcıya iCloud belgelerini ve masaüstü ekranını görüntüleyin. MacOS 10.13.4 ve üzeri için. |
@@ -323,7 +323,7 @@ Apple ve Intune arasında yönetimi ve eşitlemeyi etkinleştirdiniz ve ADE ciha
 
 Bkz. [aygıt kayıt programı iOS/ıpados cihazınızı Intune 'A kaydetme](../user-help/enroll-your-device-dep-ios.md).
 
-## <a name="renew-an-ade-token"></a>Bir ADE belirtecini yenileme  
+## <a name="renew-an-automated-device-enrollment-token"></a>Otomatik cihaz kayıt belirtecini yenileme  
 
 > [!NOTE]
 > ADE belirtecinizi yıllık olarak yenilemeye ek olarak, Apple Business Manager 'da belirtecini kuran kullanıcı için yönetilen Apple KIMLIĞI parolası değiştiğinde veya Apple Business Manager kuruluşunuzu terk ettiğinde, kayıt programı belirtecinizi Intune ve Apple Business Manager içinde yenilemeniz gerekir.
@@ -347,7 +347,7 @@ Bkz. [aygıt kayıt programı iOS/ıpados cihazınızı Intune 'A kaydetme](../u
 9. **Belirteci yenile**’yi seçin. Belirtecin yenilendiğine dair onayı görürsünüz.   
     ![Onay ekran görüntüsü.](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
-## <a name="delete-an-ade-token-from-intune"></a>Intune 'dan bir ADE belirtecini silme
+## <a name="delete-an-automated-device-enrollment-token-from-intune"></a>Intune 'dan otomatik cihaz kayıt belirtecini silme
 
 Kayıt profili belirteçlerini Intune 'dan olduğu sürece silebilirsiniz.
 - belirtece hiçbir cihaz atanmadı

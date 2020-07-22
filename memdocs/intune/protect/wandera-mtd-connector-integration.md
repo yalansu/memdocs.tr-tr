@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/26/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,11 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc44bb114d6ff9089a01da2d0b7db7aa7527f4b5
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: b227148a6e16f7c9f8d62cb58eeb628afbd84123
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972156"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86872027"
 ---
 # <a name="integrate-wandera-mobile-threat-protection-with-intune"></a>Wandera Mobile Threat Protection 'ı Intune ile tümleştirme  
 
@@ -69,12 +70,10 @@ Wandera ve Intune arasında tümleştirmeyi ayarlamak, Wandera personelinden des
 
    ![İzinleri kabul et](./media/wandera-mtd-connector-integration/permissions.png)
 
-10. Otomatik olarak RADAR Yönetici konsoluna geri döndürülecektir.  Yetkilendirme başarılı olduysa, Izin ver düğmesinin yanında yeşil bir onay işareti görürsünüz.
-11. Her birinin yanında yeşil onay işaretlerine gelene kadar ilgili Izin düğmelerine tıklayarak, kalan listelenen tümleştirmelerin onay işlemini tekrarlayın.
+9. Otomatik olarak RADAR Yönetici konsoluna geri döndürülecektir.  Yetkilendirme başarılı olduysa, Izin ver düğmesinin yanında yeşil bir onay işareti görürsünüz.
+10. Her birinin yanında yeşil onay işaretlerine gelene kadar ilgili Izin düğmelerine tıklayarak, kalan listelenen tümleştirmelerin onay işlemini tekrarlayın.
 
-    ![Eşitleme grubu](./media/wandera-mtd-connector-integration/sync-group-name.png)
-
-12. Intune konsoluna dönün ve Wandera MTD bağlayıcısını düzenlemeyle çalışmaya geri edin. Tüm kullanılabilir ' ı açık olarak ayarlayın ve ardından yapılandırmayı kaydedin.
+11. Intune konsoluna dönün ve Wandera MTD bağlayıcısını düzenlemeyle çalışmaya geri edin. Tüm kullanılabilir ' ı açık olarak ayarlayın ve ardından yapılandırmayı kaydedin.
 
     ![Wandera 'yi etkinleştir](./media/wandera-mtd-connector-integration/enable-wandera.png)
 
@@ -105,7 +104,7 @@ Bu bölümde, **gerekli** iOS cihaz yapılandırma dosyalarını indirecek ve ar
 2. **Apple iOS** denetimli veya **Apple iOS** denetimli bölümlerini cihaz filo yapılandırmanıza göre genişletin.
 3. Belirtilen yapılandırma profillerini indirin ve aşağıdaki bir adımda onları karşıya yüklemeye hazırlanın.
 4. **Microsoft Intune yönetici konsolu 'nu** açın ve **cihazlar > IOS/ıpados > yapılandırma profilleri**' ne gidin.  **Profil oluştur**’a tıklayın.
-5. Görüntülenen panelde, **Platform**altında **IOS/ıpados** ' ı seçin ve ardından profil altında **özel** ' i seçin. Sonra **Oluştur**' a tıklayın.
+5. Görüntülenen panelde, **Platform**altında **IOS/ıpados** ' ı seçin ve ardından profil altında **özel** ' i seçin. Ardından, **Oluştur**’a tıklayın.
 6. **Ad** alanına, yapılandırma için bir açıklama başlığı sağlayın ve bu, en iyi şekılde, radar 'de etkinleştirme profilini adlandırdıklarınızı eşleştirir. Bu, gelecekte çapraz başvurmayı kolaylaştırmak için yardımcı olur. Alternatif olarak, isterseniz etkinleştirme profili kodunu sağlayın. Adı bu şekilde düzelterek, yapılandırmanın denetimli veya denetimli cihazlar için olup olmadığını belirten bir değer kullanmanızı öneririz.
 7. İsteğe bağlı olarak, yapılandırmanın amacı/kullanımı hakkında diğer yöneticiler için daha fazla ayrıntı sağlayan bir **Açıklama** sağlayın. **İleri**’ye tıklayın.
 8. **Dosya Seç** ' e tıklayın ve adım 3 ' te Indirilen uygun etkinleştirme profiline karşılık gelen indirilen yapılandırma profilini bulun. Her ikisini de indirdiyseniz ilgili denetimli veya denetlenmeyen profili seçmek için dikkatli olmanız gerekir. **İleri**’ye tıklayın.

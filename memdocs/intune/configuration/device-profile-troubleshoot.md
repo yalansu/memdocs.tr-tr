@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,32 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7893e845d2f4c73d4fc6fdecd8691b288c33bb48
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b6004526d8c9340e70e5149f2261eea07a916ed7
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078252"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871993"
 ---
-# <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Microsoft Intune 'deki cihaz ilkeleri ve profillerle ilgili yaygın sorular, sorunlar ve çözümler
+# <a name="common-questions-and-answers-with-device-policies-and-profiles-in-microsoft-intune"></a>Microsoft Intune 'deki cihaz ilkeleri ve profillerle ilgili yaygın sorular ve yanıtlar
 
 Intune 'da cihaz profilleri ve ilkeleriyle çalışırken sık sorulan soruların yanıtlarını alın. Bu makalede ayrıca iade zaman aralıkları listelenmekte, çakışmalar üzerinde daha fazla detaın ve daha fazlası verilmektedir.
-
-## <a name="why-doesnt-a-user-get-a-new-profile-when-changing-a-password-or-passphrase-on-an-existing-wi-fi-profile"></a>Bir kullanıcı, mevcut bir Wi-Fi profilinde parola değiştirirken neden yeni bir profil almıyor?
-
-Şirket Wi-Fi profili oluşturur, profili bir gruba dağıtır, parolayı değiştirir ve profili kaydedersiniz. Profil değiştiğinde, bazı kullanıcılar yeni profili alamayabilir.
-
-Bu sorunu azaltmak için konuk Wi-Fi kurulumu yapın. Şirket Wi-Fi başarısız olursa, kullanıcılar konuk Wi-Fi ile bağlanabilir. Otomatik bağlanma ayarlarının tümünü etkinleştirdiğinizden emin olun. Konuk Wi-Fi profilini tüm kullanıcılara dağıtın.
-
-Bazı ek öneriler:  
-
-- Bağlanmakta olduğunuz Wi-Fi ağı bir parola veya parola kullanıyorsa, Wi-Fi yönlendiricisine doğrudan bağlanabildiğinizden emin olun. İOS/ıpados cihazından test edebilirsiniz.
-- Bir Wi-Fi uç noktasına (Wi-Fi yönlendiricisi) başarıyla bağlandıktan sonra SSID’yi ve kullanılan kimlik bilgilerini (bu değer erişim kodu veya paroladır) not edin.
-- SSID ve kimlik bilgilerini (parola) Önceden Paylaşılan Anahtar alanına girin. 
-- Profili, tercihen yalnızca BT ekibinden oluşan, sınırlı sayıda kullanıcıları olan bir test grubuna dağıtın. 
-- İOS/ıpados cihazınızı Intune 'a eşitleyin. Henüz kaydolmadıysanız kaydolun. 
-- Aynı Wi-Fi uç noktasına bağlantıyı (ilk adımda bahsedildiği gibi) tekrar test edin.
-- Daha büyük gruplara veya sonuçta kuruluşunuzdaki tüm beklenen kullanıcılara dağıtın. 
 
 ## <a name="how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned"></a>Cihazların, atandıktan sonra bir ilke, profil veya uygulamayı alması ne kadar sürer?
 
@@ -55,7 +39,7 @@ Bir cihaz, ilk bildirimden sonra ilkeyi veya profili almak için iade vermezse, 
 | Platform | Döngü süresi|
 | --- | --- |
 | iOS/iPadOS | Her 8 saatte bir |
-| Mac OS | Her 8 saatte bir |
+| macOS | Her 8 saatte bir |
 | Android | Her 8 saatte bir |
 | Cihaz olarak kaydedilen Windows 10 bilgisayarlar | Her 8 saatte bir |
 | Windows Phone | Her 8 saatte bir |
@@ -63,16 +47,16 @@ Bir cihaz, ilk bildirimden sonra ilkeyi veya profili almak için iade vermezse, 
 
 Cihaz son zamanlarda kaydedildiyse, uyumluluk, uyumsuzluk ve yapılandırma iadede daha sık çalışır ve bu da **tahmin** edilir:
 
-| Platform | Frequency |
+| Platform | Sıklık |
 | --- | --- |
 | iOS/iPadOS | 1 saat boyunca 15 dakikada bir ve daha sonra 8 saatte bir |  
-| Mac OS | 1 saat boyunca 15 dakikada bir ve daha sonra 8 saatte bir | 
+| macOS | 1 saat boyunca 15 dakikada bir ve daha sonra 8 saatte bir | 
 | Android | 15 dakika boyunca 3 dakikada bir, sonra 2 saat boyunca 15 dakikada bir ve daha sonra 8 saatte bir | 
 | Cihaz olarak kaydedilen Windows 10 bilgisayarlar | 15 dakika boyunca 3 dakikada bir, sonra 2 saat boyunca 15 dakikada bir ve daha sonra 8 saatte bir | 
 | Windows Phone | 15 dakika boyunca 5 dakikada bir, sonra 2 saat boyunca 15 dakikada bir ve daha sonra 8 saatte bir | 
 | Windows 8.1 | 15 dakika boyunca 5 dakikada bir, sonra 2 saat boyunca 15 dakikada bir ve daha sonra 8 saatte bir | 
 
-Herhangi bir zamanda, kullanıcılar, ilke veya profil güncelleştirmelerini hemen denetlemek için şirket portalı uygulamasını, **Ayarlar** > **eşitlemesini** açabilir.
+Herhangi bir zamanda, kullanıcılar, **Settings**  >  ilke veya profil güncelleştirmelerini hemen denetlemek için şirket portalı uygulamasını, ayarlar**eşitlemesini** açabilir.
 
 ## <a name="what-actions-cause-intune-to-immediately-send-a-notification-to-a-device"></a>Hangi eylemler cihaza Intune tarafından anında bildirim gönderilmesine neden olur?
 
@@ -154,7 +138,7 @@ Bir profili sildiğinizde veya bir cihazı profilin bulunduğu bir gruptan kald�
 
 Windows Phone cihazlar bir kez ayarlandıktan sonra MDM veya EAS kullanılarak ayarlanan güvenlik ilkelerine güvenlik altına düşmesini sağlar. Örneğin, **en az sayıda karakter parolası** 8 olarak ayarlanır. Bunu 4 ' e azaltmayı deneyin. Cihaza daha kısıtlayıcı olan profil zaten uygulandı.
 
-Profili daha az güvenli bir değerle değiştirmek için güvenlik ilkelerini sıfırlayın. Örneğin, Windows 8.1 Masaüstünde, sağ > tarafta içeri doğru kaydırın ve **Ayarlar** > **Denetim Masası**' nı seçin. **Kullanıcı Hesapları** uygulamasını seçin. Sol taraftaki gezinti menüsünde **güvenlik Ilkelerini Sıfırla** bağlantısı vardır (en alta doğru). Bunu seçin ve ardından **İlkeleri Sıfırla**’yı seçin.
+Profili daha az güvenli bir değerle değiştirmek için güvenlik ilkelerini sıfırlayın. Örneğin, Windows 8.1 Masaüstünde, sağ > tarafta içeri doğru kaydırın ve **Ayarlar**  >  **Denetim Masası**' nı seçin. **Kullanıcı Hesapları** uygulamasını seçin. Sol taraftaki gezinti menüsünde **güvenlik Ilkelerini Sıfırla** bağlantısı vardır (en alta doğru). Bunu seçin ve ardından **İlkeleri Sıfırla**’yı seçin.
 
 Android, Windows Phone 8,1 ve üzeri, iOS/ıpados ve Windows 10 gibi diğer MDM cihazlarının devre dışı bırakılması ve daha az kısıtlayıcı bir profil uygulamak için Intune 'a yeniden kaydedilmesi gerekebilir.
 

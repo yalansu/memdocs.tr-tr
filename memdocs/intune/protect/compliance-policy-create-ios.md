@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 536ad36120a8fb5dc4ad0d16b8f265e56260d461
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: e57cd425ca89fa875b89c73a9eba30cecb7516d7
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729252"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871925"
 ---
 # <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Intune kullanarak cihazları uyumlu veya uyumsuz olarak işaretlemek için iOS/ıpados ayarları
 
@@ -149,7 +149,7 @@ E-posta profilleri hakkında ayrıntılı bilgi için bkz. [Intune ile e-posta p
   Uygulamaların paket kimliklerini ilkeye ekleyerek bunları kısıtlayabilirsiniz. Cihazda bu uygulama yüklüyse cihaz uyumsuz olarak işaretlenir.
 
   - **Uygulama adı** -paket kimliğini belirlemenize yardımcı olması için Kullanıcı dostu bir ad girin.
-  - **Uygulama PAKETI kimliği** -uygulama sağlayıcısı tarafından atanan benzersiz paket kimliğini girin. Paket KIMLIĞINI bulmak için bkz. [iOS/ıpados uygulamasının paket kimliğini bulma](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (başka bir Microsoft Web sitesini açar).  
+  - **Uygulama PAKETI kimliği** -uygulama sağlayıcısı tarafından atanan benzersiz paket kimliğini girin. Paket KIMLIĞINI bulmak için Support.apple.com adresindeki [Yerel iOS ve ıpados uygulamaları Için paket kimlikleri](https://support.apple.com/guide/mdm/native-ios-and-ipados-app-bundle-ids-mdm90f60c1ce/web) bölümüne bakın veya uygulamanın yazılım satıcısına başvurun.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

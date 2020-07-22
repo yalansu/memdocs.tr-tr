@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bcfab31d6efc2ff43451b3193848060c6f178a8
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 599a5f6e6e355a37e909182fc14a07d489f45558
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327138"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86872044"
 ---
 # <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Hızlı Başlangıç: Windows 10 cihazları için otomatik kayıt ayarlama
 
@@ -35,19 +35,19 @@ Intune aboneliğiniz yoksa [ücretsiz deneme hesabı için kaydolun](../fundamen
 
 ## <a name="sign-in-to-intune-in-the-microsoft-endpoint-manager"></a>Microsoft uç nokta yöneticisinde Intune 'da oturum açma
 
-[Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) genel yönetici veya Intune Hizmet Yöneticisi olarak oturum açın. Intune Deneme aboneliği oluşturduysanız aboneliği oluşturduğunuz hesap Genel yönetici rolüne sahip olur.
+[Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) genel yönetici veya Intune Yöneticisi olarak oturum açın. Intune Deneme aboneliği oluşturduysanız aboneliği oluşturduğunuz hesap Genel yönetici rolüne sahip olur.
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Windows 10 otomatik kaydını ayarlama
 
 Bu örnekte kurumsal ve kendi cihazını getir türü cihazların otomatik kaydolabilmesi için MDM kaydını kullanacaksınız. Ücretsiz bir Azure Active Directory Premium aboneliğine kaydolacaksınız.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **tüm hizmetler** > **M365 Azure Active Directory** > **Azure Active Directory** > **Mobility (MDM ve MAM)** öğesini seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **tüm hizmetler**  >  **M365 Azure Active Directory**  >  **Azure Active Directory**  >  **Mobility (MDM ve MAM)** öğesini seçin.
 2. **Bu özelliği kullanmak için ücretsiz bir Premium deneme sürümü edinin** seçeneğini belirleyin. Bu seçeneğin belirlenmesi, Azure Active Directory ücretsiz Premium deneme sürümü kullanılarak otomatik kayıt yapılmasına imkan verir. 
 
     ![Azure Active Directory ücretsiz Premium deneme sürümünü seçin](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-01.png)
 
 3. **Enterprise Mobility + Security E5** ücretsiz deneme seçeneğine tıklayın. 
-4. Ücretsiz **deneme** > sürümünü etkinleştirme ücretsiz deneme sürümünü**etkinleştirin** .
+4. Ücretsiz **deneme**sürümünü  >  **etkinleştirme** ücretsiz deneme sürümünü etkinleştirin.
 
     ![Enterprise Mobility + Security E5 ücretsiz deneme sürümünü seçin](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-02.png)
 
@@ -62,7 +62,7 @@ Bu örnekte kurumsal ve kendi cihazını getir türü cihazların otomatik kaydo
 
     ![Yapılandırma listesinden “Bazıları”nı seçin](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-04.png)
 
-5. **Grup** > Seç**contoso sınayıcıları** > atanan grup olarak**Seç** ' e tıklayın.
+5. **Grup Seç**  >  **contoso sınayıcıları**  >  atanan grup olarak**Seç** ' e tıklayın.
 
     ![Kaydedilecek grubu seçin](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-05.png)
 
@@ -70,7 +70,7 @@ Bu örnekte kurumsal ve kendi cihazını getir türü cihazların otomatik kaydo
 
     ![Kaydedilecek grubu seçin](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-06.png)
 
-7. **Grup** > Seç**contoso sınayıcıları** > atanan grup olarak**Seç ' i** seçin. 
+7. **Grup Seç**  >  **contoso sınayıcıları**  >  atanan grup olarak**Seç ' i** seçin. 
 8. Geri kalan yapılandırma değerleri için varsayılan değerleri kullanabilirsiniz.
 9. **Kaydet**'i seçin.
 

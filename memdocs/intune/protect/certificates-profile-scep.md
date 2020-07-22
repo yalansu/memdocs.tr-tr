@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/03/2020
+ms.date: 07/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03e29f7c0256a5cd1c9cdabdd24394a2f390286b
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: ebf6a71a4d462e1025b6c44557a9513887488673
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462159"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891539"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Intune 'da SCEP sertifika profilleri oluşturma ve atama
 
@@ -48,7 +48,7 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
 
       2. Cihaz sahipleri için SCEP sertifika profilleri tarafından sağlanan sertifikaları iptal etmek için Intune 'U kullanamazsınız. İptali bir dış işlem veya doğrudan sertifika yetkilisi ile yönetebilirsiniz.
 
-      3. Android kurumsal adanmış cihazlarda, SCEP sertifika profilleri yalnızca Wi-Fi ağ yapılandırması ve kimlik doğrulaması için desteklenir.  Android kurumsal adanmış cihazlarda SCEP sertifika profilleri VPN veya uygulama kimlik doğrulaması için desteklenmez.
+      3. Android kurumsal adanmış cihazlarda, SCEP sertifika profilleri Wi-Fi ağ yapılandırması, VPN ve kimlik doğrulaması için desteklenir. Android kurumsal adanmış cihazlarda SCEP sertifika profilleri, uygulama kimlik doğrulaması için desteklenmez.
 
 4. **Oluştur**’u seçin.
 
@@ -71,6 +71,9 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
 
        **Cihazı** , kiosks gibi Kullanıcı-daha az cihazlar veya Windows cihazları gibi senaryolar için kullanın. Windows cihazlarında, sertifika yerel bilgisayar sertifika deposuna yerleştirilir.
 
+     > [!NOTE]
+     > MacOS 'ta, SCEP ile sağladığınız sertifikalar her zaman cihazın sistem anahtarlığınıza (sistem deposuna) yerleştirilir.
+ 
    - **Konu adı biçimi**:
 
      Intune 'un sertifika isteğinde konu adını otomatik olarak nasıl oluşturduğunu seçin. Konu adı biçimi için seçenekler, **Kullanıcı** veya **cihaz**' ı seçtiğiniz sertifika türüne bağlıdır.
