@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d246ea2811e0fb561bc623ae29d3fb5ef0de66f9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 70f8033f694dfafefc92696df0b0e6ea652e2feb
+ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989382"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86946669"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Intune’da Windows 10 yazılım güncelleştirmelerini yönetme
 
@@ -90,7 +90,7 @@ Windows 10 güncelleştirme halkaları [kapsam etiketlerini](../fundamentals/sco
 
    Hazırlandığınızda, *atamalara*devam etmek için **İleri** ' yi seçin.
 
-6. **Atamalar**' ın altında **+ dahil edilecek grupları seçin** ve ardından güncelleştirme halkasını bir veya daha fazla gruba atayın. Atamanın ince ayar yapmak için **+ Select grupları** kullanın. Devam etmek için **İleri**’yi seçin.
+6. **Atamalar**' ın altında **+ dahil edilecek grupları seçin** ve ardından güncelleştirme halkasını bir veya daha fazla gruba atayın. Atamanın ince ayar yapmak için **+ Select grupları** kullanın. Devam etmek için **İleri** seçeneğini belirleyin.
 
 7. **Gözden geçir + oluştur**bölümünde ayarları gözden geçirin ve ardından Windows 10 güncelleştirme halkasını kaydetmeye hazırsanız **Oluştur** ' u seçin. Yeni güncelleştirme halkalarınız, güncelleştirme halkaları listesinde görüntülenir.
 
@@ -100,7 +100,7 @@ Portalda, **cihazlar**  >  **Windows**  >  **Windows 10 güncelleştirme halkala
 
 Bu sayfadan, halkalar atama durumunu görüntüleyebilir ve güncelleştirme halkasını yönetmek için genel bakış bölmesinin üst kısmından aşağıdaki eylemleri seçebilirsiniz:
 
-- [Sil](#delete)
+- [Silme](#delete)
 - [Duraklat](#pause)
 - [Sürdür](#resume)
 - [Genişletme](#extend)
@@ -193,7 +193,7 @@ Windows Update ilkeleri hakkında daha fazla bilgi için bkz. Windows istemci y�
 
 ## <a name="windows-10-feature-updates"></a>Windows 10 özellik güncelleştirmeleri
 
-*Bu özellik genel önizleme aşamasındadır.*
+*Bu özellik genel önizlemede.*
 
 *Windows 10 özellik güncelleştirmeleri*ile Windows 10 sürüm 1803 veya sürüm 1809 gibi cihazların üzerinde kalmasını istediğiniz Windows özellik sürümünü seçersiniz. 1803 veya üzeri bir özellik düzeyi belirleyebilirsiniz.
 
@@ -222,6 +222,8 @@ Intune 'da Windows 10 özellik güncelleştirmelerini kullanmak için aşağıda
 
 - Windows 10 özellik güncelleştirme ilkeleri, Autopilot Out deneyimi (OOBE) sırasında uygulanamıyor ve yalnızca bir cihazın sağlama işlemini tamamladıktan (genellikle bir gün) sonra ilk Windows Update taramaya uygulanır.
 
+- Windows 10 özellik güncelleştirmeleri genel önizlemede kaldığı halde, cihazları Configuration Manager ve Intune ile birlikte yönetirken, özellik güncelleştirme ilkelerinin hemen etkili olmaması ve cihazların Intune 'da yapılandırıldıklarında daha sonraki bir özellik güncelleştirmesine güncelleştirilmesine neden olabilir. Bu sınırlama, Configuration Manager gelecek bir güncelleştirmeyle kaldırılacak.
+
 ### <a name="create-and-assign-windows-10-feature-updates"></a>Windows 10 özellik güncelleştirmelerini oluşturma ve atama
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
@@ -230,7 +232,7 @@ Intune 'da Windows 10 özellik güncelleştirmelerini kullanmak için aşağıda
 
 3. **Temel bilgiler**altında bir ad, açıklama (isteğe bağlı) belirtin ve **dağıtılacak Özellik Güncelleştirmesi**için, istediğiniz özellik kümesiyle Windows sürümünü seçin ve ardından **İleri**' yi seçin.
 
-4. **Atamalar**altında **+ dahil edilecek grupları seç** ' i seçin ve ardından özellik güncelleştirme dağıtımını bir veya daha fazla gruba atayın. Devam etmek için **İleri**’yi seçin.
+4. **Atamalar**altında **+ dahil edilecek grupları seç** ' i seçin ve ardından özellik güncelleştirme dağıtımını bir veya daha fazla gruba atayın. Devam etmek için **İleri** seçeneğini belirleyin.
 
 5. **Gözden geçir + oluştur**altında, ayarları gözden geçirin ve Windows 10 özellik güncelleştirmeleri ilkesini kaydetmeye hazırsanız **Oluştur** ' u seçin.  
 
