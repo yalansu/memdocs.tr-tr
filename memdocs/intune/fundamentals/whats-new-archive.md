@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8073cb1dbe872d9c7fd1ad05235707be4b969519
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 0c1029c4641d9ff07bf4254427cb08dfa583b5f8
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461428"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262634"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune’daki yenilikler - önceki aylar
 
@@ -2562,7 +2562,7 @@ Bu özellik güncelleştirmesi ile Windows 10 cihazı S modundan çıkaran veya 
 Şunlar için geçerlidir: En son [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) derlemesi (önizlemedeyken).
 
 #### <a name="windows-defender-atp-configuration-package-automatically-added-to-configuration-profile---2144658---"></a>Windows Defender ATP yapılandırma paketi, otomatik olarak yapılandırma profiline eklenir<!-- 2144658 -->
-Eskiden Intune’da [Gelişmiş Tehdit Koruması ve ekleme](../protect/advanced-threat-protection.md#onboard-windows-devices-by-using-a-configuration-profile) cihazları kullanırken bir yapılandırma paketini indirip bunu yapılandırma profilinize ekliyordunuz. Bu güncelleştirme ile Intune, paketi otomatik olarak Windows Defender Güvenlik Merkezi’nden alır ve profilinize ekler.
+Eskiden Intune’da [Gelişmiş Tehdit Koruması ve ekleme](../protect/advanced-threat-protection-configure.md#onboard-devices) cihazları kullanırken bir yapılandırma paketini indirip bunu yapılandırma profilinize ekliyordunuz. Bu güncelleştirme ile Intune, paketi otomatik olarak Windows Defender Güvenlik Merkezi’nden alır ve profilinize ekler.
 Windows 10 ve üzeri için geçerlidir.
 
 #### <a name="require-users-to-connect-during-device-setup--2311457--"></a>Cihaz kurulumu sırasında kullanıcıların bağlanmasını gerektirme<!--2311457-->
@@ -4364,7 +4364,7 @@ Bu sürümde, Windows 10 cihaz kısıtlama profili için aşağıdaki kategorile
 - Hücresel ve bağlantı
 - Kilit ekranı deneyimi
 - Gizlilik
-- Arayın
+- Arama
 - Windows Spot
 - Microsoft Edge tarayıcısı
 

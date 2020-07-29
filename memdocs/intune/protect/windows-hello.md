@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 64a76911725e5d596a80ecc67e42f088666017de
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: d120ee0f55651ab1661e426e5889aaf8a4c7e670
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531902"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262872"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>İş için Windows Hello ile Microsoft Intune tümleştirmesi  
 
@@ -32,13 +32,21 @@ Iş için Windows Hello 'Yu (eski adıyla İş için Microsoft Passport), cihaz 
 
 Intune, İş İçin Hello ile iki şekilde tümleşir:
 
-- **Kiracı genelinde**: *cihaz kaydı*altında bir Intune ilkesi oluşturulabilir. Bu ilke, tüm kuruluşu hedefler (kiracı genelinde). Windows AutoPilot ilk çalıştırma deneyimini (OOBE) destekler ve bir cihaz kaydedildiğinde uygulanır.
-- **Ayrık gruplar**: Iş Için Windows Hello 'Yu, Intune 'a kayıtlı cihazlara dağıtabilirsiniz. Windows Hello 'Yu yönetebilen ilke türleri, *cihaz yapılandırması*, çeşitli *güvenlik temelleri*ve uç nokta güvenlik *hesabı koruma* profilleri altında oluşturduğunuz *kimlik koruma* profillerini içerir. Bu profil türleri, atanan kullanıcıları veya cihazları hedefleyin ve iade sırasında uygulanır.
+- **Kiracı genelinde** (*Bu makale)*: bir Intune ilkesi, *cihaz kaydı*altında oluşturulabilir. Bu ilke, tüm kuruluşu hedefler (kiracı genelinde). Windows AutoPilot ilk çalıştırma deneyimini (OOBE) destekler ve bir cihaz kaydedildiğinde uygulanır.
+- **Ayrık gruplar**: Intune 'a daha önce kaydolmuş cihazlar Için Windows Hello for Business için cihazları yapılandırmak üzere bir cihaz yapılandırma [**kimlik koruması**](../protect/identity-protection-configure.md) profili kullanın. Kimlik koruma profilleri atanan kullanıcıları veya cihazları hedefleyebilir ve iade sırasında uygulanabilir.
 
-Tüm kuruluşunuzu hedefleyen bir varsayılan İş İçin Windows Hello ilkesi oluşturmak için bu makaleden yararlanın. Seçili kullanıcı ve cihaz gruplarına uygulanacak bir kimlik koruma profili oluşturmak için bkz. [Kimlik koruma profili oluşturma](identity-protection-configure.md).  
+Ayrıca Intune, Iş için Windows Hello bazı ayarlarını yönetmek üzere aşağıdaki ilke türlerini destekler:
+
+- [**Güvenlik temelleri**](../protect/security-baselines.md). Aşağıdaki taban çizgileri Iş için Windows Hello ayarlarını içerir:
+  - [Microsoft Defender Gelişmiş tehdit koruması temel ayarları](../protect/security-baseline-settings-defender-atp.md#windows-hello-for-business)
+  - [Windows MDM güvenlik taban çizgisi ayarları](../protect/security-baseline-settings-mdm-all.md#windows-hello-for-business)
+- Uç nokta güvenlik [**hesabı koruma**](../protect/endpoint-security-account-protection-policy.md) ilkesi. [Hesap koruması ayarlarını](../protect/endpoint-security-account-protection-profile-settings.md#account-protection)görüntüleyin.
+
+Bu makalenin geri kalanında, tüm kuruluşunuzu hedefleyen Iş için varsayılan bir Windows Hello ilkesi oluşturma konusu ele alınmaktadır.
 
 > [!IMPORTANT]
 > Yıldönümü Güncelleştirmesi’nden önceki Windows 10 masaüstü ve mobil sürümlerinde, kaynaklarda kimlik doğrulama için kullanılabilen iki farklı PIN ayarlayabilirsiniz:
+>
 > - **Cihaz PIN’i** cihazın kilidini açmak ve bulut kaynaklarına bağlanmak için kullanılabilir.
 > - **Iş PIN 'i** , kullanıcının kişisel cihazlarında (KCG) Azure AD kaynaklarına erişmek için kullanıldı.
 > 

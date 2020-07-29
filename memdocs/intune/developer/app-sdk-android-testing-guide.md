@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd4ece62215d48f3481923e099feecc992d7aa6d
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: b47361bf4812de91d12c779a6eb58fef35e9d0f2
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093374"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262056"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Android için Microsoft Intune uygulama SDK 'Sı geliştiriciler test Kılavuzu
 
 Android için Microsoft Intune uygulama SDK 'Sı test Kılavuzu, Intune ile yönetilen Android uygulamanızı test etmenize yardımcı olmak için tasarlanmıştır.
 
 ## <a name="demo-tenant-setup"></a>Tanıtım kiracı kurulumu
-Şirketiniz ile zaten bir kiracınız yoksa önceden oluşturulmuş verilerle veya olmadan bir tanıtım kiracısı oluşturabilirsiniz. Microsoft CDX erişimi için bir [Microsoft iş ortağı](https://partner.microsoft.com/en-us/business-opportunities/why-microsoft) olarak kaydolmanız gerekir. Yeni bir hesap oluşturmak için:
+Şirketiniz ile zaten bir kiracınız yoksa önceden oluşturulmuş verilerle veya olmadan bir tanıtım kiracısı oluşturabilirsiniz. Microsoft CDX erişimi için bir [Microsoft iş ortağı](https://partner.microsoft.com/business-opportunities/why-microsoft) olarak kaydolmanız gerekir. Yeni bir hesap oluşturmak için:
 1. [Microsoft CDX kiracı oluşturma sitesine](https://cdx.transform.microsoft.com/my-tenants/create-tenant) gidin ve bir Microsoft 365 Kurumsal kiracı oluşturun.
 2. [Intune](../fundamentals/setup-steps.md) 'u mobil cihaz YÖNETIMI (MDM) etkinleştirecek şekilde ayarlayın.
 3. [Kullanıcı oluşturun](../fundamentals/users-add.md).

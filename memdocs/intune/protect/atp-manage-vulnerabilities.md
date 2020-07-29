@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72fb278070e2d5b8581fb1b2e263aa06c90b5df9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a1d410da2cbedb9bcd2418fac1ddb783529ee8c6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989749"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262600"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Intune kullanarak Microsoft Defender ATP tarafından tanımlanan güvenlik açıklarını düzeltin
 
@@ -63,7 +63,7 @@ Düzeltme için genel eylemler şunları içerir:
 
 - Düzeltmeyi tamamladıktan sonra, Intune Yöneticisi güvenlik görevini açar ve **tamamlanmış görevi**seçer.  Düzeltme durumu, Intune ve ATP 'de, güvenlik yöneticilerinin güvenlik açığı için düzeltilen durumu doğrulayabileceği şekilde güncelleştirilir.
 
-## <a name="prerequisites"></a>Ön koşullar  
+## <a name="prerequisites"></a>Önkoşullar  
 
 **Abonelikler**:
 
@@ -75,7 +75,7 @@ Düzeltme için genel eylemler şunları içerir:
 - Microsoft Defender ATP ile hizmet bağlantısı için bir hizmet yapılandırın.
 - ATP tarafından değerlendirilme riskini alacak cihazlara **Microsoft Defender ATP (Windows 10 Masaüstü)** profil türüyle bir cihaz yapılandırma ilkesi dağıtın.
 
-  Intune 'u ATP ile çalışacak şekilde ayarlama hakkında daha fazla bilgi için bkz. [Intune 'Da koşullu erişim Ile Microsoft Defender ATP için uyumluluğu zorlama](advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune).
+  Intune 'u ATP ile çalışacak şekilde ayarlama hakkında daha fazla bilgi için bkz. [Intune 'Da koşullu erişim Ile Microsoft Defender ATP için uyumluluğu zorlama](advanced-threat-protection-configure.md#enable-microsoft-defender-atp-in-intune).
 
 ## <a name="work-with-security-tasks"></a>Güvenlik görevleriyle çalışma
 
@@ -103,6 +103,7 @@ Düzeltme için genel eylemler şunları içerir:
 Düzeltme başarılı olduktan sonra, düzeltilen cihazlardan gelen yeni bilgilere bağlı olarak ATP 'deki risk etkilenme puanı düşürülemiyor.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
+
 Intune ve [Microsoft Defender ATP](advanced-threat-protection.md)hakkında daha fazla bilgi edinin.
 
 Intune [Mobile Threat](mobile-threat-defense.md)Defense ' i gözden geçirin.

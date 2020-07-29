@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da2f2b1155e6760d23d4ead65899b82e277fbd3e
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 2cd5e8f6e1975adf33131ca47049eb2d4a6f68cd
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891556"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262889"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -290,11 +290,11 @@ Kuruluşunuzdaki en önemli destek sorunlarını önceden bulmak ve gidermek iç
 
 #### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>Android için uyumluluk ilkelerinde Microsoft Defender ATP kullanma<!-- 4425686  -->
 
-Artık Intune 'U [Android cihazları Microsoft Defender Gelişmiş tehdit koruması](../protect/advanced-threat-protection.md#onboard-android-devices) (MICROSOFTDEFENDER ATP) uygulamasına eklemek için kullanabilirsiniz. Kayıtlı cihazlarınız eklendi olduktan sonra, Android için uyumluluk ilklarınız Microsoft Defender ATP 'den *tehdit düzeyi* sinyallerini kullanabilir. Bunlar, daha önce Windows 10 cihazlarında kullanabileceğiniz sinyallerdir.
+Artık Intune 'U [Android cihazları Microsoft Defender Gelişmiş tehdit koruması](../protect/advanced-threat-protection-configure.md#onboard-devices) (MICROSOFTDEFENDER ATP) uygulamasına eklemek için kullanabilirsiniz. Kayıtlı cihazlarınız eklendi olduktan sonra, Android için uyumluluk ilklarınız Microsoft Defender ATP 'den *tehdit düzeyi* sinyallerini kullanabilir. Bunlar, daha önce Windows 10 cihazlarında kullanabileceğiniz sinyallerdir.
 
 #### <a name="configure-defender-atp-web-protection-for-android-devices---6185563----"></a>Android cihazlar için Defender ATP Web korumasını yapılandırma<!-- 6185563  -->
 
-Android cihazlar için Microsoft Defender Gelişmiş tehdit koruması 'nı (Microsoft Defender ATP) kullandığınızda, [Microsoft Defender ATP Web koruması](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android) 'nı, kimlik avı taraması özelliğini devre dışı bırakmak için yapılandırabilir veya taramanın VPN kullanmasını engelleyebilirsiniz.
+Android cihazlar için Microsoft Defender Gelişmiş tehdit koruması 'nı (Microsoft Defender ATP) kullandığınızda, [Microsoft Defender ATP Web koruması](../protect/advanced-threat-protection-manage-android.md) 'nı, kimlik avı taraması özelliğini devre dışı bırakmak için yapılandırabilir veya taramanın VPN kullanmasını engelleyebilirsiniz.
 
 Android cihazınızın Intune 'a nasıl oluşturulduğuna bağlı olarak, aşağıdaki seçenekler kullanılabilir:
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43107ce98ee1c9d002b07470c224b2291819069b
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 8012b11557971ff8a7e3a05360243010d891fa2e
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264116"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262787"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Microsoft Intune’da Android cihazlar için özel ayarlar kullanma
 
@@ -35,7 +35,7 @@ Android özel profilleri, Open Mobile Alliance Tekdüzen Kaynak Tanımlayıcıs�
 - [Önceden paylaşılan anahtar ile Wi-Fi profili oluşturma](/intune/wi-fi-profile-shared-key)
 - [Uygulama başına VPN profili oluşturma](/intune/android-pulse-secure-per-app-vpn)
 - [Samsung Knox Standard cihazlarında uygulamalara izin verme veya bunları engelleme](/intune/samsung-knox-apps-allow-block)
-- [Android için Microsoft Defender Gelişmiş tehdit koruması 'nda Web korumasını yapılandırma](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android)
+- [Android için Microsoft Defender Gelişmiş tehdit koruması 'nda Web korumasını yapılandırma](../protect/advanced-threat-protection-manage-android.md)
 
 >[!IMPORTANT]
 > Yalnızca listelenen ayarlar bir özel profil tarafından yapılandırılabilir. Android cihazları, yapılandırabileceğiniz OMA-URI ayarlarının tam bir listesini sunmaz. Diğer ayarları görmek istiyorsanız, [Intune Uservoice sitesinde](https://microsoftintune.uservoice.com/forums/291681-ideas) diğer ayarlar için oy verin.

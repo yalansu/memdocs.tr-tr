@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d0e5e3e0b142b47dba64b1cb26dfb5d798e877c9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ff08d1424866a0f18a44aa51b97ffc6f92e58789
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983860"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262702"
 ---
 # <a name="add-and-assign-the-windows-10-company-portal-app-for-autopilot-provisioned-devices"></a>Autopilot tarafından sağlanan cihazlar için Windows 10 Şirket Portalı uygulaması ekleme ve atama
 
 Cihazları yönetmek ve uygulamaları yüklemek için kullanıcılarınız Şirket Portalı uygulamasını kullanabilir. Windows 10 Şirket Portalı uygulamasını doğrudan Intune 'dan atayabilirsiniz. 
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Windows 10 Autopilot tarafından sağlanan cihazlarda, Microsoft Store for Business hesabınızı Intune ile ilişkilendirmeniz önerilir. Daha fazla bilgi için bkz. [Microsoft Intune Ile iş için Microsoft Store toplu satın alınan uygulamaları yönetme](windows-store-for-business.md).
 
@@ -52,8 +52,8 @@ Windows 10 Autopilot tarafından sağlanan cihazlarda, Microsoft Store for Busin
 ## <a name="assign-the-company-portal-app"></a>Şirket Portalı uygulamasını atama
 
 1. Yönetici hesabınızla [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın   . 
-2. Sağ bölmedeki**uygulamalar**sekmesini seçin.
-3. **Platform tarafından**altında**Windows**' u seçin.
+2. Sağ bölmedeki **uygulamalar** sekmesini seçin.
+3. **Platform tarafından**altında **Windows**' u seçin.
 4. **Şirket portalı (çevrimdışı)** seçeneğini belirleyin.
 5. Eşitleme zamanlamasının tamamlanmasını beklemeniz ya da Microsoft Endpoint Manager yönetim merkezinden el ile eşitleme yapmanız gerekir.
 6. Şirket Portalı uygulamasını seçtiğiniz Autopilot cihaz gruplarına gerekli bir uygulama olarak atayın.

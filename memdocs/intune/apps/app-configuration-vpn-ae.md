@@ -1,12 +1,12 @@
 ---
-title: Android Kurumsal cihazları için VPN yapılandırma
+title: Microsoft Intune 'de Android Kurumsal cihazları için bir VPN veya uygulama başına VPN yapılandırın | Microsoft Docs
 titleSuffix: Microsoft Intune
-description: Uygulama koruma İlkesi kullanın TOC, Android kurumsal cihazlar için bir VPN yapılandırın.
+description: Microsoft Intune ' de Android kurumsal cihazlara yönelik bir VPN veya uygulama başına VPN profili eklemek veya oluşturmak için bir uygulama yapılandırma ilkesi kullanın.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 07/23/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,155 +18,209 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcb7bd506d92befa3c73faf7270de28765f5b192
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 7e869ad933e86d9330dbb8d6a26b1886a71cee07
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347351"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262906"
 ---
-# <a name="configure-a-vpn-for-android-enterprise-devices"></a>Android Kurumsal cihazları için VPN yapılandırma
+# <a name="use-a-vpn-and-per-app-vpn-policy-on-android-enterprise-devices-in-microsoft-intune"></a>Microsoft Intune 'de Android kurumsal cihazlarda VPN ve uygulama başına VPN ilkesi kullanın
 
-Bu konu başlığı altında, Android kurumsal cihazlarda bir VPN istemcisiyle birlikte dağıtılabilecek bir uygulama yapılandırma ilkesinin nasıl oluşturulacağı açıklanmaktadır. Bu yapılandırma, seçilen uygulamaların şirket kaynaklarına erişmesi için ağ trafiğine izin verir.
+Sanal özel ağlar (VPN), kullanıcıların, ana, otel, calarlar ve daha fazlası dahil olmak üzere kuruluş kaynaklarına uzaktan erişmesini sağlar. Microsoft Intune, bir uygulama yapılandırma ilkesi kullanarak Android kurumsal cihazlarda VPN istemci uygulamalarını yapılandırabilirsiniz. Ardından, bu ilkeyi kuruluşunuzdaki cihazlara VPN yapılandırmasıyla dağıtın.
+
+Ayrıca, belirli uygulamalar tarafından kullanılan VPN ilkeleri de oluşturabilirsiniz. Bu özellik uygulama başına VPN olarak adlandırılır. Uygulama etkin olduğunda, VPN 'ye bağlanabilir ve VPN üzerinden kaynaklara erişebilir. Uygulama etkin olmadığında VPN kullanılmaz.
+
+Bu özellik şu platformlarda geçerlidir:
+
+- Android Kurumsal
+
+VPN istemci uygulamanız için uygulama yapılandırma ilkesini oluşturmanın iki yolu vardır:
+
+- Yapılandırma tasarımcısı
+- JSON verileri
+
+Bu makalede her iki seçeneği kullanarak uygulama başına VPN ve VPN uygulama yapılandırma ilkesi oluşturma işlemlerinin nasıl yapılacağı gösterilir.
 
 > [!NOTE]
-> Android platformu, seçili uygulamalardan biri açıldığında VPN istemci bağlantısının otomatik olarak tetiklemesini desteklememektedir. VPN bağlantısı önce el ile başlatılmalıdır, ya da [her zaman VPN](../configuration/vpn-settings-android-enterprise.md)'yi de kullanabilirsiniz.
+> VPN istemci yapılandırma parametrelerinin birçoğu benzerdir. Ancak, her uygulamanın benzersiz anahtar ve seçenekleri vardır. Sorularınız varsa VPN satıcınıza danışın.
 
-Başarılı VPN erişimi elde etmek için bir yapılandırma ilkesi oluşturmanın ön gereksinimleri, seçilen VPN istemcisinin yönetilen uygulama yapılandırma profillerini desteklemeye yönelik özelliğini içerir. Şu anda, Intune uygulama yapılandırma ilkesini destekleyen VPN istemcileri şunları içerir:
-- Cisco AnyConnect
-- Citrix SSO
-- F5 Access
-- Palo Alto küresel bağlantı
-- Pulse Secure
-- SonicWall Mobile Connect
+## <a name="before-you-begin"></a>Başlamadan önce
 
-VPN uç noktasına yönelik kimlik doğrulama erişimi için istemci sertifikalarının kullanılması gerekiyorsa, uygulama yapılandırma ilkesi için gerekli değerleri doldurmaya yardımcı olmak üzere Sertifika profillerinin önceden oluşturulması gerekir.
+- Bir uygulama açıldığında Android, VPN istemci bağlantısını otomatik olarak tetiklemez. VPN bağlantısının el ile başlatılması gerekir. Ya da bağlantıyı başlatmak için [Always on VPN](../configuration/vpn-settings-android-enterprise.md) kullanabilirsiniz.
 
-> [!NOTE]
-> Android kurumsal iş profili senaryoları hem SCEP hem de PKCS sertifikalarını destekleirken, Android kurumsal cihaz sahibi senaryoları Şu anda yalnızca SCEP sertifikalarını destekler. 
+- Aşağıdaki VPN istemcileri Intune uygulama yapılandırma ilkelerini destekler:
 
-Uygulama başına VPN profili oluşturmak ve test etmek için temel akış aşağıdaki adımlardır:
-1.  Altyapınız için uygun VPN istemci uygulamasını seçin.
-2.  VPN bağlantısıyla kullanmak istediğiniz üretkenlik uygulamalarının uygulama paketi kimliklerini belirler.
-3.  VPN bağlantısının kimlik doğrulama gereksinimlerini karşılamak için gereken tüm sertifika profillerini dağıtın. Başarılı dağıtımı doğruladığınızdan emin olun.
-4.  VPN istemci uygulamasını dağıtın.
-5.  Önceki adımlarda toplanan bilgileri kullanarak uygulama yapılandırma tabanlı VPN profilini hazırlayın.
-6.  Yeni oluşturulan VPN profilini dağıtın.
-7.  VPN istemci uygulamasının VPN sunucusu altyapınıza başarıyla bağlanıp bağlanmayacağını doğrulayın.
-8.  Seçili üretkenlik uygulamalarınızdan gelen trafiğin, etkin olduğunda VPN 'yi başarıyla yeniden geçişli olduğunu doğrulayın.
+  - Cisco AnyConnect
+  - Citrix SSO
+  - F5 Access
+  - Palo Alto Networks GlobalProtect
+  - Pulse Secure
+  - SonicWall Mobile Connect
+
+- Intune 'da VPN ilkesi oluşturduğunuzda, yapılandırmak için farklı anahtarlar seçersiniz. Bu anahtar adları farklı VPN istemci uygulamalarına göre farklılık gösterir. Bu nedenle, ortamınızdaki anahtar adları bu makaledeki örneklerden farklı olabilir.
+
+- Yapılandırma Tasarımcısı ve JSON verileri, sertifika tabanlı kimlik doğrulamasını başarılı bir şekilde kullanabilir. VPN kimlik doğrulaması için istemci sertifikaları gerekiyorsa, VPN ilkesini oluşturmadan önce sertifika profillerini oluşturun. VPN uygulama yapılandırma ilkeleri, sertifika profillerindeki değerleri kullanır.
+
+  Android kurumsal iş profili cihazları, SCEP ve PKCS sertifikalarını destekler. Android kurumsal tam olarak yönetilen, adanmış ve şirkete ait iş profili cihazları yalnızca SCEP sertifikalarını destekler. Daha fazla bilgi için bkz. [Microsoft Intune kimlik doğrulaması için sertifikaları kullanma](../protect/certificates-configure.md).
+
+## <a name="per-app-vpn-overview"></a>Uygulama başına VPN 'ye Genel Bakış
+
+Uygulama başına VPN oluştururken ve test edilirken, temel akış aşağıdaki adımları içerir:
+
+1. VPN istemci uygulamasını seçin. [Başlamadan önce](#before-you-begin) (Bu makalede) desteklenen uygulamaları listeler.
+2. VPN bağlantısını kullanacak uygulamaların uygulama paketi kimliklerini alın. [Uygulama PAKETI kimliğini alma](#get-the-app-package-id) (Bu makalede) size nasıl yapılacağını gösterir.
+3. VPN bağlantısının kimliğini doğrulamak için sertifikalar kullanıyorsanız, VPN ilkesini dağıtmadan önce sertifika profillerini oluşturun ve dağıtın. Sertifika profillerinin başarılı bir şekilde dağıttığınızdan emin olun. Daha fazla bilgi için bkz. [Microsoft Intune kimlik doğrulaması için sertifikaları kullanma](../protect/certificates-configure.md).
+4. [VPN istemci uygulamasını](apps-add-android-for-work.md) Intune 'a ekleyin ve uygulamayı kullanıcılarınıza ve cihazlarınıza dağıtın.
+5. VPN uygulama yapılandırma ilkesini oluşturun. İlkedeki uygulama paketi kimliklerini ve sertifika bilgilerini kullanın.
+6. Yeni VPN ilkesini dağıtın.
+7. VPN istemci uygulamasının VPN sunucunuza başarıyla bağlandığını doğrulayın.
+8. Uygulama etkin olduğunda, uygulamanızdan gelen trafiğin VPN üzerinden başarılı bir şekilde gitdiğini doğrulayın.
 
 ## <a name="get-the-app-package-id"></a>Uygulama paketi KIMLIĞINI al
 
-VPN erişimi vermek istediğiniz her uygulama için paket KIMLIĞINI belirler. Genel olarak kullanılabilir uygulamalar için, Google Play deposundaki her bir uygulama için paket kimliklerini almayı göz önünde bulundurun. Her uygulama için görünen URL paket KIMLIĞINI içerir. Örneğin, Microsoft Edge tarayıcısının Android sürümü için paket KIMLIĞI `com.microsoft.emmx` . Paket KIMLIĞI URL 'nin bir parçası olarak dahil edilir.
+VPN kullanacak her uygulama için paket KIMLIĞINI alın. Genel kullanıma açık uygulamalar için, Google Play deposundaki uygulama paketi KIMLIĞINI alabilirsiniz. Her uygulama için görünen URL paket KIMLIĞINI içerir.
 
-![Uygulama paketi KIMLIĞINI bulma örneği.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-01.png)
+Aşağıdaki örnekte, Microsoft Edge tarayıcı uygulamasının paket KIMLIĞI `com.microsoft.emmx` . Paket KIMLIĞI URL 'nin bir parçasıdır:
 
-Iş kolu (LOB) uygulamaları için satıcınıza veya uygulama geliştirme ekibinize ilgili paket KIMLIĞINI sağlamasını isteyin.
+:::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-01.png" alt-text="Google Play deposundaki URL 'de uygulama paketi KIMLIĞINI alın.":::
+
+Iş kolu (LOB) uygulamaları için, satıcı veya uygulama geliştiricisinden paket KIMLIĞINI alın.
 
 ## <a name="certificates"></a>Sertifikalar
 
-Bu konu başlığında, VPN bağlantınızın sertifika tabanlı kimlik doğrulamasını kullandığını ve istemci kimlik doğrulamasının başarılı olması için gereken zincirdeki tüm sertifikaları başarıyla dağıttığımız varsayılmaktadır. Genellikle, bu istemci sertifikası, tüm ara sertifikalar ve kök sertifika olacaktır.
-Android Enterprise için sertifika dağıtımı hakkında daha fazla bilgi için, konusunu inceleyerek [Microsoft Intune kimlik doğrulaması için sertifikaları kullanın](../protect/certificates-configure.md).
+Bu makalede, VPN bağlantınızın sertifika tabanlı kimlik doğrulaması kullandığı varsayılmaktadır. Ayrıca, istemcilerin başarıyla kimlik doğrulaması yapması için gereken zincirdeki tüm sertifikaları başarıyla dağıttığınızı varsayar. Genellikle, bu sertifika zinciri istemci sertifikasını, tüm ara sertifikaları ve kök sertifikayı içerir.
 
-İstemci kimlik doğrulama sertifikası profiliniz dağıtıldıktan sonra, VPN uygulama yapılandırma ilkesini oluşturmak için bu profille ilgili bazı ayrıntılara ihtiyacınız vardır.
-Uygulama yapılandırma profilleri oluşturma konusunda bilgi sahibi değilseniz, [yönetilen Android Kurumsal cihazları için uygulama yapılandırma Ilkeleri ekleme](../apps/app-configuration-policies-use-android.md)konusuna bakın.
- 
+Sertifikalar hakkında daha fazla bilgi için bkz. [Microsoft Intune kimlik doğrulaması için sertifikaları kullanma](../protect/certificates-configure.md).
 
-## <a name="build-the-vpn-profile"></a>VPN profili oluşturma
+İstemci kimlik doğrulama sertifikası profiliniz dağıtıldığında, sertifika profilinde bir sertifika belirteci oluşturur. Bu belirteç, VPN uygulama yapılandırma ilkesini oluşturmak için kullanılır.
 
-VPN uygulamanız için uygulama yapılandırma ilkesini oluşturmanın iki yolu vardır. **Yapılandırma tasarımcısını** veya **JSON verileri** seçeneğini kullanabilirsiniz. Tüm gerekli VPN ayarlarının **yapılandırma Tasarımcısı** yönteminde kullanılamadığı durumlarda **JSON verileri** seçeneği gereklidir. Destek için JSON seçeneğinin gerekli olduğunu belirlerseniz VPN satıcınıza başvurun. Bu konu başlığında her iki yöntemin da örnekleri gösterilecektir. Hem **JSON verileri** hem de **yapılandırma Tasarımcısı** yöntemlerinde sertifika tabanlı kimlik doğrulamasını başarıyla ekleyebilirsiniz. **JSON veri** yöntemini kullanırken, gerekli profil değerlerini ayıklamak için **yapılandırma tasarımcısını** kullanarak başlayabilirsiniz.
+Uygulama yapılandırma ilkeleri oluşturma konusunda bilgi sahibi değilseniz, bkz. [yönetilen Android Kurumsal cihazları için uygulama yapılandırma Ilkeleri ekleme](app-configuration-policies-use-android.md).
 
-> [!NOTE]
-> VPN istemci yapılandırma parametrelerinin birçoğu benzerdir, ancak her uygulamanın benzersiz anahtarları ve seçenekleri vardır. Sorular ortaya çıkarsa VPN satıcınıza danışın. 
+## <a name="use-the-configuration-designer"></a>Yapılandırma tasarımcısını kullanma
 
-## <a name="use-the-configuration-designer-flow"></a>Yapılandırma Tasarımcısı akışını kullanma
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
+2. **Uygulamalar**  >  **uygulama yapılandırma ilkeleri**  >  **Add**  >  **yönetilen cihazlar**ekleme ' yi seçin.
+3. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
-1.  **Yönetilen cihazlar**için yeni bir uygulama yapılandırma ilkesi ekleyerek başlayın.
-2.  Uygun bir ad girin.
-3.  Platform olarak **Android Enterprise** ' ı seçin.
-4.  Sertifika tabanlı kimlik doğrulaması gerekliyse **yalnızca Iş profili** veya **cihaz sahibi yalnızca** profil türü olarak seçin. **Çalışma sahibi ve cihaz sahibi profili** sertifika tabanlı kimlik doğrulamasıyla uyumlu değil.
-5.  Hedeflenen uygulama için, dağıttığınız VPN istemcisini seçin; Bu örnekte, önceden dağıtılan Cisco AnyConnect VPN istemcisini kullanıyoruz
+    - **Ad**: ilke için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir ilke adı **uygulama yapılandırma ilkesidir: Android kurumsal iş profili cihazları Için Cisco AnyConnect VPN ilkesi**.
+    - **Açıklama**: ilke için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+    - **Platform**: **Android kurumsal**' i seçin.
+    - **Profil türü**: seçenekleriniz:
+      - **Tüm profil türleri**: Bu seçenek Kullanıcı adı ve parola kimlik doğrulamasını destekler. Sertifika tabanlı kimlik doğrulaması kullanıyorsanız, bu seçeneği kullanmayın.
+      - **Yalnızca tam olarak yönetilen, adanmış ve şirkete ait iş profili**: Bu seçenek sertifika tabanlı kimlik doğrulamayı ve Kullanıcı adı ve parola kimlik doğrulamasını destekler.
+      - **Yalnızca Iş profili**: Bu seçenek sertifika tabanlı kimlik doğrulamayı ve Kullanıcı adı ve parola kimlik doğrulamasını destekler.
+    - **Hedeflenen uygulama**: daha önce EKLEMIŞ olduğunuz VPN istemci uygulamasını seçin. Aşağıdaki örnekte, Cisco AnyConnect VPN istemci uygulaması kullanılır:
 
-  ![Uygulama yapılandırma ilkesi oluşturma örneği-temel bilgiler.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-02.png)
+      :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-02.png" alt-text="Microsoft Intune 'de VPN veya uygulama başına VPN yapılandırmak için bir uygulama yapılandırma ilkesi oluşturma":::
 
-6. Sonraki sayfada yapılandırma ayarları açılır öğesini kullanın ve **yapılandırma tasarımcısını kullan** seçeneğini belirleyin.
+4. **İleri**’yi seçin.
+5. **Ayarlar**' da, aşağıdaki özellikleri girin:
 
-  ![Yapılandırma Tasarımcısı Flow-Settings kullanımı örneği.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-03.png)
+    - **Yapılandırma ayarları biçimi**: **yapılandırma tasarımcısını kullan**' ı seçin:
 
-7. Yapılandırma anahtarlarının listesini açmak için **Ekle** ' ye tıklayın.
-8.  Seçtiğiniz yapılandırma için gereken tüm yapılandırma anahtarlarını seçin. Bu örnekte, sertifika tabanlı kimlik doğrulaması ve uygulama başına VPN gibi AnyConnect VPN için ayarlamak üzere en az bir liste kullanıyoruz.
+      :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-03.png" alt-text="Yapılandırma Tasarımcısı 'Nı kullanarak Microsoft Intune bir uygulama yapılandırması VPN ilkesi oluşturun-örnek.":::
+
+    - **Ekle**: yapılandırma anahtarlarının listesini gösterir. Yapılandırmanız için gereken tüm yapılandırma anahtarlarını seçin > Tamam ' **ı**seçin.
+
+      Aşağıdaki örnekte, sertifika tabanlı kimlik doğrulaması ve uygulama başına VPN de dahil olmak üzere, AnyConnect VPN için en az bir liste seçtik:
   
-  <img alt="Example of using the Configuration Designer Flow - Configuration keys." src="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-04.png" width="350">
+      :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-04.png" alt-text="Yapılandırma Tasarımcısı-örnek kullanarak Microsoft Intune bir VPN uygulama yapılandırma ilkesine yapılandırma anahtarları ekleyin.":::
 
-9. **Bağlantı adı**, **ana bilgisayar**ve **protokol** anahtarları için uygun değerleri girin.
+    - **Yapılandırma değeri**: seçtiğiniz yapılandırma anahtarlarının değerlerini girin. Anahtar adlarının, kullanmakta olduğunuz VPN Istemci uygulamasına bağlı olarak değişebileceğini unutmayın. Örneğimizde seçili anahtarlar:
 
-  ![Yapılandırma Tasarımcısı Flow-yapılandırma anahtarı seçimini kullanma örneği.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-05.png)  
+      - **Uygulama BAŞıNA VPN Izin verilen uygulamalar**: daha önce topladığınız uygulama paketi kimliklerini girin. Örnek:
 
-  > [!NOTE]
-  > Bu anahtarların adları, ilkeyi oluşturduğunuz VPN Istemci uygulamasına bağlı olarak farklılık gösterebilir.
+        :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-06.png" alt-text="Yapılandırma Tasarımcısı örneğini kullanarak Microsoft Intune bir VPN uygulama yapılandırma ilkesine izin verilen uygulama paketi kimliklerini girin.":::
 
-10. Daha önce, **uygulama BAŞıNA VPN Izin verilen uygulamalar** anahtarında topladığınız uygulama paketi kimliklerini girin.
+      - **Anahtarlık sertifikası diğer adı** (isteğe bağlı): **dizeden** **sertifika**olarak **değer türünü** değiştirin. VPN kimlik doğrulamasıyla kullanılacak istemci sertifikası profilini seçin. Örnek:
 
-  ![Yapılandırma Tasarımcısı Flow-App Package kimliklerini kullanma örneği.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-06.png)  
+        :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-07.png" alt-text="Yapılandırma Tasarımcısı örneğini kullanarak Microsoft Intune bir VPN uygulama yapılandırma ilkesinde anahtar zinciri istemci sertifikası diğer adını değiştirin.":::
 
-11. **Anahtarlık sertifikası diğer adı** (isteğe bağlı) anahtarında **değer türünü** **dizeden** **sertifikaya**değiştirin, bu, VPN kimlik doğrulamasıyla kullanılacak doğru istemci sertifikası profilini seçmenizi sağlar.
+      - **Protokol**: VPN 'in **SSL** veya **IPSec** tünel protokolünü seçin.
+      - **Bağlantı adı**: VPN bağlantısı için Kullanıcı dostu bir ad girin. Kullanıcılar bu bağlantı adını cihazlarında görür. Örneğin, `ContosoVPN` girin.
+      - **Ana bilgisayar**: Ana BILGISAYAR adı URL 'sini, yayın uç yönlendiricisine girin. Örneğin, `vpn.contoso.com` girin.
 
-  ![Yapılandırma Tasarımcısı Flow-güncelleştirme Anahtarlık sertifikası diğer adını kullanma örneği.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-07.png)  
+        :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-05.png" alt-text="Yapılandırma tasarımcısını kullanarak Microsoft Intune bir VPN uygulama yapılandırma ilkesinde protokol, bağlantı adı ve ana bilgisayar adı örnekleri":::
 
-12. Sonraki sayfada, uygun kapsam etiketlerini seçin.
-13. Sonraki sayfada, uygulama yapılandırma ilkesini dağıtmak istediğiniz uygun grupları girin.
-14. İlkenin oluşturulmasını ve dağıtımını gerçekleştirmek için **Oluştur** ' u seçin.
+6. **İleri**’yi seçin.
+7. **Atamalar**' da, VPN uygulama yapılandırma ilkesini atamak için grupları seçin.
 
-  ![Yapılandırma Tasarımcısı Flow-Review kullanımı örneği.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-08.png)  
+    **İleri**’yi seçin.
 
-## <a name="use-the-json-flow"></a>JSON akışını kullanma
+8. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve ilke gruplarınıza dağıtılır. İlke ayrıca uygulama yapılandırma ilkeleri listesinde gösterilir.
 
-Geçici bir profil oluşturun:
-1.  **Yönetilen cihazlar**için yeni bir uygulama yapılandırma ilkesi ekleyerek başlayın.
-2.  Uygun bir ad girin (Bu profil kaydedilmeyecektir çünkü bu profilin kullanılması geçicidir).
-3.  Platform olarak **Android Enterprise** ' ı seçin.
-4.  Hedeflenen uygulama için, dağıttığınız VPN istemcisini seçin.
-5.  Sertifika tabanlı kimlik doğrulaması gerekliyse **yalnızca Iş profili** veya **cihaz sahibi yalnızca** profil türü olarak seçin. **Çalışma sahibi ve cihaz sahibi profili** sertifika tabanlı kimlik doğrulamasıyla uyumlu değil.
+    :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-08.png" alt-text="Microsoft Intune örneğinde yapılandırma Tasarımcısı akışını kullanarak uygulama yapılandırma ilkesini gözden geçirin.":::
 
-  ![JSON Flow temel bilgileri kullanımı örneği.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-09.png)  
+## <a name="use-json"></a>JSON kullanma
 
-6.  Sonraki sayfada **yapılandırma ayarları** açılır öğesini kullanın ve **yapılandırma tasarımcısını kullan**seçeneğini belirleyin.
+**Yapılandırma tasarımcısında**kullanılan tüm VPN ayarlarını bilmiyorsanız veya bilmiyorsanız bu seçeneği kullanın. Yardıma ihtiyacınız varsa VPN satıcınıza başvurun.
 
-  ![JSON Flow-yapılandırma ayarları biçimi kullanma örneği.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-10.png)  
+### <a name="get-the-certificate-token"></a>Sertifika belirtecini al
 
-7.  Yapılandırma anahtarlarının listesini açmak için **Ekle** ' ye tıklayın.
-8.  **Değer türü** **dize**olan anahtarlardan birini seçin ve **Tamam**' a tıklayın.
+Bu adımlarda geçici bir ilke oluşturun. İlke kaydedilmez. Amaç, sertifika belirtecini kopyalayamaktır. Bu belirteci, JSON kullanarak VPN ilkesi oluştururken kullanacaksınız (sonraki bölüm).
 
-  <img alt="Example of using the JSON Flow - Select a key." src="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-11.png" width="350">
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **uygulamalar**  >  **uygulama yapılandırma ilkeleri**  >  **Add**  >  **yönetilen cihazlar**Ekle ' yi seçin.
+2. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
-9.  Bundan sonra **değer türünü** **dizeden** **sertifikaya**değiştirin. Bu, VPN kimlik doğrulamasıyla kullanılacak doğru istemci sertifikası profilini seçmenizi sağlar.
+    - **Ad**: herhangi bir ad girin. Bu ilke geçicidir ve kaydedilmez.
+    - **Platform**: **Android kurumsal**' i seçin.
+    - **Profil türü**: **yalnızca iş profilini**seçin.
+    - **Hedeflenen uygulama**: daha önce EKLEMIŞ olduğunuz VPN istemci uygulamasını seçin.
 
-  ![JSON Flow bağlantı adını kullanma örneği.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-12.png)  
+3. **İleri**’yi seçin.
+4. **Ayarlar**' da, aşağıdaki özellikleri girin:
 
-10. **Değer türünü** hemen **dizeye**doğru olarak değiştirin. **Yapılandırma değerinin** biçim belirtecine değiştiği unutulmamalıdır `{{cert:GUID}}` .
-11. Sertifikanın belirteç temsilini seçin ve metin düzenleyici gibi alternatif bir konuma kopyalayın.
+    - **Yapılandırma ayarları biçimi**: **yapılandırma tasarımcısını kullan**' ı seçin.
+    - **Ekle**: yapılandırma anahtarlarının listesini gösterir. **Dize** **değer türünde** bir anahtar seçin. **Tamam**’ı seçin.
 
-  ![JSON Flow-yapılandırma değerini kullanma örneği.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-13.png)  
+      :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-11.png" alt-text="Yapılandırma Tasarımcısı 'nda Microsoft Intune VPN uygulama yapılandırma ilkesinde dize değer türü olan bir anahtar seçin":::
 
-12. Oluşturulmakta olan profili at – önceki adımların tek amacı sertifika belirtecini belirlemektir.
+5. **Değer türünü** **dizeden** **sertifikaya**değiştirin. Bu adım VPN 'in kimliğini doğrulayan doğru istemci sertifikası profilini seçmenizi sağlar:
 
-### <a name="create-the-vpn-profile"></a>VPN profili oluşturma
+    :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-12.png" alt-text="Microsoft Intune örnekteki bir VPN uygulama yapılandırma ilkesinde bağlantı adını değiştirme":::
 
-1.  **Yönetilen cihazlar**için yeni bir uygulama yapılandırma profili ekleyerek başlayın.
-2.  Uygun bir ad girin.
-3.  Platform olarak **Android Enterprise** ' ı seçin.
-4.  Hedeflenen uygulama için, dağıttığınız VPN istemcisini seçin.
-5.  Sertifika tabanlı kimlik doğrulaması gerekliyse **yalnızca Iş profili** veya **cihaz sahibi yalnızca** profil türü olarak seçin. **Çalışma sahibi ve cihaz sahibi profili** sertifika tabanlı kimlik doğrulamasıyla uyumlu değil.
-6.  **Yapılandırma ayarları açılır öğesini** kullanın ve **JSON verisi gir**seçeneğini belirleyin.
-7.  JSON 'u doğrudan düzenleyebilir veya tercih ediyorsanız **JSON şablonu indir** düğmesini kullanarak şablonu dilediğiniz bir dış düzenleyicide değiştirin. İçerme JSON 'u geçersiz olarak işlerken **Akıllı Tırnakları**kullanma seçeneğine sahip metin düzenleyicilerle dikkatli olun.
+6. **Değer türünü** hemen **dizeye**doğru olarak değiştirin. **Yapılandırma değeri** bir belirteç olarak değişir `{{cert:GUID}}` :
 
-  ![JSON akışını kullanma örneği-JSON düzenleme.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-14.png)  
+    :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-13.png" alt-text="Yapılandırma değeri Microsoft Intune içindeki bir VPN uygulama yapılandırma ilkesinde sertifika belirtecini gösterir":::
 
-8.  Kullandığınız yöntemden bağımsız olarak, istenen yapılandırma için gereken değerleri doldurduktan sonra, tüm JSON içindeki "STRING_VALUE" veya STRING_VALUE değeri ile kalan tüm ayarların kaldırılması gerekir.
+7. Bu sertifika belirtecini kopyalayıp metin Düzenleyicisi gibi başka bir dosyaya yapıştırın.
 
-#### <a name="example-json-for-f5-access-vpn"></a>F5 Access VPN için örnek JSON
+8. Bu ilkeyi atın. Kaydetme. Tek amaç, sertifika belirtecini kopyalayıp yapıştırmaktır.
 
-Aşağıda, F5 Access VPN için JSON verilerinin bir örneği verilmiştir.
+### <a name="create-the-vpn-policy-using-json"></a>JSON kullanarak VPN ilkesi oluşturma
+
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **uygulamalar**  >  **uygulama yapılandırma ilkeleri**  >  **Add**  >  **yönetilen cihazlar**Ekle ' yi seçin.
+
+2. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
+
+    - **Ad**: ilke için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir ilke adı **uygulama yapılandırma ilkesidir: tüm şirketteki Android kurumsal iş profili cihazları IÇIN JSON Cisco AnyConnect VPN ilkesi**.
+    - **Açıklama**: ilke için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
+    - **Platform**: **Android kurumsal**' i seçin.
+    - **Profil türü**: seçenekleriniz:
+      - **Tüm profil türleri**: Bu seçenek Kullanıcı adı ve parola kimlik doğrulamasını destekler. Sertifika tabanlı kimlik doğrulaması kullanıyorsanız, bu seçeneği kullanmayın.
+      - **Yalnızca tam olarak yönetilen, adanmış ve şirkete ait iş profili**: Bu seçenek sertifika tabanlı kimlik doğrulamayı ve Kullanıcı adı ve parola kimlik doğrulamasını destekler.
+      - **Yalnızca Iş profili**: Bu seçenek sertifika tabanlı kimlik doğrulamayı ve Kullanıcı adı ve parola kimlik doğrulamasını destekler.
+    - **Hedeflenen uygulama**: daha önce EKLEMIŞ olduğunuz VPN istemci uygulamasını seçin. 
+
+3. **İleri**’yi seçin.
+4. **Ayarlar**' da, aşağıdaki özellikleri girin:
+
+    - **Yapılandırma ayarları biçimi**: **JSON verisi gir**' i seçin. JSON 'ı doğrudan düzenleyebilirsiniz.
+    - **JSON şablonunu indirin**: Bu seçeneği, şablonu indirmek ve herhangi bir harici düzenleyicide güncelleştirmek için kullanın. Geçersiz JSON oluşturduklarında **Akıllı Tırnakları**kullanan metin düzenleyicilerle dikkatli olun.
+
+    Yapılandırmanız için gereken değerleri girdikten sonra, veya içeren tüm ayarları kaldırın `"STRING_VALUE"` `STRING_VALUE` .
+
+    :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-14.png" alt-text="JSON akışını kullanma örneği-JSON düzenleme.":::
+
+5. **İleri**’yi seçin.
+6. **Atamalar**' da, VPN uygulama yapılandırma ilkesini atamak için grupları seçin.
+
+    **İleri**’yi seçin.
+
+7. **Gözden geçir + oluştur**bölümünde ayarlarınızı gözden geçirin. **Oluştur**' u seçtiğinizde değişiklikleriniz kaydedilir ve ilke gruplarınıza dağıtılır. İlke ayrıca uygulama yapılandırma ilkeleri listesinde gösterilir.
+
+#### <a name="json-example-for-f5-access-vpn"></a>F5 Access VPN için JSON örneği
 
 ``` JSON
 {
@@ -238,14 +292,9 @@ Aşağıda, F5 Access VPN için JSON verilerinin bir örneği verilmiştir.
 }
 ```
 
-## <a name="summary"></a>Özet
-
-Android kurumsal kayıtlı cihazlar için bir uygulama yapılandırma ilkesi kullanmak, platformda doğrudan destek yokluğunda uygulama başına VPN davranışından yararlanmanızı sağlar. 
-
 ## <a name="additional-information"></a>Ek bilgiler
 
-İlgili bilgiler için aşağıdaki konulara bakın:
-- [Yönetilen Android Kurumsal cihazları için uygulama yapılandırma ilkeleri ekleme](../apps/app-configuration-policies-use-android.md)
+- [Yönetilen Android Kurumsal cihazları için uygulama yapılandırma ilkeleri ekleme](app-configuration-policies-use-android.md)
 - [Intune 'da VPN yapılandırmak için Android kurumsal cihaz ayarları](../configuration/vpn-settings-android-enterprise.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c43b74b6ca20fa3f140ad688be49daa928c54b5f
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 4991ced4517ffe5902f876c196b47c2c2b50a8a6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264048"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262770"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Kılavuzlu senaryo-bulutta yönetilen modern masaüstü
 
@@ -32,7 +32,7 @@ Modern masaüstü 'nü buluttan yönetmek, internet genelindeki uzak eylemlerin 
 
 Bulutta yönetilen bir modern masaüstünü kendi kuruluşunuzda değerlendirmek istiyorsanız, Bu Kılavuzlu senaryo temel bir dağıtım için gerekli tüm konfigürasyonları önceden tanımlar. Bu Kılavuzlu senaryoda, Intune cihaz yönetimi yeteneklerini deneyebileceğiniz güvenli bir ortam oluşturacaksınız.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - [MDM yetkilisini Intune olarak ayarlama](../fundamentals/mdm-authority-set.md#set-mdm-authority-to-intune) -mobil cihaz YÖNETIMI (MDM) yetkilisi ayarı, cihazlarınızı nasıl yöneteceğinizi belirler. Kullanıcıların yönetilmek üzere cihaz kaydedebilmeleri için, BT yöneticisi olarak bir MDM yetkilisi ayarlamanız gerekir.
 - M365 E3 en düşük (veya en iyi güvenlik için M365 E5)
@@ -47,7 +47,7 @@ Bulutta yönetilen bir modern masaüstünü kendi kuruluşunuzda değerlendirmek
 
 ## <a name="step-1---introduction"></a>1. adım-giriş
 
-Bu Kılavuzlu senaryoyu kullanarak bir test kullanıcısı ayarlayabilir, bir cihazı Intune 'a kaydedebilir ve Intune tarafından önerilen ayarlarla, ayrıca Windows 10 ve Microsoft 365 uygulamaları dağıtabilirsiniz. [Bu korumayı Intune 'da etkinleştirmeyi](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune)seçerseniz cihazınız Microsoft Defender Gelişmiş tehdit koruması için de yapılandırılır. Ayarladığınız Kullanıcı ve Kaydolmakta olduğunuz cihaz yeni bir güvenlik grubuna eklenir ve güvenlik ve üretkenlik için önerilen ayarlarla yapılandırılır.
+Bu Kılavuzlu senaryoyu kullanarak bir test kullanıcısı ayarlayabilir, bir cihazı Intune 'a kaydedebilir ve Intune tarafından önerilen ayarlarla, ayrıca Windows 10 ve Microsoft 365 uygulamaları dağıtabilirsiniz. [Bu korumayı Intune 'da etkinleştirmeyi](../protect/advanced-threat-protection-configure.md#enable-microsoft-defender-atp-in-intune)seçerseniz cihazınız Microsoft Defender Gelişmiş tehdit koruması için de yapılandırılır. Ayarladığınız Kullanıcı ve Kaydolmakta olduğunuz cihaz yeni bir güvenlik grubuna eklenir ve güvenlik ve üretkenlik için önerilen ayarlarla yapılandırılır.
 
 ### <a name="what-you-will-need-to-continue"></a>Devam etmeniz gerekenler
 
@@ -127,5 +127,5 @@ Kullanıcı cihazı Azure Active Directory katıldıktan sonra cihaza aşağıda
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- Microsoft Defender Gelişmiş tehdit algılama kullanıyorsanız, Defender tehdit analizinin uyumluluğu karşılaması için bir [Intune uyumluluk ilkesi](../protect/advanced-threat-protection.md#create-and-assign-compliance-policy-to-set-device-risk-level) oluşturun.
-- Cihaz Intune uyumluluğunu karşılamıyorsa, erişimi engellemek için [cihaz tabanlı bir koşullu erişim ilkesi](../protect/advanced-threat-protection.md#create-a-conditional-access-policy) oluşturun.
+- Microsoft Defender Gelişmiş tehdit algılama kullanıyorsanız, Defender tehdit analizinin uyumluluğu karşılaması için bir [Intune uyumluluk ilkesi](../protect/advanced-threat-protection-configure.md#create-and-assign-compliance-policy-to-set-device-risk-level) oluşturun.
+- Cihaz Intune uyumluluğunu karşılamıyorsa, erişimi engellemek için [cihaz tabanlı bir koşullu erişim ilkesi](../protect/advanced-threat-protection-configure.md#create-a-conditional-access-policy) oluşturun.

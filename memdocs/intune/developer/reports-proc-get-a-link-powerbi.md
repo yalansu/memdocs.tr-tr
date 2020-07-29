@@ -6,7 +6,7 @@ keywords: Intune Veri Ambarı
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 07/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7ba3c7397298ea25eecc1147319760892434720
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: a6cabb4f89d1ad105b88f54ac7a1c43405d1a65d
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270999"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262583"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Power BI ile Veri Ambarına bağlanma
 
@@ -52,6 +52,9 @@ En son [Power BI Desktop](https://aka.ms/intune/datawarehouseapi/installpowerbi)
 ## <a name="load-the-data-and-reports-using-the-power-bi-intune-compliance-data-warehouse-app"></a>Power BI Intune Uyumluluğu Veri Ambarı Uygulamasını kullanarak verileri ve raporları yükleme
 
 Power BI [Intune uyumluluk (veri ambarı)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) uygulaması, kiracınız için bilgiler ve veri ambarı veri modelini temel alan bir dizi önceden oluşturulmuş rapor içerir.
+
+> [!NOTE]
+> Power BI Intune uyumluluk verileri ambarı uygulaması, Azure Kamu bulut ortamları için desteklenmez.
 
 1. Yükleme işlemini başlatmak için [Intune uyumluluk (veri ambarı)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) uygulamasının **appsource** sayfasına gidin.
 2. **Şimdi al** düğmesine tıklayın ve ardından **devam**' a tıklayın.
@@ -89,7 +92,7 @@ Azure AD’de istemci kimliği doğrulandığı zaman OData URL’si, Veri Ambar
     2. Kullanıcı adınızı ve parolanızı yazın.  
     3. **Oturum aç '** ı seçin.  
     4. **Bağlan**'ı seçin.  
-10. **Yükle**’yi seçin.
+10. **Yükle**'yi seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

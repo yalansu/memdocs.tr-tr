@@ -15,14 +15,14 @@ ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune
+ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b29069d4543d4abb4bc403c446441e181d963bdd
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 13b2c69a0bf4e031717847b700e60e873fbda157
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327318"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262855"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune Uygulama SDK’sı Xamarin Bağlamaları
 
@@ -38,7 +38,7 @@ Microsoft Intune Uygulama SDK’sı Xamarin Bağlamaları, Intune uygulama korum
 
 ### <a name="developer-machines"></a>Geliştirici makineleri
 * Windows (Visual Studio sürüm 15.7+)
-* Mac OS
+* macOS
 
 ### <a name="mobile-app-platforms"></a>Mobil uygulama platformları
 * Android
@@ -122,7 +122,7 @@ Intune uygulama SDK 'sını tümleştirmeyle ilgili kapsamlı bir genel bakış 
 #### <a name="remapper"></a>Remapper
 1.4428.1 sürümünden itibaren, `Microsoft.Intune.MAM.Remapper` paket, mam sınıfı, yöntemi ve sistem hizmetleri yerine getirmek için [derleme araçları](app-sdk-android.md#build-tooling) olarak bir Xamarin. Android uygulamasına eklenebilir. Yeniden eşleştirici dahil edildiğinde, yeniden adlandırılmış Yöntemler ve MAM uygulama bölümlerinin MAM denk değiştirme bölümü, uygulama oluşturulduğunda otomatik olarak gerçekleştirilir.
 
-Yeniden eşleştirici tarafından MAM bir sınıfı hariç tutmak için, proje `.csproj` dosyanıza aşağıdaki özellik eklenebilir.
+Yeniden eşleştirici tarafından MAM bir sınıfı hariç tutmak için, proje dosyanıza aşağıdaki özellik eklenebilir `.csproj` .
 
 ```xml
   <PropertyGroup>
@@ -137,7 +137,7 @@ Yeniden eşleştirici tarafından MAM bir sınıfı hariç tutmak için, proje `
 Birçok durumda, Android sınıfında kullanılabilir olan bir yöntem, MAM değiştirme sınıfında kesin olarak işaretlenmiştir. Bu durumda, MAM değiştirme sınıfı benzer ada sahip olup geçersiz kılmanız gereken bir yöntem (`MAM` son ekini alır) sağlar. Örneğin, `MAMActivity`’i geçersiz kılıp `OnCreate()` çağırmak yerine `base.OnCreate()`’den türetilirken, `Activity`, `OnMAMCreate()`’i geçersiz kılmalı ve `base.OnMAMCreate()` çağırmalıdır.
 
 #### <a name="mam-application"></a>[MAM uygulaması](app-sdk-android.md#mamapplication)
-Uygulamanızda bir `Android.App.Application` sınıf tanımlanmalıdır. MAM el ile tümleştirildiğinde, öğesinden `MAMApplication`devralması gerekir. Alt sınıfınızın `[Application]` özniteliği ile doğru şekilde donatıldığından ve `(IntPtr, JniHandleOwnership)` oluşturucusunu geçersiz kıldığından emin olun.
+Uygulamanızda bir `Android.App.Application` sınıf tanımlanmalıdır. MAM el ile tümleştirildiğinde, öğesinden devralması gerekir `MAMApplication` . Alt sınıfınızın `[Application]` özniteliği ile doğru şekilde donatıldığından ve `(IntPtr, JniHandleOwnership)` oluşturucusunu geçersiz kıldığından emin olun.
 
 ```csharp
     [Application]
@@ -171,7 +171,7 @@ MAMPolicyManager.GetPolicy(currentActivity).GetIsSaveToLocationAllowed(SaveLocat
 ```
 
 #### <a name="register-for-notifications-from-the-sdk"></a>[SDK’dan gelen bildirimlere kaydolma](app-sdk-android.md#register-for-notifications-from-the-sdk)
-Uygulamanız bir `MAMNotificationReceiver` oluşturup Ile `MAMNotificationReceiverRegistry`kaydederek SDK 'dan gelen bildirimlere kaydolmalıdır. Bu, aşağıdaki örnekte gösterildiği gibi alıcı ve öğesinde `App.OnMAMCreate`istenen bildirim türü sağlanarak yapılır:
+Uygulamanız bir oluşturup ile kaydederek SDK 'dan gelen bildirimlere kaydolmalıdır `MAMNotificationReceiver` `MAMNotificationReceiverRegistry` . Bu, aşağıdaki örnekte gösterildiği gibi alıcı ve öğesinde istenen bildirim türü sağlanarak yapılır `App.OnMAMCreate` :
 
 ```csharp
 public override void OnMAMCreate()
@@ -193,12 +193,12 @@ IMAMEnrollmentManager mgr = MAMComponents.Get<IMAMEnrollmentManager>();
 
 ### <a name="xamarinforms-integration"></a>Xamarin.Forms tümleştirmesi
 
-Uygulamalar `Xamarin.Forms` için paket `Microsoft.Intune.MAM.Remapper` , ekleme `MAM` sınıfları tarafından, yaygın olarak kullanılan `Xamarin.Forms` sınıfların Sınıf hiyerarşisine otomatik olarak Mam sınıfı değiştirme işlemini gerçekleştirir. 
+`Xamarin.Forms`Uygulamalar için `Microsoft.Intune.MAM.Remapper` paket, ekleme `MAM` sınıfları tarafından, yaygın olarak kullanılan sınıfların Sınıf HIYERARŞISINE otomatik olarak Mam sınıfı değiştirme işlemini gerçekleştirir `Xamarin.Forms` . 
 
 > [!NOTE]
 > Xamarin. Forms tümleştirmesi, yukarıda açıklanan Xamarin. Android tümleştirmesi ' ne ek olarak yapılmalıdır. Remapper, Xamarin. Forms uygulamaları için farklı davrandığı için el ile MAM değiştirmeler yine de yapılmalıdır.
 
-Yeniden eşleştirici projenize eklendikten sonra, MAM denk değişiklikleri yapmanız gerekir. Örneğin, ve `FormsAppCompatActivity` `FormsApplicationActivity` , uygulamanızda GEÇERSIZ kılmaları `OnCreate` sağlayan ve `OnResume` mam eşdeğerlerine `OnMAMCreate` ve `OnMAMResume` sırasıyla değiştirilerek kullanılabilir olmaya devam edebilir.
+Yeniden eşleştirici projenize eklendikten sonra, MAM denk değişiklikleri yapmanız gerekir. Örneğin, `FormsAppCompatActivity` ve, `FormsApplicationActivity` uygulamanızda geçersiz kılmaları sağlayan `OnCreate` ve `OnResume` mam eşdeğerlerine `OnMAMCreate` ve sırasıyla değiştirilerek kullanılabilir olmaya devam edebilir `OnMAMResume` .
 
 ```csharp
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
@@ -212,9 +212,9 @@ Yeniden eşleştirici projenize eklendikten sonra, MAM denk değişiklikleri yap
 ```
 
 Değişiklikler yapılmadığından, değişiklikleri yapana kadar aşağıdaki derleme hatalarıyla karşılaşabilirsiniz:
-* [Derleyici hatası CS0239](https://docs.microsoft.com/dotnet/csharp/misc/cs0239). Bu hata genellikle bu biçimde ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``görülür.
-Bu, yeniden eşleştirici Xamarin sınıflarının devralınmasını değiştirdiğinde, bazı işlevlerin yapılması `sealed` ve bunun yerine geçersiz kılınmasına yenı bir mam varyantı eklendiği için beklenmektedir.
-* [Derleyici Hatası CS0507](https://docs.microsoft.com/dotnet/csharp/language-reference/compiler-messages/cs0507): Bu hata genellikle bu biçimde ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``görülür. Remapper, Xamarin sınıflarının bazılarının devralınmasını değiştirdiğinde, bazı üye işlevleri olarak `public`değiştirilir. Bu işlevlerden herhangi birini geçersiz kılarsınız, bu geçersiz kılmaların `public` erişim değiştiricilerini de değiştirmeniz gerekecektir.
+* [Derleyici hatası CS0239](https://docs.microsoft.com/dotnet/csharp/misc/cs0239). Bu hata genellikle bu biçimde görülür ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed`` .
+Bu, yeniden eşleştirici Xamarin sınıflarının devralınmasını değiştirdiğinde, bazı işlevlerin yapılması `sealed` ve bunun yerine geçersiz kılınmasına yeni BIR mam varyantı eklendiği için beklenmektedir.
+* [Derleyici Hatası CS0507](https://docs.microsoft.com/dotnet/csharp/language-reference/compiler-messages/cs0507): Bu hata genellikle bu biçimde görülür ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...`` . Remapper, Xamarin sınıflarının bazılarının devralınmasını değiştirdiğinde, bazı üye işlevleri olarak değiştirilir `public` . Bu işlevlerden herhangi birini geçersiz kılarsınız, bu geçersiz kılmaların erişim değiştiricilerini de değiştirmeniz gerekecektir `public` .
 
 > [!NOTE]
 > Yeniden Eşleştirici, Visual Studio 'Nun IntelliSense otomatik tamamlama için kullandığı bir bağımlılığı yeniden yazar. Bu nedenle, IntelliSense 'in değişiklikleri doğru tanıması için yeniden eşleştirici eklendiğinde projeyi yeniden yüklemeniz ve yeniden oluşturmanız gerekebilir.

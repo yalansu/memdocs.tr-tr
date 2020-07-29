@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e5786289e54071d54c11fbb08790e95e54a9377
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 2e881dc386fa0fe0b98b5e3d4480e1957c251808
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461870"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262685"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Intune 'da uyumsuz cihazlar için eylemleri yapılandırma
 
@@ -147,8 +147,12 @@ Kullanıcılarınıza e-posta göndermek için bir bildirim iletisi şablonu olu
 
 5. **Gözden geçir + oluştur**altında, bildirim iletisi şablonunun kullanıma hazırsa emin olmak için yapılandırmalarınızı gözden geçirin. Bildirim oluşturmayı tamamladıktan sonra **Oluştur** ' u seçin.
 
-> [!NOTE]
-> Ayrıca, daha önce oluşturduğunuz mevcut bir bildirim şablonunu seçebilir ve şablonu güncelleştirmek için bilgilerini **düzenleyebilirsiniz** .
+### <a name="view-and-edit-notifications"></a>Bildirimleri görüntüleyin ve düzenleyin
+
+Oluşturulan bildirimler *uyumluluk ilkeleri*  >  *bildirimleri* sayfasında kullanılabilir. Sayfasında, yapılandırmasını görüntülemek için bir bildirim seçebilirsiniz:
+
+- Intune 'da oturum açmak için kullandığınız hesaba bildirim e-postası önizlemesi göndermek için **Önizleme e-postası gönder** ' i seçin. 
+- Bir değişiklik yapmak için *temel bilgiler* veya *kapsam etiketleri* için **Düzenle** ' yi seçin.
 
 ## <a name="add-actions-for-noncompliance"></a>Uyumsuzluğa yönelik eylemler ekleme
 

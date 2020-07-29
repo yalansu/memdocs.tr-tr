@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68f8eb2ab3b7e348daa99e982e640e9bd28692d8
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 3f493b6c6f9ee100c15a3958ec435261da271f7c
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264133"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262821"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Microsoft Intune 'de OEMConfig ile Android kurumsal cihazlarını kullanma ve yönetme
 
@@ -62,7 +62,7 @@ OEMConfig kullanırken aşağıdaki bilgileri unutmayın:
 
   Zemilden olmayan cihazlarda OEMConfig modeli yalnızca cihaz başına tek bir ilkeyi destekler. Aynı cihaza birden çok profil atanmışsa, tutarsız bir davranış görebilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Cihazlarınızda OEMConfig kullanmak için aşağıdaki gereksinimlere sahip olduğunuzdan emin olun:
 
@@ -89,7 +89,7 @@ Cihazın OEMConfig 'i desteklediğinden emin olun, Intune 'a doğru OEMConfig uy
     - **Platform**: **Android kurumsal**' i seçin.
     - **Profil**: **oemconfig**' i seçin.
 
-4. **Oluştur**'u seçin.
+4. **Oluştur**’u seçin.
 5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
     - **Ad**: Yeni profil için açıklayıcı bir ad girin.
@@ -160,7 +160,6 @@ OEMConfig Apps, standart uygulamalarla karşılaştırıldığında, Google tara
 | Archos | com. archos. oemconfig | |
 | Ascom | com. Ascom. Myco. oemconfig | |
 | Bluebird | com. Bluebird. Android. oemconfig | |
-| Cipherlab | com. cipherlab. oemconfig | |
 | Dataloi | com. datalobir. Settings. oemconfig | |
 | Honeywell | com. Honeywell. oemconfig | |
 | HMDGlobal-7,2 | com. hmdglobal. app. oemconfig. n7_2 | 

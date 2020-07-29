@@ -1,11 +1,11 @@
 ---
-title: Microsoft Intune-Azure 'da Android için özel uygulama başına VPN profili | Microsoft Docs
-description: Microsoft Intune tarafından yönetilen Android Cihaz Yöneticisi cihazları için uygulama başına VPN profili oluşturmayı öğrenin.
+title: Microsoft Intune-Azure 'da Android Cihaz Yöneticisi için özel uygulama başına VPN profili | Microsoft Docs
+description: Android Cihaz Yöneticisi 'nde, Microsoft Intune 'de Pulse Secure veya Citrix VPN bağlantı türleriyle uygulama başına VPN profilleri için özel bir profil kullanın.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 07/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,25 +17,28 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a351255fa0574e9b92d096b3895f9469ed9ced2a
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: 3c8e09b6010f7fc846fd81281053eaaa722e5ef4
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137369"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262804"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Microsoft Intune özel profili kullanarak Android cihazları için uygulama başına VPN profili oluşturma
 
 Intune tarafından yönetilen Android 5.0 ve üzeri cihazlar için uygulama başına VPN profili oluşturabilirsiniz. İlk olarak, Pulse Secure veya Citrix bağlantı türlerinden birini kullanan bir VPN profili oluşturun. Ardından, VPN profilini belirli uygulamalarla ilişkilendiren özel bir yapılandırma ilkesi oluşturun.
 
-> [!NOTE]
-> Android kurumsal cihazlarda uygulama başına VPN kullanmak için de bu adımları kullanabilirsiniz. Ancak, VPN istemci uygulamanız için bir [uygulama yapılandırma ilkesi](../apps/app-configuration-vpn-ae.md) kullanmanız önerilir.
+Bu özellik şu platformlarda geçerlidir:
+
+- Android cihaz yöneticisi
+
+Android kurumsal cihazlarda uygulama başına VPN kullanmak için bir [uygulama yapılandırma ilkesi](../apps/app-configuration-vpn-ae.md)kullanın. Uygulama yapılandırma ilkeleri, daha fazla VPN istemci uygulaması destekler. Android kurumsal cihazlarda, bu makaledeki adımları kullanabilirsiniz. Ancak, önerilmez ve yalnızca Pulse Secure ve Citrix VPN bağlantılarıyla sınırlandırılırsınız.
 
 İlkeyi Android cihazınıza veya kullanıcı gruplarına atadıktan sonra kullanıcılar, Pulse Secure veya Citrix VPN istemcisini başlatmalıdır. Ardından, VPN istemcisi yalnızca belirtilen uygulamalardan gelen trafiğin açık VPN bağlantısını kullanmasına izin verir.
 
 > [!NOTE]
 >
-> Bu profil için yalnızca Pulse Secure ve Citrix bağlantı türleri desteklenir.
+> Android Cihaz Yöneticisi için yalnızca Pulse Secure ve Citrix bağlantı türleri desteklenir. Android kurumsal cihazlarda bir [uygulama yapılandırma ilkesi](../apps/app-configuration-vpn-ae.md)kullanın.
 
 ## <a name="step-1-create-a-vpn-profile"></a>1. Adım: VPN profili oluşturma
 
@@ -80,10 +83,9 @@ Intune tarafından yönetilen Android 5.0 ve üzeri cihazlar için uygulama baş
     - **Veri türü**: **dize**girin.
     - **Değer**: profille ilişkilendirilecek paketlerin noktalı virgülle ayrılmış bir listesini girin. Örneğin, Excel 'In ve Google Chrome tarayıcısının VPN bağlantısını kullanmasını istiyorsanız, girin `com.microsoft.office.excel;com.android.chrome` .
 
-    > [!div class="mx-imgBorder"]
-    >![Örnek Android Cihaz Yöneticisi uygulama başına VPN özel ilkesi](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
+    :::image type="content" source="./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png" alt-text="Android Cihaz Yöneticisi uygulama başına VPN özel ilkesi Microsoft Intune":::
 
-### <a name="set-your-app-list-to-blacklist-or-whitelist-optional"></a>Uygulama listenizi kara liste veya beyaz liste olarak ayarlama (isteğe bağlı)
+### <a name="set-your-blocked-and-allowed-app-list-optional"></a>Engellenen ve izin verilen uygulama listenizi ayarlama (isteğe bağlı)
 
 VPN bağlantısını *kullanamaz* uygulamaların bir listesini girmek için **kara** liste değerini kullanın. Diğer tüm uygulamalar VPN üzerinden bağlanır. Ya da, VPN bağlantısını kullanan uygulamaların bir listesini girmek için **beyaz liste** değerini *kullanın.* Listede olmayan uygulamalar VPN üzerinden bağlanmazlar.
 
