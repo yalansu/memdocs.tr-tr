@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 07/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41b11a29cdfd61382e68130479a1ab465bf354c6
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: 1da738611dd5fe114054645170d2b49ef12f0523
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107426"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334615"
 ---
 # <a name="add-wired-network-settings-for-macos-devices-in-microsoft-intune"></a>Microsoft Intune 'de macOS cihazları için kablolu ağ ayarları ekleme
 
-Belirli kablolu ağ ayarlarına sahip bir profil oluşturabilir ve ardından bu profili macOS cihazlarınıza dağıtabilirsiniz. Microsoft Intune, ağınızda kimlik doğrulaması, PKCS veya SCEP sertifikası ekleme ve daha fazlası dahil olmak üzere birçok özellik sunar.
+Belirli kablolu ağ ayarlarına sahip bir profil oluşturabilir ve ardından bu profili macOS cihazlarınıza dağıtabilirsiniz. Microsoft Intune, ağınızda kimlik doğrulaması, SCEP sertifikası ekleme ve daha fazlası dahil olmak üzere birçok özellik sunmaktadır.
 
 Bu makalede, yapılandırabileceğiniz ayarlar açıklanmaktadır.
 
@@ -63,7 +63,7 @@ Bu makalede, yapılandırabileceğiniz ayarlar açıklanmaktadır.
 
     - **Sunucu güveni**  -  **Sertifika sunucusu adları**: güvenilen sertifika yetkiliniz (CA) tarafından verilen sertifikalarda kullanılan bir veya daha fazla ortak ad **ekleyin** . Bu bilgileri girdiğinizde, bu ağa bağlandıklarında Kullanıcı cihazlarında gösterilen dinamik güven penceresini atlayabilirsiniz.
     - **Sunucu doğrulaması Için kök sertifika**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlandığı zaman, bu sertifika sunucuya sunulur. Bağlantının kimliğini doğrulamak için kullanılır.
-    - **Istemci kimlik doğrulaması**  -  **Sertifikalar**: cihaza de dağıtılan SCEP veya PKCS istemci sertifikası profilini seçin. Bu sertifika, bağlantının kimliğini doğrulamak için cihaz tarafından sunucuya sunulan kimliktir.
+    - **Istemci kimlik doğrulaması**  -  **Sertifikalar**: cihaza de dağıtılan SCEP istemci sertifikası profilini seçin. Bu sertifika, bağlantının kimliğini doğrulamak için cihaz tarafından sunucuya sunulan kimliktir. PKCS sertifikaları desteklenmez.
     - **Kimlik gizliliği (dış kimlik)**: EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir, örneğin `anonymous`. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.
 
   - **EAP-TTLS**: Ayrıca şunları girin:
@@ -77,7 +77,7 @@ Bu makalede, yapılandırabileceğiniz ayarlar açıklanmaktadır.
           - **Karşılıklı Kimlik Doğrulama Protokolü (CHAP)**
           - **Microsoft CHAP (MS-CHAP)**
           - **Microsoft CHAP Sürüm 2 (MS-CHAP v2)**
-      - **Sertifikalar**: cihaza de dağıtılan SCEP veya PKCS istemci sertifikası profilini seçin. Bu sertifika, bağlantının kimliğini doğrulamak için cihaz tarafından sunucuya sunulan kimliktir.
+      - **Sertifikalar**: cihaza de dağıtılan SCEP istemci sertifikası profilini seçin. Bu sertifika, bağlantının kimliğini doğrulamak için cihaz tarafından sunucuya sunulan kimliktir. PKCS sertifikaları desteklenmez.
       - **Kimlik gizliliği (dış kimlik)**: EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir, örneğin `anonymous`. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.
 
   - **LEAP**
@@ -88,7 +88,7 @@ Bu makalede, yapılandırabileceğiniz ayarlar açıklanmaktadır.
     - **Sunucu doğrulaması Için kök sertifika**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlandığı zaman, bu sertifika sunucuya sunulur. Bağlantının kimliğini doğrulamak için kullanılır.
     - **Istemci kimlik doğrulaması**: bir **kimlik doğrulama yöntemi**seçin. Seçenekleriniz şunlardır:
       - Kullanıcı adı **ve parola**: kullanıcıdan bağlantının kimliğini doğrulamak için bir Kullanıcı adı ve parola ister.
-      - **Sertifikalar**: cihaza de dağıtılan SCEP veya PKCS istemci sertifikası profilini seçin. Bu sertifika, bağlantının kimliğini doğrulamak için cihaz tarafından sunucuya sunulan kimliktir.
+      - **Sertifikalar**: cihaza de dağıtılan SCEP istemci sertifikası profilini seçin. Bu sertifika, bağlantının kimliğini doğrulamak için cihaz tarafından sunucuya sunulan kimliktir. PKCS sertifikaları desteklenmez.
       - **Kimlik gizliliği (dış kimlik)**: EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir, örneğin `anonymous`. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar

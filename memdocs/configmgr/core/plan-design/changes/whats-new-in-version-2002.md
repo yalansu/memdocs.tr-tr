@@ -2,7 +2,7 @@
 title: Sürüm 2002’deki yenilikler
 titleSuffix: Configuration Manager
 description: Geçerli dalın Configuration Manager sürüm 2002 ' de tanıtılan değişiklikler ve yeni yetenekler hakkında ayrıntılı bilgi alın.
-ms.date: 07/15/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c5107ffe26c72852cbc1dbaa15eb19a990c7939
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: 5b2fcaeb9cb5bd4ce3e41aed8e1bafcc7f76bbb4
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422857"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262124"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 2002 ' deki yenilikler
 
@@ -434,16 +434,17 @@ Bu sürüm, yeni özelliklerden başlayarak hata düzeltmeleri gibi ek değişik
 
 Aşağıdaki güncelleştirme paketi (4560496) konsolunda 15 Temmuz 2020 tarihinden itibaren kullanılabilir: [Microsoft uç noktası Configuration Manager sürüm 2002 Için güncelleştirme paketi](https://support.microsoft.com/help/4560496).
 
-<!--
-### Hotfixes
+### <a name="hotfixes"></a>Düzeltmeler
 
-The following additional hotfixes are available to address specific issues:
+Aşağıdaki ek düzeltmeler belirli sorunları ele almak için kullanılabilir:
 
-| ID | Title | Date | In-console |
+| ID | Başlık | Tarih | Konsol içi |
 |---------|---------|---------|---------|
-| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
+| [4575339](https://support.microsoft.com/help/4575339) | Cihazlar Microsoft uç noktası Configuration Manager Yönetim Merkezi 'nde iki kez görünüyor | 23 Temmuz 2020 | Hayır |
+| [4575774](https://support.microsoft.com/help/4575774) | New-CMTSStepPrestartCheck cmdlet 'i Configuration Manager, sürüm 2002 ' de başarısız oluyor | 24 Temmuz 2020 | Hayır |
 
-> [!NOTE]  
+<!--
+> [!NOTE]
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
 -->
 

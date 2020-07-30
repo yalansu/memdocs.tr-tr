@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24663f8338f03fab53369689b4a61b5bd1bec63f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1d52e968b5e35490027c7887b597608e25476e24
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991221"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365466"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>Intune 'da iOS/ıpados cihazları için uygulama başına sanal özel ağ (VPN) ayarlama
 
@@ -38,6 +38,9 @@ VPN 'nizin uygulama başına VPN 'i destekleyip desteklemediğini görmek için 
 Bu makalede, uygulama başına VPN profili oluşturma ve bu profili uygulamalarınıza atama işlemlerinin nasıl yapılacağı gösterilir. Son kullanıcılarınız için sorunsuz bir uygulama başına VPN deneyimi oluşturmak için bu adımları kullanın. Uygulama başına VPN 'yi destekleyen çoğu VPN için, Kullanıcı bir uygulama açar ve VPN 'ye otomatik olarak bağlanır.
 
 Bazı VPN 'Ler uygulama başına VPN ile Kullanıcı adı ve parola doğrulamasına izin verir. Yani, kullanıcıların VPN 'ye bağlanmak için bir Kullanıcı adı ve parola girmesi gerekir.
+
+> [!IMPORTANT]
+> İOS 13 ' te, uygulama başına VPN profillerinin sertifika tabanlı kimlik doğrulaması kullanıldığında kullanıcı kayıt ortamlarında bağlanmasına neden olan bilinen bir sorun vardır. Apple 'ın gelecek bir sürümünde bunu gidermeye yönelik Apple planları.
 
 > [!IMPORTANT]
 > İOS/ıpados için IKEv2 VPN profilleri için uygulama başına VPN desteklenmez.

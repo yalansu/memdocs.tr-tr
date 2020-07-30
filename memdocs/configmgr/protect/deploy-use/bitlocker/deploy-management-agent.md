@@ -2,7 +2,7 @@
 title: BitLocker yönetimini dağıtma
 titleSuffix: Configuration Manager
 description: İstemcileri ve kurtarma hizmetini yönetim noktalarına Configuration Manager için BitLocker yönetim aracısını dağıtma
-ms.date: 04/01/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a050ab523730adbfdd2ecf541557fabbf95081b
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 786a7a528c027ab46237dac92378224705b0e026
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715705"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262838"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker yönetimini dağıtma
 
@@ -179,7 +179,13 @@ Daha fazla bilgi için bkz. [kurtarma verilerini şifreleme](encrypt-recovery-da
 
 - BitLocker yönetim ayarları, MBAD Grup İlkesi ayarlarıyla tamamen uyumludur. Cihazlar hem Grup İlkesi ayarlarını hem de Configuration Manager ilkelerini alıyorsa, bunları eşleşecek şekilde yapılandırın.
 
+  > [!NOTE]
+  > Tek başına MBAD için bir Grup İlkesi ayarı varsa, Configuration Manager tarafından denenen eşdeğer ayarı geçersiz kılar. Tek başına MBAD, etki alanı Grup İlkesi 'ni kullanır, Configuration Manager BitLocker Yönetimi için yerel ilkeler ayarlıyor. Etki alanı ilkeleri yerel Configuration Manager BitLocker yönetim ilkelerini geçersiz kılar. Tek başına MBAB etki alanı Grup İlkesi Configuration Manager ilkesiyle eşleşmiyorsa, Configuration Manager BitLocker Yönetimi başarısız olur. Örneğin, bir etki alanı Grup ilkesi, anahtar kurtarma hizmetleri için tek başına MBAı sunucusunu ayarlarsa, Configuration Manager BitLocker Yönetimi yönetim noktası için aynı ayarı ayarlayamıyorum. Bu davranış, istemcilerin kurtarma anahtarlarını yönetim noktasındaki Configuration Manager BitLocker yönetim anahtarı kurtarma hizmetine raporlamasına neden olur.
+
 - Configuration Manager, tüm MBAD Grup İlkesi ayarlarını uygulamaz. Grup İlkesi 'nde ek ayarlar yapılandırırsanız, Configuration Manager istemcilerindeki BitLocker yönetim Aracısı bu ayarları alır.
+
+  > [!IMPORTANT]
+  > Configuration Manager BitLocker Management 'ın belirttiği bir ayar için bir grup ilkesi ayarlamamış. Yalnızca Configuration Manager BitLocker yönetiminde mevcut olmayan ayarlar için Grup ilkeleri ayarlayın. Configuration Manager sürüm 2002, tek başına MBAD ile özellik eşliği içerir. Configuration Manager sürüm 2002 ve üzeri sürümlerde, çoğu örnekte, BitLocker ilkelerini yapılandırmak için etki alanı grup ilkelerini ayarlama nedeni olmamalıdır. Çakışma ve sorunları önlemek için, BitLocker için Grup ilkeleri kullanmaktan kaçının. Tüm ayarları Configuration Manager BitLocker yönetim ilkeleri aracılığıyla yapılandırın.
 
 ### <a name="tpm-password-hash"></a>TPM Parola karması
 

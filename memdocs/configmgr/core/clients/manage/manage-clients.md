@@ -10,12 +10,12 @@ ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b9111e3be82424425561e0a664fee955d73ee63
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: b6d1ee82e116a6d4375e37ccca84c8b35707f8e1
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270829"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334598"
 ---
 # <a name="how-to-manage-clients-in-configuration-manager"></a>Configuration Manager istemcileri yönetme
 
@@ -249,22 +249,24 @@ Configuration Manager istemci önbelleğinin varsayılan konumu `%windir%\ccmcac
 
 ### <a name="about-the-client-cache"></a>İstemci önbelleği hakkında  
 
-Configuration Manager istemcisi dağıtımı aldıktan hemen sonra gerekli yazılım içeriğini indirir, ancak dağıtımın zamanlandığı zamana kadar çalıştırmayı bekler. Zamanlanan zamanda Configuration Manager istemci, içeriğin önbellekte kullanılabilir olup olmadığını kontrol eder. İçerik önbellekte ise ve doğru sürümteyse, istemci önbelleğe alınmış içeriği kullanır. İçeriğin gerekli sürümü değiştiğinde veya istemci başka bir pakete yer açmak üzere içeriği silerse, istemci içeriği yeniden önbelleğe indirir.  
+Configuration Manager istemcisi, dağıtımın kullanılabilir zamanından hemen sonra gerekli yazılımların içeriğini indirir, ancak dağıtımın zamanlanan zamanına kadar çalıştırmayı bekler. Zamanlanan zamanda Configuration Manager istemci, içeriğin önbellekte kullanılabilir olup olmadığını kontrol eder. İçerik önbellekte ise ve doğru sürümteyse, istemci önbelleğe alınmış içeriği kullanır. İçeriğin gerekli sürümü değiştiğinde veya istemci başka bir pakete yer açmak üzere içeriği silerse, istemci içeriği yeniden önbelleğe indirir.  
 
 İstemci, önbelleğin boyutundan daha büyük bir program veya uygulamanın içeriğini indirmeye çalışırsa, yetersiz önbellek boyutu nedeniyle dağıtım başarısız olur. İstemci yetersiz önbellek boyutu için 10050 durum iletisini oluşturur. Önbellek boyutunu daha sonra artırırsanız, sonuç şu şekilde olur:  
 
 - Gerekli bir program için: istemci içeriği indirmeyi otomatik olarak yeniden dener. Paketi ve programı istemciye yeniden dağıtın.  
 - Gerekli bir uygulama için: istemci, istemci ilkesini indirdiğinde içeriği indirmeyi otomatik olarak yeniden dener.  
 
-İstemci önbelleğin boyutundan küçük olan bir paketi indirmeye çalışırsa, ancak önbellek doluysa, tüm *gerekli* dağıtımlar şu kadar yeniden denemeye devam tutar:
+İstemci önbelleğin boyutundan daha az içerik indirmeye çalışırsa, ancak önbellek doluysa, tüm *gerekli* dağıtımlar şu kadar yeniden denemeye devam tutar:
 
 - Önbellek alanı kullanılabilir
 - İndirme zaman aşımına uğrar
 - Yeniden deneme sayısı sınırına ulaştı
 
-Daha sonra önbellek boyutunu artırırsanız, istemci, sonraki yeniden deneme aralığı sırasında paketi indirmeyi yeniden dener. İstemci, 18 kez denenene kadar her dört saatte bir içeriği indirmeyi dener.  
+Daha sonra önbellek boyutunu artırırsanız, istemci, sonraki yeniden deneme aralığı sırasında içeriği yeniden indirmeyi dener. İstemci, 18 kez denenene kadar her dört saatte bir içeriği indirmeyi dener.  
 
-Önbelleğe alınan içerik otomatik olarak silinmez. İstemci bu içeriği kullandıktan sonra en az bir gün önbellekte kalır. İstemci önbelleğinde içeriği kalıcı hale getirme seçeneğiyle paket özelliklerini yapılandırırsanız, istemci onu otomatik olarak silmez. Önbellek alanı son 24 saat içinde indirilen paketler tarafından kullanılıyorsa ve istemcinin yeni paketler indirmesi gerekiyorsa, önbellek boyutunu artırın veya kalıcı önbellek içeriğini silme seçeneğini belirleyin.  
+Önbelleğe alınan içerik otomatik olarak silinmez. İstemci bu içeriği kullandıktan sonra en az bir gün önbellekte kalır. İçeriği istemci önbelleğinde kalıcı hale getirme seçeneğiyle yapılandırırsanız, istemci onu otomatik olarak silmez. Önbellek alanı son 24 saat içinde indirilen içerik tarafından kullanılıyorsa ve istemcinin yeni içerik indirmesi gerekiyorsa, önbellek boyutunu artırın ya da kalıcı önbellek içeriğini silme seçeneğini belirleyin.
+
+Yalnızca uygulamalar için, ilgili bir dağıtımın içeriği önbellekte mevcut ise, istemci yalnızca yeni veya değiştirilmiş dosyaları indirir. İlgili dağıtımlar, aynı dağıtım türüne ve yerine geçilen uygulamalara ait eski düzeltmelere yönelik olanları içerir.
 
 İstemci önbelleğini manuel istemci yüklemesi sırasında veya istemci yüklendikten sonra yapılandırmak için aşağıdaki yordamları kullanın.  
 
@@ -283,7 +285,7 @@ Yükleme kaynak konumundan CCMSetup.exe komutunu çalıştırın ve gereken aşa
     > [!NOTE]
     > SMSCACHESIZE yerine Configuration Manager konsolundaki **Istemci ayarları** ' nda bulunan önbellek boyutu ayarlarını kullanın. Daha fazla bilgi için bkz. [istemci önbellek ayarları](../deploy/about-client-settings.md#client-cache-settings).
 
-CCMSetup. exe için bu komut satırı özelliklerinin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [istemci yükleme özellikleri hakkında](../deploy/about-client-installation-properties.md).
+CCMSetup.exe için bu komut satırı özelliklerinin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [istemci yükleme özellikleri hakkında](../deploy/about-client-installation-properties.md).
 
 ### <a name="configure-the-cache-during-client-push-installation"></a>İstemci gönderme yüklemesi sırasında önbelleği yapılandırma  
 
@@ -304,7 +306,7 @@ CCMSetup. exe için bu komut satırı özelliklerinin nasıl kullanılacağı ha
      > [!NOTE]
      > SMSCACHESIZE yerine Configuration Manager konsolundaki **Istemci ayarları** ' nda bulunan önbellek boyutu ayarlarını kullanın. Daha fazla bilgi için bkz. [istemci önbellek ayarları](../deploy/about-client-settings.md#client-cache-settings).
 
-     CCMSetup. exe için bu komut satırı özelliklerinin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [istemci yükleme özellikleri hakkında](../deploy/about-client-installation-properties.md).  
+     CCMSetup.exe için bu komut satırı özelliklerinin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [istemci yükleme özellikleri hakkında](../deploy/about-client-installation-properties.md).  
 
 ### <a name="configure-the-cache-on-the-client-computer"></a>İstemci bilgisayarda önbelleği yapılandırma  
 
@@ -321,12 +323,12 @@ CCMSetup. exe için bu komut satırı özelliklerinin nasıl kullanılacağı ha
 
 ## <a name="uninstall-the-client"></a><a name="BKMK_UninstalClient"></a>İstemciyi kaldırma
 
-Configuration Manager istemci yazılımını bir bilgisayardan, **CCMSetup. exe** ' yi **/Uninstall** özelliğiyle kullanarak kaldırabilirsiniz. Komut isteminden tek bir bilgisayarda CCMSetup. exe ' yi çalıştırın veya bir bilgisayar koleksiyonu için istemciyi kaldırmak üzere bir paket dağıtın.  
+**/Uninstall** özelliği ile **CCMSetup.exe** kullanarak bir bilgisayardan Configuration Manager istemci yazılımını kaldırabilirsiniz. Komut isteminden tek bir bilgisayarda CCMSetup.exe çalıştırın veya istemciyi bir bilgisayar koleksiyonu için kaldırmak üzere bir paket dağıtın.  
 
 > [!NOTE]  
 > Configuration Manager istemcisini bir mobil cihazdan kaldıramazsınız. Configuration Manager istemcisini bir mobil cihazdan kaldırmanız gerekiyorsa, mobil cihazdaki tüm verileri silen cihazı silmelisiniz.  
 
-1. Yönetici olarak bir Windows komut istemi açın. Klasörü CCMSetup. exe ' nin bulunduğu konum olarak değiştirin, örneğin:`cd %windir%\ccmsetup`
+1. Yönetici olarak bir Windows komut istemi açın. Klasörü CCMSetup.exe bulunduğu konuma değiştirin, örneğin:`cd %windir%\ccmsetup`
 
 2. Şu komutu çalıştırın:`CCMSetup.exe /uninstall`
 

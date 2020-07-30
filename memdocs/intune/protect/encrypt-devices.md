@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 07/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 16a2558a0f4b002528e749f4a66d3341e83c8576
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a9fad599342cf358409c7be09ebb8b4eb1c0c4a5
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989676"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334632"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Intune 'da Windows 10 için BitLocker ilkesini yönetme
 
@@ -79,7 +79,7 @@ Tercih ettiğiniz ilke türünü oluşturmak için aşağıdaki yordamlardan bir
 
 5. Scope **(Etiketler)** sayfasında kapsam etiketleri **Seç** ' i seçerek profile kapsam etiketleri atayın.
 
-   Devam etmek için **İleri**’yi seçin.
+   Devam etmek için **İleri** seçeneğini belirleyin.
 
 6. **Atamalar** sayfasında, bu profili alacak grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. Kullanıcı ve cihaz profilleri atama.
 
@@ -162,17 +162,17 @@ BitLocker için bilgi, [BitLocker yapılandırma hizmeti sağlayıcısı](https:
 
 Windows 10 sürüm 1909 veya üstünü çalıştıran bir cihazın BitLocker kurtarma anahtarını uzaktan döndürmek için bir Intune cihaz eylemini kullanabilirsiniz.
 
-#### <a name="prerequisites"></a>Ön koşullar
+#### <a name="prerequisites"></a>Önkoşullar
 
 Cihazların BitLocker kurtarma anahtarının döndürmesini desteklemek için aşağıdaki önkoşulları karşılaması gerekir:
 
 - Cihazların Windows 10 sürüm 1909 veya üstünü çalıştırması gerekir
 
-- Azure AD 'ye katılmış ve Hibriya katılmış cihazlarda anahtar döndürme özelliğinin etkinleştirilmesi için destek bulunmalıdır:
+- Azure AD 'ye katılmış ve karma olarak birleştirilmiş cihazların BitLocker ilke yapılandırması ile etkin anahtar döndürme desteği olmalıdır:
 
-  - **İstemci tabanlı kurtarma parolası döndürme**
-
-  Bu ayar, Windows 10 Endpoint Protection cihaz yapılandırma ilkesinin bir parçası olarak *Windows şifrelemesi* altında bulunur.
+  - *Azure AD 'ye katılmış cihazlarda döndürmeyi etkinleştirmek* veya *Azure AD ve hibriya katılmış cihazlarda döndürmeyi etkinleştirmek* için **istemci tabanlı kurtarma parolası dönüşü**
+  - **BitLocker kurtarma bilgilerini Azure Active Directory** *etkin* olacak şekilde Kaydet
+  - **BitLocker 'ın gerekli şekilde etkinleştirilmeden önce kurtarma bilgilerini Azure Active Directory depolayın** *Required*
 
 #### <a name="to-rotate-the-bitlocker-recovery-key"></a>BitLocker kurtarma anahtarını döndürmek için
 

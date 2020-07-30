@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 07/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1916004d8e61239d7de92a77769ee970cc7a3118
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 72d0345c91f525fb6dc28adeabe8522801c51a9f
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565615"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365432"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Intune 'da VPN sunucularına bağlanmak için VPN profilleri oluşturma
 
 Sanal özel ağlar (VPN 'Ler), kullanıcılara kuruluş ağınıza güvenli uzaktan erişim olanağı sağlar. Cihazlar VPN sunucusuyla bir bağlantı başlatmak için bir VPN bağlantısı profili kullanır. Microsoft Intune içindeki **VPN profilleri** , kuruluşunuzdaki kullanıcılara ve cihazlara VPN ayarları atar. Kullanıcıların kuruluş ağınıza kolayca ve güvenli bir şekilde bağlanabilmeleri için bu ayarları kullanın.
 
 Örneğin, kuruluş ağındaki bir dosya paylaşımıyla bağlantı kurmak için tüm iOS/ıpados cihazlarını gerekli ayarlarla yapılandırmak istiyorsunuz. Bu ayarları içeren bir VPN profili oluşturursunuz. Ardından, bu profili iOS/ıpados cihazlarına sahip tüm kullanıcılara atarsınız. Kullanıcılar, VPN bağlantısını kullanılabilir ağlar listesinde görür ve ağa kolaylıkla bağlanabilir.
+
+> [!NOTE]
+> İOS/ıpados ve macOS için Kullanıcı kaydı, yalnızca [uygulama BAŞıNA VPN](vpn-setting-configure-per-app.md)'yi destekler.
 
 > [!NOTE]
 > Aşağıdaki platformlar için VPN profilleri oluşturmak üzere [Intune özel yapılandırma ilkelerini](custom-settings-configure.md) kullanabilirsiniz:

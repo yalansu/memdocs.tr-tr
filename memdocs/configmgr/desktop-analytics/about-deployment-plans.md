@@ -2,7 +2,7 @@
 title: Masaüstü analizinden dağıtım planları
 titleSuffix: Configuration Manager
 description: Masaüstü analizinden dağıtım planları hakkında bilgi edinin.
-ms.date: 05/11/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ccc325ac4b8e02142a1442862ad661a77b0561f2
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: acaa7c8a906edd78f0c54c5735c97c55434d848b
+ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268496"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87400724"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Masaüstü analizinden dağıtım planları hakkında
 
@@ -47,6 +47,8 @@ Dağıtım planınızın bir parçası olarak, aşağıdaki işlemleri yapabilir
 Varsayılan olarak, masaüstü Analizi dağıtım planı verilerini günlük olarak yeniler. Bir uygulama için önemli atama ya da pilot 'a eklenecek bir cihaz seçme gibi bir dağıtım planında yaptığınız tüm değişiklikler, işlenmesi 24 saate kadar sürer. Bu işlemi hızlandırmak için isteğe bağlı veri yenileme isteyin. Daha fazla bilgi için bkz. [Masaüstü analizi hakkında SSS](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).  
 
 Masaüstü analizlerini Configuration Manager 'e bağladıktan sonra dağıtım planlarındaki koleksiyonlarınızı seçin. Bu tümleştirme daha sonra Windows 'u masaüstü Analizi verilerine göre bir koleksiyona dağıtmanıza olanak tanır.
+
+Dağıtım planları, en son üç Windows 10 sürümünü hedeflemeyi destekler. Masaüstü analizi, mevcut olduktan sonra 45 gün içinde yeni bir Windows 10 sürümü için destek ekler. Bu sırada hizmet, en eski sürümü de bırakacak. En eski sürümü hedefleyen dağıtım planlarını kullanamazsınız. Masaüstü Analytics 'te desteklenen en eski sürümü hedefleyen devam eden bir dağıtım planınız varsa, yeni bir Windows 10 sürümü kullanılabilir olduktan sonra dağıtımı 45 gün içinde doldurun.
 
 ## <a name="readiness-rules"></a>Hazırlık kuralları
 

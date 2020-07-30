@@ -2,7 +2,7 @@
 title: Topluluk hub 'ı ve GitHub
 titleSuffix: Configuration Manager
 description: Configuration Manager 'de topluluk hub 'ını etkinleştirme ve kullanma
-ms.date: 07/10/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8aadc391c5c0b259ab1a1736f3654f25b98dbae0
-ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
+ms.openlocfilehash: c0b812fa3b373d6bd5bd2bebed8b1540ceb7bdd6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86236418"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262090"
 ---
 # <a name="community-hub-and-github"></a>Topluluk hub 'ı ve GitHub
 <!--3555935, 3555936-->
@@ -44,10 +44,7 @@ Topluluk hub 'ı aşağıdaki nesneleri destekler:
       - Windows Server desteklenmez, bu nedenle Configuration Manager konsolunun site sunucusundan ayrı bir Windows 10 cihazına yüklenmesi gerekir.
    - Oturum açan kullanıcı hesabı yerleşik yönetici hesabı olamaz
 
-- Raporları indirmek için, içeri aktardığınız sitedeki **http site sistemleri için Configuration Manager tarafından oluşturulan sertifikaları kullan** seçeneğini açmanız gerekir. Daha fazla bilgi için bkz. [GELIŞMIŞ http](/sccm/core/plan-design/hierarchy/enhanced-http).
-   1. **Yönetim**  >  **sitesi yapılandırma**  >  **siteleri**' ne gidin.
-   1. Siteyi seçin ve şeritte **Özellikler** ' i seçin.
-   1. **Iletişim güvenliği** SEKMESINDE, **http site sistemleri için Configuration Manager tarafından oluşturulan sertifikaları kullanma**seçeneğini belirleyin.
+- Configuration Manager [Yönetim hizmetinin](../../../develop/adminservice/set-up.md) ayarlanması ve çalışması gerekir.
 
 - Kuruluşunuz ağ iletişimini bir güvenlik duvarı veya ara cihaz kullanarak internet ile kısıtlarsa, Configuration Manager konsolunun İnternet uç noktalarına erişmesine izin vermeniz gerekir. Daha fazla bilgi için bkz. [Internet erişimi gereksinimleri](../../plan-design/network/internet-endpoints.md#community-hub).
 

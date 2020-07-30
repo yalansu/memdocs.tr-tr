@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/23/2020
+ms.date: 07/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,16 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b9aedb7595db5ff0f40f2d12b8cee985fb7be99
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 7bc7f526db4cb9fd269d2d48845cc5dc4096b5df
+ms.sourcegitcommit: 0c5d09bfefbedeb561658cf7274483896e84e5d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332861"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87412350"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Intune ile Mobile Threat Defense tümleştirmesi
 
 Intune, mobil tehdit savunma (MTD) satıcısındaki verileri cihaz uyumluluk ilkeleri ve cihaz koşullu erişim kuralları için bir bilgi kaynağı olarak tümleştirebilir. Bu bilgileri, güvenliği aşılmış mobil cihazlardan erişimi engelleyerek Exchange ve SharePoint gibi kurumsal kaynakların korunmasına yardımcı olmak için kullanabilirsiniz.
+
+> [!NOTE]
+> Bu makalede, üçüncü taraf mobil tehdit savunma satıcıları hakkında daha fazla bilgi için Microsoft Defender [ATP](../protect/advanced-threat-protection.md)'ye bakın.
 
 Intune, Intune uygulama koruma ilkelerini kullanarak, kayıtlı olmayan cihazlar için bu verileri kaynak olarak kullanabilir. Bu nedenle, Yöneticiler bu bilgileri [Microsoft Intune korunan bir uygulamadaki](../apps/apps-supported-intune-apps.md)kurumsal verileri korumak ve bir blok veya seçmeli silme vermek için kullanabilir.
 
@@ -97,3 +100,4 @@ Cihaz, ağ ve uygulama riskine dayalı olarak şirket kaynağına erişimi korum
 - [Better Mobile](better-mobile-threat-defense-connector.md)
 - [Sophos Mobile](sophos-mtd-connector.md)
 - [Wandera Mobile Threat Defense](wandera-mtd-connector.md)
+- [Microsoft Defender](../protect/advanced-threat-protection.md)

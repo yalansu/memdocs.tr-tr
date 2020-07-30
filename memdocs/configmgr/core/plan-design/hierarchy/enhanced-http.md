@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1a6ec98bd350eb0ac8643254f64a9480f156bb13
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 79b4119a12826596fcc91fa1b4ead4e151e2ddd8
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239768"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262107"
 ---
 # <a name="enhanced-http"></a>Gelişmiş HTTP
 
@@ -53,10 +53,10 @@ Aşağıdaki senaryolar bu geliştirmelerden faydalanır:
 ### <a name="scenario-1-client-to-management-point"></a><a name="bkmk_scenario1"></a>Senaryo 1: Istemciden yönetim noktasına
 
 <!--1356889-->
-[Azure Active Directory (Azure AD) ile birleştirilmiş cihazlar](/azure/active-directory/devices/concept-azure-ad-join) , http için yapılandırılmış bir yönetim noktasıyla iletişim kurabilir. Site sunucusu yönetim noktası için güvenli bir kanal üzerinden iletişim kurmasına izin veren bir sertifika oluşturur.
+[Azure Active Directory (Azure AD) ile birleştirilmiş cihazlar](/azure/active-directory/devices/concept-azure-ad-join) ve [Configuration Manager verilen belirteç](../../clients/deploy/deploy-clients-cmg-token.md) içeren cihazlar, site için GELIŞTIRILMIŞ http 'yi etkinleştirirseniz http için yapılandırılmış bir yönetim noktasıyla iletişim kurabilir. Gelişmiş HTTP etkinken, site sunucusu yönetim noktası için güvenli bir kanal üzerinden iletişim kurmasına izin veren bir sertifika oluşturur.
 
 > [!Note]  
-> Bu davranış, bir bulut yönetimi ağ geçidi üzerinden iletişim kuran Azure AD 'ye katılmış istemciler için HTTPS özellikli bir yönetim noktası gerektiren Configuration Manager geçerli dal sürümü 1802 ' den değiştirilmiştir. Daha fazla bilgi için bkz. [https için yönetim noktasını etkinleştirme](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
+> Bu senaryo, HTTPS etkin bir yönetim noktası kullanılmasını gerektirmez, ancak gelişmiş HTTP kullanımına alternatif olarak desteklenir. HTTPS etkin bir yönetim noktası kullanma hakkında daha fazla bilgi için bkz. [https için yönetim noktasını etkinleştirme](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
 
 ### <a name="scenario-2-client-to-distribution-point"></a><a name="bkmk_scenario2"></a>Senaryo 2: Istemciden dağıtım noktasına
 

@@ -2,7 +2,7 @@
 title: İstemci ayarları
 titleSuffix: Configuration Manager
 description: İstemci davranışlarını denetlemek için varsayılan ve özel ayarlar hakkında bilgi edinin
-ms.date: 04/21/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 21e837d5d97c42f095159a87e015f181c5e53419
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 9f6bb29930a6e2d4faf4ffdd141d3c9cd1831305
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347177"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365517"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Configuration Manager istemci ayarları hakkında
 
@@ -329,6 +329,11 @@ Kullanıcılara gerekli uygulama veya yazılım güncelleştirme dağıtımları
 
 Yetkisiz kullanım süresini 0 olarak 120 saat olarak ayarlayın. Bu ayarı, **kullanıcı tercihlerine göre bu dağıtımın uygulanması için**dağıtım özelliği ile birlikte kullanın. Daha fazla bilgi için bkz. [uygulamaları dağıtma](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
 
+
+### <a name="enable-endpoint-analytics-data-collection"></a>Endpoint Analytics veri toplamayı etkinleştir
+
+Endpoint Analytics 'e yüklemek için istemcisinde yerel veri toplamayı sağlar. Cihazları yerel veri toplamaya göre yapılandırmak için **Evet** olarak ayarlayın. Yerel veri toplamayı devre dışı bırakmak için **Hayır** olarak ayarlayın. Daha fazla bilgi için bkz. [Configuration Manager cihazlarını Endpoint Analytics 'e kaydetme](../../../../analytics/enroll-configmgr.md).
+
 ## <a name="computer-restart"></a>Bilgisayar yeniden başlatma
 
 Bu ayarlar hakkında daha fazla bilgi için bkz. [cihaz yeniden başlatma bildirimleri](device-restart-notifications.md).<!-- 7182335 -->
@@ -539,7 +544,7 @@ Ardından, gerektiğinde aşağıdaki ek ayarları yapılandırın:
 
 
 
-## <a name="remote-tools"></a>Uzak Araçlar  
+## <a name="remote-tools"></a>Uzak araçlar  
 
 ### <a name="enable-remote-control-on-clients-and-firewall-exception-profiles"></a>İstemcilerde uzaktan denetimi etkinleştir ve güvenlik duvarı özel durum profilleri
 
@@ -672,7 +677,7 @@ Yazılım Merkezi 'nde hangi sekmelerin görünür olacağını seçin. Sekmeyi 
 Kullanılabilir sekmeler:
 - **Uygulamalar**
 - **Güncelleştirmeler**
-- **İşletim Sistemleri**
+- **İşletim sistemleri**
 - **Yükleme durumu**
 - **Cihaz Uyumluluğu**
 - **Seçenekler**
@@ -690,7 +695,7 @@ Aşağıdaki sekmeleri yazılım merkezi 'nde görünür yapmak için bu gruptak
 
 - **Uygulamalar**
 - **Güncelleştirmeler**
-- **İşletim Sistemleri**
+- **İşletim sistemleri**
 - **Yükleme durumu**
 - **Cihaz Uyumluluğu**
 - **Seçenekler**
@@ -919,15 +924,15 @@ Configuration Manager sürüm 1902 ' den başlayarak, Windows 10 sürüm 1709 ve
 
 Bu istemci ayarı aşağıdaki seçenekleri sağlar:
 
-- **Yapılandırılmadı**: Configuration Manager ayarı değiştirmez. Yöneticiler kendi setupconfig. ini dosyasını önceden hazırlamalarını sağlayabilir. Bu varsayılan değerdir.
+- **Yapılandırılmadı**: Configuration Manager ayarı değiştirmez. Yöneticiler kendi setupconfig.ini dosyalarını önceden hazırlamalarını sağlayabilir. Bu değer varsayılandır.
 
 - **Normal**: Windows kurulumu daha hızlı bir şekilde daha fazla sistem kaynağı ve güncelleştirme kullanır. Daha fazla işlemci zamanı kullanır, bu nedenle toplam yükleme süresi daha kısadır, ancak kullanıcının kesintisi daha uzundur.  
 
-    - `/Priority Normal` [Windows kurulumu komut satırı seçeneğiyle](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)cihazdaki setupconfig. ini dosyasını yapılandırır.
+    - `/Priority Normal` [Windows kurulumu komut satırı seçeneğiyle](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)cihazdaki setupconfig.ini dosyasını yapılandırır.
 
 - **Düşük**: cihaz, arka planda indirildiğinde ve güncelleştirmelerde çalışmaya devam edebilirsiniz. Toplam yükleme süresi daha uzundur, ancak kullanıcının kesintisi daha kısadır. Bu seçeneği kullandığınızda zaman aşımını önlemek için en fazla çalışma süresini artırmanız gerekebilir.  
 
-    - `/Priority` [Windows kurulumu komut satırı seçeneğini](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) setupconfig. ini dosyasından kaldırır.
+    - `/Priority` [Windows kurulumu komut satırı seçeneğini](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) setupconfig.ini dosyasından kaldırır.
 
 
 ### <a name="enable-third-party-software-updates"></a>Üçüncü taraf yazılım güncelleştirmelerini etkinleştir

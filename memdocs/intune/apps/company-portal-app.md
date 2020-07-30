@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69ef6a0b368a712a35cc377a51325836b6e7aaf6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d979001f159b427314f8bc53788ccce0acd13d11
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262624"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365551"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune Şirket Portalı uygulamaları, Şirket Portalı Web sitesini ve Intune uygulamasını özelleştirme
 
@@ -178,9 +178,9 @@ Intune, kişisel kimlik doğrulama (PıV) ve ortak erişim kartı (CAC) ile birl
 
 İOS/ıpados cihazlarının türetilmiş kimlik bilgileri hakkında daha fazla bilgi için bkz. [Microsoft Intune türetilmiş kimlik bilgilerini kullanma](../protect/derived-credentials.md).
 
-## <a name="dark-mode-for-iosipados-and-windows-company-portal"></a>İOS/ıpados ve Windows Şirket Portalı için koyu mod
+## <a name="dark-mode-for-the-company-portal"></a>Şirket Portalı için koyu mod
 
-İOS/ıpados ve Windows Şirket Portalı için koyu mod kullanılabilir. Kullanıcılar uygulamaları indirebilir, cihazlarını yönetebilir ve cihaz ayarlarına bağlı olarak tercih ettikleri renk düzeninde BT desteği alabilir. İOS/ıpados ve Windows Şirket Portalı, son kullanıcının cihaz ayarlarına koyu veya hafif mod için otomatik olarak eşleşir.
+İOS/ıpados, macOS ve Windows Şirket Portalı için koyu mod kullanılabilir. Kullanıcılar uygulamaları indirebilir, cihazlarını yönetebilir ve cihaz ayarlarına bağlı olarak tercih ettikleri renk düzeninde BT desteği alabilir. İOS/ıpados, macOS ve Windows Şirket Portalı, son kullanıcının cihaz ayarlarına koyu veya hafif mod için otomatik olarak eşleştirecektir.
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Windows Şirket Portalı klavye kısayolları
 
