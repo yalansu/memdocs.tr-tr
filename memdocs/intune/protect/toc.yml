@@ -1,6 +1,6 @@
 - name: Intune ile Verileri ve Cihazları Koruma
   href: index.yml
-- name: Genel bakış
+- name: Genel Bakış
   expanded: true
   items:
     - name: Cihaz korumaya genel bakış
@@ -90,7 +90,15 @@
             - name: Hesap koruması
               href: endpoint-security-account-protection-policy.md
         - name: Microsoft Defender ATP
-          href: advanced-threat-protection.md
+          items:
+            - name: Microsoft Defender ATP
+              href: advanced-threat-protection.md
+            - name: Defender ATP’yi yapılandırma
+              href: advanced-threat-protection-configure.md
+            - name: Android web koruması
+              href: advanced-threat-protection-manage-android.md
+            - name: Defender ATP’yi izleme
+              href: advanced-threat-protection-monitor.md
         - name: Güvenlik duvarı kuralı geçişi
           href: endpoint-security-firewall-rule-tool.md
         - name: Disk şifreleme
