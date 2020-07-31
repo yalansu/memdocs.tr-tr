@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9ce8c10d9d59d97caa53ece12dd43d90c78546bb
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 05553af3e973805eed62c68f13afc3cf7d3d2ee3
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384851"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438591"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager ile Always on kullanılabilirlik grupları SQL Server kullanmaya hazırlanma
 
@@ -28,7 +28,7 @@ Kullanılabilirlik gruplarının kullanımını Configuration Manager destekler:
 - Birincil sitelerde ve merkezi yönetim sitesinde.
 - Şirket içinde veya Microsoft Azure.
 
-Microsoft Azure ' de kullanılabilirlik grupları kullandığınızda, *Azure kullanılabilirlik kümelerini*kullanarak site veritabanınızın kullanılabilirliğini daha da artırabilirsiniz. Azure Kullanılabilirlik Kümeleri hakkında daha fazla bilgi için bkz. [Sanal makinelerin kullanılabilirliğini yönetme](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/).
+Microsoft Azure ' de kullanılabilirlik grupları kullandığınızda, *Azure kullanılabilirlik kümelerini*kullanarak site veritabanınızın kullanılabilirliğini daha da artırabilirsiniz. Azure Kullanılabilirlik Kümeleri hakkında daha fazla bilgi için bkz. [Sanal makinelerin kullanılabilirliğini yönetme](/azure/virtual-machines/windows/manage-availability).
 
 > [!Important]
 > Devam etmeden önce, SQL Server ve SQL Server kullanılabilirlik gruplarını yapılandırmaya rahat olun. Aşağıdaki bilgiler SQL Server belge kitaplığına ve yordamlarına başvurur.
@@ -45,7 +45,7 @@ Configuration Manager ile kullanılabilirlik gruplarının kullanılması için 
 - [Site veritabanını bir kullanılabilirlik grubunun dışına, tek başına SQL Server varsayılan veya adlandırılmış bir örneğine taşıyın](configure-aoag.md#bkmk_stop)  
 
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Aşağıdaki Önkoşullar tüm senaryolar için geçerlidir. Belirli bir senaryoya ek önkoşullar uygulandıklarında, bu senaryoya göre ayrıntılandırılmıştır.
 

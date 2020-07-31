@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: def7a40091f6c9a45e67f5e4de7d7dca94b3cba2
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: 7eccc3bf6b7ded9db93f5af78d55f090e9704cbc
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422813"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438610"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Configuration Manager içinde koleksiyonlar oluşturma
 
@@ -229,11 +229,12 @@ Koleksiyon üyeliklerinin Azure Active Directory (Azure AD) grubuna eşitlenmesi
 
 Azure AD eşitleme her beş dakikada bir gerçekleşir. Configuration Manager Azure AD 'ye kadar tek yönlü bir işlemdir. Azure AD 'de yapılan değişiklikler Configuration Manager koleksiyonlara yansıtılmaz, ancak Configuration Manager tarafından üzerine yazılmaz. Örneğin, Configuration Manager koleksiyonunda iki cihaz varsa ve Azure AD grubunda üç farklı cihaz varsa, eşitlemeden sonra Azure AD grubunda beş cihaz vardır.
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 
 - [Bulut yönetimi](../../../servers/deploy/configure/azure-services-wizard.md) IÇIN Azure AD ile tümleştirme
 - [Kullanıcı keşfi Azure Active Directory](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
 - HTTPS veya [Gelişmiş BIR http](../../../plan-design/hierarchy/enhanced-http.md) etkin yönetim noktası
+- **Tüm sistemler** koleksiyonuna erişim
 
 ### <a name="create-a-group-and-set-the-owner-in-azure-ad"></a>Azure AD 'de Grup oluşturma ve sahibi ayarlama
 
@@ -255,7 +256,7 @@ Azure AD eşitleme her beş dakikada bir gerçekleşir. Configuration Manager Az
 
 1. Configuration Manager konsolunda **varlıklar ve uyum**  >  **genel bakış**  >  **Cihaz Koleksiyonları**' na gidin.
 1. Eşitlemek için koleksiyona sağ tıklayın, ardından **Özellikler**' e tıklayın. 
-1. **AAD grubu eşitleme** sekmesinde, **Ekle**' ye tıklayın.
+1. **Bulut eşitleme** sekmesinde, **Ekle**' ye tıklayın.
 1. Açılan menüden, Azure AD grubunuzu oluşturduğunuz **kiracıyı** seçin.
 1. **Ad ile başlayan** arama ölçütlerinizi yazın ve ardından **Ara**' ya tıklayın.
   - Oturum açmanız istenirse, Azure AD grubu için sahip olarak belirttiğiniz kimliği kullanın.
@@ -277,7 +278,7 @@ Azure AD eşitleme her beş dakikada bir gerçekleşir. Configuration Manager Az
 
 ## <a name="using-powershell"></a><a name="bkmk_powershell"></a>PowerShell 'i kullanma
 
-Koleksiyonları oluşturmak ve içeri aktarmak için PowerShell 'i kullanabilirsiniz. Daha fazla bilgi için bkz:
+Koleksiyonları oluşturmak ve içeri aktarmak için PowerShell 'i kullanabilirsiniz. Daha fazla bilgi için bkz.
 
 * [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
 * [Set-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Set-CMCollection)

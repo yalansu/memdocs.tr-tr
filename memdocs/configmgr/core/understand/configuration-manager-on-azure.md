@@ -10,12 +10,12 @@ ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c12372325573c6795396ff0832ca60cba68b8c29
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: c9d398d7fddab61014547fc0f8f64cd180e58ab6
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078507"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438571"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 'da Configuration Manager-sık sorulan sorular
 
@@ -84,7 +84,7 @@ Configuration Manager Azure yük dengeleyiciler ile sınanmasa da, işlevler uyg
 
 ## <a name="performance"></a>Performans
 ### <a name="what-factors-affect-performance-in-this-scenario"></a>Bu senaryodaki performansı etkileyen etmenler nelerdir?
-[Azure VM boyutu ve türü](https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs), Azure VM diskleri (Premium Depolama önerilir, özellikle SQL Server için), ağ gecikmesi ve hız en önemli alanlardır.
+[Azure VM boyutu ve türü](/azure/virtual-machines/sizes), Azure VM diskleri (Premium Depolama önerilir, özellikle SQL Server için), ağ gecikmesi ve hız en önemli alanlardır.
 
 ### <a name="so-tell-me-more-about-azure-virtual-machines-what-size-vms-should-i-use"></a>Bu nedenle, Azure sanal makineleri hakkında daha fazla bilgi verin. VM 'Leri hangi boyutta kullanmalıyım?
 Genel olarak, işlem gücünün (CPU ve bellek) [Configuration Manager için önerilen donanımları](../plan-design/configs/recommended-hardware.md)karşılaması gerekir. Ancak, özellikle bu VM 'Lerin kullanıldığı disklere geldiğinde, normal bilgisayar donanımı ve Azure VM 'Leri arasında bazı farklılıklar vardır.  Kullandığınız sanal makinelerin boyutu, ortamınızın boyutuna bağlıdır ancak bazı öneriler aşağıda verilmiştir:
@@ -113,7 +113,7 @@ Uzak **site veritabanı** -uzak bir sunucuda site veritabanıyla birincil veya m
 |**25k-50.000**      | Site sunucusu: F4S </br>Veritabanı sunucusu: DS13_V2 | Site sunucusu: 1xP30 </br>Veritabanı sunucusu: 2xP30 (dizili)   |
 |**50.000-100.000**     | Site sunucusu: F8S </br>Veritabanı sunucusu: DS14_V2 | Site sunucusu: 2xP30 (dizili)   </br>Veritabanı sunucusu: 3xP30 (dizili)   |
 
-Aşağıda, Configuration Manager yüklemesi ve veritabanı dosyaları: ![VM) diskleri için ayrı mantıksal birimler içeren bir şeritli birimde 3xp30 disk ile DS14_V2 50.000 ila 100.000 istemcileri ile ilgili bir örnek yapılandırma gösterilmektedir.](media/vm_disks.png)  
+Aşağıda, Configuration Manager yüklemesi ve veritabanı dosyaları: ![ VM) diskleri için ayrı mantıksal birimler içeren bir şeritli birimde 3xp30 disk ile DS14_V2 50.000 ila 100.000 istemcileri ile ilgili bir örnek yapılandırma gösterilmektedir.](media/vm_disks.png)  
 
 
 
@@ -157,7 +157,7 @@ Her ortam farklı olduğundan, zor olacak. En iyi şey, ortamınız Microsoft Az
 **Temel bilgiler:**https://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
 **Azure VM makine türleri:**
-- Azure makine boyutları:https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
+- Azure makine boyutları:https://docs.microsoft.com/azure/virtual-machines/sizes  
 - VM fiyatlandırması:https://azure.microsoft.com/pricing/details/virtual-machines/  
 - Depolama fiyatlandırması:https://azure.microsoft.com/pricing/details/storage/
 
@@ -169,7 +169,7 @@ Her ortam farklı olduğundan, zor olacak. En iyi şey, ortamınız Microsoft Az
 
 **Sonrası**
 - Azure IaaS çalışma süresi SLA 'Sı:https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
-- Açıklanan kullanılabilirlik kümeleri:https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
+- Açıklanan kullanılabilirlik kümeleri:https://docs.microsoft.com/azure/virtual-machines/windows/manage-availability
 
 **Bilirlik**
 - Express Route ile Azure VPN:https://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/

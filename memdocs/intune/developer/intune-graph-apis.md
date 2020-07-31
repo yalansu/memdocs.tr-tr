@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d300be679d54a5f565fb2c42f889a7dcd23894a
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 7acbd455ef720dd0ab17cce40eae8060c7a68c87
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088556"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438636"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Microsoft Graph’ta Intune API’lerine erişmek için Azure AD kullanma
 
@@ -124,7 +124,7 @@ Bu noktada, ayrıca:
 
 - Uygulamayı kiracınızın dışındaki kullanıcılar için kullanılabilir hale getirin.  (Bu genellikle yalnızca birden çok kiracı/kuruluş destekleyen iş ortakları için gereklidir.)  
 
-    Bunu yapmak için:
+    Bunun için:
 
   1. Uygulama dikey penceresinden **Bildirim**’i seçin; böylece **Bildirimi Düzenle** dikey penceresi açılır.
 
@@ -279,7 +279,7 @@ Tablo, ayarları Azure portalında göründükleri sırayla listeler. Aşağıda
   - Hüküm ve Koşullar
   - Telekom Gider Yönetimi
   - Bulut PKI
-  - Markalama
+  - Marka
   - Mobile Threat Defense
 
 ### <a name="devicemanagementserviceconfigreadwriteall"></a><a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
@@ -297,7 +297,7 @@ Tablo, ayarları Azure portalında göründükleri sırayla listeler. Aşağıda
   - Hüküm ve Koşullar
   - Telekom Gider Yönetimi
   - Bulut PKI
-  - Markalama
+  - Marka
   - Mobile Threat Defense
 
 ## <a name="azure-ad-authentication-examples"></a>Azure AD kimlik doğrulaması örnekleri
@@ -351,11 +351,11 @@ Bu örnek, Intune hesabınızla ilişkili cihazların bir listesini almak için 
   > Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 
-    1. Çözüm Gezgini’ne sağ tıklayın.
-    2. **NuGet Paketlerini Yönet...**’i seçin &gt;**İnceleyin**.
-    3. `Microsoft.IdentityModel.Clients.ActiveDirectory` seçeneğini belirleyin ve **Yükle**’yi seçin.
+   1. Çözüm Gezgini’ne sağ tıklayın.
+   2. **NuGet Paketlerini Yönet...**’i seçin &gt;**İnceleyin**.
+   3. `Microsoft.IdentityModel.Clients.ActiveDirectory` seçeneğini belirleyin ve **Yükle**’yi seçin.
 
-    <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
+   <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
 
 4. Aşağıdaki deyimleri **Program.cs**’nin en üst kısmına ekleyin:
 
@@ -447,7 +447,7 @@ namespace IntuneGraphExample
 
 ### <a name="authenticate-azure-ad-powershell"></a>Azure AD Kimlik Doğrulaması (PowerShell)
 
-Aşağıdaki PowerShell betiği, kimlik doğrulaması için AzureAD PowerShell modülü kullanır.  Daha fazla bilgi için bkz. [Azure Active Directory PowerShell Sürüm 2](https://docs.microsoft.com/powershell/azure/install-adv2?view=azureadps-2.0) ve [Intune PowerShell örnekleri](https://github.com/microsoftgraph/powershell-intune-samples).
+Aşağıdaki PowerShell betiği, kimlik doğrulaması için AzureAD PowerShell modülü kullanır.  Daha fazla bilgi için bkz. [Azure Active Directory PowerShell Sürüm 2](/powershell/azure/active-directory/install-adv2) ve [Intune PowerShell örnekleri](https://github.com/microsoftgraph/powershell-intune-samples).
 
 Bu örnekte, geçerli bir uygulama kimliği eşleştirmek için `$clientID` değerini güncelleştirin.
 
@@ -560,7 +560,7 @@ catch {
 
 Kuruluşunuz, kuruluşları kendi Azure AD kiracıları ile destekliyorsa, istemcilerinize uygulamanızı ilgili kiracıları ile kullanacakları şekilde izin vermek isteyebilirsiniz.
 
-Bunu yapmak için:
+Bunun için:
 
 1. İstemci hesabının hedef Azure AD kiracısında mevcut olduğunu doğrulayın.
 
@@ -610,7 +610,7 @@ Ayrıca:
     string authority = "https://login.microsoftonline.com/common/";
     ```
 
-    -
+    şöyle değiştirin:
 
     ``` csharp
     string authority = "https://login.microsoftonline.com/northwind.onmicrosoft.com/";

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
-ms.openlocfilehash: 04793a053e85be051ce9ffafd2f15d274cf166f0
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: f276db618a2e67832ffa5575622e00eea02c7422
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973086"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438623"
 ---
 # <a name="manage-surface-drivers-with-configuration-manager"></a>Configuration Manager ile yüzey sürücülerini yönetme
 
@@ -138,7 +138,7 @@ Yazılım güncelleştirme noktasının doğru şekilde yapılandırıldığın�
 
 ##  <a name="frequently-asked-questions-faq"></a><a name="bkmk_faq"></a>Sık sorulan sorular (SSS)
 
-### <a name="after-i-follow-the-steps-in-this-article-my-surface-drivers-are-still-not-synchronized-why"></a>Bu makaledeki adımları izledikten sonra yüzey Sürücülerim hala eşitlenmedi. Neden mi?
+### <a name="after-i-follow-the-steps-in-this-article-my-surface-drivers-are-still-not-synchronized-why"></a>Bu makaledeki adımları izledikten sonra yüzey Sürücülerim hala eşitlenmedi. Neden?
 
 Microsoft Update yerine yukarı akış Windows Server Update Services (WSUS) sunucusundan eşitlerseniz, yukarı akış WSUS sunucusunun yüzey sürücü güncelleştirmelerini destekleyecek ve eşitleyeceği şekilde yapılandırıldığından emin olun. Tüm aşağı akış sunucuları, yukarı akış WSUS sunucu veritabanında bulunan güncelleştirmelerle sınırlıdır.
 
@@ -162,4 +162,4 @@ Yüzey sürücüleri hakkında daha fazla bilgi için aşağıdaki makalelere ba
 
 - [Yüzey ve System Center Configuration Manager ilgili konular](https://docs.microsoft.com/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
 - [Yüzey güncelleştirme geçmişi](https://support.microsoft.com/help/4036283/surface-surface-update-history)
-- [Surface cihazları için en son bellenim ve sürücüleri indirin](https://docs.microsoft.com/surface/deploy-the-latest-firmware-and-drivers-for-surface-devices)
+- [Surface cihazları için en son bellenim ve sürücüleri indirin](/surface/manage-surface-driver-and-firmware-updates)
