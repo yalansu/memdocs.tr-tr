@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 535def8c7504d8cd1ea1890c419c2f8b98d4f6f6
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 1f706b2bb898f0969bf33d118291551d0f98d9ef
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491210"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443903"
 ---
 # <a name="set-enrollment-restrictions"></a>Kayıt kısıtlamalarını ayarlama
 
@@ -175,6 +175,10 @@ Kullanıcı kısıtlamalar atanmış birden çok grupta yer alıyorsa, öncelik 
 Kısıtlama oluşturduğunuzda, bu kısıtlama listede varsayılanın hemen üstüne eklenir.
 
 Cihaz kaydı, hem cihaz türü hem de cihaz sınırı kısıtlamaları için varsayılan kısıtlamalar içerir. Daha yüksek öncelikli kısıtlamalarla geçersiz kılınmadığı sürece, bu iki kısıtlama tüm kullanıcılara uygulanır.
+
+>[!NOTE]
+>Kayıt kısıtlamaları kullanıcılara uygulanır. Kullanıcı odaklı olmayan kayıt senaryolarında (örn. Windows Autopilot Self-dağıtımı modu veya beyaz eldiven sağlama), yalnızca varsayılan öncelik kısıtlamaları ("tüm kullanıcılar" için hedeflenen) zorlanır.
+
 
 Varsayılan kısıtlamalar dışındaki tüm kısıtlamaların önceliğini değiştirebilirsiniz.
 

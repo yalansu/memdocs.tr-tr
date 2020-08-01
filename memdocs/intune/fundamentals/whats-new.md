@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 07/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cd5e8f6e1975adf33131ca47049eb2d4a6f68cd
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 773be58733e4bf154fe994852ce72a8ad3a6dc54
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262889"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443861"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -54,6 +54,14 @@ ms.locfileid: "87262889"
 ### Role-based access control
 ### Scripts
 
+<!-- ########################## -->
+## <a name="week-of-july-27-2020"></a>27 Temmuz 2020 haftası
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="monitor-and-troubleshoot"></a>İzleme ve sorun giderme
+
+#### <a name="power-bi-compliance-report-template-v20---636958---"></a>Power BI uyumluluk raporu şablonu V 2.0<!-- 636958 -->
+Power BI şablon uygulamaları, Power BI iş ortaklarının çok az kodlamaya sahip Power BI uygulamalar oluşturmasına ve bunları herhangi bir Power BI müşteriye dağıtmalarına olanak tanır. Yöneticiler, Power BI uyumluluk raporu şablonunun sürümünü V 1.0 'dan V 2.0 'a güncelleştirebilir. V 2.0, gelişmiş bir tasarım, Ayrıca, şablonun bir parçası olarak ortaya çıkacak hesaplamalarda ve verilerde yapılan değişiklikleri içerir. Daha fazla bilgi için bkz. [Power BI Ile veri ambarına bağlanma](../developer/reports-proc-get-a-link-powerbi.md) ve [bir şablon uygulamasını güncelleştirme](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app). Ayrıca, [Intune veri ambarı Ile PowerBI uyumluluk raporunun yeni bir sürümünü duyuran](https://aka.ms/new_compliance_report)blog gönderisine bakın.
 
 <!-- ########################## -->
 ## <a name="week-of-july-13-2020--2007-service-release"></a>13 Temmuz 2020 (2007 hizmet sürümü) haftası
@@ -1090,7 +1098,7 @@ Genel önizleme olarak, Microsoft uç nokta yönetimi Yönetim Merkezi 'nde uç 
 Aşağıda, önizleme aşamasında olan yeni ilke türleri ve bunların kullanılabilir profil türleri verilmiştir:
 
 - **Virüsten koruma (Önizleme)**:
-  - MacOS
+  - macOS:
     - **Virüsten koruma** - [Mac IÇIN Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)'Yi yönetmek üzere MacOS için [Virüsten koruma ilkesi ayarlarını](../protect/antivirus-microsoft-defender-settings-macos.md) yönetin.
 
   - Windows 10 ve üzeri:
@@ -1106,12 +1114,12 @@ Aşağıda, önizleme aşamasında olan yeni ilke türleri ve bunların kullanı
   - **Windows Güvenlik deneyimi** -son kullanıcıların Microsoft Defender Güvenlik Merkezi 'nde görüntüleyebilecekleri Windows güvenlik ayarlarını ve aldıkları bildirimleri yönetin. Bu ayarlar, cihaz yapılandırma Endpoint Protection profili olarak kullanılabilenlerden değiştirilmez.
 
 - **Disk şifrelemesi (Önizleme)**:
-  - MacOS
+  - macOS:
     - **FileVault**
   - Windows 10 ve üzeri:
     - **BitLocker**
 - **Güvenlik Duvarı (Önizleme)**:
-  - MacOS
+  - macOS:
     - **macOS güvenlik duvarı**
   - Windows 10 ve üzeri:
     - **Microsoft Defender güvenlik duvarı**

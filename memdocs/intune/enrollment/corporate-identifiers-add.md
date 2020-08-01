@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9796df0da4974b860348bf52ef06db202219136
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: b90051e9062978fbc016e461d67fbf081f50c616
+ms.sourcegitcommit: 5a58af4f7d40bbde88a273fba859bf69eeff6107
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491125"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87473687"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Cihazları şirkete ait olarak tanımlama
 
@@ -52,7 +52,10 @@ Bu özellik aşağıdaki platformlar için desteklenir:
 | Windows | Desteklenen (Windows Phone) | Desteklenmez |
 | iOS/macOS | Desteklenmiyor (aşağıda önemli kısmına bakın)  | Desteklenir |
 | Cihaz Yöneticisi yönetilen Android OS ile v10 arasındaki | Desteklenmez | Desteklenmez |
-| Diğer Android | Desteklenmez | Desteklenir |
+| Android kurumsal iş profili | Desteklenmez | Desteklenir |
+| Android kurumsal tam yönetilen | Desteklenmez | Desteklenir |
+| Android kurumsal adanmış cihazlar | Desteklenmez | Desteklenmez |
+| Android kurumsal şirkete ait iş profili | Desteklenmez | Desteklenir |
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 
@@ -63,11 +66,6 @@ Bu özellik aşağıdaki platformlar için desteklenir:
 Listeyi oluşturmak için iki sütunlu, üst bilgisi olmayan bir virgülle ayrılmış değerler (.csv) listesi oluşturun. 14 basamaklı IMEI numaralarını veya seri numaraları sol sütuna, ayrıntıları sağ sütuna ekleyin. Tek bir .csv dosyasında yalnızca tek bir kimlik türü: IMEI veya seri numarası içeri aktarılabilir. Ayrıntılar 128 karakterle sınırlıdır ve yalnızca yönetimsel kullanım içindir. Ayrıntılar cihazda görüntülenmez. Her .csv dosyası için geçerli sınır 5.000 satırdır.
 
 **Seri numaraları olan bir .csv dosyası yükleme** – Üst bilgi içermeyen, iki sütunlu, virgülle ayrılmış değer (.csv) listesini oluşturun ve .csv dosyası başına 5.000 cihaz veya 5 MB ile sınırlayın.
-
-|||
-|-|-|
-|&lt;Kimlik 1&gt;|&lt;Cihaz 1 Ayrıntıları&gt;|
-|&lt;Kimlik 2&gt;|&lt;Cihaz 2 Ayrıntıları&gt;|
 
 Bu .csv dosyası bir metin düzenleyicisinde görüntülendiğinde aşağıdaki gibi görünür:
 

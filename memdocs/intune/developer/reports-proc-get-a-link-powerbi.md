@@ -6,7 +6,7 @@ keywords: Intune Veri Ambarı
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 07/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6cabb4f89d1ad105b88f54ac7a1c43405d1a65d
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: c3a20477b643da961f5c7281d92f3d24a4e7313d
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262583"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443858"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Power BI ile Veri Ambarına bağlanma
 
@@ -40,6 +40,9 @@ Power BI Uyumluluğu uygulamasını kullanarak Intune kiracınız için etkileş
 - Cihaz envanter günlükleri
 
 Ayrıca kayıt, uyumluluk, cihaz yapılandırma profili ve yazılım güncelleştirmeleri için vurgulanan eğilimler de vardır. Örnek grafikler ve raporlar, tuvale kullanıcı dostu filtreler uygular. Gelişmiş filtreler kullanmak için Power BI Desktop’taki **Filtre** panosuna bakın.
+
+> [!NOTE]
+> Power BI şablon uygulamaları, Power BI iş ortaklarının çok az kodlamaya sahip Power BI uygulamalar oluşturmasına ve bunları herhangi bir Power BI müşteriye dağıtmalarına olanak tanır. Örneğin, V 2.0 'daki Power BI uyumluluk raporu şablonunu kullanabilirsiniz. V 2.0, gelişmiş bir tasarım, Ayrıca, şablonun bir parçası olarak ortaya çıkacak hesaplamalarda ve verilerde yapılan değişiklikleri içerir. Daha fazla bilgi için bkz. [şablon uygulamasını güncelleştirme](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app), [Intune uyumluluk (veri ambarı) uygulaması](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd)ve [Power BI şablon uygulamaları nedir?](https://docs.microsoft.com/power-bi/service-template-apps-overview)
 
 Aşağıdaki adımlar, Power BI dosyasını nasıl indireceğinizi ve OData bağlantısını Power BI ile nasıl kullanacağınızı gösterir.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 07/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7f382c604d4cddef487871e47ad004389669982
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8bbeb0c3db963e858230ce9a45f45f976bbfbbef
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984300"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443887"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Microsoft Intune’da uygulama atamalarını dahil etme ve dışlama
 
@@ -88,7 +88,12 @@ Dahil etme ve dışlama atamasını kullanarak gruplara uygulama atamak için:
 
 Grup atamaları yaparken, zaten atanmış olan gruplar değiştirilemez. Şu anda kullanılamayan bir grup seçmek istiyorsanız, önce uygulamayı uygulamanın atanan listesinden kaldırın.
 
-Atamaları düzenlemek için, uygulamanın **Atamalar** listesinde değiştirmek istediğiniz atamayı içeren satırı seçin. Ayrıca, satırın sonundaki üç noktayı (**…**) ve sonra da **Kaldır**'ı seçerek de atamayı kaldırabilirsiniz. **Atamalar** listesinin görünümünü değiştirmek için **Atama türü**’ne veya **Dahil edilen/Dışlanan**’a göre gruplandırın.
+Atamaları düzenlemek için, uygulamanın **Atamalar** listesinde değiştirmek istediğiniz atamayı içeren satırı seçin. Ayrıca, satırın sonundaki üç noktayı (**…**) ve sonra da **Kaldır**'ı seçerek de atamayı kaldırabilirsiniz. 
+
+> [!NOTE]
+> Grup atamasını kaldırdığınızda ilgili uygulama kaldırılmaz. Yüklü uygulama cihazda kalır.  
+
+**Atamalar** listesinin görünümünü değiştirmek için **Atama türü**’ne veya **Dahil edilen/Dışlanan**’a göre gruplandırın.
 
 ![Intune uygulama atamaları - Tamamlandı](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
 

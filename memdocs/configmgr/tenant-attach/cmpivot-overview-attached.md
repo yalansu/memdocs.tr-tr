@@ -2,7 +2,7 @@
 title: Kiracı ekli CMPivot genel bakış
 titleSuffix: Configuration Manager
 description: Microsoft Endpoint Manager kiracıya bağlı cihazlar için CMPivot genel bakış.
-ms.date: 07/13/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: 31bf1359-54e5-4416-9f39-6bb0070db542
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f334bcce832c07a4d4394305b9aa33189166a9cf
-ms.sourcegitcommit: 6d987bb69d0eb9955a3003202864f58d6aaa426a
+ms.openlocfilehash: 07bb8cd913c945198d181e6191c540eeb8b2dffc
+ms.sourcegitcommit: 5a58af4f7d40bbde88a273fba859bf69eeff6107
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381058"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87473670"
 ---
 # <a name="tenant-attach-cmpivot-overview"></a>Kiracı iliştirme: CMPivot genel bakış
 
@@ -34,6 +34,10 @@ Microsoft Endpoint Manager Yönetici konsolundan CMPivot kullanırken, sorgular�
 - `project`Yalnızca belirli sütunlara ihtiyacınız varsa kullanın.
 - `take`Belirtilen sayıda satıra geri dönmek için kullanın.
 - `top`Belirtilen sütunlara göre sıralanan Ilk N kaydı döndürmek için kullanın.
+
+> [!Important]
+> Bir cihazı sorgulamak için CMPivot kullanıldığında, 10 dakika içinde bir yanıt yoksa sorgu zaman aşımına uğrayacaktır. <!--7802754-->
+
 
 [!INCLUDE [Overview article sections for both Microsoft Endpoint Manager and Configuration Manager use](../core/servers/manage/includes/cmpivot-overview-shared.md)]
 
