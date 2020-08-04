@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ed3f53b6e2e9557def20fc459dfcf4641b0e396d
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: be1401f28ccbd15de2561a19169ed67a81a91550
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905834"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526041"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Configuration Manager için Technical Preview 1601 ' deki yetenekler
 
@@ -130,13 +130,13 @@ Technical Preview 1601 ' den başlayarak, bir istemcinin Configuration Manager k
 
 ### <a name="icons-for-client-status"></a>İstemci durumu simgeleri  
 
-|||  
-|-|-|  
+| Simge | Açıklama |
+| ---- | ----------- |
 |![istemciler için çevrimiçi durum simgesi](media/online-status-icon.png)|İstemci çevrimiçi.|  
 |![istemciler için çevrimdışı durum simgesi](media/offline-status-icon.png)|İstemci çevrimdışı.|  
 |![istemciler için bilinmeyen durum simgesi](media/unknown-status-icon.png)|İstemci durumu bilinmiyor.|  
 
-### <a name="prerequisites"></a>Ön koşullar  
+### <a name="prerequisites"></a>Önkoşullar  
  İstemci çevrimiçi durumunun önkoşulları yok. Teknik Önizleme 1601 Configuration Manager yüklendiği anda kullanmaya başlayabilirsiniz.  
 
 ### <a name="limitations"></a>Sınırlamalar  

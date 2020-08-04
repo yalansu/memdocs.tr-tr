@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 786a7a528c027ab46237dac92378224705b0e026
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ba72e9accb7cbc5a7dc1149c6c9d947cb3e0692b
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262838"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526092"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker yönetimini dağıtma
 
@@ -131,6 +131,10 @@ Birden fazla ilke oluşturduğunuzda, onun göreli önceliğini yapılandırabil
 1. İlkeyi dağıtmak için **Tamam ' ı** seçin.
 
 Aynı ilkenin birden çok dağıtımını oluşturabilirsiniz. Her dağıtımla ilgili ek bilgileri görüntülemek için **BitLocker yönetim** düğümünde ilkeyi seçin ve ardından Ayrıntılar bölmesinde **dağıtımlar** sekmesine geçin.
+
+> [!IMPORTANT]
+> Bir Uzak Masaüstü Protokolü bağlantısı etkinse, MBAMCLIENT BitLocker Sürücü Şifrelemesi eylem başlatamaz. Tüm uzak konsol bağlantıları kapatılmalıdır ve BitLocker Sürücü Şifrelemesi başlamadan önce bir kullanıcının fiziksel konsol oturumunda oturum açması gerekir.
+
 
 ## <a name="monitor"></a>İzleme
 

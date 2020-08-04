@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 53a30f376bd288e8d50d88ea8f33af37f3cd599e
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: b15b3017dd49c75f4281a3c0bfd1c8a695ab8bae
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110160"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526007"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Configuration Manager Güvenlik için plan yapın
 
@@ -70,7 +70,7 @@ HTTPS iletişimini kullanmak tüm Configuration Manager iletişim yollarında ö
 
 ### <a name="certificates-for-cmg-and-cdp"></a><a name="bkmk_plan-cmgcdp"></a>CMG ve CDP sertifikaları
 
-Bulut yönetimi ağ geçidi (CMG) ve bulut dağıtım noktası (CDP) aracılığıyla Internet 'teki istemcileri yönetmek için sertifikaların kullanılması gerekir. Sertifika sayısı ve türü, belirli senaryolarınıza bağlı olarak farklılık gösterir. Daha fazla bilgi için aşağıdaki makalelere bakın:
+Bulut yönetimi ağ geçidi (CMG) ve bulut dağıtım noktası (CDP) aracılığıyla Internet 'teki istemcileri yönetmek için sertifikaların kullanılması gerekir. Sertifika sayısı ve türü, belirli senaryolarınıza bağlı olarak farklılık gösterir. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 - [Bulut yönetimi ağ geçidi için sertifikalar](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md)  
 - [Bulut dağıtım noktası için sertifikalar](../hierarchy/use-a-cloud-based-distribution-point.md#bkmk_certs)  
 
@@ -97,7 +97,7 @@ Bulut yönetimi ağ geçidi (CMG) ve bulut dağıtım noktası (CDP) aracılığ
 
 2.  Özel anahtar olmadan sertifikayı dışarı aktarın, dosyayı güvenli bir şekilde depolayın ve yalnızca güvenli bir kanaldan erişin.  
 
-3.  Aşağıdaki Client. msi özelliğini kullanarak istemciyi yükler:`SMSSIGNCERT=<full path and file name>`  
+3.  Aşağıdaki client.msi özelliğini kullanarak istemciyi yükler:`SMSSIGNCERT=<full path and file name>`  
 
 
 ###  <a name="plan-for-pki-certificate-revocation"></a><a name="BKMK_PlanningForCRLs"></a>PKI sertifikası iptalini planlayın  
@@ -160,9 +160,11 @@ IIS site sistemleriniz HTTP üzerinden istemci kimlik doğrulaması için veya H
 
 3.  Sertifika geçerlidir, iptal edilmemiştir ve süresi dolmamıştır. Geçerlilik denetimi, özel anahtarın erişilebilir olduğunu da doğrular.  
 
-4.  Sertifika, istemci kimlik doğrulama özelliğine sahiptir veya bilgisayar adına verilir.  
+4.  Sertifikada istemci kimlik doğrulama özelliği bulunur.
 
-5.  Sertifika en uzun geçerlilik süresine sahiptir.  
+5.  Sertifika konu adı, yerel bilgisayar adını bir alt dize olarak içerir.  
+
+6.  Sertifika en uzun geçerlilik süresine sahiptir.  
 
 Aşağıdaki mekanizmalardan yararlanarak istemcileri sertifika verenler listesini kullanacak şekilde yapılandırın:  
 
@@ -172,7 +174,7 @@ Aşağıdaki mekanizmalardan yararlanarak istemcileri sertifika verenler listesi
 
 - İstemciler, sitesine başarıyla atandıktan sonra yönetim noktasından indirir.  
 
-- CCMCERTıSERS 'ın CCMSetup Client. msi özelliği olarak istemci yüklemesi sırasında belirtin.  
+- CCMCERTıSERS 'in CCMSetup client.msi özelliği olarak istemci yüklemesi sırasında belirtin.  
 
 İlk yüklendiklerinde ve henüz siteye atanmadıysa, sertifika verenler listesine sahip olmayan istemciler bu denetimi atlayın. İstemciler sertifika verenler listesine sahip olduğunda ve sertifika verenler listesinde güvenilen bir kök sertifikaya zincirler bir PKI sertifikasına sahip olmadığında, sertifika seçimi başarısız olur. İstemciler diğer sertifika seçim ölçütlerine devam eder.  
 
@@ -200,7 +202,7 @@ Aşağıdaki tabloda, Configuration Manager istemci sertifikası seçim kriterle
 |2.5.4.4|SN|Konu adı|  
 |2.5.4.5|SERIALNUMBER|Seri numarası|  
 |2.5.4.6|C|Ülke kodu|  
-|2.5.4.7|L|Konum|  
+|2.5.4.7|L|Yerleşim yeri|  
 |2.5.4.8|S veya ST|Eyalet veya bölge adı|  
 |2.5.4.9|STREET|Açık adres|  
 |2.5.4.10|O|Kuruluş adı|  
@@ -208,7 +210,10 @@ Aşağıdaki tabloda, Configuration Manager istemci sertifikası seçim kriterle
 |2.5.4.12|T veya Title|Başlık|  
 |2.5.4.42|G veya GN veya GivenName|Ad|  
 |2.5.4.43|I veya Initials|Baş harfler|  
-|2.5.29.17|(değer yok)|Konu Diğer Adı|  
+|2.5.29.17|(değer yok)|Konu Diğer Adı| 
+
+  > [!NOTE]
+  > Yukarıdaki diğer sertifika seçme yöntemlerinden birini yapılandırırsanız, sertifika konu adının yerel bilgisayar adını içermesi gerekmez.
 
 Seçim kriterleri uygulandıktan sonra birden fazla uygun sertifika bulunuyorsa, en uzun geçerlilik süresine sahip sertifikayı seçmek için varsayılan yapılandırmayı geçersiz kılabilir ve bunun yerine hiçbir sertifika seçili olmadığını belirtebilirsiniz. Bu senaryoda, istemci bir PKI sertifikasıyla IIS site sistemleriyle iletişim kuramaz. İstemci, kendi atanan geri dönüş durum noktasına bir hata iletisi göndererek, sertifika Seçim kriterlerinizi değiştirebilmeniz veya iyileştirmek için sertifika seçim hatası hakkında sizi uyarır. İstemci davranışı ardından, başarısız bağlantının HTTPS veya HTTP üzerinden olmasına bağlıdır:  
 
@@ -242,15 +247,15 @@ Configuration Manager yapılandırma seçenekleri ve seçim sayısı nedeniyle, 
 
 6. **Varlıklar ve Uyum** çalışma alanında **Aygıtlar** düğümünde **İstemci Sertifikası** sütununu görüntüleyerek kaç istemcinin bir istemci PKI sertifikası kullandığını izleyin.  
 
-    Ayrıca, Configuration Manager HTTPS Hazırlık Değerlendirmesi Aracı 'nı (**Cmhttpsreadiness. exe**) bilgisayarlara dağıtabilirsiniz. Ardından, Configuration Manager ile istemci PKI sertifikasını kaç bilgisayarın kullanabileceğinizi görüntülemek için raporları kullanın.  
+    Ayrıca, Configuration Manager HTTPS hazırlık değerlendirme aracı 'nı (**cmHttpsReadiness.exe**) bilgisayarlara dağıtabilirsiniz. Ardından, Configuration Manager ile istemci PKI sertifikasını kaç bilgisayarın kullanabileceğinizi görüntülemek için raporları kullanın.  
 
    > [!NOTE]
-   >  Configuration Manager istemcisini yüklediğinizde, `%windir%\CCM` klasöründe **cmhttpsreadiness. exe** aracını yükler. Bu aracı çalıştırdığınızda aşağıdaki komut satırı seçenekleri kullanılabilir:  
+   >  Configuration Manager istemcisini yüklediğinizde, klasöre **CMHttpsReadiness.exe** aracı yüklenir `%windir%\CCM` . Bu aracı çalıştırdığınızda aşağıdaki komut satırı seçenekleri kullanılabilir:  
    > 
-   > - `/Store:<name>`: Bu seçenek **Ccmccertstore** Client. msi özelliği ile aynıdır  
-   > - `/Issuers:<list>`: Bu seçenek **Ccmcertısers** Client. msi özelliğiyle aynıdır    
-   > - `/Criteria:<criteria>`: Bu seçenek **Ccmccertsel** Client. msi özelliğiyle aynıdır    
-   > - `/SelectFirstCert`: Bu seçenek **Ccmfirstcert** Client. msi özelliği ile aynıdır    
+   > - `/Store:<name>`: Bu seçenek **Ccmccertstore** client.msi özelliğiyle aynıdır  
+   > - `/Issuers:<list>`: Bu seçenek **Ccmcertısers** client.msi özelliğiyle aynıdır    
+   > - `/Criteria:<criteria>`: Bu seçenek **Ccmccertsel** client.msi özelliğiyle aynıdır    
+   > - `/SelectFirstCert`: Bu seçenek **Ccmfirstcert** client.msi özelliğiyle aynıdır    
    > 
    >   Daha fazla bilgi için bkz. [istemci yükleme özellikleri hakkında](../../clients/deploy/about-client-installation-properties.md).  
 
@@ -315,10 +320,10 @@ Bir Configuration Manager istemcisi için güvenilir kök anahtarı önceden sa�
 
 4.  Dosyayı tüm bilgisayarların erişebileceği bir konuma kaydedin, ancak dosyanın üzerinde değişiklik yapılmasını güvenli hale getirebilirsiniz.  
 
-5.  İstemciyi, Client. msi özelliklerini kabul eden herhangi bir yükleme yöntemini kullanarak yükleme. Aşağıdaki özelliği belirtin:`SMSROOTKEYPATH=<full path and file name>`  
+5.  client.msi özellikleri kabul eden herhangi bir yükleme yöntemini kullanarak istemcisini yükler. Aşağıdaki özelliği belirtin:`SMSROOTKEYPATH=<full path and file name>`  
 
     > [!IMPORTANT]  
-    > İstemci yüklemesi sırasında güvenilir kök anahtarı belirttiğinizde, site kodunu da belirtin. Aşağıdaki Client. msi özelliğini kullanın:`SMSSITECODE=<site code>`   
+    > İstemci yüklemesi sırasında güvenilir kök anahtarı belirttiğinizde, site kodunu da belirtin. Aşağıdaki client.msi özelliğini kullanın:`SMSSITECODE=<site code>`   
 
 
 ### <a name="pre-provision-a-client-with-the-trusted-root-key-without-using-a-file"></a><a name="bkmk_trk-provision-nofile"></a>Bir dosya kullanmadan güvenilir kök anahtarla bir istemciyi önceden sağlama  
@@ -327,17 +332,17 @@ Bir Configuration Manager istemcisi için güvenilir kök anahtarı önceden sa�
 
 2.  **SMSPublicRootKey =** girişini bulun. Anahtarı bu satırdan kopyalayın ve herhangi bir değişiklik yapmadan dosyayı kapatın.  
 
-3.  İstemciyi, Client. msi özelliklerini kabul eden herhangi bir yükleme yöntemini kullanarak yükleme. Aşağıdaki Client. msi özelliğini belirtin: `SMSPublicRootKey=<key>` burada `<key>` , MobileClient. tcf dosyasından kopyaladığınız dizedir.  
+3.  client.msi özellikleri kabul eden herhangi bir yükleme yöntemini kullanarak istemcisini yükler. Aşağıdaki client.msi özelliğini belirtin: `SMSPublicRootKey=<key>` burada `<key>` , MobileClient. tcf dosyasından kopyaladığınız dizedir.  
 
     > [!IMPORTANT]  
-    >  İstemci yüklemesi sırasında güvenilir kök anahtarı belirttiğinizde, site kodunu da belirtin. Aşağıdaki Client. msi özelliğini kullanın:`SMSSITECODE=<site code>`   
+    >  İstemci yüklemesi sırasında güvenilir kök anahtarı belirttiğinizde, site kodunu da belirtin. Aşağıdaki client.msi özelliğini kullanın:`SMSSITECODE=<site code>`   
 
 
 ### <a name="verify-the-trusted-root-key-on-a-client"></a><a name="bkmk_trk-verify"></a>Bir istemcide güvenilen kök anahtarı doğrulama  
 
 1. Yönetici olarak bir Windows PowerShell konsolu açın.  
 
-2. Şu komutu çalıştırın:  
+2. Aşağıdaki komutu çalıştırın:  
 
     ``` PowerShell
     (Get-WmiObject -Namespace root\ccm\locationservices -Class TrustedRootKey).TrustedRootKey
@@ -348,9 +353,9 @@ Döndürülen dize, güvenilen kök anahtarıdır. Site sunucusundaki MobileClie
 
 ### <a name="remove-or-replace-the-trusted-root-key"></a><a name="bkmk_trk-reset"></a>Güvenilen kök anahtarı kaldır veya Değiştir  
 
-Client. msi özelliğini kullanarak bir istemciden güvenilir kök anahtarı kaldırma, **Resetkeyınformation = true**. 
+client.msi özelliğini kullanarak, güvenilen kök anahtarı bir istemciden kaldırın, **Resetkeyınformation = true**. 
 
-Güvenilir kök anahtarı değiştirmek için, istemciyi yeni güvenilir kök anahtarla birlikte yeniden yükleyin. Örneğin, Client Push kullanın ya da **SMSPublicRootKey**Client. msi özelliğini belirtin.  
+Güvenilir kök anahtarı değiştirmek için, istemciyi yeni güvenilir kök anahtarla birlikte yeniden yükleyin. Örneğin, Client Push kullanın ya da **SMSPublicRootKey**client.msi özelliğini belirtin.  
 
 Bu yükleme özellikleri hakkında daha fazla bilgi için bkz. [istemci yükleme parametreleri ve özellikleri hakkında](../../clients/deploy/about-client-installation-properties.md).
 

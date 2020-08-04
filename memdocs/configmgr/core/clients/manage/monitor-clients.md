@@ -10,12 +10,12 @@ ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1f31ac96f29fc302e601b8da071b1486f4e7df90
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 00a10e169db36c62b083c56114159b54185a1040
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715350"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87525922"
 ---
 # <a name="how-to-monitor-clients-in-configuration-manager"></a>Configuration Manager istemcileri izleme
 
@@ -53,8 +53,8 @@ Configuration Manager, istemci durumu olarak aşağıdaki bilgi türlerini sağl
 
     Her satırın başındaki simgeler cihazın çevrimiçi durumunu gösterir:  
 
-    |||  
-    |-|-|  
+    | Simge | Açıklama |
+    | ---- | ----------- |  
     |![istemciler için çevrimiçi durum simgesi](../../../core/clients/manage/media/online-status-icon.png)|Cihaz çevrimiçi|  
     |![istemciler için çevrimdışı durum simgesi](../../../core/clients/manage/media/offline-status-icon.png)|Cihaz çevrimdışı|  
     |![istemciler için bilinmeyen durum simgesi](../../../core/clients/manage/media/unknown-status-icon.png)|Çevrimiçi durum bilinmiyor|  
@@ -87,7 +87,7 @@ Configuration Manager konsolunda **izleme** çalışma alanına gidin. **İstemc
 
 Varsayılan olarak, istemci sistem durumu panosu, son üç gün içinde etkin istemcileri ve istemcileri gösterir. Bu nedenle, bu panoda istemci sistem durumu geçmiş diğer kaynaklarından farklı sayılar görebilirsiniz. Örneğin, **Istemci durumu**altındaki diğer düğümler veya istemci durumu kategorisindeki raporlar.
 
-### <a name="filters"></a>FilTReleri
+### <a name="filters"></a>Filtreler
 
 Panonun üst kısmında, panoda görüntülenecek verileri ayarlamaya yönelik bir filtre kümesi vardır.
 

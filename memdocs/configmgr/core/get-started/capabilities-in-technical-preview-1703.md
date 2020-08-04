@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fb13844dd05049b9186909884aa0c457a8cfacd9
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 98a82d118442a7ca37ff7b2df62bf4702c15ba2c
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428420"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526024"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Configuration Manager için Technical Preview 1703 ' deki yetenekler
 
@@ -31,9 +31,8 @@ Bu makalede, sürüm 1703 Configuration Manager için Technical Preview 'da kull
 
 Artık, lisanslanan uygulamaları cihazlara ve kullanıcılara dağıtabilirsiniz. Cihaz lisansını desteklemeye yönelik uygulamalara bağlı olarak, dağıtım sırasında aşağıdaki gibi uygun bir lisans talep edilir:
 
-|||||
-|-|-|-|-|
-|Configuration Manager sürümü|Uygulama, cihaz lisansını destekliyor mu?|Dağıtım koleksiyonu türü|Talep edilen lisans|
+| Configuration Manager sürümü | Uygulama, cihaz lisansını destekliyor mu? | Dağıtım koleksiyonu türü | Talep edilen lisans |
+| ----------------------------- | ------------------------------ | -------------------------- | --------------- |
 |1702 öncesi|Yes|Kullanıcı|Kullanıcı Lisansı|
 |1702 öncesi|No|Kullanıcı|Kullanıcı Lisansı|
 |1702 öncesi|Yes|Cihaz|Kullanıcı Lisansı|
@@ -139,7 +138,7 @@ Bu sürüm, görev dizisi gruplarını genişletme ve daraltma özelliğini tan�
 ## <a name="client-settings-to-configure-windows-analytics-for-upgrade-readiness"></a>Yükseltme Hazırlığı için Windows analizlerini yapılandırmak için istemci ayarları
 Bu sürümden itibaren, Configuration Manager Yükseltme Hazırlığı gibi Windows Analytics çözümlerini kullanmak için gereken Windows Tanılama verilerinin yapılandırılmasını basitleştirmek üzere cihaz istemci ayarlarını kullanabilirsiniz. Configuration Manager, Windows Analytics 'ten, istemci bilgisayarlarınız tarafından bildirilen Windows Tanılama verilerine dayalı olarak ortamınızın geçerli durumu hakkında değerli Öngörüler sağlayabilen verileri alabilir. Windows Tanılama verileri, istemci bilgisayarlar tarafından Windows Tanılama hizmetine bildirilir ve ardından ilgili veriler daha sonra kuruluşunuzun OMS çalışma alanlarından birinde barındırılan Windows Analytics çözümlerine aktarılır. Yükseltme Hazırlığı, yönetilen cihazlarınız için Windows yükseltmeleriyle ilgili kararları önceliklendirmenize yardımcı olabilecek bir Windows Analytics çözümüdür.
 
-### <a name="prerequisites"></a>Ön koşullar
+### <a name="prerequisites"></a>Önkoşullar
 - Sitenizi Yükseltme Hazırlığı bulut hizmetini kullanacak şekilde yapılandırmış olmanız gerekir.
 
 ### <a name="configure-windows-analytics-client-settings"></a>Windows Analytics istemci ayarlarını yapılandırma

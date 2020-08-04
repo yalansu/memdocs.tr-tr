@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f49ba4fffd84ffae3e5b47ad74088b65d599533
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: c23044b912b7f0edf2852477aad80dd9be66cf54
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491261"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526075"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Android kurumsal cihaz ayarları
 
@@ -440,7 +440,7 @@ Bu ayarlar, Intune 'un yalnızca bir kişisel veya kendi cihazındaki (BYOD) And
 
   Cihazlarda, kullanıcılar profilde yapılandırılan süreden daha büyük bir zaman değeri ayarlayamamakta. Kullanıcılar, daha düşük bir saat değeri ayarlayabilir. Örneğin, profil dakikalar olarak ayarlandıysa `15` , kullanıcılar değeri 5 dakikaya ayarlayabilirler. Kullanıcılar değeri 30 dakika olarak ayarlayamıyorum.
 
-- **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihaz temizlenmeden önce izin verilen hatalı parola sayısını 4-11 adresinden girin. `0`(sıfır) cihaz temizleme işlevini devre dışı bırakabilir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihazdaki iş profili temizlenmeden önce izin verilen hatalı parola sayısını 4-11 adresinden girin. `0`(sıfır) cihaz temizleme işlevini devre dışı bırakabilir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
 - **Parola kullanım süresi (gün)**: kullanıcı parolalarının değiştirilmesi gereken gün sayısını girin ( **1** - **365**arasında).
 - **Gerekli parola türü**: gerekli parola karmaşıklığı düzeyini ve biyometrik cihazların kullanılıp kullanılamayacağını girin. Seçenekleriniz şunlardır:
@@ -468,7 +468,7 @@ Bu parola ayarları, bir iş profili kullanan cihazlardaki kişisel profiller i�
 
   Cihazlarda, kullanıcılar profilde yapılandırılan süreden daha büyük bir zaman değeri ayarlayamamakta. Kullanıcılar, daha düşük bir saat değeri ayarlayabilir. Örneğin, profil dakikalar olarak ayarlandıysa `15` , kullanıcılar değeri 5 dakikaya ayarlayabilirler. Kullanıcılar değeri 30 dakika olarak ayarlayamıyorum.
 
-- **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihaz temizlenmeden önce izin verilen hatalı parola sayısını 4-11 adresinden girin. `0`(sıfır) cihaz temizleme işlevini devre dışı bırakabilir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihazdaki iş profili temizlenmeden önce izin verilen hatalı parola sayısını 4-11 adresinden girin. `0`(sıfır) cihaz temizleme işlevini devre dışı bırakabilir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Parola kullanım süresi (gün)**: cihaz parolasının, 1-365 adresinden değiştirilinceye kadar gün sayısını girin. Örneğin, `90` 90 gün sonra parolanın süresini dolacak şekilde girin. Parola geçerlilik süresi dolduğunda kullanıcıların yeni bir parola oluşturması istenir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Gerekli parola türü**: gerekli parola karmaşıklığı düzeyini ve biyometrik cihazların kullanılıp kullanılamayacağını girin. Seçenekleriniz şunlardır:
   - **Cihaz varsayılanı**
