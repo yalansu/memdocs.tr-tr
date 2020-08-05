@@ -19,18 +19,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e031acf6964c2e43bb355db85dd5e365db1a08ad
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 619974819575936912b6a5c386116bdf26448252
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326906"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546852"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Öğretici - Intune’a cihaz kaydetmek için Windows Autopilot kullanma
 
-Windows Autopilot, cihaz kaydını basitleştirir. Microsoft Intune ve Autopilot ile özel işletim sistemi görüntüleri oluşturmanıza, bu görüntüleri cihazlara uygulamanıza ve bunların bakımını yapmanıza gerek kalmadan son kullanıcılarınıza yeni cihazlar verebilirsiniz.
+[Windows Autopilot](../../autopilot/index.yml) , cihazların kaydedilmesini basitleştirir. Microsoft Intune ve Autopilot ile özel işletim sistemi görüntüleri oluşturmanıza, bu görüntüleri cihazlara uygulamanıza ve bunların bakımını yapmanıza gerek kalmadan son kullanıcılarınıza yeni cihazlar verebilirsiniz.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > [!div class="checklist"]
 > * Intune’a cihaz ekleme
 > * Bir Autopilot cihaz grubu oluşturma
@@ -60,7 +60,7 @@ Windows Autopilot’ı ayarlamanın ilk adımı, Windows cihazları Intune’a e
 
 2. CSV dosyasını kaydedin.
 
-3. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar** > **Windows** > **cihazları** ' nı ( **Windows Autopilot dağıtım programı** > **içeri aktarma**altında) seçin.
+3. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **cihazlar**  >  **Windows**  >  **cihazları** ' nı ( **Windows Autopilot dağıtım programı**  >  **içeri aktarma**altında) seçin.
 
     ![Windows Autopilot cihazlarının ekran görüntüsü](./media/enrollment-autopilot/autopilot-import-device.png)
 
@@ -70,7 +70,7 @@ Windows Autopilot’ı ayarlamanın ilk adımı, Windows cihazları Intune’a e
 
 5. Cihaz bilgilerini içeri aktarmayı başlatmak için **İçeri Aktar**'ı seçin. İçeri aktarma birkaç dakika sürebilir.
 
-4. İçeri aktarma işlemi tamamlandıktan sonra **cihazlar** > **Windows** > **Windows kayıt** > **cihazları** ' nı ( **Windows Autopilot dağıtım programı** > **eşitlemesi**altında) seçin. Eşitlemenin devam ettiğini gösteren bir ileti görüntülenir. Kaç tane cihaz eşitlediğinize bağlı olarak işlemin tamamlanması birkaç dakikayı bulabilir.
+4. İçeri aktarma işlemi tamamlandıktan sonra **cihazlar**  >  **Windows**  >  **Windows kayıt**  >  **cihazları** ' nı ( **Windows Autopilot dağıtım programı**  >  **eşitlemesi**altında) seçin. Eşitlemenin devam ettiğini gösteren bir ileti görüntülenir. Kaç tane cihaz eşitlediğinize bağlı olarak işlemin tamamlanması birkaç dakikayı bulabilir.
 
 5. Yeni cihazları görmek için görüntüyü yenileyin.
 
@@ -78,19 +78,19 @@ Windows Autopilot’ı ayarlamanın ilk adımı, Windows cihazları Intune’a e
 
 Daha sonra bir cihaz grubu oluşturacak ve az önce yüklediğiniz Autopilot cihazları buraya koyacaksınız.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **gruplar** > **Yeni Grup**' u seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **gruplar**  >  **Yeni Grup**' u seçin.
 2. **Gruplar** dikey penceresinde:
     1. **Grup türü** olarak **Güvenlik**’i seçin.
     2. **Grup adı** olarak *Autopilot Grubu* yazın. **Grup açıklaması** olarak *Autopilot cihazlar için test grubu* yazın.
     3. **Üyelik türü** olarak **Atanan**’ı seçin.
 3. **Grup** dikey penceresinde **Üyeler**’i seçin ve Autopilot cihazları gruba ekleyin. Henüz kaydedilmemiş Autopilot cihazları, adın cihaz seri numarası olduğu cihazlardır.
-4. **Oluştur**’u seçin.  
+4. **Oluştur**' a tıklayın.  
 
 ## <a name="create-an-autopilot-deployment-profile"></a>Bir Autopilot dağıtım profili oluşturma
 
 Bir cihaz grubu oluşturduktan sonra, Autopilot cihazları yapılandırabilmek için bir dağıtım profili oluşturmalısınız.
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **Windows** > **Windows kayıt** > **dağıtım profilleri** > **Profil oluştur**' u seçin.
+1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **Windows**  >  **Windows kayıt**  >  **dağıtım profilleri**  >  **Profil oluştur**' u seçin.
 2. **Temel bilgiler** sayfasında, **ad**için *Autopilot profilini*girin. **Açıklama** olarak *Autopilot cihazlar için test profili* yazın.
 3. **Tüm hedeflenen cihazları Autopilot’a dönüştür** ayarını **Evet** olarak seçin. Bu ayar, listedeki tüm cihazların Autopilot dağıtım hizmetine kaydolmasını sağlar. Kaydın işlenmesi için 48 saat kadar bekleyin.
 4. **İleri**’yi seçin.
@@ -116,7 +116,7 @@ Artık Autopilot cihazlarını kullanmak istemiyorsanız, bunları silebilirsini
 
 1. Cihazlar Intune’a kayıtlıysa önce bunları [Azure Active Directory portalından silmeniz](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal) gerekir.
 
-2. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar** > **Windows** > **Windows kayıt** > **cihazları** ' nı ( **Windows Autopilot dağıtım programı**altında) seçin.
+2. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **Windows**  >  **Windows kayıt**  >  **cihazları** ' nı ( **Windows Autopilot dağıtım programı**altında) seçin.
 
 3. Silmek istediğiniz cihazları seçin ve **Sil**' i seçin.
 
@@ -127,6 +127,6 @@ Artık Autopilot cihazlarını kullanmak istemiyorsanız, bunları silebilirsini
 Windows Autopilot için kullanılabilir diğer seçenekler hakkında daha fazla bilgi edinebilirsiniz.
 
 > [!div class="nextstepaction"]
-> [Ayrıntılı Autopilot kaydı makalesi](enrollment-autopilot.md)
+> [Ayrıntılı Autopilot kaydı makalesi](../../autopilot/enrollment-autopilot.md)
 
 

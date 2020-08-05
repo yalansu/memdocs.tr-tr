@@ -2,7 +2,7 @@
 title: Sürüm 1810’daki yenilikler
 titleSuffix: Configuration Manager
 description: Geçerli dalın Configuration Manager sürüm 1810 ' de tanıtılan değişiklikler ve yeni yetenekler hakkında ayrıntılı bilgi alın.
-ms.date: 04/23/2019
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2a3b322f868c5c203114de4d974ba6682272c5d7
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f08b7449b4232d55c4be6227d23965231aa7a273
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906259"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546459"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1810 ' deki yenilikler
 
@@ -237,7 +237,7 @@ Daha fazla bilgi için bkz. [uygulama oluşturma](../../../apps/deploy-use/creat
 <!--3607717, fka 1358333-->
 [Mevcut cihazlar Için Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) artık Windows 10, sürüm 1809 veya sonraki sürümlerde kullanılabilir. Bu yeni özellik, tek bir yerel Configuration Manager görev sırası kullanarak [Windows Autopilot Kullanıcı odaklı mod](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) Için bir Windows 7 cihazını yeniden görüntülemenizi ve sağlamanızı sağlar.
 
-Daha fazla bilgi için bkz. [Mevcut cihazlar için Windows Autopilot](../../../osd/deploy-use/windows-autopilot-for-existing-devices.md).
+Daha fazla bilgi için bkz. [Mevcut cihazlar için Windows Autopilot](../../../../autopilot/existing-devices.md).
 
 
 ### <a name="specify-the-drive-for-offline-os-image-servicing"></a>Çevrimdışı işletim sistemi görüntüsü bakımı için sürücüyü belirtin

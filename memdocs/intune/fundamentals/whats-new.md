@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 773be58733e4bf154fe994852ce72a8ad3a6dc54
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 46c58437fab66b0a4fd22ea8452856ca701e9eb7
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443861"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546818"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -75,8 +75,8 @@ Son kullanıcılar artık [Microsoft Intune Web şirket portalı](https://portal
 #### <a name="exchange-on-premises-connector-support---7138486----"></a>Exchange şirket Içi bağlayıcı desteği<!-- 7138486  -->
 Intune, 2007 (Temmuz) sürümünden itibaren Intune hizmetinden şirket Içi Exchange Bağlayıcı özelliği desteğini kaldırıyor. Etkin bağlayıcı içeren mevcut müşteriler şu anda geçerli işlevselliğe devam edebilir. Etkin Bağlayıcısı olmayan yeni müşteriler ve mevcut müşteriler, artık yeni bağlayıcılar oluşturamaz veya Intune 'dan Exchange ActiveSync (EAS) cihazlarını yönetemez. Bu müşteriler için, Microsoft şirket içi Exchange 'e erişimi korumak için Exchange [karma modern kimlik doğrulamasının (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) kullanılmasını önerir. HMA hem Intune Uygulama Koruması Ilkelerini (MAM olarak da bilinir) hem de şirket içi Exchange için Outlook Mobile aracılığıyla koşullu erişim imkanı sunar.
 
-#### <a name="smime-for-outlook-on-ios-and-android-enterprise-devices-managed-without-enrollment---6517155----"></a>İOS ve Android kurumsal cihazlarda kayıt olmadan yönetilen Outlook için S/MIME<!-- 6517155  -->
-Artık, kayıt olmadan yönetilen cihazlar için uygulama yapılandırma ilkelerini kullanarak iOS ve Android kurumsal cihazlarda Outlook için S/MIME 'yi etkinleştirebilirsiniz. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **uygulamalar**  >  **uygulama yapılandırma ilkeleri**  >  **Add**  >  **yönetilen uygulamalar**Ekle ' yi seçin. Ayrıca, kullanıcıların Outlook 'ta bu ayarı değiştirmesine izin verip vermeyeceğinizi de seçebilirsiniz. S/MIME hakkında genel bilgi için bkz. [Intune 'da e-postayı imzalamak ve şifrelemek Için s/MIME 'ye genel bakış](../protect/certificates-s-mime-encryption-sign.md). Outlook yapılandırma ayarları hakkında daha fazla bilgi için bkz. [Microsoft Outlook yapılandırma ayarları](../apps/app-configuration-policies-outlook.md) ve [cihaz kaydı olmadan yönetilen uygulamalar için uygulama yapılandırma ilkeleri ekleme](../apps/app-configuration-policies-managed-app.md). Microsoft Exchange 'e özgü S/MIME bilgileri için bkz. [s/MIME senaryoları](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios) ve [yapılandırma anahtarları-S/MIME ayarları](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings).
+#### <a name="smime-for-outlook-on-ios-and-android-devices-without-enrollment---6517155---"></a>Kayıt olmadan iOS ve Android cihazlarda Outlook için S/MIME<!-- 6517155 -->
+Artık, yönetilen uygulamalar için bir uygulama yapılandırma ilkesi kullanarak iOS ve Android cihazlarda Outlook için S/MIME 'yi etkinleştirebilirsiniz. Bu, cihaz kayıt durumundan bağımsız olarak ilke teslimine izin verir. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **uygulamalar**  >  **uygulama yapılandırma ilkeleri**  >  **Add**  >  **yönetilen uygulamalar**Ekle ' yi seçin. Ayrıca, kullanıcıların Outlook 'ta bu ayarı değiştirmesine izin verip vermeyeceğinizi de seçebilirsiniz. Ancak, S/MIME sertifikalarını iOS ve Android için Outlook 'a otomatik olarak dağıtmak için cihazın kayıtlı olması gerekir. S/MIME hakkında genel bilgi için bkz. [Intune 'da e-postayı imzalamak ve şifrelemek Için s/MIME 'ye genel bakış](https://docs.microsoft.com/mem/intune/protect/certificates-s-mime-encryption-sign). Outlook yapılandırma ayarları hakkında daha fazla bilgi için bkz. [Microsoft Outlook yapılandırma ayarları](../apps/app-configuration-policies-outlook.md) ve [cihaz kaydı olmadan yönetilen uygulamalar için uygulama yapılandırma ilkeleri ekleme](../apps/app-configuration-policies-managed-app.md). İOS ve Android S/MIME bilgileri için Outlook için bkz. [s/MIME senaryoları](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios) ve [yapılandırma anahtarları-S/MIME ayarları](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings). 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Cihaz yapılandırması

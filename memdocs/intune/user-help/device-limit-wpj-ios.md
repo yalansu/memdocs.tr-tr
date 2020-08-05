@@ -1,5 +1,5 @@
 ---
-title: Kayıtlı cihaz sınırına ulaşıldı | Microsoft Docs
+title: Kayıtlı iOS cihaz sınırına ulaşıldı
 titlesuffix: Intune Company Portal
 description: ''
 keywords: ''
@@ -19,14 +19,14 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7920450185bbc3d198777893a303f4fdec1cd5f7
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 9e808ced9ad2d4f8ce8aded4fe572fea8d55884f
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880497"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546408"
 ---
-# <a name="the-limit-of-devices-you-can-register-has-been-reached"></a>Kaydedebileceğiniz cihaz sınırına ulaşıldı
+# <a name="the-limit-of-ios-devices-you-can-register-has-been-reached"></a>Kaydolabilmeniz için kullanabileceğiniz iOS cihazlarının sınırına ulaşıldı
 
 Her şirkette, kişilerin şirket kaynaklarına ulaşabilmek için kullanabileceği cihaz sayısına bir sınırlama getirilir. Böylece şirket bilgileri güvende tutulur ve her bir kullanıcının bu bilgilere yalnızca belirli cihazlardan ve konumlardan erişmeye yetkili olması sağlanır. Cihaz sayısı sınırına ulaştığınız için **Cihazınızı kaydedemediğinize** dair bir ileti görürseniz, yapabileceğiniz üç şey vardır:
 

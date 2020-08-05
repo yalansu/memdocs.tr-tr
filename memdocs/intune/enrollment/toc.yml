@@ -1,6 +1,6 @@
 - name: Microsoft Intune’da kayıt
   href: index.yml
-- name: Genel bakış
+- name: Genel Bakış
   expanded: true
   items:
     - name: Cihaz kaydına genel bakış
@@ -56,10 +56,6 @@
           href: windows-bulk-enroll.md
         - name: Kayıt Durumu Sayfası
           href: windows-enrollment-status.md
-        - name: Windows Autopilot Dağıtım Programı
-          href: enrollment-autopilot.md
-        - name: Autopilot ile Hibrit Azure AD
-          href: windows-autopilot-hybrid.md
         - name: Intune AD Bağlayıcısı için proxy’yi yapılandırma
           href: autopilot-hybrid-connector-proxy.md
     - name: Android kaydını ayarlama

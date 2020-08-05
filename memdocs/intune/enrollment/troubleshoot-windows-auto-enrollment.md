@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd84d50fb7e1ad9d67cd106d6da2b187dfd6adb4
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 968aa9b2f7127e9b7f092f36a99b491a75f0b78c
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87528220"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546875"
 ---
 # <a name="troubleshoot-windows-10-group-policy-based-auto-enrollment-in-intune"></a>Intune 'da Windows 10 Grup İlkesi tabanlı otomatik kayıt sorunlarını giderme
 
@@ -33,11 +33,11 @@ Active Directory (AD) etki alanına katılmış cihazlar için otomatik kaydı M
 
 Sorun gidermeye başlamadan önce, her şeyin doğru şekilde yapılandırıldığını doğrulamanız en iyisidir. Sorun doğrulama sırasında çözülenemediğinde, bazı önemli günlük dosyalarını denetleyerek sorun gidermeye devam edebilirsiniz.
 
-1. Cihazı kaydetmeye çalışan kullanıcıya geçerli bir Intune lisansı atandığını doğrulayın.
+- Cihazı kaydetmeye çalışan kullanıcıya geçerli bir Intune lisansı atandığını doğrulayın.
 
    ![Intune lisansını doğrulama](./media/troubleshoot-windows-auto-enrollment/intune-license.png)
 
-2. Cihazların Intune 'A kaydolabileceği tüm kullanıcılar için otomatik kaydın etkinleştirildiğini doğrulayın. Daha fazla bilgi için bkz. [Azure AD ve Microsoft Intune: yeni portalda OTOMATIK MDM kaydı](https://docs.microsoft.com/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal).
+- Cihazların Intune 'A kaydolabileceği tüm kullanıcılar için otomatik kaydın etkinleştirildiğini doğrulayın. Daha fazla bilgi için bkz. [Azure AD ve Microsoft Intune: yeni portalda OTOMATIK MDM kaydı](https://docs.microsoft.com/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal).
 
    ![Otomatik kaydı doğrulama](./media/troubleshoot-windows-auto-enrollment/verify-auto-enrollment.png)
 
@@ -45,9 +45,9 @@ Sorun gidermeye başlamadan önce, her şeyin doğru şekilde yapılandırıldı
    - **Mam Kullanıcı kapsamının** **none**olarak ayarlandığını doğrulayın. Aksi takdirde, bu ayar MDM kapsamına göre önceliğe sahip olur ve sorunlara yol açabilir.
    - **MDM bulma URL 'sinin** olarak ayarlandığını doğrulayın **https://enrollment.manage.microsoft.com/enrollmentserver/discovery** .
 
-3. Cihazın Windows 10, sürüm 1709 veya sonraki bir sürümünü çalıştırdığından emin olun.
+- Cihazın Windows 10, sürüm 1709 veya sonraki bir sürümünü çalıştırdığından emin olun.
 
-4. Cihazların **karma Azure AD 'ye katılmış**olarak ayarlandığını doğrulayın. Bu ayar, cihazların hem etki alanına katılmış hem de Azure AD 'ye katılmış olduğu anlamına gelir.
+- Cihazların **karma Azure AD 'ye katılmış**olarak ayarlandığını doğrulayın. Bu ayar, cihazların hem etki alanına katılmış hem de Azure AD 'ye katılmış olduğu anlamına gelir.
 
    Ayarları doğrulamak için, komut satırında **dsregcmd/Status** komutunu çalıştırın. Sonra çıktıda aşağıdaki durum değerlerini doğrulayın:
 
@@ -68,16 +68,16 @@ Sorun gidermeye başlamadan önce, her şeyin doğru şekilde yapılandırıldı
 
    ![Azure AD 'ye katılmış cihazların listesi](./media/troubleshoot-windows-auto-enrollment/ad-joined-devices.png)
 
-5. Hem **Microsoft Intune**hem de    **Microsoft Intune kayıt** Azure AD dikey PENCERESINDE **Mobility (MDM ve MAM)** altında listelenebilir   . Her ikisi de varsa, **Microsoft Intune**' nin altındaki otomatik kayıt ayarlarını yapılandırmadığınızdan emin olun.
+- Hem **Microsoft Intune**hem de    **Microsoft Intune kayıt** Azure AD dikey PENCERESINDE **Mobility (MDM ve MAM)** altında listelenebilir   . Her ikisi de varsa, **Microsoft Intune**' nin altındaki otomatik kayıt ayarlarını yapılandırmadığınızdan emin olun.
 
-6. Aşağıdaki grup ilkesi ilkesi ayarının Intune 'a kaydedilmesi gereken tüm cihazlara başarıyla dağıtıldığını doğrulayın:
+- Aşağıdaki grup ilkesi ilkesi ayarının Intune 'a kaydedilmesi gereken tüm cihazlara başarıyla dağıtıldığını doğrulayın:
 
    **Bilgisayar yapılandırması**  >  **İlkeler**  >  **Yönetim Şablonları**  >  **Windows bileşenleri**  >  **MDM**  >  **Varsayılan Azure AD kimlik bilgilerini kullanarak OTOMATIK MDM kaydını etkinleştirme**
 
    Grup ilkesi ilkesi ayarının başarıyla dağıtıldığını doğrulamak için etki alanı yöneticilerinizle iletişime geçin.
 
-7. Cihazın, klasik bılgısayar Aracısı kullanılarak Intune 'A kayıtlı olmadığından emin olun.
-8. Azure AD ve Intune 'da aşağıdaki ayarları doğrulayın:
+- Cihazın, klasik bılgısayar Aracısı kullanılarak Intune 'A kayıtlı olmadığından emin olun.
+- Azure AD ve Intune 'da aşağıdaki ayarları doğrulayın:
 
    **Azure AD cihaz ayarları 'nda:**
 
@@ -138,3 +138,6 @@ Olay KIMLIĞI 75, aşağıdaki durumlarda günlüğe kaydedilmez:
     **gpupdate/Force**
 
     Sorun devam ederse, Active Directory ek sorun giderme yapın.
+
+## <a name="next-steps"></a>Sonraki adımlar
+[Windows cihaz kaydıyla ilgili sorunları giderme](troubleshoot-windows-enrollment-errors.md)

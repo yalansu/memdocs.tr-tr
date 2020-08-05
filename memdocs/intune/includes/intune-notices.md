@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/30/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 22dc48a60d03a0cc6bc10e04bc3facbf36983ff9
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 79e2694cfd34f1db8bf11969506ec3d8cbc453d4
+ms.sourcegitcommit: 8a9b85d1c879060ea541f7c8ad1ae34a4ed33ed0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84637573"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87507521"
 ---
 Bu bildirimler, gelecekteki Intune değişiklik ve özelliklerine hazırlanmanıza yardımcı olabilecek önemli bilgiler sağlar.
 
@@ -30,7 +30,7 @@ Hangi cihazların veya kullanıcıların etkilendiğini görmek için Intune rap
 
 Eski PC yönetimi, 15 Ekim 2020 ' de destek altına geçiyor. Cihazları Windows 10 ' a yükseltin ve Intune tarafından yönetilmek üzere bunları mobil cihaz yönetimi (MDM) cihazları olarak yeniden kaydedin.
 
-[Daha fazla bilgi](https://go.microsoft.com/fwlink/?linkid=2107122)
+[Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2107122)
 
 ### <a name="move-to-the-microsoft-endpoint-manager-admin-center-for-all-your-intune-management"></a>Tüm Intune yöneti, Microsoft Endpoint Manager yönetim merkezine gidin
 MC208118 son Mart sürümünde, Microsoft Endpoint Manager için yeni ve basit bir URL sunuyoruz – Intune yönetimi: [https://endpoint.microsoft.com](https://endpoint.microsoft.com) . Microsoft Uç Nokta Yöneticisi, Microsoft Intune ve Configuration Manager içeren Birleşik bir platformdur. **1 ağustos 2020**' den itibaren, ' de Intune yönetimini kaldıracağız [https://portal.azure.com](https://portal.azure.com) ve bunun yerine [https://endpoint.microsoft.com](https://endpoint.microsoft.com) tüm uç nokta yönetiminiz için kullanmanızı öneririz. 
@@ -75,6 +75,9 @@ Cihazlar aşağıdakilerden biri olursa etkilenmeyecektir:
 - **Minimum parola uzunluğunu** ayarla
 - **Parolanın süresi dolana kadar geçen gün sayısını** ayarla
 - **Yeniden kullanmayı engellemek için önceki parolaların sayısını** ayarla
+
+
+![Android uyumluluk ilkesi sayfasının ekran ucu](../fundamentals/media/notices/android-compliance-settings.png)
 
 ###### <a name="additional-impacts-based-on-android-os-version"></a>Android işletim sistemi sürümüne dayalı ek etkiler
 

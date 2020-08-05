@@ -1,5 +1,5 @@
 ---
-title: Cihazınızda bir sertifika eksik | Microsoft Docs
+title: Eksik gerekli sertifikayı yükler
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1cd3309ebe05d48fd2b28988ffc09702901c470a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 162a5c2ff02a762578fb6f52b60b6ff404862329
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881055"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546717"
 ---
 # <a name="install-missing-certificate-required-by-your-organization"></a>Kuruluşunuz için gereken eksik sertifikayı yükler  
 
@@ -43,8 +43,8 @@ Gerekli sertifikayı indirmeyi ve cihazınızın kaydedilmesini sağlamak için 
 Tarayıcı erişimini etkinleştirmek için bu adımları izleyin. Erişimi etkinleştirdikten sonra, Şirket Portalı uygun sertifikayı yükleyecek ve kayıt işlemine devam edecektir.    
 
 1. Şirket Portalı uygulamasında sağ köşeye gidin ve menüyü seçin.  
-2. **Ayarlar**' ı seçin.  
-3. **Tarayıcı erişimini etkinleştir** ' ın yanında **Etkinleştir**' i seçin.  
+2. **Ayarlar**'ı seçin.  
+3. **Tarayıcı erişimini etkinleştir**' ın yanındaki **Etkinleştir**' i seçin.  
 4. Cihaz Yöneticisi ekranında **Etkinleştir**' i seçin. 
 
 ## <a name="identify-and-download-the-missing-certificate-through-web-search"></a>Web araması aracılığıyla eksik sertifikayı tanımla ve indir

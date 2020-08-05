@@ -2,7 +2,7 @@
 title: Görev dizisi adımları
 titleSuffix: Configuration Manager
 description: Configuration Manager görev dizisine ekleyebileceğiniz adımlar hakkında bilgi edinin.
-ms.date: 04/01/2020
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 114a0a18b3eb5d416b45379ccb3ac68128e529c5
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 61070d98c5b7d453f493cf7ea2995705ee43f325
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353607"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546629"
 ---
 # <a name="task-sequence-steps"></a>Görev dizisi adımları
 
@@ -620,7 +620,7 @@ Bu adımın **Özellikler** sekmesinde, bu bölümde açıklanan ayarları yapı
 
 Yakalanan işletim sistemi görüntüsünü depolarken Configuration Manager kullandığı konumun dosya sistemi yolu.  
 
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Açıklama  
 
 Yansıma dosyasında depolanan yakalanan işletim sistemi görüntüsünün isteğe bağlı kullanıcı tanımlı bir açıklaması.  
 
@@ -1189,7 +1189,7 @@ Biçimlendirilecek diskin türü. Açılır listeden belirlenebilecek iki seçen
 
 Aşağıdaki öznitelikler de dahil olmak üzere, görev dizisinin oluşturduğu bölüm veya birim hakkında belirli bilgiler:  
 
-- Name  
+- Ad  
 - Kalan disk alanı  
 
 Yeni bir bölüm oluşturmak için **bölüm özellikleri** iletişim kutusunu başlatmak üzere **Yeni** ' yi seçin. Bölüm türü ve boyutunu ve bir önyükleme bölümüyse belirtin. Mevcut bir bölümü değiştirmek için, değiştirilecek bölümü seçin ve ardından **Özellikler** düğmesini seçin. Sabit sürücü bölümlerinin nasıl yapılandırılacağı hakkında daha fazla bilgi için aşağıdaki makalelerden birine bakın:  
@@ -1599,7 +1599,7 @@ Sysprep'in ürün etkinleştirme bayrağını sıfırlamasını önlemek için b
 <!--SCCMDocs-pr issue 2695-->
 Bu seçenek Sysprep 'in varsayılan yeniden başlatma davranışı yerine bilgisayarı kapatması talimatını verir.
 
-[Var olan cihazlar Için Windows Autopilot](../deploy-use/windows-autopilot-for-existing-devices.md) görev sırası bu seçenekle bu adımı kullanır.
+[Var olan cihazlar Için Windows Autopilot](../../../autopilot/existing-devices.md) görev sırası bu seçenekle bu adımı kullanır.
 
 - Görev dizisinin cihazı yenilemesini ve sonra Autopilot için OOBE 'yi hemen başlatmasını istiyorsanız, bu seçeneği kapalı bırakın.  
 
@@ -2064,7 +2064,7 @@ Aşağıdaki örnek, geçersiz parametreleri içerir. İlk iki öğe Windows Pow
 <!-- SCCMDocs-pr issue 3561 -->
 Bir parametre değeri özel bir karakter içeriyorsa, değer etrafında tek tırnak işaretleri ( `'` ) kullanın. Çift tırnak işaretleri () kullanmak, `"` görev dizisi adımının parametreyi yanlış işlemesini sağlayabilir.
 
-Örneğin, `-Arg1 '%TSVar1%' -Arg2 '%TSVar2%'`
+Örnek: `-Arg1 '%TSVar1%' -Arg2 '%TSVar2%'`
 
 Sürüm 2002 ' den başlayarak bu özelliği bir değişken olarak ayarlayın.<!-- 5690481 --> Örneğin, `%MyScriptVariable%` öğesini belirtirseniz, görev dizisi betiği çalıştırdığında, bu özel değişkenin değerini PowerShell komut satırına ekler.
 

@@ -5,17 +5,17 @@ description: Windows 10 Internet tabanlı cihazlarınızı ortak yönetim için 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 07/06/2020
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: d58faa57fa1459bbc8d821d117d20b3f404dc8e0
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 076a4b6d1bf5773287d4a0b32109023039a3b399
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776897"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546425"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>İnternet tabanlı cihazları ortak yönetim için hazırlama
 
@@ -25,7 +25,7 @@ Bu makale, yeni internet tabanlı cihazlar için ortak yönetimin ikinci yoluna 
 
 Yeni Windows 10 cihazları için Autopilot hizmetini kullanarak, kutudan Out deneyimini (OOBE) yapılandırabilirsiniz. Bu işlem, cihazın Azure AD 'ye katılmasını ve cihazın Intune 'a kaydedilmesini içerir.  
 
-Daha fazla bilgi için bkz. [Windows Autopilot 'e genel bakış](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot).
+Daha fazla bilgi için bkz. [Windows Autopilot 'e genel bakış](../../autopilot/windows-autopilot.md).
 
 Cihazlarınızı Azure AD 'ye katılarak Intune 'a otomatik olarak kaydedilecek şekilde yapılandırmak için bkz. [Microsoft Intune Için Windows cihazlarını kaydetme](https://docs.microsoft.com/intune/windows-enroll).  
 
@@ -46,9 +46,9 @@ Daha fazla bilgi için bkz. [Intune 'da cihaz ekleme](https://docs.microsoft.com
 ### <a name="autopilot-for-existing-devices"></a>Var olan cihazlar için Autopilot
 <!--1358333-->
 
-[Mevcut cihazlar Için Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) , Windows 10, sürüm 1809 veya sonraki sürümlerde kullanılabilir. Bu özellik, tek bir yerel Configuration Manager görev sırası kullanarak [Windows Autopilot Kullanıcı odaklı mod](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) Için bir Windows 7 cihazını yeniden görüntüetmenizi ve sağlamanızı sağlar.
+[Mevcut cihazlar Için Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) , Windows 10, sürüm 1809 veya sonraki sürümlerde kullanılabilir. Bu özellik, tek bir yerel Configuration Manager görev sırası kullanarak [Windows Autopilot Kullanıcı odaklı mod](../../autopilot/user-driven.md) Için bir Windows 7 cihazını yeniden görüntüetmenizi ve sağlamanızı sağlar.
 
-Daha fazla bilgi için bkz. [var olan cihazlar Için Windows Autopilot görev sırası](../osd/deploy-use/windows-autopilot-for-existing-devices.md).
+Daha fazla bilgi için bkz. [var olan cihazlar Için Windows Autopilot görev sırası](../../autopilot/existing-devices.md).
 
 ## <a name="install-the-configuration-manager-client"></a>Configuration Manager istemcisini yükler
 

@@ -1,5 +1,5 @@
 ---
-title: Android kurumsal güvenlik yapılandırma çerçevesi
+title: Android kurumsal güvenlik yapılandırma ilkeleri
 titleSuffix: Microsoft Intune
 description: Android kurumsal cihaz temel ve yüksek güvenlik için önerilen kısıtlamaları ve ayarları öğrenin.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ecd15ea98ff9fa5ff0ff6ff570e644a8dcf5003
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 3735a37d4572454968638d29ab2646d6fda943ad
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502885"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546595"
 ---
 # <a name="android-enterprise-security-configuration-framework-app-configuration-policies"></a>Android Enterprise Security Configuration Framework uygulama yapılandırma ilkeleri
 
