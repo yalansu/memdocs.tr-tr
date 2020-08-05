@@ -78,3 +78,6 @@
             - name: Uç nokta analizi
               tocHref: /mem/analytics/
               topicHref: /mem/analytics/
+            - name: Otomatik Pilot
+              tocHref: /mem/autopilot/
+              topicHref: /mem/autopilot/
