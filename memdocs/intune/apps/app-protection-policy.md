@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 08/06/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28401c314d70f1d810fe12e815d8558afc8aab89
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 5685a9d8738fa3f2303902d439fe73e8d45b35e7
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502604"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865729"
 ---
 # <a name="app-protection-policies-overview"></a>Uygulama koruma ilkelerine genel bakış
 
@@ -323,6 +323,11 @@ Bu işlemin amacı, kuruluşunuzun uygulama içindeki verilerinin güvenli ve uy
   
 ### <a name="ios-share-extension"></a>iOS Share uzantısı
 Veri Aktarım İlkesi **yalnızca yönetilen uygulamalar** veya **uygulama olmadan**ayarlanmış olsa bile, yönetilmeyen uygulamalarda iş veya okul verilerini açmak Için iOS/ıpados Share uzantısını kullanabilirsiniz. Intune uygulama koruma ilkesi, cihazı yönetmeksizin iOS/ıpados paylaşma uzantısını denetlemez. Bu nedenle, Intune _**“kurumsal” verileri veriler uygulama dışında paylaşılmadan önce şifreler**_. Yönetilen uygulama dışında bir "Kurumsal" dosya açmaya çalışırken bu şifreleme davranışını doğrulayabilirsiniz. Bu dosya şifrelenmiş olmalı ve yönetilen bir uygulama dışında açılamamalıdır.
+
+### <a name="universal-links-support"></a>Evrensel bağlantılar desteği
+Varsayılan olarak, Intune uygulama koruma ilkeleri yetkisiz uygulama içeriğine erişimi engeller. İOS/ıpados 'da, [evrensel bağlantıları](https://developer.apple.com/universal-links/)kullanarak belirli içerik veya uygulamaları açmaya yönelik işlevsellik vardır. 
+
+Kullanıcılar, uygulamayı Safari 'de ziyaret ederek ve **Yeni sekmede aç** veya **Aç**seçeneğini belirleyerek bir uygulamanın evrensel bağlantılarını devre dışı bırakabilir. Intune uygulama koruma ilkeleriyle Kullanıcı evrensel bağlantılarına yönelik olarak, evrensel bağlantıların yeniden etkinleştirilmesi önemlidir. **Open in**  < İlgili bağlantıya bastıktan sonra son kullanıcının Safari 'de> bir açık***uygulama adı*** olması gerekir. Bu, tüm evrensel bağlantıları cihazdaki korumalı uygulamaya yönlendirmesi için ek korumalı uygulama istemelidir.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Aynı uygulama ve kullanıcı kümesi için birden çok Intune uygulama koruma erişimi ayarı
 Erişim için Intune uygulama koruma ilkeleri, hedeflenen bir uygulamaya kurumsal hesabından erişmeyi denediğinde Son Kullanıcı cihazlarında belirli bir sırada uygulanır. Genel olarak öncelik temizlemededir; ardından engelleme, sonra da kapatılabilen uyarı gelir. Örneğin, belirli bir Kullanıcı/uygulama için geçerliyse, bir kullanıcıyı iOS/ıpados sürümünü güncelleştirmek üzere uyaran en düşük iOS/ıpados işletim sistemi ayarı, kullanıcının erişimini engelleyen en düşük iOS/ıpados işletim sistemi ayarından sonra uygulanır. Dolayısıyla, BT yöneticisinin en düşük iOS işletim sistemi olarak 11.0.0.0 ve en düşük iOS işletim sistemi (yalnızca Uyarı) olarak 11.1.0.0'ı ayarladığı bir senaryoda, uygulamaya erişmeye çalışan cihazın işletim sistemi iOS 10 olduğunda, son kullanıcı erişimin engellenmesine yol açan en düşük iOS işletim sistemi sürümüne yönelik daha kısıtlayıcı ayar temel alınarak engellenebilir.

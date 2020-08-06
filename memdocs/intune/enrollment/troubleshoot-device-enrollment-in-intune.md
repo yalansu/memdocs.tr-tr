@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8f400c946f26de272b782194df3f1b1930ab0b4
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 87f81c9f33fd267bcd57a14b59c88d36a937fecd
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093509"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865831"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Microsoft Intune cihaz kaydı sorunlarını giderme
 
@@ -57,7 +57,7 @@ Bu sorunlar, tüm cihaz platformlarında oluşabilir.
 ### <a name="device-cap-reached"></a>Cihaz sınırına ulaşıldı
 **Sorun:** Kullanıcı kayıt sırasında bir hata alıyor ( **Şirket portalı geçici olarak kullanılamıyor**).
 
-**Çözüm:**
+**Çözünürlüğüne**
 
 #### <a name="check-number-of-devices-enrolled-and-allowed"></a>Kaydedilen ve izin verilen cihazların sayısını denetleme
 
@@ -67,7 +67,7 @@ Aşağıdaki adımları izleyerek kullanıcıya cihaz sayısı üst sınırını
 
 2. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **Kullanıcılar**  >  **tüm kullanıcılar** ' ı seçin > Kullanıcı > **cihazları**seçin. Cihaz sayısını not alın.
 
-3. Kullanıcının kayıtlı cihazlarının sayısı şimdiden cihaz sınırı kısıtlamasına eşitse, aşağıdakilerden biri gerçekleşene kadar başka kaydedemez:
+3. Kullanıcının kayıtlı cihaz sayısı zaten cihaz sınır kısıtlamasına eşitse, şu ana kadar kaydolamazlar:
     - [Mevcut cihazlar kaldırılır](../remote-actions/devices-wipe.md) veya
     - [Cihaz kısıtlamalarını ayarlayarak](enrollment-restrictions-set.md) cihaz sınırını artırırsınız.
 
@@ -82,7 +82,7 @@ Cihaz sınırlarına ulaşmaktan kaçınmak için, eski cihaz kayıtlarını kal
 ### <a name="company-portal-temporarily-unavailable"></a>Şirket Portalı Geçici Olarak Devre Dışı
 **Sorun:** Kullanıcılar, cihazlarında **Şirket Portalı Geçici Olarak Devre Dışı** hatası alıyor.
 
-**Çözüm:**
+**Çözünürlüğüne**
 
 1. Intune Şirket Portalı uygulamasını cihazınızdan kaldırın.
 
@@ -97,7 +97,7 @@ Cihaz sınırlarına ulaşmaktan kaçınmak için, eski cihaz kayıtlarını kal
 ### <a name="mdm-authority-not-defined"></a>MDM yetkilisi tanımlı değil
 **Sorun:** Bir kullanıcı, **MDM yetkilisi tanımlı değil** hatası alıyor.
 
-**Çözüm:**
+**Çözünürlüğüne**
 
 1. MDM Yetkilisinin [uygun şekilde ayarlandığını](../fundamentals/mdm-authority-set.md) doğrulayın.
     
@@ -193,7 +193,7 @@ Kullanıcılarınıza cihazlarını Android 6.0 sürümüne yükseltmeyi denemel
 ### <a name="profile-installation-failed"></a>Profil yüklemesi başarısız oldu
 **Sorun:** Bir kullanıcı, bir Android cihazında **Profil yüklemesi başarısız oldu** hatasını alıyor.
 
-**Çözüm:**
+**Çözünürlüğüne**
 
 1. Kullanıcıya Intune hizmetinin kullandığınız sürümü için uygun bir lisans atandığını doğrulayın.
 
@@ -225,7 +225,7 @@ Sorunu düzeltmek için AD FS sunucusunda veya proxy’lerdeki Bilgisayar Kişis
 4. Sertifikanın üst sertifikası/s ' nı görmek için **sertifika yolu** sekmesini seçin.
 5. Her üst sertifikada, **Sertifikayı Görüntüle**’yi seçin.
 6. **Ayrıntıları**  >  **Dosyaya Kopyala...** seçeneğini belirleyin.
-7. Üst sertifikanın ortak anahtarını istediğiniz dosya konumuna dışarı aktarmak veya kaydetmek için sihirbaz yönergelerini izleyin.
+7. Ana sertifikanın ortak anahtarını, seçtiğiniz dosya konumuna dışarı veya dışarı aktarmak için sihirbaz istemlerini izleyin.
 8. **Sertifikalar**  >  **Tüm görevler**  >  **içeri aktar**' a sağ tıklayın.
 9. Üst sertifikaları **Yerel Bilgisayar\Kişisel\Sertifikalar** konumuna içeri aktarmak için sihirbazdaki istemleri izleyin.
 10. AD FS sunucularını yeniden başlatın.
@@ -288,9 +288,11 @@ Kaydedildikten sonra cihazlar, iyi duruma geri döner ve şirket kaynaklarına y
 ### <a name="verify-ws-trust-13-is-enabled"></a>WS-Trust 1.3’ün etkinleştirildiğini doğrulama
 **Sorun** Otomatik cihaz kaydı (ADE) iOS/ıpados cihazları kaydedilemiyor
 
-Kullanıcı benzeşimi ile ADE cihazlarını kaydetme, Kullanıcı belirteçleri istemek için WS-Trust 1,3 Kullanıcı adı/karma uç noktasının etkinleştirilmesini gerektirir. Active Directory bu uç noktayı varsayılan olarak etkinleştirir. Etkinleştirilmiş uç noktaların bir listesini almak için Get-AdfsEndpoint PowerShell cmdlet'ini kullanın ve trust/13/UsernameMixed uç noktasını arayın. Örneğin:
+Kullanıcı benzeşimi ile ADE cihazlarını kaydetme, Kullanıcı belirteçleri istemek için WS-Trust 1,3 Kullanıcı adı/karma uç noktasının etkinleştirilmesini gerektirir. Active Directory bu uç noktayı varsayılan olarak etkinleştirir. Etkinleştirilmiş uç noktaların bir listesini almak için Get-AdfsEndpoint PowerShell cmdlet'ini kullanın ve trust/13/UsernameMixed uç noktasını arayın. Örnek:
 
-      Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```powershell
+Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```
 
 Daha fazla bilgi için [Get-AdfsEndpoint belgelerine](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) bakın.
 
@@ -328,9 +330,9 @@ Bu sorun şu koşullarda oluşabilir:
 | ---- | ---- |
 | Platform | iOS/iPadOS |
 | Kullanıcı Benzeşimi | Kullanıcı Benzeşimi ile kaydolma |
-|Apple Kurulum Yardımcısı yerine Şirket Portalı ile kimlik doğrulama | Yes |
+|Apple Kurulum Yardımcısı yerine Şirket Portalı ile kimlik doğrulama | Evet |
 | VPP ile Şirket Portalı'nı yükleme | Belirteç kullanma: belirteç adresi |
-| Kimlik doğrulanana kadar Şirket Portalı'nı Tek Uygulama modunda çalıştırma | Yes |
+| Kimlik doğrulanana kadar Şirket Portalı'nı Tek Uygulama modunda çalıştırma | Evet |
 
 **Çözüm**: Sorunu gidermek için şunları yapmanız gerekir:
 1. VPP belirtecinde bir sorun olup olmadığını belirleyin ve varsa sorunu giderin.
@@ -400,7 +402,7 @@ Bu hata bilgisayarda şu koşullarda oluşabilir:
 - daha önce kaydedilmiş bir bilgisayarın kopyalanmış bir görüntüsünü içeriyordur.
 Önceki hesabın hesap sertifikası hala bilgisayarda duruyordur.
 
-**Çözüm:**
+**Çözünürlüğüne**
 
 1. **Başlangıç** menüsünde, **Çalıştır** -> **MMC** yazın.
 1. **Dosya**  >  **Ekle/Kaldır ek bileşenlerini**seçin.

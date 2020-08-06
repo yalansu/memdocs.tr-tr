@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 225006df484d0e65d6a78960d96a7fc70f251991
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 38f5b4ba6d243af74462046c243de34dc5cd8544
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878113"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866052"
 ---
-# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Lookout for Work tarafından bulunan bir tehdidi çözme  
+# <a name="resolve-a-threat-found-by-lookout-for-work-on-android"></a>Android üzerinde Lookout for Work tarafından bulunan bir tehdidi çözümleyin
 
 Lookout for Work uygulaması, Android cihazlarınızda olası tehditleri belirleyen bir Mobil Tehdit Savunması hizmetidir. Bu tehditler Şirket Portalı uygulamasına raporlanır ve burada çözümlenmemiş, uyumsuz sorunlar olarak görünür. Bu tehditler var olduğu sürece şunları yapamayabilirsiniz:
 

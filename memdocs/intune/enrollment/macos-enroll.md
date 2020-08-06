@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1de1b015daad50837142ce9628543f0b2d7587d7
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 7c0973805a0646ec7df87f36eea183a9456f7e39
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093758"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865515"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Intune’da macOS cihazların kaydını ayarlama
 
@@ -33,7 +33,7 @@ Intune, kullanıcılara şirket e-postasına ve uygulamalarına erişim vermek i
 
 Intune yöneticisi olarak, şirkete ait macOS cihazları ile kişilere ait macOS cihazları ("kendi cihazını getir" veya KCG) için kaydı ayarlayabilirsiniz. 
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 macOS cihaz kaydını ayarlamadan önce, aşağıdaki önkoşulları tamamlayın:
 
@@ -62,6 +62,7 @@ Diğer son kullanıcı görevleri hakkında daha fazla bilgi için şu makaleler
 Kullanıcılarına cihaz sağlayan kuruluşlar için Intune, aşağıdaki şirkete ait macOS cihazı kayıt yöntemlerini destekler:
 - [Apple 'ın otomatik cihaz kaydı (ade)](device-enrollment-program-enroll-macos.md): kuruluşlar MacOS cihazlarını Ade aracılığıyla satın alabilir. ADE, cihazları yönetime getirmek için bir kayıt profilini "hava üzerinden" dağıtmanızı sağlar.
 - [Cihaz kayıt yöneticisi (DEM)](device-enrollment-manager-enroll.md): En çok 1.000 cihazı kaydetmek için DEM hesabı kullanabilirsiniz.
+- [Doğrudan kayıt](device-enrollment-direct-enroll-macos.md): doğrudan kayıt, cihazı temizlemez.
 
 ## <a name="block-macos-enrollment"></a>macOS kaydını engelleme
 Varsayılan olarak, Intune macOS cihazlarının kaydına izin verir. macOS cihazlarının kaydedilmesini engellemek için bkz. [Cihaz türü kısıtlamaları ayarlama](enrollment-restrictions-set.md).

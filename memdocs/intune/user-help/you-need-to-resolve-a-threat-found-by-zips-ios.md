@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 41c80ee092e61f016c02e66690cf7f3601f89618
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: f72415900067793d41b0e6086cf3ee0c78e9ee85
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882535"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865661"
 ---
-# <a name="resolve-a-threat-found-by-zimperium-zips"></a>Zimperium zIPS tarafından bulunan bir tehdidi çözme
+# <a name="resolve-a-threat-found-by-zimperium-zips-on-ios"></a>İOS 'ta Zkusuren IUM ZIP 'ler tarafından bulunan bir tehdidi çözümleyin
 
 Zimperium zIPS, iOS cihazlarınızda olası tehditleri belirleyen bir Mobile Tehdit Savunması hizmetidir. Bu tehditler Şirket Portalı uygulamasına raporlanır ve çözümlenmemiş, uyumsuz sorunlar olarak görünür. Cihazınız uyumsuz olarak belirlenirse şunları yapamayabilirsiniz:
 

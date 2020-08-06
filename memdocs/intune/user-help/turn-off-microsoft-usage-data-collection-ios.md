@@ -19,14 +19,14 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a9ea1274ca231cd60da9158ff19bf717e47316c2
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2cfdd7d65fd1f474588fcb225853835654a8fa5e
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881717"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866069"
 ---
-# <a name="how-to-turn-off-microsoft-data-collection"></a>Microsoft’un veri toplamasını devre dışı bırakma
+# <a name="how-to-turn-off-microsoft-data-collection-for-ios-devices"></a>İOS cihazları için Microsoft veri toplamayı devre dışı bırakma
 
 Microsoft, ürünlerimiz ve hizmetlerimizle ilgili belirli verileri otomatik olarak toplar. Şirket Portalı uygulaması da dahil olmak üzere ürünlerimizin güvenilirliği ve performansını artırmak için bunu yaparız. Bu veriler gizli olsa da, bazı kullanıcılar bu toplama işleminden rahatsız olabilir. Şirketinizin destek birimi, bu verilerin toplanması konusunda denetim sahibi değildir ve bu ayar için yaptığınız seçimi değiştiremez.
 

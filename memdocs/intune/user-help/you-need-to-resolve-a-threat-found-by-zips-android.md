@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 6d9507b5aaefce58df9e4ce0c833c1da88e7e93f
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 8421ee84c38727b9732dddf0ed63c62e940eab66
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882563"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866154"
 ---
-# <a name="resolve-a-threat-found-by-zimperium-zips"></a>Zimperium zIPS tarafından bulunan bir tehdidi çözme
+# <a name="resolve-a-threat-found-by-zimperium-zips-on-android"></a>Android 'de Zıium ZIP 'ler tarafından bulunan bir tehdidi çözümleyin
 
 Zimperium zIPS, Android cihazlarınızda olası tehditleri belirleyen bir Mobile Tehdit Savunması hizmetidir. Bu tehditler Şirket Portalı uygulamasına raporlanır ve çözümlenmemiş, uyumsuz sorunlar olarak görünür. Cihazınız uyumsuz olarak belirlenirse şunları yapamayabilirsiniz:
 

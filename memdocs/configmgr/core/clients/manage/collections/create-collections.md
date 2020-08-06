@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7eccc3bf6b7ded9db93f5af78d55f090e9704cbc
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: 5e81bc9b2135d17c445f8a86ff2214db394f63db
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438610"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865498"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Configuration Manager içinde koleksiyonlar oluşturma
 
@@ -136,13 +136,13 @@ Tek bir koleksiyon ekleme kuralına ve bir koleksiyonu hariç tutma kuralına sa
 
 1. **Doğrudan üyelik kuralı oluşturma Sihirbazı**' nın **kaynak ara** sayfasında, aşağıdaki bilgileri belirtin.  
 
-    - **Kaynak sınıfı**: aramak ve koleksiyona eklemek istediğiniz kaynak türünü seçin. Örneğin:
+    - **Kaynak sınıfı**: aramak ve koleksiyona eklemek istediğiniz kaynak türünü seçin. Örnek:
         - **Sistem kaynağı**: istemci bilgisayarlardan döndürülen envanter verileri için arama yapın.
         - **Bilinmeyen bilgisayar**: bilinmeyen bilgisayarlar tarafından döndürülen değerler arasından seçim yapın.
         - **Kullanıcı kaynağı**: Configuration Manager tarafından toplanan kullanıcı bilgilerini arayın.
         - **Kullanıcı grubu kaynağı**: Configuration Manager tarafından toplanan Kullanıcı grubu bilgilerini arayın.
 
-    - **Öznitelik adı**: aramak istediğiniz seçili kaynak sınıfıyla ilişkili özniteliği seçin. Örneğin:  
+    - **Öznitelik adı**: aramak istediğiniz seçili kaynak sınıfıyla ilişkili özniteliği seçin. Örnek:  
 
         - Bilgisayarları NetBIOS adına göre seçmek istiyorsanız **kaynak sınıfı** listesinde **sistem kaynağı** ' nı, **öznitelik adı** listesinde **NetBIOS adı** ' nı seçin.  
 
@@ -152,7 +152,7 @@ Tek bir koleksiyon ekleme kuralına ve bir koleksiyonu hariç tutma kuralına sa
 
     - **Configuration Manager istemcisi yüklü olmayan kaynakları hariç tut**: Bu kaynaklar arama sonuçlarında gösterilmez.  
 
-    - **Değer**: seçili öznitelik adını aramak için bir değer girin. Yüzde karakterini (%) kullanın joker karakter olarak. Örneğin:  
+    - **Değer**: seçili öznitelik adını aramak için bir değer girin. Yüzde karakterini (%) kullanın joker karakter olarak. Örnek:  
         - NetBIOS adı "d" ile başlayan bilgisayarları aramak için bu alana **% d** girin.  
         - Contoso OU 'sunda Kullanıcı aramak için bu alana **contoso** girin.
 
@@ -171,9 +171,8 @@ Tek bir koleksiyon ekleme kuralına ve bir koleksiyonu hariç tutma kuralına sa
 
 - **Sorgu Ifadesini Düzenle**: koleksiyon için kural olarak kullanılacak bir sorgu yazabileceğiniz **sorgu ekstresi özellikleri** iletişim kutusunu açar. Sorgular hakkında daha fazla bilgi için bkz. [sorgulara giriş](../../../servers/manage/introduction-to-queries.md).  
 
-        
-        > [!TIP]  
-        > On the General tab, selecting the checkbox to **Omit duplicate rows (select distinct)** may result in less rows returned and potentially quicker results. 
+    > [!TIP]  
+    > Genel sekmesinde, yinelenen satırları atlamak için onay kutusunu seçmek **(benzersiz Seç)** , daha az satır döndürülmesine ve çok daha hızlı sonuçlara neden olabilir.
 
 ### <a name="device-category-rule"></a><a name="bkmk-category"></a>Cihaz kategorisi kuralı
 
@@ -229,7 +228,7 @@ Koleksiyon üyeliklerinin Azure Active Directory (Azure AD) grubuna eşitlenmesi
 
 Azure AD eşitleme her beş dakikada bir gerçekleşir. Configuration Manager Azure AD 'ye kadar tek yönlü bir işlemdir. Azure AD 'de yapılan değişiklikler Configuration Manager koleksiyonlara yansıtılmaz, ancak Configuration Manager tarafından üzerine yazılmaz. Örneğin, Configuration Manager koleksiyonunda iki cihaz varsa ve Azure AD grubunda üç farklı cihaz varsa, eşitlemeden sonra Azure AD grubunda beş cihaz vardır.
 
-### <a name="prerequisites"></a>Ön koşullar
+### <a name="prerequisites"></a>Önkoşullar
 
 - [Bulut yönetimi](../../../servers/deploy/configure/azure-services-wizard.md) IÇIN Azure AD ile tümleştirme
 - [Kullanıcı keşfi Azure Active Directory](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)

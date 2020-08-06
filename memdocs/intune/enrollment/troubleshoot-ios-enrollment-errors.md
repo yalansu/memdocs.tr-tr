@@ -17,18 +17,18 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b0c65e12349f8b4c887b5a633a1cd94c272ca5a
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 37724c4d9acdfcdb9e371a21a7b15c509de78c60
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093357"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865481"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune 'de iOS/ıpados cihaz kaydı sorunlarını giderme
 
 Bu makalede, Intune 'da iOS/ıpados cihazlarını kaydetme sırasında Intune yöneticilerinin sorunları anlamasına ve sorunlarını gidermenize yardımcı olur.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Sorun gidermeye başlamadan önce bazı temel bilgilerin toplanması önemlidir. Bu bilgiler sorunu daha iyi anlamanıza ve çözüm bulma süresini azaltmanıza yardımcı olabilir.
 
@@ -60,7 +60,7 @@ Sorunla ilgili olarak aşağıdaki bilgileri toplayın:
 **Neden:** Intune kiracınız yalnızca şirkete ait cihazlara izin verecek şekilde yapılandırılmıştır. 
 
 #### <a name="resolution"></a>Çözüm
-1. Azure Portal’da oturum açın.
+1. Azure portalında oturum açın.
 2. **Diğer hizmetler**' i seçin, Intune ' u arayın ve ardından **Intune**' u seçin.
 3. **Cihaz kaydı**  >  **Kayıt kısıtlamaları**' nı seçin.
 4. **Cihaz türü kısıtlamaları**' nın altında, ayarlamak istediğiniz kısıtlamayı seçin > **Özellikler**  >  **platformları seçin** > **iOS**için **izin ver** ' i seçin ve ardından **Tamam**' a tıklayın.
@@ -109,8 +109,9 @@ Sorunla ilgili olarak aşağıdaki bilgileri toplayın:
 1. Şirket Portalı uygulamayı cihazdan kaldırın.
 2. **Microsoft Intune şirket portalı** uygulamasını **App Store**'dan indirin ve yükleyin.
 3. Cihazı yeniden kaydedin.
- > [!NOTE]
-    > Bu hata, Kullanıcı cihaz kaydı izin verilecek şekilde yapılandırıldığından daha fazla cihaz kaydetmeye çalışıyorsa de oluşabilir. Bu adımlar sorunu gidermezse, aşağıda **ulaşılan cihaz sınırına** yönelik çözüm adımlarını izleyin.
+
+> [!NOTE]
+> Bu hata, Kullanıcı cihaz kaydı izin verilecek şekilde yapılandırıldığından daha fazla cihaz kaydetmeye çalışıyorsa de oluşabilir. Bu adımlar sorunu gidermezse, aşağıda **ulaşılan cihaz sınırına** yönelik çözüm adımlarını izleyin.
 
 ### <a name="device-cap-reached"></a>Cihaz Sınırına Ulaşıldı
 
@@ -186,7 +187,7 @@ APNs sertifikasını yenileyin ve sonra cihazı yeniden kaydedin.
 
 Kayıt profili atanan bir ADE ile yönetilen Cihazı açtığınızda, kayıt başarısız olur ve aşağıdaki hata iletisini alırsınız:
 
-```
+```output
 asciidoc
 mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" } }
 iPhone mobileassetd[83] <Notice>: Client connection invalid (Connection invalid); terminating connection

@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: c95e449f05c64c19712266c32c1e9c273b0d9bd6
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4836afeeb0eeb667f0c40fe91fe94ffd6ce46798
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877062"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866035"
 ---
-# <a name="resolve-a-threat-found-by-symantec-endpoint-protection-mobile"></a>Symantec Endpoint Protection Mobile tarafından bulunan bir tehdidi çözme
+# <a name="resolve-a-threat-found-by-symantec-endpoint-protection-mobile-on-android"></a>Android 'de Symantec Endpoint Protection Mobile tarafından bulunan bir tehdidi çözümleyin
 
 Symantec Endpoint Protection (SEP) Mobile, Android cihazlarınızda olası tehditleri belirleyen bir Mobil Tehdit Savunması hizmetidir. Bu tehditler Şirket Portalı uygulamasına raporlanır ve çözümlenmemiş, uyumsuz sorunlar olarak görünür. Cihazınız uyumsuz olarak belirlenirse şunları yapamayabilirsiniz:
 

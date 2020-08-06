@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 86e2305692c1e50af7cc2518f394b5c91cfed4f3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2f6ba59ccc2832a66eb1a7b081008aa43b0c75bc
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882284"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866239"
 ---
-# <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>SandBlast Mobile Protect tarafından bulunan bir tehdidi çözme
+# <a name="resolve-a-threat-found-by-sandblast-mobile-protect-on-android"></a>Android 'de SandBlast Mobile Protect tarafından bulunan bir tehdidi çözümleyin
 
 SandBlast Mobile Protect, Android cihazlarınızda olası tehditleri belirleyen bir Mobil Tehdit Savunması hizmetidir. Sonrasında Şirket Portalı uygulamasında görüntüleyebileceğiniz tehditleri raporlar. Tehditler, uygulamada çözümlenmemiş ve uyumsuz sorunlar olarak görünür. Bu tehditler var olduğu sürece şunları yapamayabilirsiniz:   
 

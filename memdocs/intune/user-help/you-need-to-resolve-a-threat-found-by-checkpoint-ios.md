@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7ce384a835bbc4b8d990bbd3ebf93b812647aa1d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 9ef18bc6554f5db364eaf320c66da12e7a5ffe7d
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882230"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866171"
 ---
-# <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>SandBlast Mobile Protect tarafından bulunan bir tehdidi çözme
+# <a name="resolve-a-threat-found-by-sandblast-mobile-protect-on-ios"></a>İOS 'ta SandBlast Mobile Protect tarafından bulunan bir tehdidi çözümleyin
 
 SandBlast Mobile Protect, iOS cihazlarınızda olası tehditleri belirleyen ve değerlendiren bir Mobil Tehdit Savunması hizmetidir. Uygulama daha sonra tehditleri raporlar, böylece bunları Şirket Portalı uygulamasında görüntüleyebilirsiniz. Tehditler, uygulamada çözümlenmemiş ve uyumsuz sorunlar olarak görünür. Bu tehditler var olduğu sürece şunları yapamayabilirsiniz:   
 

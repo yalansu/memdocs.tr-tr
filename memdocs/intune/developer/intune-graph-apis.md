@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7acbd455ef720dd0ab17cce40eae8060c7a68c87
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: 541c607bebb57b1ee23df1af3ab80d29cdd0c6fc
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438636"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866137"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Microsoft Graph’ta Intune API’lerine erişmek için Azure AD kullanma
 
@@ -308,7 +308,7 @@ Her örnekte, en az `DeviceManagementManagedDevices.Read.All` izni kapsamına (d
 
 Her iki örnek sınanırken, aşağıdakine benzer HTTP durumu 403 (Yasak) hataları alabilirsiniz:
 
-``` javascript
+```json
 {
   "error": {
     "code": "Forbidden",
@@ -339,23 +339,22 @@ Bu durumda, aşağıdakileri doğrulayın:
 
 Bu örnek, Intune hesabınızla ilişkili cihazların bir listesini almak için C#’nin nasıl kullanılacağını gösterir.
 
+ > [!NOTE]
+  > Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 1. Visual Studio'yu başlatın ve ardından yeni bir Visual C# Konsol uygulaması (.NET Framework) projesi oluşturun.
 
 2. Projeniz için bir ad girin ve diğer ayrıntıları istediğiniz gibi sağlayın.
 
     <img src="../media/aad-auth-cpp-new-console.png" width="624" height="433" alt="Creating a C# console app project in Visual Studio"  />
 
-3. Microsoft ADAL NuGet paketini projeye eklemek için Çözüm Gezgini’ni kullanın.
+3. Microsoft ADAL NuGet paketini projeye eklemek için Çözüm Gezgini kullanın:
 
-  > [!NOTE]
-  > Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+    1. Çözüm Gezgini’ne sağ tıklayın.
+    1. **NuGet Paketlerini Yönet...**’i seçin &gt;**İnceleyin**.
+    1. `Microsoft.IdentityModel.Clients.ActiveDirectory` seçeneğini belirleyin ve **Yükle**’yi seçin.
 
-
-   1. Çözüm Gezgini’ne sağ tıklayın.
-   2. **NuGet Paketlerini Yönet...**’i seçin &gt;**İnceleyin**.
-   3. `Microsoft.IdentityModel.Clients.ActiveDirectory` seçeneğini belirleyin ve **Yükle**’yi seçin.
-
-   <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
+    <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
 
 4. Aşağıdaki deyimleri **Program.cs**’nin en üst kısmına ekleyin:
 

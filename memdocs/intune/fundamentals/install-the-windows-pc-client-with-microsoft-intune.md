@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1641efe6899c46a797a8ccf7979b533cb620d19
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d9e6806e8d755163d5ae1701ca49ad2daeff464f
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331442"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865882"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Windows bilgisayarlara Intune yazılım istemcisini yükleme
 
@@ -70,7 +70,7 @@ Intune istemci yazılımının kullanıcılar tarafından yüklendiği yöntemle
 
 1. **Microsoft_Intune_Setup.exe** ve **MicrosoftIntune.accountcert** dosyalarını içeren klasörde, 32 bit ve 64 bit bilgisayarlar için Windows Installer tabanlı yükleme programlarını ayıklamak için aşağıdaki komutu çalıştırın:
 
-    ```
+    ```cmd
     Microsoft_Intune_Setup.exe/Extract <destination folder>
     ```
 
@@ -86,7 +86,7 @@ Intune istemci yazılımının kullanıcılar tarafından yüklendiği yöntemle
 ## <a name="deploy-the-client-software-as-part-of-an-image"></a>İstemci yazılımını bir görüntünün parçası olarak dağıtma
 Aşağıdaki yordamı örnek alarak Intune istemci yazılımını bilgisayarlara bir işletim sistemi görüntüsünün parçası olarak dağıtabilirsiniz:
 
-1. İstemci yükleme dosyalarını **Microsoft_Intune_Setup. exe** ve **microsoftınsettings. ACCOUNTCERT**' i başvuru bilgisayarındaki **%systemdrive%\Temp\ Microsoft_Intune_Setup** klasörüne kopyalayın.
+1. **Microsoft_Intune_Setup.exe** ve MicrosoftClient yükleme dosyalarını başvuru bilgisayarındaki **%systemdrive%\temp\ Microsoft_Intune_Setup** klasörüne **kopyalayın.**
 
 2. **SetupComplete.cmd** betiğine aşağıdaki komutu ekleyerek **WindowsIntuneEnrollPending** kayıt defteri girişini oluşturun:
 
@@ -198,7 +198,7 @@ Windows istemci yazılımı kaydı iki yolla silinebilir:
 
 ### <a name="unenroll-by-using-the-intune-admin-console"></a>Intune yönetim konsolunu kullanarak kayıt silme
 
-Intune yönetim konsolunu kullanarak yazılım istemcisinin kaydını silmek için **gruplar** > **tüm bilgisayarlar** > **cihazlar**' a gidin. İstemciye sağ tıklayın ve **Devre Dışı Bırak/Temizle**’yi seçin.
+Intune yönetim konsolunu kullanarak yazılım istemcisinin kaydını silmek için **gruplar**  >  **tüm bilgisayarlar**  >  **cihazlar**' a gidin. İstemciye sağ tıklayın ve **Devre Dışı Bırak/Temizle**’yi seçin.
 
 ### <a name="unenroll-by-using-a-command-prompt-on-the-client"></a>İstemci üzerindeki bir komut isteminden kayıt silme
 
@@ -206,42 +206,46 @@ Yükseltilmiş bir komut istemi kullanarak aşağıdaki komutlardan birini çal�
 
 **Yöntem 1**:
 
-    "C:\Program Files\Microsoft\OnlineManagement\Common\ProvisioningUtil.exe" /UninstallAgents /MicrosoftIntune
+```cmd
+"C:\Program Files\Microsoft\OnlineManagement\Common\ProvisioningUtil.exe" /UninstallAgents /MicrosoftIntune
+```
 
 **Yöntem 2** Bu aracıların tümünün her Windows SKU’sunda yüklü olduğunu unutmayın:
 
-    wmic product where name="Microsoft Endpoint Protection Management Components" call uninstall
-    wmic product where name="Microsoft Intune Notification Service" call uninstall
-    wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall
-    wmic product where name="Microsoft Online Management Policy Agent" call uninstall
-    wmic product where name="Microsoft Policy Platform" call uninstall
-    wmic product where name="Microsoft Security Client" call uninstall
-    wmic product where name="Microsoft Online Management Client" call uninstall
-    wmic product where name="Microsoft Online Management Client Service" call uninstall
-    wmic product where name="Microsoft Easy Assist v2" call uninstall
-    wmic product where name="Microsoft Intune Monitoring Agent" call uninstall
-    wmic product where name="Windows Intune Endpoint Protection Agent" call uninstall
-    wmic product where name="Windows Firewall Configuration Provider" call uninstall
-    wmic product where name="Microsoft Intune Center" call uninstall
-    wmic product where name="Microsoft Online Management Update Manager" call uninstall
-    wmic product where name="Microsoft Online Management Agent Installer" call uninstall
-    wmic product where name="Microsoft Intune" call uninstall
-    wmic product where name="Windows Endpoint Protection Management Components" call uninstall
-    wmic product where name="Windows Intune Notification Service" call uninstall
-    wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall
-    wmic product where name="Windows Online Management Policy Agent" call uninstall
-    wmic product where name="Windows Policy Platform" call uninstall
-    wmic product where name="Windows Security Client" call uninstall
-    wmic product where name="Windows Online Management Client" call uninstall
-    wmic product where name="Windows Online Management Client Service" call uninstall
-    wmic product where name="Windows Easy Assist v2" call uninstall
-    wmic product where name="Windows Intune Monitoring Agent" call uninstall
-    wmic product where name="Windows Intune Endpoint Protection Agent" call uninstall
-    wmic product where name="Windows Firewall Configuration Provider" call uninstall
-    wmic product where name="Windows Intune Center" call uninstall
-    wmic product where name="Windows Online Management Update Manager" call uninstall
-    wmic product where name="Windows Online Management Agent Installer" call uninstall
-    wmic product where name="Windows Intune" call uninstall
+```cmd
+wmic product where name="Microsoft Endpoint Protection Management Components" call uninstall
+wmic product where name="Microsoft Intune Notification Service" call uninstall
+wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall
+wmic product where name="Microsoft Online Management Policy Agent" call uninstall
+wmic product where name="Microsoft Policy Platform" call uninstall
+wmic product where name="Microsoft Security Client" call uninstall
+wmic product where name="Microsoft Online Management Client" call uninstall
+wmic product where name="Microsoft Online Management Client Service" call uninstall
+wmic product where name="Microsoft Easy Assist v2" call uninstall
+wmic product where name="Microsoft Intune Monitoring Agent" call uninstall
+wmic product where name="Windows Intune Endpoint Protection Agent" call uninstall
+wmic product where name="Windows Firewall Configuration Provider" call uninstall
+wmic product where name="Microsoft Intune Center" call uninstall
+wmic product where name="Microsoft Online Management Update Manager" call uninstall
+wmic product where name="Microsoft Online Management Agent Installer" call uninstall
+wmic product where name="Microsoft Intune" call uninstall
+wmic product where name="Windows Endpoint Protection Management Components" call uninstall
+wmic product where name="Windows Intune Notification Service" call uninstall
+wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall
+wmic product where name="Windows Online Management Policy Agent" call uninstall
+wmic product where name="Windows Policy Platform" call uninstall
+wmic product where name="Windows Security Client" call uninstall
+wmic product where name="Windows Online Management Client" call uninstall
+wmic product where name="Windows Online Management Client Service" call uninstall
+wmic product where name="Windows Easy Assist v2" call uninstall
+wmic product where name="Windows Intune Monitoring Agent" call uninstall
+wmic product where name="Windows Intune Endpoint Protection Agent" call uninstall
+wmic product where name="Windows Firewall Configuration Provider" call uninstall
+wmic product where name="Windows Intune Center" call uninstall
+wmic product where name="Windows Online Management Update Manager" call uninstall
+wmic product where name="Windows Online Management Agent Installer" call uninstall
+wmic product where name="Windows Intune" call uninstall
+```
 
 > [!TIP]
 > İstemci kaydı silindiğinde, etkilenen istemci için sunucu tarafında eski bir kayıt kalır. Kayıt silme işlemi zaman uyumsuzdur ve kaldırılacak dokuz aracı olduğundan tamamlanması 30 dakikaya kadar sürebilir.
@@ -259,7 +263,9 @@ Yükseltilmiş bir komut istemi kullanarak aşağıdaki komutlardan birini çal�
 
 Kayıt silme işlemi OnlineManagement klasörünü kaldırmaz. Kaldırma sonrasında 30 dakika bekleyin ve ardından bu komutu çalıştırın. Çok erken çalıştırırsanız, kaldırma işlemi bilinmeyen bir durumda kalabilir. Klasörü kaldırmak için yükseltilmiş bir komut istemi başlatın ve çalıştırın:
 
-    "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
+```cmd
+rd /s /q %ProgramFiles%\Microsoft\OnlineManagement
+```
 
 ## <a name="next-steps"></a>Sonraki adımlar
 [Intune yazılım istemcisi ile genel Windows bilgisayar yönetim görevleri](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
