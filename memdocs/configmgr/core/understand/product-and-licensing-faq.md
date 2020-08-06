@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1ce9024fa610c6af19eb40ccf0da662a3e99234f
-ms.sourcegitcommit: 01c1ca337e82c5e8e92153079ed89f79e20bde9e
+ms.openlocfilehash: 7c92423316f83841875aed2493442881bc3a1d74
+ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86157833"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87821606"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager dalları ve lisanslama hakkında sık sorulan sorular
 
@@ -58,7 +58,7 @@ Configuration Manager aşağıdaki planlara dahil edilir:
 - EMS E5
 - Microsoft 365 E3
 - Microsoft 365 E5
-- Microsoft 365 F1
+- Microsoft 365 F3 (eski adıyla F1 Microsoft 365)
 
 <!-- Sources:
 https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans
@@ -95,16 +95,16 @@ Ortak Yönetim Lisansı, Yazılım Güvencesine sahip müşterilerin kullanıcı
 |---------|---------|---------|
 |Windows 10 kaydı|Evet (yalnızca var olan ConfigMgr tarafından yönetilen cihazlar için)|Evet|
 |iOS, Android, macOS kaydı|Hayır|Evet|
-|Autopilot|Hayır|Evet|
+|Otomatik Pilot|Hayır|Evet|
 |Mobil uygulama yönetimi (MAM)|Hayır|Evet|
-|Koşullu erişim<br>(ek AADP1 gerekir)|Evet|Yes|
-|Cihaz profilleri|Evet|Yes|
-|Yazılım güncelleştirme yönetimi|Evet|Yes|
-|Sayım|Evet|Yes|
-|Uygulama yönetimi|Evet|Yes|
+|Koşullu erişim<br>(ek AADP1 gerekir)|Evet|Evet|
+|Cihaz profilleri|Evet|Evet|
+|Yazılım güncelleştirme yönetimi|Evet|Evet|
+|Envanter|Evet|Evet|
+|Uygulama yönetimi|Evet|Evet|
 |Uzaktan yardım<br>(TeamViewer lisansı gereklidir)|Evet|Evet|
-|Masaüstü Analizi<br>(Windows Abonelik lisansları gereklidir|Evet|YOK|
-|Kiracı ekleme|Evet|YOK|
+|Masaüstü Analizi<br>(Windows Abonelik lisansları gereklidir|Evet|Yok|
+|Kiracı ekleme|Evet|Yok|
 |Uç nokta analizi|Evet|Evet|
 
 Daha fazla bilgi için aşağıdaki makaleleri inceleyin:

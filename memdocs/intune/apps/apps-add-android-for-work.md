@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc8fb5b50475c523741128d64582be29d4bf5ffe
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: b8ce02a86236e390983b4e1ecca8d48d4767e49e
+ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262668"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87821640"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Intune ile Yönetilen Google Play uygulamalarını Android Kurumsal cihazlarına ekleme
 
@@ -175,8 +175,8 @@ Web bağlantıları, Microsoft Edge veya dağıtmayı seçtiğiniz başka bir ta
 Mağazadan bir uygulamayı onayladıysanız ve **uygulamalar** iş yükünde görmüyorsanız, şu şekilde bir anında eşitleme zorlayın:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-3. **Uygulamalar**  >  **kiracı yönetim**  >  **bağlayıcıları ve belirteçleri**  >  **yönetilen Google Play**seçin.
-5. **Yönetilen Google Play** bölmesinde **Yenile**’yi seçin.  
+3. **Kiracı Yönetimi**  >  **bağlayıcıları ve belirteçleri**  >  **yönetilen Google Play**seçin.
+5. **Yönetilen Google Play** bölmesinde **Eşitle**' yi seçin.  
     Bu sayfa son eşitlemenin zamanını ve durumunu güncelleştirir.
 6. Microsoft Endpoint Manager Yönetim Merkezi 'nde **uygulamalar**  >  **tüm uygulamalar**' ı seçin.  
     Yeni eklenen Yönetilen Google Play uygulaması görüntülenir.

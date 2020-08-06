@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46c58437fab66b0a4fd22ea8452856ca701e9eb7
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: d44da952be6d01daa19f7c8227976cfa46299c88
+ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546818"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87821657"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -68,9 +68,6 @@ Power BI şablon uygulamaları, Power BI iş ortaklarının çok az kodlamaya sa
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Uygulama yönetimi
-
-#### <a name="win32-app-installation-notifications-and-the-company-portal---7485945----"></a>Win32 uygulaması Yükleme bildirimleri ve Şirket Portalı<!-- 7485945  -->
-Son kullanıcılar artık [Microsoft Intune Web şirket portalı](https://portal.manage.microsoft.com/) gösterilen uygulamaların şirket portalı uygulama veya şirket portalı Web sitesi tarafından açılıp açılmayacağı konusunda karar verebilir. Bu seçenek yalnızca son kullanıcının yüklü Şirket Portalı uygulaması varsa ve bir Web Şirket Portalı uygulamasını tarayıcı dışında başlattığında kullanılabilir. 
 
 #### <a name="exchange-on-premises-connector-support---7138486----"></a>Exchange şirket Içi bağlayıcı desteği<!-- 7138486  -->
 Intune, 2007 (Temmuz) sürümünden itibaren Intune hizmetinden şirket Içi Exchange Bağlayıcı özelliği desteğini kaldırıyor. Etkin bağlayıcı içeren mevcut müşteriler şu anda geçerli işlevselliğe devam edebilir. Etkin Bağlayıcısı olmayan yeni müşteriler ve mevcut müşteriler, artık yeni bağlayıcılar oluşturamaz veya Intune 'dan Exchange ActiveSync (EAS) cihazlarını yönetemez. Bu müşteriler için, Microsoft şirket içi Exchange 'e erişimi korumak için Exchange [karma modern kimlik doğrulamasının (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) kullanılmasını önerir. HMA hem Intune Uygulama Koruması Ilkelerini (MAM olarak da bilinir) hem de şirket içi Exchange için Outlook Mobile aracılığıyla koşullu erişim imkanı sunar.
@@ -1098,7 +1095,7 @@ Genel önizleme olarak, Microsoft uç nokta yönetimi Yönetim Merkezi 'nde uç 
 Aşağıda, önizleme aşamasında olan yeni ilke türleri ve bunların kullanılabilir profil türleri verilmiştir:
 
 - **Virüsten koruma (Önizleme)**:
-  - macOS:
+  - MacOS
     - **Virüsten koruma** - [Mac IÇIN Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)'Yi yönetmek üzere MacOS için [Virüsten koruma ilkesi ayarlarını](../protect/antivirus-microsoft-defender-settings-macos.md) yönetin.
 
   - Windows 10 ve üzeri:
@@ -1114,12 +1111,12 @@ Aşağıda, önizleme aşamasında olan yeni ilke türleri ve bunların kullanı
   - **Windows Güvenlik deneyimi** -son kullanıcıların Microsoft Defender Güvenlik Merkezi 'nde görüntüleyebilecekleri Windows güvenlik ayarlarını ve aldıkları bildirimleri yönetin. Bu ayarlar, cihaz yapılandırma Endpoint Protection profili olarak kullanılabilenlerden değiştirilmez.
 
 - **Disk şifrelemesi (Önizleme)**:
-  - macOS:
+  - MacOS
     - **FileVault**
   - Windows 10 ve üzeri:
     - **BitLocker**
 - **Güvenlik Duvarı (Önizleme)**:
-  - macOS:
+  - MacOS
     - **macOS güvenlik duvarı**
   - Windows 10 ve üzeri:
     - **Microsoft Defender güvenlik duvarı**
