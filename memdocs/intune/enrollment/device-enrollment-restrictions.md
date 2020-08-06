@@ -43,16 +43,16 @@ Android kurumsal iş profili temel güvenliği (düzey 1) için aşağıdaki cih
 
 | Tür | Platform | Sürüm | Kişisel cihazlara izin verir |
 |--------|--------|--------|--------|
-| Android Kurumsal | İzin Ver | Android 5,0 ve üzeri.<p>Microsoft, en düşük Android ana sürümünün Microsoft uygulamaları için desteklenen Android sürümleriyle eşleşecek şekilde yapılandırılmasını önerir. Android kurumsal gereksinimleri olan OEM 'Ler ve cihazlar, geçerli sevkiyat sürümü + bir mektup yükseltmesi desteklemelidir.   Android, bilgi çalışanları için Android 8,0 ve üstünü öneriyor. Daha fazla bilgi için bkz. [Android Enterprise önerilen gereksinimleri](https://www.android.com/enterprise/recommended/requirements/). | Yes |
-| Android cihaz yöneticisi| Blok | Tüm sürümler | Yes |
+| Android Kurumsal | İzin Ver | Android 5,0 ve üzeri.<p>Microsoft, en düşük Android ana sürümünün Microsoft uygulamaları için desteklenen Android sürümleriyle eşleşecek şekilde yapılandırılmasını önerir. Android kurumsal gereksinimleri olan OEM 'Ler ve cihazlar, geçerli sevkiyat sürümü + bir mektup yükseltmesi desteklemelidir.   Android, bilgi çalışanları için Android 8,0 ve üstünü öneriyor. Daha fazla bilgi için bkz. [Android Enterprise önerilen gereksinimleri](https://www.android.com/enterprise/recommended/requirements/). | Evet |
+| Android cihaz yöneticisi| Blok | Tüm sürümler | Evet |
 
 ## <a name="work-profile-high-level-3-security-restrictions"></a>İş profili yüksek (düzey 3) güvenlik kısıtlamaları
 Android kurumsal iş profili yüksek güvenlik (düzey 3) için aşağıdaki cihaz kısıtlamalarının uygulanması gerekir:
 
 | Tür | Platform | Sürüm | Kişisel cihazlara izin verir |
 |--------|--------|--------|--------|
-| Android Kurumsal | İzin Ver | Android 8,0 ve üzeri | Yes |
-| Android cihaz yöneticisi| Blok | Tüm sürümler | Yes |
+| Android Kurumsal | İzin Ver | Android 8,0 ve üzeri | Evet |
+| Android cihaz yöneticisi| Blok | Tüm sürümler | Evet |
 
 ## <a name="fully-managed-security-restrictions"></a>Tam olarak yönetilen güvenlik kısıtlamaları
 Kuruluşun, [tam olarak yönetilen cihazları kaydetmeyi](android-fully-managed-enroll.md#enroll-the-fully-managed-devices)Inceleyerek Android kurumsal tam olarak yönetilen cihaz kaydını desteklediğinden emin olun. 
