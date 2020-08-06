@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8405ef9c8d83583fe2ceb5da668ccfd79d23a39a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b91751e9879d06b40bdd9518926759da2331115f
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79323790"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758270"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Mobil uygulama yönetimi sorunlarını giderme
 
@@ -86,7 +86,7 @@ Hata iletisi veya iletişim kutusu | Nedeni | Düzeltme |
 -- | --- | --- |
 **Uygulama ayarlanmadı**: Bu uygulama, kullanabilmeniz için ayarlanmamış. Yardım için BT yöneticinize başvurun. | Uygulama için gerekli bir uygulama koruma ilkesi algılanamadı. |Kullanıcının güvenlik grubuna bir iOS uygulama koruma ilkesi dağıtıldığından ve bu uygulamayı hedeflediğinden emin olun.
 **Intune Managed Browser'a Hoş Geldiniz**: Bu uygulama, Microsoft Intune tarafından yönetildiğinde en iyi şekilde çalışır. Bu uygulamayı web'de gezinmek için her zaman kullanabilirsiniz ve uygulama Microsoft Intune tarafından yönetildiğinde ek veri koruma özelliklerine erişiminiz olur. | Intune Managed Browser uygulaması için gerekli uygulama koruma ilkesi algılanamadı. <br><br>Kullanıcı web’de gezinmek için uygulamayı kullanmaya devam edebilir ancak uygulama Intune tarafından yönetilmez. | Kullanıcının güvenlik grubuna bir iOS uygulama koruma ilkesi dağıtıldığından ve Intune Managed Browser uygulamasını hedeflediğinden emin olun.
-**Oturum Açma Başarısız**: Şu an oturumunuzu açamıyoruz. Lütfen daha sonra tekrar deneyin. | Kullanıcı iş veya okul hesabıyla oturum açmayı denedikten sonra MAM hizmetine kaydedilemiyor. | Kullanıcının güvenlik grubuna bir iOS uygulama koruma ilkesi dağıtıldığından ve bu uygulamayı hedeflediğinden emin olun.
+**Oturum Açma Başarısız**: Şu an oturumunuzu açamıyoruz. Lütfen daha sonra yeniden deneyin. | Kullanıcı iş veya okul hesabıyla oturum açmayı denedikten sonra MAM hizmetine kaydedilemiyor. | Kullanıcının güvenlik grubuna bir iOS uygulama koruma ilkesi dağıtıldığından ve bu uygulamayı hedeflediğinden emin olun.
 **Hesap Ayarlanmadı**: Kuruluşunuz hesabınızı iş veya okul verilerine erişecek şekilde ayarlamadı. Yardım için lütfen BT yöneticinizle görüşün. | Kullanıcı hesabının Intune A Direct lisansı yok. | Kullanıcı hesabının [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com)bir Intune lisansı atanmış olduğundan emin olun.
 **Cihaz Uyumlu Değil**: Bu uygulama, cihazınıza jailbreak uygulandığı içi kullanılamaz. Yardım için BT yöneticinize başvurun. | Intune, kullanıcının jailbreak uygulanmış bir cihaz kullandığını algıladı. | Cihazı fabrika ayarlarına sıfırlayın. Apple destek sitesindeki [bu yönergeleri](https://support.apple.com/HT201274) izleyin.
 **İnternet Bağlantısı Gerekli**: Bu uygulamayı kullanabileceğinizi doğrulamak için İnternet'e bağlı olmalısınız. | Cihaz, İnternet'e bağlı değil. | Cihazı bir WiFi veya Veri ağına bağlayın.
@@ -102,7 +102,7 @@ Hata iletisi veya iletişim kutusu | Nedeni | Düzeltme |
 -- | --- | --- |
 **Uygulama ayarlanmadı**: Bu uygulama, kullanabilmeniz için ayarlanmamış. Yardım için BT yöneticinize başvurun. | Uygulama için gerekli bir uygulama koruma ilkesi algılanamadı. |Kullanıcının güvenlik grubuna bir Android uygulama koruma ilkesi dağıtıldığından ve bu uygulamayı hedeflediğinden emin olun.
 **Uygulama başlatma başarısız oldu**: Uygulamanız başlatılırken bir sorun oluştu. Uygulamayı ya da Intune Şirket Portalı uygulamasını güncelleştirmeyi deneyin. Yardıma ihtiyacınız olursa BT yöneticinizle iletişime geçin. | Intune uygulama için uygulama koruma ilkesinin geçerli olduğunu algıladı, ancak uygulama MAM başlatılırken kilitleniyor. | Uygulama sürümünün güncel olduğundan emin olun. <br><br> Intune Şirket Portalı uygulamasının cihazda yüklü ve güncel olduğundan emin olun. <br><br> Hata devam ederse, günlükleri Intune 'a göndermek veya bir [destek bileti](../fundamentals/get-support.md#create-an-online-support-ticket)oluşturmak için şirket portalı uygulamasını kullanın.
-**Uygulama bulunamadı**: Bu cihazda, kuruluşunuzun bu içeriği açmasına izin verdiği herhangi bir uygulama yok. Yardım için BT yöneticinize başvurun. | Kullanıcı iş veya okul hesabını başka bir uygulamayla açmayı denedi ancak Intune verileri açma izni olan başka yönetilen uygulama bulamıyor. | Kullanıcının güvenliğine bir Android uygulama koruma ilkesi dağıtıldığından ve bu ilkenin söz konusu veriyi açabilen en azından başka bir MAM özellikli uygulamayı hedeflediğinden emin olun.
+**Uygulama bulunamadı**: Bu cihazda, kuruluşunuzun bu içeriği açmasına izin verdiği herhangi bir uygulama yok. Yardım için BT yöneticinize başvurun. | Kullanıcı iş veya okul hesabını başka bir uygulamayla açmayı denedi ancak Intune verileri açma izni olan başka yönetilen uygulama bulamıyor. | Kullanıcının güvenlik grubuna bir Android uygulama koruma ilkesi dağıtıldığından ve söz konusu verileri açan en az bir MAM özellikli uygulamayı hedeflediğinden emin olun.
 **Oturum açma başarısız oldu**: Oturum açmayı yeniden deneyin. Sorun devam ederse yardım için BT yöneticinize başvurun. | Kullanıcının oturum açmayı denediği hesabın kimlik doğrulaması başarısız oldu. | Kullanıcının Intune MAM hizmetine zaten kayıtlı bir iş veya okul hesabıyla oturum açtığından emin olun (Bu uygulamada başarıyla oturum açılan ilk iş veya okul hesabı). <br><br> Uygulamanın verilerini temizleyin. <br><br> Uygulama sürümünün güncel olduğundan emin olun. <br><br> Şirket Portalı sürümünün güncel olduğundan emin olun.
 **İnternet bağlantısı gerekli**: Bu uygulamayı kullanbildiğinizi doğrulamak için internet 'e bağlı olmanız gerekir. | Cihaz, İnternet'e bağlı değil. | Cihazı bir WiFi veya Veri ağına bağlayın.
 **Cihaz uyumlu değil**: Bu uygulama, cihazınıza kök erişim izni verildiğinden kullanılamaz. Yardım için BT yöneticinize başvurun. | Intune, kullanıcının kök erişim izni verilmiş bir cihaz kullandığını algılandı. | Cihazı fabrika ayarlarına sıfırlayın.

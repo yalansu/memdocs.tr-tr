@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/04/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d979001f159b427314f8bc53788ccce0acd13d11
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: 33977676b4c144573965477154a7939f6061280a
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365551"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758355"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune Şirket Portalı uygulamaları, Şirket Portalı Web sitesini ve Intune uygulamasını özelleştirme
 
@@ -105,11 +105,13 @@ Aşağıdaki tabloda kayda özgü yapılandırma ayrıntıları verilmiştir:
 
 > [!IMPORTANT]
 > Aşağıdaki ayarlar, [otomatik cihaz kaydına](../enrollment/device-enrollment-program-enroll-ios.md)kaydolmak üzere yapılandırılmış IOS/ıpados cihazlarına uygulanmaz. Bu ayarın nasıl yapılandırıldığına bakılmaksızın, otomatik cihaz kaydına kaydolmak üzere yapılandırılan iOS/ıpados cihazları, kullanıma hazır akış sırasında kaydedilir ve kullanıcıların Şirket Portalı başlatırken oturum açması istenir.
+> 
+> Aşağıdaki ayarlar, [Samsung KNOX mobil kaydı](../enrollment/android-samsung-knox-mobile-enroll.md) (KME) Ile yapılandırılmış Android cihazları için geçerlidir. Bir cihaz KME için yapılandırıldıysa ve cihaz kaydı kullanılamıyor olarak ayarlandıysa, cihaz kullanıma hazır akış sırasında kayıt yapamaz.
 
 |    Cihaz kayıt seçenekleri    |    Açıklama    |    Denetim listesi istemleri    |    Bildirim    |    Cihaz ayrıntıları durumu    |    Uygulama ayrıntıları durumu (kayıt gerektiren bir uygulama)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    Kullanılabilir, istemlerle    |    Tüm olası konumlara kaydolmak için istemlerle ilgili varsayılan deneyim.    |    Yes    |    Yes    |    Yes    |    Yes    |
-|    Kullanılabilir, istem yok    |    Kullanıcı, geçerli cihazlarından veya kayıt gerektiren uygulamalardan cihaz ayrıntıları ' nda durum aracılığıyla kaydedebilir.    |    Hayır    |    Hayır    |    Evet    |    Yes    |
+|    Kullanılabilir, istem yok    |    Kullanıcı, geçerli cihazlarından veya kayıt gerektiren uygulamalardan cihaz ayrıntıları ' nda durum aracılığıyla kaydedebilir.    |    Hayır    |    Hayır    |    Yes    |    Yes    |
 |    Kullanılamaz    |    Kullanıcıların kaydolmasına yol yoktur.    |    Hayır    |    Hayır    |    Hayır    |    Hayır    |
 
 ### <a name="privacy"></a>Gizlilik
@@ -194,7 +196,7 @@ Windows Şirket Portalı uygulamasında aşağıdaki kısayollar kullanılabilir
 |  | Giriş Sayfası | Alt+H |
 |  | Tüm uygulamalar | Alt+A |
 |  | Yüklenen uygulamalar | Alt+I |
-|  | Geri bildirim gönder | Alt+F |
+|  | Geri bildirim gönderme | Alt+F |
 |  | Profilim | Alt+U |
 |  | Ayarlar | Alt+T |
 | Giriş - Cihaz kutucuğu | Rename | F2 |

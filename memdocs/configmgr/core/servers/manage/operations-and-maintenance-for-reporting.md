@@ -10,12 +10,12 @@ ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 5e154f2859a7541ac8f67b8588da7dfb8877c940
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 414d1138a7682d6b9acbc7731035fff1842a1fe7
+ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713719"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87815421"
 ---
 # <a name="operations-and-maintenance-for-reporting-in-configuration-manager"></a>Configuration Manager raporlama için işlemler ve bakım
 
@@ -33,7 +33,7 @@ Configuration Manager raporlarını SQL Server Reporting Services depolar. Rapor
 Bir raporu çalıştırdığınızda, rapor başlığını, açıklamasını ve kategorisini yerel işletim sisteminin dilinde görüntüler. Daha fazla bilgi için bkz. [raporlar Için diller](configuring-reporting.md#-languages-for-reports).
 
 > [!NOTE]  
-> Rapor Yöneticisi, Web tabanlı bir rapor erişim ve yönetim aracıdır. Bunu, HTTPS bağlantısı üzerinden tek bir rapor sunucusu örneğini yönetmek için kullanabilirsiniz. İşletimsel görevler için Rapor Yöneticisi kullanın: raporları görüntüleyin, rapor özelliklerini değiştirin ve ilişkili rapor aboneliklerini yönetin. Bu makalede, Rapor Yöneticisi rapor görüntüleme ve rapor özelliklerini değiştirme adımları sağlanmaktadır. Rapor Yöneticisi diğer seçenekler hakkında daha fazla bilgi için bkz. [Rapor Yöneticisi nedir?](https://docs.microsoft.com/sql/reporting-services/report-manager-ssrs-native-mode)
+> Rapor Yöneticisi, Web tabanlı bir rapor erişim ve yönetim aracıdır. Bunu, HTTPS bağlantısı üzerinden tek bir rapor sunucusu örneğini yönetmek için kullanabilirsiniz. İşletimsel görevler için Rapor Yöneticisi kullanın: raporları görüntüleyin, rapor özelliklerini değiştirin ve ilişkili rapor aboneliklerini yönetin. Bu makalede, Rapor Yöneticisi rapor görüntüleme ve rapor özelliklerini değiştirme adımları sağlanmaktadır. Rapor Yöneticisi diğer seçenekler hakkında daha fazla bilgi için bkz. [Rapor Yöneticisi nedir?](https://docs.microsoft.com/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server)
 
 Bir Configuration Manager raporu çalıştırmak için aşağıdaki yordamları kullanın.
 
@@ -50,7 +50,7 @@ Bir Configuration Manager raporu çalıştırmak için aşağıdaki yordamları 
 
 ### <a name="run-a-report-in-a-web-browser"></a>Bir raporu Web tarayıcısında çalıştırma
 
-1. Web tarayıcınızda Rapor Yöneticisi URL 'sine gidin, örneğin, `https://Server1/Reports`. Reporting Services Configuration Manager **Rapor Yöneticisi URL 'si** sayfasında bu adresi bulun.
+1. Web tarayıcınızda Rapor Yöneticisi URL 'sine gidin, örneğin, `https://Server1/Reports` . Reporting Services Configuration Manager **Rapor Yöneticisi URL 'si** sayfasında bu adresi bulun.
 
 1. Rapor Yöneticisi, Configuration Manager için rapor klasörünü (örneğin, **ConfigMgr_CAS**) seçin.
 
@@ -67,7 +67,7 @@ Rapor özellikleri rapor adı ve açıklamasını içerir. Configuration Manager
 
 Özellikleri değiştirmek için Rapor Yöneticisi kullanın:
 
-1. Web tarayıcınızda Rapor Yöneticisi URL 'sine gidin, örneğin, `https://Server1/Reports`.
+1. Web tarayıcınızda Rapor Yöneticisi URL 'sine gidin, örneğin, `https://Server1/Reports` .
 
 1. Rapor Yöneticisi, Configuration Manager için rapor klasörünü (örneğin, **ConfigMgr_CAS**) seçin.
 
@@ -84,7 +84,7 @@ Mevcut bir Configuration Manager rapor, istediğiniz bilgileri almadığında, R
 Bir raporu düzenlemek için, rapordaki belirli nesneler üzerinde **site değiştirme** Iznine ve **rapor değiştirme** izinlerine sahip olmanız gerekir.
 
 > [!IMPORTANT]
-> Site güncelleştirmeleri yerleşik raporları korur. Bir standart raporu değiştirirseniz, site güncelleştirildiğinde, raporu alt çizgi öneki (`_`) ile yeniden adlandırır. Bu davranış, site güncelleştirmesinin standart rapor tarafından değiştirilen raporun üzerine yazılmayacağı şekilde emin olur.
+> Site güncelleştirmeleri yerleşik raporları korur. Bir standart raporu değiştirirseniz, site güncelleştirildiğinde, raporu alt çizgi öneki () ile yeniden adlandırır `_` . Bu davranış, site güncelleştirmesinin standart rapor tarafından değiştirilen raporun üzerine yazılmayacağı şekilde emin olur.
 >
 > Önceden tanımlanmış raporları değiştirirseniz, bir site güncelleştirmesini yüklemeden önce özel raporlarınızı yedekleyin. Güncelleştirmeden sonra raporu Raporlama Hizmetleri 'ne geri yükleyin. Önceden tanımlanmış bir raporda önemli değişiklikler yaparsanız bunun yerine yeni bir rapor oluşturun. Bir siteyi yükseltmeden önce oluşturduğunuz yeni raporların üzerine yazılmaz.
 
@@ -141,9 +141,9 @@ Model tabanlı bir Configuration Manager raporu oluşturmak için aşağıdaki y
 
 ### <a name="create-a-sql-based-report"></a>SQL tabanlı rapor oluşturma
 
-Özel rapor için bir SQL bildirimi oluşturduğunuzda SQL Server tablolarına doğrudan başvurmayın. Site veritabanından desteklenen raporlama SQL Server görünümlerine her zaman başvurun. Bu görünümlerde ile `v_`başlayan adlar vardır. Daha fazla bilgi için bkz. [Configuration Manager SQL Server görünümlerini kullanarak özel raporlar oluşturma](../../../develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views.md).
+Özel rapor için bir SQL bildirimi oluşturduğunuzda SQL Server tablolarına doğrudan başvurmayın. Site veritabanından desteklenen raporlama SQL Server görünümlerine her zaman başvurun. Bu görünümlerde ile başlayan adlar vardır `v_` . Daha fazla bilgi için bkz. [Configuration Manager SQL Server görünümlerini kullanarak özel raporlar oluşturma](../../../develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views.md).
 
-Ayrıca, site veritabanından ortak saklı yordamlara de başvurabilirsiniz. Bu saklı yordamların ile `sp_`başlayan adları vardır.
+Ayrıca, site veritabanından ortak saklı yordamlara de başvurabilirsiniz. Bu saklı yordamların ile başlayan adları vardır `sp_` .
 
 SQL tabanlı bir Configuration Manager raporu oluşturmak için aşağıdaki yordamı kullanın.
 
@@ -181,7 +181,7 @@ SQL Server Reporting Services ' de rapor abonelikleri, belirtilen raporların e-
 
 Bir dosya paylaşımında rapor teslim etmek üzere bir rapor aboneliği oluşturduğunuzda, Raporlama Hizmetleri raporu belirtilen biçimde, belirttiğiniz dosya paylaşımında kopyalar. Tek seferde yalnızca bir rapor için abone olabilir ve teslim isteyebilirsiniz.
 
-Bir dosya paylaşımının kullanıldığı bir abonelik oluşturduğunuzda, hedef olarak var olan bir paylaşılan klasör belirtin. Rapor sunucusu, klasörü veya ağ payını oluşturmaz. Bir abonelikte hedef klasörü belirttiğinizde, bir UNC yolu kullanın ve klasör yolunda sonunda ters eğik çizgi (`\`) eklemeyin. Aşağıdaki örnek, hedef klasör için geçerli bir UNC yoludur: `\\server\reportfiles\operations\2001`.
+Bir dosya paylaşımının kullanıldığı bir abonelik oluşturduğunuzda, hedef olarak var olan bir paylaşılan klasör belirtin. Rapor sunucusu, klasörü veya ağ payını oluşturmaz. Bir abonelikte hedef klasörü belirttiğinizde, bir UNC yolu kullanın ve klasör yolunda sonunda ters eğik çizgi () eklemeyin `\` . Aşağıdaki örnek, hedef klasör için geçerli bir UNC yoludur: `\\server\reportfiles\operations\2001` .
 
 > [!NOTE]
 > Aboneliği oluştururken, bir Kullanıcı adı ve parola belirtirsiniz. Bu hesabın hedef klasöre **yazma** izinleri olan bu paylaşıma erişmesi gerekir.
@@ -286,7 +286,7 @@ E-posta kullanarak rapor teslim etmek üzere bir rapor aboneliği oluşturmak i�
     - **Kime**: alıcı olarak geçerli bir e-posta adresi belirtin.
 
         > [!NOTE]
-        > Birden çok alıcı girmek için her e-posta adresini noktalı virgülle (`;`) ayırın.
+        > Birden çok alıcı girmek için her e-posta adresini noktalı virgülle ( `;` ) ayırın.
 
     - **Bilgi**: isteğe bağlı olarak, bu raporun bir kopyasını almak için bir e-posta adresi belirtin.
 

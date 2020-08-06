@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 67d86850dc0440481916984af8635d9e005044c6
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 742cd1e86ac0bff6563c0d3ee4edce7324629480
+ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428614"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87815472"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Öğretici: yeni internet tabanlı cihazlar için ortak yönetimi etkinleştirme
 
@@ -40,7 +40,7 @@ Bu öğreticide, Windows 10 cihazlarının hem Azure Active Directory (AD) hem d
 > * Configuration Manager içinde ortak yönetimi etkinleştirme
 > * Intune 'U Configuration Manager istemcisini yükleyecek şekilde yapılandırma
 
-## <a name="prerequisites"></a>Ön koşullar  
+## <a name="prerequisites"></a>Önkoşullar  
 
 ### <a name="azure-services-and-environment"></a>Azure hizmetleri ve ortamı
 
@@ -96,14 +96,14 @@ Bu sertifika hakkında:
 
 ### <a name="identify-a-unique-name-for-your-cloud-management-gateway-in-azure"></a>Azure 'da bulut yönetimi ağ geçidiniz için benzersiz bir ad belirler
 
-CMG sunucusu kimlik doğrulama sertifikasını istediğinizde, Azure 'da *bulut hizmetinizi (klasik)* tanımlamak için benzersiz bir ad olması gerektiğini belirtirsiniz. Varsayılan olarak, Azure genel bulutu *cloudapp.net*kullanır ve cmg, cloudapp.net etki alanı içinde * \< YourUniqueDnsName>. cloudapp.net*olarak barındırılır.  
+CMG sunucusu kimlik doğrulama sertifikasını istediğinizde, Azure 'da *bulut hizmetinizi (klasik)* tanımlamak için benzersiz bir ad olması gerektiğini belirtirsiniz. Varsayılan olarak, Azure genel bulutu *cloudapp.net*kullanır ve cmg, cloudapp.net etki alanı içinde * \<YourUniqueDnsName> . cloudapp.net*olarak barındırılır.  
 
 > [!TIP]  
 > Bu öğreticide, **CMG sunucusu kimlik doğrulama sertifikası** *contoso.com*ile biten bir FQDN kullanır.  CMG 'yi oluşturduktan sonra, kuruluşunuzun ortak DNS 'si içinde kurallı bir ad kaydı (CNAME) yapılandıracağız. Bu kayıt, CMG için ortak sertifikada kullandığımız adla eşleşen bir diğer ad oluşturur.  
 
 Genel sertifikanızı girmeden önce, kullanmak istediğiniz adı Azure 'da bulabilirsiniz. Hizmeti doğrudan Azure 'da oluşturmazsınız. Bunun yerine, isteğiniz ortak sertifikada belirtilen ad, CMG 'yi yüklerken bulut hizmetini oluşturmak için Configuration Manager tarafından kullanılır.  
 
-1. [Microsoft Azure Portal](https://portal.azure.com/)oturum açın.  
+1. [Microsoft Azure portalda](https://portal.azure.com/) oturum açın.  
 
 2. **Kaynak oluştur**' u seçin, **işlem** kategorisini seçin ve ardından **bulut hizmeti**' ni seçin. Bulut hizmeti (klasik) sayfası açılır.
 
@@ -125,7 +125,9 @@ Bir CSR oluşturduğunuzda sürüm 2 anahtar sağlayıcısı türü isteyin. Yal
 > [!TIP]  
 > CMG 'yi dağıtırken aynı anda bir bulut dağıtım noktası (CDP) de yükleyeceğiz. Varsayılan olarak, bir CMG dağıttığınızda, **CMG 'nin bulut dağıtım noktası olarak çalışmasına Izin ver ve Azure Storage 'dan içerik** sunma seçeneği seçilidir. Sunucu üzerindeki CDP 'yi CMG ile birlikte bulmak, CDP 'yi desteklemeye yönelik ayrı sertifikalara ve yapılandırmalara gereksinimi ortadan kaldırır. CDP ortak yönetimi kullanmak için gerekli olmamasına rağmen, çoğu ortamda faydalıdır.  
 >
-> Ortak yönetim için ek bulut dağıtım noktaları kullanacaksanız, her ek sunucu için ayrı sertifikalar istemeniz gerekir. CDP için ortak bir sertifika istemek üzere, bulut yönetimi ağ geçidi CSR için aynı ayrıntıları kullanın. Yalnızca ortak adı, her CDP için benzersiz olacak şekilde değiştirmeniz gerekir.  
+> Ek, ayrı bir CDPs kullanıyorsanız, her ek CDP için ayrı sertifikalar istemeniz gerekir. Bir CDP için ortak bir sertifika istemek üzere, bulut yönetimi ağ geçidi CSR 'si için aynı ayrıntıları kullanın. Yalnızca ortak adı, her CDP için benzersiz olacak şekilde değiştirmeniz gerekir.
+>
+> Ek, ayrı bir CDP kullanılması kullanım dışıdır ve artık önerilmez. Daha fazla bilgi için bkz. [kullanımdan kaldırılan özellikler](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).
 
 #### <a name="details-for-the-cloud-management-gateway-csr"></a>Bulut yönetimi ağ geçidi CSR ayrıntıları
 
@@ -160,7 +162,7 @@ Ortak sertifika sağlayıcıları genellikle sertifikanın içeri aktarılması 
 
 6. **Sertifika deposu sayfasında**, sertifika **türüne bağlı olarak sertifika deposunu otomatik olarak Seç**' i seçin ve ardından **İleri**' yi seçin.  
 
-7. **Son**' u seçin.
+7. **Son**’u seçin.
 
 ### <a name="export-the-certificate"></a>Sertifikayı dışarı aktarma
 
@@ -270,7 +272,7 @@ Azure 'da hizmet olarak bir bulut yönetimi ağ geçidi yüklemek için bu yorda
   
    3. Azure aboneliğinizde **oturum açın** . Configuration Manager, Configuration Manager için Azure bulut hizmetleri 'ni etkinleştirdiğinizde yapılandırdığınız bilgilere göre ek bilgiler doldurur.  
 
-   Devam etmek için **İleri**’yi seçin.  
+   Devam etmek için **İleri** seçeneğini belirleyin.  
 
 3. **Ayarlar** sayfasında, CMG sunucusu kimlik doğrulama sertifikasını içeri aktardıktan sonra, verdiğiniz dosya olan **Configmgrcloudmgserver. pfx**adlı dosyayı seçin. Parolayı belirttikten sonra,. pfx Sertifika dosyasındaki ayrıntılara göre **hizmet adı** ve **dağıtım adı** otomatik olarak doldurulur.
 
@@ -284,7 +286,7 @@ Azure 'da hizmet olarak bir bulut yönetimi ağ geçidi yüklemek için bu yorda
 
 8. **CMG 'nin bulut dağıtım noktası olarak çalışmasına Izin ver** onay kutusunu etkinleştirin ve CMG ile bir bulut dağıtım noktası dağıtmak istiyorsanız Azure Storage 'dan içerik sunar.
 
-9. Devam etmek için **İleri**’yi seçin.
+9. Devam etmek için **İleri** seçeneğini belirleyin.
 
 10. **Uyarı** sayfasındaki değerleri gözden geçirin ve ardından **İleri**' yi seçin.
 
@@ -327,7 +329,7 @@ Siteyi gelişmiş HTTP 'yi destekleyecek şekilde yapılandırın.
 
 5. **Bulut yönetimi ağ geçidi bağlantı noktasını** seçin ve ardından devam etmek için **İleri** ' yi seçin.  
 
-6. **Bulut yönetimi ağ geçidi bağlantı noktası** sayfasındaki varsayılan seçimleri gözden geçirin ve doğru CMG 'nin seçili olduğundan emin olun. Birden çok bulut yönetimi ağ geçidine sahipseniz, farklı bir CMG belirtmek için açılan listeyi kullanabilirsiniz. Ayrıca, yükleme sırasında CMG 'yi de değiştirebilirsiniz. Devam etmek için **İleri**’yi seçin.
+6. **Bulut yönetimi ağ geçidi bağlantı noktası** sayfasındaki varsayılan seçimleri gözden geçirin ve doğru CMG 'nin seçili olduğundan emin olun. Birden çok bulut yönetimi ağ geçidine sahipseniz, farklı bir CMG belirtmek için açılan listeyi kullanabilirsiniz. Ayrıca, yükleme sırasında CMG 'yi de değiştirebilirsiniz. Devam etmek için **İleri** seçeneğini belirleyin.
 
 7. Yüklemeyi başlatmak için **İleri** ' yi seçin ve ardından sonuçları tamamlama sayfasında görüntüleyin.  Bağlantı noktasının yüklenmesini gerçekleştirmek için **Kapat** ' ı seçin.
 
@@ -387,15 +389,15 @@ Daha sonra, daha önce yönetilmeyen bir Windows 10 cihazı Intune 'a kaydoldukt
 
 2. Uygulama türü için, **diğer**bölümünde **iş kolu uygulaması** ' nı seçin.
 
-3. **Uygulama paketi dosyası**için, **CCMSetup. msi**Configuration Manager dosyasının konumuna gidin ve ardından **Aç > Tamam**' ı seçin.
-Örneğin, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup.msi*
+3. **Uygulama paketi dosyası**için **ccmsetup.msi**Configuration Manager dosyanın konumuna gidin ve ardından **Aç > Tamam**' ı seçin.
+Örneğin, *C:\Program Files\Microsoft yapılandırma Manager\bin\i386\ccmsetup.msi*
 
 4. **Uygulama bilgileri**' ni seçin ve ardından aşağıdaki ayrıntıları belirtin:
    - **Açıklama**: Configuration Manager istemci  
 
    - **Yayımcı**: Microsoft  
 
-   - **Komut satırı bağımsız değişkenleri**: * \< **ccmsetupcmd** komut satırını belirtin. * *Ortak yönetim yapılandırma sihirbazının etkinleştirme sayfasından kaydettiğiniz komut satırını kullanabilirsiniz. Bu komut satırı, bulut hizmetinizin adlarını ve cihazların Configuration Manager istemci yazılımını yüklemesini sağlayan ek değerleri içerir. >*  
+   - **Komut satırı bağımsız değişkenleri**:*\<Specify the **CCMSETUPCMD** command line. You can use the command line you saved from the* Enablement *page of the Co-management Configuration Wizard. This command line includes the names of your cloud service and additional values that enable devices to install the Configuration Manager client software.>*  
 
      Komut satırı yapısı, yalnızca CCMSETUPCMD ve Smssitekodu parametreleri kullanılarak bu örneğe benzemelidir:  
 
@@ -414,7 +416,7 @@ Aşağıdaki yordam, önceki yordamda oluşturduğunuz Configuration Manager ist
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://endpoint.microsoft.com)oturum açın. **Uygulamalar**  >  **tüm uygulamalar** ' ı seçin ve ardından Configuration Manager istemcisini dağıtmak için oluşturduğunuz uygulamayı **ConfigMgr istemci kurulumu önyüklemesi**' ni seçin.  
 
-2. **Özellikler** ' e tıklayın, ardından **atamalar**için **düzenleyin** . Ortak yönetime katılmasını istediğiniz kullanıcıların ve cihazların bulunduğu Azure Active Directory (AD) gruplarını ayarlamak için **gerekli** atamalar altında **Grup Ekle** ' yi seçin.  
+2. **Özellikler** ' i seçin ve **atamalar**için **düzenleyin** . Ortak yönetime katılmasını istediğiniz kullanıcıların ve cihazların bulunduğu Azure Active Directory (AD) gruplarını ayarlamak için **gerekli** atamalar altında **Grup Ekle** ' yi seçin.  
 
 3. **Gözden geçir + kaydet** ' i seçin ve ardından yapılandırmayı **kaydedin** .
 Uygulama artık sizin atadığınız kullanıcılar ve cihazlar için gereklidir. Uygulama bir cihaza Configuration Manager istemcisini yükledikten sonra ortak yönetim tarafından yönetilir.
