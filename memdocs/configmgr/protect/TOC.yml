@@ -56,8 +56,10 @@
               href: deploy-use/endpoint-antimalware-policies.md
             - name: İstemciyi yapılandırma
               href: deploy-use/endpoint-protection-configure-client.md
-            - name: Tek başına istemcide Endpoint Protection yapılandırması
+            - name: Endpoint Protection’ı tek başına istemcide yapılandırma
               href: deploy-use/endpoint-protection-configure-standalone-client.md
+            - name: Grup İlkelerini kullanarak Endpoint Protection yönetme
+              href: deploy-use/endpoint-protection-group-policies.md
         - name: Windows Güvenlik Duvarı ilkeleri
           href: deploy-use/create-windows-firewall-policies.md
         - name: Microsoft Defender Gelişmiş Tehdit Koruması

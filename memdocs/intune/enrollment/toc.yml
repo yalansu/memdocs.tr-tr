@@ -121,6 +121,8 @@
       items:
         - name: Otomatik Cihaz Kaydı
           href: device-enrollment-program-enroll-macos.md
+        - name: macOS cihazlar için Doğrudan Kayıt Anlaşması
+          href: device-enrollment-direct-enroll-macos.md
     - name: Eksik kayıt raporu
       href: enrollment-report-company-portal-abandon.md
     - name: Kayıt sorunlarını giderme
