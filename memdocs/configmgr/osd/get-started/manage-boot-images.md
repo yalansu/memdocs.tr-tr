@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4403c8d0c57fba8fb63e3df729fb8a48ff123362
-ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
+ms.openlocfilehash: 76e0fd3ad8ceaecb43d2a61c3abe15accda5e5d8
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732882"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912379"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Configuration Manager ile önyükleme görüntülerini yönetme
 
@@ -80,8 +80,8 @@ Bir önyükleme görüntüsü, bir sitede yüklü olan farklı bir Windows ADK s
 
 Site yüklemesi sırasında Configuration Manager, bir WinPE sürümünü temel alan önyükleme görüntülerini Windows ADK 'nin desteklenen sürümünden otomatik olarak ekler. Configuration Manager sürümüne bağlı olarak, farklı bir WinPE sürümünü temel alan önyükleme görüntülerini Windows ADK 'nin desteklenen sürümünden ekleyebilirsiniz. Desteklenmeyen bir WinPE sürümünü içeren bir önyükleme görüntüsü eklemeye çalıştığınızda bir hata oluşur. Aşağıdaki liste, şu anda desteklenen Windows ADK ve WinPE sürümleridir:
 
-|  |  |
-|---------|---------|
+| Windows türü | Desteklenen sürümler |
+|--------------|--------------------|
 | Windows ADK sürümü | Windows 10 için Windows ADK |
 | Configuration Manager konsolundan özelleştirilebilen önyükleme görüntüleri için Windows PE sürümleri | Windows PE 10 |
 | Configuration Manager konsolundan *özelleştirilemeyen* önyükleme görüntüleri Için desteklenen Windows PE sürümleri | -Windows PE 3,1<sup>[Note 1](#bkmk_note1)</sup> <br> -Windows PE 5 |
@@ -105,7 +105,7 @@ Site yüklemesi sırasında Configuration Manager, bir WinPE sürümünü temel 
 
 3. **Veri kaynağı** sayfasında, aşağıdaki seçenekleri belirtin:  
 
-    - **Yol** kutusunda, önyükleme görüntüsü WIM dosyasının yolunu belirtin. Belirtilen yol UNC biçiminde geçerli bir ağ yolu olmalıdır. Örneğin, `\\ServerName\ShareName\BootImageName.wim`
+    - **Yol** kutusunda, önyükleme görüntüsü WIM dosyasının yolunu belirtin. Belirtilen yol UNC biçiminde geçerli bir ağ yolu olmalıdır. Örnek: `\\ServerName\ShareName\BootImageName.wim`
 
     - **Önyükleme Görüntüsü** açılan listesinden önyükleme görüntüsünü seçin. WıM dosyası birden çok önyükleme görüntüsü içeriyorsa uygun görüntüyü seçin.  
 
@@ -225,7 +225,7 @@ Müşteriler tarafından yaygın olarak kullanılan bileşenler şunlardır:
 
 Dil ekleme hakkında daha fazla bilgi için bkz. [birden çok dil yapılandırma](#BKMK_BootImageLanguage).
 
-#### <a name="data-source"></a>veri kaynağı
+#### <a name="data-source"></a>Veri Kaynağı
 
 **Veri Kaynağı** sekmesinde, aşağıdaki ayarlardan birini güncelleştirin:  
 
@@ -297,6 +297,6 @@ PXE veya medya tarafından başlatılan işletim sistemi dağıtımları için W
 
 ### <a name="set-the-windows-pe-language-for-a-pxe-or-media-initiated-os-deployment"></a>PXE veya medya tarafından başlatılan işletim sistemi dağıtımı için Windows PE dilini ayarlama  
 
-1. Önyükleme görüntüsünü güncelleştirmeden önce ilgili görev dizisi kaynak dosyasının (tsres. dll) site sunucusundaki ilgili dil klasöründe bulunduğunu doğrulayın. Örneğin, Ingilizce kaynak dosyası şu konumdadır:`<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
+1. Önyükleme görüntüsünü güncelleştirmeden önce ilgili görev dizisi kaynak dosyasının (tsres.dll) site sunucusundaki ilgili dil klasöründe bulunduğunu doğrulayın. Örneğin, Ingilizce kaynak dosyası şu konumdadır:`<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
 
 2. Başlatma öncesi komutunuz kapsamında, **SMSTSLanguageFolder** ortam değişkenini ılgılı dil kimliğine ayarlayın. Dil KIMLIĞI, onaltılı biçimde değil, Decimal kullanılarak belirtilmelidir. Örneğin, dil KIMLIĞINI Ingilizce olarak ayarlamak için, klasör adının 00000409 onaltılık değerini değil **1033**ondalık değerini belirtin.  

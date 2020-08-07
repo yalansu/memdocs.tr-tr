@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 08/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c90e25469927bc4fc435ad4cbd36e09b1cf0a3af
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: b862a65ca087c5dbd0c47baf7af9cf369caac9e4
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262651"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912572"
 ---
 # <a name="ios-app-protection-policy-settings"></a>iOS uygulama koruma ilkesi ayarları
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -45,7 +45,7 @@ Bu makalede iOS/ıpados cihazları için uygulama koruma ilkesi ayarları açık
 | <ul><ui>**Dışarıda tutulacak uygulamaları seçin** | Bu seçenek, önceki seçenekte *İlke ile yönetilen uygulamalar* seçildiğinde kullanılabilir duruma gelir.   |   |
 | <ul><ui>**Kuruluş verilerinin kopyalarını Kaydet** | Bu uygulamada *Farklı Kaydet* seçeneğinin kullanımını devre dışı bırakmak için **Engelle**'yi seçin. *Farklı Kaydet*'in kullanılmasına izin vermek istiyorsanız **İzin Ver**'i seçin. <br><br>**Not:** *Bu ayar Microsoft Excel, OneNote, Outlook, PowerPoint ve Word için desteklenir. Ayrıca, üçüncü taraf ve LOB uygulamaları tarafından da desteklenebilir.* <br><br> *Engelle*'ye ayarladığınızda, *Kullanıcının seçili hizmetlere kopya kaydetmesine izin ver* ayarını yapılandırabilirsiniz.   | <br><br> **İzin Ver**   |
 | <ul><ui><ul><ui>**Kullanıcının seçili hizmetlere kopya kaydetmesine izin ver** | Kullanıcılar, seçili hizmetlere (OneDrive İş, SharePoint ve Yerel Depolama) kaydedebilir. Diğer tüm hizmetler engellenir. OneDrive Iş: dosyaları OneDrive Iş ve SharePoint Online 'a kaydedebilirsiniz. SharePoint: şirket içi SharePoint 'e dosya kaydedebilirsiniz. Yerel depolama: dosyaları yerel depolamaya kaydedebilirsiniz.| **0 seçili**  |
-|<ul><ui>**İletişim verilerini aktarma** | Genellikle, bir Kullanıcı bir uygulamada köprülü telefon numarası seçtiğinde, önceden doldurulan telefon numarası ve çağrıya hazır olarak bir çevirici uygulaması açılır. Bu ayar için, ilke tarafından yönetilen bir uygulamadan başlatıldığında bu tür bir içerik aktarımını nasıl işleyeceğinizi seçin:<ul><li>**Hiçbiri, bu verileri uygulamalar arasında aktarma**: bir telefon numarası algılandığında iletişim verileri aktarılmaz.</li><li>**Belirli bir çevirici uygulaması**: bir telefon numarası algılandığında belirli bir çevirici uygulamasının iletişim başlatmasına izin verin.</li><li>**Herhangi bir çevirici uygulaması**: bir telefon numarası algılandığında, iletişim kurmak için herhangi bir çevirici uygulamasının kullanılmasına izin verin.</li></ul>| **Herhangi bir çevirici uygulaması** |  
+|<ul><ui>**İletişim verilerini aktarma** | Genellikle, bir Kullanıcı bir uygulamada köprülü telefon numarası seçtiğinde, önceden doldurulan telefon numarası ve çağrıya hazır olarak bir çevirici uygulaması açılır. Bu ayar için, ilke tarafından yönetilen bir uygulamadan başlatıldığında bu tür bir içerik aktarımını nasıl işleyeceğinizi seçin:<ul><li>**Hiçbiri, bu verileri uygulamalar arasında aktarma**: bir telefon numarası algılandığında iletişim verileri aktarılmaz.</li><li>**Belirli bir çevirici uygulaması**: bir telefon numarası algılandığında belirli bir çevirici uygulamasının iletişim başlatmasına izin verin.</li><li>**Herhangi bir çevirici uygulaması**: bir telefon numarası algılandığında, iletişim kurmak için herhangi bir çevirici uygulamasının kullanılmasına izin verin.</li></ul> <p>**Note**: *Bu ayar Intune SDK 12.7.0 ve üstünü gerektirir. Uygulamalarınız çevirici işlevselliğine güveniyor ve geçici bir çözüm olarak doğru Intune SDK sürümünü kullanmadığından, bir veri aktarımı muafiyeti olarak "tel; telprompt" eklemeyi göz önünde bulundurun. Uygulamalar doğru Intune SDK sürümünü destekledikten sonra, istisnayı kaldırın.*| **Herhangi bir çevirici uygulaması** |  
 |<ul><ui><ul><ui>**Çevirici uygulama URL 'SI şeması** | Herhangi bir çevirici uygulaması seçildiğinde, iOS cihazlarında Çevirici uygulamasını başlatmak için kullanılan çevirici uygulama URL 'sini sağlamanız gerekir. Daha fazla bilgi için bkz. Apple 'ın [Telefon bağlantılarıyla](https://developer.apple.com/library/archive/featuredarticles/iPhoneURLScheme_Reference/PhoneLinks/PhoneLinks.html#//apple_ref/doc/uid/TP40007899-CH6-SW1)ilgili belgeleri. | **Adet** |
 | **Diğer uygulamalardan veri al** | Hangi uygulamaların bu uygulamaya veri aktarabileceğini belirtin: <ul><li>**Tüm uygulamalar**: Herhangi bir uygulamadan veri aktarımına izin verilir.</li><li>**Hiçbiri**: İlkeyle yönetilen diğer uygulamalar da dahil olmak üzere hiçbir uygulamadan veri aktarmaya izin verilmez.</li><li>**İlke ile yönetilen uygulamalar**: Yalnızca diğer ilkeyle yönetilen uygulamalardan aktarım yapılmasına izin verilir.</li><li>**Gelen kuruluş verileriyle tüm uygulamalar**: Herhangi bir uygulamadan veri aktarımına izin verilir. Kullanıcı kimliği olmayan tüm gelen veriler, kuruluşunuzdan gelen veriler olarak ele alınır. Veriler, `IntuneMAMUPN` ayarı tarafından tanımlandığı şekliyle MDM kayıtlı kullanıcının kimliğiyle işaretlenir.<p><p>**Note:** _ **gelen kuruluş veri değerine sahıp tüm uygulamalar** yalnızca MDM 'ye kayıtlı cihazlar için geçerlidir. Bu ayar, kayıtlı olmayan bir cihazdaki bir kullanıcıya hedeflenirse, **herhangi bir uygulama** değerinin davranışı geçerli olur._</li></ul> Intune’un veri aktarımı kaynağı olarak izin verebileceği bazı muaf uygulamalar ve hizmetler vardır. Uygulama ve hizmetlerin tam listesi için bkz. [Veri aktarımı muafiyetleri](#data-transfer-exemptions). Kayıtlı olmayan iOS/ıpados cihazlarında çok kimlikli MAM etkin uygulamalar bu ilkeyi yoksayar ve tüm gelen verilere izin verir.<br><br> | **Tüm uygulamalar**    |
 | **Diğer uygulamalar arasında kesme, kopyalama ve yapıştırmayı kısıtla** | Bu uygulamada kes, kopyala ve yapıştır eylemlerinin ne zaman kullanılabileceğini belirtin. Aşağıdakilerden birini seçin: <ul><li>**Engellendi**: Bu uygulama ve diğer herhangi bir uygulama arasında kesme, kopyalama ve yapıştırma eylemlerine izin verilmez.</li><li>**İlkeyle yönetilen uygulamalar**: Bu uygulama ve diğer ilkeyle yönetilen uygulamalar arasında kesme, kopyalama ve yapıştırma eylemlerine izin verilir.</li><li>**Yapıştırma seçeneğiyle ilke ile yönetilen**: Bu uygulama ve diğer ilkeyle yönetilen uygulamalar arasında kesme veya kopyalama eylemine izin verilir. Herhangi bir uygulamadan verilerin bu uygulamaya yapıştırılmasına izin verir.</li><li>**Herhangi bir uygulama**: Bu uygulamaya veya bu uygulamadan kesme, kopyalama ve yapıştırma eylemleriyle ilgili bir kısıtlama olmaz.</ul> | **Herhangi bir uygulama**   |
@@ -80,6 +80,8 @@ Intune uygulama koruma ilkesinin, belirli senaryolarda veri aktarımına hedef v
 | <code>itms; itmss; itms-apps; itms-appss; itms-services</code> | App Store |
 | <code>calshow</code> | Yerel Takvim |
 
+> [!IMPORTANT]
+> 15 Haziran 2020 tarihinden önce oluşturulan uygulama koruma ilkeleri, varsayılan veri aktarımı muafiyetlerinin bir parçası olarak *tel* ve *telprompt* URL şemasını içerir. Bu URL şemaları, yönetilen uygulamaların çeviriciyi başlatmasını sağlar. **İletişim verilerini aktarmaya yönelik** uygulama koruma ilkesi ayarı bu işlevi değiştirdi. Yöneticiler, veri aktarımı muafiyetinden *tel; telprompt;* ' ı kaldırmalı ve, çevirici işlevselliği Başlatan yönetilen uygulamalar Intune SDK 12.7.0 veya üstünü içerir.
 
 ## <a name="access-requirements"></a>Erişim gereksinimleri
 
@@ -119,7 +121,7 @@ Varsayılan olarak bazı ayarlara önceden yapılandırılmış değer ve eyleml
 | **Cihaz modelleri** | Model tanımlayıcısının noktalı virgülle ayrılmış bir listesini belirtin. Bu değerler büyük/küçük harfe duyarlı değildir. *Eylemler* şunları içerir: <br><ul><li>**Belirtilenlere izin ver (belirtilmeyenleri engelle)** - Yalnızca belirtilen cihaz modeliyle eşleşen cihazlar uygulamayı kullanabilir. Diğer tüm cihaz modelleri engellenir. </li></ul> <ul><li>**Belirtilenlere izin ver (belirtilmeyenleri sil)** - Uygulamayla ilişkili kullanıcı hesabı cihazdan silinir.</li></ul> Bu ayarı kullanma hakkında daha fazla bilgi için bkz. [koşullu başlatma eylemleri](app-protection-policies-access-actions.md#ios-policy-settings). |
 | **İzin verilen en fazla cihaz tehdit düzeyi** | Uygulama koruma ilkeleri, Intune-MTD bağlayıcısının avantajlarından yararlanabilir. Bu uygulamayı kullanmak için kabul edilebilir en yüksek tehdit düzeyini belirtin. Tehditler, Son Kullanıcı cihazında seçtiğiniz Mobile Threat Defense (MTD) satıcı uygulamanız tarafından belirlenir. *Güvenli*, *düşük*, *Orta*veya *yüksek*seçeneklerinden birini belirtin. *Güvenli* bir şekilde cihazda tehdit gerektirmez ve en kısıtlayıcı yapılandırılabilir değerdir, ancak *büyük* temelde etkin bir Intune-MTD bağlantısı gerektirir. *Eylemler* şunları içerir: <br><ul><li>**Erişimi engelle** -Son Kullanıcı cihazında seçtiğiniz Mobile Threat Defense (MTD) satıcı uygulamanız tarafından belirlenen tehdit düzeyi bu gereksinimi karşılamıyorsa, kullanıcının erişimi engellenir.</li></ul><ul><li>**Verileri sil** - Uygulamayla ilişkili kullanıcı hesabı cihazdan silinir.</li></ul>**Note:** *uygulamanın Intune SDK sürüm 12.0.15 veya üstüne sahip olmasını gerektirir.* <br><br> Bu ayarı kullanma hakkında daha fazla bilgi için bkz. [kayıtlı olmayan cihazlar için MTD 'Yi etkinleştirme](../protect/mtd-enable-unenrolled-devices.md). |
 
-### <a name="learn-more"></a>Daha fazlasını öğrenin
+### <a name="learn-more"></a>Daha fazla bilgi edinin
 - [Microsoft uygulamalarınızdaki LinkedIn bilgileri ve özellikleri](https://go.microsoft.com/fwlink/?linkid=850740) hakkında bilgi edinin.
 - [Office 365 Yol haritası sayfasında](https://products.office.com/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc) LinkedIn hesap bağlantıları yayını hakkında bilgi edinin. 
 - [LinkedIn hesap bağlantılarını yapılandırma](https://docs.microsoft.com/azure/active-directory/linkedin-integration) hakkında bilgi edinin.

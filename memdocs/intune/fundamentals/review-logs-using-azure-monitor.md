@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 010bbd18c09424ed2434dc19405851bb5c254591
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f71bbc2022068616b90f37c209d41d28ea5970d0
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990779"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912537"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Intune 'da günlük verilerini depolama, Olay Hub 'ları veya Log Analytics 'e gönderme (Önizleme)
 
@@ -43,7 +43,7 @@ Bu özellikler, Intune 'da **Tanılama ayarlarının** bir parçasıdır.
 
 Bu makalede, farklı hizmetlere günlük verileri göndermek, örnek ve maliyet tahminleri sağlamak ve bazı yaygın soruların **cevapları Için tanılama ayarlarının** nasıl kullanılacağı gösterilmektedir. Bu özelliği etkinleştirdikten sonra, günlüklerinizin seçtiğiniz Azure Izleyici hizmetine yönlendirilmesidir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu özelliği kullanmak için şunlara ihtiyacınız vardır:
 
@@ -139,8 +139,8 @@ Aşağıdaki tablolarda, kiracının boyutuna bağlı olarak maliyet tahmini gö
 
 **100.000 kullanıcısı ile denetim günlüğü**
 
-| | |
-|---|---|
+| Kategori | Değer |
+| -------- | ----- |
 |Günlük olay sayısı| 1,5 milyon|
 |Aylık tahmini veri hacmi| 90 GB|
 |Aylık tahmini maliyet (USD)| $1,93|
@@ -148,8 +148,8 @@ Aşağıdaki tablolarda, kiracının boyutuna bağlı olarak maliyet tahmini gö
 
 **1.000 kullanıcısı ile denetim günlüğü**
 
-| | |
-|---|---|
+| Kategori | Değer |
+| -------- | ----- |
 |Günlük olay sayısı| 15.000|
 |Aylık tahmini veri hacmi| 900 MB|
 |Aylık tahmini maliyet (USD)| $0,02|
@@ -165,8 +165,8 @@ Aşağıdaki tabloda Batı ABD bölgesinde yer alan temel bir olay hub'ı için 
 
 **100.000 kullanıcısı ile denetim günlüğü**
 
-| | |
-|---|---|
+| Kategori | Değer |
+| -------- | ----- |
 |Saniye başına olay sayısı| 18|
 |Beş dakikalık aralık başına olay sayısı| 5400|
 |Aralık başına boyut| 10,8 MB|
@@ -176,8 +176,8 @@ Aşağıdaki tabloda Batı ABD bölgesinde yer alan temel bir olay hub'ı için 
 
 **1.000 kullanıcısı ile denetim günlüğü**
 
-| | |
-|---|---|
+| Kategori | Değer |
+| -------- | ----- |
 |Saniye başına olay sayısı|0.1 |
 |Beş dakikalık aralık başına olay sayısı| 52|
 |Aralık başına boyut|104 KB |

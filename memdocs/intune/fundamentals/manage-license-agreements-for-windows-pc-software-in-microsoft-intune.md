@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f1bd1b5da0a45ce4291eba765742405e1e4ba43
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 080b7237eb95ba729e4152e646ff8de7466309a0
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077897"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912286"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Microsoft Intune’da Windows bilgisayarı yazılımları için lisans sözleşmelerini yönetme
 
@@ -102,7 +102,7 @@ Intune Toplu Lisans sözleşmeleri, Microsoft Toplu Lisanslama sözleşmeleri il
         > [!NOTE]
         > Birkaç anlaşma numarası çifti eklerseniz Intune, belirttiğiniz adla tek bir anlaşma oluşturur ve eklediğiniz tüm çiftler bu anlaşmanın bir parçası olur.
 
-    Başka bir anlaşma **+** numarası çifti eklemeyi veya **-** daha önce girdiğiniz bir anlaşma numarası çiftini kaldırmayı seçebilirsiniz.
+    **+** Başka bir anlaşma numarası çifti eklemeyi veya daha **-** önce girdiğiniz bir anlaşma numarası çiftini kaldırmayı seçebilirsiniz.
 
 4. **Lisans Grubu Seç** alanında aşağıdakilerden birini yapın:
 
@@ -178,10 +178,8 @@ Intune’a, Microsoft Toplu Lisanslama sözleşmelerinin yanı sıra, başka tü
 ## <a name="manage-license-agreements"></a>Lisans anlaşmalarını yönetme
 Yazılım lisanslama anlaşmaları, lisans gruplarına eklenebilir. Lisans sözleşmelerinizi kuruluşunuz için mantıksal birimler halinde düzenlemek için lisans gruplarını kullanabilirsiniz. Buna ek olarak, daha önce oluşturmuş olduğunuz lisans sözleşmelerini silebilirsiniz.
 
-
-|                            |                                                                                                                                                                                                                                                                                                                                                                          |
-|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|            Görev            |                                                                                                                                                                                 Ayrıntılar                                                                                                                                                                                  |
+| Görev | Ayrıntılar |
+| ---- | ------- |
 |   Lisans grubu oluşturma   |                                                            <strong>Lisanslar</strong> çalışma alanının <strong>Genel Bakış</strong> sayfasındaki <strong>Görevler</strong> menüsünde <strong>Lisans Grubu Oluştur</strong>’u seçin. <strong>Not:</strong> Toplamda en fazla 500 lisans grubu oluşturabilirsiniz.                                                             |
 |   Lisans grubunu yeniden adlandırma   |                                                                                                      <strong>Lisanslar</strong> çalışma alanında bir lisans grubu seçin ve ardından <strong>Görevler</strong> menüsünde <strong>Lisans Grubunu Düzenle</strong>’yi seçin.                                                                                                       |
 |   Lisans grubunu silme   |                                 <strong>Lisanslar</strong> çalışma alanında bir lisans grubu seçin ve ardından <strong>Görevler</strong> menüsünde <strong>Lisans Grubunu Sil</strong>’i seçin. <strong>İpucu:</strong> Silinen grubun içindeki tüm lisanslar <strong>Atanmamış anlaşmalar</strong> lisans grubuna taşınır.                                 |

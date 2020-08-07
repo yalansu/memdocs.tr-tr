@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: eacf64245f4cfc779dc92be73e8d7e387b34f909
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: fa29c1b2474d6a0a42b7ff8e3624a3ec8d6a090e
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427933"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912303"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Sürüm 1702 ' deki yenilikler&#39;Configuration Manager
 
@@ -271,17 +271,16 @@ Bu değişiklik sayesinde, Karma dağıtımlar yeni bir Configuration Manager ya
 
 Artık, lisanslanan uygulamaları cihazlara ve kullanıcılara dağıtabilirsiniz. Cihaz lisansını desteklemeye yönelik uygulamalara bağlı olarak, dağıtım sırasında aşağıdaki gibi uygun bir lisans talep edilir:
 
-|||||
-|-|-|-|-|
-|Configuration Manager sürümü|Uygulama, cihaz lisansını destekliyor mu?|Dağıtım koleksiyonu türü|Talep edilen lisans|
-|1702 öncesi|Yes|Kullanıcı|Kullanıcı Lisansı|
-|1702 öncesi|No|Kullanıcı|Kullanıcı Lisansı|
-|1702 öncesi|Yes|Cihaz|Kullanıcı Lisansı|
-|1702 öncesi|No|Cihaz|Kullanıcı Lisansı|
-|1702 ve üzeri|Yes|Kullanıcı|Kullanıcı Lisansı|
-|1702 ve üzeri|No|Kullanıcı|Kullanıcı Lisansı|
-|1702 ve üzeri|Yes|Cihaz|Cihaz lisansı|
-|1702 ve üzeri|No|Cihaz|Kullanıcı Lisansı|
+| Configuration Manager sürümü | Uygulama, cihaz lisansını destekliyor mu? | Dağıtım koleksiyonu türü | Talep edilen lisans |
+| ----------------------------- | ------------------------------ | -------------------------- | --------------- |
+|1702 öncesi|Evet|Kullanıcı|Kullanıcı Lisansı|
+|1702 öncesi|Hayır|Kullanıcı|Kullanıcı Lisansı|
+|1702 öncesi|Evet|Cihaz|Kullanıcı Lisansı|
+|1702 öncesi|Hayır|Cihaz|Kullanıcı Lisansı|
+|1702 ve üzeri|Evet|Kullanıcı|Kullanıcı Lisansı|
+|1702 ve üzeri|Hayır|Kullanıcı|Kullanıcı Lisansı|
+|1702 ve üzeri|Evet|Cihaz|Cihaz lisansı|
+|1702 ve üzeri|Hayır|Cihaz|Kullanıcı Lisansı|
 
 ### <a name="support-for-ios-volume-purchase-program-for-education"></a>Eğitim için iOS toplu satın alma programı desteği
 

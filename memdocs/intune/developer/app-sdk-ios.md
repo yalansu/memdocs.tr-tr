@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a69176e347453131c76d669b14fd7ec37b331071
-ms.sourcegitcommit: ba36a60b08bb85d592bfb8c4bbe6d02a47858b09
+ms.openlocfilehash: db975d15ec0c93bde8991872f6847364786aa429
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052502"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912422"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>iOS için Microsoft Intune Uygulama SDK’sı geliştirici kılavuzu
 
@@ -33,7 +33,7 @@ ms.locfileid: "86052502"
 
 iOS için Microsoft Intune Uygulama SDK’sı, Intune uygulama koruma ilkelerini (APP veya MAM ilkeleri olarak da bilinir) yerel iOS uygulamanıza eklemenizi sağlar. MAM özellikli uygulamalar Intune Uygulama SDK’sı ile tümleşik çalışır. Intune uygulamayı etkin bir şekilde yönetirken, BT yöneticileri mobil uygulamanıza uygulama koruma ilkeleri dağıtabilir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - OS X 10.12.6 veya üstünü çalıştıran bir Mac OS bilgisayara ihtiyacınız vardır ve Ayrıca Xcode 9 veya üzeri bir sürümü yüklü olur.
 
@@ -135,7 +135,7 @@ Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin
 3. Her bir proje hedefinde **Özellikler**’i seçip **Anahtar Zinciri Paylaşımı** anahtarını etkinleştirerek anahtar zinciri paylaşımını etkinleştirin (önceden etkinleştirilmemişse). Anahtarlık paylaşımı, sonraki adıma devam edebilmeniz için gereklidir.
 
    > [!NOTE]
-   > Sağlama profilinizin, yeni anahtarlık paylaşımı değerlerini desteklemesi gerekir. Anahtarlık erişim grupları bir joker karakteri desteklemelidir. Bunu,. mobileprovision dosyasını bir metin düzenleyicisinde açıp **Anahtarlık erişim grupları**araması yaparak ve bir joker karakter olmasını sağlayarak denetleyebilirsiniz. Örneğin:
+   > Sağlama profilinizin, yeni anahtarlık paylaşımı değerlerini desteklemesi gerekir. Anahtarlık erişim grupları bir joker karakteri desteklemelidir. Bunu,. mobileprovision dosyasını bir metin düzenleyicisinde açıp **Anahtarlık erişim grupları**araması yaparak ve bir joker karakter olmasını sağlayarak denetleyebilirsiniz. Örnek:
    >
    >  ```xml
    >  <key>keychain-access-groups</key>
@@ -154,7 +154,7 @@ Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin
     
       ![Intune Uygulama SDK’sı iOS: Anahtarlık paylaşımı](./media/app-sdk-ios/intune-app-sdk-ios-keychain-sharing.png)
     
-    d. Anahtarlık erişim gruplarını oluşturmak için yukarıda gösterilen Xcode UI'ı kullanmak yerine doğrudan yetkilendirme dosyalarını düzenliyorsanız, anahtarlık erişim gruplarını `$(AppIdentifierPrefix)` öğesinin önüne ekleyin (Xcode bunu otomatik olarak işler). Örneğin:
+    d. Anahtarlık erişim gruplarını oluşturmak için yukarıda gösterilen Xcode UI'ı kullanmak yerine doğrudan yetkilendirme dosyalarını düzenliyorsanız, anahtarlık erişim gruplarını `$(AppIdentifierPrefix)` öğesinin önüne ekleyin (Xcode bunu otomatik olarak işler). Örnek:
     
       - `$(AppIdentifierPrefix)com.microsoft.intune.mam`
       - `$(AppIdentifierPrefix)com.microsoft.adalcache`
@@ -176,34 +176,29 @@ Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin
 
 '-o' parametresi belirtilmezse, giriş dosyası yerinde değiştirilir. Araç bir kez etkilidir ve uygulamanın Info.plist dosyası her değiştirildiğinde veya yetkilendirmeler yapıldığında yeniden çalıştırılmalıdır. En son sürümde Info.plist yapılandırma gereksinimlerinin değişmesi durumunda, Intune SDK'sını güncelleştirirken de aracın en son sürümünü indirmeniz ve çalıştırmanız gerekir.
 
-## <a name="configure-adalmsal"></a>ADAL/MSAL yapılandırma
+## <a name="configure-msal"></a>MSAL yapılandırma
 
-> [!NOTE]
-> Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+Intune uygulama SDK 'sı, kimlik doğrulama ve koşullu başlatma senaryolarında [Microsoft kimlik doğrulama kitaplığını](https://github.com/AzureAD/microsoft-authentication-library-for-objc) kullanır. Ayrıca, Kullanıcı kimliğini cihaz kayıt senaryoları olmadan yönetim için MAM hizmetine kaydetmek için MSAL kullanır.
 
-Intune uygulama SDK 'sı, kimlik doğrulama ve koşullu başlatma senaryoları için [Azure Active Directory kimlik doğrulama kitaplığını](https://github.com/AzureAD/azure-activedirectory-library-for-objc) ya da [Microsoft kimlik doğrulama kitaplığını](https://github.com/AzureAD/microsoft-authentication-library-for-objc) kullanabilir. Ayrıca, Kullanıcı kimliğini cihaz kayıt senaryoları olmadan yönetim için MAM hizmetine kaydetmek için ADAL/MSAL kullanır.
+Genellikle MSAL, uygulamaya verilen belirteçlerin güvenliğini sağlamak için uygulamaların Azure Active Directory (AAD) ile kaydolmesini ve benzersiz bir istemci KIMLIĞI ve yeniden yönlendirme URI 'SI oluşturmasını gerektirir. Uygulamanız kullanıcıların kimliğini doğrulamak için zaten MSAL kullanıyorsa, uygulamanın mevcut kayıt değerlerini kullanması ve Intune uygulama SDK 'sının varsayılan değerlerini geçersiz kılması gerekir. Bu, kullanıcılardan iki kez kimlik doğrulaması (Intune Uygulama SDK'sı ve uygulama tarafından) istenmemesini sağlar.
 
-Genellikle, ADAL/MSAL, uygulamaya verilen belirteçlerin güvenliğini sağlamak için uygulamaların Azure Active Directory (AAD) ile kaydolmanızı ve benzersiz bir istemci KIMLIĞI ve yeniden yönlendirme URI 'SI oluşturmasını gerektirir. Uygulamanız, kullanıcıların kimliğini doğrulamak için zaten ADAL veya MSAL kullanıyorsa, uygulamanın mevcut kayıt değerlerini kullanması ve Intune uygulama SDK 'sının varsayılan değerlerini geçersiz kılması gerekir. Bu, kullanıcılardan iki kez kimlik doğrulaması (Intune Uygulama SDK'sı ve uygulama tarafından) istenmemesini sağlar.
+Uygulamanız zaten MSAL kullanmıyorsa ve herhangi bir AAD kaynağına erişmeniz gerekmiyorsa, MSAL tümleştirmeyi seçerseniz AAD 'de bir istemci uygulama kaydı ayarlamanız gerekmez. MSAL tümleştirmeye karar verirseniz, bir uygulama kaydı yapılandırmanız ve varsayılan Intune istemci KIMLIĞINI ve yeniden yönlendirme URI 'sini geçersiz kılmanız gerekir.  
 
-Uygulamanız zaten ADAL veya MSAL kullanmıyorsa ve herhangi bir AAD kaynağına erişmeniz gerekmiyorsa, ADAL 'i tümleştirmeyi seçerseniz AAD 'de bir istemci uygulama kaydı ayarlamanız gerekmez. MSAL tümleştirmeye karar verirseniz, bir uygulama kaydı yapılandırmanız ve varsayılan Intune istemci KIMLIĞINI ve yeniden yönlendirme URI 'sini geçersiz kılmanız gerekir.  
+Uygulamanızın en son [msal](https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases)sürümüne bağlantısı olması önerilir.
 
-Uygulamanızın en son [adal](https://github.com/AzureAD/azure-activedirectory-library-for-objc/releases) veya [msal](https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases)sürümüne bağlantısı olması önerilir.
+### <a name="link-to-msal-binaries"></a>MSAL ikili dosyalarına bağlantı
 
-### <a name="link-to-adal-or-msal-binaries"></a>ADAL veya MSAL ikili dosyalarına bağlantı
-
-**Seçenek 1-** Uygulamanızı ADAL ikili dosyalarına bağlamak için [aşağıdaki adımları](https://github.com/AzureAD/azure-activedirectory-library-for-objc#download) izleyin.
-
-**Seçenek 2-** Alternatif olarak, uygulamanızı MSAL ikilileriyle bağlamak için [Bu yönergeleri](https://github.com/AzureAD/microsoft-authentication-library-for-objc#installation) izleyebilirsiniz.
+Uygulamanızı MSAL ikilileriyle bağlamak için [Bu yönergeleri](https://github.com/AzureAD/microsoft-authentication-library-for-objc#installation) izleyin.
 
 1. Uygulamanızda tanımlanmış bir Anahtarlık erişim grubu yoksa, uygulamanın paket KIMLIĞINI ilk grup olarak ekleyin.
 
-2. Anahtarlık erişim gruplarına ekleyerek ADAL/MSAL çoklu oturum açma (SSO) özelliğini etkinleştirin `com.microsoft.adalcache` .
+2. Anahtarlık erişim gruplarına ekleyerek MSAL çoklu oturum açma (SSO) özelliğini etkinleştirin `com.microsoft.adalcache` .
 
-3. ADAL paylaşımlı önbellek anahtar zinciri grubunu açıkça ayarlıyorsanız, ayarın `<appidprefix>.com.microsoft.adalcache` olduğundan emin olun. Bu ayarı geçersiz kılmadığınız sürece ADAL bunu sizin için ayarlar. `com.microsoft.adalcache` öğesini değiştirmek için özel bir anahtarlık grubu belirtmek isterseniz, bunu IntuneMAMSettings altındaki Info.plist dosyası içinde `ADALCacheKeychainGroupOverride` anahtarını kullanarak belirtin.
+3. MSAL paylaşılan önbellek Anahtarlık grubunu açıkça ayarlamanız durumunda, ' ın ' a ayarlandığından emin olun `<appidprefix>.com.microsoft.adalcache` . MSAL geçersiz kılmadığınız takdirde bunu sizin için ayarlar. `com.microsoft.adalcache` öğesini değiştirmek için özel bir anahtarlık grubu belirtmek isterseniz, bunu IntuneMAMSettings altındaki Info.plist dosyası içinde `ADALCacheKeychainGroupOverride` anahtarını kullanarak belirtin.
 
-### <a name="configure-adalmsal-settings-for-the-intune-app-sdk"></a>Intune uygulama SDK 'Sı için ADAL/MSAL ayarlarını yapılandırma
+### <a name="configure-msal-settings-for-the-intune-app-sdk"></a>Intune uygulama SDK 'Sı için MSAL ayarlarını yapılandırma
 
-Uygulamanız kimlik doğrulaması için zaten ADAL veya MSAL kullanıyorsa ve kendi Azure Active Directory ayarlarını içeriyorsa, Intune uygulama SDK 'sını AAD 'ye göre kimlik doğrulaması sırasında aynı ayarları kullanacak şekilde zorlayabilirsiniz. Bu sayede uygulamanın kullanıcıdan iki kez kimlik doğrulaması istemesi engellenmiş olur. Aşağıdaki ayarları doldurma hakkında bilgi edinmek için [Intune Uygulama SDK'sı için ayarları yapılandırma](#configure-settings-for-the-intune-app-sdk) bölümüne göz atın:  
+Uygulamanız kimlik doğrulaması için zaten MSAL kullanıyorsa ve kendi Azure Active Directory ayarlarını içeriyorsa, Intune uygulama SDK 'sını AAD 'ye göre kimlik doğrulaması sırasında aynı ayarları kullanacak şekilde zorlayabilirsiniz. Bu sayede uygulamanın kullanıcıdan iki kez kimlik doğrulaması istemesi engellenmiş olur. Aşağıdaki ayarları doldurma hakkında bilgi edinmek için [Intune Uygulama SDK'sı için ayarları yapılandırma](#configure-settings-for-the-intune-app-sdk) bölümüne göz atın:  
 
 * ADALClientId
 * ADALAuthority
@@ -211,13 +206,13 @@ Uygulamanız kimlik doğrulaması için zaten ADAL veya MSAL kullanıyorsa ve ke
 * ADALRedirectScheme
 * ADALCacheKeychainGroupOverride
 
-Uygulamanız zaten ADAL veya MSAL kullanıyorsa, aşağıdaki konfigürasyonlar gereklidir:
+Uygulamanız zaten MSAL kullanıyorsa, aşağıdaki konfigürasyonlar gereklidir:
 
-1. Projenin Info. plist dosyasında, anahtar adı ile **ıntunemamsettings** sözlüğü altında, `ADALClientId` adal çağrıları IÇIN kullanılacak istemci kimliğini belirtin.
+1. Projenin Info. plist dosyasında, anahtar adı ile **ıntunemamsettings** sözlüğü altında, `ADALClientId` msal ÇAĞRıLARıNDA kullanılacak istemci kimliğini belirtin.
 
 2. Ayrıca, anahtar adlı **ıntunemamsettings** sözlüğü altında `ADALAuthority` , Azure AD yetkilisini belirtin.
 
-3. Ayrıca, anahtar adlı **ıntunemamsettings** sözlüğü altında `ADALRedirectUri` , adal çağrıları için kullanılacak yeniden yönlendirme URI 'sini belirtin. Alternatif olarak, uygulamanın yeniden yönlendirme URI'si `scheme://bundle_id` biçimindeyse bunun yerine `ADALRedirectScheme` belirtebilirsiniz.
+3. Ayrıca, anahtar adlı **ıntunemamsettings** sözlüğü altında `ADALRedirectUri` , msal çağrılarında kullanılacak yeniden yönlendirme URI 'sini belirtin. Alternatif olarak, uygulamanın yeniden yönlendirme URI'si `scheme://bundle_id` biçimindeyse bunun yerine `ADALRedirectScheme` belirtebilirsiniz.
 
 Ayrıca, uygulamalar çalışma zamanında bu Azure AD ayarlarını geçersiz kılabilir. Bunu yapmak için `IntuneMAMPolicyManager` örneğinde `aadAuthorityUriOverride`, `aadClientIdOverride` ve `aadRedirectUriOverride` özelliklerini ayarlamanız yeterlidir.
 
@@ -226,13 +221,13 @@ Ayrıca, uygulamalar çalışma zamanında bu Azure AD ayarlarını geçersiz k�
 > [!NOTE]
 > Statik olan ve çalışma zamanında saptanması gerekmeyen tüm ayarlar için Info.plist yaklaşımı önerilir. `IntuneMAMPolicyManager` özelliklerine atanan değerler, Info.plist dosyasında belirtilen ve bunlara karşılık gelen tüm değerlerden önceliklidir ve uygulama yeniden başlatıldıktan sonra bile kalıcı olmayı sürdürür. Kullanıcının kaydı silinene ya da değerler temizlenene veya değiştirilene kadar SDK ilke iadelerinde bunları kullanmaya devam edecektir.
 
-### <a name="if-your-app-does-not-use-adal-or-msal"></a>Uygulamanız ADAL veya MSAL kullanmıyorsa
+### <a name="if-your-app-does-not-use-msal"></a>Uygulamanız MSAL kullanmıyorsa
 
-Daha önce belirtildiği gibi, Intune uygulama SDK 'sı kimlik doğrulaması ve koşullu başlatma senaryoları için [Azure Active Directory kimlik doğrulama kitaplığını](https://github.com/AzureAD/azure-activedirectory-library-for-objc) veya [Microsoft kimlik doğrulama kitaplığını](https://github.com/AzureAD/microsoft-authentication-library-for-objc) kullanabilir. Ayrıca, Kullanıcı kimliğini cihaz kayıt senaryoları olmadan yönetim için MAM hizmetine kaydetmek için ADAL/MSAL kullanır. **Uygulamanız kendi kimlik doğrulama mekanizması IÇIN adal veya msal kullanmıyorsa**, tümleştirmeyi seçtiğiniz kimlik doğrulama kitaplığına bağlı olarak özel AAD ayarlarını yapılandırmanız gerekebilir:   
+Daha önce belirtildiği gibi, Intune uygulama SDK 'sı, kimlik doğrulama ve koşullu başlatma senaryolarında [Microsoft kimlik doğrulama kitaplığını](https://github.com/AzureAD/microsoft-authentication-library-for-objc) kullanır. Ayrıca, Kullanıcı kimliğini cihaz kayıt senaryoları olmadan yönetim için MAM hizmetine kaydetmek için MSAL kullanır. **Uygulamanız kendi kimlik doğrulama mekanizması IÇIN msal kullanmıyorsa**, özel AAD ayarlarını yapılandırmanız gerekebilir:
 
-ADAL-Intune uygulama SDK 'Sı, ADAL parametrelerinin varsayılan değerlerini sağlar ve Azure AD kimlik doğrulamasını işler. Geliştiricilerin daha önce bahsedilen ADAL ayarları için herhangi bir değer belirtmelerine gerek yoktur. 
-
-MSAL-geliştiricilerin, [burada](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration)belirtilen biçimde özel bir yeniden yönlendirme URI 'SI ile AAD 'de bir uygulama kaydı oluşturması gerekir. Geliştiriciler `ADALClientID` `ADALRedirectUri` daha önce bahsedilen ve ayarlarını ya da `aadClientIdOverride` örnekteki eşdeğerini ve özellikleri ayarlamalıdır `aadRedirectUriOverride` `IntuneMAMPolicyManager` . Geliştiriciler, Intune uygulama koruma hizmeti 'ne uygulama kaydı erişimi sağlamak için önceki bölümde 4. adımı izlediklerinden emin olmalıdır.
+* Geliştiricilerin, [burada](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration)belirtilen biçimde özel bir yeniden yönlendirme URI 'SI ile AAD 'de bir uygulama kaydı oluşturması gerekir. 
+* Geliştiriciler `ADALClientID` `ADALRedirectUri` daha önce bahsedilen ve ayarlarını ya da `aadClientIdOverride` örnekteki eşdeğerini ve özellikleri ayarlamalıdır `aadRedirectUriOverride` `IntuneMAMPolicyManager` . 
+* Geliştiriciler, Intune uygulama koruma hizmeti 'ne uygulama kaydı erişimi sağlamak için önceki bölümde 4. adımı izlediklerinden emin olmalıdır.
 
 ### <a name="special-considerations-when-using-msal"></a>MSAL kullanılırken özel konular 
 
@@ -250,16 +245,16 @@ Bu ayarlardan bazıları önceki bölümlerde ele alınmış olabilir ve bazıla
 
 Ayar  | Tür  | Tanım | Gerekli mi?
 --       |  --   |   --       |  --
-ADALClientId  | Dize  | Uygulamanın Azure AD istemci tanımlayıcısı. | Intune olmayan bir AAD kaynağına erişen MSAL ve herhangi bir ADAL uygulamasını kullanan tüm uygulamalar için gereklidir. |
+ADALClientId  | Dize  | Uygulamanın Azure AD istemci tanımlayıcısı. | MSAL kullanan tüm uygulamalar için gereklidir. |
 ADALAuthority | Dize | Uygulamanın Azure AD yetkilisi kullanımda. AAD hesaplarının yapılandırıldığı ortamınızı kullanmanız gerekir. | İsteğe bağlı. Uygulama, tek bir kuruluş/AAD kiracısı içinde kullanılmak üzere oluşturulmuş özel bir iş kolu uygulaması ise önerilir. Bu değer yoksa, ortak AAD yetkilisi kullanılır.|
 ADALRedirectUri  | Dize  | Uygulamanın Azure AD yeniden yönlendirme URI 'SI. | MSAL kullanan tüm uygulamalar için ADALRedirectUri veya ADALRedirectScheme, Intune olmayan bir AAD kaynağına erişen herhangi bir ADAL uygulaması için gereklidir.  |
 ADALRedirectScheme  | Dize  | Uygulamanın Azure AD yeniden yönlendirme şeması. Bu, uygulamanın yeniden yönlendirme URI'si `scheme://bundle_id` biçimindeyse ADALRedirectUri yerine kullanılabilir. | MSAL kullanan tüm uygulamalar için ADALRedirectUri veya ADALRedirectScheme, Intune olmayan bir AAD kaynağına erişen herhangi bir ADAL uygulaması için gereklidir. |
-ADALLogOverrideDisabled | Boole  | SDK 'nın tüm ADAL/MSAL günlüklerini (varsa, uygulamadan gelen ADAL çağrıları dahil) kendi günlük dosyasına yönlendirip yönlendirmeyeceğini belirtir. Varsayılan ayar HAYIR’dır. Uygulama kendi ADAL/MSAL günlük geri aramasını ayarlayacaktır Evet olarak ayarlayın. | İsteğe bağlı. |
-ADALCacheKeychainGroupOverride | Dize  | "Com. Microsoft. adalcache" yerine ADAL/MSAL önbelleği için kullanılacak Anahtarlık grubunu belirtir. Bunun uygulama kimliği öneki olmadığına unutmayın. Bu, çalışma zamanında sağlanan dizeye önek olarak eklenir. | İsteğe bağlı. |
+ADALLogOverrideDisabled | Boole  | SDK 'nın tüm MSAL günlüklerini (varsa, uygulamadan gelen MSAL çağrıları dahil) kendi günlük dosyasına yönlendirip yönlendirmeyeceğini belirtir. Varsayılan ayar HAYIR’dır. Uygulama kendi MSAL günlük geri aramasını ayarlayacaktır Evet olarak ayarlayın. | İsteğe bağlı. |
+ADALCacheKeychainGroupOverride | Dize  | "Com. Microsoft. adalcache" yerine MSAL önbelleği için kullanılacak Anahtarlık grubunu belirtir. Bunun uygulama kimliği öneki olmadığına unutmayın. Bu, çalışma zamanında sağlanan dizeye önek olarak eklenir. | İsteğe bağlı. |
 AppGroupIdentifiers | Dizeler dizisi  | Uygulamanın yetkilendirmeleri com. Apple. Security. Application-Groups bölümündeki uygulama grupları dizisi. | Uygulama, uygulama grupları kullanıyorsa gereklidir. |
 ContainingAppBundleId | Dize | Uzantının içeren uygulamanın paket KIMLIĞINI belirtir. | iOS uzantıları için gereklidir. |
 DebugSettingsEnabled| Boole | EVET olarak ayarlanırsa, Ayarlar paketindeki sınama ilkeleri uygulanabilir. Uygulamalar bu ayar etkin olarak *gönderilmemelidir*. | İsteğe bağlı. Varsayılan ayar Hayır’dır. |
-AutoEnrollOnLaunch| Boole| Mevcut bir yönetilen kimlik tespit edilirse ve bu kimlik henüz kaydedilmemişse uygulama başlatıldığında otomatik olarak kaydetmeye çalışılıp çalışılmayacağını belirtir. Varsayılan ayar HAYIR’dır. <br><br> Notlar: yönetilen kimlik bulunamazsa veya ADAL/MSAL önbelleğinde kimlik için geçerli bir belirteç yoksa, uygulama aynı zamanda MAMPolicyRequired Evet olarak ayarlanmadığı müddetçe kayıt girişimi kimlik bilgileri istenmeden sessizce başarısız olur. | İsteğe bağlı. Varsayılan ayar Hayır’dır. |
+AutoEnrollOnLaunch| Boole| Mevcut bir yönetilen kimlik tespit edilirse ve bu kimlik henüz kaydedilmemişse uygulama başlatıldığında otomatik olarak kaydetmeye çalışılıp çalışılmayacağını belirtir. Varsayılan ayar HAYIR’dır. <br><br> Notlar: yönetilen kimlik bulunamazsa veya kimlik için geçerli bir belirteç MSAL önbelleğinde kullanılabilir değilse, uygulama aynı zamanda MAMPolicyRequired öğesini Evet olarak ayarlamadığınız müddetçe kayıt girişimi, kimlik bilgileri istenmeden sessizce başarısız olur. | İsteğe bağlı. Varsayılan ayar Hayır’dır. |
 MAMPolicyRequired| Boole| Uygulamanın bir Intune uygulama koruma ilkesine sahip olmadığında başlatılmasının engellenip engellenmeyeceğini belirtir. Varsayılan ayar HAYIR’dır. <br><br> Not: MAMPolicyRequired ayarı EVET olarak ayarlanmışsa uygulamalar App Store’a gönderilemez. MAMPolicyRequired EVET olarak ayarlandığında AutoEnrollOnLaunch da EVET olarak ayarlanmalıdır. | İsteğe bağlı. Varsayılan ayar Hayır’dır. |
 MAMPolicyWarnAbsent | Boole| Uygulamanın bir Intune uygulama koruma ilkesine sahip olmadığında başlatılırken kullanıcıyı uyarıp uyarmayacağını belirtir. <br><br> Not: Kullanıcılar, uyarı kapatıldıktan sonra da uygulamayı ilke olmadan kullanabilecektir. | İsteğe bağlı. Varsayılan ayar Hayır’dır. |
 MultiIdentity | Boole| Uygulamanın çoklu kimliği fark edip edemediğini belirtir. | İsteğe bağlı. Varsayılan ayar Hayır’dır. |
@@ -558,7 +553,7 @@ Sürüm 8.0.2'den başlayarak, yalnızca Intune tarafından yönetilen paylaşı
 
 Ve aracılığıyla belge paylaşırken `UIActivityViewController` `UIDocumentInteractionController` , iOS, paylaşılan belgeyi açmayı destekleyen her uygulama Için ' Kopyala ' eylemlerini görüntüler. Uygulamalar, Info.plist dosyalarındaki `CFBundleDocumentTypes` ayarı yoluyla destekledikleri belge türlerini bildirir. İlke yönetilmeyen uygulamalara paylaşımı yasaklarsa, bu paylaşım türü artık kullanılabilir olmaz. Bunun yerine kullanıcı, kullanıcı arabirimi olmayan Eylem uzantısını ekleyip bunu Intune Uygulama SDK’sına bağlamak zorunda kalır. Eylem uzantısı, yalnızca bir saplamadır. SDK, dosya paylaşım davranışını uygular. Aşağıdaki adımları izleyin:
 
-1. Uygulamanız, kendi Info. plist altında, onun karşılığına göre tanımlanmış en az bir ıgnmeurl içermelidir `CFBundleURLTypes` `-intunemam` . Örneğin:
+1. Uygulamanız, kendi Info. plist altında, onun karşılığına göre tanımlanmış en az bir ıgnmeurl içermelidir `CFBundleURLTypes` `-intunemam` . Örnek:
     ```objc
     <key>CFBundleURLSchemes</key>
     <array>

@@ -10,12 +10,12 @@ ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e989de5acab778374c233862d0ab4d7077899d28
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: f686547e4698f1941a64f5b0346ba2d723248c31
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428596"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912510"
 ---
 # <a name="reference-for-maintenance-tasks-in-configuration-manager"></a>Configuration Manager 'de bakım görevlerine yönelik başvuru
 
@@ -31,8 +31,8 @@ Daha fazla bilgi için bkz. [bakım görevlerini ayarlama](maintenance-tasks.md#
 
 Bir siteyi ve Configuration Manager veritabanını geri yüklemek için kritik bilgilerinizin bir yedeğini oluşturmak için bu görevi kullanın. Daha fazla bilgi için bkz. [bir Configuration Manager sitesini yedekleme](backup-and-recovery.md).  
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |**Birincil site**|Etkin değil|
 |İkincil site|Kullanılamaz|
@@ -41,8 +41,8 @@ Bir siteyi ve Configuration Manager veritabanını geri yüklemek için kritik b
 
 Yazılım envanteri ve Varlık Yönetim Bilgileri kataloğu arasındaki yazılım başlıklarının tutarlılığını sağlamak için bu görevi kullanın. Daha fazla bilgi için bkz. [varlık yönetim bilgileri giriş](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).  
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |Birincil site|Kullanılamaz|
 |İkincil site|Kullanılamaz|
@@ -54,8 +54,8 @@ Yazılım envanteri ve Varlık Yönetim Bilgileri kataloğu arasındaki yazılı
 
 **Istemci yeniden keşif** süresi sırasında sinyal bulma kaydı gönderolmayan istemciler için yüklü bayrağını kaldırmak üzere bu görevi kullanın. Yüklü bayrağı, etkin bir Configuration Manager istemcisi olabilecek bir bilgisayara otomatik istemci gönderme yüklemesini önler.  
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin değil|
 |İkincil site|Kullanılamaz|
@@ -64,8 +64,8 @@ Yazılım envanteri ve Varlık Yönetim Bilgileri kataloğu arasındaki yazılı
 
 Eski uygulama isteklerini veritabanından silmek için bu görevi kullanın. Daha fazla bilgi için bkz. [uygulama oluşturma ve dağıtma](../../../apps/get-started/create-and-deploy-an-application.md).  
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -74,8 +74,8 @@ Eski uygulama isteklerini veritabanından silmek için bu görevi kullanın. Dah
 
 Artık başvurulmayan uygulama düzeltmelerini silmek için bu görevi kullanın. Daha fazla bilgi için bkz. [uygulamaları gözden geçirme ve değiştirme](../../../apps/deploy-use/revise-and-supersede-applications.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -84,8 +84,8 @@ Artık başvurulmayan uygulama düzeltmelerini silmek için bu görevi kullanın
 
 İstemciler tarafından kullanılan indirme kaynağıyla ilgili geçmiş verileri silmek için bu görevi kullanın. Site, [Istemci veri kaynakları panosunu](../deploy/configure/monitor-content-you-have-distributed.md#client-data-sources-dashboard)doldurmak için indirme kaynağı bilgilerini kullanır.
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -98,8 +98,8 @@ Bu görevi, istemci işlemleri için tüm eski verileri site veritabanından sil
 - Endpoint Protection, istemcilerin bir taramayı çalıştırması veya güncelleştirilmiş tanımları indirmesi için yönetici kullanıcı tarafından yapılan istekler gibi
 - Betikleri Çalıştır durum sonuçları
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -108,8 +108,8 @@ Bu görevi, istemci işlemleri için tüm eski verileri site veritabanından sil
 <!-- not listed in dogfood for either primary or CAS, was it renamed? -->
 İstemci bildirimi tarafından kaydedilen istemcilerin çevrimiçi durumuyla ilgili geçmiş bilgilerini silmek için bu görevi kullanın. Belirtilen süreden daha eski durumuna sahip istemcilerin bilgilerini siler. Daha fazla bilgi için bkz. [istemcileri izleme](../../clients/manage/monitor-clients.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -124,8 +124,8 @@ Bu görevi, [bulut yönetimi ağ geçidiyle](../../clients/manage/cmg/plan-cloud
 - Başarısız istek sayısı
 - En fazla eşzamanlı istek sayısı
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -134,8 +134,8 @@ Bu görevi, [bulut yönetimi ağ geçidiyle](../../clients/manage/cmg/plan-cloud
 
 Bu görevi, CMPivot sorguları içindeki istemcilerden gelen site veritabanından eski bilgileri silmek için kullanın. Daha fazla bilgi için bkz. [CMPivot for Real Time Data](cmpivot.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -144,8 +144,8 @@ Bu görevi, CMPivot sorguları içindeki istemcilerden gelen site veritabanında
 
 Bu görevi, toplanan dosyalarla ilgili eski veritabanı bilgilerini silmek için kullanın. Bu görev ayrıca toplanan dosyaları seçilen sitede site sunucusu klasör yapısından da siler. Varsayılan olarak, toplanan dosyaların en son beş kopyası site sunucusunda **ınboxes\sinv\nbox\filecol** dizininde depolanır. Daha fazla bilgi için bkz. [yazılım envanterine giriş](../../clients/manage/inventory/introduction-to-software-inventory.md).  
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -154,8 +154,8 @@ Bu görevi, toplanan dosyalarla ilgili eski veritabanı bilgilerini silmek için
 
 Bu görevi, eski işletim sistemi dağıtımı bilgisayar ilişkilendirme verileri veritabanından silmek için kullanın. Bu bilgiler, bir görev dizisi sırasında Kullanıcı durumu geri yüklenirken kullanılır. Daha fazla bilgi için bkz. [Kullanıcı durumunu yönetme](../../../osd/get-started/manage-user-state.md).  
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -164,8 +164,8 @@ Bu görevi, eski işletim sistemi dağıtımı bilgisayar ilişkilendirme verile
 
 Bu görev site veritabanından konsol bağlantıları hakkındaki verileri siler.<!-- SCCMDocs#528 -->
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -174,8 +174,8 @@ Bu görev site veritabanından konsol bağlantıları hakkındaki verileri siler
 
 Bu görevi, ayıklama görünümleri tarafından oluşturulan veritabanından eski verileri silmek için kullanın. Dış sistemler tarafından kullanılan eski veri değişikliği bilgilerini veritabanından verileri ayıklayarak siler.<!--SCCMDocs#1590--><!--By default, Extraction Views are disabled. You only enable them by using the Configuration Manager SDK. Unless Extraction Views are enabled, there is no data for this task to delete.-->
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -184,8 +184,8 @@ Bu görevi, ayıklama görünümleri tarafından oluşturulan veritabanından es
 
 Bu görevi, mobil cihaz silme eylemlerine ilişkin eski verilerden veritabanını silmek için kullanın. Daha fazla bilgi için bkz. [uzaktan silme, kilitleme veya parola sıfırlama ile verileri koruma](../../../mdm/deploy-use/wipe-lock-reset-devices.md).  
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -200,8 +200,8 @@ Eski bulma verilerini veritabanından silmek için bu görevi kullanın. Bu veri
 
 Bu görev Ayrıca, kullanımdan kaldırılan olarak işaretlenen eski cihazları da kaldırır. Bu görev bir sitede çalıştırıldığında, o siteyle ilişkili veriler silinir ve bu değişiklikler diğer sitelere çoğaltılır. Daha fazla bilgi için bkz. [bulmayı çalıştırma](../deploy/configure/run-discovery.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -210,8 +210,8 @@ Bu görev Ayrıca, kullanımdan kaldırılan olarak işaretlenen eski cihazları
 
 Bu görevi, belirli bir süreden daha uzun bir süre saklanan dağıtım noktaları için eski verileri veritabanından silmek için kullanın.  
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -222,8 +222,8 @@ Bu görevi, belirli bir süredir siteye herhangi bir bilgi bildirmeyen mobil cih
 
 Bu görev, [Şirket ıçı MDM](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)Configuration Manager kayıtlı cihazlar için geçerlidir. Bu cihazlar hakkında daha fazla bilgi için bkz. [istemciler ve cihazlar Için desteklenen işletim sistemleri](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_OnpremOS).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin değil|
 |İkincil site|Kullanılamaz|
@@ -232,8 +232,8 @@ Bu görev, [Şirket ıçı MDM](../../../mdm/understand/manage-mobile-devices-wi
 
 Endpoint Protection (EP) için veritabanı eski durum bilgilerini silmek için bu görevi kullanın. Daha fazla bilgi için bkz. [izleme Endpoint Protection](../../../protect/deploy-use/monitor-endpoint-protection.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -245,8 +245,8 @@ Endpoint Protection (EP) için veritabanı eski durum bilgilerini silmek için b
 
 Exchange Server Bağlayıcısı tarafından yönetilen mobil cihazlara ilişkin eski verileri silmek için bu görevi kullanın. Site, bu verileri Exchange Server Bağlayıcısı özelliklerinin **bulma** sekmesindeki **(gün) daha fazla süre için etkin olmayan mobil cihazlara** göre siler. Daha fazla bilgi için bkz. [Configuration Manager ve Exchange ile mobil cihazları yönetme](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -255,8 +255,8 @@ Exchange Server Bağlayıcısı tarafından yönetilen mobil cihazlara ilişkin 
 
 Bu görevi, belirli bir süreden daha uzun süredir depolanan veritabanı envanter verilerinden silmek için kullanın. Daha fazla bilgi için bkz. [donanım envanterini görüntülemek için kaynak Gezgini kullanma](../../clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -268,8 +268,8 @@ Bu görevi, sorun giderme için kullanılan eski günlük verilerini veritabanı
 > [!IMPORTANT]  
 > Bu görev, varsayılan olarak her sitede günlük olarak çalıştırılır. Bir merkezi yönetim sitesinde ve birincil sitelerde, görev 30 günden eski olan verileri siler. İkincil bir sitede SQL Server Express kullandığınızda, bu görevin günlük olarak çalıştığından ve yedi gün boyunca etkin olmayan verileri sildiğinden emin olun.  
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |**Birincil site**|Etkin|
 |**İkincil site**|Etkin|
@@ -278,8 +278,8 @@ Bu görevi, sorun giderme için kullanılan eski günlük verilerini veritabanı
 
 Bu görevi, belirli bir süreden daha uzun süredir depolanan yazılım kullanım ölçümü için eski verileri veritabanından silmek üzere kullanın. Daha fazla bilgi için bkz. [yazılım kullanım ölçümü](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -288,8 +288,8 @@ Bu görevi, belirli bir süreden daha uzun süredir depolanan yazılım kullanı
 
 Bu görevi, belirli bir süreden daha uzun süredir depolanan yazılım kullanım ölçümü için eski veritabanı Özet verilerinden silmek üzere kullanın. Daha fazla bilgi için bkz. [yazılım kullanım ölçümü](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -298,8 +298,8 @@ Bu görevi, belirli bir süreden daha uzun süredir depolanan yazılım kullanı
 
 Bu görev eski istemci varlığı geçmişini siler.
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -308,8 +308,8 @@ Bu görev eski istemci varlığı geçmişini siler.
 
 Bu görevi, istemci bildirim görevleriyle ilgili site veritabanı bilgilerini silmek için kullanın. Bu görev, belirli bir süre için güncelleştirilmemiş veriler için geçerlidir. Daha fazla bilgi için bkz. [istemci bildirimleri](../../clients/manage/client-notification.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -318,8 +318,8 @@ Bu görevi, istemci bildirim görevleriyle ilgili site veritabanı bilgilerini s
 
 Eski geçiş kodu Windows Phone cihazların verilerini sıfırlamasını silmek için bu görevi hiyerarşinizin en üst düzeyindeki sitesinde kullanın. Geçiş kodu sıfırlama verileri şifrelenir ancak cihazlar için PIN 'ı içerir. Varsayılan olarak, bu görev etkindir ve bir günden eski olan verileri siler.  
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -328,8 +328,8 @@ Eski geçiş kodu Windows Phone cihazların verilerini sıfırlamasını silmek 
 
 Configuration Manager siteleri arasında veritabanı çoğaltmasıyla ilgili eski veritabanından silmek için bu görevi kullanın. Bu bakım görevinin yapılandırmasını değiştirdiğinizde, yapılandırma hiyerarşideki geçerli tüm sitelere uygulanabilir. Daha fazla bilgi için bkz. [veritabanı çoğaltmasını izleme](monitor-replication.md).  
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |**Birincil site**|Etkin|
 |**İkincil site**|Etkin|
@@ -338,8 +338,8 @@ Configuration Manager siteleri arasında veritabanı çoğaltmasıyla ilgili esk
 
 Bu görevi, belirli bir süre boyunca güncelleştirilmemiş eski çoğaltma Özeti verilerini site veritabanından silmek için kullanın. Daha fazla bilgi için bkz. [veritabanı çoğaltmasını izleme](monitor-replication.md).  
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |**Birincil site**|Etkin|
 |**İkincil site**|Etkin|
@@ -348,8 +348,8 @@ Bu görevi, belirli bir süre boyunca güncelleştirilmemiş eski çoğaltma Öz
 
 Bu görevi, durum filtre kurallarında yapılandırılmış eski durum iletisi verilerini veritabanından silmek için kullanın. Daha fazla bilgi için bkz. [Configuration Manager durum sistemini izleme](use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -358,8 +358,8 @@ Bu görevi, durum filtre kurallarında yapılandırılmış eski durum iletisi v
 
 Bu görevi, belirli bir süreden daha uzun süredir depolanan eski Endpoint Protection tehdit verilerini veritabanından silmek için kullanın. Daha fazla bilgi için bkz. [Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -368,8 +368,8 @@ Bu görevi, belirli bir süreden daha uzun süredir depolanan eski Endpoint Prot
 
 Bu görevi, belirli bir süre boyunca güncelleştirilmemiş site veritabanından bilinmeyen bilgisayarlara ilişkin bilgileri silmek için kullanın. Daha fazla bilgi için bkz. [bilinmeyen bilgisayar dağıtımları Için hazırlanma](../../../osd/get-started/prepare-for-unknown-computer-deployments.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -378,8 +378,8 @@ Bu görevi, belirli bir süre boyunca güncelleştirilmemiş site veritabanında
 
 Eski Kullanıcı cihaz benzeşimi verilerini veritabanından silmek için bu görevi kullanın. Daha fazla bilgi için bkz. [kullanıcıları ve cihazları Kullanıcı cihaz benzeşimi Ile bağlama](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -388,8 +388,8 @@ Eski Kullanıcı cihaz benzeşimi verilerini veritabanından silmek için bu gö
 
 Bu görevi, sistem bulma tarafından oluşturulan yinelenen kayıtları site veritabanından silmek için kullanın.<!-- SCCMDocs#1339 -->
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |Birincil site|Kullanılamaz|
 |İkincil site|Kullanılamaz|
@@ -398,8 +398,8 @@ Bu görevi, sistem bulma tarafından oluşturulan yinelenen kayıtları site ver
 
 Kayıt sertifikasının süresi dolduktan sonra eski toplu kayıt sertifikalarını ve ilgili profilleri silmek için bu görevi kullanın. Daha fazla bilgi için bkz. [sertifika profilleri oluşturma](../../../protect/deploy-use/create-certificate-profiles.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -413,8 +413,8 @@ Bu görev yalnızca Configuration Manager istemci kaynakları üzerinde çalış
 > [!IMPORTANT]  
 > Etkinleştirildiğinde, bu görevi **sinyal bulma** zamanlamadan daha büyük bir aralıkta çalışacak şekilde yapılandırın. Bu yapılandırma, etkin istemcilerin istemci kayıtlarını etkin olarak işaretlemek için bir sinyal bulma kaydı göndermesini sağlar, bu nedenle bu görev onları silmez.  
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin değil|
 |İkincil site|Kullanılamaz|
@@ -423,8 +423,8 @@ Bu görev yalnızca Configuration Manager istemci kaynakları üzerinde çalış
 
 Bu görevi, belirli bir süreden daha uzun bir süre saklanan, süresi dolmayan uyarıları silmek için kullanın. Daha fazla bilgi için bkz. [uyarıları ve durum sistemini kullanma](use-alerts-and-the-status-system.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -436,8 +436,8 @@ Eski istemci kayıtlarını veritabanından silmek için bu görevi kullanın. K
 > [!IMPORTANT]  
 > Etkinleştirildiğinde, bu görevi sinyal bulma zamanlamadan daha büyük bir aralıkta çalışacak şekilde yapılandırın. Bu yapılandırma, istemcinin eski durumu doğru şekilde ayarlayan bir sinyal bulma kaydı göndermesini sağlar.  
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin değil|
 |İkincil site|Kullanılamaz|
@@ -446,8 +446,8 @@ Eski istemci kayıtlarını veritabanından silmek için bu görevi kullanın. K
 
 Active Directory siteleri, alt ağlar ve etki alanları hakkındaki verileri silmek için bu görevi kullanın. Son 30 gün içinde, sitenin Active Directory orman bulma yöntemi tarafından bulunmayan verileri kaldırır. Bu görev, bulma verilerini kaldırır, ancak bu bulgu verilerinden oluşturduğunuz sınırları etkilemez. Daha fazla bilgi için bkz. [bulmayı çalıştırma](../deploy/configure/run-discovery.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -456,8 +456,8 @@ Active Directory siteleri, alt ağlar ve etki alanları hakkındaki verileri sil
 
 İstemci dağıtım durumu bilgilerini içeren tabloyu düzenli aralıklarla temizlemek için bu görevi kullanın. Bu görev, eski veya kullanımdan kaldırılan cihazlarla ilişkili kayıtları temizler.  
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -466,8 +466,8 @@ Active Directory siteleri, alt ağlar ve etki alanları hakkındaki verileri sil
 
 Koleksiyon üyeliği değerlendirmesini bir site bileşeni olarak yapılandırırsınız. Daha fazla bilgi için bkz. [site bileşenleri](../deploy/configure/site-components.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -476,8 +476,8 @@ Koleksiyon üyeliği değerlendirmesini bir site bileşeni olarak yapılandırı
 
 Configuration Manager veritabanı birincil anahtarlarının bütünlüğünü izlemek için bu görevi kullanın. Birincil anahtar, bir sütunu veya bir satırı benzersiz bir şekilde tanımlayan sütunların bir birleşimidir. Anahtar, Microsoft SQL Server veritabanı tablosundaki diğer satırlardan satırı ayırır.
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -492,8 +492,8 @@ Performansı artırmak için Configuration Manager veritabanı dizinleri, verita
 - %50 ' den az benzersiz olan sütunlarda dizinleri bırakır
 - Veri benzersizliği ölçütünü karşılayan mevcut tüm dizinleri yeniden oluşturur
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |**Merkezi yönetim sitesi**|Etkin değil|
 |**Birincil site**|Etkin değil|
 |**İkincil site**|Etkin değil|
@@ -504,8 +504,8 @@ Yazılım kullanım ölçümü dosya kullanımı için birden çok kayıttan al�
 
 Yazılım kullanım ölçümü verilerini özetlemek ve veritabanında disk alanından tasarruf etmek için bu görevi **yazılım ölçümü aylık kullanım verilerini Özetle** göreviyle birlikte kullanın. Daha fazla bilgi için bkz. [yazılım kullanım ölçümü](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -514,8 +514,8 @@ Yazılım kullanım ölçümü verilerini özetlemek ve veritabanında disk alan
 
 Birden çok kaydı tek bir genel kayıtta birleştirmek için donanım envanteri aracılığıyla toplanan varlık yönetim bilgileri yazılım bilgilerinden verileri özetlemek üzere bu görevi kullanın. Veri özetleme, Configuration Manager veritabanında depolanan veri miktarını sıkıştırabilir. Daha fazla bilgi için bkz. [varlık yönetim bilgileri bakım görevlerini yapılandırma](../../clients/manage/asset-intelligence/configuring-asset-intelligence.md#BKMK_ConfigureMaintenanceTasks).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -526,8 +526,8 @@ Yazılım ölçümü aylık kullanımı için birden çok kayıttan alınan veri
 
 Yazılım kullanım ölçümü verilerini özetlemek ve veritabanında yer kazanmak için bu görevi **yazılım ölçümü dosyası kullanım verilerini Özetle** göreviyle birlikte kullanın. Daha fazla bilgi için bkz. [yazılım kullanım ölçümü](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -538,8 +538,8 @@ Bu görevi, koleksiyonlardaki kaynaklarla ilke ve uygulama dağıtımlarının e
 
 Bu eşlemeler hızlı başvuru için bir tabloda depolanır. Bir koleksiyon üyeliği değiştiğinde, site bu değişiklikleri yansıtacak şekilde bu saklı eşlemeleri güncelleştirir. Ancak, bu eşlemelerin eşitlenmemiş olması mümkündür. Örneğin, site bir bildirim dosyasını düzgün bir şekilde işleyemezse, bu değişiklik eşlemelere bir değişikliğe yansıtılmayabilir. Bu görev, geçerli koleksiyon üyeliğine göre eşlemeyi yeniler.  
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|
@@ -548,8 +548,8 @@ Bu eşlemeler hızlı başvuru için bir tabloda depolanır. Bir koleksiyon üye
 
 Uygulama Kataloğu web sitesi veritabanı önbelleğini en son uygulama bilgileriyle eşleştirmek için bu görevi kullanın. Bu bakım görevinin yapılandırmasını değiştirdiğinizde, hiyerarşideki tüm birincil siteler için geçerli olur.  
 
-|||
-|---------|---------|
+| Site türü | Durum |
+| --------- | ------ |
 |Merkezi yönetim sitesi|Kullanılamaz|
 |**Birincil site**|Etkin|
 |İkincil site|Kullanılamaz|

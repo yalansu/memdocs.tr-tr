@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2020
+ms.date: 08/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35ee8b225abe48aa4b8b0ca78b9e5b137d0721f6
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: 49d731ef6e9508367ded8ed5d711b744be7d2db1
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758372"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912542"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Microsoft Intune ile iOS ve Android için Edge kullanarak Web erişimini yönetme
 
@@ -114,7 +114,7 @@ Bu yapılandırma senaryosu yalnızca kayıtlı cihazlarla birlikte kullanılabi
 
 ## <a name="general-app-configuration-scenarios"></a>Genel uygulama yapılandırma senaryoları
 
-İOS ve Android için Edge, yöneticilere birçok uygulama içi ayar için varsayılan yapılandırmayı özelleştirme olanağı sunar. Bu özellik şu anda yalnızca iOS ve Android için kenarda, uygulamada oturum açan iş veya okul hesabına uygulanan bir Intune Uygulama Koruması Ilkesi olduğunda sunulur.
+İOS ve Android için Edge, yöneticilere birçok uygulama içi ayar için varsayılan yapılandırmayı özelleştirme olanağı sunar. Bu özellik şu anda yalnızca iOS ve Android için Edge 'de, uygulamada oturum açan iş veya okul hesabına uygulanan bir Intune Uygulama Koruması Ilkesi olduğunda ve ilke ayarları yönetilen uygulamalar uygulama yapılandırma Ilkesi aracılığıyla teslim edildiğinde sunulur.
 
 > [!IMPORTANT]
 > Android Edge, yönetilen Google Play kullanılabilen Kmıum ayarlarını desteklemez.
@@ -246,12 +246,12 @@ Android Edge, aşağıdaki ayarlara sahip bir bilgi noktası uygulaması olarak 
 |    Anahtar    |    Değer    |
 |-----------|-------------|
 |    com. Microsoft. Intune. mam. managedbrowser. Enablekıoskmode    |    **true** , Android için uç bilgi noktası modunu sunar<br>**false** (varsayılan) bilgi noktası modunu devre dışı bırakır    |
-|    com. Microsoft. Intune. mam. managedbrowser. Showaddressbarınkioskmode    |    **doğru** , adres çubuğunu bilgi noktası modunda gösterir<br> **false** (varsayılan) bilgi noktası modundaki adres çubuğunu gizler    |
-|    com. Microsoft. Intune. mam. managedbrowser. Showbot, Arınkioskmode    |    **true** , bilgi noktası modunda alt eylem çubuğunu gösterir<br> **false** (varsayılan) bilgi noktası modundaki alt çubuğu gizler    |
+|    com. Microsoft. Intune. mam. managedbrowser. Showaddressbarınkioskmode    |    **doğru** , adres çubuğunu bilgi noktası modunda gösterir<br> **yanlış** (varsayılan) bilgi noktası modu etkinleştirildiğinde adres çubuğunu gizler    |
+|    com. Microsoft. Intune. mam. managedbrowser. Showbot, Arınkioskmode    |    **true** , bilgi noktası modunda alt eylem çubuğunu gösterir<br> **yanlış** (varsayılan) bilgi noktası modu etkinleştirildiğinde alt çubuğu gizler    |
 
 ## <a name="data-protection-app-configuration-scenarios"></a>Veri koruma uygulaması yapılandırma senaryoları
 
-Uygulama Microsoft Uç Nokta Yöneticisi tarafından uygulamada oturum açan iş veya okul hesabına uygulanan bir Intune Uygulama Koruması Ilkesiyle yönetildiğinde iOS ve Android için aşağıdaki veri koruma ayarları için uygulama yapılandırma ilkelerini destekler:
+Uygulama Microsoft Uç Nokta Yöneticisi tarafından, uygulamada oturum açan iş veya okul hesabına uygulanan bir Intune Uygulama Koruması Ilkesiyle yönetilen ve ilke ayarları yönetilen uygulamalar uygulama yapılandırma Ilkesi aracılığıyla teslim edildiğinde, iOS ve Android için uygulama yapılandırma ilkelerini, aşağıdaki veri koruma ayarları için destekler:
 
 - Hesap eşitlemesini yönetme
 - Kısıtlanmış Web sitelerini yönetme
