@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 34005a63b372198bbc2e3079f8ab560ef6b2b791
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: eb393b05e1ee93239b43725a67b9a1b3e54e71ed
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795655"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997958"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Masaüstü Analizi veri gizliliği
 
@@ -94,7 +94,5 @@ Gizlilik açısından ilgili sık sorulan sorular için bkz. [gızlılık SSS](f
 - [Güvenilir bulutta güven](https://azure.microsoft.com/overview/trusted-cloud/)  
 
 - [Güven Merkezi](https://www.microsoft.com/trustcenter)  
-
-- [Gizlilik kalkanı](https://www.privacyshield.gov/)  
 
 Masaüstü analizinden ayrı olarak, Configuration Manager tanılama ve kullanım verilerini Microsoft 'a gönderir. Microsoft bu verileri, Configuration Manager gelecek sürümlerin yükleme deneyimini, kalitesini ve güvenliğini geliştirmek için kullanır. Daha fazla bilgi için bkz. [Configuration Manager Için tanılama ve kullanım verileri](../core/plan-design/diagnostics/diagnostics-and-usage-data.md).

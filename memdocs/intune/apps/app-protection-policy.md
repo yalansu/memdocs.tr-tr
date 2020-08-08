@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5685a9d8738fa3f2303902d439fe73e8d45b35e7
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 9688397218539ef3cc16f6fed91380e1820dbb15
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865729"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997978"
 ---
 # <a name="app-protection-policies-overview"></a>Uygulama koruma ilkelerine genel bakış
 
@@ -325,7 +325,7 @@ Bu işlemin amacı, kuruluşunuzun uygulama içindeki verilerinin güvenli ve uy
 Veri Aktarım İlkesi **yalnızca yönetilen uygulamalar** veya **uygulama olmadan**ayarlanmış olsa bile, yönetilmeyen uygulamalarda iş veya okul verilerini açmak Için iOS/ıpados Share uzantısını kullanabilirsiniz. Intune uygulama koruma ilkesi, cihazı yönetmeksizin iOS/ıpados paylaşma uzantısını denetlemez. Bu nedenle, Intune _**“kurumsal” verileri veriler uygulama dışında paylaşılmadan önce şifreler**_. Yönetilen uygulama dışında bir "Kurumsal" dosya açmaya çalışırken bu şifreleme davranışını doğrulayabilirsiniz. Bu dosya şifrelenmiş olmalı ve yönetilen bir uygulama dışında açılamamalıdır.
 
 ### <a name="universal-links-support"></a>Evrensel bağlantılar desteği
-Varsayılan olarak, Intune uygulama koruma ilkeleri yetkisiz uygulama içeriğine erişimi engeller. İOS/ıpados 'da, [evrensel bağlantıları](https://developer.apple.com/universal-links/)kullanarak belirli içerik veya uygulamaları açmaya yönelik işlevsellik vardır. 
+Varsayılan olarak, Intune uygulama koruma ilkeleri yetkisiz uygulama içeriğine erişimi engeller. İOS/ıpados 'da, [evrensel bağlantıları](https://developer.apple.com/ios/universal-links/)kullanarak belirli içerik veya uygulamaları açmaya yönelik işlevsellik vardır. 
 
 Kullanıcılar, uygulamayı Safari 'de ziyaret ederek ve **Yeni sekmede aç** veya **Aç**seçeneğini belirleyerek bir uygulamanın evrensel bağlantılarını devre dışı bırakabilir. Intune uygulama koruma ilkeleriyle Kullanıcı evrensel bağlantılarına yönelik olarak, evrensel bağlantıların yeniden etkinleştirilmesi önemlidir. **Open in**  < İlgili bağlantıya bastıktan sonra son kullanıcının Safari 'de> bir açık***uygulama adı*** olması gerekir. Bu, tüm evrensel bağlantıları cihazdaki korumalı uygulamaya yönlendirmesi için ek korumalı uygulama istemelidir.
 

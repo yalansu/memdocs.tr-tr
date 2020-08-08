@@ -2,7 +2,7 @@
 title: Gelişmiş HTTP
 titleSuffix: Configuration Manager
 description: PKI sertifikalarına gerek olmadan istemci iletişimini güvenli hale getirmek için modern kimlik doğrulaması kullanın.
-ms.date: 07/10/2020
+ms.date: 08/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79b4119a12826596fcc91fa1b4ead4e151e2ddd8
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 5d28e0ccef767770092d03898489104ae6f8c674
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262107"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997906"
 ---
 # <a name="enhanced-http"></a>Gelişmiş HTTP
 
@@ -118,6 +118,11 @@ Bu sertifikaları Configuration Manager konsolunda görebilirsiniz. **Yönetim**
 
 İstemcinin yönetim noktası ve dağıtım noktasıyla Bu yapılandırmayla nasıl iletişim kurduğu hakkında daha fazla bilgi için bkz. [istemcilerden site sistemlerine ve hizmetlere yönelik iletişimler](communications-between-endpoints.md#Planning_Client_to_Site_System).
 
+## <a name="validate-the-certificate"></a>Sertifikayı doğrulama
+
+Gelişmiş HTTP 'yi etkinleştirdiğinizde, site sunucusu **SMS rol SSL sertifikası**adlı kendinden imzalı bir sertifika oluşturur. Bu sertifika, kök **SMS veren** sertifika tarafından verilir. Yönetim noktası, bu sertifikayı 443 numaralı bağlantı noktasına göre IIS varsayılan Web sitesine ekler.
+
+Yapılandırmanın durumunu görmek için **Mpcontrol. log**' u inceleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

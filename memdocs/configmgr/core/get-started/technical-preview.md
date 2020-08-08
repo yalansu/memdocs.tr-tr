@@ -2,7 +2,7 @@
 title: Teknik Önizleme sürümleri
 titleSuffix: Configuration Manager
 description: Configuration Manager ' de yeni işlevsellik ve özellikleri test etmek için teknik önizleme dalı hakkında bilgi edinin.
-ms.date: 07/14/2020
+ms.date: 08/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 64e784ec7313dfa778ee39f6e1f52e7c09fcfd95
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 1d67ba33e2f2f9783b903e60aa64170e1fbb61a5
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384834"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997925"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager için teknik önizleme
 
@@ -94,7 +94,6 @@ Microsoft, art arda üç sürüm kullanılabilir olana kadar her bir Technical P
 Sürümünden sonraki bir yıla kadar bir temel sürümü yükler. Yeni bir Technical Preview sitesi yüklediğinizde, en son temel sürümü kullanın. Aşağıdaki Configuration Manager Technical Preview dalı sürümleri, konsol içi güncelleştirmeler ve yeni temel sürümler olarak kullanılabilir:
 
 - **Technical Preview sürüm 2007**
-- **Technical Preview sürüm 2002**
 
 [Değerlendirme merkezinden](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)bir temel sürüm indirin.
 
@@ -121,13 +120,15 @@ bullet format:
 
 Aşağıdaki özellikler en son Configuration Manager Technical Preview sürümü ile sunulmaktadır:
 
-### <a name="technical-preview-version-2007"></a>Technical Preview sürüm 2007
+### <a name="technical-preview-version-2008"></a>Technical Preview sürüm 2008
 
-- [Kiracı iliştirme: Microsoft Endpoint Manager Yönetim Merkezi 'nde donanım envanterini görüntüleme](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
-- [İstemci veri kaynakları panosundaki geliştirmeler](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
-- [Artık bazı konsol alanlarında kullanılan sabit genişlikli yazı tipi](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
-- [Görev sırası ilke boyutunu Yönet](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
-- [Yönetim merkezinde cihaz zaman çizelgesinde iyileştirmeler](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
+- [Koleksiyon sorgu önizlemesi](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
+- [Özellik güncelleştirmeleri için SetupDiag hatalarını çözümle](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
+- [Senaryo durumunu izleme](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
+- [Koleksiyon değerlendirme görünümü](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
+- [Bkz. konsolundaki görev sırası boyutu](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
+- [Eski toplanan tanılama dosyalarını Sil görevi](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
+- [Nesneleri geçerli klasöre aktar](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
 
 > [!NOTE]
 > Technical Preview 'un önceki bir sürümünde kullanılabilen özellikler sonraki sürümlerde de kullanılabilir durumda kalır. Benzer şekilde, geçerli dala eklenen Configuration Manager özellikler, Technical Preview dalında kullanılabilir kalır.
@@ -144,6 +145,14 @@ When there's a new CB, add any features not in that CB to the table in H2 "Featu
 
 > [!TIP]
 > Yeni bir geçerli dal sürümü kullanılabilir olduğunda, bu sürümde kullanılabilen özellikler en son *Yenilikler* makalesinde listelenmiştir. Daha fazla bilgi için bkz. [artımlı sürümlerindeki](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)yenilikler.
+
+### <a name="technical-preview-version-2007"></a>Technical Preview sürüm 2007
+
+- [Kiracı iliştirme: Microsoft Endpoint Manager Yönetim Merkezi 'nde donanım envanterini görüntüleme](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
+- [İstemci veri kaynakları panosundaki geliştirmeler](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
+- [Artık bazı konsol alanlarında kullanılan sabit genişlikli yazı tipi](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
+- [Görev sırası ilke boyutunu Yönet](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
+- [Yönetim merkezinde cihaz zaman çizelgesinde iyileştirmeler](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
 
 ### <a name="technical-preview-version-2006"></a>Technical Preview sürüm 2006
 
