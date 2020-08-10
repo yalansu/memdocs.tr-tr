@@ -1,12 +1,12 @@
 ---
-title: Intune son kullanıcı uygulamaları arabirimlerinde yapılan güncelleştirmeler
+title: Intune son kullanıcı uygulamaları için Kullanıcı Arabirimi güncelleştirmeleri | Microsoft Docs
 titleSuffix: Microsoft Intune
 description: Son kullanıcı cihazlarında Microsoft Intune ile çalışan uygulamalar için kullanıcı arabiriminde yapılan değişiklikleri keşfedin.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 08/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11aba38d63621472b5e8513b066b96120d649c31
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: cbb66833397d16ec18ce015d26a19bd28a1113c4
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740901"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048166"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune son kullanıcı uygulamaları arabirimlerinde yapılan güncelleştirmeler
 
@@ -34,6 +34,13 @@ Microsoft Intune uygulamalarına yönelik en son güncelleştirmeler hakkında b
 
 Bir çalışan ya da öğrenciyseniz, Şirket Portalı yardım belgelerinin ekran görüntülerini ve bağlantılarını kontrol ettiğinizden emin olun. Şirket Portalı uygulamasının nasıl kullanılacağı hakkında daha fazla bilgi için, [Şirket portalı Kullanıcı Yardım belgelerine](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done)bakın.  
 
+## <a name="week-of-august-10-2020"></a>10 Ağustos 2020 haftası
+
+### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-shows-descriptions---7414768---"></a>Android için Şirket Portalı App 'teki cihaz ayarlarını güncelleştirme iyileştirmesi açıklamaları gösterir<!-- 7414768 -->
+
+Android cihazlarda Şirket Portalı uygulamasında, **cihaz ayarlarını Güncelleştir** sayfası, güncelleştirilmesi gereken ayarları listeler. Kullanıcılar daha fazla bilgi görmek için sorunu genişletir ve **Çözümle** düğmesine bakın.
+
+Bu Kullanıcı deneyimi geliştirilmiştir. Listelenen ayarlar, açıklamayı göstermek için varsayılan olarak genişletilir ve uygunsa **Çözümle** düğmesini gösterir. Daha önce, sorunlar varsayılan olarak daraltılıydı. Bu varsayılan davranış, kullanıcıların sorunları daha hızlı çözümleyebilmeleri için tıklama sayısını azaltır.
 
 ## <a name="week-of-june-8-2020"></a>8 Haziran 2020 haftası 
 

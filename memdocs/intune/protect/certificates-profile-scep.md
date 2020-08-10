@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/21/2020
+ms.date: 08/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebf6a71a4d462e1025b6c44557a9513887488673
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 77a69af395aee293f927682f9d1a095c11a1d8a5
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891539"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048098"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Intune 'da SCEP sertifika profilleri oluşturma ve atama
 
@@ -315,6 +315,8 @@ Devam etmeden önce aşağıdakileri göz önünde bulundurun:
 
 > [!NOTE]
 > - İOS/ıpados cihazlarında, bir SCEP sertifika profili veya PKCS sertifika profili, Wi-Fi veya VPN profili gibi ek bir profille ilişkilendirildiğinde, cihaz bu ek profillerin her biri için bir sertifika alır. Bu, iOS/ıpados cihazının SCEP veya PKCS sertifika isteği tarafından sunulan birden çok sertifikaya sahip olmasına neden olur. 
+> 
+>   SCEP tarafından sunulan sertifikalar benzersizdir. PKCS tarafından sunulan sertifikalar aynı sertifikadır, ancak her profil örneği yönetim profilinde ayrı bir satırla temsil edildiğinde farklı şekilde görünür.
 > - İOS 13 ve macOS 10,15 ' de, Apple tarafından ele alınması gereken bazı [ek güvenlik gereksinimleri](https://support.apple.com/HT210176) vardır.  
 
 

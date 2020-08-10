@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a8d48235141c0b5ad07fbdce4d24e894f8103e6f
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2e32b6e1c5e976669e78d3cf00610fbd57b68dd1
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882402"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048047"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Şirket kaynaklarınıza iOS cihaz erişimi ayarlayın  
 
@@ -35,12 +35,12 @@ Cihazınız kaydedildikten sonra, *yönetilen*hale gelir. Kuruluşunuz, Intune g
 > [!NOTE]
 > Her nedenden dolayı hizmetimizin tarafından toplanan herhangi bir veriyi üçüncü taraflardan satmayacağız.  
 
-Cihazınızdaki iş veya okul bilgilerine erişimi sürdürmek için cihazınızı kuruluşunuzun tercih ettiğiniz ayarlarla eşleşecek şekilde yapılandırmanız gerekir. Bu makalede, cihazınızı kaydetmek ve kuruluşunuzun ayar gereksinimlerini korumak için Şirket Portalı nasıl kullanılacağı açıklanır.  
+Cihazınızdaki iş veya okul bilgilerine erişimi sürdürmek için cihazınızı kuruluşunuzun tercih ettiğiniz ayarlarla eşleşecek şekilde yapılandırmanız gerekir. Bu makalede, cihazınızı kaydetmek ve erişim gereksinimlerini sürdürmek için Şirket Portalı nasıl kullanılacağı açıklanır.  
 </br>
 > [!VIDEO https://www.youtube.com/embed/mJyv6YcHi7c?rel=0]
 
 > [!NOTE]
-> Mail uygulamasında şirket e-postasına erişmeyi denediğinizde cihazınızı yönettirmeniz istendiyse, doğru yere geldiniz. iOS cihazınızda e-posta ve diğer şirket kaynaklarına erişmek için aşağıdaki yönergeleri izleyin.  
+> E-posta uygulamasında iş e-postanıza erişmeye çalıştıysanız ve cihazınızın yönetilebilmesi için bir istem alırsanız doğru yerde olursunuz. İOS cihazınızda e-postanıza ve diğer iş kaynaklarınıza erişiminizi yeniden elde etmenize yardımcı olacak aşağıdaki yönergeleri izleyin.  
 
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Şirket Portalı uygulamasından bekleyebilecekleriniz  
@@ -56,13 +56,17 @@ Kayıttan sonra kuruluşunuz, çok faktörlü kimlik doğrulaması gibi yeni bir
 
 Kayıt hakkında daha fazla bilgi edinmek için bkz. [Şirket Portalı uygulamasını yüklediğimde ve cihazımı kaydettiğimde ne olur?](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
+## <a name="prerequisties"></a>Önkoşulıtlar  
+
+* [Intune şirket portalı uygulamasını](install-and-sign-in-to-the-intune-company-portal-app-ios.md) cihazınıza indirip yüklemek için App Store 'a gidin. 
+* Tüm adımlar tamamlanana kadar bir Wi-Fi bağlantısı saklayın.
+* Cihazınızda Safari Web tarayıcısına erişin.
+
 ## <a name="enroll-your-ios-device"></a>iOS cihazınızı kaydetme  
 
-[Intune şirket portalı uygulamasını](install-and-sign-in-to-the-intune-company-portal-app-ios.md) cihazınıza indirip yüklemek için App Store 'a gidin. Ayrıca, bir Wi-Fi bağlantısı sürdürmenize ve kayıt sırasında Safari 'ye erişiminizin olması gerekir. 
+Kayıt sırasında birkaç dakikadan uzun bir süre durakladığında, Şirket Portalı uygulamasının kurulum 'u kapatması veya sonlandırmasına neden olabilir. Bu durumda, uygulamayı yeniden açın ve yeniden deneyin.  
 
-Kayıt sırasında birkaç dakikadan uzun bir süre durakladığında uygulamanın kurulum 'u kapatması veya sonlandırmasına neden olabilir. Bu durumda Şirket Portalı uygulamasını açın ve yeniden deneyin.  
-
-1. Şirket Portalı açın ve iş veya okul hesabınızla oturum açın.  
+1. Şirket Portalı’nı açın ve iş veya okul hesabınızla oturum açın.  
 
 2. Şirket Portalı bildirimleri almanız istendiğinde, **Izin ver** ' e dokunun. Şirket Portalı, örneğin cihaz ayarlarınızın güncellenmesi gerekiyorsa sizi uyarmak için bildirimleri kullanır.  
 
@@ -123,7 +127,7 @@ Kayıt sırasında birkaç dakikadan uzun bir süre durakladığında uygulaman�
 
 9. Şirket Portalı uygulamasına geri dönün. Şirket Portalı, cihazınızı eşitlemeye ve ayarlamaya başlayacaktır. Şirket Portalı ek cihaz ayarlarını güncelleştirmenizi isteyebilir. Varsa, **devam**' a dokunun.  
 
-10. Listedeki tüm öğeler yeşil onay işareti gösterdiğinizde kurulumun tamamlandığını bilirsiniz. **Bitti**’ye dokunun.   
+10. Listedeki tüm öğeler yeşil onay işareti gösterdiğinizde kurulumun tamamlandığını bilirsiniz. **Bitti**'ye dokunun.   
 
 > [!Note]
 > Kuruluşunuz ses ve veri sınırlarını izliyor veya size şirkete ait bir cihaz sağlıyorsa, birkaç adım daha doldurmanız gerekebilir. **Datalert** uygulamasını yüklemek isteyip istemediğiniz sorulursa, bkz. [cihazınızı Telekom gider yönetimine kaydetme](enroll-your-device-with-telecom-expense-management-ios.md). Kuruluşunuz Apple Aygıt Kayıt Programı bir parçasıysa [şirkete ait cihazınızı nasıl kaydedebileceğinizi](enroll-your-device-dep-ios.md)öğrenin.  
@@ -176,7 +180,7 @@ Kayıt sırasında birkaç dakikadan uzun bir süre durakladığında uygulaman�
 
 11. Şirket Portalı uygulamasına geri dönün. Şirket Portalı, cihazınızı eşitlemeye ve ayarlamaya başlayacaktır. Şirket Portalı ek cihaz ayarlarını güncelleştirmenizi isteyebilir. Varsa, **devam**' a dokunun.    
 
-12. Listedeki tüm öğeler yeşil onay işareti gösterdiğinizde kurulumun tamamlandığını bilirsiniz. **Bitti**’ye dokunun.  
+12. Listedeki tüm öğeler yeşil onay işareti gösterdiğinizde kurulumun tamamlandığını bilirsiniz. **Bitti**'ye dokunun.  
 
 ## <a name="it-administrator-support"></a>BT yöneticisi desteği  
 BT yöneticisiyseniz ve cihazları kaydederken sorun yaşıyorsanız, bkz. [Microsoft Intune iOS cihaz kaydı sorunlarını giderme](https://support.microsoft.com/en-us/help/4039809). Bu makalede, sık karşılaşılan hatalar, nedenler ve bunları çözmeye yönelik adımlar listelenir.  

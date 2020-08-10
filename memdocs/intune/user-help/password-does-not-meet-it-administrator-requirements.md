@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aed17d518213f875e15f2261ec1a18640357203a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4f53aa731dbe7483f7fbe97c509a82677072c25c
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880948"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88047995"
 ---
 # <a name="device-password-requirements-for-enrolled-devices"></a>Kayıtlı cihazlar için cihaz parolası gereksinimleri
 
@@ -89,13 +89,15 @@ Ek Yardım veya kuruluşunuzun özel gereksinimlerini öğrenmek için BT destek
 | Parolanın süresi doldu. | Yeni bir parola ayarlayın. Kuruluşunuz, parolanızın belirli bir süre geçtikten sonra değiştirilmesini gerektirir. |
 | Parolanız çok kısa süre önce kullanıldı. | Daha önce kullanılmayan bir parola seçin. Bir parolayı yeniden kullanmadan önce kuruluşunuz belirli bir süre geçiş yapılmasını gerektirir. |
 
-## <a name="next-steps"></a>Sonraki adımlar
+## <a name="update-password-passcode-pin"></a>Parolayı Güncelleştir, geçiş kodu, PIN
 
-Cihaz parolanızı, geçiş kodunu veya PIN 'inizi oluşturmak veya değiştirmek için aşağıdaki makalelere bakın.  
+Aşağıdaki makalelerde, cihaz parolanızı, geçiş kodunu veya PIN 'inizi değiştirme adımları gösterilmektedir. En güncel yönergeler için, cihaz üreticisinden yardım belgelerine bakın. 
 
 - [Windows 10 cihaz parolasını ayarla](set-or-change-your-password-windows.md)  
 - [İOS cihaz geçiş kodunu ayarla](set-or-change-your-passcode-ios.md)  
 - [Android cihaz PIN 'ini veya parolasını ayarlama](set-your-pin-or-password-android.md)  
+
+## <a name="next-steps"></a>Sonraki adımlar
 
 Bu bilgiler yardımcı olmadı mı? Destek sorumlunuza başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.  
 

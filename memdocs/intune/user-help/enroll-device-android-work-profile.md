@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/08/2020
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,16 +19,18 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2be81c19a48d89876f71293e6f868d8cee0e1192
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 39d68f7cec9cdd4baef84d07d7284f6407f659c5
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531409"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048064"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Cihazı Android iş profiline kaydetme
 
-İş veya okul e-postasına, uygulamalarına ve diğer verilere erişim sağlamak için kişisel Android cihazınızı kaydedin. Kayıt sırasında bir Android iş profili ayarlarsınız. Bu profil, cihazınızdaki kişisel verileri iş verilerinize ayırır. Kuruluşunuz, iş dosyalarından ve verilerinden oluşan iş profilini yönetir. Şirketinizin destek, cihazınızdaki kişisel verileri yönetemez.  
+İş veya okul e-postasına, uygulamalarına ve diğer verilere erişim sağlamak için kişisel Android cihazınızı kaydedin. Kayıt sırasında, cihazınızdaki kişisel verileri iş verilerinize ayıran bir Android iş profili ayarlarsınız. Bu tür bir kurulum yapmanız gereken bir şeydir, kuruluşunuz tercih ettiğiniz iletişim kanalı veya Intune Şirket Portalı uygulaması aracılığıyla size bilgi verir. 
+
+Profiliniz kurulduktan sonra kuruluşunuz, yalnızca iş dosyalarından ve iş verilerinden oluşan iş tarafını yönetir. Şirketinizin destek, cihazınızdaki kişisel verileri yönetemez.  
 </br>
 > [!VIDEO https://www.youtube.com/embed/9Dl8HsGk4tI]
 
