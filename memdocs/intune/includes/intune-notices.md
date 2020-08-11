@@ -4,27 +4,24 @@ description: dosya dahil etme
 author: ErikjeMS
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 03/30/2020
+ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 79e2694cfd34f1db8bf11969506ec3d8cbc453d4
-ms.sourcegitcommit: 8a9b85d1c879060ea541f7c8ad1ae34a4ed33ed0
+ms.openlocfilehash: af506f9eee80d167b42827f93958fc2a3a5741a4
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87507521"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051646"
 ---
 Bu bildirimler, gelecekteki Intune değişiklik ve özelliklerine hazırlanmanıza yardımcı olabilecek önemli bilgiler sağlar.
 
-### <a name="microsoft-intune-support-for-windows-10-mobile-ending--3544938--"></a>Windows 10 Mobile bitiş için Microsoft Intune desteği<!--3544938-->
-Windows 10 Mobile için Microsoft temel desteği Aralık 2019 ' de sona erdi. Bu destek bildiriminde bahsedildiği gibi, Windows 10 Mobile kullanıcıları artık yeni güvenlik güncelleştirmeleri, güvenlikle ilgili olmayan düzeltmeler, ücretsiz yardımlı destek seçenekleri veya Microsoft 'un çevrimiçi teknik içerik güncelleştirmeleri almak için uygun olmayacaktır. Microsoft Intune, tüm mobil işletim sistemi desteğine bağlı olarak, Windows 10 Mobile uygulaması için Şirket Portalı ve 10 Ağustos 2020 ' de Windows 10 Mobile Işletim sistemi için destek sona acaktır.
+### <a name="microsoft-intune-ends-support-for-windows-phone-81-and-windows-10-mobile---3544938-3544909---"></a>Microsoft Intune Windows Phone 8,1 ve Windows 10 Mobile desteğini sonlandırır<!-- 3544938, 3544909 -->
+Windows Phone 8,1 için Microsoft temel desteği 2017 Temmuz 'da sona erdi ve genişletilmiş destek, Haziran 2019 ' de sona erdi. Windows Phone 8,1 için Şirket Portalı uygulaması, 2017 ' den bu yana bir moda sahip. Ayrıca, Microsoft Intune Windows Phone 8,1 ' de 20 Şubat 2020 ' de desteği sona ermiştir. 
 
-#### <a name="how-does-this-affect-me"></a>Bu değişiklik beni nasıl etkileyecek?
-Kuruluşunuzda dağıtılmış Windows 10 Mobile cihazları varsa, şu anda ve 10 Ağustos 2020 arasında yeni cihazlar kaydedebilir, ilke ve uygulamaları ekleyebilir veya kaldırabilir ya da herhangi bir yönetim ayarını güncelleştirebilirsiniz. 10 Ağustos 'tan sonra yeni kayıtları durduracağız ve sonuç olarak Windows 10 Mobile yönetimini Intune kullanıcı arabiriminden kaldıracağız. Cihazlar artık Intune hizmetini denetmayacak ve cihaz ve ilke verilerini silecağız.  
+Windows 10 Mobile için Microsoft temel desteği Aralık 2019 ' de sona erdi. Destek bildiriminde bahsedildiği gibi, Windows 10 Mobile kullanıcıları artık yeni güvenlik güncelleştirmeleri, güvenlikle ilgili olmayan düzeltmeler, ücretsiz yardımlı destek seçenekleri veya Microsoft 'tan çevrimiçi teknik içerik güncelleştirmeleri almaya uygun olmayacaktır. Microsoft Intune, tüm mobil işletim sistemi desteğine bağlı olarak, Windows 10 Mobile uygulaması ve 10 Ağustos 2020 ' de Windows 10 Mobile Işletim sistemi için Şirket Portalı desteğini sonlandırır.
 
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Bu değişikliğe hazırlanmak için ne yapmam gerek?
-Hangi cihazların veya kullanıcıların etkilendiğini görmek için Intune raporlamayı kontrol edebilirsiniz. **Cihazlar**  >  **tüm cihazlar** ' a gidin ve işletim sistemine göre filtreleyin. Kuruluşunuzun Windows 10 Mobile çalıştıran cihazlara sahip olduğunu belirlemenize yardımcı olması için ek sütunlar ekleyebilirsiniz. Son kullanıcılarınızın cihazlarını yükseltmesini isteyin veya şirket erişimi için cihazları kullanmaya devam edin.
-
+10 Ağustos 'tan itibaren, Windows Phone 8,1 ve Windows 10 Mobile cihazlarının kayıtları başarısız olur ve Windows mobil profil türleri Intune kullanıcı arabiriminden kaldırılır. Zaten kayıtlı cihazlar artık Intune hizmetini iade etmeyecektir ve cihaz ve ilke verilerini silecağız.
 
 ### <a name="end-of-support-for-legacy-pc-management"></a>Eski PC yönetimi için destek sonu
 

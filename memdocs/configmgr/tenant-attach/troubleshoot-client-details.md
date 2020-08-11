@@ -10,15 +10,17 @@ ms.assetid: 44c2eb8a-3ccc-471f-838b-55d7971bb79e
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 2a30e141bb5ea4d7508bf81f53f173e2a3154f08
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: d983e0c3d84f5bcbf411af1243ddc045d66d9199
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210778"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051587"
 ---
 # <a name="troubleshoot-configmgr-client-details-in-the-admin-center-preview"></a>Yönetim merkezinde ConfigMgr istemci ayrıntıları sorunlarını giderme (Önizleme)
 <!--6374854, 6521921-->
+*Uygulama hedefi: Configuration Manager (geçerli dal)*
+
 Microsoft Endpoint Manager Yönetim Merkezi 'nde ConfigMgr istemci ayrıntılarına sorun gidermek için aşağıdakileri kullanın:
 
 > [!Important]
@@ -63,7 +65,7 @@ ConfigMgr istemci ayrıntılarını görüntülerken, bu hatalardan biri üzerin
 
 1. Hizmet bağlantı noktasının **Cmgatewaynotificationworker. log**kullanarak buluta bağlantı olduğunu doğrulayın.
 1. Merkezi sitedeki site bileşeni izlemenin SMS_REST_PROVIDER bileşenini inceleyerek yönetim hizmetinin sağlıklı olduğunu doğrulayın.
-1. IIS 'nin sağlayıcı makinesine yüklenmesi gerekir. Daha fazla bilgi için bkz [. Yönetim hizmeti önkoşulları](../develop/adminservice/overview.md#prerequisites)
+1. IIS 'nin sağlayıcı makinesine yüklenmesi gerekir. Daha fazla bilgi için bkz. [Yönetim hizmeti önkoşulları](../develop/adminservice/overview.md#prerequisites).
 1. Hizmet bağlantı noktasındaki saatin eşitlenmiş olduğunu doğrulayın. Hizmet bağlantı noktasının saati biraz geride olursa, [Configuration Manager sürüm 2002 kiracı iliştirme sorunları Için KB4563473-Update paketini](https://support.microsoft.com/help/4563473)uygulayın. Hatalar için sağlayıcı makinesinde **Adminservice. log dosyasına** bakın.
 
 ## <a name="known-issues"></a>Bilinen sorunlar

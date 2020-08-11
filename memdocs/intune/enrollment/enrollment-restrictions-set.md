@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f706b2bb898f0969bf33d118291551d0f98d9ef
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: e5ed799d01ea4fdae1f9ecb013b4cf73deb0e6f0
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443903"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051664"
 ---
 # <a name="set-enrollment-restrictions"></a>Kayıt kısıtlamalarını ayarlama
 
@@ -147,7 +147,7 @@ Windows şirket kaydı olarak yetkilendirme için aşağıdaki yöntemler uygund
 - Kaydeden kullanıcı [cihaz kayıt yöneticisi hesabı]( device-enrollment-manager-enroll.md) kullanıyor.
 - Cihaz [Windows Autopilot](enrollment-autopilot.md) yoluyla kaydediliyor.
 - Cihaz Windows Autopilot ile kaydediliyor ancak Windows Ayarları'ndan bir yalnızca MDM kaydı seçeneği değil.
-- Cihazın IMEI numarası **cihaz kaydı**  >  **[Kurumsal cihaz tanımlayıcılarında](corporate-identifiers-add.md)** listelenir. (Windows Phone 8.1 için desteklenmez.)
+- Cihazın IMEI numarası **cihaz kaydı**  >  **[Kurumsal cihaz tanımlayıcılarında](corporate-identifiers-add.md)** listelenir.
 - Cihaz bir [toplu sağlama paketi](windows-bulk-enroll.md) ile kaydediliyor.
 - Cihaz, GPO 'dan kaydolur veya [ortak yönetim için Configuration Manager otomatik kayıt](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1)yapar.
  
@@ -182,7 +182,7 @@ Cihaz kaydı, hem cihaz türü hem de cihaz sınırı kısıtlamaları için var
 
 Varsayılan kısıtlamalar dışındaki tüm kısıtlamaların önceliğini değiştirebilirsiniz.
 
-1. Azure portalında oturum açın.
+1. Azure Portal’da oturum açın.
 2. **Diğer Hizmetler**'i seçin, **Intune** için arama yapın ve ardından **Intune**'u seçin.
 3. **Cihaz kaydı**  >  **Kayıt kısıtlamaları**' nı seçin.
 4. Öncelik listesinde kısıtlamanın üzerine gelin.

@@ -10,17 +10,18 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: e8db4a7f877b5bd07f1aac76fc49b6efef31802e
-ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.openlocfilehash: d966f0a509f5402846d0e671dbfaed571ac70d2a
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437435"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051705"
 ---
 # <a name="tenant-attach-configmgr-client-details-in-the-admin-center-preview"></a><a name="bkmk_mem"></a>Kiracı iliştirme: Yönetim merkezinde ConfigMgr istemci ayrıntıları (Önizleme)
 <!--6024387, 6374854, 6521921, intune 7552762 pubpreview July 7, 2020-->
+*Uygulama hedefi: Configuration Manager (geçerli dal)*
 
-Artık Microsoft Endpoint Manager Yönetim Merkezi 'nde belirli bir cihaz için Koleksiyonlar, sınır grubu üyeliği ve gerçek zamanlı istemci bilgilerini içeren ConfigMgr istemci ayrıntılarını görebilirsiniz.
+Microsoft Uç Nokta Yöneticisi, tüm cihazlarınızı yönetmek için tümleşik bir çözümdür. Microsoft, Configuration Manager ve Intune 'U **Microsoft Endpoint Manager Yönetim Merkezi**adlı tek bir konsolda bir araya getirir. Yönetim merkezinde belirli bir cihaz için Koleksiyonlar, sınır grubu üyeliği ve gerçek zamanlı istemci bilgilerini içeren ConfigMgr istemci ayrıntılarını görebilirsiniz.
 
 > [!Important]
 > - Bu bilgiler, ticari olarak yayınlanmadan önce önemli ölçüde değiştirilebilen bir önizleme özelliğiyle ilgilidir. Burada verilen bilgilerle ilgili olarak Microsoft açık veya zımni hiçbir garanti vermez.
@@ -42,6 +43,8 @@ Kullanıcı hesabının aşağıdaki izinleri olması gerekir:
 - Configuration Manager içinde cihazın **koleksiyonu** için **okuma** izni.
 - Azure AD 'de Configuration Manager Mikro hizmet uygulaması için **Yönetici Kullanıcı** rolü.
   - Azure AD 'deki rolü, **Enterprise applications**  >  **mikro hizmet**  >  **kullanıcıları ve grupları**  >  **Kullanıcı Ekle**' Configuration Manager kurumsal uygulamalardan ekleyin. Azure AD Premium varsa gruplar desteklenir.
+   > [!TIP]
+   > [Azure AD 'Deki uygulama Yöneticisi rolü](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) , uygulamanın **Yönetici Kullanıcı** rolüne bir kullanıcı eklemek için yeterli izinlere sahiptir.
 
 ## <a name="view-configmgr-client-details"></a>ConfigMgr istemcisi ayrıntılarını görüntüle
 

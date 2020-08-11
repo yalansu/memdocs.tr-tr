@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d44da952be6d01daa19f7c8227976cfa46299c88
-ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
+ms.openlocfilehash: 894ef12107b8e8b520ca69a463be47ef339bd9b4
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87821657"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051647"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -53,6 +53,15 @@ ms.locfileid: "87821657"
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## <a name="week-of-august-10-2020"></a>10 Ağustos 2020 haftası
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Cihaz yönetimi
+
+#### <a name="tenant-attach-install-an-application-from-the-admin-center----in7220536-cm6024389--"></a>Kiracı iliştirme: yönetim merkezinden bir uygulama yükler <!-- IN7220536 CM6024389-->
+Artık Microsoft Endpoint Manager yönetim merkezinden bir kiracıya bağlı cihaz için bir uygulamayı gerçek zamanlı olarak yüklemeyi başlatabilirsiniz. Daha fazla bilgi için bkz. [kiracı iliştirme: yönetim merkezinden uygulama yüklemesi](../../configmgr/tenant-attach/applications.md).
 
 <!-- ########################## -->
 ## <a name="week-of-july-27-2020"></a>27 Temmuz 2020 haftası

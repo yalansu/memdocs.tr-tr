@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa06e5fee4658ad3c7f19ec39bd126ce69d8cd41
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 05a0c4e5a78281f78a986d0512abfeca155494dd
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891522"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051681"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS/iPadOS cihazlarını Apple’ın Otomatik Cihaz Kayıt Anlaşması ile otomatik olarak kaydetme
 
@@ -233,7 +233,7 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
 17. **Kurulum Yardımcısı özelleştirmesi** sayfasında, aşağıdaki profil ayarlarını yapılandırın: ![ Kurulum Yardımcısı özelleştirmesi.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
-    | Departman ayarları | Açıklama |
+    | Departman ayarları | Description |
     |---|---|
     | <strong>Bölüm Adı</strong> | Kullanıcı, etkinleştirme sırasında <strong>Yapılandırma Hakkında</strong> öğesine dokunduğunda görüntülenir. |
     |    <strong>Departman Telefonu</strong>     | Kullanıcı, etkinleştirme sırasında <strong>Yardım Gerekli</strong> düğmesine dokunduğunda görüntülenir. |
@@ -328,23 +328,28 @@ Bkz. [aygıt kayıt programı iOS/ıpados cihazınızı Intune 'A kaydetme](../u
 > [!NOTE]
 > ADE belirtecinizi yıllık olarak yenilemeye ek olarak, Apple Business Manager 'da belirtecini kuran kullanıcı için yönetilen Apple KIMLIĞI parolası değiştiğinde veya Apple Business Manager kuruluşunuzu terk ettiğinde, kayıt programı belirtecinizi Intune ve Apple Business Manager içinde yenilemeniz gerekir.
 
-1. Business.apple.com adresine gidin.  
-2. **Sunucuları Yönet** altında yenilemek istediğiniz belirteç dosyasıyla ilişkili MDM sunucunuzu seçin.
-3. **Yeni Belirteç Oluştur**’u seçin.
+1. Business.apple.com adresine gidin.
+2. **Ayarlar** ' a tıklayın (alt sol)
+3.  **MDM sunucuları**' nın altında, YENILEMEK istediğiniz Ade/DEP BELIRTECIYLE ilişkili MDM sunucunuzu seçin.
+4. **Belirteç yükle**' ye tıklayın.
 
     ![Yeni belirteç oluşturma ekran görüntüsü.](./media/device-enrollment-program-enroll-ios/generatenewtoken.png)
 
-4. **Sunucu Belirteciniz**’i seçin.  
-5. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **iOS/ıpados**  >  **iOS/ıpados kayıt**  >  **kayıt programı belirteçleri** ' ni seçin > belirteci seçin.
+5. İstemde "sunucu belirtecini Indir" i seçin
+> [!NOTE]
+> **"Sunucu belirtecini indir"** seçeneğini tıklamayın, komut isteminde bahsedildiği gibi belirteci yenilemek için bu Işlem, Intune tarafından kullanılmakta olan belirteci (veya bu konuyla ilgili başka bir MDM çözümü) geçersiz kılar. Belirteci zaten indirdiyseniz, belirteç yenilenene kadar sonraki adımlara devam ettiğinizden emin olun.
+
+6. Belirteci indirdikten sonra, [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **cihazlar**  >  **iOS/ıpados**  >  **iOS/ıpados kayıt**  >  **kayıt programı belirteçleri** ' ni seçin > belirteci seçin.
     ![Kayıt programı belirteçlerinin ekran görüntüsü.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
-6. **Belirteci yenile**’yi seçin ve orijinal belirteci oluşturmak için kullanılan Apple kimliğini girin.  
+7. **Belirteci Yenile** ' yi seçin ve özgün belirteci oluşturmak Için kullanılan Apple kimliğini girin (otomatik olarak doldurulmamışsa).  
     ![Yeni belirteç oluşturma ekran görüntüsü.](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
-7. **İleri ' yi** seçerek **kapsam etiketleri** sayfasına gidin ve isterseniz kapsam etiketleri atayın.
+8. Yeni indirilen belirteci karşıya yükleyin.
 
-8. **İleri ' yi** seçin ve yeni indirilen belirteci karşıya yükleyin.  
-9. **Belirteci yenile**’yi seçin. Belirtecin yenilendiğine dair onayı görürsünüz.   
+9. **İleri ' yi** seçerek **kapsam etiketleri** sayfasına gidin ve isterseniz kapsam etiketleri atayın.
+
+10. **Belirteci yenile**’yi seçin. Belirtecin yenilendiğine dair onayı görürsünüz.   
     ![Onay ekran görüntüsü.](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
 ## <a name="delete-an-automated-device-enrollment-token-from-intune"></a>Intune 'dan otomatik cihaz kayıt belirtecini silme

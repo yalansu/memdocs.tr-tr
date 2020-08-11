@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 08/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f8991b772f5562538403492735f1f4c2fdc87e8
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 75f6585144f62636033c94f701a57cb70e018c26
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093445"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051601"
 ---
 # <a name="set-up-the-enrollment-status-page"></a>Kayıt durumu sayfasını ayarlama
  
@@ -31,7 +31,7 @@ ms.locfileid: "85093445"
  
 Kayıt durumu sayfası (ESP), yeni bir cihazın kaydolmasından ve yeni kullanıcıların cihazda oturum açarken sağlama ilerlemesini görüntüler.  Bu, BT yöneticilerinin, tam olarak sağlanana kadar cihaza erişimi engellemeyi (engellemek), aynı zamanda kullanıcılara sağlama sürecinde kalan görevler hakkında bilgi verirken aynı anda izin vermeyi sağlar.
 
-ESP, herhangi bir [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) sağlama senaryosunun parçası olarak kullanılabilir ve aynı zamanda Windows Autopilot 'den ayrı olarak, Azure AD 'ye yönelik varsayılan kullanıma hazır deneyım (OOBE) kapsamında ve cihazda ilk kez oturum açan tüm yeni kullanıcılar için de kullanılabilir.
+ESP, herhangi bir [Windows Autopilot](../../autopilot/index.yml) sağlama senaryosunun parçası olarak kullanılabilir ve aynı zamanda Windows Autopilot 'den ayrı olarak, Azure AD 'ye yönelik varsayılan kullanıma hazır deneyım (OOBE) kapsamında ve cihazda ilk kez oturum açan tüm yeni kullanıcılar için de kullanılabilir.
 
 Şunları belirten farklı yapılandırmalara sahip birden fazla kayıt durumu sayfası profili oluşturabilirsiniz:
 
@@ -76,7 +76,7 @@ Kayıt durumu sayfasını açmak için aşağıdaki adımları izleyin.
 
 1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **Windows**  >  **Windows kayıt**  >  **kayıt durumu sayfası**  >  **Profil oluştur**' u seçin.
 2. Bir **Ad** ve **Açıklama** sağlayın.
-3. **Oluştur**’u seçin.
+3. **Oluştur**' a tıklayın.
 4. **Kayıt Durumu Sayfası** listesinde yeni profili seçin.
 5. **Atamaları**seçin  >  **grupları seçin** > bu profili benimsemek istediğiniz grupları seçin > Kaydet ' **i seçin**  >  **Save**.
 6. **Ayarlar** > bu profile uygulamak istediğiniz ayarları seçin > **Kaydet**’i seçin.
@@ -165,7 +165,7 @@ Aşağıda, kayıt durumu sayfasıyla ilgili sorunları gidermeye yönelik genel
 
 - Autopilot olmayan dağıtımlar için kayıt durumu sayfası neden gösteriliyor. Örneğin, bir Kullanıcı Configuration Manager ortak yönetim tarafından kaydedilen bir cihazda ilk kez oturum açtığında?  
   - Kayıt durumu sayfası, aşağıdakiler dahil olmak üzere tüm kayıt yöntemleri için yükleme durumunu listeler.
-      - Autopilot
+      - Otomatik Pilot
       - Ortak yönetim Configuration Manager
       - ilk kez kayıt durumu sayfası ilkesi uygulanmış olan cihazda Yeni Kullanıcı oturum açtığında
       - **kullanıma hazır deneyim (OOBE) ayarı tarafından sağlanan cihazlara tek göster sayfası** açık ve ilke ayarlandıysa, yalnızca cihazda oturum açan Ilk Kullanıcı kayıt durumu sayfasını alır
