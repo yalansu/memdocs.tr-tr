@@ -2,7 +2,7 @@
 title: Gerçek zamanlı veriler için CMPivot
 titleSuffix: Configuration Manager
 description: Configuration Manager 'de CMPivot kullanarak istemcileri gerçek zamanlı olarak sorgulama hakkında bilgi edinin.
-ms.date: 07/02/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7bf9d6018acb74ccd1a33b6101d5cceb119ca982
-ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
+ms.openlocfilehash: 06e2a90e8c481fba834cbd1b6b1f5233572e4b17
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85914632"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128349"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>Configuration Manager içindeki gerçek zamanlı veriler için CMPivot
 
@@ -32,7 +32,7 @@ Configuration Manager, müşterilerin raporlama amacıyla kullanacağı, cihaz v
  > - Bazı kötü amaçlı yazılımdan koruma yazılımları yanlışlıkla Configuration Manager çalıştırmak betiklerine veya CMPivot özelliklerine karşı olayları tetikleyemeyebilir. Kötü amaçlı yazılımdan koruma yazılımının bu özelliklerin girişim olmadan çalışmasına izin vermesi için%windir%\CCM\ScriptStore hariç tutulması önerilir.
 
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 CMPivot kullanmak için aşağıdaki bileşenler gereklidir:
 
@@ -48,22 +48,24 @@ CMPivot kullanmak için aşağıdaki bileşenler gereklidir:
 
 - CMPivot ve [Microsoft Edge](../../../apps/deploy-use/deploy-edge.md) yükleyicisi, **Microsoft kod imzalama** sertifikasıyla imzalanır. Bu sertifika, **Güvenilen Yayımcılar** deposunda listelenmemişse, eklemeniz gerekir. Aksi halde, PowerShell yürütme ilkesi **AllSigned**olarak ayarlandığında CMPivot ve Microsoft Edge yükleyicisi çalışmaz. <!--7585106-->
 
-- CMPivot için izinler:
-  - **SMS betikleri** nesnesinde **Oku** izni
-  - **Koleksiyonda** **betikleri Çalıştır** izni
-    - Alternatif olarak, sürüm 1906 ' den başlayarak, **CMPivot Run** on the **Collection**kullanabilirsiniz.
-  - **Envanter raporlarında** **okuma** izni
-  - Varsayılan kapsam.
+## <a name="permissions"></a>İzinler
 
->[!NOTE]
-> **Çalıştırma betikleri** , **Run CMPivot** izninin bir süper kümesidir.
+CMPivot için aşağıdaki izinler gereklidir:
 
-CMPivot ve Edge yükleyicisi, **Microsoft kod imzalama** sertifikasıyla imzalanır. Bu sertifika, **Güvenilen Yayımcılar** deposunda listelenmemişse, eklemeniz gerekir. Aksi halde, PowerShell yürütme ilkesi **AllSigned**olarak ayarlandığında CMPivot ve Edge yükleyicisi çalışmaz.
+- **SMS betikleri** nesnesinde **Oku** izni
+- **Koleksiyonda** **betikleri Çalıştır** izni
+   - Alternatif olarak, sürüm 1906 ' den başlayarak, **CMPivot Run** on the **Collection**kullanabilirsiniz.
+- **Envanter raporlarında** **okuma** izni
+- Varsayılan kapsam.
+
+> [!NOTE]
+> - **Çalıştırma betikleri** , **Run CMPivot** izninin bir süper kümesidir.
+> - Sürüm 1906 ' den başlayarak, [CMPivot için izinler](cmpivot-changes.md#bkmk_cmpivot_secadmin1906) Configuration Manager yerleşik **Güvenlik Yöneticisi** rolüne eklenmiştir.
  
 ## <a name="limitations"></a>Sınırlamalar
 
 - Hiyerarşide, CMPivot çalıştırmak için Configuration Manager konsolunu *birincil siteye* bağlayın. **Start CMPivot** eylemi, bir merkezi yönetim sıtesıne (CAS) bağlıyken konsolunda görüntülenmez.
-  - Configuration Manager sürüm 1902 ' den başlayarak, bir CA 'dan CMPivot çalıştırabilirsiniz. Bazı ortamlarda ek izinler gerekir. Daha fazla bilgi için bkz. [sürüm 1902 ' den başlayarak CMPivot](#bkmk_cmpivot1902).
+  - Configuration Manager sürüm 1902 ' den başlayarak, bir CA 'dan CMPivot çalıştırabilirsiniz. Bazı ortamlarda ek izinler gerekir. Daha fazla bilgi için bkz. [sürüm 1902 Için CMPivot değişiklikleri](cmpivot-changes.md#bkmk_cmpivot1902).
 
 - CMPivot yalnızca geçerli siteye bağlı istemciler için verileri döndürür.  
 
@@ -78,14 +80,9 @@ CMPivot ve Edge yükleyicisi, **Microsoft kod imzalama** sertifikasıyla imzalan
 
 ## <a name="start-cmpivot"></a>CMPivot Başlat
 
-1. Configuration Manager konsolunda, birincil siteye bağlanın. **Varlıklar ve uyum** çalışma alanına gidin ve **Cihaz Koleksiyonları** düğümünü seçin. Bir hedef koleksiyon seçin ve aracı başlatmak için Şeritteki **CMPivot Başlat** ' a tıklayın.  
-
-    > [!Tip]  
-    > Bu seçeneği görmüyorsanız, aşağıdaki konfigürasyonları kontrol edin:  
-    > 
-    > - Hesabınızın gerekli izinlere sahip olduğunu bir site yöneticisiyle onaylayın. Daha fazla bilgi için bkz. [Önkoşullar](#prerequisites).  
-    > 
-    > - Konsolunu bir *birincil siteye*bağlayın.  
+1. Configuration Manager konsolunda, birincil siteye bağlanın. **Varlıklar ve uyum** çalışma alanına gidin ve **Cihaz Koleksiyonları** düğümünü seçin. Bir hedef koleksiyon seçin ve aracı başlatmak için Şeritteki **CMPivot Başlat** ' a tıklayın. Bu seçeneği görmüyorsanız, aşağıdaki konfigürasyonları kontrol edin:  
+   - Hesabınızın gerekli izinlere sahip olduğunu bir site yöneticisiyle onaylayın. Daha fazla bilgi için bkz. [Önkoşullar](#prerequisites).  
+   - Konsolunu bir *birincil siteye*bağlayın.  
 
 2. Arabirim, aracı kullanma hakkında daha fazla bilgi sağlar.  
 
@@ -95,10 +92,8 @@ CMPivot ve Edge yükleyicisi, **Microsoft kod imzalama** sertifikasıyla imzalan
 
      - **Tablo işleçleri**, **toplama Işlevleri**ve **skaler işlevler** bağlantıları, Web tarayıcısında dil başvurusu belgelerini açar. CMPivot, [kusto sorgu dilini (KQL)](https://docs.microsoft.com/azure/kusto/query/)kullanır.  
 
-3. İstemcilerdeki sonuçları görüntülemek için CMPivot penceresini açık tutun. CMPivot penceresini kapattığınızda oturum tamamlanmıştır.  
-
-    > [!Note]  
-    > Sorgu gönderilmişse, istemciler hala sunucuya bir durum iletisi yanıtı gönderir.  
+3. İstemcilerdeki sonuçları görüntülemek için CMPivot penceresini açık tutun. CMPivot penceresini kapattığınızda oturum tamamlanmıştır.
+   - Sorgu gönderilmişse, istemciler hala sunucuya bir durum iletisi yanıtı gönderir.  
 
 
 
@@ -154,7 +149,8 @@ CMPivot penceresi aşağıdaki öğeleri içerir:
 
    - Cihazda aşağıdaki ek eylemleri gerçekleştirmek için bir cihaz adına sağ tıklayın:  
 
-      - **Pivot**: Bu cihazdaki başka bir varlık için sorgu.  
+      - **Pivot**: Bu cihazdaki başka bir varlık için sorgu.
+         - Sürüm 2006 ' den başlayarak, **Pivot** **cihaz Özeti**ile değiştirilmiştir. Daha fazla bilgi için bkz. [sürüm 2006 Için CMPivot değişiklikleri](cmpivot-changes.md#bkmk_2006).
 
       - **Betiği Çalıştır**: Bu cihazda mevcut bir PowerShell betiğini çalıştırmak Için Betiği Çalıştır Sihirbazı 'nı başlatın. Daha fazla bilgi için bkz. [komut dosyası çalıştırma](../../../apps/deploy-use/create-deploy-scripts.md#run-a-script).  
 
@@ -184,11 +180,11 @@ CMPivot penceresi aşağıdaki öğeleri içerir:
      - Çevrimdışı istemci sayısı (2)  
      - Hata döndüren tüm istemciler (0)  
 
-       Örneğin, `Query completed on 3 of 5 clients (2 clients offline and 0 failure)`  
+       Örnek: `Query completed on 3 of 5 clients (2 clients offline and 0 failure)`  
 
-   - İstemci işleminin KIMLIĞI. Örneğin, `id(16780221)`  
+   - İstemci işleminin KIMLIĞI. Örnek: `id(16780221)`  
 
-   - Geçerli koleksiyon. Örneğin, `PM_Team_Machines`  
+   - Geçerli koleksiyon. Örnek: `PM_Team_Machines`  
 
    - Sonuçlar bölmesindeki toplam satır sayısı. Örneğin, `1 objects`  
 
@@ -237,510 +233,10 @@ Büyük bir dosyayı ağ dosya sunucusuna geçici olarak depolamanız gerekir, a
 `Disk | where (Description == 'Local Fixed Disk') | where isnotnull( FreeSpace ) | order by FreeSpace asc`
 
 
-## <a name="cmpivot-starting-in-version-1810"></a><a name="bkmk_cmpivot"></a>CMPivot sürüm 1810 ' den başlayarak
-<!--1359068, 3607759-->
+## <a name="cmpivot-standalone"></a><a name="bkmk_standalone"></a>Tek başına CMPivot
 
-CMPivot, Configuration Manager sürüm 1810 ' den başlayarak aşağıdaki geliştirmeleri içerir:
+[!INCLUDE [CMPivot standalone](includes/cmpivot-standalone.md)]
 
-- [CMPivot yardımcı programı ve performansı](#bkmk_cmpivot-perf)
-- [Skaler işlevler](#bkmk_cmpivot-functions)  
-- [Görselleştirmeler işleniyor](#bkmk_cmpivot-charts)  
-- [Donanım envanteri](#bkmk_cmpivot-hinv)  
-- [Skaler işleçler](#bkmk_cmpivot-operators)  
-- [Sorgu Özeti](#bkmk_cmpivot-summary)  
-- [Denetim durumu iletileri](#cmpivot-audit-status-messages)
-
-### <a name="cmpivot-utility-and-performance"></a><a name="bkmk_cmpivot-perf"></a>CMPivot yardımcı programı ve performansı
-
-- CMPivot, 20.000 satır yerine 100.000 hücre döndürür.
-  - Varlığın 5 özelliği varsa, anlamı 5 sütun, en fazla 20.000 satır gösterilir.
-  - 10 özelliklerine sahip bir varlık için en fazla 10.000 satır gösterilir.
-  - Gösterilen toplam veri 100.000 hücreden küçük veya buna eşit olacaktır.
-- Sorgu Özeti sekmesinde, başarısız veya çevrimdışı cihazların sayısını seçin ve ardından **koleksiyon oluşturma**seçeneğini belirleyin. Bu seçenek, bu cihazların bir düzeltme dağıtımı ile hedeflemesini kolaylaştırır.
-- Klasör simgesine tıklayarak **sık kullanılan** sorguları kaydedin.
-   ![CMPivot içinde sık kullanılan bir sorgu kaydetme örneği](media/cmpivot-favorite.png)
-
-- İstemciler, hızlı bir iletişim kanalı üzerinden siteye 80 KB 'tan daha az 1810 sürümüne güncelleştirilmiş bir bağlantı verir.
-  - Bu değişiklik, betik veya sorgu çıkışını görüntüleme performansını artırır.
-  - Betik veya sorgu çıkışı 80 KB 'tan büyükse, istemci verileri bir durum iletisi aracılığıyla gönderir.
-  - İstemci, 1810 istemci sürümüne güncelleştirilmemiş durum iletilerini kullanmaya devam eder.
-
-- CMPivot ' i başlattığınızda şu hatayı görebilirsiniz: **uyumsuz bir betik sürümü nedeniyle, şu anda CMPivot 'yi kullanamazsınız. Bu sorun, hiyerarşinin bir siteyi yükseltme sürecinde olması olabilir. Yükseltme tamamlanana kadar bekleyip yeniden deneyin.**
-
-  - Bu iletiyi görürseniz, bunun anlamı:
-    - Güvenlik kapsamı düzgün ayarlanmadı.
-    - İşlemde yükseltmeyle ilgili sorunlar var.
-    - Temel alınan CMPivot betiği uyumsuz.
-
-
-### <a name="scalar-functions"></a><a name="bkmk_cmpivot-functions"></a>Skaler işlevler
-CMPivot Aşağıdaki skaler işlevleri destekler:
-- **önce ()**: verilen TimeSpan DEĞERI geçerli UTC saat zamanından çıkartır  
-- **datetime_diff ()**: iki tarih saat değeri arasındaki takvim farkını hesaplar  
-- **Now ()**: geçerli UTC saat saatini döndürür  
-- **bin ()**: değerleri, belirli bir bin boyutunun bir tam sayıya yuvarlar  
-
-> [!Note]  
-> Tarih saat veri türü, genellikle günün tarih ve saati olarak ifade edilen bir anlık zamanı temsil eder. Zaman değerleri 1 saniyelik birimlerde ölçülür. Tarih saat değeri her zaman UTC saat dilimlidir. ISO 8601 biçiminde her zaman Express tarih zaman rakamları, örneğin`yyyy-mm-dd HH:MM:ss`  
-
-#### <a name="examples"></a>Örnekler
-- `datetime(2015-12-31 23:59:59.9)`: Belirli bir tarih saat değişmez değeri   
-- `now()`: Geçerli saat  
-- `ago(1d)`: Geçerli saat eksi bir gün  
-
-
-### <a name="rendering-visualizations"></a><a name="bkmk_cmpivot-charts"></a>Görselleştirmeler işleniyor
-
-CMPivot artık KQL [render işleci](https://docs.microsoft.com/azure/kusto/query/renderoperator)için temel desteği içerir. Bu destek aşağıdaki türleri içerir:  
-- **bargrafik**: ilk sütun x eksentir ve metin, tarih saat veya sayısal olabilir. İkinci sütunlar sayısal olmalıdır ve yatay bir şerit olarak görüntülenir.  
-- **columnChart**: Yatay şeritler yerine dikey şeritler içeren bargrafik gibi.  
-- **piechart**: ilk sütun renk eksenindedir, ikinci sütun ise sayısaldır.  
-- **timechart**: çizgi grafik. İlk sütun x eksendir ve DateTime olmalıdır. İkinci sütun y eksenindedir.  
-
-#### <a name="example-bar-chart"></a>Örnek: çubuk grafik
-Aşağıdaki sorgu, en son kullanılan uygulamaları çubuk grafik olarak işler:
-
-``` Kusto
-CCMRecentlyUsedApplications
-| summarize dcount( Device ) by ProductName
-| top 10 by dcount_
-| render barchart
-```
-
-![CMPivot Bar grafik görselleştirmesi örneği](media/1359068-cmpivot-barchart.png)
-
-#### <a name="example-time-chart"></a>Örnek: zaman grafiği
-Zaman grafiklerini işlemek için yeni **bin ()** işlecini kullanarak olayları zamanında gruplayın. Aşağıdaki sorgu, son yedi gün içinde cihazların ne zaman başlatıldığını gösterir:
-
-``` Kusto
-OperatingSystem
-| where LastBootUpTime <= ago(7d)
-| summarize count() by bin(LastBootUpTime,1d)
-| render timechart
-```
-
-![CMPivot Time grafik görselleştirmesi örneği](media/1359068-cmpivot-timechart.png)
-
-#### <a name="example-pie-chart"></a>Örnek: pasta grafik
-Aşağıdaki sorgu, bir pasta grafiğindeki tüm işletim sistemi sürümlerini görüntüler:
-
-``` Kusto
-OperatingSystem
-| summarize count() by Caption
-| render piechart
-```
-
-![CMPivot pasta grafik görselleştirmesi örneği](media/1359068-cmpivot-piechart.png)
-
-
-### <a name="hardware-inventory"></a><a name="bkmk_cmpivot-hinv"></a>Donanım envanteri
-Herhangi bir donanım envanteri sınıfını sorgulamak için CMPivot kullanın. Bu sınıflar, donanım envanterinde yaptığınız özel uzantıları içerir. CMPivot hemen, site veritabanında depolanan son donanım envanteri taramasının önbellekteki sonuçları döndürür. Aynı zamanda, herhangi bir çevrimiçi istemciden canlı verilerle gerekirse sonuçları günceller.
-
-Sonuçlar tablosu veya grafikteki verilerin renk doygunluğu, verilerin canlı veya önbelleğe alınıp alınmayacağını gösterir. Örneğin, koyu mavi, çevrimiçi bir istemciden gerçek zamanlı veriler. Açık mavi, önbelleğe alınmış veriler.
-
-#### <a name="example"></a>Örnek
-
-``` Kusto
-LogicalDisk
-| summarize sum( FreeSpace ) by Device
-| order by sum_ desc
-| render columnchart
-```
-
-![Sütun grafik görselleştirmesi ile CMPivot Inventory Query örneği](media/1359068-cmpivot-inventory.png)
-
-#### <a name="limitations"></a>Sınırlamalar
-- Aşağıdaki donanım envanteri varlıkları desteklenmez:  
-    - Dizi özellikleri, örneğin IP adresi  
-    - Real32/Real64 <!--example?-->  
-    - Katıştırılmış nesne özellikleri <!--example?-->  
-- Envanter varlık adları bir karakterle başlamalıdır
-- Aynı ada sahip bir envanter varlığı oluşturarak yerleşik varlıkların üzerine yazılmaz  
-
-
-### <a name="scalar-operators"></a><a name="bkmk_cmpivot-operators"></a>Skaler işleçler
-CMPivot, aşağıdaki skaler işleçleri içerir:  
-
-> [!Note]  
-> - LHS: işlecin sol tarafında bulunan dize  
-> - RHS: işlecin sağ tarafındaki dize  
-
-
-|İşleç|Açıklama|Örnek (true verir)|
-|--------|-----------|---------------------|
-|==|Eşittir|`"aBc" == "aBc"`|
-|!=|Eşit değildir|`"abc" != "ABC"`|
-|Like|LHS, RHS için bir eşleşme içerir|`"FabriKam" like "%Brik%"`|
-|! Beğen|LHS, RHS için eşleşme içermiyor|`"Fabrikam" !like "%xyz%"`|
-|şunu içerir|RHS bir LHS alt sırası olarak gerçekleşir|`"FabriKam" contains "BRik"`|
-|! Contains|LHS 'te RHS gerçekleşmiyor|`"Fabrikam" !contains "xyz"`|
-|StartsWith|RHS bir başlangıç alt dizisi olan LHS|`"Fabrikam" startswith "fab"`|
-|! StartsWith|RHS, LHS 'in bir başlangıç alt dizisi değildir|`"Fabrikam" !startswith "kam"`|
-|EndsWith|RHS, LHS 'in bir kapanış alt sırasıdır|`"Fabrikam" endswith "Kam"`|
-|! EndsWith|RHS, LHS 'in bir kapanış alt dizisi değildir|`"Fabrikam" !endswith "brik"`|
-
-
-### <a name="query-summary"></a><a name="bkmk_cmpivot-summary"></a>Sorgu Özeti
-
-CMPivot penceresinin alt kısmındaki **Sorgu Özeti** sekmesini seçin. Bu durum, çevrimdışı olan istemcileri tanımlamanızı veya oluşabilecek hataların sorunlarını gidermenize yardımcı olur. Bu duruma sahip belirli cihazların bir listesini açmak için say sütununda bir değer seçin. 
-
-Örneğin, hata durumundaki cihaz sayısını seçin. Belirli bir hata iletisine bakın ve bu cihazların listesini dışarı aktarın. Hata belirli bir cmdlet 'in tanınmıyorsa, bir Windows PowerShell güncelleştirmesi dağıtmak için, dışarıya aktarılmış cihaz listesinden bir koleksiyon oluşturun.  
-
-### <a name="cmpivot-audit-status-messages"></a>CMPivot denetim durumu iletileri
-
-Sürüm 1810 ' den başlayarak, CMPivot çalıştırdığınızda **messageıd 40805**ile bir denetim durumu iletisi oluşturulur. Durum iletilerini **izleme**  >  **sistem durumu**  >  **durum iletisi sorguları**' na giderek görüntüleyebilirsiniz. Belirli **bir Kullanıcı Için tüm denetim durum iletilerini**, **belirli bir site için tüm denetim durum iletilerini**çalıştırabilir veya kendi durum iletisi sorgunuzu oluşturabilirsiniz.
-
-İleti için aşağıdaki biçim kullanılır:
-
-MessageID 40805: Kullanıcı &lt; Kullanıcı adı> komut dosyası &lt; betiği çalıştı-Guid> karma &lt; betiği- &lt; kimliği> toplama>.
-
-- 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14, CMPivot için komut dosyası GUID 'Sidir.
-- Betik karması, istemcinin betikleri. log dosyasında görülebilir.
-- İstemcinin komut dosyası deposunda depolanan karmayı da görebilirsiniz. İstemcideki dosya adı &lt; komut dosyası-guıd>_ &lt; betik-karma>.
-    - Örnek dosya adı: C:\Windows\CCM\ScriptStore\7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14_abc1d23e45678901fabc123d456ce789fa1b2cd3e456789123fab4c56789d0123. PS
-   
-
-![CMPivot Audit durum iletisi örneği](media/cmpivot-audit-status-message.png)
-
-## <a name="cmpivot-starting-in-version-1902"></a><a name="bkmk_cmpivot1902"></a>CMPivot sürüm 1902 ' den başlayarak
-<!--3610960-->
-Configuration Manager sürüm 1902 ' den başlayarak, bir hiyerarşide merkezi yönetim sitesinden (CAS) CMPivot çalıştırabilirsiniz. Birincil site, istemci iletişimini hala işler. Merkezi yönetim sitesinden CMPivot çalıştırılırken, yüksek hızlı ileti abonelik kanalının birincil sitesiyle iletişim kurar. Bu iletişim, siteler arasında standart SQL çoğaltmasına bağlı değildir.
-
-CMPivot çalıştıran CA 'larda, SQL veya sağlayıcı aynı makinede olmadığında veya SQL her zaman açık yapılandırma durumunda ek izinler gerektirecektir. Bu uzak yapılandırmalarda, CMPivot için bir "çift atlama senaryosu" vardır.
-
-Bu tür bir "çift atlama senaryosunda" CAS üzerinde çalışmak üzere CMPivot almak için kısıtlanmış temsili tanımlayabilirsiniz. Bu yapılandırmanın güvenlik etkilerine ilişkin etkilerini anlamak için, [Kerberos kısıtlanmış temsili](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) makalesini okuyun. Kerberos, makineler arasındaki tüm atlamalarla çalışmalıdır.<!--5746133--> SQL veya SMS sağlayıcısı gibi birden fazla uzak yapılandırmaya sahip CA 'LAR veya birden çok güvenilen orman varsa, izin ayarları birleşimine ihtiyacınız olabilir. Aşağıda gerçekleştirmeniz gerekebilecek adımlar verilmiştir:
-
-### <a name="cas-has-a-remote-sql-server"></a>CAS uzak bir SQL Server 'a sahip
-
-1. Her birincil sitenin SQL Server 'a gidin.
-   1. CAS uzak SQL Server ve CAS site sunucusunu [Configmgr_DviewAccess](../../plan-design/hierarchy/accounts.md#configmgr_dviewaccess) grubuna ekleyin.
-   ![Birincil sitenin SQL Server 'daki Configmgr_DviewAccess grubu](media/cmpivot-dviewaccess-group.png)
-1. Active Directory Kullanıcıları ve Bilgisayarları ' na gidin.
-   1. Her birincil site sunucusu için, sağ tıklayın ve **Özellikler**' i seçin.
-      1. Temsili sekmesinde üçüncü seçeneği belirleyin, **Bu bilgisayara yalnızca belirtilen hizmetlere atamak üzere güvenin**. 
-      1. **Yalnızca Kerberos kullan**' ı seçin.
-      1. CA 'ların SQL Server hizmetini bağlantı noktası ve örneği ile ekleyin.
-      1. Bu değişikliklerin şirketinizin güvenlik ilkenize göre hizalanmasına dikkat edin!
-   1. CAS sitesi için sağ tıklayıp **Özellikler**' i seçin.
-      1. Temsili sekmesinde üçüncü seçeneği belirleyin, **Bu bilgisayara yalnızca belirtilen hizmetlere atamak üzere güvenin**. 
-      1. **Yalnızca Kerberos kullan**' ı seçin.
-      1. Her birincil sitenin SQL Server hizmetini bağlantı noktası ve örneğiyle ekleyin.
-      1. Bu değişikliklerin şirketinizin güvenlik ilkenize göre hizalanmasına dikkat edin!
-
-   ![İki atlama için CMPivot AD temsili örneği](media/cmpivot-ad-delegation.png)
-
-### <a name="cas-has-a-remote-provider"></a>CA 'LAR uzak bir sağlayıcıya sahiptir
-
-1. Her birincil sitenin SQL Server 'a gidin.
-   1. CAS sağlayıcısı makine hesabını ve CAS site sunucusunu [Configmgr_DviewAccess](../../plan-design/hierarchy/accounts.md#configmgr_dviewaccess) grubuna ekleyin.
-1. Active Directory Kullanıcıları ve Bilgisayarları ' na gidin.
-   1. CAS sağlayıcısı makinesini seçin, sağ tıklayın ve **Özellikler**' i seçin.
-      1. Temsili sekmesinde üçüncü seçeneği belirleyin, **Bu bilgisayara yalnızca belirtilen hizmetlere atamak üzere güvenin**. 
-      1. **Yalnızca Kerberos kullan**' ı seçin.
-      1. Her birincil sitenin SQL Server hizmetini bağlantı noktası ve örneğiyle ekleyin.
-      1. Bu değişikliklerin şirketinizin güvenlik ilkenize göre hizalanmasına dikkat edin!
-   1. CAS site sunucusunu seçin, sağ tıklayın ve **Özellikler**' i seçin.
-      1. Temsili sekmesinde üçüncü seçeneği belirleyin, **Bu bilgisayara yalnızca belirtilen hizmetlere atamak üzere güvenin**. 
-      1. **Yalnızca Kerberos kullan**' ı seçin.
-      1. Her birincil sitenin SQL Server hizmetini bağlantı noktası ve örneğiyle ekleyin.
-      1. Bu değişikliklerin şirketinizin güvenlik ilkenize göre hizalanmasına dikkat edin!
-1. CAS uzak sağlayıcı makinesini yeniden başlatın.
-
-### <a name="sql-always-on"></a>SQL Always on
-
-1. Her birincil sitenin SQL Server 'a gidin.
-   1. CAS site sunucusunu [Configmgr_DviewAccess](../../plan-design/hierarchy/accounts.md#configmgr_dviewaccess) grubuna ekleyin.
-1. Active Directory Kullanıcıları ve Bilgisayarları ' na gidin.
-   1. Her birincil site sunucusu için, sağ tıklayın ve **Özellikler**' i seçin.
-      1. Temsili sekmesinde üçüncü seçeneği belirleyin, **Bu bilgisayara yalnızca belirtilen hizmetlere atamak üzere güvenin**. 
-      1. **Yalnızca Kerberos kullan**' ı seçin.
-      1. Bağlantı noktası ve örneği olan SQL düğümlerine yönelik CA 'ların SQL Server hizmet hesaplarını ekleyin.
-      1. Bu değişikliklerin şirketinizin güvenlik ilkenize göre hizalanmasına dikkat edin!
-   1. CAS site sunucusunu seçin, sağ tıklayın ve **Özellikler**' i seçin.
-      1. Temsili sekmesinde üçüncü seçeneği belirleyin, **Bu bilgisayara yalnızca belirtilen hizmetlere atamak üzere güvenin**. 
-      1. **Yalnızca Kerberos kullan**' ı seçin.
-      1. Her birincil sitenin SQL Server hizmetini bağlantı noktası ve örneğiyle ekleyin.
-      1. Bu değişikliklerin şirketinizin güvenlik ilkenize göre hizalanmasına dikkat edin!
-1. SPN 'nin CAS SQL dinleyicisi adı ve her birincil SQL dinleyicisi adı için [yayımlandığından](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover?view=sql-server-2017#SPNs) emin olun.
-1. Birincil SQL sunucularını yeniden başlatın.
-1. CAS site sunucusunu ve CAS SQL sunucularını yeniden başlatın.
-
-## <a name="cmpivot-starting-in-version-1906"></a><a name="bkmk_cmpivot1906"></a>CMPivot sürüm 1906 ' den başlayarak
-
-Sürüm 1906 ' den başlayarak, şu öğeler CMPivot 'ye eklenmiştir:
-
-- [Birleşimler, ek işleçler ve toplayıcısını değiştirme](#bkmk_cmpivot_joins)
-- [Güvenlik Yöneticisi rolüne CMPivot izinleri eklendi](#bkmk_cmpivot_secadmin1906)
-- [Tek başına CMPivot](#bkmk_standalone)
-
-### <a name="add-joins-additional-operators-and-aggregators-in-cmpivot"></a><a name="bkmk_cmpivot_joins"></a>CMPivot içinde birleştirmeler, ek işleçler ve aggregekleyin
-<!--4054074-->
-Artık ek aritmetik işleçleri, aggregators 'lar ve kayıt defteri ve dosya kullanma gibi sorgu birleştirmeleri ekleme imkanına sahipsiniz. Şu öğeler Eklendi:
-
-#### <a name="table-operators"></a>Tablo işleçleri
-
-|Tablo işleçleri| Description|
-|-----|-----|
-| [ayrılma](https://docs.microsoft.com/azure/kusto/query/joinoperator)| Aynı cihazla eşleşen satıra göre yeni bir tablo oluşturmak için iki tablo satırını birleştirin|
-|işlenecek|Sonuçları grafik çıkış olarak işler|
-
-Render işleci CMPivot içinde zaten var. Birden çok seri ve **WITH** ifadesiyle ilgili destek eklendi. Daha fazla bilgi için bkz. [örnekler](#bkmk_cmpivot_examples1906) bölümü ve kusto 'in [JOIN işleci](https://docs.microsoft.com/azure/kusto/query/joinoperator) makalesi.
-
-#### <a name="limitations-for-joins"></a>Birleşimler için sınırlamalar
-
-1. Birleştir sütunu her zaman **cihaz** alanında örtük olarak yapılır.
-1. Sorgu başına en fazla 5 birleşim kullanabilirsiniz.
-1. En fazla 64 Birleşik sütun kullanabilirsiniz.
-
-#### <a name="scalar-operators"></a>Skaler işleçler
-
-|İşleç| Açıklama|Örnek|
-|-----|-----|-----|
-| + | Ekle| `2 + 1, now() + 1d`|
-| - |  Çıkar| `2 - 1, now() - 1d`|
-| * | Çarp| `2 * 2`|
-| / | Böl | `2 / 1`|
-| % | Mod | `2 % 1`
-
-#### <a name="aggregation-functions"></a>Toplama işlevleri
-
-|İşlev| Description|
-|-----|-----|
-| yüzdebirlik ()| Ifadenin belirttiği popülasyon için belirtilen en yakın derecelendirme yüzdelik değeri için bir tahmin döndürür|
-| sumif() | Koşulun true olarak değerlendirilen bir Ifade toplamı döndürür|
-
-#### <a name="scalar-functions"></a>Skaler işlevler
-
-|İşlev| Description|
-|-----|-----|
-| case()| Koşulların bir listesini değerlendirir ve koşulu karşılanan ilk sonuç ifadesini döndürür |
-| FF () | İlk bağımsız değişkeni değerlendirir ve koşulun doğru (ikinci) ya da yanlış (üçüncü) olarak değerlendirildiğine bağlı olarak ikinci veya üçüncü bağımsız değişkenlerin değerini döndürür|
- | indexof() | İşlev, giriş dizesinde belirtilen bir dizenin ilk oluşumunun sıfır tabanlı dizinini bildirir|
-| strcat() | 1 ile 64 arasında bağımsız değişken arasına ekler |
-| strlen()| Giriş dizesinin karakter cinsinden uzunluğunu döndürür|
-| substring() | Bir kaynak dizeden, dizenin sonuna kadar bir dizinden başlayarak bir alt dize ayıklar |
-| tostring() | Girişi dize işlemine dönüştürür |
-
-#### <a name="examples"></a><a name="bkmk_cmpivot_examples1906"></a>Örnekler
-
-- Cihazı, üreticiyi, modeli ve OSVersion 'yi göster:
-
-   ``` Kusto
-   ComputerSystem
-   | project Device, Manufacturer, Model
-   | join (OperatingSystem | project Device, OSVersion=Caption)
-   ```
-
-- Bir cihaz için önyükleme saatlerinin grafiğini göster:
-
-   ``` Kusto
-   SystemBootData
-   | where Device == 'MyDevice'
-   | project SystemStartTime, BootDuration, OSStart=EventLogStart, GPDuration, UpdateDuration
-   | order by SystemStartTime desc
-   | render barchart with (kind=stacked, title='Boot times for MyDevice', ytitle='Time (ms)')
-   ```
-
-   ![MS 'de bir cihazın önyükleme zamanlarını gösteren yığılmış çubuk grafiği](./media/4054074-render-using-with-statement.png)
-
-### <a name="added-cmpivot-permissions-to-the-security-administrator-role"></a><a name="bkmk_cmpivot_secadmin1906"></a>Güvenlik Yöneticisi rolüne CMPivot izinleri eklendi
-<!--4683130-->
-
-Sürüm 1906 ' den başlayarak, Configuration Manager yerleşik **Güvenlik Yöneticisi** rolüne aşağıdaki izinler eklenmiştir:
-
- - SMS komut dosyasında **Oku**
- - Koleksiyonda **CMPivot Çalıştır**
- - Envanter raporunda **Oku**
-
->[!NOTE]
-> **Çalıştırma betikleri** , **Run CMPivot** izninin bir süper kümesidir.
- 
-
-### <a name="cmpivot-standalone"></a><a name="bkmk_standalone"></a>Tek başına CMPivot
-<!--3555890, 4619340, 4683130 -->
-
-Sürüm 1906 ' den başlayarak, tek başına bir uygulama olarak CMPivot kullanabilirsiniz. CMPivot tek başına yalnızca Ingilizce olarak kullanılabilir. Ortamınızdaki cihazların gerçek zamanlı durumunu görüntülemek için Configuration Manager konsolunun dışında CMPivot çalıştırın. Bu değişiklik, konsolu yüklemeden önce bir cihazda CMPivot kullanmanıza olanak sağlar.
-
-> [!Tip]  
-> Bu özellik ilk olarak sürüm 1906 ' de [yayın öncesi özelliği](pre-release-features.md)olarak sunulmuştur. Sürüm 2002 ' den başlayarak, artık yayın öncesi bir özellik değildir.  
-
-CMPivot 'in gücünden birini, yardım masası veya güvenlik yöneticileri gibi diğer kişilerle paylaşabilirsiniz. Bu kişiler, geleneksel olarak kullandıkları diğer araçlarla birlikte Configuration Manager sorgulamak için CMPivot kullanabilir. Bu zengin yönetim verilerini paylaşarak, roller arası iş sorunlarını önceden çözmek için birlikte çalışabilirsiniz.
-
-#### <a name="install-cmpivot-standalone"></a>CMPivot tek başına yükleme
-
-1. CMPivot çalıştırmak için gereken izinleri ayarlayın. Daha fazla bilgi için bkz. [Önkoşullar](#prerequisites). İzinler kullanıcıya uygunsa [Güvenlik Yöneticisi rolünü](#bkmk_cmpivot_secadmin1906) de kullanabilirsiniz.
-2. Aşağıdaki yolda CMPivot uygulama yükleyicisini bulun: `<site install path>\tools\CMPivot\CMPivot.msi` . Bu yoldan çalıştırabilir veya başka bir konuma kopyalayabilirsiniz.
-3. CMPivot tek başına uygulamasını çalıştırdığınızda bir siteye bağlanmanız istenir. Merkezi Yönetim veya birincil site sunucusunun tam etki alanı adını ya da bilgisayar adını belirtin.
-   - Tek başına CMPivot her açışınızda bir site sunucusuna bağlanmanız istenir.
-4. CMPivot çalıştırmak istediğiniz koleksiyona gidin ve sorgunuzu çalıştırın.
-
-   ![Sorgunuzu çalıştırmak istediğiniz koleksiyona gidin](./media/3555890-cmpivot-standalone-browse-collection.png)
-
-> [!NOTE]
-> **Komut dosyalarını çalıştır**, **Kaynak Gezgini**ve Web araması gibi sağ tıklama eylemleri CMPivot tek başına kullanılamaz. CMPivot tek başına 'ın birincil kullanımı Configuration Manager altyapısından bağımsız olarak sorgulama yapılır. Güvenlik yöneticilerine yardım için, CMpivot tek başına, Microsoft Defender Güvenlik Merkezi 'ne bağlanma özelliğini içerir. <!--5605358-->
-
-## <a name="cmpivot-starting-in-version-1910"></a><a name="bkmk_cmpivot1910"></a>CMPivot sürüm 1910 ' den başlayarak
-<!--5410930, 3197353-->
-Sürüm 1910 ' den başlayarak, CMPivot ağ trafiğini ve sunucularınızdaki yükü azaltmak için önemli ölçüde iyileştirilmiştir. Ayrıca, sorun giderme ve aramaya yardımcı olmak için birçok varlık ve varlık geliştirmesi eklenmiştir. 1910 sürümünde CMPivot için aşağıdaki değişiklikler yapılmıştır:
-
-- [CMPivot altyapısına iyileştirmeler](#bkmk_optimization)
-- Ek varlıklar ve varlık geliştirmeleri:
-  - Windows olay günlükleri ([WinEvent](#bkmk_WinEvent))
-  - Dosya içeriği ([FileContent](#bkmk_File))
-  - Süreçler tarafından yüklenen dll 'ler ([ProcessModule](#bkmk_ProcessModule))
-  - Azure Active Directory bilgileri ([Aadstatus](#bkmk_AadStatus))
-  - Uç nokta koruma durumu ([Epstatus](#bkmk_EPStatus))
-- [CMPivot tek başına kullanarak yerel cihaz sorgusu değerlendirmesi](#bkmk_local-eval)
-- [CMPivot için diğer geliştirmeler](#bkmk_Other)
-
-
-### <a name="optimizations-to-the-cmpivot-engine"></a><a name="bkmk_optimization"></a>CMPivot altyapısına iyileştirmeler
-<!--3197353-->
-Sunucularınızdaki ağ trafiğini ve yükünü azaltmak için CMPivot 1910 ' de iyileştirildi. Birçok sorgu işlemi artık sunucular yerine doğrudan istemcide gerçekleştirilir. Bu değişiklik Ayrıca bazı CMPivot işlemlerinin ilk sorgudan en az miktarda veri döndürdüğü anlamına gelir. Daha fazla bilgi için verilere detaya gitmeye karar verirseniz, istemciden ek verileri getirmek için yeni bir sorgu çalıştırılabilir. Örneğin, daha önce bir "özetlenen sayım" sorgusu çalıştırdığınızda sunucuya büyük bir veri kümesi döndürülür.  Büyük bir veri kümesi geri alınırken hemen ayrıntıya inme, çok sayıda yalnızca özetlenen sayı gerekiyordu. 1910 ' de, belirli bir istemcide detaya gitmeyi seçtiğinizde, istediğiniz ek verileri döndürmek için başka bir veri koleksiyonu oluşur. Bu değişiklik, çok sayıda istemciye karşı sorgulara daha iyi performans ve ölçeklenebilirlik sunar. <!--3197353, 5458337-->
-
-#### <a name="examples"></a>Örnekler
-
-CMPivot iyileştirmeleri, CMPivot sorgularını çalıştırmak için gereken ağ ve sunucu CPU yükünü önemli ölçüde azaltır. Bu iyileştirmelere göre, artık gigabayt 'tan fazla istemci verisi gerçek zamanlı olarak bulunabilir. Aşağıdaki sorgularda bu iyileştirmeler gösterilmektedir:
-
-- Kimlik doğrulama hatalarıyla kuruluşunuzdaki tüm istemcilerde tüm olay günlüklerinde arama yapın.
-
-   ``` Kusto
-   EventLog('Security')
-   | where  EventID == 4673
-   | summarize count() by Device
-   | order by count_ desc
-   ```
-
-- Karma olarak bir dosya arayın.
-
-   ``` Kusto
-   Device
-   | join kind=leftouter ( File('%windir%\\system32\\*.exe')
-   | where SHA256Hash == 'A92056D772260B39A876D01552496B2F8B4610A0B1E084952FE1176784E2CE77')
-   | project Device, MalwareFound = iif( isnull(FileName), 'No', 'Yes')
-   ```
-
-### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a>WinEvent ( \<logname> , [ \<timespan> ])
-
-Bu varlık olay günlüklerinden ve olay izleme günlük dosyalarından olayları almak için kullanılır. Varlık, Windows olay günlüğü teknolojisi tarafından oluşturulan olay günlüklerinden verileri alır. Varlık Ayrıca, Windows için olay Izleme tarafından oluşturulan günlük dosyalarındaki olayları alır (ETW). WinEvent, son 24 saat içinde varsayılan olarak gerçekleşen olaylara bakar. Ancak, 24 saatlik varsayılan değer bir TimeSpan eklenerek geçersiz kılınabilir.
-
-``` Kusto
-WinEvent('Microsoft-Windows-HelloForBusiness/Operational', 1d)
-| where LevelDisplayName =='Error'
-| summarize count() by Device
-```
-
-### <a name="filecontentfilename"></a><a name="bkmk_File"></a>FileContent ( \<filename> )
-
-Dosya Içeriği, bir metin dosyasının içeriğini almak için kullanılır.
-
-``` Kusto
-FileContent('c:\\windows\\SMSCFG.ini')
-| where Content startswith  'SMS Unique Identifier='
-| project Device, SMSId= substring(Content,22)
-```
-
-### <a name="processmoduleprocessname"></a><a name="bkmk_ProcessModule"></a>ProcessModule ( \<processname> )  
-
-Bu varlık, belirli bir işlem tarafından yüklenen modülleri (dll 'ler) numaralandırmak için kullanılır. ProcessModule, meşru işlemlerde gizlemekte olan kötü amaçlı yazılımlara yönelik arama yaparken yararlıdır.  
-
-``` Kusto
-ProcessModule('powershell')
-| summarize count() by ModuleName
-| order by count_ desc
-```
-
-### <a name="aadstatus"></a><a name="bkmk_AadStatus"></a>AadStatus
-
-Bu varlık, bir cihazdan geçerli Azure Active Directory kimlik bilgilerini almak için kullanılabilir.
-
-``` Kusto
-AadStatus
-| project Device, IsAADJoined=iif( isnull(DeviceId),'No','Yes')
-| summarize DeviceCount=count() by IsAADJoined
-| render piechart
-```
-
-### <a name="epstatus"></a><a name="bkmk_EPStatus"></a>EPStatus
-
-EPStatus, bilgisayarda yüklü olan kötü amaçlı yazılımdan koruma yazılımının durumunu almak için kullanılır.
-
-``` Kusto
-EPStatus
-| project Device, QuickScanAge=datetime_diff('day',now(),QuickScanEndTime)
-| summarize DeviceCount=count() by QuickScanAge
-| order by QuickScanAge
-| render barchart
-```
-
-### <a name="local-device-query-evaluation-using-cmpivot-standalone"></a><a name="bkmk_local-eval"></a>CMPivot tek başına kullanarak yerel cihaz sorgusu değerlendirmesi
-<!--3197353-->
-Configuration Manager konsolunun dışında CMPivot kullanırken, Configuration Manager altyapısına gerek duymadan yalnızca yerel cihazı sorgulayabilirsiniz. Artık yerel cihazdaki WMI bilgilerini hızlıca görüntülemek için CMPivot Azure Log Analytics sorgularından yararlanabilirsiniz. Bu Ayrıca, daha büyük bir ortamda çalıştırılmadan önce CMPivot sorgularının doğrulanmasını ve yeniden kullanılmasını da mümkün bir şekilde sunar. CMPivot tek başına yalnızca Ingilizce olarak kullanılabilir. Tek başına CMPivot yükleme hakkında daha fazla bilgi için bkz. [Install CMPivot standalone](#install-cmpivot-standalone).
-
-#### <a name="known-issues-for-local-device-query-evaluation"></a>Yerel aygıt sorgu değerlendirmesi için bilinen sorunlar
-
- - **Bu bilgisayarda** , KILITLI bir WMI sınıfı gibi erişiminiz olmayan bir WMI varlığı için sorgulama yaparsanız, CMPivot 'de bir kilitlenme görebilirsiniz. Bu varlıkları sorgulamak için yükseltilmiş ayrıcalıklara sahip bir hesabı kullanarak CMPivot çalıştırın. <!--5753242-->
-- **Bu bılgısayarda**WMI olmayan varlıkları Sorguladıysanız **geçersiz bir ad alanı** veya belirsiz bir özel durum görürsünüz.
-- Doğrudan yürütülebilir dosyanın yolundan değil, Başlat menüsü kısayolundan CMPivot tek başına Çalıştır. <!--5787962-->
-
-### <a name="other-enhancements"></a><a name="bkmk_Other"></a>Diğer geliştirmeler
-
-- Yeni işleci kullanarak normal ifade türü sorguları yapabilirsiniz `like` . Örneğin:<!--3056858-->
-  
-   ```kusto
-   //Find BIOS manufacture that contains any word like Micro, such as Microsoft
-   Bios
-   | where Manufacturer like '%Micro%'
-   ```
-
-- **Ccmlog ()** ve **EventLog ()** varlıklarını, varsayılan olarak yalnızca son 24 saat içindeki iletilere bakmak üzere güncelleştirdik. Bu davranış, isteğe bağlı bir TimeSpan değeri geçirerek geçersiz kılınabilir. Örneğin, aşağıdaki sorgu son 1 saat içindeki olaylara bakar:
-
-   ```kusto
-   CcmLog('Scripts',1h)
-   ```
-
-- **Dosya ()** varlığı gizli ve sistem dosyaları hakkında bilgi toplamak ve MD5 karmasını dahil etmek için güncelleştirilmiştir. MD5 karması SHA256 karması kadar doğru olmadığından, çoğu kötü amaçlı bültende yaygın olarak bildirilen karma değer olarak eğilimi gösterir.  
-
-- Sorgularda yorum ekleyebilirsiniz.<!-- 5431463 --> Bu davranış, sorgu paylaşımında yararlıdır. Örneğin:
-
-    ``` Kusto
-    //Get the top ten devices sorted by user
-    Device
-    | top 10 by UserName
-    ```
-
-- CMPivot, son siteye otomatik olarak bağlanır.<!-- 5420395 --> CMPivot başlattıktan sonra, gerekirse yeni bir siteye bağlanabilirsiniz.
-
-- **Dışarı aktarma** menüsünde, **panoya bağlantıyı sorgulamak**için yeni seçeneğini belirleyin.<!-- 5431577 --> Bu eylem, diğer kullanıcılarla paylaşabileceğiniz panoya bir bağlantı kopyalar. Örneğin:
-
-    `cmpivot:Ly8gU2FtcGxlIHF1ZXJ5DQpPcGVyYXRpbmdTeXN0ZW0NCnwgc3VtbWFyaXplIGNvdW50KCkgYnkgQ2FwdGlvbg0KfCBvcmRlciBieSBjb3VudF8gYXNjDQp8IHJlbmRlciBiYXJjaGFydA==`
-
-    Bu bağlantı aşağıdaki sorguyla birlikte CMPivot tek başına açılır:
-
-    ``` Kusto
-    // Sample query
-    OperatingSystem
-    | summarize count() by Caption
-    | order by count_ asc
-    | render barchart
-    ```
-
-    > [!TIP]
-    > Bu bağlantının çalışması için [tek başına CMPivot 'yi yükleme](#install-cmpivot-standalone).
-
-- Sorgu sonuçlarında, cihaz Microsoft Defender Gelişmiş tehdit koruması (ATP) ' ye kaydedildiyse, **Microsoft Defender Güvenlik Merkezi** çevrimiçi portalı ' nı başlatmak için cihaza sağ tıklayın.
-
-### <a name="known-issues-for-cmpivot-in-version-1910"></a>1910 sürümündeki CMPivot için bilinen sorunlar
-
-- Sınıra ulaşıldığında en fazla sonuç başlığı görüntülenmeyebilir. <!--5431427-->
-  - Her istemci, sorgu başına 128 KB değer ile sınırlıdır.
-  - Sorgunun sonuçları 128 KB 'yi aşarsa sonuçlar kesilebilir.
-  
-## <a name="cmpivot-starting-in-version-2002"></a><a name="bkmk_2002"></a>CMPivot sürüm 2002 ' den başlayarak
-<!--5870934-->
-CMPivot varlıklarından gezinmeyi kolaylaştırdık. Configuration Manager sürüm 2002 ' den başlayarak CMPivot varlıklarda arama yapabilirsiniz. Varlıkları ve varlık nesne türlerini kolayca ayırt etmek için de yeni simgeler eklenmiştir.
-
-![CMPivot varlıklarını arama](./media/5870934-search-cmpivot-entities.png)
 
  
 ## <a name="inside-cmpivot"></a>CMPivot içinde
@@ -772,9 +268,9 @@ Bir saatten sonra bir sorgu zaman aşımına uğrar. Örneğin, bir koleksiyon 5
 Daha fazla bilgi için bkz. [günlük dosyaları](../../plan-design/hierarchy/log-files.md) ve [sorun giderme CMPivot](cmpivot-tsg.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
- 
-[CMPivot sorunlarını giderme](cmpivot-tsg.md)
 
-[PowerShell betikleri oluşturma ve çalıştırma](../../../apps/deploy-use/create-deploy-scripts.md)
+- [CMPivot üzerinde yapılan değişiklikler](cmpivot-changes.md)
+- [CMPivot sorunlarını giderme](cmpivot-tsg.md)
+- [PowerShell betikleri oluşturma ve çalıştırma](../../../apps/deploy-use/create-deploy-scripts.md)
 
 

@@ -2,7 +2,7 @@
 title: Sınır gruplarını yapılandırma
 titleSuffix: Configuration Manager
 description: Sınırlar adlı ilgili ağ konumlarını mantıksal olarak düzenlemek için istemcilerin sınır gruplarını kullanarak site sistemlerini bulmasına yardımcı olma
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c9567cc441636bbda31262e0857e2fc6484c2af7
-ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
+ms.openlocfilehash: 7a925c29b5d186f3ca6f320741f5ca602b0bbb79
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153409"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128401"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Configuration Manager için sınır grupları yapılandırma
 
@@ -157,7 +157,7 @@ Bir istemci bir dağıtım noktasının konumunu istediğinde, Configuration Man
 CCMSetup Configuration Manager istemci yükleyicisi, bir yerel kaynaktan veya bir yönetim noktası aracılığıyla yükleme içeriği alabilir. İlk davranışı, istemciyi yüklemek için kullandığınız komut satırı parametrelerine bağlıdır:<!-- MEMDocs#286 -->
 
 - **/MP** veya **/Source** parametreleri kullanmazsanız, CCMSETUP Active Directory veya DNS 'den yönetim noktalarının bir listesini almayı dener.
-- Yalnızca **/Source**belirtirseniz, yükleme işlemini belirtilen yoldan zorlar. Yönetim noktalarını bulamaz. Belirtilen yolda CCMSetup. cab dosyası bulamazsa CCMSetup başarısız olur.
+- Yalnızca **/Source**belirtirseniz, yükleme işlemini belirtilen yoldan zorlar. Yönetim noktalarını bulamaz. Belirtilen yolda ccmsetup.cab bulamazsa CCMSetup başarısız olur.
 - Hem **/MP** hem de **/Source**belirtirseniz, belirtilen yönetim noktalarını denetler ve tüm bunları bulur. Geçerli bir yönetim noktası bulamazsa, belirtilen kaynak yoluna geri döner.
 
 Bu CCMSetup parametreleri hakkında daha fazla bilgi için bkz. [istemci yükleme parametreleri ve özellikleri](../../../clients/deploy/about-client-installation-properties.md).
@@ -228,7 +228,7 @@ Bir cihaz birden fazla sınır grubındayken, bu ayarlar için aşağıdaki davr
 
 #### <a name="allow-peer-downloads-in-this-boundary-group"></a><a name="bkmk_bgoptions1"></a>Bu sınır grubunda eş indirmelere izin ver
 
-Bu ayar, varsayılan olarak etkinleştirilmiştir. Yönetim noktası, istemcilere eş kaynakları içeren içerik konumlarının bir listesini sağlar. Bu ayar, [teslim iyileştirmesi](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)Için Grup kimliklerinin uygulanmasını da etkiler.  
+Bu ayar varsayılan olarak etkindir. Yönetim noktası, istemcilere eş kaynakları içeren içerik konumlarının bir listesini sağlar. Bu ayar, [teslim iyileştirmesi](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)Için Grup kimliklerinin uygulanmasını da etkiler.  
 
 Bu seçeneği devre dışı bırakmayı göz önünde bulundurmanız gereken iki yaygın senaryo vardır:  
 
@@ -312,7 +312,7 @@ Sürüm 1902 ' de, bu ayar artık şirket **içi kaynaklar üzerinde bulut taban
 - Bulut dağıtım noktaları
 - Microsoft Update (sürüm 1902 ' de eklendi)
 
-## <a name="software-update-points"></a>Yazılım güncelleştirme noktaları
+## <a name="software-update-points"></a><a name="bkmk_sup"></a>Yazılım güncelleştirme noktaları 
 
 İstemciler yeni bir yazılım güncelleştirme noktası bulmak için sınır grupları kullanır. Bir istemcinin bulabileceği sunucuları denetlemek için, farklı sınır gruplarına bireysel yazılım güncelleştirme noktaları ekleyin.
 
@@ -366,6 +366,13 @@ Sınır grubu yapılandırmalarınızı gözden geçirin. Bu değişikliği baş
 
 Daha fazla bilgi için bkz. [Istemcileri el ile yeni bir yazılım güncelleştirme noktasına değiştirme](../../../../sum/plan-design/plan-for-software-updates.md#BKMK_ManuallySwitchSUPs).
 
+### <a name="intranet-clients-can-use-a-cmg-software-update-point"></a><a name="bkmk_cmg-sup"></a>Intranet istemcileri bir CMG yazılım güncelleştirme noktası kullanabilir
+<!--7102873-->
+Sürüm 2006 ' den başlayarak, intranet istemcileri bir sınır grubuna atandığında bir CMG yazılım güncelleştirme noktasına erişebilir ve yazılım güncelleştirme noktasında [ **Configuration Manager bulut yönetimi ağ geçidi trafiğine izin ver** seçeneği etkin olur](../../../clients/manage/cmg/setup-cloud-management-gateway.md#bkmk_role) . Aşağıdaki senaryolarda intranet cihazlarının bir CMG yazılım güncelleştirme noktasına karşı tarama yapmasına izin verebilirsiniz:
+
+- Bir internet makinesi VPN 'ye bağlanırsa, Internet üzerinden CMG yazılım güncelleştirme noktasına karşı taramaya devam edecektir.
+- Sınır grubu için yalnızca yazılım güncelleştirme noktası CMG yazılım güncelleştirme noktası ise, tüm intranet ve internet cihazları buna karşı tarama yapılır.
+
 ## <a name="management-points"></a>Yönetim noktaları
 
 <!-- 1324594 -->
@@ -378,7 +385,7 @@ Daha önce, güvenli bir ağda korumalı bir yönetim noktanız olduğunda yayg�
 
 Bir istemci, atanmış yönetim noktası olmayan bir sınır grubuysa, site istemciye tüm yönetim noktaları listesini verir. Bu davranış, bir istemcinin her zaman bir yönetim noktaları listesi aldığından emin olur.
 
-Yönetim noktası sınır grubu geri dönüş, istemci yüklemesi sırasında davranışı değiştirmez (CCMSetup. exe). Komut satırı/MP parametresini kullanarak ilk yönetim noktasını belirtmezse, yeni istemci kullanılabilir yönetim noktalarının tam listesini alır. İlk önyükleme işlemi için istemci, erişebileceği ilk yönetim noktasını kullanır. İstemci sitesiyle kaydolduğunda, bu yeni davranışla birlikte yönetim noktası listesini doğru şekilde sıralanmış olarak alır.
+Yönetim noktası sınır grubu geri dönüş, istemci yüklemesi sırasında davranışı değiştirmez (ccmsetup.exe). Komut satırı/MP parametresini kullanarak ilk yönetim noktasını belirtmezse, yeni istemci kullanılabilir yönetim noktalarının tam listesini alır. İlk önyükleme işlemi için istemci, erişebileceği ilk yönetim noktasını kullanır. İstemci sitesiyle kaydolduğunda, bu yeni davranışla birlikte yönetim noktası listesini doğru şekilde sıralanmış olarak alır.
 
 Yükleme sırasında istemci içeriği alma davranışı hakkında daha fazla bilgi için bkz. [istemci yüklemesi](#bkmk_ccmsetup).
 

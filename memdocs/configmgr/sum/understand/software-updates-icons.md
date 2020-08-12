@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 3843dd4ab4fe5a9aecaae8e6f207c3d037fc1950
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ff616c9ee61e85e4e77aeef6254ca9922427270c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717716"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129432"
 ---
 # <a name="icons-used-for-software-updates-in-configuration-manager"></a>Configuration Manager 'de yazılım güncelleştirmeleri için kullanılan simgeler
 
@@ -59,7 +59,7 @@ Eşitlenen yazılım güncelleştirmeleri Configuration Manager konsolunda gör�
 
 - Yazlım güncelleştirmesi yükleme için onaylanırsa istemcinin yüklediği yazılım güncelleştirme dosyası paketinin verimliliğini artırır. Örneğin, yenisiyle değiştirilen yazılım güncelleştirmesi artık düzeltmeyle veya yeni yazılım güncelleştirmesinin desteklediği işletim sistemleriyle ilgili olmayan dosyalar içerebilir. bu nedenle, bu dosyalar yerine geçen yazılım güncelleştirmesinin dosya paketinde bulunmaz.  
 
-- Bir ürünün daha yeni sürümlerini güncelleştirir veya diğer bir deyişle, bir ürünün daha eski sürümleri ya da yapılandırmaları için artık geçerli değildir. Yazılım güncelleştirmeleri ayrıca dil desteğini genişletmek için değişiklikler yapılmışsa başka güncelleştirmelerin de yerini alabilir. Örneğin, Microsoft Office için bir ürün güncelleştirmesinin daha sonraki bir düzeltmesi, daha eski bir işletim sistemi için desteği kaldırabilir, ancak ilk yazılım güncelleştirmesi yayınlandığında yeni diller için ek destek ekleyebilir.  
+- Bir ürünün daha yeni sürümlerini güncelleştirir veya diğer bir deyişle, bir ürünün daha eski sürümleri ya da yapılandırmaları için artık geçerli değildir. Yazılım güncelleştirmeleri ayrıca dil desteğini genişletmek için değişiklikler yapılmışsa başka güncelleştirmelerin de yerini alabilir. Örneğin, Microsoft 365 uygulamalar için bir ürün güncelleştirmesinin daha sonraki bir düzeltmesi, daha eski bir işletim sistemi için desteği kaldırabilir, ancak ilk yazılım güncelleştirme sürümünde yeni diller için ek destek ekleyebilir.  
 
   Yazılım Güncelleştirme Noktası Bileşeni özelliklerindeki Yenisiyle Değiştirme Kuralları sekmesinde, yenisiyle değiştirilen yazılım güncelleştirmelerinin nasıl yönetileceğini belirtebilirsiniz. Daha fazla bilgi için, bkz. [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
 
