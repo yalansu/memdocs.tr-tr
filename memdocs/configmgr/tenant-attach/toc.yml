@@ -6,6 +6,8 @@
       href: device-sync-actions.md
     - name: İstemci ayrıntıları (önizleme)
       href: client-details.md
+    - name: Uygulamaları yükleme (önizleme)
+      href: applications.md
 - name: Kiracı ekli cihazlar için CMPivot (önizleme)
   items:
     - name: CMPivot’a genel bakış
@@ -18,3 +20,5 @@
       href: troubleshoot.md
     - name: İstemci ayrıntıları (önizleme)
       href: troubleshoot-client-details.md
+    - name: Uygulama yüklemesi (önizleme)
+      href: troubleshoot-applications.md
