@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 08/11/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7667cf1d62040c4435f41ffbe377452d3666a3ec
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 2c6f2eb7d6174c706cdd8a3910df1d0ddc2e6ef0
+ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85343035"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88110690"
 ---
 # <a name="troubleshoot-pkcs-certificate-deployment-in-microsoft-intune"></a>Microsoft Intune 'de PKCS sertifika dağıtımı sorunlarını giderme
 
@@ -129,6 +129,19 @@ Windows çalıştıran cihazlarda, Intune ile yönettiğiniz cihazların kayıt 
 Cihazda **Olay Görüntüleyicisi**  >  **uygulamalar ve hizmet günlükleri**  >  **Microsoft**  >  **Windows**  >  **DeviceManagement-Enterprise-Diagnostics-Provider** ' ı açın.
 
 ![Windows olay günlükleri](../protect/media/troubleshoot-pkcs-certificate-profiles/windows-event-log.png)
+
+## <a name="antivirus-exclusions"></a>Virüsten koruma dışlamaları
+
+NDES veya sertifika bağlayıcısını barındıran sunuculara virüsten koruma dışlamaları eklemeyi göz önünde bulundurun:
+
+- Sertifika istekleri sunucuya veya Intune sertifika bağlayıcısına ulaşmıyor, ancak başarıyla işlenmedi 
+- Sertifikalar yavaş verilir
+
+Aşağıda, dışarıda bırakabilmeniz gereken konumların örnekleri verilmiştir:
+
+- *% Program_Files%* \Microsoft ıntune\pfxisteği
+- *% Program_Files%* \Microsoft ıntune\certificaterequeststatus
+- *% Program_Files%* \Microsoft Intune\CertificateRevocationStatus
 
 ## <a name="common-errors"></a>Sık karşılaşılan hatalar
 

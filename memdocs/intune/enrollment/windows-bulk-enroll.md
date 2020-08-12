@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7894e2648b58b1afd313250dc9724f117fe6c93a
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 6d50d7f8e4edeaf6d88875fafef977936909d71f
+ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216544"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88110741"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Windows cihazlar için toplu kayıt
 
@@ -67,7 +67,7 @@ Azure AD kullanıcıları, bu cihazlarda standart kullanıcılardır ve atanan I
 
 10. İsteğe bağlı olarak, **Uygulama ekleyebilir** ve **Sertifika ekleyebilirsiniz**. Bu uygulamalar ve sertifikalar cihazda sağlanır.
 
-11. İsteğe bağlı olarak, sağlama paketinizi parola ile koruyabilirsiniz.  **Oluştur**'a tıklayın.
+11. İsteğe bağlı olarak, sağlama paketinizi parola ile koruyabilirsiniz.  **Oluştur**’a tıklayın.
     ![Windows Yapılandırma Tasarımcısı uygulamasında paket koruması ekran görüntüsü](./media/windows-bulk-enroll/bulk-enroll-create.png)
 
 ## <a name="provision-devices"></a>Cihaz sağlama
@@ -100,4 +100,4 @@ Olay Görüntüleyicisi içindeki **sağlama-tanılama-sağlayıcı** Yönetim g
 Açık bir ağ kullanmadığınız durumlarda, bağlantıları başlatmak için [cihaz düzeyinde sertifikalar](../protect/certificates-configure.md) kullanmanız gerekir. Toplu kayıtlı cihazlar, ağ erişimi için kullanıcı hedefli sertifikalara kullanamaz. 
 
 ### <a name="conditional-access"></a>Koşullu Erişim
-Toplu kayıt kullanılarak kaydedilen Windows cihazları için koşullu erişim kullanılamaz.
+Windows 10 1803 + dışında toplu kayıt kullanılarak kaydedilen Windows cihazlarında koşullu erişim kullanılamaz.

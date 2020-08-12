@@ -19,12 +19,12 @@ ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: eded7186c670699fa654b0a1be1a7d46c027a56a
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: a57010a5c8089b0ac979cf43c3706467d83faea2
+ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88047996"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88110707"
 ---
 # <a name="turn-on-windows-defender-to-access-company-resources"></a>Şirket kaynaklarına erişmek için Windows Defender’ı etkinleştirme
 
@@ -36,8 +36,7 @@ Bu makalede, kuruluşunuzun virüsten koruma gereksinimlerini karşılamak ve er
 Cihazınızda Windows Defender 'ı açmak için aşağıdaki adımları izleyin. 
 
 1. **Başlat** menüsünü seçin.
-2. Arama çubuğuna **Grup İlkesi**yazın.
-3. **Grup Ilkesini Düzenle**' yi seçin. Yerel Grup İlkesi Düzenleyicisi açılır.
+2. Arama çubuğuna **Grup İlkesi**yazın. Ardından, listelenen sonuçlardan **Grup Ilkesini Düzenle** ' yi seçin. Yerel Grup İlkesi Düzenleyicisi açılır.
 4. **Bilgisayar yapılandırması**  >  **Yönetim Şablonları**  >  **Windows bileşenleri**  >  **Windows Defender virüsten koruma**' yı seçin. 
 5. Listenin en altına gidin ve **Windows Defender virüsten koruma 'yı**Kapat ' ı seçin.  
 6. **Devre dışı** veya **yapılandırılmamış**' ı seçin. Adlar, Windows Defender 'ı kapatmanızı önerdiğinizi öneren bu seçenekleri belirlemek için sayaç sezgisel olabilir. Endişelenmeyin, bu seçenekler aslında açık olduğundan emin olur. 
@@ -48,7 +47,7 @@ Cihazınızda Windows Defender 'ı açmak için aşağıdaki adımları izleyin.
 
 Gerçek zamanlı ve buluta teslim edilen korumayı açmak için aşağıdaki adımları izleyin. Bu virüsten koruma özellikleri birlikte, sizi casus yazılımlara karşı korur ve bulut aracılığıyla kötü amaçlı yazılım sorunlarıyla ilgili düzeltmeler sunabilir. 
 
-1. **Başlat** menüsünü seçin,
+1. **Başlat** menüsünü seçin.
 2. Arama çubuğuna **Windows güvenliği**yazın. Eşleşen sonucu seçin. 
 3. **Virüs & tehdit koruması**' nı seçin.
 4. **Virüs & tehdit koruması ayarları**' nın altında **Ayarları Yönet**' i seçin.
@@ -56,16 +55,15 @@ Gerçek zamanlı ve buluta teslim edilen korumayı açmak için aşağıdaki ad�
 
 Bu seçenekleri ekranınızda görmüyorsanız, bunlar gizlenmiş olabilir. Bunları görünür yapmak için aşağıdaki adımları izleyin.  
 
-1. **Başlat**' ı seçin, **Denetim Masası**' nı açın.
-2. Arama çubuğuna **Grup İlkesi**yazın.
-3. **Grup Ilkesini Düzenle**' yi seçin. Yerel Grup İlkesi Düzenleyicisi açılır.
+1. **Başlat** menüsünü seçin.  
+2. Arama çubuğuna **Grup İlkesi**yazın. Ardından, listelenen sonuçlardan **Grup Ilkesini Düzenle** ' yi seçin. Yerel Grup İlkesi Düzenleyicisi açılır.
 3. **Computer Configuration**  >  **Administrative Templates**  >  **Windows bileşenleri**  >  **Windows Güvenlik**  >  **virüsü ve tehdit koruması**Yönetim Şablonları bilgisayar yapılandırması ' nı seçin.
 4. **Virüs ve tehdit koruması alanını Gizle '** yi seçin.
 5. **Devre dışı**seçeneğini belirleyin  >  **Apply**  >  **Tamam**.  
 
 ## <a name="update-your-antivirus-definitions"></a>Antivirüs tanımlarınızı güncelleştirme
 Virüsten koruma tanımlarınızı güncelleştirmek için aşağıdaki adımları izleyin.  
-1. **Başlat** menüsünü seçin,
+1. **Başlat** menüsünü seçin.
 2. Arama çubuğuna **Windows güvenliği**yazın. Eşleşen sonucu seçin. 
 3. **Virüs & tehdit koruması**' nı seçin.
 4. **Virüs & tehdit koruması güncelleştirmeleri**bölümünde **Güncelleştirmeleri denetle**' yi seçin. Ekranınızda bu seçeneği görmüyorsanız, [gerçek zamanlı korumayı etkinleştirme](turn-on-defender-windows.md#turn-on-real-time-and-cloud-delivered-protection)' deki ilk adım kümesini doldurun. Sonra güncelleştirmeleri yeniden denetlemeyi deneyin. 

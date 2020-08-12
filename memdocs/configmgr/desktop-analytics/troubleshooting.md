@@ -2,7 +2,7 @@
 title: Desktop Analytics sorunlarını giderme
 titleSuffix: Configuration Manager
 description: Masaüstü analiziyle ilgili sorunları gidermenize yardımcı olacak teknik ayrıntılar.
-ms.date: 07/01/2020
+ms.date: 08/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 68506ba11e356a1e9f14d58880a80bdf3cfcb5f4
-ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
+ms.openlocfilehash: e83e8d5d967b4cd3bbcb817c149cd40284bb5f9c
+ms.sourcegitcommit: 66c58078a32af3872d98f7c62af4f8047ee81b50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85828984"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089954"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Desktop Analytics sorunlarını giderme
 
@@ -74,6 +74,9 @@ Kurulumu tamamladıktan sonra bu uygulamaları sağlamanız gerekiyorsa, **bağl
 
 - **Configuration Manager Için Azure AD uygulaması**. Kurulumu tamamladıktan sonra bağlantı sorunlarını sağlamanız veya sorun gidermeniz gerekiyorsa, bkz. [Configuration Manager için uygulama oluşturma ve içeri aktarma](#create-and-import-app-for-configuration-manager). Bu uygulama, **Configuration Manager Service** API 'SINDEKI **Write cm koleksiyon VERISI** ve **okuma cm koleksiyon verilerini** gerektirir.  
 
+    > [!NOTE]
+    > Masaüstü analizi, tek bir Azure AD kiracısına rapor veren birden çok Configuration Manager hiyerarşiyi destekler.<!-- 4814075 --> Ortamınızda aynı ticari KIMLIKLE yapılandırılmış birden çok hiyerarşiniz varsa, Azure AD kiracısını ve Masaüstü Analizi örneğini paylaşmak için her hiyerarşi için [farklı uygulamalar](connect-configmgr.md#bkmk_connect) kullanın.
+
 ### <a name="create-and-import-app-for-configuration-manager"></a>Configuration Manager için uygulama oluşturma ve içeri aktarma
 
 Azure hizmetlerini Yapılandırma Sihirbazı 'ndan Configuration Manager için Azure AD uygulamasını oluşturamaz veya mevcut bir uygulamayı yeniden kullanmak istiyorsanız, el ile oluşturmanız ve içeri aktarmanız gerekir. Masaüstü Analizi portalında [ilk ekleme](set-up.md#initial-onboarding) işlemini tamamladıktan sonra aşağıdaki adımları kullanın:
@@ -92,7 +95,7 @@ Azure hizmetlerini Yapılandırma Sihirbazı 'ndan Configuration Manager için A
 
     <!--     - **Sign-on URL**: this value isn't used by Configuration Manager, but required by Azure AD. Enter a unique and valid URL, for example: `https://configmgrapp`   -->
   
-    **Kaydol**’u seçin.  
+    **Kaydet**’i seçin.  
 
 3. Uygulamayı seçin, **uygulamanın (istemci) kimliğini** ve **Dizin (kiracı) kimliğini**aklınızda yapın. Değerler, Configuration Manager bağlantısını yapılandırmak için kullanılan GUID 'lerdir.  
 
