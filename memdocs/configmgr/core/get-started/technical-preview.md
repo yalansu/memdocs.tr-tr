@@ -2,7 +2,7 @@
 title: Teknik Önizleme sürümleri
 titleSuffix: Configuration Manager
 description: Configuration Manager ' de yeni işlevsellik ve özellikleri test etmek için teknik önizleme dalı hakkında bilgi edinin.
-ms.date: 08/07/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1d67ba33e2f2f9783b903e60aa64170e1fbb61a5
-ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
+ms.openlocfilehash: 76d1edf8598e1abd71b6fd1db7faffa1750110d4
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997925"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129129"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager için teknik önizleme
 
@@ -141,7 +141,7 @@ Each month, add features from the list above to a new H3 section at the top of t
 When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
 -->
 
-Şu özellikler, geçerli dal sürümü 2002 ' den bu yana Configuration Manager Technical Preview dalının önceki sürümleriyle yayımlanmıştır:
+Şu özellikler, geçerli dal sürümü 2006 ' den bu yana Configuration Manager Technical Preview dalının önceki sürümleriyle yayımlanmıştır:
 
 > [!TIP]
 > Yeni bir geçerli dal sürümü kullanılabilir olduğunda, bu sürümde kullanılabilen özellikler en son *Yenilikler* makalesinde listelenmiştir. Daha fazla bilgi için bkz. [artımlı sürümlerindeki](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)yenilikler.
@@ -153,64 +153,6 @@ When there's a new CB, add any features not in that CB to the table in H2 "Featu
 - [Artık bazı konsol alanlarında kullanılan sabit genişlikli yazı tipi](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
 - [Görev sırası ilke boyutunu Yönet](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
 - [Yönetim merkezinde cihaz zaman çizelgesinde iyileştirmeler](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
-
-### <a name="technical-preview-version-2006"></a>Technical Preview sürüm 2006
-
-- [Ortak yönetilen cihazlarda Şirket Portalı uygulamasını kullanma](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
-- [CMG aracılığıyla kullanılabilir uygulamalarda iyileştirmeler](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
-- [Intranet istemcileri bir CMG yazılım güncelleştirme noktası kullanabilir](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
-- [CMG aracılığıyla görev dizileriyle geliştirmeler](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
-- [Uzak çalışanları iyileştirmek için yönetim öngörüleri](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
-- [VPN sınır türü geliştirmeleri](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
-- [Kiracı Iliştirme: Microsoft Endpoint Manager Yönetim Merkezi 'ndeki Configuration Manager eylemlerine yönelik Iyileştirmeler](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
-- [Endpoint Protection ilkeleri için CMG desteği](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
-- [Kiracı ekleme ekleme sırasında önceden oluşturulmuş Azure AD uygulamasını içeri aktarma](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
-- [Tarifeli bir bağlantıda istemci yükseltmesine yönelik iyileştirmeler](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
-- [Cihaz yeniden başlatmalarının yönetilmesi iyileştirmeleri](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
-- [Windows sanal masaüstü için geliştirilmiş destek](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
-- [Configuration Manager Community hub öğelerinin doğrudan bağlantıları](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
-
-### <a name="technical-preview-version-2005"></a>Technical Preview sürüm 2005
-
-- [Kiracı iliştirme: Yönetim merkezinde cihaz zaman çizelgesi](2020/technical-preview-2005.md#bkmk_timeline) <!--7141381-->
-- [Kiracı iliştirme: yönetim merkezinden bir uygulama yükler](2020/technical-preview-2005.md#bkmk_apps) <!--6024389-->
-- [Kiracı iliştirme: yönetim merkezinden CMPivot](2020/technical-preview-2005.md#bkmk_cmpivot) <!--6024392-->
-- [Kiracı iliştirme: yönetim merkezinden betikleri çalıştırma](2020/technical-preview-2005.md#bkmk_scripts) <!--6234688-->
-- [VPN sınır türü](2020/technical-preview-2005.md#bkmk_vpn) <!--7020519-->
-- [Yazılım Merkezi 'nde Azure AD kimlik doğrulaması](2020/technical-preview-2005.md#bkmk_availapp) <!--6935376-->
-- [Tarifeli bir bağlantıda istemciyi yükleyip yükseltin](2020/technical-preview-2005.md#bkmk_meter) <!--6976145-->
-- [Bulut tabanlı içerik için görev dizisi medya desteği](2020/technical-preview-2005.md#bkmk_tsmedia) <!--6209223-->
-- [Bulut yönetimi ağ geçidi cmdlet 'leri geliştirmeleri](2020/technical-preview-2005.md#bkmk_pwshcmg) <!--6978300-->
-- [Topluluk hub 'ı ve GitHub](2020/technical-preview-2005.md#community-hub-and-github) <!--3555935-->
-- [Enterprise için Microsoft 365 uygulamalar](2020/technical-preview-2005.md#bkmk_365_apps) <!--6298093-->
-- [Microsoft 'a kurulum ve yükseltme başarısızlıklarını bildir](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) <!--5622909-->
-- [Azure AD uygulama gizli anahtarı süre sonu bildirimi](2020/technical-preview-2005.md#bkmk_alertkey) <!--6386392-->
-- [BitLocker için geliştirmeler görev dizisi adımları](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
-- [İçerik kitaplığı Temizleme aracında geliştirmeler](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
-- [Windows 10 yerinde yükseltme sırasında komut istemi 'ni kaldırma](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
-
-### <a name="technical-preview-version-2004"></a>Technical Preview sürüm 2004
-
-- [Microsoft Uç Nokta Yöneticisi kiracı iliştirme: ConfigMgr istemci ayrıntıları](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
-- [Microsoft 'un bildirimleri](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
-- [Keşif verilerini konsolundan kopyalama](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
-- [CMPivot geliştirmeleri](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
-- [PowerShell sürüm 7 desteği](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
-- [Disk biçimlendirme ve bölümleme için geliştirme görev dizisi adımı](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
-- [İşletim sistemi dağıtımı için yönetim öngörüleri kuralları](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
-- [Görev sırası dağıtım türleri için PowerShell cmdlet 'leri](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
-
-### <a name="technical-preview-version-2003"></a>Technical Preview Sürüm 2003
-
-- [Microsoft Endpoint Manager konsolu aracılığıyla Microsoft Defender ATP 'ye Configuration Manager istemcileri ekleme](2020/technical-preview-2003.md#bkmk_atp) <!--5691658-->
-- [Yapılandırma öğesi değişikliklerini izle](2020/technical-preview-2003.md#bkmk_track) <!--4261411 in 2002-->
-- [Cihazların sınır gruplarını gösterme](2020/technical-preview-2003.md#bkmk_boundary) <!--6521835 in 2002-->
-- [Yeni geri bildirim Sihirbazı](2020/technical-preview-2003.md#bkmk_feedback) <!--3180826-->
-- [Microsoft Edge Yönetim Panosu geliştirmeleri](2020/technical-preview-2003.md#bkmk_edge) <!--5907383-->
-- [CMPivot geliştirmeleri](2020/technical-preview-2003.md#bkmk_cmpivot) <!--6518631-->
-- [Microsoft 'a gönderilen geri bildirim sorgusu](2020/technical-preview-2003.md#bkmk_smile) <!--6488450-->
-- [Görev sırası ilerleme durumu için yeni SDK yöntemi](2020/technical-preview-2003.md#bkmk_tsapi) <!--6448458-->
-- [İşletim sistemi dağıtımına yönelik iyileştirmeler](2020/technical-preview-2003.md#bkmk_osd) <!--6452769-->
 
 ## <a name="features-in-previous-technical-previews"></a>Önceki teknik önizlemelerde Özellikler
 
@@ -224,16 +166,25 @@ Aşağıdaki özellikler Configuration Manager Technical Preview dalının önce
 
 | Özellik        | Technical Preview sürümü |
 |----------------|---------------------------|
+| Ortak yönetilen cihazlarda Şirket Portalı uygulamasını kullanma <!--3601237--> | [Teknik Önizleme 2006](2020/technical-preview-2006.md#bkmk_portal) |
+| CMG aracılığıyla kullanılabilir uygulamalarda iyileştirmeler <!--7033501--> | [Teknik Önizleme 2006](2020/technical-preview-2006.md#bkmk_availapp) |
+| Kiracı Iliştirme: Microsoft Endpoint Manager Yönetim Merkezi 'ndeki Configuration Manager eylemlerine yönelik Iyileştirmeler <!--7518897--> | [Teknik Önizleme 2006](2020/technical-preview-2006.md#bkmk_apps) |
+| Kiracı iliştirme: Yönetim merkezinde cihaz zaman çizelgesi <!--7141381--> | [Teknik Önizleme 2005](2020/technical-preview-2005.md#bkmk_timeline) |
+| Kiracı iliştirme: yönetim merkezinden bir uygulama yükler <!--6024389--> | [Teknik Önizleme 2005](2020/technical-preview-2005.md#bkmk_apps) |
+| Kiracı iliştirme: yönetim merkezinden CMPivot <!--6024392--> | [Teknik Önizleme 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
+| Kiracı iliştirme: yönetim merkezinden betikleri çalıştırma <!--6234688--> | [Teknik Önizleme 2005](2020/technical-preview-2005.md#bkmk_scripts) |
+| Bulut yönetimi ağ geçidi cmdlet 'leri geliştirmeleri <!--6978300--> | [Teknik Önizleme 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |
+| Microsoft 'a kurulum ve yükseltme başarısızlıklarını bildir <!--5622909--> | [Teknik Önizleme 2005](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) |
+| İçerik kitaplığı Temizleme aracında geliştirmeler <!--6887878--> | [Teknik Önizleme 2005](2020/technical-preview-2005.md#bkmk_content) |
+| Keşif verilerini konsolundan kopyalama <!--6890051--> | [Teknik Önizleme 2004](2020/technical-preview-2004.md#bkmk_copydisco) |
+| PowerShell sürüm 7 desteği <!--6023299--> | [Teknik Önizleme 2004](2020/technical-preview-2004.md#bkmk_pwsh7) |
+| Yeni geri bildirim Sihirbazı <!--3180826--> | [Teknik Önizleme 2003](2020/technical-preview-2003.md#bkmk_feedback) |
+| Microsoft 'a gönderilen geri bildirim sorgusu <!--6488450--> | [Teknik Önizleme 2003](2020/technical-preview-2003.md#bkmk_smile) |
 | Geri bildirime dosya iliştirme <!--3556011--> | [Teknik Önizleme 1910](2019/technical-preview-1910.md#attach-files-to-feedback) |
 | Çok noktaya yayın özellikli dağıtım noktalarında iyileştirmeler <!--3785535--> | [Teknik Önizleme 1908,2](2019/technical-preview-1908-2.md#bkmk_multicast) |
 | Aşamalı dağıtım şablonları <!--4961086--> | [Teknik Önizleme 1908](2019/technical-preview-1908.md#phased-deployment-templates) |
 | Bulut yönetimi ağ geçidini kullanarak her yerde uzaktan denetim <!--4575930--> | [Teknik Önizleme 1906](2019/technical-preview-1906.md#remote-control-anywhere-using-cloud-management-gateway) |
-| Topluluk Merkezi geliştirmeleri <!--3555935--> | [Teknik Önizleme 1906](2019/technical-preview-1906.md#bkmk_hub) |
-| Topluluk Merkezi geliştirmeleri <!--4224401--> | [Teknik Önizleme 1905](2019/technical-preview-1905.md#bkmk_hub) |
-| Topluluk Merkezi ve GitHub <!--3555935--> | [Teknik Önizleme 1904](2019/technical-preview-1904.md#community-hub-and-github) |
 | Cloud Services maliyet tahmini <!--3555774--> | [Teknik Önizleme 1903](2019/technical-preview-1903.md#bkmk_cmg) |
-| Topluluk Merkezi raporları indirin <!--3555936--> | [Teknik Önizleme 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) |
-| Topluluk Merkezi <!--3556020, fka 1357766--> | [Teknik Önizleme 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) |
 | İstemci tabanlı PXE Yanıtlayıcı hizmeti <!--3556018, fka 1357148--> | [Teknik Önizleme 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
 | IPv6 için PXE ağ önyükleme desteği <!--3601254, fka 1269793--> |[Teknik Önizleme 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
 | Azure Active Directory kullanma <!--3607315, fka 1322145--> | [Teknik Önizleme 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |

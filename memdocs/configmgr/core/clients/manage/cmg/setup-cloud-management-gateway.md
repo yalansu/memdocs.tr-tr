@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: d1e7b2c359e21ac4a12219d27655603954702fa8
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 9ba4466a40d49c4b78b75e6f85137dfd0a4ff5ce
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410886"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129146"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configuration Manager için bulut yönetimi ağ geçidi ayarlama
 
@@ -141,7 +141,7 @@ CMG bağlantı noktası, CMG ile iletişim kurmak için site sistem rolüdür. C
 
 CMG hizmet durumu sorunlarını gidermek için **Cmgservice. log** ve **SMS_Cloud_ProxyConnector. log**kullanın. Daha fazla bilgi için bkz. [günlük dosyaları](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
-## <a name="configure-client-facing-roles-for-cmg-traffic"></a>CMG trafiği için istemciye yönelik rolleri yapılandırma
+## <a name="configure-client-facing-roles-for-cmg-traffic"></a><a name="bkmk_role"></a>CMG trafiği için istemciye yönelik rolleri yapılandırma
 
 Yönetim noktası ve yazılım güncelleştirme noktası site sistemlerini CMG trafiğini kabul edecek şekilde yapılandırın. Bu yordamı, internet tabanlı istemcilere hizmet veren tüm yönetim noktaları ve yazılım güncelleştirme noktaları için birincil sitede yapın.  
 
@@ -158,7 +158,7 @@ Yönetim noktası ve yazılım güncelleştirme noktası site sistemlerini CMG t
 Gerektiğinde ek yönetim noktaları ve tüm yazılım güncelleştirme noktaları için bu adımları yineleyin.
 
 ## <a name="configure-boundary-groups"></a>Sınır gruplarını yapılandırma
-
+ 
 <!--3640932-->
 Sürüm 1902 ' den başlayarak bir CMG 'yi bir sınır grubuyla ilişkilendirebilirsiniz. Bu yapılandırma, istemcilerin sınır grubu ilişkilerine göre istemci iletişimi için varsayılan veya CMG 'ye geri dönüş yapmasına izin verir.
 

@@ -10,12 +10,12 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 94f002ecd12d08ffd5f3d4767e315e0d83714929
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: f2ada7bfcef5714d8df3c476a6bbba695dc398e0
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764059"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127282"
 ---
 # <a name="conditional-access-with-co-management"></a>Ortak yönetim ile koşullu erişim
 
@@ -44,7 +44,7 @@ Microsoft Kurumsal Başkan Yardımcısı atacan Anderson, Ignite 2018 Keynote s�
 Koşullu erişim Ayrıca, ağa bağlı tüm cihazların sistem durumunu görmek için size merkezi bir yer sağlar. Bulut ölçeğinden faydalanır, bu da özellikle Configuration Manager üretim örneklerinin test edilmesine önem taşır.
 
 
-## <a name="benefits"></a>Avantajlar
+## <a name="benefits"></a>Yararları
 
 Her BT ekibi, ağ güvenliği ile sorunsuz hale gelir. Ağınıza erişmeden önce her cihazın güvenlik ve iş gereksinimlerinizi karşıladığından emin olmak zorunludur. Koşullu erişimle aşağıdaki faktörleri belirleyebilirsiniz: 
 - Her cihaz şifrelendiyse  
@@ -81,7 +81,7 @@ Diğer örnekler şunlardır:
 
 - 150.000 ' den fazla çalışan için uygulama tabanlı koşullu erişim kullanan Nestlé  
 
-- Artık "yalnızca yönetilen cihazların takımlar ve şirketin intraneti gibi Office 365 uygulamalarına erişimi olduğundan" Otomasyon yazılım şirketi, temposunda. Ayrıca, iş gücünün "iş günü ve Salesforce gibi diğer bulut tabanlı uygulamalara daha güvenli erişimi" de sunabilir. " Temposunda 'ın Intune deneyimi hakkında daha fazla bilgi için, bkz. [temposunda Microsoft 365 ' deki mobil işbirliği araçlarıyla iş hızını artırır](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365).
+- Artık, "yalnızca yönetilen cihazların takımlar ve şirketin intraneti gibi Microsoft 365 uygulamalarına erişimi olduğundan emin olmak için temposunda Otomasyon yazılım şirketi. Ayrıca, iş gücünün "iş günü ve Salesforce gibi diğer bulut tabanlı uygulamalara daha güvenli erişimi" de sunabilir. " Temposunda 'ın Intune deneyimi hakkında daha fazla bilgi için, bkz. [temposunda Microsoft 365 ' deki mobil işbirliği araçlarıyla iş hızını artırır](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365).
 
 Intune ayrıca Cisco ıSE, Aruba Clear Pass ve Citrix NetScaler gibi iş ortaklarıyla tamamen tümleşiktir. Bu iş ortaklarıyla, Intune kaydına ve cihaz uyumluluk durumuna göre erişim denetimlerini bu platformlar arasında koruyabilirsiniz.
 

@@ -5,17 +5,17 @@ description: Configuration Manager 'de BitLocker yönetim ve izleme Web sitesini
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 81f03922-90f6-4e8f-be65-da64ccb21cf2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 84725ac494e1d9497524303b841207bd05cd3859
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7b64e09561def3d19c306b9cfcd4f7eb808763fd
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717513"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129265"
 ---
 # <a name="bitlocker-administration-and-monitoring-website"></a>BitLocker yönetim ve izleme Web sitesi
 
@@ -53,7 +53,7 @@ TPM sahipliği hakkında daha fazla bilgi için bkz. [TPM 'yi emanetmek IÇIN MB
 > [!NOTE]
 > Windows 10, sürüm 1607 ' den itibaren, Windows TPM 'yi sağlarken TPM sahip parolasını tutmaz.
 
-1. Örneğin `https://webserver.contoso.com/HelpDesk`, Web tarayıcısında yönetim ve izleme Web sitesine gidin.
+1. Örneğin, Web tarayıcısında yönetim ve izleme Web sitesine gidin `https://webserver.contoso.com/HelpDesk` .
 
 1. Sol bölmede **TPM 'Yi Yönet** alanını seçin.
 
@@ -103,7 +103,7 @@ Kurtarma parolası almak için yönetim ve izleme Web sitesinin **sürücü kurt
 > [!IMPORTANT]
 > Kurtarma parolalarının kullanım süresini tek bir kullanım sonrasında dolacak. İşletim sistemi sürücülerinde ve sabit veri sürücülerinde, tek kullanım kuralı otomatik olarak uygulanır. Çıkarılabilir sürücülerde, sürücüyü kaldırıp yeniden eklediğinizde geçerli olur.
 
-1. Örneğin `https://webserver.contoso.com/HelpDesk`, Web tarayıcısında yönetim ve izleme Web sitesine gidin.
+1. Örneğin, Web tarayıcısında yönetim ve izleme Web sitesine gidin `https://webserver.contoso.com/HelpDesk` .
 
 1. Sol bölmede **sürücü kurtarma** alanını seçin.
 
@@ -159,7 +159,7 @@ Taşınan bir sürücüyü kurtarmak için yönetim ve izleme Web sitesinin **s�
 
 Taşınan sürücüyü özgün bilgisayarda bir TPM yongasını kullanacak şekilde yapılandırdıysanız, aşağıdaki adımları izleyin. Aksi takdirde, kurtarma işlemi tamamlanır.
 
-1. Sürücünün kilidini açtıktan sonra, bilgisayarı WinRE modunda başlatın. WinRE 'de bir komut istemi açın ve sürücünün şifresini çözmek `manage-bde` için komutunu kullanın. Bu araç, **TPM + PIN** koruyucuyu orijinal TPM yongası olmadan kaldırmanın tek yoludur. Bu komut hakkında daha fazla bilgi için bkz. [manage-bde](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-managebde).
+1. Sürücünün kilidini açtıktan sonra, bilgisayarı WinRE modunda başlatın. WinRE 'de bir komut istemi açın ve `manage-bde` sürücünün şifresini çözmek için komutunu kullanın. Bu araç, **TPM + PIN** koruyucuyu orijinal TPM yongası olmadan kaldırmanın tek yoludur. Bu komut hakkında daha fazla bilgi için bkz. [manage-bde](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-managebde).
 
 1. Bu tamamlandığında bilgisayarı normal şekilde başlatın. Configuration Manager BitLocker ilkesini, sürücüyü yeni bilgisayarın TPM Plus PIN 'ı ile şifrelemek üzere zorlayacaktır.
 
@@ -180,7 +180,7 @@ Yönetim ve izleme Web sitesinden bir kurtarma anahtarı paketi almak için kurt
     - `<key package>`: Kurtarma anahtarı paketinin konumu
     - `<recovery password>`: İlişkili kurtarma parolası
 
-    Örneğin:
+    Örnek:
 
     `repair-bde C: D: -kp F:\RecoveryKeyPackage -rp 111111-222222-333333-444444-555555-666666-777777-888888`
 
@@ -190,7 +190,7 @@ Bu komut hakkında daha fazla bilgi için bkz. [Repair-BDE](https://docs.microso
 
 Yönetim ve izleme Web sitesi, **Kurtarma denetim raporunu**içerir. Diğer raporlar Configuration Manager Raporlama Hizmetleri noktasından kullanılabilir. Daha fazla bilgi için bkz. [BitLocker raporlarını görüntüleme](view-reports.md).
 
-1. Örneğin `https://webserver.contoso.com/HelpDesk`, Web tarayıcısında yönetim ve izleme Web sitesine gidin.
+1. Örneğin, Web tarayıcısında yönetim ve izleme Web sitesine gidin `https://webserver.contoso.com/HelpDesk` .
 
 1. Sol bölmede **raporlar** alanını seçin.
 

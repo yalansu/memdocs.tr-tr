@@ -2,20 +2,20 @@
 title: BitLocker raporlarını görüntüleme
 titleSuffix: Configuration Manager
 description: Configuration Manager 'de BitLocker yönetim raporları hakkında bilgi edinin
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 0bae9477-0500-41cf-8aa3-5e6efadd0554
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d10717f980922e1f6d1fca9224e288b4df709da2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7c44ec9a9ed91d8543fedbdd5fba191b3989da19
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717359"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129230"
 ---
 # <a name="view-bitlocker-reports"></a>BitLocker raporlarını görüntüleme
 
@@ -49,7 +49,7 @@ Bu raporların tümüne doğrudan raporlama hizmetleri noktası Web sitesinden e
 
 Bir bilgisayara özgü bilgileri toplamak için bu raporu kullanın. İşletim sistemi sürücüsü ve tüm sabit veri sürücüleri hakkında ayrıntılı şifreleme bilgileri sağlar. Her sürücünün ayrıntılarını görüntülemek için bilgisayar adı girişini genişletin. Ayrıca, bilgisayardaki her sürücü türüne uygulanan ilkeyi belirtir.
 
-[![BitLocker bilgisayar uyumluluk raporunun örnek ekran görüntüsü](media/bitlocker-computer-compliance.png)](media/bitlocker-computer-compliance.png#lightbox)
+:::image type="content" source="media/bitlocker-computer-compliance.png" alt-text="BitLocker bilgisayar uyumluluk raporunun örnek ekran görüntüsü" lightbox="media/bitlocker-computer-compliance.png":::
 
 Bu raporu, kaybolan veya çalınan bilgisayarların bilinen son BitLocker şifreleme durumunu öğrenmek için de kullanabilirsiniz. Configuration Manager, dağıttığınız BitLocker ilkelerine bağlı olarak cihazın uyumluluğunu belirler. Bir cihazın BitLocker şifreleme durumunu belirlemeyi denemeden önce, kendisine dağıttığınız ilkeleri doğrulayın.
 
@@ -58,7 +58,7 @@ Bu raporu, kaybolan veya çalınan bilgisayarların bilinen son BitLocker şifre
 
 ### <a name="computer-details"></a>Bilgisayar Ayrıntıları
 
-|Sütun&nbsp;adı|Açıklama|
+|Sütun &nbsp; adı|Açıklama|
 |----------------|----|
 |Bilgisayar adı|Kullanıcı tarafından belirtilen DNS bilgisayar adı.|
 |Etki alanı adı|Bilgisayar için tam etki alanı adı.|
@@ -81,7 +81,7 @@ Bu raporu, kaybolan veya çalınan bilgisayarların bilinen son BitLocker şifre
 
 ### <a name="computer-volume"></a><a name="bkmk_volume"></a>Bilgisayar hacmi
 
-|Sütun&nbsp;adı|Açıklama|
+|Sütun &nbsp; adı|Açıklama|
 |----------------|----|
 |Sürücü harfi|Bilgisayardaki sürücü harfi.|
 |Sürücü türü|Sürücü türü. Geçerli değerler, **Işletim sistemi sürücüsü** ve **sabit veri sürücüsüdür**. Bu girişler mantıksal birimler yerine fiziksel sürücülerdir.|
@@ -100,7 +100,7 @@ Bu rapor, kuruluşunuzda BitLocker uyumluluk durumunu gösteren aşağıdaki gra
 
 - Sürücü türüne göre uyumluluk durumu dağılımı
 
-[![BitLocker kurumsal uyumluluk panosunun örnek ekran görüntüsü](media/bitlocker-enterprise-compliance-dashboard.png)](media/bitlocker-enterprise-compliance-dashboard.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-dashboard.png" alt-text="BitLocker kurumsal uyumluluk panosunun örnek ekran görüntüsü" lightbox="media/bitlocker-enterprise-compliance-dashboard.png":::
 
 ### <a name="compliance-status-distribution"></a>Uyumluluk durumu dağılımı
 
@@ -118,7 +118,7 @@ Pasta grafiğinde aşağıdaki uyumluluk durumları gösterilmektedir:
 
 - İlke zorlanmaz
 
-- Bilinmeyen. Bu bilgisayarlar bir durum hatası raporladı veya koleksiyonun bir parçasıdır ancak uyumluluk durumunu hiçbir şekilde bildirmemiştir. Bilgisayarın kuruluşa bağlantısı kesildiğinde uyumluluk durumunun olmaması meydana gelebilir.
+- Bilinmiyor. Bu bilgisayarlar bir durum hatası raporladı veya koleksiyonun bir parçasıdır ancak uyumluluk durumunu hiçbir şekilde bildirmemiştir. Bilgisayarın kuruluşa bağlantısı kesildiğinde uyumluluk durumunun olmaması meydana gelebilir.
 
 ### <a name="non-compliant---errors-distribution"></a>Uyumlu olmayan hatalar dağıtım
 
@@ -148,7 +148,7 @@ Bu çubuk grafik, geçerli BitLocker uyumluluk durumunu sürücü türüne göre
 
 Bu rapor, BitLocker yönetim ilkesini dağıttığınız bilgisayarların toplanması için kuruluşunuzdaki genel BitLocker uyumluluğu hakkındaki bilgileri gösterir.
 
-[![BitLocker kurumsal uyumluluk ayrıntılarının örnek ekran görüntüsü](media/bitlocker-enterprise-compliance-details.png)](media/bitlocker-enterprise-compliance-details.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-details.png" alt-text="BitLocker kurumsal uyumluluk ayrıntılarının örnek ekran görüntüsü" lightbox="media/bitlocker-enterprise-compliance-details.png":::
 
 |Sütun adı|Açıklama|
 |--- |--- |
@@ -180,7 +180,7 @@ Bu rapor, BitLocker yönetim ilkesini dağıttığınız bilgisayarların toplan
 
 Kuruluşunuz genelinde genel BitLocker uyumluluğunu göstermek için bu raporu kullanın. Ayrıca, BitLocker yönetim ilkesini dağıttığınız ayrı bilgisayarların uyumluluğunu gösterir.
 
-[![BitLocker kurumsal uyumluluk özetinin örnek ekran görüntüsü](media/bitlocker-enterprise-compliance-summary.png)](media/bitlocker-enterprise-compliance-summary.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-summary.png" alt-text="BitLocker kurumsal uyumluluk özetinin örnek ekran görüntüsü" lightbox="media/bitlocker-enterprise-compliance-summary.png":::
 
 |Sütun adı|Açıklama|
 |--- |--- |
@@ -199,9 +199,7 @@ Kuruluşunuz genelinde genel BitLocker uyumluluğunu göstermek için bu raporu 
 ## <a name="recovery-audit-report"></a><a name="bkmk-audit"></a>Kurtarma denetim raporu
 
 > [!NOTE]
-> Bu rapor, [BitLocker yönetim ve izleme Web sitesinden](helpdesk-portal.md#reports)de kullanılabilir.
->
-> Bu raporu Configuration Manager konsolunda görüntülemek için **izleme** çalışma alanına gidin. Gezinti bölmesinde, **Raporlama** düğümünü genişletin, **raporlar**' ı genişletin ve ardından **BitLocker yönetim** klasörünü genişletin. Raporun yerelleştirilmiş sürümü için alt klasörü seçin, örneğin, **en-US**.
+> Sürüm 2002 ' den başlayarak bu rapor yalnızca [BitLocker yönetim ve izleme Web sitesinden](helpdesk-portal.md#reports)kullanılabilir.<!-- 7629549 -->
 
 BitLocker Kurtarma anahtarlarına erişim isteğinde bulunan kullanıcıları denetlemek için bu raporu kullanın. Aşağıdaki ölçütlere göre filtre uygulayabilirsiniz:
 
@@ -210,9 +208,9 @@ BitLocker Kurtarma anahtarlarına erişim isteğinde bulunan kullanıcıları de
 - İstenen belirli anahtar türü: kurtarma anahtarı parolası, kurtarma anahtarı KIMLIĞI veya TPM Parola karması
 - Almanın gerçekleştiği bir tarih aralığı
 
-[![BitLocker kurtarma denetim raporunun örnek ekran görüntüsü](media/bitlocker-recovery-audit-report.png)](media/bitlocker-recovery-audit-report.png#lightbox)
+:::image type="content" source="media/bitlocker-recovery-audit-report.png" alt-text="BitLocker kurtarma denetim raporunun örnek ekran görüntüsü" lightbox="media/bitlocker-recovery-audit-report.png":::
 
-|Sütun&nbsp;adı|Açıklama|
+|Sütun &nbsp; adı|Açıklama|
 |----------------|----|
 |İstek tarihi ve saati|Son kullanıcının veya yardım masası kullanıcısının bir anahtarı istediği tarih ve saat.|
 |Denetim isteği kaynağı|İsteğin geldiği site. Geçerli değerler **Self-Service Portal** veya **Yardım Masası**.|

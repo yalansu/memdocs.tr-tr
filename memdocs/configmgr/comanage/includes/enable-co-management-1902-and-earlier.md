@@ -4,15 +4,17 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
-ms.date: 08/23/2019
-ms.openlocfilehash: d8eaaa403bd1dd97214b4eff82be79d5c2a6566e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.date: 08/11/2020
+ms.openlocfilehash: 4c669bbbd9f996ae820f695925ba63cd6a92da2a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710891"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127332"
 ---
 <!--Don't apply H2/H3 in this include file since they are context driven by article-->
+Configuration Manager sürüm 1902 ve önceki sürümleri için ortak yönetimi etkinleştirmek üzere aşağıdaki yönergeleri izleyin:
+
 1. Configuration Manager konsolunda, **Yönetim** çalışma alanına gidin, **Cloud Services**' i genişletin ve **ortak yönetim** düğümünü seçin. **Ortak yönetim Yapılandırma Sihirbazı**'nı açmak için şeritte **ortak yönetimi yapılandırma** ' ya tıklayın.
 
 2. Sihirbazın **abonelik** sayfasında **oturum aç**' ı seçin. Intune kiracınızda oturum açın ve ardından **İleri**' yi seçin.  
@@ -21,8 +23,7 @@ ms.locfileid: "81710891"
 
     Bu eylem, mevcut Configuration Manager istemcileri için Intune 'da otomatik istemci kaydına izin vermez. **Pilot**' ı seçtiğinizde yalnızca pilot koleksiyonun üyesi olan Configuration Manager istemciler otomatik olarak Intune 'a kaydedilir. Bu seçenek, başlangıçta ortak yönetimi test etmek ve aşamalı bir yaklaşım kullanarak ortak yönetimi sunmak için bir istemciler alt kümesinde ortak yönetimi etkinleştirmenizi sağlar. 
 
-    > [!Note]  
-    > Sürüm 1806 ' den başlayarak, otomatik kayıt tüm istemciler için hemen olmaz. Bu davranış, büyük ortamlar için kayıt ölçeklendirilmesine yardımcı olur. İstemci sayısına göre Configuration Manager rastgele kayıt. Örneğin, ortamınız 100.000 istemci içeriyorsa, bu ayarı etkinleştirdiğinizde, kayıt birkaç gün boyunca gerçekleşir.<!--1358003-->  
+    Otomatik kayıt tüm istemciler için anında değil. Bu davranış, büyük ortamlar için kayıt ölçeklendirilmesine yardımcı olur. İstemci sayısına göre Configuration Manager rastgele kayıt. Örneğin, ortamınız 100.000 istemci içeriyorsa, bu ayarı etkinleştirdiğinizde, kayıt birkaç gün boyunca gerçekleşir.<!--1358003-->  
 
 4. Intune 'a zaten kayıtlı olan internet tabanlı cihazlar için, **etkinleştirme** sayfasında komut satırını kopyalayın ve kaydedin. Configuration Manager istemcisini Intune 'da uygulama olarak yüklemek için bu komut satırını kullanabilirsiniz. Bu komut satırını şimdi kaydetmezseniz, bu komut satırını almak için istediğiniz zaman ortak yönetim yapılandırmasını gözden geçirebilirsiniz.
 

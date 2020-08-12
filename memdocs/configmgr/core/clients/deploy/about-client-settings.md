@@ -2,20 +2,20 @@
 title: İstemci ayarları
 titleSuffix: Configuration Manager
 description: İstemci davranışlarını denetlemek için varsayılan ve özel ayarlar hakkında bilgi edinin
-ms.date: 07/28/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f6bb29930a6e2d4faf4ffdd141d3c9cd1831305
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: e70a44fee7b4805884faeda0a5fb1eab72d3371e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365517"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127010"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Configuration Manager istemci ayarları hakkında
 
@@ -139,7 +139,7 @@ Kullanıcıların Internet tabanlı bilgisayarlarda kullanıcı ilkesini alabilm
 
 - Internet tabanlı yönetim noktası, Windows kimlik doğrulaması (Kerberos veya NTLM) kullanarak kullanıcının kimliğini başarılı bir şekilde doğrular. Daha fazla bilgi için bkz. [İnternet 'ten istemci iletişimleri Için değerlendirmeler](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
-- Bulut yönetimi ağ geçidi, Azure Active Directory kullanarak kullanıcının kimliğini başarılı bir şekilde doğrular. Daha fazla bilgi için bkz. [Azure AD 'ye katılmış cihazlarda Kullanıcı tarafından kullanılabilen uygulamaları dağıtma](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices).  
+- Bulut yönetimi ağ geçidi, Azure Active Directory kullanarak kullanıcının kimliğini başarılı bir şekilde doğrular. Daha fazla bilgi için bkz. [Kullanıcı tarafından kullanılabilen uygulamaları dağıtma](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
 
 Bu seçeneği **Hayır**olarak ayarlarsanız veya önceki gereksinimlerin hiçbiri karşılanmazsa, internet üzerindeki bir bilgisayar yalnızca bilgisayar ilkeleri alır. Bu senaryoda, kullanıcılar hala Internet tabanlı bir uygulama kataloğu 'ndan uygulamaları görebilir, isteyebilir ve yükleyebilir. Bu ayar **Hayır**ise, ancak **Istemcilerde kullanıcı ilkesini etkinleştir** **Evet**ise, kullanıcılar bilgisayar intranete bağlanana kadar kullanıcı ilkeleri almaz.  
 
@@ -244,7 +244,7 @@ Bu ayar hakkında daha fazla bilgi için bkz. [Microsoft Silverlight 5 sertifika
 
 ### <a name="organization-name-displayed-in-software-center"></a>Yazılım Merkezi'nde görünen organizasyon adı
 
-Kullanıcıların Yazılım Merkezi'nde gördüğü adı yazın. Bu markalama bilgileri, kullanıcıların bu uygulamayı güvenilir bir kaynak olarak belirlemesine yardımcı olur. Bu ayarın önceliği hakkında daha fazla bilgi için bkz. [marka yazılım merkezi](../../../apps/plan-design/plan-for-software-center.md#branding-software-center).  
+Kullanıcıların Yazılım Merkezi'nde gördüğü adı yazın. Bu markalama bilgileri, kullanıcıların bu uygulamayı güvenilir bir kaynak olarak belirlemesine yardımcı olur. Bu ayarın önceliği hakkında daha fazla bilgi için bkz. [marka yazılım merkezi](../../../apps/plan-design/plan-for-software-center.md#brand-software-center).  
 
 ### <a name="use-new-software-center"></a>Yeni Yazılım Merkezini kullanma
 
@@ -468,41 +468,40 @@ Bir MIF dosyasının donanım envanteri tarafından toplanması için istemci bi
 > [!NOTE]  
 > Bu ayar yalnızca varsayılan istemci ayarlarında kullanılabilir.
 
+## <a name="metered-internet-connections"></a>Tarifeli İnternet bağlantıları
 
+Windows 8 ve üzeri bilgisayarların Configuration Manager ile iletişim kurmak için Tarifeli İnternet bağlantıları kullanma biçimini yönetin. İnternet sağlayıcıları bazen tarifeli bir internet bağlantısından olduğunuzda, gönderilen ve aldığınız veri miktarına göre ücretlendirilir.
 
-## <a name="metered-internet-connections"></a>Tarifeli İnternet bağlantıları  
-
-Windows 8 ve üzeri bilgisayarların Configuration Manager ile iletişim kurmak için Tarifeli İnternet bağlantıları kullanma biçimini yönetin. İnternet sağlayıcıları bazen tarifeli bir İnternet bağlantısında olduğunuzda, gönderilen ve aldığınız veri miktarına göre ücretlendirilir.  
-
-> [!NOTE]  
-> Yapılandırılmış istemci ayarı aşağıdaki senaryolarda uygulanmaz:  
+> [!NOTE]
+> Yapılandırılmış istemci ayarı aşağıdaki senaryolarda uygulanmaz:
 >
 > - Bilgisayar bir gezici veri bağlantısı üzerinde ise Configuration Manager istemci, verilerin Configuration Manager sitelere aktarılmasını gerektiren herhangi bir görev gerçekleştirmez.  
 > - Windows ağ bağlantısı özellikleri tarifeli olmayan olarak yapılandırılırsa, Configuration Manager istemci bağlantı tarifeli olmayan şekilde davranır ve bu nedenle verileri siteye aktarır.  
 
 ### <a name="client-communication-on-metered-internet-connections"></a>Tarifeli İnternet bağlantılarında istemci iletişimi
 
-Bu ayar için aşağıdaki seçeneklerden birini belirleyin:  
+Bu ayar için aşağıdaki seçeneklerden birini belirleyin:
 
-- **Izin ver**: istemci cihazı gezici bir veri bağlantısı kullanmadığı takdirde Tarifeli İnternet bağlantısı üzerinden tüm istemci iletişimlerine izin verilir.  
+- **Izin ver**: istemci cihazı gezici bir veri bağlantısı kullanmadığı takdirde Tarifeli İnternet bağlantısı üzerinden tüm istemci iletişimlerine izin verilir.
 
-- **Limit**: Tarifeli İnternet bağlantısı üzerinden yalnızca aşağıdaki istemci iletişimlerine izin verilir:  
+- **Limit**: istemci, yalnızca aşağıdaki davranışlar için Tarifeli İnternet bağlantısı üzerinden iletişim kurar:
 
-    - İstemci ilkesi alma  
+  - İstemci ilkesini indir
 
-    - Siteye gönderilecek istemci durumu iletileri  
+  - İstemci durum iletilerini gönder
 
-    - Yazılım Merkezi 'nden yazılım yükleme istekleri  
+  - Yazılım merkezinden yazılım yükleme isteği
 
-    - Gerekli dağıtımlar (yükleme son tarihine ulaşıldığında)  
+  - Yükleme son tarihinde gerekli dağıtımlar için ek ilke ve içerik indirin
 
-    İstemci Tarifeli İnternet bağlantısı için veri aktarım sınırına ulaşırsa, istemci artık Configuration Manager sitelerle iletişim kurmayı dener.  
+  İstemci Tarifeli İnternet bağlantısı için veri aktarım sınırına ulaşırsa, istemci artık sitesiyle iletişim kurar.
 
-- **Engelle**: Configuration Manager istemci tarifeli bir internet bağlantısı olduğunda Configuration Manager sitelerle iletişim kurmayı denemez. Bu seçenek varsayılandır.  
+- **Engelle**: cihaz tarifeli bir internet bağlantısı olduğunda Configuration Manager istemcisi siteyle iletişim kurmayı denemez. Bu seçenek varsayılandır.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > İstemci, tarifeli internet bağlantısı ayarlarından bağımsız olarak yazılım merkezinden yazılım yüklemelerine her zaman izin verir. Cihaz tarifeli bir ağda olduğunda Kullanıcı yazılım yüklemesi isterse, yazılım merkezi kullanıcının amacını alır.<!-- MEMDocs#285 -->
 
+Sürüm 2006 ' den başlayarak, bu istemci ayarını **Izin ver** veya **sınırla**olarak yapılandırdığınızda, istemci her iki işi de yükler ve güncelleştirir. Bu davranış, istemcinin geçerli kalmasına izin verir, ancak yine de tarifeli bir ağda istemci iletişimini yönetir. Bu davranışı, CCMSetup parametresi **/Allowtarifeli**ile istemci yüklemesi sırasında denetleyebilirsiniz. Daha fazla bilgi için bkz. [istemci yükleme parametreleri ve özellikleri hakkında](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
 
 ## <a name="power-management"></a>Güç yönetimi  
 
@@ -894,7 +893,7 @@ Bu ayar, Delta içeriğini indirmek üzere HTTP dinleyicisi için yerel bağlant
 
 ### <a name="enable-management-of-the-office-365-client-agent"></a>Office 365 Istemci aracısının yönetimini etkinleştirme
 
-Bu seçeneği **Evet**olarak belirlediğinizde, Office 365 yükleme ayarlarının yapılandırılmasını sağlar. Ayrıca Office Içerik teslim ağlarından (CDNs) dosya indirmeyi ve dosyaları Configuration Manager bir uygulama olarak dağıtmanızı da mümkün kılar. Daha fazla bilgi için bkz. [Office 365 ProPlus 'ı yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Bu seçeneği **Evet**olarak belirlediğinizde, Microsoft 365 Apps yükleme ayarlarının yapılandırılmasını sağlar. Ayrıca Office Içerik teslim ağlarından (CDNs) dosya indirmeyi ve dosyaları Configuration Manager bir uygulama olarak dağıtmanızı da mümkün kılar. Daha fazla bilgi için bkz. [Uygulamaları yönetme Microsoft 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a>"Yazılım güncelleştirmesi" bakım penceresi kullanılabilir olduğunda "tüm dağıtımlar" bakım penceresinde yazılım güncelleştirmelerinin yüklenmesini etkinleştir
 
@@ -980,9 +979,9 @@ Configuration Manager topladığı kullanım bilgilerine göre otomatik Kullanı
 <!--3485366-->
 Bu ayar **Evet**olduğunda, kullanıcılar yazılım merkezi 'nde kendi birincil cihazlarını tanımlayabilir. Daha fazla bilgi için bkz. [Yazılım Merkezi Kullanıcı Kılavuzu](../../understand/software-center.md#work-information).
 
-## <a name="windows-analytics"></a>Windows Analizi
+## <a name="windows-diagnostic-data"></a>Windows Tanılama verileri
 
-> [!Important]  
-> Windows Analytics hizmeti 31 Ocak 2020 itibariyle kullanımdan kaldırıldı. Daha fazla bilgi için bkz. [KB 4521815: Windows Analytics emekli on 31 ocak 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
+> [!IMPORTANT]
+> Bu grup daha önce **Windows Analytics**olarak adlandırılmıştı. Microsoft, 31 Ocak 2020 tarihinde Windows Analytics hizmetini kullanımdan kaldırdı. Daha fazla bilgi için bkz. [KB 4521815: Windows Analytics emekli on 31 ocak 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 >
-> Masaüstü analizi, Windows Analytics 'in gelişmidir. Daha fazla bilgi için bkz. [Masaüstü analizi nedir?](../../../desktop-analytics/overview.md)
+> Masaüstü analizi, Windows Analytics 'in gelişmidir. Windows Tanılama verileri ayarlarını yönetmek için masaüstü Analizi 'ni kullanın. Daha fazla bilgi için bkz. [Masaüstü analizi nedir?](../../../desktop-analytics/overview.md)

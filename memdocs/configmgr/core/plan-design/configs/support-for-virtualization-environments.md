@@ -2,7 +2,7 @@
 title: Sanallaştırma desteği
 titleSuffix: Configuration Manager
 description: Sanallaştırma ortamında Configuration Manager istemci ve site sistemi rollerini yükleme gereksinimleri.
-ms.date: 02/19/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,20 +10,20 @@ ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2e266373667efebccdb84fe743f66beeaa5a0e88
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f7d774d620916f3d735a3545db5fe1e41988731d
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709596"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126690"
 ---
 # <a name="support-for-virtualization-environments-with-configuration-manager"></a>Configuration Manager ile sanallaştırma ortamları için destek
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
-Configuration Manager, bu makaledeki sanallaştırma ortamlarında sanal makine olarak çalışan desteklenen işletim sistemlerine istemci ve site sistem rollerinin yüklenmesini destekler. Bu destek, sanal makine Konağı (sanallaştırma ortamı) istemci veya site sunucusu olarak desteklenmediğinde bile vardır.  
+Configuration Manager, belirli sanallaştırma ortamlarında sanal makine (VM) olarak çalışan desteklenen işletim sistemlerine istemci ve site sistem rollerinin yüklenmesini destekler. Bu destek, sanal konak (sanallaştırma ortamı) istemci veya site sunucusu olarak desteklenmediğinde bile vardır.
 
-Örneğin, Windows Server 2012 çalıştıran bir sanal makineyi barındırmak için Microsoft Hyper-V Server 2012 ' i kullanırsınız. İstemci veya site sistem rollerini Windows Server 2012 çalıştıran sanal makineye yükleyebilirsiniz. İstemciyi Microsoft Hyper-V Server 2012 çalıştıran konağa yükleyemezsiniz.  
+Örneğin, Windows Server 2019 çalıştıran bir sanal makineyi barındırmak için Microsoft Hyper-V Server 2016 ' i kullanırsınız. İstemci veya site sistem rollerini Windows Server 2019 çalıştıran VM 'ye yükleyebilirsiniz. İstemciyi Microsoft Hyper-V Server 2016 çalıştıran konağa yükleyemezsiniz.
 
 ## <a name="virtualization-environments"></a>Sanallaştırma ortamları
 
@@ -34,40 +34,44 @@ Configuration Manager, bu makaledeki sanallaştırma ortamlarında sanal makine 
 - Microsoft Hyper-V Server 2012  
 - Windows Server 2012  
 
-### <a name="note-1-nested-virtualization"></a><a name="bkmk_note1"></a>Note 1: Iç Içe sanallaştırma
+<a name="bkmk_note1"></a>
 
-Configuration Manager, Windows Server 2016 ile yeni olan [iç içe sanallaştırmayı](https://docs.microsoft.com/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new)desteklemez.
+> [!NOTE]
+> Configuration Manager, Windows Server 2016 ile yeni olan [iç içe sanallaştırmayı](https://docs.microsoft.com/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new)desteklemez.
 
 ### <a name="virtualization-environment-support"></a>Sanallaştırma ortamı desteği
 
-Her bir sanal bilgisayar, fiziksel Configuration Manager bilgisayar için kullanacağınız donanım ve yazılım gereksinimlerine aynı veya daha fazla gereksinim duyuyor.  
+Her bir sanal bilgisayar, fiziksel Configuration Manager bilgisayar için kullanacağınız donanım ve yazılım gereksinimlerine aynı veya daha fazla gereksinim duyuyor.
 
-Sanallaştırma ortamınızın Configuration Manager için desteklendiğini doğrulamak için sunucu sanallaştırma doğrulama programını kullanın. Bir çevrimiçi sanallaştırma programı destek Ilkesi Sihirbazı 'Nı içerir. Daha fazla bilgi için bkz. [Windows Server sanallaştırma doğrulama programı](https://www.windowsservercatalog.com/svvp.aspx).  
+Configuration Manager sanallaştırma ortamınızı desteklediğini doğrulamak için, sunucu sanallaştırma doğrulama programını kullanın. Bir çevrimiçi sanallaştırma programı destek Ilkesi Sihirbazı 'Nı içerir. Daha fazla bilgi için bkz. [Windows Server sanallaştırma doğrulama programı](https://www.windowsservercatalog.com/svvp.aspx).
 
-> [!NOTE]  
-> Configuration Manager, Mac bilgisayarlarda çalışan sanal bılgısayar veya sanal sunucu konuk işletim sistemlerini desteklemez.  
+Configuration Manager, çevrimdışıyken VM 'Leri yönetemez. Ana bilgisayardaki Configuration Manager istemcisi çevrimdışı bir VM görüntüsünü yönetemez. Örneğin, yazılım güncelleştirmelerini yükleyemez veya donanım envanterini toplayamazlar.
 
-Configuration Manager, çevrimdışı olmaları durumunda sanal makineleri yönetemez. Ana bilgisayardaki Configuration Manager istemcisi kullanılarak çevrimdışı bir sanal makine görüntüsü güncelleştirilemez ve envanter tahsil edilebilir.  
+Genel olarak, Configuration Manager VM 'lere özel bir göz önüne alınmaz. Örneğin, bir VM 'yi durdurur ve durumunu kaydetmezseniz Configuration Manager, bir yazılım güncelleştirmesini yeniden yüklemem gerekip gerekmediğini belirleyemeyebilir.
 
-Sanal makineler için herhangi bir ayrıcalık yoktur. Örneğin Configuration Manager, sanal makine durdurulduysa ve güncelleştirmenin uygulandığı sanal makinenin durumu kaydedilmeden yeniden başlatılırsa, bir güncelleştirmenin bir sanal makine görüntüsüne yeniden uygulanması gerekip gerekmediğini belirleyemeyebilir.  
+Birden çok kullanıcı oturumunu destekleyen sanal ortamlarda istemci performansına Configuration Manager yardımcı olması için, varsayılan olarak kullanıcı ilkesini devre dışı bırakır. Sürüm 1910 ' den başlayarak, bu senaryoda kullanıcı ilkesini etkinleştirebilirsiniz. Daha fazla bilgi için bkz. [istemci ayarları hakkında-birden çok Kullanıcı oturumu için Kullanıcı Ilkesini etkinleştirme](../../clients/deploy/about-client-settings.md#enable-user-policy-for-multiple-user-sessions).
 
-##  <a name="microsoft-azure-virtual-machines"></a><a name="bkmk_Azure"></a> Microsoft Azure sanal makineleri  
+## <a name="microsoft-azure-vms"></a><a name="bkmk_Azure"></a>Microsoft Azure VM 'Ler
 
-Configuration Manager, veri merkezinizdeki şirket içinde çalıştığı gibi Azure 'daki sanal makinelerde çalıştırılabilir. Aşağıdaki senaryolarda Azure sanal makinelerle Configuration Manager kullanın:  
+Configuration Manager, veri merkezinizdeki şirket içinde çalıştığı gibi Azure 'daki sanal makinelerde çalıştırılabilir. Aşağıdaki senaryolarda Azure sanal makinelerinden Configuration Manager kullanın:
 
-- **Senaryo 1**: Azure sanal makinesinde Configuration Manager çalıştırın. Diğer Azure sanal makinelerinde istemcileri yönetmek için bunu kullanın.  
+- **Senaryo 1**: Azure VM üzerinde Configuration Manager çalıştırın. Diğer Azure VM 'lerinde istemcileri yönetmek için kullanın.
 
-- **Senaryo 2**: Azure sanal makinesinde Configuration Manager çalıştırın. Azure 'da çalıştırmayan istemcileri yönetmek için bunu kullanın.  
+- **Senaryo 2**: Azure VM üzerinde Configuration Manager çalıştırın. Azure 'da çalıştırmayan istemcileri yönetmek için bunu kullanın.
 
-- **Senaryo 3**: Azure sanal makinelerinde farklı Configuration Manager site sistem rolleri çalıştırın. Azure 'a doğru şekilde bağlı olan şirket içi veri merkezinizde diğer rolleri çalıştırın.  
+- **Senaryo 3**: Azure VM 'lerinde farklı Configuration Manager site sistem rolleri çalıştırın. Azure 'a doğru şekilde bağlı olan şirket içi veri merkezinizde diğer rolleri çalıştırın.
 
-Ağlar, desteklenen konfigürasyonlar ve şirket içi yüklemek için uygulanan donanım gereksinimleri için aynı Configuration Manager gereksinimleri, Azure sanal makinelerinde yükleme için de geçerlidir.  
+Ağlar, desteklenen konfigürasyonlar ve donanım gereksinimleri için aynı Configuration Manager gereksinimleri, Azure VM 'Leri için de geçerlidir.
 
 Daha fazla bilgi için bkz. [Azure 'da Configuration Manager](../../understand/configuration-manager-on-azure.md).
 
-> [!IMPORTANT]  
-> Azure sanal makinelerinde çalışan Configuration Manager siteleri ve istemcileri, şirket içi yüklemelerle aynı lisans gereksinimlerine tabidir.  
+> [!IMPORTANT]
+> Azure VM 'lerinde çalışan Configuration Manager siteleri ve istemcileri, şirket içi yüklemelerle aynı lisans gereksinimlerine tabidir.
 
 ## <a name="windows-virtual-desktop"></a>Windows Sanal Masaüstü
 
-[Windows sanal masaüstü](https://docs.microsoft.com/azure/virtual-desktop/) Microsoft Azure ve Microsoft 365 bir önizleme özelliğidir. Sürüm 1906 ' den başlayarak, Azure 'da Windows çalıştıran bu sanal cihazları yönetmek için Configuration Manager kullanın. Daha fazla bilgi için bkz. [istemciler ve cihazlar Için desteklenen işletim sistemleri](supported-operating-systems-for-clients-and-devices.md).
+[Windows sanal masaüstü](https://docs.microsoft.com/azure/virtual-desktop/) , Microsoft Azure üzerinde çalışan bir masaüstü ve uygulama sanallaştırma hizmetidir. Sürüm 1906 ' den başlayarak, Azure 'da Windows çalıştıran bu sanal cihazları yönetmek için Configuration Manager kullanın. Daha fazla bilgi için bkz. [istemciler ve cihazlar Için desteklenen işletim sistemleri](supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+[Bir sanal masaüstü altyapısında (VDı) Configuration Manager istemcilerini yönetme](../../clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)

@@ -5,17 +5,17 @@ description: BitLocker ilkesiyle uyumlu olmayan bir Configuration Manager istemc
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 6c28fa29-fc97-49ef-9fc3-cb062bdba908
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e8ee130929605f8087eb7fbef55e8a27618c3aed
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2cb6c17802319b0d559474fa8ff208346c2811e0
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722056"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127942"
 ---
 # <a name="non-compliance-codes"></a>Uyumsuzluk kodları
 
@@ -34,7 +34,7 @@ WMI 'yi görüntülemek için çeşitli yöntemler vardır. Örneğin, aşağıd
 > [!TIP]
 > Cihaz uyumluysa, bu komut hiçbir şey döndürmez.
 >
-> Ayrıca, bu sınıfın, `Compliant` cihaz uyumluysa olan `1` özniteliğini de denetleyebilirsiniz.
+> Ayrıca, `Compliant` Bu sınıfın, cihaz uyumluysa olan özniteliğini de denetleyebilirsiniz `1` .
 
 |Uyumsuzluk kodu|Uyumsuzluğun nedeni|
 |--- |--- |

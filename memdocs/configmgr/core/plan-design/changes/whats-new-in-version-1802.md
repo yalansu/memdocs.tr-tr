@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7bc30c4350d96654a0f6a6ae548d63c2928e791
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 87056482f098a440e5950b76520ab410844a1888
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904649"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129010"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Configuration Manager sürüm 1802 ' deki yenilikler
 
@@ -125,7 +125,7 @@ Configuration Manager 1802 ' de aşağıdaki Öngörüler mevcuttur:
 - Bu sürümden itibaren, **bulut yönetimi ağ geçidi** artık yayın öncesi bir özellik değildir.  
 
 - Özellik belgeleri düzeltilir ve geliştirilmiştir. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
-    - [Bulut yönetimi ağ geçidini planlayın](../../clients/manage/cmg/plan-cloud-management-gateway.md)
+    - [Bulut yönetimi ağ geçidi için planlama](../../clients/manage/cmg/plan-cloud-management-gateway.md)
     - [Bulut yönetimi ağ geçidi boyutu ve ölçek numaraları](../configs/size-and-scale-numbers.md#bkmk_cmg)
     - [Bulut yönetimi ağ geçidi için güvenlik ve gizlilik](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md)
     - [Bulut yönetimi ağ geçidi hakkında sık sorulan sorular](../../clients/manage/cmg/cloud-management-gateway-faq.md)
@@ -208,7 +208,7 @@ Windows 10 yerinde yükseltme için varsayılan görev sırası şablonu, yükse
 
 ### <a name="improvements-to-operating-system-deployment"></a>İşletim sistemi dağıtımı geliştirmeleri
 Bu sürüm, işletim sistemi dağıtımına yönelik aşağıdaki geliştirmeleri içerir:
-- Windows PE 'de CMTrace. exe ' yi başlatırken, bu programın günlük dosyaları için varsayılan görüntüleyici yapıp yapmayacağını seçmeniz istenmez. <!-- SMS 500897 -->
+- Windows PE 'de cmtrace.exe başlatırken, artık bu programı günlük dosyaları için varsayılan görüntüleyici yapmak isteyip istemediğinizi seçmeniz istenmez. <!-- SMS 500897 -->
 - [Paket Içeriğini indirme](../../../osd/understand/task-sequence-steps.md#BKMK_DownloadPackageContent) görev dizisi adımına önyükleme görüntüleri ekleyin.
 - [Görev sırasını Çalıştır](../../../osd/understand/task-sequence-steps.md#child-task-sequence) adımındaki geliştirmeler: <!-- 1261338 -->   
   - Yazılım Merkezi, PXE ve medyadan tüm işletim sistemi dağıtım senaryoları için destek.
@@ -236,7 +236,7 @@ Bir son kullanıcının veya masaüstü teknisyenin bir cihaza birden çok uygul
 
 ### <a name="use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices"></a>Azure AD 'ye katılmış cihazlarda Kullanıcı tarafından kullanılabilen uygulamalara gözatıp yüklemek için yazılım merkezi 'ni kullanma
 <!-- 1322613 -->
-Uygulamaları kullanıcılara kullanılabilir olarak dağıtırsanız, artık Azure Active Directory (Azure AD) cihazlarındaki Yazılım Merkezi aracılığıyla bunlara göz atabilir ve bunları yükleyebilirler. Daha fazla bilgi için bkz. [Azure AD 'ye katılmış cihazlarda Kullanıcı tarafından kullanılabilen uygulamaları dağıtma](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices).
+Uygulamaları kullanıcılara kullanılabilir olarak dağıtırsanız, artık Azure Active Directory (Azure AD) cihazlarındaki Yazılım Merkezi aracılığıyla bunlara göz atabilir ve bunları yükleyebilirler. Daha fazla bilgi için bkz. [Kullanıcı tarafından kullanılabilen uygulamaları dağıtma](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
 
 ### <a name="hide-installed-applications-in-software-center"></a>Yüklü uygulamaları yazılım merkezi 'nde gizle
 <!--1357592-->

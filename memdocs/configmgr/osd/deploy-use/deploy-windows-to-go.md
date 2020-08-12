@@ -5,17 +5,17 @@ description: Windows to go 'nun bir dış sürücüden önyüklenen bir Windows 
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: add0d17205cc82b30f3a88558c690a813239b92a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: a3cf735dfa2dd73ed39a24c2d674a966acddf05a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906925"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125126"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Windows to go 'Yu Configuration Manager ile dağıtma
 
@@ -311,7 +311,7 @@ Bu konuda, Configuration Manager Windows to go sağlama adımları sağlanmaktad
 
     1.  **Ad**: Komut satırı için **Enable BitLocker for Windows To Go**gibi bir ad belirtin.  
 
-    2.  **Komut satırı**: i386 \ osdbitlocker_wtg. exe/Enable/pwd: < *none & #124; AD*>  
+    2.  **Komut satırı**: i386\osdbitlocker_wtg.exe/Enable/pwd: < *none&#124;ad*>  
 
          Parametreler:  
 

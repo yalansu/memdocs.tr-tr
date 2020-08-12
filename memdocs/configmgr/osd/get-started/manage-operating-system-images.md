@@ -5,17 +5,17 @@ description: Windows resim (WıM) dosyalarında depolanan işletim sistemi gör�
 ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 190a203494cecfd28c198197f3a582adff745265
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: aa574cd3db2e7a3d3277912ed4a383f71d33e59c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724121"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124296"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>Configuration Manager ile işletim sistemi görüntülerini yönetme
 
@@ -30,7 +30,7 @@ Configuration Manager işletim sistemi görüntüleri Windows görüntü (WıM) 
 
 ### <a name="default-image"></a>Varsayılan görüntü
 
-Windows yükleme dosyaları varsayılan işletim sistemi görüntüsünü içerir. Bu görüntü, standart bir sürücü kümesi içeren temel bir işletim sistemi görüntüsüdür. Varsayılan işletim sistemi görüntüsünü kullandığınızda, görev dizisi adımlarını kullanarak uygulamaları yükler ve işletim sistemi bir cihaza yükledikten sonra diğer yapılandırma işlemleri yapın. Windows kaynak dosyalarında varsayılan işletim sistemi görüntüsünü bulun: `\Sources\install.wim`.  
+Windows yükleme dosyaları varsayılan işletim sistemi görüntüsünü içerir. Bu görüntü, standart bir sürücü kümesi içeren temel bir işletim sistemi görüntüsüdür. Varsayılan işletim sistemi görüntüsünü kullandığınızda, görev dizisi adımlarını kullanarak uygulamaları yükler ve işletim sistemi bir cihaza yükledikten sonra diğer yapılandırma işlemleri yapın. Windows kaynak dosyalarında varsayılan işletim sistemi görüntüsünü bulun: `\Sources\install.wim` .  
 
 #### <a name="default-image-advantages"></a>Varsayılan görüntü avantajları
 
@@ -75,7 +75,7 @@ Bir işletim sistemi görüntüsü kullanabilmeniz için, Configuration Manager 
         > [!Note]  
         > Configuration Manager kaynak görüntü dosyasını değiştirmez. Aynı kaynak dizinde yeni bir görüntü dosyası oluşturur.
         >
-        > Bu ayıklama işlemi, örneğin 60 GB üzerinde çok büyük görüntü dosyaları için başarısız olabilir. DıSM hatası, Configuration Manager `Not enough storage is available to process this command.` kullanımı, Smsprov. log ve DISM. log dosyasında yer alan komut satırdır. Aynı komutu el ile çalıştırın ve ardından görüntüyü içeri aktarın.<!-- SCCMDocs-pr issue 3502 -->  
+        > Bu ayıklama işlemi, örneğin 60 GB üzerinde çok büyük görüntü dosyaları için başarısız olabilir. DıSM hatası, `Not enough storage is available to process this command.` Configuration Manager kullanımı, Smsprov. log ve DISM. log dosyasında yer alan komut satırdır. Aynı komutu el ile çalıştırın ve ardından görüntüyü içeri aktarın.<!-- SCCMDocs-pr issue 3502 -->  
 
     - Sürüm 1906 ' den başlayarak, bir istemcideki içeriği önceden önbelleğe almak istiyorsanız görüntünün **mimarisini** ve **dilini** belirtin. Daha fazla bilgi için bkz. [ön önbellek Içeriğini yapılandırma](../deploy-use/configure-precache-content.md).<!--4224642-->  
 

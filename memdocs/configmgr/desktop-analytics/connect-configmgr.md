@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c7bb6d01a35ce42002207d57d27fc41c37646d15
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 7015ab4c180ed56b00149ffbff99c9e5a8112e95
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268870"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126010"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Masaüstü analiziyle Configuration Manager bağlama
 
@@ -84,8 +84,11 @@ Configuration Manager masaüstü analizine bağlamak ve cihaz ayarlarını yapı
 
     - **TICARI kimlik**: Bu değer, kuruluşunuzun kimliğiyle otomatik olarak doldurulur. Aksi takdirde, proxy sunucunuzun devam etmeden önce tüm gerekli [uç noktalara](enable-data-sharing.md#endpoints) izin verecek şekilde yapılandırıldığından emin olun. Alternatif olarak, [Masaüstü Analizi portalından](monitor-connection-health.md#bkmk_ViewCommercialID)ticari kimliğinizi el ile alın.
 
-    - **Windows 10 tanılama veri düzeyi**: en az **temel**seçin. [Tanılama veri düzeylerine](enable-data-sharing.md#diagnostic-data-levels) bakın
-  
+    - **Windows 10 tanılama veri düzeyi**: en az **gerekli**' ı seçin. Daha fazla bilgi için bkz. [Tanılama veri düzeyleri](enable-data-sharing.md#diagnostic-data-levels).
+
+        > [!TIP]
+        > Configuration Manager sürüm 2002 ve önceki sürümlerde bu değer **temel**olarak adlandırılmıştı.<!-- 7363467 -->
+
     - **Tanılama verilerinde cihaz adına Izin ver**: **Etkinleştir** ' i seçin
 
         > [!NOTE]

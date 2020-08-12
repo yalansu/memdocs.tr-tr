@@ -2,7 +2,7 @@
 title: Tanılama kullanım verileri düzeyleri
 titleSuffix: Configuration Manager
 description: Configuration Manager topladığı tanılama ve kullanım verilerinin düzeyleri hakkında bilgi edinin
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: 3c46bdb2-5bda-47c8-b5f4-9365a4b3521c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9de63280786d620229c7d408f09ef2fe583e231d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0d27e4a2f82de75cde853f3ce95c98ea8a12c465
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720341"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126519"
 ---
 # <a name="levels-of-diagnostic-usage-data"></a>Tanılama kullanım verileri düzeyleri
 
@@ -63,11 +63,11 @@ Veri toplama düzeyini değiştirmek için, **site** nesnesi sınıfında **değ
 
 Aşağıdaki makalelerde, desteklenen her sürümle Configuration Manager her düzeyde toplanan belirli veriler ayrıntılı olarak verilmiştir:
 
+- [2006 için tanılama ve kullanım verileri](levels-of-diagnostic-usage-data-collection-2006.md)
 - [2002 için tanılama ve kullanım verileri](levels-of-diagnostic-usage-data-collection-2002.md)
 - [1910 için tanılama ve kullanım verileri](levels-of-diagnostic-usage-data-collection-1910.md)
 - [1906 için tanılama ve kullanım verileri](levels-of-diagnostic-usage-data-collection-1906.md)
 - [1902 için tanılama ve kullanım verileri](levels-of-diagnostic-usage-data-collection-1902.md)
-- [1810 için tanılama ve kullanım verileri](levels-of-diagnostic-usage-data-collection-1810.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -2,20 +2,20 @@
 title: İnternet erişimi gereksinimleri
 titleSuffix: Configuration Manager
 description: Configuration Manager özelliklerinin tam işlevselliğine izin vermek için İnternet uç noktaları hakkında bilgi edinin.
-ms.date: 07/07/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 71f2a75d59af6f8d5c77e96d780e6d02352e5045
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: bc3e1312c214f871635a65d8d0031e06ea4ad8d9
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137358"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126484"
 ---
 # <a name="internet-access-requirements"></a>İnternet erişimi gereksinimleri
 
@@ -201,8 +201,6 @@ WSUS ve otomatik güncelleştirmelerin Microsoft Update bulut hizmetiyle iletiş
 
 - `http://*.download.windowsupdate.com`  
 
-- `http://test.stats.update.microsoft.com`  
-
 - `http://ntservicepack.microsoft.com`  
 
 Yazılım güncelleştirmeleri hakkında daha fazla bilgi için bkz. [plan for Software Updates](../../../sum/plan-design/plan-for-software-updates.md).
@@ -224,7 +222,7 @@ Aşağıdaki durumlarda iki site sistemi arasındaki bir güvenlik duvarına uç
 
 - `https://<FQDN for software update point on parent site>`  
 
-## <a name="manage-office-365"></a>Office 365’i yönetme
+## <a name="manage-microsoft-365-apps"></a>Microsoft 365 uygulamalarını yönetme
 
 > [!NOTE]
 > 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
@@ -275,15 +273,21 @@ Bu özellik hakkında daha fazla bilgi için bkz. [Community hub](../../servers/
 
 ## <a name="desktop-analytics"></a>Desktop Analytics
 
-Masaüstü Analizi bulut hizmeti için gerekli uç noktalar hakkında daha fazla bilgi için bkz. [veri paylaşımını etkinleştirme](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+Daha fazla bilgi için bkz. [veri paylaşımını etkinleştirme](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+
+[!INCLUDE [Internet endpoints for Desktop Analytics](includes/internet-endpoints-desktop-analytics.md)]
 
 ## <a name="tenant-attach"></a>Kiracı ekleme
 
-Kiracı iliştirme özellikleri için gerekli uç noktalar hakkında daha fazla bilgi için bkz. [kiracı eklemeyi etkinleştirme](../../../tenant-attach/device-sync-actions.md#internet-endpoints).
+Daha fazla bilgi için bkz. [kiracı eklemeyi etkinleştirme](../../../tenant-attach/device-sync-actions.md).
+
+[!INCLUDE [Internet endpoints for tenant attach](includes/internet-endpoints-tenant-attach.md)]
 
 ## <a name="endpoint-analytics"></a>Uç nokta analizi
 
-Endpoint Analytics için gerekli uç noktalar hakkında daha fazla bilgi için bkz. [Endpoint Analytics proxy yapılandırması](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+Daha fazla bilgi için bkz. [Endpoint Analytics proxy yapılandırması](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+
+[!INCLUDE [Internet endpoints for Endpoint analytics](includes/internet-endpoints-endpoint-analytics.md)]
 
 ## <a name="asset-intelligence"></a>Varlık yönetim bilgileri
 

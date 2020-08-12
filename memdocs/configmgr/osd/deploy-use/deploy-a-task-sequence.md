@@ -2,20 +2,20 @@
 title: Görev dizisini dağıtma
 titleSuffix: Configuration Manager
 description: Bir koleksiyondaki bilgisayarlara bir görev dizisi dağıtmak için bu bilgileri kullanın.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13c16e89cc75bff1ccecd03a98cd12782c419a40
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: fea9088a11310aedc95d2fdbeacdb98650eef361
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455214"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125211"
 ---
 # <a name="deploy-a-task-sequence"></a>Görev dizisini dağıtma
 
@@ -26,7 +26,7 @@ Bir görev dizisi oluşturup, başvurulan içeriği dağıttıktan sonra bir cih
 > [!WARNING]  
 > Yüksek riskli görev dizisi dağıtımlarının davranışını yönetebilirsiniz. Yüksek riskli dağıtım otomatik olarak yüklenen ve istenmeyen sonuçlara neden olabilecek bir dağıtımıdır. Örneğin, bir işletim sistemini dağıtan bir görev dizisi, yüksek **Required** riskli dağıtım olarak kabul edilir. Daha fazla bilgi için bkz. [yüksek riskli dağıtımları yönetme ayarları](../../core/servers/manage/settings-to-manage-high-risk-deployments.md).  
 
-## <a name="process"></a>İşleme
+## <a name="process"></a>İşlem
 
 Görev sırasını koleksiyondaki bilgisayarlara dağıtmak için aşağıdaki prosedürü kullanın.  
 
@@ -146,9 +146,21 @@ Görev sırasını koleksiyondaki bilgisayarlara dağıtmak için aşağıdaki p
 
     - **Windows Embedded cihazlar için filtre Işleme yaz**: Bu ayar, yazma filtresiyle etkinleştirilen Windows Embedded cihazlarındaki yükleme davranışını denetler. Yükleme son tarihinde veya bakım penceresi sırasında değişiklikleri Yürüt seçeneğini belirleyin. Bu seçeneği belirlediğinizde, yeniden başlatma gerekir ve değişiklikler cihazda kalır. Aksi takdirde, uygulama geçici bir katmana yüklenir ve daha sonra kaydedilir. Windows Embedded cihazına bir görev sırası dağıttığınızda, cihazın yapılandırılmış bakım penceresine sahip bir koleksiyonun üyesi olduğundan emin olun.  
 
-    - **Görev dizisinin Internet 'te istemci için çalışmasına Izin ver**: görev dizisinin İnternet tabanlı bir istemcide çalışmasına izin verilip verilmeyeceğini belirtin. Bir işletim sistemi yüklemesi gibi Önyükleme medyası gerektiren işlemler bu ayarla desteklenmez. Bu seçeneği yalnızca standart IŞLETIM sisteminde işlemleri çalıştıran genel yazılım yüklemeleri veya komut dosyası tabanlı görev sıraları için kullanın.  
+    - **Görev dizisinin Internet 'te istemci için çalışmasına Izin ver**: görev dizisinin İnternet tabanlı bir istemcide çalışmasına izin verilip verilmeyeceğini belirtin.
 
-        - Bu ayar, bulut yönetimi ağ geçidi aracılığıyla Internet tabanlı istemcilere Windows 10 yerinde yükseltme görev dizisinin dağıtımları için desteklenir. Daha fazla bilgi için bkz. [CMG aracılığıyla Windows 10 yerinde yükseltme dağıtımı](#deploy-windows-10-in-place-upgrade-via-cmg).  
+        Bu ayar, bulut yönetimi ağ geçidi (CMG) aracılığıyla Internet tabanlı istemcilere Windows 10 yerinde yükseltme görev dizisinin dağıtımları için desteklenir. Daha fazla bilgi için bkz. [CMG aracılığıyla Windows 10 yerinde yükseltme dağıtımı](#deploy-windows-10-in-place-upgrade-via-cmg).
+
+        Sürüm 2006 ' den başlayarak, CMG aracılığıyla iletişim kuran bir cihaza Önyükleme görüntüsüyle bir görev dizisi dağıtabilirsiniz. Kullanıcının görev dizisini yazılım merkezinden başlatması gerekir.<!--6997525-->
+
+        > [!NOTE]
+        > Bir Azure Active Directory (Azure AD) ile Birleşik istemci bir işletim sistemi dağıtımı görev dizisi çalıştırdığında, yeni işletim sistemindeki istemci Azure AD 'ye otomatik olarak katılmayacaktır. Azure AD 'ye katılmış olmasa bile, istemci hala yönetilecektir.
+        >
+        > Azure AD 'ye katılmış olan veya belirteç tabanlı kimlik doğrulaması kullanan bir internet tabanlı istemcide bir işletim sistemi dağıtımı görev dizisi çalıştırdığınızda, [Windows 'u ve ConfigMgr 'Yi Kur](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) adımında **CCMHOSTNAME** özelliğini belirtmeniz gerekir.
+
+        Sürüm 2002 ve önceki sürümlerde, Önyükleme medyası gerektiren işlemler bu ayarla desteklenmez. Bu seçeneği yalnızca standart IŞLETIM sisteminde işlemleri çalıştıran genel yazılım yüklemeleri veya komut dosyası tabanlı görev sıraları için kullanın.
+
+        > [!NOTE]
+        > İnternet tabanlı tüm görev sırası senaryolarında, görev dizisini yazılım merkezi 'nden başlatın. Windows PE, PXE veya görev sırası medyasını desteklemezler.
 
 8. **Uyarılar** sayfasında, bu görev sırası dağıtımı için istediğiniz uyarı ayarlarını belirtin.  
 

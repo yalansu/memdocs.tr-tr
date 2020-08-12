@@ -2,7 +2,7 @@
 title: Desteklenen istemciler ve cihazlar
 titleSuffix: Configuration Manager
 description: Hangi işletim sistemi sürümlerinin istemciler ve cihazlar için Configuration Manager destekleyeceğinizi öğrenin.
-ms.date: 02/19/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9e0ec6df5f80b318cb78ed8cddc986b613230e1
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 497a43fe6647f1dc2787f16a76f45ddd26d24796
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904543"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128857"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager için istemciler ve cihazlar için desteklenen işletim sistemi sürümleri
 
@@ -58,6 +58,16 @@ Bu senaryoda Kullanıcı ilkesine ihtiyacınız varsa ve olası performans etkis
 
 > [!Note]  
 > Windows 10 Enterprise çoklu oturum çalıştıran bir istemciyle birlikte ortak yönetimi kullanamazsınız. <!-- SCCMDocs-pr#3950 -->
+
+Sürüm 2006 ' den başlayarak, **Windows 10 Enterprise çoklu oturum** platformu, gereksinim kuralları veya uygulanabilirlik listeleri olan nesnelerde desteklenen işletim sistemi sürümleri listesinde bulunur.<!--6527576-->
+
+> [!NOTE]
+> En üst düzey **Windows 10** platformunu daha önce seçtiyseniz, bu eylem tüm alt platformları otomatik olarak seçti. Bu yeni platform otomatik olarak seçilmedi. **Windows 10 Enterprise çoklu oturum**eklemek istiyorsanız, listeden el ile seçin.
+
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
+
+- [Sanallaştırma ortamları desteği](support-for-virtualization-environments.md)
+- [Bir sanal masaüstü altyapısında (VDı) Configuration Manager istemcilerini yönetme](../../clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)
 
 ### <a name="supported-server-os-versions"></a>Desteklenen sunucu işletim sistemi sürümleri
 
@@ -151,8 +161,8 @@ Configuration Manager bulunan Configuration Manager mobil cihaz eski istemcisiyl
 
 - Windows CE 7,0 (ARM ve x86 işlemciler)  
 
-    > [!Note]
-    > Configuration Manager Windows CE 7,0 için destek kullanım dışıdır. Daha fazla bilgi için bkz. [Configuration Manager istemcileri Için kaldırılan ve kullanım dışı öğeler](../changes/deprecated/removed-and-deprecated-client.md).
+    > [!IMPORTANT]
+    > Configuration Manager sürüm 2006, istemci olarak Windows CE 7,0 desteğini bırakır. [Sürüm 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated)ile kullanımdan kaldırma duyurulmuştur.
 
 #### <a name="supported-languages-include"></a>Desteklenen diller şunlardır
 
@@ -335,9 +345,8 @@ Configuration Manager, şirket içi mobil cihazları istemci yazılımı yüklem
 
 - **Windows 10 Mobile Enterprise**  
 
-    > [!Note]
-    > Windows 10 Mobile ve Windows 10 Mobile Enterprise for Configuration Manager için destek kullanım dışıdır. Daha fazla bilgi için bkz. [Configuration Manager istemcileri Için kaldırılan ve kullanım dışı öğeler](../changes/deprecated/removed-and-deprecated-client.md).
-
+    > [!IMPORTANT]
+    > Configuration Manager sürüm 2006, Windows 10 Mobile ve Windows 10 Mobile Enterprise 'ın istemci olarak desteğini bırakır. [Sürüm 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated)ile kullanımdan kaldırma duyurulmuştur.
 
 ## <a name="exchange-server-connector"></a><a name="bkmk_ExSrvConOS"></a>Exchange Server Bağlayıcısı  
 

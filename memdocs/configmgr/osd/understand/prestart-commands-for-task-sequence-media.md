@@ -5,17 +5,17 @@ description: Başlatma öncesi komutu için kullanmak üzere bir betik oluşturu
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ccc9f652-2953-4c38-8a90-c799484105ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9dd921d58e6ef777017af3e2eb24dbf4bd611fab
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 06c96d668d3c37b107ae8e290ebcd124e8a2b773
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717464"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124389"
 ---
 # <a name="prestart-commands-for-task-sequence-media-in-configuration-manager"></a>Configuration Manager 'de görev sırası medyası için başlatma öncesi komutları
 
@@ -64,7 +64,7 @@ env("MyCustomVariable") = "varname"
     -   **Komut satırı** metin kutusuna, başlatma öncesi komutu için oluşturduğunuz betiği veya yürütülebilir dosyayı girin.  
 
         > [!IMPORTANT]  
-        >  Başlatma öncesi komutunu belirtmek için **cmd\> /c <başlatma öncesi komutunu** kullanın. Örneğin, başlatma öncesi komutunuzun betiği için TSScript.vbs adını kullandıysanız, komut satırı için **cmd /C TSScript.vbs** girersiniz. Buradaki **cmd /C** yeni bir Windows komut yorumlayıcı penceresi açar ve başlatma öncesi komut betiğini veya yürütülebilir dosyasını bulmak üzere Path ortam değişkenini kullanır. Ayrıca başlatma öncesi komutunun tam yolunu da belirtebilirsiniz, ancak sürücü harfi farklı sürücü yapılandırmalarına sahip bilgisayarlarda farklı olabilir.  
+        >  Başlatma öncesi komutunu belirtmek için **cmd \> /c <başlatma öncesi komutunu** kullanın. Örneğin, başlatma öncesi komutunuzun betiği için TSScript.vbs adını kullandıysanız, komut satırı için **cmd /C TSScript.vbs** girersiniz. Buradaki **cmd /C** yeni bir Windows komut yorumlayıcı penceresi açar ve başlatma öncesi komut betiğini veya yürütülebilir dosyasını bulmak üzere Path ortam değişkenini kullanır. Ayrıca başlatma öncesi komutunun tam yolunu da belirtebilirsiniz, ancak sürücü harfi farklı sürücü yapılandırmalarına sahip bilgisayarlarda farklı olabilir.  
 
     -   **Başlatma öncesi komut için dosyaları ekle**'yi seçin.  
 

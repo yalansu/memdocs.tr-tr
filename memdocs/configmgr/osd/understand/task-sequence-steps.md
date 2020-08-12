@@ -2,20 +2,20 @@
 title: Görev dizisi adımları
 titleSuffix: Configuration Manager
 description: Configuration Manager görev dizisine ekleyebileceğiniz adımlar hakkında bilgi edinin.
-ms.date: 07/06/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 61070d98c5b7d453f493cf7ea2995705ee43f325
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: bab2050448e1c870aac8f3237c21b19498cdb674
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546629"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124245"
 ---
 # <a name="task-sequence-steps"></a>Görev dizisi adımları
 
@@ -216,6 +216,9 @@ Hedef bilgisayarın belirtilen çalışma grubuna katılmasını sağlamak için
 #### <a name="join-a-domain"></a>Bir etki alanına katılma
 
 Hedef bilgisayarın belirtilen etki alanına katılmasını sağlamak için bu seçeneği belirleyin. (Gibi) etki alanını belirtin veya gösterin `fabricam.com` . Bir kuruluş birimi için Basit Dizin Erişim Protokolü (LDAP) yolunu belirtin veya buraya gidin. Örneğin: `LDAP//OU=computers, DC=Fabricam.com, C=com`.  
+
+> [!NOTE]
+> Bir Azure Active Directory (Azure AD) ile Birleşik istemci bir işletim sistemi dağıtımı görev dizisi çalıştırdığında, yeni işletim sistemindeki istemci Azure AD 'ye otomatik olarak katılmayacaktır. Azure AD 'ye katılmış olmasa bile, istemci hala yönetilecektir.
 
 #### <a name="account"></a>Hesap
 
@@ -773,7 +776,6 @@ Kayıtlı Kullanıcı ve kuruluş adlarını bilgisayardan yakalayın.
 Bilgisayardaki saat dilimi ayarını yakalayın.  
 
 
-
 ## <a name="check-readiness"></a><a name="BKMK_CheckReadiness"></a>Hazır olma durumunu denetle
 
 Hedef bilgisayarın belirtilen dağıtım önkoşul koşullarını karşıladığını doğrulamak için bu adımı kullanın.  
@@ -791,6 +793,8 @@ Sürüm 2002 ' den başlayarak, bu adım sekiz yeni denetim içerir. Bu yeni den
 - **Ağ bağdaştırıcısı bağlı**
   - **Ağ bağdaştırıcısı kablosuz değil**
 
+Sürüm 2006 ' den başlayarak bu adım, cihazın UEFı kullanıp kullanmadığını, **BILGISAYARıN UEFI modunda**olup olmadığını belirlemede bir denetim içerir.<!--6452769-->
+
 > [!IMPORTANT]
 > Bu yeni Configuration Manager özelliğinden yararlanmak için, siteyi güncelleştirdikten sonra da istemcileri en son sürüme güncelleştirin. Site ve konsolu güncelleştirdiğinizde Configuration Manager konsolunda yeni işlevsellik göründüğünde, istemci sürümü de en son olana kadar, tüm senaryo işlevsel değildir.
 
@@ -804,14 +808,15 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 - [_TS_CRSPEED](task-sequence-variables.md#TSCRSPEED)
 - [_TS_CRDISK](task-sequence-variables.md#TSCRDISK)
 - [_TS_CROSTYPE](task-sequence-variables.md#TSCROSTYPE)
-- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH)
-- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER)
-- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER)
-- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER)
-- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE)
-- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER)
-- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK)
-- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED)
+- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH) (2002 sürümünden başlayarak)
+- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER) (2002 sürümünden başlayarak)
+- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER) (2002 sürümünden başlayarak)
+- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER) (2002 sürümünden başlayarak)
+- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE) (2002 sürümünden başlayarak)
+- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER) (2002 sürümünden başlayarak)
+- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK) (2002 sürümünden başlayarak)
+- [_TS_CRUEFI](task-sequence-variables.md#TSCRUEFI) (2006 sürümünden başlayarak)
+- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED) (2002 sürümünden başlayarak)
 
 ### <a name="cmdlets-for-check-readiness"></a>Kullanıma hazır olma için cmdlet 'ler
 
@@ -869,6 +874,10 @@ Sürüm 2002 ' den başlayarak, cihazın takılı olduğundan ve pilde olmadığ
 #### <a name="network-adapter-connected"></a>Ağ bağdaştırıcısı bağlı
 
 Sürüm 2002 ' den başlayarak, cihazın ağa bağlı bir ağ bağdaştırıcısı olduğunu doğrulayın. Ayrıca, **ağ bağdaştırıcısının kablosuz**olmadığını doğrulamak için bağımlı denetimi de seçebilirsiniz.
+
+#### <a name="computer-is-in-uefi-mode"></a>Bilgisayar, UEFı modunda
+
+Sürüm 2006 ' den başlayarak, cihazın UEFı veya BIOS için yapılandırılmış olup olmadığını saptayın.
 
 ### <a name="options-for-check-readiness"></a>Kullanıma hazır olma seçenekleri
 
@@ -1054,12 +1063,9 @@ Görev dizisi bir paketi indiremediğinde, listedeki bir sonraki paketi indirmey
 
 ## <a name="enable-bitlocker"></a><a name="BKMK_EnableBitLocker"></a>BitLocker 'ı etkinleştir
 
-Sabit sürücüdeki en az iki bölümde BitLocker şifrelemesini etkinleştirmek için bu adımı kullanın. İlk etkin bölüm Windows önyükleme kodunu içerir. Başka bir bölüm işletim sistemini içerir. Önyükleme bölümü şifrelenmemiş kalmalıdır.  
+BitLocker sürücü şifrelemesi disk birimi içeriği için alt düzey şifreleme sağlar. Sabit sürücüdeki en az iki bölümde BitLocker şifrelemesini etkinleştirmek için bu adımı kullanın. İlk etkin bölüm Windows önyükleme kodunu içerir. Başka bir bölüm işletim sistemini içerir. Önyükleme bölümü şifrelenmemiş kalmalıdır.  
 
-Windows PE 'de bir sürücüde BitLocker 'ı etkinleştirmek için **BitLocker 'ın ön sağlamasını** yap adımını kullanın. Daha fazla bilgi için, bkz. [Pre-provision BitLocker](#BKMK_PreProvisionBitLocker).  
-
-> [!NOTE]  
-> BitLocker sürücü şifrelemesi disk birimi içeriği için alt düzey şifreleme sağlar.  
+Windows PE 'de bir sürücüde BitLocker 'ı etkinleştirmek için, [BitLocker 'ın ön sağlamasını](#BKMK_PreProvisionBitLocker) yap adımını kullanın.
 
 Bu adım yalnızca tam işletim sisteminde çalışır. Windows PE 'de çalışmaz.
 
@@ -1071,7 +1077,9 @@ Yalnızca TPM, USB veya **TPM ve PIN** **üzerinde** **yalnızca TPM**belirttiğ
 - Etkinleştirildi  
 - Sahipliğe İzin Veriliyor  
 
-Bu adım, kalan TPM başlatma işlemini tamamlar. Kalan adımlar fiziksel varlık veya yeniden başlatma gerektirmez. **BitLocker 'ı etkinleştir** adımı, gerekirse, AŞAĞıDAKI kalan TPM başlatma adımlarını saydam olarak tamamlar:  
+Sürüm 2006 ' den başlayarak, TPM olmayan veya TPM etkinleştirilmediğinde bu adımı atlayabilirsiniz. Yeni bir ayar, BitLocker 'ı tam olarak desteklemeyen cihazlarda görev sırası davranışını yönetmeyi kolaylaştırır.<!--6995601-->
+
+Bu adım, kalan TPM başlatma işlemini tamamlar. Kalan eylemler fiziksel varlık veya yeniden başlatma gerektirmez. **BitLocker 'ı etkinleştir** adımı, gerekirse AŞAĞıDAKI kalan TPM başlatma eylemlerini saydam olarak tamamlar:
 
 - Onay anahtarı çifti oluşturma  
 - Sahip yetkilendirme değeri oluşturun ve bu değeri desteklemek için genişletilmesi gereken Active Directory'de tutun  
@@ -1118,6 +1126,18 @@ Bu adımın **Özellikler** sekmesinde, bu bölümde açıklanan ayarları yapı
 
 Belirli, işletim sistemi olmayan bir veri sürücüsünü şifrelemek için belirli bir **sürücü**seçin. Ardından listeden sürücüyü seçin.  
 
+#### <a name="disk-encryption-mode"></a>Disk şifreleme modu
+
+<!--6995601-->
+Sürüm 2006 ' den başlayarak, aşağıdaki şifreleme algoritmalarından birini seçin:
+
+- AES_128
+- AES_256
+- XTS_AES256
+- XTS_AES128
+
+Varsayılan olarak veya belirtilmemişse, adım işletim sistemi sürümü için varsayılan şifreleme yöntemini kullanmaya devam eder. Adım, belirtilen algoritmayı desteklemeyen bir Windows sürümü üzerinde çalışıyorsa, işletim sistemi varsayılan durumuna geri döner. Bu durumda, görev dizisi altyapısı 11911 durum iletisini gönderir.
+
 #### <a name="use-full-disk-encryption"></a>Tam disk şifrelemesi kullan
 
 <!--SCCMDocs-pr issue 2671-->
@@ -1136,6 +1156,10 @@ Görev dizisindeki bir sonraki adımı çalıştırmadan önce BitLocker Sürüc
 
 Büyük bir sabit sürücü şifrelerken, şifreleme işleminin tamamlanması saatler sürebilir. Bu seçeneğin belirlenmediğinden, görev dizisinin hemen devam etmesine izin verir.  
 
+#### <a name="skip-this-step-for-computers-that-do-not-have-a-tpm-or-when-tpm-is-not-enabled"></a>TPM olmayan bilgisayarlar için veya TPM etkin olmadığında bu adımı atlayın
+
+<!--6995601-->
+Sürüm 2006 ' den başlayarak, desteklenen veya etkinleştirilmiş TPM içermeyen bir bilgisayardaki sürücü şifrelemesini atlamak için bu seçeneği belirleyin. Örneğin, bir sanal makineye bir işletim sistemi dağıtırken bu seçeneği kullanın. Varsayılan olarak, bu ayar **BitLocker 'ı etkinleştir** adımı için devre dışıdır. Bu ayarı etkinleştirirseniz ve cihazda işlevsel TPM yoksa, görev sırası altyapısı Smsts. log dosyasına bir hata kaydeder ve 11912 durum iletisini gönderir. Görev sırası bu adımı geçti.
 
 
 ## <a name="format-and-partition-disk"></a><a name="BKMK_FormatandPartitionDisk"></a>Diski Biçimlendir ve bölümle
@@ -1175,6 +1199,31 @@ Bu adımın **Özellikler** sekmesinde, bu bölümde açıklanan ayarları yapı
 
 Biçimlendirilecek diskin fiziksel disk numarası. Numara, Windows disk numaralandırma sırasını temel alır.  
 
+#### <a name="variable-name-to-store-disk-number"></a>Disk numarasını depolamak için değişken adı
+
+<!--6610288-->
+
+Sürüm 2006 ' den başlayarak biçimlendirilecek hedef diski belirtmek için bir görev dizisi değişkeni kullanın. Bu değişken seçeneği, dinamik davranışlarla daha karmaşık görev dizilerini destekler. Örneğin, özel bir betik diski algılayabilir ve değişkeni donanım türüne göre ayarlayabilir. Daha sonra farklı donanım türlerini ve bölümlerini yapılandırmak için bu adımın birden fazla örneğini kullanabilirsiniz.
+
+Bu özelliği seçerseniz, özel bir değişken adı girin. Bu özel değişkenin değerini fiziksel disk için bir tamsayı değerine ayarlamak üzere görev dizisine daha önceki bir adım ekleyin.
+
+Aşağıdaki sahte adımlarda bir örnek gösterilmektedir:
+
+- **PowerShell betiğini Çalıştır**: hedef diskleri toplamak için özel bir betik
+  - `myOSDisk`Olarak ayarlar`1`
+  - `myDataDisk`Olarak ayarlar`2`
+
+- İşletim sistemi diski için **Diski Biçimlendir ve bölümle** : `myOSDisk` değişkeni belirtir
+  - Disk 1 ' i sistem diski olarak yapılandırır
+
+- Veri diski için **Diski Biçimlendir ve bölümle** : `myDataDisk` değişkeni belirtir
+  - Ham depolama için disk 2 ' i yapılandırır
+
+Bu örneğin bir çeşitlemesi, farklı donanım türleri için disk numaralarını ve bölümleme planlarını kullanır.
+
+> [!NOTE]
+> Mevcut görev dizisi değişkeni **Osddiskındex**' i kullanmaya devam edebilirsiniz. Ancak, **Biçim ve Bölüm diski** adımının her bir örneği aynı dizin değerini kullanır. Bu adımın birden fazla örneği için programlı olarak disk numarası ayarlamak istiyorsanız bu değişken özelliğini kullanın.
+
 #### <a name="disk-type"></a>Disk Türü
 
 Biçimlendirilecek diskin türü. Açılır listeden belirlenebilecek iki seçenek vardır:
@@ -1189,7 +1238,7 @@ Biçimlendirilecek diskin türü. Açılır listeden belirlenebilecek iki seçen
 
 Aşağıdaki öznitelikler de dahil olmak üzere, görev dizisinin oluşturduğu bölüm veya birim hakkında belirli bilgiler:  
 
-- Ad  
+- Name  
 - Kalan disk alanı  
 
 Yeni bir bölüm oluşturmak için **bölüm özellikleri** iletişim kutusunu başlatmak üzere **Yeni** ' yi seçin. Bölüm türü ve boyutunu ve bir önyükleme bölümüyse belirtin. Mevcut bir bölümü değiştirmek için, değiştirilecek bölümü seçin ve ardından **Özellikler** düğmesini seçin. Sabit sürücü bölümlerinin nasıl yapılandırılacağı hakkında daha fazla bilgi için aşağıdaki makalelerden birine bakın:  
@@ -1489,6 +1538,9 @@ Güncelleştirmelerden biri bilgisayarı beklenmedik şekilde yeniden başlattı
 
 Hedef bilgisayarı bir çalışma grubuna veya etki alanına eklemek için bu adımı kullanın.  
 
+> [!NOTE]
+> Bir Azure Active Directory (Azure AD) ile Birleşik istemci bir işletim sistemi dağıtımı görev dizisi çalıştırdığında, yeni işletim sistemindeki istemci Azure AD 'ye otomatik olarak katılmayacaktır. Azure AD 'ye katılmış olmasa bile, istemci hala yönetilecektir.
+
 Bu görev dizisi adımı yalnızca tam işletim sisteminde çalışır. Windows PE 'de çalışmaz.
 
 Bu adımı görev sırası düzenleyicisine eklemek için **Ekle**' yi seçin, **genel**' i seçin ve **etki alanına veya çalışma grubuna katıl**' ı seçin.
@@ -1635,6 +1687,18 @@ Bu adımın **Özellikler** sekmesinde, bu bölümde açıklanan ayarları yapı
 
 BitLocker'ı etkinleştirmek istediğiniz sürücüyü belirtin. BitLocker yalnızca sürücüdeki kullanılan alanı şifreler.  
 
+#### <a name="disk-encryption-mode"></a>Disk şifreleme modu
+
+<!--6995601-->
+Sürüm 2006 ' den başlayarak, aşağıdaki şifreleme algoritmalarından birini seçin:
+
+- AES_128
+- AES_256
+- XTS_AES256
+- XTS_AES128
+
+Varsayılan olarak veya belirtilmemişse, adım işletim sistemi sürümü için varsayılan şifreleme yöntemini kullanmaya devam eder. Adım, belirtilen algoritmayı desteklemeyen bir Windows sürümü üzerinde çalışıyorsa, işletim sistemi varsayılan durumuna geri döner. Bu durumda, görev dizisi altyapısı 11911 durum iletisini gönderir.
+
 #### <a name="use-full-disk-encryption"></a>Tam disk şifrelemesi kullan
 
 <!--SCCMDocs-pr issue 2671-->
@@ -1642,7 +1706,7 @@ Varsayılan olarak, bu adım yalnızca sürücüdeki kullanılan alanı şifrele
 
 #### <a name="skip-this-step-for-computers-that-do-not-have-a-tpm-or-when-tpm-is-not-enabled"></a>TPM olmayan bilgisayarlar için veya TPM etkin olmadığında bu adımı atlayın
 
-Desteklenen veya etkinleştirilmiş TPM içermeyen bir bilgisayardaki sürücü şifrelemesini atlamak için bu seçeneği belirleyin. Örneğin, bir sanal makineye bir işletim sistemi dağıtırken bu seçeneği kullanın.  
+Desteklenen veya etkinleştirilmiş TPM içermeyen bir bilgisayardaki sürücü şifrelemesini atlamak için bu seçeneği belirleyin. Örneğin, bir sanal makineye bir işletim sistemi dağıtırken bu seçeneği kullanın. Varsayılan olarak, bu ayar **BitLocker 'ın ön sağlamasını** yap adımı için etkinleştirilmiştir. Bu adım, bir TPM veya başlatılmamış TPM olmadan bir cihazda başarısız olur. Sürüm 2006 ' den başlayarak, cihazda işlevsel TPM yoksa, görev sırası altyapısı Smsts. log dosyasına bir uyarı kaydeder ve durum iletisi 11912 ' yi gönderir.
 
 
 
@@ -2169,10 +2233,10 @@ Bir görev dizisine bir alt görev sırası eklediğinizde aşağıdaki noktalar
 
 Sürüm 1906 ' den başlayarak, bu adımı aşağıdaki PowerShell cmdlet 'leriyle yönetin:<!-- 2839943, SCCMDocs#1118 -->
 
-- **Get-CMTSStepRunTaskSequence**
-- **New-CMTSStepRunTaskSequence**
-- **Remove-CMTSStepRunTaskSequence**
-- **Set-CMTSStepRunTaskSequence**
+- [Get-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepruntasksequence?view=sccm-ps)
+- [New-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepruntasksequence?view=sccm-ps)
+- [Remove-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepruntasksequence?view=sccm-ps)
+- [Set-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepruntasksequence?view=sccm-ps)
 
 Daha fazla bilgi için bkz. [1906 sürüm notları-yeni cmdlet 'ler](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps#new-cmdlets).
 
@@ -2241,15 +2305,19 @@ Görev dizisinde kullanım için dinamik bir değişken ayarlamak üzere bir kur
 
     True olarak değerlendirilen bir kural için ayarlanacak bir veya daha fazla değişken belirtin veya değişkenleri bir kural kullanmadan ayarlayın. Varolan bir değişken seçin veya özel bir değişken oluşturun.  
 
-    - **Mevcut görev dizisi değişkenleri**: mevcut görev dizisi değişkenleri listesinden bir veya daha fazla değişken seçin. Dizi değişkenleri seçilecek şekilde kullanılamıyor.  
+  - **Mevcut görev dizisi değişkenleri**: mevcut görev dizisi değişkenleri listesinden bir veya daha fazla değişken seçin. Dizi değişkenleri seçilecek şekilde kullanılamıyor.  
 
-    - **Özel görev dizisi değişkenleri**: özel bir görev dizisi değişkeni tanımlayın. Ayrıca, mevcut bir görev dizisi değişkenini belirtebilirsiniz. Bu ayar, değişken dizileri mevcut görev dizisi değişkenleri listesinde olmadığından, **Osdaddapter**gibi mevcut bir değişken dizisini belirtmek için kullanışlıdır.  
+  - **Özel görev dizisi değişkenleri**: özel bir görev dizisi değişkeni tanımlayın. Ayrıca, mevcut bir görev dizisi değişkenini belirtebilirsiniz. Bu ayar, değişken dizileri mevcut görev dizisi değişkenleri listesinde olmadığından, **Osdaddapter**gibi mevcut bir değişken dizisini belirtmek için kullanışlıdır.  
 
-Bir kural için değişkenleri seçtikten sonra her değişken için bir değer belirtin. Kural doğru olarak değerlendirildiğinde değişken belirtilen değere ayarlanır. Her değişken için, değişkenin değerini gizlemek için **Gizli değer**'i seçebilirsiniz. Varsayılan olarak, bazı mevcut değişkenler **OSDCaptureAccountPassword** değişkeni gibi değerleri gizler.  
+Bir kural için değişkenleri seçtikten sonra her değişken için bir değer belirtin. Kural doğru olarak değerlendirildiğinde değişken belirtilen değere ayarlanır. Her değişken için, değişkenin değerini gizlemek için **Bu değeri gösterme** seçeneğini belirleyebilirsiniz. Varsayılan olarak, bazı mevcut değişkenler **OSDCaptureAccountPassword** değişkeni gibi değerleri gizler.  
 
 > [!IMPORTANT]  
-> Configuration Manager, **dinamik değişkenleri ayarla** adımla bir görev dizisini Içeri aktardığınızda **gizli değer** olarak işaretlenen tüm değişken değerlerini kaldırır. Görev dizisini içeri aktardıktan sonra dinamik değişkenin değerini yeniden girin.  
+> **Dinamik değişkenleri ayarla** adımını içeren bir görev dizisini içeri aktardığınızda Configuration Manager, **Bu değeri gösterme**olarak işaretlenen tüm değişken değerlerini kaldırır. Görev sırasını içeri aktardıktan sonra dinamik değişkenin değerini yeniden girin.
 
+**Bu değeri gösterme**seçeneğini kullandığınızda, değişkenin değeri görev sırası düzenleyicisinde gösterilmez. Görev sırası günlük dosyası (**Smsts. log**) veya görev sırası hata ayıklayıcı değişken değerini göstermez. Değişken, çalışma sırasında görev sırası tarafından hala kullanılıyor olabilir. Artık bu değişkenlerin gizli olmasını istemiyorsanız, önce bunları silin. Sonra değişkenleri gizleme seçeneğini seçmeden yeniden tanımlayın.  
+
+> [!WARNING]  
+> **Komut satırı** adımının komut satırını Çalıştır ' a değişkenler eklerseniz, görev sırası günlük dosyası değişken değerleri dahil olmak üzere tam komut satırını görüntüler. Potansiyel olarak gizli verilerin günlük dosyasında görünmesini engellemek için **Osddonotlogcommand** görev sırası değişkenini olarak ayarlayın `TRUE` .
 
 
 ## <a name="set-task-sequence-variable"></a><a name="BKMK_SetTaskSequenceVariable"></a>Görev sırası değişkenini ayarla
@@ -2289,8 +2357,13 @@ Bir görev dizisinin yerleşik veya eylem değişkeninin adını belirtin veya k
 <!--1358330-->
 Görev sırası değişkenlerinde depolanan hassas verileri maskelemek için bu seçeneği etkinleştirin. Örneğin, bir parola belirtirken.
 
-> [!Note]  
+> [!NOTE]
 > Bu seçeneği etkinleştirin ve sonra görev dizisi değişkeninin değerini ayarlayın. Aksi halde, değişken değeri, görev dizisi çalışırken beklenmeyen davranışlara neden olabilecek şekilde, sizin istediğiniz şekilde ayarlanamaz.<!--SCCMdocs issue #800-->
+
+**Bu değeri gösterme**seçeneğini kullandığınızda, değişkenin değeri görev sırası düzenleyicisinde gösterilmez. Görev sırası günlük dosyası (**Smsts. log**) veya görev sırası hata ayıklayıcı değişken değerini göstermez. Değişken, çalışma sırasında görev sırası tarafından hala kullanılıyor olabilir. Artık bu değişkenin gizli olmasını istemiyorsanız, önce silin. Sonra, öğeyi gizleme seçeneğini seçmeden değişkeni yeniden tanımlayın.
+
+> [!WARNING]
+> **Komut satırı** adımının komut satırını Çalıştır ' a değişkenler eklerseniz, görev sırası günlük dosyası değişken değerleri dahil olmak üzere tam komut satırını görüntüler. Potansiyel olarak gizli verilerin günlük dosyasında görünmesini engellemek için **Osddonotlogcommand** görev sırası değişkenini olarak ayarlayın `TRUE` .<!-- 6963278 -->
 
 #### <a name="value"></a>Değer  
 
@@ -2388,6 +2461,8 @@ Kullanılabilir bir ön üretim istemci paketi varsa ve bilgisayar, pilot koleks
 Görev sırası adımı otomatik olarak site atamasını ve varsayılan yapılandırmayı belirler. İstemcisini yüklerken kullanılacak ek yükleme özelliklerini belirtmek için bu alanı kullanın. Birden çok yükleme özelliği belirtmek için boşlukla ayırın.  
 
 İstemci yüklemesi sırasında kullanılacak komut satırı seçeneklerini belirtin. Örneğin, `/skipprereq: silverlight.exe` CCMSetup.exe Microsoft Silverlight önkoşulu yüklememeyi bildirmek için yazın. CCMSetup.exe için kullanılabilir komut satırı seçenekleri hakkında daha fazla bilgi için bkz. [istemci yükleme özellikleri hakkında](../../core/clients/deploy/about-client-installation-properties.md).  
+
+Azure AD 'ye katılmış olan veya belirteç tabanlı kimlik doğrulaması kullanan bir internet tabanlı istemcide bir işletim sistemi dağıtımı görev dizisi çalıştırdığınızda, **Windows 'u ve ConfigMgr 'Yi Kur** adımında [CCMHOSTNAME](../../core/clients/deploy/about-client-installation-properties.md#ccmhostname) özelliğini belirtmeniz gerekir. Örneğin, `CCMHOSTNAME=OTTERFALLS.CLOUDAPP.NET/CCM_Proxy_MutualAuth/12345678907927939`.
 
 ### <a name="options-for-setup-windows-and-configmgr"></a>Windows ve ConfigMgr kurulum seçenekleri
 

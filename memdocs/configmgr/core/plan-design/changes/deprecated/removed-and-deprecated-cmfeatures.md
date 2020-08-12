@@ -2,7 +2,7 @@
 title: Kullanım dışı bırakılan özellikler
 titleSuffix: Configuration Manager
 description: Configuration Manager artık desteklemediği özellikler hakkında bilgi edinin.
-ms.date: 05/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 40eda7184d7be5010bf51e3ac0d30d6d9442203c
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 5ee84a41a5c47ce554e4618b897c8e4933bdbe73
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905058"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129061"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager için kaldırılan ve kullanım dışı bırakılan özellikler
 
@@ -31,7 +31,6 @@ Aşağıdaki özellikler kullanım dışıdır. Artık bunları kullanmaya devam
 
 |Özellik|İlk duyurulan kullanımdan kaldırma|Destek &nbsp; kaldırıldı|
 |-----------|---|--------------|
-| Cihaz kaydı ve güvenlik güncelleştirmeleri için **son verileri görüntülemek** üzere masaüstü Analizi seçeneği.<!-- 7080949 --> Daha fazla bilgi için bkz. [veri gecikmesi](../../../../desktop-analytics/troubleshooting.md#data-latency).|Mayıs 2020|2020 Temmuz|
 |Azure 'dan içerik paylaşmaya yönelik uygulama değişti. İçerik etkinleştirilmiş bir bulut yönetimi ağ geçidi kullanın. Gelecekte geleneksel bir bulut dağıtım noktası oluşturamayacak.|Şubat 2019|TBD<sup>[Note 1](#bkmk_note1)</sup>|
 |Bulut yönetimi ağ geçidi ve bulut dağıtım noktası için Azure 'a klasik hizmet dağıtımı. Daha fazla bilgi için [plan for CMG](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager)konusuna bakın.|Kasım 2018|TBD<sup>[Note 1](#bkmk_note1)</sup>|
 
@@ -45,6 +44,7 @@ Aşağıdaki özellikler artık desteklenmiyor. Bazı durumlarda, bunlar üründ
 
 |Özellik|İlk duyurulan kullanımdan kaldırma|Destek &nbsp; kaldırıldı|  
 |-----------|---|--------------|  
+| Cihaz kaydı ve güvenlik güncelleştirmeleri için **son verileri görüntülemek** üzere masaüstü Analizi seçeneği.<!-- 7080949 --> Daha fazla bilgi için bkz. [veri gecikmesi](../../../../desktop-analytics/troubleshooting.md#data-latency).|Mayıs 2020|Temmuz 2020|
 | Windows Analytics ve Yükseltme Hazırlığı tümleştirme. Daha fazla bilgi için bkz. [KB 4521815: Windows Analytics emekli on 31 ocak 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement). | 14 Ekim 2019 | 31 Ocak 2020 |
 | Koşullu erişim uyumluluk ilkeleri için cihaz sistem durumu kanıtlama değerlendirmesi <!--1235616 aka 3608202--> Daha fazla bilgi için bkz. [karma MDM 'ye ne oldu](../../../../mdm/understand/what-happened-to-hybrid.md).| 3 Temmuz 2019 | Sürüm 1910 |
 | Configuration Manager Şirket Portalı uygulaması | 21 Mayıs 2019 | Sürüm 1910 |

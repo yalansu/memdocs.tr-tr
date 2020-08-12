@@ -2,7 +2,7 @@
 title: Konsol içi güncelleştirmeler
 titleSuffix: Configuration Manager
 description: Microsoft bulutundaki Configuration Manager güncelleştirmeleri yüklemesi
-ms.date: 06/02/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a0d7f36c921f782c0baad740d8e643f54cee0309
-ms.sourcegitcommit: 5e339c07001e911cf75ef922e6c66a7efdeab6f1
+ms.openlocfilehash: 65071493834c33dac7581075b835e023c74f5706
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84637678"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128095"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Configuration Manager için konsol içi güncelleştirmeleri yükler
 
@@ -96,13 +96,13 @@ Configuration Manager konsolundan bir güncelleştirmeyi yüklemeden önce aşa�
 
 Güncelleştirme başlamadan önce gerçekleştirilecek eylemler için geçerli güncelleştirme denetim listesini gözden geçirin:
 
+- [Güncelleştirme 2006 yükleme denetim listesi](checklist-for-installing-update-2006.md)
+
 - [Güncelleştirme 2002’yi yüklemek için denetim listesi](checklist-for-installing-update-2002.md)
 
 - [Güncelleştirme 1910’u yüklemek için denetim listesi](checklist-for-installing-update-1910.md)  
 
 - [Güncelleştirme 1906’yı yüklemek için denetim listesi](checklist-for-installing-update-1906.md)  
-
-- [Güncelleştirme 1902’yı yüklemek için denetim listesi](checklist-for-installing-update-1902.md)
 
 ### <a name="step-2-run-the-prerequisite-checker-before-installing-an-update"></a><a name="bkmk_step2"></a>2. Adım: bir güncelleştirmeyi yüklemeden önce Önkoşul denetleyicisini çalıştırma  
 
@@ -362,13 +362,13 @@ Söz konusu güncelleştirme aşağıdaki durumlardan birinde olduğunda, bir g�
 
 Site güncelleştirildikten sonra, geçerli sürüm için güncelleştirme sonrası denetim listesini gözden geçirin:  
 
+- [Sürüm 2006 için güncelleştirme sonrası denetim listesi](checklist-for-installing-update-2006.md#post-update-checklist)
+
 - [Sürüm 2002 için güncelleştirme sonrası denetim listesi](checklist-for-installing-update-2002.md#post-update-checklist)
 
 - [Sürüm 1910 için güncelleştirme sonrası denetim listesi](checklist-for-installing-update-1910.md#post-update-checklist)  
 
 - [Sürüm 1906 için güncelleştirme sonrası denetim listesi](checklist-for-installing-update-1906.md#post-update-checklist)  
-
-- [Sürüm 1902 için güncelleştirme sonrası denetim listesi](checklist-for-installing-update-1902.md#post-update-checklist)  
 
 ## <a name="enable-optional-features-from-updates"></a><a name="bkmk_options"></a> Güncelleştirmelerin isteğe bağlı özelliklerini etkinleştirme  
 
@@ -378,7 +378,7 @@ Kullanılabilir özellikleri ve bunların durumunu görüntülemek için, konsol
 
 Bir özellik isteğe bağlı olmadığında otomatik olarak yüklenir. **Özellikler** düğümünde görünmez.  
 
-> [!Important]  
+> [!IMPORTANT]
 > Çok siteli bir hiyerarşide, yalnızca merkezi yönetim sitesinden isteğe bağlı veya yayın öncesi özellikleri etkinleştirin. Bu davranış, hiyerarşide çakışma olmamasını sağlar. <!--507197-->  
 
 Yeni bir özellik veya yayın öncesi özelliğini etkinleştirdiğinizde, bu özellik kullanılabilir hale gelmeden önce Configuration Manager hiyerarşi Yöneticisi (HMAN) değişikliği işlemesi gerekir. Değişikliğin işlenmesi genellikle anında gerçekleşir. HMAN işleme döngüsüne bağlı olarak, tamamlanması 30 dakika kadar sürebilir. Değişiklik işlendikten sonra, özelliği kullanabilmeniz için konsolunu yeniden başlatın.
@@ -391,19 +391,20 @@ Aşağıdaki özellikler Configuration Manager en son sürümünde isteğe bağl
 
 <!--Note to include in target articles
 
-> [!Note]  
+> [!NOTE]
 > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](install-in-console-updates.md#bkmk_options).  
 
 -->
 
-- [Topluluk hub 'ı](community-hub.md)<!--3555935, C098DA03-C33C-4E15-B337-6C0FEEB3CB8A-->
+- [Topluluk merkezi](community-hub.md)<!--3555935, C098DA03-C33C-4E15-B337-6C0FEEB3CB8A-->
+- [Düzenleme grupları](../../../sum/deploy-use/orchestration-groups.md)<!--3098816, 290B66D8-C735-4895-B59A-DD732D84A697-->
+- [Görev sırası dağıtım türü](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt) <!-- 3555953, CB0CDFFB-9C6F-4B18-8954-A43A387302A2-->
 - [BitLocker yönetimi](../../../protect/plan-design/bitlocker-management.md) <!-- 3601034,6DD56E46-C3EC-4E38-A16F-E98644BB6434 -->
 - [Koleksiyon üyeliği sonuçlarını Azure Active Directory ile eşitler](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->
 - [Kullanıcı grubu bulmayı Azure Active Directory](../deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->
 - [Uygulama grupları](../../../apps/deploy-use/create-app-groups.md) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D-->
 - [Görev sırası hata ayıklayıcısı](../../../osd/deploy-use/debug-task-sequence.md) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71-->
 - [Paket Dönüştürme Yöneticisi](../../../apps/pcm/package-conversion-manager.md) <!--1357861,4E0C09AF-7FC1-4412-A8BB-166D9BCD0093-->
-- [Ortak yönetilen cihazlar Için istemci uygulamaları](../../../comanage/workloads.md#client-apps) (daha önce *ortak yönetilen cihazlar için mobil uygulamalar*olarak bilinir) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C-->
 - [Üçüncü taraf yazılım güncelleştirmeleri](../../../sum/deploy-use/third-party-software-updates.md)<!--1357605,1352101,1358714;B5E192AE-C81F-4348-9EF9-07A3C0FBE597-->
 - [Cihaz başına Kullanıcı için uygulama isteklerini Onayla](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-settings) <!--1357015,4BA987C9-08FC-48E2-BFFE-C9DCF35B496A-->  
 - [Betik oluşturma ve çalıştırma](../../../apps/deploy-use/create-deploy-scripts.md) <!--1236459,566F8720-F415-4E10-9A51-CDE682BA2B2E-->
@@ -416,7 +417,7 @@ Aşağıdaki özellikler Configuration Manager en son sürümünde isteğe bağl
 - [Küme durumunu algılayan bir koleksiyona hizmet verme (sunucu grupları)](../../../sum/deploy-use/service-a-server-group.md) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
 - [İş Için Windows Hello](../../../protect/deploy-use/windows-hello-for-business-settings.md) (önceden *Passport for Work*olarak bilinirdi) <!--1245704,8BCA2642-3719-4862-A355-9D39C979E1B4-->
 
-> [!Tip]  
+> [!TIP]
 > Etkinleştirme onayı gerektiren özellikler hakkında daha fazla bilgi için bkz. [yayın öncesi Özellikler](pre-release-features.md).  
 >
 > Yalnızca Technical Preview dalında bulunan özellikler hakkında daha fazla bilgi için bkz. [Technical Preview](../../get-started/technical-preview.md).

@@ -5,17 +5,17 @@ description: Windows 7 veya sonraki bir sürümü Windows 10 ' a otomatik olarak
 ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 84e6ea21f2bb9627ae6b40c62f8f856fb426bdaf
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 907c36b6f06bbf4fbbabb9ee1b2df6cadb0acb75
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384902"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125466"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Configuration Manager işletim sistemini yükseltmek için görev dizisi oluşturma
 
@@ -24,7 +24,7 @@ ms.locfileid: "86384902"
 Hedef bilgisayarda bir işletim sistemini otomatik olarak yükseltmek için Configuration Manager görev dizilerini kullanın. Bu yükseltme, Windows 7 veya sonraki bir sürümü Windows 10 ' dan veya Windows Server 2012 veya sonraki bir sürümünden Windows Server 2016 ' e olabilir. İşletim sistemi yükseltme paketine ve uygulamalar veya yazılım güncelleştirmeleri gibi yüklenecek diğer içeriklere başvuran bir görev dizisi oluşturun. İşletim sistemini yükseltmek için görev dizisi, [yükseltme pencerelerinin en son sürüm](upgrade-windows-to-the-latest-version.md) senaryosuna bir parçasıdır.  
 
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Görev dizisini oluşturmadan önce, aşağıdaki gereksinimlerin yerinde olması gerekir:
 
@@ -124,7 +124,7 @@ Herhangi bir sonuç döndürürse cihaz Wi-Fi üzerinde çalışır. Aksi takdir
 
 Windows 10 ' un bu sürümüyle uyumlu olmayan uygulamaları kaldırmak için bu gruba adımlar ekleyin. Bir uygulamayı kaldırma yöntemi farklılık gösterir.  
 
-Uygulama Windows Installer kullanıyorsa, uygulamanın Windows Installer dağıtım türü özelliklerindeki **Programlar** sekmesinden **Program kaldır** komut satırını kopyalayın. Ardından, program Kaldır komut satırı ile bu gruba bir **komut satırı Çalıştır** adımı ekleyin. Örneğin:
+Uygulama Windows Installer kullanıyorsa, uygulamanın Windows Installer dağıtım türü özelliklerindeki **Programlar** sekmesinden **Program kaldır** komut satırını kopyalayın. Ardından, program Kaldır komut satırı ile bu gruba bir **komut satırı Çalıştır** adımı ekleyin. Örnek:
 
 `msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`  
 

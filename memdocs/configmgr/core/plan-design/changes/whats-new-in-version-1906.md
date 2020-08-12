@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2db1a719aaf1cb79973f1af8e2de3c1bbb91d605
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 378a5de5633d7a526004d84ec5e6885e165eaadb
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879082"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128993"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1906 ' deki yenilikler
 
@@ -136,7 +136,7 @@ Daha fazla bilgi için bkz. [Masaüstü Analizi 'Nde uyumluluk değerlendirmesi]
 ### <a name="dalogscollector-tool"></a>DALogsCollector aracı
 
 <!--4622989-->
-Masaüstü analizine sorun gidermeye yardımcı olması için Configuration Manager install dizininden DesktopAnalyticsLogsCollector. ps1 aracını kullanın. Bazı temel sorun giderme adımlarını çalıştırır ve ilgili günlükleri tek bir çalışma dizininde toplar.
+Masaüstü Analizi sorunlarını gidermeye yardımcı olması için Configuration Manager install dizinindeki DesktopAnalyticsLogsCollector.ps1 aracını kullanın. Bazı temel sorun giderme adımlarını çalıştırır ve ilgili günlükleri tek bir çalışma dizininde toplar.
 
 Daha fazla bilgi için bkz. [Günlükler toplayıcısı](../../../desktop-analytics/log-collector.md).
 
@@ -149,7 +149,7 @@ Daha fazla bilgi için bkz. [Günlükler toplayıcısı](../../../desktop-analyt
 
 CMPivot için artık ek aritmetik işleçler, aggregators 'lar ve kayıt defteri ve dosya kullanma gibi sorgu birleştirmeleri ekleme imkanına sahip olursunuz.
 
-Daha fazla bilgi için bkz. [CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot1906).
+Daha fazla bilgi için bkz. [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1906).
 
 ### <a name="cmpivot-standalone"></a>Tek başına CMPivot
 
@@ -171,7 +171,7 @@ Configuration Manager yerleşik [**Güvenlik Yöneticisi**](../../understand/fun
 - Koleksiyonda CMPivot Çalıştır
 - Envanter raporunda oku
 
-Daha fazla bilgi için bkz. [CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot_secadmin1906).
+Daha fazla bilgi için bkz. [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot_secadmin1906).
 
 
 ## <a name="content-management"></a><a name="bkmk_content"></a>İçerik yönetimi
@@ -505,7 +505,7 @@ Artık belirli bir yazılım güncelleştirmesi gerektiren cihazları görmek i�
    - **Yazılım kitaplığı**  >  **Windows 10 Bakımı**  >  **Tüm Windows 10 güncelleştirmeleri**
    - **Yazılım kitaplığı**  >  **Office 365 Istemci yönetimi**  >  **Office 365 güncelleştirmeleri**
 
-Daha fazla bilgi için bkz. [yazılım güncelleştirmelerini izleme](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Windows 'u hizmet olarak yönetme](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)ve [Office 365 ProPlus güncelleştirmelerini yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md#drill-through-required-office-365-updates).
+Daha fazla bilgi için bkz. [yazılım güncelleştirmelerini izleme](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Windows 'u hizmet olarak yönetme](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)ve [Office 365 ProPlus güncelleştirmelerini yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ## <a name="office-management"></a><a name="bkmk_o365"></a>Office yönetimi
@@ -538,7 +538,7 @@ Daha fazla bilgi için bkz. [Windows Defender Application Guard Ilkesi oluşturm
 
 Artık klasörlerde güvenlik kapsamları ayarlayabilirsiniz. Klasör içindeki bir nesneye erişiminiz varsa ancak klasöre erişiminiz yoksa, nesneyi göremezsiniz. Benzer şekilde, bir klasöre erişiminiz varsa ancak içinde bir nesne yoksa, bu nesneyi görmezsiniz. Bir klasöre sağ tıklayın, **güvenlik kapsamlarını ayarla**' yı seçin ve ardından uygulamak istediğiniz güvenlik kapsamlarını seçin.
 
-Daha fazla bilgi için bkz. [Configuration Manager konsolunu kullanma](../../servers/manage/admin-console.md#tips) ve [rol tabanlı yönetimi yapılandırma](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder).
+Daha fazla bilgi için bkz. [Configuration Manager konsol ipuçları](../../servers/manage/admin-console-tips.md) ve [rol tabanlı yönetimi yapılandırma](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder).
 
 ### <a name="add-smbios-guid-column-to-device-and-device-collection-nodes"></a>Cihaz ve cihaz koleksiyonu düğümlerine SMBıOS GUID sütunu Ekle
 

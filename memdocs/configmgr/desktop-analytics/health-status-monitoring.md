@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 119f787f15b8c907d0c760a12b973ca984f4348c
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: b4663ca5640bcfea4338912ff471a3253b744d5f
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268547"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125840"
 ---
 # <a name="health-status-monitoring-in-desktop-analytics"></a>Masaüstü Analizi 'nde sistem durumu izleme
 
@@ -27,7 +27,7 @@ Bu özelliğin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [g�
 ![Masaüstü analizinin sistem durumunu Izle sayfasının ekran görüntüsü](media/monitor-health.png)
 
 > [!NOTE]  
-> Masaüstü analizi, yalnızca paydası olarak kullanabileceği kullanım verileri sağlayan cihazlardan sistem durumu verilerini toplar. Bu, Gelişmiş (sınırlı) düzeyde tanılama verilerini paylaşmak üzere ayarlanmamış Windows 7 ve Windows 10 çalıştıran cihazları içermediği anlamına gelir. Windows 10 çalıştıran cihazların %10 ' dan fazlası, tanılama verilerini Gelişmiş (sınırlı) dışındaki düzeylerde paylaşmak üzere ayarlandıysa, **durumu izle** sayfası başlık alanında bir uyarı görüntüler.  
+> Masaüstü analizi, yalnızca paydası olarak kullanabileceği kullanım verileri sağlayan cihazlardan sistem durumu verilerini toplar. Bu, Isteğe bağlı (sınırlı) düzeyde Tanılama verileri paylaşmak üzere ayarlanmamış Windows 7 ve Windows 10 çalıştıran cihazları içermediği anlamına gelir. Windows 10 çalıştıran cihazların %10 ' dan fazlası, tanılama verilerini Isteğe bağlı (sınırlı) dışındaki düzeylerde paylaşmak üzere ayarlandıysa, **durumu izle** sayfası başlık alanında bir uyarı görüntüler.  
 
 Belirli bir uygulama hakkında daha fazla bilgi görüntülemek için listeden seçin.
 

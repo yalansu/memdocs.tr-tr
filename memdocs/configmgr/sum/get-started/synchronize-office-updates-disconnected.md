@@ -1,8 +1,8 @@
 ---
-title: Office 365 güncelleştirmelerini Internet bağlantısı olmadan eşitler
+title: Internet bağlantısı olmadan Microsoft 365 Apps güncelleştirmelerini eşitler
 titleSuffix: Configuration Manager
-description: Internet bağlantısı kesilen en üst düzey yazılım güncelleştirme noktasında Office 365 güncelleştirmelerini eşitler.
-ms.date: 04/21/2020
+description: Internet bağlantısı kesilen en üst düzey yazılım güncelleştirme noktasında Microsoft 365 Apps güncelleştirmelerini eşitler.
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,110 +10,110 @@ ms.assetid: a8fa7e7a-bf55-42de-b0c2-c56777dc1508
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 3627d2f7772b7b9e133d742b0ee4f94dba6e457a
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 4739703436d7feec7c4c899e60b33d38ce28babf
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110364"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125738"
 ---
-# <a name="synchronize-office-365-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a>Bağlantısı kesilmiş bir yazılım güncelleştirme noktasından Office 365 güncelleştirmelerini eşitler
+# <a name="synchronize-microsoft-365-apps-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a>Bağlantısı kesilmiş bir yazılım güncelleştirme noktasından Microsoft 365 Apps güncelleştirmelerini eşitler
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 <!--4065163-->
-Configuration Manager sürüm 2002 ' den başlayarak, bir aracı kullanarak Internet 'e bağlı bir WSUS sunucusundan Office 365 güncelleştirmelerini, bağlantısı kesilen bir Configuration Manager ortamına aktarabilirsiniz. Daha önce, bağlantısı kesilen ortamlarda güncelleştirilmiş yazılım için meta verileri verdiğinizde ve içeri aktardığınızda, Office 365 güncelleştirmelerini dağıtamazsınız. Office 365 güncelleştirmeleri Office API 'sinden ve Office CDN 'den indirilen, bağlantısı kesilen ortamlar için mümkün olmayan ek meta veriler gerektirir.
+Configuration Manager sürüm 2002 ' den başlayarak, internet 'e bağlı bir WSUS sunucusundan Microsoft 365 uygulama güncelleştirmelerini, bağlantısı kesilen Configuration Manager ortamına aktarmak için bir araç kullanabilirsiniz. Daha önce, bağlantısı kesilen ortamlarda güncelleştirilmiş yazılım için meta verileri verildiğinde ve içeri aktardığınızda Microsoft 365 Apps güncelleştirmelerini dağıtamazsınız. Microsoft 365 uygulamalar güncelleştirmeleri, bir Office API 'sinden ve Office CDN 'den indirilen, bağlantısı kesilen ortamlar için mümkün olmayan ek meta veriler gerektirir.
 
 > [!Note]
 > 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - En az Windows Server 2012 çalıştıran, internet 'e bağlı bir WSUS sunucusu.
 - WSUS sunucusunun bu iki Internet uç noktasına bağlanması gerekir:
    - `officecdn.microsoft.com`
    - `config.office.com`
 - Offlineupdatedışarı aktarıcı aracını ve bağımlılıklarını Internet 'e bağlı WSUS sunucusuna kopyalayın.
-  - Araç ve bağımlılıkları ** &lt;configmgrınstalldir>/Tools/offlineupdatevericisi** dizininde bulunur.
+  - Araç ve bağımlılıkları ** &lt; configmgrınstalldir>/Tools/offlineupdatevericisi** dizininde bulunur.
 - Aracı çalıştıran kullanıcının **WSUS yöneticileri** grubunun bir parçası olması gerekir.
-- Office güncelleştirme meta verilerini ve içeriğini depolamak için oluşturulan dizin, dosyaların güvenliğini sağlamak için uygun erişim denetim listelerine (ACL 'Ler) sahip olmalıdır.
+- Microsoft 365 uygulamalar güncelleştirme meta verilerini ve içeriğini depolamak için oluşturulan dizin, dosyaların güvenliğini sağlamak için uygun erişim denetim listelerine (ACL 'Ler) sahip olmalıdır.
     - Bu dizin de boş olmalıdır.
 - Çevrimiçi WSUS sunucusundan bağlantısı kesilen ortama taşınan veriler güvenli bir şekilde taşınmalıdır.
 
 > [!IMPORTANT]
-> Tüm Office 365 dilleri için içerik indirilir. Her güncelleştirmede yaklaşık 10 GB içerik bulunabilir.
+> Tüm Microsoft 365 Apps dilleri için içerik indirilir. Her güncelleştirmede yaklaşık 10 GB içerik bulunabilir.
 
-## <a name="synchronize-then-decline-unneeded-office-365-updates"></a>Eşitlemeden sonra gereksiz Office 365 güncelleştirmelerini reddedin
+## <a name="synchronize-then-decline-unneeded-microsoft-365-apps-updates"></a>Daha sonra gerekli olmayan Microsoft 365 Apps güncelleştirmelerini eşitler
 
 1. İnternet 'e bağlı WSUS ' da WSUS konsolunu açın.
 1. **Seçenekler** **, ürünler ve sınıflandırmalar '** ı seçin.
-1. **Ürünler** sekmesinde **Office 365 istemcisi** ' ni seçin ve **sınıflandırmalar** sekmesinde **güncelleştirmeler** ' i seçin. [ ![WSUS 'de Office 365 güncelleştirmeleri için ürünler ve sınıflandırmalar](./media/4065163-o365-updates-product-classification.png)](./media/4065163-o365-updates-product-classification.png#lightbox)
-1. Office 365 güncelleştirmelerini WSUS 'e almak için **eşitlemeler** 'e gidin ve **Şimdi eşitleme** ' yi seçin.
-1. Eşitleme tamamlandığında Configuration Manager dağıtmak istemediğiniz Office 365 güncelleştirmelerini reddedin. İndirilebilmesi için Office 365 güncelleştirmelerini onaylamanız gerekmez.  
-   - WSUS 'de istenmeyen Office 365 güncelleştirmelerinin reddediliyor, WsusUtil. exe dışarı aktarma sırasında dışarı aktarılmalarını engellemez, ancak Offlineupdatedışarı aktarıcı aracının içeriği indirmelerini durdurur.
-   - Offlineupdateverme Aracı, Office 365 güncelleştirmelerini sizin için indirmeyi yapar. Bunlar için güncelleştirmeleri dışarı aktarıyorsanız diğer ürünlerin da indirilmek üzere onaylanması gerekir.
-    - WSUS 'ta gereksiz Office 365 güncelleştirmelerini kolayca görmek ve reddetmek için [WSUS 'ta yeni bir güncelleştirme görünümü](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus) oluşturun.
-1. İndirme ve dışarı aktarma için diğer ürün güncelleştirmelerini onayladıysanız, WsusUtil. exe ' yi çalıştırmadan önce içerik indirmenin tamamlanmasını bekleyin ve sunucusundaki WSUSContent klasörünün içeriğini kopyalayarak. Daha fazla bilgi için bkz. [bağlantısı kesilmiş bir yazılım güncelleştirme noktasından yazılım güncelleştirmelerini senkronize](synchronize-software-updates-disconnected.md) etme
+1. **Ürünler** sekmesinde **Office 365 istemcisi** ' ni seçin ve **sınıflandırmalar** SEKMESINDE **güncelleştirmeler** ' i seçin. [ ![ WSUS 'de Microsoft 365 Apps güncelleştirmeleri için ürünler ve sınıflandırmalar](./media/4065163-o365-updates-product-classification.png)](./media/4065163-o365-updates-product-classification.png#lightbox)
+1. Microsoft 365 uygulamalarının WSUS 'e güncelleştirmelerini almak için **eşitlemeler** 'e gidin ve **Şimdi eşitleme** ' yi seçin.
+1. Eşitleme tamamlandığında, Configuration Manager dağıtmak istemediğiniz Microsoft 365 Apps güncelleştirmelerini reddedin. İndirilmeleri için Microsoft 365 uygulama güncelleştirmelerini onaylamanız gerekmez.  
+   - İstenmeyen Microsoft 365 uygulama güncelleştirmelerinin, WSUS 'ta WsusUtil.exe dışarı aktarma sırasında dışarı aktarılmasını durdurmaz, ancak Offlineupdatedışarı aktarıcı aracının içerikleri karşıdan yüklemesini durdurur.
+   - Offlineupdatedışarı aktarma aracı, Microsoft 365 Apps güncelleştirmelerini sizin için indirir. Bunlar için güncelleştirmeleri dışarı aktarıyorsanız diğer ürünlerin da indirilmek üzere onaylanması gerekir.
+    - WSUS 'ta gereksiz Microsoft 365 Apps güncelleştirmelerini kolayca görmek ve reddetmek için [WSUS 'ta yeni bir güncelleştirme görünümü](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus) oluşturun.
+1. Karşıdan yükleme ve dışarı aktarma için diğer ürün güncelleştirmelerini onayladıysanız, sunucusundaki WSUSContent klasörünün içeriğini WsusUtil.exe dışarı ve kopyalama işlemini çalıştırmadan önce içerik indirmenin tamamlanmasını bekleyin. Daha fazla bilgi için bkz. [bağlantısı kesilmiş bir yazılım güncelleştirme noktasından yazılım güncelleştirmelerini senkronize](synchronize-software-updates-disconnected.md) etme
 
-## <a name="exporting-the-office-365-updates"></a>Office 365 güncelleştirmelerini dışarı aktarma
+## <a name="exporting-the-microsoft-365-apps-updates"></a>Microsoft 365 Apps güncelleştirmelerini dışarı aktarma
 
 1. Offlineupdatedışarı aktarıcı klasörünü Configuration Manager ' dan Internet 'e bağlı WSUS sunucusuna kopyalayın.
-    - Araç ve bağımlılıkları ** &lt;configmgrınstalldir>/Tools/offlineupdatevericisi** dizininde bulunur.
-1. Internet 'e bağlı WSUS sunucusunda bir komut isteminden, aracı şu kullanımla çalıştırın: **Offlineupdatedışarı aktarma. exe-O-D &lt;hedef yolu>**
+    - Araç ve bağımlılıkları ** &lt; configmgrınstalldir>/Tools/offlineupdatevericisi** dizininde bulunur.
+1. Internet 'e bağlı WSUS sunucusunda bir komut isteminden, aracı şu kullanımla çalıştırın: **OfflineUpdateExporter.exe-O-D &lt; hedef yolu>**
 
    |Offlineupdatedışarı aktarıcı parametresi|Açıklama|
    |---|---|
-   |**-O**|  **-Office**. Güncelleştirmeler için ürünü, Office 365 dışa aktarma işlemini belirtir|
+   |**-O**|  **-Office**. Güncelleştirmeler için ürünü belirtir Office 365 veya Microsoft 365 Apps|
    |**-D**|**-Hedef**. Hedef, gerekli bir parametredir ve hedef klasörün tüm yolu gereklidir.|
 
    - **Offlineupdatedışarı aktarma** Aracı şunları yapar:
       - WSUS 'a bağlanır
-      - WSUS 'de Office 365 güncelleştirme meta verilerini okur
-      - İçerik ve Office 365 güncelleştirmelerinin gerektirdiği tüm ek meta verileri hedef klasöre indirir
+      - WSUS 'de Microsoft 365 Apps güncelleştirme meta verilerini okur
+      - Microsoft 365 Apps güncelleştirmelerinin gerektirdiği içeriği ve ek meta verileri hedef klasöre indirir
 
-1. Internet 'e bağlı WSUS sunucusunda komut isteminde, WsusUtil. exe dosyasını içeren klasöre gidin. Araç, varsayılan olarak%*ProgramFiles*% \ Update Services\Tools konumunda bulunur. Örneğin, araç varsayılan konumda bulunuyorsa **cd %ProgramFiles%\Update Services\Tools**yazın.
+1. Internet 'e bağlı WSUS sunucusunda komut isteminde WsusUtil.exe içeren klasöre gidin. Araç, varsayılan olarak%*ProgramFiles*% \ Update Services\Tools konumunda bulunur. Örneğin, araç varsayılan konumda bulunuyorsa **cd %ProgramFiles%\Update Services\Tools**yazın.
    - Windows Server 2012 kullanıyorsanız, [KB2819484](https://support.microsoft.com/help/2819484/cab-file-that-is-exported-by-using-the-wsusutil-exe-command-is-display) WSUS sunucularında yüklü olduğundan emin olun.
    - WsusUtil aracını çalıştıran kullanıcı, sunucuda yerel Yöneticiler grubunun bir üyesi olmalıdır.
 
 1. Yazılım güncelleştirme meta verilerini bir GZIP dosyasına aktarmak için aşağıdakileri yazın:  
 
-    **WsusUtil. exe dışarı aktarma**  *PackageName*  *logfile*  
+    **WsusUtil.exe***PackageName**logfile dosyasını* dışarı aktar      
 
-    Örneğin:  
+    Örnek:  
 
-    **WsusUtil. exe Export Export. xml. gz Export. log**
+    **WsusUtil.exe dışarı aktarma export.xml. gz Export. log**
 
-1. **Dışarı aktarma. xml. gz** dosyasını, bağlantısı kesilen ağda en üst düzey WSUS sunucusuna kopyalayın.
+1. **export.xml. gz** dosyasını, bağlantısı kesilen ağdaki en üst düzey WSUS sunucusuna kopyalayın.
 1. Diğer ürünler için güncelleştirmeleri onayladıysanız, sunucusundaki WSUSContent klasörünün içeriğini üst düzey bağlantısı kesilen WSUS sunucusunun sunucusundaki WSUSContent klasörüne kopyalayın.
 1. **Offlineupdatevericisi** için kullanılan hedef klasörü, bağlantısı kesilen ağdaki en üst düzey Configuration Manager site sunucusuna kopyalayın.
 
-## <a name="import-the-office-365-updates"></a>Office 365 güncelleştirmelerini içeri aktarma
+## <a name="import-the-microsoft-365-apps-updates"></a>Microsoft 365 Apps güncelleştirmelerini içeri aktarma
 
-1. Bağlantısı kesilmiş üst düzey WSUS sunucusunda, internet 'e bağlı WSUS sunucusunda oluşturduğunuz **Export. xml. gz** dosyasından güncelleştirme meta verilerini alın.
+1. Bağlantısı kesilmiş üst düzey WSUS sunucusunda, internet 'e bağlı WSUS sunucusunda oluşturduğunuz **export.xml. gz** ' den güncelleştirme meta verilerini alın.
    
-    Örneğin:  
+    Örnek:  
 
-    **WsusUtil. exe Import Export. xml. gz Import. log**
+    **WsusUtil.exe içeri aktarma export.xml. gz Import. log**
     
-    Varsayılan olarak, WsusUtil. exe aracı%*ProgramFiles*% \ Update Services\Tools konumunda bulunur.
+    Varsayılan olarak, WsusUtil.exe aracı%*ProgramFiles*% \ Update Services\Tools konumunda bulunur.
 
-1. İçeri aktarma işlemi tamamlandıktan sonra, bağlantısı kesik üst düzey Configuration Manager site sunucusunda bir site denetim özelliği yapılandırmanız gerekir. Bu yapılandırma değişikliği noktaları Office 365 içeriğine Configuration Manager. Özelliğin yapılandırmasını değiştirmek için:
+1. İçeri aktarma işlemi tamamlandıktan sonra, bağlantısı kesik üst düzey Configuration Manager site sunucusunda bir site denetim özelliği yapılandırmanız gerekir. Bu yapılandırma değişikliği noktaları Microsoft 365 uygulamalar için içeriğe Configuration Manager. Özelliğin yapılandırmasını değiştirmek için:
    1. [O365OflBaseUrlConfigured PowerShell betiğini](#bkmk_o365_script) en üst düzey bağlantısı kesilen Configuration Manager site sunucusuna kopyalayın.
-   1. `"D:\Office365updates\content"` Office Içeriğini ve Offlineupdatedışarı aktarıcı tarafından oluşturulan meta verileri içeren kopyalanmış dizinin tam yoluna geçin.
+   1. `"D:\Office365updates\content"`Microsoft 365 Apps içeriğini ve Offlineupdateverme tarafından oluşturulan meta verileri içeren kopyalanmış dizinin tam yoluna geçin.
       > [!IMPORTANT]
       > O365OflBaseUrlConfigured özelliği için yalnızca yerel yollar çalışır.
    1. Betiği şu şekilde Kaydet`O365OflBaseUrlConfigured.ps1`
-   1. Bağlantısı kesilmiş üst düzey Configuration Manager site sunucusundaki yükseltilmiş bir PowerShell penceresinden, öğesini çalıştırın `.\O365OflBaseUrlConfigured.ps1`.
+   1. Bağlantısı kesilmiş üst düzey Configuration Manager site sunucusundaki yükseltilmiş bir PowerShell penceresinden, öğesini çalıştırın `.\O365OflBaseUrlConfigured.ps1` .
    1. Site sunucusunda **SMS_Executive** hizmetini yeniden başlatın.
-1. **Configuration Manager** konsolunda, **Yönetim** > **Site yapılandırması** > **siteler**' e gidin.
-1. Üst düzey sitenize sağ tıklayın ve ardından **site bileşenlerini** > Yapılandır**yazılım güncelleştirme noktası**' nı seçin.
+1. **Configuration Manager** konsolunda, **Yönetim**  >  **Site yapılandırması**  >  **siteler**' e gidin.
+1. Üst düzey sitenize sağ tıklayın ve ardından **site bileşenlerini Yapılandır**  >  **yazılım güncelleştirme noktası**' nı seçin.
 1. **Sınıflandırmalar** sekmesinde *güncelleştirmeler*' i seçin. **Ürünler** sekmesinde *Office 365 istemcisi*' ni seçin.
 1. Configuration Manager için [yazılım güncelleştirmelerini eşitler](synchronize-software-updates.md#manually-start-software-updates-synchronization)
-1. Eşitleme tamamlandığında, Office 365 güncelleştirmelerini dağıtmak için normal işleminizi kullanın.
+1. Eşitleme tamamlandığında, Microsoft 365 Apps güncelleştirmelerini dağıtmak için normal işleminizi kullanın.
 
 ## <a name="proxy-configuration"></a><a name="bkmk_O365_ki"></a>Ara sunucu yapılandırması
 
 - Proxy yapılandırması, araçta yerel olarak yerleşik değildir. Proxy, aracın çalıştığı sunucudaki Internet seçeneklerinde ayarlandıysa, teorik olarak kullanılır ve düzgün şekilde çalışır.
-   - Bir komut isteminden, yapılandırılan proxy `netsh winhttp show proxy` 'yi görmek için komutunu çalıştırın.
+   - Bir komut isteminden, `netsh winhttp show proxy` yapılandırılan proxy 'yi görmek için komutunu çalıştırın.
 
 
 

@@ -5,18 +5,18 @@ description: Configuration Manager sürüm 1706 tarafından toplanan tanılama v
 ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 14ee4fb0-7790-45a6-906e-6e55627d4079
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bba298522aaf3e0c77d61a51d0eaf72334bb3a1e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2a634c70d9c182982240d63ac9d6955c56308430
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715567"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128772"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1706-of-configuration-manager"></a>Configuration Manager sürüm 1706 için tanılama kullanım verileri toplama düzeyleri
 
@@ -35,7 +35,7 @@ Configuration Manager sürüm 1706, üç düzeyde tanılama ve kullanım verisi 
 ##  <a name="how-to-change-the-level"></a><a name="bkmk_change"></a> Düzeyi değiştirme
  **Site** nesne sınıfında **değiştirme** izinlerini içeren rol tabanlı yönetim kapsamına sahip yöneticiler, Configuration Manager konsolundaki tanılama ve kullanım verileri ayarlarında toplanan veri düzeyini değiştirebilir.
 
-**Yönetim** > **genel bakış** > **site yapılandırma** > **siteleri**' ne giderek veri toplama düzeyini konsolunun içinden değiştirirsiniz. **Hiyerarşi ayarları**' nı açın ve ardından kullanmak istediğiniz veri düzeyini seçin.  
+**Yönetim**  >  **genel bakış**  >  **site yapılandırma**  >  **siteleri**' ne giderek veri toplama düzeyini konsolunun içinden değiştirirsiniz. **Hiyerarşi ayarları**' nı açın ve ardından kullanmak istediğiniz veri düzeyini seçin.  
 
 
 
@@ -431,7 +431,7 @@ Configuration Manager sürüm 1706 için, bu düzey aşağıdakileri içerir:
 
     - ***[Yeni]*** Komut dosyası sayısı ve istatistikleri Çalıştır
 
-    - Lan 'Da uyandırma (WOL) ile site sayısı
+    - LAN 'da uyandırma (WOL) ile site sayısı
 
     - Raporlama kullanımı ve performans istatistikleri  
 

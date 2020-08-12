@@ -10,12 +10,12 @@ ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 95b8bf41d74e7011eed40116f4fe34e2c356d67e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6c702916f73d1fbc842966161a6958a61d24044a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722840"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126078"
 ---
 # <a name="fundamentals-of-security-for-configuration-manager"></a>Configuration Manager için güvenliğin temelleri
 
@@ -34,7 +34,7 @@ Configuration Manager güvenliği aşağıdaki katmanlardan oluşur:
 - [Windows işletim sistemi ve ağ güvenliği](#bkmk_layer-windows)
 - [Ağ altyapısı: güvenlik duvarları, yetkisiz giriş algılama, ortak anahtar altyapısı (PKI)](#bkmk_layer-network)
 - [Configuration Manager Güvenlik denetimleri](#bkmk_layer-cm)
-- [SMS sağlayıcısı](#bkmk_layer-provider)
+- [site veritabanı](#bkmk_layer-provider)
 - [Site veritabanı izinleri](#bkmk_layer-db)
 
 #### <a name="windows-os-and-network-security"></a><a name="bkmk_layer-windows"></a>Windows işletim sistemi ve ağ güvenliği
@@ -82,7 +82,7 @@ Son güvenlik katmanı, site veritabanındaki nesneler için izinlere dayanır. 
 
  Yönetici, yönetici kullanıcılara ve grup izinlerine *güvenlik rolleri* atar. İzinler, örneğin, istemci ayarları oluşturmak veya değiştirmek için farklı Configuration Manager nesne türlerine bağlanır. 
 
- *Güvenlik kapsamları* , Microsoft Office yükleyen bir uygulama gibi bir yönetici kullanıcının yönetmekle sorumlu olduğu nesnelerin belirli örneklerini gruplar. 
+ *Güvenlik kapsamları* , Microsoft 365 Uygulamaları yükleyen bir uygulama gibi bir yönetici kullanıcının yönetmekle sorumlu olduğu nesnelerin belirli örneklerini gruplar. 
 
  Güvenlik rollerinin, güvenlik kapsamlarının ve koleksiyonların birleşimi, bir yönetici kullanıcının görüntüleyebileceği ve yönetebileceği nesneleri tanımlar. Configuration Manager tipik yönetim görevleri için bazı varsayılan güvenlik rollerini yüklüyor. Belirli iş gereksinimlerinizi desteklemek için kendi güvenlik rollerinizi oluşturun.  
 

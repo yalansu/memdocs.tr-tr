@@ -10,12 +10,12 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a8c975798c506339a981e8648003387dc1e9838
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: a08b74552d5d17a737ec9e1802e10c87621f5b97
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878110"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126367"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 'de Microsoft bağlı önbelleği sorunlarını giderme
 
@@ -36,7 +36,7 @@ Bu davranışı [bir istemcide](#bkmk_verify-client) veya [sunucuda](#bkmk_verif
 
 2. PowerShell 'i açın ve aşağıdaki komutu çalıştırın:`Get-DeliveryOptimizationStatus`
 
-Örneğin:
+Örnek:
 
 ```PowerShell
 PS C:\> Get-DeliveryOptimizationStatus
@@ -137,7 +137,7 @@ Configuration Manager bağlı önbellek bileşenini dağıtım noktasına yükle
 | 0x00D00001 | Bağlı önbellek kurulumu yalnızca Internet Information Services (IIS) yüklenmişse çalıştırılabilir |
 | 0x00D00002 | Bağlı önbellek kurulumu yalnızca sunucuda bir ' varsayılan Web sitesi ' varsa çalıştırılabilir |
 | 0x00D00003 | Uygulama Isteği yönlendirme (ARR) zaten yüklüyse bağlı önbellek yükleyemezsiniz |
-| 0x00D00004 | Bağlı önbellek kurulumu yalnızca uygulama Isteği yönlendirme (ARR), Install. ps1 betiği tarafından yüklendiyse çalıştırılabilir |
+| 0x00D00004 | Bağlı önbellek kurulumu yalnızca uygulama Isteği yönlendirme (ARR), Install.ps1 betiği tarafından yüklendiyse çalıştırılabilir |
 | 0x00D00005 | Bağlı önbellek kurulumu yönetici olarak çalışan bir PowerShell oturumu gerektiriyor |
 | 0x00D00006 | Bağlı önbellek kurulumu yalnızca 64 bitlik bir PowerShell ortamından çalıştırılabilir |
 | 0x00D00007 | Bağlı önbellek kurulumu yalnızca bir Windows Server 'da çalıştırılabilir |
@@ -148,21 +148,21 @@ Configuration Manager bağlı önbellek bileşenini dağıtım noktasına yükle
 | 0x00D0000C | Hata: geçerli bir önbellek sürücüsü boyutu yüzdesi kümesi veya GB cinsinden önbellek sürücüsü boyutu sağlanmalıdır |
 | 0x00D0000D | Hata: geçerli bir önbellek sürücüsü boyutu yüzdesi kümesi ve önbellek sürücüsü boyutu her ikisi de sağlanamaz |
 | 0x00D0000E | Hata: belirtilen önbellek sürücüsü sayısı, belirtilen GB cinsinden önbellek sürücü boyutu sayısıyla aynı olmalıdır |
-| 0x00D0000F | Hata: ApplicationHost. config dosyası $AppHostConfig ' dan yedeklenme $AppHostConfigDestinationName |
-| 0x00D00010 | Hata: varsayılan Web sitesi Web. config dosyası $WebsiteConfigFilePath 'den $WebConfigDestinationName geri yüklenemedi |
-| 0x00D00011 | Hata: SetupARRWebFarm. ps1 içinde bir özel durum oluştu |
-| 0x00D00012 | Hata: SetupARRWebFarmRewriteRules. ps1 içinde bir özel durum oluştu |
-| 0x00D00013 | Hata: SetupARRWebFarmProperties. ps1 içinde bir özel durum oluştu |
-| 0x00D00014 | Hata: SetupAllowableServerVariables. ps1 içinde bir özel durum oluştu |
-| 0x00D00015 | Hata: SetupFirewallRules. ps1 içinde bir özel durum oluştu |
-| 0x00D00016 | Hata: SetupAppPoolProperties. ps1 içinde bir özel durum oluştu |
-| 0x00D00017 | Hata: SetupARROutboundRules. ps1 içinde bir özel durum oluştu |
-| 0x00D00018 | Hata: SetupARRDiskCache. ps1 içinde bir özel durum oluştu |
-| 0x00D00019 | Hata: SetupARRProperties. ps1 içinde bir özel durum oluştu |
-| 0x00D0001A | Hata: SetupARRHealthProbes. ps1 içinde bir özel durum oluştu |
-| 0x00D0001B | Hata: VerifyIISSItesStarted. ps1 içinde bir özel durum oluştu |
-| 0x00D0001C | Hata: SetDrivesToHealthy. ps1 içinde bir özel durum oluştu |
-| 0x00D0001D | Hata: VerifyCacheNodeSetup. ps1 içinde bir özel durum oluştu |
+| 0x00D0000F | Hata: $AppHostConfig applicationhost.config dosya $AppHostConfigDestinationName 'e kaydedilemedi |
+| 0x00D00010 | Hata: $WebsiteConfigFilePath varsayılan Web sitesi web.config dosyası $WebConfigDestinationName 'e yedeklenme başarısız |
+| 0x00D00011 | Hata: SetupARRWebFarm.ps1 bir özel durum oluştu |
+| 0x00D00012 | Hata: SetupARRWebFarmRewriteRules.ps1 bir özel durum oluştu |
+| 0x00D00013 | Hata: SetupARRWebFarmProperties.ps1 bir özel durum oluştu |
+| 0x00D00014 | Hata: SetupAllowableServerVariables.ps1 bir özel durum oluştu |
+| 0x00D00015 | Hata: SetupFirewallRules.ps1 bir özel durum oluştu |
+| 0x00D00016 | Hata: SetupAppPoolProperties.ps1 bir özel durum oluştu |
+| 0x00D00017 | Hata: SetupARROutboundRules.ps1 bir özel durum oluştu |
+| 0x00D00018 | Hata: SetupARRDiskCache.ps1 bir özel durum oluştu |
+| 0x00D00019 | Hata: SetupARRProperties.ps1 bir özel durum oluştu |
+| 0x00D0001A | Hata: SetupARRHealthProbes.ps1 bir özel durum oluştu |
+| 0x00D0001B | Hata: VerifyIISSItesStarted.ps1 bir özel durum oluştu |
+| 0x00D0001C | Hata: SetDrivesToHealthy.ps1 bir özel durum oluştu |
+| 0x00D0001D | Hata: VerifyCacheNodeSetup.ps1 bir özel durum oluştu |
 | 0x00D0001E | Varsayılan Web sitesi 80 bağlantı noktasında değilse bağlı önbellek yükleyemezsiniz |
 | 0x00D0001F | Hata: yüzde cinsinden önbellek sürücüsü ayırma 100 ' i aşamaz |
 | 0x00D00020 | Hata: GB cinsinden önbellek sürücüsü ayırma, sürücünün boş alanını aşamaz |
@@ -223,7 +223,7 @@ DO Cache Server aşağıdaki yeniden yazma kurallarını ekler:
 Her DO önbellek sunucusu için gereken disk alanı, kuruluşunuzun güncelleştirme gereksinimlerine bağlı olarak değişiklik gösterebilir. 100 GB, aşağıdaki içeriği önbelleğe almak için yeterli alan olmalıdır:
 
 - Bir özellik güncelleştirmesi
-- Kaliteli ve Office güncelleştirmelerinin iki ile üç ayı
+- Kaliteli ve Microsoft 365 uygulama güncelleştirmelerinin iki ile üç ayı
 - Microsoft Intune uygulamalar ve Windows gelen kutusu uygulamaları
 
 DO Cache Server çok fazla sistem belleği veya işlemci zamanı tüketmemelidir. DO Cache Server 'ı yükledikten sonra, önemli işlem veya bellek kaynak tüketimine dikkat etmeniz durumunda IIS ve ARR günlük dosyalarını çözümleyin.

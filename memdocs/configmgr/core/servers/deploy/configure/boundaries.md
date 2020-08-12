@@ -2,83 +2,145 @@
 title: Sınırları tanımla
 titleSuffix: Configuration Manager
 description: İntranetinizde, yönetmek istediğiniz cihazları içerebilen ağ konumlarını nasıl tanımlayacağınızı anlayın.
-ms.date: 03/27/2017
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f53088843e0bf42a93c1d959255c7885b07dfe35
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 41c0d08c5f445cd6d643542cfaa646bc2d89de76
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721118"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128435"
 ---
 # <a name="define-network-locations-as-boundaries-for-configuration-manager"></a>Ağ konumlarını Configuration Manager için sınır olarak tanımlayın
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
-Configuration Manager sınırları, ağınızda yönetmek istediğiniz cihazları içeren konumlardır. Bir cihazın açık olduğu sınır Active Directory sitesine veya cihaza yüklü Configuration Manager istemcisiyle tanımlanan ağ IP adresine eşdeğerdir.
-- Tekil sınırları el ile oluşturabilirsiniz. Ancak Configuration Manager, sınır olarak doğrudan bir üst ağ girişini desteklemez. Bunun yerine, IP adres aralığı sınır türünü kullanın.
-- [Active Directory orman bulma](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutForest) YÖNTEMINI her IP alt ağının ve bulduğu Active Directory sitenin sınırlarını otomatik olarak bulmak ve oluşturmak üzere yapılandırabilirsiniz. Active Directory orman keşfi bir Active Directory sitesine atanmış bir üst ağ belirlediğinde Configuration Manager, üst ağı bir IP adresi aralığı sınırına dönüştürür.  
+Configuration Manager sınırları, ağınızda yönetmek istediğiniz cihazları içeren konumlardır. Örneğin, bir Active Directory site veya ağ IP adresi gibi farklı türlerde sınırlar oluşturabilirsiniz. Configuration Manager istemcisi benzer bir ağ konumunu belirlediğinde, bu cihaz sınırın bir parçasıdır.
 
-Bir cihazın Configuration Manager yöneticisinin farkında olmadığı bir IP adresi kullanması yaygın olmayan bir durumdur. Bir cihazın ağ konumu şüpheli olduğunda, cihazdaki **IPCONFIG** komutunu kullanarak cihazın konum olarak ne rapor yaptığını doğrulayın.  
+Configuration Manager aşağıdaki sınır türlerini destekler:
 
-Bir sınır oluşturduğunuzda bu sınır, türüne ve kapsamına göre otomatik olarak adlandırılır. Bu adı değiştiremezsiniz. Bunun yerine, Configuration Manager konsolundaki sınırı tanımlamanızı sağlayacak bir açıklama belirtebilirsiniz.  
+- IP alt ağı
+- Active Directory sitesi
+- IPv6 öneki
+- IP adresi aralığı
+- VPN (sürüm 2006 ' den başlayarak)
 
-Her sınır hiyerarşinizdeki her site tarafından kullanılabilir. Sınır oluşturulduktan sonra, özelliklerini aşağıdaki şekilde değiştirebilirsiniz:  
-- Sınırı bir veya daha fazla sınır grubuna ekleyin.  
-- Sınırın türünü veya kapsamını değiştirin.  
-- Sınır grubu ile hangi site sistem sunucularının (dağıtım noktaları, durum geçiş noktaları ve yönetim noktaları) ilişkili olduğunu görmek için sınır grubunun **Site Sistemleri** sekmesini görüntüleyin.  
+Tek tek sınırları el ile oluşturabilir veya [Active Directory orman keşfi](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutForest)kullanabilirsiniz. Bu bulma yöntemi IP alt ağları ve Active Directory siteleri için sınırları otomatik olarak bulur ve oluşturur. Active Directory orman keşfi bir Active Directory sitesi için bir üst ağ belirlediğinde Configuration Manager, üst ağı bir IP adresi aralığı sınırına dönüştürür.
 
-## <a name="to-create-a-boundary"></a>Sınır oluşturmak için  
+Bir cihaz, beklediğiniz sınırın içinde değilse, ağ konumunu sınır olarak tanımlamadınız olabilir. Bir cihazın ağ konumu şüpheli olduğunda, doğrulamak için cihazda aşağıdaki Windows komutlarını kullanın:
 
-1.  Configuration Manager konsolunda, **Yönetim** > **hiyerarşisi yapılandırma** > **sınırları** ' na tıklayın.  
+- IP adresi:`ipconfig`
+- Active Directory site:`nltest /dsgetsite`
+- SANAL`ipconfig /all`
 
-2.  **Giriş** sekmesinde, **Oluştur** grubunda, **Oluştur Boundary.**'u tıklatın.  
+## <a name="boundary-types"></a>Sınır türleri
 
-3.  Sınır Oluştur iletişim kutusunun **Genel** sekmesinde, sınırı bir kolay adla ve referansla tanımlamak üzere bir **Açıklama** belirtebilirsiniz.  
+### <a name="ip-subnet"></a>IP alt ağı
 
-4.  Bu sınır için bir **Tür** seçin:  
+IP alt ağ sınır türü bir **alt ağ kimliği**gerektiriyor. Örneğin, `169.254.0.0`. **Ağ** (varsayılan ağ geçidi) ve **alt ağ maskesi** değerlerini sağlarsanız, Configuration Manager **alt ağ kimliğini**otomatik olarak hesaplar. Sınırı kaydettiğinizde Configuration Manager yalnızca alt ağ KIMLIĞI değerini kaydeder.
 
-    - **IP Alt Ağı**'nı seçerseniz, bu sınır için bir **Alt Ağ Kimliği** belirtmeniz gerekir.  
-      > [!TIP]  
-      > **Alt Ağ Kimliği** 'nin otomatik olarak belirtilmesi için **Ağ** ve **Alt ağ maskesi** 'ni belirtebilirsiniz. Sınırı kaydettiğinizde yalnızca Alt Ağ Kimliği değeri kaydedilir.  
+> [!NOTE]
+> Configuration Manager, sınır olarak doğrudan bir üst ağ girişini desteklemez. Bunun yerine, IP adres aralığı sınır türünü kullanın.
 
-    - **Active Directory sitesi**öğesini seçerseniz, site sunucusunun yerel ormanında bir Active Directory sitesi belirtmeniz veya **Gözat** ile konumunu göstermeniz gerekir.  
-        
-      - Sınır için bir Active Directory sitesi belirttiğinizde, sınır bu Active Directory sitesinin üyesi olan her IP Alt Ağı'nı içerir. Active Directory sitesinin yapılandırması Active Directory'de değişirse, bu sınırda yer alan ağ konumları da değişir.  
+### <a name="active-directory-site"></a>Active Directory sitesi
 
-      - Active Directory site sınırları, saf AzureAD istemcileri için çalışmaz. Şirket içinde dolaşırsa, yalnızca AD siteleri kullanılarak tanımlanmışsa herhangi bir sınıra düşmez.
+**Active Directory site** sınır türü için, site adını belirtirsiniz. Ad yazabilir veya site sunucusunun yerel ormanına gidebilirsiniz.
 
-    - **IPv6 öneki**'ni seçerseniz, IPv6 öneki biçiminde bir **Önek** belirtmeniz gerekir.  
+Sınır için bir Active Directory sitesi belirttiğinizde, sınır bu Active Directory sitesinin üyesi olan her bir IP alt ağını içerir. Active Directory sitesinin yapılandırması Active Directory'de değişirse, bu sınırda yer alan ağ konumları da değişir.  
 
-    - **IP Adresi Aralığı**'n seçerseniz, bir IP Alt Ağının veya birçok IP Alt Ağının parçasını içeren bir **Başlangıç IP adresi** ve **Bitiş IP adresi** belirtmeniz gerekir.    
+Active Directory site sınırları, bulut etki alanına katılmış cihazlar olarak da adlandırılan saf Azure Active Directory (Azure AD) cihazları için çalışmaz. Şirket içinde dolaşırsa ve yalnızca Active Directory site türü sınırları oluşturuyorsanız, bu cihazlar bir sınır içinde olmayacaktır.
 
-5.  Yeni sınırı kaydetmek için **Tamam** 'ı tıklatın.  
+> [!TIP]
+> Bir cihazın geçerli Active Directory sitesini görmek için aşağıdaki Windows komutunu kullanın: `nltest /dsgetsite` .
+>
+> Bir istemcinin bulut etki alanına katılmış olup olmadığını anlamak için aşağıdaki Windows komutunu kullanın: `dsregcmd /status` . Daha fazla bilgi için bkz. [dsregcmd komutu-cihaz durumu](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd).
 
-## <a name="to-configure-a-boundary"></a>Sınırı yapılandırmak için  
+### <a name="ipv6-prefix"></a>IPv6 öneki
 
-1.  Configuration Manager konsolunda, **Yönetim** > **hiyerarşisi yapılandırma** > **sınırları** ' na tıklayın.  
+**IPv6 öneki** sınır türü Için bir **ön ek**belirtirsiniz. Örneğin, `2001:1111:2222:3333`.
 
-2.  Değiştirmek istediğiniz sınırı seçin.  
+### <a name="ip-address-range"></a>IP adresi aralığı
 
-3.  **Giriş** sekmesinde, **Özellikler** grubunda, **Özellikler**'e tıklayın.  
+**IP adresi aralığı** sınır türü için, Aralık IÇIN **Başlangıç IP ADRESINI** ve **bitiş IP adresini** belirtin. Aralık, bir IP alt ağının veya birden çok IP alt ağının bir parçasını içerebilir. Bir süper ağı desteklemek için bir IP adresi aralığı sınır türü kullanın.
 
-4.  Sınırın **Özellikler** iletişim kutusunda, sınırın **Açıklama** veya **Tür** değerini düzenlemek için **Genel** sekmesini seçin. Bir sınırın kapsamını, sınırın ağ konumlarını düzenleyerek de değiştirebilirsiniz. Örneğin, bir Active Directory sitesi sınırı için yeni bir Active Directory sitesi adı belirtebilirsiniz.  
+Tek bir IP adresi için sınır tanımlamak üzere bu türü de kullanabilirsiniz. Başlangıç ve bitiş IP adreslerini aynı değer olarak ayarlayın. Bu yapılandırma, benzersiz cihazlar veya test ortamları için yararlı olabilir.
 
-5.  Bu sınırla ilişkilendirilmiş site sistemlerini görüntülemek için **Site Sistemleri** sekmesini seçin. Bu yapılandırmayı sınırın özelliklerinden değiştiremezsiniz.  
+### <a name="vpn"></a>VPN
 
-    > [!TIP]  
-    > Bir site sistemi sunucusunun bir sınırda site sistemi olarak listelenmesi için, site sistemi sunucusunun bu sınırı içeren en az bir sınır grubu için site sistem sunucusu olarak ilişkilendirilmesi gerekir. Bu ayar bir sınır grubunun **Başvurular** sekmesinde yapılandırılır.  
+<!--7020519-->
 
-6.  Bu sınır için sınır grubu üyeliğini değiştirmek için **Sınır Grupları** sekmesini seçin:  
+Sürüm 2006 ' den başlayarak, uzak istemcilerin yönetilmesini kolaylaştırmak için VPN 'Ler için bir sınır türü oluşturun. Bir istemci bir konum isteği gönderdiğinde, ağ yapılandırması hakkında ek bilgiler içerir. Bu bilgilere bağlı olarak, sunucu istemcinin VPN üzerinde olup olmadığını belirler. İstemcinin sınırında ilişkilendirilmesi Configuration Manager için cihazı VPN 'ye bağlayın.
 
-    - Bu sınırı bir veya daha fazla sınır grubuna eklemek için, **Ekle**'yi tıklatın, bir veya daha fazla sınır grubunun onay kutusunu seçip **Tamam**'ı tıklatın.  
+VPN sınırını birkaç yolla yapılandırabilirsiniz:
 
-    - Bu sınırı bir sınır grubundan kaldırmak için, sınır grubunu seçip **Kaldır**'ı tıklatın.  
+- **VPN 'Yi otomatik algıla**: Configuration Manager Noktadan Noktaya Tünel Protokolü (PPTP) kullanan HERHANGI bir VPN çözümünü algılar. VPN 'nizi algılamazsa, diğer seçeneklerden birini kullanın. Konsol listesindeki sınır değeri olacaktır `Auto:On` .
 
-7.  Sınır özelliklerini kapatmak ve yapılandırmayı kaydetmek için **Tamam** 'ı tıklatın.  
+- **Bağlantı adı**: cihazdaki VPN bağlantısının adını belirtin. Bu, VPN bağlantısı için Windows 'daki ağ bağdaştırıcısının adıdır. Configuration Manager dizenin ilk 250 karakteriyle eşleşir, ancak joker karakterleri veya kısmi dizeleri desteklemez. Konsol listesindeki sınır değeri `Name:<name>` , burada `<name>` belirttiğiniz bağlantı adıdır.
+
+  Örneğin, `ipconfig` komutu cihazda çalıştırın ve bölümlerden biri ile başlar: `PPP adapter ContosoVPN:` . Dizeyi `ContosoVPN` **bağlantı adı**olarak kullanın. Listede olarak görüntülenir `Name:CONTOSOVPN` .
+
+- **Bağlantı açıklaması**: VPN bağlantısının açıklamasını belirtin. Configuration Manager dizenin ilk 243 karakteriyle eşleşir, ancak joker karakterleri veya kısmi dizeleri desteklemez. Konsol listesindeki sınır değeri `Description:<description>` , burada `<description>` belirttiğiniz bağlantı açıklamasıdır.
+
+  Örneğin, `ipconfig /all` komutu cihazda çalıştırın ve bağlantılardan biri aşağıdaki satırı içerir: `Description . . . . . . . . . . . : ContosoMainVPN` . `ContosoMainVPN` **Bağlantı açıklaması**olarak dizeyi kullanın. Listede olarak görüntülenir `Description:CONTOSOMAINVPN` .
+
+> [!IMPORTANT]
+> Bu özellikten tam olarak yararlanmak için, siteyi güncelleştirdikten sonra istemcileri en son sürüme de güncelleştirin. Site ve konsolu güncelleştirdiğinizde Configuration Manager konsolunda yeni işlevsellik görüntülenir. Tüm senaryo, istemci sürümü de en son olana kadar işlevsel değildir.
+>
+> Bir işletim sistemi dağıtımı sırasında bu VPN sınırını kullanmak için, önyükleme görüntüsünü en son istemci ikili dosyalarını içerecek şekilde güncelleştirdiğinizden emin olun.
+
+## <a name="create-a-boundary"></a>Sınır oluşturma
+
+1. Configuration Manager konsolunda **Yönetim** çalışma alanına gidin, **Hiyerarşi Yapılandırması**' nı genişletin ve **sınırlar** düğümünü seçin.
+
+1. Şeridin **giriş** sekmesinde, **Oluştur** grubunda, **sınır oluştur**' u seçin.
+
+1. **Sınır oluştur** penceresinin **genel** sekmesinde aşağıdaki bilgileri belirtin:
+
+    - **Açıklama**: sınırı, kolay bir ad veya başvuruya göre belirler.
+
+        > [!NOTE]
+        > Configuration Manager, kenarlığını türüne ve kapsamına göre otomatik olarak adlandırır. Adı değiştiremezsiniz.
+
+    - **Tür**: oluşturulacak sınır türünü seçin. Ardından, türün gerektirdiği ek bilgileri belirtin. Daha fazla bilgi için bkz. [sınır türleri](#boundary-types).
+
+1. **Sınır grupları** sekmesine geçin. Sitede zaten sınır grupları varsa, bu yeni sınırı bir veya daha fazla gruba hemen ekleyebilirsiniz.
+
+1. Yeni sınırı kaydetmek için **Tamam ' ı** seçin.
+
+## <a name="configure-a-boundary"></a>Sınır yapılandırma
+
+> [!TIP]
+> Bir sınır oluşturduğunuzda Configuration Manager, sınırın türüne ve kapsamına göre otomatik olarak adlandırır. Bu adı değiştiremezsiniz. Configuration Manager konsolundaki sınırı belirlemesine yardımcı olmak için bir açıklama belirtin.
+
+1. Configuration Manager konsolunda **Yönetim** çalışma alanına gidin, **Hiyerarşi Yapılandırması**' nı genişletin ve **sınırlar** düğümünü seçin.
+
+1. Değiştirmek istediğiniz sınırı seçin. Şeridin **giriş** sekmesinde, **Özellikler** grubunda, **Özellikler**' i seçin.
+
+1. Sınırın **Özellikler** penceresinde, **genel** sekmesinde aşağıdaki ayarları yapılandırabilirsiniz:
+
+    - **Açıklamayı** Düzenle
+    - Sınırın **türünü** değiştirin
+    - Ağ konumlarını düzenleyerek sınırın kapsamını değiştirin. Örneğin, bir Active Directory sitesi sınırı için yeni bir Active Directory sitesi adı belirtebilirsiniz.
+
+1. Bu sınırla ilişkilendirilmiş site sistemlerini görüntülemek için **site sistemleri** sekmesine geçin. Bu yapılandırmayı sınırın özelliklerinden değiştiremezsiniz.
+
+    > [!TIP]
+    > Bir sunucunun bir sınır için site sistemi olarak listelenmesi için, bu sınırı içeren en az bir sınır grubu için site sistem sunucusu olarak ilişkilendirin. Bu yapılandırmayı bir sınır grubunun **Başvurular** sekmesinde yapın. Daha fazla bilgi için bkz. [site atamasını yapılandırma ve site sistemi sunucularını seçme](boundary-group-procedures.md#bkmk_references).
+
+1. Bu sınırın sınır grubu üyeliğini değiştirmek için **sınır grupları** sekmesini seçin:
+
+    - Bu sınırı bir veya daha fazla sınır grubuna eklemek için **Ekle**' yi seçin. Bir veya daha fazla sınır grubu seçin ve ardından **Tamam**' ı seçin.
+
+    - Bu sınırı bir sınır grubundan kaldırmak için, sınır grubunu seçin ve ardından **Kaldır**' ı seçin.
+
+1. Sınır özelliklerini kapatmak ve yapılandırmayı kaydetmek için **Tamam** ' ı seçin.
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+Her sınır hiyerarşinizdeki her site tarafından kullanılabilir. Sınır oluşturduktan sonra sınırı bir veya daha fazla [sınır grubuna](boundary-groups.md)ekleyin.

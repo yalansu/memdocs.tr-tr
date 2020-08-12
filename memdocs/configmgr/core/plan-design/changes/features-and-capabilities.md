@@ -10,12 +10,12 @@ ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5cdd0a9497f07d80813aca5dc169c4d61944e85d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 74b150b5a2157104b6a380489202fd309224a3bb
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722378"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129044"
 ---
 # <a name="features-and-capabilities-of-configuration-manager"></a>Configuration Manager özellikleri ve yetenekleri
 
@@ -37,7 +37,7 @@ Masaüstü analizi, Configuration Manager ile tümleşen bulut tabanlı bir hizm
 
 Bulut yönetimi ağ geçidi, bulut tabanlı dağıtım noktaları ve Azure Active Directory gibi özellikleri kullanarak internet tabanlı istemcileri yönetin.
 
-Daha fazla bilgi için aşağıdaki makalelere bakın:
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 - [İnternetteki istemcileri yönetme](../../clients/manage/manage-clients-internet.md)
 - [Azure AD planlaması](../security/plan-for-security.md#bkmk_planazuread)
@@ -49,7 +49,7 @@ Daha fazla bilgi için aşağıdaki makalelere bakın:
 
 ## <a name="application-management"></a>Uygulama yönetimi
 
-Yönettiğiniz farklı cihazlarda uygulamalar oluşturmanıza, yönetmenize, dağıtmanıza ve izlemenize yardımcı olur. Configuration Manager konsolundan Office 365 ' i dağıtın, güncelleştirin ve yönetin. Ayrıca, bulut tabanlı uygulamalar sunmak için Iş ve eğitimin Microsoft Store Configuration Manager tümleştirilir. Daha fazla bilgi için bkz. [uygulama yönetimine giriş](../../../apps/understand/introduction-to-application-management.md).
+Yönettiğiniz farklı cihazlarda uygulamalar oluşturmanıza, yönetmenize, dağıtmanıza ve izlemenize yardımcı olur. Configuration Manager konsolundan Microsoft 365 uygulamalarını dağıtın, güncelleştirin ve yönetin. Ayrıca, bulut tabanlı uygulamalar sunmak için Iş ve eğitimin Microsoft Store Configuration Manager tümleştirilir. Daha fazla bilgi için bkz. [uygulama yönetimine giriş](../../../apps/understand/introduction-to-application-management.md).
 
 ## <a name="os-deployment"></a>İşletim sistemi dağıtımı
 

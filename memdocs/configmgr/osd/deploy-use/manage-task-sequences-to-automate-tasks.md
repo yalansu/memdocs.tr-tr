@@ -2,20 +2,20 @@
 title: Görev dizilerini yönetme
 titleSuffix: Configuration Manager
 description: Görevlerinizi yönetmek ve ortamınızdaki görevleri otomatikleştirmek için görev dizilerini oluşturun, düzenleyin, dağıtın, içeri aktarın ve dışarı aktarın.
-ms.date: 02/26/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f79829b7cd6ec70764a20fb05f4438176c41b470
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 609f5d010018fa23dd4a533b2f1079f07d8c2283
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591043"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125074"
 ---
 # <a name="manage-task-sequences-to-automate-tasks"></a>Görevleri otomatikleştirmek için görev dizilerini yönetme
 
@@ -40,6 +40,30 @@ Görev Sırası Oluşturma Sihirbazı'nı kullanarak görev sıraları oluşturu
 ## <a name="edit"></a><a name="BKMK_ModifyTaskSequence"></a>Düzenle  
 
 Bir görev dizisini, adımlar ekleyerek veya kaldırarak, grup ekleyerek veya kaldırarak ya da adımların sırasını değiştirerek değiştirebilirsiniz. Daha fazla bilgi için bkz. [görev dizisi düzenleyicisini kullanma](../understand/task-sequence-editor.md).
+
+## <a name="reduce-the-size-of-task-sequence-policy"></a><a name="bkmk_policysize"></a>Görev sırası ilkesi boyutunu azaltma
+
+<!--6982275-->
+Görev dizisi ilkesinin boyutu 32 MB 'yi aşarsa, istemci büyük ilkeyi işleyemez. İstemci daha sonra görev dizisi dağıtımını çalıştıramazsa.
+
+Görev dizisinin site veritabanında depolanan boyutu küçüktür, ancak hala çok büyük olduğunda sorunlara neden olabilir. İstemci, tüm görev sırası ilkesini işlediğinde, genişletilmiş boyut 32 MB üzerinde sorunlara neden olabilir.
+
+Sürüm 2006 ' den başlayarak, istemcilerde 32-MB görev sırası ilke boyutunu denetlemek için [Yönetim öngörülerini](../../core/servers/manage/management-insights.md#operating-system-deployment)kullanın.
+
+Bir görev dizisi dağıtımının genel ilke boyutunu azaltmaya yardımcı olmak için aşağıdaki işlemleri gerçekleştirin:
+
+- İşlevsel kesimleri alt görev dizileri halinde ayırın ve [görev dizisi Çalıştır](../understand/task-sequence-steps.md#child-task-sequence) adımını kullanın. Her görev dizisinin ilke boyutu üzerinde ayrı bir 32 MB sınırı vardır.
+
+    > [!NOTE]
+    > Bir görev dizisindeki adımların ve grupların toplam sayısını azaltmak, ilke boyutu üzerinde en az etkiye sahiptir. Her adım genellikle ilkede birkaç KB 'dir. Bir alt görev dizisine adım grupları taşımak daha etkili olur.
+
+- Görev dizisiyle aynı koleksiyona yapılan dağıtımlardaki yazılım güncelleştirme sayısını azaltın.
+
+- [PowerShell komut dosyası adımını Çalıştır](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript) adımına bir betik girmek yerine, bir paket aracılığıyla başvuru yapın.
+
+- Görev sırası ortamının çalıştığı zaman boyutu için 8 KB 'lik bir sınır vardır. Özel görev dizisi değişkenlerinin kullanımını gözden geçirin. Bu, ilke boyutuna da katkıda bulunabilir.
+
+- Son çare olarak, karmaşık, dinamik bir görev dizisini farklı koleksiyonlara ayrı dağıtımlar ile ayrı görev sıralarına ayırın.
 
 ## <a name="software-center-properties"></a><a name="bkmk_prop-general"></a>Yazılım Merkezi özellikleri
 

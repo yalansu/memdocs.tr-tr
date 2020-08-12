@@ -2,7 +2,7 @@
 title: Sınırları ve sınır gruplarını kullanma
 titleSuffix: Configuration Manager
 description: Yönettiğiniz cihazlar için ağ konumlarını ve erişilebilir site sistemlerini tanımlamak üzere sınırları ve sınır gruplarını kullanın.
-ms.date: 06/18/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 54aa20d5-791e-4416-9db4-5aaea472c0b7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0b1a6bb6ff9fdffad65db884fe8c3b68d3fc3263
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 385dc1b2f542c964b52515e755a9202ee951bc5c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711248"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126384"
 ---
 # <a name="define-site-boundaries-and-boundary-groups"></a>Site sınırlarını ve sınır gruplarını tanımlama
 
@@ -29,6 +29,7 @@ Bir hiyerarşi herhangi bir sayıda sınır grubu içerebilir. Her sınır grubu
 - Active Directory site adı  
 - IPv6 öneki  
 - IP adresi aralığı  
+- VPN (sürüm 2006 ' den başlayarak)
 
 İntranet üzerindeki istemciler, geçerli ağ konumunu değerlendirir ve bu bilgileri ait oldukları sınır gruplarını tanımlamak için kullanır.  
 

@@ -5,17 +5,17 @@ description: Görev dizisi adımını kullanma önerileri Configuration Manager 
 ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 72d1ccd5-3763-4f88-9273-e1a73e8f4286
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6528e979222bc6ecea2a57a003ff5266b5c096c5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2c5fdc15ba05786c25361c394bc0aa8dc305d666
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719998"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124262"
 ---
 # <a name="install-software-updates"></a>Yazılım Güncelleştirmelerini Yükle
 
@@ -74,7 +74,7 @@ Görüntüleme işleminizi tasarlarken, yazılım güncelleştirmelerinin yükle
 
 Bu işlemle ilgili daha fazla bilgi için bkz. bir [işletim sistemini yakalamak için görev dizisi oluşturma](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md).
 
-#### <a name="advantages"></a>Yararları
+#### <a name="advantages"></a>Avantajlar
 
 - Dağıtım sırasında zaman ve bant genişliğini kaydeden, istemci başına dağıtım zamanında uygulanacak daha az güncelleştirme
 - Yeniden başlatmalar nedeniyle endişelenmeye yönelik daha az güncelleştirme
@@ -94,7 +94,7 @@ Resimlerinize yazılım güncelleştirmeleri uygulamak için Configuration Manag
 
 Daha fazla bilgi için bkz. [bir görüntüye yazılım güncelleştirmelerini uygulama](../get-started/manage-operating-system-images.md#BKMK_OSImagesApplyUpdates).
 
-#### <a name="advantages"></a>Yararları
+#### <a name="advantages"></a>Avantajlar
 
 - Dağıtım sırasında zaman ve bant genişliğini kaydeden, istemci başına dağıtım zamanında uygulanacak daha az güncelleştirme
 - Yeniden başlatmalar nedeniyle endişelenmeye yönelik daha az güncelleştirme
@@ -104,7 +104,7 @@ Daha fazla bilgi için bkz. [bir görüntüye yazılım güncelleştirmelerini u
 
 - Güncelleştirmelerin el ile seçimi
 - Görüntüyü dağıtım noktalarına dağıtmak için artırılan süre
-- Yalnızca CBS tabanlı güncelleştirmeleri destekler. Office güncelleştirmeleri uygulanamıyor
+- Yalnızca CBS tabanlı güncelleştirmeleri destekler. Microsoft 365 Apps güncelleştirmeleri uygulanamıyor
 
 > [!Tip]  
 > PowerShell kullanarak yazılım güncelleştirmelerinin seçimini otomatikleştirebilirsiniz. Güncelleştirmelerin listesini almak için [Get-CMSoftwareUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) cmdlet 'ini kullanın. Ardından, çevrimdışı bakım zamanlamasını oluşturmak için [New-Cmoperatingsystemımageupdateschedule](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) cmdlet 'ini kullanın. Aşağıdaki örnek, bu eylemi otomatikleştirmek için bir yöntemi gösterir:
@@ -127,7 +127,7 @@ Daha fazla bilgi için bkz. [bir görüntüye yazılım güncelleştirmelerini u
 
 Dağıtım görev dizilerinizdeki varsayılan Windows Install. wim görüntü dosyasını kullanın.
 
-#### <a name="advantages"></a>Yararları
+#### <a name="advantages"></a>Avantajlar
 
 - Olası bir sorun olarak görüntü bozulması riskini azaltan bilinen bir iyi kaynak
 - Olası bir sorun olarak görüntüdeki değişiklikleri ortadan kaldırır
@@ -207,7 +207,7 @@ Bu adımla ilgili sorunları gidermenize yardımcı olması için aşağıdaki k
 
 - Yazılım güncelleştirme yönetimi sürecini gidermenize yardımcı olması için bkz. [yazılım güncelleştirmesi yönetimi sorun giderme](https://support.microsoft.com/help/10680/software-update-management-troubleshooting-in-configuration-manager).  
 
-- Genel performansı artırmaya yardımcı olmak için, yazılım güncelleştirme kataloğunun boyutunu küçültün. Örneğin:  
+- Genel performansı artırmaya yardımcı olmak için, yazılım güncelleştirme kataloğunun boyutunu küçültün. Örnek:  
 
     - Gereksiz sınıflandırmaları, ürünleri ve dilleri kaldırın. Daha fazla bilgi için bkz. [eşitlenmek için sınıflandırmaları ve ürünleri yapılandırma](../../sum/get-started/configure-classifications-and-products.md).  
 

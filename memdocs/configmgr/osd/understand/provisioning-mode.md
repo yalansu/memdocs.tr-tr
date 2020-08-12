@@ -5,17 +5,17 @@ description: Configuration Manager görev sırası sırasında istemci sağlama 
 ms.date: 05/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 3e3ff3a4-7a75-41bb-bdf9-33ede9c0e3a3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 815b32ecf7e9cd315c2365cb5ed73004b2a48718
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b0039648c6f444efdbbaeb16f55d29b630ee7f16
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723953"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124279"
 ---
 # <a name="provisioning-mode"></a>Sağlama modu
 
@@ -42,9 +42,9 @@ Invoke-WmiMethod -Namespace root\CCM -Class SMS_Client -Name SetClientProvisioni
 
 Sürüm 1902 ' den başlayarak, görev dizisi istemciyi sağlama moduna koyarken bir zaman damgası ayarlar. Sağlama modundaki bir istemci her 60 dakikada bir zaman damgasından bu yana süreyi denetler. 48 saatten uzun bir süredir sağlama modundayken istemci, sağlama modundan otomatik olarak çıkar ve işlemini yeniden başlatır.
 
-48 saat, varsayılan sağlama modu zaman aşımı değeridir. Aşağıdaki kayıt defteri anahtarında **Provisioningmaxminutes** değerini ayarlayarak bir cihazda bu zamanlayıcıyı ayarlayabilirsiniz: `HKLM\Software\Microsoft\CCM\CcmExec`. Bu değer yoksa veya ise `0`, istemci varsayılan 48 saati kullanır.
+48 saat, varsayılan sağlama modu zaman aşımı değeridir. Aşağıdaki kayıt defteri anahtarında **Provisioningmaxminutes** değerini ayarlayarak bir cihazda bu zamanlayıcıyı ayarlayabilirsiniz: `HKLM\Software\Microsoft\CCM\CcmExec` . Bu değer yoksa veya ise `0` , istemci varsayılan 48 saati kullanır.
 
-Zaman damgası **Provisioningenabledtime** şu kayıt defteri anahtarında bulunuyor: `HKLM\Software\Microsoft\CCM\CcmExec`. Zaman damgası, makinenin en son sağlama moduna girdiği bir değere sahiptir. Biçim, dönem (Unix zaman damgası) ve UTC biçimindedir.
+Zaman damgası **Provisioningenabledtime** şu kayıt defteri anahtarında bulunuyor: `HKLM\Software\Microsoft\CCM\CcmExec` . Zaman damgası, makinenin en son sağlama moduna girdiği bir değere sahiptir. Biçim, dönem (Unix zaman damgası) ve UTC biçimindedir.
 
 Bu zaman damgası Ayrıca, aşağıdaki komutu kullanarak makineyi sağlama moduna el ile yerleştirdiğinizde geçerli saate sıfırlanır:
 

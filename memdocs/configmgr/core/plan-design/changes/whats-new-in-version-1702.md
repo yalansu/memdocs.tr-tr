@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fa29c1b2474d6a0a42b7ff8e3624a3ec8d6a090e
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: f2486e838e01415786e24c077af1997b3dfb7638
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912303"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129078"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Sürüm 1702 ' deki yenilikler&#39;Configuration Manager
 
@@ -121,7 +121,7 @@ Ayrıca, raporlama noktanlarınıza üç yeni rapor eklenir. Bu raporları, hang
 Microsoft Azure Kamu buluttaki OMS Log Analytics bağlanmak için OMS bağlayıcısını kullanabilirsiniz. Bu, bağlayıcının kamu bulutuyla çalışabilmesi için OMS bağlayıcısını yüklemeden önce bir yapılandırma dosyasını değiştirmenizi gerektirir. Daha fazla bilgi için bkz. [Azure Kamu Bulutu Ile OMS bağlayıcısını kullanma](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm).
 
 ### <a name="software-update-points-are-added-to-boundary-groups"></a>Yazılım güncelleştirme noktaları sınır gruplarına eklenir
-Sürüm 1702 ' den başlayarak, istemciler yeni bir yazılım güncelleştirme noktası bulmak için sınır grupları kullanır ve geçerli biri artık erişilebilir değilse yeni bir yazılım güncelleştirme noktası bulur. Bir istemcinin bulabileceği sunucuları denetlemek için, farklı sınır gruplarına bireysel yazılım güncelleştirme noktaları ekleyebilirsiniz. Daha fazla bilgi için, [sınır gruplarını yapılandırma](../../servers/deploy/configure/boundary-groups.md) konusundaki [yazılım güncelleştirme noktaları](../../servers/deploy/configure/boundary-groups.md#software-update-points) konusuna bakın.
+Sürüm 1702 ' den başlayarak, istemciler yeni bir yazılım güncelleştirme noktası bulmak için sınır grupları kullanır ve geçerli biri artık erişilebilir değilse yeni bir yazılım güncelleştirme noktası bulur. Bir istemcinin bulabileceği sunucuları denetlemek için, farklı sınır gruplarına bireysel yazılım güncelleştirme noktaları ekleyebilirsiniz. Daha fazla bilgi için, [sınır gruplarını yapılandırma](../../servers/deploy/configure/boundary-groups.md) konusundaki [yazılım güncelleştirme noktaları](../../servers/deploy/configure/boundary-groups.md#bkmk_sup) konusuna bakın.
 
 
 <!-- ## Migration  -->
@@ -221,7 +221,7 @@ Bu sürümden itibaren, Windows ADK sürümünü yükselttiğinizde ve sonra Con
 ## <a name="software-updates"></a>Yazılım güncelleştirmeleri
 
 ### <a name="deploy-office-365-apps-to-clients"></a>İstemcilere Office 365 uygulamalarını dağıtma
-Sürüm 1702 ' den başlayarak, Office 365 Istemci yönetimi panosundan Office 365 yükleme ayarlarını yapılandırmanıza, Office Içerik teslim ağlarından (CDNs) dosya yüklemenize ve dosyaları Configuration Manager bir uygulama olarak dağıtmanıza olanak sağlayan Office 365 yükleyicisini başlatabilirsiniz. Ayrıntılar için bkz. [Office 365 ProPlus güncelleştirmelerini yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+Sürüm 1702 ' den başlayarak, Office 365 Istemci yönetimi panosundan Office 365 yükleme ayarlarını yapılandırmanıza, Office Içerik teslim ağlarından (CDNs) dosya yüklemenize ve dosyaları Configuration Manager bir uygulama olarak dağıtmanıza olanak sağlayan Office 365 yükleyicisini başlatabilirsiniz. Ayrıntılar için bkz. [Office 365 ProPlus güncelleştirmelerini yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy).
 
 > [!IMPORTANT]
 > Configuration Manager ' de Office 365 uygulama Sihirbazı 'Nı kullanarak oluşturduğunuz ve dağıttığınız Office 365 uygulaması, **office 365 Istemci yeniden** yazılım güncelleştirmeleri istemci Aracısı ayarının yönetimini etkinleştirerek Configuration Manager tarafından otomatik olarak yönetilmez. Ayrıntılar için bkz. [istemci ayarları hakkında](../../clients/deploy/about-client-settings.md).
@@ -274,13 +274,13 @@ Artık, lisanslanan uygulamaları cihazlara ve kullanıcılara dağıtabilirsini
 | Configuration Manager sürümü | Uygulama, cihaz lisansını destekliyor mu? | Dağıtım koleksiyonu türü | Talep edilen lisans |
 | ----------------------------- | ------------------------------ | -------------------------- | --------------- |
 |1702 öncesi|Evet|Kullanıcı|Kullanıcı Lisansı|
-|1702 öncesi|Hayır|Kullanıcı|Kullanıcı Lisansı|
+|1702 öncesi|No|Kullanıcı|Kullanıcı Lisansı|
 |1702 öncesi|Evet|Cihaz|Kullanıcı Lisansı|
-|1702 öncesi|Hayır|Cihaz|Kullanıcı Lisansı|
+|1702 öncesi|No|Cihaz|Kullanıcı Lisansı|
 |1702 ve üzeri|Evet|Kullanıcı|Kullanıcı Lisansı|
-|1702 ve üzeri|Hayır|Kullanıcı|Kullanıcı Lisansı|
+|1702 ve üzeri|No|Kullanıcı|Kullanıcı Lisansı|
 |1702 ve üzeri|Evet|Cihaz|Cihaz lisansı|
-|1702 ve üzeri|Hayır|Cihaz|Kullanıcı Lisansı|
+|1702 ve üzeri|No|Cihaz|Kullanıcı Lisansı|
 
 ### <a name="support-for-ios-volume-purchase-program-for-education"></a>Eğitim için iOS toplu satın alma programı desteği
 

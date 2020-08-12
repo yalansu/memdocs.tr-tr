@@ -10,12 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 1aae76845d18d8191b6f773df5491d3a144940c1
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d28638cdf332adbb1d57526179222bb96d6d5c92
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713810"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128078"
 ---
 # <a name="introduction-to-reporting-in-configuration-manager"></a>Configuration Manager 'de raporlamaya giriş
 
@@ -93,11 +93,11 @@ Bir raporu çalıştırdığınızda, istem gerekli bir parametre için bir değ
 
 Configuration Manager rapor bağlantıları, ek verilere kolay erişim sağlamak için bir kaynak raporda kullanılır. Örneğin, kaynak rapordaki her bir öğe hakkında daha ayrıntılı bilgilere bağlantı verebilir. Hedef rapor, bir veya daha fazla istemin çalıştırılmasını gerektiriyorsa, kaynak raporun her bir istem için uygun değerler bulunan bir sütun içermesi gerekir.
 
-Bağlantının, istem değeri ile sütun numarasını belirtmesi gerekir. Örneğin:
+Bağlantının, istem değeri ile sütun numarasını belirtmesi gerekir. Örnek:
 
 - Sitenin yakın zamanda bulduğu bilgisayarları listeleyen bir rapor vardır.
 - Belirli bir bilgisayar için sitenin aldığı son iletileri listeleyen başka bir rapora bağlarsınız.
-- Bağlantıyı oluşturun ve kaynak raporundaki bu sütunun `2` bilgisayar adını içerdiğini belirtin. Bu değer, hedef rapor için gerekli bir istem.
+- Bağlantıyı oluşturun ve `2` kaynak raporundaki bu sütunun bilgisayar adını içerdiğini belirtin. Bu değer, hedef rapor için gerekli bir istem.
 - Kaynak raporu çalıştırırsanız, her veri satırının solunda bir bağlantı simgesi görüntülenir.
 - Bir satırda simgeyi seçersiniz ve rapor Görüntüleyicisi bu satır için belirtilen sütundaki değeri hedef raporun istem değeri olarak geçirir.
 
@@ -124,7 +124,7 @@ Raporlama Hizmetleri tabanlı raporlar için Configuration Manager, model tabanl
 
  Rapor Oluşturucu yüklemesi, 20'den fazla dil için destek getirir. Rapor Oluşturucusu çalıştırdığınızda, verileri yerel bilgisayarın işletim sisteminin dilinde görüntüler. Rapor Oluşturucusu dili desteklemiyorsa, verileri Ingilizce olarak görüntüler. Rapor Oluşturucusu, aşağıdaki özellikleri içeren SQL Server Reporting Services tam yeteneklerini destekler:
 
-- Microsoft Office ile benzer bir görünümde, sezgisel bir rapor yazma ortamı sağlar.  
+- Microsoft 365 uygulamalarına benzer bir görünümle, sezgisel bir rapor yazma ortamı sunar.  
 
 - SQL Server rapor tanım dili 'nin (RDL) esnek rapor yerleşimini sunar.  
 

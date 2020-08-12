@@ -10,12 +10,12 @@ ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0665c6378ac81d6f6f254501760647048ce66b0b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4e43f5a36f2a1bf44959b9645c2fb48a22cc71f1
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714356"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126782"
 ---
 # <a name="introduction-to-collections-in-configuration-manager"></a>Configuration Manager içindeki koleksiyonlara giriş
 
@@ -34,11 +34,11 @@ Koleksiyon kullanımına ilişkin bazı örnekler aşağıda verilmiştir:
 |İşlem|Örnek|  
 |---------|-------|  
 |Kaynakları gruplandırma|Kaynakları, kuruluşunuzun hiyerarşisine göre gruplandıran koleksiyonlar oluşturabilirsiniz.<br /><br /> Örneğin, "Londra genel merkezleri" Active Directory kuruluş birimi 'nde (OU) tüm bilgisayarların bir koleksiyonunu oluşturabilirsiniz. Bu tür bir koleksiyonun nasıl oluşturulacağı hakkında daha fazla bilgi için bkz. [koleksiyonları oluşturma](../../../../core/clients/manage/collections/create-collections.md).<br /><br /> Bu koleksiyonu, Endpoint Protection ayarlarını yapılandırma, cihaz güç yönetimi ayarlarını yapılandırma veya Configuration Manager istemcisini yükleme gibi işlemler için kullanabilirsiniz.|  
-|Uygulama dağıtımı|Microsoft Office 2013 yüklü olmayan tüm bilgisayarların bir koleksiyonunu oluşturabilir ve ardından bu koleksiyondaki tüm bilgisayarlara dağıtabilirsiniz.<br /><br /> Bu görevi gerçekleştirmek için uygulama gereksinimlerini de kullanabilirsiniz. Daha fazla bilgi için bkz. [Configuration Manager ile uygulama oluşturma](../../../../apps/deploy-use/create-applications.md).|  
+|Uygulama dağıtımı|Microsoft Microsoft 365 uygulamalarının yüklü olmadığı tüm bilgisayarların bir koleksiyonunu oluşturabilir ve ardından bu koleksiyondaki tüm bilgisayarlara dağıtabilirsiniz.<br /><br /> Bu görevi gerçekleştirmek için uygulama gereksinimlerini de kullanabilirsiniz. Daha fazla bilgi için bkz. [Configuration Manager ile uygulama oluşturma](../../../../apps/deploy-use/create-applications.md).|  
 |[İstemci ayarlarını yönetme](../../../../core/clients/deploy/about-client-settings.md)|Configuration Manager’daki varsayılan istemci ayarları tüm cihazlar ve tüm kullanıcılar için geçerli olsa da, bir cihaz koleksiyonu veya kullanıcı koleksiyonu için geçerli olan özel istemci ayarları oluşturabilirsiniz.<br /><br /> Örneğin, bir kaç cihazda Uzaktan denetimin kullanılabilir olmasını istiyorsanız, varsayılan istemci ayarlarını uzaktan denetime izin verecek şekilde yapılandırın ve ardından uzaktan denetime izin verilmeyen özel istemci ayarlarını yapılandırın ve bunları olağanüstü istemciler koleksiyonuna dağıtın. |  
 |[Güç yönetimi](../power/introduction-to-power-management.md)|Her koleksiyon için belirli güç ayarlarını yapılandırabilirsiniz.|  
 |[Rol tabanlı yönetim](../../../../core/servers/deploy/configure/configure-role-based-administration.md)|Configuration Manager konsolundaki çeşitli işlevlere hangi kullanıcı gruplarının erişebileceğini denetlemek için koleksiyonları kullanın.|  
-|[Bakım Pencereleri](../../../../core/clients/manage/collections/use-maintenance-windows.md)|Bakım pencereleri ile bir cihaz koleksiyonu üyelerinde çeşitli Configuration Manager işlemleri gerçekleştirilebilse de bir zaman aralığı tanımlayabilirsiniz. |  
+|[Bakım pencereleri](../../../../core/clients/manage/collections/use-maintenance-windows.md)|Bakım pencereleri ile bir cihaz koleksiyonu üyelerinde çeşitli Configuration Manager işlemleri gerçekleştirilebilse de bir zaman aralığı tanımlayabilirsiniz. |  
 
 
 ## <a name="collection-types-in-configuration-manager"></a>Configuration Manager'da koleksiyon türleri  

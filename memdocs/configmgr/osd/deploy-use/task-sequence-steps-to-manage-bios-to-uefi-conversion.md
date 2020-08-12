@@ -5,17 +5,17 @@ description: Bir işletim sistemi dağıtımı görev dizisini, UEFı 'ye geçi�
 ms.date: 05/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0118dd448520a6f0c21bfeea5f8509bd8e49fd46
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 761270fe9419330e2d60d0483554ee6c932c1b26
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429361"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124894"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>BIOS’tan UEFI’ye dönüştürmeyi yönetmek için görev sırası adımları
 
@@ -89,9 +89,9 @@ Windows 10, **MBR2GPT**basit bir dönüştürme aracı içerir. Bu işlem, UEFı
     1. **Komut satırını Çalıştır** adımını ekleyin. MBR2GPT aracı için komut satırını belirtin. Tam işletim sisteminde çalıştırıldığında, verileri değiştirmek veya silmek zorunda kalmadan diski MBR 'den GPT 'ye eklemek için yapılandırın. **Komut satırı**' nda, aşağıdaki komutu girin:`MBR2GPT.exe /convert /disk:0 /AllowFullOS`
 
     > [!TIP]
-    > MBR2GPT çalıştırmayı da tercih edebilirsiniz. Tam işletim sistemi yerine Windows PE 'de olduğunda EXE aracı. MBR2GPT çalıştırma adımından önce bilgisayarı Windows PE 'ye yeniden başlatmak için bir adım ekleyin. EXE aracı. Ardından komut satırından **/Allowfullos** seçeneğini kaldırın.
+    > Ayrıca, tüm işletim sistemi yerine Windows PE 'de MBR2GPT.EXE aracını çalıştırmayı da seçebilirsiniz. MBR2GPT.EXE aracını çalıştırma adımından önce bilgisayarı Windows PE 'ye yeniden başlatmak için bir adım ekleyin. Ardından komut satırından **/Allowfullos** seçeneğini kaldırın.
 
-    Araç ve kullanılabilir seçenekler hakkında daha fazla bilgi için bkz [. MBR2GPT. EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt).
+    Araç ve kullanılabilir seçenekler hakkında daha fazla bilgi için bkz. [MBR2GPT.EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt).
 
     1. Yazılım yazılımını BIOS 'tan UEFı 'ye dönüştüren OEM aracını çalıştırmak için bir adım ekleyin. Bu adım genellikle, OEM aracını çalıştırmak için komut satırı ile birlikte komut satırını **çalıştırır**.
 

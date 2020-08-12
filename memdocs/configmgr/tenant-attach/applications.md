@@ -2,7 +2,7 @@
 title: Yönetim merkezinde kiracı iliştirme-uygulamalar (Önizleme)
 titleSuffix: Configuration Manager
 description: Yönetim merkezinden karşıya yüklenen Configuration Manager cihazları için uygulama yükleme.
-ms.date: 08/10/2020
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,12 +10,12 @@ ms.assetid: 963dda08-87b8-4e80-90a7-25625efe8861
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: c82feac1b9c841d90be66989c220c7b528597b7d
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: ca71d40b29a9dcd9c239ccd06a8a28321f50f62c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88057602"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127687"
 ---
 # <a name="tenant-attach-install-an-application-from-the-admin-center-preview"></a><a name="bkmk_apps"></a>Kiracı iliştirme: yönetim merkezinden bir uygulama yükler (Önizleme)
 <!--cm 6024389, in 7220536 pubpreview Aug 10, 2020-->
@@ -28,13 +28,18 @@ Microsoft Uç Nokta Yöneticisi, tüm cihazlarınızı yönetmek için tümleşi
 
    :::image type="content" source="media/6024389-tenant-attach-application-list.png" alt-text="Microsoft Endpoint Manager Yönetim Merkezi 'ndeki uygulamalar" lightbox="media/6024389-tenant-attach-application-list.png":::
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - [Kiracı iliştirme önkoşulları: ConfigMgr istemci ayrıntıları](client-details.md#prerequisites).
 - [Microsoft uç noktası Configuration Manager sürüm 2002](https://support.microsoft.com/help/4560496/) ve ilgili konsolun yüklü sürümü Için güncelleştirme paketi
 - İsteğe bağlı özelliği **cihaz başına Kullanıcı için uygulama Isteklerini Onayla**' yı etkinleştirin. Daha fazla bilgi için, bkz. [Enable optional features from updates](../core/servers/manage/install-in-console-updates.md#bkmk_options).
 - Yönetici ile bir cihaz koleksiyonuna dağıtılan en az bir uygulamanın, dağıtımda ayarlanan **cihaz seçeneğinde bu uygulama için bir isteği onaylaması gerekir** . Daha fazla bilgi için bkz. [uygulamaları onaylama](../apps/deploy-use/app-approval.md#bkmk_opt).
    - Onay seçenek kümesi olmayan kullanıcı hedefli uygulamalar veya uygulamalar, Configuration Manager sürüm 2002 ' i kullanırken uygulama listesinde görünmez.
+
+Ayrıca, [Kullanıcı hedefli uygulamaları](#bkmk_user)yüklemek için aşağıdakiler gerekir:<!--7518897-->
+
+- Configuration Manager sürüm 2006 ve ilgili konsolun yüklü sürümü.
+
 
 ## <a name="permissions"></a>İzinler
 
@@ -72,7 +77,16 @@ Durum temelinde uygulama listesini filtreleyebilirsiniz. Uygulama durumu aşağ�
 - **Başarısız**: uygulama yüklemesi başarısız oldu.
 - **Gereksinimler Karşılanmadı**: uygulama gereksinimleri karşılanmadı.
 - **Yüklü değil**: uygulama şu anda yüklü değil. Genellikle bu durum, farklı bir dağıtım veya Kullanıcı uygulamayı kaldırmışsa görülür.
+- **Yeniden başlatma bekliyor**: uygulama yüklendi, ancak tamamlanmak için yeniden başlatma gerekiyor (sürüm 2006 ' den başlayarak).
 
+## <a name="deploy-an-application-to-a-user"></a><a name="bkmk_user"></a>Kullanıcıya uygulama dağıtma
+<!--7518897-->
+Configuration Manager sürüm 2006 ' den başlayarak, Kullanıcı tarafından kullanılabilir uygulamalar ConfigMgr cihazının **uygulamalar** düğümünde görünür. Cihaz için kullanılabilen uygulamaların listesi, cihazın Şu anda oturum açmış olan kullanıcısına dağıtılan uygulamalar da içerir.
+
+Bir kullanıcıya uygulama dağıtmak aşağıdaki sınırlamalara sahiptir:
+- Çoklu Kullanıcı oturum senaryoları desteklenmez.
+- Azure AD 'ye katılmış cihazlar şu anda desteklenmiyor.
+   - Hem etki alanına katılmış hem de Azure AD 'ye katılmış cihazlar desteklenir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

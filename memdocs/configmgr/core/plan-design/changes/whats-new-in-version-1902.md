@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4972f6e8689ad44dbd1a19adcde104cd5f59038c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c192db8ccab336d05ef965e837fe17fc16a19200
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719361"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128942"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1902 ' deki yenilikler
 
@@ -121,7 +121,7 @@ Daha fazla bilgi için bkz. [CMG hiyerarşi tasarımı](../../clients/manage/cmg
 <!--3610960-->
 Configuration Manager artık hiyerarşide merkezi yönetim sitesinden CMPivot çalıştırılmasını desteklemektedir. Birincil site, istemci iletişimini hala işler. Merkezi yönetim sitesinden CMPivot çalıştırılırken, yüksek hızlı ileti abonelik kanalının birincil sitesiyle iletişim kurar. Bu iletişim, siteler arasında standart SQL çoğaltmasına bağlı değildir.
 
-Daha fazla bilgi için bkz. [CMPivot for Real Time Data](../../servers/manage/cmpivot.md#bkmk_cmpivot1902).
+Daha fazla bilgi için bkz. [CMPivot for Real Time Data](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1902).
 
 ### <a name="edit-or-copy-powershell-scripts"></a>PowerShell betikleri düzenleme veya kopyalama
 
@@ -224,7 +224,7 @@ Bu sürüm, görev sırası medyasını daha iyi oluşturup yönetmenize yardım
 
 Görev sırası medyası oluşturduğunuzda, artık sitenin geçici veri depolaması için kullandığı konumu özelleştirin. Bu işlem, çok fazla sayıda geçici sürücü alanı gerektirebilir. Bu değişiklik, bu geçici dosyaları nerede depolayabileceğiniz hakkında daha fazla esneklik sağlar.
 
-**Görev sırası medyası oluşturma Sihirbazı**'Nda, **hazırlama klasörü**için bir konum belirtin. Varsayılan olarak, bu konum şu yola benzer: `%UserProfile%\AppData\Local\Temp`.
+**Görev sırası medyası oluşturma Sihirbazı**'Nda, **hazırlama klasörü**için bir konum belirtin. Varsayılan olarak, bu konum şu yola benzer: `%UserProfile%\AppData\Local\Temp` .
 
 #### <a name="add-a-label-to-the-media"></a>Medyaya bir etiket ekleyin
 
@@ -413,7 +413,7 @@ Orta Batı yönetim Zirvesi sürüm 2018 ' de müşteri geri bildirimlerine bağ
 - Görünümler, **izleme** çalışma alanının **dağıtımlar** düğümündeki tamsayı değerlerine göre sıralanır
 - Uyarıyı çok sayıda sonuç için taşıma
 
-Daha fazla bilgi için, bkz. [Configuration Manager konsolunu kullanma](../../servers/manage/admin-console.md#tips).
+Daha fazla bilgi için bkz. [Configuration Manager konsol ipuçları](../../servers/manage/admin-console-tips.md).
 
 ### <a name="configuration-manager-console-notifications"></a>Configuration Manager konsol bildirimleri
 
@@ -425,7 +425,7 @@ Uygun eylemi gerçekleştirebileceğiniz için daha iyi bilgilendirilmek için C
 
 Bu bildirim, şeridin altındaki konsol penceresinin en üstünde yer aldığı bir çubukdur. Configuration Manager güncelleştirmeler kullanılabilir olduğunda önceki deneyimin yerini alır. Bu konsol içi bildirimlerde hala kritik bilgiler görüntülenir, ancak konsolda çalışmalarınız kesintiye uğramaz. Kritik bildirimleri yok sayabilirsiniz. Konsol, tüm bildirimleri başlık çubuğunun yeni bir bildirim alanında görüntüler.
 
-Daha fazla bilgi için, bkz. [Configuration Manager konsolunu kullanma](../../servers/manage/admin-console.md).
+Daha fazla bilgi için bkz. [Configuration Manager konsol bildirimleri](../../servers/manage/admin-console-notifications.md).
 
 ### <a name="confirmation-of-console-feedback"></a>Konsol geri bildirimi onayı
 
@@ -453,7 +453,7 @@ Daha fazla bilgi için, bkz. [Configuration Manager konsolunu kullanma](../../se
 <!--3600878-->
 Artık Configuration Manager konsolunun bir cihaz görünümünde bir MAC adresi araması yapabilirsiniz. Bu özellik, PXE tabanlı dağıtımlarda sorun giderirken işletim sistemi dağıtımı yöneticileri için yararlıdır. Cihazların listesini görüntülediğinizde, **Mac adresi** sütununu görünüme ekleyin. **Mac adresi** arama ölçütlerini eklemek için arama alanını kullanın.
 
-Daha fazla bilgi için, bkz. [Configuration Manager konsolunu kullanma](../../servers/manage/admin-console.md#tips).
+Daha fazla bilgi için bkz. [Configuration Manager konsol ipuçları](../../servers/manage/admin-console-tips.md).
 
 ### <a name="use-net-47-for-improved-console-accessibility"></a>Geliştirilmiş konsol erişilebilirliği için .NET 4,7 kullanma
 
@@ -467,10 +467,10 @@ Daha fazla bilgi için bkz. [Configuration Manager erişilebilirlik özellikleri
 <!-- 3612513 -->
 Configuration Manager konsolu yüklenirken gerekli yeni bileşenler vardır. Konsolunu başka bilgisayarlara yüklemek için bir paket oluşturursanız, paketin aşağıdaki dosyaları içerdiğinden emin olun:
 
-- ConsoleSetup. exe
+- ConsoleSetup.exe
 - AdminConsole.msi
-- ConfigMgr. AC_Extension. i386. cab
-- ConfigMgr. AC_Extension. AMD64. cab
+- ConfigMgr.AC_Extension.i386.cab
+- ConfigMgr.AC_Extension.amd64.cab
 
 Bir site sunucusu yüklediğinizde veya güncelleştirdiğinizde, bu yükleme dosyalarını ve site için desteklenen dil paketlerini **Tools\consolesetup** alt klasörüne kopyalar. Daha fazla bilgi için [Configuration Manager konsolunu yüklemeye](../../servers/deploy/install/install-consoles.md)bakın.
 

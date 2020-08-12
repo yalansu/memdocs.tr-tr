@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 15cf7f3621f25a82f0e16d5275369ec93225bbf7
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: fc4309d3d09cd35c17b23bc46dcb1a28d210aa8e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422835"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125755"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Öğretici: pilot 'a Windows 10 dağıtma
 
 Bu öğretici, Windows 10 ' un bir pilot grubuna dağıtılması için masaüstü Analizi ve Configuration Manager kullanır. Şirket içi ürünle Windows 'u dağıtmak için öngörüleri sunmaya yönelik bulut hizmeti tümleştirmesini vurgular. Bir pilot gruba yerleştirilecek en iyi cihazları öğrenmek için masaüstü Analizi 'ni kullanın. Ardından Configuration Manager kullanarak Windows ile güncel bir yararlanın.
 
-Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:  
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:  
 
 > [!div class="checklist"]  
 > * Azure portal masaüstü analizlerini ayarlama  
@@ -36,7 +36,7 @@ Masaüstü analizi, Azure aboneliğinizde bir *Log Analytics çalışma alanı* 
 
 
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Bu öğreticiye başlamadan önce aşağıdaki önkoşullara sahip olduğunuzdan emin olun:  
 
@@ -56,7 +56,7 @@ Bu öğreticiye başlamadan önce aşağıdaki önkoşullara sahip olduğunuzdan
 
     - Configuration Manager Client sürüm 1902 güncelleştirme paketi (4500571) veya üzeri  
 
-- Windows tanılama veri düzeyini pilot cihazlarda **Gelişmiş (sınırlı)** olarak yapılandırmak için iş onayı  
+- Windows tanılama veri düzeyini pilot cihazlarda **Isteğe bağlı (sınırlı)** olarak yapılandırmak için iş onayı  
 
     Daha fazla bilgi için bkz. [Masaüstü Analizi gizliliği](privacy.md).
 
@@ -193,7 +193,7 @@ Masaüstü analizi ile tümleştirmeyi desteklemek için Configuration Manager s
 
     - **TICARI kimlik**: Bu değer, kuruluşunuzun kimliğiyle otomatik olarak doldurulur  
 
-    - **Windows 10 tanılama veri düzeyi**: en az **Gelişmiş (sınırlı)** seçeneğini belirleyin  
+    - **Windows 10 tanılama veri düzeyi**: en az **isteğe bağlı (sınırlı)** seçin  
 
     - **Tanılama verilerinde cihaz adına Izin ver**: **Etkinleştir** ' i seçin  
   

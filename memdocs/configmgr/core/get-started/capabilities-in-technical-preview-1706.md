@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d554f4f6e0c68912f4fac91bc1a8db2807b26a04
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 79258786b56cc3e7fe4971391903772700768a89
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078796"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126765"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Configuration Manager için Technical Preview 1706 ' deki yetenekler
 
@@ -72,7 +72,7 @@ Bu sürüm, yazılım güncelleştirme noktalarının sınır gruplarıyla nası
   - Bu geçiş, istemci tarafından kullanılabilecek bir yazılım güncelleştirme noktasına bağlanana kadar devam eder.
   - İstemci bir yazılım güncelleştirme noktası bulana kadar, her bir komşu sınır grubu için geri dönüş süresi karşılandığında kullanılabilir sunucular havuzuna ek sunucular eklenir.
 
-Daha fazla bilgi için, Güncel Dalı için sınır grupları konusundaki [yazılım güncelleştirme noktaları](../servers/deploy/configure/boundary-groups.md#software-update-points) bölümüne bakın.
+Daha fazla bilgi için, Güncel Dalı için sınır grupları konusundaki [yazılım güncelleştirme noktaları](../servers/deploy/configure/boundary-groups.md#bkmk_sup) bölümüne bakın.
 
 
 ## <a name="site-server-role-high-availability"></a>Site sunucusu rolü yüksek kullanılabilirlik
@@ -129,7 +129,7 @@ Bu sürümle birlikte, aşağıdaki koşulların **durumu** konsolunda okunabili
 - 851967 – yük devretme başarısız oldu
 
 ### <a name="add-a-site-server-in-passive-mode"></a>Pasif modda site sunucusu ekleme
-1. Konsolunda **Yönetim** > **Site yapılandırması** > **siteler** ' e gidin ve [site sistemi rolleri ekleme Sihirbazı](../servers/deploy/configure/install-site-system-roles.md)' nı başlatın. **Site sistemi sunucusu oluşturma Sihirbazı 'nı**da kullanabilirsiniz.
+1. Konsolunda **Yönetim**  >  **Site yapılandırması**  >  **siteler** ' e gidin ve [site sistemi rolleri ekleme Sihirbazı](../servers/deploy/configure/install-site-system-roles.md)' nı başlatın. **Site sistemi sunucusu oluşturma Sihirbazı 'nı**da kullanabilirsiniz.
 
 2. **Genel** sayfasında, Pasif mod site sunucusunu barındıracak sunucuyu belirtin. Belirttiğiniz sunucu, site sunucusunu pasif modda yüklemeden önce herhangi bir site sistemi rolünü barındıramıyor.
 
@@ -142,7 +142,7 @@ Bu sürümle birlikte, aşağıdaki koşulların **durumu** konsolunda okunabili
 
 5. Configuration Manager daha sonra site sunucusunu belirtilen sunucuda pasif modda yükleyecek.
 
-Ayrıntılı yükleme durumu için **Yönetim** > **Site yapılandırması** > **siteler**' e gidin.
+Ayrıntılı yükleme durumu için **Yönetim**  >  **Site yapılandırması**  >  **siteler**' e gidin.
 - Pasif moddaki site sunucusunun durumu **yükleme**olarak görüntülenir.
 
 - Daha ayrıntılı bilgi için sunucuyu seçin ve ardından **site sunucusu yükleme durumunu** açmak Için **durumu göster** ' e tıklayın.
@@ -150,15 +150,15 @@ Ayrıntılı yükleme durumu için **Yönetim** > **Site yapılandırması** > *
 
 
 ### <a name="promote-the-passive-mode-site-server-to-active-mode"></a>Pasif mod site sunucusunu etkin moda yükselt
-Pasif mod site sunucusunu etkin moda değiştirmek istediğinizde, **Yönetim** > **sitesi yapılandırma** > **siteleri**' nde **düğümler** bölmesinden bunu yapabilirsiniz. SMS_Provider bir örneğine erişebileceğiniz sürece, bu değişikliği yapmak için sitesine erişebilirsiniz.
+Pasif mod site sunucusunu etkin moda değiştirmek istediğinizde, **Nodes** **Yönetim**  >  **sitesi yapılandırma**  >  **siteleri**' nde düğümler bölmesinden bunu yapabilirsiniz. SMS_Provider bir örneğine erişebileceğiniz sürece, bu değişikliği yapmak için sitesine erişebilirsiniz.
 1. Configuration Manager konsolunun **düğümler** bölmesinde, site sunucusunu pasif modda seçin ve ardından şeritten **etkin 'e Yükselt**' i seçin.
 
 2. Yükseltmekte olduğunuz sunucunun basit **durumu** , **yükseltme**olarak **düğümler** bölmesinde görüntülenir.
 
 3. Yükseltme tamamlandıktan sonra, **durum** sütunu hem yeni *etkin* mod site sunucusu hem de yeni *Pasif* mod site sunucusu için **Tamam** ' ı gösterir.
 
-4. **Yönetim** > **sitesi yapılandırma** > **sitelerinde**, birincil site sunucusunun adı artık yeni *etkin* mod site sunucusunun adını görüntüler.
-Ayrıntılı durum için,**site sunucusu durumunu** **izleme** > ' ye gidin.
+4. **Yönetim**  >  **sitesi yapılandırma**  >  **sitelerinde**, birincil site sunucusunun adı artık yeni *etkin* mod site sunucusunun adını görüntüler.
+Ayrıntılı durum için, **Monitoring**  >  **site sunucusu durumunu**izleme ' ye gidin.
     - **Mod** sütunu, hangi sunucunun *etkin* veya *Pasif*olduğunu tanımlar.
 
     - Bir sunucuyu pasif moddan etkin moda yükseltirken, etkin duruma yükselttiğiniz site sunucusunu seçin ve ardından Şeritteki **durumu göster** ' i seçin. Bu işlem hakkında ek ayrıntılar görüntüleyen **site sunucusu yükseltme durumu** penceresini açar.
@@ -167,7 +167,7 @@ Etkin moddaki bir site sunucusu pasif moda geçtiğinde, yalnızca site sistem r
 
 
 ### <a name="daily-monitoring"></a>Günlük izleme
-Pasif modda bir birincil siteniz varsa, etkin mod site sunucusuyla eşitlenmiş ve kullanıma hazırsa emin olmak için günlük olarak izleyin. Bunu yapmak için,**site sunucusu durumunu** **izleme** > ' ye gidin. Burada hem etkin modu hem de Pasif mod site sunucularını görüntüleyebilirsiniz.
+Pasif modda bir birincil siteniz varsa, etkin mod site sunucusuyla eşitlenmiş ve kullanıma hazırsa emin olmak için günlük olarak izleyin. Bunu yapmak için, **Monitoring**  >  **site sunucusu durumunu**izleme ' ye gidin. Burada hem etkin modu hem de Pasif mod site sunucularını görüntüleyebilirsiniz.
 
 **Özet** sekmesi:
 - **Mod** sütunu, hangi sunucunun etkin veya pasif olduğunu tanımlar.
@@ -231,7 +231,7 @@ Bu sorunu çözmek için artık hem yükleme içeriği konumunu hem de isteğe b
 
 ## <a name="accessibility-improvements"></a>Erişilebilirlik geliştirmeleri  
 <!--1253000 -->
-Bu önizleme Configuration Manager konsolundaki [erişilebilirlik özelliklerine](../understand/accessibility-features.md) yönelik çeşitli geliştirmeler sunar. Bunlar:     
+Bu önizleme Configuration Manager konsolundaki [erişilebilirlik özelliklerine](../understand/accessibility-features.md) yönelik çeşitli geliştirmeler sunar. Bu modüller şunlardır:     
 
 **Konsol etrafında gezinmek için yeni klavye kısayolları:**
 - CTRL + a-ana (orta) bölmedeki odağı ayarlar.
@@ -271,7 +271,7 @@ Yükseltme Hazırlığı bağlantısının önkoşulları, Configuration Manager
 Önkoşullar yapılandırıldıktan sonra, bağlantıyı oluşturmak için Sihirbazı kullanmaya hazırlanın.
 
 ### <a name="use-the-azure-services-wizard-to-configure-upgrade-readiness"></a>Yükseltme Hazırlığı yapılandırmak için Azure Hizmetleri Sihirbazı 'Nı kullanın
-1. Konsolunda, **Yönetim** > **genel bakış** > **Cloud Services** > **Azure hizmetleri**' ne gidin ve ardından Şeritteki **giriş** sekmesinden **Azure hizmetlerini yapılandır** ' ı seçerek **Azure Hizmetleri Sihirbazı 'nı**başlatın.
+1. Konsolunda, **Yönetim**  >  **genel bakış**  >  **Cloud Services**  >  **Azure hizmetleri**' ne gidin ve ardından Şeritteki **giriş** sekmesinden **Azure hizmetlerini yapılandır** ' ı seçerek **Azure Hizmetleri Sihirbazı 'nı**başlatın.
 
 2. **Azure hizmetleri** sayfasında **yükseltme hazırlığı bağlayıcısını**seçin ve ardından **İleri**' ye tıklayın.
 
@@ -309,7 +309,7 @@ Bağlantıyı kaldırırsanız, cihazların kaydı geri alınmaz, ancak hiçbir 
    - **İstemcilerin bir bulut yönetimi ağ geçidi kullanmasını etkinleştirin** – **Evet** (varsayılan) veya **Hayır**olarak ayarlayın.
 2. İstemci ayarlarını gerekli cihaz koleksiyonuna dağıtın.
 
-Cihazın Azure AD 'ye katıldığını doğrulamak için, bir komut istemi penceresinde **dsregcmd. exe/status** komutunu çalıştırın. Cihazın Azure AD 'ye katılmış olması durumunda, sonuçlarda **Azureadkatılmış** alanı **Evet** olarak gösterilir.
+Cihazın Azure AD 'ye katıldığını onaylamak için, bir komut istemi penceresinde **/statusdsregcmd.exe** komutunu çalıştırın. Cihazın Azure AD 'ye katılmış olması durumunda, sonuçlarda **Azureadkatılmış** alanı **Evet** olarak gösterilir.
 
 ## <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Configuration Manager konsolundan PowerShell betikleri oluşturun ve çalıştırın
 <!-- 1236459 -->
@@ -323,7 +323,7 @@ Configuration Manager, paketleri ve programları kullanarak istemci cihazlarına
 - Configuration Manager konsolundaki komut dosyası tarafından döndürülen sonuçları inceleyin.
 
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 
 Betikleri kullanmak için uygun Configuration Manager güvenlik rolünün bir üyesi olmanız gerekir.
 
@@ -396,14 +396,14 @@ Artık, bir görev dizisi işletim sistemi dağıtımını başlatmak üzere IPv
 #### <a name="to-enable-pxe-boot-support-for-ipv6"></a>IPv6 için PXE önyükleme desteğini etkinleştirmek için
 PXE için IPv6 desteği seçeneğini etkinleştirmek için aşağıdaki yordamı kullanın.
 
-1. Configuration Manager konsolunda, **Yönetim** > **genel bakış** > **dağıtım noktaları**' na gidin ve PXE 'yi destekleyen dağıtım noktaları için **Özellikler** ' e tıklayın.
+1. Configuration Manager konsolunda, **Yönetim**  >  **genel bakış**  >  **dağıtım noktaları**' na gidin ve PXE 'yi destekleyen dağıtım noktaları için **Özellikler** ' e tıklayın.
 2. **PXE sekmesinde,** PXE için IPv6 desteğini etkinleştirmek üzere **IPv6 desteği** ' ni seçin.
 
 ## <a name="manage-microsoft-surface-driver-updates"></a>Microsoft Surface sürücü güncelleştirmelerini yönetme
 <!-- 1098490 -->
 Artık, Microsoft Surface sürücü güncelleştirmelerini yönetmek için Configuration Manager kullanabilirsiniz.
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 Tüm yazılım güncelleştirme noktalarında Windows Server 2016 çalışmalıdır.
 
 ### <a name="try-it-out"></a>Deneyin!
@@ -414,13 +414,13 @@ Aşağıdaki görevleri tamamlamayı deneyin ve nasıl çalıştığını bize b
 
 ## <a name="configure-windows-update-for-business-deferral-policies"></a>Iş erteleme ilkeleri için Windows Update yapılandırma
 <!-- 1290890 -->
-Artık Windows 10 için Windows 10 özellik güncelleştirmeleri veya kalite güncelleştirmeleri için erteleme ilkelerini, doğrudan Windows Update Iş tarafından yönetilen Windows 10 cihazları için yapılandırabilirsiniz. **Yazılım kitaplığı** > **Windows 10 Bakımı**altındaki **iş için yeni Windows Update ilke** düğümünde erteleme ilkelerini yönetebilirsiniz.
+Artık Windows 10 için Windows 10 özellik güncelleştirmeleri veya kalite güncelleştirmeleri için erteleme ilkelerini, doğrudan Windows Update Iş tarafından yönetilen Windows 10 cihazları için yapılandırabilirsiniz. **Yazılım kitaplığı**Windows 10 bakımı altındaki **iş için yeni Windows Update ilke** düğümünde erteleme ilkelerini yönetebilirsiniz  >  **Windows 10 Servicing**.
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 Iş için Windows Update tarafından yönetilen Windows 10 cihazlarının Internet bağlantısı olmalıdır.
 
 #### <a name="to-create-a-windows-update-for-business-deferral-policy"></a>Iş erteleme ilkesi için Windows Update oluşturmak için
-1. **Yazılım kitaplığı** > 'nda**iş ilkeleri için** **Windows 10 Bakımı** > Windows Update
+1. **Yazılım kitaplığı**'nda  >  iş ilkeleri için**Windows 10 Bakımı**  >  **Windows Update**
 2. Iş için Windows Update oluşturma Sihirbazı 'Nı açmak için **Oluştur** grubunun **giriş** sekmesinde **iş ilkesi Windows Update oluştur** ' u seçin.
 3. **Genel** sayfasında, ilke için bir ad ve açıklama girin.
 4. Erteleme Ilkeleri sayfasında, özellik güncelleştirmelerini **ertelemeyi** veya duraklatmayı yapılandırın.    
@@ -437,7 +437,7 @@ Iş için Windows Update tarafından yönetilen Windows 10 cihazlarının Intern
 8. Yeni erteleme ilkesini oluşturmak için Sihirbazı doldurun.
 
 #### <a name="to-deploy-a-windows-update-for-business-deferral-policy"></a>Windows Update Iş erteleme ilkesini dağıtmak için
-1. **Yazılım kitaplığı** > 'nda**iş ilkeleri için** **Windows 10 Bakımı** > Windows Update
+1. **Yazılım kitaplığı**'nda  >  iş ilkeleri için**Windows 10 Bakımı**  >  **Windows Update**
 2. **Giriş** sekmesinde, **dağıtım** grubunda, **Windows Update iş ilkesi için dağıt**' ı seçin.
 3. Aşağıdaki ayarları yapılandırın:
     - **Dağıtılacak yapılandırma ilkesi**: dağıtmak istediğiniz iş ilkesi Windows Update seçin.
@@ -483,7 +483,7 @@ Bu sürümde, aşağıdaki yeni ayarları Windows yapılandırma öğelerinde ku
 - **Sistem saati değişikliği**
 - **Cihaz adı değişikliği**
 
-### <a name="store"></a>Depo
+### <a name="store"></a>Depolama
 
 - **Mağazadan uygulamaları otomatik güncelleştir**
 - **Yalnızca özel mağazayı kullan**
@@ -565,7 +565,7 @@ Bu seçeneklerden hiçbiri kopyalama Yapıştır davranışını doğrudan engel
 Disallowcrossprofilecopycopy değeri true olarak ayarlandığında, Android for Work kişisel ve iş profilleri arasında kopyalama-yapıştırma davranışı engellenir.
 
 ### <a name="try-it-out"></a>Deneyin
-1. Configuration Manager konsolunda **varlıklar ve uyum** > **genel bakış** > **Uyumluluk ayarları** > **yapılandırma öğeleri**' ni seçin.
+1. Configuration Manager konsolunda **varlıklar ve uyum**  >  **genel bakış**  >  **Uyumluluk ayarları**  >  **yapılandırma öğeleri**' ni seçin.
 2. Yeni bir yapılandırma öğesi oluşturmak için **Oluştur** ' u seçin ve **iş Için** **ad** ve Android ' i belirtin.
 3. Yapılandırılacak cihaz ayarı grupları ' nda **Iş profili**' ni seçin ve **İleri**' yi seçin.
 4. **İş ve kişisel profiller arasında veri paylaşımına Izin ver**için değeri seçin ve ardından Sihirbazı doldurun.

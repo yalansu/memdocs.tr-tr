@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 928ef8a8ebc90807912f22901743725df9aa67e7
-ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
+ms.openlocfilehash: b03b57ff9797eb4fbe5a269723e98d39ae438803
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82842232"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127231"
 ---
 # <a name="co-management-workloads"></a>Ortak yönetim iş yükleri
 
@@ -104,7 +104,7 @@ Intune özelliği hakkında daha fazla bilgi için, bkz. [Microsoft Intune bir c
 
 <!--1357841-->
 
-Bu iş yükü, birlikte yönetilen cihazlarda Office 365 uygulamalarını yönetir.
+Bu iş yükü, ortak yönetilen cihazlarda Microsoft 365 uygulamalarını yönetir.
 
 - İş yükünü taşıdıktan sonra, uygulama cihazda **Şirket portalı** görüntülenir  
 
@@ -139,7 +139,7 @@ Sürüm 1910 ' den başlayarak, Microsoft bağlı önbelleği Configuration Mana
 
 Endpoint Protection iş yükü Intune 'a taşındığında, istemci yine de Configuration Manager ve Microsoft Defender tarafından ayarlanan ilkeleri kabul edebilir. <!--5024559-->
 
-Bu sorunu geçici olarak çözmek için, aşağıdaki adımları kullanarak istemci tarafından Intune ilkeleri alındıktan sonra ConfigSecurityPolicy. exe ' yi kullanarak CleanUpPolicy. xml ' i uygulayın:
+Bu sorunu geçici olarak çözmek için, aşağıdaki adımları kullanarak, Intune ilkeleri istemci tarafından alındıktan sonra ConfigSecurityPolicy.exe kullanarak CleanUpPolicy.xml uygulayın:
 
 1. Aşağıdaki metni kopyalayın ve olarak kaydedin `CleanUpPolicy.xml` .
 

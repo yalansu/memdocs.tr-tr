@@ -10,12 +10,13 @@ ms.assetid: b87ac054-9b37-4725-a3f3-2340cfb10bff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7f4acb19d1b3a28a4a53b30dd7838d24eda6c260
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ROBOTS: NOINDEX
+ms.openlocfilehash: a0e20915a8f3cda71fa3b23170ad6d3a6a34a756
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723211"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126197"
 ---
 # <a name="checklist-for-installing-update-1810-for-configuration-manager"></a>Configuration Manager için güncelleştirme 1810 yükleme denetim listesi
 
@@ -31,7 +32,7 @@ Sürüm 1810 ' e yönelik güncelleştirmeyi almak için, hiyerarşinizin en üs
 
     -   DMPDownloader. log, DMPDownloader işleminin güncelleştirmeleri denetlemeden önce bir Aralık beklediğini işaret ediyor olabilir. Güncelleştirmenin yeniden dağıtım dosyalarını indirmeyi yeniden başlatmak için, site sunucusunda **SMS_Executive** hizmetini yeniden başlatın.
 
-    -   Proxy sunucu ayarları, `silverlight.dlservice.microsoft.com` `download.microsoft.com`ve `go.microsoft.com`' den indirmelere engel olduğunda başka bir yaygın yükleme sorunu oluşur.
+    -   Proxy sunucu ayarları, ve ' den indirmelere engel olduğunda başka bir yaygın yükleme sorunu oluşur `silverlight.dlservice.microsoft.com` `download.microsoft.com` `go.microsoft.com` .
 
 Güncelleştirmeleri yükleme hakkında daha fazla bilgi için bkz. [konsol içi güncelleştirmeler ve bakım](updates.md#bkmk_inconsole).
 
@@ -126,7 +127,7 @@ Güncelleştirmeyi yüklemeden önce güncelleştirme işleminin etkin olduğu s
 
 Bir site veritabanı bakım görevi güncelleştirme yüklemesi sırasında çalıştığında güncelleştirme yüklemesi başarısız olabilir. Bir görevi devre dışı bırakmadan önce, güncelleştirme yüklendikten sonra yapılandırmasını geri yükleyebilmek için görevin zamanlamasını kaydedin.
 
-Daha fazla bilgi için bkz [. bakım görevleri](maintenance-tasks.md) ve [bakım görevleri için başvuru](reference-for-maintenance-tasks.md).
+Daha fazla bilgi [için bkz. bakım görevleri](maintenance-tasks.md)   ve [bakım görevleri için başvuru](reference-for-maintenance-tasks.md).
 
 #### <a name="temporarily-stop-any-antivirus-software"></a>Tüm virüsten koruma yazılımlarını geçici olarak durdurma 
 Bir siteyi güncelleştirmeden önce, Configuration Manager sunucularındaki virüsten koruma yazılımını durdurun. <!--SMS.503481--> 
@@ -139,7 +140,7 @@ Daha fazla bilgi için bkz. [yedekleme ve kurtarma](backup-and-recovery.md).
 #### <a name="plan-for-client-piloting"></a>İstemci pilot uygulaması için plan   
 İstemciyi güncelleştiren bir güncelleştirme yüklediğinizde, bu yeni istemci güncelleştirmesini, tüm etkin istemcilerinizi dağıtmadan ve yükseltibir ön üretim ortamında test edebilirsiniz. Bu seçenekten faydalanmak için, güncelleştirmeyi yüklemeye başlamadan önce sitenizi üretim öncesi için Otomatik yükseltmeleri destekleyecek şekilde yapılandırmanız gerekir.
 
-Daha fazla bilgi için bkz. [istemcileri](../../clients/manage/upgrade/upgrade-clients.md) yükseltme ve [bir ön üretim koleksiyonundaki istemci yükseltmelerini test etme](../../clients/manage/upgrade/test-client-upgrades.md).
+Daha fazla bilgi için bkz. [Istemcileri yükseltme](../../clients/manage/upgrade/upgrade-clients.md)   ve [bir ön üretim koleksiyonundaki istemci yükseltmelerini test etme](../../clients/manage/upgrade/test-client-upgrades.md).
 
 #### <a name="plan-to-use-service-windows"></a>Hizmet pencerelerini kullanmayı planlayın   
 Site sunucusu güncelleştirmelerinin yüklenebileceği bir dönem tanımlamak için, hizmet pencerelerini kullanın. Hiyerarşinizdeki sitelerin güncelleştirmeyi yüklemesi sırasında denetim sağlamanıza yardımcı olabilirler. Daha fazla bilgi için bkz. [site sunucuları Için hizmet pencereleri](service-windows.md).
@@ -156,7 +157,7 @@ Konsolundan bir önkoşul denetimi çalıştırmak için, **Yönetim** çalışm
 Daha fazla bilgi için, [konsol içi bir güncelleştirmeyi yüklemeden önce](install-in-console-updates.md#bkmk_beforeinstall) **bir güncelleştirmeyi yüklemeden önce Önkoşul denetleyicisini çalıştırma** bölümüne bakın.
 
 > [!IMPORTANT]  
-> Önkoşul denetleyicisi çalıştırıldığında, işlem, site bakım görevlerinde kullanılan bazı ürün kaynak dosyalarını güncelleştirir. Bu nedenle, Önkoşul denetleyicisini çalıştırdıktan sonra ancak güncelleştirmeyi yüklemeden önce, bir site bakım görevi gerçekleştirmeniz gerekirse, CD 'den **setupwpf. exe dosyasını** (Configuration Manager Kurulum) çalıştırın. Site sunucusundaki en son klasör.
+> Önkoşul denetleyicisi çalıştırıldığında, işlem, site bakım görevlerinde kullanılan bazı ürün kaynak dosyalarını güncelleştirir. Bu nedenle, Önkoşul denetleyicisini çalıştırdıktan sonra ancak güncelleştirmeyi yüklemeden önce, bir site bakım görevi gerçekleştirmeniz gerekirse, ** **   CD 'denSetupwpf.exe(Configuration Manager Kurulum) çalıştırın. Site sunucusundaki en son klasör.
 
 #### <a name="update-sites"></a>Siteleri Güncelleştir   
 Artık hiyerarşiniz için güncelleştirme yüklemesini başlatmaya hazırsınız. Güncelleştirmeyi yükleme hakkında daha fazla bilgi için bkz. [konsol içi güncelleştirmeleri yükleme](install-in-console-updates.md#bkmk_install).
@@ -185,7 +186,7 @@ Configuration Manager konsolunda, durumu görüntülemek ve çoğaltmanın etkin
 
 -   **İzleme** çalışma alanı, **veritabanı çoğaltma** düğümü  
 
-Daha fazla bilgi için aşağıdaki makalelere bakın:  
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:  
 
 - [İzleme hiyerarşisi](monitor-hierarchy.md)
 - [Çoğaltmayı izleme](monitor-replication.md)

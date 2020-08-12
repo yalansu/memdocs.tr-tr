@@ -5,17 +5,17 @@ description: Windows olay günlüğündeki olası BitLocker (MBAZ) istemci giri�
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c38b6963-cb1f-40ed-a888-e19d401ec3fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4043af4aa30942a5e8e1f7d2a3d1017c1e72d89f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d108f56032b1ca3cf4a41a836a7e9096afe41d0d
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722063"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127976"
 ---
 # <a name="client-event-logs"></a>İstemci olay günlükleri
 
@@ -129,7 +129,7 @@ WMI sağlayıcısı için DLL arama yolu güncelleştirilemedi.
 
 Aracı durduruluyor. MBAMWMI sağlayıcı örneği beklenirken zaman aşımına uğradı.
 
-## <a name="operational"></a>İşlemdeki
+## <a name="operational"></a>Operasyonel
 
 ### <a name="1-volumeenactmentsuccessful"></a>1: Birimenactmentbaşarılı
 

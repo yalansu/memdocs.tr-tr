@@ -5,18 +5,18 @@ description: Sürüm 1802 ' de toplanan tanılama ve kullanım verilerinin düze
 ms.date: 05/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 29dd51b8-6576-4010-81ba-3129ed2c3421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: c2edff394e915273fb34f4627e3636ea6e20237c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bae73e89852efbc8e85ba4df7e98eb0452d6b754
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710877"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128738"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1802-of-configuration-manager"></a>Configuration Manager sürüm 1802 için tanılama kullanım verileri toplama düzeyleri
 
@@ -35,7 +35,7 @@ Configuration Manager sürüm 1802, üç düzeyde tanılama ve kullanım verisi 
 ##  <a name="how-to-change-the-level"></a><a name="bkmk_change"></a> Düzeyi değiştirme
  **Site** nesne sınıfında **değiştirme** izinlerini içeren rol tabanlı yönetim kapsamına sahip yöneticiler, Configuration Manager konsolundaki tanılama ve kullanım verileri ayarlarında toplanan veri düzeyini değiştirebilir.
 
-**Yönetim** > **genel bakış** > **site yapılandırma** > **siteleri**' ne giderek veri toplama düzeyini konsolunun içinden değiştirirsiniz. **Hiyerarşi ayarları**' nı açın ve ardından kullanmak istediğiniz veri düzeyini seçin.  
+**Yönetim**  >  **genel bakış**  >  **site yapılandırma**  >  **siteleri**' ne giderek veri toplama düzeyini konsolunun içinden değiştirirsiniz. **Hiyerarşi ayarları**' nı açın ve ardından kullanmak istediğiniz veri düzeyini seçin.  
 
 
 

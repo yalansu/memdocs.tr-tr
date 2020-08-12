@@ -5,17 +5,17 @@ description: Windows olay günlüğündeki olası BitLocker (MBAD) sunucu girdil
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c3279b7d-654d-444b-bd17-1262894590c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d49a24b6fea08f12d1fe70c1e0b7415adf98719
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: fe7d24bc1cad27094d720a5cb5aa487caec9199d
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074818"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127874"
 ---
 # <a name="server-event-logs"></a>Sunucu olay günlükleri
 
@@ -83,7 +83,7 @@ Olası hata iletileri:
 
 - İstemci makine hesabı veya veri geçişi Kullanıcı hesabı algılanamıyor.
 
-    , `PostKeyRecoveryInfo`, Veya `IsRecoveryKeyResetRequired` `CommitRecoveryKeyRest` `GetTpmHash` Web yöntemlerine her çağrı yapıldığında, çağıran kimlik bilgilerini almak için çağıran bağlamını alır. Çağıran bağlamı null veya boş ise, hizmet bu iletiyi günlüğe kaydeder.
+    ,, `PostKeyRecoveryInfo` Veya Web yöntemlerine her çağrı yapıldığında `IsRecoveryKeyResetRequired` , `CommitRecoveryKeyRest` `GetTpmHash` çağıran kimlik bilgilerini almak için çağıran bağlamını alır. Çağıran bağlamı null veya boş ise, hizmet bu iletiyi günlüğe kaydeder.
 
 - Arayan kimliği için hesap doğrulaması başarısız oldu.
 
@@ -93,7 +93,7 @@ Olası hata iletileri:
 
 Kayıt defterindeki uyumluluk veritabanı bağlantı dizesi boş.
 
-Uyumluluk veritabanı bağlantı dizesi geçersiz olduğunda bu ileti günlüğe kaydedilir. Kayıt defteri anahtarındaki `HKLM\Software\Microsoft\MBAM Server\Web\ComplianceDBConnectionString`değeri doğrulayın.
+Uyumluluk veritabanı bağlantı dizesi geçersiz olduğunda bu ileti günlüğe kaydedilir. Kayıt defteri anahtarındaki değeri doğrulayın `HKLM\Software\Microsoft\MBAM Server\Web\ComplianceDBConnectionString` .
 
 ### <a name="105-statusservicecompliancedberror"></a>105: Statusservicekarmaşıkancedberror
 
@@ -137,7 +137,7 @@ Bilinen hatalar ve olası nedenler:
 
 - {DomainName} etki alanı adı çözümlenirken bir hata oluştu, bir bellek ayırma hatası oluştu.
 
-    Etki alanı adını çözümlemek için Windows API 'sini `DsGetDcName` çağırır. Bu ileti `ERROR_NOT_ENOUGH_MEMORY`, bir bellek ayırma hatası olduğunu BELIRTEN bu API döndürüldüğünde günlüğe kaydedilir.
+    Etki alanı adını çözümlemek için `DsGetDcName` WINDOWS API 'sini çağırır. Bu ileti `ERROR_NOT_ENOUGH_MEMORY` , bir bellek ayırma hatası olduğunu belirten bu API döndürüldüğünde günlüğe kaydedilir.
 
 - DsGetDcName yöntemi çağrılamadı
 
@@ -149,7 +149,7 @@ Bilinen hatalar ve olası nedenler:
 
 - Kurtarma veritabanının yapılandırması okunurken bir hata oluştu. Kurtarma veritabanına yönelik bağlantı dizesi yapılandırılmadı.
 
-    Bu ileti, konumundaki `HKLM\Software\Microsoft\MBAM Server\Web\RecoveryDBConnectionString` kurtarma veritabanı bağlantı dizesi bilgilerinin geçersiz olduğunu gösterir. Verilen kayıt defteri anahtarı değerini doğrulayın.
+    Bu ileti, konumundaki kurtarma veritabanı bağlantı dizesi bilgilerinin geçersiz olduğunu gösterir `HKLM\Software\Microsoft\MBAM Server\Web\RecoveryDBConnectionString` . Verilen kayıt defteri anahtarı değerini doğrulayın.
 
 Aşağıdaki iletilerden herhangi birini görürseniz, IIS sunucusundan uygulama havuzu kimlik bilgilerinin kurtarma veritabanıyla bağlantı yapıp yapamadığını doğrulayın:
 
@@ -164,7 +164,7 @@ Bilinen hatalar ve olası nedenler:
 
 - Uyumluluk veritabanının yapılandırması okunurken bir hata oluştu. Uyumluluk veritabanına yönelik bağlantı dizesi yapılandırılmadı.
 
-    Bu ileti, konumundaki `HKLM\Software\Microsoft\MBAM Server\Web\ComplianceDBConnectionString` uyumluluk veritabanı bağlantı dizesi bilgilerinin geçersiz olduğunu gösterir. Bu kayıt defteri anahtarının değerini doğrulayın.
+    Bu ileti, konumundaki uyumluluk veritabanı bağlantı dizesi bilgilerinin geçersiz olduğunu gösterir `HKLM\Software\Microsoft\MBAM Server\Web\ComplianceDBConnectionString` . Bu kayıt defteri anahtarının değerini doğrulayın.
 
 Aşağıdaki iletilerden herhangi birini görürseniz, IIS sunucusundan uygulama havuzu kimlik bilgilerinin uyumluluk veritabanıyla bağlantı yapıp yapamadığını doğrulayın:
 
@@ -177,21 +177,21 @@ Aşağıdaki iletilerden herhangi birini görürseniz, IIS sunucusundan uygulama
 Bu hatalar aşağıdaki iki koşuldan birini gösterir
 
 - MBAE Web siteleri/WebServices, uyumluluk veya kurtarma veritabanına bağlanamadı
-- MBAMWEB siteleri/WebServices yürütme hesabı (uygulama havuzu hesabı), `GetVersion` uyumluluk veya kurtarma veritabanında saklı yordamı çalıştıramıyor
+- MBAMWEB siteleri/WebServices yürütme hesabı (uygulama havuzu hesabı), `GetVersion` Uyumluluk veya kurtarma veritabanında saklı yordamı çalıştıramıyor
 
 Olayda bulunan ileti, özel durum hakkında daha fazla ayrıntı sağlar.
 
-Uygulama havuzu hesabının uyumluluk veya kurtarma veritabanlarına bağlanabildiğini doğrulayın. `GetVersion` Saklı yordamı çalıştırma izinleri olduğunu doğrulayın.
+Uygulama havuzu hesabının uyumluluk veya kurtarma veritabanlarına bağlanabildiğini doğrulayın. Saklı yordamı çalıştırma izinleri olduğunu doğrulayın `GetVersion` .
 
 ### <a name="112-webapperror"></a>112: WebAppError
 
 Hizmet asıl adı (SPN) kaydı doğrulanırken bir hata oluştu.
 
-SPN 'yi doğrulamak için, SPN eşlenmiş yürütme hesabı listesini almak üzere Active Directory sorgular. Ayrıca, `ApplicationHost.config` Web sitesi bağlamalarını almak için ' i sorgular. Bu hata iletisi, Active Directory ile iletişim kuramadığını veya `ApplicationHost.config` dosyayı yükleyemediğini belirtir.
+SPN 'yi doğrulamak için, SPN eşlenmiş yürütme hesabı listesini almak üzere Active Directory sorgular. Ayrıca, `ApplicationHost.config` Web sitesi bağlamalarını almak için ' i sorgular. Bu hata iletisi, Active Directory ile iletişim kuramadığını veya dosyayı yükleyemediğini belirtir `ApplicationHost.config` .
 
-Uygulama havuzu hesabının Active Directory veya `ApplicationHost.config` dosyayı sorgulama izinleri olduğunu doğrulayın. Ayrıca, `ApplicationHost.config` dosyadaki site bağlama girdilerini de doğrulayın.
+Uygulama havuzu hesabının Active Directory veya dosyayı sorgulama izinleri olduğunu doğrulayın `ApplicationHost.config` . Ayrıca, dosyadaki site bağlama girdilerini de doğrulayın `ApplicationHost.config` .
 
-## <a name="operational"></a>İşlemdeki
+## <a name="operational"></a>Operasyonel
 
 ### <a name="4-performancecountererror"></a>4: PerformanceCounterError
 
@@ -212,7 +212,7 @@ Trace iletisi, bazıları burada listelenen gerçek özel durum iletisini içeri
 
 Olaydaki ileti, özel durum hakkında daha fazla ayrıntı sağlar.
 
-`System.UnauthorizedAccessException`İçin, uygulama havuzu hesabının performans sayacı API 'lerine erişimi olduğunu doğrulayın.
+İçin, `System.UnauthorizedAccessException` uygulama havuzu hesabının performans sayacı API 'lerine erişimi olduğunu doğrulayın.
 
 ### <a name="200-helpdeskinformation"></a>200: Helpdeskınformation
 

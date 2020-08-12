@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 01355230d0dc8969555740cc25a08e0b8d2967d0
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 4c96a7636902bd313f8e8868917b45d8fa49e1f7
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240482"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127146"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>Configuration Manager yapılandırma temelleri oluşturma
 
@@ -84,7 +84,7 @@ Configuration Manager içindeki yapılandırma temelleri, önceden tanımlanmı�
 <!--3608345-->
 *(Sürüm 1910 ' de tanıtılmıştır)*
 
-Sürüm 1910 ' den başlayarak, özel yapılandırma temellerinin değerlendirmesi bir uyumluluk ilkesi değerlendirme kuralı olarak eklenebilir. Bir yapılandırma temeli oluşturduğunuzda veya düzenlediğinizde, **Bu taban çizgisini uyumluluk ilkesi değerlendirmesinin bir parçası olarak değerlendirmek**için bir seçeneğe sahip olursunuz. Bir uyumluluk ilkesi kuralı eklerken veya düzenlenirken, **Uyumluluk ilkesi değerlendirmesi ' nde yapılandırılmış taban çizgileri ekle**adlı bir koşulunuz vardır. Ortak yönetilen cihazlar için ve Intune 'u, genel uyumluluk durumunun bir parçası olarak Configuration Manager uyumluluk değerlendirmesi sonuçları alacak şekilde yapılandırdığınızda, bu bilgiler Azure AD 'ye gönderilir. Daha sonra bunu, Office 365 kaynaklarınıza koşullu erişim için kullanabilirsiniz. Daha fazla bilgi için bkz. [ortak yönetim Ile koşullu erişim](../../comanage/quickstart-conditional-access.md).
+Sürüm 1910 ' den başlayarak, özel yapılandırma temellerinin değerlendirmesi bir uyumluluk ilkesi değerlendirme kuralı olarak eklenebilir. Bir yapılandırma temeli oluşturduğunuzda veya düzenlediğinizde, **Bu taban çizgisini uyumluluk ilkesi değerlendirmesinin bir parçası olarak değerlendirmek**için bir seçeneğe sahip olursunuz. Bir uyumluluk ilkesi kuralı eklerken veya düzenlenirken, **Uyumluluk ilkesi değerlendirmesi ' nde yapılandırılmış taban çizgileri ekle**adlı bir koşulunuz vardır. Ortak yönetilen cihazlar için ve Intune 'u, genel uyumluluk durumunun bir parçası olarak Configuration Manager uyumluluk değerlendirmesi sonuçları alacak şekilde yapılandırdığınızda, bu bilgiler Azure AD 'ye gönderilir. Daha sonra bunu, Microsoft 365 Apps kaynaklarınıza koşullu erişim için kullanabilirsiniz. Daha fazla bilgi için bkz. [ortak yönetim Ile koşullu erişim](../../comanage/quickstart-conditional-access.md).
 
 Uyumluluk ilkesi değerlendirmesinin bir parçası olarak özel yapılandırma temelleri eklemek için aşağıdakileri yapın:
 
@@ -96,7 +96,7 @@ Uyumluluk ilkesi değerlendirmesinin bir parçası olarak özel yapılandırma t
 
 ### <a name="example-evaluation-scenario"></a>Örnek değerlendirme senaryosu
 
-Kullanıcı, **Uyumluluk ilkesi değerlendirmesi içinde yapılandırılmış taban çizgilerini**içeren bir uyumluluk ilkesiyle hedeflenen bir koleksiyonun parçası olduğunda, kullanıcıya dağıtılan veya Kullanıcı cihazının uyumluluk **değerlendirmesi için bu temeli, uyumluluk Ilkesi değerlendirmesi kapsamında değerlendir** seçeneğinin seçili olduğu taban çizgileri. Örneğin:
+Kullanıcı, **Uyumluluk ilkesi değerlendirmesi içinde yapılandırılmış taban çizgilerini**içeren bir uyumluluk ilkesiyle hedeflenen bir koleksiyonun parçası olduğunda, kullanıcıya dağıtılan veya Kullanıcı cihazının uyumluluk **değerlendirmesi için bu temeli, uyumluluk Ilkesi değerlendirmesi kapsamında değerlendir** seçeneğinin seçili olduğu taban çizgileri. Örnek:
 
 - `User1`parçasıdır `User Collection 1` .
 - `User1``Device1`, ve içinde olan kullanır `Device Collection 1` `Device Collection 2` .

@@ -10,12 +10,12 @@ ms.assetid: 58849e40-30d5-4153-84b3-ca4af3a4f09d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f92e76047a70f6d86406b1a364603163d902e62
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7ad20f80f4727fe18947bed05ded6e7b107fab12
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719935"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124093"
 ---
 # <a name="user-experiences-for-os-deployment"></a>İşletim sistemi dağıtımı için kullanıcı deneyimleri
 
@@ -146,8 +146,7 @@ Toplam adımların sayısı görev dizisine aşağıdaki öğeleri içermez:
 
 - Açıkça devre dışı bırakabilmeniz gereken adımlar. Devre dışı bir adım görev sırası sırasında çalışmaz.
 
-    > [!NOTE]
-    > Devre dışı bırakılmış bir gruptaki etkin adımlar, yine de toplam sayıma dahil edilmiştir.
+- Sürüm 2006 ' den başlayarak, devre dışı bırakılmış bir gruptaki etkin adımları saymaz.<!--6448412--> Sürüm 2002 ' de, devre dışı bırakılmış bir gruptaki etkin adımlar, yine de toplam sayıma dahil edilmiştir.
 
 ## <a name="task-sequence-error"></a>Görev sırası hatası
 
@@ -157,6 +156,6 @@ Görev sırası başarısız olursa, **görev dizisi hata** penceresini görünt
 
 - Üstbilgi bilgilerini görev sırası ilerleme penceresiyle aynı şekilde özelleştirebilirsiniz.
 
-- Görev dizisinin adını, bir hata kodunu ve kullanıcılar için genel bir iletiyi görüntüler. Örneğin, `Task sequence: Upgrade to Windows 10 Enterprise has failed with the error code (0x80004005). For more information, contact your system administrator or helpdesk operator.`
+- Görev dizisinin adını, bir hata kodunu ve kullanıcılar için genel bir iletiyi görüntüler. Örnek: `Task sequence: Upgrade to Windows 10 Enterprise has failed with the error code (0x80004005). For more information, contact your system administrator or helpdesk operator.`
 
 - Pencere, bir zaman aşımı süresinden sonra otomatik olarak kapanır. Varsayılan olarak, bu zaman aşımı 15 dakikadır. Bu değeri, [Smstserrordialogtimeout](task-sequence-variables.md#SMSTSErrorDialogTimeout)görev dizisi değişkeniyle özelleştirebilirsiniz.

@@ -5,17 +5,17 @@ description: Var olan bir bilgisayarı bölümlemek ve biçimlendirmek ve bilgis
 ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b189a346-8c0d-4870-a876-0719fbb0ab04
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9582d6840e1f750d53504da4e8e7f6bf54f44965
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b635301d9d5bd8a0fb81771255acddb21097f23b
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723785"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124911"
 ---
 # <a name="refresh-an-existing-computer-with-a-new-version-of-windows"></a>Mevcut bir bilgisayarı yeni bir Windows sürümü ile yenileme
 
@@ -41,7 +41,7 @@ Mevcut bir bilgisayardan ayarları yakalamak ve sonra ayarları yeni işletim si
 
 Önyükleme yansımaları bir Windows PE ortamında bir bilgisayar başlatır. Windows PE, sınırlı bileşen ve hizmetlere sahip en düşük bir işletim sistemi. Windows PE 'den Configuration Manager, ardından bilgisayara tam bir Windows işletim sistemi yükleyebilir.
 
-Daha fazla bilgi için aşağıdaki makalelere bakın:
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 - [Önyükleme görüntülerini yönetme](../get-started/manage-boot-images.md)
 
@@ -53,7 +53,7 @@ Daha fazla bilgi için aşağıdaki makalelere bakın:
 
 İşletim sistemi görüntüsü, işletim sistemini hedef bilgisayara yüklemek için gerekli dosyaları içerir.
 
-Daha fazla bilgi için aşağıdaki makalelere bakın:
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 - [İşletim sistemi görüntülerini yönetme](../get-started/manage-operating-system-images.md)
 
@@ -63,7 +63,7 @@ Daha fazla bilgi için aşağıdaki makalelere bakın:
 
 İşletim sistemini yüklemeyi otomatikleştirmek için bir görev dizisi kullanın. Seçtiğiniz dağıtım yöntemine bağlı olarak, görev dizisi için ek hususlar olabilir.
 
-Daha fazla bilgi için aşağıdaki makalelere bakın:
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 - [İşletim sistemi yüklemek için görev dizisi oluşturma](create-a-task-sequence-to-install-an-operating-system.md)
 

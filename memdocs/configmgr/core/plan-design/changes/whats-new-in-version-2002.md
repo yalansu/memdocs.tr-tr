@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4a9eac25de66eb4fb94ea1c5b4b8d0d46caa05d7
-ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
+ms.openlocfilehash: 66fcd9b7d4d25decb3aeef7cf38b469363eeb1fa
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88110724"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128908"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 2002 ' deki yenilikler
 
@@ -147,7 +147,7 @@ Daha fazla bilgi için bkz. [bağlantı durumunu izleme](../../../desktop-analyt
 
 CMPivot varlıklarından gezinmeyi kolaylaştırdık. Artık CMPivot varlıklarda arama yapabilirsiniz. Varlıkları ve varlık nesne türlerini kolayca ayırt etmek için de yeni simgeler eklenmiştir.
 
-Daha fazla bilgi için bkz. [CMPivot](../../servers/manage/cmpivot.md#bkmk_2002).
+Daha fazla bilgi için bkz. [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_2002).
 
 ## <a name="content-management"></a><a name="bkmk_content"></a>İçerik yönetimi
 
@@ -391,9 +391,9 @@ Daha fazla bilgi için bkz. [ürün geri bildirimi](../../understand/find-help.m
 
 <!--3555935, 3555936-->
 
-_İlk tanıtılan Haziran 2020_
+*(İlk 2020 Haziran 'da tanıtılan)*
 
-BT Yöneticisi topluluğu, yıllar boyunca çok fazla bilgi geliştirmiştir. Komut dosyaları ve raporlar gibi öğeleri sıfırdan yeniden oluşturmanız yerine, birbirleriyle paylaşabileceğiniz bir Configuration Manager **Community hub** 'ı oluşturduk. Başkalarının çalışmasını izleyerek iş saatlerini tasarrufu sağlayabilirsiniz. Topluluk hub 'ı, diğerlerinin çalışmasına ve diğer kişilerin kendi üzerinde derlenerek yaratıcıkilerin oluşturulmasını ister. GitHub zaten, paylaşım için tasarlanmış sektör genelinde işlemlere ve araçlara sahiptir. Artık topluluk hub 'ı, bu yeni topluluğu yönlendiren temel parçalar halinde doğrudan Configuration Manager konsolundaki bu araçlardan faydalanır.
+BT Yöneticisi topluluğu, yıllar boyunca çok fazla bilgi geliştirmiştir. Komut dosyaları ve raporlar gibi öğeleri sıfırdan yeniden oluşturmanız yerine, birbirleriyle paylaşabileceğiniz bir Configuration Manager **Community hub** 'ı oluşturduk. Başkalarının çalışmasını izleyerek iş saatlerini tasarrufu sağlayabilirsiniz. Topluluk hub 'ı, diğerlerinin çalışmasına ve diğer kişilerin kendi üzerinde derlenerek yaratıcıkilerin oluşturulmasını ister. GitHub zaten, paylaşım için tasarlanmış sektör genelinde işlemlere ve araçlara sahiptir. Artık topluluk hub 'ı, bu yeni topluluğu yönlendiren temel parçalar halinde doğrudan Configuration Manager konsolundaki bu araçlardan faydalanır. İlk sürüm için, topluluk hub 'ında kullanılabilir hale getirilen içerik yalnızca Microsoft tarafından karşıya yüklenir.
 
 Daha fazla bilgi için bkz. [Community hub ve GitHub](../../servers/manage/community-hub.md).
 

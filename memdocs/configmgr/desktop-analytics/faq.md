@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: d1f18c135f200b2a9e40b970871c73a0d98893a2
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: b70a375eb35599a487eeeee95235d638de35e5e1
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429843"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125874"
 ---
 # <a name="desktop-analytics-faq"></a>Desktop Analytics hakkında SSS
 
@@ -126,7 +126,7 @@ Evet, aşağıdaki Windows Analytics özellikleri devre dışı bırakıldı vey
 #### <a name="upgrade-readiness"></a>Yükseltme Hazırlığı
 
 - Internet Explorer sitesi bulma verileri
-- Office eklentisi öngörüleri (artık [Configuration Manager kullanılabilir](#bkmk_office))
+- Microsoft 365 Apps eklenti öngörüleri (artık [Configuration Manager sunulmaktadır](#bkmk_office))
 - Geribildirim merkezi öngörüleri
 
 #### <a name="update-compliance"></a>Güncelleştirme Uyumluluğu
@@ -151,9 +151,9 @@ Evet, aşağıdaki Windows Analytics özellikleri devre dışı bırakıldı vey
 
 ## <a name="other"></a>Diğer
 
-### <a name="can-i-use-desktop-analytics-for-my-office-365-proplus-upgrades"></a><a name="bkmk_office"></a>Office 365 ProPlus yükseltmelerim için masaüstü analizlerini kullanabilir miyim?
+### <a name="can-i-use-desktop-analytics-for-my-microsoft-365-apps-upgrades"></a><a name="bkmk_office"></a>Microsoft 365 Apps yükseltmeleri için masaüstü analizlerini kullanabilir miyim?
 
-Hayır, masaüstü Analizi Windows 'a odaklanılmıştır. Microsoft, birçok müşteriyle birlikte çalışan yakın işbirliği sürümünde masaüstü analizi geliştirmiştir. Müşteri geri bildirimi, masaüstü analizinin Windows dağıtımlarını güvenle yönetme yeteneğini nasıl geliştirip geliştebilmesidir. Ayrıca, [office 365 ProPlus](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) 'ın Configuration Manager ve Intune 'da Office yönetim araçlarıyla daha yakından tümleştirileceği hakkında bilgi de ister. Microsoft bu alanlara yatırım yapmaya devam ederken masaüstü analizinden Windows senaryolarına odaklanmaya devam etmektedir.
+Hayır, masaüstü Analizi Windows 'a odaklanılmıştır. Microsoft, birçok müşteriyle birlikte çalışan yakın işbirliği sürümünde masaüstü analizi geliştirmiştir. Müşteri geri bildirimi, masaüstü analizinin Windows dağıtımlarını güvenle yönetme yeteneğini nasıl geliştirip geliştebilmesidir. Bunlara Ayrıca, [Microsoft 365 uygulamaların](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) Configuration Manager ve ıntune 'Da Microsoft 365 Apps yönetim araçlarıyla daha yakından tümleştirileceklerini söyledikleri de söylüyorsunuz. Microsoft bu alanlara yatırım yapmaya devam ederken masaüstü analizinden Windows senaryolarına odaklanmaya devam etmektedir.
 
 ### <a name="how-can-i-provide-feedback-about-desktop-analytics"></a>Masaüstü analizi hakkında nasıl geri bildirim sağlayabilirim?
 

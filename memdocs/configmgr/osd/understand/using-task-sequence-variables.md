@@ -2,7 +2,7 @@
 title: Görev dizisi değişkenlerini kullanma
 titleSuffix: Configuration Manager
 description: Configuration Manager bir görev dizisinde değişkenlerin nasıl kullanılacağı hakkında bilgi edinin.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1cf428b479e9311c92f6d14d9c376817ee5e3ab5
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 433896e55b7701009e2870af8b0015fb15c1eda3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022271"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88123945"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Configuration Manager 'de görev dizisi değişkenlerini kullanma
 
@@ -35,8 +36,8 @@ Birçok değişken türü vardır:
 - [Yerleşik](#bkmk_built-in)  
 - [Eylem](#bkmk_action)  
 - [Özel](#bkmk_custom)  
-- [Salt okunurdur](#bkmk_read-only)  
-- [Dizi](#bkmk_array)  
+- [Salt okunur](#bkmk_read-only)  
+- [Dizide](#bkmk_array)  
 
 ### <a name="built-in-variables"></a><a name="bkmk_built-in"></a>Yerleşik değişkenler
 
@@ -77,7 +78,7 @@ Yeni bir görev dizisi değişkeni için bir ad belirttiğinizde aşağıdaki y�
 
 - Görev dizisi değişken adları boşlukla başlayamaz veya bitemez. Ayrıca, gömülü boşluklar olamaz. Görev sırası, bir değişken adının başındaki veya sonundaki boşlukları yoksayar.  
 
-Oluşturabileceğiniz görev sırası değişkenlerinin sayısı için bir sınır yoktur. Ancak, değişken sayısı, görev dizisi ortamının boyutuyla sınırlıdır. Görev dizisi ortamı için toplam boyut sınırı 32 MB’dir.  
+Oluşturabileceğiniz görev sırası değişkenlerinin sayısı için bir sınır yoktur. Ancak, değişken sayısı, görev dizisi ortamının boyutuyla sınırlıdır. Görev dizisi ortamı için toplam boyut sınırı 8 KB 'tır. Daha fazla bilgi için bkz. [görev sırası ilkesi boyutunu azaltma](../deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_policysize).
 
 ### <a name="read-only-variables"></a><a name="bkmk_read-only"></a>Salt okuma değişkenleri
 
@@ -189,10 +190,10 @@ Cihazlar ve koleksiyonlar için özel görev sırası değişkenlerini tanımlay
 
 Örneğin, XYZ cihazı ABC koleksiyonunun bir üyesidir. MyVariable değerini 1 değeri ile ABC koleksiyonuna atarsınız. Ayrıca, MyVariable değerini 2 değeri ile XYZ cihazına atayabilirsiniz. XYZ öğesine atanan değişken, ABC koleksiyonuna atanmış olan değişkenden daha yüksek önceliğe sahiptir. Bu değişkene sahip bir görev dizisi XYZ üzerinde çalışırken, MyVariable değeri 2 ' dir.
 
-Cihaz başına ve koleksiyon başına değişkenleri, Configuration Manager konsolunda görünmemesi için gizleyebilirsiniz. **Bu değeri Configuration Manager konsolunda gösterme**seçeneğini kullandığınızda, değişkenin değeri konsolunda görüntülenmez. Değişken, çalışma sırasında görev sırası tarafından hala kullanılıyor olabilir. Artık bu değişkenlerin gizli olmasını istemiyorsanız, önce bunları silin. Sonra değişkenleri gizleme seçeneğini seçmeden yeniden tanımlayın.  
+Cihaz başına ve koleksiyon başına değişkenleri, Configuration Manager konsolunda görünmemesi için gizleyebilirsiniz. **Bu değeri Configuration Manager konsolunda gösterme**seçeneğini kullandığınızda, değişkenin değeri konsolunda görüntülenmez. Görev sırası günlük dosyası (**Smsts. log**) veya görev sırası hata ayıklayıcı değişken değerini göstermez. Değişken, çalışma sırasında görev sırası tarafından hala kullanılıyor olabilir. Artık bu değişkenlerin gizli olmasını istemiyorsanız, önce bunları silin. Sonra değişkenleri gizleme seçeneğini seçmeden yeniden tanımlayın.  
 
 > [!WARNING]  
-> **Configuration Manager konsolunda bu değeri gösterme** ayarı yalnızca Configuration Manager konsolu için geçerlidir. Değişkenlerin değerleri, görev sırası günlük dosyasında (**Smsts. log**) hala görüntülenir.
+> **Komut satırı** adımının komut satırını Çalıştır ' a değişkenler eklerseniz, görev sırası günlük dosyası değişken değerleri dahil olmak üzere tam komut satırını görüntüler. Potansiyel olarak gizli verilerin günlük dosyasında görünmesini engellemek için **Osddonotlogcommand** görev sırası değişkenini olarak ayarlayın `TRUE` .
 
 Cihaz başına değişkenleri bir birincil sitede veya merkezi yönetim sitesinde yönetebilirsiniz. Configuration Manager, bir cihaz için 1.000 ' den fazla değişkeni desteklemez.  
 

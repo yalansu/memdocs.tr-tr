@@ -2,20 +2,20 @@
 title: Hizmet bağlantı aracı
 titleSuffix: Configuration Manager
 description: Kullanım bilgilerini el ile karşıya yüklemek için Configuration Manager bulut hizmetine bağlanmanızı sağlayan bu araç hakkında bilgi edinin.
-ms.date: 07/02/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 48aa08f3318aaa4629691bfb30b60580cd3e25f0
-ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
+ms.openlocfilehash: 8b56b849be6abd2634e29d35e58494d4d3215857
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85946853"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126095"
 ---
 # <a name="use-the-service-connection-tool-for-configuration-manager"></a>Configuration Manager için hizmet bağlantısı aracını kullanma
 
@@ -25,7 +25,7 @@ Hizmet bağlantı noktanız çevrimdışı modda olduğunda **hizmet bağlantı 
 
 Aracı çalıştırdığınızda, Configuration Manager bulut hizmetine bağlanır, hiyerarşiniz için kullanım bilgilerini karşıya yükler ve güncelleştirmeleri indirir. Kullanım verilerinin karşıya yüklenmesi, bulut hizmetinin ortamınız için doğru güncelleştirmeleri sağlamasını sağlamak için gereklidir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Sitenin bir hizmet bağlantı noktası vardır ve bunu **çevrimdışı, isteğe bağlı bir bağlantı**için yapılandırırsınız.
 
@@ -78,7 +78,7 @@ Bu davranışı değiştirmek için, indirdiği dosyaları değiştirmek üzere 
 - **-downloadsiteversion**: güncelleştirmeleri ve düzeltmeleri sitenizin sürümünden daha sonraki bir sürümle indirir.
 
     > [!IMPORTANT]
-    > Configuration Manager sürüm 2002 ' deki bilinen bir sorundan dolayı varsayılan davranış beklendiği gibi çalışmaz. Sürüm 2002 için gerekli güncelleştirmeleri indirmek üzere **-downloadsiteversion** parametresini kullanın.<!-- 7594517 -->
+    > Configuration Manager sürüm 2002 ' deki bilinen bir sorundan dolayı varsayılan davranış beklendiği gibi çalışmaz. Sürüm 2006 ' e güncelleştirin veya **-downloadsiteversion** parametresini kullanarak 2002 sürümüne yönelik gerekli güncelleştirmeleri indirin.<!-- 7594517 -->
 
 Daha fazla bilgi için bkz. [komut satırı parametreleri](#bkmk_cmd).
 
@@ -103,7 +103,7 @@ Bu yordamda, komut satırı örnekleri aşağıdaki dosya adlarını ve klasör 
 
 ### <a name="prepare"></a>Hazırlama
 
-1. Hizmet bağlantı noktasını barındıran bilgisayarda yönetici olarak bir komut istemi açın ve dizini araç konumuyla değiştirin. Örneğin:
+1. Hizmet bağlantı noktasını barındıran bilgisayarda yönetici olarak bir komut istemi açın ve dizini araç konumuyla değiştirin. Örnek:
 
     `cd C:\Source\SMSSETUP\TOOLS\ServiceConnectionTool\`
 
@@ -120,7 +120,7 @@ Bu yordamda, komut satırı örnekleri aşağıdaki dosya adlarını ve klasör 
 
 ### <a name="connect"></a>Bağlan
 
-1. İnternet erişimi olan bilgisayarda, yönetici olarak bir komut istemi açın ve dizini araç konumuyla değiştirin. Bu konum, **Serviceconnectiontool** klasörünün tamamının bir kopyasıdır. Örneğin:
+1. İnternet erişimi olan bilgisayarda, yönetici olarak bir komut istemi açın ve dizini araç konumuyla değiştirin. Bu konum, **Serviceconnectiontool** klasörünün tamamının bir kopyasıdır. Örnek:
 
     `cd D:\USB\ServiceConnectionTool\`
 
@@ -141,7 +141,7 @@ Bu yordamda, komut satırı örnekleri aşağıdaki dosya adlarını ve klasör 
 
 ### <a name="import"></a>İçeri Aktar
 
-1. Hizmet bağlantı noktasını barındıran bilgisayarda yönetici olarak bir komut istemi açın ve dizini araç konumuyla değiştirin. Örneğin:
+1. Hizmet bağlantı noktasını barındıran bilgisayarda yönetici olarak bir komut istemi açın ve dizini araç konumuyla değiştirin. Örnek:
 
     `cd C:\Source\SMSSETUP\TOOLS\ServiceConnectionTool\`
 

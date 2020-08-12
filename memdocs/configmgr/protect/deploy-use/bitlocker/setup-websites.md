@@ -2,20 +2,20 @@
 title: BitLocker portallarını ayarlama
 titleSuffix: Configuration Manager
 description: Self Servis portalı ve yönetim ve izleme Web sitesi için BitLocker yönetim bileşenlerini yükler
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 53fc4f694579fb8c53a4aea1054cf49dff21e1d2
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 5dbd782c97d11f8077c18796c87c7880eb26f3f3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715688"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129163"
 ---
 # <a name="set-up-bitlocker-portals"></a>BitLocker portallarını ayarlama
 
@@ -31,9 +31,46 @@ Aşağıdaki BitLocker yönetim bileşenlerini Configuration Manager kullanmak i
 Portalları, IIS yüklü olan mevcut bir site sunucusuna veya site sistemi sunucusuna yükleyebilir veya tek başına bir Web sunucusu kullanarak bunları barındırabilirsiniz.
 
 > [!NOTE]
-> Yalnızca Self Servis Portalı 'nı ve yönetim ve izleme Web sitesini bir birincil site veritabanıyla birlikte yükler. Bir hiyerarşide, her birincil site için bu Web sitelerini yükler.
+> Sürüm 2006 ' den başlayarak, merkezi yönetim sitesinde BitLocker Self-Service Portal ve yönetim ve izleme Web sitesini yükleyebilirsiniz.<!-- 5925693 -->
+>
+> Sürüm 2002 ve önceki sürümlerde, yalnızca Self Servis Portalı 'nı ve yönetim ve izleme Web sitesini birincil site veritabanıyla birlikte yükler. Bir hiyerarşide, her birincil site için bu Web sitelerini yükler.
 
 Başlamadan önce, bu bileşenlere ilişkin [önkoşulları](../../plan-design/bitlocker-management.md#prerequisites) onaylayın.
+
+## <a name="run-the-script"></a>Betiği çalıştırın
+
+Hedef Web sunucusunda, aşağıdaki işlemleri yapın:
+
+> [!NOTE]
+> Sitenizin tasarımına bağlı olarak, betiği birden çok kez çalıştırmanız gerekebilir. Örneğin, yönetim ve izleme Web sitesini yüklemek için betiği yönetim noktasında çalıştırın. Sonra Self Servis Portalı 'nı yüklemek için tek başına bir Web sunucusunda yeniden çalıştırın.
+
+1. Aşağıdaki dosyaları, `SMSSETUP\BIN\X64` site sunucusundaki Configuration Manager yükleme klasöründen hedef sunucudaki bir yerel klasöre kopyalayın:
+
+    - `MBAMWebSite.cab`
+    - `MBAMWebSiteInstaller.ps1`
+
+1. PowerShell 'i yönetici olarak çalıştırın ve ardından aşağıdaki komut satırına benzer betiği çalıştırın:
+
+    ``` PowerShell
+    .\MBAMWebSiteInstaller.ps1 -SqlServerName <ServerName> -SqlInstanceName <InstanceName> -SqlDatabaseName <DatabaseName> -ReportWebServiceUrl <ReportWebServiceUrl> -HelpdeskUsersGroupName <DomainUserGroup> -HelpdeskAdminsGroupName <DomainUserGroup> -MbamReportUsersGroupName <DomainUserGroup> -SiteInstall Both
+    ```
+
+    Örneğin,
+
+    ``` PowerShell
+    .\MBAMWebSiteInstaller.ps1 -SqlServerName sql.contoso.com -SqlInstanceName instance1 -SqlDatabaseName CM_ABC -ReportWebServiceUrl https://rsp.contoso.com/ReportServer -HelpdeskUsersGroupName "contoso\BitLocker help desk users" -HelpdeskAdminsGroupName "contoso\BitLocker help desk admins" -MbamReportUsersGroupName "contoso\BitLocker report users" -SiteInstall Both
+    ```
+
+    > [!IMPORTANT]
+    > Bu örnek komut satırı, kullanımlarını göstermek için tüm olası parametreleri kullanır. Ortamınızdaki gereksinimlerinize göre kullanım alanınızı ayarlayın.
+
+Yükleme sonrasında portallara aşağıdaki URL 'Ler aracılığıyla erişin:
+
+- Self Servis Portalı:`https://webserver.contoso.com/SelfService`
+- Yönetim ve izleme Web sitesi:`https://webserver.contoso.com/HelpDesk`
+
+> [!NOTE]
+> Microsoft, HTTPS kullanımını önerir, ancak gerektirmez. Daha fazla bilgi için bkz. [IIS 'de SSL ayarlama](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis).
 
 ## <a name="script-usage"></a>Betik kullanımı
 
@@ -71,42 +108,6 @@ Bu işlem, Web sunucusuna bu bileşenleri yüklemek için MBAMWebSiteInstaller.p
 - `-InstallDirectory`: Betiğin Web uygulaması dosyalarını yüklediği yol. Varsayılan olarak, bu yol olur `C:\inetpub` . Bu parametreyi kullanmadan önce özel dizini oluşturun.
 
 - `-Uninstall`: BitLocker yönetim yardım masası/Self Servis Web portalı sitelerini daha önce yüklenmiş oldukları bir Web sunucusunda kaldırır.
-
-
-## <a name="run-the-script"></a>Betiği çalıştırın
-
-Hedef Web sunucusunda, aşağıdaki işlemleri yapın:
-
-> [!NOTE]
-> Sitenizin tasarımına bağlı olarak, betiği birden çok kez çalıştırmanız gerekebilir. Örneğin, yönetim ve izleme Web sitesini yüklemek için betiği yönetim noktasında çalıştırın. Sonra Self Servis Portalı 'nı yüklemek için tek başına bir Web sunucusunda yeniden çalıştırın.
-
-1. Aşağıdaki dosyaları, `SMSSETUP\BIN\X64` site sunucusundaki Configuration Manager yükleme klasöründen hedef sunucudaki bir yerel klasöre kopyalayın:
-
-    - `MBAMWebSite.cab`
-    - `MBAMWebSiteInstaller.ps1`
-
-1. PowerShell 'i yönetici olarak çalıştırın ve ardından aşağıdaki komut satırına benzer betiği çalıştırın:
-
-    ``` PowerShell
-    .\MBAMWebSiteInstaller.ps1 -SqlServerName <ServerName> -SqlInstanceName <InstanceName> -SqlDatabaseName <DatabaseName> -ReportWebServiceUrl <ReportWebServiceUrl> -HelpdeskUsersGroupName <DomainUserGroup> -HelpdeskAdminsGroupName <DomainUserGroup> -MbamReportUsersGroupName <DomainUserGroup> -SiteInstall Both
-    ```
-
-    Örneğin,
-
-    ``` PowerShell
-    .\MBAMWebSiteInstaller.ps1 -SqlServerName sql.contoso.com -SqlInstanceName instance1 -SqlDatabaseName CM_ABC -ReportWebServiceUrl https://rsp.contoso.com/ReportServer -HelpdeskUsersGroupName "contoso\BitLocker help desk users" -HelpdeskAdminsGroupName "contoso\BitLocker help desk admins" -MbamReportUsersGroupName "contoso\BitLocker report users" -SiteInstall Both
-    ```
-
-    > [!IMPORTANT]
-    > Bu örnek komut satırı, kullanımlarını göstermek için tüm olası parametreleri kullanır. Ortamınızdaki gereksinimlerinize göre kullanım alanınızı ayarlayın.
-
-Yükleme sonrasında portallara aşağıdaki URL 'Ler aracılığıyla erişin:
-
-- Self Servis Portalı:`https://webserver.contoso.com/SelfService`
-- Yönetim ve izleme Web sitesi:`https://webserver.contoso.com/HelpDesk`
-
-> [!NOTE]
-> Microsoft, HTTPS kullanımını önerir, ancak gerektirmez. Daha fazla bilgi için bkz. [IIS 'de SSL ayarlama](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis).
 
 ## <a name="verify"></a>Doğrulama
 

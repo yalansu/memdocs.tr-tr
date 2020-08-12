@@ -2,7 +2,7 @@
 title: Topluluk hub 'ı ve GitHub
 titleSuffix: Configuration Manager
 description: Configuration Manager 'de topluluk hub 'ını etkinleştirme ve kullanma
-ms.date: 07/27/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c0b812fa3b373d6bd5bd2bebed8b1540ceb7bdd6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ae0abdd4a159759037768c8f27d5643bdf612f6e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262090"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128180"
 ---
 # <a name="community-hub-and-github"></a>Topluluk hub 'ı ve GitHub
 <!--3555935, 3555936-->
@@ -36,7 +36,7 @@ Topluluk hub 'ı aşağıdaki nesneleri destekler:
 - PowerShell Betikleri
 - Raporlar
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Topluluk hub 'ına erişmek için kullanılan Configuration Manager konsolunu çalıştıran cihaz aşağıdaki öğelere ihtiyaç duyuyor:
    - .NET Framework sürüm 4,6 veya üzeri
@@ -66,6 +66,37 @@ Topluluk hub 'ı aşağıdaki nesneleri destekler:
 
 [![Topluluk hub 'ından indirilen tüm öğeler](./media/3555935-community-hub-downloads.png)](./media/3555935-community-hub-downloads.png#lightbox)
 
+
+## <a name="direct-links-to-community-hub-items"></a><a name="bkmk_deeplink"></a>Topluluk hub 'ı öğelerine doğrudan bağlantılar
+<!--4224406-->
+*(Sürüm 2006 ' de tanıtılmıştır)* Doğrudan bağlantı ile Configuration Manager konsolu topluluk hub düğümündeki öğelere kolayca gidebilirsiniz ve başvurabilirsiniz. Bu özelliğin amacı, daha kolay işbirliği yapmak ve iş arkadaşlarınızla topluluk hub öğeleri bağlantılarını paylaşabiliyor. Bu derin bağlantılar Şu anda yalnızca konsolun topluluk hub düğümündeki öğeler için geçerlidir.
+
+### <a name="prerequisites-for-direct-links"></a>Doğrudan bağlantılar için Önkoşullar
+
+- Configuration Manager Konsolu sürüm 2006 veya üzeri
+- Bir topluluk hub 'ı bağlantısını izleyerek yerel yerleşik yönetici hesabını kullanamazsınız.
+
+### <a name="sharing-and-opening-direct-links"></a>Doğrudan bağlantıları paylaşma ve açma
+
+Bir öğeyi paylaşmak için:
+1. Hub 'daki öğeye gidip **paylaşma**' yı seçin.
+1. Kopyalanmış bağlantıyı yapıştırın ve başkalarıyla paylaşabilirsiniz.
+
+Paylaşılan bir bağlantıyı açmak için:
+1. Configuration Manager konsolunun yüklü olduğu bir makineden bağlantıya tıklayın.
+   - Örneğin, bu bağlantıyı kullanarak [kenar otomatik güncelleştirme betiğini](https://communityhub.microsoft.com/item/7200) ( `https://communityhub.microsoft.com/item/7200` ) paylaşabilirsiniz.
+1. İstendiğinde **topluluk hub 'ını Başlat ' ı** seçin.
+1. Konsol doğrudan topluluk merkezindeki komut dosyasına açılır.
+
+## <a name="known-issues"></a><a name="bkmk_known"></a>Bilinen sorunlar
+
+### <a name="unable-to-access-community-hub-node-when-running-console-as-a-different-user"></a>Konsol farklı bir kullanıcı olarak çalıştırılırken topluluk hub düğümüne erişilemiyor
+<!--7826897-->
+Daha düşük haklara sahip bir kullanıcı olarak oturum açtıysanız ve Configuration Manager konsolunu açmak için farklı bir Kullanıcı **olarak çalıştır** ' ı seçerseniz, **topluluk hub** düğümüne erişemeyebilirsiniz.
+
+### <a name="downloaded-reports-dont-get-removed-from-your-downloads-page"></a>İndirilen raporlar indirmeler sayfasından kaldırılmaz
+<!--7851305-->
+İndirilen bir raporu **izleme**  >  **raporları** düğümünden silerseniz, rapor **topluluk hub 'ından**  >  **indirmeler** sayfasında silinmez ve raporu yeniden indiremez. 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

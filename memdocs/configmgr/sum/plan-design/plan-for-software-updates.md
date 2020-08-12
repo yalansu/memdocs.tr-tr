@@ -5,17 +5,17 @@ description: Yazılım güncelleştirme noktası altyapısı için bir plan, Con
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: dca6f3e4bf67ac4c947f785016d781e538ee0a4e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b7b3ef78924389232ea292d16c6840fbef9bb321
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724023"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88123600"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Configuration Manager yazılım güncelleştirmelerini planlayın
 
@@ -71,7 +71,7 @@ Configuration Manager, aşağıdaki senaryolarda istemciye bir yazılım güncel
 ###  <a name="software-update-point-switching"></a><a name="BKMK_SUPSwitching"></a>Yazılım güncelleştirme noktası değiştirme  
 
 > [!NOTE]  
-> İstemciler yeni bir yazılım güncelleştirme noktası bulmak için sınır grupları kullanır. Geçerli yazılım güncelleştirme noktası artık erişilebilir değilse, yeni bir tane eklemek ve bulmak için sınır grupları da kullanır. Bir istemcinin bulabileceği sunucuları denetlemek için farklı sınır gruplarına bireysel yazılım güncelleştirme noktaları ekleyin. Daha fazla bilgi için bkz. [yazılım güncelleştirme noktaları](../../core/servers/deploy/configure/boundary-groups.md#software-update-points).  
+> İstemciler yeni bir yazılım güncelleştirme noktası bulmak için sınır grupları kullanır. Geçerli yazılım güncelleştirme noktası artık erişilebilir değilse, yeni bir tane eklemek ve bulmak için sınır grupları da kullanır. Bir istemcinin bulabileceği sunucuları denetlemek için farklı sınır gruplarına bireysel yazılım güncelleştirme noktaları ekleyin. Daha fazla bilgi için bkz. [yazılım güncelleştirme noktaları](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
 
 Bir sitede birden çok yazılım güncelleştirme noktanız varsa ve biri başarısız olursa ya da kullanılamaz hale gelirse, istemciler farklı bir yazılım güncelleştirme noktasına bağlanır. Bu yeni sunucu sayesinde istemciler en son yazılım güncelleştirmelerini taramaya devam eder. Bir istemci ilk olarak bir yazılım güncelleştirme noktasına atandığında, tarayamadıkça bu yazılım güncelleştirme noktasına atanmış kalır.  
 
@@ -111,7 +111,7 @@ Etkin yazılım güncelleştirme noktasıyla ilgili sorunlar olduğunda Configur
 > [!IMPORTANT]    
 > Cihazları yeni bir sunucu kullanacak şekilde değiştirdiğinizde, cihazlar bu yeni sunucuyu bulmak için geri dönüş kullanır. İstemciler, bir sonraki yazılım güncelleştirmeleri tarama döngülerinde yeni yazılım güncelleştirme noktasına geçer.<!-- SCCMDocs#1537 -->
 >
-> Bu değişikliğe başlamadan önce, yazılım güncelleştirme noktalarınızın doğru sınır gruplarında olduğundan emin olmak için sınır grubu yapılandırmalarınızı gözden geçirin. Daha fazla bilgi için bkz. [yazılım güncelleştirme noktaları](../../core/servers/deploy/configure/boundary-groups.md#software-update-points).  
+> Bu değişikliğe başlamadan önce, yazılım güncelleştirme noktalarınızın doğru sınır gruplarında olduğundan emin olmak için sınır grubu yapılandırmalarınızı gözden geçirin. Daha fazla bilgi için bkz. [yazılım güncelleştirme noktaları](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
 >
 > Yeni bir yazılım güncelleştirme noktasına geçiş yapmak ek ağ trafiği oluşturur. Trafik miktarı, WSUS Yapılandırma ayarlarınıza bağlıdır, örneğin, eşitlenen sınıflandırmalar ve ürünler veya paylaşılan bir WSUS veritabanının kullanımı. Birden çok cihaza geçiş yapmayı planlıyorsanız, bakım pencereleri sırasında bunu yapmayı deneyin. Bu zamanlama, istemciler yeni yazılım güncelleştirme noktasını taradığı zaman ağınıza etkisini azaltır.  
 
@@ -151,7 +151,7 @@ Ağınızı Internet üzerinden dolaşan cihazları yönetmeniz gerektiğinde, b
 #### <a name="cloud-management-gateway"></a>Bulut yönetimi ağ geçidi
 Microsoft Azure ' de bir bulut yönetimi ağ geçidi oluşturun ve internet tabanlı istemcilerden gelen trafiğe izin vermek için en az bir şirket içi yazılım güncelleştirme noktasını etkinleştirin. İstemciler İnternet üzerinde dolaşırken, yazılım güncelleştirme noktalarınıza karşı taramaya devam ederler. Tüm internet tabanlı istemciler her zaman Microsoft Update bulut hizmetinden içerik alır. 
 
-Daha fazla bilgi için bkz. [bulut yönetimi ağ geçidini planlayın](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).  
+Daha fazla bilgi için bkz. [bulut yönetimi ağ geçidini planlayın](../../core/clients/manage/cmg/plan-cloud-management-gateway.md) ve [sınır gruplarını yapılandırın](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
 
 #### <a name="internet-based-client-management"></a>Internet tabanlı istemci yönetimi
 Bir yazılım güncelleştirme noktasını internet 'e yönelik bir ağa yerleştirin ve internet tabanlı istemcilerden gelen trafiğe izin vermek için etkinleştirin. İstemciler İnternet üzerinde dolaşırken, tarama için bu yazılım güncelleştirme noktasına geçer. Tüm internet tabanlı istemciler her zaman Microsoft Update bulut hizmetinden içerik alır.
@@ -290,7 +290,7 @@ Bu bölüm aşağıdaki alt konuları içerir:
 - [Eşitleme kaynağı](#BKMK_SyncSource)
 - [Eşitleme zamanlaması](#BKMK_SyncSchedule)
 - [Güncelleştirme sınıflandırmaları](#BKMK_UpdateClassifications)
-- [Ürünler](#BKMK_UpdateProducts)
+- [Ürün](#BKMK_UpdateProducts)
 - [Yerine geçme kuralları](#BKMK_SupersedenceRules)
 - [Diller](#BKMK_UpdateLanguages)  
 - [En fazla çalışma süresi](#bkmk_maxruntime)
@@ -372,7 +372,7 @@ Genellikle, başka bir yazılım güncelleştirmesinin yerine geçen bir yazıl�
 
 -   Güncelleştirme yüklenmek üzere onaylanırsa istemcilere yüklenen yenisiyle değiştirilen güncelleştirme dosya paketinin verimliliğini artırır. Örneğin, yenisiyle değiştirilen güncelleştirme, artık düzeltmeyle veya yeni güncelleştirme tarafından desteklenen işletim sistemleriyle ilgili olmayan dosyalar içerebilir. Bu dosyalar, güncelleştirmenin yerine geçen dosya paketine dahil değildir.  
 
--   Bir ürünün daha yeni sürümlerini güncelleştirir. Başka bir deyişle, bir ürünün daha eski sürümleri veya yapılandırmaları için artık uygun olmayan sürümleri güncelleştirir. Güncelleştirmeler ayrıca, dil desteğini genişletmek değişiklikler yapılmışsa başka güncelleştirmelerin de yerini alabilir. Örneğin, Microsoft Office için bir ürün güncelleştirmesinin daha sonraki bir düzeltmesi, daha eski bir işletim sistemi için desteği kaldırabilir, ancak ilk güncelleştirme sürümünde yeni diller için ek destek ekleyebilir.  
+-   Bir ürünün daha yeni sürümlerini güncelleştirir. Başka bir deyişle, bir ürünün daha eski sürümleri veya yapılandırmaları için artık uygun olmayan sürümleri güncelleştirir. Güncelleştirmeler ayrıca, dil desteğini genişletmek değişiklikler yapılmışsa başka güncelleştirmelerin de yerini alabilir. Örneğin, Microsoft 365 uygulamalar için bir ürün güncelleştirmesinin daha sonraki bir düzeltmesi, daha eski bir işletim sistemi için desteği kaldırabilir, ancak ilk güncelleştirme sürümünde yeni diller için ek destek ekleyebilir.  
 
 Yazılım güncelleştirme noktasının özelliklerinde, yenisiyle değiştirilen yazılım güncelleştirmelerinin hemen dolduğunu belirtin. Bu ayar, yeni dağıtımlara eklenmesini engeller. Ayrıca, bir veya daha fazla zaman aşımına uğradı yazılım güncelleştirmeleri içerdiğini göstermek için mevcut dağıtımları işaretler. Veya yenisiyle değiştirilen yazılım güncelleştirmelerinin süresi dolmadan önce bir süre belirtin. Bu eylem, bunları dağıtmaya devam etmenize olanak tanır. 
 
@@ -403,7 +403,7 @@ Yazılım güncelleştirme dosyası dil ayarlarını ortamınızda en sık kulla
 
 #### <a name="summary-details"></a>Özet ayrıntılar  
 Eşitleme işlemi sırasında, özet ayrıntı bilgileri (yazılım güncelleştirmeleri meta verileri) yalnızca belirttiğiniz dillerdeki yazılım güncelleştirmeleri için güncelleştirilir. Meta veriler yazılım güncelleştirmesiyle ilgili bilgiler sağlar, örneğin:
-- Adı
+- Ad
 - Açıklama
 - Güncelleştirmenin desteklediği ürünler
 - Güncelleştirme sınıflandırması
@@ -461,7 +461,8 @@ Configuration Manager yazılım güncelleştirmesi için bekleyen bir yeniden ba
 
 ## <a name="evaluate-software-updates-after-a-servicing-stack-update"></a><a name="bkmk_ssu"></a>Bakım yığını güncelleştirmesinden sonra yazılım güncelleştirmelerini değerlendir
 <!--4639943-->
-Sürüm 2002 ' den başlayarak Configuration Manager, bir hizmet yığını güncelleştirmesinin (SSU) birden çok güncelleştirme için bir yüklemenin parçası olup olmadığını algılar. Bir SSU algılandığında, önce yüklenir. SSU 'yı yükledikten sonra, kalan güncelleştirmeleri yüklemek için bir yazılım güncelleştirme değerlendirme çevrimi çalışır. Bu değişiklik, bakım yığını güncelleştirmesinden sonra bağımlı bir toplu güncelleştirmenin yüklenmesine izin verir. Cihazın yüklemeler arasında yeniden başlatılması gerekmez ve ek bir bakım penceresi oluşturmanız gerekmez. SSUs öncelikle yalnızca Kullanıcı tarafından başlatılan yüklemeler için yüklenir. Örneğin, bir kullanıcı yazılım merkezinden birden çok güncelleştirme için bir yükleme başlatırsa, önce SSU yüklenmemiş olabilir.
+Sürüm 2002 ' den başlayarak Configuration Manager, bir hizmet yığını güncelleştirmesinin (SSU) birden çok güncelleştirme için bir yüklemenin parçası olup olmadığını algılar. Bir SSU algılandığında, önce yüklenir. SSU 'yı yükledikten sonra, kalan güncelleştirmeleri yüklemek için bir yazılım güncelleştirme değerlendirme çevrimi çalışır. Bu değişiklik, bakım yığını güncelleştirmesinden sonra bağımlı bir toplu güncelleştirmenin yüklenmesine izin verir. Cihazın yüklemeler arasında yeniden başlatılması gerekmez ve ek bir bakım penceresi oluşturmanız gerekmez. SSUs öncelikle yalnızca Kullanıcı tarafından başlatılan yüklemeler için yüklenir. Örneğin, bir kullanıcı yazılım merkezinden birden çok güncelleştirme için bir yükleme başlatırsa, önce SSU yüklenmemiş olabilir. Configuration Manager sürüm 2002 kullanılırken Windows Server işletim sistemleri için önce SSUs yüklemesi kullanılamaz. <!--7813007-->Bu işlevsellik, Windows Server işletim sistemleri için Configuration Manager sürüm 2006 ' ye eklenmiştir.
+
 
 
 ## <a name="next-steps"></a>Sonraki adımlar

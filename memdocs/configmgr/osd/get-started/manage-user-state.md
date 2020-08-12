@@ -1,27 +1,27 @@
 ---
-title: 'Kullanıcı durumunu yönetme '
+title: Kullanıcı durumunu yönetme
 titleSuffix: Configuration Manager
 description: Configuration Manager, işletim sistemi dağıtım senaryolarında Kullanıcı durumu verilerini yakalamak ve geri yüklemek için Kullanıcı Durumu Taşıma Aracı kullanır.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 70c15fb3a108b22ffacad69d6a67bef3b2d29952
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a720c68fc705187dedb6ff04fc3898a8b0b21c8
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724079"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124372"
 ---
 # <a name="manage-user-state-in-configuration-manager"></a>Configuration Manager Kullanıcı durumunu yönetme
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
-Geçerli işletim sisteminin kullanıcı durumunu tutmak istediğiniz işletim sistemi dağıtım senaryolarında, Configuration Manager görev dizilerini kullanarak Kullanıcı durumu verilerini yakalayabilir ve geri yükleyebilirsiniz. Örneğin:  
+Geçerli işletim sisteminin kullanıcı durumunu tutmak istediğiniz işletim sistemi dağıtım senaryolarında, Configuration Manager görev dizilerini kullanarak Kullanıcı durumu verilerini yakalayabilir ve geri yükleyebilirsiniz. Örnek:  
 
 - Kullanıcı durumunu bir bilgisayardan yakalayıp diğer bilgisayara geri yüklemek istediğiniz dağıtımlar.  
 

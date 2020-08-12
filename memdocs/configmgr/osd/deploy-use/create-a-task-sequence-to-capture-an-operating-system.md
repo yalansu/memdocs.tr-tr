@@ -5,17 +5,17 @@ description: Derleme ve yakalama görev dizisi, işletim sistemi ile birlikte be
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ceb63560c6000b1a76116d0791c98219a66066b8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 349ae2b8d574904d25f6f23bfb1707bb11df8af0
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723071"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125517"
 ---
 # <a name="create-a-task-sequence-to-capture-an-os"></a>İşletim sistemini yakalamak için görev dizisi oluşturma
 
@@ -81,7 +81,7 @@ Bir başvuru bilgisayarı oluşturmak ve işletim sistemini yakalamak için bir 
 
     - **Görüntü dizini**: görüntüde yüklenecek işletim sisteminin dizinini belirtin. İşletim sistemi görüntüsü birden çok sürüm içeriyorsa yüklemek istediğiniz sürümü seçin.  
 
-    - **Ürün anahtarı**: gerekirse, Windows işletim sisteminin yüklemesi için ürün anahtarını belirtin. Kodlanmış toplu lisans anahtarlarını ve standart ürün anahtarlarını belirtebilirsiniz. Kodsuz bir ürün anahtarı kullanırsanız, beş karakterlik her bir grubu tireyle (`-`) ayırın. Örneğin, `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`  
+    - **Ürün anahtarı**: gerekirse, Windows işletim sisteminin yüklemesi için ürün anahtarını belirtin. Kodlanmış toplu lisans anahtarlarını ve standart ürün anahtarlarını belirtebilirsiniz. Kodsuz bir ürün anahtarı kullanırsanız, beş karakterlik her bir grubu tireyle ( `-` ) ayırın. Örnek: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`  
 
     - **Sunucu Lisanslama modu**: gerekirse, sunucu lisansının **bilgisayar** **başına, sunucu başına**olduğunu veya hiçbir lisansın belirtilolmadığını belirtin. Sunucu lisansı **Sunucu başına**ise maksimum sunucu bağlantısı sayısını da belirtin.  
 
@@ -102,7 +102,7 @@ Bir başvuru bilgisayarı oluşturmak ve işletim sistemini yakalamak için bir 
 
         Kuruluş birimini (OU) de belirtebilirsiniz. Bu ayar isteğe bağlıdır ve henüz yoksa bilgisayar hesabının oluşturulacağı OU 'nun LDAP X. 500 ayırt edici adını belirtir.  
 
-    - **Hesap**: Belirtilen etki alanına katılmak üzere izinlere sahip olan hesap için kullanıcı adını ve parolayı belirtin. Örneğin: `domain\user` veya `%variable%`.  
+    - **Hesap**: Belirtilen etki alanına katılmak üzere izinlere sahip olan hesap için kullanıcı adını ve parolayı belirtin. Örneğin: `domain\user` veya `%variable%` .  
 
         > [!IMPORTANT]  
         > Dağıtım sırasında etki alanı ayarlarını ya da çalışma grubu ayarlarını geçirmeyi planlıyorsanız, uygun etki alanı kimlik bilgilerini buraya girdiğinizden emin olun.  
@@ -116,7 +116,7 @@ Bir başvuru bilgisayarı oluşturmak ve işletim sistemini yakalamak için bir 
 1. **Uygulamaları yüklemek** sayfasında, hedef bilgisayara yüklenecek uygulamaları belirtin. Birden çok uygulamayı belirlerseniz, belirli bir uygulamanın yüklemesinin başarısız olmasına karşı, görev dizisinin devam etmesini de belirtebilirsiniz.  
 
     > [!NOTE]
-    > Sihirbazın yanında **Sistem Hazırlama** sayfası görüntülenir, ancak artık kullanılmamaktadır. Devam etmek için **İleri**’yi seçin.
+    > Sihirbazın yanında **Sistem Hazırlama** sayfası görüntülenir, ancak artık kullanılmamaktadır. Devam etmek için **İleri** seçeneğini belirleyin.
 
 1. **Görüntü özellikleri** sayfasında işletim sistemi görüntüsü için aşağıdaki ayarları belirtin:
 
@@ -208,15 +208,15 @@ Bu grup bir başvuru bilgisayarı oluşturmak için gerekli işlemleri içerir.
 
 |Görev sırası adımı|Açıklama|  
 |-------------------------------|---------------|  
-|**Windows PE'de yeniden başlat**|Hedef bilgisayarı görev dizisine atanan önyükleme görüntüsüne yeniden başlatın. Bu adım, kullanıcıya yüklemenin devam edebilmesi için bilgisayarın yeniden başlatıldığını belirten bir ileti görüntüler.<br /><br />Bu adım salt okunurdur `_SMSTSInWinPE` görev dizisi değişkenini kullanır. İlişkili değer eşitse `false`, görev sırası adımı devam eder.|
-|**Diski Bölümle 0 - BIOS**|Hedef bilgisayardaki sabit sürücüyü BIOS modunda bölümleyip biçimlendirin. Varsayılan disk numarası `0`.<br /><br />Bu adım birkaç salt okunurdur görev dizisi değişkenini kullanır. Örneğin, yalnızca Configuration Manager istemci önbelleği yoksa ve bilgisayar UEFı için yapılandırılmışsa çalışır.|
-|**Diski Bölümle 0 - UEFI**|Hedef bilgisayardaki sabit sürücüyü UEFı modunda bölümleyip biçimlendirin. Varsayılan disk numarası `0`.<br /><br />Bu adım birkaç salt okunurdur görev dizisi değişkenini kullanır. Örneğin, yalnızca Configuration Manager istemci önbelleği yoksa çalışır ve yalnızca bilgisayar UEFı için yapılandırılmışsa çalışır.|
+|**Windows PE'de yeniden başlat**|Hedef bilgisayarı görev dizisine atanan önyükleme görüntüsüne yeniden başlatın. Bu adım, kullanıcıya yüklemenin devam edebilmesi için bilgisayarın yeniden başlatıldığını belirten bir ileti görüntüler.<br /><br />Bu adım salt okunurdur `_SMSTSInWinPE` görev dizisi değişkenini kullanır. İlişkili değer eşitse `false` , görev sırası adımı devam eder.|
+|**Diski Bölümle 0 - BIOS**|Hedef bilgisayardaki sabit sürücüyü BIOS modunda bölümleyip biçimlendirin. Varsayılan disk numarası `0` .<br /><br />Bu adım birkaç salt okunurdur görev dizisi değişkenini kullanır. Örneğin, yalnızca Configuration Manager istemci önbelleği yoksa ve bilgisayar UEFı için yapılandırılmışsa çalışır.|
+|**Diski Bölümle 0 - UEFI**|Hedef bilgisayardaki sabit sürücüyü UEFı modunda bölümleyip biçimlendirin. Varsayılan disk numarası `0` .<br /><br />Bu adım birkaç salt okunurdur görev dizisi değişkenini kullanır. Örneğin, yalnızca Configuration Manager istemci önbelleği yoksa çalışır ve yalnızca bilgisayar UEFı için yapılandırılmışsa çalışır.|
 |**İşletim Sistemini Uygula**|Belirtilen işletim sistemi görüntüsünü hedef bilgisayara yükler. Bu adım öncelikle birimdeki Configuration Manager özgü denetim dosyalarından başka tüm dosyaları siler. Ardından, WıM dosyasında bulunan tüm birim görüntülerini hedef bilgisayarda karşılık gelen sıralı disk birimine uygular.|
 |**Windows Ayarlarını Uygula**|Hedef bilgisayar için Windows ayarlarını yapılandırın.|
 |**Ağ Ayarlarını Uygula**|Hedef bilgisayar için ağ veya çalışma grubu yapılandırma bilgilerini belirtin.|
-|**Aygıt Sürücülerini Uygula**|Bu işletim sistemi dağıtımının bir parçası olarak sürücüleri eşleştirin ve yükler. Daha fazla bilgi için, bkz. [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers).<br /><br />Bu adım salt okunurdur `_SMSTSMediaType` görev dizisi değişkenini kullanır. İlişkili değer eşit `FullMedia`değilse, bu adım çalıştırılmaz.|
+|**Aygıt Sürücülerini Uygula**|Bu işletim sistemi dağıtımının bir parçası olarak sürücüleri eşleştirin ve yükler. Daha fazla bilgi için, bkz. [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers).<br /><br />Bu adım salt okunurdur `_SMSTSMediaType` görev dizisi değişkenini kullanır. İlişkili değer eşit değilse `FullMedia` , bu adım çalıştırılmaz.|
 |**Windows 'u ve Configuration Manager ayarlama**|Configuration Manager istemci yazılımını yükler. Configuration Manager, Configuration Manager istemci GUID 'sini yükleyip kaydeder. Gerekli **yükleme özelliklerini**ekleyin.|
-|**Güncelleştirmeleri Yükle**|Yazılım güncelleştirmelerinin hedef bilgisayara nasıl yükleneceğini belirtin. Hedef bilgisayar, bu adım çalıştırılıncaya kadar ilgili yazılım güncelleştirmeleri için değerlendirilmez. Bu noktada, değerlendirme diğer Configuration Manager yönetilen tüm istemcilere benzer. Daha fazla bilgi için bkz. [yazılım güncelleştirmelerini yükler](../understand/install-software-updates.md).<br /><br />Bu adım salt okunurdur `_SMSTSMediaType` görev dizisi değişkenini kullanır. İlişkili değer eşit `FullMedia`değilse, bu adım çalıştırılmaz.|
+|**Güncelleştirmeleri yükler**|Yazılım güncelleştirmelerinin hedef bilgisayara nasıl yükleneceğini belirtin. Hedef bilgisayar, bu adım çalıştırılıncaya kadar ilgili yazılım güncelleştirmeleri için değerlendirilmez. Bu noktada, değerlendirme diğer Configuration Manager yönetilen tüm istemcilere benzer. Daha fazla bilgi için bkz. [yazılım güncelleştirmelerini yükler](../understand/install-software-updates.md).<br /><br />Bu adım salt okunurdur `_SMSTSMediaType` görev dizisi değişkenini kullanır. İlişkili değer eşit değilse `FullMedia` , bu adım çalıştırılmaz.|
 |**Uygulamaları yükler**|Referans bilgisayara yüklenecek uygulamaları belirtir.|
 
 ### <a name="group-capture-the-reference-machine"></a>Grup: başvuru makinesini yakala

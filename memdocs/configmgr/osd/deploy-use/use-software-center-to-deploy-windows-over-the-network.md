@@ -1,40 +1,54 @@
 ---
 title: Windows’u ağ üzerinden dağıtmak için Yazılım Merkezi’ni kullanma
 titleSuffix: Configuration Manager
-description: Mevcut bir bilgisayarı yeni bir Windows sürümü ile yenilemek veya Windows 'un en son sürümüne yükseltmek için, bir işletim sistemini yazılım merkezi 'ne dağıtabilirsiniz.
-ms.date: 06/16/2017
+description: Mevcut bir bilgisayarı yeni bir Windows sürümü ile yenilemek veya Windows 'un en son sürümüne yükseltmek için yazılım merkezi 'nden bir işletim sistemi dağıtın.
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 919e3636-53fe-4119-ad14-2d03702b391b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4b9946f6204c2e95645c932cd4e9aab691f1d95d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6bd10240ebc7ec478efe122bf7f8a45d3afe9f10
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724219"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124610"
 ---
 # <a name="use-software-center-to-deploy-windows-over-the-network-with-configuration-manager"></a>Configuration Manager ile Windows 'u ağ üzerinden dağıtmak için yazılım merkezi 'ni kullanma
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
-Yazılım Merkezi 'nde kullanılabilir Configuration Manager bir işletim sistemi yükleyen görev sırasını yapabilirsiniz. Aşağıdaki işletim sistemi dağıtım senaryolarıyla bir işletim sistemini yazılım merkezi 'ne dağıtabilirsiniz:
+Yazılım Merkezi 'nde kullanılabilir bir işletim sistemi yükleyen bir görev sırası yapabilirsiniz. Bir Kullanıcı aşağıdaki işletim sistemi dağıtım senaryoları için yazılım merkezi 'nden bir görev dizisi çalıştırabilir:
 
--   [Mevcut bir bilgisayarı yeni bir Windows sürümü ile yenileme](refresh-an-existing-computer-with-a-new-version-of-windows.md)
+- [Mevcut bir bilgisayarı yeni bir Windows sürümü ile yenileme](refresh-an-existing-computer-with-a-new-version-of-windows.md)
 
--   [Windows’u en yeni sürüme yükseltme](upgrade-windows-to-the-latest-version.md)
+- [Windows’u en yeni sürüme yükseltme](upgrade-windows-to-the-latest-version.md)
 
-İşletim sistemi dağıtım senaryolarından birindeki adımları doldurun. Ardından, yazılım merkezi 'nde mevcut olan dağıtımlar için hazırlanmak üzere aşağıdaki bölümleri kullanın.
+- [İşletim sistemi dışı dağıtımlar için görev dizisi oluşturma](create-a-task-sequence-for-non-operating-system-deployments.md)
 
-## <a name="configure-deployment-settings"></a>Dağıtım ayarlarını yapılandırma  
-İşletim sistemi dağıtımını yazılım merkezi 'nde kullanılabilir hale getirmek için dağıtımı yapılandırın. Dağıtımı, Yazılım Dağıtma Sihirbazı 'nın **dağıtım ayarları** sayfasında veya dağıtımın özelliklerindeki **dağıtım ayarları** sekmesinde yapılandırabilirsiniz. **Aşağıdakiler için kullanılabilir yap** ayarı için **Yalnızca Configuration Manager İstemcileri** veya **Configuration Manager istemcileri, medya ve PXE**ayarını yapılandırın. Sistem işletim sistemini dağıttığında, işletim sistemi, hedef koleksiyonun üyeleri için yazılım merkezi 'nde görüntülenir.
+Bu işletim sistemi dağıtım senaryolarından birindeki adımları doldurun. Ardından, yazılım merkezi 'nde mevcut olan dağıtımlar için hazırlanmak üzere aşağıdaki bölümleri kullanın.
 
-##  <a name="deploy-the-task-sequence-to-computers"></a><a name="BKMK_Deploy"></a> Görev dizisini bilgisayarlara dağıtma  
-İşletim sistemini bir hedef koleksiyona dağıtın. Daha fazla bilgi için, bkz. [Deploy a task sequence](deploy-a-task-sequence.md). Yazılım Merkezi için işletim sistemlerini dağıttığınızda, dağıtımın gerekli veya kullanılabilir olup olmadığını yapılandırabilirsiniz.
+## <a name="deploy-the-task-sequence"></a><a name="BKMK_Deploy"></a> Görev dizisini dağıtma
 
--   **Gerekli dağıtım**: Gerekli dağıtımlar işletim sistemini Yazılım Merkezi’nde kullanılabilir hale getirir, ancak yapılandırılmış atama zamanlamasında otomatik olarak başlatılır.
+Görev dizisini bir hedef koleksiyona dağıtın. Daha fazla bilgi için, bkz. [Deploy a task sequence](deploy-a-task-sequence.md).
 
--   **Kullanılabilir dağıtım**: İşletim sistemi Yazılım Merkezi'nde kullanılabilir hale gelir ve kullanıcı bunu isteğe bağlı olarak yükleyebilir.
+Dağıtımın **dağıtım ayarları** sayfasında, **aşağıdaki için kullanılabilir yap** ayarı için aşağıdaki seçeneklerden birini belirleyin:
+
+- Yalnızca Configuration Manager Istemcileri
+
+- Configuration Manager istemcileri, medya ve PXE
+
+Dağıtımın gerekli veya kullanılabilir olup olmadığını da yapılandırın:
+
+- Gerekli dağıtım: gerekli dağıtımlar, görev dizisini yazılım merkezi 'nde kullanılabilir hale getirir. Yapılandırılan son tarihte otomatik olarak başlatılır.
+
+- Kullanılabilir dağıtım: görev dizisi yazılım merkezi 'nde kullanılabilir ve Kullanıcı bunu isteğe bağlı olarak yükleyebilir.
+
+Dağıtımı oluşturduktan sonra, hedef koleksiyondaki istemciler yazılım merkezi 'nde görev dizisini gösterir.
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+[İşletim sistemi dağıtımı için kullanıcı deneyimleri](../understand/user-experience.md#software-center)

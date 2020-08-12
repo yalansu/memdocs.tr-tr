@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: ae1f52b0744f79f79e00e5dfe2d6a76c903cf4a4
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 1a64d49edca146c70a56b07cb304d1744b86a1bf
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240040"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127755"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Yazılım güncelleştirmelerini otomatik dağıtma  
 
@@ -47,7 +47,7 @@ ADR kullanarak yazılım güncelleştirmelerini otomatik olarak onaylayın ve da
 
          - **Patch Tuesday** şablonu, yazılım güncelleştirmelerini aylık bir döngüde dağıtırken kullanacağınız genel ayarları sağlar.  
 
-         - **Office 365 Istemci güncelleştirmeleri** şablonu, Office 365 Pro Plus istemcileri için güncelleştirmeleri dağıtırken kullanılacak genel ayarları sağlar.
+         - **Office 365 Istemci güncelleştirmeleri** şablonu, Microsoft 365 Apps istemcilerine yönelik güncelleştirmeleri dağıtırken kullanılacak genel ayarları sağlar.
              > [!Note]
              > 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. ADRs 'niz "title" özelliğini kullanıyorsa, 9 Haziran 2020 ' den itibaren düzenlemeniz gerekir. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)`yeni başlığa bir örnektir. Başlık değişikliği için ADRs 'nizi değiştirme hakkında daha fazla bilgi için bkz. [Microsoft 365 uygulamaları için kanalları güncelleştirme](manage-office-365-proplus-updates.md#bkmk_channel). Ad değişikliği hakkında daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change).
 
@@ -199,7 +199,7 @@ ADR kullanarak yazılım güncelleştirmelerini otomatik olarak onaylayın ve da
 
         - **İkili değişiklik çoğaltmasını etkinleştir**: dağıtım paketi için ikili değişiklik çoğaltmasını kullanmak için bu ayarı etkinleştirin. Daha fazla bilgi için bkz. [ikili farklar çoğaltması](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
 
-    - **Dağıtım paketi yok**: sürüm 1806 ' den başlayarak, yazılım güncelleştirmelerini, içeriği önce indirip dağıtım noktalarına dağıtmadan cihazlara dağıtın. Son derece büyük güncelleştirme içeriğiyle ilgilenirken bu ayar faydalıdır. Ayrıca, istemcilerin Microsoft Update bulut hizmetinden içerik almasını istediğiniz zaman da kullanabilirsiniz. Bu senaryodaki istemciler, gerekli içeriğe zaten sahip olan eşlerden içerik de indirebilir. Configuration Manager istemcisi içerik indirmeyi yönetmeye devam eder, bu nedenle Configuration Manager eş önbellek özelliğini veya teslim Iyileştirme gibi diğer teknolojileri kullanabilir. Bu özellik, Windows ve Office güncelleştirmeleri de dahil olmak üzere Configuration Manager yazılım güncelleştirme yönetimi tarafından desteklenen tüm güncelleştirme türlerini destekler.<!--1357933-->  
+    - **Dağıtım paketi yok**: sürüm 1806 ' den başlayarak, yazılım güncelleştirmelerini, içeriği önce indirip dağıtım noktalarına dağıtmadan cihazlara dağıtın. Son derece büyük güncelleştirme içeriğiyle ilgilenirken bu ayar faydalıdır. Ayrıca, istemcilerin Microsoft Update bulut hizmetinden içerik almasını istediğiniz zaman da kullanabilirsiniz. Bu senaryodaki istemciler, gerekli içeriğe zaten sahip olan eşlerden içerik de indirebilir. Configuration Manager istemcisi içerik indirmeyi yönetmeye devam eder, bu nedenle Configuration Manager eş önbellek özelliğini veya teslim Iyileştirme gibi diğer teknolojileri kullanabilir. Bu özellik, Windows ve Microsoft 365 Apps güncelleştirmeleri dahil Configuration Manager yazılım güncelleştirme yönetimi tarafından desteklenen tüm güncelleştirme türlerini destekler.<!--1357933-->  
 
         > [!Note]  
         > Bu seçeneği belirleyip ayarları uyguladığınızda, artık değiştirilemez. Diğer seçenekler gri renkte.<!--SCCMDocs-pr issue 3003-->  
@@ -209,7 +209,7 @@ ADR kullanarak yazılım güncelleştirmelerini otomatik olarak onaylayın ve da
 
 13. **Yükleme konumu** sayfasında, yazılım güncelleştirme dosyalarının internetten mi yoksa yerel ağınızdan mı yükleneceğini belirtin. Aşağıdaki ayarları yapılandırın:  
 
-    -   **Yazılım güncelleştirmelerini İnternet 'Ten indir**: yazılım güncelleştirmelerini İnternet 'teki belirli bir konumdan indirmek için bu ayarı seçin. Bu ayar, varsayılan olarak etkinleştirilmiştir.  
+    -   **Yazılım güncelleştirmelerini İnternet 'Ten indir**: yazılım güncelleştirmelerini İnternet 'teki belirli bir konumdan indirmek için bu ayarı seçin. Bu ayar varsayılan olarak etkindir.  
 
     -   **Yazılım güncelleştirmelerini yerel ağdaki bir konumdan indir**: Yazılım güncelleştirmelerini yerel bir dizinden veya paylaşılan ağ klasöründen indirmek için bu ayarı kullanın. Bu ayar, Sihirbazı çalıştıran bilgisayarın İnternet erişimi olmadığında yararlıdır. İnternet erişimi olan herhangi bir bilgisayar, yazılım güncelleştirmelerini indirebilir indirebilir. Ardından, bunları, Sihirbazı çalıştıran bilgisayardan erişilebilen yerel ağda bir yerde saklayın. System Center Updates Publisher veya üçüncü taraf düzeltme eki uygulama çözümü aracılığıyla yayınlanan içeriği indirirken başka bir senaryo olabilir. Üst düzey yazılım güncelleştirme noktasındaki WSUS içerik paylaşma, ' den indirilecek ağ konumu olarak girilebilir `\\server\WsusContent` . <!--memdocs-issue-211-->
 

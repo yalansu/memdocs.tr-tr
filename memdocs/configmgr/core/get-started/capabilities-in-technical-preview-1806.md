@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2168f844f1c9ef98ea21da68b73531bca7aad999
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4708c0d8e9a7d2a3b87310b64311d67d8b84a16a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905184"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126799"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Configuration Manager için Technical Preview 1806 ' deki yetenekler
 
@@ -240,7 +240,7 @@ Office özelleştirme aracı artık Configuration Manager konsolundaki Office 36
  Görevleri tamamlamayı deneyin. Daha sonra nasıl çalıştığını bize bildirmek için [geri bildirim](capabilities-in-technical-preview-1804.md#bkmk_feedback) gönderin.
 
 1. Configuration Manager konsolunda, **yazılım kitaplığı** çalışma alanına gidin ve **Office 365 istemci yönetimi** düğümünü seçin.
-2. Office 365 Istemci Yükleme Sihirbazı 'nı başlatmak için panoda **office 365 yükleyicisi** kutucuğuna tıklayın. Daha fazla bilgi için bkz. [Office 365 uygulamalarını dağıtma](../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+2. Office 365 Istemci Yükleme Sihirbazı 'nı başlatmak için panoda **office 365 yükleyicisi** kutucuğuna tıklayın. Daha fazla bilgi için bkz. [Office 365 uygulamalarını dağıtma](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 3. **Office ayarı** sayfasında, **Office Web sayfasına git ' e**tıklayın. Bu dağıtımın ayarlarını belirtmek için çevrimiçi Office Özelleştirme Aracı 'nı kullanın. 
 4. Tamamlandığında sağ üst köşedeki **Gönder** ' e tıklayın. Office 365 Istemci Yükleme Sihirbazı 'Nı sona erdirin.
 

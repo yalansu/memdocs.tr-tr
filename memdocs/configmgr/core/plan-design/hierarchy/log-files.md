@@ -2,7 +2,7 @@
 title: Günlük dosyası başvurusu
 titleSuffix: Configuration Manager
 description: Configuration Manager istemci, sunucu ve bağımlı bileşenler için tüm günlük dosyalarına bir başvuru.
-ms.date: 07/09/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 296ac8448292b46318921cb952b5b8545a34f1fa
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: 7fa4fbc7cb4e66a1ad47cb0c14a5f7e52abb5bf5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210335"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126445"
 ---
 # <a name="log-file-reference"></a>Günlük dosyası başvurusu
 
@@ -75,7 +75,7 @@ Aşağıdaki bölümler, size sunulan farklı günlük dosyaları hakkında ayr�
 
   - [Desktop Analytics](#desktop-analytics)
 
-  - [Keşfini](#BKMK_DiscoveryLog)  
+  - [Bulma](#BKMK_DiscoveryLog)  
 
   - [Uç nokta analizi](#bkmk_analytics)
   
@@ -331,6 +331,7 @@ Aşağıdaki tabloda, Configuration Manager site sunucusunda ve site sistemi sun
 |sitestat.log|Tüm site sistemlerinin kullanılabilirliğini ve disk alanı izleme işlemini kaydeder.|Site sunucusu|
 |SMS_AZUREAD_DISCOVERY_AGENT. log| Azure Active Directory (Azure AD) Kullanıcı ve Kullanıcı grubu bulma için günlük dosyası. Sürüm 1910 ve önceki sürümlerde, koleksiyon üyeliği sonuçlarının Azure AD 'ye eşitlenmesini de dahil edilmiştir.| Site sunucusu|
 |SMS_BUSINESS_APP_PROCESS_MANAGER. log|Iş için Microsoft Store uygulamaları eşitleyen bileşen için günlük dosyası.|Site sunucusu|
+|SMS_DataEngine. log|Yönetim öngörüleri için günlük dosyası.|Site sunucusu|
 |SMS_ISVUPDATES_SYNCAGENT. log| Üçüncü taraf yazılım güncelleştirmelerinin eşitlenmesi için günlük dosyası.| Configuration Manager hiyerarşisindeki üst düzey yazılım güncelleştirme noktası.|
 |SMS_OrchestrationGroup. log| Düzenleme grupları için günlük dosyası|Site sunucusu|
 |SMS_PhasedDeployment. log| Aşamalı dağıtımlar için günlük dosyası|Configuration Manager hiyerarşisindeki üst düzey site|
@@ -350,7 +351,7 @@ Aşağıdaki tabloda, Configuration Manager site sunucusunda ve site sistemi sun
 |statesys.log|Sistem durumu iletilerinin işlenmesini kaydeder.|Site sunucusu|  
 |statmgr.log|Tüm durum iletilerinin veritabanına yazılmasını kaydeder.|Site sunucusu|  
 |swmproc.log|Ölçüm dosyalarının ve ayarların işlenmesini kaydeder.|Site sunucusu|
-|Uxanalticsuploadworker. log|Endpoint Analytics için hizmete veri yükleme kaydeder.|Site sunucusu|   
+|Uxanalticsuploadworker. log|Endpoint Analytics için hizmete veri yükleme kaydeder.|Site sunucusu|
 
 ### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a>Site sunucusu yüklemesi
 

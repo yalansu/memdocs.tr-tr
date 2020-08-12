@@ -5,17 +5,17 @@ description: Görev dizisinde sorun gidermek için görev dizisi hata ayıklama 
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 4b60b0e1-ffa4-4fd5-864e-70a0546c8b3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 66f460b7ba5c870a9ee81d10835ceb9f660cba89
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 99ed8232a74b038b9b1cde4af257353252454c2b
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711038"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125160"
 ---
 # <a name="debug-a-task-sequence"></a>Görev dizisinde hata ayıklama
 
@@ -29,7 +29,7 @@ Sürüm 1906 ' den başlayarak, görev dizisi hata ayıklayıcı yeni bir sorun 
 > Bu Configuration Manager sürümünde, görev sırası hata ayıklayıcı bir ön sürüm özelliğidir. Etkinleştirmek için bkz. [yayın öncesi Özellikler](../../core/servers/manage/pre-release-features.md).  
 
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Hedef cihazdaki Configuration Manager istemcisini güncelleştirme
 
@@ -45,7 +45,7 @@ Sürüm 1906 ' den başlayarak, görev dizisi hata ayıklayıcı yeni bir sorun 
 1. Bir görev sırası seçin. Şeridin Dağıtım grubunda **Hata Ayıkla**' yı seçin.
 
     > [!Tip]  
-    > Alternatif olarak, **Tsdebugmode** değişkenini görev dizisinin `TRUE` dağıtıldığı bir koleksiyon veya bilgisayar nesnesi üzerinde olarak ayarlayın. Bu değişken kümesine sahip herhangi bir cihaz, kendisine dağıtılan herhangi bir görev dizisini hata ayıklama moduna koyar.
+    > Alternatif olarak, **Tsdebugmode** değişkenini `TRUE` görev dizisinin dağıtıldığı bir koleksiyon veya bilgisayar nesnesi üzerinde olarak ayarlayın. Bu değişken kümesine sahip herhangi bir cihaz, kendisine dağıtılan herhangi bir görev dizisini hata ayıklama moduna koyar.
 
 1. Hata ayıklama dağıtımı oluşturun. Dağıtım ayarları, normal bir görev sırası dağıtımıyla aynıdır. Daha fazla bilgi için, bkz. [Deploy a task sequence](deploy-a-task-sequence.md#process).
 

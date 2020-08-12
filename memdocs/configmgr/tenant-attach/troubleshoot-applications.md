@@ -2,7 +2,7 @@
 title: Uygulama yüklemesinde sorun giderme
 titleSuffix: Configuration Manager
 description: Configuration Manager kiracı iliştirme için uygulama yüklemesinde sorun giderme
-ms.date: 08/10/2020
+ms.date: 08/11/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,12 +10,12 @@ ms.assetid: 75f47456-cd8d-4c83-8dc5-98b336a7c6c8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 6960c85f8e01e3686541e537dfb4823826a77920
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 93b793dfbc6d7d0b5f4b24db65588ee1390604e9
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88057601"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129289"
 ---
 # <a name="troubleshoot-application-installation-for-devices-uploaded-to-the-admin-center-preview"></a>Yönetim merkezine yüklenen cihazlar için uygulama yüklemesinde sorun giderme (Önizleme)
 <!--6374854, 6521921-->
@@ -60,11 +60,28 @@ Microsoft Endpoint Manager Yönetim Merkezi 'nden uygulamaları görüntülerken
 
 **Hata iletisi:** Beklenmeyen bir hata oluştu
 
-**Olası nedenler:** Beklenmeyen hatalara genellikle [hizmet bağlantı noktası](../core/servers/deploy/configure/about-the-service-connection-point.md), [Yönetim hizmeti](../develop/adminservice/overview.md)veya bağlantı sorunları neden olmuş olabilir.
+#### <a name="error-code-500-with-an-unexpected-error-occurred-message"></a>Hata kodu 500, beklenmeyen bir hata oluştu iletisi
+
+1. `System.Security.SecurityException` **Adminservice. log**dosyasında görüyorsanız, [Active Directory Kullanıcı keşfi](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) tarafından KEŞFEDILEN Kullanıcı asıl adınızın (UPN) Şirket ıçı UPN yerine bir bulut UPN olarak ayarlandığını doğrulayın. Boş bir UPN değeri de kabul edilebilir çünkü Active Directory bulunan etki alanı adının kullanıldığı anlamına gelir. Geçerli bir etki alanı UPN (contoso.com) olmayan yalnızca bulutta bulunan UPN (örnek: onmicrosoft.com) görürseniz, bir sorununuz vardır ve [ACTIVE DIRECTORY UPN sonekini ayarlamanız](https://docs.microsoft.com/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization#add-upn-suffixes-and-update-your-users-to-them)gerekebilir.
+1. **Adminservice. log**dosyasında aşağıdaki hatayı görürseniz, [Microsoft Endpoint Manager Yönetim Merkezi 'Nde KB4576782-Application dikey penceresini zaman aşımına uğruyor](https://support.microsoft.com/help/4576782) :
+   ```log 
+   System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details.
+   System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+   System.ComponentModel.Win32Exception: The wait operation timed out
+   ```
+
+#### <a name="error-code-3-with-an-unexpected-error-occurred-message"></a>Beklenmeyen bir hata oluştu iletisi ile hata kodu 3
+
+Yönetici hizmeti çalışmıyor veya IIS yüklü değil. IIS 'nin sağlayıcı makinesine yüklenmesi gerekir. Daha fazla bilgi için bkz. [Yönetim hizmeti önkoşulları](../develop/adminservice/overview.md#prerequisites).
+
+#### <a name="other-possible-causes-of-unexpected-errors"></a>Beklenmeyen hataların diğer olası nedenleri
+
+Beklenmeyen hatalara genellikle [hizmet bağlantı noktası](../core/servers/deploy/configure/about-the-service-connection-point.md), [Yönetim hizmeti](../develop/adminservice/overview.md)veya bağlantı sorunları neden olmuş olabilir.
 
 1. Hizmet bağlantı noktasının **Cmgatewaynotificationworker. log**kullanarak buluta bağlantı olduğunu doğrulayın.
 1. Merkezi sitedeki site bileşeni izlemenin SMS_REST_PROVIDER bileşenini inceleyerek yönetim hizmetinin sağlıklı olduğunu doğrulayın.
 1. IIS 'nin sağlayıcı makinesine yüklenmesi gerekir. Daha fazla bilgi için bkz. [Yönetim hizmeti önkoşulları](../develop/adminservice/overview.md#prerequisites).
+
 
 ### <a name="the-site-information-hasnt-yet-synchronized"></a><a name="bkmk_sync"></a>Site bilgileri henüz eşitlenmedi
 
@@ -89,20 +106,6 @@ Microsoft Endpoint Manager Yönetim Merkezi 'nden uygulamaları görüntülerken
 **Olası neden:**  [Microsoft uç noktası Configuration Manager sürüm 2002 Için güncelleştirme toplamasının](https://support.microsoft.com/help/4560496/) ve konsolun karşılık gelen sürümünün yüklü olduğundan emin olun. Daha fazla bilgi için bkz. [Yönetim merkezinden uygulama yükleme önkoşulları](applications.md#prerequisites).
 
 ## <a name="known-issues"></a>Bilinen sorunlar
-
-### <a name="unexpected-error-occurred-when-gettingapplications"></a>Uygulamalar alınırken beklenmeyen bir hata oluştu
-
-**Senaryo:** Uygulama listesinin alınması, Configuration Manager sürüm 2002 ' i çalıştırırken ve gördüğünüz zaman beklenenden uzun sürer `unexpected error occurred` .
-
-**Hata iletisi:** AdminService. log şunları içerir:
-
-```log 
-System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details.
-System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
-System.ComponentModel.Win32Exception: The wait operation timed out
-```
-
-**Geçici çözüm:** Şu anda bir geçici çözüm kullanılamıyor.
 
 ### <a name="application-installation-times-out-if-application-requires-restart"></a>Uygulama yeniden başlatma gerektiriyorsa uygulama yüklemesi zaman aşımına uğrar
 

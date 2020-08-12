@@ -2,7 +2,7 @@
 title: Boyut ve ölçek
 titleSuffix: Configuration Manager
 description: Ortamınızdaki cihazları desteklemek için ihtiyacınız olan site sistemi rollerinin ve sitelerinin sayısını belirleme.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5109ababd00011784618f9c989e1d2b756a322d9
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 0d8057d61ebaaa8a545d21b31331faec1c04884e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715637"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126707"
 ---
 # <a name="size-and-scale-numbers-for-configuration-manager"></a>Configuration Manager için boyut ve ölçek numaraları
 
@@ -184,6 +184,8 @@ Otomatik dağıtım kurallarında (ADRs) güvenlik kapsamlarının sayısını 5
 Her SMS sağlayıcısı örneği, birden çok istekten eş zamanlı bağlantıları destekler. Bu bağlantılardaki tek sınırlamalar, Windows için kullanılabilen sunucu bağlantısı sayısı ve bağlantı isteklerine hizmet vermek için sunucudaki kullanılabilir kaynaklardır.
 
 Daha fazla bilgi için bkz. [plan for SMS Provider](../hierarchy/plan-for-the-sms-provider.md).
+
+Yönetim hizmeti, SMS sağlayıcısı 'nın her örneğindeki bir REST API. Saniyede en fazla 5.000 istek ve istemci IP adresi başına 200 isteği destekler.
 
 ## <a name="client-numbers-for-sites-and-hierarchies"></a><a name="bkmk_clientnumbers"></a>Siteler ve Hiyerarşiler için istemci numaraları
 

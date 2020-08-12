@@ -5,17 +5,17 @@ description: Configuration Manager bulunan tüm BitLocker yönetim ayarları
 ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9ce6a9c566fec22e69c0a4a7fde01b911330ec1d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cb95a05fd3d347b70dd5d53ce972bce0c23c18cc
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723932"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127893"
 ---
 # <a name="bitlocker-settings-reference"></a>BitLocker ayarları başvurusu
 
@@ -94,7 +94,7 @@ Bu ilkeyi yapılandırmadığınızda, bilgisayar yeniden başlatıldığında B
 
 Bu ilkeyi, akıllı kart sertifika tabanlı BitLocker korumasını kullanacak şekilde yapılandırın. Ardından Sertifika **nesne tanımlayıcısını**belirtin.
 
-Bu ilkeyi yapılandırmadığınızda, BitLocker bir sertifikayı belirtmek için varsayılan nesne tanımlayıcısını `1.3.6.1.4.1.311.67.1.1` kullanır.
+Bu ilkeyi yapılandırmadığınızda, BitLocker `1.3.6.1.4.1.311.67.1.1` bir sertifikayı belirtmek için varsayılan nesne tanımlayıcısını kullanır.
 
 ### <a name="organization-unique-identifiers"></a>Kuruluş benzersiz tanımlayıcıları
 
@@ -125,10 +125,10 @@ Uyumlu TPM içeren cihazlarda, şifrelenmiş veriler için ek koruma sağlamak �
 
 - **İşletim sistemi sürücüsü için koruyucu seçin**: bunu TPM ve PIN kullanacak şekilde yapılandırın ya da yalnızca TPM 'yi kullanın.
 
-- **Başlangıç için en düşük PIN uzunluğunu Yapılandır**: PIN gerekiyorsa, bu değer kullanıcının belirtebileceğiniz en kısa uzunluktadır. Bilgisayar sürücünün kilidini açmak için önyükleme yaptığında Kullanıcı bu PIN 'ı girer. Varsayılan olarak, en küçük PIN uzunluğu olur `4`.
+- **Başlangıç için en düşük PIN uzunluğunu Yapılandır**: PIN gerekiyorsa, bu değer kullanıcının belirtebileceğiniz en kısa uzunluktadır. Bilgisayar sürücünün kilidini açmak için önyükleme yaptığında Kullanıcı bu PIN 'ı girer. Varsayılan olarak, en küçük PIN uzunluğu olur `4` .
 
 > [!TIP]
-> Daha yüksek güvenlik için, TPM + PIN koruyucusu ile cihazları etkinleştirdiğinizde, **sistem** > **güç yönetimi** > **uyku ayarları**' nda aşağıdaki Grup İlkesi ayarlarını *devre dışı bırakmayı* göz önünde bulundurun:
+> Daha yüksek güvenlik için, TPM + PIN koruyucusu ile cihazları etkinleştirdiğinizde, **sistem**güç *disabling*  >  **yönetimi**  >  **uyku ayarları**' nda aşağıdaki Grup İlkesi ayarlarını devre dışı bırakmayı göz önünde bulundurun:
 >
 > - Uykuda (prize takılıyken) bekleme durumlarına (S1-S3) izin ver
 >
@@ -157,7 +157,7 @@ BitLocker korumalı işletim sistemi sürücülerinin kilidini açmak üzere par
 
 - **İşletim sistemi sürücüleri için parola karmaşıklığını yapılandırma**: parola üzerinde karmaşıklık gereksinimlerini zorlamak için **parola karmaşıklığı gerektir**' i seçin.
 
-- **İşletim sistemi sürücüsü Için en az parola uzunluğu**: varsayılan olarak en düşük uzunluk `8`.
+- **İşletim sistemi sürücüsü Için en az parola uzunluğu**: varsayılan olarak en düşük uzunluk `8` .
 
 - **Çıkarılabilir işletim sistemi sürücüleri için yalnızca ASCII parolaları iste**
 
@@ -165,7 +165,7 @@ Bu ilke ayarını etkinleştirirseniz, kullanıcılar tanımladığınız gereks
 
 #### <a name="general-usage-notes-for-os-drive-password-policy"></a>İşletim sistemi sürücüsü parola ilkesi için genel kullanım notları
 
-- Bu karmaşıklık gereksinimi ayarlarının etkin olması için, **bilgisayar yapılandırması** > **Windows ayarları** > **güvenlik ayarları** > **hesap ilkeleri** > **parola ilkesi**' nde Grup İlkesi ayarı **parolasının karmaşıklık gereksinimlerini karşılaması gerekir** .
+- Bu karmaşıklık gereksinimi ayarlarının etkin olması için, **bilgisayar yapılandırması**Windows ayarları güvenlik ayarları Hesap **Password must meet complexity requirements**  >  **Windows Settings**  >  **Security Settings**  >  **ilkeleri**  >  **parola ilkesi**' nde Grup İlkesi ayarı parolasının karmaşıklık gereksinimlerini karşılaması gerekir.
 
 - BitLocker, bir birimin kilidini açtığınızda değil, açtığınızda bu ayarları uygular. BitLocker, sürücüde bulunan koruyucularla bir sürücünün kilidini açmanızı sağlar.
 
@@ -214,7 +214,7 @@ BitLocker, bir koruyucu eklemek için Kullanıcı etkileşimi gerektirmiyorsa, y
 
 Bu ayarı devre dışı bırakır veya yapılandırmazsanız, Configuration Manager kullanıcıların BitLocker ilkeleriyle uyumlu olmasını gerektirmez.
 
-İlkeyi hemen zorlamak için bir yetkisiz kullanım süresi ayarlayın `0`.
+İlkeyi hemen zorlamak için bir yetkisiz kullanım süresi ayarlayın `0` .
 
 ## <a name="fixed-drive"></a>Sabit sürücü
 
@@ -264,7 +264,7 @@ Daha yüksek güvenlik için bu ayarı etkinleştirin ve sonra aşağıdaki ayar
 
 - **Sabit veri sürücüleri için parola karmaşıklığını yapılandırma**: parola üzerinde karmaşıklık gereksinimlerini zorlamak için **parola karmaşıklığı gerektir**' i seçin.
 
-- **Sabit veri sürücüsü Için en az parola uzunluğu**: varsayılan olarak en düşük uzunluk `8`.
+- **Sabit veri sürücüsü Için en az parola uzunluğu**: varsayılan olarak en düşük uzunluk `8` .
 
 Bu ayarı devre dışı bırakırsanız, kullanıcılar bir parolayı yapılandıramaz.
 
@@ -272,7 +272,7 @@ Bu ayarı devre dışı bırakırsanız, kullanıcılar bir parolayı yapıland�
 
 #### <a name="general-usage-notes-for-fixed-data-drive-password-policy"></a>Sabit veri sürücüsü parola ilkesi için genel kullanım notları
 
-- Bu karmaşıklık gereksinimi ayarlarının etkin olması için, **bilgisayar yapılandırması** > **Windows ayarları** > **güvenlik ayarları** > **hesap ilkeleri** > **parola ilkesi**' nde Grup İlkesi ayarı **parolasının karmaşıklık gereksinimlerini karşılaması gerekir** .
+- Bu karmaşıklık gereksinimi ayarlarının etkin olması için, **bilgisayar yapılandırması**Windows ayarları güvenlik ayarları Hesap **Password must meet complexity requirements**  >  **Windows Settings**  >  **Security Settings**  >  **ilkeleri**  >  **parola ilkesi**' nde Grup İlkesi ayarı parolasının karmaşıklık gereksinimlerini karşılaması gerekir.
 
 - BitLocker, bir birimin kilidini açtığınızda değil, açtığınızda bu ayarları uygular. BitLocker, sürücüde bulunan koruyucularla bir sürücünün kilidini açmanızı sağlar.
 
@@ -290,7 +290,7 @@ BitLocker, bir koruyucu eklemek için Kullanıcı etkileşimi gerektirmiyorsa, y
 
 Bu ayarı devre dışı bırakır veya yapılandırmazsanız, Configuration Manager kullanıcıların BitLocker ilkeleriyle uyumlu olmasını gerektirmez.
 
-İlkeyi hemen zorlamak için bir yetkisiz kullanım süresi ayarlayın `0`.
+İlkeyi hemen zorlamak için bir yetkisiz kullanım süresi ayarlayın `0` .
 
 ## <a name="removable-drive"></a>Çıkarılabilir sürücü
 
@@ -312,7 +312,7 @@ Bu ayarı etkinleştirdiğinizde:
 
 - **Çıkarılabilir veri sürücüsü parola ilkesi** ayarlarını etkinleştirin
 
-- Kullanıcı & bilgisayar yapılandırmalarına yönelik olarak, **sistem** > **çıkarılabilir depolama erişimi** 'nde aşağıdaki Grup İlkesi ayarlarını *devre dışı bırakın* :
+- Kullanıcı & bilgisayar yapılandırmalarına yönelik olarak, **sistem**çıkarılabilir depolama erişimi 'nde aşağıdaki Grup İlkesi ayarlarını *devre dışı bırakın*  >  **Removable Storage Access** :
 
   - **Tüm çıkarılabilir depolama sınıfları: tüm erişimi Reddet**
   - **Çıkarılabilir diskler: yazma erişimini engelle**
@@ -337,7 +337,7 @@ Bu ayarı etkinleştirdiğinizde:
 Bu ayarı devre dışı bıraktığınızda veya yapılandırmadığınızda, Windows tüm çıkarılabilir sürücüleri okuma ve yazma erişimiyle takar.
 
 > [!NOTE]
-> Bu ayarı, **sistem** > **çıkarılabilir depolama erişimi**'ndeki Grup İlkesi ayarlarıyla geçersiz kılabilirsiniz. Çıkarılabilir diskler Grup İlkesi ayarını etkinleştirirseniz, **yazma erişimini reddet**, ardından BitLocker bu Configuration Manager ayarını yoksayar.
+> Bu ayarı, **sistem**  >  **çıkarılabilir depolama erişimi**'ndeki Grup İlkesi ayarlarıyla geçersiz kılabilirsiniz. Çıkarılabilir diskler Grup İlkesi ayarını etkinleştirirseniz, **yazma erişimini reddet**, ardından BitLocker bu Configuration Manager ayarını yoksayar.
 
 <!-- ### Allow access to BitLocker-protected removable data drives from earlier versions of Windows -->
 
@@ -355,7 +355,7 @@ Daha yüksek güvenlik için bu ayarı etkinleştirin ve sonra aşağıdaki ayar
 
 - **Çıkarılabilir veri sürücüleri için parola karmaşıklığı yapılandırma**: parola üzerinde karmaşıklık gereksinimlerini zorlamak için **parola karmaşıklığı gerektir**' i seçin.
 
-- **Çıkarılabilir veri sürücüsü Için en az parola uzunluğu**: varsayılan olarak en düşük uzunluk `8`.
+- **Çıkarılabilir veri sürücüsü Için en az parola uzunluğu**: varsayılan olarak en düşük uzunluk `8` .
 
 Bu ayarı devre dışı bırakırsanız, kullanıcılar bir parolayı yapılandıramaz.
 
@@ -363,7 +363,7 @@ Bu ayarı devre dışı bırakırsanız, kullanıcılar bir parolayı yapıland�
 
 #### <a name="general-usage-notes-for-removable-data-drive-password-policy"></a>Çıkarılabilir veri sürücüsü parola ilkesi için genel kullanım notları
 
-- Bu karmaşıklık gereksinimi ayarlarının etkin olması için, **bilgisayar yapılandırması** > **Windows ayarları** > **güvenlik ayarları** > **hesap ilkeleri** > **parola ilkesi**' nde Grup İlkesi ayarı **parolasının karmaşıklık gereksinimlerini karşılaması gerekir** .
+- Bu karmaşıklık gereksinimi ayarlarının etkin olması için, **bilgisayar yapılandırması**Windows ayarları güvenlik ayarları Hesap **Password must meet complexity requirements**  >  **Windows Settings**  >  **Security Settings**  >  **ilkeleri**  >  **parola ilkesi**' nde Grup İlkesi ayarı parolasının karmaşıklık gereksinimlerini karşılaması gerekir.
 
 - BitLocker, bir birimin kilidini açtığınızda değil, açtığınızda bu ayarları uygular. BitLocker, sürücüde bulunan koruyucularla bir sürücünün kilidini açmanızı sağlar.
 
@@ -399,11 +399,11 @@ Bu ilke ayarını etkinleştirirseniz, aşağıdaki bilgileri sağlayın:
 
 - **İletişim**: URL, e-posta adresi veya telefon numarası belirtin. Bir Kullanıcı BitLocker korumasından bir istisna istediğinde, nasıl uygulanacağını gösteren yönergeler içeren bir Windows iletişim kutusu görür. Configuration Manager girdiğiniz bilgileri doğrulamaz.
 
-  - **URL**: standart URL biçimini kullanın, `https://website.domain.tld`. Windows, URL 'YI bir köprü olarak görüntüler.
+  - **URL**: standart URL biçimini kullanın, `https://website.domain.tld` . Windows, URL 'YI bir köprü olarak görüntüler.
 
-  - **E-posta adresi**: standart e-posta adresi `user@domain.tld`biçimini kullanın. Windows adresi şu köprü olarak görüntüler: `mailto:user@domain.tld?subject=Request exemption from BitLocker protection`.
+  - **E-posta adresi**: standart e-posta adresi biçimini kullanın `user@domain.tld` . Windows adresi şu köprü olarak görüntüler: `mailto:user@domain.tld?subject=Request exemption from BitLocker protection` .
 
-  - **Telefon numarası**: kullanıcılarınızın aramasını istediğiniz sayıyı belirtin. Windows, numarayı şu açıklamayla görüntüler: `Please call <your number> for applying exemption`.
+  - **Telefon numarası**: kullanıcılarınızın aramasını istediğiniz sayıyı belirtin. Windows, numarayı şu açıklamayla görüntüler: `Please call <your number> for applying exemption` .
 
 Bu ayarı devre dışı bırakır veya yapılandırmazsanız, Windows, kullanıcılara muafiyet isteği yönergelerini görüntülemez.
 

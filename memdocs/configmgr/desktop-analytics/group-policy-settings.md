@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 4536adad3114b944baa6c75ac4e246ecddf4a2d2
-ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
+ms.openlocfilehash: 2ee472b89f45e744e43915e51e98f11841208b73
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153435"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125816"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>Masaüstü analizi için Grup İlkesi ayarları
 
@@ -37,11 +37,11 @@ Configuration Manager, aşağıdaki kayıt defteri anahtarlarının birindeki ve
 | İlke | Yol | Şunlara uygulanır | Değer |
 |--------|------|------------|-------|
 | **Commercialıd** | Yerel | Tüm Windows sürümleri | Cihazın masaüstü analizinde görünmesi için kuruluşunuzun ticari KIMLIĞIYLE yapılandırın. |
-| **Allowtelemetri**  | GPO | Windows 10 | `1` **Temel**, `2` **Gelişmiş**veya `3` **tam** Tanılama verileri için ayarlayın. Masaüstü analizi için en az temel Tanılama verileri gerekir. Microsoft, masaüstü analizi ile gelişmiş (sınırlı) düzeyi kullanmanızı önerir. Daha fazla bilgi için bkz. [Kuruluşunuzda Windows tanılama verilerini yapılandırma](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
+| **Allowtelemetri**  | GPO | Windows 10 | `1` **Temel** (gerekli), `2` **Gelişmiş**veya `3` **tam** (isteğe bağlı) tanılama verileri için ayarlayın. Masaüstü analizi için en az temel Tanılama verileri gerekir. Microsoft, masaüstü analizi ile **Isteğe bağlı (sınırlı)** (Gelişmiş (sınırlı)) düzeyi kullanmanızı önerir. Daha fazla bilgi için bkz. [Kuruluşunuzda Windows tanılama verilerini yapılandırma](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
 | **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10, sürüm 1803 ve üzeri | Bu ayar yalnızca Allowtelemetri ayarı olduğunda geçerlidir `2` . Microsoft 'a gönderilen gelişmiş tanılama veri olaylarını yalnızca masaüstü analizinin gerektirdiği olaylarla sınırlandırır. Daha fazla bilgi için bkz. [Windows 10 Tanılama verileri olayları ve gelişmiş tanılama verilerini sınırla ilkesi aracılığıyla toplanan alanlar](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields). |
 | **AllowDeviceNameInTelemetry** | GPO | Windows 10, sürüm 1803 ve üzeri | Cihazların cihaz adını göndermesini etkinleştirin. Cihaz adı varsayılan olarak Microsoft 'a gönderilmez. Cihaz adını göndermezseniz, masaüstü analizlerinin "Unknown" olarak görünmesi gerekir. Daha fazla bilgi için bkz. [Cihaz adı](enroll-devices.md#device-name). |
 | **Ticari veri OptIn** | Yerel | Windows 8.1 ve önceki sürümler | Masaüstü Analizi bir değeri gerektirir `1` . Daha fazla bilgi için bkz. [Windows 7 ' de ticari veri katılımı](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
-| **Requestallappraerversions** | Her ikisi de | Windows 8.1 ve önceki sürümler | Masaüstü analizi, `1` veri toplamanın doğru şekilde çalışması için bir değer gerektirir. |
+| **Requestallappraerversions** | Her İkisi | Windows 8.1 ve önceki sürümler | Masaüstü analizi, `1` veri toplamanın doğru şekilde çalışması için bir değer gerektirir. |
 | **DisableEnterpriseAuthProxy** | GPO | Tüm Windows sürümleri | Ortamınız internet erişimi için Windows tümleşik kimlik doğrulaması ile Kullanıcı kimliği doğrulanmış bir ara sunucu gerektiriyorsa, masaüstü analizi, `0` veri toplamanın doğru bir şekilde çalışması için bir değer gerektirir. Daha fazla bilgi için bkz. [proxy sunucusu kimlik doğrulaması](enable-data-sharing.md#proxy-server-authentication). |
 
 > [!IMPORTANT]
@@ -62,7 +62,7 @@ Bir cihazda Yükseltme Hazırlığı ekleme betiğini çalıştırdıysanız, bu
 
 Genel olarak, masaüstü Analizi ayarlarını ve kaydını hedeflemek için Configuration Manager koleksiyonları kullanın. Cihazları koleksiyona dahil etmek veya hariç tutmak için doğrudan üyeliği veya sorguları kullanın. Daha fazla bilgi için bkz. [koleksiyonlar oluşturma](../core/clients/manage/collections/create-collections.md).
 
-Configuration Manager, hedef koleksiyonunuzda ticari KIMLIK ve Tanılama verileri ayarlarını yapılandırır. Farklı cihaz grupları için farklı Tanılama verileri ayarları yapılandırmanız gerekiyorsa, Configuration Manager ayarlarını geçersiz kılmak için Grup İlkesi ayarlarını kullanın. Örneğin, bazı cihazlar için **Gelişmiş (sınırlı)** düzey ve diğerleri için **temel** ayarlamanız gerekir. Bazı cihazlarda [Ara sunucu kimlik doğrulama](enable-data-sharing.md#proxy-server-authentication) ayarları farklı olabilir.
+Configuration Manager, hedef koleksiyonunuzda ticari KIMLIK ve Tanılama verileri ayarlarını yapılandırır. Farklı cihaz grupları için farklı Tanılama verileri ayarları yapılandırmanız gerekiyorsa, Configuration Manager ayarlarını geçersiz kılmak için Grup İlkesi ayarlarını kullanın. Örneğin, bazı cihazlar için **Isteğe bağlı (sınırlı)** düzey ayarlamanız ve diğerleri için **gerekli** olması gerekir. Bazı cihazlarda [Ara sunucu kimlik doğrulama](enable-data-sharing.md#proxy-server-authentication) ayarları farklı olabilir.
 
 İlgili Grup İlkesi ayarları şu yoldur: **bilgisayar yapılandırması**  >  **Yönetim Şablonları**  >  **Windows bileşenleri**  >  **veri toplama ve önizleme yapıları**.
 

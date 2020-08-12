@@ -5,18 +5,18 @@ description: Configuration Manager sürüm 1702 tarafından toplanan tanılama v
 ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: d43ab033-2902-4681-8716-b4b17a6df372
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 155d62b3b8876f3bdf7dab218451c38e7cca6aed
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4443d2319bceca2e92f1655660ec384674dac1e7
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81716316"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128789"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1702-of-configuration-manager"></a>Configuration Manager sürüm 1702 için tanılama kullanım verileri toplama düzeyleri
 
@@ -35,7 +35,7 @@ Configuration Manager sürüm 1702, üç düzeyde tanılama ve kullanım verisi 
 ##  <a name="how-to-change-the-level"></a><a name="bkmk_change"></a> Düzeyi değiştirme
  **Site** nesne sınıfında **değiştirme** izinlerini içeren rol tabanlı yönetim kapsamına sahip yöneticiler, Configuration Manager konsolundaki tanılama ve kullanım verileri ayarlarında toplanan veri düzeyini değiştirebilir.
 
-**Yönetim** > **genel bakış** > **site yapılandırma** > **siteleri**' ne giderek veri toplama düzeyini konsolunun içinden değiştirirsiniz. **Hiyerarşi ayarları**' nı açın ve ardından kullanmak istediğiniz veri düzeyini seçin.  
+**Yönetim**  >  **genel bakış**  >  **site yapılandırma**  >  **siteleri**' ne giderek veri toplama düzeyini konsolunun içinden değiştirirsiniz. **Hiyerarşi ayarları**' nı açın ve ardından kullanmak istediğiniz veri düzeyini seçin.  
 
 
 
@@ -395,7 +395,7 @@ Configuration Manager sürüm 1702 için, bu düzey aşağıdakileri içerir:
 
     - ***[Yeni]*** Eşitleme zamanlaması ve ortalama süre dahil olmak üzere veri ambarı hizmet noktası yapılandırması
 
-    - Lan 'Da uyandırma (WOL) ile site sayısı
+    - LAN 'da uyandırma (WOL) ile site sayısı
 
     - Raporlama kullanımı ve performans istatistikleri  
 

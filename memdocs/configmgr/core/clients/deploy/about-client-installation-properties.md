@@ -2,20 +2,20 @@
 title: İstemci yükleme parametreleri ve özellikleri
 titleSuffix: Configuration Manager
 description: Configuration Manager istemcisini yüklemek için CCMSetup komut satırı parametreleri ve özellikleri hakkında bilgi edinin.
-ms.date: 07/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1de2cd1645687740986cc62514dbc990461cbbf6
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 2d26be4d3e3381a80fcbaa547cfcc7a3b8db42f5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240584"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127027"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Configuration Manager içindeki istemci yükleme parametreleri ve özellikleri hakkında
 
@@ -36,7 +36,7 @@ CCMSetup.exe komutu istemciyi bir yönetim noktasından veya kaynak konumdan yü
 > [!NOTE]
 > client.msi doğrudan yükleyemezsiniz.  
 
-CCMSetup.exe, yüklemeyi özelleştirmek için komut satırı *parametreleri* sağlar. Parametrelere bir eğik çizgi () eklenir `/` ve kural, küçük harfe göre yapılır. Bir parametresinin değerini, `:` hemen ardından değeri olan bir iki nokta üst üste () kullanmak için belirtirsiniz. Daha fazla bilgi için bkz. [CCMSetup.exe komut satırı parametreleri](#ccmsetupexe-command-line-parameters).
+CCMSetup.exe, yüklemeyi özelleştirmek için komut satırı *parametreleri* sağlar. Parametrelere bir eğik çizgi () eklenir `/` ve genellikle daha küçük bir durumdur. Bir parametresinin değerini, `:` hemen ardından değeri olan bir iki nokta üst üste () kullanmak için belirtirsiniz. Daha fazla bilgi için bkz. [CCMSetup.exe komut satırı parametreleri](#ccmsetupexe-command-line-parameters).
 
 Ayrıca, client.msi davranışını değiştirmek için CCMSetup.exe komut satırına *Özellikler* sağlayabilirsiniz. Kurala göre özellikler büyük bir durumdur. Bir özellik için değeri `=` , hemen ardından değer gelen eşittir işareti () kullanarak belirtirsiniz. Daha fazla bilgi için bkz. [Client.msi özellikleri](#clientMsiProps).
 
@@ -49,7 +49,7 @@ Komut satırında, CCMSetup.exe komutu aşağıdaki biçimi kullanır:
 
 `CCMSetup.exe [<Ccmsetup parameters>] [<client.msi setup properties>]`  
 
-Örneğin:  
+Örnek:  
 
 `CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=S01 FSP=SMSFSP01`  
 
@@ -76,16 +76,100 @@ ccmsetup.exe için kullanılabilir komut satırı parametrelerini gösterir.
 
 Örnek: `ccmsetup.exe /?`
 
-### <a name="source"></a>/Source
+### <a name="allowmetered"></a>/Allowtarifeli
 
-Dosya yükleme konumunu belirtir. Yerel veya UNC yolunu kullanın. Cihaz, sunucu ileti bloğu (SMB) protokolünü kullanarak dosyaları indirir. **/Source**kullanmak için, istemci yüklemesine yönelik Windows Kullanıcı hesabının konum üzerinde **okuma** izinleri olması gerekir.
+<!--6976145-->
 
-CCMSetup 'ın içeriği nasıl indirdiği hakkında daha fazla bilgi için bkz. [sınır grupları-istemci yüklemesi](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). Ayrıca, bu makalede hem **/MP** hem de **/Source** parametreleri kullanırsanız CCMSetup davranışının ayrıntıları da yer almaktadır.
+Sürüm 2006 ' den başlayarak, istemcinin tarifeli bir ağda davranışını denetlemek için bu parametreyi kullanın. Bu parametre hiçbir değer alır. CCMSetup için tarifeli bir ağda istemci iletişimine izin gönderdiğinizde, içerik indirilir, siteye kaydolur ve ilk ilkeyi indirir. Diğer istemci iletişimleri, bu ilkeden istemci ayarının yapılandırmasını izler. Daha fazla bilgi için bkz. [istemci ayarları hakkında](../../clients/deploy/about-client-settings.md#client-communication-on-metered-internet-connections).
 
-> [!TIP]  
-> Alternatif indirme konumlarını belirtmek için, komut satırında **/Source** parametresini birden çok kez kullanabilirsiniz.  
+İstemciyi var olan bir cihaza yeniden yüklerseniz, yapılandırmasını anlamak için aşağıdaki önceliği kullanır:
 
-Örnek: `ccmsetup.exe /source:"\\server\share"`
+1. Mevcut yerel istemci ilkesi
+1. Windows kayıt defterinde depolanan son komut satırı
+1. CCMSetup komut satırındaki parametreler
+
+### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
+
+Bu parametre, [**otomatik istemci yükseltmesini**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate)etkinleştirdiğinizde bir istemcinin otomatik olarak yükseltilmesi gerekip gerekmediğini belirtir.
+
+Desteklenen değerler:
+
+- `TRUE`: İstemci otomatik olarak yükseltilmez
+- `FALSE`: İstemci otomatik olarak yükseltir (varsayılan)
+
+Örnek:  
+
+`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
+
+Daha fazla bilgi için bkz. [genişletilmiş birlikte çalışabilirlik istemcisi](../../understand/interoperability-client.md).
+
+> [!NOTE]  
+> **/Alwaysexcludeupgrade** parametresini kullanırken otomatik yükseltme yine de çalışır. Ancak, CCMSetup yükseltmeyi gerçekleştirmeye çalıştığında, **/Alwaysexcludeupgrade** parametresinin ayarlandığını ve **CCMSetup. log**dosyasında şu satırı günlüğe yacağını unutmayın:
+>
+> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
+>
+> CCMSetup hemen çıkış yapar ve yükseltme gerçekleştirmez.
+
+### <a name="bitspriority"></a>/BITSÖnceliği
+
+Cihaz, istemci yükleme dosyalarını bir HTTP bağlantısı üzerinden indirdiğinde, İndirme önceliğini belirtmek için bu parametreyi kullanın. Aşağıdaki olası değerlerden birini belirtin:
+
+- `FOREGROUND`
+
+- `HIGH`
+
+- `NORMAL`varsayılanını
+
+- `LOW`
+
+Örnek: `ccmsetup.exe /BITSPriority:HIGH`
+
+### <a name="config"></a>/config
+
+Bu parametre, istemci yükleme özelliklerini listeleyen bir metin dosyasını belirtir.
+
+- CCMSetup bir hizmet olarak çalışıyorsa, bu dosyayı CCMSetup sistem klasörüne yerleştirin: `%Windir%\Ccmsetup` .
+
+- [**/Noservice**](#noservice) parametresini belirtirseniz, bu dosyayı CCMSetup.exe aynı klasöre yerleştirin.
+
+Örnek: `CCMSetup.exe /config:"configuration file name.txt"`
+
+Doğru dosya biçimini sağlamak için, site sunucusundaki Configuration Manager yükleme dizinindeki klasöründe **mobileclienttemplate. tcf** dosyasını kullanın `\bin\<platform>` . Bu dosya, bölümler ve bunların nasıl kullanılacağı hakkında açıklamalar içerir. `[Client Install]`Aşağıdaki metinden sonra, bölümünde istemci yükleme özelliklerini belirtin: `Install=INSTALL=ALL` .
+
+Örnek `[Client Install]` bölüm girdisi:`Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
+
+### <a name="downloadtimeout"></a>/indirmezamanaşımı
+
+CCMSetup istemci yükleme dosyalarını indiremediğinde, bu parametre en fazla zaman aşımını dakika olarak belirtir. Bu zaman aşımından sonra, CCMSetup yükleme dosyalarını indirmeye çalışmayı durduruyor. Varsayılan değer **1440** dakikadır (bir gün).
+
+Yeniden deneme girişimleri arasındaki aralığı belirtmek için [**/retry**](#retry) parametresini kullanın.
+
+Örnek: `ccmsetup.exe /downloadtimeout:100`
+
+### <a name="excludefeatures"></a>/ExcludeFeatures
+
+Bu parametre CCMSetup.exe belirtilen özelliği yüklememediğini belirtir.
+
+Örnek: `CCMSetup.exe /ExcludeFeatures:ClientUI` Istemciye yazılım merkezi yüklenmez.  
+
+> [!NOTE]  
+> `ClientUI`, **/Excludefeatem** parametresinin desteklediği tek değerdir.
+
+### <a name="forceinstall"></a>/forceinstall
+
+CCMSetup.exe var olan tüm istemcileri kaldırmasını ve yeni bir istemci yüklemesini belirtin.  
+
+### <a name="forcereboot"></a>/forcereboot
+
+Yüklemeyi tamamlaması gerekirse bilgisayarı yeniden başlamaya zorlamak için bu parametreyi kullanın. Bu parametreyi belirtmezseniz, yeniden başlatma gerektiğinde CCMSetup çıkar. Sonraki el ile yeniden başlatma sonrasında devam eder.
+
+Örnek: `CCMSetup.exe /forcereboot`
+
+### <a name="logon"></a>/logon
+
+İstemcinin herhangi bir sürümü zaten yüklüyse, bu parametre istemci yüklemesinin durması gerektiğini belirtir.  
+
+Örnek: `ccmsetup.exe /logon`  
 
 ### <a name="mp"></a>/MP
 
@@ -123,6 +207,18 @@ Bulut yönetimi ağ geçidi URL 'sini kullandığınız zaman için örnek:`ccms
 > [!Important]
 > **/MP** parametresi için bir bulut yönetimi ağ geçidinin URL 'sini belirtirken, ile başlaması gerekir `https://` .
 
+### <a name="nocrlcheck"></a>/NoCRLCheck
+
+Bir istemcinin, bir PKI sertifikasıyla HTTPS üzerinden iletişim kurduğunda sertifika iptal listesini (CRL) denetmaması gerektiğini belirtir. Bu parametreyi belirtmezseniz, istemci HTTPS bağlantısı kurmadan önce CRL 'YI denetler. İstemci CRL denetimi hakkında daha fazla bilgi için bkz., [PKI sertifikası iptali Için planlama](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).
+
+Örnek: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
+
+### <a name="noservice"></a>/noservice
+
+Bu parametre, CCMSetup 'ın varsayılan olarak yaptığı bir hizmet olarak çalışmasını önler. CCMSetup bir hizmet olarak çalıştığında, bilgisayarın yerel sistem hesabı bağlamında çalışır. Bu hesap, yükleme için gereken ağ kaynaklarına erişmek için yeterli haklara sahip olmayabilir. **/Noservice**ile CCMSetup.exe, yüklemeyi başlatmak için kullandığınız kullanıcı hesabının bağlamında çalışır.
+
+Örnek: `ccmsetup.exe /noservice`  
+
 ### <a name="regtoken"></a>/regtoken
 
 <!--5686290-->
@@ -146,12 +242,6 @@ CCMSetup.exe yükleme dosyalarını indirilemezse, yeniden deneme aralığını 
 
 Örnek: `ccmsetup.exe /retry:20`  
 
-### <a name="noservice"></a>/noservice
-
-Bu parametre, CCMSetup 'ın varsayılan olarak yaptığı bir hizmet olarak çalışmasını önler. CCMSetup bir hizmet olarak çalıştığında, bilgisayarın yerel sistem hesabı bağlamında çalışır. Bu hesap, yükleme için gereken ağ kaynaklarına erişmek için yeterli haklara sahip olmayabilir. **/Noservice**ile CCMSetup.exe, yüklemeyi başlatmak için kullandığınız kullanıcı hesabının bağlamında çalışır.
-
-Örnek: `ccmsetup.exe /noservice`  
-
 ### <a name="service"></a>/service
 
 CCMSetup 'ın yerel sistem hesabını kullanan bir hizmet olarak çalışması gerektiğini belirtir.  
@@ -160,77 +250,6 @@ CCMSetup 'ın yerel sistem hesabını kullanan bir hizmet olarak çalışması g
 > **/Service** parametresiyle CCMSetup.exe çalıştırmak için bir komut dosyası kullanıyorsanız, hizmet başladıktan sonra CCMSetup.exe çıkar. Yükleme ayrıntılarını betiğe doğru şekilde bildiremeyebilir.
 
 Örnek: `ccmsetup.exe /service`  
-
-### <a name="uninstall"></a>/uninstall
-
-Configuration Manager istemcisini kaldırmak için bu parametreyi kullanın. Daha fazla bilgi için bkz. [Istemciyi kaldırma](../manage/manage-clients.md#BKMK_UninstalClient).
-
-Örnek: `ccmsetup.exe /uninstall`  
-
-### <a name="logon"></a>/logon
-
-İstemcinin herhangi bir sürümü zaten yüklüyse, bu parametre istemci yüklemesinin durması gerektiğini belirtir.  
-
-Örnek: `ccmsetup.exe /logon`  
-
-### <a name="forcereboot"></a>/forcereboot
-
-Yüklemeyi tamamlaması gerekirse bilgisayarı yeniden başlamaya zorlamak için bu parametreyi kullanın. Bu parametreyi belirtmezseniz, yeniden başlatma gerektiğinde CCMSetup çıkar. Sonraki el ile yeniden başlatma sonrasında devam eder.
-
-Örnek: `CCMSetup.exe /forcereboot`
-
-### <a name="bitspriority"></a>/BITSÖnceliği
-
-Cihaz, istemci yükleme dosyalarını bir HTTP bağlantısı üzerinden indirdiğinde, İndirme önceliğini belirtmek için bu parametreyi kullanın. Aşağıdaki olası değerlerden birini belirtin:
-
-- `FOREGROUND`
-
-- `HIGH`
-
-- `NORMAL`varsayılanını
-
-- `LOW`
-
-Örnek: `ccmsetup.exe /BITSPriority:HIGH`
-
-### <a name="downloadtimeout"></a>/indirmezamanaşımı
-
-CCMSetup istemci yükleme dosyalarını indiremediğinde, bu parametre en fazla zaman aşımını dakika olarak belirtir. Bu zaman aşımından sonra, CCMSetup yükleme dosyalarını indirmeye çalışmayı durduruyor. Varsayılan değer **1440** dakikadır (bir gün).
-
-Yeniden deneme girişimleri arasındaki aralığı belirtmek için [**/retry**](#retry) parametresini kullanın.
-
-Örnek: `ccmsetup.exe /downloadtimeout:100`
-
-### <a name="usepkicert"></a>/UsePKICert
-
-İstemcinin bir PKI istemci kimlik doğrulama sertifikası kullanması için bu parametreyi belirtin. Bu parametreyi eklemezseniz veya istemci geçerli bir sertifika bulamazsa, otomatik olarak imzalanan bir sertifika ile HTTP bağlantısı kullanır.
-
-Örnek: `CCMSetup.exe /UsePKICert`  
-
-> [!NOTE]
-> Bazı senaryolarda bu parametreyi belirtmeniz gerekmez, ancak yine de bir istemci sertifikası kullanın. Örneğin, istemci gönderme ve yazılım güncelleştirme tabanlı istemci yüklemesi. Bir istemciyi el ile yüklerken ve HTTPS etkin bir yönetim noktasıyla **/MP** parametresini kullandığınızda bu parametreyi kullanın.
->
-> Ayrıca, bir istemciyi yalnızca internet iletişimi için yüklediğinizde bu parametreyi de belirtin. **CCMALWAYSINF = 1** özelliğini Internet tabanlı yönetim noktası (**CCMHOSTNAME**) ve site kodu (**smssitekodu**) özellikleriyle birlikte kullanın. Internet tabanlı istemci yönetimi hakkında daha fazla bilgi için bkz. [İnternet 'ten veya güvenilmeyen bir ormandan istemci iletişimleri Için değerlendirmeler](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
-
-### <a name="nocrlcheck"></a>/NoCRLCheck
-
-Bir istemcinin, bir PKI sertifikasıyla HTTPS üzerinden iletişim kurduğunda sertifika iptal listesini (CRL) denetmaması gerektiğini belirtir. Bu parametreyi belirtmezseniz, istemci HTTPS bağlantısı kurmadan önce CRL 'YI denetler. İstemci CRL denetimi hakkında daha fazla bilgi için bkz., [PKI sertifikası iptali Için planlama](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).
-
-Örnek: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
-
-### <a name="config"></a>/config
-
-Bu parametre, istemci yükleme özelliklerini listeleyen bir metin dosyasını belirtir.
-
-- CCMSetup bir hizmet olarak çalışıyorsa, bu dosyayı CCMSetup sistem klasörüne yerleştirin: `%Windir%\Ccmsetup` .
-
-- [**/Noservice**](#noservice) parametresini belirtirseniz, bu dosyayı CCMSetup.exe aynı klasöre yerleştirin.
-
-Örnek: `CCMSetup.exe /config:"configuration file name.txt"`
-
-Doğru dosya biçimini sağlamak için, site sunucusundaki Configuration Manager yükleme dizinindeki klasöründe **mobileclienttemplate. tcf** dosyasını kullanın `\bin\<platform>` . Bu dosya, bölümler ve bunların nasıl kullanılacağı hakkında açıklamalar içerir. `[Client Install]`Aşağıdaki metinden sonra, bölümünde istemci yükleme özelliklerini belirtin: `Install=INSTALL=ALL` .
-
-Örnek `[Client Install]` bölüm girdisi:`Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
 ### <a name="skipprereq"></a>/önkoşuluatla
 
@@ -244,40 +263,33 @@ Bu parametre CCMSetup.exe belirtilen önkoşulu yüklememediğini belirtir. Bird
 
 İstemci önkoşulları hakkında daha fazla bilgi için bkz. [Windows istemci önkoşulları](prerequisites-for-deploying-clients-to-windows-computers.md).
 
-### <a name="forceinstall"></a>/forceinstall
+### <a name="source"></a>/Source
 
-CCMSetup.exe var olan tüm istemcileri kaldırmasını ve yeni bir istemci yüklemesini belirtin.  
+Dosya yükleme konumunu belirtir. Yerel veya UNC yolunu kullanın. Cihaz, sunucu ileti bloğu (SMB) protokolünü kullanarak dosyaları indirir. **/Source**kullanmak için, istemci yüklemesine yönelik Windows Kullanıcı hesabının konum üzerinde **okuma** izinleri olması gerekir.
 
-### <a name="excludefeatures"></a>/ExcludeFeatures
+CCMSetup 'ın içeriği nasıl indirdiği hakkında daha fazla bilgi için bkz. [sınır grupları-istemci yüklemesi](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). Ayrıca, bu makalede hem **/MP** hem de **/Source** parametreleri kullanırsanız CCMSetup davranışının ayrıntıları da yer almaktadır.
 
-Bu parametre CCMSetup.exe belirtilen özelliği yüklememediğini belirtir.
+> [!TIP]  
+> Alternatif indirme konumlarını belirtmek için, komut satırında **/Source** parametresini birden çok kez kullanabilirsiniz.  
 
-Örnek: `CCMSetup.exe /ExcludeFeatures:ClientUI` Istemciye yazılım merkezi yüklenmez.  
+Örnek: `ccmsetup.exe /source:"\\server\share"`
 
-> [!NOTE]  
-> `ClientUI`, **/Excludefeatem** parametresinin desteklediği tek değerdir.
+### <a name="uninstall"></a>/uninstall
 
-### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
+Configuration Manager istemcisini kaldırmak için bu parametreyi kullanın. Daha fazla bilgi için bkz. [Istemciyi kaldırma](../manage/manage-clients.md#BKMK_UninstalClient).
 
-Bu parametre, [**otomatik istemci yükseltmesini**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate)etkinleştirdiğinizde bir istemcinin otomatik olarak yükseltilmesi gerekip gerekmediğini belirtir.
+Örnek: `ccmsetup.exe /uninstall`  
 
-Desteklenen değerler:
+### <a name="usepkicert"></a>/UsePKICert
 
-- `TRUE`: İstemci otomatik olarak yükseltilmez
-- `FALSE`: İstemci otomatik olarak yükseltir (varsayılan)
+İstemcinin bir PKI istemci kimlik doğrulama sertifikası kullanması için bu parametreyi belirtin. Bu parametreyi eklemezseniz veya istemci geçerli bir sertifika bulamazsa, otomatik olarak imzalanan bir sertifika ile HTTP bağlantısı kullanır.
 
-Örneğin:  
+Örnek: `CCMSetup.exe /UsePKICert`  
 
-`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
-
-Daha fazla bilgi için bkz. [genişletilmiş birlikte çalışabilirlik istemcisi](../../understand/interoperability-client.md).
-
-> [!NOTE]  
-> **/Alwaysexcludeupgrade** parametresini kullanırken otomatik yükseltme yine de çalışır. Ancak, CCMSetup yükseltmeyi gerçekleştirmeye çalıştığında, **/Alwaysexcludeupgrade** parametresinin ayarlandığını ve **CCMSetup. log**dosyasında şu satırı günlüğe yacağını unutmayın:
+> [!NOTE]
+> Bazı senaryolarda bu parametreyi belirtmeniz gerekmez, ancak yine de bir istemci sertifikası kullanın. Örneğin, istemci gönderme ve yazılım güncelleştirme tabanlı istemci yüklemesi. Bir istemciyi el ile yüklerken ve HTTPS etkin bir yönetim noktasıyla **/MP** parametresini kullandığınızda bu parametreyi kullanın.
 >
-> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
->
-> CCMSetup hemen çıkış yapar ve yükseltme gerçekleştirmez.
+> Ayrıca, bir istemciyi yalnızca internet iletişimi için yüklediğinizde bu parametreyi de belirtin. **CCMALWAYSINF = 1** özelliğini Internet tabanlı yönetim noktası (**CCMHOSTNAME**) ve site kodu (**smssitekodu**) özellikleriyle birlikte kullanın. Internet tabanlı istemci yönetimi hakkında daha fazla bilgi için bkz. [İnternet 'ten veya güvenilmeyen bir ormandan istemci iletişimleri Için değerlendirmeler](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
 ## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a>CCMSetup.exe dönüş kodları
 
@@ -773,7 +785,7 @@ Configuration Manager, PKI sertifika seçim ölçütleri için aşağıdaki özn
 |2.5.4.4|SN|Konu adı|  
 |2.5.4.5|SERIALNUMBER|Seri numarası|  
 |2.5.4.6|C|Ülke kodu|  
-|2.5.4.7|L|Konum|  
+|2.5.4.7|L|Yerleşim yeri|  
 |2.5.4.8|S veya ST|Eyalet veya bölge adı|  
 |2.5.4.9|STREET|Açık adres|  
 |2.5.4.10|O|Kuruluş adı|  

@@ -2,20 +2,20 @@
 title: Kurtarma verilerini şifreleme
 titleSuffix: Configuration Manager
 description: Ağ üzerinden ve Configuration Manager veritabanında BitLocker kurtarma anahtarlarını, kurtarma paketlerini ve TPM parola karmalarını şifreleyin.
-ms.date: 04/15/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1ee6541a-e243-43ea-be16-d0349f7f0c6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79f50cf4b0d241df2fc8d12dc46c833af278bd5a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e887d594e80c0f92340081d9b922bfc334d1b3a5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724443"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129197"
 ---
 # <a name="encrypt-recovery-data"></a>Kurtarma verilerini şifreleme
 
@@ -36,7 +36,7 @@ Bu bilgilerin hassas doğası göz önüne alındığında, aşağıdaki durumla
     > [!NOTE]
     > Şu anda gelişmiş HTTP 'yi desteklememektedir.
 
-- Ayrıca, bu verileri site veritabanında depolandığında şifrelemeyi de göz önünde bulundurun. SQL Server hücre düzeyinde şifrelemeyi kendi sertifikanız ile kullanabilirsiniz.
+- Ayrıca, bu verileri site veritabanında depolandığında şifrelemeyi de göz önünde bulundurun. Bir SQL sertifikası yüklerseniz, verilerinizi SQL 'de şifreler Configuration Manager.
 
     BitLocker yönetim şifreleme sertifikası oluşturmak istemiyorsanız, kurtarma verilerinin düz metin depolamaya katılım yapın. Bir BitLocker yönetim ilkesi oluşturduğunuzda, **kurtarma bilgilerinin düz metin olarak depolanmasına Izin verme**seçeneğini etkinleştirin.
 
@@ -68,7 +68,7 @@ Artık yönetim noktasının **istemci bağlantıları** özelliği **http** vey
 > [!TIP]
 > Yalnızca kurtarma hizmeti ile iletişim kurması gereken istemciler, bir BitLocker yönetim ilkesiyle hedeflemesini planladığınız ve bir **Istemci yönetim** kuralı içeren istemcilerdir.
 
-Bu bağlantıyla ilgili sorunları gidermek için istemcide **Bitlockermanagementhandler. log** dosyasını kullanın. Kurtarma hizmetine bağlantı için, günlük istemcinin kullandığı URL 'YI gösterir. İle `Checking for Recovery Service at`başlayan bir girişi bulun.
+Bu bağlantıyla ilgili sorunları gidermek için istemcide **Bitlockermanagementhandler. log** dosyasını kullanın. Kurtarma hizmetine bağlantı için, günlük istemcinin kullandığı URL 'YI gösterir. İle başlayan bir girişi bulun `Checking for Recovery Service at` .
 
 > [!NOTE]
 > Sitenizde birden fazla yönetim noktası varsa, BitLocker tarafından yönetilen bir istemcinin iletişim kurabileceği sitedeki tüm yönetim noktalarında HTTPS 'yi etkinleştirin. HTTPS yönetim noktası kullanılamıyorsa, istemci bir HTTP yönetim noktasına yük devreder ve ardından kurtarma anahtarını emander.
@@ -77,9 +77,9 @@ Bu bağlantıyla ilgili sorunları gidermek için istemcide **Bitlockermanagemen
 
 ### <a name="sql-encryption-certificate"></a>SQL şifreleme sertifikası
 
-BitLocker kurtarma verilerinin SQL Server hücre düzeyinde şifrelemeyi etkinleştirmek için bu sertifikayı kullanın. Aşağıdaki gereksinimleri karşıladığı sürece, BitLocker yönetim şifreleme sertifikası oluşturmak ve dağıtmak için kendi işleminizi kullanabilirsiniz:
+Site veritabanındaki BitLocker kurtarma verilerini şifrelemek için bu SQL sertifikası Configuration Manager kullanın. Aşağıdaki gereksinimleri karşıladığı sürece, BitLocker yönetim şifreleme sertifikası oluşturmak ve dağıtmak için kendi işleminizi kullanabilirsiniz:
 
-- BitLocker yönetim şifreleme sertifikası adı olmalıdır `BitLockerManagement_CERT`.
+- BitLocker yönetim şifreleme sertifikası adı olmalıdır `BitLockerManagement_CERT` .
 
 - Bu sertifikayı bir veritabanı ana anahtarıyla şifreleyin.
 
@@ -90,7 +90,7 @@ BitLocker kurtarma verilerinin SQL Server hücre düzeyinde şifrelemeyi etkinle
 
 - Hiyerarşinizdeki her site veritabanında aynı sertifikayı dağıtın.
 
-- Ortamınızdaki SQL Server en son sürümüne sahip sertifikayı oluşturun. Örneğin:
+- Ortamınızdaki SQL Server en son sürümüne sahip sertifikayı oluşturun. Örnek:
   - SQL Server 2016 veya üzeri ile oluşturulan sertifikalar SQL Server 2014 veya daha önceki bir sürüm ile uyumludur.
   - SQL Server 2014 veya öncesiyle oluşturulan sertifikalar SQL Server 2016 veya üzeri sürümlerle uyumlu değildir.
 
@@ -108,9 +108,9 @@ Bu örnek betik aşağıdaki eylemleri yapar:
 
 Bu betiği bir üretim ortamında kullanmadan önce, aşağıdaki değerleri değiştirin:
 
-- Site veritabanı adı (`CM_ABC`)
-- Ana anahtar (`MyMasterKeyPassword`) oluşturmak için parola
-- Sertifika sona erme tarihi`20391022`()
+- Site veritabanı adı ( `CM_ABC` )
+- Ana anahtar () oluşturmak için parola `MyMasterKeyPassword`
+- Sertifika sona erme tarihi ( `20391022` )
 
 ``` SQL
 USE CM_ABC
@@ -136,9 +136,9 @@ Bu örnek betik bir sertifikayı yedekler. Sertifikayı bir dosyaya kaydettiğin
 
 Bu betiği bir üretim ortamında kullanmadan önce, aşağıdaki değerleri değiştirin:
 
-- Site veritabanı adı (`CM_ABC`)
-- Dosya yolu ve adı (`C:\BitLockerManagement_CERT_KEY`)
-- Anahtar parolasını dışa aktarma`MyExportKeyPassword`()
+- Site veritabanı adı ( `CM_ABC` )
+- Dosya yolu ve adı ( `C:\BitLockerManagement_CERT_KEY` )
+- Anahtar parolasını dışa aktarma ( `MyExportKeyPassword` )
 
 ``` SQL
 USE CM_ABC
@@ -156,10 +156,10 @@ Bu örnek betik bir sertifikayı bir dosyadan geri yükler. Başka bir site veri
 
 Bu betiği bir üretim ortamında kullanmadan önce, aşağıdaki değerleri değiştirin:
 
-- Site veritabanı adı (`CM_ABC`)
-- Ana anahtar parolası (`MyMasterKeyPassword`)
-- Dosya yolu ve adı (`C:\BitLockerManagement_CERT_KEY`)
-- Anahtar parolasını dışa aktarma`MyExportKeyPassword`()
+- Site veritabanı adı ( `CM_ABC` )
+- Ana anahtar parolası ( `MyMasterKeyPassword` )
+- Dosya yolu ve adı ( `C:\BitLockerManagement_CERT_KEY` )
+- Anahtar parolasını dışa aktarma ( `MyExportKeyPassword` )
 
 ``` SQL
 USE CM_ABC
@@ -197,7 +197,7 @@ if(@count >= 3) select 1
 else select 0
 ```
 
-Sertifika geçerliyse, betik bir değeri döndürür `1`.
+Sertifika geçerliyse, betik bir değeri döndürür `1` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

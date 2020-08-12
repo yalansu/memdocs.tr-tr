@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a8a4ce1c3d54311db18decc85f57d3e03298d339
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f6087011a0390997d704278af6ffd5e6071bf031
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904689"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129027"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Sürüm 1706 ' deki yenilikler&#39;Configuration Manager
 
@@ -65,7 +65,7 @@ Daha fazla bilgi için bkz. [Always on kullanılabilirlik grupları 'nı kullanm
 
 ### <a name="update-reset-tool"></a>Sıfırlama aracını güncelleştirme
 <!-- 1324589 -->
-Sürüm 1706 ' den başlayarak Configuration Manager birincil siteler ve merkezi yönetim siteleri, Configuration Manager güncelleştirme sıfırlama aracı **Cmupdatereset. exe**' yi içerir. Konsol içi güncelleştirmelerin indirme veya çoğaltma sorunları olduğunda sorunları gidermek için bu aracı, destek aşamasında kalan geçerli dalın herhangi bir sürümüyle birlikte kullanın. Daha fazla bilgi için bkz. [güncelleştirme sıfırlama aracı](../../servers/manage/update-reset-tool.md).
+Sürüm 1706 ' den başlayarak Configuration Manager birincil siteler ve merkezi yönetim siteleri, **CMUpdateReset.exe**Configuration Manager güncelleştirme sıfırlama aracını içerir. Konsol içi güncelleştirmelerin indirme veya çoğaltma sorunları olduğunda sorunları gidermek için bu aracı, destek aşamasında kalan geçerli dalın herhangi bir sürümüyle birlikte kullanın. Daha fazla bilgi için bkz. [güncelleştirme sıfırlama aracı](../../servers/manage/update-reset-tool.md).
 
 ### <a name="high-dpi-console-support"></a>Yüksek DPı konsol desteği  
 <!-- 1353476 -->
@@ -78,7 +78,7 @@ Bu sürüm, yazılım güncelleştirme noktalarının sınır gruplarıyla nası
 - Geri dönüş yapılandırmasından bağımsız olarak, bir istemci 120 dakika boyunca kullanılan son yazılım güncelleştirme noktasına ulaşmaya çalışır. Bu sunucuya 120 dakika boyunca ulaşamadıktan sonra istemci, kullanılabilir yazılım güncelleştirme noktası havuzunu denetleyerek yeni bir tane bulabilir.
 - İki saat boyunca özgün sunucusuna ulaşamadıktan sonra istemci, yeni bir yazılım güncelleştirme noktasıyla iletişim kurmaya yönelik daha kısa bir döngüye geçer. Bu, bir istemcinin yeni bir sunucuyla bağlantı kuramamasıdır, bir sonraki sunucuyu kullanılabilir sunucu havuzundan hızlıca seçer ve bununla iletişim kurmayı dener.
 
-Daha fazla bilgi için, Güncel Dalı için sınır grupları konusundaki [yazılım güncelleştirme noktaları](../../servers/deploy/configure/boundary-groups.md#software-update-points) bölümüne bakın.
+Daha fazla bilgi için, Güncel Dalı için sınır grupları konusundaki [yazılım güncelleştirme noktaları](../../servers/deploy/configure/boundary-groups.md#bkmk_sup) bölümüne bakın.
 
 ### <a name="azure-ad-integration-with-configuration-manager"></a>Configuration Manager ile Azure AD tümleştirmesi
 <!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->
@@ -125,7 +125,7 @@ Bu sürümde, Intune 'a kaydedilmiş veya şirket içinde Configuration Manager 
   - Dil ayarları değişikliği
   - Sistem saati değişikliği
   - Cihaz adı değişikliği
-- **Depo**
+- **Depolama**
   - Mağazadan uygulamaları otomatik güncelleştir
   - Yalnızca özel mağazayı kullan
   - Mağaza kaynaklı uygulama başlatma
@@ -228,7 +228,7 @@ Artık Windows 10 için Windows 10 özellik güncelleştirmeleri veya kalite gü
 Ayrıntılar için bkz. [Windows 10 ' da iş için Windows Update tümleştirme](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
 
 ### <a name="improved-user-notifications-for-office-365-updates"></a>Office 365 güncelleştirmeleri için geliştirilmiş Kullanıcı bildirimleri
-Bir istemci Office 365 güncelleştirmesi yüklediğinde Office Tıkla-Çalıştır Kullanıcı deneyiminden yararlanmak için geliştirmeler yapılmıştır. Bu, açılır ve uygulama içi bildirimleri ve geri sayım deneyimini içerir. Daha fazla bilgi için bkz. [yeniden başlatma davranışı ve Office 365 güncelleştirmeleri için istemci bildirimleri](../../../sum/deploy-use/manage-office-365-proplus-updates.md#restart-behavior-and-client-notifications-for-office-365-updates)
+Bir istemci Office 365 güncelleştirmesi yüklediğinde Office Tıkla-Çalıştır Kullanıcı deneyiminden yararlanmak için geliştirmeler yapılmıştır. Bu, açılır ve uygulama içi bildirimleri ve geri sayım deneyimini içerir. Daha fazla bilgi için bkz. [yeniden başlatma davranışı ve Office 365 güncelleştirmeleri için istemci bildirimleri](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
 
 ## <a name="reporting"></a>Raporlama
 

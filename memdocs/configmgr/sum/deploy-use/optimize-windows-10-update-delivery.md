@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 835dcd0c86244c1731cb6c6e040d577160759614
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 6c42015880cae09be48feff9c42b6b2a0d2c8544
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83267799"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129323"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Configuration Manager ile Windows 10 güncelleştirme teslimini iyileştirin
 
@@ -70,7 +70,7 @@ Tüm Windows Update yükleme dosyaları için teslim Iyileştirme 'yi kullanmak 
 > [!IMPORTANT]
 > - Teslim Iyileştirme etkin olmalıdır (varsayılan) ve atlanmamalıdır. Daha fazla bilgi için bkz. [Windows teslim iyileştirme başvurusu](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference).
 > - Delta içeriği için [yazılım güncelleştirmeleri istemci ayarlarınızı](../../core/clients/deploy/about-client-settings.md#software-updates) değiştirirken [teslim iyileştirme istemci ayarlarınızı](../../core/clients/deploy/about-client-settings.md#delivery-optimization) doğrulayın.
-> - Office COM etkinse, Office 365 istemci güncelleştirmeleri için teslim Iyileştirmesi kullanılamaz. Office COM Configuration Manager tarafından Office 365 istemcilerinin güncelleştirmelerini yönetmek için kullanılır. Office 365 güncelleştirmeleri için teslim Iyileştirmesi kullanılmasına izin vermek üzere Office COM kaydını silebilirsiniz. Office COM devre dışı bırakıldığında, Office 365 için yazılım güncelleştirmeleri varsayılan Office otomatik güncelleştirmeler 2,0 zamanlanmış göreviyle yönetilir. Bu, Configuration Manager Office 365 güncelleştirmeleri için yükleme işlemini dikte etmiyor veya izleyemediği anlamına gelir. Configuration Manager, konsolunda Office 365 Istemci yönetimi panosunu doldurmak üzere donanım envanterinden bilgi toplamaya devam edecektir. Office COM kaydını kaldırma hakkında bilgi için, bkz. [office 365 istemcilerinin Configuration Manager yerine OFFICE CDN 'den güncelleştirme almasını sağlama](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
+> - Office COM etkinse, Microsoft 365 Apps istemci güncelleştirmeleri için teslim Iyileştirmesi kullanılamaz. Office COM, Configuration Manager tarafından Microsoft 365 Apps istemcilerine yönelik güncelleştirmeleri yönetmek için kullanılır. Microsoft 365 Apps güncelleştirmeleri için teslim Iyileştirmesi kullanılmasına izin vermek üzere Office COM kaydını silebilirsiniz. Office COM devre dışı bırakıldığında, Microsoft 365 uygulamalar için yazılım güncelleştirmeleri varsayılan Office otomatik güncelleştirmeler 2,0 zamanlanmış göreviyle yönetilir. Bu, Configuration Manager Microsoft 365 Apps güncelleştirmeleri için yükleme işlemini dikte etmiyor veya izmeyeceği anlamına gelir. Configuration Manager, konsolunda Office 365 Istemci yönetimi panosunu doldurmak üzere donanım envanterinden bilgi toplamaya devam edecektir. Office COM kaydını kaldırma hakkında bilgi için, bkz. [office 365 istemcilerinin Configuration Manager yerine OFFICE CDN 'den güncelleştirme almasını sağlama](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
 > - İçerik depolaması için bir CMG kullanırken, kullanılabilir [istemci ayarı](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) etkinleştirildiğinde **Delta içeriğini indir** , üçüncü taraf güncelleştirmeler için içerik istemcilere indirmez. <!--6598587-->
 
 
@@ -96,11 +96,11 @@ Hızlı yükleme dosyaları için doğru eş önbelleğe alma teknolojisinin se�
 
 | İşlev  | Teslim Iyileştirme  | Eş önbellek  | BranchCache  |
 |---------|---------|---------|---------|
-| Alt ağlar arasında destekleniyor | Yes | Yes | Hayır |
+| Alt ağlar arasında destekleniyor | Evet | Evet | Hayır |
 | Bant genişliği azaltma | Evet (yerel) | Evet (BITS aracılığıyla) | Evet (BITS aracılığıyla) |
-| Kısmi içerik desteği | Evet, bu sütunda listelenen tüm desteklenen içerik türleri için bir sonraki satırda. | Yalnızca Office 365 ve Express güncelleştirmeleri için | Evet, bu sütunda listelenen tüm desteklenen içerik türleri için bir sonraki satırda. |
-| Desteklenen içerik türleri | **ConfigMgr aracılığıyla:** </br> -Hızlı güncelleştirmeler </br> -Tüm Windows güncelleştirmeleri (sürüm 1910 ' den başlayarak). Bu, Office güncelleştirmelerini içermez.</br> </br> **Microsoft bulutu aracılığıyla:**</br> -Windows ve güvenlik güncelleştirmeleri</br> -Sürücüler</br> -Windows Mağazası uygulamaları</br> -Iş için Windows Mağazası uygulamaları | [WINDOWS PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) 'de indirilen görüntüler dahil tüm ConfigMgr içerik türleri | Tüm ConfigMgr içerik türleri, görüntüler hariç |
-| Disk denetimindeki önbellek boyutu | Yes | Yes | Yes |
+| Kısmi içerik desteği | Evet, bu sütunda listelenen tüm desteklenen içerik türleri için bir sonraki satırda. | Yalnızca Microsoft 365 uygulamalar ve hızlı güncelleştirmeler için | Evet, bu sütunda listelenen tüm desteklenen içerik türleri için bir sonraki satırda. |
+| Desteklenen içerik türleri | **ConfigMgr aracılığıyla:** </br> -Hızlı güncelleştirmeler </br> -Tüm Windows güncelleştirmeleri (sürüm 1910 ' den başlayarak). Bu, Microsoft 365 uygulama güncelleştirmeleri içermez.</br> </br> **Microsoft bulutu aracılığıyla:**</br> -Windows ve güvenlik güncelleştirmeleri</br> -Sürücüler</br> -Windows Mağazası uygulamaları</br> -Iş için Windows Mağazası uygulamaları | [WINDOWS PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) 'de indirilen görüntüler dahil tüm ConfigMgr içerik türleri | Tüm ConfigMgr içerik türleri, görüntüler hariç |
+| Disk denetimindeki önbellek boyutu | Evet | Evet | Evet |
 | Eş kaynağı bulma | Automatic | El ile (istemci Aracısı ayarı) | Automatic |
 | Eş keşfi | Teslim Iyileştirme bulut hizmeti aracılığıyla (internet erişimi gerektirir) | Yönetim noktası aracılığıyla (istemci sınır gruplarına göre) | Noktalı |
 | Raporlama | Evet (Masaüstü analizlerini kullanarak) | ConfigMgr istemci veri kaynakları panosu | ConfigMgr istemci veri kaynakları panosu |

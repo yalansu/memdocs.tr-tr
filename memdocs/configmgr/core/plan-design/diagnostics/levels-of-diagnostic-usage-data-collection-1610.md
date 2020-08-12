@@ -5,18 +5,18 @@ description: Configuration Manager sürüm 1610 tarafından toplanan tanılama v
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: eb20eb90-bcc0-41de-bfea-638ea470c0dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 87049bb9799ba5764a3cdd5a14fbf622e7056f3c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 02b1eb010cc874e75b733b567ce4f41e59eab82e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81716323"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128806"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1610-of-configuration-manager"></a>Configuration Manager sürüm 1610 için tanılama kullanım verileri toplama düzeyleri
 
@@ -33,7 +33,7 @@ Configuration Manager sürüm 1610, üç düzeyde tanılama ve kullanım verisi 
 ##  <a name="how-to-change-the-level"></a><a name="bkmk_change"></a> Düzeyi değiştirme
  **Site** nesne sınıfında **değiştirme** izinlerini içeren rol tabanlı yönetim kapsamına sahip yöneticiler, Configuration Manager konsolundaki tanılama ve kullanım verileri ayarlarında toplanan veri düzeyini değiştirebilir.
 
-Sürüm 1610 ' den başlayarak, **Yönetim** > **genel bakış** > **site yapılandırma** > **siteleri**' ne giderek veri toplama düzeyini konsolunun içinden değiştirirsiniz. **Hiyerarşi ayarları**' nı açın ve ardından kullanmak istediğiniz veri düzeyini seçin.  
+Sürüm 1610 ' den başlayarak, **Yönetim**  >  **genel bakış**  >  **site yapılandırma**  >  **siteleri**' ne giderek veri toplama düzeyini konsolunun içinden değiştirirsiniz. **Hiyerarşi ayarları**' nı açın ve ardından kullanmak istediğiniz veri düzeyini seçin.  
 
 ##  <a name="level-1---basic"></a><a name="bkmk_level1"></a> Düzey 1 - Temel
  Temel düzey, hiyerarşiniz hakkındaki verileri, yüklemenizin veya yükseltme deneyiminizin artırılmasına yardımcı olması gereken verileri ve hiyerarşiniz için geçerli Configuration Manager güncelleştirmelerinin belirlenmesine yardımcı olan verileri içerir.
@@ -365,7 +365,7 @@ Configuration Manager sürüm 1610 için, bu düzey aşağıdakileri içerir:
 
 - **Çeşitli**
 
-    - Lan 'Da uyandırma (WOL) ile site sayısı
+    - LAN 'da uyandırma (WOL) ile site sayısı
 
     - ***[Yeni]*** Raporlama kullanımı ve performans istatistikleri  
 

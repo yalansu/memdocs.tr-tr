@@ -5,17 +5,17 @@ description: Configuration Manager, bir işletim sistemi dağıtımı sırasınd
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76e0fd3ad8ceaecb43d2a61c3abe15accda5e5d8
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: e68a3274a32d28ac0b4ad2a611c59870ee338472
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912379"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124550"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Configuration Manager ile önyükleme görüntülerini yönetme
 
@@ -80,11 +80,15 @@ Bir önyükleme görüntüsü, bir sitede yüklü olan farklı bir Windows ADK s
 
 Site yüklemesi sırasında Configuration Manager, bir WinPE sürümünü temel alan önyükleme görüntülerini Windows ADK 'nin desteklenen sürümünden otomatik olarak ekler. Configuration Manager sürümüne bağlı olarak, farklı bir WinPE sürümünü temel alan önyükleme görüntülerini Windows ADK 'nin desteklenen sürümünden ekleyebilirsiniz. Desteklenmeyen bir WinPE sürümünü içeren bir önyükleme görüntüsü eklemeye çalıştığınızda bir hata oluşur. Aşağıdaki liste, şu anda desteklenen Windows ADK ve WinPE sürümleridir:
 
-| Windows türü | Desteklenen sürümler |
-|--------------|--------------------|
-| Windows ADK sürümü | Windows 10 için Windows ADK |
-| Configuration Manager konsolundan özelleştirilebilen önyükleme görüntüleri için Windows PE sürümleri | Windows PE 10 |
-| Configuration Manager konsolundan *özelleştirilemeyen* önyükleme görüntüleri Için desteklenen Windows PE sürümleri | -Windows PE 3,1<sup>[Note 1](#bkmk_note1)</sup> <br> -Windows PE 5 |
+- Windows ADK sürümü: Windows 10 için Windows ADK
+
+- Configuration Manager konsolundan özelleştirilebilen önyükleme görüntüleri için Windows PE sürümleri: Windows PE 10
+
+- Configuration Manager konsolundan *özelleştirilemeyen* önyükleme görüntüleri Için desteklenen Windows PE sürümleri
+
+  - Windows PE 3,1<sup>[Note 1](#bkmk_note1)</sup>
+
+  - Windows PE 5
 
 Örneğin, Windows 10 için Windows ADK 'den Windows PE 10 tabanlı önyükleme görüntülerini özelleştirmek için Configuration Manager konsolunu kullanın. Windows PE 5 tabanlı bir önyükleme görüntüsü için, Windows 8 için Windows ADK 'den DıSM sürümünü kullanarak farklı bir bilgisayardan özelleştirin. Ardından, Özel önyükleme görüntüsünü Configuration Manager konsoluna ekleyin. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 

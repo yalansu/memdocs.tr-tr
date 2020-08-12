@@ -2,7 +2,7 @@
 title: Cihaz yeniden başlatma bildirimleri
 titleSuffix: Configuration Manager
 description: Configuration Manager içindeki çeşitli istemci ayarları için yeniden başlatma bildirimi davranışı.
-ms.date: 06/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b326c4dd8112a72555239f2c3eda078ebf47bf82
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: feb9f4206df65ee34228577a9e589ddd1be72870
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347228"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127265"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Configuration Manager cihaz yeniden başlatma bildirimleri
 
@@ -33,25 +33,25 @@ Kullanıcının bekleyen bir cihaz yeniden başlatması için aldığı bildirim
 
 ## <a name="restart-notification-types"></a>Bildirim türlerini yeniden Başlat
 
-Bir cihaz yeniden başlatma gerektirdiğinde, istemci yaklaşan yeniden başlatmanın son kullanıcısına bir bildirim gösterir. Kullanıcıların alabileceği dört genel bildirim vardır.
+Bir cihaz yeniden başlatma gerektirdiğinde, istemci yaklaşan yeniden başlatmanın son kullanıcısına bir bildirim gösterir.
 
 ### <a name="toast-notification"></a>Bildirim
 
 Windows bildirim bildirimi, kullanıcıya cihazın yeniden başlatılması gerektiğini bildirir. Bildirim bildiriminde bulunan bilgiler, çalıştırdığınız Configuration Manager sürümüne bağlı olarak farklı olabilir. Bu tür bir bildirim Windows işletim sistemi için yereldir. Üçüncü taraf yazılımları bu tür bir bildirim kullanarak da görebilirsiniz.
 
-![Bekleyen yeniden başlatmanın bildirim bildirimi](media/3555947-restart-toast.png)
+:::image type="content" source="media/3555947-restart-toast.png" alt-text="Bekleyen yeniden başlatmanın bildirim bildirimi":::
 
 ### <a name="software-center-notification-with-snooze"></a>Ertelele yazılım merkezi bildirimi
 
 Yazılım Merkezi, bir erteleme seçeneği ve cihazları yeniden başlamaya zormadan önce kalan süre ile bir bildirim gösterir. İleti, Configuration Manager sürümünüze bağlı olarak farklı olabilir.
 
-![Yeniden başlatma için bekleyen yazılım merkezi bildirimi bekleniyor düğmesi](media/3976435-snooze-restart-countdown.png)
+:::image type="content" source="media/3976435-snooze-restart-countdown.png" alt-text="Yeniden başlatma için bekleyen yazılım merkezi bildirimi bekleniyor düğmesi":::
 
 ### <a name="software-center-final-countdown-notification"></a>Software Center son geri sayım bildirimi
 
 Yazılım Merkezi, kullanıcının kapatımda veya geri erermesine yönelik bu son geri sayım bildirimini gösterir.
 
-![Software Center son geri sayım bildirimi](media/3976435-final-restart-countdown.png)
+:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Software Center son geri sayım bildirimi":::
 
 Sürüm 1906 ' den başlayarak, bekleyen yeniden başlatma işlemi 24 saatten daha az olana kadar Kullanıcı yeniden başlatma bildiriminde bir ilerleme çubuğu görmez.
 
@@ -59,17 +59,47 @@ Sürüm 1906 ' den başlayarak, bekleyen yeniden başlatma işlemi 24 saatten da
 
 Kullanıcı son tarihten önce gerekli yazılımları önceden yüklerse ve yeniden başlatma gerektiriyorsa, farklı bir bildirim görür. Aşağıdaki bildirim, hem Kullanıcı deneyimi ayarı bildirimlere izin veriyorsa hem de dağıtım için bildirim kullanmadan oluşur. Bu ayarları yapılandırma hakkında daha fazla bilgi için bkz. [dağıtım **Kullanıcı deneyimi** ayarları](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux) ve [Gerekli dağıtımlar için Kullanıcı bildirimleri](../../../apps/deploy-use/deploy-applications.md#bkmk_notify).
 
-![Önceden yüklenmiş yazılım bildirimi](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Önceden yüklenmiş yazılım bildirimi":::
 
 #### <a name="available-apps"></a>Kullanılabilir uygulamalar
 
 Bildirim kullanmıyorsanız, **kullanılabilir** olarak işaretlenen yazılımın iletişim kutusu, önceden yüklenmiş yazılım ile benzerdir. **Kullanılabilir** yazılımlar için, bildirimin yeniden başlatma için son tarih yoktur ve Kullanıcı kendi erteleme aralığını seçebilir. Daha fazla bilgi için bkz. [onay ayarları](../../../apps/deploy-use/deploy-applications.md#bkmk_approval).
 
-!["Kullanılabilir" olarak işaretlenen yazılımın, bildirimde yeniden başlatma için son tarih yok.](media/3555947-deployment-marked-available-restart.png)
+:::image type="content" source="media/3555947-deployment-marked-available-restart.png" alt-text="Kullanılabilir yazılımın, bildirimde yeniden başlatma için son tarih yok":::
+
+### <a name="software-center-notification-of-required-restart"></a>Gerekli yeniden başlatmanın yazılım merkezi bildirimi
+
+<!--3601213-->
+
+Sürüm 2006 ' den başlayarak, bir dağıtım gerektirdiğinde cihazların otomatik olarak yeniden başlatılmasını engellemek için istemci ayarlarını yapılandırabilirsiniz. Gerekli bir dağıtım cihazın yeniden başlatılmasını gerektiriyorsa, ancak istemci ayarını devre dışı bıraktığınızda **Configuration Manager bir cihazı yeniden başlamaya zorlayabilir**, aşağıdaki bildirimi görürsünüz:
+
+:::image type="content" source="media/3601213-restart-your-computer.png" alt-text="Bilgisayarınızı yeniden başlatmak için yazılım merkezi bildirimi":::
+
+**Bu bildirimi yeniden başlatırsanız,** yeniden başlatma anımsatıcı bildirimlerinin sıklığını yapılandırma sıklığınızdan sonra tekrar görünür. **Yeniden Başlat** seçeneğini belirleyip Windows 'u el ile yeniden başlatana kadar cihaz yeniden başlatmaz.
+
+> [!NOTE]
+> Varsayılan olarak, Configuration Manager cihazları yeniden başlamaya zorlayabilir.
 
 ## <a name="client-settings"></a>İstemci ayarları
 
 İstemci yeniden başlatma davranışlarını denetlemek için **bilgisayar yeniden başlatma** grubunda aşağıdaki cihaz istemci ayarlarını yapılandırın. Daha fazla bilgi için bkz. [istemci ayarlarını yapılandırma](configure-client-settings.md).
+
+### <a name="configuration-manager-can-force-a-device-to-restart"></a>Configuration Manager, cihazı yeniden başlamaya zorlayabilir
+
+<!--3601213-->
+
+Sürüm 2006 ' den başlayarak, bir dağıtım gerektirdiğinde cihazların otomatik olarak yeniden başlatılmasını engellemek için istemci ayarlarını yapılandırabilirsiniz. Configuration Manager Bu ayarı varsayılan olarak sunar.
+
+> [!IMPORTANT]
+> Bu istemci ayarı, cihaza tüm uygulama, yazılım güncelleştirmesi ve paket dağıtımları için geçerlidir. Kullanıcı, cihazı el ile yeniden başlatana kadar:
+>
+> - Yazılım güncelleştirmeleri ve uygulama düzeltmeleri tam olarak yüklenmemiş olabilir
+> - Ek yazılım yüklemeleri gerçekleşmeyebilir
+
+Bu ayarı devre dışı bıraktığınızda, cihazın yeniden başlatılmasından veya kullanıcıya son geri sayım bildirimi sunulduktan sonra geçen sürenin miktarını belirtemezsiniz.
+
+> [!NOTE]
+> Yeni Configuration Manager özelliklerinden tam olarak yararlanmak için, siteyi güncelleştirdikten sonra istemcileri en son sürüme de güncelleştirin. Site ve konsolu güncelleştirdiğinizde Configuration Manager konsolunda yeni işlevsellik göründüğünde, istemci sürümü de en son olana kadar, tüm senaryo işlevsel değildir.
 
 ### <a name="specify-the-amount-of-time-after-the-deadline-before-a-device-gets-restarted-minutes"></a>Bir cihazın yeniden başlatılmasından önceki son tarihten sonra geçen süreyi belirtin (dakika)
 
@@ -123,17 +153,17 @@ Son tarihte veya sonrasında gerekli yazılım yüklendiğinde, kullanıcıları
 
   - Yeniden başlatma, 24 saatten fazlaysa tahmini bir yeniden başlatma süresi gösterir. Bu bildirimin zamanlaması, ayarı temel alır: **bir cihazın yeniden başlatılmasından önceki son tarihten sonraki süreyi belirtin (dakika)**.
 
-    ![Yeniden başlatma zamanı, 24 saatten fazla kaldı](media/3976435-notification-greater-than-24-hours.png)
+    :::image type="content" source="media/3976435-notification-greater-than-24-hours.png" alt-text="Yeniden başlatma zamanı, 24 saatten fazla kaldı":::
 
   - Yeniden başlatma işlemi 24 saatten azsa, bir ilerleme çubuğu gösterir. Bu bildirimin zamanlaması, ayarı temel alır: **bir cihazın yeniden başlatılmasından önceki son tarihten sonraki süreyi belirtin (dakika)**.
 
-    ![Yeniden başlatma zamanı, 24 saatten az kaldı](media/3976435-notification-less-than-24-hours.png)
+    :::image type="content" source="media/3976435-notification-less-than-24-hours.png" alt-text="Yeniden başlatma zamanı, 24 saatten az kaldı":::
 
 Kullanıcı **erteleme**seçerse, erteleme dönemi dolduktan sonra başka bir geçici bildirim gösterilir. Bu davranış, son geri sayıma henüz ulaşmadığını varsayar. Sonraki bildirimin zamanlaması, ayarı temel alır: **kullanıcıya sunulan, son tarihten sonra, bir cihaz yeniden başlatılmadan önce (dakika) anımsatıcı bildirimlerinin sıklığını belirtin**. Kullanıcı **erteleme**seçeneğini seçerse ve erteleme aralığı bir saat Ise, yazılım merkezi kullanıcıya 60 dakika içinde yeniden bildirim gönderir. Bu davranış, son geri sayıma henüz ulaşmadığını varsayar.
 
 Son geri sayıma ulaştığında, yazılım merkezi kullanıcıya kapanmadıkları bir bildirim gösterir. İlerleme çubuğu kırmızıdır ve **Kullanıcı bunu yeniden** görüntüleyemez.
 
-![1906 sürümündeki yazılım merkezi son geri sayım bildirimi](media/3976435-1906-final-restart-countdown.png)
+:::image type="content" source="media/3976435-1906-final-restart-countdown.png" alt-text="1906 sürümündeki yazılım merkezi son geri sayım bildirimi":::
 
 ### <a name="proactively-install-required-software-before-the-deadline"></a>Son tarihten önce gerekli yazılımları proaktif olarak yükler
 
@@ -141,7 +171,7 @@ Kullanıcı son tarihten önce yeniden başlatılması gereken gerekli yazılım
 
 Aşağıdaki bildirim, hem Kullanıcı deneyimi ayarı bildirimlere izin veriyorsa hem de dağıtım için bildirim kullanmadan oluşur:
 
-![Önceden yüklenmiş yazılım bildirimi](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Önceden yüklenmiş yazılım bildirimi":::
 
 Dağıtım son tarihine ulaştığında, Yazılım Merkezi, [gerekli yazılımı son tarihte veya sonrasında yüklemek](#install-required-software-at-or-after-the-deadline)için davranışı izler.
 
@@ -167,7 +197,7 @@ Bu cihaz, dağıtım son tarihinden sonra üç saat (**180** dakika) yeniden ba�
 |Bir cihazın yeniden başlatılmasından önceki son tarihten sonra geçen süreyi belirtin (dakika)|7200|
 |Bir cihaz yeniden başlatılmadan önce kullanıcıya son geri sayım bildirimi sunulırken geçen süreyi belirtin (dakika)|120|
 |Son tarihten sonra, bir cihaz yeniden başlatılmadan önce kullanıcıya sunulan anımsatıcı bildirimlerinin sıklığını belirtin (dakika)|900|
-|Bir dağıtım yeniden başlatma gerektirdiğinde, bildirim yerine kullanıcıya bir iletişim kutusu penceresi gösterin|Yes|
+|Bir dağıtım yeniden başlatma gerektirdiğinde, bildirim yerine kullanıcıya bir iletişim kutusu penceresi gösterin|Evet|
 
 Bu cihaz, dağıtım son tarihinden sonra beş gün (**7200** dakika) yeniden başlatılır. İki saat (**120** dakika) yeniden başlatılmadan önce, Kullanıcı kapatılamadıklarında veya uyku bir geri sayım görür. Bu yapılandırma, 118 saatin anımsatıcıları () göstermesini sağlar `(7200 - 120) / 60` . 15 saat (**900** dakika) son tarihten sonra, yazılım merkezi ilk anımsatıcıyı görüntüler. 15 saatte bir en fazla 6 ek anımsatıcı görüntüler (**900 dakika**). Kullanıcı, anımsatıcıyı birkaç saniye içinde bir bildirim yerine ekranda bir pencere olarak görür.
 
@@ -178,7 +208,7 @@ Bu cihaz, dağıtım son tarihinden sonra beş gün (**7200** dakika) yeniden ba
 |Bir cihazın yeniden başlatılmasından önceki son tarihten sonra geçen süreyi belirtin (dakika)|2880|
 |Bir cihaz yeniden başlatılmadan önce kullanıcıya son geri sayım bildirimi sunulırken geçen süreyi belirtin (dakika)|60|
 |Son tarihten sonra, bir cihaz yeniden başlatılmadan önce kullanıcıya sunulan anımsatıcı bildirimlerinin sıklığını belirtin (dakika)|30|
-|Bir dağıtım yeniden başlatma gerektirdiğinde, bildirim yerine kullanıcıya bir iletişim kutusu penceresi gösterin|Yes|
+|Bir dağıtım yeniden başlatma gerektirdiğinde, bildirim yerine kullanıcıya bir iletişim kutusu penceresi gösterin|Evet|
 
 Cihaz, dağıtım son tarihinden sonra iki günü (**2880** dakika) yeniden başlatır. Bir saat (**60** dakika) yeniden başlatılmadan önce, Kullanıcı kapamayabileceği veya geri erteledikleri bir geri sayım görür. Bu yapılandırma, 47 saatin anımsatıcıları () göstermesini sağlar `(2880 - 60) / 60` . son tarihten **30** dakika sonra yazılım merkezi ilk anımsatıcıyı görüntüler. Her **30 dakikada**bir en fazla 92 ek anımsatıcı görüntüler. Kullanıcı, anımsatıcıyı birkaç saniye içinde bir bildirim yerine ekranda bir pencere olarak görür.
 
@@ -193,25 +223,25 @@ Sürüm 1902 ' den başlayarak, yazılım değişiklikleri gerektiğinde veya da
 
 Bu istemci ayarı yapılandırıldığında, bildirim bildirimleri ' nden yeniden başlatma gerektiren tüm gerekli dağıtımlar için Kullanıcı deneyimi değişir:
 
-![Yeniden başlatmanın gerekli bildirimi](media/3555947-restart-toast-initial.png)  
+:::image type="content" source="media/3555947-restart-toast-initial.png" alt-text="Yeniden başlatmanın gerekli bildirimi":::
 
 Daha zorlayıcı Yazılım Merkezi iletişim penceresine:
 
-![Bilgisayarınızı yeniden başlatmak için iletişim kutusu penceresi](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Bilgisayarınızı yeniden başlatmak için iletişim kutusu penceresi":::
 
 Yükleme sonrasında Kullanıcı cihazını yeniden başlatmadıysa, anımsatıcı olarak bir bildirim alır. Bu geçici anımsatıcı, kullanıcıya istemci ayarına bağlı olarak görünür: Kullanıcı **Oturumu kapatmadan veya bilgisayar yeniden başlatılmadan önceki aralığı belirten kullanıcıya geçici bir bildirim görüntüler (dakika)**. Bu ayar, bir yeniden başlatma zorlanmadan önce kullanıcının makineyi yeniden başlatması gereken genel süredir.
 
 - Bildirimler kullandığınızda geçici bildirim:
 
-  ![Bekleyen yeniden başlatmanın bildirim bildirimi](media/3555947-restart-toast.png)
+    :::image type="content" source="media/3555947-restart-toast.png" alt-text="Bekleyen yeniden başlatmanın bildirim bildirimi":::
 
 - Bildirim değil, Yazılım Merkezi iletişim kutusu penceresini kullandığınızda geçici bildirim:
 
-  ![Yeniden başlatma için bekleyen yazılım merkezi bildirimi bekleniyor düğmesi](media/3555947-1902-hide-notification.png)
+    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Yeniden başlatma için bekleyen yazılım merkezi bildirimi bekleniyor düğmesi":::
 
 Kullanıcı geçici bildirimden sonra yeniden başlamazsa, kapanmadıkları son geri sayım bildirimi verilir. Son bildirimin görüneceği zaman, istemci ayarına göre belirlenir: kullanıcının **kapatılmadığı bir iletişim kutusu görüntüler; bu, Kullanıcı oturumu kapatmadan veya bilgisayar yeniden başlatılmadan önce geri sayım aralığını gösterir (dakika)**. Örneğin, ayar 60 ise, yeniden başlatma zorlanmadan önce bir saat, son bildirim kullanıcıya görünür:
 
-![Software Center son geri sayım bildirimi](media/3555947-1902-final-countdown.png)
+:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Software Center son geri sayım bildirimi":::
 
 Aşağıdaki ayarlar, bilgisayara uygulanan en kısa [bakım penceresinden](../manage/collections/use-maintenance-windows.md) daha kısa sürede olmalıdır:
 

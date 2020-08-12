@@ -2,7 +2,7 @@
 title: Bulut yönetimi ağ geçidi planlama
 titleSuffix: Configuration Manager
 description: Internet tabanlı istemcilerin yönetimini basitleştirmek için bulut yönetimi ağ geçidini (CMG) planlayın ve tasarlayın.
-ms.date: 06/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d6165678331811f4b04e8b1f540f3dcbb7f015d
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 7c57e6568ce60680d9febc533c60533055595bc3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502264"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126942"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Configuration Manager 'de bulut yönetimi ağ geçidini planlayın
 
@@ -54,7 +54,7 @@ CMG 'nin faydalı olduğu birkaç senaryo vardır. Aşağıdaki senaryolar daha 
 
 - Configuration Manager istemcisini Internet üzerinden Windows 10 cihazlarına yükler. Azure AD 'nin kullanılması, cihazın istemci kaydı ve ataması için CMG 'ye kimlik doğrulaması yapmasına olanak sağlar. İstemciyi el ile veya Microsoft Intune gibi başka bir yazılım dağıtım yöntemi kullanarak yükleyebilirsiniz.  
 
-- Ortak yönetim ile yeni cihaz sağlama. Mevcut istemcileri otomatik olarak kaydederken ortak yönetim için CMG gerekli değildir. Windows AutoPilot, Azure AD, Microsoft Intune ve Configuration Manager içeren yeni cihazlar için gereklidir. Daha fazla bilgi için bkz. [ortak yönetime yönelik yollar](../../../../comanage/quickstart-paths.md).
+- Ortak yönetim ile yeni cihaz sağlama. Mevcut istemcileri otomatik olarak kaydederken ortak yönetim için CMG gerekli değildir. Windows Autopilot, Azure AD, Microsoft Intune ve Configuration Manager içeren yeni cihazlar için gereklidir. Daha fazla bilgi için bkz. [ortak yönetime yönelik yollar](../../../../comanage/quickstart-paths.md).
 
 ### <a name="specific-use-cases"></a>Belirli kullanım örnekleri
 
@@ -124,6 +124,8 @@ Hiyerarşinizin üst katman sitesinde CMG 'yi oluşturun. Bu bir merkezi yöneti
 Azure 'da birden çok CMG hizmeti oluşturabilir ve birden çok CMG bağlantı noktası oluşturabilirsiniz. Birden çok CMG bağlantı noktası, CMG 'den şirket içi rollere istemci trafiği yük dengelemesi sağlar.
 
 Sürüm 1902 ' den başlayarak bir CMG 'yi bir sınır grubuyla ilişkilendirebilirsiniz. Bu yapılandırma, istemcilerin [sınır grubu ilişkilerine](../../../servers/deploy/configure/boundary-groups.md)göre istemci iletişimi için varsayılan veya CMG 'ye geri dönüş yapmasına izin verir. Bu davranış özellikle şube ofisi ve VPN senaryolarında yararlı olur. İstemci trafiğini pahalı ve yavaş WAN bağlantılarından, bunun yerine Microsoft Azure ' de daha hızlı bir şekilde kullanabilirsiniz.<!--3640932-->
+
+Sürüm 2006 ' den başlayarak, intranet istemcileri bir sınır grubuna atandığında bir CMG yazılım güncelleştirme noktasına erişebilir. Daha fazla bilgi için bkz. [sınır gruplarını yapılandırma](../../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup). <!--7102873-->
 
 > [!NOTE]
 > Internet tabanlı istemciler herhangi bir sınır grubuna düşmez.
@@ -222,47 +224,54 @@ Aşağıdaki tabloda Configuration Manager özellikleri için CMG desteği liste
 
 |Özellik  |Destek  |
 |---------|---------|
-| Yazılım güncelleştirmeleri     | ![Destekleniyor](media/green_check.png) |
-| Endpoint protection     | ![Desteklenen ](media/green_check.png) <sup> [notta 1](#bkmk_note1)</sup> |
-| Donanım ve yazılım envanteri     | ![Destekleniyor](media/green_check.png) |
-| İstemci durumu ve bildirimleri     | ![Destekleniyor](media/green_check.png) |
-| Betikleri Çalıştır     | ![Destekleniyor](media/green_check.png) |
-| CMPivot     | ![Destekleniyor](media/green_check.png) |
-| Uyumluluk ayarları     | ![Destekleniyor](media/green_check.png) |
-| İstemci yüklemesi<br>( [Azure AD tümleştirmesi](../../deploy/deploy-clients-cmg-azure.md)ile) | ![Destekleniyor](media/green_check.png) |
-| İstemci yüklemesi<br>( [belirteç kimlik doğrulaması](../../deploy/deploy-clients-cmg-token.md)ile) | ![Destekleniyor](media/green_check.png) (2002) |
-| Yazılım dağıtımı (cihaz hedefli)     | ![Destekleniyor](media/green_check.png) |
-| Yazılım dağıtımı (kullanıcı hedefli, gerekli)<br>(Azure AD tümleştirmesi ile)     | ![Destekleniyor](media/green_check.png) |
-| Yazılım dağıtımı (kullanıcı hedefli, kullanılabilir)<br>([tüm gereksinimler](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Destekleniyor](media/green_check.png) |
-| Windows 10 [yerinde yükseltme görev dizisi](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) | ![Destekleniyor](media/green_check.png) |
-| Önyükleme görüntülerini kullanmayan ve bir seçenekle dağıtılan görev dizileri: **görev sırasını başlatmadan önce tüm içeriği yerel olarak indir** | ![Destekleniyor](media/green_check.png) |
-| [Yükleme seçeneği](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg) ile önyükleme görüntülerini kullanmayan görev dizileri | ![Destekleniyor](media/green_check.png) (1910)|
-| Diğer herhangi bir görev sırası senaryosu     | ![Desteklenmiyor](media/Red_X.png) |
-| İstemci gönderme     | ![Desteklenmiyor](media/Red_X.png) |
-| Otomatik site ataması     | ![Desteklenmiyor](media/Red_X.png) |
-| Yazılım onay istekleri     | ![Desteklenmiyor](media/Red_X.png) |
-| Configuration Manager konsolu     | ![Desteklenmiyor](media/Red_X.png) |
-| Uzak Araçlar     | ![Desteklenmiyor](media/Red_X.png) |
-| Raporlama Web sitesi     | ![Desteklenmiyor](media/Red_X.png) |
-| LAN'da Uyandırma     | ![Desteklenmiyor](media/Red_X.png) |
-| Mac, Linux ve UNIX istemcileri     | ![Desteklenmiyor](media/Red_X.png) |
-| Eş önbellek     | ![Desteklenmiyor](media/Red_X.png) |
-| Şirket içi MDM     | ![Desteklenmiyor](media/Red_X.png) |
-| BitLocker Yönetimi     | ![Desteklenmiyor](media/Red_X.png) |
+| Yazılım güncelleştirmeleri     | ![Desteklenir](media/green_check.png) |
+| Endpoint protection     | ![Desteklenen ](media/green_check.png) <sup> [notta &nbsp; 1](#bkmk_note1)</sup> |
+| Donanım ve yazılım envanteri     | ![Desteklenir](media/green_check.png) |
+| İstemci durumu ve bildirimleri     | ![Desteklenir](media/green_check.png) |
+| Betikleri Çalıştır     | ![Desteklenir](media/green_check.png) |
+| CMPivot     | ![Desteklenir](media/green_check.png) |
+| Uyumluluk ayarları     | ![Desteklenir](media/green_check.png) |
+| İstemci yüklemesi<br>( [Azure AD tümleştirmesi](../../deploy/deploy-clients-cmg-azure.md)ile) | ![Desteklenir](media/green_check.png) |
+| İstemci yüklemesi<br>( [belirteç kimlik doğrulaması](../../deploy/deploy-clients-cmg-token.md)ile) | ![Desteklenir](media/green_check.png) (2002) |
+| Yazılım dağıtımı (cihaz hedefli)     | ![Desteklenir](media/green_check.png) |
+| Yazılım dağıtımı (kullanıcı hedefli, gerekli)<br>(Azure AD tümleştirmesi ile)     | ![Desteklenir](media/green_check.png) |
+| Yazılım dağıtımı (kullanıcı hedefli, kullanılabilir)<br>([tüm gereksinimler](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)) | ![Desteklenir](media/green_check.png) |
+| Windows 10 [yerinde yükseltme görev dizisi](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) | ![Desteklenir](media/green_check.png) |
+| **Görev sırasını başlatmadan önce tüm içeriği yerel olarak indirme** seçeneğiyle dağıtılan önyükleme görüntüsü olmayan görev dizisi | ![Desteklenir](media/green_check.png) |
+| Önyükleme görüntüsü olmayan görev dizisi, [indirme seçeneğiyle](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg) dağıtıldı | ![Desteklenir](media/green_check.png) (1910) |
+| Yazılım merkezinden başlatılan önyükleme görüntüsüne sahip görev dizisi | ![Desteklenir](media/green_check.png) (2006) |
+| Diğer herhangi bir görev sırası senaryosu     | ![Desteklenmez](media/Red_X.png) |
+| İstemci gönderme     | ![Desteklenmez](media/Red_X.png) |
+| Otomatik site ataması     | ![Desteklenmez](media/Red_X.png) |
+| Yazılım onay istekleri     | ![Desteklenmez](media/Red_X.png) |
+| Configuration Manager konsolu     | ![Desteklenmez](media/Red_X.png) |
+| Uzak araçlar     | ![Desteklenmez](media/Red_X.png) |
+| Raporlama Web sitesi     | ![Desteklenmez](media/Red_X.png) |
+| LAN'da Uyandırma     | ![Desteklenmez](media/Red_X.png) |
+| Mac, Linux ve UNIX istemcileri     | ![Desteklenmez](media/Red_X.png) |
+| Eş önbellek     | ![Desteklenmez](media/Red_X.png) |
+| Şirket içi MDM     | ![Desteklenmez](media/Red_X.png) |
+| BitLocker Yönetimi     | ![Desteklenmez](media/Red_X.png) |
 
 |Anahtar|
 |--|
-|![Destekleniyor](media/green_check.png) = Bu özellik tüm desteklenen Configuration Manager sürümleriyle CMG ile desteklenir  |
+|![Desteklenir](media/green_check.png) = Bu özellik tüm desteklenen Configuration Manager sürümleriyle CMG ile desteklenir  |
 |![Desteklenen ](media/green_check.png) (*yymm*) = bu özellik, Configuration Manager *yymm* sürümü ile başlayarak CMG ile desteklenir  |
-|![Desteklenmiyor](media/Red_X.png) = Bu özellik CMG ile desteklenmiyor |
+|![Desteklenmez](media/Red_X.png) = Bu özellik CMG ile desteklenmiyor |
 
 #### <a name="note-1-support-for-endpoint-protection"></a><a name="bkmk_note1"></a>Note 1: Endpoint Protection için destek
+
+Sürüm 2006 ' den başlayarak, bir CMG aracılığıyla iletişim kuran istemciler, Active Directory için etkin bir bağlantı olmadan Endpoint Protection ilkelerini hemen uygulayabilir.<!--4773948-->
+
 <!-- 4350561 -->
-Uç nokta koruma ilkesini uygulamak için etki alanına katılmış cihazların, etki alanına erişmesi gerekir. İç ağa sık erişimli erişimi olan cihazlar Endpoint Protection ilkesini uygularken gecikmeler yaşar. Cihazların, alındıktan sonra Endpoint Protection ilkesini hemen uygulamasını istiyorsanız, aşağıdaki seçeneklerden birini göz önünde bulundurun:
+Sürüm 2002 ve önceki sürümlerde, etki alanına katılmış cihazların Endpoint Protection ilkesini uygulaması için etki alanına erişmesi gerekir. İç ağa sık erişimli erişimi olan cihazlar Endpoint Protection ilkesini uygularken gecikmeler yaşar. Cihazların, alındıktan sonra Endpoint Protection ilkesini hemen uygulamasını istiyorsanız, aşağıdaki seçeneklerden birini göz önünde bulundurun:
+
+- Siteyi ve istemcileri 2006 sürümüne güncelleştirin.
 
 - Ortak yönetimi kullanın ve [Endpoint Protection iş yükünü](../../../../comanage/workloads.md#endpoint-protection) Intune 'a geçirin ve [Microsoft Defender virüsten koruma](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus) 'yı buluttan yönetin.
 
 - Endpoint Protection ilkesini uygulamak için yerel [kötü amaçlı yazılımdan koruma ilkeleri](../../../../protect/deploy-use/endpoint-antimalware-policies.md) özelliği yerine [yapılandırma öğelerini](../../../../compliance/deploy-use/create-configuration-items.md) kullanın.
+
 
 ## <a name="cost"></a>Maliyet
 

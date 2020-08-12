@@ -10,12 +10,12 @@ ms.assetid: e80d1151-91db-4a27-8411-a957297b67d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b8ee7d00f3b5c98528d9999b83b07aa393b72e36
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: df3188e827623db8faa0b27be2fe282031e9fa50
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720593"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126401"
 ---
 # <a name="manage-network-bandwidth-for-content"></a>İçerik için ağ bant genişliğini yönetme
 Configuration Manager içerik yönetimi işlemi için kullanılan ağ bant genişliğini yönetmenize yardımcı olmak için, zamanlama ve azaltma için yerleşik denetimleri kullanabilirsiniz. Önceden hazırlanan içerik de kullanabilirsiniz. Aşağıdaki bölümlerde bu seçenekler daha ayrıntılı olarak açıklanır.
@@ -61,7 +61,7 @@ Dağıtım noktasını, içerik dağıtımını yönetmeye yardımcı olmak içi
 
     -   **Paketler dağıtım noktalarına atandığında Içeriği otomatik olarak indir**: Bu seçeneği, daha küçük paketleriniz olduğunda kullanın ve zamanlama ve daraltma ayarları, içerik dağıtımı için yeterli denetim sağlar.  
 
-    -   **Yalnızca dağıtım noktasındaki içerik değişikliklerini indir**: paketteki içerik için gelecekteki güncelleştirmelerin ilk paketten genellikle daha küçük olması için bu seçeneği kullanın. Örneğin, ilk paket boyutu 700 MB 'ın üzerinde olduğundan ve ağ üzerinden gönderilemeyecek kadar büyük olduğundan, Microsoft Office gibi bir uygulamayı önceden hazırlayabilirsiniz. Ancak, bu paketteki içerik güncelleştirmeleri 10 MB 'tan az olabilir ve ağ üzerinden dağıtmak için kabul edilebilir. Diğer bir örnek, ilk paket boyutunun büyük olduğu, ancak pakete artımlı sürücü eklemeleri küçük olabilecek sürücü paketleri olabilir.  
+    -   **Yalnızca dağıtım noktasındaki içerik değişikliklerini indir**: paketteki içerik için gelecekteki güncelleştirmelerin ilk paketten genellikle daha küçük olması için bu seçeneği kullanın. Örneğin, ilk paket boyutu 700 MB 'ın üzerinde olduğundan ve ağ üzerinden gönderilemeyecek kadar büyük olduğundan, Microsoft 365 uygulamalar gibi bir uygulamayı önceden hazırlayabilirsiniz. Ancak, bu paketteki içerik güncelleştirmeleri 10 MB 'tan az olabilir ve ağ üzerinden dağıtmak için kabul edilebilir. Diğer bir örnek, ilk paket boyutunun büyük olduğu, ancak pakete artımlı sürücü eklemeleri küçük olabilecek sürücü paketleri olabilir.  
 
     -   **Bu paketteki içeriği dağıtım noktasına el ile Kopyala**: Bu seçeneği, işletim sistemi gibi içeriklere sahip olan büyük Paketleriniz varsa ve içeriği dağıtım noktasına dağıtmak için hiçbir zaman ağı kullanmak istemediğinizde kullanın. Bu seçeneği belirlediğinizde dağıtım noktasındaki içeriği önceden hazırlamanız gerekir.  
 

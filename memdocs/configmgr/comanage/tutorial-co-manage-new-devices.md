@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 742cd1e86ac0bff6563c0d3ee4edce7324629480
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: 0d7122942fe6a1455518b56159b48a11a2519d3e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87815472"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127333"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Öğretici: yeni internet tabanlı cihazlar için ortak yönetimi etkinleştirme
 
@@ -40,7 +40,7 @@ Bu öğreticide, Windows 10 cihazlarının hem Azure Active Directory (AD) hem d
 > * Configuration Manager içinde ortak yönetimi etkinleştirme
 > * Intune 'U Configuration Manager istemcisini yükleyecek şekilde yapılandırma
 
-## <a name="prerequisites"></a>Önkoşullar  
+## <a name="prerequisites"></a>Ön koşullar  
 
 ### <a name="azure-services-and-environment"></a>Azure hizmetleri ve ortamı
 
@@ -367,13 +367,9 @@ Azure yapılandırmalarının, site sistem rollerinin ve istemci ayarlarının y
 
 ### <a name="enable-co-management-starting-in-version-1906"></a>Sürüm 1906 ' den başlayarak ortak yönetimi etkinleştirme
 
-Ortak yönetimi Configuration Manager sürüm 1906 ' den başlayarak etkinleştirmek için aşağıdaki yönergeleri izleyin:
-
 [!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
 
 ### <a name="enable-co-management-in-version-1902-and-earlier"></a>Sürüm 1902 ve önceki sürümlerde ortak yönetimi etkinleştirme
-
-Configuration Manager sürüm 1902 ve önceki sürümleri için ortak yönetimi etkinleştirmek üzere aşağıdaki yönergeleri izleyin:
 
 [!INCLUDE [Enable Co-management in version 1902 and earlier](includes/enable-co-management-1902-and-earlier.md)]
 

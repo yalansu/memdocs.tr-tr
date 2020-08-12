@@ -2,7 +2,7 @@
 title: Güncel dal sürümleri
 titleSuffix: Configuration Manager
 description: Configuration Manager sürüm geçmişini gözden geçirin ve sunulan hizmetin aşamaları hakkında bilgi edinin.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 429e8159058e9126d578f9d33769ffc32eb73def
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 28920512fa2f9353ea5dbb038b140293b0e8c5e8
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712508"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126179"
 ---
 # <a name="support-for-configuration-manager-current-branch-versions"></a>Configuration Manager geçerli dal sürümleri için destek
 
@@ -27,11 +27,11 @@ Microsoft, her yıl Configuration Manager geçerli dal için güncelleştirmeler
 
 - **Güvenlik güncelleştirmeleri (yalnızca)** hizmet aşaması-yeni bir geçerli dal sürümünün yayımlanmasından sonra, Microsoft yalnızca bu sürümün destek yaşam döngüsünün (Şekil 1 ' de gösterilen) geri kalan sürümleri için güvenlik güncelleştirmelerini destekler.  
 
-[![Configuration Manager bakım ve destek zaman çizelgesi](media/servicing_support_timeline.png) grafiği](media/servicing_support_timeline.png#lightbox)
+:::image type="content" source="media/servicing_support_timeline.png" alt-text="Configuration Manager bakım ve destek zaman çizelgesi" lightbox="media/servicing_support_timeline.png":::
 
 Şekil 1. Yayın döngüsünün örneği, geçerli şube bakım desteği için çakışıyor. Bu örnek, döngüsünün çizimi için ve gerçek ya da beklenen yayın tarihlerini temsil etmez.
 
-> [!NOTE]  
+> [!NOTE]
 > En son geçerli dal sürümü her zaman **güvenlik ve kritik güncelleştirmeler** hizmeti aşamasındadır. Bu destek beyanı, kritik bir güncelleştirmeyi gerektiren bir kod hatası yaşarsanız, bir çözüm almak için en son geçerli dal sürümünün yüklü olması gerektiğini gösterir. Desteklenen diğer tüm geçerli dal sürümleri yalnızca güvenlik güncelleştirmelerini alma hakkına sahiptir.
 >
 > Geçerli bir dal sürümü için 18 aylık yaşam döngüsünün süresi dolduktan sonra tüm destek sona erer.

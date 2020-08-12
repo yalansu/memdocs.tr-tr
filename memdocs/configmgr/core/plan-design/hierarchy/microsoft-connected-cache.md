@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5bea4fab3b32464cc0d03469d4966fe3611d2f76
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: 0103ba8923698a31b86e7d34119caaeb54d54c90
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814918"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128537"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 'de Microsoft bağlı önbelleği
 
@@ -109,7 +109,7 @@ Bağlı önbelleği yükledikten sonra sürücüyü değiştirmek için:
 
 - Otomatik olarak ayarlandıysa, önce **no_sms_on_drive. SMS** dosyasını oluşturun. Ardından, bir yapılandırma değişikliğini tetiklemek için dağıtım noktası özelliklerinde bazı değişiklikler yapın.
 
-### <a name="automation"></a>Otomasyon
+### <a name="automation"></a>Otomatikleştirme
 
 <!-- SCCMDocs#1911 -->
 
@@ -132,7 +132,7 @@ Dağıtım noktası için **SMS_SCI_SysResUse** örneğini güncelleştirdiğini
 - [İş ilkeleri için Windows Update](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md)etkinleştirirseniz: Windows 10 özellik ve kalite güncelleştirmeleri
 - [Ortak yönetim iş yükleri](../../../comanage/workloads.md)için:
   - Iş için Windows Update: Windows 10 özellik ve kalite güncelleştirmeleri
-  - Office Tıkla-Çalıştır uygulamaları: Office uygulamaları ve güncelleştirmeleri
+  - Office Tıkla-Çalıştır uygulamaları: Microsoft 365 uygulamalar ve güncelleştirmeler
   - İstemci uygulamaları: Microsoft Store uygulamalar ve güncelleştirmeler
   - Endpoint Protection: Windows Defender tanım güncelleştirmeleri
 

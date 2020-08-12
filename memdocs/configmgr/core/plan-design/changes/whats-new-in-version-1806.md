@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 295940337f191b791d8c7a86de4003466213df6b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ae2846c2a5f7fea86287a05c8cc8f6013d660df6
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719319"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128959"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1806 ' deki yenilikler
 
@@ -60,7 +60,7 @@ Daha fazla bilgi için bkz. [CMPivot](../../servers/manage/cmpivot.md).
 <!--1128774-->
 Tek başına birincil site sunucusu rolü için yüksek kullanılabilirlik, pasif modda ek bir site sunucusu yüklemek için Configuration Manager tabanlı bir çözümdür. Pasif modda site sunucusu, etkin modda olan var olan site sunucunuza ek niteliğindedir. Pasif moddaki bir site sunucusu, gerektiğinde hemen kullanılmak üzere kullanılabilir. 
 
-Daha fazla bilgi için aşağıdaki makalelere bakın: 
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin: 
 - [Site sunucusu yüksek kullanılabilirliği](../../servers/deploy/configure/site-server-high-availability.md) 
 - [Akış çizelgesi-pasif modda bir site sunucusu ayarlama](../../servers/deploy/configure/passive-site-server-flowchart.md)
 - [Akış Çizelgesi - Site sunucusu yükseltme (planlı)](../../servers/deploy/configure/promote-site-server-flowchart.md)
@@ -79,7 +79,7 @@ Daha fazla bilgi için bkz. [Management Insights](../../servers/manage/managemen
 
 ### <a name="configuration-manager-tools"></a>Configuration Manager araçları
 <!--1357145-->
-Configuration Manager sunucusu ve istemci araçları artık sunucuya dahil edilmiştir. Bunları site sunucusundaki `CD.Latest\SMSSETUP\Tools` klasöründe bulabilirsiniz. Başka yükleme gerekli değildir. 
+Configuration Manager sunucusu ve istemci araçları artık sunucuya dahil edilmiştir. Bunları `CD.Latest\SMSSETUP\Tools` site sunucusundaki klasöründe bulabilirsiniz. Başka yükleme gerekli değildir. 
 
 Daha fazla bilgi için bkz. [Configuration Manager araçları](../../support/tools.md).
 
@@ -98,7 +98,7 @@ Daha fazla bilgi için bkz. [Active Directory sistem bulmayı yapılandırma](..
 <!--1357525-->
 Site sunucusu yüksek kullanılabilirliği yapılandırmak veya merkezi yönetim veya birincil site sunucularınızda sabit disk alanı boşaltmak için, içerik kitaplığını başka bir depolama konumuna yeniden yerleştir. İçerik kitaplığını site sunucusundaki başka bir sürücüye, ayrı bir sunucuya veya bir depolama alanı ağında (SAN) hataya dayanıklı disklere taşıyın. 
 
-Daha fazla bilgi için aşağıdaki makalelere bakın: 
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin: 
 - [İçerik kitaplığı](../hierarchy/the-content-library.md)
 - [Akış çizelgesi - İçerik kitaplığını yönetme](../hierarchy/manage-content-library-flowchart.md)
 
@@ -107,7 +107,7 @@ Daha fazla bilgi için aşağıdaki makalelere bakın:
 <!--1322209-->
 Bir bulut dağıtım noktası oluştururken, sihirbaz artık **Azure Resource Manager dağıtımı**oluşturma seçeneği sağlar. Azure Resource Manager, tüm çözüm kaynaklarının, kaynak grubu olarak adlandırılan tek bir varlık olarak yönetilmesine yönelik modern bir platformdur. Azure Resource Manager ile bulut dağıtım noktası dağıtımında, site kimlik doğrulaması yapmak ve gerekli bulut kaynaklarını oluşturmak için Azure Active Directory kullanır. Bu modernlanmış dağıtım, klasik Azure Yönetim sertifikası gerektirmez. 
 
-Bulut dağıtım noktası için özellik belgeleri de düzeltilir ve geliştirilmiştir. Daha fazla bilgi için aşağıdaki makalelere bakın:
+Bulut dağıtım noktası için özellik belgeleri de düzeltilir ve geliştirilmiştir. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 - [Bulut dağıtım noktası kullan](../hierarchy/use-a-cloud-based-distribution-point.md)   
 - [Bulut dağıtım noktası yükler](../../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md)  
 
@@ -183,7 +183,7 @@ Daha fazla bilgi için bkz. [GELIŞMIŞ http](../hierarchy/enhanced-http.md).
 
 ### <a name="cmtrace-installed-with-client"></a>İstemci ile CMTrace yüklendi
 <!--1357971-->
-CMTrace günlük görüntüleme aracı artık Configuration Manager istemcisiyle birlikte otomatik olarak yüklenir. Bu, varsayılan olarak olan istemci yükleme dizinine eklenir `%WinDir%\ccm\cmtrace.exe`. 
+CMTrace günlük görüntüleme aracı artık Configuration Manager istemcisiyle birlikte otomatik olarak yüklenir. Bu, varsayılan olarak olan istemci yükleme dizinine eklenir `%WinDir%\ccm\cmtrace.exe` . 
 
 Daha fazla bilgi için bkz. [CMTrace](../../support/cmtrace.md).
 
@@ -278,7 +278,7 @@ Güvenlik Içeriği Otomasyon Protokolü (SCAP) içeriğini uyumluluk ayarları 
 <!--1358147-->
 Bir uygulama için aşamalı dağıtım oluşturun. Aşamalı dağıtımlar, özelleştirilebilir ölçütlere ve gruplara göre düzenlenmiş, sıralı bir yazılım dağıtımını düzenlemenize olanak tanır. Örneğin, uygulamayı bir pilot koleksiyonuna dağıtın ve ardından başarı ölçütlerine göre otomatik olarak piyasaya devam edin. 
 
-Daha fazla bilgi için aşağıdaki makalelere bakın:  
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:  
 
 - [Aşamalı dağıtım oluşturma](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
 
@@ -296,7 +296,7 @@ Daha fazla bilgi için bkz. [Windows uygulamaları oluşturma](../../../apps/get
 <!--1358149-->
 Office özelleştirme aracı artık Configuration Manager konsolundaki Office 365 yükleyicisiyle tümleşiktir. Office 365 için bir dağıtım oluştururken, en yeni Office yönetilebilirlik ayarlarını dinamik olarak yapılandırın. Microsoft, Office Özelleştirme Aracı 'nı yeni Office 365 derlemelerini yayınlarsa güncelleştirir. Bu tümleştirme, Office 365 ' deki yeni yönetilebilirlik ayarlarından yararlanarak kullanılabilir duruma gelir. 
 
-Daha fazla bilgi için bkz. [Office 365 uygulamalarını dağıtma](../../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+Daha fazla bilgi için bkz. [Office 365 uygulamalarını dağıtma](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ### <a name="support-for-new-windows-app-package-formats"></a>Yeni Windows uygulama paketi biçimleri için destek
@@ -544,9 +544,9 @@ Daha fazla bilgi için bkz. [ürün yaşam döngüsü panosu](../../clients/mana
 
 - **Dağıtım durumu** düğümünü genişletin ve **İçerik durumu**' nu seçin. Bir yazılım parçası seçin ve **durumu görüntüle**' ye tıklayın. Içerik durumu görünümünün **varlık ayrıntıları** bölmesinde bir veya daha fazla dağıtım noktası seçin. 
 
-Varlığa sağ tıklayın ve **Kopyala**' yı seçin. Bu eylem, seçili varlıkları tam ayrıntıları içeren virgülle ayrılmış bir liste olarak kopyalar. **CTRL** + **C** klavye kısayolu Bu görünümlerde de kullanılabilir. 
+Varlığa sağ tıklayın ve **Kopyala**' yı seçin. Bu eylem, seçili varlıkları tam ayrıntıları içeren virgülle ayrılmış bir liste olarak kopyalar. **CTRL**  +  **C** klavye kısayolu Bu görünümlerde de kullanılabilir. 
 
-Daha fazla bilgi için bkz. [sürüm 1806 ' de konsol geliştirmeleri](../../servers/manage/admin-console.md#copy-details-in-monitoring-views).
+Daha fazla bilgi için bkz. [sürüm 1806 ' de konsol geliştirmeleri](../../servers/manage/admin-console-tips.md#copy-details-in-monitoring-views).
 
 
 ### <a name="improvements-to-the-surface-dashboard"></a>Yüzey panosu geliştirmeleri
@@ -568,7 +568,7 @@ Daha fazla bilgi için bkz. [yüzey panosu](../../clients/manage/surface-device-
 <!--1358202-->
 Artık varsayılan olarak, **varlıklar ve uyum** çalışma alanının **cihazlar** düğümü, **Şu anda oturum açmış olan Kullanıcı**için bir sütun görüntüler. Ayrıca, koleksiyona özgü herhangi bir cihaz listesi için de görüntülenir. Bu değer, [istemci durumu](../../clients/manage/monitor-clients.md#bkmk_indStatus)olarak geçerli olur. Kullanıcı oturumu kapattığında, istemci bu değeri temizler. Oturum açmış bir kullanıcı yoksa değer boştur. 
 
-Daha fazla bilgi için bkz. [sürüm 1806 ' de konsol geliştirmeleri](../../servers/manage/admin-console.md#view-users-for-a-device).
+Daha fazla bilgi için bkz. [sürüm 1806 ' de konsol geliştirmeleri](../../servers/manage/admin-console-tips.md#view-users-for-a-device).
 
 
 ### <a name="submit-feedback-from-the-configuration-manager-console"></a>Configuration Manager konsolundan geri bildirim gönderin  
@@ -576,7 +576,7 @@ Daha fazla bilgi için bkz. [sürüm 1806 ' de konsol geliştirmeleri](../../ser
 
 Gülümseme Gönder! Artık Configuration Manager ekibine deneyimleriniz hakkında doğrudan bilgi verebilirsiniz. Geri bildirimin gönderilmesi Configuration Manager konsolundan kolaydır. Tüm geri bildirimlerinizi duymak istiyoruz: Praise, sorunlar ve öneriler. Configuration Manager konsolunda, şeridin üstündeki sağ üst köşedeki gülümseme düğmesine tıklayın. Bu geri bildirim, Configuration Manager için doğrudan Microsoft ürün ekibine gider. Windows 10 Geri Bildirim Hub 'ı kullanılırken, yine de desteklenirken konsol içi geri bildirim mekanizmasını kullanmanız önerilir.  
 
-Daha fazla bilgi için bkz. sürüm 1806 ve [ürün geri bildirimi](../../understand/find-help.md#BKMK_1806Feedback) ['ndeki konsol geliştirmeleri](../../servers/manage/admin-console.md#send-feedback) .
+Daha fazla bilgi için bkz. sürüm 1806 ve [ürün geri bildirimi](../../understand/find-help.md#BKMK_1806Feedback) ['ndeki konsol geliştirmeleri](../../servers/manage/admin-console-tips.md#send-feedback) .
 
 
 
@@ -593,12 +593,12 @@ Aşağıdaki güncelleştirme paketi (4462978) konsolunda 24 Ekim 2018 ' de baş
 
 Aşağıdaki ek düzeltmeler belirli sorunları ele almak için kullanılabilir:
 
-| Kimlik | Başlık | Tarih | Konsol içi |
+| ID | Başlık | Tarih | Konsol içi |
 |---------|---------|---------|---------|
-| [4346645](https://support.microsoft.com/help/4346645) | Configuration Manager sürüm 1806 için güncelleştirme, ilk dalga | 31 Ağustos 2018 | Yes |
-| [4465865](https://support.microsoft.com/help/4465865) | Yazılım güncelleştirmeleri, WSUS bağlantısı kesildiğinde Configuration Manager ortamda indirmez<br><br>Bu güncelleştirme ayrıca güncelleştirme paketi 'nde (4462978) | 01 Ekim 2018 | Yes |
-| [4471892](https://support.microsoft.com/help/4471892) | PXE Yanıtlayıcısı Configuration Manager 1806 ' deki alt ağlarda çalışmıyor | 23 Kasım 2018 | Hayır |
-| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune bağlayıcı sertifikası Configuration Manager yenilemez | 18 Ocak 2019 | Yes |
+| [4346645](https://support.microsoft.com/help/4346645) | Configuration Manager sürüm 1806 için güncelleştirme, ilk dalga | 31 Ağustos 2018 | Evet |
+| [4465865](https://support.microsoft.com/help/4465865) | Yazılım güncelleştirmeleri, WSUS bağlantısı kesildiğinde Configuration Manager ortamda indirmez<br><br>Bu güncelleştirme ayrıca güncelleştirme paketi 'nde (4462978) | 01 Ekim 2018 | Evet |
+| [4471892](https://support.microsoft.com/help/4471892) | PXE Yanıtlayıcısı Configuration Manager 1806 ' deki alt ağlarda çalışmıyor | 23 Kasım 2018 | No |
+| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune bağlayıcı sertifikası Configuration Manager yenilemez | 18 Ocak 2019 | Evet |
 
 
 ## <a name="next-steps"></a>Sonraki adımlar

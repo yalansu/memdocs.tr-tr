@@ -5,17 +5,17 @@ description: Configuration Manager konsolunda görev sırası düzenleyicisinin 
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a4e8bb56-ee85-49fd-8b1c-c8f513cec671
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2047ae9e276ac94b633d1dc30814ed641cd34d03
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 405617277953eae61fbfce4fdb9b3a7d280aedcf
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711430"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124457"
 ---
 # <a name="use-the-task-sequence-editor"></a>Görev dizisi düzenleyicisini kullanma
 
@@ -121,9 +121,9 @@ Mevcut bir görev sırasını değiştirmek için aşağıdaki yordamı kullanı
 
         Bir grubu veya adımı kesebilir, kopyalayabilir ve yapıştırabilirsiniz. Öğeye sağ tıklayın ve eylemi seçin. Her eylem için standart klavye kısayollarını da kullanabilirsiniz:
 
-        - Kes: **CTRL** + **X**
-        - Kopyala: **CTRL** + **C**
-        - Yapıştır: **CTRL** + **V**
+        - Kes: **CTRL**  +  **X**
+        - Kopyala: **CTRL**  +  **C**
+        - Yapıştır: **CTRL**  +  **V**
 
     - **Bir adımı veya grubu kaldırın**: adımı veya grubu seçin ve **Kaldır**' ı seçin.  
 
@@ -155,7 +155,7 @@ Aşağıdaki koşul türleri kullanılabilir:
 - **Görev dizisi değişkeni**. Görev dizisi ortamında herhangi bir yerleşik, eylem, özel veya salt okuma [görev dizisi değişkeninin](task-sequence-variables.md) geçerli değerini değerlendirin. Daha fazla bilgi için bkz. [adım koşulları](using-task-sequence-variables.md#bkmk_access-condition).
 
     > [!NOTE]
-    > Bu koşulda bir dizi değişkeni kullanabilirsiniz, ancak belirli dizi üyesini belirtmeniz gerekir. Örneğin, `OSDAdapter0EnableDHCP` *Ilk* ağ bağdaştırıcısının DHCP 'yi etkinleştirip etkinleştirmediğini belirtir. Daha fazla bilgi için bkz. [dizi değişkenleri](using-task-sequence-variables.md#bkmk_array).
+    > Bu koşulda bir dizi değişkeni kullanabilirsiniz, ancak belirli dizi üyesini belirtmeniz gerekir. Örneğin, `OSDAdapter0EnableDHCP` *ilk* ağ bağdaştırıcısının DHCP 'yi etkinleştirip etkinleştirmediğini belirtir. Daha fazla bilgi için bkz. [dizi değişkenleri](using-task-sequence-variables.md#bkmk_array).
 
 - **Işletim sistemi sürümü**: görev dizisinin çalıştığı cihazın işletim sistemi sürümünü değerlendirin. Bu liste, Configuration Manager tamamında kullanılan genel işletim sistemi sürümleridir. Windows 10 ' un belirli bir sürümü gibi daha ayrıntılı bir işletim sistemi sürümünü değerlendirmek için **WMI 'Yı sorgula** koşulunu kullanın.
 
@@ -194,7 +194,7 @@ Koşulları bir adımdan diğerine yeniden kullanmak için sürüm 1910 ' den ba
 - Sonra Yapıştır
 - Buraya Yapıştır (yalnızca iç içe geçmiş koşullar için geçerlidir)
 
-Kopyalamak için standart klavye kısayollarını kullanın (**CTRL** + **C**) ve Kes (**CTRL** + **X**). Standart **CTRL** + **V** klavye kısayolu, **sonra Yapıştır eyleminden sonra** yapılır.
+Kopyalamak için standart klavye kısayollarını kullanın (**CTRL**  +  **C**) ve Kes (**CTRL**  +  **X**). Standart **CTRL**  +  **V** klavye kısayolu, **sonra Yapıştır eyleminden sonra** yapılır.
 
 Ayrıca, koşulları listede yukarı veya aşağı taşımaya yönelik yeni seçenekler de vardır.
 
@@ -243,10 +243,10 @@ Arama yaptığınızda, düzenleyici penceresi, arama ölçütlerinizle eşleşe
 
 Bu arama alanlarına hızlıca erişin ve aşağıdaki klavye kısayollarıyla arama sonuçlarına gidin:
 
-- **CTRL** + **F**: arama dizesi girin
-- **CTRL** + **O**: sonuçların kapsamını belirlemek için arama seçeneklerini belirleyin
+- **CTRL**  +  **F**: bir arama dizesi girin
+- **CTRL**  +  **O**: sonuçların kapsamını belirlemek için arama seçeneklerini belirleyin
 - **F3** veya **ENTER**: sonuçlar boyunca ilerme
-- **SHIFT** + **F3**: sonuçlarda geriye doğru adımla
+- **SHIFT**  +  **F3**: sonuçlarda geriye doğru adımla
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

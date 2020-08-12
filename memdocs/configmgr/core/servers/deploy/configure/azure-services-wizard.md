@@ -2,20 +2,20 @@
 title: Azure hizmetlerini yapılandırma
 titleSuffix: Configuration Manager
 description: Configuration Manager ortamınızı bulut yönetimi, Iş için Microsoft Store ve Log Analytics Azure hizmetleriyle bağlayın.
-ms.date: 06/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6ca5307de5c7df54c3cf7924bc91b0175b1bfa39
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: ebdd07874f09ff6d97747826d6056df177e2c735
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715331"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128486"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Azure hizmetlerini Configuration Manager ile kullanım için yapılandırma
 
@@ -62,9 +62,9 @@ Aşağıdaki tabloda her bir hizmetin ayrıntıları listelenmektedir.
 
 |Hizmet  |Kiracılar  |Bulutlar  |Web uygulaması  |Yerel uygulama  |Eylemler  |
 |---------|---------|---------|---------|---------|---------|
-|İle bulut yönetimi<br>Azure AD bulma | Birden çok | Ortak, özel | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | İçeri aktarma, oluşturma |
-|Log Analytics Bağlayıcısı | Bir | Ortak, özel | ![Destekleniyor](media/green_check.png) | ![Desteklenmiyor](media/Red_X.png) | İçeri Aktar |
-|İçin Microsoft Store<br>İş | Bir | Ortak | ![Destekleniyor](media/green_check.png) | ![Desteklenmiyor](media/Red_X.png) | İçeri aktarma, oluşturma |
+|İle bulut yönetimi<br>Azure AD bulma | Birden çok | Ortak, özel | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | İçeri aktarma, oluşturma |
+|Log Analytics Bağlayıcısı | Bir | Ortak, özel | ![Desteklenir](media/green_check.png) | ![Desteklenmez](media/Red_X.png) | İçeri Aktar |
+|İçin Microsoft Store<br>İş | Bir | Genel | ![Desteklenir](media/green_check.png) | ![Desteklenmez](media/Red_X.png) | İçeri aktarma, oluşturma |
 
 ### <a name="about-azure-ad-apps"></a>Azure AD uygulamaları hakkında
 
@@ -229,6 +229,17 @@ Uygulamalar sayfasında Web ve yerel uygulamaları belirttikten sonra, bağland�
 Son olarak, Azure Hizmetleri Sihirbazı ' nı Özet, Ilerleme ve tamamlama sayfalarından tamamlayabilirsiniz. Configuration Manager ' de bir Azure hizmeti yapılandırmasını tamamladınız. Diğer Azure hizmetlerini yapılandırmak için bu işlemi tekrarlayın.
 
 ## <a name="renew-secret-key"></a><a name="bkmk_renew"></a>Gizli anahtarı Yenile
+
+Azure AD uygulamasının gizli anahtarını geçerlilik süresinin sonundan önce yenilemeniz gerekir. Anahtarın sona ermesine izin verirseniz Configuration Manager Azure AD ile kimlik doğrulaması yapamaz, bu da bağlı Azure hizmetlerinizin çalışmayı durdurmasına neden olur.
+
+Sürüm 2006 ' den başlayarak Configuration Manager konsolu aşağıdaki koşullara ilişkin bildirimleri görüntüler:<!--6386392-->
+
+- Bir veya daha fazla Azure AD uygulama gizli anahtarı yakında dolacak
+- Bir veya daha fazla Azure AD uygulama gizli anahtarının geçerliliği bitti
+
+Her iki durumu da azaltmak için gizli anahtarı yenileyin.
+
+Bu bildirimlerle etkileşim kurma hakkında daha fazla bilgi için, [Configuration Manager konsol bildirimleri](../../manage/admin-console-notifications.md)' ne bakın.
 
 ### <a name="renew-key-for-created-app"></a>Oluşturulan uygulama için anahtarı Yenile
 

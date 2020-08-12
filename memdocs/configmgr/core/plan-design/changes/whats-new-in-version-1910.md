@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a52b70b0a753036c506e5d515cbac048d6771295
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 1567531ed83586f47ba2f79372e0b7962c1341dc
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879049"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128925"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1910 ' deki yenilikler
 
@@ -45,7 +45,7 @@ Aşağıdaki Microsoft yönetim çözümleri artık Microsoft Endpoint Manager m
 - [Configuration Manager](https://docs.microsoft.com/configmgr)
 - [Intune](https://docs.microsoft.com/intune)
 - [Desktop Analytics](../../../desktop-analytics/overview.md)
-- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- [Otomatik Pilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
 - [Cihaz yönetimi yönetici konsolundaki](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760) diğer özellikler
 
 Daha fazla bilgi için, Microsoft Kurumsal Başkan Yardımcısı Microsoft 365 atacan Anderson 'tan aşağıdaki gönderilere bakın:
@@ -98,19 +98,19 @@ Masaüstü Analizi bulut hizmetindeki aylık değişiklikler hakkında daha fazl
 <!--3197353-->
 CMPivot altyapısına bazı önemli iyileştirmeler ekledik. Artık, daha fazla işlemi ConfigMgr istemcisine gönderebilirsiniz. İyileştirmeler, CMPivot sorguları çalıştırmak için gereken ağ ve sunucu CPU yükünü büyük ölçüde azaltır. Bu iyileştirmelere göre, artık gigabayt 'tan fazla istemci verisi gerçek zamanlı olarak bulunabilir. 
 
-Daha fazla bilgi için bkz. [CMPivot altyapısına iyileştirmeler](../../servers/manage/cmpivot.md#bkmk_optimization).
+Daha fazla bilgi için bkz. [CMPivot altyapısına iyileştirmeler](../../servers/manage/cmpivot-changes.md#bkmk_optimization).
 
 ### <a name="additional-cmpivot-entities-and-enhancements"></a>Ek CMPivot varlıkları ve geliştirmeleri
 <!--5410930-->
 Sorun giderme ve avlamaya yardımcı olmak için çeşitli yeni CMPivot varlıkları ve varlık geliştirmeleri ekledik. Sorgulamak için aşağıdaki varlıkları ekledik:
 
-- Windows olay günlükleri ([WinEvent](../../servers/manage/cmpivot.md#bkmk_WinEvent))
-- Dosya içeriği ([FileContent](../../servers/manage/cmpivot.md#bkmk_File))
-- Süreçler tarafından yüklenen dll 'Ler ([ProcessModule](../../servers/manage/cmpivot.md#bkmk_ProcessModule))
-- Azure Active Directory bilgileri ([Aadstatus](../../servers/manage/cmpivot.md#bkmk_AadStatus))
-- Uç nokta koruma durumu ([Epstatus](../../servers/manage/cmpivot.md#bkmk_EPStatus))
+- Windows olay günlükleri ([WinEvent](../../servers/manage/cmpivot-changes.md#bkmk_WinEvent))
+- Dosya içeriği ([FileContent](../../servers/manage/cmpivot-changes.md#bkmk_File))
+- Süreçler tarafından yüklenen dll 'Ler ([ProcessModule](../../servers/manage/cmpivot-changes.md#bkmk_ProcessModule))
+- Azure Active Directory bilgileri ([Aadstatus](../../servers/manage/cmpivot-changes.md#bkmk_AadStatus))
+- Uç nokta koruma durumu ([Epstatus](../../servers/manage/cmpivot-changes.md#bkmk_EPStatus))
 
-Bu sürüm ayrıca CMPivot için çeşitli [diğer geliştirmeler](../../servers/manage/cmpivot.md#bkmk_Other) de içerir. Daha fazla bilgi için bkz. [sürüm 1910 ' den başlayarak CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot1910).
+Bu sürüm ayrıca CMPivot için çeşitli [diğer geliştirmeler](../../servers/manage/cmpivot-changes.md#bkmk_Other) de içerir. Daha fazla bilgi için bkz. [sürüm 1910 ' den başlayarak CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1910).
 
 ## <a name="content-management"></a><a name="bkmk_content"></a>İçerik yönetimi
 

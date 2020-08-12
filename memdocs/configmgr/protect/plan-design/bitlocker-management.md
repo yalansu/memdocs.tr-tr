@@ -2,7 +2,7 @@
 title: BitLocker yönetimi için planlama
 titleSuffix: Configuration Manager
 description: Configuration Manager BitLocker Sürücü Şifrelemesi yönetmeyi planlayın
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c03d5d06dc6b49ceff6af8ce862eb19cb4a517a
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 8370c3352778fa6bb7c6229beb1c7610c419a86d
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531477"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129306"
 ---
 # <a name="plan-for-bitlocker-management"></a>BitLocker yönetimi için planlama
 
@@ -25,7 +25,7 @@ ms.locfileid: "84531477"
 
 Sürüm 1910 ' den başlayarak, Active Directory katılmış şirket içi Windows istemcileri için BitLocker Sürücü Şifrelemesi (BDE) yönetmek üzere Configuration Manager kullanın. Azure Active Directory birleştirilmiş veya çalışma grubu istemcileri desteklenmez. Microsoft BitLocker yönetim ve Izleme (MBAD) kullanımını değiştirecek tam BitLocker yaşam döngüsü yönetimi sağlar.
 
-> [!Note]  
+> [!NOTE]
 > Configuration Manager varsayılan olarak bu isteğe bağlı özelliği etkinleştirmez. Bu özelliği kullanmadan önce etkinleştirmeniz gerekir. Daha fazla bilgi için, bkz. [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
 
 Daha fazla bilgi için bkz. [BitLocker genel bakış](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview).
@@ -81,6 +81,8 @@ Kullanıcıların, BitLocker şifreli bir cihazın kilidini açmak için tek kul
   - HTTPS için yönetim noktasını yapılandırın. Bu seçenek 1910 veya 2002 Configuration Manager sürümleri için geçerlidir.
 
   Daha fazla bilgi için bkz. [kurtarma verilerini şifreleme](../deploy-use/bitlocker/encrypt-recovery-data.md).
+
+- BitLocker kurtarma hizmeti, veritabanı çoğaltması kullanan bir yönetim noktasına yüklense de, istemciler kurtarma anahtarlarını emanyapamıyorum. Ardından BitLocker sürücüyü şifrelemez. Kurtarma hizmetini kullanmak için, bir çoğaltma yapılandırmasında değil en az bir yönetim noktasına ihtiyacınız vardır. Herhangi bir yönetim noktasındaki BitLocker kurtarma hizmetini bir veritabanı çoğaltması ile devre dışı bırakın.<!-- 7813149 -->
 
 - BitLocker yönetim raporlarını kullanmak için, Raporlama Hizmetleri noktası site sistemi rolünü yükler. Daha fazla bilgi için bkz. [raporlamayı yapılandırma](../../core/servers/manage/configuring-reporting.md).
 

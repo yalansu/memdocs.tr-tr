@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 8bfd535c93cb9f1dcfc42705f3cce61874dfe226
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8ea95a04977038514c00f0199df42c8070e813c3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724422"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127663"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>Iş için Windows Update tümleştirin
 
@@ -38,7 +38,7 @@ Windows Update for Business (WUfB), bu cihazlar doğrudan Windows Update (WU) hi
 
 - Güncelleştirme uyumluluk durumuna dayalı Defender için genel Endpoint Protection raporlaması, eksik tarama verileri nedeniyle doğru sonuçlar döndürmez.  
 
-- Configuration Manager, güncelleştirmeleri almak için WUfB 'ye bağlı istemcilere Office, IE ve Visual Studio gibi Microsoft güncelleştirmelerini dağıtabmayacak.  
+- Configuration Manager, güncelleştirmeleri almak için WUfB 'ye bağlı istemcilere Microsoft 365 uygulamalar, IE ve Visual Studio gibi Microsoft güncelleştirmelerini dağıtabmayacak.  
 
 - Configuration Manager, WSUS 'e yayınlanan ve Configuration Manager üzerinden yönetilen 3. taraf güncelleştirmelerini, güncelleştirmeleri almak için WUfB 'ye bağlı istemcilere dağıtabilir. WUfB 'e bağlanan istemcilerde üçüncü taraf güncelleştirmelerinin yüklenmesini istemiyorsanız, [istemcilerde yazılım güncelleştirmelerini etkinleştir](../../core/clients/deploy/about-client-settings.md#software-updates)adlı istemci ayarını devre dışı bırakın.
 
@@ -70,7 +70,7 @@ Windows 10 güncelleştirmelerini ve yükseltmelerini almak için WUfB kullanan 
 
 ## <a name="configure-windows-update-for-business-deferral-policies"></a>Iş erteleme ilkeleri için Windows Update yapılandırma
 <!-- 1290890 -->
-Configuration Manager sürüm 1706 ' den başlayarak, Windows 10 için Windows 10 özellik güncelleştirmeleri veya kalite güncelleştirmeleri için erteleme ilkelerini, doğrudan Iş Windows Update tarafından yönetilen Windows 10 cihazları için yapılandırabilirsiniz. **Yazılım kitaplığı** > **Windows 10 Bakımı**altındaki **iş için yeni Windows Update ilke** düğümünde erteleme ilkelerini yönetebilirsiniz.
+Configuration Manager sürüm 1706 ' den başlayarak, Windows 10 için Windows 10 özellik güncelleştirmeleri veya kalite güncelleştirmeleri için erteleme ilkelerini, doğrudan Iş Windows Update tarafından yönetilen Windows 10 cihazları için yapılandırabilirsiniz. **Yazılım kitaplığı**Windows 10 bakımı altındaki **iş için yeni Windows Update ilke** düğümünde erteleme ilkelerini yönetebilirsiniz  >  **Windows 10 Servicing**.
 
 > [!NOTE]
 > Configuration Manager sürüm 1802 ' den başlayarak, Windows Insider için erteleme ilkelerini ayarlayabilirsiniz. <!--507201-->  
@@ -83,7 +83,7 @@ Windows Insider programı hakkında daha fazla bilgi için bkz. [iş Için Windo
 
 #### <a name="to-create-a-windows-update-for-business-deferral-policy"></a>Iş erteleme ilkesi için Windows Update oluşturmak için
 
-1. **Yazılım kitaplığı** > 'nda**iş ilkeleri için** **Windows 10 Bakımı** > Windows Update
+1. **Yazılım kitaplığı**'nda  >  iş ilkeleri için**Windows 10 Bakımı**  >  **Windows Update**
 1. Iş için Windows Update oluşturma Sihirbazı 'Nı açmak için **Oluştur** grubunun **giriş** sekmesinde **iş ilkesi Windows Update oluştur** ' u seçin.
 1. **Genel** sayfasında, ilke için bir ad ve açıklama girin.
 1. Erteleme Ilkeleri sayfasında, özellik güncelleştirmelerini **ertelemeyi** veya duraklatmayı yapılandırın. Özellik Güncelleştirmeleri genellikle Windows’un yeni özellikleridir. **Dal hazırlık düzeyi** ayarını yapılandırdıktan sonra, özellik güncelleştirmelerini Microsoft 'un kullanılabilirliğine göre ertelemek için ne kadar süre ertelemenizi istediğinizi tanımlayabilirsiniz.
@@ -105,7 +105,7 @@ Windows Insider programı hakkında daha fazla bilgi için bkz. [iş Için Windo
 
 #### <a name="to-deploy-a-windows-update-for-business-deferral-policy"></a>Windows Update Iş erteleme ilkesini dağıtmak için
 
-1. **Yazılım kitaplığı** > 'nda**iş ilkeleri için** **Windows 10 Bakımı** > Windows Update
+1. **Yazılım kitaplığı**'nda  >  iş ilkeleri için**Windows 10 Bakımı**  >  **Windows Update**
 1. **Giriş** sekmesinde, **dağıtım** grubunda, **Windows Update iş ilkesi için dağıt**' ı seçin.
 1. Aşağıdaki ayarları yapılandırın:
     - **Dağıtılacak yapılandırma ilkesi**: dağıtmak istediğiniz iş ilkesi Windows Update seçin.

@@ -2,20 +2,20 @@
 title: Sürüm notları
 titleSuffix: Configuration Manager
 description: Üründe henüz düzeltilmeyen veya Microsoft Desteği Bilgi Bankası makalesinde kapsanan acil sorunlar hakkında bilgi edinin.
-ms.date: 05/21/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 131b6104d5724c8a4eeb0bb68c4afd9a5319abb7
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 9c1152b14da7c0a473e266b1ac1e6da2778aa105
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83823971"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126300"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager için sürüm notları
 
@@ -29,10 +29,10 @@ Bu makale, Configuration Manager geçerli dalı için sürüm notlarını içeri
 
 Farklı sürümlerle sunulan yeni özellikler hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
+- [Sürüm 2006 ' deki yenilikler](../../../plan-design/changes/whats-new-in-version-2006.md)
 - [Sürüm 2002’deki yenilikler](../../../plan-design/changes/whats-new-in-version-2002.md)
 - [Sürüm 1910’daki yenilikler](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [Sürüm 1906’daki yenilikler](../../../plan-design/changes/whats-new-in-version-1906.md)  
-- [Sürüm 1902’deki yenilikler](../../../plan-design/changes/whats-new-in-version-1902.md)
 
 Masaüstü analizlerinin yeni özellikleri hakkında daha fazla bilgi için bkz. [Masaüstü analizteki yenilikler](../../../../desktop-analytics/whats-new.md).
 
@@ -121,24 +121,15 @@ Bir bulut yönetimi ağ geçidi (CMG) aracılığıyla iletişim kuran bir cihaz
 
 - Siteyi gelişmiş HTTP için yapılandırırsınız ve yönetim noktası HTTP 'dir.<!-- 6358851 -->
 
-    Bu sorunu geçici olarak çözmek için, HTTPS için yönetim noktasını yapılandırın.
+    Bu sorunu geçici olarak çözmek için 2006 sürümüne güncelleştirin. Alternatif olarak, HTTPS için yönetim noktasını yapılandırın.
 
 - İstemciyi, kimlik doğrulaması için bir toplu kayıt belirteciyle yükleyip kaydettiniz.<!-- 6377921 -->
 
-    Bu sorunu geçici olarak çözmek için aşağıdaki kimlik doğrulama yöntemlerinden birini kullanın:
+    Bu sorunu geçici olarak çözmek için 2006 sürümüne güncelleştirin. Alternatif olarak, aşağıdaki kimlik doğrulama yöntemlerinden birini kullanın:
 
   - Cihazı iç ağa ön kaydetme
   - Cihazı istemci kimlik doğrulama sertifikasıyla yapılandırma
   - Cihazı Azure AD 'ye ekleme
-
-### <a name="after-passive-site-server-is-promoted-the-default-boot-image-packages-still-have-package-source-on-the-previous-active-server"></a>Pasif site sunucusu yükseltildikten sonra, varsayılan önyükleme görüntüsü paketleri hala önceki etkin sunucuda paket kaynağına sahip olur
-
-<!--3453224, SCCMDocs-pr issue 3097-->
-*Uygulama hedefi: Configuration Manager sürüm 1810*
-
-Pasif modda (sunucu B) bir site sunucunuz varsa, onu etkin olarak yükselttiğinizde, varsayılan önyükleme görüntülerinin içerik konumu daha önce etkin olan sunucuya (sunucu A) başvurmaya devam eder. Sunucu A 'nın bir donanım hatası varsa, varsayılan önyükleme görüntülerini güncelleştiremez veya değiştiremezsiniz.
-
-Bu sorun için geçici çözüm yoktur.
 
 ## <a name="software-updates"></a>Yazılım güncelleştirmeleri
 
@@ -171,9 +162,9 @@ Daha fazla bilgi için bkz. [özel güvenlik rolleri oluşturma](../configure/co
 ### <a name="an-extended-security-update-for-windows-7-causes-them-to-show-as-unable-to-enroll"></a><a name="dawin7-diagtrack"></a>Windows 7 için genişletilmiş bir güvenlik güncelleştirmesi, **kaydedemeyecek** gibi gösterilmelerine neden olur
 
 <!-- 7283186 -->
-_Uygulama hedefi: 1902, 1906, 1910 ve 2002 Configuration Manager sürümleri_
+_Uygulama hedefi: Configuration Manager sürümler 2002 ve öncesi_
 
-Windows 7 için Nisan 2020 Genişletilmiş Güvenlik Güncelleştirmesi (ESU), en düşük gerekli olan diagtrack. dll sürümünü 10586 ' den 10240 ' ye değiştirdi. Bu değişiklik, Windows 7 cihazlarının masaüstü Analizi **bağlantı durumu** panosuna **kayıt yapılamıyor** olarak gösterilmesini sağlar. Bu durum için cihaz görünümü detayına indığınızda, **diagtrack hizmeti yapılandırma** özelliği aşağıdaki durumu gösterir:`Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
+Windows 7 için Nisan 2020 Genişletilmiş Güvenlik Güncelleştirmesi (ESU), diagtrack.dll gereken minimum sürümünü 10586 ' den 10240 ' ye değiştirdi. Bu değişiklik, Windows 7 cihazlarının masaüstü Analizi **bağlantı durumu** panosuna **kayıt yapılamıyor** olarak gösterilmesini sağlar. Bu durum için cihaz görünümü detayına indığınızda, **diagtrack hizmeti yapılandırma** özelliği aşağıdaki durumu gösterir:`Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
 
 Bu sorun için geçici çözüm gerekmez. Nisan ESU 'yi kaldırmayın. Aksi halde doğru yapılandırılmamışsa, Windows 7 cihazları tanılama verilerini hala masaüstü Analizi hizmetine bildirir ve portalda görünmeye devam eder.
 

@@ -2,7 +2,7 @@
 title: Windows 10 için destek
 titleSuffix: Configuration Manager
 description: Configuration Manager ile istemci veya OSD için desteklenen Windows 10 sürümleri hakkında bilgi edinin
-ms.date: 05/27/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a67a22f788af39dacb9f3a39e91e0f28444c6988
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 6a30fc55fb4129b8ea3493b76fd6871a2a62f881
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879069"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126748"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager 'de Windows 10 için destek  
 
@@ -26,7 +26,7 @@ Configuration Manager desteklediği Windows 10 sürümleri hakkında bilgi edini
 - [Configuration Manager istemcisi olarak Windows 10](#windows-10-as-a-client)
 - [Windows 10 için Windows değerlendirme ve Dağıtım Seti (ADK)](#windows-10-adk)
 
-> [!Tip]
+> [!TIP]
 > İstemci olarak Windows Server derlemeleri, ilişkili Windows 10 sürümüyle aynı şekilde desteklenir. Örneğin, Windows Server 2016, Windows 10 LTSB 2016 ile aynı derleme sürümüdür ve Windows Server sürüm 1803, Windows 10 sürüm 1803 ile aynı derleme sürümüdür.
 >
 > Site sistemi olarak Windows Server hakkında daha fazla bilgi için bkz. [Configuration Manager site sistemi sunucuları Için desteklenen işletim sistemleri](supported-operating-systems-for-site-system-servers.md#bkmk_core).
@@ -39,7 +39,7 @@ Configuration Manager sürüm, [Bu sürüm için destek](../../servers/manage/cu
 
 - Güncel dalın Configuration Manager en son sürümü, güvenlik ve kritik güncelleştirmeleri alır ve bu, Windows 10 sürümleriyle ilgili sorunları gidermeye yönelik düzeltmeler içerir. Microsoft Configuration Manager geçerli dalın yeni bir sürümünü yayımlarsa, önceki sürümler yalnızca güvenlik güncelleştirmelerini alırlar. Daha fazla bilgi için bkz. [Configuration Manager geçerli dal sürümleri Için destek](../../servers/manage/current-branch-versions-supported.md).  
 
-    > [!Note]  
+    > [!NOTE]
     > Windows 10 ile güncel kalabilmek için en iyi yol Configuration Manager ile güncel kalmanız. Daha fazla bilgi için bkz. [hizmet olarak Configuration Manager ve Windows](../../understand/configuration-manager-and-windows-as-service.md).  
 
 - Bu bilgiler [, istemciler ve cihazlar Için desteklenen işletim sistemlerini](supported-operating-systems-for-clients-and-devices.md)tamamlar.  
@@ -48,21 +48,22 @@ Configuration Manager sürüm, [Bu sürüm için destek](../../servers/manage/cu
 
 Aşağıdaki tabloda, farklı Configuration Manager sürümleriyle istemci olarak kullanabileceğiniz Windows 10 sürümleri listelenmiştir.
 
-| Windows 10 sürümü | ConfigMgr 1810 | ConfigMgr 1902 | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 |
-|---------------------|-----|-----|-----|-----|-----|
-| **Kurumsal 2015 LTSB** <!--10/14/2025-->   | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
-| **Kurumsal 2016 LTSB** <!--10/13/2026-->   | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
-| **Kurumsal LTSC 2019** <!--01/09/2029-->   | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
-| **1709**<br>(10.0.16299)   <!--10/13/2020-->   | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
-| **1803**<br>(10.0.17134)   <!--11/10/2020-->   | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
-| **1809**<br>(10.0.17763)   <!--05/11/2021-->   | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
-| **1903**<br>(10.0.18362)   <!--12/08/2020-->   | ![Desteklenmiyor](media/Red_X.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
-| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
-| **2004**<br>(10.0.19041)   <!--??/??/2021-->   | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Destekleniyor](media/green_check.png) |
+| Windows 10 sürümü | ConfigMgr 1810 | ConfigMgr 1902 | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 | ConfigMgr 2006 |
+|---------------------|-----|-----|-----|-----|-----|-----|
+| **1709**<br>(10.0.16299)   <!--10/13/2020-->   | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) |
+| **1803**<br>(10.0.17134)   <!--11/10/2020-->   | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) |
+| **1809**<br>(10.0.17763)   <!--05/11/2021-->   | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) |
+| **1903**<br>(10.0.18362)   <!--12/08/2020-->   | ![Desteklenmez](media/Red_X.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) |
+| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![Desteklenmez](media/Red_X.png) | ![Desteklenmez](media/Red_X.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) |
+| **2004**<br>(10.0.19041)   <!--12/14/2021-->   | ![Desteklenmez](media/Red_X.png) | ![Desteklenmez](media/Red_X.png) | ![Desteklenmez](media/Red_X.png) | ![Desteklenmez](media/Red_X.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) |
 
-<!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
+Geçerli dalın Configuration Manager şu anda desteklenen tüm sürümleri aşağıdaki Windows 10 LTSB/LTSC sürümlerini destekler:
 
-Windows yaşam döngüsü hakkında daha fazla bilgi için bkz. [Windows yaşam döngüsü olgu sayfası](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)
+- **Kurumsal 2015 LTSB** <!--10/14/2025-->
+- **Kurumsal 2016 LTSB** <!--10/13/2026-->
+- **Kurumsal LTSC 2019** <!--01/09/2029-->
+
+Windows yaşam döngüsü hakkında daha fazla bilgi için bkz. [Windows yaşam döngüsü olgu sayfası](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
 | Anahtar |
 |--|
@@ -107,13 +108,13 @@ Windows Insider hakkında geri bildirim sağlamak için [Geri Bildirim Hub 'ın�
 
 Aşağıdaki tabloda, farklı Configuration Manager sürümleriyle kullanabileceğiniz Windows 10 ADK 'nin sürümleri listelenmektedir.
 
-| Windows 10 ADK sürümü  | ConfigMgr 1810 | ConfigMgr 1902 | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 |
-|--------------------|-----|-----|-----|-----|-----|
-| **1709**<br>(10.1.16299) | ![Desteklenmiyor](media/Red_X.png)   | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) |
-| **1803**<br>(10.1.17134) | ![Geriye dönük uyumlu](media/blue_compat.png) | ![Geriye dönük uyumlu](media/blue_compat.png) | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) |
-| **1809**<br>(10.1.17763) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Geriye dönük uyumlu](media/blue_compat.png) | ![Geriye dönük uyumlu](media/blue_compat.png) | ![Desteklenmiyor](media/Red_X.png) |
-| **1903**<br>(10.1.18362) | ![Desteklenmiyor](media/Red_X.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) | ![Destekleniyor](media/green_check.png) |
-| **2004**<br>(10.1.19041) | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Desteklenmiyor](media/Red_X.png) | ![Destekleniyor](media/green_check.png) |
+| Windows 10 ADK sürümü  | ConfigMgr 1810 | ConfigMgr 1902 | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 | ConfigMgr 2006 |
+|--------------------|-----|-----|-----|-----|-----|-----|
+| **1709**<br>(10.1.16299) | ![Desteklenmez](media/Red_X.png)   | ![Desteklenmez](media/Red_X.png) | ![Desteklenmez](media/Red_X.png) | ![Desteklenmez](media/Red_X.png) | ![Desteklenmez](media/Red_X.png) | ![Desteklenmez](media/Red_X.png) |
+| **1803**<br>(10.1.17134) | ![Geriye dönük uyumlu](media/blue_compat.png) | ![Geriye dönük uyumlu](media/blue_compat.png) | ![Desteklenmez](media/Red_X.png) | ![Desteklenmez](media/Red_X.png) | ![Desteklenmez](media/Red_X.png) | ![Desteklenmez](media/Red_X.png) |
+| **1809**<br>(10.1.17763) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Geriye dönük uyumlu](media/blue_compat.png) | ![Geriye dönük uyumlu](media/blue_compat.png) | ![Desteklenmez](media/Red_X.png) | ![Desteklenmez](media/Red_X.png) |
+| **1903**<br>(10.1.18362) | ![Desteklenmez](media/Red_X.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) | ![Geriye dönük uyumlu](media/blue_compat.png) |
+| **2004**<br>(10.1.19041) | ![Desteklenmez](media/Red_X.png) | ![Desteklenmez](media/Red_X.png) | ![Desteklenmez](media/Red_X.png) | ![Desteklenmez](media/Red_X.png) | ![Desteklenir](media/green_check.png) | ![Desteklenir](media/green_check.png) |
 
 |Anahtar|
 |--|

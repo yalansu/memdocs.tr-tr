@@ -5,17 +5,17 @@ description: Çeşitli senaryolarda Windows dağıtımını basitleştirmek içi
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ff6e7267-302a-4563-815e-cdc0d1a4b60f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d5219b518d46ccca174c7aa3fef62fe3334def35
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 82bb02d8154939b4b0e0ee89bcc6637e9393acff
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711115"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125228"
 ---
 # <a name="create-prestaged-media"></a>Önceden hazırlanan ortam oluşturma
 
@@ -37,7 +37,7 @@ Aşağıdaki işletim sistemi dağıtım senaryoları için önceden hazırlanm�
 Önceden hazırlanan medyayı uyguladıktan sonra bilgisayar ilk kez başlatıldığında, bilgisayar Windows PE 'de başlatılır. İşletim sistemi dağıtım işlemini tamamlayan görev dizisini bulmak için bir yönetim noktasına bağlanır. Önceden hazırlanan medya kullanan bir görev dizisini dağıttığınızda istemci, ilk olarak geçerli içerik için yerel görev sırası önbelleğini denetler. İçerik bulunamazsa veya yeniden değiştirilmişse, istemci içeriği bir dağıtım noktasından veya eşinden indirir.  
 
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Görev sırası medyası oluşturma Sihirbazı 'Nı kullanarak önceden hazırlanmış medya oluşturmadan önce tüm koşulların karşılandığından emin olun.
 
@@ -66,7 +66,7 @@ Kullanıcı hesabınızın, bu dağıtım noktasındaki içerik kitaplığı iç
 > Görev sırası medyası oluşturma Sihirbazı medyada şu görev dizisi değişkeni koşulunu ayarlar: **_SMSTSMediaType = OEMMedia**. Görev dizinizdeki bu koşulu kullanabilirsiniz.  
 
 
-## <a name="process"></a>İşleme
+## <a name="process"></a>İşlem
 
  > [!NOTE]  
  > PKI ortamları için, kök CA birincil sitede belirtildiğinden, önceden hazırlanan medyanın birincil sitede oluşturulduğundan emin olun. CAS sitesi, önceden hazırlanan medyayı düzgün şekilde oluşturmak için kök CA bilgilerine sahip değildir.
@@ -98,9 +98,9 @@ Kullanıcı hesabınızın, bu dağıtım noktasındaki içerik kitaplığı iç
 
     - **Açıklama**: Medyanın hangi amaçla kullanıldığına ilişkin benzersiz bir açıklama belirtin.  
 
-    - **Medya dosyası**: Çıkış dosyalarının adını ve yolunu belirtin. Sihirbaz çıkış dosyalarını bu konuma yazar. Örneğin, `\\servername\folder\outputfile.wim`  
+    - **Medya dosyası**: Çıkış dosyalarının adını ve yolunu belirtin. Sihirbaz çıkış dosyalarını bu konuma yazar. Örnek: `\\servername\folder\outputfile.wim`  
 
-    - **Hazırlama klasörü**<!--1359388-->: Medya oluşturma işlemi çok sayıda geçici sürücü alanı gerektirebilir. Varsayılan olarak, bu konum şu yola benzer: `%UserProfile%\AppData\Local\Temp`. Sürüm 1902 ' den başlayarak, bu geçici dosyaları nerede depolayabileceğiniz konusunda daha fazla esneklik sağlamak için bu değeri başka bir sürücü ve yol olarak değiştirin.  
+    - **Hazırlama klasörü**<!--1359388-->: Medya oluşturma işlemi çok sayıda geçici sürücü alanı gerektirebilir. Varsayılan olarak, bu konum şu yola benzer: `%UserProfile%\AppData\Local\Temp` . Sürüm 1902 ' den başlayarak, bu geçici dosyaları nerede depolayabileceğiniz konusunda daha fazla esneklik sağlamak için bu değeri başka bir sürücü ve yol olarak değiştirin.  
 
 6. **Güvenlik** sayfasında, aşağıdaki seçenekleri belirtin:  
 

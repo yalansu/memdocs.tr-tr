@@ -2,20 +2,20 @@
 title: Görev dizisi değişkeni başvurusu
 titleSuffix: Configuration Manager
 description: Configuration Manager görev sırasını denetlemek ve özelleştirmek için değişkenler hakkında bilgi edinin.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b3ddd1a4b59ba750e9fca5f8386762b4a5dddb13
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 667d7451f467592bd0645b54d7068a20628ec98e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429799"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124150"
 ---
 # <a name="task-sequence-variables"></a>Görev dizisi değişkenleri
 
@@ -373,6 +373,13 @@ Bilgisayarın Windows To Go cihazı olarak çalışıp çalışmadığını beli
 
 **Ağ bağdaştırıcısı bağlı** denetiminin true ( `1` ) veya false () döndürdüğünden, salt okunurdur `0` . Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
 
+### <a name="_ts_cruefi"></a><a name="TSCRUEFI"></a>_TS_CRUEFI
+
+*2006 sürümünden başlayarak* <!--6452769-->
+*[Hazırlık denetimi](task-sequence-steps.md#BKMK_CheckReadiness) adımını uygular.*
+
+**BILGISAYARıN UEFI modunda** BIOS ( `0` ) veya UEFI () döndürüldüğünden bağımsız bir salt okunurdur `1` . Denetimi etkinleştirmezseniz, salt okunurdur bu değişkenin değeri boştur.
+
 ### <a name="_ts_crwired"></a><a name="TSCRWIRED"></a>_TS_CRWIRED
 
 *2002 sürümünden başlayarak* <!--6005561-->  
@@ -416,7 +423,7 @@ Yapılandırma adımı için *ilk* ağ bağdaştırıcısının özelliklerini t
 
 #### <a name="osdadapter0enabledhcp"></a>OSDAdapter0EnableDHCP
 
-Bu ayar zorunludur. Olası değerler: `True` veya `False`. Örneğin:
+Bu ayar zorunludur. Olası değerler: `True` veya `False`. Örnek:
 
 `true`: bağdaştırıcı için dinamik ana bilgisayar Yapılandırma Protokolü 'Nü (DHCP) etkinleştirin
 
