@@ -10,12 +10,12 @@ ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 344ba7f6a6b0ee7683c3ac7661338f01be601a10
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a8091ecf4abc113d41f053c1152152262131a4bb
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718696"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146091"
 ---
 # <a name="websites-for-site-system-servers-in-configuration-manager"></a>Configuration Manager'da site sistemi sunucuları için web siteleri
 
@@ -47,10 +47,10 @@ Birçok Configuration Manager site sistem rolü, Microsoft Internet Information 
 
 -   Configuration Manager istemci iletişimi (istemci isteği bağlantı noktası) için ayarladığınız aynı bağlantı noktasına yanıt vermek üzere özel Web sitesini ayarlayın.  
 
--   Özel bir klasör kullanan her özel veya varsayılan Web sitesi için, kullandığınız varsayılan belge türünün bir kopyasını Web sitesini barındıran kök klasörde yerleştirin. Örneğin, varsayılan yapılandırmalara sahip bir Windows Server 2008 R2 bilgisayarında **iisstart. htm** , kullanılabilir olan birkaç varsayılan belge türünden biridir. Bu dosyayı varsayılan Web sitesinin kökünde bulabilir ve ardından SMSWEB özel Web sitesini barındıran kök klasörde bu dosyanın bir kopyasını (veya kullandığınız varsayılan belge türünün bir kopyasını) yerleştirebilirsiniz. Varsayılan belge türleri hakkında daha fazla bilgi için bkz. [IIS Için varsayılan &lt;belge defaultDocument\> ](https://www.iis.net/configreference/system.webserver/defaultdocument).  
+-   Özel bir klasör kullanan her özel veya varsayılan Web sitesi için, kullandığınız varsayılan belge türünün bir kopyasını Web sitesini barındıran kök klasörde yerleştirin. Örneğin, varsayılan yapılandırmalara sahip bir Windows Server 2008 R2 bilgisayarında, **iisstart.htm** kullanılabilen çeşitli varsayılan belge türlerinden biridir. Bu dosyayı varsayılan Web sitesinin kökünde bulabilir ve ardından SMSWEB özel Web sitesini barındıran kök klasörde bu dosyanın bir kopyasını (veya kullandığınız varsayılan belge türünün bir kopyasını) yerleştirebilirsiniz. Varsayılan belge türleri hakkında daha fazla bilgi için bkz. [ &lt; \> IIS için varsayılan belge defaultDocument](https://www.iis.net/configreference/system.webserver/defaultdocument).  
 
-**IIS gereksinimleri hakkında:**
-**aşağıdaki site sistem rolleri, site sistem hizmetlerini barındırmak için IIS ve bir Web sitesi gerektirir:**  
+**IIS gereksinimleri hakkında:** 
+ **Aşağıdaki site sistem rolleri, site sistem hizmetlerini barındırmak IÇIN IIS ve bir Web sitesi gerektirir:**  
 
 -   Uygulama Kataloğu web hizmet noktası  
 
@@ -83,7 +83,7 @@ Ek hususlar:
 -   Özel Web sitesi için IIS 'de ayarladığınız TCP/IP bağlantı noktaları, site için istemci istek bağlantı noktalarıyla eşleşmelidir.  
 
 ## <a name="switch-between-default-and-custom-websites"></a>Varsayılan ve özel Web siteleri arasında geçiş yap  
-Birincil sitede özel Web sitelerini kullanmaya ilişkin kutuyu dilediğiniz zaman denetleyebilir veya işaretini kaldırabilirsiniz (Bu kutu, sitenin özelliklerinin genel sekmesindedir), bu değişikliği yapmadan önce dikkatle planlayın. Bu yapılandırma değiştiğinde, birincil sitedeki ve alt ikincil sitelerdeki tüm ilgili site sistem rollerinin kaldırılması ve yeniden yüklenmesi gerekir:  
+Birincil sitede özel Web sitelerini kullanmaya ilişkin kutuyu dilediğiniz zaman denetleyebilir veya işaretini kaldırabilirsiniz (Bu kutu, sitenin özelliklerinin bağlantı noktaları sekmesindedir), bu değişikliği yapmadan önce dikkatle planlayın. Bu yapılandırma değiştiğinde, birincil sitedeki ve alt ikincil sitelerdeki tüm ilgili site sistem rollerinin kaldırılması ve yeniden yüklenmesi gerekir:  
 
 Aşağıdaki roller **otomatik olarak yeniden yüklenir**:  
 

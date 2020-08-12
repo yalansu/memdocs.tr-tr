@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: a0d1ee33e3aca6dbb6ff6e349eb9a578aad6ae88
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 36dca5ce8bb0fc3523bcd72441e3ecf22931609b
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048081"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146040"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Intune 'da Endpoint Security için saldırı yüzeyi Azaltma ilkesi ayarları
 
@@ -177,11 +177,14 @@ Desteklenen platformlar ve profiller:
 ### <a name="microsoft-defender-application-control"></a>Microsoft Defender uygulama denetimi
 
 - **Uygulama dolabı uygulama denetimi**  
+  CSP: [AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+
   - **Yapılandırılmadı** (*varsayılan*)
   - **Bileşenleri zorlama ve uygulamaları depolama**
   - **Bileşenleri denetleme ve uygulamaları depolama**
   - **Bileşenleri zorlama, Mağaza uygulamaları ve akıllı dolap**
-  - **Denetim bileşenleri, Mağaza uygulamaları ve akıllı dolap** CSP: [APPLOCKER CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+  - **Denetim bileşenleri, Mağaza uygulamaları ve akıllı dolap**
+   
 
 - **Kullanıcıların SmartScreen uyarılarını yoksaymalarını engelleyin**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
@@ -247,7 +250,7 @@ Desteklenen platformlar ve profiller:
 
   Bu ASR kuralı şu GUID aracılığıyla denetlenir: 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
   - **Yapılandırılmadı** (*varsayılan*)-ayar, kapalı olan Windows varsayılan öğesine geri döner.
-  - **Engelle** -Office makrosunda Win32 API çağrıları kullanılması engellenmiştir.
+  - **Engelle**  -Office makrosunda Win32 API çağrıları kullanılması engellenmiştir.
   - **Denetim modu** -Windows olayları engelleme yerine oluşturulur.
 
 - **Office iletişim uygulamalarının alt işlem oluşturmasını engelleyin**  
@@ -441,7 +444,7 @@ Desteklenen platformlar ve profiller:
   Hizmet listesi hakkında daha fazla bilgi için bkz. [Servicesallowedlist kullanım kılavuzu](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide)
 
   - **Ek** olarak Izin verilen Bluetooth hizmetleri ve profillerini, gibi onaltılı dizeler olarak belirtin `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}` .
-  - **Içeri aktarma** -Bluetooth hizmetleri ve profillerinin bir listesini içeren bir. csv dosyasını, örneğin`{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`
+  - **Içeri aktarma** -Bluetooth hizmetleri ve profillerinin bir listesini içeren bir. csv dosyasını, örneğin `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`
 
 ## <a name="exploit-protection-profile"></a>Exploit Protection profili
 

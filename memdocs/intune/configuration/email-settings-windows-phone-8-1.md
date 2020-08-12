@@ -6,24 +6,27 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/19/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ROBOTS: NOINDEX
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 369e856b26ecbf8a7d6d7f8c0a87a9bfdf69e318
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f5bd00f12ab0f015c6408e2bbc934e1320c7540e
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086922"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146159"
 ---
 # <a name="email-profile-settings-in-microsoft-intune-for-devices-running-windows-phone-81"></a>Windows Phone 8.1 çalıştıran cihazlar için Microsoft Intune'da e-posta profili ayarları
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 Bu makalede, Windows Phone 8.1 çalıştıran cihazlarınız için yapılandırabileceğiniz e-posta profili ayarları gösterilmektedir.
 
@@ -39,16 +42,16 @@ Bu makalede, Windows Phone 8.1 çalıştıran cihazlarınız için yapılandıra
 - **E-posta sunucusu**: Exchange sunucunuzun konak adını girin. Örneğin, `outlook.office365.com` girin.
 - **Hesap adı**: E-posta hesabı için görünen adı girin. Bu ad, cihazlarda kullanıcılara gösterilir.
 - **AAD’den kullanıcı adı özniteliği**: Bu ad, Intune’un Azure Active Directory’den (AAD) aldığı özniteliktir. Intune, bu profil tarafından kullanılan kullanıcı adını dinamik olarak oluşturur. Seçenekleriniz şunlardır:
-  - **Kullanıcı asıl adı**: `user1` veya `user1@contoso.com`gibi adı alır.
-  - **BIRINCIL SMTP adresi**: adı gibi e-posta adresi biçiminde alır `user1@contoso.com`.
+  - **Kullanıcı asıl adı**: veya gibi adı alır `user1` `user1@contoso.com` .
+  - **BIRINCIL SMTP adresi**: adı gibi e-posta adresi biçiminde alır `user1@contoso.com` .
   - **sAM Hesap Adı**: Etki alanı gerektirir; örneğin `domain\user1`. Şunları da girin:
     - **Kullanıcı etki alanı adı kaynağı**: seçenekleriniz:
       - **AAD** (Azure Active Directory): **AAD 'den Kullanıcı etki alanı adı özniteliğini**girin. Kullanıcının **tam etki alanı adını** veya **NetBIOS adı** özniteliğini almayı seçin.
-      - **Özel**: **kullanılacak özel etki alanı adını**girin. Intune 'un, `contoso.com` veya `contoso`gibi etki alanı adı için kullandığı bir değer girin.
+      - **Özel**: **kullanılacak özel etki alanı adını**girin. Intune 'un, veya gibi etki alanı adı için kullandığı bir değer girin `contoso.com` `contoso` .
 
 - **AAD 'Den e-posta adresi özniteliği**: Intune bu özniteliği Azure ACTIVE DIRECTORY (AAD) öğesinden alır. Kullanıcının e-posta adresinin nasıl oluşturulduğunu seçin. Seçenekleriniz şunlardır:
-  - **Kullanıcı asıl adı**: `user1@contoso.com` veya `user1`gibi, e-posta adresi olarak tam asıl adı kullanır.
-  - **BIRINCIL SMTP adresi**: Exchange 'de oturum açmak IÇIN birincil SMTP adresini kullanır `user1@contoso.com`.
+  - **Kullanıcı asıl adı**: veya gibi, e-posta adresi olarak tam asıl adı kullanır `user1@contoso.com` `user1` .
+  - **BIRINCIL SMTP adresi**: Exchange 'de oturum açmak IÇIN birincil SMTP adresini kullanır `user1@contoso.com` .
 
 ## <a name="security-settings"></a>Güvenlik ayarları
 

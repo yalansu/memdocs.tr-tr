@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ee0603a96d7276e9e1ef0fb9bff60ac44a3ef84
-ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
+ms.openlocfilehash: bc307f22e3caa77357d8d3054a432c8d42c38fc4
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301393"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146516"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>İlke ve profillerin ve Intune 'da sorun giderme
 
@@ -144,7 +144,7 @@ Cihaz platformuna bağlı olarak, ilkeyi daha az güvenli bir değerle değişti
 
 Örneğin, Windows 8.1 Masaüstünde, sağ taraftaki içeri doğru kaydırın ve sonra da **Charms** çubuğunu açın. **Ayarlar**  >  **Denetim Masası**  >  **Kullanıcı hesapları**' nı seçin. Sol taraftaki **Güvenlik İlkelerini Sıfırla**’yı seçin ve **İlkeleri Sıfırla**’ya tıklayın.
 
-Android, iOS/ıpados ve Windows Phone 8,1 gibi diğer platformların devre dışı bırakılması ve daha az kısıtlayıcı bir ilkeyi uygulamak için yeniden kaydedilmesi gerekebilir.
+Android ve iOS/ıpados gibi diğer platformların devre dışı bırakılması ve daha az kısıtlayıcı bir ilkeyi uygulamak için yeniden kaydedilmesi gerekebilir.
 
 [Cihaz kaydı sorunlarını giderme](../enrollment/troubleshoot-device-enrollment-in-intune.md) iyi bir kaynak olabilir.
 

@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune - Azure'da özel cihaz ayarlarını kullanma | Microsoft Docs
-description: Microsoft Intune kullanan Windows Phone, Windows 8.1, Windows 10 ve üzeri, Android Cihaz Yöneticisi, Android Enterprise, macOS ve iOS/ıpados cihazları için özel ayarları kullanmak üzere bir profil ekleyin veya oluşturun.
+description: Microsoft Intune kullanarak Windows 8.1, Windows 10 ve üzeri, Android Cihaz Yöneticisi, Android Enterprise, macOS ve iOS/ıpados cihazları için özel ayarları kullanmak üzere bir profil ekleyin veya oluşturun.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ddbb82d3cd5c86ff32917013edd4f16b303678fe
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: aaa0deaf2c6332965f40ae02a47b7541cf2f9e8e
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990103"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146414"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Intune'da özel ayarlarla profil oluşturma
 
@@ -45,7 +45,6 @@ Bu makalede, Android Cihaz Yöneticisi, Android Enterprise, iOS/ıpados, macOS v
         - **iOS/iPadOS**
         - **macOS**
         - **Windows 10 ve üzeri**
-        - **Windows Phone 8.1**
 
     - **Profil**: **özel**' i seçin.
 
@@ -65,7 +64,6 @@ Bu makalede, Android Cihaz Yöneticisi, Android Enterprise, iOS/ıpados, macOS v
     - [macOS](custom-settings-macos.md)
     - [Windows 10](custom-settings-windows-10.md)
     - [Windows 10 Holographic for Business](custom-settings-windows-holographic.md)
-    - [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
 
 8. **İleri**’yi seçin.
 9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).

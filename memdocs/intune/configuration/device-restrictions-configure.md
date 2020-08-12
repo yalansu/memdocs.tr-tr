@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune-Azure 'da ilke kullanarak cihaz özelliklerini kısıtlama | Microsoft Docs
-description: Android Cihaz Yöneticisi, Android kurumsal, macOS, iOS, Idos, Windows Phone ve Windows 10 cihazlarındaki özellikleri Microsoft Intune kısıtlamak için bir cihaz profili ekleyin.
+description: Android Cihaz Yöneticisi, Android kurumsal, macOS, iOS, Idos ve Windows 10 cihazlarında Microsoft Intune özellikleri kısıtlamak için bir cihaz profili ekleyin.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 951293ff723ff0243d4068656497cbe0bca27ef9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e710678e3ac4775f5737090b791446c7a6e8285c
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989172"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146363"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Microsoft Intune’da cihaz kısıtlama ayarlarını yapılandırma
 
@@ -50,7 +50,6 @@ Bu makalede bir cihaz kısıtlama profili oluşturma yöntemi gösterilmektedir.
         - **macOS**
         - **Windows 10 ve üzeri**
         - **Windows 8.1 ve üzeri**
-        - **Windows Phone 8.1**
 
     - **Profil**: **cihaz kısıtlamalarını**seçin.
 
@@ -70,7 +69,6 @@ Bu makalede bir cihaz kısıtlama profili oluşturma yöntemi gösterilmektedir.
     - [Android Kurumsal](device-restrictions-android-for-work.md)
     - [iOS/iPadOS](device-restrictions-ios.md)
     - [macOS](device-restrictions-macos.md)
-    - [Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
     - [Windows 8.1](device-restrictions-windows-8-1.md)
     - [Windows 10 ve üzeri](device-restrictions-windows-10.md)
     - [Windows 10 Team](device-restrictions-windows-10-teams.md)

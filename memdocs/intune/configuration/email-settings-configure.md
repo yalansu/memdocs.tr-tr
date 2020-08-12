@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bb01770909192b17f0e72b852e4094ff7ad3a04
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: de260f56753e292ed95ac22c76b9cc16457c981b
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565657"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146006"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Intune kullanarak cihazlara e-posta ayarları ekleme
 
@@ -33,8 +33,7 @@ Aşağıdaki cihazlarda yerleşik e-posta ayarlarını yapılandırmak için e-p
 - Android Kurumsal
 - iOS 11,0 ve üzeri
 - ıpados 13,0 ve üzeri
-- Windows Phone 8,1 ve üzeri
-- Windows 10 (masaüstü) ve Windows 10 Mobile
+- Windows 10 (masaüstü)
 
 Bu makalede, Microsoft Intune’da e-posta profili oluşturma işlemi gösterilir. Ayrıca daha özel ayarlar için farklı platformlara bağlantılar içerir.
 
@@ -50,7 +49,6 @@ Bu makalede, Microsoft Intune’da e-posta profili oluşturma işlemi gösterili
         - **Android Kurumsal**
         - **iOS/iPadOS**
         - **Windows 10 ve üzeri**
-        - **Windows Phone 8.1**
 
     - **Profil**: **e-posta**' yı seçin.
 
@@ -68,7 +66,6 @@ Bu makalede, Microsoft Intune’da e-posta profili oluşturma işlemi gösterili
     - [Android Kurumsal](email-settings-android-enterprise.md)
     - [iOS/iPadOS](email-settings-ios.md)
     - [Windows 10](email-settings-windows-10.md)
-    - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
 
 8. **İleri**’yi seçin.
 9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).

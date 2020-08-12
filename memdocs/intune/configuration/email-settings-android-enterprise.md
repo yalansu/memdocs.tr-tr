@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab544d285e49fd3914a8e9867c35ad9ed97f5fe8
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 99e4e037faf5253f92b4907f9b8746dbd58038eb
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80087024"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146074"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Intune 'da e-posta, kimlik doğrulama ve eşitlemeyi yapılandırmak için Android kurumsal cihaz ayarları
 
@@ -41,12 +41,12 @@ Bir [cihaz yapılandırma profili](email-settings-configure.md) oluşturun (iş 
 - **E-posta sunucusu**: Exchange sunucunuzun konak adını girin. Örneğin, `outlook.office365.com` girin.
 - **AAD'den kullanıcı adı özniteliği**: Bu ad, Intune'un Azure Active Directory'den (Azure AD) aldığı özniteliktir. Intune, bu profil tarafından kullanılan kullanıcı adını dinamik olarak oluşturur. Seçenekleriniz şunlardır:
 
-  - **Kullanıcı asıl adı**: `user1` veya `user1@contoso.com`gibi adı alır.
-  - **Kullanıcı adı**: yalnızca adı alır (örneğin,) `user1`.
+  - **Kullanıcı asıl adı**: veya gibi adı alır `user1` `user1@contoso.com` .
+  - **Kullanıcı adı**: yalnızca adı alır (örneğin,) `user1` .
 
 - **AAD 'Den e-posta adresi özniteliği**: Bu ad, Intune 'un Azure AD 'den aldığı e-posta özniteliğidir. Intune, bu profil tarafından kullanılan e-posta adresini dinamik olarak oluşturur. Seçenekleriniz şunlardır:
-  - **Kullanıcı asıl adı**: e-posta adresi olarak `user1@contoso.com` veya `user1`gibi tam asıl adı kullanır.
-  - **BIRINCIL SMTP adresi**: Exchange 'de oturum açmak için gıbı birincil SMTP `user1@contoso.com`adresini kullanır.
+  - **Kullanıcı asıl adı**: `user1@contoso.com` `user1` e-posta adresi olarak veya gibi tam asıl adı kullanır.
+  - **BIRINCIL SMTP adresi**: `user1@contoso.com` Exchange 'de oturum açmak IÇIN gibi birincil SMTP adresini kullanır.
 
 - **Kimlik doğrulama yöntemi**: e-posta profili tarafından kullanılan kimlik doğrulama yöntemi olarak **Kullanıcı adı ve parola** ya da **Sertifikalar** seçin.
   - **Sertifika**’yı seçerseniz, Exchange bağlantısının kimliğini doğrulamak için daha önce oluşturduğunuz istemci SCEP veya PKCS sertifika profilini seçin.
@@ -61,4 +61,4 @@ Bir [cihaz yapılandırma profili](email-settings-configure.md) oluşturun (iş 
 
 [Profili atama](device-profile-assign.md) ve [durumunu izleme](device-profile-monitor.md).
 
-[Android Samsung KNOX](email-settings-android.md), [IOS/ıpados](email-settings-ios.md), [Windows 10 ve üzeri](email-settings-windows-10.md)ve [Windows Phone 8,1](email-settings-windows-phone-8-1.md) cihazları için e-posta profilleri de oluşturabilirsiniz.
+[Android Samsung KNOX](email-settings-android.md), [IOS/ıpados](email-settings-ios.md)ve [Windows 10 ve üzeri](email-settings-windows-10.md) cihazlar için e-posta profilleri de oluşturabilirsiniz.

@@ -14,12 +14,18 @@
           href: understand/find-help.md
         - name: Belgeleri kullanma
           href: understand/use-docs.md
-        - name: Konsolu kullanma
-          href: servers/manage/admin-console.md
         - name: Erişilebilirlik özellikleri
           href: understand/accessibility-features.md
         - name: Yazılım Merkezi kullanıcı kılavuzu
           href: understand/software-center.md
+    - name: Konsolu kullanma
+      items:
+        - name: Konsolu kullanma
+          href: servers/manage/admin-console.md
+        - name: Konsol bildirimleri
+          href: servers/manage/admin-console-notifications.md
+        - name: Konsol değişiklikleri ve ipuçları
+          href: servers/manage/admin-console-tips.md
     - name: Temel bilgiler
       items:
         - name: Configuration Manager'ın temelleri
@@ -76,6 +82,8 @@
           href: plan-design/changes/features-and-capabilities.md
         - name: Artımlı sürümlerdeki yenilikler
           href: plan-design/changes/whats-new-incremental-versions.md
+        - name: Sürüm 2006’daki yenilikler
+          href: plan-design/changes/whats-new-in-version-2006.md
         - name: Sürüm 2002’deki yenilikler
           href: plan-design/changes/whats-new-in-version-2002.md
         - name: Sürüm 1910’daki yenilikler
@@ -84,8 +92,6 @@
           href: plan-design/changes/whats-new-in-version-1906.md
         - name: Sürüm 1902’deki yenilikler
           href: plan-design/changes/whats-new-in-version-1902.md
-        - name: Sürüm 1810’daki yenilikler
-          href: plan-design/changes/whats-new-in-version-1810.md
         - name: Configuration Manager 2012’den sonraki değişiklikler
           href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
         - name: Kaldırılan ve kullanım dışı bırakılan
@@ -212,6 +218,8 @@
           items:
             - name: Düzeylere genel bakış
               href: plan-design/diagnostics/levels-overview.md
+            - name: Sürüm 2006 verileri
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2006.md
             - name: Sürüm 2002 verileri
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002.md
             - name: Sürüm 1910 verileri
@@ -220,8 +228,6 @@
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
             - name: Sürüm 1902 verileri
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
-            - name: Sürüm 1810 verileri
-              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
         - name: Sık sorulan sorular (SSS)
           href: plan-design/diagnostics/frequently-asked-questions.md
     - name: Configuration Manager için güvenlik ve gizlilik
@@ -470,6 +476,8 @@
           href: servers/manage/cmpivot-overview.md
         - name: CMPivot'u kullanma
           href: servers/manage/cmpivot.md
+        - name: CMPivot değişiklikleri
+          href: servers/manage/cmpivot-changes.md
         - name: CMPivot sorunlarını giderme
           href: servers/manage/cmpivot-tsg.md
     - name: Bakım görevleri
@@ -512,6 +520,8 @@
           href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
         - name: Düzeltme yükleyicisini kullanma
           href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+        - name: Güncelleştirme 2006’yı yüklemek için denetim listesi
+          href: servers/manage/checklist-for-installing-update-2006.md
         - name: Güncelleştirme 2002’yi yüklemek için denetim listesi
           href: servers/manage/checklist-for-installing-update-2002.md
         - name: Güncelleştirme 1910’u yüklemek için denetim listesi
@@ -520,8 +530,6 @@
           href: servers/manage/checklist-for-installing-update-1906.md
         - name: Güncelleştirme 1902’yı yüklemek için denetim listesi
           href: servers/manage/checklist-for-installing-update-1902.md
-        - name: Güncelleştirme 1810’yı yüklemek için denetim listesi
-          href: servers/manage/checklist-for-installing-update-1810.md
         - name: Geçerli dal sürümleri için destek
           href: servers/manage/current-branch-versions-supported.md
     - name: Yedekleme ve kurtarma

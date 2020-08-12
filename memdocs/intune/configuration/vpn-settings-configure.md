@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/28/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72d0345c91f525fb6dc28adeabe8522801c51a9f
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: 649b9417f349509e4d1630d0cfecfe8e5b6b1430
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365432"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146499"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Intune 'da VPN sunucularına bağlanmak için VPN profilleri oluşturma
 
@@ -37,9 +37,7 @@ Sanal özel ağlar (VPN 'Ler), kullanıcılara kuruluş ağınıza güvenli uzak
 >
 > * Android 4 ve üzeri
 > * Windows 8.1 ve üzeri çalıştıran kayıtlı cihazlar
-> * Windows Phone 8.1 ve üzeri
 > * Windows 10 masaüstü çalıştıran kayıtlı cihazlar
-> * Windows 10 Mobile
 > * Windows 10 Holographic for Business
 
 ## <a name="vpn-connection-types"></a>VPN bağlantısı türleri
@@ -57,7 +55,6 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Cisco AnyConnect
   - Android cihaz yöneticisi
@@ -90,7 +87,6 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - IKEv2
   - iOS/iPadOS
@@ -115,7 +111,6 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - iOS/iPadOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - SonicWall Mobile Connect
   - Android cihaz yöneticisi
@@ -125,7 +120,6 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Zscaler
   - Android kurumsal iş profilleri: [uygulama yapılandırma Ilkesini](../apps/app-configuration-vpn-ae.md) kullanma
@@ -149,7 +143,6 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
       - **macOS**
       - **Windows 10 ve üzeri**
       - **Windows 8.1 ve üzeri**
-      - **Windows Phone 8.1**
     - **Profil**: **VPN**' yi seçin.
 
 4. **Oluştur**’u seçin.
@@ -167,7 +160,6 @@ VPN profillerini oluştururken aşağıdaki bağlantı türlerini kullanabilirsi
     - [macOS](vpn-settings-macos.md)
     - [Windows 10](vpn-settings-windows-10.md) (Windows holographic for Business dahil)
     - [Windows 8.1](vpn-settings-windows-8-1.md)
-    - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
 8. **İleri**’yi seçin.
 9. **Kapsam etiketleri** ' nde (isteğe bağlı), profili, veya gıbı belirli BT gruplarına filtrelemek için bir etiket atayın `US-NC IT Team` `JohnGlenn_ITDepartment` . Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT IÇIN RBAC ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md).

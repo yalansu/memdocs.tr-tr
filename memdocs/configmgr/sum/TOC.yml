@@ -32,7 +32,7 @@
       items:
         - name: Bağlantısı kesilmiş bir yazılım güncelleştirme noktasından yazılım güncelleştirmelerini eşitleme
           href: get-started/synchronize-software-updates-disconnected.md
-        - name: Bağlantısı kesilmiş bir yazılım güncelleştirme noktasından Office 365 güncelleştirmelerini eşitleme
+        - name: Bağlı olmayan bir yazılım güncelleştirme noktasından Microsoft 365 Uygulama güncelleştirmelerini eşitleme
           href: get-started/synchronize-office-updates-disconnected.md
 - name: Dağıtma ve kullanma
   items:
@@ -62,7 +62,7 @@
       href: deploy-use/service-a-server-group.md
     - name: Office 365 İstemci Yönetimi Panosu
       href: deploy-use/office-365-dashboard.md
-    - name: Office 365 ProPlus güncelleştirmelerini yönetme
+    - name: Microsoft 365 Uygulamaları güncelleştirmelerini yönetme
       href: deploy-use/manage-office-365-proplus-updates.md
     - name: Windows 10 güncelleştirme teslimini en iyi duruma getirme
       href: deploy-use/optimize-windows-10-update-delivery.md

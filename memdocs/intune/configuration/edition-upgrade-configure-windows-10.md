@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b846aa1ead9bb2d1c1b15d783e646e59047c16ee
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0e18395aae96adec3bf4bbf60bdcccdd205dc90d
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988407"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146346"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Microsoft Intune kullanarak cihazlarda Windows 10 sürümlerini yükseltme veya S modunu değiştirme
 
@@ -50,7 +50,7 @@ Bu makalede, desteklenen yükseltme yolları listelenmekte ve cihaz yapılandır
 Cihazları yükseltmeden önce, aşağıdaki önkoşullara sahip olduğunuzdan emin olun:
 
 - Yükseltilen Windows sürümünü ilkeyle hedeflenen tüm cihazlara yüklemek için geçerli bir ürün anahtarı (Windows 10 Masaüstü sürümleri için). Çoklu Etkinleştirme Anahtarları (MAK) veya Anahtar Yönetimi Sunucusu (KMS) anahtarlarından herhangi birini kullanabilirsiniz.
-- Windows 10 Mobile ve Windows 10 holographic sürümleri için bir Microsoft lisans dosyası kullanabilirsiniz. Lisans dosyası, ilkeyle hedeflediğiniz tüm cihazlara güncelleştirilmiş sürümü yüklemek için lisans bilgilerini içerir.
+- Windows 10 holographic sürümleri için bir Microsoft lisans dosyası kullanabilirsiniz. Lisans dosyası, ilkeyle hedeflediğiniz tüm cihazlara güncelleştirilmiş sürümü yüklemek için lisans bilgilerini içerir.
 - İlkeyi atadığınız Windows 10 cihazları Microsoft Intune’a kaydedilir. Intune bilgisayar istemcisi yazılımını çalıştıran bilgisayarlar ile sürüm yükseltme ilkesini kullanamazsınız.
 
 ## <a name="supported-upgrade-paths"></a>Desteklenen yükseltme yolları
@@ -70,7 +70,6 @@ Aşağıdaki tabloda, Windows 10 sürümü yükseltme profili için desteklenen 
 | Windows 10 Core | Windows 10 Education <br/>Windows 10 Enterprise <br/>Windows 10 Pro Education | 
 | Windows 10 Core N sürümü | Windows 10 Education N sürümü <br/>Windows 10 Enterprise N sürümü <br/>Windows 10 Pro Education N sürümü | 
 | Windows 10 Holographic | Windows 10 Holographic for Business |
-| Windows 10 Mobile | Windows 10 Mobile Enterprise |
 
 <!--The following table provides information about the supported upgrade paths for Windows 10 editions in this policy:
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 08/11/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bf114edf17fa1f8959b5f26b83c771b711b83f5
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 43101602defab75c15c542ec922cba6f2bf96cf0
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093180"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146329"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune'daki cihaz profillerini kullanarak cihazlarınıza özellik ve ayar uygulama
 
@@ -58,8 +58,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- Mac OS
-- Windows Phone 8.1
+- macOS
 - Windows 8.1
 - Windows 10 ve üzeri
 
@@ -72,8 +71,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- Mac OS
-- Windows Phone 8.1
+- macOS
 
 ## <a name="delivery-optimization"></a>Teslim iyileştirme
 
@@ -101,7 +99,7 @@ Bu özellik şunları destekler:
 Bu özellik şunları destekler:
 
 - iOS/iPadOS
-- Mac OS
+- macOS
 
 ## <a name="device-firmware-configuration-interface"></a>Cihaz üretici yazılımı yapılandırma arabirimi
 
@@ -120,7 +118,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- Mac OS
+- macOS
 - Windows 10 ve üzeri
 - Windows 10 Team
 
@@ -155,7 +153,6 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- Windows Phone 8.1
 - Windows 10 ve üzeri
 
 ## <a name="endpoint-protection"></a>Endpoint protection
@@ -166,7 +163,7 @@ Microsoft Intune ile Microsoft Defender Gelişmiş tehdit koruması (WDADTP) ekl
 
 Bu özellik şunları destekler:
 
-- Mac OS
+- macOS
 - Windows 10 ve üzeri
 
 ## <a name="esim-cellular---public-preview"></a>eSIM hücresel - Genel önizleme
@@ -183,11 +180,11 @@ Bu özellik şunları destekler:
 
 Bu özellik şunları destekler:
 
-- Mac OS
+- macOS
 
 ## <a name="identity-protection"></a>Kimlik koruması
 
-[Kimlik koruması](../protect/identity-protection-configure.md), Windows 10 ve Windows 10 Mobile cihazlarda İş İçin Windows Hello deneyimini denetler. İş İçin Windows Hello’yu kullanıcı ve cihazlar için kullanılabilir kılmak ve cihaz PIN’i ve hareketlerini belirtmek için bu ayarları yapılandırın.  
+[Kimlik koruması](../protect/identity-protection-configure.md) , Windows 10 cihazlarında Iş Için Windows Hello deneyimini denetler. İş İçin Windows Hello’yu kullanıcı ve cihazlar için kullanılabilir kılmak ve cihaz PIN’i ve hareketlerini belirtmek için bu ayarları yapılandırın.  
 
 Bu özellik şunları destekler:  
 
@@ -243,7 +240,7 @@ MacOS cihazlarındaki [tercih dosyaları](preference-file-settings-macos.md) , u
 
 Bu özellik şunları destekler:
 
-- Mac OS
+- macOS
 
 ## <a name="shared-multi-user-device"></a>Paylaşılan çok kullanıcılı cihaz
 
@@ -277,8 +274,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- Mac OS
-- Windows Phone 8.1
+- macOS
 - Windows 8.1
 - Windows 10 ve üzeri
 
@@ -291,7 +287,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- Mac OS
+- macOS
 - Windows 8.1 (yalnızca içeri aktarma)
 - Windows 10 ve üzeri
 
@@ -303,7 +299,7 @@ Profili atadığınızda macOS masaüstü kullanıcıları, kendisini yapıland�
 
 Bu özellik şunları destekler:
 
-- Mac OS
+- macOS
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra Mobility Uzantıları (MX)
 
