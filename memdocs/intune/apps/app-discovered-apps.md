@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d60d4eba093ce9663abf2aa57c6461bef5a34ef1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 062a70f66843a67884d8406b66393da7bc52712b
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988726"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179613"
 ---
 # <a name="intune-discovered-apps"></a>Intune bulunan uygulamalar
 
@@ -57,7 +57,6 @@ Aşağıdaki liste, uygulama platformu türünü, kişisel cihazlar için izlene
 | Windows 10 (Win32 uygulamaları) NOTE: cihazda [Intune yönetim uzantısı gerekir](intune-management-extension.md) | Geçerli değil | Cihazda MSI yüklü uygulamalar | Cihaz kaydından her 24 saatte bir |
 | Windows 10 (modern uygulamalar) | Yalnızca yönetilen modern uygulamalar | Cihazda yüklü tüm modern uygulamalar | Her 7 günde bir cihaz kaydı |
 | Windows 8.1 | Yalnızca yönetilen uygulamalar | Yalnızca yönetilen uygulamalar | Her 7 günde bir cihaz kaydı |
-| Windows Phone 8 | Yalnızca yönetilen uygulamalar | Yalnızca yönetilen uygulamalar | Her 7 günde bir cihaz kaydı |
 | Windows RT | Yalnızca yönetilen uygulamalar | Yalnızca yönetilen uygulamalar | Her 7 günde bir cihaz kaydı |
 | iOS/iPadOS | Yalnızca yönetilen uygulamalar | Cihazda yüklü tüm uygulamalar | Her 7 günde bir cihaz kaydı |
 | macOS | Yalnızca yönetilen uygulamalar | Cihazda yüklü tüm uygulamalar | Her 7 günde bir cihaz kaydı |

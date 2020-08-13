@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/04/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33977676b4c144573965477154a7939f6061280a
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: a82fbfa9e494828450729e29467580c29a590282
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758355"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179562"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune Şirket Portalı uygulamaları, Şirket Portalı Web sitesini ve Intune uygulamasını özelleştirme
 
@@ -205,7 +205,7 @@ Windows Şirket Portalı uygulamasında aşağıdaki kısayollar kullanılabilir
 | Cihaz ayrıntıları | Rename | F2 |
 |  | Kaldır | Ctrl+D veya Delete |
 |  | Erişimi denetleme | Ctrl+M veya F9 |
-| Uygulama ayrıntıları | Yükleme | Ctrl+I |
+| Uygulama ayrıntıları | Yükle | Ctrl+I |
 | Cihazlar | Kullanılabilir | Ctrl+D |
 
 Son kullanıcılar, Windows Şirket Portalı uygulamasında kullanılabilen kısayolları da görebilir.
@@ -232,14 +232,12 @@ Kullanılabilir Kullanıcı self servis eylemlerini özelleştirmek için bkz. [
 
 Bazı platformlar ve Konfigürasyonlar self servis cihaz eylemlerine izin vermez. Aşağıdaki tabloda self servis eylemleri hakkında daha ayrıntılı bilgi verilmektedir:
 
-| Eylem | Windows 10<sup>(3)</sup> | iOS/ıpados<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
+| Eylem | Windows 10<sup>(3)</sup> | iOS/ıpados<sup>(3)</sup> | macOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
 | Devre Dışı Bırakma | Kullanılabilir<sup>(1)</sup> | Kullanılabilir<sup>(9)</sup> | Kullanılabilir | Kullanılabilir<sup>(7)</sup> |
 | Silme | Kullanılabilir | Kullanılabilir<sup>(5)</sup><sup>(9)</sup> | NA | Kullanılabilir<sup>(7)</sup> |
 | Yeniden Adlandır<sup>(4)</sup> | Kullanılabilir | Kullanılabilir | Kullanılabilir | Kullanılabilir |
 | Sync | Kullanılabilir | Kullanılabilir | Kullanılabilir | Kullanılabilir |
-| Uzaktan Kilitleme | Yalnızca Windows Phone | Kullanılabilir | Kullanılabilir | Kullanılabilir |
-| Geçiş kodunu Sıfırla | Yalnızca Windows Phone | Kullanılabilir<sup>(8)</sup> | NA | Kullanılabilir<sup>(6)</sup> |
 | Anahtar Kurtarma | NA | NA | Kullanılabilir<sup>(2)</sup> | NA |
 
 <sup>(1)</sup> **devre dışı BıRAKMA** , Azure AD 'ye katılmış Windows cihazlarında her zaman engellenir.<br>

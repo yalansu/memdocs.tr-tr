@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/12/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,17 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99dc504f8fc3148463288820dc810bab892e3081
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: f755285ea20397b8bd7afb835f4bea212dd492b9
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912390"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179370"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Microsoft Intune uygulama yönetimi nedir?
-
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 BT yöneticisi olarak Microsoft Intune'u şirketinizin iş gücünün kullandığı istemci uygulamaları yönetmek için kullanabilirsiniz. Bu işlev, cihazları yönetmeye ve verileri korumaya ek niteliğindedir. Yöneticinin önceliklerinden biri, son kullanıcıların işlerini yapabilmeleri için gereken uygulamalara erişimleri olduğundan emin olmaktır. Bu amaca ulaşmak zor olabilir çünkü:
 - Çok çeşitli cihaz platformları ve uygulama türleri vardır.
@@ -51,22 +48,22 @@ Intune MAM iki yapılandırmayı destekler:
 
 Intune, ihtiyacınız olan uygulamaları çalıştırmak istediğiniz cihazlara almanıza yardımcı olacak çeşitli özellikler sunar. Aşağıdaki tablo, uygulama yönetimi özelliklerinin bir özetini sağlar.
 
-| Uygulama yönetimi özelliği | Android/Android Kurumsal | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
-|-------------------------- | -------------------------- | ---------- | ----- | ---------- | ----------------- |
-| Cihazlara ve kullanıcılara uygulamaları ekleme ve atama | Evet | Evet | Evet | Evet | Evet |
-| Intune’a kayıtlı olmayan cihazlara uygulamaları atama | Evet | Evet | Hayır | Hayır | Hayır |
-| Uygulamaların başlangıç davranışını denetlemek için uygulama yapılandırma ilkelerini kullanma | Evet | Evet | Hayır | Hayır | Hayır |
-| Süresi dolan uygulamaları yenilemek için mobil uygulama sağlama ilkelerini kullanma | Hayır | Evet | Hayır | Hayır | Hayır |
-| Uygulama koruma ilkeleriyle uygulamalardaki şirket verilerini koruma | Evet | Evet | Hayır | Hayır <sup>1</sup> | Hayır |
-| Yüklü uygulamadan yalnızca şirket verilerini kaldırma (uygulama seçmeli silme) | Evet | Evet | Hayır | Evet | Evet |
-| Uygulama atamalarını izleme | Evet | Evet | Evet | Evet | Evet |
-| Uygulama mağazasından toplu satın alınan uygulamaları atama ve izleme | Hayır | Hayır | Hayır | Evet | Hayır |
-| Cihazlara uygulamaları zorunlu yükleme (gerekli) <sup>2</sup> | Evet | Evet | Evet | Evet | Evet |
-| Şirket Portalı’ndan cihazlara isteğe bağlı yükleme (kullanılabilir yükleme) | Evet <sup>3</sup> | Evet | Evet | Evet | Evet |
-| Web’deki bir uygulamanın kısayolunu yükleme (web bağlantısı) | Evet <sup>4</sup> | Evet | Evet | Evet | Evet |
-| Şirket içi (iş kolu) uygulamaları | Evet | Evet | Evet | Evet | Hayır |
-| Mağazadan uygulamalar | Evet | Evet | Hayır | Evet | Evet |
-| Uygulamaları güncelleştirme | Evet | Evet | Hayır | Evet | Evet |
+| Uygulama yönetimi özelliği | Android/Android Kurumsal | iOS/iPadOS | macOS | Windows 10 |
+|-------------------------- | -------------------------- | ---------- | ----- | ---------- |
+| Cihazlara ve kullanıcılara uygulamaları ekleme ve atama | Evet | Evet | Evet | Evet |
+| Intune’a kayıtlı olmayan cihazlara uygulamaları atama | Evet | Evet | Hayır | Hayır |  |
+| Uygulamaların başlangıç davranışını denetlemek için uygulama yapılandırma ilkelerini kullanma | Evet | Evet | Hayır | Hayır |
+| Süresi dolan uygulamaları yenilemek için mobil uygulama sağlama ilkelerini kullanma | Hayır | Evet | Hayır | Hayır |
+| Uygulama koruma ilkeleriyle uygulamalardaki şirket verilerini koruma | Evet | Evet | Hayır | Hayır <sup>1</sup> |
+| Yüklü uygulamadan yalnızca şirket verilerini kaldırma (uygulama seçmeli silme) | Evet | Evet | Hayır | Evet |
+| Uygulama atamalarını izleme | Evet | Evet | Evet | Evet |
+| Uygulama mağazasından toplu satın alınan uygulamaları atama ve izleme | Hayır | Hayır | Hayır | Evet |
+| Cihazlara uygulamaları zorunlu yükleme (gerekli) <sup>2</sup> | Evet | Evet | Evet | Evet |
+| Şirket Portalı’ndan cihazlara isteğe bağlı yükleme (kullanılabilir yükleme) | Evet <sup>3</sup> | Evet | Evet | Evet |
+| Web’deki bir uygulamanın kısayolunu yükleme (web bağlantısı) | Evet <sup>4</sup> | Evet | Evet | Evet |
+| Şirket içi (iş kolu) uygulamaları | Evet | Evet | Evet | Evet |
+| Mağazadan uygulamalar | Evet | Evet | Hayır | Evet |
+| Uygulamaları güncelleştirme | Evet | Evet | Hayır | Evet |
 
 <sup>1</sup> Windows 10 çalıştıran cihazlarda uygulamaları korumak için [Windows Bilgi Koruması](../protect/windows-information-protection-configure.md)’nu kullanmayı göz önüne alabilirsiniz.<br>
 <sup>2</sup> Yalnızca Intune tarafından yönetilen cihazlar için geçerlidir.<br>
@@ -119,7 +116,7 @@ Uygulama iş yükü gezinti menüsünün en üst kısmında, yaygın olarak kull
 Konsolun içindeki aşağıdaki öğeler uygulamayla ilgili işlevsellik sağlar:
 - **İş İçin Microsoft Mağazası**: İş İçin Microsoft Mağazası’na tümleştirmeyi kurun. Bundan sonra, satın alınan uygulamaları Intune’a eşitleyebilir, bunları atayabilir ve lisans kullanımınızı izleyebilirsiniz. Daha fazla bilgi için, bkz. [iş toplu satın alınan uygulamalar için Microsoft Store](windows-store-for-business.md).
 - **Windows Enterprise sertifikası**: Yönetilen Windows cihazlarınıza iş kolu uygulamalarını dağıtmak için kullanılan kod imzalama sertifikasını uygulayın veya durumunu görüntüleyin.
-- **Windows Symantec sertifikası**: Windows 10 Mobile cihazlarına XAP ve WP8.x appx dosyalarını dağıtmak için gereken kod imzalama sertifikasını uygulayın veya durumunu görüntüleyin.
+- **Windows Symantec sertifikası**: Symantec kod imzalama sertifikasını uygulayın veya durumunu görüntüleyin.
 - **Windows dışarıdan yükleme anahtarları**: Uygulamayı Windows mağazasından yayımlamak ve indirmek yerine doğrudan cihazlara yüklemek için kullanılabilecek bir Windows dışarıdan yükleme anahtarı ekleyin. Daha fazla bilgi için bkz. [bir Windows uygulamasını dışarıdan yükleme](app-sideload-windows.md).
 - **Apple VPP belirteçleri**: IOS/ıpados toplu satın alma programı (VPP) lisanslarınızı uygulayın ve görüntüleyin. Daha fazla bilgi için bkz. [iOS/ıpados toplu satın alınan uygulamalar](vpp-apps-ios.md).
 - **Yönetilen Google Play**: yönetilen Google Play, Google 'ın kurumsal uygulama mağazası ve Android Enterprise uygulamalarının tek kaynağıdır. Daha fazla bilgi için bkz. [Intune Ile Android Enterprise cihazlarına yönetilen Google Play uygulamaları ekleme](apps-add-android-for-work.md).

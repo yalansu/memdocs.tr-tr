@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7926bd972fd24f39bd4e3f520fd250526502812a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c41f22e2aa60803067b9015f2ae3a84db43ff894
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983945"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179545"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Microsoft Intune kullanarak Windows 10 Şirket Portalı uygulamasını ekleme
 
@@ -71,7 +71,7 @@ Intune’un Evrensel uygulamaların bağımlılıklarını nasıl işlediği hak
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular 
 ### <a name="how-do-i-update-the-company-portal-app-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Daha eski uygulamaları mağazadan zaten yüklediklerinde, kullanıcılarımın cihazlarındaki Şirket Portalı uygulamayı güncelleştirmek Nasıl yaparım? mı?
-Kullanıcılarınız, Windows 8.1 veya Windows Phone 8.1 Şirket Portalı uygulamalarını Microsoft Store’dan zaten yüklemişlerse sizin ya da kullanıcınızın herhangi bir işlemde bulunmasına gerek kalmadan bu uygulamalar otomatik olarak en son sürüme güncelleştirilecektir. Bu güncelleştirme gerçekleşmezse, kullanıcılarınızdan cihazlarında Store uygulamaları için otomatik güncelleştirmeleri etkinleştirdiklerini doğrulamalarını isteyin.   
+Kullanıcılarınız Windows 8.1 Şirket Portalı uygulamalarını Microsoft Store zaten yüklediyse, sizin veya kullanıcılarınız tarafından hiçbir eylemde bulunması gerekmeden, uygulamaları, en son sürüme otomatik olarak güncelleştirilecektir. Bu güncelleştirme gerçekleşmezse, kullanıcılarınızdan cihazlarında Store uygulamaları için otomatik güncelleştirmeleri etkinleştirdiklerini doğrulamalarını isteyin.   
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Dışarıdan yüklenen Windows 8.1 Şirket Portalı uygulamamı Windows 10 Şirket Portalı uygulamasına nasıl yükseltebilirim?
 Önerilen geçiş yolumuz, Windows 8.1 Şirket Portalı uygulamasının atamasını **kaldırmak**için atama eylemini ayarlayarak silmektir. Bu ayarı seçtikten sonra, yukarıda açıklanan seçeneklerden herhangi birini kullanarak Windows 10 Şirket Portalı uygulamasını atayabilirsiniz.  
@@ -80,8 +80,8 @@ Uygulamayı dışarıdan yüklemeniz gerekiyorsa ve Windows 8.1 Şirket Portalı
 
 Uygulamayı dışarıdan yüklemeniz gerekiyorsa ve Windows 8.1 Şirket Portalı uygulamasını Symantec kod imzalama sertifikası ile imzalayıp atadıysanız, sıradaki bölümde sunulan adımları izleyin.
 
-### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Dışarıdan yüklenmiş ve imzalı Windows Phone 8.1 veya Windows 8.1 Şirket Portalı uygulamamı Windows 10 Şirket Portalı uygulamasına nasıl yükseltebilirim?
-Önerdiğimiz geçiş yolu, Windows Phone 8,1 Şirket Portalı uygulamasının mevcut atamasını veya Windows 8.1 Şirket Portalı uygulamasını **kaldırmak**için atama eylemini ayarlayarak silmek içindir. Bu ayarı seçtikten sonra Windows 10 Şirket Portalı uygulamasını normal şekilde atayabilirsiniz.  
+### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>İmzalı ve dışarıdan yüklenen Windows 8.1 Şirket Portalı uygulamamı Windows 10 Şirket Portalı uygulamasına yükseltmek Nasıl yaparım??
+Önerilen geçiş yolumuz, Windows 8.1 Şirket Portalı uygulaması için atama eylemini **Kaldır**olarak ayarlayarak mevcut atamayı silmektir. Bu ayarı seçtikten sonra Windows 10 Şirket Portalı uygulamasını normal şekilde atayabilirsiniz.  
 
 Aksi takdirde, yükseltme yoluna uyulduğundan emin olmak için Windows 10 Şirket Portalı uygulamasının uygun şekilde güncelleştirilmesi ve imzalanması gerekir.  
 
@@ -99,7 +99,7 @@ Uygulamayı şu şekilde nasıl imzalayacağınızı aşağıda bulabilirsiniz:
 |---|---|
 | InputWin10AppxBundle  |  Kaynak appxbundle dosyasının yolu. |
 | OutputWin10AppxBundle | İmzalı appxbundle dosyası için çıkış yolu. 
-| Win81Appx  | Windows 8.1 veya Windows Phone 8.1 Şirket Portalı (.APPX) dosyasının yolu. |
+| Win81Appx  | Windows 8.1 Şirket Portalı yolu (. APPX) dosyası. |
 | PfxFilePath  |  Symantec Enterprise Mobil Kod İmza Sertifikası (.PFX) dosyasının yolu.  |
 | PfxPassword  | Symantec Enterprise Mobil Kod İmza Sertifikası’nın parolası. |
 | PublisherId | Kuruluşun Yayımcı Kimliği. Bu yoksa, Symantec Kurumsal Mobil Kod İmzalama Sertifikası’nın Konu alanı kullanılır. |

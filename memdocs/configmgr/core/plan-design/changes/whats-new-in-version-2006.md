@@ -1,5 +1,5 @@
 ---
-title: Sürüm 2006 ' deki yenilikler
+title: Sürüm 2006’daki yenilikler
 titleSuffix: Configuration Manager
 description: Geçerli dalın Configuration Manager sürüm 2006 ' de tanıtılan değişiklikler ve yeni yetenekler hakkında ayrıntılı bilgi alın.
 ms.date: 08/11/2020
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7dd8daa7d41a6ad335f7c2d8a2a53e5ccbdf7b04
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f624a207b5e9afded9b86312d1608a35005355f6
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129718"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179350"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 2006 ' deki yenilikler
 
@@ -284,6 +284,18 @@ Doğrudan bağlantı ile Configuration Manager konsolu topluluk hub düğümünd
 Artık Configuration Manager konsolunda Microsoft 'tan bildirim almayı tercih edebilirsiniz. Bu bildirimler yeni veya güncelleştirilmiş özellikler, Configuration Manager ve ekli hizmetlerde yapılan değişiklikler ve Düzeltme eylemi gerektiren sorunlar hakkında bilgi almanıza yardımcı olur.
 
 Daha fazla bilgi için bkz. [Microsoft 'tan ileti almak için bir site yapılandırma](../../servers/manage/admin-console-notifications.md#bkmk_msft).
+
+### <a name="power-bi-sample-reports"></a>Power BI örnek raporlar
+<!--5679791-->
+
+*(İlk 2020 Haziran 'da tanıtılan)*
+
+Power BI Rapor Sunucusu Configuration Manager raporlama ile tümleştirdiğinizde, artık kullanılabilir örnek Power BI raporları vardır. Aşağıdaki örnek raporları indirip yükleyin:
+
+- Yazılım Güncelleştirme Uyumluluğu durumu
+- Yazılım güncelleştirmesi dağıtım durumu
+
+Daha fazla bilgi için bkz. [ınstall Power BI Sample Reports](../../servers/manage/powerbi-sample-reports.md).
 
 <!-- Unused sections in this release:
 ## Reporting

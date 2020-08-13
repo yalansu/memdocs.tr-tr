@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 529d7a7da1257b9ebce1e1ab3cec706e8f100403
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 0f4080c5cfcc6635478bd88b7d9edf42dd3d8576
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270948"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179494"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Intune 'da Windows 10 cihazlarında PowerShell betikleri kullanma
 
-Windows 10 cihazlarında çalıştırmak için Intune 'da PowerShell betiklerini karşıya yüklemek üzere Microsoft Intune Management uzantısını kullanın. Yönetim uzantısı Windows 10 mobil cihaz yönetimini (MDM) geliştirir ve modern yönetime taşımayı kolaylaştırır.
+Windows 10 cihazlarında çalıştırmak için Intune 'da PowerShell betiklerini karşıya yüklemek üzere Microsoft Intune Management uzantısını kullanın. Yönetim uzantısı Windows cihaz yönetimini (MDM) geliştirir ve modern yönetime taşımayı kolaylaştırır.
 
 Bu özellik şu platformlarda geçerlidir:
 
@@ -64,7 +64,7 @@ Intune yönetim uzantısında aşağıdaki Önkoşullar bulunur. Önkoşullar ka
   
     - Azure AD 'de [Intune 'A otomatik kayıt](../enrollment/quickstart-setup-auto-enrollment.md) etkinleştirilir. Son Kullanıcı, yerel bir kullanıcı hesabı kullanarak cihazda oturum açar, cihazı Azure AD 'ye el ile birleştirir ve sonra Azure AD hesabını kullanarak cihazda oturum açar.
     
-    OR  
+    VEYA  
     
     - Kullanıcı, Azure AD hesabını kullanarak cihazda oturum açar ve ardından Intune 'da kaydolur.
 
@@ -98,7 +98,7 @@ Intune yönetim uzantısında aşağıdaki Önkoşullar bulunur. Önkoşullar ka
       | Betiği 64-bit PS konağında Çalıştır | İstemci mimarisi | Yeni PS betiği | Mevcut ilke PS betiği |
       | --- | --- | --- | --- | 
       | Hayır | 32 bit  | 32-bit PS Konağı destekleniyor | Yalnızca 32 bit ve 64 bit mimarilerinde çalışan 32-bit PS ana bilgisayarında çalışır. |
-      | Yes | 64 bit | 64-bit mimariler için 64-bit PS konağında betiği çalıştırır. 32 bit üzerinde çalıştırıldığında, betik bir 32 bit PS konağında çalışır. | Betiği 32 bit PS ana bilgisayarında çalıştırır. Bu ayar 64 bit olarak değişirse, betik bir 64 bit PS konağında açılır (çalışmaz) ve sonuçları raporlar. 32 bit üzerinde çalıştırıldığında, betik 32-bit PS ana bilgisayarında çalışır. |
+      | Evet | 64 bit | 64-bit mimariler için 64-bit PS konağında betiği çalıştırır. 32 bit üzerinde çalıştırıldığında, betik bir 32 bit PS konağında çalışır. | Betiği 32 bit PS ana bilgisayarında çalıştırır. Bu ayar 64 bit olarak değişirse, betik bir 64 bit PS konağında açılır (çalışmaz) ve sonuçları raporlar. 32 bit üzerinde çalıştırıldığında, betik 32-bit PS ana bilgisayarında çalışır. |
 
 5. **Kapsam etiketlerini**seçin. Kapsam etiketleri isteğe bağlıdır. [Dağıtım için rol tabanlı erişim denetimi (RBAC) ve kapsam etiketlerini kullanma](../fundamentals/scope-tags.md) daha fazla bilgi içerir.
 
@@ -169,7 +169,7 @@ Azure portalda kullanıcılar ve cihazlar için PowerShell betiklerinin çalış
 
 ## <a name="intune-management-extension-logs"></a>Intune yönetim uzantısı günlükleri
 
-İstemci makinesindeki Aracı günlükleri genellikle içinde bulunur `\ProgramData\Microsoft\IntuneManagementExtension\Logs` . Bu günlük dosyalarını görüntülemek için [CMTrace. exe](https://docs.microsoft.com/configmgr/core/support/cmtrace) ' yi kullanabilirsiniz.
+İstemci makinesindeki Aracı günlükleri genellikle içinde bulunur `\ProgramData\Microsoft\IntuneManagementExtension\Logs` . Bu günlük dosyalarını görüntülemek için [CMTrace.exe](https://docs.microsoft.com/configmgr/core/support/cmtrace) kullanabilirsiniz.
 
 ![Microsoft Intune ekran görüntüsü veya örnek CMTrace Aracısı günlükleri](./media/apps-win32-app-management/apps-win32-app-10.png)  
 
@@ -226,7 +226,7 @@ Cihazın otomatik olarak kayıtlı olup olmadığını görmek için şunları y
     write-output "Script worked" | out-file c:\Scripts\output.txt
     ```
 
-    Başarılı olursa output. txt oluşturulmalıdır ve "betiği çalıştı" metnini içermelidir.
+    Başarılı olursa, output.txt oluşturulmalıdır ve "betiği çalıştı" metnini içermelidir.
 
   - Betik yürütmeyi Intune olmadan test etmek için, [PsExec aracını](https://docs.microsoft.com/sysinternals/downloads/psexec) yerel olarak kullanarak sistem hesabındaki betikleri çalıştırın:
 

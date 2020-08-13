@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/21/2019
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cffdadab0518fbc6a52d0f2bf60752c165fd1c3e
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: cb9812505bb1a4560c7b5668aee5b83d5cc0aec7
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881510"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179596"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Windows 10 cihazlarını Intune Şirket Portalı kaydetme
 
@@ -37,7 +37,7 @@ Windows 10 Masaüstü, telefon ve tablet gibi çeşitli cihaz türleri arasında
 ## <a name="enroll-windows-10-version-1607-and-later-device"></a>Windows 10 sürüm 1607 ve üzeri bir cihaz Kaydet 
 Bu adımlar, Windows 10, sürüm 1607 ve üzeri sürümlerde çalışan bir cihazın nasıl kaydedileceğini açıklamaktadır.  
 
-1. **Başlat**'a gidin. Windows 10 Mobile cihazında çalışıyorsanız **tüm uygulamalar** listesine devam edin.
+1. **Başlat**'a gidin. 
 
 2. **Ayarlar** uygulamasını başlatın. Uygulama, uygulamalar listenizde hazır değilse, arama çubuğuna gidin ve "Ayarlar" yazın.
 
@@ -46,7 +46,7 @@ Bu adımlar, Windows 10, sürüm 1607 ve üzeri sürümlerde çalışan bir ciha
 
     ![İş veya okul hesabına erişimi seçme](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
-4. Kuruluşunuzun Intune oturum açma sayfasına ulaşmak için iş veya okul e-posta adresinizi girin. Ardından **İleri**' yi seçin.  
+4. Kuruluşunuzun Intune oturum açma sayfasına ulaşmak için iş veya okul e-posta adresinizi girin. Sonra **İleri**’yi seçin.  
 
 
    ![İş veya okul hesabınızı girme](./media/w10-enroll-rs1-set-up-work-or-school-account.png)  
@@ -72,7 +72,7 @@ Bu adımlar, Windows 10, sürüm 1607 ve üzeri sürümlerde çalışan bir ciha
 ## <a name="enroll-windows-10-version-1511-and-earlier-device"></a>Windows 10 sürüm 1511 ve önceki bir cihaz kaydetme  
 Bu adımlar, Windows 10, sürüm 1511 ve önceki sürümlerde çalışan bir cihazın nasıl kaydedileceğini açıklamaktadır.  
 
-1. **Başlat**'a gidin. Windows 10 Mobile cihazında çalışıyorsanız **tüm uygulamalar** listesine devam edin.
+1. **Başlat**'a gidin. 
 
 2. **Ayarlar** uygulamasını başlatın. Uygulama, uygulamalar listenizde hazır değilse, arama çubuğuna gidin ve "Ayarlar" yazın.
 
@@ -89,7 +89,7 @@ Bu adımlar, Windows 10, sürüm 1511 ve önceki sürümlerde çalışan bir cih
 6. İş veya okul kimlik bilgilerinizle oturum açın.  
 
 
-    ![Oturum aç](./media/W10-enroll-4-sign-in.png)  
+    ![Oturum açma](./media/W10-enroll-4-sign-in.png)  
 
 İş veya okul e-postalarınıza, dosyalarınıza veya diğer verilerinize hâlâ erişemiyor musunuz? Kayıt sırasında [hesap ile ilgili sorunların nasıl giderileceği](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account) hakkında bilgi edinin.  
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 08/12/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab05388b6062cb0e3bd7e249a6755a642f404b93
-ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.openlocfilehash: 258f2bddc86da7bdd9160ecc82f5fa96343ffe33
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437452"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179676"
 ---
 # <a name="microsoft-intune-protected-apps"></a>Microsoft Intune korumalı uygulamalar  
 
@@ -122,8 +122,6 @@ Intune’da tüm platformlar için uygulama eklemeyi öğrenmek için bkz.:
 - [iOS mağaza uygulamaları](store-apps-ios.md)
 - [iOS LOB uygulamaları](lob-apps-ios.md)
 - [Web uygulamaları (tüm platformlar için)](web-app.md)
-- [Windows Phone 8.1 mağaza uygulamaları](store-apps-windows-phone-8-1.md)
-- [Windows Phone LOB uygulamaları](lob-apps-windows-phone.md)
 - [Microsoft mağazası uygulamaları](store-apps-windows.md)
 - [Windows LOB uygulaması](lob-apps-windows.md)
 - [Windows 10 için Office 365 uygulamaları](apps-add-office365.md)

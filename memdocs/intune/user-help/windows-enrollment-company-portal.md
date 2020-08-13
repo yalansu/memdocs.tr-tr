@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/24/2019
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5e7cd5e5fa5f04e674b2fd9d37c8895b72372c4c
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2a79b5c433a286321426f2b14f63768e575b5556
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881396"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179477"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Intune Şirket Portalı Windows cihaz kaydı  
 
@@ -75,10 +75,8 @@ Kayıt adımları farklı Windows 10 cihazlarının sürümleri için farklılı
     * __1607 veya üzeri__: [ **Ayarlar**  >  **iş veya okul** rotası ayarlarını](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device)kullanarak cihazınızı kaydedin.   
     * __1511 veya önceki sürümler__: [ **Ayarlar**  >  **hesaplar** yolunu](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device)kullanarak cihazınızı kaydedin.  
 
-## <a name="enroll-non-windows-10-devices"></a>Windows 10 olmayan cihazları kaydetme  
-Şirket Portalı Web sitesi aracılığıyla desteklenen diğer Windows cihazlarını kaydetmek için aşağıdaki makaleleri kullanın:   
-* [Windows 8.1. veya Windows RT 8,1 cihazı](enroll-your-W81-or-rt81-windows.md)  
-* [Windows Phone 8,1 cihazı](enroll-your-wp81-windows.md)    
+## <a name="enroll-other-windows-devices"></a>Diğer Windows cihazlarını kaydetme  
+Şirket Portalı Web sitesi aracılığıyla [Windows 8.1. veya WINDOWS RT 8,1 cihazlarını](enroll-your-W81-or-rt81-windows.md) kaydedebilirsiniz. 
 
 ## <a name="it-administrator-support"></a>BT yöneticisi desteği  
 BT yöneticisiyseniz ve cihazları kaydederken sorun yaşıyorsanız, bkz. [Microsoft Intune Windows cihaz kaydı sorunlarını giderme](https://support.microsoft.com/help/4469913). Bu makalede, sık karşılaşılan hatalar, nedenler ve bunları çözmeye yönelik adımlar listelenir.  

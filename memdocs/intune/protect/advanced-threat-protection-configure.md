@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e19315f07d803e2aab53b3724fde85f1975c0c5
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ad02078d2a8b9926de463e01d3dcbc675c721e4a
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87264493"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179528"
 ---
 # <a name="configure-microsoft-defender-atp-in-intune"></a>Intune 'da Microsoft Defender ATP 'yi yapılandırma
 
@@ -60,7 +60,7 @@ Yalnızca Microsoft Defender ATP 'yi her kiracı için tek bir kez etkinleştirm
    - **Windows cihazları 10.0.15063 ve sonraki sürümlerini Microsoft Defender ATP** 'yi **Açık** olarak ayarla
    - **6.0.0 ve üzeri sürüm Android cihazlarını açık olarak Microsoft Defender ATP 'ye bağlama** **On**
 
-5. **Kaydet**'i seçin.
+5. **Kaydet**’i seçin.
 
 > [!TIP]
 > Yeni bir uygulamayı Intune mobil tehdit savunması ile tümleştirdiğinizde ve Intune bağlantısını etkinleştirdiğinizde, Intune Azure Active Directory içinde klasik bir koşullu erişim ilkesi oluşturur. [Microsoft Defender ATP](advanced-threat-protection.md) veya ek [MTD iş ortaklarından](mobile-threat-defense.md#mobile-threat-defense-partners)herhangi biri dahil olmak üzere tümleştirilen her MTD uygulaması yeni bir klasik koşullu erişim ilkesi oluşturur. Bu ilkeler yoksayılabilir, ancak düzenlenmemelidir, silinmemelidir veya devre dışı bırakılmalıdır.
@@ -92,10 +92,10 @@ Yapılandırma paketini kullanarak bir cihaz ekledikten sonra, bunu tekrar yapma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
-3. Bir **Ad** ve **Açıklama** girin.
-4. **Platform**için **Windows 10 ve üzeri** ' i seçin
-5. **Profil türü**Için **Microsoft Defender ATP (Windows 10 Masaüstü)** öğesini seçin.
-6. Şu ayarları yapılandırın:
+3. **Platform**için **Windows 10 ve üzeri** ' i seçin
+4. **Profil türü**Için, **Microsoft Defender ATP (Windows 10 Masaüstü)** öğesini seçin ve ardından **Oluştur**' u seçin.
+5. **Temel bilgiler** sayfasında, profil Için bir *ad* ve *Açıklama* (Isteğe bağlı) girin ve ardından **İleri**' yi seçin.
+6. **Yapılandırma ayarları** sayfasında, aşağıdakileri yapılandırın:
 
    - **Microsoft Defender ATP istemci yapılandırma paketi türü**: yapılandırma paketini profile **eklemek için Ekle** ' yi seçin. Yapılandırma paketini profilden çıkarmak için **Çıkar**’ı seçin.
   
@@ -107,8 +107,14 @@ Yapılandırma paketini kullanarak bir cihaz ekledikten sonra, bunu tekrar yapma
 
      [Microsoft uç noktası Configuration Manager kullanarak Windows 10 makineleri](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) eklemek, bu MICROSOFT Defender ATP ayarları hakkında daha fazla bilgi içerir.
 
-7. **Tamam**' ı seçin ve ardından profili oluşturan değişikliklerinizi kaydetmek için **oluşturun** .
-8. [Cihaz yapılandırma profilini,](../configuration/device-profile-assign.md) MICROSOFT Defender ATP ile değerlendirmek Istediğiniz cihazlara atayın.
+7. **Kapsam etiketleri** sayfasını açmak için **İleri ' yi** seçin. Kapsam etiketleri isteğe bağlıdır. Devam etmek için **İleri** seçeneğini belirleyin.
+
+8. **Atamalar** sayfasında, bu profili alacak grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](../configuration/device-profile-assign.md).
+
+   **İleri**’yi seçin.
+
+9. **Gözden geçir + oluştur** sayfasında, Işiniz bittiğinde **Oluştur**' u seçin. Oluşturduğunuz profilin ilke türünü seçtiğinizde yeni profil listede görüntülenir.
+ **Tamam**' a tıklayın ve ardından profil oluşturan değişikliklerinizi kaydetmek için **oluşturun** .
 
 ### <a name="onboard-android-devices"></a>Android cihazları ekleme
 

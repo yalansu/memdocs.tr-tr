@@ -6,28 +6,29 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 4a95e575-2c63-4bfc-b9c4-f0a132eef618
+ROBOTS: NOINDEX
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26baded3ebf12b770d8e1a70a3ab9251381afa03
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4da59e9480a32e44733296c348085316c29c9f37
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987868"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179410"
 ---
 # <a name="add-windows-phone-81-store-apps-to-microsoft-intune"></a>Windows Phone 8.1 mağazası uygulamalarını Microsoft Intune’a ekleme
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 Bir cihaza veya kullanıcı grubuna uygulama atamadan önce uygulamayı ilk olarak Microsoft Intune’a eklemeniz gerekir. 
 
@@ -37,14 +38,14 @@ Aşağıdakileri yaparak, Azure portalından Intune’a bir Windows Phone 8.1 ma
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, kullanılabilir **Mağaza uygulama** türleri altında **Windows Phone 8,1 mağaza uygulaması**' nı seçin.
-4. **Seç**' e tıklayın.<br>
+4. **Seç**’e tıklayın.<br>
    **Uygulama ekleme** adımları görüntülenir.
 5. Windows Phone 8,1 mağaza uygulamalarına yönelik **uygulama bilgilerini** yapılandırmak için [Microsoft Store](https://www.microsoft.com/store/apps/windows-phone) ' a gidin ve dağıtmak istediğiniz uygulamayı arayın. Uygulama sayfasını görüntüleyin ve uygulama ayrıntılarını bir yere göz önünde yapın. 
 6. **Uygulama bilgileri** sayfasında, uygulama ayrıntılarını ekleyin:
     - **Ad**: uygulamanın şirket portalında görüntülenecek olan adını girin. Kullandığınız uygulama adlarının benzersiz olduğundan emin olun. Bir uygulama adı iki kez kullanılırsa, Şirket Portalı’nda kullanıcılara yalnızca bir ad gösterilir.
     - **Açıklama**: Uygulama için bir açıklama girin. Bu açıklama Şirket Portalı’nda kullanıcılara görüntülenir.Açıklama şirket portalında kullanıcılara görüntülenir.
     - **Yayımcı**: Uygulama yayımcısının adını girin.
-    - **Uygulama mağazası URL’si**: Oluşturmak istediğiniz uygulamanın App Store URL’sini yazın.
+    - **Uygulama Mağazası URL 'si**: oluşturmak Istediğiniz uygulamanın uygulama mağazası URL 'sini yazın.
     - **Kategori**: İsteğe bağlı olarak, yerleşik uygulama kategorilerinden veya kendi oluşturduğunuz kategorilerden birini ya da birkaçını seçin. Böylelikle, Şirket Portalı’na göz atarken kullanıcıların uygulamayı bulmaları kolaylaşır.
     - **Bunu şirket portalı öne çıkan uygulama olarak göster**: kullanıcılar uygulamalara gözatarken, uygulama paketini Şirket portalının ana sayfasında göze çarpacak şekilde görüntülemek için bu seçeneği belirleyin.
     - **Bilgi URL’si**: İsteğe bağlı olarak, bu uygulama hakkında bilgi içeren bir web sitesinin URL’sini girin. URL, şirket portalında kullanıcılara görüntülenir.

@@ -1,12 +1,12 @@
 ---
-title: Windows ve Windows Phone uygulamalarını dışarıdan yükleme
+title: Windows uygulamalarını dışarıdan yükleme
 titleSuffix: Microsoft Intune
 description: Intune’u kullanarak iş kolu uygulamalarını dağıtmak için bunları nasıl imzalayacağınızı öğrenin.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -16,12 +16,12 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8194c3fcc90942b791d5300a37b3c093a5229cc9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: da43cab373021107a940ce0bd71c0f4986d5e907
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989592"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179630"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Intune ile Windows cihazlarına dağıtmak için iş kolu uygulamalarını imzalayın
 
@@ -53,7 +53,7 @@ Uygulamayı kullanıcılara veya cihazlara gereken şekilde dağıtırsanız, ı
 Windows 10 cihazınız sertifika yetkilisine zaten güvenmezse, appx paketinizi imzaladıktan ve Intune hizmetine yükledikten sonra, kod imzalama sertifikasını Intune portalına yüklemeniz gerekir:
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Kiracı Yönetimi**  >  **bağlayıcıları ve belirteçleri**  >  **Windows Enterprise sertifikası**' na tıklayın.
+2. **Kiracı Yönetimi**bağlayıcıları ' na tıklayın  >  **ve**  >  **Windows Kurumsal sertifikalarını**belirteçler yapın.
 3. **Kod imzalama sertifika dosyası**altında bir dosya seçin.
 4. *. Cer* dosyanızı seçin ve **Aç**' a tıklayın.
 5. Sertifika dosyanızı Intune 'a eklemek için **karşıya yükle** ' ye tıklayın.
@@ -64,13 +64,13 @@ Intune yalnızca karşıya yüklenen en son. cer dosyasını dağıtır. Kurulu�
 
 ## <a name="how-to-renew-the-symantec-enterprise-code-signing-certificate"></a>Symantec kurumsal kod imzalama sertifikasını yenileme
 
-Windows Phone 8,1 mobil uygulamaları dağıtmak için kullanılan sertifika, 28 2019 Şubat tarihinde kaldırılmıştır ve artık Symantec 'ten yenileme için kullanılamaz. WIndows 10 Mobile 'a dağıtıyorsanız, [Windows 10 dışarıdan yükleme](app-sideload-windows.md#windows-10-sideloading) yönergelerini Izleyerek Symantec masaüstü kurumsal kod imzalama sertifikaları kullanmaya devam edebilirsiniz.
+Windows Phone 8,1 mobil uygulamaları dağıtmak için kullanılan sertifika, 28 2019 Şubat tarihinde kaldırılmıştır ve artık Symantec 'ten yenileme için kullanılamaz. Ayrıca, Intune, 10 Ağustos 2020 itibariyle Windows 10 Mobile desteğini de sonlandırdı.
 
 ## <a name="how-to-install-the-updated-certificate-for-line-of-business-lob-apps"></a>İş kolu (LOB) uygulamaları için güncelleştirilmiş sertifika yükleme
 
 Windows Phone 8.1
 
-Intune hizmeti, mevcut Symantec mobil kurumsal kod imzalama sertifikasının süresi dolduktan sonra bu platform için LOB uygulamalarını artık dağıtmaz. SD kart kullanılarak veya dosyayı cihaza indirerek imzasız XAP/APPX dosyalarını dışarıdan yüklemek yine de mümkün olacaktır. Daha fazla bilgi için bkz. [WINDOWS Phone XAP dosyalarını yüklemek](https://answers.microsoft.com/en-us/mobiledevices/forum/mdlumia-mdapps/how-to-install-xap-file-in-windows-phone-8/da09ee72-51ae-407c-9b85-bc148df89280).
+Intune hizmeti, mevcut Symantec mobil kurumsal kod imzalama sertifikasının süresi dolduktan sonra bu platform için LOB uygulamalarını artık dağıtmaz.
 
 Windows 8.1 Masaüstü/Windows 10 Masaüstü & Mobile
 
@@ -102,7 +102,7 @@ Intune’un Evrensel uygulamaların bağımlılıklarını nasıl işlediği hak
 
 ### <a name="how-do-i-update-the-company-portal-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Eski uygulamaları mağazadan zaten yüklediklerinde, kullanıcılarımın cihazlarındaki Şirket Portalı güncelleştirmek Nasıl yaparım? mı?
 
-Kullanıcılarınız, Windows 8.1 veya Windows Phone 8.1 Şirket Portalı uygulamalarını Mağaza'dan zaten yüklemişlerse sizin ya da kullanıcınızın herhangi bir işlemde bulunmasına gerek kalmadan bu uygulamalar otomatik olarak yeni sürüme güncelleştirilecektir. Bu güncelleştirme gerçekleşmezse, kullanıcılarınızdan cihazlarında Mağaza uygulamaları için otomatik güncelleştirmeleri etkinleştirdiklerini denetlemelerini isteyin.
+Kullanıcılarınız Windows 8.1 Şirket Portalı uygulamaları mağazadan zaten yüklediyse, sizin veya kullanıcınız tarafından hiçbir eylemde bulunması gerekmeden otomatik olarak yeni sürüme güncelleştirilmeleri gerekir. Bu güncelleştirme gerçekleşmezse, kullanıcılarınızdan cihazlarında Mağaza uygulamaları için otomatik güncelleştirmeleri etkinleştirdiklerini denetlemelerini isteyin.
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Dışarıdan yüklenen Windows 8.1 Şirket Portalı uygulamamı Windows 10 Şirket Portalı uygulamasına nasıl yükseltebilirim?
 
@@ -112,9 +112,9 @@ Uygulamayı dışarıdan yüklemeniz gerekiyorsa ve Windows 8.1 Şirket Portalı
 
 Uygulamayı dışarıdan yüklemeniz gerekiyorsa ve Windows 8.1 Şirket Portalı’nı Symantec kod imzalama sertifikası ile imzalayıp dağıttıysanız aşağıdaki bölümde sunulan adımları izleyin.  
 
-### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Dışarıdan yüklenmiş ve imzalı Windows Phone 8.1 veya Windows 8.1 Şirket Portalı uygulamamı Windows 10 Şirket Portalı uygulamasına nasıl yükseltebilirim?
+### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>İmzalı ve dışarıdan yüklenen Windows 8.1 Şirket Portalı uygulamamı Windows 10 Şirket Portalı uygulamasına yükseltmek Nasıl yaparım??
 
-Önerilen geçiş yolumuz, dağıtım eylemini "Kaldır" olarak ayarlayarak Windows Phone 8,1 Şirket Portalı uygulaması veya Windows 8.1 Şirket Portalı uygulaması için mevcut dağıtımı silmektir. Bunu yaptıktan sonra Windows 10 Şirket Portalı uygulaması normal bir biçimde dağıtılabilir.  
+Önerilen geçiş yolumuz, dağıtım eylemini "Kaldır" olarak ayarlayarak Windows 8.1 Şirket Portalı uygulaması için mevcut dağıtımı silmektir. Bunu yaptıktan sonra Windows 10 Şirket Portalı uygulaması normal bir biçimde dağıtılabilir.  
 
 Aksi takdirde, yükseltme yoluna uyulduğundan emin olmak için Windows 10 Şirket Portalı uygulamasının uygun şekilde güncelleştirilmesi ve imzalanması gerekir.  
 
@@ -130,7 +130,7 @@ Uygulamayı şu şekilde nasıl imzalayıp dağıtırsınız:
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | InputWin10AppxBundle  |                                             Kaynak appxbundle dosyasının bulunduğu yol.                                              |
 | OutputWin10AppxBundle |                                                  İmzalı appxbundle dosyası için çıkış yolu.                                                  |
-|       Win81Appx       |                          Windows 8.1 veya Windows Phone 8.1 Şirket Portalı (.APPX) dosyasının bulunduğu yol.                           |
+|       Win81Appx       |                          Windows 8.1 Şirket Portalı (. APPX) dosyası bulunur.                           |
 |      PfxFilePath      |                                   Symantec Enterprise Mobil Kod İmza Sertifikası (.PFX) dosyasının yolu.                                    |
 |      PfxPassword      |                                     Symantec Enterprise Mobil Kod İmza Sertifikası’nın parolası.                                      |
 |      PublisherId      |      Kuruluşun Yayımcı Kimliği. Yoksa, Symantec Kurumsal Mobil Kod İmzalama Sertifikası’nın 'Konu' alanı kullanılır.       |
