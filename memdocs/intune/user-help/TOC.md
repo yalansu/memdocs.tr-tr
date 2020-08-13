@@ -135,7 +135,6 @@
 #### [Windows kayıt anlaşması ile çalışmaya başlama](windows-enrollment-company-portal.md)
 #### [Windows 10 cihazını kaydetme](enroll-windows-10-device.md)
 #### [Windows 8.1 veya Windows RT 8.1 cihazını kaydetme](enroll-your-w81-or-rt81-windows.md)
-#### [Windows Phone 8.1 cihazını kaydetme](enroll-your-wp81-windows.md)
 ### [Cihazınızı şifreleme](encrypt-your-device-windows.md)
 ### [Cihaz parolasını ayarlama veya değiştirme](set-or-change-your-password-windows.md)
 ### [Cihazınızın Intune kaydını kaldırma](unenroll-your-device-from-intune-windows.md)
