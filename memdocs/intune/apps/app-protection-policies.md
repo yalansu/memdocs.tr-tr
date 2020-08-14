@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4beb6c5a91f9f379006df482ff10066831389b6
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 1cb05cb518d4edfb443bf4f70ff1c51154e17f4c
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216408"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217652"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Uygulama koruma ilkelerini oluşturma ve atama
 
@@ -60,10 +60,10 @@ Kuruluşunuzun iş kolu (LOB) uygulamalarını uygulama koruma ilkelerine hazır
 3. **Ilke oluştur** ' u seçin ve **IOS/ıpados** ya da **Android**' i seçin. **Ilke oluştur** bölmesi görüntülenir.
 4. **Temel bilgiler** sayfasında, aşağıdaki değerleri ekleyin:
 
-    | Değer | Description |
+    | Değer | Açıklama |
     |--------------|------------------------------------------------|
-    | Name | Bu uygulama koruma ilkesinin adı. |
-    | Description | Seçim Bu uygulama koruma ilkesinin açıklaması. |
+    | Ad | Bu uygulama koruma ilkesinin adı. |
+    | Açıklama | Seçim Bu uygulama koruma ilkesinin açıklaması. |
 
 
     **Platform** değeri, yukarıdaki seçeneğe göre ayarlanır.
@@ -73,9 +73,9 @@ Kuruluşunuzun iş kolu (LOB) uygulamalarını uygulama koruma ilkelerine hazır
 5. **İleri** ' ye tıklayarak **uygulamalar** sayfasını görüntüleyin.<br>
     **Uygulamalar** sayfası, bu ilkeyi farklı cihazlardaki uygulamalara nasıl uygulamak istediğinizi seçmenizi sağlar. En az bir uygulama eklemeniz gerekir.<p>
 
-    | Değer/seçenek | Description |
+    | Değer/seçenek | Açıklama |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Tüm cihaz türlerindeki uygulamalar için hedef | İlkenizi herhangi bir yönetim durumundaki cihazlarda uygulamalara hedeflemek için bu seçeneği kullanın. Belirli cihaz türlerindeki uygulamaları hedeflemek için **Hayır** ' ı seçin. Bilgi için bkz. [cihaz yönetim durumuna bağlı olarak hedef uygulama koruma ilkeleri](#target-app-protection-policies-based-on-device-management-state) |
+    | Tüm cihaz türlerindeki uygulamalar için hedef | İlkenizi herhangi bir yönetim durumundaki cihazlarda uygulamalara hedeflemek için bu seçeneği kullanın. Belirli cihaz türlerindeki uygulamaları hedeflemek için **Hayır**  ' ı seçin. Bilgi için bkz. [cihaz yönetim durumuna bağlı olarak hedef uygulama koruma ilkeleri](#target-app-protection-policies-based-on-device-management-state) |
     |     Cihaz türleri | Bu ilkenin MDM yönetilen cihazlara veya yönetilmeyen cihazlara uygulanıp uygulanmayacağını belirtmek için bu seçeneği kullanın. İOS/ıpados uygulama ilkeleri için **yönetilmeyen** ve **yönetilen** cihazlar arasından seçim yapın. Android uygulama ilkeleri için **yönetilmeyen**, **Android Cihaz Yöneticisi**ve **Android kurumsal**' i seçin.  |
     | Ortak uygulamalar | Hedeflenecek uygulamaları seçmek için **ortak uygulamaları seç** ' e tıklayın. |
     | Özel uygulamalar | Bir paket KIMLIĞINE göre hedeflemek üzere özel uygulamalar seçmek için **özel uygulamalar Seç** ' e tıklayın. |
@@ -103,7 +103,7 @@ Kuruluşunuzun iş kolu (LOB) uygulamalarını uygulama koruma ilkelerine hazır
     - **Android koşullu başlatma** -bilgi için bkz. [Android uygulama koruma Ilkesi ayarları-koşullu başlatma](app-protection-policy-settings-android.md#conditional-launch).
 
 9. **Atamalar** sayfasını göstermek için **İleri** ' ye tıklayın.<br>
-   **Atamalar** sayfası, uygulama koruma ilkesini Kullanıcı gruplarına atamanıza olanak tanır.
+   **Atamalar** sayfası, uygulama koruma ilkesini Kullanıcı gruplarına atamanıza olanak tanır. İlkenin etkili olması için ilkeyi bir kullanıcı grubuna uygulamanız gerekir.
 
 10. **İleri** ' ye tıklayın ve bu uygulama koruma ilkesi için girdiğiniz değerleri ve ayarları gözden geçirin.
 
@@ -111,6 +111,9 @@ Kuruluşunuzun iş kolu (LOB) uygulamalarını uygulama koruma ilkelerine hazır
 
     > [!TIP]
     > Bu ilke ayarları, yalnızca uygulamalar iş bağlamında kullanılırken uygulanır. Son kullanıcı, uygulamayı kişisel bir görev için kullanırken bu ilkelerden etkilenmez. Yeni bir dosya oluşturduğunuzda bunun kişisel bir dosya olarak kabul edildiğini unutmayın.
+
+    > [!IMPORTANT]
+    > Uygulama koruma ilkelerinin mevcut cihazlara uygulanması zaman alabilir. Son kullanıcılar, uygulama koruma ilkesi uygulandığında cihazda bir bildirim görür. Koşullu erişim kurallarını uygulamadan önce uygulama koruma ilkelerinizi cihazlara uygulayın.
 
 Son kullanıcılar uygulamaları App Store veya Google Play’den indirebilir. Daha fazla bilgi için bkz.
 * [Android uygulamanız uygulama koruma ilkeleriyle yönetildiğinde beklemeniz gerekenler](../fundamentals/end-user-mam-apps-android.md)
@@ -131,9 +134,9 @@ Değişikliklerin etkisini hemen görmek için, son kullanıcının uygulama otu
 
 4. **Uygulamalar** sayfası, bu ilkeyi farklı cihazlardaki uygulamalara nasıl uygulamak istediğinizi seçmenizi sağlar. En az bir uygulama eklemeniz gerekir.<p>
     
-    | Değer/seçenek | Description |
+    | Değer/seçenek | Açıklama |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Tüm cihaz türlerindeki uygulamalar için hedef | İlkenizi herhangi bir yönetim durumundaki cihazlarda uygulamalara hedeflemek için bu seçeneği kullanın. Belirli cihaz türlerindeki uygulamaları hedeflemek için **Hayır** ' ı seçin. Bu ayar için ek uygulama yapılandırması gerekli olabilir. Daha fazla bilgi için bkz. [Cihaz yönetim durumuna bağlı olarak uygulama koruma ilkeleri hedefleme](#target-app-protection-policies-based-on-device-management-state). |
+    | Tüm cihaz türlerindeki uygulamalar için hedef | İlkenizi herhangi bir yönetim durumundaki cihazlarda uygulamalara hedeflemek için bu seçeneği kullanın. Belirli cihaz türlerindeki uygulamaları hedeflemek için **Hayır**  ' ı seçin. Bu ayar için ek uygulama yapılandırması gerekli olabilir. Daha fazla bilgi için bkz. [Cihaz yönetim durumuna bağlı olarak uygulama koruma ilkeleri hedefleme](#target-app-protection-policies-based-on-device-management-state). |
     |     Cihaz türleri | Bu ilkenin MDM yönetilen cihazlara veya yönetilmeyen cihazlara uygulanıp uygulanmayacağını belirtmek için bu seçeneği kullanın. İOS/ıpados uygulama ilkeleri için **yönetilmeyen** ve **yönetilen** cihazlar arasından seçim yapın. Android uygulama ilkeleri için **yönetilmeyen**, **Android Cihaz Yöneticisi**ve **Android kurumsal**' i seçin.  |
     | Ortak uygulamalar | Hedeflenecek uygulamaları seçmek için **ortak uygulamaları seç** ' e tıklayın. |
     | Özel uygulamalar | Bir paket KIMLIĞINE göre hedeflemek üzere özel uygulamalar seçmek için **özel uygulamalar Seç** ' e tıklayın. |

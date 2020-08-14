@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eccb45ee4a0aade230ba8c18f68c4f0bc992e011
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 15ba22e209da1fd6ab828c20928a34a7e6aab52f
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491329"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217672"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Silme, kullanımdan kaldırma veya el ile kaydını kaldırma yoluyla cihaz kaldırma
 
@@ -167,7 +167,8 @@ Intune’u etkin olmayan, eski veya yanıt vermeyen cihazları otomatik olarak s
 3. **Bu çok gün için iade edilmemiş cihazlarda silme** kutusuna 30 ile 270 arasında bir sayı girin.
 4. **Kaydet**'i seçin.
 
-
+> [!NOTE]
+> Cihaz temizleme kuralları, [tam olarak yönetilen](https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll), [adanmış](https://docs.microsoft.com/mem/intune/enrollment/android-kiosk-enroll)ve [şirkete ait iş profili](https://docs.microsoft.com/mem/intune/enrollment/android-corporate-owned-work-profile-enroll)gibi Android kurumsal senaryolarında kullanılamaz. 
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Azure Active Directory portalından cihazları silme
 

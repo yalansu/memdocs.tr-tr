@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 08/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8318e6dc364d0dfbf38ac278938018b80f703b58
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 40d8e62e73e67d7db1978500d77118dfb1257748
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79326234"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217569"
 ---
 # <a name="understand-app-protection-policy-delivery-timing"></a>Uygulama koruma Ilkesi teslim zamanlamasını anlama
 
@@ -36,7 +36,7 @@ Uygulama koruma ilkesi teslimi, kullanıcılarınız için lisans durumuna ve In
 |    Kullanıcı durumu    |    Uygulama koruma davranışı     |    Yeniden deneme aralığı (bkz. nota bakın)    |    Bunun nedeni nedir?    |
 |-----------------------------------------------------|-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 |    Kiracı eklendi değil    |    Sonraki yeniden deneme aralığı için bekleyin.  Uygulama koruması Kullanıcı için etkin değil.    |    24 saat    |    Intune için kiracınızı kurmayan bir durum oluşur.    |
-|    Kullanıcı lisanslı değil     |    Sonraki yeniden deneme aralığı için bekleyin.  Uygulama koruması Kullanıcı için etkin değil.     |    12 saat, ancak Android cihazlarda bu Aralık, Intune uygulama SDK 'Sı sürüm 5.6.0 veya üstünü gerektirir. Aksi takdirde, Androd cihazları için Aralık 24 saattir.   |    Kullanıcı Intune için lisanslanmadığı zaman gerçekleşir.    |
+|    Kullanıcı lisanslı değil     |    Sonraki yeniden deneme aralığı için bekleyin.  Uygulama koruması Kullanıcı için etkin değil.     |    12 saat, ancak Android cihazlarda bu Aralık, Intune uygulama SDK 'Sı sürüm 5.6.0 veya üstünü gerektirir. Aksi takdirde, Android cihazlarda Aralık 24 saattir.   |    Kullanıcı Intune için lisanslanmadığı zaman gerçekleşir.    |
 |    Kullanıcı, uygulama koruma Ilkeleri atamadı    |    Sonraki yeniden deneme aralığı için bekleyin.  Uygulama koruması Kullanıcı için etkin değil.    |    12 saat        |    Kullanıcıya uygulama ayarları atamadığınızda gerçekleşir.    |
 |    Kullanıcı tarafından atanan uygulama koruma Ilkeleri ancak uygulama koruma Ilkelerinde tanımlı değil   |    Sonraki yeniden deneme aralığı için bekleyin.  Uygulama koruması Kullanıcı için etkin değil.    |    12 saat        |    Uygulamayı uygulamaya eklemediğiniz zaman gerçekleşir.    |
 |    Kullanıcı Intune MAM için başarıyla kaydedildi    |    Uygulama koruması her ilke ayarı için uygulanır.    Güncelleştirmeler, yeniden deneme aralığına göre yapılır    |    Intune hizmeti, Kullanıcı yüküne göre tanımlanır.    Genellikle 30 dakika.     |    Kullanıcı MAM yapılandırması için Intune hizmetine başarıyla kaydolursa oluşur.    |

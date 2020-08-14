@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/10/2020
+ms.date: 08/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee6ccebc9610f74f9f34c08bc8204e652e0a01db
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: d47f1e121a5010a17d213d21d3208977e8f75514
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85092882"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217627"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Intune’da Windows 10 ve üzeri cihazlar için Wi-Fi ayarları ekleme
 
@@ -101,12 +101,14 @@ Kurumsal profiller, Wi-Fi bağlantılarının kimliğini doğrulamak için Geni�
   - **Zaman aşımından önce kimlik doğrulanması gereken en uzun süre**: Ağda kimlik doğrulaması yapmadan önce beklenecek saniye sayısı üst sınırını (1-120 saniye arası) girin.
   - **Windows'un kullanıcıdan ek kimlik doğrulama kimlik bilgileri istemesine izin ver**: **Evet** seçildiğinde, kimlik doğrulama yöntemi gerektiriyorsa Windows sisteminin kullanıcıdan ek kimlik bilgileri istemesine izin verilir. Bu istemleri gizlemek için **Hayır**'ı seçin.
 
-- **İkili ana anahtar önbelleğe almayı etkinleştir**: Kimlik doğrulamasında kullanılan PMK'yi önbelleğe almak için **Evet**'i seçin. Bu önbellek normalde ağda kimlik doğrulamasının daha hızlı tamamlanmasını sağlar. Wi-Fi ağına her bağlantıda karşılıklı kimlik doğrulamayı zorlamak için **Hayır**'ı seçin.
+- **İkili ana anahtar önbelleğe almayı etkinleştir**: Kimlik doğrulamasında kullanılan PMK'yi önbelleğe almak için **Evet**'i seçin. Bu önbellek normalde ağda kimlik doğrulamasının daha hızlı tamamlanmasını sağlar. Wi-Fi ağına her bağlantıda karşılıklı kimlik doğrulamayı zorlamak için **Hayır**'ı seçin. **Ön kimlik doğrulamayı etkinleştir** ayarını kullanmak için **Evet**' i seçin.
 
   - **Bir PMK'nin önbellekte depolanacağı en uzun süre**: İkili ana anahtarın (PMK) önbellekte depolanacağı dakika sayısını (5-1440 dakika arası) girin.
   - **Önbellekte depolanacak en fazla PMK sayısı**: Önbellekte depolanacak anahtar sayısını (1-255 arası) girin.
 
 - **Ön kimlik doğrulamasını etkinleştir**: Ön kimlik doğrulaması profilin bağlantı öncesinde profildeki ağ için tüm erişim noktalarında kimlik doğrulaması yapmasını sağlar. Erişim noktaları arasında hareket ederken, ön kimlik doğrulaması kullanıcının veya cihazların daha hızlı yeniden bağlanmasını sağlar. Profilin aralık içinde yer alan bu ağın tüm erişim noktalarında kimlik doğrulaması yapması için **Evet**'i seçin. Kullanıcı veya cihazın her erişim noktasında ayrıca kimlik doğrulaması yapmasını gerektirmek için **Hayır**'ı seçin.
+
+  Bu ayarı kullanmak için, **ikili ana anahtar (PMK) önbelleğe almayı etkinleştir** ' i **Evet**olarak ayarlayın.
 
   - **En yüksek ön kimlik doğrulaması denemesi**: Ön kimlik doğrulaması için yapılacak deneme sayısını (1-16 arası) girin.
 

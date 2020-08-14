@@ -6,7 +6,7 @@ keywords: Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fd0fbcd00ba4d6ab0e61b1d673cc13e7f8f828f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: fe19721210b4221e4e86394be0a4e3663a9f0b77
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987961"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217294"
 ---
 # <a name="add-ios-store-apps-to-microsoft-intune"></a>iOS mağaza uygulamalarını Microsoft Intune’a ekleme
 
@@ -44,7 +44,7 @@ Bu yöntemi kullanarak yalnızca App Store’da ücretsiz olan uygulamaları ata
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, kullanılabilir **Mağaza uygulama** türleri altında **iOS Mağazası uygulaması**' nı seçin.
-4. **Seç**' e tıklayın.<br>
+4. **Seç**’e tıklayın.<br>
    **Uygulama ekleme** adımları görüntülenir.
 5. **App Store’da Ara**’yı seçin.
 6. **App Store 'Da ara** bölmesinde, App Store ülke/bölge yerel ayarını seçin.

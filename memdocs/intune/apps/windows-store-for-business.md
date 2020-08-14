@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ed7852a5aaf09a99823035d12bf2aa9139c1c02
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9f92fe778f640cccfc0026a6bad2c7f92cdce4d5
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990236"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217365"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Toplu satın alınan uygulamaları Microsoft Store Iş için Microsoft Intune ile yönetme
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-[İş İçin Microsoft Mağazası](https://www.microsoft.com/business-store), kuruluşunuz için tek tek veya toplu olarak uygulamaları bulabileceğiniz ve satın alabileceğiniz bir yer sağlar. Mağazayı Microsoft Intune’a bağlayarak toplu satın alınan uygulamaları Azure portalından yönetebilirsiniz. Örneğin:
+[İş İçin Microsoft Mağazası](https://www.microsoft.com/business-store), kuruluşunuz için tek tek veya toplu olarak uygulamaları bulabileceğiniz ve satın alabileceğiniz bir yer sağlar. Mağazayı Microsoft Intune’a bağlayarak toplu satın alınan uygulamaları Azure portalından yönetebilirsiniz. Örnek:
 
 * Satın almış olduğunuz (veya ücretsiz) uygulamaların listesini Intune ile eşzamanlı olarak saklayabilirsiniz.
 * Eşitlenen uygulamalar, Intune yönetim konsolunda gösterilir; bu uygulamaları herhangi bir uygulama gibi atayabilirsiniz.
@@ -53,7 +53,7 @@ ms.locfileid: "83990236"
 - Kaydedilen cihazlar Windows 10’un 1511 sürümünü veya sonraki bir sürümü kullanıyor olmalıdır.
 
 > [!NOTE]
-> Yönetilen cihazlarda depoyu devre dışı bırakırsanız (el ile, ilke veya grup ilkesi aracılığıyla), çevrimiçi lisanslı uygulamalar yüklenemeyecektir.
+> Yönetilen cihazlarda depoya erişimi devre dışı bırakırsanız (el ile, ilke veya grup ilkesi aracılığıyla), çevrimiçi lisanslı uygulamalar yüklenemeyecektir.
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>İş İçin Microsoft Mağazası hesabınızı Intune’la ilişkilendirme
 

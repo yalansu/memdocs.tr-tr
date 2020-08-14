@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/16/2020
+ms.date: 08/13/2020
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 893981700ede9587a980faa0e4d6b0384c24e3d4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 778937ed360a2271c342c55bdd03e33ddb5bdb25
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80401496"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217553"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Hızlı Başlangıç: Microsoft Intune'u ücretsiz deneyin
 
@@ -31,7 +31,7 @@ Microsoft Intune, cihaz ve uygulamaları yöneterek iş gücünüzün şirket ve
 
 Intune, Microsoft Endpoint Manager Yönetim Merkezi kullanılarak yönetilen güvenli bir bulut tabanlı hizmetten mobil cihaz yönetimi (MDM) ve mobil uygulama yönetimi (MAM) sağlar. Intune kullanarak işgücünüzün şirket kaynaklarının (veriler, cihazlar ve uygulamalar) yapılandırmasının, erişiminin ve güncelleştirmesinin şirketinizin uyumluluk ilke ve gereksinimlerini karşılayacak şekilde doğru olmasını sağlayabilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 Microsoft Intune'u kurmadan önce aşağıdaki gereksinimleri gözden geçirin:
 
 - [Desteklenen işletim sistemleri ve tarayıcılar](supported-devices-browsers.md)
@@ -64,8 +64,8 @@ Intune'u 30 gün boyunca ücretsiz deneyebilirsiniz. Zaten bir iş veya okul hes
 
 Portalda zaten oturum açmadıysanız, aşağıdaki adımları izleyin:
 
-1. Yeni bir tarayıcı penceresi açın ve adres **https://endpoint.microsoft.com** çubuğuna yazın. 
-2. Oturum açmak için yukarıdaki adımlarda verilen kullanıcı KIMLIĞINI kullanın (*yourID@yourdomain*. onmicrosoft.com).
+1. Yeni bir tarayıcı penceresi açın ve **https://endpoint.microsoft.com** Adres çubuğuna yazın. 
+2. Oturum açmak için yukarıdaki adımlarda verilen kullanıcı KIMLIĞINI kullanın ( *yourID@yourdomain* . onmicrosoft.com).
 
     ![Portal oturum açma sayfasının görüntüsü](./media/free-trial-sign-up/azure-portal-signin.png)
 
@@ -86,8 +86,8 @@ Microsoft Uç Nokta Yöneticisi 'nde oturum açtıktan sonra, MDM yetkilisini he
 
 ### <a name="to-set-the-mdm-authority-to-intune-follow-these-steps"></a>MDM yetkilisini Intune olarak ayarlamak için şu adımları izleyin:
 
-1. Yeni bir tarayıcı penceresi açın ve adres **https://portal.azure.com** çubuğuna yazın. 
-2. **Tüm hizmetler** > **Microsoft Intune**seçin.
+1. Yeni bir tarayıcı penceresi açın ve **https://portal.azure.com** Adres çubuğuna yazın. 
+2. **Tüm hizmetler**  >  **Microsoft Intune**seçin.
 3. Cihaz yönetimini etkinleştirmediğinizi gösteren başlığı veya başlığı göremiyorsanız **Cihaz kaydı**’nı seçin. Cihaz yönetimini henüz etkinleştirmediyseniz **MDM Yetkilisi seçin** dikey penceresi görüntülenir.
 
     > [!NOTE]
@@ -108,7 +108,7 @@ Yukarıda belirtildiği gibi, kuruluşunuzun, **. onmicrosoft.com**olmadan kulla
 
 1. [Microsoft 365 Yönetim Merkezi](https://admin.microsoft.com) ' ne gidin ve yönetici hesabınızı kullanarak oturum açın.
 
-2. Gezinti bölmesinde, **Kurulum** > **etki alanları** > **etki alanı Ekle**' yi seçin.
+2. Gezinti bölmesinde, **Kurulum**  >  **etki alanları**  >  **etki alanı Ekle**' yi seçin.
 
 3. Özel etki alanı adınızı yazın. Ardından **İleri**' yi seçin.
 
@@ -126,8 +126,8 @@ Yukarıda belirtildiği gibi, kuruluşunuzun, **. onmicrosoft.com**olmadan kulla
 ## <a name="admin-experiences"></a>Yönetici deneyimi
 
 En sık kullanacağınız iki Portal vardır:
-- Microsoft Endpoint Manager Yönetim Merkezi ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)), [Intune 'un yeteneklerini](what-is-intune.md)keşfedebileceğiniz yerdir. Bu, yöneticinin Intune ile çalıştığı yerdir.
-- Microsoft 365 Yönetim Merkezi ([https://admin.microsoft.com](https://admin.microsoft.com)), bu kullanıcı için Azure Active Directory kullanmıyorsanız kullanıcıları ekleyebileceğiniz ve yönetebileceğiniz yerdir. Ayrıca hesabınızın faturalama ve destek gibi diğer yönlerini de yönetebilirsiniz.
+- Microsoft Endpoint Manager Yönetim Merkezi ( [https://endpoint.microsoft.com/](https://endpoint.microsoft.com/) ), [Intune 'un yeteneklerini](what-is-intune.md)keşfedebileceğiniz yerdir. Bu, yöneticinin Intune ile çalıştığı yerdir.
+- Microsoft 365 Yönetim Merkezi ( [https://admin.microsoft.com](https://admin.microsoft.com) ), bu kullanıcı için Azure Active Directory kullanmıyorsanız kullanıcıları ekleyebileceğiniz ve yönetebileceğiniz yerdir. Ayrıca hesabınızın faturalama ve destek gibi diğer yönlerini de yönetebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

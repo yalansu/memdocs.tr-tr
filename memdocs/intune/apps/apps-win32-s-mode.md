@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/08/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92aa9705fc1a59a288db08a5583bc5b83de111e2
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ac0e1089b91fa6404ab9582b7f64ae6f60bf217b
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985921"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216980"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>S modundaki cihazlarda Win32 uygulamalarını etkinleştirme
 
-[Windows 10 S modu](https://docs.microsoft.com/windows/deployment/s-mode) , yalnızca mağaza uygulamalarını çalıştıran kilitli bir işletim sistemidir. Varsayılan olarak, Windows S modu cihazları Win32 uygulamalarının yüklenmesine ve yürütülmesine izin vermez. Bu cihazlar tek bir *Win 10s temel ilkesi*içerir ve bu, S modu cihazının üzerinde herhangi bir Win32 uygulaması çalıştırmasını kilitler. Ancak, Intune 'da **S modu ek ilkesi** oluşturup kullanarak, Windows 10 S modunda yönetilen cihazlara Win32 uygulamaları yükleyip çalıştırabilirsiniz. [Microsoft Defender uygulama denetimi (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) PowerShell araçlarını kullanarak, Windows S modu için bir veya daha fazla ek ilke oluşturabilirsiniz. Ek ilkeleri [Device Guard Imzalama hizmeti (DGSS)](https://go.microsoft.com/fwlink/?linkid=2095629) veya [SignTool. exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/use-signed-policies-to-protect-windows-defender-application-control-against-tampering) Ile imzalamanız ve ardından Intune aracılığıyla ilkeleri karşıya yüklemeniz ve dağıtmanız gerekir. Alternatif olarak, ek ilkeleri kuruluşunuzdan bir kod imzalama sertifikası ile imzalayabilirsiniz, ancak tercih edilen yöntem DGSS 'yi kullanmaktır. Kuruluşunuzdaki kod imzalama sertifikasını kullandığınız örnekte, kod imzalama sertifikası 'nın zincirinin bulunduğu kök sertifika cihazda mevcut olmalıdır.
+[Windows 10 S modu](https://docs.microsoft.com/windows/deployment/s-mode) , yalnızca mağaza uygulamalarını çalıştıran kilitli bir işletim sistemidir. Varsayılan olarak, Windows S modu cihazları Win32 uygulamalarının yüklenmesine ve yürütülmesine izin vermez. Bu cihazlar tek bir *Win 10s temel ilkesi*içerir ve bu, S modu cihazının üzerinde herhangi bir Win32 uygulaması çalıştırmasını kilitler. Ancak, Intune 'da **S modu ek ilkesi** oluşturup kullanarak, Windows 10 S modunda yönetilen cihazlara Win32 uygulamaları yükleyip çalıştırabilirsiniz. [Microsoft Defender uygulama denetimi (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) PowerShell araçlarını kullanarak, Windows S modu için bir veya daha fazla ek ilke oluşturabilirsiniz. Ek ilkeleri [Device Guard Imzalama hizmeti (DGSS)](https://go.microsoft.com/fwlink/?linkid=2095629) veya [SignTool.exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/use-signed-policies-to-protect-windows-defender-application-control-against-tampering) Ile imzalamanız ve ardından Intune aracılığıyla ilkeleri karşıya yüklemeniz ve dağıtmanız gerekir. Alternatif olarak, ek ilkeleri kuruluşunuzdan bir kod imzalama sertifikası ile imzalayabilirsiniz, ancak tercih edilen yöntem DGSS 'yi kullanmaktır. Kuruluşunuzdaki kod imzalama sertifikasını kullandığınız örnekte, kod imzalama sertifikası 'nın zincirinin bulunduğu kök sertifika cihazda mevcut olmalıdır.
 
 Intune 'da S modu ek ilkesini atayarak, cihazın, yüklenen ilgili imzalı uygulama kataloğuna izin veren mevcut S modu ilkesinde bir özel durum yapmasını sağlayabilirsiniz. İlke, S modu cihazında kullanılabilecek bir izin verilen uygulamalar listesi (uygulama kataloğu) ayarlar.
 

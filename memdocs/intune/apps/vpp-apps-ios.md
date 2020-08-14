@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/17/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c6152b4380abacde6dd6e8e014ebe91aa258edb
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 3dd7730e8ac25c41140f3e375383bf185eae91e6
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912585"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217222"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Microsoft Intune ile Apple Volume Purchase Program aracılığıyla satın alınan iOS ve macOS uygulamalarını yönetme
 
@@ -64,7 +64,7 @@ Apple Business Manager kullanarak ortak ve özel uygulamalar satın alabilir ve 
 - **Mağaza uygulamaları:** Apple Business Manager 'ı kullanarak, Içerik yöneticileri App Store 'da bulunan ücretsiz ve ücretli uygulamaları satın alabilir.
 - **Özel uygulamalar:** Apple Business Manager 'ı kullanarak, Içerik yöneticileri kuruluşunuza özel olarak sunulan özel uygulamalar da satın alabilir. Bu uygulamalar, doğrudan çalıştığınız geliştiriciler tarafından kuruluşunuzun özel ihtiyaçlarına göre tasarlanmıştır. [Özel uygulamaları dağıtma](https://developer.apple.com/business/custom-apps/)hakkında daha fazla bilgi edinin.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 - Kuruluşunuz için bir [Apple Business Manager](https://business.apple.com/) veya [Apple Okul Yöneticisi](https://school.apple.com/) hesabı. 
 - Bir veya daha fazla konum belirtece atanan uygulama lisansları satın alındı. 
 - Konum belirteçleri indirildi. 
@@ -94,24 +94,30 @@ Mevcut satın alınan VPP içeriğini ve belirteçleri Apple Business Manager ve
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Kiracı Yönetimi**  >  **bağlayıcıları ' nı seçin ve**  >  **Apple VPP belirteçlerini**belirteçler yapın.
-3. VPP belirteçleri listesi bölmesinde **Oluştur**’u seçin.
-4. **VPP belirteci oluştur** bölmesinde aşağıdaki bilgileri girin:
-    - **VPP belirteç dosyası** -henüz yapmadıysanız, Apple Business Manager veya Apple Okul Yöneticisi için kaydolun. Kaydolduktan sonra hesabınıza yönelik Apple VPP belirtecini indirin ve burada seçin.
-    - **Apple Kimliği** -karşıya yüklenen belirteçle Ilişkili hesabın YÖNETILEN Apple kimliğini girin.
-    - **Başka BIR MDM 'den belirteç denetimini al** -bu seçeneğin **Evet** olarak ayarlanması, belirtecin başka bir MDM çözümünden Intune 'a yeniden atanalmasına izin verir.
-    - **Belirteç adı** -belirteç adını ayarlamak için bir yönetim alanı.
-    - **Ülke/bölge** -VPP ülke/bölge deposunu seçin.  Intune, VPP uygulamalarını belirtilen VPP ülke/bölge deposundan tüm yerel ayarlar için eşitler.
+3. VPP belirteçleri listesi bölmesinde **Oluştur**’u seçin. **VPP belirteci oluştur** işlemi görüntülenir. VPP belirteci oluşturulurken kullanılan dört sayfa vardır. İlki **temel bilgiler**.
+4. **Temel bilgiler** sayfasında, aşağıdaki bilgileri belirtin:
+   - **Belirteç adı** -belirteç adını ayarlamak için bir yönetim alanı.
+   - **Apple Kimliği** -karşıya yüklenen belirteçle Ilişkili hesabın YÖNETILEN Apple kimliğini girin.
+   - **VPP belirteç dosyası** -henüz yapmadıysanız, Apple Business Manager veya Apple Okul Yöneticisi için kaydolun. Kaydolduktan sonra hesabınıza yönelik Apple VPP belirtecini indirin ve burada seçin.
+5. **İleri** ' ye tıklayarak **Ayarlar** sayfasını görüntüleyin.
+6. **Ayarlar** sayfasında, aşağıdaki bilgileri belirtin:
+   - **Başka BIR MDM 'den belirteç denetimini al** -bu seçeneğin **Evet** olarak ayarlanması, belirtecin başka bir MDM çözümünden Intune 'a yeniden atanalmasına izin verir.
+   - **Ülke/bölge** -VPP ülke/bölge deposunu seçin.  Intune, VPP uygulamalarını belirtilen VPP ülke/bölge deposundan tüm yerel ayarlar için eşitler.
+
         > [!WARNING]  
         > Ülke/bölge 'yi değiştirmek, bu belirteçle oluşturulan uygulamalar için Apple hizmetiyle bir sonraki eşitlemede uygulamalar meta verilerini ve App Store URL 'sini güncelleştirir. Uygulama, yeni ülke/bölge deposunda yoksa güncelleştirilmeyecek.
 
-    - **VPP hesabı türü** - **İş** veya **Eğitim**’i seçin.
-    - **Otomatik uygulama güncelleştirmeleri** - Otomatik güncelleştirmeleri etkinleştirmek için **Açık** veya **Kapalı** olarak ayarlayın. Bu etkinleştirildiğinde Intune, uygulama mağazasındaki VPP uygulama güncelleştirmelerini algılar ve cihaz iade edildiğinde bunları cihaza otomatik olarak gönderir.
+   - **VPP hesabı türü** - **İş** veya **Eğitim**’i seçin.
+   - **Otomatik uygulama güncelleştirmeleri** - Otomatik güncelleştirmeleri etkinleştirmek için **Açık** veya **Kapalı** olarak ayarlayın. Bu etkinleştirildiğinde Intune, uygulama mağazasındaki VPP uygulama güncelleştirmelerini algılar ve cihaz iade edildiğinde bunları cihaza otomatik olarak gönderir.
 
         > [!NOTE]
         > Apple VPP uygulamalarına yönelik otomatik uygulama güncelleştirmeleri, hem **gerekli** hem de **kullanılabilir** yüklemeleri otomatik olarak güncelleştirir. **Kullanılabilir** yüklemede dağıtılan uygulamalar için otomatik GÜNCELLEŞTIRME, BT Yöneticisi için, uygulamanın yeni bir sürümünün kullanılabildiğini bildiren bir durum iletisi oluşturur. Bu durum iletisi, uygulama seçilerek, cihaz yüklemesi durumu seçilerek ve durum ayrıntıları denetlenerek görüntülenebilir.  
 
     - **Microsoft 'a hem Kullanıcı hem de cihaz bilgilerini Apple 'a göndermek için izin veriyorum.** -Devam etmek için **kabul** ediyorum ' u seçmeniz gerekir. Microsoft 'un Apple 'a gönderdiği verileri gözden geçirmek için bkz. [Intune 'un Apple 'a gönderdiği veriler](../protect/data-intune-sends-to-apple.md).
-5. İşiniz bittiğinde **Oluştur**'u seçin. Belirteç, belirteçler listesi bölmesinde görüntülenir.
+7. **İleri** ' ye tıklayarak **kapsam etiketleri** sayfasını görüntüleyin.
+8. İsteğe bağlı olarak uygulamanın kapsam etiketlerini eklemek için **kapsam etiketlerini Seç** ' e tıklayın. Daha fazla bilgi için bkz. [Dağıtılmış BT için rol tabanlı erişim denetimi (RBAC) ve kapsam etiketleri kullanma](../fundamentals/scope-tags.md).
+9. **İleri** ' ye tıklayarak **gözden geçir + oluştur** sayfasını görüntüleyin. VPP belirteci için girdiğiniz değerleri ve ayarları gözden geçirin.
+10. İşiniz bittiğinde **Oluştur**’a tıklayın. Belirteç, belirteçler listesi bölmesinde görüntülenir.
 
 ## <a name="synchronize-a-vpp-token"></a>VPP belirtecini eşitler
 

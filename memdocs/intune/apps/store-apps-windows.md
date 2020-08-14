@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42be4df74093f90360d2968a7c0b6fe4597eedec
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c816bf41933346a568ff0419ea8daccbeffebd3d
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987793"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217301"
 ---
 # <a name="add-microsoft-store-apps-to-microsoft-intune"></a>Microsoft Store uygulamalarını Microsoft Intune’a ekleme
 
@@ -37,7 +37,7 @@ Aşağıdakileri yaparak Intune’a bir Microsoft Store uygulaması ekleyebilirs
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, kullanılabilir **Mağaza uygulama** türleri altında, **Windows Mağazası uygulaması**' nı seçin.
-4. **Seç**' e tıklayın. **Uygulama ekleme** adımları görüntülenir.
+4. **Seç**’e tıklayın. **Uygulama ekleme** adımları görüntülenir.
 5. Windows Mağazası uygulamalarına yönelik **uygulama bilgilerini** yapılandırmak için [Microsoft Store](https://www.microsoft.com/store/apps) ' a gidin ve dağıtmak istediğiniz uygulamayı arayın. Uygulama sayfasını görüntüleyin ve uygulama ayrıntılarını bir yere göz önünde yapın. 
 6. **Uygulama bilgileri** sayfasında, uygulama ayrıntılarını ekleyin:
     - **Ad**: uygulamanın şirket portalında görüntülenecek olan adını girin. Kullandığınız uygulama adlarının benzersiz olduğundan emin olun. Bir uygulama adı iki kez kullanılırsa, Şirket Portalı’nda kullanıcılara yalnızca bir ad gösterilir.

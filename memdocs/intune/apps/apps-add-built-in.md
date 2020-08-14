@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ee40dc9feb9b66b6267fc91448cc7265296597f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 37bf4cf8d6381ab076f7c0cd0eb879ddf43d571c
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989555"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217106"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Microsoft Intune’a yerleşik uygulama ekleme
 
@@ -40,7 +40,7 @@ Microsoft Intune’da mümkün olan uygulamalara yerleşik uygulama eklemek içi
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, kullanılabilir **Mağaza uygulama** türleri altında **yerleşik uygulama**' yı seçin.
-4. **Seç**' e tıklayın. **Uygulama ekleme** adımları görüntülenir.
+4. **Seç**’e tıklayın. **Uygulama ekleme** adımları görüntülenir.
 5. **Yerleşik uygulamaları seçin** sayfasında, dahil etmek istediğiniz uygulamaları seçmek Için **Uygulama Seç** ' e tıklayın.
 6. Dahil etmek istediğiniz yerleşik uygulamaları seçin. 
 7. Uygulamaları seçtikten sonra, **yerleşik uygulamalar** ' ı seçin bölmesinde **Seç** ' e tıklayın.
