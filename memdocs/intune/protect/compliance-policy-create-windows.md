@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c42ec6b7b67a1c000702e6e53747270d0eda28c
-ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.openlocfilehash: 7b0870c82d0a53df1df8ddb9e21b363f72b80e3a
+ms.sourcegitcommit: 69a6829ace9fc1999e58e5f31348521b638ef0ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437353"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88239519"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Cihazları Intune ile uyumlu veya uyumsuz olarak işaretlemek için Windows 10 ve üzeri ayarları
 
@@ -54,7 +54,7 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
   - **Gerektir** -sistem, fabrikada güvenilen bir duruma önyükleme yapılmasını zorlanmıştır. Makineyi önyüklemek için kullanılan çekirdek bileşenleri, cihazı üreten kuruluşun güvendiği doğru şifreleme imzalarına sahip olmalıdır. UEFI üretici yazılımı, makinenin başlatılmasına izin vermeden önce imzayı doğrular. Herhangi bir dosya üzerinde değişiklik yapılmışsa ve imzasını kesen sistem önyükleme yapmaz.
 
   > [!NOTE]
-  > **Cihazda güvenli önyüklemenin etkinleştirilmesini gerektir** AYARı bazı TPM 1,2 ve 2,0 cihazlarda desteklenir. TPM 2.0 ve sonrasını desteklemeyen cihazlarda ilke durumu Intune'da **Uyumsuz** olarak gösterilir. Desteklenen sürümler hakkında daha fazla bilgi için bkz. [cihaz sistem durumu kanıtlama](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
+  > **Cihazda güvenli önyüklemenin etkinleştirilmesini gerektir** AYARı bazı TPM 1,2 ve 2,0 cihazlarda desteklenir. TPM 2.0 ve sonrasını desteklemeyen cihazlarda ilke durumu Intune'da **Uyumsuz** olarak gösterilir. Desteklenen sürümler hakkında daha fazla bilgi için bkz.  [cihaz sistem durumu kanıtlama](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
 
 - **Kod bütünlüğü gerektir**:  
   Kod bütünlüğü, bir sürücünün veya sistem dosyasının belleğe her yüklendiğinde bütünlüğünü doğrulayan bir özelliktir.
@@ -106,6 +106,9 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
   - **Gerektir** -Configuration Manager için tüm ayarların (yapılandırma öğeleri) uyumlu olmasını gerektir.
 
     Örneğin, tüm yazılım güncelleştirmelerinin cihazlarda yüklü olmasını gerektirirsiniz. Configuration Manager, bu gereksinimin "yüklü" durumu vardır. Cihazdaki herhangi bir program bilinmeyen bir durumdaysa, cihaz Intune 'da uyumlu değildir.
+    
+  > [!NOTE]
+  > Ortak yönetim için uyumluluk iş yükü *Configuration Manager*olarak ayarlandığında yalnızca **Configuration Manager cihaz uyumluluğunu gerektir** ' i kullanın. Bu ayarı, uyumluluk iş yükünün *Intune*olarak ayarlandığı durumlarda kullandığınızda tüm uyumluluk değerlendirmelerini etkileyebilir. 
 
 ## <a name="system-security"></a>Sistem Güvenliği
 
