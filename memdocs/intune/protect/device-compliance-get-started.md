@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 08/14/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 832ddbde9e3cf4782c7d3867ad6a09cc250960c7
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 6bb3397432f1c171418ea99510cb04f1bdefc639
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088335"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252801"
 ---
 # <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>Intune ile yönettiğiniz cihazların kurallarını ayarlamak için uyumluluk ilkelerini kullanma
 
@@ -31,9 +31,7 @@ Intune 'da uyumluluk ilkeleri:
 
 - Kullanıcıların ve cihazların uyumlu olması için uyması gereken kuralları ve ayarları tanımlayın.
 - Uyumsuz cihazlara uygulanan eylemleri dahil edin. Uyumsuzluğa yönelik eylemler, kullanıcılara uyumsuz cihazlarda uyumsuzluk ve verileri koruma koşullarına göre uyarı verebilir.
-- , Kuralları karşılamayan ve uyumsuz olarak işaretlenen kullanıcıları ve cihazları engellemek için [koşullu erişimle birleştirebilir](#integrate-with-conditional-access) .
-
-  Koşullu erişim, üçüncü taraf mobil cihaz yönetimi iş ortaklarıyla yönettiğiniz cihazlardan uyumluluk durumu verileriyle de çalışabilir. Bu özelliği etkinleştirmek için Azure AD ve Intune 'a iş ortağı için destek eklersiniz. Daha fazla bilgi için bkz. cihaz uyumluluk ortakları için destek ekleme. 
+- , Kuralları karşılamayan kullanıcıları ve cihazları engelleyebilen [koşullu erişimle birleştirilebilir](#integrate-with-conditional-access).
 
 Intune 'da uyumluluk ilkelerinin iki bölümü vardır:
 
@@ -126,7 +124,6 @@ Aşağıdaki konular, cihaz yapılandırma ilkesinin farklı yönleri için adan
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)
   - [Windows 10 Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
   - [Windows 8.1 ve üzeri](compliance-policy-create-windows-8-1.md)
   - [Windows 10 ve üzeri](compliance-policy-create-windows.md)
 
@@ -163,13 +160,13 @@ Aşağıdaki tabloda, bir uyumluluk ilkesi koşullu erişim ilkesi ile kullanıl
 
 |**İlke ayarı**| **Platform** |
 | --- | ----|
-| **PIN veya parola yapılandırması** | - **Android 4,0 ve üzeri**: karantinaya alındı<br>- **Samsung KNOX Standard 4,0 ve üzeri**: karantinaya alındı<br>- **Android Enterprise**: karantinaya alındı  <br>  <br>- **iOS 8,0 ve üzeri**: düzeltildi<br>- **MacOS 10,11 ve üzeri**: düzeltildi  <br>  <br>- **Windows 8.1 ve üzeri**: düzeltildi<br>- **Windows Phone 8,1 ve üzeri**: düzeltildi|
-| **Cihaz şifrelemesi** | - **Android 4,0 ve üzeri**: karantinaya alındı<br>- **Samsung KNOX Standard 4,0 ve üzeri**: karantinaya alındı<br>- **Android Enterprise**: karantinaya alındı<br><br>- **iOS 8,0 ve üzeri**: DÜZELTILEN (PIN ayarlanarak)<br>- **MacOS 10,11 ve üzeri**: DÜZELTILEN (PIN ayarlanarak)<br><br>- **Windows 8.1 ve üzeri**: geçerli değil<br>- **Windows Phone 8,1 ve üzeri**: düzeltildi |
-| **Güvenliği kırılmış veya kökü belirtilen cihaz** | - **Android 4,0 ve üzeri**: karantinaya alındı (ayar değil)<br>- **Samsung KNOX Standard 4,0 ve üzeri**: karantinaya alındı (ayar değil)<br>- **Android Enterprise**: karantinaya alındı (ayar değil)<br><br>- **iOS 8,0 ve üzeri**: karantinaya alındı (ayar değil)<br>- **MacOS 10,11 ve üzeri**: geçerli değil<br><br>- **Windows 8.1 ve üzeri**: geçerli değil<br>- **Windows Phone 8,1 ve üzeri**: geçerli değil |
-| **E-posta profili** | - **Android 4,0 ve üzeri**: uygulanamaz<br>- **Samsung KNOX Standard 4,0 ve üzeri**: uygulanamaz<br>- **Android Enterprise**: uygulanamaz<br><br>- **iOS 8,0 ve üzeri**: karantinaya alındı<br>- **MacOS 10,11 ve üzeri**: karantinaya alındı<br><br>- **Windows 8.1 ve üzeri**: geçerli değil<br>- **Windows Phone 8,1 ve üzeri**: geçerli değil |
-| **En düşük işletim sistemi sürümü** | - **Android 4,0 ve üzeri**: karantinaya alındı<br>- **Samsung KNOX Standard 4,0 ve üzeri**: karantinaya alındı<br>- **Android Enterprise**: karantinaya alındı<br><br>- **iOS 8,0 ve üzeri**: karantinaya alındı<br>- **MacOS 10,11 ve üzeri**: karantinaya alındı<br><br>- **Windows 8.1 ve üzeri**: karantinaya alındı<br>- **Windows Phone 8,1 ve üzeri**: karantinaya alındı |
-| **En yüksek işletim sistemi sürümü** | - **Android 4,0 ve üzeri**: karantinaya alındı<br>- **Samsung KNOX Standard 4,0 ve üzeri**: karantinaya alındı<br>- **Android Enterprise**: karantinaya alındı<br><br>- **iOS 8,0 ve üzeri**: karantinaya alındı<br>- **MacOS 10,11 ve üzeri**: karantinaya alındı<br><br>- **Windows 8.1 ve üzeri**: karantinaya alındı<br>- **Windows Phone 8,1 ve üzeri**: karantinaya alındı |
-| **Windows durum kanıtlama** | - **Android 4,0 ve üzeri**: uygulanamaz<br>- **Samsung KNOX Standard 4,0 ve üzeri**: uygulanamaz<br>- **Android Enterprise**: uygulanamaz<br><br>- **iOS 8,0 ve üzeri**: uygulanamaz<br>- **MacOS 10,11 ve üzeri**: geçerli değil<br><br>- **Windows 10 ve Windows 10 Mobile**: karantinaya alındı<br>- **Windows 8.1 ve üzeri**: karantinaya alındı<br>- **Windows Phone 8,1 ve üzeri**: geçerli değil |
+| **PIN veya parola yapılandırması** | - **Android 4,0 ve üzeri**: karantinaya alındı<br>- **Samsung KNOX Standard 4,0 ve üzeri**: karantinaya alındı<br>- **Android Enterprise**: karantinaya alındı  <br>  <br>- **iOS 8,0 ve üzeri**: düzeltildi<br>- **MacOS 10,11 ve üzeri**: düzeltildi  <br>  <br>- **Windows 8.1 ve üzeri**: düzeltildi|
+| **Cihaz şifrelemesi** | - **Android 4,0 ve üzeri**: karantinaya alındı<br>- **Samsung KNOX Standard 4,0 ve üzeri**: karantinaya alındı<br>- **Android Enterprise**: karantinaya alındı<br><br>- **iOS 8,0 ve üzeri**: DÜZELTILEN (PIN ayarlanarak)<br>- **MacOS 10,11 ve üzeri**: DÜZELTILEN (PIN ayarlanarak)<br><br>- **Windows 8.1 ve üzeri**: geçerli değil|
+| **Güvenliği kırılmış veya kökü belirtilen cihaz** | - **Android 4,0 ve üzeri**: karantinaya alındı (ayar değil)<br>- **Samsung KNOX Standard 4,0 ve üzeri**: karantinaya alındı (ayar değil)<br>- **Android Enterprise**: karantinaya alındı (ayar değil)<br><br>- **iOS 8,0 ve üzeri**: karantinaya alındı (ayar değil)<br>- **MacOS 10,11 ve üzeri**: geçerli değil<br><br>- **Windows 8.1 ve üzeri**: geçerli değil |
+| **E-posta profili** | - **Android 4,0 ve üzeri**: uygulanamaz<br>- **Samsung KNOX Standard 4,0 ve üzeri**: uygulanamaz<br>- **Android Enterprise**: uygulanamaz<br><br>- **iOS 8,0 ve üzeri**: karantinaya alındı<br>- **MacOS 10,11 ve üzeri**: karantinaya alındı<br><br>- **Windows 8.1 ve üzeri**: geçerli değil |
+| **En düşük işletim sistemi sürümü** | - **Android 4,0 ve üzeri**: karantinaya alındı<br>- **Samsung KNOX Standard 4,0 ve üzeri**: karantinaya alındı<br>- **Android Enterprise**: karantinaya alındı<br><br>- **iOS 8,0 ve üzeri**: karantinaya alındı<br>- **MacOS 10,11 ve üzeri**: karantinaya alındı<br><br>- **Windows 8.1 ve üzeri**: karantinaya alındı|
+| **En yüksek işletim sistemi sürümü** | - **Android 4,0 ve üzeri**: karantinaya alındı<br>- **Samsung KNOX Standard 4,0 ve üzeri**: karantinaya alındı<br>- **Android Enterprise**: karantinaya alındı<br><br>- **iOS 8,0 ve üzeri**: karantinaya alındı<br>- **MacOS 10,11 ve üzeri**: karantinaya alındı<br><br>- **Windows 8.1 ve üzeri**: karantinaya alındı |
+| **Windows durum kanıtlama** | - **Android 4,0 ve üzeri**: uygulanamaz<br>- **Samsung KNOX Standard 4,0 ve üzeri**: uygulanamaz<br>- **Android Enterprise**: uygulanamaz<br><br>- **iOS 8,0 ve üzeri**: uygulanamaz<br>- **MacOS 10,11 ve üzeri**: geçerli değil<br><br>- **Windows 10**: karantinaya alındı<br>- **Windows 8.1 ve üzeri**: karantinaya alındı |
 
 ---------------------------
 

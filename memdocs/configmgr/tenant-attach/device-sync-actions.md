@@ -10,14 +10,14 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 784a287176066ce34c3499ecdc91a450e2d6160c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 676ae288003b257802eea495c4101a95129eaf34
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127554"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88251873"
 ---
-# <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Microsoft Uç Nokta Yöneticisi kiracı iliştirme: cihaz eşitleme ve cihaz eylemleri
+# <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Microsoft Uç Nokta Yöneticisi kiracı iliştirme: cihaz eşitleme ve cihaz eylemleri
 <!--3555758 live 3/4/2020-->
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
@@ -25,7 +25,7 @@ Microsoft Uç Nokta Yöneticisi, tüm cihazlarınızı yönetmek için tümleşi
 
 Configuration Manager sürüm 2002 ' den başlayarak, Configuration Manager cihazlarınızı bulut hizmetine yükleyebilir ve yönetim merkezindeki **cihazlar** dikey penceresinden eylemler gerçekleştirebilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Bu değişiklik uygulanırken oturum açmak için *genel yönetici* olan bir hesap. Daha fazla bilgi için bkz. [Azure Active Directory (Azure AD) yönetici rolleri](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
    - Ekleme, Azure AD kiracınızda üçüncü taraf bir uygulama ve birinci taraf hizmet sorumlusu oluşturur.
@@ -34,13 +34,13 @@ Configuration Manager sürüm 2002 ' den başlayarak, Configuration Manager ciha
    - [Azure Active Directory Kullanıcı bulma](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) ve [Active Directory Kullanıcı keşfi](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)ile birlikte keşfedilmiştir.
       - Bu, Kullanıcı hesabının Azure AD 'de eşitlenmiş bir kullanıcı nesnesi olması gerektiği anlamına gelir.
    - Microsoft Endpoint Manager Yönetim merkezinde **uzak görevler** altında **Configuration Manager eylemi Başlat** izni.
-
+- Merkezi Yönetim sitenizde [uzak bir sağlayıcı](../core/plan-design/hierarchy/plan-for-the-sms-provider.md)varsa, CMPivot makalesindeki [CA 'ların uzak sağlayıcı](../core/servers/manage/cmpivot-changes.md#cas-has-a-remote-provider) senaryosuna ilişkin yönergeleri izleyin. <!--7796824-->
 
 ## <a name="internet-endpoints"></a>Internet uç noktaları
 
 [!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
 
-## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a>Ortak yönetim zaten etkin olduğunda cihaz yüklemeyi etkinleştir
+## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a> Ortak yönetim zaten etkin olduğunda cihaz yüklemeyi etkinleştir
 
 Şu anda ortak yönetim 'i etkinleştirdiyseniz, cihaz yüklemeyi etkinleştirmek için ortak yönetim özelliklerini kullanacaksınız. Ortak yönetim zaten etkin olmadığında, bunun yerine cihaz yüklemeyi etkinleştirmek için [ **ortak yönetim yapılandırma** Sihirbazı 'nı kullanın](#bkmk_config) .
 
@@ -58,7 +58,7 @@ Ortak yönetim zaten etkin olduğunda, aşağıdaki yönergeleri kullanarak ciha
 1. Değişiklik yapmayı tamamladıktan sonra ortak yönetim özelliklerinden çıkmak için **Tamam ' ı** seçin.
 
 
-## <a name="enable-device-upload-when-co-management-isnt-enabled"></a><a name="bkmk_config"></a>Ortak yönetim etkin olmadığında cihaz yüklemeyi etkinleştir
+## <a name="enable-device-upload-when-co-management-isnt-enabled"></a><a name="bkmk_config"></a> Ortak yönetim etkin olmadığında cihaz yüklemeyi etkinleştir
 
 Ortak yönetim özelliği etkinleştirilmemişse, cihaz yüklemeyi etkinleştirmek için **ortak yönetim yapılandırma** Sihirbazı 'nı kullanırsınız. Ortak yönetim için otomatik kayıt veya Intune 'a geçiş iş yüklerini etkinleştirmek zorunda kalmadan cihazlarınızı karşıya yükleyebilirsiniz. **İstemci** sütununda **Evet** olan Configuration Manager tarafından yönetilen tüm cihazlar karşıya yüklenir. Gerekirse, karşıya yüklemeyi tek bir cihaz koleksiyonuna sınırlayabilirsiniz. Ortak yönetim ortamınızda zaten etkinleştirilmişse, bunun yerine cihaz yüklemeyi etkinleştirmek için [ortak yönetim özelliklerini düzenleyin](#bkmk_edit) .
 
@@ -82,7 +82,7 @@ Ortak yönetim etkin olmadığında, cihaz yüklemeyi etkinleştirmek için aşa
 
 ## <a name="perform-device-actions"></a>Cihaz eylemlerini gerçekleştirme
 
-1. Bir tarayıcıda şuraya gidin`endpoint.microsoft.com`
+1. Bir tarayıcıda şuraya gidin `endpoint.microsoft.com`
 1. Yüklenen cihazları görmek için **cihazlar** ' ı ve ardından **tüm cihazlar** ' ı seçin. **ConfigMgr** 'yi karşıya yüklenen cihazlar Için **tarafından yönetilen** sütununda görürsünüz.
    [![Microsoft Endpoint Manager Yönetim Merkezi 'ndeki tüm cihazlar](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
 1. **Genel bakış** sayfasını yüklemek için bir cihaz seçin.
@@ -93,7 +93,7 @@ Ortak yönetim etkin olmadığında, cihaz yüklemeyi etkinleştirmek için aşa
 
    [![Microsoft Endpoint Manager Yönetim Merkezi 'nde cihaza genel bakış](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 
-## <a name="import-a-previously-created-azure-ad-application-optional"></a><a name="bkmk_aad_app"></a>Önceden oluşturulmuş bir Azure AD uygulamasını içeri aktarma (isteğe bağlı)
+## <a name="import-a-previously-created-azure-ad-application-optional"></a><a name="bkmk_aad_app"></a> Önceden oluşturulmuş bir Azure AD uygulamasını içeri aktarma (isteğe bağlı)
 <!--6479246-->
 *(Sürüm 2006 ' de tanıtılmıştır)*
 

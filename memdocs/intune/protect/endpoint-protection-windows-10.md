@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/23/2020
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fedca34aaf390dfec655e3166f3a153af93a7ce0
-ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
+ms.openlocfilehash: 69b4df0b5ceb947ab875f82a0d6f5ac59ce89eef
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506599"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252631"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Intune kullanarak cihazları korumak için Windows 10 (ve üzeri) ayarları
 
@@ -268,8 +268,8 @@ Aşağıdaki ayarlar bu makalede tek bir kez listelenirse, ancak tümü üç öz
 
   - **Yapılandırılmadı**  
   - **Engelle** -yerel depodaki yetkili uygulama güvenlik duvarı kuralları yok sayılır ve zorlanmaz.  
-  - **İzin ver** -
-   seçeneği, yerel depoda tanınabilmesi ve uygulanabilmeleri için güvenlik duvarı kuralları uygular ' i **etkinleştirir** .  
+  - **Izin ver** -
+    Tanınan ve zorlanan güvenlik duvarı kurallarını yerel depoda **Etkinleştir** ' i seçin.  
 
 - **Yerel depodan genel bağlantı noktası Microsoft Defender güvenlik duvarı kuralları**  
   **Varsayılan**: yapılandırılmadı  
@@ -303,7 +303,7 @@ Bir veya daha fazla özel güvenlik duvarı kuralı **ekleyebilirsiniz** . Daha 
 
 #### <a name="general-settings"></a>Genel ayarlar:  
 
-- **Adı**  
+- **Ad**  
   **Varsayılan**: *ad yok*  
 
   Kuralınız için bir kolay ad belirtin. Bu ad, bu adı belirlemenize yardımcı olacak kurallar listesinde görünür.  
@@ -340,7 +340,7 @@ Bir veya daha fazla özel güvenlik duvarı kuralı **ekleyebilirsiniz** . Daha 
   - **Paket aile adı** – bir paket aile adı belirtin. Paket aile adını bulmak için **Get-AppxPackage**PowerShell komutunu kullanın.   
     Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/App/PackageFamilyName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#packagefamilyname)  
  
-  - **Dosya yolu** – istemci cihazında bir uygulamanın yolunu, mutlak bir yol veya göreli bir yol olabilen bir dosya yolu belirtmeniz gerekir. Örneğin: C:\windows\system\noteasma .exe veya%Windir%\note, exe.  
+  - **Dosya yolu** – istemci cihazında bir uygulamanın yolunu, mutlak bir yol veya göreli bir yol olabilen bir dosya yolu belirtmeniz gerekir. Örneğin: C:\Windows\System\Notepad.exe veya% WINDIR% \Notepad.exe.  
     Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)  
 
   - **Windows hizmeti** – trafik gönderen veya alan bir uygulama değil, bir hizmet Ise, Windows hizmeti kısa adını belirtin. Hizmet kısa adını bulmak için, **Get-Service**PowerShell komutunu kullanın.  
@@ -390,7 +390,7 @@ Bu kuralın uygulandığı yerel ve uzak adresleri belirtin.
 #### <a name="port-and-protocol-settings"></a>Bağlantı noktası ve protokol ayarları  
 Bu kuralın uygulandığı yerel ve uzak bağlantı noktalarını belirtin.  
 
-- **Protocol**  
+- **Protokol**  
   **Varsayılan**: any  
   Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)  
   Aşağıdakilerden birini seçin ve gerekli tüm konfigürasyonları doldurun:  
@@ -453,13 +453,16 @@ Cihazda Microsoft Edge yüklü olmalıdır.
   
   Başka bir şifreleme yöntemi etkinken Windows şifrelemesi açılırsa cihaz kullanılamaz hale gelebilir.  
 
-- **Depolama kartını şifreleme (yalnızca mobil)**  
-  *Bu ayar yalnızca Windows 10 Mobile için geçerlidir.*  
-  **Varsayılan**: yapılandırılmadı  
-  BitLocker CSP: [Requirestooygecardencryption](https://go.microsoft.com/fwlink/?linkid=872524)  
+<!-- Support Deprecated for Windows 10 Mobile as of August 2020
 
-  - Cihazın kullandığı çıkarılabilir depolama kartlarını şifrelemeyi **gerektirir** .  
-  - **Yapılandırılmadı** -depolama kartı şifrelemesi gerektirmez ve kullanıcıdan açmayı sorma.  
+- **Encrypt storage card (mobile only)**  
+  *This setting only applies to Windows 10 mobile.*  
+  **Default**: Not configured  
+  BitLocker CSP: [RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)  
+
+  - **Require** to encrypt any removable storage cards used by the device.  
+  - **Not configured** - Don't require storage card encryption, and don't prompt the user to turn it on.  
+-->
 
 ### <a name="bitlocker-base-settings"></a>BitLocker temel ayarları  
 
@@ -478,7 +481,7 @@ Temel ayarlar, tüm veri sürücüsü türleri için evrensel BitLocker ayarlar�
   *Blok*olarak ayarlandığında, aşağıdaki ayarı yapılandırabilirsiniz:  
 
   - **Standart kullanıcıların Azure AD katılımı sırasında şifrelemeyi etkinleştirmesine izin ver**  
-    *Bu ayar yalnızca Azure Active Directory katılmış (Azure SıFATı) cihazları için geçerlidir ve önceki ayara bağlıdır `Warning for other disk encryption`.*  
+    *Bu ayar yalnızca Azure Active Directory katılmış (Azure SıFATı) cihazları için geçerlidir ve önceki ayara bağlıdır `Warning for other disk encryption` .*  
     **Varsayılan**: yapılandırılmadı  
     BitLocker CSP: [Allowstandarduserencryption](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
 
@@ -599,7 +602,7 @@ Bu ayarlar, belirli işletim sistemi veri sürücüleri için geçerlidir.
   - **En az karakter**  
     **Varsayılan**: *yapılandırılmamış* BitLocker CSP: [SystemDrivesMinimumPINLength](https://go.microsoft.com/fwlink/?linkid=872528)  
 
-    Başlangıç PIN kodu için gereken karakter sayısını **4**-**20**' den girin.  
+    Başlangıç PIN kodu için gereken karakter sayısını **4** - **20**' den girin.  
 
 - **İşletim sistemi sürücüsü kurtarma**  
   **Varsayılan**: yapılandırılmadı   
@@ -642,7 +645,7 @@ Bu ayarlar, belirli işletim sistemi veri sürücüleri için geçerlidir.
     **Varsayılan**: yapılandırılmadı  
 
     - **Enable** -BitLocker kurtarma bilgilerini Azure Active Directory (Azure AD) olarak depolayın.  
-    - **Yapılandırılmadı** -BitLocker kurtarma bilgileri AAD 'de depolanmaz.  
+    - **Yapılandırılmadı** -BitLocker kurtarma BILGILERI Azure AD 'de depolanmaz.  
 
   - **Azure Active Directory depolanan BitLocker kurtarma bilgileri**  
     **Varsayılan**: yedekleme kurtarma parolaları ve anahtar paketleri  
@@ -739,7 +742,7 @@ Bu ayarlar özellikle sabit veri sürücülerine uygulanır.
     **Varsayılan**: yapılandırılmadı  
 
     - **Enable** -BitLocker kurtarma bilgilerini Azure Active Directory (Azure AD) olarak depolayın.  
-    - **Yapılandırılmadı** -BitLocker kurtarma bilgileri AAD 'de depolanmaz.
+    - **Yapılandırılmadı** -BitLocker kurtarma BILGILERI Azure AD 'de depolanmaz.
 
   - **Azure Active Directory depolanan BitLocker kurtarma bilgileri**  
     **Varsayılan**: yedekleme kurtarma parolaları ve anahtar paketleri  
@@ -787,12 +790,12 @@ Saldırı yüzeyi azaltma kuralları, bir kötü amaçlı yazılımın kötü am
 
 - **Windows yerel güvenlik yetkilisi alt sisteminden kimlik bilgisi çalma eylemlerine bayrak ekleme**  
   **Varsayılan**: yapılandırılmadı  
-  Kural: [Windows yerel güvenlik yetkilisi alt sisteminden kimlik bilgisi çalmasını engelle (Lsass. exe)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
+  Kural: [Windows yerel güvenlik yetkilisi alt sisteminden kimlik bilgisi çalınmasını engelle (lsass.exe)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
   Genellikle makinelere bulaşmak için açık arayan kötü amaçlı yazılımlar tarafından kullanılan eylem ve uygulamaları önlemeye yardımcı olun.  
 
   - **Yapılandırılmadı**  
-  - Windows yerel güvenlik yetkilisi alt sisteminden (Lsass. exe) kimlik bilgisi çalmasını etkinleştir ' i **etkinleştirin** .  
+  - Windows yerel güvenlik yetkilisi alt sisteminden (lsass.exe) kimlik bilgisi çalmasını **etkinleştirme** -işaretle.  
   - **Yalnızca denetim**  
 
 - **Adobe Reader 'dan işlem oluşturma (Beta)**  
@@ -946,7 +949,7 @@ Fidye yazılımı gibi kötü amaçlı uygulamalardan ve tehditlerden [değerli 
   Dosya ve klasörleri kötü amaçlı uygulamaların yetkisiz değişikliklerinden korur.  
 
   - **Yapılandırılmadı**  
-  - **Etkinleştir**  
+  - **Etkinleştirme**  
   - **Yalnızca denetim**  
   - **Disk değişikliğini engelle**  
   - **Disk değişikliğini denetleme**  
@@ -1293,7 +1296,7 @@ Windows 10 cihazlarında yerel güvenlik ayarlarını yapılandırmak için bu s
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_MachineInactivityLimit](https://go.microsoft.com/fwlink/?linkid=867891)  
 
 
-  Ekran koruyucusu başlatılana kadar etkileşimli masaüstü oturum açma ekranında işlem yapılmayan en uzun süreyi dakika cinsinden girin. (**0** - **99999**)  
+  Ekran koruyucusu başlatılana kadar etkileşimli masaüstü oturum açma ekranında işlem yapılmayan en uzun süreyi dakika cinsinden girin. (**0**  -  **99999**)  
 
 - **Oturum açmak için CTRL + ALT + DEL gerektir**  
   **Varsayılan**: yapılandırılmadı  
@@ -1314,7 +1317,7 @@ Windows 10 cihazlarında yerel güvenlik ayarlarını yapılandırmak için bu s
   - **Kapanmaya zorla** -akıllı kart kaldırıldığında Kullanıcı oturumu otomatik olarak kapatılır.  
   - Akıllı kartın **Uzak Masaüstü Hizmetleri oturumu** kaldırma işlemi kullanıcının oturumunu kapatmadan oturumun bağlantısını keser. Bu seçenek kullanıcının daha sonra yeniden oturum açmak zorunda kalmadan akıllı kartı takıp oturumu devam ettirmesine veya akıllı kart okuyucuyla donatılmış başka bir bilgisayarda bunu yapmasına olanak tanır. Yerel bir oturum söz konusuysa, bu ilke İş İstasyonunu Kilitle ilkesiyle tam olarak aynı işlevi görür.  
 
-#### <a name="display"></a>Ekran  
+#### <a name="display"></a>Göster  
 
 - **Kilit ekranında Kullanıcı bilgileri**  
   **Varsayılan**: yapılandırılmadı  
@@ -1335,8 +1338,8 @@ Windows 10 cihazlarında yerel güvenlik ayarlarını yapılandırmak için bu s
   - **Etkinleştirin** -Kullanıcı adını gizleyin.  
   - **Yapılandırılmadı** -Son Kullanıcı adını göster.  
 
-- **Varsayılan oturum açma**
-  **Default**sırasında Kullanıcı adını gizle: yapılandırılmadı  
+- **Oturum açma** 
+   sırasında Kullanıcı adını gizle **Varsayılan**: yapılandırılmadı  
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotDisplayUsernameAtSignIn](https://go.microsoft.com/fwlink/?linkid=867959)  
 
   
@@ -1409,7 +1412,7 @@ Windows 10 cihazlarında yerel güvenlik ayarlarını yapılandırmak için bu s
   
   Bu güvenlik ayarı, bir sunucunun 128 bitlik şifreleme ve/veya NTLMv2 oturum güvenliği için anlaşma sağlamasına izin verir.  
 
-  - **Yok**  
+  - **Hiçbiri**  
   - **NTLMv2 oturum güvenliği gerektir**  
   - **128 bit şifreleme gerektir**  
   - **Ntlmv2'yi ve 128 bit şifreleme**  
@@ -1420,7 +1423,7 @@ Windows 10 cihazlarında yerel güvenlik ayarlarını yapılandırmak için bu s
 
   Bu güvenlik ayarı, ağ oturum açmaları için hangi sınama/yanıt kimlik doğrulama protokolünün kullanıldığını belirler.  
 
-  - **Yok**  
+  - **Hiçbiri**  
   - **NTLMv2 oturum güvenliği gerektir**  
   - **128 bit şifreleme gerektir**  
   - **Ntlmv2'yi ve 128 bit şifreleme**  

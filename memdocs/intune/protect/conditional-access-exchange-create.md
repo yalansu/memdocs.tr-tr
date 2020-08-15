@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b0a22d24a67364df3d3aa064489db67e2c97e98
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cb70d5842ce13b5baa9dc60ec2ed9cd698bad75c
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462244"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252767"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Intune için Exchange şirket içi erişimini yapılandırma
 
@@ -69,14 +69,13 @@ Koşullu erişimi yapılandırmadan önce, aşağıdaki yapılandırmaların mev
 
 ### <a name="support-for-mobile-devices"></a>Mobil cihaz desteği
 
-- **Windows Phone 8,1 ve üzeri** -koşullu erişim ilkesi oluşturmak için bkz. [koşullu erişim ilkeleri oluşturma](../protect/create-conditional-access-intune.md)
+- **Windows Phone** -koşullu erişim ilkesi oluşturmak için bkz. [koşullu erişim ilkeleri oluşturma](../protect/create-conditional-access-intune.md)
 - **İOS/ıpados üzerinde yerel e-posta uygulaması** -koşullu erişim ilkesi oluşturmak için bkz. [koşullu erişim ilkeleri oluşturma](../protect/create-conditional-access-intune.md)
 - **Android 4 veya üzeri sürümlerde Gmail gibi EAS posta istemcileri** -koşullu erişim ilkesi oluşturmak için bkz. [koşullu erişim ilkeleri oluşturma](../protect/create-conditional-access-intune.md)
 
 - **Android Cihaz Yöneticisi 'Nde EAS posta istemcileri** -koşullu erişim ilkesi oluşturmak için bkz. [koşullu erişim ilkeleri oluşturma](../protect/create-conditional-access-intune.md)
 
 - **Android iş profili cihazlarda EAS posta istemcileri** -Android iş profili cihazlarında yalnızca *Gmail* ve *dokuz iş için* desteklenir. Android iş profilleriyle çalışmak üzere koşullu erişim için, *Android Enterprise uygulaması Için Gmail veya dokuz iş* için *Gmail* bir e-posta profili dağıtmanız ve ayrıca bu uygulamaları gerekli bir yükleme olarak dağıtmanız gerekir. Uygulamayı dağıttıktan sonra cihaz tabanlı koşullu erişim ayarlayabilirsiniz.
-
 
 #### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>Android iş profili cihazlarına koşullu erişim ayarlamak için
 

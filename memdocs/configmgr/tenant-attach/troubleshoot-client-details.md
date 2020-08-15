@@ -10,12 +10,12 @@ ms.assetid: 44c2eb8a-3ccc-471f-838b-55d7971bb79e
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: d983e0c3d84f5bcbf411af1243ddc045d66d9199
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 9ca99afa60ed5f8b9a1491381767ec4f6359826f
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051587"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252505"
 ---
 # <a name="troubleshoot-configmgr-client-details-in-the-admin-center-preview"></a>Yönetim merkezinde ConfigMgr istemci ayrıntıları sorunlarını giderme (Önizleme)
 <!--6374854, 6521921-->
@@ -30,13 +30,13 @@ Microsoft Endpoint Manager Yönetim Merkezi 'nde ConfigMgr istemci ayrıntılar�
 
 ConfigMgr istemci ayrıntılarını görüntülerken, bu hatalardan biri üzerinde çalıştırabilirsiniz.  
 
-### <a name="the-necessary-configuration-is-missing-in-azure-active-directory"></a><a name="bkmk_aad"></a>Gerekli Yapılandırma Azure Active Directory eksik
+### <a name="the-necessary-configuration-is-missing-in-azure-active-directory"></a><a name="bkmk_aad"></a> Gerekli Yapılandırma Azure Active Directory eksik
 
 **Hata iletisi:** Gerekli Yapılandırma Azure Active Directory eksik. Configuration Manager sitesini Azure kiracınıza iliştirdiğinizden ve uygun Kullanıcı rolünü Azure AD 'ye atadığınızdan emin olun.
 
 **Olası neden:** Kullanıcı hesabının Azure AD 'de Configuration Manager Mikro hizmet uygulaması için **Yönetici Kullanıcı** rolü eksik olabilir. Azure AD 'deki rolü, **Enterprise applications**  >  **mikro hizmet**  >  **kullanıcıları ve grupları**  >  **Kullanıcı Ekle**' Configuration Manager kurumsal uygulamalardan ekleyin. Azure AD Premium varsa gruplar desteklenir. Bu izne yapılan değişikliklerin etkili olması bir saate kadar sürebilir.
 
-### <a name="unable-to-get-device-or-collection-information"></a><a name="bkmk_noinfo"></a>Cihaz veya koleksiyon bilgisi alınamıyor
+### <a name="unable-to-get-device-or-collection-information"></a><a name="bkmk_noinfo"></a> Cihaz veya koleksiyon bilgisi alınamıyor
 
 **Hata iletisi 1:** İstemci ayrıntıları (veya koleksiyon) bilgileri alınamıyor. Azure AD ve AD Kullanıcı bulmanın yapılandırıldığından ve kullanıcının her ikisiyle de bulunduğundan emin olun. Kullanıcının Configuration Manager uygun izinlere sahip olduğunu doğrulayın.
 
@@ -57,7 +57,7 @@ ConfigMgr istemci ayrıntılarını görüntülerken, bu hatalardan biri üzerin
     Azure AD özellikleri boşsa, sitenin [Azure AD Kullanıcı keşfi](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc)yapılandırmasını denetleyin.
 
 
-### <a name="unexpected-error-occurred"></a><a name="bkmk_1603"></a>Beklenmeyen bir hata oluştu
+### <a name="unexpected-error-occurred"></a><a name="bkmk_1603"></a> Beklenmeyen bir hata oluştu
 
 **Hata iletisi:** Beklenmeyen bir hata oluştu
 
@@ -76,7 +76,7 @@ ConfigMgr istemci ayrıntılarını görüntülerken, bu hatalardan biri üzerin
 
 **Hata iletisi:** Sonuçların alınması zaman aşımına uğradı. Configuration Manager hizmet bağlantı noktasının çalışır durumda olduğundan ve buluta bir bağlantı bulunduğundan emin olun.
 
-**Geçici çözüm:** `Microsoft.ConfigurationManagement.ManagementProvider.dll`Site sunucusunun `bin\x64` klasöründen uzak hizmet bağlantı noktasının `bin\x64` klasörüne kopyalayın.  Hizmeti, `SMS_EXECUTIVE` hizmet bağlantı noktası sunucusunda yeniden başlatın.
+**Geçici çözüm:** `Microsoft.ConfigurationManagement.ManagementProvider.dll` Site sunucusunun `bin\x64` klasöründen uzak hizmet bağlantı noktasının `bin\x64` klasörüne kopyalayın.  Hizmeti, `SMS_EXECUTIVE` hizmet bağlantı noktası sunucusunda yeniden başlatın.
 
 ### <a name="boundary-groups-list-is-empty"></a>Sınır grupları listesi boş
 
@@ -85,6 +85,8 @@ ConfigMgr istemci ayrıntılarını görüntülerken, bu hatalardan biri üzerin
 Boş liste, Configuration Manager siteleri hiyerarşiniz olduğunda Configuration Manager sürüm 2002 için bilinen bir sorundur.
 
 :::image type="content" source="media/6024387-known-issue-device-details.png" alt-text="Sınır grubu listesi boş" lightbox="media/6024387-known-issue-device-details.png":::
+
+[!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

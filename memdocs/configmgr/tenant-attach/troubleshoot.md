@@ -10,12 +10,12 @@ ms.assetid: 44c2eb8a-3ccc-471f-838b-55d7971bb79e
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 6dfe7bb44a70d26a68c6d3743ecdb05e5d55e3f1
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f89bf241410838fd98c8895ced6d49dbf3e99597
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129330"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252481"
 ---
 # <a name="troubleshooting-tenant-attach-and-device-actions"></a>Kiracı iliştirme ve cihaz eylemleri sorunlarını giderme
 
@@ -48,7 +48,7 @@ Yönetim noktasında bulunan aşağıdaki günlükleri kullanın:
 
 - **CcmNotificationAgent.log**
 
-## <a name="review-your-upload"></a><a name="bkmk_review"></a>Karşıya yüklemeyi gözden geçirin
+## <a name="review-your-upload"></a><a name="bkmk_review"></a> Karşıya yüklemeyi gözden geçirin
 
 1. ConfigMgr yükleme dizininden **Cmgatewaysyncuploadworker. log** &lt; dosyasını açın> \logs.
 1. Sonraki eşitleme zamanı, şuna benzer günlük girdileri tarafından belirtilir `Next run time will be at approximately: 02/28/2020 16:35:31` .
@@ -114,7 +114,7 @@ Send Task response message <BgbResponseMessage TimeStamp="2020-01-21T15:43:43Z">
 
 ## <a name="common-issues"></a>Genel sorunlar
 
-### <a name="unauthorized-to-perform-client-action"></a><a name="bkmk_noauth"></a>İstemci eylemi gerçekleştirme yetkisi yok
+### <a name="unauthorized-to-perform-client-action"></a><a name="bkmk_noauth"></a> İstemci eylemi gerçekleştirme yetkisi yok
 
 Yönetici Configuration Manager için gerekli izinlere sahip değilse, `Unauthorized` **Cmgatewaynotificationworker. log**dosyasında bir yanıt görürsünüz.
 
@@ -125,6 +125,8 @@ Unauthorized to perform client action. TemplateID: RequestMachinePolicy TenantId
 ```  
 
 Microsoft Endpoint Manager Yönetim Merkezi 'nden eylemi çalıştıran kullanıcının Configuration Manager sitesinde gerekli izinlere sahip olduğundan emin olun. Daha fazla bilgi için bkz. [Microsoft Endpoint Manager kiracı iliştirme önkoşulları](device-sync-actions.md#prerequisites).
+
+
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
@@ -137,6 +139,7 @@ Configuration Manager istemci olan belirli cihazların hizmete yüklenmeyeceği 
 
 **Davranış:** Oluşturma aşamasında kiracı ekleme gerçekleştirirken, ilk kez tam eşitleme gerçekleştirilir. Sonraki eşitleme döngüleri, Delta eşitlelerdir. Etkilenen cihazlara yapılan herhangi bir güncelleştirme, cihazın eşitlemeden kaldırılmasına neden olur.
 
+[!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

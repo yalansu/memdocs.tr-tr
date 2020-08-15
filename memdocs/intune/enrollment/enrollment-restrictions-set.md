@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5ed799d01ea4fdae1f9ecb013b4cf73deb0e6f0
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: b056eb0bab2416a87f443c025a76c22b580ed3c9
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051664"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252463"
 ---
 # <a name="set-enrollment-restrictions"></a>Kayıt kısıtlamalarını ayarlama
 
@@ -47,11 +47,10 @@ Birden çok kısıtlama oluşturabilir ve bunları farklı kullanıcı grupları
   - iOS/iPadOS
   - macOS
   - Windows
-  - Windows Mobile
-- İOS/ıpados, Android Cihaz Yöneticisi, Android kurumsal iş profili, Windows ve Windows Mobile için Platform işletim sistemi sürümü. (Yalnızca Windows 10 sürümleri kullanılabilir. Windows 8.1'e izin veriliyorsa bunu boş bırakın.)
+- İOS/ıpados için Platform işletim sistemi sürümü, Android Cihaz Yöneticisi, Android kurumsal iş profili ve Windows.
   - En düşük sürüm.
   - En yüksek sürüm.
-- [Kişisel cihazları](device-enrollment.md#bring-your-own-device) kısıtlama (IOS, Android Cihaz Yöneticisi, Android kurumsal iş profili, MacOS, Windows ve Windows Mobile).
+- [Kişisel cihazları](device-enrollment.md#bring-your-own-device) kısıtlama (IOS, Android Cihaz Yöneticisi, Android kurumsal iş profili, MacOS ve Windows).
 
 ## <a name="default-restrictions"></a>Varsayılan kısıtlamalar
 

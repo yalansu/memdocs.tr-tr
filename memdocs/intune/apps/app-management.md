@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/13/2020
+ms.date: 08/14/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5fded6fdf9de5f0ea18848ff45f6647363d2bfa3
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 3b4a3334649b411390088a665f9a8fe9db8b47e1
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217660"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252314"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Microsoft Intune uygulama yönetimi nedir?
 
@@ -111,7 +111,9 @@ Uygulama iş yükü gezinti menüsünün en üst kısmında, yaygın olarak kull
 ### <a name="try-the-interactive-guide"></a>Etkileşimli Kılavuzu deneyin
 [Microsoft Uç Nokta Yöneticisi ile mobil ve masaüstü uygulamalarını yönetme ve koruma](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) Etkileşimli Kılavuzu, Intune 'a kayıtlı cihazların nasıl yönetileceğini, ilkelerle uyumluluğu zorunlu kılmak ve kuruluşunuzun verilerini korumak Için Microsoft Uç Nokta Yöneticisi Yönetim Merkezi 'nde size adım adım yol gösterir.</br></br>
 
-> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
+<div align=”center”>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no"/></iframe>
+</div>
 
 ## <a name="additional-information"></a>Ek bilgiler
 Konsolun içindeki aşağıdaki öğeler uygulamayla ilgili işlevsellik sağlar:

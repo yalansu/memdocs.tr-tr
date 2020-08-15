@@ -6,7 +6,7 @@ keywords: Intune Veri Ambarı
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 08/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db6feb746aa7177f56ff6e87565d67e207d4d9ef
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 1fb6ec17ce058247529ab1e51d50d876e4c97408
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165456"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252682"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Microsoft Intune veri ambarı veri modeli
 
@@ -60,6 +60,9 @@ Yıldız şeması modeli, esneklik ve veri çözümlemesi için iyileştirilmiş
 ## <a name="time-daily-snapshots"></a>Süre: Günlük anlık görüntüler
 
 Ambar, Intune'daki verilerden aşağı akıştadır. Intune gece yarısı UTC'de günlük anlık görüntü alır ve anlık görüntüyü ambarda saklar. Tutulan anlık görüntülerin süresi, olgu tablosundan olgu tablosuna farklılık gösterir. Bazıları yedi gün, diğerleri 30 gün ve daha uzun süreli olabilir.
+
+> [!NOTE]
+> Veri ambarı JAMF cihazlarını eşitlemez. JAMF hakkında daha fazla bilgi için bkz. Microsoft Intune ve [veri JAMF Pro tarafından Intune 'a gönderdiği](..\protect\data-jamf-sends-to-intune.md) [JAMF Pro tümleştirmesinde sorun giderme](..\protect\troubleshoot-jamf.md) .
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

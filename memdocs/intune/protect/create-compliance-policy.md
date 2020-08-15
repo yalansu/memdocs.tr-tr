@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e541eb04f8de689ee76a68556bb1b2eb90914b96
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 9c1431105bdba9731bda4599e310889bfbf86a2c
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461445"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252263"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Microsoft Intune’da uyumluluk ilkesi oluşturma
 
@@ -53,7 +53,6 @@ Cihaz uyumluluk ilkelerini kullanmak için aşağıdakilerden emin olun:
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Cihazları Intune'a kaydetme (uyumluluk durumunu görmek için gereklidir)
 
@@ -70,7 +69,6 @@ Cihaz uyumluluk ilkelerini kullanmak için aşağıdakilerden emin olun:
    - *Android Kurumsal*
    - *iOS/iPadOS*
    - *macOS*
-   - *Windows Phone 8.1*
    - *Windows 8.1 ve üzeri*
    - *Windows 10 ve üzeri*
 
@@ -89,7 +87,7 @@ Cihaz uyumluluk ilkelerini kullanmak için aşağıdakilerden emin olun:
    - [Android Kurumsal](compliance-policy-create-android-for-work.md)
    - [iOS/iPadOS](compliance-policy-create-ios.md)
    - [macOS](compliance-policy-create-mac-os.md)
-   - [Windows Phone 8.1, Windows 8.1 ve üzeri](compliance-policy-create-windows-8-1.md)
+   - [Windows 8.1 ve üzeri](compliance-policy-create-windows-8-1.md)
    - [Windows 10 ve üzeri](compliance-policy-create-windows.md)  
 
 6. **Konumlar** sekmesinde, cihazın konumuna göre uyumluluğu zorlayabilirsiniz. Mevcut konumlar arasından seçim yapın. Henüz kullanılabilir bir konumunuz yoksa, kılavuz için bkz. [konumları (ağ dilimini) kullanma](use-network-locations.md) .
@@ -159,7 +157,7 @@ Cihaz uyumluluk ilkelerini izleme hakkında daha fazla bilgi için bkz. [Intune 
 
 Bir cihazda birden fazla uyumluluk ilkesi varsa ve cihazın bu atanmış uyumluluk ilkelerinden iki veya daha fazlası için farklı uyumluluk durumları varsa, cihaza tek bir uyumluluk durumu atanır. Bu atama, uyumluluk durumlarına atanan kavramsal önem derecesi düzeyine dayalı olarak yapılır. Uyumluluk durumlarının önem derecesi aşağıdaki gibidir:
 
-|Durum  |Severity  |
+|Durum  |Önem Derecesi  |
 |---------|---------|
 |Bilinmiyor     |1|
 |NotApplicable     |2|

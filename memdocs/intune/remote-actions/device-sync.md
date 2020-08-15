@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 650a91d17223c31e02d660e47874a42731de572a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: de0c6694f046d9df61f136e830d220ab0b688d28
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983028"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252699"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Intune ile en son ilkeleri ve eylemleri almak için cihazları eşitleme
 
@@ -31,7 +31,6 @@ Cihazı **Eşitle** eylemi, seçili cihazı Intune’a hemen giriş yapmaya zorl
 ## <a name="supported-platforms"></a>Desteklenen platformlar
 
 - Windows
-- Windows Phone
 - iOS
 - macOS
 - Android
@@ -54,16 +53,16 @@ Bir yönetici **eşitleme** cihazı eylemini çalıştırdığında, başarısı
 
 | Hata kodu  | Önerilen açıklama | Yeniden denenebilir |
 |---|---|---|
-| 2016330898 | Bilinmeyen bir hata oluştu. | No |
-| 2016330897 | Intune bağlantınız zaman aşımına uğradı. Bağlantınızı sıfırlayın. | Yes |
-| 2016330896 | İnternet bağlantınız kesildi. Bağlantınızı sıfırlayın. | Yes |
-| 2016330895 | İnternet bağlantınız kesildi. Bağlantınızı sıfırlayın. | Yes |
-| 2016330894 | İnternet bağlantınız kesildi. Bağlantınızı sıfırlayın. | Yes |
-| 2016330893 | İnternet bağlantınız kesildi. Bağlantınızı sıfırlayın. | Yes|
-| 2016330892 | Uluslararası dolaşım devre dışı bırakıldı. | No|
-| 2016330891 | Telefon araması sırasında bu cihaz için hücresel veri bağlantısına erişilemiyor. Görüşmenin sonlanmasını bekleyin. | Yes|
-| 2016330890 | Bu cihaz için hücresel ağ. Bu cihazlar şu anda kullanılamıyor. | No|
-| 2016330889 | Güvenli bağlantı başarısız oldu. Bağlantınızı sıfırlayın. | Yes|
+| 2016330898 | Bilinmeyen bir hata oluştu. | Hayır |
+| 2016330897 | Intune bağlantınız zaman aşımına uğradı. Bağlantınızı sıfırlayın. | Evet |
+| 2016330896 | İnternet bağlantınız kesildi. Bağlantınızı sıfırlayın. | Evet |
+| 2016330895 | İnternet bağlantınız kesildi. Bağlantınızı sıfırlayın. | Evet |
+| 2016330894 | İnternet bağlantınız kesildi. Bağlantınızı sıfırlayın. | Evet |
+| 2016330893 | İnternet bağlantınız kesildi. Bağlantınızı sıfırlayın. | Evet|
+| 2016330892 | Uluslararası dolaşım devre dışı bırakıldı. | Hayır|
+| 2016330891 | Telefon araması sırasında bu cihaz için hücresel veri bağlantısına erişilemiyor. Görüşmenin sonlanmasını bekleyin. | Evet|
+| 2016330890 | Bu cihaz için hücresel ağ. Bu cihazlar şu anda kullanılamıyor. | Hayır|
+| 2016330889 | Güvenli bağlantı başarısız oldu. Bağlantınızı sıfırlayın. | Evet|
 | 2016330888 | Sunucu güven değerlendirmesi başarısız oldu. | Hayır|
 
 ## <a name="next-steps"></a>Sonraki adımlar

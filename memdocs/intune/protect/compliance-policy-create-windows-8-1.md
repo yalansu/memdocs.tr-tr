@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune - Azure’daki Windows 8.1 uyumluluk ilkeleri | Microsoft Docs
-description: Microsoft Intune'da Windows 8.1 ve Windows Phone 8.1 cihazlarınızda uyumluluk ayarı yaparken kullanabileceğiniz tüm ayarların bulunduğu listeyi inceleyin. İşletim sistemi alt ve üst sınırı uyumluluğunu denetleyin, parola kısıtlamalarını ve uzunluğunu belirleyin, veri depolama alanında şifrelemeyi etkinleştirin ve çok daha fazlasını yapın.
+description: Microsoft Intune Windows 8.1 için uyumluluk ayarlarken kullanabileceğiniz tüm ayarların listesini görüntüleyin. İşletim sistemi alt ve üst sınırı uyumluluğunu denetleyin, parola kısıtlamalarını ve uzunluğunu belirleyin, veri depolama alanında şifrelemeyi etkinleştirin ve çok daha fazlasını yapın.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,38 +15,31 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0189fea7f73b70286a6daf844a10806d4c1e8a5d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9b423d289e81c48479adcaa7a594974b23a9476c
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79329670"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252716"
 ---
 # <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Intune'u kullanarak cihazları uyumlu veya uyumlu değil şeklinde işaretlemek için kullanabileceğiniz Windows 8.1 ayarları
 
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 Bu makalede Intune'daki Windows 8.1 cihazları için yapılandırabileceğiniz farklı uyumluluk ayarları listelenmekte ve anlatılmaktadır. Bu ayarları mobil cihaz yönetimi (MDM) çözümünüzün bir parçası olarak kullanarak basit parola kullanılmasını engelleyebilir, işletim sistemi için alt ve üst sınır belirleyebilir ve çok daha fazlasını yapabilirsiniz.
 
 Bu özellik şu platformlarda geçerlidir:
 
-- Windows Phone 8.1
 - Windows 8.1 ve üzeri
 
 Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun kaynaklarının korunmasına yardımcı olabilirsiniz. Uyumluluk ilkeleri ve işlevleri hakkında daha fazla bilgi için bkz. [Cihaz uyumluluğunu kullanmaya başlama](device-compliance-get-started.md).
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Bir uyumluluk Ilkesi oluşturun](create-compliance-policy.md#create-the-policy). **Platform** olarak **Windows Phone 8.1** veya **Windows 8.1 ve sonrası**'nı seçin.
+[Bir uyumluluk Ilkesi oluşturun](create-compliance-policy.md#create-the-policy). **Platform**için **Windows 8.1 ve üstünü**seçin.
 
 ## <a name="device-properties"></a>Cihaz Özellikleri
 
 ### <a name="operating-system-version"></a>İşletim Sistemi Sürümü
-
-**Windows Phone 8,1 ve üzeri**
-- **Mobil cihazlar Için en düşük işletim sistemi sürümü**:  
-  İzin verilen en düşük sürümü girin. Bir cihaz en düşük işletim sistemi sürümü gereksinimini karşılamadığında uyumsuz olarak bildirilir. Yükseltme hakkında bilgi içeren bir bağlantı gösterilir. Cihaz kullanıcısı cihazlarını yükseltmeyi seçebilir ve ardından şirket kaynaklarına erişim alabilir.
-
-- **Mobil cihazlar Için en yüksek işletim sistemi sürümü**:  
-  İzin verilen en yüksek sürümü girin. Bir cihaz, kurala girilen sürümden daha sonraki bir işletim sistemi sürümünü kullanırken, kuruluş kaynaklarına erişim engellenir. Cihaz kullanıcısına BT yöneticisine başvurması istenir. Cihaz, işletim sistemi sürümüne izin vermek için bir kural olana kadar kuruluş kaynaklarına erişemez.
 
 **Windows 8.1 ve üzeri**
 - **En düşük işletim sistemi sürümü**:  
@@ -88,7 +81,7 @@ Windows 8.1 bilgisayarları **3** sürümünü döndürür. Windows için işlet
     - Küçük harfler
     - Büyük harfler
     - Simgeleri
-    - Numaralar
+    - Sayılar
 
     Daha yüksek bir sayı ayarlanırsa kullanıcının daha karmaşık bir parola oluşturması gerekir. Microsoft hesabı ile erişilen cihazlarda, aşağıdaki koşullardan biri karşılandığında uyumluluk ilkesi doğru şekilde değerlendirilemiyor:
 

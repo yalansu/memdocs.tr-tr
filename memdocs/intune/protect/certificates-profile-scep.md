@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/10/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77a69af395aee293f927682f9d1a095c11a1d8a5
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: bc016ef1a3fd76c425a24d8230a0c078a0159922
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048098"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252665"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Intune 'da SCEP sertifika profilleri oluşturma ve atama
 
@@ -67,7 +67,7 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
      Sertifika profilini nasıl kullanacağınızı gösteren bir tür seçin:
 
      - **Kullanıcı**: *Kullanıcı* sertifikaları hem Kullanıcı hem de cihaz özniteliklerini, sertifikanın konu ve San 'ı içerebilir.  
-     - **Cihaz**: *cihaz* sertifikaları, sertifikanın konu ve San 'ı yalnızca cihaz özniteliklerini içerebilir.
+     - **Cihaz**:  *cihaz* sertifikaları, sertifikanın konu ve San 'ı yalnızca cihaz özniteliklerini içerebilir.
 
        **Cihazı** , kiosks gibi Kullanıcı-daha az cihazlar veya Windows cihazları gibi senaryolar için kullanın. Windows cihazlarında, sertifika yerel bilgisayar sertifika deposuna yerleştirilir.
 
@@ -115,7 +115,7 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
 
          Bu örnekte, CN ve E değişkenlerini kullanan bir konu adı biçimi ve kuruluş birimi, kuruluş, konum, durum ve ülke değerleri için dizeler bulunur. [CertStrToName işlevi](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx), bu işlevi ve desteklenen dizelerini açıklar.
          
-         \*Android tam olarak yönetilen, adanmış ve şirkete ait Iş profili profilleri için **CN = {{userPrincipalName}}** ayarı çalışmaz. Android tam olarak yönetilen, adanmış ve şirkete ait Iş profili profilleri kullanıcı olmayan cihazlarda kullanılabilir, bu nedenle kullanıcının Kullanıcı asıl adını alabilmesi mümkün olmayacaktır. Kullanıcılar için bu seçeneğe gerçekten ihtiyaç duyuyorsanız, şu şekilde bir geçici çözüm kullanabilirsiniz: **CN = {{username}} \@ contoso.com** , Kullanıcı adı ve el ile eklediğiniz etki alanı gibijanedoe@contoso.com
+         \* Android tam olarak yönetilen, adanmış ve şirkete ait Iş profili profilleri için **CN = {{userPrincipalName}}** ayarı çalışmaz. Android tam olarak yönetilen, adanmış ve şirkete ait Iş profili profilleri kullanıcı olmayan cihazlarda kullanılabilir, bu nedenle kullanıcının Kullanıcı asıl adını alabilmesi mümkün olmayacaktır. Kullanıcılar için bu seçeneğe gerçekten ihtiyaç duyuyorsanız, şu şekilde bir geçici çözüm kullanabilirsiniz: **CN = {{username}} \@ contoso.com** , Kullanıcı adı ve el ile eklediğiniz etki alanı gibi janedoe@contoso.com
 
       - **Cihaz sertifika türü**
 
@@ -211,7 +211,7 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
 
    - **Karma algoritması**:
 
-     *(Android, Android Enterprise, Windows Phone 8,1, Windows 8.1 ve üzeri ve Windows 10 ve üzeri için geçerlidir)*
+     *(Android, Android Enterprise, Windows 8.1 ve üzeri ve Windows 10 ve üzeri için geçerlidir)*
 
      Bu sertifika ile kullanmak için kullanılabilir karma algoritma türlerinden birini seçin. Bağlanan cihazların destekleyeceği en güçlü güvenlik düzeyini seçin.
 

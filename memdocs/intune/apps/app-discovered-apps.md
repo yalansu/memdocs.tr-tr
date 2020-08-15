@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 062a70f66843a67884d8406b66393da7bc52712b
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 50b90f312eff076e1c55f0baf56f15d491d4e0e1
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179613"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252280"
 ---
 # <a name="intune-discovered-apps"></a>Intune bulunan uygulamalar
 
@@ -64,7 +64,7 @@ Aşağıdaki liste, uygulama platformu türünü, kişisel cihazlar için izlene
 | Android Kurumsal | Yalnızca yönetilen uygulamalar | Yalnızca Iş profilinde yüklü olan uygulamalar | Her 7 günde bir cihaz kaydı |
 
 > [!NOTE]
-> - Windows 10 karma Azure AD 'ye katılmış cihazlar Configuration Manager içindeki uygulama yönetimi iş yükünde gösterildiği gibi, şu anda uygulama envanterini yukarıdaki zamanlamaya göre Intune yönetim uzantısı (IME) aracılığıyla toplamamaktadır. Bu sorunu azaltmak için, IME 'nin cihaza yüklenebilmesi için Configuration Manager içindeki uygulama yönetimi iş yükünün Intune 'a geçiş yapması gerekir (Win32 envanter ve PowerShell dağıtımı için IME gereklidir). Bu davranıştaki tüm değişikliklerin veya güncelleştirmelerin [geliştirme](../fundamentals/in-development.md) ve [/veya yenilikler](../fundamentals/whats-new.md)' de duyurulduğunu unutmayın.
+> - Windows 10 ortak yönetilen cihazlar Configuration Manager içindeki istemci uygulamaları iş yükünde gösterildiği gibi, yukarıdaki zamanlamaya göre şu anda Intune yönetim uzantısı (IME) aracılığıyla uygulama envanterini toplamamaktadır. Bu sorunu azaltmak için, IME 'nin cihaza yüklenebilmesi için Configuration Manager 'deki istemci uygulaması iş yükünün Intune 'a geçiş yapması gerekir (Win32 envanter ve PowerShell dağıtımı için IME gereklidir). Bu davranıştaki tüm değişikliklerin veya güncelleştirmelerin [geliştirme](../fundamentals/in-development.md) ve [/veya yenilikler](../fundamentals/whats-new.md)' de duyurulduğunu unutmayın.
 > - , Kasım 2019 ' den önce kaydedilen kişiye ait macOS cihazları, cihazlar yeniden kaydedilinceye kadar cihazda yüklü olan tüm uygulamaları göstermeye devam edebilir.
 > - Android kurumsal tam olarak yönetilen ve adanmış, bulunan uygulamaları görüntülemez.
 

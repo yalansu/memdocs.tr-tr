@@ -10,12 +10,12 @@ ms.assetid: 75f47456-cd8d-4c83-8dc5-98b336a7c6c8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 93b793dfbc6d7d0b5f4b24db65588ee1390604e9
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0d081c79a6267495a9738efcb19ceb8b7aa74958
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129289"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252512"
 ---
 # <a name="troubleshoot-application-installation-for-devices-uploaded-to-the-admin-center-preview"></a>Yönetim merkezine yüklenen cihazlar için uygulama yüklemesinde sorun giderme (Önizleme)
 <!--6374854, 6521921-->
@@ -30,13 +30,13 @@ Microsoft Endpoint Manager Yönetim Merkezi 'nde Configuration Manager uygulamal
 
 Microsoft Endpoint Manager Yönetim Merkezi 'nden uygulamaları görüntülerken veya yüklerken, bu hatalardan biri üzerinde çalıştırabilirsiniz.  
 
-### <a name="the-necessary-configuration-is-missing-in-azure-active-directory"></a><a name="bkmk_aad"></a>Gerekli Yapılandırma Azure Active Directory eksik
+### <a name="the-necessary-configuration-is-missing-in-azure-active-directory"></a><a name="bkmk_aad"></a> Gerekli Yapılandırma Azure Active Directory eksik
 
 **Hata iletisi:** Gerekli Yapılandırma Azure Active Directory eksik. Configuration Manager sitesini Azure kiracınıza iliştirdiğinizden ve uygun Kullanıcı rolünü Azure AD 'ye atadığınızdan emin olun.
 
 **Olası neden:** Kullanıcı hesabının Azure AD 'de Configuration Manager Mikro hizmet uygulaması için **Yönetici Kullanıcı** rolü eksik olabilir. Azure AD 'deki rolü, **Enterprise applications**  >  **mikro hizmet**  >  **kullanıcıları ve grupları**  >  **Kullanıcı Ekle**' Configuration Manager kurumsal uygulamalardan ekleyin. Azure AD Premium varsa gruplar desteklenir. Bu izne yapılan değişikliklerin etkili olması bir saate kadar sürebilir.
 
-### <a name="unable-to-get-application-information"></a><a name="bkmk_noinfo"></a>Uygulama bilgileri alınamıyor
+### <a name="unable-to-get-application-information"></a><a name="bkmk_noinfo"></a> Uygulama bilgileri alınamıyor
 
 **Hata iletisi 1:** Uygulama bilgileri alınamıyor. Azure AD ve AD Kullanıcı bulmanın yapılandırıldığından ve kullanıcının her ikisiyle de bulunduğundan emin olun. Kullanıcının Configuration Manager uygun izinlere sahip olduğunu doğrulayın.
 
@@ -56,7 +56,7 @@ Microsoft Endpoint Manager Yönetim Merkezi 'nden uygulamaları görüntülerken
 
     Azure AD özellikleri boşsa, sitenin [Azure AD Kullanıcı keşfi](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc)yapılandırmasını denetleyin.
 
-### <a name="unexpected-error-occurred"></a><a name="bkmk_1603"></a>Beklenmeyen bir hata oluştu
+### <a name="unexpected-error-occurred"></a><a name="bkmk_1603"></a> Beklenmeyen bir hata oluştu
 
 **Hata iletisi:** Beklenmeyen bir hata oluştu
 
@@ -83,7 +83,7 @@ Beklenmeyen hatalara genellikle [hizmet bağlantı noktası](../core/servers/dep
 1. IIS 'nin sağlayıcı makinesine yüklenmesi gerekir. Daha fazla bilgi için bkz. [Yönetim hizmeti önkoşulları](../develop/adminservice/overview.md#prerequisites).
 
 
-### <a name="the-site-information-hasnt-yet-synchronized"></a><a name="bkmk_sync"></a>Site bilgileri henüz eşitlenmedi
+### <a name="the-site-information-hasnt-yet-synchronized"></a><a name="bkmk_sync"></a> Site bilgileri henüz eşitlenmedi
 
 **Hata iletisi:** Site bilgileri henüz Microsoft Endpoint Manager yönetim merkezine Configuration Manager ile eşitlenmemiş. Siteyi Azure kiracınıza iliştirdikten 15 dakikaya kadar bekleyin.
 
@@ -91,13 +91,13 @@ Beklenmeyen hatalara genellikle [hizmet bağlantı noktası](../core/servers/dep
 - Bu hata genellikle kiracı iliştirme 'ye yeni ekleme gerçekleştirildiğinde oluşur. Bilgilerin eşitlenmesi 15 dakika bekleyin.
 - Bu hata, merkezi yönetim sitesi yeni bir Configuration Manager sürümüne yükseltildiyse ancak bazı alt birincil siteler henüz yükseltilmemişse de görünebilir.
 
-### <a name="application-shows-as-installed-after-creating-a-new-deployment"></a><a name="bkmk_installed"></a>Uygulama yeni bir dağıtım oluşturduktan sonra yüklendi olarak gösteriliyor
+### <a name="application-shows-as-installed-after-creating-a-new-deployment"></a><a name="bkmk_installed"></a> Uygulama yeni bir dağıtım oluşturduktan sonra yüklendi olarak gösteriliyor
 
 **Belirti:** Kullanılabilir yeni bir cihaz oluşturulduktan sonra bir uygulama, Microsoft Endpoint Manager Yönetim Merkezi 'nde yüklü olarak gösterilir.
 
 **Olası neden:** Bu cihaz için gösterilen uygulama durumu, başka bir etkin veya geçmiş dağıtımından yapılır.
 
-### <a name="errors-when-searching-or-retrying-an-installation"></a><a name="bkmk_hfru"></a>Bir yüklemeyi ararken veya yeniden denemeden oluşan hatalar
+### <a name="errors-when-searching-or-retrying-an-installation"></a><a name="bkmk_hfru"></a> Bir yüklemeyi ararken veya yeniden denemeden oluşan hatalar
 
 **Belirti:** Aşağıdaki eylemler gerçekleştirilirken hatalar oluşur:
 - Aramayı Kullanma
@@ -114,6 +114,9 @@ Beklenmeyen hatalara genellikle [hizmet bağlantı noktası](../core/servers/dep
 **Belirtiler:** Kullanıcı `restart pending` bildirimleri ve yazılım merkezi 'nde görüntülenir. Microsoft Endpoint Manager yönetim merkezinden uygulama `Installing` durumunda kalır.  
 
 **Geçici çözüm:** Kullanıcı cihazı yeniden başlattıktan sonra, yönetici merkezinde doğru durum görüntülenir.
+
+[!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
+
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

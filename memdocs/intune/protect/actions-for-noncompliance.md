@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e881dc386fa0fe0b98b5e3d4480e1957c251808
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d262041c982d3d9a629ccb550a1376e5e479a759
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262685"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252784"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Intune 'da uyumsuz cihazlar için eylemleri yapılandırma
 
@@ -63,8 +63,6 @@ E-posta gönderildiğinde, Intune e-posta bildiriminde uyumsuz cihaz hakkındaki
     - Android kurumsal bilgi noktası cihazları
   - iOS/iPadOS
   - macOS
-  - Windows 10 Mobile
-  - Windows Phone 8.1 ve üzeri
 
 - **Uyumsuz cihazı devre dışı bırak**: Bu eylem tüm şirket verilerini cihazdan kaldırır ve cihazı Intune yönetiminden kaldırır. Bir cihazın yanlışlıkla silinmesini engellemek için, bu eylem en az **30** günlük zamanlamayı destekler.
 
@@ -75,8 +73,6 @@ E-posta gönderildiğinde, Intune e-posta bildiriminde uyumsuz cihaz hakkındaki
     - Android kurumsal Iş profili
   - iOS/iPadOS
   - macOS
-  - Windows 10 Mobile
-  - Windows Phone 8.1 ve üzeri
 
   [Cihazları devre dışı bırakma](../remote-actions/devices-wipe.md#retire)hakkında daha fazla bilgi edinin.
 

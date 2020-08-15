@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: d120ee0f55651ab1661e426e5889aaf8a4c7e670
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 7088bfd5b27d986e12a175de1bdea0bf060c3ad3
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262872"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252529"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>İş için Windows Hello ile Microsoft Intune tümleştirmesi  
 
@@ -45,17 +45,15 @@ Ayrıca Intune, Iş için Windows Hello bazı ayarlarını yönetmek üzere aşa
 Bu makalenin geri kalanında, tüm kuruluşunuzu hedefleyen Iş için varsayılan bir Windows Hello ilkesi oluşturma konusu ele alınmaktadır.
 
 > [!IMPORTANT]
-> Yıldönümü Güncelleştirmesi’nden önceki Windows 10 masaüstü ve mobil sürümlerinde, kaynaklarda kimlik doğrulama için kullanılabilen iki farklı PIN ayarlayabilirsiniz:
+> Yıldönümü güncelleştirmesinden önce, kaynakların kimliğini doğrulamak için kullanılabilecek iki farklı PIN ayarlayabilirsiniz:
 >
 > - **Cihaz PIN’i** cihazın kilidini açmak ve bulut kaynaklarına bağlanmak için kullanılabilir.
 > - **Iş PIN 'i** , kullanıcının kişisel cihazlarında (KCG) Azure AD kaynaklarına erişmek için kullanıldı.
-> 
+>
 > Yıldönümü Güncelleştirmesi’nde bu iki PIN, tek bir cihaz PIN’inde birleştirilmiştir.
 > Cihaz PIN’ini denetlemek için ayarladığınız Intune yapılandırma ilkelerinin yanı sıra, yapılandırmış olduğunuz İş İçin Windows Hello ilkeleri de bu yeni PIN değerine ayarlanmıştır.
-> PIN’i denetlemek için iki ilke türünü de ayarladıysanız, İş için Windows Hello ilkesi hem Windows 10 masaüstü cihazlara hem de Windows 10 mobil cihazlara uygulanır.
+> PIN 'ı denetlemek için her iki ilke türünü de ayarladıysanız, Iş için Windows Hello ilkesi uygulanır.
 > İlke çakışmalarının çözümlendiğinden ve PIN ilkesinin düzgün şekilde uygulandığından emin olmak için, İş İçin Windows Hello İlkenizi yapılandırma ilkenizdeki ayarlarla eşleşecek şekilde güncelleştirin ve kullanıcılarınızdan cihazlarını Şifket Portalı uygulamasında eşitlemelerini isteyin.
-
-
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>İş İçin Windows Hello ilkesi oluşturma
 
@@ -65,13 +63,13 @@ Bu makalenin geri kalanında, tüm kuruluşunuzu hedefleyen Iş için varsayıla
 
 3. **İş Için Windows Hello 'Yu yapılandırmak**için aşağıdaki seçenekler arasından seçim yapın:
 
-     - **Etkin**. İş İçin Windows Hello ayarlarını yapılandırmak istiyorsanız bu ayarı seçin.  *Etkin*' i seçtiğinizde, Windows Hello için ek ayarlar görünür ve cihazlar için yapılandırılabilir.
+   - **Etkin**. İş İçin Windows Hello ayarlarını yapılandırmak istiyorsanız bu ayarı seçin.  *Etkin*' i seçtiğinizde, Windows Hello için ek ayarlar görünür ve cihazlar için yapılandırılabilir.
 
-    - **Devre dışı**. Cihaz kaydı sırasında Iş için Windows Hello 'Yu etkinleştirmek istemiyorsanız, bu seçeneği seçin. Devre dışı bırakıldığında, kullanıcılar, sağlama gerekebilecek mobil telefonlar Azure Active Directory dahil olmak üzere Iş için Windows Hello sağlayamaz. *Devre dışı*olarak ayarlandığında, bu ilke Iş Için Windows Hello 'yu Etkinleştiremese de Iş Için Windows Hello için sonraki ayarları yine de yapılandırabilirsiniz.
+   - **Devre dışı**. Cihaz kaydı sırasında Iş için Windows Hello 'Yu etkinleştirmek istemiyorsanız, bu seçeneği seçin. Devre dışı bırakıldığında, kullanıcılar Iş için Windows Hello 'Yu sağlayamaz. *Devre dışı*olarak ayarlandığında, bu ilke Iş Için Windows Hello 'yu Etkinleştiremese de Iş Için Windows Hello için sonraki ayarları yine de yapılandırabilirsiniz.
 
-    - **Yapılandırılmadı**. Intune’un İş İçin Windows Hello ayarlarını denetlemesini istemiyorsanız bu ayarı seçin. Windows 10 cihazlarında mevcut Iş için Windows Hello ayarları değiştirilmez. Bölmedeki diğer ayarlardan hiçbiri kullanılamaz.
+   - **Yapılandırılmadı**. Intune’un İş İçin Windows Hello ayarlarını denetlemesini istemiyorsanız bu ayarı seçin. Windows 10 cihazlarında mevcut Iş için Windows Hello ayarları değiştirilmez. Bölmedeki diğer ayarlardan hiçbiri kullanılamaz.
 
-4. Önceki adımda **Etkin**’i seçtiyseniz, tüm kayıtlı Windows 10 ve Windows 10 Mobile cihazlarına uygulanacak olan gerekli ayarları yapılandırın. Bu ayarları yapılandırdıktan sonra **Kaydet**' i seçin.
+4. Önceki adımda **etkin** ' i seçtiyseniz, tüm kayıtlı Windows 10 cihazlarına uygulanan gerekli ayarları yapılandırın. Bu ayarları yapılandırdıktan sonra **Kaydet**' i seçin.
 
    - **Güvenilir Platform Modülü (TPM) kullanın**:
 

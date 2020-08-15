@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b0870c82d0a53df1df8ddb9e21b363f72b80e3a
-ms.sourcegitcommit: 69a6829ace9fc1999e58e5f31348521b638ef0ba
+ms.openlocfilehash: 15b590c87bb56427e44f955fb2f68382f60c7bc1
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88239519"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252656"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Cihazları Intune ile uyumlu veya uyumsuz olarak işaretlemek için Windows 10 ve üzeri ayarları
 
@@ -106,9 +106,9 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
   - **Gerektir** -Configuration Manager için tüm ayarların (yapılandırma öğeleri) uyumlu olmasını gerektir.
 
     Örneğin, tüm yazılım güncelleştirmelerinin cihazlarda yüklü olmasını gerektirirsiniz. Configuration Manager, bu gereksinimin "yüklü" durumu vardır. Cihazdaki herhangi bir program bilinmeyen bir durumdaysa, cihaz Intune 'da uyumlu değildir.
-    
+
   > [!NOTE]
-  > Ortak yönetim için uyumluluk iş yükü *Configuration Manager*olarak ayarlandığında yalnızca **Configuration Manager cihaz uyumluluğunu gerektir** ' i kullanın. Bu ayarı, uyumluluk iş yükünün *Intune*olarak ayarlandığı durumlarda kullandığınızda tüm uyumluluk değerlendirmelerini etkileyebilir. 
+  > Ortak yönetim için uyumluluk iş yükü *Configuration Manager*olarak ayarlandığında yalnızca **Configuration Manager cihaz uyumluluğunu gerektir** ' i kullanın. Bu ayarı, uyumluluk iş yükünün *Intune*olarak ayarlandığı durumlarda kullandığınızda, genel uyumluluk değerlendirmelerini etkileyebilir.
 
 ## <a name="system-security"></a>Sistem Güvenliği
 
