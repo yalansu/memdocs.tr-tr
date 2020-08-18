@@ -2,7 +2,7 @@
 title: Sürüm notları
 titleSuffix: Configuration Manager
 description: Üründe henüz düzeltilmeyen veya Microsoft Desteği Bilgi Bankası makalesinde kapsanan acil sorunlar hakkında bilgi edinin.
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9c1152b14da7c0a473e266b1ac1e6da2778aa105
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a29c165e13e82144d7fea767ca719a0c84c88023
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126300"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512657"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager için sürüm notları
 
@@ -29,7 +29,7 @@ Bu makale, Configuration Manager geçerli dalı için sürüm notlarını içeri
 
 Farklı sürümlerle sunulan yeni özellikler hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [Sürüm 2006 ' deki yenilikler](../../../plan-design/changes/whats-new-in-version-2006.md)
+- [Sürüm 2006’daki yenilikler](../../../plan-design/changes/whats-new-in-version-2006.md)
 - [Sürüm 2002’deki yenilikler](../../../plan-design/changes/whats-new-in-version-2002.md)
 - [Sürüm 1910’daki yenilikler](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [Sürüm 1906’daki yenilikler](../../../plan-design/changes/whats-new-in-version-1906.md)  
@@ -37,7 +37,7 @@ Farklı sürümlerle sunulan yeni özellikler hakkında daha fazla bilgi için a
 Masaüstü analizlerinin yeni özellikleri hakkında daha fazla bilgi için bkz. [Masaüstü analizteki yenilikler](../../../../desktop-analytics/whats-new.md).
 
 > [!Tip]  
-> Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın:`https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
+> Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın: `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="set-up-and-upgrade"></a>Kurulum ve yükseltme  
 
@@ -113,6 +113,20 @@ Bu sorunu geçici olarak çözmek için dizinde adlı bir klasör oluşturun `sc
 
 ## <a name="os-deployment"></a>İşletim sistemi dağıtımı
 
+### <a name="client-policy-error-when-you-deploy-a-task-sequence"></a>Bir görev dizisini dağıtırken istemci ilkesi hatası
+
+<!-- 7970134 -->
+
+*Uygulama hedefi: Configuration Manager sürüm 2006 erken güncelleştirme halkası*
+
+Bir istemciye bir görev dizisi dağıttığınızda, gerekli bir görev sırası son tarihe yüklenmez ve kullanılabilir bir görev sırası yazılım merkezi 'nde görünmez. Şu hata iletisine benzer bir açıklama ile 10803 durum iletisini görürsünüz:
+
+*İstemci, ilkeyi indiremedi. Veri aktarım hizmeti "BITS hatası:" Sunucunun yanıtı geçerli değildi. Sunucu tanımlı protokolü takip etmez. (-2145386469).*
+
+Bu sorun, HTTPS için yönetim noktasını yapılandırdığınızda ve cihaz Configuration Manager istemci 1906 veya önceki bir sürümü kullandığında oluşur.
+
+Bu sorunu geçici olarak çözmek için cihazdaki Configuration Manager istemcisini 1910 veya sonraki bir sürüme güncelleştirin.
+
 ### <a name="task-sequences-cant-run-over-cmg"></a>Görev dizileri CMG üzerinden çalıştırılamaz
 
 *Uygulama hedefi: Configuration Manager sürüm 2002*
@@ -164,7 +178,7 @@ Daha fazla bilgi için bkz. [özel güvenlik rolleri oluşturma](../configure/co
 <!-- 7283186 -->
 _Uygulama hedefi: Configuration Manager sürümler 2002 ve öncesi_
 
-Windows 7 için Nisan 2020 Genişletilmiş Güvenlik Güncelleştirmesi (ESU), diagtrack.dll gereken minimum sürümünü 10586 ' den 10240 ' ye değiştirdi. Bu değişiklik, Windows 7 cihazlarının masaüstü Analizi **bağlantı durumu** panosuna **kayıt yapılamıyor** olarak gösterilmesini sağlar. Bu durum için cihaz görünümü detayına indığınızda, **diagtrack hizmeti yapılandırma** özelliği aşağıdaki durumu gösterir:`Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
+Windows 7 için Nisan 2020 Genişletilmiş Güvenlik Güncelleştirmesi (ESU), diagtrack.dll gereken minimum sürümünü 10586 ' den 10240 ' ye değiştirdi. Bu değişiklik, Windows 7 cihazlarının masaüstü Analizi **bağlantı durumu** panosuna **kayıt yapılamıyor** olarak gösterilmesini sağlar. Bu durum için cihaz görünümü detayına indığınızda, **diagtrack hizmeti yapılandırma** özelliği aşağıdaki durumu gösterir: `Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
 
 Bu sorun için geçici çözüm gerekmez. Nisan ESU 'yi kaldırmayın. Aksi halde doğru yapılandırılmamışsa, Windows 7 cihazları tanılama verilerini hala masaüstü Analizi hizmetine bildirir ve portalda görünmeye devam eder.
 

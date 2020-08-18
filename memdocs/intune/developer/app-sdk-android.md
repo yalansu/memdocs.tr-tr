@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99fa22d351d8d0672d2745f18bb70dfd096ac1d7
-ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.openlocfilehash: d1ede68097ef3afe0358154ff7b8802a0b3a7285
+ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437428"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501176"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Android için Microsoft Intune Uygulama SDK’sı geliştirici kılavuzu
 
@@ -165,7 +165,7 @@ Bu, şu sonuçları üretir:
 * `zap.jar`, bir proje olmadığı ve `includeExternalLibraries` içine dahil edilmediğinden yeniden **yazılmaz**
 * `com.contoso.foo:zap-artifact:1.0.0`, `includeExternalLibraries` içine dahil edildiğinden yeniden yazılır
 * `com.microsoft.bar:baz:1.0.0`, bir joker karakterle `includeExternalLibraries` içine dahil edildiğinden (`com.microsoft.*`) yeniden yazılır.
-* `com.microsoft.qux:foo:2.0`, bir olumsuzlama düzeniyle açıkça dışlandığı için, önceki öğeyle aynı joker karakterle eşleşip eşleşmese de bu geri yazılır.
+* `com.microsoft.qux:foo:2.0` , bir olumsuzlama düzeniyle açıkça dışlandığı için, önceki öğeyle aynı joker karakterle eşleşip eşleşmese de bu geri yazılır.
 
 #### <a name="usage-of-includeexternallibraries"></a>includeExternalLibraries kullanımı
 
@@ -181,11 +181,11 @@ Her iki soruyu da 'evet' ile yanıtlıyorsanız, bu kitaplığı `includeExterna
 
 | Senaryo | Dahil edilsin mi? |
 |--|--|
-| Uygulamanıza bir PDF görüntüleyici kitaplığı dahil ediyor ve görüntüleyicinin `Activity` sınıfını kullanıcılarınız PDF'leri görüntülemeye çalıştığında uygulamanızda kullanıyorsunuz | Evet |
+| Uygulamanıza bir PDF görüntüleyici kitaplığı dahil ediyor ve görüntüleyicinin `Activity` sınıfını kullanıcılarınız PDF'leri görüntülemeye çalıştığında uygulamanızda kullanıyorsunuz | Yes |
 | Gelişmiş Web performansı için bir HTTP kitaplığını uygulamanıza dahil ediyorsunuz | Hayır |
-| `Activity`, `Application` ve `Fragment` sınıflarından türetilmiş sınıfları olan React Native gibi bir kitaplığı dahil ediyor ve bu sınıfları uygulamanızda kullanıyor veya bunlardan başka sınıflar türetiyorsunuz | Evet |
+| `Activity`, `Application` ve `Fragment` sınıflarından türetilmiş sınıfları olan React Native gibi bir kitaplığı dahil ediyor ve bu sınıfları uygulamanızda kullanıyor veya bunlardan başka sınıflar türetiyorsunuz | Yes |
 | `Activity`, `Application` ve `Fragment` sınıflarından türetilmiş sınıflar içeren React Native gibi bir kitaplığı dahil ediyor, ancak yalnızca statik yardımcıları veya hizmet sınıflarını kullanıyorsunuz | Hayır |
-| `TextView` sınıfından türetilmiş görünüm sınıfları içeren bir kitaplığı dahil ediyor ve bu sınıfları uygulamanızda kullanıyor veya bunlardan başka sınıflar türetiyorsunuz | Evet |
+| `TextView` sınıfından türetilmiş görünüm sınıfları içeren bir kitaplığı dahil ediyor ve bu sınıfları uygulamanızda kullanıyor veya bunlardan başka sınıflar türetiyorsunuz | Yes |
 
 #### <a name="reporting"></a>Raporlama
 Yapı eklentisi, yaptığı değişikliklerin HTML raporunu oluşturabilir. Bu raporun oluşturulmasını istemek için `report = true` yapılandırma bloğunda ' i belirtin `intunemam` . Oluşturulduysa, rapor `outputs/logs` derleme dizinine yazılır.
@@ -758,7 +758,7 @@ Parametresi için `username` , daha fazla bilgi için bkz. [veri aktarımı Içi
 #### <a name="unknown-or-unlisted-locations"></a>Bilinmeyen veya listelenmemiş konumlar
 
 İstenen konum `SaveLocation` veya numaralandırmalar içinde listelenmediyse `OpenLocation` veya bu `service` / `location` parametre bilinmiyorsa, ve parametreleri için `ACCOUNT_DOCUMENT` iki seçenek vardır `OTHER` .
-`ACCOUNT_DOCUMENT`veriler uygulamada oturum açan bir AAD hesabına ait olduğunda, ancak `ONEDRIVE_FOR_BUSINESS` `SHAREPOINT` Bu durum yoksa, `OTHER` Bu durumda kullanılması gerekir.
+`ACCOUNT_DOCUMENT` veriler uygulamada oturum açan bir AAD hesabına ait olduğunda, ancak `ONEDRIVE_FOR_BUSINESS` `SHAREPOINT` Bu durum yoksa, `OTHER` Bu durumda kullanılması gerekir.
 
 Yönetilen hesap ile yönetilen hesabın UPN 'sini paylaşan bir hesap arasında ayrım yapmak önemlidir.
 Örneğin, "" UPN 'si ile yönetilen bir hesap, user@contoso.com OneDrive 'da oturum açmış "" UPN 'sine sahip bir hesapla aynı değildir user@contoso.com .
@@ -768,10 +768,10 @@ Bilinmeyen veya listelenmemiş hizmet başka bir hesapta oturum açarsa (ör. " 
 #### <a name="username-for-data-transfer"></a>Veri aktarımı için Kullanıcı adı
 
 Kayıt ilkesini denetlerken, `username` kaydedilen bulut hizmeti ile ILIŞKILI UPN/Kullanıcı adı/e-posta olması gerekir (Bu, kaydedilmekte olan*not* kullanıcıyla aynı olması gerekmez).
-`SaveLocation.LOCAL`bir bulut hizmeti değil, her zaman bir `null` Kullanıcı adı parametresiyle birlikte kullanılmalıdır.
+`SaveLocation.LOCAL` bir bulut hizmeti değil, her zaman bir `null` Kullanıcı adı parametresiyle birlikte kullanılmalıdır.
 
 Açık ilke denetlenirken, `username` açılan bulut hizmeti ile ILIŞKILI UPN/Kullanıcı adı/e-posta olmalıdır.
-`OpenLocation.LOCAL`ve `OpenLocation.CAMERA` bulut hizmeti konumları değildir ve bu nedenle her zaman bir `null` Kullanıcı adı parametresiyle birlikte kullanılmalıdır.
+`OpenLocation.LOCAL` ve `OpenLocation.CAMERA` bulut hizmeti konumları değildir ve bu nedenle her zaman bir `null` Kullanıcı adı parametresiyle birlikte kullanılmalıdır.
 
 Aşağıdaki konumlar her zaman AAD UPN ve Cloud Service Kullanıcı adı arasında bir eşleme içeren bir Kullanıcı adı bekler: `ONEDRIVE_FOR_BUSINESS` , `SHAREPOINT` ve `ACCOUNT_DOCUMENT` .
 
@@ -963,7 +963,7 @@ Ayrıca aşağıdaki [Koşullu Erişim](#conditional-access) gereksinimlerini in
 |Gerekli ADAL parametresi| Değer |
 |--|--|
 | ClientID | Uygulamanın İstemci Kimliği (uygulama kaydedilirken Azure AD tarafından oluşturulur) |
-| SkipBroker | **Doğru** |
+| SkipBroker | **True** |
 
 Gerekirse Yetkili ve NonBrokerRedirectURI belirtilebilir.
 
@@ -1154,7 +1154,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 
 ### <a name="important-implementation-notes"></a>Önemli uygulama notları
 
-#### <a name="authentication"></a>Kimlik doğrulama
+#### <a name="authentication"></a>Kimlik Doğrulaması
 
 * Uygulama `registerAccountForMAM()` çağrısı yaptığında, bundan kısa süre sonra farklı bir iş parçacığında `MAMServiceAuthenticationCallback` arabiriminde bir geri çağırma alabilir. İdeal olarak, uygulama, istenen belirtecin alımını hızlandırmak için hesabı kaydetmeden önce ADAL 'dan kendi belirtecini almış. Uygulama geri aramadan geçerli bir belirteç döndürürse, kayıt devam eder ve uygulama bir bildirim aracılığıyla nihai sonucu alır.
 
@@ -1184,7 +1184,7 @@ Hesap ilk kez kaydedildiğinde, `PENDING` durumunda başlar. Bu, ilk MAM hizmeti
 | `AUTHORIZATION_NEEDED` | Bu sonuç, bir belirtecin uygulamanın kayıtlı örneği tarafından sağlandığını `MAMServiceAuthenticationCallback` veya belirtilen belirtecin geçersiz olduğunu gösterir.  Uygulama mümkünse geçerli bir belirteç almalı ve `updateToken()` yöntemini çağırmalıdır. |
 | `NOT_LICENSED` | Kullanıcı Intune’da lisanslı değildir veya Intune MAM hizmetiyle iletişim kurma girişimi başarısız olmuştur.  Uygulamanın yönetilmeyen (normal) durumda çalışmaya devam etmesi ve kullanıcının engellenmemesi gerekir.  Kullanıcının gelecekte lisanslı duruma gelme olasılığına karşı, kayıt işlemleri düzenli aralıklarla yeniden denenecektir. |
 | `ENROLLMENT_SUCCEEDED` | Kayıt girişimi başarılı olmuştur ve kullanıcı kaydedilmiştir.  Başarılı bir kayıt söz konusu olduğunda, bu bildirimden önce ilke yenileme bildirimi gönderilir.  Kurumsal verilere erişim izni verilmelidir. |
-| `ENROLLMENT_FAILED` | Kayıt girişimi başarısız olmuştur.  Diğer ayrıntılar, cihaz günlüklerinde bulunabilir.  Daha önce kullanıcının Intune için lisanslı olduğunu belirlediğinden, uygulamanın bu durumda kurumsal verilere erişim izni olmaması gerekir.|
+| `ENROLLMENT_FAILED` | Kayıt girişimi başarısız olmuştur.  Diğer ayrıntılar, cihaz günlüklerinde bulunabilir.  Daha önce kullanıcının Intune için lisanslı olduğunu belirlediğinden, uygulamanın bu durumda kurumsal verilere erişim izni olmaması gerekir. Tüm uygulamalar, uygulamanız tarafından "enrollment_succeeded" alınana kadar kurumsal veri erişiminin yetkisiz olduğundan emin olmalıdır.|
 | `WRONG_USER` | Cihaz başına yalnızca bir kullanıcı MAM hizmetiyle uygulamayı kaydedebilir. Bu sonuç, bu sonucun teslim edildiği kullanıcının (ikinci Kullanıcı) MAM ilkesi ile hedeflendiğini, ancak farklı bir kullanıcının zaten kayıtlı olduğunu gösterir. İkinci Kullanıcı için MAM ilkesi zorlanamadığından, bu kullanıcı için kayıt kaydı daha sonra başarılı olmadığı sürece uygulamanız bu kullanıcının verilerine erişime izin vermelidir (muhtemelen Kullanıcı uygulamanızdan kaldırılır). Bu sonucu sunmaya eşzamanlı `WRONG_USER` olarak, mam var olan hesabı kaldırma seçeneğiyle istemde yer alacak. İnsan kullanıcısı bir süre içinde yanıt verdiği zaman, ikinci kullanıcıyı kısa bir süre sonra kaydetmek mümkün olacaktır. İkinci Kullanıcı kayıtlı kaldığı sürece, MAM kaydı düzenli aralıklarla yeniden dener. |
 | `UNENROLLMENT_SUCCEEDED` | Kaydın kaldırılması başarılı olmuştur.|
 | `UNENROLLMENT_FAILED` | Kayıt kaldırma isteği başarısız olmuştur.  Diğer ayrıntılar, cihaz günlüklerinde bulunabilir. Genel olarak, uygulama geçerli bir (null ya da boş) UPN 'yi geçirmiş olduğu sürece bu durum oluşmaz. Uygulamanın gidebilmesine yönelik doğrudan, güvenilir bir düzeltme yoktur. Bu değer geçerli bir UPN kaydı silinirken alınmışsa, lütfen Intune MAM ekibine hata olarak bildirin.|
@@ -1251,7 +1251,7 @@ public interface MAMComplianceManager {
 
 `remediateCompliance()`Yöntemi, istenen belirteci vermek IÇIN AAD 'nin koşullarını karşılamak üzere uygulamayı yönetim altına koymaya çalışmak üzere çağırılır.  İlk dört parametre ADAL yöntemi tarafından alınan özel durumdan ayıklanabilir `AuthenticationCallback.onError()` (Aşağıdaki kod örneğine bakın).  Son parametre, uyumluluk girişimi sırasında bir UX gösterilip gösterilmeyeceğini denetleyen bir Boole değeri.  Bu işlem sırasında özelleştirilmiş UX gösterme gereksinimi olmayan uygulamalar için varsayılan olarak sunulan basit bir engelleme ilerleme stil arabirimidir.  Yalnızca uyumluluk düzeltmesi devam ederken engellenecek ve nihai sonucu göstermeyecektir.  Uygulama, uyumluluk düzeltme girişiminin başarısını veya başarısızlığını işlemek için bir bildirim alıcısı kaydetmelidir (aşağıya bakın).
 
-`remediateCompliance()`Yöntemi, uyumluluk oluşturma kapsamında BIR mam kaydı olabilir.  Uygulama, kayıt bildirimleri için bir bildirim alıcısı kaydettirirse bir kayıt bildirimi alabilir.  Uygulamanın kayıtlı yöntemi, `MAMServiceAuthenticationCallback` `acquireToken()` mam kaydı için bir belirteç almak üzere çağırılır. `acquireToken()`uygulama kendi belirtecini elde etmeden önce çağrılacaktır, bu nedenle uygulamanın başarılı bir belirteç alımı sonrasında kullandığı tüm muhasebe veya hesap oluşturma görevleri henüz yapılmamış olabilir.  Geri çağırma bu durumda bir belirteç elde edebilmelidir.  Öğesinden bir belirteç döndüremiyorum `acquireToken()` , uyumluluk düzeltme girişimi başarısız olur.  `updateToken()`İstenen kaynak için daha sonra geçerli bir belirteçle çağrı yaparsanız, uyumluluk düzeltmesi verilen belirteçle hemen yeniden denenir.
+`remediateCompliance()`Yöntemi, uyumluluk oluşturma kapsamında BIR mam kaydı olabilir.  Uygulama, kayıt bildirimleri için bir bildirim alıcısı kaydettirirse bir kayıt bildirimi alabilir.  Uygulamanın kayıtlı yöntemi, `MAMServiceAuthenticationCallback` `acquireToken()` mam kaydı için bir belirteç almak üzere çağırılır. `acquireToken()` uygulama kendi belirtecini elde etmeden önce çağrılacaktır, bu nedenle uygulamanın başarılı bir belirteç alımı sonrasında kullandığı tüm muhasebe veya hesap oluşturma görevleri henüz yapılmamış olabilir.  Geri çağırma bu durumda bir belirteç elde edebilmelidir.  Öğesinden bir belirteç döndüremiyorum `acquireToken()` , uyumluluk düzeltme girişimi başarısız olur.  `updateToken()`İstenen kaynak için daha sonra geçerli bir belirteçle çağrı yaparsanız, uyumluluk düzeltmesi verilen belirteçle hemen yeniden denenir.
 
 > [!NOTE]
 > `acquireToken()`Kullanıcı aracıyı yüklemek ve hata alınmadan önce cihazı kaydetmek için zaten Kılavuzlu için sessiz belirteç alma işlemi yine de mümkün olacaktır `ADALError.AUTH_FAILED_INTUNE_POLICY_REQUIRED` .  Bu, aracıda, istenen belirtecin sessiz Alım işleminin başarılı olmasına izin veren, önbelleğinde geçerli bir yenileme belirteci olmasına neden olur.
@@ -1345,7 +1345,7 @@ AuthenticationResult result = acquireTokenSilentSync(resourceId, clientId, userI
 > Düzeltme girişimi sırasında özel bir engelleme UX 'i göstermek istiyorsanız, showUX parametresi için *false* olarak geçmelisiniz `remediateCompliance()` . ' İ çağırmadan önce UX 'nizi gösterdiğinizden ve bildirim dinleyicinizi kaydetmeniz gerekir `remediateCompliance()` .  Bu, çok hızlı bir şekilde başarısız olursa bildirimin kaçırıldığı bir yarış durumu önler `remediateCompliance()` .  Örneğin, `onCreate()` `onMAMCreate()` bir etkinlik alt sınıfının or yöntemi, bildirim dinleyicisini kaydetmek ve sonra çağırmak için ideal bir yerdir `remediateCompliance()` .  Parametreleri, `remediateCompliance()` UX veya amaç ek ekstraları olarak geçirilebilir.  Uyumluluk durumu bildirimi alındığında, sonucu görüntüleyebilir veya yalnızca etkinliği tamamaktarabilirsiniz.
 
 > [!NOTE]
-> `remediateCompliance()`hesabı kaydeder ve kaydı deneyecektir.  Ana belirteç alındıktan sonra, çağırma `registerAccountForMAM()` gerekli değildir, ancak bunu yapmakla bir sorun yoktur. Diğer taraftan, uygulama, Kullanıcı hesabını kaldırmak için belirtecini ve dileklerini elde kuramazsa, `unregisterAccountForMAM()` hesabı kaldırmak ve arka plan kaydı yeniden denemelerini engellemek için çağrı yapılmalıdır.
+> `remediateCompliance()` hesabı kaydeder ve kaydı deneyecektir.  Ana belirteç alındıktan sonra, çağırma `registerAccountForMAM()` gerekli değildir, ancak bunu yapmakla bir sorun yoktur. Diğer taraftan, uygulama, Kullanıcı hesabını kaldırmak için belirtecini ve dileklerini elde kuramazsa, `unregisterAccountForMAM()` hesabı kaldırmak ve arka plan kaydı yeniden denemelerini engellemek için çağrı yapılmalıdır.
 
 ## <a name="protecting-backup-data"></a>Yedekleme verilerini koruma
 
@@ -1477,7 +1477,7 @@ Varsayılan olarak, tüm uygulamalar tek kimlikli uygulamalar olarak değerlendi
 Geliştiriciler uygulama kullanıcısının kimliğini azalan öncelik sırasına göre aşağıdaki düzeylerde ayarlayabilir:
 
   1. İş parçacığı düzeyi
-  2. `Context`(genellikle `Activity` ) düzeyde
+  2. `Context` (genellikle `Activity` ) düzeyde
   3. İşlem düzeyi
 
 İş parçacığı düzeyinde ayarlanmış bir kimlik, `Context` düzeyinde ayarlanmış bir kimliğin; bağlam düzeyinde ayarlanmış bir kimlikse işlem düzeyinde ayarlanmış bir kimliğin yerini alır. İçindeki bir kimlik kümesi `Context` yalnızca ilgili ilişkili senaryolarda kullanılır. Örneğin, dosya GÇ işlemlerinin ilişkili bir dosyası yoktur `Context` . En yaygın olarak, uygulamalar `Context` bir üzerinde kimlik ayarlar `Activity` . Kimlik aynı kimliğe ayarlanmadığı takdirde, bir uygulamanın yönetilen kimliğin verilerini görüntülemesi *gerekir* `Activity` . Genel olarak işlem düzeyi kimliği yalnızca, uygulama belirli bir anda tüm iş parçacıklarında sadece tek bir kullanıcıyla çalışıyorsa kullanışlıdır. Pek çok uygulamanın bunu kullanmaya ihtiyacı yoktur.
@@ -1626,7 +1626,7 @@ Uygulamanın kimlik ayarlayabilme özelliğine ek olarak, bir iş parçacığı 
 
 `onMAMIdentitySwitchRequired` yöntemi, `MAMService.onMAMBind` öğesinden döndürülen bir Bağlayıcı aracılığıyla yapılanlar dışındaki tüm örtük kimlik değişiklikleri için çağrılır. Varsayılan `onMAMIdentitySwitchRequired` uygulamaları hemen şu çağrıyı yapar:
 
-* `reportIdentitySwitchResult(FAILURE)`nedeni `RESUME_CANCELLED` .
+* `reportIdentitySwitchResult(FAILURE)` nedeni `RESUME_CANCELLED` .
 
 * Diğer tüm durumlarda `reportIdentitySwitchResult(SUCCESS)`.
 
@@ -2073,9 +2073,9 @@ Aşağıda izin verilen stil özniteliklerinin, bunların denetledikleri UI öğ
 
 |Stil özniteliği | Etkilenen UI öğeleri | Öznitelik öğesi adı | Beklenen kaynak türü |
 | -- | -- | -- | -- |
-| Arka plan rengi | PIN ekranı arka plan rengi <Br>PIN kutusu dolgu rengi | background_color | Color (Renk) |
-| Ön plan rengi | Ön plan metin rengi <br> Varsayılan durumda PIN kutusu kenarlığı <br> Kullanıcı PIN girdiğinde PIN kutusundaki karakterler (gizlenmiş karakterler dahil)| foreground_color | Color (Renk)|
-| Vurgu rengi | Vurgulandığında PIN kutusu kenarlığı <br> Köprüler |accent_color | Color (Renk) |
+| Arka plan rengi | PIN ekranı arka plan rengi <Br>PIN kutusu dolgu rengi | background_color | Color |
+| Ön plan rengi | Ön plan metin rengi <br> Varsayılan durumda PIN kutusu kenarlığı <br> Kullanıcı PIN girdiğinde PIN kutusundaki karakterler (gizlenmiş karakterler dahil)| foreground_color | Color|
+| Vurgu rengi | Vurgulandığında PIN kutusu kenarlığı <br> Köprüler |accent_color | Color |
 | Uygulama logosu | Intune uygulaması PIN ekranında gösterilen büyük simge | logo_image | Çizilebilir |
 
 ## <a name="default-enrollment-optional"></a>Varsayılan kayıt (isteğe bağlı)
@@ -2175,5 +2175,5 @@ Android için Intune Uygulama SDK’sı, uygulamanızdan veri toplanmasını den
 
 * Tüm gereksiz ve kullanılmayan kitaplıkları kaldırın (örneğin android.support.v4)
 
-## <a name="testing"></a>Test Etme
+## <a name="testing"></a>Sınama
 Bkz. [Test Kılavuzu](app-sdk-android-testing-guide.md).

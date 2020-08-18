@@ -2,7 +2,7 @@
 title: 2006 için denetim listesi
 titleSuffix: Configuration Manager
 description: Configuration Manager sürüm 2006 ' e güncelleştirmeden önce gerçekleştirilecek eylemler hakkında bilgi edinin.
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6d359306-69ae-4873-ba90-964b6ae51d79
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7a3c66863e7768c5ca90151bf85d61aa1e3a0e17
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 97ad8c947c634f43a53e1fac68f0a3255aa89809
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129692"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512759"
 ---
 # <a name="checklist-for-installing-update-2006-for-configuration-manager"></a>Configuration Manager için güncelleştirme 2006 yükleme denetim listesi
 
@@ -81,7 +81,11 @@ Microsoft, betiği dijital olarak imzalar ve onu imzalı kendiliğinden ayıklan
 
 Erken güncelleştirme halkasını kabul etmek için:
 
-1. Windows PowerShell 'i açın ve **yönetici olarak çalıştırın**
+1. **Yönetici olarak** bir Windows PowerShell sürüm 5 oturumu açın
+
+    > [!IMPORTANT]
+    > Geçerli dal Configuration Manager şu anda PowerShell sürüm 7 ' yi desteklememektedir. PowerShell sürüm 7 ' yi zaten yüklediyseniz, PowerShell sürüm 5 ' i kullanmaya devam edebilirsiniz. Daha fazla bilgi için bkz. [Windows powershell 5,1 Ile PowerShell 7 yan yana kullanımı](https://docs.microsoft.com/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
+
 1. Aşağıdaki sözdizimini kullanarak **EnableEarlyUpdateRing2006.ps1** betiğini çalıştırın:
 
     `EnableEarlyUpdateRing2006.ps1 <SiteServer_Name> | SiteServer_IP>`

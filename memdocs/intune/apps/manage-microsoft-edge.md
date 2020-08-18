@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49d731ef6e9508367ded8ed5d711b744be7d2db1
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 2eb5a5e87b54fd8a92fc40c6d1295250d90b05c4
+ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501193"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Microsoft Intune ile iOS ve Android için Edge kullanarak Web erişimini yönetme
 
@@ -189,7 +189,7 @@ Erişim kolaylığı için, kullanıcılarınızın iOS ve Android için Edge ku
 
 |    Anahtar    |    Değer    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Bu yapılandırmanın değeri, yer işaretlerinin bir listesidir. Her yer işareti, yer işareti başlığından ve yer işareti URL 'sinden oluşur. Başlığı ve URL 'YI `|` karakterle ayırın.<br> Örnek: `Microsoft Bing|https://www.bing.com`<p>Birden çok yer işaretini yapılandırmak için, her çifti çift karakterle ayırın `||` .<br>Örnek:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
+|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Bu yapılandırmanın değeri, yer işaretlerinin bir listesidir. Her yer işareti, yer işareti başlığından ve yer işareti URL 'sinden oluşur. Başlığı ve URL 'YI `|` karakterle ayırın.<br> Örnek: `Microsoft Bing|https://www.bing.com`<p>Birden çok yer işaretini yapılandırmak için, her çifti çift karakterle ayırın `||` .<br>Örneğin:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
 #### <a name="my-apps-bookmark"></a>Uygulamalarım yer işareti
 
@@ -321,8 +321,8 @@ Tanımlı izin verilenler listesi veya engellenenler listesi ayarlarından bağ�
     |    `http://www.contoso.com`    |    Tek bir sayfayla eşleşir    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Tek bir sayfayla eşleşir    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
     |    `http://www.contoso.com/*`   |    `www.contoso.com` ile başlayan tüm URL’lerle eşleşir    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
-    |    `http://*.contoso.com/*`    |    Altındaki tüm alt etki alanlarını eşleştirir`contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`
-    |    `http://*contoso.com/*`    |    Şununla biten tüm alt etki alanlarını eşleştirir`contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
+    |    `http://*.contoso.com/*`    |    Altındaki tüm alt etki alanlarını eşleştirir `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`
+    |    `http://*contoso.com/*`    |    Şununla biten tüm alt etki alanlarını eşleştirir `contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
     `http://www.contoso.com/images`    |    Tek bir klasörle eşleşir    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
     |    `http://www.contoso.com:80`    |    Bir bağlantı noktası numarası kullanarak tek bir sayfayla eşleşir    |    `http://www.contoso.com:80`    |         |
     |    `https://www.contoso.com`    |    Güvenli tek bir sayfayla eşleşir    |    `https://www.contoso.com`    |    `http://www.contoso.com`    |
@@ -343,7 +343,7 @@ Tanımlı izin verilenler listesi veya engellenenler listesi ayarlarından bağ�
 
 ### <a name="manage-proxy-configuration"></a>Ara sunucu yapılandırmasını yönetme
 
-Kullanıcılara mobil cihazlarındaki intranet sitelerine erişim sağlamak için iOS ve Android için Edge ve [Azure AD uygulama ara sunucusu](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) birlikte kullanabilirsiniz. Örnek: 
+Kullanıcılara mobil cihazlarındaki intranet sitelerine erişim sağlamak için iOS ve Android için Edge ve [Azure AD uygulama ara sunucusu](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) birlikte kullanabilirsiniz. Örneğin: 
 
 - Kullanıcı, Intune tarafından korunan Outlook mobil uygulamasını kullanıyor. Ardından, bir e-postada intranet sitesinin bağlantısına tıklamıştır ve iOS ve Android için Edge, bu intranet sitesinin kullanıcı tarafından uygulama proxy 'Si aracılığıyla sunulduğunu algılar. Kullanıcı, intranet sitesine ulaşmadan önce geçerli bir Multi-Factor Authentication ve koşullu erişim ile kimlik doğrulamak için uygulama proxy 'Si üzerinden otomatik olarak yönlendirilir. Kullanıcı artık mobil cihazlarında bile iç sitelere erişebiliyor ve Outlook 'taki bağlantı beklendiği gibi çalışıyor.
 - Kullanıcı iOS veya Android cihazında iOS ve Android için Edge 'i açar. İOS ve Android için Edge Intune ile korunuyorsa ve uygulama proxy 'Si etkinse, Kullanıcı, kullanıldıkları iç URL 'YI kullanarak bir intranet sitesine gidebilir. İOS ve Android için Edge, bu intranet sitesinin kullanıcıya uygulama proxy 'Si aracılığıyla sunulduğunu algılar. Kullanıcı, intranet sitesine ulaşmadan önce kimlik doğrulaması yapmak için uygulama proxy 'Si üzerinden otomatik olarak yönlendirilir. 

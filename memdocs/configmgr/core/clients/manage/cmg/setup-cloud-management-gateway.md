@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 9ba4466a40d49c4b78b75e6f85137dfd0a4ff5ce
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 6b56f9848f497b7167b478b427f37a00bb2656b9
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129146"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512725"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configuration Manager için bulut yönetimi ağ geçidi ayarlama
 
@@ -141,7 +141,7 @@ CMG bağlantı noktası, CMG ile iletişim kurmak için site sistem rolüdür. C
 
 CMG hizmet durumu sorunlarını gidermek için **Cmgservice. log** ve **SMS_Cloud_ProxyConnector. log**kullanın. Daha fazla bilgi için bkz. [günlük dosyaları](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
-## <a name="configure-client-facing-roles-for-cmg-traffic"></a><a name="bkmk_role"></a>CMG trafiği için istemciye yönelik rolleri yapılandırma
+## <a name="configure-client-facing-roles-for-cmg-traffic"></a><a name="bkmk_role"></a> CMG trafiği için istemciye yönelik rolleri yapılandırma
 
 Yönetim noktası ve yazılım güncelleştirme noktası site sistemlerini CMG trafiğini kabul edecek şekilde yapılandırın. Bu yordamı, internet tabanlı istemcilere hizmet veren tüm yönetim noktaları ve yazılım güncelleştirme noktaları için birincil sitede yapın.  
 
@@ -207,7 +207,7 @@ Bu komut, istemcinin bildiği herhangi bir internet tabanlı yönetim noktasın�
 
 Seçenekler 1 ve 2 ' de **ccmsetup.exe**çalıştırdığınızda, CMG 'nin URL 'sini belirtmek için **/MP** parametresini kullanın. Daha fazla bilgi için bkz. [istemci yükleme parametreleri ve özellikleri hakkında](../../deploy/about-client-installation-properties.md#mp).
 
-Seçenek 3 ' ten itibaren Configuration Manager sürüm 2002 ' den başlayarak, istemciyi, toplu kayıt belirteci kullanarak intranetinize bağlı olmayan sistemlere yükleyebilirsiniz. Bu yöntem hakkında daha fazla bilgi için bkz. [toplu kayıt belirteci oluşturma](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
+Seçenek 3 ' ten itibaren Configuration Manager sürüm 2002 ' den başlayarak, istemciyi, toplu kayıt belirteci kullanarak intranetinize bağlı olmayan sistemlere yükleyebilirsiniz. Bu yöntem hakkında daha fazla bilgi için bkz. [toplu kayıt belirteci oluşturma](../../deploy/deploy-clients-cmg-token.md#bulk-registration-token).
 
 ### <a name="configure-off-premises-clients-for-cmg"></a>CMG için şirket dışı istemcileri yapılandırma
 
@@ -270,7 +270,7 @@ Aşağıdaki yapılandırma gibi daha önemli değişiklikler, hizmetin yeniden 
 - Abonelik
 - Hizmet adı
 - Genel PKI 'ya özel
-- Bölge
+- Region
 
 Internet tabanlı istemciler için en az bir etkin CMG 'yi her zaman güncel tutun. Internet tabanlı istemciler, kaldırılan bir CMG ile iletişim kuramaz. İstemciler, intranete geri dolaşılana kadar yeni bir tane hakkında bilgi sahibi değildir. İlk olarak silinecek ikinci bir CMG örneği oluştururken başka bir CMG bağlantı noktası da oluşturun.
 
