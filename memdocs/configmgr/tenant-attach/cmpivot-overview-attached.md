@@ -2,7 +2,7 @@
 title: Kiracı ekli CMPivot genel bakış
 titleSuffix: Configuration Manager
 description: Microsoft Endpoint Manager kiracıya bağlı cihazlar için CMPivot genel bakış.
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: 31bf1359-54e5-4416-9f39-6bb0070db542
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 048309c40718f091d2d232d90bf8d77a0d56c7b7
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 93460b08b7ba47951656e1107aae56e687acf4e8
+ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127629"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501200"
 ---
 # <a name="tenant-attach-cmpivot-overview"></a>Kiracı iliştirme: CMPivot genel bakış
 
@@ -26,7 +26,7 @@ ms.locfileid: "88127629"
 
 CMPivot, ortamınızdaki bir cihazın durumunu hızlı bir şekilde değerlendirmenize ve işlem yapmanıza olanak sağlar. Bir sorgu girdiğinizde, CMPivot Şu anda bağlı olan cihazda gerçek zamanlı olarak bir sorgu çalıştırır. Döndürülen veriler, iş sorularını yanıtlamak, ortamınızdaki sorunları gidermek veya güvenlik tehditlerine yanıt vermek için filtrelenebilir, gruplandırılabilir ve iyileştirilmelidir. CMPivot kullanma hakkında daha fazla bilgi için bkz. [Use CMPivot](../core/servers/manage/cmpivot.md).
 
-## <a name="refine-cmpivot-queries"></a><a name="bkmk_refine"></a>CMPivot sorgularını iyileştir
+## <a name="refine-cmpivot-queries"></a><a name="bkmk_refine"></a> CMPivot sorgularını iyileştir
 
 Microsoft Endpoint Manager Yönetici konsolundan CMPivot kullanırken, sorgularınızın performans için ayarlanmış olduğundan emin olun. Çok büyük bir veri kümesine sahip bir sorgu istemeniz durumunda alabilirsiniz `Error: The query result is too large, retry with additional filters` . Bu hatayı görürseniz sorgunuzu daha belirgin olacak şekilde daraltın. Aşağıdaki işleçler genellikle sorguları iyileştirmek için kullanılır:
 
@@ -40,6 +40,19 @@ Microsoft Endpoint Manager Yönetici konsolundan CMPivot kullanırken, sorgular�
 
 
 [!INCLUDE [Overview article sections for both Microsoft Endpoint Manager and Configuration Manager use](../core/servers/manage/includes/cmpivot-overview-shared.md)]
+
+## <a name="known-issues"></a>Bilinen sorunlar
+
+### <a name="inconsistent-results-for-some-operators-with-configuration-manager-version-2002"></a>Configuration Manager sürüm 2002 ile bazı işleçler için tutarsız sonuçlar
+<!--7784718, 7884272-->
+Microsoft Endpoint Manager Yönetim Merkezi 'ndeki Configuration Manager sürüm 2002 ile CMPivot kullanırken, aşağıdaki işleçler için tutarsız sonuçlar alabilirsiniz:
+
+- Özetleme ölçütü
+- Take
+- Sıralama ölçütü
+- Üst
+- Count
+- Distinct
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
