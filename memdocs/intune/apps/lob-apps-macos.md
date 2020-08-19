@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 673adad15e92fb06cf5cf7c3589b06ab8b1b337a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 407189163107da24e19b84c2011fa47f6a796475
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990662"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591702"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>macOS iş kolu (LOB) uygulamalarını Microsoft Intune’a ekleme
 
@@ -42,8 +42,7 @@ Bu makaledeki bilgiler macOS iş kolu uygulamalarını Microsoft Intune’a ekle
 İş kolu dosyanızı Microsoft Intune için karşıya yüklemeden önce, bir dış aracı indirmeniz, indirilen Aracı yürütülebilir olarak işaretlemeniz ve *. pkg* dosyalarını araçla önceden işlem yapmanız gerekir. *.pkg* dosyalarınızın ön işlemesi, bir macOS cihazında yapılmalıdır. Mac için Intune Uygulama Sarmalama Aracı'nı kullanarak Mac uygulamalarının Microsoft Intune tarafından yönetilmesini sağlayın.
 
 > [!IMPORTANT]
-> *. Pkg* dosyası, bir Apple geliştirici hesabından elde edilen "Geliştirici Kimliği yükleyicisi" sertifikası kullanılarak imzalanmalıdır. macOS LOB uygulamalarının Microsoft Intune'a yüklemek için yalnızca *.pkg* dosyaları kullanılabilir. *.dmg*’den *.pkg*’ye yapılan dönüştürme gibi diğer biçim dönüştürme işlemleri desteklenmez.
->
+> *. Pkg* dosyası, bir Apple geliştirici hesabından elde edilen "Geliştirici Kimliği yükleyicisi" sertifikası kullanılarak imzalanmalıdır. macOS LOB uygulamalarının Microsoft Intune'a yüklemek için yalnızca *.pkg* dosyaları kullanılabilir. Ancak, *. dmg* - *. pkg* gibi diğer biçimlerin dönüştürülmesi desteklenir. Pkg olmayan uygulama türlerini dönüştürme hakkında daha fazla bilgi için bkz. [DMG veya uygulama biçimli uygulamaları Intune ile yönetilen Mac 'lere dağıtma](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-deploy-dmg-or-app-format-apps-to-intune-managed-macs/ba-p/1503416).
 
 1. [Mac Için Intune uygulama sarmalama aracı](https://github.com/msintuneappsdk/intune-app-wrapping-tool-mac)'nı indirin.
 
@@ -76,7 +75,7 @@ Bu makaledeki bilgiler macOS iş kolu uygulamalarını Microsoft Intune’a ekle
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, **diğer** uygulama türleri altında **iş kolu uygulaması**' nı seçin.
-4. **Seç**' e tıklayın. **Uygulama ekleme** adımları görüntülenir.
+4. **Seç**’e tıklayın. **Uygulama ekleme** adımları görüntülenir.
 
 ## <a name="step-1---app-information"></a>1. adım-uygulama bilgileri
 

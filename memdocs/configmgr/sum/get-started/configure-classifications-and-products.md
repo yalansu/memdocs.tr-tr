@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 4f13ff305ba5fc2b5c5080bafb6fed2412ff8366
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: a5254ba5a25b10df2943eaa7f80b32b17ea3680f
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84614075"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591502"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>Sınıflandırmaları ve eşitlenmek üzere ürünleri yapılandırma  
 
@@ -106,7 +106,7 @@ Windows 10, sürüm 1909 için özellik güncelleştirmelerini onayladığınız
 
 ### <a name="windows-10-version-1903-and-later"></a>Windows 10, sürüm 1903 ve üzeri
 
-**Windows 10, sürüm 1903 ve üzeri,** **Windows 10** ürününün önceki sürümleri gibi bir parçası olmak yerine kendi ürünü olarak Microsoft Update eklenmiştir. Bu değişiklik, istemcilerinizin bu güncelleştirmeleri görmesini sağlamak için birkaç el ile adım uygulamanızı sağlar. Configuration Manager sürüm 1906 ' de yeni ürün için gerçekleştirmeniz gereken el ile adım sayısını azaltmaya yardımcı oluyoruz. <!--4682946-->
+**Windows 10, sürüm 1903 ve üzeri,** **Windows 10**  ürününün önceki sürümleri gibi bir parçası olmak yerine kendi ürünü olarak Microsoft Update eklenmiştir. Bu değişiklik, istemcilerinizin bu güncelleştirmeleri görmesini sağlamak için birkaç el ile adım uygulamanızı sağlar. Configuration Manager sürüm 1906 ' de yeni ürün için gerçekleştirmeniz gereken el ile adım sayısını azaltmaya yardımcı oluyoruz. <!--4682946-->
 
 #### <a name="windows-10-version-1903-and-later-with-configuration-manager-version-1906"></a>Windows 10, sürüm 1903 ve üzeri Configuration Manager sürüm 1906
 Configuration Manager sürüm 1906 ' e güncelleştirdiğinizde ve eşitleme için **Windows 10** ürününün seçili olması halinde, aşağıdaki eylemler otomatik olarak gerçekleşir:
@@ -120,7 +120,7 @@ Windows 10, sürüm 1903 istemcilerinde Configuration Manager 1902 kullanıyorsa
 - Windows 10, sürüm 1903 istemcileri için tüm [Otomatik dağıtım kurallarını](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process) güncelleştirin.
 - Windows 10, sürüm 1903 istemcileri için [bakım planlarını](../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow) güncelleştirme.
 
-## <a name="windows-insider-program"></a><a name="bkmk_WIfB"></a>Windows Insider programı
+## <a name="windows-insider-program"></a><a name="bkmk_WIfB"></a> Windows Insider programı
 <!--3556023-->
 2019 Eylül 'den başlayarak, Windows Insider Preview derlemelerini çalıştıran cihazlara Configuration Manager ile hizmet verebilir ve güncelleştirebilirsiniz. Bu değişiklik, bu cihazları normal işlemlerinizi değiştirmeden veya Iş için Windows Update etkinleştirmeden yönetebileceğiniz anlamına gelir. Windows Insider Preview derlemeleri için özellik güncelleştirmelerini ve toplu güncelleştirmeleri, diğer Windows 10 güncelleştirme veya yükseltme gibi Configuration Manager içine indirebilirsiniz. Daha fazla bilgi için bkz. [Windows 10 özellik GÜNCELLEŞTIRMELERINI WSUS](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Publishing-pre-release-Windows-10-feature-updates-to-WSUS/ba-p/845054) blog gönderisine yayımlama.
 
@@ -168,9 +168,9 @@ Yükseltmeleri dağıtma hakkında daha fazla bilgi için bkz. [Windows 'u hizme
 
 ### <a name="keeping-insider-devices-up-to-date"></a>Insider cihazlarını güncel tutma
 
-Windows Insider için toplu güncelleştirmeler, Configuration Manager için WSUS ve uzantıya göre sunulacaktır. Bu toplu güncelleştirmeler Windows 10 sürüm 1903 toplu güncelleştirmelerine benzer bir sıklıkta yayınlanacaktır. Windows Insider toplu güncelleştirmeleri, **Windows Insider ön sürümü** ürün kategorisinde ve **güvenlik güncelleştirmeleri** ya da **güncelleştirmeler**olarak sınıflandırılmaktadır. Windows Insider için toplu güncelleştirmeleri, [Otomatik dağıtım kuralları](../deploy-use/automatically-deploy-software-updates.md) veya [aşamalı dağıtımlar](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)gibi normal yazılım güncelleştirme işleminizi kullanarak dağıtabilirsiniz.
+Windows Insider için toplu güncelleştirmeler, Configuration Manager için WSUS ve uzantıya göre sunulacaktır. Bu toplu güncelleştirmeler Windows 10 sürüm 1903 toplu güncelleştirmelerine benzer bir sıklıkta yayınlanacaktır. Windows Insider toplu güncelleştirmeleri, **Windows Insider ön sürümü** ürün kategorisinde ve **güvenlik güncelleştirmeleri** ya da **güncelleştirmeler**olarak sınıflandırılmaktadır. Windows Insider için toplu güncelleştirmeleri, [Otomatik dağıtım kuralları](../deploy-use/automatically-deploy-software-updates.md) veya [aşamalı dağıtımlar](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)gibi normal yazılım güncelleştirme işleminizi kullanarak dağıtabilirsiniz.
 
-## <a name="extended-security-updates-and-configuration-manager"></a><a name="bkmk_ESU"></a>Genişletilmiş güvenlik güncelleştirmeleri ve Configuration Manager
+## <a name="extended-security-updates-and-configuration-manager"></a><a name="bkmk_ESU"></a> Genişletilmiş güvenlik güncelleştirmeleri ve Configuration Manager
 
 [Genişletilmiş güvenlik güncelleştirmeleri (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) programı, destek sonunun ötesinde belirli eski Microsoft ürünlerini çalıştırması gereken müşteriler için son çare bir seçenektir. Ürünün genişletilmiş destek tarihine kadar olan en fazla üç yıl sonra kritik ve/veya önemli güvenlik güncelleştirmelerini ( [Microsoft Güvenlik Yanıt Merkezi (MSRC)](https://www.microsoft.com/msrc)tarafından tanımlandığı şekilde) içerir.
 

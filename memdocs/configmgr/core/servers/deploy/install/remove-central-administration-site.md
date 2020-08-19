@@ -10,12 +10,12 @@ ms.assetid: 16975644-8dfa-4f22-b45a-c54a9250dbd2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 237c326c4420aec13ad6c9ca9b07d9f5304b6945
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 5b8b7ee17077c859a1f0a9eb41c5f9d0857db550
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84613983"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591519"
 ---
 # <a name="remove-the-central-administration-site"></a>Merkezi yönetim sitesini kaldırma
 
@@ -67,7 +67,7 @@ Sürüm 2002 ' den başlayarak, hiyerarşi merkezi yönetim sitesinden (CAS) ve 
 
 - CA 'lara bağımlılığı olabilecek tüm üçüncü taraf yazılımları gözden geçirin.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Configuration Manager kurulumu 'nu çalıştıran yönetici kullanıcının aşağıdaki güvenlik haklarına ihtiyacı vardır:
 
@@ -87,7 +87,7 @@ Sürüm 2002 ' den başlayarak, hiyerarşi merkezi yönetim sitesinden (CAS) ve 
 
 - Hiyerarşide yalnızca bir alt birincil site. Daha fazla bilgi için bkz. [birincil siteyi kaldırma](uninstall-sites-and-hierarchies.md#bkmk_primary).
 
-## <a name="process"></a>İşleme
+## <a name="process"></a>İşlem
 
 1. Aşağıdaki yöntemlerden birini kullanarak CAS sunucusunda Configuration Manager kurulumunu başlatın:
 
@@ -119,7 +119,7 @@ Kurulum tamamlandığında, birincil siteyi sıfırlar. Daha fazla bilgi için b
 
 Kurulum işlemi sırasında aşağıdaki günlükleri gözden geçirin:
 
-- `C:\ConfigMgrSetup.log`CAS sunucusunda
+- `C:\ConfigMgrSetup.log` CAS sunucusunda
 
 - birincil site sunucusundaki Configuration Manager logs dizininde **HMAN. log**
 
@@ -141,7 +141,7 @@ CAS 'yi kaldırdıktan sonra, ortamınız için uygulanan aşağıdaki adımlar�
 
   - [Işletim sistemi dağıtım medyasını](../../../../osd/deploy-use/create-task-sequence-media.md)yeniden oluşturun.
 
-- Configuration Manager [Azure izleyici](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=configmgr/core/context/core-context)ile bağlanıyorsanız, bağlantıyı sıfırlamanız gerekir. Sorunları çözecek ilk adım [gizli anahtarı yenilemeyecektir](../configure/azure-services-wizard.md#bkmk_renew). Bu sorunu çözmezse, bağlantıyı yeniden oluşturun.<!-- 5584635 -->
+- Configuration Manager [Azure izleyici](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context)ile bağlanıyorsanız, bağlantıyı sıfırlamanız gerekir. Sorunları çözecek ilk adım [gizli anahtarı yenilemeyecektir](../configure/azure-services-wizard.md#bkmk_renew). Bu sorunu çözmezse, bağlantıyı yeniden oluşturun.<!-- 5584635 -->
 
 - Sürüm 2002 ' de yüzey sürücülerinin eşitlenmesini etkinleştirirseniz, CA 'ları kaldırdıktan sonra bu özelliği yeniden yapılandırın. Daha fazla bilgi için bkz. [Microsoft Surface Drivers ve bellenim Updates](../../../../sum/deploy-use/surface-drivers.md).<!-- 5728727 -->
 

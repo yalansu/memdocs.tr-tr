@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 974636ae787be0d454cc3a4fea98832aa4400c7c
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: 4e1ac5180a30959618f37d909511785b4de1c407
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303496"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591257"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Mobil cihaz yönetimi yetkilisini ayarlayın
 
@@ -36,9 +36,9 @@ Olası yapılandırmalar şunlardır:
 
 - **Intune ortak yönetim** -Intune bulut çözümünün Windows 10 cihazları için Configuration Manager ile tümleştirilmesi. Configuration Manager konsolunu kullanarak Intune’u siz yapılandırırsınız. [Cihazların otomatik kaydını Intune 'A yapılandırın](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
-- **Office 365 Için temel taşınabilirlik ve güvenlik** -bu yapılandırmayı ETKINLEŞTIRDIYSENIZ, MDM yetkilisini "Office 365" olarak ayarlamış olursunuz. Intune 'u kullanmaya başlamak istiyorsanız, Intune lisansı satın almanız gerekir.
+- **Office 365 Için temel taşınabilirlik ve güvenlik** -bu yapılandırmayı ETKINLEŞTIRDIYSENIZ, MDM yetkilisi ' ni "Office 365" olarak ayarlanmış olarak görürsünüz. Intune 'u kullanmaya başlamak istiyorsanız, Intune lisansı satın almanız gerekir.
 
-- **Office 365 Için temel mobilite ve güvenlik** -Office 365 Için temel mobilite ve güvenlik kullanıyorsanız ve yönetim yetkilisini her bir kullanıcı için Intune veya temel taşınabilirlik ve Office 365 için güvenlik IÇIN, MDM 'ye kayıtlı cihazları yönetmek üzere hangi hizmetin kullanılacağını dikte edecek şekilde ayarladıysanız, Intune 'u kiracınıza ekleyebilirsiniz. Her bir kullanıcının yönetim yetkilisi kullanıcıya atanan lisansa göre tanımlanır: kullanıcının yalnızca Microsoft 365 temel veya standart lisansı varsa, cihazları temel taşınabilirlik ve Office 365 için güvenlik tarafından yönetilir. Kullanıcının bir lisans entitling Intune 'u varsa, cihazları Intune tarafından yönetilir. Daha önce temel taşınabilirlik ve Office 365 güvenliği tarafından yönetilen bir kullanıcıya Intune entitling lisans eklerseniz, cihazları Intune yönetimine geçiş yapılır. Kullanıcılara Intune 'a geçiş yapmadan önce Office 365 temel Mobility ve Security 'yi değiştirmek üzere kullanıcılara atanmış Intune yapılandırmalarının olduğundan emin olun, aksi halde, cihazları Office 365 yapılandırması için temel Mobility ve Security 'yi kaybeder ve Intune 'dan herhangi bir değişiklik almaz.
+- **Office 365 Için temel mobilite ve güvenlik** -Office 365 Için temel mobilite ve güvenlik kullanıyorsanız ve yönetim yetkilisini her bir kullanıcı için Intune veya temel taşınabilirlik ve Office 365 için güvenlik IÇIN, MDM 'ye kayıtlı cihazları yönetmek üzere hangi hizmetin kullanılacağını dikte edecek şekilde ayarladıysanız, Intune 'u kiracınıza ekleyebilirsiniz. Her bir kullanıcının yönetim yetkilisi kullanıcıya atanan lisansa göre tanımlanır: kullanıcının yalnızca Microsoft 365 temel veya standart lisansı varsa, cihazları temel taşınabilirlik ve Office 365 için güvenlik tarafından yönetilir. Kullanıcının bir lisans entitling Intune 'u varsa, cihazları Intune tarafından yönetilir. Daha önce temel taşınabilirlik ve Office 365 güvenliği tarafından yönetilen bir kullanıcıya Intune entitling lisans eklerseniz, cihazları Intune yönetimine geçiş yapılır. Kullanıcılara Intune 'a geçmeden önce Office 365 temel Mobility ve Security 'yi değiştirmek üzere kullanıcılara atanmış Intune yapılandırmalarına sahip olduğunuzdan emin olun, aksi halde, cihazları Office 365 yapılandırması için temel taşınabilirlik ve güvenliği kaybeder ve Intune 'dan herhangi bir değişiklik almaz.
 
 ## <a name="set-mdm-authority-to-intune"></a>MDM yetkilisini Intune olarak ayarlama
 
@@ -48,12 +48,12 @@ Olası yapılandırmalar şunlardır:
 
 1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nde, **mobil cihaz yönetim yetkilisi** ayarını açmak için turuncu başlık ' ı seçin. Turuncu başlık, ancak henüz MDM yetkilisini ayarlamadıysanız görüntülenir.
 2. **Mobil Cihaz Yönetimi Yetkilisi** altında, aşağıdakilerden birini MDM yetkiliniz olarak belirtin:
-   - **Intune MDM Yetkilisi**
-   - **Hiçbiri**
+  - **Intune MDM Yetkilisi**
+  - **Hiçbiri**
 
-   ![Intune tarafından ayarlı mobil cihaz yönetim yetkilisi ekranının ekran görüntüsü](./media/mdm-authority-set/set-mdm-auth.png)
+  ![Intune tarafından ayarlı mobil cihaz yönetim yetkilisi ekranının ekran görüntüsü](./media/mdm-authority-set/set-mdm-auth.png)
 
-   MDM yetkilinizi başarıyla Intune olarak ayarladığınızı bildiren bir ileti görüntülenir.
+  MDM yetkilinizi başarıyla Intune olarak ayarladığınızı bildiren bir ileti görüntülenir.
 
 ### <a name="workflow-of-intune-administration-ui"></a>Intune Yönetim UI’si iş akışı
 Android veya Apple cihaz yönetimi etkinleştirildiğinde Intune, ilgili cihazları yönetmek üzere bu üçüncü taraf hizmetleriyle tümleştirmek için cihaz ve kullanıcı bilgilerini gönderir.
@@ -68,14 +68,44 @@ Bu durumların tamamında onay kesinlikle bir mobil cihaz yönetimi hizmetinin �
 - [Intune’un Apple’a gönderdiği veriler](https://aka.ms/data-intune-sends-to-apple)
 
 ## <a name="key-considerations"></a>Dikkat Edilmesi Gereken Önemli Noktalar
-Yeni MDM yetkilisine geçtikten sonra cihazın iade edilmesi ve hizmetle eşitlenmesi için bir geçiş süresi (sekiz saate kadar) olması olasıdır. Kayıtlı cihazların değişiklikten sonra yönetilmeye ve korumaya devam edecek şekilde emin olmak için yeni MDM yetkilisinde ayarları yapılandırmanız gerekir. 
+Yeni MDM yetkilisine geçtikten sonra cihazın iade edilmesi ve hizmetle eşitlenmesi için bir geçiş süresi (sekiz saate kadar) olması olasıdır. Kayıtlı cihazların değişiklikten sonra yönetilmeye ve korumaya devam edecağına emin olmak için yeni MDM yetkilisinde ayarları yapılandırmanız gerekir. 
 - Yeni MDM yetkilisinden (tek başına Intune) gelen ayarların cihazdaki mevcut ayarların yerini alması için değişiklik sonrasında cihazların hizmete bağlanması gerekir.
-- MDM yetkilisini değiştirdikten sonra önceki MDM yetkilisinden bazı temel ayarlar (örneğin, profiller) en fazla yedi güne kadar veya cihaz hizmete ilk kez bağlanana kadar cihazda kalır. Yeni MDM yetkilisinde uygulama ve ayarları (ilkeler, profiller, uygulamalar vb.) mümkün olan en kısa sürede yapılandırmanız ve ayarı, kayıtlı cihazları olan kullanıcıları içeren Kullanıcı gruplarına dağıtmanız önerilir. MDM yetkilisindeki değişiklikten sonra cihaz hizmete ilk bağlandığı zaman, yeni MDM yetkilisinden yeni ayarları alacaktır, böylece yönetim ve korumada boşluk oluşması önlenecektir.
+- MDM yetkilisini değiştirdikten sonra önceki MDM yetkilisinden bazı temel ayarlar (örneğin, profiller) en fazla yedi güne kadar veya cihaz hizmete ilk kez bağlanana kadar cihazda kalır. Yeni MDM yetkilisindeki uygulama ve ayarları (ilkeler, profiller ve uygulamalar gibi) mümkün olan en kısa sürede yapılandırmanız ve ayarı, kayıtlı cihazları olan kullanıcıları içeren Kullanıcı gruplarına dağıtmanız önerilir. MDM yetkilisindeki değişiklikten sonra cihaz hizmete ilk bağlandığı zaman, yeni MDM yetkilisinden yeni ayarları alacaktır, böylece yönetim ve korumada boşluk oluşması önlenecektir.
 - İlişkili kullanıcıları olmayan cihazlar (genellikle iOS/ıpados Aygıt Kayıt Programı veya toplu kayıt senaryolarında) yeni MDM yetkilisine geçirilmez. Bu cihazları yeni MDM yetkilisine taşımak için destek ile iletişime geçip yardım almanız gerekir.
+
+## <a name="coexistence"></a>Birlikte
+
+Birlikte bulunma özelliğinin etkinleştirilmesi, Intune 'U yeni bir kullanıcı kümesi için kullanmanızı sağlarken mevcut kullanıcılar için temel hareketliliği ve güvenliği kullanmaya devam etmenizi sağlar. Kullanıcı aracılığıyla hangi cihazların Intune tarafından yönetildiğini kontrol edersiniz. Bir kullanıcıya bir Intune lisansı atanırsa veya Configuration Manager ile Intune ortak yönetimi kullanılıyorsa, tüm kayıtlı cihazları Intune tarafından yönetilir. Aksi takdirde, Kullanıcı temel taşınabilirlik ve güvenlik tarafından yönetilir.
+
+Birlikte bulunmasını olanaklı kılmak için üç önemli adım vardır:
+1. Hazırlık
+2. Intune MDM yetkilisi ekleme
+3. Kullanıcı ve cihaz geçişi (isteğe bağlı).
+
+### <a name="preparation"></a>Hazırlık
+
+Temel taşınabilirlik ve güvenlikle birlikte bulundurmadan önce aşağıdaki noktaları göz önünde bulundurun:
+- Intune ile yönetmek istediğiniz kullanıcılar için Intune 'da yeterli sayıda lisansa sahip olduğunuzdan emin olun.
+- Hangi kullanıcıların Intune ile lisans lisanslarına atandığını gözden geçirin. Birlikte bulunma etkinleştirildikten sonra, bir Intune çoklu lisans lisansı atanmış olan tüm kullanıcılar cihazlarını Intune 'a geçiş yapar. Beklenmedik cihaz anahtarlarından kaçınmak için, birlikte bulunmasını etkinleştirene kadar herhangi bir Intune-pul lisansı atamamanızı öneririz.
+- Başlangıçta Office 365 güvenlik & uyumluluk portalı aracılığıyla dağıtılan cihaz güvenlik ilkelerinin yerini almak için Intune ilkeleri oluşturun ve dağıtın. Bu değişiklik, temel taşınabilirlik ve güvenlik 'ten Intune 'a taşımayı düşündüğünüz tüm kullanıcılar için yapılmalıdır. Bu kullanıcılara atanmış Intune ilkesi yoksa, birlikte bulunma özelliğinin etkinleştirilmesi, temel taşınabilirlik ve güvenlik ayarlarını kaybetmesine neden olabilir. Bu ayarlar, yönetilen e-posta profilleri gibi değişiklik yapılmadan kaybolacaktır.
+
+### <a name="add-intune-mdm-authority"></a>Intune MDM yetkilisi ekleme
+
+Birlikte bulunma özelliğini etkinleştirmek için, Intune 'U ortamınız için MDM yetkilisi olarak eklemeniz gerekir:
+
+1. Azure AD Genel veya Intune Hizmet Yöneticisi haklarıyla endpoint.microsoft.com 'de oturum açın.
+2. **Cihazlar**' a gidin.
+3. **MDM yetkilisi Ekle dikey** penceresi görüntülenir.
+4. MDM yetkilisini *Office 365* ' den *Intune* 'a geçirmek ve birlikte bulunmasını sağlamak için, **Intune MDM yetkilisi**  >  **Ekle**' yi seçin.
+  ![MDM yetkilisi ekleme ekranının ekran görüntüsü](./media/mdm-authority-set/add-mdm-authority.png)
+
+### <a name="migrate-users-and-devices-optional"></a>Kullanıcıları ve cihazları geçirme (isteğe bağlı)
+
+Intune MDM yetkilisi etkinleştirildikten sonra, birlikte bulunma etkinleştirilir ve kullanıcıları Intune ile yönetmeye başlayabilirsiniz. İsteğe bağlı olarak, temel taşınabilirlik ve güvenlik tarafından daha önce yönetilen cihazları Intune tarafından yönetilmek üzere taşımak istiyorsanız, bu kullanıcılara bir Intune-pul lisansı atayın. Kullanıcıların cihazları, bir sonraki MDM iadelerinde Intune 'a geçiş yapar. Temel taşınabilirlik ve güvenlik aracılığıyla bu cihazlara uygulanan ayarlar artık uygulanmayacaktır ve cihazlardan kaldırılacak.
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>MDM sertifikası süre sonunda mobil cihazı temizleme
 
-Mobil cihazlar Intune hizmetiyle iletişim kurduğunda MDM sertifikası otomatik olarak yenilenir. Mobil cihazlar temizlendiğinde veya belirli bir süre boyunca Intune hizmetiyle iletişim kuramadığında, MDM sertifikası yenilenmez. MDM sertifikasının süre sonundan 180 gün sonra, cihaz Azure Portal’dan kaldırılır.
+Mobil cihazlar Intune hizmetiyle iletişim kurduğunda MDM sertifikası otomatik olarak yenilenir. Mobil cihazlar silinir veya belirli bir süre boyunca Intune hizmetiyle iletişim kuramazlar, MDM sertifikası yenilenmez. MDM sertifikasının süre sonundan 180 gün sonra, cihaz Azure Portal’dan kaldırılır.
 
 ## <a name="remove-mdm-authority"></a>MDM yetkilisini kaldırma
 
@@ -83,30 +113,30 @@ MDM yetkilisi tekrar Bilinmeyen olarak değiştirilemez. MDM yetkilisi, hizmet t
 
 ## <a name="what-to-expect-after-changing-the-mdm-authority"></a>MDM yetkilisini değiştirdikten sonra ne olur
 
-- Intune hizmeti bir kiracının MDM yetkilisinin değiştiğini algıladığında, hizmetine giriş yapmak ve hizmeti eşitlenmek üzere tüm kayıtlı cihazlara bir bildirim iletisi gönderir (Bu bildirim düzenli olarak zamanlanan iadinin dışında). Bu nedenle, kiracının MDM yetkilisi tek başına Intune 'dan değiştirildikten sonra, açık ve çevrimiçi olan cihazlar hizmete bağlanır, yeni MDM yetkilisini alır ve yeni MDM yetkilisi tarafından yönetilir. Bu cihazların yönetiminde ve korunmasında bir kesinti olmaz.
-- MDM yetkilisindeki değişiklik sırasında (veya hemen sonrasında) açık ve çevrimiçi olan cihazlarda bile, cihazlar yeni MDM yetkilisi altında hizmete kaydolmadan önce sekiz saate kadar (bir sonraki zamanlanmış düzenli iadenin zamanına bağlı olarak) bir gecikme olur.    
+- Intune hizmeti bir kiracının MDM yetkilisinin değiştiğini algıladığında, hizmetine giriş yapmak ve hizmeti eşitlenmek üzere tüm kayıtlı cihazlara bir bildirim iletisi gönderir (Bu bildirim düzenli olarak zamanlanan iadinin dışında). Bu nedenle, kiracının MDM yetkilisi tek başına Intune 'dan değiştirildikten sonra, açık ve çevrimiçi olan cihazlar hizmete bağlanır, yeni MDM yetkilisini alır ve yeni MDM yetkilisi tarafından yönetilir. Bu cihazların yönetimi ve korumasına kesinti yoktur.
+- MDM yetkilisindeki değişiklik sırasında (veya hemen sonrasında) açık ve çevrimiçi olan cihazlarda bile, cihazlar yeni MDM yetkilisi altında hizmete kaydolmadan önce sekiz saate kadar (bir sonraki zamanlanmış düzenli iadenin zamanına bağlı olarak) bir gecikme olur.  
 
-  > [!IMPORTANT]    
-  > MDM yetkilisini değiştirdiğiniz saat arasında ve yenilenen APNs sertifikası yeni yetkiliye yüklendiğinde, iOS/ıpados cihazları için yeni cihaz kayıtları ve cihaz denetimi başarısız olur. Bu nedenle MDM yetkilisindeki değişiklikten hemen sonra APNs sertifikasını gözden geçirmeniz ve yeni yetkiliye yüklemeniz önemlidir.
+ > [!IMPORTANT]  
+ > MDM yetkilisini değiştirdiğiniz saat arasında ve yenilenen APNs sertifikası yeni yetkiliye yüklendiğinde, iOS/ıpados cihazları için yeni cihaz kayıtları ve cihaz denetimi başarısız olur. Bu nedenle MDM yetkilisindeki değişiklikten hemen sonra APNs sertifikasını gözden geçirmeniz ve yeni yetkiliye yüklemeniz önemlidir.
 
-- Kullanıcılar, el ile cihazdan hizmete iadeyi başlatarak hızlıca yeni MDM yetkilisine geçebilir. Bu değişikliği Şirket Portalı uygulamasını kullanarak ve bir cihaz uyumluluk denetimi başlatarak kolaylıkla yapabilirler.
+- Kullanıcılar, el ile cihazdan hizmete iadeyi başlatarak hızlıca yeni MDM yetkilisine geçebilir. Kullanıcılar Şirket Portalı uygulamasını kullanarak ve bir cihaz uyumluluk denetimi başlatarak bu değişikliği kolayca yapabilir.
 - Cihazların, MDM yetkilisindeki değişiklikten sonra iade ettikten ve hizmetle eşitlendikten sonra düzgün çalıştığını doğrulamak için, yeni MDM yetkilisindeki cihazları arayın.
-- Cihaz MDM yetkilisindeki değişiklik sırasında çevrimdışı olduğu zaman ile hizmete giriş yaptığı zaman arasında bir ara dönem vardır. Bu ara dönemde cihazın korunduğundan ve işlevsel olduğundan emin olmak için aşağıdaki profiller yedi güne kadar (veya cihaz yeni MDM yetkilisine bağlanıp mevcut ayarları yenileriyle değiştirene kadar) cihazda kalır:
-  - E-posta profili
-  - VPN profili
-  - Sertifika profili
-  - Wi-Fi profili
-  - Yapılandırma profilleri
+- MDM yetkilisindeki değişiklik sırasında bir cihaz çevrimdışı olduğunda ve bu cihaz hizmeti iade ettiğinde bir ara zaman vardır. Bu ara dönemde cihazın korunduğundan ve işlevsel olduğundan emin olmak için aşağıdaki profiller yedi güne kadar (veya cihaz yeni MDM yetkilisine bağlanıp mevcut ayarları yenileriyle değiştirene kadar) cihazda kalır:
+   - E-posta profili
+   - VPN profili
+   - Sertifika profili
+   - Wi-Fi profili
+   - Yapılandırma profilleri
 - Yeni MDM yetkilisine geçtikten sonra, Microsoft Intune yönetim konsolunda doğru uyumluluk verilerinin gösterilmesi bir haftayı bulabilir. Ancak Azure Active Directory’deki ve cihazdaki uyumluluk durumları doğru olacaktır, böylece cihaz korunmaya devam eder.
-- Mevcut ayarların üzerine yazılması amaçlanan yeni ayarların, öncekilerle aynı ada sahip olduğundan emin olun. Aksi takdirde eski ayarların üzerine yazılmaz. Ve cihazlarda gereksiz profiller ve ilkeler ortaya çıkabilir.    
+- Mevcut ayarların üzerine yazılması amaçlanan yeni ayarların, öncekilerle aynı ada sahip olduğundan emin olun. Aksi takdirde eski ayarların üzerine yazılmaz. Ve cihazlarda gereksiz profiller ve ilkeler ortaya çıkabilir.  
 
-  > [!TIP]    
-  > En iyi uygulama olarak, tüm yönetim ayarları ve yapılandırmaları ile dağıtımları, MDM yetkilisindeki değişiklik tamamlandıktan hemen sonra oluşturmalısınız. Böylece, ara dönemde cihazların korunduğundan ve etkin olarak yönetildiğinden emin olursunuz.
+ > [!TIP]  
+ > En iyi uygulama olarak, tüm yönetim ayarları ve yapılandırmaları ile dağıtımları, MDM yetkilisindeki değişiklik tamamlandıktan hemen sonra oluşturmalısınız. Böylece, ara dönemde cihazların korunduğundan ve etkin olarak yönetildiğinden emin olursunuz.
 
-- MDM yetkilisini değiştirdikten sonra cihazların yeni yetkiliye başarılı bir şekilde kaydedildiğini doğrulamak için aşağıdaki adımları gerçekleştirin:   
-  - Yeni cihaz kaydetme
-  - Yeni kaydedilen cihazın yeni MDM yetkilisinde göründüğünden emin olun.
-  - Yönetim konsolunu kullanarak cihazda Uzaktan Kilitleme gibi bir eylem gerçekleştirin. Bu eylem başarılı olursa cihaz, yeni MDM yetkilisi tarafından yönetiliyor demektir.
+- MDM yetkilisini değiştirdikten sonra cihazların yeni yetkiliye başarılı bir şekilde kaydedildiğini doğrulamak için aşağıdaki adımları gerçekleştirin:  
+ - Yeni cihaz kaydetme
+ - Yeni kaydedilen cihazın yeni MDM yetkilisinde göründüğünden emin olun.
+ - Yönetim konsolunu kullanarak cihazda Uzaktan Kilitleme gibi bir eylem gerçekleştirin. Bu eylem başarılı olursa cihaz, yeni MDM yetkilisi tarafından yönetiliyor demektir.
 - Belirli cihazlarla sorun yaşıyorsanız bu cihazları kaldırıp yeniden kaydederek cihazların yeni yetkiliye bağlanması ve yönetilmeye devam etmesini sağlayabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar

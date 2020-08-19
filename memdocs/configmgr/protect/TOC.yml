@@ -121,7 +121,7 @@
     - name: 'Wi-Fi, VPN, e-posta ve sertifika profilleri dağıtma'
       href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
     - name: Hüküm ve koşullar ayarları
-      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
+      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/mem/configmgr/protect/toc.json&bc=/mem/configmgr/protect/breadcrumb/toc.json
     - name: Korumayı izleme
       items:
         - name: 'Wi-Fi, e-posta ve VPN profillerini izleme'

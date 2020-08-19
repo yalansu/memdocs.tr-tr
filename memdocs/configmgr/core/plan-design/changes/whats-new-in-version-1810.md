@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a0d7f561a324d20f503b8fee3e8a869774c70d89
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 05a6950708da04effe230d0d5637c4e3bcedd7e6
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128976"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591590"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1810 ' deki yenilikler
 
@@ -34,11 +34,11 @@ Yeni Configuration Manager özelliklerinden yararlanmak için önce istemcileri 
 -->  
 
 > [!Tip]  
-> Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1810+-+Configuration+Manager%22&locale=en-us`
+> Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1810+-+Configuration+Manager%22&locale=en-us`
 
 
 
-## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a>Kullanımdan kaldırılan özellikler ve işletim sistemleri
+## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a> Kullanımdan kaldırılan özellikler ve işletim sistemleri
 
 [Kaldırılan ve kullanımdan kaldırılan öğelerde](deprecated/removed-and-deprecated.md)uygulanmadan önce yapılan değişiklikler hakkında bilgi edinin.
 
@@ -50,7 +50,7 @@ Azure 'da klasik hizmet dağıtımları artık Configuration Manager kullanım d
 
 
 
-## <a name="site-infrastructure"></a><a name="bkmk_infra"></a>Site altyapısı
+## <a name="site-infrastructure"></a><a name="bkmk_infra"></a> Site altyapısı
 
 ### <a name="support-for-windows-server-2019"></a>Windows Server 2019 için destek
 
@@ -95,7 +95,7 @@ Daha fazla bilgi için bkz. [istemci bildirimleri](../../clients/manage/client-n
 
 
 
-## <a name="content-management"></a><a name="bkmk_content"></a>İçerik yönetimi
+## <a name="content-management"></a><a name="bkmk_content"></a> İçerik yönetimi
 
 ### <a name="new-boundary-group-options"></a>Yeni sınır grubu seçenekleri
 
@@ -118,7 +118,7 @@ Daha fazla bilgi için bkz. [Management Insights](../../servers/manage/managemen
 
 
 
-## <a name="client-management"></a><a name="bkmk_client"></a>İstemci yönetimi
+## <a name="client-management"></a><a name="bkmk_client"></a> İstemci yönetimi
 
 ### <a name="new-client-notification-action-to-wake-up-device"></a>Cihazı Uyandırma için yeni istemci bildirim eylemi
 
@@ -156,7 +156,7 @@ Daha fazla bilgi için bkz. [sınır gruplarını yapılandırma](../../servers/
 
 
 
-## <a name="co-management"></a><a name="bkmk_comgmt"></a>Ortak yönetim
+## <a name="co-management"></a><a name="bkmk_comgmt"></a> Ortak yönetim
 
 ### <a name="required-app-compliance-policy-for-co-managed-devices"></a>Ortak yönetilen cihazlar için gerekli uygulama uyumluluk ilkesi
 
@@ -191,7 +191,7 @@ Daha fazla bilgi için bkz. [İnternet tabanlı cihazları ortak yönetim için 
 
 
 
-## <a name="application-management"></a><a name="bkmk_app"></a>Uygulama yönetimi
+## <a name="application-management"></a><a name="bkmk_app"></a> Uygulama yönetimi
 
 ### <a name="convert-applications-to-msix"></a>Uygulamaları MALTıYA Dönüştür
 
@@ -231,7 +231,7 @@ Daha fazla bilgi için bkz. [uygulama oluşturma](../../../apps/deploy-use/creat
 
 
 
-## <a name="os-deployment"></a><a name="bkmk_osd"></a>İşletim sistemi dağıtımı
+## <a name="os-deployment"></a><a name="bkmk_osd"></a> İşletim sistemi dağıtımı
 
 ### <a name="task-sequence-support-of-windows-autopilot-for-existing-devices"></a>Mevcut cihazlar için Windows Autopilot görev dizisi desteği
 
@@ -280,14 +280,14 @@ Daha fazla bilgi için bkz. [görev dizisi değişkenleri](../../../osd/understa
 
 
 
-## <a name="software-updates"></a><a name="bkmk_sum"></a>Yazılım güncelleştirmeleri
+## <a name="software-updates"></a><a name="bkmk_sum"></a> Yazılım güncelleştirmeleri
 
 ### <a name="phased-deployment-of-software-updates"></a>Yazılım güncelleştirmelerinin aşamalı dağıtımı
 
 <!--1358146-->
 Yazılım güncelleştirmeleri için aşamalı dağıtımlar oluşturun. Aşamalı dağıtımlar, özelleştirilebilir ölçütlere ve gruplara göre düzenlenmiş, sıralı bir yazılım dağıtımını düzenlemenize olanak tanır.
 
-Daha fazla bilgi için bkz. [aşamalı dağıtımlar oluşturma](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+Daha fazla bilgi için bkz. [aşamalı dağıtımlar oluşturma](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 
 
 ### <a name="improvement-to-maintenance-windows-for-software-updates"></a>Yazılım güncelleştirmeleri için bakım pencerelerini geliştirme
@@ -314,7 +314,7 @@ Artık özellik güncelleştirmeleri için yerine geçme kurallarını Özellik 
 
 Daha fazla bilgi için, bkz. [Supersedence rules](../../../sum/get-started/install-a-software-update-point.md#supersedence-rules).
 
-## <a name="reporting"></a><a name="bkmk_report"></a>Rapor
+## <a name="reporting"></a><a name="bkmk_report"></a> Rapor
 
 ### <a name="improvement-to-lifecycle-dashboard"></a>Yaşam döngüsü panosuna iyileştirme
 
@@ -335,7 +335,7 @@ Daha fazla bilgi için bkz. [veri ambarı](../../servers/manage/data-warehouse.m
 
 
 
-## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a>Configuration Manager konsolu
+## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a> Configuration Manager konsolu
 
 ### <a name="configuration-manager-administrator-authentication"></a>Configuration Manager yönetici kimlik doğrulaması
 
@@ -385,7 +385,7 @@ CMPivot için ek performans ve sorun giderme geliştirmeleri hakkında daha fazl
 CMPivot hakkında daha fazla bilgi için bkz. [CMPivot](../../servers/manage/cmpivot.md).
 
 
-### <a name="improvements-to-scripts"></a><a name="bkmk_scripts"></a>Betiklerin geliştirmeleri
+### <a name="improvements-to-scripts"></a><a name="bkmk_scripts"></a> Betiklerin geliştirmeleri
 
 <!--1358239-->
 Artık ham veya yapılandırılmış JSON biçiminde ayrıntılı betik çıktısını görüntüleyebilirsiniz. Bu biçimlendirme, çıktının okunmasını ve çözümlenmesini kolaylaştırır.
@@ -414,7 +414,7 @@ Daha fazla bilgi için bkz. [plan for SMS Provider](../hierarchy/plan-for-the-sm
 
 
 
-## <a name="on-premises-mdm"></a><a name="bkmk_opmdm"></a>Şirket içi MDM
+## <a name="on-premises-mdm"></a><a name="bkmk_opmdm"></a> Şirket içi MDM
 
 ### <a name="an-intune-connection-is-no-longer-required-for-new-on-premises-mdm-deployments"></a>Yeni şirket içi MDM dağıtımları için bir Intune bağlantısı artık gerekli değildir
 
@@ -438,8 +438,8 @@ Aşağıdaki ek düzeltmeler belirli sorunları ele almak için kullanılabilir:
 
 | ID | Başlık | Tarih | Konsol içi |
 |---------|---------|---------|---------|
-| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune bağlayıcı sertifikası Configuration Manager yenilemez | 18 Ocak 2019 | Evet |
-| [4490434](https://support.microsoft.com/help/4490434) | Configuration Manager içinde yinelenen Kullanıcı keşfi sütunları oluşturuldu | 22 Şubat 2019 | Evet |
+| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune bağlayıcı sertifikası Configuration Manager yenilemez | 18 Ocak 2019 | Yes |
+| [4490434](https://support.microsoft.com/help/4490434) | Configuration Manager içinde yinelenen Kullanıcı keşfi sütunları oluşturuldu | 22 Şubat 2019 | Yes |
 | [4490575](https://support.microsoft.com/help/4490575) | Güncelleştirme yüklemeleri yanıt vermeyi durdurur veya Configuration Manager, sürüm 1810 ' de hiçbir şekilde tamamlanmayı göstermez | 22 Şubat 2019 | Evet |
 
 

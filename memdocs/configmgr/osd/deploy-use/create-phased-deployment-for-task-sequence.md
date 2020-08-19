@@ -10,12 +10,12 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1845b381d8b37fed3a785475e961cd39c54cf42d
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 36da7d35b75d2675fc775ed46e49e8adf2e6af3f
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125279"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591744"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>Configuration Manager aşamalı dağıtımlar oluşturma
 
@@ -51,7 +51,7 @@ Aşamalı dağıtım oluşturmadan önce ilişkili içeriği bir dağıtım nokt
 
 
 
-## <a name="phase-settings"></a><a name="bkmk_settings"></a>Aşama ayarları
+## <a name="phase-settings"></a><a name="bkmk_settings"></a> Aşama ayarları
 
 Bu ayarlar aşamalı dağıtımlar için benzersizdir. Aşamalı dağıtım işleminin zamanlamasını ve davranışını denetlemek üzere aşamalar oluştururken veya düzenlenirken bu ayarları yapılandırın. 
 
@@ -91,7 +91,7 @@ Include a timeline diagram
 
 
 
-## <a name="automatically-create-a-default-two-phase-deployment"></a><a name="bkmk_auto"></a>Otomatik olarak varsayılan iki aşamalı dağıtım oluştur
+## <a name="automatically-create-a-default-two-phase-deployment"></a><a name="bkmk_auto"></a> Otomatik olarak varsayılan iki aşamalı dağıtım oluştur
 
 1. Configuration Manager konsolundaki aşamalı dağıtım oluşturma Sihirbazı 'nı başlatın. Bu eylem, dağıtmakta olduğunuz yazılımın türüne göre farklılık gösterir:  
 
@@ -124,7 +124,7 @@ Include a timeline diagram
 > [!NOTE]
 > 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager üründe ve belgelerde eski adı görmeye devam edebilirsiniz.  
 
-## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a>El ile yapılandırılan aşamalarla aşamalı bir dağıtım oluşturma
+## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a> El ile yapılandırılan aşamalarla aşamalı bir dağıtım oluşturma
 <!--1358148--> 
 
 Sürüm 1806 ' den başlayarak, bir görev dizisi için el ile yapılandırılan aşamalarla aşamalı bir dağıtım oluşturun. Aşamalı dağıtım oluşturma sihirbazının **aşamalar** sekmesinden 10 ' a kadar ek aşama ekleyin. 
@@ -187,7 +187,7 @@ Aşamalı dağıtım oluşturduktan sonra, değişiklikler yapmak için özellik
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Aşamalı dağıtımları yönetme ve izleme:
-- [Uygulama](manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)
-- [Yazılım güncelleştirmesi](manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [Uygulama](manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
+- [Yazılım güncelleştirmesi](manage-monitor-phased-deployments.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
 - [Görev dizisi](manage-monitor-phased-deployments.md)  
 

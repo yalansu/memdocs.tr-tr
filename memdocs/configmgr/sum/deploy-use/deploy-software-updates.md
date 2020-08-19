@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: 2adf22fd9c17863d7c29e2a29d2125d22f2d944f
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 5cee950e2b42d73f20921c2baf08b98d2d206586
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127680"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591197"
 ---
 # <a name="deploy-software-updates"></a>Yazılım güncelleştirmelerini dağıtma  
 
@@ -48,7 +48,7 @@ Genellikle, istemcileriniz için bir taban çizgisi oluşturmak üzere yazılım
 
 
 
-## <a name="manually-deploy-software-updates"></a><a name="BKMK_ManualDeployment"></a>Yazılım güncelleştirmelerini el ile dağıtma
+## <a name="manually-deploy-software-updates"></a><a name="BKMK_ManualDeployment"></a> Yazılım güncelleştirmelerini el ile dağıtma
 Configuration Manager konsolunda yazılım güncelleştirmeleri ' ni seçin ve dağıtım sürecini el ile başlatın. Bu dağıtım yöntemini genellikle aşağıdaki şekilde kullanabilirsiniz:  
 
 - Aylık dağıtımları yöneten otomatik dağıtım kuralları oluşturmadan önce gerekli yazılım güncelleştirmeleriyle istemcileri güncel duruma getirmek  
@@ -72,7 +72,7 @@ Daha fazla bilgi ve ayrıntılı adımlar için bkz. [yazılım güncelleştirme
 > - 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
 > - Microsoft 365 Apps istemci güncelleştirmelerini el ile dağıttığınızda, **yazılım kitaplığı** çalışma alanının **Office 365 Istemci yönetimi** altındaki **Office 365 güncelleştirmeleri** düğümünde bunları bulun. 
 
-## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a>Yazılım güncelleştirmelerini otomatik olarak dağıt
+## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a> Yazılım güncelleştirmelerini otomatik olarak dağıt
 
 Otomatik bir dağıtım kuralı (ADR) kullanarak otomatik yazılım güncelleştirmeleri dağıtımını yapılandırın. Bu dağıtım yöntemi, aylık yazılım güncelleştirmeleri (genellikle "Düzeltme Eki Salı" olarak bilinir) ve tanım güncelleştirmelerini yönetmek için ortaktır. Dağıtım işlemini otomatikleştirmek için bir ADR ölçütlerini tanımlarsınız. Aşağıdaki listede, yazılım güncelleştirmelerini otomatik olarak dağıtmak için genel iş akışı sağlanmaktadır:  
 
@@ -110,10 +110,10 @@ Daha fazla bilgi ve ayrıntılı adımlar için bkz. [yazılım güncelleştirme
 
 
 
-## <a name="deploy-software-updates-in-phases"></a><a name="bkmk_phased"></a>Yazılım güncelleştirmelerini aşamalarda dağıtma
+## <a name="deploy-software-updates-in-phases"></a><a name="bkmk_phased"></a> Yazılım güncelleştirmelerini aşamalarda dağıtma
 
 <!--1358146-->
 Sürüm 1810 ' den başlayarak, yazılım güncelleştirmeleri için aşamalı dağıtımlar oluşturun. Aşamalı dağıtımlar, özelleştirilebilir ölçütlere ve gruplara göre düzenlenmiş, sıralı bir yazılım dağıtımını düzenlemenize olanak tanır.
 
-Daha fazla bilgi için bkz. [aşamalı dağıtımlar oluşturma](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+Daha fazla bilgi için bkz. [aşamalı dağıtımlar oluşturma](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 

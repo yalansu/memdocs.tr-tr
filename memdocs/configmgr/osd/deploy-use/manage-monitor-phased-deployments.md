@@ -10,25 +10,25 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66f31983e34ff37cd2df8532cd9d45d372ef1f3b
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: fe8bbbf311baa335640ca7dea90ccd46da4fa5ea
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125109"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591719"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>Aşamalı dağıtım izleme ve yönetme
 
 Bu makalede, aşamalı dağıtımları yönetme ve izleme işlemlerinin nasıl yapılacağı açıklanır. Yönetim görevleri bir sonraki aşamayı el ile başlatmak ve bir aşamayı askıya almak ya da sürdürmeyi içerir. 
 
 İlk olarak, aşamalı bir dağıtım oluşturmanız gerekir: 
-- [Uygulama](create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
-- [Yazılım güncelleştirmesi](create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [Uygulama](create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
+- [Yazılım güncelleştirmesi](create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
 - [Görev dizisi](create-phased-deployment-for-task-sequence.md)  
 
 
 
-## <a name="move-to-the-next-phase"></a><a name="bkmk_move"></a>Sonraki aşamaya geçin
+## <a name="move-to-the-next-phase"></a><a name="bkmk_move"></a> Sonraki aşamaya geçin
 
 Ayarı seçtiğinizde, **dağıtımın ikinci aşamasını el ile**başlatırsanız, site başarı ölçütlerine bağlı olarak bir sonraki aşamayı otomatik olarak başlamaz. Aşamalı dağıtımı sonraki aşamaya taşımanız gerekir.  
 
@@ -55,7 +55,7 @@ Ayarı seçtiğinizde, **dağıtımın ikinci aşamasını el ile**başlatırsan
 
 
 
-## <a name="suspend-and-resume-phases"></a><a name="bkmk_suspend"></a>Askıya alma ve özgeçmişler 
+## <a name="suspend-and-resume-phases"></a><a name="bkmk_suspend"></a> Askıya alma ve özgeçmişler 
 
 Aşamalı bir dağıtımı el ile askıya alabilir veya sürdürebilirsiniz. Örneğin, bir görev dizisi için aşamalı dağıtım oluşturursunuz. Pilot grubunuza yönelik aşamayı izlerken çok sayıda başarısızlık fark edersiniz. Başka cihazların görev dizisini çalıştırmasını durdurmak için aşamalı dağıtımı askıya alın. Sorunu çözdükten sonra, piyasaya çıkmaya devam etmek için aşamalı dağıtımı sürdürmeniz gerekir. 
 
@@ -86,7 +86,7 @@ When you suspend a phased deployment, it sets the available and deadline times o
 -->
 
 
-## <a name="monitor"></a><a name="bkmk_monitor"></a>İzleyicisi
+## <a name="monitor"></a><a name="bkmk_monitor"></a> İzleyicisi
 <!--1358577-->
 Sürüm 1902 ' den başlayarak, aşamalı dağıtımlar kendi adanmış izleme düğümüne sahiptir ve oluşturduğunuz aşamalı dağıtımları tanımlamanızı ve aşamalı dağıtım izleme görünümüne gitmelerini kolaylaştırır. **İzleme** çalışma alanından **aşamalı dağıtımlar**' ı seçin ve ardından durumu görmek için aşamalı dağıtımlardan birine çift tıklayın. <!--3555949-->
 

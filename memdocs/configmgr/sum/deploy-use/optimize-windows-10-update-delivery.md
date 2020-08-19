@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6c42015880cae09be48feff9c42b6b2a0d2c8544
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2e832feb6f5a56225cd63a0b0d6290fc0c70e53a
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129323"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591563"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Configuration Manager ile Windows 10 güncelleştirme teslimini iyileştirin
 
@@ -58,7 +58,7 @@ En iyi sonuçlar için teslim Iyileştirme [indirme modunu](https://docs.microso
 
 İstemcileri farklı ağlarda dolaşrsa, bu grup kimliklerinin el ile yapılandırılması zor olur. Configuration Manager sürüm 1802, [sınır gruplarını teslim iyileştirmesi ile tümleştirerek](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)bu işlemin yönetimini basitleştirmek için yeni bir özellik ekledi. İstemci uyandığında, ilkeleri almak için yönetim noktasıyla iletişim kurun ve ağ ve sınır grubu bilgilerini sağlar. Configuration Manager her sınır grubu için benzersiz bir KIMLIK oluşturur. Site, istemcinin teslim Iyileştirme grubu KIMLIĞINI Configuration Manager sınır KIMLIĞIYLE otomatik olarak yapılandırmak için istemcinin konum bilgilerini kullanır. İstemci başka bir sınır grubuna gezinse, yönetim noktasına yönlendirilir ve yeni bir sınır grubu KIMLIĞIYLE otomatik olarak yeniden yapılandırılır. Dağıtım Iyileştirmesi, bu tümleştirmeyle güncelleştirmelerin indirileceği bir eş bulmak için Configuration Manager sınır grubu bilgilerini kullanabilir.
 
-### <a name="delivery-optimization-starting-in-version-1910"></a><a name="bkmk_DO-1910"></a>Sürüm 1910 ' den başlayarak teslim Iyileştirmesi
+### <a name="delivery-optimization-starting-in-version-1910"></a><a name="bkmk_DO-1910"></a> Sürüm 1910 ' den başlayarak teslim Iyileştirmesi
 <!--4699118-->
 Configuration Manager sürüm 1910 ' den başlayarak, yalnızca Express yükleme dosyalarını değil Windows 10 sürüm 1709 veya üstünü çalıştıran istemciler için tüm Windows Update içeriğinin dağıtımı için teslim Iyileştirmesi kullanabilirsiniz.
 
@@ -66,13 +66,22 @@ Tüm Windows Update yükleme dosyaları için teslim Iyileştirme 'yi kullanmak 
 
 - **Kullanılabilir olduğunda istemcilerin Delta içeriğini Indirmesine Izin ver** **.**
 - **İstemcilerin Delta içerik için istekleri almak için kullandığı bağlantı noktası,** 8005 (varsayılan) veya özel bir bağlantı noktası numarası olarak ayarlanır.
-
+ 
 > [!IMPORTANT]
 > - Teslim Iyileştirme etkin olmalıdır (varsayılan) ve atlanmamalıdır. Daha fazla bilgi için bkz. [Windows teslim iyileştirme başvurusu](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference).
 > - Delta içeriği için [yazılım güncelleştirmeleri istemci ayarlarınızı](../../core/clients/deploy/about-client-settings.md#software-updates) değiştirirken [teslim iyileştirme istemci ayarlarınızı](../../core/clients/deploy/about-client-settings.md#delivery-optimization) doğrulayın.
 > - Office COM etkinse, Microsoft 365 Apps istemci güncelleştirmeleri için teslim Iyileştirmesi kullanılamaz. Office COM, Configuration Manager tarafından Microsoft 365 Apps istemcilerine yönelik güncelleştirmeleri yönetmek için kullanılır. Microsoft 365 Apps güncelleştirmeleri için teslim Iyileştirmesi kullanılmasına izin vermek üzere Office COM kaydını silebilirsiniz. Office COM devre dışı bırakıldığında, Microsoft 365 uygulamalar için yazılım güncelleştirmeleri varsayılan Office otomatik güncelleştirmeler 2,0 zamanlanmış göreviyle yönetilir. Bu, Configuration Manager Microsoft 365 Apps güncelleştirmeleri için yükleme işlemini dikte etmiyor veya izmeyeceği anlamına gelir. Configuration Manager, konsolunda Office 365 Istemci yönetimi panosunu doldurmak üzere donanım envanterinden bilgi toplamaya devam edecektir. Office COM kaydını kaldırma hakkında bilgi için, bkz. [office 365 istemcilerinin Configuration Manager yerine OFFICE CDN 'den güncelleştirme almasını sağlama](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
 > - İçerik depolaması için bir CMG kullanırken, kullanılabilir [istemci ayarı](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) etkinleştirildiğinde **Delta içeriğini indir** , üçüncü taraf güncelleştirmeler için içerik istemcilere indirmez. <!--6598587-->
 
+#### <a name="configuration-recommendations-for-clients-downloading-delta-content"></a>Delta içeriğini indirirken istemciler için yapılandırma önerileri
+<!--7913814-->
+İstemciler yazılım güncelleştirme içeriği için kullanılabilir [istemci ayarı](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) etkinleştirildiğinde **Delta Içeriği Indirmelerine izin ver** , [dağıtım noktası geri dönüş](../../core/servers/deploy/configure/boundary-group-procedures.md#bkmk_site-fallback) davranışında sınırlamalar vardır. Bu istemcilerin yazılım güncelleştirme içeriğini düzgün bir şekilde indirebilmeleri için aşağıdaki yapılandırmaların kullanılması önerilir:
+
+- İstemcilerin bir sınır grubunda olduğundan ve bu sınır grubuyla ilişkili gereken içeriğe sahip güvenilir bir dağıtım noktası olduğundan emin olun.
+- Doğrudan internet 'ten indirebilecek istemciler için Microsoft Update etkin olan yazılım güncelleştirmelerini dağıtın.
+   - Bu geri dönüş davranışı için dağıtım ayarı, **yazılım güncelleştirmelerinin geçerli, komşu veya site sınır gruplarındaki dağıtım noktasında mevcut olmaması, Microsoft Updates 'ten içerik indirmesi** ve **indirme ayarları** sayfasında bulunur. Daha fazla bilgi için bkz. [yazılım güncelleştirmelerini dağıtma](manually-deploy-software-updates.md#process-to-manually-deploy-the-software-updates-in-a-software-update-group).
+
+Yukarıdaki seçeneklerden herhangi biri uygun değilse, istemcilerin, geri dönüşlerinin izin vermek için istemci ayarlarından devre dışı bırakılabilirler **Delta içeriğini Indirmesine Izin verin** . İstemci Delta kanalını kullanmayacaksa, bu durumda teslim Iyileştirme eşlemesi yararlanılabilir.
 
 ### <a name="configuration-manager-peer-cache"></a>Configuration Manager eş önbelleği
 
@@ -96,11 +105,11 @@ Hızlı yükleme dosyaları için doğru eş önbelleğe alma teknolojisinin se�
 
 | İşlev  | Teslim Iyileştirme  | Eş önbellek  | BranchCache  |
 |---------|---------|---------|---------|
-| Alt ağlar arasında destekleniyor | Evet | Evet | Hayır |
+| Alt ağlar arasında destekleniyor | Yes | Yes | Hayır |
 | Bant genişliği azaltma | Evet (yerel) | Evet (BITS aracılığıyla) | Evet (BITS aracılığıyla) |
 | Kısmi içerik desteği | Evet, bu sütunda listelenen tüm desteklenen içerik türleri için bir sonraki satırda. | Yalnızca Microsoft 365 uygulamalar ve hızlı güncelleştirmeler için | Evet, bu sütunda listelenen tüm desteklenen içerik türleri için bir sonraki satırda. |
 | Desteklenen içerik türleri | **ConfigMgr aracılığıyla:** </br> -Hızlı güncelleştirmeler </br> -Tüm Windows güncelleştirmeleri (sürüm 1910 ' den başlayarak). Bu, Microsoft 365 uygulama güncelleştirmeleri içermez.</br> </br> **Microsoft bulutu aracılığıyla:**</br> -Windows ve güvenlik güncelleştirmeleri</br> -Sürücüler</br> -Windows Mağazası uygulamaları</br> -Iş için Windows Mağazası uygulamaları | [WINDOWS PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) 'de indirilen görüntüler dahil tüm ConfigMgr içerik türleri | Tüm ConfigMgr içerik türleri, görüntüler hariç |
-| Disk denetimindeki önbellek boyutu | Evet | Evet | Evet |
+| Disk denetimindeki önbellek boyutu | Yes | Yes | Yes |
 | Eş kaynağı bulma | Automatic | El ile (istemci Aracısı ayarı) | Automatic |
 | Eş keşfi | Teslim Iyileştirme bulut hizmeti aracılığıyla (internet erişimi gerektirir) | Yönetim noktası aracılığıyla (istemci sınır gruplarına göre) | Noktalı |
 | Raporlama | Evet (Masaüstü analizlerini kullanarak) | ConfigMgr istemci veri kaynakları panosu | ConfigMgr istemci veri kaynakları panosu |
@@ -119,7 +128,7 @@ Daha büyük boyutlu güncelleştirmelerin sunucu tarafı avantajları hızlı d
 
 
 
-## <a name="frequently-asked-questions"></a><a name="bkmk_faq"></a>Sık sorulan sorular
+## <a name="frequently-asked-questions"></a><a name="bkmk_faq"></a> Sık sorulan sorular
 
 #### <a name="how-do-windows-express-downloads-work-with-configuration-manager"></a>Windows Express nasıl yüklenir Configuration Manager?
 

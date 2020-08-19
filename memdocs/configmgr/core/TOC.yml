@@ -750,7 +750,7 @@
         - name: Linux ve UNIX istemcilerini yönetme
           href: clients/manage/manage-clients-for-linux-and-unix-servers.md
         - name: Verileri Azure İzleyici ile eşitleme
-          href: 'https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=sccm/core/context/core-context'
+          href: 'https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context'
         - name: Mac istemcilerinin bakımını yapma
           href: clients/manage/maintain-mac-clients.md
         - name: Surface cihazı panosu

@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: f100d28b3fd4ce0d310ddb2f0b4e777c72f72881
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 20c560925b2c1abec282b8c5f8dae3f6f42f4d64
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076212"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591214"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-configuration-manager"></a>Configuration Manager için Technical Preview 1701 ' deki yetenekler
 
@@ -61,7 +61,7 @@ Aşağıda, bu Technical Preview ile yazılım güncelleştirme noktalarına yö
   Bir istemci geri dönüş kullanır, bir kullanılabilir yazılım güncelleştirme noktası havuzu oluşturmak için geri dönüş için sınır grubu yapılandırmasını kullanır. Bu havuz, istemcilerin *geçerli sınır grubundaki*tüm yazılım güncelleştirme noktalarını, *komşu sınır gruplarını*ve istemcilerin *site varsayılan sınır grubunu*içerir.
 
 - **Varsayılan site sınır grubunu yapılandırın:**  
-  *Varsayılan site sınır grubu&lt;sitekoduna>* yazılım güncelleştirme noktası eklemeyi göz önünde bulundurun. Bu, başka bir sınır grubunun üyesi olmayan istemcilerin yazılım güncelleştirme noktası bulmak için geri dönüşmesini sağlar.
+  *Varsayılan site sınır grubu &lt; sitekoduna>* yazılım güncelleştirme noktası eklemeyi göz önünde bulundurun. Bu, başka bir sınır grubunun üyesi olmayan istemcilerin yazılım güncelleştirme noktası bulmak için geri dönüşmesini sağlar.
 
 
 Sınır grupları için yazılım güncelleştirme noktalarını yönetmek için, [güncel dalı belgelerindeki yordamları](../servers/deploy/configure/boundary-group-procedures.md)kullanın, ancak yapılandırabileceğiniz geri dönüş sürelerinin henüz yazılım güncelleştirme noktaları için kullanılmadığını unutmayın.
@@ -96,8 +96,8 @@ Bu önizleme sürümünden itibaren, bulut veya şirket içi sistem durumu kanı
 
 ### <a name="try-it-out"></a>Deneyin
 
-- **Yönetim noktasında şirket içi cihaz durumu kanıtlamasını etkinleştirme**<br>  Configuration Manager konsolunda, yönetim noktasına gidin ve **Yönetim noktası bileşen özellikleri** ' ni açın ve ardından **Gelişmiş Seçenekler** sekmesine tıklayın. **Ekle** ' ye tıklayın ve şirket içi URL 'yi (örneğin, https://10.10.10.10) şirket içi **cihaz durumu kanıtlama hizmeti URL 'leri**için) belirtin.
-- **İstemci Aracısı için şirket içi yönetim noktası durumu kanıtlama raporlamasını etkinleştirin**<br>Configuration Manager konsolunda, **Yönetim** > **istemci ayarları** ' nı seçin ve çift tıklayın veya yeni bir **özel cihaz ayarları**oluşturun. **Bilgisayar Aracısı** ' nı seçin ve şirket **Içi sistem durumu kanıtlama hizmetini kullan '** ı **Evet**olarak ayarlayın. **Cihaz sistem durumu kanıtlama hizmeti ile Iletişimi etkinleştir** seçeneği **Evet** olarak ayarlanırsa ve **Şirket Içi sistem durumu kanıtlama kullanımı** **Hayır**olarak ayarlanırsa, yönetim noktası bulut tabanlı cihaz sistem durumu kanıtlama hizmeti 'ni kullanır.
+- **Yönetim noktasında şirket içi cihaz durumu kanıtlamasını etkinleştirme**<br>  Configuration Manager konsolunda, yönetim noktasına gidin ve **Yönetim noktası bileşen özellikleri** ' ni açın ve ardından **Gelişmiş Seçenekler** sekmesine tıklayın. **Ekle** ' ye tıklayın ve şirket içi URL 'yi (örneğin, şirket Içi https://10.10.10.10) **cihaz durumu kanıtlama hizmeti URL 'leri**için) belirtin.
+- **İstemci Aracısı için şirket içi yönetim noktası durumu kanıtlama raporlamasını etkinleştirin**<br>Configuration Manager konsolunda, **Yönetim**  >  **istemci ayarları** ' nı seçin ve çift tıklayın veya yeni bir **özel cihaz ayarları**oluşturun. **Bilgisayar Aracısı** ' nı seçin ve şirket **Içi sistem durumu kanıtlama hizmetini kullan '** ı **Evet**olarak ayarlayın. **Cihaz sistem durumu kanıtlama hizmeti ile Iletişimi etkinleştir** seçeneği **Evet** olarak ayarlanırsa ve **Şirket Içi sistem durumu kanıtlama kullanımı** **Hayır**olarak ayarlanırsa, yönetim noktası bulut tabanlı cihaz sistem durumu kanıtlama hizmeti 'ni kullanır.
 
 ## <a name="use-the-oms-connector-for-microsoft-azure-government-cloud"></a>Microsoft Azure Kamu Bulutu için OMS bağlayıcısını kullanma
 Bu Technical Preview ile, artık Microsoft Azure Kamu buluttaki bir OMS çalışma alanına bağlanmak için Microsoft Operations Management Suite (OMS) bağlayıcısını kullanabilirsiniz.  
@@ -105,27 +105,27 @@ Bu Technical Preview ile, artık Microsoft Azure Kamu buluttaki bir OMS çalış
 Bunu yapmak için, bir yapılandırma dosyasını kamu bulutuna işaret etmek üzere değiştirirsiniz ve sonra OMS bağlayıcısını yüklersiniz.
 
 ### <a name="set-up-an-oms-connector-to-microsoft-azure-government-cloud"></a>Microsoft Azure Kamu Bulutu için OMS Bağlayıcısı ayarlama
-1. Configuration Manager konsolunun yüklü olduğu herhangi bir bilgisayarda, kamu bulutunu işaret etmek için aşağıdaki yapılandırma dosyasını düzenleyin: *** &lt;cm yükleme yolu> \adminconsole\bin\microsoft.configurationmanagmenet.exe.config***
+1. Configuration Manager konsolunun yüklü olduğu herhangi bir bilgisayarda, kamu bulutunu işaret etmek için aşağıdaki yapılandırma dosyasını düzenleyin: *** &lt; cm yükleme yolu # C0\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config***
 
    **Düzeltmeler**
 
    *FairFaxArmResourceID* ayar adı için değeri "şuna eşit olacak şekilde değiştirin<https://management.usgovcloudapi.net/">
 
-   - **Özgün:** &lt;Setting Name = "FairFaxArmResourceId" SerializeAs = "String" >   
-     &lt;değer>&lt;/değer>   
+   - **Özgün:** &lt; Setting Name = "FairFaxArmResourceId" serializeAs = "String" >   
+     &lt;değer>&lt; /değer>   
      &lt;/Setting>
 
    - **Bilmesini**     
-     &lt;ayar adı = "FairFaxArmResourceId" serializeAs = "String" > &lt;değer><https://management.usgovcloudapi.net/&lt;/value>>  
+     &lt;Setting Name = "FairFaxArmResourceId" serializeAs = "String" > &lt; Value &gt; https://management.usgovcloudapi.net/&lt ;/Value&gt;  
      &lt;/Setting>
 
-   *FairFaxAuthorityResource* ayar adı için değeri "<https://login.microsoftonline.com/>" değerine eşit olacak şekilde değiştirin
+   *FairFaxAuthorityResource* ayar adı için değeri "" değerine eşit olacak şekilde değiştirin <https://login.microsoftonline.com/>
 
-   - **Özgün:** &lt;Setting Name = "FairFaxAuthorityResource" SerializeAs = "String" >   
-     &lt;değer>&lt;/değer>
+   - **Özgün:** &lt; Setting Name = "FairFaxAuthorityResource" serializeAs = "String" >   
+     &lt;değer>&lt; /değer>
 
-   - **Düzenlendi:** &lt;Setting Name = "FairFaxAuthorityResource" SerializeAs = "String" >   
-     &lt;değer><https://login.microsoftonline.com/&lt;/value>>
+   - **Düzenlendi:** &lt; Setting Name = "FairFaxAuthorityResource" serializeAs = "String" >   
+     &lt;değer &gt; [https://login.microsoftonline.com](https://login.microsoftonline.com) &lt; /değer&gt;
 
 2. Dosyayı İki değişiklikle kaydettikten sonra, Configuration Manager konsolunu aynı bilgisayarda yeniden başlatın ve ardından bu konsolu kullanarak OMS bağlayıcısını yükleyebilirsiniz. Bağlayıcıyı yüklemek için [Configuration Manager verileri Microsoft Operations Management Suite](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)' deki bilgileri kullanın ve Microsoft Azure Kamu buluttaki **Operations Management Suite çalışma alanını** seçin.
 

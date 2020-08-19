@@ -10,12 +10,12 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6c2fcd583e860273e2fbfc9fcda1e08053336345
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a4afb066a5f07ff2347bc64b7811c2f09f3bd548
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127534"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88590943"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>Configuration Manager ile uygulama dağıtma
 
@@ -34,7 +34,7 @@ Ayrıca, bir uygulama dağıtımının benzetimini de yapabilirsiniz. Bu benzeti
 >
 > MDM 'ye kayıtlı cihazlar sanal dağıtımları, Kullanıcı deneyimini veya zamanlama ayarlarını desteklemez.
 
-## <a name="deploy-an-application"></a><a name="bkmk_deploy"></a>Uygulama dağıtma
+## <a name="deploy-an-application"></a><a name="bkmk_deploy"></a> Uygulama dağıtma
 
 1. Configuration Manager konsolunda, **yazılım kitaplığı** çalışma alanına gidin, **uygulama yönetimi**' ni genişletin ve **uygulamalar** ya da **uygulama grupları** düğümünü seçin.
 
@@ -50,7 +50,7 @@ Ayrıca, bir uygulama dağıtımının benzetimini de yapabilirsiniz. Bu benzeti
 > - [Kullanıcı deneyimi](#bkmk_deploy-ux)
 > - [Uyarılar](#bkmk_deploy-alerts)
 
-### <a name="deployment-general-information"></a><a name="bkmk_deploy-general"></a>Dağıtım **genel** bilgileri
+### <a name="deployment-general-information"></a><a name="bkmk_deploy-general"></a> Dağıtım **genel** bilgileri
 
 Yazılım Dağıtma Sihirbazı 'nın **genel** sayfasında aşağıdaki bilgileri belirtin:  
 
@@ -67,7 +67,7 @@ Yazılım Dağıtma Sihirbazı 'nın **genel** sayfasında aşağıdaki bilgiler
 
 - **Yorumlar (isteğe bağlı)**: isteğe bağlı olarak, bu dağıtım için bir açıklama girin.
 
-### <a name="deployment-content-options"></a><a name="bkmk_deploy-content"></a>Dağıtım **içeriği** seçenekleri
+### <a name="deployment-content-options"></a><a name="bkmk_deploy-content"></a> Dağıtım **içeriği** seçenekleri
 
 **İçerik** sayfasında, bu uygulamanın içeriğini bir dağıtım noktasına veya bir dağıtım noktası grubuna dağıtmak için **Ekle** ' yi seçin.
 
@@ -110,7 +110,7 @@ Uygulama içeriği zaten dağıtılmışsa, burada görünürler.
     >
     > **Kullanılabilir** yüklemenin amacı için bu seçeneği etkinleştirebilir veya devre dışı bırakabilirsiniz. <!--1351266-->
 
-#### <a name="approval-settings"></a><a name="bkmk_approval"></a>Onay ayarları
+#### <a name="approval-settings"></a><a name="bkmk_approval"></a> Onay ayarları
 
 Uygulama onay davranışı, önerilen isteğe bağlı özelliği etkinleştirdiğinize ve **cihaz başına Kullanıcı için uygulama Isteklerini onayladığınıza**bağlıdır.
 
@@ -126,7 +126,7 @@ Dağıtım türü teknolojisi tarafından destekleniyorsa, bir dağıtımın öz
 
 **Dağıtım türü özellikleri iletişim kutusunun Kurulum davranışı sekmesinde belirttiğiniz çalışan tüm yürütülebilir dosyaları otomatik olarak kapatın**. Daha fazla bilgi için bkz. [bir uygulamayı yüklemeden önce yürütülebilir dosyaları çalıştırmaya yönelik denetim](#bkmk_exe-check).
 
-### <a name="deployment-scheduling-settings"></a><a name="bkmk_deploy-sched"></a>Dağıtım **zamanlama** ayarları
+### <a name="deployment-scheduling-settings"></a><a name="bkmk_deploy-sched"></a> Dağıtım **zamanlama** ayarları
 
 **Zamanlama** sayfasında, bu uygulamanın ne zaman dağıtıldığını veya istemci cihazları için kullanılabilir olduğunu ayarlayın.
 
@@ -155,7 +155,7 @@ Son tarihten sonra istemci, uygulamayı kullanıcının yapılandırdığı, bu 
 > [!NOTE]
 > Çoğu zaman, bu özellik, Kullanıcı ofis dışı durumdayken cihazın gücü kapatıldığında senaryoya yöneliktir. Teknik olarak, yetkisiz kullanım süresi, istemci, dağıtım son tarihinden sonra ilke aldığında başlar. Configuration Manager istemci hizmetini (CcmExec) durdurup bir süre sonra dağıtım son tarihinden sonra yeniden başlatırsanız aynı davranış oluşur.
 
-### <a name="deployment-user-experience-settings"></a><a name="bkmk_deploy-ux"></a>Dağıtım **Kullanıcı deneyimi** ayarları
+### <a name="deployment-user-experience-settings"></a><a name="bkmk_deploy-ux"></a> Dağıtım **Kullanıcı deneyimi** ayarları
 
 **Kullanıcı deneyimi** sayfasında, kullanıcıların uygulama yüklemesiyle nasıl etkileşim kurabileceğine ilişkin bilgileri belirtin.
 
@@ -169,22 +169,22 @@ Son tarihten sonra istemci, uygulamayı kullanıcının yapılandırdığı, bu 
 
   - Windows Embedded cihazına bir yazılım güncelleştirmesi dağıttığınızda, cihazın yapılandırılmış bakım penceresine sahip bir koleksiyonun üyesi olduğundan emin olun. Bakım pencereleri ve Windows Embedded cihazları hakkında daha fazla bilgi için bkz. [Windows Embedded uygulamaları oluşturma](../get-started/creating-windows-embedded-applications.md).  
 
-### <a name="deployment-alerts"></a><a name="bkmk_deploy-alerts"></a>Dağıtım **uyarıları**
+### <a name="deployment-alerts"></a><a name="bkmk_deploy-alerts"></a> Dağıtım **uyarıları**
 
 **Uyarılar** sayfasında, bu dağıtım için Configuration Manager uyarıları nasıl üretir yapılandırın. System Center Operations Manager kullanıyorsanız, uyarılarını da yapılandırın. Gerekli dağıtımlar için yalnızca bazı uyarıları yapılandırabilirsiniz.
 
-## <a name="create-a-phased-deployment"></a><a name="bkmk_phased"></a>Aşamalı dağıtım oluşturma
+## <a name="create-a-phased-deployment"></a><a name="bkmk_phased"></a> Aşamalı dağıtım oluşturma
 
 <!--1358147-->
 Aşamalı dağıtımlar, özelleştirilebilir ölçütlere ve gruplara göre düzenlenmiş, sıralı bir yazılım dağıtımını düzenlemenize olanak tanır. Örneğin, uygulamayı bir pilot koleksiyonuna dağıtın ve ardından başarı ölçütlerine göre otomatik olarak piyasaya devam edin.
 
 Daha fazla bilgi için aşağıdaki makaleleri inceleyin:  
 
-- [Aşamalı dağıtım oluşturma](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Aşamalı dağıtım oluşturma](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
-- [Aşamalı dağıtım izleme ve yönetme](../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Aşamalı dağıtım izleme ve yönetme](../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
-## <a name="delete-a-deployment"></a><a name="bkmk_delete"></a>Bir dağıtımı silme
+## <a name="delete-a-deployment"></a><a name="bkmk_delete"></a> Bir dağıtımı silme
 
 1. Configuration Manager konsolunda, **yazılım kitaplığı** çalışma alanına gidin, **uygulama yönetimi**' ni genişletin ve **uygulamalar** ya da **uygulama grupları** düğümünü seçin.  
 
@@ -196,7 +196,7 @@ Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 Bir uygulama dağıtımını sildiğinizde, uygulamanın zaten yüklemiş olduğu uygulamanın tüm örnekleri kaldırılmaz. Bu uygulamaları kaldırmak için **uygulamayı kaldırmak üzere bilgisayarlara dağıtın.** Bir uygulama dağıtımını silerseniz, uygulama artık yazılım merkezi 'nde görünmez. Dağıtım için hedef koleksiyondan bir kaynağı kaldırdığınızda aynı davranış oluşur.
 
-## <a name="user-notifications-for-required-deployments"></a><a name="bkmk_notify"></a>Gerekli dağıtımlar için Kullanıcı bildirimleri
+## <a name="user-notifications-for-required-deployments"></a><a name="bkmk_notify"></a> Gerekli dağıtımlar için Kullanıcı bildirimleri
 
 Kullanıcılar gerekli yazılımları alır ve **erteleme ve bana anımsat** ayarını seçtiğinizde, aşağıdaki seçeneklerden birini seçebilirler:  
 
@@ -206,7 +206,7 @@ Kullanıcılar gerekli yazılımları alır ve **erteleme ve bana anımsat** aya
 
 :::image type="content" source="media/ComputerAgentSettings.png" alt-text="Varsayılan istemci ayarlarındaki bilgisayar Aracısı grubu":::
 
-En uzun süre erteleme süresi her zaman dağıtım zaman çizelgesinde istemci ayarlarında yapılandırılan bildirim değerlerine göre belirlenir. Örnek:  
+En uzun süre erteleme süresi her zaman dağıtım zaman çizelgesinde istemci ayarlarında yapılandırılan bildirim değerlerine göre belirlenir. Örneğin:  
 
 - **Dağıtım son tarihini 24 saatten büyük bir süre sonra,** **Bilgisayar Aracısı** sayfasında her saat için 10 saat için hatırlat.  
 
@@ -220,7 +220,7 @@ En uzun süre erteleme süresi her zaman dağıtım zaman çizelgesinde istemci 
 
 :::image type="content" source="media/client-toast-notification.png" alt-text="Gerekli yazılım iletişim kutusu size kritik yazılım bakımı bildirir":::
 
-## <a name="check-for-running-executable-files"></a><a name="bkmk_exe-check"></a>Yürütülebilir dosyaları çalıştırmaya yönelik denetim
+## <a name="check-for-running-executable-files"></a><a name="bkmk_exe-check"></a> Yürütülebilir dosyaları çalıştırmaya yönelik denetim
 
 İstemci üzerinde belirli yürütülebilir dosyaların çalışıp çalışmadığını denetlemek için bir dağıtım yapılandırın. Uygulamanın yüklenmesini kesintiye uğratan süreçler denetlemek için bu seçeneği kullanın. Bu yürütülebilir dosyalardan biri çalıştırıyorsa, istemci, dağıtım türünün yüklenmesini engeller. İstemcinin dağıtım türünü yükleyebilmesi için önce çalışan yürütülebilir dosyayı kapatması gerekir. Gerekli amacı olan dağıtımlar için, istemci çalışan yürütülebilir dosyayı otomatik olarak kapatabilir.
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3259bd1b20740046e70b1ef53281b0ff235a3896
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: d4594a50f42d6b8e6ea0b88b83920eda11615815
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905474"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591011"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Configuration Manager için Technical Preview 1705 ' deki yetenekler
 
@@ -49,7 +49,7 @@ Bu makalede, sürüm 1705 Configuration Manager için Technical Preview 'da kull
 -->
 
 ## <a name="update-reset-tool"></a>Sıfırlama aracını güncelleştirme  
-Konsol içi güncelleştirmelerin indirme veya çoğaltma sorunları olduğunda sorunları gidermek için **Cmupdatereset. exe**Configuration Manager güncelleştirme sıfırlama aracını kullanabilirsiniz. Bu araç, Technical Preview sürüm 1705 ' ye eklenmiştir. Önizlemeyi, \CD.exe ' ye yükledikten sonra Technical Preview sitenizin site sunucusunda, \ \. ***Latest\smssetup\tools*** klasörüne bulabilirsiniz.
+Konsol içi güncelleştirmelerin indirme veya çoğaltma sorunları olduğunda sorunları gidermek için **CMUpdateReset.exe**Configuration Manager güncelleştirme sıfırlama aracını kullanabilirsiniz. Bu araç, Technical Preview sürüm 1705 ' ye eklenmiştir. Önizlemeyi, \CD.exe ' ye yükledikten sonra Technical Preview sitenizin site sunucusunda, \ \. ***Latest\smssetup\tools*** klasörüne bulabilirsiniz.
 
 Bu aracı Teknik Önizleme sürümleri 1606 veya sonrası ile birlikte kullanabilirsiniz. Bu geriye doğru destek, aracın bir dizi teknik önizleme güncelleştirme senaryolarıyla kullanılabilmesi ve sonraki Teknik Önizleme kullanılabilir hale gelene kadar beklemeniz gerekmeden sağlanır.
 
@@ -88,13 +88,13 @@ Araç çalıştıktan sonra:
 | **-S &lt; en üst katman sitenizin SQL Server FQDN 'si>** | *Gerekli* <br> Hiyerarşinizin üst katman sitesi için site veritabanını barındıran SQL Server FQDN belirtmeniz gerekir. |
 |                **-D &lt; veritabanı adı>**                 |                             *Gerekli* <br> Üst katman siteleri veritabanının adını belirtmeniz gerekir.                             |
 |                 **-P &lt; PAKETI guıd>**                 |                        *Gerekli* <br> Sıfırlamak istediğiniz güncelleştirme paketi için GUID 'YI belirtmeniz gerekir.                        |
-|           **-I &lt; SQL Server örnek adı>**           |                   *İsteğe Bağlı* <br> Site veritabanını barındıran SQL Server örneğini tanımlamak için bunu kullanın.                   |
-|                       **-FDELETE**                       |                      *İsteğe Bağlı* <br> Başarıyla indirilen bir güncelleştirme paketinin silinmesini zorlamak için bunu kullanın.                      |
+|           **-I &lt; SQL Server örnek adı>**           |                   *İsteğe bağlı* <br> Site veritabanını barındıran SQL Server örneğini tanımlamak için bunu kullanın.                   |
+|                       **-FDELETE**                       |                      *İsteğe bağlı* <br> Başarıyla indirilen bir güncelleştirme paketinin silinmesini zorlamak için bunu kullanın.                      |
 
- **Örnekler**  
- Tipik bir senaryoda, indirme sorunları olan bir güncelleştirmeyi sıfırlamak istersiniz. SQL Server FQDN 'niz *server1.fabrikam.com*, site veritabanı *CM_XYZ*ve paket GUID 'si *61F16b3c-f1f6-4f9f-8647-2a524b0c802c*olur.  Şunu çalıştırırsınız: ***Cmupdatereset. exe-S server1.fabrikam.com-D CM_XYZ-P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+ **Örnekler:**  
+ Tipik bir senaryoda, indirme sorunları olan bir güncelleştirmeyi sıfırlamak istersiniz. SQL Server FQDN 'niz *server1.fabrikam.com*, site veritabanı *CM_XYZ*ve paket GUID 'si *61F16b3c-f1f6-4f9f-8647-2a524b0c802c*olur.  Şunu çalıştırın: ***CMUpdateReset.exe-S server1.fabrikam.com-D CM_XYZ-P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
- Daha Extreme bir senaryoda sorunlu güncelleştirme paketinin silinmesini zorlamak isteyebilirsiniz. SQL Server FQDN 'niz *server1.fabrikam.com*, site veritabanı *CM_XYZ*ve paket GUID 'si *61F16b3c-f1f6-4f9f-8647-2a524b0c802c*olur.  Şunu çalıştırırsınız: ***Cmupdatereset. exe-FDELETE-S server1.fabrikam.com-D CM_XYZ-P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+ Daha Extreme bir senaryoda sorunlu güncelleştirme paketinin silinmesini zorlamak isteyebilirsiniz. SQL Server FQDN 'niz *server1.fabrikam.com*, site veritabanı *CM_XYZ*ve paket GUID 'si *61F16b3c-f1f6-4f9f-8647-2a524b0c802c*olur.  Şunu çalıştırın: ***CMUpdateReset.exe-fdelete-S server1.fabrikam.com-D CM_XYZ-P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
 ### <a name="test-the-tool-with-the-technical-preview"></a>Teknik Önizleme ile aracı test edin  
 Bu aracı Teknik Önizleme sürümleri 1606 veya sonrası ile birlikte kullanabilirsiniz. Bu geriye doğru destek, aracın daha fazla sayıda teknik önizleme güncelleştirme senaryolarıyla kullanılabilmesi için, sonraki Technical Preview sürümü kullanılabilir olana kadar beklemek zorunda kalmadan sağlanır.
@@ -131,7 +131,7 @@ Bu sürümle birlikte, artık Configuration Manager kullandığınız SQL Server
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Sitenizi kurtarmak için zaman uyumsuz çoğaltmayı kullanın
 Site veritabanınızı kurtarmak için zaman uyumsuz bir çoğaltma kullanmadan önce, site veritabanına ek yazmaları engellemek için etkin birincil siteyi durdurmanız gerekir. Siteyi durdurduktan sonra, [el ile kurtarılan bir veritabanını](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered)kullanmak yerine zaman uyumsuz bir çoğaltma kullanabilirsiniz.
 
-Siteyi durdurmak için, site sunucusundaki önemli hizmetleri durdurmak için [Hiyerarşi Bakımı aracını](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md) kullanabilirsiniz. Komut satırını kullanın: **Preinst. exe/STOPSITE**   
+Siteyi durdurmak için, site sunucusundaki önemli hizmetleri durdurmak için [Hiyerarşi Bakımı aracını](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md) kullanabilirsiniz. Komut satırını kullanın: **Preinst.exe/STOPSITE**   
 
 Siteyi durdurma, site sunucusundaki SMS_Executive hizmeti tarafından izlenen Site Bileşen Yöneticisi hizmeti 'nin (Sitecomp) durdurulmasına eşdeğerdir.
 
@@ -190,7 +190,7 @@ Bu sürümde, aşağıdaki senaryoyu desteklemek için bulut hizmetleri 'ni Azur
 - Configuration Manager istemcisini Internet 'ten el ile yüklemek ve bir Configuration Manager sitesine atamasını sağlamak.
 - Configuration Manager istemcisini Internet 'teki cihazlara dağıtmak için Intune 'U kullanın.
 
-### <a name="advantages"></a>Yararları
+### <a name="advantages"></a>Avantajlar
 
 Cloud Services ve Azure AD 'nin kullanılması, istemci kimlik doğrulama sertifikalarını kullanma gereksinimini ortadan kaldırır.
 
@@ -246,14 +246,14 @@ Bu noktada, Configuration Manager sitenizi Azure AD 'ye bağladınız.
 Başlamadan önce, istemci yükleme kaynak dosyalarının istemcisini yüklemek istediğiniz cihazda yerel olarak depolandığından emin olun.
 Ardından, aşağıdaki yükleme komut satırını kullanarak [Istemcileri Windows bilgisayarlarına dağıtma](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual) bölümündeki yönergeleri kullanın (örnekteki değerleri kendi değerlerinizle değiştirin):
 
-**CCMSetup. exe/NoCrlCheck/Source: C:\CLIENT CCMHOSTNAME = SCCMPROXYCONTOSO. CLOUDAPP. NET/CCM_Proxy_ServerAuth/72457598037527932 Smssitekodu = HEC AADTENANTıD = 780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME = contoso AADCLIENTAPPıD = \< guıd > AADRESOURCEURI =<https://contososerver>**
+**ccmsetup.exe/NoCrlCheck/Source: C:\CLIENT CCMHOSTNAME = SCCMPROXYCONTOSO. CLOUDAPP. NET/CCM_Proxy_ServerAuth/72457598037527932 Smssitekodu = HEC AADTENANTıD = 780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME = contoso AADCLIENTAPPıD = \<GUID> aadresourceuri =<code>https://contososerver</code>**
 
 - **/NoCRLCheck**: yönetim noktanız veya bulut yönetimi ağ geçidiniz ortak olmayan bir sunucu sertifikası kullanıyorsa, istemci CRL konumuna ulaşamayacak olabilir.
 - **/Source**: yerel klasör: istemci yükleme dosyalarının konumu.
 - **CCMHOSTNAME**: Internet yönetim noktasının adı. Bunu, yönetilen istemcideki bir komut isteminden **gwmi ad alanı root\ccm\locationservices-class SMS_ActiveMPCandidate** çalıştırarak bulabilirsiniz.
 - **SMSMP**: arama yönetim noktanağınızın adı – bu, intranetinizde olabilir.
 - **Smssitekodu**: Configuration Manager sitenizin site kodudur.
-- **Aadtenantıd**, **aadtenantname**: Configuration Manager bağladığınız Azure AD kiracının kimliği ve adı. Bunu, Azure AD 'ye katılmış bir cihazdaki komut isteminden dsregcmd. exe/status komutunu çalıştırarak bulabilirsiniz.
+- **Aadtenantıd**, **aadtenantname**: Configuration Manager bağladığınız Azure AD kiracının kimliği ve adı. Bunu, Azure AD 'ye katılmış bir cihazdaki komut isteminden dsregcmd.exe/Status çalıştırarak bulabilirsiniz.
 - **Aadclientappıd**: Azure AD ISTEMCI uygulama kimliği. Bu konuda yardım almak için bkz. [kaynaklara erişebilen Azure Active Directory uygulaması ve hizmet sorumlusu oluşturmak için portalı kullanma](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 - **Aadresourceuri**: EKLENDI Azure AD Server uygulamasının tanımlayıcı URI 'si.
 

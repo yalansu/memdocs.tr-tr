@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ae2846c2a5f7fea86287a05c8cc8f6013d660df6
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d6703f0889590b3d37d05b7c9b283a16c0150649
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128959"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591641"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1806 ' deki yenilikler
 
@@ -165,7 +165,7 @@ Configuration Manager istemcisini yüklemek için Client Push yöntemini kullan�
 Daha fazla bilgi için bkz. [Client Push ile istemcileri yükleme](../../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush).
 
 
-### <a name="enhanced-http-site-system"></a><a name="bkmk_ehttp"></a>Gelişmiş HTTP sitesi sistemi
+### <a name="enhanced-http-site-system"></a><a name="bkmk_ehttp"></a> Gelişmiş HTTP sitesi sistemi
 <!--1356889,1358228-->
 HTTPS iletişimini kullanmak tüm Configuration Manager iletişim yollarında önerilir, ancak PKI sertifikalarını yönetme yükü nedeniyle bazı müşteriler için zor olabilir.
 
@@ -280,9 +280,9 @@ Bir uygulama için aşamalı dağıtım oluşturun. Aşamalı dağıtımlar, öz
 
 Daha fazla bilgi için aşağıdaki makaleleri inceleyin:  
 
-- [Aşamalı dağıtım oluşturma](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Aşamalı dağıtım oluşturma](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
-- [Aşamalı dağıtım izleme ve yönetme](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Aşamalı dağıtım izleme ve yönetme](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
 
 ### <a name="provision-windows-app-packages-for-all-users-on-a-device"></a>Bir cihazdaki tüm kullanıcılar için Windows uygulama paketleri sağlama
@@ -505,7 +505,7 @@ Daha fazla bilgi için bkz. [yazılım güncelleştirmeleri raporları](../../..
 
 ## <a name="inventory"></a>Envanter
 
-### <a name="improvement-to-hardware-inventory-for-large-integer-values"></a><a name="bkmk_bigint"></a>Büyük tamsayı değerleri için donanım envanterine iyileştirme
+### <a name="improvement-to-hardware-inventory-for-large-integer-values"></a><a name="bkmk_bigint"></a> Büyük tamsayı değerleri için donanım envanterine iyileştirme
 <!--1357880-->
 Donanım envanteri daha önce 4.294.967.296 'den büyük tamsayılar için sınıra sahipti (2 ^ 32). Bayt cinsinden sabit sürücü boyutları gibi öznitelikler için bu sınıra ulaşılırsa. Yönetim noktası bu sınırın üstünde tamsayı değerlerini işlemedi, bu nedenle veritabanında hiçbir değer depolanmadı. Şimdi bu yayında sınır 18446744073709551616 (2 ^ 64) olarak artar. 
 
@@ -595,8 +595,8 @@ Aşağıdaki ek düzeltmeler belirli sorunları ele almak için kullanılabilir:
 
 | ID | Başlık | Tarih | Konsol içi |
 |---------|---------|---------|---------|
-| [4346645](https://support.microsoft.com/help/4346645) | Configuration Manager sürüm 1806 için güncelleştirme, ilk dalga | 31 Ağustos 2018 | Evet |
-| [4465865](https://support.microsoft.com/help/4465865) | Yazılım güncelleştirmeleri, WSUS bağlantısı kesildiğinde Configuration Manager ortamda indirmez<br><br>Bu güncelleştirme ayrıca güncelleştirme paketi 'nde (4462978) | 01 Ekim 2018 | Evet |
+| [4346645](https://support.microsoft.com/help/4346645) | Configuration Manager sürüm 1806 için güncelleştirme, ilk dalga | 31 Ağustos 2018 | Yes |
+| [4465865](https://support.microsoft.com/help/4465865) | Yazılım güncelleştirmeleri, WSUS bağlantısı kesildiğinde Configuration Manager ortamda indirmez<br><br>Bu güncelleştirme ayrıca güncelleştirme paketi 'nde (4462978) | 01 Ekim 2018 | Yes |
 | [4471892](https://support.microsoft.com/help/4471892) | PXE Yanıtlayıcısı Configuration Manager 1806 ' deki alt ağlarda çalışmıyor | 23 Kasım 2018 | No |
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune bağlayıcı sertifikası Configuration Manager yenilemez | 18 Ocak 2019 | Evet |
 
