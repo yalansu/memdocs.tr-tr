@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/30/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 894ef12107b8e8b520ca69a463be47ef339bd9b4
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: a925106a09f0035f516018ec0b44a17267e64eec
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051647"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614828"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -41,7 +41,7 @@ ms.locfileid: "88051647"
 >
 > Bir sürümdeki yaklaşan özelliklerin bir listesi için [geliştirme sayfasını](in-development.md) inceleyin.
 
-**RSS akışı**: aşağıdaki URL 'yi kopyalayıp akış okuyucunuzun içine yapıştırarak Bu sayfa güncelleştirildikten sonra bildirim alın:`https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us`
+**RSS akışı**: aşağıdaki URL 'yi kopyalayıp akış okuyucunuzun içine yapıştırarak Bu sayfa güncelleştirildikten sonra bildirim alın: `https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us`
 
 <!-- Common categories:  
 ### App management
@@ -53,6 +53,21 @@ ms.locfileid: "88051647"
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## <a name="week-of-august-17-2020"></a>17 Ağustos 2020 haftası
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>Cihaz güvenliği
+
+#### <a name="set-device-compliance-state-from-third-party-mdm-providers---6361689---"></a>Üçüncü taraf MDM sağlayıcılarından cihaz uyumluluk durumunu ayarla<!-- 6361689 -->
+
+Intune artık [cihaz uyumluluk ayrıntıları kaynağı olarak üçüncü taraf MDM çözümlerini](../protect/device-compliance-partners.md)desteklemektedir. Bu üçüncü taraf uyumluluk verileri, Microsoft Intune tümleştirmesi aracılığıyla iOS ve Android üzerinde Microsoft 365 uygulamalar için koşullu erişim ilkelerini zorlamak üzere kullanılabilir.  Intune, bir cihazın güvenilir olup olmadığını anlamak için üçüncü taraf sağlayıcıdan uyumluluk ayrıntılarını değerlendirir ve ardından Azure AD 'de koşullu erişim özniteliklerini ayarlar.  Azure AD koşullu erişim ilkelerinizi Microsoft Endpoint Manager yönetim merkezi veya Azure AD portalı içinden oluşturmaya devam edersiniz.
+
+Aşağıdaki üçüncü taraf MDM sağlayıcıları, genel önizleme olarak bu yayında desteklenir:
+
+- VMWare çalışma alanı bir UEM (daha önce AirWatch olarak biliniyordu)
+
 
 <!-- ########################## -->
 ## <a name="week-of-august-10-2020"></a>10 Ağustos 2020 haftası
@@ -70,7 +85,7 @@ Artık Microsoft Endpoint Manager yönetim merkezinden bir kiracıya bağlı cih
 ### <a name="monitor-and-troubleshoot"></a>İzleme ve sorun giderme
 
 #### <a name="power-bi-compliance-report-template-v20---636958---"></a>Power BI uyumluluk raporu şablonu V 2.0<!-- 636958 -->
-Power BI şablon uygulamaları, Power BI iş ortaklarının çok az kodlamaya sahip Power BI uygulamalar oluşturmasına ve bunları herhangi bir Power BI müşteriye dağıtmalarına olanak tanır. Yöneticiler, Power BI uyumluluk raporu şablonunun sürümünü V 1.0 'dan V 2.0 'a güncelleştirebilir. V 2.0, gelişmiş bir tasarım, Ayrıca, şablonun bir parçası olarak ortaya çıkacak hesaplamalarda ve verilerde yapılan değişiklikleri içerir. Daha fazla bilgi için bkz. [Power BI Ile veri ambarına bağlanma](../developer/reports-proc-get-a-link-powerbi.md) ve [bir şablon uygulamasını güncelleştirme](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app). Ayrıca, [Intune veri ambarı Ile PowerBI uyumluluk raporunun yeni bir sürümünü duyuran](https://aka.ms/new_compliance_report)blog gönderisine bakın.
+Power BI şablon uygulamaları, Power BI iş ortaklarının çok az kodlamaya sahip Power BI uygulamalar oluşturmasına ve bunları herhangi bir Power BI müşteriye dağıtmalarına olanak tanır. Yöneticiler, Power BI uyumluluk raporu şablonunun sürümünü V 1.0 'dan V 2.0 'a güncelleştirebilir. V 2.0, gelişmiş bir tasarım, Ayrıca, şablonun bir parçası olarak ortaya çıkacak hesaplamalarda ve verilerde yapılan değişiklikleri içerir. Daha fazla bilgi için bkz. [Power BI Ile veri ambarına bağlanma](../developer/reports-proc-get-a-link-powerbi.md) ve [bir şablon uygulamasını güncelleştirme](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app). Ayrıca, [Intune veri ambarı ile Power BI uyumluluk raporunun yeni bir sürümünü duyuran](https://aka.ms/new_compliance_report)blog gönderisine bakın.
 
 <!-- ########################## -->
 ## <a name="week-of-july-13-2020--2007-service-release"></a>13 Temmuz 2020 (2007 hizmet sürümü) haftası
@@ -245,12 +260,12 @@ Bu rolleri görmek için [Microsoft Endpoint Manager Yönetim Merkezi](https://g
 
 #### <a name="additional-data-warehouse-v10-properties---6125732-wnready---"></a>Ek veri ambarı v 1.0 özellikleri<!-- 6125732 wnready -->
 Intune veri ambarı v 1.0 kullanılarak ek özellikler mevcuttur. Aşağıdaki özellikler artık [cihazlar](../developer/reports-ref-devices.md#devices) varlığı aracılığıyla kullanıma sunulmuştur:
-- `ethernetMacAddress`-Bu cihazın benzersiz ağ tanımlayıcısı.
-- `office365Version`-Cihaza yüklü Office 365 sürümü.
+- `ethernetMacAddress` -Bu cihazın benzersiz ağ tanımlayıcısı.
+- `office365Version` -Cihaza yüklü Office 365 sürümü.
 
 Aşağıdaki özellikler artık [Devicepropertygeçmişin](../developer/reports-ref-devices.md#devicepropertyhistories) varlığı aracılığıyla kullanıma sunulmuştur:
-- `physicalMemoryInBytes`-Bayt cinsinden fiziksel bellek.
-- `totalStorageSpaceInBytes`-Bayt cinsinden toplam depolama kapasitesi.
+- `physicalMemoryInBytes` -Bayt cinsinden fiziksel bellek.
+- `totalStorageSpaceInBytes` -Bayt cinsinden toplam depolama kapasitesi.
 
 Daha fazla bilgi için bkz. [Microsoft Intune veri ambarı API 'si](../developer/reports-nav-intune-data-warehouse.md).
 
@@ -752,7 +767,7 @@ Microsoft Office 365 ProPlus, **enterprise Microsoft 365 Apps**olarak yeniden ad
 Android Enterprise çalıştıran cihazlarda Outlook için S/MIME ayarını yönetmek üzere uygulama yapılandırma ilkelerini kullanabilirsiniz. Ayrıca, cihaz kullanıcılarının Outlook ayarları 'nda S/MIME 'yi etkinleştirmesine veya devre dışı bırakmasına izin verip vermeyeceğinizi de seçebilirsiniz. Android için uygulama yapılandırma ilkelerini kullanmak için, [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) 'nde **uygulamalar**  >  **uygulama yapılandırma ilkeleri**  >  **Add**  >  **yönetilen cihazlar**Ekle ' ye gidin. Outlook ayarlarını yapılandırma hakkında daha fazla bilgi için bkz. [Microsoft Outlook yapılandırma ayarları](../apps/app-configuration-policies-outlook.md).
 
 #### <a name="pre-release-testing-for-managed-google-play-apps---2681933----"></a>Yönetilen Google Play uygulamaları için yayın öncesi test<!-- 2681933  -->
-[Uygulama ön sürümü testi için Google Play kapalı test izlerini](https://support.google.com/googleplay/android-developer/answer/3131213) kullanan kuruluşlar, bu parçaları Intune ile yönetebilir. Test yapmak için Google Play 'in ön üretim izlerine yayımlanan uygulamaları, pilot gruplara seçerek atayabilirsiniz. Intune 'da, bir uygulamanın kendisine yayımlanmış bir üretim öncesi derleme testi izlemesine sahip olup olmadığını ve bu izlemeyi AAD Kullanıcı veya cihaz gruplarına atayabilmesini sağlayabilirsiniz. Bu özellik, şu anda desteklenen Android kurumsal senaryolarımız (iş profili, tam olarak yönetilen ve adanmış) için kullanılabilir. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **uygulamalar**  >  **Android**  >  **Ekle**' yi seçerek yönetilen bir Google Play uygulaması ekleyebilirsiniz. Daha fazla bilgi için bkz. [yönetilen Google Play kapatılan test parçalarıyla çalışma](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks).
+[Uygulama ön sürümü testi için Google Play kapalı test izlerini](https://support.google.com/googleplay/android-developer/answer/3131213) kullanan kuruluşlar, bu parçaları Intune ile yönetebilir. Test yapmak için Google Play 'in ön üretim izlerine yayımlanan uygulamaları, pilot gruplara seçerek atayabilirsiniz. Intune 'da, bir uygulamanın kendisine yayımlanmış bir üretim öncesi derleme testi izlemesine sahip olup olmadığını ve bu izlemeyi Azure AD Kullanıcı veya cihaz grupları ' na atayabilmesini sağlayabilirsiniz. Bu özellik, şu anda desteklenen Android kurumsal senaryolarımız (iş profili, tam olarak yönetilen ve adanmış) için kullanılabilir. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **uygulamalar**  >  **Android**  >  **Ekle**' yi seçerek yönetilen bir Google Play uygulaması ekleyebilirsiniz. Daha fazla bilgi için bkz. [yönetilen Google Play kapatılan test parçalarıyla çalışma](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks).
 
 #### <a name="microsoft-teams-is-now-included-in-the-office-365-suite-for-macos---5903936----"></a>Microsoft ekipleri artık macOS için Office 365 Suite 'e eklenmiştir<!-- 5903936  -->
 Microsoft Endpoint Manager 'da macOS için Microsoft Office atanan kullanıcılar artık mevcut Microsoft Office uygulamalarına (Word, Excel, PowerPoint, Outlook ve OneNote) ek olarak Microsoft ekipleri alacak. Intune, diğer Office macOS uygulamaları yüklü olan mevcut Mac cihazlarını algılar ve cihaz Intune ile bir dahaki sefer iade ettiğinde Microsoft ekipleri yüklemeye çalışır. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, MacOS için **Office 365 paketini** , **Apps**  >  **MacOS**  >  **Add**uygulamaları ' nı seçerek bulabilirsiniz. Daha fazla bilgi için bkz. [Microsoft Intune Ile macOS cihazlarına Office 365 atama](../apps/apps-add-office365-macos.md).
@@ -1017,7 +1032,7 @@ Sorun giderme dikey penceresinde bekleyen bir MAM ilkesi için bildirim simgesi 
 Microsoft Endpoint Manager 'da [uyumluluk ilkeleri oluşturmak](../protect/create-compliance-policy.md#create-the-policy) için Kullanıcı arabirimini güncelleştirdik (**cihaz**  >  **uyumluluk ilkeleri**  >  **ilkeleri**  >  **ilke oluştur**). Daha önce kullandığınız ayarların ve ayrıntıların aynısını içeren yeni bir kullanıcı deneyimi sunuyoruz. Yeni deneyim, Uyumluluk ilkesini oluşturmak için sihirbaza benzer bir süreç izler ve ilke için *atamalar* ekleyebileceğiniz bir sayfa ve ilkeyi oluşturmadan önce yapılandırmanızı gözden geçirebileceğiniz bir *İnceleme + oluştur* sayfası içerir.
 
 #### <a name="retire-noncompliant-devices---1827291---------"></a>Uyumsuz cihazları devre dışı bırak<!-- 1827291       -->
-Uyumsuz cihazlara ekleyebileceğiniz uyumlu olmayan cihazlar için, [uyumsuz cihazı devre dışı](../protect/actions-for-noncompliance.md#add-actions-for-noncompliance)bırakmak üzere yeni bir eylem ekledik.  Yeni eylem, **uyumsuz cihazı devre dışı bırakma**, cihazdaki tüm şirket verilerinin kaldırılmasına neden olur ve ayrıca cihazın Intune tarafından yönetilmesini kaldırır.  Bu eylem, gün cinsinden yapılandırılan değere ulaşıldığında ve bu noktada cihaz kullanımdan kalkmaya uygun hale geldiğinde çalışır. Minimum değer 30 gündür.  Yöneticilerin uygun olan tüm cihazları devre dışı bırakabileceği *uyumlu olmayan cihazları devre* dışı bırak bölümü kullanılarak cihazları devre dışı bırakmak IÇIN açık BT yöneticisi onayı gerekecektir.
+Uyumsuz cihazlara ekleyebileceğiniz uyumlu olmayan cihazlar için,  [uyumsuz cihazı devre dışı](../protect/actions-for-noncompliance.md#add-actions-for-noncompliance)bırakmak üzere yeni bir eylem ekledik.  Yeni eylem, **uyumsuz cihazı devre dışı bırakma**, cihazdaki tüm şirket verilerinin kaldırılmasına neden olur ve ayrıca cihazın Intune tarafından yönetilmesini kaldırır.  Bu eylem, gün cinsinden yapılandırılan değere ulaşıldığında ve bu noktada cihaz kullanımdan kalkmaya uygun hale geldiğinde çalışır. Minimum değer 30 gündür.  Yöneticilerin uygun olan tüm cihazları devre dışı bırakabileceği *uyumlu olmayan cihazları devre* dışı bırak bölümü kullanılarak cihazları devre dışı bırakmak IÇIN açık BT yöneticisi onayı gerekecektir.
 
 #### <a name="support-for-wpa-and-wpa2-in-ios-enterprise-wi-fi-profiles--6215273-----"></a>İOS Enterprise Wi-Fi profillerinde WPA ve WPA2 desteği<!--6215273   -->
 [İOS Için Enterprise Wi-Fi profilleri](../configuration/wi-fi-settings-ios.md#enterprise-profiles) artık *güvenlik türü* alanını destekliyor. *Güvenlik türü*Için, **WPA Enterprise** veya **WPA/WPA2 kurumsal**seçeneklerinden birini seçebilir ve ardından *EAP türü*için bir seçim belirtebilirsiniz.  (**Cihazlar**  >  **Yapılandırma profilleri**  >  **Profil oluşturun** ve *Platform* Için **iOS/ıpados** ' ı seçin ve ardından *profil*için **Wi-Fi** ' i seçin. 
@@ -1075,14 +1090,14 @@ Intune veri ambarı, `EthernetMacAddress` `device` yöneticilerin Kullanıcı ve
 
 #### <a name="additional-data-warehouse-device-inventory-properties---6125732----"></a>Ek veri ambarı cihaz envanteri özellikleri<!-- 6125732  -->
 Intune veri ambarı kullanılarak ek cihaz envanteri özellikleri kullanılabilir. Aşağıdaki özellikler artık [cihazlar](../developer/reports-ref-devices.md#devices) Beta koleksiyonu aracılığıyla kullanıma sunulmuştur:
-- `ethernetMacAddress`-Bu cihazın benzersiz ağ tanımlayıcısı.
-- `model`-Cihaz modeli.
-- `office365Version`-Cihaza yüklü Office 365 sürümü.
-- `windowsOsEdition`-Işletim sistemi sürümü.
+- `ethernetMacAddress` -Bu cihazın benzersiz ağ tanımlayıcısı.
+- `model` -Cihaz modeli.
+- `office365Version` -Cihaza yüklü Office 365 sürümü.
+- `windowsOsEdition` -Işletim sistemi sürümü.
 
 Aşağıdaki özellikler artık [Devicepropertyhistory](../developer/reports-ref-devices.md#devicepropertyhistories) Beta koleksiyonu aracılığıyla kullanıma sunulmuştur:
-- `physicalMemoryInBytes`-Bayt cinsinden fiziksel bellek.
-- `totalStorageSpaceInBytes`-Bayt cinsinden toplam depolama kapasitesi.
+- `physicalMemoryInBytes` -Bayt cinsinden fiziksel bellek.
+- `totalStorageSpaceInBytes` -Bayt cinsinden toplam depolama kapasitesi.
 
 Daha fazla bilgi için bkz. [Microsoft Intune veri ambarı API 'si](../developer/reports-nav-intune-data-warehouse.md).
 

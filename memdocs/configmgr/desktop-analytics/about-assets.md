@@ -2,7 +2,7 @@
 title: Masaüstü analizinden varlıklar
 titleSuffix: Configuration Manager
 description: Masaüstü Analizi 'nde cihazlar, sürücüler ve uygulamalar hakkında bilgi edinin.
-ms.date: 05/11/2020
+ms.date: 08/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: f87c4cc1bcbe8039acb5876dc8e26ac597f12e59
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: d4328aee2bc08054fbeaa7147ceed30fe61b61a7
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107297"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614813"
 ---
 # <a name="assets-in-desktop-analytics"></a>Masaüstü analizinden varlıklar
 
@@ -42,6 +42,9 @@ Bir dağıtım planında, cihazlar hakkında daha fazla ayrıntı vardır. Daha 
 
 En **önemli uygulamalar,** kayıtlı cihazların %2 ' inden fazlasına yüklendi.
 
+> [!TIP]
+> Belirli bir dağıtım planı için bu değeri yapılandırabilirsiniz. Dağıtım planının özelliklerinde, **hazırlık kuralları**' nda, **Uygulamalarınız için düşük bir kurulum sayısı eşiği tanımlamak**için değeri belirtin.
+
 **Uygulama sürümleri ayrıntıları** ayarı varsayılan olarak kapalıdır, bu nedenle bu sekme, tüm uygulama sürümlerini aynı ad ve yayımcıya birleştirir.<!-- 5542186 --> Varsayılan davranış, gördüğünüz toplam uygulama sayısını azaltmaya yardımcı olur ve bu da uygulamalara açıklama ekleme çabalarınızı azaltmaya yardımcı olur. Önemli **uygulamalar** kutucuğunda uygulama sayısı da bu ayarı yansıtır. Örneğin, Microsoft Edge 'in yüzlerce örneğini listelemek yerine, tüm sürümler için bir örnek vardır. Tüm sürümler için kararları bir kez daha yapabilirsiniz. Bir uygulamanın belirli sürümleri hakkında kararlar almanız gerekiyorsa, bu ayarı açın. Bu ayarı, bir dağıtım planıyla çalışırken da yapılandırabilirsiniz. Daha fazla bilgi için bkz. [varlıkları planlayın](about-deployment-plans.md#plan-assets).
 
 Listeden uygulamayı seçin ve **Düzenle**' yi seçin. Bu eylem, uygulamanın ayrıntılarını görüntüler. **Önem** açılan menüsünü seçin ve bir değer ayarlayın. Ayrıca, bir **sahip**atayabilirsiniz. Herhangi bir değişiklik yaparsanız **Kaydet**' i seçin.
@@ -53,6 +56,9 @@ Aşağıdaki kategorilerden birini ayarlayarak uygulamaların **önemini** yapı
 - Yoksayma
 - Gözden geçirilmedi
 - Önemli değil<!-- 3587232 -->
+
+> [!NOTE]
+> Uygulamayı Configuration Manager dağıttıysanız, masaüstü Analizi **Varsayılan olarak bunu** otomatik olarak yapılandırır. Bu davranış, ortamınızdaki uygulamaları daha hızlı bir şekilde bir üretim dağıtımında daha hızlı ilerlemesini sağlamak için yapılandırmanızı sağlar.<!-- 4859763 -->
 
 **Uygulama sürümleri ayrıntıları** ayarı kapalıyken, uygulama ayrıntıları bölmesi, birleştirilagösterdiği uygulama sürümlerinin ve dillerin sayısını gösterir. Uygulama ayrıntılarına değişiklikler kaydederseniz, tüm sürümler için geçerlidir. Örneğin, **önem derecesini** veya **sahibini**ayarlayın. Bazı değerlerde "çoklu" görüntülenir, bu da tüm sürümlerde tutarlı bir değer olmadığı anlamına gelir.
 

@@ -2,7 +2,7 @@
 title: Masaüstü Analizinizdeki yenilikler
 titleSuffix: Configuration Manager
 description: Masaüstü Analizi bulut hizmeti 'nin en son aylık sürümündeki yeni özelliklerin özeti.
-ms.date: 07/01/2020
+ms.date: 08/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ec554d755b92d1c710def580a34fdbbddc7b4d45
-ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
+ms.openlocfilehash: c41c6333cfee1b6a24bb84c0f020c14c303fd904
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85819992"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614751"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Masaüstü Analizinizdeki yenilikler
 
@@ -25,10 +25,22 @@ Her ay masaüstü analizinden nelerin yeni olduğunu öğrenin.
 > [!TIP]
 > Her aylık güncelleştirmenin piyasaya çıkma üç güne kadar sürebilir. Bazı özelliklerin piyasaya çıkması birkaç haftayı bulabilir ve tüm özellikler ilk hafta bütün müşterilerimize sunulmamış olabilir.
 
-Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
+Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
 
-## <a name="july-2020"></a>2020 Temmuz
+## <a name="august-2020"></a>Ağustos 2020
+
+### <a name="apps-deployed-from-configuration-manager-are-important-by-default"></a>Configuration Manager dağıtılan uygulamalar varsayılan olarak önemli öneme sahiptir
+
+<!-- 4859763 -->
+
+Bir uygulamanın **önem derecesi** , masaüstü analizinin, pilot dağıtımlar için dahil edilecek cihazların belirlenmesi açısından önemlidir. Masaüstü analizinden tüm uygulamaların önemini el ile yapılandırmak için gereken bir yönetici. Pilot uygulamayı doğruladıktan sonra bir üretim dağıtımıyla devam edebilirsiniz.
+
+Artık Configuration Manager ile dağıttığınız tüm uygulamalar için, masaüstü Analizi varsayılan olarak otomatik olarak bunu önemli olarak yapılandırır. Bu davranış, ortamınızdaki uygulamaları daha hızlı bir şekilde bir üretim dağıtımında daha hızlı ilerlemesini sağlamak için yapılandırmanızı sağlar.
+
+Daha fazla bilgi için bkz. [varlıklar-uygulamalar](about-assets.md#apps).
+
+## <a name="july-2020"></a>Temmuz 2020
 
 ### <a name="windows-10-version-2004-now-available-in-desktop-analytics"></a>Windows 10, sürüm 2004, artık Masaüstü Analizi 'nde kullanılabilir
 
