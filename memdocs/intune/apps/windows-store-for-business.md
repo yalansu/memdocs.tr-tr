@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f92fe778f640cccfc0026a6bad2c7f92cdce4d5
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 5be1c4fd42d27386b4fdc51cac6167625432491f
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217365"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559574"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Toplu satın alınan uygulamaları Microsoft Store Iş için Microsoft Intune ile yönetme
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-[İş İçin Microsoft Mağazası](https://www.microsoft.com/business-store), kuruluşunuz için tek tek veya toplu olarak uygulamaları bulabileceğiniz ve satın alabileceğiniz bir yer sağlar. Mağazayı Microsoft Intune’a bağlayarak toplu satın alınan uygulamaları Azure portalından yönetebilirsiniz. Örnek:
+[İş İçin Microsoft Mağazası](https://www.microsoft.com/business-store), kuruluşunuz için tek tek veya toplu olarak uygulamaları bulabileceğiniz ve satın alabileceğiniz bir yer sağlar. Mağazayı Microsoft Intune’a bağlayarak toplu satın alınan uygulamaları Azure portalından yönetebilirsiniz. Örneğin:
 
 * Satın almış olduğunuz (veya ücretsiz) uygulamaların listesini Intune ile eşzamanlı olarak saklayabilirsiniz.
 * Eşitlenen uygulamalar, Intune yönetim konsolunda gösterilir; bu uygulamaları herhangi bir uygulama gibi atayabilirsiniz.
@@ -78,6 +78,7 @@ Artık devam edebilir ve Intune konsolunda eşitlemeyi ayarlayabilirsiniz.
 6. Microsoft Mağazası’ndan satın aldığınız uygulamaları Intune’a almak için **Eşitle**’ye tıklayın.
 
 ## <a name="synchronize-apps"></a>Uygulamaları eşitleme
+Microsoft Store for Business hesabınızı Intune yönetici kimlik bilgilerinizle zaten ilişkilendirdiyseniz, aşağıdaki adımları kullanarak Iş için Microsoft Store Iş uygulamalarınızı Intune ile el ile eşitleyebilirsiniz.
 
 1. İş için **kiracı yönetim**  >  **bağlayıcıları ve belirteçleri**  >  **Microsoft Store**seçin.
 2. Microsoft Mağazası’ndan satın aldığınız uygulamaları Intune’a almak için **Eşitle**’ye tıklayın.

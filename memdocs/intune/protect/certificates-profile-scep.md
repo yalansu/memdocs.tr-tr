@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc016ef1a3fd76c425a24d8230a0c078a0159922
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: f0119ace5e1ec511ec0e8235a1dcea4b7199c058
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252665"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559547"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Intune 'da SCEP sertifika profilleri oluşturma ve atama
 
@@ -218,6 +218,8 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
    - **Kök sertifika**:
 
      Daha önce yapılandırdığınız ve bu SCEP sertifika profili için geçerli kullanıcılara ve cihazlara atadığınız *Güvenilen sertifika profilini* seçin. Güvenilen sertifika profili, kullanıcılara ve cihazlara güvenilen kök CA sertifikası sağlamak için kullanılır. Güvenilen sertifika profili hakkında daha fazla bilgi için bkz. *Intune 'da kimlik doğrulaması için sertifikaları kullanma*' da [Güvenilen kök CA sertifikanızı dışarı aktarma](certificates-configure.md#export-the-trusted-root-ca-certificate) ve [Güvenilen sertifika profilleri oluşturma](certificates-configure.md#create-trusted-certificate-profiles) . Kök sertifika yetkiliniz ve veren bir sertifika yetkiliniz varsa, sertifikayı veren sertifika yetkilisini doğrulayan güvenilen kök sertifika profilini seçin.
+     > [!NOTE]
+     > İOS/ıpados cihazlarında, bir kök sertifika yetkiliniz ve veren bir sertifika yetkiliniz varsa, kök sertifika yetkilisini doğrulayan güvenilen kök sertifika profilini seçin. 
 
    - **Genişletilmiş anahtar kullanımı**:
 

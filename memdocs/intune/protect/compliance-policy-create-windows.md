@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15b590c87bb56427e44f955fb2f68382f60c7bc1
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 0357f8fe751738bc3f8a5198db96b2113ee16bfc
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252656"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559503"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Cihazları Intune ile uyumlu veya uyumsuz olarak işaretlemek için Windows 10 ve üzeri ayarları
 
@@ -47,7 +47,9 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
    Windows BitLocker Sürücü Şifrelemesi, Windows işletim sistemi biriminde depolanan tüm verileri şifreler. BitLocker, Windows işletim sistemini ve Kullanıcı verilerini korumaya yardımcı olmak için Güvenilir Platform Modülü (TPM) kullanır. Ayrıca, sol tarafta bırakılmış, kayıp veya çalınmış olsa bile bir bilgisayarın üzerinde oynanmadığını doğrulamanıza yardımcı olur. Bilgisayar TPM ile donatılmışsa, BitLocker TPM’yi verileri koruyan şifreleme anahtarlarını kilitlemek için kullanır. Sonuç olarak, TPM bilgisayarın durumunu doğrulana kadar anahtarlara erişilemez.  
 
   - **Yapılandırılmadı** (*varsayılan*)-Bu ayar uyumluluk veya uyumsuzluk için değerlendirilmez.
-  - **Gerektir** -cihaz, sistem kapalı veya hazırda bekleme durumunda sürücüde depolanan verileri yetkisiz erişimden koruyabilir.  
+  - **Gerektir** -cihaz, sistem kapalı veya hazırda bekleme durumunda sürücüde depolanan verileri yetkisiz erişimden koruyabilir.
+  
+  [Cihaz Healthkanıtlama CSP 'si-BitLockerStatus](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp)
 
 - **Cihazda güvenli önyüklemenin etkinleştirilmesini gerektir**:  
   - **Yapılandırılmadı** (*varsayılan*)-Bu ayar uyumluluk veya uyumsuzluk için değerlendirilmez.
@@ -166,6 +168,8 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
   Bu ayar, bir cihazdaki tüm sürücüler için geçerlidir.
   - **Yapılandırılmadı** (*varsayılan*)
   - **Gerektir** -kullanım, cihazlarınızda veri depolamayı şifrelemek için *gerektir* .
+  
+   [DeviceStatus CSP-DeviceStatus/uyumluluk/Encryptionuyumluluğu](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
   > **Bir cihazdaki veri depolama şifrelemesi** ayarı cihazdaki genel şifreleme varlığını denetler. Daha güçlü bir şifreleme ayarı için **BitLocker’ı gerektir** ayarını kullanmayı göz önünde bulundurabilirsiniz. Bu ayar, TPM düzeyinde BitLocker durumunu doğrulamak için Windows Cihaz Sistem Durumu Kanıtlama özelliğinden yararlanır.
@@ -185,7 +189,7 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
   - **Yapılandırılmadı** (*varsayılan*)-ıNTUNE, cihazı bir TPM yonga sürümü için denetlemez.
   - **Gerektir** -Intune, uyumluluk için TPM yonga sürümünü denetler. TPM yonga sürümü **0** ' dan büyükse cihaz uyumludur (sıfır). Cihazda TPM sürümü yoksa cihaz uyumlu değildir.
 
-  [DeviceStatus CSP-DeviceStatus/TPM/SpecificationVersion düğümü](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP-DeviceStatus/TPM/SpecificationVersion](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
   
 - **Virüsten koruma**:  
   - **Yapılandırılmadı** (*varsayılan*)-Intune, cihazda yüklü olan herhangi bir virüsten koruma çözümünü denetlemez.
@@ -217,7 +221,7 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
   - **Yapılandırılmadı** (*varsayılan*)-Intune hiçbir gereksinimi zorlamaz.
   - **Gerektir** -Microsoft Defender Güvenlik Intelligence 'ın güncel olmasını zorunlu kılın.
 
-  [Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
+  [Defender CSP-Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
   
   Daha fazla bilgi için bkz. [Microsoft Defender virüsten koruma ve diğer Microsoft Antimalware Için güvenlik zekası güncelleştirmeleri](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
@@ -225,7 +229,7 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
   - **Yapılandırılmadı** (*varsayılan*)-Intune bu özelliği denetlemez ve var olan ayarları değiştirmez.
   - **Gerekli** -kötü amaçlı yazılım, casus yazılım ve diğer istenmeyen yazılımları tarayan gerçek zamanlı korumayı etkinleştirin.  
 
-  [Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  [İlke CSP-Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
