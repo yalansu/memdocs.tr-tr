@@ -1,11 +1,11 @@
 ---
 title: Mobil cihazınıza mobil tehdit savunması 'nı yükler
-description: Mobil cihazınıza mobil tehdit savunması yüklemeyi öğrenin.
+description: Mobile Threat Defense uygulamalarının ne olduğunu ve bir tanesi ayarlamayı öğrenin.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/27/2020
+ms.date: 08/18/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,20 +17,38 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5df46a4632b198b4b4916f5ce5165b3f116ccac9
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 5f32af94b179da42a268d4942122a3cab2faf6ff
+ms.sourcegitcommit: 21b6c0c054e5371f32d611a2411ccd166b0e03bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881884"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88643763"
 ---
-# <a name="install-mobile-threat-defense"></a>Mobil tehdit savunması 'nı yükler   
+# <a name="install-mobile-threat-defense-app"></a>Mobile Threat Defense uygulamasını yükler  
+
+> [!TIP]
+> Pazardaki çeşitli MTD uygulamaları vardır. Kuruluşunuzun hangisini kullanacağınızı söylemiş olması gerekir. Bir MTD uygulaması yüklemek isteyip istemediğiniz sorulursa uygulamayı ayarlamaya veya yüklemeye hemen yönlendirilmezseniz yardım için BT destek sorumlunuza başvurun.  
 
 Kuruluşunuzun güvenlik gereksinimlerinin bir parçası olarak, bir Mobile Threat Defense (MTD) satıcı uygulaması yüklemenize gerek duyabilirsiniz. Bu tür bir uygulama, cihazınızdaki şüpheli uygulamalar, ağlar veya işletim sistemi güvenlik açıkları gibi tehditleri algılar ve sizi uyarır.  
 
-Gerekli MTD uygulamanız yoksa, iş veya okul hesabınızla korunan uygulamalarda oturum açmanız engellenir. Bu makalede, engeli kaldırılacak [BIR MTD uygulamasını nasıl yükleyeceğinizi](set-up-mobile-threat-defense.md#install-app) öğreneceksiniz.  
+Gerekli MTD uygulamanız yoksa, iş veya okul hesabınızla korumalı, yönetilen uygulamalarda (Microsoft Excel veya OneDrive gibi) oturum açmanız engellenir. Bu makalede, [BIR MTD uygulamasını ayarlamayı](set-up-mobile-threat-defense.md#set-up-mtd-app) ve yeniden erişim elde etme hakkında bilgi edineceksiniz.    
 
-Farklı adlara sahip olan, yüklemek için kullanabileceğiniz çeşitli MTD satıcı uygulamaları vardır. Kuruluşunuz hangisini kullanacağınızı bilmenizi sağlayacak. Uygulamayı yüklemek isteyip istemediğiniz sorulursa, daha fazla yönerge veya uygulama almaya yönelik bir bağlantı verilmemişse, BT destek sorumlunuza başvurun. 
+## <a name="mtd-apps-for-ios"></a>İOS için MTD uygulamaları
+Aşağıdaki MTD uygulamaları genellikle iOS cihazlarında kullanılır. Uygulama mağazasındaki listesini açmak için bir uygulama seçin.   
+
+* [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139367)
+* [Symantec Endpoint Protection (SEP) Mobile](https://go.microsoft.com/fwlink/?linkid=2139141)
+* [Sandblast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139231)
+* [Zimperium zIPS](https://go.microsoft.com/fwlink/?linkid=2139232)
+
+
+## <a name="mtd-apps-for-android"></a>Android için MTD uygulamaları 
+Aşağıdaki MTD uygulamaları genellikle Android cihazlarda kullanılır. Google Play listesini açmak için bir uygulama seçin.  
+
+* [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139453)
+* [Symantec Endpoint Protection (SEP) Mobile](https://go.microsoft.com/fwlink/?linkid=2139454)
+* [Sandblast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139455)
+* [Zyium mobil IP 'leri (ZIP 'ler)](https://go.microsoft.com/fwlink/?linkid=2139142)  
 
 
 ## <a name="information-your-organization-can-see"></a>Kuruluşunuzun görebileceği bilgiler   
@@ -43,18 +61,24 @@ Kuruluşunuz, kişisel uygulamalarınızda metin, e-posta ve resim gibi verileri
 * Uygulama paketi ve dinamik Boyut: bir uygulamanın cihazınızda kullandığı alan miktarı. 
 
 
-## <a name="install-app"></a>Uygulamayı yükleme    
-Korumalı bir uygulamada oturum açtığınızda, otomatik olarak bir MTD uygulaması kurmanız istenir. Yüklemeyi tamamlamaya yönelik ekrandaki adımları izleyin. Ek Yardım için bu bölümdeki adımları kullanın.  
- 
-Cihazınızı kaydetmeniz de istenebilir. Kayıt, kimliğinizi doğrulamak ve okul veya iş hesabınızı cihazınıza bağlamak için gereklidir. Kaydolmadıysanız, MTD uygulamasını yüklemeden önce bu kurulum üzerinden otomatik olarak gezinirsiniz. **Erişim al** ekranına geldiğinizde, yükleme adımlarını başlatabilirsiniz.  
+## <a name="set-up-mtd-app"></a>MTD uygulamasını ayarlama 
+Korumalı bir uygulamada oturum açtığınızda, bir MTD uygulaması kurmanız istenir. Yüklemeyi tamamlayıp korumalı uygulamaya erişim kazanmak için ekrandaki adımları izleyin. 
+
+Ek bağlam için, bu bölümdeki [iOS](set-up-mobile-threat-defense.md#ios-setup) veya [Android](set-up-mobile-threat-defense.md#android-setup) yönergelerine bakın. Bu adımlar, ekranda gösterilen yönergelerin yerini alacak ve bu adımların değiştirilmesini amaçlıyordu. 
+
+Bir MTD uygulaması yüklemek isteyip istemediğiniz konusunda emin değilseniz, yardım için BT destek sorumlunuza başvurun.  
+
+### <a name="device-registration"></a>Cihaz kaydı  
+Kimlik doğrulamak ve okul veya iş hesabınızı cihazınıza bağlamak için cihaz kaydı gereklidir. Cihazınız kayıtlı değilse, MTD uygulamasını yüklemeden önce bu adımlarla ekranda otomatik olarak gezinirsiniz.   
 
 Cihaz kaydı hakkında daha fazla bilgi için bkz. [kuruluşunuzun ağına kişisel cihazınızı kaydetme](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network).  
 
 ### <a name="ios-setup"></a>iOS kurulumu  
+Bu adımlar, korumalı bir uygulamada oturum açtıktan sonra görünen **erişim al** ekranında başlar.  
 
 1. **Erişim al** ekranında, kuruluşunuzun gerektirdiği MTD uygulamasını yüklemek için yönergeleri izleyin.   
 2. **Erişim al** ekranına dönün ve **Aç**' ı seçin.  
-3. MTD uygulaması Microsoft Authenticator açmak için izin ister. **Aç**'ı seçin. 
+3. MTD uygulaması Microsoft Authenticator açmak için izin ister. **Aç**’ı seçin. 
 4. Oturum açmak için iş hesabınızı seçin. 
 5. MTD uygulaması cihazınızı güvenlik tehditleri için taradığında bekleyin. 
 6. İlk olarak erişmeye çalıştığınız okul veya iş uygulamasına geri dönün. Bu noktada, kuruluşunuz PIN oluşturma gibi diğer uygulama güvenlik gereksinimlerini yapılandırmanızı isteyebilir.   
@@ -63,6 +87,7 @@ Cihaz kaydı hakkında daha fazla bilgi için bkz. [kuruluşunuzun ağına kişi
     * MTD uygulamasına gidin ve mevcut tehditleri denetleyin. Tehdidi çözümlemek ve erişimi yeniden kazanmak için önerilen adımları izleyin.    
 
 ### <a name="android-setup"></a>Android kurulumu 
+Bu adımlar, korumalı bir uygulamada oturum açtıktan sonra görünen **erişim al** ekranında başlar.  
 
 1. **Erişim al** ekranında, kuruluşunuzun gerektirdiği MTD uygulamasını yüklemek için yönergeleri izleyin.  
 2. **Erişim al** ekranına dönün ve **Aç**' ı seçin.  
@@ -74,24 +99,42 @@ Cihaz kaydı hakkında daha fazla bilgi için bkz. [kuruluşunuzun ağına kişi
     * **Erişim al** ekranında yeniden **Denetle**' yi seçin.  
     * MTD uygulamasına gidin ve mevcut tehditleri denetleyin. Tehdidi çözümlemek ve erişimi yeniden kazanmak için önerilen adımları izleyin.  
 
-### <a name="installation-failed"></a>Yükleme başarısız oldu  
 
-Yükleme başarısız olursa BT destek sorumlunuza başvurun. Kuruluşunuzun iletişim bilgilerini bulmak için [Şirket portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) gidin.  
-
-Uygulama günlüklerinizi, yükleme hakkında daha fazla bağlam sağlamak için BT destek sorumlunuza da gönderebilirsiniz.  
-* Android kullanıcıları: Şirket Portalı [günlüklerinizi karşıya yükleyin ve e-posta ile gönderin](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) .   
-
-* iOS cihaz kullanıcıları: iOS için Microsoft Edge 'ten [günlüklerinizi alın ve gönderin](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) .  
-
-## <a name="resolve-a-threat"></a>Tehdidi çözümleme  
+## <a name="detecting-and-resolving-a-threat"></a>Tehdidi algılama ve çözme
 Bir tehdit kuruluşunuzun tanımlı tehdit düzeyini aşarsa, kuruluşunuzun şunları yapmanız gerekir:  
    
 * Erişimi engelle: iş veya okul hesabınızda oturum açtığınızda kuruluşunuzun korunan uygulamalarını kullanmanızı engeller.  
 * Verileri silme: kuruluşunuzun korunan uygulamalarından bir veya daha fazla iş veya okul verilerini siler.  
 
-Bir tehdidi çözümlemek ve erişimi yeniden kazanmak için cihazınızda MTD uygulamasını açın. Tehdidin cihazınızı nasıl etkileyebileceğini ve nasıl çözümleneceğini öğrenmek için, belirtilen bilgileri okuyun. Tehdidi çözümlemek için adımları izledikten sonra MTD uygulamasına dönün ve yeni bir tarama başlatın. Kuruluşunuza yeniden erişim kazanmak birkaç dakika sürebilir.  
+Bir tehdidi çözümlemek ve korunan uygulamalara erişimi yeniden kazanmak için:  
+
+1. Cihazınızda MTD uygulamasını açın.     
+2. Tehdidin cihazınızı nasıl etkileyebileceğini ve nasıl çözümleneceğini öğrenmek için ekran bilgilerini okuyun. 
+3. Tehdidi çözümlemek için adımları izledikten sonra MTD uygulamasına dönün ve yeni bir tarama başlatın. Kuruluşunuza yeniden erişim kazanmak birkaç dakika sürebilir.  
+
+## <a name="get-support"></a>Destek alma
+Kuruluşunuzun iletişim bilgilerini bulmak için [Şirket portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) gidin. Hakkında yardım almak için onlara başvurun:
+
+* Hangi MTD uygulamasının kullanılacağını belirleme  
+* Yükleme  
+* Yükleme başarısız  
+* Tehdidi algılama/çözme  
+* MTD uygulamasını kaldırma   
+ 
+
+### <a name="share-app-logs-with-it-support"></a>Uygulama günlüklerini BT desteğiyle paylaşma
+Uygulama günlüklerinizi, başarısız bir yükleme hakkında daha fazla bağlam sağlamak için BT destek sorumlunuza da gönderebilirsiniz.  
+* Android kullanıcıları: Şirket Portalı [günlüklerinizi karşıya yükleyin ve e-posta ile gönderin](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) .   
+
+* iOS cihaz kullanıcıları: iOS için Microsoft Edge 'ten [günlüklerinizi alın ve gönderin](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) .  
+
 
 ## <a name="next-steps"></a>Sonraki adımlar  
+
+Yönetilen uygulamaların nasıl çalıştığı, nasıl alınacağı ve bir tane kullandığınızı nasıl anlayacağınız hakkında daha fazla bilgi edinmek için aşağıdaki makalelere bakın.  
+
+* [Android cihazınızdaki yönetilen uygulamaları kullanma](use-managed-apps-on-your-device-android.md)
+* [iOS cihazınızdaki yönetilen uygulamaları kullanma](use-managed-apps-on-your-device-ios.md)  
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 270560e289a7b2078bdb21b75cfe227992e84f29
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: fe6a46c10f55378292e57548494852c4014c062a
+ms.sourcegitcommit: 21b6c0c054e5371f32d611a2411ccd166b0e03bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88616268"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88643712"
 ---
 # <a name="support-third-party-device-compliance-partners-in-intune"></a>Intune 'da üçüncü taraf cihaz uyumluluk iş ortaklarını destekleme
 
@@ -31,13 +31,11 @@ Varsayılan olarak, Intune, cihazlarınız için mobil cihaz yönetimi (MDM) yet
 
 Cihaz uyumluluk ortaklarından veri kullanımını etkinleştirmek için aşağıdaki görevleri doldurun:
 
-1. Bu iş ortağını ilgili cihazlar için bir mobil cihaz yönetimi (MDM) yetkilisi olarak belirlemek için **Azure AD 'ye cihaz uyumluluk ortağını ekleyin** .
+1. **Intune 'u cihaz uyumluluk ortağıyla çalışacak şekilde yapılandırın**ve ardından cihazları bu uyumluluk ortağı tarafından yönetilen Kullanıcı gruplarını yapılandırın.
 
-2. **Intune 'u cihaz uyumluluk ortağıyla çalışacak şekilde yapılandırın**ve ardından cihazları bu uyumluluk ortağı tarafından yönetilen Kullanıcı gruplarını yapılandırın.
+2. **Uyumluluk ortağınızı Intune 'a veri gönderecek şekilde yapılandırın**.
 
-3. **Uyumluluk ortağınızı Intune 'a veri gönderecek şekilde yapılandırın**.
-
-4. **İOS veya Android cihazlarınızı bu cihaz uyumluluk ortağına kaydedin**.
+3. **İOS veya Android cihazlarınızı bu cihaz uyumluluk ortağına kaydedin**.
 
 Bu görevler tamamlandıktan sonra, cihaz uyumluluk ortağı cihaz durumu ayrıntılarını Intune 'a gönderir. Intune daha sonra bu bilgileri Azure AD 'ye ekler. Örneğin, uyumlu olmayan bir duruma sahip cihazlar, bu durumun Azure AD 'deki cihaz kaydına eklenmesini sağlar.
 
@@ -47,7 +45,7 @@ Uyumluluk durumu daha sonra, Intune tarafından yönetilen cihazlar için uyumlu
 
 Genel önizlemede:
 
-- VMWare çalışma alanı BIR UEM (eski adıyla AirWatch)
+- VMware çalışma alanı BIR UEM (eski adıyla AirWatch)
 
 ## <a name="prerequisites"></a>Ön koşullar
 
@@ -57,27 +55,9 @@ Genel önizlemede:
 
 - Desteklenen cihaz platformları ve ek önkoşullar için uyumluluk iş ortağınızla ilgili belgeleri gözden geçirin.
 
-## <a name="add-support-in-azure-ad-for-a-device-compliance-partner"></a>Cihaz uyumluluk ortağı için Azure AD 'de destek ekleme
-
-Üçüncü taraf cihaz uyumluluk iş ortakları tarafından yönetilen cihazlar için desteği etkinleştirmek üzere, Azure AD 'de bu ortağı *Mobility (MDM ve MAM)* öğesine eklemeniz gerekir. Varsayılan olarak, Intune, *Mobility (MDM ve MAM)* için zaten kayıtlı.
-
-### <a name="add-a-device-compliance-partner-to-azure-ad"></a>Azure AD 'ye cihaz uyumluluk ortağı ekleme
-
-1. [Azure Portal](https://aad.portal.azure.com/) oturum açın ve **Azure Active Directory**  >  **Mobility (MDM ve MAM)**  >  **Uygulama Ekle**' ye gidin. ([ *MOBILITY (MDM ve MAM)* dikey penceresini doğrudan açın](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Mobility).)
-
-2. **Uygulama Ekle** dikey penceresinde, cihaz uyumluluk iş ortağınızın kutucuğunu seçin ve ardından **Ekle**' yi seçin.
-
-   - *Çalışma alanı BIR UEM*Için, **VMware tarafından AirWatch** ' ı seçin
-
-3. *Mobility (MDM ve MAM)* dikey penceresinde, **yapılandırma** dikey penceresini açmak ve kullanılabilir seçenekleri yapılandırmak için uyumluluk ortağınızı seçin.  Seçenekler **MDM Kullanıcı kapsamını**, **MDM kullanım koşulları URL 'sini**ve **MDM bulma URL**'sini içerir. Kullanıcı kapsamı **bazılarına**ayarlandığında, bu uyumluluk ortağıyla cihazları kaydedebilen Azure AD Kullanıcı gruplarını seçersiniz.
-
-   Seçtiğiniz gruplardan hedeflenen cihazlar, iş ortağını MDM yetkilisi olarak kullanır.
-
-4. Azure AD 'de iş ortağı yapılandırmasını gerçekleştirmek için **Kaydet** ' i seçin. Daha sonra, uyumluluk ortağını Intune 'A eklersiniz.
-
 ## <a name="configure-intune-to-work-with-a-device-compliance-partner"></a>Intune 'U cihaz uyumluluk ortağıyla çalışacak şekilde yapılandırma
 
-Azure AD, *Mobility (MDM ve MAM)* için bir cihaz uyumluluk ortağını destekleyecek şekilde yapılandırıldığında, Intune 'u da bu iş ortağıyla çalışacak şekilde yapılandırabilirsiniz. Bu yapılandırma, koşullu erişim ilkeleriniz ile bu iş ortağından uyumluluk durumu verilerini kullanmak istiyorsanız gereklidir.
+Koşullu erişim ilkeleriniz ile bu iş ortağından uyumluluk durumu verilerini kullanmak için bir cihaz uyumluluk ortağının desteğini etkinleştirin.
 
 ### <a name="add-a-compliance-partner-to-intune"></a>Intune 'a uyumluluk ortağı ekleme
 
@@ -88,7 +68,11 @@ Azure AD, *Mobility (MDM ve MAM)* için bir cihaz uyumluluk ortağını destekle
    > [!div class="mx-imgBorder"]
    > ![Cihaz uyumluluk ortağı ekleme](./media/device-compliance-partners/add-compliance-partner.png)
 
-3. **Temel bilgiler** sayfasında, **Uyumluluk ortağı** açılır ' i genişletin ve eklemekte olduğunuz iş ortağını seçin. Ardından, **Platform**için açılan eklentiyi seçin ve platformu seçin.
+3. **Temel bilgiler** sayfasında, **Uyumluluk ortağı** açılır ' i genişletin ve eklemekte olduğunuz iş ortağını seçin.
+
+   - VMware çalışma alanını iOS veya Android platformları için uyumluluk ortağı olarak kullanmak için, **VMware çalışma alanını tek bir mobil uyumluluk**' i seçin.
+
+   Ardından, **Platform**için açılan eklentiyi seçin ve platformu seçin. macOS bu önizleme ile desteklenmiyor.
 
    Azure AD 'ye birden çok uyumluluk iş ortağı eklemiş olsanız bile, her platform için tek bir iş ortağıyla sınırlı olursunuz.
 
@@ -115,7 +99,7 @@ Yapılandırmanız artık Iş ortağı Uyumluluk Yönetimi sayfasında görünt�
    Çalışma alanı BIR UıEM konsolunun içinden, Microsoft Endpoint Manager Yönetim merkezinde kaydettiğiniz değişiklikleri el ile eşitlemeniz gerekir. Değişiklikleri el ile eşitleene kadar, çalışma alanı yapılandırma değişikliklerinin farkında değildir ve atadığınız yeni gruplardaki kullanıcılar uyumluluğu başarıyla raporlamaz.
 
    Azure hizmetlerinden el ile eşitleme yapmak için:
-   1. VMWare çalışma alanınızda BIR UıEM konsolunda oturum açın.
+   1. VMware çalışma alanınızda BIR UıEM konsolunda oturum açın.
    2. **Ayarlar**  >  **sistem**  >  **kurumsal tümleştirme**  >  **Dizin Hizmetleri**' ne gidin.
    3. *Azure hizmetlerini eşitleme*için **Eşitle**' ye tıklayın.
 
@@ -133,15 +117,12 @@ Cihazları bu iş ortağıyla kaydetme hakkında bilgi için cihaz uyumluluk iş
 
 ## <a name="monitor-devices-managed-by-third-party-device-compliance-partners"></a>Üçüncü taraf cihaz uyumluluk iş ortakları tarafından yönetilen cihazları izleme
 
-Üçüncü taraf cihaz uyumluluk iş ortaklarını yapılandırdıktan ve cihazları bunlara kaydettikten sonra, iş ortağı uyumluluk ayrıntılarını Intune 'a iletir. Intune bu verileri aldıktan sonra, Microsoft Endpoint Manager Yönetim merkezinde cihazların ayrıntılarını görüntüleyebilirsiniz.  
+Üçüncü taraf cihaz uyumluluk iş ortaklarını yapılandırdıktan ve cihazları bunlara kaydettikten sonra, iş ortağı uyumluluk ayrıntılarını Intune 'a iletir. Intune bu verileri aldıktan sonra Azure portal cihazlarla ilgili ayrıntıları görüntüleyebilirsiniz.
 
-[Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın ve **uç nokta güvenliği**  >  **tüm cihazlar**' a gidin.  Bir üçüncü taraf iş ortağı MDM yetkilisi tarafından yönetilen cihazlar, bu ortağın adını **yönetilen** sütununda görüntüler.
-
-> [!NOTE]
-> Tüm üçüncü taraf uyumluluk iş ortakları Yönetim merkezinde tanımlanmaz. Cihazlarınız listede yoksa, Intune aboneliğinize erişmek ve bunları görüntülemek için [Azure Portal](https://portal.azure.com) oturum açabilirsiniz.
-
-Bu görünüm hakkında daha fazla bilgi için bkz. [cihazları yönetme](../protect/endpoint-security-manage-devices.md).
+Azure Portal oturum açın ve **Azure AD**  >  **cihazlar**  >  [**tüm cihazlar**](https://portal.azure.com/#blade/Microsoft_AAD_Devices/DevicesMenuBlade/Devices/menuId/)' a gidin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Cihaz uyumluluk ilkesiyle çalışmaya başlama](../protect/device-compliance-get-started.md)
+Cihazlar için uyumluluk ilkeleri oluşturmak üzere üçüncü taraf iş ortağınızdan belgeleri kullanın.
+
+- [VMware çalışma alanı BIR UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)

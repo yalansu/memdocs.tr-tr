@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f2ba732cfd8f377937a6471b5fc7f0558e19d6f0
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: c3f2da199e49596959c8b1b445a492f0ef505a36
+ms.sourcegitcommit: 21b6c0c054e5371f32d611a2411ccd166b0e03bc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881775"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88643797"
 ---
 # <a name="fix-common-problems-with-your-ios-device"></a>İOS cihazınızla ilgili sık karşılaşılan sorunları giderme
 
@@ -39,4 +39,4 @@ Yaygın iOS kayıt sorularına yanıtlar bulmak veya iOS ile ilgili sorunları g
 - [iOS cihazımı güncelleştirmem gerekiyor](you-need-to-update-your-ios-device.md)
 - [Kullandığım iOS sürümü henüz desteklenmiyor](your-ios-version-isnt-yet-supported.md)
 - [iOS cihazıma bir Mobile Threat Defense uygulaması yüklemem gerekiyor](set-up-mobile-threat-defense.md)
-- [iOS cihazımda Mobile Threat Defense uygulamasının bulduğu bir tehdidi gidermem gerekiyor](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
+- [iOS cihazımda Mobile Threat Defense uygulamasının bulduğu bir tehdidi gidermem gerekiyor](set-up-mobile-threat-defense.md#detecting-and-resolving-a-threat)
