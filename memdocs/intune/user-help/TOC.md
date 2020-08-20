@@ -8,7 +8,7 @@
 
 ## [Şirket Portalı’nda oturum açma](sign-in-to-the-company-portal.md)  
 
-## [Mobile Threat Defense uygulamasını yükleme](set-up-mobile-threat-defense.md)  
+## [Mobil tehdit savunması uygulamasını yükleme](set-up-mobile-threat-defense.md)  
 
 ## Android cihazınızı kullanma
 ### [Android cihazınızı neden kaydetmelisiniz?](why-enroll-android-device.md)
@@ -38,11 +38,17 @@
 #### [Samsung Knox ile sık karşılaşılan sorunları çözme](samsung-knox-errors-android.md)
 #### [Outlook yüklemek için cihazınızı güncelleştirin](update-device-outlook-android.md)
 
-#### Günlüğe kaydetme
-##### [Ayrıntılı günlük kaydını açma](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-##### [Günlükleri karşıya yükleme ve e-posta ile gönderme](send-logs-to-your-it-admin-by-email-android.md)
-##### [USB kablosu kullanarak günlükleri gönderme](send-logs-to-your-it-admin-using-cable-android.md)
-##### [Hataları Microsoft'a gönderme](send-logs-to-microsoft-android.md)
+### Günlüğe kaydetme
+#### [Ayrıntılı günlük kaydını açma](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
+#### [Günlükleri karşıya yükleme ve e-posta ile gönderme](send-logs-to-your-it-admin-by-email-android.md)
+#### [USB kablosu kullanarak günlükleri gönderme](send-logs-to-your-it-admin-using-cable-android.md)
+#### [Hataları Microsoft'a gönderme](send-logs-to-microsoft-android.md)
+
+### MTD uygulamasında bir tehdidi çözüme kavuşturma  
+#### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)  
+#### [Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-android.md)
+#### [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)    
+#### [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)
 
 ### İşletim sistemi soruları
 #### [Cihazınızı güncelleştirme](you-need-to-update-your-android-device.md)
@@ -55,16 +61,6 @@
 #### [Desteklenmeyen güvenlik yaması](you-need-to-update-your-device-OS-security-patch-android.md)
 #### [Şifreleme hataları olan cihazlar](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
 
-### Mobil Tehdit Savunması uygulamaları 
-#### [Lookout for Work’ü Yükleme](you-are-prompted-to-install-lookout-for-work-android.md)
-#### [Symantec Endpoint Protection Mobile’ı Yükleme](you-are-prompted-to-install-skycure-android.md)
-#### [SandBlast Mobile Protect’i Yükleme](you-are-prompted-to-install-sandblast-android.md)
-#### [Zimperium zIPS’i Yükleme](you-are-prompted-to-install-zips-android.md)
-#### [Tehdidi çözümleme](you-need-to-resolve-a-threat-found-by-mtd-android.md)
-##### [Lookout for Work’ü Kullanma](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
-##### [Symantec Endpoint Protection Mobile’ı Kullanma](you-need-to-resolve-a-threat-found-by-skycure-android.md)
-##### [SandBlast Mobile Protect’i Kullanma](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)
-##### [Zimperium zIPS’i Kullanma](you-need-to-resolve-a-threat-found-by-zips-android.md)
 
 ## [iOS cihazınızı kullanma](using-your-iOS-device-with-intune.md)
 ### [iOS cihaz sıfırlamasının etkileri](effects-of-device-reset-company-portal-ios.md)
@@ -99,16 +95,12 @@
 #### [Outlook yüklemek için cihazınızı güncelleştirin](update-device-outlook-ios.md)
 #### [Kullandığım iOS sürümü henüz desteklenmiyor](your-ios-version-isnt-yet-supported.md)
 
-### Mobil Tehdit Savunması uygulamaları
-#### [Lookout for Work’ü Yükleme](you-are-prompted-to-install-lookout-for-work-ios.md)
-#### [Symantec Endpoint Protection Mobile’ı Yükleme](you-are-prompted-to-install-skycure-ios.md)
-#### [SandBlast Mobile Protect’i Yükleme](you-are-prompted-to-install-sandblast-ios.md)
-#### [Zimperium zIPS’i Yükleme](you-are-prompted-to-install-zips-ios.md)
-#### [Tehdidi çözümleme](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
-##### [Lookout for Work’ü Kullanma](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
-##### [Symantec Endpoint Protection Mobile’ı Kullanma](you-need-to-resolve-a-threat-found-by-skycure-ios.md)
-##### [SandBlast Mobile Protect’i Kullanma](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)
-##### [Zimperium zIPS’i Kullanma](you-need-to-resolve-a-threat-found-by-zips-ios.md)
+### MTD uygulamasında bir tehdidi çözüme kavuşturma  
+#### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)  
+#### [Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-ios.md)    
+#### [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)    
+#### [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
+
 
 ## macOS cihazınızı kullanma
 ### [Bir macOS cihazı kaydettiğinizde ne olur?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
