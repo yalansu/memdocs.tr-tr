@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a925106a09f0035f516018ec0b44a17267e64eec
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: f403f7b4753abc7e98995ebd345c91d1f5812f46
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614828"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663475"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -66,7 +66,7 @@ Intune artık [cihaz uyumluluk ayrıntıları kaynağı olarak üçüncü taraf 
 
 Aşağıdaki üçüncü taraf MDM sağlayıcıları, genel önizleme olarak bu yayında desteklenir:
 
-- VMWare çalışma alanı bir UEM (daha önce AirWatch olarak biliniyordu)
+- VMWare çalışma alanı BIR UEM (daha önce AirWatch olarak biliniyordu)
 
 
 <!-- ########################## -->

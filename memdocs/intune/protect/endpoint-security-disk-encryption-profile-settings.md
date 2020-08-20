@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 3760aa9820495db6c2460bf2e6d2e9a08d705a10
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 37e9f68951c3576393e6ed3eb3346847029736c4
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462040"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663217"
 ---
 # <a name="disk-encryption-policy-settings-for-endpoint-security-in-intune"></a>Intune 'da uç nokta güvenliği için disk şifreleme ilkesi ayarları
 
@@ -92,6 +92,9 @@ Desteklenen platformlar ve profiller:
   Bu ayar yalnızca Windows Mobile ve mobil kurumsal SKU cihazları için geçerlidir.
   - **Yapılandırılmadı** (*varsayılan*)-ayar, depolama kartı şifrelemesi gerektirmeyen işletim sistemi varsayılana döner.
   - **Evet** -depolama kartlarında şifreleme, mobil cihazlar için gereklidir.
+
+  > [!NOTE]
+  > [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) ve [Windows Phone 8,1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) desteği 2020 tarihinde sona erdi.
 
 - **Üçüncü taraf şifreleme hakkında istemi gizle**  
   CSP: [Allowwarningforotherdiskencryption](https://go.microsoft.com/fwlink/?linkid=872525)

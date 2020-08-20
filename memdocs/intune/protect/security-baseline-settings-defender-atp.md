@@ -18,11 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: 8046318c55e2a9791f01fca4a5a54de3f1487782
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: d29240dcbcbbcd5a4399dbfb3648c2a6df47764c
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022203"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663439"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -109,6 +110,9 @@ Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları
   Bu ayar yalnızca Windows Mobile ve mobil kurumsal SKU cihazları için geçerlidir.
   - **Evet** (*varsayılan*)-mobil cihazlar için depolama kartlarında şifreleme gereklidir.
   - **Yapılandırılmadı** -ayar, depolama kartı şifrelemesi gerektirmeyen işletim sistemi varsayılana döner.
+
+  > [!NOTE]
+  > [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) ve [Windows Phone 8,1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) desteği 2020 tarihinde sona erdi.
 
 - **İşletim sistemi ve sabit veri sürücüleri için tam disk şifrelemesini etkinleştir**  
   CSP: [Requiredeviceencryption](https://go.microsoft.com/fwlink/?linkid=872523)
@@ -316,7 +320,7 @@ Aşağıdaki ayarlar hakkında daha fazla bilgi için Windows belgelerindeki [Wi
   - **Evet** (*varsayılan*)
   - **Yapılandırılmadı**
 
-## <a name="firewall"></a>Güvenlik Duvarı
+## <a name="firewall"></a>Güvenlik duvarı
 
 Daha fazla bilgi için Windows belgelerindeki [güvenlik DUVARı CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) bölümüne bakın.
 
@@ -339,7 +343,7 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
    UTF-8 gerekmiyorsa, önceden paylaşılmış anahtarlar UTF-8 kullanılarak kodlanacaktır. Bundan sonra cihaz kullanıcıları başka bir kodlama yöntemi seçebilirler.
 
   - **Yapılandırılmadı**
-  - **Yok**
+  - **Hiçbiri**
   - **UTF8** (*varsayılan*)
 
 - **Sertifika iptal listesi (CRL) doğrulaması**  
@@ -348,7 +352,7 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
   Sertifika iptal listesi (CRL) doğrulamanın nasıl uygulanacağını belirtin.  
 
   - **Yapılandırılmadı** (*varsayılan*)-CRL doğrulaması devre dışı bırakıldı.
-  - **Yok**
+  - **Hiçbiri**
   - **Girişimde**
   - **Gerektirme**
 
@@ -763,7 +767,7 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
   Varsayılan olarak, Windows 10 masaüstü cihazlarındaki Defender, bulduğu sorunlar hakkında Microsoft 'a bilgi gönderir. Microsoft, sizi ve diğer müşterileri etkileyen sorunlar hakkında daha fazla bilgi edinmek için bu bilgileri çözümleyerek geliştirilmiş çözümler sunar.
 
   - **Evet** (*varsayılan*)-buluta teslim edilen koruma açıktır.  Cihaz kullanıcıları bu ayarı değiştiremezler.
-  - **Yapılandırılmadı** -ayar, sistem varsayılan ayarlarına geri yüklenir.
+  - **Yapılandırılmadı**  -ayar, sistem varsayılan ayarlarına geri yüklenir.
 
 - **Office uygulamalarının ekleme koddan diğer işlemlere engel**  
   [Cihazları kötüye bilgisayarlardan koruyun](https://go.microsoft.com/fwlink/?linkid=872974)

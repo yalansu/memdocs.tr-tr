@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37ea8cf3f8615630ccc5b1f5fcc72f69c66db3ef
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 6412b0d23edb9f93becb3973cc1ae02c0a068dea
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179579"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663251"
 ---
 # <a name="create-a-design"></a>Tasarım oluşturma
 
@@ -296,8 +296,8 @@ Tasarım sırasında sertifikaları nasıl belgelayabilmeniz için bir örnek a�
 
 | **Tür** | **Profil adı** | **Cihaz platformu** | **Kullanım örnekleri** |   
 |:---:|:---:|:---:|:---:|
-| Kök CA | Kurumsal Kök CA | Android, iOS/ıpados, Windows Mobile | Kurumsal, KCG  |                                                           
-| SCEP | Kullanıcı Sertifikası | Android, iOS/ıpados, Windows Mobile | Kurumsal, KCG |                                                           
+| Kök CA | Kurumsal Kök CA | Android, iOS/ıpados | Kurumsal, KCG  |                                                           
+| SCEP | Kullanıcı Sertifikası | Android, iOS/ıpados | Kurumsal, KCG |                                                           
 
 
 Sertifika profili ihtiyaçlarınızı belirlemek için [yukarıdaki tablonun bir şablonunu indirebilirsiniz](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4abfd387c803535329fa51c7cafca295ae1078c
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 9f54bf7f281fca65e01d839e926200bc68c49765
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262532"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663456"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Intune 'da koşullu erişimle Microsoft Defender ATP için uyumluluğu zorlama
 
@@ -59,13 +59,13 @@ Cihazları *Orta* veya *yüksek* düzeyde risk uyumlu olmayan şekilde sınıfla
 
 Android çalıştıran cihazlar için, Android 'de Microsoft Defender ATP yapılandırmasını değiştirmek üzere Intune ilkesini kullanabilirsiniz. Daha fazla bilgi için bkz. [Microsoft Defender ATP Web koruması](../protect/advanced-threat-protection-manage-android.md).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Microsoft Defender ATP 'yi Intune ile birlikte kullanmak için, aşağıdakilerin yapılandırıldığından ve kullanıma hazırlandığınızdan emin olun:
 
 - Enterprise Mobility + Security E3 ve Windows E5 (veya Microsoft 365 Kurumsal E5) için lisanslı kiracı
 - Microsoft Intune ortamı, [Intune ile yönetilen](../enrollment/windows-enroll.md) Windows 10 veya aynı zamanda Azure AD 'ye katılmış Android cihazları
-- Microsoft [Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) ve Microsoft Defender güvenlik MERKEZI (ATP portalı) erişimi
+- Microsoft Defender Güvenlik Merkezi 'ne (ATP portalı) erişmenizi sağlayacak [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) ortamı
 
 > [!NOTE]
 > Microsoft Defender ATP, iOS/ıpados ve Android Intune uygulama koruma ilkeleriyle desteklenmez.

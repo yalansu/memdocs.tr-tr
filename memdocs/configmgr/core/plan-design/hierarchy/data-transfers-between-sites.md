@@ -10,12 +10,12 @@ ms.assetid: dc526e8d-fac3-4bb5-b206-03ad29b0ae11
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6b6d4eab77d0543f9001cef2c1e2b618ba3e4328
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c3b74ceab892c67abbd56e8cb2a5c123374a92be
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720215"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663320"
 ---
 # <a name="data-transfers-between-sites"></a>Siteler arasında veri aktarımı
 
@@ -25,13 +25,13 @@ Configuration Manager, siteler arasında farklı bilgi türlerini aktarmak için
 
 ## <a name="types-of-replication"></a>Çoğaltma türleri
 
-### <a name="file-based-replication"></a><a name="bkmk_fileroute" />Dosya tabanlı çoğaltma
+### <a name="file-based-replication"></a><a name="bkmk_fileroute" /></a> File-based replication
 
 Configuration Manager hiyerarşinizdeki siteler arasında dosya tabanlı verileri aktarmak için dosya tabanlı çoğaltmayı kullanır. Bu veriler, alt sitelerdeki dağıtım noktalarına dağıtmak istediğiniz uygulamaları ve paketleri içerir. Ayrıca, sitenin üst sitesine aktardığı işlenmemiş bulma verisi kayıtlarını işler ve sonra işler.  
 
 Daha fazla bilgi için bkz. [dosya tabanlı çoğaltma](file-based-replication.md).
 
-### <a name="database-replication"></a><a name="bkmk_dbrep" />Veritabanı çoğaltması
+### <a name="database-replication"></a><a name="bkmk_dbrep" /></a> Database replication
 
 Configuration Manager veritabanı çoğaltması, verileri aktarmak için SQL Server kullanır. Site veritabanındaki değişiklikleri hiyerarşideki diğer sitelerdeki bilgilerle birleştirmek için bu yöntemi kullanır.
 

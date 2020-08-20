@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 233bc5bbdf983069ed60c8a9afbe165fb2e6b9b1
-ms.sourcegitcommit: 764142960005ea0cb5afa00757f2b403ce5032c6
+ms.openlocfilehash: 088c3d6a281efcb1877d80d68382b1dc848ae321
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405826"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663387"
 ---
 # <a name="troubleshoot-conditional-access"></a>Koşullu erişim sorunlarını giderme
 Bu makalede, kullanıcılarınız koşullu erişimle korunan kaynaklara erişim izni alamazsanız veya kullanıcılar korumalı kaynaklara erişebiliyorsa ve engellenmesi gereken durumlarda ne yapılacağını açıklar.
@@ -45,7 +45,7 @@ Koşullu erişimin çalışması için aşağıdaki gereksinimlerin karşılanma
 
 - Kullanıcıya varsayılan olarak bir cihaz uyumluluk ilkesi atanmış olmalıdır. Bu, Intune yönetim portalındaki **cihaz uyumluluk**uyumluluğu ilke ayarları altında olan **Uyumluluk ilkesi atanmamış olan ayar işareti cihazlarının** yapılandırmasına bağlıdır  >  **Compliance Policy Settings** .
 
-- Kullanıcı Outlook yerine cihazın yerel posta istemcisini kullanıyorsa, cihazda Exchange ActiveSync etkinleştirilmelidir. Bu, iOS/ıpados, Windows Phone ve Android Knox cihazları için otomatik olarak gerçekleşir.
+- Kullanıcı Outlook yerine cihazın yerel posta istemcisini kullanıyorsa, cihazda Exchange ActiveSync etkinleştirilmelidir. Bu, iOS/ıpados ve Android Knox cihazları için otomatik olarak gerçekleşir.
 
 - Şirket içi Exchange için Intune Exchange bağlayıcınızın doğru şekilde yapılandırılması gerekir. Daha fazla bilgi için bkz. [Microsoft Intune Exchange Connector 'Da sorun giderme](troubleshoot-exchange-connector.md).
 
@@ -94,7 +94,7 @@ Azure Yönetim Portalı’nda ve cihaz envanteri raporunda her cihaz için bu ko
 
 ## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>Cihazlar uyumsuz, ancak kullanıcılar engellenmiyor
 
-- Windows bilgisayarları için koşullu erişim yalnızca yerel e-posta uygulamasını, modern kimlik doğrulaması ile Office 2013 veya Office 2016 ' i engeller. Outlook 'un önceki sürümlerinin veya Windows bilgisayarlarda tüm posta uygulamalarının engellenmesi, [Azure Active Directory Koşullu erişim Için SharePoint Online ve Exchange Online kurulumu](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication)uyarınca AAD cihaz kaydı ve Active Directory Federasyon Hizmetleri (AD FS) (AD FS) yapılandırmalarının kullanılmasını gerektirir.
+- Windows bilgisayarları için koşullu erişim yalnızca yerel e-posta uygulamasını, modern kimlik doğrulaması ile Office 2013 veya Office 2016 ' i engeller. Outlook 'un önceki sürümlerinin veya Windows bilgisayarlarda tüm posta uygulamalarının engellenmesi, [Azure Active Directory Koşullu erişim Için SharePoint Online ve Exchange Online kurulumu](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication)UYARıNCA Azure AD cihaz kaydı ve Active Directory Federasyon Hizmetleri (AD FS) (AD FS) yapılandırmalarının kullanılmasını gerektirir.
 
 - Cihaz seçmeli olarak temizlendiğinde veya Intune kullanımından kaldırıldığında, erişimi birkaç saat daha devam edebilir. Bunun nedeni, Exchange 'in altı saat boyunca erişim haklarının önbelleğe alınır. Bu senaryoda, kullanımdan kaldırılan cihazlardaki verileri korumanın başka yöntemlerini göz önünde bulundurun.
 

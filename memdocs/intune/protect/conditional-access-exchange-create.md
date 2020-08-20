@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb70d5842ce13b5baa9dc60ec2ed9cd698bad75c
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 19a2d82f23abef49f193859c46a17cbb44a61f49
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252767"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663353"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Intune için Exchange şirket içi erişimini yapılandırma
 
@@ -59,7 +59,7 @@ Koşullu erişimi yapılandırmadan önce, aşağıdaki yapılandırmaların mev
   - Intune’a **kayıtlı** veya etki alanına katılmış bir bilgisayar olmalıdır.
   - **Azure Active Directory’de kayıtlı olmalıdır**. Buna ek olarak, istemci Exchange ActiveSync kimliği Azure Active Directory’de kayıtlı olmalıdır.
 
-- Azure AD Cihaz Kayıt Hizmeti (DRS), Intune ve Office 365 müşterileri için otomatik olarak etkinleştirilir. ADFS cihaz kayıt hizmeti 'ni zaten dağıtan müşteriler, kayıtlı cihazları şirket içi Active Directory göremez. **Bu, Windows bilgisayarları ve Windows Phone cihazları için geçerlidir**.
+- Azure AD Cihaz Kayıt Hizmeti (DRS), Intune ve Office 365 müşterileri için otomatik olarak etkinleştirilir. ADFS cihaz kayıt hizmeti 'ni zaten dağıtan müşteriler, kayıtlı cihazları şirket içi Active Directory göremez. **Bu, Windows bilgisayarları ve cihazları için geçerlidir**.
 
 - Söz konusu cihaza dağıtılan cihaz uyumluluk ilkeleriyle **uyumluluk**.
 
@@ -69,7 +69,6 @@ Koşullu erişimi yapılandırmadan önce, aşağıdaki yapılandırmaların mev
 
 ### <a name="support-for-mobile-devices"></a>Mobil cihaz desteği
 
-- **Windows Phone** -koşullu erişim ilkesi oluşturmak için bkz. [koşullu erişim ilkeleri oluşturma](../protect/create-conditional-access-intune.md)
 - **İOS/ıpados üzerinde yerel e-posta uygulaması** -koşullu erişim ilkesi oluşturmak için bkz. [koşullu erişim ilkeleri oluşturma](../protect/create-conditional-access-intune.md)
 - **Android 4 veya üzeri sürümlerde Gmail gibi EAS posta istemcileri** -koşullu erişim ilkesi oluşturmak için bkz. [koşullu erişim ilkeleri oluşturma](../protect/create-conditional-access-intune.md)
 
