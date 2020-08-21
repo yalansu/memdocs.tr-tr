@@ -10,18 +10,18 @@ ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7848e3c0c38391ab61d10ad46cbb772c812539c7
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: c3f069225ec1af364a8580559ac4019e1bdd5f0f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906650"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693361"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-configuration-manager"></a>Configuration Manager 'da Windows Embedded cihazlarına istemci dağıtımını planlama
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
-<a name="BKMK_DeployClientEmbedded"></a>Windows katıştırılmış cihazınız Configuration Manager istemcisi içermiyorsa, cihazın gerekli bağımlılıkları karşılaması halinde istemci yükleme yöntemlerinden herhangi birini kullanabilirsiniz. Katıştırılmış cihaz yazma filtrelerini destekliyorsa istemciyi yüklemeden önce bu filtreleri devre dışı bırakmanız ve istemci yüklenip bir siteye atandıktan sonra tekrar etkinleştirmeniz gerekir.  
+<a name="BKMK_DeployClientEmbedded"></a> Windows katıştırılmış cihazınız Configuration Manager istemcisi içermiyorsa, cihazın gerekli bağımlılıkları karşılaması halinde istemci yükleme yöntemlerinden herhangi birini kullanabilirsiniz. Katıştırılmış cihaz yazma filtrelerini destekliyorsa istemciyi yüklemeden önce bu filtreleri devre dışı bırakmanız ve istemci yüklenip bir siteye atandıktan sonra tekrar etkinleştirmeniz gerekir.  
 
  Filtreleri devre dışı bıraktığınızda, filtre sürücülerini devre dışı bırakmamanız gerektiğine dikkat edin. Genellikle bu sürücüler bilgisayar başlatıldığında otomatik olarak başlatılır. Sürücüleri devre dışı bırakmak, istemcinin yüklenmesini engeller veya yazma filtre düzenlemesini etkileyerek istemci işlemlerinin başarısız olmasına neden olur. Her bir yazma filtresiyle ilişkili çalışır halde kalması gereken hizmetler şunlardır:  
 
@@ -46,11 +46,11 @@ ms.locfileid: "82906650"
 
  Configuration Manager, aşağıdaki yazma filtresi türlerini yönetmeyi destekler:  
 
-- Dosya tabanlı yazma Filtresi (FBWF)-daha fazla bilgi Için [dosya tabanlı yazma Filtresi](https://docs.microsoft.com/previous-versions/windows/embedded/aa940926(v=winembedded.5))konusuna bakın.  
+- Dosya tabanlı yazma Filtresi (FBWF)-daha fazla bilgi Için [dosya tabanlı yazma Filtresi](/previous-versions/windows/embedded/aa940926(v=winembedded.5))konusuna bakın.  
 
-- Gelişmiş Yazma filtresi (EWF) RAM-daha fazla bilgi Için [Gelişmiş Yazma filtresi](https://docs.microsoft.com/previous-versions/windows/embedded/ms912906(v=winembedded.5))konusuna bakın.  
+- Gelişmiş Yazma filtresi (EWF) RAM-daha fazla bilgi Için [Gelişmiş Yazma filtresi](/previous-versions/windows/embedded/ms912906(v=winembedded.5))konusuna bakın.  
 
-- Birleşik Yazma filtresi (UWF)-daha fazla bilgi Için bkz. [Birleşik Yazma filtresi](https://docs.microsoft.com/windows-hardware/customize/enterprise/unified-write-filter).  
+- Birleşik Yazma filtresi (UWF)-daha fazla bilgi Için bkz. [Birleşik Yazma filtresi](/windows-hardware/customize/enterprise/unified-write-filter).  
 
   Configuration Manager, Windows Embedded cihazı EWF RAM reg modundayken yazma Filtresi işlemlerini desteklemez.  
 

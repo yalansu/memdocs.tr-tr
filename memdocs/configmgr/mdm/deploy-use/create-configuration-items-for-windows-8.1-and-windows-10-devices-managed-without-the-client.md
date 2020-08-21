@@ -10,12 +10,12 @@ ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1987ba504630ab1d4b23cdb54710f0cbaa3db28a
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: 26846066aa713d40fdacfe75810d43cafd1c3f04
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506268"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693684"
 ---
 # <a name="create-configuration-items-for-windows-devices-with-on-premises-mdm-in-configuration-manager"></a>Configuration Manager 'de şirket içi MDM ile Windows cihazları için yapılandırma öğeleri oluşturma
 
@@ -75,7 +75,7 @@ Configuration Manager uyumluluk ayarları hakkında daha fazla genel bilgi için
 
 Yeni yapılandırma öğesini, **Varlıklar ve Uyumluluk** çalışma alanındaki **Yapılandırma Öğeleri** düğümünde görüntüleyebilirsiniz.
 
-## <a name="settings-reference"></a><a name="bkmk_setref"></a>Ayarlar başvurusu  
+## <a name="settings-reference"></a><a name="bkmk_setref"></a> Ayarlar başvurusu  
 
 Aşağıdaki bölümler her bir grupta bulunan belirli ayarları ayrıntılandırır. Bu ayarları, Configuration Manager istemcisi *olmadan* yönetilen **Windows 8.1 ve Windows 10** cihazları Için **yapılandırma öğesi oluşturma Sihirbazı** ' nın **cihaz ayarları** sayfasında yapılandırın.
 
@@ -127,7 +127,7 @@ Bu ayarlar, yalnızca Windows 8.1 ve Windows 10 çalıştıran cihazlara yöneli
 - **Özel e-posta hesabı**: cihazda kurumsal olmayan bir e-posta hesabının kullanılmasına izin verin veya bu hesabı yasaklaın.
 - **Microsoft hesabı 'Nı Windows Mail uygulamasında isteğe bağlı hale getir**: Windows Mail 'de bir Microsoft hesabı gerektirmeyen bu seçeneği etkinleştirin.
 
-### <a name="store"></a>Depo
+### <a name="store"></a>Depolama
 
 Bu ayarlar yalnızca Windows 10 ve üzeri sürümleri çalıştıran cihazlar içindir.
 
@@ -236,7 +236,7 @@ Bu ayarlar yalnızca Windows 10 ve üzeri sürümleri çalıştıran cihazlar i�
     - **Ağ bağlantısı**: **Internet** veya **iş**seçeneklerinden birini belirleyin.
     - **Kimlik doğrulaması**: kablosuz bağlantı için kimlik doğrulama yöntemini seçin:
         - **Aç**
-        - **Shared**
+        - **Paylaşılan**
         - **WPA**
         - **WPA-PSK**
         - **WPA2**
@@ -325,7 +325,7 @@ Bu ayarlar yalnızca Windows 10 Team çalıştıran cihazlar içindir.
 
 ### <a name="windows-information-protection"></a>Windows Bilgi Koruması  
 
-Configuration Manager ile kurumsal veri korumayı yapılandırma hakkında daha fazla bilgi için bkz. [Windows Information Protection (WIP) kullanarak kurumsal verilerinizi koruma](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+Configuration Manager ile kurumsal veri korumayı yapılandırma hakkında daha fazla bilgi için bkz. [Windows Information Protection (WIP) kullanarak kurumsal verilerinizi koruma](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 ### <a name="microsoft-edge-legacy"></a>Microsoft Edge eski
 

@@ -10,12 +10,12 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 433896e55b7701009e2870af8b0015fb15c1eda3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 7013ae10de753cbcb664771bd30dc51b259aa390
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88123945"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697560"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Configuration Manager 'de görev dizisi değişkenlerini kullanma
 
@@ -29,7 +29,7 @@ ms.locfileid: "88123945"
 
 Kullanılabilir tüm görev sırası değişkenlerinin bir başvurusu için bkz. [görev dizisi değişkenleri](task-sequence-variables.md).
 
-## <a name="types-of-variables"></a><a name="bkmk_types"></a>Değişken türleri
+## <a name="types-of-variables"></a><a name="bkmk_types"></a> Değişken türleri
 
 Birçok değişken türü vardır:  
 
@@ -39,7 +39,7 @@ Birçok değişken türü vardır:
 - [Salt okunur](#bkmk_read-only)  
 - [Dizide](#bkmk_array)  
 
-### <a name="built-in-variables"></a><a name="bkmk_built-in"></a>Yerleşik değişkenler
+### <a name="built-in-variables"></a><a name="bkmk_built-in"></a> Yerleşik değişkenler
 
 Yerleşik değişkenler, görev dizisinin çalıştığı ortam hakkında bilgiler sağlar. Değerleri, tüm görev sırası boyunca kullanılabilir. Genellikle, görev sırası altyapısı herhangi bir adımı çalıştırmadan önce yerleşik değişkenleri başlatır.
 
@@ -47,7 +47,7 @@ Yerleşik değişkenler, görev dizisinin çalıştığı ortam hakkında bilgil
 
 Görev dizisi, her adımdan önce bazı değişkenleri değerlendirir. Örneğin, `_SMSTSCurrentActionName` geçerli adımın adını listeler.
 
-### <a name="action-variables"></a><a name="bkmk_action"></a>Eylem değişkenleri
+### <a name="action-variables"></a><a name="bkmk_action"></a> Eylem değişkenleri
 
 Görev dizisi eylem değişkenleri, tek bir görev dizisi adımının kullandığı yapılandırma ayarlarını belirtir. Varsayılan olarak, adım, çalıştırılmadan önce ayarlarını başlatır. Bu ayarlar yalnızca ilişkili görev dizisi adımı çalışırken kullanılabilir. Görev dizisi, adımı çalıştırmadan önce eylem değişkeni değerini ortama ekler. Ardından, adım çalıştıktan sonra değeri ortamdan kaldırır.
 
@@ -60,7 +60,7 @@ Bazı görev sırası adımları belirli eylem değişkenlerini *Çıkış*olara
 > [!Note]  
 > Tüm görev dizisi adımlarının eylem değişkenleri yok. Örneğin, **BitLocker 'ı etkinleştir** eylemiyle ilişkili değişkenler olsa da, **BitLocker 'ı devre dışı bırak** eylemiyle ilişkili değişken yoktur.  
 
-### <a name="custom-variables"></a><a name="bkmk_custom"></a>Özel değişkenler
+### <a name="custom-variables"></a><a name="bkmk_custom"></a> Özel değişkenler
 
 Bu değişkenler Configuration Manager oluşturmaz. Koşul olarak, komut satırlarında veya betikte kullanmak üzere kendi değişkenlerinizi başlatın.
 
@@ -80,7 +80,7 @@ Yeni bir görev dizisi değişkeni için bir ad belirttiğinizde aşağıdaki y�
 
 Oluşturabileceğiniz görev sırası değişkenlerinin sayısı için bir sınır yoktur. Ancak, değişken sayısı, görev dizisi ortamının boyutuyla sınırlıdır. Görev dizisi ortamı için toplam boyut sınırı 8 KB 'tır. Daha fazla bilgi için bkz. [görev sırası ilkesi boyutunu azaltma](../deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_policysize).
 
-### <a name="read-only-variables"></a><a name="bkmk_read-only"></a>Salt okuma değişkenleri
+### <a name="read-only-variables"></a><a name="bkmk_read-only"></a> Salt okuma değişkenleri
 
 Salt okunurdur bazı değişkenlerin değerini değiştiremezsiniz. Genellikle ad bir alt çizgi karakteriyle () başlar `_` . Görev sırası bunları işlemleri için kullanır. Salt okuma değişkenleri, görev dizisi ortamında görünür.
 
@@ -89,7 +89,7 @@ Bu değişkenler betiklerin veya komut satırlarındaki yararlı olur. Örneğin
 > [!NOTE]  
 > Salt okuma görev dizisi değişkenleri, bir görev dizisindeki adımlarla okunabilir, ancak bunlar ayarlanamaz. Örneğin, komut **satırı Çalıştır** adımı için komut satırının parçası olarak salt okunurdur bir değişken kullanın. **Görev sırası değişkenini ayarla** adımını kullanarak salt okunurdur bir değişken ayarlayamazsınız.  
 
-### <a name="array-variables"></a><a name="bkmk_array"></a>Dizi değişkenleri
+### <a name="array-variables"></a><a name="bkmk_array"></a> Dizi değişkenleri
 
 Görev dizisi bazı değişkenleri bir dizi olarak depolar. Dizideki her öğe, tek bir nesne için ayarları temsil eder. Bir cihazda yapılandırmak için birden fazla nesne olduğunda bu değişkenleri kullanın. Aşağıdaki görev dizisi adımları dizi değişkenlerini kullanır:
 
@@ -97,7 +97,7 @@ Görev dizisi bazı değişkenleri bir dizi olarak depolar. Dizideki her öğe, 
 
 - [Diski Biçimlendir ve Bölümle](task-sequence-steps.md#BKMK_FormatandPartitionDisk)  
 
-## <a name="how-to-set-variables"></a><a name="bkmk_set"></a>Değişkenleri ayarlama
+## <a name="how-to-set-variables"></a><a name="bkmk_set"></a> Değişkenleri ayarlama
 
 Salt okuma olmayan özel değişkenler veya değişkenler için, değişkenin değerini başlatmak ve ayarlamak için birkaç yöntem vardır:  
 
@@ -130,19 +130,19 @@ Aynı değişkeni farklı yöntemlerle ayarlarsanız, görev sırası altyapıs�
 
 - Görev dizisi değişken değerleri, değerin kullanımına bağlı olarak büyük/küçük harfe duyarlı olabilir. Çoğu durumda, görev dizisi değişken değerleri büyük/küçük harfe duyarlı değildir. Bir parola içeren bir değişken büyük/küçük harfe duyarlıdır.  
 
-### <a name="set-task-sequence-variable"></a><a name="bkmk_set-ts-step"></a>Görev sırası değişkenini ayarla
+### <a name="set-task-sequence-variable"></a><a name="bkmk_set-ts-step"></a> Görev sırası değişkenini ayarla
 
 Tek bir değişkeni tek bir değere ayarlamak için görev dizisinde bu adımı kullanın.
 
 Daha fazla bilgi için bkz. [görev dizisi değişkenini ayarlama](task-sequence-steps.md#BKMK_SetTaskSequenceVariable).
 
-### <a name="set-dynamic-variables"></a><a name="bkmk_set-dyn-step"></a>Dinamik değişkenleri ayarla
+### <a name="set-dynamic-variables"></a><a name="bkmk_set-dyn-step"></a> Dinamik değişkenleri ayarla
 
 Görev dizisinde bir veya daha fazla görev sırası değişkeni ayarlamak için bu adımı kullanın. Hangi değişkenlerin ve değerlerin kullanılacağını belirlemek için bu adımda kurallar tanımlarsınız.
 
 Daha fazla bilgi için bkz. [dinamik değişkenleri ayarlama](task-sequence-steps.md#BKMK_SetDynamicVariables).
 
-### <a name="run-powershell-script"></a><a name="bkmk_run-ps"></a>PowerShell betiğini Çalıştır
+### <a name="run-powershell-script"></a><a name="bkmk_run-ps"></a> PowerShell betiğini Çalıştır
 
 <!-- 6315548 -->
 
@@ -167,13 +167,13 @@ Ortamınızda birden çok ülkede/bölgede kullanıcılar vardır. bu nedenle i�
     (Get-Culture).TwoLetterISOLanguageName
     ```
 
-    Cmdlet hakkında daha fazla bilgi için bkz. [Get-Culture](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-culture). İki harfli ISO dili adları hakkında daha fazla bilgi için bkz. [ıso 639-1 kodlarının listesi](https://wikipedia.org/wiki/List_of_ISO_639-1_codes).
+    Cmdlet hakkında daha fazla bilgi için bkz. [Get-Culture](/powershell/module/microsoft.powershell.utility/get-culture). İki harfli ISO dili adları hakkında daha fazla bilgi için bkz. [ıso 639-1 kodlarının listesi](https://wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
 1. **Görev dizisi değişkenine çıkış**seçeneği için, belirtin `CurrentOSLanguage` .
 
     ![PowerShell betiği çalıştırma adımının örnek görüntüsü](media/run-powershell-script-example-language.png)
 
-1. Ingilizce dil görüntüsünün **işletim sistemini Uygula** adımında, aşağıdaki koşulu oluşturun:`Task Sequence Variable CurrentOSLanguage equals "en"`
+1. Ingilizce dil görüntüsünün **işletim sistemini Uygula** adımında, aşağıdaki koşulu oluşturun: `Task Sequence Variable CurrentOSLanguage equals "en"`
 
     ![İşletim sistemini Uygula adımında örnek durum ekran görüntüsü](media/condition-custom-task-sequence-variable.png)
 
@@ -184,7 +184,7 @@ Ortamınızda birden çok ülkede/bölgede kullanıcılar vardır. bu nedenle i�
 
 **PowerShell Betiği Çalıştır** adımı, Windows 'un İngilizce dil sürümü olan bir cihazda çalıştırıldığında, komut değeri döndürür `en` . Daha sonra bu değeri özel değişkenine kaydeder. Ingilizce dil görüntüsü için **işletim sistemi Uygula** adımı aynı cihazda çalıştırıldığında, koşul true olarak değerlendirilir. Farklı diller için **işletim sistemi Uygula** adımının birden çok örneği varsa, görev sırası, işletim sistemi diliyle eşleşen adımı dinamik olarak çalıştırır.
 
-### <a name="collection-and-device-variables"></a><a name="bkmk_set-coll-var"></a>Koleksiyon ve cihaz değişkenleri
+### <a name="collection-and-device-variables"></a><a name="bkmk_set-coll-var"></a> Koleksiyon ve cihaz değişkenleri
 
 Cihazlar ve koleksiyonlar için özel görev sırası değişkenlerini tanımlayabilirsiniz. Bir cihaz için tanımladığınız değişkenlere cihaz başına görev sırası değişkenleri denir. Bir koleksiyon için tanımlanan değişkenler koleksiyon başına görev sırası değişkenleri olarak bilinir. Bir çakışma varsa, cihaz başına değişkenler koleksiyon başına değişkenlere göre önceliklidir. Bu davranış, belirli bir cihaza atanan görev sırası değişkenlerinin otomatik olarak, cihazı içeren koleksiyona atanan değişkenlere göre daha yüksek önceliğe sahip olduğu anlamına gelir.  
 
@@ -228,23 +228,23 @@ Cihaz başına değişkenleri bir birincil sitede veya merkezi yönetim sitesind
 
 5. Tüm değişkenleri koleksiyon özelliklerine ekledikten sonra **Tamam**' ı seçin.  
 
-### <a name="tsenvironment-com-object"></a><a name="bkmk_set-com"></a>TSEnvironment COM nesnesi
+### <a name="tsenvironment-com-object"></a><a name="bkmk_set-com"></a> TSEnvironment COM nesnesi
 
 Bir betikteki değişkenlerle çalışmak için **TSEnvironment** nesnesini kullanın.
 
 Daha fazla bilgi için bkz. Configuration Manager SDK 'da [çalışan bir görev dizisinde değişkenleri kullanma](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md) .
 
-### <a name="prestart-command"></a><a name="bkmk_set-prestart"></a>Başlatma öncesi komutu
+### <a name="prestart-command"></a><a name="bkmk_set-prestart"></a> Başlatma öncesi komutu
 
 Başlatma öncesi komutu, Kullanıcı görev sırasını seçmeden önce Windows PE 'de çalışan bir betik veya yürütülebilir dosyadır. Başlatma öncesi komutu bir değişkeni sorgulayabilir veya kullanıcıdan bilgi isteyebilir ve sonra ortama kaydedebilir. Başlatma öncesi komutundan değişkenleri okumak ve yazmak için [TSEnvironment](#bkmk_set-com) com nesnesini kullanın.
 
 Daha fazla bilgi için bkz. [görev dizisi medyası Için başlatma öncesi komutları](prestart-commands-for-task-sequence-media.md).
 
-### <a name="task-sequence-wizard"></a><a name="bkmk_set-tswiz"></a>Görev sırası Sihirbazı
+### <a name="task-sequence-wizard"></a><a name="bkmk_set-tswiz"></a> Görev sırası Sihirbazı
 
 Sürüm 1906 ' den başlayarak, görev dizisi Sihirbazı penceresinde bir görev sırası seçtikten sonra, görev sırası değişkenlerini düzenleme sayfası bir **Düzenle** düğmesi içerir. Değişkenleri düzenlemek için erişilebilir klavye kısayollarını kullanabilirsiniz. Bu değişiklik, fare kullanılamayan durumlarda yardımcı olur.<!-- 4668846 -->
 
-### <a name="task-sequence-media-wizard"></a><a name="bkmk_set-media"></a>Görev sırası Medyası Sihirbazı
+### <a name="task-sequence-media-wizard"></a><a name="bkmk_set-media"></a> Görev sırası Medyası Sihirbazı
 
 Medyadan çalıştırılan görev dizileri için değişkenleri belirtin. İşletim sistemini dağıtmak için medya kullanırken, medya oluştururken görev sırası değişkenlerini ekler ve değerlerini belirtirsiniz. Değişkenler ve değerleri medyada depolanır.  
 
@@ -260,7 +260,7 @@ Koleksiyona göre ve bilgisayara göre değişkenlerin yerine medya değişkenle
 
 Daha fazla bilgi için bkz. [görev dizisi medyası oluşturma](../deploy-use/create-task-sequence-media.md).
 
-## <a name="how-to-access-variables"></a><a name="bkmk_access"></a>Değişkenlere erişme
+## <a name="how-to-access-variables"></a><a name="bkmk_access"></a> Değişkenlere erişme
 
 Önceki bölümde yer aldığı yöntemlerden birini kullanarak değişkeni ve değerini belirttikten sonra, görev dizilerinizde kullanın. Örneğin, yerleşik görev dizisi değişkenleri için varsayılan değerlere erişin veya bir değişkenin değerinde bir adım koşullu yapın.  
 
@@ -271,7 +271,7 @@ Görev dizisi ortamındaki değişken değerlerine erişmek için aşağıdaki y
 - [Özel Betik](#bkmk_access-script)  
 - [Windows kurulumu yanıt dosyası](#bkmk_access-answer)  
   
-### <a name="use-in-a-step"></a><a name="bkmk_access-step"></a>Bir adımda kullanma
+### <a name="use-in-a-step"></a><a name="bkmk_access-step"></a> Bir adımda kullanma
 
 Bir görev dizisi adımındaki ayar için bir değişken değeri belirtin. Görev sırası düzenleyicisinde, adımı düzenleyin ve alan değeri olarak değişken adını belirtin. Değişken adını yüzde işaretleri () içine alın `%` .
 
@@ -279,7 +279,7 @@ Bir görev dizisi adımındaki ayar için bir değişken değeri belirtin. Göre
 
 `cmd.exe /c %_SMSTSMachineName% > C:\File.txt`
 
-### <a name="step-condition"></a><a name="bkmk_access-condition"></a>Adım koşulu
+### <a name="step-condition"></a><a name="bkmk_access-condition"></a> Adım koşulu
 
 Bir adım veya gruptaki koşulun bir parçası olarak yerleşik veya özel görev dizisi değişkenleri kullanın. Görev sırası, adımı veya grubu çalıştırmadan önce değişken değerini değerlendirir.
 
@@ -305,7 +305,7 @@ Var olan bir işletim sistemi görüntüsünü yüklemek için varsayılan göre
 
 Koşullar hakkında daha fazla bilgi için bkz. [görev dizisi Düzenleyicisi-koşullar](task-sequence-editor.md#bkmk_conditions).
 
-### <a name="custom-script"></a><a name="bkmk_access-script"></a>Özel Betik
+### <a name="custom-script"></a><a name="bkmk_access-script"></a> Özel Betik
 
 Görev dizisi çalışırken **Microsoft. SMS. TSEnvironment** com nesnesini kullanarak değişkenleri okuyun ve yazın.
 
@@ -329,7 +329,7 @@ Write-Output "Hello world!" | Out-File -FilePath "$_SMSTSLogPath\mylog.log" -Enc
 $tsenv.Value("startTime") = (Get-Date -Format HH:mm:ss) + ".000+000"
 ```
 
-### <a name="windows-setup-answer-file"></a><a name="bkmk_access-answer"></a>Windows kurulumu yanıt dosyası
+### <a name="windows-setup-answer-file"></a><a name="bkmk_access-answer"></a> Windows kurulumu yanıt dosyası
 
 Sağladığınız Windows kurulumu yanıt dosyasında katıştırılmış görev sırası değişkenleri olabilir. Formunu kullanın `%varname%` , burada *varname* değişkenin adıdır. **Windows 'u ve ConfigMgr 'Yi Kur** adımı, gerçek değişken değeri için değişken adı dizesinin yerini alır. Bu katıştırılmış görev sırası değişkenleri bir unattend.xml yanıt dosyasındaki yalnızca sayısal alanlarda kullanılamaz.
 

@@ -10,12 +10,12 @@ ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: f9f4e1ffe8b28efda0f59e6a252f39c95e2b7749
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 1434d7802eb1ed68cb0a575778bdae1e5e99c9ec
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240125"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694755"
 ---
 # <a name="remote-connection-profiles-in-configuration-manager"></a>Configuration Manager uzak bağlantı profilleri
 
@@ -31,11 +31,11 @@ Configuration Manager, **uzak bilgisayar bağlantısı**olan istemcilerde bir g�
 > [!IMPORTANT]  
 > Bir Kullanıcı ve bir cihaz arasındaki Kullanıcı cihaz benzeşimi ilişkisi değişirse Configuration Manager, uzak bağlantı profilini ve Windows Güvenlik Duvarı ayarlarını, bilgisayara bağlantıları engelleyecek şekilde devre dışı bırakır.
 
-## <a name="prerequisites"></a>Önkoşullar  
+## <a name="prerequisites"></a>Ön koşullar  
 
 ### <a name="external-dependencies"></a>Dış bağımlılıklar  
 
-- Kullanıcıların Internet 'ten bağlanmasını etkinleştirmek istiyorsanız, bir Uzak Masaüstü Ağ Geçidi sunucusu yükleyip yapılandırın. Uzak Masaüstü Ağ Geçidi sunucusunun nasıl yükleneceği ve yapılandırılacağı hakkında daha fazla bilgi için, [her yerden uzak Masaüstü Hizmetleri erişim](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere)bölümüne bakın.
+- Kullanıcıların Internet 'ten bağlanmasını etkinleştirmek istiyorsanız, bir Uzak Masaüstü Ağ Geçidi sunucusu yükleyip yapılandırın. Uzak Masaüstü Ağ Geçidi sunucusunun nasıl yükleneceği ve yapılandırılacağı hakkında daha fazla bilgi için, [her yerden uzak Masaüstü Hizmetleri erişim](/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere)bölümüne bakın.
 
 - İstemciler ana bilgisayar tabanlı bir güvenlik duvarı çalıştıralıyorsa, mstsc.exe programı etkinleştirmesi gerekir. Uzak bağlantı profilini yapılandırırken **Windows etki alanlarındaki ve özel ağlardaki bağlantılarda Windows Güvenlik Duvarı özel durumuna Izin ver**ayarını etkinleştirin. Bu ayar Configuration Manager Windows güvenlik duvarını otomatik olarak yapılandırmak için izin verir.
 
@@ -52,7 +52,7 @@ Configuration Manager, **uzak bilgisayar bağlantısı**olan istemcilerde bir g�
 
 ## <a name="security-and-privacy-considerations"></a>Güvenlik ve gizlilik konuları
 
-### <a name="security-considerations"></a>Güvenlik konuları  
+### <a name="security-considerations"></a>Güvenlikle ilgili dikkat edilmesi gerekenler  
 
 - Kullanıcıların birincil cihazlarını tanımlamalarına izin vermek yerine kullanıcı aygıtı benzeşimini elle belirtin. Kullanım tabanlı yapılandırmayı etkinleştirmeyin.
 
@@ -83,7 +83,7 @@ Bir Kullanıcı bir iş bilgisayarına uzaktan bağlanıyorsa, bir. wsrdp dosyas
         - Bölümler arasında nokta ( `.` ) ve bağlantı noktasından önce iki nokta ( `:` ) dışında, tek özel karakterler Dash ( `–` ) ve alt çizgi ( `_` ).
         - Configuration Manager, bu değer için uluslararası bir etki alanı adının kullanımını desteklemez.
 
-    - **Yalnızca ağ düzeyinde kimlik doğrulama Ile uzak masaüstü çalıştıran bilgisayarlardan bağlantıya Izin ver**: varsayılan olarak etkin, bu ayar bağlantı için ek bir güvenlik düzeyi ekler. Daha fazla bilgi için bkz. [Uzak Masaüstü erişimi verme](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#why-allow-connections-only-with-network-level-authentication).
+    - **Yalnızca ağ düzeyinde kimlik doğrulama Ile uzak masaüstü çalıştıran bilgisayarlardan bağlantıya Izin ver**: varsayılan olarak etkin, bu ayar bağlantı için ek bir güvenlik düzeyi ekler. Daha fazla bilgi için bkz. [Uzak Masaüstü erişimi verme](/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#why-allow-connections-only-with-network-level-authentication).
 
     - Aşağıdaki bağlantı ayarlarını etkinleştirin:
 
@@ -162,4 +162,4 @@ Configuration Manager, uzak bağlantı profilleri hakkındaki bilgileri izlemek 
 > [!IMPORTANT]  
 > `%`Uyumluluk ayarları raporlarında **Cihaz filtresi** ve **Kullanıcı filtresi** parametrelerini kullanırken joker karakteri () kullanın.  
 
-Configuration Manager raporlamayı yapılandırma hakkında daha fazla bilgi için bkz. [raporlamaya giriş](../../core/servers/manage/introduction-to-reporting.md).  
+Configuration Manager raporlamayı yapılandırma hakkında daha fazla bilgi için bkz. [raporlamaya giriş](../../core/servers/manage/introduction-to-reporting.md).

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: 5cee950e2b42d73f20921c2baf08b98d2d206586
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: a6e27e2d03983fdf627016d0e3b41aaa378afe29
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591197"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693480"
 ---
 # <a name="deploy-software-updates"></a>Yazılım güncelleştirmelerini dağıtma  
 
@@ -69,7 +69,7 @@ Aşağıdaki listede, yazılım güncelleştirmelerinin el ile dağıtımı içi
 Daha fazla bilgi ve ayrıntılı adımlar için bkz. [yazılım güncelleştirmelerini el ile dağıtma](manually-deploy-software-updates.md).
 
 > [!Note]
-> - 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
+> - 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
 > - Microsoft 365 Apps istemci güncelleştirmelerini el ile dağıttığınızda, **yazılım kitaplığı** çalışma alanının **Office 365 Istemci yönetimi** altındaki **Office 365 güncelleştirmeleri** düğümünde bunları bulun. 
 
 ## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a> Yazılım güncelleştirmelerini otomatik olarak dağıt

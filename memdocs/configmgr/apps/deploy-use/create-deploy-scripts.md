@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2113baf43c377379a2a996c59fd13e55072cf898
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
+ms.openlocfilehash: db3a673d99efc40bd6fa0da7930c66c648136e03
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605193"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695382"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Configuration Manager konsolundan PowerShell betikleri oluşturun ve çalıştırın
 
@@ -40,7 +40,7 @@ Configuration Manager ' de bu tümleştirmeyle, *komut dosyalarını çalıştı
 > - Betiklerin gücü verildiğinde, kasıtlı olarak ve kullanımlarıyla ilgili bir sorun olduğunu hatırladık. Size yardımcı olmaya yönelik ek korumalar sunuyoruz; ayrılmış roller ve kapsamlar. Betikleri çalıştırmadan önce betiklerin doğruluğunu doğruladığınızdan emin olun ve istenmeyen betik yürütmeyi engellemek için güvenilir bir kaynaktan olduklarını doğrulayın. Genişletilmiş karakterler veya başka bir gizleme olun ve betikleri güvenli hale getirme hakkında kendinizi eğitin. [PowerShell betiği güvenliği hakkında daha fazla bilgi edinin](learn-script-security.md)
 > - Bazı kötü amaçlı yazılımdan koruma yazılımları yanlışlıkla Configuration Manager çalıştırmak betiklerine veya CMPivot özelliklerine karşı olayları tetikleyemeyebilir. Kötü amaçlı yazılımdan koruma yazılımının bu özelliklerin girişim olmadan çalışmasına izin vermesi için%windir%\CCM\ScriptStore hariç tutulması önerilir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - PowerShell betikleri çalıştırmak için, istemcinin PowerShell sürüm 3,0 veya üzerini çalıştırıyor olması gerekir. Ancak, çalıştırdığınız bir betik bir PowerShell 'in daha sonraki bir sürümünden işlevsellik içeriyorsa, betiği çalıştırdığınız istemcinin bu PowerShell sürümünü çalıştırması gerekir.
 - Configuration Manager istemcileri, betikleri çalıştırmak için istemciyi 1706 sürümünden veya daha sonra çalıştırıyor olmalıdır.
@@ -101,10 +101,10 @@ Bu onay öncelikle betik geliştirmenin test aşaması için kullanılır.
   
 Çalıştırma betikleri, Kullanıcı gruplarını temsil eden Etiketler atayarak yazma ve yürütmeyi denetlemek için, Configuration Manager mevcut bir özelliği olan güvenlik kapsamlarını kullanır. Güvenlik kapsamlarını kullanma hakkında daha fazla bilgi için bkz. [Configuration Manager için rol tabanlı yönetimi yapılandırma](../../core/servers/deploy/configure/configure-role-based-administration.md).
 
-## <a name="create-security-roles-for-scripts"></a><a name="bkmk_ScriptRoles"></a>Betikler için güvenlik rolleri oluşturma
+## <a name="create-security-roles-for-scripts"></a><a name="bkmk_ScriptRoles"></a> Betikler için güvenlik rolleri oluşturma
 Komut dosyalarını çalıştırmak için kullanılan üç güvenlik rolü Configuration Manager ' de varsayılan olarak oluşturulmaz. Komut dosyası çalıştıranlar, komut dosyası yazarları ve betik onaylayanlar rollerini oluşturmak için, özetlenen adımları izleyin.
 
-1. Configuration Manager konsolunda, **Yönetim** >**güvenlik** >**güvenliği rolleri** ' ne gidin
+1. Configuration Manager konsolunda, **Yönetim**  > **güvenlik**  > **güvenliği rolleri** ' ne gidin
 2. Rol üzerinde sağ tıklayın ve **Kopyala**' ya tıklayın. Kopyaladığınız rolün izinleri zaten atanmış. Yalnızca istediğiniz izinleri aldığınızdan emin olun. 
 3. Özel role bir **ad** ve **Açıklama**sağlayın. 
 4. Güvenlik rolünü aşağıda özetlenen izinler atayın.  
@@ -117,9 +117,9 @@ Komut dosyalarını çalıştırmak için kullanılan üç güvenlik rolü Confi
 
 |Kategori|İzin|Durum|
 |---|---|---|
-|Koleksiyon|Betiği Çalıştır|Yes|
-|Site|Okuma|Yes|
-|SMS betikleri|Okuma|Yes|
+|Koleksiyon|Betiği Çalıştır|Evet|
+|Site|Okuma|Evet|
+|SMS betikleri|Okuma|Evet|
 
 
 **Rol adı**: betik yazarları  
@@ -129,11 +129,11 @@ Komut dosyalarını çalıştırmak için kullanılan üç güvenlik rolü Confi
 |Kategori|İzin|Durum|
 |---|---|---|
 |Koleksiyon|Betiği Çalıştır|Hayır|
-|Site|Okuma|Yes|
-|SMS betikleri|Oluştur|Yes|
-|SMS betikleri|Okuma|Yes|
-|SMS betikleri|Sil|Yes|
-|SMS betikleri|Değiştir|Yes|
+|Site|Okuma|Evet|
+|SMS betikleri|Oluştur|Evet|
+|SMS betikleri|Okuma|Evet|
+|SMS betikleri|Sil|Evet|
+|SMS betikleri|Değiştir|Evet|
 
 
 **Rol adı**: betik onaylayanları  
@@ -143,10 +143,10 @@ Komut dosyalarını çalıştırmak için kullanılan üç güvenlik rolü Confi
 |Kategori|İzin|Durum|
 |---|---|---|
 |Koleksiyon|Betiği Çalıştır|Hayır|
-|Site|Okuma|Yes|
-|SMS betikleri|Okuma|Yes|
-|SMS betikleri|Onaylama|Yes|
-|SMS betikleri|Değiştir|Yes|
+|Site|Okuma|Evet|
+|SMS betikleri|Okuma|Evet|
+|SMS betikleri|Onaylama|Evet|
+|SMS betikleri|Değiştir|Evet|
 
      
 **Betik yazarları rolü için SMS betikleri izinleri örneği**  
@@ -203,9 +203,9 @@ Bu örnekte, *adı*dize parametresinin özelliklerini ayarlayabileceksiniz.
 
 #### <a name="using-regular-expression-validation"></a>Normal Ifade doğrulamasını kullanma
 
-Normal ifade, bir karakter dizesini kodlanmış bir doğrulamaya göre denetlemek için programlama açısından bir düzenleme biçimidir. Örneğin, *Regex* alanına yerleştirerek `[^A-Z]` *FirstName* alanındaki büyük alfabetik bir karakterin yokluğunu kontrol edebilirsiniz.
+Normal ifade, bir karakter dizesini kodlanmış bir doğrulamaya göre denetlemek için programlama açısından bir düzenleme biçimidir. Örneğin, Regex alanına yerleştirerek *FirstName* alanındaki büyük alfabetik bir karakterin yokluğunu kontrol edebilirsiniz `[^A-Z]` . *RegEx*
 
-Bu iletişim kutusu için normal ifade işleme .NET Framework tarafından desteklenir. Normal ifadeleri kullanma hakkında yönergeler için bkz. [.net normal ifade](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions) ve [normal ifade dili](https://docs.microsoft.com/dotnet/standard/base-types/regular-expression-language-quick-reference).
+Bu iletişim kutusu için normal ifade işleme .NET Framework tarafından desteklenir. Normal ifadeleri kullanma hakkında yönergeler için bkz. [.net normal ifade](/dotnet/standard/base-types/regular-expressions) ve [normal ifade dili](/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
 
 ## <a name="script-examples"></a>Betik örnekleri
@@ -236,7 +236,7 @@ Bu betik, makinenin işletim sistemi sürümü için sorgulamak üzere WMI kulla
 Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 ```
 
-## <a name="edit-or-copy-powershell-scripts"></a><a name="bkmk_psedit"></a>PowerShell betikleri düzenleme veya kopyalama
+## <a name="edit-or-copy-powershell-scripts"></a><a name="bkmk_psedit"></a> PowerShell betikleri düzenleme veya kopyalama
 <!--3705507-->
 *(Sürüm 1902 ile tanıtılan)*  
 **Betikleri Çalıştır** özelliği ile kullanılan mevcut bir PowerShell betiğini **düzenleyebilir** veya **kopyalayabilirsiniz** . Değiştirmeniz gereken bir betiği yeniden oluşturmak yerine, şimdi doğrudan düzenleyin. Her iki eylem de yeni bir komut dosyası oluştururken kullandığınız sihirbaz deneyimini kullanır. Bir betiği düzenlerken veya kopyaladığınızda, Configuration Manager onay durumunu kalıcı durumdan tutmaz.
@@ -294,7 +294,7 @@ Bir cihaz koleksiyonunda betik çalıştırmayı başlattıktan sonra, işlemi i
 
 ## <a name="script-output"></a>Betik çıkışı
 
-İstemcinin betik sonuçlarını [ConvertTo-JSON](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) cmdlet 'INE ayırarak JSON biçimlendirmesini kullanarak geri dönüş betiği çıkışı. JSON biçimi sürekli olarak okunabilir betik çıkışı döndürüyor. Nesneleri çıkış olarak döndürmeyen betikler için, ConvertTo-JSON cmdlet 'i, çıktıyı, istemcinin JSON yerine döndürdüğü basit bir dizeye dönüştürür.  
+İstemcinin betik sonuçlarını [ConvertTo-JSON](/powershell/module/microsoft.powershell.utility/convertto-json) cmdlet 'INE ayırarak JSON biçimlendirmesini kullanarak geri dönüş betiği çıkışı. JSON biçimi sürekli olarak okunabilir betik çıkışı döndürüyor. Nesneleri çıkış olarak döndürmeyen betikler için, ConvertTo-JSON cmdlet 'i, çıktıyı, istemcinin JSON yerine döndürdüğü basit bir dizeye dönüştürür.  
 
 - Bilinmeyen bir sonuç elde eden veya istemcinin çevrimdışı olduğu betikler, grafiklerde veya veri kümesinde gösterilmez. <!--507179-->
 - 4 KB 'ye kırpdığından büyük betik çıkışı döndürülmekten kaçının. <!--508488-->
@@ -302,11 +302,11 @@ Bir cihaz koleksiyonunda betik çalıştırmayı başlattıktan sonra, işlemi i
 
    ![Enum nesnesini bir sabit değere Dönüştür](./media/run-scripts/enum-tostring-JSON.png)
 
-Ayrıntılı betik çıkışını ham veya yapılandırılmış JSON biçiminde görüntüleyebilirsiniz. Bu biçimlendirme, çıktının okunmasını ve çözümlenmesini kolaylaştırır. Betik geçerli bir JSON biçimli metin döndürürse veya çıkış, [ConvertTo-JSON](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) PowerShell cmdlet 'ı kullanılarak JSON 'a dönüştürülebileceğinden, ayrıntılı çıktıyı **JSON çıktısı** veya **Ham çıktı**olarak görüntüleyin. Aksi takdirde tek seçenek **betik çıktıdır**.
+Ayrıntılı betik çıkışını ham veya yapılandırılmış JSON biçiminde görüntüleyebilirsiniz. Bu biçimlendirme, çıktının okunmasını ve çözümlenmesini kolaylaştırır. Betik geçerli bir JSON biçimli metin döndürürse veya çıkış, [ConvertTo-JSON](/powershell/module/microsoft.powershell.utility/convertto-json) PowerShell cmdlet 'ı kullanılarak JSON 'a dönüştürülebileceğinden, ayrıntılı çıktıyı **JSON çıktısı** veya **Ham çıktı**olarak görüntüleyin. Aksi takdirde tek seçenek **betik çıktıdır**.
 
 ### <a name="example-script-output-is-convertible-to-valid-json"></a>Örnek: betik çıkışı geçerli JSON 'a dönüştürülebilir
 
-Komutundaki`$PSVersionTable.PSVersion`  
+Komutundaki `$PSVersionTable.PSVersion`  
 
 ``` Output
 Major  Minor  Build  Revision
@@ -316,7 +316,7 @@ Major  Minor  Build  Revision
 
 ### <a name="example-script-output-isnt-valid-json"></a>Örnek: betik çıkışı geçerli bir JSON değil
 
-Komutundaki`Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
+Komutundaki `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
 ``` Output
 Microsoft Windows 10 Enterprise

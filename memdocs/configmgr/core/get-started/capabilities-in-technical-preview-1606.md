@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0513c1908b1360a50653931dda57e5d148055240
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 18ea44f662591a21750fb630425ddfb975678aa2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905667"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695605"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Configuration Manager için Technical Preview 1606 ' deki yetenekler
 
@@ -36,7 +36,7 @@ Bu makalede, sürüm 1606 Configuration Manager için Technical Preview 'da kull
 
 **Aşağıda, bu sürümle deneyebilmeniz için kullanabileceğiniz yeni özellikler verilmiştir.**  
 
-## <a name="automatically-categorize-devices-into-collections"></a><a name="dmp_category"></a>Cihazları koleksiyonlara otomatik olarak kategorilere ayır
+## <a name="automatically-categorize-devices-into-collections"></a><a name="dmp_category"></a> Cihazları koleksiyonlara otomatik olarak kategorilere ayır
 Microsoft Intune ile Configuration Manager kullanırken cihazları otomatik olarak cihaz koleksiyonlarına yerleştirmek için kullanılabilecek cihaz kategorileri oluşturabilirsiniz. Daha sonra kullanıcıların Intune 'A cihaz kaydettiğinde bir cihaz kategorisi seçmesi gerekir. Ayrıca, Configuration Manager konsolundan bir cihazın kategorisini de değiştirebilirsiniz.
 
 **Önemli:** Bu özellik Microsoft Intune **haziran 2016** sürümüyle birlikte çalışarak. Bu yordamları denemeden önce bu sürüme güncelleştirildiğinden emin olun.
@@ -59,7 +59,7 @@ Bir koleksiyonu bir cihaz kategorisiyle ilişkilendirdiğinizde, belirttiğiniz 
 2.  **Cihazlar** listesinden bir cihaz seçin ve ardından **giriş** sekmesinde, **cihaz** grubunda, **Kategoriyi Değiştir**' i tıklatın.
 3.  **Cihaz kategorisini Düzenle** iletişim kutusunda, bu cihaza uygulanacak kategoriyi seçin ve ardından **Tamam**' a tıklayın.
 
-## <a name="enforcement-grace-period-for-required-application-and-software-update-deployments"></a><a name="dmp_grace"></a>Gerekli uygulama ve yazılım güncelleştirme dağıtımları için zorlama yetkisiz kullanım süresi
+## <a name="enforcement-grace-period-for-required-application-and-software-update-deployments"></a><a name="dmp_grace"></a> Gerekli uygulama ve yazılım güncelleştirme dağıtımları için zorlama yetkisiz kullanım süresi
 
 Bazı durumlarda, yapılandırdığınız son tarihlerden sonra kullanıcılara gerekli uygulama dağıtımlarını veya yazılım güncelleştirmelerini yüklemek için daha fazla zaman vermek isteyebilirsiniz. Bu, genellikle bir bilgisayar uzun bir süre kapatılmış ve çok sayıda uygulama veya güncelleştirme dağıtımı yüklemesi gerektiğinde gerekli olabilir.
 Örneğin, bir son kullanıcı tatilden yeni döndürülürse, süresi geçmiş uygulama dağıtımları yüklenirken uzun süredir beklemek zorunda kalabilir.
@@ -80,9 +80,9 @@ Yazılım güncelleştirmeleri dağıtım sihirbazına, otomatik dağıtım kura
 
 Device Guard, cihazda çalışmasına izin verilen öğeleri tamamen denetlemek için donanım ve yazılım özelliklerini kullanan bir Windows 10 özelliğidir.
 
-Daha fazla bilgi için bkz. [Device Guard 'A giriş](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
+Daha fazla bilgi için bkz. [Device Guard 'A giriş](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
 
-Bu sürümde, Configuration Manager ile dağıtılan yürütülebilir ve DLL dosyalarının yönetilen bir yükleyiciden geldiği şekilde otomatik olarak güvenilir olması için, Configuration Manager Device Guard ve [Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) ile birlikte çalışabilir, yani hedef cihazda çalışmasına izin verilecek ve diğer yazılım, açıkça diğer AppLocker kuralları tarafından çalışmasına izin verilmediği sürece çalışmasına izin verilmeyecektir.  
+Bu sürümde, Configuration Manager ile dağıtılan yürütülebilir ve DLL dosyalarının yönetilen bir yükleyiciden geldiği şekilde otomatik olarak güvenilir olması için, Configuration Manager Device Guard ve [Windows AppLocker](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) ile birlikte çalışabilir, yani hedef cihazda çalışmasına izin verilecek ve diğer yazılım, açıkça diğer AppLocker kuralları tarafından çalışmasına izin verilmediği sürece çalışmasına izin verilmeyecektir.  
 
 Mevcut olduğunda, bu özellik Configuration Manager konsolundan yapılandırılamaz. İlkeyi yapılandırmak için, her istemcide bir kayıt defteri anahtarı yapılandırıp istemci üzerinde Windows hizmetlerini yapılandırmanız gerekir.
 Bu işlem tamamlandıktan sonra, AppLocker ilke dosyasını yapılandırın. İlke dosyasını yapılandırdıktan sonra, herhangi bir uyumlu istemci cihazına dağıtabilirsiniz.
@@ -95,11 +95,11 @@ Tüm AppLocker ilkeleri gibi, yönetilen yükleyici kuralları olan ilkeler iki 
 
 Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
-- [Device Guard tanıtımı](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
+- [Device Guard tanıtımı](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [Windows Defender uygulama denetimi dağıtım işlemini Planlama ve kullanmaya başlama](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
+- [Windows Defender uygulama denetimi dağıtım işlemini Planlama ve kullanmaya başlama](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
-  ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a>Şirket içi mobil cihaz yönetimi için birden çok cihaz yönetim noktası  
+  ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a> Şirket içi mobil cihaz yönetimi için birden çok cihaz yönetim noktası  
   Technical Preview 1606 ile, \- Şirket Içi mobil cihaz yönetimi (MDM), kayıtlı bir cihazı, kullanılabilir birden fazla cihaz yönetim noktasına sahip olacak şekilde otomatik olarak yapılandıran, Windows 10 yıldönümü güncelleştirmesi 'nde yeni bir özelliği destekler. Bu özellik, normal kullandığı bir cihaz kullanılabilir olmadığında cihazın başka bir cihaz yönetim noktasına geri yüklenmesine izin verir. Bu özellik yalnızca Windows 10 yıldönümü güncelleştirmesi yüklü olan bilgisayarlarda kullanılabilir.  
 
 ### <a name="try-it-out"></a>Deneyin!  
@@ -170,8 +170,8 @@ Ağda kullanılan istemci sertifikalarının kökünü dışarı aktarmanın en 
 #### <a name="upload-the-management-certificate-to-azure"></a>Yönetim sertifikasını Azure 'a yükleme
 
 Configuration Manager Azure API 'sine erişmek ve bulut proxy hizmetini yapılandırmak için bir Azure Yönetim sertifikası gereklidir. Bir yönetim sertifikasını karşıya yükleme hakkında daha fazla bilgi ve yönergeler için, Azure belgelerinde aşağıdaki makalelere bakın:
-- [Azure Cloud Services’da sertifikalara genel bakış](https://azure.microsoft.com/documentation/articles/cloud-services-certs-create/)
-- [Azure yönetim API Management sertifikasını karşıya yükleyin](https://azure.microsoft.com/documentation/articles/azure-api-management-certs/).
+- [Azure Cloud Services’da sertifikalara genel bakış](/azure/cloud-services/cloud-services-certs-create)
+- [Azure yönetim API Management sertifikasını karşıya yükleyin](/previous-versions/azure/azure-api-management-certs).
 
 Yönetim sertifikasıyla ilişkili abonelik KIMLIĞINI kopyalamadığınızdan emin olun. Bulut proxy hizmetini Configuration Manager konsolunda yapılandırmak için buna ihtiyacınız olacaktır.
 
@@ -194,7 +194,7 @@ Yönetim sertifikasıyla ilişkili abonelik KIMLIĞINI kopyalamadığınızdan e
 2. Bulut proxy hizmeti aracılığıyla yönetmek istediğiniz istemcilerin birincil sitesini seçin ve **Özellikler**' e tıklayın.
 3. Birincil site Özellik sayfasının Istemci bilgisayar Iletişimleri sekmesinde, **kullanılabilir olduğunda PKI istemci sertifikası (istemci kimlik doğrulaması)** seçeneğinin yanındaki kutuyu işaretleyin.
 4. **İstemciler site sistemleri için sertifika iptal listesini (CRL) kontrol edin ' in**yanındaki kutuyu temizlediğinizden emin olun. Bu seçenek yalnızca CRL 'YI herkese açık bir şekilde yayımlıyorsanız gereklidir.
-5. **Tamam**'a tıklayın.
+5. **Tamam** düğmesine tıklayın.
 
 #### <a name="add-the-cloud-proxy-connector-point"></a>Bulut proxy Bağlayıcısı noktasını ekleyin
 
@@ -211,7 +211,7 @@ Bulut proxy hizmetini ayarlamanın son adımı, site sistem rollerini, bulut pro
 
 #### <a name="check-status-on-a-client-on-the-internet"></a>Internet 'teki bir istemcideki durumu denetleme
 
-Hizmet ve roller tamamen yapılandırıldıktan sonra, iç istemciler bulut proxy hizmeti 'nin konumunu bir sonraki konum isteğiyle alır. Güncelleştirilmiş konum bilgileri olan istemciler daha sonra Internet 'teki Configuration Manager ile iletişim kurabilir. Konum istekleri için yoklama döngüsünün her 24 saati vardır. Normal olarak zamanlanmış konum isteğini beklemek istemiyorsanız, bilgisayarda SMS Aracısı ana bilgisayar hizmeti 'ni (Ccmexec. exe) yeniden başlatarak isteği zorlayabilirsiniz.
+Hizmet ve roller tamamen yapılandırıldıktan sonra, iç istemciler bulut proxy hizmeti 'nin konumunu bir sonraki konum isteğiyle alır. Güncelleştirilmiş konum bilgileri olan istemciler daha sonra Internet 'teki Configuration Manager ile iletişim kurabilir. Konum istekleri için yoklama döngüsünün her 24 saati vardır. Normal olarak zamanlanmış konum isteğini beklemek istemiyorsanız, bilgisayarda SMS Aracısı ana bilgisayar hizmeti 'ni (ccmexec.exe) yeniden başlatarak isteği zorlayabilirsiniz.
 
 İstemciler bulut proxy hizmeti için yeni konum bilgilerine sahip olduktan sonra, artık iç özel ağda olmayan ancak Internet erişimi olan istemcilerin durumunu denetlemeyi deneyin. Ayrıca, bulut proxy hizmetindeki trafiği **yönetim > Cloud Services > bulut proxy hizmeti**' ne giderek, liste bölmesinde hizmeti seçerek ve trafik bilgilerini Ayrıntılar bölmesinde görüntüleyerek de izleyebilirsiniz.   
 
@@ -241,7 +241,7 @@ Technical Preview 1606 ile Configuration Manager konsolundaki güncelleştirmele
 - **Daha fazla yükleme durumu:**
 
     Bir sitenin güncelleştirme yükleme durumunu görüntülediğinizde, konsol artık aşağıdaki eylemler için ayrı Ayrıntılar görüntüler:
-    - **İndir** (Bu yalnızca hizmet bağlantı noktası site sistem rolünün yüklü olduğu en üst katman sitesi için geçerlidir)
+    - **İndir**  (Bu yalnızca hizmet bağlantı noktası site sistem rolünün yüklü olduğu en üst katman sitesi için geçerlidir)
     - **Çoğaltma**
     - **Önkoşul Denetimi**
     - **Yükleme**

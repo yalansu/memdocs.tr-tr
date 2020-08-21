@@ -2,7 +2,7 @@
 title: Yazılım Merkezini planlama
 titleSuffix: Configuration Manager
 description: Kullanıcıların Configuration Manager etkileşimde bulunmak için yazılım merkezi 'ni nasıl yapılandırmak ve marka eklemek istediğinize karar verin.
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c6826794-aa19-469d-ae47-1a0db68a1ff1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5b32fc2de3c945ff2292f119a10d84d982d08677
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 802dbaa4188199e555a5cc0143ed599ad454e27e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127367"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695180"
 ---
 # <a name="plan-for-software-center"></a>Yazılım Merkezini planlama
 
@@ -25,7 +25,7 @@ Kullanıcılar ayarları değiştirebilir, uygulamalara gözatabilir ve yazılı
 
 Yazılım Merkezi 'nin diğer özellikleri hakkında daha fazla bilgi için bkz. [Software Center Kullanıcı Kılavuzu](../../core/understand/software-center.md).  
 
-## <a name="configure-software-center"></a><a name="bkmk_userex"></a>Yazılım merkezini yapılandırma  
+## <a name="configure-software-center"></a><a name="bkmk_userex"></a> Yazılım merkezini yapılandırma  
 
 Yazılım Merkezi 'nin en son özelliklerinden yararlanmak için Configuration Manager sitelerinizi ve istemcilerinizi sürüm 1906 veya sonraki bir sürüme güncelleştirin.
 
@@ -44,6 +44,8 @@ Yazılım Merkezi 'nin en son özelliklerinden yararlanmak için Configuration M
 
 - Kullanıcılar, yazılım merkezi 'nde Kullanıcı cihaz benzeşimini yapılandırabilir. Daha fazla bilgi için bkz. [kullanıcıları ve cihazları Kullanıcı cihaz benzeşimi Ile bağlama](../deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
+- Sürüm 2006 ' den başlayarak, birlikte yönetilen cihazları hem Intune hem de Configuration Manager uygulamalar için Şirket Portalı kullanacak şekilde yapılandırabilirsiniz. Daha fazla bilgi için bkz. [ortak yönetilen cihazlarda şirket portalı uygulamasını kullanma](../../comanage/company-portal.md).<!--CMADO-3601237,INADO-4297660-->
+
 > [!IMPORTANT]
 > Yeni Configuration Manager özelliklerinden yararlanmak için önce istemcileri en son sürüme güncelleştirin. Site ve konsolu güncelleştirdiğinizde Configuration Manager konsolunda yeni işlevsellik göründüğünde, istemci sürümü de en son olana kadar, tüm senaryo işlevsel değildir.
 
@@ -57,7 +59,7 @@ Yazılım Merkezi 'nin en son özelliklerinden yararlanmak için Configuration M
 
 - Daha önce yazılım merkezi, kullanılabilir sunucular listesinden ilk yönetim noktasını çekildi. Sürüm 1906 ' den başlayarak, istemcinin kullandığı yönetim noktasını kullanır. Bu değişiklik, yazılım merkezi 'nin istemci olarak atanan birincil siteden aynı yönetim noktasını kullanmasına olanak sağlar.
 
-## <a name="replace-toast-notifications-with-dialog-window"></a><a name="bkmk_impact"></a>Bildirim bildirimlerini iletişim kutusu penceresiyle değiştirme
+## <a name="replace-toast-notifications-with-dialog-window"></a><a name="bkmk_impact"></a> Bildirim bildirimlerini iletişim kutusu penceresiyle değiştirme
 
 <!--3555947-->
 Bazen kullanıcılar, bir yeniden başlatma veya gerekli dağıtım hakkındaki Windows bildirim bildirimini görmez. Ardından, anımsatıcıyı erteleme deneyimini görmez. Bu davranış, istemci son tarihe ulaştığında kötü bir kullanıcı deneyimine yol açabilir.
@@ -141,4 +143,7 @@ Uygulama Kataloğu kullanıyorsanız, marka şu öncelikleri izler:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yazılım Merkezi kullanıcı kılavuzu](../../core/understand/software-center.md)
+
 - [Uygulama yönetimini planlama ve yapılandırma](plan-for-and-configure-application-management.md)
+
+- [Ortak yönetilen cihazlarda Şirket Portalı uygulamasını kullanma](../../comanage/company-portal.md)

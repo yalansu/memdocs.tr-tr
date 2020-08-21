@@ -10,12 +10,12 @@ ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 23cc7d0c642637a310f53280bafed6a2a28d2834
-ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
+ms.openlocfilehash: ea1965d6cae90808156957be1c9634e4c1631aa8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83406683"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694534"
 ---
 # <a name="create-a-configuration-manager-lab-in-azure"></a>Azure 'da Configuration Manager Laboratuvarı oluşturma
 
@@ -44,7 +44,7 @@ Bu işlem, aşağıdaki nesneleri oluşturabileceğiniz bir Azure aboneliği ger
 
 
 
-## <a name="process"></a>İşleme
+## <a name="process"></a>İşlem
 
 1. [Configuration Manager Technical Preview şablonuna](https://azure.microsoft.com/resources/templates/sccm-technicalpreview/) gidin veya [geçerli dal şablonunu Configuration Manager](https://azure.microsoft.com/resources/templates/sccm-currentbranch/).  
 
@@ -66,7 +66,7 @@ Bu işlem, aşağıdaki nesneleri oluşturabileceğiniz bir Azure aboneliği ger
 
         - **Yönetici Kullanıcı adı**: yönetici haklarına sahip VM 'lerde bir kullanıcının adı. Bu kullanıcıyı VM 'lerde oturum açmak için kullanırsınız.  
 
-        - **Yönetici parolası**: parolanın Azure karmaşıklık gereksinimlerini karşılaması gerekir. Daha fazla bilgi için bkz. [adminPassword](https://docs.microsoft.com/rest/api/compute/virtualmachines/createorupdate#osprofile).  
+        - **Yönetici parolası**: parolanın Azure karmaşıklık gereksinimlerini karşılaması gerekir. Daha fazla bilgi için bkz. [adminPassword](/rest/api/compute/virtualmachines/createorupdate#osprofile).  
 
     > [!Important]  
     > Azure için aşağıdaki ayarlar gereklidir. Varsayılan değerleri kullanın. Bu değerleri değiştirmeyin.  
@@ -86,7 +86,7 @@ Azure, ayarları doğrular ve ardından dağıtıma başlar. Azure portal dağı
 
 Yapılandırma betiklerinin durumunu görmek için `<prefix>PS1` sunucuya bağlanın ve şu dosyayı görüntüleyin: `%windir%\TEMP\ProvisionScript\PS1.json` . Tüm adımları tamamlandı olarak gösteriyorsa, işlem yapılır.
 
-VM 'lere bağlanmak için öncelikle her bir VM 'nin genel IP adreslerini Azure portal alın. SANAL makineye bağlandığınızda, etki alanı adı olur `contoso.com` . Dağıtım şablonunda belirttiğiniz kimlik bilgilerini kullanın. Daha fazla bilgi için bkz. [Windows çalıştıran bir Azure sanal makinesine bağlanma ve oturum](https://docs.microsoft.com/azure/virtual-machines/windows/connect-logon)açma.
+VM 'lere bağlanmak için öncelikle her bir VM 'nin genel IP adreslerini Azure portal alın. SANAL makineye bağlandığınızda, etki alanı adı olur `contoso.com` . Dağıtım şablonunda belirttiğiniz kimlik bilgilerini kullanın. Daha fazla bilgi için bkz. [Windows çalıştıran bir Azure sanal makinesine bağlanma ve oturum](/azure/virtual-machines/windows/connect-logon)açma.
 
 
 

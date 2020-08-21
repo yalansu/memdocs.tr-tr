@@ -10,20 +10,20 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 423864c2c954cc67da4ef54d55d7263ae346e786
-ms.sourcegitcommit: 24ce7df7dadf2385afe364b817ec58feeb04c700
+ms.openlocfilehash: cc10f262e4639ffdd8513bece662116f5ed39516
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86212294"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695384"
 ---
 # <a name="microsoft-edge-management"></a>Microsoft Edge yönetimi
 
 *Uygulama hedefi: Configuration Manager (Güncel Dalı)*
 
-Tüm yeni Microsoft Edge iş için hazırlayın. Configuration Manager sürüm 1910 ' den başlayarak, artık kullanıcılarınıza [Microsoft Edge, sürüm 77 ve üstünü](https://docs.microsoft.com/deployedge/) dağıtabilirsiniz. Seçilen Edge derlemesini yüklemek için bir PowerShell betiği kullanılır. Komut dosyası Ayrıca, Configuration Manager ile yönetilebilmesi için otomatik güncelleştirmeleri devre dışı bırakır.
+Tüm yeni Microsoft Edge iş için hazırlayın. Configuration Manager sürüm 1910 ' den başlayarak, artık kullanıcılarınıza [Microsoft Edge, sürüm 77 ve üstünü](/deployedge/) dağıtabilirsiniz. Seçilen Edge derlemesini yüklemek için bir PowerShell betiği kullanılır. Komut dosyası Ayrıca, Configuration Manager ile yönetilebilmesi için otomatik güncelleştirmeleri devre dışı bırakır.
 
-## <a name="deploy-microsoft-edge"></a><a name="bkmk_Microsoft_Edge"></a>Microsoft Edge 'i dağıtma
+## <a name="deploy-microsoft-edge"></a><a name="bkmk_Microsoft_Edge"></a> Microsoft Edge 'i dağıtma
 <!--4561024-->
 Yöneticiler, dağıtım için Microsoft Edge istemcisinin bir sürümüyle birlikte Beta, dev veya kararlı kanal seçebilir. Her sürüm müşterilerimiz ve topluluğumuza dersleri ve geliştirmeler içerir.
 
@@ -31,7 +31,7 @@ Yöneticiler, dağıtım için Microsoft Edge istemcisinin bir sürümüyle birl
 
 Microsoft Edge dağıtımıyla hedeflenen istemciler için:
 
-- PowerShell [yürütme Ilkesi](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) kısıtlı olarak ayarlanamaz.
+- PowerShell [yürütme Ilkesi](/powershell/module/microsoft.powershell.core/about/about_execution_policies) kısıtlı olarak ayarlanamaz.
   - Yüklemeyi gerçekleştirmek için PowerShell yürütülür.
 
 - Microsoft Edge yükleyicisi ve [CMPivot](../../core/servers/manage/cmpivot.md) , **Microsoft kod imzalama** sertifikasıyla imzalanır. Bu sertifika, **Güvenilen Yayımcılar** deposunda listelenmemişse, eklemeniz gerekir. Aksi halde, PowerShell yürütme ilkesi **AllSigned**olarak ayarlandığında Microsoft Edge yükleyicisi ve CMPivot çalışmaz. <!--7585106-->
@@ -43,11 +43,11 @@ Configuration Manager konsolunu çalıştıran cihazın aşağıdaki uç noktala
 |`https://edgeupdates.microsoft.com/api/products?view=enterprise`|Microsoft Edge yayınları hakkında bilgi|
 |`http://dl.delivery.mp.microsoft.com`|Microsoft Edge yayınları için içerik|
 
-### <a name="verify-microsoft-edge-update-policies"></a><a name="bkmk_autoupdate"></a>Microsoft Edge güncelleştirme ilkelerini doğrulama
+### <a name="verify-microsoft-edge-update-policies"></a><a name="bkmk_autoupdate"></a> Microsoft Edge güncelleştirme ilkelerini doğrulama
 
 #### <a name="configuration-manager-version-1910"></a>Configuration Manager sürüm 1910
 
-Sürüm 1910 ' de, Microsoft Edge dağıtıldığında yükleme betiği, Microsoft Edge için otomatik güncelleştirmeleri kapatarak Configuration Manager yönetilebilmesi için devre dışı bırakır. Grup ilkesi kullanarak bu davranışı değiştirebilirsiniz. Daha fazla bilgi için bkz. Microsoft Edge ve [Microsoft Edge güncelleştirme ilkelerini](https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies) [dağıtımınızı planlayın](https://docs.microsoft.com/deployedge/deploy-edge-plan-deployment#define-and-configure-policies) .
+Sürüm 1910 ' de, Microsoft Edge dağıtıldığında yükleme betiği, Microsoft Edge için otomatik güncelleştirmeleri kapatarak Configuration Manager yönetilebilmesi için devre dışı bırakır. Grup ilkesi kullanarak bu davranışı değiştirebilirsiniz. Daha fazla bilgi için bkz. Microsoft Edge ve [Microsoft Edge güncelleştirme ilkelerini](/DeployEdge/microsoft-edge-update-policies) [dağıtımınızı planlayın](/deployedge/deploy-edge-plan-deployment#define-and-configure-policies) .
 
 #### <a name="configuration-manager-version-2002-and-later"></a>Configuration Manager sürüm 2002 ve üzeri
 <!--4561024-->
@@ -103,7 +103,7 @@ Configuration Manager sürüm 1910 ' den başlayarak, **Microsoft Edge yönetimi
    - [Yazılım güncelleştirmelerini el ile dağıtma](../../sum/deploy-use/manually-deploy-software-updates.md)
    - [Yazılım güncelleştirmelerini indirme](../../sum/deploy-use/download-software-updates.md)
 
-## <a name="microsoft-edge-management-dashboard"></a><a name="bkmk_edge-dash"></a>Microsoft Edge Yönetim Panosu
+## <a name="microsoft-edge-management-dashboard"></a><a name="bkmk_edge-dash"></a> Microsoft Edge Yönetim Panosu
 <!--3871913-->
 *(Sürüm 2002 ' de tanıtılmıştır)*
 

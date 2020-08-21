@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3dd4c3f22a0f2c24153e6d26be2e3098511c5dc4
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e408bbe7ea88d70c5a9d02368c2d820584cae2b8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905317"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694449"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-configuration-manager"></a>Configuration Manager için Technical Preview 1710 ' deki yetenekler
 
@@ -97,17 +97,17 @@ Bu sürüm, Windows Defender Exploit Guard için destek ekler. Tüm dört Exploi
 
 Exploit Guard ilke dağıtımına yönelik uyumluluk verileri Configuration Manager konsolundan kullanılabilir.
 
-Exploit Guard ve belirli bileşenler ve kurallar hakkında daha fazla bilgi için Windows belge kitaplığı 'nda [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) bölümüne bakın.
+Exploit Guard ve belirli bileşenler ve kurallar hakkında daha fazla bilgi için Windows belge kitaplığı 'nda [Windows Defender Exploit Guard](/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) bölümüne bakın.
 
 ### <a name="prerequisites"></a>Ön koşullar
 Yönetilen cihazların Windows 10 1709 Fall Creators Update veya sonrasını çalıştırması ve yapılandırılan bileşenlere ve kurallara bağlı olarak aşağıdaki gereksinimleri karşılamalıdır:
 
 |Exploit Guard bileşeni |Ek önkoşullar|
 |------------------------|------------------------|
-| Saldırı Yüzeyini Azaltma  | Cihazlarda [Windows Defender av gerçek zamanlı korumanın]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) etkinleştirilmiş olması gerekir.  |
-| Denetlenen klasör erişimi  | Cihazlarda [Windows Defender av gerçek zamanlı korumanın]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) etkinleştirilmiş olması gerekir.   |
-| Exploit protection  | Yok  |
-| Ağ koruması  |  Cihazlarda [Windows Defender av gerçek zamanlı korumanın]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) etkinleştirilmiş olması gerekir.  |
+| Saldırı Yüzeyini Azaltma  | Cihazlarda [Windows Defender av gerçek zamanlı korumanın]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) etkinleştirilmiş olması gerekir.  |
+| Denetlenen klasör erişimi  | Cihazlarda [Windows Defender av gerçek zamanlı korumanın]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) etkinleştirilmiş olması gerekir.   |
+| Exploit protection  | Hiçbiri  |
+| Ağ koruması  |  Cihazlarda [Windows Defender av gerçek zamanlı korumanın]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) etkinleştirilmiş olması gerekir.  |
 
 ### <a name="create-an-exploit-guard-policy----1355468---"></a>Exploit Guard ilkesi oluşturma  <!--1355468 -->
 1. Configuration Manager konsolunda **varlıklar ve uyumluluk**  >  **Endpoint Protection**' ne gidin ve ardından **Windows Defender Exploit Guard**' ı tıklatın.
@@ -125,7 +125,7 @@ Exploit Guard ilkeleri oluşturduktan sonra, bunları dağıtmak için Exploit G
 
 ## <a name="limited-support-for-cng-certificates"></a>CNG sertifikaları için sınırlı destek
 <!-- 1356191 -->
-Bu sürümden itibaren, artık aşağıdaki senaryolar için [şifreleme API 'si: yeni nesil (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) sertifika şablonları kullanabilirsiniz:
+Bu sürümden itibaren, artık aşağıdaki senaryolar için [şifreleme API 'si: yeni nesil (CNG)](/windows/win32/seccng/cng-features) sertifika şablonları kullanabilirsiniz:
 
 - Bir HTTPS yönetim noktasıyla istemci kaydı ve iletişim.   
 - Bir HTTPS dağıtım noktasıyla yazılım dağıtımı ve uygulama dağıtımı.   
@@ -210,7 +210,7 @@ Bir ilke oluşturmak ve kullanılabilir ayarlara gitmek için:
     > [!NOTE]
     > Windows 10 bilgisayarları, istemcide yalnızca bir ağ yalıtımı listesini depolar. Bu sürümde, iki farklı türde ağ yalıtımı listesi (biri Windows Information Protection, diğeri Windows Defender Application Guard 'dan) oluşturabilir ve bunları istemciye dağıtabilirsiniz. Her iki ilkeyi de dağıtırsanız, bu ağ yalıtımı listelerinin eşleşmesi gerekir. Aynı istemciyle eşleşmeyen listeler dağıtırsanız, dağıtım başarısız olur.
 
-    Ağ tanımlarının nasıl belirtilme hakkında daha fazla bilgiyi [Windows Information Protection belgeleri]- [windows Information Protection (WIP) kullanarak kurumsal verilerinizi koruma](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)hakkında daha fazla bilgi edinebilirsiniz.
+    Ağ tanımlarının nasıl belirtilme hakkında daha fazla bilgiyi [Windows Information Protection belgeleri]- [windows Information Protection (WIP) kullanarak kurumsal verilerinizi koruma](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)hakkında daha fazla bilgi edinebilirsiniz.
 
 6. İşiniz bittiğinde Sihirbazı doldurun ve ilkeyi bir veya daha fazla Windows 10 cihazına dağıtın.
 
@@ -219,4 +219,4 @@ Bir ilke oluşturmak ve kullanılabilir ayarlara gitmek için:
 Windows Defender Application Guard hakkında daha fazla bilgi edinmek için [Bu blog gönderisine](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97)bakın. Ayrıca, Windows Defender Application Guard tek başına modu hakkında daha fazla bilgi edinmek için [Bu blog gönderisine](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903)bakın.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
-Technical Preview dalını yükleme veya güncelleştirme hakkında daha fazla bilgi için bkz. [Configuration Manager Için Teknik Önizleme](technical-preview.md).    
+Technical Preview dalını yükleme veya güncelleştirme hakkında daha fazla bilgi için bkz. [Configuration Manager Için Teknik Önizleme](technical-preview.md).

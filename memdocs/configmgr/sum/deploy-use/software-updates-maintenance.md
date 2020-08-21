@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 560b432bb90f99207fd15bc07e7aff98ffd59ebf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a327d50a2743f81407530355b6fd5101ce6a8b02
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719788"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696914"
 ---
 # <a name="software-updates-maintenance"></a>Yazılım güncelleştirmeleri bakımı
 
@@ -27,7 +27,7 @@ WSUS temizleme görevlerini Configuration Manager konsolundan, yazılım güncel
 
 Aşağıdaki adımları çalıştırarak WSUS temizleme işini zamanlayın:
 
-1. Configuration Manager konsolunda **Yönetim** > **genel bakış** > **Site yapılandırması** > **siteler**' e gidin.
+1. Configuration Manager konsolunda **Yönetim**  >  **genel bakış**  >  **Site yapılandırması**  >  **siteler**' e gidin.
 2. Configuration Manager hiyerarşinizin en üstünde bulunan siteyi seçin.
 
 3. **Ayarlar** grubunda **Site Bileşenlerini Yapılandır** ’a tıklayın ve ardından Yazılım Güncelleştirme Noktası Bileşen Özellikleri’ni açmak için **Yazılım Güncelleştirme Noktası** ’na tıklayın.  
@@ -109,7 +109,7 @@ CA, birincil ve ikincil sitelerde aşağıdaki **WSUS sunucusu Temizleme Sihirba
 
 WSUS içindeki güncelleştirmelerin reddediliyor, bu güncelleştirmeleri istemcilere gönderilen kataloglardan kaldırarak performansı geliştirir. Yenisiyle değiştirilen Configuration Manager işaretlerinin reddediliyor, katalogları en aza indirir ve performansı geliştirir.
 
-1. Configuration Manager konsolunda **Yönetim** > **genel bakış** > **Site yapılandırması** > **siteler**' e gidin.
+1. Configuration Manager konsolunda **Yönetim**  >  **genel bakış**  >  **Site yapılandırması**  >  **siteler**' e gidin.
 2. Configuration Manager hiyerarşinizin en üstünde bulunan siteyi seçin.
 3. **Ayarlar** grubunda Site Bileşenlerini Yapılandır ’a tıklayın ve ardından Yazılım Güncelleştirme Noktası Bileşen Özellikleri’ni açmak için **Yazılım Güncelleştirme Noktası** ’na tıklayın.
 4. **WSUS bakım** sekmesinde, **yenisiyle DEĞIŞTIRME kurallarına göre WSUS 'ta zaman aşımına uğradı güncelleştirmeleri Reddet**' i seçin.
@@ -118,7 +118,7 @@ WSUS içindeki güncelleştirmelerin reddediliyor, bu güncelleştirmeleri istem
 
 Kümelenmemiş dizinlerin eklenmesi Configuration Manager, WSUS temizleme performansını geliştirir.
 
-1. Configuration Manager konsolunda **Yönetim** > **genel bakış** > **Site yapılandırması** > **siteler**' e gidin.
+1. Configuration Manager konsolunda **Yönetim**  >  **genel bakış**  >  **Site yapılandırması**  >  **siteler**' e gidin.
 2. Configuration Manager hiyerarşinizin en üstünde bulunan siteyi seçin.
 3. **Ayarlar** grubunda Site Bileşenlerini Yapılandır ’a tıklayın ve ardından Yazılım Güncelleştirme Noktası Bileşen Özellikleri’ni açmak için **Yazılım Güncelleştirme Noktası** ’na tıklayın.
 4. **WSUS bakım** sekmesinde, **KÜMELENMIŞ olmayan dizinleri WSUS veritabanına ekle**' yi seçin.
@@ -130,17 +130,17 @@ Kümelenmemiş dizinlerin eklenmesi Configuration Manager, WSUS temizleme perfor
 
 WSUS veritabanı uzak bir SQL Server 'da olduğunda, dizin oluşturmak için SQL 'de izinler eklemeniz gerekebilir. WSUS veritabanına bağlanmak ve dizinleri oluşturmak için kullanılan hesap farklılık gösterebilir. [Yazılım güncelleştirme noktası özelliklerinde bir WSUS sunucusu bağlantı hesabı](../get-started/install-a-software-update-point.md#wsus-server-connection-account)belirtirseniz, bağlantı hesabının SQL izinlerine sahip olduğundan emin olun. WSUS sunucusu bağlantı hesabı belirtmezseniz, site sunucusunun bilgisayar hesabı SQL izinlerine ihtiyaç duyuyor.
 
-- Dizin oluşturmak için tablo `ALTER` veya görünümde izin gerekir. Hesap, `sysadmin` sabit sunucu rolü veya `db_ddladmin` ve `db_owner` sabit veritabanı rollerinin bir üyesi olmalıdır. Oluşturma ve dizin ve izinler hakkında daha fazla bilgi için bkz. [create INDEX (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions).
-- Hesaba `CONNECT SQL` sunucu izni verilmelidir. Daha fazla bilgi için bkz. [sunucu Izinleri verme (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+- Dizin oluşturmak `ALTER` için tablo veya görünümde izin gerekir. Hesap, `sysadmin` sabit sunucu rolü veya `db_ddladmin` ve `db_owner` sabit veritabanı rollerinin bir üyesi olmalıdır. Oluşturma ve dizin ve izinler hakkında daha fazla bilgi için bkz. [create INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions).
+- `CONNECT SQL`Hesaba sunucu izni verilmelidir. Daha fazla bilgi için bkz. [sunucu Izinleri verme (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
 
 > [!NOTE]  
->  WSUS veritabanı, varsayılan olmayan bir bağlantı noktası kullanan uzak bir SQL Server 'da bulunuyorsa, dizinler eklenmeyebilir. Bu senaryo için [SQL Server Yapılandırma Yöneticisi kullanarak bir sunucu diğer adı](https://docs.microsoft.com/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017) oluşturabilirsiniz. Diğer ad eklendikten ve Configuration Manager WSUS veritabanıyla bağlantı yapabilirler, dizinler eklenir.
+>  WSUS veritabanı, varsayılan olmayan bir bağlantı noktası kullanan uzak bir SQL Server 'da bulunuyorsa, dizinler eklenmeyebilir. Bu senaryo için [SQL Server Yapılandırma Yöneticisi kullanarak bir sunucu diğer adı](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017) oluşturabilirsiniz. Diğer ad eklendikten ve Configuration Manager WSUS veritabanıyla bağlantı yapabilirler, dizinler eklenir.
 
 ### <a name="remove-obsolete-updates-from-the-wsus-database"></a>Eski güncelleştirmeleri WSUS veritabanından kaldır
 
 Eski güncelleştirmeler, WSUS veritabanında kullanılmayan güncelleştirmeler ve güncelleştirme düzeltmeleridir. Genellikle, bir güncelleştirme artık [Microsoft Update kataloğunda](https://www.catalog.update.microsoft.com/) olmadığı ve bir önkoşul veya bağımlılık olarak diğer güncelleştirmeler tarafından gerekli olmadığı kabul edilmez.
 
-1. Configuration Manager konsolunda **Yönetim** > **genel bakış** > **Site yapılandırması** > **siteler**' e gidin.
+1. Configuration Manager konsolunda **Yönetim**  >  **genel bakış**  >  **Site yapılandırması**  >  **siteler**' e gidin.
 2. Configuration Manager hiyerarşinizin en üstünde bulunan siteyi seçin.
 3. **Ayarlar** grubunda Site Bileşenlerini Yapılandır ’a tıklayın ve ardından Yazılım Güncelleştirme Noktası Bileşen Özellikleri’ni açmak için **Yazılım Güncelleştirme Noktası** ’na tıklayın.
 4. **WSUS Bakımı** sekmesinde, **eski güncelleştirmeleri WSUS veritabanından kaldır**' ı seçin.
@@ -150,8 +150,8 @@ Eski güncelleştirmeler, WSUS veritabanında kullanılmayan güncelleştirmeler
 
 WSUS veritabanı uzak bir SQL Server 'da olduğunda, site sunucusunun bilgisayar hesabı aşağıdaki SQL izinlerine ihtiyaç duyuyor:
 
-- `db_datareader` Ve `db_datawriter` sabit veritabanı rolleri. Daha fazla bilgi için bkz. [veritabanı düzeyinde roller](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles).
-- `CONNECT SQL` Sunucu izni, site sunucusunun bilgisayar hesabına verilmelidir. Daha fazla bilgi için bkz. [sunucu Izinleri verme (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+- `db_datareader`Ve `db_datawriter` sabit veritabanı rolleri. Daha fazla bilgi için bkz. [veritabanı düzeyinde roller](/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles).
+- `CONNECT SQL`Sunucu izni, site sunucusunun bilgisayar hesabına verilmelidir. Daha fazla bilgi için bkz. [sunucu Izinleri verme (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
 
 #### <a name="wsus-cleanup-wizard"></a>WSUS Temizleme Sihirbazı
 
@@ -173,7 +173,7 @@ Sürüm 1906 ' den başlayarak, aşağıdaki **WSUS sunucusu Temizleme Sihirbaz�
    - WSUS veritabanına kümelenmemiş dizinler ekleme
    - Eski güncelleştirmeleri WSUS veritabanından kaldır
 
-Bu senaryoda Configuration Manager, uzak yazılım güncelleştirme noktaları için bir Windows Iç veritabanı kullanan yukarıdaki WSUS bakım görevlerini gerçekleştiremiyor. Bu sorun, Windows Iç veritabanı uzak bağlantılara izin vermediğinden oluşur. Site sunucusunda aşağıdaki hataları `WSyncMgr.log` görürsünüz:
+Bu senaryoda Configuration Manager, uzak yazılım güncelleştirme noktaları için bir Windows Iç veritabanı kullanan yukarıdaki WSUS bakım görevlerini gerçekleştiremiyor. Bu sorun, Windows Iç veritabanı uzak bağlantılara izin vermediğinden oluşur. Site sunucusunda aşağıdaki hataları görürsünüz `WSyncMgr.log` :
 
 ```text
 Indexing Failed. Could not connect to SUSDB.
@@ -188,8 +188,8 @@ Bu sorunu geçici olarak çözmek için, Windows Iç veritabanı 'nı kullanarak
 
 Aşağıdaki girişler için wsyncmgr. log ' i inceleyerek bu temizlemeyi doğrulayabilirsiniz:
 
-- Bu günlük girişini gördüğünüzde WSUS 'ta yenisiyle değiştirilen güncelleştirmelerin reddi tamamlanır:`Cleanup processed <number> total updates and declined <number>`
-- WSUS temizliği bu girişi gördüğünüzde başlatılıyor:`Calling WSUS Cleanup.`
-- Bu girdiyi gördüğünüzde, zaman aşımına uğradı güncelleştirmeler için WSUS temizliği tamamlanır:`Successfully completed WSUS Cleanup.`
-- Bu girdiyi gördüğünüzde Configuration Manager süre dolduğunda güncelleştirme yapılandırma öğeleri temizliği başlatılıyor:`Deleting old expired updates...`
-- Bu girdiyi gördüğünüzde Configuration Manager süre dolduğunda güncelleştirme yapılandırma öğelerini Temizleme işlemi tamamlanır:`Deleted <number> expired updates total`
+- Bu günlük girişini gördüğünüzde WSUS 'ta yenisiyle değiştirilen güncelleştirmelerin reddi tamamlanır: `Cleanup processed <number> total updates and declined <number>`
+- WSUS temizliği bu girişi gördüğünüzde başlatılıyor: `Calling WSUS Cleanup.`
+- Bu girdiyi gördüğünüzde, zaman aşımına uğradı güncelleştirmeler için WSUS temizliği tamamlanır: `Successfully completed WSUS Cleanup.`
+- Bu girdiyi gördüğünüzde Configuration Manager süre dolduğunda güncelleştirme yapılandırma öğeleri temizliği başlatılıyor: `Deleting old expired updates...`
+- Bu girdiyi gördüğünüzde Configuration Manager süre dolduğunda güncelleştirme yapılandırma öğelerini Temizleme işlemi tamamlanır: `Deleted <number> expired updates total`

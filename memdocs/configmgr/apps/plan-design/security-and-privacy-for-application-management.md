@@ -10,12 +10,12 @@ ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7f7085b7ee6f0f723c9bcf9d10cb85b03f990a44
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e3ceb036180d002956eb0f62348ad317dfce6e7e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709960"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695146"
 ---
 # <a name="security-and-privacy-for-application-management-in-configuration-manager"></a>Configuration Manager 'de uygulama yönetimi için güvenlik ve Gizlilik
 
@@ -75,7 +75,7 @@ Dağıtımı doğrudan bir dağıtım noktasından çalışacak şekilde yapıla
 
 Dağıtımları doğrudan dağıtım noktalarından çalıştırmanız gerekiyorsa, dağıtım noktalarındaki paketlerde en az NTFS izinlerini kullanın. Ayrıca, istemci ve dağıtım noktaları arasında ve dağıtım noktaları ile site sunucusu arasındaki kanalı korumak için Internet Protokolü güvenliği (IPSec) kullanın.
 
-### <a name="dont-let-users-interact-with-elevated-processes"></a><a name="bkmk_interact"></a>Kullanıcıların yükseltilmiş işlemlerle etkileşime girmesine izin verme
+### <a name="dont-let-users-interact-with-elevated-processes"></a><a name="bkmk_interact"></a> Kullanıcıların yükseltilmiş işlemlerle etkileşime girmesine izin verme
   
 Ayarları **yönetici haklarıyla çalıştırma** veya **sistem için yüklemeyi**etkinleştirirseniz, kullanıcıların bu uygulamalarla etkileşime girmesine izin verin. Bir uygulamayı yapılandırdığınızda, **kullanıcıların program yüklemesini görüntülemesine ve etkileşime girmesine Izin ver**seçeneğini belirleyebilirsiniz. Bu ayar, kullanıcıların kullanıcı arabirimindeki gerekli istemlere yanıt vermesini sağlar. Uygulamayı **yönetici haklarıyla çalışacak**şekilde yapılandırırsanız veya **sistem için**sürüm 1802 ' den başlayarak, programı çalıştıran bilgisayardaki bir saldırgan, istemci bilgisayardaki ayrıcalıkların iletmek için Kullanıcı arabirimini kullanabilir.
 
@@ -91,7 +91,7 @@ Kurulum için Windows Installer kullanan programları ve yönetim kimlik bilgile
 
 Mobil cihaz uygulamalarını yalnızca, mobil cihazın güvendiği bir sertifika yetkilisi (CA) tarafından kod İmzalandıklarında dağıtın.
 
-Örneğin:
+Örnek:
 
 - Bir satıcıdan gelen ve VeriSign gibi iyi bilinen bir CA tarafından imzalanan bir uygulama.  
 
@@ -168,7 +168,7 @@ Bir Web uygulaması dağıtım türü yapılandırırsanız, bağlantıyı güve
      Bir App-V uygulaması bir bilgisayarda yayımlandığında, o bilgisayarda oturum açan tüm kullanıcılar uygulamayı yükleyebilir. Yayımlandıktan sonra uygulamayı yükleyebilen kullanıcıları kısıtlayamazsınız.  
 
 
-## <a name="certificates-for-microsoft-silverlight-5-and-elevated-trust-mode-required-for-the-application-catalog"></a><a name="BKMK_CertificatesSilverlight5"></a>Microsoft Silverlight 5 sertifikaları ve uygulama kataloğu için gerekli yükseltilmiş güven modu  
+## <a name="certificates-for-microsoft-silverlight-5-and-elevated-trust-mode-required-for-the-application-catalog"></a><a name="BKMK_CertificatesSilverlight5"></a> Microsoft Silverlight 5 sertifikaları ve uygulama kataloğu için gerekli yükseltilmiş güven modu  
 
 > [!Important]  
 > Sürüm 1910 ile uygulama kataloğu rolleri için destek sona erer. Daha fazla bilgi için bkz. [uygulama kataloğunu kaldırma](plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
@@ -182,7 +182,7 @@ Uygulama Kataloğu web sitesi noktası site sistemi rolünü yüklediğinizde, i
 
 **Silverlight uygulamalarının yükseltilmiş güven modunda çalışmasına Izin ver** ayarını **Hayır**olarak ayarlarsanız, istemciler Microsoft imzalama sertifikasını kaldırmaz.  
 
-Silverlight 'taki güvenilen uygulamalar hakkında daha fazla bilgi için bkz. [Güvenilen uygulamalar](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ee721083\(v=vs.95\)).  
+Silverlight 'taki güvenilen uygulamalar hakkında daha fazla bilgi için bkz. [Güvenilen uygulamalar](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ee721083\(v=vs.95\)).  
 
 
 ## <a name="privacy-information-for-application-management"></a> Uygulama yönetimi için gizlilik bilgileri  
@@ -208,7 +208,7 @@ Aşağıdaki özellikler verimli yazılım dağıtımına yardımcı olur:
     > [!Important]  
     > Sürüm 1910 ile uygulama kataloğu rolleri için destek sona erer. Daha fazla bilgi için bkz. [uygulama kataloğunu kaldırma](plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
 
-### <a name="user-device-affinity-privacy-information"></a><a name="bkmk_privacy-uda"></a>Kullanıcı cihaz benzeşimi gizlilik bilgileri
+### <a name="user-device-affinity-privacy-information"></a><a name="bkmk_privacy-uda"></a> Kullanıcı cihaz benzeşimi gizlilik bilgileri
 
 - Configuration Manager istemcilerle yönetim noktası site sistemleri arasında bilgi aktarabilir. Bilgiler bilgisayar ve oturum açma hesabı ile oturum açma hesaplarının özetlenen kullanımını tanımlayabilir.  
 
@@ -220,7 +220,7 @@ Aşağıdaki özellikler verimli yazılım dağıtımına yardımcı olur:
 
 - Kullanıcı ve cihaz benzeşimi oluşturmak için kullanılan bilgisayar ve oturum açma kullanım bilgileri her zaman etkindir. Kullanıcılar ve yönetici kullanıcılar, Kullanıcı aygıt benzeşimi bilgilerini sağlayabilir.  
 
-### <a name="software-center-privacy-information"></a><a name="bkmk_privacy-userex"></a>Yazılım Merkezi gizlilik bilgileri
+### <a name="software-center-privacy-information"></a><a name="bkmk_privacy-userex"></a> Yazılım Merkezi gizlilik bilgileri
 
 - Software Center, Configuration Manager yöneticisinin kullanıcıların çalıştırması için herhangi bir uygulama veya program veya betiği yayımlamasına olanak sağlar. Configuration Manager katalogda yayınlanan program veya komut dosyası türleri veya iletilerdeki bilgi türü üzerinde denetim yoktur.  
 
@@ -239,4 +239,4 @@ Aşağıdaki özellikler verimli yazılım dağıtımına yardımcı olur:
 
 - Uygulama Kataloğu, Configuration Manager yöneticisinin kullanıcıların çalıştırması için herhangi bir uygulama veya program veya betiği yayımlamasına olanak sağlar. Configuration Manager katalogda yayınlanan program veya komut dosyası türleri veya iletilerdeki bilgi türü üzerinde denetim yoktur.  
 
-- Configuration Manager istemcilerle Uygulama Kataloğu site sistem rolleri arasında bilgi aktarabilir. Bilgiler bilgisayar ve oturum açma hesaplarını tanımlayabilir. İstemci ve sunucular arasında aktarılan bilgiler, bu site sistem rolleri istemcilerin HTTPS kullanarak bağlanmasını gerektirecek şekilde yapılandırılmadığı takdirde şifrelenmez.  
+- Configuration Manager istemcilerle Uygulama Kataloğu site sistem rolleri arasında bilgi aktarabilir. Bilgiler bilgisayar ve oturum açma hesaplarını tanımlayabilir. İstemci ve sunucular arasında aktarılan bilgiler, bu site sistem rolleri istemcilerin HTTPS kullanarak bağlanmasını gerektirecek şekilde yapılandırılmadığı takdirde şifrelenmez.

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d4594a50f42d6b8e6ea0b88b83920eda11615815
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 0ddad23dfde87fa402c01d4eaa21a1b76db27d93
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591011"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692936"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Configuration Manager için Technical Preview 1705 ' deki yetenekler
 
@@ -121,12 +121,12 @@ Bu sürümle birlikte, artık Configuration Manager kullandığınız SQL Server
 
 - Bu sürüm, site veritabanınız olarak zaman uyumsuz tamamlama çoğaltmasını kullanmak için yük devretmeyi desteklemez.
   > [!CAUTION]  
-  > Configuration Manager, zaman uyumsuz tamamlama çoğaltmasının durumunu doğrulamak için geçerli olduğundan emin olmak için, bu [tür bir çoğaltma eşitlenmemiş](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes)olabilir ve site veritabanı, site veritabanının bütünlüğünü ve verilerinizi riske koyabildiğinden zaman uyumsuz bir çoğaltma çoğaltmasının kullanımını eşzamanlı hale getirebilirsiniz.  
+  > Configuration Manager, zaman uyumsuz tamamlama çoğaltmasının durumunu doğrulamak için geçerli olduğundan emin olmak için, bu [tür bir çoğaltma eşitlenmemiş](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes)olabilir ve site veritabanı, site veritabanının bütünlüğünü ve verilerinizi riske koyabildiğinden zaman uyumsuz bir çoğaltma çoğaltmasının kullanımını eşzamanlı hale getirebilirsiniz.  
 
 - Bir kullanılabilirlik grubunda, kullandığınız SQL Server sürümü tarafından desteklenen aynı sayıda ve türde çoğaltmaları kullanabilirsiniz.   (Önceki destek iki eşzamanlı kayıt çoğaltmalarıyla sınırlandırılmıştır.)
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Zaman uyumsuz bir kayıt çoğaltması yapılandırma
-[Configuration Manager ile kullandığınız bir kullanılabilirlik grubuna](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)zaman uyumsuz bir çoğaltma eklemek için, zaman uyumlu çoğaltma yapılandırmak için gereken yapılandırma betiklerini çalıştırmanız gerekmez. (Bunun nedeni, site veritabanı olarak o zaman uyumsuz çoğaltmanın kullanılması desteklenmez.) Daha fazla bilgi için bkz. [kullanılabilirlik grubuna ikincil çoğaltma ekleme](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014).
+[Configuration Manager ile kullandığınız bir kullanılabilirlik grubuna](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)zaman uyumsuz bir çoğaltma eklemek için, zaman uyumlu çoğaltma yapılandırmak için gereken yapılandırma betiklerini çalıştırmanız gerekmez. (Bunun nedeni, site veritabanı olarak o zaman uyumsuz çoğaltmanın kullanılması desteklenmez.) Daha fazla bilgi için bkz. [kullanılabilirlik grubuna ikincil çoğaltma ekleme](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014).
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Sitenizi kurtarmak için zaman uyumsuz çoğaltmayı kullanın
 Site veritabanınızı kurtarmak için zaman uyumsuz bir çoğaltma kullanmadan önce, site veritabanına ek yazmaları engellemek için etkin birincil siteyi durdurmanız gerekir. Siteyi durdurduktan sonra, [el ile kurtarılan bir veritabanını](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered)kullanmak yerine zaman uyumsuz bir çoğaltma kullanabilirsiniz.
@@ -254,7 +254,7 @@ Ardından, aşağıdaki yükleme komut satırını kullanarak [Istemcileri Windo
 - **SMSMP**: arama yönetim noktanağınızın adı – bu, intranetinizde olabilir.
 - **Smssitekodu**: Configuration Manager sitenizin site kodudur.
 - **Aadtenantıd**, **aadtenantname**: Configuration Manager bağladığınız Azure AD kiracının kimliği ve adı. Bunu, Azure AD 'ye katılmış bir cihazdaki komut isteminden dsregcmd.exe/Status çalıştırarak bulabilirsiniz.
-- **Aadclientappıd**: Azure AD ISTEMCI uygulama kimliği. Bu konuda yardım almak için bkz. [kaynaklara erişebilen Azure Active Directory uygulaması ve hizmet sorumlusu oluşturmak için portalı kullanma](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
+- **Aadclientappıd**: Azure AD ISTEMCI uygulama kimliği. Bu konuda yardım almak için bkz. [kaynaklara erişebilen Azure Active Directory uygulaması ve hizmet sorumlusu oluşturmak için portalı kullanma](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 - **Aadresourceuri**: EKLENDI Azure AD Server uygulamasının tanımlayıcı URI 'si.
 
 ## <a name="use-azure-services-wizard-to-configure-a-connection-to-oms"></a>OMS bağlantısını yapılandırmak için Azure Hizmetleri Sihirbazı 'Nı kullanma
@@ -265,7 +265,7 @@ Ardından, aşağıdaki yükleme komut satırını kullanarak [Istemcileri Windo
 -   Configuration Manager, Log Analytics veya Yükseltme Hazırlığı gibi özellikler için OMS 'ye bağlanır.
 
 ### <a name="prerequisites-for-the-oms-connector"></a>OMS Bağlayıcısı için Önkoşullar
-OMS bağlantısını yapılandırma önkoşulları [, güncel dalı sürüm 1702 ' de belgelenenlerden](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)değiştirilmez. Bu bilgiler burada yinelenir:  
+OMS bağlantısını yapılandırma önkoşulları [, güncel dalı sürüm 1702 ' de belgelenenlerden](/azure/azure-monitor/platform/collect-sccm)değiştirilmez. Bu bilgiler burada yinelenir:  
 
 -   OMS 'ye Configuration Manager izni sağlanıyor.
 

@@ -10,12 +10,12 @@ ms.assetid: 7a2abb79-9ae5-4a25-9e18-5dcf528de3bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3ee640a70eea9f2e8470e852409911d28e542bc2
-ms.sourcegitcommit: 1d8bf691780b94a945e94945115d4d1df4242808
+ms.openlocfilehash: b1bc72a3691e4a6f47c29a5a91ef11c92f0f7e7c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663391"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693293"
 ---
 # <a name="best-practices-for-collections-in-configuration-manager"></a>Configuration Manager içindeki koleksiyonlar için en iyi yöntemler
 
@@ -45,7 +45,7 @@ Yoğun bir Configuration Manager ortamında, yinelenen koleksiyon değerlendirme
 
 Uygun bir koleksiyon yapısını tasarlayabilmeniz için koleksiyon değerlendirme grafiğinin nasıl çalıştığını unutmayın. Tüm koleksiyonları her zaman güncelleştirmek için tam koleksiyon değerlendirmesine güvenmeyin. Bir zamanlamaya göre artımlı olarak güncelleştirilmiş bir koleksiyon güncelleştirmesi varsa, artımlı güncelleştirmeler için etkinleştirilmemiş koleksiyonlara başvuru güncelleştirilemeyebilir. Artımlı değerlendirme sırasında sık karşılaşılan güncelleştirmeler olduğundan, tam bir değerlendirme koleksiyonu güncelleştiremeyebilir ve bu döngüyle ilgili koleksiyon değerlendirme grafı sona eriyor. Bu durumda, başvuran bir koleksiyon değerlendirmesi gerçekleşmez. Daha fazla bilgi için bkz. [koleksiyon değerlendirme grafiği](collection-evaluation.md#collection-evaluation-graph).
 
-## <a name="limit-incremental-updates"></a><a name="bkmk_incremental"></a>Artımlı güncelleştirmeleri sınırla
+## <a name="limit-incremental-updates"></a><a name="bkmk_incremental"></a> Artımlı güncelleştirmeleri sınırla
 
 Birçok koleksiyon için artımlı güncelleştirmelerin etkinleştirilmesi değerlendirme gecikmelerine neden olabilir. Artımlı olarak güncellenen koleksiyonların sayısını 200 olarak sınırlamak en iyisidir. Tam sayı şunlara bağlıdır:
 
@@ -96,7 +96,7 @@ Amaz
 
 ## <a name="use-ceviewer-to-monitor-collection-evaluation"></a>Toplama değerlendirmesini izlemek için CEViewer 'ı kullanma
 
-[Koleksiyon değerlendirme Görüntüleyicisi 'ni (CEViewer)](https://docs.microsoft.com/mem/configmgr/core/support/ceviewer) kullanarak kaç koleksiyonun değerlendirileceğini ve her koleksiyonun ne kadar süre güncelleyeceğinizi izleyebilirsiniz. CEViewer *CD 'de. Site sunucusundaki en son* klasör.
+[Koleksiyon değerlendirme Görüntüleyicisi 'ni (CEViewer)](../../../support/ceviewer.md) kullanarak kaç koleksiyonun değerlendirileceğini ve her koleksiyonun ne kadar süre güncelleyeceğinizi izleyebilirsiniz. CEViewer *CD 'de. Site sunucusundaki en son* klasör.
 
 SQL ile benzer bir denetimi el ile gerçekleştirmek için aşağıdaki sorguyu kullanabilirsiniz:
 
@@ -111,5 +111,3 @@ FROM (
 WHERE ([t2].[IncrementalEvaluationStartTime] IS NOT NULL) AND ([t2].[LastIncrementalRefreshTime] IS NOT NULL) and (refreshtype='4' or refreshtype='6')
 ORDER BY [t2].[value] DESC
 ```
-
-

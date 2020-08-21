@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f2486e838e01415786e24c077af1997b3dfb7638
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a947b332addbc3404617abdbbe199ede4e74dc63
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129078"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692800"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Sürüm 1702 ' deki yenilikler&#39;Configuration Manager
 
@@ -83,7 +83,7 @@ Güncelleştirmeler ve bakım için değişiklikler aşağıda verilmiştir:
 - **Yeni güncelleştirme durumları**  
   Konsolunda kullanılabilir güncelleştirmeleri görüntülediğinizde, iki yeni durum vardır:  
   - **Yüklenmek üzere kullanılabilir** -bu, indirilmiş ve yüklenmeye hazır bir güncelleştirmedir.
-  - **Indirmeye hazır** -Bu güncelleştirme mevcut, ancak indirilmedi. Bu güncelleştirmeyi indirmeyi seçebilirsiniz, ancak bu güncelleştirmenin yerini daha yeni bir güncelleştirme almıştır.
+  - **Indirmeye hazır**  -Bu güncelleştirme mevcut, ancak indirilmedi. Bu güncelleştirmeyi indirmeyi seçebilirsiniz, ancak bu güncelleştirmenin yerini daha yeni bir güncelleştirme almıştır.
 
 
 - **Daha basit güncelleştirme seçimleri**  
@@ -118,7 +118,7 @@ Ayrıca, raporlama noktanlarınıza üç yeni rapor eklenir. Bu raporları, hang
 
 
 ### <a name="use-the-oms-connector-with-the-azure-government-cloud"></a>Azure Kamu bulutu ile OMS bağlayıcısını kullanma
-Microsoft Azure Kamu buluttaki OMS Log Analytics bağlanmak için OMS bağlayıcısını kullanabilirsiniz. Bu, bağlayıcının kamu bulutuyla çalışabilmesi için OMS bağlayıcısını yüklemeden önce bir yapılandırma dosyasını değiştirmenizi gerektirir. Daha fazla bilgi için bkz. [Azure Kamu Bulutu Ile OMS bağlayıcısını kullanma](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm).
+Microsoft Azure Kamu buluttaki OMS Log Analytics bağlanmak için OMS bağlayıcısını kullanabilirsiniz. Bu, bağlayıcının kamu bulutuyla çalışabilmesi için OMS bağlayıcısını yüklemeden önce bir yapılandırma dosyasını değiştirmenizi gerektirir. Daha fazla bilgi için bkz. [Azure Kamu Bulutu Ile OMS bağlayıcısını kullanma](/azure/azure-monitor/platform/collect-sccm).
 
 ### <a name="software-update-points-are-added-to-boundary-groups"></a>Yazılım güncelleştirme noktaları sınır gruplarına eklenir
 Sürüm 1702 ' den başlayarak, istemciler yeni bir yazılım güncelleştirme noktası bulmak için sınır grupları kullanır ve geçerli biri artık erişilebilir değilse yeni bir yazılım güncelleştirme noktası bulur. Bir istemcinin bulabileceği sunucuları denetlemek için, farklı sınır gruplarına bireysel yazılım güncelleştirme noktaları ekleyebilirsiniz. Daha fazla bilgi için, [sınır gruplarını yapılandırma](../../servers/deploy/configure/boundary-groups.md) konusundaki [yazılım güncelleştirme noktaları](../../servers/deploy/configure/boundary-groups.md#bkmk_sup) konusuna bakın.
@@ -274,13 +274,13 @@ Artık, lisanslanan uygulamaları cihazlara ve kullanıcılara dağıtabilirsini
 | Configuration Manager sürümü | Uygulama, cihaz lisansını destekliyor mu? | Dağıtım koleksiyonu türü | Talep edilen lisans |
 | ----------------------------- | ------------------------------ | -------------------------- | --------------- |
 |1702 öncesi|Evet|Kullanıcı|Kullanıcı Lisansı|
-|1702 öncesi|No|Kullanıcı|Kullanıcı Lisansı|
+|1702 öncesi|Hayır|Kullanıcı|Kullanıcı Lisansı|
 |1702 öncesi|Evet|Cihaz|Kullanıcı Lisansı|
-|1702 öncesi|No|Cihaz|Kullanıcı Lisansı|
+|1702 öncesi|Hayır|Cihaz|Kullanıcı Lisansı|
 |1702 ve üzeri|Evet|Kullanıcı|Kullanıcı Lisansı|
-|1702 ve üzeri|No|Kullanıcı|Kullanıcı Lisansı|
+|1702 ve üzeri|Hayır|Kullanıcı|Kullanıcı Lisansı|
 |1702 ve üzeri|Evet|Cihaz|Cihaz lisansı|
-|1702 ve üzeri|No|Cihaz|Kullanıcı Lisansı|
+|1702 ve üzeri|Hayır|Cihaz|Kullanıcı Lisansı|
 
 ### <a name="support-for-ios-volume-purchase-program-for-education"></a>Eğitim için iOS toplu satın alma programı desteği
 

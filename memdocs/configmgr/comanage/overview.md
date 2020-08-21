@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: a7f38f48946244deb6026d040c44159d0384f7b1
-ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
+ms.openlocfilehash: f9e1809447f8d8ea8f6e0382575b71bfdec71fac
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854448"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695061"
 ---
 # <a name="what-is-co-management"></a>Ortak yönetim nedir?
 
@@ -65,7 +65,7 @@ Ortak yönetimden bu acil değer hakkında daha fazla bilgi için bkz. [Co-Manag
 
 Ortak yönetim, çeşitli iş yükleri için Intune ile organize etmenize de olanak sağlar. Daha fazla bilgi için [Iş yükleri](#workloads) bölümüne bakın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Ortak yönetim aşağıdaki alanlarda önkoşulları içerir:
 
@@ -102,15 +102,15 @@ Ortak yönetimin etkinleştirilmesi, sitenizi Azure AD 'ye eklemenizi gerektirme
 
 - Windows 10 cihazlarının Azure AD 'ye bağlı olması gerekir. Bunlar aşağıdaki türlerden biri olabilir:  
 
-  - Cihazın şirket içi Active Directory katıldığı ve Azure Active Directory kaydettiğiniz [karma Azure AD 'ye katılmış](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+  - Cihazın şirket içi Active Directory katıldığı ve Azure Active Directory kaydettiğiniz [karma Azure AD 'ye katılmış](/azure/active-directory/devices/concept-azure-ad-join-hybrid).
 
-  - [Azure AD-yalnızca birleştirilmiş](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan) . (Bu tür bazen "bulut etki alanına katılmış" olarak adlandırılır)<!--SCCMDocs issue 605-->  
+  - [Azure AD-yalnızca birleştirilmiş](/azure/active-directory/devices/azureadjoin-plan) . (Bu tür bazen "bulut etki alanına katılmış" olarak adlandırılır)<!--SCCMDocs issue 605-->  
 
 ### <a name="intune"></a>Intune
 
-- [Intune’u ayarlama](https://docs.microsoft.com/intune/setup-steps)  
+- [Intune’u ayarlama](/intune/setup-steps)  
 
-- [Windows 10 otomatik kayıt özelliğini etkinleştirme](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
+- [Windows 10 otomatik kayıt özelliğini etkinleştirme](/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
 
 ### <a name="windows-10"></a>Windows 10
 
@@ -129,7 +129,7 @@ Cihazlarınızı Windows 10, sürüm 1709 veya sonraki bir sürüme yükseltin. 
 | Azure uygulamalarını Configuration Manager içeri aktarma | Configuration Manager **tam yönetici**<br>Ek Azure rolü gerekmez |
 | Configuration Manager içinde ortak yönetimi etkinleştirme | Bir Azure AD kullanıcısı<br>**Tüm** kapsam haklarıyla **tam yönetici** Configuration Manager.<!--SCCMDoc issue 626--> |
 
-Azure rolleri hakkında daha fazla bilgi için bkz. [farklı rolleri anlama](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles).
+Azure rolleri hakkında daha fazla bilgi için bkz. [farklı rolleri anlama](/azure/role-based-access-control/rbac-and-directory-admin-roles).
 
 Configuration Manager rolleri hakkında daha fazla bilgi için bkz. [rol tabanlı yönetimin temelleri](../core/understand/fundamentals-of-role-based-administration.md).
 
@@ -167,4 +167,4 @@ Daha fazla bilgi için bkz. [ortak yönetimi izleme](how-to-monitor.md).
 
 - [Anında değer ve birlikte çalışmaya başlama hakkında daha fazla bilgi edinin](quickstarts.md)  
 
-- [Öğretici: mevcut Configuration Manager istemcileri için ortak yönetimi etkinleştirme](tutorial-co-manage-clients.md)  
+- [Öğretici: mevcut Configuration Manager istemcileri için ortak yönetimi etkinleştirme](tutorial-co-manage-clients.md)

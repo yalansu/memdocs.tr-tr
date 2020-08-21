@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 51a974247d7281d6134b699a5865f801d1ed6094
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 9d58ffee30986efeda1716358ab7aa6c1d36cbf5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905717"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695690"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Configuration Manager için Technical Preview 1609 ' deki yetenekler
 
@@ -91,7 +91,7 @@ Bu sürümde, bu yeni özelliklerle [iş Için Windows Mağazası tümleştirmes
 
 Çeşitli cihaz platformları için yapılandırma öğelerinde kullanabileceğiniz pek çok yeni ayar ekledik.
 Bunlar, bir tek başına yapılandırmada Microsoft Intune daha önce var olan ve Intune 'U Configuration Manager ile kullandığınızda kullanılabilir olan ayarlardır.
-Bu ayarlardan herhangi biriyle ilgili yardıma ihtiyacınız varsa, [Microsoft Intune ilkeleriyle cihazlarınızda ayarları ve özellikleri yönetin](/mem/intune/configuration/device-profiles) ' i açın ve istediğiniz platformun ayarlar alt konusunu seçin.
+Bu ayarlardan herhangi biriyle ilgili yardıma ihtiyacınız varsa, [Microsoft Intune ilkeleriyle cihazlarınızda ayarları ve özellikleri yönetin](../../../intune/configuration/device-profiles.md) ' i açın ve istediğiniz platformun ayarlar alt konusunu seçin.
 
 
 ### <a name="new-settings-for-android-devices"></a>Android cihazları için yeni ayarlar
@@ -238,7 +238,7 @@ Aşağıdaki bölümlerde, bu önizleme ile tanıtılan değişiklikler, yeni mo
 ### <a name="changes-in-ui-and-behavior-for-boundary-groups-and-content-locations"></a>Sınır grupları ve içerik konumları için Kullanıcı arabirimi ve davranıştaki değişiklikler
 Sınır gruplarında yapılan önemli değişiklikler ve istemcilerin içerik bulma yöntemleri aşağıda verilmiştir. Bu değişikliklerin ve kavramların birçoğu birlikte çalışır.
 - **Hızlı veya yavaş yapılandırma işlemleri kaldırılır:** Artık tek tek dağıtım noktalarını hızlı veya yavaş olacak şekilde yapılandıramazsınız.  Bunun yerine, bir sınır grubuyla ilişkilendirilmiş her site sistemi aynı şekilde değerlendirilir. Bu değişiklik nedeniyle, sınır grubu özelliklerinin **Başvurular** sekmesi artık hızlı veya yavaş yapılandırmayı desteklememektedir.
-- **Her sitede yeni varsayılan sınır grubu:**  Her birincil sitenin ***Default-site-sınır-Group \< sitekodu>*** adlı yeni bir varsayılan sınır grubu vardır.  İstemci, bir sınır grubuna atanan bir ağ konumunda olmadığında, bu istemci, atanmış sitesinden varsayılan grupla ilişkili site sistemlerini kullanır. Bu sınır grubunu, geri dönüş içerik konumu kavramının yerini alarak kullanmayı planlayın.    
+- **Her sitede yeni varsayılan sınır grubu:**  Her birincil sitenin ***varsayılan-site-sınır grubu \<sitecode> ***adlı yeni bir varsayılan sınır grubu vardır.  İstemci, bir sınır grubuna atanan bir ağ konumunda olmadığında, bu istemci, atanmış sitesinden varsayılan grupla ilişkili site sistemlerini kullanır. Bu sınır grubunu, geri dönüş içerik konumu kavramının yerini alarak kullanmayı planlayın.    
   -  **' İçerik için geri dönüş kaynak konumlarına Izin ver '** kaldırıldı: artık geri dönüş için kullanılacak bir dağıtım noktasını açıkça yapılandırmayın ve bunu ayarlama seçenekleri kullanıcı arabiriminden kaldırılır.
 
   Ayrıca, istemcilerin uygulama için dağıtım türündeki **içerik için bir geri dönüş kaynak konumu kullanmasına Izin ver** ayarının sonucu değişmiştir. Dağıtım türündeki bu ayar artık istemcinin varsayılan site sınır grubunu içerik kaynağı konumu olarak kullanmasına olanak sağlar.
@@ -317,8 +317,8 @@ Farklı komşu grupları, belirli dağıtım noktalarının bir içerik kaynağ�
 
 ### <a name="update-existing-boundary-groups-to-the-new-model"></a><a name="bkmk_update"></a>Mevcut sınır gruplarını yeni modele Güncelleştir
 Sürüm 1609 ' i yüklediğinizde ve sitenizi güncelleştirdiğinizde, aşağıdaki konfigürasyonlar otomatik olarak yapılır. Bunlar, yeni sınır grupları ve ilişkiler yapılandırılana kadar geçerli geri dönüş davranışının kullanılabilir kalmasını sağlamak için tasarlanmıştır.  
-- Bir sitedeki korumasız dağıtım noktaları, söz konusu sitenin sınır grubuna *>varsayılan site sınır grubu site \< koduna* eklenir.
-- Bir kopya, yavaş bağlantıyla yapılandırılmış bir site sunucusu içeren her bir mevcut sınır grubundan oluşur. Yeni grubun adı *** \< orijinal sınır grubu adı>-yavaş-tmp***:  
+- Bir sitedeki korumasız dağıtım noktaları, bu sitenin *varsayılan site sınır grubu \<sitecode> * sınır grubuna eklenir.
+- Bir kopya, yavaş bağlantıyla yapılandırılmış bir site sunucusu içeren her bir mevcut sınır grubundan oluşur. Yeni grubun adı *** \<original boundary group name> -yavaş-tmp***:  
   -   Hızlı bağlantısı olan site sistemleri orijinal sınır grubunda bırakılır.
   -   Sınır grubunun kopyasına yavaş bağlantısı olan site sistemlerinin bir kopyası eklenir. Yavaş olarak yapılandırılan özgün site sistemleri geriye dönük uyumluluk için özgün sınır grubunda kalır, ancak bu sınır grubundan kullanılmaz.
   -   Bu sınır grubu kopyasında kendisiyle ilişkili sınırlar yok. Ancak, özgün grup ve geri dönüş süresi sıfır olan yeni sınır grubu kopyası arasında bir geri dönüş bağlantısı oluşturulur.
@@ -327,10 +327,10 @@ Sürüm 1609 ' i yüklediğinizde ve sitenizi güncelleştirdiğinizde, aşağı
 
 Yavaş ağda "program çalıştırma" için özgün dağıtım yapılandırması  |"İstemcinin içerik için bir geri dönüş kaynak konumu kullanmasına Izin ver" için özgün dağıtım noktası yapılandırması  |Yeni geri dönüş davranışı  
 ---------|---------|---------
-Seçildi     |  Seçildi    |  **Geri dönüş yok** -yalnızca geçerli sınır grubundaki dağıtım noktalarını kullan       
-Seçildi     |  Seçilmedi|  **Geri dönüş yok** -yalnızca geçerli sınır grubundaki dağıtım noktalarını kullan       
+Seçili     |  Seçili    |  **Geri dönüş yok** -yalnızca geçerli sınır grubundaki dağıtım noktalarını kullan       
+Seçili     |  Seçilmedi|  **Geri dönüş yok** -yalnızca geçerli sınır grubundaki dağıtım noktalarını kullan       
 Seçilmedi |  Seçilmedi|  **Komşuyla geri dönüş** -geçerli sınır grubundaki dağıtım noktalarını kullanın ve ardından komşu sınır grubundan dağıtım noktalarını ekleyin. Varsayılan site sınır grubuna yönelik açık bir bağlantı yapılandırılmadığı takdirde, istemciler bu gruba geri dönüşmeyecektir.    
-Seçilmedi | Seçildi |   **Normal geri dönüş** -geçerli sınır grubundaki dağıtım noktalarını, ardından komşu ve site varsayılan sınır gruplarını kullanın
+Seçilmedi | Seçili |   **Normal geri dönüş** -geçerli sınır grubundaki dağıtım noktalarını, ardından komşu ve site varsayılan sınır gruplarını kullanın
 
  Diğer tüm dağıtım yapılandırmalarının **normal geri dönüşte**sonuçlanır.  
 
@@ -347,7 +347,7 @@ Panoda aşağıdakiler için grafikler görüntülenir:
 - Office 365 istemci sürümleri
 - Office 365 istemci dilleri
 - Office 365 istemci kanalları     
-Daha fazla bilgi için bkz. [Office 365 ProPlus güncelleştirme kanallarına genel bakış](https://docs.microsoft.com/deployoffice/overview-update-channels).
+Daha fazla bilgi için bkz. [Office 365 ProPlus güncelleştirme kanallarına genel bakış](/deployoffice/overview-update-channels).
 - Kullanılabilir ürünler kümesinde Office 365 Istemcisinin seçtiği otomatik dağıtım kuralları.
 
 Panoda aşağıdaki eylemleri gerçekleştirebilirsiniz:

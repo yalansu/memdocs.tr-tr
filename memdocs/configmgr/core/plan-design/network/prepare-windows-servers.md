@@ -10,12 +10,12 @@ ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7e4e84b55c929dd878cb0720b3f61dfceedcf449
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8585f04e6cedf9cb5158dbebc41b00565eabd989
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904087"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692732"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>Windows Server'ı, Configuration Manager’ı destekleyecek şekilde hazırlama
 
@@ -29,7 +29,7 @@ Configuration Manager için bir Windows bilgisayarını site sistem sunucusu ola
 
 Bu makaledeki bilgiler, Configuration Manager site sistemlerini desteklemek için gereken Windows yapılandırmalarının türlerine genel bir bakış sağlar. Belirli site sistem rollerinin yapılandırma ayrıntıları için bkz. [site ve site sistemi önkoşulları](../configs/site-and-site-system-prerequisites.md).
 
-##  <a name="windows-features-and-roles"></a><a name="BKMK_WinFeatures"></a>Windows özellikleri ve rolleri  
+##  <a name="windows-features-and-roles"></a><a name="BKMK_WinFeatures"></a> Windows özellikleri ve rolleri  
 Bir bilgisayarda Windows özelliklerini ve rollerini ayarlarken, bu yapılandırmayı gerçekleştirmek için bilgisayarı yeniden başlatmanız gerekebilir. Bu nedenle, bir Configuration Manager sitesini veya site sistem sunucusunu yüklemeden önce belirli site sistem rollerini barındıracak bilgisayarları belirlemek iyi bir fikirdir.
 
 ### <a name="features"></a>Özellikler  
@@ -95,10 +95,10 @@ Aşağıdaki Windows rolleri, yazılım güncelleştirmeleri ve işletim sistemi
 - **Windows Server Update Services**: Bu rol, yazılım güncelleştirmeleri için gereklidir.  
 
 
-##  <a name="iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a>Dağıtım noktaları için IIS istek filtreleme  
+##  <a name="iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a> Dağıtım noktaları için IIS istek filtreleme  
 Varsayılan olarak IIS, çeşitli dosya adı uzantılarına ve klasör konumlarına HTTP veya HTTPS iletişimleri aracılığıyla erişimi engellemek için istek filtreleme kullanır. Dağıtım noktasında bu, istemcilerin engellenen uzantıları veya klasör konumlarını içeren paketleri indirmelerini engeller.  
 
-Paket kaynak dosyalarınız, istek filtreleme yapılandırmanız tarafından IIS 'de engellenen uzantılara sahip olduğunda, izin vermek için istek filtrelemeyi ayarlamanız gerekir. Bu, dağıtım noktası bilgisayarlarınızdaki IIS Yöneticisi 'nde [istek filtreleme özelliği düzenlenerek](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) yapılır.  
+Paket kaynak dosyalarınız, istek filtreleme yapılandırmanız tarafından IIS 'de engellenen uzantılara sahip olduğunda, izin vermek için istek filtrelemeyi ayarlamanız gerekir. Bu, dağıtım noktası bilgisayarlarınızdaki IIS Yöneticisi 'nde [istek filtreleme özelliği düzenlenerek](/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) yapılır.  
 
 Ayrıca, aşağıdaki dosya adı uzantıları, paketler ve uygulamalar için Configuration Manager tarafından kullanılır. İstek filtreleme yapılandırmalarınızın bu dosya uzantılarını engellemediğinden emin olun:  
 
@@ -136,4 +136,4 @@ Ayrıca, aşağıdaki dosya adı uzantıları, paketler ve uygulamalar için Con
 - HEAD
 - PROPFIND
 
-Daha fazla bilgi için bkz. [IIS 'de istek filtrelemeyi yapılandırma](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs). 
+Daha fazla bilgi için bkz. [IIS 'de istek filtrelemeyi yapılandırma](/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs).

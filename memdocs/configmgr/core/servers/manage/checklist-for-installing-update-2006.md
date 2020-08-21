@@ -10,12 +10,12 @@ ms.assetid: 6d359306-69ae-4873-ba90-964b6ae51d79
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 97ad8c947c634f43a53e1fac68f0a3255aa89809
-ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
+ms.openlocfilehash: 05264780ef3971a7aa8b2d1778f0fe27c90b0b71
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512759"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696472"
 ---
 # <a name="checklist-for-installing-update-2006-for-configuration-manager"></a>Configuration Manager için güncelleştirme 2006 yükleme denetim listesi
 
@@ -84,7 +84,7 @@ Erken güncelleştirme halkasını kabul etmek için:
 1. **Yönetici olarak** bir Windows PowerShell sürüm 5 oturumu açın
 
     > [!IMPORTANT]
-    > Geçerli dal Configuration Manager şu anda PowerShell sürüm 7 ' yi desteklememektedir. PowerShell sürüm 7 ' yi zaten yüklediyseniz, PowerShell sürüm 5 ' i kullanmaya devam edebilirsiniz. Daha fazla bilgi için bkz. [Windows powershell 5,1 Ile PowerShell 7 yan yana kullanımı](https://docs.microsoft.com/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
+    > Geçerli dal Configuration Manager şu anda PowerShell sürüm 7 ' yi desteklememektedir. PowerShell sürüm 7 ' yi zaten yüklediyseniz, PowerShell sürüm 5 ' i kullanmaya devam edebilirsiniz. Daha fazla bilgi için bkz. [Windows powershell 5,1 Ile PowerShell 7 yan yana kullanımı](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
 
 1. Aşağıdaki sözdizimini kullanarak **EnableEarlyUpdateRing2006.ps1** betiğini çalıştırın:
 

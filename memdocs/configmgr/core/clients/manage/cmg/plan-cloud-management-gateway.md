@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7c57e6568ce60680d9febc533c60533055595bc3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d5b9a65b768d02d02084d778fd36255341a808b2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126942"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692851"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Configuration Manager 'de bulut yönetimi ağ geçidini planlayın
 
@@ -105,10 +105,10 @@ CMG 'nin dağıtımı ve işlemi aşağıdaki bileşenleri içerir:
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
 
 <!-- 1324735 -->
-**Azure Resource Manager dağıtımı**kullanarak CMG 'yi oluşturun. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) , tüm çözüm kaynaklarının, [kaynak grubu](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups)olarak adlandırılan tek bir varlık olarak yönetilmesine yönelik modern bir platformdur. Azure Resource Manager ile CMG 'yi dağıttığınızda, site kimlik doğrulaması yapmak ve gerekli bulut kaynaklarını oluşturmak için Azure Active Directory (Azure AD) kullanır. Bu modernlanmış dağıtım, klasik Azure Yönetim sertifikası gerektirmez.  
+**Azure Resource Manager dağıtımı**kullanarak CMG 'yi oluşturun. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) , tüm çözüm kaynaklarının, [kaynak grubu](/azure/azure-resource-manager/resource-group-overview#resource-groups)olarak adlandırılan tek bir varlık olarak yönetilmesine yönelik modern bir platformdur. Azure Resource Manager ile CMG 'yi dağıttığınızda, site kimlik doğrulaması yapmak ve gerekli bulut kaynaklarını oluşturmak için Azure Active Directory (Azure AD) kullanır. Bu modernlanmış dağıtım, klasik Azure Yönetim sertifikası gerektirmez.  
 
 > [!NOTE]
-> Bu özellik, Azure bulut hizmeti sağlayıcıları (CSP) için desteği etkinleştirmez. Azure Resource Manager ile CMG dağıtımı, CSP 'nin desteklemediği klasik bulut hizmetini kullanmaya devam eder. Daha fazla bilgi için bkz. [Azure CSP 'de kullanılabilir Azure hizmetleri](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services).
+> Bu özellik, Azure bulut hizmeti sağlayıcıları (CSP) için desteği etkinleştirmez. Azure Resource Manager ile CMG dağıtımı, CSP 'nin desteklemediği klasik bulut hizmetini kullanmaya devam eder. Daha fazla bilgi için bkz. [Azure CSP 'de kullanılabilir Azure hizmetleri](/azure/cloud-solution-provider/overview/azure-csp-available-services).
 
 Configuration Manager sürüm 1902 ' den başlayarak, bulut yönetimi ağ geçidinin yeni örnekleri için tek dağıtım mekanizmasıdır Azure Resource Manager. Mevcut dağıtımlar çalışmaya devam eder.<!-- 3605704 -->
 
@@ -216,7 +216,7 @@ Daha fazla bilgi için aşağıdaki SSS bölümüne bakın: [Kullanıcı hesapla
 
 - Ağ Yük dengeleyici kullanan yazılım güncelleştirme noktaları CMG ile çalışmaz. <!--505311-->  
 
-- Azure kaynak modeli kullanılarak gerçekleştirilen CMG dağıtımları, Azure bulut hizmeti sağlayıcıları (CSP) için desteği etkinleştirmez. Azure Resource Manager ile CMG dağıtımı, CSP 'nin desteklemediği klasik bulut hizmetini kullanmaya devam eder. Daha fazla bilgi için bkz. [Azure CSP programında bulunan Azure hizmetleri](https://docs.microsoft.com/partner-center/azure-plan-available).
+- Azure kaynak modeli kullanılarak gerçekleştirilen CMG dağıtımları, Azure bulut hizmeti sağlayıcıları (CSP) için desteği etkinleştirmez. Azure Resource Manager ile CMG dağıtımı, CSP 'nin desteklemediği klasik bulut hizmetini kullanmaya devam eder. Daha fazla bilgi için bkz. [Azure CSP programında bulunan Azure hizmetleri](/partner-center/azure-plan-available).
 
 ### <a name="support-for-configuration-manager-features"></a>Configuration Manager özellikleri için destek
 
@@ -259,7 +259,7 @@ Aşağıdaki tabloda Configuration Manager özellikleri için CMG desteği liste
 |![Desteklenen ](media/green_check.png) (*yymm*) = bu özellik, Configuration Manager *yymm* sürümü ile başlayarak CMG ile desteklenir  |
 |![Desteklenmez](media/Red_X.png) = Bu özellik CMG ile desteklenmiyor |
 
-#### <a name="note-1-support-for-endpoint-protection"></a><a name="bkmk_note1"></a>Note 1: Endpoint Protection için destek
+#### <a name="note-1-support-for-endpoint-protection"></a><a name="bkmk_note1"></a> Note 1: Endpoint Protection için destek
 
 Sürüm 2006 ' den başlayarak, bir CMG aracılığıyla iletişim kuran istemciler, Active Directory için etkin bir bağlantı olmadan Endpoint Protection ilkelerini hemen uygulayabilir.<!--4773948-->
 
@@ -268,12 +268,12 @@ Sürüm 2002 ve önceki sürümlerde, etki alanına katılmış cihazların Endp
 
 - Siteyi ve istemcileri 2006 sürümüne güncelleştirin.
 
-- Ortak yönetimi kullanın ve [Endpoint Protection iş yükünü](../../../../comanage/workloads.md#endpoint-protection) Intune 'a geçirin ve [Microsoft Defender virüsten koruma](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus) 'yı buluttan yönetin.
+- Ortak yönetimi kullanın ve [Endpoint Protection iş yükünü](../../../../comanage/workloads.md#endpoint-protection) Intune 'a geçirin ve [Microsoft Defender virüsten koruma](../../../../../intune/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) 'yı buluttan yönetin.
 
 - Endpoint Protection ilkesini uygulamak için yerel [kötü amaçlı yazılımdan koruma ilkeleri](../../../../protect/deploy-use/endpoint-antimalware-policies.md) özelliği yerine [yapılandırma öğelerini](../../../../compliance/deploy-use/create-configuration-items.md) kullanın.
 
 
-## <a name="cost"></a>Maliyet
+## <a name="cost"></a>Cost
 
 > [!IMPORTANT]  
 > Aşağıdaki maliyet bilgileri yalnızca tahmin amaçlıdır. Ortamınızın CMG kullanmanın genel maliyetini etkileyen başka değişkenleri olabilir.
@@ -325,7 +325,7 @@ CMG, Azure abonelik hesabına ücretlendirieden aşağıdaki Azure bileşenlerin
 
 - Bir CMG, istemcilere içerik sunacak bir bulut dağıtım noktası da olabilir. Bu işlevsellik, Azure VM 'lerinin gerekli sertifikalarını ve maliyetini azaltır. Daha fazla bilgi için bkz. [CMG 'Yi değiştirme](setup-cloud-management-gateway.md#modify-a-cmg).<!--1358651-->  
 
-- CMG, Azure yerel olarak yedekli depolama (LRS) kullanır. Daha fazla bilgi için bkz. [yerel olarak yedekli depolama](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs).  
+- CMG, Azure yerel olarak yedekli depolama (LRS) kullanır. Daha fazla bilgi için bkz. [yerel olarak yedekli depolama](/azure/storage/common/storage-redundancy-lrs).  
 
 ### <a name="other-costs"></a>Diğer maliyetler
 
@@ -388,15 +388,15 @@ Bu tabloda gerekli ağ bağlantı noktaları ve protokoller listelenmektedir. *�
 | CMG bağlantı noktası | HTTPS veya HTTP | 443 veya 80 | Yönetim noktası | Şirket içi trafik, bağlantı noktası yönetim noktası yapılandırmasına bağımlıdır |
 | CMG bağlantı noktası | HTTPS veya HTTP | 443 veya 80 | Yazılım güncelleştirme noktası | Şirket içi trafik, bağlantı noktası yazılım güncelleştirme noktası yapılandırmasına bağlıdır |
 
-#### <a name="note-1-cmg-connection-point-tcp-tls-ports"></a><a name="bkmk_port-note1"></a>Note 1: CMG bağlantı noktası TCP-TLS bağlantı noktaları
+#### <a name="note-1-cmg-connection-point-tcp-tls-ports"></a><a name="bkmk_port-note1"></a> Note 1: CMG bağlantı noktası TCP-TLS bağlantı noktaları
 
 CMG bağlantı noktası ilk olarak her CMG VM örneğiyle uzun süreli bir TCP-TLS bağlantısı kurmaya çalışır. Bağlantı noktası 10140 ' deki ilk sanal makine örneğine bağlanır. İkinci VM örneği 10141 numaralı bağlantı noktasını 16. bağlantı noktası 10155 ' de kullanır. TCP-TLS bağlantısı en iyi şekilde çalışır, ancak Internet proxy 'yi desteklemez. CMG bağlantı noktası TCP-TLS aracılığıyla bağlanamıyorsa, HTTPS<sup>[Note 2](#bkmk_port-note2)</sup>' ye geri döner.
 
-#### <a name="note-2-cmg-connection-point-https-ports-for-one-vm"></a><a name="bkmk_port-note2"></a>2. Note: bir VM için CMG bağlantı noktası HTTPS bağlantı noktaları
+#### <a name="note-2-cmg-connection-point-https-ports-for-one-vm"></a><a name="bkmk_port-note2"></a> 2. Note: bir VM için CMG bağlantı noktası HTTPS bağlantı noktaları
 
 CMG bağlantı noktası, CMG 'yi TCP-TLS<sup>[Not1](#bkmk_port-note1)</sup>aracılığıyla bağlanamıyorsa, yalnızca bir VM örneği IÇIN, https 443 üzerinden Azure ağ yükü dengeleyiciye bağlanır.  
 
-#### <a name="note-3-cmg-connection-point-https-ports-for-two-or-more-vms"></a><a name="bkmk_port-note3"></a>3. notta, iki veya daha fazla VM için CMG bağlantı noktası HTTPS bağlantı noktaları
+#### <a name="note-3-cmg-connection-point-https-ports-for-two-or-more-vms"></a><a name="bkmk_port-note3"></a> 3. notta, iki veya daha fazla VM için CMG bağlantı noktası HTTPS bağlantı noktaları
 
 İki veya daha fazla VM örneği varsa, CMG bağlantı noktası https 443 değil ilk VM örneğine HTTPS 10124 kullanır. HTTPS bağlantı noktası 10139 ' de 16 ' ya kadar HTTPS 10125 ' deki ikinci sanal makine örneğine bağlanır.
 

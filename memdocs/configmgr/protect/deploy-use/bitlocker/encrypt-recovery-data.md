@@ -10,12 +10,12 @@ ms.assetid: 1ee6541a-e243-43ea-be16-d0349f7f0c6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e887d594e80c0f92340081d9b922bfc334d1b3a5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2c74f1ac74b120fac2dabcd5f84f288b41368324
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129197"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697305"
 ---
 # <a name="encrypt-recovery-data"></a>Kurtarma verilerini şifreleme
 
@@ -203,9 +203,9 @@ Sertifika geçerliyse, betik bir değeri döndürür `1` .
 
 Bu SQL komutları hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [SQL Server ve veritabanı şifreleme anahtarları](https://docs.microsoft.com/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
-- [Sertifika Oluştur](https://docs.microsoft.com/sql/t-sql/statements/create-certificate-transact-sql)
-- [Yedekleme sertifikası](https://docs.microsoft.com/sql/t-sql/statements/backup-certificate-transact-sql)
-- [Ana anahtar oluştur](https://docs.microsoft.com/sql/t-sql/statements/create-master-key-transact-sql)
-- [Yedekleme ana anahtarı](https://docs.microsoft.com/sql/t-sql/statements/backup-master-key-transact-sql)
-- [Sertifika izinleri verme](https://docs.microsoft.com/sql/t-sql/statements/grant-certificate-permissions-transact-sql)
+- [SQL Server ve veritabanı şifreleme anahtarları](/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
+- [Sertifika Oluştur](/sql/t-sql/statements/create-certificate-transact-sql)
+- [Yedekleme sertifikası](/sql/t-sql/statements/backup-certificate-transact-sql)
+- [Ana anahtar oluştur](/sql/t-sql/statements/create-master-key-transact-sql)
+- [Yedekleme ana anahtarı](/sql/t-sql/statements/backup-master-key-transact-sql)
+- [Sertifika izinleri verme](/sql/t-sql/statements/grant-certificate-permissions-transact-sql)

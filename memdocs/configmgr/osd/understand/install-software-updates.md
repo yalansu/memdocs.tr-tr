@@ -10,12 +10,12 @@ ms.assetid: 72d1ccd5-3763-4f88-9273-e1a73e8f4286
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c5fdc15ba05786c25361c394bc0aa8dc305d666
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 73acd43ef9d7924682de9df66487c5a04297e640
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124262"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697509"
 ---
 # <a name="install-software-updates"></a>Yazılım Güncelleştirmelerini Yükle
 
@@ -47,7 +47,7 @@ Birçok görüntü dosyası, farklı Windows sürümleri gibi birden çok dizin 
 
 Sürüm 1902 ' den başlayarak, siteye bir işletim sistemi görüntüsü eklediğinizde bu süreci otomatikleştirin. Daha fazla bilgi için bkz. [işletim sistemi görüntüsü ekleme](../get-started/manage-operating-system-images.md#BKMK_AddOSImages).<!--3719699-->
 
-### <a name="reduce-image-size"></a><a name="bkmk_resetbase"></a>Görüntü boyutunu azalt
+### <a name="reduce-image-size"></a><a name="bkmk_resetbase"></a> Görüntü boyutunu azalt
 
 Görüntüye yazılım güncelleştirmeleri uyguladığınızda, yenisiyle değiştirilen tüm güncelleştirmeleri kaldırarak çıktıyı iyileştirin. DıSM komut satırı aracını kullanın, örneğin:
 
@@ -68,7 +68,7 @@ Görüntüleme işleminizi tasarlarken, yazılım güncelleştirmelerinin yükle
 - [Çevrimdışı bakım kullan](#bkmk_offline)  
 - [Yalnızca varsayılan görüntüyü kullan](#bkmk_installwim)
 
-### <a name="periodically-recapture-the-image"></a><a name="bkmk_goldimage"></a>Görüntüyü düzenli aralıklarla yeniden yakala
+### <a name="periodically-recapture-the-image"></a><a name="bkmk_goldimage"></a> Görüntüyü düzenli aralıklarla yeniden yakala
 
 Özel bir işletim sistemi görüntüsünü düzenli bir zamanlamaya göre yakalamaya yönelik otomatikleştirilmiş bir işleminiz vardır. Bu yakalama görev dizisi en son yazılım güncelleştirmelerini yüklüyor. Bu güncelleştirmeler toplu, toplu olmayan ve hizmet yığını güncelleştirmeleri (SSU) gibi diğer kritik güncelleştirmeleri içerebilir. Dağıtım görev sırası, yakalama sonrasında ek güncelleştirmeler yüklenir.
 
@@ -88,7 +88,7 @@ Bu işlemle ilgili daha fazla bilgi için bkz. bir [işletim sistemini yakalamak
 - Ön üretim ortamları üzerinden test etmek için gereken süre, işletim sistemi düzeltme döngüsüyle daha uzun olabilir. bu durum, güncelleştirilmiş görüntüyü ilgisiz hale getirir
 
 
-### <a name="use-offline-servicing"></a><a name="bkmk_offline"></a>Çevrimdışı bakım kullan
+### <a name="use-offline-servicing"></a><a name="bkmk_offline"></a> Çevrimdışı bakım kullan
 
 Resimlerinize yazılım güncelleştirmeleri uygulamak için Configuration Manager zamanlayın.
 
@@ -107,7 +107,7 @@ Daha fazla bilgi için bkz. [bir görüntüye yazılım güncelleştirmelerini u
 - Yalnızca CBS tabanlı güncelleştirmeleri destekler. Microsoft 365 Apps güncelleştirmeleri uygulanamıyor
 
 > [!Tip]  
-> PowerShell kullanarak yazılım güncelleştirmelerinin seçimini otomatikleştirebilirsiniz. Güncelleştirmelerin listesini almak için [Get-CMSoftwareUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) cmdlet 'ini kullanın. Ardından, çevrimdışı bakım zamanlamasını oluşturmak için [New-Cmoperatingsystemımageupdateschedule](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) cmdlet 'ini kullanın. Aşağıdaki örnek, bu eylemi otomatikleştirmek için bir yöntemi gösterir:
+> PowerShell kullanarak yazılım güncelleştirmelerinin seçimini otomatikleştirebilirsiniz. Güncelleştirmelerin listesini almak için [Get-CMSoftwareUpdate](/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) cmdlet 'ini kullanın. Ardından, çevrimdışı bakım zamanlamasını oluşturmak için [New-Cmoperatingsystemımageupdateschedule](/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) cmdlet 'ini kullanın. Aşağıdaki örnek, bu eylemi otomatikleştirmek için bir yöntemi gösterir:
 >
 > ```PowerShell
 > # Get the OS image
@@ -123,7 +123,7 @@ Daha fazla bilgi için bkz. [bir görüntüye yazılım güncelleştirmelerini u
 > ```
 
 
-### <a name="use-default-image-only"></a><a name="bkmk_installwim"></a>Yalnızca varsayılan görüntüyü kullan
+### <a name="use-default-image-only"></a><a name="bkmk_installwim"></a> Yalnızca varsayılan görüntüyü kullan
 
 Dağıtım görev dizilerinizdeki varsayılan Windows Install. wim görüntü dosyasını kullanın.
 

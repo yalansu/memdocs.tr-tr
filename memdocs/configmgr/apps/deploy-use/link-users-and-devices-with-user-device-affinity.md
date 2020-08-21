@@ -10,12 +10,12 @@ ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2e74f969016d79254ceb8e8323b6e3914969ecc7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8e1a55efa6b23aa489ea65b3296e33847163a5c4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710100"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695248"
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-configuration-manager"></a>Configuration Manager 'deki Kullanıcı cihaz benzeşimi ile Kullanıcı ve cihazları bağlama
 
@@ -96,7 +96,7 @@ Tek seferde birçok ilişki oluşturmak için, birden çok Kullanıcı aygıt be
 
 1. Kullanıcı aygıt benzeşimini Içeri aktarma sihirbazında **eşleme Seç** sayfasında, şu bilgileri ayarlayın:  
 
-    - **Dosya adı**. Benzeşim oluşturmak istediğiniz kullanıcı ve cihazların listesini içeren bir virgülle ayrılmış değerler (CSV) dosyası belirtin. Bu dosyada, her bir Kullanıcı ve cihaz çifti, virgülle ayrılmış değerlerle birlikte kendi satırı üzerinde olmalıdır. Şu biçimi kullanın:`<domain>\<username>,<device NetBIOS name>`  
+    - **Dosya adı**. Benzeşim oluşturmak istediğiniz kullanıcı ve cihazların listesini içeren bir virgülle ayrılmış değerler (CSV) dosyası belirtin. Bu dosyada, her bir Kullanıcı ve cihaz çifti, virgülle ayrılmış değerlerle birlikte kendi satırı üzerinde olmalıdır. Şu biçimi kullanın: `<domain>\<username>,<device NetBIOS name>`  
 
     - **Bu dosyada başvuru amaçlı sütun başlıkları vardır**. . Csv dosyasında bir üst satır üst bilgisi varsa, bu seçeneği seçin. Site, içeri aktarma sırasında üst bilgi satırını yoksayar.  
 
@@ -135,7 +135,7 @@ Sürüm 1902 ' den başlayarak, benzeşim ayarlamak için yazılım merkezi 'ni 
 > [!Important]
 > Uygulama kataloğunun Silverlight Kullanıcı deneyimi, güncel dal sürümü 1806 ' den itibaren desteklenmez. Sürüm 1906 ' den başlayarak, güncelleştirilmiş istemciler Kullanıcı tarafından kullanılabilen uygulama dağıtımları için yönetim noktasını otomatik olarak kullanır. Ayrıca yeni uygulama kataloğu rolleri yükleyemezsiniz. Sürüm 1910 ile uygulama kataloğu rolleri için destek sona erer.  
 >
-> Daha fazla bilgi için aşağıdaki makalelere bakın:
+> Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 >
 > - [Yazılım merkezini yapılandırma](../plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Kaldırılan ve kullanım dışı bırakılan özellikler](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -162,4 +162,4 @@ Sürüm 1902 ' den başlayarak, benzeşim ayarlamak için yazılım merkezi 'ni 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Ayrıca, kayıtlı bir cihazın birincil kullanımını bulmak için Microsoft Intune de kullanabilirsiniz. Daha fazla bilgi için, Intune belgelerinde Intune [cihazının birincil kullanıcısını bulma](https://docs.microsoft.com/intune/find-primary-user) bölümüne bakın.
+Ayrıca, kayıtlı bir cihazın birincil kullanımını bulmak için Microsoft Intune de kullanabilirsiniz. Daha fazla bilgi için, Intune belgelerinde Intune [cihazının birincil kullanıcısını bulma](/intune/find-primary-user) bölümüne bakın.

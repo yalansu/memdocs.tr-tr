@@ -10,16 +10,16 @@ ms.assetid: 561eb5b6-f90c-485a-91c2-e45bb0ce7877
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e11a6130fb9f7d86b7d3377cc4120d4e61c43d2d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d41a0806a33ac627eceaafab54c73c31ea013365
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711465"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694840"
 ---
 # <a name="upgrade-windows-10-for-co-management"></a>Ortak yönetim için Windows 10 ' a yükseltme
 
-Kuruluşunuzu ortak yönetime ekleme konusunda çalışırken, geçerli olan bazı müşteriler için önemli bir aceye sahip olursunuz. Ortak yönetim [Windows 10 sürüm 1709](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1709) veya üstünü gerektirir. Windows 'u güncelleştirdiğinizde ve otomatik kaydı yapılandırdıktan sonra, istemcileriniz otomatik olarak ortak yönetime kaydedilir.
+Kuruluşunuzu ortak yönetime ekleme konusunda çalışırken, geçerli olan bazı müşteriler için önemli bir aceye sahip olursunuz. Ortak yönetim [Windows 10 sürüm 1709](/windows/whats-new/whats-new-windows-10-version-1709) veya üstünü gerektirir. Windows 'u güncelleştirdiğinizde ve otomatik kaydı yapılandırdıktan sonra, istemcileriniz otomatik olarak ortak yönetime kaydedilir.
 
 Aşağıdaki videoda, üst düzey Program Yöneticisi ramiz York ve ürün pazarlama yöneticisi Locky Ainley, ortak yönetim için Windows 10 ' a yükseltmeyi ve tanıtımı sağlar:
 
@@ -31,7 +31,7 @@ Aşağıdaki videoda, üst düzey Program Yöneticisi ramiz York ve ürün pazar
 
 Diğer Platform geliştirmeleri arasında Windows 10 sürüm 1709 ve üzeri otomatik kaydı destekler. Bu davranış, bir cihazın Azure Active Directory (Azure AD) katıldığında otomatik olarak Intune 'a kaydolmasını sağlar. 
 
-Daha fazla bilgi için bkz. [Windows 10 otomatik kaydını etkinleştirme](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment).
+Daha fazla bilgi için bkz. [Windows 10 otomatik kaydını etkinleştirme](/intune/windows-enroll#enable-windows-10-automatic-enrollment).
 
 
 ## <a name="how-to-do-it"></a>Nasıl yapılır?
@@ -61,5 +61,4 @@ Büyük Avrupa yazılım üreticisi, erken benimseyen grubunu başarıyla kullan
 
 İşlemin herhangi bir noktasında Windows 10 yükseltmeniz ile ilgili yardıma ihtiyacınız varsa [Microsoft FastTrack](https://Microsoft.com/FastTrack/), oturum açın ve yardım isteyin. 
 
-Daha fazla bilgi için bkz. [FastTrack 'ten yardım alın](quickstart-fasttrack.md). 
-
+Daha fazla bilgi için bkz. [FastTrack 'ten yardım alın](quickstart-fasttrack.md).

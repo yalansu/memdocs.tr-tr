@@ -10,20 +10,20 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 2b851c03424af0ba0f826716b401705879338855
-ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
+ms.openlocfilehash: e0395d41c2886bca1d623fb2736bfc86012f89b4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84436678"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696761"
 ---
-#  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a>Yazılım güncelleştirmeleri için ayarları yönetme  
+#  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a> Yazılım güncelleştirmeleri için ayarları yönetme  
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
 Configuration Manager ' de yazılım güncelleştirmelerini eşitledikten sonra, aşağıdaki bölümlerdeki ayarları yapılandırın ve doğrulayın.
 
-##  <a name="client-settings-for-software-updates"></a><a name="BKMK_ClientSettings"></a>Yazılım güncelleştirmeleri için istemci ayarları  
+##  <a name="client-settings-for-software-updates"></a><a name="BKMK_ClientSettings"></a> Yazılım güncelleştirmeleri için istemci ayarları  
 Yazılım güncelleştirme noktasını yükledikten sonra yazılım güncelleştirmeleri istemcilerde varsayılan olarak etkinleştirilir ve istemci ayarlarında bulunan **Yazılım Güncelleştirmeleri** sayfası varsayılan değerlere sahip olur. İstemci ayarları site genelinde kullanılır ve yazılım güncelleştirmeleri uyumluluk için tarandığı zaman ve yazılım güncelleştirmelerinin istemci bilgisayarlara nasıl ve ne zaman yükleneceğini etkiler. Yazılım güncelleştirmelerini dağıtmadan önce, istemci ayarlarının sitenizdeki yazılım güncelleştirmeleri için uygun olduğunu doğrulayın.  
 
 > [!IMPORTANT]  
@@ -40,7 +40,7 @@ Yazılım güncelleştirme noktasında çalıştırılan WSUS'a bağlanmak üzer
 Yazılım güncelleştirme noktası bir site için oluşturulduğunda istemciler, yazılım güncelleştirme noktası sunucu adını sağlayan ve bilgisayardaki **Intranet Microsoft update hizmet konumunu belirt** yerel ilkesini yapılandıran bir makine ilkesini alır. WUA, **Güncelleştirmelerin algılanması için intranet update hizmetini kur** ayarında belirtilen sunucu adını alır ve yazılım güncelleştirmeleri uyumluluğu için tarama yaptığında bu sunucuya bağlanır. **Intranet Microsoft update hizmet konumunu belirt** ayarı için bir etki alanı ilkesi oluşturulduğunda bu ilke yerel ilkeyi geçersiz kılar ve WUA, yazılım güncelleştirme noktasının dışındaki bir sunucuya bağlanabilir. Bu durumda istemci, farklı ürünlere, sınıflandırmalara ve dillere bağlı olarak yazılım güncelleştirme uyumluluğu için tarama yapabilir. Bu nedenle, Active Directory ilkesini istemci bilgisayarları için yapılandırmamanız gerekir.  
 
 ### <a name="allow-signed-content-from-intranet-microsoft-update-service-location-group-policy"></a>Microsoft Update Hizmet Konumu'ndan Alınan İçeriğe İzin Ver grup ilkesi  
-Bilgisayarlardaki WUA, System Center Updates Publisher ile oluşturulan ve yayınlanan yazılım güncelleştirmeleri için tarama yapmadan önce **Microsoft update hizmet konumundan alınan imzalı içeriğe izin ver** Grup İlkesi ayarını etkinleştirmeniz gerekir. İlke ayarı etkinleştirildiğinde, bir intranet konumu üzerinden alınan yazılım güncelleştirmeleri yerel bilgisayarın **Güvenilir Yayımcılar** sertifika deposunda imzalanırsa WUA bu yazılım güncelleştirmelerini kabul eder. Updates Publisher için gereken Grup İlkesi ayarları hakkında daha fazla bilgi için bkz. [Updates Publisher 2011 Belge Kitaplığı](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
+Bilgisayarlardaki WUA, System Center Updates Publisher ile oluşturulan ve yayınlanan yazılım güncelleştirmeleri için tarama yapmadan önce **Microsoft update hizmet konumundan alınan imzalı içeriğe izin ver** Grup İlkesi ayarını etkinleştirmeniz gerekir. İlke ayarı etkinleştirildiğinde, bir intranet konumu üzerinden alınan yazılım güncelleştirmeleri yerel bilgisayarın **Güvenilir Yayımcılar** sertifika deposunda imzalanırsa WUA bu yazılım güncelleştirmelerini kabul eder. Updates Publisher için gereken Grup İlkesi ayarları hakkında daha fazla bilgi için bkz. [Updates Publisher 2011 Belge Kitaplığı](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 ### <a name="automatic-updates-configuration"></a>Otomatik güncelleştirmeler yapılandırması  
 Otomatik Güncelleştirmeler güvenlik güncelleştirmelerinin ve diğer önemli indirmelerin istemci bilgisayarlarında alınmasını sağlar. Otomatik Güncelleştirmeler **Otomatik Güncelleştirmeleri Yapılandır** Grup İlkesi ayarı veya yerel bilgisayardaki Denetim Masası üzerinden yapılandırılır. Otomatik Güncelleştirmeler etkinleştirildiğinde istemci bilgisayarları güncelleştirme bildirimlerini alır ve yapılandırma ayarlarına bağlı olarak gerekli güncelleştirmeleri indirir ve yükler. Otomatik Güncelleştirmeler yazılım güncelleştirmeleriyle bir arada bulunduğunda tüm istemci bilgisayarları aynı güncelleştirme için bildirim simgelerini ve açılan ekran bildirimlerini görüntüleyebilir. Aynı zamanda, bir yeniden başlatma gerektiğinde tüm istemci bilgisayarları aynı güncelleştirme için bir yeniden başlatma iletişim kutusunu görüntüleyebilir.  
@@ -62,10 +62,10 @@ Yazılım güncelleştirme özelliklerini açmak için aşağıdaki prosedürü 
    > [!NOTE]  
    >  **Tüm yazılım güncelleştirmeleri** düğümünde Configuration Manager, yalnızca **kritik** ve **güvenlik** sınıflandırmasına sahip olan ve son 30 gün içinde yayınlanan yazılım güncelleştirmelerini görüntüler.  
 
-###  <a name="review-software-updates-information"></a><a name="BKMK_SoftwareUpdatesInformation"></a>Yazılım güncelleştirme bilgilerini gözden geçirme  
+###  <a name="review-software-updates-information"></a><a name="BKMK_SoftwareUpdatesInformation"></a> Yazılım güncelleştirme bilgilerini gözden geçirme  
 Yazılım güncelleştirme özelliklerinde, yazılım güncelleştirmesi hakkındaki ayrıntılı bilgileri gözden geçirebilirsiniz. Birden fazla yazılım güncelleştirmesini seçtiğinizde ayrıntılı bilgiler görüntülenmez. Aşağıdaki bölümlerde, seçilen yazılım güncelleştirmesi için mevcut bilgiler tanımlanır.  
 
-####  <a name="software-update-details"></a><a name="BKMK_SoftwareUpdateDetails"></a>Yazılım Güncelleştirme ayrıntıları  
+####  <a name="software-update-details"></a><a name="BKMK_SoftwareUpdateDetails"></a> Yazılım Güncelleştirme ayrıntıları  
 **Güncelleştirme Ayrıntıları** sekmesinde, seçilen yazılım güncelleştirmesi hakkında aşağıdaki özet bilgileri görüntüleyebilirsiniz:  
 
 - **Bülten Kimliği**: Güvenlik yazılım güncelleştirmeleriyle ilişkili bülten kimliğini belirtir. Güvenlik bülteni ayrıntılarını, [Microsoft Güvenlik Yanıt Merkezi](https://portal.msrc.microsoft.com/) Web SAYFASıNDAKI bülten kimliğini arayarak bulabilirsiniz.  
@@ -86,7 +86,7 @@ Yazılım güncelleştirme özelliklerinde, yazılım güncelleştirmesi hakkın
 
 - **Etkilenen ürünler**: Yazılım güncelleştirmesinin geçerli olduğu ürünleri listeler.  
 
-####  <a name="content-information"></a><a name="BKMK_ContentInformation"></a>İçerik bilgileri  
+####  <a name="content-information"></a><a name="BKMK_ContentInformation"></a> İçerik bilgileri  
 **İçerik Bilgisi** sekmesinde, seçilen yazılım güncelleştirmesiyle ilişkili içerik hakkında aşağıdaki bilgileri gözden geçirin:  
 
 -   **İçerik Kimliği**: Yazılım güncelleştirmesi içerik kimliğini belirtir.  
@@ -99,20 +99,20 @@ Yazılım güncelleştirme özelliklerinde, yazılım güncelleştirmesi hakkın
 
 -   **Boyut (MB)**: Yazılım güncelleştirmesi kaynak dosyalarının boyutunu belirtir.  
 
-####  <a name="custom-bundle-information"></a><a name="BKMK_CustomBundleInformation"></a>Özel paket bilgileri  
+####  <a name="custom-bundle-information"></a><a name="BKMK_CustomBundleInformation"></a> Özel paket bilgileri  
 **Özel Paket Bilgileri** sekmesinde, yazılım güncelleştirmesi için özel paket bilgilerini gözden geçirin. Seçilen yazılım güncelleştirmesi, yazılım güncelleştirme dosyasında bulunan paketli yazılım güncelleştirmelerini içeriyorsa, bunlar **Paket bilgileri** bölümünde görüntülenir. Bu sekme, farklı diller için güncelleştirme dosyaları gibi **İçerik Bilgisi** sekmesinde görüntülenen paketlenmiş yazılım güncelleştirmelerini görüntülemez.  
 
-####  <a name="supersedence-information"></a><a name="BKMK_SupersedenceInformation"></a>Yenisiyle değiştirme bilgileri  
+####  <a name="supersedence-information"></a><a name="BKMK_SupersedenceInformation"></a> Yenisiyle değiştirme bilgileri  
 **Yenileriyle Değiştirme Bilgileri** sekmesinde, yazılım güncelleştirmesini yenisiyle değiştirme konusunda aşağıdaki bilgileri görüntüleyebilirsiniz:  
 
 - **Bu güncelleştirme, aşağıdaki güncelleştirmelerle değiştirilmiştir**: Bu güncelleştirmenin yerine gelen yazılım güncelleştirmelerini belirtir, yani listelenen güncelleştirmeler yeni olanlardır. Çoğu durumda, yazılım güncelleştirmesinin yerini alan yazılım güncelleştirmelerinden birini dağıtırsınız. Listede görüntülenen yazılım güncelleştirmeleri, yazılım güncelleştirmeleri konusunda daha fazla bilgi sağlayan web sayfalarına köprüler içerir. Bu güncelleştirme yenilenmediğinde **Yok** görüntülenir.  
 
 - **Bu güncelleştirme aşağıdaki güncelleştirmeleri değiştirmiştir**: Bu yazılım güncelleştirmesinin yerini aldığı yazılım güncelleştirmelerini belirtir, yani bu yazılım güncelleştirmesi yeni olandır. Çoğu durumda, bu yazılım güncelleştirmesini değiştirilen yazılım güncelleştirmelerini değiştirmek için dağıtırsınız. Listede görüntülenen yazılım güncelleştirmeleri, yazılım güncelleştirmeleri konusunda daha fazla bilgi sağlayan web sayfalarına köprüler içerir. Bu güncelleştirme başka bir güncelleştirmeyle yenilenmediğinde **Yok** görüntülenir.  
 
-###  <a name="configure-software-updates-settings"></a><a name="BKMK_SoftwareUpdatesSettings"></a>Yazılım güncelleştirme ayarlarını yapılandırma  
+###  <a name="configure-software-updates-settings"></a><a name="BKMK_SoftwareUpdatesSettings"></a> Yazılım güncelleştirme ayarlarını yapılandırma  
 Özellikler kısmında yazılım güncelleştirme ayarlarını bir veya daha fazla yazılım güncelleştirmesi için yapılandırabilirsiniz. Çoğu yazılım güncelleştirme ayarını sadece merkezi yönetim sitesinden veya bağımsız birincil siteden yapılandırabilirsiniz. Aşağıdaki bölümler, yazılım güncelleştirmeleri ayarlarını yapılandırmanıza yardımcı olur.  
 
-####  <a name="set-maximum-run-time"></a><a name="BKMK_SetMaxRunTime"></a>Maksimum çalışma süresini ayarla  
+####  <a name="set-maximum-run-time"></a><a name="BKMK_SetMaxRunTime"></a> Maksimum çalışma süresini ayarla  
 **Maksimum Çalıştırma Süresi** sekmesinde, bir yazılım güncelleştirmesinin istemci bilgisayarlarda tamamlanması için ayrılan maksimum süre miktarını belirleyin. Güncelleştirme en uzun çalışma süresi değerinden uzun sürerse, Configuration Manager bir durum mesajı oluşturur ve yazılım güncelleştirmeleri yüklemesini sonlandırır. Bu ayarı sadece merkezi yönetim sitesinde veya bağımsız birincil sitede yapılandırabilirsiniz.  
 
 Configuration Manager ayrıca, yazılım güncelleştirme yüklemesinin yapılandırılmış bir bakım penceresi içinde başlatılıp başlatılmayacağını anlamak için bu ayarı kullanır. Maksimum çalıştırma süresi, bakım penceresinde mevcut kalan süreden fazlaysa, yazılım güncelleştirme yüklemesi bir sonraki bakım penceresinin başlatılmasına kadar ertelenir. İstemci bilgisayarda yapılandırılmış bakım penceresiyle (zaman çerçevesi) yüklenecek birden fazla yazılım güncelleştirmesi olduğunda, önce en düşük maksimum çalıştırma süresine sahip yazılım güncelleştirmesi yüklenir, ardından bir sonraki en düşük maksimum çalıştırma süresi olan yazılım güncelleştirmesi yüklenir ve bu biçimde devam eder. İstemci, her yazılım güncelleştirmesini yüklemeden önce, mevcut bakım penceresinin yazılım güncelleştirmesini yüklemek için yeterli zaman sağlayacağını doğrular. Yazılım güncelleştirmesi yüklenmeye başladıktan sonra, yükleme bakım penceresinin bitimini aşsa bile yüklenmeye devam eder. Bakım pencereleri hakkında daha fazla bilgi için bkz. [bakım pencerelerini kullanma](../../core/clients/manage/collections/use-maintenance-windows.md).  
@@ -124,7 +124,7 @@ Configuration Manager ayrıca, yazılım güncelleştirme yüklemesinin yapılan
 > [!IMPORTANT]  
 >  Maksimum çalıştırma süresi değerini yapılandırılan bakım penceresi süresinden daha küçük bir değere ayarladığınızdan emin olun veya bakım penceresi süresini maksimum çalışma zamanından daha büyük bir değere yükseltin. Aksi takdirde, yazılım güncelleştirme yüklemesi hiç başlamaz.  
 
-####  <a name="set-custom-severity"></a><a name="BKMK_SetCustomSeverity"></a>Özel önem derecesi ayarla  
+####  <a name="set-custom-severity"></a><a name="BKMK_SetCustomSeverity"></a> Özel önem derecesi ayarla  
 Bir yazılım güncelleştirmesinin özelliklerinde yazılım güncelleştirmesinin özel önem derecesi değerlerini yapılandırmak için **Özel Önem Derecesi** sekmesini kullanabilirsiniz. Önceden tanımlı değerler ihtiyaçlarınızı karşılamıyorsa bunun yapılması gerekebilir. Özel değerler Configuration Manager konsolundaki **özel önem derecesi** sütununda listelenir. Yazılım güncelleştirmelerini tanımlı özel önem derecesi değerlerine göre sıralayabilir ve ayrıca bu değerleri filtreleyebilen sorgu ve raporlar da oluşturabilirsiniz. Bu ayarı sadece merkezi yönetim sitesinde veya bağımsız birincil sitede yapılandırabilirsiniz.  
 
 **Özel Önem Derecesi** sekmesinde aşağıdaki ayarları yapılandırabilirsiniz.  
@@ -139,4 +139,4 @@ Kullanılıyorsa, yazılım güncelleştirmelerini işleyen Configuration Manage
 #### <a name="to-enable-crl-checking"></a>CRL denetimini etkinleştirmek için  
 CRL denetimini gerçekleştiren bilgisayarda, ürün DVD 'sinden aşağıdaki komutu çalıştırın: **\smssetup\bin\x64 \\ ** < *Language* > **\UpdDwnldCfg.exe/checkrevocation**.  
 
-Örneğin, Ingilizce (US) için **\Smssetup\bin\x64\00000409\upddwnldcfg.exe/checkrevocation** çalıştırın  
+Örneğin, Ingilizce (US) çalıştırmak için **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe/checkrevocation**

@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7c92423316f83841875aed2493442881bc3a1d74
-ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
+ms.openlocfilehash: bf69dfd73472cb252d2d821dd8e5fb5eb5a6302f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87821606"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695775"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager dalları ve lisanslama hakkında sık sorulan sorular
 
@@ -23,11 +23,11 @@ ms.locfileid: "87821606"
 
 Bu SSS, Microsoft Toplu Lisanslama programları aracılığıyla kullanılabilen Configuration Manager geçerli dalı ve uzun süreli bakım dalı (LTSB) sürümleriyle ilgili genel lisanslama sorularını ele alır. Bu makale bilgilendirme amaçlıdır. Configuration Manager lisanslamayı kapsayan herhangi bir belgenin yerini almaz veya değiştirmez. Daha fazla bilgi için [Ürün koşullarına](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)bakın. Ürün koşulları, toplu lisanslama 'de tüm Microsoft ürünleri için kullanım koşulları 'nı anlatmaktadır.
 
-### <a name="whats-current-branch"></a><a name="bkmk_cb"></a>Geçerli dal nedir?
+### <a name="whats-current-branch"></a><a name="bkmk_cb"></a> Geçerli dal nedir?
 
 Geçerli dal, etkin bir hizmet modeli sağlayan Configuration Manager üretime yönelik olarak hazırlanmakta olan bir yapı. Bu hizmet modeli Windows 10 ' da deneyim gibidir. Bu yaklaşım, bir Cloud temposunda 'a taşınan ve daha hızlı yenilik yapın etmek isteyen müşterileri destekler. Geçerli dal bakım modeliyle yeni özellikler ve işlevler almaya devam edersiniz. Bu nedenle, yalnızca Configuration Manager lisanslarda etkin yazılım güvencesi olan veya eşdeğer abonelik haklarıyla olan müşteriler, geçerli Configuration Manager dalını yükleyip kullanabilir.
 
-### <a name="whats-the-long-term-servicing-branch-ltsb"></a><a name="bkmk_ltsb"></a>Uzun süreli bakım dalı (LTSB) nedir?  
+### <a name="whats-the-long-term-servicing-branch-ltsb"></a><a name="bkmk_ltsb"></a> Uzun süreli bakım dalı (LTSB) nedir?  
 
 LTSB, Configuration Manager üretime hazırlamış bir derleme. Yazılım Güvencesi veya eşdeğer abonelik haklarının sona erme süresini aşan müşterilere yöneliktir. LTSB, geçerli dala kıyasla [işlevselliği düşürür](introduction-to-the-ltsb.md#features-that-arent-available). Yazılım Güvencesi veya eşdeğer abonelik haklarının son kullanım süresini aşan müşterilerin geçerli Configuration Manager dalını kaldırması gerekir. Configuration Manager için kalıcı lisans hakları olan müşteriler, süresi dolma sırasında geçerli olan Configuration Manager sürümünün LTSB derlemesini yükleyip kullanabilir.
 
@@ -68,7 +68,7 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 > [!IMPORTANT]
 > Configuration Manager [Microsoft 365 iş](https://www.microsoft.com/microsoft-365/business) planına dahil değildir.
 
-### <a name="what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a>Microsoft Endpoint Manager 'da ortak yönetim için lisanslamayla ilgili değişiklikler nelerdir?
+### <a name="what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a> Microsoft Endpoint Manager 'da ortak yönetim için lisanslamayla ilgili değişiklikler nelerdir?
 
 <!-- 7202432 -->
 
@@ -103,25 +103,25 @@ Ortak Yönetim Lisansı, Yazılım Güvencesine sahip müşterilerin kullanıcı
 |Envanter|Evet|Evet|
 |Uygulama yönetimi|Evet|Evet|
 |Uzaktan yardım<br>(TeamViewer lisansı gereklidir)|Evet|Evet|
-|Masaüstü Analizi<br>(Windows Abonelik lisansları gereklidir|Evet|Yok|
-|Kiracı ekleme|Evet|Yok|
+|Masaüstü Analizi<br>(Windows Abonelik lisansları gereklidir|Evet|N/A|
+|Kiracı ekleme|Evet|N/A|
 |Uç nokta analizi|Evet|Evet|
 
 Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 - [Ortak yönetim önkoşulları](../../comanage/overview.md#prerequisites)
-- [Windows Autopilot gereksinimleri](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
+- [Windows Autopilot gereksinimleri](/windows/deployment/windows-autopilot/windows-autopilot-requirements)
 - [Masaüstü Analizi önkoşulları](../../desktop-analytics/overview.md#prerequisites)
 - [Kiracı iliştirme önkoşulları](../../tenant-attach/device-sync-actions.md#prerequisites)
 - [Endpoint Analytics lisanslama önkoşulları](../../../analytics/overview.md#licensing-prerequisites)
 - [Intune ile koşullu erişim kullanma](../../../intune/protect/conditional-access.md#use-conditional-access-with-intune)
 - [TeamViewer önkoşulları](../../../intune/remote-actions/teamviewer-support.md#prerequisites)
 
-### <a name="i-have-enterprise-mobility--security-and-it-expired-what-must-i-do-now"></a><a name="bkmk_ems-expires"></a>Enterprise Mobility + Security ve bu süre doldum, şimdi ne yapmam gerekir?  
+### <a name="i-have-enterprise-mobility--security-and-it-expired-what-must-i-do-now"></a><a name="bkmk_ems-expires"></a> Enterprise Mobility + Security ve bu süre doldum, şimdi ne yapmam gerekir?  
 
 EMS, geçerli dalı ve uzun süreli hizmet dalı Configuration Manager kullanma hakkı verir. Bu hakların süreleri dolduğunda, her iki dalı kullanma haklarınız yoktur ve kaldırması gerekir.  
 
-### <a name="if-my-sa-expires-and-i-had-lsa-what-do-i-get"></a><a name="bkmk_sa-expires"></a>SA 'nın süresi dolarsa ve L&SA, ne edinebilirim?
+### <a name="if-my-sa-expires-and-i-had-lsa-what-do-i-get"></a><a name="bkmk_sa-expires"></a> SA 'nın süresi dolarsa ve L&SA, ne edinebilirim?
 
 SA 'nın, 1 Ekim 2016 ' den sonra süresi dolmuşsa, altında San&elde ettiğiniz programa bağlı olarak, LTSB 'yi kullanmak için kalıcı bir lisans tutabilirsiniz. Şu anda geçerli dalı kullanıyorsanız, onu kaldırmanız ve ardından LTSB 'yi kurmanız gerekir. Geçerli daldan LTSB 'ye geçiş veya dönüştürme desteği yoktur.
 
@@ -129,15 +129,15 @@ SA 'nız 1 Ekim 2016 ' den önce dolmuşsa ve Configuration Manager için kalıc
 
 System Center Endpoint Protection kullanıyorsanız ve SA 'nın süresi dolarsa, kaldırmanız gerekir. System Center Endpoint Protection, *L (Lisans)* hakları ve kalıcı haklar gerektirmez.<!--506238-->
 
-### <a name="do-i-own-the-current-branch"></a><a name="bkmk_owncb"></a>Geçerli dala "sahip" misiniz?
+### <a name="do-i-own-the-current-branch"></a><a name="bkmk_owncb"></a> Geçerli dala "sahip" misiniz?
 
 Hayır. Etkin SA 'yı kullandığınızda geçerli dalı kullanma lisansına sahipsiniz. Örneğin, *l&sa*ile *sa* süresi dolmuşsa, geçerli dalı kullanma haklarını Içermeyen yalnızca *l (Lisans)* haklarına sahip olursunuz. L 'niz kalıcı haklar sağlıyorsa, geçerli dalın yerine LTSB Configuration Manager kullanabilirsiniz. SA 'nız 1 Ekim 2016 ' den önce dolmuşsa, System Center 2012 R2 Configuration Manager de kullanabilirsiniz.
 
-### <a name="can-i-purchase-configuration-manager-standalone-without-sa"></a><a name="bkmk_standalone"></a>SA olmadan tek başına Configuration Manager satın alabilir miyim?
+### <a name="can-i-purchase-configuration-manager-standalone-without-sa"></a><a name="bkmk_standalone"></a> SA olmadan tek başına Configuration Manager satın alabilir miyim?
 
 Hayır. Configuration Manager kullanma haklarını almanın tek yolu, SA ile veya eşdeğer bir abonelikle lisans alma yöntemidir. Geliştirme ve test amaçları için Configuration Manager sunulur, ancak üretim kullanımı değil, MSDN gibi geliştirici programları vardır.
 
-### <a name="does-a-non-production-environment-for-testing-or-development-require-an-explicit-license"></a><a name="bkmk_lab"></a>Test veya geliştirme için üretim dışı bir ortam açık bir lisans gerektiriyor mu?
+### <a name="does-a-non-production-environment-for-testing-or-development-require-an-explicit-license"></a><a name="bkmk_lab"></a> Test veya geliştirme için üretim dışı bir ortam açık bir lisans gerektiriyor mu?
 
 <!-- SCCMDocs#1848 -->
 
@@ -149,21 +149,21 @@ Hayır. Configuration Manager kullanma haklarını almanın tek yolu, SA ile vey
 
 - Laboratuvar ortamında, [Technical Preview dalını](../get-started/technical-preview.md)kullanabilirsiniz. Technical Preview, geçerli Dalla aynı işlevselliğe sahiptir, ancak ölçek ve desteklenen platformlar açısından bazı sınırlamalar içerir.
 
-### <a name="do-i-have-rights-to-install-any-update-in-the-configuration-manager-console"></a><a name="bkmk_update-rights"></a>Configuration Manager konsolunda herhangi bir güncelleştirmeyi yüklemek için haklara sahip mıyım?
+### <a name="do-i-have-rights-to-install-any-update-in-the-configuration-manager-console"></a><a name="bkmk_update-rights"></a> Configuration Manager konsolunda herhangi bir güncelleştirmeyi yüklemek için haklara sahip mıyım?
 
 Etkin *sa*'nız varsa haklarınız vardır.
 
 Etkin SA yoksa, geçerli dalı kaldırın ve ardından Configuration Manager LTSB ' yi yükleme. LTSB, Configuration Manager artımlı sürümleri için güncelleştirmeleri almaz, ancak destek yaşam döngüsüne göre güvenlik güncelleştirmelerini alır.
 
-### <a name="i-have-purchased-ems-or-microsoft-365-through-a-cloud-solution-provider-csp-do-i-have-rights-to-use-configuration-manager"></a><a name="bkmk_csp"></a>Bir bulut çözüm sağlayıcısı (CSP) aracılığıyla EMS veya Microsoft 365 satın aldım, Configuration Manager kullanma haklarım var mı?
+### <a name="i-have-purchased-ems-or-microsoft-365-through-a-cloud-solution-provider-csp-do-i-have-rights-to-use-configuration-manager"></a><a name="bkmk_csp"></a> Bir bulut çözüm sağlayıcısı (CSP) aracılığıyla EMS veya Microsoft 365 satın aldım, Configuration Manager kullanma haklarım var mı?
 
 Evet, EMS lisansı kapsamındaki istemcileri yönetmek için Configuration Manager kullanma haklarınız vardır. İlk olarak [değerlendirme yazılımını](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)indirin ve yükleyin. Ardından lisans anahtarını almak için Microsoft Desteği başvurun.<!--issue472--> Microsoft Desteği ile konuşurken iç Makale No 4033838 ' ye başvurmalarını isteyin.<!-- SCCMDocs issue 493 -->
 
-### <a name="is-my-subscription-end-date-the-same-as-an-sa-expiration-date"></a><a name="bkmk_expiration-date"></a>Aboneliğimin bitiş tarihi bir SA sona erme tarihi ile aynı mı?
+### <a name="is-my-subscription-end-date-the-same-as-an-sa-expiration-date"></a><a name="bkmk_expiration-date"></a> Aboneliğimin bitiş tarihi bir SA sona erme tarihi ile aynı mı?
 
 *Sa* veya aboneliğiniz etkinse, geçerli Configuration Manager dalı için kullanım haklarına sahip olursunuz. Etkin bir abonelik, etkin *sa*'ya sahip olma, ancak kalıcı olmayan *"L" (Lisans)* ile eşdeğerdir. Aboneliğiniz bittikten sonra, geçerli dalı kaldırın. Şu anda LTSB 'yi kullanma haklarınız yok.  
 
-### <a name="what-are-the-use-rights-associated-with-the-sql-technology-provided-with-configuration-manager"></a><a name="bkmk_sql"></a>Configuration Manager ile birlikte sunulan SQL teknolojisiyle ilişkili kullanım hakları nelerdir?
+### <a name="what-are-the-use-rights-associated-with-the-sql-technology-provided-with-configuration-manager"></a><a name="bkmk_sql"></a> Configuration Manager ile birlikte sunulan SQL teknolojisiyle ilişkili kullanım hakları nelerdir?
 
 Configuration Manager SQL Server teknolojisini içerir. Microsoft 'un bu ürüne yönelik lisans koşulları, SQL Server teknolojiden yalnızca Configuration Manager bileşenleri desteklemek için kullanılmasına olanak tanır. SQL Server istemci erişim lisansları Bu kullanım için gerekli değildir.
 
@@ -178,7 +178,7 @@ Configuration Manager ile SQL özellikleri için onaylanan kullanım hakları ş
 Configuration Manager eklenen SQL Server Lisansı, Configuration Manager için bir veritabanı barındırmak üzere yüklediğiniz her bir SQL Server örneğini destekler. Ancak, bu lisansı kullandığınızda yalnızca yukarıdaki listedeki Configuration Manager veritabanları bu SQL Server çalıştırılabilir. Ek Microsoft veya üçüncü taraf ürün için bir veritabanı SQL Server paylaşıyorsa, bu SQL Server örneği için ayrı lisansa sahip olmanız gerekir.
  <!-- sms500967 -->
 
-### <a name="does-on-premises-mobile-device-management-mdm-require-an-intune-subscription"></a><a name="bkmk_opmdm"></a>Şirket içi mobil cihaz yönetimi (MDM) bir Intune aboneliği gerektiriyor mu?
+### <a name="does-on-premises-mobile-device-management-mdm-require-an-intune-subscription"></a><a name="bkmk_opmdm"></a> Şirket içi mobil cihaz yönetimi (MDM) bir Intune aboneliği gerektiriyor mu?
 
 1806 ve önceki sürümlerde, şirket içi MDM kullanmaya başlamak için bir Microsoft Intune aboneliğine sahip olmanız gerekir. Abonelik yalnızca cihazların lisansını izlemek için gereklidir ve cihazların yönetim bilgilerini yönetmek ya da depolamak için kullanılmaz. Tüm yönetim verileri kuruluşunuzda şirket içi Configuration Manager altyapısı kullanılarak depolanır.  
 

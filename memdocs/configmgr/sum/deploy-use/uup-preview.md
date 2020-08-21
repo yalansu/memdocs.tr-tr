@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3871b51c85d0474c4bea2da24fc5a2f31d02f59f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c37fab775cdb90667ff1bc9f77dbbcaa1864b6f0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719739"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696795"
 ---
 # <a name="uup-private-preview-instructions"></a>Özel Önizleme yönergeleri
 
@@ -29,7 +29,7 @@ Birleşik güncelleştirme platformu (UUP), tüketici ve kurumsal cihazların I�
 
 UUP hakkında daha fazla bilgi için şu Windows blog gönderisine bakın: [Birleşik güncelleştirme platformumuz (uup) Için bir güncelleştirme](https://blogs.windows.com/windowsexperience/2017/03/02/an-update-on-our-unified-update-platform-uup/).
 
-## <a name="benefits"></a>Avantajlar
+## <a name="benefits"></a>Yararları
 
 Windows 10 UUP özelliği ve toplu güncelleştirmeler, müşterilerin hizmet verme sorunlarını bugün bildirme hakkında birden çok sorunu çözmeye yardımcı olur.
 
@@ -45,7 +45,7 @@ Windows 10 UUP özelliği ve toplu güncelleştirmeler, müşterilerin hizmet ve
 
 - Toplu güncelleştirmeler, FOD ve Language Pack içeriğini çevrimdışına dağıtmanıza olanak tanır. Bu davranış, kullanıcıların bunları isteğe bağlı olarak eklemesini sağlar. Kullanıcıların Internet 'ten indirilmesi gerekmez ve bu içeriği önceden hazırlama hakkında bilgi almanız gerekmez.
 
-## <a name="set-up"></a>Ayarla
+## <a name="set-up"></a>Kurulum
 
 ### <a name="1-send-your-wsus-id-to-microsoft"></a>1. WSUS KIMLIĞINIZI Microsoft 'a gönderin
 
@@ -62,7 +62,7 @@ $config.ServerId
 $config.MUUrl
 ```
 
-**Muurl** özelliği olmalıdır `https://sws.update.microsoft.com`. Bunu değiştirmek için aşağıdaki destek makalesindeki çözünürlüğe bakın: [WSUS eşitlemesi, SoapException ile başarısız olur](https://support.microsoft.com/help/4482416/wsus-synchronization-fails-with-soapexception).
+**Muurl** özelliği olmalıdır `https://sws.update.microsoft.com` . Bunu değiştirmek için aşağıdaki destek makalesindeki çözünürlüğe bakın: [WSUS eşitlemesi, SoapException ile başarısız olur](https://support.microsoft.com/help/4482416/wsus-synchronization-fails-with-soapexception).
 
 ### <a name="2-update-configuration-manager"></a>2. güncelleştirme Configuration Manager
 
@@ -155,15 +155,15 @@ Güncelleştirme güncelleştirmeleri eşitlenmeye başlamaya hazırsanız ve Mi
 
 - Bu önizleme güncelleştirmeleri ayrı bir üründe bulunduğundan, bu güncelleştirmeleri bulmak için filtrelemek üzere ürünü kullanın. Bakım planının ürün filtresini kullanarak, ön veya olmayan özellik güncelleştirmelerini dağıtın.  
 
-- **Yazılım kitaplığı**'Nın **tüm yazılım güncelleştirmeleri** ve **tüm Windows 10 güncelleştirmeleri** düğümlerinde, yeni bir isteğe bağlı sütun **etiketi**vardır. Bu özellik ADRs 'de bir filtre olarak da kullanılabilir. Güncelleştirme güncelleştirmeleri için bu alanda için `UUP`arama yapın. Güncelleştirme olmayan güncelleştirmeler için boştur.  
+- **Yazılım kitaplığı**'Nın **tüm yazılım güncelleştirmeleri** ve **tüm Windows 10 güncelleştirmeleri** düğümlerinde, yeni bir isteğe bağlı sütun **etiketi**vardır. Bu özellik ADRs 'de bir filtre olarak da kullanılabilir. Güncelleştirme güncelleştirmeleri için bu alanda için arama yapın `UUP` . Güncelleştirme olmayan güncelleştirmeler için boştur.  
 
 ### <a name="updates-available-during-preview"></a>Önizleme sırasında güncelleştirmeler var
 
-Microsoft tarafından yayınlanan tüm Windows 10 güncelleştirmeleri hakkında daha fazla bilgi için bkz. [Windows 10 sürüm bilgileri](https://docs.microsoft.com/windows/release-information/).
+Microsoft tarafından yayınlanan tüm Windows 10 güncelleştirmeleri hakkında daha fazla bilgi için bkz. [Windows 10 sürüm bilgileri](/windows/release-information/).
 
 #### <a name="cumulative-updates-to-test"></a>Sınanacak toplu güncelleştirmeler
 
-Birden çok yukarı etiketli güncelleştirme görüyorsanız, **eylül 2019** (2019-09) güncelleştirmesiyle veya sonraki bir sürümle başlayın. Örneğin:
+Birden çok yukarı etiketli güncelleştirme görüyorsanız, **eylül 2019** (2019-09) güncelleştirmesiyle veya sonraki bir sürümle başlayın. Örnek:
 
 - 2019-09 x64 tabanlı sistemler için Windows 10 sürüm 1809 toplu güncelleştirmesi (KB4512578)
 - 2019-09 x64 tabanlı sistemler için Windows 10 sürüm 1803 toplu güncelleştirmesi (KB4516058)
@@ -171,7 +171,7 @@ Birden çok yukarı etiketli güncelleştirme görüyorsanız, **eylül 2019** (
 
 #### <a name="feature-updates-to-test"></a>Sınanacak özellik güncelleştirmeleri
 
-Birden çok yukarı etiketli güncelleştirme görüyorsanız, **eylül 2019** (2019-09B) güncelleştirmesi veya sonraki bir sürümle başlayın. Örneğin:
+Birden çok yukarı etiketli güncelleştirme görüyorsanız, **eylül 2019** (2019-09B) güncelleştirmesi veya sonraki bir sürümle başlayın. Örnek:
 
 - Windows 10 için özellik güncelleştirmesi, sürüm 1809 x64 2019-09B
 - Windows 10 için özellik güncelleştirmesi, sürüm 1803 x64 2019-09B

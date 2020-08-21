@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d481976a6c86da67670871690ba16985a67c80d8
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: a685e10ecdb2f6fac8d5634fd932facf52fddcb0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746468"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694959"
 ---
 # <a name="paths-to-co-management"></a>Ortak yönetim yolları
 
@@ -28,16 +28,16 @@ Ortak yönetimi ayarlamanıza yönelik iki temel yol vardır. Her yol için önk
 
 
 
-## <a name="path-1-auto-enroll-existing-clients"></a><a name="bkmk_path1"></a>Yol 1: mevcut istemcileri otomatik kaydetme
+## <a name="path-1-auto-enroll-existing-clients"></a><a name="bkmk_path1"></a> Yol 1: mevcut istemcileri otomatik kaydetme
 
 Bu yolu almak, mevcut Configuration Manager yönetilen cihazlarınızı Intune 'a hızlıca kaydedebilir. Bu cihazların Configuration Manager ile yönetimi, ortak yönetimi etkinleştirmeden önce öğesinden farklı değildir. Artık tüm bulut tabanlı avantajları elde edersiniz. Bu yol kullanıcılarınız için saydamdır.
 
 Ayarlamanız gerekenler şunlardır:
 - Hibrit Azure AD
-    - Aşağıdaki [Azure AD karma kimlik seçeneklerinden](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin)biri:  
-       - [Sorunsuz çoklu oturum açma](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso) ile [parola KARMASı eşitlemesi](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization) (SSO)
-       - [Sorunsuz çoklu oturum açma (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso) ile [geçişli kimlik doğrulaması](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta)
-       - [Federasyon SSO 'SU (Active Directory Federasyon Hizmetleri (AD FS) (AD FS) ile)](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
+    - Aşağıdaki [Azure AD karma kimlik seçeneklerinden](/azure/active-directory/hybrid/plan-connect-user-signin)biri:  
+       - [Sorunsuz çoklu oturum açma](/azure/active-directory/hybrid/how-to-connect-sso) ile [parola KARMASı eşitlemesi](/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization) (SSO)
+       - [Sorunsuz çoklu oturum açma (SSO)](/azure/active-directory/hybrid/how-to-connect-sso) ile [geçişli kimlik doğrulaması](/azure/active-directory/hybrid/how-to-connect-pta)
+       - [Federasyon SSO 'SU (Active Directory Federasyon Hizmetleri (AD FS) (AD FS) ile)](/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
     - Azure AD Connect
     - Azure AD Premium lisansı
     - Karma Azure AD-katılmayı yapılandırma (bir seçenek belirleyin):
@@ -51,7 +51,7 @@ Bu yol hakkında bir öğretici için bkz. [öğretici: mevcut Configuration Man
 
 
 
-## <a name="path-2-bootstrap-with-modern-provisioning"></a><a name="bkmk_path2"></a>Yol 2: modern sağlama ile önyükleme
+## <a name="path-2-bootstrap-with-modern-provisioning"></a><a name="bkmk_path2"></a> Yol 2: modern sağlama ile önyükleme
 
 Ayarlamanız gerekenler şunlardır:
 
@@ -61,4 +61,3 @@ Ayarlamanız gerekenler şunlardır:
 4. [Configuration Manager istemcisini dağıtmak için Intune 'U kullanma](how-to-prepare-Win10.md)  
 
 Bu yol hakkında bir öğretici için bkz. [öğretici: yeni internet tabanlı cihazlar için ortak yönetimi etkinleştirme](tutorial-co-manage-new-devices.md).
-

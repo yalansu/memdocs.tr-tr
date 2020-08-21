@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5dbd782c97d11f8077c18796c87c7880eb26f3f3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d1b07d30c7a593ec0bd70e6c330c57364186f2c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129163"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697271"
 ---
 # <a name="set-up-bitlocker-portals"></a>BitLocker portallarını ayarlama
 
@@ -66,21 +66,21 @@ Hedef Web sunucusunda, aşağıdaki işlemleri yapın:
 
 Yükleme sonrasında portallara aşağıdaki URL 'Ler aracılığıyla erişin:
 
-- Self Servis Portalı:`https://webserver.contoso.com/SelfService`
-- Yönetim ve izleme Web sitesi:`https://webserver.contoso.com/HelpDesk`
+- Self Servis Portalı: `https://webserver.contoso.com/SelfService`
+- Yönetim ve izleme Web sitesi: `https://webserver.contoso.com/HelpDesk`
 
 > [!NOTE]
-> Microsoft, HTTPS kullanımını önerir, ancak gerektirmez. Daha fazla bilgi için bkz. [IIS 'de SSL ayarlama](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis).
+> Microsoft, HTTPS kullanımını önerir, ancak gerektirmez. Daha fazla bilgi için bkz. [IIS 'de SSL ayarlama](/iis/manage/configuring-security/how-to-set-up-ssl-on-iis).
 
 ## <a name="script-usage"></a>Betik kullanımı
 
 Bu işlem, Web sunucusuna bu bileşenleri yüklemek için MBAMWebSiteInstaller.ps1 bir PowerShell betiği kullanır. Aşağıdaki parametreleri kabul eder:
 
-- `-SqlServerName <ServerName>`(gerekli): birincil site veritabanı sunucusunun tam etki alanı adı.
+- `-SqlServerName <ServerName>` (gerekli): birincil site veritabanı sunucusunun tam etki alanı adı.
 
 - `-SqlInstanceName <InstanceName>`: Birincil site veritabanı için SQL Server örnek adı. SQL varsayılan örneği kullanıyorsa bu parametreyi eklemeyin.
 
-- `-SqlDatabaseName <DatabaseName>`(gerekli): birincil site veritabanının adı (örneğin,) `CM_ABC` .
+- `-SqlDatabaseName <DatabaseName>` (gerekli): birincil site veritabanının adı (örneğin,) `CM_ABC` .
 
 - `-ReportWebServiceUrl <ReportWebServiceUrl>`: Birincil sitenin raporlama hizmet noktasının Web hizmeti URL 'SI. **Reporting Services Configuration Manager** **Web hizmeti URL 'si** değeridir.
 
@@ -117,9 +117,9 @@ Aşağıdaki günlükleri kullanarak izleyin ve sorun giderin:
 
 - Her bileşene ait izleme günlükleri aşağıdaki varsayılan konumlarda bulunur:
 
-  - Self Servis Portalı:`C:\inetpub\Microsoft BitLocker Management Solution\Logs\Self Service Website`
+  - Self Servis Portalı: `C:\inetpub\Microsoft BitLocker Management Solution\Logs\Self Service Website`
 
-  - Yönetim ve izleme Web sitesi:`C:\inetpub\Microsoft BitLocker Management Solution\Logs\Help Desk Website`
+  - Yönetim ve izleme Web sitesi: `C:\inetpub\Microsoft BitLocker Management Solution\Logs\Help Desk Website`
 
 Daha fazla sorun giderme bilgisi için bkz. [BitLocker sorunlarını giderme](../../tech-ref/bitlocker/troubleshoot.md).
 

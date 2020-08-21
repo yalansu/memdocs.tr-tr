@@ -10,12 +10,12 @@ ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 07c5488b0ea28f37f7f8a07b532c67fb64aad810
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2eea75f39430f1cc38ff994280425ca918eaa432
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713432"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694568"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>Configuration Manager 'da Windows bilgisayarlarına istemci dağıtma
 
@@ -29,7 +29,7 @@ Bu makalede, Configuration Manager istemcisinin Windows bilgisayarlarına nasıl
 - [İstemci dağıtımı için en iyi yöntemler](plan/best-practices-for-client-deployment.md)  
 
 
-## <a name="client-push-installation"></a><a name="BKMK_ClientPush"></a>Client push yüklemesi
+## <a name="client-push-installation"></a><a name="BKMK_ClientPush"></a> Client push yüklemesi
 
 İstemci gönderimi kullanmanın üç ana yolu vardır:  
 
@@ -63,7 +63,7 @@ Site sunucusu istemci bilgisayarla iletişim kuramıyor veya kurulum işlemini b
     > [!NOTE]  
     > Configuration Manager istemcisini yüklemek için Client Push kullandığında, site sunucusu istemciye uzak bir bağlantı oluşturur. Sürüm 1806 ' den başlayarak, site bağlantı kurulmadan önce NTLM 'ye geri dönüşe izin vermeyerek Kerberos karşılıklı kimlik doğrulaması gerektirebilir. Bu geliştirme, sunucu ve istemci arasındaki iletişimin güvenliğini sağlamaya yardımcı olur.  
     >
-    > Güvenlik ilkelerinize bağlı olarak, ortamınız eski NTLM kimlik doğrulaması üzerinden Kerberos 'u zaten tercih edebilir veya zorunlu kılabilir. Bu kimlik doğrulama protokollerinin güvenlik konuları hakkında daha fazla bilgi için, [NTLM 'yi kısıtlamak üzere Windows güvenlik ilkesi ayarı](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations)hakkında bilgi edinin.  
+    > Güvenlik ilkelerinize bağlı olarak, ortamınız eski NTLM kimlik doğrulaması üzerinden Kerberos 'u zaten tercih edebilir veya zorunlu kılabilir. Bu kimlik doğrulama protokollerinin güvenlik konuları hakkında daha fazla bilgi için, [NTLM 'yi kısıtlamak üzere Windows güvenlik ilkesi ayarı](/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations)hakkında bilgi edinin.  
     >
     > Bu özelliği kullanmak için istemciler güvenilir bir Active Directory ormanında olmalıdır. Windows 'da Kerberos, karşılıklı kimlik doğrulaması için Active Directory kullanır.  
 
@@ -114,7 +114,7 @@ Site sunucusu istemci bilgisayarla iletişim kuramıyor veya kurulum işlemini b
 > [!NOTE]  
 > Site istemci gönderimi için yapılandırılmamış olsa bile istemcileri yüklemek için bu sihirbazı kullanın.  
 
-## <a name="software-update-based-installation"></a><a name="BKMK_ClientSUP"></a>Yazılım güncelleştirmesi tabanlı yükleme  
+## <a name="software-update-based-installation"></a><a name="BKMK_ClientSUP"></a> Yazılım güncelleştirmesi tabanlı yükleme  
 
 Yazılım güncelleştirme tabanlı istemci yüklemesi, istemciyi yazılım güncelleştirmesi olarak bir yazılım güncelleştirme noktasına yayımlar. İlk kez yükleme veya yükseltme için bu yöntemi kullanın.  
 
@@ -151,7 +151,7 @@ Configuration Manager istemcisi olmayan bilgisayarları yazılım güncelleştir
     > [!TIP]  
     > Bağlantı noktası numarasını öğrenmek için bkz. [WSUS tarafından kullanılan bağlantı noktası ayarlarını belirleme](../../../sum/plan-design/plan-for-software-updates.md).
 
-    FQDN biçimindeki örnek:`http://server1.contoso.com:8530`  
+    FQDN biçimindeki örnek: `http://server1.contoso.com:8530`  
 
 5. **İntranet istatistikleri sunucusunu ayarlama**: Bu ayar genellikle aynı sunucu adıyla yapılandırılır.
 
@@ -174,11 +174,11 @@ Configuration Manager istemcisi olmayan bilgisayarları yazılım güncelleştir
 
 Configuration Manager istemcisi için yazılım güncelleştirmesi, yeni bir sürüm olduğunda otomatik olarak güncellenmez. Siteyi güncelleştirdiğinizde, istemciyi güncelleştirmek için bu yordamı tekrarlayın.  
 
-## <a name="group-policy-installation"></a><a name="BKMK_ClientGP"></a>grup ilkesi yükleme
+## <a name="group-policy-installation"></a><a name="BKMK_ClientGP"></a> grup ilkesi yükleme
 
 Configuration Manager istemcisini yayınlamak veya atamak için Active Directory Domain Services grup ilkesi kullanın. İstemci, bilgisayar başladığında yüklenir. Grup ilkesi kullandığınızda, istemci Denetim Masası 'ndaki **Program Ekle veya Kaldır** ' da görünür. Kullanıcı onu oradan yükleyebilir.  
 
-Grup ilkesi tabanlı yüklemeler için CCMSetup. msi Windows Installer paketini kullanın. Bu dosya, site sunucusundaki `<ConfigMgr installation directory>\bin\i386` klasöründe bulunur. Yükleme davranışını değiştirmek için bu dosyaya özellikler ekleyemezsiniz.  
+Grup ilkesi tabanlı yüklemeler için CCMSetup.msi Windows Installer paketini kullanın. Bu dosya, `<ConfigMgr installation directory>\bin\i386` site sunucusundaki klasöründe bulunur. Yükleme davranışını değiştirmek için bu dosyaya özellikler ekleyemezsiniz.  
 
 > [!IMPORTANT]  
 > İstemci yükleme dosyalarına erişmek için yönetici izinlerinizin olması gerekir.  
@@ -189,20 +189,20 @@ Grup ilkesi tabanlı yüklemeler için CCMSetup. msi Windows Installer paketini 
 
 Daha fazla bilgi için bkz. [Grup İlkesi kullanarak yazılımı uzaktan yüklemek için](https://support.microsoft.com/help/816102/how-to-use-group-policy-to-remotely-install-software-in-windows-server).  
 
-## <a name="manual-installation"></a><a name="BKMK_Manual"></a>El ile yükleme
+## <a name="manual-installation"></a><a name="BKMK_Manual"></a> El ile yükleme
 
-İstemci yazılımını, CCMSetup. exe kullanarak bilgisayarlara el ile yükleme. Bu programı ve destekleyici dosyalarını site sunucusundaki Configuration Manager yükleme klasöründe bulunan Istemci klasöründe bulabilirsiniz. Site bu klasörü ağda paylaşır:  
+CCMSetup.exe kullanarak istemci yazılımını bilgisayarlara el ile yükleyebilirsiniz. Bu programı ve destekleyici dosyalarını site sunucusundaki Configuration Manager yükleme klasöründe bulunan Istemci klasöründe bulabilirsiniz. Site bu klasörü ağda paylaşır:  
 
 `\\<site server name>\SMS_<site code>\Client\`  
 
-`<site server name>`birincil site sunucusu adıdır. `<site code>`, istemcinin atandığı birincil site kodudur. İstemci üzerindeki komut satırından CCMSetup. exe ' yi çalıştırmak için bu ağ konumuna bağlanın ve ardından komutunu çalıştırın.  
+`<site server name>` birincil site sunucusu adıdır. `<site code>` , istemcinin atandığı birincil site kodudur. İstemci üzerindeki komut satırından CCMSetup.exe çalıştırmak için, bu ağ konumuna bağlanın ve ardından komutunu çalıştırın.  
 
 > [!IMPORTANT]  
 > İstemci yükleme dosyalarına erişmek için yönetici izinlerinizin olması gerekir.  
 
-CCMSetup. exe tüm gerekli önkoşulları istemci bilgisayara kopyalar ve istemciyi yüklemek için Windows Installer paketini (Client. msi) çağırır. Client. msi dosyasını doğrudan çalıştıramazsınız.  
+CCMSetup.exe, tüm gerekli önkoşulları istemci bilgisayara kopyalar ve istemciyi yüklemek için Windows Installer paketini (Client.msi) çağırır. Client.msi doğrudan çalıştıramazsınız.  
 
-İstemci yüklemesinin davranışını değiştirmek için hem CCMSetup. exe hem de Client. msi için komut satırı seçeneklerini belirtin. Client. msi özelliklerini belirttıklamadan önce ile `/` başlayan CCMSetup parametrelerini belirttiğinizden emin olun. Örneğin:  
+İstemci yüklemesinin davranışını değiştirmek için hem CCMSetup.exe hem de Client.msi için komut satırı seçeneklerini belirtin. Client.msi özellikleri belirttıklamadan önce ile başlayan CCMSetup parametrelerini belirttiğinizden emin olun `/` . Örnek:  
 
 `CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=AUTO FSP=SMSFP01`
 
@@ -212,8 +212,8 @@ Bu örnekte istemci aşağıdaki seçeneklerle yüklenir:
 |--------------|-----------------|  
 |`/mp:SMSMP01`|Bu CCMSetup parametresi, gerekli istemci yükleme dosyalarını indirmek için SMSMP01 yönetim noktasını belirtir.|  
 |`/logon`|Bu CCMSetup parametresi, bilgisayarda var olan bir Configuration Manager istemcisi bulunursa yüklemenin durması gerektiğini belirtir.|  
-|`SMSSITECODE=AUTO`|Bu Client. msi özelliği, örneğin Active Directory Domain Services kullanarak, istemcinin kullanmak üzere Configuration Manager site kodunu bulmaya çalışacağını belirtir.|  
-|`FSP=SMSFP01`|Bu Client. msi özelliği, istemci bilgisayardan gönderilen durum iletilerini almak için SMSFP01 adlı geri dönüş durum noktasının kullanıldığını belirtir.|  
+|`SMSSITECODE=AUTO`|Bu Client.msi özelliği, istemcisinin Active Directory Domain Services kullanarak kullanmak üzere Configuration Manager site kodunu bulmaya çalışacağını belirtir.|  
+|`FSP=SMSFP01`|Bu Client.msi özelliği, istemci bilgisayardan gönderilen durum iletilerini almak için SMSFP01 adlı geri dönüş durum noktasının kullanıldığını belirtir.|  
 
 Daha fazla bilgi için bkz. [istemci yükleme parametreleri ve özellikleri hakkında](about-client-installation-properties.md).  
 
@@ -234,7 +234,7 @@ Tüm site sistemi sunucularını bir intranet FQDN 'siyle yapılandırdığını
 İstemci bilgisayarda aşağıdaki adımlarla başlayın:  
 
 1. Yerel yönetici olarak oturum açın.  
-2. Z sürücüsünü ile `\\MPSERVER\SMS_ABC\Client`eşleyin.  
+2. Z sürücüsünü ile eşleyin `\\MPSERVER\SMS_ABC\Client` .  
 3. Komut istemi 'ni Z sürücüsüne geçirin.  
 
 Ardından aşağıdaki komutlardan birini çalıştırın:  
@@ -264,15 +264,15 @@ Bu komut Active Directory Domain Services tarafından sağlanan otomatik yapıla
 - Internet 'ten gelen bağlantıları kabul eden geri dönüş durumu noktası
 - En uzun geçerlilik süresine sahip bir istemci ortak anahtar altyapısı (PKI) sertifikası (varsa) kullanın
 
-## <a name="logon-script-installation"></a><a name="BKMK_ClientLogonScript"></a>Oturum açma betiği yüklemesi
+## <a name="logon-script-installation"></a><a name="BKMK_ClientLogonScript"></a> Oturum açma betiği yüklemesi
 
-Configuration Manager, Configuration Manager istemci yazılımını yüklemek için oturum açma komut dosyalarının kullanılmasını destekler. İstemci yüklemesini tetiklemek için bir oturum açma komut dosyasındaki CCMSetup. exe program dosyasını kullanın.  
+Configuration Manager, Configuration Manager istemci yazılımını yüklemek için oturum açma komut dosyalarının kullanılmasını destekler. İstemci yüklemesini tetiklemek için bir oturum açma komut dosyasında CCMSetup.exe program dosyasını kullanın.  
 
-Oturum açma komut dosyası yüklemesi, el ile istemci yüklemeyle aynı yöntemleri kullanır. CCMSsetup. exe için `/logon` yükleme parametresini belirtin. İstemcinin herhangi bir sürümü bilgisayarda zaten varsa, bu parametre istemcinin yüklenmesini engeller. Bu davranış, oturum açma komut dosyası her çalıştığında istemcinin yeniden yüklenmesini önler.  
+Oturum açma komut dosyası yüklemesi, el ile istemci yüklemeyle aynı yöntemleri kullanır. `/logon`CCMSsetup.exe için yükleme parametresini belirtin. İstemcinin herhangi bir sürümü bilgisayarda zaten varsa, bu parametre istemcinin yüklenmesini engeller. Bu davranış, oturum açma komut dosyası her çalıştığında istemcinin yeniden yüklenmesini önler.  
 
-`/Source` Parametresini kullanarak bir yükleme kaynağı belirtmezseniz ve `/MP` parametresi tarafından yüklemenin alınacağı hiçbir yönetim noktası belirtilmemişse, ccmsetup. exe Active Directory Domain Services arayarak yönetim noktasını konumlandırır. Bu davranış yalnızca Configuration Manager şemasını genişlettiyseniz ve siteyi Active Directory Domain Services yayımladıysanız oluşur. Alternatif olarak, istemci, yönetim noktasını bulmak için DNS veya WINS kullanabilir.  
+Parametresini kullanarak bir yükleme kaynağı belirtmezseniz `/Source` ve parametresi tarafından yüklemenin alınacağı hiçbir yönetim noktası belirtilmemişse `/MP` , CCMSetup.exe yönetim noktasını Active Directory Domain Services arayarak konumlandırır. Bu davranış yalnızca Configuration Manager şemasını genişlettiyseniz ve siteyi Active Directory Domain Services yayımladıysanız oluşur. Alternatif olarak, istemci, yönetim noktasını bulmak için DNS veya WINS kullanabilir.  
 
-## <a name="package-and-program-installation"></a><a name="BKMK_ClientApp"></a>Paket ve program yükleme
+## <a name="package-and-program-installation"></a><a name="BKMK_ClientApp"></a> Paket ve program yükleme
 
 Seçili cihazlar için istemci yazılımını yükselten bir paket ve program oluşturmak ve dağıtmak için Configuration Manager kullanın. Configuration Manager, paket özelliklerini genellikle kullanılan değerlerle dolduran bir paket tanımı dosyası sağlar. Ek komut satırı parametreleri ve özellikleri belirterek istemci yüklemesinin davranışını özelleştirin.  
 
@@ -298,11 +298,11 @@ Seçili cihazlar için istemci yazılımını yükselten bir paket ve program ol
     > [!NOTE]  
     > Configuration Manager dağıtımının çalıştırıldığı bilgisayarın, belirtilen ağ klasörüne erişimi olmalıdır. Aksi halde, istemci yüklemesi başarısız olur.  
 
-    İstemci yükleme özelliklerinden herhangi birini değiştirmek için, **Configuration Manager Aracısı sessiz yükseltme özellikleri** program Iletişim kutusunun **genel** sekmesinde CCMSetup. exe komut satırını değiştirin. Varsayılan yükleme özellikleri şunlardır `/noservice SMSSITECODE=AUTO`.  
+    İstemci yükleme özelliklerinden herhangi birini değiştirmek için, **Configuration Manager Aracısı sessiz yükseltme özellikleri** program Iletişim kutusunun **genel** sekmesindeki CCMSetup.exe komut satırını değiştirin. Varsayılan yükleme özellikleri şunlardır `/noservice SMSSITECODE=AUTO` .  
 
 6. Paketi, istemci yükseltme paketini barındırmak istediğiniz dağıtım noktalarının tümüne dağıtın. Ardından paketi, yükseltmek istediğiniz istemcileri içeren cihaz koleksiyonlarına dağıtın.  
 
-## <a name="intune-mdm-managed-windows-devices"></a><a name="bkmk_mdm"></a>Intune MDM ile yönetilen Windows cihazları
+## <a name="intune-mdm-managed-windows-devices"></a><a name="bkmk_mdm"></a> Intune MDM ile yönetilen Windows cihazları
 
 Configuration Manager istemcisini Microsoft Intune kayıtlı cihazlara dağıtın.
 
@@ -317,7 +317,7 @@ Configuration Manager istemcisini yükledikten sonra, cihazların Intune kaydın
 
 ### <a name="install-the-configuration-manager-client-by-using-intune"></a>Intune kullanarak Configuration Manager istemcisini yüklemesi
 
-1. Intune 'da, **CCMSetup. msi**Configuration Manager istemci yükleme dosyasını Içeren [bir Windows iş kolu uygulaması ekleyin](https://docs.microsoft.com/mem/intune/apps/lob-apps-windows) . Bu dosyayı site sunucusundaki Configuration Manager yükleme dizini `\bin\i386` klasöründe bulabilirsiniz.  
+1. Intune 'da, Configuration Manager istemci yükleme dosyasını içeren [bir Windows iş kolu uygulaması ekleyin](https://docs.microsoft.com/mem/intune/apps/lob-apps-windows) **CCMSetup.msi**. Bu dosyayı `\bin\i386` site sunucusundaki Configuration Manager yükleme dizini klasöründe bulabilirsiniz.  
 
 2. Intune Yazılım Yayımcısı, komut satırı parametrelerini girin. Örneğin, bu komutu intranette geleneksel bir istemciyle birlikte kullanın:  
 
@@ -326,9 +326,9 @@ Configuration Manager istemcisini yükledikten sonra, cihazların Intune kaydın
     > [!NOTE]  
     > Azure AD kimlik doğrulaması kullanılarak modern bir Windows 10 istemcisiyle birlikte kullanılacak bir komut örneği için bkz. [İnternet tabanlı cihazları ortak yönetim için hazırlama](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client).  
 
-3. [Uygulamayı](https://docs.microsoft.com/mem/intune/apps/apps-deploy) kayıtlı Windows bilgisayarları grubuna atayın.  
+3. [Uygulamayı](../../../../intune/apps/apps-deploy.md) kayıtlı Windows bilgisayarları grubuna atayın.  
 
-## <a name="os-image-installation"></a><a name="BKMK_ClientImage"></a>İşletim sistemi görüntüsü yükleme
+## <a name="os-image-installation"></a><a name="BKMK_ClientImage"></a> İşletim sistemi görüntüsü yükleme
 
 Configuration Manager istemcisini, işletim sistemi görüntüsü oluşturmak için kullandığınız başvuru bilgisayarına önceden yükleyin.
 
@@ -340,11 +340,11 @@ Configuration Manager istemcisini, işletim sistemi görüntüsü oluşturmak i�
 1. Configuration Manager istemci yazılımını referans bilgisayara el ile yükleyebilirsiniz. Daha fazla bilgi için bkz. [Configuration Manager istemcilerini El Ile nasıl yüklenir](#BKMK_Manual).  
 
     > [!IMPORTANT]  
-    > CCMSetup. exe komut satırı özelliklerinde istemci için Configuration Manager bir site kodu belirtmeyin.  
+    > CCMSetup.exe komut satırı özelliklerinde istemci için Configuration Manager bir site kodu belirtmeyin.  
 
-2. Bir komut isteminde, başvuru bilgisayarında `net stop ccmexec` SMS aracı ana bilgisayar hizmeti 'Ni (Ccmexec. exe) durdurmak için yazın.  
+2. Bir komut isteminde, `net stop ccmexec` başvuru BILGISAYARıNDA SMS aracı ana bilgisayar hizmeti 'ni (CcmExec.exe) durdurmak için yazın.  
 
-3. SMSCFG 'yi silin. INı dosyası referans bilgisayardaki Windows klasöründen.  
+3. SMSCFG.INI dosyasını referans bilgisayardaki Windows klasöründen silin.  
 
 4. Referans bilgisayardaki yerel bilgisayar deposunda depolanan tüm sertifikaları kaldırın. Örneğin, PKI sertifikaları kullanıyorsanız, bilgisayarı görüntüetmeden önce **bilgisayar** ve **Kullanıcı**için **Kişisel** deposundaki sertifikaları kaldırın.  
 
@@ -359,11 +359,11 @@ Configuration Manager istemcisini, işletim sistemi görüntüsü oluşturmak i�
 
 7. Görüntüyü hedef bilgisayarlara dağıtın.  
 
-## <a name="workgroup-computers"></a><a name="BKMK_ClientWorkgroup"></a>Çalışma grubu bilgisayarları
+## <a name="workgroup-computers"></a><a name="BKMK_ClientWorkgroup"></a> Çalışma grubu bilgisayarları
 
 Configuration Manager, çalışma gruplarındaki bilgisayarlar için istemci yüklemeyi destekler. İstemcisini [Configuration Manager istemcilerini el ile yüklemek için](#BKMK_Manual)belirtilen yöntemi kullanarak, istemciyi çalışma grubu bilgisayarlarına yükleyebilirsiniz.  
 
-### <a name="prerequisites"></a>Önkoşullar  
+### <a name="prerequisites"></a>Ön koşullar  
 
 - İstemcisini her çalışma grubu bilgisayarına el ile yükleyebilirsiniz. Yükleme sırasında etkileşimli kullanıcı yerel yönetici haklarına sahip olmalıdır.  
 
@@ -405,14 +405,14 @@ Bu örnek, istemcinin sınır grubunda yapılandırılmış bir ağ konumunda ol
 
 `CCMSetup.exe FSP=fspserver.constoso.com`  
 
-## <a name="internet-based-client-management"></a><a name="BKMK_ClientInternet"></a>Internet tabanlı istemci yönetimi  
+## <a name="internet-based-client-management"></a><a name="BKMK_ClientInternet"></a> Internet tabanlı istemci yönetimi  
 
 > [!NOTE]  
 > Bu bölüm, [bulut yönetimi ağ geçidi](../manage/cmg/plan-cloud-management-gateway.md)kullanan istemciler için geçerlidir. Internet tabanlı istemcileri bir bulut yönetimi ağ geçidi kullanarak yüklemek için bkz. [Azure AD 'yi kullanarak kimlik doğrulaması için Configuration Manager Windows 10 Istemcileri yüklemek ve atamak](deploy-clients-cmg-azure.md).  
 
 Configuration Manager sitesi bazen intranette ve bazen de internet 'te olan istemciler için [İnternet tabanlı istemci yönetimini](../manage/plan-internet-based-client-management.md) desteklediğinde, istemcileri intranete yüklerken iki seçeneğiniz vardır:  
 
-- İstemcisini yüklerken Client. msi özelliğini `CCMHOSTNAME=<internet FQDN of the internet-based management point>` , örneğin el ile yükleme veya istemci gönderimi kullanarak ekleyin. Bu yöntemi kullandığınızda, istemcisini doğrudan siteye atayın. Otomatik site atamasını kullanamazsınız. Bu yapılandırma yönteminin bir örneğini sağlayan [el ile Configuration Manager Istemcileri nasıl yüklenir](#BKMK_Manual) bölümüne bakın.  
+- İstemcisini yüklerken Client.msi özelliğini `CCMHOSTNAME=<internet FQDN of the internet-based management point>` , el ile yükleme veya Client Push kullanarak ekleyin. Bu yöntemi kullandığınızda, istemcisini doğrudan siteye atayın. Otomatik site atamasını kullanamazsınız. Bu yapılandırma yönteminin bir örneğini sağlayan [el ile Configuration Manager Istemcileri nasıl yüklenir](#BKMK_Manual) bölümüne bakın.  
 
 - İntranet istemci yönetimine yönelik istemciyi yükler ve ardından istemciye Internet tabanlı bir istemci yönetim noktası atayın. Denetim Masası 'ndaki **Configuration Manager** sayfasındaki istemci özelliklerini kullanarak veya bir komut dosyası kullanarak yönetim noktasını değiştirin. Bu yöntemi kullanırken otomatik istemci atamasını kullanabilirsiniz. Daha fazla bilgi için [istemci yüklemesinden sonra istemcileri internet tabanlı istemci yönetimi için yapılandırma](#BKMK_ConfigureIBCM_MP) bölümüne bakın.  
 
@@ -420,7 +420,7 @@ Configuration Manager sitesi bazen intranette ve bazen de internet 'te olan iste
 
 - Bu istemcilerin intranete bir VPN ile geçici olarak bağlanması için bir mekanizma sağlar. Ardından, uygun istemci yükleme yöntemini kullanarak istemcisini yükleme.  
 
-- Configuration Manager bağımsız bir yükleme yöntemi kullanın. Örneğin, istemci yükleme kaynak dosyalarını çıkarılabilir medyaya paketleyin ve medyayı kullanıcılara gönderin. İstemci yükleme kaynak dosyaları Configuration Manager site sunucusundaki `<installation path>\Client` klasöründe bulunur. Medyada, istemci klasörü üzerine el ile kopyalamak için bir komut dosyası ekleyin. Bu klasörden, CCMSetup. exe ' yi ve tüm uygun CCMSetup komut satırı özelliklerini kullanarak istemcisini yükler.  
+- Configuration Manager bağımsız bir yükleme yöntemi kullanın. Örneğin, istemci yükleme kaynak dosyalarını çıkarılabilir medyaya paketleyin ve medyayı kullanıcılara gönderin. İstemci yükleme kaynak dosyaları `<installation path>\Client` Configuration Manager site sunucusundaki klasöründe bulunur. Medyada, istemci klasörü üzerine el ile kopyalamak için bir komut dosyası ekleyin. Bu klasörden CCMSetup.exe ve tüm uygun CCMSetup komut satırı özelliklerini kullanarak istemciyi kurun.  
 
 > [!NOTE]  
 > Configuration Manager, bir istemciyi doğrudan Internet tabanlı yönetim noktasından veya internet tabanlı yazılım güncelleştirme noktasından yüklemeyi desteklemez.
@@ -431,24 +431,24 @@ Configuration Manager sitesi bazen intranette ve bazen de internet 'te olan iste
 
 1. [Configuration Manager istemcilerini el ile yüklemek için](#BKMK_Manual)bölümündeki yönergeleri izleyin. Her zaman aşağıdaki seçenekleri ekleyin:  
 
-    - CCMSetup komut satırı parametresi`/source:<local path of the copied Client folder>`  
+    - CCMSetup komut satırı parametresi `/source:<local path of the copied Client folder>`  
 
-    - CCMSetup komut satırı parametresi`/UsePKICert`  
+    - CCMSetup komut satırı parametresi `/UsePKICert`  
 
-    - Client. msi özelliği`CCMHOSTNAME=<FQDN of internet-based management point>`  
+    - Client.msi özelliği `CCMHOSTNAME=<FQDN of internet-based management point>`  
 
-    - Client. msi özelliği`SMSSIGNCERT=<local path of exported site server signing certificate>`  
+    - Client.msi özelliği `SMSSIGNCERT=<local path of exported site server signing certificate>`  
 
-    - Client. msi özelliği`SMSSITECODE=<site code of internet-based management point>`  
+    - Client.msi özelliği `SMSSITECODE=<site code of internet-based management point>`  
 
     > [!NOTE]  
-    > Sitede birden fazla internet tabanlı yönetim noktası varsa, bu `CCMHOSTNAME` özellik için ne belirttiğinize bağımsız değildir. Configuration Manager istemcisi belirtilen internet tabanlı yönetim noktasına bağlandığı zaman, istemciye sitedeki kullanılabilir internet tabanlı yönetim noktalarının listesini gönderir. İstemci listeden rastgele bir tane seçer.
+    > Sitede birden fazla internet tabanlı yönetim noktası varsa, bu özellik için ne belirttiğinize bağımsız değildir `CCMHOSTNAME` . Configuration Manager istemcisi belirtilen internet tabanlı yönetim noktasına bağlandığı zaman, istemciye sitedeki kullanılabilir internet tabanlı yönetim noktalarının listesini gönderir. İstemci listeden rastgele bir tane seçer.
 
-2. İstemcinin sertifika iptal listesini (CRL) denetlemesini istemiyorsanız CCMSetup komut satırı parametresini `/NoCRLCheck`belirtin.  
+2. İstemcinin sertifika iptal listesini (CRL) denetlemesini istemiyorsanız CCMSetup komut satırı parametresini belirtin `/NoCRLCheck` .  
 
-3. Internet tabanlı bir geri dönüş durum noktası kullanıyorsanız, Client. msi özelliğini `FSP=<internet FQDN of the internet-based fallback status point>`belirtin.  
+3. Internet tabanlı bir geri dönüş durum noktası kullanıyorsanız, Client.msi özelliğini belirtin `FSP=<internet FQDN of the internet-based fallback status point>` .  
 
-4. İstemcisini yalnızca İnternet istemci yönetimi için yüklüyorsanız Client. msi özelliğini `CCMALWAYSINF=1`belirtin.  
+4. İstemcisini yalnızca İnternet istemci yönetimi için yüklüyorsanız Client.msi özelliğini belirtin `CCMALWAYSINF=1` .  
 
 5. Ek CCMSetup komut satırı parametreleri belirtmeniz gerekip gerekmediğini belirleyin. Örneğin, istemcinin birden fazla geçerli PKI sertifikası varsa, bir sertifika seçim ölçütü belirtmeniz gerekebilir. Kullanılabilir özelliklerin bir listesi için bkz. [istemci yükleme parametreleri ve özellikleri hakkında](about-client-installation-properties.md).  
 
@@ -466,7 +466,7 @@ Bu örnek, istemcisini aşağıdaki davranışlarla birlikte yüklenir:
 - Contoso.com etki alanına Internet tabanlı geri dönüş durum noktasını atayın.
 - İstemciyi ABC sitesine atayın.  
 
-### <a name="to-configure-clients-for-internet-based-client-management-after-client-installation"></a><a name="BKMK_ConfigureIBCM_MP"></a>İstemci yüklemesinden sonra istemcileri internet tabanlı istemci yönetimine göre yapılandırmak için  
+### <a name="to-configure-clients-for-internet-based-client-management-after-client-installation"></a><a name="BKMK_ConfigureIBCM_MP"></a> İstemci yüklemesinden sonra istemcileri internet tabanlı istemci yönetimine göre yapılandırmak için  
 
 İstemcisini yükledikten sonra Internet tabanlı yönetim noktasını atamak için aşağıdaki yordamlardan birini kullanın. İlki el ile yapılandırma gerektirir ve birkaç istemciye uygundur. İkincisi birçok istemciyi yapılandırmak için daha uygundur.  
 
@@ -487,7 +487,7 @@ Bu örnek, istemcisini aşağıdaki davranışlarla birlikte yüklenir:
 
 1. PowerShell ıSE veya Visual Studio Code gibi bir PowerShell satır içi düzenleyiciyi açın. Not Defteri gibi bir metin Düzenleyicisi de kullanabilirsiniz.
 
-2. Aşağıdaki kod satırlarını kopyalayıp düzenleyiciye ekleyin. Internet `'mp.contoso.com'` tabanlı yönetim NOKTANAĞıNıZıN Internet FQDN 'siyle değiştirin.
+2. Aşağıdaki kod satırlarını kopyalayıp düzenleyiciye ekleyin. `'mp.contoso.com'`Internet tabanlı yönetim noktanağınızın Internet FQDN 'siyle değiştirin.
 
     ``` PowerShell
     $newInternetBasedManagementPointFQDN = 'mp.contoso.com'
@@ -500,7 +500,7 @@ Bu örnek, istemcisini aşağıdaki davranışlarla birlikte yüklenir:
     > [!NOTE]  
     > Son satır yalnızca yeni internet yönetim noktası değerini doğrulamak için geçerlidir.
     >
-    > Belirtilen bir internet tabanlı yönetim noktasını silmek için, tırnak işaretlerinin içindeki sunucu FQDN değerini kaldırın. Satır olur `$newInternetBasedManagementPointFQDN = ''`.
+    > Belirtilen bir internet tabanlı yönetim noktasını silmek için, tırnak işaretlerinin içindeki sunucu FQDN değerini kaldırın. Satır olur `$newInternetBasedManagementPointFQDN = ''` .
 
 3. Dosyayı bir. ps1 uzantısıyla kaydedin.  
 
@@ -512,7 +512,7 @@ Bu örnek, istemcisini aşağıdaki davranışlarla birlikte yüklenir:
 
 Değişikliklerin etkili olması için istemciyi yeniden başlatmanız gerekebilir.  
 
-## <a name="provision-client-installation-properties"></a><a name="BKMK_Provision"></a>İstemci yükleme özelliklerini sağlama
+## <a name="provision-client-installation-properties"></a><a name="BKMK_Provision"></a> İstemci yükleme özelliklerini sağlama
 
 Grup İlkesi ve yazılım güncelleştirmesi tabanlı istemci yüklemeleri için istemci yükleme özelliklerini sağlayın. Configuration Manager istemci yükleme özelliklerine sahip bilgisayarları sağlamak için Windows grup ilkesi kullanın. Bu özellikler bilgisayarın kayıt defterinde saklanır. İstemci, yüklediğinde onları okur. Bu yordam normalde gerekli değildir, ancak aşağıdaki gibi bazı istemci yükleme senaryoları için gerekli olabilir:  
 
@@ -521,21 +521,21 @@ Grup İlkesi ve yazılım güncelleştirmesi tabanlı istemci yüklemeleri için
 - Belirli bilgisayarlardaki istemci yükleme özelliklerini geçersiz kılmak istiyorsunuz.  
 
 > [!NOTE]  
-> CCMSetup. exe komut satırında herhangi bir yükleme özelliği sağlanmışsa, bilgisayarlarda sağlanan yükleme özellikleri kullanılmaz.
+> CCMSetup.exe komut satırında herhangi bir yükleme özelliği sağlanmışsa, bilgisayarlarda sağlanan yükleme özellikleri kullanılmaz.
 
-Configuration Manager yükleme medyasında adlı `ConfigMgrInstallation.adm` bir grup ilkesi yönetim şablonu sağlanır. İstemci bilgisayarlarını yükleme özellikleriyle sağlamak için bu şablonu kullanın.
+Configuration Manager yükleme medyasında adlı bir grup ilkesi yönetim şablonu `ConfigMgrInstallation.adm` sağlanır. İstemci bilgisayarlarını yükleme özellikleriyle sağlamak için bu şablonu kullanın.
 
 > [!TIP]
-> Varsayılan `ConfigMgrInstallation.adm` olarak 255 karakterden daha büyük dizeleri desteklemez. Bu yapılandırma, CCMCERTıSERS gibi uzun değerlerle birden fazla parametre veya parametre eklenmesini etkileyebilir.<!-- SCCMDocs#1648 -->
+> Varsayılan olarak `ConfigMgrInstallation.adm` 255 karakterden daha büyük dizeleri desteklemez. Bu yapılandırma, CCMCERTıSERS gibi uzun değerlerle birden fazla parametre veya parametre eklenmesini etkileyebilir.<!-- SCCMDocs#1648 -->
 >
 > Bu soruna geçici bir çözüm için:
 >
-> 1. Not `ConfigMgrInstallation.adm` defteri 'nde düzenleyin.
-> 2. Özelliği `VALUENAME SetupParameters`için `MAXLEN` değeri daha büyük bir tam sayı olarak değiştirin. Örneğin, `MAXLEN 511`.
+> 1. `ConfigMgrInstallation.adm`Not defteri 'nde düzenleyin.
+> 2. Özelliği için `VALUENAME SetupParameters` `MAXLEN` değeri daha büyük bir tam sayı olarak değiştirin. Örneğin, `MAXLEN 511`.
 
 ### <a name="configure-and-assign-client-installation-properties-by-using-a-group-policy-object"></a>Bir Grup İlkesi nesnesi kullanarak istemci yükleme özelliklerini yapılandırma ve atama  
 
-1. Windows Grup İlkesi Nesne Düzenleyicisi gibi bir düzenleyiciyi kullanarak ConfigMgrInstallation. adm yönetim şablonunu yeni veya var olan bir Grup İlkesi nesnesine (GPO) aktarın. Bu dosyayı Configuration Manager yükleme medyasında `TOOLS\ConfigMgrADMTemplates` klasöründe bulabilirsiniz.  
+1. Windows Grup İlkesi Nesne Düzenleyicisi gibi bir düzenleyiciyi kullanarak ConfigMgrInstallation. adm yönetim şablonunu yeni veya var olan bir Grup İlkesi nesnesine (GPO) aktarın. Bu dosyayı `TOOLS\ConfigMgrADMTemplates` Configuration Manager yükleme medyasında klasöründe bulabilirsiniz.  
 
 2. İçeri aktarılan **İstemci Dağıtım Ayarlarını Yapılandır** ayarının özelliklerini açın.  
 
@@ -543,4 +543,4 @@ Configuration Manager yükleme medyasında adlı `ConfigMgrInstallation.adm` bir
 
 4. **CCMSetup** kutusunda, gerekli CCMSetup komut satırı özelliklerini girin. Tüm CCMSetup komut satırı özelliklerinin listesi ve kullanımları örnekleri için bkz. [istemci yükleme parametreleri ve özellikleri hakkında](about-client-installation-properties.md).  
 
-5. Configuration Manager istemci yükleme özellikleriyle sağlamak istediğiniz bilgisayarlara GPO atayın.  
+5. Configuration Manager istemci yükleme özellikleriyle sağlamak istediğiniz bilgisayarlara GPO atayın.

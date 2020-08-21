@@ -10,12 +10,12 @@ ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 381f9d190b1d73bbbab6142fd9587e881d0870ce
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2a73fff7fd2eb5d630d6047a7da6f131188f06c5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723918"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693497"
 ---
 # <a name="protect-data-and-site-infrastructure"></a>Veri ve site altyapısını koruma
 
@@ -33,7 +33,7 @@ Kullanıcılarınızın kuruluşunuzun kaynaklarına güvenli bir şekilde eriş
   - Microsoft Defender uygulama denetimi
 
   > [!TIP]
-  > Ortak yönetilen Windows 10 cihazlarında Endpoint Protection 'ı Microsoft Endpoint Manager bulut hizmetini kullanarak yönetmek için [ **Endpoint Protection** iş yükünü](../../comanage/workloads.md#endpoint-protection) Intune 'a geçirin. Daha fazla bilgi için bkz. [Microsoft Intune Için Endpoint Protection](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
+  > Ortak yönetilen Windows 10 cihazlarında Endpoint Protection 'ı Microsoft Endpoint Manager bulut hizmetini kullanarak yönetmek için [ **Endpoint Protection** iş yükünü](../../comanage/workloads.md#endpoint-protection) Intune 'a geçirin. Daha fazla bilgi için bkz. [Microsoft Intune Için Endpoint Protection](/intune/endpoint-protection-windows-10).
 
 - BitLocker Sürücü Şifrelemesi (BDE) ile şirket içi Windows istemcilerinde depolanan verileri koruyun. Configuration Manager, Microsoft BitLocker yönetim ve Izleme (MBAD) kullanımını değiştirecek tam BitLocker yaşam döngüsü yönetimi sağlar. Daha fazla bilgi için bkz. [plan for BitLocker Management](../plan-design/bitlocker-management.md).
 
@@ -43,4 +43,4 @@ Kullanıcılarınızın kuruluşunuzun kaynaklarına güvenli bir şekilde eriş
 
 - Wi-Fi profilleri kuruluşunuzdaki cihazlarda kablosuz ağ ayarlarını yönetmenize yardımcı olacak bir araç ve kaynak kümesi sağlar. Bu ayarları dağıtarak, kablosuz ağlara bağlanmak için gereken son kullanıcı çabalarını en aza indirmiş olursunuz. Daha fazla bilgi için bkz. [Wi-Fi profilleri](../deploy-use/create-wifi-profiles.md).  
 
-- Cihazları, kullanıcıların kaynaklara bağlanması için ihtiyaç duyduğu sertifikalarla sağlayın. Daha fazla bilgi için bkz. [sertifika profilleri](../deploy-use/introduction-to-certificate-profiles.md).  
+- Cihazları, kullanıcıların kaynaklara bağlanması için ihtiyaç duyduğu sertifikalarla sağlayın. Daha fazla bilgi için bkz. [sertifika profilleri](../deploy-use/introduction-to-certificate-profiles.md).

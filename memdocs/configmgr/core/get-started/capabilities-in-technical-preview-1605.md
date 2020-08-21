@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: d52725e0127f7129a3962cd3ef178d2540bb785a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1836a4c7d08547405dad08d7e60eb108d0dfd00f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905746"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695724"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-configuration-manager"></a>Configuration Manager için Technical Preview 1605 ' deki yetenekler
 
@@ -32,7 +32,7 @@ Bu makalede, sürüm 1605 Configuration Manager için Technical Preview 'da kull
 
   **Aşağıda, bu sürümle deneyebilmeniz için kullanabileceğiniz yeni özellikler verilmiştir.**  
 
-##  <a name="per-app-vpn-for-windows-10-devices"></a><a name="BKMK_PerAppVPN"></a>Windows 10 cihazları için uygulama başına VPN  
+##  <a name="per-app-vpn-for-windows-10-devices"></a><a name="BKMK_PerAppVPN"></a> Windows 10 cihazları için uygulama başına VPN  
  Intune ile Configuration Manager kullanılarak yönetilen Windows 10 cihazlarında, Configuration Manager Yönetici Konsolu aracılığıyla yapılandırdığınız bir VPN bağlantısını otomatik olarak açan uygulamaların bir listesini ekleyebilirsiniz. VPN trafiğini bu uygulamalarla kısıtlama seçeneğiniz vardır veya VPN bağlantısı üzerinden tüm trafiğe izin vermeyi sürdürebilirsiniz.  
 
  **Gereksinimler**:  
@@ -41,17 +41,17 @@ Bu makalede, sürüm 1605 Configuration Manager için Technical Preview 'da kull
 
 -   En az bir cihaza dağıtılan bir Windows 10 VPN profili  
 
-##  <a name="improvements-to-the-install-software-updates-task-sequence"></a><a name="BKMK_InstallSU"></a>Yazılım güncelleştirmelerini yüklemek görev sırası geliştirmeleri  
+##  <a name="improvements-to-the-install-software-updates-task-sequence"></a><a name="BKMK_InstallSU"></a> Yazılım güncelleştirmelerini yüklemek görev sırası geliştirmeleri  
  Yazılım güncelleştirmelerini yüklemek görev sırasında aşağıdaki geliştirmeler yapılmıştır:  
 
 -   Yazılım güncelleştirmelerini yükler görev dizisi adımı sırasında yazılım güncelleştirmeleri taramasıyla ilgili zaman aşımını denetlemenize olanak tanımak için, SMSTSSoftwareUpdateScanTimeout yeni bir görev dizisi değişkeni vardır. Varsayılan değer 30 dakikadır.  
 
 -   Günlüğe kaydetme geliştirmeleri vardı. Smsts. log günlük dosyası, yazılım güncelleştirmeleri yükleme işlemi sırasında sorunları gidermenize yardımcı olacak diğer günlük dosyalarına başvuran yeni günlük girişleri içerir.  
 
-##  <a name="improvements-to-the-prepare-configmgr-client-for-capture-task-sequence-step"></a><a name="BKMK_PrepareConfigMgrClient"></a>Yakalama için ConfigMgr Istemcisini hazırla görev dizisi adımındaki geliştirmeler  
+##  <a name="improvements-to-the-prepare-configmgr-client-for-capture-task-sequence-step"></a><a name="BKMK_PrepareConfigMgrClient"></a> Yakalama için ConfigMgr Istemcisini hazırla görev dizisi adımındaki geliştirmeler  
  ConfigMgr Istemcisini hazırla adımı yalnızca anahtar bilgilerini kaldırmak yerine Configuration Manager istemcisini tamamen kaldırır. Görev dizisi yakalanan işletim sistemi görüntüsünü dağıttığında, her seferinde yeni bir Configuration Manager istemci yükler.  
 
-##  <a name="grace-period-for-required-application-deployments"></a><a name="BKMK_Grace"></a>Gerekli uygulama dağıtımları için yetkisiz kullanım süresi  
+##  <a name="grace-period-for-required-application-deployments"></a><a name="BKMK_Grace"></a> Gerekli uygulama dağıtımları için yetkisiz kullanım süresi  
  Bazı durumlarda, kullanıcıların gerekli uygulama dağıtımlarını yapılandırdığınız son tarihlerden daha fazla zaman yüklemesine izin vermek isteyebilirsiniz. Örneğin, bir son kullanıcı tatilden yeni döndürülürse, süresi geçmiş uygulama dağıtımları yüklenirken uzun süredir beklemek zorunda kalabilir. Ancak, uygulamayı istedikleri zaman hemen yükleyebilir.  
 
  Bu sorunu çözmeye yardımcı olmak için artık Configuration Manager istemci ayarlarını bir koleksiyona dağıtarak bir **yetkisiz kullanım süresi** tanımlayabilirsiniz.  
@@ -68,7 +68,7 @@ Bu makalede, sürüm 1605 Configuration Manager için Technical Preview 'da kull
 
    Yazılım güncelleştirmeleri dağıtım sihirbazına, otomatik dağıtım kuralları sihirbazına ve özellikler sayfalarına benzer seçenekler eklenmiştir. Ancak bunlar şu anda bu teknik önizlemede uygulanmıyor.  
 
-##  <a name="new-experience-for-remote-device-actions"></a><a name="BKMK_Remote"></a>Uzak cihaz eylemleri için yeni deneyim  
+##  <a name="new-experience-for-remote-device-actions"></a><a name="BKMK_Remote"></a> Uzak cihaz eylemleri için yeni deneyim  
  Configuration Manager konsolundan uzak cihaz eylemlerini gerçekleştirmeye yönelik deneyim geliştirilmiştir.  
 Artık **varlıklar ve uyum** çalışma alanından erişilen **uzak cihaz eylemleri** menüsünde **devre dışı bırakma/Temizleme**, **sıfırlama geçiş kodu**, **Uzaktan kilitleme**ve **atlama Etkinleştirme Kilidi** gibi genel eylemler bulunabilir.  
 
@@ -82,7 +82,7 @@ Artık **varlıklar ve uyum** çalışma alanından erişilen **uzak cihaz eylem
 
 - **Cihazlar** düğümünün ana sayfasında (tüm sütunlar varsayılan olarak görünür olmayabilir).  
 
-##  <a name="windows-store-for-business-apps"></a><a name="BKMK_WSFB"></a>Iş için Windows Mağazası uygulamaları  
+##  <a name="windows-store-for-business-apps"></a><a name="BKMK_WSFB"></a> Iş için Windows Mağazası uygulamaları  
  [İş Için Windows Mağazası](https://www.microsoft.com/business-store) , kuruluşunuz için tek tek veya toplu olarak uygulamaları bulabileceğiniz ve satın alabileceğiniz yerdir. Mağazayı Configuration Manager bağlayarak, toplu satın alınan uygulamaları Configuration Manager konsolundan yönetebilirsiniz, örneğin:  
 
 - Satın alınan uygulama listesini Configuration Manager ile eşitlenebilir  
@@ -153,7 +153,7 @@ Artık **varlıklar ve uyum** çalışma alanından erişilen **uzak cihaz eylem
 >   
 >  Şu anda Configuration Manager ile çevrimiçi lisanslanmış uygulamalar dağıtamazsınız.  
 
-##  <a name="general-improvements-for-volume-purchased-apps"></a><a name="BKMK_VPP2"></a>Toplu satın alınan uygulamalar için genel geliştirmeler  
+##  <a name="general-improvements-for-volume-purchased-apps"></a><a name="BKMK_VPP2"></a> Toplu satın alınan uygulamalar için genel geliştirmeler  
 
 -   Bu sürümde, Iş için Windows Mağazası 'ndan toplu satın alınan uygulamalar ve iOS Uygulama Mağazası, **Mağaza uygulamaları Için lisans bilgileri**olan aynı görünüme birleştirildi.  
 
@@ -165,14 +165,14 @@ Artık **varlıklar ve uyum** çalışma alanından erişilen **uzak cihaz eylem
 
 -   Configuration Manager konsolundaki toplu satın alınan uygulamalara yönelik bir Apple VPP belirtecini almak ve yüklemek için kullandığınız konum değişmiştir. Bunu artık **Admin** **Cloud Services**  >  **Apple Volume Purchase program belirteçleri** düğümü altındaki yönetici çalışma alanında yapabilirsiniz.  
 
-##  <a name="enterprise-data-protection-edp"></a><a name="BKMK_VPP"></a>Kurumsal veri koruma (EDP)  
+##  <a name="enterprise-data-protection-edp"></a><a name="BKMK_VPP"></a> Kurumsal veri koruma (EDP)  
  Kurumsal veri koruma (EDP) ilkelerinizi dağıtmanıza olanak sağlayan yapılandırma öğeleri oluşturabilirsiniz, bu da korumalı uygulamalarınızı, EDP koruma düzeyinizi ve ağ üzerinde kurumsal verilerin nasıl bulunacağını seçmenizi sağlar. EDP hakkında daha fazla bilgi için aşağıdaki konulara bakın:  
 
-- [Windows Information Protection (WıP) kullanarak kurumsal verilerinizi koruma](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
-- [Configuration Manager kullanarak bir Windows Information Protection (WıP) ilkesi oluşturma ve dağıtma](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
+- [Windows Information Protection (WıP) kullanarak kurumsal verilerinizi koruma](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Configuration Manager kullanarak bir Windows Information Protection (WıP) ilkesi oluşturma ve dağıtma](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
 
 
-##  <a name="end-users-can-install-apps-from-the-company-portal"></a><a name="BKMK_End"></a>Son kullanıcılar Şirket Portalı uygulama yükleyebilir  
+##  <a name="end-users-can-install-apps-from-the-company-portal"></a><a name="BKMK_End"></a> Son kullanıcılar Şirket Portalı uygulama yükleyebilir  
  Şirket içi MDM, Configuration Manager sürüm 1511 ' de tanıtılmıştır. Önceki sürümlerde, uygulamaları MDM ile yönetilen Windows 10 cihazlarına, şirket içi MDM tarafından yönetilen cihazlar için **gereken** yüklemede dağıtım amacını dağıtabilirsiniz.  
 
  Bu sürümde, artık şirket içi MDM ile yönetilen Windows 10 bilgisayarlarının kullanıcıları için **kullanılabilir** dağıtım amacına sahip uygulamaları dağıtabilirsiniz ve kullanıcılar artık bu uygulamaları şirket portalı yükleyebilir.
@@ -236,7 +236,7 @@ Bu teknik önizlemede, Şirket Portalı 15 dakikadan uzun bir süre açık ise, 
 
    2. **Set-executionPolicy RemoteSigned** Çalıştır  
 
-   3. ** &lt; SCCM yükleme dizini \> \CD. Latest\smssetup\tools\mdm** Çalıştır klasöründen **.\configurationscript.exe**  
+   3. ** &lt; SCCM yükleme dizini \> \CD.exe \ Test\smssetup\tools\mdm** Run klasöründen **.\ConfigurationScript.ps1**  
 
       Yapılandırma betiği şunları yapar:  
 
@@ -263,12 +263,12 @@ Bu teknik önizlemede, Şirket Portalı 15 dakikadan uzun bir süre açık ise, 
 
      Şirket Portalı açtıktan sonra, oturum açmak için kullanıcının Active Directory kimlik bilgilerini ( **Configuration Manager** user@domain veya etki alanı \ Kullanıcı biçiminde) belirten Configuration Manager adlı bir kimlik doğrulama iletişim kutusu görüntülenir.  
 
-##  <a name="new-tabs-for-updates-and-operating-systems-in-software-center"></a><a name="BKMK_SW1"></a>Yazılım Merkezi 'nde güncelleştirmeler ve Işletim sistemleri için yeni sekmeler  
+##  <a name="new-tabs-for-updates-and-operating-systems-in-software-center"></a><a name="BKMK_SW1"></a> Yazılım Merkezi 'nde güncelleştirmeler ve Işletim sistemleri için yeni sekmeler  
  Bu sürümde, Yazılım Merkezi uygulamasının yerleşimini geliştirmek için aşağıdaki değişiklikler yapılmıştır:  
 
 -   **Uygulamalar** sekmesi, **güncelleştirmeler**, **Işletim sistemleri** (daha önce **Filtreler** listesinde bulunan) ve **uygulamalar**için üç ayrı sekmeye bölünür.  
 
-##  <a name="service-a--server-group"></a><a name="BKMK_ServerGroups"></a>Sunucu grubu hizmeti  
+##  <a name="service-a--server-group"></a><a name="BKMK_ServerGroups"></a> Sunucu grubu hizmeti  
  Configuration Manager sürüm 1511 ' de Technical Preview, koleksiyondaki tüm cihazların bir sunucu grubu üzerinde oluşturulduğu bir koleksiyon oluşturma özelliğini içeriyordu. Ardından, sunucu grubuna yazılım güncelleştirmelerini dağıtırken kullanılacak sunucu grubu ayarlarını yapılandırabilir, belirli bir zamanda güncellenen bilgisayarların yüzdesini denetleyebilir ve dağıtım öncesi ve dağıtım sonrası PowerShell betiklerini özel eylemleri çalıştıracak şekilde yapılandırabilirsiniz.  
 
  Configuration Manager, sürüm 1605 için teknik önizleme, sunucu grubundaki bilgisayarları tanımladığınız belirli bir sırada güncelleştirme özelliği ekler, sunucu grubundaki bilgisayarların durumunu görüntülemek için Gelişmiş izleme ekler ve istemciler yazılım güncelleştirmelerini yükleyemazken ve diğer istemcilerin yazılım güncelleştirmelerini yüklemesini engelliyorsa faydalı olan dağıtım kilitlerini temizleyebilme olanağı sağlar.  
@@ -280,7 +280,7 @@ Bu teknik önizlemede, Şirket Portalı 15 dakikadan uzun bir süre açık ise, 
 
 -   Sunucu grubundaki bilgisayarların, yazılım güncelleştirmelerini koleksiyonun sunucu grubu ayarlarına göre belirli bir sırada yüklemesini belirtebilirsiniz. Dağıtım öncesi ve dağıtım sonrası betikleri belirtmek için yordamdaki örnek betikleri kullanın.  
 
--   Bu koleksiyona bir yazılım güncelleştirmesi dağıtabiliyorum. C:\Temp ' teki Start. txt ve End. txt dosyalarını (örnek betiklerden oluşturulan) gözden geçirin ve sunucu grubundaki bilgisayarlarda dağıtımın başlangıç ve bitiş zamanlarını doğrulayın. Daha fazla bilgi için UpdatesDeployment. log dosyasını gözden geçirin.  
+-   Bu koleksiyona bir yazılım güncelleştirmesi dağıtabiliyorum. C:\Temp ' teki start.txt ve end.txt dosyalarını (örnek betiklerden oluşturulan) gözden geçirin ve sunucu grubundaki bilgisayarlarda dağıtımın başlangıç ve bitiş zamanlarını doğrulayın. Daha fazla bilgi için UpdatesDeployment. log dosyasını gözden geçirin.  
 
 #### <a name="to-create-a-collection-for-a-server-group"></a>Bir sunucu grubu için koleksiyon oluşturmak için  
 
@@ -335,7 +335,7 @@ Bu teknik önizlemede, Şirket Portalı 15 dakikadan uzun bir süre açık ise, 
 
 2.  **Giriş** sekmesinde, **dağıtım** grubunda, **sunucu grubu dağıtım kilitlerini temizle**' ye tıklayın. İstemciler yazılım güncelleştirmelerini yükleyemediyse ve diğer istemcilerin yazılım güncelleştirmelerini yüklemesini engelliyorsa, dağıtım kilitleri el ile temizlenebilir.  
 
-##  <a name="support-for-microsoft-defender-advanced-threat-protection-service"></a><a name="BKMK_ATP"></a>Microsoft Defender Gelişmiş tehdit koruması hizmeti desteği  
+##  <a name="support-for-microsoft-defender-advanced-threat-protection-service"></a><a name="BKMK_ATP"></a> Microsoft Defender Gelişmiş tehdit koruması hizmeti desteği  
  Microsoft Defender Gelişmiş tehdit koruması (ATP), kuruluşların ağlarında gelişmiş saldırıları algılamasına, araştırmasına ve yanıt vermesine yardımcı olacak bir hizmettir. Microsoft Defender ATP daha önce Windows Defender ATP olarak bilinirdi. [Microsoft Defender ATP](https://blogs.windows.com/windowsexperience/2016/03/01/announcing-windows-defender-advanced-threat-protection)hakkında daha fazla bilgi edinin. Configuration Manager, yönetilen Windows 10 yıldönümü Edition istemci cihazlarını eklemenize ve izlemenize yardımcı olabilir.  
 
 ### <a name="try-it-now"></a>Hemen deneyin!  
@@ -402,7 +402,7 @@ Bu teknik önizlemede, Şirket Portalı 15 dakikadan uzun bir süre açık ise, 
 
         -   **Eklendi** -Policy uygulanmadı, ancak aracı ilke üzerinde yer bildirmedi  
 
-##  <a name="on-premises-device-health-attestation"></a><a name="BKMK_DHA"></a>Şirket içi Cihaz Sistem Durumu Kanıtlama  
+##  <a name="on-premises-device-health-attestation"></a><a name="BKMK_DHA"></a> Şirket içi Cihaz Sistem Durumu Kanıtlama  
  Windows 10 cihazları için sistem durumu kanıtlama artık şirket içi altyapıyı kullanarak iletişim kuracak şekilde yapılandırılabilir. Yöneticiler, raporlamanın bulut veya şirket içi kaynaklar aracılığıyla yapılıp yapılmadığını belirtebilir. Sistem durumu kanıtlama raporlaması için şirket içi seçilirse, hizmet için bir URL belirtilebilir. Bu, internet erişimi olmayan istemci bilgisayarların sistem durumu kanıtlama kullanarak cihazları etkinleştirmesine ve yönetmesine olanak tanır.  
 
 ### <a name="enable-health-attestation-for-on-premises-devices"></a>Şirket içi cihazlarda sistem durumu kanıtlamasını etkinleştirme  
@@ -412,10 +412,10 @@ Bu teknik önizlemede, Şirket Portalı 15 dakikadan uzun bir süre açık ise, 
 
 2.  **Şirket içi Sistem Durumu Kanıtlama Hizmeti URL'si**belirtin ve **Tamam**’a tıklayın.  
 
-##  <a name="new-restart-options-for-windows-10-clients-after-software-update-installation"></a><a name="BKMK_RestartOptions"></a>Windows 10 istemcileri için yazılım güncelleştirme yüklemesinden sonra yeni yeniden başlatma seçenekleri  
+##  <a name="new-restart-options-for-windows-10-clients-after-software-update-installation"></a><a name="BKMK_RestartOptions"></a> Windows 10 istemcileri için yazılım güncelleştirme yüklemesinden sonra yeni yeniden başlatma seçenekleri  
  Yeniden başlatma gerektiren bir yazılım güncelleştirmesi Configuration Manager kullanılarak dağıtıldığında ve bir bilgisayara yüklendiğinde, bekleyen bir yeniden başlatma zamanlanır ve bir yeniden başlatma iletişim kutusu görüntülenir. Şu anda Windows 8 ve üzeri için, Windows güç seçeneklerini kullanarak bilgisayarı kapatır veya yeniden başlatırsanız (yeniden başlatma iletişim kutusu yerine), bilgisayar yeniden başlatıldıktan sonra yeniden başlatma iletişim kutusu kalır ve bilgisayarın yapılandırılan son tarihte yeniden başlatılması gerekir. Bu Technical Preview sürümünde, Configuration Manager yazılım güncelleştirmesi için bekleyen bir yeniden başlatma olduğunda, **güncelleştirme ve yeniden başlatma** ve **güncelleştirme ve kapatma** seçeneği Windows 10 bilgisayarlarda Windows güç seçeneklerinde kullanılabilir olacaktır. Bu seçeneklerden biri kullanıldığında, bilgisayar yeniden başlatıldıktan sonra yeniden başlatma iletişim kutusu görüntülenmez.  
 
-##  <a name="pre-declare-corporate-owned-devices-with-imei-or-ios-serial-number"></a><a name="BKMK_IMEI"></a>Şirkete ait cihazları ıMEı veya iOS seri numarası ile önceden bildirme  
+##  <a name="pre-declare-corporate-owned-devices-with-imei-or-ios-serial-number"></a><a name="BKMK_IMEI"></a> Şirkete ait cihazları ıMEı veya iOS seri numarası ile önceden bildirme  
  Artık, şirketin sahip olduğu cihazları Uluslararası istasyon mobil ekipman kimliği (ıMEı) numaralarını içeri aktararak tanımlayabilirsiniz. Cihaz ıMEı numaralarını içeren bir virgülle ayrılmış değerler (. csv) dosyasını karşıya yükleyebilir veya cihaz bilgilerini el ile girebilirsiniz.  İOS cihazlarının seri numaralarını da içeri aktarabilirsiniz.  İçeri aktarılan bilgiler, "Kurumsal" olarak kaydeden cihazların sahipliğini ayarlar.  Hizmete erişen her kullanıcı için bir Intune lisansı hala gereklidir.  
 
 ### <a name="try-it-out"></a>Deneyin!  
@@ -439,7 +439,7 @@ Bu teknik önizlemede, Şirket Portalı 15 dakikadan uzun bir süre açık ise, 
 
 3. Karşıya yüklenen dosyalar için şirkete ait cihazları önceden bildirmek üzere bilgileri içeren. csv dosyasına gidin. Dosya, üst satırı dışlayarak aşağıdaki biçimde olmalıdır (yalnızca rehberlik için verilmiştir):  
 
-   |**IMEı #**|**iOS seri**|**İşletim Sistemi**|**Ayrıntılar**|
+   |**IMEı #**|**iOS seri**|**İşletim sistemi**|**Ayrıntılar**|
    |---|---|---|---|
    |123456789012345||PENCERELERIN|Şirkete ait Windows cihazı|
    |123456789012|A0BCD0EFGH0J|IOS|Şirkete ait iOS cihazlar|
@@ -463,4 +463,4 @@ Bu teknik önizlemede, Şirket Portalı 15 dakikadan uzun bir süre açık ise, 
 
      **İleri**’ye tıklayın.  
 
-4. Dosya içeri aktarma işleminin sonuçlarını gözden geçirin. Daha önce içeri aktarılan ıMEı veya seri numaralarının ayrıntıları, yeni ayrıntılarla güncelleştirilir.  Devam etmek için **İleri** ' ye, güncelleştirilmiş ayrıntıları korumak için **geri** ' ye veya sonra Sihirbazı doldurun.  
+4. Dosya içeri aktarma işleminin sonuçlarını gözden geçirin. Daha önce içeri aktarılan ıMEı veya seri numaralarının ayrıntıları, yeni ayrıntılarla güncelleştirilir.  Devam etmek için **İleri** ' ye, güncelleştirilmiş ayrıntıları korumak için **geri** ' ye veya sonra Sihirbazı doldurun.

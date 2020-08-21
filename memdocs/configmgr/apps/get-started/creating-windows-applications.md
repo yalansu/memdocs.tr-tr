@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ddd01055ac6edf2872854c93cc5172b396052ad2
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 2712613eb6d03253c05a011037ac8492992e1f03
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270863"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695197"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Configuration Manager Windows uygulamaları oluşturma
 
@@ -23,7 +23,7 @@ ms.locfileid: "84270863"
 
 [Uygulama oluşturmaya](../deploy-use/create-applications.md)yönelik diğer Configuration Manager gereksinimleri ve yordamlarına ek olarak, Windows cihazları için uygulama oluştururken ve dağıtırken aşağıdaki noktaları da göz önünde bulundurmanız gerekir.  
 
-## <a name="general-considerations"></a><a name="bkmk_general"></a>Genel hususlar  
+## <a name="general-considerations"></a><a name="bkmk_general"></a> Genel hususlar  
 
 Configuration Manager, Windows 8.1 ve Windows 10 cihazları için Windows uygulama paketi (. appx) ve uygulama paketi (. appxdemeti) biçimlerinin dağıtımını destekler.
 
@@ -32,7 +32,7 @@ Configuration Manager konsolunda bir uygulama oluşturduğunuzda, uygulama yükl
 > [!Note]  
 > Yeni Configuration Manager özelliklerinden yararlanmak için önce istemcileri en son sürüme güncelleştirin. Site ve konsolu güncelleştirdiğinizde Configuration Manager konsolunda yeni işlevsellik göründüğünde, istemci sürümü de en son olana kadar, tüm senaryo işlevsel değildir.<!--SCCMDocs issue 646-->  
 
-## <a name="provision-windows-app-packages-for-all-users-on-a-device"></a><a name="bkmk_provision"></a>Bir cihazdaki tüm kullanıcılar için Windows uygulama paketleri sağlama
+## <a name="provision-windows-app-packages-for-all-users-on-a-device"></a><a name="bkmk_provision"></a> Bir cihazdaki tüm kullanıcılar için Windows uygulama paketleri sağlama
 <!--1358310-->
 Cihazdaki tüm kullanıcılar için Windows uygulama paketi ile bir uygulama sağlayın. Bu senaryonun yaygın bir örneği, bir okuldaki öğrenciler tarafından kullanılan tüm cihazlara Minecseft: eğitim sürümü gibi Iş ve eğitim Microsoft Store bir uygulama sağlamadır. Daha önce Configuration Manager yalnızca Kullanıcı başına bu uygulamaları yüklemeyi destekler. Yeni bir cihazda oturum açtıktan sonra bir öğrenciye bir uygulamaya erişmeniz gerekir. Artık uygulama tüm kullanıcılar için cihaza sağlandığında, daha hızlı bir şekilde üretken olabilirler.
 
@@ -53,12 +53,12 @@ Bu özellik için bir Windows uygulama dağıtım türü yapılandırmak için, 
 > [!Note]  
 > Sağlanan bir uygulamayı kullanıcıların zaten oturum açmış olduğu cihazlardan kaldırmanız gerekiyorsa, iki adet kaldırma dağıtımı oluşturmanız gerekir. İlk kaldırma dağıtımını cihazları içeren bir cihaz koleksiyonuna hedefleyin. İkinci kaldırma dağıtımını, sağlanan uygulamayla cihazlarda zaten oturum açmış olan kullanıcıları içeren bir kullanıcı koleksiyonuna hedefleyin. Bir cihazda sağlanan uygulamayı kaldırırken, Windows bu uygulamayı da kullanıcılar için kaldırmıyor.
 
-## <a name="support-for-msix-format"></a><a name="bkmk_msix"></a>MSIX biçimi desteği
+## <a name="support-for-msix-format"></a><a name="bkmk_msix"></a> MSIX biçimi desteği
 <!--1357427-->
 
 Configuration Manager, Windows 10 uygulama paketi (. msix) ve uygulama paketi (. msixdemeti) biçimlerini destekler. Windows 10 sürüm 1809 veya üzeri bu biçimleri destekler.
 
-- MALTıYA genel bakış için [maltıya daha yakından](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix)bakın.  
+- MALTıYA genel bakış için [maltıya daha yakından](/archive/blogs/sgern/a-closer-look-at-msix)bakın.  
 
 - Yeni bir MSIX uygulaması oluşturma hakkında bilgi için bkz. [Insider Build 17682 ' de sunulan Msix desteği](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).  
 
@@ -79,7 +79,7 @@ Mevcut Windows Installer (. msi) uygulamalarınızı MSIX biçimine dönüştür
 
   - Microsoft Store 'ten [Msix paketleme aracını](https://www.microsoft.com/store/productId/9N5LW3JBCXKF) yükler  
 
-  - [Msix paketleme aracı sürücüsünü](https://docs.microsoft.com/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers) yükler<!--SCCMDocs-pr issue #3091-->  
+  - [Msix paketleme aracı sürücüsünü](/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers) yükler<!--SCCMDocs-pr issue #3091-->  
 
 Bu cihaza başka herhangi bir uygulama veya hizmet yüklemeyin. Bu, başvuru sistemdir.
 
@@ -104,12 +104,12 @@ Sihirbaz tamamlandığında, MSIX paketleme aracı sihirbazda belirttiğiniz kon
 
 Bu MALTıDAN bu uygulamayı kullanmak için önce, istemcilerin ona güvenmesi için dijital olarak imzalamanız gerekir. Bu işlemle ilgili daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [MSIX – Maltıpaketleme aracı – MSIX paketi imzalanıyor](https://docs.microsoft.com/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
-- [SignTool kullanarak uygulama paketini imzalama](https://docs.microsoft.com/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
+- [MSIX – Maltıpaketleme aracı – MSIX paketi imzalanıyor](/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
+- [SignTool kullanarak uygulama paketini imzalama](/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
 
 Uygulamayı imzalamadan sonra, Configuration Manager uygulamada yeni bir dağıtım türü oluşturun. Daha fazla bilgi için bkz. [uygulama için dağıtım türleri oluşturma](../deploy-use/create-applications.md#bkmk_create-dt).
 
-## <a name="task-sequence-deployment-type"></a><a name="bkmk_tsdt"></a>Görev sırası dağıtım türü
+## <a name="task-sequence-deployment-type"></a><a name="bkmk_tsdt"></a> Görev sırası dağıtım türü
 
 <!--3555953-->
 
@@ -150,7 +150,7 @@ Uygulamayı oluştururken, bir görev dizisi dağıtım türü eklemek için, Ku
 
 - Bu görev dizisinde **uygulama Install** adımını kullanmayın. Uygulama yüklemek için [paketi yüklemek](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) adımını kullanın.
 
-## <a name="support-for-universal-windows-platform-uwp-apps"></a><a name="bkmk_uwp"></a>Evrensel Windows Platformu (UWP) uygulamaları için destek  
+## <a name="support-for-universal-windows-platform-uwp-apps"></a><a name="bkmk_uwp"></a> Evrensel Windows Platformu (UWP) uygulamaları için destek  
 
 Windows 10 cihazlarında iş kolu uygulamalarını yüklemek için dışarıdan yükleme anahtarı gerekmez. Ancak, Windows 'da dışarıdan yüklemeyi etkinleştirmek için kayıt defteri anahtarının `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps` değeri **1**olmalıdır.  
 
@@ -162,11 +162,11 @@ Mobil uygulama paketlerini imzalamak için, kullanılacak kod imzalama sertifika
 
 | Paket  | Symantec  | Symantec dışı  |
 |---------|---------|---------|
-| Windows 10 Mobile cihazlarında Universal **. appx** paketleri | Yes | Yes |
-| **. xap** paketleri | Yes | Hayır |
-| Windows 10 Mobile cihazlarına yüklemek için Windows Phone 8,1 için oluşturulan **appx** paketleri | Yes | Hayır |
+| Windows 10 Mobile cihazlarında Universal **. appx** paketleri | Evet | Evet |
+| **. xap** paketleri | Evet | Hayır |
+| Windows 10 Mobile cihazlarına yüklemek için Windows Phone 8,1 için oluşturulan **appx** paketleri | Evet | Hayır |
 
-## <a name="deploy-windows-installer-apps-to-mdm-enrolled-windows-10-devices"></a><a name="bkmk_mdm-msi"></a>MDM 'ye kayıtlı Windows 10 cihazlarına Windows Installer uygulamalarını dağıtma  
+## <a name="deploy-windows-installer-apps-to-mdm-enrolled-windows-10-devices"></a><a name="bkmk_mdm-msi"></a> MDM 'ye kayıtlı Windows 10 cihazlarına Windows Installer uygulamalarını dağıtma  
 
 **MDM ( \* . msi) dağıtım türü aracılığıyla Windows Installer** , WINDOWS 10 çalıştıran MDM 'ye kayıtlı cihazlara Windows Installer tabanlı uygulamalar oluşturmanıza ve dağıtmanıza olanak tanır.  
 
@@ -182,4 +182,4 @@ Bu dağıtım türünü kullandığınızda, aşağıdaki noktaları göz önün
 
 - Cihazdaki tüm kullanıcılar için makine başına MSI paketleri yüklenir.  
 
-- Configuration Manager uygulama güncelleştirmelerini destekler. Her sürümün MSI ürün kodu aynı olmalıdır.  
+- Configuration Manager uygulama güncelleştirmelerini destekler. Her sürümün MSI ürün kodu aynı olmalıdır.

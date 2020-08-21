@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4708c0d8e9a7d2a3b87310b64311d67d8b84a16a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 44fcea129b6f45c292bcdd6b83004131ce2d4e96
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126799"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694432"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Configuration Manager için Technical Preview 1806 ' deki yetenekler
 
@@ -39,7 +39,7 @@ Steps to workaround, if any.
 -->
 ## <a name="known-issues-in-this-technical-preview"></a>Bu Technical Preview 'da bilinen sorunlar
 
-### <a name="site-fails-to-upgrade-with-remote-content-library"></a><a name="ki_contentlib"></a>Site, uzak içerik kitaplığıyla yükseltme yapamıyor
+### <a name="site-fails-to-upgrade-with-remote-content-library"></a><a name="ki_contentlib"></a> Site, uzak içerik kitaplığıyla yükseltme yapamıyor
 <!--514642-->
 Site, **cmupdate. log**dosyasında aşağıdaki hatalarla yükseltme yapamıyor:  
 
@@ -62,7 +62,7 @@ Bu sorun, içerik kitaplığı uzak bir konumda olduğunda bu yayında oluşur.
 
 
 
-## <a name="third-party-software-updates"></a><a name="bkmk-3pupdate"></a>Üçüncü taraf yazılım güncelleştirmeleri
+## <a name="third-party-software-updates"></a><a name="bkmk-3pupdate"></a> Üçüncü taraf yazılım güncelleştirmeleri
 <!--1352101-->
 Bu sürüm, [UserVoice geri bildirimlerinizin](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co)bir sonucu olarak üçüncü taraf yazılım güncelleştirmeleri desteğiyle daha da yinelenir. Artık bazı yaygın senaryolar için System Center Updates Publisher (SCUP) kullanımını gerektirsiz olursunuz. Configuration Manager konsolundaki Yeni **üçüncü taraf yazılım güncelleştirme katalogları** düğümü, üçüncü taraf kataloglara abone olmanıza, güncelleştirmelerini yazılım güncelleştirme noktanya yayımlamanıza ve sonra istemcilere dağıtmanıza olanak tanır. 
 
@@ -81,10 +81,10 @@ SCUP, diğer katalogları ve senaryoları desteklemeye devam etmektedir. Configu
 
     > [!Tip]  
     > Yazılım güncelleştirme noktası, imzalama sertifikalarını işlemek için kullanılan WSUS API 'Leri için bir gereksinim olduğundan, HTTPS gerektirir. İstemcilerin da HTTPS etkin olması gerekmez. WSUS üzerinde HTTPS 'yi etkinleştirme hakkında daha fazla bilgi için, yardım için aşağıdaki makalelere bakın:  
-    > - [WSUS’u Güvenli Yuva Katmanı Protokolü ile güvenli hale getirme](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
-    > - [WSUS desteği blog gönderisi](https://docs.microsoft.com/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
+    > - [WSUS’u Güvenli Yuva Katmanı Protokolü ile güvenli hale getirme](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
+    > - [WSUS desteği blog gönderisi](/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
 
-- Yazılım güncelleştirme noktası, sunucusundaki WSUSContent klasöründe, üçüncü taraf yazılım güncelleştirmeleri için kaynak ikili içeriğini depolamak için yeterli disk alanı. Gerekli depolama alanı, satıcıya, güncelleştirme türlerine ve dağıtım için yayımladığınız belirli güncelleştirmelere göre farklılık gösterir. Sunucusundaki WSUSContent klasörünü daha fazla boş alana sahip başka bir sürücüye taşımanız gerekiyorsa, WSUS destek ekibi Web günlüğü gönderisine [WSUS 'nin güncelleştirmeleri yerel olarak depoladığı konumu nasıl değiştirileceği](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally)konusuna bakın.  
+- Yazılım güncelleştirme noktası, sunucusundaki WSUSContent klasöründe, üçüncü taraf yazılım güncelleştirmeleri için kaynak ikili içeriğini depolamak için yeterli disk alanı. Gerekli depolama alanı, satıcıya, güncelleştirme türlerine ve dağıtım için yayımladığınız belirli güncelleştirmelere göre farklılık gösterir. Sunucusundaki WSUSContent klasörünü daha fazla boş alana sahip başka bir sürücüye taşımanız gerekiyorsa, WSUS destek ekibi Web günlüğü gönderisine [WSUS 'nin güncelleştirmeleri yerel olarak depoladığı konumu nasıl değiştirileceği](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally)konusuna bakın.  
 
 - İstemci ayarını etkinleştirin ve dağıtın **yazılım güncelleştirmeleri** grubundaki [üçüncü taraf yazılım güncelleştirmelerini etkinleştirin](../clients/deploy/about-client-settings.md#enable-third-party-software-updates) .  
 
@@ -354,4 +354,4 @@ Bu sürüm, [yüzey panosu](../clients/manage/surface-device-dashboard.md)için 
 
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Technical Preview dalını yükleme veya güncelleştirme hakkında daha fazla bilgi için bkz. [Configuration Manager Için Teknik Önizleme](technical-preview.md).    
+Technical Preview dalını yükleme veya güncelleştirme hakkında daha fazla bilgi için bkz. [Configuration Manager Için Teknik Önizleme](technical-preview.md).

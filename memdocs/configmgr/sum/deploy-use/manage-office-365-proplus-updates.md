@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Apps güncelleştirmelerini yönetme
+title: Microsoft 365 Uygulamaları güncelleştirmelerini yönetme
 titleSuffix: Configuration Manager
 description: Configuration Manager, güncelleştirmeleri istemcilere dağıtmak üzere kullanılabilir hale getirmek için WSUS kataloğundaki Microsoft 365 Apps istemci güncelleştirmelerini site sunucusuna eşitler.
 author: mestew
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: d2a7f5ec31359cdd1a69bad3204d5119f8998e92
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 907c8d63d68ee4f34b9d22be24f32ffb1878b715
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129180"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696183"
 ---
 # <a name="manage-microsoft-365-apps-with-configuration-manager"></a>Configuration Manager ile Microsoft 365 uygulamalarını yönetme
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
 > [!Note]
-> 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
+> 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
 
 Configuration Manager, Microsoft 365 uygulamalarını aşağıdaki yollarla yönetmenizi sağlar:
 
@@ -39,8 +39,8 @@ Configuration Manager, Microsoft 365 uygulamalarını aşağıdaki yollarla yön
 
 Microsoft 365 Apps istemci bilgilerini gözden geçirmek ve bu Microsoft 365 uygulamalar yönetim eylemlerinden bazılarını başlatmak için [Office 365 Istemci yönetimi panosunu](office-365-dashboard.md)kullanın.
 
-## <a name="deploy-microsoft-365-apps"></a><a name="bkmk_deploy"></a>Microsoft 365 uygulamalarını dağıtma
-İlk Microsoft 365 uygulamalar yüklemesi için Office 365 Istemci yönetimi panosundan Microsoft 365 Apps yükleyicisini başlatın. Sihirbaz, Microsoft 365 Apps yükleme ayarlarını yapılandırmanıza, Office Içerik teslim ağlarından (CDNs) dosya yüklemenize ve dosyalar için bir betik uygulaması oluşturmanıza ve dağıtmanıza olanak tanır. Microsoft 365 uygulamalar istemcilere yüklenene ve [Microsoft 365 Apps otomatik güncelleştirmeleri görevinin](https://docs.microsoft.com/deployoffice/overview-update-process-microsoft-365-apps) çalışmalarından Microsoft 365 uygulama güncelleştirmeleri uygulanmaz. Test amacıyla, güncelleştirme görevini el ile çalıştırabilirsiniz.
+## <a name="deploy-microsoft-365-apps"></a><a name="bkmk_deploy"></a> Microsoft 365 uygulamalarını dağıtma
+İlk Microsoft 365 uygulamalar yüklemesi için Office 365 Istemci yönetimi panosundan Microsoft 365 Apps yükleyicisini başlatın. Sihirbaz, Microsoft 365 Apps yükleme ayarlarını yapılandırmanıza, Office Içerik teslim ağlarından (CDNs) dosya yüklemenize ve dosyalar için bir betik uygulaması oluşturmanıza ve dağıtmanıza olanak tanır. Microsoft 365 uygulamalar istemcilere yüklenene ve [Microsoft 365 Apps otomatik güncelleştirmeleri görevinin](/deployoffice/overview-update-process-microsoft-365-apps) çalışmalarından Microsoft 365 uygulama güncelleştirmeleri uygulanmaz. Test amacıyla, güncelleştirme görevini el ile çalıştırabilirsiniz.
 
 Önceki Configuration Manager sürümler için, istemcilerde Microsoft 365 uygulamaları ilk kez yüklemek üzere aşağıdaki adımları uygulamanız gerekir:
 - Office dağıtım aracı 'Nı (ODT) İndir
@@ -76,7 +76,7 @@ Configuration Manager 1806 ' den başlayarak, Office özelleştirme aracı Confi
 
     Varolan bir yapılandırma dosyanız varsa, dosyanın konumunu girin ve 7. adıma atlayın.  &#92;&#92;*sunucu*&#92;*Share*&#92;*filename*biçiminde bir konum belirtmeniz gerekir. 'Sini.
     > [!IMPORTANT]    
-    > XML yapılandırma dosyası yalnızca [Office 2016 tarafından desteklenen diller](https://docs.microsoft.com/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016)içermelidir.
+    > XML yapılandırma dosyası yalnızca [Office 2016 tarafından desteklenen diller](/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016)içermelidir.
 
 5. **Istemci ürünleri** sayfasında, kullandığınız Microsoft 365 Apps Suite ' i seçin. Dahil etmek istediğiniz uygulamaları seçin. Dahil edilecek ek ürünleri seçin ve ardından **İleri**' ye tıklayın.
 6. **Istemci ayarları** sayfasında, dahil edilecek ayarları seçin ve ardından **İleri**' ye tıklayın.
@@ -103,7 +103,7 @@ Hangi cihazların belirli bir Microsoft 365 Apps yazılım güncelleştirmesi ge
 1. Bu eylem sizi, güncelleştirme gerektiren cihazları görebileceğiniz **cihazlarda** geçici bir düğüme götürür. Ayrıca, bir düğüm için, listeden yeni koleksiyon oluşturma gibi işlemler gerçekleştirebilirsiniz.
 
 
-## <a name="deploy-microsoft-365-apps-updates"></a><a name="bkmk_update"></a>Microsoft 365 Apps güncelleştirmelerini dağıtma
+## <a name="deploy-microsoft-365-apps-updates"></a><a name="bkmk_update"></a> Microsoft 365 Apps güncelleştirmelerini dağıtma
 
 Microsoft 365 Apps güncelleştirmelerini Configuration Manager ile dağıtmak için aşağıdaki adımları kullanın:
 
@@ -120,13 +120,13 @@ Microsoft 365 Apps güncelleştirmelerini Configuration Manager ile dağıtmak i
 
       3. **Yazılım güncelleştirmeleri** ' ne tıklayın ve **Office 365 istemci Aracısı ayarının yönetimini etkinleştirmek** için **Evet** ' i seçin.  
 
-    **Yöntem 2**: Office dağıtım aracını veya grup ilkesi kullanarak Configuration Manager [güncelleştirmeleri almak için Microsoft 365 Apps istemcilerinin etkinleştirin](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#BKMK_EnableClient) .  
+    **Yöntem 2**: Office dağıtım aracını veya grup ilkesi kullanarak Configuration Manager  [güncelleştirmeleri almak için Microsoft 365 Apps istemcilerinin etkinleştirin](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#BKMK_EnableClient) .  
 
 4. [Microsoft 365 Apps güncelleştirmelerini Istemcilere dağıtın](deploy-software-updates.md) .
 
 > [!NOTE]  
 >
-> Microsoft 365 uygulamalar yakın zamanda yüklenmişse ve nasıl yüklendiğine bağlı olarak, güncelleştirme kanalının henüz ayarlanmamış olması mümkündür. Bu durumda, dağıtılan güncelleştirmeler geçerli değil olarak algılanır. Microsoft 365 uygulamalar yüklediğinde, [Zamanlanmış bir otomatik güncelleştirmeler görevi](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus) oluşturulur. Bu durumda, güncelleştirme kanalının ayarlanması ve güncelleştirmelerin uygun olarak algılanabilmesi için bu görevin en az bir kez çalışması gerekir.
+> Microsoft 365 uygulamalar yakın zamanda yüklenmişse ve nasıl yüklendiğine bağlı olarak, güncelleştirme kanalının henüz ayarlanmamış olması mümkündür. Bu durumda, dağıtılan güncelleştirmeler geçerli değil olarak algılanır. Microsoft 365 uygulamalar yüklediğinde, [Zamanlanmış bir otomatik güncelleştirmeler görevi](/deployoffice/overview-of-the-update-process-for-office-365-proplus) oluşturulur. Bu durumda, güncelleştirme kanalının ayarlanması ve güncelleştirmelerin uygun olarak algılanabilmesi için bu görevin en az bir kez çalışması gerekir.
 >
 > Microsoft 365 uygulamalar yakın zamanda yüklenmişse ve dağıtılan güncelleştirmeler algılanmazsa, sınama amacıyla, Office otomatik güncelleştirmeler görevini el ile başlatabilir ve ardından istemcide [yazılım güncelleştirmeleri dağıtımı değerlendirme döngüsünü](../understand/software-updates-introduction.md#scan-for-software-updates-compliance-process) başlatabilirsiniz. Bunu bir görev dizisinde nasıl yapacağınız hakkında yönergeler için bkz. [bir görev dizisindeki Microsoft 365 uygulamalarını güncelleştirme](manage-office-365-proplus-updates.md#bkmk_ts).
 
@@ -151,10 +151,10 @@ Bir Microsoft 365 Apps istemcisine bir güncelleştirme dağıttığınızda, ye
 >- Kullanıcı son tarihten önce bir Microsoft 365 Apps güncelleştirmesi yüklerse, son tarihe ulaşıldığında güncelleştirmenin yüklendiğini doğrular Configuration Manager. Güncelleştirme cihazda algılanmazsa, güncelleştirme yüklenir. 
 >- Uygulama içi bildirim çubuğu, güncelleştirme indirilmeden önce çalıştıran bir uygulama üzerinde görüntülenmez. Güncelleştirme indirildikten sonra, uygulama içi bildirim yalnızca yeni açılan uygulamalar için görüntülenir.
 >- Bir hizmet penceresi tarafından tetiklenen veya iş dışı saatlere yönelik olarak zamanlanan Microsoft 365 uygulama güncelleştirmeleri için, Office uygulamalarını çalıştırmak, güncelleştirmeyi bildirim olmadan yüklemek için kapanmaya zorlanacaktır. 
->- Daha fazla bilgi için bkz. [Microsoft 365 uygulamalar Için Son Kullanıcı güncelleştirme bildirimleri](https://docs.microsoft.com/deployoffice/end-user-update-notifications-microsoft-365-apps)
+>- Daha fazla bilgi için bkz. [Microsoft 365 uygulamalar Için Son Kullanıcı güncelleştirme bildirimleri](/deployoffice/end-user-update-notifications-microsoft-365-apps)
 
 
-## <a name="add-languages-for-microsoft-365-apps-update-downloads"></a><a name="bkmk_o365_lang"></a>Microsoft 365 uygulamalar güncelleştirme indirmeleri için dil ekleme
+## <a name="add-languages-for-microsoft-365-apps-update-downloads"></a><a name="bkmk_o365_lang"></a> Microsoft 365 uygulamalar güncelleştirme indirmeleri için dil ekleme
 Microsoft 365 uygulamalar tarafından desteklenen tüm diller için güncelleştirmeleri indirmek üzere Configuration Manager için destek ekleyebilirsiniz.
 
 ### <a name="download-updates-for-additional-languages-in-version-1902"></a>Sürüm 1902 ' de ek diller için güncelleştirmeleri indirin
@@ -189,7 +189,7 @@ Merkezi yönetim sitesindeki veya tek başına birincil sitedeki yazılım günc
 6. İlk sorgu sonucundan başlayarak, **PropertyName** özelliği için **AdditionalUpdateLanguagesForO365** ile bulana kadar her bir nesneyi açın.
 7. **Değer2** öğesini seçin ve **özelliği Düzenle**' ye tıklayın.  
    ![Değer2 özelliğini Düzenle](../media/3-queryresult.png)
-8. **Değer2** özelliğine ek diller ekleyin ve **özelliği kaydet**' e tıklayın. <br/> Örneğin, pt-pt (Portekizce-Portekiz için), AF-za (Afriveçce-Güney Afrika için), NN-No (Norveççe (Nynorsk)-Norveç vb. gibi. `pt-pt,af-za,nn-no`Örnek dilleri yazmanız gerekir. Diller arasında boşluk kullanmayın.
+8. **Değer2** özelliğine ek diller ekleyin ve **özelliği kaydet**' e tıklayın. <br/> Örneğin, pt-pt (Portekizce-Portekiz için), AF-za (Afriveçce-Güney Afrika için), NN-No (Norveççe (Nynorsk)-Norveç vb. gibi. `pt-pt,af-za,nn-no` Örnek dilleri yazmanız gerekir. Diller arasında boşluk kullanmayın.
  
    ![Özellik Düzenleyicisi 'nde dil ekleme](../media/4-props.png)  
 9. **Kapat**' a tıklayın, **Kapat**' a tıklayın, **özelliği kaydet**' e tıklayın ve **nesneyi kaydet** ' e tıklayın (burada **Kapat** ' a tıkladığınızda değerler atılır). **Kapat**' a tıklayın ve ardından Windows Yönetim Araçları sınayıcıdan çıkmak için **Çıkış** ' a tıklayın.
@@ -197,7 +197,7 @@ Merkezi yönetim sitesindeki veya tek başına birincil sitedeki yazılım günc
 11. Artık Microsoft 365 Apps güncelleştirmelerini indirdiğinizde güncelleştirmeler, sihirbazda seçtiğiniz dillerde indirilir ve bu yordamda yapılandırılır. Güncelleştirmelerin doğru dillerde indirildiğini doğrulamak için, güncelleştirmenin paket kaynağına gidin ve dosya adında dil koduna sahip dosyaları arayın.  
     ![Ek dillere sahip dosya adları](../media/5-verification.png)
 
-## <a name="updating-microsoft-365-apps-in-a-task-sequence"></a><a name="bkmk_ts"></a>Bir görev dizisindeki Microsoft 365 uygulamalarını güncelleştirme
+## <a name="updating-microsoft-365-apps-in-a-task-sequence"></a><a name="bkmk_ts"></a> Bir görev dizisindeki Microsoft 365 uygulamalarını güncelleştirme
 Microsoft 365 Apps güncelleştirmelerini yüklemek için [yazılım güncelleştirmelerini yükler](../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates) görev dizisi adımını kullanırken, dağıtılan güncelleştirmelerin geçerli değil olarak algılanabilmesi mümkündür.  Zamanlanan Office otomatik güncelleştirmeler görevi en az bir kez çalıştırılmadıysa bu durum oluşabilir ( [Microsoft 365 uygulama güncelleştirmelerini dağıtma](manage-office-365-proplus-updates.md#bkmk_update)bölümündeki nota bakın). Örneğin, bu adımı çalıştırmadan önce Microsoft 365 uygulamalar hemen yüklenmişse bu durum oluşabilir.
 
 Güncelleştirme kanalının dağıtılan güncelleştirmelerin düzgün algılanabilmesi için ayarlandığından emin olmak için aşağıdaki yöntemlerden birini kullanın:
@@ -209,7 +209,7 @@ Güncelleştirme kanalının dağıtılan güncelleştirmelerin düzgün algıla
 4. Configuration Manager konsolunda, görev dizinizi düzenleyin.
 5. Görev dizisindeki **yazılım güncelleştirmelerini yükler** adımından önce yeni bir **komut satırı Çalıştır** adımı ekleyin. Microsoft 365 uygulamalar aynı görev dizisinin bir parçası olarak yüklenirse, Office yüklendikten sonra bu adımın çalıştığından emin olun.
 6. Office otomatik güncelleştirmeleri zamanlanmış görevinden topladığınız komutta ve bağımsız değişkenlerde kopyalama yapın. 
-7. **Tamam**’a tıklayın. 
+7. **Tamam** düğmesine tıklayın. 
 
 **Yöntem 2:**
 1. Aynı Microsoft 365 uygulamalarla aynı sürüme sahip bir makinede Görev Zamanlayıcı (Taskschd. msc) açın ve Microsoft 365 Apps otomatik güncelleştirmeler görevini yapın. Genellikle, **Task Scheduler Library**  > **Microsoft** > **Office**Görev Zamanlayıcı Kitaplığı altında bulunur.
@@ -218,9 +218,9 @@ Güncelleştirme kanalının dağıtılan güncelleştirmelerin düzgün algıla
 4. Komut satırı alanına, zamanlanmış görevi çalıştıracak komut satırını girin. Tırnak içindeki dizenin, adım 1 ' de tanımlanan görevin yolu ve adıyla eşleştiğinden emin olmak için aşağıdaki örneğe bakın.  
 
     Örnek: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates 2.0"`
-5. **Tamam**’a tıklayın. 
+5. **Tamam** düğmesine tıklayın. 
 
-## <a name="update-channels-for-microsoft-365-apps"></a><a name="bkmk_channel"></a>Microsoft 365 uygulamalar için kanalları güncelleştirme
+## <a name="update-channels-for-microsoft-365-apps"></a><a name="bkmk_channel"></a> Microsoft 365 uygulamalar için kanalları güncelleştirme
 <!--6298093-->
 Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldığında güncelleştirme kanalları da yeniden adlandırıldı. Güncelleştirmeleri dağıtmak için bir otomatik dağıtım kuralı (ADR) kullanıyorsanız, ADRs 'de **başlık** özelliğini kullanan değişiklikler yapmanız gerekir. Çünkü Microsoft Update katalogdaki güncelleştirme paketlerinin adı değişiyor.
 
@@ -243,12 +243,12 @@ Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden
 |Geçerli kanal (Önizleme)|Aylık kanal (hedefli)|
 |Beta kanalı|'Dan|
 
-ADRs 'nizi değiştirme hakkında daha fazla bilgi için bkz. [yazılım güncelleştirmelerini otomatik olarak dağıtma](automatically-deploy-software-updates.md). Ad değişikliği hakkında daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change).
+ADRs 'nizi değiştirme hakkında daha fazla bilgi için bkz. [yazılım güncelleştirmelerini otomatik olarak dağıtma](automatically-deploy-software-updates.md). Ad değişikliği hakkında daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](/deployoffice/name-change).
 
 
 ## <a name="change-the-update-channel-after-you-enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager"></a>Microsoft 365 Apps istemcilerinin Configuration Manager güncelleştirmelerini almasını etkinleştirdikten sonra güncelleştirme kanalını değiştirin
 
-Microsoft 365 uygulamaları dağıttıktan sonra, güncelleştirme kanalını grup ilkesi veya Office dağıtım aracı (ODT) ile değiştirebilirsiniz. Örneğin, bir cihazı yarı yıllık kanaldan yarı yıllık kanala (hedefli) taşıyabilirsiniz. Kanal değiştirilirken, Office, tam sürümü yeniden yüklemek veya indirmek zorunda kalmadan otomatik olarak güncelleştirilir. Daha fazla bilgi için bkz. [kuruluşunuzdaki cihazlar için Microsoft 365 Apps güncelleştirme kanalını değiştirme](https://docs.microsoft.com//deployoffice/change-update-channels).
+Microsoft 365 uygulamaları dağıttıktan sonra, güncelleştirme kanalını grup ilkesi veya Office dağıtım aracı (ODT) ile değiştirebilirsiniz. Örneğin, bir cihazı yarı yıllık kanaldan yarı yıllık kanala (hedefli) taşıyabilirsiniz. Kanal değiştirilirken, Office, tam sürümü yeniden yüklemek veya indirmek zorunda kalmadan otomatik olarak güncelleştirilir. Daha fazla bilgi için bkz. [kuruluşunuzdaki cihazlar için Microsoft 365 Apps güncelleştirme kanalını değiştirme](//deployoffice/change-update-channels).
 
 
 ## <a name="next-steps"></a>Sonraki adımlar

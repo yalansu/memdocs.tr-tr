@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9cb8097fbdd57184e5cd0e229cf96dcb317cf1e5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: cc05ae5a9be6c437fab60f8c4c5a45d61e8c3e65
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127350"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694891"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Öğretici: mevcut Configuration Manager istemcileri için ortak yönetimi etkinleştirme
 
@@ -50,7 +50,7 @@ Bu öğreticide, zaten Configuration Manager kayıtlı olan Windows 10 cihazlar�
 
 Ortamınızda henüz yoksa, bu öğreticide şunları yapmanız gerekir:
 
-- Şirket içi Active Directory ve Azure Active Directory (AD) kiracınız arasında [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-select-installation) yapılandırın.
+- Şirket içi Active Directory ve Azure Active Directory (AD) kiracınız arasında [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-select-installation) yapılandırın.
 
 > [!TIP]
 > Artık kullanıcılarınıza tek tek Intune veya EMS lisansı satın almanız ve atamanız gerekmez. Daha fazla bilgi için bkz. [ürün ve lisanslama hakkında SSS](../core/understand/product-and-licensing-faq.md#bkmk_mem).
@@ -78,10 +78,10 @@ Hibrit bir Azure AD ayarladığınızda, Azure AD Connect ve Active Directory Fe
 >
 > Hibrit Azure AD hakkında daha fazla bilgi için Azure Active Directory belgelerinde aşağıdaki makalelerle başlayın:
 >
-> - [Azure AD katılımınızı uygulamayı planlama](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)
-> - [Hibrit Azure AD katılımınızı uygulamayı planlama](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
-> - [Cihazlarınızın hibrit Azure AD katılımını denetleme](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-control)
-> - [Federasyon etki alanları için hibrit Azure AD katılımını yapılandırma](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
+> - [Azure AD katılımınızı uygulamayı planlama](/azure/active-directory/devices/azureadjoin-plan)
+> - [Hibrit Azure AD katılımınızı uygulamayı planlama](/azure/active-directory/devices/hybrid-azuread-join-plan)
+> - [Cihazlarınızın hibrit Azure AD katılımını denetleme](/azure/active-directory/devices/hybrid-azuread-join-control)
+> - [Federasyon etki alanları için hibrit Azure AD katılımını yapılandırma](/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
 
 ### <a name="set-up-azure-ad-connect"></a>Azure AD Connect ayarlama
 
@@ -92,7 +92,7 @@ Hibrit Azure AD, bilgisayar hesaplarını şirket içi Active Directory (AD) ve 
 Azure AD Connect yapılandırmak için, Azure AD için genel bir yöneticinin kimlik bilgilerine ihtiyacınız vardır.  
 
 > [!TIP]  
-> Aşağıdaki yordam Azure AD Connect kurulumu için yetkili olarak düşünülmemelidir, ancak Intune ile Configuration Manager arasında ortak yönetim yapılandırmasını kolaylaştırmak için burada verilmiştir. Azure AD 'nin kurulumu için bu ve ilgili yordamlarda bulunan yetkili içerik için bkz. Azure AD belgelerinde [yönetilen etki alanları için karma Azure AD birleştirmesini yapılandırma](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains) .  
+> Aşağıdaki yordam Azure AD Connect kurulumu için yetkili olarak düşünülmemelidir, ancak Intune ile Configuration Manager arasında ortak yönetim yapılandırmasını kolaylaştırmak için burada verilmiştir. Azure AD 'nin kurulumu için bu ve ilgili yordamlarda bulunan yetkili içerik için bkz. Azure AD belgelerinde [yönetilen etki alanları için karma Azure AD birleştirmesini yapılandırma](/azure/active-directory/devices/hybrid-azuread-join-managed-domains) .  
 
 #### <a name="configure-a-hybrid-azure-ad-join-using-azure-ad-connect"></a>Azure AD Connect kullanarak karma Azure AD katılımı yapılandırma
 
@@ -107,7 +107,7 @@ Azure AD Connect yapılandırmak için, Azure AD için genel bir yöneticinin ki
    Windows alt etki alanına katılmış cihazları destekleme seçeneğini belirleyebilirsiniz, ancak cihazların ortak yönetiminin yalnızca Windows 10 için desteklendiğini aklınızda bulundurun.
 8. **SCP** sayfasında, hizmet bağlantı noktasını (SCP) yapılandırmak Azure AD Connect istediğiniz her şirket içi orman için aşağıdaki adımları uygulayın ve ardından **İleri**' yi seçin:  
    1. Ormanı seçin.  
-   2. Kimlik doğrulama hizmetini seçin.  Bir Federasyon etki alanınız varsa, kuruluşunuz özel olarak Windows 10 istemcileri olmadığından ve bilgisayar/cihaz eşitlemesini yapılandırdıysanız veya kuruluşunuz [SeamlessSSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)kullanıyorsa, AD FS Server ' ı seçin.  
+   2. Kimlik doğrulama hizmetini seçin.  Bir Federasyon etki alanınız varsa, kuruluşunuz özel olarak Windows 10 istemcileri olmadığından ve bilgisayar/cihaz eşitlemesini yapılandırdıysanız veya kuruluşunuz [SeamlessSSO](/azure/active-directory/hybrid/how-to-connect-sso)kullanıyorsa, AD FS Server ' ı seçin.  
    3. Kuruluş yöneticisinin kimlik bilgilerini girmek için **Ekle** seçeneğine tıklayın.  
 9. Yönetilen bir etki alanınız varsa, bu adımı atlayın.  
 
@@ -115,7 +115,7 @@ Azure AD Connect yapılandırmak için, Azure AD için genel bir yöneticinin ki
 10. **Yapılandırmaya hazırlanma** sayfasında **Yapılandır**' ı seçin.
 11. **Yapılandırma Tamam** sayfasında **Çıkış**' ı seçin.
 
-Etki alanına katılmış Windows cihazları için karma Azure AD JOIN 'i tamamlamada sorunlarla karşılaşırsanız bkz. [Windows için karma Azure AD 'ye katılma sorunlarını giderme geçerli cihazlar](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
+Etki alanına katılmış Windows cihazları için karma Azure AD JOIN 'i tamamlamada sorunlarla karşılaşırsanız bkz. [Windows için karma Azure AD 'ye katılma sorunlarını giderme geçerli cihazlar](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
 
 ## <a name="configure-client-settings-to-direct-clients-to-register-with-azure-ad"></a>İstemcileri Azure AD 'ye kaydolmak üzere yönlendirmek için Istemci ayarlarını yapılandırma
 
@@ -155,7 +155,7 @@ Otomatik kayıt, kullanıcıların Windows 10 cihazlarını Intune 'a kaydetmele
     > [!NOTE]
     > Bazı kiracıların yapılandırmak için bu seçeneklere sahip olmayabilir.<!-- SCCMDocs#1230 -->
     >
-    > **Microsoft Intune** , Azure AD için MDM uygulamasını nasıl yapılandıracaksınız. **Microsoft Intune kaydı** , IOS ve Android kaydı için Multi-Factor Authentication ilkelerini uyguladığınızda oluşturulan belirli BIR Azure AD uygulamasıdır. Daha fazla bilgi için bkz. [Intune cihaz kayıtları için çok faktörlü kimlik doğrulaması gerektirme](https://docs.microsoft.com/intune/enrollment/multi-factor-authentication).
+    > **Microsoft Intune** , Azure AD için MDM uygulamasını nasıl yapılandıracaksınız. **Microsoft Intune kaydı** , IOS ve Android kaydı için Multi-Factor Authentication ilkelerini uyguladığınızda oluşturulan belirli BIR Azure AD uygulamasıdır. Daha fazla bilgi için bkz. [Intune cihaz kayıtları için çok faktörlü kimlik doğrulaması gerektirme](/intune/enrollment/multi-factor-authentication).
 
 5. MDM Kullanıcı kapsamı için **Tümü**' nü ve ardından **Kaydet**' i seçin.  
 

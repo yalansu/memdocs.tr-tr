@@ -10,12 +10,12 @@ ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cb95a05fd3d347b70dd5d53ce972bce0c23c18cc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: be9db7d0ee68f22073a3537e53fc93bf8faff9e0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127893"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693531"
 ---
 # <a name="bitlocker-settings-reference"></a>BitLocker ayarları başvurusu
 
@@ -119,7 +119,7 @@ Bu ayarı etkinleştirirseniz, kullanıcının işletim sistemi sürücüsünü 
 > [!NOTE]
 > Sürücü zaten şifrelendiyse ve bu ayarı devre dışı bırakırsanız, BitLocker sürücünün şifresini çözer.  
 
-[Güvenilir Platform Modülü (TPM)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-top-node)olmayan cihazlarınız varsa, **uyumlu bir TPM olmadan BitLocker 'a izin verme (parola gerektirir)** seçeneğini kullanın. Bu ayar, cihazın TPM 'ye sahip olmasa bile, BitLocker 'ın işletim sistemi sürücüsünü şifrelemesine olanak tanır. Bu seçeneğe izin verirseniz, Windows kullanıcıdan bir BitLocker parolası belirtmesini ister.
+[Güvenilir Platform Modülü (TPM)](/windows/security/information-protection/tpm/trusted-platform-module-top-node)olmayan cihazlarınız varsa, **uyumlu bir TPM olmadan BitLocker 'a izin verme (parola gerektirir)** seçeneğini kullanın. Bu ayar, cihazın TPM 'ye sahip olmasa bile, BitLocker 'ın işletim sistemi sürücüsünü şifrelemesine olanak tanır. Bu seçeneğe izin verirseniz, Windows kullanıcıdan bir BitLocker parolası belirtmesini ister.
 
 Uyumlu TPM içeren cihazlarda, şifrelenmiş veriler için ek koruma sağlamak üzere başlangıçta iki tür kimlik doğrulama yöntemi kullanılabilir. Bilgisayar başladığında, kimlik doğrulaması için yalnızca TPM kullanabilir veya bir kişisel kimlik numarası (PIN) girişi gerektirebilir. Aşağıdaki ayarları yapılandırın:
 

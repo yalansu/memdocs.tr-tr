@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: b5a9a4a7f23942ac06dc16a0b54b657c7fd617a9
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: a2e032e2aecfd53dc3a92cfb9c40798b4dcd1db9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715620"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692783"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Bulut yönetimi ağ geçidi için sertifikalar
 
@@ -51,7 +51,7 @@ Bulut yönetimi ağ geçidi için sertifikalar aşağıdaki konfigürasyonları 
 
 - **TLS 1,2**. Daha fazla bilgi için bkz. [TLS 1,2 'yi etkinleştirme](../../../plan-design/security/enable-tls-1-2.md).  
 
-## <a name="cmg-server-authentication-certificate"></a><a name="bkmk_serverauth"></a>CMG sunucusu kimlik doğrulama sertifikası
+## <a name="cmg-server-authentication-certificate"></a><a name="bkmk_serverauth"></a> CMG sunucusu kimlik doğrulama sertifikası
 
 *Bu sertifika tüm senaryolarda gereklidir.*
 
@@ -66,9 +66,9 @@ CMG, internet tabanlı istemcilerin bağlandığı bir HTTPS hizmeti oluşturur.
 
 Bu sertifika, Azure 'da hizmeti belirlemek için genel olarak benzersiz bir ad gerektirir. Bir sertifika istenmeden önce, istediğiniz Azure etki alanı adının benzersiz olduğunu doğrulayın. Örneğin, *GraniteFalls.cloudapp.net*.
 
-1. [Azure Portal](https://portal.azure.com) oturum açın.
+1. [Azure portalında](https://portal.azure.com) oturum açın.
 1. **Tüm kaynaklar**' ı ve ardından **Ekle**' yi seçin.
-1. **Bulut hizmeti**araması yapın. **Oluştur**'u seçin.
+1. **Bulut hizmeti**araması yapın. **Oluştur**’u seçin.
 1. **DNS adı** alanına istediğiniz öneki yazın, örneğin, *granteden*. Arabirim, etki alanı adının kullanılabilir olduğunu veya başka bir hizmet tarafından zaten kullanımda olduğunu yansıtır.
 
     > [!Important]  
@@ -81,7 +81,7 @@ Ayrıca, CMG 'yi içerik için etkinleştirirseniz CMG hizmeti adının de benze
 
 DNS adı ön eki, örneğin *Granıse*, 3 ile 24 karakter uzunluğunda olmalı ve yalnızca alfasayısal karakterler kullanmalıdır. Tire () gibi özel karakterler kullanmayın `-` .<!-- SCCMDocs#1080 -->
 
-### <a name="cmg-trusted-root-certificate-to-clients"></a><a name="bkmk_cmgroot"></a>CMG güvenilen kök sertifikayı istemcilere
+### <a name="cmg-trusted-root-certificate-to-clients"></a><a name="bkmk_cmgroot"></a> CMG güvenilen kök sertifikayı istemcilere
 
 İstemcilerin CMG sunucusu kimlik doğrulama sertifikasına güvenmesi gerekir. Bu güveni gerçekleştirmenin iki yöntemi vardır:
 
@@ -93,7 +93,7 @@ DNS adı ön eki, örneğin *Granıse*, 3 ile 24 karakter uzunluğunda olmalı v
 
   - [Configuration Manager Istemcisini Intune 'dan yüklemeyi](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client)planlıyorsanız, istemcilerdeki sertifikaları sağlamak için Intune sertifika profillerini de kullanabilirsiniz. Daha fazla bilgi için bkz. [sertifika profili yapılandırma](../../../../../intune/protect/certificates-configure.md).
 
-### <a name="server-authentication-certificate-issued-by-public-provider"></a><a name="bkmk_serverauthpublic"></a>Ortak sağlayıcı tarafından verilen sunucu kimlik doğrulama sertifikası
+### <a name="server-authentication-certificate-issued-by-public-provider"></a><a name="bkmk_serverauthpublic"></a> Ortak sağlayıcı tarafından verilen sunucu kimlik doğrulama sertifikası
 
 Bir üçüncü taraf sertifika sağlayıcısı, bu etki alanının Microsoft tarafından sahiplendiğinden, CloudApp.net için bir sertifika oluşturamaz. Yalnızca sahip olduğunuz bir etki alanı için verilen bir sertifika edinebilirsiniz. Bir üçüncü taraf sağlayıcıdan sertifika almak için başlıca neden, istemcilerinizin o sağlayıcının kök sertifikasına zaten güveneceğidir.
 
@@ -116,7 +116,7 @@ Bir DNS diğer adı oluşturmak için aşağıdaki işlemi kullanın:
 
 Configuration Manager içinde CMG örneğini oluşturduğunuzda, sertifikanın Configuration Manager GraniteFalls.Contoso.com sahip olması durumunda, yalnızca ana bilgisayar adını ayıklar, örneğin: Granıda. Bu ana bilgisayar adını, Azure 'un bir bulut hizmeti oluştururken gerektirdiği CloudApp.net 'e ekler. Etki alanınız için DNS ad alanındaki CNAME diğer adı, Contoso.com, bu iki FQDN 'yi birlikte eşler. Configuration Manager istemcilere bu CMG 'ye erişmek için bir ilke verir; DNS eşlemesi, Azure 'daki hizmete güvenli bir şekilde erişebilmeleri için bir araya gelir.<!--SCCMDocs issue #565-->  
 
-### <a name="server-authentication-certificate-issued-from-enterprise-pki"></a><a name="bkmk_serverauthpki"></a>Kurumsal PKI 'dan verilen sunucu kimlik doğrulama sertifikası
+### <a name="server-authentication-certificate-issued-from-enterprise-pki"></a><a name="bkmk_serverauthpki"></a> Kurumsal PKI 'dan verilen sunucu kimlik doğrulama sertifikası
 
 CMG için bir bulut dağıtım noktasıyla aynı şekilde özel bir SSL sertifikası oluşturun. [Bulut tabanlı dağıtım noktaları için hizmet sertifikası dağıtma](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_clouddp2008_cm2012) yönergelerini izleyin, ancak şunları farklı yapın:
 
@@ -128,7 +128,7 @@ CMG için bir bulut dağıtım noktasıyla aynı şekilde özel bir SSL sertifik
 
   - Azure ABD Kamu Bulutu için **usgovcloudapp.net** ile biten bir ad kullanın  
 
-## <a name="client-authentication-certificate"></a><a name="bkmk_clientauth"></a>İstemci kimlik doğrulama sertifikası
+## <a name="client-authentication-certificate"></a><a name="bkmk_clientauth"></a> İstemci kimlik doğrulama sertifikası
 
 İstemci kimlik doğrulama sertifikası gereksinimleri:
 
@@ -146,7 +146,7 @@ Bu sertifikayı Configuration Manager bağlamı dışında sağlayın. Örneğin
 >
 > Sürüm 2002 ' den başlayarak,<!--5686290--> Configuration Manager, genellikle dahili ağa bağlanmayan, Azure AD 'ye katılmadan ve PKI tarafından verilen bir sertifika yüklemek için bir yönteme sahip olmayan Internet tabanlı cihazlara yönelik desteğini uzatır. Daha fazla bilgi için bkz. [CMG Için belirteç tabanlı kimlik doğrulaması](../../deploy/deploy-clients-cmg-token.md).
 
-### <a name="cmg-connection-point"></a><a name="bkmk_cmgcp"></a>CMG bağlantı noktası
+### <a name="cmg-connection-point"></a><a name="bkmk_cmgcp"></a> CMG bağlantı noktası
 
 İstemci isteklerini güvenli bir şekilde iletmek için CMG bağlantı noktası yönetim noktasıyla güvenli bir bağlantı gerektirir. Cihazlarınızı ve yönetim noktalarınızı nasıl yapılandırdığınıza bağlı olarak, CMG bağlantı noktası yapılandırmasını belirler.
 
@@ -160,7 +160,7 @@ Bu sertifikayı Configuration Manager bağlamı dışında sağlayın. Örneğin
 
 Daha fazla bilgi için bkz. [https için yönetim noktasını etkinleştirme](#bkmk_mphttps).
 
-### <a name="client-trusted-root-certificate-to-cmg"></a><a name="bkmk_clientroot"></a>İstemci güvenilen kök sertifikası CMG 'ye
+### <a name="client-trusted-root-certificate-to-cmg"></a><a name="bkmk_clientroot"></a> İstemci güvenilen kök sertifikası CMG 'ye
 
 *Bu sertifika, istemci kimlik doğrulama sertifikaları kullanılırken gereklidir. Tüm istemciler kimlik doğrulaması için Azure AD 'yi kullandıklarında, bu sertifika gerekli değildir.*
 
@@ -205,7 +205,7 @@ Bir bilgisayara istemci kimlik doğrulama sertifikası verdikten sonra bu işlem
 
 8. Özgün istemci kimlik doğrulama sertifikasının sertifika yolundaki tüm sertifikaları dışarı aktarın. Hangi sertifika veren sertifikaların ara CA 'Ları olduğunu ve hangilerinin güvenilen kök CA 'Ları olduğunu unutmayın.  
 
-## <a name="enable-management-point-for-https"></a><a name="bkmk_mphttps"></a>HTTPS için yönetim noktasını etkinleştir
+## <a name="enable-management-point-for-https"></a><a name="bkmk_mphttps"></a> HTTPS için yönetim noktasını etkinleştir
 
 Bu sertifikayı Configuration Manager bağlamı dışında sağlayın. Örneğin, bir Web sunucusu sertifikası vermek için Active Directory Sertifika Hizmetleri ve Grup İlkesi kullanın. Daha fazla bilgi için bkz. [PKI sertifikası gereksinimleri](../../../plan-design/network/pki-certificate-requirements.md) ve [IIS çalıştıran site sistemleri için Web sunucusu sertifikasını dağıtma](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012).
 
@@ -258,8 +258,8 @@ Bu tablolar, istemci ve site sürümünün türüne bağlı olarak yönetim nokt
 
 - *Çalışma grubu*: cihaz bir etki alanına veya Azure AD 'ye katılmamış, ancak [istemci kimlik doğrulama sertifikasına](#bkmk_clientauth)sahip.
 - *Ad etki alanına katılmış*: cihazı şirket içi Active Directory etki alanına katabilirsiniz.
-- *Azure AD 'ye katılmış*: bulut etki alanına katılmış olarak da bilinen, cihazı BIR Azure AD kiracısına birleştirmelisiniz. Daha fazla bilgi için bkz. [Azure AD 'ye katılmış cihazlar](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join).
-- *Karma olarak katıldı*: cihazı şirket içi Active Directory birleştirir ve Azure AD 'nize kaydedersiniz. Daha fazla bilgi için bkz. [karma Azure AD 'ye katılmış cihazlar](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+- *Azure AD 'ye katılmış*: bulut etki alanına katılmış olarak da bilinen, cihazı BIR Azure AD kiracısına birleştirmelisiniz. Daha fazla bilgi için bkz. [Azure AD 'ye katılmış cihazlar](/azure/active-directory/devices/concept-azure-ad-join).
+- *Karma olarak katıldı*: cihazı şirket içi Active Directory birleştirir ve Azure AD 'nize kaydedersiniz. Daha fazla bilgi için bkz. [karma Azure AD 'ye katılmış cihazlar](/azure/active-directory/devices/concept-azure-ad-join-hybrid).
 - *Http*: yönetim noktası özelliklerinde, Istemci bağlantılarını **http**olarak ayarlarsınız.
 - *Https*: yönetim noktası özelliklerinde, Istemci bağlantılarını **https**olarak ayarlarsınız.
 - *E-http*: site özellikleri, **iletişim güvenliği** sekmesinde, site SISTEMI ayarlarını **https veya http**olarak ayarlarsınız ve **http site sistemleri için Configuration Manager tarafından oluşturulan sertifikaları kullanma**seçeneğini etkinleştirirsiniz. Http yönetim noktası http için yönetim noktasını yapılandırırsanız http ve HTTPS iletişimi (belirteç kimlik doğrulama senaryoları) için de kullanılır.
@@ -267,7 +267,7 @@ Bu tablolar, istemci ve site sürümünün türüne bağlı olarak yönetim nokt
     > [!Note]
     > Sürüm 1902 ve önceki sürümlerde bu sekmeye **Istemci bilgisayar iletişimi**adı verilir.<!-- SCCMDocs#1645 -->
 
-## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a>Azure Yönetim sertifikası
+## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a> Azure Yönetim sertifikası
 
 *Bu sertifika, klasik hizmet dağıtımları için gereklidir. Azure Resource Manager dağıtımları için gerekli değildir.*
 
@@ -282,9 +282,9 @@ Azure 'da CMG 'yi oluşturmak için Configuration Manager hizmet bağlantı nokt
 
 Bir yönetim sertifikasını karşıya yükleme hakkında daha fazla bilgi ve yönergeler için, Azure belgelerinde aşağıdaki makalelere bakın:
 
-- [Cloud Services ve yönetim sertifikaları](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
+- [Cloud Services ve yönetim sertifikaları](/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
 
-- [Azure hizmet yönetimi sertifikasını karşıya yükleme](https://docs.microsoft.com/azure/azure-api-management-certs)  
+- [Azure hizmet yönetimi sertifikasını karşıya yükleme](/azure/azure-api-management-certs)  
 
 > [!IMPORTANT]
 > Yönetim sertifikasıyla ilişkili abonelik KIMLIĞINI kopyalamadığınızdan emin olun. Bunu, Configuration Manager konsolunda CMG oluşturmak için kullanırsınız.
@@ -295,4 +295,4 @@ Bir yönetim sertifikasını karşıya yükleme hakkında daha fazla bilgi ve y�
 
 - [Bulut yönetimi ağ geçidi hakkında sık sorulan sorular](cloud-management-gateway-faq.md)  
 
-- [Bulut yönetimi ağ geçidi için güvenlik ve gizlilik](security-and-privacy-for-cloud-management-gateway.md)  
+- [Bulut yönetimi ağ geçidi için güvenlik ve gizlilik](security-and-privacy-for-cloud-management-gateway.md)

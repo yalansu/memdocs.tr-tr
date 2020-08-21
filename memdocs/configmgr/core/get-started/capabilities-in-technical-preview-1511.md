@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 337b494bdce24463c19dd22ae975af5e99d6d895
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 59d343d09f827edec5db0dd5302c75c00a0c8455
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905841"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694517"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Configuration Manager için Technical Preview 1511 ' deki yetenekler
 
@@ -26,7 +26,7 @@ Bu makalede, sürüm 1511 Configuration Manager için Technical Preview 'da kull
 
 Aşağıda, bu sürümle deneyebilmeniz için kullanabileceğiniz yeni özellikler verilmiştir.  
 
-##  <a name="integration-with-windows-update-for-business-in-windows-10"></a><a name="BKMK_WUfB"></a>Windows 10 ' da Iş için Windows Update tümleştirme  
+##  <a name="integration-with-windows-update-for-business-in-windows-10"></a><a name="BKMK_WUfB"></a> Windows 10 ' da Iş için Windows Update tümleştirme  
  Configuration Manager artık, Windows Update for Business (WUfB) ile doğrudan bağlanmış bir Windows 10 bilgisayarını, Windows 10 güncelleştirmelerini ve yükseltmelerini almak için WSUS 'a bağlananlardan ayırt etme özelliğine sahiptir.  WUfB aracılığıyla bağlanan bilgisayarlar için, güncelleştirmeler ve yükseltmeler, Grup Ilkeleri veya MDM ilkeleri aracılığıyla yönetici kullanıcı tarafından ayarlanan temposunda üzerinden yönetilebilir ve bu güncelleştirmeler/yükseltmeler doğrudan WUfB 'den yüklenebilir.    
 WUfB aracılığıyla bağlanan bilgisayarlar için Configuration Manager uyumluluk durumunu (Windows güncelleştirmeleri veya tanım güncelleştirmeleri dahil) bildiremeyecektir. Ayrıca Configuration Manager, bu bilgisayarlara Microsoft güncelleştirmeleri veya üçüncü taraf güncelleştirmeleri dağıtamayacak.  
 
@@ -34,7 +34,7 @@ WUfB aracılığıyla bağlanan bilgisayarlar için Configuration Manager uyumlu
 
 -   Windows 10 Desktop Pro veya Windows 10 Enterprise Edition Sürüm 1511 veya üzeri  
 
--   [Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb) üzerinden yönetilecek bilgisayarlar.  
+-   [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) üzerinden yönetilecek bilgisayarlar.  
 
 ### <a name="try-it-out"></a>Deneyin!  
  Aşağıdaki görevi tamamlamayı deneyin ve nasıl çalıştığını bize bildirmek için bu konunun en üstündeki geri bildirim bilgilerini kullanın:  
@@ -50,7 +50,7 @@ WUfB aracılığıyla bağlanan bilgisayarlar için Configuration Manager uyumlu
 
 5.  WUfB üzerinden yönetilen bilgisayarların uyumluluk durumunda **bilinmiyor** görüntülenir ve genel uyumluluk yüzdesinin bir parçası olarak sayılmaz.  
 
-##  <a name="managing-office-365-proplus-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a>Configuration Manager aracılığıyla Office 365 ProPlus Istemci güncelleştirmesini yönetme  
+##  <a name="managing-office-365-proplus-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Configuration Manager aracılığıyla Office 365 ProPlus Istemci güncelleştirmesini yönetme  
  Configuration Manager artık Office 365 Masaüstü istemci güncelleştirmelerini Configuration Manager Yazılım Güncelleştirmesi Yönetimi iş akışını kullanarak yönetme olanağı vardır.    
 Microsoft, Windows Server Updates Services (WSUS) için yeni bir Office 365 Masaüstü istemci güncelleştirmesi yayımladığında, Office 365 güncelleştirmesi Katalog eşitlemesinin bir parçası olacak şekilde yapılandırıldıysa, Configuration Manager güncelleştirmeyi kataloğuna eşitleyebilecektir.  Configuration Manager site sunucusu, Office 365 istemci güncelleştirmelerini indirir ve paketini Configuration Manager dağıtım noktalarına dağıtır.  Configuration Manager istemci, Office 365 Masaüstü istemcilerine güncelleştirmelerin nereden alınacağını ve güncelleştirme yükleme işleminin ne zaman başlatılacağını bildirir.  
 
@@ -67,9 +67,9 @@ Microsoft, Windows Server Updates Services (WSUS) için yeni bir Office 365 Masa
 
 4. Konsol içi izleme veya raporları kullanarak Office 365 güncelleştirmeleri için uyumluluğu doğrulayabilirsiniz.  
 
-   Ayrıntılı adımlar için bkz. [Configuration Manager Technical Preview Ile Office 365 istemci güncelleştirmelerini yönetme](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
+   Ayrıntılı adımlar için bkz. [Configuration Manager Technical Preview Ile Office 365 istemci güncelleştirmelerini yönetme](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
-##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a>Yüksek oranda kullanılabilir veritabanları için SQL Server AlwaysOn desteği  
+##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Yüksek oranda kullanılabilir veritabanları için SQL Server AlwaysOn desteği  
  Configuration Manager artık site veritabanını barındırmak için SQL Server AlwaysOn kullanılabilirlik grupları kullanmayı desteklemektedir.  Yeni bir site yüklediğinizde, kurulumu normal bir SQL Server örneği yerine kullanılabilirlik grubu kullanacak şekilde yönlendirebilirsiniz.  
 
 > [!NOTE]  
@@ -110,7 +110,7 @@ Aşağıdaki görevleri tamamlamayı deneyin ve daha sonra bu konunun en üstün
  Önce kullanılabilirlik grubunu oluşturup yapılandırmak için aşağıdaki yordamları kullanın ve ardından kullanılabilirlik grubunu kullanan yeni bir Configuration Manager sitesini yüklemeniz gerekir.  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>SQL Server AlwaysOn kullanılabilirlik grubu oluşturmak için  
-[SQL Server kullanılabilirlik grubu oluşturma](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) işlemi SQL Server belge kitaplığında belgelenmiştir.  Kullanılabilirlik grubunu oluşturduğunuzda, Configuration Manager ile kullanım için aşağıdaki gereksinimlerin karşılandığından emin olun:  
+[SQL Server kullanılabilirlik grubu oluşturma](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) işlemi SQL Server belge kitaplığında belgelenmiştir.  Kullanılabilirlik grubunu oluşturduğunuzda, Configuration Manager ile kullanım için aşağıdaki gereksinimlerin karşılandığından emin olun:  
 
 -   En fazla üç üye:  
 
@@ -145,7 +145,7 @@ SQL Server kullanılabilirlik grubu kullanan bir site yüklemek için:
 
 3.  Bu bilgileri verdikten sonra, kurulum 'u normal işlem ve konfigürasyonlarınızla doldurun.  
 
-##  <a name="service-a--server-cluster"></a><a name="BKMK_ClusterServerUpdates"></a>Sunucu kümesi hizmeti  
+##  <a name="service-a--server-cluster"></a><a name="BKMK_ClusterServerUpdates"></a> Sunucu kümesi hizmeti  
 Artık bir kümedeki sunucuları içeren bir koleksiyon oluşturabilir ve ardından kümeye güncelleştirmeleri dağıtırken kullanılacak küme ayarlarını yapılandırabilirsiniz. Belirli bir zamanda çevrimiçi olan sunucuların yüzdesini denetleyebilir ve dağıtım öncesi ve dağıtım sonrası PowerShell betiklerini özel eylemleri çalıştıracak şekilde yapılandırabilirsiniz.  
 
 **Bu sürüm için bilinen sorunlar:**  
@@ -161,7 +161,7 @@ Aşağıdaki görevi tamamlamayı deneyin ve nasıl çalıştığını bize bild
 
 -   Kümedeki sunucuların yalnızca %50 ' sinin küme hizmeti 'nin herhangi bir noktasında çevrimdışı olduğunu belirtebilir. Dağıtım öncesi ve dağıtım sonrası betikleri belirtmek için yordamdaki örnek betikleri kullanın.  
 
--   Bu koleksiyona bir güncelleştirme dağıtın. C:\Temp ' teki Start. txt ve End. txt dosyalarını gözden geçirin ve kümedeki sunucularda dağıtımın başlangıç ve bitiş zamanlarını doğrulayın. Daha fazla bilgi için UpdatesDeployment. log dosyasını gözden geçirin.  
+-   Bu koleksiyona bir güncelleştirme dağıtın. C:\Temp ' teki start.txt ve end.txt dosyalarını gözden geçirin ve kümedeki sunucularda dağıtımın başlangıç ve bitiş zamanlarını doğrulayın. Daha fazla bilgi için UpdatesDeployment. log dosyasını gözden geçirin.  
 
 #### <a name="to-create-a-collection-for-a-server-cluster"></a>Sunucu kümesine yönelik bir koleksiyon oluşturmak için  
 
@@ -202,4 +202,4 @@ Aşağıdaki görevi tamamlamayı deneyin ve nasıl çalıştığını bize bild
 
 1.  [Yazılım güncelleştirmelerini](../../sum/deploy-use/deploy-software-updates.md) sunucu kümesi koleksiyonuna dağıtın.  
 
-2.  [Yazılım güncelleştirme dağıtımını izleyin](../../sum/deploy-use/monitor-software-updates.md).  
+2.  [Yazılım güncelleştirme dağıtımını izleyin](../../sum/deploy-use/monitor-software-updates.md).

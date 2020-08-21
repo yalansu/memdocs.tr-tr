@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d26be4d3e3381a80fcbaa547cfcc7a3b8db42f5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: efc2cc22dc4edeacc00e521233eda383314b0b92
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127027"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693446"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Configuration Manager içindeki istemci yükleme parametreleri ve özellikleri hakkında
 
@@ -118,7 +118,7 @@ Cihaz, istemci yükleme dosyalarını bir HTTP bağlantısı üzerinden indirdi�
 
 - `HIGH`
 
-- `NORMAL`varsayılanını
+- `NORMAL` varsayılanını
 
 - `LOW`
 
@@ -136,7 +136,7 @@ Bu parametre, istemci yükleme özelliklerini listeleyen bir metin dosyasını b
 
 Doğru dosya biçimini sağlamak için, site sunucusundaki Configuration Manager yükleme dizinindeki klasöründe **mobileclienttemplate. tcf** dosyasını kullanın `\bin\<platform>` . Bu dosya, bölümler ve bunların nasıl kullanılacağı hakkında açıklamalar içerir. `[Client Install]`Aşağıdaki metinden sonra, bölümünde istemci yükleme özelliklerini belirtin: `Install=INSTALL=ALL` .
 
-Örnek `[Client Install]` bölüm girdisi:`Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
+Örnek `[Client Install]` bölüm girdisi: `Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
 ### <a name="downloadtimeout"></a>/indirmezamanaşımı
 
@@ -153,7 +153,7 @@ Bu parametre CCMSetup.exe belirtilen özelliği yüklememediğini belirtir.
 Örnek: `CCMSetup.exe /ExcludeFeatures:ClientUI` Istemciye yazılım merkezi yüklenmez.  
 
 > [!NOTE]  
-> `ClientUI`, **/Excludefeatem** parametresinin desteklediği tek değerdir.
+> `ClientUI` , **/Excludefeatem** parametresinin desteklediği tek değerdir.
 
 ### <a name="forceinstall"></a>/forceinstall
 
@@ -186,9 +186,9 @@ Birden fazla yönetim noktası belirtmek için **/MP** komut satırı parametres
 
 İstemci HTTPS kullanarak bir yönetim noktasına bağlanırsa, bilgisayar adı olmayan FQDN 'yi belirtin. Değer, yönetim noktası PKI sertifikasının **Konu** veya **Konu diğer adı**ile aynı olmalıdır. Configuration Manager, intranetteki bağlantılar için sertifikadaki bir bilgisayar adını kullanmayı desteklese de, FQDN kullanılması önerilir.
 
-Bilgisayar adına sahip bir örnek:`ccmsetup.exe /mp:SMSMP01`  
+Bilgisayar adına sahip bir örnek: `ccmsetup.exe /mp:SMSMP01`  
 
-FQDN ile örnek:`ccmsetup.exe /mp:smsmp01.contoso.com`  
+FQDN ile örnek: `ccmsetup.exe /mp:smsmp01.contoso.com`  
 
 Bu parametre Ayrıca bir bulut yönetimi ağ geçidinin (CMG) URL 'sini de belirtebilir. İstemciyi Internet tabanlı bir cihaza yüklemek için bu URL 'YI kullanın. Bu parametrenin değerini almak için aşağıdaki adımları kullanın:
 
@@ -202,7 +202,7 @@ Bu parametre Ayrıca bir bulut yönetimi ağ geçidinin (CMG) URL 'sini de belir
 
 - `https://` **/MP** parametresiyle kullanılacak ön eki ekleyin.
 
-Bulut yönetimi ağ geçidi URL 'sini kullandığınız zaman için örnek:`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
+Bulut yönetimi ağ geçidi URL 'sini kullandığınız zaman için örnek: `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
 > [!Important]
 > **/MP** parametresi için bir bulut yönetimi ağ geçidinin URL 'sini belirtirken, ile başlaması gerekir `https://` .
@@ -291,7 +291,7 @@ Configuration Manager istemcisini kaldırmak için bu parametreyi kullanın. Dah
 >
 > Ayrıca, bir istemciyi yalnızca internet iletişimi için yüklediğinizde bu parametreyi de belirtin. **CCMALWAYSINF = 1** özelliğini Internet tabanlı yönetim noktası (**CCMHOSTNAME**) ve site kodu (**smssitekodu**) özellikleriyle birlikte kullanın. Internet tabanlı istemci yönetimi hakkında daha fazla bilgi için bkz. [İnternet 'ten veya güvenilmeyen bir ormandan istemci iletişimleri Için değerlendirmeler](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
-## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a>CCMSetup.exe dönüş kodları
+## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a> CCMSetup.exe dönüş kodları
 
 CCMSetup.exe komutu aşağıdaki dönüş kodlarını sağlar. Sorunu gidermek için, `%WinDir%\ccmsetup\ccmsetup.log` bağlam için istemciyi ve dönüş kodları hakkında ek ayrıntıları gözden geçirin.
 
@@ -304,7 +304,7 @@ CCMSetup.exe komutu aşağıdaki dönüş kodlarını sağlar. Sorunu gidermek i
 |9|Önkoşul değerlendirme hatası|  
 |10|Kurulum bildirim karma doğrulama hatası|  
 
-## <a name="ccmsetupmsi-properties"></a><a name="ccmsetupMsiProps"></a>Ccmsetup.msi özellikleri
+## <a name="ccmsetupmsi-properties"></a><a name="ccmsetupMsiProps"></a> Ccmsetup.msi özellikleri
 
 Aşağıdaki özellikler ccmsetup.msi yükleme davranışını değiştirebilir.
 
@@ -317,13 +317,13 @@ Bu CCMSetup 'ı kullanın. ek komut satırı parametreleri ve özellikleri CCMSe
 > [!Tip]
 > Microsoft Intune komut satırını 1024 karakterle sınırlandırır.
 
-## <a name="clientmsi-properties"></a><a name="clientMsiProps"></a>Client.msi özellikleri
+## <a name="clientmsi-properties"></a><a name="clientMsiProps"></a> Client.msi özellikleri
 
 Aşağıdaki özellikler, ccmsetup.exe yüklenen client.msi yükleme davranışını değiştirebilir. [Client Push yükleme yöntemini](plan/client-installation-methods.md#client-push-installation)kullanırsanız, bu özellikleri Configuration Manager konsolundaki **Client Push Yükleme özelliklerinin** **istemci** sekmesinde belirtin.
 
 ### <a name="aadclientappid"></a>AADCLIENTAPPıD
 
-Azure Active Directory (Azure AD) istemci uygulaması tanımlayıcısını belirtir. Bulut yönetimi için [Azure hizmetlerini yapılandırırken](../../servers/deploy/configure/azure-services-wizard.md) istemci uygulamasını oluşturabilir veya içeri aktarabilirsiniz. Azure Yöneticisi, Azure portal bu özelliğin değerini alabilir. Daha fazla bilgi için bkz. [uygulama kimliği Al](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). **Aadclientappıd** özelliği için, bu uygulama kimliği **Yerel** uygulama türü içindir.
+Azure Active Directory (Azure AD) istemci uygulaması tanımlayıcısını belirtir. Bulut yönetimi için [Azure hizmetlerini yapılandırırken](../../servers/deploy/configure/azure-services-wizard.md) istemci uygulamasını oluşturabilir veya içeri aktarabilirsiniz. Azure Yöneticisi, Azure portal bu özelliğin değerini alabilir. Daha fazla bilgi için bkz. [uygulama kimliği Al](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). **Aadclientappıd** özelliği için, bu uygulama kimliği **Yerel** uygulama türü içindir.
 
 Örnek: `ccmsetup.exe AADCLIENTAPPID=aa28e7f1-b88a-43cd-a2e3-f88b257c863b`
 
@@ -340,11 +340,11 @@ Azure Yöneticisi, Azure portal bu özelliğin değerini alabilir. **Azure Activ
 Azure AD kiracı tanımlayıcısını belirtir. [Azure hizmetlerini](../../servers/deploy/configure/azure-services-wizard.md) bulut yönetimi için yapılandırırken bu kiracının bağlantılarını Configuration Manager. Bu özelliğin değerini almak için aşağıdaki adımları kullanın:
 
 - Aynı Azure AD kiracısına katılmış bir Windows 10 cihazında, bir komut istemi açın.
-- Şu komutu çalıştırın:`dsregcmd.exe /status`
+- Şu komutu çalıştırın: `dsregcmd.exe /status`
 - Cihaz durumu bölümünde **Tenantıd** değerini bulun. Örneğin, `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
   > [!Note]
-  > Azure Yöneticisi Azure portal bu değeri de alabilir. Daha fazla bilgi için bkz. [KIRACı kimliği Al](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
+  > Azure Yöneticisi Azure portal bu değeri de alabilir. Daha fazla bilgi için bkz. [KIRACı kimliği Al](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 
 Örnek: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -654,7 +654,7 @@ Aşağıdaki işlemi kullanın:
 
 Örnek: `CCMSetup.exe SMSCACHEDIR="C:\Temp"`  
 
-İstemci önbellek klasörü konumunu denetlemek için [**SMSCACHEFLAGS**](#smscacheflags) özelliğiyle birlikte bu özelliği kullanın. Örneğin, istemci önbellek klasörünü kullanılabilir en büyük istemci disk sürücüsüne yüklemek için:`CCMSetup.exe SMSCACHEDIR=Cache SMSCACHEFLAGS=MAXDRIVE`
+İstemci önbellek klasörü konumunu denetlemek için [**SMSCACHEFLAGS**](#smscacheflags) özelliğiyle birlikte bu özelliği kullanın. Örneğin, istemci önbellek klasörünü kullanılabilir en büyük istemci disk sürücüsüne yüklemek için: `CCMSetup.exe SMSCACHEDIR=Cache SMSCACHEFLAGS=MAXDRIVE`
 
 ### <a name="smscacheflags"></a>SMSCACHEFLAGS
 
@@ -773,7 +773,7 @@ Bu özellik, istemciyi atadığınız bir Configuration Manager sitesini belirti
 
 Örnek: `CCMSetup.exe SMSSITECODE=XZY`
 
-## <a name="attribute-values-for-certificate-selection-criteria"></a><a name="BKMK_attributevalues"></a>Sertifika seçim ölçütleri için öznitelik değerleri
+## <a name="attribute-values-for-certificate-selection-criteria"></a><a name="BKMK_attributevalues"></a> Sertifika seçim ölçütleri için öznitelik değerleri
 
 Configuration Manager, PKI sertifika seçim ölçütleri için aşağıdaki öznitelik değerlerini destekler:
 
@@ -793,4 +793,4 @@ Configuration Manager, PKI sertifika seçim ölçütleri için aşağıdaki özn
 |2.5.4.12|T veya Title|Başlık|  
 |2.5.4.42|G veya GN veya GivenName|Ad|  
 |2.5.4.43|I veya Initials|Baş harfler|  
-|2.5.29.17|(değer yok)|Konu Diğer Adı|  
+|2.5.29.17|(değer yok)|Konu Diğer Adı|

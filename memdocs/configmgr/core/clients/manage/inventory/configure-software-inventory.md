@@ -10,12 +10,12 @@ ms.assetid: f86559de-092a-4ce8-9b43-5d7530e0b763
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f6fcf4736c30d8743d0d26b52aac60ef12b5c9cd
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 9663f71118836513d95ec914d0f70b09cda9954f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906308"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693072"
 ---
 # <a name="how-to-configure-software-inventory-in-configuration-manager"></a>Configuration Manager 'de yazılım envanterini yapılandırma
 
@@ -44,7 +44,7 @@ Bu yordam, yazılım envanteri için varsayılan istemci ayarlarını yapıland�
    > [!TIP]
    >   Inventoryprovider 'da 80041006 hata kodu. log, WMI sağlayıcısının bellek yetersiz olduğu anlamına gelir. Diğer bir deyişle, bir sağlayıcının bellek kotası sınırına ulaşıldı ve envanter sağlayıcısı devam edemez.
    > Bu durumda, envanter Aracısı 0 girişi olan bir rapor oluşturur, bu nedenle hiçbir stok öğesi bildirilmemiştir. <br/>
-   > Bu hata için olası bir çözüm, yazılım envanteri koleksiyonunun kapsamını azaltmaktır. Envanter kapsamını sınırlandırdıktan sonra hata oluştuğunda, [_ProviderHostQuotaConfiguration](https://docs.microsoft.com/windows/win32/wmisdk/--providerhostquotaconfiguration) sınıfında tanımlanan [MemoryPerHost](https://techcommunity.microsoft.com/t5/ask-the-performance-team/memory-and-handle-quotas-in-the-wmi-provider-service/ba-p/373319) özelliğinin artırılması bir çözüm sağlayabilir.
+   > Bu hata için olası bir çözüm, yazılım envanteri koleksiyonunun kapsamını azaltmaktır. Envanter kapsamını sınırlandırdıktan sonra hata oluştuğunda, [_ProviderHostQuotaConfiguration](/windows/win32/wmisdk/--providerhostquotaconfiguration) sınıfında tanımlanan [MemoryPerHost](https://techcommunity.microsoft.com/t5/ask-the-performance-team/memory-and-handle-quotas-in-the-wmi-provider-service/ba-p/373319) özelliğinin artırılması bir çözüm sağlayabilir.
 
 <!--SMS.480648 include WMI Out of memory tip -->
 

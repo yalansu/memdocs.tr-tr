@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 94208da3eda33cba69f04bbbf42edd08b585c1c4
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 1f8af5975d623161e05e168192ee102bd0d072dc
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428185"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694398"
 ---
 # <a name="capabilities-in-technical-preview-1802-for-configuration-manager"></a>Configuration Manager için Technical Preview 1802 ' deki yetenekler
 
@@ -56,7 +56,7 @@ Bu sürümde, artık ortak yönetimi etkinleştirdikten sonra Configuration Mana
  
 ## <a name="configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups"></a>Windows Dağıtım Iyileştirmesini Configuration Manager sınır grupları kullanacak şekilde yapılandırma
 <!-- 1324696 -->
-Şirket ağınızda ve Uzak ofislerde içerik dağıtımını tanımlamak ve düzenlemek için Configuration Manager sınır gruplarını kullanırsınız. [Windows teslim iyileştirme](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) , Windows 10 cihazları arasında içerik paylaşmak için bulut tabanlı ve eşler arası bir teknolojidir. Bu sürümden başlayarak, eşler arasında içerik paylaşırken sınır gruplarınızı kullanmak için teslim Iyileştirmesini yapılandırın. Yeni bir istemci ayarı, sınır grubu tanımlayıcısını istemcideki teslim Iyileştirme grubu tanımlayıcısı olarak uygular. İstemci, teslim Iyileştirme bulut hizmeti ile iletişim kurduğunda, istenen içeriğe sahip eşleri bulmak için bu tanımlayıcıyı kullanır. 
+Şirket ağınızda ve Uzak ofislerde içerik dağıtımını tanımlamak ve düzenlemek için Configuration Manager sınır gruplarını kullanırsınız. [Windows teslim iyileştirme](/windows/deployment/update/waas-delivery-optimization) , Windows 10 cihazları arasında içerik paylaşmak için bulut tabanlı ve eşler arası bir teknolojidir. Bu sürümden başlayarak, eşler arasında içerik paylaşırken sınır gruplarınızı kullanmak için teslim Iyileştirmesini yapılandırın. Yeni bir istemci ayarı, sınır grubu tanımlayıcısını istemcideki teslim Iyileştirme grubu tanımlayıcısı olarak uygular. İstemci, teslim Iyileştirme bulut hizmeti ile iletişim kurduğunda, istenen içeriğe sahip eşleri bulmak için bu tanımlayıcıyı kullanır. 
 
 ### <a name="prerequisites"></a>Ön koşullar
 - Teslim Iyileştirme yalnızca Windows 10 istemcilerinde kullanılabilir
@@ -68,7 +68,7 @@ Bu sürümde, artık ortak yönetimi etkinleştirdikten sonra Configuration Mana
 2. Yeni **teslim iyileştirme** grubunu seçin.
 3. **Teslim Iyileştirme grubu kimliği için Configuration Manager sınır gruplarını kullan**ayarını etkinleştirin.
 
-Daha fazla bilgi için [teslim iyileştirme seçeneklerinde](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization) **Grup** teslim modu seçeneğine bakın.
+Daha fazla bilgi için [teslim iyileştirme seçeneklerinde](/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization) **Grup** teslim modu seçeneğine bakın.
 
 
 
@@ -93,19 +93,19 @@ Windows 10 yerinde yükseltme için varsayılan görev sırası şablonu, yükse
 ### <a name="new-groups-under-prepare-for-upgrade"></a>**Yükseltmeye hazırlanma** altındaki yeni gruplar
 - **Pil denetimleri**: bilgisayarın pil veya kablolu güç kullanıp kullanmadığını denetlemek için bu gruba adımlar ekleyin. Bu eylem, bu denetimi gerçekleştirmek için özel bir betik veya yardımcı program gerektirir.
 - **Ağ/kablolu bağlantı denetimleri**: bilgisayarın bir ağa bağlı olup olmadığını denetlemek için bu gruba adımlar ekleyin ve kablosuz bağlantı kullanmıyor. Bu eylem, bu denetimi gerçekleştirmek için özel bir betik veya yardımcı program gerektirir.
-- **Uyumsuz uygulamaları kaldır**: Windows 10 ' un bu sürümüyle uyumlu olmayan uygulamaları kaldırmak için bu gruba adımlar ekleyin. Bir uygulamayı kaldırma yöntemi farklılık gösterir. Uygulama Windows Installer kullanıyorsa, uygulamanın Windows Installer dağıtım türü özelliklerindeki **Programlar** sekmesinden **Program kaldır** komut satırını kopyalayın. Ardından, program Kaldır komut satırı ile bu gruba bir **komut satırı Çalıştır** adımı ekleyin. Örneğin: </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br> 
+- **Uyumsuz uygulamaları kaldır**: Windows 10 ' un bu sürümüyle uyumlu olmayan uygulamaları kaldırmak için bu gruba adımlar ekleyin. Bir uygulamayı kaldırma yöntemi farklılık gösterir. Uygulama Windows Installer kullanıyorsa, uygulamanın Windows Installer dağıtım türü özelliklerindeki **Programlar** sekmesinden **Program kaldır** komut satırını kopyalayın. Ardından, program Kaldır komut satırı ile bu gruba bir **komut satırı Çalıştır** adımı ekleyin. Örnek: </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br> 
 - **Uyumsuz sürücüleri kaldır**: Windows 10 ' un bu sürümü ile uyumlu olmayan sürücüleri kaldırmak için bu gruba adımlar ekleyin.
 - **Üçüncü taraf güvenliği kaldır/askıya al**: virüsten koruma gibi üçüncü taraf güvenlik programlarını kaldırmak veya askıya almak için bu gruba adımlar ekleyin.
-   - Üçüncü taraf bir disk şifreleme programı kullanıyorsanız, **/Yansıtıctdrivers** [komut satırı seçeneğiyle](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)Windows kurulumu için şifreleme sürücüsünü belirtin. Bu gruptaki görev dizisine bir [görev dizisi değişkeni ayarlama](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) adımı ekleyin. Görev sırası değişkenini **Osdsetupadditionalupgradeoptions**olarak ayarlayın. Değeri, sürücünün yoluyla **/Yansıtıctdriver** olarak ayarlayın. Bu [görev dizisi eylem değişkeni](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS) , görev sırası tarafından kullanılan Windows kurulumu komut satırını ekler. Bu işlemle ilgili ek yönergeler için yazılım satıcınıza başvurun.
+   - Üçüncü taraf bir disk şifreleme programı kullanıyorsanız, **/Yansıtıctdrivers** [komut satırı seçeneğiyle](/windows-hardware/manufacture/desktop/windows-setup-command-line-options)Windows kurulumu için şifreleme sürücüsünü belirtin. Bu gruptaki görev dizisine bir [görev dizisi değişkeni ayarlama](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) adımı ekleyin. Görev sırası değişkenini **Osdsetupadditionalupgradeoptions**olarak ayarlayın. Değeri, sürücünün yoluyla **/Yansıtıctdriver** olarak ayarlayın. Bu [görev dizisi eylem değişkeni](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS) , görev sırası tarafından kullanılan Windows kurulumu komut satırını ekler. Bu işlemle ilgili ek yönergeler için yazılım satıcınıza başvurun.
 
 ### <a name="new-groups-under-post-processing"></a>**Işlem sonrası** yeni gruplar
 - **Kurulum tabanlı sürücüleri Uygula**: paketten kurulum tabanlı sürücüler (. exe) yüklemek için bu gruba adımlar ekleyin.
 - **Üçüncü taraf güvenliği yüklemek/etkinleştirmek**: virüsten koruma gibi üçüncü taraf güvenlik programlarını yüklemek veya etkinleştirmek için bu gruba adımlar ekleyin. 
-- **Windows varsayılan uygulamalarını ve Ilişkilendirmelerini ayarla**: Windows varsayılan uygulamalarını ve dosya ilişkilendirmelerini ayarlamak için bu gruba adımlar ekleyin. Önce istediğiniz uygulama ilişkilendirmelerinizi içeren bir başvuru bilgisayarı hazırlayın. Ardından dışarı aktarmak için aşağıdaki komut satırını çalıştırın: </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>XML dosyasını bir pakete ekleyin. Sonra bu grupta bir [komut satırı Çalıştır](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) adımı ekleyin. XML dosyasını içeren paketi belirtin ve ardından aşağıdaki komut satırını belirtin: </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> Daha fazla bilgi için bkz. [Varsayılan uygulama Ilişkilendirmelerini dışarı veya içeri](https://docs.microsoft.com/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)aktarma.
-- **Özelleştirmeleri ve kişiselleştirmeyi uygulama**: program gruplarını düzenleme gibi Başlat menüsü özelleştirmeleri uygulamak için bu gruba adımlar ekleyin. Daha fazla bilgi için bkz. [Başlangıç ekranını özelleştirme](https://docs.microsoft.com/windows-hardware/manufacture/desktop/customize-the-start-screen).
+- **Windows varsayılan uygulamalarını ve Ilişkilendirmelerini ayarla**: Windows varsayılan uygulamalarını ve dosya ilişkilendirmelerini ayarlamak için bu gruba adımlar ekleyin. Önce istediğiniz uygulama ilişkilendirmelerinizi içeren bir başvuru bilgisayarı hazırlayın. Ardından dışarı aktarmak için aşağıdaki komut satırını çalıştırın: </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>XML dosyasını bir pakete ekleyin. Sonra bu grupta bir [komut satırı Çalıştır](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) adımı ekleyin. XML dosyasını içeren paketi belirtin ve ardından aşağıdaki komut satırını belirtin: </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> Daha fazla bilgi için bkz. [Varsayılan uygulama Ilişkilendirmelerini dışarı veya içeri](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)aktarma.
+- **Özelleştirmeleri ve kişiselleştirmeyi uygulama**: program gruplarını düzenleme gibi Başlat menüsü özelleştirmeleri uygulamak için bu gruba adımlar ekleyin. Daha fazla bilgi için bkz. [Başlangıç ekranını özelleştirme](/windows-hardware/manufacture/desktop/customize-the-start-screen).
 
 ### <a name="additional-recommendations"></a>Ek öneriler
-- Windows [10 yükseltme hatalarını çözmek](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)için Windows belgelerini gözden geçirin. Bu makale, yükseltme işlemiyle ilgili ayrıntılı bilgileri de içerir.
+- Windows [10 yükseltme hatalarını çözmek](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)için Windows belgelerini gözden geçirin. Bu makale, yükseltme işlemiyle ilgili ayrıntılı bilgileri de içerir.
 - **Hazır olma durumunu denetle** adımında **minimum boş DISK alanı (MB) sağlayın**. Değeri 32 bit işletim sistemi yükseltme paketi için en az **16384** (16 GB) veya 64-bit için **20480** (20 GB) olarak ayarlayın. 
 - İlkeyi indirmeyi yeniden denemek için **SMSTSDownloadRetryCount** [yerleşik görev dizisi değişkenini](../../osd/understand/task-sequence-variables.md) kullanın. Şu anda varsayılan olarak istemci iki kez yeniden denenir; Bu değişken iki (2) olarak ayarlanır. İstemcileriniz kablolu bir kurumsal ağ bağlantısında değilse, istemcinin ilkeyi almasına yardımcı olur. Bu değişkenin kullanılması, olumsuz bir yan etkiye neden olmaz, bu, ilke indirilemez gecikmez.<!-- 501016 --> Ayrıca, varsayılan 15 saniyeden **SMSTSDownloadRetryDelay** değişkenini de artırın.
 - Satır içi uyumluluk değerlendirmesi gerçekleştirin. 
@@ -227,14 +227,14 @@ Bu Technical Preview sürümünden itibaren, aşağıdaki HTTPS etkin sunucu rol
 
 ## <a name="cloud-management-gateway-support-for-azure-resource-manager"></a>Azure Resource Manager için bulut yönetimi ağ geçidi desteği
 <!-- 1324735 -->
-[Bulut yönetimi ağ geçidinin](../clients/manage/cmg/plan-cloud-management-gateway.md) (CMG) bir örneğini oluştururken, sihirbaz artık **Azure Resource Manager dağıtımı**oluşturma seçeneği sağlar. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) , tüm çözüm kaynaklarının, [kaynak grubu](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups)olarak adlandırılan tek bir varlık olarak yönetilmesine yönelik modern bir platformdur. Azure Resource Manager ile CMG 'yi dağıttığınızda, site kimlik doğrulaması yapmak ve gerekli bulut kaynaklarını oluşturmak için Azure Active Directory (Azure AD) kullanır. Bu modernlanmış dağıtım, klasik Azure Yönetim sertifikası gerektirmez.  
+[Bulut yönetimi ağ geçidinin](../clients/manage/cmg/plan-cloud-management-gateway.md) (CMG) bir örneğini oluştururken, sihirbaz artık **Azure Resource Manager dağıtımı**oluşturma seçeneği sağlar. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) , tüm çözüm kaynaklarının, [kaynak grubu](/azure/azure-resource-manager/resource-group-overview#resource-groups)olarak adlandırılan tek bir varlık olarak yönetilmesine yönelik modern bir platformdur. Azure Resource Manager ile CMG 'yi dağıttığınızda, site kimlik doğrulaması yapmak ve gerekli bulut kaynaklarını oluşturmak için Azure Active Directory (Azure AD) kullanır. Bu modernlanmış dağıtım, klasik Azure Yönetim sertifikası gerektirmez.  
 
 CMG Sihirbazı yine de Azure Yönetim sertifikası kullanan **Klasik hizmet dağıtımı** için seçenek sağlar. Kaynakların dağıtımını ve yönetimini basitleştirmek için, tüm yeni CMG örnekleri için Azure Resource Manager dağıtım modelini kullanmanızı öneririz. Mümkünse, var olan CMG örneklerini Kaynak Yöneticisi aracılığıyla yeniden dağıtın.
 
 Configuration Manager var olan klasik CMG örneklerini Azure Resource Manager dağıtım modeline geçirmez. Azure Resource Manager dağıtımlarını kullanarak yeni CMG örnekleri oluşturun ve ardından klasik CMG örneklerini kaldırın. 
 
 > [!IMPORTANT]
-> Bu özellik, Azure bulut hizmeti sağlayıcıları (CSP) için desteği etkinleştirmez. Azure Resource Manager ile CMG dağıtımı, CSP 'nin desteklemediği klasik bulut hizmetini kullanmaya devam eder. Daha fazla bilgi için bkz. [Azure CSP 'de kullanılabilir Azure hizmetleri](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+> Bu özellik, Azure bulut hizmeti sağlayıcıları (CSP) için desteği etkinleştirmez. Azure Resource Manager ile CMG dağıtımı, CSP 'nin desteklemediği klasik bulut hizmetini kullanmaya devam eder. Daha fazla bilgi için bkz. [Azure CSP 'de kullanılabilir Azure hizmetleri](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
 ### <a name="prerequisites"></a>Ön koşullar
 - [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md)ile tümleştirme. Azure AD Kullanıcı keşfi gerekli değildir.
@@ -300,7 +300,7 @@ Uygulamaları kullanıcılara kullanılabilir olarak dağıtırsanız, artık Az
 
 ## <a name="report-on-windows-autopilot-device-information"></a>Windows AutoPilot cihaz bilgileri hakkında rapor
 <!-- 1351442 -->
-Windows AutoPilot, yeni Windows 10 cihazlarını modern bir şekilde ekleme ve yapılandırma çözümüdür. Daha fazla bilgi için bkz. [Windows Autopilot 'e genel bakış](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). Windows AutoPilot ile var olan cihazları kaydetmenin bir yöntemi, cihaz bilgilerini Iş ve eğitim için Microsoft Store karşıya yüklemedir. Bu bilgilere cihaz seri numarası, Windows ürün tanımlayıcısı ve bir donanım tanımlayıcısı dahildir. Bu cihaz bilgilerini toplamak ve raporlamak için Configuration Manager kullanın. 
+Windows AutoPilot, yeni Windows 10 cihazlarını modern bir şekilde ekleme ve yapılandırma çözümüdür. Daha fazla bilgi için bkz. [Windows Autopilot 'e genel bakış](/windows/deployment/windows-autopilot/windows-10-autopilot). Windows AutoPilot ile var olan cihazları kaydetmenin bir yöntemi, cihaz bilgilerini Iş ve eğitim için Microsoft Store karşıya yüklemedir. Bu bilgilere cihaz seri numarası, Windows ürün tanımlayıcısı ve bir donanım tanımlayıcısı dahildir. Bu cihaz bilgilerini toplamak ve raporlamak için Configuration Manager kullanın. 
 
 ### <a name="prerequisites"></a>Ön koşullar
 - Bu cihaz bilgileri yalnızca Windows 10, sürüm 1703 ve üzeri istemciler için geçerlidir
@@ -311,13 +311,13 @@ Windows AutoPilot, yeni Windows 10 cihazlarını modern bir şekilde ekleme ve y
 1. Configuration Manager konsolunda, **izleme** çalışma alanında, **Raporlama** düğümünü genişletin, **raporlar**' ı genişletin ve **donanım-genel** düğümünü seçin.
 2. Yeni rapor, **Windows Autopilot cihaz bilgilerini** çalıştırın ve sonuçları görüntüleyin. 
 3. Rapor görüntüleyicisinde **dışarı aktar** simgesine tıklayın ve **CSV (virgülle sınırlandırılmış)** seçeneğini belirleyin.
-4. Dosyayı kaydettikten sonra Iş ve eğitim için Microsoft Store verileri karşıya yükleyin. Daha fazla bilgi için bkz. [iş ve eğitim için Microsoft Store cihaz ekleme](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#add-devices-and-apply-autopilot-deployment-profile). 
+4. Dosyayı kaydettikten sonra Iş ve eğitim için Microsoft Store verileri karşıya yükleyin. Daha fazla bilgi için bkz. [iş ve eğitim için Microsoft Store cihaz ekleme](/microsoft-store/add-profile-to-devices#add-devices-and-apply-autopilot-deployment-profile). 
 
 
 
 ## <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Windows Defender Exploit Guard için Configuration Manager Ilkelerine yönelik iyileştirmeler
 <!-- 1356220 -->
-[Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)Için Configuration Manager saldırı yüzeyi azaltma ve denetimli klasör erişim bileşenleri için ek ilke ayarları eklenmiştir.
+[Windows Defender Exploit Guard](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)Için Configuration Manager saldırı yüzeyi azaltma ve denetimli klasör erişim bileşenleri için ek ilke ayarları eklenmiştir.
 
 **Denetimli klasör erişimi için yeni ayarlar**<br/>
 Denetlenen klasör erişimini yapılandırırken iki ek seçenek vardır: **yalnızca disk kesimlerini engelle** ve **yalnızca disk kesimlerini denetle**. Bu iki ayar, denetlenen klasör erişiminin yalnızca önyükleme kesimleri için etkinleştirilmesini sağlar ve belirli klasörlerin veya varsayılan korumalı klasörlerin korumasını etkinleştirmez. 
@@ -334,18 +334,18 @@ Denetlenen klasör erişimini yapılandırırken iki ek seçenek vardır: **yaln
 <!-- 1357310 -->
 Windows 10 istemcilerinde [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) Web tarayıcısını kullanan müşteriler için artık birkaç Microsoft Edge ayarını yapılandırmak üzere bir Configuration Manager uyumluluk ayarları ilkesi oluşturabilirsiniz. Bu ilke şu anda aşağıdaki ayarları içerir:
 - **Microsoft Edge tarayıcısını varsayılan olarak ayarla**: Web tarayıcısı için Windows 10 varsayılan uygulama ayarını Microsoft Edge olarak yapılandırır
-- **Adres çubuğu açılır öğesine Izin ver**: Windows 10, sürüm 1703 veya üstünü gerektirir. Daha fazla bilgi için bkz. [Allowaddressbardropı tarayıcı ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
-- **Microsoft tarayıcıları arasında sık kullanılanlara eşitlemeye Izin ver**: Windows 10, sürüm 1703 veya üstünü gerektirir. Daha fazla bilgi için bkz. [Syncfavoritesbetweenıeandmicrosoftedge Browser ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
-- **Çıkışta tarama verilerini temizlemeye Izin ver**: Windows 10, sürüm 1703 veya üstünü gerektirir. Daha fazla bilgi için bkz. [Clearbrowsingdataonexit Browser ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
-- **Üst bilgileri Izlememe Izin ver**: daha fazla bilgi için bkz. [allowdonottrack tarayıcı ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
-- **Otomatik doldurmaya Izin ver**: daha fazla bilgi için bkz. [allowotomatik doldurma tarayıcı ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
-- **Tanımlama bilgilerine Izin ver**: daha fazla bilgi için bkz. [AllowCookies tarayıcı ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
-- **Açılır pencere engelleyiciye Izin ver**: daha fazla bilgi için bkz. [allowpopup Browser Policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
-- **Adres çubuğunda arama önerilerine Izin ver**: daha fazla bilgi için bkz. [Allowsearchmülationsınaddressbar tarayıcı ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
-- **Internet Explorer 'a intranet trafiği gönderilmesine Izin ver**: daha fazla bilgi için bkz. [SendIntranetTraffictoInternetExplorer Browser Policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
-- **Parola Yöneticisi 'Ne Izin ver**: daha fazla bilgi için bkz. [allowpasswordmanager tarayıcı ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
-- **Geliştirici Araçları Izin ver**: daha fazla bilgi için bkz. [AllowDeveloperTools Browser Policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
-- **Uzantılara Izin ver**: daha fazla bilgi için bkz. [AllowExtensions tarayıcı ilkesi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
+- **Adres çubuğu açılır öğesine Izin ver**: Windows 10, sürüm 1703 veya üstünü gerektirir. Daha fazla bilgi için bkz. [Allowaddressbardropı tarayıcı ilkesi](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
+- **Microsoft tarayıcıları arasında sık kullanılanlara eşitlemeye Izin ver**: Windows 10, sürüm 1703 veya üstünü gerektirir. Daha fazla bilgi için bkz. [Syncfavoritesbetweenıeandmicrosoftedge Browser ilkesi](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
+- **Çıkışta tarama verilerini temizlemeye Izin ver**: Windows 10, sürüm 1703 veya üstünü gerektirir. Daha fazla bilgi için bkz. [Clearbrowsingdataonexit Browser ilkesi](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
+- **Üst bilgileri Izlememe Izin ver**: daha fazla bilgi için bkz. [allowdonottrack tarayıcı ilkesi](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
+- **Otomatik doldurmaya Izin ver**: daha fazla bilgi için bkz. [allowotomatik doldurma tarayıcı ilkesi](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
+- **Tanımlama bilgilerine Izin ver**: daha fazla bilgi için bkz. [AllowCookies tarayıcı ilkesi](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
+- **Açılır pencere engelleyiciye Izin ver**: daha fazla bilgi için bkz. [allowpopup Browser Policy](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
+- **Adres çubuğunda arama önerilerine Izin ver**: daha fazla bilgi için bkz. [Allowsearchmülationsınaddressbar tarayıcı ilkesi](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
+- **Internet Explorer 'a intranet trafiği gönderilmesine Izin ver**: daha fazla bilgi için bkz. [SendIntranetTraffictoInternetExplorer Browser Policy](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
+- **Parola Yöneticisi 'Ne Izin ver**: daha fazla bilgi için bkz. [allowpasswordmanager tarayıcı ilkesi](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
+- **Geliştirici Araçları Izin ver**: daha fazla bilgi için bkz. [AllowDeveloperTools Browser Policy](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
+- **Uzantılara Izin ver**: daha fazla bilgi için bkz. [AllowExtensions tarayıcı ilkesi](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
 
 ### <a name="prerequisites"></a>Ön koşullar
 - Azure Active Directory katılmış Windows 10 istemcisi. 
@@ -424,4 +424,4 @@ Aşamalı dağıtımlar, birden çok koleksiyonda yazılım Eşgüdümlü, sıra
 
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Technical Preview dalını yükleme veya güncelleştirme hakkında daha fazla bilgi için bkz. [Configuration Manager Için Teknik Önizleme](technical-preview.md).    
+Technical Preview dalını yükleme veya güncelleştirme hakkında daha fazla bilgi için bkz. [Configuration Manager Için Teknik Önizleme](technical-preview.md).

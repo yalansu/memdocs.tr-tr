@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0c2464bfba05d640868af7d5c8be7c32c0999946
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9cd0df25c64c4ca1e0d2ce98de5d2915f7564241
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721510"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693038"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-configuration-manager"></a>Configuration Manager için Technical Preview 1612 ' deki yetenekler
 
@@ -53,7 +53,7 @@ Veri ambarı veritabanını yüklemeye ve yapılandırmaya ek olarak, bu veriler
 | **3** | Veri ambarı hizmet noktası, eşitlenen verilerin bir kopyasını veri ambarı veritabanına aktarır ve depolar. |  
 | **A** | Yerleşik raporları kullanarak, Raporlama Hizmetleri noktasına SQL Server Reporting Services kullanarak geçirilen bir veri isteği yapılır. |  
 | **B** | Çoğu rapor güncel bilgiler içindir ve bu istekler site veritabanına karşı çalıştırılır. |  
-| **C** | Bir rapor geçmiş verileri istediğinde **veri ambarı** *kategorisi* içeren raporlardan birini kullanarak, istek veri ambarı veritabanına karşı çalıştırılır.   |  
+| **,** | Bir rapor geçmiş verileri istediğinde **veri ambarı** *kategorisi* içeren raporlardan birini kullanarak, istek veri ambarı veritabanına karşı çalıştırılır.   |  
 
 ### <a name="prerequisites-for-the-data-warehouse-service-point-and-database"></a>Veri ambarı hizmet noktası ve veritabanı önkoşulları
 - Hiyerarşinizde bir raporlama hizmetleri noktası site sistem rolü yüklü olmalıdır.
@@ -81,12 +81,12 @@ Sihirbaz, veri ambarı hizmet noktasını seçip yüklemeye yönelik bir seçene
 
 **Genel** sayfa: aşağıdaki genel bilgiler gereklidir:
 - **Configuration Manager veritabanı ayarları:**   
-  - **Sunucu adı** -site veritabanını BARıNDıRAN sunucunun FQDN 'sini belirtin. SQL Server varsayılan bir örneğini kullanmıyorsanız, aşağıdaki biçimde FQDN 'den sonra örneği belirtmeniz gerekir: *** &lt;Sqlserver_FQDN>\&lt; Instance_name>***
+  - **Sunucu adı** -site veritabanını BARıNDıRAN sunucunun FQDN 'sini belirtin. SQL Server varsayılan bir örneğini kullanmıyorsanız, aşağıdaki biçimde FQDN 'den sonra örneği belirtmeniz gerekir: *** &lt; Sqlserver_FQDN>\& lt; Instance_name>***
   - **Veritabanı adı** -site veritabanının adını belirtin.
   - **Doğrula** -site veritabanına olan bağlantının başarılı olduğundan emin olmak için **Doğrula** ' ya tıklayın.
 </br></br>
 - **Veri ambarı veritabanı ayarları:**
-  - **Sunucu adı** -veri ambarı hizmet noktasını ve veritabanını BARıNDıRAN sunucunun FQDN 'sini belirtin. SQL Server varsayılan bir örneğini kullanmıyorsanız, aşağıdaki biçimde FQDN 'den sonra örneği belirtmeniz gerekir: *** &lt;Sqlserver_FQDN>\&lt; Instance_name>***
+  - **Sunucu adı** -veri ambarı hizmet noktasını ve veritabanını BARıNDıRAN sunucunun FQDN 'sini belirtin. SQL Server varsayılan bir örneğini kullanmıyorsanız, aşağıdaki biçimde FQDN 'den sonra örneği belirtmeniz gerekir: *** &lt; Sqlserver_FQDN>\& lt; Instance_name>***
   - **Veritabanı adı** -veri ambarı VERITABANı için FQDN 'yi belirtin.  Configuration Manager, bu adı taşıyan veritabanını oluşturacak. SQL Server örneğinde zaten var olan bir veritabanı adı belirtirseniz, Configuration Manager Bu veritabanını kullanacaktır.
   - **Doğrula** -site veritabanına olan bağlantının başarılı olduğundan emin olmak için **Doğrula** ' ya tıklayın.
 
@@ -104,8 +104,8 @@ Veri ambarı rolü yüklendikten sonra, *Raporlama Hizmetleri noktası hesabı* 
 
 #### <a name="troubleshoot-installation-and-data-synchronization"></a>Yükleme ve veri eşitleme sorunlarını giderme
 Veri ambarı hizmet noktası yüklemesiyle ilgili sorunları araştırmak veya verilerin eşitlenmesi için aşağıdaki günlükleri kullanın:
-- **Dwssmsı. log** ve **dwsssetup. log** -veri ambarı hizmet noktasını yüklerken hataları araştırmak için bu günlükleri kullanın.
-- **Microsoft. ConfigMgrDataWarehouse. log** – bu günlüğü, site veritabanı arasındaki veri ambarı veritabanına veri eşitlemesini araştırmak için kullanın.
+- **Dwssmsı. log** ve **dwsssetup. log**  -veri ambarı hizmet noktasını yüklerken hataları araştırmak için bu günlükleri kullanın.
+- ** MgrDataWarehouse. logMicrosoft.Config** – bu günlüğü, site veritabanı arasındaki veri ambarı veritabanına veri eşitlemesini araştırmak için kullanın.
 
 ### <a name="reporting"></a>Raporlama
 Bir veri ambarı site sistem rolünü yükledikten sonra, Raporlama Hizmetleri noktanınızda bir **veri ambarı** *kategorisi* ile aşağıdaki raporlar mevcuttur:
@@ -140,16 +140,16 @@ Veri ambarı veritabanını yeni bir SQL Server taşımak için aşağıdaki ad�
 5. Site sistemi rolü yüklendikten sonra taşıma işlemi tamamlanır.
 
 Site sistem rolünün başarıyla yeniden yüklendiğini onaylamak için aşağıdaki Configuration Manager günlüklerini gözden geçirebilirsiniz:  
-- **Dwssmsı. log** ve **dwsssetup. log** -veri ambarı hizmet noktasını yüklerken hataları araştırmak için bu günlükleri kullanın.
-- **Microsoft. ConfigMgrDataWarehouse. log** – bu günlüğü, site veritabanı arasındaki veri ambarı veritabanına veri eşitlemesini araştırmak için kullanın.
+- **Dwssmsı. log** ve **dwsssetup. log**  -veri ambarı hizmet noktasını yüklerken hataları araştırmak için bu günlükleri kullanın.
+- ** MgrDataWarehouse. logMicrosoft.Config** – bu günlüğü, site veritabanı arasındaki veri ambarı veritabanına veri eşitlemesini araştırmak için kullanın.
 
 
 ## <a name="content-library-cleanup-tool"></a>İçerik kitaplığı Temizleme Aracı
-Technical Preview sürüm 1612 ' den başlayarak, bir dağıtım noktasından (yalnız bırakılmış içerik) herhangi bir paket veya uygulamayla ilişkili olmayan içeriği kaldırmak için yeni bir komut satırı aracı (**Contentlibrarycleanup. exe**) kullanabilirsiniz. Bu araç, içerik kitaplığı temizleme aracı olarak adlandırılır.
+Technical Preview sürüm 1612 ' den başlayarak, bir dağıtım noktasından (yalnız bırakılmış içerik) herhangi bir paket veya uygulamayla ilişkili olmayan içeriği kaldırmak için yeni bir komut satırı aracı (**ContentLibraryCleanup.exe**) kullanabilirsiniz. Bu araç, içerik kitaplığı temizleme aracı olarak adlandırılır.
 
 Bu araç yalnızca, aracı çalıştırdığınızda belirttiğiniz dağıtım noktasındaki içeriği etkiler ve site sunucusundaki içerik kitaplığından içerik kaldıramaz.
 
-Technical Preview 1612 ' i yükledikten sonra, Technical Preview site sunucusundaki *% CM_Installation_Path% \ CD. latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* klasöründe **contentlibrarycleanup. exe** ' yi bulabilirsiniz.
+Technical Preview 1612 ' i yükledikten sonra, **ContentLibraryCleanup.exe** \* Technical Preview site sunucusundaki *% CM_Installation_Path% \ CD. latest\SMSSETUP\TOOLS\ContentLibraryCleanup klasöründeContentLibraryCleanup.exebulabilirsiniz.
 
 Bu teknik önizleme ile yayınlanan araç, geçmiş Configuration Manager ürünleri için sunulan benzer araçların eski sürümlerini değiştirmek üzere tasarlanmıştır. Bu araç sürümü 1 Mart 2017 ' den sonra işlevi durdursa da, bu araç Güncel Dalı bir parçası olarak yayınlanana veya bir üretime hazır bant dışı yayın sürümü olarak yayınlanana kadar, gelecekteki teknik önizlemelerle yeni sürümler yayımlanacak.
 
@@ -181,11 +181,11 @@ Araç iki modda çalıştırılabilir:
 
 ### <a name="run-the-tool"></a>Aracı çalıştırma
 Aracı çalıştırmak için:
-1. **Contentlibrarycleanup. exe**dosyasını içeren bir klasöre bir yönetim komut istemi açın.  
+1. **ContentLibraryCleanup.exe**içeren bir klasöre bir yönetim komut istemi açın.  
 2. Ardından, gerekli komut satırı anahtarlarını ve kullanmak istediğiniz isteğe bağlı anahtarları içeren bir komut satırı girin.
 
 **Bilinen sorun** Araç çalıştırıldığında, herhangi bir paket veya dağıtım başarısız olduğunda veya devam ederken aşağıdakine benzer bir hata döndürülür:
--  *System. InvalidOperationException: paket \<packageıd> tam olarak yüklenmediğinden bu içerik kitaplığı şu anda temizlenemez.*
+-  *System. InvalidOperationException: paket tam olarak yüklenmediğinden bu içerik kitaplığı şu anda temizlenemez \<packageID> .*
 
 **Geçici çözüm:** Yok. İçerik devam ederken veya dağıtımı başarısız olduğunda, araç yalnız bırakılmış dosyaları tanımlayamıyor. Bu nedenle, araç, bu sorun çözülene kadar içeriği temizleyemeyecektir.
 
@@ -196,12 +196,12 @@ Aşağıdaki komut satırı anahtarları herhangi bir sırada kullanılabilir.
 
 |Anahtar|Ayrıntılar|
 |---------|-------|
-|**/Delete**  |**İsteğe Bağlı** </br> Dağıtım noktasından içerik silmek istediğinizde bu anahtarı kullanın. İçerik silinmeden önce sorulur. </br></br> Bu anahtar kullanılmazsa araç, hangi içeriğin silineceği hakkındaki sonuçları günlüğe kaydeder, ancak dağıtım noktasından herhangi bir içerik silmez. </br></br> Örnek: ***Contentlibrarycleanup. exe/dp server1.contoso.com/Delete*** |
-| **anahtarın**       |**İsteğe Bağlı** </br> Aracı tüm istemleri (içerik silinirken istemler gibi) ve günlük dosyasını otomatik olarak açmayın sessiz modda çalıştırın. </br></br> Örnek: ***Contentlibrarycleanup. exe/q/dp server1.contoso.com*** |
-| **/DP &lt;DAĞıTıM noktası FQDN>**  | **Gerekli** </br> Temizlemek istediğiniz dağıtım noktasının tam etki alanı adını (FQDN) belirtin. </br></br> Örnek: ***Contentlibrarycleanup. exe/dp server1.contoso.com***|
-| **/PS &lt;birincil site FQDN 'si>**       | Birincil sitedeki bir dağıtım noktasından içerik temizlenirken **Isteğe bağlıdır** .</br>İkincil sitedeki bir dağıtım noktasından içerik temizlenirken **gereklidir** . </br></br> Dağıtım noktasının ikincil bir sitede olması durumunda, dağıtım noktasının ait olduğu birincil sitenin FQDN 'sini veya üst birincil üst öğeyi belirtin. </br></br> Örnek: ***Contentlibrarycleanup. exe/dp server1.contoso.com/PS siteserver1.contoso.com*** |
-| **/SC &lt;birincil site kodu>**  | Birincil sitedeki bir dağıtım noktasından içerik temizlenirken **Isteğe bağlıdır** .</br>İkincil sitedeki bir dağıtım noktasından içerik temizlenirken **gereklidir** . </br></br> Dağıtım noktasının ikincil bir sitede olması durumunda, dağıtım noktasının ait olduğu birincil sitenin veya üst birincil sitenin site kodunu belirtin.</br></br> Örnek: ***Contentlibrarycleanup. exe/dp server1.contoso.com/SC ABC*** |
-| **/log \<günlük dosyası dizin>**       |**İsteğe Bağlı** </br> Günlük dosyalarını yerleştirmek için bir dizin belirtin. Bu, yerel bir sürücü veya bir ağ paylaşımında olabilir.</br></br> Bu anahtar kullanılmazsa, günlük dosyaları otomatik olarak kullanıcılar geçici klasörüne yerleştirilir.</br></br> Yerel sürücü örneği: ***Contentlibrarycleanup. exe/dp server1.contoso.com/log C:\users\\administrators \ masaüstü*** </br></br>Ağ paylaşımının örneği: *** \\ &lt;contentlibrarycleanup. exe/DP server1.contoso.com/log Share>\&lt; klasör>***|
+|**/Delete**  |**İsteğe bağlı** </br> Dağıtım noktasından içerik silmek istediğinizde bu anahtarı kullanın. İçerik silinmeden önce sorulur. </br></br> Bu anahtar kullanılmazsa araç, hangi içeriğin silineceği hakkındaki sonuçları günlüğe kaydeder, ancak dağıtım noktasından herhangi bir içerik silmez. </br></br> Örnek: ***ContentLibraryCleanup.exe/dp server1.contoso.com/Delete*** |
+| **anahtarın**       |**İsteğe bağlı** </br> Aracı tüm istemleri (içerik silinirken istemler gibi) ve günlük dosyasını otomatik olarak açmayın sessiz modda çalıştırın. </br></br> Örnek: ***ContentLibraryCleanup.exe/q/dp server1.contoso.com*** |
+| **/DP &lt; dağıtım noktası FQDN>**  | **Gerekli** </br> Temizlemek istediğiniz dağıtım noktasının tam etki alanı adını (FQDN) belirtin. </br></br> Örnek:  ***ContentLibraryCleanup.exe/dp server1.contoso.com***|
+| **/PS &lt; birincil SITE FQDN 'si>**       | Birincil sitedeki bir dağıtım noktasından içerik temizlenirken **Isteğe bağlıdır** .</br>İkincil sitedeki bir dağıtım noktasından içerik temizlenirken **gereklidir** . </br></br> Dağıtım noktasının ikincil bir sitede olması durumunda, dağıtım noktasının ait olduğu birincil sitenin FQDN 'sini veya üst birincil üst öğeyi belirtin. </br></br> Örnek: ***ContentLibraryCleanup.exe/dp server1.contoso.com/PS siteserver1.contoso.com*** |
+| **/SC &lt; birincil site kodu>**  | Birincil sitedeki bir dağıtım noktasından içerik temizlenirken **Isteğe bağlıdır** .</br>İkincil sitedeki bir dağıtım noktasından içerik temizlenirken **gereklidir** . </br></br> Dağıtım noktasının ikincil bir sitede olması durumunda, dağıtım noktasının ait olduğu birincil sitenin veya üst birincil sitenin site kodunu belirtin.</br></br> Örnek: ***ContentLibraryCleanup.exe/dp server1.contoso.com/SC ABC*** |
+| **/log \<log file directory>**       |**İsteğe bağlı** </br> Günlük dosyalarını yerleştirmek için bir dizin belirtin. Bu, yerel bir sürücü veya bir ağ paylaşımında olabilir.</br></br> Bu anahtar kullanılmazsa, günlük dosyaları otomatik olarak kullanıcılar geçici klasörüne yerleştirilir.</br></br> Yerel sürücü örneği: ***ContentLibraryCleanup.exe/dp server1.contoso.com/log C:\users\\administrators \ Desktop*** </br></br>Ağ paylaşımının örneği: ***ContentLibraryCleanup.exe/dp server1.contoso.com/log \\ &lt; Share>\& lt; klasör>***|
 
 
 ## <a name="improvements-for-in-console-search"></a>Konsol içi aramada iyileştirmeler
@@ -221,7 +221,7 @@ Artık, çalışıyorsa, bir uygulamanın yüklenmesini engelleyebileceği dağ�
 ### <a name="try-it-out"></a>Deneyin
 Yürütülebilir dosyaların bir listesini yapılandırmak için
 1. Herhangi bir dağıtım türünün Özellikler sayfasında, **Yükleyici işleme** sekmesini seçin.
-2. Listeye daha fazla yürütülebilir dosyadan birini eklemek için **Ekle**' ye tıklayın (örneğin **Edge. exe**)
+2. Listeye daha fazla yürütülebilir dosyadan birini eklemek için **Ekle**' ye tıklayın (örneğin **Edge.exe**)
 3. Dağıtım türü Özellikler iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.
 
 Artık, bu uygulamayı bir kullanıcıya veya cihaza dağıttığınızda ve eklediğiniz yürütülebilir dosyalardan biri çalışıyorsa, Son Kullanıcı bir uygulama çalıştığı için yüklemenin başarısız olduğunu belirten bir yazılım merkezi iletişim kutusu görür.
@@ -252,14 +252,14 @@ Windows 10 güncelleştirmeleri için Configuration Manager için hızlı yükle
 
 ### <a name="to-enable-the-download-of-express-installation-files-for-windows-10-updates-on-the-server"></a>Sunucuda Windows 10 güncelleştirmeleri için hızlı yükleme dosyalarının indirilmesini etkinleştirmek için
 Windows 10 Express yükleme dosyaları için meta verileri eşitlemeye başlamak üzere, yazılım güncelleştirme noktası özelliklerinde etkinleştirmelisiniz.
-1. Configuration Manager konsolunda, **Yönetim** > **Site yapılandırması** > **siteler**' e gidin.
+1. Configuration Manager konsolunda, **Yönetim**  >  **Site yapılandırması**  >  **siteler**' e gidin.
 2. Merkezi yönetim sitesini veya tek başına birincil siteyi seçin.
 3. **Giriş** sekmesindeki **Ayarlar** grubunda **Site Bileşenlerini Yapılandır**’a, ardından da **Yazılım Güncelleştirme Noktası**’na tıklayın. **Güncelleştirme dosyaları** sekmesinde, **Windows 10 için tüm onaylanan güncelleştirmeler ve hızlı yükleme dosyaları Için tam dosyaları indir**' i seçin.
 
 ### <a name="to-enable-support-for-clients-to-download-and-install-express-installation-files"></a>İstemcilerin hızlı yükleme dosyalarını indirmesi ve yüklemesi için desteği etkinleştirmek üzere
 İstemcilerde hızlı yükleme dosyaları desteğini etkinleştirmek için istemci ayarlarının yazılım güncelleştirmeleri bölümünde istemcilerde hızlı yükleme dosyalarını etkinleştirmeniz gerekir. Bu, belirttiğiniz bağlantı noktasına hızlı yükleme dosyalarını indirme isteklerinin dinlediği yeni bir HTTP dinleyicisi oluşturur. İstemci ayarlarını, istemcide bu işlevselliği etkinleştirmek üzere dağıttıktan sonra, geçerli ayın Windows 10 toplu güncelleştirmesi ile önceki ayın güncelleştirmesi arasındaki Delta 'yı indirmeye çalışır (istemciler, Express yükleme dosyalarını destekleyen bir Windows 10 sürümü çalıştırmalıdır).
 1. Yazılım güncelleştirme noktası bileşen özelliklerindeki hızlı yükleme dosyaları desteğini etkinleştirin (önceki yordam).
-2. Configuration Manager konsolunda **Yönetim** > **istemci ayarları**' na gidin.
+2. Configuration Manager konsolunda **Yönetim**  >  **istemci ayarları**' na gidin.
 3. Uygun istemci ayarlarını seçin, sonra **giriş** sekmesinde **Özellikler**' e tıklayın.
 4. **Yazılım güncelleştirmeleri** sayfasını seçin, **istemcilerde hızlı güncelleştirmeleri yüklemeyi etkinleştir** **ayarını yapılandırın ve** **Hızlı güncelleştirmeler için içerik ındırmek için kullanılan bağlantı noktası** için istemcideki http dinleyicisi tarafından kullanılan bağlantı noktasını yapılandırın.
 
@@ -274,7 +274,7 @@ Windows 10 Express yükleme dosyaları için meta verileri eşitlemeye başlamak
 
 OData uç noktasını kullanabilmeniz için, bunu site için etkinleştirmeniz gerekir.
 
-1.  **Yönetim** > **sitesi yapılandırma** > **siteleri**' ne gidin.
+1.  **Yönetim**  >  **sitesi yapılandırma**  >  **siteleri**' ne gidin.
 2.  Birincil siteyi seçin ve **Özellikler**' e tıklayın.
 3.  Birincil site özellikleri sayfasının Genel sekmesinde, **Bu sitedeki tüm sağlayıcılar IÇIN REST uç noktasını etkinleştir**' e tıklayın ve ardından **Tamam**' a tıklayın.
 
@@ -300,7 +300,7 @@ Azure yönetici kimlik bilgilerine ihtiyacınız olacağı için bu görevi bir 
 
 #### <a name="to-create-the-connection"></a>Bağlantıyı oluşturmak için:
 
-2. **Yönetim** çalışma alanında, **Cloud Services** > **Azure Active Directory** > **Azure Active Directory Ekle**' yi seçin.
+2. **Yönetim** çalışma alanında, **Cloud Services**  >  **Azure Active Directory**  >  **Azure Active Directory Ekle**' yi seçin.
 2. Azure AD ile bağlantı oluşturmak için **oturum aç '** ı seçin.
 
 #### <a name="configuration-manager-client-requirements"></a>Configuration Manager istemci gereksinimleri
@@ -317,4 +317,4 @@ Bu yapılandırma değişikliklerini yaptıktan sonra, ilkeyi test etmek için b
 
 ## <a name="change-to-configuring-multi-factor-authentication-for-device-enrollment"></a>Cihaz kaydı için Multi-Factor Authentication 'ı yapılandırma değiştirme
 
-Azure portal cihaz kaydı için Multi-Factor Authentication (MFA) ayarlayabilmeniz artık, MFA seçeneği Configuration Manager konsolundan kaldırılmıştır. [Bu Microsoft Intune konu başlığında](/mem/intune/enrollment/multi-factor-authentication), kayıt için MFA ayarlama hakkında daha fazla bilgi bulabilirsiniz.
+Azure portal cihaz kaydı için Multi-Factor Authentication (MFA) ayarlayabilmeniz artık, MFA seçeneği Configuration Manager konsolundan kaldırılmıştır. [Bu Microsoft Intune konu başlığında](../../../intune/enrollment/multi-factor-authentication.md), kayıt için MFA ayarlama hakkında daha fazla bilgi bulabilirsiniz.

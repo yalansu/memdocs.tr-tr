@@ -1,5 +1,5 @@
 ---
-title: Koleksiyon değerlendirmesi
+title: Koleksiyon değerlendirme
 titleSuffix: Configuration Manager
 description: Koleksiyon değerlendirme işlemi, türleri ve Tetikleyicileri hakkında bilgi edinin. Koleksiyon değerlendirme grafiğini ve hiyerarşisini anlayın.
 ms.date: 06/05/2020
@@ -10,12 +10,12 @@ ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: af90154b848ddcd7cbff21917ef122ab10585098
-ms.sourcegitcommit: 1d8bf691780b94a945e94945115d4d1df4242808
+ms.openlocfilehash: 15b58b841ca87cf2b5e04c98dfd35c487c941e78
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663916"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693327"
 ---
 # <a name="collection-evaluation-in-configuration-manager"></a>Configuration Manager içinde koleksiyon değerlendirmesi
 
@@ -27,7 +27,7 @@ Uygun koleksiyon tasarımı kararları almak için, koleksiyon değerlendirme da
 
 ## <a name="evaluation-process"></a>Değerlendirme işlemi
 
-Koleksiyon Değerlendiricisi koleksiyonları oluşturduğunda, değiştirdiğinde ve sildiğinde, [Colleval. log kayıtları kaydedilir](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files#BKMK_ServerLogs) .
+Koleksiyon Değerlendiricisi koleksiyonları oluşturduğunda, değiştirdiğinde ve sildiğinde, [Colleval. log kayıtları kaydedilir](../../../plan-design/hierarchy/log-files.md#BKMK_ServerLogs) .
 
 Yüksek düzeyde, her bir koleksiyon değerlendirmesi ve güncelleştirmesi şu adımları izler:
 
@@ -59,7 +59,7 @@ Bu iş parçacığı türleri, değerlendirme türüne bağlı olarak koleksiyon
 
 Aşağıdaki tabloda, koleksiyon değerlendirme Tetikleyicileri ve bunlara karşılık gelen değerlendirme türleri açıklanmaktadır. 
 
-| Tetikleyici | Değerlendirme türü | Description |
+| Tetikleyici | Değerlendirme türü | Açıklama |
 |---------|-----------------|-------------|
 |El ile|Tek veya yardımcı|El ile en yüksek öncelikli koleksiyon değerlendirmesi. Yönetici el ile toplama değerlendirmesi istediğinde, koleksiyon Değerlendiricisi bir sonraki kullanılabilir değerlendirme iş parçacığını değerlendirmeye atar.|
 |Zamanlanan|Birincil|Zamanlanan değerlendirme işlemi, değerlendirme, olay odaklı yerine zaman odaklı olması dışında, el ile değerlendirmesiyle aynıdır.|
@@ -105,5 +105,5 @@ Aşağıdaki örnekte, var olan sunucuya DNS yükleme, **DNS sunucuları** kolek
 ## <a name="next-steps"></a>Sonraki adımlar
 - [Koleksiyon oluşturma](create-collections.md)
 - [Koleksiyonlar için en iyi yöntemler](best-practices-for-collections.md)
-- [Koleksiyon Değerlendirme Görüntüleyicisi](https://docs.microsoft.com/mem/configmgr/core/support/ceviewer)
+- [Koleksiyon Değerlendirme Görüntüleyicisi](../../../support/ceviewer.md)
 - [Configmgrdogs TechEd Avustralya 'Da ConfigMgr 2012 oturumunda sorun giderme](https://channel9.msdn.com/Events/TechEd/Australia/2014/DCI411)

@@ -10,12 +10,12 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: eab91146ec21bbee888d496012419f47bca4b599
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: ac3bbb7c755be82b171f35442d2dbaf446dfea84
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776982"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695129"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>Configuration Manager 'da ortak yönetimi izleme
 
@@ -77,7 +77,7 @@ Aşağıdaki kategorilerdeki cihaz durumunun dökümünü gösterir:
     > [!NOTE]
     > Sürüm 1906 ' den başlayarak, bu bekleyen durumdaki cihaz sayısını azaltmak için, yeni bir ortak yönetilen cihaz artık Azure AD *cihaz* belirtecine göre Microsoft Intune hizmetine otomatik olarak kaydeder. Kullanıcının otomatik kayıt işleminin başlaması için cihazda oturum açmasını beklemesi gerekmez. Bu davranışı desteklemek için, cihazın Windows 10, sürüm 1803 veya sonraki bir sürümü çalıştırması gerekir.
     >
-    > Cihaz belirteci başarısız olursa, kullanıcı belirteciyle önceki davranışa geri döner. Aşağıdaki girdi için **Comanagementhandler. log dosyasına** bakın:`Enrolling device with RegisterDeviceWithManagementUsingAADDeviceCredentials`
+    > Cihaz belirteci başarısız olursa, kullanıcı belirteciyle önceki davranışa geri döner. Aşağıdaki girdi için **Comanagementhandler. log dosyasına** bakın: `Enrolling device with RegisterDeviceWithManagementUsingAADDeviceCredentials`
 
 Bu durumdaki cihazların listesine gitmek için kutucukta bir durum seçin.  
 
@@ -100,10 +100,10 @@ Bu tablo, cihazlardan kayıt hatalarının bir listesidir. Bu hatalar Windows 'u
 Yüzlerce olası hata vardır. Aşağıdaki tabloda en yaygın hatalar listelenmektedir.
 <!-- SCCMDocs issue 1064, BUG 3158555 -->
 
-| Hata | Description |
+| Hata | Açıklama |
 |---------|---------|
-| 2147549183 (0x8000FFFF) | MDM kaydı henüz Azure AD 'de yapılandırılmadı, ya da kayıt URL 'SI beklenmiyordu.<br><br>[Windows 10 otomatik kayıt özelliğini etkinleştirme](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) |
-| 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | Kullanıcı Lisansı hatalı durum engelliyor kayıt durumunda<br><br>[Kullanıcılara lisans atama](https://docs.microsoft.com/intune/licenses-assign) |
+| 2147549183 (0x8000FFFF) | MDM kaydı henüz Azure AD 'de yapılandırılmadı, ya da kayıt URL 'SI beklenmiyordu.<br><br>[Windows 10 otomatik kayıt özelliğini etkinleştirme](/intune/windows-enroll#enable-windows-10-automatic-enrollment) |
+| 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | Kullanıcı Lisansı hatalı durum engelliyor kayıt durumunda<br><br>[Kullanıcılara lisans atama](/intune/licenses-assign) |
 | 2149056555 (0x8018002B)<br>MENROLL_E_MDM_NOT_CONFIGURED | Intune 'a otomatik olarak kaydolmaya çalışırken, ancak Azure AD yapılandırması tam olarak uygulanmaz. Bu sorun, kısa bir süre sonra cihaz yeniden denendiğinden geçici olmalıdır. |
 | 2149056554 (0x 8018002A)<br>&nbsp; | Kullanıcı işlemi iptal etti<br><br>MDM kaydı çok faktörlü kimlik doğrulaması gerektiriyorsa ve Kullanıcı desteklenen bir ikinci faktörle oturum açmadıysa, Windows, kaydolmak üzere kullanıcıya bir bildirim bildirimi görüntüler. Kullanıcı bildirim bildirimine yanıt vermezse, bu hata oluşur. Bu sorun, Configuration Manager yeniden deneneceği ve kullanıcıya sorulacak şekilde geçici olmalıdır. Kullanıcılar, Windows 'da oturum açtıklarında çok faktörlü kimlik doğrulaması kullanmalıdır. Ayrıca, bu davranışı beklemek için bunları eğitin ve istenirse işlem yapın. |
 | 2149056532 (0x80180014)<br>MENROLL_E_DEVICENOTSUPPORTED | Mobil cihaz yönetimi desteklenmez. Cihaz kısıtlamalarını denetleyin. |
@@ -114,7 +114,7 @@ Yüzlerce olası hata vardır. Aşağıdaki tabloda en yaygın hatalar listelenm
 | 3399548929 | Kullanıcı oturumu açma gerekiyor<br><br>Bu sorun geçici olmalıdır. Kayıt görevi gerçekleşmeden önce Kullanıcı hızlı bir şekilde oturumu kapattığında oluşur. |
 | 3400073236 | ADAL güvenlik belirteci isteği başarısız oldu.<br><br>Azure AD yapılandırmanızı denetleyin ve kullanıcıların kimlik doğrulamasını başarıyla yapıp yapabilmeleri için emin olun. |
 | 2149122477 | Genel HTTP sorunu |
-| 3400073247 | ADAL ile tümleşik Windows kimlik doğrulaması yalnızca Federal akışta desteklenir<br><br>[Hibrit Azure Active Directory JOIN Uygulamanızı planlayın](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) |
+| 3400073247 | ADAL ile tümleşik Windows kimlik doğrulaması yalnızca Federal akışta desteklenir<br><br>[Hibrit Azure Active Directory JOIN Uygulamanızı planlayın](/azure/active-directory/devices/hybrid-azuread-join-plan) |
 | 3399942148 | Sunucu veya proxy bulunamadı.<br><br>Bu sorun, istemci buluttan iletişim kuramıyorsa geçici olmalıdır. Devam ederse, istemcinin Azure ile tutarlı bir bağlantı olduğundan emin olun. | 
 | 2149056532 | Belirli bir platform veya sürüm desteklenmiyor<br><br>Cihazın ortak yönetim için [En düşük gereksinimleri](overview.md#windows-10) karşıladığından emin olun. |
 | 2147943568 | Öğe bulunamadı<br><br>Bu sorun geçici olmalıdır. Sorun devam ederse, Microsoft Desteği başvurun. |
@@ -124,7 +124,7 @@ Yüzlerce olası hata vardır. Aşağıdaki tabloda en yaygın hatalar listelenm
 | 2149134055 | WinHTTP adı çözülmedi<br><br>İstemci hizmetin adını çözümleyemiyor. DNS yapılandırmasını denetleyin. |
 | 2149134050 | İnternet zaman aşımı<br><br>Bu sorun, istemci buluttan iletişim kuramıyorsa geçici olmalıdır. Devam ederse, istemcinin Azure ile tutarlı bir bağlantı olduğundan emin olun. |
 
-Daha fazla bilgi için bkz. [MDM kayıt hatası değerleri](https://docs.microsoft.com/windows/desktop/mdmreg/mdm-registration-constants).
+Daha fazla bilgi için bkz. [MDM kayıt hatası değerleri](/windows/desktop/mdmreg/mdm-registration-constants).
 
 ## <a name="deployment-policies"></a>Dağıtım ilkeleri
 

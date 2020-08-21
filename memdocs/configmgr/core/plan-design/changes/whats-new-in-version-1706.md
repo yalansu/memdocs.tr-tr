@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f6087011a0390997d704278af6ffd5e6071bf031
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e0f2801a9bf3d587d0117a720f4151f431441291
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129027"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692834"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Sürüm 1706 ' deki yenilikler&#39;Configuration Manager
 
@@ -193,7 +193,7 @@ Bu sürümden itibaren, üç yeni mobil uygulama yönetimi (MAM) ilkesi ayarı k
 ## <a name="operating-system-deployment"></a>İşletim sistemi dağıtımı
 
 ### <a name="hardware-inventory-collects-secure-boot-information"></a>Donanım envanteri güvenli önyükleme bilgilerini toplar
-Donanım envanteri artık istemcilerde güvenli önyüklemenin etkin olup olmadığı hakkında bilgi toplar. Bu bilgiler **SMS_Firmware** sınıfında depolanır (sürüm 1702 ' de kullanıma sunulmuştur) ve varsayılan olarak donanım envanterinde etkinleştirilir. Donanım envanteri hakkında daha fazla bilgi için bkz. [donanım envanterini yapılandırma](../../clients/manage/inventory/configure-hardware-inventory.md).
+Donanım envanteri artık istemcilerde güvenli önyüklemenin etkin olup olmadığı hakkında bilgi toplar. Bu bilgiler **SMS_Firmware** sınıfında depolanır (sürüm 1702 ' de kullanıma sunulmuştur) ve varsayılan olarak donanım envanterinde etkinleştirilir. Donanım envanteri hakkında daha fazla bilgi için bkz.  [donanım envanterini yapılandırma](../../clients/manage/inventory/configure-hardware-inventory.md).
 
 ### <a name="collapsible-task-sequence-groups"></a>Daraltılabilir görev dizisi grupları
 Bu sürüm, görev dizisi gruplarını genişletme ve daraltma özelliğini tanıtır. Tek tek grupları genişletebilir veya daraltabilir veya aynı anda tüm grupları genişletebilir veya daraltabilirsiniz.
@@ -213,7 +213,7 @@ Artık, Microsoft Surface sürücü güncelleştirmelerini yönetmek için Confi
 
 #### <a name="prerequisites"></a>Ön koşullar
 - Tüm yazılım güncelleştirme noktalarında Windows Server 2016 çalışmalıdır.    
-- Bu, kullanılabilir olması için açmanız gereken bir ön sürüm özelliğidir. Daha fazla bilgi için bkz. [Güncelleştirmelerden yayın öncesi sürüm özelliklerini kullanma](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
+- Bu, kullanılabilir olması için açmanız gereken bir ön sürüm özelliğidir. Daha fazla bilgi için bkz. [Güncelleştirmelerden yayın öncesi sürüm özelliklerini kullanma](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
 #### <a name="to-manage-surface-driver-updates"></a>Surface sürücü güncelleştirmelerini yönetmek için
 

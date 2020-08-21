@@ -10,12 +10,12 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5d8ae26c5e9cbf9f3a45d3584341e79de8ab3402
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: d5e042980a1fa6fb8a92abcff6d3938874cf6b38
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240720"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694602"
 ---
 # <a name="get-started-with-compliance-settings-in-configuration-manager"></a>Configuration Manager uyumluluk ayarları ile çalışmaya başlama
 
@@ -68,11 +68,11 @@ Bir yapılandırma temeli tanımladıktan sonra, Kullanıcı ve cihaz koleksiyon
 İstemci cihazlar, dağıtılan her bir yapılandırma temeline göre uyumluluklarını değerlendirir ve durum iletileri kullanarak sonuçları siteye hemen bildirir. Bir cihazın Şu anda ağla bağlantısı kesilirse ancak yapılandırma temelini indirdiyse yapılandırma öğelerinin uyumluluğunu yine de değerlendirir. Yeniden bağlandığında uyumluluk bilgilerini gönderir.  
 
 ### <a name="monitoring-configuration-baselines"></a>Yapılandırma temelleri izleniyor
-- Configuration Manager konsolundaki uyumluluk değerlendirmesinin sonuçlarını, **dağıtımlar** düğümündeki **izleme** çalışma alanı altında izleyin. Örneğin:
+- Configuration Manager konsolundaki uyumluluk değerlendirmesinin sonuçlarını, **dağıtımlar** düğümündeki **izleme** çalışma alanı altında izleyin. Örnek:
   - Uyumsuzluğun yaygın nedenleri
   - Hatalar
   - Etkilenen Kullanıcı ve cihaz sayısı
-- Uyumluluk ayarları raporlarını ek ayrıntılarla çalıştırın. Örneğin:
+- Uyumluluk ayarları raporlarını ek ayrıntılarla çalıştırın. Örnek:
   - Uyumlu veya uyumlu olmayan cihazlar
   - Yapılandırma temelinin hangi öğesi bir bilgisayarın uyumsuz olmasına neden oluyor
 - Configuration Manager istemcisini çalıştıran Windows bilgisayarlarından uyumluluk değerlendirmesi sonuçlarını görüntüleyin. **Configuration Manager** Denetim Masası ' nı açın ve **Konfigürasyonlar** sekmesine geçin.  
@@ -105,6 +105,6 @@ Daha fazla bilgi için bkz [. Windows cihazlarını sürüm yükseltme Ilkesiyle
 
 ## <a name="microsoft-edge-legacy-browser-profiles"></a>Microsoft Edge eski tarayıcı profilleri
 <!-- 1357310 -->
-Windows 10 istemcilerinde [Microsoft Edge eski](https://docs.microsoft.com/microsoft-edge/deploy/) Web tarayıcısını kullanan müşteriler için, tarayıcı ayarlarını yapılandırmak üzere bir Configuration Manager uyumluluk ilkesi oluşturun.
+Windows 10 istemcilerinde [Microsoft Edge eski](/microsoft-edge/deploy/) Web tarayıcısını kullanan müşteriler için, tarayıcı ayarlarını yapılandırmak üzere bir Configuration Manager uyumluluk ilkesi oluşturun.
 
 Daha fazla bilgi için bkz. [Microsoft Edge eski tarayıcı profilleri](../deploy-use/browser-profiles.md).

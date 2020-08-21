@@ -10,12 +10,12 @@ ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7a82a635eafcc0ecb5251457db9d4fbb301fce33
-ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
+ms.openlocfilehash: 920f3c9aabcdec1242a6f5e5fc8e6b65c5cc0b53
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86390849"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694619"
 ---
 # <a name="upgrade-windows-devices-to-a-new-edition-with-configuration-manager"></a>Windows cihazlarını Configuration Manager ile yeni bir sürüme yükseltme
 
@@ -35,7 +35,7 @@ Cihazların Configuration Manager istemci yazılımını çalıştırması gerek
 
 Cihazları en son sürüme yükseltmeye başlamadan önce, aşağıdaki önkoşulları gözden geçirin:  
 
-- Windows 10 masaüstü sürümleri için: ilkeyle hedeflediğiniz tüm cihazlarda Windows 'un yeni sürümü için geçerli bir ürün anahtarı. Bu ürün anahtarı birden çok etkinleştirme anahtarı (MAK) veya bir genel toplu lisanslama anahtarı (GVLK) olabilir. Bir GVLK, anahtar yönetimi hizmeti (KMS) istemci kurulum anahtarı olarak da adlandırılır. Daha fazla bilgi için bkz. [toplu etkinleştirme planı](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). KMS istemci kurulum anahtarlarının bir listesi için, bkz. Windows Server etkinleştirme kılavuzunun [ek a](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) . <!--496871-->  
+- Windows 10 masaüstü sürümleri için: ilkeyle hedeflediğiniz tüm cihazlarda Windows 'un yeni sürümü için geçerli bir ürün anahtarı. Bu ürün anahtarı birden çok etkinleştirme anahtarı (MAK) veya bir genel toplu lisanslama anahtarı (GVLK) olabilir. Bir GVLK, anahtar yönetimi hizmeti (KMS) istemci kurulum anahtarı olarak da adlandırılır. Daha fazla bilgi için bkz. [toplu etkinleştirme planı](/windows/deployment/volume-activation/plan-for-volume-activation-client). KMS istemci kurulum anahtarlarının bir listesi için, bkz. Windows Server etkinleştirme kılavuzunun [ek a](/windows-server/get-started/kmsclientkeys) . <!--496871-->  
 
 - Windows 10 Mobile için: Microsoft Toplu Lisanslama Hizmet Merkezi 'nden (VLSC) bir XML Lisans dosyası. Bu dosya, ilkeyle hedeflediğiniz tüm cihazlarda Windows 'un yeni sürümü için lisanslama bilgilerini içerir. Lisanslama XML 'i içeren **Windows 10 Mobile Enterprise**için ISO dosyasını indirin.<!-- SCCMDocs#2033 -->
 
@@ -43,7 +43,7 @@ Cihazları en son sürüme yükseltmeye başlamadan önce, aşağıdaki önkoşu
 
 ## <a name="configure-the-policy"></a>İlkeyi yapılandırma  
 
-1. Configuration Manager konsolunda **varlıklar ve uyum** çalışma alanına gidin, **Uyumluluk ayarları**' nı genişletin ve **Windows 10 sürüm yükseltme** düğümünü seçin.  
+1. Configuration Manager konsolunda **varlıklar ve uyum** çalışma alanına gidin, **Uyumluluk ayarları**' nı genişletin ve  **Windows 10 sürüm yükseltme** düğümünü seçin.  
 
 2. Şeridin **giriş** sekmesinde, **Oluştur** grubunda, **sürüm yükseltme İlkesi Oluştur**' u seçin.  
 
@@ -70,7 +70,7 @@ Cihazları en son sürüme yükseltmeye başlamadan önce, aşağıdaki önkoşu
 
 ## <a name="deploy-the-policy"></a>İlkeyi dağıtma  
 
-1. Configuration Manager konsolunda **varlıklar ve uyum** çalışma alanına gidin, **Uyumluluk ayarları**' nı genişletin ve **Windows 10 sürüm yükseltme** düğümünü seçin.  
+1. Configuration Manager konsolunda **varlıklar ve uyum** çalışma alanına gidin, **Uyumluluk ayarları**' nı genişletin ve  **Windows 10 sürüm yükseltme** düğümünü seçin.  
 
 2. Dağıtmak istediğiniz Windows 10 sürüm yükseltme ilkesini seçin. Şeridin **giriş** sekmesinde, **dağıtım** grubunda, **Dağıt**' ı seçin.  
 
@@ -89,16 +89,16 @@ Bu dağıtımı **izleme** çalışma alanının **dağıtımlar** düğümünde
 
 Bu hatalar dağıtımın başarısız olduğu anlamına gelmez. Hedeflenen cihazda yükseltmenin başarıyla çalıştığını doğrulayın.
 
-İstemci hedeflenen ilkeyi değerlendirirken, yükseltmeyi iki saat içinde uygular. [Bazı Windows sürümlerinde](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades) bu süre için yeniden başlatma gerekebilir. İlkeyi dağıttığınız kullanıcıları bilgilendirdiğinizden emin olun veya ilkeyi kullanıcıların çalışma saatlerinin dışında çalışacak şekilde zamanlayın.
+İstemci hedeflenen ilkeyi değerlendirirken, yükseltmeyi iki saat içinde uygular. [Bazı Windows sürümlerinde](/windows/deployment/upgrade/windows-10-edition-upgrades) bu süre için yeniden başlatma gerekebilir. İlkeyi dağıttığınız kullanıcıları bilgilendirdiğinizden emin olun veya ilkeyi kullanıcıların çalışma saatlerinin dışında çalışacak şekilde zamanlayın.
 
-İstemci üzerindeki **Dcmwmiprovider. log** dosyasında aşağıdaki hata görünürse, etkinleştirme senaryonuz için uygun anahtarı kullandığınızdan emin olun. Daha fazla bilgi için, [başlamadan önce](#before-you-start) bölümüne bakın. Etkinleştirme için bir anahtar yönetimi hizmeti (KMS) kullanıyorsanız, bir [KMS istemci kurulum anahtarı](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys)kullandığınızdan emin olun.  <!-- 496871 -->
+İstemci üzerindeki **Dcmwmiprovider. log** dosyasında aşağıdaki hata görünürse, etkinleştirme senaryonuz için uygun anahtarı kullandığınızdan emin olun. Daha fazla bilgi için, [başlamadan önce](#before-you-start) bölümüne bakın. Etkinleştirme için bir anahtar yönetimi hizmeti (KMS) kullanıyorsanız, bir [KMS istemci kurulum anahtarı](/windows-server/get-started/kmsclientkeys)kullandığınızdan emin olun.  <!-- 496871 -->
 
 `Failed to execute CheckApplicabilityMethod with error = 0x80041001 OsEditionUpgradeProvider`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Toplu etkinleştirme planı](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)
+- [Toplu etkinleştirme planı](/windows/deployment/volume-activation/plan-for-volume-activation-client)
 
-- [Windows 10 sürüm yükseltme](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades)
+- [Windows 10 sürüm yükseltme](/windows/deployment/upgrade/windows-10-edition-upgrades)
 
-- [Microsoft Intune kullanarak cihazlarda Windows 10 sürümlerini yükseltme veya S modunu değiştirme](https://docs.microsoft.com/intune/edition-upgrade-configure-windows-10)
+- [Microsoft Intune kullanarak cihazlarda Windows 10 sürümlerini yükseltme veya S modunu değiştirme](/intune/edition-upgrade-configure-windows-10)

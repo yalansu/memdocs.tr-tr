@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d6703f0889590b3d37d05b7c9b283a16c0150649
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 3b153dad513107b118d11fa95e3feaa035a1bc90
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591641"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692647"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1806 ' deki yenilikler
 
@@ -308,7 +308,7 @@ Daha fazla bilgi için bkz. [Windows uygulamaları oluşturma](../../../apps/get
 
 ### <a name="uninstall-application-on-approval-revocation"></a>Onay iptalinde uygulamayı kaldır
 <!--1357891-->
-Bir uygulama için onayı iptal ettiğinizde davranış değişmiştir. Artık uygulama isteğini reddetmeniz durumunda, istemci uygulamayı kullanıcının cihazından kaldırır. Bu davranış, **cihaz başına kullanıcılara yönelik uygulama isteklerini Onayla** [özelliğini](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_options) etkinleştirmenizi gerektirir. 
+Bir uygulama için onayı iptal ettiğinizde davranış değişmiştir. Artık uygulama isteğini reddetmeniz durumunda, istemci uygulamayı kullanıcının cihazından kaldırır. Bu davranış, **cihaz başına kullanıcılara yönelik uygulama isteklerini Onayla** [özelliğini](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) etkinleştirmenizi gerektirir. 
 
 Daha fazla bilgi için bkz. [uygulamaları dağıtma](../../../apps/deploy-use/deploy-applications.md#bkmk_approval).
 
@@ -348,7 +348,7 @@ Daha fazla bilgi için bkz. [aşama ayarları](../../../osd/deploy-use/create-ph
 
 ### <a name="improvements-to-windows-10-in-place-upgrade-task-sequence"></a>Windows 10 yerinde yükseltme görev dizisinde iyileştirmeler
 <!--1358500-->
-Windows 10 yerinde yükseltme için varsayılan görev sırası şablonu, yükseltme işleminin başarısız olması durumunda eklemek için önerilen eylemleri içeren başka bir yeni grup içerir. Bu eylemler, sorun gidermeyi kolaylaştırır. Bu tür bir araç Windows [Setupdiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag)'dir. Bir Windows 10 yükseltmesinin neden başarısız olduğuna ilişkin ayrıntıları almak için tek başına bir tanılama aracıdır. 
+Windows 10 yerinde yükseltme için varsayılan görev sırası şablonu, yükseltme işleminin başarısız olması durumunda eklemek için önerilen eylemleri içeren başka bir yeni grup içerir. Bu eylemler, sorun gidermeyi kolaylaştırır. Bu tür bir araç Windows [Setupdiag](/windows/deployment/upgrade/setupdiag)'dir. Bir Windows 10 yükseltmesinin neden başarısız olduğuna ilişkin ayrıntıları almak için tek başına bir tanılama aracıdır. 
 
 Daha fazla bilgi için bkz. [bir işletim sistemini yükseltmek için görev dizisi oluşturma](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#recommended-task-sequence-steps-on-failure).
 
@@ -584,7 +584,7 @@ Daha fazla bilgi için bkz. sürüm 1806 ve [ürün geri bildirimi](../../unders
 
 Bu sürüm, yeni özelliklerden başlayarak hata düzeltmeleri gibi ek değişiklikler de içerir. Daha fazla bilgi için bkz. [Configuration Manager geçerli daldaki değişikliklerin özeti, sürüm 1806](https://support.microsoft.com/help/4459701).
 
-Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell 1806 sürüm notları](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps).
+Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell 1806 sürüm notları](/powershell/sccm/1806_release_notes?view=sccm-ps).
 
 Aşağıdaki güncelleştirme paketi (4462978) konsolunda 24 Ekim 2018 ' de başlayan: [güncel dalı Için güncelleştirme paketi, sürüm 1806 Configuration Manager](https://support.microsoft.com/help/4462978).
 
@@ -595,9 +595,9 @@ Aşağıdaki ek düzeltmeler belirli sorunları ele almak için kullanılabilir:
 
 | ID | Başlık | Tarih | Konsol içi |
 |---------|---------|---------|---------|
-| [4346645](https://support.microsoft.com/help/4346645) | Configuration Manager sürüm 1806 için güncelleştirme, ilk dalga | 31 Ağustos 2018 | Yes |
-| [4465865](https://support.microsoft.com/help/4465865) | Yazılım güncelleştirmeleri, WSUS bağlantısı kesildiğinde Configuration Manager ortamda indirmez<br><br>Bu güncelleştirme ayrıca güncelleştirme paketi 'nde (4462978) | 01 Ekim 2018 | Yes |
-| [4471892](https://support.microsoft.com/help/4471892) | PXE Yanıtlayıcısı Configuration Manager 1806 ' deki alt ağlarda çalışmıyor | 23 Kasım 2018 | No |
+| [4346645](https://support.microsoft.com/help/4346645) | Configuration Manager sürüm 1806 için güncelleştirme, ilk dalga | 31 Ağustos 2018 | Evet |
+| [4465865](https://support.microsoft.com/help/4465865) | Yazılım güncelleştirmeleri, WSUS bağlantısı kesildiğinde Configuration Manager ortamda indirmez<br><br>Bu güncelleştirme ayrıca güncelleştirme paketi 'nde (4462978) | 01 Ekim 2018 | Evet |
+| [4471892](https://support.microsoft.com/help/4471892) | PXE Yanıtlayıcısı Configuration Manager 1806 ' deki alt ağlarda çalışmıyor | 23 Kasım 2018 | Hayır |
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune bağlayıcı sertifikası Configuration Manager yenilemez | 18 Ocak 2019 | Evet |
 
 

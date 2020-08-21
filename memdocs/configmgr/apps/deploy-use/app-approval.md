@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f725c1b7dc380a84cd94e666b98dbd309df3744c
-ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
+ms.openlocfilehash: 15aba2a32e680ab9499f5295307c82daafbbed71
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82802064"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695369"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Configuration Manager uygulamaları onaylama
 
@@ -23,11 +23,11 @@ ms.locfileid: "82802064"
 
 Configuration Manager ' de [bir uygulama](deploy-applications.md) dağıttığınızda, yüklemeden önce onay isteyebilirsiniz. Kullanıcılar uygulamayı Yazılım Merkezi 'nde ister ve sonra Configuration Manager konsolundaki isteği gözden geçirin. İsteği onaylayabilir veya reddedebilirsiniz.
 
-## <a name="approval-settings"></a><a name="bkmk_approval"></a>Onay ayarları
+## <a name="approval-settings"></a><a name="bkmk_approval"></a> Onay ayarları
 
 Uygulama onay davranışı, önerilen [isteğe bağlı uygulama onay deneyimini](#bkmk_opt)etkinleştirip etkinleştirmediğinize bağlıdır. Aşağıdaki onay ayarlarından biri, uygulama dağıtımının **dağıtım ayarları** sayfasında görünür:  
 
-### <a name="an-administrator-must-approve-a-request-for-this-application-on-the-device"></a><a name="bkmk_opt"></a>Bir yöneticinin cihazda bu uygulama için bir isteği onaylaması gerekir
+### <a name="an-administrator-must-approve-a-request-for-this-application-on-the-device"></a><a name="bkmk_opt"></a> Bir yöneticinin cihazda bu uygulama için bir isteği onaylaması gerekir
 
 > [!Note]  
 > Configuration Manager Bu özelliği varsayılan olarak etkinleştirmez. Kullanmadan önce, **cihaz başına kullanıcılara yönelik uygulama Isteklerini Onayla**özelliğini etkinleştirin. Daha fazla bilgi için, bkz. [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
@@ -49,11 +49,11 @@ Bir uygulamayı yükleme için onayladıktan sonra, Configuration Manager konsol
 
 Sürüm 1906 ' den başlayarak, konsolundaki bir uygulama isteğini onaylar ve sonra reddetmeniz durumunda yeniden onaylayabilirsiniz. Uygulamayı onayladıktan sonra, uygulama istemciye yeniden yüklenir.  <!-- 4224910 -->
 
-Onay işlemini [onaylama-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) PowerShell cmdlet 'i ile otomatikleştirin. Sürüm 1902 ' den başlayarak, bu cmdlet **ınstallactionbehavior** parametresini içerir. Uygulamanın hemen mi yoksa iş dışı saatlerde mı yükleneceğini belirtmek için bu parametreyi kullanın.<!-- SCCMDocs-pr issue #3418 -->
+Onay işlemini [onaylama-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) PowerShell cmdlet 'i ile otomatikleştirin. Sürüm 1902 ' den başlayarak, bu cmdlet **ınstallactionbehavior** parametresini içerir. Uygulamanın hemen mi yoksa iş dışı saatlerde mı yükleneceğini belirtmek için bu parametreyi kullanın.<!-- SCCMDocs-pr issue #3418 -->
 
 1906 ' den başlayarak hangi dağıtımların onay gerektirdiğini görebilirsiniz. **Uygulamalar** düğümünde bir uygulama seçin. Ayrıntılar bölmesinde **dağıtımlar** sekmesine geçin. Varsayılan olarak yeni bir sütun görüntülenir, **onay gerektirir**.
 
-#### <a name="retry-the-install-of-pre-approved-applications"></a><a name="bkmk_retry"></a>Önceden onaylanan uygulamalar yüklemesini yeniden deneyin
+#### <a name="retry-the-install-of-pre-approved-applications"></a><a name="bkmk_retry"></a> Önceden onaylanan uygulamalar yüklemesini yeniden deneyin
 
 <!--4336307-->
 Sürüm 1906 ' den başlayarak, daha önce bir kullanıcı veya cihaz için onaylanmış bir uygulamanın yüklemesini yeniden deneyebilirsiniz. Onay seçeneği yalnızca kullanılabilir dağıtımlar içindir. Kullanıcı uygulamayı kaldırırsa veya ilk yükleme işlemi başarısız olursa, Configuration Manager durumunu yeniden değerlendirmez ve yeniden yüklemez. Bu özellik destek teknisyeninin, yardım için çağıran bir kullanıcı için uygulama yüklemeyi hızlı bir şekilde yeniden denemesini sağlar.
@@ -76,7 +76,7 @@ Uygulama başarıyla yüklenemezse veya Kullanıcı uygulamayı kaldırırsa, ye
 - [ConfigMgr 1810 uygulama onayı geliştirmeleri](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/Application-approval-improvements-in-ConfigMgr-1810/ba-p/303534)
 - [Configuration Manager 'de uygulama onay işlemine yönelik güncelleştirmeler](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/Updates-to-the-application-approval-process-in-Configuration/ba-p/275048)
 
-### <a name="require-administrator-approval-if-users-request-this-application"></a><a name="bkmk_prior"></a>Kullanıcıların bu uygulamayı istemesi durumunda yönetici onayı iste
+### <a name="require-administrator-approval-if-users-request-this-application"></a><a name="bkmk_prior"></a> Kullanıcıların bu uygulamayı istemesi durumunda yönetici onayı iste
 
 > [!Note]  
 > Bu deneyim, önerilen [isteğe bağlı uygulama onay deneyimini](#bkmk_opt)etkinleştirmezseniz geçerlidir.
@@ -87,7 +87,7 @@ Uygulama onay istekleri, **yazılım kitaplığı** çalışma alanındaki **uyg
 
 Bir uygulamayı yükleme için onayladıktan sonra, Configuration Manager konsolundaki isteği **reddedebilirsiniz** . Bu eylem, istemcinin uygulamayı herhangi bir cihazdan kaldırmasına neden olmaz. Kullanıcıların yazılım merkezi 'nden uygulamanın yeni kopyalarını yüklemesini engeller.  
 
-## <a name="email-notifications"></a><a name="bkmk_email-approve"></a>E-posta bildirimleri
+## <a name="email-notifications"></a><a name="bkmk_email-approve"></a> E-posta bildirimleri
 
 <!--1321550-->
 
@@ -150,13 +150,13 @@ Bu ek isteğe bağlı önkoşullara sahip olan alıcılar, internet erişimi ola
 
         1. `<CMG FQDN>`Bulut yönetimi ağ geçidi (CMG) hizmetinizin tam etki alanı adı (FQDN) ile değiştirin. Örneğin, GraniteFalls.Contoso.com.  
 
-        1. Sonra **Kaydet**' i seçin.  
+        1. Sonra **Kaydet**'i seçin.  
 
     1. **Yönet** menüsünde, **bildirim**' ı seçin.  
 
         1. Bildirim Düzenleme bölmesinde **oauth2AllowImplicitFlow** özelliğini bulun.  
 
-        1. Değerini **true**olarak değiştirin. Örneğin, tüm satır aşağıdaki satıra benzer görünmelidir:`"oauth2AllowImplicitFlow": true,`  
+        1. Değerini **true**olarak değiştirin. Örneğin, tüm satır aşağıdaki satıra benzer görünmelidir: `"oauth2AllowImplicitFlow": true,`  
 
         1. **Kaydet**’i seçin.  
 

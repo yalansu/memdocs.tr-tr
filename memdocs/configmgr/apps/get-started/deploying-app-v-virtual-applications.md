@@ -10,12 +10,12 @@ ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df6f550b21523e365055f6a4cdafadca7603c4bf
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 63db181bd145ea2fa14f206e94c521b65f7e7354
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906379"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695163"
 ---
 # <a name="deploy-app-v-virtual-applications-with-configuration-manager"></a>Configuration Manager ile App-V sanal uygulamalarını dağıtma
 
@@ -31,7 +31,7 @@ Sanal uygulamaları yönetmek için Configuration Manager kullandığınızda, a
 
 -   Sanal uygulamaları desteklemek için işletim sistemi dağıtımı, yazılım ve donanım envanteri, yazılım ölçümü ve varlık yönetim bilgileri  
 
-Microsoft Application Virtualization (App-V) ile uygulama oluşturma ve sıralama hakkında daha fazla bilgi için bkz. [Application Virtualization 4 belgeleri](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v4/).  
+Microsoft Application Virtualization (App-V) ile uygulama oluşturma ve sıralama hakkında daha fazla bilgi için bkz. [Application Virtualization 4 belgeleri](/microsoft-desktop-optimization-pack/appv-v4/).  
 
 Bir uygulama oluşturmaya yönelik diğer Configuration Manager gereksinimleri ve yordamlarına ek olarak, sanal uygulama oluştururken ve dağıtırken aşağıdaki noktaları dikkate almanız gerekir:
 
@@ -65,9 +65,9 @@ Bir uygulama oluşturmaya yönelik diğer Configuration Manager gereksinimleri v
 
 Windows 10 ' da App-V hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
-- [App-V ' d a yenilikler](https://docs.microsoft.com/windows/application-management/app-v/appv-about-appv)
-- [Windows 10 için App-V ile çalışmaya başlama](https://docs.microsoft.com/windows/application-management/app-v/appv-getting-started)
-- [Mevcut bir yüklemeden Windows 10 için App-V ' d e yükseltme](https://docs.microsoft.com/windows/application-management/app-v/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
+- [App-V ' d a yenilikler](/windows/application-management/app-v/appv-about-appv)
+- [Windows 10 için App-V ile çalışmaya başlama](/windows/application-management/app-v/appv-getting-started)
+- [Mevcut bir yüklemeden Windows 10 için App-V ' d e yükseltme](/windows/application-management/app-v/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
 
 ##  <a name="steps-to-manage-app-v-virtual-applications"></a>App-V sanal uygulamalarını yönetme adımları  
  App-V sanal uygulamalarını yönetmek için aşağıdaki adımları izleyin:  
@@ -90,7 +90,7 @@ App-V Istemcisini yönetmek için Configuration Manager kullandığınızda, san
 
 Akış tesliminin sizin için en iyi teslim yöntemi olup olmadığına karar vermenize yardımcı olması için bu tablodaki bilgileri kullanın:
 
-|Yararları|Dezavantajlar|  
+|Avantajlar|Dezavantajlar|  
 |----------------|-------------------|  
 |Bu yöntemde, dağıtım noktalarından paket içeriğinin akışını gerçekleştirmek için standart ağ protokolleri kullanılır.<br /><br /> Sanal uygulamalara ilişkin program kısayolları, dağıtım noktasına yönelik bir bağlantı başlatır; dolayısıyla sanal uygulama teslimi isteğe bağlı olur.<br /><br /> Bu yöntem, dağıtım noktalarıyla yüksek bant genişlikli bağlantıları olan istemcilerde iyi işler.<br /><br /> İstemciler, geçerli sürümün eski sürümün yerini aldığını bildiren ilkeyi aldıklarında kuruluş genelinde dağıtılan güncelleştirilmiş sanal uygulamalar kullanılabilir olur ve istemciler yalnızca eski sürümden farklılıkları indirirler.<br /><br /> Kullanıcıların yetkisiz uygulamalara veya paketlere erişimini önlemek için izin erişimleri dağıtım noktasında tanımlanır.|Kullanıcı uygulamayı ilk defa çalıştırana kadar sanal uygulamaların akışı gerçekleştirilmez. Bu senaryoda, kullanıcı sanal uygulamalar için program kısayollarını alabilir ve ardından sanal uygulamaları ilk defa çalıştırmadan önce ağ bağlantısını kesebilir. İstemci çevrimdışıyken Kullanıcı sanal uygulamayı çalıştırmaya çalışırsa, Kullanıcı bir hata görür ve sanallaştırılmış uygulamayı çalıştıramıyor çünkü Configuration Manager bir dağıtım noktası, uygulamanın akışını sağlamak için kullanılabilir değildir. Kullanıcı ağa yeniden bağlanıp uygulamayı çalıştırana kadar uygulama kullanılamaz.<br /><br /> Bundan kaçınmak amacıyla, istemcilere sanal uygulama teslimi için yerel teslim yöntemini kullanabilirsiniz veya akışla teslim için Internet tabanlı istemci yönetimini etkinleştirebilirsiniz.|  
 
@@ -99,7 +99,7 @@ Bu yaklaşım, diğer uygulama biçimlerinin Configuration Manager ile nasıl te
 
 Yerel teslimin sizin için en iyi teslim yöntemi olup olmadığına karar vermenize yardımcı olması için bu tablodaki bilgileri kullanın:   
 
-|Yararları|Dezavantajlar|  
+|Avantajlar|Dezavantajlar|  
 |----------------|-------------------|  
 |Arka Plan Akıllı Aktarım Hizmeti (BITS) kullanılarak paketi indirmek için standart dağıtım noktası işlevselliği kullanılır.<br /><br /> Sanal uygulama paketi içerikleri istemciye yerel olarak dağıtılır. Bu, kullanıcıların bilgisayarlarını ağa bağlı olmadığında çalıştırabileceği anlamına gelir.<br /><br /> Bu yöntem, yavaş ve güvenilmeyen ağ bağlantıları için ve nadiren ağa bağlanan bilgisayarlar için uygundur.<br /><br /> Configuration Manager, yalnızca sanal uygulama paketi içeriği güncelleştirilirken değiştirilen dosyalardaki baytları istemcilere göndermek için uzaktan değişiklikleri sıkıştırma (RDC) kullanır. Configuration Manager istemcisi, paketin geçerli sürümüne ve istemciye gönderilen değişikliklere dayalı olarak bir sanal uygulama paketinin yeni bir sürümünü oluşturmak için RDC 'yi kullanır.<br /><br /> Bu yöntem, mobil kullanıcılar veya bağlantısı kesilmiş kullanıcılar için uygulama dayanıklılığı sağlar. Yöneticiler, sanal uygulama bir Install eylemiyle dağıtılmışsa, dağıtım sonrasında paketi Configuration Manager önbellekte kalıcı hale getirmek için seçim yapabilir. Configuration Manager istemci önbelleğindeki paket, App-V Istemcisinin paketini önbelleğine çekmek için yerel, güvenilir bir akış kaynağı işlevi görür.|Sanal uygulama Configuration Manager önbelleğinde kalıcı olduğunda, istemcide sanal uygulama paketinin boyutunun iki katına eşit olan disk alanı gerekir.|  
 
@@ -147,7 +147,7 @@ Bu özelliği Configuration Manager birlikte kullanabilmeniz için her iki paket
 App-V Dynamic Suite Composition hakkında daha fazla bilgi edinmek için App-V belgelerinize bakın.  
 
 ##  <a name="converting-app-v-46-applications-to-app-v-5-applications"></a> App-V 4.6 uygulamalarını App-V 5 uygulamalarına dönüştürme  
-App-V 4.6 ve App-V 5 arasındaki uygulama paket biçimi değişmiştir. App-V 4.6 kullanılarak sıralanmış olan uygulamalar artık desteklenmez. Ancak App-V 5, uygulamaları dönüştürmek için kullanabileceğiniz bir paket dönüştürücü aracına sahiptir. Daha fazla bilgi için bkz. [App-V ' nin önceki bir sürümünde oluşturulan paketi dönüştürme](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/how-to-convert-a-package-created-in-a-previous-version-of-app-v).  
+App-V 4.6 ve App-V 5 arasındaki uygulama paket biçimi değişmiştir. App-V 4.6 kullanılarak sıralanmış olan uygulamalar artık desteklenmez. Ancak App-V 5, uygulamaları dönüştürmek için kullanabileceğiniz bir paket dönüştürücü aracına sahiptir. Daha fazla bilgi için bkz. [App-V ' nin önceki bir sürümünde oluşturulan paketi dönüştürme](/microsoft-desktop-optimization-pack/appv-v5/how-to-convert-a-package-created-in-a-previous-version-of-app-v).  
 
 App-V 4.6 uygulamalarını App-V 5 uygulamalarına dönüştürmek için aşağıdaki adımları kullanın:  
 
@@ -178,7 +178,7 @@ Dağıtım yapılandırma dosyası, kayıt defteri ayarları gibi, bilgisayara u
 
 App-V 5 sanal uygulamalarını Configuration Manager dağıtmak istiyorsanız, App-V 5 dağıtım türünü oluşturduğunuzda üç dosyanın tümünün aynı klasörde mevcut olması gerekir. Klasörde birden fazla dosya varsa Configuration Manager en güncel olanı kullanır.  
 
-Daha fazla bilgi için [App-V 5,0 dinamik yapılandırma hakkında](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50-dynamic-configuration)bölümüne bakın.  
+Daha fazla bilgi için [App-V 5,0 dinamik yapılandırma hakkında](/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50-dynamic-configuration)bölümüne bakın.  
 
 ##  <a name="app-v-local-interaction"></a>App-V yerel etkileşimi  
 Bazı uygulama dağıtım senaryolarında, uygulamalar istemci bilgisayarlarına yerel olarak yüklenir ve diğer uygulamalar aynı istemci bilgisayarına sanal uygulamalar olarak dağıtılır. Varsayılan olarak, yerel olarak yüklenen uygulamalar sanal uygulamaları doğrudan görüntüleyemez veya bağlanamaz. Bu, App-V tarafından sağlanan uygulama yalıtımının amaçlanan davranışıdır. Yerel etkileşim, bir App-V Istemcisinin, bir istemci bilgisayarda çalışan yerel olarak yüklenen uygulamalara, sanallaştırılmış uygulamalarla ilgili ve iletişim kurmasına izin vermek için etkinleştirebilen bir özelliktir. Configuration Manager ve App-V yerel etkileşimi tam olarak destekler.  
@@ -186,7 +186,7 @@ Bazı uygulama dağıtım senaryolarında, uygulamalar istemci bilgisayarlarına
 App-V yerel etkileşim özelliği hakkında daha fazla bilgi için App-V belgelerinize bakın.  
 
 ##  <a name="app-v-5-shared-content-store"></a> App-V 5 Paylaşılan İçerik Deposu  
-Configuration Manager App-V 5 paylaşılan Içerik depolama özelliğini destekler. Daha fazla bilgi için bkz. [App-V 5.0 Paylaşılan İçerik Deposu (SCS) Planlaması](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/planning-for-the-app-v-50-sequencer-and-client-deployment#planning-for-the-app-v-50-shared-content-store-scs).  
+Configuration Manager App-V 5 paylaşılan Içerik depolama özelliğini destekler. Daha fazla bilgi için bkz. [App-V 5.0 Paylaşılan İçerik Deposu (SCS) Planlaması](/microsoft-desktop-optimization-pack/appv-v5/planning-for-the-app-v-50-sequencer-and-client-deployment#planning-for-the-app-v-50-shared-content-store-scs).  
 
 ##  <a name="monitoring-virtual-applications"></a>Sanal uygulamaları izleme  
 
@@ -206,4 +206,4 @@ Configuration Manager ortamınızda App-V ' i izlemek için aşağıdaki raporla
 ### <a name="log-files"></a>Günlük dosyaları  
 Configuration Manager, günlük dosyalarındaki sanal uygulama dağıtımlarıyla ilgili bilgileri kaydeder. Sanal uygulamaların ve Configuration Manager uygulama yönetiminin kullandığı günlük dosyaları hakkında bilgi için bkz. [günlük dosyaları](../../core/plan-design/hierarchy/log-files.md).  
 
-Windows 8.1 için C:\ProgramData\Microsoft\Application Virtualization Istemcisinde App-V istemcisine ait günlükleri bulun.  
+Windows 8.1 için C:\ProgramData\Microsoft\Application Virtualization Istemcisinde App-V istemcisine ait günlükleri bulun.

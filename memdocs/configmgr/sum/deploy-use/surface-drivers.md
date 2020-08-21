@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
-ms.openlocfilehash: f276db618a2e67832ffa5575622e00eea02c7422
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: c0b4942e8a6e81477814e24281e0d9e3752c5f90
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438623"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696880"
 ---
 # <a name="manage-surface-drivers-with-configuration-manager"></a>Configuration Manager ile yüzey sürücülerini yönetme
 
@@ -52,7 +52,7 @@ Surface sürücülerinin eşitlenmesini etkinleştirmek için aşağıdaki adım
 1. Surface sürücüleri Configuration Manager ' ye getirmek için [yazılım güncelleştirme noktanızı eşitler](../get-started/synchronize-software-updates.md) .
 1. Yüzey sürücüleri eşitlendikten sonra, diğer güncelleştirmeleri dağıtırken aynı şekilde dağıtın.
 
-## <a name="products-for-surface-drivers"></a><a name="bkmk_prod"></a>Surface sürücüleri için ürünler
+## <a name="products-for-surface-drivers"></a><a name="bkmk_prod"></a> Surface sürücüleri için ürünler
 
 Çoğu sürücü aşağıdaki ürün gruplarına aittir:
 
@@ -83,7 +83,7 @@ Surface sürücülerinin eşitlenmesini etkinleştirmek için aşağıdaki adım
 > [!NOTE]
 > Birçok yüzey sürücüsü birden çok Windows 10 ürün grubuna aittir. Burada listelenen tüm ürünleri seçmeniz gerekebilir. Güncelleştirme kataloğunuzun doldurulmasına yönelik ürünlerin sayısını azaltmaya yardımcı olmak için yalnızca eşitleme için ortamınız için gereken ürünleri seçmenizi öneririz.
 
-## <a name="surface-models"></a><a name="bkmk_models"></a>Yüzey modelleri
+## <a name="surface-models"></a><a name="bkmk_models"></a> Yüzey modelleri
 
 Aşağıdaki tablo, Configuration Manager sürücüleri yükleyebilecekleri Windows 10 ' un yüzey modellerini ve sürümlerini içerir. Surface sürücü güncelleştirmeleri, Microsoft Update kataloğunda yayımlandıkları gün Configuration Manager kullanılamaz. Configuration Manager, hangi yüzey sürücülerinin içeri aktarılacağını kendi listesini tutar. Windows 10 S ürünleri gerektiren cihazlar belirtilmiştir. Microsoft amaçlar, yüzey sürücülerinin ikinci Salı günü, Configuration Manager eşitlemeye uygun hale getirmek için her ay Salı ve daha sonra izin verilenler listesine eklenmesini sağlar. Daha fazla bilgi için bkz. [sık sorulan sorular](#bkmk_faq).
 
@@ -91,21 +91,21 @@ Aşağıdaki tablo, Configuration Manager sürücüleri yükleyebilecekleri Wind
 
 |Yüzey modeli|Windows 10 1709| Windows 10 1803|Windows 10 1809|Windows 10 1903|Windows 10 1909|
 |----|----|----|----|----|----|
-|Surface Pro 3|Yes| Yes| Yes |Yes|Yes|
-|Surface Pro 4|Yes| Yes| Yes |Yes|Yes|
-|Surface Pro 6|Yok| Yes| Yes |Yes|Yes|
-|Surface Pro 7|Yok| Yok| Yok |Yes|Yes|
-|Surface Pro X|Yok| Yok| Yok |Yes|Yes|
-|Surface Book|Yes| Yes| Yes |Yes|Yes|
-|Surface Book 2|Yes| Yes| Yes |Yes|Yes|
-|Surface Book 3|Yok| Yok| Yok |Yes|Yes|
+|Surface Pro 3|Evet| Evet| Evet |Evet|Evet|
+|Surface Pro 4|Evet| Evet| Evet |Evet|Evet|
+|Surface Pro 6|N/A| Evet| Evet |Evet|Evet|
+|Surface Pro 7|Yok| Yok| Yok |Evet|Evet|
+|Surface Pro X|Yok| Yok| Yok |Evet|Evet|
+|Surface Book|Evet| Evet| Evet |Evet|Evet|
+|Surface Book 2|Evet| Evet| Evet |Evet|Evet|
+|Surface Book 3|Yok| Yok| Yok |Evet|Evet|
 |Yüzey dizüstü bilgisayar|Evet, "Windows 10 S sürüm 1709 ve üzeri bakım sürücüleri" seçiliyken seçili| Evet, "Windows 10 S sürüm 1803 ve üzeri bakım sürücüleri" seçiliyken seçili|Evet, "Windows 10 S sürüm 1809 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|Evet, "Windows 10 S sürüm 1903 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|Evet, "Windows 10 S sürüm 1903 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|
-|Yüzey dizüstü 2|Yok| Yes |Yes|Yes|Yes|
-|Yüzey dizüstü 3|Yok| Yok|Yok|Yes |Yes|
-|Yüzey go|Yok| Evet, "Windows 10 S sürüm 1803 ve üzeri bakım sürücüleri" seçiliyken seçili|Evet, "Windows 10 S sürüm 1809 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|Evet, "Windows 10 S sürüm 1903 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|Evet, "Windows 10 S sürüm 1903 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|
-|Yüzey git 2|Yok| Yok| Yes |Yes|Evet, "Windows 10 S sürüm 1903 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|
-|Surface Studio|Yes| Yes| Yes |Yes|Yes|
-|Surface Studio 2|Yok| Yes| Yes |Yes|Yes|
+|Yüzey dizüstü 2|N/A| Evet |Evet|Evet|Evet|
+|Yüzey dizüstü 3|Yok| Yok|Yok|Evet |Evet|
+|Yüzey go|N/A| Evet, "Windows 10 S sürüm 1803 ve üzeri bakım sürücüleri" seçiliyken seçili|Evet, "Windows 10 S sürüm 1809 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|Evet, "Windows 10 S sürüm 1903 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|Evet, "Windows 10 S sürüm 1903 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|
+|Yüzey git 2|Yok| Yok| Evet |Evet|Evet, "Windows 10 S sürüm 1903 ve sonraki sürümleri & hizmet sürücülerini yükseltme" seçiliyken|
+|Surface Studio|Evet| Evet| Evet |Evet|Evet|
+|Surface Studio 2|N/A| Evet| Evet |Evet|Evet|
 
 ## <a name="verify-the-configuration"></a>Yapılandırmayı doğrulama
 
@@ -136,7 +136,7 @@ Yazılım güncelleştirme noktasının doğru şekilde yapılandırıldığın�
    Bu giriş, şu anda yazılım güncelleştirme noktası sunucunuz tarafından eşitlenmiş olan her ürün grubunu ve sınıflandırmayı listeleyen bir XML öğesidir. Seçtiğiniz ürünleri bulamıyorsanız, yazılım güncelleştirme noktasının ürünleri, Çift denetimi kaydedilir.
 1. Bir sonraki eşitleme bitene kadar de bekleyebilirsiniz. Daha sonra yüzey sürücüsü ve bellenim güncelleştirmelerinin Configuration Manager konsolundaki yazılım güncelleştirmelerinde listelenip listelenmediğini denetleyin. Örneğin, konsol şu bilgileri görüntüleyebilir: ![ Configuration Manager konsolunda eşitlenmiş yüzey sürücüleri](media/synchronized-surface-drivers.png)
 
-##  <a name="frequently-asked-questions-faq"></a><a name="bkmk_faq"></a>Sık sorulan sorular (SSS)
+##  <a name="frequently-asked-questions-faq"></a><a name="bkmk_faq"></a> Sık sorulan sorular (SSS)
 
 ### <a name="after-i-follow-the-steps-in-this-article-my-surface-drivers-are-still-not-synchronized-why"></a>Bu makaledeki adımları izledikten sonra yüzey Sürücülerim hala eşitlenmedi. Neden?
 
@@ -154,12 +154,12 @@ Hayır. Güncelleştirme WSUS 'e aktarılsa bile, güncelleştirme izin verilenl
 
 ### <a name="what-alternative-methods-do-i-have-to-deploy-surface-driver-and-firmware-updates"></a>Surface sürücü ve üretici yazılımı güncelleştirmelerini hangi alternatif yöntemlerle dağıtmalıyım?
 
-Farklı kanallar aracılığıyla yüzey sürücüsü ve bellenim güncelleştirmelerinin nasıl dağıtılacağı hakkında bilgi için bkz. [Surface sürücü ve bellenim güncelleştirmelerini yönetme](https://docs.microsoft.com/surface/manage-surface-driver-and-firmware-updates). . Msi veya. exe dosyasını indirmek ve sonra geleneksel yazılım dağıtım kanalları aracılığıyla dağıtmak istiyorsanız, bkz. [Surface üretici yazılımının Configuration Manager Ile güncelleştirilmesini koruma](https://docs.microsoft.com/archive/blogs/thejoncallahan/keeping-surface-firmware-updated-with-configuration-manager).
+Farklı kanallar aracılığıyla yüzey sürücüsü ve bellenim güncelleştirmelerinin nasıl dağıtılacağı hakkında bilgi için bkz. [Surface sürücü ve bellenim güncelleştirmelerini yönetme](/surface/manage-surface-driver-and-firmware-updates). . Msi veya. exe dosyasını indirmek ve sonra geleneksel yazılım dağıtım kanalları aracılığıyla dağıtmak istiyorsanız, bkz. [Surface üretici yazılımının Configuration Manager Ile güncelleştirilmesini koruma](/archive/blogs/thejoncallahan/keeping-surface-firmware-updated-with-configuration-manager).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Yüzey sürücüleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [Yüzey ve System Center Configuration Manager ilgili konular](https://docs.microsoft.com/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
+- [Yüzey ve System Center Configuration Manager ilgili konular](/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
 - [Yüzey güncelleştirme geçmişi](https://support.microsoft.com/help/4036283/surface-surface-update-history)
 - [Surface cihazları için en son bellenim ve sürücüleri indirin](/surface/manage-surface-driver-and-firmware-updates)

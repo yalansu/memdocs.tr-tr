@@ -10,24 +10,24 @@ ms.assetid: e217699a-28b2-471a-b421-8fbd1d1fd638
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4d13d9dfd75abb656a765ce8c91ce6f177636cd3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: ca7d81ba112c9eb79fb8bcfff96fb213b87b44c3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127180"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694823"
 ---
 # <a name="onedrive-for-business-profiles"></a>OneDrive İş Profilleri
 
-Configuration Manager sürüm 1902 ' den başlayarak, Windows bilinen klasörlerini OneDrive Iş 'e taşımak için OneDrive Iş profilleri oluşturabilirsiniz. Bu klasörler Masaüstü, belgeler ve resimleri içerir. Her profilde, Windows bilinen klasörlerini taşımaya yönelik ayarları belirtebilirsiniz. OneDrive Iş hakkında daha fazla bilgi için bkz. [yeniden yönlendirme ve Windows bilinen klasörlerini OneDrive 'a taşıma](https://docs.microsoft.com/onedrive/redirect-known-folders). <!--3556021-->
+Configuration Manager sürüm 1902 ' den başlayarak, Windows bilinen klasörlerini OneDrive Iş 'e taşımak için OneDrive Iş profilleri oluşturabilirsiniz. Bu klasörler Masaüstü, belgeler ve resimleri içerir. Her profilde, Windows bilinen klasörlerini taşımaya yönelik ayarları belirtebilirsiniz. OneDrive Iş hakkında daha fazla bilgi için bkz. [yeniden yönlendirme ve Windows bilinen klasörlerini OneDrive 'a taşıma](/onedrive/redirect-known-folders). <!--3556021-->
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-- [Microsoft 365 Kiracı KIMLIĞINIZI bulun](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
+- [Microsoft 365 Kiracı KIMLIĞINIZI bulun](/onedrive/find-your-office-365-tenant-id)  
 
-- OneDrive Sync Client sürüm 18.111.0603.0004 veya üstünü dağıtın. Daha fazla bilgi için bkz. [Configuration Manager kullanarak OneDrive uygulamaları dağıtma](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+- OneDrive Sync Client sürüm 18.111.0603.0004 veya üstünü dağıtın. Daha fazla bilgi için bkz. [Configuration Manager kullanarak OneDrive uygulamaları dağıtma](/onedrive/deploy-on-windows).  
 
-## <a name="move-windows-known-folders-to-onedrive"></a><a name="bkmk_odfb"></a>Windows bilinen klasörlerini OneDrive 'a taşı
+## <a name="move-windows-known-folders-to-onedrive"></a><a name="bkmk_odfb"></a> Windows bilinen klasörlerini OneDrive 'a taşı
 <!--3556021-->
 Windows bilinen klasörlerini OneDrive Iş 'e taşımak için Configuration Manager kullanın. Bu klasörler Masaüstü, belgeler ve resimleri içerir. Windows 10 yükseltmelerinizi basitleştirmek için, bir görev dizisini dağıtmadan önce bu ayarları Windows 7 istemcilerine dağıtın. 
 

@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5ee84a41a5c47ce554e4618b897c8e4933bdbe73
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 29b5dd8fdceb803de77aff9adbd0614d1e201b18
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129061"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694278"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager için kaldırılan ve kullanım dışı bırakılan özellikler
 
@@ -34,7 +34,7 @@ Aşağıdaki özellikler kullanım dışıdır. Artık bunları kullanmaya devam
 |Azure 'dan içerik paylaşmaya yönelik uygulama değişti. İçerik etkinleştirilmiş bir bulut yönetimi ağ geçidi kullanın. Gelecekte geleneksel bir bulut dağıtım noktası oluşturamayacak.|Şubat 2019|TBD<sup>[Note 1](#bkmk_note1)</sup>|
 |Bulut yönetimi ağ geçidi ve bulut dağıtım noktası için Azure 'a klasik hizmet dağıtımı. Daha fazla bilgi için [plan for CMG](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager)konusuna bakın.|Kasım 2018|TBD<sup>[Note 1](#bkmk_note1)</sup>|
 
-### <a name="note-1-support-removed-tbd"></a><a name="bkmk_note1"></a>Note 1: destek TBD
+### <a name="note-1-support-removed-tbd"></a><a name="bkmk_note1"></a> Note 1: destek TBD
 
 Belirli bir zaman çerçevesi belirlenir (TBD). Microsoft, yeni süreç veya özelliğe değiştirmenizi önerir, ancak yakın bir işlem için kullanım dışı olan işlemleri veya özelliği kullanmaya devam edebilirsiniz.
 
@@ -68,7 +68,7 @@ Aşağıdaki özellikler artık desteklenmiyor. Bazı durumlarda, bunlar üründ
 
 Aşağıdaki bölümlerde sürüm 1511 ile kaldırılan özellikler için ek ayrıntılar yer alır:
 
-#### <a name="out-of-band-management"></a><a name="bkmk_amt"></a>Bant dışı yönetim  
+#### <a name="out-of-band-management"></a><a name="bkmk_amt"></a> Bant dışı yönetim  
 
 Configuration Manager, Configuration Manager konsolunun içinden AMT tabanlı bilgisayarlar için yerel destek kaldırılmıştır.  
 
@@ -76,11 +76,11 @@ Configuration Manager, Configuration Manager konsolunun içinden AMT tabanlı bi
 
 - System Center 2012 Configuration Manager bant dışı yönetim bu değişiklikten etkilenmez.  
 
-#### <a name="network-access-protection"></a><a name="bkmk_nap"></a>Ağ erişim koruması
+#### <a name="network-access-protection"></a><a name="bkmk_nap"></a> Ağ erişim koruması
 
 Configuration Manager ağ erişim koruması desteğini kaldırdı. Özellik Windows Server 2012 R2 'de kullanımdan kaldırılmıştır ve Windows 10 ' dan kaldırılmıştır.  
 
-Ağ erişimi koruması alternatifleri için [Ağ İlkesi ve Erişim Hizmetlerine Genel Bakış](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)) konusundaki *Devre dışı bırakılan işlevsellik* bölümüne bakın.
+Ağ erişimi koruması alternatifleri için [Ağ İlkesi ve Erişim Hizmetlerine Genel Bakış](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)) konusundaki *Devre dışı bırakılan işlevsellik* bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

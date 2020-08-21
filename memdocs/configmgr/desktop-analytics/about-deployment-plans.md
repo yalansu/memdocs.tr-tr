@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: acaa7c8a906edd78f0c54c5735c97c55434d848b
-ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
+ms.openlocfilehash: 0e9f1551f75c1cb8499c5eab846588ee6ddc1d80
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87400724"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693395"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Masaüstü analizinden dağıtım planları hakkında
 
@@ -70,7 +70,7 @@ Dağıtım planındaki her bir cihaz için **Windows yükseltme kararına** bak�
 
 **Cihazın yerini alacak** Windows yükseltme kararı aşağıdaki nedenlerden biri olabilir:
 
-- Windows 10 gerekli bir işlemci denetiminde başarısız oldu. Daha fazla bilgi için bkz. [En düşük donanım gereksinimleri](https://docs.microsoft.com/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor).
+- Windows 10 gerekli bir işlemci denetiminde başarısız oldu. Daha fazla bilgi için bkz. [En düşük donanım gereksinimleri](/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor).
 - BIOS bloğu vardır
 - Yeterli belleğe sahip değil
 - Sistemdeki bir önyükleme kritik bileşeni engellenmiş bir sürücüye sahip
@@ -132,4 +132,4 @@ Bir dağıtım planı oluşturduktan sonra, ürünleri dağıtmak için Configur
 
 - [Güvenlik ve özellik güncelleştirmeleri hakkında bilgi edinin](about-updates.md)  
 
-- [Dağıtım planı oluşturma](create-deployment-plans.md)  
+- [Dağıtım planı oluşturma](create-deployment-plans.md)

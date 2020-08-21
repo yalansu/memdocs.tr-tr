@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: fc4309d3d09cd35c17b23bc46dcb1a28d210aa8e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 5c5337433b0d64ec1f6bf1efae97bd2391031f2e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125755"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694279"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Öğretici: pilot 'a Windows 10 dağıtma
 
@@ -32,7 +32,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 Azure aboneliğiniz yoksa başlamadan önce [ücretsiz bir hesap](https://azure.microsoft.com/free) oluşturun. Düzgün yapılandırıldığında, masaüstü analizlerinin kullanımı hiçbir Azure maliyetine neden olmaz.
 
-Masaüstü analizi, Azure aboneliğinizde bir *Log Analytics çalışma alanı* kullanır. Çalışma alanı, temelde hesap bilgilerini ve hesaba ilişkin basit yapılandırma bilgilerini içeren bir kapsayıcıdır. Daha fazla bilgi için bkz. [çalışma alanlarını yönetme](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json).
+Masaüstü analizi, Azure aboneliğinizde bir *Log Analytics çalışma alanı* kullanır. Çalışma alanı, temelde hesap bilgilerini ve hesaba ilişkin basit yapılandırma bilgilerini içeren bir kapsayıcıdır. Daha fazla bilgi için bkz. [çalışma alanlarını yönetme](/azure/log-analytics/log-analytics-manage-access?toc=%2fazure%2fazure-monitor%2ftoc.json).
 
 
 
@@ -76,8 +76,8 @@ Bu öğreticiye başlamadan önce aşağıdaki önkoşullara sahip olduğunuzdan
     - `https://kmwatsonc.events.data.microsoft.com`  
     - `https://oca.telemetry.microsoft.com`  
     - `https://login.live.com`  
-    - `https://graph.windows.net`(yalnızca Configuration Manager sunucu rolü)
-    - `https://*.manage.microsoft.com`(yalnızca Configuration Manager sunucu rolü)
+    - `https://graph.windows.net` (yalnızca Configuration Manager sunucu rolü)
+    - `https://*.manage.microsoft.com` (yalnızca Configuration Manager sunucu rolü)
 
     Daha fazla bilgi için bkz. [Masaüstü analizi için veri paylaşımını etkinleştirme](enable-data-sharing.md#endpoints).  
 
@@ -102,7 +102,7 @@ Bu yordamı kullanarak, masaüstü analizine oturum açın ve aboneliğinizde ya
 
         Bu seçeneği seçmezseniz, masaüstü Analizi kullanıcıları yine de güvenlik grubunun üyesi olarak ekler. **Genel yöneticinin** kullanıcılar Için **Masaüstü Analizi yönetici** rolünü el ile ataması gerekir.  
 
-        Azure Active Directory ' de yönetici rolü izinleri atama hakkında daha fazla bilgi ve **Masaüstü Analizi yöneticilerine**atanan izinler hakkında daha fazla bilgi için, bkz. [Azure Active Directory içindeki yönetici rolü izinleri](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+        Azure Active Directory ' de yönetici rolü izinleri atama hakkında daha fazla bilgi ve **Masaüstü Analizi yöneticilerine**atanan izinler hakkında daha fazla bilgi için, bkz. [Azure Active Directory içindeki yönetici rolü izinleri](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
 
     - Masaüstü analizi, çalışma alanları ve dağıtım planları oluşturmak ve yönetmek için Azure Active Directory **çalışma alanı sahipleri** güvenlik grubunu önceden yapılandırır. 
 
@@ -234,7 +234,7 @@ Masaüstü Analizi 'nde bir dağıtım planı oluşturmak için bu yordamı kull
 
 4. **Dağıtım planı oluştur** bölmesinde, aşağıdaki ayarları yapılandırın:  
 
-    - **Ad**: dağıtım planı için benzersiz bir ad, örneğin`Windows 10 pilot`  
+    - **Ad**: dağıtım planı için benzersiz bir ad, örneğin `Windows 10 pilot`  
 
     - **Ürünler ve sürümler**: hangi Windows 10 sürümünü dağıtacağınızı seçin. Microsoft, en son sürümü kullanan dağıtım planlarının oluşturulmasını önerir.
 
@@ -292,7 +292,7 @@ Configuration Manager Windows 10 ' da pilot grubuna dağıtmak için bu yordamı
 - [Monitor](#bkmk_monitor-ts) status in Configuration Manager  
  -->
 
-### <a name="create-an-os-upgrade-package-for-windows-10"></a><a name="bkmk_create-package"></a>Windows 10 için işletim sistemi yükseltme paketi oluşturma
+### <a name="create-an-os-upgrade-package-for-windows-10"></a><a name="bkmk_create-package"></a> Windows 10 için işletim sistemi yükseltme paketi oluşturma
 
 1. Configuration Manager konsolunda, **yazılım kitaplığı** çalışma alanına gidin, **işletim sistemleri**' ni genişletin ve **işletim sistemi yükseltme paketleri** düğümünü seçin.  
 
@@ -320,7 +320,7 @@ Sonra, işletim sistemi yükseltme paketini dağıtım noktalarına dağıtın.
 4. Içerik Dağıtma Sihirbazı 'Nı doldurun.  
 
 
-### <a name="create-an-os-upgrade-task-sequence-for-windows-10"></a><a name="bkmk_create-ts"></a>Windows 10 için işletim sistemi yükseltme görev dizisi oluşturma
+### <a name="create-an-os-upgrade-task-sequence-for-windows-10"></a><a name="bkmk_create-ts"></a> Windows 10 için işletim sistemi yükseltme görev dizisi oluşturma
 
 1. Configuration Manager konsolunda, **yazılım kitaplığı** çalışma alanına gidin, **işletim sistemleri**' ni genişletin ve **görev dizileri**' ni seçin.  
 
@@ -339,7 +339,7 @@ Sonra, işletim sistemi yükseltme paketini dağıtım noktalarına dağıtın.
     - **Ürün anahtarı**: işletim sisteminin yüklenmesi için Windows ürün anahtarını belirtin. Kodlanmış toplu lisans anahtarlarını veya standart ürün anahtarlarını belirtin. Standart bir ürün anahtarı kullanırsanız, her beş karakter grubunu bir tire (-) ile ayırın. Örneğin: *xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*. Yükseltme bir toplu lisans sürümü için olduğunda, ürün anahtarı gerekli olmayabilir.  
 
         > [!Note]  
-        > Bu ürün anahtarı birden çok etkinleştirme anahtarı (MAK) veya bir genel toplu lisanslama anahtarı (GVLK) olabilir. Bir GVLK, anahtar yönetimi hizmeti (KMS) istemci kurulum anahtarı olarak da adlandırılır. Daha fazla bilgi için bkz. [toplu etkinleştirme planı](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). KMS istemci kurulum anahtarlarının bir listesi için, bkz. Windows Server etkinleştirme kılavuzunun [ek a](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) .
+        > Bu ürün anahtarı birden çok etkinleştirme anahtarı (MAK) veya bir genel toplu lisanslama anahtarı (GVLK) olabilir. Bir GVLK, anahtar yönetimi hizmeti (KMS) istemci kurulum anahtarı olarak da adlandırılır. Daha fazla bilgi için bkz. [toplu etkinleştirme planı](/windows/deployment/volume-activation/plan-for-volume-activation-client). KMS istemci kurulum anahtarlarının bir listesi için, bkz. Windows Server etkinleştirme kılavuzunun [ek a](/windows-server/get-started/kmsclientkeys) .
 
 6. **Güncelleştirmeleri dahil et** sayfasında, yazılım güncelleştirmelerini yüklememe için **İleri** ' yi seçin.  
 
@@ -348,7 +348,7 @@ Sonra, işletim sistemi yükseltme paketini dağıtım noktalarına dağıtın.
 8. Görev sırası oluşturma Sihirbazı 'Nı doldurun.  
 
 
-### <a name="deploy-the-task-sequence-using-the-desktop-analytics-deployment-plan"></a><a name="bkmk_deploy-ts"></a>Masaüstü Analizi dağıtım planını kullanarak görev dizisini dağıtma
+### <a name="deploy-the-task-sequence-using-the-desktop-analytics-deployment-plan"></a><a name="bkmk_deploy-ts"></a> Masaüstü Analizi dağıtım planını kullanarak görev dizisini dağıtma
 
 1. Configuration Manager konsolunda, **yazılım kitaplığı**' na gidin, **Masaüstü Analizi Bakımı**' nı genişletin ve **dağıtım planları** düğümünü seçin.  
 
@@ -376,7 +376,7 @@ Sonra, işletim sistemi yükseltme paketini dağıtım noktalarına dağıtın.
 10. Sihirbazı tamamlayın.  
 
 
-### <a name="install-the-task-sequence-from-software-center"></a><a name="bkmk_install-ts"></a>Görev sırasını yazılım merkezi 'nden yükler
+### <a name="install-the-task-sequence-from-software-center"></a><a name="bkmk_install-ts"></a> Görev sırasını yazılım merkezi 'nden yükler
 
 1. Pilot dağıtım planının üyesi olan bir cihazda oturum açın.  
 

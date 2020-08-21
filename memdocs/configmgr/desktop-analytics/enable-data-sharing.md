@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 40ebeabaaf236377388660a2a1a328e308a708ab
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 999d8441e8c97f0a4b7ad4a92c8175300dcc4ead
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125976"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696455"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Masaüstü analizi için veri paylaşımını etkinleştirme
 
@@ -31,7 +31,7 @@ Configuration Manager masaüstü analizi ile tümleştirdiğinizde, cihazlarda t
 > [!IMPORTANT]
 > Çoğu durumda bu ayarları yapılandırmak için yalnızca Configuration Manager kullanın. Bu ayarları etki alanı Grup İlkesi nesnelerinde da uygulamayın. Daha fazla bilgi için bkz. [çakışma çözümü](enroll-devices.md#conflict-resolution).
 
-Masaüstü analizinin temel işlevselliği, **gerekli** [Tanılama veri düzeyinde](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels)çalışmaktadır. Configuration Manager 'de **Isteğe bağlı (sınırlı)** düzeyi yapılandırmazsanız, masaüstü analizinin aşağıdaki özelliklerini almazsınız:
+Masaüstü analizinin temel işlevselliği, **gerekli** [Tanılama veri düzeyinde](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels)çalışmaktadır. Configuration Manager 'de **Isteğe bağlı (sınırlı)** düzeyi yapılandırmazsanız, masaüstü analizinin aşağıdaki özelliklerini almazsınız:
 
 - Uygulama kullanımı
 - [Ek uygulama öngörüleri](compat-assessment.md#additional-insights)
@@ -53,12 +53,12 @@ Microsoft, sizin alacağınız avantajları en üst düzeye çıkarmak için, **
 > |---------|---------|
 > | Gerekli | Temel |
 > | İsteğe bağlı (sınırlı) | Gelişmiş (sınırlı) |
-> | Yok | Gelişmiş |
+> | N/A | Gelişmiş |
 > | İsteğe Bağlı | Tam |
 >
 > Daha önce **Gelişmiş** düzeyde herhangi bir cihaz yapılandırdıysanız, sürüm 2006 ' e yükselttiğinizde bu kullanıcılar **isteğe bağlı (sınırlı)** olarak döndürülür. Böylece daha az veri Microsoft 'a gönderilir. Bu değişiklik, masaüstü analizinden gördüklerinizi etkilemez.
 
-**Isteğe bağlı (sınırlı)** ile Microsoft ile paylaşılan Tanılama verileri hakkında daha fazla bilgi için bkz. [Windows 10 gelişmiş tanılama verileri olayları ve alanları](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
+**Isteğe bağlı (sınırlı)** ile Microsoft ile paylaşılan Tanılama verileri hakkında daha fazla bilgi için bkz. [Windows 10 gelişmiş tanılama verileri olayları ve alanları](/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
 
 > [!IMPORTANT]
 > Microsoft 'un gizliliğinizi denetim altına alan araçlar ve kaynakları sağlamaya yönelik güçlü bir taahhüt vardır. Sonuç olarak, masaüstü Analizi Windows 8.1 cihazları destekleirken, Microsoft, Avrupa ülkelerinde (EEA ve Isviçre) bulunan Windows 8.1 cihazlardan Windows Tanılama verileri toplamaz.
@@ -67,9 +67,9 @@ Daha fazla bilgi için bkz. [Masaüstü Analizi gizliliği](privacy.md).
 
 Windows tanılama veri düzeylerini daha iyi anlamak için aşağıdaki makaleler de iyi kaynaklardır:
 
-- [Windows 10 ve BT karar mekanizmaları için GDPR](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance)  
+- [Windows 10 ve BT karar mekanizmaları için GDPR](/windows/privacy/gdpr-it-guidance)  
 
-- [Kuruluşunuzda Windows tanılama verilerini yapılandırma](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
+- [Kuruluşunuzda Windows tanılama verilerini yapılandırma](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
 > [!NOTE]
 > **Isteğe bağlı (sınırlı)** Tanılama verileri gönderecek şekilde yapılandırılan istemciler, ilk tam taramada Microsoft bulutuna YAKLAŞıK 2 MB veri gönderecek. Günlük Delta, günde 250-400 KB arasında değişir.
@@ -111,7 +111,7 @@ Cihazları, oturum açmış kullanıcının proxy kimlik doğrulaması bağlamı
 - Kullanıcıların tanılama veri uç noktalarına erişmek için proxy iznine sahip olduğundan emin olun. Bu seçenek, cihazların proxy izinlerine sahip konsol kullanıcılarına sahip olmasını gerektirir, bu nedenle bu yöntemi gözetimsiz cihazlarla kullanamazsınız.
 
 > [!IMPORTANT]
-> Kullanıcı proxy kimlik doğrulama yaklaşımı, Microsoft Defender Gelişmiş tehdit koruması kullanımıyla uyumlu değildir. Bu davranış, bu kimlik doğrulamanın **Disableenterpriseauthproxy** kayıt defteri anahtarını olarak ayarlanmış olması `0` , Microsoft Defender ATP 'nin olarak ayarlanmasını gerektirmesidir `1` . Daha fazla bilgi için bkz. [Microsoft Defender ATP 'de makine proxy ve internet bağlantısı ayarlarını yapılandırma](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
+> Kullanıcı proxy kimlik doğrulama yaklaşımı, Microsoft Defender Gelişmiş tehdit koruması kullanımıyla uyumlu değildir. Bu davranış, bu kimlik doğrulamanın **Disableenterpriseauthproxy** kayıt defteri anahtarını olarak ayarlanmış olması `0` , Microsoft Defender ATP 'nin olarak ayarlanmasını gerektirmesidir `1` . Daha fazla bilgi için bkz. [Microsoft Defender ATP 'de makine proxy ve internet bağlantısı ayarlarını yapılandırma](/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
 ### <a name="device-proxy-authentication"></a>Cihaz proxy kimlik doğrulaması
 
@@ -127,7 +127,7 @@ Bu yaklaşım en karmaşıktır çünkü aşağıdaki yapılandırmalarda gerekl
 
 - Cihazların yerel sistem bağlamında WinHTTP aracılığıyla proxy sunucusuna ulaşabildiğinizden emin olun. Bu davranışı yapılandırmak için aşağıdaki seçeneklerden birini kullanın:
 
-  - Komut satırı`netsh winhttp set proxy`
+  - Komut satırı `netsh winhttp set proxy`
 
   - Web proxy otomatik bulma (WPAD) protokolü
 
@@ -137,4 +137,4 @@ Bu yaklaşım en karmaşıktır çünkü aşağıdaki yapılandırmalarda gerekl
 
   - Yönlendirilmiş bağlantı veya ağ adresi çevirisi (NAT) kullanan
 
-- Proxy sunucularını, Active Directory ' deki bilgisayar hesaplarının tanılama veri uç noktalarına erişmesine izin verecek şekilde yapılandırın. Bu yapılandırma, proxy sunucularının Windows tümleşik kimlik doğrulamasını desteklemesini gerektirir.  
+- Proxy sunucularını, Active Directory ' deki bilgisayar hesaplarının tanılama veri uç noktalarına erişmesine izin verecek şekilde yapılandırın. Bu yapılandırma, proxy sunucularının Windows tümleşik kimlik doğrulamasını desteklemesini gerektirir.

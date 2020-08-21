@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 52c2b70d2b094d5a89d80aafa61f1db67a53816f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b488e0953648b42baa59dc347b0bc942bac291fe
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987721"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692579"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Configuration Manager bir bulut dağıtım noktası kullanın
 
@@ -47,7 +47,7 @@ Bu makale, bulut dağıtım noktası hakkında bilgi edinmenize, kullanımını 
 - [Sık sorulan sorular (SSS)](#bkmk_faq)
 
 
-## <a name="features-and-benefits"></a><a name="bkmk_features"></a>Özellikler ve avantajlar
+## <a name="features-and-benefits"></a><a name="bkmk_features"></a> Özellikler ve avantajlar
 
 ### <a name="features"></a>Özellikler
 
@@ -59,7 +59,7 @@ Bulut dağıtım noktası, şirket içi dağıtım noktaları tarafından da sun
 
 - Hem intranet hem de internet tabanlı istemcileri destekler  
 
-### <a name="benefits"></a>Avantajlar
+### <a name="benefits"></a>Yararları
 
 Bulut dağıtım noktası aşağıdaki ek avantajları sağlar:  
 
@@ -72,7 +72,7 @@ Bulut dağıtım noktası aşağıdaki ek avantajları sağlar:
 - Sürüm 1806 ' den başlayarak, çekme dağıtım noktaları için bulut dağıtım noktalarını kaynak konumları olarak kullanın.  
 
 
-## <a name="topology-design"></a><a name="bkmk_topology"></a>Topoloji tasarımı
+## <a name="topology-design"></a><a name="bkmk_topology"></a> Topoloji tasarımı
 
 Bulut dağıtım noktasının dağıtımı ve işlemi aşağıdaki bileşenleri içerir:  
 
@@ -89,7 +89,7 @@ Bulut dağıtım noktasının dağıtımı ve işlemi aşağıdaki bileşenleri 
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
 
 <!--1322209-->
-Sürüm 1806 ' den başlayarak bir **Azure Resource Manager dağıtımı**kullanarak bir bulut dağıtım noktası oluşturun. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) , tüm çözüm kaynaklarının, [kaynak grubu](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups)olarak adlandırılan tek bir varlık olarak yönetilmesine yönelik modern bir platformdur. Azure Resource Manager ile bulut dağıtım noktası dağıtımında, site kimlik doğrulaması yapmak ve gerekli bulut kaynaklarını oluşturmak için Azure Active Directory (Azure AD) kullanır. Bu modernlanmış dağıtım, klasik Azure Yönetim sertifikası gerektirmez.  
+Sürüm 1806 ' den başlayarak bir **Azure Resource Manager dağıtımı**kullanarak bir bulut dağıtım noktası oluşturun. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) , tüm çözüm kaynaklarının, [kaynak grubu](/azure/azure-resource-manager/resource-group-overview#resource-groups)olarak adlandırılan tek bir varlık olarak yönetilmesine yönelik modern bir platformdur. Azure Resource Manager ile bulut dağıtım noktası dağıtımında, site kimlik doğrulaması yapmak ve gerekli bulut kaynaklarını oluşturmak için Azure Active Directory (Azure AD) kullanır. Bu modernlanmış dağıtım, klasik Azure Yönetim sertifikası gerektirmez.  
 
 > [!Note]  
 > Bu özellik, Azure bulut hizmeti sağlayıcıları (CSP) için desteği etkinleştirmez. Azure Resource Manager ile bulut dağıtım noktası dağıtımı, CSP 'nin desteklemediği klasik bulut hizmetini kullanmaya devam eder. Daha fazla bilgi için bkz. [Azure CSP 'de kullanılabilir Azure hizmetleri](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
@@ -130,7 +130,7 @@ Hiyerarşinizde bir bulut dağıtım noktası kullandığınızda, yedekleme ve 
 - Sunucu kimlik doğrulama sertifikasının bir kopyasını yedekleyin ve kaydedin. Klasik hizmet dağıtımını Azure 'da kullanıyorsanız, Azure yönetim sertifikasının bir kopyasını da yedekleyin ve kaydedin. Configuration Manager birincil sitesini farklı bir sunucuya geri yüklediğinizde, sertifikaları yeniden içeri aktarmanız gerekir.  
 
 
-## <a name="requirements"></a><a name="bkmk_requirements"></a>Gereklilik
+## <a name="requirements"></a><a name="bkmk_requirements"></a> Gereklilik
 
 - Hizmeti barındırmak için bir **Azure aboneliğine** ihtiyacınız vardır.  
 
@@ -156,7 +156,7 @@ Hiyerarşinizde bir bulut dağıtım noktası kullandığınızda, yedekleme ve 
 - İstemci cihazları için **İnternet bağlantısı**gerekir ve **IPv4**kullanılmalıdır.  
 
 
-## <a name="specifications"></a><a name="bkmk_spec"></a>Lerinize
+## <a name="specifications"></a><a name="bkmk_spec"></a> Lerinize
 
 - Bulut dağıtım noktası, [istemciler ve cihazlar Için desteklenen işletim sistemlerinde](../configs/supported-operating-systems-for-clients-and-devices.md)listelenen tüm Windows sürümlerini destekler.  
 
@@ -191,7 +191,7 @@ Hiyerarşinizde bir bulut dağıtım noktası kullandığınızda, yedekleme ve 
 - Bir bulut dağıtım noktasını çekme dağıtım noktası olarak yapılandıramazsınız.  
 
 
-## <a name="cost"></a><a name="bkmk_cost"></a>YT
+## <a name="cost"></a><a name="bkmk_cost"></a> YT
 
 <!--501018-->
 > [!IMPORTANT]  
@@ -244,16 +244,16 @@ Bulut dağıtım noktası, Azure abonelik hesabına ücretlendirieden aşağıda
 
 - Bulut dağıtım noktaları, dağıtım modeline bağlı olarak aşağıdaki standart BLOB depolama alanını kullanır:  
 
-    - Azure Resource Manager dağıtımı Azure yerel olarak yedekli depolama (LRS) kullanır. Bu değişiklik, depolama hesabının maliyetini azaltır. Klasik dağıtım, GRS 'nin ek özelliklerini kullanmıyor. Daha fazla bilgi için bkz. [yerel olarak yedekli depolama](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs).  
+    - Azure Resource Manager dağıtımı Azure yerel olarak yedekli depolama (LRS) kullanır. Bu değişiklik, depolama hesabının maliyetini azaltır. Klasik dağıtım, GRS 'nin ek özelliklerini kullanmıyor. Daha fazla bilgi için bkz. [yerel olarak yedekli depolama](/azure/storage/common/storage-redundancy-lrs).  
 
-    - Configuration Manager sürüm 1810 veya önceki sürümleriyle klasik bir dağıtım, Azure coğrafi olarak yedekli depolama (GRS) kullanır. Daha fazla bilgi için bkz. [coğrafi olarak yedekli depolama](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs).  
+    - Configuration Manager sürüm 1810 veya önceki sürümleriyle klasik bir dağıtım, Azure coğrafi olarak yedekli depolama (GRS) kullanır. Daha fazla bilgi için bkz. [coğrafi olarak yedekli depolama](/azure/storage/common/storage-redundancy-grs).  
 
 #### <a name="other-costs"></a>Diğer maliyetler
 
 - Her bulut hizmetinin dinamik bir IP adresi vardır. Her farklı bulut dağıtım noktası yeni bir dinamik IP adresi kullanır. Bulut hizmeti başına ek VM 'Ler eklemek bu adresleri artırmaz.  
 
 
-## <a name="ports-and-data-flow"></a><a name="bkmk_dataflow"></a>Bağlantı noktaları ve veri akışı
+## <a name="ports-and-data-flow"></a><a name="bkmk_dataflow"></a> Bağlantı noktaları ve veri akışı
 
 Bulut dağıtım noktası için iki birincil veri akışı vardır:  
 
@@ -288,7 +288,7 @@ Bulut dağıtım noktası için iki birincil veri akışı vardır:
 6. İstemci, bulut dağıtım noktasının sunucu kimlik doğrulama sertifikasına güveniyorsa, içeriği indirmek için Azure depolama 'ya bağlanır.
 
 
-## <a name="performance-and-scale"></a><a name="bkmk_perf"></a>Performans ve ölçek
+## <a name="performance-and-scale"></a><a name="bkmk_perf"></a> Performans ve ölçek
 
 <!--494872-->
 
@@ -308,7 +308,7 @@ Bulut dağıtım noktası, Azure depolama 'ya ön uç olarak iki Azure VM kullan
 Azure depolama hizmeti, tek bir dosya için saniye başına 500 isteği destekler. Tek bir bulut dağıtım noktasının performans testi, 24 saat içinde tek 100 MB 'lık bir dosyanın 50.000 istemciye dağıtımını destekliyordu.<!--512106-->  
 
 
-## <a name="certificates"></a><a name="bkmk_certs"></a>Sertifika  
+## <a name="certificates"></a><a name="bkmk_certs"></a> Sertifika  
 
 Bulut dağıtım noktası tasarımınıza bağlı olarak, bir veya daha fazla dijital sertifikaya ihtiyacınız vardır.  
 
@@ -357,7 +357,7 @@ Configuration Manager sürüm 1810 veya önceki bir sürümü ile klasik Azure d
 Karmaşıklığı azaltmak için tüm Azure abonelikleri ve tüm Configuration Manager siteleri genelinde tüm klasik bulut dağıtım noktaları ve bulut yönetimi ağ geçitleri dağıtımları için aynı Azure yönetim sertifikasını kullanın.
 
 
-## <a name="frequently-asked-questions-faq"></a><a name="bkmk_faq"></a>Sık sorulan sorular (SSS)
+## <a name="frequently-asked-questions-faq"></a><a name="bkmk_faq"></a> Sık sorulan sorular (SSS)
 
 ### <a name="does-a-client-need-a-certificate-to-download-content-from-a-cloud-distribution-point"></a>Bir istemcinin bir bulut dağıtım noktasından içerik indirmesi için bir sertifikaya ihtiyacı var mı?
 
@@ -375,11 +375,11 @@ Kuruluşunuz ExpressRoute kullanıyorsa, ExpressRoute kullanan aboneliğden bulu
 
 ### <a name="do-i-need-to-maintain-the-azure-virtual-machines"></a>Azure sanal makinelerini sürdürmem gerekir mi?
 
-Bakım gerekli değildir. Bulut dağıtım noktasının tasarımı bir hizmet olarak Azure platformu (PaaS) kullanır. Sağladığınız aboneliği kullanarak, Configuration Manager gerekli VM 'Leri, depolamayı ve ağı oluşturur. Azure, sanal makineleri güvenlik altına alır ve günceller. Bu VM 'Ler, hizmet olarak altyapı (IaaS) gibi durumlarda şirket içi ortamınızın bir parçası değildir. Bulut dağıtım noktası, Configuration Manager ortamınızı buluta genişleten PaaS 'dir. Daha fazla bilgi için bkz. [PaaS bulut hizmeti modelinin güvenlik avantajları](https://docs.microsoft.com/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model).  
+Bakım gerekli değildir. Bulut dağıtım noktasının tasarımı bir hizmet olarak Azure platformu (PaaS) kullanır. Sağladığınız aboneliği kullanarak, Configuration Manager gerekli VM 'Leri, depolamayı ve ağı oluşturur. Azure, sanal makineleri güvenlik altına alır ve günceller. Bu VM 'Ler, hizmet olarak altyapı (IaaS) gibi durumlarda şirket içi ortamınızın bir parçası değildir. Bulut dağıtım noktası, Configuration Manager ortamınızı buluta genişleten PaaS 'dir. Daha fazla bilgi için bkz. [PaaS bulut hizmeti modelinin güvenlik avantajları](/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model).  
 
 ### <a name="does-the-cloud-distribution-point-use-azure-cdn"></a>Bulut dağıtım noktası Azure CDN kullanıyor mu?
 
-Azure Content Delivery Network (CDN), yüksek bant genişliğine sahip içeriği dünya genelinde stratejik olarak yerleştirilmiş fiziksel düğümlerde önbelleğe alarak hızlı bir şekilde sunan genel bir çözümdür. Daha fazla bilgi için bkz. [Azure CDN nedir?](https://docs.microsoft.com/azure/cdn/cdn-overview).
+Azure Content Delivery Network (CDN), yüksek bant genişliğine sahip içeriği dünya genelinde stratejik olarak yerleştirilmiş fiziksel düğümlerde önbelleğe alarak hızlı bir şekilde sunan genel bir çözümdür. Daha fazla bilgi için bkz. [Azure CDN nedir?](/azure/cdn/cdn-overview).
 
 Configuration Manager bulut dağıtım noktası şu anda Azure CDN desteklemiyor.
 

@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 60ca31b73e31ea59b7a854f87262be7fdc4ab5c5
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 42dc0f65e9e3765de35e6db7f5272aeeaab63fa2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240346"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695299"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Configuration Manager uygulamalar oluşturma
 
@@ -45,7 +45,7 @@ Bu makale, bir dağıtım türünü yapılandırmak için aşağıdaki bilgileri
 - [Dönüş kodları](#bkmk_dt-return)
 - [Bağımlılıklar](#bkmk_dt-depend)
 
-## <a name="create-an-application"></a><a name="bkmk_create"></a>Uygulama oluşturma  
+## <a name="create-an-application"></a><a name="bkmk_create"></a> Uygulama oluşturma  
 
 1. Configuration Manager konsolunda, **yazılım kitaplığı** çalışma alanına gidin, **uygulama yönetimi**' ni genişletin ve **uygulamalar** düğümünü seçin.  
 
@@ -57,7 +57,7 @@ Ardından, uygulama bilgilerini otomatik olarak algıla veya el ile belirt:
 
 - Daha karmaşık uygulamalar oluşturmak için uygulama bilgilerini [el ile belirtin](#bkmk_manual-app) . Birden fazla dağıtım türü, bağımlılık, algılama yöntemi veya gereksinimi tanımlayın.  
 
-### <a name="automatically-detect-application-information"></a><a name="bkmk_auto-app"></a>Uygulama bilgilerini otomatik olarak algıla  
+### <a name="automatically-detect-application-information"></a><a name="bkmk_auto-app"></a> Uygulama bilgilerini otomatik olarak algıla  
 
 1. Uygulama oluşturma Sihirbazı ' nın **genel** sayfasında **Bu uygulamayla Ilgili bilgileri otomatik olarak yükleme dosyalarından algıla**' yı seçin.  
 
@@ -97,7 +97,7 @@ Yeni uygulama artık Configuration Manager konsolunun **uygulamalar** düğümü
 
 Daha fazla dağıtım türü eklemek veya diğer ayarları yapılandırmak için bkz. [uygulama için dağıtım türleri oluşturma](#bkmk_create-dt).  
 
-### <a name="manually-specify-application-information"></a><a name="bkmk_manual-app"></a>Uygulama bilgilerini el ile belirt  
+### <a name="manually-specify-application-information"></a><a name="bkmk_manual-app"></a> Uygulama bilgilerini el ile belirt  
 
 1. Uygulama Oluştur sihirbazının **genel** sayfasında **uygulama bilgilerini el ile belirt**' i seçin ve ardından **İleri**' yi seçin.  
 
@@ -156,7 +156,7 @@ Daha fazla dağıtım türü eklemek veya diğer ayarları yapılandırmak için
 
 Yeni uygulama artık Configuration Manager konsolunun **uygulamalar** düğümünde görüntülenir.  
 
-## <a name="create-deployment-types-for-the-application"></a><a name="bkmk_create-dt"></a>Uygulama için dağıtım türleri oluşturma  
+## <a name="create-deployment-types-for-the-application"></a><a name="bkmk_create-dt"></a> Uygulama için dağıtım türleri oluşturma  
 
 [Uygulama bilgilerini otomatik olarak algılayın](#bkmk_auto-app), bu bölümdeki adımlardan bazılarını bitiremeyebilirsiniz.  
 
@@ -185,7 +185,7 @@ Dağıtım türü oluşturma Sihirbazı 'nı başlatmak için üç yol vardır:
 
 Ardından, dağıtım türü bilgilerini [otomatik olarak tanımlamak](#bkmk_auto-dt) veya [el ile belirtmek](#bkmk_manual-dt) için aşağıdaki yordamlardan birini kullanın.  
 
-### <a name="automatically-identify-deployment-type-information"></a><a name="bkmk_auto-dt"></a>Dağıtım türü bilgilerini otomatik olarak tanımla  
+### <a name="automatically-identify-deployment-type-information"></a><a name="bkmk_auto-dt"></a> Dağıtım türü bilgilerini otomatik olarak tanımla  
 
 1. Dağıtım türü oluşturma Sihirbazı ' nın **genel** sayfasında:  
 
@@ -217,7 +217,7 @@ Ardından, dağıtım türü bilgilerini [otomatik olarak tanımlamak](#bkmk_aut
 
 4. **İleri**' yi seçin ve ardından [dağıtım türü içerik seçeneklerine](#bkmk_dt-content)devam edin.  
 
-### <a name="manually-specify-the-deployment-type-information"></a><a name="bkmk_manual-dt"></a>Dağıtım türü bilgilerini el ile belirt  
+### <a name="manually-specify-the-deployment-type-information"></a><a name="bkmk_manual-dt"></a> Dağıtım türü bilgilerini el ile belirt  
 
 1. Dağıtım türü Oluştur sihirbazının **genel** sayfasında, **tür** açılan listesinde, bu dağıtım türü için uygulama yükleme dosya türünü seçin.
 
@@ -227,7 +227,7 @@ Ardından, dağıtım türü bilgilerini [otomatik olarak tanımlamak](#bkmk_aut
 
 4. [Dağıtım türü içerik seçeneklerine](#bkmk_dt-content)devam edin.  
 
-### <a name="deployment-type-content-options"></a><a name="bkmk_dt-content"></a>Dağıtım türü **içerik** seçenekleri  
+### <a name="deployment-type-content-options"></a><a name="bkmk_dt-content"></a> Dağıtım türü **içerik** seçenekleri  
 
 **İçerik** sayfasında, aşağıdaki bilgileri belirtin:  
 
@@ -275,7 +275,7 @@ Bir dağıtım türünün özelliklerini görüntülediğinizde, aşağıdaki se
 
 - **İstemcilerin aynı alt ağdaki diğer istemcilerle içerik paylaşmasına izin ver**: İçerik yüklemeleri için BranchCache kullanımının etkinleştirilip etkinleştirilmeyeceğini belirtin. Daha fazla bilgi için bkz. [BranchCache](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache). BranchCache her zaman istemcilerde etkindir. Dağıtım noktası destekliyorsa, istemciler BranchCache kullandığından, bu ayar 1802 sürümünde kaldırılmıştır.  
 
-### <a name="deployment-type-task-sequence-options"></a><a name="bkmk_dt-ts"></a>Dağıtım türü **görev dizisi** seçenekleri
+### <a name="deployment-type-task-sequence-options"></a><a name="bkmk_dt-ts"></a> Dağıtım türü **görev dizisi** seçenekleri
 
 <!--3555953-->
 
@@ -290,14 +290,14 @@ Sürüm 2002 ' den başlayarak görev sırası dağıtım türü hakkında daha 
 > [!TIP]  
 > Görev diziniz listede görünmezse, herhangi bir işletim sistemi dağıtımı veya işletim sistemi yükseltme adımı içermediğinden emin olun. Ayrıca, yüksek etkili bir görev dizisi olarak işaretlenmemiş olduğunu doğrulayın. Daha fazla bilgi için, [görev dizisi dağıtım türü](../get-started/creating-windows-applications.md#bkmk_tsdt)için önkoşulları gözden geçirin.
 
-### <a name="deployment-type-detection-method-options"></a><a name="bkmk_dt-detect"></a>Dağıtım türü **algılama yöntemi** seçenekleri
+### <a name="deployment-type-detection-method-options"></a><a name="bkmk_dt-detect"></a> Dağıtım türü **algılama yöntemi** seçenekleri
 
 Bu yordam, dağıtım türünün varlığını gösteren bir algılama yöntemi ayarlar. Diğer bir deyişle, Windows cihazının uygulamanın zaten yüklü olup olmadığı. Bir algılama yöntemi oluşturmak için aşağıdaki iki yöntemden birini kullanın:
 
 - [Bu dağıtım türünün varolup olmadığını algılamak için kurallar yapılandırın](#bkmk_detect-rule)
 - [Bu dağıtım türünün varolup olmadığını algılamak için özel bir komut dosyası kullan](#bkmk_detect-script)
 
-#### <a name="configure-rules-to-detect-the-presence-of-this-deployment-type"></a><a name="bkmk_detect-rule"></a>Bu dağıtım türünün varolup olmadığını algılamak için kurallar yapılandırın
+#### <a name="configure-rules-to-detect-the-presence-of-this-deployment-type"></a><a name="bkmk_detect-rule"></a> Bu dağıtım türünün varolup olmadığını algılamak için kurallar yapılandırın
 
 1. **Algılama yöntemi** sayfasında, **Bu dağıtım türünün varlığını algılamak için kuralları yapılandırma** seçeneği varsayılan olarak seçilidir. **Yan tümce Ekle**' yi seçin.  
 
@@ -349,7 +349,7 @@ Dağıtım türü için birden fazla algılama yöntemi oluşturduğunuzda, daha
 
 Bir algılama yöntemi olarak özel bir betik kullanma ile ilgili sonraki bölüme *geçin* . Veya dağıtım türü için [Kullanıcı deneyimi](#bkmk_dt-ux) seçeneklerine *atlayın* .
 
-#### <a name="use-a-custom-script-to-check-for-the-presence-of-a-deployment-type"></a><a name="bkmk_detect-script"></a>Dağıtım türünün varlığını denetlemek için özel bir betik kullanın  
+#### <a name="use-a-custom-script-to-check-for-the-presence-of-a-deployment-type"></a><a name="bkmk_detect-script"></a> Dağıtım türünün varlığını denetlemek için özel bir betik kullanın  
 
 1. **Algılama yöntemi** sayfasında, **Bu dağıtım türü kutusunun varolup olmadığını algılamak için özel bir komut dosyası kullan** ' ı seçin. Ardından **Düzenle**’yi seçin.  
 
@@ -454,7 +454,7 @@ WScript.StdErr.Write "Completed"
 WScript.Quit(0)
 ```
 
-### <a name="deployment-type-user-experience-options"></a><a name="bkmk_dt-ux"></a>Dağıtım türü **Kullanıcı deneyimi** seçenekleri
+### <a name="deployment-type-user-experience-options"></a><a name="bkmk_dt-ux"></a> Dağıtım türü **Kullanıcı deneyimi** seçenekleri
 
 Bu ayarlar, istemcinin cihaza uygulamayı nasıl yüklediğini ve kullanıcının ne göreceğini belirtir.  
 
@@ -525,7 +525,7 @@ Belirli yükleme sonrası davranışı zorunlu tutun. Aşağıdaki seçeneklerde
 
 - **Configuration Manager istemci zorunlu bir cihaz yeniden başlatmaya zorlayacaktır**: Configuration Manager başarılı olduktan sonra cihaz yeniden başlatılmasını zorlar. Yazılım Merkezi bir yeniden başlatmanın gerekli olduğunu bildiriyor. Yüklemesi sırasında bir Kullanıcı oturum açmışsa, bu kullanıcılara *dağıtımın* Kullanıcı deneyimi yapılandırmasına bağlı olarak sorulur.  
 
-### <a name="deployment-type-requirements"></a><a name="bkmk_dt-require"></a>Dağıtım türü **gereksinimleri**
+### <a name="deployment-type-requirements"></a><a name="bkmk_dt-require"></a> Dağıtım türü **gereksinimleri**
 
 Configuration Manager, dağıtım türünü yüklemeden önce cihazlarda bu gereksinimleri doğrular. Bu uygulamayı alan cihazları veya kullanıcıları daha ayrıntılı hale getirmek ve denetlemek için gereksinimleri kullanın. Örneğin, uygulamayı bir kullanıcı koleksiyonuna dağıtırsanız, uygulamanın donanım gereksinimlerini burada belirtin.
 
@@ -549,7 +549,7 @@ Configuration Manager, dağıtım türünü yüklemeden önce cihazlarda bu gere
 
 6. Gereksinimi kaydetmek ve **Gereksinim Oluştur** iletişim kutusunu kapatmak için **Tamam** ' ı seçin.  
 
-### <a name="deployment-type-dependencies"></a><a name="bkmk_dt-depend"></a>Dağıtım türü **bağımlılıkları**  
+### <a name="deployment-type-dependencies"></a><a name="bkmk_dt-depend"></a> Dağıtım türü **bağımlılıkları**  
 
 Bağımlılıklar, istemcinin bu dağıtım türünü yüklemeden önce yüklenmesi gereken başka bir uygulamadan bir veya daha fazla dağıtım türünü tanımlar.
 
@@ -578,7 +578,7 @@ Bağımlılıklar, istemcinin bu dağıtım türünü yüklemeden önce yüklenm
 
 8. **Bağımlılık Ekle** penceresini kapatmak için **Tamam ' ı** seçin.  
 
-### <a name="deployment-type-return-codes"></a><a name="bkmk_dt-return"></a>Dağıtım türü **dönüş kodları**
+### <a name="deployment-type-return-codes"></a><a name="bkmk_dt-return"></a> Dağıtım türü **dönüş kodları**
 
 > [!Note]  
 > Bu sayfa, dağıtım türü oluşturma Sihirbazı 'nda değil. Bu yalnızca var olan bir dağıtım türünün özelliklerindeki bir sekmedir.  
@@ -639,11 +639,11 @@ Bazı dağıtım türleri oluşturduğunuzda Configuration Manager, bu teknoloji
 |15605    |Hızlı yeniden deneme|
 |15618    |Hızlı yeniden deneme|
 
-## <a name="additional-options-for-app-v-deployment-types"></a><a name="bkmk_appv"></a>App-V dağıtım türleri için ek seçenekler  
+## <a name="additional-options-for-app-v-deployment-types"></a><a name="bkmk_appv"></a> App-V dağıtım türleri için ek seçenekler  
 
 Sanal uygulamalar (App-V) için dağıtım türleri için benzersiz olan ek seçenekleri yapılandırın.  
 
-### <a name="app-v-deployment-type-content-options"></a><a name="bkmk_appv-content"></a>App-V dağıtım türü **içerik** seçenekleri  
+### <a name="app-v-deployment-type-content-options"></a><a name="bkmk_appv-content"></a> App-V dağıtım türü **içerik** seçenekleri  
 
 1. Configuration Manager konsolunda, **yazılım kitaplığı** çalışma alanına gidin, **uygulama yönetimi**' ni genişletin ve **uygulamalar** düğümünü seçin.  
 
@@ -659,7 +659,7 @@ Sanal uygulamalar (App-V) için dağıtım türleri için benzersiz olan ek seç
 
 5. Dağıtım türü özelliklerini kapatmak için **Tamam ' ı** seçin. Ardından, uygulama özelliklerini kapatmak için **Tamam** ' ı seçin.  
 
-### <a name="app-v-deployment-type-publishing-options"></a><a name="bkmk_appv-pub"></a>App-V dağıtım türü **Yayımlama** seçenekleri
+### <a name="app-v-deployment-type-publishing-options"></a><a name="bkmk_appv-pub"></a> App-V dağıtım türü **Yayımlama** seçenekleri
 
 1. Configuration Manager konsolunda, **yazılım kitaplığı** çalışma alanına gidin, **uygulama yönetimi**' ni genişletin ve **uygulamalar** düğümünü seçin.  
 
@@ -671,7 +671,7 @@ Sanal uygulamalar (App-V) için dağıtım türleri için benzersiz olan ek seç
 
 5. Dağıtım türü özelliklerini kapatmak için **Tamam ' ı** seçin. Ardından, uygulama özelliklerini kapatmak için **Tamam** ' ı seçin.  
 
-## <a name="import-an-application"></a><a name="bkmk_import"></a>Bir uygulamayı içeri aktarma  
+## <a name="import-an-application"></a><a name="bkmk_import"></a> Bir uygulamayı içeri aktarma  
 
 Bir uygulamayı Configuration Manager aktarmak için aşağıdaki yordamı kullanın:
 
@@ -688,11 +688,11 @@ Bir uygulamayı Configuration Manager aktarmak için aşağıdaki yordamı kulla
 Yeni uygulama **Uygulamalar** düğümünde görüntülenir.  
 
 > [!TIP]  
-> Windows PowerShell cmdlet **Import-Cmapp,** Bu yordamla aynı işleve sahiptir. Daha fazla bilgi için bkz. [Import-Cmappte](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps).  
+> Windows PowerShell cmdlet **Import-Cmapp,** Bu yordamla aynı işleve sahiptir. Daha fazla bilgi için bkz. [Import-Cmappte](/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps).  
 
 Bir uygulamayı dışarı aktarma hakkında daha fazla bilgi için bkz. [uygulamalar Için yönetim görevleri](management-tasks-applications.md).
 
-## <a name="supported-deployment-types"></a><a name="bkmk_deploy-types"></a>Desteklenen Dağıtım türleri  
+## <a name="supported-deployment-types"></a><a name="bkmk_deploy-types"></a> Desteklenen Dağıtım türleri  
 
 Configuration Manager, uygulamalar için aşağıdaki dağıtım türlerini destekler:
 
@@ -714,7 +714,7 @@ Configuration Manager, uygulamalar için aşağıdaki dağıtım türlerini dest
 > [!NOTE]
 > Configuration Manager konsolu diğer dağıtım türlerini görüntüleyebilir, ancak artık desteklenmesiz platformlar içindir. Daha fazla bilgi için bkz. [karma 'e ne oldu?](../../mdm/understand/what-happened-to-hybrid.md).
 
-### <a name="note-1-windows-app-package-in-the-windows-store"></a><a name="bkmk_note1"></a>Note 1: Windows uygulama paketi (Windows Mağazası 'nda)
+### <a name="note-1-windows-app-package-in-the-windows-store"></a><a name="bkmk_note1"></a> Note 1: Windows uygulama paketi (Windows Mağazası 'nda)
 
 Uygulamayı Windows Mağazası 'na bir bağlantı olarak dağıtmak için, Grup İlkesi 'ni **Mağaza uygulamasını**Kapat ' ı yapılandırın. Bu ilkeyi **devre dışı** veya **yapılandırılmamış**olarak ayarlayın. Bu ayarı etkinleştirirseniz istemciler, uygulamaları indirmek ve yüklemek üzere Windows Mağazası 'na bağlanamaz.
 

@@ -10,18 +10,18 @@ ms.assetid: 2af37410-d04c-4059-801c-9edb8bf72d89
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a84247482ddece88208e83fec545afc5e953a070
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c757632e96eb9bdaca829d4a19e5e156fcf52577
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711528"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694993"
 ---
 # <a name="use-azure-ad-for-co-management"></a>Ortak yönetim için Azure AD kullanma
 
 Bulutta, kimlik yeni denetim düzledir. Azure Active Directory (Azure AD), kullanıcılarınızın, cihazlarınızın ve uygulamalarınızın yanı sıra hem bulutta hem de şirket içi ortamlarda bağlantı kurmanıza olanak tanır. Cihazlarınızı Azure AD 'ye kaydetmek, kaynaklarınız için kullanıcılarınız ve güvenlik açısından üretkenliği artırmanıza olanak sağlar. Azure AD 'de cihazların olması hem ortak yönetim hem de cihaz tabanlı koşullu erişim için temelidir.
 
-Cihaz tabanlı koşullu erişim hakkında daha fazla bilgi için bkz [. nasıl yapılır: bulut uygulaması için yönetilen cihazların koşullu erişimle erişim gerektirme](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices)
+Cihaz tabanlı koşullu erişim hakkında daha fazla bilgi için bkz [. nasıl yapılır: bulut uygulaması için yönetilen cihazların koşullu erişimle erişim gerektirme](/azure/active-directory/conditional-access/require-managed-devices)
 
 Aşağıdaki videoda, üst düzey Program Yöneticisi Sanderin deo ve ürün pazarlama yöneticisi adam Harbour tartışın ve ortak yönetim için Azure AD ile tanıtım edin:
 
@@ -37,7 +37,7 @@ Azure AD, şirkete ait cihazlar için kuruluşunuzun ihtiyaçlarına uygun iki s
 
   - Azure AD 'de birkaç ayarı etkinleştirerek, kullanıcılarınızın Windows kurulum deneyimi (OOBE) aracılığıyla cihazları Azure AD 'ye birleştirmesini sağlayabilirsiniz  
 
-  - Daha fazla bilgi için bkz [. nasıl yapılır: Azure AD JOIN Uygulamanızı planlayın](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)  
+  - Daha fazla bilgi için bkz [. nasıl yapılır: Azure AD JOIN Uygulamanızı planlayın](/azure/active-directory/devices/azureadjoin-plan)  
 
 - **Karma Azure AD 'ye katılmış cihaz**: mevcut etki alanına katılmış cihazlarınıza Azure AD 'ye katılma  
 
@@ -47,15 +47,15 @@ Azure AD, şirkete ait cihazlar için kuruluşunuzun ihtiyaçlarına uygun iki s
 
   - Windows 10 için JOIN makine bağlamında gerçekleşir, bu nedenle kullanıcıların ek adımlar alması gerekmez  
 
-  - Daha fazla bilgi için bkz. [karma Azure Active Directory JOIN uygulamanızı planlaması](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)  
+  - Daha fazla bilgi için bkz. [karma Azure Active Directory JOIN uygulamanızı planlaması](/azure/active-directory/devices/hybrid-azuread-join-plan)  
 
-Her iki seçenek de kullanıcılar için benzer işlevsellik sağlar. Gereksinimlerinize göre bunlardan birini seçmeniz esnektir. Örneğin, Active Directory katılmadıklarında bile [Şirket içi kaynaklarınıza](https://docs.microsoft.com/azure/active-directory/devices/azuread-join-sso) Azure AD 'ye katılmış makinelerden erişebilirsiniz.
+Her iki seçenek de kullanıcılar için benzer işlevsellik sağlar. Gereksinimlerinize göre bunlardan birini seçmeniz esnektir. Örneğin, Active Directory katılmadıklarında bile [Şirket içi kaynaklarınıza](/azure/active-directory/devices/azuread-join-sso) Azure AD 'ye katılmış makinelerden erişebilirsiniz.
 
-[Kimlik doğrulama yönteminiz](https://docs.microsoft.com/azure/active-directory/hybrid/choose-ad-authn)ne olduğuna bakılmaksızın, farklı ortamlarda CIHAZLARı Azure AD 'ye ekleyebilirsiniz. Örneğin, Federasyon kimlik doğrulaması veya bulut kimlik doğrulaması.
+[Kimlik doğrulama yönteminiz](/azure/active-directory/hybrid/choose-ad-authn)ne olduğuna bakılmaksızın, farklı ortamlarda CIHAZLARı Azure AD 'ye ekleyebilirsiniz. Örneğin, Federasyon kimlik doğrulaması veya bulut kimlik doğrulaması.
 
 Zaten bir şirket içi Active Directory varsa, iki seçenekten birini ayarlamak basittir.
 
-## <a name="benefits"></a>Avantajlar
+## <a name="benefits"></a>Yararları
 
 Cihazların Azure AD 'ye katılması, kuruluşunuza aşağıdaki avantajları sağlar:
 
@@ -67,13 +67,13 @@ Azure AD 'ye katılmış cihazlarda, herhangi bir buluta veya şirket içi kayna
 
 Iş için Windows Hello, Windows 10 ' a güçlü parola azaltır kimlik doğrulaması uygular. Cihazlarınızı Azure AD 'ye katılarak, hem bulut hem de şirket içi kaynaklar için Kullanıcı tabanınız genelinde Iş için Windows Hello 'Yu etkinleştirebilirsiniz. Iş için Windows Hello, karmaşık Parolaları hatırlama veya yanlışlıkla ortaya çıkaran sorunu ortadan kaldırır. Oturum açma işlemi hem basit hem de güvenlidir.
 
-Daha fazla bilgi için bkz. [iş Için Windows Hello](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).  
+Daha fazla bilgi için bkz. [iş Için Windows Hello](/windows/security/identity-protection/hello-for-business/hello-identity-verification).  
 
 ### <a name="device-based-conditional-access"></a>Cihaz tabanlı koşullu erişim
 
 Kuruluşunuzun verilerini daha iyi korumak için cihaz durumuna göre koşullu erişimi etkinleştirin. Cihaz tabanlı koşullu erişim yönetilen bir cihaz gerektirir. Bu cihaz uyumlu bir cihaz ya da karma Azure AD 'ye katılmış bir cihaz olmalıdır. Azure AD 'ye katılmış cihazlar için Intune 'un cihazı uyumlu olarak işaretlemesi gerekir. Ancak, karma Azure AD 'ye katılmış cihazlar için, koşullu erişimi değerlendirmek üzere cihaz durumunun kendisi kullanılır. Ortak yönetim, karma Azure AD 'ye katılmış cihazlar için Intune aracılığıyla uyumluluğu değerlendirmeden daha fazla avantaj sağlar. Bu özellik cihaz yapılandırmasının bozulmadan emin olmanızı sağlar.
 
-Cihaz tabanlı koşullu erişim hakkında daha fazla bilgi için bkz. [nasıl yapılır: bulut uygulaması için yönetilen cihazların koşullu erişimle erişimine ihtiyacı](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices).  
+Cihaz tabanlı koşullu erişim hakkında daha fazla bilgi için bkz. [nasıl yapılır: bulut uygulaması için yönetilen cihazların koşullu erişimle erişimine ihtiyacı](/azure/active-directory/conditional-access/require-managed-devices).  
 
 ### <a name="automatic-device-licensing"></a>Otomatik cihaz lisanslama
 
@@ -83,7 +83,7 @@ Azure AD 'ye katılmış tüm Windows 10 cihazları lisans denetimleri aracılı
 
 Self Servis işlevselliği, self servis parola sıfırlama ve BitLocker kurtarma anahtarını içerir. Azure AD Ayrıca parolanızı sıfırlamanıza veya BitLocker Kurtarma anahtarlarına erişmenize yönelik doğrudan seçenekler sağlar. Azure AD 'yi kullanarak parolanızı bir Web tarayıcısı yerine doğrudan Windows kilit ekranından sıfırlayabilirsiniz. Bu özellikler, kullanıcılar için uçuşmayı azaltır ve kuruluşunuzun yardım masası maliyetlerini kesmeye yardımcı olur.  
 
-Daha fazla bilgi için bkz. [öğretici: kullanıcıların hesaplarının kilidini açma veya Azure Active Directory self servis parola sıfırlama kullanarak parola sıfırlama](https://docs.microsoft.com/azure/active-directory/authentication/tutorial-enable-sspr).
+Daha fazla bilgi için bkz. [öğretici: kullanıcıların hesaplarının kilidini açma veya Azure Active Directory self servis parola sıfırlama kullanarak parola sıfırlama](/azure/active-directory/authentication/tutorial-enable-sspr).
 
 ### <a name="enterprise-state-roaming"></a>Kurumsal durum dolaşımı
 
@@ -101,11 +101,11 @@ Azure AD, iş yüklerinizi kolaylaştırmak için çeşitli seçenekler sağlar,
 
 ## <a name="configure"></a>Yapılandırma
 
-Zaten bir şirket içi Active Directory ortamınız varsa ve etki alanına katılmış cihazlarınızı Azure AD 'ye katmak istiyorsanız, karma Azure AD 'ye katılmış cihazları yapılandırın. Daha fazla bilgi için [nasıl yapılır: karma Azure Active Directory JOIN Uygulamanızı planlayın](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
+Zaten bir şirket içi Active Directory ortamınız varsa ve etki alanına katılmış cihazlarınızı Azure AD 'ye katmak istiyorsanız, karma Azure AD 'ye katılmış cihazları yapılandırın. Daha fazla bilgi için [nasıl yapılır: karma Azure Active Directory JOIN Uygulamanızı planlayın](/azure/active-directory/devices/hybrid-azuread-join-plan).
 
 Configuration Manager, [Yeni Windows 10 etki alanına katılmış cihazları Azure AD 'ye otomatik olarak kaydetmek](../core/clients/deploy/about-client-settings.md#automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory)için bir istemci ayarına sahiptir. İstemci ayarlarını yapılandırma hakkında daha fazla bilgi için bkz. [istemci ayarlarını yapılandırma](../core/clients/deploy/configure-client-settings.md).
 
-Cihazlarınız için Azure AD 'ye katılma 'yı şirket içi etki alanınıza katmadan yapılandırmak istiyorsanız, ortamınızda Azure AD 'ye katılma konularını gözden geçirin. Azure AD JOIN ile çalışmaya karar verdikten sonra kuruluşunuzun ihtiyaçlarına bağlı olarak bu uygulamayı dağıtmak için birçok seçeneğiniz vardır. Daha fazla bilgi için aşağıdaki makalelere bakın:
+Cihazlarınız için Azure AD 'ye katılma 'yı şirket içi etki alanınıza katmadan yapılandırmak istiyorsanız, ortamınızda Azure AD 'ye katılma konularını gözden geçirin. Azure AD JOIN ile çalışmaya karar verdikten sonra kuruluşunuzun ihtiyaçlarına bağlı olarak bu uygulamayı dağıtmak için birçok seçeneğiniz vardır. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
-- [Nasıl yapılır: Azure AD JOIN Uygulamanızı planlayın](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)  
-- [Sağlama seçeneklerinizi anlayın](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan#understand-your-provisioning-options)  
+- [Nasıl yapılır: Azure AD JOIN Uygulamanızı planlayın](/azure/active-directory/devices/azureadjoin-plan)  
+- [Sağlama seçeneklerinizi anlayın](/azure/active-directory/devices/azureadjoin-plan#understand-your-provisioning-options)

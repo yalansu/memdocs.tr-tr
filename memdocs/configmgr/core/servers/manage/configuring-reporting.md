@@ -10,12 +10,12 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b7ada6f54a7642817a321937a4d7128994d5538
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: e53c61052b8ee1b217a5268e8877dc4f4415f477
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83823988"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692630"
 ---
 # <a name="configure-reporting-in-configuration-manager"></a>Configuration Manager raporlamayı yapılandırma
 
@@ -39,7 +39,7 @@ SQL Server Reporting Services, farklı türlerde veri kaynakları için kapsaml�
 
 Bir raporu çalıştırdığınızda, Raporlama Hizmetleri bileşeni verileri almak için Configuration Manager site veritabanına bağlanır.  
 
-Raporlama Hizmetleri noktasını bir Configuration Manager sitesine yükleyebilmek için önce hedef site sistemine SQL Server Reporting Services yükleyip yapılandırın. Daha fazla bilgi için bkz. [ınstall SQL Server Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services).  
+Raporlama Hizmetleri noktasını bir Configuration Manager sitesine yükleyebilmek için önce hedef site sistemine SQL Server Reporting Services yükleyip yapılandırın. Daha fazla bilgi için bkz. [ınstall SQL Server Reporting Services](/sql/reporting-services/install-windows/install-reporting-services).  
 
 ### <a name="verify-sql-server-reporting-services-installation"></a>SQL Server Reporting Services yüklemeyi doğrulama
 
@@ -96,11 +96,11 @@ Configuration Manager konsolundaki raporları görüntüleyebilmeniz veya yönet
 
 - Bir raporlama hizmetleri noktası yüklediğinizde, bir [Raporlama Hizmetleri noktası hesabı](../../plan-design/hierarchy/accounts.md#reporting-services-point-account)belirtin. Farklı bir etki alanındaki kullanıcıların bir raporu çalıştırması için, etki alanları arasında çift yönlü bir güven oluşturun. Aksi takdirde rapor çalıştırılamaz.
 
-### <a name="install-the-reporting-services-point-on-a-site-system"></a><a name="bkmk_install" />Raporlama Hizmetleri noktasını bir site sistemine yükler  
+### <a name="install-the-reporting-services-point-on-a-site-system"></a><a name="bkmk_install" /> Raporlama Hizmetleri noktasını bir site sistemine yükler  
 
 Site sistemlerini yapılandırma hakkında daha fazla bilgi için bkz. [site sistemi rollerini yüklemeyi](../deploy/configure/install-site-system-roles.md).  
 
-1. Configuration Manager konsolunda **Yönetim** çalışma alanına gidin, **Site yapılandırması**' nı genişletin ve ardından **sunucular ve site sistemi rolleri** düğümünü seçin.  
+1. Configuration Manager konsolunda **Yönetim** çalışma alanına gidin, **Site yapılandırması**' nı genişletin ve ardından  **sunucular ve site sistemi rolleri** düğümünü seçin.  
 
 1. Raporlama Hizmetleri noktasını yeni veya var olan bir site sistemi sunucusuna ekleyin:  
 
@@ -144,7 +144,7 @@ Sihirbaz tamamlandıktan sonra, Configuration Manager Raporlama Hizmetleri 'nde 
 > [!TIP]  
 > Yalnızca raporlama hizmetleri noktası site rolünü barındıran site sistemlerini listelemek için, **sunucular ve site sistem rolleri**' ne sağ tıklayın ve **Raporlama Hizmetleri noktası**' nı seçin.  
 
-### <a name="languages-for-reports"></a><a name="bkmk_languages" />Raporlar için Diller
+### <a name="languages-for-reports"></a><a name="bkmk_languages" /> Raporlar için Diller
 
 <!-- SCCMDocs#1067 -->
 
@@ -211,7 +211,7 @@ Configuration Manager, raporlama hizmetleri noktasını yüklediğinde, Raporlam
 
 - **ConfigMgr rapor yöneticileri**: Bu güvenlik rolüyle atanan kullanıcılar, Configuration Manager raporlamayla ilgili tüm görevleri gerçekleştirebilir.  
 
-## <a name="verify-installation"></a><a name="bkmk_verify"></a>Yüklemeyi doğrula
+## <a name="verify-installation"></a><a name="bkmk_verify"></a> Yüklemeyi doğrula
 
 Belirli durum iletilerine ve günlük dosyası girişlerine bakarak Raporlama Hizmetleri noktası yüklemesini doğrulayın. Raporlama hizmetleri noktası yüklemesinin başarılı olduğunu doğrulamak için aşağıdaki yordamı kullanın.  
 
@@ -241,7 +241,7 @@ Bu günlük dosyasında, Raporlama Hizmetleri noktasının başarıyla yüklendi
 SQL Server Reporting Services raporları yazmak için kullanabileceğiniz birçok seçenek vardır. Configuration Manager konsolunda raporlar oluşturduğunuzda veya düzenlediğinizde, Configuration Manager yazma ortamı olarak kullanmak üzere Rapor Oluşturucusu açılır. Configuration Manager raporlarınızı nasıl yazarlarından bağımsız olarak, site veritabanı sunucusuna sunucu kimlik doğrulaması için otomatik olarak imzalanan bir sertifikaya ihtiyacınız vardır.
 
 > [!NOTE]  
-> SQL Server Reporting Services rapor yazma hakkında daha fazla bilgi için bkz. [Rapor Oluşturucusu yazma ortamı](https://docs.microsoft.com/sql/reporting-services/tools/report-builder-authoring-environment-ssrs).  
+> SQL Server Reporting Services rapor yazma hakkında daha fazla bilgi için bkz. [Rapor Oluşturucusu yazma ortamı](/sql/reporting-services/tools/report-builder-authoring-environment-ssrs).  
 
 Configuration Manager, sertifikayı site sunucusuna ve SMS sağlayıcı rollerine otomatik olarak yüklenir. Bu sunuculardan birini çalıştırdığınızda Configuration Manager konsolundan raporlar oluşturabilir veya düzenleyebilirsiniz.
 

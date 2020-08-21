@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4ddae3e4c4cf31cb05376bfa437d722f16652fad
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6ff280a01b7388f3e4d296625a94c0184a0e6b09
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721321"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692987"
 ---
 # <a name="capabilities-in-technical-preview-1707-for-configuration-manager"></a>Configuration Manager için Technical Preview 1707 ' deki yetenekler
 
@@ -35,7 +35,7 @@ Bu makalede, sürüm 1707 Configuration Manager için Technical Preview 'da kull
 - **Pasif modda bir site sunucunuz varsa, Preview sürüm 1707 ' e güncelleştirme başarısız olur**. Önizleme sürümü 1706 ' i çalıştırdığınızda ve [pasif modda bir birincil site sunucusuna](capabilities-in-technical-preview-1706.md#site-server-role-high-availability)sahip olduğunuzda, önizleme sitenizi sürüm 1707 ' ye başarıyla güncelleştirebilmeniz için Pasif mod site sunucusunu kaldırmanız gerekir. Siteniz sürüm 1707 ' i çalıştırdıktan sonra Pasif mod site sunucusunu yeniden yükleyebilirsiniz.
 
   Pasif mod site sunucusunu kaldırmak için:
-  1. Konsolunda **Yönetim** > **genel bakış** > **Site yapılandırması** > **sunucuları ve site sistem rolleri**' ne gidin ve Pasif mod site sunucusunu seçin.
+  1. Konsolunda **Yönetim**  >  **genel bakış**  >  **Site yapılandırması**  >  **sunucuları ve site sistem rolleri**' ne gidin ve Pasif mod site sunucusunu seçin.
   2. **Site sistemi rolleri** bölmesinde, **site sunucusu** rolüne sağ tıklayın ve ardından **rolü kaldır**' ı seçin.
   3. Pasif mod site sunucusuna sağ tıklayın ve ardından **Sil**' i seçin.
   4. Site sunucusu kaldırıldıktan sonra, etkin birincil site sunucusunda hizmeti **CONFIGURATION_MANAGER_UPDATE**yeniden başlatın.
@@ -60,7 +60,7 @@ Bu sürümden itibaren, eş önbellek Windows 10 için içerik hızlı yükleme 
 
 ## <a name="surface-device-dashboard"></a>Surface cihaz panosu
 <!--1355788-->
-Surface cihaz panosu, ortamınızda bulunan yüzey cihazları hakkında bilgi sağlar. Konsolunda, **izleme** > **yüzeyi cihazları**' na gidin. Aşağıdakileri görebilirsiniz:
+Surface cihaz panosu, ortamınızda bulunan yüzey cihazları hakkında bilgi sağlar. Konsolunda, **izleme**  >  **yüzeyi cihazları**' na gidin. Aşağıdakileri görebilirsiniz:
 - Yüzey yüzdesi
 - Yüzey modellerinin yüzdesi
 - ilk beş işletim sistemi sürümü
@@ -81,11 +81,11 @@ Windows Defender Application Guard ilkeleri oluşturup dağıtmak için, ilkeyi 
 #### <a name="to-create-a-policy-and-to-browse-the-available-settings"></a>Bir ilke oluşturmak ve kullanılabilir ayarlara gitmek için:
 
 1. Configuration Manager konsolunda, **varlıklar ve uyumluluk**' i seçin.
-2. **Varlıklar ve uyum** çalışma alanında,**Windows Defender Application Guard****Endpoint Protection** >  **genel bakış** > ' ı seçin.
+2. **Varlıklar ve uyum** çalışma alanında, **Overview**  >  **Endpoint Protection**  >  **Windows Defender Application Guard**Endpoint Protection genel bakış ' ı seçin.
 3. **Giriş** sekmesinde, **Oluştur** grubunda, **Windows Defender Application Guard İlkesi Oluştur**' a tıklayın.
 4. Blog gönderisini başvuru olarak kullanarak, özelliği denemek için kullanılabilir ayarları gözden geçirin ve yapılandırabilirsiniz.
 5. Bu sürümde, sihirbaza yeni **ağ tanımı** sayfasını ekledik. Bu sayfada, kurumsal kimlik ' i belirtin ve kurumsal ağ sınırınızı tanımlayın.<br>Windows 10 bilgisayarları, istemcide yalnızca bir ağ yalıtımı listesini depolar. Bu sürümde, iki farklı türde ağ yalıtımı listesi (biri Windows Information Protection, diğeri Windows Defender Application Guard 'dan) oluşturabilir ve bunları istemciye dağıtabilirsiniz. Her iki ilkeyi de dağıtırsanız, bu ağ yalıtımı listelerinin eşleşmesi gerekir. Aynı istemciyle eşleşmeyen listeler dağıtırsanız, dağıtım başarısız olur.
-[Windows Information Protection belgelerinde](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)ağ tanımlarını belirtme hakkında daha fazla bilgi edinebilirsiniz.
+[Windows Information Protection belgelerinde](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)ağ tanımlarını belirtme hakkında daha fazla bilgi edinebilirsiniz.
 
 6. İşiniz bittiğinde Sihirbazı doldurun ve ilkeyi bir veya daha fazla Windows 10 cihazına dağıtın.
 

@@ -10,12 +10,12 @@ ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: ade07cf23807d340ee5e0c7955a042a44f9031c5
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 9589b9e542c9d323ab7a23af169725c1a54bfb70
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240448"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694772"
 ---
 # <a name="create-configuration-items-for-windows-10-devices"></a>Windows 10 cihazları için yapılandırma öğeleri oluşturma
 
@@ -140,9 +140,9 @@ Configuration Manager Windows Information Protection yapılandırma öğeleri ş
   
 WıP 'i Configuration Manager ile yapılandırma hakkında daha fazla bilgi için bkz.:
 
-- [Windows Information Protection (WıP) kullanarak kurumsal verilerinizi koruma](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
-- [Configuration Manager kullanarak bir Windows Information Protection (WıP) ilkesi oluşturma ve dağıtma](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
-- [Windows Information Protection (WıP) kullanılırken Sınırlamalar](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/limitations-with-wip)
+- [Windows Information Protection (WıP) kullanarak kurumsal verilerinizi koruma](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Configuration Manager kullanarak bir Windows Information Protection (WıP) ilkesi oluşturma ve dağıtma](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
+- [Windows Information Protection (WıP) kullanılırken Sınırlamalar](/windows/security/information-protection/windows-information-protection/limitations-with-wip)
 
 ## <a name="see-also"></a>Ayrıca bkz.  
 [Configuration Manager istemcisiyle yönetilen cihazlar için yapılandırma öğeleri](../../compliance/deploy-use/create-configuration-items.md)

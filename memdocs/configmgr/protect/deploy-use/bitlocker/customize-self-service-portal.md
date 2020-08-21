@@ -10,12 +10,12 @@ ms.assetid: 6bc26e36-9914-4606-ae8d-f7b23218942f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 220ebb558a0e01f701cab621381ad951a8fd0738
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: aa7f95e18775862427254839a2aab2c229e31057
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88123910"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697339"
 ---
 # <a name="customize-the-self-service-portal"></a>Self servis portalı özelleştirme
 
@@ -80,7 +80,7 @@ Belirli bir süre işlem yapılmadan sonra kullanıcının oturumunun süresinin
 
 1. **Eylemler** bölmesinde **Uygula**' yı seçin.
 
-## <a name="localize-helpdesk-text-and-url"></a><a name="bkmk_localize"></a>Yardım Masası metnini ve URL 'YI yerelleştirin
+## <a name="localize-helpdesk-text-and-url"></a><a name="bkmk_localize"></a> Yardım Masası metnini ve URL 'YI yerelleştirin
 
 Self Servis portalı `HelpdeskText` bildiriminin ve bağlantısının yerelleştirilmiş sürümlerini yapılandırabilirsiniz `HelpdeskUrl` . Bu dize, kullanıcılara portalı kullanırken nasıl ek yardım alma hakkında bilgilendirir. Yerelleştirilmiş metni yapılandırırsanız Portal, Web tarayıcıları için yerelleştirilmiş sürümü bu dilde görüntüler. Yerelleştirilmiş bir sürüm bulamazsa, ve ayarlarında varsayılan değeri görüntüler `HelpdeskText` `HelpdeskUrl` .
 
@@ -128,7 +128,7 @@ Self Servis portalı, aşağıdaki kurallara göre bildirim metnini görüntüle
 
 1. `<language>`Uygulama yolunda desteklenen her dil için bir klasör oluşturun `Self Service Website` . Örneğin, `es-es` İspanyolca (İspanya) için. Varsayılan olarak, tam yol `C:\inetpub\Microsoft BitLocker Management Solution\Self Service Website\es-es` .
 
-    Kullanabileceğiniz geçerli dil kodlarının listesi için bkz. [ulusal dil desteği (NLS) API başvurusu](https://docs.microsoft.com/windows/win32/intl/locale-identifiers#predefined-locale-identifiers).
+    Kullanabileceğiniz geçerli dil kodlarının listesi için bkz. [ulusal dil desteği (NLS) API başvurusu](/windows/win32/intl/locale-identifiers#predefined-locale-identifiers).
 
     > [!TIP]
     > Dil klasörünün adı ayrıca dilden bağımsız bir ad olabilir. Örneğin, İspanyolca (Ispanya **) ve İspanyolca** (Arjantin) için es **-es** yerine İspanyolca için **es** . Kullanıcı tarayıcısını **es-es**olarak ayarladıysanız ve bu dil klasörü yoksa, Web sunucusu, üst yerel ayar klasörünü özyinelemeli olarak denetler.**es** (Üst ayarlar .NET içinde tanımlanmıştır.) Örneğin, `Self Service Website\es\Notice.txt` . Bu özyinelemeli geri dönüş, .NET kaynak yükleme kurallarını taklit eder.

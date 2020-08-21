@@ -9,12 +9,12 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 01b6587d1d223675fdc240c20913e21854d55821
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9f24768521cd179c3a6403aff057de48ae46e7e7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718465"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695520"
 ---
 # <a name="online-documentation-for-configuration-manager"></a>Configuration Manager çevrimiçi belgeler
 
@@ -26,7 +26,7 @@ Configuration Manager belge kitaplığına hoş geldiniz. Kullandığınız ür�
 
 ### <a name="online-documentation"></a>Çevrimiçi belgeler
 
-[Docs.Microsoft.com/ConfigMgr](https://docs.microsoft.com/configmgr)adresindeki geçerli Configuration Manager dalı için çevrimiçi belgeleri görüntüleyin:  
+[Docs.Microsoft.com/ConfigMgr](/configmgr)adresindeki geçerli Configuration Manager dalı için çevrimiçi belgeleri görüntüleyin:  
 
 - [Configuration Manager'a Giriş](../understand/introduction.md)  
 
@@ -76,33 +76,33 @@ Aşağıdaki sürümler için:
 
 Çevrimiçi belgeleri aşağıdaki konumlarda görüntüleyin:  
 
-- [System Center 2012 Configuration Manager Yazılımını Kullanmaya Başlama](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144\(v=technet.10\))  
+- [System Center 2012 Configuration Manager Yazılımını Kullanmaya Başlama](/previous-versions/system-center/system-center-2012-R2/gg682144\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager için Site Yönetimi](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983\(v=technet.10\))  
+- [System Center 2012 Configuration Manager için Site Yönetimi](/previous-versions/system-center/system-center-2012-R2/gg681983\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager'da Hiyerarşilerin Geçirilmesi](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682006\(v=technet.10\))  
+- [System Center 2012 Configuration Manager'da Hiyerarşilerin Geçirilmesi](/previous-versions/system-center/system-center-2012-R2/gg682006\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager için İstemci Dağıtma](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391\(v=technet.10\))  
+- [System Center 2012 Configuration Manager için İstemci Dağıtma](/previous-versions/system-center/system-center-2012-R2/gg699391\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager'da Yazılım ve İşletim Sistemlerini Dağıtma](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699393\(v=technet.10\))  
+- [System Center 2012 Configuration Manager'da Yazılım ve İşletim Sistemlerini Dağıtma](/previous-versions/system-center/system-center-2012-R2/gg699393\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager’da Varlıklar ve Uyumluluk](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682029\(v=technet.10\))  
+- [System Center 2012 Configuration Manager’da Varlıklar ve Uyumluluk](/previous-versions/system-center/system-center-2012-R2/gg682029\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager'da Güvenlik ve Gizlilik](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682033\(v=technet.10\))  
+- [System Center 2012 Configuration Manager'da Güvenlik ve Gizlilik](/previous-versions/system-center/system-center-2012-R2/gg682033\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager Kullanımına Yönelik Senaryolar ve Çözümler](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj884163\(v=technet.10\))  
+- [System Center 2012 Configuration Manager Kullanımına Yönelik Senaryolar ve Çözümler](/previous-versions/system-center/system-center-2012-R2/jj884163\(v=technet.10\))  
 
 ### <a name="release-notes-and-technical-publications"></a>Sürüm notları ve teknik yayınlar
 
 Sürüm notları ve teknik yayınlar Configuration Manager kılavuzlarını tamamlar. Sürüm notları, ürün belgelerinde kullanılamayan ve Configuration Manager başarıyla yüklenmesi için gereken bilgileri içerir. Teknik yayınlar Configuration Manager yazılımını destekleyen ek bilgiler sağlar.  
 
-- [System Center 2012 Configuration Manager için Sürüm Notları](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj870706\(v=technet.10\))  
+- [System Center 2012 Configuration Manager için Sürüm Notları](/previous-versions/system-center/system-center-2012-R2/jj870706\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager için Teknik Yayınlar](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh531521\(v=technet.10\))  
+- [System Center 2012 Configuration Manager için Teknik Yayınlar](/previous-versions/system-center/system-center-2012-R2/hh531521\(v=technet.10\))  
 
 ### <a name="accessibility"></a>Erişilebilirlik
 
-Engelli kişiler için Configuration Manager daha erişilebilir hale getirme özellikleri, ürünleri ve hizmetleri hakkında daha fazla bilgi için, bkz. [Configuration Manager erişilebilirlik özellikleri](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj553406\(v=technet.10\))
+Engelli kişiler için Configuration Manager daha erişilebilir hale getirme özellikleri, ürünleri ve hizmetleri hakkında daha fazla bilgi için, bkz. [Configuration Manager erişilebilirlik özellikleri](/previous-versions/system-center/system-center-2012-R2/jj553406\(v=technet.10\))
 
 ### <a name="downloadable-documentation"></a>İndirilebilir belgeler
 

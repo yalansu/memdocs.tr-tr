@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 98a82d118442a7ca37ff7b2df62bf4702c15ba2c
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 9209a1a948c43a21f097ba836a6761b53ddc9530
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526024"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692970"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Configuration Manager için Technical Preview 1703 ' deki yetenekler
 
@@ -33,14 +33,14 @@ Artık, lisanslanan uygulamaları cihazlara ve kullanıcılara dağıtabilirsini
 
 | Configuration Manager sürümü | Uygulama, cihaz lisansını destekliyor mu? | Dağıtım koleksiyonu türü | Talep edilen lisans |
 | ----------------------------- | ------------------------------ | -------------------------- | --------------- |
-|1702 öncesi|Yes|Kullanıcı|Kullanıcı Lisansı|
-|1702 öncesi|No|Kullanıcı|Kullanıcı Lisansı|
-|1702 öncesi|Yes|Cihaz|Kullanıcı Lisansı|
-|1702 öncesi|No|Cihaz|Kullanıcı Lisansı|
-|1702 ve üzeri|Yes|Kullanıcı|Kullanıcı Lisansı|
-|1702 ve üzeri|No|Kullanıcı|Kullanıcı Lisansı|
-|1702 ve üzeri|Yes|Cihaz|Cihaz lisansı|
-|1702 ve üzeri|No|Cihaz|Kullanıcı Lisansı|
+|1702 öncesi|Evet|Kullanıcı|Kullanıcı Lisansı|
+|1702 öncesi|Hayır|Kullanıcı|Kullanıcı Lisansı|
+|1702 öncesi|Evet|Cihaz|Kullanıcı Lisansı|
+|1702 öncesi|Hayır|Cihaz|Kullanıcı Lisansı|
+|1702 ve üzeri|Evet|Kullanıcı|Kullanıcı Lisansı|
+|1702 ve üzeri|Hayır|Kullanıcı|Kullanıcı Lisansı|
+|1702 ve üzeri|Evet|Cihaz|Cihaz lisansı|
+|1702 ve üzeri|Hayır|Cihaz|Kullanıcı Lisansı|
 
 
 ## <a name="direct-links-to-applications-in-software-center"></a>Yazılım Merkezi 'nde uygulamaların doğrudan bağlantıları
@@ -82,7 +82,7 @@ Technical Preview 1703 ile, bu sihirbaz kullanılarak yalnızca Iş için Window
 
 - [Configuration Manager iş Için Windows Mağazası 'ndan uygulamaları yönetme](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)güncel dalı konusunun [Iş için Windows Mağazası eşitlemesini ayarlama](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_setup) bölümünde bulunan yapılandırma adımlarını değiştirmek için bu önizleme konusundaki bilgileri kullanın.
 
-- Web Apps hakkında daha fazla bilgi için [Azure App Service 'Da kimlik doğrulaması ve yetkilendirme](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview)ve [Web Apps genel bakış](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)bölümüne bakın.
+- Web Apps hakkında daha fazla bilgi için [Azure App Service 'Da kimlik doğrulaması ve yetkilendirme](/azure/app-service/app-service-authentication-overview)ve [Web Apps genel bakış](/azure/app-service-web/app-service-web-overview)bölümüne bakın.
 
 ### <a name="prerequisites-and-planning"></a>Önkoşullar ve planlama
 Configuration Manager ile Iş için Windows Mağazası arasında bir bağlantı ayarladığınızda, mağazadan eşitlenen uygulama içeriğinin tutulacağı bir klasör sağlamalısınız. Bu klasörün güvenli olduğundan ve içeriğinin cihazlara dağıtılabilmesi için aşağıdaki izinlerin sağlandığından emin olun:
@@ -138,7 +138,7 @@ Bu sürüm, görev dizisi gruplarını genişletme ve daraltma özelliğini tan�
 ## <a name="client-settings-to-configure-windows-analytics-for-upgrade-readiness"></a>Yükseltme Hazırlığı için Windows analizlerini yapılandırmak için istemci ayarları
 Bu sürümden itibaren, Configuration Manager Yükseltme Hazırlığı gibi Windows Analytics çözümlerini kullanmak için gereken Windows Tanılama verilerinin yapılandırılmasını basitleştirmek üzere cihaz istemci ayarlarını kullanabilirsiniz. Configuration Manager, Windows Analytics 'ten, istemci bilgisayarlarınız tarafından bildirilen Windows Tanılama verilerine dayalı olarak ortamınızın geçerli durumu hakkında değerli Öngörüler sağlayabilen verileri alabilir. Windows Tanılama verileri, istemci bilgisayarlar tarafından Windows Tanılama hizmetine bildirilir ve ardından ilgili veriler daha sonra kuruluşunuzun OMS çalışma alanlarından birinde barındırılan Windows Analytics çözümlerine aktarılır. Yükseltme Hazırlığı, yönetilen cihazlarınız için Windows yükseltmeleriyle ilgili kararları önceliklendirmenize yardımcı olabilecek bir Windows Analytics çözümüdür.
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 - Sitenizi Yükseltme Hazırlığı bulut hizmetini kullanacak şekilde yapılandırmış olmanız gerekir.
 
 ### <a name="configure-windows-analytics-client-settings"></a>Windows Analytics istemci ayarlarını yapılandırma

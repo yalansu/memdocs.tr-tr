@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bc3e1312c214f871635a65d8d0031e06ea4ad8d9
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: fbb5d524551f5ff2c0a04b62b0f494046eee7a45
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126484"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692698"
 ---
 # <a name="internet-access-requirements"></a>İnternet erişimi gereksinimleri
 
@@ -30,7 +30,7 @@ Configuration Manager, ürün genelinde aşağıdaki Microsoft URL iletme hizmet
 
 Aşağıdaki bölümlerde açıkça listelenmese de, bu uç noktalara her zaman izin vermeniz gerekir.
 
-## <a name="service-connection-point"></a><a name="bkmk_scp"></a>Hizmet bağlantı noktası
+## <a name="service-connection-point"></a><a name="bkmk_scp"></a> Hizmet bağlantı noktası
 
 Bu yapılandırma, hizmet bağlantı noktasını barındıran bilgisayar ve bu bilgisayar ile internet arasında güvenlik duvarları için geçerlidir. Her ikisi de, HTTPS için giden bağlantı noktası **tcp 443** ve aşağıdaki Internet konumlarına http için **TCP 80** giden bağlantı noktası üzerinden iletişime izin vermelidir.
 
@@ -45,7 +45,7 @@ Diğer Configuration Manager özellikleri, hizmet bağlantı noktasından ek uç
 
 Sürüm 2002 ' den başlayarak, Configuration Manager site bir bulut hizmeti için gerekli uç noktalara bağlanamazsa, kritik bir durum ileti KIMLIĞI 11488 oluşturur. Hizmete bağlanamadığınızda SMS_SERVICE_CONNECTOR bileşen durumu kritik olarak değişir. Configuration Manager konsolunun [Bileşen durumu](../../servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) düğümünde ayrıntılı durumu görüntüleyin.<!-- 5566763 -->
 
-### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"></a>Güncelleştirmeler ve bakım
+### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"></a> Güncelleştirmeler ve bakım
 
 Bu işlev hakkında daha fazla bilgi için bkz. [güncelleştirmeler ve bakım Configuration Manager](../../servers/manage/updates.md).
 
@@ -84,30 +84,30 @@ Bu işlev hakkında daha fazla bilgi için bkz. [Windows 'u hizmet olarak yönet
 
 Bu işlev hakkında daha fazla bilgi için bkz. [Azure hizmetlerini Configuration Manager ile kullanım Için yapılandırma](../../servers/deploy/configure/azure-services-wizard.md).
 
-- `management.azure.com`(Azure genel bulutu)
-- `management.usgovcloudapi.net`(Azure ABD kamu bulutu)
+- `management.azure.com` (Azure genel bulutu)
+- `management.usgovcloudapi.net` (Azure ABD kamu bulutu)
 
 ## <a name="co-management"></a>Ortak yönetim
 
-Windows 10 cihazlarını ortak yönetim için Microsoft Intune kaydederseniz, bu cihazların Intune için gereken uç noktalara erişebildiğinizden emin olun. Daha fazla bilgi için bkz. [Microsoft Intune Için ağ uç noktaları](https://docs.microsoft.com/intune/intune-endpoints).
+Windows 10 cihazlarını ortak yönetim için Microsoft Intune kaydederseniz, bu cihazların Intune için gereken uç noktalara erişebildiğinizden emin olun. Daha fazla bilgi için bkz. [Microsoft Intune Için ağ uç noktaları](/intune/intune-endpoints).
 
 ## <a name="microsoft-store-for-business"></a>Iş için Microsoft Store
 
-[İş için Microsoft Store](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)Configuration Manager tümleştirirseniz, hizmet bağlantı noktasının ve hedeflenen cihazların bulut hizmetine erişebildiğinden emin olun. Daha fazla bilgi için bkz. [iş proxy yapılandırması için Microsoft Store](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+[İş için Microsoft Store](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)Configuration Manager tümleştirirseniz, hizmet bağlantı noktasının ve hedeflenen cihazların bulut hizmetine erişebildiğinden emin olun. Daha fazla bilgi için bkz. [iş proxy yapılandırması için Microsoft Store](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
 
 ## <a name="delivery-optimization"></a>Teslim iyileştirme
 
-Teslim iyileştirme kullanıyorsanız, istemcilerin bulut hizmetiyle iletişim kurması gerekir:`*.do.dsp.mp.microsoft.com`
+Teslim iyileştirme kullanıyorsanız, istemcilerin bulut hizmetiyle iletişim kurması gerekir: `*.do.dsp.mp.microsoft.com`
 
 Microsoft bağlı önbelleğini destekleyen dağıtım noktaları da bu uç noktaları gerektirir.
 
 Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
-- [Teslim iyileştirme hakkında SSS](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
+- [Teslim iyileştirme hakkında SSS](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
 - [Configuration Manager 'de içerik yönetimi için temel kavramlar](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
 - [Configuration Manager 'de Microsoft bağlı önbelleği](../hierarchy/microsoft-connected-cache.md)
 
-## <a name="cloud-services"></a><a name="bkmk_cloud"></a>Bulut Hizmetleri
+## <a name="cloud-services"></a><a name="bkmk_cloud"></a> Bulut Hizmetleri
 
 <!-- SCCMDocs-pr #3402 -->
 
@@ -132,23 +132,23 @@ CMG/CDP hizmet dağıtımı için hizmet bağlantı noktasının erişimi olmas�
 
 - Azure AD Kullanıcı keşfi için:
 
-  - Sürüm 1902 ve üzeri: Microsoft Graph uç noktası`https://graph.microsoft.com/`
+  - Sürüm 1902 ve üzeri: Microsoft Graph uç noktası `https://graph.microsoft.com/`
 
-  - Sürüm 1810 ve önceki sürümler: Azure AD Graph uç noktası`https://graph.windows.net/`  
+  - Sürüm 1810 ve önceki sürümler: Azure AD Graph uç noktası `https://graph.windows.net/`  
 
 ### <a name="cmg-connection-point"></a>CMG bağlantı noktası
 
 CMG bağlantı noktasının aşağıdaki hizmet uç noktalarına erişmesi gerekir:
 
 - Bulut hizmeti adı (CMG veya CDP için):
-  - `<name>.cloudapp.net`(Azure genel bulutu)
-  - `<name>.usgovcloudapp.net`(Azure ABD kamu bulutu)
+  - `<name>.cloudapp.net` (Azure genel bulutu)
+  - `<name>.usgovcloudapp.net` (Azure ABD kamu bulutu)
 
-- Hizmet yönetimi uç noktası:`https://management.core.windows.net/`  
+- Hizmet yönetimi uç noktası: `https://management.core.windows.net/`  
 
 - Depolama uç noktası (içerik etkinleştirilmiş CMG veya CDP için):
-  - `<name>.blob.core.windows.net`(Azure genel bulutu)
-  - `<name>.blob.core.usgovcloudapi.net`(Azure ABD kamu bulutu)
+  - `<name>.blob.core.windows.net` (Azure genel bulutu)
+  - `<name>.blob.core.usgovcloudapi.net` (Azure ABD kamu bulutu)
 <!--  and `<name>.table.core.windows.net` per DC, only used internally -->
 
 CMG bağlantı noktası site sistemi, bir Web proxy 'si kullanmayı destekler. Bu rolü bir proxy için yapılandırma hakkında daha fazla bilgi için bkz. [proxy sunucu desteği](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). CMG bağlantı noktasının yalnızca CMG hizmet uç noktalarına bağlanması gerekir. Diğer Azure uç noktalarına erişmesi gerekmez.
@@ -156,16 +156,16 @@ CMG bağlantı noktası site sistemi, bir Web proxy 'si kullanmayı destekler. B
 ### <a name="configuration-manager-client"></a>Configuration Manager istemcisi
 
 - Bulut hizmeti adı (CMG veya CDP için):
-  - `<name>.cloudapp.net`(Azure genel bulutu)
-  - `<name>.usgovcloudapp.net`(Azure ABD kamu bulutu)
+  - `<name>.cloudapp.net` (Azure genel bulutu)
+  - `<name>.usgovcloudapp.net` (Azure ABD kamu bulutu)
 
 - Depolama uç noktası (içerik etkinleştirilmiş CMG veya CDP için):
-  - `<name>.blob.core.windows.net`(Azure genel bulutu)
-  - `<name>.blob.core.usgovcloudapi.net`(Azure ABD kamu bulutu)
+  - `<name>.blob.core.windows.net` (Azure genel bulutu)
+  - `<name>.blob.core.usgovcloudapi.net` (Azure ABD kamu bulutu)
 
 - Azure AD belirteç alımı için Azure AD uç noktası:
-  - `login.microsoftonline.com`(Azure genel bulutu)
-  - `login.microsoftonline.us`(Azure ABD kamu bulutu)
+  - `login.microsoftonline.com` (Azure genel bulutu)
+  - `login.microsoftonline.us` (Azure ABD kamu bulutu)
 
 ### <a name="configuration-manager-console"></a>Configuration Manager konsolu
 
@@ -179,7 +179,7 @@ CMG bağlantı noktası site sistemi, bir Web proxy 'si kullanmayı destekler. B
   - Azure ABD kamu bulutu
     - `login.microsoftonline.us`
 
-## <a name="software-updates"></a><a name="bkmk_sum"></a>Yazılım güncelleştirmeleri
+## <a name="software-updates"></a><a name="bkmk_sum"></a> Yazılım güncelleştirmeleri
 
 WSUS ve otomatik güncelleştirmelerin Microsoft Update bulut hizmetiyle iletişim kurabilmesi için etkin yazılım güncelleştirme noktasının aşağıdaki uç noktalara erişmesine izin verin:  
 
@@ -225,17 +225,17 @@ Aşağıdaki durumlarda iki site sistemi arasındaki bir güvenlik duvarına uç
 ## <a name="manage-microsoft-365-apps"></a>Microsoft 365 uygulamalarını yönetme
 
 > [!NOTE]
-> 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
+> 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
 
 Microsoft 365 uygulamalarını kurumsal olarak dağıtmak ve güncelleştirmek için Configuration Manager kullanıyorsanız aşağıdaki uç noktalara izin verin:
 
 <!-- SCCMDocs#929 -->
 
-- `officecdn.microsoft.com`yazılım güncelleştirme noktasını Kurumsal istemci güncelleştirmelerine yönelik Microsoft 365 uygulamalar için eşitlemeye yönelik
+- `officecdn.microsoft.com` yazılım güncelleştirme noktasını Kurumsal istemci güncelleştirmelerine yönelik Microsoft 365 uygulamalar için eşitlemeye yönelik
 
-- `config.office.com`kurumsal dağıtımlar için Microsoft 365 uygulamalar için özel yapılandırma oluşturma
+- `config.office.com` kurumsal dağıtımlar için Microsoft 365 uygulamalar için özel yapılandırma oluşturma
 
-- `contentstorage.osi.office.net`Office eklentisi hazırlığını desteklemek için<!-- MEMDocs#410 -->
+- `contentstorage.osi.office.net` Office eklentisi hazırlığını desteklemek için<!-- MEMDocs#410 -->
 
 ## <a name="configuration-manager-console"></a>Configuration Manager konsolu
 

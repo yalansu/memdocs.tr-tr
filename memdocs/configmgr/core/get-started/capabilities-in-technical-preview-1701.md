@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 20c560925b2c1abec282b8c5f8dae3f6f42f4d64
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: a9d0beeee1e00315a913adfc5dde6bd69f75cd6f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591214"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693004"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-configuration-manager"></a>Configuration Manager için Technical Preview 1701 ' deki yetenekler
 
@@ -127,7 +127,7 @@ Bunu yapmak için, bir yapılandırma dosyasını kamu bulutuna işaret etmek ü
    - **Düzenlendi:** &lt; Setting Name = "FairFaxAuthorityResource" serializeAs = "String" >   
      &lt;değer &gt; [https://login.microsoftonline.com](https://login.microsoftonline.com) &lt; /değer&gt;
 
-2. Dosyayı İki değişiklikle kaydettikten sonra, Configuration Manager konsolunu aynı bilgisayarda yeniden başlatın ve ardından bu konsolu kullanarak OMS bağlayıcısını yükleyebilirsiniz. Bağlayıcıyı yüklemek için [Configuration Manager verileri Microsoft Operations Management Suite](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)' deki bilgileri kullanın ve Microsoft Azure Kamu buluttaki **Operations Management Suite çalışma alanını** seçin.
+2. Dosyayı İki değişiklikle kaydettikten sonra, Configuration Manager konsolunu aynı bilgisayarda yeniden başlatın ve ardından bu konsolu kullanarak OMS bağlayıcısını yükleyebilirsiniz. Bağlayıcıyı yüklemek için [Configuration Manager verileri Microsoft Operations Management Suite](/azure/azure-monitor/platform/collect-sccm)' deki bilgileri kullanın ve Microsoft Azure Kamu buluttaki **Operations Management Suite çalışma alanını** seçin.
 
 3. OMS Bağlayıcısı yüklendikten sonra, siteye bağlanan herhangi bir konsolu kullandığınızda kamu bulutuna bağlantı sağlanır.
 

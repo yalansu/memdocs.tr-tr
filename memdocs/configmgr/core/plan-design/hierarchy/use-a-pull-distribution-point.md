@@ -10,12 +10,12 @@ ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c243897a4c52eff04263325b998c4b23d6b3dde4
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 5f0993f6120735f8a614801f9ac14c29870ffefe
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166596"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692596"
 ---
 # <a name="use-a-pull-distribution-point-with-configuration-manager"></a>Configuration Manager ile bir çekme dağıtım noktası kullanma
 
@@ -134,7 +134,7 @@ Bir çekme dağıtım noktası kullandığınızda, aşağıdaki site bileşeni 
 
 - İstek temelli dağıtım noktaları, içerik aktarımını yönetmek için **CCMFramework** bileşenini kullanır. Configuration Manager istemcisi bu bileşeni içerir.  
 
-- Çekme dağıtım noktasını etkinleştirdiğinizde, site, **PullDP. msi**' yi yüklüyor. Bu yükleyici, CCMFramework bileşenini de ekler. Çerçeve Configuration Manager istemcisi gerektirmez.  
+- Çekme dağıtım noktasını etkinleştirdiğinizde, site **pulldp.msi**yüklenir. Bu yükleyici, CCMFramework bileşenini de ekler. Çerçeve Configuration Manager istemcisi gerektirmez.  
 
 - Çekme dağıtım noktası yüklendikten sonra, birincil olarak çalışmak için **ccmexec** hizmetini kullanır.  
 
@@ -148,10 +148,10 @@ Bir çekme dağıtım noktası kullandığınızda, aşağıdaki site bileşeni 
 > [!TIP]
 > İstek temelli dağıtım noktası ekledikten sonra günlük dosyalarında HTTP 403 hataları görürseniz, aşağıdaki değişikliği yapın:
 >
-> 1. Kaynak dağıtım noktasında, aşağıdaki kayıt defteri değerini ayarlayın:`HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL, ClientAuthTrustMode = 2 (REG_DWORD)`
+> 1. Kaynak dağıtım noktasında, aşağıdaki kayıt defteri değerini ayarlayın: `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL, ClientAuthTrustMode = 2 (REG_DWORD)`
 > 1. Kaynak dağıtım noktası sunucusunu yeniden başlatın.
 >
-> Sonra çekme dağıtım noktası, kaynaktan içerik yüklemeye başlamalıdır. Bu kayıt defteri anahtarı hakkında daha fazla bilgi için bkz. [TLS-SSL (Schannel SSP) genel bakış](https://docs.microsoft.com/windows-server/security/tls/what-s-new-in-tls-ssl-schannel-ssp-overview).<!-- SCCMDocs#1973 -->
+> Sonra çekme dağıtım noktası, kaynaktan içerik yüklemeye başlamalıdır. Bu kayıt defteri anahtarı hakkında daha fazla bilgi için bkz. [TLS-SSL (Schannel SSP) genel bakış](/windows-server/security/tls/what-s-new-in-tls-ssl-schannel-ssp-overview).<!-- SCCMDocs#1973 -->
 
 ## <a name="see-also"></a>Ayrıca bkz.  
 

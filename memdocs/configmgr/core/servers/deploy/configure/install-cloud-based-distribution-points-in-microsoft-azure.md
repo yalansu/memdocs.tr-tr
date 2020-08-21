@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35379aed71544a25a98ec4dfa421be70c1bae851
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 4a1e19025af82c9beeed8c227871df94b4674791
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427699"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692715"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Configuration Manager için bulut dağıtım noktası yükler
 
@@ -38,7 +38,7 @@ Bu makalede Microsoft Azure bir Configuration Manager bulut dağıtım noktası 
 - [Gelişmiş sorun giderme](#bkmk_tshoot)
 
 
-## <a name="before-you-begin"></a><a name="bkmk_before"></a>Başlamadan önce
+## <a name="before-you-begin"></a><a name="bkmk_before"></a> Başlamadan önce
 
 Başlayın [bir bulut dağıtım noktası kullanın](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md)makalesini okuyun. Bu makale, bulut dağıtım noktalarınızı planlayıp tasarlamanıza yardımcı olur.
 
@@ -91,14 +91,14 @@ Bir bulut dağıtım noktasını Windows BranchCache kullanmak üzere etkinleşt
 
 - Site sunucusunda bir şirket içi dağıtım noktası site sistemi rolü varsa, **BranchCache 'ı etkinleştirmek ve yapılandırmak**için bu rolün özelliklerinde seçeneğini yapılandırın. Daha fazla bilgi için bkz. [dağıtım noktası yapılandırma](install-and-configure-distribution-points.md#bkmk_config-general).
 
-- Site sunucusunun bir dağıtım noktası rolü yoksa, Windows 'da BranchCache özelliğini yükler. Daha fazla bilgi için bkz. [BranchCache özelliğini yükler](https://docs.microsoft.com/windows-server/networking/branchcache/deploy/install-the-branchcache-feature).
+- Site sunucusunun bir dağıtım noktası rolü yoksa, Windows 'da BranchCache özelliğini yükler. Daha fazla bilgi için bkz. [BranchCache özelliğini yükler](/windows-server/networking/branchcache/deploy/install-the-branchcache-feature).
 
 Zaten bir bulut dağıtım noktasına içerik dağıtdıysanız ve sonra BranchCache 'i etkinleştirmeye karar verirseniz, önce özelliği yüklemeniz gerekir. Ardından içeriği bulut dağıtım noktasına yeniden dağıtın.
 
 > [!NOTE]  
 > Configuration Manager sürüm 1810 ve önceki sürümlerde, birden fazla bulut dağıtım noktanız varsa BranchCache anahtar parolasını el ile ayarlamanız gerekir. Daha fazla bilgi için bkz. [MICROSOFT DESTEĞI KB 4458143](https://support.microsoft.com/help/4458143).
 
-## <a name="set-up"></a><a name="bkmk_setup"></a>Ayarla  
+## <a name="set-up"></a><a name="bkmk_setup"></a> Ayarla  
 
 Bu yordamı, bu bulut dağıtım noktasını [tasarımınız](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_topology)tarafından belirlendiği şekilde barındırmak için bu yordamı gerçekleştirin.  
 
@@ -134,7 +134,7 @@ Bu yordamı, bu bulut dağıtım noktasını [tasarımınız](../../../plan-desi
         > [!NOTE]  
         > Bulut dağıtım noktası sunucu kimlik doğrulama sertifikası joker karakterleri destekler. Joker karakter sertifikası kullanıyorsanız, `*` **hizmet FQDN 'si** alanındaki yıldız işaretini () hizmet için istenen ana bilgisayar adıyla değiştirin.  
 
-5. **Uyarılar** sayfasında, depolama kotaları, aktarım kotaları ve bu kotaların ne yüzdesinden Configuration Manager uyarı oluşturmasını istediğinizi belirleyin. Ardından **İleri**' yi seçin.  
+5. **Uyarılar** sayfasında, depolama kotaları, aktarım kotaları ve bu kotaların ne yüzdesinden Configuration Manager uyarı oluşturmasını istediğinizi belirleyin. Sonra **İleri**’yi seçin.  
 
 6. Sihirbazı tamamlayın.  
 
@@ -147,7 +147,7 @@ Site, bulut dağıtım noktası için yeni bir barındırılan hizmet oluşturma
 > `Waiting for check if container exists. Will check again in 10 seconds`  
 > Depolama hesabı sağlamasını gerçekleştirdikten sonra hizmet oluşturulup yapılandırılır.  
 
-### <a name="verify-installation"></a>Yüklemeyi doğrula
+### <a name="verify-installation"></a>Yüklemeyi doğrulama
 
 Aşağıdaki yöntemleri kullanarak bulut dağıtım noktası yüklemesinin tamamlandığını doğrulayın:  
 
@@ -158,7 +158,7 @@ Aşağıdaki yöntemleri kullanarak bulut dağıtım noktası yüklemesinin tama
 - Gerekirse Azure portal gidin. Bulut dağıtım noktası **dağıtımı** için **hazırlık**durumu görüntülenir.  
 
 
-## <a name="configure-dns"></a><a name="bkmk_dns"></a>DNS yapılandırma  
+## <a name="configure-dns"></a><a name="bkmk_dns"></a> DNS yapılandırma  
 
 İstemcilerin bulut dağıtım noktasını kullanabilmesi için, bulut dağıtım noktasının adını Azure tarafından yönetilen bir IP adresine çözebilmeleri gerekir. Yönetim noktası, bulut dağıtım noktasının **HIZMET FQDN** 'sini verir. Bulut dağıtım noktası, **hizmet adı**olarak Azure 'da bulunur. Bulut dağıtım noktası özelliklerinin **Ayarlar** sekmesinde bu değerlere bakın.
 
@@ -190,14 +190,14 @@ Aşağıdaki işlem, bir istemcinin bulut dağıtım noktasının adını nasıl
 5. Bulut dağıtım noktası, sunucu kimlik doğrulama sertifikasını istemciye gösterir. İstemci, doğrulanacak sertifikanın güven zincirini kullanır.  
 
 
-## <a name="set-up-site-server-proxy"></a><a name="bkmk_proxy"></a>Site sunucusu ara sunucusunu ayarlama  
+## <a name="set-up-site-server-proxy"></a><a name="bkmk_proxy"></a> Site sunucusu ara sunucusunu ayarlama  
 
 Bulut dağıtım noktasını yöneten birincil site sunucusunun Azure ile iletişim kurması gerekir. Kuruluşunuz internet erişimini denetlemek için bir proxy sunucusu kullanıyorsa, birincil site sunucusunu bu proxy 'yi kullanacak şekilde yapılandırın.  
 
 Daha fazla bilgi için bkz. [proxy sunucu desteği](../../../plan-design/network/proxy-server-support.md).  
 
 
-## <a name="distribute-content-and-configure-clients"></a><a name="bkmk_client"></a>İçerik dağıtma ve istemcileri yapılandırma
+## <a name="distribute-content-and-configure-clients"></a><a name="bkmk_client"></a> İçerik dağıtma ve istemcileri yapılandırma
 
 İçeriği bulut dağıtım noktasına diğer şirket içi dağıtım noktasıyla aynı şekilde dağıtın. Yönetim noktası, istemcilerin talep aldığı içeriğe sahip olmadığı müddetçe, içerik konumları listesinde bulut dağıtım noktasını içermez. Daha fazla bilgi için bkz. [Içeriği dağıtma ve yönetme](deploy-and-manage-content.md).
 
@@ -212,13 +212,13 @@ Varsayılan istemci ayarları, istemcilerin bulut dağıtım noktalarını kulla
     - Bu ayarı hem kullanıcılar hem de cihazlar için değiştirin ve dağıtın.  
 
 
-## <a name="manage-and-monitor"></a><a name="bkmk_monitor"></a>Yönetme ve izleme  
+## <a name="manage-and-monitor"></a><a name="bkmk_monitor"></a> Yönetme ve izleme  
 
 Bulut dağıtım noktasına dağıttığınız içeriği diğer şirket içi dağıtım noktalarıyla aynı şekilde izleyin. Daha fazla bilgi için bkz. [Içeriği izleme](monitor-content-you-have-distributed.md).
 
 Konsolunda bulut dağıtım noktalarının listesini görüntülediğinizde, listeye ek sütunlar ekleyebilirsiniz. Örneğin, **veri çıkış** sütunu, son 30 gün içinde hizmetten indirilen veri istemcilerinin miktarını gösterir.<!-- SCCMDocs#755 -->
 
-### <a name="alerts"></a><a name="bkmk_alerts"></a>Larınız  
+### <a name="alerts"></a><a name="bkmk_alerts"></a> Larınız  
 
 Configuration Manager Azure hizmetini düzenli olarak denetler. Hizmet etkin değilse ya da abonelik veya sertifika sorunları varsa Configuration Manager bir uyarı oluşturur.
 
@@ -234,7 +234,7 @@ Bulut dağıtım noktasında depolamak istediğiniz veri miktarı ve istemcileri
 Yükleme sırasında her bir bulut dağıtım noktası için eşikler belirtin veya bulut dağıtım noktası özelliklerinin **Uyarılar** sekmesini kullanın.  
 
 > [!NOTE]  
-> Bulut dağıtım noktası uyarıları, Azure 'un kullanım istatistiklerine bağlıdır ve bu da kullanılabilir hale gelir ve 24 saat sürebilir. Azure Depolama Analizi hakkında daha fazla bilgi için bkz. [depolama Analizi](https://docs.microsoft.com/rest/api/storageservices/storage-analytics).  
+> Bulut dağıtım noktası uyarıları, Azure 'un kullanım istatistiklerine bağlıdır ve bu da kullanılabilir hale gelir ve 24 saat sürebilir. Azure Depolama Analizi hakkında daha fazla bilgi için bkz. [depolama Analizi](/rest/api/storageservices/storage-analytics).  
 
 Saatlik bir döngüde, bulut dağıtım noktasını izleyen birincil site işlem verilerini Azure 'dan indirir. Bu işlem verilerini `CloudDP-<ServiceName>.log` site sunucusundaki dosyasında depolar. Configuration Manager, bu bilgileri her bir bulut dağıtım noktası için depolama ve aktarım kotalarıyla karşılaştırarak değerlendirir. Verilerin aktarımı, uyarılar veya kritik uyarılar için belirtilen birime ulaştığında ya da bu verileri aştığında, uygun uyarıyı üretir Configuration Manager.  
 
@@ -242,7 +242,7 @@ Saatlik bir döngüde, bulut dağıtım noktasını izleyen birincil site işlem
 > Site, Azure 'dan her saat veri aktarımlarıyla ilgili bilgileri indirdiği için, Configuration Manager verilere erişebilmeleri ve bir uyarı oluşturmadan önce kullanım bir uyarı veya kritik eşiği aşabilir.  
 
 
-## <a name="modify"></a><a name="bkmk_modify"></a>Değiştirebilirler
+## <a name="modify"></a><a name="bkmk_modify"></a> Değiştirebilirler
 
 Configuration Manager konsolunun **Yönetim** çalışma alanındaki **Cloud Services** altında bulunan **bulut dağıtım noktaları** düğümünde dağıtım noktasıyla ilgili üst düzey bilgileri görüntüleyin. Daha fazla ayrıntı görmek için bir dağıtım noktası seçin ve **Özellikler** ' i seçin.  
 
@@ -319,7 +319,7 @@ Bir hiyerarşiden bulut dağıtım noktasını sildiğinizde Configuration Manag
 Azure 'daki tüm bileşenleri el ile kaldırmak sistemin tutarsız olmasına neden olur. Bu durum yalnız bırakılmış bilgileri bırakır ve beklenmeyen davranışlar ortaya çıkabilir.
 
 
-## <a name="advanced-troubleshooting"></a><a name="bkmk_tshoot"></a>Gelişmiş sorun giderme
+## <a name="advanced-troubleshooting"></a><a name="bkmk_tshoot"></a> Gelişmiş sorun giderme
 
 Bulut dağıtım noktanınızdan sorunları gidermeye yardımcı olmak üzere Azure VM 'lerinden tanılama günlüğü toplamanız gerekiyorsa, abonelik için hizmet tanılama uzantısını etkinleştirmek üzere aşağıdaki PowerShell örneğini kullanın:<!--514275-->  
 
@@ -345,7 +345,7 @@ Select-AzureSubscription $azureSubscriptionName
 Set-AzureServiceDiagnosticsExtension -StorageAccountName $storage_name -StorageAccountKey $key -DiagnosticsConfigurationPath $public_config –ServiceName $service_name -Slot 'Production' -Verbose
 ```
 
-Aşağıdaki örnek, yukarıdaki PowerShell betiğindeki **public_config** değişkeninde başvurulan örnek bir **Diagnostics. wadcfgx** dosyasıdır. Daha fazla bilgi için bkz. [Azure tanılama uzantısı yapılandırma şeması](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics-schema).  
+Aşağıdaki örnek, yukarıdaki PowerShell betiğindeki **public_config** değişkeninde başvurulan örnek bir **Diagnostics. wadcfgx** dosyasıdır. Daha fazla bilgi için bkz. [Azure tanılama uzantısı yapılandırma şeması](/azure/monitoring-and-diagnostics/azure-diagnostics-schema).  
 
 ``` XML
 <?xml version="1.0" encoding="utf-8"?>

@@ -10,12 +10,12 @@ ms.assetid: 81f03922-90f6-4e8f-be65-da64ccb21cf2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b64e09561def3d19c306b9cfcd4f7eb808763fd
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bf9301e4fcb279b7d79a6f6c3d0a90ab3d15e277
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129265"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697322"
 ---
 # <a name="bitlocker-administration-and-monitoring-website"></a>BitLocker yönetim ve izleme Web sitesi
 
@@ -29,7 +29,7 @@ BitLocker yönetim ve izleme Web sitesi, BitLocker Sürücü Şifrelemesi için 
 
 Kullanabilmeniz için, bu bileşeni bir Web sunucusuna yükleyebilirsiniz. Daha fazla bilgi için bkz. [BitLocker raporlarını ve portallarını ayarlama](setup-websites.md).
 
-Yönetim ve izleme Web sitesine aşağıdaki URL aracılığıyla erişin:`https://webserver.contoso.com/HelpDesk`
+Yönetim ve izleme Web sitesine aşağıdaki URL aracılığıyla erişin: `https://webserver.contoso.com/HelpDesk`
 
 > [!NOTE]
 > **Kurtarma denetim raporunu** yönetim ve izleme Web sitesinde görüntüleyebilirsiniz. Diğer BitLocker yönetim raporlarını Raporlama Hizmetleri noktasına eklersiniz. Daha fazla bilgi için bkz. [BitLocker raporlarını görüntüleme](view-reports.md).
@@ -48,7 +48,7 @@ Yönetim ve izleme Web sitesinin belirli bölgelerine erişmek için, Kullanıc�
 
 Bir Kullanıcı çok fazla kez hatalı PIN girerse TPM 'YI kilitleyebilir. TPM kilitleri üreticiden üreticiye kadar değişiklik yapmadan önce kullanıcının hatalı PIN girebilmesi için gereken sayı. Yönetim ve izleme Web sitesinin **TPM 'Yi Yönet** alanından merkezi anahtar kurtarma veri sistemine erişin.
 
-TPM sahipliği hakkında daha fazla bilgi için bkz. [TPM 'yi emanetmek IÇIN MBAD 'Yi yapılandırma ve OwnerAuth parolalarını depolama](https://docs.microsoft.com/microsoft-desktop-optimization-pack/mbam-v25/mbam-25-security-considerations#bkmk-tpm).
+TPM sahipliği hakkında daha fazla bilgi için bkz. [TPM 'yi emanetmek IÇIN MBAD 'Yi yapılandırma ve OwnerAuth parolalarını depolama](/microsoft-desktop-optimization-pack/mbam-v25/mbam-25-security-considerations#bkmk-tpm).
 
 > [!NOTE]
 > Windows 10, sürüm 1607 ' den itibaren, Windows TPM 'yi sağlarken TPM sahip parolasını tutmaz.
@@ -91,7 +91,7 @@ TPM sahipliği hakkında daha fazla bilgi için bkz. [TPM 'yi emanetmek IÇIN MB
 
 ## <a name="drive-recovery"></a>Sürücü kurtarma
 
-### <a name="recover-a-drive-in-recovery-mode"></a><a name="bkmk_recovery"></a>Kurtarma modunda bir sürücüyü kurtarma
+### <a name="recover-a-drive-in-recovery-mode"></a><a name="bkmk_recovery"></a> Kurtarma modunda bir sürücüyü kurtarma
 
 Sürücüler, aşağıdaki senaryolarda kurtarma moduna geçer:
 
@@ -142,7 +142,7 @@ Kurtarma parolası almak için yönetim ve izleme Web sitesinin **sürücü kurt
 
 Sürücünün kilidini açmak için kurtarma parolasını girin veya kurtarma paketini kullanın.
 
-### <a name="recover-a-moved-drive"></a><a name="bkmk_moved"></a>Taşınan sürücüyü kurtarma
+### <a name="recover-a-moved-drive"></a><a name="bkmk_moved"></a> Taşınan sürücüyü kurtarma
 
 TPM farklı olduğu için bir sürücüyü yeni bir bilgisayara taşıdığınızda, BitLocker önceki PIN 'ı kabul etmez. Taşınan sürücüyü kurtarmak için kurtarma parolasını almak üzere kurtarma anahtarı KIMLIĞINI alın.
 
@@ -159,11 +159,11 @@ Taşınan bir sürücüyü kurtarmak için yönetim ve izleme Web sitesinin **s�
 
 Taşınan sürücüyü özgün bilgisayarda bir TPM yongasını kullanacak şekilde yapılandırdıysanız, aşağıdaki adımları izleyin. Aksi takdirde, kurtarma işlemi tamamlanır.
 
-1. Sürücünün kilidini açtıktan sonra, bilgisayarı WinRE modunda başlatın. WinRE 'de bir komut istemi açın ve `manage-bde` sürücünün şifresini çözmek için komutunu kullanın. Bu araç, **TPM + PIN** koruyucuyu orijinal TPM yongası olmadan kaldırmanın tek yoludur. Bu komut hakkında daha fazla bilgi için bkz. [manage-bde](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-managebde).
+1. Sürücünün kilidini açtıktan sonra, bilgisayarı WinRE modunda başlatın. WinRE 'de bir komut istemi açın ve `manage-bde` sürücünün şifresini çözmek için komutunu kullanın. Bu araç, **TPM + PIN** koruyucuyu orijinal TPM yongası olmadan kaldırmanın tek yoludur. Bu komut hakkında daha fazla bilgi için bkz. [manage-bde](/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-managebde).
 
 1. Bu tamamlandığında bilgisayarı normal şekilde başlatın. Configuration Manager BitLocker ilkesini, sürücüyü yeni bilgisayarın TPM Plus PIN 'ı ile şifrelemek üzere zorlayacaktır.
 
-### <a name="recover-a-corrupted-drive"></a><a name="bkmk_corrupted"></a>Bozuk sürücüyü kurtarma
+### <a name="recover-a-corrupted-drive"></a><a name="bkmk_corrupted"></a> Bozuk sürücüyü kurtarma
 
 Yönetim ve izleme Web sitesinden bir kurtarma anahtarı paketi almak için kurtarma anahtarı KIMLIĞINI kullanın. Daha fazla bilgi için bkz. [Kurtarma modunda bir sürücüyü kurtarma](#bkmk_recovery).
 
@@ -175,7 +175,7 @@ Yönetim ve izleme Web sitesinden bir kurtarma anahtarı paketi almak için kurt
 
     Aşağıdaki değerleri değiştirin:
 
-    - `<corrupted drive>`: Bozuk sürücünün sürücü harfi, örneğin`D:`
+    - `<corrupted drive>`: Bozuk sürücünün sürücü harfi, örneğin `D:`
     - `<fixed drive>`: Var olan bir sabit disk sürücüsünün sürücü harfi, bozulan sürücüden benzer veya daha büyük boyutlu. BitLocker, bozuk sürücüdeki verileri belirtilen sürücüye kurtarır ve bu sürücüdeki verileri taşıyor. Bu sürücüdeki tüm verilerin üzerine yazılır.
     - `<key package>`: Kurtarma anahtarı paketinin konumu
     - `<recovery password>`: İlişkili kurtarma parolası
@@ -184,7 +184,7 @@ Yönetim ve izleme Web sitesinden bir kurtarma anahtarı paketi almak için kurt
 
     `repair-bde C: D: -kp F:\RecoveryKeyPackage -rp 111111-222222-333333-444444-555555-666666-777777-888888`
 
-Bu komut hakkında daha fazla bilgi için bkz. [Repair-BDE](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-repairbde).
+Bu komut hakkında daha fazla bilgi için bkz. [Repair-BDE](/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-repairbde).
 
 ## <a name="reports"></a>Raporlar
 

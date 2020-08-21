@@ -10,12 +10,12 @@ ms.assetid: 27dd26d1-e99c-4431-b2f8-60406394b6db
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8e2f7bbb51c72fa3d0f2a36e8a5419552d468b4c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 405303b3988e8c853ba30e8fb6d620d782b0474e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711479"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694908"
 ---
 # <a name="set-up-hybrid-azure-ad-for-co-management"></a>Ortak yönetim için karma Azure AD ayarlama
 
@@ -26,8 +26,8 @@ Aşağıdaki videoda, üst düzey Program Yöneticisi Sanderin deo ve ürün paz
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Configuring-Devices-in-Azure-Active-Directory/player]
 
 Hibrit Azure AD-katılım işlemi, şirket içi etki alanına katılmış cihazlarınızı Azure AD 'ye otomatik olarak kaydeder. Bu işlemle ilgili daha fazla bilgi için aşağıdaki makalelere bakın:
-- [Azure Active Directory'de cihaz yönetimine giriş](https://docs.microsoft.com/azure/active-directory/device-management-introduction) 
-- [Hibrit Azure AD katılırsanız nasıl planlanacağı](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
+- [Azure Active Directory'de cihaz yönetimine giriş](/azure/active-directory/device-management-introduction) 
+- [Hibrit Azure AD katılırsanız nasıl planlanacağı](/azure/active-directory/devices/hybrid-azuread-join-plan)
 
 Hibrit Azure AD katılımı, ortak yönetim için temel temellerinden biridir. Bu işlem bazı müşteriler için zor olabilir, örneğin:
 - Kuruluşunuz bir üçüncü taraf kimlik çözümü kullanıyor 
@@ -41,14 +41,14 @@ Bu güçlüklerin çözümlenmesi bazı kılavuzlardan yararlanabilir. Bu makale
 Korumak istediğiniz bir kimlik oluşturulurken cihazlar kullanıcılara benzerdir. Bir cihazın kimliğini dilediğiniz zaman ve herhangi bir konumda korumak için, bu cihazın kimliğini Azure AD 'ye taşımanız gerekir.
 
 Kullanmakta olduğunuz etki alanı türüne göre, bunu gerçekleştirmenin iki temel yolu vardır. Aşağıdaki etki alanı türlerinden biri için karma Azure AD JOIN 'i yapılandırın:  
-- [Federasyon etki alanları](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
-- [Yönetilen etki alanları](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains)  
+- [Federasyon etki alanları](/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
+- [Yönetilen etki alanları](/azure/active-directory/devices/hybrid-azuread-join-managed-domains)  
 
 Yukarıdaki iki yöntem en iyi deneyimi sağlar. Tam el ile gerçekleştirilen işlem dahil daha ayrıntılı bilgi için aşağıdaki makalelere bakın:
-- [Karma Azure AD 'ye katılmış cihazları el ile yapılandırma](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
-- Azure AD bulmayı içeren [karma Azure AD Için ADFS geçişli geçişli kimlik doğrulaması](https://docs.microsoft.com/windows-server/identity/ad-fs/ad-fs-overview)  
+- [Karma Azure AD 'ye katılmış cihazları el ile yapılandırma](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
+- Azure AD bulmayı içeren [karma Azure AD Için ADFS geçişli geçişli kimlik doğrulaması](/windows-server/identity/ad-fs/ad-fs-overview)  
 
-Sorun giderme kılavuzu için bkz. [Windows 10 karma Azure AD 'ye ekleme sorun giderme kılavuzu](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
+Sorun giderme kılavuzu için bkz. [Windows 10 karma Azure AD 'ye ekleme sorun giderme kılavuzu](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
 
 
 
@@ -66,5 +66,4 @@ Planlama aşamasında, karma Azure AD katılımı ortak Yönetimi destekleyen bi
 
 İşlemin herhangi bir noktasında Azure AD 'yi ayarlamak için yardıma ihtiyacınız varsa [Microsoft FastTrack](https://Microsoft.com/FastTrack/)' a gidin, oturum açın ve yardım isteyin. 
 
-Daha fazla bilgi için bkz. [FastTrack 'ten yardım alın](quickstart-fasttrack.md). 
-
+Daha fazla bilgi için bkz. [FastTrack 'ten yardım alın](quickstart-fasttrack.md).

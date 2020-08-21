@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 73b8111cbada129997cec965ca685f1ef22b1f3a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7a4c42891276b36fd888f0f70495bdcd504f23a1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721440"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693021"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-configuration-manager"></a>Configuration Manager için Technical Preview 1702 ' deki yetenekler
 
@@ -38,7 +38,7 @@ Bu önizleme Configuration Manager konsolundaki yeni geri bildirim seçeneklerin
 -  Konsolda herhangi bir nesneye sağ tıkladığınızda.   
     ![Righ-tıklama seçeneği](./media/feedback-option.png)   
 
-**Geri bildirim** seçilirse, tarayıcınızda Configuration Manager UserVoice geri bildirim Web sitesine açılır https://configurationmanager.uservoice.com/forums/300492-ideas.
+**Geri bildirim** seçilirse, tarayıcınızda Configuration Manager UserVoice geri bildirim Web sitesine açılır https://configurationmanager.uservoice.com/forums/300492-ideas .
 ##  <a name="changes-for-updates-and-servicing"></a>Güncelleştirmeler ve bakım için değişiklikler
 Aşağıda bu önizleme ile birlikte sunulmuştur.
 
@@ -62,7 +62,7 @@ Bu ayarları, Configuration Manager SDK kullandığınızda eş kaynak özelliğ
 
 Bilgisayar, içerik için bir isteği reddettiğinde, istenen bilgisayar, kullanılabilir içerik kaynağı konumları havuzundaki içerik formu alternatif kaynaklarını göstermeye devam eder.   
 
-## <a name="use-azure-active-directory-domain-services-to-manage-devices-users-and-groups"></a><a name="azurediscovery"></a>Cihazları, kullanıcıları ve grupları yönetmek için Azure Active Directory Domain Services kullanma
+## <a name="use-azure-active-directory-domain-services-to-manage-devices-users-and-groups"></a><a name="azurediscovery"></a> Cihazları, kullanıcıları ve grupları yönetmek için Azure Active Directory Domain Services kullanma
 
 Bu Technical Preview sürümüyle Azure Active Directory (AD) etki alanı Hizmetleri tarafından yönetilen bir etki alanına katılmış cihazları yönetebilirsiniz. Ayrıca, bu etki alanındaki cihazları, kullanıcıları ve grupları çeşitli Configuration Manager bulma yöntemleriyle de bulabilirsiniz.
 
@@ -76,9 +76,9 @@ Azure AD 'yi Configuration Manager kullanmak için şunlar gerekir:
 - Azure AD 'nize katılmış bir Azure VM üzerinde çalışan bir Configuration Manager sitesi.
 - Aynı Azure AD ortamında çalışan istemcileri Configuration Manager.
 
-Azure AD etki alanı hizmetini yapılandırmak için bkz. [Azure AD Domain Services kullanmaya başlama](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
+Azure AD etki alanı hizmetini yapılandırmak için bkz. [Azure AD Domain Services kullanmaya başlama](/azure/active-directory-domain-services/create-instance).
 
-### <a name="discover-resources"></a>Kaynakları bulma
+### <a name="discover-resources"></a>Kaynak bulma
 Azure AD 'de çalışacak Configuration Manager ayarladıktan sonra, Azure AD 'yi kaynaklar için aramak üzere aşağıdaki Active Directory bulma yöntemlerini kullanabilirsiniz:  
 - Active Directory Sistem Saptama
 - Active Directory Kullanıcı Saptama
@@ -101,7 +101,7 @@ Azure AD 'nin grupları depolayan bir OU 'su yok. Bunun yerine, sistem veya Kull
 
 Azure AD hakkında daha fazla bilgi için aşağıdakilere bakın:  
 - Azure.microsoft.com üzerinde [Azure Active Directory Domain Services](https://azure.microsoft.com/services/active-directory-ds) .
-- Docs.microsoft.com hakkındaki [belgeleri Active Directory Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services) .
+- Docs.microsoft.com hakkındaki [belgeleri Active Directory Domain Services](/azure/active-directory-domain-services) .
 
 ## <a name="conditional-access-device-compliance-policy-improvements"></a>Koşullu erişim cihaz uyumluluk ilkesi geliştirmeleri
 
@@ -117,9 +117,9 @@ Ayrıca, kuruluşların güvenli olmayan uygulamalar aracılığıyla veri sız�
 Bu önizleme sürümünden itibaren, yönetilen istemcilerin %20 ' den fazla (varsayılan) kötü amaçlı yazılımdan koruma istemcisinin (örn. Windows Defender veya Endpoint Protection istemcisi) kullanım dışı bir sürümünü kullanıyorsa Configuration Manager Endpoint Protection bir uyarı verir.
 
 ### <a name="try-it-out"></a>Deneyin
-İstemci ayarları ilkesini kullanarak tüm masaüstü ve sunucu istemcilerinde Endpoint Protection etkinleştirildiğinden emin olun. Artık, bir **kötü amaçlı yazılımdan koruma istemci sürümü** ve **Endpoint Protection dağıtım durumunu** **varlıklar ve uyumluluk** > **genel bakış** > **cihazlarından** > ,**tüm masaüstü bilgisayarlar ve istemcileri**sunarak görüntüleyebilirsiniz. Bir uyarıyı denetlemek için **izleme** çalışma alanındaki **uyarıları** görüntüleyin. Yönetilen istemcilerin %20 ' si bir kötü amaçlı yazılımdan koruma yazılımının süresi dolmuşsa, kötü amaçlı yazılımdan koruma istemcisi sürümü güncel değildir. Bu uyarı, **izleme** > **genel bakış** sekmesinde görünmez. Zaman aşımına uğradı istemcileri güncelleştirmek için kötü amaçlı yazılımdan koruma istemcileri için yazılım güncelleştirmelerini etkinleştirin.
+İstemci ayarları ilkesini kullanarak tüm masaüstü ve sunucu istemcilerinde Endpoint Protection etkinleştirildiğinden emin olun. Artık, bir **kötü amaçlı yazılımdan koruma istemci sürümü** ve **Endpoint Protection dağıtım durumunu** **varlıklar ve uyumluluk**  >  **genel bakış**  >  **cihazlarından**,  >  **tüm masaüstü bilgisayarlar ve istemcileri**sunarak görüntüleyebilirsiniz. Bir uyarıyı denetlemek için **izleme** çalışma alanındaki **uyarıları** görüntüleyin. Yönetilen istemcilerin %20 ' si bir kötü amaçlı yazılımdan koruma yazılımının süresi dolmuşsa, kötü amaçlı yazılımdan koruma istemcisi sürümü güncel değildir. Bu uyarı, **izleme**  >  **genel bakış** sekmesinde görünmez. Zaman aşımına uğradı istemcileri güncelleştirmek için kötü amaçlı yazılımdan koruma istemcileri için yazılım güncelleştirmelerini etkinleştirin.
 
-Uyarının oluşturulduğu yüzdeyi yapılandırmak için, **izleme** > **uyarıları** > **tüm uyarılar**' ı genişletin, **kötü amaçlı yazılımdan koruma istemcileri güncel** değil ' e çift tıklayın ve **bir kötü amaçlı yazılımdan koruma istemcisinin güncel olmayan sürümüne sahip yönetilen istemcilerin yüzdesi seçeneğinden fazla olursa oluştur uyarısını** değiştirin.
+Uyarının oluşturulduğu yüzdeyi yapılandırmak için, **izleme**  >  **uyarıları**  >  **tüm uyarılar**' ı genişletin, **kötü amaçlı yazılımdan koruma istemcileri güncel** değil ' e çift tıklayın ve **bir kötü amaçlı yazılımdan koruma istemcisinin güncel olmayan sürümüne sahip yönetilen istemcilerin yüzdesi seçeneğinden fazla olursa oluştur uyarısını** değiştirin.
 
 ## <a name="compliance-assessment-for-windows-update-for-business-updates"></a>Iş güncelleştirmeleri için Windows Update uyumluluk değerlendirmesi
 Artık bir uyumluluk ilkesi güncelleştirme kuralını, koşullu erişim değerlendirmesinin bir parçası olarak Iş değerlendirmesi sonucu için bir Windows Update içerecek şekilde yapılandırabilirsiniz.
@@ -128,11 +128,11 @@ Artık bir uyumluluk ilkesi güncelleştirme kuralını, koşullu erişim değer
 
 ### <a name="allow-windows-update-for-business-to-manage-windows-10-updates"></a>Iş Windows Update Windows 10 güncelleştirmelerini yönetmesine izin ver
 Windows Update Iş güncelleştirmelerine yönelik uyumluluk değerlendirmesi bilgilerini toplamak için, istemci Aracısı ayarını Iş Windows Update Windows 10 güncelleştirmelerini yönetmeye açıkça izin verecek şekilde yapılandırmak için aşağıdaki yordamı kullanın.
-1. Configuration Manager konsolunda, **Yönetim** > **istemci ayarları**' na gidin.
+1. Configuration Manager konsolunda, **Yönetim**  >  **istemci ayarları**' na gidin.
 2. İstemci ayarları için Özellikler ' de **yazılım güncelleştirmeleri**' ne gidin ve **Iş için Windows Update Windows 10 güncelleştirmelerini Yönet** ' i seçerek **Evet** ' i seçin.
 
 ### <a name="create-a-compliance-policy-for-windows-update-for-business-assessment"></a>Iş değerlendirmesi Windows Update için bir uyumluluk ilkesi oluşturma
-1. Configuration Manager konsolunda **varlıklar ve uyum** > **Uyumluluk ayarları** > **uyumluluk ilkeleri**' ne gidin.
+1. Configuration Manager konsolunda **varlıklar ve uyum**  >  **Uyumluluk ayarları**  >  **uyumluluk ilkeleri**' ne gidin.
 2. **Uyumluluk Ilkesi oluştur** ' a tıklayın veya değiştirmek üzere var olan bir uyumluluk ilkesi seçin.
 3. Genel sayfasında, bir ad ve açıklama girin, **Configuration Manager istemcisiyle yönetilen cihazlar Için Uyumluluk kuralları**' nı seçin, raporlama için uyumsuzluk önem derecesini ayarlayın ve **İleri**' ye tıklayın.
 4. Desteklenen Platformlar sayfasında **Windows 10**' u seçin ve ardından **İleri**' ye tıklayın.
@@ -141,7 +141,7 @@ Windows Update Iş güncelleştirmelerine yönelik uyumluluk değerlendirmesi bi
 Yeni ilke, **Varlıklar ve Uyum** çalışma alanının **Uyumluluk İlkeleri** düğümünde görüntülenir.
 
 ### <a name="deploy-a-compliance-policy"></a>Uyumluluk ilkesini dağıtma
-1. Configuration Manager konsolunda, **varlıklar ve uyumluluk** > **uyumluluğu ayarları**' na gidin ve ardından **uyumluluk ilkeleri**' ne tıklayın.
+1. Configuration Manager konsolunda, **varlıklar ve uyumluluk**  >  **uyumluluğu ayarları**' na gidin ve ardından **uyumluluk ilkeleri**' ne tıklayın.
 2. **Giriş** sekmesinde, **Dağıtım** grubunda, **Dağıt**'a tıklayın.
 3. **Uyumluluk İlkesini Dağıt** iletişim kutusunda, ilkenin dağıtılacağı kullanıcı koleksiyonunu seçmek için **Gözat**’a tıklayın.
    Ek olarak, ilke uyumlu olmadığı taktirde uyarı oluşturma seçeneklerini ve ayrıca bu ilkenin uyumluluk değerlendirmesinde kullanılacak zamanlamayı yapılandırma seçeneklerini de belirleyebilirsiniz.
@@ -164,12 +164,12 @@ Bir görev dizisini yüksek etki olarak ayarlamak için aşağıdaki yordamı ku
 > [!NOTE]
 > Belirli koşullara uyan herhangi bir görev dizisi otomatik olarak yüksek etki olarak tanımlanır. Ayrıntılar için bkz. [yüksek riskli dağıtımları yönetme](../servers/manage/settings-to-manage-high-risk-deployments.md).
 
-1. Configuration Manager konsolunda, **yazılım kitaplığı** > **işletim sistemleri** > **görev dizileri**' ne gidin.
+1. Configuration Manager konsolunda, **yazılım kitaplığı**  >  **işletim sistemleri**  >  **görev dizileri**' ne gidin.
 2. Düzenlenecek görev sırasını seçin ve **Özellikler**' e tıklayın.
 3. **Kullanıcı bildirimi** sekmesinde, **Bu bir üst etki görevi sırası**seçin.
 
 ### <a name="create-a-custom-notification-for-high-risk-deployments"></a>Yüksek riskli dağıtımlar için özel bildirim oluşturma
-1. Configuration Manager konsolunda, **yazılım kitaplığı** > **işletim sistemleri** > **görev dizileri**' ne gidin.
+1. Configuration Manager konsolunda, **yazılım kitaplığı**  >  **işletim sistemleri**  >  **görev dizileri**' ne gidin.
 2. Düzenlenecek görev sırasını seçin ve **Özellikler**' e tıklayın.
 3. **Kullanıcı bildirimi** sekmesinde **özel metin kullan**' ı seçin.
    > [!NOTE]
@@ -194,7 +194,7 @@ Bir görev dizisini yüksek etki olarak ayarlamak için aşağıdaki yordamı ku
 
 ### <a name="configure-software-center-properties"></a>Yazılım Merkezi özelliklerini yapılandırma
 Yazılım Merkezi 'nde görünen görev dizisinin ayrıntılarını yapılandırmak için aşağıdaki yordamı kullanın. Bu ayrıntılar yalnızca bilgi amaçlıdır.  
-1. Configuration Manager konsolunda, **yazılım kitaplığı** > **işletim sistemleri** > **görev dizileri**' ne gidin.
+1. Configuration Manager konsolunda, **yazılım kitaplığı**  >  **işletim sistemleri**  >  **görev dizileri**' ne gidin.
 2. Düzenlenecek görev sırasını seçin ve **Özellikler**' e tıklayın.
 3. **Genel** sekmesinde, yazılım merkezi için aşağıdaki ayarlar kullanılabilir:
    - **Yeniden başlatma gerekli**: kullanıcının yükleme sırasında yeniden başlatma gerekip gerekmediğini bilmesini sağlar.
@@ -204,7 +204,7 @@ Yazılım Merkezi 'nde görünen görev dizisinin ayrıntılarını yapılandır
 
 ## <a name="check-for-running-executable-files-before-installing-an-application"></a>Bir uygulamayı yüklemeden önce yürütülebilir dosyaları çalıştırmaya yönelik denetim
 
-Dağıtım türünün * \<dağıtım türü adı>* **Özellikler** iletişim kutusunda, yükleme davranışı sekmesinde artık, çalışıyorsa dağıtım türünün yüklenmesini engelleyebilen daha fazla yürütülebilir dosyadan birini belirtebilirsiniz. Dağıtım türünün yüklenebilmesi için kullanıcının çalışan yürütülebilir dosyayı kapatması (veya gerekli amacına sahip dağıtımlar için otomatik olarak kapatılabilir) gerekir.
+*\<deployment type name>* Dağıtım türünün **Özellikler** Iletişim kutusunda, yükleme davranışı sekmesinde artık, çalışıyorsa dağıtım türünün yüklenmesini engelleyebilen daha fazla yürütülebilir dosyadan birini belirtebilirsiniz. Dağıtım türünün yüklenebilmesi için kullanıcının çalışan yürütülebilir dosyayı kapatması (veya gerekli amacına sahip dağıtımlar için otomatik olarak kapatılabilir) gerekir.
 
 ### <a name="try-it-out"></a>Deneyin.
 
@@ -214,7 +214,7 @@ Dağıtım türünün * \<dağıtım türü adı>* **Özellikler** iletişim kut
 
 Uygulama **kullanılabilir**olarak dağıtılmışsa ve Son Kullanıcı uygulamayı yüklemeye çalışırsa, yüklemeye devam edebilmek için önce belirttiğiniz çalışan yürütülebilir dosyaları kapatmaları istenir.
 
-Uygulama **gerekli**olarak dağıtılmışsa ve **dağıtım türü özellikleri iletişim kutusunun yükleme davranışı sekmesinde belirttiğiniz çalışan tüm yürütülebilir dosyaları otomatik olarak kapat** seçeneği işaretliyse, uygulama yükleme son tarihine ulaşıldığında belirttiğiniz yürütülebilir dosyaların otomatik olarak kapatıldığını bildiren bir iletişim kutusu görür. Bu iletişim kutularını **istemci ayarları** > **bilgisayar aracısında**zamanlayabilirsiniz. Son kullanıcının bu iletileri görmesini istemiyorsanız, **Yazılım Merkezi 'Nde Gizle** ' yi ve dağıtımın özelliklerinin **Kullanıcı deneyimi** sekmesindeki tüm bildirimler ' i seçin.
+Uygulama **gerekli**olarak dağıtılmışsa ve **dağıtım türü özellikleri iletişim kutusunun yükleme davranışı sekmesinde belirttiğiniz çalışan tüm yürütülebilir dosyaları otomatik olarak kapat** seçeneği işaretliyse, uygulama yükleme son tarihine ulaşıldığında belirttiğiniz yürütülebilir dosyaların otomatik olarak kapatıldığını bildiren bir iletişim kutusu görür. Bu iletişim kutularını **istemci ayarları**  >  **bilgisayar aracısında**zamanlayabilirsiniz. Son kullanıcının bu iletileri görmesini istemiyorsanız, **Yazılım Merkezi 'Nde Gizle** ' yi ve dağıtımın özelliklerinin **Kullanıcı deneyimi** sekmesindeki tüm bildirimler ' i seçin.
 
 Uygulama **gerekli** olarak dağıtılmışsa ve **dağıtım türü özellikleri iletişim kutusunun yükleme davranışı sekmesinde belirttiğiniz çalışan tüm yürütülebilir dosyaları otomatik olarak kapat** seçeneği seçili değilse, belirtilen uygulamalardan bir veya daha fazlası çalışıyorsa uygulamanın yüklenmesi başarısız olur.
 
@@ -226,12 +226,12 @@ Ayrıca, artık birden fazla sertifika kayıt noktası site sistemi rolü üzeri
 
 İOS cihazları için bir PFX sertifika profilini bir e-posta profiliyle ilişkilendirebilir ve S/MIME şifrelemesini etkinleştirebilirsiniz.  Böylece, iOS üzerinde yerel e-posta istemcisinde S/MIME etkinleştirilir ve doğru S/MIME şifreleme sertifikasını bu sertifikayla ilişkilendirir.
 
-Configuration Manager sertifikalar hakkında daha fazla bilgi için bkz. [sertifika profillerine giriş]( https://docs.microsoft.com/sccm/protect/deploy-use/introduction-to-certificate-profiles).
+Configuration Manager sertifikalar hakkında daha fazla bilgi için bkz. [sertifika profillerine giriş]( /sccm/protect/deploy-use/introduction-to-certificate-profiles).
 
 
 ## <a name="new-compliance-settings-for-ios-devices"></a>İOS cihazları için yeni uyumluluk ayarları
 
-İOS cihazları için yapılandırma öğelerinde kullanabileceğiniz yeni ayarlar ekledik. Bunlar, bir tek başına yapılandırmada Microsoft Intune daha önce var olan ve Intune 'U Configuration Manager ile kullandığınızda kullanılabilir olan ayarlardır. Bu ayarlardan herhangi biriyle ilgili yardıma ihtiyacınız varsa bkz. [Microsoft Intune iOS ilke ayarları](/mem/intune/configuration/device-restrictions-ios).
+İOS cihazları için yapılandırma öğelerinde kullanabileceğiniz yeni ayarlar ekledik. Bunlar, bir tek başına yapılandırmada Microsoft Intune daha önce var olan ve Intune 'U Configuration Manager ile kullandığınızda kullanılabilir olan ayarlardır. Bu ayarlardan herhangi biriyle ilgili yardıma ihtiyacınız varsa bkz. [Microsoft Intune iOS ilke ayarları](../../../intune/configuration/device-restrictions-ios.md).
 
 - **Yönetilen uygulamalardan iCloud 'a veri eşitleme**
 - **Diğer cihazdaki etkinliklere devam etmek için iletim**
@@ -294,11 +294,11 @@ Android for Work, Android 'den ayrı bir platformdur ve iş profillerini destekl
 Aşağıdaki bölümlerde, Android for Work yönetimi açıklanır.
 
 #### <a name="enable-android-for-work-management"></a>Android for Work yönetimini etkinleştir
-1. Bu Intune kiracının tüm https://accounts.google.com/SignUp Android for Work yönetim görevleriyle ilişkilendirilecek Android for Work yönetici hesabınız olarak kullanmak üzere bir Google hesabı oluşturun. Bu, Android cihazlarını yöneten yöneticiler arasında paylaşılan bir Google hesabı olabilir. Bu, kuruluşunuzun Play for Work konsolunda uygulama yönetmek ve yayımlamak için kullandığı Google hesabıdır. Bu hesabı, Play for Work mağazasındaki uygulamaları onaylamak için kullanacaksınız, bu nedenle hesap adını ve parolayı takip edin.
+1. https://accounts.google.com/SignUpBu Intune kiracının tüm Android for Work yönetim görevleriyle Ilişkilendirilecek Android for Work yönetici hesabınız olarak kullanmak üzere bir Google hesabı oluşturun. Bu, Android cihazlarını yöneten yöneticiler arasında paylaşılan bir Google hesabı olabilir. Bu, kuruluşunuzun Play for Work konsolunda uygulama yönetmek ve yayımlamak için kullandığı Google hesabıdır. Bu hesabı, Play for Work mağazasındaki uygulamaları onaylamak için kullanacaksınız, bu nedenle hesap adını ve parolayı takip edin.
 2. Google hesabını Configuration Manager ' de yönetilen Intune kiracısına bağlayarak Android kaydını etkinleştirin:
-   1. **Yönetime** > **genel bakış** > **Cloud Services**Cloud Services > **Microsoft Intune abonelikleri** ' ne gidin ve Intune aboneliğinizi seçin.
-   2. Şeritte **platformları** > Yapılandır**Android** ' e tıklayın ve **Android kaydını etkinleştir** ' in işaretli olduğundan emin olun.
-   3. Şeritte **platformları** > Yapılandır**Android for Work**' e tıklayın.
+   1. **Yönetime**  >  **genel bakış**  >  **Cloud Services**  >  **Microsoft Intune abonelikleri** ' ne gidin ve Intune aboneliğinizi seçin.
+   2. Şeritte **platformları Yapılandır**  >  **Android** ' e tıklayın ve **Android kaydını etkinleştir** ' in işaretli olduğundan emin olun.
+   3. Şeritte **platformları Yapılandır**  >  **Android for Work**' e tıklayın.
    4. İletişim kutusunda, **Intune konsolunda Android for Work yapılandırma**' ya tıklayın. Intune Konsolu Web tarayıcınızda açılır.
    5. Intune portalında oturum açmak için Intune yönetici kimlik bilgilerinizi kullanın.
    6. Google Play Android for Work Web sitesini açmak için **Yapılandır** ' a tıklayın.
@@ -319,14 +319,14 @@ Bağlama tamamlandığında, Intune portalında hesap adı ve kuruluş adını g
 #### <a name="approve-and-deploy-android-for-work-apps"></a>Android for Work uygulamalarını onaylama ve dağıtma
 Iş için Yürüt mağazasındaki uygulamaları onaylamak, Configuration Manager konsoluna eşitlemek ve bunları yönetilen Android for Work cihazlarına dağıtmak için aşağıdaki adımları izleyin. Uygulamaları kullanıcıların iş profillerine dağıtmak için, Play for Work içindeki uygulamaları onaylamanız ve ardından uygulamaları Configuration Manager konsolu ile eşitlemeniz gerekir.
 
-1. Bir tarayıcı açın ve şuraya gidin: https://play.google.com/work.
+1. Bir tarayıcı açın ve şuraya gidin: https://play.google.com/work .
 2. Intune kiracınıza bağladınız Google Yönetici hesabını kullanarak oturum açın.
 3. Ortamınızda dağıtmak istediğiniz uygulamalara gözatıp her biri için **Onayla** ' ya tıklayın.
-4. Configuration Manager konsolunda, > **Android for Work** Cloud Services **yöneticiye** > **Genel Bakış ' a** > **Cloud Services**gidin ve **Eşitle**' ye tıklayın.
-5. Uygulamaların eşitlenmesi için en fazla 10 dakika bekleyin ve ardından**Mağaza uygulamaları için** **yazılım kitaplığı** > **'na genel bakış** > **uygulama yönetimi** > lisans bilgileri ' ne gidin.
+4. Configuration Manager konsolunda, **Administrator**  >  **Overview**  >  **Cloud Services**  >  **Android for Work** Cloud Services yöneticiye genel bakış ' a gidin ve **Eşitle**' ye tıklayın.
+5. Uygulamaların eşitlenmesi için en fazla 10 dakika bekleyin ve ardından **Software Library**  >  Mağaza uygulamaları için yazılım Kitaplığı **'na genel bakış**  >  **uygulama yönetimi**  >  **Lisans bilgileri**' ne gidin.
 6. Çalışma için Yürüt ' den eşitlenen bir uygulamaya tıklayın ve ardından **uygulama oluştur**' a tıklayın.
 7. Sihirbazı tamamlayıp **Kapat**' a tıklayın.
-8. **Yazılım kitaplığı** > 'na**genel bakış** > **uygulama yönetimi** > **uygulamalarına**gidin, bir Android for Work uygulaması seçin ve her zamanki gibi dağıtın.
+8. **Yazılım kitaplığı**'na  >  **genel bakış**  >  **uygulama yönetimi**  >  **uygulamalarına**gidin, bir Android for Work uygulaması seçin ve her zamanki gibi dağıtın.
 
 Play for Work Apps 'i Configuration Manager ile eşitlemek için, Play for Work Web sitesinde en az bir uygulamayı onaylamanız gerekir.
 
@@ -347,7 +347,7 @@ Bunu denemek için standart iş akışı aracılığıyla bir yapılandırma ö�
 #### <a name="perform-selective-wipe"></a>Seçmeli Temizleme gerçekleştir
 Android for Work olarak kaydedilen cihazlar yalnızca iş profilini yönettiğiniz için seçmeli olarak temizlenir. Bu, kişisel profilin silinmesine karşı korunmasını sağlar. Android for Work cihazında seçmeli temizleme gerçekleştirmek, tüm uygulamalar ve veriler dahil olmak üzere iş profilini kaldırır ve cihazı kaydeder.
 
-Bir Android for Work cihazını seçmeli olarak silmek için Configuration Manager konsolundaki normal [seçmeli silme işlemini](https://docs.microsoft.com/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe) kullanın.
+Bir Android for Work cihazını seçmeli olarak silmek için Configuration Manager konsolundaki normal [seçmeli silme işlemini](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe) kullanın.
 
 #### <a name="known-issues-for-android-for-work"></a>Android for Work için bilinen sorunlar
 **Android for Work e-posta profillerinde eşitleme zamanlamasının yapılandırılması, bunların dağıtılmasına neden olur** Android for Work e-posta profilleri için ConfigMgr Kullanıcı arabirimindeki seçeneklerden biri "Schedule". Bu, diğer platformlarda, yöneticinin dağıtılan mobil cihazlara e-posta ve diğer e-posta hesabı verilerinin eşitlenmesi için bir zamanlama yapılandırmasına izin verir. Ancak, Android for Work e-posta profilleri için çalışmaz ve "Yapılandırılmadı" dışında herhangi bir seçeneğin seçilmesi profilin hiçbir cihaza dağıtılmamasına neden olur.

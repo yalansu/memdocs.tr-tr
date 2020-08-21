@@ -10,21 +10,21 @@ ms.assetid: a8fa7e7a-bf55-42de-b0c2-c56777dc1508
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 4739703436d7feec7c4c899e60b33d38ce28babf
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 49e0f5e1dff466e62cdba0def917dd34510e48ee
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125738"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696778"
 ---
-# <a name="synchronize-microsoft-365-apps-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a>Bağlantısı kesilmiş bir yazılım güncelleştirme noktasından Microsoft 365 Apps güncelleştirmelerini eşitler
+# <a name="synchronize-microsoft-365-apps-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a> Bağlantısı kesilmiş bir yazılım güncelleştirme noktasından Microsoft 365 Apps güncelleştirmelerini eşitler
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 <!--4065163-->
 Configuration Manager sürüm 2002 ' den başlayarak, internet 'e bağlı bir WSUS sunucusundan Microsoft 365 uygulama güncelleştirmelerini, bağlantısı kesilen Configuration Manager ortamına aktarmak için bir araç kullanabilirsiniz. Daha önce, bağlantısı kesilen ortamlarda güncelleştirilmiş yazılım için meta verileri verildiğinde ve içeri aktardığınızda Microsoft 365 Apps güncelleştirmelerini dağıtamazsınız. Microsoft 365 uygulamalar güncelleştirmeleri, bir Office API 'sinden ve Office CDN 'den indirilen, bağlantısı kesilen ortamlar için mümkün olmayan ek meta veriler gerektirir.
 
 > [!Note]
-> 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
+> 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
@@ -51,7 +51,7 @@ Configuration Manager sürüm 2002 ' den başlayarak, internet 'e bağlı bir WS
 1. Eşitleme tamamlandığında, Configuration Manager dağıtmak istemediğiniz Microsoft 365 Apps güncelleştirmelerini reddedin. İndirilmeleri için Microsoft 365 uygulama güncelleştirmelerini onaylamanız gerekmez.  
    - İstenmeyen Microsoft 365 uygulama güncelleştirmelerinin, WSUS 'ta WsusUtil.exe dışarı aktarma sırasında dışarı aktarılmasını durdurmaz, ancak Offlineupdatedışarı aktarıcı aracının içerikleri karşıdan yüklemesini durdurur.
    - Offlineupdatedışarı aktarma aracı, Microsoft 365 Apps güncelleştirmelerini sizin için indirir. Bunlar için güncelleştirmeleri dışarı aktarıyorsanız diğer ürünlerin da indirilmek üzere onaylanması gerekir.
-    - WSUS 'ta gereksiz Microsoft 365 Apps güncelleştirmelerini kolayca görmek ve reddetmek için [WSUS 'ta yeni bir güncelleştirme görünümü](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus) oluşturun.
+    - WSUS 'ta gereksiz Microsoft 365 Apps güncelleştirmelerini kolayca görmek ve reddetmek için [WSUS 'ta yeni bir güncelleştirme görünümü](/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus) oluşturun.
 1. Karşıdan yükleme ve dışarı aktarma için diğer ürün güncelleştirmelerini onayladıysanız, sunucusundaki WSUSContent klasörünün içeriğini WsusUtil.exe dışarı ve kopyalama işlemini çalıştırmadan önce içerik indirmenin tamamlanmasını bekleyin. Daha fazla bilgi için bkz. [bağlantısı kesilmiş bir yazılım güncelleştirme noktasından yazılım güncelleştirmelerini senkronize](synchronize-software-updates-disconnected.md) etme
 
 ## <a name="exporting-the-microsoft-365-apps-updates"></a>Microsoft 365 Apps güncelleştirmelerini dışarı aktarma
@@ -101,7 +101,7 @@ Configuration Manager sürüm 2002 ' den başlayarak, internet 'e bağlı bir WS
    1. `"D:\Office365updates\content"`Microsoft 365 Apps içeriğini ve Offlineupdateverme tarafından oluşturulan meta verileri içeren kopyalanmış dizinin tam yoluna geçin.
       > [!IMPORTANT]
       > O365OflBaseUrlConfigured özelliği için yalnızca yerel yollar çalışır.
-   1. Betiği şu şekilde Kaydet`O365OflBaseUrlConfigured.ps1`
+   1. Betiği şu şekilde Kaydet `O365OflBaseUrlConfigured.ps1`
    1. Bağlantısı kesilmiş üst düzey Configuration Manager site sunucusundaki yükseltilmiş bir PowerShell penceresinden, öğesini çalıştırın `.\O365OflBaseUrlConfigured.ps1` .
    1. Site sunucusunda **SMS_Executive** hizmetini yeniden başlatın.
 1. **Configuration Manager** konsolunda, **Yönetim**  >  **Site yapılandırması**  >  **siteler**' e gidin.
@@ -110,14 +110,14 @@ Configuration Manager sürüm 2002 ' den başlayarak, internet 'e bağlı bir WS
 1. Configuration Manager için [yazılım güncelleştirmelerini eşitler](synchronize-software-updates.md#manually-start-software-updates-synchronization)
 1. Eşitleme tamamlandığında, Microsoft 365 Apps güncelleştirmelerini dağıtmak için normal işleminizi kullanın.
 
-## <a name="proxy-configuration"></a><a name="bkmk_O365_ki"></a>Ara sunucu yapılandırması
+## <a name="proxy-configuration"></a><a name="bkmk_O365_ki"></a> Ara sunucu yapılandırması
 
 - Proxy yapılandırması, araçta yerel olarak yerleşik değildir. Proxy, aracın çalıştığı sunucudaki Internet seçeneklerinde ayarlandıysa, teorik olarak kullanılır ve düzgün şekilde çalışır.
    - Bir komut isteminden, `netsh winhttp show proxy` yapılandırılan proxy 'yi görmek için komutunu çalıştırın.
 
 
 
-## <a name="modify-o365oflbaseurlconfigured-property"></a><a name="bkmk_o365_script"></a>O365OflBaseUrlConfigured özelliğini değiştir
+## <a name="modify-o365oflbaseurlconfigured-property"></a><a name="bkmk_o365_script"></a> O365OflBaseUrlConfigured özelliğini değiştir
 
 ```powershell
 # Name: O365OflBaseUrlConfigured.ps1

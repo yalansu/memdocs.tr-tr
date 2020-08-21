@@ -10,12 +10,12 @@ ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5f441bc277f9c91cb1a83ce97879bd29b6349481
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: dc8e31245212136cd67f6f8cac062723c2cabefb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718808"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696013"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Updates Publisher için sertifikaları ve güvenliği yönetme
 
@@ -76,7 +76,7 @@ Aşağıdakiler, istemci bilgisayarlarda imza sertifikasının nasıl yapıland�
    -   Sertifika yetkilisi (CA) tarafından verilen sertifikalar için: sertifikayı **Güvenilen Yayımcılar** sertifika deposuna ekleyin.
 
    > [!NOTE]
-   > WUA Ayrıca yerel bilgisayarda **Intranet Microsoft güncelleştirme hizmeti konumundan imzalı Içeriğe Izin ver** Grup İlkesi ayarının etkinleştirilip etkinleştirilmediğini denetler. Updates Publisher ile oluşturulup yayımlanan güncelleştirmeleri taramak üzere WUA için bu ilke ayarı etkinleştirilmelidir. Bu grup ilkesi ayarını etkinleştirme hakkında daha fazla bilgi için bkz. [Istemci bilgisayarlarda Grup ilkesi yapılandırma](https://docs.microsoft.com/previous-versions/bb530967(v=technet.10)).
+   > WUA Ayrıca yerel bilgisayarda **Intranet Microsoft güncelleştirme hizmeti konumundan imzalı Içeriğe Izin ver** Grup İlkesi ayarının etkinleştirilip etkinleştirilmediğini denetler. Updates Publisher ile oluşturulup yayımlanan güncelleştirmeleri taramak üzere WUA için bu ilke ayarı etkinleştirilmelidir. Bu grup ilkesi ayarını etkinleştirme hakkında daha fazla bilgi için bkz. [Istemci bilgisayarlarda Grup ilkesi yapılandırma](/previous-versions/bb530967(v=technet.10)).
 
 
 

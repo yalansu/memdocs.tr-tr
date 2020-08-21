@@ -10,12 +10,12 @@ ms.assetid: a4e8bb56-ee85-49fd-8b1c-c8f513cec671
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 405617277953eae61fbfce4fdb9b3a7d280aedcf
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 6a4aaaab8eb9195f4f5dce4deb890540b0837852
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124457"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697472"
 ---
 # <a name="use-the-task-sequence-editor"></a>Görev dizisi düzenleyicisini kullanma
 
@@ -78,7 +78,7 @@ Görev sırası Düzenleyicisi aşağıdaki bileşenleri içerir:
 
 Standart Windows denetimlerini kullanarak görev dizisi düzenleyicisini yeniden boyutlandırabilirsiniz. İki ana bölme genişliğini yeniden boyutlandırmak için, fareyi kullanarak görev dizisi ve adım özellikleri arasındaki çubuğu seçin ve sonra sola veya sağa sürükleyin.
 
-## <a name="view-a-task-sequence"></a><a name="bkmk_view"></a>Görev sırasını görüntüleme
+## <a name="view-a-task-sequence"></a><a name="bkmk_view"></a> Görev sırasını görüntüleme
 
 1. Configuration Manager konsolunda, **yazılım kitaplığı** çalışma alanına gidin, **işletim sistemleri**' ni genişletin ve ardından **görev dizileri** düğümünü seçin.  
 
@@ -140,7 +140,7 @@ Kullanılabilir görev dizisi adımlarının bir listesi için bkz. [görev dizi
 
 Görev sırası düzenleyicisinin birden fazla örneğini aynı anda açabilirsiniz. Bu davranış, birden çok görev dizisini karşılaştırmanıza veya aralarındaki adımları kopyalayıp yapıştırmanıza olanak tanır. Bir görev dizisini **düzenleyebilir** ve diğeri **görüntüleyebilirsiniz** , ancak aynı görev dizisinde her iki eylemi de yapamazsınız.
 
-## <a name="conditions"></a><a name="bkmk_conditions"></a>Durumunda
+## <a name="conditions"></a><a name="bkmk_conditions"></a> Durumunda
 
 Görev dizisinin nasıl davranacağını denetlemek için koşulları kullanın. Tek bir adıma veya bir adım grubuna koşul ekleyin. Görev dizisi, cihazda adımı çalıştırmadan önce koşulları değerlendirir. Yalnızca koşulların doğru değerlendirmesi durumunda bu adımı çalıştırır. Bir koşul yanlış değerlendirilirse, görev dizisi grubu veya adımı atlar.
 
@@ -175,14 +175,14 @@ Aşağıdaki koşul türleri kullanılabilir:
 
 Koşulları aşağıdaki PowerShell cmdlet 'leriyle yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepConditionFile](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionFile?view=sccm-ps)
-- [Get-CMTSStepConditionFolder](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionFolder?view=sccm-ps)
-- [Get-Cmtsstepconditionifdeyimin](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionIfStatement?view=sccm-ps)
-- [Get-CMTSStepConditionOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionOperatingSystem?view=sccm-ps)
-- [Get-CMTSStepConditionQueryWmi](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionQueryWmi?view=sccm-ps)
-- [Get-CMTSStepConditionRegistry](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionRegistry?view=sccm-ps)
-- [Get-CMTSStepConditionSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionSoftware?view=sccm-ps)
-- [Get-CMTSStepConditionVariable](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionVariable?view=sccm-ps)
+- [Get-CMTSStepConditionFile](/powershell/module/configurationmanager/Get-CMTSStepConditionFile?view=sccm-ps)
+- [Get-CMTSStepConditionFolder](/powershell/module/configurationmanager/Get-CMTSStepConditionFolder?view=sccm-ps)
+- [Get-Cmtsstepconditionifdeyimin](/powershell/module/configurationmanager/Get-CMTSStepConditionIfStatement?view=sccm-ps)
+- [Get-CMTSStepConditionOperatingSystem](/powershell/module/configurationmanager/Get-CMTSStepConditionOperatingSystem?view=sccm-ps)
+- [Get-CMTSStepConditionQueryWmi](/powershell/module/configurationmanager/Get-CMTSStepConditionQueryWmi?view=sccm-ps)
+- [Get-CMTSStepConditionRegistry](/powershell/module/configurationmanager/Get-CMTSStepConditionRegistry?view=sccm-ps)
+- [Get-CMTSStepConditionSoftware](/powershell/module/configurationmanager/Get-CMTSStepConditionSoftware?view=sccm-ps)
+- [Get-CMTSStepConditionVariable](/powershell/module/configurationmanager/Get-CMTSStepConditionVariable?view=sccm-ps)
 
 ### <a name="copy-and-paste-conditions"></a>Koşulları Kopyala ve Yapıştır
 
@@ -201,7 +201,7 @@ Ayrıca, koşulları listede yukarı veya aşağı taşımaya yönelik yeni seç
 > [!Note]  
 > Bir görev dizisindeki adımlar arasında koşullar kopyalayabilir ve yapıştırabilirsiniz. Bu eylem, farklı görev dizileri arasında desteklenmez.
 
-## <a name="reclaim-lock-for-editing"></a><a name="bkmk_sedo"></a>Düzenlenmek üzere geri kazanmak için kilitle
+## <a name="reclaim-lock-for-editing"></a><a name="bkmk_sedo"></a> Düzenlenmek üzere geri kazanmak için kilitle
 
 <!--3699337-->
 Configuration Manager konsolu yanıt vermeyi durdurursa, kilit 30 dakika sonra sona erene kadar daha fazla değişiklik yapmaktan ayrılabilir. Bu kilit Configuration Manager SEDO (dağıtılmış nesnelerin serileştirilmiş düzenlemesi) sisteminin bir parçasıdır. Daha fazla bilgi için bkz. [Configuration Manager SEDO](../../develop/core/understand/sedo.md).
@@ -211,7 +211,7 @@ Sürüm 1906 ' den başlayarak, bir görev dizisi üzerinde kilidi temizleyebili
 > [!TIP]
 > Sürüm 1910 ' den başlayarak, Configuration Manager konsolundaki herhangi bir nesne üzerindeki kilidi temizleyebilirsiniz. Daha fazla bilgi için, bkz. [Configuration Manager konsolunu kullanma](../../core/servers/manage/admin-console.md#bkmk_sedo).<!--4786915-->
 
-## <a name="search"></a><a name="bkmk_search"></a>Aramanız
+## <a name="search"></a><a name="bkmk_search"></a> Aramanız
 
 <!-- 4621085 -->
 

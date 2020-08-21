@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bab2050448e1c870aac8f3237c21b19498cdb674
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 51a636ffc4adad20e6bc1c69b3194db7a0fa72fd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124245"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697373"
 ---
 # <a name="task-sequence-steps"></a>Görev dizisi adımları
 
@@ -47,7 +47,7 @@ Belirli görev dizisi adımları için aşağıdaki bölümler, **Seçenekler** 
 
 
 
-## <a name="apply-data-image"></a><a name="BKMK_ApplyDataImage"></a>Veri Görüntüsünü Uygula
+## <a name="apply-data-image"></a><a name="BKMK_ApplyDataImage"></a> Veri Görüntüsünü Uygula
 
 Veri görüntüsünü belirtilen hedef bölüme kopyalamak için bu adımı kullanın.  
 
@@ -66,10 +66,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-Cmtsstepapplydataımage](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyDataImage?view=sccm-ps)
-- [New-Cmtsstepapplydataımage](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyDataImage?view=sccm-ps)
-- [Remove-Cmtsstepapplydataımage](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyDataImage?view=sccm-ps)
-- [Set-Cmtsstepapplydataımage](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyDataImage?view=sccm-ps)
+- [Get-Cmtsstepapplydataımage](/powershell/module/configurationmanager/Get-CMTSStepApplyDataImage?view=sccm-ps)
+- [New-Cmtsstepapplydataımage](/powershell/module/configurationmanager/New-CMTSStepApplyDataImage?view=sccm-ps)
+- [Remove-Cmtsstepapplydataımage](/powershell/module/configurationmanager/Remove-CMTSStepApplyDataImage?view=sccm-ps)
+- [Set-Cmtsstepapplydataımage](/powershell/module/configurationmanager/Set-CMTSStepApplyDataImage?view=sccm-ps)
 
 ### <a name="properties-for-apply-data-image"></a>Veri Görüntüsünü Uygula özellikleri
 
@@ -100,7 +100,7 @@ Görev dizisinin, görüntüyü yüklemeden önce hedef bölümdeki tüm dosyala
 
 
 
-## <a name="apply-driver-package"></a><a name="BKMK_ApplyDriverPackage"></a>Sürücü paketini Uygula  
+## <a name="apply-driver-package"></a><a name="BKMK_ApplyDriverPackage"></a> Sürücü paketini Uygula  
 
 Sürücü paketindeki tüm sürücüleri indirmek ve Windows işletim sistemine yüklemek için bu adımı kullanın.
 
@@ -133,10 +133,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyDriverPackage?view=sccm-ps)
-- [New-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyDriverPackage?view=sccm-ps)
-- [Remove-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyDriverPackage?view=sccm-ps)
-- [Set-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [Get-CMTSStepApplyDriverPackage](/powershell/module/configurationmanager/Get-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [New-CMTSStepApplyDriverPackage](/powershell/module/configurationmanager/New-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [Remove-CMTSStepApplyDriverPackage](/powershell/module/configurationmanager/Remove-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [Set-CMTSStepApplyDriverPackage](/powershell/module/configurationmanager/Set-CMTSStepApplyDriverPackage?view=sccm-ps)
 
 ### <a name="properties-for-apply-driver-package"></a>Sürücü paketi Uygula özellikleri
 
@@ -150,7 +150,7 @@ Gerekli cihaz sürücülerini içeren sürücü paketini belirtin. **Bir paket s
 
 `/recurse`Windows sürücü paketini uygularken, PARAMETREYI DISM komut satırına eklemek için bu seçeneği belirleyin.
 
-Bu seçeneği etkinleştirdiğinizde, ek DıSM komut satırı parametreleri de belirtebilirsiniz. Daha fazla seçenek dahil etmek için [Osdınstalldriversaddıtionaloptions](task-sequence-variables.md#OSDInstallDriversAdditionalOptions) görev dizisi değişkenini kullanın. Daha fazla bilgi için bkz. [Windows 10 DISM komut satırı seçenekleri](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).<!-- SCCMDocs#2125 -->
+Bu seçeneği etkinleştirdiğinizde, ek DıSM komut satırı parametreleri de belirtebilirsiniz. Daha fazla seçenek dahil etmek için [Osdınstalldriversaddıtionaloptions](task-sequence-variables.md#OSDInstallDriversAdditionalOptions) görev dizisi değişkenini kullanın. Daha fazla bilgi için bkz. [Windows 10 DISM komut satırı seçenekleri](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).<!-- SCCMDocs#2125 -->
 
 #### <a name="select-the-mass-storage-driver-within-the-package-that-needs-to-be-installed-before-setup-on-pre-windows-vista-operating-systems"></a>Paketin içinde Windows Vista'dan önceki işletim sistemlerinde kurulumdan önce yüklenmesi gereken yığın depolama sürücüsünü seçin
 
@@ -160,7 +160,7 @@ Klasik bir işletim sistemi yüklemek için gereken herhangi bir yığın depola
 
 Klasik bir işletim sistemi kurulumundan önce yüklenecek yığın depolama sürücüsü dosyasını seçin. Açılan liste belirtilen paketten doldurulur.  
 
-##### <a name="model"></a>Model
+##### <a name="model"></a>Modelleme
 
 Windows Vista 'Dan önceki işletim sistemi dağıtımları için gereken önyükleme için kritik cihazı belirtin.  
 
@@ -170,7 +170,7 @@ Bu seçenek Windows 'un, dijital imza olmadan sürücü yüklemesini sağlar.
 
 
 
-## <a name="apply-network-settings"></a><a name="BKMK_ApplyNetworkSettings"></a>Ağ ayarlarını uygula  
+## <a name="apply-network-settings"></a><a name="BKMK_ApplyNetworkSettings"></a> Ağ ayarlarını uygula  
 
 Hedef bilgisayar için ağ veya çalışma grubu yapılandırma bilgilerini belirtmek üzere bu adımı kullanın. Görev sırası bu değerleri uygun yanıt dosyasında depolar. Windows Kurulumu, **Windows 'u ve ConfigMgr 'Yi Kur** eylemini sırasında bu yanıt dosyasını kullanır.  
 
@@ -200,10 +200,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyNetworkSetting?view=sccm-ps)
-- [New-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyNetworkSetting?view=sccm-ps)
-- [Remove-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyNetworkSetting?view=sccm-ps)
-- [Set-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [Get-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/Get-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [New-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/New-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [Remove-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/Remove-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [Set-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/Set-CMTSStepApplyNetworkSetting?view=sccm-ps)
 
 ### <a name="properties-for-apply-network-settings"></a>Ağ ayarlarını uygula özellikleri
 
@@ -235,7 +235,7 @@ Bilgisayardaki her ağ bağdaştırıcısı için ağ yapılandırmalarını bel
 
 
 
-## <a name="apply-operating-system-image"></a><a name="BKMK_ApplyOperatingSystemImage"></a>Işletim sistemi görüntüsünü Uygula  
+## <a name="apply-operating-system-image"></a><a name="BKMK_ApplyOperatingSystemImage"></a> Işletim sistemi görüntüsünü Uygula  
 
 Hedef bilgisayara bir işletim sistemi yüklemek için bu adımı kullanın.
 
@@ -264,10 +264,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyOperatingSystem?view=sccm-ps)
-- [New-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyOperatingSystem?view=sccm-ps)
-- [Remove-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyOperatingSystem?view=sccm-ps)
-- [Set-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [Get-CMTSStepApplyOperatingSystem](/powershell/module/configurationmanager/Get-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [New-CMTSStepApplyOperatingSystem](/powershell/module/configurationmanager/New-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [Remove-CMTSStepApplyOperatingSystem](/powershell/module/configurationmanager/Remove-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [Set-CMTSStepApplyOperatingSystem](/powershell/module/configurationmanager/Set-CMTSStepApplyOperatingSystem?view=sccm-ps)
 
 ### <a name="behaviors-for-apply-os-image"></a>İşletim sistemi görüntüsü uygulama davranışları
 
@@ -359,7 +359,7 @@ Görev sırasını, işletim sistemi görüntüsüne doğrudan dağıtım noktas
 
 
 
-## <a name="apply-windows-settings"></a><a name="BKMK_ApplyWindowsSettings"></a>Windows ayarlarını uygula
+## <a name="apply-windows-settings"></a><a name="BKMK_ApplyWindowsSettings"></a> Windows ayarlarını uygula
 
 Hedef bilgisayar için Windows ayarlarını yapılandırmak üzere bu adımı kullanın. Görev sırası bu değerleri uygun yanıt dosyasında depolar. Windows Kurulumu, **Windows 'u ve ConfigMgr 'Yi Kur** adımı sırasında bu yanıt dosyasını kullanır.  
 
@@ -390,10 +390,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-Cmtsstepapplywindowsayarı](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyWindowsSetting?view=sccm-ps)
-- [New-Cmtsstepapplywindowsayarı](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyWindowsSetting?view=sccm-ps)
-- [Remove-Cmtsstepapplywindowsayarı](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyWindowsSetting?view=sccm-ps)
-- [Set-Cmtsstepapplywindowsayarı](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [Get-Cmtsstepapplywindowsayarı](/powershell/module/configurationmanager/Get-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [New-Cmtsstepapplywindowsayarı](/powershell/module/configurationmanager/Get-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [Remove-Cmtsstepapplywindowsayarı](/powershell/module/configurationmanager/Remove-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [Set-Cmtsstepapplywindowsayarı](/powershell/module/configurationmanager/Set-CMTSStepApplyWindowsSetting?view=sccm-ps)
 
 ### <a name="properties-for-apply-windows-settings"></a>Windows ayarlarını uygula özellikleri
 
@@ -450,12 +450,12 @@ Aşağıdaki ayarları yapılandırın:
 - Kullanıcı arabirimi dili geri dönüş
 - Kullanıcı yerel ayarı
 
-Bu Windows kurulumu yanıt dosyası değerleri hakkında daha fazla bilgi için bkz. [Microsoft-Windows-International-Core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
+Bu Windows kurulumu yanıt dosyası değerleri hakkında daha fazla bilgi için bkz. [Microsoft-Windows-International-Core](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
 
 > [!NOTE]
 > Özel bir Windows kurulumu yanıt dosyası (unattend.xml) oluşturursanız, bu adım varolan değerlerin üzerine yazar. Bu ayarlar için dinamik bir işlemi otomatik hale getirmek üzere ilgili görev dizisi değişkenlerini kullanın. Örneğin, [Osdwindowssettingsınputlocale](task-sequence-variables.md#OSDWindowsSettingsInputLocale). 
 
-## <a name="auto-apply-drivers"></a><a name="BKMK_AutoApplyDrivers"></a>Sürücüleri otomatik olarak Uygula
+## <a name="auto-apply-drivers"></a><a name="BKMK_AutoApplyDrivers"></a> Sürücüleri otomatik olarak Uygula
 
 Sürücüleri işletim sistemi dağıtımının bir parçası olarak eşleştirmek ve yüklemek için bu adımı kullanın.  
 
@@ -502,10 +502,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepAutoApplyDriver?view=sccm-ps)
-- [New-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepAutoApplyDriver?view=sccm-ps)
-- [Remove-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepAutoApplyDriver?view=sccm-ps)
-- [Set-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [Get-CMTSStepAutoApplyDriver](/powershell/module/configurationmanager/Get-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [New-CMTSStepAutoApplyDriver](/powershell/module/configurationmanager/New-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [Remove-CMTSStepAutoApplyDriver](/powershell/module/configurationmanager/Remove-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [Set-CMTSStepAutoApplyDriver](/powershell/module/configurationmanager/Set-CMTSStepAutoApplyDriver?view=sccm-ps)
 
 ### <a name="properties-for-auto-apply-drivers"></a>Sürücüleri otomatik olarak Uygula özellikleri
 
@@ -538,7 +538,7 @@ Bu seçenek Windows 'un, dijital imza olmadan sürücü yüklemesini sağlar.
 
 
 
-## <a name="capture-network-settings"></a><a name="BKMK_CaptureNetworkSettings"></a>Ağ ayarlarını yakala
+## <a name="capture-network-settings"></a><a name="BKMK_CaptureNetworkSettings"></a> Ağ ayarlarını yakala
 
 Görev sırasını çalıştıran bilgisayardan Microsoft ağ ayarlarını yakalamak için bu adımı kullanın. Görev sırası bu ayarları görev dizisi değişkenlerine kaydeder. Bu ayarlar, **ağ ayarlarını uygula** adımında yapılandırdığınız varsayılan ayarları geçersiz kılar.  
 
@@ -557,10 +557,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureNetworkSettings?view=sccm-ps)
-- [New-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureNetworkSettings?view=sccm-ps)
-- [Remove-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureNetworkSettings?view=sccm-ps)
-- [Set-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [Get-CMTSStepCaptureNetworkSettings](/powershell/module/configurationmanager/Get-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [New-CMTSStepCaptureNetworkSettings](/powershell/module/configurationmanager/New-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [Remove-CMTSStepCaptureNetworkSettings](/powershell/module/configurationmanager/Remove-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [Set-CMTSStepCaptureNetworkSettings](/powershell/module/configurationmanager/Set-CMTSStepCaptureNetworkSettings?view=sccm-ps)
 
 ### <a name="properties-for-capture-network-settings"></a>Yakalama ağ ayarları özellikleri
 
@@ -580,7 +580,7 @@ Hedef bilgisayarın ağ bağdaştırıcısı yapılandırmasını yakalar. Aşa�
 
 
 
-## <a name="capture-operating-system-image"></a><a name="BKMK_CaptureOperatingSystemImage"></a>Işletim sistemi görüntüsünü yakala
+## <a name="capture-operating-system-image"></a><a name="BKMK_CaptureOperatingSystemImage"></a> Işletim sistemi görüntüsünü yakala
 
 Bu adım, bir başvuru bilgisayarından bir veya daha fazla görüntü yakalar. Görev sırası, belirtilen ağ paylaşımında bir Windows görüntü (. wim) dosyası oluşturur. Ardından bu görüntüyü görüntü tabanlı IŞLETIM sistemi dağıtımları için Configuration Manager içine aktarmak üzere **Işletim sistemi görüntü paketi ekleme** Sihirbazı 'nı kullanın.  
 
@@ -610,10 +610,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-Cmtsstepcapturessystemutility Mımage](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureSystemImage?view=sccm-ps)
-- [New-Cmtsstepcapturessystemutility Mımage](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureSystemImage?view=sccm-ps)
-- [Remove-Cmtsstepcapturessystemutility Mımage](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureSystemImage?view=sccm-ps)
-- [Set-Cmtsstepcapturessystemutility Mımage](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [Get-Cmtsstepcapturessystemutility Mımage](/powershell/module/configurationmanager/Get-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [New-Cmtsstepcapturessystemutility Mımage](/powershell/module/configurationmanager/New-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [Remove-Cmtsstepcapturessystemutility Mımage](/powershell/module/configurationmanager/Remove-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [Set-Cmtsstepcapturessystemutility Mımage](/powershell/module/configurationmanager/Set-CMTSStepCaptureSystemImage?view=sccm-ps)
 
 ### <a name="properties-for-capture-os-image"></a>İşletim sistemi görüntüsü yakalama özellikleri
 
@@ -641,7 +641,7 @@ Belirtilen ağ paylaşımıyla ilgili izinlere sahip Windows hesabını girin. W
 
 
 
-## <a name="capture-user-state"></a><a name="BKMK_CaptureUserState"></a>Kullanıcı durumunu yakala
+## <a name="capture-user-state"></a><a name="BKMK_CaptureUserState"></a> Kullanıcı durumunu yakala
 
 Bu adım, görev dizisini çalıştıran bilgisayardan Kullanıcı durumu ve ayarlarını yakalamak için Kullanıcı Durumu Taşıma Aracı (USMT) kullanır. Bu görev dizisi adımı **Kullanıcı Durumunu Geri Yükle** görev dizisi adımıyla birlikte kullanılır. Bu adım, Configuration Manager oluşturup yöneten bir şifreleme anahtarı kullanarak USMT durum deposunu her zaman şifreler.  
 
@@ -672,10 +672,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureUserState?view=sccm-ps)
-- [New-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureUserState?view=sccm-ps)
-- [Remove-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureUserState?view=sccm-ps)
-- [Set-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureUserState?view=sccm-ps)
+- [Get-CMTSStepCaptureUserState](/powershell/module/configurationmanager/Get-CMTSStepCaptureUserState?view=sccm-ps)
+- [New-CMTSStepCaptureUserState](/powershell/module/configurationmanager/New-CMTSStepCaptureUserState?view=sccm-ps)
+- [Remove-CMTSStepCaptureUserState](/powershell/module/configurationmanager/Remove-CMTSStepCaptureUserState?view=sccm-ps)
+- [Set-CMTSStepCaptureUserState](/powershell/module/configurationmanager/Set-CMTSStepCaptureUserState?view=sccm-ps)
 
 ### <a name="properties-for-capture-user-state"></a>Kullanıcı durumunu yakala özellikleri
 
@@ -721,7 +721,7 @@ Aşağıdaki ayarlarından herhangi birini belirtmek için bu seçeneği etkinle
 
 - **Dosyaları kopyalamak yerine bağlantıları kullanarak yerel olarak yakala**: Dosyaları yakalamak için NTFS sabit bağlantılarını kullanmak üzere bu ayarı etkinleştirin.  
 
-    Sabit bağlantılar kullanarak verileri geçirme hakkında daha fazla bilgi için bkz. [sabit bağlantı geçiş deposu](https://docs.microsoft.com/windows/deployment/usmt/usmt-hard-link-migration-store).  
+    Sabit bağlantılar kullanarak verileri geçirme hakkında daha fazla bilgi için bkz. [sabit bağlantı geçiş deposu](/windows/deployment/usmt/usmt-hard-link-migration-store).  
 
 - **Çevrimdışı modda yakala (yalnızca WINDOWS PE)**: Bu ayarı, Windows PE 'de tüm işletim sistemi yerine Kullanıcı durumunu yakalamak için etkinleştirin.  
 
@@ -731,7 +731,7 @@ Bu seçenek, dosyaları başka bir uygulama tarafından düzenlenmek üzere kili
 
 
 
-## <a name="capture-windows-settings"></a><a name="BKMK_CaptureWindowsSettings"></a>Windows ayarlarını yakala
+## <a name="capture-windows-settings"></a><a name="BKMK_CaptureWindowsSettings"></a> Windows ayarlarını yakala
 
 Görev sırasını çalıştıran bilgisayardan Windows ayarlarını yakalamak için bu adımı kullanın. Görev sırası bu ayarları görev dizisi değişkenlerine kaydeder. Yakalanan bu ayarlar **Windows ayarlarını uygula** adımında yapılandırdığınız varsayılan ayarları geçersiz kılar.  
 
@@ -754,10 +754,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureWindowsSettings?view=sccm-ps)
-- [New-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureWindowsSettings?view=sccm-ps)
-- [Remove-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureWindowsSettings?view=sccm-ps)
-- [Set-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [Get-CMTSStepCaptureWindowsSettings](/powershell/module/configurationmanager/Get-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [New-CMTSStepCaptureWindowsSettings](/powershell/module/configurationmanager/New-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [Remove-CMTSStepCaptureWindowsSettings](/powershell/module/configurationmanager/Remove-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [Set-CMTSStepCaptureWindowsSettings](/powershell/module/configurationmanager/Set-CMTSStepCaptureWindowsSettings?view=sccm-ps)
 
 ### <a name="properties-for-capture-windows-settings"></a>Yakalama Windows ayarları özellikleri
 
@@ -776,7 +776,7 @@ Kayıtlı Kullanıcı ve kuruluş adlarını bilgisayardan yakalayın.
 Bilgisayardaki saat dilimi ayarını yakalayın.  
 
 
-## <a name="check-readiness"></a><a name="BKMK_CheckReadiness"></a>Hazır olma durumunu denetle
+## <a name="check-readiness"></a><a name="BKMK_CheckReadiness"></a> Hazır olma durumunu denetle
 
 Hedef bilgisayarın belirtilen dağıtım önkoşul koşullarını karşıladığını doğrulamak için bu adımı kullanın.  
 
@@ -822,10 +822,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepPrestartCheck?view=sccm-ps)
-- [New-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepPrestartCheck?view=sccm-ps)
-- [Remove-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepPrestartCheck?view=sccm-ps)
-- [Set-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepPrestartCheck?view=sccm-ps)
+- [Get-CMTSStepPrestartCheck](/powershell/module/configurationmanager/Get-CMTSStepPrestartCheck?view=sccm-ps)
+- [New-CMTSStepPrestartCheck](/powershell/module/configurationmanager/New-CMTSStepPrestartCheck?view=sccm-ps)
+- [Remove-CMTSStepPrestartCheck](/powershell/module/configurationmanager/Remove-CMTSStepPrestartCheck?view=sccm-ps)
+- [Set-CMTSStepPrestartCheck](/powershell/module/configurationmanager/Set-CMTSStepPrestartCheck?view=sccm-ps)
 
 ### <a name="properties-for-check-readiness"></a>Kullanıma hazır olma özellikleri
 
@@ -886,7 +886,7 @@ Sürüm 2006 ' den başlayarak, cihazın UEFı veya BIOS için yapılandırılm�
 
 
 
-## <a name="connect-to-network-folder"></a><a name="BKMK_ConnectToNetworkFolder"></a>Ağ klasörüne Bağlan
+## <a name="connect-to-network-folder"></a><a name="BKMK_ConnectToNetworkFolder"></a> Ağ klasörüne Bağlan
 
 Paylaşılan bir ağ klasörüne bağlantı oluşturmak için bu adımı kullanın.  
 
@@ -907,10 +907,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConnectNetworkFolder?view=sccm-ps)
-- [New-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepConnectNetworkFolder?view=sccm-ps)
-- [Remove-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepConnectNetworkFolder?view=sccm-ps)
-- [Set-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [Get-CMTSStepConnectNetworkFolder](/powershell/module/configurationmanager/Get-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [New-CMTSStepConnectNetworkFolder](/powershell/module/configurationmanager/New-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [Remove-CMTSStepConnectNetworkFolder](/powershell/module/configurationmanager/Remove-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [Set-CMTSStepConnectNetworkFolder](/powershell/module/configurationmanager/Set-CMTSStepConnectNetworkFolder?view=sccm-ps)
 
 ### <a name="properties-for-connect-to-network-folder"></a>Ağ klasörüne Bağlan özellikleri
 
@@ -930,7 +930,7 @@ Bu ağ klasörüne bağlanma izinlerine sahip kullanıcı hesabını belirtmek i
 
 
 
-## <a name="disable-bitlocker"></a><a name="BKMK_DisableBitLocker"></a>BitLocker 'ı devre dışı bırak
+## <a name="disable-bitlocker"></a><a name="BKMK_DisableBitLocker"></a> BitLocker 'ı devre dışı bırak
 
 Geçerli işletim sistemi sürücüsünde veya belirli bir sürücüde BitLocker şifrelemesini devre dışı bırakmak için bu adımı kullanın. Bu eylem, anahtar koruyucularını sabit sürücüdeki şifresiz metinde görünür bırakır. Sürücü içeriğinin şifresini çözmez. Bu eylem neredeyse anında tamamlanır.  
 
@@ -954,10 +954,10 @@ Sürüm 1906 ' den başlayarak, aşağıdaki görev dizisi değişkenlerini bu a
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepDisableBitLocker?view=sccm-ps)
-- [New-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepDisableBitLocker?view=sccm-ps)
-- [Remove-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepDisableBitLocker?view=sccm-ps)
-- [Set-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepDisableBitLocker?view=sccm-ps)
+- [Get-CMTSStepDisableBitLocker](/powershell/module/configurationmanager/Get-CMTSStepDisableBitLocker?view=sccm-ps)
+- [New-CMTSStepDisableBitLocker](/powershell/module/configurationmanager/New-CMTSStepDisableBitLocker?view=sccm-ps)
+- [Remove-CMTSStepDisableBitLocker](/powershell/module/configurationmanager/Remove-CMTSStepDisableBitLocker?view=sccm-ps)
+- [Set-CMTSStepDisableBitLocker](/powershell/module/configurationmanager/Set-CMTSStepDisableBitLocker?view=sccm-ps)
 
 ### <a name="properties-for-disable-bitlocker"></a>BitLocker 'ı devre dışı bırakma özellikleri
 
@@ -979,7 +979,7 @@ Sürüm 1906 ' den başlayarak, BitLocker 'ı devre dışı bırakmak için yeni
 Bu davranışı, [Osdbitlockerrebootcount](task-sequence-variables.md#OSDBitLockerRebootCount) ve [OSDBitLockerRebootCountOverride](task-sequence-variables.md#OSDBitLockerRebootCountOverride)görev dizisi değişkenleriyle ayarlayabilir ve değiştirebilirsiniz.
 
 
-## <a name="download-package-content"></a><a name="BKMK_DownloadPackageContent"></a>Paket Içeriğini indir
+## <a name="download-package-content"></a><a name="BKMK_DownloadPackageContent"></a> Paket Içeriğini indir
 
 Aşağıdaki paket türlerinden birini indirmek için bu adımı kullanın:  
 
@@ -1009,10 +1009,10 @@ Bu adımı görev sırası düzenleyicisine eklemek için **Ekle**, **yazılım*
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepDownloadPackageContent?view=sccm-ps)
-- [New-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepDownloadPackageContent?view=sccm-ps)
-- [Remove-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepDownloadPackageContent?view=sccm-ps)
-- [Set-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [Get-CMTSStepDownloadPackageContent](/powershell/module/configurationmanager/Get-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [New-CMTSStepDownloadPackageContent](/powershell/module/configurationmanager/New-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [Remove-CMTSStepDownloadPackageContent](/powershell/module/configurationmanager/Remove-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [Set-CMTSStepDownloadPackageContent](/powershell/module/configurationmanager/Set-CMTSStepDownloadPackageContent?view=sccm-ps)
 
 ### <a name="properties-for-download-package-content"></a>Paket Içeriğini Indirme özellikleri
 
@@ -1042,7 +1042,7 @@ Configuration Manager, değişken adına sayısal bir sonek ekler. Örneğin, bi
 
 Görev dizisi bir paketi indiremediğinde, listedeki bir sonraki paketi indirmeye başlar.  
 
-### <a name="note-1-use-of-boot-images-in-the-download-package-content-step"></a><a name="bkmk_note1"></a>Note 1: paket Içeriğini Indir adımında önyükleme görüntülerinin kullanımı
+### <a name="note-1-use-of-boot-images-in-the-download-package-content-step"></a><a name="bkmk_note1"></a> Note 1: paket Içeriğini Indir adımında önyükleme görüntülerinin kullanımı
 
 *Sürüm 1910 ve üzeri için geçerlidir*<!-- SCCMDocs-pr #4202 -->
 
@@ -1061,7 +1061,7 @@ Görev dizisi bir paketi indiremediğinde, listedeki bir sonraki paketi indirmey
   - , Özelliklerinde başvurulan bir önyükleme görüntüsüne sahiptir.
   - Bu görev dizisinin birden çok örneği, mimari ve dil için gereken farklı önyükleme görüntülerine sahiptir
 
-## <a name="enable-bitlocker"></a><a name="BKMK_EnableBitLocker"></a>BitLocker 'ı etkinleştir
+## <a name="enable-bitlocker"></a><a name="BKMK_EnableBitLocker"></a> BitLocker 'ı etkinleştir
 
 BitLocker sürücü şifrelemesi disk birimi içeriği için alt düzey şifreleme sağlar. Sabit sürücüdeki en az iki bölümde BitLocker şifrelemesini etkinleştirmek için bu adımı kullanın. İlk etkin bölüm Windows önyükleme kodunu içerir. Başka bir bölüm işletim sistemini içerir. Önyükleme bölümü şifrelenmemiş kalmalıdır.  
 
@@ -1103,10 +1103,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepEnableBitLocker?view=sccm-ps)
-- [New-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepEnableBitLocker?view=sccm-ps)
-- [Remove-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepEnableBitLocker?view=sccm-ps)
-- [Set-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepEnableBitLocker?view=sccm-ps)
+- [Get-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/Get-CMTSStepEnableBitLocker?view=sccm-ps)
+- [New-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/New-CMTSStepEnableBitLocker?view=sccm-ps)
+- [Remove-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/Remove-CMTSStepEnableBitLocker?view=sccm-ps)
+- [Set-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/Set-CMTSStepEnableBitLocker?view=sccm-ps)
 
 ### <a name="properties-for-enable-bitlocker"></a>BitLocker 'ı etkinleştir özellikleri
 
@@ -1162,7 +1162,7 @@ Büyük bir sabit sürücü şifrelerken, şifreleme işleminin tamamlanması sa
 Sürüm 2006 ' den başlayarak, desteklenen veya etkinleştirilmiş TPM içermeyen bir bilgisayardaki sürücü şifrelemesini atlamak için bu seçeneği belirleyin. Örneğin, bir sanal makineye bir işletim sistemi dağıtırken bu seçeneği kullanın. Varsayılan olarak, bu ayar **BitLocker 'ı etkinleştir** adımı için devre dışıdır. Bu ayarı etkinleştirirseniz ve cihazda işlevsel TPM yoksa, görev sırası altyapısı Smsts. log dosyasına bir hata kaydeder ve 11912 durum iletisini gönderir. Görev sırası bu adımı geçti.
 
 
-## <a name="format-and-partition-disk"></a><a name="BKMK_FormatandPartitionDisk"></a>Diski Biçimlendir ve bölümle
+## <a name="format-and-partition-disk"></a><a name="BKMK_FormatandPartitionDisk"></a> Diski Biçimlendir ve bölümle
 
 Hedef bilgisayarda belirtilen bir diski biçimlendirmek ve bölümlemek için bu adımı kullanın.  
 
@@ -1186,10 +1186,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtssteppartitiondisk?view=sccm-ps)
-- [New-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtssteppartitiondisk?view=sccm-ps)
-- [Remove-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtssteppartitiondisk?view=sccm-ps)
-- [Set-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtssteppartitiondisk?view=sccm-ps)
+- [Get-CMTSStepPartitionDisk](/powershell/module/configurationmanager/get-cmtssteppartitiondisk?view=sccm-ps)
+- [New-CMTSStepPartitionDisk](/powershell/module/configurationmanager/new-cmtssteppartitiondisk?view=sccm-ps)
+- [Remove-CMTSStepPartitionDisk](/powershell/module/configurationmanager/remove-cmtssteppartitiondisk?view=sccm-ps)
+- [Set-CMTSStepPartitionDisk](/powershell/module/configurationmanager/set-cmtssteppartitiondisk?view=sccm-ps)
 
 ### <a name="properties-for-format-and-partition-disk"></a>Biçim ve Bölüm diski özellikleri
 
@@ -1238,19 +1238,19 @@ Biçimlendirilecek diskin türü. Açılır listeden belirlenebilecek iki seçen
 
 Aşağıdaki öznitelikler de dahil olmak üzere, görev dizisinin oluşturduğu bölüm veya birim hakkında belirli bilgiler:  
 
-- Name  
+- Ad  
 - Kalan disk alanı  
 
 Yeni bir bölüm oluşturmak için **bölüm özellikleri** iletişim kutusunu başlatmak üzere **Yeni** ' yi seçin. Bölüm türü ve boyutunu ve bir önyükleme bölümüyse belirtin. Mevcut bir bölümü değiştirmek için, değiştirilecek bölümü seçin ve ardından **Özellikler** düğmesini seçin. Sabit sürücü bölümlerinin nasıl yapılandırılacağı hakkında daha fazla bilgi için aşağıdaki makalelerden birine bakın:  
 
-- [UEFı/GPT tabanlı sabit sürücü bölümleri](https://docs.microsoft.com/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions)  
-- [BIOS/MBR tabanlı sabit sürücü bölümleri](https://docs.microsoft.com/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions)  
+- [UEFı/GPT tabanlı sabit sürücü bölümleri](/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions)  
+- [BIOS/MBR tabanlı sabit sürücü bölümleri](/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions)  
 
 Bir bölümü silmek için bölümü seçin ve ardından **Sil**' i seçin.  
 
 
 
-## <a name="install-application"></a><a name="BKMK_InstallApplication"></a>Uygulamayı yükler
+## <a name="install-application"></a><a name="BKMK_InstallApplication"></a> Uygulamayı yükler
 
 Bu adım belirtilen uygulamaları veya dinamik bir görev dizisi değişkenleri listesi tarafından tanımlanan bir uygulama kümesini yüklüyor. Görev dizisi bu adımı çalıştırdığında, uygulama yüklemesi bir ilke yoklama aralığı için beklenmeden hemen başlar.  
 
@@ -1295,10 +1295,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-Cmtsstepınstallapplication](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallapplication?view=sccm-ps)
-- [New-Cmtsstepınstallapplication](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallapplication?view=sccm-ps)
-- [Remove-Cmtsstepınstallapplication](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallapplication?view=sccm-ps)
-- [Set-Cmtsstepınstallapplication](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallapplication?view=sccm-ps)
+- [Get-Cmtsstepınstallapplication](/powershell/module/configurationmanager/get-cmtsstepinstallapplication?view=sccm-ps)
+- [New-Cmtsstepınstallapplication](/powershell/module/configurationmanager/new-cmtsstepinstallapplication?view=sccm-ps)
+- [Remove-Cmtsstepınstallapplication](/powershell/module/configurationmanager/remove-cmtsstepinstallapplication?view=sccm-ps)
+- [Set-Cmtsstepınstallapplication](/powershell/module/configurationmanager/set-cmtsstepinstallapplication?view=sccm-ps)
 
 ### <a name="properties-for-install-application"></a>Uygulama yüklemesi için Özellikler
 
@@ -1369,7 +1369,7 @@ Uygulama yüklemelerinden biri beklenmedik bir şekilde bilgisayarı yeniden ba�
 
 
 
-## <a name="install-package"></a><a name="BKMK_InstallPackage"></a>Paketi yükler
+## <a name="install-package"></a><a name="BKMK_InstallPackage"></a> Paketi yükler
 
 Görev dizisinin bir parçası olarak bir yazılım paketi yüklemek için bu adımı kullanın. Bu adım çalıştığında, yükleme bir ilke yoklama aralığı için beklenmeden hemen başlar.  
 
@@ -1408,10 +1408,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-Cmtsstepınstallsoftware](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallsoftware?view=sccm-ps)
-- [New-Cmtsstepınstallsoftware](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallsoftware?view=sccm-ps)
-- [Remove-Cmtsstepınstallsoftware](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallsoftware?view=sccm-ps)
-- [Set-Cmtsstepınstallsoftware](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallsoftware?view=sccm-ps)
+- [Get-Cmtsstepınstallsoftware](/powershell/module/configurationmanager/get-cmtsstepinstallsoftware?view=sccm-ps)
+- [New-Cmtsstepınstallsoftware](/powershell/module/configurationmanager/new-cmtsstepinstallsoftware?view=sccm-ps)
+- [Remove-Cmtsstepınstallsoftware](/powershell/module/configurationmanager/remove-cmtsstepinstallsoftware?view=sccm-ps)
+- [Set-Cmtsstepınstallsoftware](/powershell/module/configurationmanager/set-cmtsstepinstallsoftware?view=sccm-ps)
 
 > [!TIP]
 > Kullanıcı görev dizisini yüklemeden önce geçerli bir işletim sistemi yükseltme paketini indirmek için içeriği önceden önbelleğe alma özelliğini kullanın. Daha fazla bilgi için bkz. [ön önbellek Içeriğini yapılandırma](../deploy-use/configure-precache-content.md).
@@ -1464,7 +1464,7 @@ Bu ayar, bir yazılım paketinin yüklenmesi başarısız olursa adımın devam 
 
 
 
-## <a name="install-software-updates"></a><a name="BKMK_InstallSoftwareUpdates"></a>Yazılım güncelleştirmelerini yükler
+## <a name="install-software-updates"></a><a name="BKMK_InstallSoftwareUpdates"></a> Yazılım güncelleştirmelerini yükler
 
 Yazılım güncelleştirmelerini hedef bilgisayara yüklemek için bu adımı kullanın. Bu görev dizisi adımı çalıştırılıncaya kadar hedef bilgisayar ilgili yazılım güncelleştirmeleri için değerlendirilmez. Bu sırada, hedef bilgisayar yazılım güncelleştirmeleri için diğer Configuration Manager istemcileri gibi değerlendirilir. Yazılım güncelleştirmelerini yüklemek için bu adım için, önce güncelleştirmeleri hedef bilgisayarın üyesi olduğu bir koleksiyona dağıtın.  
 
@@ -1492,10 +1492,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-Cmtsstepınstallupdate](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallupdate?view=sccm-ps)
-- [New-Cmtsstepınstallupdate](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallupdate?view=sccm-ps)
-- [Remove-Cmtsstepınstallupdate](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallupdate?view=sccm-ps)
-- [Set-Cmtsstepınstallupdate](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallupdate?view=sccm-ps)
+- [Get-Cmtsstepınstallupdate](/powershell/module/configurationmanager/get-cmtsstepinstallupdate?view=sccm-ps)
+- [New-Cmtsstepınstallupdate](/powershell/module/configurationmanager/new-cmtsstepinstallupdate?view=sccm-ps)
+- [Remove-Cmtsstepınstallupdate](/powershell/module/configurationmanager/remove-cmtsstepinstallupdate?view=sccm-ps)
+- [Set-Cmtsstepınstallupdate](/powershell/module/configurationmanager/set-cmtsstepinstallupdate?view=sccm-ps)
 
 Bu adım için daha fazla öneri ve teknik akış grafiği diyagramı için bkz. [yazılım güncelleştirmelerini yüklemeyi](install-software-updates.md).
 
@@ -1534,7 +1534,7 @@ Güncelleştirmelerden biri bilgisayarı beklenmedik şekilde yeniden başlattı
 
 
 
-## <a name="join-domain-or-workgroup"></a><a name="BKMK_JoinDomainorWorkgroup"></a>Etki alanına veya çalışma grubuna katıl
+## <a name="join-domain-or-workgroup"></a><a name="BKMK_JoinDomainorWorkgroup"></a> Etki alanına veya çalışma grubuna katıl
 
 Hedef bilgisayarı bir çalışma grubuna veya etki alanına eklemek için bu adımı kullanın.  
 
@@ -1561,10 +1561,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
-- [New-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
-- [Remove-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
-- [Set-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [Get-CMTSStepJoinDomainWorkgroup](/powershell/module/configurationmanager/Get-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [New-CMTSStepJoinDomainWorkgroup](/powershell/module/configurationmanager/New-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [Remove-CMTSStepJoinDomainWorkgroup](/powershell/module/configurationmanager/Remove-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [Set-CMTSStepJoinDomainWorkgroup](/powershell/module/configurationmanager/Set-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
 
 ### <a name="properties-for-join-domain-or-workgroup"></a>Katılma etki alanı veya çalışma grubu özellikleri
 
@@ -1582,11 +1582,11 @@ Hedef bilgisayarın belirtilen etki alanına katılmasını sağlamak için bu s
 
 #### <a name="enter-the-account-which-has-permission-to-join-the-domain"></a>Etki alanına katılmak için yeterli izne sahip olan hesabı belirtin
 
-Etki alanına ekleme izinleri olan bir hesabın kullanıcı adını ve parolasını girmek için **Ayarla** ' yı seçin. Hesabı şu biçimde girin: `Domain\account` . Görev sırası etki alanına katılma hesabı hakkında daha fazla bilgi için bkz. [hesaplar](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account).  
+Etki alanına ekleme izinleri olan bir hesabın kullanıcı adını ve parolasını girmek için **Ayarla** ' yı seçin. Hesabı şu biçimde girin:  `Domain\account` . Görev sırası etki alanına katılma hesabı hakkında daha fazla bilgi için bkz. [hesaplar](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account).  
 
 
 
-## <a name="prepare-configmgr-client-for-capture"></a><a name="BKMK_PrepareConfigMgrClientforCapture"></a>ConfigMgr Istemcisini yakalamaya hazırla
+## <a name="prepare-configmgr-client-for-capture"></a><a name="BKMK_PrepareConfigMgrClientforCapture"></a> ConfigMgr Istemcisini yakalamaya hazırla
 
 Başvuru bilgisayarında Configuration Manager istemcisini kaldırmak veya yapılandırmak için bu adımı kullanın. Bu eylem, görüntüleme işleminin bir parçası olarak bilgisayarı yakalamaya hazırlar.
 
@@ -1603,14 +1603,14 @@ Bu adımı görev sırası düzenleyicisine eklemek için **Ekle**, **görüntü
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
-- [New-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
-- [Remove-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
-- [Set-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [Get-CMTSStepPrepareConfigMgrClient](/powershell/module/configurationmanager/Get-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [New-CMTSStepPrepareConfigMgrClient](/powershell/module/configurationmanager/New-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [Remove-CMTSStepPrepareConfigMgrClient](/powershell/module/configurationmanager/Remove-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [Set-CMTSStepPrepareConfigMgrClient](/powershell/module/configurationmanager/Set-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
 
 
 
-## <a name="prepare-windows-for-capture"></a><a name="BKMK_PrepareWindowsforCapture"></a>Windows 'u yakalamaya hazırla
+## <a name="prepare-windows-for-capture"></a><a name="BKMK_PrepareWindowsforCapture"></a> Windows 'u yakalamaya hazırla
 
 Referans bilgisayarda bir işletim sistemi görüntüsü yakalarken Sysprep seçeneklerini belirtmek için bu adımı kullanın. Bu adım Sysprep 'i çalıştırır ve ardından bilgisayarı görev sırası için belirtilen Windows PE önyükleme görüntüsü ile yeniden başlatır. Başvuru bilgisayarı bir etki alanına katılırsa bu eylem başarısız olur.  
 
@@ -1629,10 +1629,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepPrepareWindows?view=sccm-ps)
-- [New-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepPrepareWindows?view=sccm-ps)
-- [Remove-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepPrepareWindows?view=sccm-ps)
-- [Set-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepPrepareWindows?view=sccm-ps)
+- [Get-CMTSStepPrepareWindows](/powershell/module/configurationmanager/Get-CMTSStepPrepareWindows?view=sccm-ps)
+- [New-CMTSStepPrepareWindows](/powershell/module/configurationmanager/New-CMTSStepPrepareWindows?view=sccm-ps)
+- [Remove-CMTSStepPrepareWindows](/powershell/module/configurationmanager/Remove-CMTSStepPrepareWindows?view=sccm-ps)
+- [Set-CMTSStepPrepareWindows](/powershell/module/configurationmanager/Set-CMTSStepPrepareWindows?view=sccm-ps)
 
 ### <a name="properties-for-prepare-windows-for-capture"></a>Windows 'u yakalamaya hazırlamaya yönelik özellikler
 
@@ -1659,7 +1659,7 @@ Bu seçenek Sysprep 'in varsayılan yeniden başlatma davranışı yerine bilgis
 
 
 
-## <a name="pre-provision-bitlocker"></a><a name="BKMK_PreProvisionBitLocker"></a>BitLocker 'ın ön sağlamasını yap
+## <a name="pre-provision-bitlocker"></a><a name="BKMK_PreProvisionBitLocker"></a> BitLocker 'ın ön sağlamasını yap
 
 Windows PE 'de bir sürücüde BitLocker 'ı etkinleştirmek için bu adımı kullanın. Varsayılan olarak, yalnızca kullanılan sürücü alanı şifrelenir, bu nedenle şifreleme süreleri çok daha hızlıdır. Anahtar yönetim seçeneklerini işletim sistemi yüklendikten sonra [BitLocker 'ı etkinleştir](#BKMK_EnableBitLocker) adımını kullanarak uygularsınız.
 
@@ -1674,10 +1674,10 @@ Bu adımı görev sırası düzenleyicisine eklemek için **Ekle**' yi seçin, *
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
-- [New-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
-- [Remove-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
-- [Set-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [Get-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/Get-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [New-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/New-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [Remove-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/Remove-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [Set-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/Set-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
 
 ### <a name="properties-for-pre-provision-bitlocker"></a>BitLocker 'ın ön sağlamasını yapmak için Özellikler
 
@@ -1710,7 +1710,7 @@ Desteklenen veya etkinleştirilmiş TPM içermeyen bir bilgisayardaki sürücü 
 
 
 
-## <a name="release-state-store"></a><a name="BKMK_ReleaseStateStore"></a>Yayın durumu deposu
+## <a name="release-state-store"></a><a name="BKMK_ReleaseStateStore"></a> Yayın durumu deposu
 
 Durum geçiş noktasına yakalama veya geri yükleme eyleminin tamamlandığını bildirmek için bu adımı kullanın. Bu adımı, **durum deposu iste**, **Kullanıcı durumunu yakala**ve **Kullanıcı durumunu geri yükle** adımlarını birlikte kullanın. Bir durum geçiş noktası ve Kullanıcı Durumu Taşıma Aracı (USMT) kullanarak Kullanıcı durumu verilerini geçirmek için bu adımları kullanın.  
 
@@ -1737,10 +1737,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepReleaseStateStore?view=sccm-ps)
-- [New-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepReleaseStateStore?view=sccm-ps)
-- [Remove-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepReleaseStateStore?view=sccm-ps)
-- [Set-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepReleaseStateStore?view=sccm-ps)
+- [Get-CMTSStepReleaseStateStore](/powershell/module/configurationmanager/Get-CMTSStepReleaseStateStore?view=sccm-ps)
+- [New-CMTSStepReleaseStateStore](/powershell/module/configurationmanager/New-CMTSStepReleaseStateStore?view=sccm-ps)
+- [Remove-CMTSStepReleaseStateStore](/powershell/module/configurationmanager/Remove-CMTSStepReleaseStateStore?view=sccm-ps)
+- [Set-CMTSStepReleaseStateStore](/powershell/module/configurationmanager/Set-CMTSStepReleaseStateStore?view=sccm-ps)
 
 ### <a name="properties-for-release-state-store"></a>Yayın durumu deposunun özellikleri
 
@@ -1748,7 +1748,7 @@ Bu adım, **Özellikler** sekmesinde herhangi bir ayar gerektirmez.
 
 
 
-## <a name="request-state-store"></a><a name="BKMK_RequestStateStore"></a>Durum depolama alanını iste
+## <a name="request-state-store"></a><a name="BKMK_RequestStateStore"></a> Durum depolama alanını iste
 
 Durumu yakalama veya geri yükleme sırasında bir durum geçiş noktasına erişim istemek için bu adımı kullanın.  
 
@@ -1776,10 +1776,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepRequestStateStore?view=sccm-ps)
-- [New-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepRequestStateStore?view=sccm-ps)
-- [Remove-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepRequestStateStore?view=sccm-ps)
-- [Set-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepRequestStateStore?view=sccm-ps)
+- [Get-CMTSStepRequestStateStore](/powershell/module/configurationmanager/Get-CMTSStepRequestStateStore?view=sccm-ps)
+- [New-CMTSStepRequestStateStore](/powershell/module/configurationmanager/New-CMTSStepRequestStateStore?view=sccm-ps)
+- [Remove-CMTSStepRequestStateStore](/powershell/module/configurationmanager/Remove-CMTSStepRequestStateStore?view=sccm-ps)
+- [Set-CMTSStepRequestStateStore](/powershell/module/configurationmanager/Set-CMTSStepRequestStateStore?view=sccm-ps)
 
 ### <a name="properties-for-request-state-store"></a>Istek durumu deposu özellikleri
 
@@ -1811,7 +1811,7 @@ Görev sırası, bilgisayar hesabı kullanılarak durum geçiş noktasına eriş
 
 
 
-## <a name="restart-computer"></a><a name="BKMK_RestartComputer"></a>Bilgisayarı yeniden Başlat
+## <a name="restart-computer"></a><a name="BKMK_RestartComputer"></a> Bilgisayarı yeniden Başlat
 
 Görev sırasını çalıştıran bilgisayarı yeniden başlatmak için bu adımı kullanın. Yeniden başlatmadan sonra, bilgisayar otomatik olarak görev dizisindeki bir sonraki adımla devam eder.  
 
@@ -1830,10 +1830,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepreboot?view=sccm-ps)
-- [New-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepreboot?view=sccm-ps)
-- [Remove-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepreboot?view=sccm-ps)
-- [Set-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepreboot?view=sccm-ps)
+- [Get-CMTSStepReboot](/powershell/module/configurationmanager/get-cmtsstepreboot?view=sccm-ps)
+- [New-CMTSStepReboot](/powershell/module/configurationmanager/new-cmtsstepreboot?view=sccm-ps)
+- [Remove-CMTSStepReboot](/powershell/module/configurationmanager/remove-cmtsstepreboot?view=sccm-ps)
+- [Set-CMTSStepReboot](/powershell/module/configurationmanager/set-cmtsstepreboot?view=sccm-ps)
 
 ### <a name="properties-for-restart-computer"></a>Bilgisayarı yeniden Başlat için Özellikler
 
@@ -1861,7 +1861,7 @@ Hedef bilgisayar yeniden başlatılmadan önceki saniye cinsinden süreyi belirt
 
 
 
-## <a name="restore-user-state"></a><a name="BKMK_RestoreUserState"></a>Kullanıcı durumunu geri yükle
+## <a name="restore-user-state"></a><a name="BKMK_RestoreUserState"></a> Kullanıcı durumunu geri yükle
 
 Kullanıcı durumunu ve ayarlarını hedef bilgisayara geri yüklemek üzere Kullanıcı Durumu Taşıma Aracı (USMT) başlatmak için bu adımı kullanın. Bu adımı, **Kullanıcı durumunu yakala** adımla birlikte kullanırsınız.  
 
@@ -1894,10 +1894,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepRestoreUserState?view=sccm-ps)
-- [New-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepRestoreUserState?view=sccm-ps)
-- [Remove-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepRestoreUserState?view=sccm-ps)
-- [Set-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepRestoreUserState?view=sccm-ps)
+- [Get-CMTSStepRestoreUserState](/powershell/module/configurationmanager/Get-CMTSStepRestoreUserState?view=sccm-ps)
+- [New-CMTSStepRestoreUserState](/powershell/module/configurationmanager/New-CMTSStepRestoreUserState?view=sccm-ps)
+- [Remove-CMTSStepRestoreUserState](/powershell/module/configurationmanager/Remove-CMTSStepRestoreUserState?view=sccm-ps)
+- [Set-CMTSStepRestoreUserState](/powershell/module/configurationmanager/Set-CMTSStepRestoreUserState?view=sccm-ps)
 
 ### <a name="properties-for-restore-user-state"></a>Kullanıcı durumunu geri yükle özellikleri
 
@@ -1929,7 +1929,7 @@ Daha ayrıntılı günlük dosyası bilgileri oluşturmak için bu seçeneği et
 
 
 
-## <a name="run-command-line"></a><a name="BKMK_RunCommandLine"></a>Komut satırını Çalıştır
+## <a name="run-command-line"></a><a name="BKMK_RunCommandLine"></a> Komut satırını Çalıştır
 
 Belirtilen komut satırını çalıştırmak için bu adımı kullanın.  
 
@@ -1958,10 +1958,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepruncommandline?view=sccm-ps)
-- [New-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepruncommandline?view=sccm-ps)
-- [Remove-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepruncommandline?view=sccm-ps)
-- [Set-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepruncommandline?view=sccm-ps)
+- [Get-CMTSStepRunCommandLine](/powershell/module/configurationmanager/get-cmtsstepruncommandline?view=sccm-ps)
+- [New-CMTSStepRunCommandLine](/powershell/module/configurationmanager/new-cmtsstepruncommandline?view=sccm-ps)
+- [Remove-CMTSStepRunCommandLine](/powershell/module/configurationmanager/remove-cmtsstepruncommandline?view=sccm-ps)
+- [Set-CMTSStepRunCommandLine](/powershell/module/configurationmanager/set-cmtsstepruncommandline?view=sccm-ps)
 
 ### <a name="properties-for-run-command-line"></a>Komut satırı çalıştırma özellikleri
 
@@ -2043,7 +2043,7 @@ Betikten, adımın başarılı olarak değerlendirilmesi gereken diğer çıkı�
 
 
 
-## <a name="run-powershell-script"></a><a name="BKMK_RunPowerShellScript"></a>PowerShell betiğini Çalıştır
+## <a name="run-powershell-script"></a><a name="BKMK_RunPowerShellScript"></a> PowerShell betiğini Çalıştır
 
 Belirtilen Windows PowerShell betiğini çalıştırmak için bu adımı kullanın.  
 
@@ -2076,10 +2076,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtssteprunpowershellscript?view=sccm-ps)
-- [New-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtssteprunpowershellscript?view=sccm-ps)
-- [Remove-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtssteprunpowershellscript?view=sccm-ps)
-- [Set-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtssteprunpowershellscript?view=sccm-ps)
+- [Get-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/get-cmtssteprunpowershellscript?view=sccm-ps)
+- [New-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/new-cmtssteprunpowershellscript?view=sccm-ps)
+- [Remove-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/remove-cmtssteprunpowershellscript?view=sccm-ps)
+- [Set-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/set-cmtssteprunpowershellscript?view=sccm-ps)
 
 > [!Note]  
 > İmzalı PowerShell betiklerini Unicode biçiminde kullanın. Varsayılan olan ANSI biçimi, bu adımla çalışmaz.
@@ -2198,7 +2198,7 @@ Sürüm 1902 ' den başlayarak, komut dosyasındaki, adımın başarılı olarak
 
 
 
-## <a name="run-task-sequence"></a><a name="child-task-sequence"></a>Görev sırasını Çalıştır
+## <a name="run-task-sequence"></a><a name="child-task-sequence"></a> Görev sırasını Çalıştır
 
 > [!Note]  
 > Sürüm 1910 ' de, Configuration Manager Bu özelliği varsayılan olarak sunar. Sürüm 1906 veya önceki sürümlerde, bu isteğe bağlı özelliği varsayılan olarak etkinleştirmez Configuration Manager. Kullanmadan önce bu özelliği etkinleştirin. Daha fazla bilgi için, bkz. [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
@@ -2250,7 +2250,7 @@ Alt görev sırasını seçmek için **Araştır** ' ı seçin. **Görev sıras�
 
 
 
-## <a name="set-dynamic-variables"></a><a name="BKMK_SetDynamicVariables"></a>Dinamik değişkenleri ayarla
+## <a name="set-dynamic-variables"></a><a name="BKMK_SetDynamicVariables"></a> Dinamik değişkenleri ayarla
 
 Aşağıdaki eylemleri gerçekleştirmek için bu adımı kullanın:  
 
@@ -2320,7 +2320,7 @@ Bir kural için değişkenleri seçtikten sonra her değişken için bir değer 
 > **Komut satırı** adımının komut satırını Çalıştır ' a değişkenler eklerseniz, görev sırası günlük dosyası değişken değerleri dahil olmak üzere tam komut satırını görüntüler. Potansiyel olarak gizli verilerin günlük dosyasında görünmesini engellemek için **Osddonotlogcommand** görev sırası değişkenini olarak ayarlayın `TRUE` .
 
 
-## <a name="set-task-sequence-variable"></a><a name="BKMK_SetTaskSequenceVariable"></a>Görev sırası değişkenini ayarla
+## <a name="set-task-sequence-variable"></a><a name="BKMK_SetTaskSequenceVariable"></a> Görev sırası değişkenini ayarla
 
 Görev dizisiyle kullanılan bir değişkenin değerini ayarlamak için bu adımı kullanın.  
 
@@ -2339,10 +2339,10 @@ Görev dizisi değişkenleri, görev dizisi eylemleri tarafından okunur ve bu e
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetvariable?view=sccm-ps)
-- [New-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetvariable?view=sccm-ps)
-- [Remove-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetvariable?view=sccm-ps)
-- [Set-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetvariable?view=sccm-ps)
+- [Get-CMTSStepSetVariable](/powershell/module/configurationmanager/get-cmtsstepsetvariable?view=sccm-ps)
+- [New-CMTSStepSetVariable](/powershell/module/configurationmanager/new-cmtsstepsetvariable?view=sccm-ps)
+- [Remove-CMTSStepSetVariable](/powershell/module/configurationmanager/remove-cmtsstepsetvariable?view=sccm-ps)
+- [Set-CMTSStepSetVariable](/powershell/module/configurationmanager/set-cmtsstepsetvariable?view=sccm-ps)
 
 ### <a name="properties-for-set-task-sequence-variable"></a>Görev dizisi değişkenini ayarla özellikleri
 
@@ -2371,7 +2371,7 @@ Görev sırası, değişkeni bu değere ayarlar. Bu görev dizisi değişkenini 
 
 
 
-## <a name="setup-windows-and-configmgr"></a><a name="BKMK_SetupWindowsandConfigMgr"></a>Windows 'u ve ConfigMgr 'yi Kur
+## <a name="setup-windows-and-configmgr"></a><a name="BKMK_SetupWindowsandConfigMgr"></a> Windows 'u ve ConfigMgr 'yi Kur
 
 Windows PE 'den yeni işletim sistemine geçişi gerçekleştirmek için bu adımı kullanın. Bu görev dizisi adımı herhangi bir işletim sistemi dağıtımının gerekli bir parçasıdır. Configuration Manager istemcisini yeni işletim sistemine yükleyip görev dizisinin yeni IŞLETIM sisteminde yürütmeye devam etmesine hazırlar.  
 
@@ -2409,11 +2409,11 @@ Bu adım aşağıdaki eylemleri gerçekleştirir:
 
     2. Yeni dağıtılan işletim sistemine yeniden başlatın.  
 
-    3. Windows Mini Kurulum, önceden belirtilen Sysprep. inf veya tüm Kullanıcı arabirimi ayarlarını gizlenen unattend.xml yanıt dosyasını kullanarak çalışır. Bir etki alanına katmak için **ağ ayarlarını uygula** adımını kullanırsanız, bu bilgiler yanıt dosyasında bulunur. Windows Mini Kurulum, bilgisayarı etki alanına birleştirir.  
+    3. Windows Mini Kurulum, önceden belirtilen Sysprep. inf veya tüm Kullanıcı arabirimi ayarlarını gizlenen unattend.xml yanıt dosyasını kullanarak çalışır. Bir etki alanına katmak için  **ağ ayarlarını uygula** adımını kullanırsanız, bu bilgiler yanıt dosyasında bulunur. Windows Mini Kurulum, bilgisayarı etki alanına birleştirir.  
 
 #### <a name="set-up-the-configuration-manager-client"></a>Configuration Manager istemcisini ayarlama  
 
-1. Windows mini kurulumu tamamlandıktan sonra görev dizisi, setupcomplete.cmd dosyasını kullanarak devam eder. Daha fazla bilgi için bkz. [Kurulum tamamlandıktan sonra betiği çalıştırma (SetupComplete. cmd)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd).  
+1. Windows mini kurulumu tamamlandıktan sonra görev dizisi, setupcomplete.cmd dosyasını kullanarak devam eder. Daha fazla bilgi için bkz. [Kurulum tamamlandıktan sonra betiği çalıştırma (SetupComplete. cmd)](/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd).  
 
 2. **Windows ayarlarını uygula** adımında seçilen seçeneğe bağlı olarak yerel yönetici hesabını etkinleştirin veya devre dışı bırakın.  
 
@@ -2426,7 +2426,7 @@ Bu adım aşağıdaki eylemleri gerçekleştirir:
 Görev dizisi bir sonraki adımı çalıştırmaya devam eder.  
 
 > [!Note]  
-> Windows Grup ilkesi, görev sırası tamamlanana kadar normalde işlemez. Bu davranış, farklı Windows sürümleri arasında tutarlıdır. Görev sırası sırasında diğer özel eylemler, Grup İlkesi değerlendirmesini tetikleyebilir. İşlemlerin sırası hakkında daha fazla bilgi için bkz. [Kurulum tamamlandıktan sonra betiği çalıştırma (SetupComplete. cmd)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd). <!-- 2841304 -->
+> Windows Grup ilkesi, görev sırası tamamlanana kadar normalde işlemez. Bu davranış, farklı Windows sürümleri arasında tutarlıdır. Görev sırası sırasında diğer özel eylemler, Grup İlkesi değerlendirmesini tetikleyebilir. İşlemlerin sırası hakkında daha fazla bilgi için bkz. [Kurulum tamamlandıktan sonra betiği çalıştırma (SetupComplete. cmd)](/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd). <!-- 2841304 -->
 
 
 ### <a name="variables-for-setup-windows-and-configmgr"></a>Windows ve ConfigMgr kurulumu için değişkenler
@@ -2439,10 +2439,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
-- [New-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
-- [Remove-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
-- [Set-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [Get-CMTSStepSetupWindowsAndConfigMgr](/powershell/module/configurationmanager/get-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [New-CMTSStepSetupWindowsAndConfigMgr](/powershell/module/configurationmanager/new-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [Remove-CMTSStepSetupWindowsAndConfigMgr](/powershell/module/configurationmanager/remove-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [Set-CMTSStepSetupWindowsAndConfigMgr](/powershell/module/configurationmanager/set-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
 
 ### <a name="properties-for-setup-windows-and-configmgr"></a>Windows ve ConfigMgr kurulum özellikleri
 
@@ -2471,7 +2471,7 @@ Azure AD 'ye katılmış olan veya belirteç tabanlı kimlik doğrulaması kulla
 
 
 
-## <a name="upgrade-operating-system"></a><a name="BKMK_UpgradeOS"></a>Işletim sistemini yükselt
+## <a name="upgrade-operating-system"></a><a name="BKMK_UpgradeOS"></a> Işletim sistemini yükselt
 
 Eski bir Windows sürümünü Windows 10 ' un daha yeni bir sürümüne yükseltmek için bu adımı kullanın.  
 
@@ -2496,10 +2496,10 @@ Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:
 
 Aşağıdaki PowerShell cmdlet 'leriyle bu adımı yönetin:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
-- [New-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
-- [Remove-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
-- [Set-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [Get-CMTSStepUpgradeOperatingSystem](/powershell/module/configurationmanager/Get-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [New-CMTSStepUpgradeOperatingSystem](/powershell/module/configurationmanager/New-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [Remove-CMTSStepUpgradeOperatingSystem](/powershell/module/configurationmanager/Remove-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [Set-CMTSStepUpgradeOperatingSystem](/powershell/module/configurationmanager/Set-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
 
 ### <a name="properties-for-upgrade-os"></a>İşletim sistemi yükseltme özellikleri
 
@@ -2525,7 +2525,7 @@ Yükseltme işlemine uygulanacak ürün anahtarını belirtin.
 
 #### <a name="provide-the-following-driver-content-to-windows-setup-during-upgrade"></a>Yükseltme sırasında Windows Kurulumu’na aşağıdaki sürücü içeriklerini sağlayın
 
-Yükseltme işlemi sırasında hedef bilgisayara sürücü ekleyin. Sürücülerin Windows 10 ile uyumlu olmaları gerekir. Bu ayar Windows Kurulumu komut satırı seçeneğine karşılık gelir `/InstallDriver` . Daha fazla bilgi için bkz. [Windows kurulumu komut satırı seçenekleri](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers).
+Yükseltme işlemi sırasında hedef bilgisayara sürücü ekleyin. Sürücülerin Windows 10 ile uyumlu olmaları gerekir. Bu ayar Windows Kurulumu komut satırı seçeneğine karşılık gelir `/InstallDriver` . Daha fazla bilgi için bkz. [Windows kurulumu komut satırı seçenekleri](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers).
 
 Aşağıdaki seçeneklerden birini belirtin:  
 
@@ -2561,7 +2561,7 @@ Kurulum, tarama sonucunda bir çıkış kodu döndürür. Aşağıdaki tabloda d
 |MOSETUP_E_COMPAT_SYSREQ_BLOCK (0xC1900200)|Windows 10 için uygun değil.|  
 |MOSETUP_E_COMPAT_INSTALLDISKSPACE_BLOCK (0xC190020E)|Yeterli boş disk alanı yok.|  
 
-Bu parametre hakkında daha fazla bilgi için bkz. [Windows kurulumu komut satırı seçenekleri](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#compat).  
+Bu parametre hakkında daha fazla bilgi için bkz. [Windows kurulumu komut satırı seçenekleri](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#compat).  
 
 #### <a name="ignore-any-dismissible-compatibility-messages"></a>Atlanabilir tüm uyumluluk iletilerini yok say
 

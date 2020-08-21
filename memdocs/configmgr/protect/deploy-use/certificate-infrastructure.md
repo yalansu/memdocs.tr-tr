@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 590c6fd336ec19949b5f5b99b25b3104524a52d6
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 656cc80c929eb7e829dd06b642a83cb174d3b0c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210120"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697254"
 ---
 # <a name="configure-certificate-infrastructure"></a>Sertifika altyapısını yapılandırma
 
@@ -34,7 +34,7 @@ Altyapınızı SCEP veya PFX sertifikaları için yapılandırmak üzere bu adı
 
 ### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>Ağ Aygıtı Kayıt Hizmeti ve bağımlılıklarını yüklemek ve yapılandırmak için  
 
-1. Windows Server 2012 R2 çalıştıran bir sunucuda, Active Directory Sertifika Hizmetleri sunucu rolü için Ağ Aygıtı Kayıt Hizmeti rol hizmetini yükleyin ve yapılandırın. Daha fazla bilgi için bkz. [ağ cihazı kayıt hizmeti Kılavuzu](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).
+1. Windows Server 2012 R2 çalıştıran bir sunucuda, Active Directory Sertifika Hizmetleri sunucu rolü için Ağ Aygıtı Kayıt Hizmeti rol hizmetini yükleyin ve yapılandırın. Daha fazla bilgi için bkz. [ağ cihazı kayıt hizmeti Kılavuzu](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).
 
 2. Ağ Cihazı Kayıt Hizmetinin kullandığı sertifika şablonları için güvenlik izinlerini denetleyin ve gerekirse değiştirin:  
 
@@ -44,7 +44,7 @@ Altyapınızı SCEP veya PFX sertifikaları için yapılandırmak üzere bu adı
 
    -   Ağ Cihazı Kayıt Hizmeti uygulama havuzunun kullandığı SCEP Hizmeti hesabı için: **Okuma** ve **Kayıt** izinleri.  
 
-        Bu gereksinim Configuration Manager özgü değildir ancak ağ cihazı kayıt hizmeti 'nin yapılandırılmasına bir parçasıdır. Daha fazla bilgi için bkz. [ağ cihazı kayıt hizmeti Kılavuzu](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).  
+        Bu gereksinim Configuration Manager özgü değildir ancak ağ cihazı kayıt hizmeti 'nin yapılandırılmasına bir parçasıdır. Daha fazla bilgi için bkz. [ağ cihazı kayıt hizmeti Kılavuzu](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).  
 
    > [!TIP]  
    >  Ağ Aygıtı Kayıt Hizmetinin hangi sertifika şablonlarını kullandığını belirlemek için, Ağ Aygıtı Kayıt Hizmetini çalıştıran sunucuda şu kayıt defteri anahtarını görüntüleyin: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP.  
@@ -69,7 +69,7 @@ Altyapınızı SCEP veya PFX sertifikaları için yapılandırmak üzere bu adı
 
    - **MaxRequestBytes** anahtarını **16777216** olarak ayarlayın.  
 
-     Daha fazla bilgi için bkz. Microsoft Desteği makalesi [820129: Windows Için http. sys kayıt defteri ayarları](https://support.microsoft.com/help/820129).
+     Daha fazla bilgi için bkz. Microsoft Desteği makalesi [820129: Windows için kayıt defteri ayarları Http.sys](https://support.microsoft.com/help/820129).
 
 6. Aynı sunucuda, İnternet Bilgi Hizmetleri (IIS) Yöneticisinde, /certsrv/mscep uygulaması için istek filtresi ayarlarını değiştirin ve ardından sunucuyu yeniden başlatın. **İstek Filtresi Ayarlarını Düzenle** iletişim kutusunda, **İstek Sınırları** ayarlarının aşağıdaki gibi olması gerekir:  
 
@@ -79,7 +79,7 @@ Altyapınızı SCEP veya PFX sertifikaları için yapılandırmak üzere bu adı
 
    - **Maksimum sorgu dizesi (Bayt)**: **65534**  
 
-     Bu ayarlar ve nasıl yapılandırılacağı hakkında daha fazla bilgi için bkz. [IIS Istek sınırları](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/).
+     Bu ayarlar ve nasıl yapılandırılacağı hakkında daha fazla bilgi için bkz. [IIS Istek sınırları](/iis/configuration/system.webServer/security/requestFiltering/requestLimits/).
 
 7. Kullandığınız sertifika şablonundan daha düşük geçerlilik süresine sahip olan bir sertifika talep edebilmek istiyorsanız: Kuruluş sertifika yetkilisi için bu yapılandırma varsayılan olarak devre dışıdır. Bir kuruluş sertifika yetkilisinde bu seçeneği etkinleştirmek için, Certutil komut satırı aracını kullanın ve ardından aşağıdaki komutları kullanarak sertifika hizmetini durdurun ve yeniden başlatın:  
 
@@ -89,9 +89,9 @@ Altyapınızı SCEP veya PFX sertifikaları için yapılandırmak üzere bu adı
 
    3. **net start certsvc**  
 
-      Daha fazla bilgi için bkz. [Sertifika Hizmetleri araçları ve ayarları](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\)).
+      Daha fazla bilgi için bkz. [Sertifika Hizmetleri araçları ve ayarları](/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\)).
 
-8. Aşağıdaki bağlantıyı örnek olarak kullanıp ağ cihazı kayıt hizmetinin çalıştığını doğrulayın: `https://server.contoso.com/certsrv/mscep/mscep.dll`. Yerleşik Ağ Cihazı Kayıt Hizmeti web sayfasını görmeniz gerekir. Bu web sayfası, hizmetin ne olduğunu açıklar ve ağ aygıtlarının sertifika isteklerini göndermek için URL'yi kullandığını açıklar.  
+8. Aşağıdaki bağlantıyı örnek olarak kullanıp ağ cihazı kayıt hizmetinin çalıştığını doğrulayın: `https://server.contoso.com/certsrv/mscep/mscep.dll` . Yerleşik Ağ Cihazı Kayıt Hizmeti web sayfasını görmeniz gerekir. Bu web sayfası, hizmetin ne olduğunu açıklar ve ağ aygıtlarının sertifika isteklerini göndermek için URL'yi kullandığını açıklar.  
 
    Artık Ağ Cihazı Kayıt Hizmeti ve bağımlılıkları yapılandırıldığından, sertifika kayıt noktasını yüklemeye ve yapılandırmaya hazırsınız demektir.
 
@@ -125,7 +125,7 @@ Configuration Manager hiyerarşisinde en az bir sertifika kayıt noktası yükle
    - **SCEP sertifika Isteklerini işle**' yi seçtiyseniz, aşağıdakileri yapılandırın:
      -   Sertifika kayıt noktası için **Web sitesi adı**, **HTTPS bağlantı noktası numarası**ve **sanal uygulama adı** . Bu alanlar varsayılan değerlerle otomatik olarak doldurulur. 
      -   **Ağ cihazı kayıt hizmeti ve kök CA sertifikası Için URL** - **Ekle**' ye tıklayın, ardından **URL ve kök CA sertifikası Ekle** iletişim kutusunda aşağıdakileri belirtin:
-         - **Ağ Cihazı Kayıt Hizmeti için URL**: URL'yi şu biçimde belirtin: https://*<server_FQDN>*/certsrv/mscep/mscep.dll. Örneğin, ağ aygıtı kayıt hizmeti 'ni çalıştıran sunucunuzun FQDN 'SI server1.contoso.com ise, yazın `https://server1.contoso.com/certsrv/mscep/mscep.dll`.
+         - **Ağ Cihazı Kayıt Hizmeti için URL**: URL'yi şu biçimde belirtin: https://*<server_FQDN>*/certsrv/mscep/mscep.dll. Örneğin, ağ aygıtı kayıt hizmeti 'ni çalıştıran sunucunuzun FQDN 'SI server1.contoso.com ise, yazın `https://server1.contoso.com/certsrv/mscep/mscep.dll` .
          - **Kök CA Sertifikası**: **1. Adım: Ağ Cihazı Kayıt Hizmeti’ni ve bağımlılıkları yükleme ve yapılandırma** aşamasında oluşturduğunuz ve kaydettiğiniz (.cer) dosyasını bulun ve seçin. Bu kök CA sertifikası, sertifika kayıt noktasının Configuration Manager Ilke modülünün kullanacağı istemci kimlik doğrulama sertifikasını doğrulamasına olanak tanır.  
 
    - **PFX Sertifika Isteklerini işle**' yi seçtiyseniz, seçili sertifika yetkilisi için bağlantı ayrıntılarını ve kimlik bilgilerini yapılandırırsınız.
@@ -171,7 +171,7 @@ Configuration Manager Ilkesi modülünü, **Adım 2: sertifika kayıt noktasın�
 
 ##### <a name="to-install-the-policy-module"></a>İlke Modülünü yüklemek için  
 
-1. Ağ aygıtı kayıt hizmeti 'ni çalıştıran sunucuda, bir etki alanı yöneticisi olarak oturum açın ve aşağıdaki dosyaları Configuration Manager yükleme ortamındaki <Configmgrınstalservıce Media\>\smssetup\polıcymodule\x64 klasöründen klasöründen geçici bir klasöre kopyalayın:  
+1. Ağ aygıtı kayıt hizmeti 'ni çalıştıran sunucuda, bir etki alanı yöneticisi olarak oturum açın ve aşağıdaki dosyaları Configuration Manager yükleme ortamındaki <Configmgrınstalservıce Media \> \smssetup\polıcymodule\x64 klasöründen klasöründen geçici bir klasöre kopyalayın:  
 
    -   PolicyModule.msi  
 
@@ -179,13 +179,13 @@ Configuration Manager Ilkesi modülünü, **Adım 2: sertifika kayıt noktasın�
 
    Ek olarak, yükleme medyasında bir LanguacePack klasörünüz varsa, bu klasörü ve içindekileri kopyalayın.  
 
-2. Geçici klasörden, Configuration Manager Ilke modülü Kurulum Sihirbazı 'nı başlatmak için PolicyModuleSetup. exe ' yi çalıştırın.  
+2. Geçici klasörden, Configuration Manager Ilke modülü Kurulum Sihirbazı 'nı başlatmak için PolicyModuleSetup.exe ' yi çalıştırın.  
 
 3. Sihirbazın ilk sayfasında, **İleri**'ye tıklayın, lisans koşullarını kabul edin ve ardından **İleri**'ye tıklayın.  
 
 4. **Kurulum Klasörü** sayfasında, ilke modülü için varsayılan kurulum klasörünü kabul edin veya alternatif bir klasör belirtin ve ardından **İleri**'ye tıklayın.  
 
-5. **Sertifika Kayıt Noktası** sayfasında, sertifika kayıt noktası için özelliklerde belirtilen sanal uygulama adını ve site sistem sunucusunun FQDN'sini kullanarak sertifika kayıt noktasının URL'sini belirtin. Varsayılan sanal uygulama adı CMCertificateRegistration'dır. Örneğin, site sistem sunucusunun bir server1.contoso.com FQDN 'SI varsa ve varsayılan sanal uygulama adını kullandıysanız, öğesini belirtin `https://server1.contoso.com/CMCertificateRegistration`.
+5. **Sertifika Kayıt Noktası** sayfasında, sertifika kayıt noktası için özelliklerde belirtilen sanal uygulama adını ve site sistem sunucusunun FQDN'sini kullanarak sertifika kayıt noktasının URL'sini belirtin. Varsayılan sanal uygulama adı CMCertificateRegistration'dır. Örneğin, site sistem sunucusunun bir server1.contoso.com FQDN 'SI varsa ve varsayılan sanal uygulama adını kullandıysanız, öğesini belirtin `https://server1.contoso.com/CMCertificateRegistration` .
 
 6. **443** varsayılan bağlantı noktasını kabul edin veya sertifika kayıt noktasının kullandığı alternatif bağlantı noktası numarasını belirtin ve ardından **İleri**'ye tıklayın.  
 
@@ -201,4 +201,4 @@ Configuration Manager Ilkesi modülünü, **Adım 2: sertifika kayıt noktasın�
    Configuration Manager Ilkesi modülünü kaldırmak istiyorsanız Denetim Masası 'ndaki **Programlar ve Özellikler** ' i kullanın. 
 
  
-Yapılandırma adımlarını tamamladığınıza göre, sertifika profilleri oluşturup dağıtarak kullanıcılara ve cihazlara sertifika dağıtmaya hazırsınız demektir. Sertifika profillerinin nasıl oluşturulacağı hakkında daha fazla bilgi için bkz. [sertifika profilleri oluşturma](../../protect/deploy-use/create-certificate-profiles.md).  
+Yapılandırma adımlarını tamamladığınıza göre, sertifika profilleri oluşturup dağıtarak kullanıcılara ve cihazlara sertifika dağıtmaya hazırsınız demektir. Sertifika profillerinin nasıl oluşturulacağı hakkında daha fazla bilgi için bkz. [sertifika profilleri oluşturma](../../protect/deploy-use/create-certificate-profiles.md).

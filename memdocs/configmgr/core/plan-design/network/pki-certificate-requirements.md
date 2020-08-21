@@ -10,12 +10,12 @@ ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: df0b632ccf7939bdc897d4a456f0e6cacc7a1760
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: ff364dc248519d0027ce96fe43f4f3f6cf373e68
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87525963"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692749"
 ---
 # <a name="pki-certificate-requirements-for-configuration-manager"></a>Configuration Manager için PKI sertifikası gereksinimleri
 
@@ -23,7 +23,7 @@ ms.locfileid: "87525963"
 
 Configuration Manager için gerekli olabilecek ortak anahtar altyapısı (PKI) sertifikaları aşağıdaki tablolarda listelenmiştir. Bu bilgi, PKI sertifikalarına dair temel bilgileri varsayar. Daha fazla bilgi için bkz. [Configuration Manager IÇIN PKI sertifikalarının adım adım örnek dağıtımı: Windows Server 2008 sertifika yetkilisi](example-deployment-of-pki-certificates.md).
 
-Active Directory Sertifika Hizmetleri hakkında daha fazla bilgi için bkz. [Active Directory Sertifika hizmetlerine genel bakış](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)).
+Active Directory Sertifika Hizmetleri hakkında daha fazla bilgi için bkz. [Active Directory Sertifika hizmetlerine genel bakış](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)).
 
 Şifreleme API 'SI kullanma hakkında bilgi için, Configuration Manager ile yeni nesil (CNG) sertifikaları, bkz. [CNG sertifikalarına genel bakış](cng-certificates-overview.md).
 
@@ -59,7 +59,7 @@ Active Directory Sertifika hizmetlerini ve sertifika şablonlarını kullandığ
 |Bir dağıtım noktası yüklü site sistemleri.|İstemci kimlik doğrulaması|**İş İstasyonu Kimlik Doğrulaması**|**Gelişmiş Anahtar Kullanımı** değeri **İstemci Kimlik Doğrulaması (1.3.6.1.5.5.7.3.2)**.<br /><br /> Sertifika konusu veya konu alternatif adı (SAN) için belirli gereksinimler yoktur. Aynı sertifikayı birden çok dağıtım noktası için kullanabilirsiniz. Ancak, her dağıtım noktası için farklı bir sertifika kullanmak iyi bir fikirdir.<br /><br /> Özel anahtar dışarı aktarılabilir olmalıdır.<br /><br /> SHA-2 karma algoritması desteklenir.<br /><br /> Desteklenen anahtar uzunluğu üst sınırı 2.048 bittir.|Bu sertifika iki amaca sahiptir:<br /><br /><ul><li>Dağıtım noktası durum iletileri göndermeden önce HTTPS etkin bir yönetim noktasına dağıtım noktasının kimliğini doğrular.</li><li>**İstemciler IÇIN PXE desteğini etkinleştir** dağıtım noktası seçeneği belirlendiğinde, sertifika bilgisayarlara gönderilir. İşletim sistemi dağıtım işlemindeki görev dizileri, istemci ilkesi alma veya envanter bilgileri gönderme gibi istemci eylemleri içeriyorsa, istemci bilgisayarlar işletim sisteminin dağıtımı sırasında HTTPS etkin bir yönetim noktasına bağlanabilir.</li></ul> Bu sertifika, yalnızca işletim sistemi dağıtım işlemi süresince kullanılır ve istemciye yüklenmez. Bu geçici kullanım nedeniyle, birden fazla istemci sertifikası kullanmak istemiyorsanız, her işletim sistemi dağıtımı için aynı sertifika kullanılabilir.<br /><br /> Bu sertifika, ortak anahtar sertifika standardı (PKCS #12) biçiminde aktarılmalıdır. Dağıtım noktası özelliklerine içeri aktarılabilmesi için parolanın bilinmesi gerekir.<br /><br /> **Note:** Bu sertifika için gereksinimler, işletim sistemlerini dağıtan önyükleme görüntülerinin istemci sertifikasıyla aynıdır. Gereksinimler aynı olduğundan aynı sertifika dosyasını kullanabilirsiniz.|  
 |Microsoft Intune bağlayıcısını çalıştıran site sistem sunucusu|İstemci kimlik doğrulaması|Uygulanamaz: Intune bu sertifikayı otomatik olarak oluşturur.|**Gelişmiş anahtar kullanımı** değeri **istemci kimlik doğrulaması 'nı (1.3.6.1.5.5.7.3.2)** içerir.<br /><br /> Üç özel uzantı müşterinin Intune aboneliğini benzersiz şekilde tanımlar.<br /><br /> Anahtar boyutu 2.048 bittir ve SHA-1 karma algoritmasını kullanır.<br /><br /> **Note:** Bu ayarları değiştiremezsiniz. Bu bilgiler yalnızca bilgilendirme amacıyla verilmiştir.|Microsoft Intune abone olduğunuzda bu sertifika otomatik olarak istenir ve Configuration Manager veritabanına yüklenir. Microsoft Intune bağlayıcısını yüklediğinizde, bu sertifika daha sonra Microsoft Intune bağlayıcısını çalıştıran site sistem sunucusuna yüklenir. Bilgisayar sertifika deposuna yüklenir.<br /><br /> Bu sertifika, Microsoft Intune bağlayıcısını kullanarak Microsoft Intune Configuration Manager hiyerarşinin kimliğini doğrulamak için kullanılır. Bunlar arasında aktarılan tüm veriler Güvenli Yuva Katmanı'nı (SSL) kullanırlar.|  
 
-###  <a name="proxy-web-servers-for-internet-based-client-management"></a><a name="BKMK_PKIcertificates_for_proxyservers"></a>Internet tabanlı istemci yönetimi için proxy Web sunucuları  
+###  <a name="proxy-web-servers-for-internet-based-client-management"></a><a name="BKMK_PKIcertificates_for_proxyservers"></a> Internet tabanlı istemci yönetimi için proxy Web sunucuları  
  Site, internet tabanlı istemci yönetimini destekliyorsa ve gelen internet bağlantıları için SSL sonlandırma (köprüleme) kullanarak bir proxy Web sunucusu kullanıyorsanız, proxy Web sunucusu aşağıdaki tabloda listelenen sertifika gereksinimlerine sahiptir.  
 
 > [!NOTE]  
@@ -69,7 +69,7 @@ Active Directory Sertifika hizmetlerini ve sertifika şablonlarını kullandığ
 |--------------------------------------|-------------------------|-------------------------------------------|---------------------------------------------|----------------------------------------------------------|  
 |Internet üzerinden istemci bağlantılarını kabul eden proxy Web sunucusu|Sunucu kimlik doğrulaması ve istemci kimlik doğrulaması|1. <br />                        **Web sunucusu**<br /><br /> 2. <br />                        **İş İstasyonu Kimlik Doğrulaması**|Konu adı alanında veya konu alternatif adı alanında İnternet FQDN 'SI. Microsoft sertifika şablonları kullanıyorsanız, konu diğer adı yalnızca iş istasyonu şablonuyla kullanılabilir.<br /><br /> SHA-2 karma algoritması desteklenir.|Bu sertifika, aşağıdaki sunucuların Internet istemcilerinde kimliğini doğrulamak ve istemci ile bu sunucu arasında aktarılan tüm verileri SSL kullanarak şifrelemek için kullanılır:<br /><br /><ul><li>Internet tabanlı yönetim noktası</li><li>Internet tabanlı dağıtım noktası</li><li>Internet tabanlı yazılım güncelleştirme noktası</li></ul> İstemci kimlik doğrulaması, Configuration Manager istemcileri ile Internet tabanlı site sistemleri arasındaki istemci bağlantılarını köprülemek için kullanılır.|  
 
-##  <a name="pki-certificates-for-clients"></a><a name="BKMK_PKIcertificates_for_clients"></a>İstemciler için PKI sertifikaları  
+##  <a name="pki-certificates-for-clients"></a><a name="BKMK_PKIcertificates_for_clients"></a> İstemciler için PKI sertifikaları  
 
 |Configuration Manager bileşeni|Sertifika amacı|Kullanılacak Microsoft sertifika şablonu|Sertifikadaki belirli bilgiler|Sertifikanın Configuration Manager nasıl kullanıldığı|  
 |-------------------------------------|-------------------------|-------------------------------------------|---------------------------------------------|----------------------------------------------------------|  

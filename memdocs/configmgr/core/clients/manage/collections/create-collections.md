@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5e81bc9b2135d17c445f8a86ff2214db394f63db
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 5606d7bb5656fe4616ba416836dab2c04c490cfa
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865498"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693310"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Configuration Manager içinde koleksiyonlar oluşturma
 
@@ -72,7 +72,7 @@ Tek bir koleksiyon ekleme kuralına ve bir koleksiyonu hariç tutma kuralına sa
 
 
 
-## <a name="create-a-collection"></a><a name="bkmk_create"></a>Koleksiyon oluşturma  
+## <a name="create-a-collection"></a><a name="bkmk_create"></a> Koleksiyon oluşturma  
 
 1. Configuration Manager konsolunda **varlıklar ve uyum** çalışma alanına gidin.  
 
@@ -132,7 +132,7 @@ Tek bir koleksiyon ekleme kuralına ve bir koleksiyonu hariç tutma kuralına sa
 > Koleksiyon üyelerini görmek için Configuration Manager konsolunu yenilemeniz veya yeniden yüklemeniz gerekir. İlk zamanlanan güncelleştirmeden sonra koleksiyonda görünmez. Ayrıca, koleksiyon için **üyeliği Güncelleştir** ' i el ile seçebilirsiniz. Bir koleksiyon güncelleştirmesinin tamamlanması birkaç dakika sürebilir.  
 
         
-### <a name="configure-a-direct-rule"></a><a name="bkmk-direct"></a>Doğrudan kural yapılandırma  
+### <a name="configure-a-direct-rule"></a><a name="bkmk-direct"></a> Doğrudan kural yapılandırma  
 
 1. **Doğrudan üyelik kuralı oluşturma Sihirbazı**' nın **kaynak ara** sayfasında, aşağıdaki bilgileri belirtin.  
 
@@ -159,7 +159,7 @@ Tek bir koleksiyon ekleme kuralına ve bir koleksiyonu hariç tutma kuralına sa
 2. **Kaynakları seçin** sayfasında, **kaynaklar** listesinden koleksiyona eklemek istediğiniz kaynakları seçin ve ardından **İleri**' yi seçin.  
 
 
-### <a name="configure-a-query-rule"></a><a name="bkmk-query"></a>Sorgu kuralı yapılandırma  
+### <a name="configure-a-query-rule"></a><a name="bkmk-query"></a> Sorgu kuralı yapılandırma  
 
 **Sorgu kuralı özellikleri** iletişim kutusunda, aşağıdaki bilgileri belirtin.  
 
@@ -174,7 +174,7 @@ Tek bir koleksiyon ekleme kuralına ve bir koleksiyonu hariç tutma kuralına sa
     > [!TIP]  
     > Genel sekmesinde, yinelenen satırları atlamak için onay kutusunu seçmek **(benzersiz Seç)** , daha az satır döndürülmesine ve çok daha hızlı sonuçlara neden olabilir.
 
-### <a name="device-category-rule"></a><a name="bkmk-category"></a>Cihaz kategorisi kuralı
+### <a name="device-category-rule"></a><a name="bkmk-category"></a> Cihaz kategorisi kuralı
 
 Aşağıdaki eylemler **cihaz kategorileri Seç** penceresinde kullanılabilir.
 
@@ -185,18 +185,18 @@ Aşağıdaki eylemler **cihaz kategorileri Seç** penceresinde kullanılabilir.
 Daha fazla bilgi için bkz. [cihazları koleksiyonlara otomatik olarak kategorilere ayırma](automatically-categorize-devices-into-collections.md).<!-- SCCMDocs issue 552 -->
 
 
-### <a name="configure-an-include-collection-rule"></a><a name="bkmk-include"></a>Bir koleksiyonu dahil etme kuralı yapılandırma  
+### <a name="configure-an-include-collection-rule"></a><a name="bkmk-include"></a> Bir koleksiyonu dahil etme kuralı yapılandırma  
 
 **Koleksiyon Seç** iletişim kutusunda, yeni koleksiyona dahil etmek istediğiniz koleksiyonları seçin ve ardından **Tamam**' ı seçin.  
 
 
-### <a name="configure-an-exclude-collection-rule"></a><a name="bkmk-exclude"></a>Koleksiyonu hariç tutma kuralı yapılandırma  
+### <a name="configure-an-exclude-collection-rule"></a><a name="bkmk-exclude"></a> Koleksiyonu hariç tutma kuralı yapılandırma  
 
 **Koleksiyon Seç** iletişim kutusunda, yeni koleksiyondan hariç tutmak istediğiniz koleksiyonları seçin ve ardından **Tamam**' ı seçin.  
 
 
 
-## <a name="import-a-collection"></a><a name="bkmk_import"></a>Bir koleksiyonu içeri aktarma  
+## <a name="import-a-collection"></a><a name="bkmk_import"></a> Bir koleksiyonu içeri aktarma  
 
 Bir siteden bir koleksiyonu dışarı aktardığınızda, Configuration Manager dosyayı bir Yönetilen Nesne Biçimi (MOF) dosyası olarak kaydeder. Bu yordamı, bu dosyayı site veritabanınıza aktarmak için kullanın. Bu yordamı gerçekleştirmek için Koleksiyonlar sınıfında **oluşturma** izinlerine sahip olmanız gerekir.
 
@@ -218,7 +218,7 @@ Koleksiyonları dışarı aktarma hakkında daha fazla bilgi için bkz. [koleksi
 
 5. Koleksiyonu içeri aktarmak için sihirbazı tamamlayın. Yeni koleksiyon, **Varlıklar ve Uyumluluk** çalışma alanının **Kullanıcı Koleksiyonları** veya **Cihaz Koleksiyonları** düğümünde görüntülenir. Yeni içeri aktarılan koleksiyon için koleksiyon üyelerini görmek üzere Configuration Manager konsolunu yenileyin veya yeniden yükleyin.  
 
-## <a name="synchronize-collection-membership-results-to-azure-active-directory-groups"></a><a name="bkmk_aadcollsync"></a>Koleksiyon üyeliği sonuçlarını Azure Active Directory gruplarıyla eşitler
+## <a name="synchronize-collection-membership-results-to-azure-active-directory-groups"></a><a name="bkmk_aadcollsync"></a> Koleksiyon üyeliği sonuçlarını Azure Active Directory gruplarıyla eşitler
 
 <!--3607475-->
 > [!Tip]  
@@ -228,7 +228,7 @@ Koleksiyon üyeliklerinin Azure Active Directory (Azure AD) grubuna eşitlenmesi
 
 Azure AD eşitleme her beş dakikada bir gerçekleşir. Configuration Manager Azure AD 'ye kadar tek yönlü bir işlemdir. Azure AD 'de yapılan değişiklikler Configuration Manager koleksiyonlara yansıtılmaz, ancak Configuration Manager tarafından üzerine yazılmaz. Örneğin, Configuration Manager koleksiyonunda iki cihaz varsa ve Azure AD grubunda üç farklı cihaz varsa, eşitlemeden sonra Azure AD grubunda beş cihaz vardır.
 
-### <a name="prerequisites"></a>Önkoşullar
+### <a name="prerequisites"></a>Ön koşullar
 
 - [Bulut yönetimi](../../../servers/deploy/configure/azure-services-wizard.md) IÇIN Azure AD ile tümleştirme
 - [Kullanıcı keşfi Azure Active Directory](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
@@ -275,13 +275,13 @@ Azure AD eşitleme her beş dakikada bir gerçekleşir. Configuration Manager Az
 
 ![Koleksiyonları Azure AD 'ye eşitler](media/3607475-sync-collection-to-azuread.png)
 
-## <a name="using-powershell"></a><a name="bkmk_powershell"></a>PowerShell 'i kullanma
+## <a name="using-powershell"></a><a name="bkmk_powershell"></a> PowerShell 'i kullanma
 
 Koleksiyonları oluşturmak ve içeri aktarmak için PowerShell 'i kullanabilirsiniz. Daha fazla bilgi için bkz.
 
-* [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
-* [Set-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Set-CMCollection)
-* [Import-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Import-CMCollection)
+* [New-CMCollection](/powershell/module/configurationmanager/new-cmcollection)
+* [Set-CMCollection](/powershell/module/ConfigurationManager/Set-CMCollection)
+* [Import-CMCollection](/powershell/module/ConfigurationManager/Import-CMCollection)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -2,7 +2,7 @@
 title: İstemci ayarları
 titleSuffix: Configuration Manager
 description: İstemci davranışlarını denetlemek için varsayılan ve özel ayarlar hakkında bilgi edinin
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e70a44fee7b4805884faeda0a5fb1eab72d3371e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 8045df681560972a353e08ee43c10b6ae86dc50f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127010"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693429"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Configuration Manager istemci ayarları hakkında
 
@@ -167,7 +167,7 @@ Bu senaryoda Kullanıcı ilkesine ihtiyacınız varsa ve olası performans etkis
 
 ### <a name="automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory"></a>Azure Active Directory ile yeni Windows 10 etki alanına katılmış cihazları otomatik olarak kaydet
 
-Karma birleştirmeyi desteklemek için Azure Active Directory yapılandırdığınızda, Configuration Manager Bu işlevsellik için Windows 10 cihazlarını yapılandırır. Daha fazla bilgi için bkz. [karma Azure Active Directory katılmış cihazları yapılandırma](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
+Karma birleştirmeyi desteklemek için Azure Active Directory yapılandırdığınızda, Configuration Manager Bu işlevsellik için Windows 10 cihazlarını yapılandırır. Daha fazla bilgi için bkz. [karma Azure Active Directory katılmış cihazları yapılandırma](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
 
 ### <a name="enable-clients-to-use-a-cloud-management-gateway"></a>İstemcilerin bulut yönetimi ağ geçidi kullanmasını sağlama
 
@@ -341,11 +341,11 @@ Bu ayarlar hakkında daha fazla bilgi için bkz. [cihaz yeniden başlatma bildir
 ## <a name="delivery-optimization"></a>Teslim Iyileştirme
 
 <!-- 1324696 -->
-Şirket ağınızda ve Uzak ofislerde içerik dağıtımını tanımlamak ve düzenlemek için Configuration Manager sınır gruplarını kullanırsınız. [Windows teslim iyileştirme](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) , Windows 10 cihazları arasında içerik paylaşmak için bulut tabanlı ve eşler arası bir teknolojidir. Dağıtım Iyileştirmesini, içerik eşleri arasında paylaşırken sınır gruplarınızı kullanacak şekilde yapılandırın.
+Şirket ağınızda ve Uzak ofislerde içerik dağıtımını tanımlamak ve düzenlemek için Configuration Manager sınır gruplarını kullanırsınız. [Windows teslim iyileştirme](/windows/deployment/update/waas-delivery-optimization) , Windows 10 cihazları arasında içerik paylaşmak için bulut tabanlı ve eşler arası bir teknolojidir. Dağıtım Iyileştirmesini, içerik eşleri arasında paylaşırken sınır gruplarınızı kullanacak şekilde yapılandırın.
 
 > [!Note]
 > - Teslim Iyileştirme yalnızca Windows 10 istemcilerinde kullanılabilir.
-> - Teslim Iyileştirme bulut hizmetine Internet erişimi, eşler arası işlevselliğini kullanmak için bir gereksinimdir. Gerekli Internet uç noktaları hakkında daha fazla bilgi için bkz. [dağıtım iyileştirmesi hakkında sık sorulan sorular](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
+> - Teslim Iyileştirme bulut hizmetine Internet erişimi, eşler arası işlevselliğini kullanmak için bir gereksinimdir. Gerekli Internet uç noktaları hakkında daha fazla bilgi için bkz. [dağıtım iyileştirmesi hakkında sık sorulan sorular](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
 > - İçerik depolaması için bir CMG kullanırken, kullanılabilir [istemci ayarı](#allow-clients-to-download-delta-content-when-available) etkinleştirildiğinde **Delta içeriğini indir** , üçüncü taraf güncelleştirmeler için içerik istemcilere indirmez. <!--6598587--> 
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Teslim Iyileştirme grubu KIMLIĞI için Configuration Manager sınır grupları kullanma
@@ -641,6 +641,17 @@ Bilgisayarlarda Uzak Masaüstü oturumlarını yönetmek Configuration Manager s
 
 ## <a name="software-center"></a>Yazılım Merkezi
 
+### <a name="select-the-user-portal"></a>Kullanıcı portalını seçin
+
+<!--CMADO-3601237,INADO-4297660-->
+Sürüm 2006 ' den başlayarak, Şirket Portalı ortak yönetilen cihazlara dağıtırsanız, bu ayarı **Şirket portalı**olarak yapılandırın. Bu ayar, kullanıcıların yalnızca Şirket Portalı bildirimler aldığından emin olur.
+
+Şirket Portalı ortak yönetilen bir cihaza yükler, ancak bu ayarı **Yazılım Merkezi**olarak yapılandırırsanız, kullanıcılar her iki portaldan bildirimler görür. Bu deneyim, kullanıcılar için kafa karıştırıcı olabilir.
+
+Şirket Portalı istemci ayarını değiştirirseniz, bir Kullanıcı Configuration Manager bildirimi seçtiğinde Şirket Portalı başlatır. Bildirim, Şirket Portalı desteklemediği bir senaryo için ise bildirim, yazılım merkezini başlatır.
+
+Şirket Portalı davranışı ortak yönetim iş yükü yapılandırmanıza bağlıdır. Daha fazla bilgi için bkz. [ortak yönetilen cihazlarda şirket portalı uygulamasını kullanma](../../../comanage/company-portal.md).
+
 ### <a name="select-these-new-settings-to-specify-company-information"></a>Şirket bilgilerini belirtmek için bu yeni ayarları seçin
 
 Bu seçeneği **Evet**olarak ayarlayın ve ardından kuruluşunuz Için marka yazılım merkezi için aşağıdaki ayarları belirtin:
@@ -651,15 +662,15 @@ Bu seçeneği **Evet**olarak ayarlayın ve ardından kuruluşunuz Için marka ya
 
 - **Yazılım Merkezi için bir logo seçin**: Yazılım Merkezi 'nde görünecek bir görüntü seçmek Için, **Araştır** ' a tıklayın. Logo, 400 x 100 piksellik bir JPEG, PNG veya BMP olmalı ve en fazla 750 KB boyutunda olmalıdır. Logo dosya adı boşluk içermemelidir.  
 
-### <a name="hide-unapproved-applications-in-software-center"></a><a name="bkmk_HideUnapproved"></a>Yazılım merkezindeki onaylanmamış uygulamaları gizle
+### <a name="hide-unapproved-applications-in-software-center"></a><a name="bkmk_HideUnapproved"></a> Yazılım merkezindeki onaylanmamış uygulamaları gizle
 
 Bu seçeneği etkinleştirdiğinizde, onay gerektiren Kullanıcı tarafından kullanılabilir uygulamalar yazılım merkezi 'nde gizlenir.<!--1355146-->
 
-### <a name="hide-installed-applications-in-software-center"></a><a name="bkmk_HideInstalled"></a>Yüklü uygulamaları yazılım merkezi 'nde gizle
+### <a name="hide-installed-applications-in-software-center"></a><a name="bkmk_HideInstalled"></a> Yüklü uygulamaları yazılım merkezi 'nde gizle
 
 Bu seçeneği etkinleştirdiğinizde, zaten yüklü olan uygulamalar artık Uygulamalar sekmesinde gösterilmez. Configuration Manager yüklediğinizde veya sürümüne yükselttiğinizde Bu seçenek varsayılan olarak ayarlanır. Yüklenen uygulamalar, yükleme durumu sekmesi altında hala gözden geçirilmek üzere kullanılabilir. <!--1357592-->
 
-### <a name="hide-application-catalog-link-in-software-center"></a><a name="bkmk_HideAppCat"></a>Yazılım Merkezi 'nde Uygulama Kataloğu bağlantısını gizle
+### <a name="hide-application-catalog-link-in-software-center"></a><a name="bkmk_HideAppCat"></a> Yazılım Merkezi 'nde Uygulama Kataloğu bağlantısını gizle
 
 Yazılım Merkezi 'nde Uygulama Kataloğu web sitesi bağlantısının görünürlüğünü belirtin. Bu seçenek ayarlandığında, kullanıcılar yazılım merkezi 'nin yükleme durumu düğümünde Uygulama Kataloğu web sitesi bağlantısını görmez. <!--1358214-->
 
@@ -709,7 +720,7 @@ Aşağıdaki sekmeleri yazılım merkezi 'nde görünür yapmak için bu gruptak
 
 Örneğin, kuruluşunuz uyumluluk ilkelerini kullanmıyorsa ve yazılım merkezi 'nde cihaz uyumluluğu sekmesini gizlemek istiyorsanız, **Cihaz uyumluluğunu etkinleştir sekmesini** **Hayır**olarak ayarlayın.
 
-### <a name="configure-default-views-in-software-center"></a><a name="bkmk_swctr_defaults"></a>Yazılım Merkezi 'nde varsayılan görünümleri yapılandırma
+### <a name="configure-default-views-in-software-center"></a><a name="bkmk_swctr_defaults"></a> Yazılım Merkezi 'nde varsayılan görünümleri yapılandırma
 <!--3612112-->
 *(Sürüm 1902 ' de tanıtılmıştır)*
 
@@ -895,7 +906,7 @@ Bu ayar, Delta içeriğini indirmek üzere HTTP dinleyicisi için yerel bağlant
 
 Bu seçeneği **Evet**olarak belirlediğinizde, Microsoft 365 Apps yükleme ayarlarının yapılandırılmasını sağlar. Ayrıca Office Içerik teslim ağlarından (CDNs) dosya indirmeyi ve dosyaları Configuration Manager bir uygulama olarak dağıtmanızı da mümkün kılar. Daha fazla bilgi için bkz. [Uygulamaları yönetme Microsoft 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
-### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a>"Yazılım güncelleştirmesi" bakım penceresi kullanılabilir olduğunda "tüm dağıtımlar" bakım penceresinde yazılım güncelleştirmelerinin yüklenmesini etkinleştir
+### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a> "Yazılım güncelleştirmesi" bakım penceresi kullanılabilir olduğunda "tüm dağıtımlar" bakım penceresinde yazılım güncelleştirmelerinin yüklenmesini etkinleştir
 
 Bu seçeneği **Evet**olarak belirlediğinizde ve istemcide en az bir "yazılım güncelleştirmesi" bakım penceresi tanımlanmışsa, yazılım güncelleştirmeleri "tüm dağıtımlar" bakım penceresi sırasında yüklenir.
 
@@ -916,7 +927,7 @@ Varsayılan seçenek olarak bu ayar **Hayır**olarak ayarlanmıştır. Bu değer
 Varsayılan olarak, istemci yazılım güncelleştirmelerini yalnızca ikinci bakım penceresi sırasında kurar. Bu senaryodaki tüm dağıtımlar için bakım penceresini yoksayar. Bu ayarı **Evet**olarak değiştirdiğinizde istemci, 02:00-06:00 arasında yazılım güncelleştirmelerini yüklüyor.
 
 
-### <a name="specify-thread-priority-for-feature-updates"></a><a name="bkmk_thread-priority"></a>Özellik güncelleştirmeleri için iş parçacığı önceliği belirtin
+### <a name="specify-thread-priority-for-feature-updates"></a><a name="bkmk_thread-priority"></a> Özellik güncelleştirmeleri için iş parçacığı önceliği belirtin
 
 <!--3734525-->
 Configuration Manager sürüm 1902 ' den başlayarak, Windows 10 sürüm 1709 veya üzeri istemcilerin [Windows 10 Bakımı](../../../osd/deploy-use/manage-windows-as-a-service.md)aracılığıyla bir özellik güncelleştirmesi yükleme önceliğini ayarlayabilirsiniz. Bu ayarın Windows 10 yerinde yükseltme görev dizileri üzerinde hiçbir etkisi yoktur.
@@ -927,11 +938,11 @@ Bu istemci ayarı aşağıdaki seçenekleri sağlar:
 
 - **Normal**: Windows kurulumu daha hızlı bir şekilde daha fazla sistem kaynağı ve güncelleştirme kullanır. Daha fazla işlemci zamanı kullanır, bu nedenle toplam yükleme süresi daha kısadır, ancak kullanıcının kesintisi daha uzundur.  
 
-    - `/Priority Normal` [Windows kurulumu komut satırı seçeneğiyle](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)cihazdaki setupconfig.ini dosyasını yapılandırır.
+    - `/Priority Normal` [Windows kurulumu komut satırı seçeneğiyle](/windows-hardware/manufacture/desktop/windows-setup-command-line-options)cihazdaki setupconfig.ini dosyasını yapılandırır.
 
 - **Düşük**: cihaz, arka planda indirildiğinde ve güncelleştirmelerde çalışmaya devam edebilirsiniz. Toplam yükleme süresi daha uzundur, ancak kullanıcının kesintisi daha kısadır. Bu seçeneği kullandığınızda zaman aşımını önlemek için en fazla çalışma süresini artırmanız gerekebilir.  
 
-    - `/Priority` [Windows kurulumu komut satırı seçeneğini](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) setupconfig.ini dosyasından kaldırır.
+    - `/Priority` [Windows kurulumu komut satırı seçeneğini](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) setupconfig.ini dosyasından kaldırır.
 
 
 ### <a name="enable-third-party-software-updates"></a>Üçüncü taraf yazılım güncelleştirmelerini etkinleştir
@@ -940,7 +951,7 @@ Bu seçeneği **Evet**olarak belirlediğinizde, **bir intranet Microsoft güncel
 
 ### <a name="enable-dynamic-update-for-feature-updates"></a><a name="bkmk_du"></a>Özellik güncelleştirmeleri için dinamik güncelleştirmeyi etkinleştir
 <!--4062619-->
-Configuration Manager sürüm 1906 ' den başlayarak, [Windows 10 Için dinamik güncelleştirme](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847)'yi yapılandırabilirsiniz. Dinamik güncelleştirme, istemciyi Internet 'ten bu güncelleştirmeleri indirmek üzere yönlendirerek Windows kurulumu sırasında dil paketlerini, istek üzerine, sürücüleri ve toplu güncelleştirmeleri yükler. Bu ayar **Evet** veya **Hayır**olarak ayarlandığında, özellik güncelleştirme yüklemesi sırasında kullanılan [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) dosyasını değiştirir Configuration Manager.
+Configuration Manager sürüm 1906 ' den başlayarak, [Windows 10 Için dinamik güncelleştirme](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847)'yi yapılandırabilirsiniz. Dinamik güncelleştirme, istemciyi Internet 'ten bu güncelleştirmeleri indirmek üzere yönlendirerek Windows kurulumu sırasında dil paketlerini, istek üzerine, sürücüleri ve toplu güncelleştirmeleri yükler. Bu ayar **Evet** veya **Hayır**olarak ayarlandığında, özellik güncelleştirme yüklemesi sırasında kullanılan [setupconfig](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) dosyasını değiştirir Configuration Manager.
 
 - **Yapılandırılmadı** -varsayılan değer. Setupconfig dosyasında değişiklik yapılmadı.
   - Dinamik güncelleştirme, Windows 10 ' un tüm desteklenen sürümlerinde varsayılan olarak etkinleştirilmiştir.

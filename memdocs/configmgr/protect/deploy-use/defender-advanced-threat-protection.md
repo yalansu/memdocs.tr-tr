@@ -10,28 +10,28 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cbf7dd3e35db8d2020e96e2511017e43863f724e
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 5feaf05a6829d902b1d8dcbe57722dfce410de6f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85613503"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693548"
 ---
 # <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender Gelişmiş Tehdit Koruması
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
-Endpoint Protection, [Microsoft Defender Gelişmiş tehdit koruması 'nı (ATP)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) yönetmenize ve izlemenize yardımcı olabilir (eski adıyla WINDOWS Defender ATP olarak bilinir). Microsoft Defender ATP, kuruluşların ağlarında gelişmiş saldırıları algılamasına, araştırmasına ve yanıt vermesine yardımcı olur. Configuration Manager ilkeleri Windows 10 istemcilerini eklemenize ve izlemenize yardımcı olabilir.
+Endpoint Protection, [Microsoft Defender Gelişmiş tehdit koruması 'nı (ATP)](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) yönetmenize ve izlemenize yardımcı olabilir (eski adıyla WINDOWS Defender ATP olarak bilinir). Microsoft Defender ATP, kuruluşların ağlarında gelişmiş saldırıları algılamasına, araştırmasına ve yanıt vermesine yardımcı olur. Configuration Manager ilkeleri Windows 10 istemcilerini eklemenize ve izlemenize yardımcı olabilir.
 
-Microsoft Defender ATP, Microsoft [Defender Güvenlik Merkezi](https://securitycenter.windows.com)'ndeki bir hizmettir. İstemci ekleme yapılandırma dosyası ekleyerek ve dağıtarak, Configuration Manager dağıtım durumunu ve Microsoft Defender ATP Aracısı sistem durumunu izleyebilir. Microsoft Defender ATP, Configuration Manager istemcisini çalıştıran veya [Microsoft Intune tarafından yönetilen](https://docs.microsoft.com/intune/protect/advanced-threat-protection)bilgisayarlarda desteklenir.
+Microsoft Defender ATP, Microsoft [Defender Güvenlik Merkezi](https://securitycenter.windows.com)'ndeki bir hizmettir. İstemci ekleme yapılandırma dosyası ekleyerek ve dağıtarak, Configuration Manager dağıtım durumunu ve Microsoft Defender ATP Aracısı sistem durumunu izleyebilir. Microsoft Defender ATP, Configuration Manager istemcisini çalıştıran veya [Microsoft Intune tarafından yönetilen](/intune/protect/advanced-threat-protection)bilgisayarlarda desteklenir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Microsoft Defender Gelişmiş tehdit koruması çevrimiçi hizmetine abonelik  
 - Configuration Manager istemcisini çalıştıran istemci bilgisayarlar
 - Aşağıdaki [desteklenen istemci işletim sistemleri](#bkmk_os) bölümünde listelenen bir işletim sistemini kullanan istemciler.
 
-### <a name="supported-client-operating-systems"></a><a name="bkmk_os"></a>Desteklenen istemci işletim sistemleri
+### <a name="supported-client-operating-systems"></a><a name="bkmk_os"></a> Desteklenen istemci işletim sistemleri
 
 Çalıştırmakta olduğunuz Configuration Manager sürümüne bağlı olarak, aşağıdaki istemci işletim sistemleri eklendi olabilir:
 
@@ -74,7 +74,7 @@ Configuration Manager ile ATP 'ye cihaz eklediğinizde, ATP ilkesini bir hedef k
 > - Hedef koleksiyonunuz yukarı düzey cihazlar içeriyorsa ve alt düzey cihazlar için yönergeleri kullanırsanız, yukarı düzey cihazlar eklendi olmayacaktır.
 > - Hedef koleksiyonunuz alt düzey cihazlar içeriyorsa ve yukarı düzey cihazlar için yönergeleri kullanırsanız, alt düzey cihazlar eklendi olmayacaktır.
 
-## <a name="onboard-devices-with-any-supported-operating-system-to-atp-recommended"></a><a name="bkmk_any_os"></a>Desteklenen işletim sistemlerini ATP 'ye içeren cihazları ekleme (önerilir)
+## <a name="onboard-devices-with-any-supported-operating-system-to-atp-recommended"></a><a name="bkmk_any_os"></a> Desteklenen işletim sistemlerini ATP 'ye içeren cihazları ekleme (önerilir)
  Configuration Manager için yapılandırma dosyasını, **çalışma alanı anahtarını**ve **çalışma alanı kimliğini** sağlayarak, [desteklenen işletim SISTEMLERINDEN](#bkmk_os) herhangi birini çalıştıran cihazları ATP 'ye ekleyebilirsiniz.
 
 ### <a name="get-the-configuration-file-workspace-id-and-workspace-key"></a>Yapılandırma dosyasını, çalışma alanı KIMLIĞINI ve çalışma alanı anahtarını al
@@ -107,12 +107,12 @@ Configuration Manager ile ATP 'ye cihaz eklediğinizde, ATP ilkesini bir hedef k
    :::image type="content" source="media/5229962-create-atp-policy-wizard.png" alt-text="Microsoft Defender ATP Ilkesi oluşturma Sihirbazı" lightbox="media/5229962-create-atp-policy-wizard.png":::
 
 1. Analiz edilmek üzere yönetilen cihazlardan toplanan ve paylaşılan dosya örneklerini belirtin.  
-   - **Yok**
+   - **Hiçbiri**
    - **Tüm dosya türleri**  
 1. Özeti gözden geçirin ve Sihirbazı doldurun.  
 1. Oluşturduğunuz ilkeye sağ tıkladıktan sonra, Microsoft Defender ATP ilkesini istemcilere hedeflemek için **Dağıt** ' ı seçin.
 
-## <a name="onboard-devices-running-up-level-operating-systems-to-atp"></a><a name="bkmk_uplevel"></a>En yüksek düzeyde işletim sistemlerini ATP 'ye çalıştıran cihazlar ekleme
+## <a name="onboard-devices-running-up-level-operating-systems-to-atp"></a><a name="bkmk_uplevel"></a> En yüksek düzeyde işletim sistemlerini ATP 'ye çalıştıran cihazlar ekleme
 
 Yukarı düzey istemciler ATP 'ye ekleme için bir ekleme yapılandırma dosyası gerektirir. Yukarı düzey işletim sistemleri şunları içerir:
 - Windows 10, sürüm 1607 ve üzeri 
@@ -142,12 +142,12 @@ Hedef koleksiyonunuz hem yukarı düzey hem de alt düzey cihazlar içeriyorsa v
    > [!Note]
    > Configuration Manager sürüm 2002 için, yalnızca yukarı düzey cihazlar ekleme olsanız bile **çalışma alanı anahtarı** ve **çalışma alanı kimliği** gerekir. **Settings**  >  **Onboarding**  >  [Microsoft Defender ATP çevrimiçi hizmeti](https://securitycenter.windows.com/)'nden**Windows 7 ve 8,1** ekleme ayarları ' nı seçerek bu değerleri alın. <!--7054188-->
 1. Analiz edilmek üzere yönetilen cihazlardan toplanan ve paylaşılan dosya örneklerini belirtin.  
-   - **Yok**
+   - **Hiçbiri**
    - **Tüm dosya türleri**  
 1. Özeti gözden geçirin ve Sihirbazı doldurun.  
 1. Oluşturduğunuz ilkeye sağ tıkladıktan sonra, Microsoft Defender ATP ilkesini istemcilere hedeflemek için **Dağıt** ' ı seçin.
 
-## <a name="onboard-devices-running-down-level-operating-systems-to-atp"></a><a name="bkmk_downlevel"></a>Alt düzey işletim sistemlerini ATP 'ye çalıştıran cihazlar ekleme
+## <a name="onboard-devices-running-down-level-operating-systems-to-atp"></a><a name="bkmk_downlevel"></a> Alt düzey işletim sistemlerini ATP 'ye çalıştıran cihazlar ekleme
 
 Alt düzey istemciler, ATP ekleme için **çalışma alanı anahtarı** ve **çalışma alanı kimliği** gerektirir. Alt düzey işletim sistemleri şunları içerir:
 - Windows 8.1
@@ -173,7 +173,7 @@ Hedef koleksiyonunuz hem yukarı düzey hem de alt düzey cihazlar içeriyorsa v
    > - Configuration Manager sürüm 2002 için, yalnızca alt düzey cihazları ekleme olsanız bile yapılandırma dosyası gerekir. **Settings**  >  **Onboarding**  >  [Microsoft Defender ATP çevrimiçi hizmeti](https://securitycenter.windows.com/)'nden**Windows 10** ' un eklenmesi seçeneklerini belirleyerek bu değerleri alın. <!--7054188--> 
    > - Microsoft Defender ATP yapılandırma dosyası, güvenli tutulması gereken hassas bilgiler içerir.
 1. Analiz edilmek üzere yönetilen cihazlardan toplanan ve paylaşılan dosya örneklerini belirtin.  
-   - **Yok**
+   - **Hiçbiri**
    - **Tüm dosya türleri**  
 1. Özeti gözden geçirin ve Sihirbazı doldurun.  
 1. Oluşturduğunuz ilkeye sağ tıkladıktan sonra, Microsoft Defender ATP ilkesini istemcilere hedeflemek için **Dağıt** ' ı seçin.
@@ -220,6 +220,6 @@ Hedef koleksiyonunuz hem yukarı düzey hem de alt düzey cihazlar içeriyorsa v
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Microsoft Defender Gelişmiş Tehdit Koruması](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
+- [Microsoft Defender Gelişmiş Tehdit Koruması](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
 
-- [Microsoft Defender Gelişmiş tehdit koruması ekleme sorunlarını giderme](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)
+- [Microsoft Defender Gelişmiş tehdit koruması ekleme sorunlarını giderme](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)

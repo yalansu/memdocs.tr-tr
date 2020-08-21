@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: a5254ba5a25b10df2943eaa7f80b32b17ea3680f
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 7dc3ef2ceb22f1c15c96127c593965ea31bdd7eb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591502"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696829"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>Sınıflandırmaları ve eşitlenmek üzere ürünleri yapılandırma  
 
@@ -129,7 +129,7 @@ Configuration Manager 'de Windows Insider desteği hakkında daha fazla bilgi i�
 ### <a name="prerequisites"></a>Ön koşullar
 
 - Configuration Manager sürüm 1906 veya üzeri, [yazılım güncelleştirme yönetimi](../plan-design/plan-for-software-updates.md)için yapılandırıldı.
-- [Windows Insider Preview derlemesi](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-get-started)çalıştıran Windows 10 cihazları.
+- [Windows Insider Preview derlemesi](/windows-insider/at-work-pro/wip-4-biz-get-started)çalıştıran Windows 10 cihazları.
 - Windows Insider cihazlarını içeren bir koleksiyon.
 
 ### <a name="enable-windows-insider-upgrades-and-updates"></a>Windows Insider yükseltmelerini ve güncelleştirmelerini etkinleştir
@@ -160,7 +160,7 @@ Windows Insider için özellik güncelleştirmelerini, diğer tüm yükseltmeler
 - Lisans koşulları varsa, dağıtımınızın yüklenmek üzere koşulları kabul etmesi gerekir.
 - [İstemci ayarlarında iş parçacığı önceliğini](../../core/clients/deploy/about-client-settings.md#bkmk_thread-priority)kullanmayı göz önünde bulundurun.
 - Dinamik güncelleştirme, en son toplu güncelleştirme de dahil olmak üzere kritik güncelleştirmeleri doğrudan Microsoft Update otomatik olarak yüklüyor. Bu davranış, Windows 10 sürüm 1903 için özellik güncelleştirmeleriyle başlatıldı. 
-  - İstemci ayarları 'nda veya bir [setupconfig.ini dosyası](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)Ile [dinamik güncelleştirmeyi açıkça devre dışı](../../core/clients/deploy/about-client-settings.md#bkmk_du) bırakabilirsiniz. 
+  - İstemci ayarları 'nda veya bir [setupconfig.ini dosyası](/windows-hardware/manufacture/desktop/windows-setup-command-line-options)Ile [dinamik güncelleştirmeyi açıkça devre dışı](../../core/clients/deploy/about-client-settings.md#bkmk_du) bırakabilirsiniz. 
   - Daha fazla bilgi için [Windows 10 dinamik güncelleştirme](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) blog gönderisine bakın.
 
 Yükseltmeleri dağıtma hakkında daha fazla bilgi için bkz. [Windows 'u hizmet olarak yönetme](../../osd/deploy-use/manage-windows-as-a-service.md).

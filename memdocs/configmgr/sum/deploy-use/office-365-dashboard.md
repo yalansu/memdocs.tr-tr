@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 69f234a2-b04b-445a-b81f-6b4acfc00eaf
-ms.openlocfilehash: ce3947c8ca3c562869fdfed2ddba4d9b160902be
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bae995b0704e2b2774d5f002cbf907777a3edcf0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129404"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697050"
 ---
 # <a name="office-365-client-management-dashboard"></a>Office 365 Istemci yönetimi panosu
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
 > [!Note]
-> 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
+> 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
 
 Configuration Manager sürüm 1802 ' den başlayarak, Office 365 Istemci yönetimi panosundan Microsoft 365 Apps istemci bilgilerini gözden geçirebilirsiniz. Office 365 istemci yönetimi panosu, grafik bölümleri seçildiğinde ilgili cihazların bir listesini görüntüler. <!--1357281 -->
 
@@ -57,9 +57,9 @@ En üst düzey site sunucunuzun, hazırlık dosyasını indirmek için aşağıd
 
 *(Bir önkoşul olarak sürüm 1910 ' de kullanıma sunulmuştur)*
 
-Sürüm 1910 ' den başlayarak, Microsoft 365 uygulamaların **Office 365 ProPlus pilot ve sistem durumu panosundaki**bilgileri doldurması için veri toplamayı etkinleştirmeniz gerekir. Veriler Configuration Manager site veritabanında depolanır ve Microsoft 'a gönderilmez.
+Sürüm 1910 ' den başlayarak, Microsoft 365 uygulamaların  **Office 365 ProPlus pilot ve sistem durumu panosundaki**bilgileri doldurması için veri toplamayı etkinleştirmeniz gerekir. Veriler Configuration Manager site veritabanında depolanır ve Microsoft 'a gönderilmez.
 
-Bu veriler, [Microsoft 365 uygulamalardan Microsoft 'a gönderilen tanılama verileri](https://docs.microsoft.com/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft)bölümünde açıklanan tanılama verilerinden farklıdır.
+Bu veriler, [Microsoft 365 uygulamalardan Microsoft 'a gönderilen tanılama verileri](/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft)bölümünde açıklanan tanılama verilerinden farklıdır.
 
 Grup ilkesi kullanarak ya da kayıt defterini düzenleyerek veri toplamayı etkinleştirebilirsiniz.
 
@@ -67,7 +67,7 @@ Grup ilkesi kullanarak ya da kayıt defterini düzenleyerek veri toplamayı etki
 
 1. En son [yönetim şablonu dosyalarını Microsoft Indirme Merkezi ' nden](https://www.microsoft.com/download/details.aspx?id=49030)indirin.
 2. Altındaki **telemetri verilerini toplamayı aç** ilkesi ayarını etkinleştirin `User Configuration\Policies\Administrative Templates\Microsoft Office 2016\Telemetry Dashboard` .
-    - Alternatif olarak, [Office bulut İlkesi Hizmeti](https://docs.microsoft.com/DeployOffice/overview-office-cloud-policy-service)ile ilke ayarını uygulayın.
+    - Alternatif olarak, [Office bulut İlkesi Hizmeti](/DeployOffice/overview-office-cloud-policy-service)ile ilke ayarını uygulayın.
     - Bu ilke ayarı, bu veri koleksiyonu için dağıtım yapmanız gerekmeyen Office telemetri panosu tarafından da kullanılır.
 
 #### <a name="enable-data-collection-from-the-registry"></a>Kayıt defterinden veri toplamayı etkinleştirme
@@ -90,7 +90,7 @@ Office 365 Istemci yönetimi panosu, aşağıdaki bilgiler için grafikler sağl
 - Microsoft 365 uygulamalar İstemci kanalları daha fazla bilgi Için bkz. [Microsoft 365 uygulamalar için güncelleştirme kanallarına genel bakış](/DeployOffice/overview-of-update-channels-for-office-365-proplus).
 
 
-## <a name="integration-for-microsoft-365-apps-readiness"></a><a name="bkmk_o365_readiness"></a>Microsoft 365 uygulama hazırlığı için tümleştirme
+## <a name="integration-for-microsoft-365-apps-readiness"></a><a name="bkmk_o365_readiness"></a> Microsoft 365 uygulama hazırlığı için tümleştirme
 <!--3735402-->
 Configuration Manager sürüm 1902 ' den başlayarak, Microsoft 365 uygulamalarına yükseltmeye hazırlanma ve yüksek güvenilirlikli cihazları tanımlamak için panoyu kullanabilirsiniz. Bu tümleştirme, ortamınızdaki eklentiler ve makrolarla ilgili olası uyumluluk sorunları hakkında öngörüler sağlar. Daha sonra Configuration Manager kullanarak Microsoft 365 uygulamalarını kullanıma yönelik cihazlara dağıtın.
 
@@ -105,12 +105,12 @@ Bir cihaz listesine gitmek için bir durum seçin. Bu hazırlık raporu, cihazla
 
 - İstemci ayarlarında donanım envanterini etkinleştirin. Daha fazla bilgi için [Önkoşullar](#prerequisites) bölümüne bakın.  
 
-- Cihazın bir eklenti hazırlık dosyasını indirmek için Office içerik teslimi ağı 'na (CDN) bağlanması gerekir. Daha fazla bilgi için bkz. [içerik teslim ağları](https://docs.microsoft.com/office365/enterprise/content-delivery-networks). Cihaz bu dosyayı indiremez, eklentiler durumu *gözden geçirmeniz gerekir*.  
+- Cihazın bir eklenti hazırlık dosyasını indirmek için Office içerik teslimi ağı 'na (CDN) bağlanması gerekir. Daha fazla bilgi için bkz. [içerik teslim ağları](/office365/enterprise/content-delivery-networks). Cihaz bu dosyayı indiremez, eklentiler durumu *gözden geçirmeniz gerekir*.  
 
     > [!Note]  
     > Bu özellik için Microsoft 'a veri gönderilmez.  
 
-### <a name="detailed-macro-readiness"></a><a name="bkmk_ort"></a>Ayrıntılı makro hazırlığı
+### <a name="detailed-macro-readiness"></a><a name="bkmk_ort"></a> Ayrıntılı makro hazırlığı
 
 Varsayılan olarak, tarama Aracısı her cihazda en son kullanılan (MRU) dosyalar listesine bakar. Bu listedeki makroları destekleyen dosyaları sayar. Bu dosyalar aşağıdaki türleri içerir:
 - Excel makro içerebilen çalışma kitapları (. xlsm) veya Word makro içerebilen belge (. docm) gibi makro içerebilen Office dosya biçimleri  
@@ -126,7 +126,7 @@ ReadinessReportCreator.exe -mru -output c:\temp -silent
 
 Daha fazla bilgi için bkz. [bir kuruluştaki birden fazla kullanıcı için hazır olma bilgileri alma](/deployoffice/use-the-readiness-toolkit-to-assess-application-compatibility-for-office-365-pro#getting-readiness-information-for-multiple-users-in-an-enterprise).
 
-## <a name="microsoft-365-apps-readiness-dashboard"></a><a name="bkmk_readiness-dash"></a>Microsoft 365 uygulamalar hazır olma panosu
+## <a name="microsoft-365-apps-readiness-dashboard"></a><a name="bkmk_readiness-dash"></a> Microsoft 365 uygulamalar hazır olma panosu
 
 *(Sürüm 1906 ' de tanıtılmıştır)*
 
@@ -185,7 +185,7 @@ Bu rapor, en son hangi cihazların makrolar içerebilecek dosyaları belirlemek 
 
 Taramayı gerçekleştirme hakkında daha fazla bilgi için bkz. [ayrıntılı makro hazırlığı](#bkmk_ort).
 
-## <a name="office-365-proplus-pilot-and-health-dashboard"></a><a name="bkmk_pilot"></a>Office 365 ProPlus pilot ve sistem durumu panosu
+## <a name="office-365-proplus-pilot-and-health-dashboard"></a><a name="bkmk_pilot"></a> Office 365 ProPlus pilot ve sistem durumu panosu
 <!--4488272, 4488301-->
 *(Sürüm 1910 ' de tanıtılmıştır)*
 

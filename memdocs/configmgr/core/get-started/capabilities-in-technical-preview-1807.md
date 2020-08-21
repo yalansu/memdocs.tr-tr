@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ace27e9035af6696e455382a32365be0e3824d65
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8ead53c71e336001ac820a437fa67758c6375cbd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905193"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694381"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Configuration Manager Technical Preview sürüm 1807 ' deki yetenekler 
 
@@ -42,7 +42,7 @@ Steps to workaround, if any.
 
 ## <a name="known-issues"></a>Bilinen sorunlar 
 
-### <a name="issues-with-office-365-software-updates"></a><a name="ki_o365"></a>Office 365 yazılım güncelleştirmeleriyle ilgili sorunlar
+### <a name="issues-with-office-365-software-updates"></a><a name="ki_o365"></a> Office 365 yazılım güncelleştirmeleriyle ilgili sorunlar
 <!--521365-->
 Technical Preview şube sürümlerini 1806 ve 1806,2 kullanarak Office 365 güncelleştirmelerini yönetiyorsanız, istemciler üzerinde yüklenemeyebilir. 
 
@@ -58,7 +58,7 @@ Technical Preview şube sürümlerini 1806 ve 1806,2 kullanarak Office 365 günc
 **Aşağıdaki bölümlerde bu sürümde denenecek yeni özellikler açıklanır:**  
 
 
-## <a name="community-hub"></a><a name="bkmk_hub"></a>Topluluk Merkezi
+## <a name="community-hub"></a><a name="bkmk_hub"></a> Topluluk Merkezi
 <!--1357766-->
 
 Topluluk Merkezi, yararlı Configuration Manager nesnelerini başkalarıyla paylaşmak için merkezi bir konumdur. Configuration Manager konsolundaki Yeni **topluluk** çalışma alanına bakın ve **hub** düğümünü seçin. Aşağıdaki Configuration Manager nesne türlerini indirmek için Topluluk Merkezi kullanın: 
@@ -73,7 +73,7 @@ Kullanılabilir bir öğe hakkında daha fazla ayrıntı görmek için hub 'da t
 
 **Topluluk** çalışma alanı aşağıdaki düğümleri de içerir:
 
-- **Belgeler**: Configuration Manager [belge kitaplığını](https://docs.microsoft.com/sccm/) görüntüler  
+- **Belgeler**: Configuration Manager [belge kitaplığını](/sccm/) görüntüler  
 
 - **Geri bildirim**: Configuration Manager [UserVoice sitesini](https://configurationmanager.uservoice.com/) görüntüler  
 
@@ -82,7 +82,7 @@ Kullanılabilir bir öğe hakkında daha fazla ayrıntı görmek için hub 'da t
 
 - İstemci IŞLETIM sisteminde Configuration Manager konsolunu kullanın.  
 
-    - Alternatif olarak, ancak önerilmemiştir: bir sunucu IŞLETIM sisteminde [Internet Explorer: Artırılmış Güvenlik Yapılandırması](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10))'nı devre dışı bırakın.
+    - Alternatif olarak, ancak önerilmemiştir: bir sunucu IŞLETIM sisteminde [Internet Explorer: Artırılmış Güvenlik Yapılandırması](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10))'nı devre dışı bırakın.
 
 - Konsola sahip olan bilgisayar için internet erişimi ve aşağıdaki sitelerle bağlantı gerekir:  
     - `https://aka.ms`  
@@ -96,7 +96,7 @@ Hub 'a katkıda bulunan öğeler şu anda bu sürümde kullanılamıyor.
 
 
 
-## <a name="specify-the-drive-for-offline-os-image-servicing"></a><a name="bkmk_osd"></a>Çevrimdışı işletim sistemi görüntüsü bakımı için sürücüyü belirtin  
+## <a name="specify-the-drive-for-offline-os-image-servicing"></a><a name="bkmk_osd"></a> Çevrimdışı işletim sistemi görüntüsü bakımı için sürücüyü belirtin  
 <!--1358924-->
 
 [UserVoice geri bildirimlerinizi](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/33506009-gui-option-for-offline-os-image-servicing-drive)temel alarak, artık Configuration Manager işletim sistemi görüntülerinin çevrimdışı bakımı sırasında kullanılan sürücüyü belirtin. Bu işlem geçici dosyalarla büyük miktarda disk alanı tüketebilir, bu nedenle kullanılacak sürücüyü seçme esnekliği sağlar. 
@@ -118,10 +118,10 @@ Varsayılan olarak, bu ayar **otomatiktir**. Bu değerle Configuration Manager y
 
 
 
-## <a name="co-managed-device-sync-activity-from-intune"></a><a name="bkmk_comgmt"></a>Intune 'dan ortak yönetilen cihaz eşitleme etkinliği
+## <a name="co-managed-device-sync-activity-from-intune"></a><a name="bkmk_comgmt"></a> Intune 'dan ortak yönetilen cihaz eşitleme etkinliği
 <!--1358565-->
 
-Configuration Manager konsolunda, ortak yönetilen bir cihazın Microsoft Intune birlikte etkin olup olmadığını gösterir. Bu durum, [Intune veri ambarından](https://docs.microsoft.com/intune/reports-nav-create-intune-reports)alınan verileri temel alır. Configuration Manager konsolundaki **Istemci durumu** panosu, **Intune kullanan etkin olmayan istemcileri**gösterir. Bu yeni kategori, Configuration Manager ile etkin olmayan, ancak önceki haftada Intune hizmeti ile eşitlenen, ortak yönetilen cihazlar içindir.
+Configuration Manager konsolunda, ortak yönetilen bir cihazın Microsoft Intune birlikte etkin olup olmadığını gösterir. Bu durum, [Intune veri ambarından](/intune/reports-nav-create-intune-reports)alınan verileri temel alır. Configuration Manager konsolundaki **Istemci durumu** panosu, **Intune kullanan etkin olmayan istemcileri**gösterir. Bu yeni kategori, Configuration Manager ile etkin olmayan, ancak önceki haftada Intune hizmeti ile eşitlenen, ortak yönetilen cihazlar içindir.
 
 
 ### <a name="try-it-out"></a>Deneyin!
@@ -140,7 +140,7 @@ Ortak yönetimi etkinleştirme hakkında daha fazla bilgi için bkz. [Windows 10
 
 
 
-## <a name="repair-applications"></a><a name="bkmk_app-repair"></a>Uygulamaları onarma
+## <a name="repair-applications"></a><a name="bkmk_app-repair"></a> Uygulamaları onarma
 <!--1357866-->
 
 [UserVoice geri bildirimlerinizi](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8365071-force-reinstall-of-application)temel alarak, Windows Installer ve betik yükleyicisi dağıtım türleri için bir onarım komut satırı belirtin. 
@@ -163,7 +163,7 @@ Yazılım Merkezi 'nde kullanıcıların uygulamayı **onarması** için yeni d�
 
 
 
-## <a name="approve-application-requests-via-email"></a><a name="bkmk_email-approve"></a>Uygulama isteklerini e-postayla onaylama
+## <a name="approve-application-requests-via-email"></a><a name="bkmk_email-approve"></a> Uygulama isteklerini e-postayla onaylama
 <!--1321550-->
 
 Uygulama onay istekleri için e-posta bildirimlerini yapılandırın. Bir Kullanıcı bir uygulama istediğinde, bir e-posta alırsınız. Configuration Manager konsolu gerekmeden isteği onaylamak veya reddetmek için e-postadaki bağlantılar ' a tıklayın.
@@ -193,7 +193,7 @@ Bu önkoşulları yapılandırmazsanız site, isteği onaylama veya reddetme ba�
 
         - **Yeniden yönlendirme URI 'si**: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth` . Bulut yönetimi ağ geçidi (CMG) hizmetinin tam etki alanı adını (FQDN) kullanın, örneğin, GraniteFalls.Contoso.com.   
 
-        - **Manifest**: **oauth2AllowImplicitFlow** değerini true olarak ayarlayın:`"oauth2AllowImplicitFlow": true,`  
+        - **Manifest**: **oauth2AllowImplicitFlow** değerini true olarak ayarlayın: `"oauth2AllowImplicitFlow": true,`  
 
 
 ### <a name="try-it-out"></a>Deneyin!
@@ -216,13 +216,13 @@ Görevleri tamamlamayı deneyin. Daha sonra bu özelliği kullanarak düşüncel
 
 
 
-## <a name="improvement-to-script-output"></a><a name="bkmk_script"></a>Betik çıktısına iyileştirme
+## <a name="improvement-to-script-output"></a><a name="bkmk_script"></a> Betik çıktısına iyileştirme
 <!--1236459-->
 
 Artık ham veya yapılandırılmış JSON biçiminde ayrıntılı betik çıktısını görüntüleyebilirsiniz. Bu biçimlendirme, çıktının okunmasını ve çözümlenmesini kolaylaştırır. Betik geçerli bir JSON biçimli metin döndürürse, ayrıntılı çıktıyı **JSON çıktısı** veya **Ham çıktı**olarak görüntüleyin. Aksi takdirde tek seçenek **betik çıktıdır**. 
 
 #### <a name="example-script-output-is-valid-json"></a>Örnek: betik çıkışı geçerli bir JSON
-Komutundaki`$PSVersionTable.PSVersion`  
+Komutundaki `$PSVersionTable.PSVersion`  
 
 ``` Output
 Major  Minor  Build  Revision
@@ -231,7 +231,7 @@ Major  Minor  Build  Revision
 ```
 
 #### <a name="example-script-output-isnt-valid-json"></a>Örnek: betik çıkışı geçerli bir JSON değil
-Komutundaki`Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
+Komutundaki `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
 ``` Output
 Microsoft Windows 10 Enterprise
@@ -252,7 +252,7 @@ Görevleri tamamlamayı deneyin. Daha sonra bu özelliği kullanarak düşüncel
 
 
 
-## <a name="improvement-to-third-party-software-updates"></a><a name="bkmk_3pupdate"></a>Üçüncü taraf yazılım güncelleştirmelerine yönelik geliştirme
+## <a name="improvement-to-third-party-software-updates"></a><a name="bkmk_3pupdate"></a> Üçüncü taraf yazılım güncelleştirmelerine yönelik geliştirme
 <!--1358714-->
 
 Artık özel katalogların özelliklerini değiştirebilirsiniz.

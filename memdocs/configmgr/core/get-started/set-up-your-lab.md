@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 216c61a671d7d06e434fa399bb3bae12e12f7275
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: c8159928e5fe3e8524c3282cfd1eb543dc9537da
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905159"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696506"
 ---
 # <a name="set-up-a-configuration-manager-lab"></a>Configuration Manager Laboratuvarı ayarlama
 
@@ -24,7 +24,7 @@ ms.locfileid: "82905159"
 Bu konudaki yönergelerin ardından, Configuration Manager benzetimli gerçek zamanlı etkinliklerle değerlendirmek için bir laboratuvar ayarlamanıza olanak sağlar.  
 
 > [!NOTE]
-> Microsoft, Configuration Manager değerlendirme sürümünü kullanarak bu laboratuvarın önceden yapılandırılmış bir sürümünü sunmaktadır. Daha fazla bilgi için bkz. [Windows ve Office dağıtımı ve Yönetim Laboratuvarı seti](https://docs.microsoft.com/microsoft-365/enterprise/modern-desktop-deployment-and-management-lab). 
+> Microsoft, Configuration Manager değerlendirme sürümünü kullanarak bu laboratuvarın önceden yapılandırılmış bir sürümünü sunmaktadır. Daha fazla bilgi için bkz. [Windows ve Office dağıtımı ve Yönetim Laboratuvarı seti](/microsoft-365/enterprise/modern-desktop-deployment-and-management-lab). 
 
 ##  <a name="core-components"></a><a name="BKMK_LabCore"></a> Temel bileşenler  
  Ortamınızı Configuration Manager için ayarlamak, Configuration Manager yüklenmesini desteklemek için bazı çekirdek bileşenleri gerektirir.    
@@ -33,7 +33,7 @@ Bu konudaki yönergelerin ardından, Configuration Manager benzetimli gerçek za
 
      [Değerlendirme merkezinden](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012)Windows Server 2012 R2 'nin değerlendirme sürümünü indirebilirsiniz.  
 
-     Bu alýþtýrmalar boyunca başvurulan indirmelere daha kolay erişebilmek için Internet Explorer Artırılmış güvenlik yapılandırmasını değiştirmeyi veya devre dışı bırakmayı göz önünde bulundurun. Daha fazla bilgi için bkz. [Internet Explorer: Artırılmış Güvenlik Yapılandırması](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).  
+     Bu alýþtýrmalar boyunca başvurulan indirmelere daha kolay erişebilmek için Internet Explorer Artırılmış güvenlik yapılandırmasını değiştirmeyi veya devre dışı bırakmayı göz önünde bulundurun. Daha fazla bilgi için bkz. [Internet Explorer: Artırılmış Güvenlik Yapılandırması](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).  
 
 -   **SQL Server 2012 SP2** kullanır.  
 
@@ -45,7 +45,7 @@ Bu konudaki yönergelerin ardından, Configuration Manager benzetimli gerçek za
 
     -   **SQL_Latin1_General_CP1_CI_AS** , **SQL Harmanlama** sınıfı olarak kullanılır.  
 
-    -   **Windows kimlik doğrulaması**, [SQL kimlik doğrulaması](https://docs.microsoft.com/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15)yerine tercih edilir.  
+    -   **Windows kimlik doğrulaması**, [SQL kimlik doğrulaması](/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15)yerine tercih edilir.  
 
     -   Adanmış bir **SQL Server örneği** gereklidir.  
 
@@ -61,11 +61,11 @@ Bu konudaki yönergelerin ardından, Configuration Manager benzetimli gerçek za
 
 -   **Etki alanı denetleyicisi, Active Directory Domain Services yüklü Windows Server 2008 R2 'yi kullanır** . Etki alanı denetleyicisi aynı zamanda, DHCP ve DNS sunucuları için tam etki alanı adıyla kullanılmak üzere ana bilgisayar olarak çalışır.  
 
-     Daha fazla bilgi için bkz. [Active Directory Domain Services genel bakış](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831484(v=ws.11)).  
+     Daha fazla bilgi için bkz. [Active Directory Domain Services genel bakış](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831484(v=ws.11)).  
 
 -   Hyper-V, bu alıştırmalarda uygulanan yönetim adımlarının beklendiği gibi çalıştığını doğrulamak için **birkaç sanal makineyle kullanılır** . Windows 10 yüklü olan en az üç sanal makine önerilir.  
 
-     Daha fazla bilgi için bkz. [Hyper-V ' e genel bakış](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).  
+     Daha fazla bilgi için bkz. [Hyper-V ' e genel bakış](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).  
 
 -   **yönetici izinleri** gereklidir.  
 
@@ -86,7 +86,7 @@ Bu bileşenlerin tümünü yükledikten sonra, Windows ortamınızı Configurati
 
     -   Grup kapsamı: **Universal**  
 
-    -   Grup türü: **Security**  
+    -   Grup türü: **güvenlik**  
 
 -   Etki alanı kullanıcısı: **ConfigUser**  
 
@@ -95,7 +95,7 @@ Bu bileşenlerin tümünü yükledikten sonra, Windows ortamınızı Configurati
 Configuration Manager istemcilerinin site kaynaklarını bulmak için Active Directory Domain Services sorgulamasını sağlamak için gereken sonraki adımlar, sonraki yordamlarda listelenir.  
 
 ##  <a name="create-the-system-management-container"></a><a name="BKMK_CreateSysMgmtLab"></a> Sistem Yönetimi kapsayıcısını oluşturma  
- Configuration Manager, şema genişletildiğinde Active Directory Domain Services gerekli sistem yönetimi kapsayıcısını otomatik olarak oluşturmaz. Bu nedenle bunu, laboratuvarınız için kendiniz oluşturursunuz. Bu adım, [ADSI düzenleme yüklemenizi](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10))gerektirir.
+ Configuration Manager, şema genişletildiğinde Active Directory Domain Services gerekli sistem yönetimi kapsayıcısını otomatik olarak oluşturmaz. Bu nedenle bunu, laboratuvarınız için kendiniz oluşturursunuz. Bu adım, [ADSI düzenleme yüklemenizi](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10))gerektirir.
 
  Active Directory Etki Alanı Hizmetleri'nde **Sistem** Kapsayıcısı’nda **Tüm Bağımlı Nesneleri Oluştur** iznine sahip bir hesapla oturum açmalısınız.  
 
@@ -139,7 +139,7 @@ Configuration Manager istemcilerinin site kaynaklarını bulmak için Active Dir
 
 #### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>extadsch.exe kullanarak Active Directory şemasını genişletmek için:  
 
-1.  Şema yöneticisi etki alanı denetleyicisinin sistem durumunun bir yedeğini oluşturun. Ana etki alanı denetleyicisini yedekleme hakkında daha fazla bilgi için bkz. [Windows Server yedekleme](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770757(v=ws.11))  
+1.  Şema yöneticisi etki alanı denetleyicisinin sistem durumunun bir yedeğini oluşturun. Ana etki alanı denetleyicisini yedekleme hakkında daha fazla bilgi için bkz. [Windows Server yedekleme](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770757(v=ws.11))  
 
 2.  Yükleme medyasında **\SMSSETUP\BIN\X64** konumuna gidin.  
 
@@ -158,7 +158,7 @@ Configuration Manager istemcilerinin site kaynaklarını bulmak için Active Dir
 
  **.NET yükleme ve Windows Communication Foundation’ı etkinleştirme**  
 
- İki .NET Framework sürümü yüklemeniz gerekir: Önce .NET 3.5.1 ve sonra .NET 4.5.2+. Ayrıca Windows Communication Foundation’ı etkinleştirmeniz gerekir. WCF; dağıtılmış bilgi işlem, kapsamlı birlikte çalışılabilirlik ve hizmet yönlendirmesi için doğrudan desteğe yönelik yönetilebilir bir yaklaşım sunmak üzere tasarlanmıştır ve hizmet odaklı bir programlama modeli aracılığıyla bağlı uygulamaların geliştirilmesini kolaylaştırır. Daha fazla bilgi için bkz. [Windows Communication Foundation nedir?](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms731082(v=vs.90)).
+ İki .NET Framework sürümü yüklemeniz gerekir: Önce .NET 3.5.1 ve sonra .NET 4.5.2+. Ayrıca Windows Communication Foundation’ı etkinleştirmeniz gerekir. WCF; dağıtılmış bilgi işlem, kapsamlı birlikte çalışılabilirlik ve hizmet yönlendirmesi için doğrudan desteğe yönelik yönetilebilir bir yaklaşım sunmak üzere tasarlanmıştır ve hizmet odaklı bir programlama modeli aracılığıyla bağlı uygulamaların geliştirilmesini kolaylaştırır. Daha fazla bilgi için bkz. [Windows Communication Foundation nedir?](/previous-versions/dotnet/netframework-3.5/ms731082(v=vs.90)).
 
 #### <a name="to-install-net-and-activate-windows-communication-foundation"></a>.NET yüklemek ve Windows Communication Foundation’ı etkinleştirmek için:  
 
@@ -200,13 +200,13 @@ Configuration Manager istemcilerinin site kaynaklarını bulmak için Active Dir
 
 **BITS, IIS ve RDC’yi etkinleştirme**  
 
-Bir istemci ve sunucu arasında dosyaları zaman uyumsuz olarak aktarması gereken uygulamalar için [Arka Plan Akıllı Aktarım Hizmeti (BITS)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282296(v=ws.11)) kullanılır. BITS, ön ve arka plandaki aktarım akışını ölçerek diğer ağ uygulamalarının yanıt hızlarını korur. Ayrıca bir aktarım oturumu kesintiye uğrarsa dosya aktarımına otomatik olarak devam eder.  
+Bir istemci ve sunucu arasında dosyaları zaman uyumsuz olarak aktarması gereken uygulamalar için [Arka Plan Akıllı Aktarım Hizmeti (BITS)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282296(v=ws.11)) kullanılır. BITS, ön ve arka plandaki aktarım akışını ölçerek diğer ağ uygulamalarının yanıt hızlarını korur. Ayrıca bir aktarım oturumu kesintiye uğrarsa dosya aktarımına otomatik olarak devam eder.  
 
 Bu site sunucusu yönetim noktası olarak da kullanılacağından bu laboratuvar için BITS’i yüklersiniz.  
 
 Internet Information Services (IIS), web’deki herhangi bir şeyi barındırmak için kullanılabilen esnek, ölçeklenebilir bir web sunucusudur. Birçok site sistemi rolü için Configuration Manager tarafından kullanılır. IIS hakkında daha fazla bilgi için [site sistemi sunucuları Için Web sitelerini](../../core/plan-design/network/websites-for-site-system-servers.md)gözden geçirin.  
 
-[Uzaktan Değişiklikleri Sıkıştırma (RDC)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754372(v=ws.11)) , uygulamaların, belirli bir dosya kümesinde herhangi bir değişiklik yapılıp yapılmadığını tespit etmek üzere kullanabileceği bir API kümesidir. RDC, uygulamanın dosyanın yalnızca değişmiş bölümlerini çoğaltmasını sağlayarak ağ trafiğini en düşük düzeyde tutar.  
+[Uzaktan Değişiklikleri Sıkıştırma (RDC)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754372(v=ws.11)) , uygulamaların, belirli bir dosya kümesinde herhangi bir değişiklik yapılıp yapılmadığını tespit etmek üzere kullanabileceği bir API kümesidir. RDC, uygulamanın dosyanın yalnızca değişmiş bölümlerini çoğaltmasını sağlayarak ağ trafiğini en düşük düzeyde tutar.  
 
 #### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>BITS, IIS ve RDC site sunucusu rollerini etkinleştirmek için:  
 
@@ -278,7 +278,7 @@ Internet Information Services (IIS), web’deki herhangi bir şeyi barındırmak
 
         -   **ISAPI Uzantıları**  
 
-        -   **ISAPI Filtreleri**  
+        -   **ISAPI filtreleri**  
 
         -   **Sunucu Tarafına Şunlar Dahildir**  
 
@@ -356,7 +356,7 @@ Yüklemeye başlamadan önce tüm ayarların doğru bir şekilde etkinleştirild
     |15. Adım: **İstemci İletişim Ayarları**|**Tüm site sistemi rolleri istemcilerden yalnızca HTTPS bağlantısı kabul eder** ’in seçili olmadığını doğrulayın|  
     |16. Adım: **Site Sistemi Rolleri**|FQDN değerinizi girip **Tüm site sistemi rolleri istemcilerden yalnızca HTTPS bağlantısı kabul eder** ’in hala seçili olmadığından emin olun.|  
 
-##  <a name="enable-publishing-for-the-configuration-manager-site"></a><a name="BKMK_EnablePubLab"></a>Configuration Manager sitesi için yayımlamayı etkinleştirme  
+##  <a name="enable-publishing-for-the-configuration-manager-site"></a><a name="BKMK_EnablePubLab"></a> Configuration Manager sitesi için yayımlamayı etkinleştirme  
 Her bir Configuration Manager sitesi, kendi siteye özgü bilgilerini Active Directory şeması içindeki etki alanı bölümü içinde sistem yönetimi kapsayıcısına yayımlar. Bu trafiği işlemek için Active Directory ve Configuration Manager arasındaki iletişim için çift yönlü kanallar açılmalıdır. Active Directory ve ağ altyapınızın belirli bileşenlerini belirlemek için ayrıca Orman Saptama’yı da etkinleştirmeniz gerekir.  
 
 #### <a name="to-configure-active-directory-forests-for-publishing"></a>Active Directory ormanlarını yayın yapmak için yapılandırmak amacıyla:  

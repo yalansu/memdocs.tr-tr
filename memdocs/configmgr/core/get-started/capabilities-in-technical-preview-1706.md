@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 79258786b56cc3e7fe4971391903772700768a89
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 8c3624f9fc903395b36846170ff3552f32db59dd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126765"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692953"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Configuration Manager için Technical Preview 1706 ' deki yetenekler
 
@@ -104,7 +104,7 @@ Pasif mod site sunucusu yüklemek için **site sistemi sunucusu oluşturma Sihir
 
 - Pasif mod site sunucusunu çalıştıracak bilgisayar:
 
-    - [Birincil bir siteyi yükleme önkoşulları](https://docs.microsoft.com/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site)ile Buluşmalıdır.
+    - [Birincil bir siteyi yükleme önkoşulları](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site)ile Buluşmalıdır.
 
     - , Etkin mod site sunucusunun sürümüyle eşleşen kaynak dosyalarını kullanarak yüklenir.
 
@@ -231,7 +231,7 @@ Bu sorunu çözmek için artık hem yükleme içeriği konumunu hem de isteğe b
 
 ## <a name="accessibility-improvements"></a>Erişilebilirlik geliştirmeleri  
 <!--1253000 -->
-Bu önizleme Configuration Manager konsolundaki [erişilebilirlik özelliklerine](../understand/accessibility-features.md) yönelik çeşitli geliştirmeler sunar. Bu modüller şunlardır:     
+Bu önizleme Configuration Manager konsolundaki [erişilebilirlik özelliklerine](../understand/accessibility-features.md) yönelik çeşitli geliştirmeler sunar. Bu güncelleştirmeler şunlardır:     
 
 **Konsol etrafında gezinmek için yeni klavye kısayolları:**
 - CTRL + a-ana (orta) bölmedeki odağı ayarlar.
@@ -261,7 +261,7 @@ Yükseltme Hazırlığı bağlantısının önkoşulları, Configuration Manager
 
 **Önkoşullar**
 - Bağlantıyı eklemek için, Configuration Manager ortamınızın bir [çevrimiçi modda](../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes)bir [hizmet bağlantı noktası](../servers/deploy/configure/about-the-service-connection-point.md) yapılandırması gerekir. Bağlantıyı ortamınıza eklediğinizde, bu site sistem rolünü çalıştıran makineye Microsoft Monitoring Agent de yükler.
-- Configuration Manager bir "Web uygulaması ve/veya Web API" yönetim aracı olarak kaydedin ve [ISTEMCI kimliğini bu kayıttan](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/)alın.
+- Configuration Manager bir "Web uygulaması ve/veya Web API" yönetim aracı olarak kaydedin ve [ISTEMCI kimliğini bu kayıttan](/azure/active-directory/develop/quickstart-register-app)alın.
 - Azure Active Directory ' de kayıtlı yönetim aracı için bir istemci anahtarı oluşturun.
 - Azure portal, kayıtlı Web uygulamasına OMS 'ye erişim izni verin.
 
@@ -309,7 +309,7 @@ Bağlantıyı kaldırırsanız, cihazların kaydı geri alınmaz, ancak hiçbir 
    - **İstemcilerin bir bulut yönetimi ağ geçidi kullanmasını etkinleştirin** – **Evet** (varsayılan) veya **Hayır**olarak ayarlayın.
 2. İstemci ayarlarını gerekli cihaz koleksiyonuna dağıtın.
 
-Cihazın Azure AD 'ye katıldığını onaylamak için, bir komut istemi penceresinde **/statusdsregcmd.exe** komutunu çalıştırın. Cihazın Azure AD 'ye katılmış olması durumunda, sonuçlarda **Azureadkatılmış** alanı **Evet** olarak gösterilir.
+Cihazın Azure AD 'ye katıldığını onaylamak için, bir komut istemi penceresinde ** /statusdsregcmd.exe** komutunu çalıştırın. Cihazın Azure AD 'ye katılmış olması durumunda, sonuçlarda **Azureadkatılmış** alanı **Evet** olarak gösterilir.
 
 ## <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Configuration Manager konsolundan PowerShell betikleri oluşturun ve çalıştırın
 <!-- 1236459 -->

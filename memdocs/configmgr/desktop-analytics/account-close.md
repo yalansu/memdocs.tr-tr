@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: e24c2ee19093dd12af6e87280a31851a1f593782
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: b8d22d7f011fb87dc1105fd8447d2e93adc80c6e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268479"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693378"
 ---
 # <a name="how-to-close-your-account"></a>Hesabınızı kapatma
 
@@ -114,9 +114,9 @@ Cihazların tanılama verilerini göndermeye devam etmesini istemiyorsanız:
 Aşağıdaki yöntemlerden birini kullanarak bu değerleri ayarlayın:
 
 - Grup ilkesi, **bilgisayar yapılandırması**  >  **Yönetim Şablonları**  >  **Windows bileşenleri**  >  **veri toplama ve önizleme yapıları**
-- [Microsoft Intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry) gibi mobil cihaz YÖNETIMI (MDM)
+- [Microsoft Intune](/intune/device-restrictions-windows-10#reporting-and-telemetry) gibi mobil cihaz YÖNETIMI (MDM)
 
-Daha fazla bilgi için bkz. [Kuruluşunuzda Windows tanılama verilerini yapılandırma](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
+Daha fazla bilgi için bkz. [Kuruluşunuzda Windows tanılama verilerini yapılandırma](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
 
 > [!NOTE]  
 > Bu değişiklikleri uyguladığınızda, cihazlar tanılama verilerini göndermeyi hemen durdurur. Microsoft 'un, çalışma alanınız için öngörüleri işlemeyi durdurması 24-48 saat sürebilir. Microsoft bu verileri, bulut hizmetlerinden 30 gün içinde veya daha az bir süre içinde siler.

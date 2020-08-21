@@ -10,12 +10,12 @@ ms.assetid: 0ef5f3ce-b0e4-4775-b5c2-b245e45b4194
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1beec2f5ef7b6da9f1f093300ec6c2b239e7396e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5d9331ce452e40944e4a9b363773d254a32f2c58
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724058"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697492"
 ---
 # <a name="prepare-site-system-roles-for-os-deployments-with-configuration-manager"></a>Configuration Manager ile IŞLETIM sistemi dağıtımları için site sistemi rolleri hazırlama
 
@@ -32,7 +32,7 @@ Dağıtım noktası site sistemi rolü, istemcilerin indirme kaynak dosyaların�
 İşletim sistemlerinin bilgisayarlara dağıtımını desteklemek için yeterli dağıtım noktanız olması önemlidir. Bu dağıtım noktalarının hiyerarşinize yerleştirmesini planlamanız de önemlidir. Daha fazla bilgi için bkz. [içeriği ve içerik altyapısını yönetme](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md). Bu makale, işletim sistemi dağıtımına özel dağıtım noktaları için bazı ek planlama konuları içerir.  
 
 
-###  <a name="additional-planning-considerations-for-distribution-points"></a><a name="BKMK_AdditionalPlanning"></a>Dağıtım noktaları için ek planlama konuları  
+###  <a name="additional-planning-considerations-for-distribution-points"></a><a name="BKMK_AdditionalPlanning"></a> Dağıtım noktaları için ek planlama konuları  
 
 Aşağıdaki öğeler dağıtım noktaları için göz önünde bulundurmanız gereken ek planlardır:  
 
@@ -58,12 +58,12 @@ Belirli bir zaman çerçevesinde belirli sayıda bilgisayara bir işletim sistem
 Bir dağıtım noktasına işletim sistemi dağıtabilirsiniz, ancak işletim sistemi görüntüsünün farklı bir dağıtım noktasından alınması gerekir.  
 
 
-###  <a name="configuring-distribution-points-to-accept-pxe-requests"></a><a name="BKMK_PXEDistributionPoint"></a>PXE isteklerini kabul etmek için dağıtım noktalarını yapılandırma  
+###  <a name="configuring-distribution-points-to-accept-pxe-requests"></a><a name="BKMK_PXEDistributionPoint"></a> PXE isteklerini kabul etmek için dağıtım noktalarını yapılandırma  
 
 PXE önyükleme istekleri yapan istemcileri Configuration Manager işletim sistemlerini dağıtmak için, PXE isteklerini kabul etmek üzere bir veya daha fazla dağıtım noktası yapılandırın. Dağıtım noktasını yapılandırdıktan sonra, PXE önyükleme isteklerine yanıt verir ve yapılacak uygun dağıtım eylemini belirler. Daha fazla bilgi için, bkz. [Install or modify a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).  
 
 
-###  <a name="customize-the-ramdisk-tftp-block-and-window-sizes-on-pxe-enabled-distribution-points"></a><a name="BKMK_RamDiskTFTP"></a>PXE 'yi destekleyen dağıtım noktalarında RamDisk TFTP bloğunu ve pencere boyutlarını özelleştirin  
+###  <a name="customize-the-ramdisk-tftp-block-and-window-sizes-on-pxe-enabled-distribution-points"></a><a name="BKMK_RamDiskTFTP"></a> PXE 'yi destekleyen dağıtım noktalarında RamDisk TFTP bloğunu ve pencere boyutlarını özelleştirin  
 
 PXE 'yi destekleyen dağıtım noktaları için RamDisk TFTP bloğunu ve pencere boyutlarını özelleştirebilirsiniz. Ağınızı özelleştirdiyseniz, büyük bir blok veya pencere boyutu, önyükleme görüntüsü indirmenin zaman aşımı hatası vererek başarısız olmasına neden olabilir. RamDisk TFTP blok ve pencere boyutu özelleştirmeleri, PXE kullanırken belirli ağ gereksinimlerinizi karşılayacak şekilde TFTP trafiğini iyileştirmenize olanak tanır. Yapılandırmanın en verimli olduğunu belirlemek için, özelleştirilmiş ayarları ortamınızda test edin.  
 
@@ -75,7 +75,7 @@ PXE 'yi destekleyen dağıtım noktaları için RamDisk TFTP bloğunu ve pencere
 #### <a name="modify-the-ramdisk-tftp-window-size"></a>RamDisk TFTP pencere boyutunu değiştirme  
 RamDisk TFTP pencere boyutunu özelleştirmek için, PXE 'yi destekleyen dağıtım noktalarına aşağıdaki kayıt defteri anahtarını ekleyin:  
 
-- **Konum**:`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP`  
+- **Konum**: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP`  
 - **Ad**: RamDiskTFTPWindowSize  
 - **Tür**: REG_DWORD  
 - **Değer**: (özelleştirilmiş pencere boyutu)  
@@ -84,7 +84,7 @@ RamDisk TFTP pencere boyutunu özelleştirmek için, PXE 'yi destekleyen dağıt
 #### <a name="modify-the-ramdisk-tftp-block-size"></a>RamDisk TFTP blok boyutunu değiştirme  
 RamDisk TFTP pencere boyutunu özelleştirmek için, PXE 'yi destekleyen dağıtım noktalarına aşağıdaki kayıt defteri anahtarını ekleyin:  
 
-- **Konum**:`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP`  
+- **Konum**: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP`  
 - **Ad**: RamDiskTFTPBlockSize  
 - **Tür**: REG_DWORD  
 - **Değer**: (özelleştirilmiş blok boyutu)  
@@ -94,7 +94,7 @@ RamDisk TFTP pencere boyutunu özelleştirmek için, PXE 'yi destekleyen dağıt
 > Hem Windows Dağıtım Hizmetleri hem de Configuration Manager PXE Yanıtlayıcı hizmeti bu TFTP yapılandırmasını destekler.  
 
 
-###  <a name="configure-distribution-points-to-support-multicast"></a><a name="BKMK_DPMulticast"></a>Dağıtım noktalarını çok noktaya yayını destekleyecek şekilde yapılandırma  
+###  <a name="configure-distribution-points-to-support-multicast"></a><a name="BKMK_DPMulticast"></a> Dağıtım noktalarını çok noktaya yayını destekleyecek şekilde yapılandırma  
 
 Çok noktaya yayın, bir ağ iyileştirme yöntemidir. Birden çok istemci aynı anda aynı işletim sistemi görüntüsünü indirileceği zaman dağıtım noktalarında kullanın. Çok noktaya yayın kullandığınızda, birden çok bilgisayar, işletim sistemi görüntüsünü dağıtım noktası tarafından çok noktaya yayın olarak aynı anda indirebilir. Çok noktaya yayın olmadan dağıtım noktası, verilerin bir kopyasını ayrı bir bağlantı üzerinden her bir istemciye gönderir. Daha fazla bilgi için bkz. [Windows 'u ağ üzerinden dağıtmak için çok noktaya yayın kullanma](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md).  
 
@@ -114,9 +114,9 @@ Kullanıcı durumunun boyutu, durum yükseltme noktasındaki disk depolamasını
 
 ### <a name="user-state-migration-tool"></a>Kullanıcı Durumu Geçirme Aracı  
 
-İşletim sistemlerinin dağıtımı sırasında Kullanıcı durumunu yakalamak ve geri yüklemek için, USMT kaynak dosyalarını işaret eden bir Kullanıcı Durumu Taşıma Aracı (USMT) paketini kullanın. Configuration Manager, bu paketi **yazılım kitaplığı** > **uygulama yönetimi** > **paketlerindeki**Configuration Manager konsolunda otomatik olarak oluşturur. Configuration Manager, Kullanıcı durumunu bir işletim sisteminden yakalamak ve sonra başka bir işletim sistemine geri yüklemek için USMT 10 ' u kullanır. Windows 10 için Windows değerlendirme ve Dağıtım Seti (Windows ADK), USMT 10 içerir.
+İşletim sistemlerinin dağıtımı sırasında Kullanıcı durumunu yakalamak ve geri yüklemek için, USMT kaynak dosyalarını işaret eden bir Kullanıcı Durumu Taşıma Aracı (USMT) paketini kullanın. Configuration Manager, bu paketi **yazılım kitaplığı**  >  **uygulama yönetimi**  >  **paketlerindeki**Configuration Manager konsolunda otomatik olarak oluşturur. Configuration Manager, Kullanıcı durumunu bir işletim sisteminden yakalamak ve sonra başka bir işletim sistemine geri yüklemek için USMT 10 ' u kullanır. Windows 10 için Windows değerlendirme ve Dağıtım Seti (Windows ADK), USMT 10 içerir.
 
-USMT 10 için farklı geçiş senaryolarının açıklaması için, bkz. Windows belgelerindeki [genel geçiş senaryoları](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios) .  
+USMT 10 için farklı geçiş senaryolarının açıklaması için, bkz. Windows belgelerindeki [genel geçiş senaryoları](/windows/deployment/usmt/usmt-common-migration-scenarios) .  
 
 
 ### <a name="retention-policy"></a>Retention ilkesi  
@@ -156,4 +156,4 @@ Bu sihirbazları kullandığınızda, durum geçiş noktası için aşağıdaki 
 
 -   Durum geçiş noktasının yalnızca kullanıcı durumu verilerini geri yükleme isteklerine yanıt verip vermeyeceği. Bu seçeneği etkinleştirdiğinizde, durum geçiş noktasını Kullanıcı durumu verilerini depolamak için kullanamazsınız.  
 
-Site sistemi rolü yüklemek için gereken adımlar için bkz. [site sistemi rolleri ekleme](../../core/servers/deploy/configure/add-site-system-roles.md).  
+Site sistemi rolü yüklemek için gereken adımlar için bkz. [site sistemi rolleri ekleme](../../core/servers/deploy/configure/add-site-system-roles.md).

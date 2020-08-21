@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 6b56f9848f497b7167b478b427f37a00bb2656b9
-ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
+ms.openlocfilehash: a5800b40b581f2a65c4adcea0d229977ae61f774
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512725"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693344"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configuration Manager için bulut yönetimi ağ geçidi ayarlama
 
@@ -40,7 +40,7 @@ Bir CMG oluşturmak için gerekli bilgilere ve önkoşullara sahip olduğunuzdan
 
   - **Bulut yönetimi**IÇIN [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) ile tümleştirme. Azure AD Kullanıcı keşfi gerekli değildir. Siteyi Azure Resource Manager kullanarak CMG dağıtmak üzere Azure AD ile tümleştirmek için **genel yönetici**gerekir.
 
-  - **Microsoft. classiccompute**  &  **Microsoft. Storage** kaynak sağlayıcılarının Azure aboneliği içinde kayıtlı olması gerekir. Daha fazla bilgi için bkz. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
+  - **Microsoft. classiccompute**  &  **Microsoft. Storage** kaynak sağlayıcılarının Azure aboneliği içinde kayıtlı olması gerekir. Daha fazla bilgi için bkz. [Azure Resource Manager](/azure/azure-resource-manager/resource-manager-supported-services).
 
   - Bir **Abonelik sahibinin** CMG 'yi dağıtmak için oturum açması gerekir.
 

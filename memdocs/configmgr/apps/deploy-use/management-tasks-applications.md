@@ -10,12 +10,12 @@ ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3352f8aa719e93210124d164d89791214eb20bf5
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 15c1be9ed388356e17f8591123114dccf7bcd612
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905855"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695214"
 ---
 # <a name="management-tasks-for-configuration-manager-applications"></a>Configuration Manager uygulamalar için yönetim görevleri
 
@@ -40,8 +40,8 @@ Uygulamalar ve dağıtım türleri oluşturma konusunda yardım için bkz. [uygu
 |**Istatistikleri Güncelleştir**|**İzleme** çalışma alanının **Dağıtımlar** düğümünde görüntülenen bu uygulamanın dağıtımları hakkındaki bilgileri güncelleştirir.<br /><br /> Bkz. [Configuration Manager konsolundan uygulamaları izleme](../../apps/deploy-use/monitor-applications-from-the-console.md).|  
 |**Yeniden uygulamaya koy**|**Devre dışı bırakma** yönetim görevi kullanılarak kullanımdan kaldırılan bir uygulamayı tekrar belirtir.|  
 |**Devre dışı bırak**|Bir uygulamayı devre dışı bırakırsanız, artık dağıtım için kullanılamaz, ancak uygulamanın uygulaması ve dağıtımları silinmez. Bu uygulamanın istemci bilgisayarlarında yüklü olan mevcut kopyaları kaldırılmayacak. Uygulama için tüm düzeltmeler 60 gün sonra Configuration Manager'dan silinir. Ancak, uygulamanın yüklü kopyaları kaldırılmaz.<br /><br /> Bir uygulamayı silmek için, öncelikle uygulamayı devre dışı bırakmanız, tüm dağıtımları silmeniz, diğer dağıtımlar tarafından uygulamaya yapılan başvuruları kaldırmanız ve ardından uygulamanın tüm düzeltmelerini silmeniz gerekir.<br /><br /> Bkz. [uygulamaları gözden geçirme ve değiştirme](../../apps/deploy-use/revise-and-supersede-applications.md).|  
-|**Dışarı aktar**|Seçilen uygulamaları, daha sonra arşivleyebileceğiniz veya başka bir siteye yükleyebileceğiniz bir. zip dosyasına aktarmanızı sağlayan **Uygulama Verme Sihirbazı** ' nı açar. Uygulama içeriğini dışa aktarmayı seçerseniz, içeriğe sahip bir klasör oluşturulur.<br /><br /> Ayrıca uygulama bağımlılıklarını, yerine geçme ilişkilerini ve koşulları ve uygulama için içeriği ve bağımlılıklarını dışarı aktarabilirsiniz.<br /><br /> Windows PowerShell cmdlet 'i **dışarı aktarma-Cmappu**, aynı işlevi yapar. Daha fazla bilgi için bkz. [Export-Cmappte](https://docs.microsoft.com/powershell/module/configurationmanager/export-cmapplication?view=sccm-ps).|  
-|**Sil**|Şu anda seçili olan uygulamayı siler.<br /><br /> Diğer uygulamaların bağımlılığının bulunduğu, etkin bir dağıtımının olduğu veya bağımlı görev dizilerinin olduğu durumlarda bir uygulamayı silemezsiniz.|  
+|**Dışarı Aktarma**|Seçilen uygulamaları, daha sonra arşivleyebileceğiniz veya başka bir siteye yükleyebileceğiniz bir. zip dosyasına aktarmanızı sağlayan **Uygulama Verme Sihirbazı** ' nı açar. Uygulama içeriğini dışa aktarmayı seçerseniz, içeriğe sahip bir klasör oluşturulur.<br /><br /> Ayrıca uygulama bağımlılıklarını, yerine geçme ilişkilerini ve koşulları ve uygulama için içeriği ve bağımlılıklarını dışarı aktarabilirsiniz.<br /><br /> Windows PowerShell cmdlet 'i **dışarı aktarma-Cmappu**, aynı işlevi yapar. Daha fazla bilgi için bkz. [Export-Cmappte](/powershell/module/configurationmanager/export-cmapplication?view=sccm-ps).|  
+|**Silme**|Şu anda seçili olan uygulamayı siler.<br /><br /> Diğer uygulamaların bağımlılığının bulunduğu, etkin bir dağıtımının olduğu veya bağımlı görev dizilerinin olduğu durumlarda bir uygulamayı silemezsiniz.|  
 |**Dağıtımı Benzet**|Bir uygulamayı yüklemeden veya kaldırmadan uygulama dağıtımının sonuçlarını sınayabileceğiniz **Uygulama Dağıtımını Benzetme Sihirbazı** 'nı açar.<br /><br /> Bkz. [uygulama dağıtımlarının benzetimini](../../apps/deploy-use/simulate-application-deployments.md)yapma.|  
 |**Dağıtma**|Seçilen uygulamayı hiyerarşinizdeki bilgisayar koleksiyonlarına dağıtabileceğiniz **Yazılım Dağıtma Sihirbazı** 'nı açar.<br /><br /> Bkz. [uygulamaları dağıtma](../../apps/deploy-use/deploy-applications.md).|  
 |**İçeriği Dağıt**|Seçilen uygulamanın içeriğini hiyerarşinizdeki dağıtım noktalarına kopyalayabileceğiniz **İçerik Dağıtma Sihirbazı** 'nı açar.<br /><br /> Bkz. [içeriği ve içerik altyapısını yönetme](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).|  
@@ -55,5 +55,5 @@ Uygulamalar ve dağıtım türleri oluşturma konusunda yardım için bkz. [uygu
 |----------|-------------|  
 |**Önceliği Arttır**|Seçilen dağıtım türünün önceliğini arttırır. Dağıtım türleri sırayla değerlendirilir. Bir dağıtım türü belirtilen gereksinimleri karşıladığında, çalışır ve daha sonra öncelik listesinde başka hiçbir dağıtım türü değerlendirilir.|  
 |**Önceliği Azalt**|Seçilen dağıtım türünün önceliğini azaltır.|  
-|**Sil**|Seçilen dağıtım türünü siler.<br><br>Başka bir uygulamadaki bir dağıtım türü tarafından başvurulduğunda bir dağıtım türünü silemezsiniz.<br>Bir dağıtım türünü silmek için, diğer dağıtım türlerinde olan dağıtım türüne tüm bağımlılıkları kaldırmanız gerekir.<br>Ayrıca, silmek istediğiniz dağıtım türüne başvuran bir dağıtım türüne sahip tüm uygulamaların önceki düzeltmelerini de kaldırmanız gerekir.|  
-|**İçeriği Güncelleştir**|Seçilen dağıtım türü için içeriği yeniler.<br /><br /> Sanal uygulamasına sahip bir dağıtım türü için bu sihirbazı başlattığınızda **Içerik Güncelleştirme Sihirbazı** başlatılır. Bu sihirbaz, seçili sanal uygulama için yayımlama seçeneklerini ve gereksinim kurallarını değiştirmenize olanak sağlar. Daha fazla bilgi için bkz. [uygulama oluşturma](../../apps/deploy-use/create-applications.md).<br /><br /> Dağıtım türünün içeriğini yenilediğinizde uygulamanın yeni bir düzeltmesi oluşturulur. Bu durum, istemci aygıtlarının yeni uygulama ile birlikte güncelleştirilmesine sebep olabilir.|  
+|**Silme**|Seçilen dağıtım türünü siler.<br><br>Başka bir uygulamadaki bir dağıtım türü tarafından başvurulduğunda bir dağıtım türünü silemezsiniz.<br>Bir dağıtım türünü silmek için, diğer dağıtım türlerinde olan dağıtım türüne tüm bağımlılıkları kaldırmanız gerekir.<br>Ayrıca, silmek istediğiniz dağıtım türüne başvuran bir dağıtım türüne sahip tüm uygulamaların önceki düzeltmelerini de kaldırmanız gerekir.|  
+|**İçeriği Güncelleştir**|Seçilen dağıtım türü için içeriği yeniler.<br /><br /> Sanal uygulamasına sahip bir dağıtım türü için bu sihirbazı başlattığınızda **Içerik Güncelleştirme Sihirbazı** başlatılır. Bu sihirbaz, seçili sanal uygulama için yayımlama seçeneklerini ve gereksinim kurallarını değiştirmenize olanak sağlar. Daha fazla bilgi için bkz. [uygulama oluşturma](../../apps/deploy-use/create-applications.md).<br /><br /> Dağıtım türünün içeriğini yenilediğinizde uygulamanın yeni bir düzeltmesi oluşturulur. Bu durum, istemci aygıtlarının yeni uygulama ile birlikte güncelleştirilmesine sebep olabilir.|

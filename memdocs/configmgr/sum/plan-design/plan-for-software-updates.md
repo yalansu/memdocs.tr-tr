@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: b7b3ef78924389232ea292d16c6840fbef9bb321
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 991f367dbd842037aecf4f808f27c4fb2961cc38
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88123600"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696727"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Configuration Manager yazılım güncelleştirmelerini planlayın
 
@@ -24,7 +24,7 @@ ms.locfileid: "88123600"
 Configuration Manager üretim ortamında yazılım güncelleştirmelerini kullanmadan önce, planlama sürecinde ileretmeniz önemlidir. Yazılım güncelleştirme noktası altyapısı için iyi bir plana sahip olmak, başarılı bir yazılım güncelleştirmeleri uygulamasının anahtarıdır. Yazılım güncelleştirmeleri için kapasite planlaması hakkında daha fazla bilgi için bkz. [boyut ve ölçek numaraları](../../core/plan-design/configs/size-and-scale-numbers.md#software-update-point).
 
 
-##  <a name="determine-the-software-update-point-infrastructure"></a><a name="BKMK_SUPInfrastructure"></a>Yazılım güncelleştirme noktası altyapısını belirleme  
+##  <a name="determine-the-software-update-point-infrastructure"></a><a name="BKMK_SUPInfrastructure"></a> Yazılım güncelleştirme noktası altyapısını belirleme  
 
 Bu bölüm aşağıdaki alt konuları içerir:    
 - [Yazılım güncelleştirme noktası listesi](#BKMK_SUPList)
@@ -53,7 +53,7 @@ Bir birincil siteye yüklediğiniz ilk yazılım güncelleştirme noktası, biri
 Site için eşitleme kaynağı olarak yapılandırılan yazılım güncelleştirme noktası hatası olduğunda, başarısız rolü el ile kaldırın. Ardından eşitleme kaynağı olarak kullanmak üzere yeni bir yazılım güncelleştirme noktası seçin. Daha fazla bilgi için bkz. [site sistemi rolünü kaldırma](../../core/servers/deploy/install/uninstall-sites-and-hierarchies.md#bkmk_role).  
 
 
-###  <a name="software-update-point-list"></a><a name="BKMK_SUPList"></a>Yazılım güncelleştirme noktası listesi  
+###  <a name="software-update-point-list"></a><a name="BKMK_SUPList"></a> Yazılım güncelleştirme noktası listesi  
 
 Configuration Manager, aşağıdaki senaryolarda istemciye bir yazılım güncelleştirme noktası listesi sağlar:  
 
@@ -68,7 +68,7 @@ Configuration Manager, aşağıdaki senaryolarda istemciye bir yazılım güncel
 -   **Internet tabanlı istemciler**: yalnızca İnternet 'ten bağlantılara izin vermek üzere yapılandırdığınız yazılım güncelleştirme noktalarının listesini veya internet ve intranet istemci bağlantılarına izin veren yazılım güncelleştirme noktalarının bir listesini alır.  
 
 
-###  <a name="software-update-point-switching"></a><a name="BKMK_SUPSwitching"></a>Yazılım güncelleştirme noktası değiştirme  
+###  <a name="software-update-point-switching"></a><a name="BKMK_SUPSwitching"></a> Yazılım güncelleştirme noktası değiştirme  
 
 > [!NOTE]  
 > İstemciler yeni bir yazılım güncelleştirme noktası bulmak için sınır grupları kullanır. Geçerli yazılım güncelleştirme noktası artık erişilebilir değilse, yeni bir tane eklemek ve bulmak için sınır grupları da kullanır. Bir istemcinin bulabileceği sunucuları denetlemek için farklı sınır gruplarına bireysel yazılım güncelleştirme noktaları ekleyin. Daha fazla bilgi için bkz. [yazılım güncelleştirme noktaları](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
@@ -104,7 +104,7 @@ Configuration Manager aşağıdaki Windows Update Aracısı hata kodlarından he
 Bir hata kodunun anlamını aramak için, ondalık hata kodunu onaltılı olarak dönüştürün ve ardından bir sitede [Windows Update Agent-hata kodları wiki](https://social.technet.microsoft.com/wiki/contents/articles/15260.windows-update-agent-error-codes.aspx)gibi onaltılı değeri arayın. örneğin, 2149842970 ondalık hata kodu onaltılı bir 8024001A, bu da bir ilke değeri ayarlanmamış WU_E_POLICY_NOT_SET anlamına gelir.  
 
 
-###  <a name="manually-switch-clients-to-a-new-software-update-point"></a><a name="BKMK_ManuallySwitchSUPs"></a>İstemcileri el ile yeni bir yazılım güncelleştirme noktasına değiştirme
+###  <a name="manually-switch-clients-to-a-new-software-update-point"></a><a name="BKMK_ManuallySwitchSUPs"></a> İstemcileri el ile yeni bir yazılım güncelleştirme noktasına değiştirme
 
 Etkin yazılım güncelleştirme noktasıyla ilgili sorunlar olduğunda Configuration Manager istemcileri yeni bir yazılım güncelleştirme noktasına geçirin. Bu değişiklik yalnızca bir istemci bir yönetim noktasından birden çok yazılım güncelleştirme noktası aldığında gerçekleşir.
 
@@ -123,7 +123,7 @@ Bu değişikliği bir cihaz koleksiyonunda başlatın. Tetiklendiğinde, istemci
 2.  Hedef koleksiyonu seçin. Şeridin **giriş** sekmesinde, **koleksiyon** grubunda, **İstemci bildirimi**' ne ve ardından **sonraki yazılım güncelleştirme noktasına geç ' e**tıklayın.  
 
 
-###  <a name="software-update-points-in-an-untrusted-forest"></a><a name="BKMK_SUP_CrossForest"></a>Güvenilmeyen bir ormandaki yazılım güncelleştirme noktaları  
+###  <a name="software-update-points-in-an-untrusted-forest"></a><a name="BKMK_SUP_CrossForest"></a> Güvenilmeyen bir ormandaki yazılım güncelleştirme noktaları  
 
 Güvenilmeyen bir ormandaki istemcileri desteklemek için bir sitede bir veya daha fazla yazılım güncelleştirme noktası oluşturun. Başka bir ormana yazılım güncelleştirme noktası eklemek için, önce bu ormana bir WSUS sunucusu yükleyip yapılandırın. Ardından, yazılım güncelleştirme noktası site sistemi rolüne sahip bir Configuration Manager site sunucusu eklemek için Sihirbazı başlatın. Sihirbazda, güvenilmeyen ormandaki WSUS'ye başarılı şekilde bağlanmak üzere aşağıdaki ayarları yapılandırın:  
 
@@ -134,17 +134,17 @@ Güvenilmeyen bir ormandaki istemcileri desteklemek için bir sitede bir veya da
 Örneğin, iki yazılım güncelleştirme noktası (SUP01 ve SUP02) bulunan A ormanında bir birincil siteniz var. Aynı birincil site için, B ormanında iki yazılım güncelleştirme noktanız (SUP03 ve SUP04) de vardır. Bir sonraki yazılım güncelleştirme noktasına geçiş yaparken istemciler, sunucuları aynı ormandan önceliklendirmesine izin verir.  
 
 
-###  <a name="use-an-existing-wsus-server-as-the-synchronization-source-at-the-top-level-site"></a><a name="BKMK_WSUSSyncSource"></a>Üst düzey sitede eşitleme kaynağı olarak var olan bir WSUS sunucusunu kullan  
+###  <a name="use-an-existing-wsus-server-as-the-synchronization-source-at-the-top-level-site"></a><a name="BKMK_WSUSSyncSource"></a> Üst düzey sitede eşitleme kaynağı olarak var olan bir WSUS sunucusunu kullan  
 
 Genellikle, hiyerarşinizdeki üst düzey site, yazılım güncelleştirmeleri meta verilerini Microsoft Update ile eşitlemek üzere yapılandırılmıştır. Kurumsal Güvenlik ilkeniz, üst düzey sitenin internet 'e erişmesine izin vermezse, en üst düzey site için eşitleme kaynağını mevcut bir WSUS sunucusunu kullanacak şekilde yapılandırın. Bu WSUS sunucusu Configuration Manager hiyerarşinizde değil. Örneğin, internet 'e bağlı bir ağda (DMZ) bir WSUS sunucusuna sahipsiniz, ancak üst düzey siteniz internet erişimi olmayan bir iç ağ içinde. DMZ 'deki WSUS sunucusunu, yazılım güncelleştirmeleri meta verileri için eşitleme kaynağınız olarak yapılandırın. Yazılım güncelleştirmelerini Configuration Manager için gereken ölçütlerle eşleştirmek için DMZ içindeki WSUS sunucusunu yapılandırın. Aksi takdirde, üst düzey site, beklediğiniz yazılım güncelleştirmelerini eşitlemeyebilir. Yazılım güncelleştirme noktasını yüklediğinizde bir WSUS sunucusu bağlantı hesabı yapılandırın. Bu hesabın DMZ 'deki WSUS sunucusuna erişmesi gerekir. Ayrıca, güvenlik duvarının ilgili bağlantı noktaları için trafiğe izin verdiğini onaylayın. Daha fazla bilgi için, [yazılım güncelleştirme noktası tarafından eşitleme kaynağı için kullanılan bağlantı noktaları](../../core/plan-design/hierarchy/ports.md#BKMK_PortsSUP-WSUS)bölümüne bakın.  
 
 
-###  <a name="software-update-point-on-a-secondary-site"></a><a name="BKMK_SUPSecSite"></a>İkincil sitedeki yazılım güncelleştirme noktası  
+###  <a name="software-update-point-on-a-secondary-site"></a><a name="BKMK_SUPSecSite"></a> İkincil sitedeki yazılım güncelleştirme noktası  
 
 Yazılım güncelleştirme noktası ikincil bir sitede isteğe bağlıdır. İkincil bir siteye yalnızca bir yazılım güncelleştirme noktası yükler. İkincil sitede bir yazılım güncelleştirme noktası yüklü olmadığında, ikincil bir sitenin sınırları içindeki cihazlar atanmış birincil sitelerinde bir yazılım güncelleştirme noktası kullanır. İkincil sitedeki cihazlar ile üst birincil sitedeki yazılım güncelleştirme noktaları arasında sınırlı ağ bant genişliği olduğunda genellikle ikincil siteye bir yazılım güncelleştirme noktası yüklersiniz. Birincil sitedeki yazılım güncelleştirme noktası kapasite sınırına yaklaşırsa de bu yapılandırmayı kullanabilirsiniz. Bir yazılım güncelleştirme noktasını ikincil siteye başarıyla yükleyip yapılandırdıktan sonra, istemciler için site genelinde bir ilke güncelleştirilir ve yeni yazılım güncelleştirme noktasını kullanmaya başlar.  
 
 
-### <a name="plan-for-internet-based-clients"></a><a name="bkmk_internet-clients"></a>Internet tabanlı istemciler için plan
+### <a name="plan-for-internet-based-clients"></a><a name="bkmk_internet-clients"></a> Internet tabanlı istemciler için plan
 
 Ağınızı Internet üzerinden dolaşan cihazları yönetmeniz gerektiğinde, bu cihazlarda yazılım güncelleştirmelerinin nasıl yönetileceğini gösteren bir plan geliştirin. Configuration Manager, bu senaryoya yönelik birkaç teknolojiyi destekler. Kuruluşunuzun gereksinimlerini karşılamak için gereken bir veya bir bileşim kullanın.
 
@@ -164,7 +164,7 @@ Iş Windows Update, en son kalite ve özellik güncelleştirmeleriyle Windows 10
 Daha fazla bilgi için bkz. [iş için Windows Update tümleştirme](../deploy-use/integrate-windows-update-for-business-windows-10.md).
 
 
-### <a name="plan-software-update-content"></a><a name="bkmk_content"></a>Yazılım güncelleştirme içeriğini planlayın
+### <a name="plan-software-update-content"></a><a name="bkmk_content"></a> Yazılım güncelleştirme içeriğini planlayın
 
 İstemciler, yüklemek için yazılım güncelleştirmeleri için içerik dosyalarını indirmeleri gerekir. Configuration Manager, bu içeriğin yönetimini ve teslimini desteklemek için çeşitli teknolojiler sağlar. Ya da istemcilerin doğrudan Microsoft Update bulut hizmetinden içerik almasını sağlamak veya istemek için yazılım güncelleştirme dağıtımlarını yapılandırın.
 
@@ -186,7 +186,7 @@ Sürüm 1806 ' den başlayarak, yazılım güncelleştirmelerini dağıttığın
 Internet tabanlı istemciler Microsoft Update bulut hizmetinden her zaman içerik indirir. Yazılım güncelleştirme dağıtım paketlerini bir bulut dağıtım noktasına dağıtmayın. Bulut dağıtım noktasıyla depolama alanı için ücretlendirilirsiniz, ancak istemciler bu paketleri indirmez. 
 
 
-### <a name="plan-for-third-party-updates"></a><a name="bkmk_thirdparty"></a>Üçüncü taraf güncelleştirmeleri için plan yapın
+### <a name="plan-for-third-party-updates"></a><a name="bkmk_thirdparty"></a> Üçüncü taraf güncelleştirmeleri için plan yapın
 Configuration Manager, Microsoft tarafından yayımlanan yazılım güncelleştirmelerini yerel olarak destekleyen WSUS ile tümleşir. Çoğu müşteri, aynı zamanda güncelleştirme gerektiren diğer üçüncü taraf uygulamaları kullanır. Üçüncü taraf uygulamalarının güncel tutulması için göz önünde bulundurmanız gereken birkaç seçenek vardır.
 
 #### <a name="supersede-applications-to-update"></a>Güncelleştirilecek uygulamaları değiştirme
@@ -206,7 +206,7 @@ Daha fazla bilgi için bkz. [System Center Updates Publisher](../tools/updates-p
 
 
 
-##  <a name="plan-for-software-update-point-installation"></a><a name="BKMK_SUPInstallation"></a>Yazılım güncelleştirme noktası yüklemesini planlayın  
+##  <a name="plan-for-software-update-point-installation"></a><a name="BKMK_SUPInstallation"></a> Yazılım güncelleştirme noktası yüklemesini planlayın  
 
 Bu bölüm aşağıdaki alt konuları içerir:  
 - [Yazılım güncelleştirme noktası gereksinimleri](#BKMK_SUPSystemRequirements)
@@ -220,7 +220,7 @@ Bu bölümde, yazılım güncelleştirme noktası yüklemesini başarıyla planl
 
 Yazılım güncelleştirme noktası rolünü, WSUS ve Configuration Manager site sistemleri için Desteklenen yapılandırmaların en düşük gereksinimlerini karşılayan bir site sistemine yükler.  
 
--   Windows Server 'da WSUS sunucu rolüne ilişkin en düşük gereksinimler hakkında daha fazla bilgi için bkz. [Gözden geçirme konuları ve sistem gereksinimleri](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements).  
+-   Windows Server 'da WSUS sunucu rolüne ilişkin en düşük gereksinimler hakkında daha fazla bilgi için bkz. [Gözden geçirme konuları ve sistem gereksinimleri](/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements).  
 
 -   Configuration Manager site sistemleri için desteklenen konfigürasyonlar hakkında daha fazla bilgi için bkz. [site ve site sistemi önkoşulları](../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
@@ -235,7 +235,7 @@ Windows Server 2012 veya sonraki sürümlerde WSUS kullandığınızda, Configur
 
 -   **NT AUTHORITY\SYSTEM** hesabını WSUS veritabanı (SUSDB) için bir kullanıcı olarak ekleyin. En düşük webService veritabanı rol üyeliğini yapılandırın.  
   
-WSUS 'i Windows Server 'a yüklemek hakkında daha fazla bilgi için bkz. [WSUS sunucu rolünü yüklemek](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role).  
+WSUS 'i Windows Server 'a yüklemek hakkında daha fazla bilgi için bkz. [WSUS sunucu rolünü yüklemek](/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role).  
 
 Bir birincil siteye birden çok yazılım güncelleştirme noktası yüklediğinizde aynı Active Directory ormanındaki her yazılım güncelleştirme noktası için aynı WSUS veritabanını kullanın. Aynı veritabanının paylaşılması, istemciler yeni bir yazılım güncelleştirme noktasına geçiş yaparken performansı geliştirir. Daha fazla bilgi için bkz. [yazılım güncelleştirme noktaları için PAYLAŞıLAN WSUS veritabanı kullanma](software-updates-best-practices.md#bkmk_shared-susdb).  
 
@@ -243,7 +243,7 @@ Bir birincil siteye birden çok yazılım güncelleştirme noktası yüklediğin
 
 WSUS 'u yüklediğinizde bir içerik dizini yolu sağlamanız gerekir. WSUS içerik dizini öncelikle, tarama sırasında istemciler tarafından gereken Microsoft yazılım lisans koşulları dosyalarını depolamak için kullanılır. WSUS içerik dizininin Configuration Manager, Configuration Manager yazılım dağıtım paketleri için içerik kaynak dizininizle çakışmamalıdır. WSUS içerik dizininden ve Configuration Manager paket kaynağıyla örtüşerek, WSUS içerik dizininden yanlış dosyaların kaldırılmasına neden olur.
 
-####  <a name="configure-wsus-to-use-a-custom-website"></a><a name="BKMK_CustomWebSite"></a>WSUS 'i özel bir Web sitesi kullanacak şekilde yapılandırma  
+####  <a name="configure-wsus-to-use-a-custom-website"></a><a name="BKMK_CustomWebSite"></a> WSUS 'i özel bir Web sitesi kullanacak şekilde yapılandırma  
 WSUS yüklerken mevcut IIS Varsayılan web sitesini kullanabilir veya özel bir WSUS web sitesi oluşturabilirsiniz. WSUS için özel bir Web sitesi oluşturun, böylece IIS, WSUS hizmetlerini ayrılmış bir sanal Web sitesinde barındırır. Aksi takdirde, diğer Configuration Manager site sistemleri veya uygulamaları tarafından kullanılan Web sitesini paylaşır. Bu yapılandırma özellikle yazılım güncelleştirme noktası rolünü site sunucusuna yüklediğinizde gereklidir. WSUS 'i Windows Server 2012 veya sonraki sürümlerde çalıştırdığınızda, WSUS varsayılan olarak HTTP için bağlantı noktası 8530 ve HTTPS için bağlantı noktası 8531 ' i kullanacak şekilde yapılandırılır. Bir sitede yazılım güncelleştirme noktası oluştururken bu bağlantı noktalarını belirtin.  
 
 
@@ -265,7 +265,7 @@ Yazılım güncelleştirme noktasının güvenliğini sağlamaya yardımcı olma
 Yazılım güncelleştirme noktasını yüklediğinizde ve yapılandırdığınızda, **WSUS sunucusu IÇIN SSL Iletişimini etkinleştirme**seçeneğini belirleyin. Aksi takdirde, Configuration Manager WSUS 'yi SSL kullanamayacak şekilde yapılandırır. Bir yazılım güncelleştirme noktasında SSL 'yi etkinleştirdiğinizde, alt sitelerdeki tüm yazılım güncelleştirme noktalarını da SSL kullanacak şekilde yapılandırın.  
 
 
-###  <a name="configure-firewalls"></a><a name="BKMK_ConfigureFirewalls"></a>Güvenlik duvarlarını yapılandırma  
+###  <a name="configure-firewalls"></a><a name="BKMK_ConfigureFirewalls"></a> Güvenlik duvarlarını yapılandırma  
 
 Configuration Manager merkezi yönetim sitesindeki yazılım güncelleştirme noktası, yazılım güncelleştirme noktasındaki WSUS ile iletişim kurar. WSUS, yazılım güncelleştirmeleri meta verilerini eşitlemek için eşitleme kaynağıyla iletişim kurar. Bir alt sitedeki yazılım güncelleştirme noktaları, üst sitedeki yazılım güncelleştirme noktasıyla iletişim kurar. Birincil sitede birden fazla yazılım güncelleştirme noktası olduğunda, ek yazılım güncelleştirme noktaları varsayılan yazılım güncelleştirme noktasıyla iletişim kurar. Varsayılan rol, sitede yüklü olan ilk yazılım güncelleştirme noktasıdır.  
 
@@ -322,7 +322,7 @@ Eşitleme zamanlamasını yalnızca Configuration Manager hiyerarşisindeki üst
 Yazılım güncelleştirme noktası başarıyla eşitlendiğinde, alt sitelere bir eşitleme isteği gönderir. Birincil sitede ek yazılım güncelleştirme noktalarınız varsa, her bir yazılım güncelleştirme noktasına bir eşitleme isteği gönderir. Bu işlem hiyerarşideki her sitede yinelenir.  
 
 
-###  <a name="update-classifications"></a><a name="BKMK_UpdateClassifications"></a>Güncelleştirme sınıflandırmaları  
+###  <a name="update-classifications"></a><a name="BKMK_UpdateClassifications"></a> Güncelleştirme sınıflandırmaları  
 
 Her yazılım güncelleştirmesi, farklı güncelleştirme türlerinin düzenlenmesine yardımcı olan bir güncelleştirme sınıflandırmasıyla tanımlanır. Eşitleme işlemi sırasında, site belirtilen sınıflandırmalar için meta verileri eşitler. 
 
@@ -352,7 +352,7 @@ Güncelleştirme sınıflandırması ayarlarını yalnızca üst düzey sitede y
 >  En iyi uygulama olarak, ilk kez eşitlemeden önce tüm sınıflandırmaları temizleyin. İlk eşitlemeden sonra, istenen sınıflandırmaları seçin ve ardından eşitlemeyi yeniden çalıştırın.  
 
 
-###  <a name="products"></a><a name="BKMK_UpdateProducts"></a>Ürün  
+###  <a name="products"></a><a name="BKMK_UpdateProducts"></a> Ürün  
 
 Her yazılım güncelleştirmesinin meta verileri, güncelleştirmenin geçerli olduğu bir veya daha fazla ürünü tanımlar. Bir ürün, bir işletim sisteminin veya uygulamanın belirli bir sürümüdür. Bir ürün örneği Microsoft Windows 10 ' dur. Bir ürün ailesi, tek tek ürünlerin türetildiği temel işletim sistemi veya uygulamadır. Bir ürün ailesine örnek olarak, Windows 10 ve Windows Server 2016 ' in üye olduğu Microsoft Windows 'tur. Bir ürün ailesini veya bir ürün ailesi içinde bireysel ürünleri seçin.  
 
@@ -364,7 +364,7 @@ Yazılım güncelleştirmeleri birden fazla ürün için geçerli olduğunda ve 
 >  Configuration Manager, yazılım güncelleştirme noktasını ilk kez yüklerken seçtiğiniz ürünlerin ve ürün ailelerinin listesini depolar. Configuration Manager yayımlandıktan sonra yayınlanan ürünler ve ürün aileleri, eşitleme tamamlanana kadar seçme seçeneği sunulmayabilir. Eşitleme işlemi, aralarından seçim yapabileceğiniz kullanılabilir ürünlerin ve ürün ailelerinin listesini güncelleştirir. Yazılım güncelleştirmelerini ilk defa eşitlemeden önce tüm ürünleri temizleyin. İlk eşitlemeden sonra, istediğiniz ürünleri seçin ve ardından eşitlemeyi yeniden çalıştırın.  
 
 
-###  <a name="supersedence-rules"></a><a name="BKMK_SupersedenceRules"></a>Yenisiyle değiştirme kuralları  
+###  <a name="supersedence-rules"></a><a name="BKMK_SupersedenceRules"></a> Yenisiyle değiştirme kuralları  
 
 Genellikle, başka bir yazılım güncelleştirmesinin yerine geçen bir yazılım güncelleştirmesi aşağıdaki eylemlerin bir veya daha fazlasını yapar:  
 
@@ -388,7 +388,7 @@ Yazılım güncelleştirme noktasının özelliklerinde, yenisiyle değiştirile
     > - Configuration Manager sürüm 1806 ' den önce, Configuration Manager yenisiyle değiştirilen bir yazılım güncelleştirmesini **zaman aşımına ermişse**, güncelleştirmeyi WSUS 'de **reddedildi** olarak ayarlamamıştır. İstemciler, güncelleştirme el ile veya özel bir komut dosyası aracılığıyla reddedilene kadar, süre dolma bir güncelleştirmeyi taramaya devam eder.  Configuration Manager sürüm 1806 ' den sonra, Configuration Manager WSUS 'teki yenisiyle değiştirilen güncelleştirmeleri de reddeder. WSUS temizleme görevi hakkında daha fazla bilgi için bkz. [yazılım güncelleştirmeleri Bakımı](../deploy-use/software-updates-maintenance.md).
     > - Configuration Manager sürüm 1810 ' den başlayarak, özellik **güncelleştirmeleri** için değiştirme kuralları davranışını **Özellik dışı güncelleştirmelerden**ayrı olarak belirtebilirsiniz.
 
-###  <a name="languages"></a><a name="BKMK_UpdateLanguages"></a>Diller  
+###  <a name="languages"></a><a name="BKMK_UpdateLanguages"></a> Diller  
 
 Yazılım güncelleştirme noktasının dil ayarları şunları yapılandırmanıza izin verir: 
 - Özet ayrıntılarının (yazılım güncelleştirmeleri meta verileri) yazılım güncelleştirmeleri için eşitlendiği diller  
@@ -417,7 +417,7 @@ Eşitleme işlemi sırasında, özet ayrıntı bilgileri (yazılım güncelleşt
 >  İhtiyaç duyduğunuz tüm Özet ayrıntı dillerini seçin. Üst düzey sitedeki yazılım güncelleştirme noktası eşitleme kaynağıyla eşitlendiğinde, seçili özet ayrıntıları dilleri aldığı yazılım güncelleştirmeleri meta verilerini belirlenir. Eşitleme en az bir kez çalıştıktan sonra Özet ayrıntıları dillerini değiştirirseniz, yalnızca yeni veya güncelleştirilmiş yazılım güncelleştirmeleri için değiştirilen Özet ayrıntı dillerinin yazılım güncelleştirme meta verilerini alır. Eşitleme kaynağındaki yazılım güncelleştirmesinde değişiklik olmadığı takdirde, zaten eşitlenmiş olan yazılım güncelleştirmeleri değiştirilen diller için yeni meta verilerle güncellenmez.
 
 
-###  <a name="maximum-run-time"></a><a name="bkmk_maxruntime"></a>En fazla çalışma süresi
+###  <a name="maximum-run-time"></a><a name="bkmk_maxruntime"></a> En fazla çalışma süresi
 <!--3734426-->
 *(Sürüm 1906 ' de tanıtılmıştır)*
 
@@ -444,7 +444,7 @@ Sürüm 1906 ' den başlayarak, bir yazılım güncelleştirmesi yüklemesinin t
 > [!NOTE]
 > Sürüm 1906 ' de, en üst düzey yazılım güncelleştirme noktasını yüklediğinizde maksimum çalışma zamanı kullanılamaz. Yükleme sonrasında, en üst düzey yazılım güncelleştirme noktanağınızın çalışma süresini en fazla düzenleyin.
 
-##  <a name="plan-for-a-software-updates-maintenance-window"></a><a name="BKMK_MaintenanceWindow"></a>Yazılım güncelleştirmeleri bakım penceresi için plan  
+##  <a name="plan-for-a-software-updates-maintenance-window"></a><a name="BKMK_MaintenanceWindow"></a> Yazılım güncelleştirmeleri bakım penceresi için plan  
 
 Yazılım güncelleştirmeleri yüklemesi için ayrılmış bir bakım penceresi ekleyin. Bu eylem, bir genel bakım penceresi ve yazılım güncelleştirmeleri için farklı bir bakım penceresi yapılandırmanıza olanak tanır. Bir genel bakım penceresi ve yazılım güncelleştirmeleri bakım penceresi yapılandırdığınızda, istemciler yalnızca yazılım güncelleştirmeleri bakım penceresi sırasında yazılım güncelleştirmelerini yükler. 
 
@@ -459,7 +459,7 @@ Yeniden başlatma gerektiren bir yazılım güncelleştirmesi dağıtıldığın
 
 Configuration Manager yazılım güncelleştirmesi için bekleyen bir yeniden başlatma işlemi olduğunda, **güncelleştirme ve yeniden başlatma** ve **güncelleştirme ve kapatma** seçeneği Windows 10 bilgisayarlarda Windows güç seçenekleri 'nde kullanılabilir. Bu seçeneklerden birini kullandıktan sonra, bilgisayar yeniden başlatıldıktan sonra yeniden başlatma iletişim kutusu görüntülenmez. Bazı durumlarda, işletim sistemi bekleyen yeniden başlatma seçeneklerini kaldırabilir. Windows 10 ' da hızlı başlangıç özelliği etkinse bu durum oluşabilir. Daha fazla bilgi için bkz. [güncelleştirmeler Windows 10 ' da hızlı başlangıç ile yüklenemeyebilir](https://support.microsoft.com/help/4011287/windows-updates-not-install-with-fast-startup).
 
-## <a name="evaluate-software-updates-after-a-servicing-stack-update"></a><a name="bkmk_ssu"></a>Bakım yığını güncelleştirmesinden sonra yazılım güncelleştirmelerini değerlendir
+## <a name="evaluate-software-updates-after-a-servicing-stack-update"></a><a name="bkmk_ssu"></a> Bakım yığını güncelleştirmesinden sonra yazılım güncelleştirmelerini değerlendir
 <!--4639943-->
 Sürüm 2002 ' den başlayarak Configuration Manager, bir hizmet yığını güncelleştirmesinin (SSU) birden çok güncelleştirme için bir yüklemenin parçası olup olmadığını algılar. Bir SSU algılandığında, önce yüklenir. SSU 'yı yükledikten sonra, kalan güncelleştirmeleri yüklemek için bir yazılım güncelleştirme değerlendirme çevrimi çalışır. Bu değişiklik, bakım yığını güncelleştirmesinden sonra bağımlı bir toplu güncelleştirmenin yüklenmesine izin verir. Cihazın yüklemeler arasında yeniden başlatılması gerekmez ve ek bir bakım penceresi oluşturmanız gerekmez. SSUs öncelikle yalnızca Kullanıcı tarafından başlatılan yüklemeler için yüklenir. Örneğin, bir kullanıcı yazılım merkezinden birden çok güncelleştirme için bir yükleme başlatırsa, önce SSU yüklenmemiş olabilir. Configuration Manager sürüm 2002 kullanılırken Windows Server işletim sistemleri için önce SSUs yüklemesi kullanılamaz. <!--7813007-->Bu işlevsellik, Windows Server işletim sistemleri için Configuration Manager sürüm 2006 ' ye eklenmiştir.
 

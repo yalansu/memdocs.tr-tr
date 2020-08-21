@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 076a4b6d1bf5773287d4a0b32109023039a3b399
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: c20f5e883c1b33c90218532dd6ae31f510fd8294
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546425"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695044"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>İnternet tabanlı cihazları ortak yönetim için hazırlama
 
@@ -27,7 +27,7 @@ Yeni Windows 10 cihazları için Autopilot hizmetini kullanarak, kutudan Out den
 
 Daha fazla bilgi için bkz. [Windows Autopilot 'e genel bakış](../../autopilot/windows-autopilot.md).
 
-Cihazlarınızı Azure AD 'ye katılarak Intune 'a otomatik olarak kaydedilecek şekilde yapılandırmak için bkz. [Microsoft Intune Için Windows cihazlarını kaydetme](https://docs.microsoft.com/intune/windows-enroll).  
+Cihazlarınızı Azure AD 'ye katılarak Intune 'a otomatik olarak kaydedilecek şekilde yapılandırmak için bkz. [Microsoft Intune Için Windows cihazlarını kaydetme](/intune/windows-enroll).  
 
 ### <a name="gather-information-from-configuration-manager"></a>Configuration Manager bilgi toplayın
 
@@ -41,7 +41,7 @@ Intune tarafından gereken cihaz bilgilerini toplamak ve raporlamak için Config
 
 4. Dosyayı kaydettikten sonra, verileri Intune 'a yükleyin.  
 
-Daha fazla bilgi için bkz. [Intune 'da cihaz ekleme](https://docs.microsoft.com/intune/enrollment-autopilot#add-devices).
+Daha fazla bilgi için bkz. [Intune 'da cihaz ekleme](/intune/enrollment-autopilot#add-devices).
 
 ### <a name="autopilot-for-existing-devices"></a>Var olan cihazlar için Autopilot
 <!--1358333-->
@@ -65,7 +65,7 @@ Daha fazla bilgi için bkz. [var olan cihazlar Için Windows Autopilot görev s�
 
 3. **Etkinleştirme** sekmesinde komut satırını kopyalayın. Sonraki işlem için kaydetmek üzere not defteri 'ne yapıştırın.  
 
-Aşağıdaki komut satırı bir örnektir:`CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC"`
+Aşağıdaki komut satırı bir örnektir: `CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC"`
 
 <!--1358215-->
 Ortamınız için hangi komut satırı özelliklerine ihtiyacınız olduğuna karar verin:  

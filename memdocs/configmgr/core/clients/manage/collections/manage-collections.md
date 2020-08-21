@@ -10,12 +10,12 @@ ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2fc8347ae766cbd16075ef4170efa2f8042371f8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 063ce963e805651ffd795e830d2b21dfed6fc043
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714342"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693140"
 ---
 # <a name="how-to-manage-collections-in-configuration-manager"></a>Configuration Manager koleksiyonları yönetme
 
@@ -28,7 +28,7 @@ Configuration Manager içindeki koleksiyonlara yönelik yönetim görevlerini ge
 
 
 
-## <a name="how-to-manage-device-collections"></a><a name="bkmk_device"></a>Cihaz koleksiyonlarını yönetme  
+## <a name="how-to-manage-device-collections"></a><a name="bkmk_device"></a> Cihaz koleksiyonlarını yönetme  
 
 **Varlıklar ve Uyumluluk** çalışma alanında **Cihaz Koleksiyonları**’nı, yönetilecek koleksiyonu seçin ve ardından bir yönetim görevini seçin.  
 
@@ -128,7 +128,7 @@ Seçili koleksiyonu, **Cihaz Koleksiyonları** düğümündeki başka bir klasö
 Daha fazla bilgi için bkz. [koleksiyon özellikleri](#BKMK_CollProp).  
 
 
-## <a name="how-to-manage-user-collections"></a><a name="bkmk_user"></a>Kullanıcı koleksiyonlarını yönetme  
+## <a name="how-to-manage-user-collections"></a><a name="bkmk_user"></a> Kullanıcı koleksiyonlarını yönetme  
 
 **Varlıklar ve Uyumluluk** çalışma alanında **Kullanıcı Koleksiyonları**’nı, yönetilecek koleksiyonu ve ardından bir yönetim görevini seçin.  
 
@@ -142,12 +142,12 @@ Daha fazla bilgi için bkz. [koleksiyon özellikleri](#BKMK_CollProp).
 - **Benzeşim İsteklerini Yönet**  
 - **Üyeliği Güncelleştir**  
 - **Kaynak Ekle**  
-- **Dışarı aktar**  
+- **Dışarı Aktarma**  
 - **Kopyala**  
 - **Yenile**  
-- **Sil**  
+- **Silme**  
 - **Dağıtımı Benzet**  
-- **Dağıt**  
+- **Dağıtma**  
     - **Uygulama**  
     - **Program**  
     - **Yapılandırma temeli**
@@ -188,32 +188,32 @@ Koleksiyon üyeliği sonuçlarını Azure Active Directory gruplarıyla eşitler
 
 #### <a name="alerts"></a>Uyarılar 
 İstemci durumu ve Endpoint Protection için uyarıların ne zaman oluşturulduğunu yapılandırın. Daha fazla bilgi için bkz. [istemci durumunu yapılandırma](../../deploy/configure-client-status.md) ve [Endpoint Protection izleme](../../../../protect/deploy-use/monitor-endpoint-protection.md).  
-## <a name="using-powershell"></a><a name="bkmk_powershell"></a>PowerShell 'i kullanma
+## <a name="using-powershell"></a><a name="bkmk_powershell"></a> PowerShell 'i kullanma
 
 PowerShell, koleksiyonları yönetmek için kullanılabilir.  Daha fazla bilgi için bkz.
 
-* [-CMCollection 'ı al](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollection)
-* [Set-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmcollection)
-* [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
-* [-CMCollection 'ı Kopyala](https://docs.microsoft.com/powershell/module/configurationmanager/copy-cmcollection)
-* [Remove-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollection)
-* [Import-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmcollection)
-* [Dışarı aktarma-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/export-cmcollection)
-* [Get-CMCollectionMember](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionmember)
-* [Get-CMCollectionSetting](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionsetting)
-* [Invoke-CMCollectionUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/invoke-cmcollectionupdate)
-* [Add-CMCollectionMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmcollectionmembershiprule)
-* [Set-CMCollectionPowerManagement](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmcollectionpowermanagement)
-* [Get-CMCollectionMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionmembershiprule)
-* [Remove-CMCollectionMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionmembershiprule)
-* [Get-CMCollectionDirectMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectiondirectmembershiprule)
-* [Get-CMCollectionQueryMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionquerymembershiprule)
-* [Get-CMCollectionIncludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionincludemembershiprule)
-* [Add-Cmcollectiontoyönetitiveuser](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmcollectiontoadministrativeuser)
-* [Remove-CMCollectionQueryMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionquerymembershiprule)
-* [Remove-CMCollectionDirectMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectiondirectmembershiprule)
-* [Get-CMCollectionExcludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionexcludemembershiprule)
-* [Add-CMCollectionToDistributionPointGroup](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmcollectiontodistributionpointgroup)
-* [Remove-CMCollectionIncludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionincludemembershiprule)
-* [Remove-CMCollectionExcludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionexcludemembershiprule)
-* [Remove-CMCollectionFromAdministrativeUser](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionfromadministrativeuser)
+* [-CMCollection 'ı al](/powershell/module/configurationmanager/get-cmcollection)
+* [Set-CMCollection](/powershell/module/configurationmanager/set-cmcollection)
+* [New-CMCollection](/powershell/module/configurationmanager/new-cmcollection)
+* [-CMCollection 'ı Kopyala](/powershell/module/configurationmanager/copy-cmcollection)
+* [Remove-CMCollection](/powershell/module/configurationmanager/remove-cmcollection)
+* [Import-CMCollection](/powershell/module/configurationmanager/import-cmcollection)
+* [Dışarı aktarma-CMCollection](/powershell/module/configurationmanager/export-cmcollection)
+* [Get-CMCollectionMember](/powershell/module/configurationmanager/get-cmcollectionmember)
+* [Get-CMCollectionSetting](/powershell/module/configurationmanager/get-cmcollectionsetting)
+* [Invoke-CMCollectionUpdate](/powershell/module/configurationmanager/invoke-cmcollectionupdate)
+* [Add-CMCollectionMembershipRule](/powershell/module/configurationmanager/add-cmcollectionmembershiprule)
+* [Set-CMCollectionPowerManagement](/powershell/module/configurationmanager/set-cmcollectionpowermanagement)
+* [Get-CMCollectionMembershipRule](/powershell/module/configurationmanager/get-cmcollectionmembershiprule)
+* [Remove-CMCollectionMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionmembershiprule)
+* [Get-CMCollectionDirectMembershipRule](/powershell/module/configurationmanager/get-cmcollectiondirectmembershiprule)
+* [Get-CMCollectionQueryMembershipRule](/powershell/module/configurationmanager/get-cmcollectionquerymembershiprule)
+* [Get-CMCollectionIncludeMembershipRule](/powershell/module/configurationmanager/get-cmcollectionincludemembershiprule)
+* [Add-Cmcollectiontoyönetitiveuser](/powershell/module/configurationmanager/add-cmcollectiontoadministrativeuser)
+* [Remove-CMCollectionQueryMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionquerymembershiprule)
+* [Remove-CMCollectionDirectMembershipRule](/powershell/module/configurationmanager/remove-cmcollectiondirectmembershiprule)
+* [Get-CMCollectionExcludeMembershipRule](/powershell/module/configurationmanager/get-cmcollectionexcludemembershiprule)
+* [Add-CMCollectionToDistributionPointGroup](/powershell/module/configurationmanager/add-cmcollectiontodistributionpointgroup)
+* [Remove-CMCollectionIncludeMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionincludemembershiprule)
+* [Remove-CMCollectionExcludeMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionexcludemembershiprule)
+* [Remove-CMCollectionFromAdministrativeUser](/powershell/module/configurationmanager/remove-cmcollectionfromadministrativeuser)

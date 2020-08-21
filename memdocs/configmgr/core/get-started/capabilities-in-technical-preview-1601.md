@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: be1401f28ccbd15de2561a19169ed67a81a91550
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 1e86f331531d166e30ec7284d3852930fb3e62af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526041"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695826"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Configuration Manager için Technical Preview 1601 ' deki yetenekler
 
@@ -57,7 +57,7 @@ Bu makalede, sürüm 1601 Configuration Manager için Technical Preview 'da kull
 
 **Aşağıda, bu sürümle deneyebilmeniz için kullanabileceğiniz yeni özellikler verilmiştir.**  
 
-##  <a name="improvements-to-microsoft-intune-integration"></a><a name="bkmk_hybrid1"></a>Microsoft Intune tümleştirme geliştirmeleri  
+##  <a name="improvements-to-microsoft-intune-integration"></a><a name="bkmk_hybrid1"></a> Microsoft Intune tümleştirme geliştirmeleri  
 1601 Technical Preview sürümünde aşağıdaki özellikler için destek ekledik:  
 
 ### <a name="improvements-to-conditional-access"></a>Koşullu erişim geliştirmeleri  
@@ -75,11 +75,11 @@ Bu makalede, sürüm 1601 Configuration Manager için Technical Preview 'da kull
 
     -   Microsoft Intune Aboneliği. Microsoft Intune aboneliğin Configuration Manager konsolunda yapılandırılması gerekir.  
 
-    -   [Azure AD otomatik kaydı Için Önkoşullar](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   [Azure AD otomatik kaydı Için Önkoşullar](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
 
     Seçeneğini kullanmak için, aşağıda açıklanan belirli kurallara sahip Configuration Manager bir uyumluluk ilkesi oluşturmanız ve Intune konsolunda bir koşullu erişim ilkesi ayarlamanız gerekir.  Ayrıca, yalnızca uyumlu bilgisayarların erişimine izin verildiğinden emin olmak için Windows BILGISAYARı gereksinimini **cihazlar uyumlu** olmalıdır seçeneğine ayarlamanız gerekir. Configuration Manager tarafından yönetilen bilgisayarlar için geçerli olan uyumlu ilke kuralları aşağıda verilmiştir.  
 
-    -   **Azure ActiveDirectory 'de kayıt gerektir:** Bu kural, kullanıcının cihazının Azure AD 'ye katılıp katılmadığını denetler ve yoksa cihaz otomatik olarak Azure AD 'ye kaydedilir. Otomatik kayıt yalnızca Windows 8.1’de desteklenir. Windows 7 bilgisayarlar için otomatik kayıt gerçekleştirmek üzere bir MSI dağıtın. Daha fazla bilgi için [buraya](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)bakın.  
+    -   **Azure ActiveDirectory 'de kayıt gerektir:** Bu kural, kullanıcının cihazının Azure AD 'ye katılıp katılmadığını denetler ve yoksa cihaz otomatik olarak Azure AD 'ye kaydedilir. Otomatik kayıt yalnızca Windows 8.1’de desteklenir. Windows 7 bilgisayarlar için otomatik kayıt gerçekleştirmek üzere bir MSI dağıtın. Daha fazla bilgi için [buraya](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1)bakın.  
 
     -   **Belirli bir gün sayısından daha eski bir son tarihe sahip tüm gerekli güncelleştirmeler:** Bu kural, kullanıcının cihazında, sizin belirttiğiniz son tarih ve yetkisiz kullanım süresi içinde gerekli tüm güncelleştirmelerin ( **gerekli otomatik güncelleştirmeler** kuralında belirtilir) olup olmadığını denetler ve bekleyen gerekli güncelleştirmeleri otomatik olarak yükler.  
 
@@ -98,7 +98,7 @@ Bu makalede, sürüm 1601 Configuration Manager için Technical Preview 'da kull
 
     -   **Otomatik güncelleştirmeleri gerektir:** Güncelleştirmelerin otomatik olarak yüklenmesine izin vermek için Windows 8.1 veya üzeri cihazları zorunlu kılabilir ve ayrıca yüklü olan güncelleştirmelerin sınıfını belirtebilirsiniz.  Aşağıdakilerden birini seçebilirsiniz: yalnızca önemli olarak işaretlenmiş güncelleştirmeleri yükleyebilir veya tüm önerilen güncelleştirmeleri yükleyebilirsiniz.  
 
-         Otomatik Güncelleştirmeler için bir kural oluşturmak üzere **Uyumluluk Ilkesi oluşturma Sihirbazı**' nı açın ve yeni bir kural ekleyin.  Koşul olarak **gereken güncelleştirmelerin minimum sınıflandırmasını** seçin ve değeri kullanılabilir değerlerden birine ayarlayın: **hiçbiri**, **Önerilen**ve **önemli**.  
+         Otomatik Güncelleştirmeler için bir kural oluşturmak üzere **Uyumluluk Ilkesi oluşturma Sihirbazı**' nı açın ve yeni bir kural ekleyin.  Koşul olarak  **gereken güncelleştirmelerin minimum sınıflandırmasını** seçin ve değeri kullanılabilir değerlerden birine ayarlayın: **hiçbiri**, **Önerilen**ve **önemli**.  
 
         -   **Hiçbiri:** Güncelleştirmeler otomatik olarak yüklenmez.  
 
@@ -123,7 +123,7 @@ Bu makalede, sürüm 1601 Configuration Manager için Technical Preview 'da kull
 
      Bu seçeneği kullanmak için şirket içi Exchange için **koşullu erişim Ilkesini Yapılandırma Sihirbazı** ' nın **genel** sayfasına gidin.  
 
-##  <a name="client-online-status"></a><a name="bkmk_clientStatus"></a>İstemci çevrimiçi durumu  
+##  <a name="client-online-status"></a><a name="bkmk_clientStatus"></a> İstemci çevrimiçi durumu  
 Technical Preview 1601 ' den başlayarak, bir istemcinin Configuration Manager konsolunda çevrimiçi veya çevrimdışı olduğunu bir bakışta belirleyebilirsiniz. Konsol cihaz dökümlerinin güncelleştirilmiş simgeleri ve sütunları ile, sorun alanını ve ilgilenmeniz gerekebilecek diğer sorunları belirlemek için ortamınızdaki istemcilerin durumunu değerlendirebilirsiniz.  
 
 İstemci şu anda Configuration Manager bir yönetim noktası site sistemi rolüne bağlıysa çevrimiçi hale gelir. Yönetim noktası istemciden ping benzeri iletiler aldığı sürece, durumu çevrimiçi olur. Yönetim, 5 dakika boyunca bir ileti almazsa, istemcinin durumu çevrimdışı olarak değişir.  
@@ -136,7 +136,7 @@ Technical Preview 1601 ' den başlayarak, bir istemcinin Configuration Manager k
 |![istemciler için çevrimdışı durum simgesi](media/offline-status-icon.png)|İstemci çevrimdışı.|  
 |![istemciler için bilinmeyen durum simgesi](media/unknown-status-icon.png)|İstemci durumu bilinmiyor.|  
 
-### <a name="prerequisites"></a>Önkoşullar  
+### <a name="prerequisites"></a>Ön koşullar  
  İstemci çevrimiçi durumunun önkoşulları yok. Teknik Önizleme 1601 Configuration Manager yüklendiği anda kullanmaya başlayabilirsiniz.  
 
 ### <a name="limitations"></a>Sınırlamalar  
@@ -156,7 +156,7 @@ Technical Preview 1601 ' den başlayarak, bir istemcinin Configuration Manager k
 
    İstemci durumundaki son değişiklikleri göstermek için konsolu yenileyin.  
 
-##  <a name="improvements-to-application-management"></a><a name="bkmk_appmgmt1601"></a>Uygulama yönetimi geliştirmeleri  
+##  <a name="improvements-to-application-management"></a><a name="bkmk_appmgmt1601"></a> Uygulama yönetimi geliştirmeleri  
  1601 Technical Preview sürümünde aşağıdaki özellikler için destek ekledik:  
 
 ### <a name="manage-volume-purchased-apps-for-ios-devices"></a>iOS cihazları için toplu satın alınan uygulamaları yönetme  
@@ -191,7 +191,7 @@ Technical Preview 1601 ' den başlayarak, bir istemcinin Configuration Manager k
 
 -   **Yazılım dağıtma** Sihirbazı ' nda, **uygulama yapılandırma ilkesi** sayfasında, oluşturduğunuz uygulama yapılandırma ilkesini uygulamadan uyumlu bir dağıtım türüyle ilişkilendirin.  
 
-##  <a name="improvements-to-compliance-settings"></a><a name="bkmk_compliance1601"></a>Uyumluluk ayarları geliştirmeleri  
+##  <a name="improvements-to-compliance-settings"></a><a name="bkmk_compliance1601"></a> Uyumluluk ayarları geliştirmeleri  
  1601 Technical Preview sürümünde aşağıdaki özellikler için destek ekledik:  
 
 ### <a name="microsoft-edge-browser-settings"></a>Microsoft Edge tarayıcı ayarları  
@@ -213,4 +213,4 @@ Technical Preview 1601 ' den başlayarak, bir istemcinin Configuration Manager k
 
  Yeni ayarları görmek için, **yapılandırma öğesi oluştur** sihirbazının yapılandırma öğesi **cihaz ayarları** sayfasında **BILGI noktası modu-Samsung KNOX** ' u seçin.  
 
- Daha fazla bilgi için bkz. [Configuration Manager istemcisi olmadan yönetilen Windows 8.1 ve Windows 10 cihazları için yapılandırma öğeleri oluşturma](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
+ Daha fazla bilgi için bkz. [Configuration Manager istemcisi olmadan yönetilen Windows 8.1 ve Windows 10 cihazları için yapılandırma öğeleri oluşturma](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).

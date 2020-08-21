@@ -10,12 +10,12 @@ ms.assetid: 01b30260-f03a-4851-a549-d1b76e8cfc69
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd238319ba064f57911eee58e1299e17a2ce5b60
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: db59ad55c52f8d937b23704af310dc8879fe8a6d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713845"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692885"
 ---
 # <a name="evaluate-configuration-manager-by-building-your-own-lab-environment"></a>Kendi laboratuvar ortamınızı oluşturarak Configuration Manager değerlendirin
 
@@ -47,8 +47,8 @@ ms.locfileid: "81713845"
 
  Bu laboratuvarı oluşturduğunuzda çalışabilecek işlevsel bir ortama sahip olacaksınız. Ancak bu ortam sistem performansı, sabit disk alanı yönetimi ve SQL Server depolama gibi faktörlerle iyileştirilmez.  
 
-##  <a name="recommended-reading-before-you-build-the-lab"></a><a name="BKMK_EvalRec"></a>Laboratuvar oluşturmadan önce okumanız önerilir  
- [Configuration Manager belgelerinde](https://docs.microsoft.com/sccm/)çok sayıda içerik mevcuttur. Laboratuvarı oluşturmaya başlamadan önce bu kitaplıktan aşağıdaki konuları okumanızı öneririz:  
+##  <a name="recommended-reading-before-you-build-the-lab"></a><a name="BKMK_EvalRec"></a> Laboratuvar oluşturmadan önce okumanız önerilir  
+ [Configuration Manager belgelerinde](/sccm/)çok sayıda içerik mevcuttur. Laboratuvarı oluşturmaya başlamadan önce bu kitaplıktan aşağıdaki konuları okumanızı öneririz:  
 
 -   [Configuration Manager giriş](../../core/understand/introduction.md)bölümünde Configuration Manager konsolu, Son Kullanıcı portalları ve örnek senaryolar hakkında temel kavramlar öğrenin.  
 
@@ -60,4 +60,4 @@ ms.locfileid: "81713845"
 
 -   İçerik [yönetimi kavramlarıyla](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)ilgili içerik yönetimi hakkında bilgi edinin.  
 
--   [İstemcilerin Configuration Manager için site kaynaklarını ve hizmetleri nasıl bulduklarını anlamak için](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)dağıtımınızın tamamında günlük görevleri başarıyla desteklemeyi öğrenin.  
+-   [İstemcilerin Configuration Manager için site kaynaklarını ve hizmetleri nasıl bulduklarını anlamak için](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)dağıtımınızın tamamında günlük görevleri başarıyla desteklemeyi öğrenin.

@@ -5,12 +5,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: include
 ms.date: 08/11/2020
-ms.openlocfilehash: ca735cde1da5d563b9a7772fdaa55834e307312e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2ae953f6fb01f42c8140407c551ddeb3a9f39c70
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125975"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692697"
 ---
 ### <a name="server-connectivity-endpoints"></a>Sunucu bağlantısı uç noktaları
 
@@ -42,15 +42,15 @@ Hizmet bağlantı noktasının aşağıdaki uç noktalarla iletişim kurması ge
 |-------|-----------|-----------|
 | 1 | `https://settings-win.data.microsoft.com` | Uyumluluk güncelleştirmesinin Microsoft 'a veri göndermesini sağlar. |
 | 2 | `http://adl.windows.com` | Uyumluluk güncelleştirmesinin Microsoft 'un en son uyumluluk verilerini almasına izin verir. |
-| 3 | `https://watson.telemetry.microsoft.com` | [Windows hata bildirimi (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Windows 10, sürüm 1803 veya önceki sürümlerde dağıtım sistem durumunu izlemek için gereklidir. |
-| 4 | `https://umwatsonc.events.data.microsoft.com` | [Windows hata bildirimi (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Windows 10, sürüm 1809 veya sonraki sürümlerde cihaz sistem durumu raporları için gereklidir. |
-| 5 | `https://ceuswatcab01.blob.core.windows.net` | [Windows hata bildirimi (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Windows 10, sürüm 1809 veya sonraki sürümlerde dağıtım durumunu izlemek için gereklidir. |
-| 6 | `https://ceuswatcab02.blob.core.windows.net` | [Windows hata bildirimi (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Windows 10, sürüm 1809 veya sonraki sürümlerde dağıtım durumunu izlemek için gereklidir. |
-| 7 | `https://eaus2watcab01.blob.core.windows.net` | [Windows hata bildirimi (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Windows 10, sürüm 1809 veya sonraki sürümlerde dağıtım durumunu izlemek için gereklidir. |
-| 8 | `https://eaus2watcab02.blob.core.windows.net` | [Windows hata bildirimi (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Windows 10, sürüm 1809 veya sonraki sürümlerde dağıtım durumunu izlemek için gereklidir. |
-| 9 | `https://weus2watcab01.blob.core.windows.net` | [Windows hata bildirimi (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Windows 10, sürüm 1809 veya sonraki sürümlerde dağıtım durumunu izlemek için gereklidir. |
-| 10 | `https://weus2watcab02.blob.core.windows.net` | [Windows hata bildirimi (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Windows 10, sürüm 1809 veya sonraki sürümlerde dağıtım durumunu izlemek için gereklidir. |
-| 11 | `https://kmwatsonc.events.data.microsoft.com` | [Çevrimiçi Kilitlenme Analizi (Oca)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis). Windows 10, sürüm 1809 veya sonraki sürümlerde cihaz sistem durumu raporları için gereklidir. |
-| 12 | `https://oca.telemetry.microsoft.com`  | [Çevrimiçi Kilitlenme Analizi (Oca)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis). Windows 10, sürüm 1803 veya önceki sürümlerde dağıtım sistem durumunu izlemek için gereklidir. |
-| 13 | `https://login.live.com` | Masaüstü analizi için daha güvenilir bir cihaz kimliği sağlamak için gereklidir. <br> <br>Son Kullanıcı Microsoft hesabı erişimini devre dışı bırakmak için, bu uç noktayı engellemek yerine ilke ayarlarını kullanın. Daha fazla bilgi için bkz. [enterprise Microsoft hesabı](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication). |
+| 3 | `https://watson.telemetry.microsoft.com` | [Windows hata bildirimi (WER)](/windows/win32/wer/windows-error-reporting). Windows 10, sürüm 1803 veya önceki sürümlerde dağıtım sistem durumunu izlemek için gereklidir. |
+| 4 | `https://umwatsonc.events.data.microsoft.com` | [Windows hata bildirimi (WER)](/windows/win32/wer/windows-error-reporting). Windows 10, sürüm 1809 veya sonraki sürümlerde cihaz sistem durumu raporları için gereklidir. |
+| 5 | `https://ceuswatcab01.blob.core.windows.net` | [Windows hata bildirimi (WER)](/windows/win32/wer/windows-error-reporting). Windows 10, sürüm 1809 veya sonraki sürümlerde dağıtım durumunu izlemek için gereklidir. |
+| 6 | `https://ceuswatcab02.blob.core.windows.net` | [Windows hata bildirimi (WER)](/windows/win32/wer/windows-error-reporting). Windows 10, sürüm 1809 veya sonraki sürümlerde dağıtım durumunu izlemek için gereklidir. |
+| 7 | `https://eaus2watcab01.blob.core.windows.net` | [Windows hata bildirimi (WER)](/windows/win32/wer/windows-error-reporting). Windows 10, sürüm 1809 veya sonraki sürümlerde dağıtım durumunu izlemek için gereklidir. |
+| 8 | `https://eaus2watcab02.blob.core.windows.net` | [Windows hata bildirimi (WER)](/windows/win32/wer/windows-error-reporting). Windows 10, sürüm 1809 veya sonraki sürümlerde dağıtım durumunu izlemek için gereklidir. |
+| 9 | `https://weus2watcab01.blob.core.windows.net` | [Windows hata bildirimi (WER)](/windows/win32/wer/windows-error-reporting). Windows 10, sürüm 1809 veya sonraki sürümlerde dağıtım durumunu izlemek için gereklidir. |
+| 10 | `https://weus2watcab02.blob.core.windows.net` | [Windows hata bildirimi (WER)](/windows/win32/wer/windows-error-reporting). Windows 10, sürüm 1809 veya sonraki sürümlerde dağıtım durumunu izlemek için gereklidir. |
+| 11 | `https://kmwatsonc.events.data.microsoft.com` | [Çevrimiçi Kilitlenme Analizi (Oca)](/windows/win32/dxtecharts/crash-dump-analysis). Windows 10, sürüm 1809 veya sonraki sürümlerde cihaz sistem durumu raporları için gereklidir. |
+| 12 | `https://oca.telemetry.microsoft.com`  | [Çevrimiçi Kilitlenme Analizi (Oca)](/windows/win32/dxtecharts/crash-dump-analysis). Windows 10, sürüm 1803 veya önceki sürümlerde dağıtım sistem durumunu izlemek için gereklidir. |
+| 13 | `https://login.live.com` | Masaüstü analizi için daha güvenilir bir cihaz kimliği sağlamak için gereklidir. <br> <br>Son Kullanıcı Microsoft hesabı erişimini devre dışı bırakmak için, bu uç noktayı engellemek yerine ilke ayarlarını kullanın. Daha fazla bilgi için bkz. [enterprise Microsoft hesabı](/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication). |
 | 14 | `https://v20.events.data.microsoft.com` | Bağlı kullanıcı deneyimi ve tanılama bileşeni uç noktası. |

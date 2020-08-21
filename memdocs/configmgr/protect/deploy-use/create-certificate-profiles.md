@@ -10,12 +10,12 @@ ms.assetid: 634d612c-92d7-4c03-873a-b2e730c9a72d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 159afbf2c5aae9516fc5244ee06a2aa484290c20
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84f1ea48887f89cf06ed4b41d0de0dfc24e9d508
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721762"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697135"
 ---
 # <a name="create-certificate-profiles"></a>Sertifika profilleri oluşturma
 
@@ -114,7 +114,7 @@ Sertifika profili oluşturma sihirbazının **SCEP kayıt** sayfasını doldurun
 
   - **Güvenilir Platform Modülü'ne (TPM) yükle, yoksa başarısız kıl**: Anahtarı TPM'ye yükler. TPM modülü yoksa, yükleme başarısız olur.  
 
-  - **İş Için Windows Hello 'Ya yüklemek istemiyorsanız başarısız oldu**: Bu seçenek Windows 10 cihazlarında kullanılabilir. Bu, sertifikayı Multi-Factor Authentication tarafından korunan Iş için Windows Hello Mağazası 'nda depolamanıza olanak tanır. Daha fazla bilgi için bkz. [iş Için Windows Hello](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).
+  - **İş Için Windows Hello 'Ya yüklemek istemiyorsanız başarısız oldu**: Bu seçenek Windows 10 cihazlarında kullanılabilir. Bu, sertifikayı Multi-Factor Authentication tarafından korunan Iş için Windows Hello Mağazası 'nda depolamanıza olanak tanır. Daha fazla bilgi için bkz. [iş Için Windows Hello](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
     > [!NOTE]  
     > Bu seçenek, sertifika özellikleri sayfasındaki Gelişmiş anahtar kullanımı için akıllı kartla oturum açmayı desteklemez.
@@ -138,10 +138,10 @@ Sertifika Profili Oluşturma Sihirbazı'nın **Sertifika Özellikleri** sayfası
 
   - Sertifika şablonunun adını *yazarsanız* , adın sertifika şablonlarından biriyle tam olarak eşleştiğinden emin olun. NDES sunucusunun kayıt defterinde listelenen adlarla aynı olmalıdır. Sertifika şablonunun görünen adını değil, sertifika şablonu adını belirttiğinizden emin olun.  
 
-    Sertifika şablonlarının adlarını bulmak için aşağıdaki kayıt defteri anahtarına gidin: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP`. **EncryptionTemplate**, **Generaldeðersetemplate**ve **SignatureTemplate**için değerler olarak sertifika şablonlarını listeler. Varsayılan olarak, tüm üç sertifika şablonu için değer **IPSECIntermediateOffline**'dır, bu, **IPSec (Çevrimdışı talep)** şablon ekran adına eşlenir.  
+    Sertifika şablonlarının adlarını bulmak için aşağıdaki kayıt defteri anahtarına gidin: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP` . **EncryptionTemplate**, **Generaldeðersetemplate**ve **SignatureTemplate**için değerler olarak sertifika şablonlarını listeler. Varsayılan olarak, tüm üç sertifika şablonu için değer **IPSECIntermediateOffline**'dır, bu, **IPSec (Çevrimdışı talep)** şablon ekran adına eşlenir.  
 
     > [!WARNING]  
-    > Sertifika şablonunun adını yazdığınızda Configuration Manager, sertifika şablonunun içeriğini doğrulayamaz. Sertifika şablonunun desteklemediği seçenekleri belirleyebilirsiniz, bu durum başarısız bir sertifika isteğine neden olabilir. Bu davranış gerçekleştiğinde, CPR. log dosyasında W3wp. exe için, sertifika imzalama isteği (CSR) ve çekişme ile ilgili şablon adının eşleşeceğini belirten bir hata iletisi görürsünüz.  
+    > Sertifika şablonunun adını yazdığınızda Configuration Manager, sertifika şablonunun içeriğini doğrulayamaz. Sertifika şablonunun desteklemediği seçenekleri belirleyebilirsiniz, bu durum başarısız bir sertifika isteğine neden olabilir. Bu davranış gerçekleştiğinde, CPR. log dosyasında, sertifika imzalama isteği (CSR) ve güçlük ile ilgili şablon adının eşleşmediğinden w3wp.exe için bir hata iletisi görürsünüz.  
     >
     > **Generalstasetemplate** değeri için belirtilen sertifika şablonunun adını yazdığınızda, bu sertifika profili için **anahtar şifreleme** ve **dijital imza** seçeneklerini belirleyin. Bu sertifika profilinde yalnızca **anahtar şifreleme** seçeneğini etkinleştirmek Istiyorsanız, **EncryptionTemplate** anahtarı için sertifika şablonu adını belirtin. Benzer şekilde, bu sertifika profilinde yalnızca **Dijital imza** seçeneğini etkinleştirmek istiyorsanız, **SignatureTemplate** anahtarı için sertifika şablonu adını belirtin.  
 
@@ -157,7 +157,7 @@ Sertifika Profili Oluşturma Sihirbazı'nın **Sertifika Özellikleri** sayfası
 - **Sertifika geçerlilik süresi**: veren CA 'da özel bir geçerlilik süresi ayarlarsanız, sertifikanın süresi dolmadan önce kalan sürenin miktarını belirtin.
 
     > [!TIP]
-    > Aşağıdaki komut satırı ile özel bir geçerlilik süresi ayarlayın:`certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE`
+    > Aşağıdaki komut satırı ile özel bir geçerlilik süresi ayarlayın: `certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE`
     > Bu komut hakkında daha fazla bilgi için bkz. [sertifika altyapısı](certificate-infrastructure.md).  
 
     Belirtilen sertifika şablonundaki geçerlilik süresinden düşük bir değer belirtebilirsiniz, ancak daha yüksek olabilir. Örneğin, sertifika şablonunda sertifika geçerlilik süresi iki yılsa, beş yıl değerini değil, bir yıl değeri belirtebilirsiniz. Değerin, yayımlayan sertifika yetkilisinin sertifikası için kalan geçerlilik süresinden de düşük olması gerekir.  

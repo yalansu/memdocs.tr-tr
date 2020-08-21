@@ -10,12 +10,12 @@ ms.assetid: ed4dc65e-e5d5-4f75-88ac-f4849ec8fc10
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f22ba6f29e0c85e19ab66d1b052085db5303cc2c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 055d79c56417135e2b08a31bc05a3ca30b5fd581
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710828"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695112"
 ---
 # <a name="third-party-mdm-coexistence-with-configuration-manager"></a>Configuration Manager ile üçüncü taraf MDM birlikte bulunma
 
@@ -23,12 +23,12 @@ Windows 10 cihazlarını aynı anda hem Configuration Manager hem de Microsoft I
 
 Configuration Manager istemcisi, Windows 10 sürüm 1709 veya üstünü çalıştıran bir cihazda bir üçüncü taraf MDM hizmeti ile birlikte çalışabilir ve Azure Active Directory birleştirilir. Cihaz aşağıdaki türlerden biri olabilir:
 
-- [Azure AD-yalnızca birleştirilmiş](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan) . (Bu tür bazen "bulut etki alanına katılmış" olarak adlandırılır)  
+- [Azure AD-yalnızca birleştirilmiş](/azure/active-directory/devices/azureadjoin-plan) . (Bu tür bazen "bulut etki alanına katılmış" olarak adlandırılır)  
 
-- Cihazın şirket içi Active Directory katıldığı ve Azure Active Directory kaydedildiği [karma etki alanına katılmış](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).  
+- Cihazın şirket içi Active Directory katıldığı ve Azure Active Directory kaydedildiği [karma etki alanına katılmış](/azure/active-directory/devices/hybrid-azuread-join-plan).  
 
 > [!Note]  
-> [Kişisel cihazları](https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device)desteklemez.  
+> [Kişisel cihazları](/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device)desteklemez.  
 
 Configuration Manager istemcisi bir üçüncü taraf MDM hizmetinin de cihazı yönetiyor algıladığında, Configuration Manager içindeki belirli iş yüklerini otomatik olarak devre dışı bırakır. Bu davranış MDM hizmetinin bu işlevleri almasına izin verir. Ayrıca, istemci üzerinde, cihazı ve Kullanıcı deneyimini olumsuz yönde etkileyebilecek çakışan ayarları da engeller. Configuration Manager içindeki aşağıdaki iş yükleri bu durumda devre dışı bırakılır:
 

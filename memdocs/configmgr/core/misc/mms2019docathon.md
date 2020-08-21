@@ -9,12 +9,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e671118578d059e2b8416e6854a701ce7c405c0f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c6e4c0f7c6a1be519a33343508da3bd72cd2cd48
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718528"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695588"
 ---
 # <a name="mms-2019-docathon"></a>MMS 2019 Docathon
 
@@ -28,7 +28,7 @@ Neden katılırsanız? Docs.microsoft.com, GitHub tarafından desteklenen Micros
 - Gerçek dünya Kılavuzu ve ipuçları
 - İçerik incelemesi, yenilik
 
-## <a name="set-up"></a>Ayarla
+## <a name="set-up"></a>Kurulum
 
 Henüz katkıda bulunmak üzere ayarlanmamışsa, bu adımları önceden yapın.
 
@@ -51,7 +51,7 @@ Henüz katkıda bulunmak üzere ayarlanmamışsa, bu adımları önceden yapın.
 
 - Microsoft çalışanlarının birkaç kez daha gerekli tek seferlik adım ve biraz farklı bir katkı süreci vardır  
 
-Daha fazla bilgi için, docs.microsoft.com katkıda bulunan kılavuzunda [GitHub hesabı kurulumu](https://docs.microsoft.com/contribute/get-started-setup-github) 'na bakın.
+Daha fazla bilgi için, docs.microsoft.com katkıda bulunan kılavuzunda [GitHub hesabı kurulumu](/contribute/get-started-setup-github) 'na bakın.
 
 ## <a name="scope"></a>Kapsam
 
@@ -68,7 +68,7 @@ Ayrıca, diğer docs.microsoft.com içeriklerinizde değişiklik yapmaya da hoş
 [Sorunları nasıl](../understand/use-docs.md#bkmk_docfeedback) ve [katkıda bulunabileceğinizi](../understand/use-docs.md#bkmk_contribute)öğrenmek hakkında bilgi edinin. En temel değişiklikler GitHub tarayıcı deneyimi aracılığıyla yapılabilir.  
 
 > [!Note]  
-> Git ve VSCode ile daha karmaşık iş akışıyla ilgileniyorsanız, bkz. [içerik yazma araçları 'Nı yükler](https://docs.microsoft.com/contribute/get-started-setup-tools). Ve/veya yardım için Aaron/Erik sorma. Aşağıdaki eylemler, daha karmaşık iş akışını kullanma nedenlerinden bazılarıdır:
+> Git ve VSCode ile daha karmaşık iş akışıyla ilgileniyorsanız, bkz. [içerik yazma araçları 'Nı yükler](/contribute/get-started-setup-tools). Ve/veya yardım için Aaron/Erik sorma. Aşağıdaki eylemler, daha karmaşık iş akışını kullanma nedenlerinden bazılarıdır:
 >
 > - Yeni bir makale oluşturun
 > - Görüntü ekleme
@@ -79,8 +79,8 @@ Ayrıca, diğer docs.microsoft.com içeriklerinizde değişiklik yapmaya da hoş
 
 Bu olay için amacınız hakkında düşünce ve planlama yapmayı başlatın. Ne yapmak istiyorsunuz?
 
-- Kapsam içi depolarda var olan sorunları inceleyin. **İyi bir sorun** veya **Yardım** gibi Etiketler, iyi başlangıç noktaları tanımlayabilir. Bu sorunlardan birini eklemek istiyorsanız, **#MMS2019Docathon** ile üzerine yorum yapın ve bunu etiketleyerek @authorsorunu atadıklarından emin olun. Diğer bir deyişle, üzerinde [DIB 'leri çağırın](https://www.merriam-webster.com/words-at-play/word-origin-dibs) . Bu işlemi istediğiniz kadar tekrarlayın.  
-    Örneğin, SCCMDocs ' de, Aaron, makalenin yazardır:`@aczechowski I'm claiming this issue for #MMS2019Docathon`
+- Kapsam içi depolarda var olan sorunları inceleyin. **İyi bir sorun** veya **Yardım** gibi Etiketler, iyi başlangıç noktaları tanımlayabilir. Bu sorunlardan birini eklemek istiyorsanız, **#MMS2019Docathon** ile üzerine yorum yapın ve bunu etiketleyerek @author sorunu atadıklarından emin olun. Diğer bir deyişle, üzerinde [DIB 'leri çağırın](https://www.merriam-webster.com/words-at-play/word-origin-dibs) . Bu işlemi istediğiniz kadar tekrarlayın.  
+    Örneğin, SCCMDocs ' de, Aaron, makalenin yazardır: `@aczechowski I'm claiming this issue for #MMS2019Docathon`
 
 - Bir makaleyle ilgili bir sorun olduğunu biliyoruz, ancak henüz dosyalanmış geri bildirimde bulunmadınız. Diğer bir deyişle, makalenin altındaki **geri bildirim** bölümünde hiçbir şey yoktur. Yeni bir sorun dosyaya, sonra da yukarıdaki yönergeleri kullanarak talep edin.  
 
@@ -134,13 +134,13 @@ Aşağıdaki ödüller, kapsam içi depolarda meşru katkıların sayısına gö
 
 - [Microsoft stili](https://aka.ms/MicrosoftStyle)
 
-    - [Hızlı başlangıç](https://docs.microsoft.com/contribute/style-quick-start)
+    - [Hızlı başlangıç](/contribute/style-quick-start)
 
-    - [Microsoft stili ve sesi için ilk 10 İpucu](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)
+    - [Microsoft stili ve sesi için ilk 10 İpucu](/style-guide/top-10-tips-style-voice)
 
-- [Katkıda bulunan Kılavuzu](https://docs.microsoft.com/contribute)
+- [Katkıda bulunan Kılavuzu](/contribute)
 
-- [Docs’ta makale yazmak için Markdown kullanma](https://docs.microsoft.com/contribute/markdown-reference)
+- [Docs’ta makale yazmak için Markdown kullanma](/contribute/markdown-reference)
 
 ## <a name="official-rules"></a>Resmi kurallar
 
@@ -166,7 +166,7 @@ Microsoft Bulut + AI geliştirici Ilişkileri Içeriği & öğrenme MMS 2019 Doc
 
 5. NASıL GIRILIR
 
-    Bir giriş oluşturmak için aşağıdaki GitHub depolarındaki makalelere düzenlemeler iletin: ıntunedocs, SCCMDocs, SCCM-docs-PowerShell-ref. Gönderim süreci hakkında daha fazla bilgi için bkz. [katkıda bulunma](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_contribute).
+    Bir giriş oluşturmak için aşağıdaki GitHub depolarındaki makalelere düzenlemeler iletin: ıntunedocs, SCCMDocs, SCCM-docs-PowerShell-ref. Gönderim süreci hakkında daha fazla bilgi için bkz. [katkıda bulunma](/sccm/core/understand/use-docs#bkmk_contribute).
 
     Bir giriş göndermek için GitHub 'da bir çekme isteği gönderebilirsiniz.
 
@@ -248,10 +248,10 @@ Microsoft Bulut + AI geliştirici Ilişkileri Içeriği & öğrenme MMS 2019 Doc
 
 12. WINLAYıCıLAR LISTESI
 
-    Ödülleri listesi, 9 Mayıs 2019 ' de 30 https://aka.ms/mms2019docathon gün içinde gönderilir.
+    Ödülleri listesi https://aka.ms/mms2019docathon , 9 mayıs 2019 ' de 30 gün içinde gönderilir.
 
 13. GİZLİLİK
 
     Microsoft 'ta gizliliğinizi korumayı taahhüt ediyoruz. Microsoft, bu formda sağladığınız bilgileri, Ürünlerimiz, yükseltmelerimiz ve geliştirmelerimiz hakkındaki önemli bilgileri size bildirmek ve size diğer Microsoft ürün ve hizmetleriyle ilgili bilgiler göndermek için kullanır. Microsoft, sağladığınız hizmetleri veya işlemleri ya da yasalar için gerekli olduğu durumlar dışında, üçüncü taraflarla verdiğiniz bilgileri, izniniz olmadan paylaşmaz. Microsoft kişisel bilgilerinizin güvenliğini sağlamayı taahhüt eder. Kişisel bilgilerinizi yetkisiz erişimden, kullanımdan ve açıklanmaktan korumaya yardımcı olmak üzere çok çeşitli güvenlik teknolojileri ve yordamları kullanırız. Kişisel bilgileriniz, yukarıda açıklanan koşullar dışında, izniniz olmadan şirket dışında hiçbir şekilde paylaşılmaz.
 
-    Microsoft 'un bu bildirime uymadığını düşünüyorsanız, Microsoft Gizlilik Yanıt Merkezi, Microsoft Corporation, One Microsoft Way, Redmond, privrc@microsoft.com WA 98052 e-postası veya posta göndererek Microsoft 'a başvurun.
+    Microsoft 'un bu bildirime uymadığını düşünüyorsanız, Microsoft privrc@microsoft.com Gizlilik Yanıt Merkezi, Microsoft Corporation, One Microsoft Way, Redmond, WA 98052 e-postası veya posta göndererek Microsoft 'a başvurun.

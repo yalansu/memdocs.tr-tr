@@ -10,12 +10,12 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f2ada7bfcef5714d8df3c476a6bbba695dc398e0
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f5b9addd35dd3e9252c1b988de4bb006e9a5bc0d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127282"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694976"
 ---
 # <a name="conditional-access-with-co-management"></a>Ortak yönetim ile koşullu erişim
 
@@ -108,12 +108,11 @@ ATP tümleştirmesi hakkında daha fazla bilgi için bkz. [Microsoft Defender AT
 
 Koşullu erişimi kullanma hakkında daha fazla bilgi için aşağıdaki makalelere bakın: 
 
-- [Azure AD 'de koşullu erişim](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)  
+- [Azure AD 'de koşullu erişim](/azure/active-directory/conditional-access/overview)  
 
-- [Intune cihaz uyumluluk ilkeleri](https://docs.microsoft.com/intune/device-compliance)  
+- [Intune cihaz uyumluluk ilkeleri](/intune/device-compliance)  
 
-- [Intune ile uygulama tabanlı koşullu erişim](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
+- [Intune ile uygulama tabanlı koşullu erişim](/intune/app-based-conditional-access-intune)  
 
 > [!Note]  
-> Koşullu erişim özellikleri, hibrit Azure AD 'ye katılmış cihazlar için hemen kullanılabilir hale gelir. Bu özellikler Multi-Factor Authentication ve hibrit Azure AD JOIN erişim denetimini içerir. Bu davranış, Azure AD özelliklerini temel alır. Intune ve Configuration Manager yapılandırma tabanlı değerlendirmede yararlanmak için ortak Yönetimi etkinleştirin. Bu yapılandırma, uyumlu cihazlar için doğrudan Intune 'dan erişim denetimi sağlar. Ayrıca Intune 'un uyumluluk ilkeleri değerlendirme özelliğini de sağlar.  
-
+> Koşullu erişim özellikleri, hibrit Azure AD 'ye katılmış cihazlar için hemen kullanılabilir hale gelir. Bu özellikler Multi-Factor Authentication ve hibrit Azure AD JOIN erişim denetimini içerir. Bu davranış, Azure AD özelliklerini temel alır. Intune ve Configuration Manager yapılandırma tabanlı değerlendirmede yararlanmak için ortak Yönetimi etkinleştirin. Bu yapılandırma, uyumlu cihazlar için doğrudan Intune 'dan erişim denetimi sağlar. Ayrıca Intune 'un uyumluluk ilkeleri değerlendirme özelliğini de sağlar.

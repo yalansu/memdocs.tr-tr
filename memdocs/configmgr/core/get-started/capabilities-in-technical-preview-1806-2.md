@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b7643c73d2e9dad00e926bdc3db905016c45860a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 062ae289ff53952d670592be6ff0027a91a627d4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905212"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694415"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-configuration-manager"></a>Configuration Manager için Technical Preview 1806,2 ' deki yetenekler
 
@@ -40,7 +40,7 @@ Steps to workaround, if any.
 
 ## <a name="known-issues-in-this-technical-preview"></a>Bu Technical Preview 'da bilinen sorunlar
 
-### <a name="clients-dont-automatically-update"></a><a name="ki_sqlncli"></a>İstemciler otomatik olarak güncelleştirmez
+### <a name="clients-dont-automatically-update"></a><a name="ki_sqlncli"></a> İstemciler otomatik olarak güncelleştirmez
 <!--518760-->
 Sürüm 1806,2 ' e güncelleştirirken site, site sunucusunda bekleyen bir yeniden başlatmaya neden olabilecek SQL Native Client de güncelleştirir. Bu gecikme, belirli dosyaların güncelleştirilmesine neden olur ve bu da otomatik istemci yükseltmesini etkiler.
 
@@ -55,7 +55,7 @@ Sitenizi zaten güncelleştirdiyseniz, otomatik istemci yükseltmesi ve istemci 
 
     Bu konum, istemcilerden erişilebilen bir ağ paylaşımından olabilir.  
 
-3. Yükseltilmiş bir komut isteminden aşağıdaki komut satırını çalıştırın:`C:\Temp\CMUClient\ccmsetup.exe /source:C:\Temp\CMUClient`  
+3. Yükseltilmiş bir komut isteminden aşağıdaki komut satırını çalıştırın: `C:\Temp\CMUClient\ccmsetup.exe /source:C:\Temp\CMUClient`  
 
 Technical Preview sürüm 1806,2 sitenize yeni bir istemci yüklüyorsanız, bu işlemi kullanın. 
 
@@ -65,7 +65,7 @@ Technical Preview sürüm 1806,2 sitenize yeni bir istemci yüklüyorsanız, bu 
 > SMSSITEKODU veya CCMLOGLEVEL gibi komut satırı özelliklerinin kullanımı, ancak var olan bir istemciyi yükseltirken gerekli olmaması gerekir. 
 
 
-### <a name="version-18062-shows-version-1806-in-about-configuration-manager"></a><a name="ki_version"></a>Sürüm 1806,2, yaklaşık Configuration Manager sürümünde 1806 sürümünü gösterir
+### <a name="version-18062-shows-version-1806-in-about-configuration-manager"></a><a name="ki_version"></a> Sürüm 1806,2, yaklaşık Configuration Manager sürümünde 1806 sürümünü gösterir
 <!--518148-->
 Technical Preview sürüm 1806,2 ' e yükselttikten sonra, konsolunun sol üst köşesinden **ilgili Configuration Manager** penceresini açarsanız, **Sürüm 1806**' yi de gösterir. 
 
@@ -84,7 +84,7 @@ Technical Preview sürüm 1806,2 ' e yükselttikten sonra, konsolunun sol üst k
 **Aşağıda, bu sürümle deneyebilmeniz için kullanabileceğiniz yeni özellikler verilmiştir.**  
 
 
-## <a name="improvements-to-phased-deployments"></a><a name="bkmk_pod"></a>Aşamalı dağıtımlarda iyileştirmeler
+## <a name="improvements-to-phased-deployments"></a><a name="bkmk_pod"></a> Aşamalı dağıtımlarda iyileştirmeler
 
 Bu sürüm, [aşamalı dağıtımlar](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md)için aşağıdaki geliştirmeleri içerir:
 - [Aşamalı dağıtım durumu](#bkmk_pod-monitor)
@@ -92,7 +92,7 @@ Bu sürüm, [aşamalı dağıtımlar](../../osd/deploy-use/create-phased-deploym
 - [Aşamalı dağıtımlar sırasında aşamalı dağıtım](#bkmk_pod-throttle)
 
 
-### <a name="phased-deployment-status"></a><a name="bkmk_pod-monitor"></a>Aşamalı dağıtım durumu
+### <a name="phased-deployment-status"></a><a name="bkmk_pod-monitor"></a> Aşamalı dağıtım durumu
 <!--1358577-->
 Aşamalı dağıtımlar artık yerel bir izleme deneyimine sahiptir. **İzleme** çalışma alanındaki **dağıtımlar** düğümünden aşamalı bir dağıtım seçin ve ardından şeritte **aşamalı dağıtım durumu** ' nu tıklatın.
 
@@ -117,7 +117,7 @@ Bu Pano, dağıtımdaki her aşama için aşağıdaki bilgileri gösterir:
 Aşamalı dağıtım durumu panosu aynı aşama için birden çok satır gösterebilir.<!--518510-->
 
 
-### <a name="phased-deployment-of-applications"></a><a name="bkmk_pod-app"></a>Uygulamaların aşamalı dağıtımı
+### <a name="phased-deployment-of-applications"></a><a name="bkmk_pod-app"></a> Uygulamaların aşamalı dağıtımı
 <!--1358147-->
 Uygulamalar için aşamalı dağıtımlar oluşturun. Aşamalı dağıtımlar, özelleştirilebilir ölçütlere ve gruplara göre düzenlenmiş, sıralı bir yazılım dağıtımını düzenlemenize olanak tanır.
 
@@ -132,7 +132,7 @@ Aşamalı dağıtımı oluşturmadan önce uygulamanın içeriğini bir dağıt�
 Bir uygulama için el ile aşamalar oluşturamazsınız. Sihirbaz, uygulama dağıtımları için otomatik olarak iki aşama oluşturur.
 
 
-### <a name="gradual-rollout-during-phased-deployments"></a><a name="bkmk_pod-throttle"></a>Aşamalı dağıtımlar sırasında aşamalı dağıtım
+### <a name="gradual-rollout-during-phased-deployments"></a><a name="bkmk_pod-throttle"></a> Aşamalı dağıtımlar sırasında aşamalı dağıtım
 <!--1358578-->
 Aşamalı bir dağıtım sırasında, her bir aşamadaki dağıtım artık aşamalı olarak gerçekleşebilir. Bu davranış, dağıtım sorunları riskini azaltmaya yardımcı olur ve içeriğin istemcilere dağıtılması nedeniyle ağdaki yükü azaltır. Site, her bir aşamanın yapılandırmasına bağlı olarak yazılımı aşamalı olarak kullanılabilir hale getirir. Bir aşamadaki her istemcinin, yazılımın kullanılabilir hale getirilme zamanına göre son tarihi vardır. Kullanılabilir saat ve son tarih arasındaki zaman penceresi, bir aşamadaki tüm istemciler için aynıdır. 
 
@@ -143,11 +143,11 @@ Aşamalı dağıtım oluşturup bir aşamayı el ile yapılandırdığınızda, 
 
 
 
-## <a name="support-for-new-windows-app-package-formats"></a><a name="bkmk_msix"></a>Yeni Windows uygulama paketi biçimleri için destek
+## <a name="support-for-new-windows-app-package-formats"></a><a name="bkmk_msix"></a> Yeni Windows uygulama paketi biçimleri için destek
 <!--1357427-->
 Configuration Manager artık yeni Windows 10 uygulama paketi (. msix) ve uygulama paketi (. msixdemeti) biçimlerinin dağıtımını desteklemektedir. En son [Windows Insider Preview](https://insider.windows.com/) derlemeleri Şu anda bu yeni biçimleri desteklemektedir.
 
-MALTıYA genel bakış için [maltıya daha yakından](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix)bakın.
+MALTıYA genel bakış için [maltıya daha yakından](/archive/blogs/sgern/a-closer-look-at-msix)bakın.
 
 Yeni bir MSIX uygulaması oluşturma hakkında bilgi için bkz. [Insider Build 17682 ' de sunulan Msix desteği](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).
 
@@ -164,11 +164,11 @@ Görevleri tamamlamayı deneyin. Daha sonra nasıl çalıştığını bize bildi
 
 
 
-## <a name="improvement-to-client-push-security"></a><a name="bkmk_client-push"></a>İstemci anında iletme güvenliğine iyileştirme
+## <a name="improvement-to-client-push-security"></a><a name="bkmk_client-push"></a> İstemci anında iletme güvenliğine iyileştirme
 <!--1358204-->
 Configuration Manager istemcisini yüklemek için [Client Push](../clients/deploy/plan/client-installation-methods.md#client-push-installation) yöntemini kullanırken, site sunucusu yüklemeyi başlatmak için istemciye bir uzak bağlantı oluşturur. Bu sürümden itibaren, site bağlantı kurulmadan önce NTLM 'ye geri dönüşe izin vermeyerek Kerberos karşılıklı kimlik doğrulaması gerektirebilir. Bu geliştirme, sunucu ve istemci arasındaki iletişimin güvenliğini sağlamaya yardımcı olur. 
 
-Güvenlik ilkelerinize bağlı olarak, ortamınız daha eski NTLM kimlik doğrulaması üzerinden Kerberos 'u zaten tercih edebilir veya zorunlu kılabilir. Bu kimlik doğrulama protokollerinin güvenlik konuları hakkında daha fazla bilgi için bkz. [NTLM 'yi kısıtlamak Için Windows güvenlik ilkesi ayarı](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).
+Güvenlik ilkelerinize bağlı olarak, ortamınız daha eski NTLM kimlik doğrulaması üzerinden Kerberos 'u zaten tercih edebilir veya zorunlu kılabilir. Bu kimlik doğrulama protokollerinin güvenlik konuları hakkında daha fazla bilgi için bkz. [NTLM 'yi kısıtlamak Için Windows güvenlik ilkesi ayarı](/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).
 
 
 ### <a name="prerequisite"></a>Önkoşul
@@ -190,7 +190,7 @@ Siteyi yükselttiğinizde, mevcut davranış devam ettirir. İstemci anında yü
 
 
 
-## <a name="management-insights-for-proactive-maintenance"></a><a name="bkmk_insights"></a>Proaktif Bakım için yönetim öngörüleri
+## <a name="management-insights-for-proactive-maintenance"></a><a name="bkmk_insights"></a> Proaktif Bakım için yönetim öngörüleri
 <!--1352184,et al-->
 Olası yapılandırma sorunlarını vurgulamak için bu sürümde ek yönetim öngörüleri sunulmaktadır. Yeni **proaktif bakım** grubunda aşağıdaki kuralları gözden geçirin:  
 
@@ -208,7 +208,7 @@ Olası yapılandırma sorunlarını vurgulamak için bu sürümde ek yönetim ö
 
 
 
-## <a name="transition-mobile-apps-workload-for-co-managed-devices"></a><a name="bkmk_comgmt"></a>Ortak yönetilen cihazlar için mobil uygulamalar iş yükünü geçirme
+## <a name="transition-mobile-apps-workload-for-co-managed-devices"></a><a name="bkmk_comgmt"></a> Ortak yönetilen cihazlar için mobil uygulamalar iş yükünü geçirme
 <!--1357892-->
 Windows masaüstü uygulamalarını dağıtmak için Configuration Manager kullanmaya devam ederken mobil uygulamaları Microsoft Intune yönetin. Modern uygulamalar iş yükünü geçmek için ortak yönetim özellikleri sayfasına gidin. Kaydırıcı çubuğunu Configuration Manager 'den pilot 'a veya tümüne taşıyın. 
 
@@ -218,11 +218,11 @@ Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 - [Windows 10 cihazları için ortak yönetim](../../comanage/overview.md)  
 
-- [Microsoft Intune uygulama yönetimi nedir?](https://docs.microsoft.com/intune/app-management)  
+- [Microsoft Intune uygulama yönetimi nedir?](/intune/app-management)  
 
 
 
-## <a name="boundary-group-options-for-peer-downloads"></a><a name="bkmk_bgoptions"></a>Eş indirmeleri için sınır grubu seçenekleri
+## <a name="boundary-group-options-for-peer-downloads"></a><a name="bkmk_bgoptions"></a> Eş indirmeleri için sınır grubu seçenekleri
 <!--1356193-->
 Artık sınır grupları ortamınızda içerik dağıtımı üzerinde daha fazla denetim sağlamak için ek ayarlar içerir. Bu sürüm aşağıdaki seçenekleri ekler:  
 
@@ -248,7 +248,7 @@ Eş kaynak istemcisinde birden fazla IP adresi (IPv4, IPv6 veya her ikisi) varsa
 
 
 
-## <a name="third-party-software-updates-support-for-custom-catalogs"></a><a name="bkmk_3pupdate"></a>Özel kataloglar için üçüncü taraf yazılım güncelleştirmeleri desteği
+## <a name="third-party-software-updates-support-for-custom-catalogs"></a><a name="bkmk_3pupdate"></a> Özel kataloglar için üçüncü taraf yazılım güncelleştirmeleri desteği
 <!--1358714-->
 Bu sürüm, [UserVoice geri bildirimlerinizin](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co)bir sonucu olarak üçüncü taraf yazılım güncelleştirmeleri desteğiyle daha da yinelenir. [Technical Preview sürüm 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate) , yazılım satıcılarından kayıtlı kataloglar olan *iş ortağı katalogları*için destek sağlamıştır. Sağladığınız kataloglar, Microsoft 'a kaydolmayan *özel kataloglar*olarak adlandırılır. Configuration Manager konsoluna özel kataloglar ekleyin.  
 
@@ -307,7 +307,7 @@ Bir kataloğun aboneliğini kaldırmak için, listeden istediğiniz kataloğu se
 
 
 
-## <a name="improvements-to-cloud-management-features"></a><a name="bkmk_cloud"></a>Bulut yönetimi özelliklerine yönelik iyileştirmeler
+## <a name="improvements-to-cloud-management-features"></a><a name="bkmk_cloud"></a> Bulut yönetimi özelliklerine yönelik iyileştirmeler
 
 Bu sürüm aşağıdaki geliştirmeleri içerir:  
 
@@ -319,11 +319,11 @@ Bu sürüm aşağıdaki geliştirmeleri içerir:
 
     - [Azure Resource Manager ile bulut dağıtım noktası](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager) dağıtma  
 
-- Müşteriler, şirket içi ağa bağlı Azure Active Directory katılmış cihazlarda Windows 10 sağlamak için Windows AutoPilot kullanıyor. Bu cihazlarda Configuration Manager istemcisini yüklemek veya yükseltmek için, artık **istemcilerin anonim olarak bağlanmasına Izin verecek**şekilde yapılandırılmış bir bulut dağıtım noktası veya şirket içi dağıtım noktası gerekmez. Bunun yerine, bulut etki alanına katılmış bir istemcinin şirket içi HTTP özellikli bir dağıtım noktasıyla iletişim kurmasına izin veren **http site sistemleri için Configuration Manager tarafından oluşturulan sertifikaları kullanmak**üzere site seçeneğini etkinleştirin. Daha fazla bilgi için bkz. [Gelişmiş güvenli istemci iletişimleri](https://docs.microsoft.com/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).<!--515854-->  
+- Müşteriler, şirket içi ağa bağlı Azure Active Directory katılmış cihazlarda Windows 10 sağlamak için Windows AutoPilot kullanıyor. Bu cihazlarda Configuration Manager istemcisini yüklemek veya yükseltmek için, artık **istemcilerin anonim olarak bağlanmasına Izin verecek**şekilde yapılandırılmış bir bulut dağıtım noktası veya şirket içi dağıtım noktası gerekmez. Bunun yerine, bulut etki alanına katılmış bir istemcinin şirket içi HTTP özellikli bir dağıtım noktasıyla iletişim kurmasına izin veren **http site sistemleri için Configuration Manager tarafından oluşturulan sertifikaları kullanmak**üzere site seçeneğini etkinleştirin. Daha fazla bilgi için bkz. [Gelişmiş güvenli istemci iletişimleri](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).<!--515854-->  
 
 
 
-## <a name="new-software-updates-compliance-report"></a><a name="bkmk_report"></a>Yeni yazılım güncelleştirmeleri uyumluluk raporu
+## <a name="new-software-updates-compliance-report"></a><a name="bkmk_report"></a> Yeni yazılım güncelleştirmeleri uyumluluk raporu
 <!--1357775-->
 Yazılım güncelleştirmeleri uyumluluğuna ilişkin raporları görüntülemek, genellikle sitesiyle en son iletişim kurmayan istemcilerden gelen verileri içerir. Yeni bir rapor, belirli bir yazılım güncelleştirme grubu için uyumluluk sonuçlarını "sağlıklı" istemcilere göre filtrelemenize olanak sağlar. Bu rapor, ortamınızdaki etkin istemcilerin daha gerçekçi uyumluluk durumunu gösterir. 
  
@@ -338,4 +338,4 @@ Rapor aşağıdaki bölümleri içerir:
 
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Technical Preview dalını yükleme veya güncelleştirme hakkında daha fazla bilgi için bkz. [Configuration Manager Için Teknik Önizleme](technical-preview.md).    
+Technical Preview dalını yükleme veya güncelleştirme hakkında daha fazla bilgi için bkz. [Configuration Manager Için Teknik Önizleme](technical-preview.md).
