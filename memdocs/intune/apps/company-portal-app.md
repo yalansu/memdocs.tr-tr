@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 08/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c789f47767e42b57cd94d63bf9299af57351468d
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3a23db0f04895bda6f187e466965a959c891f1ad
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700625"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725443"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune Şirket Portalı uygulamaları, Şirket Portalı Web sitesini ve Intune uygulamasını özelleştirme
 
@@ -45,7 +45,7 @@ Aşağıdaki tabloda son kullanıcı deneyimi için marka özelleştirme ayrınt
 | **Üst bilgide göster** | Son Kullanıcı deneyimlerinde bulunan üstbilginin **kuruluş logosu ve adı**, **yalnızca kuruluş logosu**veya **yalnızca kuruluş adını**görüntülemesi gerekip gerekmediğini seçin. Aşağıdaki önizleme kutuları, adı değil yalnızca logoları gösterir.  |
 | **Tema rengi arka planı için logoyu karşıya yükle** | Seçtiğiniz Tema renginiz üzerinde göstermek istediğiniz logoyu karşıya yükleyin. En iyi görünüm için saydam bir arka plana sahip bir logo yükleyin. Bunun, ayarın altındaki Önizleme kutusunda nasıl görüneceğini görebilirsiniz.<p>Maksimum görüntü boyutu: 400 x 400 piksel<br>En büyük dosya boyutu: 750KB<br>Dosya türü: PNG, JPG veya JPEG |
 | **Beyaz veya hafif arka plan için logoyu karşıya yükle** | Beyaz veya hafif renkli arka planların üzerine göstermek istediğiniz logoyu karşıya yükleyin. En iyi görünüm için saydam bir arka plana sahip bir logo yükleyin. Bunun, ayarın altındaki Önizleme kutusunda beyaz bir arka plana nasıl görüneceğini görebilirsiniz.<p>Maksimum görüntü boyutu: 400 x 400 piksel<br>En büyük dosya boyutu: 750 KB<br>Dosya türü: PNG, JPG veya JPEG |
-| **Marka görüntüsünü karşıya yükle** | Kuruluşunuzun markasını yansıtan bir görüntü yükleyin.<p><ul><li>Önerilen Görüntü genişliği: 1125 piksel 'den büyük (en az 650 piksel olması gerekir)</li><li>En büyük görüntü boyutu: 1,3 MB</li><li>Dosya türü: PNG, JPG veya JPEG</li><li>Şu konumlarda görüntülenir:</li><ul><li>iOS/ıpados Şirket Portalı: kullanıcının profil sayfasında arka plan resmi.</li><li>Şirket Portalı Web sitesi: kullanıcının profil sayfasında arka plan resmi.</li><li>Android Intune uygulaması: çekmecede, kullanıcının profil sayfasında bir arka plan görüntüsü olarak.</li></ul></ul> |
+| **Marka görüntüsünü karşıya yükle** | Kuruluşunuzun markasını yansıtan bir görüntü yükleyin.<p><ul><li>Önerilen Görüntü genişliği: 1125 piksel 'den büyük (en az 650 piksel olması gerekir)</li><li>En büyük görüntü boyutu: 1,3 MB</li><li>Dosya türü: PNG, JPG veya JPEG</li><li>Şu konumlarda görüntülenir:</li><ul><li>iOS/ıpados Şirket Portalı: kullanıcının profil sayfasında arka plan resmi.</li><li>Windows Şirket Portalı: kullanıcının profil sayfasında arka plan resmi.</li><li>Şirket Portalı Web sitesi: kullanıcının profil sayfasında arka plan resmi.</li><li>Android Intune uygulaması: çekmecede, kullanıcının profil sayfasında bir arka plan görüntüsü olarak.</li></ul></ul> |
 
 > [!NOTE]
 > Bir Kullanıcı Şirket Portalı bir iOS/ıpados uygulaması yüklerken bir istem alır. Bu durum, iOS/ıpados uygulamasının bir toplu satın alma programı (VPP) ile bağlantılı veya iş kolu (LOB) uygulamasına bağlı olan App Store 'a bağlanması durumunda meydana gelir. İstem, kullanıcıların eylemi kabul etmesine veya uygulamanın yönetimine izin veriyor. İstem şirketinizin adını gösterir veya şirketinizin adı kullanılamadığında **Şirket portalı** görüntülenir.
@@ -90,7 +90,7 @@ Aşağıda, Android için Intune uygulamasındaki marka görüntüsünün bir ö
 
 ### <a name="enrollment"></a>Kayıt
 
-Aşağıdaki tabloda kayda özgü yapılandırma ayrıntıları verilmiştir:
+Aşağıdaki tabloda, kayda özgü yapılandırma ayrıntıları verilmiştir:
 
 | Alan adı | Maksimum uzunluk | Daha fazla bilgi |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -125,11 +125,11 @@ Aşağıdaki tabloda gizlilik 'e özgü yapılandırma ayrıntıları verilmişt
 
 ### <a name="device-ownership-notification"></a>Cihaz sahipliği bildirimi
 
-Aşağıdaki tabloda bildirime özgü yapılandırma ayrıntıları verilmiştir:
+Aşağıdaki tabloda, bildirime özgü yapılandırma ayrıntıları verilmiştir:
 
 | Alan adı | Maksimum uzunluk | Daha fazla bilgi |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cihaz sahiplik türü kişisel 'den şirkete (yalnızca Android ve iOS/ıpados) değiştirildiğinde kullanıcılara anında iletme bildirimi gönderin | N/A | Hem Android hem de iOS Şirket Portalı kullanıcılarınıza cihaz sahiplik türü kişisel ' e değiştirildiğinde, anında iletme bildirimi gönderin. Varsayılan olarak, bu anında iletme bildirimi off olarak ayarlanır. Cihaz sahipliği kurumsal sahiplik olarak ayarlandığında, Intune cihaza daha fazla erişim sahibi olur. Bu, tam uygulama envanteri, Filekasası anahtar döndürme, telefon numarası alma ve birkaç uzak eylem seçme işlemlerini içerir. Daha fazla bilgi için bkz. [cihaz sahipliğini değiştirme](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
+| Cihaz sahiplik türü kişisel 'den şirkete (yalnızca Android ve iOS/ıpados) değiştirildiğinde kullanıcılara anında iletme bildirimi gönderin | N/A | Hem Android hem de iOS Şirket Portalı kullanıcılarınıza cihaz sahiplik türü kişisel ' e değiştirildiğinde, anında iletme bildirimi gönderin. Varsayılan olarak, bu anında iletme bildirimi off olarak ayarlanır. Cihaz sahipliği kurumsal sahiplik olarak ayarlandığında, Intune cihaza daha fazla erişime sahiptir; bu, tam uygulama envanteri, Filekasasyon anahtarı döndürme, telefon numarası alma ve birkaç uzak eylem seçme içerir. Daha fazla bilgi için bkz. [cihaz sahipliğini değiştirme](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
 
 ### <a name="app-sources"></a>Uygulama kaynakları
 
@@ -154,7 +154,7 @@ Her son kullanıcı için Şirket Portalı **Azure AD kurumsal uygulamalarını*
 
 ### <a name="customizing-user-self-service-actions-for-the-company-portal"></a>Şirket Portalı için Kullanıcı self servis eylemlerini özelleştirme
 
-Şirket Portalı uygulamasında ve Web sitesinde son kullanıcılara gösterilen kullanılabilir self servis cihaz eylemlerini özelleştirebilirsiniz. İstenmeyen cihaz eylemlerini önlemeye yardımcı olmak için **Kiracı Yönetimi**özelleştirmesi ' nı seçerek Şirket portalı uygulamasının ayarlarını yapılandırabilirsiniz  >  **Customization**. 
+Şirket Portalı uygulamasında ve Web sitesinde son kullanıcılara gösterilen kullanılabilir self servis cihaz eylemlerini özelleştirebilirsiniz. İstenmeyen cihaz eylemlerini önlemeye yardımcı olmak için **Kiracı Yönetimi**özelleştirmesi ' nı seçerek Şirket portalı uygulamasının ayarlarını yapılandırabilirsiniz  >  **Customization**.
 
 Aşağıdaki eylemler kullanılabilir:
 - Kurumsal Windows cihazlarında **Kaldır** düğmesini gizleyin.
@@ -163,7 +163,7 @@ Aşağıdaki eylemler kullanılabilir:
 - Kurumsal iOS/ıpados cihazlarında **sıfırlama** düğmesini gizleyin.
 
 > [!NOTE]
-> Bu eylemler, Şirket Portalı uygulaması ve Web sitesindeki cihaz eylemlerini kısıtlamak ve herhangi bir cihaz kısıtlama ilkesi uygulamamayı yapmak için kullanılabilir. Kullanıcıların, ayarlardan fabrika sıfırlaması veya MDM kaldırma gerçekleştirmesini kısıtlamak için, cihaz kısıtlama ilkelerini yapılandırmanız gerekir. 
+> Bu eylemler, Şirket Portalı uygulaması ve Web sitesindeki cihaz eylemlerini kısıtlamak ve herhangi bir cihaz kısıtlama ilkesi uygulamamayı yapmak için kullanılabilir. Kullanıcıların, ayarlardan fabrika sıfırlaması veya MDM kaldırma gerçekleştirmesini kısıtlamak için, cihaz kısıtlama ilkelerini yapılandırmanız gerekir.
 
 ## <a name="opening-web-company-portal-applications"></a>Web Şirket Portalı uygulamalarını açma
 Web Şirket Portalı uygulamalarında, son kullanıcının Şirket Portalı uygulaması yüklüyse, son kullanıcılar, tarayıcının dışında açılırken uygulamayı nasıl açmak istediğimi soran bir iletişim kutusu görür. Uygulama Şirket Portalı yolunda değilse, Şirket Portalı giriş sayfasını açar. Uygulama yolda ise, Şirket Portalı belirli uygulamayı açar. 

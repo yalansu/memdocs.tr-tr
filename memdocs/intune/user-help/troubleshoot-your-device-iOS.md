@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: c3f2da199e49596959c8b1b445a492f0ef505a36
-ms.sourcegitcommit: 21b6c0c054e5371f32d611a2411ccd166b0e03bc
+ms.openlocfilehash: 52bcff0e8b84b8e5b8a3fbd0a68d322836e91bea
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88643797"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725341"
 ---
 # <a name="fix-common-problems-with-your-ios-device"></a>İOS cihazınızla ilgili sık karşılaşılan sorunları giderme
 
@@ -38,5 +38,5 @@ Yaygın iOS kayıt sorularına yanıtlar bulmak veya iOS ile ilgili sorunları g
 - [Nasıl yaparım? cihazımda seri numarasını bulamıyor musunuz?](how-do-i-find-the-serial-number-on-my-device-ios.md)
 - [iOS cihazımı güncelleştirmem gerekiyor](you-need-to-update-your-ios-device.md)
 - [Kullandığım iOS sürümü henüz desteklenmiyor](your-ios-version-isnt-yet-supported.md)
-- [iOS cihazıma bir Mobile Threat Defense uygulaması yüklemem gerekiyor](set-up-mobile-threat-defense.md)
-- [iOS cihazımda Mobile Threat Defense uygulamasının bulduğu bir tehdidi gidermem gerekiyor](set-up-mobile-threat-defense.md#detecting-and-resolving-a-threat)
+- [İOS cihazım üzerinde bir mobil tehdit savunma uygulaması yüklemem gerekiyor](set-up-mobile-threat-defense.md)
+- [İOS cihazmda bir Mobile Threat Defense uygulamasının bulduğu bir tehdidi çözmem gerekiyor](set-up-mobile-threat-defense.md#resolving-a-threat)

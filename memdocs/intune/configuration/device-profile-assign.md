@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 08/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,18 +15,18 @@ ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 ms.reviewer: altsou
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5259fe84b11ce5d1ec4a3110dcbc188afb2e6d3e
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 74bdb4276fc5a03fe159b82769a8b358d01b8677
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565691"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725407"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Microsoft Intune'da kullanıcı ve cihaz profilleri atama
 
-Bir profil oluşturursunuz ve girdiğiniz tüm ayarlar burada saklanır. Bir sonraki adım, profili Azure Active Directory (Azure AD) kullanıcı veya cihaz gruplarınıza dağıtmak veya "atamaktır". Atanan profiller kullanıcılara ve cihazlara ulaşır ve girdiğiniz ayarlar uygulanır.
+Bir profil oluşturursunuz ve girdiğiniz tüm ayarlar burada saklanır. Bir sonraki adım, profilinizi Kullanıcı veya cihaz gruplarınızı dağıtmaktır veya "atamanız". Atanan profiller kullanıcılara ve cihazlara ulaşır ve girdiğiniz ayarlar uygulanır.
 
 Bu makalede profil atama yöntemlerinin yanı sıra profillerinizde kapsam etiketlerini kullanma adımları hakkında bilgilere yer verilmiştir.
 
@@ -39,27 +39,35 @@ Bu makalede profil atama yöntemlerinin yanı sıra profillerinizde kapsam etike
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Profiller atamak için uygun role sahip olduğunuzdan emin olun. Daha fazla bilgi için bkz. [Microsoft Intune Ile rol tabanlı erişim denetimi (RBAC)](../fundamentals/role-based-access-control.md).
+Profiller atamak için doğru rolün bulunduğundan emin olun. Daha fazla bilgi için bkz. [Microsoft Intune Ile rol tabanlı erişim denetimi (RBAC)](../fundamentals/role-based-access-control.md).
 
 ## <a name="assign-a-device-profile"></a>Bir cihaz profili atama
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Cihaz**  >  **yapılandırma profillerini**seçin. Tüm profiller listelenir.
-3. Atamak istediğiniz profili ve ardından **Atamalar**'ı seçin.
-4. Grupları **Dahil Etmeyi** veya **Dışlamayı** seçin ve sonra da gruplarınızı belirtin. Gruplarınızı seçtiğinizde, bir Azure AD grubu seçersiniz. Birden çok grup seçmek için grupları seçerken **Ctrl** tuşunu basılı tutun.
+3. Atamak istediğiniz profili seçin > **Özellikler**  >  **atamaları**  >  **Düzenle**:
 
-    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="Microsoft Intune içindeki bir profil atamasında grupları dahil etme veya hariç tutma seçeneklerinin ekran görüntüsü":::
+    :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Microsoft Intune ve uç nokta yöneticisinde profili kullanıcılara ve gruplara dağıtmak için atamaları seçin":::
 
-5. Değişikliklerinizi **kaydedin** .
+4. **Dahil edilen grupları** veya **Dışlanan grupları**seçin ve ardından **dahil edilecek grupları seç**' i seçin. Gruplarınızı seçtiğinizde, bir Azure AD grubu seçersiniz. Birden çok grup seçmek için grupları seçerken **Ctrl** tuşunu basılı tutun.
 
-### <a name="evaluate-how-many-users-are-targeted"></a>Kaç kullanıcının hedeflendiğini değerlendirme
+    :::image type="content" source="./media/device-profile-assign/select-included-excluded-groups-profile-assignment.png" alt-text="Microsoft Intune ve uç nokta yöneticisinde bir profili atarken veya dağıtmada kullanıcıları ve grupları dahil etme veya hariç tutma.":::
 
-Profili atadıktan sonra etkilenen kullanıcı sayısını da **değerlendirebilirsiniz**. Bu özellik, cihaz değil kullanıcı sayısını hesaplar.
+5. **Gözden geçir + kaydet**' i seçin. Bu adım, profilinizi atamaz.
+6. **Kaydet**’i seçin. Kaydettiğinizde profiliniz atanır. Cihazların Intune hizmetine iade edildiğinde gruplarınızı profil ayarlarınızı alır.
 
-1. Yönetim merkezinde, **cihazlar**  >  **yapılandırma profilleri**' ni seçin.
-2. **Atamalar**değerlendirmesi > bir profil seçin  >  **Evaluate**. Bu profilin kaç kullanıcıyı hedeflediğini gösteren bir ileti görüntülenir.
+<!-- MandiA 8.20.20: Commenting out this section, as it may not be in the fullscreen changes. Working with engineering/PM to confirm.
 
-**Değerlendir** düğmesi gri gösteriliyorsa, profilin bir veya birden fazla gruba atandığından emin olun.
+### Evaluate how many users are targeted
+
+When you assign the profile, you can also **Evaluate** how many users are affected. This feature calculates users; it doesn't calculate devices.
+
+1. In the admin center, select **Devices** > **Configuration profiles**.
+2. Select a profile > **Assignments** > **Evaluate**. A message shows you how many users are targeted by this profile.
+
+If the **Evaluate** button is grayed out, make sure the profile is assigned to one or more groups.
+
+-->
 
 ## <a name="use-scope-tags-or-applicability-rules"></a>Kapsam etiketlerini veya uygulanabilirlik kurallarını kullanma
 

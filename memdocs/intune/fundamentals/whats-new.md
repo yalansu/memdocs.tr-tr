@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4fe51b37f1631d8dcb140f49dffcc819db2d112b
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a9de296ec27c20ab25a60b0d825a360c272ca48d
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695792"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725426"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -57,6 +57,11 @@ ms.locfileid: "88695792"
 <!-- ########################## -->
 ## <a name="week-of-august-17-2020"></a>17 Ağustos 2020 haftası
 
+### <a name="intune-apps"></a>Intune uygulamaları
+
+#### <a name="custom-brand-image-now-displayed-in-the-windows-company-portal-profile-page---4280187---"></a>Özel marka resmi artık Windows Şirket Portalı profili sayfasında görüntüleniyor<!-- 4280187 -->
+Microsoft Intune Yöneticisi olarak, Intune 'a, Windows Şirket Portalı uygulamasındaki kullanıcının profil sayfasında bir arka plan görüntüsü olarak görüntülenecek özel bir marka resmi yükleyebilirsiniz. Daha fazla bilgi için bkz. [uygulamaları, Şirket portalı Web sitesini ve Intune uygulamasını özelleştirme Intune şirket portalı](../apps/company-portal-app.md#branding).
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Uygulama yönetimi
 
@@ -73,6 +78,7 @@ Aşağıdaki üçüncü taraf MDM sağlayıcıları, genel önizleme olarak bu y
 
 - VMWare çalışma alanı BIR UEM (daha önce AirWatch olarak biliniyordu)
 
+*Bu güncelleştirme, müşterilere küresel olarak gönderilir. Bu özelliği bir sonraki hafta içinde görmeniz gerekir.*
 
 <!-- ########################## -->
 ## <a name="week-of-august-10-2020"></a>10 Ağustos 2020 haftası
@@ -388,7 +394,7 @@ Aşağıdakiler cihazlar için geçerlidir:
 - Windows 10 ve üzeri
 
 #### <a name="wired-network-device-configuration-profiles-for-macos-devices---3508686----"></a>MacOS cihazları için kablolu ağ cihaz yapılandırma profilleri<!-- 3508686  -->
-Kablolu ağları yapılandıran yeni bir MacOS cihaz yapılandırma profili vardır (**cihaz** > * * yapılandırma profilleri > için **profil**  >  **MacOS** for platform >, profile yönelik **kablolu ağ** ). Kablolu ağları yönetmek için 802.1 x profilleri oluşturmak ve bu kablolu ağları macOS cihazlarınıza dağıtmak için bu özelliği kullanın.
+Kablolu ağları yapılandıran yeni bir MacOS cihaz yapılandırma profili vardır (**cihaz**  >  **yapılandırma profilleri**,  >  **Create profile**  >  platform için**MacOS profil oluşturma MacOS** for profile için **kablolu ağ** >). Kablolu ağları yönetmek için 802.1 x profilleri oluşturmak ve bu kablolu ağları macOS cihazlarınıza dağıtmak için bu özelliği kullanın.
 
 Bu özellik hakkında daha fazla bilgi için bkz. [macOS cihazlarda kablolu ağlar](../configuration/wired-networks-configure.md).
 
@@ -466,7 +472,7 @@ Daha önce, kayıt durumu sayfası (ESP) profilleri yalnızca Kullanıcı grupla
 #### <a name="shared-ipads-for-business--6367326-----"></a>Iş için paylaşılan IPad 'ler<!--6367326   -->
 Birden çok çalışanın cihaz paylaşabilmesi için, Intune ve Apple Business Manager 'ı kullanarak paylaşılan iPad 'i kolayca ve güvenli bir şekilde ayarlayabilirsiniz. Apple 'ın [paylaşılan iPad](https://developer.apple.com/education/shared-ipad/) 'i, Kullanıcı verilerini korurken birden çok kullanıcı için kişiselleştirilmiş bir deneyim sağlar. Yönetilen bir Apple KIMLIĞI kullanarak, kullanıcılar kuruluşlarındaki paylaşılan iPad 'de oturum açtıktan sonra uygulamalarına, verilerine ve ayarlarına erişebilirler. Paylaşılan iPad, Federasyon kimlikleriyle birlikte çalışmaktadır.
 
-Bu özelliği görmek için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **cihazlar**  >  **iOS**  >  **iOS kayıt**  >  **kayıt programı belirteçleri** ' ne gidin > belirteç seçin * * > **profiller**  >  **Profil oluştur**  >  **iOS**. **Yönetim ayarları** sayfasında, **Kullanıcı benzeşimi olmadan kaydet** ' i seçin ve **paylaşılan iPad** seçeneğini görürsünüz.
+Bu özelliği görmek için [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **cihazlar**  >  **iOS**  >  **iOS kaydı**  >  **kayıt programı belirteçleri**' ne gidin  >  **bir belirteç**  >  **profilleri**seçin  >  **iOS profili oluştur**  >  **iOS**. **Yönetim ayarları** sayfasında, **Kullanıcı benzeşimi olmadan kaydet** ' i seçin ve **paylaşılan iPad** seçeneğini görürsünüz.
 
 Şunları gerektirir: ıpados 13,4 ve üzeri. Bu sürüm, kullanıcıların yönetilen bir Apple KIMLIĞI olmadan bir cihaza erişebilmeleri için paylaşılan iPad ile geçici oturumlar için destek ekledi. Oturum kapatma sonrasında cihaz tüm Kullanıcı verilerini siler, böylece cihaz kullanıma hemen kullanılabilir hale gelir ve cihaz temizleme gereksinimini ortadan kaldırır. 
 

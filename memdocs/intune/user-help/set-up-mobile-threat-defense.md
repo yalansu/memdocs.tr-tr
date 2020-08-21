@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/18/2020
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 46eb7c5bd691c17747baba926e81b8bd503108b4
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 23d449b6b5edf43ea709f8fce194ac5a8afe8eb4
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700744"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725358"
 ---
 # <a name="install-mobile-threat-defense-app"></a>Mobil tehdit savunması uygulamasını yükleme  
 
@@ -100,8 +100,8 @@ Bu adımlar, korumalı bir uygulamada oturum açtıktan sonra görünen **erişi
     * MTD uygulamasına gidin ve mevcut tehditleri denetleyin. Tehdidi çözümlemek ve erişimi yeniden kazanmak için önerilen adımları izleyin.  
 
 
-## <a name="detecting-and-resolving-a-threat"></a>Tehdidi algılama ve çözme
-Bir tehdit kuruluşunuzun tanımlı tehdit düzeyini aşarsa, kuruluşunuzun şunları yapmanız gerekir:  
+## <a name="resolving-a-threat"></a>Tehdidi çözme
+Bir tehdit algılanırsa ve kuruluşunuzun tanımlı tehdit düzeyini aşarsa, kuruluşunuz şu şekilde olur:  
    
 * Erişimi engelle: iş veya okul hesabınızda oturum açtığınızda kuruluşunuzun korunan uygulamalarını kullanmanızı engeller.  
 * Verileri silme: kuruluşunuzun korunan uygulamalarından bir veya daha fazla iş veya okul verilerini siler.  
@@ -109,8 +109,8 @@ Bir tehdit kuruluşunuzun tanımlı tehdit düzeyini aşarsa, kuruluşunuzun şu
 Bir tehdidi çözümlemek ve korunan uygulamalara erişimi yeniden kazanmak için:  
 
 1. Cihazınızda MTD uygulamasını açın.     
-2. Tehdidin cihazınızı nasıl etkileyebileceğini ve nasıl çözümleneceğini öğrenmek için ekran bilgilerini okuyun. 
-3. Tehdidi çözümlemek için adımları izledikten sonra MTD uygulamasına dönün ve yeni bir tarama başlatın. Kuruluşunuza yeniden erişim kazanmak birkaç dakika sürebilir.  
+2. Tehdit ayrıntılarını uygulamada okuyun. Bu, tehdidi çözülmedi ve çözümlenmezse tehdidin cihazınızı nasıl etkileyebileceğini açıklar. 
+3. Cihazınızda gerekli değişiklikleri yaptıktan sonra, MTD uygulamasına dönün ve yeni bir tarama başlatın. Tüm tehditler çözümlenene kadar bu adımları tekrarlayın. Değişikliklerinizin kuruluşunuzla eşitlenmesi birkaç dakika sürebilir. Bu değişiklikler eşitlendikten sonra korunan uygulamaya yeniden erişim elde edersiniz. 
 
 ## <a name="get-support"></a>Destek alma
 Kuruluşunuzun iletişim bilgilerini bulmak için [Şirket portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) gidin. Hakkında yardım almak için onlara başvurun:
@@ -122,7 +122,7 @@ Kuruluşunuzun iletişim bilgilerini bulmak için [Şirket portalı Web sitesine
 * MTD uygulamasını kaldırma   
  
 
-### <a name="share-app-logs-with-it-support"></a>Uygulama günlüklerini BT desteğiyle paylaşma
+### <a name="share-app-logs-with-it-support"></a>Uygulama günlüklerini BT desteğiyle paylaşma  
 Uygulama günlüklerinizi, başarısız bir yükleme hakkında daha fazla bağlam sağlamak için BT destek sorumlunuza da gönderebilirsiniz.  
 * Android kullanıcıları: Şirket Portalı [günlüklerinizi karşıya yükleyin ve e-posta ile gönderin](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) .   
 
