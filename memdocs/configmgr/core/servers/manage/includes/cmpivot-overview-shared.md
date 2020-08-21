@@ -4,18 +4,18 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 07/13/2020
-ms.openlocfilehash: 80302a1c369c36a08cc1a55e20cf339dbc8d2883
-ms.sourcegitcommit: 6d987bb69d0eb9955a3003202864f58d6aaa426a
+ms.openlocfilehash: 8e95fce122a3e153f2aa391dcd5e40439f8e5820
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381059"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88703544"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
 ## <a name="queries"></a>Sorgular
 
-Sorgular terimleri aramak, eğilimleri belirlemek, desenleri analiz etmek ve verilerinize göre birçok diğer öngörü sağlamak için kullanılabilir. CMPivot tablosal ifadesi deyimi için [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query) veri akışı modelinin bir alt kümesini kullanır. Tablosal ifade deyiminin tipik yapısı, istemci varlıklarının ve tablo veri işleçlerinin (filtreler ve projeksiyonlar gibi) bir kompozisyonlarıdır. Birleşim, dikey çizgi karakteri (|) ile temsil edilir ve bu ifadeye, tablo verilerinin soldan sağa akışını görsel olarak temsil eden normal bir form verir. Her operatör, "kanaldan" tablosal veri kümesini ve işlecin gövdesinden ek girdileri (diğer tablolu veri kümeleri dahil) kabul eder, ardından aşağıdaki bir sonraki işlece bir tablo verisi kümesi yayar:`entity | operator1 | operator2 | ...`
+Sorgular terimleri aramak, eğilimleri belirlemek, desenleri analiz etmek ve verilerinize göre birçok diğer öngörü sağlamak için kullanılabilir. CMPivot tablosal ifadesi deyimi için [Azure Log Analytics](/azure/kusto/query) veri akışı modelinin bir alt kümesini kullanır. Tablosal ifade deyiminin tipik yapısı, istemci varlıklarının ve tablo veri işleçlerinin (filtreler ve projeksiyonlar gibi) bir kompozisyonlarıdır. Birleşim, dikey çizgi karakteri (|) ile temsil edilir ve bu ifadeye, tablo verilerinin soldan sağa akışını görsel olarak temsil eden normal bir form verir. Her operatör, "kanaldan" tablosal veri kümesini ve işlecin gövdesinden ek girdileri (diğer tablolu veri kümeleri dahil) kabul eder, ardından aşağıdaki bir sonraki işlece bir tablo verisi kümesi yayar: `entity | operator1 | operator2 | ...`
 
 Aşağıdaki örnekte, varlık `CCMRecentlyUsedApplications` (son kullanılan uygulamalara bir başvurudur) ve işleci ise (kayıt başına bazı koşula göre kayıtları filtreleyerek kaydedilir):
 
@@ -28,7 +28,7 @@ CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%' | project Com
 Varlıklar, istemciden sorgulanabilen nesnelerdir. Şu anda şu varlıkları destekliyoruz:
 
 
-|Varlık|Description|
+|Varlık|Açıklama|
 |---|---|
 |AadStatus|Azure Active Directory durumu|
 |Yöneticiler|Yerel Yöneticiler grubunun üyeleri|
@@ -97,7 +97,7 @@ Varlıklar, istemciden sorgulanabilen nesnelerdir. Şu anda şu varlıkları des
 |Officeproductınfo|Office ürün bilgileri|
 |Officevbarulet Ihlali|Office VBA kural Ihlali|
 |Officeveli|Office VBA tarama Özeti|
-|OperatingSystem|Operating System|
+|OperatingSystem|İşletim Sistemi|
 |OperatingSystemEx|İşletim sistemi EX|
 |OperatingSystemRecoveryConfiguration|İşletim sistemi kurtarma yapılandırması|
 |OptionalFeature|İsteğe bağlı özellik|
@@ -165,7 +165,7 @@ Varlıklar, istemciden sorgulanabilen nesnelerdir. Şu anda şu varlıkları des
 |Kesintisiz güç kaynağı|Kesintisiz güç kaynağı|
 |USBController|USB denetleyicisi|
 |USBDevice|USB cihazı|
-|User|Cihaza etkin bağlantısı olan bir kullanıcı hesabı|
+|Kullanıcı|Cihaza etkin bağlantısı olan bir kullanıcı hesabı|
 |USMFolderRedirectionHealth|Klasör yeniden yönlendirme sistem durumu|
 |USMUserProfile|Kullanıcı profili sistem durumu|
 |VideoController|Video denetleyicisi|
@@ -181,7 +181,7 @@ Varlıklar, istemciden sorgulanabilen nesnelerdir. Şu anda şu varlıkları des
 
 Tablo işleçleri, veri akışlarını filtrelemek, özetlemek ve dönüştürmek için kullanılabilir. Şu anda aşağıdaki işleçler desteklenir:
 
-|Tablo işleçleri|Description|
+|Tablo işleçleri|Açıklama|
 |---|---|
 |count|Kayıt sayısını içeren tek bir kayıt içeren bir tablo döndürür|
 |distinct|Giriş tablosunun belirtilen sütunlarının ayrı bir birleşimini içeren bir tablo oluşturur|
@@ -258,7 +258,7 @@ Skaler işlevler ifadelerde kullanılabilir. Şu anda aşağıdaki skaler işlev
 |substring()|Bir kaynak dizeden, dizenin sonuna kadar bir dizinden başlayarak bir alt dize ayıklar|
 |tostring()|Girişi dize gösterimine dönüştürür|
 
-## <a name="additional-entities-operators-and-functions-for-cmpivot-from-configuration-manager"></a><a name="bkmk_onprem_only"></a>Configuration Manager 'den CMPivot için ek varlıklar, işleçler ve işlevler
+## <a name="additional-entities-operators-and-functions-for-cmpivot-from-configuration-manager"></a><a name="bkmk_onprem_only"></a> Configuration Manager 'den CMPivot için ek varlıklar, işleçler ve işlevler
 
 > [!Important]
 > Microsoft Endpoint Manager Yönetim Merkezi 'nden CMPivot çalıştırdığınızda bu öğeler desteklenmez.

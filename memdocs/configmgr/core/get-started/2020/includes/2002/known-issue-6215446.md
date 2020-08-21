@@ -5,18 +5,18 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
 ms.date: 02/13/2020
-ms.openlocfilehash: 54e00688c1375f9ec54ada86d2b2c4b9347d5405
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d887f842b789b41260a49b149b61f28741937613
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711920"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88703700"
 ---
-### <a name="cant-delete-collections"></a><a name="ki_coll"></a>Koleksiyonlar silinemiyor
+### <a name="cant-delete-collections"></a><a name="ki_coll"></a> Koleksiyonlar silinemiyor
 
 <!--6245446-->
 Technical Preview dalının bu sürümünde koleksiyonları silemezsiniz.
 
 Bu sorunu geçici olarak çözmek için aşağıdaki Configuration Manager PowerShell cmdlet 'ini kullanarak koleksiyonları silin:
 
-- [Remove-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollection?view=sccm-ps)
+- [Remove-CMCollection](/powershell/module/configurationmanager/remove-cmcollection?view=sccm-ps)

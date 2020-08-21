@@ -27,7 +27,7 @@
 - Windows 10 ekipleri (Surface Hub)
 
    Windows 10 ekipleri çalıştıran cihazları yönetme hakkında daha fazla bilgi için bkz. [MDM ile Surface Hub yönetme](https://docs.microsoft.com/surface-hub/manage-settings-with-mdm-for-surface-hub)
-- Windows 10 1709 (RS3) ve üzeri, Windows Phone 8,1, Windows 8.1 RT, Windows 8.1 çalıştıran bilgisayarlar (Sustaoluşturma modu)
+- Windows 10 1709 (RS3) ve üzeri, Windows 8.1 RT, Windows 8.1 çalıştıran bilgisayarlar (Sustaşici modu)
 
 > [!NOTE]
 > Tüm Windows sürümleri, MDM aracılığıyla yapılandırılmakta olan tüm kullanılabilir işletim sistemi özelliklerini desteklemez. Bkz. [Windows yapılandırma hizmeti sağlayıcısı başvuru belgeleri](https://docs.microsoft.com/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Her CSP, hangi Windows sürümlerinin desteklendiğini vurgular.
