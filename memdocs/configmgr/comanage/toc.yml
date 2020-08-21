@@ -50,5 +50,7 @@
       href: how-to-prepare-Win10.md
     - name: İş yüklerinin Intune'a geçişi
       href: how-to-switch-workloads.md
+    - name: Şirket Portalı’ndaki uygulamalar
+      href: company-portal.md
     - name: Ortak yönetimi izleme
       href: how-to-monitor.md
