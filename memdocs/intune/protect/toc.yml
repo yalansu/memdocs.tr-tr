@@ -302,8 +302,6 @@
           href: compliance-policy-create-windows.md
         - name: Uyumluluk ilkesi ayarları - Windows 8.1
           href: compliance-policy-create-windows-8-1.md
-        - name: Uyumluluk ilkesi ayarları - Windows Phone 8.1
-          href: compliance-policy-create-windows-8-1.md
     - name: Uç nokta güvenlik ilkesi ayarları
       items:
         - name: Virüsten koruma ilke ayarları
