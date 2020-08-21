@@ -10,12 +10,12 @@ ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: da2fe2ad66617ffb5ad3058011f111b0aaf9e9ae
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 788c48599ac8a94b8690f3a88f9761b9ae8ac742
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82903904"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699441"
 ---
 # <a name="support-center-for-configuration-manager"></a>Configuration Manager için destek merkezi
 
@@ -52,7 +52,7 @@ Sürüm 1906 ' den başlayarak **Onetrace** , Destek Merkezi 'nin bulunduğu yen
 
 ### <a name="powershell-cmdlets"></a>PowerShell cmdlet'leri
 
-Destek Merkezi, [PowerShell cmdlet 'lerini](https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps)de içerir. Bu cmdlet 'leri, başka bir Configuration Manager istemcisine uzak bağlantı oluşturmak, veri toplama seçeneklerini yapılandırmak ve veri toplamayı başlatmak için kullanın.
+Destek Merkezi, [PowerShell cmdlet 'lerini](/powershell/sccm/overview?view=sccm-ps)de içerir. Bu cmdlet 'leri, başka bir Configuration Manager istemcisine uzak bağlantı oluşturmak, veri toplama seçeneklerini yapılandırmak ve veri toplamayı başlatmak için kullanın.
 
 
 ## <a name="prerequisites"></a>Ön koşullar
@@ -70,9 +70,9 @@ Site sunucusunda aşağıdaki yolda bulunan destek merkezi yükleyicisini bulun:
 
 Yükledikten sonra, **Microsoft System Center** grubundaki Başlat menüsünde aşağıdaki öğeleri bulun:  
 
-- Destek Merkezi (ConfigMgrSupportCenter. exe)  
-- Destek Merkezi günlük dosyası Görüntüleyicisi (CMLogViewer. exe)  
-- Destek Merkezi Görüntüleyicisi (ConfigMgrSupportCenterViewer. exe)  
+- Destek Merkezi (ConfigMgrSupportCenter.exe)  
+- Destek Merkezi günlük dosyası Görüntüleyicisi (CMLogViewer.exe)  
+- Destek Merkezi Görüntüleyicisi (ConfigMgrSupportCenterViewer.exe)  
 
 
 ## <a name="known-issues"></a>Bilinen sorunlar
@@ -95,7 +95,7 @@ Bu sorundan kaçınmak için, uzak bir istemciye bağlanmak üzere aşağıdaki 
 
 ### <a name="scripted-server-message-block-connections-to-remote-clients-might-require-removal"></a>Uzak istemcilere betikleştirilmiş sunucu ileti bloğu bağlantıları kaldırma gerekebilir
 
-[New-CMMachineConnection](https://go.microsoft.com/fwlink/p/?linkid=390542) PowerShell cmdlet 'ini kullanarak uzak istemcilere bağlanırken, destek merkezi her bir uzak istemciye bir sunucu ileti bloğu (SMB) bağlantısı oluşturur. Veri toplamayı tamamladıktan sonra bu bağlantıları korur. Windows için en fazla uzak bağlantı sayısını aşmamak için, `net use` Şu anda etkin olan uzak bağlantı kümesini görmek için komutunu kullanın. Ardından, aşağıdaki komutu kullanarak gereksiz tüm bağlantıları devre dışı bırakın:`net use <connection_name> /d`
+[New-CMMachineConnection](https://go.microsoft.com/fwlink/p/?linkid=390542) PowerShell cmdlet 'ini kullanarak uzak istemcilere bağlanırken, destek merkezi her bir uzak istemciye bir sunucu ileti bloğu (SMB) bağlantısı oluşturur. Veri toplamayı tamamladıktan sonra bu bağlantıları korur. Windows için en fazla uzak bağlantı sayısını aşmamak için, `net use` Şu anda etkin olan uzak bağlantı kümesini görmek için komutunu kullanın. Ardından, aşağıdaki komutu kullanarak gereksiz tüm bağlantıları devre dışı bırakın: `net use <connection_name> /d`
 `<connection_name>`Uzak bağlantının adıdır.
 
 ### <a name="application-deployment-evaluation-cycle-request-isnt-sent-correctly-to-remote-machines"></a>Uygulama dağıtımı değerlendirme çevrimi isteği uzak makinelere doğru şekilde gönderilmedi

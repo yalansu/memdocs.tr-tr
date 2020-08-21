@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 378a5de5633d7a526004d84ec5e6885e165eaadb
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0401207ec98331c33e87a0ac03b5cd7f750c17e7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128993"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698723"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1906 ' deki yenilikler
 
@@ -28,7 +28,7 @@ Bu güncelleştirmeyi yüklemek için her zaman en son denetim listesini gözden
 Yeni Configuration Manager özelliklerinden tam olarak yararlanmak için, siteyi güncelleştirdikten sonra istemcileri en son sürüme de güncelleştirin. Site ve konsolu güncelleştirdiğinizde Configuration Manager konsolunda yeni işlevsellik göründüğünde, istemci sürümü de en son olana kadar, tüm senaryo işlevsel değildir.
 
 > [!Tip]  
-> Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1906+-+Configuration+Manager%22&locale=en-us`
+> Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1906+-+Configuration+Manager%22&locale=en-us`
 
 
 ## <a name="requirement-changes"></a>Gereksinim değişiklikleri
@@ -45,7 +45,7 @@ SHA-1 algoritmasındaki zayıf noktalar nedeniyle ve sektör standartlarına uyu
 Daha fazla bilgi için bkz. [Windows istemcileri Için Önkoşullar](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#bkmk_sha2).
 
 
-## <a name="site-infrastructure"></a><a name="bkmk_infra"></a>Site altyapısı
+## <a name="site-infrastructure"></a><a name="bkmk_infra"></a> Site altyapısı
 
 ### <a name="site-server-maintenance-task-improvements"></a>Site sunucusu bakım görevi geliştirmeleri
 
@@ -87,7 +87,7 @@ Daha fazla bilgi için bkz. [Management Insights](../../servers/manage/managemen
 
 - Kurulumdan yeni bir zaman uyumlu çoğaltma ekleme<!--3127336-->: Artık var olan bir SQL Always on kullanılabilirlik grubuna yeni bir ikincil çoğaltma düğümü ekleyebilirsiniz. El ile gerçekleştirilen bir işlem yerine, bu değişikliği yapmak için Configuration Manager Kurulum kullanın. Daha fazla bilgi için bkz. [SQL Server Always on kullanılabilirlik grupları yapılandırma](../../servers/deploy/configure/configure-aoag.md#bkmk_sync).
 
-- Çoklu alt ağ yük devretme<!-- SCCMDocs-pr#3734 -->: Artık SQL Server ' de [MultiSubnetFailover Bağlantı dizesi anahtar sözcüğünü](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) etkinleştirebilirsiniz. Ayrıca, site sunucusunu el ile yapılandırmanız gerekir. Daha fazla bilgi için bkz. [Çoklu alt ağ yük devretme](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover) önkoşulu.
+- Çoklu alt ağ yük devretme<!-- SCCMDocs-pr#3734 -->: Artık SQL Server ' de [MultiSubnetFailover Bağlantı dizesi anahtar sözcüğünü](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) etkinleştirebilirsiniz. Ayrıca, site sunucusunu el ile yapılandırmanız gerekir. Daha fazla bilgi için bkz. [Çoklu alt ağ yük devretme](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover) önkoşulu.
 
 - Dağıtılmış görünümler için destek<!-- SCCMDocs-pr#3792 -->: Site veritabanı SQL Server Always on kullanılabilirlik grubunda barındırılabilir ve [dağıtılmış görünümleri](../hierarchy/data-transfers-between-sites.md#bkmk_dbrep)kullanmak için veritabanı çoğaltması bağlantılarını etkinleştirebilirsiniz.
 
@@ -101,7 +101,7 @@ Daha fazla bilgi için bkz. [Management Insights](../../servers/manage/managemen
     - SQL kullanılabilirlik grubu çoğaltmalarının hepsi aynı dengeli dağıtım moduna sahip olmalıdır
     - SQL kullanılabilirlik grubu çoğaltmaları sağlıklı olmalıdır
 
-## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a>Buluta bağlı yönetim
+## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a> Buluta bağlı yönetim
 
 ### <a name="azure-active-directory-user-group-discovery"></a>Kullanıcı grubu bulmayı Azure Active Directory
 
@@ -122,7 +122,7 @@ Eşitleme, koleksiyon üyeliği sonuçlarına göre Azure AD grup üyelikleri ol
 Daha fazla bilgi için bkz. [koleksiyon oluşturma](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync).
 
 
-## <a name="desktop-analytics"></a><a name="bkmk_da"></a>Masaüstü Analizi
+## <a name="desktop-analytics"></a><a name="bkmk_da"></a> Masaüstü Analizi
 
 ### <a name="readiness-insights-for-desktop-apps"></a>Masaüstü uygulamaları için hazırlık öngörüleri
 
@@ -141,7 +141,7 @@ Masaüstü Analizi sorunlarını gidermeye yardımcı olması için Configuratio
 Daha fazla bilgi için bkz. [Günlükler toplayıcısı](../../../desktop-analytics/log-collector.md).
 
 
-## <a name="real-time-management"></a><a name="bkmk_real"></a>Gerçek zamanlı yönetim
+## <a name="real-time-management"></a><a name="bkmk_real"></a> Gerçek zamanlı yönetim
 
 ### <a name="add-joins-additional-operators-and-aggregators-in-cmpivot"></a>CMPivot içinde birleştirmeler, ek işleçler ve aggregekleyin
 
@@ -174,7 +174,7 @@ Configuration Manager yerleşik [**Güvenlik Yöneticisi**](../../understand/fun
 Daha fazla bilgi için bkz. [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot_secadmin1906).
 
 
-## <a name="content-management"></a><a name="bkmk_content"></a>İçerik yönetimi
+## <a name="content-management"></a><a name="bkmk_content"></a> İçerik yönetimi
 
 ### <a name="delivery-optimization-download-data-in-client-data-sources-dashboard"></a>İstemci veri kaynakları panosundaki teslim Iyileştirme indirme verileri
 
@@ -193,12 +193,12 @@ Bu önbellek sunucusu teslim Iyileştirmesi tarafından indirilen içerik için 
 Daha fazla bilgi için, bkz. [Configuration Manager Içindeki ağ önbelleğinde teslim iyileştirmesi](../hierarchy/microsoft-connected-cache.md).
 
 
-## <a name="client-management"></a><a name="bkmk_client"></a>İstemci yönetimi
+## <a name="client-management"></a><a name="bkmk_client"></a> İstemci yönetimi
 
 ### <a name="support-for-windows-virtual-desktop"></a>Windows sanal masaüstü desteği
 
 <!--3556025-->
-[Windows sanal masaüstü](https://docs.microsoft.com/azure/virtual-desktop/) Microsoft Azure ve Microsoft 365 bir önizleme özelliğidir. Artık, Azure 'da Windows çalıştıran bu sanal cihazları yönetmek için Configuration Manager kullanabilirsiniz.
+[Windows sanal masaüstü](/azure/virtual-desktop/) Microsoft Azure ve Microsoft 365 bir önizleme özelliğidir. Artık, Azure 'da Windows çalıştıran bu sanal cihazları yönetmek için Configuration Manager kullanabilirsiniz.
 
 Terminal sunucusuna benzer şekilde, bu sanal cihazlar Çoklu eşzamanlı etkin kullanıcı oturumlarına izin verir. İstemci performansına yardımcı olmak için Configuration Manager artık bu çoklu kullanıcı oturumlarına izin veren her cihazda kullanıcı ilkelerini devre dışı bırakır. Kullanıcı ilkelerini etkinleştirseniz bile, istemci Windows sanal masaüstü ve terminal sunucuları 'nı içeren bu cihazlarda varsayılan olarak devre dışı bırakır.
 
@@ -231,7 +231,7 @@ Artık Configuration Manager istemcisinin önbelleğe alınmış içeriği tutab
 Daha fazla bilgi için bkz. [istemci önbellek ayarları](../../clients/deploy/about-client-settings.md#client-cache-settings).
 
 
-## <a name="co-management"></a><a name="bkmk_comgmt"></a>Ortak yönetim
+## <a name="co-management"></a><a name="bkmk_comgmt"></a> Ortak yönetim
 
 ### <a name="improvements-to-co-management-auto-enrollment"></a>Ortak yönetim otomatik kayıt geliştirmeleri
 
@@ -263,7 +263,7 @@ Daha fazla bilgi için bkz. [ortak yönetimi etkinleştirme](../../../comanage/h
 ABD devlet müşterileri artık Azure ABD kamu bulutu (portal.azure.us) ile birlikte ortak yönetimi kullanabilir. Daha fazla bilgi için bkz. [ortak yönetimi etkinleştirme](../../../comanage/how-to-enable.md).
 
 
-## <a name="application-management"></a><a name="bkmk_app"></a>Uygulama yönetimi
+## <a name="application-management"></a><a name="bkmk_app"></a> Uygulama yönetimi
 
 ### <a name="filter-applications-deployed-to-devices"></a>Cihazlara dağıtılan uygulamaları filtrele
 
@@ -311,7 +311,7 @@ Bu sürüm, uygulama onayları için aşağıdaki geliştirmeleri içerir:
 Daha fazla bilgi için bkz. [uygulamaları onaylama](../../../apps/deploy-use/app-approval.md).
 
 
-## <a name="os-deployment"></a><a name="bkmk_osd"></a>İşletim sistemi dağıtımı
+## <a name="os-deployment"></a><a name="bkmk_osd"></a> İşletim sistemi dağıtımı
 
 ### <a name="task-sequence-debugger"></a>Görev sırası hata ayıklayıcısı
 
@@ -377,7 +377,7 @@ Bu sürüm, işletim sistemi dağıtımına yönelik aşağıdaki geliştirmeler
 PXE DHCP el sıkışması sırasında 82 seçeneği artık WDS olmadan PXE Yanıtlayıcı ile desteklenmektedir. 82 seçeneği WDS ile desteklenmez.
 
 
-## <a name="software-center"></a><a name="bkmk_userxp"></a>Yazılım Merkezi
+## <a name="software-center"></a><a name="bkmk_userxp"></a> Yazılım Merkezi
 
 ### <a name="improvements-to-software-center-tab-customizations"></a>Software Center sekme özelleştirmelerinde geliştirmeler
 
@@ -449,7 +449,7 @@ Software Center 'da varsayılan sekmeleri açmak için de bu söz dizimini kulla
 
 Daha fazla bilgi için bkz. [Software Center sekme görünürlüğü](../../clients/deploy/about-client-settings.md#software-center-tab-visibility).
 
-## <a name="software-updates"></a><a name="bkmk_sum"></a>Yazılım güncelleştirmeleri
+## <a name="software-updates"></a><a name="bkmk_sum"></a> Yazılım güncelleştirmeleri
 
 ### <a name="additional-options-for-wsus-maintenance"></a>WSUS bakımı için ek seçenekler
 
@@ -484,7 +484,7 @@ Daha fazla bilgi için bkz. [yazılım güncelleştirme istemci ayarları](../..
 
 <!--4682946-->
 
-**Windows 10, sürüm 1903 ve üzeri,** **Windows 10** ürününün önceki sürümleri gibi bir parçası olmak yerine kendi ürünü olarak Microsoft Update eklenmiştir. Bu değişiklik, istemcilerinizin bu güncelleştirmeleri görmesini sağlamak için birkaç el ile adım uygulamanızı sağlar. Yeni ürün için gerçekleştirmeniz gereken el ile adımların sayısını azaltmaya yardımcı oluk.
+**Windows 10, sürüm 1903 ve üzeri,** **Windows 10**  ürününün önceki sürümleri gibi bir parçası olmak yerine kendi ürünü olarak Microsoft Update eklenmiştir. Bu değişiklik, istemcilerinizin bu güncelleştirmeleri görmesini sağlamak için birkaç el ile adım uygulamanızı sağlar. Yeni ürün için gerçekleştirmeniz gereken el ile adımların sayısını azaltmaya yardımcı oluk.
 
 Configuration Manager sürüm 1906 ' e güncelleştirdiğinizde ve eşitleme için **Windows 10** ürününün seçili olması halinde, aşağıdaki eylemler otomatik olarak gerçekleşir:
 
@@ -508,7 +508,7 @@ Artık belirli bir yazılım güncelleştirmesi gerektiren cihazları görmek i�
 Daha fazla bilgi için bkz. [yazılım güncelleştirmelerini izleme](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Windows 'u hizmet olarak yönetme](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)ve [Office 365 ProPlus güncelleştirmelerini yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
-## <a name="office-management"></a><a name="bkmk_o365"></a>Office yönetimi
+## <a name="office-management"></a><a name="bkmk_o365"></a> Office yönetimi
 
 ### <a name="office-365-proplus-upgrade-readiness-dashboard"></a>Office 365 ProPlus yükseltme hazırlığı panosu
 
@@ -519,7 +519,7 @@ Hangi cihazların Office 365 ProPlus sürümüne yükseltmeye hazır olduğunu b
 Pano, Önkoşullar ve bu verileri kullanma hakkında daha fazla bilgi için bkz. [Office 365 ProPlus hazırlığı Için tümleştirme](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash).
 
 
-## <a name="protection"></a><a name="bkmk_protect"></a>Korunmasına
+## <a name="protection"></a><a name="bkmk_protect"></a> Korunmasına
 
 ### <a name="windows-defender-application-guard-file-trust-criteria"></a>Windows Defender Application Guard dosya güven ölçütleri
 
@@ -530,7 +530,7 @@ Kullanıcıların normalde Windows Defender Application Guard (WDAG) içinde aç
 Daha fazla bilgi için bkz. [Windows Defender Application Guard Ilkesi oluşturma ve dağıtma](../../../protect/deploy-use/create-deploy-application-guard-policy.md#bkmk_FM).
 
 
-## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a>Configuration Manager konsolu
+## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a> Configuration Manager konsolu
 
 ### <a name="role-based-access-for-folders"></a>Klasörler için rol tabanlı erişim
 
@@ -598,7 +598,7 @@ Daha fazla bilgi için bkz. [Yönetim hizmeti](../hierarchy/plan-for-the-sms-pro
 **İzleme** çalışma alanında **istemci işlemleri**' ni seçin. **Sonraki yazılım güncelleştirme noktasına geçiş** işlemi artık düzgün şekilde adlandırılmış.
 
 
-## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a>Kullanımdan kaldırılan özellikler ve işletim sistemleri
+## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a> Kullanımdan kaldırılan özellikler ve işletim sistemleri
 
 [Kaldırılan ve kullanımdan kaldırılan öğelerde](deprecated/removed-and-deprecated.md)uygulanmadan önce yapılan değişiklikler hakkında bilgi edinin.
 
@@ -622,7 +622,7 @@ Bu sürümden itibaren, aşağıdaki özellikler artık ön sürüm değildir:
 
 Bu sürüm, yeni özelliklerden başlayarak hata düzeltmeleri gibi ek değişiklikler de içerir. Daha fazla bilgi için bkz. [Configuration Manager geçerli daldaki değişikliklerin özeti, sürüm 1906](https://support.microsoft.com/help/4514258).
 
-Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell sürüm 1906 sürüm notları](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps).
+Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell sürüm 1906 sürüm notları](/powershell/sccm/1906-release-notes?view=sccm-ps).
 
 Aşağıdaki güncelleştirme paketi (4517869) konsolunda 1 Ekim 2019 ' den başlayarak sunulmaktadır: [Configuration Manager geçerli dalı, sürüm 1906 Için güncelleştirme paketi](https://support.microsoft.com/help/4517869).
 

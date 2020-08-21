@@ -10,12 +10,12 @@ ms.assetid: 31de47c9-891b-4de7-8d5e-fbbc1bff7c60
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5d9d7cea7e5653b338a3eb4adb01d9fded99035e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8e1334603bcf60ea3eb8c3d18b73d511570cdc5d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720523"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699747"
 ---
 # <a name="how-to-enable-tls-12"></a>TLS 1,2 nasıl etkinleştirilir
 
@@ -62,7 +62,7 @@ Bu bölümde, belirli Configuration Manager özellikleri ve senaryoları için b
 |Site sistemi rolleri| - [.NET Framework güncelleştirme](enable-tls-1-2-server.md#bkmk_net) ve güçlü şifreleme ayarlarını doğrulama <br/> - [SQL Server Native Client](enable-tls-1-2-server.md#bkmk_sql-client) de dahil olmak üzere [SQL Server ve onun istemci bileşenlerini güncelleştirme](enable-tls-1-2-server.md#bkmk_sql)|
 |Raporlama hizmetleri noktası|- Site sunucusunda, SQL Raporlama Hizmetleri sunucularında ve konsolu olan herhangi bir bilgisayarda [.NET Framework güncelleştirme](enable-tls-1-2-server.md#bkmk_net)<br/> -SMS_Executive hizmetini gerektiği şekilde yeniden başlatın|
 |Yazılım güncelleştirme noktası|[WSUS güncelleştirme](enable-tls-1-2-server.md#bkmk_wsus)|
-|Bulut yönetimi ağ geçidi|[TLS 1,2 'yi zorla](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md#bkmk_tls)|
+|Bulut yönetimi ağ geçidi|[TLS 1.2’yi zorlama](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md#bkmk_tls)|
 |Configuration Manager konsolu| - [Güncelleştirme .NET Framework](enable-tls-1-2-client.md#bkmk_net)<br/> -Güçlü şifreleme ayarlarını doğrulama|
 |HTTPS site sistem rolleriyle Configuration Manager istemci|[Windows Update, WinHTTP kullanarak istemci-sunucu iletişimleri için TLS 1,2 desteği](enable-tls-1-2-client.md#bkmk_winhttp)|
 |Yazılım Merkezi| - [Güncelleştirme .NET Framework](enable-tls-1-2-client.md#bkmk_net)<br/> -Güçlü şifreleme ayarlarını doğrulama|
@@ -86,7 +86,7 @@ Configuration Manager TLS 1,2 gibi şifreleme protokollerini kullanan temel beş
 
 ### <a name="what-determines-which-encryption-protocol-is-used"></a>Hangi şifreleme protokolünün kullanıldığını belirler?
 
-HTTPS, hem istemci hem de sunucu tarafından şifrelenmiş bir konuşmada desteklenen en yüksek protokol sürümüne her zaman anlaşacaktır. Bir bağlantı kurulurken, istemci sunucuya en yüksek protokolü ile bir ileti gönderir. Sunucu aynı sürümü destekliyorsa, bu sürümü kullanarak bir ileti gönderir. Bu anlaşmalı sürüm, bağlantı için kullanılan bir sürümdür. Sunucu, istemci tarafından sunulan sürümü desteklemiyorsa, sunucu iletisi kullanabileceği en yüksek sürümü belirler. TLS El Sıkışma Protokolü hakkında daha fazla bilgi için bkz. [TLS kullanarak güvenli bir oturum oluşturma](https://docs.microsoft.com/windows/win32/secauthn/tls-handshake-protocol#establishing-a-secure-session-by-using-tls).
+HTTPS, hem istemci hem de sunucu tarafından şifrelenmiş bir konuşmada desteklenen en yüksek protokol sürümüne her zaman anlaşacaktır. Bir bağlantı kurulurken, istemci sunucuya en yüksek protokolü ile bir ileti gönderir. Sunucu aynı sürümü destekliyorsa, bu sürümü kullanarak bir ileti gönderir. Bu anlaşmalı sürüm, bağlantı için kullanılan bir sürümdür. Sunucu, istemci tarafından sunulan sürümü desteklemiyorsa, sunucu iletisi kullanabileceği en yüksek sürümü belirler. TLS El Sıkışma Protokolü hakkında daha fazla bilgi için bkz. [TLS kullanarak güvenli bir oturum oluşturma](/windows/win32/secauthn/tls-handshake-protocol#establishing-a-secure-session-by-using-tls).
 
 ### <a name="what-determines-which-protocol-version-the-client-and-server-can-use"></a>İstemci ve sunucunun hangi protokol sürümünü kullanabileceğinizi belirler?
 
@@ -103,7 +103,7 @@ Genellikle, aşağıdaki öğeler hangi protokol sürümünün kullanıldığın
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 - [Şifreleme denetimleri teknik başvurusu](cryptographic-controls-technical-reference.md)
-- [.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamaları](https://docs.microsoft.com/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
+- [.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamaları](/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
 - [KB 3135244: Microsoft SQL Server için TLS 1,2 desteği](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)
 
 ## <a name="next-steps"></a>Sonraki adımlar

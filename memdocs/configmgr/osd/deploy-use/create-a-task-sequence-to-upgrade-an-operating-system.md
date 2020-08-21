@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 907c36b6f06bbf4fbbabb9ee1b2df6cadb0acb75
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: ca002664bd55dbac79ace5cfe4bf88cd41d65b89
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125466"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698104"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Configuration Manager işletim sistemini yükseltmek için görev dizisi oluşturma
 
@@ -41,7 +41,7 @@ Görev dizisini oluşturmadan önce, aşağıdaki gereksinimlerin yerinde olmas�
 - [Uygulamalar](../../apps/deploy-use/create-applications.md) Configuration Manager konsoluna eklenmelidir.  
 
 
-## <a name="create-a-task-sequence-to-upgrade-an-os"></a><a name="BKMK_UpgradeOS"></a>İşletim sistemini yükseltmek için görev dizisi oluşturma  
+## <a name="create-a-task-sequence-to-upgrade-an-os"></a><a name="BKMK_UpgradeOS"></a> İşletim sistemini yükseltmek için görev dizisi oluşturma  
 
 İstemcilerdeki IŞLETIM sistemini yükseltmek için bir görev dizisi oluşturun ve görev sırası oluşturma Sihirbazı ' nda bir **işletim sistemini yükseltme paketinden Yükselt** ' i seçin. Sihirbaz, işletim sistemini yükseltmek, yazılım güncelleştirmelerini uygulamak ve uygulamaları yüklemek için görev dizisi adımlarını ekler.
 
@@ -66,7 +66,7 @@ Görev dizisini oluşturmadan önce, aşağıdaki gereksinimlerin yerinde olmas�
     - **Ürün anahtarı**: işletim sisteminin yüklenmesi için Windows ürün anahtarını belirtin. Kodlanmış toplu lisans anahtarlarını veya standart ürün anahtarlarını belirtin. Standart bir ürün anahtarı kullanırsanız, beş karakter grubunu her bir tire () ile ayırın `-` . Örneğin: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`. Yükseltme bir toplu lisans sürümü için olduğunda, ürün anahtarı gerekli olmayabilir.  
 
         > [!Note]  
-        > Bu ürün anahtarı birden çok etkinleştirme anahtarı (MAK) veya bir genel toplu lisanslama anahtarı (GVLK) olabilir. Bir GVLK, anahtar yönetimi hizmeti (KMS) istemci kurulum anahtarı olarak da adlandırılır. Daha fazla bilgi için bkz. [toplu etkinleştirme planı](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). KMS istemci kurulum anahtarlarının bir listesi için, bkz. Windows Server etkinleştirme kılavuzunun [ek a](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) .
+        > Bu ürün anahtarı birden çok etkinleştirme anahtarı (MAK) veya bir genel toplu lisanslama anahtarı (GVLK) olabilir. Bir GVLK, anahtar yönetimi hizmeti (KMS) istemci kurulum anahtarı olarak da adlandırılır. Daha fazla bilgi için bkz. [toplu etkinleştirme planı](/windows/deployment/volume-activation/plan-for-volume-activation-client). KMS istemci kurulum anahtarlarının bir listesi için, bkz. Windows Server etkinleştirme kılavuzunun [ek a](/windows-server/get-started/kmsclientkeys) .
 
     - **Çözümlenemeyen uyumluluk Iletilerini yoksayın**: Windows Server 2016 ' e yükseltiyorsanız Bu ayarı seçin. Bu ayarı seçmezseniz, Windows Kurulumu kullanıcının bir Windows uygulama uyumluluğu iletişim kutusunda **Onayla** ' yı seçmesini beklediği için görev sırası tamamlanamamalıdır.  
 
@@ -217,7 +217,7 @@ Sürüm 1806 ' den başlayarak, Windows 10 yerinde yükseltme için varsayılan 
 
 Ek tanılama araçları çalıştırmak için bu gruba adımlar ekleyin. Hatadan sonra sistemden daha fazla bilgi toplamak için bu araçları otomatikleştirin.  
 
-Bu tür bir araç Windows [Setupdiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag)'dir. Bir Windows 10 yükseltmesinin neden başarısız olduğuna ilişkin ayrıntıları almak için tek başına bir tanılama aracıdır.  
+Bu tür bir araç Windows [Setupdiag](/windows/deployment/upgrade/setupdiag)'dir. Bir Windows 10 yükseltmesinin neden başarısız olduğuna ilişkin ayrıntıları almak için tek başına bir tanılama aracıdır.  
 
 - Configuration Manager, araç için [bir paket oluşturun](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program) .  
 
@@ -225,13 +225,13 @@ Bu tür bir araç Windows [Setupdiag](https://docs.microsoft.com/windows/deploym
     `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`  
 
 > [!TIP]
-> En son işlevsellik ve bilinen sorunlara yönelik düzeltmeler için her zaman SetupDiag 'un en son sürümünü kullanın. Daha fazla bilgi için bkz. [Setupdiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag).
+> En son işlevsellik ve bilinen sorunlara yönelik düzeltmeler için her zaman SetupDiag 'un en son sürümünü kullanın. Daha fazla bilgi için bkz. [Setupdiag](/windows/deployment/upgrade/setupdiag).
 
 ## <a name="additional-recommendations"></a>Ek öneriler
 
 ### <a name="windows-documentation"></a>Windows belgeleri
 
-Windows [10 yükseltme hatalarını çözmek](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)için Windows belgelerini gözden geçirin. Bu makale, yükseltme işlemiyle ilgili ayrıntılı bilgileri de içerir.  
+Windows [10 yükseltme hatalarını çözmek](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)için Windows belgelerini gözden geçirin. Bu makale, yükseltme işlemiyle ilgili ayrıntılı bilgileri de içerir.  
 
 ### <a name="check-minimum-disk-space"></a>En az disk alanını denetle
 
@@ -272,12 +272,12 @@ Bu görev sırası sırasında cihazı BIOS 'tan UEFı 'ye değiştirmek istiyor
 ### <a name="manage-bitlocker"></a>seçin,
 
 <!--SCCMDocs issue #494-->
-BitLocker disk şifrelemesi kullanıyorsanız, varsayılan olarak Windows Kurulumu yükseltme sırasında otomatik olarak askıya alır. Windows 10 sürüm 1803 ' den başlayarak, Windows Kurulumu `/BitLocker` Bu davranışı denetlemek için komut satırı parametresini içerir. Güvenlik gereksinimleriniz, etkin disk şifrelemesini her zaman gerektirdiğinde, **yükseltme Için hazırla** grubunda **Osdsetupadditionalupgradeoptions** [görev dizisi değişkenini](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) kullanın `/BitLocker TryKeepActive` . Daha fazla bilgi için bkz. [Windows kurulumu komut satırı seçenekleri](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
+BitLocker disk şifrelemesi kullanıyorsanız, varsayılan olarak Windows Kurulumu yükseltme sırasında otomatik olarak askıya alır. Windows 10 sürüm 1803 ' den başlayarak, Windows Kurulumu `/BitLocker` Bu davranışı denetlemek için komut satırı parametresini içerir. Güvenlik gereksinimleriniz, etkin disk şifrelemesini her zaman gerektirdiğinde, **yükseltme Için hazırla** grubunda **Osdsetupadditionalupgradeoptions** [görev dizisi değişkenini](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) kullanın `/BitLocker TryKeepActive` . Daha fazla bilgi için bkz. [Windows kurulumu komut satırı seçenekleri](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
 
 ### <a name="remove-default-apps"></a>Varsayılan uygulamaları Kaldır
 
 <!--SCCMDocs issue #526-->
-Bazı müşteriler Windows 10 ' da varsayılan sağlanan uygulamaları kaldırır. Örneğin, Bing hava durumu uygulaması veya Microsoft Solitaire koleksiyonu. Bazı durumlarda, bu uygulamalar Windows 10 ' u güncelleştirdikten sonra döndürülür. Daha fazla bilgi için bkz. [Windows 10 ' dan kaldırılan uygulamaları tutma](https://docs.microsoft.com/windows/application-management/remove-provisioned-apps-during-update).
+Bazı müşteriler Windows 10 ' da varsayılan sağlanan uygulamaları kaldırır. Örneğin, Bing hava durumu uygulaması veya Microsoft Solitaire koleksiyonu. Bazı durumlarda, bu uygulamalar Windows 10 ' u güncelleştirdikten sonra döndürülür. Daha fazla bilgi için bkz. [Windows 10 ' dan kaldırılan uygulamaları tutma](/windows/application-management/remove-provisioned-apps-during-update).
 
 **Yükseltme Için hazırla** grubundaki görev dizisine **komut satırı Çalıştır** adımı ekleyin. Aşağıdaki örneğe benzer bir komut satırı belirtin:
 

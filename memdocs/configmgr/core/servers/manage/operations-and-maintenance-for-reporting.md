@@ -10,12 +10,12 @@ ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 414d1138a7682d6b9acbc7731035fff1842a1fe7
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: 21bb81e9851ab80d7807df337a67005e5b6b292a
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87815421"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699662"
 ---
 # <a name="operations-and-maintenance-for-reporting-in-configuration-manager"></a>Configuration Manager raporlama için işlemler ve bakım
 
@@ -33,7 +33,7 @@ Configuration Manager raporlarını SQL Server Reporting Services depolar. Rapor
 Bir raporu çalıştırdığınızda, rapor başlığını, açıklamasını ve kategorisini yerel işletim sisteminin dilinde görüntüler. Daha fazla bilgi için bkz. [raporlar Için diller](configuring-reporting.md#-languages-for-reports).
 
 > [!NOTE]  
-> Rapor Yöneticisi, Web tabanlı bir rapor erişim ve yönetim aracıdır. Bunu, HTTPS bağlantısı üzerinden tek bir rapor sunucusu örneğini yönetmek için kullanabilirsiniz. İşletimsel görevler için Rapor Yöneticisi kullanın: raporları görüntüleyin, rapor özelliklerini değiştirin ve ilişkili rapor aboneliklerini yönetin. Bu makalede, Rapor Yöneticisi rapor görüntüleme ve rapor özelliklerini değiştirme adımları sağlanmaktadır. Rapor Yöneticisi diğer seçenekler hakkında daha fazla bilgi için bkz. [Rapor Yöneticisi nedir?](https://docs.microsoft.com/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server)
+> Rapor Yöneticisi, Web tabanlı bir rapor erişim ve yönetim aracıdır. Bunu, HTTPS bağlantısı üzerinden tek bir rapor sunucusu örneğini yönetmek için kullanabilirsiniz. İşletimsel görevler için Rapor Yöneticisi kullanın: raporları görüntüleyin, rapor özelliklerini değiştirin ve ilişkili rapor aboneliklerini yönetin. Bu makalede, Rapor Yöneticisi rapor görüntüleme ve rapor özelliklerini değiştirme adımları sağlanmaktadır. Rapor Yöneticisi diğer seçenekler hakkında daha fazla bilgi için bkz. [Rapor Yöneticisi nedir?](/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server)
 
 Bir Configuration Manager raporu çalıştırmak için aşağıdaki yordamları kullanın.
 
@@ -77,7 +77,7 @@ Rapor özellikleri rapor adı ve açıklamasını içerir. Configuration Manager
 
 Rapor Yöneticisi rapor özelliklerini rapor sunucusuna kaydeder. Configuration Manager konsolu raporun güncelleştirilmiş rapor özelliklerini gösterir.
 
-## <a name="edit-a-report"></a><a name="bkmk_edit"></a>Rapor düzenleme
+## <a name="edit-a-report"></a><a name="bkmk_edit"></a> Rapor düzenleme
 
 Mevcut bir Configuration Manager rapor, istediğiniz bilgileri almadığında, Rapor Oluşturucusu ' de düzenleyin. Ayrıca, raporun düzen veya tasarımını değiştirmek için Rapor Oluşturucusu de kullanabilirsiniz. Varsayılan bir raporu doğrudan düzenleyebileceğiniz sırada klonlamak en iyisidir. Düzenlemek için raporu açın ve **farklı kaydet**' i seçin.
 
@@ -173,7 +173,7 @@ SQL tabanlı bir Configuration Manager raporu oluşturmak için aşağıdaki yor
 
 1. Raporu rapor sunucusuna kaydetmek için **Kaydet** ' i seçin.
 
-## <a name="manage-report-subscriptions"></a><a name="bkmk_subscription"></a>Rapor aboneliklerini yönetme
+## <a name="manage-report-subscriptions"></a><a name="bkmk_subscription"></a> Rapor aboneliklerini yönetme
 
 SQL Server Reporting Services ' de rapor abonelikleri, belirtilen raporların e-posta veya zamanlanan aralıklarda bir dosya paylaşımında otomatik olarak teslimini yapılandırmanızı sağlar. Rapor aboneliklerini yapılandırmak için, Configuration Manager **abonelik oluşturma Sihirbazı 'nı** kullanın.
 
@@ -256,12 +256,12 @@ Bir dosya paylaşımında rapor teslim etmek üzere bir rapor aboneliği oluştu
 
 1. Configuration Manager rapor aboneliğini başarıyla oluşturduğunu doğrulayın. Rapor aboneliklerini görüntülemek ve değiştirmek için **abonelikler** düğümünü seçin.
 
-### <a name="create-a-report-subscription-to-deliver-a-report-by-email"></a><a name="bkmk_subscription-email"></a>Raporu e-postayla teslim etmek için rapor aboneliği oluşturma
+### <a name="create-a-report-subscription-to-deliver-a-report-by-email"></a><a name="bkmk_subscription-email"></a> Raporu e-postayla teslim etmek için rapor aboneliği oluşturma
 
 Raporu e-postayla teslim etmek için bir rapor aboneliği oluşturduğunuzda, Raporlama Hizmetleri yapılandırdığınız alıcılara bir e-posta gönderir. E-posta, raporu ek olarak içerir. Rapor sunucusu e-posta adreslerini doğrulamaz veya bir e-posta sunucusundan alamaz. Raporları kuruluşunuzun içindeki veya dışındaki geçerli bir e-posta hesabına e-posta ile gönderebilirsiniz.
 
 > [!NOTE]
-> **E-posta** aboneliği seçeneğini etkinleştirmek Için, Raporlama Hizmetleri 'ndeki e-posta ayarlarını yapılandırmanız gerekir. Daha fazla bilgi için bkz. [Reporting Services 'Da e-posta teslimi](https://docs.microsoft.com/sql/reporting-services/subscriptions/e-mail-delivery-in-reporting-services).
+> **E-posta** aboneliği seçeneğini etkinleştirmek Için, Raporlama Hizmetleri 'ndeki e-posta ayarlarını yapılandırmanız gerekir. Daha fazla bilgi için bkz. [Reporting Services 'Da e-posta teslimi](/sql/reporting-services/subscriptions/e-mail-delivery-in-reporting-services).
 
 Aşağıdaki e-posta teslim seçeneklerinden birini veya her ikisini seçebilirsiniz:
 

@@ -10,12 +10,12 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a7f7853b006d4ac8b11a30217d1b05b1eedd69dc
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: bf9ad15266c4e6615ba100d5ea5270e23b93ece7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268989"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699135"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>Configuration Manager siteleri yükleme önkoşulları
 
@@ -34,7 +34,7 @@ Aşağıdaki önkoşullar aşağıdaki türlerden birini yüklemek için geçerl
 
 Bir merkezi yönetim sitesini bir hiyerarşi genişletmesinin parçası olarak yüklüyorsanız, bkz. [tek başına birincil siteyi genişletme](#bkmk_expand).
 
-### <a name="prerequisites-for-installing-a-primary-site-or-a-central-administration-site"></a><a name="bkmk_PrereqPri"></a>Birincil site veya merkezi yönetim sitesi yükleme önkoşulları  
+### <a name="prerequisites-for-installing-a-primary-site-or-a-central-administration-site"></a><a name="bkmk_PrereqPri"></a> Birincil site veya merkezi yönetim sitesi yükleme önkoşulları  
 
 - Gerekli Windows Server rolleri, özellikleri ve Windows bileşenleri yüklü olmalıdır. Daha fazla bilgi için bkz. [site sistemi önkoşulları](../../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012sspreq)  
 
@@ -73,13 +73,13 @@ Bir merkezi yönetim sitesini bir hiyerarşi genişletmesinin parçası olarak y
 
 - Site sunucusu ve site veritabanı sunucusu tüm önkoşul yapılandırmalarının yerine getirmelidir. Configuration Manager kurulumunu başlatmadan önce, sorunları belirlemek ve onarmak için [önkoşul denetleyicisi 'ni el ile çalıştırın](prerequisite-checker.md) .  
 
-### <a name="prerequisites-to-expand-a-stand-alone-primary-site"></a><a name="bkmk_expand"></a>Tek başına birincil siteyi genişletme önkoşulları
+### <a name="prerequisites-to-expand-a-stand-alone-primary-site"></a><a name="bkmk_expand"></a> Tek başına birincil siteyi genişletme önkoşulları
 
 Tek başına birincil site, merkezi yönetim sitesi olan bir hiyerarşiye genişletebilmeniz için aşağıdaki önkoşulları karşılamalıdır:
 
 #### <a name="source-file-version-matches-site-version"></a>Kaynak dosya sürümü site sürümüyle eşleşiyor
 
-Yeni Merkezi yönetim sitesini bir CD 'den medyayı kullanarak yükler. Tek başına birincil sitenin sürümü ile eşleşen en son klasör. Sürümlerin eşleştiğinden emin olmak için CD 'de bulunan kaynak dosyalarını kullanın [. ](../../manage/the-cd.latest-folder.md)Tek başına birincil sitede en son klasör.
+Yeni Merkezi yönetim sitesini bir CD 'den medyayı kullanarak yükler. Tek başına birincil sitenin sürümü ile eşleşen en son klasör. Sürümlerin eşleştiğinden emin olmak için CD 'de bulunan kaynak dosyalarını kullanın [. ](../../manage/the-cd.latest-folder.md) Tek başına birincil sitede en son klasör.
 
 Farklı siteleri yüklemek için kullanılacak doğru kaynak dosyaları hakkında daha fazla bilgi için bkz. [farklı site türlerini yükleme seçenekleri](prepare-to-install-sites.md#bkmk_options).  
 
@@ -133,7 +133,7 @@ Bir merkezi yönetim sitesi ile birincil site arasında başarıyla veri çoğal
 
 Siteyi genişlettikten sonra, aşağıdaki Azure hizmetlerini Configuration Manager ile yeniden yapılandırmanız gerekir:
 
-- [Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- [Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 - [Iş için Microsoft Store](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 - [Bulut yönetimi ağ geçidi](../../../clients/manage/cmg/plan-cloud-management-gateway.md)
 
@@ -148,7 +148,7 @@ Alternatif olarak, bu hizmete bağlantıyı kaldırıp yeniden oluşturun:
 3. Configuration Manager ile kullanmak üzere Azure hizmetine bağlantıyı yeniden yapılandırın.  
 
 
-## <a name="secondary-sites"></a><a name="bkmk_secondary"></a>İkincil siteler
+## <a name="secondary-sites"></a><a name="bkmk_secondary"></a> İkincil siteler
 
 İkincil siteleri yüklemek için Önkoşullar aşağıda verilmiştir:  
 

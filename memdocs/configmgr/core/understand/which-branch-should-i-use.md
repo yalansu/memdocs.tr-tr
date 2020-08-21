@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 542069b82ea4c68a48ccc47b79007fd2fa25322a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1c54648f1f98ad5fef8efd16d2abe53f204a38f5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906021"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700676"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>Configuration Manager’ın hangi dalını kullanmalıyım?
 
@@ -85,7 +85,7 @@ LTSB, sürüm 1606 ' i temel alır. Bu dal yeni özellikler sunan veya mevcut ö
 LTSB 'yi yeni bir site olarak veya desteklenen bir System Center 2012 Configuration Manager sitesinden yükseltme olarak yüklemek için System Center 2016 ile aldığınız sürüm 1606 [temel medyasını](../servers/manage/updates.md#bkmk_Baselines) kullanın. Temel medyayı kullanarak geçerli dalın 1606 sürümünü çalıştıran yeni bir site veya uzun süreli bakım dalını çalıştıran yeni bir site yükleyebilirsiniz.
 
 > [!TIP]  
-> System Center 2016 hakkında bilgi edinmek için bkz. [System center 2016 belgeleri](https://docs.microsoft.com/system-center/index). Bu belgede Ayrıca, bir Microsoft Lisans Sözleşmesi veya benzer haklar gerektiren System Center 2016 'nin nasıl alınacağı de tanımlanmaktadır.  
+> System Center 2016 hakkında bilgi edinmek için bkz. [System center 2016 belgeleri](/system-center/index). Bu belgede Ayrıca, bir Microsoft Lisans Sözleşmesi veya benzer haklar gerektiren System Center 2016 'nin nasıl alınacağı de tanımlanmaktadır.  
 >  
 > Toplu Lisanslama hizmeti Merkezi 'nde (VLSC) Configuration Manager sürüm 1606 ' yı bulmak için, [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx)'nin **indirmeler ve anahtarlar** sekmesine gidin, arama `System Center 2016` yapın ve ardından **System center 2016 Datacenter** veya **System Center 2016 Standard**' ı seçin.  
 >  

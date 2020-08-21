@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: dd997508f34b02ef7d2824ffd3a4dfec9cb9066a
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 066a7517700d85315a04bec55b6f8254d3e49255
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251887"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700397"
 ---
 # <a name="tenant-attach-configmgr-client-details-in-the-admin-center-preview"></a><a name="bkmk_mem"></a> Kiracı iliştirme: Yönetim merkezinde ConfigMgr istemci ayrıntıları (Önizleme)
 <!--6024387, 6374854, 6521921, intune 7552762 pubpreview July 7, 2020-->
@@ -27,13 +27,13 @@ Microsoft Uç Nokta Yöneticisi, tüm cihazlarınızı yönetmek için tümleşi
 > - Bu bilgiler, ticari olarak yayınlanmadan önce önemli ölçüde değiştirilebilen bir önizleme özelliğiyle ilgilidir. Burada verilen bilgilerle ilgili olarak Microsoft açık veya zımni hiçbir garanti vermez.
 > - Sınır grupları sekmesi yalnızca tek başına siteler için çalışır. Sekme, tek başına birincil site dışında herhangi bir şey için yönetim merkezinde boş olur.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - [Karşıya yüklenen cihazlara kiracı eklenmiş](device-sync-actions.md)bir ortam.
 - Aşağıdaki tarayıcılardan biri:
   - Microsoft Edge, sürüm 77 ve üzeri
   - Google Chrome
-- Kullanıcı hesabı hem [Azure Active Directory (Azure AD) Kullanıcı keşfi](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc) hem de [Active Directory Kullanıcı keşfi](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser)ile keşfedilmiştir.
+- Kullanıcı hesabı hem [Azure Active Directory (Azure AD) Kullanıcı keşfi](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) hem de [Active Directory Kullanıcı keşfi](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)ile keşfedilmiştir.
   - Kullanıcı hesabının Azure 'da eşitlenmiş bir kullanıcı nesnesi olması gerektiği anlamına gelir.
 
 ## <a name="permissions"></a>İzinler
@@ -44,7 +44,7 @@ Kullanıcı hesabının aşağıdaki izinleri olması gerekir:
 - Azure AD 'de Configuration Manager Mikro hizmet uygulaması için **Yönetici Kullanıcı** rolü.
   - Azure AD 'deki rolü, **Enterprise applications**  >  **mikro hizmet**  >  **kullanıcıları ve grupları**  >  **Kullanıcı Ekle**' Configuration Manager kurumsal uygulamalardan ekleyin. Azure AD Premium varsa gruplar desteklenir.
    > [!TIP]
-   > [Azure AD 'Deki uygulama Yöneticisi rolü](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) , uygulamanın **Yönetici Kullanıcı** rolüne bir kullanıcı eklemek için yeterli izinlere sahiptir.
+   > [Azure AD 'Deki uygulama Yöneticisi rolü](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) , uygulamanın **Yönetici Kullanıcı** rolüne bir kullanıcı eklemek için yeterli izinlere sahiptir.
 
 ## <a name="view-configmgr-client-details"></a>ConfigMgr istemcisi ayrıntılarını görüntüle
 

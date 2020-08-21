@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05a6950708da04effe230d0d5637c4e3bcedd7e6
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 04630815b3d10a232d7fc0eea50296062c823194
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591590"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699849"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1810 ' deki yenilikler
 
@@ -236,7 +236,7 @@ Daha fazla bilgi için bkz. [uygulama oluşturma](../../../apps/deploy-use/creat
 ### <a name="task-sequence-support-of-windows-autopilot-for-existing-devices"></a>Mevcut cihazlar için Windows Autopilot görev dizisi desteği
 
 <!--3607717, fka 1358333-->
-[Mevcut cihazlar Için Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) artık Windows 10, sürüm 1809 veya sonraki sürümlerde kullanılabilir. Bu yeni özellik, tek bir yerel Configuration Manager görev sırası kullanarak [Windows Autopilot Kullanıcı odaklı mod](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) Için bir Windows 7 cihazını yeniden görüntülemenizi ve sağlamanızı sağlar.
+[Mevcut cihazlar Için Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) artık Windows 10, sürüm 1809 veya sonraki sürümlerde kullanılabilir. Bu yeni özellik, tek bir yerel Configuration Manager görev sırası kullanarak [Windows Autopilot Kullanıcı odaklı mod](/windows/deployment/windows-autopilot/user-driven) Için bir Windows 7 cihazını yeniden görüntülemenizi ve sağlamanızı sağlar.
 
 Daha fazla bilgi için bkz. [Mevcut cihazlar için Windows Autopilot](../../../../autopilot/existing-devices.md).
 
@@ -427,7 +427,7 @@ Microsoft Intune aboneliğini yapılandırmak için şirket içi MDM önkoşulu 
 
 Bu sürüm, yeni özelliklerden başlayarak hata düzeltmeleri gibi ek değişiklikler de içerir. Daha fazla bilgi için bkz. [Configuration Manager geçerli daldaki değişikliklerin özeti, sürüm 1810](https://support.microsoft.com/help/4482169).
 
-Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell sürüm 1810 sürüm notları](https://docs.microsoft.com/powershell/sccm/1810-release-notes?view=sccm-ps).
+Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell sürüm 1810 sürüm notları](/powershell/sccm/1810-release-notes?view=sccm-ps).
 
 Aşağıdaki güncelleştirme paketi (4488598) konsolunda 25 Mart 2019 tarihinden itibaren Mart 'ta kullanılabilir: [güncelleştirme paketi 2 Configuration Manager geçerli dalı, sürüm 1810](https://support.microsoft.com/help/4488598). Bu, önceki güncelleştirme paketinin yerini alır, KB 4486457.
 
@@ -438,8 +438,8 @@ Aşağıdaki ek düzeltmeler belirli sorunları ele almak için kullanılabilir:
 
 | ID | Başlık | Tarih | Konsol içi |
 |---------|---------|---------|---------|
-| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune bağlayıcı sertifikası Configuration Manager yenilemez | 18 Ocak 2019 | Yes |
-| [4490434](https://support.microsoft.com/help/4490434) | Configuration Manager içinde yinelenen Kullanıcı keşfi sütunları oluşturuldu | 22 Şubat 2019 | Yes |
+| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune bağlayıcı sertifikası Configuration Manager yenilemez | 18 Ocak 2019 | Evet |
+| [4490434](https://support.microsoft.com/help/4490434) | Configuration Manager içinde yinelenen Kullanıcı keşfi sütunları oluşturuldu | 22 Şubat 2019 | Evet |
 | [4490575](https://support.microsoft.com/help/4490575) | Güncelleştirme yüklemeleri yanıt vermeyi durdurur veya Configuration Manager, sürüm 1810 ' de hiçbir şekilde tamamlanmayı göstermez | 22 Şubat 2019 | Evet |
 
 

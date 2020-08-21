@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1567531ed83586f47ba2f79372e0b7962c1341dc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 6406a208de448e40e1d686440f41610266cde042
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128925"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700308"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1910 ' deki yenilikler
 
@@ -28,9 +28,9 @@ Bu güncelleştirmeyi yüklemek için her zaman en son denetim listesini gözden
 Yeni Configuration Manager özelliklerinden tam olarak yararlanmak için, siteyi güncelleştirdikten sonra istemcileri en son sürüme de güncelleştirin. Site ve konsolu güncelleştirdiğinizde Configuration Manager konsolunda yeni işlevsellik göründüğünde, istemci sürümü de en son olana kadar, tüm senaryo işlevsel değildir.
 
 > [!TIP]
-> Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1910+-+Configuration+Manager%22&locale=en-us`
+> Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1910+-+Configuration+Manager%22&locale=en-us`
 
-## <a name="microsoft-endpoint-configuration-manager"></a><a name="bkmk_mem"></a>Microsoft uç noktası Configuration Manager
+## <a name="microsoft-endpoint-configuration-manager"></a><a name="bkmk_mem"></a> Microsoft uç noktası Configuration Manager
 
 <!--4960084-->
 
@@ -42,10 +42,10 @@ Microsoft Uç Nokta Yöneticisi, tüm cihazlarınızı yönetmek için tümleşi
 
 Aşağıdaki Microsoft yönetim çözümleri artık Microsoft Endpoint Manager markasının bir parçasıdır:
 
-- [Configuration Manager](https://docs.microsoft.com/configmgr)
-- [Intune](https://docs.microsoft.com/intune)
+- [Configuration Manager](/configmgr)
+- [Intune](/intune)
 - [Desktop Analytics](../../../desktop-analytics/overview.md)
-- [Otomatik Pilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- [Otomatik Pilot](/intune/enrollment/enrollment-autopilot)
 - [Cihaz yönetimi yönetici konsolundaki](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760) diğer özellikler
 
 Daha fazla bilgi için, Microsoft Kurumsal Başkan Yardımcısı Microsoft 365 atacan Anderson 'tan aşağıdaki gönderilere bakın:
@@ -69,7 +69,7 @@ Bu yeni konumları dahil etmek için tuttuğunuz tüm dahili belgeleri güncelle
 > [!TIP]
 > Windows 10 ' da, Başlat menüsünü açtığınızda, simgeyi bulmak için adı yazın. Örneğin `Configuration Manager` veya `Software Center` girin.
 
-## <a name="site-infrastructure"></a><a name="bkmk_infra"></a>Site altyapısı
+## <a name="site-infrastructure"></a><a name="bkmk_infra"></a> Site altyapısı
 
 ### <a name="reclaim-sedo-lock"></a>SEDO kilidini geri kazan
 
@@ -88,11 +88,11 @@ Daha fazla bilgi için bkz. [Şirket içi siteleri Microsoft Azure Için genişl
 
 <!-- ## <a name="bkmk_cloud"></a> Cloud-attached management -->
 
-## <a name="desktop-analytics"></a><a name="bkmk_da"></a>Masaüstü Analizi
+## <a name="desktop-analytics"></a><a name="bkmk_da"></a> Masaüstü Analizi
 
 Masaüstü Analizi bulut hizmetindeki aylık değişiklikler hakkında daha fazla bilgi için bkz. [Masaüstü](../../../desktop-analytics/whats-new.md)analizine ilişkin yenilikler.
 
-## <a name="real-time-management"></a><a name="bkmk_real"></a>Gerçek zamanlı yönetim
+## <a name="real-time-management"></a><a name="bkmk_real"></a> Gerçek zamanlı yönetim
 
 ### <a name="optimizations-to-the-cmpivot-engine"></a>CMPivot altyapısına iyileştirmeler
 <!--3197353-->
@@ -112,7 +112,7 @@ Sorun giderme ve avlamaya yardımcı olmak için çeşitli yeni CMPivot varlıkl
 
 Bu sürüm ayrıca CMPivot için çeşitli [diğer geliştirmeler](../../servers/manage/cmpivot-changes.md#bkmk_Other) de içerir. Daha fazla bilgi için bkz. [sürüm 1910 ' den başlayarak CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1910).
 
-## <a name="content-management"></a><a name="bkmk_content"></a>İçerik yönetimi
+## <a name="content-management"></a><a name="bkmk_content"></a> İçerik yönetimi
 
 ### <a name="microsoft-connected-cache-support-for-intune-win32-apps"></a>Intune Win32 uygulamaları için Microsoft bağlı önbellek desteği
 
@@ -127,7 +127,7 @@ Daha fazla bilgi için bkz. [Microsoft bağlı önbelleği Configuration Manager
 >
 > Bağlı önbelleği bir Configuration Manager dağıtım noktasına yüklediğinizde, teslim Iyileştirme hizmeti trafiğini yerel kaynaklara yükler. Bağlı önbellek, içeriği bayt aralığı düzeyinde verimli bir şekilde önbelleğe alarak bu davranışı yapar.
 
-## <a name="client-management"></a><a name="bkmk_client"></a>İstemci yönetimi
+## <a name="client-management"></a><a name="bkmk_client"></a> İstemci yönetimi
 
 ### <a name="include-custom-configuration-baselines-as-part-of-compliance-policy-assessment"></a>Uyumluluk ilkesi değerlendirmesinin bir parçası olarak özel yapılandırma temellerini dahil et
 <!--3608345-->
@@ -152,7 +152,7 @@ Daha fazla bilgi için bkz. [istemci ayarlarını yapılandırma](../../clients/
 <!-- ## <a name="bkmk_comgmt"></a> Co-management -->
 
 
-## <a name="application-management"></a><a name="bkmk_app"></a>Uygulama yönetimi
+## <a name="application-management"></a><a name="bkmk_app"></a> Uygulama yönetimi
 
 ### <a name="deploy-microsoft-edge-version-77-and-later"></a>Microsoft Edge sürüm 77 ve üzerini dağıtma
 <!--4561024-->
@@ -172,7 +172,7 @@ Geçerli dal sürüm 1906 ' den başlayarak, bir cihaz koleksiyonuna tek bir da�
 Daha fazla genel bilgi için bkz. [uygulama grupları oluşturma](../../../apps/deploy-use/create-app-groups.md).
 
 
-## <a name="os-deployment"></a><a name="bkmk_osd"></a>İşletim sistemi dağıtımı
+## <a name="os-deployment"></a><a name="bkmk_osd"></a> İşletim sistemi dağıtımı
 
 ### <a name="improvements-to-the-task-sequence-editor"></a>Görev sırası Düzenleyicisi geliştirmeleri
 
@@ -264,7 +264,7 @@ Daha fazla bilgi için bkz. [görev dizisi değişkenleri-SetupCompletePause](..
 
 <!-- ## <a name="bkmk_userxp"></a> Software Center -->
 
-## <a name="software-updates"></a><a name="bkmk_sum"></a>Yazılım güncelleştirmeleri
+## <a name="software-updates"></a><a name="bkmk_sum"></a> Yazılım güncelleştirmeleri
 
 ### <a name="additional-options-for-third-party-update-catalogs"></a>Üçüncü taraf güncelleştirme katalogları için ek seçenekler
 <!--4469002-->
@@ -287,7 +287,7 @@ Artık otomatik dağıtım kurallarınız (ADRs) için bir güncelleştirme filt
 
 Daha fazla bilgi için bkz. [yazılım güncelleştirmelerini otomatik olarak dağıtma](../../../sum/deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process).
 
-## <a name="office-management"></a><a name="bkmk_o365"></a>Office yönetimi
+## <a name="office-management"></a><a name="bkmk_o365"></a> Office yönetimi
 
 
 ### <a name="office-365-proplus-pilot-and-health-dashboard"></a>Office 365 ProPlus pilot ve sistem durumu panosu
@@ -297,7 +297,7 @@ Office 365 ProPlus pilot ve sistem durumu panosu, Office 365 ProPlus ' i planlay
 
 Daha fazla bilgi için bkz. [Office 365 ProPlus pilot ve sistem durumu panosu](../../../sum/deploy-use/office-365-dashboard.md#bkmk_pilot).
 
-## <a name="protection"></a><a name="bkmk_protect"></a>Korunmasına
+## <a name="protection"></a><a name="bkmk_protect"></a> Korunmasına
 
 ### <a name="bitlocker-management"></a>BitLocker yönetimi
 
@@ -313,7 +313,7 @@ Configuration Manager artık BitLocker Sürücü Şifrelemesi için aşağıdaki
 
 Daha fazla bilgi için bkz. [plan for BitLocker Management](../../../protect/plan-design/bitlocker-management.md).
 
-## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a>Configuration Manager konsolu
+## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a> Configuration Manager konsolu
 
 ### <a name="view-active-consoles-and-message-administrators-through-console-connections"></a>Konsol bağlantıları aracılığıyla etkin konsolları ve ileti yöneticilerini görüntüleme
 <!--4923997-->
@@ -346,7 +346,7 @@ Bu sürüm Configuration Manager konsolunda arama yapmak için aşağıdaki geli
 
 ## <a name="other-updates"></a>Diğer güncelleştirmeler
 
-Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell sürüm 1910 sürüm notları](https://docs.microsoft.com/powershell/sccm/1910-release-notes?view=sccm-ps).
+Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell sürüm 1910 sürüm notları](/powershell/sccm/1910-release-notes?view=sccm-ps).
 
 Yönetim hizmeti REST API değişiklikler hakkında daha fazla bilgi için bkz. [Yönetim hizmeti sürüm notları](../../../develop/adminservice/release-notes.md#bkmk_1910).
 

@@ -10,12 +10,12 @@ ms.assetid: 395403dc-6997-4415-93fd-6b1eeb6ba31a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 06e308a54ee9636a7781667823e7b7f98ae6f25c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cb2529dbbe923a5035f0b7586dab696cd6fc917e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718570"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699424"
 ---
 # <a name="configuration-manager-tools"></a>Configuration Manager Araçları
 
@@ -23,9 +23,9 @@ ms.locfileid: "81718570"
 
 Configuration Manager araçları [istemci tabanlı](#client-tools) ve [sunucu tabanlı araçları](#server-tools)içerir. Configuration Manager altyapınızı desteklemeye ve sorunlarını gidermenize yardımcı olması için bu araçları kullanın.
 
-Configuration Manager sürüm 1806 ' den başlayarak, bu araçlar site sunucusundaki `CD.Latest\SMSSETUP\Tools` klasörüne dahil edilmiştir. Başka bir yükleme gerekli değildir.<!--1357145--> Configuration Manager sürüm 1806 ve üzeri ile araçların bu sürümlerini kullanın.
+Configuration Manager sürüm 1806 ' den başlayarak, bu araçlar `CD.Latest\SMSSETUP\Tools` site sunucusundaki klasörüne dahil edilmiştir. Başka bir yükleme gerekli değildir.<!--1357145--> Configuration Manager sürüm 1806 ve üzeri ile araçların bu sürümlerini kullanın.
 
-[İstemciler ve cihazlar Için desteklenen işletim sistemlerinde](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices) desteklenen istemciler olarak listelenen tüm Windows işletim sistemleri, bu araçlarla kullanılmak üzere desteklenir.
+[İstemciler ve cihazlar Için desteklenen işletim sistemlerinde](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices) desteklenen istemciler olarak listelenen tüm Windows işletim sistemleri, bu araçlarla kullanılmak üzere desteklenir.
 
 > [!Note]  
 > [System Center 2012 R2 Configuration Manager araç seti](https://www.microsoft.com/download/details.aspx?id=50012) , Microsoft İndirme Merkezi 'nden hala kullanılabilir. Configuration Manager sürüm 1806 ve üzeri için CD 'deki araçların sürümlerini kullanın. Site sunucusundaki en son klasör. Bazı araçlar daha önce araç setinde yer almaktadır ancak sürüm 1806 ' de yoktu. Bu eski araçlar artık desteklenmemektedir.
@@ -48,7 +48,7 @@ Bu araçlar `ClientTools` alt klasörüdür:
 - [Zamanlama aracı gönder](send-schedule-tool.md): yapılandırma temellerinin zamanlamalarını ve değerlendirmesini tetikleme  
 
 > [!Note]  
-> `ClientTools` Klasör Microsoft. Diagnostics. Tracing. EventSource. dll dosyasını da içerir. Bu kitaplığın çeşitli istemci araçları gerekir. Doğrudan kullanamazsınız.  
+> `ClientTools`Klasör Microsoft.Diagnostics.Tracing.EventSource.dll dosyasını da içerir. Bu kitaplığın çeşitli istemci araçları gerekir. Doğrudan kullanamazsınız.  
 
 
 ## <a name="server-tools"></a>Sunucu araçları
@@ -72,9 +72,9 @@ Bu araçlar `ServerTools` alt klasörüdür:
 > [!Note]  
 > ServerTools klasörü de aşağıdaki dosyaları içerir:
 >
-> - AdminUI. WqlQueryEngine. dll
-> - Microsoft. ConfigurationManagement. ManagementProvider. dll
-> - Microsoft. Diagnostics. Tracing. EventSource. dll
+> - AdminUI.WqlQueryEngine.dll
+> - Microsoft.ConfigurationManagement.ManagementProvider.dll
+> - Microsoft.Diagnostics.Tracing.EventSource.dll
 >
 > Bu kitaplıkların çeşitli sunucu araçları gerekir. Onları doğrudan kullanamazsınız.  
 
@@ -86,13 +86,13 @@ Bu araçlar `ServerTools` alt klasörüdür:
 
 - [Microsoft Azure şirket içi siteyi genişletme ve geçirme](azure-migration-tool.md): Configuration Manager için programlı olarak Azure sanal makineleri (VM 'ler) oluşturmanıza yardımcı olur. <!--3556022--> 
 
-- [İçerik kitaplığı Temizleme Aracı](../plan-design/hierarchy/content-library-cleanup-tool.md): ' de bir dağıtım noktasından yalnız bırakılmış `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` Içeriği kaldırmak için **contentlibrarycleanup. exe** ' yi kullanın.  
+- [İçerik kitaplığı Temizleme Aracı](../plan-design/hierarchy/content-library-cleanup-tool.md): **ContentLibraryCleanup.exe** `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` bir dağıtım noktasından yalnız bırakılmış içeriği kaldırmak için içindeContentLibraryCleanup.exekullanın.  
 
-- [Hiyerarşi bakım aracı](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): komutları hiyerarşi Yöneticisi bileşenine geçirmek için site `\<SiteServerName>\SMS_<SiteCode>\bin\X64\00000409` sunucusundaki paylaşılan klasörde **Preinst. exe** ' yi kullanın.  
+- [Hiyerarşi bakım aracı](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): **Preinst.exe** `\<SiteServerName>\SMS_<SiteCode>\bin\X64\00000409` komutları hiyerarşi Yöneticisi bileşenine geçirmek için site sunucusundaki paylaşılan klasördePreinst.exekullanın.  
 
-- [Güncelleştirme sıfırlama aracı](../servers/manage/update-reset-tool.md): konsol içi güncelleştirmelerin indirme veya çoğaltma sorunları olduğunda `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` sorunları gidermek Için Içindeki **cmupdatereset. exe** ' yi kullanın.  
+- [Güncelleştirme sıfırlama aracı](../servers/manage/update-reset-tool.md): **CMUpdateReset.exe** `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` konsol içi güncelleştirmelerin indirme veya çoğaltma sorunları olduğunda sorunları gidermek için içindeCMUpdateReset.exekullanın.  
 
-- [Hizmet bağlantı aracı](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): hizmet bağlantı noktanız çevrimdışıyken sitenizin güncel kalmasını `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` sağlamak için **serviceconnectiontool. exe** ' yi kullanın.   
+- [Hizmet bağlantı aracı](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): **ServiceConnectionTool.exe** `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` hizmet bağlantı noktanız çevrimdışı olduğunda sitenizi güncel tutmak içinServiceConnectionTool.exekullanın.   
 
 - [Microsoft Dağıtım Araç Seti (MDT)](../../mdt/use-the-mdt.md): Masaüstü ve sunucu işletim sistemi dağıtımlarını otomatikleştirmek için bir araçlar, süreçler ve kılavuz topluluğu.
 

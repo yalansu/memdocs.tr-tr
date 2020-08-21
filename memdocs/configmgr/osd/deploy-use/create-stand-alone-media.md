@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 62c667706a9d77b3bb7d2b6bbdfde3cde8bb8365
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 57b353dd9dd9fcf7f97d10480f4067bd65a1f483
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125194"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697985"
 ---
 # <a name="create-stand-alone-media"></a>Tek başına medya oluşturma
 
@@ -140,7 +140,7 @@ Bir CD veya DVD seti için medya oluşturmak üzere görev sırası medyası olu
 
         - Configuration Manager, medyanın köküne adlı bir metin dosyası yazar `MediaLabel.txt` . Varsayılan olarak, dosya tek satırlık bir metin içerir: `label=Configuration Manager` . Medya için etiketi özelleştirirseniz, bu satır varsayılan değer yerine özel etiketinizi kullanır.  
 
-    - **Medyaya Autorun. inf dosyasını dahil et**<!-- 4090666 -->: Sürüm 1906 ' den başlayarak Configuration Manager, varsayılan olarak Autorun. inf dosyası eklemez. Bu dosya genellikle kötü amaçlı yazılımdan koruma ürünleri tarafından engelleniyor. Windows 'un Otomatik Çalıştır özelliği hakkında daha fazla bilgi için bkz. [Autorun-Enabled CD-ROM uygulaması oluşturma](https://docs.microsoft.com/windows/desktop/shell/autoplay). Senaryonuz için hala gerekliyse, dosyayı eklemek için bu seçeneği belirleyin.  
+    - **Medyaya Autorun. inf dosyasını dahil et**<!-- 4090666 -->: Sürüm 1906 ' den başlayarak Configuration Manager, varsayılan olarak Autorun. inf dosyası eklemez. Bu dosya genellikle kötü amaçlı yazılımdan koruma ürünleri tarafından engelleniyor. Windows 'un Otomatik Çalıştır özelliği hakkında daha fazla bilgi için bkz. [Autorun-Enabled CD-ROM uygulaması oluşturma](/windows/desktop/shell/autoplay). Senaryonuz için hala gerekliyse, dosyayı eklemek için bu seçeneği belirleyin.  
 
 5. **Güvenlik** sayfasında, aşağıdaki seçenekleri belirtin:
 
@@ -151,7 +151,7 @@ Bir CD veya DVD seti için medya oluşturmak üzere görev sırası medyası olu
         >
         > Tek başına medyada, yalnızca görev dizisi adımlarını ve değişkenlerini şifreler. Medyanın kalan içeriğini şifrelemez. Görev dizisi betiklerine herhangi bir hassas bilgi eklemeyin. Tüm hassas bilgileri, görev dizisi değişkenlerini kullanarak depolayın ve uygulayın.  
 
-    - **Bu tek başına medyanın geçerli olması için tarih aralığı seçin**: medyada isteğe bağlı başlangıç ve sona erme tarihlerini ayarlayın. Bu ayar varsayılan olarak devre dışıdır. Tarihler, tek başına medya çalıştırılmadan önce bilgisayardaki sistem saatine göre karşılaştırılır. Sistem saati, sona erme zamanından önceki bir zamandan veya ondan sonra olduğunda, tek başına medya başlatılmaz. Bu seçenekler, [New-CMStandaloneMedia](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) PowerShell cmdlet 'i kullanılarak da kullanılabilir.  
+    - **Bu tek başına medyanın geçerli olması için tarih aralığı seçin**: medyada isteğe bağlı başlangıç ve sona erme tarihlerini ayarlayın. Bu ayar varsayılan olarak devre dışıdır. Tarihler, tek başına medya çalıştırılmadan önce bilgisayardaki sistem saatine göre karşılaştırılır. Sistem saati, sona erme zamanından önceki bir zamandan veya ondan sonra olduğunda, tek başına medya başlatılmaz. Bu seçenekler, [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) PowerShell cmdlet 'i kullanılarak da kullanılabilir.  
 
 6. **Tek BAŞıNA CD/DVD** sayfasında, işletim sistemini dağıtan görev sırasını seçin. Yalnızca bir Önyükleme görüntüsüyle ilişkili olan görev dizilerini seçebilirsiniz. Görev sırası tarafından başvurulan içerik listesini doğrulayın.  
 

@@ -10,23 +10,23 @@ ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ed155fb61491a273732ed3b974b6ddb5ac29bc89
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4d57be201274c347e5dcd492734b2141c64d579b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904008"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700019"
 ---
 # <a name="health-attestation-for-configuration-manager"></a>Configuration Manager için durum kanıtlama
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
-Yöneticiler, Configuration Manager konsolunda [Windows 10 Cihaz Durumu Kanıtlama](https://docs.microsoft.com/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices)’nın durumunu görebilir.  Cihaz durumu kanıtlama, yöneticinin istemci bilgisayarlarda aşağıdaki güvenilir BIOS, TPM ve önyükleme yazılım yapılandırmalarının etkin olduğundan emin olmasını sağlar:  
+Yöneticiler, Configuration Manager konsolunda [Windows 10 Cihaz Durumu Kanıtlama](/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices)’nın durumunu görebilir.  Cihaz durumu kanıtlama, yöneticinin istemci bilgisayarlarda aşağıdaki güvenilir BIOS, TPM ve önyükleme yazılım yapılandırmalarının etkin olduğundan emin olmasını sağlar:  
 
 -   Erken başlatılan kötü amaçlı yazılımdan koruma - Erken başlatılan kötü amaçlı yazılımdan koruma (ELAM), bilgisayarınızı başlarken ve üçüncü taraf sürücüleri başlamadan önce korur. [ELAM nasıl açılır](https://gallery.technet.microsoft.com/How-to-turn-on-Early-84552ec5)  
 -   BitLocker - Windows BitLocker Sürücü Şifrelemesi, Windows işletim sistemi birimde depolanan tüm verileri şifrelemenizi sağlayan bir yazılımdır.  [BitLocker 'ı açma](https://gallery.technet.microsoft.com/How-to-turn-on-BitLocker-34294d3d)  
--   Güvenli Önyükleme - Güvenli Önyükleme, bilgisayarınızın yalnızca bilgisayar üreticisinin güvendiği yazılımla önyüklendiğinden emin olmaya yardımcı olmak için bilgisayar sektörünün geliştirdiği bir güvenlik standardıdır. [Güvenli Önyükleme hakkında daha fazla bilgi edinin](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824987(v=win.10))  
--   Kod Bütünlüğü - Kod Bütünlüğü, bir sürücünün veya sistem dosyasının belleğe her yüklendiğinde bütünlüğünü doğrulayarak işletim sisteminin güvenliğini arttıran bir özelliktir. [Kod Bütünlüğü hakkında daha fazla bilgi edinin](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd348642(v=ws.10))  
+-   Güvenli Önyükleme - Güvenli Önyükleme, bilgisayarınızın yalnızca bilgisayar üreticisinin güvendiği yazılımla önyüklendiğinden emin olmaya yardımcı olmak için bilgisayar sektörünün geliştirdiği bir güvenlik standardıdır. [Güvenli Önyükleme hakkında daha fazla bilgi edinin](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824987(v=win.10))  
+-   Kod Bütünlüğü - Kod Bütünlüğü, bir sürücünün veya sistem dosyasının belleğe her yüklendiğinde bütünlüğünü doğrulayarak işletim sisteminin güvenliğini arttıran bir özelliktir. [Kod Bütünlüğü hakkında daha fazla bilgi edinin](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd348642(v=ws.10))  
 
 Bu işlevsellik, Configuration Manager tarafından yönetilen PC’lerle şirket içi kaynaklarında ve Microsoft Intune tarafından yönetilen mobil cihazlarda kullanılabilir. Yöneticiler, raporlamanın bulut veya şirket içi altyapısı aracılığıyla yapılacağını belirtebilir. Şirket içi cihaz sistem durumu kanıtlama izlemesi, yöneticinin internet erişimi olmadan istemci bilgisayarlarını izlemesini sağlar.
 
@@ -34,7 +34,7 @@ Bu işlevsellik, Configuration Manager tarafından yönetilen PC’lerle şirket
 
  **Gereklilik**  
 
--   [Cihaz sistem durumu kanıtlama etkinken](https://docs.microsoft.com/windows-server/security/device-health-attestation)Windows 10 sürüm 1607 veya windows Server 2016 sürüm 1607 çalıştıran istemci cihazları.
+-   [Cihaz sistem durumu kanıtlama etkinken](/windows-server/security/device-health-attestation)Windows 10 sürüm 1607 veya windows Server 2016 sürüm 1607 çalıştıran istemci cihazları.
 -   TPM 1,2 veya TPM 2 etkin cihazlar.
 -   Bulut yönetimi kullanılırken, Configuration Manager istemci Aracısı ile yönetim noktası arasında *has.spserv.Microsoft.com* (bağlantı noktası 443) sistem durumu kanıtlama hizmeti (bulut yönetimi) ile iletişim. Şirket içinde, istemcinin cihaz sistem durumu kanıtlama etkin yönetim noktasıyla iletişim kurabilmesi gerekir.
 

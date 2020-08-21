@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f877de32c9915f91d1e2d7f2d90b9b40ab69df11
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f6d3f6dbbbb407ee63eb8253cbf3ca740a10479c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906584"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699798"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Configuration Manager gizliliği hakkında ek bilgiler
 
@@ -47,7 +47,7 @@ Kullanım verileri düzeyleri ve ayarları hakkında daha fazla bilgi için bkz.
 
 Log Analytics Bağlayıcısı, Koleksiyonlar gibi verileri Configuration Manager Azure bulut hizmeti 'ne eşitler. Yönetici özelliği yapılandırdığında Azure abonelik KIMLIĞI ve gizli anahtar Configuration Manager veritabanında depolanır. Hem Azure Active Directory istemci parolası hem de Azure çalışma alanı paylaşılan anahtarı şirket içi Configuration Manager veritabanında depolanır. Configuration Manager ile Azure arasındaki tüm iletişimler HTTPS kullanır. Microsoft 'a rastgele tanılama ve kullanım verileri dışında Koleksiyonlar hakkında ek bilgi sağlanmaz. 
 
-Log Analytics toplanan bilgiler hakkında daha fazla bilgi için bkz. [Log Analytics veri güvenliği](https://docs.microsoft.com/azure/log-analytics/log-analytics-data-security).
+Log Analytics toplanan bilgiler hakkında daha fazla bilgi için bkz. [Log Analytics veri güvenliği](/azure/log-analytics/log-analytics-data-security).
 
 
 

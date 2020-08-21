@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 37e4db2ad801c5923ba3db54554af0bb13968048
-ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
+ms.openlocfilehash: 9e71baef06349a00d49bc7fdc799d078c29939d8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301444"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699526"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Bir Configuration Manager sitesini kurtarma
 
@@ -49,8 +49,8 @@ Var olan bir sunucuyu temizlemek için aşağıdaki yordamlardan birini kullanı
 
 #### <a name="clean-an-existing-server-for-site-server-recovery-only"></a>Var olan bir sunucuyu yalnızca site sunucusu kurtarması için temizle
 
-1. SMS kayıt defteri anahtarlarını silme:`HKLM\Software\Microsoft\SMS`
-2. İle başlayan tüm kayıt defteri girdilerini `SMS` silin `HKLM\System\CurrentControlSet\Services` . Örneğin:
+1. SMS kayıt defteri anahtarlarını silme: `HKLM\Software\Microsoft\SMS`
+2. İle başlayan tüm kayıt defteri girdilerini `SMS` silin `HKLM\System\CurrentControlSet\Services` . Örnek:
     - SMS_DISCOVERY_DATA_MANAGER
     - SMS_EXECUTIVE
     - SMS_INBOX_MONITOR
@@ -126,7 +126,7 @@ Aşağıdaki bölümler, Kurtarma senaryonuz için en iyi seçenekleri seçmeniz
 
 ### <a name="site-server-recovery-options"></a>Site sunucusu kurtarma seçenekleri
 
-Kurulum 'u CD 'nin bir kopyasından Configuration Manager başlatın **. **Configuration Manager yükleme klasörü dışında oluşturduğunuz en son klasör.  
+Kurulum 'u CD 'nin bir kopyasından Configuration Manager başlatın **. ** Configuration Manager yükleme klasörü dışında oluşturduğunuz en son klasör.  
 
 - Site sunucusundaki **Başlangıç** menüsünden kurulum 'u çalıştırırsanız **Site kurtar** seçeneği kullanılamaz.  
 
@@ -181,7 +181,7 @@ Configuration Manager site veritabanını zaten kurtardığınızda bu seçeneğ
     Configuration Manager dışında bir yöntem kullanarak site veritabanını geri yükledikten sonra, kurulum 'U çalıştırın ve site veritabanı kurtarmayı gerçekleştirmek için bu seçeneği belirleyin.  
 
     > [!NOTE]  
-    > Site veritabanınızı yedeklemek için DPM kullandığınızda, Configuration Manager geri yükleme işlemine devam etmeden önce site veritabanını belirtilen bir konuma geri yüklemek için DPM yordamlarını kullanın. DPM hakkında daha fazla bilgi için [Data Protection Manager](https://docs.microsoft.com/system-center/dpm) belge kitaplığı ' na bakın.  
+    > Site veritabanınızı yedeklemek için DPM kullandığınızda, Configuration Manager geri yükleme işlemine devam etmeden önce site veritabanını belirtilen bir konuma geri yüklemek için DPM yordamlarını kullanın. DPM hakkında daha fazla bilgi için [Data Protection Manager](/system-center/dpm) belge kitaplığı ' na bakın.  
 
 - Bir hiyerarşide, birincil site veritabanını kurtardığınızda kurtarma işlemi, son yedeklemeden sonra site veritabanında yapılan herhangi bir değişikliği CA 'dan alır. CAS geri yüklenirken, kurtarma işlemi bu değişiklikleri bir başvuru birincil sitesinden alır. Tek başına birincil sitenin site veritabanını kurtardığınızda, son yedeklemeden sonraki site değişikliklerini kaybedersiniz.  
 
@@ -193,7 +193,7 @@ Configuration Manager site veritabanı sunucusunda bir veri kaybı oluşmadığ�
 
 Configuration Manager, SQL Server site veritabanı için değişiklik izleme imkanı sunar. Değişiklik izleme, zaman içinde önceki bir noktadan sonra veritabanı tablolarında yapılan değişiklikler hakkında bilgi için sorguya Configuration Manager olanak tanır. Saklama süresi, değişiklik izleme bilgilerinin ne kadar süreyle tutulacağını belirtir. Varsayılan olarak, site veritabanı beş günlük bir bekletme dönemine sahip olacak şekilde yapılandırılmıştır. Bir site veritabanını kurtardığınızda, yedeklemenin tutma süresi içinde veya dışında olmasına bağlı olarak kurtarma işlemi farklı şekilde devam eder. Örneğin, SQL sunucunuz başarısız olursa ve son yedeklemeniz yedi gün daha eski ise, bu, bekletme döneminin dışındadır.
 
-SQL Server değişiklik izleme iç işlevleri hakkında daha fazla bilgi için, SQL Server ekibinin şu blog gönderilerine bakın: [değişiklik izleme temizleme-Bölüm 1](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) ve [değişiklik izleme temizleme-Bölüm 2](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-2).
+SQL Server değişiklik izleme iç işlevleri hakkında daha fazla bilgi için, SQL Server ekibinin şu blog gönderilerine bakın: [değişiklik izleme temizleme-Bölüm 1](/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) ve [değişiklik izleme temizleme-Bölüm 2](/archive/blogs/sql_server_team/change-tracking-cleanup-part-2).
 
 ### <a name="reinitialization-of-site-or-global-data"></a>Siteyi veya genel verileri yeniden başlatma
 
@@ -263,7 +263,7 @@ Site sunucunuzu ve site veritabanınızı kurtarmanıza yardımcı olması için
 
 1. Katılımsız yükleme komut dosyasını site kurtarması için gereken seçenekler için hazırlayın. Daha fazla bilgi için bkz. [Katılımsız Site Recovery](unattended-recovery.md).  
 
-2. Configuration Manager Kurulum 'u `/script` komut satırı seçeneğini kullanarak çalıştırın. Örneğin, **ConfigMgrUnattend. ini**Kurulum başlatma dosyası oluşturursunuz. Bu dosyayı `C:\Temp` , kurulumu çalıştırdığınız bilgisayarın dizinine kaydedersiniz. Aşağıdaki komutu kullanın:  
+2. Configuration Manager Kurulum 'u `/script` komut satırı seçeneğini kullanarak çalıştırın. Örneğin, **ConfigMgrUnattend.ini**bir Kurulum başlatma dosyası oluşturursunuz. Bu dosyayı `C:\Temp` , kurulumu çalıştırdığınız bilgisayarın dizinine kaydedersiniz. Aşağıdaki komutu kullanın:  
 
     `setup.exe /script C:\temp\ConfigMgrUnattend.ini`  
 
@@ -378,7 +378,7 @@ Site kurtarmasından sonra, site sunucusuna uygulanan tüm [bant dışı düzelt
 
 ### <a name="recover-custom-reports"></a>Özel raporları kurtarma
 
-Bazı müşteriler SQL Server Reporting Services özel raporlar oluşturur. Bu bileşen başarısız olduğunda, raporları rapor sunucusunun bir yedeklemesinden kurtarın. Raporlama hizmetlerinde özel raporlarınızı geri yükleme hakkında daha fazla bilgi için bkz. [Reporting Services Için Yedekleme ve geri yükleme işlemleri](https://docs.microsoft.com/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).
+Bazı müşteriler SQL Server Reporting Services özel raporlar oluşturur. Bu bileşen başarısız olduğunda, raporları rapor sunucusunun bir yedeklemesinden kurtarın. Raporlama hizmetlerinde özel raporlarınızı geri yükleme hakkında daha fazla bilgi için bkz. [Reporting Services Için Yedekleme ve geri yükleme işlemleri](/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).
 
 ### <a name="recover-content-files"></a>İçerik dosyalarını geri yükleme
 
@@ -410,7 +410,7 @@ Durum geçiş noktası özellikleri kapsamında, Kullanıcı durumu verilerini d
 
 ### <a name="regenerate-the-certificates-for-distribution-points"></a>Dağıtım noktaları için sertifikaları yeniden oluşturma
 
-Bir siteyi geri yükledikten sonra, **Distmgr. log** bir veya daha fazla dağıtım noktası için şu girdiyi listeleyebilir: `Failed to decrypt cert PFX data` . Bu giriş, dağıtım noktası sertifika verilerinin, site tarafından çözülemediğini belirtir. Bu sorunu çözmek için sertifikayı etkilenen dağıtım noktaları için yeniden oluşturun veya yeniden içeri aktarın. [Set-CMDistributionPoint](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmdistributionpoint) PowerShell cmdlet 'ini kullanın.
+Bir siteyi geri yükledikten sonra, **Distmgr. log** bir veya daha fazla dağıtım noktası için şu girdiyi listeleyebilir: `Failed to decrypt cert PFX data` . Bu giriş, dağıtım noktası sertifika verilerinin, site tarafından çözülemediğini belirtir. Bu sorunu çözmek için sertifikayı etkilenen dağıtım noktaları için yeniden oluşturun veya yeniden içeri aktarın. [Set-CMDistributionPoint](/powershell/module/configurationmanager/set-cmdistributionpoint) PowerShell cmdlet 'ini kullanın.
 
 ### <a name="update-certificates-used-for-cloud-based-distribution-points"></a>Bulut tabanlı dağıtım noktaları için kullanılan sertifikaları güncelleştirme
 

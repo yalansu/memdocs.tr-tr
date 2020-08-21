@@ -14,14 +14,16 @@ ms.technology: ''
 ms.assetid: ''
 ms.reviewer: laarrizz
 ms.suite: ems
-ms.custom: intune-azure
+ms.custom:
+- intune-azure
+- contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3a9ae0c697cb6cd60f0f9bddce50057bcfcd3a3
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: ca22e74469cf84967d4d9630293a2b4e617e3d81
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462108"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698788"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Intune 'da Windows 10 cihazlarını yapılandırmak için güvenlik temellerini kullanma
 
@@ -235,7 +237,7 @@ Bir temeli çoğaltdıktan sonra, yapılandırmasında değişiklik yapmak için
 1. Taban çizgisini seçin ve ardından **Özellikler**' i seçin.
 2. Taban çizgisi içindeki ayarlar kategorilerinin listesini genişletmek için **Ayarlar** ' ı seçin. Bu görünümden ayarları değiştiremezsiniz, ancak bunların nasıl yapılandırıldığını inceleyebilirsiniz.
 3. Ayarları değiştirmek için, değişiklik yapmak istediğiniz her kategori için **Düzenle** ' yi seçin:
-   - Temel bilgiler
+   - Temel Bilgiler
    - Atamalar
    - Kapsam etiketleri
    - Yapılandırma ayarları

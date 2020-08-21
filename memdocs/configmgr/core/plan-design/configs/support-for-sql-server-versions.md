@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b30380f4e272050b7224b52d092f39aa8ab5bad4
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: bda64f11d5d2ee9498ce69224ec9a52efc0df902
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383181"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700342"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager için desteklenen SQL Server sürümleri
 
@@ -63,9 +63,9 @@ Birden çok sitesi olan bir hiyerarşide, farklı siteler, site veritabanını b
 
 - Configuration Manager, kullandığınız SQL Server sürümlerini destekler.
 - Kullandığınız SQL Server sürümleri Microsoft tarafından destede kalır.
-- SQL Server iki SQL Server sürümü arasında çoğaltmayı destekler. Daha fazla bilgi için bkz. [çoğaltma geri uyumluluğu SQL Server](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility).
+- SQL Server iki SQL Server sürümü arasında çoğaltmayı destekler. Daha fazla bilgi için bkz. [çoğaltma geri uyumluluğu SQL Server](/sql/relational-databases/replication/replication-backward-compatibility).
 
-SQL Server 2016 ve öncesi için, her SQL sürümü ve hizmet paketi için destek, [Microsoft yaşam döngüsü ilkesini](https://aka.ms/sqllifecycle)izler. Belirli bir SQL Server hizmet paketine yönelik destek, temel hizmet paketi sürümüne geriye dönük uyumluluğu bırakmadığı müddetçe toplu güncelleştirmeleri içerir. SQL Server 2017 ' den başlayarak, hizmet paketleri, [modern bir hizmet modelini](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server)takip eden bir şekilde yayınlanmayacak. SQL Server ekibi, kullanılabilir hale geldiğinde [toplu güncelleştirmelerin devam eden ve proaktif yüklemesini](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism) öneriyor.
+SQL Server 2016 ve öncesi için, her SQL sürümü ve hizmet paketi için destek, [Microsoft yaşam döngüsü ilkesini](https://aka.ms/sqllifecycle)izler. Belirli bir SQL Server hizmet paketine yönelik destek, temel hizmet paketi sürümüne geriye dönük uyumluluğu bırakmadığı müddetçe toplu güncelleştirmeleri içerir. SQL Server 2017 ' den başlayarak, hizmet paketleri, [modern bir hizmet modelini](/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server)takip eden bir şekilde yayınlanmayacak. SQL Server ekibi, kullanılabilir hale geldiğinde [toplu güncelleştirmelerin devam eden ve proaktif yüklemesini](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism) öneriyor.
 
 Aksi belirtilmediği takdirde, aşağıdaki SQL Server sürümleri tüm Configuration Manager etkin sürümleriyle desteklenir. Yeni bir SQL Server sürümü için destek eklenirse, bu desteği ekleyen Configuration Manager sürümü belirtilmiştir. Benzer şekilde, destek kullanım dışı ise, Configuration Manager etkilenen sürümleri hakkında ayrıntılı bilgi için bkz..
 
@@ -74,7 +74,7 @@ Aksi belirtilmediği takdirde, aşağıdaki SQL Server sürümleri tüm Configur
 
 ### <a name="sql-server-2019-standard-enterprise"></a>SQL Server 2019: Standart, kurumsal
 
-Configuration Manager sürüm 1910 ' den başlayarak, toplu güncelleştirme 5 ' i (CU5) veya sonraki bir sürümünü kullanarak, toplu güncelleştirme sürümünüz SQL yaşam döngüsü tarafından desteklendiği sürece bu sürümü kullanabilirsiniz. CU5, [SKALAR UDF](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining)ile ilgili bir sorunu çözen SQL Server 2019 için en düşük gereksinimdir.
+Configuration Manager sürüm 1910 ' den başlayarak, toplu güncelleştirme 5 ' i (CU5) veya sonraki bir sürümünü kullanarak, toplu güncelleştirme sürümünüz SQL yaşam döngüsü tarafından desteklendiği sürece bu sürümü kullanabilirsiniz. CU5, [SKALAR UDF](/sql/relational-databases/user-defined-functions/scalar-udf-inlining)ile ilgili bir sorunu çözen SQL Server 2019 için en düşük gereksinimdir.
 
 Bu SQL sürümü aşağıdaki siteler için kullanılabilir:
 
@@ -85,13 +85,13 @@ Bu SQL sürümü aşağıdaki siteler için kullanılabilir:
 <!--
 #### Known issue with SQL Server 2019
 
-There's a known issue<!--6436234 with the new [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
+There's a known issue<!--6436234 with the new [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF  
 ```
 
-While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
+While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
 
 You can safely disable this SQL feature for the site database server because Configuration Manager doesn't use it.
 
@@ -187,7 +187,7 @@ Configuration Manager, Çin GB18030 standardı için bu harmanlamada iki özel d
 
 ### <a name="database-compatibility-level"></a>Veritabanı uyumluluk düzeyi
 
-Configuration Manager, site veritabanının uyumluluk düzeyinin Configuration Manager sürümünüz için desteklenen en düşük SQL Server sürümden az olmaması gerekir. Örneğin, sürüm 1702 ' den başlayarak, 110 ' e eşit veya daha büyük bir [veritabanı uyumluluk düzeyine](https://docs.microsoft.com/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database) sahip olmanız gerekir. <!-- SMS.506266-->
+Configuration Manager, site veritabanının uyumluluk düzeyinin Configuration Manager sürümünüz için desteklenen en düşük SQL Server sürümden az olmaması gerekir. Örneğin, sürüm 1702 ' den başlayarak, 110 ' e eşit veya daha büyük bir [veritabanı uyumluluk düzeyine](/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database) sahip olmanız gerekir. <!-- SMS.506266-->
 
 ### <a name="sql-server-features"></a>SQL Server özellikleri
 
@@ -205,7 +205,7 @@ Her site için adanmış bir SQL Server örneğini kullanın. Örnek, **adlandı
 
 ### <a name="sql-server-memory"></a>SQL Server belleği
 
-SQL Server Management Studio kullanarak SQL Server için bellek ayırın. **Sunucu belleği seçenekleri**altındaki **En düşük sunucu belleği** ayarını belirleyin. Bu ayarı yapılandırma hakkında daha fazla bilgi için bkz. [SQL Server Memory Server yapılandırma seçenekleri](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options).  
+SQL Server Management Studio kullanarak SQL Server için bellek ayırın. **Sunucu belleği seçenekleri**altındaki **En düşük sunucu belleği** ayarını belirleyin. Bu ayarı yapılandırma hakkında daha fazla bilgi için bkz. [SQL Server Memory Server yapılandırma seçenekleri](/sql/database-engine/configure-windows/server-memory-server-configuration-options).  
 
 - **Site sunucusuyla aynı bilgisayara yüklediğiniz bir veritabanı sunucusu için**: belleği, kullanılabilir adreslenebilir sistem belleğinin yüzde 80 50 ' i ile SQL Server sınırlayın.  
 
@@ -219,11 +219,11 @@ SQL Server Management Studio kullanarak SQL Server için bellek ayırın. **Sunu
 
 ### <a name="sql-nested-triggers"></a>SQL iç içe Tetikleyicileri
 
-SQL iç içe tetikleyicilerinin etkinleştirilmesi gerekir. Daha fazla bilgi için bkz [. iç içe Tetikleyiciler sunucu yapılandırma seçeneğini](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option) yapılandırma
+SQL iç içe tetikleyicilerinin etkinleştirilmesi gerekir. Daha fazla bilgi için bkz [. iç içe Tetikleyiciler sunucu yapılandırma seçeneğini](/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option) yapılandırma
 
 ### <a name="sql-server-clr-integration"></a>SQL Server CLR tümleştirmesi
 
-Site veritabanı, SQL Server ortak dil çalışma zamanının (CLR) etkin olmasını gerektirir. Configuration Manager yüklendiğinde bu seçenek otomatik olarak etkinleştirilir. CLR hakkında daha fazla bilgi için bkz. [SQL Server clr tümleştirmesine giriş](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).  
+Site veritabanı, SQL Server ortak dil çalışma zamanının (CLR) etkin olmasını gerektirir. Configuration Manager yüklendiğinde bu seçenek otomatik olarak etkinleştirilir. CLR hakkında daha fazla bilgi için bkz. [SQL Server clr tümleştirmesine giriş](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).  
 
 ### <a name="sql-server-service-broker-ssb"></a>SQL Server Hizmet Aracısı (SSB)
 
@@ -231,7 +231,7 @@ SQL Server Hizmet Aracısı hem siteler arası çoğaltma hem de tek bir birinci
 
 ### <a name="trustworthy-setting"></a>GÜVENILIR ayar
 
-Configuration Manager, SQL [güvenilir veritabanı özelliğine](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property)otomatik olarak izin vermez. Configuration Manager için bu özellik **gereklidir.**
+Configuration Manager, SQL [güvenilir veritabanı özelliğine](/sql/relational-databases/security/trustworthy-database-property)otomatik olarak izin vermez. Configuration Manager için bu özellik **gereklidir.**
 
 ## <a name="optional-configurations-for-sql-server"></a><a name="bkmk_optional"></a> SQL Server için isteğe bağlı yapılandırmalar
 
@@ -255,7 +255,7 @@ SQL Server çalıştıran bilgisayar SQL Server hizmetini çalıştırmak için 
 
 Site veritabanı için SPN 'Ler hakkında bilgi için bkz. [site veritabanı sunucusu için SPN 'Yi yönetme](../../servers/manage/modify-your-infrastructure.md#bkmk_SPN).  
 
-SQL Server hizmeti tarafından kullanılan hesabın nasıl değiştirileceği hakkında bilgi için bkz. [SCM Hizmetleri-hizmet başlatma hesabını değiştirme](https://docs.microsoft.com/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account).  
+SQL Server hizmeti tarafından kullanılan hesabın nasıl değiştirileceği hakkında bilgi için bkz. [SCM Hizmetleri-hizmet başlatma hesabını değiştirme](/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account).  
 
 ### <a name="sql-server-reporting-services"></a>SQL Server Reporting Services
 
@@ -290,7 +290,7 @@ SQL Server çalıştıran bir bilgisayar, birden fazla siteden bir veritabanı b
 
 SQL Server çalıştıran bilgisayarda etkin bir güvenlik duvarınız varsa, dağıtımınızın kullandığı bağlantı noktalarına ve SQL Server iletişim kuran bilgisayarlar arasındaki ağ konumlarına izin verecek şekilde yapılandırıldığından emin olun.  
 
-Belirli bir bağlantı noktasını kullanmak üzere SQL Server nasıl yapılandırılacağı hakkında bir örnek için, bkz. [belirli BIR TCP bağlantı noktasını dinlemek için sunucu yapılandırma](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
+Belirli bir bağlantı noktasını kullanmak üzere SQL Server nasıl yapılandırılacağı hakkında bir örnek için, bkz. [belirli BIR TCP bağlantı noktasını dinlemek için sunucu yapılandırma](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
 
 ## <a name="upgrade-options-for-sql-server"></a>SQL Server için yükseltme seçenekleri
 

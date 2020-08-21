@@ -10,20 +10,20 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e68a3274a32d28ac0b4ad2a611c59870ee338472
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 74b8b0f29172140a19c402c79b7ea9b7339cf3e5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124550"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697645"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Configuration Manager ile önyükleme görüntülerini yönetme
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
-Configuration Manager bir önyükleme görüntüsü, işletim sistemi dağıtımı sırasında kullanılan bir [WINDOWS PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) (WinPE) görüntüsüdür. Önyükleme görüntüleri, WinPE 'de bir bilgisayarı başlatmak için kullanılır. Bu en düşük işletim sistemi sınırlı bileşen ve hizmet içerir. Configuration Manager, WinPE 'yi kullanarak hedef bilgisayarı Windows yüklemesine hazırlar.
+Configuration Manager bir önyükleme görüntüsü, işletim sistemi dağıtımı sırasında kullanılan bir [WINDOWS PE](/windows-hardware/manufacture/desktop/winpe-intro) (WinPE) görüntüsüdür. Önyükleme görüntüleri, WinPE 'de bir bilgisayarı başlatmak için kullanılır. Bu en düşük işletim sistemi sınırlı bileşen ve hizmet içerir. Configuration Manager, WinPE 'yi kullanarak hedef bilgisayarı Windows yüklemesine hazırlar.
 
-## <a name="default-boot-images"></a><a name="BKMK_BootImageDefault"></a>Varsayılan önyükleme görüntüleri
+## <a name="default-boot-images"></a><a name="BKMK_BootImageDefault"></a> Varsayılan önyükleme görüntüleri
 
 Configuration Manager iki varsayılan önyükleme görüntüsü sağlar: biri x86 platformlarını ve diğeri de x64 platformlarını destekler. Bu görüntüler, site sunucusunda aşağıdaki paylaşımdaki *x64* veya *I386* klasörlerinde depolanır: `\\<SiteServerName>\SMS_<sitecode>\osd\boot\` . Varsayılan önyükleme görüntüleri, aldığınız eyleme göre güncelleştirilir veya yeniden oluşturulur.
 
@@ -70,13 +70,13 @@ Windows ADK yükleme dizininden önyükleme görüntüsünü en son WinPE sürü
 
 **Önyükleme görüntüleri** düğümü (**istemci sürümü**) için de yeni bir sütun içerir. Her Önyükleme görüntüsündeki Configuration Manager istemci sürümünü hızlıca görüntülemek için bu sütunu kullanın.
 
-## <a name="customize-a-boot-image"></a><a name="BKMK_BootImageCustom"></a>Önyükleme görüntüsünü özelleştirme  
+## <a name="customize-a-boot-image"></a><a name="BKMK_BootImageCustom"></a> Önyükleme görüntüsünü özelleştirme  
 
 Bir önyükleme görüntüsü Windows ADK 'nin desteklenen sürümünden WinPE sürümünü temel alırken, konsoldan [bir önyükleme görüntüsünü](#BKMK_ModifyBootImages) özelleştirebilir veya değiştirebilirsiniz. Bir siteyi yükselttiğinizde ve Windows ADK 'nin yeni bir sürümünü yüklediğinizde, Özel önyükleme görüntüleri Windows ADK 'nin yeni sürümüyle güncellenmez. Bu durumda, Configuration Manager konsolundaki önyükleme görüntülerini özelleştiremezsiniz. Ancak, yükseltmeden önceki gibi çalışmaya devam ederler.  
 
 Bir önyükleme görüntüsü, bir sitede yüklü olan farklı bir Windows ADK sürümünü temel alarak önyükleme görüntülerini özelleştirmeniz gerekir. Dağıtım Görüntüsü Bakımı ve yönetimi (DıSM) komut satırı aracını kullanma gibi bu önyükleme görüntülerini özelleştirmek için başka bir yöntem kullanın. DıSM, Windows ADK 'nin bir parçasıdır. Daha fazla bilgi için bkz. [önyükleme görüntülerini özelleştirme](customize-boot-images.md).  
 
-## <a name="add-a-boot-image"></a><a name="BKMK_AddBootImages"></a>Önyükleme görüntüsü ekleme  
+## <a name="add-a-boot-image"></a><a name="BKMK_AddBootImages"></a> Önyükleme görüntüsü ekleme  
 
 Site yüklemesi sırasında Configuration Manager, bir WinPE sürümünü temel alan önyükleme görüntülerini Windows ADK 'nin desteklenen sürümünden otomatik olarak ekler. Configuration Manager sürümüne bağlı olarak, farklı bir WinPE sürümünü temel alan önyükleme görüntülerini Windows ADK 'nin desteklenen sürümünden ekleyebilirsiniz. Desteklenmeyen bir WinPE sürümünü içeren bir önyükleme görüntüsü eklemeye çalıştığınızda bir hata oluşur. Aşağıdaki liste, şu anda desteklenen Windows ADK ve WinPE sürümleridir:
 
@@ -94,7 +94,7 @@ Site yüklemesi sırasında Configuration Manager, bir WinPE sürümünü temel 
 
 - [Önyükleme görüntülerini özelleştirme](customize-boot-images.md)
 - [Windows 10 ADK desteği](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk)
-- [DıSM desteklenen platformlar](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)
+- [DıSM desteklenen platformlar](/windows-hardware/manufacture/desktop/dism-supported-platforms)
 
 <a name="bkmk_note1"></a>
 
@@ -128,7 +128,7 @@ Site yüklemesi sırasında Configuration Manager, bir WinPE sürümünü temel 
 > [!Tip]  
 > Konsolunun **önyükleme görüntüsü** düğümünde **Boyut (KB)** sütunu her önyükleme görüntüsünün açılmış boyutunu görüntüler. Site, ağ üzerinden bir önyükleme görüntüsü gönderdiğinde, sıkıştırılmış bir kopya gönderir. Bu kopya genellikle **Boyut (KB)** sütununda listelenen boyuttan daha küçüktür.  
 
-## <a name="distribute-boot-images"></a><a name="BKMK_DistributeBootImages"></a>Önyükleme görüntülerini dağıtma  
+## <a name="distribute-boot-images"></a><a name="BKMK_DistributeBootImages"></a> Önyükleme görüntülerini dağıtma  
 
 Önyükleme görüntüleri dağıtım noktalarına, diğer içerikleri dağıttığınız şekilde dağıtılır. Bir işletim sistemini dağıtmadan veya medya oluşturmadan önce, önyükleme görüntüsünü en az bir dağıtım noktasına dağıtın.
 
@@ -142,7 +142,7 @@ Site yüklemesi sırasında Configuration Manager, bir WinPE sürümünü temel 
   
 İşletim sistemlerini dağıtmak için PXE kullanma hakkında daha fazla bilgi için bkz. [Windows 'u ağ üzerinden dağıtmak IÇIN PXE kullanma](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
-## <a name="modify-a-boot-image"></a><a name="BKMK_ModifyBootImages"></a>Önyükleme görüntüsünü değiştirme  
+## <a name="modify-a-boot-image"></a><a name="BKMK_ModifyBootImages"></a> Önyükleme görüntüsünü değiştirme  
 
 Görüntüye aygıt sürücüleri ekleyin veya kaldırın ya da önyükleme görüntüsünün özelliklerini düzenleyin. Eklediğiniz veya kaldırdığınız Sürücüler ağ veya depolama sürücülerini içerebilir. Önyükleme görüntülerini değiştirirken aşağıdakileri göz önünde bulundurun:  
 
@@ -206,11 +206,11 @@ Görüntüye aygıt sürücüleri ekleyin veya kaldırın ya da önyükleme gör
 - **WinPE 'de varsayılan klavye düzeni ayarla**: <!--4910348-->Sürüm 1910 ' den başlayarak, önyükleme görüntüsü için varsayılan klavye yerleşimini yapılandırın. En-US dışında bir dil seçerseniz Configuration Manager, kullanılabilir giriş yerel ayarları 'nda hala en-US ' i içerir. Cihazda, ilk klavye düzeni seçili yerel ayar olur, ancak gerekirse Kullanıcı cihazı en-US ' a değiştirebilir.
 
 > [!Tip]
-> Bu ayarları bir betikten yapılandırmak için [set-Cmbootımage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) PowerShell cmdlet 'ini kullanın.
+> Bu ayarları bir betikten yapılandırmak için [set-Cmbootımage](/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) PowerShell cmdlet 'ini kullanın.
 
 #### <a name="optional-components"></a>İsteğe bağlı bileşenler
 
-**Isteğe bağlı bileşenler** sekmesinde, Configuration Manager ile kullanılmak üzere Windows PE 'ye eklenen bileşenleri belirtin. Kullanılabilir isteğe bağlı bileşenler hakkında daha fazla bilgi için bkz. [WinPE: Paket ekleme (İsteğe Bağlı Bileşenler Başvurusu)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
+**Isteğe bağlı bileşenler** sekmesinde, Configuration Manager ile kullanılmak üzere Windows PE 'ye eklenen bileşenleri belirtin. Kullanılabilir isteğe bağlı bileşenler hakkında daha fazla bilgi için bkz. [WinPE: Paket ekleme (İsteğe Bağlı Bileşenler Başvurusu)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
 
 Aşağıdaki bileşenler Configuration Manager için gereklidir ve her zaman önyükleme görüntülerine eklenir:
 
@@ -271,7 +271,7 @@ Dil ekleme hakkında daha fazla bilgi için bkz. [birden çok dil yapılandırma
 
 **Güvenlik** sekmesinde, bu nesne için izinleri olan yönetici kullanıcıları görüntüleyin.
 
-## <a name="configure-a-boot-image-for-pxe"></a><a name="BKMK_BootImagePXE"></a>PXE için önyükleme görüntüsü yapılandırma  
+## <a name="configure-a-boot-image-for-pxe"></a><a name="BKMK_BootImagePXE"></a> PXE için önyükleme görüntüsü yapılandırma  
 
 PXE tabanlı bir dağıtım için önyükleme görüntüsü kullanabilmeniz için, önyükleme görüntüsünü PXE 'yi destekleyen bir dağıtım noktasından dağıtılacak şekilde yapılandırın.  
 
@@ -283,7 +283,7 @@ PXE tabanlı bir dağıtım için önyükleme görüntüsü kullanabilmeniz içi
 
 4. **Veri Kaynağı** sekmesinde **Bu önyükleme görüntüsünü PXE'yi destekleyen dağıtım noktasından dağıt** öğesini seçin. Daha fazla bilgi için bkz. [Windows 'u ağ üzerinden dağıtmak IÇIN PXE kullanma](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
-## <a name="configure-multiple-languages"></a><a name="BKMK_BootImageLanguage"></a>Birden çok dil yapılandırma
+## <a name="configure-multiple-languages"></a><a name="BKMK_BootImageLanguage"></a> Birden çok dil yapılandırma
 
 > [!TIP]
 > Sürüm 1910 ' den başlayarak, varsayılan klavye düzeni bir önyükleme görüntüsünün özelliklerinde yapılandırılır. Daha fazla bilgi için bkz. [Özelleştirme](#customization).<!--4910348-->
@@ -301,6 +301,6 @@ PXE veya medya tarafından başlatılan işletim sistemi dağıtımları için W
 
 ### <a name="set-the-windows-pe-language-for-a-pxe-or-media-initiated-os-deployment"></a>PXE veya medya tarafından başlatılan işletim sistemi dağıtımı için Windows PE dilini ayarlama  
 
-1. Önyükleme görüntüsünü güncelleştirmeden önce ilgili görev dizisi kaynak dosyasının (tsres.dll) site sunucusundaki ilgili dil klasöründe bulunduğunu doğrulayın. Örneğin, Ingilizce kaynak dosyası şu konumdadır:`<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
+1. Önyükleme görüntüsünü güncelleştirmeden önce ilgili görev dizisi kaynak dosyasının (tsres.dll) site sunucusundaki ilgili dil klasöründe bulunduğunu doğrulayın. Örneğin, Ingilizce kaynak dosyası şu konumdadır: `<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
 
-2. Başlatma öncesi komutunuz kapsamında, **SMSTSLanguageFolder** ortam değişkenini ılgılı dil kimliğine ayarlayın. Dil KIMLIĞI, onaltılı biçimde değil, Decimal kullanılarak belirtilmelidir. Örneğin, dil KIMLIĞINI Ingilizce olarak ayarlamak için, klasör adının 00000409 onaltılık değerini değil **1033**ondalık değerini belirtin.  
+2. Başlatma öncesi komutunuz kapsamında, **SMSTSLanguageFolder** ortam değişkenini ılgılı dil kimliğine ayarlayın. Dil KIMLIĞI, onaltılı biçimde değil, Decimal kullanılarak belirtilmelidir. Örneğin, dil KIMLIĞINI Ingilizce olarak ayarlamak için, klasör adının 00000409 onaltılık değerini değil **1033**ondalık değerini belirtin.

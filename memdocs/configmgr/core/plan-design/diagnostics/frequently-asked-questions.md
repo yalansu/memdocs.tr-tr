@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60634ed8e275ff8496a08969054aa912a81b9d07
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: eb14f909238e86a7aa4a87493b17a218a21f0909
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709547"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700206"
 ---
 # <a name="frequently-asked-questions-about-diagnostics-and-usage-data"></a>Tanılama ve kullanım verileri hakkında sık sorulan sorular
 
@@ -24,7 +24,7 @@ ms.locfileid: "81709547"
 
 Bu makale, Configuration Manager tanılama ve kullanım verileri hakkında sık sorulan soruların yanıtlarını sağlar.
 
-## <a name="can-i-turn-off-diagnostic-and-usage-data"></a><a name="bkmk_off"></a>Tanılama ve kullanım verilerini kapatabilir miyim?
+## <a name="can-i-turn-off-diagnostic-and-usage-data"></a><a name="bkmk_off"></a> Tanılama ve kullanım verilerini kapatabilir miyim?
 
 Sitenin veri gönderdiği zaman yönetimine yardımcı olmak için, hizmet bağlantı noktasını çevrimdışı modda kullanın. Ardından, verileri el ile göndermek için hizmet bağlantı aracını kullanın. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
@@ -41,7 +41,7 @@ Configuration Manager topladığı veri düzeyini de seçebilirsiniz. Daha fazla
 
 Microsoft Configuration Manager tanılama ve kullanım verilerini bir yıl boyunca depolar.
 
-## <a name="is-diagnostics-and-usage-data-sent-when-setup-runs"></a><a name="bkmk_update"></a>Tanılama ve kullanım verileri, kurulum çalıştırıldığında gönderilir mi?
+## <a name="is-diagnostics-and-usage-data-sent-when-setup-runs"></a><a name="bkmk_update"></a> Tanılama ve kullanım verileri, kurulum çalıştırıldığında gönderilir mi?
 
 Hayır. Tanılama ve kullanım verileri yalnızca site yüklendikten ve çalışır duruma geldikten sonra gönderilir.
 
@@ -59,25 +59,25 @@ Hayır. Bu veriler, IP adresleri veya ayrıntılı coğrafi bilgiler gibi herhan
 
 Veriler, her sitenin saat dilimi bilgisini içerir. Bu bilgiler, bir hiyerarşideki sitelerin geniş coğrafi konumu ve küresel dağılımı hakkında öngörüler sağlayabilir.
 
-## <a name="can-you-see-data-in-custom-sql-tables"></a><a name="bkmk_tables"></a>Verileri özel SQL tablolarında görebilmeniz gerekir mi?
+## <a name="can-you-see-data-in-custom-sql-tables"></a><a name="bkmk_tables"></a> Verileri özel SQL tablolarında görebilmeniz gerekir mi?
 
 Hayır. Configuration Manager, SQL saklı yordamları aracılığıyla tanılama ve kullanım verilerini toplar. Bu saklı yordamlar veritabanındaki varsayılan ürün tablolarına karşı çalışır. Bu SQL tablolarının tümüne **TEL_** ön eki eklenir. SQL şeması algılama sorgusunun bir parçası olarak, bilinen varsayılan değerlerle karşılaştırmak için tüm tablo adlarının karma değerleri oluşturulur. Bu davranış, veritabanında özel tabloların mevcut olduğunu belirler. Özel tabloların varlığı, Microsoft 'un veritabanı şemasını varsayılan olarak genişletmiş olduğunu bildirir. Bu tablolar içinde depolanan verilerin hiçbirini içermez.
 
-## <a name="can-you-see-other-databases"></a><a name="bkmk_databases"></a>Diğer veritabanlarını görebilir misiniz?
+## <a name="can-you-see-other-databases"></a><a name="bkmk_databases"></a> Diğer veritabanlarını görebilir misiniz?
 
 Hayır. Veri toplamaya yönelik saklı yordamlar Configuration Manager site veritabanıyla sınırlıdır. Microsoft diğer veritabanlarının adlarını veya diğer veritabanlarındaki verileri göremez.
 
-## <a name="is-any-data-sent-to-other-integrated-cloud-services"></a><a name="bkmk_cloud"></a>Diğer tümleşik bulut hizmetlerine gönderilen veriler midir?
+## <a name="is-any-data-sent-to-other-integrated-cloud-services"></a><a name="bkmk_cloud"></a> Diğer tümleşik bulut hizmetlerine gönderilen veriler midir?
 
 Evet, bu hizmetleri Configuration Manager ile tümleştirdiğinizde. Tüm bulut hizmetleri etkileşiminin bir parçası olarak Configuration Manager, bu hizmete bazı veriler gönderir. Bu veriler, bu bulut hizmetine özeldir ve Configuration Manager tanılama ve kullanım verilerinden ayrıdır. Başka bir bulut hizmetiyle etkileşime göre kullanılan belirli veriler hakkında daha fazla bilgi için, bu hizmet için belgelere bakın.
 
 Örneğin, aşağıdaki bulut Hizmetleri Microsoft Endpoint Manager 'ın bir parçasıdır:
 
 - [Masaüstü Analizi veri gizliliği](../../../desktop-analytics/privacy.md)
-- [Intune’da gizlilik ve kişisel veriler](https://docs.microsoft.com/intune/protect/privacy-personal-data)
-- [Windows Autopilot gereksinimleri](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
+- [Intune’da gizlilik ve kişisel veriler](/intune/protect/privacy-personal-data)
+- [Windows Autopilot gereksinimleri](/windows/deployment/windows-autopilot/windows-autopilot-requirements)
 
-## <a name="does-configuration-manager-collect-any-personal-data"></a><a name="bkmk_personal"></a>Kişisel verileri toplamak Configuration Manager mı?
+## <a name="does-configuration-manager-collect-any-personal-data"></a><a name="bkmk_personal"></a> Kişisel verileri toplamak Configuration Manager mı?
 
 Hayır. Yapılandırma kişisel verileri veya müşteri verilerini toplamaz veya iletmez. Bu, doğrudan dağıttığınız, yönettiğiniz ve işletebilmeniz gereken şirket içi bir üründür. Microsoft tarafından toplanan tanılama ve kullanım verileri, gelecekteki sürümlerin yükleme deneyimini, kalitesini ve güvenliğini geliştirir.
 

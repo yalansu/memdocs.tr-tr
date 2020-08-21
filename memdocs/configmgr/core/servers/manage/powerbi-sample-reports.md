@@ -10,18 +10,18 @@ ms.assetid: 7e9bc22c-67ac-4a86-b613-944a4928e583
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cb55fc79c44af83c7bb7a5e0802800f55e28e6b3
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: 025788a4ed4a26123f24ec667348eae97821295e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614767"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699696"
 ---
 # <a name="install-power-bi-sample-reports"></a>Power BI örnek raporlarını yükleme
 <!--5679791-->
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
-Sürüm 2002 ' den başlayarak, [Power BI Rapor Sunucusu](https://docs.microsoft.com/power-bi/report-server/get-started) Configuration Manager raporlama ile tümleştirebilirsiniz. Configuration Manager ' de yükleyebileceğiniz, indirilebilir bir örnek rapor mevcuttur. Bu makalede, Power BI örnek raporlarının Configuration Manager nasıl yükleneceği açıklanır.
+Sürüm 2002 ' den başlayarak, [Power BI Rapor Sunucusu](/power-bi/report-server/get-started) Configuration Manager raporlama ile tümleştirebilirsiniz. Configuration Manager ' de yükleyebileceğiniz, indirilebilir bir örnek rapor mevcuttur. Bu makalede, Power BI örnek raporlarının Configuration Manager nasıl yükleneceği açıklanır.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
@@ -34,7 +34,7 @@ Sürüm 2002 ' den başlayarak, [Power BI Rapor Sunucusu](https://docs.microsoft
     > [!IMPORTANT]
     > Yalnızca [Microsoft Indirme merkezi](https://www.microsoft.com/download/)'ndeki Power BI Desktop sürümlerini kullanın. Microsoft Store sürüm kullanmayın.
     >
-    > Yalnızca [Power BI rapor sunucusu Için En Iyi duruma getirilmiş](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop)Power BI Desktop bir sürümünü kullanın.
+    > Yalnızca [Power BI rapor sunucusu Için En Iyi duruma getirilmiş](/power-bi/report-server/install-powerbi-desktop)Power BI Desktop bir sürümünü kullanın.
 
 ## <a name="download-the-sample-reports"></a>Örnek raporları indirin
 

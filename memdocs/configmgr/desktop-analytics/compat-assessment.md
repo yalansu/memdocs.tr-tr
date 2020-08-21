@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 7b2bff4f8365693c86540c9b0578307340f13a49
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: c9268514b43f4f728d3fff4715d4d71308a712f3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268904"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699084"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Masaüstü Analizi 'nde uyumluluk değerlendirmesi
 
@@ -180,13 +180,13 @@ Configuration Manager sitesini ve istemcileri 1906 sürümüne güncelleştirdi�
 
 #### <a name="16-bit-apps"></a>16 bit uygulamalar
 
-Tüm 16 bit bileşenleri uygulamalardan kaldırın ve 32-bit veya 64 bit eşdeğerleriyle değiştirin. Daha fazla bilgi için bkz. [Windows Vista ve Windows Server 2008 Geliştirici hikayesi: uygulama uyumluluğu tanımlama kitabı](https://docs.microsoft.com/previous-versions/aa480152\(v=msdn.10\)).
+Tüm 16 bit bileşenleri uygulamalardan kaldırın ve 32-bit veya 64 bit eşdeğerleriyle değiştirin. Daha fazla bilgi için bkz. [Windows Vista ve Windows Server 2008 Geliştirici hikayesi: uygulama uyumluluğu tanımlama kitabı](/previous-versions/aa480152\(v=msdn.10\)).
 
 Diğer seçenek, Windows 10 desteği için NT Sanal DOS makinesi 'ni (NTVDM) etkinleştirmektir.
 
 #### <a name="requires-admin-privileges"></a>Yönetici ayrıcalıkları gerektirir
 
-Uygulama, kullanıcının cihaza yönetici erişimine sahip olmasını gerektirir. Bu uygulamalar için yönetici izinleri gerektiren bir uygulama bildirimi kullanın. Daha fazla bilgi için bkz. [uygulama bildirimi oluşturma ve ekleme](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\)).
+Uygulama, kullanıcının cihaza yönetici erişimine sahip olmasını gerektirir. Bu uygulamalar için yönetici izinleri gerektiren bir uygulama bildirimi kullanın. Daha fazla bilgi için bkz. [uygulama bildirimi oluşturma ve ekleme](/previous-versions/bb756929\(v=msdn.10\)).
 
 Masaüstü analizi, herhangi bir gerileme bulması için pilot teste yönelik uygulamayı önerir.
 
@@ -196,7 +196,7 @@ Birçok Java uygulaması ayrı olarak yüklenen Java Runtime Environment (JRE) k
 
 #### <a name="not-dpi-aware"></a>DPı olmayan duyarlı
 
-Uygulama, Windows 10 ' da Gelişmiş ekran çözünürlükleriyle ilgili sorunları gösterebilir. Yüksek DPı çözünürlükleriyle ilgili sorunlardan kaçınmak için bir uygulama bildirimi kullanın. Daha fazla bilgi için bkz. [uygulama bildirimleri](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests).
+Uygulama, Windows 10 ' da Gelişmiş ekran çözünürlükleriyle ilgili sorunları gösterebilir. Yüksek DPı çözünürlükleriyle ilgili sorunlardan kaçınmak için bir uygulama bildirimi kullanın. Daha fazla bilgi için bkz. [uygulama bildirimleri](/windows/desktop/SbsCs/application-manifests).
 
 Masaüstü analizi, herhangi bir gerileme bulması için pilot teste yönelik uygulamayı önerir.
 
@@ -220,13 +220,13 @@ Masaüstü analizi, herhangi bir gerileme bulması için pilot teste yönelik uy
 
 #### <a name="net-framework-2030"></a>.NET Framework 2.0/3.0
 
-.NET 2,0 ve 3,5 çerçeveleri Windows 10 ' da desteklenir. Windows özelliğini etkinleştirmeniz gerekebilir. Daha fazla bilgi için bkz. [Windows 10 ' da .NET Framework 3,5](https://docs.microsoft.com/dotnet/framework/install/dotnet-35-windows-10).
+.NET 2,0 ve 3,5 çerçeveleri Windows 10 ' da desteklenir. Windows özelliğini etkinleştirmeniz gerekebilir. Daha fazla bilgi için bkz. [Windows 10 ' da .NET Framework 3,5](/dotnet/framework/install/dotnet-35-windows-10).
 
 #### <a name="ui-access"></a>UI erişimi
 
 Kullanıcı Arabirimi erişimi olan uygulamalar, masaüstünde daha yüksek ayrıcalıklı pencereler için girişi yönlendirmek üzere Kullanıcı arabirimi denetim düzeylerini atlayabilir. Bu ayarı yalnızca kullanıcı arabirimi yardımcı teknoloji uygulamaları için kullanın.
 
-Uygulamanızda erişilebilirlik özelliklerini kullanmıyorsanız, uygulama bildiriminde UI erişim bayrağını yanlış olarak ayarlayın. Daha fazla bilgi için bkz. [uygulama bildirimi oluşturma ve ekleme](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\)).
+Uygulamanızda erişilebilirlik özelliklerini kullanmıyorsanız, uygulama bildiriminde UI erişim bayrağını yanlış olarak ayarlayın. Daha fazla bilgi için bkz. [uygulama bildirimi oluşturma ve ekleme](/previous-versions/bb756929\(v=msdn.10\)).
 
 Masaüstü analizi, herhangi bir gerileme bulması için pilot teste yönelik uygulamayı önerir.
 
@@ -239,10 +239,10 @@ Değerlendirme, masaüstü Analizi 'nde sürücü üzerinde bulunabilir. Bir da�
 | Sürücü kullanılabilirliği | Eylem gerekli mi? | Anlamı | Rehber |
 |---------------------|------------------|---------------|----------|
 | Yerleşik olarak kullanılabilir | Hayır, yalnızca tanıma için | Uygulamanın veya sürücünün yüklü olan sürümü yeni işletim sistemi sürümüne geçirilmez. Yeni işletim sistemi sürümü ile uyumlu bir sürüm yüklü. | Yükseltmenin devam etmesi için herhangi bir eylem gerekmez. |
-| Windows Update içeri aktar | Yes | Bir sürücünün Şu anda yüklü olan sürümü yeni işletim sistemi sürümüne geçirilmez. Windows Update ile uyumlu bir sürüm kullanılabilir. | Bilgisayar Windows Update güncelleştirmeleri otomatik olarak alırsa, herhangi bir eylem gerekmez. Aksi takdirde, Windows 'u yükselttikten sonra Windows Update yeni bir sürücü alın. |
-| Kullanıma hazır ve Windows Update | Yes | Bir sürücünün Şu anda yüklü olan sürümü yeni işletim sistemi sürümüne geçirilmez. Yükseltme sırasında yeni bir sürücü yüklense de Windows Update yeni bir sürüm kullanılabilir. | Bilgisayar Windows Update güncelleştirmeleri otomatik olarak alırsa, herhangi bir eylem gerekmez. Aksi takdirde, Windows 'u yükselttikten sonra Windows Update yeni bir sürücü alın. |
-| Satıcıyla denetle | Yes | Sürücü yeni işletim sistemi sürümüne geçirilmez ve Masaüstü Analizi uyumlu bir sürümü bulamıyor. | Bir çözüm için sürücüyü üreten bağımsız donanım satıcısı (IHV) veya cihazı sağlayan özgün ekipman üreticisi (OEM) ile görüşün. |
+| Windows Update içeri aktar | Evet | Bir sürücünün Şu anda yüklü olan sürümü yeni işletim sistemi sürümüne geçirilmez. Windows Update ile uyumlu bir sürüm kullanılabilir. | Bilgisayar Windows Update güncelleştirmeleri otomatik olarak alırsa, herhangi bir eylem gerekmez. Aksi takdirde, Windows 'u yükselttikten sonra Windows Update yeni bir sürücü alın. |
+| Kullanıma hazır ve Windows Update | Evet | Bir sürücünün Şu anda yüklü olan sürümü yeni işletim sistemi sürümüne geçirilmez. Yükseltme sırasında yeni bir sürücü yüklense de Windows Update yeni bir sürüm kullanılabilir. | Bilgisayar Windows Update güncelleştirmeleri otomatik olarak alırsa, herhangi bir eylem gerekmez. Aksi takdirde, Windows 'u yükselttikten sonra Windows Update yeni bir sürücü alın. |
+| Satıcıyla denetle | Evet | Sürücü yeni işletim sistemi sürümüne geçirilmez ve Masaüstü Analizi uyumlu bir sürümü bulamıyor. | Bir çözüm için sürücüyü üreten bağımsız donanım satıcısı (IHV) veya cihazı sağlayan özgün ekipman üreticisi (OEM) ile görüşün. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-Windows 10 için FastTrack Center avantajı, **Masaüstü uygulaması güvence altına**erişim sağlar. Bu avantaj, Windows 10 ve kurumsal uyumluluk için Microsoft 365 uygulamalarla ilgili sorunları gidermek üzere tasarlanan yeni bir hizmettir. Daha fazla bilgi için bkz. [Masaüstü uygulamaları güvence](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure).
+Windows 10 için FastTrack Center avantajı, **Masaüstü uygulaması güvence altına**erişim sağlar. Bu avantaj, Windows 10 ve kurumsal uyumluluk için Microsoft 365 uygulamalarla ilgili sorunları gidermek üzere tasarlanan yeni bir hizmettir. Daha fazla bilgi için bkz. [Masaüstü uygulamaları güvence](/fasttrack/win-10-desktop-app-assure).

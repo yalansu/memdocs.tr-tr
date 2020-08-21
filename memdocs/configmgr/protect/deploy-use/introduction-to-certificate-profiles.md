@@ -10,12 +10,12 @@ ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 35269e7c727031a9cd66072985f3d9ec362978cf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3598c95d1431915431d96b16c10c7c913741fe3d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722308"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700002"
 ---
 # <a name="introduction-to-certificate-profiles-in-configuration-manager"></a>Configuration Manager 'da sertifika profillerine giriş
 
@@ -59,11 +59,11 @@ Sertifika profilleri aşağıdaki yönetim yeteneklerini sağlar:
 
 ## <a name="requirements"></a>Gereksinimler
 
-SCEP kullanan sertifika profillerini dağıtmak için, sertifika kayıt noktasını bir site sistemi sunucusuna yükler. Ayrıca, Windows Server 2012 R2 veya üstünü çalıştıran bir sunucuda NDES için Configuration Manager Ilke modülünü bir ilke modülü de yükler. Bu sunucu Active Directory Sertifika Hizmetleri rolü gerektirir. Ayrıca, sertifikaları gerektiren cihazların erişebileceği çalışan bir NDES de gerektirir. Cihazlarınızın internet 'ten sertifikalara kaydolması gerekiyorsa, NDES sunucunuza internet 'ten erişilebilir olması gerekir. Örneğin, internet 'ten NDES sunucusuna giden trafiği güvenle etkinleştirmek için [Azure uygulama proxy 'si](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy)kullanabilirsiniz.
+SCEP kullanan sertifika profillerini dağıtmak için, sertifika kayıt noktasını bir site sistemi sunucusuna yükler. Ayrıca, Windows Server 2012 R2 veya üstünü çalıştıran bir sunucuda NDES için Configuration Manager Ilke modülünü bir ilke modülü de yükler. Bu sunucu Active Directory Sertifika Hizmetleri rolü gerektirir. Ayrıca, sertifikaları gerektiren cihazların erişebileceği çalışan bir NDES de gerektirir. Cihazlarınızın internet 'ten sertifikalara kaydolması gerekiyorsa, NDES sunucunuza internet 'ten erişilebilir olması gerekir. Örneğin, internet 'ten NDES sunucusuna giden trafiği güvenle etkinleştirmek için [Azure uygulama proxy 'si](/azure/active-directory/manage-apps/application-proxy)kullanabilirsiniz.
 
 PFX sertifikaları bir sertifika kayıt noktası da gerektirir. Ayrıca sertifika için sertifika yetkilisini (CA) ve ilgili erişim kimlik bilgilerini belirtin. Sertifika yetkilisi olarak Microsoft veya Entrust belirtebilirsiniz.  
 
-NDES 'nin sertifikaları dağıtabilmesi için bir ilke Configuration Manager modülünü nasıl desteklediği hakkında daha fazla bilgi için, bkz. [ağ cihazı kayıt hizmeti Ile Ilke modülü kullanma](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016\(v=ws.11\)).
+NDES 'nin sertifikaları dağıtabilmesi için bir ilke Configuration Manager modülünü nasıl desteklediği hakkında daha fazla bilgi için, bkz. [ağ cihazı kayıt hizmeti Ile Ilke modülü kullanma](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016\(v=ws.11\)).
 
 Gereksinimlere bağlı olarak, Configuration Manager çeşitli cihaz türlerindeki ve işletim sistemlerindeki farklı sertifika depolarına sertifika dağıtılmasını destekler. Şu cihazlar ve işletim sistemleri desteklenir:  
 

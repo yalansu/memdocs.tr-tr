@@ -10,12 +10,12 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a9ed8e1ece27117993761a3ce52c462e94e9f79a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: eb7e2e5c564263c7172d70ec33bb33c0dd73409c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124782"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697832"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-configuration-manager"></a>Windows Configuration Manager ile en son sürüme yükseltme
 
@@ -51,11 +51,11 @@ Cihazların bir işletim sistemi yükseltme görev sırasını hedeflemek için 
 
 #### <a name="windows-client"></a>Windows istemcisi
 
-- Windows 7
+- Windows 7
 - Windows 8.1
 - Windows 10 ' un önceki bir sürümü. Örneğin, Windows 10, sürüm 1809 sürümünü Windows 10, sürüm 1903 ' ye yükseltebilirsiniz.  
 
-Daha fazla bilgi için bkz. [Windows 10 yükseltme yolları](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-upgrade-paths).
+Daha fazla bilgi için bkz. [Windows 10 yükseltme yolları](/windows/deployment/upgrade/windows-10-upgrade-paths).
 
 #### <a name="windows-server"></a>Windows Server
 
@@ -64,10 +64,10 @@ Daha fazla bilgi için bkz. [Windows 10 yükseltme yolları](https://docs.micros
 - Windows Server 2016 ' in önceki bir sürümü
 - Windows Server 2019 ' in önceki bir sürümü
 
-Windows Server tarafından desteklenen yükseltme yolları hakkında daha fazla bilgi için bkz. [Windows server 2016 desteklenen yükseltme yolları](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) ve [Windows Server yükseltme merkezi](https://aka.ms/upgradecenter).
+Windows Server tarafından desteklenen yükseltme yolları hakkında daha fazla bilgi için bkz. [Windows server 2016 desteklenen yükseltme yolları](/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) ve [Windows Server yükseltme merkezi](https://aka.ms/upgradecenter).
 
 
-## <a name="plan"></a><a name="BKMK_Plan"></a>Planınızın  
+## <a name="plan"></a><a name="BKMK_Plan"></a> Planınızın  
 
 ### <a name="task-sequence-requirements-and-limitations"></a>Görev sırası gereksinimleri ve sınırlamaları
 
@@ -95,7 +95,7 @@ Aşağıdaki görevler yerinde yükseltme ile uyumlu değildir. Geleneksel işle
 Yükseltme senaryosu için tek önkoşul, kullanılabilir bir dağıtım noktasıdır. İşletim sistemi yükseltme paketini ve görev dizisine dahil ettiğiniz diğer paketleri dağıtın. Daha fazla bilgi için, bkz. [Install or modify a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md).
 
 
-## <a name="configure"></a><a name="BKMK_Configure"></a>Yapılandırma  
+## <a name="configure"></a><a name="BKMK_Configure"></a> Yapılandırma  
 
 ### <a name="prepare-the-os-upgrade-package"></a>İşletim sistemi yükseltme paketini hazırlama  
 
@@ -111,7 +111,7 @@ Windows 10 yükseltme paketi, hedef bilgisayardaki işletim sistemini yükseltme
 > Özel bir görev dizisi oluşturabilir ve [işletim sistemi yükseltme](../understand/task-sequence-steps.md#BKMK_UpgradeOS) adımını ekleyebilirsiniz. Bu adım, işletim sistemini Windows 10 ' a yükseltmek için gereken tek bir adımdır. Bu yöntemi seçerseniz, yükseltmeyi gerçekleştirmek için **işletim sistemini yükseltme** adımından sonra [Bilgisayarı yeniden Başlat](../understand/task-sequence-steps.md#BKMK_RestartComputer) adımını da ekleyin. Bilgisayarı Windows PE 'ye değil yüklü IŞLETIM sisteminde yeniden başlatmak için **Şu anda yüklü varsayılan işletim sistemi** ayarını kullandığınızdan emin olun.  
 
 
-## <a name="deploy"></a><a name="BKMK_Deploy"></a>Dağıtımı  
+## <a name="deploy"></a><a name="BKMK_Deploy"></a> Dağıtımı  
 
 İşletim sistemini dağıtmak için aşağıdaki dağıtım yöntemlerinden birini kullanın:  
 
@@ -125,4 +125,4 @@ Windows 10 yükseltme paketi, hedef bilgisayardaki işletim sistemini yükseltme
 
 ## <a name="monitor"></a>İzleme  
 
-İşletim sistemini yükseltmek üzere görev dizisi dağıtımını izlemek için bkz. [işletim sistemi dağıtımlarını izleme](monitor-operating-system-deployments.md).  
+İşletim sistemini yükseltmek üzere görev dizisi dağıtımını izlemek için bkz. [işletim sistemi dağıtımlarını izleme](monitor-operating-system-deployments.md).

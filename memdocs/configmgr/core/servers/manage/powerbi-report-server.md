@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f4089f52d912491b3b1396906fe391c5c334e061
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: eaceea5f83bd93fee8261a94147383cde001f90b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814898"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699594"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Power BI Rapor Sunucusu ile tümleştirme
 
@@ -23,13 +23,13 @@ ms.locfileid: "84814898"
 
 <!--3721603-->
 
-Sürüm 2002 ' den başlayarak, [Power BI Rapor Sunucusu](https://docs.microsoft.com/power-bi/report-server/get-started) Configuration Manager raporlama ile tümleştirebilirsiniz. Bu tümleştirme size modern görselleştirme ve daha iyi performans sağlar. Bu, SQL Server Reporting Services zaten mevcut olana benzer Power BI raporlar için konsol desteği ekler.
+Sürüm 2002 ' den başlayarak, [Power BI Rapor Sunucusu](/power-bi/report-server/get-started) Configuration Manager raporlama ile tümleştirebilirsiniz. Bu tümleştirme size modern görselleştirme ve daha iyi performans sağlar. Bu, SQL Server Reporting Services zaten mevcut olana benzer Power BI raporlar için konsol desteği ekler.
 
 Power BI Desktop rapor dosyalarını Kaydet (. PBIX) ve Power BI Rapor Sunucusu dağıtın. Bu işlem, SQL Server Reporting Services rapor dosyalarıyla benzerdir (. RDL). Raporları tarayıcıda doğrudan Configuration Manager konsolundan da başlatabilirsiniz.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-- Power BI Rapor Sunucusu Lisansı. Daha fazla bilgi için bkz. [lisanslama Power BI rapor sunucusu](https://docs.microsoft.com/power-bi/report-server/get-started#licensing-power-bi-report-server).
+- Power BI Rapor Sunucusu Lisansı. Daha fazla bilgi için bkz. [lisanslama Power BI rapor sunucusu](/power-bi/report-server/get-started#licensing-power-bi-report-server).
 
 - [Microsoft Power BI rapor sunucusu-eylül 2019](https://www.microsoft.com/download/details.aspx?id=57270)veya sonraki bir sürümü indirin.
 
@@ -40,7 +40,7 @@ Power BI Desktop rapor dosyalarını Kaydet (. PBIX) ve Power BI Rapor Sunucusu 
 
     > [!IMPORTANT]
     > - Yalnızca [Microsoft Indirme merkezi](https://www.microsoft.com/download/)'ndeki Power BI Desktop sürümlerini kullanın, Microsoft Store bir sürüm kullanmayın.
-    > - Yalnızca [ **Power BI rapor sunucusu Için iyileştirildiğini**belirten Power BI Desktop](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop)bir sürümünü kullanın.
+    > - Yalnızca [ **Power BI rapor sunucusu Için iyileştirildiğini**belirten Power BI Desktop](/power-bi/report-server/install-powerbi-desktop)bir sürümünü kullanın.
 
 - Power BI tümleştirme, raporlama için aynı rol tabanlı yönetimi kullanır.
     > [!NOTE]
@@ -54,7 +54,7 @@ Bu işlem, sitede bu rolün zaten mevcut olup olmadığına bağlı olarak farkl
 
 Bu işlemi yalnızca sitede bir Raporlama Hizmetleri noktanız zaten varsa kullanın. Bu işlemin tüm adımlarını aynı sunucuda yapın:
 
-1. **Raporlama sunucusu Configuration Manager**, **şifreleme anahtarlarını**yedekleyin. Daha fazla bilgi için bkz. [SSRS şifreleme anahtarları-şifreleme anahtarlarını yedekleme ve geri yükleme](https://docs.microsoft.com/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys).
+1. **Raporlama sunucusu Configuration Manager**, **şifreleme anahtarlarını**yedekleyin. Daha fazla bilgi için bkz. [SSRS şifreleme anahtarları-şifreleme anahtarlarını yedekleme ve geri yükleme](/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys).
 
     > [!WARNING]
     > Bu adımı atlarsanız SQL Server Reporting Services özel raporlara erişiminizi kaybedersiniz.
@@ -95,7 +95,7 @@ Bu işlemi yalnızca sitede bir Raporlama Hizmetleri noktanız yoksa kullanın. 
 
 1. Şeritte **rapor oluştur**' u seçin. Bu eylem Power BI Desktop açar.
 
-1. Power BI Desktop bir rapor oluşturun.
+1. Power BI Desktop’ta rapor oluşturma.
 
     - Power BI Desktop, bir veri kaynağına bağlandığınızda, bağlantı ayarları için **DirectQuery** ' yi seçin.
 
@@ -111,7 +111,7 @@ Configuration Manager konsolunda, yeni raporu, Power BI raporları listesinde g�
 
 Bir rapor oluşturduktan sonra, Configuration Manager konsolunda aşağıdaki eylemleri kullanın:
 
-- **Tarayıcıda Çalıştır**: Power BI raporunu Web tarayıcısında açar. Bu URL 'YI başkalarıyla paylaşma, örneğin:`https://rsp.contoso.com/Reports/POWERBI/ConfigMgr_ABC/Windows%2010/Windows10%20Dashboard?rs:embed=true`
+- **Tarayıcıda Çalıştır**: Power BI raporunu Web tarayıcısında açar. Bu URL 'YI başkalarıyla paylaşma, örneğin: `https://rsp.contoso.com/Reports/POWERBI/ConfigMgr_ABC/Windows%2010/Windows10%20Dashboard?rs:embed=true`
 
     > [!TIP]
     > Web tarayıcısında yalnızca bu raporları görüntüleyebilirsiniz.

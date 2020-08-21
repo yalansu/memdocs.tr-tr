@@ -10,12 +10,12 @@ ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 102d07f29b9addd1f2c37dd741db09e972cd5802
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 30b57de75e637aa083070832783647b8ad35b4a7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718843"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700540"
 ---
 # <a name="install-site-system-roles-for-configuration-manager"></a>Configuration Manager için site sistemi rollerini yükler
 
@@ -38,7 +38,7 @@ Varsayılan olarak, Configuration Manager bir site sistem rolü yüklediğinde, 
 
 Configuration Manager, rolleri yüklemek için **site sistemi yükleme hesabını** kullanır. Rolü yüklerken bu hesabı belirtirsiniz. Varsayılan olarak, bu hesap, site sunucusu bilgisayarının yerel sistem hesabıdır. Site sistemi yükleme hesabı olarak bir etki alanı kullanıcı hesabı belirtebilirsiniz. Daha fazla bilgi için bkz. [hesaplar-site sistemi yükleme hesabı](../../../plan-design/hierarchy/accounts.md#site-system-installation-account).
 
-## <a name="install-roles-on-an-existing-site-system-server"></a><a name="bkmk_addrole"></a>Var olan bir site sistemi sunucusuna roller yükler
+## <a name="install-roles-on-an-existing-site-system-server"></a><a name="bkmk_addrole"></a> Var olan bir site sistemi sunucusuna roller yükler
 
 1. Configuration Manager konsolunda **Yönetim** çalışma alanına gidin. **Site yapılandırması**' nı genişletin ve **sunucular ve site sistemi rolleri** düğümünü seçin. Yeni site sistem rollerini yüklemek istediğiniz var olan site sistem sunucusunu seçin.
 
@@ -56,9 +56,9 @@ Configuration Manager, rolleri yüklemek için **site sistemi yükleme hesabın�
 1. Sihirbazı tamamlayın. Belirli roller için ek sayfalar görünebilir. Daha fazla bilgi için bkz. [site sistemi rolleri Için yapılandırma seçenekleri](configuration-options-for-site-system-roles.md).
 
 > [!TIP]
-> **New-CMSiteSystemServer**Windows PowerShell cmdlet 'i Bu yordamla aynı işlevi gerçekleştirir. Daha fazla bilgi için bkz. [New-CMSiteSystemServer](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps).
+> **New-CMSiteSystemServer**Windows PowerShell cmdlet 'i Bu yordamla aynı işlevi gerçekleştirir. Daha fazla bilgi için bkz. [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps).
 
-## <a name="install-roles-on-a-new-site-system-server"></a><a name="bkmk_createnew"></a>Yeni bir site sistemi sunucusuna roller yükler
+## <a name="install-roles-on-a-new-site-system-server"></a><a name="bkmk_createnew"></a> Yeni bir site sistemi sunucusuna roller yükler
 
 1. Configuration Manager konsolunda **Yönetim** çalışma alanına gidin. **Site yapılandırması**' nı genişletin ve **sunucular ve site sistemi rolleri** düğümünü seçin.
 
@@ -76,7 +76,7 @@ Configuration Manager, rolleri yüklemek için **site sistemi yükleme hesabın�
 1. Sihirbazı tamamlayın. Belirli roller için ek sayfalar görünebilir. Daha fazla bilgi için bkz. [site sistemi rolleri Için yapılandırma seçenekleri](configuration-options-for-site-system-roles.md).
 
 > [!TIP]
-> **New-CMSiteSystemServer**Windows PowerShell cmdlet 'i Bu yordamla aynı işlevi gerçekleştirir. Daha fazla bilgi için bkz. [New-CMSiteSystemServer](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps).
+> **New-CMSiteSystemServer**Windows PowerShell cmdlet 'i Bu yordamla aynı işlevi gerçekleştirir. Daha fazla bilgi için bkz. [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

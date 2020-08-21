@@ -10,12 +10,12 @@ ms.assetid: 16975644-8dfa-4f22-b45a-c54a9250dbd2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5b8b7ee17077c859a1f0a9eb41c5f9d0857db550
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 5a1d9d4ce8cdd19efb440d4d73fafdc96a514bcd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591519"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699169"
 ---
 # <a name="remove-the-central-administration-site"></a>Merkezi yönetim sitesini kaldırma
 
@@ -141,7 +141,7 @@ CAS 'yi kaldırdıktan sonra, ortamınız için uygulanan aşağıdaki adımlar�
 
   - [Işletim sistemi dağıtım medyasını](../../../../osd/deploy-use/create-task-sequence-media.md)yeniden oluşturun.
 
-- Configuration Manager [Azure izleyici](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context)ile bağlanıyorsanız, bağlantıyı sıfırlamanız gerekir. Sorunları çözecek ilk adım [gizli anahtarı yenilemeyecektir](../configure/azure-services-wizard.md#bkmk_renew). Bu sorunu çözmezse, bağlantıyı yeniden oluşturun.<!-- 5584635 -->
+- Configuration Manager [Azure izleyici](/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context)ile bağlanıyorsanız, bağlantıyı sıfırlamanız gerekir. Sorunları çözecek ilk adım [gizli anahtarı yenilemeyecektir](../configure/azure-services-wizard.md#bkmk_renew). Bu sorunu çözmezse, bağlantıyı yeniden oluşturun.<!-- 5584635 -->
 
 - Sürüm 2002 ' de yüzey sürücülerinin eşitlenmesini etkinleştirirseniz, CA 'ları kaldırdıktan sonra bu özelliği yeniden yapılandırın. Daha fazla bilgi için bkz. [Microsoft Surface Drivers ve bellenim Updates](../../../../sum/deploy-use/surface-drivers.md).<!-- 5728727 -->
 

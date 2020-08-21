@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: eb393b05e1ee93239b43725a67b9a1b3e54e71ed
-ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
+ms.openlocfilehash: 5250d3296df19c454f55ed166e998f8c940c98db
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997958"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700811"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Masaüstü Analizi veri gizliliği
 
 Masaüstü analizi, müşteri verileri gizliliğine tam olarak kaydedilir, bu, bu adalar üzerinde ortalama:
 
-- **Saydamlık:** Windows Tanılama olaylarını tam belgeliyoruz. Bunları şirketinizin güvenlik ve uyumluluk ekipleriyle birlikte gözden geçirin. Windows tanılama veri Görüntüleyicisi, belirli bir cihazdan gönderilen tanılama verilerini görmenizi sağlar. Daha fazla bilgi için bkz. [Tanılama veri görüntüleyicisine genel bakış](https://docs.microsoft.com/windows/configuration/diagnostic-data-viewer-overview).  
+- **Saydamlık:** Windows Tanılama olaylarını tam belgeliyoruz. Bunları şirketinizin güvenlik ve uyumluluk ekipleriyle birlikte gözden geçirin. Windows tanılama veri Görüntüleyicisi, belirli bir cihazdan gönderilen tanılama verilerini görmenizi sağlar. Daha fazla bilgi için bkz. [Tanılama veri görüntüleyicisine genel bakış](/windows/configuration/diagnostic-data-viewer-overview).  
 
 - **Denetim:** Microsoft ile paylaşılacak tanılama verilerinin düzeyini denetlersiniz. Windows 10, sürüm 1709, gelişmiş tanılama verilerini masaüstü analizi için gereken en düşük düzeyde sınırlamak üzere yeni bir ilke ekler.  
 
@@ -30,7 +30,7 @@ Masaüstü analizi, müşteri verileri gizliliğine tam olarak kaydedilir, bu, b
 
 - **Güven:** Masaüstü analizi, Microsoft [Gizlilik bildirimi](https://privacy.microsoft.com/privacystatement) ve [çevrimiçi hizmet koşulları](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46)'nı destekler.  
 
-Daha fazla bilgi için, [Microsoft 'un GDPR altında işlemcinin olduğu Windows Hizmetleri](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr)bölümüne bakın.<!-- 5353168 -->
+Daha fazla bilgi için, [Microsoft 'un GDPR altında işlemcinin olduğu Windows Hizmetleri](/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr)bölümüne bakın.<!-- 5353168 -->
 
 ## <a name="data-flow"></a>Veri akışı
 
@@ -57,7 +57,7 @@ Aşağıdaki çizimde, tanılama verilerinin tanılama veri hizmeti, geçici dep
 
 3. Cihazlar, tanılama verilerini Windows için Microsoft Tanılama Veri Yönetimi hizmetine gönderir. Tüm Tanılama verileri HTTPS üzerinden şifrelenir ve cihazdan bu hizmete aktarım sırasında sertifika sabitleme kullanır. Microsoft Veri Yönetimi hizmeti Birleşik Devletler barındırılır.
 
-      - Uygulama hataları, çekirdek hataları, yanıt vermeyen uygulamalar ve uygulamaya özgü diğer sorunlar, uygulamaya özgü sorun raporlarını Microsoft 'a göndermek için Windows Hata Bildirimi API kullanır. Bu veri akışı hakkında özel ayrıntılar için [wer kullanma](https://docs.microsoft.com/windows/win32/wer/using-wer) bölümüne bakın.
+      - Uygulama hataları, çekirdek hataları, yanıt vermeyen uygulamalar ve uygulamaya özgü diğer sorunlar, uygulamaya özgü sorun raporlarını Microsoft 'a göndermek için Windows Hata Bildirimi API kullanır. Bu veri akışı hakkında özel ayrıntılar için [wer kullanma](/windows/win32/wer/using-wer) bölümüne bakın.
       
 4. Her gün Microsoft, BT odaklı öngörülerin bir anlık görüntüsünü üretir. Bu anlık görüntü, Windows 'daki tanılama verilerini kayıtlı cihazların girişinde birleştirir. Bu işlem yalnızca masaüstü Analizi tarafından kullanılan geçici depolamada gerçekleşir. Geçici depolama, Birleşik Devletler Microsoft veri merkezlerinde barındırılır. Tüm veriler SSL (HTTPS) ile şifrelenmiş bir kanal üzerinden gönderilir. Anlık görüntüler ticari KIMLIĞE göre ayrılmış.  
 
@@ -71,23 +71,23 @@ Gizlilik açısından ilgili sık sorulan sorular için bkz. [gızlılık SSS](f
 
 İlgili gizlilik yönleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [Windows 10 ve BT karar mekanizmaları için GDPR](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance)  
+- [Windows 10 ve BT karar mekanizmaları için GDPR](/windows/privacy/gdpr-it-guidance)  
 
-- [Kuruluşunuzda Windows tanılama verilerini yapılandırma](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
+- [Kuruluşunuzda Windows tanılama verilerini yapılandırma](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
-- [Windows 7, Windows 8 ve Windows 8.1 Appraiser tanılama veri olayları ve alanları](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/appraiser-diagnostic-data-events-and-fields)  
+- [Windows 7, Windows 8 ve Windows 8.1 Appraiser tanılama veri olayları ve alanları](/previous-versions/windows/it-pro/windows-8.1-and-8/appraiser-diagnostic-data-events-and-fields)  
 
-- [Windows 10, sürüm 1809 temel düzey Windows Tanılama olayları ve alanları](https://docs.microsoft.com/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
+- [Windows 10, sürüm 1809 temel düzey Windows Tanılama olayları ve alanları](/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
 
-- [Masaüstü Analizi tarafından kullanılan Windows 10, sürüm 1709 Geliştirilmiş tanılama veri olayları ve alanları](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
+- [Masaüstü Analizi tarafından kullanılan Windows 10, sürüm 1709 Geliştirilmiş tanılama veri olayları ve alanları](/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
 
-- [Windows Kurulumu hata bildirimi](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting)
+- [Windows Kurulumu hata bildirimi](/windows/deployment/upgrade/windows-error-reporting)
 
-- [Tanılama veri görüntüleyicisine genel bakış](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
+- [Tanılama veri görüntüleyicisine genel bakış](/windows/privacy/diagnostic-data-viewer-overview)  
 
 - [Lisans hüküm ve belgeler](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)  
 
-- [Log Analytics veri güvenliği](https://docs.microsoft.com/azure/azure-monitor/platform/data-security)
+- [Log Analytics veri güvenliği](/azure/azure-monitor/platform/data-security)
 
 - [Microsoft Azure veri merkezlerinde güvenlik ve Gizlilik](https://azure.microsoft.com/global-infrastructure/)  
 

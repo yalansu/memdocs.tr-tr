@@ -10,12 +10,12 @@ ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7bae98a8df1d8b8ff843bd333083c4c6ad68848c
-ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
+ms.openlocfilehash: 4ae2d837179e3b661bfbfa68d1db429674e20de5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343193"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699407"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>Configuration Manager kullanmaya yönelik yardım bulun
 
@@ -35,9 +35,9 @@ Bu makalede, Configuration Manager kullanmaya yönelik yardım bulmak için bird
 
 
 
-##  <a name="product-documentation"></a><a name="bkmk_Info"></a>Ürün belgeleri  
+##  <a name="product-documentation"></a><a name="bkmk_Info"></a> Ürün belgeleri  
 
-En güncel ürün belgelerine erişmek için [kitaplık dizininden](https://docs.microsoft.com/sccm/)başlayın.  
+En güncel ürün belgelerine erişmek için [kitaplık dizininden](/sccm/)başlayın.  
 
 <a name="BKMK_SearchTips"></a>  
 
@@ -47,7 +47,7 @@ Arama hakkında ipuçları, geri bildirim sağlama ve ürün belgelerini kullanm
 
 <a name="product-feedback"></a>
 
-## <a name="product-feedback-starting-with-version-1806"></a><a name="BKMK_1806Feedback"></a>Sürüm 1806 ile başlayan ürün geri bildirimi
+## <a name="product-feedback-starting-with-version-1806"></a><a name="BKMK_1806Feedback"></a> Sürüm 1806 ile başlayan ürün geri bildirimi
 
 Configuration Manager sürüm 1806 ' den başlayarak, ürün geri bildirimini doğrudan konsolundan gönderebilirsiniz. Günlükleri iliştirmeye ihtiyacınız varsa, [Geri Bildirim Hub 'ını](#BKMK_FeedbackHub)kullanın. Aşağıdaki işlemleri yapabilirsiniz: <!--1357542-->
 
@@ -112,33 +112,33 @@ Configuration Manager 2002 ' den başlayarak, **gülümseme gönderdiğinizde** 
 
 
 
-### <a name="send-feedback-that-you-saved-for-later-submission"></a><a name="BKMK_NoInternet"></a>Daha sonra gönderilmek üzere kaydettiğiniz geri bildirimleri gönderin
+### <a name="send-feedback-that-you-saved-for-later-submission"></a><a name="BKMK_NoInternet"></a> Daha sonra gönderilmek üzere kaydettiğiniz geri bildirimleri gönderin
 
 1. **Geri bildirim sağla** penceresinin altındaki **Kaydet** ' e tıklayın. 
 2. . Zip dosyasını kaydedin. Yerel makinenin internet erişimi yoksa, dosyayı internet 'e bağlı bir makineye kopyalayın. 
-3. Gerekirse, şurada bulunan UploadOfflineFeedback klasörünü kopyalayın:`cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\`
+3. Gerekirse, şurada bulunan UploadOfflineFeedback klasörünü kopyalayın: `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\`
     - CD. Latest klasörü hakkında daha fazla bilgi için [CD 'ye bakın. En son klasör](../servers/manage/the-cd.latest-folder.md)
 
 4. İnternet 'e bağlı bir makinede, bir komut istemi açın. 
-5. Şu komutu çalıştırın:`UploadOfflineFeedback.exe -f c:\folder\location_of.zip`
+5. Şu komutu çalıştırın: `UploadOfflineFeedback.exe -f c:\folder\location_of.zip`
     
     - İsteğe bağlı olarak, aşağıdaki parametreleri belirtebilirsiniz:
-        -  `-t, --timeout`Verilerin gönderilmesi için saniye cinsinden zaman aşımı. 0 sınırsızdır. Varsayılan değer 30 ' dur.
-        - `-s --silent`Konsolda günlüğe kaydetme yok (--verbose ile birleştirilemez)
-        - `-v, --verbose`Konsola ayrıntılı günlük kaydı çıkar (--Silent ile birleştirilemez)
-        - `--help`Yardım ekranını görüntüler
+        -  `-t, --timeout` Verilerin gönderilmesi için saniye cinsinden zaman aşımı. 0 sınırsızdır. Varsayılan değer 30 ' dur.
+        - `-s --silent`  Konsolda günlüğe kaydetme yok (--verbose ile birleştirilemez)
+        - `-v, --verbose` Konsola ayrıntılı günlük kaydı çıkar (--Silent ile birleştirilemez)
+        - `--help` Yardım ekranını görüntüler
     
     - Sürüm 1910 ' den başlayarak, UploadOfflineFeedback yardımcı programı bir proxy sunucu kullanımını destekler. Aşağıdaki parametreleri belirtebilirsiniz:
-        - `-x, --proxy`İnternet 'e bağlanmak için bir proxy sunucusu belirtir.
-        - `-o, --port`İnternet 'e bağlanacak ara sunucu bağlantı noktasını belirtir.
-        - `-u, --user`İnternet 'e bağlanmak için proxy sunucusu kullanıcı adını belirtir.
-        - `-w, --password`İnternet 'e bağlanmak için proxy sunucusu parolasını belirtir. Parola istemi oluşturmak için bir yıldız işareti (&#42;) yazın. Parolayı parola istemine yazdığınızda bu parola görüntülenmez. Komut satırında düz metin daha az güvenli olduğundan parola girişi için bir istem oluşturmak üzere bir yıldız işareti (&#42;) kullanmanız önemle önerilir.
-        - `-i`Bağlantı denetimini atla: ağ bağlantısı denetimini atlar, yalnızca belirtilen ayarlarla geri bildirim yükler.
+        - `-x, --proxy` İnternet 'e bağlanmak için bir proxy sunucusu belirtir.
+        - `-o, --port` İnternet 'e bağlanacak ara sunucu bağlantı noktasını belirtir.
+        - `-u, --user` İnternet 'e bağlanmak için proxy sunucusu kullanıcı adını belirtir.
+        - `-w, --password` İnternet 'e bağlanmak için proxy sunucusu parolasını belirtir. Parola istemi oluşturmak için bir yıldız işareti (&#42;) yazın. Parolayı parola istemine yazdığınızda bu parola görüntülenmez. Komut satırında düz metin daha az güvenli olduğundan parola girişi için bir istem oluşturmak üzere bir yıldız işareti (&#42;) kullanmanız önemle önerilir.
+        - `-i` Bağlantı denetimini atla: ağ bağlantısı denetimini atlar, yalnızca belirtilen ayarlarla geri bildirim yükler.
 
-## <a name="confirmation-of-console-feedback"></a><a name="bkmk_feedbackid"></a>Konsol geri bildirimi onayı
+## <a name="confirmation-of-console-feedback"></a><a name="bkmk_feedbackid"></a> Konsol geri bildirimi onayı
 
 <!--3556010-->
-Sürüm 1902 ' den başlayarak, Configuration Manager konsolu veya UploadOfflineFeedback. exe aracılığıyla geri bildirim gönderdiğinizde, bir onay iletisi gösterir. Bu ileti, izleme tanımlayıcısı olarak Microsoft 'a verebileceğiniz bir **geri BILDIRIM kimliği**içerir.
+Sürüm 1902 ' den başlayarak, Configuration Manager konsolu veya UploadOfflineFeedback.exe aracılığıyla geri bildirim gönderdiğinizde, bir onay iletisi gösterir. Bu ileti, izleme tanımlayıcısı olarak Microsoft 'a verebileceğiniz bir **geri BILDIRIM kimliği**içerir.
 
 - **Geri bildirim kimliğini**kopyalamak için, kimliğin yanındaki Kopyala simgesini seçin veya **CTRL**  +  **C** tuş kısayolunu kullanın.
   - Bu KIMLIK bilgisayarınızda depolanmaz, bu nedenle pencereyi kapatmadan önce kopyayı kopyalamadığınızdan emin olun.
@@ -147,9 +147,9 @@ Sürüm 1902 ' den başlayarak, Configuration Manager konsolu veya UploadOffline
    ![Configuration Manager 1902 ' de konsolundan geri bildirim onayı](media/1902-feedback-id-example.png)
 - **UploadOfflineFeedback** komut Aracı,-s veya--Silent kullanılmadığı takdirde **feedbackıd** 'yi konsola yazar.
 
-  ![Configuration Manager 1902 ' de UploadOfflineFeedback. exe ' den geri bildirim onayı](media/1902-offline-feedback-id-example.png)
+  ![Configuration Manager 1902 ' de UploadOfflineFeedback.exe geri bildirim onayı](media/1902-offline-feedback-id-example.png)
 
-##  <a name="product-feedback-for-versions-1802-and-earlier"></a><a name="BKMK_FeedbackHub"></a>1802 ve önceki sürümler için ürün geri bildirimi
+##  <a name="product-feedback-for-versions-1802-and-earlier"></a><a name="BKMK_FeedbackHub"></a> 1802 ve önceki sürümler için ürün geri bildirimi
 
 Windows 10 ' a yerleşik olarak bulunan [geri bildirim Merkezi uygulaması](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app) aracılığıyla olası ürün Hatalarını bildirin. **Yeni geri bildirim eklediğinizde** **Kurumsal Yönetim** kategorisini seçtiğinizden emin olun ve ardından aşağıdaki alt kategorilerinden birini seçin:
 - Configuration Manager İstemcisi
@@ -167,7 +167,7 @@ Configuration Manager yeni özellik fikirlerini Oylamak için [UserVoice sayfas�
   - Diğer öğelerde kullanabilmeniz için UserVoice oylarınızı geri vermek istiyoruz.
   - Bu özelliğe yönelik en önemli geliştirme hakkında bilgi sahibi olmak için yeni tasarım değişikliği Isteklerini bu özelliğe kaydedebilirsiniz.
 
-##  <a name="configuration-manager-team-blog"></a><a name="BKMK_ProductGroupBlog"></a>Ekip Blogu Configuration Manager  
+##  <a name="configuration-manager-team-blog"></a><a name="BKMK_ProductGroupBlog"></a> Ekip Blogu Configuration Manager  
 
 Configuration Manager mühendislik ve iş ortağı takımları, size Configuration Manager ve ilgili teknolojiler hakkında teknik bilgiler ve diğer haberleri sağlamak için [Enterprise Mobility + Security blogu](https://cloudblogs.microsoft.com/enterprisemobility/?product=system-center-configuration-manager) kullanır. Web günlüğü postalarımız ürün belgelerini tamamlar ve bilgileri destekler.  
 

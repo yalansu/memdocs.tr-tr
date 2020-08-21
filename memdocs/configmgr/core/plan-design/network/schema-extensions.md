@@ -10,12 +10,12 @@ ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1ace560130e43fd5675b51b6d507e84043c01407
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 81371828078264e185dc0a1883dd383257949ef4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904084"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700104"
 ---
 # <a name="schema-extensions-for-configuration-manager"></a>Configuration Manager için şema uzantıları
 
@@ -25,7 +25,7 @@ Active Directory şemasını Configuration Manager destekleyecek şekilde geniş
 
 -   Active Directory şemasını genişletmek iyi bir fikirdir, ancak gerekli değildir.  
 
-[Active Directory şemasını genişletmeden](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema) önce Active Directory Etki alanı Hizmetleri’ni tanımanız ve [Active Directory şemasını değiştirme](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)) işlemini kolaylıkla yapabilmeniz gerekir.  
+[Active Directory şemasını genişletmeden](/sccm/core/plan-design/network/extend-the-active-directory-schema) önce Active Directory Etki alanı Hizmetleri’ni tanımanız ve [Active Directory şemasını değiştirme](/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)) işlemini kolaylıkla yapabilmeniz gerekir.  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Configuration Manager için Active Directory şemasını genişletmeyle ilgili konular  
 
@@ -88,7 +88,7 @@ Active Directory şemasını Configuration Manager destekleyecek şekilde geniş
 
 -   **Geçici çözüm**: Şemayı genişletmezseniz, güvenli anahtar bilgilerini siteler arasında değiştirmek için **preinst.exe** adlı hiyerarşi bakım aracını kullanın.  
 
-     Örneğin, bir birincil sitede içerik oluşturmayı ve bu içeriği farklı bir birincil sitenin altında ikincil bir siteye dağıtmayı planlıyorsanız, İkincil sitenin kaynak birincil sitenin ortak anahtarını almasına izin vermek için Active Directory şemasını genişletmeli ya da iki site arasında anahtarları doğrudan paylaşmak için Preinst. exe ' yi kullanabilirsiniz.  
+     Örneğin, bir birincil sitede içerik oluşturmayı ve bu içeriği farklı bir birincil sitenin altında ikincil bir siteye dağıtmayı planlıyorsanız, İkincil sitenin kaynak birincil sitenin ortak anahtarını almasına izin vermek için Active Directory şemasını genişletmeli ya da iki site arasında anahtarları doğrudan paylaşmak için preinst.exe kullanabilirsiniz.  
 
 ## <a name="active-directory-attributes-and-classes"></a>Active Directory öznitelikleri ve sınıfları  
 Şemayı Configuration Manager uzatdığınızda, şemaya aşağıdaki sınıflar ve öznitelikler eklenir ve bu Active Directory ormanındaki tüm Configuration Manager siteleri için kullanılabilir.  
@@ -136,10 +136,10 @@ Active Directory şemasını Configuration Manager destekleyecek şekilde geniş
 
 > [!NOTE]
 > 
->  Şema uzantıları, ürünün önceki sürümlerinden ileri taşınan ancak Configuration Manager tarafından kullanılmayan öznitelikleri ve sınıfları içerebilir. Örneğin:  
+>  Şema uzantıları, ürünün önceki sürümlerinden ileri taşınan ancak Configuration Manager tarafından kullanılmayan öznitelikleri ve sınıfları içerebilir. Örnek:  
 > 
 > 
 > - Öznitelik: CN = MS-SMS-site-sınırları  
 >   -   Sınıf: CN = MS-SMS-Server-Locator-Point  
 
-ConfigMgr_ad_schema görüntüleyerek yukarıdaki listelerin güncel olduğundan emin olabilirsiniz **. LDF** dosyası Configuration Manager yükleme ortamının **\Smssetup\bin\x64** klasöründen.  
+ConfigMgr_ad_schema görüntüleyerek yukarıdaki listelerin güncel olduğundan emin olabilirsiniz **. LDF** dosyası Configuration Manager yükleme ortamının **\Smssetup\bin\x64** klasöründen.

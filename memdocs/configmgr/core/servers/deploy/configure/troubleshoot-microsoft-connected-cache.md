@@ -10,12 +10,12 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a08b74552d5d17a737ec9e1802e10c87621f5b97
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b24ed0aa963373fc0933a2c34b7b036d77cc9a2b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126367"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699220"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 'de Microsoft bağlı önbelleği sorunlarını giderme
 
@@ -30,11 +30,11 @@ Teslim Iyileştirme önbellek sunucusunu doğru şekilde yüklediğinizde ve ist
 
 Bu davranışı [bir istemcide](#bkmk_verify-client) veya [sunucuda](#bkmk_verify-server)doğrulayın.
 
-### <a name="verify-on-a-client"></a><a name="bkmk_verify-client"></a>İstemci üzerinde doğrulama
+### <a name="verify-on-a-client"></a><a name="bkmk_verify-client"></a> İstemci üzerinde doğrulama
 
 1. Windows 10, sürüm 1809 veya sonraki sürümleri çalıştıran istemcide, bulutta yönetilen içeriği indirin. Bağlı önbelleğin desteklediği içerik türleri hakkında daha fazla bilgi için bkz. [bağlı önbelleği doğrulama](../../../plan-design/hierarchy/microsoft-connected-cache.md#verify).
 
-2. PowerShell 'i açın ve aşağıdaki komutu çalıştırın:`Get-DeliveryOptimizationStatus`
+2. PowerShell 'i açın ve aşağıdaki komutu çalıştırın: `Get-DeliveryOptimizationStatus`
 
 Örnek:
 
@@ -74,7 +74,7 @@ IsPinned                    : False
 
 İstemci doğru yapılandırılmamışsa veya önbellek sunucusu doğru şekilde yüklenmemişse, teslim Iyileştirme istemcisi özgün bulut kaynağına geri döner. Sonra BytesFromCacheServer özniteliği sıfır olur.
 
-### <a name="verify-on-the-server"></a><a name="bkmk_verify-server"></a>Sunucuda doğrulama
+### <a name="verify-on-the-server"></a><a name="bkmk_verify-server"></a> Sunucuda doğrulama
 
 İlk olarak, kayıt defteri özelliklerinin doğru şekilde yapılandırıldığını doğrulayın: `HKLM\SOFTWARE\Microsoft\Delivery Optimization In-Network Cache` . Örneğin, sürücü önbelleği konumu, burada gibi `PrimaryDrivesInput\DOINC-E77D08D0-5FEA-4315-8C95-10D359D59294` `PrimaryDrivesInput` birden çok sürücü olabilir `C,D,E` .
 
@@ -114,13 +114,13 @@ Aşağıdaki öznitelikler başarıyı gösterir:
 
 ## <a name="log-files"></a>Günlük dosyaları
 
-- ARR kurulum günlüğü:`%temp%\arr_setup.log`
+- ARR kurulum günlüğü: `%temp%\arr_setup.log`
 
 - Önbellek sunucusu kurulum günlüğü: `SMS_DP$\Ms.Dsp.Do.Inc.Setup\DoincSetup.log` dağıtım noktasında ve `DistMgr.log` site sunucusunda
 
-- IIS işletimsel Günlükler: varsayılan olarak,`%SystemDrive%\inetpub\logs\LogFiles`
+- IIS işletimsel Günlükler: varsayılan olarak, `%SystemDrive%\inetpub\logs\LogFiles`
 
-- Önbellek sunucusu işletimsel günlüğünü yap:`C:\Doinc\Product\Install\Logs`
+- Önbellek sunucusu işletimsel günlüğünü yap: `C:\Doinc\Product\Install\Logs`
 
     > [!TIP]
     > Diğer kullanımlar arasında bu günlük, Microsoft bulutuyla ilgili bağlantı sorunlarını belirlemenize yardımcı olabilir.
@@ -228,7 +228,7 @@ Her DO önbellek sunucusu için gereken disk alanı, kuruluşunuzun güncelleşt
 
 DO Cache Server çok fazla sistem belleği veya işlemci zamanı tüketmemelidir. DO Cache Server 'ı yükledikten sonra, önemli işlem veya bellek kaynak tüketimine dikkat etmeniz durumunda IIS ve ARR günlük dosyalarını çözümleyin.
 
-IIS ve ARR günlük dosyaları sunucuda çok fazla alan kaplasa, günlük dosyalarını yönetmek için kullanabileceğiniz çeşitli yöntemler vardır. Daha fazla bilgi için bkz. [IIS günlük dosyası depolamayı yönetme](https://docs.microsoft.com/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview).
+IIS ve ARR günlük dosyaları sunucuda çok fazla alan kaplasa, günlük dosyalarını yönetmek için kullanabileceğiniz çeşitli yöntemler vardır. Daha fazla bilgi için bkz. [IIS günlük dosyası depolamayı yönetme](/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

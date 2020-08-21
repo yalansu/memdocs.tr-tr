@@ -10,12 +10,12 @@ ms.assetid: 2162d67d-31a9-45b2-bb9e-835f3ac6e6fe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7f46c283bd533d67387ab0abac35e7625438addc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a0a434f013da48d660efa78f5e2cdca6ced0826d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129700"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700727"
 ---
 # <a name="configuration-manager-console-changes-and-tips"></a>Konsol değişiklikleri ve ipuçları Configuration Manager
 
@@ -25,7 +25,7 @@ Configuration Manager konsolundaki değişiklikler hakkında bilgi edinmek için
 
 ## <a name="general-tips"></a>Genel ipuçları
 
-### <a name="improvements-to-console-search"></a><a name="bkmk_search"></a>Konsol aramasında iyileştirmeler
+### <a name="improvements-to-console-search"></a><a name="bkmk_search"></a> Konsol aramasında iyileştirmeler
 <!--4640570-->
 *(Sürüm 1910 ' de tanıtılmıştır)*
 
@@ -72,7 +72,7 @@ Konsolda 1.000 'den fazla sonuç döndüren bir düğüm seçtiğinizde, Configu
 
 Bu uyarı ve arama alanı arasında artık ek boş alan var. Bu taşıma, daha fazla sonuç göstermek için uyarının yanlışlıkla seçilmesine engel olmaya yardımcı olur.
 
-### <a name="send-feedback"></a>Geri bildirim gönderme
+### <a name="send-feedback"></a>Geri bildirim gönder
 
 *(Sürüm 1806 ' de tanıtılmıştır)*
 <!--1357542-->
@@ -148,7 +148,7 @@ Varsayılan olmayan bir sütunun nasıl gösterileceği hakkında daha fazla bil
 <!-- 3614690 -->
 Sürüm 1806 ' den başlayarak, bir cihaz koleksiyonunda arama yaparken, anahtar sözcüğü tüm nesne özellikleriyle aramaz. Ne arayacağını bilmiyorsanız, aşağıdaki dört Özellik genelinde arama yapar:
 
-- Name
+- Ad
 - Birincil Kullanıcı (ler)
 - Şu anda oturum açmış Kullanıcı
 - Son oturum açma Kullanıcı adı
@@ -186,7 +186,7 @@ Bu davranış, özellikle büyük bir ortamda ada göre arama yapmak için gerek
 1. Bu eylem sizi, güncelleştirme gerektiren cihazları görebileceğiniz **cihazlarda** geçici bir düğüme götürür. Ayrıca, bir düğüm için, listeden yeni koleksiyon oluşturma gibi işlemler gerçekleştirebilirsiniz.
 
 > [!NOTE]
-> 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
+> 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
 
 ### <a name="maximize-the-browse-registry-window"></a>Kayıt Defteri penceresini en üst düzeye çıkarın
 
@@ -245,7 +245,7 @@ Aşağıdaki izleme düğümleri için **varlık ayrıntıları** bölmesinden b
 
 - **İçerik dağıtım durumu**  
 
-- **Dağıtım durumu**  
+- **Dağıtım Durumu**  
 
 ![Dağıtım durumu görünümü, varlık ayrıntılarını Kopyala](media/1810-deployment-status.PNG)
 

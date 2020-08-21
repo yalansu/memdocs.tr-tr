@@ -10,12 +10,12 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d4f5ff0e1c8c92fbadc286e9909388eb66aa8f7b
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1370c1bf80283ff30ad54378ad58ecd9a5d24d47
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906096"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699373"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-configuration-manager"></a>Configuration Manager uzun vadeli bakım dalına giriş
 
@@ -26,7 +26,7 @@ Configuration Manager uzun süreli bakım dalı (LTSB), tüm müşteriler için 
 Configuration Manager sürüm 1606 temelinde, LTSB, Configuration Manager geçerli dalı ile karşılaştırıldığında işlevselliği düşürür.
 
 > [!TIP]   
-> Configuration Manager LTSB, System Center Suite uzun süreli bakım kanalı (LTSC) ile ilgili değildir. Daha fazla bilgi için bkz. [System Center sürüm seçeneklerine genel bakış](https://docs.microsoft.com/system-center/ltsc-and-sac-overview).
+> Configuration Manager LTSB, System Center Suite uzun süreli bakım kanalı (LTSC) ile ilgili değildir. Daha fazla bilgi için bkz. [System Center sürüm seçeneklerine genel bakış](/system-center/ltsc-and-sac-overview).
 
 ## <a name="features-that-arent-available"></a>Kullanılamayan özellikler
 
@@ -53,7 +53,7 @@ Bulut tümleştirmelerine ek olarak Configuration Manager geçerli şube 1610 ve
 
 ## <a name="find-ltsb-documentation"></a>LTSB belgelerini bulun
 
-LTSB, geçerli dal sürüm 1606 ' i temel alır. LTSB 'ye özgü uyarılar ve sınırlamalar ile [geçerli dal belgelerini](https://docs.microsoft.com/mem/configmgr/)kullanın. Bu uyarılar ve sınırlamalar aşağıdaki makalelerde tanımlanmıştır:
+LTSB, geçerli dal sürüm 1606 ' i temel alır. LTSB 'ye özgü uyarılar ve sınırlamalar ile [geçerli dal belgelerini](../../index.yml)kullanın. Bu uyarılar ve sınırlamalar aşağıdaki makalelerde tanımlanmıştır:
 
 - [LTSB’yi yükleme](install-the-ltsb.md)
 - [LTSB’yi güncel dala yükseltme](convert-to-current-branch.md)

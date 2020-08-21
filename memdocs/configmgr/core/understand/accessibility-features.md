@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b25b0137e24212cbad2ba688735e45d9fe9aac0
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: a6e406d55524caca71bf75b087c9fd78a470c939
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556039"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699390"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Configuration Manager erişilebilirlik özellikleri
 
@@ -28,7 +28,7 @@ Configuration Manager herkes için erişilebilir hale getirmenize yardımcı ola
 > [!Note]  
 > Sürüm 1902 ' den başlayarak, Configuration Manager konsolunun erişilebilirlik özelliklerini geliştirmek için, konsolunu çalıştıran bilgisayarda .NET 'i 4,7 veya üzeri bir sürüme güncelleştirin. <!-- SCCMDocs-pr issue #3228 -->  
 > 
-> .NET 4.7.1 ve 4.7.2 ' de yapılan erişilebilirlik değişiklikleriyle ilgili daha fazla bilgi için, [.NET Framework erişilebilirlik](https://docs.microsoft.com/dotnet/framework/whats-new/whats-new-in-accessibility)yenilikleri bölümüne bakın.  
+> .NET 4.7.1 ve 4.7.2 ' de yapılan erişilebilirlik değişiklikleriyle ilgili daha fazla bilgi için, [.NET Framework erişilebilirlik](/dotnet/framework/whats-new/whats-new-in-accessibility)yenilikleri bölümüne bakın.  
 
 
 
@@ -57,14 +57,14 @@ Bir çalışma alanına erişmek için aşağıdaki klavye kısayollarını kull
 |CTRL + D|Varsa, odağı Ayrıntılar bölmesine ayarlayın.|
 |Alt     |Şeridin içindeki ve çıkan odayı değiştirin.|
 
-### <a name="cmpivot-shortcuts"></a><a name="bkmk_cmpshortcuts"></a>CMPivot kısayolları
+### <a name="cmpivot-shortcuts"></a><a name="bkmk_cmpshortcuts"></a> CMPivot kısayolları
 
 Çoğu [Web tarayıcısı klavye kısayolu](https://support.microsoft.com/help/17456/windows-internet-explorer-ease-of-access-options) CMPivot içinde çalışacaktır.
 
 |Klavye kısayolu|Amaç|
 |--------|--------|  
 |CTRL + 1|İlk sekmede odağı ayarlayın.|
-|Alt +&lt;|Adrese geri dönmek için|
+|Alt + &lt;|Adrese geri dönmek için|
 
 
 ## <a name="other-accessibility-features"></a>Diğer erişilebilirlik özellikleri
@@ -98,5 +98,4 @@ Configuration Manager kullanıcı arabirimlerine gidilme temelleri hakkında dah
 - [Yazılım Merkezi kullanıcı kılavuzu](software-center.md)
 
 > [!NOTE]  
-> Bu makaledeki bilgiler yalnızca Birleşik Devletler Microsoft ürünlerini lisanslayan kullanıcılar için geçerlidir. Bu ürünü Birleşik Devletler dışında aldıysanız, yazılım paketinizle birlikte gelen yan kuruluş bilgi kartını kullanabilir veya Microsoft Destek Hizmetleri 'ne yönelik iletişim bilgileri için [Microsoft Erişilebilirlik Web sitesini](https://www.microsoft.com/accessibility/) ziyaret edebilirsiniz. Bu bölümde açıklanan ürün ve hizmet türlerinin bölgenizde kullanılabilir olup olmadığını öğrenmek için yan kuruluşuna başvurabilirsiniz. Erişilebilirlik hakkında bilgiler Japonca ve Fransızca'nın dahil olduğu farklı dillerde mevcuttur.  
-
+> Bu makaledeki bilgiler yalnızca Birleşik Devletler Microsoft ürünlerini lisanslayan kullanıcılar için geçerlidir. Bu ürünü Birleşik Devletler dışında aldıysanız, yazılım paketinizle birlikte gelen yan kuruluş bilgi kartını kullanabilir veya Microsoft Destek Hizmetleri 'ne yönelik iletişim bilgileri için [Microsoft Erişilebilirlik Web sitesini](https://www.microsoft.com/accessibility/) ziyaret edebilirsiniz. Bu bölümde açıklanan ürün ve hizmet türlerinin bölgenizde kullanılabilir olup olmadığını öğrenmek için yan kuruluşuna başvurabilirsiniz. Erişilebilirlik hakkında bilgiler Japonca ve Fransızca'nın dahil olduğu farklı dillerde mevcuttur.

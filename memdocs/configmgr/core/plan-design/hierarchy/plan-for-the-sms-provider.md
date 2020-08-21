@@ -10,12 +10,12 @@ ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b01ea9b089da3cfcfc3e8d23e7ad25d27ab2fec7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c83d0da07474c8b078ee226d249b73f00562e0f5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712557"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700172"
 ---
 # <a name="plan-for-the-sms-provider"></a>SMS Sağlayıcı planı
 
@@ -23,7 +23,7 @@ ms.locfileid: "81712557"
 
 Configuration Manager yönetmek için, **SMS sağlayıcısı**örneğine bağlanan bir Configuration Manager konsolunu kullanırsınız. Varsayılan olarak, bir merkezi yönetim sitesi veya birincil site yüklediğinizde bir SMS Sağlayıcısı site sunucusuna yüklenir.
 
-## <a name="about-the-sms-provider"></a><a name="BKMK_PlanSMSProv"></a> SMS Sağlayıcı hakkında  
+## <a name="about-the-sms-provider"></a><a name="BKMK_PlanSMSProv"></a> SMS sağlayıcı hakkında  
 
 SMS sağlayıcı, bir sitedeki Configuration Manager veritabanına **okuma** ve **yazma** erişimi atayan bir Windows Yönetim Araçları (WMI) sağlayıcıdır.  
 
@@ -67,7 +67,7 @@ SMS Sağlayıcıyı desteklemek için hedef sunucunun aşağıdaki önkoşullar�
     > [!Note]  
     > Her SMS sağlayıcısı, bir sertifika gerektiren Yönetim hizmetini yüklemeye çalışır. Bu hizmetin, bu sertifikayı HTTPS bağlantı noktası 443 ' e bağlamak için IIS 'e bağımlılığı vardır. [GELIŞMIŞ http](enhanced-http.md)'yi etkinleştirirseniz site, bu sertifikayı IIS API 'leri kullanarak bağlar. Siteniz PKI kullanıyorsa, SMS sağlayıcısı üzerinde IIS 'de bir PKI sertifikasını el ile bağlamanız gerekir. Sürüm 2002 ' den başlayarak, site otomatik olarak otomatik olarak imzalanan sertifikayı kullanır.
 
-## <a name="locations"></a><a name="bkmk_location"></a>Yerlerini  
+## <a name="locations"></a><a name="bkmk_location"></a> Yerlerini  
 
 Bir sitesi yüklediğinizde, site için ilk SMS Sağlayıcıyı otomatik olarak yüklersiniz. SMS Sağlayıcısı için aşağıdaki desteklenen konumlardan birini belirtebilirsiniz:  
 
@@ -95,7 +95,7 @@ Aşağıdaki bölümlerde, her desteklenen konuma bir SMS sağlayıcısı yükle
 
 #### <a name="configuration-manager-site-server"></a>Configuration Manager site sunucusu
 
-- **Avantajlar:**  
+- **Üstünlü**  
 
   - SMS sağlayıcısı, site veritabanı bilgisayarının sistem kaynaklarını kullanmaz.  
 
@@ -107,7 +107,7 @@ Aşağıdaki bölümlerde, her desteklenen konuma bir SMS sağlayıcısı yükle
 
 #### <a name="sql-server-that-hosts-the-site-database"></a>Site veritabanını barındıran SQL Server
 
-- **Avantajlar:**  
+- **Üstünlü**  
 
   - SMS sağlayıcısı, site sunucusunda sistem kaynaklarını kullanmaz.  
 
@@ -121,7 +121,7 @@ Aşağıdaki bölümlerde, her desteklenen konuma bir SMS sağlayıcısı yükle
 
 #### <a name="computer-other-than-the-site-server-or-site-database-server"></a>Site sunucusu veya site veritabanı sunucusu dışında bir bilgisayar
 
-- **Avantajlar:**  
+- **Üstünlü**  
 
   - SMS sağlayıcısı, site sunucusu veya site veritabanı sistem kaynaklarını kullanmaz.  
 
@@ -135,7 +135,7 @@ Aşağıdaki bölümlerde, her desteklenen konuma bir SMS sağlayıcısı yükle
 
   - Bu konum, aksi takdirde diğer hizmetlere ayrılan sistem kaynaklarını kullanabilir.  
 
-## <a name="authentication"></a><a name="bkmk_auth"></a>Yetkilendirmesi
+## <a name="authentication"></a><a name="bkmk_auth"></a> Yetkilendirmesi
 
 <!--1357013-->
 Sürüm 1810 ' den başlayarak, yöneticilerin Configuration Manager sitelere erişmesi için en düşük kimlik doğrulama düzeyini belirtebilirsiniz. Bu özellik, yöneticilerin Windows 'da gerekli düzeyiyle oturum açmasını zorlar. SMS sağlayıcısına erişen tüm bileşenler için geçerlidir. Örneğin, Configuration Manager konsolu, SDK yöntemleri ve Windows PowerShell cmdlet 'leri.
@@ -165,13 +165,13 @@ Aşağıdaki düzeyler mevcuttur:
 
 - **Sertifika kimlik doğrulaması**: GÜVENILEN bir PKI sertifika yetkilisi tarafından verilen geçerli bir sertifika ile kimlik doğrulaması gerektir. Bu sertifikayı Configuration Manager ' de yapılandırmayın. Configuration Manager, yöneticinin PKI kullanarak Windows 'da oturum açmanızı gerektirir.  
 
-- **İş Için Windows Hello kimlik doğrulaması**: bir cihaza bağlı olan ve Biyometri veya PIN kullanan güçlü iki öğeli kimlik doğrulama ile kimlik doğrulaması gerektir. Daha fazla bilgi için bkz. [iş Için Windows Hello](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).  
+- **İş Için Windows Hello kimlik doğrulaması**: bir cihaza bağlı olan ve Biyometri veya PIN kullanan güçlü iki öğeli kimlik doğrulama ile kimlik doğrulaması gerektir. Daha fazla bilgi için bkz. [iş Için Windows Hello](/windows/security/identity-protection/hello-for-business/hello-identity-verification).  
 
 ### <a name="exclusions"></a>Dışlamalar
 
 Hiyerarşi ayarlarının **kimlik doğrulama** sekmesinden, bazı kullanıcıları veya grupları da hariç tutabilir. Bu seçeneği gelişigüzel bir şekilde kullanın. Örneğin, belirli kullanıcılar Configuration Manager konsoluna erişim gerektirdiğinde, ancak gerekli düzeyde Windows 'da kimlik doğrulayamıyorum. Ayrıca, bir sistem hesabı bağlamında çalışan Otomasyon veya hizmetler için de gerekli olabilir.
 
-## <a name="about-sms-provider-languages"></a><a name="BKMK_SMSProvLanguages"></a>SMS sağlayıcı dilleri hakkında  
+## <a name="about-sms-provider-languages"></a><a name="BKMK_SMSProvLanguages"></a> SMS sağlayıcı dilleri hakkında  
 
 SMS sağlayıcısı, yüklediğiniz sunucunun görüntüleme dilinden bağımsız olarak çalışır.  
 
@@ -185,7 +185,7 @@ Configuration Manager veritabanındaki bir nesne için veri depoladığında, ku
 
 - Configuration Manager, bir yönetici kullanıcının, nesneyi oluşturmak için kullanılan dili kullanarak oluşturduğu nesneleri depolar. Bu nesneler Configuration Manager konsolunda aynı dilde görüntülenir. SMS sağlayıcısı bu dosyaları çeviremez ve birden çok dil seçeneklerine sahip değildir.  
 
-## <a name="use-multiple-sms-providers"></a><a name="BKMK_MultiSMSProv"></a>Birden çok SMS sağlayıcısı kullanma  
+## <a name="use-multiple-sms-providers"></a><a name="BKMK_MultiSMSProv"></a> Birden çok SMS sağlayıcısı kullanma  
 
 Site yüklemeyi tamamladıktan sonra, site için ek SMS Sağlayıcıları yükleyebilirsiniz. Ek SMS Sağlayıcılarını yüklemek için site sunucusunda Configuration Manager kurulumunu çalıştırın.
 
@@ -204,7 +204,7 @@ Bir sitede birden çok SMS sağlayıcısı yüklediğinizde ve bir bağlantı is
 
 Bir Configuration Manager konsolunu bir siteye ilk kez bağladığınızda, bağlantı site sunucusundaki WMI 'yı sorgular. Bu sorgu, konsolunun kullandığı SMS sağlayıcısının bir örneğini tanımlar. SMS sağlayıcısının bu belirli örneği, oturum sona erene kadar Konsolu tarafından kullanımda kalır. Oturum sona erdiğinde, SMS sağlayıcı sunucusu ağda kullanılamadığından, Konsolu siteye yeniden bağladığınızda, ilk sorgu yinelenir. Site, kullanılamayan aynı SMS sağlayıcısı örneğini atar. Bu davranış gerçekleşirse, site kullanılabilir bir SMS sağlayıcısı döndürdüğünden konsolu yeniden bağlamayı deneyin.  
 
-## <a name="about-the-sms-provider-namespace"></a><a name="BKMK_SMSProvNamespace"></a>SMS sağlayıcı ad alanı hakkında  
+## <a name="about-the-sms-provider-namespace"></a><a name="BKMK_SMSProvNamespace"></a> SMS sağlayıcı ad alanı hakkında  
 
 Configuration Manager WMI şeması, SMS sağlayıcısı 'nın yapısını tanımlar. Şema ad alanları, SMS sağlayıcı şeması içindeki Configuration Manager verilerinin konumunu anlatır. Aşağıdaki tabloda SMS sağlayıcısı tarafından kullanılan bazı yaygın ad alanları yer almaktadır:  
 
@@ -216,7 +216,7 @@ Configuration Manager WMI şeması, SMS sağlayıcısı 'nın yapısını tanım
 |`Root\CCM`|İstemci yapılandırma ilkeleri ve istemci verileri Configuration Manager.|  
 |`Root\CIMv2\SMS`|Envanter istemci aracısının topladığı Envanter raporlama sınıflarının konumu. İstemciler, bilgisayar ilkesi değerlendirmesi sırasında bu ayarları derler. Bu ayarlar, bilgisayarın istemci ayarları yapılandırmasını temel alır.|  
 
-## <a name="os-deployment-requirements"></a><a name="BKMK_WAIKforSMSProv"></a>İşletim sistemi dağıtım gereksinimleri
+## <a name="os-deployment-requirements"></a><a name="BKMK_WAIKforSMSProv"></a> İşletim sistemi dağıtım gereksinimleri
 
 SMS sağlayıcısı 'nın bir örneğini yüklediğiniz bilgisayar desteklenen bir Windows ADK sürümü gerektirir.  
 
@@ -232,7 +232,7 @@ Bu gereksinim hakkında daha fazla bilgi için bkz. [işletim sistemi dağıtım
 
 Windows ADK yüklemesi, SMS Sağlayıcısı’nı yükleyen her bilgisayarda 650 MB’ye kadar boş disk alanı gerektirebilir. Bu yüksek disk alanı gereksinimi, Configuration Manager Windows PE önyükleme görüntülerini yüklemesi için gereklidir.  
 
-## <a name="administration-service"></a><a name="bkmk_admin-service"></a>Yönetim hizmeti
+## <a name="administration-service"></a><a name="bkmk_admin-service"></a> Yönetim hizmeti
 
 <!--3607711, fka 1321523-->
 

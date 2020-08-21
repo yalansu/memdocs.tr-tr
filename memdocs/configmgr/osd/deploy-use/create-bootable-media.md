@@ -10,12 +10,12 @@ ms.assetid: ead79e64-1b63-4d0d-8bd5-addff8919820
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6e18c5e9e029900e10cebfb8e7bcdee29fd928ba
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a3ec1476a9b5374eb91d147e2b22fd0f669d6251
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125415"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698053"
 ---
 # <a name="create-bootable-media"></a>Önyüklenebilir ortam oluşturma
 
@@ -128,7 +128,7 @@ Bir CD veya DVD seti için medya oluşturmak üzere görev sırası medyası olu
 
         - Configuration Manager, medyanın köküne adlı bir metin dosyası yazar `MediaLabel.txt` . Varsayılan olarak, dosya tek satırlık bir metin içerir: `label=Configuration Manager` . Medya için etiketi özelleştirirseniz, bu satır varsayılan değer yerine özel etiketinizi kullanır.
 
-    - **Medyaya Autorun. inf dosyasını dahil et**<!-- 4090666 -->: Sürüm 1906 ' den başlayarak Configuration Manager, varsayılan olarak Autorun. inf dosyası eklemez. Bu dosya genellikle kötü amaçlı yazılımdan koruma ürünleri tarafından engelleniyor. Windows 'un Otomatik Çalıştır özelliği hakkında daha fazla bilgi için bkz. [Autorun-Enabled CD-ROM uygulaması oluşturma](https://docs.microsoft.com/windows/desktop/shell/autoplay). Senaryonuz için hala gerekliyse, dosyayı eklemek için bu seçeneği belirleyin.
+    - **Medyaya Autorun. inf dosyasını dahil et**<!-- 4090666 -->: Sürüm 1906 ' den başlayarak Configuration Manager, varsayılan olarak Autorun. inf dosyası eklemez. Bu dosya genellikle kötü amaçlı yazılımdan koruma ürünleri tarafından engelleniyor. Windows 'un Otomatik Çalıştır özelliği hakkında daha fazla bilgi için bkz. [Autorun-Enabled CD-ROM uygulaması oluşturma](/windows/desktop/shell/autoplay). Senaryonuz için hala gerekliyse, dosyayı eklemek için bu seçeneği belirleyin.
 
 1. **Güvenlik** sayfasında, aşağıdaki seçenekleri belirtin:
 
@@ -200,4 +200,4 @@ Sürücü, Configuration Manager konsolunu çalıştıran bilgisayara bağlı ol
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Windows’u ağ üzerinden dağıtmak için önyüklenebilir ortam kullanma](use-bootable-media-to-deploy-windows-over-the-network.md)  
+[Windows’u ağ üzerinden dağıtmak için önyüklenebilir ortam kullanma](use-bootable-media-to-deploy-windows-over-the-network.md)

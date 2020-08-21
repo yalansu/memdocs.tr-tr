@@ -10,12 +10,12 @@ ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c60f30e306c6ff52849cfcdd4696d67a7d26f395
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4c8029cdda80d327cbed2a4c60c71ff1811e4723
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722238"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698706"
 ---
 # <a name="windows-hello-for-business-settings-in-configuration-manager"></a>Configuration Manager Iş için Windows Hello ayarları
 
@@ -31,7 +31,7 @@ Configuration Manager Iş için Windows Hello ile tümleşir. (Bu özellik daha 
 >
 > Ortak yönetilen cihazlar için, [ **kaynak erişim ilkeleri** iş yükünü](../../comanage/workloads.md#resource-access-policies) Intune 'a taşımayı düşünün. Daha sonra bu sertifikaları yönetmek için Intune ilkelerini kullanın. Daha fazla bilgi için bkz. [iş yüklerini değiştirme](../../comanage/how-to-switch-workloads.md).
 
-Daha fazla bilgi için bkz. [iş Için Windows Hello](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).
+Daha fazla bilgi için bkz. [iş Için Windows Hello](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
 > [!Note]  
 > Configuration Manager varsayılan olarak bu isteğe bağlı özelliği etkinleştirmez. Bu özelliği kullanmadan önce etkinleştirmeniz gerekir. Daha fazla bilgi için, bkz. [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
@@ -69,9 +69,9 @@ Configuration Manager aşağıdaki yollarla Iş için Windows Hello ile tümleş
         > [!NOTE]
         > Sürüm 1910 ' den başlayarak Configuration Manager ' deki Iş için Windows Hello ayarları ile sertifika tabanlı kimlik doğrulaması desteklenmez.
 
-    - **MINIMUM PIN uzunluğunu Yapılandır**: kullanıcının PIN 'i için en az bir uzunluk gerektirmek istiyorsanız, bu seçeneği etkinleştirin ve bir değer belirtin. Etkinleştirildiğinde, varsayılan değer `4`.
+    - **MINIMUM PIN uzunluğunu Yapılandır**: kullanıcının PIN 'i için en az bir uzunluk gerektirmek istiyorsanız, bu seçeneği etkinleştirin ve bir değer belirtin. Etkinleştirildiğinde, varsayılan değer `4` .
 
-    - **MAKSIMUM PIN uzunluğunu Yapılandır**: kullanıcının PIN 'i için maksimum uzunluk gerektirmek istiyorsanız, bu seçeneği etkinleştirin ve bir değer belirtin. Etkinleştirildiğinde varsayılan değer `127`.
+    - **MAKSIMUM PIN uzunluğunu Yapılandır**: kullanıcının PIN 'i için maksimum uzunluk gerektirmek istiyorsanız, bu seçeneği etkinleştirin ve bir değer belirtin. Etkinleştirildiğinde varsayılan değer `127` .
 
     - **PIN süre sonu iste (gün)**: kullanıcının cihaz PIN 'ini değiştirmesi gereken gün sayısını belirtir.
 
@@ -143,9 +143,9 @@ Aşağıdaki ekran görüntüsünde Iş için Windows Hello profil ayarları ör
     > [!TIP]
     > **Güvenlik** sekmesini görmüyorsanız Özellikler penceresini kapatın. **Görünüm** menüsüne gidin ve **Gelişmiş Özellikler**' i seçin.
 
-1. **Add (Ekle)** seçeneğini belirleyin.
+1. **Ekle**’yi seçin.
 
-1. **Sorumluyu Seç** ' i seçin `Key Admins`ve girin.
+1. **Sorumluyu Seç** ' i seçin ve girin `Key Admins` .
 
 1. **Uygulanacağı** öğe listesinde, alt **Kullanıcı nesneleri**' ni seçin.
 

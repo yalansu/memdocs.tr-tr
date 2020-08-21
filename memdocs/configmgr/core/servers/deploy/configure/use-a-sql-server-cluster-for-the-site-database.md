@@ -10,12 +10,12 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d035e6fbd776a03ce38a4cd0fc12755100b60c91
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: 988a9c31fca8d06104ce317f4709ee990089d723
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643243"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699152"
 ---
 # <a name="use-a-sql-server-cluster-for-the-site-database"></a>Site veritabanı için SQL Server kümesi kullanma
 
@@ -49,7 +49,7 @@ Aşağıdaki seçenekler, site veritabanı olarak kullanılan SQL Server yük de
 
 
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Aşağıdaki önkoşulları göz önünde bulundurun:  
 
@@ -62,8 +62,8 @@ Aşağıdaki önkoşulları göz önünde bulundurun:
 
 - Kerberos kimlik doğrulamasını desteklemek için, her bir SQL Server küme düğümünün ağ bağlantısı için **TCP/IP** ağ iletişim protokolünü etkinleştirin. **Adlandırılmış kanallar** protokolü gerekli değildir, ancak Kerberos kimlik doğrulaması sorunlarını gidermek için kullanılabilir. Ağ protokolü ayarları, **SQL Server ağ yapılandırması**altında **SQL Server Yapılandırma Yöneticisi**yapılandırılır.  
 
-- Site veritabanı için SQL Server kümesi kullandığınızda belirli sertifika gereksinimleri vardır. Daha fazla bilgi için aşağıdaki makalelere bakın:
-  - [Bir SQL yük devretme kümesi yapılandırmasına sertifika yükler](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
+- Site veritabanı için SQL Server kümesi kullandığınızda belirli sertifika gereksinimleri vardır. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
+  - [Bir SQL yük devretme kümesi yapılandırmasına sertifika yükler](/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
   - [Configuration Manager için PKI sertifikası gereksinimleri](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 
   > [!NOTE]
@@ -97,11 +97,11 @@ Configuration Manager, adlandırılmış bir örnek kullanan bir SQL Server küm
 
 
 
-## <a name="prepare-a-clustered-sql-server-instance"></a><a name="bkmk_prepare"></a>Kümelenmiş SQL Server örneği hazırlama  
+## <a name="prepare-a-clustered-sql-server-instance"></a><a name="bkmk_prepare"></a> Kümelenmiş SQL Server örneği hazırlama  
 
 Site veritabanınızı hazırlamak için tamamlanacak ana görevler şunlardır:
 
-- Mevcut Windows Server küme ortamında, site veritabanını barındıracak sanal SQL Server kümesini oluşturun. SQL Server kümesi yüklemek ve ayarlamak için özel adımlar için, SQL Server sürümünüze özgü belgelere bakın. Daha fazla bilgi için bkz. [yeni SQL Server yük devretme kümesi oluşturma](https://docs.microsoft.com/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup?view=sql-server-2017).  
+- Mevcut Windows Server küme ortamında, site veritabanını barındıracak sanal SQL Server kümesini oluşturun. SQL Server kümesi yüklemek ve ayarlamak için özel adımlar için, SQL Server sürümünüze özgü belgelere bakın. Daha fazla bilgi için bkz. [yeni SQL Server yük devretme kümesi oluşturma](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup?view=sql-server-2017).  
 
 - SQL Server kümesindeki her bilgisayarda, Configuration Manager site bileşenlerini yüklemesini istemediğiniz her sürücünün kök klasörüne bir dosya yerleştirin. Dosyayı `NO_SMS_ON_DRIVE.SMS` olarak adlandırın. Varsayılan olarak Configuration Manager, yedekleme gibi işlemleri desteklemek için her bir fiziksel düğüme bazı bileşenleri yüklüyor.  
 
@@ -117,4 +117,4 @@ Kümelenmiş site veritabanı kullanan bir siteyi yüklemek için, bir siteyi y�
 - **Veritabanı Bilgileri** sayfasında, site veritabanını barındıracak sanal SQL Server kümesi örneğinin adını belirtin. Sanal örnek, SQL Server çalıştıran bilgisayarın adını değiştirir.  
 
     > [!IMPORTANT]  
-    > Sanal SQL Server kümesi örneğinin adını girerken, Windows Server kümesi tarafından oluşturulan sanal Windows Server adını girmeyin. Sanal Windows Server adını kullanırsanız, site veritabanı, etkin Windows Server küme düğümünün yerel sabit sürücüsüne yüklenir. Söz konusu düğüm başarısız olursa, bu durum yük devretmenin başarıyla tamamlanmasını engeller.  
+    > Sanal SQL Server kümesi örneğinin adını girerken, Windows Server kümesi tarafından oluşturulan sanal Windows Server adını girmeyin. Sanal Windows Server adını kullanırsanız, site veritabanı, etkin Windows Server küme düğümünün yerel sabit sürücüsüne yüklenir. Söz konusu düğüm başarısız olursa, bu durum yük devretmenin başarıyla tamamlanmasını engeller.

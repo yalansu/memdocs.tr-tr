@@ -10,12 +10,12 @@ ms.assetid: 10eb8958-3848-49d7-95c0-16119b624580
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d85ab7e9d66c1206c6741117d7b379c998078708
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f8f8d6512e0ddd9881005c5916eeb804aac59e2d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125381"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698019"
 ---
 # <a name="create-capture-media"></a>Yakalama ortamı oluşturma
 
@@ -84,7 +84,7 @@ Bir CD veya DVD seti için medya oluşturmak üzere görev sırası medyası olu
 
         - Configuration Manager, medyanın köküne adlı bir metin dosyası yazar `MediaLabel.txt` . Varsayılan olarak, dosya tek satırlık bir metin içerir: `label=Configuration Manager` . Medya için etiketi özelleştirirseniz, bu satır varsayılan değer yerine özel etiketinizi kullanır.  
 
-    - **Medyaya Autorun. inf dosyasını dahil et**<!-- 4090666 -->: Sürüm 1906 ' den başlayarak Configuration Manager, varsayılan olarak Autorun. inf dosyası eklemez. Bu dosya genellikle kötü amaçlı yazılımdan koruma ürünleri tarafından engelleniyor. Windows 'un Otomatik Çalıştır özelliği hakkında daha fazla bilgi için bkz. [Autorun-Enabled CD-ROM uygulaması oluşturma](https://docs.microsoft.com/windows/desktop/shell/autoplay). Senaryonuz için hala gerekliyse, dosyayı eklemek için bu seçeneği belirleyin.  
+    - **Medyaya Autorun. inf dosyasını dahil et**<!-- 4090666 -->: Sürüm 1906 ' den başlayarak Configuration Manager, varsayılan olarak Autorun. inf dosyası eklemez. Bu dosya genellikle kötü amaçlı yazılımdan koruma ürünleri tarafından engelleniyor. Windows 'un Otomatik Çalıştır özelliği hakkında daha fazla bilgi için bkz. [Autorun-Enabled CD-ROM uygulaması oluşturma](/windows/desktop/shell/autoplay). Senaryonuz için hala gerekliyse, dosyayı eklemek için bu seçeneği belirleyin.  
 
 5. **Önyükleme görüntüsü** sayfasında, aşağıdaki seçenekleri belirtin:  
 

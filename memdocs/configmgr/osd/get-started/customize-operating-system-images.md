@@ -10,12 +10,12 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 652a0c5e36ce7c4bacf40531a82fdf4e16197d95
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4f1d89707fa3e1765067c264d2abec12116bde88
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906910"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697730"
 ---
 # <a name="customize-operating-system-images-with-configuration-manager"></a>Configuration Manager ile işletim sistemi görüntülerini özelleştirme
 
@@ -23,14 +23,14 @@ ms.locfileid: "82906910"
 
 Configuration Manager işletim sistemi görüntüleri, WıM dosyalarıdır ve bir bilgisayarda bir işletim sistemini başarılı bir şekilde yüklemek ve yapılandırmak için gerekli referans dosya ve klasörlerinin sıkıştırılmış bir koleksiyonunu temsil eder. Özel bir işletim sistemi görüntüsü gerekli tüm işletim sistemi dosyaları, destek dosyaları, yazılım güncelleştirmeleri, araçlar ve diğer yazılım uygulamalarıyla yapılandırdığınız bir referans bilgisayardan oluşturulur ve yakalanır. Referans bilgisayarını elle nereye kadar yapılandıracağınız size kalmıştır. Oluşturma ve yakalama görev dizisini kullanarak referans bilgisayarın yapılandırmasını tamamen otomatikleştirebilir, referans bilgisayarın belirli özelliklerini elle yapılandırdıktan sonra görev dizilerini kullanarak kalan kısmı otomatikleştirebilir veya görev dizilerini kullanmadan referans bilgisayarı elle yapılandırabilirsiniz. Bir işletim sistemini özelleştirmek için aşağıdaki bölümleri kullanın.
 
-##  <a name="prepare-for-the--reference-computer"></a><a name="BKMK_PrepareReferenceComputer"></a>Referans bilgisayarı için hazırlanma  
+##  <a name="prepare-for-the--reference-computer"></a><a name="BKMK_PrepareReferenceComputer"></a> Referans bilgisayarı için hazırlanma  
  Referans bilgisayardan bir işletim sistemi yakalama özelliği kullanmadan önce dikkat etmeniz gereken birkaç nokta vardır.  
 
-###  <a name="decide-between-an-automated-or-manual-configuration"></a><a name="BKMK_RefComputerDecide"></a>Otomatikleştirilmiş veya el ile yapılandırma arasında karar verme  
+###  <a name="decide-between-an-automated-or-manual-configuration"></a><a name="BKMK_RefComputerDecide"></a> Otomatikleştirilmiş veya el ile yapılandırma arasında karar verme  
  Aşağıdakiler, referans bilgisayarın otomatik veya el ile yapılandırılmasının avantajlarını ve dezavantajlarını özetlemektedir.  
 
 #### <a name="automated-configuration"></a>Otomatik yapılandırma  
- **Üstünlü**  
+ **Avantajlar**  
 
 - Bu yapılandırma, bir yönetici veya kullanıcının bulunma zorunluluğunu ortadan kaldırarak tamamen katılımsız yapılabilir.  
 
@@ -45,7 +45,7 @@ Configuration Manager işletim sistemi görüntüleri, WıM dosyalarıdır ve bi
 - Referans bilgisayarın gereksinimleri önemli düzeyde değişiyorsa görev dizisinin tekrar oluşturulup yeniden test edilmesi çok uzun sürebilir.  
 
 #### <a name="manual-configuration"></a>El ile yapılandırma  
- **Üstünlü**  
+ **Avantajlar**  
 
 - Görev dizisi oluşturmak veya bu diziyi test edip sorunlarını gidermeyi beklemek zorunda değilsiniz.  
 
@@ -61,7 +61,7 @@ Configuration Manager işletim sistemi görüntüleri, WıM dosyalarıdır ve bi
 
 - Bir kişinin aktif olarak işlemin tamamının başında bulunmasını gerektirir.  
 
-###  <a name="considerations-for-the-reference-computer"></a><a name="BKMK_RefComputerConsiderations"></a>Başvuru bilgisayarı için önemli noktalar  
+###  <a name="considerations-for-the-reference-computer"></a><a name="BKMK_RefComputerConsiderations"></a> Başvuru bilgisayarı için önemli noktalar  
  Aşağıda, referans bilgisayar yapılandırılırken göz önüne alınacak temel öğeler sıralanmıştır.  
 
 -   **Dağıtılacak işletim sistemi**  
@@ -95,7 +95,7 @@ Configuration Manager işletim sistemi görüntüleri, WıM dosyalarıdır ve bi
     > [!IMPORTANT]  
     >  [Windows'u Yakalamaya Hazırla](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) görev sırası adımı, Sysprep çalıştırılmadan önce referans bilgisayardaki yerel yönetici parolasını boş değere sıfırlamaya çalışır. **Parolalar karmaşıklık gereksinimlerine uymalıdır** Yerel Güvenlik ilkesi etkinse, bu görev dizisi adımı yönetici parolasını sıfırlayamaz. Bu senaryoda, görev dizisini çalıştırmadan önce bu ilkeyi devre dışı bırakın.  
 
-     Sysprep hakkında daha fazla bilgi için bkz. [Sysprep (sistem hazırlığı) genel bakış](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
+     Sysprep hakkında daha fazla bilgi için bkz. [Sysprep (sistem hazırlığı) genel bakış](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
 
 -   **Yükleme senaryolarını kolaylaştırmak için gerekli doğru araçlar ve betikler**  
 
@@ -105,7 +105,7 @@ Configuration Manager işletim sistemi görüntüleri, WıM dosyalarıdır ve bi
 
      Referans bilgisayardan işletim sistemi görüntüsünü yakaladığınızda referans bilgisayarı eklemek istediğiniz masaüstü özelleştirme özellikleriyle yapılandırabilirsiniz. Masaüstü özellikleri duvar kağıdını, kurumsal markayı ve standart varsayılan kullanıcı profilini içerir.  
 
-##  <a name="manually-build-a-reference-computer"></a><a name="BKMK_ManuallyBuildReference"></a>Referans bilgisayarı el ile oluşturma  
+##  <a name="manually-build-a-reference-computer"></a><a name="BKMK_ManuallyBuildReference"></a> Referans bilgisayarı el ile oluşturma  
  Bir referans bilgisayarı elle oluşturmak için aşağıdaki yordamı kullanın.  
 
 > [!NOTE]  
@@ -128,7 +128,7 @@ Configuration Manager işletim sistemi görüntüleri, WıM dosyalarıdır ve bi
 
    Referans bilgisayarı hazırlandıktan sonra, referans bilgisayardan işletim sistemi görüntüsünü yakalamak için bir görev dizisi kullanın.  Ayrıntılı adımlar için bkz. [Var olan bir referans bilgisayardan işletim sistemi görüntüsü yakalama](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_CaptureExistingRefComputer).  
 
-##  <a name="use-a-task-sequence-to-build-a-reference-computer"></a><a name="BKMK_UseTSToBuildReference"></a>Başvuru bilgisayarı oluşturmak için görev dizisi kullanma  
+##  <a name="use-a-task-sequence-to-build-a-reference-computer"></a><a name="BKMK_UseTSToBuildReference"></a> Başvuru bilgisayarı oluşturmak için görev dizisi kullanma  
  İşletim sistemi, sürücüler, uygulamalar ve daha fazlasını dağıtmak için bir görev dizisi kullanarak bir referans bilgisayar oluşturmak için süreci otomatik hale getirebilirsiniz.  Referans bilgisayarını oluşturmak ve referans bilgisayardan işletim sistemi görüntüsünü yakalamak için aşağıdaki adımları kullanın.  
 
--   Referans bilgisayarını oluşturmak ve referans bilgisayardan işletim sistemi görüntüsünü yakalamak için bir görev dizisi kullanın.  Ayrıntılı adımlar için bkz. [Başvuru bilgisayarı oluşturmak ve yakalamak için görev dizisi kullanma](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS).  
+-   Referans bilgisayarını oluşturmak ve referans bilgisayardan işletim sistemi görüntüsünü yakalamak için bir görev dizisi kullanın.  Ayrıntılı adımlar için bkz. [Başvuru bilgisayarı oluşturmak ve yakalamak için görev dizisi kullanma](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS).

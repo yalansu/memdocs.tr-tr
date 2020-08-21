@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 46d2af2d89e41e931add0f77931b442b68835235
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8d766a172f934e27398ec2633ef0ec23ba4ade5e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906474"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700693"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Bir Configuration Manager sitesinin yedeğini alma
 
@@ -47,7 +47,7 @@ Bu makaledeki bölümler, sitelerinizi yedeklemelerinizde size yardımcı olabil
 ####  <a name="using-data-protection-manager-to-back-up-your-site-database"></a>Site veritabanınızın yedeğini almak için Data Protection Manager'ı kullanma
 Configuration Manager site veritabanınızı yedeklemek için System Center Data Protection Manager (DPM) kullanabilirsiniz.
 
-Site veritabanı bilgisayarı için DPM 'de yeni bir koruma grubu oluşturun. Oluştur Yeni Koruma Grubu Sihirbazı **Grup üyelerini seçin** sayfasında, veri kaynağı listesinden SMS Yazıcı hizmetini seçersiniz. Ardından, uygun bir üye olarak site veritabanını seçin. DPM kullanma hakkında daha fazla bilgi için [Data Protection Manager](https://docs.microsoft.com/system-center/dpm) belge kitaplığı ' na bakın.  
+Site veritabanı bilgisayarı için DPM 'de yeni bir koruma grubu oluşturun. Oluştur Yeni Koruma Grubu Sihirbazı **Grup üyelerini seçin** sayfasında, veri kaynağı listesinden SMS Yazıcı hizmetini seçersiniz. Ardından, uygun bir üye olarak site veritabanını seçin. DPM kullanma hakkında daha fazla bilgi için [Data Protection Manager](/system-center/dpm) belge kitaplığı ' na bakın.  
 
 > [!IMPORTANT]  
 >  Configuration Manager, adlandırılmış bir örnek kullanan bir SQL Server kümesi için DPM yedeklemesini desteklemez. Varsayılan SQL Server örneğini kullanan bir SQL Server kümesinde DPM yedeklemesini destekler.  
@@ -67,7 +67,7 @@ Site veritabanını geri yükledikten sonra, siteyi kurtarmak için kurulum 'dak
 
 Varsayılan site yedekleme görevini en az beş günde bir çalıştırmayı planlayın. Bu zamanlama, Configuration Manager beş güne ait bir *SQL Server değişiklik izleme saklama süresi* kullandığından kaynaklanır. Daha fazla bilgi için bkz. [değişiklik izleme saklama süresi SQL Server](recover-sites.md#sql-server-change-tracking-retention-period).
 
-Yedekleme işlemini basitleştirmek için, bir **AfterBackup. bat** dosyası oluşturabilirsiniz. Bu betik yedekleme görevi başarıyla tamamlandıktan sonra yedekleme sonrası eylemleri otomatik olarak çalıştırır. Yedek anlık görüntüsünü güvenli bir konuma arşivlemek için AfterBackup. bat dosyasını kullanın. AfterBackup. bat dosyasını, dosyaları yedekleme klasörünüze kopyalamak veya diğer yedekleme görevlerini başlatmak için de kullanabilirsiniz.  
+Yedekleme işlemini basitleştirmek için bir **AfterBackup.bat** dosyası oluşturabilirsiniz. Bu betik yedekleme görevi başarıyla tamamlandıktan sonra yedekleme sonrası eylemleri otomatik olarak çalıştırır. Yedekleme anlık görüntüsünü güvenli bir konuma arşivlemek için AfterBackup.bat dosyasını kullanın. Dosyaları yedekleme klasörünüze kopyalamak veya diğer yedekleme görevlerini başlatmak için AfterBackup.bat dosyasını da kullanabilirsiniz.  
 
 Bir merkezi yönetim sitesini ve birincil siteyi yedekleyebilirsiniz. İkincil siteler veya site sistem sunucuları yedekleme görevlerine sahip değildir.
 
@@ -137,16 +137,16 @@ Aşağıdaki nedenlerle yedekleme anlık görüntüsünün birden çok arşivini
 
 
 ## <a name="using-the-afterbackupbat-file"></a>AfterBackup.bat dosyasını kullanma  
-Siteyi başarıyla yedekledikten sonra, yedekleme görevi **AfterBackup. bat**adlı bir betiği çalıştırmayı otomatik olarak dener. AfterBackup. bat dosyasını ' de site sunucusunda el ile oluşturun `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box` . Bir AfterBackup. bat dosyası doğru klasörde mevcutsa, yedekleme görevi tamamlandıktan sonra otomatik olarak çalışır.
+Siteyi başarıyla yedekledikten sonra, yedekleme görevi otomatik olarak **AfterBackup.bat**adlı bir betiği çalıştırmayı dener. İçindeki site sunucusunda AfterBackup.bat dosyasını el ile oluşturun `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box` . Doğru klasörde bir AfterBackup.bat dosyası varsa, yedekleme görevi tamamlandıktan sonra otomatik olarak çalışır.
 
-AfterBackup. bat dosyası her yedekleme işleminin sonunda yedekleme anlık görüntüsünü arşivlemenize imkan tanır. Site Sunucusunu Yedekle bakım görevinin parçası olmayan diğer yedekleme sonrası görevleri otomatik olarak gerçekleştirebilir. AfterBackup.bat dosyası arşive ve yedekleme işlemlerini bütünleştirir, böylece her yeni yedekleme anlık görüntüsünün arşivlenmesini sağlar.
+AfterBackup.bat dosyası her yedekleme işleminin sonunda yedekleme anlık görüntüsünü arşivlemenize imkan tanır. Site Sunucusunu Yedekle bakım görevinin parçası olmayan diğer yedekleme sonrası görevleri otomatik olarak gerçekleştirebilir. AfterBackup.bat dosyası arşive ve yedekleme işlemlerini bütünleştirir, böylece her yeni yedekleme anlık görüntüsünün arşivlenmesini sağlar.
 
-AfterBackup. bat dosyası yoksa yedekleme görevi, yedekleme işlemini etkilemeden onu atlar. Yedekleme görevinin bu betiği başarıyla çalıştırdığını doğrulamak için **izleme** çalışma alanındaki **Bileşen durumu** düğümüne gidin ve **SMS_SITE_BACKUP**durum iletilerini gözden geçirin. Görev AfterBackup. bat komut dosyasını başarıyla başlattığında, **5040**ileti kimliğini görürsünüz.  
+AfterBackup.bat dosyası yoksa yedekleme görevi, yedekleme işlemini etkilemeden onu atlar. Yedekleme görevinin bu betiği başarıyla çalıştırdığını doğrulamak için **izleme** çalışma alanındaki **Bileşen durumu** düğümüne gidin ve **SMS_SITE_BACKUP**durum iletilerini gözden geçirin. Görev AfterBackup.bat komut dosyasını başarıyla başlattığında, ileti KIMLIĞI **5040**' i görürsünüz.  
 
 > [!TIP]  
->  Site sunucusu yedekleme dosyalarınızı AfterBackup. bat ile arşivlemek için toplu iş dosyasında bir kopyalama komut aracını kullanmanız gerekir. Bu tür bir araç Windows Server 'da [Robocopy](https://docs.microsoft.com/windows-server/administration/windows-commands/robocopy) 'dir. Örneğin, AfterBackup. bat dosyasını aşağıdaki komutla oluşturun:`Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
+>  Site sunucusu yedekleme dosyalarınızı AfterBackup.bat arşivlemek için Batch dosyasında bir kopyalama komut aracını kullanmanız gerekir. Bu tür bir araç Windows Server 'da [Robocopy](/windows-server/administration/windows-commands/robocopy) 'dir. Örneğin, aşağıdaki komutla AfterBackup.bat dosyasını oluşturun: `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
 
-AfterBackup. bat dosyasının kullanım amacı yedekleme anlık görüntülerini arşivlemek olsa da, her yedekleme işleminin sonunda ek görevleri çalıştırmak için bir AfterBackup. bat dosyası oluşturabilirsiniz.  
+AfterBackup.bat kullanım amacı yedekleme anlık görüntülerini arşivlemek olsa da, her yedekleme işleminin sonunda ek görevleri çalıştırmak için bir AfterBackup.bat dosyası oluşturabilirsiniz.  
 
 
 
@@ -165,7 +165,7 @@ SQL Server Reporting Services önceden tanımlı veya oluşturulmuş özel rapor
 > [!IMPORTANT]  
 >  Configuration Manager daha yeni bir sürüme güncelleştirdiğinde, önceden tanımlanmış raporların üzerine yeni raporlar yazılabilir. Önceden tanımlı bir raporu değiştirirseniz, raporu yedeklediğinizden emin olun ve ardından Raporlama Hizmetleri 'ne geri yükleyin.  
 
-Raporlama hizmetlerinde özel raporlarınızı yedekleme hakkında daha fazla bilgi için bkz. [Reporting Services Için Yedekleme ve geri yükleme işlemleri](https://docs.microsoft.com/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).  
+Raporlama hizmetlerinde özel raporlarınızı yedekleme hakkında daha fazla bilgi için bkz. [Reporting Services Için Yedekleme ve geri yükleme işlemleri](/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).  
 
 ### <a name="back-up-content-files"></a>İçerik dosyalarını yedekleme  
 Configuration Manager içerik kitaplığı tüm yazılım dağıtımları için tüm içerik dosyalarının depolandığı yerdir. İçerik Kitaplığı site sunucusunda ve her dağıtım noktasında bulunur. Site Sunucusunu Yedekle bakım görevi, içerik kitaplığı veya paket kaynak dosyalarını yedeketmez. Bir site sunucusu başarısız olduğunda, içerik kitaplığıyla ilgili bilgiler site veritabanına geri yüklenir, ancak içerik kitaplığı ve paket kaynak dosyalarını geri yüklemeniz gerekir.  
@@ -210,7 +210,7 @@ Updates Publisher veritabanını yedeklemek için aşağıdaki yordamı kullanı
 ## <a name="about-the-sms-writer-service"></a>SMS Yazıcı hizmeti hakkında  
 SMS Yazıcı, yedekleme işlemi sırasında Windows Birim Gölge Kopyası Hizmeti (VSS) ile etkileşimde bulunan bir hizmettir. Configuration Manager site yedeklemesi başarıyla tamamlanmak üzere SMS Yazıcı hizmeti 'nin çalışıyor olması gerekir.  
 
-### <a name="process"></a>İşleme  
+### <a name="process"></a>İşlem  
 1. SMS Yazıcı, VSS hizmetine kaydolur ve bu hizmetin arabirimleri ile olaylarını bağlar. 
 2. VSS olayları yayınladığında veya SMS Yazıcıya belirli bildirimleri gönderdiğinde, SMS Yazıcı bildirime yanıt verir ve uygun tedbiri alır. 
 3. SMS Yazıcı, içinde bulunan **smsdk. ctl** yedekleme denetim dosyasını okur `<ConfigMgrInstallationPath>\inboxes\smsbkup.box` ve yedeklenecek dosyaları ve verileri belirler. 
@@ -231,9 +231,9 @@ SMS yazıcısının yazıcı KIMLIĞI **03ba67dd-dc6d-4729-a038-251f7018463b**.
 SMS Yazıcı hizmeti Yerel Sistem hesabı altında çalışmalıdır.  
 
 ### <a name="volume-shadow-copy-service"></a>Birim Gölge Kopyası hizmeti  
-VSS, bir sistemdeki uygulamalar birimlere yazmayı sürdürürken, birim yedeklemelerinin yapılmasına olanak veren bir çerçeveyi uygulayan COM API kümesidir. VSS, disk üzerindeki verileri güncelleştiren kullanıcı uygulamaları (SMS Yazıcı hizmeti) ile yedekleme uygulamaları (Yedekleme Yöneticisi hizmeti) arasında eşgüdüme olanak tanıyan tutarlı bir arayüz sağlar. Daha fazla bilgi için [birim gölge kopyası hizmeti](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service)bakın.  
+VSS, bir sistemdeki uygulamalar birimlere yazmayı sürdürürken, birim yedeklemelerinin yapılmasına olanak veren bir çerçeveyi uygulayan COM API kümesidir. VSS, disk üzerindeki verileri güncelleştiren kullanıcı uygulamaları (SMS Yazıcı hizmeti) ile yedekleme uygulamaları (Yedekleme Yöneticisi hizmeti) arasında eşgüdüme olanak tanıyan tutarlı bir arayüz sağlar. Daha fazla bilgi için [birim gölge kopyası hizmeti](/windows-server/storage/file-server/volume-shadow-copy-service)bakın.  
 
 
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Bir yedekleme oluşturduktan sonra, [Site Recovery](recover-sites.md) 'yi bu yedekleme ile alıştırma yapın. Bu uygulama, bir kurtarma işlemini kullanabilmeniz için bilmeniz gereken bir işlem yapmanıza yardımcı olabilir. Ayrıca, hedeflenen amacı için yedeklemenin başarılı olduğunu onaylamaya de yardımcı olabilir.  
+Bir yedekleme oluşturduktan sonra, [Site Recovery](recover-sites.md) 'yi bu yedekleme ile alıştırma yapın. Bu uygulama, bir kurtarma işlemini kullanabilmeniz için bilmeniz gereken bir işlem yapmanıza yardımcı olabilir. Ayrıca, hedeflenen amacı için yedeklemenin başarılı olduğunu onaylamaya de yardımcı olabilir.

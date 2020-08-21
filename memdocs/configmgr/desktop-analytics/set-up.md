@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: a90f3260782f08fdf8f7424a95e09b34e38e97d3
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: facfb2be1972933524c7ad632537fc8306939c1c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268163"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700761"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Masaüstü analizlerini ayarlama
 
@@ -39,7 +39,7 @@ Bu yordamı kullanarak, masaüstü analizine oturum açın ve aboneliğinizde ya
 
         Bu seçeneği seçmezseniz, masaüstü Analizi kullanıcıları yine de güvenlik grubunun üyesi olarak ekler. **Genel yöneticinin** kullanıcılar Için **Masaüstü Analizi yönetici** rolünü el ile ataması gerekir.
 
-        Azure Active Directory ' de yönetici rolü izinleri atama hakkında daha fazla bilgi ve **Masaüstü Analizi yöneticilerine**atanan izinler hakkında daha fazla bilgi için, bkz. [Azure Active Directory içindeki yönetici rolü izinleri](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+        Azure Active Directory ' de yönetici rolü izinleri atama hakkında daha fazla bilgi ve **Masaüstü Analizi yöneticilerine**atanan izinler hakkında daha fazla bilgi için, bkz. [Azure Active Directory içindeki yönetici rolü izinleri](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
 
     - Masaüstü analizi, çalışma alanları ve dağıtım planları oluşturmak ve yönetmek için Azure Active Directory **çalışma alanı sahipleri** güvenlik grubunu önceden yapılandırır.
 
@@ -82,4 +82,4 @@ Azure portal, masaüstü Analizi **giriş** sayfasını gösterir.
 
 Configuration Manager, masaüstü analiziyle bağlantı kurmak için sonraki makaleye ilerleyin.
 > [!div class="nextstepaction"]  
-> [Configuration Manager’a bağlanma](connect-configmgr.md)  
+> [Configuration Manager’a bağlanma](connect-configmgr.md)

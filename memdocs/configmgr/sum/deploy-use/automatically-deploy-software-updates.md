@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: 1a64d49edca146c70a56b07cb304d1744b86a1bf
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 3f49d7d001de07a7d3d6a7bdbb5f9ff90de018c9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127755"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699883"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Yazılım güncelleştirmelerini otomatik dağıtma  
 
@@ -24,14 +24,14 @@ ms.locfileid: "88127755"
 Mevcut bir yazılım güncelleştirme grubuna yeni güncelleştirmeler eklemek yerine bir otomatik dağıtım kuralı (ADR) kullanın. Genellikle, ADRs 'yi kullanarak aylık yazılım güncelleştirmeleri ("Düzeltme Eki Salı" güncelleştirmeleri) ve Endpoint Protection tanım güncelleştirmelerini yönetme olarak da bilinir. Sizin için uygun olan dağıtım yönteminin belirlenmesi için yardıma ihtiyacınız varsa bkz. [yazılım güncelleştirmelerini dağıtma](deploy-software-updates.md).
 
 
-##  <a name="create-an-automatic-deployment-rule-adr"></a><a name="BKMK_CreateAutomaticDeploymentRule"></a>Otomatik dağıtım kuralı (ADR) oluşturma  
+##  <a name="create-an-automatic-deployment-rule-adr"></a><a name="BKMK_CreateAutomaticDeploymentRule"></a> Otomatik dağıtım kuralı (ADR) oluşturma  
 ADR kullanarak yazılım güncelleştirmelerini otomatik olarak onaylayın ve dağıtın. Kural, kural her çalıştığında yeni bir yazılım güncelleştirme grubuna yazılım güncelleştirmeleri ekleyebilir veya mevcut bir gruba yazılım güncelleştirmeleri ekleyebilir. Bir kural çalıştırıldığında ve var olan bir gruba yazılım güncelleştirmeleri eklediğinde, kural gruptaki tüm güncelleştirmeleri kaldırır. Daha sonra, tanımladığınız kriterleri karşılayan güncelleştirmeleri gruba ekler. 
 
 > [!WARNING]  
 >  ADR 'yi ilk kez oluşturmadan önce, sitenin yazılım güncelleştirmeleri eşitlemesini tamamlamış olduğunu doğrulayın. Ingilizce olmayan bir dille Configuration Manager çalıştırdığınızda bu adım önemlidir. Yazılım güncelleştirme sınıflandırmaları, ilk eşitlemeden önce Ingilizce olarak görüntülenir ve ardından yazılım güncelleştirme eşitlemesi tamamlandıktan sonra yerelleştirilmiş dillerde görüntülenir. Yazılım güncelleştirmelerini eşitlemeden önce oluşturduğunuz kurallar eşitleme sonrasında doğru çalışmayabilir çünkü metin dizesi eşleşmeyebilir.  
 
 
-### <a name="process-to-create-an-adr"></a><a name="bkmk_adr-process"></a>ADR oluşturma işlemi  
+### <a name="process-to-create-an-adr"></a><a name="bkmk_adr-process"></a> ADR oluşturma işlemi  
 
 1.  Configuration Manager konsolunda, **yazılım kitaplığı** çalışma alanına gidin, **yazılım güncelleştirmeleri**' ni genişletin ve **Otomatik dağıtım kuralları** düğümünü seçin.  
 
@@ -49,7 +49,7 @@ ADR kullanarak yazılım güncelleştirmelerini otomatik olarak onaylayın ve da
 
          - **Office 365 Istemci güncelleştirmeleri** şablonu, Microsoft 365 Apps istemcilerine yönelik güncelleştirmeleri dağıtırken kullanılacak genel ayarları sağlar.
              > [!Note]
-             > 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. ADRs 'niz "title" özelliğini kullanıyorsa, 9 Haziran 2020 ' den itibaren düzenlemeniz gerekir. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)`yeni başlığa bir örnektir. Başlık değişikliği için ADRs 'nizi değiştirme hakkında daha fazla bilgi için bkz. [Microsoft 365 uygulamaları için kanalları güncelleştirme](manage-office-365-proplus-updates.md#bkmk_channel). Ad değişikliği hakkında daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change).
+             > 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. ADRs 'niz "title" özelliğini kullanıyorsa, 9 Haziran 2020 ' den itibaren düzenlemeniz gerekir. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` yeni başlığa bir örnektir. Başlık değişikliği için ADRs 'nizi değiştirme hakkında daha fazla bilgi için bkz. [Microsoft 365 uygulamaları için kanalları güncelleştirme](manage-office-365-proplus-updates.md#bkmk_channel). Ad değişikliği hakkında daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](/deployoffice/name-change).
 
          - **SCEP ve Windows Defender virüsten koruma güncelleştirmeleri** şablonu, Endpoint Protection tanım güncelleştirmelerini dağıtırken kullanılacak genel ayarları sağlar.  
 
@@ -92,7 +92,7 @@ ADR kullanarak yazılım güncelleştirmelerini otomatik olarak onaylayın ve da
      - Sürüm 1806 ' den başlayarak, **mimari** için bir özellik filtresi artık kullanılabilir. Daha az ortak olan Itanium ve ARM64 gibi mimarileri hariç tutmak için bu filtreyi kullanın. 64 bit (x64) sistemlerde çalışan 32-bit (x86) uygulamaları ve bileşenleri olduğunu unutmayın. X86 gerekmediği sürece, x64 ' u seçtiğinizde de etkinleştirin.<!--1322266-->  
 
     > [!NOTE]  
-    > **Windows 10, sürüm 1903 ve üzeri,** **Windows 10** ürününün önceki sürümleri gibi bir parçası olmak yerine kendi ürünü olarak Microsoft Update eklenmiştir. Bu değişiklik, istemcilerinizin bu güncelleştirmeleri görmesini sağlamak için birkaç el ile adım uygulamanızı sağlar. Configuration Manager sürüm 1906 ' de yeni ürün için gerçekleştirmeniz gereken el ile adım sayısını azaltmaya yardımcı oluyoruz. Daha fazla bilgi için bkz. [Windows 10 sürümleri için ürünleri yapılandırma](../get-started/configure-classifications-and-products.md#windows-10-version-1903-and-later) <!--4682946-->
+    > **Windows 10, sürüm 1903 ve üzeri,** **Windows 10**  ürününün önceki sürümleri gibi bir parçası olmak yerine kendi ürünü olarak Microsoft Update eklenmiştir. Bu değişiklik, istemcilerinizin bu güncelleştirmeleri görmesini sağlamak için birkaç el ile adım uygulamanızı sağlar. Configuration Manager sürüm 1906 ' de yeni ürün için gerçekleştirmeniz gereken el ile adım sayısını azaltmaya yardımcı oluyoruz. Daha fazla bilgi için bkz. [Windows 10 sürümleri için ürünleri yapılandırma](../get-started/configure-classifications-and-products.md#windows-10-version-1903-and-later) <!--4682946-->
 
 
 6. **Değerlendirme zamanlaması** SAYFASıNDA, ADR 'nin bir zamanlamaya göre çalışmasına etkinleştirilip etkinleştirilmeyeceğini belirtin. Etkinleştirildiğinde, **Özelleştir** 'i tıklatarak tekrarlama zamanlamasını ayarlayın.  
@@ -225,7 +225,7 @@ Sihirbazı tamamladıktan sonra ADR çalışır. Belirtilen ölçütlere uyan ya
 
 
 
-##  <a name="add-a-new-deployment-to-an-existing-adr"></a><a name="BKMK_AddDeploymentToADR"></a>Var olan bir ADR 'ye yeni bir dağıtım ekleme  
+##  <a name="add-a-new-deployment-to-an-existing-adr"></a><a name="BKMK_AddDeploymentToADR"></a> Var olan bir ADR 'ye yeni bir dağıtım ekleme  
 
 ADR oluşturduktan sonra kurala başka dağıtımlar ekleyin. Bu eylem farklı koleksiyonlara farklı güncelleştirmeler dağıtma karmaşıklığını yönetmenize yardımcı olur. Her yeni dağıtım, tüm işlevlere ve dağıtım izleme deneyimine sahiptir.  
 
@@ -244,7 +244,7 @@ ADR oluşturduktan sonra kurala başka dağıtımlar ekleyin. Bu eylem farklı k
      - Uyarılar
      - İndirme Ayarları  
 
-Dağıtımlar ayrıca Windows PowerShell cmdlet 'leri kullanılarak programlı bir şekilde eklenebilir. Bu yöntemin kullanımıyla ilgili tam bir açıklama için, bkz. [New-CMSoftwareUpdateDeployment](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment) .
+Dağıtımlar ayrıca Windows PowerShell cmdlet 'leri kullanılarak programlı bir şekilde eklenebilir. Bu yöntemin kullanımıyla ilgili tam bir açıklama için, bkz. [New-CMSoftwareUpdateDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment) .
 
 Dağıtım işlemi hakkında daha fazla bilgi için bkz. [Yazılım güncelleştirmesi dağıtım işlemi](../understand/software-updates-introduction.md#BKMK_DeploymentProcess).
 

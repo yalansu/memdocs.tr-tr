@@ -9,41 +9,41 @@ ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e32956d2ca9385c22e9073cfa2665e1f61b3ebd3
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 8325102e9a818191eae5061b7adf60dbbb7269b5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078643"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700710"
 ---
 # <a name="use-the-setup-wizard-to-install-configuration-manager-sites"></a>Configuration Manager siteleri yüklemek için Kurulum Sihirbazı 'Nı kullanma
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
-Yeni bir Configuration Manager sitesini Kılavuzlu Kullanıcı arabirimini kullanarak yüklemek için, Configuration Manager Kurulum Sihirbazı 'Nı (Setup. exe) kullanın. Sihirbaz, birincil sitenin veya merkezi yönetim sitesinin yüklenmesini destekler. Ayrıca, Configuration Manager [bir değerlendirme yüklemesini](upgrade-an-evaluation-install-to-a-full-install.md) tam lisanslı bir yüklemeye yükseltmek için de Sihirbazı kullanırsınız. Sihirbazı kullanmak istemiyorsanız, bunun yerine bir [yükleme betiği](use-a-command-line-to-install-sites.md) kullanabilir ve Katılımsız komut satırı yüklemesi çalıştırabilirsiniz.
+Yeni bir Configuration Manager sitesini Kılavuzlu Kullanıcı arabirimini kullanarak yüklemek için, Configuration Manager Kurulum Sihirbazı 'Nı (setup.exe) kullanın. Sihirbaz, birincil sitenin veya merkezi yönetim sitesinin yüklenmesini destekler. Ayrıca, Configuration Manager [bir değerlendirme yüklemesini](upgrade-an-evaluation-install-to-a-full-install.md) tam lisanslı bir yüklemeye yükseltmek için de Sihirbazı kullanırsınız. Sihirbazı kullanmak istemiyorsanız, bunun yerine bir [yükleme betiği](use-a-command-line-to-install-sites.md) kullanabilir ve Katılımsız komut satırı yüklemesi çalıştırabilirsiniz.
 
 Configuration Manager konsolundan İkincil bir site yükler. İkincil siteler, komut dosyası komut satırı yüklemesini desteklemez.
 
 > [!Note]  
 > Sürüm 1906 ' den başlayarak, **giriş. hta** dosyası yükleme ortamının kökünde artık yok. Aşağıdaki bilgilere bağlantılar sağladı:<!--SCCMDocs-pr#3545-->
 >
-> - **Siteyi yükler**: `smssetup\bin\x64\setup.exe`. Daha fazla bilgi için bkz. [bir merkezi yönetim veya birincil site yüklemeye](#bkmk_primary).
+> - **Siteyi yükler**: `smssetup\bin\x64\setup.exe` . Daha fazla bilgi için bkz. [bir merkezi yönetim veya birincil site yüklemeye](#bkmk_primary).
 > - **Başlamadan önce**: [bir site hiyerarşisi tasarlama](../../../plan-design/hierarchy/design-a-hierarchy-of-sites.md) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626543 -->
 > - **Sunucu hazırlığını değerlendir**: [önkoşul denetleyicisi](prerequisite-checker.md) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626546 -->
-> - **Gerekli önkoşul dosyalarını indirin**: `smssetup\bin\x64\setupdl.exe`. Daha fazla bilgi için bkz. [Kurulum Yükleyici](setup-downloader.md).
-> - **Configuration Manager konsolu 'Nu yükler**: `smssetup\bin\i386\consolesetup.exe`. Daha fazla bilgi için bkz. [konsolları Install](install-consoles.md).
+> - **Gerekli önkoşul dosyalarını indirin**: `smssetup\bin\x64\setupdl.exe` . Daha fazla bilgi için bkz. [Kurulum Yükleyici](setup-downloader.md).
+> - **Configuration Manager konsolu 'Nu yükler**: `smssetup\bin\i386\consolesetup.exe` . Daha fazla bilgi için bkz. [konsolları Install](install-consoles.md).
 > - [**System Center Updates Publisher indir**](../../../../sum/tools/updates-publisher.md) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626548 -->
 > - **Ek işletim sistemleri için Istemcileri indir**: <!-- https://go.microsoft.com/fwlink/p/?LinkId=626550 -->
 >   - [Microsoft uç nokta Configuration Manager-macOS Istemcisi (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850)
 >   - [UNIX ve Linux için istemciler](https://www.microsoft.com/download/details.aspx?id=47719)
 > - [**Sürüm notları**](release-notes.md) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
-> - [**Belgeleri okuyun**](https://docs.microsoft.com/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
+> - [**Belgeleri okuyun**](/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
 > - **Yükleme yardımını edinin**: [TechNet forumları: Configuration Manager (güncel dalı) – site ve istemci dağıtımı](https://social.technet.microsoft.com/Forums/en-us/home?forum=ConfigMgrDeployment) <!--NOTE: this link requires en-us locale to work-->   <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->
 > - **Configuration Manager Community**: [System Center topluluğu: katılma](https://social.technet.microsoft.com/wiki/contents/articles/11504.system-center-community-how-to-participate.aspx) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626544 -->
 > - [**Configuration Manager giriş**](https://www.microsoft.com/cloud-platform/system-center-configuration-manager) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626545 -->
 
 
-## <a name="install-a-central-administration-or-primary-site"></a><a name="bkmk_primary"></a>Merkezi Yönetim veya birincil site yükler
+## <a name="install-a-central-administration-or-primary-site"></a><a name="bkmk_primary"></a> Merkezi Yönetim veya birincil site yükler
 
 Bir merkezi yönetim sitesi veya bir birincil site yüklemek için aşağıdaki yordamı kullanın. Ayrıca, değerlendirme sitesini tam lisanslı bir Configuration Manager sitesine yükseltmek için de kullanın.
 
@@ -54,9 +54,9 @@ Site yüklemesini başlatmadan önce aşağıdaki makalelerdeki ayrıntıları t
 
 Bir merkezi yönetim sitesini bir site genişletme senaryosunun parçası olarak yüklüyorsanız, aşağıdaki yordamı kullanmadan önce [tek başına birincil siteyi genişletmeyi](use-the-setup-wizard-to-install-sites.md#bkmk_expand) gözden geçirin.
 
-### <a name="process-to-install-a-primary-or-central-administration-site"></a><a name="bkmk_installpri"></a>Birincil veya merkezi yönetim sitesi yüklemek için işlem
+### <a name="process-to-install-a-primary-or-central-administration-site"></a><a name="bkmk_installpri"></a> Birincil veya merkezi yönetim sitesi yüklemek için işlem
 
-1. Sitesini yüklemek istediğiniz bilgisayarda, **Configuration Manager Kurulum Sihirbazı**' nı başlatmak için `<InstallationMedia>\SMSSETUP\BIN\X64\Setup.exe` ' i çalıştırın.  
+1. Sitesini yüklemek istediğiniz bilgisayarda, `<InstallationMedia>\SMSSETUP\BIN\X64\Setup.exe` **Configuration Manager Kurulum Sihirbazı**' nı başlatmak için ' i çalıştırın.  
 
     > [!NOTE]  
     > Tek başına birincil siteyi genişletmek için bir merkezi yönetim sitesi yüklediğinizde veya var olan bir hiyerarşiye yeni bir alt birincil site yüklüyorsanız, mevcut sitenin veya sitelerin sürümüyle eşleşen yükleme medyasını (kaynak dosyaları) kullanın. Daha önce yüklenen sitelerin sürümünü değiştiren konsol içi güncelleştirmeler yüklediyseniz, özgün yükleme medyasını kullanmayın. Bunun yerine, CD 'deki kaynak dosyalarını kullanın [. Güncel bir sitenin en son klasörü](../../manage/the-cd.latest-folder.md) . Configuration Manager, yeni sitenizin bağlanacağı mevcut sitenin sürümüyle eşleşen kaynak dosyalar kullanmanızı gerektirir.  
@@ -166,11 +166,11 @@ Bir merkezi yönetim sitesini bir site genişletme senaryosunun parçası olarak
 
     - **SQL Server adı (FQDN)**: varsayılan olarak, bu değer site sunucusu bilgisayarına ayarlanır.  
 
-        Özel bir bağlantı noktası kullanıyorsanız, bu bağlantı noktasını SQL Server FQDN 'sine ekleyin. SQL Server FQDN 'sini virgül ve sonra bağlantı noktası numarası ile izleyin. Örneğin, Server *SQLSERVER1.fabrikam.com*için, *1551*bağlantı noktasını belirtmek için aşağıdakileri kullanın:`SQLServer1.fabrikam.com,1551`  
+        Özel bir bağlantı noktası kullanıyorsanız, bu bağlantı noktasını SQL Server FQDN 'sine ekleyin. SQL Server FQDN 'sini virgül ve sonra bağlantı noktası numarası ile izleyin. Örneğin, Server *SQLSERVER1.fabrikam.com*için, *1551*bağlantı noktasını belirtmek için aşağıdakileri kullanın: `SQLServer1.fabrikam.com,1551`  
 
     - **Örnek adı**: Bu değer varsayılan olarak boştur. Site sunucusu bilgisayarında varsayılan SQL örneğini kullanır.  
 
-    - **Veritabanı adı**: varsayılan olarak, bu değer olarak `CM_<Sitecode>`ayarlanır. Bu değeri özelleştirebilirsiniz.  
+    - **Veritabanı adı**: varsayılan olarak, bu değer olarak ayarlanır `CM_<Sitecode>` . Bu değeri özelleştirebilirsiniz.  
 
     - **Hizmet Aracısı bağlantı noktası**: varsayılan olarak, bu değer 4022 varsayılan SQL Server hizmet Aracısı (SSB) bağlantı noktasını kullanacak şekilde ayarlanır. SQL, diğer sitelerdeki Site veritabanıyla doğrudan iletişim kurmak için onu kullanır.  
 
@@ -244,7 +244,7 @@ Bir merkezi yönetim sitesini bir site genişletme senaryosunun parçası olarak
     - Kurulum tamamlandıktan sonra, nesneleri ve ayarları düzenleyebilen bir konsola bağlanabilirsiniz.  
 
 
-## <a name="expand-a-stand-alone-primary-site"></a><a name="bkmk_expand"></a>Tek başına birincil siteyi genişletme
+## <a name="expand-a-stand-alone-primary-site"></a><a name="bkmk_expand"></a> Tek başına birincil siteyi genişletme
 
 İlk siteniz olarak bağımsız bir birincil siteyi yüklediğinizde, daha sonra bir merkezi yönetim sitesi yükleyerek bu siteyi daha büyük bir hiyerarşiye genişletmeyi seçebilirsiniz.
 
@@ -271,7 +271,7 @@ Siteyi genişletmek için, aşağıdaki uyarılarla yeni bir merkezi yönetim si
 Tek başına bir birincil siteyi genişletmek için, önce [bir siteyi genişletme önkoşullarını](prerequisites-for-installing-sites.md#bkmk_expand)inceleyin. Ardından Bu makalenin önceki kısımlarında [birincil veya merkezi yönetim sitesi yüklemek için](use-the-setup-wizard-to-install-sites.md#bkmk_installpri) yordamı kullanın.
 
 
-## <a name="install-a-secondary-site"></a><a name="bkmk_secondary"></a>İkincil site yükler
+## <a name="install-a-secondary-site"></a><a name="bkmk_secondary"></a> İkincil site yükler
 
 İkincil bir site yüklemek için Configuration Manager konsolunu kullanın.  
 
@@ -281,7 +281,7 @@ Tek başına bir birincil siteyi genişletmek için, önce [bir siteyi genişlet
 
 - İkincil siteyi yüklediğinizde Configuration Manager, yeni siteyi üst birincil sitede yapılandırılan istemci iletişim bağlantı noktalarını kullanacak şekilde yapılandırır.  
 
-### <a name="process-to-install-a-secondary-site"></a><a name="bkmk_installsecondary"></a>İkincil site yüklemek için işlem  
+### <a name="process-to-install-a-secondary-site"></a><a name="bkmk_installsecondary"></a> İkincil site yüklemek için işlem  
 
 1. Configuration Manager konsolunda **Yönetim** çalışma alanına gidin, **Site yapılandırması**' nı genişletin ve **siteler** düğümünü seçin. Yeni ikincil sitenin üst birincil sitesi olacak siteyi seçin.  
 
@@ -411,11 +411,11 @@ Tek başına bir birincil siteyi genişletmek için, önce [bir siteyi genişlet
 
 11. **Özet** sayfasında, ayarları doğrulayın ve ardından ikincil siteyi yüklemek için **İleri** ' yi seçin. Sihirbaz **tamamlama** sayfasını gösterdiğinde Sihirbazı kapatabilirsiniz. İkincil site yüklemesi arka planda devam eder.  
 
-### <a name="how-to-verify-the-secondary-site-installation-status"></a><a name="bkmk_verify"></a>İkincil site yükleme durumunu doğrulama  
+### <a name="how-to-verify-the-secondary-site-installation-status"></a><a name="bkmk_verify"></a> İkincil site yükleme durumunu doğrulama  
 
 1. Configuration Manager konsolunda **Yönetim** çalışma alanına gidin, **Site yapılandırması**' nı genişletin ve **siteler** düğümünü seçin.  
 
 2. Yüklemekte olduğunuz ikincil siteyi seçin ve ardından şeritte **yükleme durumunu göster** ' i seçin.  
 
     > [!TIP]  
-    > Aynı anda birden fazla ikincil site yüklediğinizde, önkoşul denetleyicisi her seferinde tek bir siteye karşı çalışır. Sonraki siteyi denetlemeye başlamadan önce bir siteyi tamamlaması gerekir.  
+    > Aynı anda birden fazla ikincil site yüklediğinizde, önkoşul denetleyicisi her seferinde tek bir siteye karşı çalışır. Sonraki siteyi denetlemeye başlamadan önce bir siteyi tamamlaması gerekir.

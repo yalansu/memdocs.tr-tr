@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 65071493834c33dac7581075b835e023c74f5706
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f22a28c173c980bdf598a5afc8a969a86ec96cc2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128095"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699781"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Configuration Manager için konsol içi güncelleştirmeleri yükler
 
@@ -96,7 +96,7 @@ Configuration Manager konsolundan bir güncelleştirmeyi yüklemeden önce aşa�
 
 Güncelleştirme başlamadan önce gerçekleştirilecek eylemler için geçerli güncelleştirme denetim listesini gözden geçirin:
 
-- [Güncelleştirme 2006 yükleme denetim listesi](checklist-for-installing-update-2006.md)
+- [Güncelleştirme 2006’yı yüklemek için denetim listesi](checklist-for-installing-update-2006.md)
 
 - [Güncelleştirme 2002’yi yüklemek için denetim listesi](checklist-for-installing-update-2002.md)
 
@@ -104,7 +104,7 @@ Güncelleştirme başlamadan önce gerçekleştirilecek eylemler için geçerli 
 
 - [Güncelleştirme 1906’yı yüklemek için denetim listesi](checklist-for-installing-update-1906.md)  
 
-### <a name="step-2-run-the-prerequisite-checker-before-installing-an-update"></a><a name="bkmk_step2"></a>2. Adım: bir güncelleştirmeyi yüklemeden önce Önkoşul denetleyicisini çalıştırma  
+### <a name="step-2-run-the-prerequisite-checker-before-installing-an-update"></a><a name="bkmk_step2"></a> 2. Adım: bir güncelleştirmeyi yüklemeden önce Önkoşul denetleyicisini çalıştırma  
 
 Bir güncelleştirmeyi yüklemeden önce o güncelleştirmenin önkoşul denetimini çalıştırmayı deneyin. Bir güncelleştirmeyi yüklemeden önce önkoşulu çalıştırırsanız:  
 
@@ -135,7 +135,7 @@ Daha sonra, güncelleştirmeyi yüklediğinizde, güncelleştirmeyi önkoşul de
 
     3. Daha fazla bilgi için site sunucusunda **ConfigMgrPrereq. log dosyasına** bakın.  
 
-## <a name="install-in-console-updates"></a><a name="bkmk_install"></a>Konsol içi güncelleştirmeleri yükler  
+## <a name="install-in-console-updates"></a><a name="bkmk_install"></a> Konsol içi güncelleştirmeleri yükler  
 
 Configuration Manager konsolundan güncelleştirme yüklemeye hazırsanız, hiyerarşinizin en üst düzey sitesiyle başlayın. Bu site, merkezi yönetim sitesi ya da tek başına birincil sitedir.  
 
@@ -235,7 +235,7 @@ Konsol güncelleştirmesi tamamlandıktan sonra, konsolunun ve site sürümlerin
 > [!Note]  
 > Konsol sürümü, site sürümünden biraz farklıdır. Konsolun ikincil sürümü Configuration Manager yayın sürümüne karşılık gelir. Örneğin, Configuration Manager sürüm 1802 ' de ilk site sürümü 5.0.8634.1000 ve ilk konsol sürümü 5 ' tir. **1802**. 1082,1700. Derleme (1082) ve düzeltme (1700) numaraları gelecekteki düzeltmelerle birlikte değişebilir.
 
-### <a name="to-start-the-update-installation-at-the-top-level-site"></a><a name="bkmk_toptier"></a>En üst düzey sitede güncelleştirme yüklemesini başlatmak için  
+### <a name="to-start-the-update-installation-at-the-top-level-site"></a><a name="bkmk_toptier"></a> En üst düzey sitede güncelleştirme yüklemesini başlatmak için  
 
 Hiyerarşinizin en üst düzey sitesinde, Configuration Manager konsolunda, **Yönetim** çalışma alanına gidin ve **güncelleştirmeler ve bakım** düğümünü seçin. **Kullanılabilir**durumuna sahip bir güncelleştirme seçin ve ardından Şeritteki **güncelleştirme paketini yükler** ' i seçin.  
 
@@ -411,7 +411,7 @@ Aşağıdaki özellikler Configuration Manager en son sürümünde isteğe bağl
 - [Surface sürücü güncelleştirmeleri](../../../sum/get-started/configure-classifications-and-products.md) <!--1098490,82AD973A-7CDF-4B67-A665-72875D6E099A-->
 - [Bulut yönetimi ağ geçidi](../../clients/manage/cmg/plan-cloud-management-gateway.md) <!--1101764,DD043119-789C-4158-AC79-725E999F385A-->
 - [PFX oluştur](../../../protect/deploy-use/introduction-to-certificate-profiles.md) <!--1321368,CED76B79-929C-4C45-981F-B9BCA6D38A17-->
-- [Azure Log Analytics Bağlayıcısı](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
+- [Azure Log Analytics Bağlayıcısı](/azure/azure-monitor/platform/collect-sccm) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
 - [Windows Defender Exploit Guard ilkesi](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md) <!--1355468,8491D4C8-8484-46B8-BCD6-17DC2CADBAEB-->
 - [Windows 10 için VPN](../../../protect/deploy-use/vpn-profiles.md) <!--1283610,EDBEBA3D-3A4D-4465-84D9-D71EB811E7F6-->
 - [Küme durumunu algılayan bir koleksiyona hizmet verme (sunucu grupları)](../../../sum/deploy-use/service-a-server-group.md) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
@@ -426,7 +426,7 @@ Aşağıdaki özellikler Configuration Manager en son sürümünde isteğe bağl
 
 Geçerli dal, bir üretim ortamında erken test için yayın öncesi özellikleri içerir. Daha fazla bilgi için bkz. [yayın öncesi Özellikler](pre-release-features.md).
 
-## <a name="frequently-asked-questions"></a><a name="bkmk_faq"></a>Sık sorulan sorular
+## <a name="frequently-asked-questions"></a><a name="bkmk_faq"></a> Sık sorulan sorular
 
 ### <a name="why-dont-i-see-certain-updates-in-my-console"></a>Bazı güncelleştirmeleri konsolumda neden göremiyorum?
 
@@ -436,4 +436,4 @@ Microsoft bulut hizmeti ile başarılı bir eşitlemeden sonra konsolunuzda beli
 
     Eksik bir güncelleştirme için gerekli yapılandırmalara ve önkoşullara sahip olduğunu düşünüyorsanız, hizmet bağlantı noktasının çevrimiçi modda olduğunu doğrulayın. Ardından, bir denetimi zorlamak için **güncelleştirmeler ve bakım** düğümündeki **Güncelleştirmeleri denetle** seçeneğini kullanın. Hizmet bağlantı noktanız çevrimdışı modda ise, bulut hizmetiyle el ile eşitleme yapmak için hizmet bağlantı aracını kullanın.  
 
-- Hesabınız, Configuration Manager konsolundaki güncelleştirmeleri görüntülemek için doğru rol tabanlı yönetim izinlerine sahip değildir. Daha fazla bilgi için bkz. [güncelleştirmeleri yönetme izinleri](#assign-permissions-to-view-and-manage-updates-and-features).  
+- Hesabınız, Configuration Manager konsolundaki güncelleştirmeleri görüntülemek için doğru rol tabanlı yönetim izinlerine sahip değildir. Daha fazla bilgi için bkz. [güncelleştirmeleri yönetme izinleri](#assign-permissions-to-view-and-manage-updates-and-features).

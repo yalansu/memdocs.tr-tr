@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6a30fc55fb4129b8ea3493b76fd6871a2a62f881
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1e35a66c05a09455b3f2aded3d81daa2ccd5eff0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126748"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700257"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager 'de Windows 10 için destek  
 
@@ -70,7 +70,7 @@ Windows yaşam döngüsü hakkında daha fazla bilgi için bkz. [Windows yaşam 
 | ![Desteklenen ](media/green_check.png)  =  **Supported** destekleniyor  |
 | ![Desteklenmeyen desteklenmez ](media/Red_X.png)  =  **Not supported** |
 
-### <a name="windows-10-client-support-notes"></a><a name="bkmk_win10-notes"></a>Windows 10 istemci destek notları
+### <a name="windows-10-client-support-notes"></a><a name="bkmk_win10-notes"></a> Windows 10 istemci destek notları
 
 - Windows 10 yarı yıllık kanal sürümleri için destek aşağıdaki sürümleri içerir: Enterprise, Pro, eğitim ve Pro eğitim.  
 
@@ -78,7 +78,7 @@ Windows yaşam döngüsü hakkında daha fazla bilgi için bkz. [Windows yaşam 
 
 - Windows 10, sürüm 1909 için, işletim sistemi dağıtımı medyası sürümü 10.0.18362.418 olarak gösterir.
 
-### <a name="windows-10-on-arm64"></a><a name="bkmk_arm64"></a>ARM64 üzerinde Windows 10
+### <a name="windows-10-on-arm64"></a><a name="bkmk_arm64"></a> ARM64 üzerinde Windows 10
 
 Configuration Manager, Windows 10 ARM64 cihazlarında istemciyi destekler. İşletim sistemi dağıtımı desteklenmiyor.<!-- 1353704 -->
 
@@ -87,11 +87,11 @@ Sürüm 2002 ' den başlayarak,<!--5954175--> **tüm Windows 10 (ARM64)** platfo
 > [!NOTE]
 > En üst düzey **Windows 10** platformunu daha önce seçtiyseniz, bu eylem hem **tüm windows 10 (64-bit)** hem de **tüm Windows 10 (32-bit)**' i otomatik olarak seçti. Bu yeni platform otomatik olarak seçilmedi. **Tüm Windows 10 (ARM64)** eklemek istiyorsanız, listeden el ile seçin.
 
-### <a name="support-for-windows-insider"></a><a name="bkmk_WIfB-support"></a>Windows Insider desteği
+### <a name="support-for-windows-insider"></a><a name="bkmk_WIfB-support"></a> Windows Insider desteği
 
 Configuration Manager sürüm 1906 ' den başlayarak, [Windows Insider derlemelerini güncelleştirebilir ve hizmet](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB) verebilirsiniz. Bu özellik, müşterilerimize kolaylık sağlaması olarak sunulmaktadır. Bu işlevselliğin çalışması gerektiği sürece, için destek en iyi çabadır. Configuration Manager, bu işlevin işlevine başlanmasıyla ilgili bir düzeltme yayınmayabilir.  
 
-Windows Insider hakkında geri bildirim sağlamak için [Geri Bildirim Hub 'ını](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-feedback)kullanın.
+Windows Insider hakkında geri bildirim sağlamak için [Geri Bildirim Hub 'ını](/windows-insider/at-work-pro/wip-4-biz-feedback)kullanın.
 
 ## <a name="windows-10-adk"></a>Windows 10 ADK
 
@@ -99,7 +99,7 @@ Windows Insider hakkında geri bildirim sağlamak için [Geri Bildirim Hub 'ın�
 
 - [İşletim sistemi dağıtımı için altyapı gereksinimleri](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#windows-adk-for-windows-10)
 
-- [Windows 10 için Windows ADK’yi indirin](https://docs.microsoft.com/windows-hardware/get-started/adk-install)
+- [Windows 10 için Windows ADK’yi indirin](/windows-hardware/get-started/adk-install)
 
     > [!IMPORTANT]
     > Windows 10 sürüm 1809 ' den itibaren, Windows PE ayrı bir yükleyicidir. Aksi takdirde işlevsel farklılık yoktur.
@@ -118,11 +118,11 @@ Aşağıdaki tabloda, farklı Configuration Manager sürümleriyle kullanabilece
 
 |Anahtar|
 |--|
-| ![Desteklenen ](media/green_check.png)  =  **Supported** destekleniyor <br/> Bu tabloda yalnızca Configuration Manager sürümüyle ilgili olarak Windows ADK desteklenebilirliği gösterilmektedir. Microsoft, dağıttığınız Windows sürümüyle eşleşen Windows ADK kullanılmasını önerir. En son Windows 10 sürümünü dağıttığınızda en son Windows ADK sürümünü kullanın. En son Windows ADK sürümü, Windows 8.1 gibi eski işletim sistemi sürümlerinin dağıtımını destekleyebilir.<!-- SCCMDocs issue 1229 --> Windows ADK bileşeni desteklenebilirliği hakkında daha fazla bilgi için bkz. [DISM desteklenen platformlar](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) ve [USMT gereksinimleri](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
+| ![Desteklenen ](media/green_check.png)  =  **Supported** destekleniyor <br/> Bu tabloda yalnızca Configuration Manager sürümüyle ilgili olarak Windows ADK desteklenebilirliği gösterilmektedir. Microsoft, dağıttığınız Windows sürümüyle eşleşen Windows ADK kullanılmasını önerir. En son Windows 10 sürümünü dağıttığınızda en son Windows ADK sürümünü kullanın. En son Windows ADK sürümü, Windows 8.1 gibi eski işletim sistemi sürümlerinin dağıtımını destekleyebilir.<!-- SCCMDocs issue 1229 --> Windows ADK bileşeni desteklenebilirliği hakkında daha fazla bilgi için bkz. [DISM desteklenen platformlar](/windows-hardware/manufacture/desktop/dism-supported-platforms) ve [USMT gereksinimleri](/windows/deployment/usmt/usmt-requirements#bkmk-1). |
 | ![Geriye dönük uyumlu ](media/blue_compat.png)   =  **geriye dönük uyumlu** <br/> Bu bileşim test değildir ancak çalışmalıdır. Bilinen tüm sorunları veya uyarıları belgeliyoruz. |
 | ![Desteklenmeyen desteklenmez ](media/Red_X.png)  =  **Not supported** |
 
-### <a name="windows-10-adk-support-notes"></a><a name="bkmk_adk-notes"></a>Windows 10 ADK destek notları
+### <a name="windows-10-adk-support-notes"></a><a name="bkmk_adk-notes"></a> Windows 10 ADK destek notları
 
 - Configuration Manager yalnızca Windows 10 ADK 'nin x86 ve AMD64 bileşenlerini destekler. Bu, şu anda ARM veya ARM64 bileşenlerini desteklememektedir.
 

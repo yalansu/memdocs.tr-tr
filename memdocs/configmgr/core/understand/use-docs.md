@@ -10,12 +10,12 @@ ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 31f9b1cb083400abd36858a177e87804a916362c
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: aca3322c245fa22a7c87f30e328833d8a8a128bc
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746533"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699050"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>Configuration Manager belgelerini kullanma
 
@@ -30,7 +30,7 @@ Bu makalede Configuration Manager belge kitaplığı kullanımı için kaynaklar
 
 Ürünle ilgili genel yardım için bkz. [Yardım bulma](find-help.md).
 
-## <a name="search"></a><a name="bkmk_searchtips"></a>Aramanız
+## <a name="search"></a><a name="bkmk_searchtips"></a> Aramanız
 
 İhtiyacınız olan bilgileri bulmanıza yardımcı olması için aşağıdaki arama ipuçlarını kullanın:
 
@@ -59,9 +59,9 @@ Bu makalede Configuration Manager belge kitaplığı kullanımı için kaynaklar
 > [!TIP]
 > Configuration Manager sürüm 1902 ' den başlayarak, Configuration Manager konsolunun yeni **topluluk** çalışma alanında bir **belge** düğümü vardır. Bu düğüm Configuration Manager belge ve destek makaleleri hakkında güncel bilgiler içerir. Daha fazla bilgi için, bkz. [Configuration Manager konsolunu kullanma](../servers/manage/admin-console.md#bkmk_doc-dashboard).
 
-## <a name="feedback"></a><a name="bkmk_docfeedback"></a>Lerimi
+## <a name="feedback"></a><a name="bkmk_docfeedback"></a> Lerimi
 
-Alttaki geri bildirim bölümüne gitmek için herhangi bir makalenin sağ üst kısmındaki **geri bildirim** bağlantısını seçin. Bu bölüm, GitHub sorunlarıyla tümleştirilir. GitHub sorunlarıyla tümleştirme hakkında daha fazla bilgi için bkz. [docs platform blog gönderisi](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs).
+Alttaki geri bildirim bölümüne gitmek için herhangi bir makalenin sağ üst kısmındaki **geri bildirim** bağlantısını seçin. Bu bölüm, GitHub sorunlarıyla tümleştirilir. GitHub sorunlarıyla tümleştirme hakkında daha fazla bilgi için bkz. [docs platform blog gönderisi](/teamblog/a-new-feedback-system-is-coming-to-docs).
 
 Configuration Manager ürünün kendisi üzerinde geri bildirim paylaşmak için **ürün geri bildirimi**' ni seçin. Daha fazla bilgi için bkz. [ürün geri bildirimi](find-help.md#product-feedback).
 
@@ -81,7 +81,7 @@ Aşağıdaki geri bildirim türlerini göndermek için GitHub sorunlarını kull
 - Yerelleştirme: içerik çevirisi hakkında geri bildirim.
 - Arama altyapısı iyileştirmesi (SEO): içerik arama sorunları hakkında geri bildirim. Yorumlara arama altyapısını, anahtar sözcükleri ve hedef makaleyi dahil edin.
 
-Belge ile ilgili olmayan konularda bir sorun oluşturursanız Microsoft bu sorunları kapatır. Örneğin:
+Belge ile ilgili olmayan konularda bir sorun oluşturursanız Microsoft bu sorunları kapatır. Örnek:
 
 - [Ürün geri bildirimi](find-help.md#product-feedback)
 - [Ürün soruları](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)
@@ -89,15 +89,15 @@ Belge ile ilgili olmayan konularda bir sorun oluşturursanız Microsoft bu sorun
 
 Temel docs.microsoft.com platformunda geri bildirim paylaşmak için bkz. [docs geri bildirimi](https://aka.ms/sitefeedback). Platform, üst bilgi, içindekiler tablosu ve sağ menü gibi tüm sarmalayıcı bileşenlerini içerir. Ayrıca makalelerin, yazı tipi, uyarı kutuları ve sayfa bağlayıcıları gibi tarayıcıda nasıl işlenmesi.
 
-## <a name="notifications"></a><a name="bkmk_notifications"></a>Bildirimi
+## <a name="notifications"></a><a name="bkmk_notifications"></a> Bildirimi
 
 Belge kitaplığındaki içerik değiştiğinde bildirim almak için aşağıdaki adımları kullanın:
 
-1. Bir makale veya makale kümesi bulmak için [docs aramasını](https://docs.microsoft.com/search/index?scope=ConfigMgr) kullanın. Örneğin:
+1. Bir makale veya makale kümesi bulmak için [docs aramasını](/search/index?scope=ConfigMgr) kullanın. Örnek:
 
-    - ["Sorun giderme Için günlük dosyaları-Configuration Manager"](https://docs.microsoft.com/search/index?search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22&scope=ConfigMgr) başlığına göre tek bir makaleyi arayın
+    - ["Sorun giderme Için günlük dosyaları-Configuration Manager"](/search/index?scope=ConfigMgr&search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22) başlığına göre tek bir makaleyi arayın
 
-    - [SQL](https://docs.microsoft.com/search/index?search=SQL&scope=ConfigMgr) hakkında herhangi bir makale arayın
+    - [SQL](/search/index?scope=ConfigMgr&search=SQL) hakkında herhangi bir makale arayın
 
 2. Sağ üst köşede **RSS** bağlantısını seçin.
 
@@ -106,9 +106,9 @@ Belge kitaplığındaki içerik değiştiğinde bildirim almak için aşağıdak
 > [!TIP]
 > Ayrıca, GitHub 'daki [Sccmdocs deposunu](https://github.com/MicrosoftDocs/SCCMdocs) **izleyebilirsiniz** . Bu yöntem birçok bildirim oluşturur. Ayrıca Microsoft tarafından kullanılan özel bir depodan değişiklik içermez.
 
-## <a name="contribute"></a><a name="bkmk_contribute"></a>Bulun
+## <a name="contribute"></a><a name="bkmk_contribute"></a> Bulun
 
-Configuration Manager belge kitaplığı, docs.microsoft.com üzerindeki içerikler, GitHub üzerinde açık kaynaklıdır. Bu kitaplık, topluluk katkılarını kabul eder ve teşvik eder. Kullanmaya başlama hakkında daha fazla bilgi için bkz. katkıda bulunan [Kılavuzu](https://docs.microsoft.com/contribute). Tek önkoşul, [GitHub hesabı](https://github.com/join)oluşturmaktır.
+Configuration Manager belge kitaplığı, docs.microsoft.com üzerindeki içerikler, GitHub üzerinde açık kaynaklıdır. Bu kitaplık, topluluk katkılarını kabul eder ve teşvik eder. Kullanmaya başlama hakkında daha fazla bilgi için bkz. katkıda bulunan [Kılavuzu](/contribute). Tek önkoşul, [GitHub hesabı](https://github.com/join)oluşturmaktır.
 
 ### <a name="basic-steps-to-contribute-to-sccmdocs"></a>SCCMdocs 'a katkıda bulunmak için temel adımlar
 
@@ -116,7 +116,7 @@ Configuration Manager belge kitaplığı, docs.microsoft.com üzerindeki içerik
 
 2. Kaynak dosyayı düzenlemek için kalem simgesini seçin.
 
-3. Markaşağı kaynağında değişiklik yapın. Daha fazla bilgi için bkz. [belgeleri yazmak Için Marku kullanma](https://docs.microsoft.com/contribute/markdown-reference).
+3. Markaşağı kaynağında değişiklik yapın. Daha fazla bilgi için bkz. [belgeleri yazmak Için Marku kullanma](/contribute/markdown-reference).
 
 4. Dosya değişikliğini öner bölümünde, *nelerin* değiştirildiğini açıklayan genel teslim açıklamasını girin. Ardından **Dosya değişikliğini öner**' i seçin.
 
@@ -148,7 +148,7 @@ Configuration Manager belgelerine katkıda bulunmak için aşağıdaki genel yö
 
 - Büyük çekme istekleri konusunda sürmeyin. Bunun yerine [bir sorun verin](#bkmk_docfeedback) ve bir tartışma başlatın. Daha sonra, büyük bir süre yatırmadan önce bir yönü kabul eteceğiz.
 
-- [Microsoft Stil Kılavuzu ' nu](https://aka.ms/MicrosoftStyle)okuyun. [Microsoft stili ve sesi Için en iyi 10 ipucunu](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)öğrenin.
+- [Microsoft Stil Kılavuzu ' nu](https://aka.ms/MicrosoftStyle)okuyun. [Microsoft stili ve sesi Için en iyi 10 ipucunu](/style-guide/top-10-tips-style-voice)öğrenin.
 
 - [Çekme isteği şablonunu](https://github.com/MicrosoftDocs/SCCMdocs/blob/master/PULL_REQUEST_TEMPLATE.md) , çalışmanızın başlangıç noktası olarak kullanın.
 
@@ -160,7 +160,7 @@ Configuration Manager belgelerine katkıda bulunmak için aşağıdaki genel yö
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Microsoft Uç Nokta Yöneticisi belgelerinin birleştirilmesi
 
-Intune ve Configuration Manager birleştirilmiş senaryoları daha iyi desteklemek için, belge kitaplıkları [Microsoft Endpoint Manager sitesinde](https://docs.microsoft.com/mem)birleştirilir. Intune belgeleri artık [docs.Microsoft.com/mem/inTune](https://docs.microsoft.com/mem/intune)' dir ve Configuration Manager belgeleri artık [docs.Microsoft.com/mem/ConfigMgr](https://docs.microsoft.com/mem/configmgr). Hala eski bir URL kullanıyorsanız, bu içeriği okumak için herhangi bir değişiklik yapmanıza gerek kalmaz, otomatik olarak yeniden yönlenmez.
+Intune ve Configuration Manager birleştirilmiş senaryoları daha iyi desteklemek için, belge kitaplıkları [Microsoft Endpoint Manager sitesinde](/mem)birleştirilir. Intune belgeleri artık [docs.Microsoft.com/mem/inTune](../../../intune/index.yml)' dir ve Configuration Manager belgeleri artık [docs.Microsoft.com/mem/ConfigMgr](../../index.yml). Hala eski bir URL kullanıyorsanız, bu içeriği okumak için herhangi bir değişiklik yapmanıza gerek kalmaz, otomatik olarak yeniden yönlenmez.
 
 Geribildirim sağlar veya makalelere katkıda bulunun, bazı değişiklikler yapmanız gerekir:
 

@@ -10,12 +10,12 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 176280452039fd42dfef1d63cfdbb48169cda545
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 17c22027ffc28f2e04e95b8223de27b8f26489fd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777033"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698495"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Configuration Manager kullanılan hesaplar
 
@@ -88,7 +88,7 @@ Configuration Manager, kullanıldıkları ve tüm gereksinimlerin kullanıldığ
   - [smsdbrole_WebPortal](#smsdbrole_webportal)
   - [smsschm_users](#smsschm_users)
 
-## <a name="windows-groups-that-configuration-manager-creates-and-uses"></a><a name="bkmk_groups"></a>Configuration Manager oluşturduğu ve kullandığı Windows grupları  
+## <a name="windows-groups-that-configuration-manager-creates-and-uses"></a><a name="bkmk_groups"></a> Configuration Manager oluşturduğu ve kullandığı Windows grupları  
 
 Configuration Manager otomatik olarak oluşturulur ve birçok durumda aşağıdaki Windows gruplarını otomatik olarak korur:  
 
@@ -96,7 +96,7 @@ Configuration Manager otomatik olarak oluşturulur ve birçok durumda aşağıda
 > Configuration Manager, etki alanı üyesi olan bir bilgisayarda bir grup oluşturduğunda, Grup bir yerel güvenlik grubudur. Bilgisayar bir etki alanı denetleyicisiyse, Grup bir etki alanı yerel grubudur. Bu grup türü, etki alanındaki tüm etki alanı denetleyicileri arasında paylaşılır.  
 
 
-### <a name="configuration-manager_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a>Yapılandırma Manager_CollectedFilesAccess
+### <a name="configuration-manager_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a> Yapılandırma Manager_CollectedFilesAccess
 
 Configuration Manager, yazılım envanteri tarafından toplanan dosyaları görüntülemeye erişim vermek için bu grubu kullanır.  
 
@@ -111,7 +111,7 @@ Bir siteyi kaldırdığınızda, bu grup otomatik olarak kaldırılmaz. Bir site
 Configuration Manager, Grup üyeliğini otomatik olarak yönetir. Üyelik, atanmış bir güvenlik rolünden **Koleksiyon** güvenliği sağlanabilir nesnesine **Toplanan Dosyaları Görüntüleme** izni verilen yönetici kullanıcıları içerir.
 
 #### <a name="permissions"></a>İzinler
-Varsayılan olarak, bu grubun site sunucusundaki şu klasörde **okuma** izni vardır:`C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`  
+Varsayılan olarak, bu grubun site sunucusundaki şu klasörde **okuma** izni vardır: `C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`  
 
 
 ### <a name="configuration-manager_dviewaccess"></a><a name="configmgr_dviewaccess"></a>Yapılandırma Manager_DViewAccess  
@@ -121,7 +121,7 @@ Bu grup, bir alt birincil sitenin site veritabanı sunucusunda veya veritabanı 
 Daha fazla bilgi için bkz. [siteler arasındaki veri aktarımları](data-transfers-between-sites.md).
 
 
-### <a name="configuration-manager-remote-control-users"></a><a name="configmgr_rcusers"></a>Uzaktan denetim kullanıcılarını Configuration Manager  
+### <a name="configuration-manager-remote-control-users"></a><a name="configmgr_rcusers"></a> Uzaktan denetim kullanıcılarını Configuration Manager  
 
 Configuration Manager uzak Araçlar, **Izin verilen görüntüleyiciler** listesinde ayarladığınız hesapları ve grupları depolamak için bu grubu kullanır. Site bu listeyi her bir istemciye atar.  
 
@@ -166,7 +166,7 @@ SMS yöneticileri grubu için hakları ve izinleri **WMI denetimi** MMC ek bile�
 Uzak bir Configuration Manager konsolu kullandığınızda, hem site sunucusu bilgisayarında hem de SMS sağlayıcısında **Uzaktan etkinleştirme** DCOM izinlerini yapılandırın. Bu hakları **SMS yöneticileri** grubuna verin. Bu eylem, bu hakları doğrudan kullanıcılara veya gruplara vermek yerine yönetimi basitleştirir. Daha fazla bilgi için bkz. [uzaktan Configuration Manager konsolları IÇIN DCOM Izinlerini yapılandırma](../../servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole). 
 
 
-### <a name="sms_sitesystemtositeserverconnection_mp_ltsitecode"></a><a name="bkmk_remotemp"></a>SMS_SiteSystemToSiteServerConnection_MP_ &lt; sitekodu\>  
+### <a name="sms_sitesystemtositeserverconnection_mp_ltsitecode"></a><a name="bkmk_remotemp"></a> SMS_SiteSystemToSiteServerConnection_MP_ &lt; sitekodu\>  
  
 Site sunucusundan uzakta olan yönetim noktaları, site veritabanına bağlanmak için bu grubu kullanır. Bu grup, site sunucusunda ve site veritabanındaki gelen kutusu klasörlerine bir yönetim noktası erişimi sağlar.  
 
@@ -182,7 +182,7 @@ Configuration Manager, Grup üyeliğini otomatik olarak yönetir. Varsayılan ol
 Varsayılan olarak, bu grubun site sunucusundaki şu klasörde **okuma**, **okuma & yürütme**ve **klasör içeriğini listeleme** izni vardır: `C:\Program Files\Microsoft Configuration Manager\inboxes` . Bu grup, yönetim noktasının istemci verilerini yazdığı **gelen kutularındaki**alt klasörlere **yazma** ek iznine sahiptir.
 
 
-### <a name="sms_sitesystemtositeserverconnection_smsprov_ltsitecode"></a><a name="bkmk_remoteprov"></a>SMS_SiteSystemToSiteServerConnection_SMSProv_ &lt; sitekodu\>  
+### <a name="sms_sitesystemtositeserverconnection_smsprov_ltsitecode"></a><a name="bkmk_remoteprov"></a> SMS_SiteSystemToSiteServerConnection_SMSProv_ &lt; sitekodu\>  
  
 Uzak SMS sağlayıcısı bilgisayarları, site sunucusuna bağlanmak için bu grubu kullanır.  
 
@@ -200,14 +200,14 @@ Varsayılan olarak, bu grubun site sunucusundaki şu klasörde **okuma**, **okum
 Bu grubun Ayrıca, aşağıdaki site sunucusundaki alt klasörlerde **okuma** izni vardır `C:\Program Files\Microsoft Configuration Manager\OSD\Bin` . 
 
 Ayrıca aşağıdaki alt klasörler için aşağıdaki izinlere sahiptir `C:\Program Files\Microsoft Configuration Manager\OSD\boot` :
-- **Okuyamaz**  
+- **Okuma**  
 - **& yürütmeyi oku**  
 - **Klasör içeriğini Listele**  
 - **Yazarken**  
 - **Değiştir**   
 
 
-### <a name="sms_sitesystemtositeserverconnection_stat_ltsitecode"></a><a name="bkmk_remotestat"></a>SMS_SiteSystemToSiteServerConnection_Stat_ &lt; sitekodu\>  
+### <a name="sms_sitesystemtositeserverconnection_stat_ltsitecode"></a><a name="bkmk_remotestat"></a> SMS_SiteSystemToSiteServerConnection_Stat_ &lt; sitekodu\>  
 
 Configuration Manager uzak site sistem bilgisayarları üzerindeki dosya gönderme Yöneticisi bileşeni, site sunucusuna bağlanmak için bu grubu kullanır.  
 
@@ -225,7 +225,7 @@ Varsayılan olarak, bu grubun site sunucusundaki şu klasörde ve alt klasörler
 Bu grup, site sunucusunda aşağıdaki klasöre **yazma** ve **değiştirme** ek izinlerine sahiptir: `C:\Program Files\Microsoft Configuration Manager\inboxes\statmgr.box` .
 
 
-### <a name="sms_sitetositeconnection_ltsitecode"></a><a name="bkmk_filerepl"></a>SMS_SiteToSiteConnection_ &lt; sitekodu\>  
+### <a name="sms_sitetositeconnection_ltsitecode"></a><a name="bkmk_filerepl"></a> SMS_SiteToSiteConnection_ &lt; sitekodu\>  
 Configuration Manager, bir hiyerarşideki siteler arasında dosya tabanlı çoğaltmayı etkinleştirmek için bu grubu kullanır. Bu siteye doğrudan dosya aktaran her bir uzak site için, bu grubun bir **dosya çoğaltma hesabı**olarak ayarlanmış hesapları vardır.  
 
 #### <a name="type-and-location"></a>Tür ve konum
@@ -241,7 +241,7 @@ Varsayılan olarak, bu grup aşağıdaki klasöre **tam denetime** sahiptir: `C:
 
 
 
-## <a name="accounts-that-configuration-manager-uses"></a><a name="bkmk_accounts"></a>Configuration Manager kullanılan hesaplar  
+## <a name="accounts-that-configuration-manager-uses"></a><a name="bkmk_accounts"></a> Configuration Manager kullanılan hesaplar  
 
 Configuration Manager için aşağıdaki hesapları ayarlayabilirsiniz.  
 
@@ -553,7 +553,7 @@ Birlikte bulunan dağıtım noktaları olan Configuration Manager 2007 dağıtı
 > [!NOTE]  
 > Kaynak site hesabı ve [kaynak site veritabanı hesabı](#source-site-database-account) , Configuration Manager konsolundaki **Yönetim** çalışma alanının **hesaplar** düğümünde **geçiş Yöneticisi** olarak tanımlanır.  
 
-Daha fazla bilgi için bkz. [hiyerarşiler arasında veri geçirme](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies).
+Daha fazla bilgi için bkz. [hiyerarşiler arasında veri geçirme](/sccm/core/migration/migrate-data-between-hierarchies).
 
 
 ### <a name="source-site-database-account"></a>Kaynak site veritabanı hesabı  
@@ -569,7 +569,7 @@ Configuration Manager (geçerli dal) bilgisayar hesabını kullanıyorsanız, a�
 > [!NOTE]  
 > Kaynak site hesabı ve [kaynak site veritabanı hesabı](#source-site-database-account) , Configuration Manager konsolundaki **Yönetim** çalışma alanının **hesaplar** düğümünde **geçiş Yöneticisi** olarak tanımlanır.  
 
-Daha fazla bilgi için bkz. [hiyerarşiler arasında veri geçirme](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies).
+Daha fazla bilgi için bkz. [hiyerarşiler arasında veri geçirme](/sccm/core/migration/migrate-data-between-hierarchies).
 
 
 ### <a name="task-sequence-domain-join-account"></a>Görev sırası etki alanına katılacak hesap 
@@ -620,7 +620,7 @@ Hesabı, görev dizisinde belirttiğiniz komut satırını çalıştırmak için
 > Komut satırı bilgisayarda yönetim erişimi gerektiriyorsa, görev dizisini çalıştıran tüm bilgisayarlarda yalnızca bu hesap için bir yerel yönetici hesabı oluşturmayı düşünün. Artık ihtiyaç kalmadığında hesabı silin.  
 
 
-## <a name="user-objects-that-configuration-manager-uses-in-sql"></a><a name="bkmk_sqlusers"></a>Configuration Manager SQL 'de kullanan kullanıcı nesneleri 
+## <a name="user-objects-that-configuration-manager-uses-in-sql"></a><a name="bkmk_sqlusers"></a> Configuration Manager SQL 'de kullanan kullanıcı nesneleri 
 <!--SCCMDocs issue #1160-->
 Configuration Manager, SQL 'de aşağıdaki kullanıcı nesnelerini otomatik olarak oluşturur ve korur.  Bu nesneler güvenlik/kullanıcılar altında Configuration Manager veritabanı içinde bulunur.  
 

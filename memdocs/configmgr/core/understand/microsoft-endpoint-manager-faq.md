@@ -10,12 +10,12 @@ ms.assetid: be276b34-e283-4386-8b45-5629e431c50d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63f6c7321301e5705c4188012ba53b50f4c37b57
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e0b59ffa73bb2c7524f2eed29326f238d856adef
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906027"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699322"
 ---
 # <a name="microsoft-endpoint-configuration-manager-faq"></a>Microsoft Endpoint Configuration Manager hakkında SSS
 
@@ -37,10 +37,10 @@ Microsoft Uç Nokta Yöneticisi, tüm cihazlarınızı yönetmek için tümleşi
 
 Aşağıdaki Microsoft yönetim çözümleri artık **Microsoft Endpoint Manager** markasının bir parçasıdır:
 
-- [Configuration Manager](https://docs.microsoft.com/configmgr)
-- [Intune](https://docs.microsoft.com/intune)
+- [Configuration Manager](/configmgr)
+- [Intune](/intune)
 - [Desktop Analytics](../../desktop-analytics/overview.md)
-- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- [Otomatik Pilot](/intune/enrollment/enrollment-autopilot)
 - [Cihaz yönetimi yönetici konsolundaki](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760) diğer özellikler
 
 Daha fazla bilgi için, Microsoft Kurumsal Başkan Yardımcısı Microsoft 365 atacan Anderson 'tan aşağıdaki gönderilere bakın:

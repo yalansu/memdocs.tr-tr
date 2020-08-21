@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 676ae288003b257802eea495c4101a95129eaf34
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 4bdfbabf27906eb8a79ec8ba24f51c3e176dc028
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251873"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700414"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Microsoft Uç Nokta Yöneticisi kiracı iliştirme: cihaz eşitleme ve cihaz eylemleri
 <!--3555758 live 3/4/2020-->
@@ -25,9 +25,9 @@ Microsoft Uç Nokta Yöneticisi, tüm cihazlarınızı yönetmek için tümleşi
 
 Configuration Manager sürüm 2002 ' den başlayarak, Configuration Manager cihazlarınızı bulut hizmetine yükleyebilir ve yönetim merkezindeki **cihazlar** dikey penceresinden eylemler gerçekleştirebilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-- Bu değişiklik uygulanırken oturum açmak için *genel yönetici* olan bir hesap. Daha fazla bilgi için bkz. [Azure Active Directory (Azure AD) yönetici rolleri](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
+- Bu değişiklik uygulanırken oturum açmak için *genel yönetici* olan bir hesap. Daha fazla bilgi için bkz. [Azure Active Directory (Azure AD) yönetici rolleri](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
    - Ekleme, Azure AD kiracınızda üçüncü taraf bir uygulama ve birinci taraf hizmet sorumlusu oluşturur.
 - Azure genel bulut ortamı.
 - Cihaz eylemlerini tetikleyen Kullanıcı hesapları aşağıdaki önkoşullara sahiptir:
@@ -118,13 +118,13 @@ Kiracı iliştirme 'ye ekleme sırasında önceden oluşturulmuş bir uygulaman�
    - CmCollectionData. Write
 
 - Microsoft Graph izinleri:
-   - Directory. Read. tüm [uygulamalar izni](https://docs.microsoft.com/graph/permissions-reference#application-permissions)
-   - Directory. Read. tüm [temsilci Dizin izni](https://docs.microsoft.com/graph/permissions-reference#directory-permissions)
+   - Directory. Read. tüm [uygulamalar izni](/graph/permissions-reference#application-permissions)
+   - Directory. Read. tüm [temsilci Dizin izni](/graph/permissions-reference#directory-permissions)
 
-- Azure AD uygulaması için **kiracı için yönetici onayı izninin** seçildiğinden emin olun. Daha fazla bilgi için bkz. [uygulama kayıtları yönetici onayı verme](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent).
+- Azure AD uygulaması için **kiracı için yönetici onayı izninin** seçildiğinden emin olun. Daha fazla bilgi için bkz. [uygulama kayıtları yönetici onayı verme](/azure/active-directory/manage-apps/grant-admin-consent).
 
 - İçeri aktarılan uygulamanın aşağıdaki şekilde yapılandırılması gerekir:
-   - **Yalnızca bu kuruluş dizinindeki hesaplar**için kaydedilir. Daha fazla bilgi için bkz. [uygulamanıza kimlerin erişebileceğini değiştirme](https://docs.microsoft.com/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
+   - **Yalnızca bu kuruluş dizinindeki hesaplar**için kaydedilir. Daha fazla bilgi için bkz. [uygulamanıza kimlerin erişebileceğini değiştirme](/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
    -  Geçerli bir uygulama KIMLIĞI URI 'SI ve gizli anahtarı vardır
 
 

@@ -10,12 +10,12 @@ ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bfe2d395187f8af86e2d09156a45f7398a5bc670
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 474d59ec22d1edaf8e662298e90555e6772d302b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720684"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698805"
 ---
 # <a name="how-to-bulk-enroll-devices-with-on-premises-mdm-in-configuration-manager"></a>Configuration Manager Şirket içi MDM ile cihazları toplu kaydetme
 
@@ -23,7 +23,7 @@ ms.locfileid: "81720684"
 
 Configuration Manager Şirket içi mobil cihaz yönetimi (MDM) içindeki toplu kayıt, cihazları kaydetmek için otomatikleştirilmiş bir yöntemdir. Diğer yöntem, kullanıcıların cihazı kaydetmek için kimlik bilgilerini girmesini gerektiren Kullanıcı kaydı ' dır. Toplu kayıt, kayıt sırasında cihazın kimliğini doğrulamak için bir kayıt paketi kullanır. Paket, kaydı desteklemek için sertifika ve Wi-Fi profilleri de içerebilen bir. ppkg dosyasıdır.
 
-## <a name="create-a-certificate-profile"></a><a name="bkmk_createCert"></a>Sertifika profili oluşturma
+## <a name="create-a-certificate-profile"></a><a name="bkmk_createCert"></a> Sertifika profili oluşturma
 
 Cihaza bir güvenilen kök sertifikayı otomatik olarak yüklemek için bir sertifika profili ekleyin. Bu kök sertifika, şirket içi MDM için gereken cihazlar ve site sistem rolleri arasındaki güvenilir iletişim için gereklidir.
 
@@ -31,7 +31,7 @@ Siteyi şirket içi MDM için hazırlarken, güvenilen kök sertifikayı dışar
 
 Sertifika profili oluşturmak için, dışarıya aktarılmış sertifikayı kullanın. Daha fazla bilgi için bkz. [sertifika profilleri oluşturma](../../protect/deploy-use/create-certificate-profiles.md).
 
-## <a name="create-a-wi-fi-profile"></a><a name="CreateWifi"></a>Wi-Fi profili oluşturma
+## <a name="create-a-wi-fi-profile"></a><a name="CreateWifi"></a> Wi-Fi profili oluşturma
 
 Toplu kayıt paketinin başka bir bileşeni bir Wi-Fi profilidir. Bu profil, cihazın kaydı desteklemesi için ağ bağlantısına sahip olduğundan emin olabilir.
 
@@ -59,7 +59,7 @@ Configuration Manager, Wi-Fi profilinde ara sunucu bilgileri için bir ayara sah
 
 - Windows görüntü ve yapılandırma Tasarımcısı 'nı (ICD) kullanarak ikinci bir paket oluşturun ve toplu kayıt paketiyle birlikte dağıtın.
 
-## <a name="create-an-enrollment-profile"></a><a name="bkmk_createEnroll"></a>Kayıt profili oluşturma
+## <a name="create-an-enrollment-profile"></a><a name="bkmk_createEnroll"></a> Kayıt profili oluşturma
 
 Kayıt profili, cihaz kaydı için gerekli ayarları belirtmenize olanak tanır. Bu ayarlar, bir [sertifika profili](#bkmk_createCert) ve bir [Wi-Fi profili](#CreateWifi)içerir.
 
@@ -88,11 +88,11 @@ Kayıt profili, cihaz kaydı için gerekli ayarları belirtmenize olanak tanır.
 
 1. Sihirbazı tamamlayın.
 
-## <a name="create-an-enrollment-package"></a><a name="bkmk_createPpkg"></a>Kayıt paketi oluşturma
+## <a name="create-an-enrollment-package"></a><a name="bkmk_createPpkg"></a> Kayıt paketi oluşturma
 
 Kayıt paketi (ppkg), şirket içi MDM için cihazları toplu kaydetmek üzere kullandığınız dosyadır. Bu dosyayı Configuration Manager oluşturun. Windows ICD ile benzer türlerde paketler oluşturabileceğiniz gibi, şirket içi MDM için cihazları kaydetmek üzere yalnızca Configuration Manager içinde oluşturduğunuz paketler kullanılabilir. Windows ICD ile oluşturduğunuz bir paket, yalnızca kayıt için gerekli Kullanıcı asıl adını (UPN) sağlayabilir, gerçek kayıt işlemini başlatamaz.
 
-Kayıt paketi oluşturma işlemi, Windows 10 için Windows Değerlendirme ve Dağıtım Araç Seti’ni (ADK) gerektirir. Configuration Manager konsolunu çalıştıran bilgisayarda, Windows ADK 'nin en son sürümünü yükler. **Görüntüleme ve yapılandırma Tasarımcısı (ICD)** özelliğini ve tüm bağımlılıkları seçin. (Bu sürümün, Configuration Manager sitesi tarafından işletim sistemi dağıtımı için kullanılan sürümle eşleşmesi gerekmez.) Daha fazla bilgi için bkz. [Windows 10 Için WINDOWS ADK 'Yi indirme](https://docs.microsoft.com/windows-hardware/get-started/adk-install).
+Kayıt paketi oluşturma işlemi, Windows 10 için Windows Değerlendirme ve Dağıtım Araç Seti’ni (ADK) gerektirir. Configuration Manager konsolunu çalıştıran bilgisayarda, Windows ADK 'nin en son sürümünü yükler. **Görüntüleme ve yapılandırma Tasarımcısı (ICD)** özelliğini ve tüm bağımlılıkları seçin. (Bu sürümün, Configuration Manager sitesi tarafından işletim sistemi dağıtımı için kullanılan sürümle eşleşmesi gerekmez.) Daha fazla bilgi için bkz. [Windows 10 Için WINDOWS ADK 'Yi indirme](/windows-hardware/get-started/adk-install).
 
 1. Configuration Manager konsolunda **varlıklar ve uyum** çalışma alanına gidin, **şirkete ait tüm cihazlar**' ı genişletin, **Windows**' u genişletin ve **kayıt profilleri** düğümünü seçin.
 
@@ -116,7 +116,7 @@ Configuration Manager geçerli kayıt paketlerini izler. Konsolunda, **kayıt pr
 > [!TIP]
 > Configuration Manager konsolundan bir kayıt paketini kaldırırsanız, cihazları kaydetmek için kullanamazsınız. Başkalarının toplu kayıt için kullanmasını istemediğiniz kayıt paketlerini yönetmek için bu yöntemi kullanın.
 
-## <a name="bulk-enroll-a-device"></a><a name="bkmk_getPpkg"></a>Bir cihazı toplu kaydetme
+## <a name="bulk-enroll-a-device"></a><a name="bkmk_getPpkg"></a> Bir cihazı toplu kaydetme
 
 Cihazın, kullanıma hazır deneyim (OOBE) işleminden önce veya sonra cihazları kaydetmek için paketi kullanabilirsiniz. Kayıt paketi, özgün ekipman üreticisi (OEM) sağlama paketinin bir parçası olarak da dahil edilebilir.
 
@@ -144,7 +144,7 @@ Toplu kayıt için paketi kullanmak için cihaza fiziksel olarak teslim etmeniz 
 
 Kayıt işlemi başlar.
 
-## <a name="verify-enrollment"></a><a name="bkmk_verifyEnroll"></a>Kaydı doğrula
+## <a name="verify-enrollment"></a><a name="bkmk_verifyEnroll"></a> Kaydı doğrula
 
 ### <a name="verify-bulk-enrollment-on-the-device"></a>Cihazdaki toplu kaydı doğrulama
 

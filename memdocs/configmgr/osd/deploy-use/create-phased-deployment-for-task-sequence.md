@@ -10,12 +10,12 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 36da7d35b75d2675fc775ed46e49e8adf2e6af3f
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: d9dcefe942309ad57c823ec669b7aa6630974fa8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591744"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698036"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>Configuration Manager aşamalı dağıtımlar oluşturma
 
@@ -122,7 +122,7 @@ Include a timeline diagram
 6. **Özet** sekmesinde seçimlerinizi onaylayın ve sonra Sihirbazı tamamladıktan sonra **İleri** ' yi seçin.  
 
 > [!NOTE]
-> 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager üründe ve belgelerde eski adı görmeye devam edebilirsiniz.  
+> 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager üründe ve belgelerde eski adı görmeye devam edebilirsiniz.  
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a> El ile yapılandırılan aşamalarla aşamalı bir dağıtım oluşturma
 <!--1358148--> 

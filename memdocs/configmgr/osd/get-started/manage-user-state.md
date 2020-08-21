@@ -10,12 +10,12 @@ ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a720c68fc705187dedb6ff04fc3898a8b0b21c8
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b4975f67c84c2354d13457981ac90ba4481d292f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124372"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697594"
 ---
 # <a name="manage-user-state-in-configuration-manager"></a>Configuration Manager Kullanıcı durumunu yönetme
 
@@ -27,11 +27,11 @@ Geçerli işletim sisteminin kullanıcı durumunu tutmak istediğiniz işletim s
 
 - Kullanıcı durumunu yakalayıp aynı bilgisayara geri yüklemek istediğiniz güncelleştirme dağıtımları.  
 
-Configuration Manager, işletim sistemi yüklemesi tamamlandıktan sonra bir kaynak bilgisayardan hedef bilgisayara Kullanıcı durumu verilerinin geçişini yönetmek için Kullanıcı Durumu Taşıma Aracı (USMT) 10,0 kullanır. USMT 10.0’a yönelik genel geçiş senaryoları hakkında daha fazla bilgi için bkz.  [Genel Geçiş Senaryoları](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios).
+Configuration Manager, işletim sistemi yüklemesi tamamlandıktan sonra bir kaynak bilgisayardan hedef bilgisayara Kullanıcı durumu verilerinin geçişini yönetmek için Kullanıcı Durumu Taşıma Aracı (USMT) 10,0 kullanır. USMT 10.0’a yönelik genel geçiş senaryoları hakkında daha fazla bilgi için bkz.  [Genel Geçiş Senaryoları](/windows/deployment/usmt/usmt-common-migration-scenarios).
 
 Kullanıcı verilerini yakalamanıza ve geri yüklemenize yardımcı olması için aşağıdaki bölümleri kullanın.
 
-## <a name="store-user-state-data"></a><a name="BKMK_StoringUserData"></a>Kullanıcı durumu verilerini depolama
+## <a name="store-user-state-data"></a><a name="BKMK_StoringUserData"></a> Kullanıcı durumu verilerini depolama
 
  Kullanıcı durumunu yakaladığınızda, kullanıcı durumu verilerini hedef bilgisayarda veya bir durum geçiş noktasında depolayabilirsiniz. Kullanıcı durumunu bir Kullanıcı durumu geçiş noktasında depolamak için durum geçiş noktası site sistemi rolünü barındıran bir Configuration Manager site sistem sunucusu kullanmanız gerekir. Kullanıcı durumunu hedef bilgisayarda depolamak için, görev dizinizi, bağlantıları kullanarak verileri yerel olarak depolayacak şekilde yapılandırmanız gerekir.
 
@@ -67,7 +67,7 @@ Kullanıcı durumu bilgisi yakalandığında, bilgiler aşağıdaki yöntemlerin
 
     - Yakalama veya geri yükleme eyleminin tamamlanduğunu durum geçiş noktasına bildirmek için[Release State Store](../understand/task-sequence-steps.md#BKMK_ReleaseStateStore) .  
 
-### <a name="store-user-data-locally"></a><a name="BKMK_UserDataDestination"></a>Kullanıcı verilerini yerel olarak depolama
+### <a name="store-user-data-locally"></a><a name="BKMK_UserDataDestination"></a> Kullanıcı verilerini yerel olarak depolama
 
  Kullanıcı durumu verilerini yerel olarak depolamak için şunları yapmanız gerekir:  
 
@@ -129,4 +129,4 @@ Bir işletim sistemini yeni donanıma yüklediğinizde ve kullanıcı veri ayarl
 
 ## <a name="restore-user-state-data-when-an-operating-system-deployment-fails"></a><a name="BKMK_MigrationFails"></a> İşletim sistemi dağıtımı başarısız olduğunda kullanıcı durum verilerini geri yükleme
 
-İşletim sistemi dağıtımı başarısız olursa, dağıtım işlemi sırasında yakalanan kullanıcı durumu verilerini almak için USMT 10.0 LoadState özelliğini kullanın. Bu, bir durum geçiş noktasında depolanan verileri veya hedef bilgisayarda yerel olarak kayıtlı verileri içerir. Bu USMT özelliği hakkında daha fazla bilgi için, bkz. [LoadState Sözdizimi](https://docs.microsoft.com/windows/deployment/usmt/usmt-loadstate-syntax).
+İşletim sistemi dağıtımı başarısız olursa, dağıtım işlemi sırasında yakalanan kullanıcı durumu verilerini almak için USMT 10.0 LoadState özelliğini kullanın. Bu, bir durum geçiş noktasında depolanan verileri veya hedef bilgisayarda yerel olarak kayıtlı verileri içerir. Bu USMT özelliği hakkında daha fazla bilgi için, bkz. [LoadState Sözdizimi](/windows/deployment/usmt/usmt-loadstate-syntax).

@@ -2,7 +2,7 @@
 title: Sürüm 2006’daki yenilikler
 titleSuffix: Configuration Manager
 description: Geçerli dalın Configuration Manager sürüm 2006 ' de tanıtılan değişiklikler ve yeni yetenekler hakkında ayrıntılı bilgi alın.
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f624a207b5e9afded9b86312d1608a35005355f6
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: bdfb122173c913274373f41c3932f1ac094ec953
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179350"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700291"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 2006 ' deki yenilikler
 
@@ -27,13 +27,10 @@ Bu güncelleştirmeyi yüklemek için her zaman en son denetim listesini gözden
 
 Yeni Configuration Manager özelliklerinden tam olarak yararlanmak için, siteyi güncelleştirdikten sonra istemcileri en son sürüme de güncelleştirin. Site ve konsolu güncelleştirdiğinizde Configuration Manager konsolunda yeni işlevsellik göründüğünde, istemci sürümü de en son olana kadar, tüm senaryo işlevsel değildir.
 
-<!-- commenting this for now as it doesn't work 7422960
 > [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
- -->
+> Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
 
-## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a>Microsoft Uç Nokta Yöneticisi kiracı iliştirme
+## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Microsoft Uç Nokta Yöneticisi kiracı iliştirme
 
 ### <a name="install-applications-from-the-admin-center"></a>Yönetim merkezinden uygulama yüklemesi
 <!--7518897, 6024389-->
@@ -43,7 +40,7 @@ Microsoft Endpoint Manager yönetim merkezinden bir kiracıya bağlı cihaz içi
 <!--6479246-->
 Yeni bir ekleme sırasında, yönetici Kiracı ekleme sırasında daha önce oluşturulmuş bir uygulama belirtebilir. Daha fazla bilgi için bkz. [Microsoft Endpoint Manager kiracı iliştirme: cihaz eşitleme ve cihaz eylemleri](../../../tenant-attach/device-sync-actions.md#bkmk_aad_app).
 
-## <a name="endpoint-analytics"></a><a name="bkmk_ea"></a>Uç nokta Analizi
+## <a name="endpoint-analytics"></a><a name="bkmk_ea"></a> Uç nokta Analizi
 
 ### <a name="endpoint-analytics-data-collection-enabled-by-default"></a>Varsayılan olarak etkinleştirilen Endpoint Analytics veri koleksiyonu
 <!--7065447, 7741111-->
@@ -54,7 +51,7 @@ Yeni bir ekleme sırasında, yönetici Kiracı ekleme sırasında daha önce olu
 
 Daha fazla bilgi için bkz. [Configuration Manager Endpoint Analytics veri toplamayı yapılandırma](../../../../analytics/enroll-configmgr.md#bkmk_cm_upload).
 
-## <a name="site-infrastructure"></a><a name="bkmk_infra"></a>Site altyapısı
+## <a name="site-infrastructure"></a><a name="bkmk_infra"></a> Site altyapısı
 
 ### <a name="vpn-boundary-type"></a>VPN sınır türü
 
@@ -90,7 +87,15 @@ Configuration Manager Windows sanal masaüstü desteği hakkında daha fazla bil
 <!--7102873-->
 Intranet istemcileri artık bir sınır grubuna atandığında bir CMG yazılım güncelleştirme noktasına erişebilir. Daha fazla bilgi için bkz. [sınır gruplarını yapılandırma](../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup).
 
-## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a>Buluta bağlı yönetim
+## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a> Buluta bağlı yönetim
+
+### <a name="use-the-company-portal-app-on-co-managed-devices"></a>Ortak yönetilen cihazlarda Şirket Portalı uygulamasını kullanma
+
+<!--CMADO-3601237,INADO-4297660-->
+
+Şirket Portalı artık Microsoft Endpoint Manager için platformlar arası uygulama portalı deneyimidir. Ortak yönetilen cihazları Şirket Portalı de kullanacak şekilde yapılandırarak tüm cihazlarda tutarlı bir kullanıcı deneyimi sağlayabilirsiniz.
+
+Daha fazla bilgi için bkz. [ortak yönetilen cihazlarda şirket portalı uygulamasını kullanma](../../../comanage/company-portal.md).
 
 ### <a name="use-microsoft-azure-china-21vianet-for-co-management"></a>Ortak yönetim için Microsoft Azure Çin 21Vianet kullanın
 <!--7133238-->
@@ -121,14 +126,14 @@ Windows Tanılama verilerine yönelik masaüstü Analizi gereksinimleriyle daha 
 |---------|---------|
 | Gerekli | Temel |
 | İsteğe bağlı (sınırlı) | Gelişmiş (sınırlı) |
-| Yok | Gelişmiş |
+| N/A | Gelişmiş |
 | İsteğe Bağlı | Tam |
 
 Daha önce **Gelişmiş** düzeyde herhangi bir cihaz yapılandırdıysanız, sürüm 2006 ' e yükselttiğinizde bu kullanıcılar **isteğe bağlı (sınırlı)** olarak döndürülür. Böylece daha az veri Microsoft 'a gönderilir. Bu değişiklik, masaüstü analizinden gördüklerinizi etkilemez.
 
 Daha fazla bilgi için bkz. [Masaüstü analizi için veri paylaşımını etkinleştirme](../../../desktop-analytics/enable-data-sharing.md).
 
-## <a name="real-time-management"></a><a name="bkmk_real"></a>Gerçek zamanlı yönetim
+## <a name="real-time-management"></a><a name="bkmk_real"></a> Gerçek zamanlı yönetim
 
 ### <a name="improvements-to-cmpivot"></a>CMPivot geliştirmeleri
 <!--6518631-->
@@ -140,7 +145,7 @@ CMPivot ' de aşağıdaki iyileştirmeler yapılmıştır:
 
 Daha fazla bilgi için bkz. [sürüm 2006 ' den başlayarak CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_2006).
 
-## <a name="client-management"></a><a name="bkmk_client"></a>İstemci yönetimi
+## <a name="client-management"></a><a name="bkmk_client"></a> İstemci yönetimi
 
 ### <a name="install-and-upgrade-the-client-on-a-metered-connection"></a>Tarifeli bir bağlantıda istemciyi yükleyip yükseltin
 
@@ -163,7 +168,7 @@ Configuration Manager, cihaz yeniden başlatmaları yönetmek ve bildirimleri ye
 
 Daha fazla bilgi için bkz. [cihaz yeniden başlatma bildirimleri](../../clients/deploy/device-restart-notifications.md).
 
-## <a name="application-management"></a><a name="bkmk_app"></a>Uygulama yönetimi
+## <a name="application-management"></a><a name="bkmk_app"></a> Uygulama yönetimi
 
 ### <a name="improvements-to-available-apps-via-cmg"></a>CMG aracılığıyla kullanılabilir uygulamalarda iyileştirmeler
 
@@ -182,7 +187,7 @@ Office 365 ProPlus, 21 Nisan 2020 tarihinde Kurumsal Microsoft 365 uygulamalar o
 
 Daha fazla bilgi için bkz. [Microsoft 365 Apps kanal adları](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel) ve [Microsoft 365 uygulamalar hazır olma panosu](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash).
 
-## <a name="os-deployment"></a><a name="bkmk_osd"></a>İşletim sistemi dağıtımı
+## <a name="os-deployment"></a><a name="bkmk_osd"></a> İşletim sistemi dağıtımı
 
 ### <a name="task-sequence-media-support-for-cloud-based-content"></a>Bulut tabanlı içerik için görev dizisi medya desteği
 
@@ -264,7 +269,7 @@ Artık, merkezi yönetim sitesinde BitLocker Self-Service Portal ve yönetim ve 
 
 Daha fazla bilgi için bkz. [BitLocker portallarını ayarlama](../../../protect/deploy-use/bitlocker/setup-websites.md).
 
-## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a>Configuration Manager konsolu
+## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a> Configuration Manager konsolu
 
 ### <a name="community-hub-and-github"></a>Topluluk hub 'ı ve GitHub
 <!--3555935, 3555936, deep link included 4224406-->
@@ -275,7 +280,7 @@ BT Yöneticisi topluluğu, yıllar boyunca çok fazla bilgi geliştirmiştir. Ko
 
 Daha fazla bilgi için bkz. [Community hub ve GitHub](../../servers/manage/community-hub.md).
 
-### <a name="direct-links-to-community-hub-items"></a><a name="bkmk_deeplink"></a>Topluluk hub 'ı öğelerine doğrudan bağlantılar
+### <a name="direct-links-to-community-hub-items"></a><a name="bkmk_deeplink"></a> Topluluk hub 'ı öğelerine doğrudan bağlantılar
 <!--4224406-->
 Doğrudan bağlantı ile Configuration Manager konsolu topluluk hub düğümündeki öğelere kolayca gidebilirsiniz ve başvurabilirsiniz. Daha fazla bilgi için bkz. [topluluk hub öğelerine doğrudan bağlantılar](../../servers/manage/community-hub.md#bkmk_deeplink).
 
@@ -306,7 +311,7 @@ Daha fazla bilgi için bkz. [ınstall Power BI Sample Reports](../../servers/man
 ## <a name="bkmk_comgmt"></a> Co-management
 -->
 
-## <a name="deprecated-operating-systems"></a><a name="bkmk_deprecated"></a>Kullanım dışı işletim sistemleri
+## <a name="deprecated-operating-systems"></a><a name="bkmk_deprecated"></a> Kullanım dışı işletim sistemleri
 
 [Kaldırılan ve kullanımdan kaldırılan öğelerde](deprecated/removed-and-deprecated.md)uygulanmadan önce yapılan değişiklikler hakkında bilgi edinin.
 
@@ -324,7 +329,7 @@ Starting with this version, the following features are no longer [pre-release](.
 ### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
 -->
 
-Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell sürüm 2006 sürüm notları](https://docs.microsoft.com/powershell/sccm/2006-release-notes?view=sccm-ps).
+Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell sürüm 2006 sürüm notları](/powershell/sccm/2006-release-notes?view=sccm-ps).
 
 Yönetim hizmeti REST API değişiklikler hakkında daha fazla bilgi için bkz. [Yönetim hizmeti sürüm notları](../../../develop/adminservice/release-notes.md#bkmk_2006).
 

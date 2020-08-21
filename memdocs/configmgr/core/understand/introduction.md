@@ -10,12 +10,12 @@ ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13c3be302ecefad36d7be8617a4cc9354db1b685
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 99e02c190e02a5e017fe2c3f41682ad1624b6051
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906067"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699356"
 ---
 # <a name="what-is-configuration-manager"></a>Configuration Manager nedir?
 
@@ -29,10 +29,10 @@ Microsoft Uç Nokta Yöneticisi, tüm cihazlarınızı yönetmek için tümleşi
 
 Aşağıdaki Microsoft yönetim çözümleri artık **Microsoft Endpoint Manager** markasının bir parçasıdır:
 
-- [Configuration Manager](https://docs.microsoft.com/configmgr)
-- [Intune](https://docs.microsoft.com/intune)
+- [Configuration Manager](/configmgr)
+- [Intune](/intune)
 - [Desktop Analytics](../../desktop-analytics/overview.md)
-- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- [Otomatik Pilot](/intune/enrollment/enrollment-autopilot)
 - [Cihaz yönetimi yönetici konsolundaki](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760) diğer özellikler
 
 Daha fazla bilgi için bkz. [Microsoft uç nokta CONFIGURATION Manager SSS](microsoft-endpoint-manager-faq.md).
@@ -85,7 +85,7 @@ Configuration Manager konsolunu ek bilgisayarlara yükleyebilir ve Configuration
 
 Daha fazla bilgi için bkz. [Configuration Manager konsolunu kullanma](../servers/manage/admin-console.md).
 
-### <a name="software-center"></a><a name="BKMK_ApplicationCatalog"></a>Yazılım Merkezi
+### <a name="software-center"></a><a name="BKMK_ApplicationCatalog"></a> Yazılım Merkezi
 
 **Yazılım Merkezi** , Configuration Manager Istemcisini bir Windows cihazına yüklediğinizde yüklenen bir uygulamadır. Kullanıcılar, dağıttığınız yazılımı istemek ve yüklemek için yazılım merkezi 'ni kullanır. Software Center, kullanıcıların aşağıdaki işlemleri yapmanızı sağlar:  
 
@@ -110,4 +110,4 @@ Temel kavramlara alışdığınızda, Configuration Manager başarıyla dağıtm
 - [Configuration Manager özellikleri ve yetenekleri](../plan-design/changes/features-and-capabilities.md)  
 - [Cihaz yönetim çözümü seçme](../plan-design/choose-a-device-management-solution.md)  
 - [Kendi laboratuvar ortamınızı oluşturarak Configuration Manager değerlendirin](../get-started/set-up-your-lab.md)
-- [Configuration Manager kullanmaya yönelik yardım bulun](find-help.md)  
+- [Configuration Manager kullanmaya yönelik yardım bulun](find-help.md)

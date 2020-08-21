@@ -15,16 +15,16 @@ ms.assetid: ''
 searchScope:
 - User help
 ROBOTS: ''
-ms.custom: intune-enduser
+ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 5f32af94b179da42a268d4942122a3cab2faf6ff
-ms.sourcegitcommit: 21b6c0c054e5371f32d611a2411ccd166b0e03bc
+ms.openlocfilehash: 46eb7c5bd691c17747baba926e81b8bd503108b4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 08/20/2020
-ms.locfileid: "88643763"
+ms.locfileid: "88700744"
 ---
-# <a name="install-mobile-threat-defense-app"></a>Mobile Threat Defense uygulamasını yükler  
+# <a name="install-mobile-threat-defense-app"></a>Mobil tehdit savunması uygulamasını yükleme  
 
 > [!TIP]
 > Pazardaki çeşitli MTD uygulamaları vardır. Kuruluşunuzun hangisini kullanacağınızı söylemiş olması gerekir. Bir MTD uygulaması yüklemek isteyip istemediğiniz sorulursa uygulamayı ayarlamaya veya yüklemeye hemen yönlendirilmezseniz yardım için BT destek sorumlunuza başvurun.  

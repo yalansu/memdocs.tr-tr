@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9f0ed1d5913154d90242d1aa2a47efbcf7d22282
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 2dd722ddcf0e5ea6e944a76366204ac83ede05ec
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943799"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698965"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Configuration Manager için önkoşul denetimleri listesi
 
@@ -161,7 +161,7 @@ Genişletmeyi planladığınız birincil site tek başına bir birincil sitedir.
 
 Windows güvenlik duvarı devre dışı bırakıldı veya SQL Server için ilgili bir Windows Güvenlik Duvarı özel durumu var.
 
-Sqlservr. exe ' ye veya gerekli TCP bağlantı noktalarına uzaktan erişilmesine izin verin. Varsayılan olarak, SQL Server TCP bağlantı noktası 1433 ' i dinler ve SQL Server Hizmet Aracısı (SSB) TCP bağlantı noktası 4022 ' i kullanır.
+Sqlservr.exe veya gerekli TCP bağlantı noktalarına uzaktan erişilmesine izin verin. Varsayılan olarak, SQL Server TCP bağlantı noktası 1433 ' i dinler ve SQL Server Hizmet Aracısı (SSB) TCP bağlantı noktası 4022 ' i kullanır.
 
 ### <a name="free-disk-space-on-site-server"></a>Site sunucusundaki boş disk alanı
 
@@ -279,7 +279,7 @@ Daha fazla bilgi için, [bir etki alanı denetleyicisine SQL Server yüklerken s
 
 SQL Server örneği **SQL_Latin1_General_CP1_CI_AS** harmanlamasını kullanacak şekilde yapılandırılmıştır.
 
-Configuration Manager site veritabanı zaten yüklüyse, bu denetim veritabanı için de geçerli olur. SQL Server örneğinizi ve veritabanı harmanlamalarını değiştirme hakkında daha fazla bilgi için bkz. [SQL harmanlama ve Unicode desteği](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support).
+Configuration Manager site veritabanı zaten yüklüyse, bu denetim veritabanı için de geçerli olur. SQL Server örneğinizi ve veritabanı harmanlamalarını değiştirme hakkında daha fazla bilgi için bkz. [SQL harmanlama ve Unicode desteği](/sql/relational-databases/collations/collation-and-unicode-support).
 
 Bir Çince işletim sistemi kullanıyorsanız ve GB18030 desteği gerektiriyorsa, bu denetim uygulanmaz. GB18030 desteğini etkinleştirme hakkında daha fazla bilgi için bkz. [Uluslararası destek](../../../plan-design/hierarchy/international-support.md).
 
@@ -379,7 +379,7 @@ SQL Server Always on kullanıldığında, kullanılabilirlik grubu çoğaltmalar
 <!-- SCCMDocs-pr#3899 -->
 *Uygulama hedefi: site veritabanı sunucusu*
 
-Sürüm 1906 ' den başlayarak, her zaman açık SQL Server kullanırken, kullanılabilirlik Grubu çoğaltmalarını aynı [dengeli dağıtım moduyla](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas)yapılandırmanız gerekir.
+Sürüm 1906 ' den başlayarak, her zaman açık SQL Server kullanırken, kullanılabilirlik Grubu çoğaltmalarını aynı [dengeli dağıtım moduyla](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas)yapılandırmanız gerekir.
 
 ### <a name="sql-availability-group-replicas-must-be-healthy"></a>SQL kullanılabilirlik grubu çoğaltmaları sağlıklı olmalıdır
 
@@ -633,7 +633,7 @@ Configuration Manager bilgisayar bir Windows etki alanının üyesidir.
 
 Windows güvenlik duvarı devre dışı bırakıldı veya SQL Server için ilgili bir Windows Güvenlik Duvarı özel durumu var.
 
-Sqlservr. exe ' ye veya gerekli TCP bağlantı noktalarına uzaktan erişilmesine izin verin. Varsayılan olarak, SQL Server TCP bağlantı noktası 1433 ' i dinler ve sunucu Hizmet Aracısı (SSB), TCP bağlantı noktası 4022 ' i kullanır.
+Sqlservr.exe veya gerekli TCP bağlantı noktalarına uzaktan erişilmesine izin verin. Varsayılan olarak, SQL Server TCP bağlantı noktası 1433 ' i dinler ve sunucu Hizmet Aracısı (SSB), TCP bağlantı noktası 4022 ' i kullanır.
 
 ### <a name="firewall-exception-for-sql-server-for-management-point"></a>Yönetim noktası SQL Server için güvenlik duvarı özel durumu
 
@@ -673,7 +673,7 @@ NAP için etkinleştirilmiş yazılım güncelleştirmesi yok.
 
 Disk sürücüsü NTFS dosya sistemiyle biçimlendirilir. Daha iyi güvenlik için site sunucusu bileşenlerini NTFS dosya sistemiyle biçimlendirilen disk sürücülerine yüklersiniz.
 
-### <a name="pending-configuration-item-policy-updates"></a><a name="bkmk_pending-policy"></a>Bekleyen yapılandırma öğesi İlkesi güncelleştirmeleri
+### <a name="pending-configuration-item-policy-updates"></a><a name="bkmk_pending-policy"></a> Bekleyen yapılandırma öğesi İlkesi güncelleştirmeleri
 
 <!--SCCMDocs-pr issue 2814-->
 
@@ -735,13 +735,13 @@ Paketler, gibi, paylaşma adında geçersiz karakterler içermez `#` .
 
 Site veritabanı örneği için SQL Server hizmetini çalıştırmak üzere yapılandırdığınız hesabın, Active Directory Domain Services geçerli bir hizmet asıl adı (SPN) vardır. Kerberos kimlik doğrulamasını desteklemek için Active Directory geçerli bir SPN kaydedin.
 
-### <a name="sql-server-change-tracking-cleanup"></a><a name="bkmk_changetracking"></a>Değişiklik izleme temizlemeyi SQL Server
+### <a name="sql-server-change-tracking-cleanup"></a><a name="bkmk_changetracking"></a> Değişiklik izleme temizlemeyi SQL Server
 
 *Uygulama hedefi: site veritabanı sunucusu*
 
 Sürüm 1810 ' den başlayarak, site veritabanının SQL değişiklik izleme verileri biriktirme listesine sahip olup olmadığını denetleyin.<!--SCCMDocs-pr issue 3023-->  
 
-Site veritabanında bir tanılama saklı yordamı çalıştırarak bu denetimi el ile doğrulayın. İlk olarak, site veritabanınıza bir [Tanılama bağlantısı](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) oluşturun. En kolay yöntem SQL Server Management Studio Veritabanı Altyapısı sorgu düzenleyicisini kullanmak ve ' a bağlanmak `admin:<instance name>` .
+Site veritabanında bir tanılama saklı yordamı çalıştırarak bu denetimi el ile doğrulayın. İlk olarak, site veritabanınıza bir [Tanılama bağlantısı](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) oluşturun. En kolay yöntem SQL Server Management Studio Veritabanı Altyapısı sorgu düzenleyicisini kullanmak ve ' a bağlanmak `admin:<instance name>` .
 
 Adanmış yönetici bağlantısı sorgu penceresinde aşağıdaki komutları çalıştırın:
 
@@ -804,7 +804,7 @@ Configuration Manager aşağıdaki site sistem rollerinde SQL Server Native Clie
 
 SQL Server, merkezi yönetim sitesi ve birincil site için en az 8 GB bellek ve ikincil site için en az 4 GB bellek ayırır.
 
-Daha fazla bilgi için bkz. [SQL Server Management Studio kullanarak bellek seçeneklerini yapılandırma](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-).
+Daha fazla bilgi için bkz. [SQL Server Management Studio kullanarak bellek seçeneklerini yapılandırma](/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-).
 
 > [!NOTE]  
 > Bu denetim, ikincil bir sitede SQL Server Express için geçerli değildir. Bu sürüm, 1 GB ayrılmış bellekle sınırlıdır.  
@@ -849,7 +849,7 @@ Daha fazla bilgi için bkz. [site yayımlama için Active Directory hazırlama](
 
 WinRM 1,1, bant dışı yönetim konsolunu çalıştırmak için birincil site sunucusunda veya Configuration Manager konsol bilgisayarında yüklüdür.
 
-WinRM, Windows 'un şu anda desteklenen tüm sürümleriyle otomatik olarak yüklenir. Daha fazla bilgi için bkz. [Windows Uzaktan Yönetimi Için yükleme ve yapılandırma](https://docs.microsoft.com/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
+WinRM, Windows 'un şu anda desteklenen tüm sürümleriyle otomatik olarak yüklenir. Daha fazla bilgi için bkz. [Windows Uzaktan Yönetimi Için yükleme ve yapılandırma](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
 
 ### <a name="wsus-on-site-server"></a>Site sunucusundaki WSUS
 
@@ -857,4 +857,4 @@ WinRM, Windows 'un şu anda desteklenen tüm sürümleriyle otomatik olarak yük
 
 Site sunucusunda Windows Server Update Services 'in (WSUS) desteklenen bir sürümü yüklü.
 
-Site sunucusu dışında bir sunucuda yazılım güncelleştirme noktası kullandığınızda, WSUS Yönetim konsolunu site sunucusuna yüklemelisiniz. WSUS hakkında daha fazla bilgi için bkz. [Windows Server Update Services](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
+Site sunucusu dışında bir sunucuda yazılım güncelleştirme noktası kullandığınızda, WSUS Yönetim konsolunu site sunucusuna yüklemelisiniz. WSUS hakkında daha fazla bilgi için bkz. [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).

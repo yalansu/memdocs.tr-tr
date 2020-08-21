@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: db70eab54f319197f267173fe857d0fb147a7eba
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: ecd8b83224cbcbfe367a3b1db160d680952a4407
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746570"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700846"
 ---
 # <a name="monitor-connection-health"></a>Bağlantı durumunu izleme
 
@@ -130,7 +130,7 @@ Cihazın hizmetle iletişim kurabildiğinden emin olun. Daha fazla bilgi için b
 
 Configuration Manager, bu cihazı hala yapılandırıyor veya durumunu öğrenmek için cihazdan yeterli veri yok.
 
-### <a name="missing-data"></a>Eksik veri
+### <a name="missing-data"></a>Eksik veriler
 
 Configuration Manager cihazı başarıyla yapılandırdı, ancak masaüstü Analizi bir uyumluluk değerlendirmesi oluşturamaz. Cihazın yapılandırması (Census) veya yüklü uygulamalar (envanter) için bir veri kümesine sahip değildir.
 
@@ -154,7 +154,7 @@ Bu sütunlar, cihazların masaüstü analiziyle iletişim kurması için temel [
 
 Ayrıntı bölmesinde kullanılabilir özelliklerin tam listesini görmek için bir cihaz seçin. Ayrıca, bu özelliklerden herhangi birini, cihaz listesine sütun olarak ekleyebilirsiniz.
 
-## <a name="device-properties"></a><a name="bkmk_config-issues"></a>Cihaz özellikleri
+## <a name="device-properties"></a><a name="bkmk_config-issues"></a> Cihaz özellikleri
 
 Aşağıdaki masaüstü Analizi cihaz özellikleri Configuration Manager cihaz listesinde sütunlar olarak kullanılabilir:
 
@@ -198,7 +198,7 @@ Günlük dosyasında aşağıdakine benzer hatalar görürsünüz:
 
 `%s`, Gerekli bir uç noktanın URL 'sidir.
 
-Ayrıca, cihazlar kayıt sorunlarıyla karşılaşana kadar dikkat gerektirmeyen belirleyici olmayan hata iletileri de görebilirsiniz. Örneğin:
+Ayrıca, cihazlar kayıt sorunlarıyla karşılaşana kadar dikkat gerektirmeyen belirleyici olmayan hata iletileri de görebilirsiniz. Örnek:
 
 `This status is not related to proxy configuration, consider to investigate only if you are experiencing device enrollment or configuration alert issues.`
 
@@ -318,7 +318,7 @@ Aksi takdirde, aşağıdaki hatalardan biri gösterilebilir:
 
 Cihazlar işletim sistemi sürümüne bağlı olarak aşağıdaki uç noktaya bir GET isteğiyle bağlantıyı doğrular:
 
-| İşletim sistemi sürümü | Uç Nokta |
+| İşletim sistemi sürümü | Uç Noktası |
 |------------|----------|
 | -Windows 10, sürüm 1809 veya üzeri<br/>-Windows 10, sürüm 1803, 2018-09 toplu güncelleştirmesi veya sonrası | `https://v10c.events.data.microsoft.com/health/keepalive` |
 | Windows 10, sürüm 1803, 2018-09 veya üzeri toplu güncelleştirme *olmadan* | `https://v10.events.data.microsoft.com/health/keepalive` |
@@ -334,7 +334,7 @@ Daha fazla bilgi için istemcide M365AHandler. log dosyasına bakın.
 <!--1004-->
 Bu denetim başarılı olmazsa, bir Kullanıcı cihazda daha düşük bir Windows tanılama verisi seçti. Ayrıca, çakışan bir Grup İlkesi nesnesi de oluşabilir. Daha fazla bilgi için bkz. [Windows ayarları](enroll-devices.md#windows-settings).
 
-İş gereksinimlerinize bağlı olarak, Grup İlkesi aracılığıyla Kullanıcı seçimini devre dışı bırakabilirsiniz. **Telemetri katılım ayarı Kullanıcı arabirimini yapılandırmak**için bu ayarı kullanın. Daha fazla bilgi için bkz. [Kuruluşunuzda Windows tanılama verilerini yapılandırma](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
+İş gereksinimlerinize bağlı olarak, Grup İlkesi aracılığıyla Kullanıcı seçimini devre dışı bırakabilirsiniz. **Telemetri katılım ayarı Kullanıcı arabirimini yapılandırmak**için bu ayarı kullanın. Daha fazla bilgi için bkz. [Kuruluşunuzda Windows tanılama verilerini yapılandırma](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
 
 ### <a name="check-user-proxy"></a>Kullanıcı ara sunucusunu denetle
 
@@ -343,7 +343,7 @@ DisableEnterpriseAuthProxy ayarı, Windows 7 için varsayılan olarak etkindir. 
 
 Bu özellik aşağıdaki hataları gösterebilir:
 
-- Kimlik doğrulama proxy 'si etkin. DisableEnterpriseAuthProxy 'yi içinde 0 olarak ayarla`HKLM:\Software\Policies\Microsoft\Windows\DataCollection`
+- Kimlik doğrulama proxy 'si etkin. DisableEnterpriseAuthProxy 'yi içinde 0 olarak ayarla `HKLM:\Software\Policies\Microsoft\Windows\DataCollection`
 
 - Kimlik doğrulama proxy 'si durumu denetlenemiyor. Özel durum ayrıntıları için günlükleri denetleyin
 
@@ -364,7 +364,7 @@ Aksi takdirde, aşağıdaki hatalardan biri gösterilebilir:
 
 - Kayıt defteri anahtarındaki ticari kimlik güncelleştirilemez `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection` . Özel durum ayrıntıları için günlükleri denetleyin  
 
-- Doğru ticari kimlik değerini sağlayın`HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`  
+- Doğru ticari kimlik değerini sağlayın `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`  
 
 Daha fazla bilgi için istemcide M365AHandler. log dosyasına bakın.  
 
@@ -372,7 +372,7 @@ Bu kayıt defteri anahtarındaki izinleri denetleyin. Yerel sistem hesabının, 
 
 Cihaz için farklı bir KIMLIK vardır. Bu kayıt defteri anahtarı Grup İlkesi tarafından kullanılır. Configuration Manager tarafından belirtilen KIMLIĞE göre önceliklidir.  
 
-<a name="bkmk_ViewCommercialID"></a>Masaüstü Analizi portalındaki ticari KIMLIĞI görüntülemek için aşağıdaki yordamı kullanın:
+<a name="bkmk_ViewCommercialID"></a> Masaüstü Analizi portalındaki ticari KIMLIĞI görüntülemek için aşağıdaki yordamı kullanın:
 
 1. Masaüstü Analizi portalına gidin ve genel ayarlar grubunda **bağlı hizmetler** ' i seçin.  
 
@@ -455,7 +455,7 @@ Masaüstü analizi, daha güvenilir bir cihaz kimliği için Microsoft hesabı h
 
 **Microsoft hesabı oturum açma Yardımcısı** hizmetinin devre dışı olmadığından emin olun. Başlangıç türü **el ile (tetikleyici başlatma)** olmalıdır.
 
-Son Kullanıcı Microsoft hesabı erişimini devre dışı bırakmak için, bu uç noktayı engellemek yerine ilke ayarlarını kullanın. Daha fazla bilgi için bkz. [enterprise Microsoft hesabı](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication).
+Son Kullanıcı Microsoft hesabı erişimini devre dışı bırakmak için, bu uç noktayı engellemek yerine ilke ayarlarını kullanın. Daha fazla bilgi için bkz. [enterprise Microsoft hesabı](/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication).
 
 ### <a name="windows-diagnostic-data-opt-in"></a>Windows tanılama verilerini kabul etme
 

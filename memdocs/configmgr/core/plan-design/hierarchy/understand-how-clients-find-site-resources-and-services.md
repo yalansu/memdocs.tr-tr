@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b012dd1e7da0d6a3efb4d1cc33b8a79ef319bc0a
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 262234edbd6fac6973653ca6cac62853fde23b2d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269006"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700121"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>İstemcilerin Configuration Manager için site kaynaklarını ve hizmetleri nasıl bulkullandığını öğrenin
 
@@ -31,7 +31,7 @@ Hizmet sağlayan site sistemi rollerinin örnekleri şunlardır:
 
 
 
-##  <a name="fundamentals-of-service-location"></a><a name="bkmk_fund"></a>Hizmet konumu temelleri  
+##  <a name="fundamentals-of-service-location"></a><a name="bkmk_fund"></a> Hizmet konumu temelleri  
  İstemci, iletişim kurabildiği bir yönetim noktası bulmak için hizmet konumunu kullanırken geçerli ağ konumunu, iletişim protokol tercihini ve atanan siteyi değerlendirir.  
 
 **İstemci bir yönetim noktasıyla iletişim kurar:**  
@@ -43,7 +43,7 @@ Hizmet sağlayan site sistemi rollerinin örnekleri şunlardır:
 **Configuration Manager istemcisi bir hizmet konumu isteği yapar:**  
 - Her 25 saatte bir sürekli işlem.  
 - İstemci, ağ yapılandırması veya konumunda bir değişiklik algıladığında.  
-- Bilgisayardaki **Ccmexec. exe** hizmeti (çekirdek istemci hizmeti) başladığında.  
+- Bilgisayardaki **ccmexec.exe** hizmeti (çekirdek istemci hizmeti) başladığında.  
 - İstemci, gerekli bir hizmeti sağlayan bir site sistem rolünü bulmalıdır.  
 
 **Bir istemci, site sistem rollerini barındıran sunucuları bulmaya**çalıştığında, istemci protokolünü (http veya https) destekleyen bir site sistem rolünü bulmak için hizmet konumunu kullanır. Varsayılan olarak, istemciler tarafından kullanılabilen en güvenli yöntemi kullanır. Aşağıdaki topluluklara bir göz atın:  
@@ -52,7 +52,7 @@ Hizmet sağlayan site sistemi rollerinin örnekleri şunlardır:
 
 - Internet Information Services (IIS) kullanan ve istemcilerinden gelen iletişimi destekleyen bir site sistem rolü dağıttığınızda, istemcilerin site sistemine HTTP veya HTTPS kullanarak bağlandığını belirtmeniz gerekir. HTTP kullanırsanız imzalama ve şifreleme seçeneklerini de göz önünde bulundurmanız gerekir. Daha fazla bilgi için, [güvenlik planında](../../../core/plan-design/security/plan-for-security.md) [Imzalama ve şifrelemeyi planlama](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) konusuna bakın.  
 
-##  <a name="service-location-and-how-clients-determine-their-assigned-management-point"></a><a name="BKMK_Plan_Service_Location"></a>Hizmet konumu ve istemcilerin atanan yönetim noktalarını belirleme şekli  
+##  <a name="service-location-and-how-clients-determine-their-assigned-management-point"></a><a name="BKMK_Plan_Service_Location"></a> Hizmet konumu ve istemcilerin atanan yönetim noktalarını belirleme şekli  
 Bir istemci birincil siteye ilk atandığında, bu site için varsayılan bir yönetim noktası seçer. Birincil siteler birden çok yönetim noktasını destekler ve her bir istemci, varsayılan Yönetim noktası olarak bir yönetim noktasını bağımsız olarak tanımlar. Bu varsayılan Yönetim noktası daha sonra istemcinin atanan yönetim noktası olur. (İstemci yükleme komutlarını, yüklü olduğunda bir istemci için atanan yönetim noktasını ayarlamak için de kullanabilirsiniz.)  
 
 İstemci, istemcinin geçerli ağ konumuna ve sınır grubu yapılandırmalarına bağlı olarak iletişim kuracak bir yönetim noktası seçer. Atanmış bir yönetim noktasına sahip olsa da, bu, istemcinin kullandığı yönetim noktası olmayabilir.  
@@ -62,7 +62,7 @@ Bir istemci birincil siteye ilk atandığında, bu site için varsayılan bir y�
 
 Tercih edilen yönetim noktalarını kullanabilirsiniz. Tercih edilen yönetim noktaları, istemcinin atanmış sitesinden, istemcinin site sistem sunucularını bulmak için kullandığı bir sınır grubuyla ilişkilendirilmiş yönetim noktalarıdır. Site sistemi sunucusu olarak bir sınır grubuyla tercih edilen bir yönetim noktasının ilişkilendirmesi, dağıtım noktalarının veya durum geçiş noktalarının bir sınır grubuyla ilişkilendirilmesiyle benzerdir. Bir istemci atanan sitesinden bir yönetim noktası kullanırken hiyerarşi için tercih edilen yönetim noktalarını etkinleştirirseniz, atanan sitesinden diğer yönetim noktalarını kullanmadan önce tercih edilen bir yönetim noktasını kullanmayı dener.  
 
-Yönetim noktası benzeşimini yapılandırmak için [Yönetim noktası benzeşimi](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) blogundan bilgileri de kullanabilirsiniz. Yönetim noktası benzeşimi, atanmış yönetim noktalarının varsayılan davranışını geçersiz kılar ve istemcinin bir veya daha fazla belirli yönetim noktası kullanmasına izin verir.  
+Yönetim noktası benzeşimini yapılandırmak için [Yönetim noktası benzeşimi](/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) blogundan bilgileri de kullanabilirsiniz. Yönetim noktası benzeşimi, atanmış yönetim noktalarının varsayılan davranışını geçersiz kılar ve istemcinin bir veya daha fazla belirli yönetim noktası kullanmasına izin verir.  
 
 İstemcinin bir yönetim noktasıyla iletişim kurabilmesi her seferinde, Windows Yönetim Araçları (WMI) ' de yerel olarak depoladığı MP listesini denetler. İstemci, yüklendiğinde bir başlangıç MP listesi oluşturur. İstemci daha sonra listeyi hiyerarşideki her bir yönetim noktasıyla ilgili ayrıntılarla düzenli olarak güncelleştirir.  
 
@@ -79,7 +79,7 @@ Bir istemci bir yönetim noktasını başarıyla bulduktan ve iletişim kurduğu
 
 İnternet için yapılandırılmayan bir istemci, yalnızca İnternet 'e yönelik yönetim noktaları sağlanmaz. İnternet için yapılandırılan çalışma grubu istemcileri, yalnızca İnternet 'e yönelik yönetim noktalarıyla iletişim kurar.  
 
-##  <a name="the-mp-list"></a><a name="BKMK_MPList"></a>MP listesi  
+##  <a name="the-mp-list"></a><a name="BKMK_MPList"></a> MP listesi  
 MP listesi, istemcinin daha önce tanımladığı yönetim noktalarının öncelikli listesi olduğundan, istemci için tercih edilen hizmet konumu kaynağıdır. Bu liste, istemci listeyi güncelleştirdiğinde her bir kullanıcı tarafından kendi ağ konumlarına göre sıralanır ve ardından istemci WMI'sinde yerel olarak depolanır.  
 
 ### <a name="building-the-initial-mp-list"></a>Başlangıç MP listesini oluşturma  
@@ -108,7 +108,7 @@ Tipik iletişimler için, istemci, istemcinin ağ konumuna bağlı olarak sını
 
 1.  Ara sunucu  
 2.  Yerel  
-3.  Atandı  
+3.  Atanmış  
 
 Ancak istemci, diğer iletişimler proxy veya yerel yönetim noktasına gönderilse bile, kayıt iletileri ve belirli ilke iletileri için atanan yönetim noktasını kullanır.  
 
@@ -130,7 +130,7 @@ Bir istemci bir yönetim noktasıyla iletişim kurduktan sonra, şu kadar aynı 
 
 İstemci daha sonra kullanılacak yeni bir yönetim noktasını rastgele seçer.  
 
-##  <a name="active-directory"></a><a name="bkmk_ad"></a>Active Directory  
+##  <a name="active-directory"></a><a name="bkmk_ad"></a> Active Directory  
 Etki alanı ile birleşik istemciler hizmet konumu için AD DS kullanabilir. Bu, sitelerin [verileri Active Directory'ye yayımlamasını](../../servers/deploy/configure/publish-site-data.md)gerektirir.  
 
 İstemci, aşağıdaki koşulların tümü doğru olduğunda hizmet konumu için AD DS kullanabilir:  
@@ -141,7 +141,7 @@ Etki alanı ile birleşik istemciler hizmet konumu için AD DS kullanabilir. Bu,
 
 İstemci, AD DS hizmet konumu için kullanmak üzere bir yönetim noktası bulamazsa DNS kullanmaya çalışır.  
 
-##  <a name="dns"></a><a name="bkmk_dns"></a>BKZ  
+##  <a name="dns"></a><a name="bkmk_dns"></a> BKZ  
 İntranetteki istemciler hizmet konumu için DNS kullanabilir. Bu, hiyerarşideki sitelerden en az birinin DNS'teki yönetim noktaları hakkında bilgi yayımlamasını gerektirir.  
 
 Aşağıdaki koşullardan herhangi biri doğruysa, hizmet konumu için DNS kullanabilirsiniz:
@@ -170,7 +170,7 @@ Yönetim noktalarını DNS'ye yayımlamak için, aşağıdaki iki koşulun doğr
 > [!IMPORTANT]  
 > Configuration Manager DNS yayımlaması ayrık ad alanını desteklemez. Ayrık bir ad alanınız varsa, yönetim noktalarını DNS 'ye el ile yayımlayabilirsiniz veya bu bölümde belgelenen diğer hizmet konumu yöntemlerinden birini kullanabilirsiniz.  
 
-**DNS sunucularınız otomatik güncelleştirmeleri destekledikleri zaman**, intranet üzerindeki YÖNETIM noktalarını DNS 'ye otomatik olarak yayımlamak üzere Configuration Manager yapılandırabilir veya bu kayıtları DNS 'ye el ile yayımlayabilirsiniz. Yönetim noktaları DNS'ye yayımlandığında, intranet FQDN'leri ve bağlantı noktası numaraları, hizmet konumu (SRV) kaydına yayımlanır. DNS yayımlamayı, sitenin yönetim noktası bileşen özelliklerindeki bir sitede yapılandırırsınız. Daha fazla bilgi için bkz. [Configuration Manager Için site bileşenleri](../../../core/servers/deploy/configure/site-components.md).  
+**DNS sunucularınız otomatik güncelleştirmeleri destekledikleri zaman**, intranet üzerindeki YÖNETIM noktalarını DNS 'ye otomatik olarak yayımlamak üzere Configuration Manager yapılandırabilir veya bu kayıtları DNS 'ye el ile yayımlayabilirsiniz. Yönetim noktaları DNS'ye yayımlandığında, intranet FQDN'leri ve bağlantı noktası numaraları, hizmet konumu (SRV) kaydına yayımlanır. DNS yayımlamayı, sitenin yönetim noktası bileşen özelliklerindeki bir sitede yapılandırırsınız. Daha fazla bilgi için bkz.  [Configuration Manager Için site bileşenleri](../../../core/servers/deploy/configure/site-components.md).  
 
 **DNS bölgeniz dinamik güncelleştirmeler için "yalnızca güvenli" olarak ayarlandığında**, yalnızca DNS 'de yayımlanacak ilk yönetim noktası, varsayılan izinlerle bu işlemi başarıyla yapabilir.
 
@@ -179,7 +179,7 @@ Yalnızca bir yönetim noktası DNS kaydını başarıyla yayımlayıp değişti
 
 **DNS sunucularınız otomatik güncelleştirmeleri desteklemiyor ancak hizmet konumu kayıtlarını destekliyorsa**, yönetim noktalarını DNS'ye manuel olarak yayımlayabilirsiniz. Bunu gerçekleştirmek için, hizmet konumu kaynak kaydını (SRV RR) DNS'ye el ile belirtmeniz gerekir.  
 
-Configuration Manager, hizmet konumu kayıtları için RFC 2782 ' ü destekler. Bu kayıtlar şu biçimdedir: *_Service. _Proto. Name TTL sınıfı SRV öncelik ağırlığı bağlantı noktası hedefi*  
+Configuration Manager, hizmet konumu kayıtları için RFC 2782 ' ü destekler. Bu kayıtlar şu biçimdedir:   *_Service. _Proto. Name TTL sınıfı SRV öncelik ağırlığı bağlantı noktası hedefi*  
 
 Configuration Manager bir yönetim noktası yayımlamak için, aşağıdaki değerleri belirtin:  
 
@@ -239,9 +239,9 @@ Windows Server DNS'i kullanırsanız, intranet yönetim noktaları için bu DNS 
 
 Bu adımları, DNS'ye yayımlamak istediğiniz, intranetteki her bir yönetim noktası için tekrarlayın.  
 
-##  <a name="wins"></a><a name="bkmk_wins"></a>DÜR  
+##  <a name="wins"></a><a name="bkmk_wins"></a> DÜR  
 Diğer hizmet konumu mekanizmaları başarısız olduğunda, istemciler WINS'i denetleyerek bir ilk yönetim noktası bulabilir.  
 
 Varsayılan olarak, birincil site, sitede HTTP için yapılandırılan ilk yönetim noktasını ve HTTPS için yapılandırılan ilk yönetim noktasını WINS 'te yayımlar.  
 
-İstemcilerin WINS'de bir HTTP yönetim noktası bulmasını istemiyorsanız, istemcileri CCMSetup.exe Client.msi özelliği **SMSDIRECTORYLOOKUP=NOWINS**ile yapılandırın.  
+İstemcilerin WINS'de bir HTTP yönetim noktası bulmasını istemiyorsanız, istemcileri CCMSetup.exe Client.msi özelliği **SMSDIRECTORYLOOKUP=NOWINS**ile yapılandırın.

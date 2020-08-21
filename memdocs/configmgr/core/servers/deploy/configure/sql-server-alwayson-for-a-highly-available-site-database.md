@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05553af3e973805eed62c68f13afc3cf7d3d2ee3
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: c9cf8e74793213e47dd503de1fdf1284bdc7d6a9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438591"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699237"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager ile Always on kullanılabilirlik grupları SQL Server kullanmaya hazırlanma
 
@@ -76,13 +76,13 @@ SQL Server *Enterprise* sürümünü kullanın.
 
 Her SQL Server örneği, bir etki alanı kullanıcı hesabı (**hizmet hesabı**) veya etki alanı olmayan bir hesap altında çalıştırılabilir. Bir gruptaki her çoğaltmanın farklı bir yapılandırması olabilir.
 
-- Mümkün olan en düşük izinlere sahip bir hesap kullanın. Daha fazla bilgi için bkz. [SQL Server yükleme Için güvenlik konuları](https://docs.microsoft.com/sql/sql-server/install/security-considerations-for-a-sql-server-installation).  
+- Mümkün olan en düşük izinlere sahip bir hesap kullanın. Daha fazla bilgi için bkz. [SQL Server yükleme Için güvenlik konuları](/sql/sql-server/install/security-considerations-for-a-sql-server-installation).  
 
-- SQL Server için hizmet hesaplarını ve izinleri yapılandırma hakkında daha fazla bilgi için bkz. [Windows hizmet hesaplarını ve Izinlerini yapılandırma](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).  
+- SQL Server için hizmet hesaplarını ve izinleri yapılandırma hakkında daha fazla bilgi için bkz. [Windows hizmet hesaplarını ve Izinlerini yapılandırma](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).  
 
-- Etki alanı olmayan bir hesabı kullanmak için sertifikaları kullanmanız gerekir. Daha fazla bilgi için bkz. [veritabanı yansıtma uç noktası için sertifikaları kullanma (Transact-SQL)](https://docs.microsoft.com/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql).  
+- Etki alanı olmayan bir hesabı kullanmak için sertifikaları kullanmanız gerekir. Daha fazla bilgi için bkz. [veritabanı yansıtma uç noktası için sertifikaları kullanma (Transact-SQL)](/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql).  
 
-- Daha fazla bilgi için bkz. [Always on kullanılabilirlik grupları için veritabanı yansıtma uç noktası oluşturma](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).  
+- Daha fazla bilgi için bkz. [Always on kullanılabilirlik grupları için veritabanı yansıtma uç noktası oluşturma](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).  
 
 
 ### <a name="database"></a>Veritabanı
@@ -104,7 +104,7 @@ Her çoğaltmanın veritabanını aşağıdaki ayarlarla yapılandırın:
     GO
     ```
 
-    Daha fazla bilgi için bkz. [clr tümleştirmesi](https://docs.microsoft.com/sql/relational-databases/clr-integration/clr-integration-enabling).  
+    Daha fazla bilgi için bkz. [clr tümleştirmesi](/sql/relational-databases/clr-integration/clr-integration-enabling).  
 
 - **En büyük metin REPL boyutunu** ayarla `2147483647` :  
 
@@ -120,7 +120,7 @@ Her çoğaltmanın veritabanını aşağıdaki ayarlarla yapılandırın:
     ALTER DATABASE [CM_xxx] SET TRUSTWORTHY ON;
     ```
 
-    Daha fazla bilgi için [güvenilir veritabanı özelliğine](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property)bakın.
+    Daha fazla bilgi için [güvenilir veritabanı özelliğine](/sql/relational-databases/security/trustworthy-database-property)bakın.
 
 - **Hizmet Aracısı**etkinleştirin:  
 
@@ -217,9 +217,9 @@ Birincil ve ikincil çoğaltmalara yönelik veritabanı yapılandırmasını do�
 - Zaman uyumsuz bir kayıt çoğaltmasını, zaman uyumlu çoğaltmanızı kurtarmak için kullanabilirsiniz. Daha fazla bilgi için bkz. [site veritabanı kurtarma seçenekleri](../../manage/recover-sites.md#site-database-recovery-options).  
 
     > [!Warning]  
-    > Configuration Manager, site veritabanınız olarak zaman uyumsuz tamamlama çoğaltmasını kullanmak için *Yük devretmeyi* desteklemez. Daha fazla bilgi için bkz. [Yük devretme ve yük devretme modları (Always on kullanılabilirlik grupları)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups).  
+    > Configuration Manager, site veritabanınız olarak zaman uyumsuz tamamlama çoğaltmasını kullanmak için *Yük devretmeyi* desteklemez. Daha fazla bilgi için bkz. [Yük devretme ve yük devretme modları (Always on kullanılabilirlik grupları)](/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups).  
 
-Configuration Manager, zaman uyumsuz tamamlama çoğaltmasının geçerli olduğunu doğrulamak için durumunu doğrulamaz. Site veritabanı olarak zaman uyumsuz bir kayıt çoğaltmasının kullanımı sitenizin bütünlüğünü ve verilerinizi riske koyabilirler. Bu çoğaltma, tasarım ile eşitlenmemiş olabilir. Daha fazla bilgi için bkz. [SQL Server Always on kullanılabilirlik gruplarına genel bakış](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
+Configuration Manager, zaman uyumsuz tamamlama çoğaltmasının geçerli olduğunu doğrulamak için durumunu doğrulamaz. Site veritabanı olarak zaman uyumsuz bir kayıt çoğaltmasının kullanımı sitenizin bütünlüğünü ve verilerinizi riske koyabilirler. Bu çoğaltma, tasarım ile eşitlenmemiş olabilir. Daha fazla bilgi için bkz. [SQL Server Always on kullanılabilirlik gruplarına genel bakış](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
 
 Her çoğaltma üyesinin aşağıdaki yapılandırması olmalıdır:
 
@@ -239,17 +239,17 @@ Her çoğaltma üyesinin aşağıdaki yapılandırması olmalıdır:
     > - Kullanılabilirlik grubundaki site veritabanının kullanımını belirtmek için Configuration Manager kurulumunu çalıştırırsınız.  
     > - Configuration Manager için herhangi bir güncelleştirmeyi yüklersiniz. (Yalnızca site veritabanı için uygulanan güncelleştirmeler değil).  
 
-- Tüm üyelerin aynı [dengeli dağıtım moduna](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas)ihtiyacı vardır.<!-- SCCMDocs-pr#3899 --> Configuration Manager Kurulum, yükleme veya kurtarma aracılığıyla bir veritabanı oluştururken bu yapılandırmayı doğrulamak için bir önkoşul denetimi içerir.
+- Tüm üyelerin aynı [dengeli dağıtım moduna](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas)ihtiyacı vardır.<!-- SCCMDocs-pr#3899 --> Configuration Manager Kurulum, yükleme veya kurtarma aracılığıyla bir veritabanı oluştururken bu yapılandırmayı doğrulamak için bir önkoşul denetimi içerir.
 
     > [!Note]  
-    > Kurulum veritabanını oluşturduğunda ve **Otomatik** dengeli dağıtım yapılandırdığınızda, kullanılabilirlik grubunun veritabanını oluşturmak için izinleri olması gerekir. Bu gereksinim, hem yeni bir veritabanı ya da kurtarma için geçerlidir. Daha fazla bilgi için bkz. [ikincil çoğaltma Için otomatik dengeli dağıtım](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#security).<!-- SCCMDocs-pr#3900 -->
+    > Kurulum veritabanını oluşturduğunda ve **Otomatik** dengeli dağıtım yapılandırdığınızda, kullanılabilirlik grubunun veritabanını oluşturmak için izinleri olması gerekir. Bu gereksinim, hem yeni bir veritabanı ya da kurtarma için geçerlidir. Daha fazla bilgi için bkz. [ikincil çoğaltma Için otomatik dengeli dağıtım](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#security).<!-- SCCMDocs-pr#3900 -->
 
 #### <a name="replica-member-location"></a>Çoğaltma üyesi konumu
 
 Tüm çoğaltmaları şirket içinde bir kullanılabilirlik grubunda barındırın veya Microsoft Azure tümünü barındırın. Şirket içi bir üyeyi ve Azure 'daki bir üyeyi içeren bir grup desteklenmez.
 
 > [!NOTE]
-> SQL Server için bir Azure sanal makinesi kullanıyorsanız, **kayan IP**'yi etkinleştirin. Daha fazla bilgi için bkz. [Azure sanal makinelerinde SQL Server Always on kullanılabilirlik grubu için yük dengeleyici yapılandırma](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).<!-- SCCMDocs#1928 -->
+> SQL Server için bir Azure sanal makinesi kullanıyorsanız, **kayan IP**'yi etkinleştirin. Daha fazla bilgi için bkz. [Azure sanal makinelerinde SQL Server Always on kullanılabilirlik grubu için yük dengeleyici yapılandırma](/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).<!-- SCCMDocs#1928 -->
 
 Configuration Manager Kurulum 'un her bir çoğaltmaya bağlanması gerekiyor. Azure 'da bir kullanılabilirlik grubu ayarladığınızda ve grup bir iç veya dış yük dengeleyicinin arkasında olduğunda, aşağıdaki varsayılan bağlantı noktalarını açın:
 
@@ -263,11 +263,11 @@ Kurulum tamamlandıktan sonra, bu bağlantı noktalarının Configuration Manage
 
 Bu yapılandırmalarda özel bağlantı noktalarını kullanabilirsiniz. Uç nokta ve kullanılabilirlik grubundaki tüm çoğaltmalarda aynı özel bağlantı noktalarını kullanın.
 
-SQL 'in siteler arasında veri çoğaltması için, Azure Yük dengeleyicideki her bağlantı noktası için bir yük dengeleme kuralı oluşturun. Daha fazla bilgi için bkz. [bir iç yük dengeleyici Için yüksek kullanılabilirlik bağlantı noktalarını yapılandırma](https://docs.microsoft.com/azure/load-balancer/load-balancer-configure-ha-ports).<!-- MEMDocs#252 -->
+SQL 'in siteler arasında veri çoğaltması için, Azure Yük dengeleyicideki her bağlantı noktası için bir yük dengeleme kuralı oluşturun. Daha fazla bilgi için bkz. [bir iç yük dengeleyici Için yüksek kullanılabilirlik bağlantı noktalarını yapılandırma](/azure/load-balancer/load-balancer-configure-ha-ports).<!-- MEMDocs#252 -->
 
 #### <a name="listener"></a>Dinleyici
 
-Kullanılabilirlik grubunun en az bir *kullanılabilirlik grubu dinleyicisi*olmalıdır. Kullanılabilirlik grubundaki site veritabanını kullanmak üzere Configuration Manager yapılandırdığınızda, bu dinleyicinin sanal adını kullanır. Bir kullanılabilirlik grubu birden çok dinleyici içerebilse de Configuration Manager yalnızca birini kullanabilir. Daha fazla bilgi için bkz. [SQL Server kullanılabilirlik grubu dinleyicisi oluşturma veya yapılandırma](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server).
+Kullanılabilirlik grubunun en az bir *kullanılabilirlik grubu dinleyicisi*olmalıdır. Kullanılabilirlik grubundaki site veritabanını kullanmak üzere Configuration Manager yapılandırdığınızda, bu dinleyicinin sanal adını kullanır. Bir kullanılabilirlik grubu birden çok dinleyici içerebilse de Configuration Manager yalnızca birini kullanabilir. Daha fazla bilgi için bkz. [SQL Server kullanılabilirlik grubu dinleyicisi oluşturma veya yapılandırma](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server).
 
 #### <a name="file-paths"></a>Dosya yolları
 
@@ -294,7 +294,7 @@ Bu dosya yolu, ikincil çoğaltma sunucularına yalnızca kullanılabilirlik gru
 #### <a name="multi-subnet-failover"></a>Çoklu alt ağ yük devretme
 
 <!-- SCCMDocs-pr#3734 -->
-Sürüm 1906 ' den başlayarak [MultiSubnetFailover Bağlantı dizesi anahtar sözcüğünü](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) SQL Server etkinleştirebilirsiniz. Ayrıca, aşağıdaki değerleri site sunucusundaki Windows kayıt defterine el ile eklemeniz gerekir:
+Sürüm 1906 ' den başlayarak [MultiSubnetFailover Bağlantı dizesi anahtar sözcüğünü](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) SQL Server etkinleştirebilirsiniz. Ayrıca, aşağıdaki değerleri site sunucusundaki Windows kayıt defterine el ile eklemeniz gerekir:
 
 ``` Registry
 HKLM:\SOFTWARE\Microsoft\SMS\Identification
@@ -315,11 +315,11 @@ Aşağıdaki sınırlamalar tüm senaryolar için geçerlidir.
 
 ### <a name="unsupported-sql-server-options-and-configurations"></a>Desteklenmeyen SQL Server seçenekleri ve yapılandırmalar
 
-- **Temel kullanılabilirlik grupları**: SQL Server 2016 Standard Edition ile birlikte sunulan temel kullanılabilirlik grupları, ikincil çoğaltmalara okuma erişimini desteklemez. Yapılandırma bu erişimi gerektirir. Daha fazla bilgi için bkz. [temel SQL Server kullanılabilirlik grupları](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017).  
+- **Temel kullanılabilirlik grupları**: SQL Server 2016 Standard Edition ile birlikte sunulan temel kullanılabilirlik grupları, ikincil çoğaltmalara okuma erişimini desteklemez. Yapılandırma bu erişimi gerektirir. Daha fazla bilgi için bkz. [temel SQL Server kullanılabilirlik grupları](/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017).  
 
-- **Yük devretme kümesi örneği**: Configuration Manager ile kullandığınız bir çoğaltma için yük devretme kümesi örnekleri desteklenmez. Daha fazla bilgi için bkz. [SQL Server her zaman yük devretme kümesi örnekleri](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server).  
+- **Yük devretme kümesi örneği**: Configuration Manager ile kullandığınız bir çoğaltma için yük devretme kümesi örnekleri desteklenmez. Daha fazla bilgi için bkz. [SQL Server her zaman yük devretme kümesi örnekleri](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server).  
 
-- **MultiSubnetFailover**: sürüm 1902 ve önceki sürümlerde, birden çok alt ağ yapılandırmasında Configuration Manager olan bir kullanılabilirlik grubu kullanılması desteklenmez. Ayrıca, [Mutlısubnetfailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) anahtar sözcük bağlantı dizesini de kullanamazsınız.
+- **MultiSubnetFailover**: sürüm 1902 ve önceki sürümlerde, birden çok alt ağ yapılandırmasında Configuration Manager olan bir kullanılabilirlik grubu kullanılması desteklenmez. Ayrıca, [Mutlısubnetfailover](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) anahtar sözcük bağlantı dizesini de kullanamazsınız.
 
     Bu yapılandırmayı desteklemek için Configuration Manager sürüm 1906 veya sonraki bir sürüme güncelleştirin. Daha fazla bilgi için bkz. [Çoklu alt ağ yük devretme](sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover) önkoşulu.
 
@@ -382,7 +382,7 @@ Bir site veritabanı bir kullanılabilirlik grubu kullandığında, ortak Config
 
 ### <a name="transaction-log"></a>İşlem günlüğü  
 
-Site veritabanının kurtarma modelini **tam**olarak ayarlayın. Bu yapılandırma, bir kullanılabilirlik grubunda Configuration Manager kullanımı için gereksinimdir. Site veritabanı işlem günlüğünün boyutunu izlemeyi ve korumayı planlayın. Tam kurtarma modelinde, veritabanının veya işlem günlüğünün tam yedeklemesini yapana kadar işlemler sağlamolmaz. Daha fazla bilgi için bkz. [SQL Server veritabanlarının yedeklenmesi ve geri yüklenmesi](https://docs.microsoft.com/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases).
+Site veritabanının kurtarma modelini **tam**olarak ayarlayın. Bu yapılandırma, bir kullanılabilirlik grubunda Configuration Manager kullanımı için gereksinimdir. Site veritabanı işlem günlüğünün boyutunu izlemeyi ve korumayı planlayın. Tam kurtarma modelinde, veritabanının veya işlem günlüğünün tam yedeklemesini yapana kadar işlemler sağlamolmaz. Daha fazla bilgi için bkz. [SQL Server veritabanlarının yedeklenmesi ve geri yüklenmesi](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases).
 
 
 ## <a name="changes-for-site-recovery"></a>Site Recovery değişiklikleri

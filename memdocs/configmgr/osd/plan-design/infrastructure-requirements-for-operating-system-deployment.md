@@ -10,12 +10,12 @@ ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f34c803cb2b43a2c69cee4c16f5029474e318eb2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c9bb07bd2b82a9411bc527d04a9a64a0bb6e12f8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724436"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697679"
 ---
 # <a name="infrastructure-requirements-for-os-deployment-in-configuration-manager"></a>Configuration Manager işletim sistemi dağıtımı için altyapı gereksinimleri
 
@@ -23,7 +23,7 @@ ms.locfileid: "81724436"
 
 Configuration Manager işletim sistemi dağıtımının dış bağımlılıkları ve ürün içinde bağımlılıkları vardır. Altyapıyı işletim sistemi dağıtımına hazırlanmanıza yardımcı olması için bu makaleyi kullanın.  
 
-##  <a name="dependencies-external-to-configuration-manager"></a><a name="BKMK_ExternalDependencies"></a>Configuration Manager dış bağımlılıklar  
+##  <a name="dependencies-external-to-configuration-manager"></a><a name="BKMK_ExternalDependencies"></a> Configuration Manager dış bağımlılıklar  
 
 Bu bölümde, Configuration Manager ' de işletim sistemlerini dağıtmak için gereken harici araçlar, yükleme setleri ve işletim SISTEMI sürümleri hakkında bilgi verilmektedir.  
 
@@ -31,11 +31,11 @@ Bu bölümde, Configuration Manager ' de işletim sistemlerini dağıtmak için 
 
 Windows değerlendirme ve Dağıtım Seti (ADK), Windows 'un yapılandırmasını ve dağıtımını destekleyen bir araç ve belge kümesidir. Configuration Manager, Windows 'u yükleme, görüntü yakalama ve Kullanıcı profillerini ve verilerini geçirme gibi eylemleri otomatikleştirmek için Windows ADK 'yi kullanır.  
 
-Daha fazla bilgi için aşağıdaki makalelere bakın:  
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:  
 
-- [BT Uzmanlarına yönelik Windows 10 için Windows ADK senaryoları](https://docs.microsoft.com/windows/deployment/windows-adk-scenarios-for-it-pros)  
+- [BT Uzmanlarına yönelik Windows 10 için Windows ADK senaryoları](/windows/deployment/windows-adk-scenarios-for-it-pros)  
 
-- [Windows 10 için Windows ADK’yi indirin](https://docs.microsoft.com/windows-hardware/get-started/adk-install)  
+- [Windows 10 için Windows ADK’yi indirin](/windows-hardware/get-started/adk-install)  
 
     > [!IMPORTANT]
     > ADK için hem Windows **10 Için WINDOWS ADK** hem de **Windows PE eklentisi**' ni indirdiğinizden emin olun.
@@ -77,9 +77,9 @@ Farklı Configuration Manager sürümleriyle kullanabileceğiniz Windows 10 ADK 
 
 Configuration Manager, işletim sistemi dağıtımınızın parçası olarak Kullanıcı durumunu yakalamak ve geri yüklemek için USMT 10 kaynak dosyalarını içeren bir USMT paketini kullanır. Configuration Manager Kurulum, USMT paketini otomatik olarak oluşturur. USMT 10, Windows 7, Windows 8, Windows 8.1 ve Windows 10 ' dan Kullanıcı durumunu yakalar.  
 
-Daha fazla bilgi için aşağıdaki makalelere bakın:  
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:  
 
-- [USMT 10 için Genel Geçiş Senaryoları](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios)  
+- [USMT 10 için Genel Geçiş Senaryoları](/windows/deployment/usmt/usmt-common-migration-scenarios)  
 
 - [Kullanıcı durumunu yönetme](../get-started/manage-user-state.md)  
 
@@ -133,7 +133,7 @@ DHCP, PXE dağıtımları için gerekli olur. İşletim sistemlerini PXE kullana
 
 
 
-##  <a name="configuration-manager-dependencies"></a><a name="BKMK_InternalDependencies"></a>Configuration Manager Bağımlılıklar  
+##  <a name="configuration-manager-dependencies"></a><a name="BKMK_InternalDependencies"></a> Configuration Manager Bağımlılıklar  
 
 Bu bölüm Configuration Manager işletim sistemi dağıtımı önkoşulları hakkında bilgiler sağlar.  
 
@@ -266,13 +266,13 @@ Dağıtım noktasını DHCP çalıştıran bir sunucuda birlikte barındırmak i
 > Sürüm 1902 ' den başlayarak, bir dağıtım noktasında Windows dağıtım hizmeti olmadan bir PXE Yanıtlayıcı 'yı etkinleştirdiğinizde, artık DHCP hizmetiyle aynı sunucuda olabilir. Daha fazla bilgi için bkz. [PXE isteklerini kabul etmek için en az bir dağıtım noktasını yapılandırma](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md#BKMK_Configure).
 
 
-##  <a name="supported-operating-systems"></a><a name="BKMK_SupportedOS"></a>Desteklenen işletim sistemleri  
+##  <a name="supported-operating-systems"></a><a name="BKMK_SupportedOS"></a> Desteklenen işletim sistemleri  
 
 [İstemciler ve cihazlar için desteklenen işletim sistemlerinde](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md) desteklenen istemciler olarak listelenen tüm Windows işletim sistemleri işletim sistemi dağıtımı için desteklenir.  
 
 
 
-##  <a name="supported-disk-configurations"></a><a name="BKMK_SupportedDiskConfig"></a>Desteklenen disk yapılandırması  
+##  <a name="supported-disk-configurations"></a><a name="BKMK_SupportedDiskConfig"></a> Desteklenen disk yapılandırması  
 
 Referans ve hedef bilgisayarlardaki Configuration Manager işletim sistemi dağıtımı için desteklenen sabit disk yapılandırması bileşimleri aşağıdaki tabloda gösterilmiştir:  
 

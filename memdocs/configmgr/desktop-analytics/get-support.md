@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: dd18355b9e472866a4d684162913795443ab07ef
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 112a1fe4a47cce330593d34da7ce8d9180457497
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268530"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698914"
 ---
 # <a name="get-support-for-desktop-analytics"></a>Masaüstü analizi için destek alın
 
@@ -31,11 +31,11 @@ Microsoft, masaüstü analizi için genel teknik, satış öncesi, faturalandır
 
 ## <a name="help-and-support"></a>Yardım ve destek
 
-Masaüstü analizine yönelik yardım istemek için, portalda **sorun giderme + Destek**altında **Yardım ve destek** seçeneğini kullanın. Bu eylem, masaüstü analizi için çevrimiçi bir destek bileti dosyası. Bir destek olayı oluşturmak ve yönetmek için hesabınızın **Microsoft. office365. Supportbilet/bilet/yönetme**eylemini içeren bir Azure Active Directory (Azure AD) rolü olmalıdır. Daha fazla bilgi için bkz. [Azure AD 'de yönetici rolleri](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).
+Masaüstü analizine yönelik yardım istemek için, portalda **sorun giderme + Destek**altında **Yardım ve destek** seçeneğini kullanın. Bu eylem, masaüstü analizi için çevrimiçi bir destek bileti dosyası. Bir destek olayı oluşturmak ve yönetmek için hesabınızın **Microsoft. office365. Supportbilet/bilet/yönetme**eylemini içeren bir Azure Active Directory (Azure AD) rolü olmalıdır. Daha fazla bilgi için bkz. [Azure AD 'de yönetici rolleri](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).
 
 Sorun yalnızca Analize göre Configuration Manager daha geniş olursa, yeni bir destek isteği açmak için [Microsoft desteği](https://aka.ms/cmcbsupport) ' ne gidin. **Masaüstü Analizi** kategorisini kullanın.
 
-## <a name="share-product-feedback"></a><a name="bkmk_feedback"></a>Ürün geri bildirimini paylaşma
+## <a name="share-product-feedback"></a><a name="bkmk_feedback"></a> Ürün geri bildirimini paylaşma
 
 <!-- 5451636 -->
 

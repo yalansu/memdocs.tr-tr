@@ -10,12 +10,12 @@ ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 761270fe9419330e2d60d0483554ee6c932c1b26
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bf108cec074129f9b70e7cd2658cf2b1c8c10bc2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124894"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697917"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>BIOS’tan UEFI’ye dönüştürmeyi yönetmek için görev sırası adımları
 
@@ -70,7 +70,7 @@ Bir işletim sistemini yüklemek için var olan bir görev dizisinde, BIOS 'TAN 
     > [!TIP]
     > Varsayılan olarak, EFı bölüm boyutu 500 MB 'tır. Bazı ortamlarda, önyükleme görüntüsü bu bölümde depolamaya çok büyük. Bu sorunu geçici olarak çözmek için, EFı bölümünün boyutunu artırın. Örneğin, bunu 1 GB olarak ayarlayın.<!-- SCCMDocs#1024 -->
 
-## <a name="convert-from-bios-to-uefi-during-in-place-upgrade"></a><a name="bkmk_ipu"></a>Yerinde yükseltme sırasında BIOS 'tan UEFı 'ye dönüştürme
+## <a name="convert-from-bios-to-uefi-during-in-place-upgrade"></a><a name="bkmk_ipu"></a> Yerinde yükseltme sırasında BIOS 'tan UEFı 'ye dönüştürme
 
 Windows 10, **MBR2GPT**basit bir dönüştürme aracı içerir. Bu işlem, UEFı etkin donanımlar için sabit diski yeniden bölümlemek için işlemi otomatikleştirir. Dönüştürme aracını yerinde yükseltme işlemiyle Windows 10 ' a tümleştirebilirsiniz. Bu aracı, yükseltme görev diziniz ve bellenimi BIOS 'tan UEFı 'ye dönüştüren OEM aracıyla birleştirin.
 
@@ -91,7 +91,7 @@ Windows 10, **MBR2GPT**basit bir dönüştürme aracı içerir. Bu işlem, UEFı
     > [!TIP]
     > Ayrıca, tüm işletim sistemi yerine Windows PE 'de MBR2GPT.EXE aracını çalıştırmayı da seçebilirsiniz. MBR2GPT.EXE aracını çalıştırma adımından önce bilgisayarı Windows PE 'ye yeniden başlatmak için bir adım ekleyin. Ardından komut satırından **/Allowfullos** seçeneğini kaldırın.
 
-    Araç ve kullanılabilir seçenekler hakkında daha fazla bilgi için bkz. [MBR2GPT.EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt).
+    Araç ve kullanılabilir seçenekler hakkında daha fazla bilgi için bkz. [MBR2GPT.EXE](/windows/deployment/mbr-to-gpt).
 
     1. Yazılım yazılımını BIOS 'tan UEFı 'ye dönüştüren OEM aracını çalıştırmak için bir adım ekleyin. Bu adım genellikle, OEM aracını çalıştırmak için komut satırı ile birlikte komut satırını **çalıştırır**.
 

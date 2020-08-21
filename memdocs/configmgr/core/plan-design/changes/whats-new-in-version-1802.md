@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 87056482f098a440e5950b76520ab410844a1888
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: aaba31a8a017f75338cf4d6dee3c2f2d80d7e377
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129010"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698529"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Configuration Manager sürüm 1802 ' deki yenilikler
 
@@ -267,7 +267,7 @@ Artık Windows varsayılan olarak belirli bir Web tarayıcısına sahip istemcil
 
 ### <a name="report-on-windows-autopilot-device-information"></a>Windows Autopilot cihaz bilgileri hakkında rapor
 <!-- 1351442 -->
-Windows Autopilot, yeni Windows 10 cihazlarını modern bir şekilde ekleme ve yapılandırma çözümüdür. Daha fazla bilgi için bkz. [Windows Autopilot 'e genel bakış](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). Windows Autopilot ile var olan cihazları kaydetmenin bir yöntemi, cihaz bilgilerini Iş ve eğitim için Microsoft Store karşıya yüklemedir. Bu bilgilere cihaz seri numarası, Windows ürün tanımlayıcısı ve bir donanım tanımlayıcısı dahildir. Bu cihaz bilgilerini toplamak ve yeni raporla, **Windows Autopilot cihaz bilgileri**, **donanım-genel** raporlar düğümünde bildirmek için Configuration Manager kullanın. Daha fazla bilgi için bkz. ortak yönetime hazırlanma bölümünde [İnternet tabanlı cihazları ortak yönetim için hazırlama](../../../comanage/how-to-prepare-Win10.md#windows-autopilot) .
+Windows Autopilot, yeni Windows 10 cihazlarını modern bir şekilde ekleme ve yapılandırma çözümüdür. Daha fazla bilgi için bkz. [Windows Autopilot 'e genel bakış](/windows/deployment/windows-autopilot/windows-10-autopilot). Windows Autopilot ile var olan cihazları kaydetmenin bir yöntemi, cihaz bilgilerini Iş ve eğitim için Microsoft Store karşıya yüklemedir. Bu bilgilere cihaz seri numarası, Windows ürün tanımlayıcısı ve bir donanım tanımlayıcısı dahildir. Bu cihaz bilgilerini toplamak ve yeni raporla, **Windows Autopilot cihaz bilgileri**, **donanım-genel** raporlar düğümünde bildirmek için Configuration Manager kullanın. Daha fazla bilgi için bkz. ortak yönetime hazırlanma bölümünde [İnternet tabanlı cihazları ortak yönetim için hazırlama](../../../comanage/how-to-prepare-Win10.md#windows-autopilot) .
 
 ### <a name="report-on-windows-10-servicing-details-for-a-specific-collection"></a>Belirli bir koleksiyon için Windows 10 Bakımı Ayrıntıları raporu
 <!--1357653-->
@@ -287,7 +287,7 @@ Windows Autopilot, yeni Windows 10 cihazlarını modern bir şekilde ekleme ve y
 
 ### <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Windows Defender Exploit Guard için Configuration Manager Ilkelerine yönelik iyileştirmeler
 <!-- 1356220 -->
-[Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction)Için Configuration Manager [saldırı yüzeyi azaltma](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_ASR) ve [denetimli klasör erişim](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_CFA) bileşenleri için ek ilke ayarları eklenmiştir.
+[Windows Defender Exploit Guard](/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction)Için Configuration Manager [saldırı yüzeyi azaltma](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_ASR) ve [denetimli klasör erişim](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_CFA) bileşenleri için ek ilke ayarları eklenmiştir.
 
 ### <a name="new-host-interaction-settings-for-windows-defender-application-guard"></a>Windows Defender Application Guard için yeni konak etkileşim ayarları
 <!-- 1356256 -->

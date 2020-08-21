@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a3cf735dfa2dd73ed39a24c2d674a966acddf05a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: c2861214bcdc9162b0121304b342d1d9d48be170
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125126"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697951"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Windows to go 'Yu Configuration Manager ile dağıtma
 
@@ -23,7 +23,7 @@ ms.locfileid: "88125126"
 
 Bu konuda, Configuration Manager Windows to go sağlama adımları sağlanmaktadır. Windows To Go, Windows 8'in, bilgisayarda çalıştırılan işletim sisteminden bağımsız olarak, Windows 7 veya Windows 8 sertifika gereksinimlerini karşılayan bilgisayarlarda bir USB bağlantılı harici sürücüden önyüklenebilecek bir Windows To Go çalışma alanının oluşturulmasını sağlayan bir kurum özelliğidir. Windows To Go çalışma alanları, kurumların masaüstü ve dizüstü bilgisayarları için kullandığı görüntünün aynısını kullanabilir ve aynı şekilde yönetilebilir.  
 
- Windows to go hakkında daha fazla bilgi için bkz. [Windows to go özelliğine genel bakış](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
+ Windows to go hakkında daha fazla bilgi için bkz. [Windows to go özelliğine genel bakış](/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
 
 ## <a name="provision-windows-to-go"></a>Windows To Go Sağlama  
  Windows To Go, USB bağlantılı harici sürücüde depolanan bir işletim sistemidir. Windows To Go sürücüsünü, diğer işletim sistemi dağıtımlarını sağladığınıza çok benzer şekilde sağlayabilirsiniz. Ancak, Windows To Go, kullanıcı odaklı ve yüksek mobiliteli bir çözüm olacak şekilde tasarlandığından, bu sürücüleri sağlamak için biraz daha farklı bir yaklaşım sergilemelisiniz.  
@@ -67,7 +67,7 @@ Bu konuda, Configuration Manager Windows to go sağlama adımları sağlanmaktad
 
      Windows 8 dağıtımı için, önceden hazırlanan medya oluşturduğunuzda bakacağınız bir görev dizisi oluşturmanız gerekir. Daha fazla bilgi için bkz. [görevleri otomatikleştirmek için görev dizilerini yönetme](manage-task-sequences-to-automate-tasks.md).  
 
-###  <a name="create-prestaged-media"></a><a name="BKMK_CreatePrestagedMedia"></a>Önceden hazırlanan medya oluşturma  
+###  <a name="create-prestaged-media"></a><a name="BKMK_CreatePrestagedMedia"></a> Önceden hazırlanan medya oluşturma  
  Ön hazırlığı yapılan medya, hedef bilgisayarı çalıştırmak için kullanılan önyükleme görüntüsünü ve hedef bilgisayara uygulanan işletim sistemi görüntüsünü içerir. Önceden hazırlanmış medyayla sağladığınız bilgisayar, önyükleme görüntüsü kullanılarak başlatılabilir. Bilgisayar ardından, tam bir işletim sistemi dağıtımı yüklemek için, var olan bir işletim sistemi dağıtımı görev dizisi çalıştırabilir. İşletim sistemini dağıtan görev dizisi, medyada yer almaz.  
 
  Önceden hazırlama aşamasında, işletim sistemi görüntüsü ve önyükleme görüntüsüne ek olarak uygulamalar ve aygıt sürücüleri gibi içerik ekleyebilirsiniz. Böylelikle, bir işletim sistemini dağıtmak için geçen süre azaltılır ve içerik zaten sürücüde olduğundan ağ trafiği azaltılır.  
@@ -208,7 +208,7 @@ Bu konuda, Configuration Manager Windows to go sağlama adımları sağlanmaktad
     > [!NOTE]  
     >  Sihirbazın önceden hazırlanmış medya dosyasını tamamlaması uzun sürebilir.  
 
-###  <a name="create-a-windows-to-go-creator-package"></a><a name="BKMK_CreatePackage"></a>Windows to go oluşturan paketi oluşturma  
+###  <a name="create-a-windows-to-go-creator-package"></a><a name="BKMK_CreatePackage"></a> Windows to go oluşturan paketi oluşturma  
  Windows To Go dağıtımının parçası olarak, önceden hazırlanmış medya dosyasını dağıtacağınız bir paket oluşturmanız gerekir. Paketin, Windows To Go sürücüsünü yapılandıran ve önceden hazırlanmış medyayı sürücüye çıkaran aracı içermesi gerekir. Windows To Go Oluşturan paketini oluşturmak için aşağıdaki yordamı kullanın.  
 
 #### <a name="to-create-the-windows-to-go-creator-package"></a>Windows To Go Oluşturan paketi oluşturmak için  
@@ -273,7 +273,7 @@ Bu konuda, Configuration Manager Windows to go sağlama adımları sağlanmaktad
 
       **İleri** 'yi tıklatın ve sihirbazı tamamlayın.  
 
-###  <a name="update-the-task-sequence-to-enable-bitlocker-for-windows-to-go"></a><a name="BKMK_UpdateTaskSequence"></a>Windows To Go için BitLocker 'ı etkinleştirmek üzere görev dizisini güncelleştirme  
+###  <a name="update-the-task-sequence-to-enable-bitlocker-for-windows-to-go"></a><a name="BKMK_UpdateTaskSequence"></a> Windows To Go için BitLocker 'ı etkinleştirmek üzere görev dizisini güncelleştirme  
  Windows To Go, TPM kullanmadan bir dış önyüklenebilir sürücüde BitLocker'ı etkinleştirir. Bu nedenle, Windows To Go sürücüsünde BitLocker'ı yapılandırmak için ayrı bir araç kullanmanız gerekir. BitLocker'ı etkinleştirmek için **Windows'u ve ConfigMgr'yi Kur** adımından sonraki görev sırasına bir eylem eklemeniz gerekir.  
 
 > [!NOTE]  
@@ -336,7 +336,7 @@ Bu konuda, Configuration Manager Windows to go sağlama adımları sağlanmaktad
     > [!NOTE]  
     >  Yeni komut satırı adımından sonra gelme olasılığı bulunan **BitLocker'ı Etkinleştir** adımı, Windows To Go için BitLocker'ı etkinleştirmek üzere kullanılmaz. Ancak, bu adımı bir Windows To Go sürücüsü kullanmayan Windows 8 dağıtımları için kullanmak üzere görev sırasında tutabilirsiniz.  
 
-###  <a name="deploy-the-windows-to-go-creator-package-and-task-sequence"></a><a name="BKMK_Deployments"></a>Windows To Go Oluşturucu paketini ve görev dizisini dağıtma  
+###  <a name="deploy-the-windows-to-go-creator-package-and-task-sequence"></a><a name="BKMK_Deployments"></a> Windows To Go Oluşturucu paketini ve görev dizisini dağıtma  
  Windows To Go karma bir dağıtım işlemidir. Bu nedenle Windows To Go Oluşturucu paketini ve Windows 8 görev sırasını dağıtmanız gerekir. Dağıtım işlemini tamamlamak için aşağıdaki yordamları kullanın.  
 
 #### <a name="to-deploy-the-windows-to-go-creator-package"></a>Windows To Go Oluşturucu paketini dağıtmak için  
@@ -451,7 +451,7 @@ Bu konuda, Configuration Manager Windows to go sağlama adımları sağlanmaktad
 
 11. Sihirbazı tamamlayın.  
 
-###  <a name="user-runs-the-windows-to-go-creator"></a><a name="BKMK_UserExperience"></a>Kullanıcı Windows to go oluşturucuyu çalıştırır  
+###  <a name="user-runs-the-windows-to-go-creator"></a><a name="BKMK_UserExperience"></a> Kullanıcı Windows to go oluşturucuyu çalıştırır  
  Windows To Go paketini ve Windows 8 görev sırasını dağıttıktan sonra Windows To Go Oluşturucu kullanılabilir hale gelir. Kullanıcı yazılım kataloğuna veya Windows To Go Oluşturucu aygıtlara dağıtıldıysa Yazılım Merkezine giderek Windows To Go Oluşturucu programını çalıştırabilir. Oluşturucu paketi indirildikten sonra görev çubuğunda yanıp sönen bir simge gösterilir. Kullanıcı bu simgeyi tıklattığında kullanıcının sağlanacak Windows To Go sürücüsünü seçmesi (/drive komut satırı seçeneği kullanılmıyorsa) için bir iletişim kutusu gösterilir. Sürücü Windows To Go gereksinimlerini karşılamıyorsa veya sürücüde görüntünün yüklenmesi için yeterli boş disk alanı yoksa oluşturucu programı bir hata iletisi gösterir. Kullanıcı, onay sayfasından uygulanacak bir sürücü ve görüntü doğrulaması yapabilir. Oluşturucu Windows To Go sürücüsüne içerik yapılandırıp önceden hazırladığından bir ilerleme iletişim kutusu gösterir. Önceden hazırlama tamamlandıktan sonra oluşturucu, Windows To Go sürücüsünü önyükleyecek şekilde bilgisayarı yeniden başlatmaya yönelik bir uyarı gösterir.  
 
 > [!NOTE]  
@@ -461,4 +461,4 @@ Bu konuda, Configuration Manager Windows to go sağlama adımları sağlanmaktad
  Bilgisayar Windows To Go sürücüsüne yeniden başlatıldıktan sonra, sürücü Windows PE'de önyüklenir ve yönetim noktasına bağlanarak işletim sistemi dağıtımını tamamlama ilkesini alır. Configuration Manager sürücüyü yapılandırır ve aşamalar. Sürücüyü Configuration Manager sonra, Kullanıcı sağlama işlemini tamamlamak için bilgisayarı yeniden başlatabilir (bir etki alanına katılması veya uygulamaları yüklemek gibi). Bu işlem tüm önceden hazırlanmış medyalar için aynıdır.  
 
 ###  <a name="user-logs-in-to-windows-8"></a><a name="BKMK_UserLogsIn"></a> Kullanıcının Windows 8'de oturum açması  
- Configuration Manager sağlama işlemini tamamladıktan sonra Windows 8 kilit ekranı görüntülendikten sonra, Kullanıcı işletim sisteminde oturum açabilir.  
+ Configuration Manager sağlama işlemini tamamladıktan sonra Windows 8 kilit ekranı görüntülendikten sonra, Kullanıcı işletim sisteminde oturum açabilir.

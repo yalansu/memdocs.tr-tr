@@ -10,12 +10,12 @@ ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b16ba822cb538b62fac06ee550dd17cfa8f077be
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0e4fc5b019de25234ae964137f6b374ecbbca7d8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124570"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697798"
 ---
 # <a name="customize-boot-images-with-configuration-manager"></a>Configuration Manager ile önyükleme görüntülerini özelleştirme
 
@@ -49,7 +49,7 @@ Configuration Manager her sürümü belirli bir Windows değerlendirme ve Dağı
 
 - **WinPE-WDS-Tools**: Windows Dağıtım Hizmetleri araçlarını yükler.  
 
-  Ekleyebileceğiniz başka Windows PE paketleri de bulunur. Önyükleme görüntüsüne ekleyebileceğiniz isteğe bağlı bileşenler hakkında daha fazla bilgi için bkz. [WinPE: paket ekleme (Isteğe bağlı bileşenler başvurusu)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
+  Ekleyebileceğiniz başka Windows PE paketleri de bulunur. Önyükleme görüntüsüne ekleyebileceğiniz isteğe bağlı bileşenler hakkında daha fazla bilgi için bkz. [WinPE: paket ekleme (Isteğe bağlı bileşenler başvurusu)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 > [!NOTE]
 >Eklediğiniz araçları içeren özelleştirilmiş bir önyükleme görüntüsünden WinPE ile açılış yaptığınızda, WinPE’den bir komut satırı açabilir ve çalıştırmak için aracın dosya adını yazabilirsiniz. Bu araçların konumu otomatik olarak yol değişkenine eklenir. Komut istemi yalnızca önyükleme görüntüsü özelliklerindeki **Özelleştirme** sekmesinde **komut desteğini etkinleştir (yalnızca test)** ayarı seçiliyse eklenebilir.
@@ -72,7 +72,7 @@ Configuration Manager her sürümü belirli bir Windows değerlendirme ve Dağı
     Burada C:\WinPEWAIK önyükleme görüntüsünü içeren klasör ve C:\WinPEMount ise bağlanan klasördür.  
 
    > [!NOTE]
-   >  Daha fazla bilgi için bkz. [DISM (Dağıtım Görüntüsü Bakımı ve yönetimi) başvurusu](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
+   >  Daha fazla bilgi için bkz. [DISM (Dağıtım Görüntüsü Bakımı ve yönetimi) başvurusu](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. Önyükleme görüntüsünü bağladıktan sonra, isteğe bağlı bileşenleri önyükleme görüntüsüne eklemek için DISM'yi kullanın. Windows PE 5'de 64 bit isteğe bağlı bileşenler <*Yükleme yolu*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs konumunda bulunur.  
 
@@ -108,7 +108,7 @@ Configuration Manager her sürümü belirli bir Windows değerlendirme ve Dağı
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"**  
 
    > [!TIP]
-   >  Önyükleme görüntüsüne ekleyebileceğiniz isteğe bağlı bileşenler hakkında daha fazla bilgi için, bkz. [WINDOWS PE Isteğe bağlı bileşenler başvurusu](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
+   >  Önyükleme görüntüsüne ekleyebileceğiniz isteğe bağlı bileşenler hakkında daha fazla bilgi için, bkz. [WINDOWS PE Isteğe bağlı bileşenler başvurusu](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 6. Gerektiğinde önyükleme görüntüsüne belirli sürücüleri eklemek için DISM'yi kullanın. Önyükleme görüntüsüne sürücü eklemek için aşağıdakileri yazın:  
 
@@ -194,7 +194,7 @@ Configuration Manager her sürümü belirli bir Windows değerlendirme ve Dağı
     Burada C:\WinPEWAIK önyükleme görüntüsünü içeren klasör ve C:\WinPEMount ise bağlanan klasördür.  
 
    > [!NOTE]
-   > Daha fazla bilgi için bkz. [DISM (Dağıtım Görüntüsü Bakımı ve yönetimi) başvurusu](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
+   > Daha fazla bilgi için bkz. [DISM (Dağıtım Görüntüsü Bakımı ve yönetimi) başvurusu](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. Önyükleme görüntüsünü bağladıktan sonra, isteğe bağlı bileşenleri önyükleme görüntüsüne eklemek için DISM'yi kullanın. Windows PE 3.1'de, örneğin, isteğe bağlı bileşenler <*YüklemeYolu*>\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\ konumunda bulunur.  
 
@@ -224,7 +224,7 @@ Configuration Manager her sürümü belirli bir Windows değerlendirme ve Dağı
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wds-tools_en-us.cab"**  
 
    > [!TIP]
-   >  Önyükleme görüntüsüne ekleyebileceğiniz farklı paketler hakkında daha fazla bilgi için bkz. bir [WINDOWS PE görüntüsüne paket ekleme](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10)).
+   >  Önyükleme görüntüsüne ekleyebileceğiniz farklı paketler hakkında daha fazla bilgi için bkz. bir [WINDOWS PE görüntüsüne paket ekleme](/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10)).
 
 6. Gerektiğinde önyükleme görüntüsüne belirli sürücüleri eklemek için DISM'yi kullanın. Gerekirse önyükleme görüntüsüne sürücü eklemek için aşağıdakileri yazın:  
 
@@ -290,4 +290,4 @@ Configuration Manager her sürümü belirli bir Windows değerlendirme ve Dağı
 
     3.  Adım 3'te tanımlanan önyükleme görüntüsüne tıklayın.  
 
-    4.  **Giriş** sekmesinde, **Dağıtım** grubunda, **Dağıtım Noktalarını Güncelleştir**'i tıklatın.  
+    4.  **Giriş** sekmesinde, **Dağıtım** grubunda, **Dağıtım Noktalarını Güncelleştir**'i tıklatın.

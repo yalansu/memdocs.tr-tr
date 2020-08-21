@@ -1,5 +1,5 @@
 ---
-title: Grup Ilkelerini kullanarak Endpoint Protection yönetme
+title: Grup İlkelerini kullanarak Endpoint Protection yönetme
 titleSuffix: Configuration Manager
 description: Endpoint Protection grup Ilkelerini kullanarak yönetmeyi öğrenin.
 ms.date: 08/05/2020
@@ -10,12 +10,12 @@ ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6c43ca9e1007c62835015a8c26a478af7da34ebb
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: d028dc6149ae1fee2d61634b96ccf450fc8f4b24
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87820014"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700608"
 ---
 # <a name="use-group-policy-settings-to-manage-endpoint-protection-in-previous-versions-of-windows"></a>Önceki Windows sürümlerinde Endpoint Protection yönetmek için grup ilkesi ayarlarını kullanın
 
@@ -42,7 +42,7 @@ Bu tür cihazlarda Endpoint Protection aşağıdaki şekilde açıklanan grup il
     - [Yerel cihaz](#load-endpoint-protection-group-policy-settings-into-your-local-device)
 
 > [!NOTE]
-> Windows 10, Windows Server 2019 ve Windows Server 2016 ' de Microsoft Defender virüsten koruma 'yı yönetmek için grup ilkesi ayarlarını kullanma hakkında bilgi için bkz. [Microsoft Defender virüsten koruma yapılandırmak ve yönetmek için Grup İlkesi ayarlarını kullanma](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
+> Windows 10, Windows Server 2019 ve Windows Server 2016 ' de Microsoft Defender virüsten koruma 'yı yönetmek için grup ilkesi ayarlarını kullanma hakkında bilgi için bkz. [Microsoft Defender virüsten koruma yapılandırmak ve yönetmek için Grup İlkesi ayarlarını kullanma](/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
 
 ## <a name="copy-endpoint-protection-policy-definitions"></a>Endpoint Protection ilkesi tanımlarını Kopyala
 
@@ -75,7 +75,7 @@ Endpoint Protection tarafından yönetilen alt düzey bir Windows cihazında, En
     
     Burada **DC** , etki alanı denetleyicinizin adıdır ve **contoso.com** etki alanıdır.
 
-3. [Grup İlkesi Yönetim Konsolu](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) açın ve etki alanında yeni bir grup ilkesi NESNESI (GPO) oluşturun, örneğin **Endpoint Protection**.
+3. [Grup İlkesi Yönetim Konsolu](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) açın ve etki alanında yeni bir grup ilkesi NESNESI (GPO) oluşturun, örneğin **Endpoint Protection**.
 4. Endpoint Protection için GPO 'ya sağ tıklayın ve **Düzenle**' ye tıklayın.
 5. Grup İlkesi Yönetimi Düzenleyicisi, **bilgisayar yapılandırma**  >  **ilkeleri**  >  **Yönetim Şablonları: ilke tanımları**  >  **Windows bileşenleri**  >  **Endpoint Protection**' ne gidin.
 

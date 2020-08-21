@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ebdd07874f09ff6d97747826d6056df177e2c735
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 7cb0a2c71a3ea326348b87d6b34e3109a8ef9f20
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128486"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700138"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Azure hizmetlerini Configuration Manager ile kullanım için yapılandırma
 
@@ -39,10 +39,10 @@ Bu Sihirbazı kullanarak aşağıdaki Azure hizmetlerini yapılandırın:
 
   - [Uygulama onayı e-postası bildirimleri](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 
-- **Log Analytics Bağlayıcısı**: [Azure Log Analytics 'a bağlanın](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm). Koleksiyon verilerini Log Analytics ile eşitleyin.  
+- **Log Analytics Bağlayıcısı**: [Azure Log Analytics 'a bağlanın](/azure/azure-monitor/platform/collect-sccm). Koleksiyon verilerini Log Analytics ile eşitleyin.  
 
     > [!Note]  
-    > Bu makale, daha önce *OMS Bağlayıcısı*olarak adlandırılan *Log Analytics bağlayıcıya*başvurur. İşlevsel farklılık yoktur. Daha fazla bilgi için bkz. [Azure yönetim-izleme](https://docs.microsoft.com/azure/azure-monitor/terminology#log-analytics).  
+    > Bu makale, daha önce *OMS Bağlayıcısı*olarak adlandırılan *Log Analytics bağlayıcıya*başvurur. İşlevsel farklılık yoktur. Daha fazla bilgi için bkz. [Azure yönetim-izleme](/azure/azure-monitor/terminology#log-analytics).  
 
 - **İş için Microsoft Store**: [iş için Microsoft Store](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)bağlanın. Kuruluşunuz için Configuration Manager ile dağıtabileceğiniz mağaza uygulamalarını alın.  
 
@@ -78,10 +78,10 @@ Her hizmet için gerekli uygulama izinleri ve yapılandırma hakkında daha fazl
 
 Azure uygulamaları hakkında daha fazla bilgi için aşağıdaki makalelerle başlayın:
 
-- [Azure App Service’de kimlik doğrulaması ve yetkilendirme](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview)
-- [Web Apps genel bakış](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)
+- [Azure App Service’de kimlik doğrulaması ve yetkilendirme](/azure/app-service/app-service-authentication-overview)
+- [Web Apps genel bakış](/azure/app-service-web/app-service-web-overview)
 - [Azure AD 'de uygulama kaydetmenin temelleri](/azure/active-directory/develop/authentication-scenarios)  
-- [Uygulamanızı Azure Active Directory kiracınızla kaydetme](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration)
+- [Uygulamanızı Azure Active Directory kiracınızla kaydetme](/azure/active-directory/active-directory-app-registration)
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -93,7 +93,7 @@ Bağlanmak istediğiniz hizmete karar verdikten sonra, [Hizmet Ayrıntıları](#
 
 Bazı hizmetler, Azure AD uygulamalarının belirli izinlere sahip olmasını gerektirir. Tüm gerekli izinleri öğrenmek için her hizmet için bilgileri gözden geçirin. Örneğin, bir Web uygulamasını içeri aktarabilmeniz için önce bir Azure Yöneticisi tarafından [Azure Portal](https://portal.azure.com)oluşturmanız gerekir.
 
-Log Analytics bağlayıcısını yapılandırırken, ilgili çalışma alanını içeren kaynak grubunda yeni kayıtlı Web uygulamasına *katkıda* bulunan izin verin. Bu izin, Configuration Manager Bu çalışma alanına erişmesine izin verir. İzin atarken, Azure portal **Kullanıcı Ekle** alanında uygulama kaydı adını arayın. Bu işlem, [Log Analytics izinlerle Configuration Manager sağlamaya](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics)benzer. Uygulamayı Configuration Manager içeri aktarmadan önce bir Azure Yöneticisi bu izinleri atamalıdır.
+Log Analytics bağlayıcısını yapılandırırken, ilgili çalışma alanını içeren kaynak grubunda yeni kayıtlı Web uygulamasına *katkıda* bulunan izin verin. Bu izin, Configuration Manager Bu çalışma alanına erişmesine izin verir. İzin atarken, Azure portal **Kullanıcı Ekle** alanında uygulama kaydı adını arayın. Bu işlem, [Log Analytics izinlerle Configuration Manager sağlamaya](/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics)benzer. Uygulamayı Configuration Manager içeri aktarmadan önce bir Azure Yöneticisi bu izinleri atamalıdır.
 
 ## <a name="start-the-azure-services-wizard"></a>Azure Hizmetleri Sihirbazı 'nı başlatma
 
@@ -174,7 +174,7 @@ Azure 'da yönetici kullanıcı olarak kimlik doğrulaması gerçekleştirmek i�
 Azure AD 'de Web uygulaması oluşturmak için **Tamam** ' ı seçin ve sunucu uygulaması oluştur iletişim kutusunu kapatın. Bu eylem [sunucu uygulaması iletişim kutusuna](#server-app-dialog)geri döner.
 
 > [!NOTE]
-> Tanımlanmış bir Azure AD koşullu erişim ilkeniz varsa ve **tüm bulut uygulamalarına** geçerliyse, oluşturulan sunucu uygulamasını bu ilkeden hariç bırakmanız gerekir. Belirli uygulamaları dışarıda bırakma hakkında daha fazla bilgi için bkz. [Azure AD koşullu erişim belgeleri](https://docs.microsoft.com/azure/active-directory/conditional-access/).
+> Tanımlanmış bir Azure AD koşullu erişim ilkeniz varsa ve **tüm bulut uygulamalarına** geçerliyse, oluşturulan sunucu uygulamasını bu ilkeden hariç bırakmanız gerekir. Belirli uygulamaları dışarıda bırakma hakkında daha fazla bilgi için bkz. [Azure AD koşullu erişim belgeleri](/azure/active-directory/conditional-access/).
 
 ### <a name="native-client-app"></a>Yerel Istemci uygulaması
 
@@ -222,13 +222,13 @@ Uygulamalar sayfasında Web ve yerel uygulamaları belirttikten sonra, bağland�
 
 - **Bulut yönetimi** hizmeti, **bulma** sayfası: [Azure AD Kullanıcı bulmayı yapılandırma](configure-discovery-methods.md#azureaadisc)  
 
-- **Log Analytics Bağlayıcısı** hizmeti, **yapılandırma** sayfası: [bağlantıyı Log Analytics yapılandırma](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- **Log Analytics Bağlayıcısı** hizmeti, **yapılandırma** sayfası: [bağlantıyı Log Analytics yapılandırma](/azure/azure-monitor/platform/collect-sccm)  
 
 - **İş hizmetleri için Microsoft Store** yapılandırma **sayfası:** [iş için Microsoft Store yapılandırma](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_config)  
 
 Son olarak, Azure Hizmetleri Sihirbazı ' nı Özet, Ilerleme ve tamamlama sayfalarından tamamlayabilirsiniz. Configuration Manager ' de bir Azure hizmeti yapılandırmasını tamamladınız. Diğer Azure hizmetlerini yapılandırmak için bu işlemi tekrarlayın.
 
-## <a name="renew-secret-key"></a><a name="bkmk_renew"></a>Gizli anahtarı Yenile
+## <a name="renew-secret-key"></a><a name="bkmk_renew"></a> Gizli anahtarı Yenile
 
 Azure AD uygulamasının gizli anahtarını geçerlilik süresinin sonundan önce yenilemeniz gerekir. Anahtarın sona ermesine izin verirseniz Configuration Manager Azure AD ile kimlik doğrulaması yapamaz, bu da bağlı Azure hizmetlerinizin çalışmayı durdurmasına neden olur.
 

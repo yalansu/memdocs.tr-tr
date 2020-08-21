@@ -10,12 +10,12 @@ ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3d65c83d0a9fd009fa21a3b9e623145f87cc9498
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: de3c75982e19e6183260a2a5f99f65b9c785d27f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128144"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700523"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Configuration Manager 'de Yönetim öngörüleri
 
@@ -67,7 +67,7 @@ Bazı Öngörüler, işlem yapmanızı sağlar. Bir öngörü seçin, **daha faz
 
 - Sorgu temelinde filtrelenmiş görünüme gidin. Örneğin, boş koleksiyonlar üzerinde işlem yapmak, koleksiyonlar listesinde yalnızca bu koleksiyonları gösterir. Daha sonra bir koleksiyonu silme veya üyelik kurallarını değiştirme gibi işlemleri gerçekleştirin.
 
-## <a name="management-insights-dashboard"></a><a name="bkmk_insights"></a>Yönetim öngörüleri panosu
+## <a name="management-insights-dashboard"></a><a name="bkmk_insights"></a> Yönetim öngörüleri panosu
 
 <!--1357979-->
 
@@ -131,7 +131,7 @@ Uygulama yönetilikleriniz için Öngörüler.
 
 - **Bulut yönetimi ağ geçidini etkinleştir**: bulut yönetimi ağ geçidi (CMG), Configuration Manager istemcilerini Internet üzerinden yönetmek için basit bir yol sağlar. CMG 'yi Microsoft Azure bir bulut hizmeti olarak dağıtarak, internet üzerinde dolaşan istemcilere içerik yönetmeye ve hizmet vermeye devam edebilirsiniz. CMG ile, internet 'e açık ek şirket içi altyapıya gerek kalmaz. Daha fazla bilgi için [plan for CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md)konusuna bakın.<!-- 451B9B3A-D86A-4EF1-ACC3-FE6A207886BA -->
 
-- **Cihazların karma Azure Active Directory katılmasını sağlama**: Azure AD 'ye katılmış cihazlar, kullanıcıların kendi etki alanı kimlik bilgileriyle oturum açmalarına olanak tanır ve cihazların kuruluşun güvenlik ve uyumluluk standartlarını karşıladığından emin olmanızı sağlar. Daha fazla bilgi için bkz. [Azure AD karma kimlik tasarımı konuları](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-overview).<!-- 6DC6B149-8B48-45E9-B189-F1E12A62D994 -->
+- **Cihazların karma Azure Active Directory katılmasını sağlama**: Azure AD 'ye katılmış cihazlar, kullanıcıların kendi etki alanı kimlik bilgileriyle oturum açmalarına olanak tanır ve cihazların kuruluşun güvenlik ve uyumluluk standartlarını karşıladığından emin olmanızı sağlar. Daha fazla bilgi için bkz. [Azure AD karma kimlik tasarımı konuları](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-overview).<!-- 6DC6B149-8B48-45E9-B189-F1E12A62D994 -->
 
 - **Uygun https yapılandırmasına sahip olmayan siteler**: sürüm 2002 ' den başlayarak, bu Öngörüler hiyerarşinizdeki https için düzgün şekilde yapılandırılmamış siteleri listeler. Bu yapılandırma, sitenin [koleksiyon üyeliği sonuçlarını Azure AD gruplarına eşitlemesini](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync)engeller. Azure AD eşitleme 'nin tüm cihazları karşıya yüklememesine neden olabilir. Bu istemcilerin yönetimi düzgün çalışmayabilir.<!--6268489--> [GELIŞMIŞ http](../../plan-design/hierarchy/enhanced-http.md)'yi yapılandırın veya https için en az bir yönetim noktası etkinleştirin. Siteyi HTTPS iletişimi için zaten yapılandırdıysanız, bu öngörü görünmez.<!-- 73884047-3395-430E-B971-F853806D4349 -->
 
@@ -162,7 +162,7 @@ Koleksiyonları temizleyip yeniden yapılandırarak yönetimi basitleştirmeye y
 
 <!--3607758-->
 
-Sürüm 2002 ' den başlayarak bu grup Microsoft Premier alan mühendisinin bir sürümüdür. Bu Öngörüler, Microsoft Premier 'in [hizmet hub 'ında](https://docs.microsoft.com/services-hub/health/getting_started_with_on_demand_assessments)sağladığı pek çok daha fazla denetim örneğidir.
+Sürüm 2002 ' den başlayarak bu grup Microsoft Premier alan mühendisinin bir sürümüdür. Bu Öngörüler, Microsoft Premier 'in [hizmet hub 'ında](/services-hub/health/getting_started_with_on_demand_assessments)sağladığı pek çok daha fazla denetim örneğidir.
 
 - **Active Directory güvenlik grubu keşfi çok sık çalışacak şekilde yapılandırılmıştır**: genellikle Active Directory güvenlik grubu bulmayı her üç saatte bir daha sık gerçekleşecek şekilde yapılandırmanız gerekmez. Daha sık bir yapılandırmanın Active Directory, ağ ve Configuration Manager üzerinde olumsuz bir performans etkisi olabilir. Tam eşitleme zamanlaması kullanmak yerine artımlı eşitlemeyi etkinleştirin. Daha fazla bilgi için [Active Directory grubu bulma](../deploy/configure/about-discovery-methods.md#bkmk_aboutGroup)bölümüne bakın.<!-- 4E739B65-AEC9-4B1D-8B36-AC6AC4A72022 -->
 
@@ -182,7 +182,7 @@ Sürüm 2002 ' den başlayarak bu grup Microsoft Premier alan mühendisinin bir 
 
 - **Tüm siteleri aynı sürüme Güncelleştir**: aynı Configuration Manager sürümünü bir hiyerarşide kullanın. Bu yapılandırma, tüm sitelerin aynı işlevselliği sağlamasına olanak sağlar. Aynı hiyerarşideki farklı sürümlerin siteleri birlikte çalışabilirlik senaryolarını ortaya çıkarabilir. Configuration Manager sonraki sürümleri yeni özellikler içerir ve bilinen sorunları çözer. Daha fazla bilgi için bkz. [farklı sürümler arasında birlikte çalışabilirlik](../../plan-design/hierarchy/interoperability-between-different-versions.md).<!-- 88C630A5-6D6B-4DDB-95D7-78E12107970D -->
 
-Bu Öngörüler hakkında daha fazla bilgi için bkz. [Configuration Manager Management Insights Için düzeltme adımları](https://docs.microsoft.com/services-hub/health/remediation-steps-configmgr).
+Bu Öngörüler hakkında daha fazla bilgi için bkz. [Configuration Manager Management Insights Için düzeltme adımları](/services-hub/health/remediation-steps-configmgr).
 
 > [!TIP]
 > Zaten Microsoft 'un birleştirilmiş veya Microsoft Premier müşterisiyseniz, isteğe bağlı ek değerlendirmeler için [Hizmetler hub 'ında](https://serviceshub.microsoft.com/assessments/) oturum açın.

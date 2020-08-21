@@ -10,12 +10,12 @@ ms.assetid: 5e5d854c-9cc1-4dd8-b33f-0fcac675b395
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f9aff29d2773c4994272317d5fcd486b83cba8d7
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 0dcd519a7703b5de94f779dc5dbe48aa0d34a3bc
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210188"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700472"
 ---
 # <a name="windows-defender-application-control-management-with-configuration-manager"></a>Configuration Manager ile Windows Defender uygulama denetimi yönetimi
 
@@ -26,7 +26,7 @@ Windows Defender uygulama denetimi bilgisayarları kötü amaçlı yazılımlara
 
 Windows Defender uygulama denetimi, bir bılgısayarda çalışmasına izin verilen yazılımın açık bir listesini zorlayan, yazılım tabanlı bir güvenlik katmanıdır. Uygulama denetiminde herhangi bir donanım veya bellenim önkoşulu yoktur. İle dağıtılan uygulama denetim ilkeleri, bu makalede özetlenen en düşük Windows sürümü ve SKU gereksinimlerini karşılayan hedeflenen koleksiyonlardaki bilgisayarlarda bir ilkeyi etkinleştirmek Configuration Manager. İsteğe bağlı olarak, Configuration Manager aracılığıyla dağıtılan uygulama Denetim ilkelerinin hiper yönetici tabanlı koruması, uyumlu donanımda grup ilkesi aracılığıyla etkinleştirilebilir.
 
-Windows Defender uygulama denetimi hakkında daha fazla bilgi edinmek için, [Windows Defender uygulama denetimi dağıtım kılavuzu](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)' nu okuyun.
+Windows Defender uygulama denetimi hakkında daha fazla bilgi edinmek için, [Windows Defender uygulama denetimi dağıtım kılavuzu](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)' nu okuyun.
 
    > [!NOTE]
    > - Windows 10, sürüm 1709 ' den başlayarak, yapılandırılabilir kod bütünlüğü ilkeleri Windows Defender uygulama denetimi olarak bilinir.
@@ -125,13 +125,13 @@ Bir Windows Defender uygulama denetim ilkesinin işlenmesini izlemek için, iste
 
 Engellenen veya denetlenen belirli yazılımların doğrulanması için aşağıdaki yerel istemci olay günlüklerine bakın:
 
-1. Yürütülebilir dosyaların engellenmesi ve denetlenmesi için, **uygulama ve hizmet günlükleri** > **Microsoft** > **Windows** > **kod bütünlüğü** > **işletimsel**' i kullanın.
-2. Windows Installer ve betik dosyalarının engellenmesi ve denetlenmesi için, **uygulama ve hizmet günlükleri** > **Microsoft** > **Windows** > **AppLocker** > **MSI ve betiği**kullanın.
+1. Yürütülebilir dosyaların engellenmesi ve denetlenmesi için, **uygulama ve hizmet günlükleri**  >  **Microsoft**  >  **Windows**  >  **kod bütünlüğü**  >  **işletimsel**' i kullanın.
+2. Windows Installer ve betik dosyalarının engellenmesi ve denetlenmesi için, **uygulama ve hizmet günlükleri**  >  **Microsoft**  >  **Windows**  >  **AppLocker**  >  **MSI ve betiği**kullanın.
 
 <!--Reworked article to put this inline while working on VSO 1355092
 ## Automatically let software run if it is trusted by Intelligent Security Graph
 
-You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes [Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender SmartScreen for this software to be trusted.
+You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes [Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender SmartScreen for this software to be trusted.
 
 1. Open the **Create Windows Defender Application Policy** wizard.
 2. On the **Inclusions** page, check the box for **Authorize software that is trusted by the Intelligent Security Graph**.
@@ -153,6 +153,3 @@ Bu durumda, cihaz yeniden başlatıldığında veya **zorlama etkinleştirilmiş
 ## <a name="next-steps"></a>Sonraki adımlar
 
  [Kötü amaçlı yazılımdan koruma ilkelerini ve güvenlik duvarı ayarlarını yönetme](endpoint-antimalware-firewall.md)
-
-
-

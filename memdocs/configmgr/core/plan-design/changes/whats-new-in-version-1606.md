@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 070c616ed8411bcd90b2d3edb12b04edd57241e1
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 2fa46770adfbf3e688bbdc561d8193967f3913cd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590482"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698597"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Sürüm 1606 ' deki yenilikler&#39;Configuration Manager
 
@@ -79,14 +79,14 @@ Güncelleştirme 1606 yüklendikten sonra, standart ve çekme dağıtım noktas�
 
 
 
-## <a name="accessibility"></a><a name="accessibility"></a>Larınızdaki
+## <a name="accessibility"></a><a name="accessibility"></a> Larınızdaki
 Bir çalışma alanının farklı düğümleri arasında gezinmek için artık bir düğümün adının ilk harfini girebilirsiniz. Her tuş basma imleci bu harfle başlayan bir sonraki düğüme taşıtir. Ekran okuyucusu olan kullanıcılar için okuyucu bu düğümün adını okur. Erişilebilirlik seçenekleri hakkında daha fazla bilgi için bkz. [erişilebilirlik özellikleri](../../../core/understand/accessibility-features.md).
 
 ## <a name="administration"></a><a name="administration"></a>Yönetim
 Configuration Manager konsolundaki yönetim değişiklikleri aşağıda verilmiştir:
 ### <a name="oms-connector"></a>OMS Bağlayıcısı
 
-Artık, Configuration Manager Configuration Manager koleksiyon olarak [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/documentation/articles/operations-management-suite-overview/)olarak bağlanabilirsiniz. Bu, Configuration Manager dağıtımınızdan Koleksiyonlar gibi verileri OMS 'de görünür hale getirir. Daha fazla bilgi edinmek için bkz. [Configuration Manager verileri buradan Microsoft Operations Management Suite eşitleme](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm).
+Artık, Configuration Manager Configuration Manager koleksiyon olarak [Microsoft Operations Management Suite (OMS)](/azure/azure-monitor/overview)olarak bağlanabilirsiniz. Bu, Configuration Manager dağıtımınızdan Koleksiyonlar gibi verileri OMS 'de görünür hale getirir. Daha fazla bilgi edinmek için bkz. [Configuration Manager verileri buradan Microsoft Operations Management Suite eşitleme](/azure/azure-monitor/platform/collect-sccm).
 
 OMS Bağlayıcısı, yayın öncesi bir özelliktir. Etkinleştirmek için, bkz. [güncelleştirmelerden yayın öncesi özellikleri kullanma](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
 

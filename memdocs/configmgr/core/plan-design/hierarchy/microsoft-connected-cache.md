@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0103ba8923698a31b86e7d34119caaeb54d54c90
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: cd44270d8662d9e7b1b26db92e2f66035edc24f1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128537"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699339"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 'de Microsoft bağlı önbelleği
 
@@ -61,7 +61,7 @@ Bu önbellek Configuration Manager dağıtım noktası içeriğinden ayrıdır. 
 
   - 80 numaralı bağlantı noktasında etkin olan varsayılan Web sitesi
 
-  - IIS [uygulama Isteği yönlendirme](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) özelliğini önceden yüklemeyin. Bağlı önbellek, ARR 'yi yüklüyor ve ayarlarını yapılandırır. Microsoft, bağlı önbelleğin ARR yapılandırmasının bu özelliği de kullanan sunucudaki diğer uygulamalarla çakışmamasını garanti edemez.
+  - IIS [uygulama Isteği yönlendirme](/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) özelliğini önceden yüklemeyin. Bağlı önbellek, ARR 'yi yüklüyor ve ayarlarını yapılandırır. Microsoft, bağlı önbelleğin ARR yapılandırmasının bu özelliği de kullanan sunucudaki diğer uygulamalarla çakışmamasını garanti edemez.
 
   - Dağıtım noktası, Microsoft bulutuna internet erişimi gerektirir. Belirli URL 'Ler, bulut özellikli belirli içeriklere göre farklılık gösterebilir. Teslim iyileştirme için uç noktalara de izin vermeyi unutmayın. Daha fazla bilgi için bkz. [Internet erişimi gereksinimleri](../network/internet-endpoints.md).
 
@@ -97,7 +97,7 @@ Bu önbellek Configuration Manager dağıtım noktası içeriğinden ayrıdır. 
 
 1. İstemci ayarları ' nda, **teslim iyileştirme** grubunda, **Configuration Manager tarafından yönetilen cihazları Içerik Indirme Için Microsoft bağlı önbellek sunucularını kullanacak şekilde**yapılandırma ayarını yapılandırın.  
 
-### <a name="note-1-about-drive-selection"></a><a name="bkmk_note1"></a>Note 1: sürücü seçimi hakkında
+### <a name="note-1-about-drive-selection"></a><a name="bkmk_note1"></a> Note 1: sürücü seçimi hakkında
 
 **Otomatik**' i seçerseniz, Configuration Manager bağlı önbellek bileşenini yüklediğinde, **no_sms_on_drive. SMS** dosyasını kabul eder. Örneğin, dağıtım noktası dosyasına sahiptir `C:\no_sms_on_drive.sms` . C: sürücüsü en fazla boş alana sahip olsa bile Configuration Manager bağlı önbelleği, önbelleği için başka bir sürücü kullanacak şekilde yapılandırır.
 
@@ -109,7 +109,7 @@ Bağlı önbelleği yükledikten sonra sürücüyü değiştirmek için:
 
 - Otomatik olarak ayarlandıysa, önce **no_sms_on_drive. SMS** dosyasını oluşturun. Ardından, bir yapılandırma değişikliğini tetiklemek için dağıtım noktası özelliklerinde bazı değişiklikler yapın.
 
-### <a name="automation"></a>Otomatikleştirme
+### <a name="automation"></a>Otomasyon
 
 <!-- SCCMDocs#1911 -->
 
@@ -118,7 +118,7 @@ Bir dağıtım noktasındaki Microsoft bağlı önbellek ayarlarının yapıland
 Dağıtım noktası için **SMS_SCI_SysResUse** örneğini güncelleştirdiğinizde, aşağıdaki özellikleri ayarlayın:
 
 - **AgreeDOINCLicense**: `1` Lisans koşullarını kabul edecek şekilde ayarlayın.
-- **Bayraklar**: Etkinleştir `|= 4` , devre dışı bırak`&= ~4`
+- **Bayraklar**: Etkinleştir `|= 4` , devre dışı bırak `&= ~4`
 - **DiskSpaceDOINC**: veya olarak ayarla `Percentage``GB`
 - **RetainDOINCCache**: veya olarak ayarla `0``1`
 - **Localdrivedoınc**: `Automatic` olarak, veya gibi belirli bir sürücü harfini ayarla `C:``D:`
@@ -136,13 +136,13 @@ Dağıtım noktası için **SMS_SCI_SysResUse** örneğini güncelleştirdiğini
   - İstemci uygulamaları: Microsoft Store uygulamalar ve güncelleştirmeler
   - Endpoint Protection: Windows Defender tanım güncelleştirmeleri
 
-Windows 10 sürüm 1809 veya sonraki sürümlerde, **Get-teslimat Yoptimizationstatus** Windows PowerShell cmdlet 'i ile bu davranışı doğrulayın. Cmdlet çıkışında **BytesFromCacheServer** değerini gözden geçirin. Daha fazla bilgi için bkz. [Izleyici teslim iyileştirmesi](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization).
+Windows 10 sürüm 1809 veya sonraki sürümlerde, **Get-teslimat Yoptimizationstatus** Windows PowerShell cmdlet 'i ile bu davranışı doğrulayın. Cmdlet çıkışında **BytesFromCacheServer** değerini gözden geçirin. Daha fazla bilgi için bkz. [Izleyici teslim iyileştirmesi](/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization).
 
 Önbellek sunucusu herhangi bir HTTP hatası döndürürse, teslim Iyileştirme istemcisi özgün bulut kaynağına geri döner.
 
 Daha ayrıntılı bilgi için bkz. [Configuration Manager Microsoft bağlı önbellek sorunlarını giderme](../../servers/deploy/configure/troubleshoot-microsoft-connected-cache.md).
 
-## <a name="support-for-intune-win32-apps"></a><a name="bkmk_intune"></a>Intune Win32 uygulamaları için destek
+## <a name="support-for-intune-win32-apps"></a><a name="bkmk_intune"></a> Intune Win32 uygulamaları için destek
 
 <!--5032900-->
 
@@ -184,7 +184,7 @@ Sürüm 1910 ' den başlayarak, Configuration Manager dağıtım noktalarınızd
 
 - Bu özellik yalnızca Intune Win32 uygulama türünü destekler.
 
-  - Bu amaçla Intune 'da yeni bir uygulama oluşturun ve atayın (dağıtın). (Intune sürüm 1811 ' den önce oluşturulan uygulamalar çalışmaz.) Daha fazla bilgi için bkz. [Intune Win32 uygulama yönetimi](https://docs.microsoft.com/intune/apps/apps-win32-app-management).
+  - Bu amaçla Intune 'da yeni bir uygulama oluşturun ve atayın (dağıtın). (Intune sürüm 1811 ' den önce oluşturulan uygulamalar çalışmaz.) Daha fazla bilgi için bkz. [Intune Win32 uygulama yönetimi](/intune/apps/apps-win32-app-management).
 
   - Uygulamanın boyutunun en az 100 MB olması gerekir.
   

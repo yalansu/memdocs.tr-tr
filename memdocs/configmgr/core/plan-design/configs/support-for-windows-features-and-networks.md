@@ -10,12 +10,12 @@ ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7e8e65571a3902661176ca3840690c159faef416
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4f9266668a488b6331857bf860d874a48161fcd0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709624"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700223"
 ---
 # <a name="support-for-windows-features-and-networks-in-configuration-manager"></a>Configuration Manager 'da Windows özellikleri ve ağları için destek
 
@@ -49,13 +49,13 @@ Bu istemciler de içeriği önbelleğe alarak. Aynı alt ağdaki diğer istemcil
 - BranchCache 'i destekleyebilen istemcilerin BranchCache dağıtılmış önbellek modu için yapılandırılmış olması gerekir.  
 - BranchCache 'i desteklemek için BITS istemci ayarları için işletim sistemi ayarı etkinleştirilmelidir.  
 
-Bilgi için bkz. Windows belgelerindeki [Istemcileri BranchCache için yapılandırma](https://docs.microsoft.com/windows/deployment/update/waas-branchcache#configure-clients-for-branchcache) .
+Bilgi için bkz. Windows belgelerindeki [Istemcileri BranchCache için yapılandırma](/windows/deployment/update/waas-branchcache#configure-clients-for-branchcache) .
 
 Desteklenen Configuration Manager tüm Windows sürümleri, varsayılan olarak BranchCache ' i destekler.
 
-Daha fazla bilgi için Windows Server belgelerindeki [Windows Için BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) konusuna bakın.  
+Daha fazla bilgi için Windows Server belgelerindeki [Windows Için BranchCache](/windows-server/networking/branchcache/branchcache) konusuna bakın.  
 
-## <a name="computers-in-workgroups"></a><a name="bkmk_Workgroups"></a>Çalışma gruplarındaki bilgisayarlar  
+## <a name="computers-in-workgroups"></a><a name="bkmk_Workgroups"></a> Çalışma gruplarındaki bilgisayarlar  
 
 Configuration Manager, çalışma gruplarındaki istemciler için destek sağlar.  
 
@@ -64,7 +64,7 @@ Configuration Manager, çalışma gruplarındaki istemciler için destek sağlar
 > [!NOTE]
 > Çalışma gruplarındaki istemciler desteklense de, tüm site sistemleri desteklenen bir Active Directory etki alanının üyesi olmalıdır.  
 
-## <a name="data-deduplication"></a><a name="bkmmk_datadedup"></a>Yinelenen verileri kaldırma
+## <a name="data-deduplication"></a><a name="bkmmk_datadedup"></a> Yinelenen verileri kaldırma
 
 Configuration Manager, Windows Server 2012 veya üzeri sürümlerde dağıtım noktalarıyla yinelenen verileri kaldırma özelliğinin kullanımını destekler.
 
@@ -75,9 +75,9 @@ Daha fazla bilgi için aşağıdaki gönderilere bakın:
 
 - Configuration Manager ekibi blogda [dağıtım noktaları ve Windows Server 2012 yinelenen verileri kaldırma Configuration Manager](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-distribution-points-and-windows-server/ba-p/273385)
 
-- Windows Server belgelerinde [yinelenen verileri kaldırma 'ya genel bakış](https://docs.microsoft.com/windows-server/storage/data-deduplication/overview)
+- Windows Server belgelerinde [yinelenen verileri kaldırma 'ya genel bakış](/windows-server/storage/data-deduplication/overview)
 
-## <a name="directaccess"></a><a name="bkmk_DA"></a>'In  
+## <a name="directaccess"></a><a name="bkmk_DA"></a> 'In  
 
 Configuration Manager istemciler ve site sunucusu sistemleri arasındaki iletişim için DirectAccess özelliğini destekler.  
 
@@ -93,11 +93,11 @@ Configuration Manager, DirectAccess üzerinde aşağıdaki işlevleri destekleme
 
 - Site içindeki Configuration Manager site sistem sunucuları arasındaki iletişim  
 
-## <a name="dual-boot-computers"></a><a name="bkmk_dualboot"></a>Çift önyükleme bilgisayarları  
+## <a name="dual-boot-computers"></a><a name="bkmk_dualboot"></a> Çift önyükleme bilgisayarları  
 
 Configuration Manager, tek bir bilgisayarda birden fazla işletim sistemini yönetemez. Yönetmek üzere bir bilgisayarda birden fazla işletim sistemi varsa, Configuration Manager istemcisinin yalnızca yönetilmesi gereken işletim sistemine yüklendiğinden emin olmak için sitenin bulma ve istemci yükleme yöntemlerini ayarlayın.  
 
-## <a name="ipv6"></a><a name="bkmk_IPv6"></a>IPv6  
+## <a name="ipv6"></a><a name="bkmk_IPv6"></a> IPv6  
 
 Internet Protokolü sürüm 4 ' ün (IPv4) yanı sıra, Configuration Manager aşağıdaki özel durumlarla birlikte Internet Protokolü sürüm 6 ' yı (IPv6) destekler:  
 
@@ -111,11 +111,11 @@ Internet Protokolü sürüm 4 ' ün (IPv4) yanı sıra, Configuration Manager a�
 |Uyandırma ara sunucusu iletişimi|İstemci uyandırma proxy’si paketlerinin desteklenmesi için IPv4 gereklidir.|  
 |Windows CE|Windows CE cihazlarda Configuration Manager istemcisini desteklemek için IPv4 gereklidir.|  
 
-## <a name="network-address-translation"></a><a name="bkmk_NAT"></a>Ağ adresi çevirisi  
+## <a name="network-address-translation"></a><a name="bkmk_NAT"></a> Ağ adresi çevirisi  
 
 Site Internet 'te olan istemcileri desteklemediği ve istemci internet 'e bağlı olduğunu algıladığı müddetçe, ağ adresi çevirisi (NAT) Configuration Manager desteklenmez. Internet tabanlı istemci yönetimi hakkında daha fazla bilgi için bkz. [Internet tabanlı istemcileri yönetmeyi planlayın](../../clients/manage/plan-internet-based-client-management.md).  
 
-## <a name="specialized-storage-technology"></a><a name="bkmk_storage"></a>Özel depolama teknolojisi  
+## <a name="specialized-storage-technology"></a><a name="bkmk_storage"></a> Özel depolama teknolojisi  
 
 Configuration Manager, Configuration Manager bileşeninin yüklü olduğu işletim sistemi sürümü için Windows Donanım uyumluluğu listesi 'nde sertifikalanmış tüm donanımlarla birlikte kullanılabilir.
 
@@ -129,4 +129,4 @@ Site sunucusu rolleri, Configuration Manager dizin ve dosya izinlerini ayarlayab
 
      Ayrıca, bir Configuration Manager istemcisinin önbelleği SIS özellikli bir birimde desteklenmez.  
 
-- **Çıkarılabilir disk sürücüsü**: Configuration Manager çıkarılabilir disk sürücüsüne Configuration Manager site sistemlerinin veya istemcilerinin yüklenmesini desteklemez.  
+- **Çıkarılabilir disk sürücüsü**: Configuration Manager çıkarılabilir disk sürücüsüne Configuration Manager site sistemlerinin veya istemcilerinin yüklenmesini desteklemez.

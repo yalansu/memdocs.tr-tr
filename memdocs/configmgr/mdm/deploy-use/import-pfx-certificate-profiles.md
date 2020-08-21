@@ -10,12 +10,12 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3304d480f0650191a784a9152ae464e81c2207a1
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: df5dfdeab010012a258fe59612a348c269081c45
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906407"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700506"
 ---
 # <a name="import-pfx-certificate-profiles"></a>PFX sertifika profilleri içeri aktarma
 
@@ -28,7 +28,7 @@ Configuration Manager, farklı cihazlar ve işletim sistemi sürümleri için fa
 Sertifika kimlik bilgilerini içeri aktarmak ve ardından, aygıtlara PFX dosyaları sağlamak için Configuration Manager kullanın. Bu dosyaları, şifrelenmiş veri değişimini desteklemek üzere kullanıcıya özgü sertifikalar oluşturmak için kullanabilirsiniz.
 
 > [!TIP]  
-> Bu işleme ilişkin adım adım yönergeler için, [Configuration Manager ' de PFX Sertifika profillerini oluşturma ve dağıtma](https://docs.microsoft.com/archive/blogs/karanrustagi/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager)Web günlüğü gönderisine bakın.  
+> Bu işleme ilişkin adım adım yönergeler için, [Configuration Manager ' de PFX Sertifika profillerini oluşturma ve dağıtma](/archive/blogs/karanrustagi/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager)Web günlüğü gönderisine bakın.  
 
 ## <a name="create-a-profile"></a>Profil oluşturma
 
@@ -70,9 +70,9 @@ Hedef kullanıcıları, PFX sertifikalarını yüklemeniz gereken Windows 10 cih
 
 PFX sertifikasını içeri aktarmak için aşağıdaki Configuration Manager PowerShell cmdlet 'lerini kullanarak bir PFX betiği oluşturun:
 
-- [Get-CMClientCertificatePfx](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
-- [Import-CMClientCertificatePfx](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
-- [Remove-CMClientCertificatePfx](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
+- [Get-CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
+- [Import-CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
+- [Remove-CMClientCertificatePfx](/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
 
 ### <a name="example-script"></a>Örnek betik
 

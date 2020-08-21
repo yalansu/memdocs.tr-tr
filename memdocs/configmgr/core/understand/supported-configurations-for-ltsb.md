@@ -10,12 +10,12 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7de7d562131f97ac21d1c394b176d3b7f4ce7747
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: b72e0a14abd2b468056d4303497625633b8f64a8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906446"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698931"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager uzun vadeli bakım dalı için desteklenen konfigürasyonlar
 
@@ -72,7 +72,7 @@ Aşağıdaki Windows bilgisayar işletim sistemlerini Configuration Manager dahi
 - Windows Server 2012 (x64) sunucu çekirdeği yüklemesi (Note 2)
 
 **(Note 1)** Veri merkezi sürümleri desteklenir ancak Configuration Manager için sertifikalı değildir.  
-**(Note 2)** İstemci gönderme yüklemesini desteklemek için, bu işletim sistemi sürümünü çalıştıran bilgisayarın dosya ve Depolama Hizmetleri sunucu rolü için dosya sunucusu rol hizmetini çalıştırması gerekir. Windows özelliklerini bir sunucu çekirdeği bilgisayara yükleme hakkında daha fazla bilgi için bkz. sunucu [rollerini ve özellikleri sunucu çekirdeği sunucusuna yükleme](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11)).
+**(Note 2)** İstemci gönderme yüklemesini desteklemek için, bu işletim sistemi sürümünü çalıştıran bilgisayarın dosya ve Depolama Hizmetleri sunucu rolü için dosya sunucusu rol hizmetini çalıştırması gerekir. Windows özelliklerini bir sunucu çekirdeği bilgisayara yükleme hakkında daha fazla bilgi için bkz. sunucu [rollerini ve özellikleri sunucu çekirdeği sunucusuna yükleme](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11)).
 
 ### <a name="windows-embedded"></a>Windows Embedded
 İstemci yazılımını cihaza yükleyerek, LTSB 'yi kullanarak aşağıdaki Windows Embedded cihazlarını yönetebilirsiniz.  Daha fazla bilgi için bkz. [Windows Embedded cihazlarına istemci dağıtımını planlama](../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).
@@ -91,7 +91,7 @@ Aşağıdaki Windows bilgisayar işletim sistemlerini Configuration Manager dahi
 
 -   Uygulama Kataloğu, herhangi bir Windows Embedded cihazında desteklenmez.  
 
--   Windows XP tabanlı Windows Embedded cihazlarında algılanan kötü amaçlı yazılımları izleyebilmeniz için önce, Microsoft Windows WMI betik paketini katıştırılmış cihaza yüklemelisiniz. Bu paketi yüklemek için Windows Embedded hedef Tasarımcısı 'nı kullanın. *Wbemdisp. DLL* ve *Wbemdisp. *Algılanan kötü amaçlı yazılımın raporlandığından emin olmak için, TLB dosyaları var olmalı ve katıştırılmış cihazdaki%windir%\System32\WBEM klasörüne kaydedilmelidir.  
+-   Windows XP tabanlı Windows Embedded cihazlarında algılanan kötü amaçlı yazılımları izleyebilmeniz için önce, Microsoft Windows WMI betik paketini katıştırılmış cihaza yüklemelisiniz. Bu paketi yüklemek için Windows Embedded hedef Tasarımcısı 'nı kullanın. *WBEMDISP.DLL* ve *Wbemdisp. *Algılanan kötü amaçlı yazılımın raporlandığından emin olmak için, TLB dosyaları var olmalı ve katıştırılmış cihazdaki%windir%\System32\WBEM klasörüne kaydedilmelidir.  
 
 **Desteklenen işletim sistemleri:**  
 -   Windows 10 Enterprise 2016 LTSB (x86, x64)  

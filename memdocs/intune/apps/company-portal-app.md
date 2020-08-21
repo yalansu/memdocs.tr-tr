@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a82fbfa9e494828450729e29467580c29a590282
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: c789f47767e42b57cd94d63bf9299af57351468d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179562"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700625"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune Şirket Portalı uygulamaları, Şirket Portalı Web sitesini ve Intune uygulamasını özelleştirme
 
@@ -40,7 +40,7 @@ Aşağıdaki tabloda son kullanıcı deneyimi için marka özelleştirme ayrınt
 | Alan adı | Daha fazla bilgi |
 |---|---|---|
 | **Kuruluş adı** | Bu ad, son kullanıcı deneyiminde mesajlaşma boyunca görüntülenir. Üst **bilgide göster** ayarı kullanılarak, üstbilgilere görüntülenecek şekilde ayarlanabilir. Maksimum Uzunluk 40 karakterdir. |
-| **Color (Renk)** | Beş standart renkten seçmek için **Standart** ' ı seçin. Onaltılık kod değerine göre belirli bir rengi seçmek için **özel** ' i seçin. |
+| **Color** | Beş standart renkten seçmek için **Standart** ' ı seçin. Onaltılık kod değerine göre belirli bir rengi seçmek için **özel** ' i seçin. |
 | **Tema rengi** | Son Kullanıcı deneyimine göre göstermek için tema rengini ayarlayın. Metin rengini otomatik olarak siyah veya beyaz olarak ayarlayacağız, bu sayede seçtiğiniz tema renginizdeki en üstünde görünür. |
 | **Üst bilgide göster** | Son Kullanıcı deneyimlerinde bulunan üstbilginin **kuruluş logosu ve adı**, **yalnızca kuruluş logosu**veya **yalnızca kuruluş adını**görüntülemesi gerekip gerekmediğini seçin. Aşağıdaki önizleme kutuları, adı değil yalnızca logoları gösterir.  |
 | **Tema rengi arka planı için logoyu karşıya yükle** | Seçtiğiniz Tema renginiz üzerinde göstermek istediğiniz logoyu karşıya yükleyin. En iyi görünüm için saydam bir arka plana sahip bir logo yükleyin. Bunun, ayarın altındaki Önizleme kutusunda nasıl görüneceğini görebilirsiniz.<p>Maksimum görüntü boyutu: 400 x 400 piksel<br>En büyük dosya boyutu: 750KB<br>Dosya türü: PNG, JPG veya JPEG |
@@ -94,7 +94,7 @@ Aşağıdaki tabloda kayda özgü yapılandırma ayrıntıları verilmiştir:
 
 | Alan adı | Maksimum uzunluk | Daha fazla bilgi |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cihaz kaydı | Yok | Kullanıcıların mobil cihaz yönetimine kaydolmasını ve nasıl sorulup sorulmayacağını belirtin. Daha fazla bilgi için bkz. [cihaz kayıt ayarı seçenekleri](../apps/company-portal-app.md#device-enrollment-setting-options). |
+| Cihaz kaydı | N/A | Kullanıcıların mobil cihaz yönetimine kaydolmasını ve nasıl sorulup sorulmayacağını belirtin. Daha fazla bilgi için bkz. [cihaz kayıt ayarı seçenekleri](../apps/company-portal-app.md#device-enrollment-setting-options). |
 
 #### <a name="device-enrollment-setting-options"></a>Cihaz kayıt ayarı seçenekleri
 
@@ -129,16 +129,21 @@ Aşağıdaki tabloda bildirime özgü yapılandırma ayrıntıları verilmiştir
 
 | Alan adı | Maksimum uzunluk | Daha fazla bilgi |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cihaz sahiplik türü kişisel 'den şirkete (yalnızca Android ve iOS/ıpados) değiştirildiğinde kullanıcılara anında iletme bildirimi gönderin | Yok | Hem Android hem de iOS Şirket Portalı kullanıcılarınıza cihaz sahiplik türü kişisel ' e değiştirildiğinde, anında iletme bildirimi gönderin. Varsayılan olarak, bu anında iletme bildirimi off olarak ayarlanır. Cihaz sahipliği kurumsal sahiplik olarak ayarlandığında, Intune cihaza daha fazla erişim sahibi olur. Bu, tam uygulama envanteri, Filekasası anahtar döndürme, telefon numarası alma ve birkaç uzak eylem seçme işlemlerini içerir. Daha fazla bilgi için bkz. [cihaz sahipliğini değiştirme](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
+| Cihaz sahiplik türü kişisel 'den şirkete (yalnızca Android ve iOS/ıpados) değiştirildiğinde kullanıcılara anında iletme bildirimi gönderin | N/A | Hem Android hem de iOS Şirket Portalı kullanıcılarınıza cihaz sahiplik türü kişisel ' e değiştirildiğinde, anında iletme bildirimi gönderin. Varsayılan olarak, bu anında iletme bildirimi off olarak ayarlanır. Cihaz sahipliği kurumsal sahiplik olarak ayarlandığında, Intune cihaza daha fazla erişim sahibi olur. Bu, tam uygulama envanteri, Filekasası anahtar döndürme, telefon numarası alma ve birkaç uzak eylem seçme işlemlerini içerir. Daha fazla bilgi için bkz. [cihaz sahipliğini değiştirme](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
 
 ### <a name="app-sources"></a>Uygulama kaynakları
 
-Şirket Portalı, hangi ek uygulama kaynaklarının gösterildiğini seçebilirsiniz. Aşağıdaki tabloda, uygulama kaynağına özgü yapılandırma ayrıntıları verilmiştir:
+Şirket Portalı, hangi ek uygulama kaynaklarının gösterildiğini seçebilirsiniz.
+
+> [!NOTE]
+> Şirket Portalı, Configuration Manager uygulamalarını destekler. Bu özellik, son kullanıcıların ortak yönetilen müşteriler için Şirket Portalı hem Configuration Manager hem de Intune tarafından dağıtılan uygulamaları görmesini sağlar. Daha fazla bilgi için bkz. [ortak yönetilen cihazlarda şirket portalı uygulamasını kullanma](/mem/configmgr/comanage/company-portal).
+
+Aşağıdaki tabloda, uygulama kaynağına özgü yapılandırma ayrıntıları verilmiştir:
 
 | Alan adı | Maksimum uzunluk | Daha fazla bilgi |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Azure AD kurumsal uygulamaları | Yok | Her son kullanıcı için Şirket Portalı **Azure AD kurumsal uygulamalarını** görüntülemek üzere **Gizle** veya **göster** ' i seçin. Daha fazla bilgi için bkz. [Uygulama kaynağı ayarı seçenekleri](../apps/company-portal-app.md#app-source-setting-options). |
-| Office Online Uygulamaları | Yok | Her son kullanıcı için Şirket Portalı **Office Online uygulamalarını** görüntülemek üzere **Gizle** veya **göster** ' i seçin. Daha fazla bilgi için bkz. [Uygulama kaynağı ayarı seçenekleri](../apps/company-portal-app.md#app-source-setting-options). |
+| Azure AD kurumsal uygulamaları | N/A | Her son kullanıcı için Şirket Portalı **Azure AD kurumsal uygulamalarını** görüntülemek üzere **Gizle** veya **göster** ' i seçin. Daha fazla bilgi için bkz. [Uygulama kaynağı ayarı seçenekleri](../apps/company-portal-app.md#app-source-setting-options). |
+| Office Online Uygulamaları | N/A | Her son kullanıcı için Şirket Portalı **Office Online uygulamalarını** görüntülemek üzere **Gizle** veya **göster** ' i seçin. Daha fazla bilgi için bkz. [Uygulama kaynağı ayarı seçenekleri](../apps/company-portal-app.md#app-source-setting-options). |
 
 #### <a name="app-source-setting-options"></a>Uygulama kaynağı ayarı seçenekleri
 
@@ -165,8 +170,8 @@ Web Şirket Portalı uygulamalarında, son kullanıcının Şirket Portalı uygu
 
 Şirket Portalı seçildikten sonra, URI yolu aşağıdakilerden biri olduğunda Kullanıcı uygulamada ilgili sayfaya yönlendirilir:
 
-- `/apps`-Web Şirket Portalı tüm uygulamaları listeleyen uygulamalar sayfasını açar.
-- `/apps/[appID]`-Web Şirket Portalı, karşılık gelen uygulamanın ayrıntılar sayfasını açar.
+- `/apps` -Web Şirket Portalı tüm uygulamaları listeleyen uygulamalar sayfasını açar.
+- `/apps/[appID]` -Web Şirket Portalı, karşılık gelen uygulamanın ayrıntılar sayfasını açar.
 - *URI yolu farklı veya beklenmeyen* -Web Şirket Portalı giriş sayfası görüntülenir.
 
 Kullanıcının yüklü Şirket Portalı uygulaması yoksa, Kullanıcı Web Şirket Portalı alınır.
@@ -196,7 +201,7 @@ Windows Şirket Portalı uygulamasında aşağıdaki kısayollar kullanılabilir
 |  | Giriş Sayfası | Alt+H |
 |  | Tüm uygulamalar | Alt+A |
 |  | Yüklenen uygulamalar | Alt+I |
-|  | Geri bildirim gönderme | Alt+F |
+|  | Geri bildirim gönder | Alt+F |
 |  | Profilim | Alt+U |
 |  | Ayarlar | Alt+T |
 | Giriş - Cihaz kutucuğu | Rename | F2 |
@@ -205,7 +210,7 @@ Windows Şirket Portalı uygulamasında aşağıdaki kısayollar kullanılabilir
 | Cihaz ayrıntıları | Rename | F2 |
 |  | Kaldır | Ctrl+D veya Delete |
 |  | Erişimi denetleme | Ctrl+M veya F9 |
-| Uygulama ayrıntıları | Yükle | Ctrl+I |
+| Uygulama ayrıntıları | Yükleme | Ctrl+I |
 | Cihazlar | Kullanılabilir | Ctrl+D |
 
 Son kullanıcılar, Windows Şirket Portalı uygulamasında kullanılabilen kısayolları da görebilir.

@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: b70a375eb35599a487eeeee95235d638de35e5e1
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b24369f2c2f21208f188cf5c0c2ef3a28db83c04
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125874"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700829"
 ---
 # <a name="desktop-analytics-faq"></a>Desktop Analytics hakkında SSS
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-### <a name="can-i-use-cloud-enabled-analytics-with-intune-managed-devices"></a><a name="bkmk_intune"></a>Intune ile yönetilen cihazlarla bulut özellikli çözümlemeler kullanabilir miyim?
+### <a name="can-i-use-cloud-enabled-analytics-with-intune-managed-devices"></a><a name="bkmk_intune"></a> Intune ile yönetilen cihazlarla bulut özellikli çözümlemeler kullanabilir miyim?
 
 Bugün değil, [Öngörüler temelli cihaz yönetimi](https://myignite.techcommunity.microsoft.com/sessions/81690?source=sessions)hakkında Microsoft Ignite 2019 duyurusuna bakın. Bu planlı çözüm, Cihaz Durumu ve Yükseltme Hazırlığı bir ardıldır.
 
@@ -73,7 +73,7 @@ Evet. Daha fazla bilgi için bkz. [yerinde yükseltme SıRASıNDA BIOS 'TAN UEFI
 
 ### <a name="can-i-use-desktop-analytics-with-windows-10-ltsc"></a>Masaüstü analizlerini Windows 10 LTSC ile kullanabilir miyim?
 
-Masaüstü analizi, Windows 10 uzun süreli bakım kanalı (LTSC) cihazlarını desteklemez. Daha fazla bilgi için bkz. [hizmet olarak Windows 'a genel bakış](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+Masaüstü analizi, Windows 10 uzun süreli bakım kanalı (LTSC) cihazlarını desteklemez. Daha fazla bilgi için bkz. [hizmet olarak Windows 'a genel bakış](/windows/deployment/update/waas-overview#long-term-servicing-channel).
 
 ### <a name="can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal"></a>Masaüstü Analizi portalından verilerin yenilenmesi için gereken süre miktarını azaltabilir miyim?
 
@@ -106,7 +106,7 @@ Bilgisayarlarınızdaki Windows Tanılama verileri, Birleşik Devletler bulunan 
 
 ### <a name="can-i-use-update-compliance-together-with-desktop-analytics"></a>Güncelleştirme Uyumluluğu masaüstü analiziyle birlikte kullanabilir miyim?
 
-Evet. Azure portal bugün [güncelleştirme uyumluluğu](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) kullanıyorsanız, şimdi ve 2020 Ocak ' den fazla devam edebilirsiniz.
+Evet. Azure portal bugün [güncelleştirme uyumluluğu](/windows/deployment/update/update-compliance-get-started) kullanıyorsanız, şimdi ve 2020 Ocak ' den fazla devam edebilirsiniz.
 
 Daha fazla bilgi için bkz. [KB 4521815: Windows Analytics emekli on 31 ocak 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 
@@ -151,7 +151,7 @@ Evet, aşağıdaki Windows Analytics özellikleri devre dışı bırakıldı vey
 
 ## <a name="other"></a>Diğer
 
-### <a name="can-i-use-desktop-analytics-for-my-microsoft-365-apps-upgrades"></a><a name="bkmk_office"></a>Microsoft 365 Apps yükseltmeleri için masaüstü analizlerini kullanabilir miyim?
+### <a name="can-i-use-desktop-analytics-for-my-microsoft-365-apps-upgrades"></a><a name="bkmk_office"></a> Microsoft 365 Apps yükseltmeleri için masaüstü analizlerini kullanabilir miyim?
 
 Hayır, masaüstü Analizi Windows 'a odaklanılmıştır. Microsoft, birçok müşteriyle birlikte çalışan yakın işbirliği sürümünde masaüstü analizi geliştirmiştir. Müşteri geri bildirimi, masaüstü analizinin Windows dağıtımlarını güvenle yönetme yeteneğini nasıl geliştirip geliştebilmesidir. Bunlara Ayrıca, [Microsoft 365 uygulamaların](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) Configuration Manager ve ıntune 'Da Microsoft 365 Apps yönetim araçlarıyla daha yakından tümleştirileceklerini söyledikleri de söylüyorsunuz. Microsoft bu alanlara yatırım yapmaya devam ederken masaüstü analizinden Windows senaryolarına odaklanmaya devam etmektedir.
 

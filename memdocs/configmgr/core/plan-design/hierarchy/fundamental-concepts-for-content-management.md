@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d8f29ed1e3201da139daeaa1fadca739ff44dc8e
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 11649452012de33ef1e62007d71466d5a45c56ca
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384953"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698614"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager 'de içerik yönetimi için temel kavramlar
 
@@ -110,10 +110,10 @@ Aşağıdaki tabloyu kullanarak bu teknolojilerin önemli özelliklerini karşı
 
 | Özellik  | Eş &nbsp; önbellek  | Teslim &nbsp; iyileştirme  | BranchCache  |
 |---------|---------|---------|---------|
-| Alt ağlar arasında | Yes | Evet | Hayır |
+| Alt ağlar arasında | Evet | Evet | Hayır |
 | Bant genişliğini kısıtlama | Evet (BITS) | Evet (yerel) | Evet (BITS) |
-| Kısmi içerik | Yes | Yes | Yes |
-| Diskte denetim önbelleği boyutu | Yes | Yes | Yes |
+| Kısmi içerik | Evet | Evet | Evet |
+| Diskte denetim önbelleği boyutu | Evet | Evet | Evet |
 | Eş kaynak keşfi | El ile (istemci ayarı) | Automatic | Automatic |
 | Eş keşfi | Sınır grupları kullanarak yönetim noktası aracılığıyla | Bulut hizmeti yap | Yayınla |
 | Raporlama | İstemci veri kaynakları panosu | İstemci veri kaynakları panosu | İstemci veri kaynakları panosu |
@@ -132,7 +132,7 @@ Aşağıdaki tabloyu kullanarak bu teknolojilerin önemli özelliklerini karşı
 
 ## <a name="branchcache"></a>BranchCache
 
-[BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) bir Windows teknolojisidir. BranchCache 'i destekleyen ve BranchCache için yapılandırdığınız bir dağıtımı indirmiş olan istemciler, daha sonra BranchCache özellikli diğer istemcilere bir içerik kaynağı olarak görev yapar.  
+[BranchCache](/windows-server/networking/branchcache/branchcache) bir Windows teknolojisidir. BranchCache 'i destekleyen ve BranchCache için yapılandırdığınız bir dağıtımı indirmiş olan istemciler, daha sonra BranchCache özellikli diğer istemcilere bir içerik kaynağı olarak görev yapar.  
 
 Örneğin, Windows Server 2012 veya üstünü çalıştıran ve BranchCache sunucusu olarak yapılandırılmış bir dağıtım noktanız vardır. BranchCache özellikli ilk istemci bu sunucudan içerik istediğinde, istemci bu içeriği indirir ve önbelleğe alır.  
 
@@ -145,9 +145,9 @@ Daha fazla bilgi için bkz. [Windows BranchCache Için destek](../configs/suppor
 ## <a name="delivery-optimization"></a>Teslim Iyileştirme
 
 <!-- 1324696 -->
-Şirket ağınızda ve Uzak ofislerde içerik dağıtımını tanımlamak ve düzenlemek için Configuration Manager sınır gruplarını kullanırsınız. [Windows teslim iyileştirme](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) , Windows 10 cihazları arasında içerik paylaşmak için bulut tabanlı ve eşler arası bir teknolojidir. Dağıtım Iyileştirmesini, içerik eşleri arasında paylaşırken sınır gruplarınızı kullanacak şekilde yapılandırın. İstemci ayarları, sınır grubu tanımlayıcısını istemcide teslim Iyileştirme grubu tanımlayıcısı olarak uygular. İstemci, teslim Iyileştirme bulut hizmeti ile iletişim kurduğunda, içerik ile eşleri bulmak için bu tanımlayıcıyı kullanır. Daha fazla bilgi için bkz. [teslim iyileştirme](../../clients/deploy/about-client-settings.md#delivery-optimization) istemci ayarları.
+Şirket ağınızda ve Uzak ofislerde içerik dağıtımını tanımlamak ve düzenlemek için Configuration Manager sınır gruplarını kullanırsınız. [Windows teslim iyileştirme](/windows/deployment/update/waas-delivery-optimization) , Windows 10 cihazları arasında içerik paylaşmak için bulut tabanlı ve eşler arası bir teknolojidir. Dağıtım Iyileştirmesini, içerik eşleri arasında paylaşırken sınır gruplarınızı kullanacak şekilde yapılandırın. İstemci ayarları, sınır grubu tanımlayıcısını istemcide teslim Iyileştirme grubu tanımlayıcısı olarak uygular. İstemci, teslim Iyileştirme bulut hizmeti ile iletişim kurduğunda, içerik ile eşleri bulmak için bu tanımlayıcıyı kullanır. Daha fazla bilgi için bkz. [teslim iyileştirme](../../clients/deploy/about-client-settings.md#delivery-optimization) istemci ayarları.
 
-Teslim Iyileştirme, Windows 10 kalite güncelleştirmeleri için hızlı yükleme dosyalarının Windows 10 güncelleştirme teslimini iyileştirmek için önerilen teknolojiden oluşur. Configuration Manager sürüm 1910 ' den başlayarak, teslim Iyileştirme bulut hizmetine Internet erişimi, eşler arası işlevselliğini kullanmak için bir gereksinimdir. Gerekli Internet uç noktaları hakkında daha fazla bilgi için bkz. [dağıtım iyileştirmesi hakkında sık sorulan sorular](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). En iyi duruma getirme, tüm Windows güncelleştirmeleri için kullanılabilir. Daha fazla bilgi için bkz. [Windows 10 güncelleştirme teslimini iyileştirme](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
+Teslim Iyileştirme, Windows 10 kalite güncelleştirmeleri için hızlı yükleme dosyalarının Windows 10 güncelleştirme teslimini iyileştirmek için önerilen teknolojiden oluşur. Configuration Manager sürüm 1910 ' den başlayarak, teslim Iyileştirme bulut hizmetine Internet erişimi, eşler arası işlevselliğini kullanmak için bir gereksinimdir. Gerekli Internet uç noktaları hakkında daha fazla bilgi için bkz. [dağıtım iyileştirmesi hakkında sık sorulan sorular](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). En iyi duruma getirme, tüm Windows güncelleştirmeleri için kullanılabilir. Daha fazla bilgi için bkz. [Windows 10 güncelleştirme teslimini iyileştirme](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
 
 
 ## <a name="microsoft-connected-cache"></a>Microsoft Bağlı Önbellek

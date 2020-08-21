@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8370c3352778fa6bb7c6229beb1c7610c419a86d
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 22e78fdba1c004554d671ba2db96c61395f95ca2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129306"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699968"
 ---
 # <a name="plan-for-bitlocker-management"></a>BitLocker yönetimi için planlama
 
@@ -28,7 +28,7 @@ Sürüm 1910 ' den başlayarak, Active Directory katılmış şirket içi Window
 > [!NOTE]
 > Configuration Manager varsayılan olarak bu isteğe bağlı özelliği etkinleştirmez. Bu özelliği kullanmadan önce etkinleştirmeniz gerekir. Daha fazla bilgi için, bkz. [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
 
-Daha fazla bilgi için bkz. [BitLocker genel bakış](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview).
+Daha fazla bilgi için bkz. [BitLocker genel bakış](/windows/security/information-protection/bitlocker/bitlocker-overview).
 
 > [!TIP]
 > Microsoft Endpoint Manager bulut hizmetini kullanarak, ortak yönetilen Windows 10 cihazlarında şifrelemeyi yönetmek için [ **Endpoint Protection** iş yükünü](../../comanage/workloads.md#endpoint-protection) Intune 'a geçirin. Intune kullanma hakkında daha fazla bilgi için bkz. [Windows şifrelemesi](/intune/protect/endpoint-protection-windows-10#windows-encryption).
@@ -94,7 +94,7 @@ Kullanıcıların, BitLocker şifreli bir cihazın kilidini açmak için tek kul
     > [!NOTE]
     > Yalnızca Self Servis Portalı 'nı ve yönetim ve izleme Web sitesini bir birincil site veritabanıyla birlikte yükler. Bir hiyerarşide, her birincil site için bu Web sitelerini yükler.
 
-- Self Servis portalını barındıracak Web sunucusunda, yüklemeye başlamadan önce [MICROSOFT ASP.NET MVC 4,0](https://docs.microsoft.com/aspnet/mvc/mvc4) ve .NET Framework 3,5 özelliğini yükledikten sonra. Portal yükleme işlemi sırasında, diğer gerekli Windows Server rolleri ve özellikleri otomatik olarak yüklenir.
+- Self Servis portalını barındıracak Web sunucusunda, yüklemeye başlamadan önce [MICROSOFT ASP.NET MVC 4,0](/aspnet/mvc/mvc4) ve .NET Framework 3,5 özelliğini yükledikten sonra. Portal yükleme işlemi sırasında, diğer gerekli Windows Server rolleri ve özellikleri otomatik olarak yüklenir.
 
 - Portal yükleyici betiğini çalıştıran kullanıcı hesabı, site veritabanı sunucusunda SQL **sysadmin** haklarına sahip olmalıdır. Kurulum işlemi sırasında, betik Web sunucusu makine hesabı için oturum açma, Kullanıcı ve SQL rol haklarını ayarlar. Self Servis portalı ve yönetim ve izleme Web sitesinin kurulumunu tamamladıktan sonra bu kullanıcı hesabını sysadmin rolünden kaldırabilirsiniz.
 

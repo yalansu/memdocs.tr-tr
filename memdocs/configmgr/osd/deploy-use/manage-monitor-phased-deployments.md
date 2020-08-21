@@ -10,12 +10,12 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: fe8bbbf311baa335640ca7dea90ccd46da4fa5ea
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: efc43258e65752e7371c9baadf61598aac820062
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591719"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698002"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>Aşamalı dağıtım izleme ve yönetme
 
@@ -79,7 +79,7 @@ Aşamalı bir dağıtımı el ile askıya alabilir veya sürdürebilirsiniz. Ör
 4. Aşamalı dağıtımı seçin ve şeritte **askıya al** veya geri **et** ' e tıklayın. 
 
 > [!NOTE]
-> 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager üründe ve belgelerde eski adı görmeye devam edebilirsiniz. 
+> 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager üründe ve belgelerde eski adı görmeye devam edebilirsiniz. 
 
 <!-- Removed for 1806, need to clarify behavior with engineering
 When you suspend a phased deployment, it sets the available and deadline times on the active deployments to a future time. When you resume, it generates a new schedule based on when you resume the phased deployment. The new schedule helps to avoid problems if you resume after the original deadline. For example, the initial schedule has the required deadline seven days after the deployment is available. You suspend it on the second day. If you aren't ready to resume it until day eight, you don't want the deployment to be immediately past the deadline. So it generates a new deadline starting from when you resume the phased deployment on day eight. 
@@ -128,4 +128,3 @@ Aşama hedefi, *sonraki* aşama Için aşama ayarlarındaki **dağıtım başar�
 
 Örneğin, aşağıdaki özellikler, yukarıdaki %65 ' de gösterilen başarı ölçütü kutucuğu ile aynı aşamada verilmiştir:  
 ![Aşama özelliklerindeki aşama ayarları sekmesi](media/phase-properties-phase-settings.png)
-

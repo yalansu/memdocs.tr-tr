@@ -10,12 +10,12 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: aa574cd3db2e7a3d3277912ed4a383f71d33e59c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2f8b8a45ff83ce903f5737c94144e6ca5ab50826
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124296"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697662"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>Configuration Manager ile işletim sistemi görüntülerini yönetme
 
@@ -43,7 +43,7 @@ Windows yükleme dosyaları varsayılan işletim sistemi görüntüsünü içeri
 - İşletim sistemi yüklemesi daha uzun sürebilir. Uygulama yüklemesi ve diğer yapılandırma işlemleri, işletim sistemi yüklemesi tamamlandıktan sonra oluşur.  
 
 
-### <a name="captured-image-from-a-reference-computer"></a><a name="bkmk_capture"></a>Referans bilgisayarından yakalanan görüntü
+### <a name="captured-image-from-a-reference-computer"></a><a name="bkmk_capture"></a> Referans bilgisayarından yakalanan görüntü
 
 Özelleştirilmiş bir işletim sistemi görüntüsü oluşturmak için, istenen IŞLETIM sistemiyle bir başvuru bilgisayarı oluşturun. Ardından uygulamaları yükleyip ayarları yapılandırın. WıM dosyasını oluşturmak için başvuru bilgisayarından işletim sistemi görüntüsünü yakalayın. Referans bilgisayarı el ile oluşturun veya derleme adımlarının bazılarını veya tümünü otomatikleştirmek için bir görev dizisi kullanın. Daha fazla bilgi için bkz. [OS görüntülerini özelleştirme](customize-operating-system-images.md).  
 
@@ -58,7 +58,7 @@ Windows yükleme dosyaları varsayılan işletim sistemi görüntüsünü içeri
 - Uygulamalar ve araçlar için güncelleştirmeler gerektiğinde yeni bir görüntü oluşturmanız gerekir.  
 
 
-## <a name="add-an-os-image"></a><a name="BKMK_AddOSImages"></a>Bir işletim sistemi görüntüsü ekleme  
+## <a name="add-an-os-image"></a><a name="BKMK_AddOSImages"></a> Bir işletim sistemi görüntüsü ekleme  
 
 Bir işletim sistemi görüntüsü kullanabilmeniz için, Configuration Manager sitenize ekleyin.
 
@@ -89,12 +89,12 @@ Bir işletim sistemi görüntüsü kullanabilmeniz için, Configuration Manager 
 
 5. Sihirbazı tamamlayın.  
 
-Bu konsol Sihirbazı 'nın PowerShell cmdlet 'inin eşdeğeri için, bkz. [New-CMOperatingSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
+Bu konsol Sihirbazı 'nın PowerShell cmdlet 'inin eşdeğeri için, bkz. [New-CMOperatingSystemImage](/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
 
 Sonra, işletim sistemi görüntüsünü dağıtım noktalarına dağıtın.  
 
 
-## <a name="distribute-content-to-distribution-points"></a><a name="BKMK_DistributeBootImages"></a>İçeriği dağıtım noktalarına dağıtma  
+## <a name="distribute-content-to-distribution-points"></a><a name="BKMK_DistributeBootImages"></a> İçeriği dağıtım noktalarına dağıtma  
 
 İşletim sistemi görüntülerini, diğer içerikle aynı şekilde dağıtım noktalarına dağıtın. Görev dizisini dağıtmadan önce, işletim sistemi görüntüsünü en az bir dağıtım noktasına dağıtın. Daha fazla bilgi için, bkz. [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
 
@@ -102,7 +102,7 @@ Sonra, işletim sistemi görüntüsünü dağıtım noktalarına dağıtın.
 [!INCLUDE [Apply software updates to an image](includes/wim-apply-updates.md)]
 
 
-## <a name="prepare-the-os-image-for-multicast-deployments"></a><a name="BKMK_OSImageMulticast"></a>İşletim sistemi görüntüsünü çok noktaya yayın dağıtımları için hazırlama  
+## <a name="prepare-the-os-image-for-multicast-deployments"></a><a name="BKMK_OSImageMulticast"></a> İşletim sistemi görüntüsünü çok noktaya yayın dağıtımları için hazırlama  
 
 Birden fazla bilgisayarın aynı anda bir işletim sistemi görüntüsünü indirmesini sağlamak için çok noktaya yayın dağıtımlarını kullanın. Görüntü, her istemci dağıtım noktasından ayrı bir bağlantı üzerinden bir görüntünün kopyasını indirmek yerine dağıtım noktası tarafından istemcilere çok noktaya yayın yapılır. [Windows 'u ağ üzerinden dağıtmak için çok noktaya yayın kullanmak](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md)üzere işletim sistemi dağıtım yöntemini seçtiğinizde, işletim sistemi görüntüsünü çok noktaya yayını destekleyecek şekilde yapılandırın. Sonra görüntüyü çok noktaya yayın özellikli bir dağıtım noktasına dağıtın.
 
@@ -122,4 +122,4 @@ Birden fazla bilgisayarın aynı anda bir işletim sistemi görüntüsünü indi
 
          **Bu paketi yalnızca çok noktaya yayın üzerinden aktar**' ı seçerseniz, **çalışan görev dizisi için gerektiğinde Içeriği yerel olarak indirmek**için görev sırası dağıtım seçeneğini de belirtmeniz gerekir. Daha fazla bilgi için, bkz. [Deploy a task sequence](../deploy-use/deploy-a-task-sequence.md).  
 
-5. Ayarları kaydetmek ve görüntü özelliklerini kapatmak için **Tamam** ' ı seçin.  
+5. Ayarları kaydetmek ve görüntü özelliklerini kapatmak için **Tamam** ' ı seçin.

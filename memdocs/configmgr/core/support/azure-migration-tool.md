@@ -10,12 +10,12 @@ ms.assetid: 1c975c5e-efd1-4d47-a315-39ccb32633dc
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 00f07e20c24ea9bb7d06b18f300e0206696c5e20
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4d5f0c9127cc5c5819368eb0454d7bc63546ccc1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723456"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699509"
 ---
 # <a name="extend-and-migrate-on-premises-site-to-microsoft-azure"></a>Şirket içi siteyi genişletme ve Microsoft Azure için geçirme
 
@@ -68,18 +68,18 @@ Microsoft. Keykasası/Vaults/dağıtım/eylem <br>
 Microsoft. Keykasası/Kasaults/okuma <br>
 
 
-İzinler ve rol atama hakkında daha fazla bilgi için bkz. [RBAC kullanarak Azure kaynaklarına erişimi yönetme](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal).
+İzinler ve rol atama hakkında daha fazla bilgi için bkz. [RBAC kullanarak Azure kaynaklarına erişimi yönetme](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="run-the-tool"></a>Aracı çalıştırma
 
-1. Birincil site sunucusunda oturum açın ve Configuration Manager yükleme dizininde aşağıdaki aracı çalıştırın:`Cd.Latest\SMSSETUP\TOOLS\ExtendMigrateToAzure\ExtendMigrateToAzure.exe`
+1. Birincil site sunucusunda oturum açın ve Configuration Manager yükleme dizininde aşağıdaki aracı çalıştırın: `Cd.Latest\SMSSETUP\TOOLS\ExtendMigrateToAzure\ExtendMigrateToAzure.exe`
 
 1. **Genel** sekmesindeki bilgileri gözden geçirin ve ardından **Azure Information** sekmesine geçin.
 
 1. **Azure bilgileri** sekmesinde **Azure ortamınızı**seçin ve **oturum açın**.
 
     > [!TIP]
-    > Doğru şekilde oturum açmak için `https://*.microsoft.com` güvenilir web siteleri listenize eklemeniz gerekebilir.
+    > `https://*.microsoft.com`Doğru şekilde oturum açmak için güvenilir web siteleri listenize eklemeniz gerekebilir.
 
     [![Genişlet ve geçir aracında Azure bilgileri sekmesi](./media/3556022-azure-information-tab.png)](./media/3556022-azure-information-tab.png#lightbox)
 
@@ -93,27 +93,27 @@ Microsoft. Keykasası/Kasaults/okuma <br>
 
 2. Site sunucunuzu Azure 'a genişletmek veya geçirmek istiyorsanız, **Azure 'da site sunucusu oluştur**' u seçin. Ardından aşağıdaki alanları girin:
 
-    |Adı|Açıklama|
+    |Ad|Açıklama|
     |---|---|
     |**Abonelik**|Salt okunurdur. Abonelik adı ve KIMLIĞINI gösterir.|
     |**Kaynak grubu**| Kullanılabilir kaynak gruplarını listeler. Yeni bir kaynak grubu oluşturmanız gerekiyorsa, [Azure Portal](https://portal.azure.com)kullanın ve ardından bu aracı yeniden çalıştırın.|
     |**Konum**| Salt okunurdur. Sanal ağınızın konumu tarafından belirlenir|
-    |**VM boyutu**|İş yükünüze sığacak bir boyut seçin. Microsoft **Standard_DS3_v2**önerir.|
+    |**VM Boyutu**|İş yükünüze sığacak bir boyut seçin. Microsoft **Standard_DS3_v2**önerir.|
     |**İşletim sistemi**|Salt okunurdur. Araç Windows Server 2019 kullanır.|
     |**Disk türü**|Salt okunurdur. Araç en iyi performans için Premium SSD kullanır.|
     |**Sanal ağ**|Salt okunurdur.|
     |**Alt ağ**|Kullanılacak alt ağı seçin. Yeni bir alt ağ oluşturmanız gerekiyorsa [Azure Portal](https://portal.azure.com)kullanın.|
     |**Makine adı**|Azure 'da pasif site sunucusu VM 'sinin adını girin. [Azure Portal](https://portal.azure.com)gösterilenle aynı adı vardır.|
     |**Yerel Yönetici Kullanıcı adı**|Azure VM 'nin etki alanına katılmadan önce oluşturduğu yerel yönetici kullanıcının adını girin.|
-    |**Yerel yönetici parolası**|Yerel yönetici kullanıcının parolası. Azure dağıtımı sırasında parolayı korumak için, parolayı [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview)bir gizli dizi olarak depolayın. Ardından, buradaki başvuruyu kullanın. Gerekirse, [Azure Portal](https://portal.azure.com)yeni bir tane oluşturun.|
+    |**Yerel yönetici parolası**|Yerel yönetici kullanıcının parolası. Azure dağıtımı sırasında parolayı korumak için, parolayı [Azure Key Vault](/azure/key-vault/key-vault-overview)bir gizli dizi olarak depolayın. Ardından, buradaki başvuruyu kullanın. Gerekirse, [Azure Portal](https://portal.azure.com)yeni bir tane oluşturun.|
     |**Etki alanı FQDN 'SI**|Active Directory etki alanının katılması için tam etki alanı adı. Varsayılan olarak, araç bu değeri geçerli makinenizden alır.|
     |**Etki alanı Kullanıcı adı**|Etki alanına katılmasına izin verilen etki alanı kullanıcısının adı. Araç varsayılan olarak, şu anda oturum açmış kullanıcının adını kullanır.|
-    |**Etki alanı parolası**|Etki alanına katılacak etki alanı kullanıcısının parolası. Araç, **Başlat**' ı seçtikten sonra doğrular. Azure dağıtımı sırasında parolayı korumak için, parolayı [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview)bir gizli dizi olarak depolayın. Ardından, buradaki başvuruyu kullanın. Gerekirse, [Azure Portal](https://portal.azure.com)yeni bir tane oluşturun.|
+    |**Etki alanı parolası**|Etki alanına katılacak etki alanı kullanıcısının parolası. Araç, **Başlat**' ı seçtikten sonra doğrular. Azure dağıtımı sırasında parolayı korumak için, parolayı [Azure Key Vault](/azure/key-vault/key-vault-overview)bir gizli dizi olarak depolayın. Ardından, buradaki başvuruyu kullanın. Gerekirse, [Azure Portal](https://portal.azure.com)yeni bir tane oluşturun.|
     |**Etki alanı DNS IP 'si**|Etki alanına katılmak için kullanılır. Varsayılan olarak, araç geçerli makinenizden geçerli DNS 'i kullanır.|
     |**Tür**|Salt okunurdur. *Pasif site sunucusunu* tür olarak gösterir.|
 
     > [!IMPORTANT]
-    > Varsayılan olarak, sanal makineler **mevcut Windows Server lisansını kullan**için **Hayır** olarak ayarlanır. Yazılım Güvencesi kapsamındaki şirket içi Windows Server lisanslarınızı kullanmak istiyorsanız, sanal makineler sağlandıktan sonra [Azure Portal](https://portal.azure.com) bu ayarı yapılandırın. Daha fazla bilgi için bkz. [Windows Server için Azure hibrit avantajı](https://docs.microsoft.com/windows-server/get-started/azure-hybrid-benefit).
+    > Varsayılan olarak, sanal makineler **mevcut Windows Server lisansını kullan**için **Hayır** olarak ayarlanır. Yazılım Güvencesi kapsamındaki şirket içi Windows Server lisanslarınızı kullanmak istiyorsanız, sanal makineler sağlandıktan sonra [Azure Portal](https://portal.azure.com) bu ayarı yapılandırın. Daha fazla bilgi için bkz. [Windows Server için Azure hibrit avantajı](/windows-server/get-started/azure-hybrid-benefit).
 
 1. Azure VM 'yi sağlamaya başlamak için **Başlat**' ı seçin. Dağıtım durumunu izlemek için, aracının **Azure 'Daki dağıtımlar** sekmesine geçin. En son durumu almak için **dağıtım durumunu yenile**' yi seçin.
 
@@ -157,7 +157,7 @@ Araç, şu anda veritabanını Şirket içinden Azure 'a geçirmek için herhang
 
 1. Dağıtım tamamlandığında, site rolüne ek değişiklikler yapmak için Configuration Manager konsoluna gidin.
 
-## <a name="deployments-in-azure"></a><a name="bkmk_deploy-azure"></a>Azure 'da dağıtımlar
+## <a name="deployments-in-azure"></a><a name="bkmk_deploy-azure"></a> Azure 'da dağıtımlar
 
 1. Azure VM 'yi oluşturduktan sonra, araçtaki Azure sekmesinde **dağıtımlar** ' a geçiş yapın. Rolü varsayılan ayarlarla yapılandırmak için **Dağıt** ' ı seçin.
 
@@ -167,7 +167,7 @@ Araç, şu anda veritabanını Şirket içinden Azure 'a geçirmek için herhang
 
 1. Daha fazla rol yapılandırmak için bu işlemi tekrarlayın.
 
-## <a name="add-site-roles-to-an-existing-virtual-machine-deployment"></a><a name="bkmk_add_role"></a>Mevcut bir sanal makine dağıtımına site rolleri ekleme
+## <a name="add-site-roles-to-an-existing-virtual-machine-deployment"></a><a name="bkmk_add_role"></a> Mevcut bir sanal makine dağıtımına site rolleri ekleme
 <!--5665775, 6307931-->
 Configuration Manager sürüm 2002 ' den başlayarak, şirket içi siteyi genişletme ve geçirme Microsoft Azure Aracı, tek bir Azure sanal makinesinde birden çok site sistem rolü sağlamayı destekler. İlk Azure sanal makine dağıtımı tamamlandıktan sonra site sistemi rolleri ekleyebilirsiniz. Var olan bir sanal makineye yeni bir rol eklemek için aşağıdaki adımları uygulayın:
 1. **Azure 'Daki dağıtımlar** sekmesinde, **tamamlandı** durumuna sahip bir sanal makine dağıtımına tıklayın.

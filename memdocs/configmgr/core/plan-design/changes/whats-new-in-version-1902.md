@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c192db8ccab336d05ef965e837fe17fc16a19200
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f758456ad75c4acde1b050be75d653cc0e1dcfa1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128942"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700376"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1902 ' deki yenilikler
 
@@ -32,10 +32,10 @@ Yeni Configuration Manager özelliklerinden tam olarak yararlanmak için, siteyi
  -->
 
 > [!Tip]  
-> Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1902+-+Configuration+Manager%22&locale=en-us`
+> Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1902+-+Configuration+Manager%22&locale=en-us`
 
 
-## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a>Kullanımdan kaldırılan özellikler ve işletim sistemleri
+## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a> Kullanımdan kaldırılan özellikler ve işletim sistemleri
 
 [Kaldırılan ve kullanımdan kaldırılan öğelerde](deprecated/removed-and-deprecated.md)uygulanmadan önce yapılan değişiklikler hakkında bilgi edinin.
 
@@ -46,7 +46,7 @@ Sürüm 1902 aşağıdaki ürünler için desteği bırakır:
 - İstemci olarak Linux ve UNIX. [Sürüm 1802](whats-new-in-version-1802.md#deprecation-announcement-for-linux-and-unix-client-support)ile kullanımdan kaldırma duyurulmuştur. Linux sunucularının yönetilmesi için Microsoft Azure yönetimini göz önünde bulundurun. Azure çözümlerinde, Linux için uçtan uca düzeltme eki yönetimi de dahil olmak üzere çoğu durumda Configuration Manager işlevselliği aşılacağından kapsamlı Linux desteği vardır.
 
 
-## <a name="site-infrastructure"></a><a name="bkmk_infra"></a>Site altyapısı
+## <a name="site-infrastructure"></a><a name="bkmk_infra"></a> Site altyapısı
 
 ### <a name="client-health-dashboard"></a>İstemci sistem durumu panosu
 
@@ -88,7 +88,7 @@ Daha fazla bilgi için bkz. [GELIŞMIŞ http](../hierarchy/enhanced-http.md).
 - **Uzak SQL Server sistem yeniden başlatması bekleniyor**: Bu önkoşul denetimi, **bekleyen sistem yeniden başlatma** kuralına benzerdir, ancak uzak bir SQL Server denetler. Daha fazla bilgi için bkz. [önkoşul denetimleri listesi](../../servers/deploy/install/list-of-prerequisite-checks.md#pending-system-restart-on-the-remote-sql-server). <!--SCCMDocs-pr issue 3377-->  
 
 
-## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a>Buluta bağlı yönetim
+## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a> Buluta bağlı yönetim
 
 ### <a name="stop-cloud-service-when-it-exceeds-threshold"></a>Eşiği aştığında bulut hizmetini durdur
 
@@ -114,7 +114,7 @@ Artık bir bulut yönetimi ağ geçidini (CMG) bir sınır grubuyla ilişkilendi
 Daha fazla bilgi için bkz. [CMG hiyerarşi tasarımı](../../clients/manage/cmg/plan-cloud-management-gateway.md#hierarchy-design) ve [CMG 'yi ayarlama](../../clients/manage/cmg/setup-cloud-management-gateway.md#configure-boundary-groups).
 
 
-## <a name="real-time-management"></a><a name="bkmk_real"></a>Gerçek zamanlı yönetim
+## <a name="real-time-management"></a><a name="bkmk_real"></a> Gerçek zamanlı yönetim
 
 ### <a name="run-cmpivot-from-the-central-administration-site"></a>Merkezi yönetim sitesinden CMPivot çalıştırma
 
@@ -131,7 +131,7 @@ Artık betikleri Çalıştır özelliği ile kullanılan mevcut bir PowerShell b
 Daha fazla bilgi için bkz. [betikleri çalıştırma](../../../apps/deploy-use/create-deploy-scripts.md#bkmk_psedit).
 
 
-## <a name="content-management"></a><a name="bkmk_content"></a>İçerik yönetimi
+## <a name="content-management"></a><a name="bkmk_content"></a> İçerik yönetimi
 
 ### <a name="distribution-point-maintenance-mode"></a>Dağıtım noktası bakım modu
 
@@ -156,7 +156,7 @@ Bu özellik hakkında daha fazla bilgi için bkz. [bakım modu](../../servers/de
 Configuration Manager SDK ile bu işlemi otomatikleştirme hakkında daha fazla bilgi için, bkz. [SetDPMaintenanceMode Method in class SMS_DistributionPointInfo](../../../develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo.md).
 
 
-## <a name="client-management"></a><a name="bkmk_client"></a>İstemci yönetimi
+## <a name="client-management"></a><a name="bkmk_client"></a> İstemci yönetimi
 
 ### <a name="client-provisioning-mode-timeout"></a>İstemci sağlama modu zaman aşımı
 
@@ -180,7 +180,7 @@ Artık, uyandırma proxy 'si için özel bir bağlantı noktası numarası belir
 Daha fazla bilgi için bkz. [LAN 'Da uyandırma yapılandırma](../../clients/deploy/configure-wake-on-lan.md).
 
 
-## <a name="application-management"></a><a name="bkmk_app"></a>Uygulama yönetimi
+## <a name="application-management"></a><a name="bkmk_app"></a> Uygulama yönetimi
 
 ### <a name="improvements-to-application-approvals-via-email"></a>Uygulama onayları ile e-posta aracılığıyla iyileştirmeler
 
@@ -199,7 +199,7 @@ Bu sürüm, [Paket Dönüştürme Yöneticisi](../../../apps/pcm/package-convers
 - Genel hata düzeltmeleri ve geliştirmeleri
 
 
-## <a name="os-deployment"></a><a name="bkmk_osd"></a>İşletim sistemi dağıtımı
+## <a name="os-deployment"></a><a name="bkmk_osd"></a> İşletim sistemi dağıtımı
 
 ### <a name="progress-status-during-in-place-upgrade-task-sequence"></a>Yerinde yükseltme görev sırası sırasında ilerleme durumu
 
@@ -292,7 +292,7 @@ Bu sürüm, işletim sistemi dağıtımına yönelik aşağıdaki geliştirmeler
 - Windows dağıtım hizmeti olmadan bir dağıtım noktasında bir PXE Yanıtlayıcı 'yı etkinleştirdiğinizde, artık DHCP hizmetiyle aynı sunucuda olabilir. <!--3734270--> Daha fazla bilgi için bkz. [PXE isteklerini kabul etmek için en az bir dağıtım noktasını yapılandırma](../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md#BKMK_Configure).
 
 
-## <a name="software-center"></a><a name="bkmk_userxp"></a>Yazılım Merkezi
+## <a name="software-center"></a><a name="bkmk_userxp"></a> Yazılım Merkezi
 
 ### <a name="replace-toast-notifications-with-dialog-window"></a>Bildirim bildirimlerini iletişim kutusu penceresiyle değiştirme
 
@@ -330,7 +330,7 @@ Bu ayarları istemci ayarları **Yazılım Merkezi** grubunda belirtin.
 Daha fazla bilgi için bkz. [istemci ayarları hakkında](../../clients/deploy/about-client-settings.md#bkmk_swctr_defaults).
 
 
-## <a name="software-updates"></a><a name="bkmk_sum"></a>Yazılım güncelleştirmeleri
+## <a name="software-updates"></a><a name="bkmk_sum"></a> Yazılım güncelleştirmeleri
 
 ### <a name="specify-priority-for-feature-updates-in-windows-10-servicing"></a>Windows 10 Bakımı 'nda özellik güncelleştirmeleri için öncelik belirtme
 
@@ -342,16 +342,16 @@ Bu seçeneği yapılandırmak için istemci ayarlarını kullanın. **Yazılım 
 Daha fazla bilgi için bkz. [istemci ayarları hakkında](../../clients/deploy/about-client-settings.md#software-updates).
 
 
-## <a name="office-management"></a><a name="bkmk_o365"></a>Office yönetimi
+## <a name="office-management"></a><a name="bkmk_o365"></a> Office yönetimi
 
 ### <a name="redirect-windows-known-folders-to-onedrive"></a>Windows bilinen klasörlerini OneDrive 'a yönlendir
 
 <!--3556021-->
 Windows bilinen klasörlerini OneDrive Iş 'e taşımak için Configuration Manager kullanın. Bu klasörler Masaüstü, belgeler ve resimleri içerir. Windows 10 yükseltmelerinizi basitleştirmek için, bir görev dizisini dağıtmadan önce bu ayarları Windows 7 istemcilerine dağıtın.
 
-OneDrive Iş 'in bu özelliği hakkında daha fazla bilgi için bkz. [yeniden yönlendirme ve Windows bilinen klasörlerini OneDrive 'a taşıma](https://docs.microsoft.com/onedrive/redirect-known-folders).
+OneDrive Iş 'in bu özelliği hakkında daha fazla bilgi için bkz. [yeniden yönlendirme ve Windows bilinen klasörlerini OneDrive 'a taşıma](/onedrive/redirect-known-folders).
 
-İlk olarak, [Office 365 KIRACı kimliğinizi bulun](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Ardından OneDrive Sync Client sürüm 18.111.0603.0004 veya üstünü dağıtın. Daha fazla bilgi için bkz. [Configuration Manager kullanarak OneDrive uygulamaları dağıtma](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+İlk olarak, [Office 365 KIRACı kimliğinizi bulun](/onedrive/find-your-office-365-tenant-id). Ardından OneDrive Sync Client sürüm 18.111.0603.0004 veya üstünü dağıtın. Daha fazla bilgi için bkz. [Configuration Manager kullanarak OneDrive uygulamaları dağıtma](/onedrive/deploy-on-windows).  
 
 Bir OneDrive Iş profili oluşturup dağıtmak için, Configuration Manager konsolunda **varlıklar ve uyum** çalışma alanına gidin. **Uyumluluk ayarları**' nı genişletin ve **OneDrive iş profilleri** düğümünü seçin.  
 
@@ -381,7 +381,7 @@ Daha fazla bilgi için bkz. [Office 365 güncelleştirmelerini yönetme](../../.
 Daha fazla bilgi için bkz. [ürün yaşam döngüsü panosunu kullanma](../../clients/manage/asset-intelligence/product-lifecycle-dashboard.md).
 
 
-## <a name="phased-deployments"></a><a name="bkmk_pod"></a>Aşamalı dağıtımlar
+## <a name="phased-deployments"></a><a name="bkmk_pod"></a> Aşamalı dağıtımlar
 
 ### <a name="dedicated-monitoring-for-phased-deployments"></a>Aşamalı dağıtımlar için adanmış izleme
 
@@ -400,9 +400,9 @@ Bir görev dizisi, yazılım güncelleştirmesi veya uygulama için aşamalı da
 Daha fazla bilgi için bkz. [aşamalı dağıtımlar oluşturma](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md).
 
 
-## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a>Configuration Manager konsolu
+## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a> Configuration Manager konsolu
 
-### <a name="improvements-to-configuration-manager-console"></a><a name="bkmk_console"></a>Configuration Manager konsolundaki iyileştirmeler
+### <a name="improvements-to-configuration-manager-console"></a><a name="bkmk_console"></a> Configuration Manager konsolundaki iyileştirmeler
 
 <!--3594151-->
 Orta Batı yönetim Zirvesi sürüm 2018 ' de müşteri geri bildirimlerine bağlı olarak, bu sürüm Configuration Manager konsoluna aşağıdaki geliştirmeleri içerir:
@@ -479,7 +479,7 @@ Bir site sunucusu yüklediğinizde veya güncelleştirdiğinizde, bu yükleme do
 
 Bu sürüm, yeni özelliklerden başlayarak hata düzeltmeleri gibi ek değişiklikler de içerir. Daha fazla bilgi için bkz. [Configuration Manager geçerli daldaki değişikliklerin özeti, sürüm 1902](https://support.microsoft.com/help/4498910).
 
-Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell sürüm 1902 sürüm notları](https://docs.microsoft.com/powershell/sccm/1902-release-notes?view=sccm-ps).
+Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell sürüm 1902 sürüm notları](/powershell/sccm/1902-release-notes?view=sccm-ps).
 
 Aşağıdaki güncelleştirme paketi (4500571) konsolunda 17 Haziran 2019 tarihinden itibaren kullanılabilir: [güncelleştirme paketi Configuration Manager geçerli dalı, sürüm 1902](https://support.microsoft.com/help/4500571).
 

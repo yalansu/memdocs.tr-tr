@@ -10,12 +10,12 @@ ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f7d774d620916f3d735a3545db5fe1e41988731d
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 4d2977fc34e9c398e9e266cbc9b223ea74a1dd18
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126690"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700240"
 ---
 # <a name="support-for-virtualization-environments-with-configuration-manager"></a>Configuration Manager ile sanallaştırma ortamları için destek
 
@@ -37,7 +37,7 @@ Configuration Manager, belirli sanallaştırma ortamlarında sanal makine (VM) o
 <a name="bkmk_note1"></a>
 
 > [!NOTE]
-> Configuration Manager, Windows Server 2016 ile yeni olan [iç içe sanallaştırmayı](https://docs.microsoft.com/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new)desteklemez.
+> Configuration Manager, Windows Server 2016 ile yeni olan [iç içe sanallaştırmayı](/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new)desteklemez.
 
 ### <a name="virtualization-environment-support"></a>Sanallaştırma ortamı desteği
 
@@ -51,7 +51,7 @@ Genel olarak, Configuration Manager VM 'lere özel bir göz önüne alınmaz. Ö
 
 Birden çok kullanıcı oturumunu destekleyen sanal ortamlarda istemci performansına Configuration Manager yardımcı olması için, varsayılan olarak kullanıcı ilkesini devre dışı bırakır. Sürüm 1910 ' den başlayarak, bu senaryoda kullanıcı ilkesini etkinleştirebilirsiniz. Daha fazla bilgi için bkz. [istemci ayarları hakkında-birden çok Kullanıcı oturumu için Kullanıcı Ilkesini etkinleştirme](../../clients/deploy/about-client-settings.md#enable-user-policy-for-multiple-user-sessions).
 
-## <a name="microsoft-azure-vms"></a><a name="bkmk_Azure"></a>Microsoft Azure VM 'Ler
+## <a name="microsoft-azure-vms"></a><a name="bkmk_Azure"></a> Microsoft Azure VM 'Ler
 
 Configuration Manager, veri merkezinizdeki şirket içinde çalıştığı gibi Azure 'daki sanal makinelerde çalıştırılabilir. Aşağıdaki senaryolarda Azure sanal makinelerinden Configuration Manager kullanın:
 
@@ -70,7 +70,7 @@ Daha fazla bilgi için bkz. [Azure 'da Configuration Manager](../../understand/c
 
 ## <a name="windows-virtual-desktop"></a>Windows Sanal Masaüstü
 
-[Windows sanal masaüstü](https://docs.microsoft.com/azure/virtual-desktop/) , Microsoft Azure üzerinde çalışan bir masaüstü ve uygulama sanallaştırma hizmetidir. Sürüm 1906 ' den başlayarak, Azure 'da Windows çalıştıran bu sanal cihazları yönetmek için Configuration Manager kullanın. Daha fazla bilgi için bkz. [istemciler ve cihazlar Için desteklenen işletim sistemleri](supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
+[Windows sanal masaüstü](/azure/virtual-desktop/) , Microsoft Azure üzerinde çalışan bir masaüstü ve uygulama sanallaştırma hizmetidir. Sürüm 1906 ' den başlayarak, Azure 'da Windows çalıştıran bu sanal cihazları yönetmek için Configuration Manager kullanın. Daha fazla bilgi için bkz. [istemciler ve cihazlar Için desteklenen işletim sistemleri](supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -10,12 +10,12 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 033c5de1a85ce2fa8b11fe7a187fcc4d5c023931
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7efc775199a34a66a8cd4a83b85baccd4a3ab5cb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720733"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699492"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>Configuration Manager destekleyen şirket içi altyapıyı yükseltme
 
@@ -28,7 +28,7 @@ Configuration Manager çalıştıran sunucu altyapısını yükseltmenize yardı
 - Configuration Manager, geçerli dalınızı ve altyapınızı yeni bir sürüme *güncelleştirmek* istiyorsanız, bkz. [Configuration Manager güncelleştirmeleri](updates.md).  
 
 
-## <a name="upgrade-the-os-of-site-systems"></a><a name="BKMK_SupConfigUpgradeSiteSrv"></a>Site sistemlerinin işletim sistemini yükseltme  
+## <a name="upgrade-the-os-of-site-systems"></a><a name="BKMK_SupConfigUpgradeSiteSrv"></a> Site sistemlerinin işletim sistemini yükseltme  
 
 Configuration Manager, aşağıdaki durumlarda site sunucusunu ve herhangi bir site sistemi rolünü barındıran sunucu işletim sisteminin yerinde yükseltmesini destekler:  
 
@@ -52,11 +52,11 @@ Bir sunucuyu yükseltmek için, yükseltmekte olduğunuz işletim sistemi taraf�
 
 - [Windows Server yükseltme Merkezi](https://aka.ms/upgradecenter)  
 
-- [Windows Server 2016 için yükseltme ve dönüştürme seçenekleri](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths)  
+- [Windows Server 2016 için yükseltme ve dönüştürme seçenekleri](/windows-server/get-started/supported-upgrade-paths)  
 
-- [Windows Server 2012 R2 için yükseltme seçenekleri](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))  
+- [Windows Server 2012 R2 için yükseltme seçenekleri](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))  
 
-### <a name="upgrade-to-windows-server-2016-or-2019"></a><a name="bkmk_2016-2019"></a>Windows Server 2016 veya 2019 ' ye yükseltme
+### <a name="upgrade-to-windows-server-2016-or-2019"></a><a name="bkmk_2016-2019"></a> Windows Server 2016 veya 2019 ' ye yükseltme
 
 Aşağıdaki yükseltme senaryolarından herhangi biri için bu bölümdeki adımları kullanın:  
 
@@ -104,7 +104,7 @@ Aşağıdaki yükseltme senaryolarından herhangi biri için bu bölümdeki adı
 
 Site sunucusunu veya SMS sağlayıcısı 'nın bir örneğini yükselttikten sonra Configuration Manager konsoluna bağlanamazsınız. Bu sorunu geçici olarak çözmek için WMI 'da **SMS yöneticileri** grubunun izinlerini el ile geri yükleyin. Site sunucusunda ve SMS sağlayıcısı 'nın bir örneğini barındıran her uzak sunucuda izinlerin ayarlanması gerekir:
 
-1. İlgili sunucularda, Microsoft Yönetim Konsolu 'Nu (MMC) açın ve **WMI denetimi**için ek bileşenini ekleyin ve ardından **Yerel bilgisayar**' ı seçin.  
+1. İlgili sunucularda, Microsoft Yönetim Konsolu 'Nu (MMC) açın ve  **WMI denetimi**için ek bileşenini ekleyin ve ardından **Yerel bilgisayar**' ı seçin.  
 
 2. MMC ' de, **WMI denetimi (yerel)** **özelliklerini** açın ve **güvenlik** sekmesini seçin.  
 
@@ -114,7 +114,7 @@ Site sunucusunu veya SMS sağlayıcısı 'nın bir örneğini yükselttikten son
 
     - Uzaktan Etkinleştir  
 
-4. **SMS** düğümünün altındaki **güvenlik sekmesinde** , **Site_&lt;Sitekodu**> düğümünü seçin ve ardından **güvenlik**' i seçin. **SMS yöneticileri** grubunun aşağıdaki izinlere sahip olduğundan emin olun:  
+4. **SMS** düğümünün altındaki **güvenlik sekmesinde** , **Site_ &lt; Sitekodu**> düğümünü seçin ve ardından **güvenlik**' i seçin. **SMS yöneticileri** grubunun aşağıdaki izinlere sahip olduğundan emin olun:  
 
     - Çalıştırma yöntemleri  
 
@@ -128,11 +128,11 @@ Site sunucusunu veya SMS sağlayıcısı 'nın bir örneğini yükselttikten son
 
 #### <a name="known-issue-for-remote-site-systems"></a>Uzak site sistemleri için bilinen sorun
 
-Bir site sistem rolü barındıran bir sunucuyu yükselttikten sonra, bu değer `Software\Microsoft\SMS` aşağıdaki kayıt defteri anahtarında eksik olabilir:`HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths`
+Bir site sistem rolü barındıran bir sunucuyu yükselttikten sonra, bu değer `Software\Microsoft\SMS` aşağıdaki kayıt defteri anahtarında eksik olabilir: `HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths`
 
 Windows 'u sunucuda yükselttikten sonra bu değer eksikse, el ile ekleyin. Aksi takdirde, site sistem rollerinin, site sunucusu gelen kutularına dosya yükleme sorunları olabilir.
 
-### <a name="upgrade-to-windows-server-2012-r2"></a><a name="bkmk_2012r2"></a>Windows Server 2012 R2 'ye yükseltme
+### <a name="upgrade-to-windows-server-2012-r2"></a><a name="bkmk_2012r2"></a> Windows Server 2012 R2 'ye yükseltme
 
 Windows Server 2008 R2 veya Windows Server 2012 ' den Windows Server 2012 R2 'ye yükselttiğinizde aşağıdaki koşullar geçerli olabilir:
 
@@ -140,7 +140,7 @@ Windows Server 2008 R2 veya Windows Server 2012 ' den Windows Server 2012 R2 'ye
 
 - Windows Server 2012: yüklüyse WSUS rolünü sunucudan kaldırın. WSUS yeniden yüklendikten sonra SUSDB 'yi koruyabilir ve yeniden iliştirebilirsiniz.  
 
-- Windows Server 2008 R2 'de: Windows Server 2012 R2 'ye yükseltmeden önce, WSUS 3,2 'ı sunucudan kaldırmanız gerekir. WSUS yeniden yüklendikten sonra SUSDB 'yi koruyabilir ve yeniden iliştirebilirsiniz. Daha fazla bilgi için bkz. [Windows Server Update Services 'A genel bakış](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
+- Windows Server 2008 R2 'de: Windows Server 2012 R2 'ye yükseltmeden önce, WSUS 3,2 'ı sunucudan kaldırmanız gerekir. WSUS yeniden yüklendikten sonra SUSDB 'yi koruyabilir ve yeniden iliştirebilirsiniz. Daha fazla bilgi için bkz. [Windows Server Update Services 'A genel bakış](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
 
 - Site sunucusunun işletim sistemini yükseltiyorsanız, site için [dosya tabanlı çoğaltmanın](../../plan-design/hierarchy/file-based-replication.md) sağlıklı olduğundan emin olun. Hem gönderme hem de alma sitelerindeki biriktirme listesinin tüm gelen kutularını kontrol edin. Çok sayıda takılı veya bekleyen çoğaltma işi varsa, bu işlerin bitmesini bekleyin.<!-- SCCMDocs#1792 -->
     - Gönderen sitede **Sender. log**' u gözden geçirin.
@@ -181,7 +181,7 @@ Aşağıdaki Windows Server yükseltme senaryoları genellikle Configuration Man
 - Windows Server 2008 R2 'den Windows Server 2012  
 
 
-## <a name="upgrade-the-os-of-clients"></a><a name="BKMK_SupConfigUpgradeClient"></a>İstemcilerin işletim sistemini yükseltme  
+## <a name="upgrade-the-os-of-clients"></a><a name="BKMK_SupConfigUpgradeClient"></a> İstemcilerin işletim sistemini yükseltme  
 
 Configuration Manager, aşağıdaki durumlarda işletim sisteminin Configuration Manager istemcileri için yerinde yükseltmesini destekler:  
 
@@ -192,7 +192,7 @@ Configuration Manager, aşağıdaki durumlarda işletim sisteminin Configuration
 - Windows 10 ' un derleme için hizmet yükseltmeleri. Daha fazla bilgi için bkz. [Windows 'u hizmet olarak yönetme](../../../osd/deploy-use/manage-windows-as-a-service.md).  
 
 
-## <a name="upgrade-sql-server"></a><a name="BKMK_SupConfigUpgradeDBSrv"></a>SQL Server yükselt  
+## <a name="upgrade-sql-server"></a><a name="BKMK_SupConfigUpgradeDBSrv"></a> SQL Server yükselt  
 
 Configuration Manager, site veritabanı sunucusunda SQL Server yerinde yükseltmesini destekler.
 
@@ -242,15 +242,15 @@ Site veritabanınız için kullanımdaki SQL Server kardinalite tahmini uyumlulu
 SELECT name, compatibility_level FROM sys.databases
 ```
 
-SQL CE Uyumluluk düzeyleri ve bunların nasıl ayarlanacağı hakkında daha fazla bilgi için bkz. [ALTER DATABASE Compatibility Level (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
+SQL CE Uyumluluk düzeyleri ve bunların nasıl ayarlanacağı hakkında daha fazla bilgi için bkz. [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
 
 SQL Server yükseltme hakkında daha fazla bilgi için aşağıdaki SQL Server makalelerine bakın:  
 
-- [SQL Server 2017 ' ye yükseltin](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
+- [SQL Server 2017 ' ye yükseltin](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
 
-- [SQL Server 2016 ' ye yükseltin](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
+- [SQL Server 2016 ' ye yükseltin](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
 
-- [SQL Server 2014’e yükseltme](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
+- [SQL Server 2014’e yükseltme](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
 
 ### <a name="to-upgrade-sql-server-on-the-site-database-server"></a>Site veritabanı sunucusundaki SQL Server’ı yükseltmek için  
 
@@ -261,4 +261,4 @@ SQL Server yükseltme hakkında daha fazla bilgi için aşağıdaki SQL Server m
 3. Configuration Manager hizmetlerini yeniden başlatın  
 
 > [!NOTE]  
-> Merkezi yönetim sitesinde kullanılan SQL Server sürümünü standart bir veri merkezine ya da kuruluşa değiştirdiğinizde, veritabanı bölümü değişmez. Bu veritabanı bölümü, hiyerarşinin desteklediği istemci sayısını sınırlar.  
+> Merkezi yönetim sitesinde kullanılan SQL Server sürümünü standart bir veri merkezine ya da kuruluşa değiştirdiğinizde, veritabanı bölümü değişmez. Bu veritabanı bölümü, hiyerarşinin desteklediği istemci sayısını sınırlar.

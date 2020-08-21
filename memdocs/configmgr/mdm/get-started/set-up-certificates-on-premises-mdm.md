@@ -10,12 +10,12 @@ ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bc63a21970bb522407c86d027690b83894b3cb99
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 4ac8d416e05b97b824ae236c2b1a2ff958b946b5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721832"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700036"
 ---
 # <a name="set-up-certificates-for-trusted-communications-with-on-premises-mdm"></a>Şirket içi MDM ile güvenilen iletişimler için sertifikaları ayarlama
 
@@ -34,9 +34,9 @@ Toplu kayıtlı cihazlarda, sertifikayı kayıt paketine dahil edebilirsiniz. Ku
 Sunucu sertifikaları vermek için Verisign veya GoDaddy gibi tanınmış bir ortak CA kullanırsanız, güvenilen kök sertifikayı her bir cihaza el ile yüklemek zorunda kalmaktan kaçınabilirsiniz. Çoğu cihaz bu genel yetkililere yerel olarak güvenir. Bu yöntem, sertifikayı başka yollarla yüklemek yerine, Kullanıcı tarafından kaydedilen cihazlar için kullanışlı bir alternatiftir.
 
 > [!IMPORTANT]  
-> Şirket içi MDM için cihazlar ve site sistem sunucuları arasındaki güvenilir iletişimler için sertifikaları kurmanın birçok yolu vardır. Bu makaledeki bilgiler, bunu yapmanın bir yolu örneğidir. Bu yöntem, sertifika yetkilisi ve sertifika yetkilisi Web kaydı rolüyle Active Directory Sertifika Hizmetleri gerektirir. Daha fazla bilgi için bkz. [Active Directory Sertifika Hizmetleri](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740\(v=ws.11\)).
+> Şirket içi MDM için cihazlar ve site sistem sunucuları arasındaki güvenilir iletişimler için sertifikaları kurmanın birçok yolu vardır. Bu makaledeki bilgiler, bunu yapmanın bir yolu örneğidir. Bu yöntem, sertifika yetkilisi ve sertifika yetkilisi Web kaydı rolüyle Active Directory Sertifika Hizmetleri gerektirir. Daha fazla bilgi için bkz. [Active Directory Sertifika Hizmetleri](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740\(v=ws.11\)).
 
-## <a name="publish-the-crl"></a><a name="bkmk_configCa"></a>CRL yayımlama
+## <a name="publish-the-crl"></a><a name="bkmk_configCa"></a> CRL yayımlama
 
 Active Directory Sertifika yetkilisi (CA), varsayılan olarak LDAP tabanlı sertifika iptal listeleri (CRL 'Ler) kullanır. Etki alanına katılmış cihazlar için CRL 'ye bağlantılara izin verir. Etki alanına katılmış olmayan cihazların CA 'dan verilen sertifikalara güvenmesine izin vermek için, HTTP tabanlı bir CRL ekleyin.
 
@@ -60,7 +60,7 @@ Active Directory Sertifika yetkilisi (CA), varsayılan olarak LDAP tabanlı sert
 
 1. CRL Yayımla penceresinde **yalnızca Delta CRL**' yi seçin ve ardından pencereyi kapatmak için **Tamam** ' ı seçin.
 
-## <a name="create-the-certificate-template"></a><a name="bkmk_certTempl"></a>Sertifika şablonu oluşturma
+## <a name="create-the-certificate-template"></a><a name="bkmk_certTempl"></a> Sertifika şablonu oluşturma
 
 CA, site sistem rollerini barındıran sunucular için sertifikalar vermek üzere Web sunucusu sertifika şablonunu kullanır. Bu sunucular, site sistem rolleri ve kayıtlı cihazlar arasındaki güvenilen iletişimler için SSL uç noktaları olacaktır.
 
@@ -85,7 +85,7 @@ CA, site sistem rollerini barındıran sunucular için sertifikalar vermek üzer
 
     1. **Etki alanı yöneticileri** ve **Enterprise Admins** güvenlik gruplarından **kaydetme** iznini kaldırın.
 
-    1. **Ekle**' yi seçin ve güvenlik grubunuzun adını girin. Örneğin, **CONFIGMGR MDM sunucuları**. Pencereyi kapatmak için **Tamam ' ı** seçin.
+    1. **Ekle**' yi seçin ve güvenlik grubunuzun adını girin. Örneğin, **CONFIGMGR MDM sunucuları**. Pencereyi kapatmak için **Tamam**’ı seçin.
 
     1. Bu grup için **kaydetme** iznini seçin. **Oku** iznini kaldırmayın.
 
@@ -95,11 +95,11 @@ CA, site sistem rollerini barındıran sunucular için sertifikalar vermek üzer
 
 1. **Sertifika şablonlarını etkinleştir** penceresinde, yeni şablonu seçin. Örneğin **CONFIGMGR MDM Web sunucusu**. Ardından **Tamam** ' ı seçerek pencereyi kaydedin ve kapatın.
 
-## <a name="request-the-certificate"></a><a name="bkmk_requestCert"></a>Sertifikayı iste
+## <a name="request-the-certificate"></a><a name="bkmk_requestCert"></a> Sertifikayı iste
 
 Bu işlem, IIS için Web sunucusu sertifikasının nasıl isteneceğini açıklar. Şirket içi MDM için rollerden birini barındıran her site sistem sunucusu için bu işlemi yapın.
 
-1. Rollerden birini barındıran site sistemi sunucusunda, yönetici olarak bir komut istemi açın. Boş `mmc` bir Microsoft Yönetim Konsolu açmak için girin.
+1. Rollerden birini barındıran site sistemi sunucusunda, yönetici olarak bir komut istemi açın. `mmc`Boş bir Microsoft Yönetim Konsolu açmak için girin.
 
 1. Konsol penceresinde, **Dosya** menüsüne gidin ve **ek bileşen Ekle/Kaldır**' ı seçin.
 
@@ -121,7 +121,7 @@ Bu işlem, IIS için Web sunucusu sertifikasının nasıl isteneceğini açıkla
 
 Her sunucu için benzersiz bir Web sunucusu sertifikası gerekir. Gerekli site sistemi rollerinden birini barındıran her sunucu için bu işlemi tekrarlayın. Sunucu tüm site sistem rollerini barındırıyorsa, yalnızca bir Web sunucusu sertifikası istemeniz yeterlidir.
 
-## <a name="bind-the-certificate"></a><a name="bkmk_bindCert"></a>Sertifikayı bağlama
+## <a name="bind-the-certificate"></a><a name="bkmk_bindCert"></a> Sertifikayı bağlama
 
 Sonraki adım, yeni sertifikayı Web sunucusuna bağlayamıyor. *Kayıt noktası* ve *kayıt proxy noktası* site sistem rollerini barındıran her sunucu için bu işlemi izleyin. Bir sunucu tüm site sistem rollerini barındırıyorsa, bu işlemi yalnızca bir kez yapmanız gerekir.
 
@@ -138,7 +138,7 @@ Sonraki adım, yeni sertifikayı Web sunucusuna bağlayamıyor. *Kayıt noktası
 
 1. IIS Yöneticisi konsolunda, bağlantılar listesinde, Web sunucusunu seçin. Sağ taraftaki eylem panelinde **Yeniden Başlat**' ı seçin. Bu eylem Web sunucusu hizmetini yeniden başlatır.
 
-## <a name="export-the-trusted-root-certificate"></a><a name="bkmk_exportCert"></a>Güvenilen kök sertifikayı dışarı aktarma
+## <a name="export-the-trusted-root-certificate"></a><a name="bkmk_exportCert"></a> Güvenilen kök sertifikayı dışarı aktarma
 
 Active Directory Sertifika Hizmetleri, etki alanına katılmış tüm cihazlarda gerekli sertifikayı CA 'dan otomatik olarak yüklenir. Etki alanına katılmış olmayan cihazların site sistem rolleriyle iletişim kurması için gereken sertifikayı almak için, Web sunucusuna bağlanan sertifikadan dışarı aktarın.
 

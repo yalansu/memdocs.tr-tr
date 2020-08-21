@@ -10,12 +10,12 @@ ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 53aa7e932e782254f63b422526b315f3ce91f397
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2f07f1277a9e87ea3266473fc54dc96907a0f0e6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906166"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698982"
 ---
 # <a name="language-packs-in-configuration-manager"></a>Configuration Manager dil paketleri
 
@@ -42,12 +42,12 @@ Configuration Manager Kurulum 'u çalıştırdığınızda, önkoşul ve yeniden
 
 ## <a name="server-languages"></a>Sunucu dilleri  
 
-Bir yerel ayar KIMLIĞINI sunucularda desteklemek istediğiniz bir dile eşlemek için aşağıdaki tabloyu kullanın. Yerel ayar kimlikleri hakkında daha fazla bilgi için bkz. [Microsoft tarafından atanan yerel kimlikler](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
+Bir yerel ayar KIMLIĞINI sunucularda desteklemek istediğiniz bir dile eşlemek için aşağıdaki tabloyu kullanın. Yerel ayar kimlikleri hakkında daha fazla bilgi için bkz. [Microsoft tarafından atanan yerel kimlikler](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
 
 |Sunucu dili|Yerel Kimlik (LCID)|Üç harfli kod|  
 |---------------------|------------------------|-----------------------|  
 |İngilizce (varsayılan)|0409|ENU|  
-|Basitleştirilmiş Çince|0804|CHS|  
+|ve|0804|CHS|  
 |Çince (Geleneksel, Tayvan)|0404|CHT|  
 |Çekçe|0405|CSY|  
 |Felemenkçe - Hollanda|0413|NLD|  
@@ -69,7 +69,7 @@ Bir yerel ayar KIMLIĞINI sunucularda desteklemek istediğiniz bir dile eşlemek
 
 ## <a name="client-languages"></a>İstemci dilleri  
 
-Bir yerel ayar KIMLIĞINI istemci bilgisayarlarında desteklemek istediğiniz bir dile eşlemek için aşağıdaki tabloyu kullanın. Yerel ayar kimlikleri hakkında daha fazla bilgi için bkz. [Microsoft tarafından atanan yerel kimlikler](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
+Bir yerel ayar KIMLIĞINI istemci bilgisayarlarında desteklemek istediğiniz bir dile eşlemek için aşağıdaki tabloyu kullanın. Yerel ayar kimlikleri hakkında daha fazla bilgi için bkz. [Microsoft tarafından atanan yerel kimlikler](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
 
 |İstemci dili|Yerel Kimlik (LCID)|Üç harfli kod|  
 |---------------------|------------------------|-----------------------|  

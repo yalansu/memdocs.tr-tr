@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66fcd9b7d4d25decb3aeef7cf38b469363eeb1fa
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d54354c82a6487690aa571eb72554f4eee45747b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128908"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700574"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 2002 ' deki yenilikler
 
@@ -28,17 +28,17 @@ Bu güncelleştirmeyi yüklemek için her zaman en son denetim listesini gözden
 Yeni Configuration Manager özelliklerinden tam olarak yararlanmak için, siteyi güncelleştirdikten sonra istemcileri en son sürüme de güncelleştirin. Site ve konsolu güncelleştirdiğinizde Configuration Manager konsolunda yeni işlevsellik göründüğünde, istemci sürümü de en son olana kadar, tüm senaryo işlevsel değildir.
 
 > [!TIP]
-> Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2002+-+Configuration+Manager%22&locale=en-us`
+> Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2002+-+Configuration+Manager%22&locale=en-us`
 
-## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a>Microsoft Uç Nokta Yöneticisi kiracı iliştirme
+## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Microsoft Uç Nokta Yöneticisi kiracı iliştirme
 
-### <a name="device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Cihaz eşitleme ve cihaz eylemleri
+### <a name="device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Cihaz eşitleme ve cihaz eylemleri
 <!--3555758-->
 Microsoft Uç Nokta Yöneticisi, tüm cihazlarınızı yönetmek için tümleşik bir çözümdür. Microsoft, Configuration Manager ve Intune 'U **Microsoft Endpoint Manager Yönetim Merkezi**adlı tek bir konsolda bir araya getirir. Bu sürümden itibaren, Configuration Manager cihazlarınızı bulut hizmetine yükleyebilir ve yönetim merkezindeki **cihazlar** dikey penceresinden eylemler gerçekleştirebilirsiniz.
 
 Daha fazla bilgi için bkz. [Microsoft Endpoint Manager kiracı iliştirme](../../../tenant-attach/device-sync-actions.md).
 
-## <a name="site-infrastructure"></a><a name="bkmk_infra"></a>Site altyapısı
+## <a name="site-infrastructure"></a><a name="bkmk_infra"></a> Site altyapısı
 
 ### <a name="remove-a-central-administration-site"></a>Merkezi yönetim sitesini kaldırma
 <!-- 3607277 -->
@@ -98,7 +98,7 @@ Kimlik doğrulaması da dahil olmak üzere site sisteminin ara sunucu ayarları 
 
 Daha fazla bilgi için bkz. [proxy sunucu desteği](../network/proxy-server-support.md#bkmk_other).
 
-## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a>Buluta bağlı yönetim
+## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a> Buluta bağlı yönetim
 
 ### <a name="critical-status-message-shows-server-connection-errors-to-required-endpoints"></a>Kritik durum iletisi gerekli uç noktalara sunucu bağlantı hatalarını gösterir
 
@@ -125,7 +125,7 @@ Daha fazla bilgi için bkz. [CMG Için belirteç tabanlı kimlik doğrulaması](
 
 Microsoft Endpoint Manager Yönetim merkezinde yeni bulut tabanlı özellikler veya şirket içi Configuration Manager yüklemeniz için diğer bağlı bulut hizmetleri kullanılabilir olduğunda, artık Configuration Manager konsolundaki bu yeni özellikleri tercih edebilirsiniz. Configuration Manager konsolundaki özellikleri etkinleştirme hakkında daha fazla bilgi için bkz. [güncelleştirmelerden isteğe bağlı özellikleri etkinleştirme](../../servers/manage/install-in-console-updates.md#bkmk_options).
 
-## <a name="desktop-analytics"></a><a name="bkmk_da"></a>Masaüstü Analizi
+## <a name="desktop-analytics"></a><a name="bkmk_da"></a> Masaüstü Analizi
 
 Masaüstü Analizi bulut hizmetindeki aylık değişiklikler hakkında daha fazla bilgi için bkz. [Masaüstü](../../../desktop-analytics/whats-new.md)analizine ilişkin yenilikler.
 
@@ -139,7 +139,7 @@ Masaüstü Analizi bulut hizmetindeki aylık değişiklikler hakkında daha fazl
 
 Daha fazla bilgi için bkz. [bağlantı durumunu izleme](../../../desktop-analytics/monitor-connection-health.md).
 
-## <a name="real-time-management"></a><a name="bkmk_real"></a>Gerçek zamanlı yönetim
+## <a name="real-time-management"></a><a name="bkmk_real"></a> Gerçek zamanlı yönetim
 
 ### <a name="improvements-to-cmpivot"></a>CMPivot geliştirmeleri
 
@@ -149,7 +149,7 @@ CMPivot varlıklarından gezinmeyi kolaylaştırdık. Artık CMPivot varlıklard
 
 Daha fazla bilgi için bkz. [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_2002).
 
-## <a name="content-management"></a><a name="bkmk_content"></a>İçerik yönetimi
+## <a name="content-management"></a><a name="bkmk_content"></a> İçerik yönetimi
 
 ### <a name="exclude-certain-subnets-for-peer-content-download"></a>Eş içerik indirme için bazı alt ağları hariç tut
 
@@ -165,7 +165,7 @@ Daha fazla bilgi için bkz. [sınır grubu seçenekleri](../../servers/deploy/co
 
 Ortamınız internet erişimi için kimliği doğrulanmamış bir ara sunucu kullanıyorsa, artık Microsoft bağlı önbelleği için bir Configuration Manager dağıtım noktası etkinleştirdiğinizde, proxy üzerinden iletişim kurabilir. Daha fazla bilgi için bkz. [Microsoft bağlı önbelleği](../hierarchy/microsoft-connected-cache.md).
 
-## <a name="client-management"></a><a name="bkmk_client"></a>İstemci yönetimi
+## <a name="client-management"></a><a name="bkmk_client"></a> İstemci yönetimi
 
 ### <a name="client-log-collection"></a>İstemci günlüğü koleksiyonu
 
@@ -202,7 +202,7 @@ Bu ayar hakkında daha fazla bilgi için bkz. [Configuration Manager istemcisiyl
 
 <!-- ## <a name="bkmk_comgmt"></a> Co-management -->
 
-## <a name="application-management"></a><a name="bkmk_app"></a>Uygulama yönetimi
+## <a name="application-management"></a><a name="bkmk_app"></a> Uygulama yönetimi
 
 ### <a name="microsoft-edge-management-dashboard"></a>Microsoft Edge Yönetim Panosu
 
@@ -239,7 +239,7 @@ Artık uygulama modeli aracılığıyla görev dizilerini kullanarak karmaşık 
 
 Daha fazla bilgi için bkz. [Windows uygulamaları oluşturma](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt).
 
-## <a name="os-deployment"></a><a name="bkmk_osd"></a>İşletim sistemi dağıtımı
+## <a name="os-deployment"></a><a name="bkmk_osd"></a> İşletim sistemi dağıtımı
 
 ### <a name="bootstrap-a-task-sequence-immediately-after-client-registration"></a>İstemci kaydından hemen sonra bir görev dizisini önyükleyebilirsiniz
 
@@ -290,7 +290,7 @@ Bu sürüm, işletim sistemi dağıtımına yönelik aşağıdaki geliştirmeler
 
 <!-- ## <a name="bkmk_userxp"></a> Software Center -->
 
-## <a name="software-updates"></a><a name="bkmk_sum"></a>Yazılım güncelleştirmeleri
+## <a name="software-updates"></a><a name="bkmk_sum"></a> Yazılım güncelleştirmeleri
 
 ### <a name="orchestration-groups"></a>Düzenleme grupları
 
@@ -322,14 +322,14 @@ Daha fazla bilgi için bkz. [Office 365 güncelleştirmelerini bağlantısı kes
 
 <!-- ## <a name="bkmk_o365"></a> Office management -->
 
-## <a name="protection"></a><a name="bkmk_protect"></a>Korunmasına
+## <a name="protection"></a><a name="bkmk_protect"></a> Korunmasına
 
 ### <a name="expand-microsoft-defender-advanced-threat-protection-atp-onboarding"></a>Microsoft Defender Gelişmiş tehdit koruması (ATP) ekleme 'yi Genişlet
  
 <!-- 5229962 -->
 Configuration Manager, cihazları Microsoft Defender ATP 'ye ekleme desteğini genişletti. Daha fazla bilgi için bkz. [Microsoft Defender Gelişmiş tehdit koruması](../../../protect/deploy-use/defender-advanced-threat-protection.md).
 
-### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a>Microsoft Endpoint Manager Yönetim Merkezi aracılığıyla Microsoft Defender ATP 'ye Configuration Manager istemcileri ekleme
+### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Microsoft Endpoint Manager Yönetim Merkezi aracılığıyla Microsoft Defender ATP 'ye Configuration Manager istemcileri ekleme
 <!--5691658-->
 Artık, yönetilen istemcileri Configuration Manager için Microsoft Defender ATP uç noktası algılama ve yanıt (EDR) ekleme ilkelerini dağıtabilirsiniz. Bu istemciler Azure AD veya MDM kaydı gerektirmez ve ilke, Azure AD grupları yerine ConfigMgr koleksiyonlarına hedeflenmiş olur.
 
@@ -346,7 +346,7 @@ Bu özellik, müşterilerin hem Intune Configuration Manager MDM 'yi hem de iste
 
     Bu sürümden itibaren, HTTPS gereksinimi, tüm yönetim noktası rolünü değil kurtarma hizmetini barındıran IIS Web sitesi içindir. Bu değişiklik, sertifika gereksinimlerini andırmakta ve aktarım içindeki kurtarma anahtarlarını şifreler.<!-- 5925660 --> Daha fazla bilgi için bkz. [kurtarma verilerini şifreleme](../../../protect/deploy-use/bitlocker/encrypt-recovery-data.md).
 
-## <a name="reporting"></a><a name="bkmk_report"></a>Rapor
+## <a name="reporting"></a><a name="bkmk_report"></a> Rapor
 
 ### <a name="integrate-with-power-bi-report-server"></a>Power BI Rapor Sunucusu ile tümleştirme
 
@@ -356,7 +356,7 @@ Artık Power BI Rapor Sunucusu Configuration Manager raporlama ile tümleştireb
 
 Daha fazla bilgi için bkz. [Power BI rapor sunucusu tümleştirme](../../servers/manage/powerbi-report-server.md).
 
-## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a>Configuration Manager konsolu
+## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a> Configuration Manager konsolu
 
 ### <a name="show-boundary-groups-for-devices"></a>Cihazların sınır gruplarını gösterme
 
@@ -397,7 +397,7 @@ BT Yöneticisi topluluğu, yıllar boyunca çok fazla bilgi geliştirmiştir. Ko
 
 Daha fazla bilgi için bkz. [Community hub ve GitHub](../../servers/manage/community-hub.md).
 
-## <a name="tools"></a><a name="bkmk_tools"></a>Aracı
+## <a name="tools"></a><a name="bkmk_tools"></a> Aracı
 
 ### <a name="onetrace-log-groups"></a>OneTrace günlük grupları
 
@@ -411,7 +411,7 @@ OneTrace artık destek merkezi 'ndeki özelliğe benzer şekilde özelleştirile
 
 Daha fazla bilgi için bkz. [Destek Merkezi OneTrace](../../support/support-center-onetrace.md).
 
-### <a name="improvements-to-extend-and-migrate-on-premises-site-to-microsoft-azure"></a><a name="bkmk_extend"></a>Şirket içi sitede genişletme ve geçirme geliştirmeleri Microsoft Azure
+### <a name="improvements-to-extend-and-migrate-on-premises-site-to-microsoft-azure"></a><a name="bkmk_extend"></a> Şirket içi sitede genişletme ve geçirme geliştirmeleri Microsoft Azure
 <!--5665775, 6307931-->
 Şirket içi Microsoft Azure siteyi genişletmeye ve geçirmeye yönelik araç artık tek bir Azure sanal makinesinde birden çok site sistemi rolü sağlamayı desteklemektedir. İlk Azure sanal makine dağıtımı tamamlandıktan sonra site sistemi rolleri ekleyebilirsiniz.
 
@@ -426,7 +426,7 @@ Bu sürümden itibaren, aşağıdaki özellikler artık [ön sürüm](../../serv
 - [Tek başına CMPivot](../../servers/manage/cmpivot.md#bkmk_standalone)<!--3555890/4692885-->
 - [Ortak yönetilen cihazlar Için istemci uygulamaları](../../../comanage/workloads.md#client-apps) (daha önce *ortak yönetilen cihazlar için mobil uygulamalar*olarak bilinir)<!-- 1357892/3600959 -->
 
-Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell sürüm 2002 sürüm notları](https://docs.microsoft.com/powershell/sccm/2002-release-notes?view=sccm-ps).
+Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell sürüm 2002 sürüm notları](/powershell/sccm/2002-release-notes?view=sccm-ps).
 
 Yönetim hizmeti REST API değişiklikler hakkında daha fazla bilgi için bkz. [Yönetim hizmeti sürüm notları](../../../develop/adminservice/release-notes.md#bkmk_2002).
 
@@ -440,8 +440,8 @@ Aşağıdaki ek düzeltmeler belirli sorunları ele almak için kullanılabilir:
 
 | ID | Başlık | Tarih | Konsol içi |
 |---------|---------|---------|---------|
-| [4575339](https://support.microsoft.com/help/4575339) | Cihazlar Microsoft uç noktası Configuration Manager Yönetim Merkezi 'nde iki kez görünüyor | 23 Temmuz 2020 | No |
-| [4575774](https://support.microsoft.com/help/4575774) | New-CMTSStepPrestartCheck cmdlet 'i Configuration Manager, sürüm 2002 ' de başarısız oluyor | 24 Temmuz 2020 | No |
+| [4575339](https://support.microsoft.com/help/4575339) | Cihazlar Microsoft uç noktası Configuration Manager Yönetim Merkezi 'nde iki kez görünüyor | 23 Temmuz 2020 | Hayır |
+| [4575774](https://support.microsoft.com/help/4575774) | New-CMTSStepPrestartCheck cmdlet 'i Configuration Manager, sürüm 2002 ' de başarısız oluyor | 24 Temmuz 2020 | Hayır |
 | [4576782](https://support.microsoft.com/help/4576782) | Microsoft Endpoint Manager Yönetim Merkezi 'nde uygulama dikey penceresi zaman aşımına uğruyor | 11 Ağustos 2020 | Hayır |
 
 <!--

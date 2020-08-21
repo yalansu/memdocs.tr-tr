@@ -10,12 +10,12 @@ ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 92bf86225cf869622fd4b496fd3e8e852b651a70
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: aae6db43a03f524773cad4c26ff11817da02a323
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713677"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699679"
 ---
 # <a name="modify-your-configuration-manager-infrastructure"></a>Configuration Manager altyapınızı değiştirme
 
@@ -23,7 +23,7 @@ ms.locfileid: "81713677"
 
 Bir veya daha fazla site yükledikten sonra, yapılandırmaların değiştirilmesi veya altyapınızı etkileyen işlemler gerçekleştirmeniz gerekebilir.
 
-## <a name="manage-the-sms-provider"></a><a name="BKMK_ManageSMSprovider"></a>SMS Sağlayıcıyı yönetme
+## <a name="manage-the-sms-provider"></a><a name="BKMK_ManageSMSprovider"></a> SMS Sağlayıcıyı yönetme
 
 SMS sağlayıcısı, bir veya daha fazla Configuration Manager konsolu için yönetim iletişim noktası sağlar. Birden çok SMS sağlayıcısı yüklediğinizde, site ve hiyerarşinizi yönetmek için iletişim noktaları için artıklık sağlayabilirsiniz.
 
@@ -56,7 +56,7 @@ Bir sitedeki SMS sağlayıcısını değiştirmeden önce, bkz. [plan for SMS Pr
 
 Kurulum Sihirbazı bittikten sonra, SMS sağlayıcı yapılandırması tamamlanır. Site **özellikleri**' nde, **genel** sekmesinde, BIR site için bir SMS sağlayıcısı yüklü olan bilgisayarları doğrulayın.
 
-## <a name="manage-the-configuration-manager-console"></a><a name="bkmk_Console"></a>Configuration Manager konsolunu yönetme
+## <a name="manage-the-configuration-manager-console"></a><a name="bkmk_Console"></a> Configuration Manager konsolunu yönetme
 
 Aşağıdaki görevler Configuration Manager konsolunu yönetmenize yardımcı olur:
 
@@ -68,9 +68,9 @@ Aşağıdaki görevler Configuration Manager konsolunu yönetmenize yardımcı o
 
 - Kullanıcıların konsolunda neleri görebileceğini ve yapabileceklerini sınırlamak üzere yönetici izinlerini değiştirmek için, bkz. [yönetici kullanıcının yönetim kapsamını değiştirme](../deploy/configure/configure-role-based-administration.md#BKMK_ModAdminUser).
 
-### <a name="manage-configuration-manager-console-language"></a><a name="BKMK_ManageConsoleLanguages"></a>Configuration Manager konsolu dilini yönetme
+### <a name="manage-configuration-manager-console-language"></a><a name="BKMK_ManageConsoleLanguages"></a> Configuration Manager konsolu dilini yönetme
 
-Site sunucusu yüklemesi sırasında, Configuration Manager konsolu yükleme dosyaları ve site için desteklenen dil paketleri, site sunucusundaki Configuration Manager yükleme yolunun `\Tools\ConsoleSetup` alt klasörüne kopyalanır.
+Site sunucusu yüklemesi sırasında, Configuration Manager konsolu yükleme dosyaları ve site için desteklenen dil paketleri, `\Tools\ConsoleSetup` site sunucusundaki Configuration Manager yükleme yolunun alt klasörüne kopyalanır.
 
 - Site sunucusunda bu klasörden Configuration Manager konsolu yüklemesini başlattığınızda, Configuration Manager konsolu ve desteklenen dil paketi dosyalarını bilgisayara kopyalar.
 
@@ -92,9 +92,9 @@ Bilgisayardaki yapılandırılmış yerel ayarı ne olursa olsun Configuration M
 
 #### <a name="install-an-english-only-version-of-the-configuration-manager-console-on-computers"></a>Bilgisayarlarda Configuration Manager konsolunun yalnızca Ingilizce sürümünü yükler  
 
-1. Windows Gezgini 'nde, Configuration Manager yükleme `\Tools\ConsoleSetup\LanguagePack` yolunda öğesine gidin.
+1. Windows Gezgini 'nde, `\Tools\ConsoleSetup\LanguagePack` Configuration Manager yükleme yolunda öğesine gidin.
 
-1. **.msp** ve **.mst** dosyalarını yeniden adlandırın. Örneğin, ** &lt;dosya adını\>değiştirebilirsiniz. MSP** 'den ** &lt;dosya adına\>. MSP. Disabled**.
+1. **.msp** ve **.mst** dosyalarını yeniden adlandırın. Örneğin, ** &lt; dosya adını değiştirebilirsiniz \> . MSP** 'den ** &lt; dosya adına \> . MSP. Disabled**.
 
 1. Configuration Manager konsolunu bilgisayara yüklersiniz.
 
@@ -105,13 +105,13 @@ Bilgisayardaki yapılandırılmış yerel ayarı ne olursa olsun Configuration M
 
 1. Configuration Manager konsolunu çalıştıran bilgisayarda, Configuration Manager konsolunu kapatın.
 
-1. Windows Gezgini 'nde, Configuration Manager konsol &lt;bilgisayarında *consoleınstallationpath*> \Bin\ ' e gidin.  
+1. Windows Gezgini 'nde, &lt; Configuration Manager konsol bilgisayarında *consoleınstallationpath*> \Bin\ ' e gidin.  
 
 1. Uygun dil klasörünü, bilgisayarda yapılandırılmış dil için yeniden adlandırın. Örneğin, bilgisayar için dil ayarları Almanca olarak belirlenmişse **de** klasörünü **de.disabled** olarak yeniden adlandırabilirsiniz.  
 
 1. Configuration Manager konsolunu bilgisayar için yapılandırılmış dilde açmak için, klasörü orijinal adıyla yeniden adlandırın. Örneğin **de.disabled** klasörünü **de** olarak yeniden adlandırın.  
 
-## <a name="configure-dcom-permissions-for-remote-consoles"></a><a name="BKMK_ConfigDCOMforRemoteConsole"></a>Uzak konsollar için DCOM izinlerini yapılandırma
+## <a name="configure-dcom-permissions-for-remote-consoles"></a><a name="BKMK_ConfigDCOMforRemoteConsole"></a> Uzak konsollar için DCOM izinlerini yapılandırma
 
 Configuration Manager konsolunu çalıştıran kullanıcı hesabı, SMS sağlayıcı kullanarak site veritabanına erişim izni gerektirir. Ancak, uzak bir Configuration Manager konsolunu kullanan bir yönetici kullanıcı, üzerinde **Uzaktan etkinleştirme** DCOM izinleri gerektirir:
 
@@ -130,7 +130,7 @@ Yönetim kullanıcıları için uzaktan Configuration Manager konsol erişimi sa
 
 ### <a name="configure-dcom-permissions-for-remote-configuration-manager-console-connections"></a>Uzaktan Configuration Manager konsol bağlantıları için DCOM izinlerini yapılandırma
 
-1. Hedef bilgisayarda yönetici olarak, **Bileşen Hizmetleri**'ni açmak `Dcomcnfg.exe` için öğesini çalıştırın.
+1. Hedef bilgisayarda yönetici olarak, `Dcomcnfg.exe` **Bileşen Hizmetleri**'ni açmak için öğesini çalıştırın.
 
 1. **Bileşen Hizmetleri**' ni genişletin, **bilgisayarlar**' ı genişletin ve **ardından Bilgisayarım ' ı seçin.** **Eylem** menüsünde **Özellikler**' i seçin.
 
@@ -138,7 +138,7 @@ Yönetim kullanıcıları için uzaktan Configuration Manager konsol erişimi sa
 
 1. **Başlatma ve etkinleştirme izinleri** penceresinde **Ekle**' yi seçin.
 
-1. **Kullanıcıları, bilgisayarları, hizmet hesaplarını veya grupları seç** penceresinde, **Seçilecek nesne adlarını girin** alanına yazın `SMS Admins`ve ardından **Tamam**' ı seçin.
+1. **Kullanıcıları, bilgisayarları, hizmet hesaplarını veya grupları seç** penceresinde, **Seçilecek nesne adlarını girin** alanına yazın `SMS Admins` ve ardından **Tamam**' ı seçin.
 
    > [!TIP]
    > SMS yöneticileri grubunu bulmak için **Bu konumdan**ayarını değiştirmeniz gerekebilir: SMS sağlayıcı bir üye sunucuda çalıştırıldığında bu grup bilgisayarda yereldir ve SMS sağlayıcı bir etki alanı denetleyicisinde çalıştırıldığında bir etki alanı yerel grubudur.
@@ -151,7 +151,7 @@ Bilgisayarınız artık SMS yöneticileri grubunun üyelerine uzaktan Configurat
 
 Uzaktan Configuration Manager konsollarını destekleyen her SMS sağlayıcısı bilgisayarında bu yordamı yineleyin.
 
-## <a name="modify-the-site-database-configuration"></a><a name="bkmk_dbconfig"></a>Site veritabanı yapılandırmasını değiştirme
+## <a name="modify-the-site-database-configuration"></a><a name="bkmk_dbconfig"></a> Site veritabanı yapılandırmasını değiştirme
 
 Bir siteyi yükledikten sonra site veritabanı ve site veritabanı sunucusunun yapılandırmasını değiştirebilirsiniz. Değişiklik yapmak için bir CAS sunucusunda veya birincil site sunucusunda Configuration Manager kurulumunu çalıştırın. Site veritabanını aynı bilgisayardaki yeni bir SQL Server örneğine veya SQL Server’ın desteklenen bir sürümünü çalıştıran farklı bir bilgisayara taşıyabilirsiniz. Bu değişiklikler, ikincil sitelerdeki veritabanı yapılandırması için desteklenmez.
 
@@ -180,14 +180,14 @@ Site veritabanını taşırsanız, aşağıdaki konfigürasyonları da gözden g
 
 - Site veritabanını yeni bir bilgisayara taşıdığınızda, site sunucusunun bilgisayar hesabını SQL Server çalıştıran bilgisayardaki local **Administrators** grubuna ekleyin. Site veritabanı için bir SQL Server kümesi kullanıyorsanız, bilgisayar hesabını her bir Windows Server küme düğümü bilgisayarının yerel **Yöneticiler** grubuna ekleyin.
 
-- Veritabanını SQL Server yeni bir örneğe veya yeni bir SQL Server bilgisayara taşıdığınızda, ortak dil çalışma zamanı (CLR) tümleştirmesini etkinleştirin. Site veritabanını barındıran SQL Server örneğine bağlanmak için **SQL Server Management Studio** kullanın. Ardından aşağıdaki saklı yordamı bir sorgu olarak çalıştırın:`sp_configure 'clr enabled',1; reconfigure`
+- Veritabanını SQL Server yeni bir örneğe veya yeni bir SQL Server bilgisayara taşıdığınızda, ortak dil çalışma zamanı (CLR) tümleştirmesini etkinleştirin. Site veritabanını barındıran SQL Server örneğine bağlanmak için **SQL Server Management Studio** kullanın. Ardından aşağıdaki saklı yordamı bir sorgu olarak çalıştırın: `sp_configure 'clr enabled',1; reconfigure`
 
 - Yeni SQL Server yedekleme konumuna erişimi olduğundan emin olun. Site veritabanı yedeklemenizi depolamak için bir UNC kullandığınızda, veritabanını yeni bir sunucuya taşıdıktan sonra, yeni SQL Server bilgisayar hesabının UNC konumuna **yazma** izinlerine sahip olduğundan emin olun. Bu yapılandırma, SQL Server bir AlwaysOn kullanılabilirlik grubuna veya bir SQL Server kümesine ne zaman geçilebileceğinizi içerir.
 
 > [!IMPORTANT]
 > Yönetim noktaları için bir veya daha fazla veritabanı yinelemesi içeren bir veritabanını taşımadan önce, önce veritabanı çoğaltmalarını kaldırın. Veritabanı taşımayı tamamladıktan sonra veritabanı yinelemelerini yeniden yapılandırabilirsiniz. Daha fazla bilgi için bkz. [Yönetim noktaları Için veritabanı çoğaltmaları](../deploy/configure/database-replicas-for-management-points.md).
 
-## <a name="manage-the-spn-for-the-site-database-server"></a><a name="bkmk_SPN"></a>Site veritabanı sunucusu için SPN 'YI yönetme
+## <a name="manage-the-spn-for-the-site-database-server"></a><a name="bkmk_SPN"></a> Site veritabanı sunucusu için SPN 'YI yönetme
 
 Site veritabanı için SQL Services çalıştıran hesabı seçebilirsiniz:
 
@@ -195,11 +195,11 @@ Site veritabanı için SQL Services çalıştıran hesabı seçebilirsiniz:
 
 - Hizmetler bir etki alanı yerel kullanıcı hesabıyla çalıştığında SPN 'yi el ile kaydedin. SPN, SQL istemcilerinin ve diğer site sistemlerinin Kerberos ile kimlik doğrulamasına olanak tanır. Kerberos kimlik doğrulaması olmadan veritabanıyla iletişim başarısız olabilir.
 
-SPN 'Ler ve Kerberos bağlantıları hakkında daha fazla bilgi için bkz. [Kerberos bağlantıları için hizmet asıl adını kaydetme](https://docs.microsoft.com/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections).
+SPN 'Ler ve Kerberos bağlantıları hakkında daha fazla bilgi için bkz. [Kerberos bağlantıları için hizmet asıl adını kaydetme](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections).
 
 **Setspn** aracını kullanarak site veritabanı sunucusunun SQL Server hizmet hesabı IÇIN bir SPN kaydedin. Setspn 'yi, SQL Server aynı etki alanındaki bir bilgisayarda etki alanı yöneticisi olarak çalıştırın.
 
-Aşağıdaki yordamlar SQL Server hizmet hesabı için SPN 'nin nasıl yönetileceği örneklerdir. Setspn hakkında daha fazla bilgi için bkz. [Setspn Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241\(v=ws.11\)).
+Aşağıdaki yordamlar SQL Server hizmet hesabı için SPN 'nin nasıl yönetileceği örneklerdir. Setspn hakkında daha fazla bilgi için bkz. [Setspn Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241\(v=ws.11\)).
 
 ### <a name="manually-create-a-domain-user-spn-for-the-sql-server-service-account"></a>SQL Server hizmet hesabı için el ile bir etki alanı kullanıcı SPN 'si oluşturun
 
@@ -210,13 +210,13 @@ Aşağıdaki yordamlar SQL Server hizmet hesabı için SPN 'nin nasıl yönetile
     > [!IMPORTANT]
     > Kümelenmiş bir SQL Server için SPN oluşturduğunuzda, SQL Server bilgisayar adı olarak SQL Server kümesinin sanal adını belirtin.
 
-    - NetBIOS adı:`setspn -A MSSQLSvc/<SQL Server computer name>:<port> <Domain\Account>`
+    - NetBIOS adı: `setspn -A MSSQLSvc/<SQL Server computer name>:<port> <Domain\Account>`
 
-        Örneğin, `setspn -A MSSQLSvc/sqlserver:1433 contoso\sqlservice`
+        Örnek: `setspn -A MSSQLSvc/sqlserver:1433 contoso\sqlservice`
 
-    - TAM`setspn -A MSSQLSvc/<SQL Server FQDN>:<port> <Domain\Account>`
+    - TAM `setspn -A MSSQLSvc/<SQL Server FQDN>:<port> <Domain\Account>`
 
-        Örneğin, `setspn -A MSSQLSvc/sqlserver.contoso.com:1433 contoso\sqlservice`
+        Örnek: `setspn -A MSSQLSvc/sqlserver.contoso.com:1433 contoso\sqlservice`
 
     > [!NOTE]
     > Bir SQL Server adlandırılmış örnek için SPN kaydetme komutu, varsayılan bir örnek için SPN kaydettiğinizde kullandığınız ile aynıdır. Tek istisna, bağlantı noktası numarasının, adlandırılmış örneğin kullandığı bağlantı noktasıyla aynı olması gerekir.
@@ -225,9 +225,9 @@ Aşağıdaki yordamlar SQL Server hizmet hesabı için SPN 'nin nasıl yönetile
 
 1. Yönetici olarak bir komut istemi açın.
 
-1. Aşağıdaki komutu girin:`setspn -L <domain\SQL service account>`
+1. Aşağıdaki komutu girin: `setspn -L <domain\SQL service account>`
 
-    Örneğin, `setspn -L contoso\sqlservice`
+    Örnek: `setspn -L contoso\sqlservice`
 
 1. Kayıtlı **servicePrincipalName**öğesini gözden geçirin. SQL Server için geçerli bir SPN oluşturdunuz emin olun.
 
@@ -237,13 +237,13 @@ Aşağıdaki yordamlar SQL Server hizmet hesabı için SPN 'nin nasıl yönetile
 
 1. **SQL Server Configuration Manager**’ı açın.
 
-1. **SQL Server Hizmetleri**' ni seçin ve ardından **SQL Server&lt;örnek adı\>**' nı açın.
+1. **SQL Server Hizmetleri**' ni seçin ve ardından **SQL Server &lt; örnek adı \> **' nı açın.
 
 1. **Oturum açma** sekmesine geçin. **Bu hesabı**seçin ve ardından 1. adımdaki etki alanı kullanıcı hesabı için Kullanıcı adını ve parolayı girin.
 
 1. Hizmet hesabı değişikliğini onaylayın ve SQL Server hizmetini yeniden başlatın.
 
-## <a name="run-a-site-reset"></a><a name="bkmk_reset"></a>Site sıfırlaması Çalıştır
+## <a name="run-a-site-reset"></a><a name="bkmk_reset"></a> Site sıfırlaması Çalıştır
 
 Bir CA veya birincil sitede bir site sıfırlaması çalıştırıldığında, site:
 
@@ -253,7 +253,7 @@ Bir CA veya birincil sitede bir site sıfırlaması çalıştırıldığında, s
 
 İkincil siteler Site sıfırlamayı desteklemez.
 
-Bir siteyi el ile sıfırlayabilirsiniz. Ayrıca, site yapılandırmasını değiştirdikten sonra otomatik olarak da çalıştırılabilir. Örneğin:
+Bir siteyi el ile sıfırlayabilirsiniz. Ayrıca, site yapılandırmasını değiştirdikten sonra otomatik olarak da çalıştırılabilir. Örnek:
 
 - Configuration Manager bileşenleri tarafından kullanılan hesaplarda değişiklik yaptıysanız el ile site sıfırlamayı düşünün. Bu eylem, site bileşenlerinin yeni hesap ayrıntılarını kullanmak üzere güncellediğinizden emin olmanızı sağlar.
 
@@ -306,9 +306,9 @@ Hiyerarşi, [istemci yükseltmelerini bir ön üretim koleksiyonunda test](../..
 
     - **Başlat** menüsünde **Configuration Manager Kurulum**' u seçin.
 
-    - Configuration Manager *yükleme medyası*dizininde öğesini açın `\SMSSETUP\BIN\X64\setup.exe`. Bu sürümün site sürümüyle aynı olduğundan emin olun.
+    - Configuration Manager *yükleme medyası*dizininde öğesini açın `\SMSSETUP\BIN\X64\setup.exe` . Bu sürümün site sürümüyle aynı olduğundan emin olun.
 
-    - Configuration Manager *yüklendiği*dizinde açın `\BIN\X64\setup.exe`.
+    - Configuration Manager *yüklendiği*dizinde açın `\BIN\X64\setup.exe` .
 
 1. **Başlarken** sayfasında, **Site bakımı yap veya bu siteyi sıfırla**' yı seçin.
 
@@ -316,7 +316,7 @@ Hiyerarşi, [istemci yükseltmelerini bir ön üretim koleksiyonunda test](../..
 
 1. Site sıfırlamasına başlamak için **Evet** ' i seçin.
 
-## <a name="manage-language-packs-at-a-site"></a><a name="bkmk_sitelang"></a>Bir sitedeki dil paketlerini yönetme
+## <a name="manage-language-packs-at-a-site"></a><a name="bkmk_sitelang"></a> Bir sitedeki dil paketlerini yönetme
 
 Bir site yüklendikten sonra, kullanımda olan sunucu ve istemci dil paketlerini değiştirebilirsiniz.
 
@@ -342,9 +342,9 @@ Configuration Manager desteklediği istemci ve sunucu dilleri hakkında daha faz
 
     - **Başlat** menüsünde **Configuration Manager Kurulum**' u seçin.
 
-    - Configuration Manager *yükleme medyası*dizininde öğesini açın `\SMSSETUP\BIN\X64\setup.exe`. Bu sürümün site sürümüyle aynı olduğundan emin olun.
+    - Configuration Manager *yükleme medyası*dizininde öğesini açın `\SMSSETUP\BIN\X64\setup.exe` . Bu sürümün site sürümüyle aynı olduğundan emin olun.
 
-    - Configuration Manager *yüklendiği*dizinde açın `\BIN\X64\setup.exe`.
+    - Configuration Manager *yüklendiği*dizinde açın `\BIN\X64\setup.exe` .
 
 1. **Başlarken** sayfasında, **Site bakımı yap veya bu siteyi sıfırla**' yı seçin.
 
@@ -365,7 +365,7 @@ Configuration Manager desteklediği istemci ve sunucu dilleri hakkında daha faz
     > [!NOTE]
     > Configuration Manager, sitedeki tüm site sistem rollerini de yeniden yükler bir site sıfırlaması başlatır.
 
-## <a name="modify-the-database-server-alert-threshold"></a><a name="BKMK_ModDBAlert"></a>Veritabanı sunucusu uyarı eşiğini değiştirme
+## <a name="modify-the-database-server-alert-threshold"></a><a name="BKMK_ModDBAlert"></a> Veritabanı sunucusu uyarı eşiğini değiştirme
 
 Varsayılan olarak, bir site veritabanı sunucusundaki boş disk alanı azaldığında Configuration Manager uyarı oluşturur:
 

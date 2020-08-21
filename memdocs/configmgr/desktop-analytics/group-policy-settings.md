@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 2ee472b89f45e744e43915e51e98f11841208b73
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d00edbfc30a87660adc65758dc9fbcb9113197f0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125816"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700659"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>Masaüstü analizi için Grup İlkesi ayarları
 
@@ -30,17 +30,17 @@ Configuration Manager, cihazları masaüstü analizine kaydettiğinde, cihazı y
 
 Configuration Manager, aşağıdaki kayıt defteri anahtarlarının birindeki veya her ikisinde Windows ilkelerini ayarlar:
 
-- Grup İlkesi nesnesi (**GPO**):`HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
+- Grup İlkesi nesnesi (**GPO**): `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
-- **Yerel** ilke tercihi:`HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
+- **Yerel** ilke tercihi: `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
 
 | İlke | Yol | Şunlara uygulanır | Değer |
 |--------|------|------------|-------|
 | **Commercialıd** | Yerel | Tüm Windows sürümleri | Cihazın masaüstü analizinde görünmesi için kuruluşunuzun ticari KIMLIĞIYLE yapılandırın. |
-| **Allowtelemetri**  | GPO | Windows 10 | `1` **Temel** (gerekli), `2` **Gelişmiş**veya `3` **tam** (isteğe bağlı) tanılama verileri için ayarlayın. Masaüstü analizi için en az temel Tanılama verileri gerekir. Microsoft, masaüstü analizi ile **Isteğe bağlı (sınırlı)** (Gelişmiş (sınırlı)) düzeyi kullanmanızı önerir. Daha fazla bilgi için bkz. [Kuruluşunuzda Windows tanılama verilerini yapılandırma](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
-| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10, sürüm 1803 ve üzeri | Bu ayar yalnızca Allowtelemetri ayarı olduğunda geçerlidir `2` . Microsoft 'a gönderilen gelişmiş tanılama veri olaylarını yalnızca masaüstü analizinin gerektirdiği olaylarla sınırlandırır. Daha fazla bilgi için bkz. [Windows 10 Tanılama verileri olayları ve gelişmiş tanılama verilerini sınırla ilkesi aracılığıyla toplanan alanlar](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields). |
+| **Allowtelemetri**  | GPO | Windows 10 | `1` **Temel** (gerekli), `2` **Gelişmiş**veya `3` **tam** (isteğe bağlı) tanılama verileri için ayarlayın. Masaüstü analizi için en az temel Tanılama verileri gerekir. Microsoft, masaüstü analizi ile **Isteğe bağlı (sınırlı)** (Gelişmiş (sınırlı)) düzeyi kullanmanızı önerir. Daha fazla bilgi için bkz. [Kuruluşunuzda Windows tanılama verilerini yapılandırma](/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
+| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10, sürüm 1803 ve üzeri | Bu ayar yalnızca Allowtelemetri ayarı olduğunda geçerlidir `2` . Microsoft 'a gönderilen gelişmiş tanılama veri olaylarını yalnızca masaüstü analizinin gerektirdiği olaylarla sınırlandırır. Daha fazla bilgi için bkz. [Windows 10 Tanılama verileri olayları ve gelişmiş tanılama verilerini sınırla ilkesi aracılığıyla toplanan alanlar](/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields). |
 | **AllowDeviceNameInTelemetry** | GPO | Windows 10, sürüm 1803 ve üzeri | Cihazların cihaz adını göndermesini etkinleştirin. Cihaz adı varsayılan olarak Microsoft 'a gönderilmez. Cihaz adını göndermezseniz, masaüstü analizlerinin "Unknown" olarak görünmesi gerekir. Daha fazla bilgi için bkz. [Cihaz adı](enroll-devices.md#device-name). |
-| **Ticari veri OptIn** | Yerel | Windows 8.1 ve önceki sürümler | Masaüstü Analizi bir değeri gerektirir `1` . Daha fazla bilgi için bkz. [Windows 7 ' de ticari veri katılımı](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
+| **Ticari veri OptIn** | Yerel | Windows 8.1 ve önceki sürümler | Masaüstü Analizi bir değeri gerektirir `1` . Daha fazla bilgi için bkz. [Windows 7 ' de ticari veri katılımı](/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
 | **Requestallappraerversions** | Her İkisi | Windows 8.1 ve önceki sürümler | Masaüstü analizi, `1` veri toplamanın doğru şekilde çalışması için bir değer gerektirir. |
 | **DisableEnterpriseAuthProxy** | GPO | Tüm Windows sürümleri | Ortamınız internet erişimi için Windows tümleşik kimlik doğrulaması ile Kullanıcı kimliği doğrulanmış bir ara sunucu gerektiriyorsa, masaüstü analizi, `0` veri toplamanın doğru bir şekilde çalışması için bir değer gerektirir. Daha fazla bilgi için bkz. [proxy sunucusu kimlik doğrulaması](enable-data-sharing.md#proxy-server-authentication). |
 
@@ -66,7 +66,7 @@ Configuration Manager, hedef koleksiyonunuzda ticari KIMLIK ve Tanılama veriler
 
 İlgili Grup İlkesi ayarları şu yoldur: **bilgisayar yapılandırması**  >  **Yönetim Şablonları**  >  **Windows bileşenleri**  >  **veri toplama ve önizleme yapıları**.
 
-Grup İlkesi ayarları yalnızca aşağıdaki anahtardaki kayıt defteri ayarlarını değiştirir:`HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
+Grup İlkesi ayarları yalnızca aşağıdaki anahtardaki kayıt defteri ayarlarını değiştirir: `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
 > [!IMPORTANT]
 > Karmaşık senaryoları etkinleştirmek için Grup İlkesi ayarlarını kullandığınızda, yapılandırma çakışmalarına neden olabilecek ilke ayarlarına özel dikkat edin. Configuration Manager yalnızca *değer yoksa* [Windows ayarlarını](#windows-settings) yapılandırır. Grup İlkesi ayarları Configuration Manager ayarlarından önceliklidir. bu nedenle, bazı Grup İlkesi yapılandırmalarının masaüstü analiziyle sorun oluşmasına neden olabilir.
@@ -103,6 +103,6 @@ Bu Grup İlkesi ayarları Configuration Manager veya masaüstü Analizi tarafın
 | Görünen ad | Kayıt defteri değeri | Masaüstü analizine kayıtlı cihazlarda etki |
 |--------------|----------------|-------------------------------------------------|
 | **Telemetri katılım değişikliği bildirimlerini yapılandırma** | DisableTelemetryOptInChangeNotification | Windows 10, sürüm 1803 ' den itibaren Windows, tanılama veri düzeyi değiştiğinde kullanıcıları bilgilendirir. Bildirimleri devre dışı bırakmak için bu ilkeyi kullanın. |
-| **Telemetri katılım ayarlarını yapılandırma kullanıcı arabirimi** | DisableTelemetryOptInSettingsUx | Tanılama veri düzeyini yapılandırırken, cihazın üst sınırını ayarlarsınız. Windows 10, sürüm 1803 ' den başlayarak, kullanıcılar daha düşük bir düzey ayarlayabilir. Kullanıcıların tanılama düzeyini değiştirmesini engellemek için bu ilkeyi kullanın. Daha fazla bilgi için bkz. [Kuruluşunuzda Windows tanılama verilerini yapılandırma](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management). |
+| **Telemetri katılım ayarlarını yapılandırma kullanıcı arabirimi** | DisableTelemetryOptInSettingsUx | Tanılama veri düzeyini yapılandırırken, cihazın üst sınırını ayarlarsınız. Windows 10, sürüm 1803 ' den başlayarak, kullanıcılar daha düşük bir düzey ayarlayabilir. Kullanıcıların tanılama düzeyini değiştirmesini engellemek için bu ilkeyi kullanın. Daha fazla bilgi için bkz. [Kuruluşunuzda Windows tanılama verilerini yapılandırma](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management). |
 | **Tanılama verilerini silmeyi devre dışı bırak** | DisableDeviceDelete | Kullanıcılar, Windows 10, sürüm 1809 ' den başlayarak tanılama verilerini **tanılama & geri bildirim** ayarları sayfasından silebilir. Microsoft 'un cihazdan topladığı tanılama verilerinin silinmesini engellemek için bu ilkeyi kullanın. |
 | **Tanılama veri görüntüleyicisini devre dışı bırak** | DisableDiagnosticDataViewer | Windows 10, sürüm 1809 ' den başlayarak, kullanıcılar tanılama **& geri bildirim** ayarları sayfasından tanılama veri görüntüleyicisini etkinleştirip açabilir. Windows ayarlarındaki tanılama veri görüntüleyicisini devre dışı bırakmak ve Microsoft 'un cihazdan topladığı tanılama verilerini göstermesini engellemek için bu ilkeyi kullanın.|

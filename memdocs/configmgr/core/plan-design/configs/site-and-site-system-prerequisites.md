@@ -10,12 +10,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d4fb94d0ab64cb7c3dc3128c982b0c2b162b22b7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ce3420a6e229b5987616c5c0c1c41d50cdc499c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719193"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700359"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>Configuration Manager için site ve site sistemi önkoşulları
 
@@ -28,7 +28,7 @@ Yazılım güncelleştirme noktası için Windows Server Update Services (WSUS) 
 .NET Framework hakkında daha fazla bilgi için bkz. [yaşam döngüsü SSS-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework).
 
 
-## <a name="general-requirements-and-limitations"></a><a name="bkmk_generalprerewq"></a>Genel gereksinimler ve sınırlamalar
+## <a name="general-requirements-and-limitations"></a><a name="bkmk_generalprerewq"></a> Genel gereksinimler ve sınırlamalar
 
 Tüm site sistemi sunucuları için aşağıdaki gereksinimler geçerlidir:
 
@@ -52,7 +52,7 @@ Tüm site sistemi sunucuları için aşağıdaki gereksinimler geçerlidir:
 
 - Herhangi bir Configuration Manager hizmeti için başlangıç türü veya "farklı oturum açma" ayarlarını değiştirmek desteklenmez. Bunu yaparsanız, önemli hizmetlerin düzgün çalışmasını engelleyebilirsiniz.  
 
-### <a name="prerequisites-for-windows-server-2012-and-later-operating-systems"></a><a name="bkmk_2012Prereq"></a>Windows Server 2012 ve üzeri işletim sistemleri için Önkoşullar  
+### <a name="prerequisites-for-windows-server-2012-and-later-operating-systems"></a><a name="bkmk_2012Prereq"></a> Windows Server 2012 ve üzeri işletim sistemleri için Önkoşullar  
 
 Windows Server 2012 ve üzeri sürümlerde site sistem sunucularına ve rollerine yönelik belirli Önkoşullar için bu makalenin ana bölümlerine bakın:
 
@@ -75,7 +75,7 @@ Windows Server 2012 ve üzeri sürümlerde site sistem sunucularına ve rollerin
 - [Yazılım güncelleştirme noktası](#bkmk_2012SUPpreq)
 - [Durum geçiş noktası](#bkmk_2012SMPpreq)
 
-## <a name="central-administration-site-and-primary-site-servers"></a><a name="bkmk_2012sspreq"></a>Merkezi Yönetim sitesi ve birincil site sunucuları
+## <a name="central-administration-site-and-primary-site-servers"></a><a name="bkmk_2012sspreq"></a> Merkezi Yönetim sitesi ve birincil site sunucuları
 
 ### <a name="windows-server-roles-and-features"></a>Windows Server rolleri ve özellikleri
 
@@ -93,7 +93,7 @@ Ayrıca, 4,5 veya sonraki bir sürümü .NET Framework desteklenen bir sürümü
 
 .NET Framework sürümleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [.NET Framework sürümleri ve bağımlılıklar](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework sürümleri ve bağımlılıklar](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Yaşam döngüsü SSS-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="windows-adk"></a>Windows ADK  
@@ -113,7 +113,7 @@ Ayrıca, 4,5 veya sonraki bir sürümü .NET Framework desteklenen bir sürümü
 Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden dağıtılabilir bir bileşen olarak SQL Server Native Client yükler. Site yüklendikten sonra Configuration Manager SQL Server Native Client yükseltmez. Bu bileşenin güncel olduğundan emin olun. Daha fazla bilgi için bkz. [önkoşul denetimleri-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="secondary-site-server"></a><a name="bkmk_2012secpreq"></a>İkincil site sunucusu
+## <a name="secondary-site-server"></a><a name="bkmk_2012secpreq"></a> İkincil site sunucusu
 
 ### <a name="windows-server-roles-and-features"></a>Windows Server rolleri ve özellikleri
 
@@ -129,7 +129,7 @@ Ayrıca, 4,5 veya sonraki bir sürümü .NET Framework desteklenen bir sürümü
 
 .NET Framework sürümleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [.NET Framework sürümleri ve bağımlılıklar](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework sürümleri ve bağımlılıklar](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Yaşam döngüsü SSS-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="visual-c-redistributable"></a>Yeniden dağıtılabilir Visual C++
@@ -149,7 +149,7 @@ Ayrıca, 4,5 veya sonraki bir sürümü .NET Framework desteklenen bir sürümü
 Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden dağıtılabilir bir bileşen olarak SQL Server Native Client yükler. Site yüklendikten sonra Configuration Manager SQL Server Native Client yükseltmez. Bu bileşenin güncel olduğundan emin olun. Daha fazla bilgi için bkz. [önkoşul denetimleri-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="database-server"></a><a name="bkmk_2012dbpreq"></a>Veritabanı sunucusu  
+## <a name="database-server"></a><a name="bkmk_2012dbpreq"></a> Veritabanı sunucusu  
 
 ### <a name="remote-registry-service"></a>Uzak Kayıt Defteri hizmeti  
 
@@ -168,7 +168,7 @@ Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden da�
 Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden dağıtılabilir bir bileşen olarak SQL Server Native Client yükler. Site yüklendikten sonra Configuration Manager SQL Server Native Client yükseltmez. Bu bileşenin güncel olduğundan emin olun. Daha fazla bilgi için bkz. [önkoşul denetimleri-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="sms-provider-server"></a><a name="bkmk_2012smsprovpreq"></a>SMS sağlayıcı sunucusu  
+## <a name="sms-provider-server"></a><a name="bkmk_2012smsprovpreq"></a> SMS sağlayıcı sunucusu  
 
 ### <a name="windows-adk"></a>Windows ADK
 
@@ -190,12 +190,12 @@ Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden da�
 Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden dağıtılabilir bir bileşen olarak SQL Server Native Client yükler. Site yüklendikten sonra Configuration Manager SQL Server Native Client yükseltmez. Bu bileşenin güncel olduğundan emin olun. Daha fazla bilgi için bkz. [önkoşul denetimleri-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="application-catalog-website-point"></a><a name="bkmk_2012acwspreq"></a>Uygulama Kataloğu web sitesi noktası  
+## <a name="application-catalog-website-point"></a><a name="bkmk_2012acwspreq"></a> Uygulama Kataloğu web sitesi noktası  
 
 > [!Important]  
 > Uygulama kataloğunun Silverlight Kullanıcı deneyimi, güncel dal sürümü 1806 ' den itibaren desteklenmez. Sürüm 1906 ' den başlayarak, güncelleştirilmiş istemciler Kullanıcı tarafından kullanılabilen uygulama dağıtımları için yönetim noktasını otomatik olarak kullanır. Ayrıca yeni uygulama kataloğu rolleri yükleyemezsiniz. Sürüm 1910 ile uygulama kataloğu rolleri için destek sona erer.  
 >
-> Daha fazla bilgi için aşağıdaki makalelere bakın:
+> Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 >
 > - [Yazılım merkezini yapılandırma](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Kaldırılan ve kullanım dışı bırakılan özellikler](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -214,7 +214,7 @@ Ayrıca, 4,5 veya sonraki bir sürümü .NET Framework desteklenen bir sürümü
 
 .NET Framework sürümleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [.NET Framework sürümleri ve bağımlılıklar](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework sürümleri ve bağımlılıklar](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Yaşam döngüsü SSS-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS yapılandırması  
@@ -244,12 +244,12 @@ Ayrıca, 4,5 veya sonraki bir sürümü .NET Framework desteklenen bir sürümü
     - IIS 6 Metatabanı Uyumluluğu  
 
 
-## <a name="application-catalog-web-service-point"></a><a name="bkmk_2012ACwsitepreq"></a>Uygulama Kataloğu Web hizmet noktası  
+## <a name="application-catalog-web-service-point"></a><a name="bkmk_2012ACwsitepreq"></a> Uygulama Kataloğu Web hizmet noktası  
 
 > [!Important]  
 > Uygulama kataloğunun Silverlight Kullanıcı deneyimi, güncel dal sürümü 1806 ' den itibaren desteklenmez. Sürüm 1906 ' den başlayarak, güncelleştirilmiş istemciler Kullanıcı tarafından kullanılabilen uygulama dağıtımları için yönetim noktasını otomatik olarak kullanır. Ayrıca yeni uygulama kataloğu rolleri yükleyemezsiniz. Sürüm 1910 ile uygulama kataloğu rolleri için destek sona erer.  
 >
-> Daha fazla bilgi için aşağıdaki makalelere bakın:
+> Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 >
 > - [Yazılım merkezini yapılandırma](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Kaldırılan ve kullanım dışı bırakılan özellikler](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -270,7 +270,7 @@ Ayrıca, 4,5 veya sonraki bir sürümü .NET Framework desteklenen bir sürümü
 
 .NET Framework sürümleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [.NET Framework sürümleri ve bağımlılıklar](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework sürümleri ve bağımlılıklar](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Yaşam döngüsü SSS-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS yapılandırması
@@ -304,7 +304,7 @@ Ayrıca, 4,5 veya sonraki bir sürümü .NET Framework desteklenen bir sürümü
 Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden dağıtılabilir bir bileşen olarak SQL Server Native Client yükler. Site yüklendikten sonra Configuration Manager SQL Server Native Client yükseltmez. Bu bileşenin güncel olduğundan emin olun. Daha fazla bilgi için bkz. [önkoşul denetimleri-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="asset-intelligence-synchronization-point"></a><a name="bkmk_2012AIpreq"></a>Varlık Yönetim Bilgileri eşitleme noktası  
+## <a name="asset-intelligence-synchronization-point"></a><a name="bkmk_2012AIpreq"></a> Varlık Yönetim Bilgileri eşitleme noktası  
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -312,7 +312,7 @@ Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden da�
 
 .NET Framework sürümleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [.NET Framework sürümleri ve bağımlılıklar](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework sürümleri ve bağımlılıklar](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Yaşam döngüsü SSS-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
@@ -320,7 +320,7 @@ Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden da�
 Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden dağıtılabilir bir bileşen olarak SQL Server Native Client yükler. Site yüklendikten sonra Configuration Manager SQL Server Native Client yükseltmez. Bu bileşenin güncel olduğundan emin olun. Daha fazla bilgi için bkz. [önkoşul denetimleri-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="certificate-registration-point"></a><a name="bkmk_2012crppreq"></a>Sertifika kayıt noktası  
+## <a name="certificate-registration-point"></a><a name="bkmk_2012crppreq"></a> Sertifika kayıt noktası  
 
 ### <a name="windows-server-roles-and-features"></a>Windows Server rolleri ve özellikleri
 
@@ -334,7 +334,7 @@ Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden da�
 
 .NET Framework sürümleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [.NET Framework sürümleri ve bağımlılıklar](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework sürümleri ve bağımlılıklar](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Yaşam döngüsü SSS-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS yapılandırması
@@ -356,7 +356,7 @@ Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden da�
 Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden dağıtılabilir bir bileşen olarak SQL Server Native Client yükler. Site yüklendikten sonra Configuration Manager SQL Server Native Client yükseltmez. Bu bileşenin güncel olduğundan emin olun. Daha fazla bilgi için bkz. [önkoşul denetimleri-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="distribution-point"></a><a name="bkmk_2012dppreq"></a>Dağıtım noktası  
+## <a name="distribution-point"></a><a name="bkmk_2012dppreq"></a> Dağıtım noktası  
 
 ### <a name="windows-server-roles-and-features"></a>Windows Server rolleri ve özellikleri
 
@@ -410,7 +410,7 @@ Daha fazla bilgi için bkz. [dağıtım noktalarını yükleyip yapılandırma](
 > Dağıtım noktası içerik aktarırken, Windows içinde yerleşik **arka plan Akıllı Aktarım Hizmeti** (BITS) kullanarak aktarır. İstemci bu sunucuya bilgi yüklemediğinden dağıtım noktası rolü isteğe bağlı BITS IIS sunucu uzantısı özelliğinin yüklenmesini gerektirmez.  
 
 
-## <a name="endpoint-protection-point"></a><a name="bkmk_2012EPPpreq"></a>Endpoint Protection noktası  
+## <a name="endpoint-protection-point"></a><a name="bkmk_2012EPPpreq"></a> Endpoint Protection noktası  
 
 ### <a name="windows-server-roles-and-features"></a>Windows Server rolleri ve özellikleri  
 
@@ -423,7 +423,7 @@ Daha fazla bilgi için bkz. [dağıtım noktalarını yükleyip yapılandırma](
 Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden dağıtılabilir bir bileşen olarak SQL Server Native Client yükler. Site yüklendikten sonra Configuration Manager SQL Server Native Client yükseltmez. Bu bileşenin güncel olduğundan emin olun. Daha fazla bilgi için bkz. [önkoşul denetimleri-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="enrollment-point"></a><a name="bkmk_2012Enrollpreq"></a>Kayıt noktası  
+## <a name="enrollment-point"></a><a name="bkmk_2012Enrollpreq"></a> Kayıt noktası  
 
 ### <a name="windows-server-roles-and-features"></a>Windows Server rolleri ve özellikleri
 
@@ -446,7 +446,7 @@ Ayrıca, 4,5 veya sonraki bir sürümü .NET Framework desteklenen bir sürümü
 
 .NET Framework sürümleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [.NET Framework sürümleri ve bağımlılıklar](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework sürümleri ve bağımlılıklar](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Yaşam döngüsü SSS-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS yapılandırması
@@ -480,7 +480,7 @@ Ayrıca, 4,5 veya sonraki bir sürümü .NET Framework desteklenen bir sürümü
 Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden dağıtılabilir bir bileşen olarak SQL Server Native Client yükler. Site yüklendikten sonra Configuration Manager SQL Server Native Client yükseltmez. Bu bileşenin güncel olduğundan emin olun. Daha fazla bilgi için bkz. [önkoşul denetimleri-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="enrollment-proxy-point"></a><a name="bkmk_2012EnrollProxpreq"></a>Kayıt proxy noktası  
+## <a name="enrollment-proxy-point"></a><a name="bkmk_2012EnrollProxpreq"></a> Kayıt proxy noktası  
 
 ### <a name="windows-server-roles-and-features"></a>Windows Server rolleri ve özellikleri
 
@@ -497,7 +497,7 @@ Ayrıca, 4,5 veya sonraki bir sürümü .NET Framework desteklenen bir sürümü
 
 .NET Framework sürümleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [.NET Framework sürümleri ve bağımlılıklar](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework sürümleri ve bağımlılıklar](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Yaşam döngüsü SSS-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS yapılandırması
@@ -533,7 +533,7 @@ Ayrıca, 4,5 veya sonraki bir sürümü .NET Framework desteklenen bir sürümü
 - Bu site sistem rolü aynı gereksinime sahip başka bir site sistem rolüyle birlikte kullanıldığında, bilgisayar için bu bellek gereksinimi artmaz, ancak en az %5 oranında kalır.  
 
 
-## <a name="fallback-status-point"></a><a name="bkmk_2012FSPpreq"></a>Geri dönüş durum noktası
+## <a name="fallback-status-point"></a><a name="bkmk_2012FSPpreq"></a> Geri dönüş durum noktası
 
 ### <a name="windows-server-roles-and-features"></a>Windows Server rolleri ve özellikleri
 
@@ -548,7 +548,7 @@ Varsayılan IIS yapılandırması aşağıdaki eklemelerle gereklidir:
     - IIS 6 Metatabanı Uyumluluğu  
 
 
-## <a name="management-point"></a><a name="bkmk_2012MPpreq"></a>Yönetim noktası  
+## <a name="management-point"></a><a name="bkmk_2012MPpreq"></a> Yönetim noktası  
 
 ### <a name="windows-server-roles-and-features"></a>Windows Server rolleri ve özellikleri
 
@@ -560,7 +560,7 @@ Varsayılan IIS yapılandırması aşağıdaki eklemelerle gereklidir:
 
 .NET Framework sürümleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [.NET Framework sürümleri ve bağımlılıklar](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework sürümleri ve bağımlılıklar](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Yaşam döngüsü SSS-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS yapılandırması
@@ -584,7 +584,7 @@ Varsayılan IIS yapılandırması aşağıdaki eklemelerle gereklidir:
 Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden dağıtılabilir bir bileşen olarak SQL Server Native Client yükler. Site yüklendikten sonra Configuration Manager SQL Server Native Client yükseltmez. Bu bileşenin güncel olduğundan emin olun. Daha fazla bilgi için bkz. [önkoşul denetimleri-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="reporting-services-point"></a><a name="bkmk_2012RSpoint"></a>Raporlama Hizmetleri noktası  
+## <a name="reporting-services-point"></a><a name="bkmk_2012RSpoint"></a> Raporlama Hizmetleri noktası  
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -592,7 +592,7 @@ Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden da�
 
 .NET Framework sürümleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [.NET Framework sürümleri ve bağımlılıklar](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework sürümleri ve bağımlılıklar](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Yaşam döngüsü SSS-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="sql-server-reporting-services"></a>SQL Server Reporting Services  
@@ -608,7 +608,7 @@ Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden da�
 Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden dağıtılabilir bir bileşen olarak SQL Server Native Client yükler. Site yüklendikten sonra Configuration Manager SQL Server Native Client yükseltmez. Bu bileşenin güncel olduğundan emin olun. Daha fazla bilgi için bkz. [önkoşul denetimleri-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="service-connection-point"></a><a name="bkmk_SCPpreq"></a>Hizmet bağlantı noktası  
+## <a name="service-connection-point"></a><a name="bkmk_SCPpreq"></a> Hizmet bağlantı noktası  
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -621,7 +621,7 @@ Ayrıca, 4,5 veya sonraki bir sürümü .NET Framework desteklenen bir sürümü
 
 .NET Framework sürümleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [.NET Framework sürümleri ve bağımlılıklar](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework sürümleri ve bağımlılıklar](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Yaşam döngüsü SSS-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="visual-c-redistributable"></a>Yeniden dağıtılabilir Visual C++
@@ -635,7 +635,7 @@ Ayrıca, 4,5 veya sonraki bir sürümü .NET Framework desteklenen bir sürümü
 Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden dağıtılabilir bir bileşen olarak SQL Server Native Client yükler. Site yüklendikten sonra Configuration Manager SQL Server Native Client yükseltmez. Bu bileşenin güncel olduğundan emin olun. Daha fazla bilgi için bkz. [önkoşul denetimleri-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="software-update-point"></a><a name="bkmk_2012SUPpreq"></a>Yazılım güncelleştirme noktası  
+## <a name="software-update-point"></a><a name="bkmk_2012SUPpreq"></a> Yazılım güncelleştirme noktası  
 
 ### <a name="windows-server-roles-and-features"></a>Windows Server rolleri ve özellikleri
 
@@ -651,7 +651,7 @@ Ayrıca, 4,5 veya sonraki bir sürümü .NET Framework desteklenen bir sürümü
 
 .NET Framework sürümleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [.NET Framework sürümleri ve bağımlılıklar](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework sürümleri ve bağımlılıklar](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Yaşam döngüsü SSS-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="windows-server-update-services"></a>Windows Server Update Services  
@@ -690,7 +690,7 @@ Ayrıca, 4,5 veya sonraki bir sürümü .NET Framework desteklenen bir sürümü
 
 .NET Framework sürümleri hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [.NET Framework sürümleri ve bağımlılıklar](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework sürümleri ve bağımlılıklar](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Yaşam döngüsü SSS-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS yapılandırması
@@ -716,4 +716,3 @@ Ayrıca, 4,5 veya sonraki bir sürümü .NET Framework desteklenen bir sürümü
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
 
 Yeni bir site yüklediğinizde Configuration Manager otomatik olarak yeniden dağıtılabilir bir bileşen olarak SQL Server Native Client yükler. Site yüklendikten sonra Configuration Manager SQL Server Native Client yükseltmez. Bu bileşenin güncel olduğundan emin olun. Daha fazla bilgi için bkz. [önkoşul denetimleri-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
-

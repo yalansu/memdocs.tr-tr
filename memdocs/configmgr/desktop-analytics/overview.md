@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 09f829bd1695426211ff94381a63b8f23d1b4fe8
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 59f3d1a8a7b217a794440e2f75e0bb09e28634a9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411023"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700812"
 ---
 # <a name="what-is-desktop-analytics"></a>Desktop Analytics nedir?
 
@@ -49,7 +49,7 @@ Derinlemesine bir demo için 10:00 'e atlayın.
 >
 > Windows Analytics 'in özellikleri, masaüstü Analizi hizmetinde birleştirilir. Ayrıca, masaüstü Analizi Configuration Manager ile daha sıkı bir şekilde tümleşiktir. Daha fazla bilgi için bkz. [Windows Analytics müşterileri Için SSS](faq.md#existing-windows-analytics-customers).
 
-## <a name="benefits"></a>Avantajlar
+## <a name="benefits"></a>Yararları
 
 Birçok müşteri, Windows 10 ' da mevcut olan ve güncel bir sorun ile karşılaşıyor. Birincil zorluk, uygulamaları test ediyor. Bu işlem genellikle el ile yapılır. BT yöneticileri ve uygulama sahiplerinin mevcut uygulamaları sürekli analiz etmesine yönelik zaman alıcı bir işlemdir. Sonra ortaya çıkan tüm sorunları düzeltin.
 
@@ -63,28 +63,28 @@ Masaüstü Analizi aşağıdaki avantajları sağlar:
 
 - **Configuration Manager tümleştirme**: hizmet bulutu-mevcut şirket içi altyapınızı mümkün. Windows 'u cihazlarınızda dağıtmak ve yönetmek için bu verileri ve çözümlemeyi kullanın.  
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Masaüstü analizlerini kullanmak için ortamınızın aşağıdaki önkoşulları karşıladığından emin olun.
 
 ### <a name="technical"></a>Teknik
 
-- [Genel yönetici](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) izinlerine sahip etkin bir genel Azure aboneliği. [Microsoft hesapları](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) desteklenmez.  
+- [Genel yönetici](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) izinlerine sahip etkin bir genel Azure aboneliği. [Microsoft hesapları](/windows/security/identity-protection/access-control/microsoft-accounts) desteklenmez.  
 
     > [!IMPORTANT]
-    > Masaüstü analizi, Azure genel 'de barındırılan ve Windows tanılama verilerini kullanan bir Windows hizmetidir. Masaüstü analizi, ABD kamu müşterileri tarafından kullanılabilen bir Azure küresel hizmettir. Bu, [ABD kamu Community uyumluluk (GCC)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) özniteliklerini karşılamıyor. Microsoft ürün ve hizmetlerinin uyumluluk tekliflerinin bir listesi için bkz. [Microsoft Güven Merkezi](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide). Masaüstü analizi, GCC High veya ABD Savunma Bakanlığı (DOD) müşterileri için kullanılamaz. Masaüstü Analizi çalışma alanlarını barındırmak için Azure Kamu aboneliklerinin kullanılması desteklenmez.
+    > Masaüstü analizi, Azure genel 'de barındırılan ve Windows tanılama verilerini kullanan bir Windows hizmetidir. Masaüstü analizi, ABD kamu müşterileri tarafından kullanılabilen bir Azure küresel hizmettir. Bu, [ABD kamu Community uyumluluk (GCC)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) özniteliklerini karşılamıyor. Microsoft ürün ve hizmetlerinin uyumluluk tekliflerinin bir listesi için bkz. [Microsoft Güven Merkezi](/microsoft-365/compliance/offering-home?view=o365-worldwide). Masaüstü analizi, GCC High veya ABD Savunma Bakanlığı (DOD) müşterileri için kullanılamaz. Masaüstü Analizi çalışma alanlarını barındırmak için Azure Kamu aboneliklerinin kullanılması desteklenmez.
 
     - Çalışma alanınızı ve aşağıdaki rolleri **ayarlamak**Için **çalışma alanı sahibi** izinleri:  
 
-      - [**Masaüstü Analizi yönetici**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) rolü.
+      - [**Masaüstü Analizi yönetici**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) rolü.
 
-      - Mevcut bir çalışma alanını kullanmak veya var olan bir kaynak grubunda yeni bir çalışma alanı oluşturmak için kaynak grubundaki katkıda bulunan ve [**Kullanıcı erişimi yöneticisi**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) [**Log Analytics**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor) .
+      - Mevcut bir çalışma alanını kullanmak veya var olan bir kaynak grubunda yeni bir çalışma alanı oluşturmak için kaynak grubundaki katkıda bulunan ve [**Kullanıcı erişimi yöneticisi**](/azure/role-based-access-control/built-in-roles#user-access-administrator) [**Log Analytics**](/azure/role-based-access-control/built-in-roles#log-analytics-contributor) .
 
-      - Yeni bir kaynak grubunda çalışma alanı oluşturmak için abonelikte [**sahip**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)veya [**katkıda bulunan**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) ve [**Kullanıcı erişimi Yöneticisi**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) izinleri.  
+      - Yeni bir kaynak grubunda çalışma alanı oluşturmak için abonelikte [**sahip**](/azure/role-based-access-control/built-in-roles#owner)veya [**katkıda bulunan**](/azure/role-based-access-control/built-in-roles#contributor) ve [**Kullanıcı erişimi Yöneticisi**](/azure/role-based-access-control/built-in-roles#user-access-administrator) izinleri.  
 
     - Ekleme işleminden sonra portala erişmek için şunlar gerekir:
 
-      - Log Analytics çalışma alanında [**Masaüstü Analizi yönetici**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) rolü ve [**sahibi**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)ya da [**katkıda bulunan**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) izinleri.
+      - Log Analytics çalışma alanında [**Masaüstü Analizi yönetici**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) rolü ve [**sahibi**](/azure/role-based-access-control/built-in-roles#owner)ya da [**katkıda bulunan**](/azure/role-based-access-control/built-in-roles#contributor) izinleri.
 
 - Configuration Manager, sürüm 1902 güncelleştirme paketi (4500571) veya üzeri. Daha fazla bilgi için bkz. [güncelleştirme Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 
@@ -103,7 +103,7 @@ Masaüstü analizlerini kullanmak için ortamınızın aşağıdaki önkoşullar
     - Cihazların Ayrıca Configuration Manager Client, sürüm 1902 güncelleştirme paketi (4500571) veya sonraki bir sürüme sahip olması gerekir. Daha fazla bilgi için bkz. [güncelleştirme Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 
     > [!Note]  
-    > Masaüstü analizi, Windows 10 uzun süreli bakım kanalına (LTSC) veya bu bilgisayardan yükseltmeleri desteklemez. Daha fazla bilgi için bkz. [hizmet olarak Windows 'a genel bakış](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+    > Masaüstü analizi, Windows 10 uzun süreli bakım kanalına (LTSC) veya bu bilgisayardan yükseltmeleri desteklemez. Daha fazla bilgi için bkz. [hizmet olarak Windows 'a genel bakış](/windows/deployment/update/waas-overview#long-term-servicing-channel).
     >
     > Masaüstü analizi, yerinde yükseltme senaryosunu en iyi şekilde destekleyecek şekilde tasarlanmıştır. 32 bitlik mimari-64-bit mimarisine gibi büyük değişiklikler yapmanız gerekiyorsa, bir görüntüleme senaryosu kullanın. Bu klasik işletim sistemi dağıtım senaryolarında masaüstü Analizi öngörüleri hâlâ değerlidir, ancak yerinde yükseltmeye özgü Kılavuzu yoksayabilirsiniz. Daha fazla bilgi için bkz. [Configuration Manager ile kurumsal işletim sistemlerini dağıtma senaryoları](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md).
 
@@ -139,7 +139,7 @@ Masaüstü analizlerini kullanmak için ortamınızın aşağıdaki önkoşullar
   - Windows sanal masaüstü erişimi E3 veya E5  
 
 > [!NOTE]
-> Bu lisans aboneliklerinin maliyetinin ötesinde, Azure Log Analytics 'da masaüstü analizinin kullanılmasına yönelik ek ücret alınmaz. Masaüstü Analizi tarafından alınan veri türleri Log Analytics veri alımı ve bekletme ücretlerinden ücretsizdir. Bu veriler, faturalandırılamayan veri türleri olarak Log Analytics, günlük veri alma Cap 'e de tabi değildir. Daha fazla bilgi için bkz. [Log Analytics kullanımı ve maliyetleri](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
+> Bu lisans aboneliklerinin maliyetinin ötesinde, Azure Log Analytics 'da masaüstü analizinin kullanılmasına yönelik ek ücret alınmaz. Masaüstü Analizi tarafından alınan veri türleri Log Analytics veri alımı ve bekletme ücretlerinden ücretsizdir. Bu veriler, faturalandırılamayan veri türleri olarak Log Analytics, günlük veri alma Cap 'e de tabi değildir. Daha fazla bilgi için bkz. [Log Analytics kullanımı ve maliyetleri](/azure/azure-monitor/platform/manage-cost-storage).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -10,12 +10,12 @@ ms.assetid: 75f47456-cd8d-4c83-8dc5-98b336a7c6c8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 0d081c79a6267495a9738efcb19ceb8b7aa74958
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 6fb487b590773afd1b59133f647696d9f858b439
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252512"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700383"
 ---
 # <a name="troubleshoot-application-installation-for-devices-uploaded-to-the-admin-center-preview"></a>Yönetim merkezine yüklenen cihazlar için uygulama yüklemesinde sorun giderme (Önizleme)
 <!--6374854, 6521921-->
@@ -62,7 +62,7 @@ Microsoft Endpoint Manager Yönetim Merkezi 'nden uygulamaları görüntülerken
 
 #### <a name="error-code-500-with-an-unexpected-error-occurred-message"></a>Hata kodu 500, beklenmeyen bir hata oluştu iletisi
 
-1. `System.Security.SecurityException` **Adminservice. log**dosyasında görüyorsanız, [Active Directory Kullanıcı keşfi](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) tarafından KEŞFEDILEN Kullanıcı asıl adınızın (UPN) Şirket ıçı UPN yerine bir bulut UPN olarak ayarlandığını doğrulayın. Boş bir UPN değeri de kabul edilebilir çünkü Active Directory bulunan etki alanı adının kullanıldığı anlamına gelir. Geçerli bir etki alanı UPN (contoso.com) olmayan yalnızca bulutta bulunan UPN (örnek: onmicrosoft.com) görürseniz, bir sorununuz vardır ve [ACTIVE DIRECTORY UPN sonekini ayarlamanız](https://docs.microsoft.com/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization#add-upn-suffixes-and-update-your-users-to-them)gerekebilir.
+1. `System.Security.SecurityException` **Adminservice. log**dosyasında görüyorsanız, [Active Directory Kullanıcı keşfi](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) tarafından KEŞFEDILEN Kullanıcı asıl adınızın (UPN) Şirket ıçı UPN yerine bir bulut UPN olarak ayarlandığını doğrulayın. Boş bir UPN değeri de kabul edilebilir çünkü Active Directory bulunan etki alanı adının kullanıldığı anlamına gelir. Geçerli bir etki alanı UPN (contoso.com) olmayan yalnızca bulutta bulunan UPN (örnek: onmicrosoft.com) görürseniz, bir sorununuz vardır ve [ACTIVE DIRECTORY UPN sonekini ayarlamanız](/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization#add-upn-suffixes-and-update-your-users-to-them)gerekebilir.
 1. **Adminservice. log**dosyasında aşağıdaki hatayı görürseniz, [Microsoft Endpoint Manager Yönetim Merkezi 'Nde KB4576782-Application dikey penceresini zaman aşımına uğruyor](https://support.microsoft.com/help/4576782) :
    ```log 
    System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details.

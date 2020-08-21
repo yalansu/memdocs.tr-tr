@@ -10,12 +10,12 @@ ms.assetid: 41cdebfe-b595-40aa-a385-32e0746255ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 43bb35243b4f7e7b1e45b66319efd4ec21e92542
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 79d483f95c12c1da1e34ca556836a1f42bbffbef
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718619"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699458"
 ---
 # <a name="support-center-user-interface-reference"></a>Destek Merkezi kullanıcı arabirimi başvurusu
 
@@ -41,7 +41,7 @@ Bu bölümde, **Destek Merkezi** aracı için Kullanıcı arabirimi açıklanmak
 - [Günlükler sekmesi](#bkmk_support-logs)  
 
 
-### <a name="window-menu"></a><a name="bkmk_support-window"></a>Pencere menüsü
+### <a name="window-menu"></a><a name="bkmk_support-window"></a> Pencere menüsü
 
 Destek Merkezi penceresinin sol üst köşesinde, mavi kutudaki oku seçerek bu menüyü açın.
 
@@ -60,14 +60,14 @@ Destek Merkezi hakkında bilgi sağlar.
 - Veri paketi dosyaları için varsayılan kaydetme konumunu değiştirme  
 - Geçici dosyaların konumunu değiştirme    
 - Uyarıları sıfırlayın. Daha önce gizlenen tüm uyarı iletileri tetiklendiğinde yeniden görüntülenir.  
-- Geçici dosya yolunu varsayılana sıfırlayın,`%UserProfile%\AppData\Local\Microsoft\ConfigMgrSupportCenter`
+- Geçici dosya yolunu varsayılana sıfırlayın, `%UserProfile%\AppData\Local\Microsoft\ConfigMgrSupportCenter`
 
-#### <a name="exit"></a>Çık
+#### <a name="exit"></a>Çıkış
 Destek merkezini kapatın.
 
 
 
-### <a name="home-tab"></a><a name="bkmk_support-home"></a>Giriş sekmesi
+### <a name="home-tab"></a><a name="bkmk_support-home"></a> Giriş sekmesi
 
 #### <a name="collect-selected-data"></a>Seçili verileri topla
 Destek Merkezi Configuration Manager istemcisinden bilgi toplar. Varsayılan olarak, aşağıdaki türleri toplar:
@@ -114,7 +114,7 @@ Bir seçeneğe ait onay kutusunu seçtiğinizde, Destek Merkezi **seçili verile
 
 
 
-### <a name="client-tab"></a><a name="bkmk_support-client"></a>İstemci sekmesi
+### <a name="client-tab"></a><a name="bkmk_support-client"></a> İstemci sekmesi
 
 #### <a name="load-or-refresh"></a>Yükleme veya yenileme
 Destek Merkezi Configuration Manager istemcisinin ayrıntılarını yükler veya yeniler.
@@ -163,7 +163,7 @@ Bağlı istemcideki Configuration Manager istemci Aracısı hizmeti (Ccmexec) ü
 
 
 
-### <a name="policy-tab"></a><a name="bkmk_support-policy"></a>İlke sekmesi
+### <a name="policy-tab"></a><a name="bkmk_support-policy"></a> İlke sekmesi
 
 Eski [policyspy](policy-spy.md) aracı yerine bu sekmedeki eylemleri kullanın.
 
@@ -208,7 +208,7 @@ Destek Merkezi, tüm ilke olaylarını temizler.
 
 
 
-### <a name="content-tab"></a><a name="bkmk_support-content"></a>İçerik sekmesi
+### <a name="content-tab"></a><a name="bkmk_support-content"></a> İçerik sekmesi
 
 Önbelleğe alınmış içerik dahil olmak üzere istemcideki içeriği görüntüleyin. Yazılım güncelleştirme ve uygulama dağıtımlarının ilerlemesini izleyin. 
 
@@ -278,7 +278,7 @@ Her olay için Görünüm aşağıdaki özellikleri gösterir:
 
 
 
-### <a name="inventory-tab"></a><a name="bkmk_support-inventory"></a>Envanter sekmesi
+### <a name="inventory-tab"></a><a name="bkmk_support-inventory"></a> Envanter sekmesi
 
 #### <a name="load-or-refresh"></a>Yükleme veya yenileme
 Destek Merkezi şu anda seçili olan görünümün istemci envanter listesini yükler veya yeniler.
@@ -330,7 +330,7 @@ Bir özellik etkin değilse, görünüm hiçbir veri görüntülemez.
 
 
 
-### <a name="troubleshooting-tab"></a><a name="bkmk_support-troubleshoot"></a>Sorun giderme sekmesi
+### <a name="troubleshooting-tab"></a><a name="bkmk_support-troubleshoot"></a> Sorun giderme sekmesi
 
 Configuration Manager istemcileriyle ilgili en yaygın sorunlardan bazılarının sorunlarını giderin:  
 - Active Directory sorunlar  
@@ -345,7 +345,7 @@ Configuration Manager istemcileriyle ilgili en yaygın sorunlardan bazılarını
 > Bu sekme, uzak bir Configuration Manager istemcisine bağlandığınızda kullanılamaz.
 
 
-#### <a name="start"></a>Başlat
+#### <a name="start"></a>Başlangıç
 İstemcinin sorunlarını gidermeye başlar
 
 - **Active Directory**: yayımlanan Configuration Manager site bilgilerini almak için Active Directory sorgular  
@@ -364,7 +364,7 @@ Sorun giderme sekmesinde bir satır seçtikten sonra, günlük dosyasını gör�
 
 
 
-### <a name="logs-tab"></a><a name="bkmk_support-logs"></a>Günlükler sekmesi
+### <a name="logs-tab"></a><a name="bkmk_support-logs"></a> Günlükler sekmesi
 
 Bu bölümde, Destek Merkezi aracının **Günlükler** sekmesindeki öğeler listelenir. 
 
@@ -384,7 +384,7 @@ Aşağıdaki seçenekleri ayarlayın:
 
 Günlük dosyalarını **Açık Günlükler** düğmesini kullanarak el ile seçmek yerine, aşağıdaki Özellik alanlarıyla ilişkili tüm günlük dosyalarını açmak için bu açılan listeyi kullanın: 
 - **İstenen yapılandırma yönetimi**
-- **Envanter**
+- **Stok**
 - **Yazılım dağıtımı**
 - **Yazılım güncelleştirmeleri**
 - **Uygulama yönetimi**
@@ -393,7 +393,7 @@ Günlük dosyalarını **Açık Günlükler** düğmesini kullanarak el ile seç
 - **İşletim Sistemi Dağıtımı**
 
 
-## <a name="support-center-log-viewer-reference"></a><a name="bkmk_log-viewer"></a>Destek Merkezi günlük Görüntüleyici başvurusu
+## <a name="support-center-log-viewer-reference"></a><a name="bkmk_log-viewer"></a> Destek Merkezi günlük Görüntüleyici başvurusu
 
 Bu bölümde, **Destek Merkezi günlük Görüntüleyici** aracı için Kullanıcı arabirimi açıklanmaktadır. 
 
@@ -403,7 +403,7 @@ Bu bölümde, **Destek Merkezi günlük Görüntüleyici** aracı için Kullanı
 **Günlük Görüntüleyici** Aracı, **Destek Merkezi**'nin **Günlükler** sekmesiyle neredeyse aynıdır. **Günlük Görüntüleyici** Aracı, **Istemci günlüğü** ve **günlük gruplarını**yapılandırma seçeneklerini içermez.
 
 
-### <a name="window-menu"></a><a name="bkmk_log-window"></a>Pencere menüsü
+### <a name="window-menu"></a><a name="bkmk_log-window"></a> Pencere menüsü
 
 Destek Merkezi günlük Görüntüleyici penceresinin sol üst köşesinde, mavi kutudaki oku seçerek bu menüyü açın.
 
@@ -423,7 +423,7 @@ Destek Merkezi günlük Görüntüleyicisi hakkındaki bilgileri görüntüler
 Destek Merkezi günlük görüntüleyicisini kapatır
 
 
-### <a name="home-tab"></a><a name="bkmk_log-home"></a>Giriş sekmesi
+### <a name="home-tab"></a><a name="bkmk_log-home"></a> Giriş sekmesi
 
 #### <a name="open-logs"></a>Günlükleri aç 
 Destek Merkezi, açılacak bir veya daha fazla günlük dosyası seçmenizi ister.
@@ -468,22 +468,22 @@ Aradığınız dize için iki veya daha fazla eşleşme bulduktan sonra, bu seç
 
 #### <a name="error-lookup"></a>Hata arama
 Şu anda açık olan günlük dosyalarında bu hata kodunu aramak için bir hata kodu girin. Aşağıdaki hata kodu biçimlerini kullanın:
-- **32-bit tamsayı (imzalanmış)**: Örneğin,`-2147024891`  
-- **32-bit tamsayı (işaretsiz)**: Örneğin,`2147942405`  
-- **32 bit onaltılı**: Örneğin,`0x80070005`  
+- **32-bit tamsayı (imzalanmış)**: Örneğin, `-2147024891`  
+- **32-bit tamsayı (işaretsiz)**: Örneğin, `2147942405`  
+- **32 bit onaltılı**: Örneğin, `0x80070005`  
 
 #### <a name="decode-certificate"></a>Kod çözme sertifikası
 **Kodu Çöz sertifikası** iletişim kutusunda, istemcideki herhangi bir sertifika için seri hale getirilmiş sertifika değerini yapıştırın. Bu değeri kayıt defterinde, günlük dosyalarında veya WMI 'da bulabilirsiniz. Sertifikayla ilgili genel bilgileri ve ayrıntıları görüntülemek için **işlem** ' i seçin. Bu bilgiler, sertifika yolunu içerir. Sertifikayı bir **. cer** dosyası olarak dışarı aktarmak Için **dışarı aktar** ' ı seçin.
 
 
 
-## <a name="advanced-log-file-filters"></a><a name="bkmk_adv-filters"></a>Gelişmiş günlük dosyası filtreleri
+## <a name="advanced-log-file-filters"></a><a name="bkmk_adv-filters"></a> Gelişmiş günlük dosyası filtreleri
 
 Gelişmiş günlük dosyası filtreleri, belirli dizeleri dahil etme, hariç tutma veya vurgulamanıza olanak tanır. Günlük dosyası girişlerine baktığınızda, bu dizeler bir günlük dosyasında veya günlük dosyası grubunda gerçekleşebilir. Filtre oluştururken joker karakter aramalarını kullanın. Filtrelerin faydalı bir birleşimini kullandığınızda bunları bir *filtre kümesi*olarak kaydedin. 
 
 Gelişmiş günlük dosyası filtreleri hızlı filtrelerin yerini alır. Her ikisini birlikte kullanın, ancak hızlı filtreler yalnızca, görüntülenecek günlük verileri için geçerlidir. Gelişmiş filtreler, herhangi bir hızlı filtre uygulamadan önce hangi verilerin başlangıçta görüntülendiğini tespit edilir.
 
-Gelişmiş Filtreler iletişim kutusunda karmaşık filtre kümeleri oluşturabilirsiniz. Bu filtre kümeleri birçok günlük dosyası bileşeni arasında dize arar. Bu bileşenler ileti, iş parçacığı, günlük düzeyi ve bileşenleri içerir. Bir filtre kümesi, günlük dosyası iletilerini dahil etmek, dışlamak veya vurgulamak için kullandığınız birden çok filtre deyimi içerir. Filtre, bir işleç ve bir değer içinde aranacak günlük dosyası sütununu tanımlar. Değer, *Joker* karakter `*`gibi normal ifadeler içerebilir.
+Gelişmiş Filtreler iletişim kutusunda karmaşık filtre kümeleri oluşturabilirsiniz. Bu filtre kümeleri birçok günlük dosyası bileşeni arasında dize arar. Bu bileşenler ileti, iş parçacığı, günlük düzeyi ve bileşenleri içerir. Bir filtre kümesi, günlük dosyası iletilerini dahil etmek, dışlamak veya vurgulamak için kullandığınız birden çok filtre deyimi içerir. Filtre, bir işleç ve bir değer içinde aranacak günlük dosyası sütununu tanımlar. Değer, *Joker* karakter gibi normal ifadeler içerebilir `*` .
 
 
 ### <a name="add-a-filter"></a>Filtre ekleme
@@ -492,7 +492,7 @@ Gelişmiş Filtreler iletişim kutusunda karmaşık filtre kümeleri oluşturabi
 
 2. Gelişmiş Filtreler iletişim kutusunda **Ekle**' yi seçin. Ardından, Filtrenizle eşleşen günlük girdilerine göre hareket etmek için aşağıdaki seçeneklerden birini belirleyin:  
     - **İçeriyor**  
-    - **Exclude**  
+    - **Amaz**  
     - **Vurgula**  
 
 3. **Gelişmiş Filtre yapılandırması** iletişim kutusunda bir sütun ve işleç seçin:  
@@ -528,7 +528,7 @@ Gelişmiş Filtreler iletişim kutusunda karmaşık filtre kümeleri oluşturabi
 
 
 
-## <a name="support-center-viewer-reference"></a><a name="bkmk_viewer"></a>Destek Merkezi Görüntüleyicisi başvurusu
+## <a name="support-center-viewer-reference"></a><a name="bkmk_viewer"></a> Destek Merkezi Görüntüleyicisi başvurusu
 
 Bu bölümde, Configuration Manager **Destek Merkezi Görüntüleyicisi** aracı için kullanıcı ARABIRIMI (UI) açıklanmaktadır. Kullanılabilir sekmeler, sorun giderme paketinin içeriğine göre farklılık gösterir. [Pencere menüsü](#bkmk_viewer-window) ve [Giriş sekmesi](#bkmk_viewer-home) varsayılan olarak gösterilir.
 - [Pencere menüsü](#bkmk_viewer-window)
@@ -543,7 +543,7 @@ Bu bölümde, Configuration Manager **Destek Merkezi Görüntüleyicisi** aracı
 - [Sorun giderme sekmesi](#bkmk_viewer-troubleshoot)
 
 
-### <a name="window-menu"></a><a name="bkmk_viewer-window"></a>Pencere menüsü
+### <a name="window-menu"></a><a name="bkmk_viewer-window"></a> Pencere menüsü
 
 Destek Merkezi Görüntüleyicisi penceresinin sol üst köşesinde, mavi kutudaki oku seçerek bu menüyü açın.
 
@@ -558,14 +558,14 @@ Destek Merkezi Görüntüleyicisi hakkındaki bilgileri görüntüler.
 - Animasyonlu Kullanıcı arabirimi öğelerinin hareketini azaltma  
 - Geçici dosyaların konumunu değiştirme    
 - Uyarıları sıfırlayın. Daha önce gizlenen tüm uyarı iletileri tetiklendiğinde yeniden görüntülenir.  
-- Geçici dosya yolunu varsayılana sıfırlayın,`%UserProfile%\AppData\Local\Microsoft\ConfigMgrSupportCenterViewer`  
+- Geçici dosya yolunu varsayılana sıfırlayın, `%UserProfile%\AppData\Local\Microsoft\ConfigMgrSupportCenterViewer`  
 
 
-#### <a name="exit"></a>Çık
+#### <a name="exit"></a>Çıkış
 Destek Merkezi görüntüleyicisinden çıkar
 
 
-### <a name="home-tab"></a><a name="bkmk_viewer-home"></a>Giriş sekmesi
+### <a name="home-tab"></a><a name="bkmk_viewer-home"></a> Giriş sekmesi
 
 #### <a name="open-bundle"></a>Paketi aç
 Destek Merkezi tarafından oluşturulan bir veri paketinin konumuna gidin.
@@ -577,7 +577,7 @@ Açmak için bir veya daha fazla günlük dosyası seçin.
 **Kodu Çöz sertifikası** iletişim kutusunda, istemcideki herhangi bir sertifika için seri hale getirilmiş sertifika değerini yapıştırın. Bu değeri kayıt defterinde, günlük dosyalarında veya WMI 'da bulabilirsiniz. Sertifikayla ilgili genel bilgileri ve ayrıntıları görüntülemek için **işlem** ' i seçin. Bu bilgiler, sertifika yolunu içerir. Sertifikayı bir **. cer** dosyası olarak dışarı aktarmak Için **dışarı aktar** ' ı seçin.
 
 
-### <a name="configuration-tab"></a><a name="bkmk_viewer-config"></a>Yapılandırma sekmesi
+### <a name="configuration-tab"></a><a name="bkmk_viewer-config"></a> Yapılandırma sekmesi
 
 Destek Merkezi Görüntüleyicisi aracının **yapılandırma** SEKMESI, WMI sağlayıcılarından alınan verileri kullanarak aşağıdaki görünümleri sağlar:
 
@@ -585,30 +585,30 @@ Destek Merkezi Görüntüleyicisi aracının **yapılandırma** SEKMESI, WMI sa�
 Bu görünüm, Destek Merkezi 'nin **istemci** sekmesinde gösterilen bilgileri görüntüler.
 
 #### <a name="operating-system"></a>İşletim sistemi
-İstemcinin işletim sistemi için ayrıntılar. [Win32_OperatingSystem](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-operatingsystem) sınıfını kullanır.
+İstemcinin işletim sistemi için ayrıntılar. [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem) sınıfını kullanır.
 
 #### <a name="computer"></a>Bilgisayar
-İstemci bilgisayarın ayrıntıları. [Win32_OperatingSystem](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-operatingsystem) sınıfını kullanır.
+İstemci bilgisayarın ayrıntıları. [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem) sınıfını kullanır.
 
 #### <a name="services"></a>Hizmetler
-İstemci bilgisayarda çalışan hizmetlerin ayrıntıları. [Win32_Service](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-service) sınıfını kullanır.
+İstemci bilgisayarda çalışan hizmetlerin ayrıntıları. [Win32_Service](/windows/desktop/CIMWin32Prov/win32-service) sınıfını kullanır.
 
 #### <a name="network-adapters"></a>Ağ bağdaştırıcıları
-İstemci bilgisayarda yüklü olan ağ bağdaştırıcılarının ayrıntıları. [Win32_NetworkAdapterConfiguration](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration) sınıfını kullanır.
+İstemci bilgisayarda yüklü olan ağ bağdaştırıcılarının ayrıntıları. [Win32_NetworkAdapterConfiguration](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration) sınıfını kullanır.
 
 
-### <a name="logs-tab"></a><a name="bkmk_viewer-logs"></a>Günlükler sekmesi
+### <a name="logs-tab"></a><a name="bkmk_viewer-logs"></a> Günlükler sekmesi
 
 **Günlükler** sekmesi, pakete dahil edilen günlük dosyalarının bir listesini gösterir. Bu sekmedeki her satır, günlük dosyasının yolunu, adını ve boyutunu sağlar. 
 
-#### <a name="open"></a>Open
+#### <a name="open"></a>Açık
 Günlük dosyasını seçtikten sonra, **günlük görüntüleyicisini**açmak için bu düğmeyi seçin. Destek Merkezi günlükleri sekmesinde görülen işlevselliğin bir alt kümesini sağlar.
 
 #### <a name="decode-certificate"></a>Kod çözme sertifikası
 **Kodu Çöz sertifikası** iletişim kutusunda, istemcideki herhangi bir sertifika için seri hale getirilmiş sertifika değerini yapıştırın. Bu değeri kayıt defterinde, günlük dosyalarında veya WMI 'da bulabilirsiniz. Sertifikayla ilgili genel bilgileri ve ayrıntıları görüntülemek için **işlem** ' i seçin. Bu bilgiler, sertifika yolunu içerir. Sertifikayı bir **. cer** dosyası olarak dışarı aktarmak Için **dışarı aktar** ' ı seçin.
 
 
-### <a name="debug-dumps-tab"></a><a name="bkmk_viewer-debug"></a>Hata ayıklama dökümleri sekmesi
+### <a name="debug-dumps-tab"></a><a name="bkmk_viewer-debug"></a> Hata ayıklama dökümleri sekmesi
 
 Bu sekmedeki her satır, dışarı aktarmak için kullanılabilen hata ayıklama döküm dosyaları hakkında ayrıntılar sağlar. Daha fazla analiz için hata ayıklama döküm dosyalarını (. dmp) dışarı aktarmak için bu sekmeyi kullanın. Bu analiz, WinDbg gibi bir hata ayıklama aracı kullanır. 
 
@@ -619,7 +619,7 @@ Bu sekmedeki her satır, dışarı aktarmak için kullanılabilen hata ayıklama
 Seçili hata ayıklama döküm dosyasının bir kopyasını kaydedin.
 
 
-### <a name="wmi-tab"></a><a name="bkmk_viewer-wmi"></a>WMI sekmesi
+### <a name="wmi-tab"></a><a name="bkmk_viewer-wmi"></a> WMI sekmesi
 
 Bu sekme, veri paketinin içerdiği Configuration Manager istemcisinden WMI verisi kümesini gösterir. 
 
@@ -639,7 +639,7 @@ Bu düğme, WMI veri kümesi içindeki bul iletişim kutusunda verdiğiniz dizen
 **Kodu Çöz sertifikası** iletişim kutusunda, istemcideki herhangi bir sertifika için seri hale getirilmiş sertifika değerini yapıştırın. Bu değeri kayıt defterinde, günlük dosyalarında veya WMI 'da bulabilirsiniz. Sertifikayla ilgili genel bilgileri ve ayrıntıları görüntülemek için **işlem** ' i seçin. Bu bilgiler, sertifika yolunu içerir. Sertifikayı bir **. cer** dosyası olarak dışarı aktarmak Için **dışarı aktar** ' ı seçin.
 
 
-### <a name="registry-tab"></a><a name="bkmk_viewer-registry"></a>Kayıt defteri sekmesi
+### <a name="registry-tab"></a><a name="bkmk_viewer-registry"></a> Kayıt defteri sekmesi
 
 Veri paketine dahil edilen kayıt defteri verilerini görüntülemek ve daha fazla analiz için bu verileri dışarı aktarmak için **kayıt defteri** sekmesini kullanın.
 
@@ -662,7 +662,7 @@ Bu düğme, WMI veri kümesi içindeki bul iletişim kutusunda verdiğiniz dizen
 **Kodu Çöz sertifikası** iletişim kutusunda, istemcideki herhangi bir sertifika için seri hale getirilmiş sertifika değerini yapıştırın. Bu değeri kayıt defterinde, günlük dosyalarında veya WMI 'da bulabilirsiniz. Sertifikayla ilgili genel bilgileri ve ayrıntıları görüntülemek için **işlem** ' i seçin. Bu bilgiler, sertifika yolunu içerir. Sertifikayı bir **. cer** dosyası olarak dışarı aktarmak Için **dışarı aktar** ' ı seçin.
 
 
-### <a name="policy-tab"></a><a name="bkmk_viewer-policy"></a>İlke sekmesi
+### <a name="policy-tab"></a><a name="bkmk_viewer-policy"></a> İlke sekmesi
 
 **İlke** sekmesi, veri paketine dahil edilen ilke verilerini görüntülemek için kullanılır. 
 
@@ -682,7 +682,7 @@ Bu düğme, WMI veri kümesi içindeki bul iletişim kutusunda verdiğiniz dizen
 **Kodu Çöz sertifikası** iletişim kutusunda, istemcideki herhangi bir sertifika için seri hale getirilmiş sertifika değerini yapıştırın. Bu değeri kayıt defterinde, günlük dosyalarında veya WMI 'da bulabilirsiniz. Sertifikayla ilgili genel bilgileri ve ayrıntıları görüntülemek için **işlem** ' i seçin. Bu bilgiler, sertifika yolunu içerir. Sertifikayı bir **. cer** dosyası olarak dışarı aktarmak Için **dışarı aktar** ' ı seçin.
 
 
-### <a name="certificates-tab"></a><a name="bkmk_viewer-certs"></a>Sertifikalar sekmesi
+### <a name="certificates-tab"></a><a name="bkmk_viewer-certs"></a> Sertifikalar sekmesi
 
 **Sertifikalar** sekmesi, veri paketine dahil edilen sertifikaları görüntülemek ve bunları dışarı aktarmak için kullanılır.
 
@@ -693,7 +693,7 @@ Seçilen sertifikayla ilgili bilgileri görüntüler.
 Seçtiğiniz sertifikanın bir kopyasını kaydetmek için **farklı kaydet** iletişim kutusunu açar.
 
 
-### <a name="troubleshooting-tab"></a><a name="bkmk_viewer-troubleshoot"></a>Sorun giderme sekmesi
+### <a name="troubleshooting-tab"></a><a name="bkmk_viewer-troubleshoot"></a> Sorun giderme sekmesi
 
 Destek Merkezi sorun giderme sekmesi kullanılarak oluşturulan günlük dosyalarını görüntülemek için **sorun giderme** sekmesini kullanın.
 

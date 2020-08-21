@@ -10,12 +10,12 @@ ms.assetid: 1d589306-9537-4306-a9bf-02c9771df514
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b2e3202a58737e2559d295e5177675300ee8f0ee
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: f32418b9351644f4c01ffadc7f9115ddf9325558
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210342"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700390"
 ---
 # <a name="tenant-attach-cmpivot-sample-scripts"></a>Kiracı iliştirme: CMPivot örnek betikleri
 <!---->
@@ -24,7 +24,7 @@ ms.locfileid: "86210342"
 > [!Important]
 > Bu makale, Configuration Manager yönelik Technical Preview dalı için geçerlidir. Daha fazla bilgi için bkz. [Technical Preview sürüm 2005 Configuration Manager](../core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot).
 
-Aşağıda bazı yaygın sorgu ihtiyaçları ve CMPivot bunları karşılamak için nasıl kullanılabileceği gösterilmektedir. CMPivot, [kusto sorgu dilinin (KQL)](https://docs.microsoft.com/azure/kusto/query/)bir alt kümesini kullanır.
+Aşağıda bazı yaygın sorgu ihtiyaçları ve CMPivot bunları karşılamak için nasıl kullanılabileceği gösterilmektedir. CMPivot, [kusto sorgu dilinin (KQL)](/azure/kusto/query/)bir alt kümesini kullanır.
 
 [!INCLUDE [Sample scripts for both Microsoft Endpoint Manager and Configuration Manager use](../core/servers/manage/includes/cmpivot-samples-shared.md)]
 

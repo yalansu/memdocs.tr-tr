@@ -10,12 +10,12 @@ ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63f815394414167ad4f887c5970538eab22c931a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8d15252c3b3c93c7e90e517c502c4c3dd2dfcf20
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906153"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700053"
 ---
 # <a name="create-queries-in-configuration-manager"></a>Configuration Manager sorgu oluşturma
 
@@ -23,7 +23,7 @@ ms.locfileid: "82906153"
 
 Bu makalede, Configuration Manager sorguları oluşturma ve içeri aktarma işlemi açıklanır.  
 
-##  <a name="create-a-query"></a><a name="BKMK_Create"></a>Sorgu oluşturma  
+##  <a name="create-a-query"></a><a name="BKMK_Create"></a> Sorgu oluşturma  
  Configuration Manager bir sorgu oluşturmak için bu yordamı kullanın.  
 
 1.  Configuration Manager konsolunda **izleme**' yi seçin.  
@@ -49,9 +49,9 @@ Bu makalede, Configuration Manager sorguları oluşturma ve içeri aktarma işle
     > [!TIP]  
     > Kendi WQL sorgularınızı oluşturmanıza yardımcı olması için aşağıdaki başvuru belgelerini kullanabilirsiniz:  
     >   
-    > -   [WQL (WMI için SQL)](https://docs.microsoft.com/windows/win32/wmisdk/wql-sql-for-wmi)  
-    > -   [WHERE yan tümcesi](https://docs.microsoft.com/windows/win32/wmisdk/where-clause)  
-    > -   [WQL İşleçleri](https://docs.microsoft.com/windows/win32/wmisdk/wql-operators)  
+    > -   [WQL (WMI için SQL)](/windows/win32/wmisdk/wql-sql-for-wmi)  
+    > -   [WHERE yan tümcesi](/windows/win32/wmisdk/where-clause)  
+    > -   [WQL İşleçleri](/windows/win32/wmisdk/wql-operators)  
 
 8.  **Criteria** &lt; Sorgu adı \> **ifade özellikleri** iletişim kutusunun ölçütler sekmesinde, sorgunun sonuçlarını iyileştirmek için kullanılan ölçütleri belirtin. Örneğin, yalnızca **xyz**site koduna sahip olan kaynakları döndürebilirsiniz. Bir sorgu için birden çok ölçüt yapılandırabilirsiniz.  
 
@@ -75,7 +75,7 @@ Bu makalede, Configuration Manager sorguları oluşturma ve içeri aktarma işle
 
 12. Sorguyu oluşturmak için sihirbazı tamamlayın. Yeni sorgu **izleme** çalışma alanındaki **sorgular** düğümünde görünür.  
 
-##  <a name="import-a-query"></a><a name="BKMK_Import"></a>Sorgu içeri aktar  
+##  <a name="import-a-query"></a><a name="BKMK_Import"></a> Sorgu içeri aktar  
  Configuration Manager bir sorguyu içeri aktarmak için bu yordamı kullanın. Sorguları dışa aktarma hakkında daha fazla bilgi için bkz. [sorguları yönetme](../../../core/servers/manage/manage-queries.md).  
 
 1.  Configuration Manager konsolunda **izleme**' yi seçin.  
@@ -86,7 +86,7 @@ Bu makalede, Configuration Manager sorguları oluşturma ve içeri aktarma işle
 
 4.  İçeri aktarılacak sorguyla ilgili bilgileri gözden geçirin ve Sihirbazı doldurun. Yeni sorgu **izleme** çalışma alanındaki **sorgular** düğümünde görünür.  
 
-##  <a name="example-wql-queries"></a><a name="BKMK_Example"></a>Örnek WQL sorguları
+##  <a name="example-wql-queries"></a><a name="BKMK_Example"></a> Örnek WQL sorguları
 
 Bu bölüm, hiyerarşinizde kullanabileceğiniz veya başka amaçlarla değiştirebileceğiniz örnek WQL sorgularını içerir. Bu sorguları kullanmak için **sorgu ekstresi özellikleri** Iletişim kutusunda **sorgu dilini göster** ' i seçin. Sonra sorguyu kopyalayıp **sorgu ekstresi** alanına yapıştırın.  
 

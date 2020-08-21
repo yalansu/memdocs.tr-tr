@@ -10,12 +10,12 @@ ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 41c0d08c5f445cd6d643542cfaa646bc2d89de76
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 13312c20edbda290daaa0d51908adeb7ab4a6860
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128435"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700070"
 ---
 # <a name="define-network-locations-as-boundaries-for-configuration-manager"></a>Ağ konumlarını Configuration Manager için sınır olarak tanımlayın
 
@@ -35,9 +35,9 @@ Tek tek sınırları el ile oluşturabilir veya [Active Directory orman keşfi](
 
 Bir cihaz, beklediğiniz sınırın içinde değilse, ağ konumunu sınır olarak tanımlamadınız olabilir. Bir cihazın ağ konumu şüpheli olduğunda, doğrulamak için cihazda aşağıdaki Windows komutlarını kullanın:
 
-- IP adresi:`ipconfig`
-- Active Directory site:`nltest /dsgetsite`
-- SANAL`ipconfig /all`
+- IP adresi: `ipconfig`
+- Active Directory site: `nltest /dsgetsite`
+- SANAL `ipconfig /all`
 
 ## <a name="boundary-types"></a>Sınır türleri
 
@@ -59,7 +59,7 @@ Active Directory site sınırları, bulut etki alanına katılmış cihazlar ola
 > [!TIP]
 > Bir cihazın geçerli Active Directory sitesini görmek için aşağıdaki Windows komutunu kullanın: `nltest /dsgetsite` .
 >
-> Bir istemcinin bulut etki alanına katılmış olup olmadığını anlamak için aşağıdaki Windows komutunu kullanın: `dsregcmd /status` . Daha fazla bilgi için bkz. [dsregcmd komutu-cihaz durumu](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd).
+> Bir istemcinin bulut etki alanına katılmış olup olmadığını anlamak için aşağıdaki Windows komutunu kullanın: `dsregcmd /status` . Daha fazla bilgi için bkz. [dsregcmd komutu-cihaz durumu](/azure/active-directory/devices/troubleshoot-device-dsregcmd).
 
 ### <a name="ipv6-prefix"></a>IPv6 öneki
 

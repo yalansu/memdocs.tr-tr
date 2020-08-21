@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 06e2a90e8c481fba834cbd1b6b1f5233572e4b17
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 11b5a58a6d9501b0368fcb0b47bf31df1bd8a6af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128349"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700591"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>Configuration Manager içindeki gerçek zamanlı veriler için CMPivot
 
@@ -90,7 +90,7 @@ CMPivot için aşağıdaki izinler gereklidir:
 
      - Sorgu dizesine eklemek için **varlıklardan** birine tıklayın.  
 
-     - **Tablo işleçleri**, **toplama Işlevleri**ve **skaler işlevler** bağlantıları, Web tarayıcısında dil başvurusu belgelerini açar. CMPivot, [kusto sorgu dilini (KQL)](https://docs.microsoft.com/azure/kusto/query/)kullanır.  
+     - **Tablo işleçleri**, **toplama Işlevleri**ve **skaler işlevler** bağlantıları, Web tarayıcısında dil başvurusu belgelerini açar. CMPivot, [kusto sorgu dilini (KQL)](/azure/kusto/query/)kullanır.  
 
 3. İstemcilerdeki sonuçları görüntülemek için CMPivot penceresini açık tutun. CMPivot penceresini kapattığınızda oturum tamamlanmıştır.
    - Sorgu gönderilmişse, istemciler hala sunucuya bir durum iletisi yanıtı gönderir.  
@@ -123,7 +123,7 @@ CMPivot penceresi aşağıdaki öğeleri içerir:
 
 5. Sorgu bölmesi, koleksiyondaki istemcilerde çalıştırmak için bir sorgu oluşturabileceğiniz veya yazdığınız yerdir.  
 
-    - CMPivot, [kusto sorgu dilinin (KQL)](https://docs.microsoft.com/azure/kusto/query/)bir alt kümesini kullanır.  
+    - CMPivot, [kusto sorgu dilinin (KQL)](/azure/kusto/query/)bir alt kümesini kullanır.  
 
     - Sorgu bölmesinde içeriği kesin, Kopyala veya Yapıştır.  
     <!-- markdownlint-disable MD038 -->
@@ -162,9 +162,9 @@ CMPivot penceresi aşağıdaki öğeleri içerir:
 
      - **Kopyala**: hücrenin metnini panoya kopyalayın.  
 
-     - Şu **olan cihazları göster**: Bu özellik için bu değere sahip cihazlar için sorgu. Örneğin, `OS` sorgunun sonuçlarından, sürüm satırındaki bir hücrede bu seçeneği belirleyin:`OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ > 0)`  
+     - Şu **olan cihazları göster**: Bu özellik için bu değere sahip cihazlar için sorgu. Örneğin, `OS` sorgunun sonuçlarından, sürüm satırındaki bir hücrede bu seçeneği belirleyin: `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ > 0)`  
 
-     - **Cihazları olmadan göster**: Bu özellik için bu değer olmadan cihazları sorgula. Örneğin, `OS` sorgunun sonuçlarından, sürüm satırındaki bir hücrede bu seçeneği belirleyin:`OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
+     - **Cihazları olmadan göster**: Bu özellik için bu değer olmadan cihazları sorgula. Örneğin, `OS` sorgunun sonuçlarından, sürüm satırındaki bir hücrede bu seçeneği belirleyin: `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
 
      - **Bing BT**: varsayılan Web tarayıcısını https://www.bing.com sorgu dizesi olarak bu değerle başlatın.  
 
@@ -233,7 +233,7 @@ Büyük bir dosyayı ağ dosya sunucusuna geçici olarak depolamanız gerekir, a
 `Disk | where (Description == 'Local Fixed Disk') | where isnotnull( FreeSpace ) | order by FreeSpace asc`
 
 
-## <a name="cmpivot-standalone"></a><a name="bkmk_standalone"></a>Tek başına CMPivot
+## <a name="cmpivot-standalone"></a><a name="bkmk_standalone"></a> Tek başına CMPivot
 
 [!INCLUDE [CMPivot standalone](includes/cmpivot-standalone.md)]
 
@@ -272,5 +272,3 @@ Daha fazla bilgi için bkz. [günlük dosyaları](../../plan-design/hierarchy/lo
 - [CMPivot üzerinde yapılan değişiklikler](cmpivot-changes.md)
 - [CMPivot sorunlarını giderme](cmpivot-tsg.md)
 - [PowerShell betikleri oluşturma ve çalıştırma](../../../apps/deploy-use/create-deploy-scripts.md)
-
-

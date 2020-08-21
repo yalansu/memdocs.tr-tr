@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 8ea95a04977038514c00f0199df42c8070e813c3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 51e64f8f815c4ba90522acf6529cff4d971dd553
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127663"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699815"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>Iş için Windows Update tümleştirin
 
@@ -24,7 +24,7 @@ ms.locfileid: "88127663"
 Windows Update for Business (WUfB), bu cihazlar doğrudan Windows Update (WU) hizmetine bağlandıklarında en son güvenlik savunmaları ve Windows özellikleriyle Kuruluşunuzda Windows 10 tabanlı cihazların her zaman güncel kalmasını sağlar. Configuration Manager, yazılım güncelleştirmelerini almak için WUfB ve WSUS kullanan Windows 10 bilgisayarları birbirinden ayırt edebilir.  
 
 > [!WARNING]
-> Cihazlarınız için ortak yönetim kullanıyorsanız ve [Windows Update Ilkelerini](../../comanage/workloads.md#windows-update-policies) Intune 'a taşıdıysanız, cihazlarınız [Intune 'dan Windows Update iş ilkelerini](https://docs.microsoft.com/intune/windows-update-for-business-configure)alır.
+> Cihazlarınız için ortak yönetim kullanıyorsanız ve [Windows Update Ilkelerini](../../comanage/workloads.md#windows-update-policies) Intune 'a taşıdıysanız, cihazlarınız [Intune 'dan Windows Update iş ilkelerini](/intune/windows-update-for-business-configure)alır.
 > - Configuration Manager istemcisi birlikte yönetilen cihazda hala yüklüyse, toplu güncelleştirmeler ve özellik güncelleştirmelerinin ayarları Intune tarafından yönetilir. Ancak, [**Istemci ayarlarında**](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates)etkinleştirildiyse, üçüncü taraf düzeltme eki uygulama Configuration Manager tarafından yönetilmeye devam eder.  
 
  Configuration Manager istemcileri, WUfB veya Windows Insiders içeren WU 'dan güncelleştirmeleri alacak şekilde yapılandırıldığında bazı Configuration Manager özellikleri artık kullanılamaz:  
@@ -52,7 +52,7 @@ Windows 10 güncelleştirmelerini ve yükseltmelerini almak için WUfB kullanan 
 
 - Windows 10 Desktop Pro veya Windows 10 Enterprise Edition sürüm 1511 veya sonraki sürümleri çalıştıran istemciler
 
-- [İş için Windows Update](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb) dağıtılır ve istemciler Windows 10 güncelleştirmelerini ve yükseltmelerini almak için WUfB kullanır.  
+- [İş için Windows Update](/windows/deployment/update/waas-manage-updates-wufb) dağıtılır ve istemciler Windows 10 güncelleştirmelerini ve yükseltmelerini almak için WUfB kullanır.  
 
 ### <a name="to-identify-clients-that-use-wufb"></a>WUfB kullanan istemcileri tanımlamak için  
 
@@ -74,7 +74,7 @@ Configuration Manager sürüm 1706 ' den başlayarak, Windows 10 için Windows 1
 
 > [!NOTE]
 > Configuration Manager sürüm 1802 ' den başlayarak, Windows Insider için erteleme ilkelerini ayarlayabilirsiniz. <!--507201-->  
-Windows Insider programı hakkında daha fazla bilgi için bkz. [iş Için Windows Insider programı ile çalışmaya](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business)başlama.
+Windows Insider programı hakkında daha fazla bilgi için bkz. [iş Için Windows Insider programı ile çalışmaya](/windows/deployment/update/waas-windows-insider-for-business)başlama.
 
 ### <a name="prerequisites-for-deferral-policies"></a>Erteleme ilkeleri için Önkoşullar
 

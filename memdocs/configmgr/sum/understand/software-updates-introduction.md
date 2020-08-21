@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-ms.openlocfilehash: bd384edafd6464073b33a593a56bc88ba2fb0b87
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 3cb8d07c9bcc31353e16f01de9e60857d47d49e4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906758"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700431"
 ---
 # <a name="introduction-to-software-updates-in-configuration-manager"></a>Configuration Manager yazılım güncelleştirmelerine giriş
 
@@ -25,7 +25,7 @@ Configuration Manager yazılım güncelleştirmeleri, kuruluştaki istemci bilgi
 
 Ortamınızdaki yazılım güncelleştirmelerini nasıl dağıtabileceğinizi gösteren örnek bir senaryo için bkz. [güvenlik yazılımı güncelleştirmelerini dağıtmak Için örnek senaryo](../deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md).  
 
-##  <a name="software-updates-synchronization"></a><a name="BKMK_Synchronization"></a>Yazılım güncelleştirmeleri eşitlemesi  
+##  <a name="software-updates-synchronization"></a><a name="BKMK_Synchronization"></a> Yazılım güncelleştirmeleri eşitlemesi  
  Configuration Manager yazılım güncelleştirmeleri eşitlemesi, yazılım güncelleştirmeleri meta verilerini almak için Microsoft Update bağlanır. Üst düzey site (merkezi yönetim sitesi veya tek başına birincil site) bir zamanlamaya göre Microsoft Update eşitlenir veya Configuration Manager konsolundan eşitlemeyi el ile başlatabilirsiniz. Configuration Manager, en üst düzey sitede yazılım güncelleştirmeleri eşitlemesini bitirdiğinde, varsa alt sitelerde yazılım güncelleştirmeleri eşitlemesi başlar. Her birincil sitede veya ikincil sitede eşitleme tamamlandığında, istemci bilgisayarlara yazılım güncelleştirme noktalarının konumunu sağlayan, site genelinde bir ilke oluşturulur.  
 
 > [!NOTE]  
@@ -97,7 +97,7 @@ Ortamınızdaki yazılım güncelleştirmelerini nasıl dağıtabileceğinizi g�
 
     -   Yazılım güncelleştirmesi istemci bilgisayara dağıtıldı ancak henüz yüklenmedi.  
 
--   **Gerekli Değil**  
+-   **Gerekli değil**  
 
      Yazılım güncelleştirmesinin istemci bilgisayarda uygulanamadığını belirtir. Bu nedenle, yazılım güncelleştirmesi gerekli değildir.  
 
@@ -105,7 +105,7 @@ Ortamınızdaki yazılım güncelleştirmelerini nasıl dağıtabileceğinizi g�
 
      Yazılım güncelleştirmesinin istemci bilgisayarda uygulanabildiğini ve istemci bilgisayarda yazılım güncelleştirmesinin zaten yüklü olduğunu belirtir.  
 
--   **Bilinmiyor**  
+-   **Bilinmeyen**  
 
      Site sunucusunun, genellikle aşağıdakilerden biri nedeniyle istemci bilgisayardan durum iletisi almadığını belirtir:  
 
@@ -177,7 +177,7 @@ Ortamınızdaki yazılım güncelleştirmelerini nasıl dağıtabileceğinizi g�
 
      Bir yazılım güncelleştirmesi yüklendikten ve bilgisayar yeniden başlatıldıktan sonra, Yazılım Günceleştirmeleri İstemci Aracısı, yerel meta verileri kullanarak yeni bir tarama başlatır. İstemci, yazılım güncelleştirmeleri meta verilerini almak için, yazılım güncelleştirme noktasında çalıştırılan WSUS'ye hiçbir zaman bağlanmaz.  
 
-##  <a name="software-update-deployment-packages"></a><a name="BKMK_DeploymentPackages"></a>Yazılım güncelleştirmesi dağıtım paketleri  
+##  <a name="software-update-deployment-packages"></a><a name="BKMK_DeploymentPackages"></a> Yazılım güncelleştirmesi dağıtım paketleri  
  Bir yazılım güncelleştirme dağıtım paketi, paylaşılan bir ağ klasörüne yazılım güncelleştirmelerini indirmek ve yazılım güncelleştirme kaynak dosyalarını, dağıtımda tanımlı dağıtım noktalarında ve site sunucularındaki içerik kitaplığına kopyalamak için kullanılan araçtır. Güncelleştirmeleri İndirme Sihirbazını kullanarak, yazılım güncelleştirmelerini indirebilirsiniz ve dağıtmadan önce onları dağıtım paketlerine ekleyebilirsiniz. Bu sihirbaz, dağıtım noktalarındaki yazılım güncelleştirmelerini sağlamanızı ve yazılım güncelleştirmelerini istemcilere dağıtmadan önce dağıtım işleminin bu kısmının başarılı olduğunu doğrulamanızı sağlar.  
 
  İndirilen yazılım güncelleştirmelerini, Yazılım Güncelleştirmelerini Dağıtma Sihirbazı ile dağıttığınızda, dağıtım işlemi otomatik olarak, yazılım güncelleştirmelerini içeren dağıtım paketini kullanır. İndirilen yazılım güncelleştirmeleri dağıtıldığında, Yazılım Güncelleştirmelerini Dağıtma Sihirbazı'nda yeni veya var olan bir dağıtım paketi belirtmeniz gerekir ve ardından sihirbaz tamamlandığında yazılım güncelleştirmeleri indirilir.  
@@ -192,7 +192,7 @@ Ortamınızdaki yazılım güncelleştirmelerini nasıl dağıtabileceğinizi g�
 
  İstemciler, bir dağıtımda yazılım güncelleştirmelerini, dağıtım paketinden bağımsız olarak, kullanılabilir yazılım güncelleştirmelerine sahip herhangi bir dağıtım noktası kullanarak yükler. Etkin bir dağıtım için bir dağıtım paketi silinse bile, istemciler, her bir güncelleştirme en az bir adet başka dağıtım paketine indirildiği ve istemciden erişilebilecek bir dağıtım noktasında kullanılabilir olduğu müddetçe, yazılım güncelleştirmelerini yine de yükleyebilir. Bir yazılım güncelleştirmesi içeren son dağıtım paketi silindiğinde, istemci bilgisayarları, güncelleştirme bir dağıtım paketine yeniden indirilene kadar yazılım güncelleştirmesini alamaz. Güncelleştirme dosyaları herhangi bir dağıtım paketinde olmadığında, yazılım güncelleştirmeleri Configuration Manager konsolunda kırmızı bir ok ile görünür. Dağıtımlar, bu durumda herhangi bir güncelleştirme içeriyorlarsa çift kırmızı okla belirir.  
 
-##  <a name="software-update-deployment-workflows"></a><a name="BKMK_DeploymentWorkflows"></a>Yazılım güncelleştirmesi dağıtım iş akışları  
+##  <a name="software-update-deployment-workflows"></a><a name="BKMK_DeploymentWorkflows"></a> Yazılım güncelleştirmesi dağıtım iş akışları  
  Ortamınızda yazılım güncelleştirmeleri dağıtmak için iki ana senaryo vardır, el ile dağıtım ve otomatik dağıtım. Genellikle, istemci bilgisayarları için bir temel çizgisi oluşturmak için yazılım güncelleştirmelerini el ile yüklersiniz ve ardından yazılım güncelleştirmelerini istemcilerde otomatik dağıtım kullanarak yönetirsiniz. Aşağıdaki bölümlerde, yazılım güncelleştirmelerinin el ile ve otomatik dağıtımı iş akışı için bir özet sağlanmaktadır.  
 
 ###  <a name="manual-deployment-of-software-updates"></a><a name="BKMK_ManualDeployment"></a> Yazılım güncelleştirmelerinin el ile dağıtımı  
@@ -219,7 +219,7 @@ Ortamınızdaki yazılım güncelleştirmelerini nasıl dağıtabileceğinizi g�
 
    -   Değerlendirme ve dağıtım zamanlamaları  
 
-   -   Kullanıcı deneyimleri  
+   -   Kullanıcı deneyimi  
 
    -   İndirme özellikleri  
 
@@ -251,7 +251,7 @@ Ortamınızdaki yazılım güncelleştirmelerini nasıl dağıtabileceğinizi g�
 
   -   Bu dağıtım için ayrı uyarılar  
 
-##  <a name="software-update-deployment-process"></a><a name="BKMK_DeploymentProcess"></a>Yazılım güncelleştirmesi dağıtım işlemi  
+##  <a name="software-update-deployment-process"></a><a name="BKMK_DeploymentProcess"></a> Yazılım güncelleştirmesi dağıtım işlemi  
  Yazılım güncelleştirmelerini dağıttıktan sonra veya bir otomatik dağıtım kuralı çalıştırılıp yazılım güncelleştirmelerini dağıttığında, site için makine ilkesine bir dağıtım atama ilkesi eklenir. Yazılım güncelleştirmeleri, indirme konumundan, İnternetten veya paylaşılan ağ klasöründen, paket kaynağına indirilir. Yazılım güncelleştirmeleri, paket kaynağından site sunucusundaki içerik kitaplığına kopyalanır ve ardından dağıtım noktasındaki içerik kitaplığına kopyalanır.  
 
  Hedef koleksiyondaki istemci bir bilgisayar dağıtım için makine ilkesini alırsa, Yazılım Güncelleştirme İstemci Aracısı bir değerlendirme taraması başlatır. İstemci Aracısı, gerekli yazılım güncelleştirmelerinin içeriğini dağıtım için **Yazılım kullanılabilir zaman** ayarında yerel istemci önbelleğine yükler ve ardından yazılım güncelleştirmeleri yüklenmeye hazırdır. İsteğe bağlı dağıtımlardaki (yükleme sonra tarihi olmayan dağıtımlar) yazılım güncelleştirmeleri, kullanıcı yüklemeyi elle başlatana kadar yüklenmez.  
@@ -264,7 +264,7 @@ Ortamınızdaki yazılım güncelleştirmelerini nasıl dağıtabileceğinizi g�
 ### <a name="deployment-reevaluation-cycle"></a>Dağıtım yeniden değerlendirme döngüsü  
  Varsayılan olarak, istemci bilgisayarlar 7 günde bir dağıtım yeniden değerlendirme döngüsü başlatır. Bu değerlendirme döngüsü sırasında, istemci bilgisayar önceden dağıtılan ve yüklenen yazılım güncelleştirmelerini tarar. Kayıp yazılım güncelleştirmeleri varsa, yazılım güncelleştirmeleri yerel önbellekten yeniden yüklenir. Yerel önbellekte artık yazılım güncelleştirmesi mevcut değilse, dağıtım noktasından indirilir ve ardından yüklenir. Yeniden değerlendirme zamanlamasını site için istemci ayarlarındaki **Yazılım Güncelleştirmeleri** sayfasında yapılandırabilirsiniz.  
 
-##  <a name="support-for-windows-embedded-devices-that-use-write-filters"></a><a name="BKMK_EmbeddedDevices"></a>Yazma filtreleri kullanan Windows Embedded cihazları için destek  
+##  <a name="support-for-windows-embedded-devices-that-use-write-filters"></a><a name="BKMK_EmbeddedDevices"></a> Yazma filtreleri kullanan Windows Embedded cihazları için destek  
  Yazma filtresi etkinleştirilmiş Windows Katıştırılmış aygıtlara yazılım güncelleştirmesi dağıtırken, dağıtma sırasında aygıtta yazma filtresini devre dışı bırakıp bırakmamayı belirtebilir ve ardından dağıtım sonrasında aygıtı yeniden başlatabilirsiniz. Yazma filtresi devre dışı bırakılmamışsa, yazılım geçici bir katmana dağıtılır ve başka bir dağıtım değişikliklerin kalıcı olmasını zorlamazsa, yazılım aygıt yeniden başlatıldığında artık yüklü olmaz.  
 
 > [!NOTE]  
@@ -272,10 +272,10 @@ Ortamınızdaki yazılım güncelleştirmelerini nasıl dağıtabileceğinizi g�
 
  Yazma filtresi davranışın denetleyen kullanıcı deneyimi ayarı, **Değişiklikleri son tarihte veya bakım pencerelerinde yürüt (yeniden başlatma gerektirir)** adlı bir onay kutusudur.  
 
- Yazma filtrelerini kullanan katıştırılmış cihazları Configuration Manager nasıl yönettiği hakkında daha fazla bilgi için bkz. [Windows Embedded cihazlarına istemci dağıtımını planlama](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
+ Yazma filtrelerini kullanan katıştırılmış cihazları Configuration Manager nasıl yönettiği hakkında daha fazla bilgi için bkz.  [Windows Embedded cihazlarına istemci dağıtımını planlama](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
 ##  <a name="extend-software-updates-in-configuration-manager"></a><a name="BKMK_ExtendSoftwareUpdates"></a> Configuration Manager'da yazılım güncelleştirmelerini genişletme  
- Microsoft Update kullanılamayan yazılım güncelleştirmelerini yönetmek için System Center Updates Publisher kullanın. Yazılım güncelleştirmelerini güncelleştirme sunucusuna yayımladıktan ve Configuration Manager yazılım güncelleştirmelerini eşitledikten sonra, yazılım güncelleştirmelerini Configuration Manager istemcilerine dağıtabilirsiniz. Updates Publisher hakkında daha fazla bilgi için bkz. [Updates publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
+ Microsoft Update kullanılamayan yazılım güncelleştirmelerini yönetmek için System Center Updates Publisher kullanın. Yazılım güncelleştirmelerini güncelleştirme sunucusuna yayımladıktan ve Configuration Manager yazılım güncelleştirmelerini eşitledikten sonra, yazılım güncelleştirmelerini Configuration Manager istemcilerine dağıtabilirsiniz. Updates Publisher hakkında daha fazla bilgi için bkz. [Updates publisher 2011](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 ## <a name="next-steps"></a>Sonraki adımlar
 [Yazılım güncelleştirmelerini planlama](../plan-design/plan-for-software-updates.md)

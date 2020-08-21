@@ -10,14 +10,14 @@ ms.assetid: 963dda08-87b8-4e80-90a7-25625efe8861
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: ca71d40b29a9dcd9c239ccd06a8a28321f50f62c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 4c535cc41e1351b334e8eb7bb942de04ebbd00a2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127687"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700438"
 ---
-# <a name="tenant-attach-install-an-application-from-the-admin-center-preview"></a><a name="bkmk_apps"></a>Kiracı iliştirme: yönetim merkezinden bir uygulama yükler (Önizleme)
+# <a name="tenant-attach-install-an-application-from-the-admin-center-preview"></a><a name="bkmk_apps"></a> Kiracı iliştirme: yönetim merkezinden bir uygulama yükler (Önizleme)
 <!--cm 6024389, in 7220536 pubpreview Aug 10, 2020-->
 *Uygulama hedefi: Configuration Manager (geçerli dal)*
 
@@ -51,9 +51,9 @@ Kullanıcı hesabının aşağıdaki izinleri olması gerekir:
 - Azure AD 'de Configuration Manager Mikro hizmet uygulaması için **Yönetici Kullanıcı** rolü. 
   - Azure AD 'deki rolü, **Enterprise applications**  >  **mikro hizmet**  >  **kullanıcıları ve grupları**  >  **Kullanıcı Ekle**' Configuration Manager kurumsal uygulamalardan ekleyin. Azure AD Premium varsa gruplar desteklenir.
    > [!TIP]
-   > [Azure AD 'Deki uygulama Yöneticisi rolü](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) , uygulamanın **Yönetici Kullanıcı** rolüne bir kullanıcı eklemek için yeterli izinlere sahiptir.
+   > [Azure AD 'Deki uygulama Yöneticisi rolü](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) , uygulamanın **Yönetici Kullanıcı** rolüne bir kullanıcı eklemek için yeterli izinlere sahiptir.
 
-## <a name="deploy-an-application-to-a-device"></a><a name="bkmk_deploy"></a>Cihaza uygulama dağıtma
+## <a name="deploy-an-application-to-a-device"></a><a name="bkmk_deploy"></a> Cihaza uygulama dağıtma
 
 1. Bir tarayıcıda öğesine gidin [https://endpoint.microsoft.com](https://endpoint.microsoft.com) .
 1. **Cihazlar** ve **tüm cihazlar**' ı seçin.
@@ -79,7 +79,7 @@ Durum temelinde uygulama listesini filtreleyebilirsiniz. Uygulama durumu aşağ�
 - **Yüklü değil**: uygulama şu anda yüklü değil. Genellikle bu durum, farklı bir dağıtım veya Kullanıcı uygulamayı kaldırmışsa görülür.
 - **Yeniden başlatma bekliyor**: uygulama yüklendi, ancak tamamlanmak için yeniden başlatma gerekiyor (sürüm 2006 ' den başlayarak).
 
-## <a name="deploy-an-application-to-a-user"></a><a name="bkmk_user"></a>Kullanıcıya uygulama dağıtma
+## <a name="deploy-an-application-to-a-user"></a><a name="bkmk_user"></a> Kullanıcıya uygulama dağıtma
 <!--7518897-->
 Configuration Manager sürüm 2006 ' den başlayarak, Kullanıcı tarafından kullanılabilir uygulamalar ConfigMgr cihazının **uygulamalar** düğümünde görünür. Cihaz için kullanılabilen uygulamaların listesi, cihazın Şu anda oturum açmış olan kullanıcısına dağıtılan uygulamalar da içerir.
 

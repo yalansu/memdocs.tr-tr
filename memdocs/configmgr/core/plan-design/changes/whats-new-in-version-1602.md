@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2e398795a14f5073141f103d93ccd82e61d4d7a8
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 9a54ee5fb427f276ec755e748513b178d0c026ab
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904891"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698580"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Sürüm 1602 ' deki yenilikler&#39;Configuration Manager
 
@@ -36,17 +36,17 @@ Configuration Manager için 1602 güncelleştirmesi yalnızca, 1511 sürümünü
 
 ## <a name="site-infrastructure"></a>Site altyapısı  
 
-###  <a name="in-place-upgrade-the-operating-system-of-site-servers-that-run-windows-server-2008-r2"></a><a name="bkmk_UpgradeOS"></a>Windows Server 2008 R2 çalıştıran site sunucularının işletim sistemini yerinde yükseltme  
+###  <a name="in-place-upgrade-the-operating-system-of-site-servers-that-run-windows-server-2008-r2"></a><a name="bkmk_UpgradeOS"></a> Windows Server 2008 R2 çalıştıran site sunucularının işletim sistemini yerinde yükseltme  
  Sürüm 1602 veya sonraki sürümleri çalıştıran Configuration Manager siteleri, site sunucuları işletim sisteminin Windows Server 2008 R2 'den Windows Server 2012 R2 'ye yerinde yükseltmesini destekler.  
 
 > [!WARNING]  
 >  Windows Server 2012 R2’ye yükseltmeden önce sunucudan WSUS 3.2’yi kaldırmalısınız .  
 >   
->  Bu kritik adım hakkında daha fazla bilgi için, [Windows Server Update Services genel bakış](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality)konusunun "yeni ve değiştirilmiş işlevsellik" bölümüne bakın.  
+>  Bu kritik adım hakkında daha fazla bilgi için, [Windows Server Update Services genel bakış](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality)konusunun "yeni ve değiştirilmiş işlevsellik" bölümüne bakın.  
 
- Bir sunucuyu yükseltmek için, Windows Server 2012 R2 yükseltme yordamlarını kullanın. Yükseltmeden sonra bir Configuration Manager site sunucusu geri yüklemesi çalıştırmanız gerekmez. Yükseltme yordamları için bkz. Windows Server belgelerindeki [Windows Server 2012 R2 için Yükseltme Seçenekleri](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)).  
+ Bir sunucuyu yükseltmek için, Windows Server 2012 R2 yükseltme yordamlarını kullanın. Yükseltmeden sonra bir Configuration Manager site sunucusu geri yüklemesi çalıştırmanız gerekmez. Yükseltme yordamları için bkz. Windows Server belgelerindeki [Windows Server 2012 R2 için Yükseltme Seçenekleri](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)).  
 
-###  <a name="sql-server-alwayson-availability-groups"></a><a name="bkmk_AOAG"></a>AlwaysOn kullanılabilirlik grupları SQL Server  
+###  <a name="sql-server-alwayson-availability-groups"></a><a name="bkmk_AOAG"></a> AlwaysOn kullanılabilirlik grupları SQL Server  
  Birincil sitelerde site veritabanını barındırmak için SQL Server AlwaysOn kullanılabilirlik gruplarını ve merkezi yönetim sitesini bir yüksek kullanılabilirlik ve olağanüstü durum kurtarma çözümü olarak kullanın.  
 
  Ayrıntılar için bkz. [Configuration Manager için yüksek oranda kullanılabilir site veritabanı Için AlwaysOn SQL Server](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).  
@@ -209,4 +209,4 @@ Configuration Manager, iOS 7,1 ve üstünü çalıştıran hem denetimli hem de 
 
 -   **Uyumsuz**: kullanıcılar hüküm ve koşulların bir sürümünü kabul etmiş, ancak en son sürümü değil.  
 
--   **Bilinmiyor**: kullanıcılar, kayıtlı bir cihaz olmadan dahil olmak üzere hüküm ve koşulları hiç kabul etmedi.  
+-   **Bilinmiyor**: kullanıcılar, kayıtlı bir cihaz olmadan dahil olmak üzere hüküm ve koşulları hiç kabul etmedi.

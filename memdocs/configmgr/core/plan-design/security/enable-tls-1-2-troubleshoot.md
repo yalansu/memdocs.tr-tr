@@ -10,12 +10,12 @@ ms.assetid: 15083f28-8ff2-4e23-9f5e-b5dbd0859839
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7c07b0af1b3063619ac5f71965d96f611aefafd9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 316387bc42ed51dd9b581a25208091ed93cad1d1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720530"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699764"
 ---
 # <a name="common-issues-when-enabling-tls-12"></a>TLS 1.2’yi etkinleştirmeye yönelik sık karşılaşılan sorunlar
 
@@ -37,7 +37,7 @@ Raporlar Configuration Manager konsolunda gösterilmezseniz, konsolunu çalışt
 
 İstemci veya sunucu için FIPS güvenlik ilkesi ayarını etkinleştirirseniz, güvenli kanal (Schannel) anlaşması, TLS 1,0 kullanmasına neden olabilir. Bu davranış, kayıt defterindeki protokolü devre dışı bıraksanız bile gerçekleşir.
 
-Araştırmak için güvenli kanal olay günlüğünü etkinleştirin ve Sistem günlüğündeki Schannel olaylarını gözden geçirin. Daha fazla bilgi için bkz. [Schannel. dll ' de belirli şifreleme algoritmalarının ve protokollerin kullanımını kısıtlama](https://support.microsoft.com/help/245030/how-to-restrict-the-use-of-certain-cryptographic-algorithms-and-protoc).
+Araştırmak için güvenli kanal olay günlüğünü etkinleştirin ve Sistem günlüğündeki Schannel olaylarını gözden geçirin. Daha fazla bilgi için bkz. [Schannel.dlliçindeki belirli şifreleme algoritmalarının ve protokollerin kullanımını kısıtlama ](https://support.microsoft.com/help/245030/how-to-restrict-the-use-of-certain-cryptographic-algorithms-and-protoc).
 
 ## <a name="sql-server-communication-failure"></a>SQL Server iletişim hatası
 
@@ -77,7 +77,7 @@ Bu sorunu çözmek için şu adımları izleyin:
 
 1. [.NET Framework güncelleştirin](enable-tls-1-2-client.md#bkmk_net)ve ilgili tüm bilgisayarlarda güçlü şifrelemeyi etkinleştirin.
 
-1. `%WinDir%\System32\InetSrv`Uygulama Kataloğu sunucusunun klasöründe aşağıdaki içeriğe sahip bir **W2SP. exe. config** dosyası oluşturun:
+1. `%WinDir%\System32\InetSrv`Uygulama Kataloğu sunucusunun klasöründe aşağıdaki içeriğe sahip bir **W2SP.exe.config** dosyası oluşturun:
 
     ``` XML
     <?xml version="1.0" encoding="utf-8" ?>
@@ -145,12 +145,12 @@ The underlying connection was closed: An unexpected error occurred on a receive.
 at System.Net.HttpWebRequest.GetResponse
 ```
 
-Sistem olay günlüğüne aşağıdaki açıklamayla SChannel EventID 36874 kaydedilebilir:`An TLS 1.2 connection request was received from a remote client application, but none of the cipher suites supported by the client application are supported by the server. The TLS connection request has failed.`
+Sistem olay günlüğüne aşağıdaki açıklamayla SChannel EventID 36874 kaydedilebilir: `An TLS 1.2 connection request was received from a remote client application, but none of the cipher suites supported by the client application are supported by the server. The TLS connection request has failed.`
 <!--SCCMDocs issue #1608-->
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- [.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamaları](https://docs.microsoft.com/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
+- [.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamaları](/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
 - [KB 3135244: Microsoft SQL Server için TLS 1,2 desteği](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)
 - [Şifreleme denetimleri teknik başvurusu](cryptographic-controls-technical-reference.md)
 
@@ -158,4 +158,3 @@ Sistem olay günlüğüne aşağıdaki açıklamayla SChannel EventID 36874 kayd
 
 - [TLS 1.2’yi istemcilerde etkinleştirme](enable-tls-1-2-client.md)
 - [Site sunucularında ve uzak site sistemlerinde TLS 1,2 'yi etkinleştirme](enable-tls-1-2-server.md)
-

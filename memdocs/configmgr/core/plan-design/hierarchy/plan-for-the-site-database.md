@@ -10,12 +10,12 @@ ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a32f0a59a0b3ce3ad864fecf61fe7281b8ebbdd2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 068511c5b3b0c15eb355c484b241a76d9dd512e2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720817"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700189"
 ---
 # <a name="plan-for-the-site-database-for-configuration-manager"></a>Configuration Manager için site veritabanını planlayın
 
@@ -31,7 +31,7 @@ Site veritabanı sunucusu, Microsoft SQL Server desteklenen bir sürümünü ça
 
 -  SQL olmayan kullanılabilirlik grubu kullanımı için veritabanı kurtarma modelinin basıt olarak ayarlanması gerekir  
 
-SQL kurtarma modları hakkında daha fazla bilgi, [Kurtarma modellerinde (SQL Server)](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server)bulunabilir.
+SQL kurtarma modları hakkında daha fazla bilgi, [Kurtarma modellerinde (SQL Server)](/sql/relational-databases/backup-restore/recovery-models-sql-server)bulunabilir.
 
 Aşağıdaki SQL Server yapılandırmaları site veritabanını barındırmak için kullanılabilir:  
 
@@ -61,4 +61,4 @@ Uzak bir veritabanı sunucu bilgisayarı kullanıyorsanız, aradaki ağ bağlant
 -   Site veritabanı ile site sunucusu birlikte konumlandırıldığında site veritabanı sunucusu için kümelenmiş bir SQL Server kullanamazsınız.  
 
 
-Genellikle, bir site sistemi sunucusu yalnızca tek bir Configuration Manager sitesinden site sistem rollerini destekler. Ancak, farklı Configuration Manager sitelerinden bir veritabanını barındırmak için SQL Server çalıştıran kümelenmiş veya kümelenmemiş sunucularda SQL Server farklı örneklerini kullanabilirsiniz. Farklı sitelerden veritabanlarını desteklemek için her bir SQL Server örneğini benzersiz iletişim bağlantı noktaları kullanacak şekilde yapılandırmanız gerekir.  
+Genellikle, bir site sistemi sunucusu yalnızca tek bir Configuration Manager sitesinden site sistem rollerini destekler. Ancak, farklı Configuration Manager sitelerinden bir veritabanını barındırmak için SQL Server çalıştıran kümelenmiş veya kümelenmemiş sunucularda SQL Server farklı örneklerini kullanabilirsiniz. Farklı sitelerden veritabanlarını desteklemek için her bir SQL Server örneğini benzersiz iletişim bağlantı noktaları kullanacak şekilde yapılandırmanız gerekir.

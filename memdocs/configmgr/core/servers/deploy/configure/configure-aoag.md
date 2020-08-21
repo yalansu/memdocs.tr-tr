@@ -10,12 +10,12 @@ ms.assetid: 7e4ec207-bb49-401f-af1b-dd705ecb465d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 12753b3800b3b304bd13c992b57d22bf9e1bfad8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2e85b36d0caeb6ceb99f56220e271774dc0db0f6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721083"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699254"
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>Configuration Manager için SQL Server Always on kullanılabilirlik grupları yapılandırma
 
@@ -29,7 +29,7 @@ Başlamadan önce:
 - Kullanılabilirlik gruplarının ve ilgili yordamların kullanımını içeren SQL Server belgeleri hakkında bilgi sahibi olun. Aşağıdaki senaryolar için bu bilgiler gereklidir.
 
 
-## <a name="create-and-configure-an-availability-group"></a><a name="bkmk_create"></a>Kullanılabilirlik grubu oluşturma ve yapılandırma
+## <a name="create-and-configure-an-availability-group"></a><a name="bkmk_create"></a> Kullanılabilirlik grubu oluşturma ve yapılandırma
 
 Bir kullanılabilirlik grubu oluşturmak için aşağıdaki yordamı kullanın ve ardından site veritabanının bir kopyasını bu kullanılabilirlik grubuna taşıyın.
 
@@ -45,7 +45,7 @@ Bir kullanılabilirlik grubu oluşturmak için aşağıdaki yordamı kullanın v
     ALTER DATABASE [CM_xxx] SET RECOVERY FULL;
     ```
 
-    Kullanılabilirlik grupları yalnızca tam yedekleme modelini destekler. Daha fazla bilgi için bkz. [bir veritabanının kurtarma modelini görüntüleme veya değiştirme](https://docs.microsoft.com/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
+    Kullanılabilirlik grupları yalnızca tam yedekleme modelini destekler. Daha fazla bilgi için bkz. [bir veritabanının kurtarma modelini görüntüleme veya değiştirme](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
 
 3. Site veritabanınızın tam yedeklemesini oluşturmak için SQL Server kullanın. Aşağıdaki seçeneklerden birini belirleyin:
 
@@ -55,13 +55,13 @@ Bir kullanılabilirlik grubu oluşturmak için aşağıdaki yordamı kullanın v
 
     Daha fazla bilgi için SQL Server belgelerinde aşağıdaki makalelere bakın:
 
-    - [Tam bir veritabanı yedeklemesi oluşturma](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)
-    - [SSMS kullanarak veritabanı yedeklemesini geri yükleme](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
+    - [Tam bir veritabanı yedeklemesi oluşturma](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)
+    - [SSMS kullanarak veritabanı yedeklemesini geri yükleme](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
 
     > [!NOTE]  
     > Bir kullanılabilirlik grubundan mevcut bir çoğaltmada tek başına kadar taşımayı planlıyorsanız, önce veritabanını kullanılabilirlik grubundan kaldırın.
 
-4. Grubun ilk birincil çoğaltmasını barındıracak sunucuda, kullanılabilirlik grubunu oluşturmak için [Yeni kullanılabilirlik Grubu Sihirbazı](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio) ' nı kullanın. Sihirbazda:
+4. Grubun ilk birincil çoğaltmasını barındıracak sunucuda, kullanılabilirlik grubunu oluşturmak için [Yeni kullanılabilirlik Grubu Sihirbazı](/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio) ' nı kullanın. Sihirbazda:
 
     - **Veritabanı Seç** sayfasında, Configuration Manager siteniz için veritabanını seçin.  
 
@@ -69,7 +69,7 @@ Bir kullanılabilirlik grubu oluşturmak için aşağıdaki yordamı kullanın v
 
         - **Çoğaltmalar:** İkincil çoğaltmaları barındıracak sunucuları belirtin.
 
-        - **Dinleyici:** Örneğin `<listener_server>.fabrikam.com`, **dinleyici DNS adını** tam bir DNS adı olarak belirtin. Kullanılabilirlik grubundaki veritabanını kullanmak üzere Configuration Manager yapılandırdığınızda, bu adı kullanır.
+        - **Dinleyici:** Örneğin, **DINLEYICI DNS adını** tam bir DNS adı olarak belirtin `<listener_server>.fabrikam.com` . Kullanılabilirlik grubundaki veritabanını kullanmak üzere Configuration Manager yapılandırdığınızda, bu adı kullanır.
 
     - **İlk Veri Eşitlemesini Seç** sayfasında **Tam**seçeneğini belirleyin. Sihirbaz, kullanılabilirlik grubunu oluşturduktan sonra, birincil veritabanını ve işlem günlüğünü yedekler. Daha sonra sihirbaz, ikincil bir çoğaltma barındıran her sunucuya onları geri yükler.
 
@@ -82,12 +82,12 @@ Bir kullanılabilirlik grubu oluşturmak için aşağıdaki yordamı kullanın v
 
     2. Her bir çoğaltmada site veritabanının doğru şekilde yapılandırıldığını doğrulamak için [doğrulama betiğini](sql-server-alwayson-for-a-highly-available-site-database.md#prerequisites) çalıştırın.
 
-    3. İkincil çoğaltmalarda yapılandırmaların ayarlanması gerekiyorsa, devam etmeden önce, birincil çoğaltmanın yükünü ikincil çoğaltmaya el ile devreder. Yalnızca birincil çoğaltmanın veritabanını yapılandırabilirsiniz. Daha fazla bilgi için, SQL Server belgelerindeki [bir kullanılabilirlik grubunun planlı el ile yük devretmesini gerçekleştirme](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server) konusuna bakın.
+    3. İkincil çoğaltmalarda yapılandırmaların ayarlanması gerekiyorsa, devam etmeden önce, birincil çoğaltmanın yükünü ikincil çoğaltmaya el ile devreder. Yalnızca birincil çoğaltmanın veritabanını yapılandırabilirsiniz. Daha fazla bilgi için, SQL Server belgelerindeki [bir kullanılabilirlik grubunun planlı el ile yük devretmesini gerçekleştirme](/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server) konusuna bakın.
 
 6. Tüm çoğaltmalar gereksinimleri karşıladıktan sonra, kullanılabilirlik grubu Configuration Manager birlikte kullanılmak üzere hazır olur.
 
 
-## <a name="configure-a-site-to-use-the-availability-group"></a><a name="bkmk_configure"></a>Bir siteyi kullanılabilirlik grubunu kullanacak şekilde yapılandırma
+## <a name="configure-a-site-to-use-the-availability-group"></a><a name="bkmk_configure"></a> Bir siteyi kullanılabilirlik grubunu kullanacak şekilde yapılandırma
 
 [Kullanılabilirlik grubunu oluşturup yapılandırdıktan](#bkmk_create)sonra, siteyi kullanılabilirlik grubunun barındırdığı veritabanını kullanacak şekilde yapılandırmak için Configuration Manager Site Bakımı ' nı kullanın.
 
@@ -101,7 +101,7 @@ Bir kullanılabilirlik grubunda veritabanına sahip yeni bir site yüklemek dest
 
 4. Site veritabanı için aşağıdaki ayarları yeniden yapılandırın:
 
-    - **SQL Server adı**: kullanılabilirlik grubu *dinleyicisinin*sanal adını girin. Kullanılabilirlik grubunu oluştururken dinleyiciyi yapılandırdınız. Sanal ad, gibi `<Listener_Server>.fabrikam.com`BIR tam DNS adı olmalıdır.  
+    - **SQL Server adı**: kullanılabilirlik grubu *dinleyicisinin*sanal adını girin. Kullanılabilirlik grubunu oluştururken dinleyiciyi yapılandırdınız. Sanal ad, gibi bir tam DNS adı olmalıdır `<Listener_Server>.fabrikam.com` .  
 
     - **Örnek:** Kullanılabilirlik grubu *dinleyicisinin* varsayılan örneğini belirtmek için bu değer boş olmalıdır. Geçerli site veritabanı adlandırılmış bir örnek üzerinde çalışıyorsa, geçerli adlı örneği temizleyin.
 
@@ -110,18 +110,18 @@ Bir kullanılabilirlik grubunda veritabanına sahip yeni bir site yüklemek dest
 5. Yeni veritabanı konumu bilgilerini girdikten sonra, kurulum 'u normal işlem ve konfigürasyonlarınızla doldurun.
 
 
-## <a name="synchronous-replica-members"></a><a name="bkmk_sync"></a>Zaman uyumlu çoğaltma üyeleri  
+## <a name="synchronous-replica-members"></a><a name="bkmk_sync"></a> Zaman uyumlu çoğaltma üyeleri  
 
 Site veritabanınız bir kullanılabilirlik grubunda barındırılıyorsa, zaman uyumlu çoğaltma üyelerini eklemek veya kaldırmak için aşağıdaki yordamları kullanın. Desteklenen tür ve çoğaltma sayısı hakkında daha fazla bilgi için bkz. [kullanılabilirlik grubu yapılandırması](sql-server-alwayson-for-a-highly-available-site-database.md#availability-group-configurations).
 
-### <a name="add-a-new-synchronous-replica-member"></a><a name="bkmk_sync-add"></a>Yeni bir zaman uyumlu çoğaltma üyesi ekleyin
+### <a name="add-a-new-synchronous-replica-member"></a><a name="bkmk_sync-add"></a> Yeni bir zaman uyumlu çoğaltma üyesi ekleyin
 
 <!--3127336-->
 Sürüm 1906 ' den başlayarak yeni bir zaman uyumlu çoğaltma üyesi eklemek için Configuration Manager Kurulum 'u çalıştırın.
 
 1. SQL Server yordamlarını kullanarak bir ikincil çoğaltma ekleyin.
 
-    1. [Her zaman açık kullanılabilirlik grubuna ikincil çoğaltma ekleyin](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
+    1. [Her zaman açık kullanılabilirlik grubuna ikincil çoğaltma ekleyin](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
 
     1. SQL Management Studio 'de durumu izleyin. Kullanılabilirlik grubunun tam sistem durumuna dönmesi için bekleyin.
 
@@ -137,40 +137,40 @@ Bu işlemi sürüm 1902 veya önceki sürümlerde el ile yapma hakkında daha fa
 
 Sürüm 1906 ' den başlayarak, bir çoğaltma üyesini kaldırmak için Configuration Manager kurulumunu kullanabilirsiniz. [Yeni bir zaman uyumlu çoğaltma üyesi eklemek](#bkmk_sync-add)için aynı işlemi kullanın.
 
-Bu işlemi sürüm 1902 veya önceki sürümlerde el ile yapma hakkında daha fazla bilgi için bkz. [kullanılabilirlik grubundan ikincil çoğaltmayı kaldırma](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server).  
+Bu işlemi sürüm 1902 veya önceki sürümlerde el ile yapma hakkında daha fazla bilgi için bkz. [kullanılabilirlik grubundan ikincil çoğaltmayı kaldırma](/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server).  
 
 
-## <a name="asynchronous-replicas"></a><a name="bkmk_async"></a>Zaman uyumsuz çoğaltmalar
+## <a name="asynchronous-replicas"></a><a name="bkmk_async"></a> Zaman uyumsuz çoğaltmalar
 
 Configuration Manager ile kullandığınız kullanılabilirlik grubunda zaman uyumsuz bir çoğaltma kullanabilirsiniz. Zaman uyumsuz çoğaltma, site veritabanı için desteklenmediğinden zaman uyumlu bir çoğaltma yapılandırmak için gereken yapılandırma betiklerini çalıştırmanız gerekmez.
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Zaman uyumsuz bir kayıt çoğaltması yapılandırma
 
-Daha fazla bilgi için bkz. [kullanılabilirlik grubuna ikincil çoğaltma ekleme](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
+Daha fazla bilgi için bkz. [kullanılabilirlik grubuna ikincil çoğaltma ekleme](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Sitenizi kurtarmak için zaman uyumsuz çoğaltmayı kullanın
 
 Site veritabanınızı kurtarmak için zaman uyumsuz çoğaltmayı kullanın.
 
-1. Site veritabanına ek yazma işlemlerini engellemek için etkin birincil siteyi durdurun. Siteyi durdurmak için [Hiyerarşi Bakımı aracını](../../manage/hierarchy-maintenance-tool-preinst.exe.md)kullanın:`preinst.exe /stopsite`
+1. Site veritabanına ek yazma işlemlerini engellemek için etkin birincil siteyi durdurun. Siteyi durdurmak için [Hiyerarşi Bakımı aracını](../../manage/hierarchy-maintenance-tool-preinst.exe.md)kullanın: `preinst.exe /stopsite`
 
 1. Siteyi durdurduktan sonra, [el ile kurtarılan bir veritabanı](../../manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered)yerine zaman uyumsuz çoğaltmayı kullanın.
 
 
-## <a name="stop-using-an-availability-group"></a><a name="bkmk_stop"></a>Kullanılabilirlik grubu kullanmayı durdur
+## <a name="stop-using-an-availability-group"></a><a name="bkmk_stop"></a> Kullanılabilirlik grubu kullanmayı durdur
 
 Site veritabanınızı artık bir kullanılabilirlik grubunda barındırmak istemediğinizde aşağıdaki yordamı kullanın. Bu işlemle, site veritabanını SQL Server tek bir örneğine geri taşıyacaksınız.
 
-1. Aşağıdaki komutu kullanarak Configuration Manager sitesini durdurun: `preinst.exe /stopsite`. Daha fazla bilgi için bkz. [hiyerarşi bakım aracı](../../manage/hierarchy-maintenance-tool-preinst.exe.md).
+1. Aşağıdaki komutu kullanarak Configuration Manager sitesini durdurun: `preinst.exe /stopsite` . Daha fazla bilgi için bkz. [hiyerarşi bakım aracı](../../manage/hierarchy-maintenance-tool-preinst.exe.md).
 
-2. SQL Server’ı kullanarak birincil çoğaltmadan site veritabanınızın tam bir yedeklemesini oluşturun. Daha fazla bilgi için bkz. [tam bir veritabanı yedeklemesi oluşturma](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
+2. SQL Server’ı kullanarak birincil çoğaltmadan site veritabanınızın tam bir yedeklemesini oluşturun. Daha fazla bilgi için bkz. [tam bir veritabanı yedeklemesi oluşturma](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
 
-3. SQL Server’ı kullanarak site veritabanı yedeklemesini, site veritabanını barındıracak sunucuya geri yükleyin. Daha fazla bilgi için bkz. [SSMS kullanarak veritabanı yedeklemesini geri yükleme](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).
+3. SQL Server’ı kullanarak site veritabanı yedeklemesini, site veritabanını barındıracak sunucuya geri yükleyin. Daha fazla bilgi için bkz. [SSMS kullanarak veritabanı yedeklemesini geri yükleme](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).
 
     > [!Note]  
     > Kullanılabilirlik grubu için birincil çoğaltma sunucusu, site veritabanının tek örneğini barındıracaktır, bu adımı atlayın.
 
-4. Site veritabanını barındıracak sunucuda, site veritabanı için yedekleme modelini **tam** iken **basit**olarak değiştirin. Daha fazla bilgi için bkz. [bir veritabanının kurtarma modelini görüntüleme veya değiştirme](https://docs.microsoft.com/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
+4. Site veritabanını barındıracak sunucuda, site veritabanı için yedekleme modelini **tam** iken **basit**olarak değiştirin. Daha fazla bilgi için bkz. [bir veritabanının kurtarma modelini görüntüleme veya değiştirme](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
 
 5. **Configuration Manager Kurulum**: `\BIN\X64\setup.exe` Configuration Manager site yükleme klasöründen çalıştırın.
 
@@ -188,4 +188,4 @@ Site veritabanınızı artık bir kullanılabilirlik grubunda barındırmak iste
 
 9. Yeni veritabanı konumu bilgilerini girdikten sonra, kurulum 'u normal işlem ve konfigürasyonlarınızla doldurun. Kurulum tamamlandığında, site yeniden başlatılır ve yeni veritabanı konumunu kullanmaya başlar.
 
-10. Kullanılabilirlik grubunun üyesi olan sunucuları temizlemek için, [kullanılabilirlik grubunu kaldırma](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server)bölümündeki yönergeleri izleyin.
+10. Kullanılabilirlik grubunun üyesi olan sunucuları temizlemek için, [kullanılabilirlik grubunu kaldırma](/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server)bölümündeki yönergeleri izleyin.

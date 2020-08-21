@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 497a43fe6647f1dc2787f16a76f45ddd26d24796
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e573a2887bd527daac9a05fec2e83ef39fbfc4e1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128857"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700325"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager için istemciler ve cihazlar için desteklenen işletim sistemi sürümleri
 
@@ -44,7 +44,7 @@ Aşağıdaki Windows işletim sistemi sürümlerini yönetmek için Configuratio
 #### <a name="windows-virtual-desktop"></a>Windows Sanal Masaüstü
 
 <!--3556025-->
-[Windows sanal masaüstü](https://docs.microsoft.com/azure/virtual-desktop/) , Microsoft Azure üzerinde çalışan bir masaüstü ve uygulama sanallaştırma hizmetidir. Sürüm 1906 ' den başlayarak, Azure 'da Windows çalıştıran bu sanal cihazları yönetmek için Configuration Manager kullanın.
+[Windows sanal masaüstü](/azure/virtual-desktop/) , Microsoft Azure üzerinde çalışan bir masaüstü ve uygulama sanallaştırma hizmetidir. Sürüm 1906 ' den başlayarak, Azure 'da Windows çalıştıran bu sanal cihazları yönetmek için Configuration Manager kullanın.
 
 Terminal sunucusuna benzer şekilde, bu sanal cihazlardan bazıları çoklu eşzamanlı etkin kullanıcı oturumlarına izin verir. İstemci performansına yardımcı olmak için Configuration Manager artık bu çoklu kullanıcı oturumlarına izin veren her cihazda kullanıcı ilkelerini devre dışı bırakır. Kullanıcı ilkelerini etkinleştirseniz bile, istemci, Windows 10 Enterprise çoklu oturum ve Terminal Server 'lar dahil bu cihazlarda varsayılan olarak devre dışı bırakır.
 
@@ -100,15 +100,15 @@ Windows Server yarı yıllık kanal sürümleri, Windows Server, sürüm 1809 gi
 
 - **Windows Server 2012** (x64) <sup> [Note 2](#bkmk_note2)</sup>
 
-#### <a name="note-1"></a><a name="bkmk_note1"></a>1. nota
+#### <a name="note-1"></a><a name="bkmk_note1"></a> 1. nota
 
 Configuration Manager testleri ve Windows Server Datacenter sürümlerini destekler, ancak Windows Server için resmi sertifikalı değildir. Configuration Manager Düzeltme desteği Windows Server Datacenter Edition 'a özgü sorunlar için sunulmamaktadır. Windows Server sertifika programı hakkında daha fazla bilgi için bkz. [Windows Server Kataloğu](https://www.windowsservercatalog.com/).
 
-#### <a name="note-2"></a><a name="bkmk_note2"></a>2. nota
+#### <a name="note-2"></a><a name="bkmk_note2"></a> 2. nota
 
-[Client Push yüklemesini](../../clients/deploy/plan/client-installation-methods.md#client-push-installation)desteklemek için dosya ve Depolama Hizmetleri sunucu rolünün dosya sunucusu hizmetini ekleyin. Sunucu Çekirdeği üzerine Windows özellikleri yükleme hakkında daha fazla bilgi için bkz. [Windows PowerShell cmdlet 'lerini kullanarak rolleri, rol hizmetlerini ve özellikleri yükleme](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets).  
+[Client Push yüklemesini](../../clients/deploy/plan/client-installation-methods.md#client-push-installation)desteklemek için dosya ve Depolama Hizmetleri sunucu rolünün dosya sunucusu hizmetini ekleyin. Sunucu Çekirdeği üzerine Windows özellikleri yükleme hakkında daha fazla bilgi için bkz. [Windows PowerShell cmdlet 'lerini kullanarak rolleri, rol hizmetlerini ve özellikleri yükleme](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets).  
 
-#### <a name="note-3"></a><a name="bkmk_note3"></a>3. nota
+#### <a name="note-3"></a><a name="bkmk_note3"></a> 3. nota
 
 Yeni Yazılım Merkezi uygulaması herhangi bir Windows Server Core sürümünde desteklenmez.<!--SCCMDocs issue 683-->
 
@@ -135,7 +135,7 @@ Cihaza Configuration Manager istemcisini yükleyerek Windows Embedded cihazları
 - **Windows 10 Enterprise** (x86, x64)  
 
 - **Windows 10 IoT Enterprise** (x86, x64)  
-    Bu sürüm, uzun süreli bakım kanalını (LTSC) içerir. Daha fazla bilgi için bkz. [Windows 10 IoT Enterprise 'A genel bakış](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
+    Bu sürüm, uzun süreli bakım kanalını (LTSC) içerir. Daha fazla bilgi için bkz. [Windows 10 IoT Enterprise 'A genel bakış](/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
 
 - **Windows Embedded 8,1 sektör** (x86, x64)
 
@@ -186,7 +186,7 @@ Configuration Manager bulunan Configuration Manager mobil cihaz eski istemcisiyl
 
 - İspanyolca (İspanya)  
 
-## <a name="extended-security-updates-and-configuration-manager"></a><a name="bkmk_ESU"></a>Genişletilmiş güvenlik güncelleştirmeleri ve Configuration Manager
+## <a name="extended-security-updates-and-configuration-manager"></a><a name="bkmk_ESU"></a> Genişletilmiş güvenlik güncelleştirmeleri ve Configuration Manager
 
 [Genişletilmiş güvenlik güncelleştirmeleri (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) programı, destek sonunun ötesinde belirli eski Microsoft ürünlerini çalıştırması gereken müşteriler için son çare bir seçenektir. Örneğin, Windows 7. Ürünün genişletilmiş destek tarihine kadar olan en fazla üç yıl sonra kritik ve/veya önemli güvenlik güncelleştirmelerini ( [Microsoft Güvenlik Yanıt Merkezi (MSRC)](https://www.microsoft.com/msrc)tarafından tanımlandığı şekilde) içerir.
 
@@ -324,7 +324,7 @@ Aşağıdaki sürümler belirtilen. tar dosyası kullanılarak desteklenir.
 |Sürüm 16,04 LTS x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 
-## <a name="on-premises-mdm"></a><a name="bkmk_OnpremOS"></a>Şirket içi MDM
+## <a name="on-premises-mdm"></a><a name="bkmk_OnpremOS"></a> Şirket içi MDM
 
 Configuration Manager, şirket içi mobil cihazları istemci yazılımı yüklemeden yönetmek için yerleşik yeteneklere sahiptir. Daha fazla bilgi için bkz. [Şirket içi altyapıyla mobil cihazları yönetme](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
@@ -335,7 +335,7 @@ Configuration Manager, şirket içi mobil cihazları istemci yazılımı yüklem
 - **Windows 10 Pro Enterprise** (x86, x64)  
 
 - **Windows 10 IoT Enterprise** (x86, x64)  
-    Bu sürüm, uzun süreli bakım kanalını (LTSC) içerir. Daha fazla bilgi için bkz. [Windows 10 IoT Enterprise 'A genel bakış](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
+    Bu sürüm, uzun süreli bakım kanalını (LTSC) içerir. Daha fazla bilgi için bkz. [Windows 10 IoT Enterprise 'A genel bakış](/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
 
 - **Windows 10 IoT Mobile Enterprise**  
 
@@ -348,7 +348,7 @@ Configuration Manager, şirket içi mobil cihazları istemci yazılımı yüklem
     > [!IMPORTANT]
     > Configuration Manager sürüm 2006, Windows 10 Mobile ve Windows 10 Mobile Enterprise 'ın istemci olarak desteğini bırakır. [Sürüm 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated)ile kullanımdan kaldırma duyurulmuştur.
 
-## <a name="exchange-server-connector"></a><a name="bkmk_ExSrvConOS"></a>Exchange Server Bağlayıcısı  
+## <a name="exchange-server-connector"></a><a name="bkmk_ExSrvConOS"></a> Exchange Server Bağlayıcısı  
 
 Configuration Manager, Configuration Manager istemcisini yüklemeden Exchange Server 'a bağlanan cihazların sınırlı yönetimini destekler. Daha fazla bilgi için bkz. [Configuration Manager ve Exchange ile mobil cihazları yönetme](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
 

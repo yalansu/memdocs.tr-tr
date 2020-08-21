@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7fa4fbc7cb4e66a1ad47cb0c14a5f7e52abb5bf5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1e24a7fe6a81408de48a73889db923cc8c5094ea
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126445"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700557"
 ---
 # <a name="log-file-reference"></a>Günlük dosyası başvurusu
 
@@ -111,11 +111,11 @@ Aşağıdaki bölümler, size sunulan farklı günlük dosyaları hakkında ayr�
 
   - [WSUS sunucusu](#BKMK_WSUSLog)  
 
-## <a name="client-log-files"></a><a name="BKMK_ClientLogs"></a>İstemci günlük dosyaları
+## <a name="client-log-files"></a><a name="BKMK_ClientLogs"></a> İstemci günlük dosyaları
 
 Aşağıdaki bölümlerde, istemci işlemleriyle ve istemci yüklemesiyle ilgili günlük dosyaları listelenmektedir.  
 
-### <a name="client-operations"></a><a name="BKMK_ClientOpLogs"></a>İstemci işlemleri
+### <a name="client-operations"></a><a name="BKMK_ClientOpLogs"></a> İstemci işlemleri
 
 Aşağıdaki tabloda Configuration Manager istemcisinde bulunan günlük dosyaları listelenmektedir.  
 
@@ -189,7 +189,7 @@ Aşağıdaki tabloda Configuration Manager istemcisinde bulunan günlük dosyala
 |wakeprxy-install.log|İstemciler, uyandırma proxy 'sini açmak için istemci ayarı seçeneğini aldığınızda yükleme bilgilerini kaydeder.|  
 |wakeprxy-uninstall.log|Uyandırma proxy 'si önceden açıldıysa uyandırma proxy 'sini devre dışı bırakmak için istemciler istemci ayarı seçeneğini aldıktan sonra uyandırma proxy 'sini kaldırma ile ilgili bilgileri kaydeder.|  
 
-### <a name="client-installation"></a><a name="BKMK_ClientInstallLog"></a>İstemci yüklemesi
+### <a name="client-installation"></a><a name="BKMK_ClientInstallLog"></a> İstemci yüklemesi
 
 Aşağıdaki tabloda, Configuration Manager istemcisinin yüklenmesiyle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -200,7 +200,7 @@ Aşağıdaki tabloda, Configuration Manager istemcisinin yüklenmesiyle ilgili b
 |CcmRepair.log|İstemci aracısının onarım etkinliklerini kaydeder.|  
 |client.msi.log|client.msi tarafından gerçekleştirilen kurulum görevlerini kaydeder. İstemci yükleme veya kaldırma sorunlarını gidermek için kullanılabilir.|  
 
-### <a name="client-for-linux-and-unix"></a><a name="BKMK_LogFilesforLnU"></a>Linux ve UNIX için istemcisi
+### <a name="client-for-linux-and-unix"></a><a name="BKMK_LogFilesforLnU"></a> Linux ve UNIX için istemcisi
 
 > [!Important]  
 > Sürüm 1902 ' den başlayarak Configuration Manager Linux veya UNIX istemcilerini desteklemez.
@@ -219,7 +219,7 @@ Linux ve UNIX için Configuration Manager istemcisi, bilgileri aşağıdaki gün
 
 Her iki günlük dosyası da birkaç günlük tutma düzeyini destekler:  
 
-- **scxcm. log**. Günlük düzeyini değiştirmek için **/opt/Microsoft/ConfigMgr/etc/scxcm.conf yolunu** düzenleyin ve **Modül** etiketinin her bir örneğini istediğiniz günlük düzeyine değiştirin:  
+- **scxcm. log**. Günlük düzeyini değiştirmek için **/opt/Microsoft/ConfigMgr/etc/scxcm.conf yolunu** düzenleyin ve  **Modül** etiketinin her bir örneğini istediğiniz günlük düzeyine değiştirin:  
 
   - Hata: dikkat gerektiren sorunları gösterir  
 
@@ -239,7 +239,7 @@ Her iki günlük dosyası da birkaç günlük tutma düzeyini destekler:
 
 Normal işletim koşulları altında hata günlüğü düzeyini kullanın. Bu günlük düzeyi en küçük günlük dosyasını oluşturur. Günlük düzeyi hata durumundan uyarı, BILGI ve sonra Izleme olarak arttığı için, dosyaya daha fazla veri yazıldığı için daha büyük bir günlük dosyası oluşturulur.  
 
-#### <a name="manage-log-files-for-the-linux-and-unix-client"></a><a name="BKMK_ManageLinuxLogs"></a>Linux ve UNIX istemcisi için günlük dosyalarını yönetme
+#### <a name="manage-log-files-for-the-linux-and-unix-client"></a><a name="BKMK_ManageLinuxLogs"></a> Linux ve UNIX istemcisi için günlük dosyalarını yönetme
 
 Linux ve UNIX için istemcisi, istemci günlük dosyalarının maksimum boyutunu sınırlamaz. Ayrıca,. log dosyalarının içeriğini. lo_ dosyasına gibi başka bir dosyaya da otomatik olarak kopyalamaz. Günlük dosyalarının en büyük boyutunu denetlemek istiyorsanız, günlük dosyalarını Linux ve UNIX için Configuration Manager istemcisinden bağımsız olarak yönetmek üzere bir işlem uygulayın.  
 
@@ -247,7 +247,7 @@ Linux ve UNIX için istemcisi, istemci günlük dosyalarının maksimum boyutunu
 
 **logrotate** hakkında daha fazla bilgi için kullandığınız Linux ve UNIX dağıtımlarının belgelerine bakın.  
 
-### <a name="client-for-mac-computers"></a><a name="BKMK_LogfilesforMac"></a>Mac bilgisayarlar için istemci
+### <a name="client-for-mac-computers"></a><a name="BKMK_LogfilesforMac"></a> Mac bilgisayarlar için istemci
 
 Mac bilgisayarlar için Configuration Manager istemcisi, Mac bilgisayardaki aşağıdaki günlük dosyalarına bilgi kaydeder:  
 
@@ -260,11 +260,11 @@ Mac bilgisayarlar için Configuration Manager istemcisi, Mac bilgisayardaki aşa
 
 Site sistem sunucusundaki **SMS_DM. log** dosyası, Mac bilgisayarlar ve mobil cihazlar ve Mac bilgisayarlar için ayarlanan yönetim noktası arasındaki iletişimi de kaydeder.  
 
-## <a name="server-log-files"></a><a name="BKMK_ServerLogs"></a>Sunucu günlük dosyaları
+## <a name="server-log-files"></a><a name="BKMK_ServerLogs"></a> Sunucu günlük dosyaları
 
 Aşağıdaki bölümlerde, site sunucusunda bulunan veya belirli site sistemi rolleriyle ilişkili olan günlük dosyaları listelenmiştir.  
 
-### <a name="site-server-and-site-systems"></a><a name="BKMK_SiteSiteServerLog"></a>Site sunucusu ve site sistemleri
+### <a name="site-server-and-site-systems"></a><a name="BKMK_SiteSiteServerLog"></a> Site sunucusu ve site sistemleri
 
 Aşağıdaki tabloda, Configuration Manager site sunucusunda ve site sistemi sunucularında bulunan günlük dosyaları listelenmektedir.  
 
@@ -353,7 +353,7 @@ Aşağıdaki tabloda, Configuration Manager site sunucusunda ve site sistemi sun
 |swmproc.log|Ölçüm dosyalarının ve ayarların işlenmesini kaydeder.|Site sunucusu|
 |Uxanalticsuploadworker. log|Endpoint Analytics için hizmete veri yükleme kaydeder.|Site sunucusu|
 
-### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a>Site sunucusu yüklemesi
+### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a> Site sunucusu yüklemesi
 
 Aşağıdaki tabloda, site yüklemeyle ilgili bilgileri içeren günlük dosyaları listelenmiştir.  
 
@@ -365,7 +365,7 @@ Aşağıdaki tabloda, site yüklemeyle ilgili bilgileri içeren günlük dosyala
 |SMS_BOOTSTRAP.log|İkincil site yükleme işlemini başlatmanın ilerleme durumu ile ilgili bilgileri kaydeder. Gerçek kurulum işleminin ayrıntıları ConfigMgrSetup.log dosyasında bulunur.|Site Sunucusu|  
 |smstsvc.log|Bir Windows hizmetini yükleme, kullanma ve kaldırma ile ilgili bilgileri kaydeder. Windows, ağ bağlantısını ve sunucular arasındaki izinleri sınamak için bu hizmeti kullanır. Bağlantıyı oluşturan sunucunun bilgisayar hesabını kullanır.|Site sunucusu ve site sistemi sunucusu|  
 
-### <a name="data-warehouse-service-point"></a><a name="BKMK_DataWarehouse"></a>Veri ambarı hizmet noktası
+### <a name="data-warehouse-service-point"></a><a name="BKMK_DataWarehouse"></a> Veri ambarı hizmet noktası
 
 Aşağıdaki tabloda, veri ambarı hizmet noktasıyla ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -375,7 +375,7 @@ Aşağıdaki tabloda, veri ambarı hizmet noktasıyla ilgili bilgiler içeren g�
 |DWSSSetup. log|Veri ambarı hizmet noktası yüklemesi tarafından oluşturulan iletileri kaydeder.|Site sistemi sunucusu|  
 |MgrDataWarehouse. log Microsoft.Config|Site veritabanı ve veri ambarı veritabanı arasındaki veri eşitleme hakkındaki bilgileri kaydeder.|Site sistemi sunucusu|  
 
-### <a name="fallback-status-point"></a><a name="BKMK_FSPLog"></a>Geri dönüş durum noktası
+### <a name="fallback-status-point"></a><a name="BKMK_FSPLog"></a> Geri dönüş durum noktası
 
 Aşağıdaki tabloda, geri dönüş durum noktasıyla ilgili bilgileri içeren günlük dosyaları listelenmiştir.  
 
@@ -385,7 +385,7 @@ Aşağıdaki tabloda, geri dönüş durum noktasıyla ilgili bilgileri içeren g
 |fspMSI.log|Geri dönüş durum noktasının yüklenmesiyle oluşturulan iletileri kaydeder.|Site sistemi sunucusu|  
 |fspmgr.log|Geri dönüş durum noktası site sistemi rolünün etkinliklerini kaydeder.|Site sistemi sunucusu|  
 
-### <a name="management-point"></a><a name="BKMK_MPLog"></a>Yönetim noktası
+### <a name="management-point"></a><a name="BKMK_MPLog"></a> Yönetim noktası
 
 Aşağıdaki tabloda, yönetim noktasıyla ilgili bilgileri içeren günlük dosyaları listelenmiştir.  
 
@@ -415,7 +415,7 @@ Aşağıdaki tabloda, yönetim noktasıyla ilgili bilgileri içeren günlük dos
 |MPSetup.log|Yönetim noktası yükleme sarmalayıcı işlemini kaydeder.|Site sunucusu|  
 |UserService. log|Sunucudan Kullanıcı tarafından kullanılabilen uygulamaları alma/yükleme, yazılım merkezinden gelen kullanıcı isteklerini kaydeder.|Site sistemi sunucusu|
 
-### <a name="service-connection-point"></a><a name="BKMK_WITLog"></a>Hizmet bağlantı noktası
+### <a name="service-connection-point"></a><a name="BKMK_WITLog"></a> Hizmet bağlantı noktası
 
 Aşağıdaki tabloda hizmet bağlantı noktasıyla ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -442,7 +442,7 @@ Aşağıdaki tabloda hizmet bağlantı noktasıyla ilgili bilgiler içeren günl
 |SrvBoot.log|Hizmeti bağlantı noktası yükleyici hizmetinin ayrıntılarını kaydeder.|Hizmet bağlantı noktası ile bilgisayar|  
 |Statesys.log|Mobil cihaz yönetim iletilerinin işlenmesini kaydeder.|Birincil site ve merkezi yönetim sitesi|  
 
-### <a name="software-update-point"></a><a name="BKMK_SUPLog"></a>Yazılım güncelleştirme noktası
+### <a name="software-update-point"></a><a name="BKMK_SUPLog"></a> Yazılım güncelleştirme noktası
 
 Aşağıdaki tabloda, yazılım güncelleştirme noktasıyla ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -459,11 +459,11 @@ Aşağıdaki tabloda, yazılım güncelleştirme noktasıyla ilgili bilgiler iç
 |WUSSyncXML.log|Microsoft Updates eşitleme işlemi için Envanter Aracı hakkındaki ayrıntıları kaydeder.|Microsoft Updates için Envanter Aracı için eşitleme konağı olarak yapılandırılan istemci bilgisayar|  
 
 
-## <a name="log-files-by-functionality"></a><a name="BKMK_FunctionLogs"></a>İşlevlere göre günlük dosyaları
+## <a name="log-files-by-functionality"></a><a name="BKMK_FunctionLogs"></a> İşlevlere göre günlük dosyaları
 
 Aşağıdaki bölümlerde Configuration Manager işlevlerle ilgili günlük dosyaları listelenmektedir.  
 
-### <a name="application-management"></a><a name="BKMK_AppManageLog"></a>Uygulama yönetimi
+### <a name="application-management"></a><a name="BKMK_AppManageLog"></a> Uygulama yönetimi
 
 Aşağıdaki tabloda, uygulama yönetimiyle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -503,7 +503,7 @@ Aşağıdaki tabloda, paketlerin ve programların dağıtımıyla ilgili bilgile
 |colleval.log|Koleksiyonların Koleksiyon Değerlendiricisi tarafından oluşturulduğu, değiştirildiği ve silindiği zamana dair ayrıntıları kaydeder.|Site sunucusu|  
 |execmgr.log|Çalışan paketler ve görev dizileri hakkındaki ayrıntıları kaydeder.|İstemci|  
 
-### <a name="asset-intelligence"></a><a name="BKMK_AILog"></a>Varlık Yönetim Bilgileri
+### <a name="asset-intelligence"></a><a name="BKMK_AILog"></a> Varlık Yönetim Bilgileri
 
 Aşağıdaki tabloda, Varlık Yönetim Bilgileri ile ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -517,7 +517,7 @@ Aşağıdaki tabloda, Varlık Yönetim Bilgileri ile ilgili bilgiler içeren gü
 |ManagedProvider.log|İlişkili bir yazılım kimliği etiketiyle yazılım bulma hakkındaki ayrıntıları kaydeder. Ayrıca, donanım envanteriyle ilgili etkinlikleri kaydeder.|Site sistemi sunucusu|  
 |MVLSImport.log|İçeri aktarılan lisans dosyalarının işlenmesiyle ilgili ayrıntıları kaydeder.|Site sistemi sunucusu|  
 
-### <a name="backup-and-recovery"></a><a name="BKMK_BnRLog"></a>Yedekleme ve kurtarma
+### <a name="backup-and-recovery"></a><a name="BKMK_BnRLog"></a> Yedekleme ve kurtarma
 
 Aşağıdaki tabloda, site sıfırlamaları ve SMS sağlayıcısı 'nda yapılan değişiklikler dahil olmak üzere yedekleme ve kurtarma eylemleriyle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -528,7 +528,7 @@ Aşağıdaki tabloda, site sıfırlamaları ve SMS sağlayıcısı 'nda yapılan
 |smssqlbkup.log|Site sunucusu olmayan bir sunucuya SQL Server yüklendiğinde site veritabanı yedekleme işleminden gelen çıktıyı kaydeder.|Site veritabanı sunucusu|  
 |Smswriter.log|Yedekleme işlemi tarafından kullanılan Configuration Manager VSS yazıcısının durumuyla ilgili bilgileri kaydeder.|Site sunucusu|  
 
-### <a name="certificate-enrollment"></a><a name="BKMK_CertificateEnrollment"></a>Sertifika kaydı
+### <a name="certificate-enrollment"></a><a name="BKMK_CertificateEnrollment"></a> Sertifika kaydı
 
 Aşağıdaki tabloda, sertifika kaydıyla ilgili bilgileri içeren Configuration Manager günlük dosyaları listelenmektedir. Sertifika kaydı, ağ cihazı kayıt hizmeti 'ni (NDES) çalıştıran sunucuda sertifika kayıt noktasını ve Configuration Manager Ilkesi modülünü kullanır.  
 
@@ -553,7 +553,7 @@ Ayrıca, aşağıdaki günlük dosyalarını da kullanabilirsiniz:
     > [!NOTE]  
     > Bu dosya NDES hesap profilinin klasöründe (örneğin, C:\users\scepsvc) bulunur. NDES günlüğü 'nün nasıl etkinleştirileceği hakkında daha fazla bilgi için NDES wiki 'nin [günlüğü etkinleştirme](https://social.technet.microsoft.com/wiki/contents/articles/9063.active-directory-certificate-services-ad-cs-network-device-enrollment-service-ndes.aspx#Enable_Logging) bölümüne bakın.  
 
-### <a name="client-notification"></a><a name="BKMK_BGB"></a>İstemci bildirimi
+### <a name="client-notification"></a><a name="BKMK_BGB"></a> İstemci bildirimi
 
 Aşağıdaki tabloda, istemci bildirimiyle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -572,7 +572,7 @@ Aşağıdaki tabloda, bulut yönetimi ağ geçidiyle ilgili bilgiler içeren gü
 
 |Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|
 |--------------|-----------------|----------------------------|  
-|CloudMgr.log|Bulut yönetimi Ağ Geçidi hizmetini dağıtma, devam eden hizmet durumu ve hizmetle ilişkili verileri kullanma hakkındaki ayrıntıları kaydeder. Günlüğe kaydetme düzeyini yapılandırmak için aşağıdaki kayıt defteri anahtarındaki **günlük düzeyi** değerini düzenleyin:`HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER`|Birincil site sunucusunda veya CA 'larda *InstallDir* klasörü.|
+|CloudMgr.log|Bulut yönetimi Ağ Geçidi hizmetini dağıtma, devam eden hizmet durumu ve hizmetle ilişkili verileri kullanma hakkındaki ayrıntıları kaydeder. Günlüğe kaydetme düzeyini yapılandırmak için aşağıdaki kayıt defteri anahtarındaki **günlük düzeyi** değerini düzenleyin: `HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER`|Birincil site sunucusunda veya CA 'larda *InstallDir* klasörü.|
 |CMGSetup. log <sup> [nonote 1](#bkmk_note1)</sup>|Bulut yönetimi ağ geçidi dağıtımının ikinci aşamasına ilişkin ayrıntıları kaydeder (Azure 'da yerel dağıtım). Günlüğe kaydetme düzeyini yapılandırmak için, **Azure portalı \ bulut Hizmetleri Yapılandırması** sekmesinde **izleme düzeyi** (**bilgi** (varsayılan), **ayrıntılı**, **hata**) ayarını kullanın.|Azure sunucunuzdaki **%AppRoot%\logs** veya site SISTEM sunucusundaki SMS/logs klasörü|
 |CMGService. log <sup> [nonote 1](#bkmk_note1)</sup>|Azure 'daki bulut yönetimi ağ geçidi hizmeti çekirdek bileşeni hakkındaki ayrıntıları kaydeder. Günlüğe kaydetme düzeyini yapılandırmak için, **Azure portalı \ bulut Hizmetleri Yapılandırması** sekmesinde **izleme düzeyi** (**bilgi** (varsayılan), **ayrıntılı**, **hata**) ayarını kullanın.|Azure sunucunuzdaki **%AppRoot%\logs** veya site SISTEM sunucusundaki SMS/logs klasörü|
 |SMS_Cloud_ProxyConnector. log|Bulut yönetimi ağ geçidi hizmeti ve bulut yönetimi ağ geçidi bağlantı noktası arasında bağlantıları ayarlamayla ilgili ayrıntıları kaydeder.|Site sistemi sunucusu|
@@ -582,11 +582,11 @@ Aşağıdaki tabloda, bulut yönetimi ağ geçidiyle ilgili bilgiler içeren gü
 - Hizmet durumu sorunlarını gidermek için **Cmgservice. log** ve **SMS_Cloud_ProxyConnector. log**kullanın.
 - İstemci trafiği sorunlarını gidermek için **CMGHttpHandler. log**, **cmgservice. log**ve **SMS_Cloud_ProxyConnector. log**kullanın.
 
-#### <a name="note-1-logs-synchronized-from-azure"></a><a name="bkmk_note1"></a>Note 1: Azure 'dan eşitlenen Günlükler
+#### <a name="note-1-logs-synchronized-from-azure"></a><a name="bkmk_note1"></a> Note 1: Azure 'dan eşitlenen Günlükler
 
 Bunlar, bulut Service Manager 'ın her beş dakikada bir Azure depolama 'dan eşitlendiği yerel Configuration Manager günlük dosyalarıdır. Bulut yönetimi ağ geçidi, günlükleri her beş dakikada bir Azure depolama 'ya gönderir. Bu nedenle en fazla gecikme 10 dakikadır. Ayrıntılı anahtarlar hem yerel hem de uzak günlükleri etkiler. Gerçek dosya adları, hizmet adını ve rol örneği tanımlayıcısını içerir. Örneğin, CMG-*ServiceName* - *roleınstanceıd*-cmgsetup. log
 
-### <a name="compliance-settings-and-company-resource-access"></a><a name="BKMK_CompSettingsLog"></a>Uyumluluk ayarları ve şirket kaynağı erişimi
+### <a name="compliance-settings-and-company-resource-access"></a><a name="BKMK_CompSettingsLog"></a> Uyumluluk ayarları ve şirket kaynağı erişimi
 
 Aşağıdaki tabloda, uyumluluk ayarları ve şirket kaynağı erişimiyle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -598,7 +598,7 @@ Aşağıdaki tabloda, uyumluluk ayarları ve şirket kaynağı erişimiyle ilgil
 |DCMReporting.log|Yapılandırma öğeleri için ilke platformu sonuçlarını durum iletilerine raporlama hakkındaki bilgileri kaydeder.|İstemci|  
 |DcmWmiProvider.log|WMI 'dan, yapılandırma öğesi eşitleme hakkındaki bilgileri kaydeder.|İstemci|  
 
-### <a name="configuration-manager-console"></a><a name="BKMK_ConsoleLog"></a>Configuration Manager konsolu
+### <a name="configuration-manager-console"></a><a name="BKMK_ConsoleLog"></a> Configuration Manager konsolu
 
 Aşağıdaki tabloda Configuration Manager konsoluyla ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -608,7 +608,7 @@ Aşağıdaki tabloda Configuration Manager konsoluyla ilgili bilgiler içeren g�
 |SmsAdminUI.log|Configuration Manager konsolunun işlemi hakkındaki bilgileri kaydeder.|Configuration Manager konsolunu çalıştıran bilgisayar|  
 |Smsprov.log|SMS sağlayıcısının etkinliklerini kaydeder. Configuration Manager konsol etkinlikleri SMS sağlayıcısını kullanır.|Site sunucusu veya site sistemi sunucusu|  
 
-### <a name="content-management"></a><a name="BKMK_ContentLog"></a>İçerik yönetimi
+### <a name="content-management"></a><a name="BKMK_ContentLog"></a> İçerik yönetimi
 
 Aşağıdaki tabloda, içerik yönetimiyle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -638,7 +638,7 @@ Configuration Manager istemcisindeki günlük dosyaları şu dizinde: `%WinDir%\
 | M365AUploadWorker. log | Configuration Manager 'den Microsoft bulutuna koleksiyon ve cihaz yükleme hakkında bilgi |Hizmet bağlantı noktası|
 | SmsAdminUI.log | Azure Cloud Services 'ı yapılandırma gibi Configuration Manager konsol etkinliği hakkında bilgi  |Hizmet bağlantı noktası|
 
-### <a name="discovery"></a><a name="BKMK_DiscoveryLog"></a>Keşfini
+### <a name="discovery"></a><a name="BKMK_DiscoveryLog"></a> Keşfini
 
 Aşağıdaki tabloda, bulma ile ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -652,7 +652,7 @@ Aşağıdaki tabloda, bulma ile ilgili bilgiler içeren günlük dosyaları list
 |InventoryAgent.log|Donanım envanteri, yazılım envanteri etkinliklerini ve istemci üzerindeki sinyal bulma işlemlerini kaydeder.|İstemci|  
 |netdisc.log|Ağ Bulma eylemlerini kaydeder.|Site sunucusu|  
 
-### <a name="endpoint-analytics"></a><a name="bkmk_analytics"></a>Uç nokta Analizi
+### <a name="endpoint-analytics"></a><a name="bkmk_analytics"></a> Uç nokta Analizi
 
 |Günlük adı|Açıklama|Günlük dosyası içeren bilgisayar|  
 |--------------|-----------------|----------------------------|  
@@ -661,7 +661,7 @@ Aşağıdaki tabloda, bulma ile ilgili bilgiler içeren günlük dosyaları list
 |SensorEndpoint. log|Endpoint Analytics ilkesinin yürütülmesini ve istemci verilerinin site sunucusuna yüklenmesini kaydeder.|İstemci|
 |SensorManagedProvider. log|Endpoint Analytics için olay ve bilgilerin toplanması ve işlenmesini kaydeder.|İstemci|
 
-### <a name="endpoint-protection"></a><a name="BKMK_EPLog"></a>Endpoint Protection
+### <a name="endpoint-protection"></a><a name="BKMK_EPLog"></a> Endpoint Protection
 
 Aşağıdaki tabloda, Uç Nokta Koruma ile ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -672,7 +672,7 @@ Aşağıdaki tabloda, Uç Nokta Koruma ile ilgili bilgiler içeren günlük dosy
 |EPMgr.log|Uç Nokta Koruma site sistemi rolünün durumunu izler.|Site sistemi sunucusu|  
 |EPSetup.log|Uç Nokta Koruma site sistemi rolünün yüklenmesiyle ilgili bilgileri sağlar.|Site sistemi sunucusu|  
 
-### <a name="extensions"></a><a name="BKMK_Extensions"></a>Uzantılardan
+### <a name="extensions"></a><a name="BKMK_Extensions"></a> Uzantılardan
 
 Aşağıdaki tabloda, uzantılarla ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -682,7 +682,7 @@ Aşağıdaki tabloda, uzantılarla ilgili bilgiler içeren günlük dosyaları l
 |FeatureExtensionInstaller.log|Configuration Manager konsolunda etkinleştirildiklerinde veya devre dışı bırakıldığında tek tek uzantıların yüklenmesi ve kaldırılması hakkındaki bilgileri kaydeder.|Configuration Manager konsolunu çalıştıran bilgisayar|  
 |SmsAdminUI.log|Konsol etkinliğine Configuration Manager kaydeder.|Configuration Manager konsolunu çalıştıran bilgisayar|  
 
-### <a name="inventory"></a><a name="BKMK_InventoryLog"></a>Envanteri
+### <a name="inventory"></a><a name="BKMK_InventoryLog"></a> Envanteri
 
 Aşağıdaki tabloda, envanter verilerinin işlenmesiyle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -692,7 +692,7 @@ Aşağıdaki tabloda, envanter verilerinin işlenmesiyle ilgili bilgiler içeren
 |invproc.log|MIF dosyalarının ikincil siteden üst siteye iletilmesini kaydeder.|İkincil site sunucusu|  
 |sinvproc.log|Yazılım envanteri verilerinin site veritabanına işlenmesiyle ilgili bilgileri kaydeder.|Site sunucusu|  
 
-### <a name="metering"></a><a name="BKMK_MeteringLog"></a>Yazılım
+### <a name="metering"></a><a name="BKMK_MeteringLog"></a> Yazılım
 
 Aşağıdaki tabloda, ölçümle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -702,7 +702,7 @@ Aşağıdaki tabloda, ölçümle ilgili bilgiler içeren günlük dosyaları lis
 |SWMTRReportGen.log|Ölçüm Aracısı tarafından toplanan kullanım verileri raporunu oluşturur. Bu veriler Mtrmgr.log günlüğüne kaydedilir.|İstemci|
 |swmproc.log|Ölçüm dosyalarının ve ayarların işlenmesini kaydeder.|Site sunucusu|
 
-### <a name="migration"></a><a name="BKMK_MigrationLog"></a>Geçiş
+### <a name="migration"></a><a name="BKMK_MigrationLog"></a> Geçiş
 
 Aşağıdaki tabloda, geçişle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -710,11 +710,11 @@ Aşağıdaki tabloda, geçişle ilgili bilgiler içeren günlük dosyaları list
 |--------------|-----------------|----------------------------|  
 |migmctrl.log|Geçiş işlerini, paylaşılan dağıtım noktalarını ve dağıtım noktası yükseltmelerini içeren geçiş eylemleriyle ilgili bilgileri kaydeder.|Configuration Manager hiyerarşisindeki üst düzey site ve her alt birincil site. Çok birincil siteli bir hiyerarşide, merkezi yönetim sitesinde oluşturulan günlük dosyasını kullanın.|  
 
-### <a name="mobile-devices"></a><a name="BKMK_MDMLog"></a>Mobil cihazlar
+### <a name="mobile-devices"></a><a name="BKMK_MDMLog"></a> Mobil cihazlar
 
 Aşağıdaki bölümlerde, mobil cihazların yönetimiyle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
-#### <a name="enrollment"></a><a name="BKMK_EnrollmentLog"></a>Kaydolmak
+#### <a name="enrollment"></a><a name="BKMK_EnrollmentLog"></a> Kaydolmak
 
 Aşağıdaki tabloda, mobil cihaz kaydıyla ilgili bilgiler içeren günlükler listelenmektedir.  
 
@@ -729,7 +729,7 @@ Aşağıdaki tabloda, mobil cihaz kaydıyla ilgili bilgiler içeren günlükler 
 |enrollmentservice.log|Kaydolma proxy noktasıyla kaydolma noktasının arasındaki iletişimi kaydeder.|Site sistemi sunucusu|  
 |SMS_DM.log|Mobil cihazlar, Mac bilgisayarlar ve mobil cihazlar ve Mac bilgisayarlar için etkinleştirilen yönetim noktası arasındaki iletişimi kaydeder.|Site sistemi sunucusu|  
 
-#### <a name="exchange-server-connector"></a><a name="BKMK_ExchSrvLog"></a>Exchange Server Bağlayıcısı
+#### <a name="exchange-server-connector"></a><a name="BKMK_ExchSrvLog"></a> Exchange Server Bağlayıcısı
 
 Aşağıdaki Günlükler Exchange Server Bağlayıcısı ile ilgili bilgiler içerir.  
 
@@ -737,7 +737,7 @@ Aşağıdaki Günlükler Exchange Server Bağlayıcısı ile ilgili bilgiler iç
 |--------------|-----------------|----------------------------|  
 |easdisc.log|Exchange Server bağlayıcısının etkinliklerini ve durumunu kaydeder.|Site sunucusu|  
 
-#### <a name="mobile-device-legacy"></a><a name="BKMK_MDLegLog"></a>Mobil cihaz eski
+#### <a name="mobile-device-legacy"></a><a name="BKMK_MDLegLog"></a> Mobil cihaz eski
 
 Aşağıdaki tabloda, mobil cihaz eski istemcisiyle ilgili bilgiler içeren günlükler listelenmektedir.  
 
@@ -762,7 +762,7 @@ Aşağıdaki tabloda, mobil cihaz eski istemcisiyle ilgili bilgiler içeren gün
 |DmSvc.log|Mobil cihaz eski istemcileriyle mobil cihazlar için etkinleştirilmiş bir yönetim noktası arasındaki iletişimi kaydeder.|İstemci|  
 |FspIsapi.log|Eski mobil cihaz istemcilerinden ve istemci bilgisayarlardan geri dönüş durum noktasına yapılan iletişimlerle ilgili ayrıntıları kaydeder.|Site sistemi sunucusu|  
 
-### <a name="os-deployment"></a><a name="BKMK_OSDLog"></a>İşletim sistemi dağıtımı
+### <a name="os-deployment"></a><a name="BKMK_OSDLog"></a> İşletim sistemi dağıtımı
 
 Aşağıdaki tabloda, işletim sistemi dağıtımıyla ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -784,7 +784,7 @@ Aşağıdaki tabloda, işletim sistemi dağıtımıyla ilgili bilgiler içeren g
 |MP_ClientIDManager.log|Görev dizilerinin PXE 'den veya önyükleme medyasından başlamasını isteyen istemci KIMLIĞINE yönelik yönetim noktası yanıtlarını kaydeder.|Site sistemi sunucusu|  
 |MP_DriverManager.log|Sürücüleri Otomatik Olarak Uygula görev dizisi eylem isteklerine verilen yönetim noktası yanıtlarını kaydeder.|Site sistemi sunucusu|  
 |OfflineServicingMgr.log|Çevrimdışı bakım zamanlamalarının ayrıntılarını kaydeder ve işletim sistemi Windows Imaging Format (WıM) dosyalarında uygulama eylemlerini güncelleştirir.|Site sistemi sunucusu|  
-|Setupact.log|Windows Sysprep ve kurulum günlükleriyle ilgili ayrıntıları kaydeder. Daha fazla bilgi için bkz. [günlük dosyaları](https://docs.microsoft.com/windows/deployment/upgrade/log-files).|İstemci|  
+|Setupact.log|Windows Sysprep ve kurulum günlükleriyle ilgili ayrıntıları kaydeder. Daha fazla bilgi için bkz. [günlük dosyaları](/windows/deployment/upgrade/log-files).|İstemci|  
 |Setupapi.log|Windows Sysprep ve kurulum günlükleriyle ilgili ayrıntıları kaydeder.|İstemci|  
 |Setuperr.log|Windows Sysprep ve kurulum günlükleriyle ilgili ayrıntıları kaydeder.|İstemci|  
 |smpisapi.log|İstemci durumu yakalama ve geri yükleme eylemleriyle ilgili ayrıntıları ve eşik bilgilerini kaydeder.|İstemci|  
@@ -800,7 +800,7 @@ Aşağıdaki tabloda, işletim sistemi dağıtımıyla ilgili bilgiler içeren g
 |loadstate.log|Kullanıcı Durumu Geçirme Aracı (USMT) ve kullanıcı durumu verilerini geri yüklemeyle ilgili ayrıntıları kaydeder.|İstemci|  
 |scanstate.log|Kullanıcı Durumu Geçirme Aracı (USMT) ve kullanıcı durumu verilerini yakalamayla ilgili ayrıntıları kaydeder.|İstemci|  
 
-### <a name="power-management"></a><a name="BKMK_PowerMgmtLog"></a>Güç yönetimi
+### <a name="power-management"></a><a name="BKMK_PowerMgmtLog"></a> Güç yönetimi
 
 Aşağıdaki tabloda, güç yönetimiyle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -808,7 +808,7 @@ Aşağıdaki tabloda, güç yönetimiyle ilgili bilgiler içeren günlük dosyal
 |--------------|-----------------|----------------------------|  
 |pwrmgmt.log|İstemci bilgisayardaki güç yönetimi etkinlikleriyle ilgili ayrıntıları, izleme ve ayarları güç yönetimi Istemci Aracısı tarafından zorlama dahil kaydeder.|İstemci|  
 
-### <a name="remote-control"></a><a name="BKMK_RCLog"></a>Uzaktan denetim
+### <a name="remote-control"></a><a name="BKMK_RCLog"></a> Uzaktan denetim
 
 Aşağıdaki tabloda, uzaktan denetimle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -816,7 +816,7 @@ Aşağıdaki tabloda, uzaktan denetimle ilgili bilgiler içeren günlük dosyala
 |--------------|-----------------|----------------------------|  
 |CMRcViewer.log|Uzaktan denetim görüntüleyicinin etkinliğiyle ilgili ayrıntıları kaydeder.|Uzaktan denetim görüntüleyicisini çalıştıran bilgisayarda,% Temp% klasöründe.|  
 
-### <a name="reporting"></a><a name="BKMK_ReportLog"></a>Rapor
+### <a name="reporting"></a><a name="BKMK_ReportLog"></a> Rapor
 
 Aşağıdaki tabloda, raporlamayla ilgili bilgiler içeren Configuration Manager günlük dosyaları listelenmektedir.  
 
@@ -826,7 +826,7 @@ Aşağıdaki tabloda, raporlamayla ilgili bilgiler içeren Configuration Manager
 |srsrpMSI.log|MSI çıktısından raporlama hizmetleri noktası yükleme işleminin ayrıntılı sonuçlarını kaydeder.|Site sistemi sunucusu|  
 |srsrpsetup.log|Raporlama hizmetleri noktası yükleme işleminin sonuçlarını kaydeder.|Site sistemi sunucusu|  
 
-### <a name="role-based-administration"></a><a name="BKMK_RBALog"></a>Rol tabanlı yönetim
+### <a name="role-based-administration"></a><a name="BKMK_RBALog"></a> Rol tabanlı yönetim
 
 Aşağıdaki tabloda, rol tabanlı yönetimi yönetmekle ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -835,7 +835,7 @@ Aşağıdaki tabloda, rol tabanlı yönetimi yönetmekle ilgili bilgiler içeren
 |hman.log|Site yapılandırma değişiklikleriyle ilgili bilgileri ve site bilgilerinin Active Directory Domain Services yayımlamasını kaydeder.|Site sunucusu|  
 |SMSProv.log|WMI sağlayıcısı erişimini site veritabanına kaydeder.|SMS Sağlayıcısı'nın bulunduğu bilgisayar|  
 
-### <a name="software-metering"></a><a name="BKMK_MeteringLog"></a>Yazılım kullanım ölçümü
+### <a name="software-metering"></a><a name="BKMK_MeteringLog"></a> Yazılım kullanım ölçümü
 
 Aşağıdaki tabloda, yazılım kullanım ölçümü ile ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -843,7 +843,7 @@ Aşağıdaki tabloda, yazılım kullanım ölçümü ile ilgili bilgiler içeren
 |--------------|-----------------|----------------------------|  
 |mtrmgr.log|Tüm yazılım kullanım ölçümü işlemlerini izler.|Site sunucusu|  
 
-### <a name="software-updates"></a><a name="BKMK_SU_NAPLog"></a>Yazılım güncelleştirmeleri
+### <a name="software-updates"></a><a name="BKMK_SU_NAPLog"></a> Yazılım güncelleştirmeleri
 
 Aşağıdaki tabloda yazılım güncelleştirmeleriyle ilgili bilgileri içeren günlük dosyaları listelenmiştir.  
 
@@ -871,7 +871,7 @@ Aşağıdaki tabloda yazılım güncelleştirmeleriyle ilgili bilgileri içeren 
 |wsyncmgr.log|Yazılım güncelleştirme eşitleme işlemiyle ilgili ayrıntıları kaydeder.|Site sunucusu|  
 |WUAHandler.log|İstemcideki Windows Update Aracısı yazılım güncelleştirmelerini aradığında onunla ilgili ayrıntıları kaydeder.|İstemci|  
 
-### <a name="wake-on-lan"></a><a name="BKMK_WOLLog"></a>LAN'da Uyandırma
+### <a name="wake-on-lan"></a><a name="BKMK_WOLLog"></a> LAN'da Uyandırma
 
 Aşağıdaki tabloda LAN'da Uyandırma kullanımı ile ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -883,7 +883,7 @@ Aşağıdaki tabloda LAN'da Uyandırma kullanımı ile ilgili bilgiler içeren g
 |wolcmgr.log|Hangi istemcilere uyandırma paketi gönderilmesi gerektiği, gönderilen uyandırma paketi sayısı ve yeniden denenen uyandırma paketi sayısıyla ilgili ayrıntıları kaydeder.|Site sunucusu|  
 |wolmgr.log|Uyandırma yordamlarıyla ilgili ayrıntıları (LAN'da Uyandırma için yapılandırılan dağıtımların ne zaman uyandırılacağı gibi) kaydeder.|Site sunucusu|  
 
-### <a name="windows-10-servicing"></a><a name="BKMK_WindowsServicingLog"></a>Windows 10 Bakımı
+### <a name="windows-10-servicing"></a><a name="BKMK_WindowsServicingLog"></a> Windows 10 Bakımı
 
 Aşağıdaki tabloda, Windows 10 Bakımı ile ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 Bakım, yazılım güncelleştirmeleriyle aynı altyapıyı ve işlemi kullanır. Hizmet senaryosu için geçerli olan diğer Günlükler için bkz. [yazılım güncelleştirmeleri](#BKMK_SU_NAPLog).
@@ -894,9 +894,9 @@ Bakım, yazılım güncelleştirmeleriyle aynı altyapıyı ve işlemi kullanır
 |DıSM. log|DıSM kullanarak tüm eylemleri kaydeder. Gerekirse, daha fazla ayrıntı için DıSM. log dosyası CBS. log dosyasına işaret eder.|İstemci|
 |Setupact. log|Windows yükleme işlemi sırasında oluşan hataların çoğu için birincil günlük dosyası. Günlük dosyası% Windir% \$ Windows. ~ BT\sources\panther klasöründe bulunur.|İstemci|
 
-Daha fazla bilgi için bkz. [çevrimiçi hizmet Ile Ilgili günlük dosyaları](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
+Daha fazla bilgi için bkz. [çevrimiçi hizmet Ile Ilgili günlük dosyaları](/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
 
-### <a name="windows-update-agent"></a><a name="BKMK_WULog"></a>Windows Update Aracısı
+### <a name="windows-update-agent"></a><a name="BKMK_WULog"></a> Windows Update Aracısı
 
 Aşağıdaki tabloda, Windows Update Aracısı ile ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 
@@ -904,9 +904,9 @@ Aşağıdaki tabloda, Windows Update Aracısı ile ilgili bilgiler içeren günl
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Windows Update aracısının WSUS sunucusuna ne zaman bağlanacağı ve uyumluluk değerlendirmesi için yazılım güncelleştirmelerini aldığı ve aracı bileşenlerinde güncelleştirmeler olup olmadığı hakkındaki ayrıntıları kaydeder.|İstemci|  
 
-Daha fazla bilgi için bkz. [Windows Update günlük dosyaları](https://docs.microsoft.com/windows/deployment/update/windows-update-logs).
+Daha fazla bilgi için bkz. [Windows Update günlük dosyaları](/windows/deployment/update/windows-update-logs).
 
-### <a name="wsus-server"></a><a name="BKMK_WSUSLog"></a>WSUS sunucusu
+### <a name="wsus-server"></a><a name="BKMK_WSUSLog"></a> WSUS sunucusu
 
 Aşağıdaki tabloda, WSUS sunucusuyla ilgili bilgiler içeren günlük dosyaları listelenmektedir.  
 

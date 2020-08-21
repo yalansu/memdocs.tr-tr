@@ -10,12 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d28638cdf332adbb1d57526179222bb96d6d5c92
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 25ccc3936d156a4d9b5442190ea957b2d1eaf1f6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128078"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699713"
 ---
 # <a name="introduction-to-reporting-in-configuration-manager"></a>Configuration Manager 'de raporlamaya giriş
 
@@ -39,7 +39,7 @@ Configuration Manager, SQL Server Reporting Services birincil raporlama çözüm
 
 - Raporları farklı türlerde popüler biçimlerde dışa aktarır.  
 
-Daha fazla bilgi için bkz. [SQL Server Reporting Services (SSRS) nedir?](https://docs.microsoft.com/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15)
+Daha fazla bilgi için bkz. [SQL Server Reporting Services (SSRS) nedir?](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15)
 
 ## <a name="power-bi-report-server"></a>Power BI Rapor Sunucusu
 
@@ -47,7 +47,7 @@ Daha fazla bilgi için bkz. [SQL Server Reporting Services (SSRS) nedir?](https:
 
 Sürüm 2002 ' den başlayarak, Power BI Rapor Sunucusu Configuration Manager raporlama ile tümleştirin. Bu tümleştirme size modern görselleştirme ve daha iyi performans sağlar. Bu, SQL Server Reporting Services zaten mevcut olana benzer Power BI raporlar için konsol desteği ekler. Daha fazla bilgi için bkz. [Power BI rapor sunucusu tümleştirme](powerbi-report-server.md).
 
-Power BI Rapor Sunucusu, raporları görüntüleyen ve yönettiğiniz bir Web portalına sahip şirket içi rapor sunucusudur. Power BI raporlar, sayfalandırılmış raporlar, mobil raporlar ve KPI 'ler oluşturmak için araçlar içerir. Daha fazla bilgi için bkz. [Power BI rapor sunucusu nedir?](https://docs.microsoft.com/power-bi/report-server/get-started).
+Power BI Rapor Sunucusu, raporları görüntüleyen ve yönettiğiniz bir Web portalına sahip şirket içi rapor sunucusudur. Power BI raporlar, sayfalandırılmış raporlar, mobil raporlar ve KPI 'ler oluşturmak için araçlar içerir. Daha fazla bilgi için bkz. [Power BI rapor sunucusu nedir?](/power-bi/report-server/get-started).
 
 ## <a name="reporting-services-point"></a>Raporlama hizmetleri noktası
 

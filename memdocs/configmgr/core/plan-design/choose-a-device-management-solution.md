@@ -10,12 +10,12 @@ ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d36e29f0f915c0f2a35070c667525853e5981564
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 877345e64045530193a4cdd735cdd399235b90c7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719270"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700274"
 ---
 # <a name="choose-a-device-management-solution"></a>Cihaz yönetim çözümü seçme
 
@@ -35,20 +35,20 @@ Bu yönetim teknolojilerini karşılaştırmanıza yardımcı olması için aşa
 
 |  | Yalnızca bulut | Buluta bağlı | Şirket içi | Bağlantı kesildi |
 |---------|---------|---------|---------|---------|
-| **Hyper-V konağı** | Uygulanamaz | -Azure Stack<br/> -Windows Yönetim Merkezi<br/> -Virtual Machine Manager | -Azure Stack<br/> -Windows Yönetim Merkezi<br/> -Virtual Machine Manager | -Azure Stack<br/> -Windows Yönetim Merkezi<br/> -Virtual Machine Manager |
+| **Hyper-V konağı** | Geçerli değil | -Azure Stack<br/> -Windows Yönetim Merkezi<br/> -Virtual Machine Manager | -Azure Stack<br/> -Windows Yönetim Merkezi<br/> -Virtual Machine Manager | -Azure Stack<br/> -Windows Yönetim Merkezi<br/> -Virtual Machine Manager |
 | **Windows Server** | -Azure yönetimi<br/> -Configuration Manager | -Azure yönetimi<br/> -Configuration Manager | -Azure yönetimi<br/> -Configuration Manager | Configuration Manager |
 | **Linux sunucusu** | Azure yönetimi | Azure yönetimi | Azure yönetimi |  |
 | **Windows 10** | -Intune<br/> -Configuration Manager | -Intune<br/> -Configuration Manager | -Intune<br/> -Configuration Manager | Configuration Manager |
 | **Windows 7 veya 8,1** | Configuration Manager | Configuration Manager | Configuration Manager | Configuration Manager |
-| **Windows Sanal Masaüstü** | Configuration Manager | Uygulanamaz | Uygulanamaz | Uygulanamaz |
+| **Windows Sanal Masaüstü** | Configuration Manager | Geçerli değil | Geçerli değil | Geçerli değil |
 
-Daha fazla bilgi için aşağıdaki makalelere bakın:
+Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
-- [Azure Stack nedir?](https://docs.microsoft.com/azure-stack/operator/azure-stack-overview)
-- [Windows Yönetim Merkezi nedir?](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/what-is)
-- [Virtual Machine Manager nedir?](https://docs.microsoft.com/system-center/vmm/overview)
-- [Azure yönetim ürünleri](https://docs.microsoft.com/azure/)
-- [Windows Sanal Masaüstü nedir?](https://docs.microsoft.com/azure/virtual-desktop/overview)
+- [Azure Stack nedir?](/azure-stack/operator/azure-stack-overview)
+- [Windows Yönetim Merkezi nedir?](/windows-server/manage/windows-admin-center/understand/what-is)
+- [Virtual Machine Manager nedir?](/system-center/vmm/overview)
+- [Azure yönetim ürünleri](/azure/)
+- [Windows Sanal Masaüstü nedir?](/azure/virtual-desktop/overview)
 
 Configuration Manager ve Intune çözümleri hakkında daha fazla bilgi için sonraki bölüme geçin.
 
@@ -68,64 +68,64 @@ Aşağıdaki etkenlere göre yönetim çözümlerini karşılaştıran iki tablo
 - [Desteklenen platformlarla karşılaştırın](#bkmk_comp1)
 - [Yönetim işlevselliğine göre karşılaştırın](#bkmk_comp2)
 
-### <a name="configuration-manager-client"></a><a name="bkmk_sccm"></a>Configuration Manager istemcisi  
+### <a name="configuration-manager-client"></a><a name="bkmk_sccm"></a> Configuration Manager istemcisi  
 
 Bu seçenek, cihazlarda Configuration Manager istemcisinin yüklenmesini gerektirir. Ortamınızdaki bilgisayarları, sunucuları ve diğer cihazları yönetmeye yönelik en fazla özelliği sağlar.
 
 Daha fazla bilgi için bkz. [istemci yükleme yöntemleri](../clients/deploy/plan/client-installation-methods.md).  
 
-### <a name="on-premises-mdm"></a><a name="bkmk_opmdm"></a>Şirket içi MDM  
+### <a name="on-premises-mdm"></a><a name="bkmk_opmdm"></a> Şirket içi MDM  
 
 Bu seçenek, Windows 10 ' da yerleşik olarak bulunan cihaz yönetimi özelliklerini kullanır. İstemci tabanlı yönetim olarak tam özellikli olmadığı sürece, şirket içi MDM, yönetime daha hafif bir dokunma yaklaşımı sağlar. Cihazları yönetmek için şirket içi Configuration Manager kaynaklarını kullanır.  
 
 Daha fazla bilgi için bkz. [Şirket içi altyapıyla mobil cihazları yönetme](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
-### <a name="co-management-with-microsoft-intune"></a><a name="bkmk_comanage"></a>Microsoft Intune ile ortak yönetim
+### <a name="co-management-with-microsoft-intune"></a><a name="bkmk_comanage"></a> Microsoft Intune ile ortak yönetim
 
 Ortak yönetim, mevcut Configuration Manager dağıtımınızı Microsoft 365 buluta eklemenin birincil yöntemlerinden biridir. Hem Configuration Manager hem de Microsoft Intune kullanarak Windows 10 cihazlarını eşzamanlı olarak yönetmenizi sağlar. Ortak yönetim, yeni işlevler ekleyerek mevcut yatırımlarınızı bulutta Configuration Manager.
 
 Daha fazla bilgi için bkz. [ortak yönetim nedir?](../../comanage/overview.md).  
 
-### <a name="microsoft-exchange"></a><a name="bkmk_exchange"></a>Microsoft Exchange  
+### <a name="microsoft-exchange"></a><a name="bkmk_exchange"></a> Microsoft Exchange  
 
 Bu seçenek, birden çok Exchange sunucusunu Configuration Manager 'e bağlamak için Exchange Server bağlayıcısını kullanır. Exchange ActiveSync 'e bağlanabilecek cihazların yönetimini merkezileştirir. Exchange mobil cihaz yönetimi özelliklerini Configuration Manager konsolundan yapılandırabilirsiniz. Örnek özellikler, uzak cihaz temizleme ve birden çok Exchange sunucusu için ayarlar denetimini içerir.
 
 Daha fazla bilgi için bkz. [Configuration Manager ve Exchange ile mobil cihazları yönetme](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
 
-### <a name="compare-solutions-by-supported-platforms"></a><a name="bkmk_comp1"></a>Çözümleri desteklenen platformlar ile karşılaştırın  
+### <a name="compare-solutions-by-supported-platforms"></a><a name="bkmk_comp1"></a> Çözümleri desteklenen platformlar ile karşılaştırın  
 
 |Platform|Configuration Manager istemcisi|Şirket içi MDM|Exchange ile Configuration Manager| Intune |
 |--------|----------------------------|---------------|-----------------------------------|--------|
-|Android| | |Yes| Yes |
-|iOS| | |Yes| Yes |
-|Mac OS X|Yes| |Yes| Yes |
-|Windows 10|Yes|Yes|Yes| Yes |
-|Windows 10 Mobile| |Yes|Yes| Yes |
-|Windows (önceki sürümler)|Yes| |Yes|  |
-|Windows Server|Yes| |Yes|  |
-|Windows Embedded|Yes| | |  |
+|Android| | |Evet| Evet |
+|iOS| | |Evet| Evet |
+|Mac OS X|Evet| |Evet| Evet |
+|Windows 10|Evet|Evet|Evet| Evet |
+|Windows 10 Mobile| |Evet|Evet| Evet |
+|Windows (önceki sürümler)|Evet| |Evet|  |
+|Windows Server|Evet| |Evet|  |
+|Windows Embedded|Evet| | |  |
 
 Desteklenen platformların tüm listesi için aşağıdaki makalelere bakın:
 
 - [Configuration Manager için istemciler ve cihazlar için desteklenen işletim sistemleri](configs/supported-operating-systems-for-clients-and-devices.md)
-- [Intune tarafından desteklenen konfigürasyonlar](https://docs.microsoft.com/intune/supported-devices-browsers)
+- [Intune tarafından desteklenen konfigürasyonlar](/intune/supported-devices-browsers)
 
-Microsoft, Android, iOS ve Windows 10 mobil cihazlarını yönetmek için Intune 'un kullanılmasını önerir. Daha fazla bilgi için bkz. [Microsoft Intune nedir?](https://docs.microsoft.com/intune/what-is-intune).
+Microsoft, Android, iOS ve Windows 10 mobil cihazlarını yönetmek için Intune 'un kullanılmasını önerir. Daha fazla bilgi için bkz. [Microsoft Intune nedir?](/intune/what-is-intune).
 
-### <a name="compare-solutions-by-management-functionality"></a><a name="bkmk_comp2"></a>Yönetim işlevselliğine göre çözümleri karşılaştırın  
+### <a name="compare-solutions-by-management-functionality"></a><a name="bkmk_comp2"></a> Yönetim işlevselliğine göre çözümleri karşılaştırın  
 
 |Yönetim işlevi|Configuration Manager istemcisi|Şirket içi MDM|Exchange ile Configuration Manager|  
 |--------|----------------------------|---------------|-----------------------------------|  
-|Sertifika tabanlı karşılıklı kimlik doğrulaması|Yes|Yes| |
-|İstemci yüklemesi|Yes| | |
-|Internet üzerinden destek|Yes| | |
-|Bulma|Yes| |Yes|
-|Donanım envanteri|Yes|Yes|Yes|
-|Yazılım envanteri|Yes| |Yes|
-|Ayarlar|Yes|Yes|Yes|
-|Yazılım dağıtımı|Yes|Yes| |
-|Yazılım güncelleştirme yönetimi|Yes| | |
-|İşletim sistemi dağıtımı|Yes| | |
-|Configuration Manager engelle|Yes|Yes| |
-|Exchange Server 'dan karantina ve engelleme (ve Configuration Manager)| | |Yes|
-|Uzaktan temizleme| |Yes|Yes|
+|Sertifika tabanlı karşılıklı kimlik doğrulaması|Evet|Evet| |
+|İstemci yüklemesi|Evet| | |
+|Internet üzerinden destek|Evet| | |
+|Bulma|Evet| |Evet|
+|Donanım envanteri|Evet|Evet|Evet|
+|Yazılım envanteri|Evet| |Evet|
+|Ayarlar|Evet|Evet|Evet|
+|Yazılım dağıtımı|Evet|Evet| |
+|Yazılım güncelleştirme yönetimi|Evet| | |
+|İşletim sistemi dağıtımı|Evet| | |
+|Configuration Manager engelle|Evet|Evet| |
+|Exchange Server 'dan karantina ve engelleme (ve Configuration Manager)| | |Evet|
+|Uzaktan temizleme| |Evet|Evet|

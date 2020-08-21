@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 18e703691696a2cfc02a5b9715fb6062360229e2
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 63aba639eea221c3a13f7ebeabaa1b96a8439a72
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353471"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700778"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Modern masaüstü kullanımdan kaldırma hakkında SSS
 
@@ -49,10 +49,10 @@ Birçok müşteri, Windows 10 ve Office 365 ProPlus ile mevcut alma ve güncel k
 
 Windows 10 ve Office 365 ProPlus çalıştıran ticari cihazlarda desteklenen ve kullanımda olan *modern Masaüstü dizinine yönelik* listelenen yazılım çözümleri için hazırlanma. Dizin, BT yöneticilerine dağıtımlar için en son Windows 10 ve Office 365 sürümlerini düşünmeye yardımcı olur.
 
-BT yöneticileriyle ilgili geri bildirimler, bu öngörüleri, dağıtım planlarını planlamak için kullandıkları araçlarla tümleştirirler. Windows 10 ve Office 365 ProPlus yükseltme projelerinizi planlamak ve yönetmek için Configuration Manager 'deki [Desktop Analytics](https://aka.ms/dadocs) ve [Office 365 ProPlus hazırlık özelliklerini](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) kullanın. 
+BT yöneticileriyle ilgili geri bildirimler, bu öngörüleri, dağıtım planlarını planlamak için kullandıkları araçlarla tümleştirirler. Windows 10 ve Office 365 ProPlus yükseltme projelerinizi planlamak ve yönetmek için Configuration Manager 'deki [Desktop Analytics](https://aka.ms/dadocs) ve [Office 365 ProPlus hazırlık özelliklerini](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) kullanın. 
 
 > [!Note]
-> 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
+> 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
 
 ### <a name="what-is-desktop-analytics"></a>Desktop Analytics nedir?
 
@@ -114,12 +114,12 @@ Destek deyimleriniz, varlıklarla doğru şekilde ilişkilendirilmemişse, Micro
 
 Geliştirici Merkezi aracılığıyla sistem durumu ve ölçüm raporlarıyla çözümlerinizi performansını değerlendirin: 
 
-- [Microsoft Store](https://docs.microsoft.com/windows/uwp/publish/health-report)
-- [Masaüstü](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)
-- [Office Eklentileri](https://docs.microsoft.com/office/dev/store/update-unpublish-and-view-metrics) 
+- [Windows Store](/windows/uwp/publish/health-report)
+- [Masaüstü](/windows/desktop/appxpkg/windows-desktop-application-program)
+- [Office Eklentileri](/office/dev/store/update-unpublish-and-view-metrics) 
 
 ### <a name="how-can-i-develop-compatible-assets-for-windows-10-and-office-365-proplus"></a>Windows 10 ve Office 365 ProPlus için uyumlu varlıkları nasıl geliştirebilirim?
 
 Masaüstü uygulamalarınızın şimdi uyumlu olduğundan emin olun ve gelecekte Windows 10 ile uyumlu kalın. Daha fazla bilgi için bkz. [geliştiriciler Için uygulama uyumluluğu](https://developer.microsoft.com/windows/desktop/app-compatibility).
 
-Office 365 ProPlus için çözümler geliştirirseniz, bkz. [Office 'TEKI com, VSTO ve VBA eklentileri Için geliştirme için en iyi yöntemler](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
+Office 365 ProPlus için çözümler geliştirirseniz, bkz. [Office 'TEKI com, VSTO ve VBA eklentileri Için geliştirme için en iyi yöntemler](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).

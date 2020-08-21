@@ -10,12 +10,12 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 84cb878de3eea56dc68180a83fd4b6a32b2d1073
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e5ea198f944cf44909e54e123889a3f0f29b1db5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906416"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699118"
 ---
 # <a name="use-cloud-services-with-configuration-manager"></a>Bulut hizmetlerini Configuration Manager ile birlikte kullanma
 
@@ -75,7 +75,7 @@ Dağıtım noktalarını barındırmak için Azure 'un kullanılması için Azur
 
 Bu ek yetenekler için bir Azure aboneliğinizin olması gerekmez. Bulutta belirli bağlantılar, sertifikalar veya hizmetler ayarlamanıza gerek yoktur. Bunun yerine, sizin için Configuration Manager tarafından otomatik olarak yönetilir. Tüm yapmanız gereken, ilgili site sistemlerinin ve cihazların Internet tabanlı URL 'Lere erişebildiğinden emin olmanızı sağlar.  
 
-##  <a name="security-for-cloud-based-services"></a><a name="BKMK_CloudSec"></a>Bulut tabanlı hizmetler için güvenlik  
+##  <a name="security-for-cloud-based-services"></a><a name="BKMK_CloudSec"></a> Bulut tabanlı hizmetler için güvenlik  
  Configuration Manager Azure 'da içeriğinizi sağlamak ve bu içeriklerinize erişmek ve kullandığınız hizmetleri yönetmek için sertifikaları kullanır. Configuration Manager, Azure 'da depoladığınız verileri şifreler, ancak Azure 'un sağladıkları dışında ek güvenlik veya veri denetimleri sunmaz.  
 
- Daha fazla bilgi için, bulut tabanlı farklı kaynak senaryolarının ayrıntılarına bakın. Ayrıca bkz. [Azure Güvenlik 'e giriş](https://docs.microsoft.com/azure/security/fundamentals/overview).
+ Daha fazla bilgi için, bulut tabanlı farklı kaynak senaryolarının ayrıntılarına bakın. Ayrıca bkz. [Azure Güvenlik 'e giriş](/azure/security/fundamentals/overview).

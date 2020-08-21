@@ -10,12 +10,12 @@ ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 45ef103645630b8e203710ec0ff36a71b3cef4cf
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 7781c20ca542d19c562574c554a08c38493911f6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904244"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700087"
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-configuration-manager-windows-server-2008-certification-authority"></a>Configuration Manager için PKI sertifikalarının adım adım örnek dağıtımı: Windows Server 2008 sertifika yetkilisi
 
@@ -31,7 +31,7 @@ Gerekli sertifikalara yönelik tek bir dağıtım yöntemi olmadığından, bir 
 > - **Sertifika Yetkilisi**: **Windows Server 2003**  
 >   - **Sertifika alıcısı**: **Windows XP / Server 2003**  
 
-## <a name="test-network-requirements"></a><a name="BKMK_testnetworkenvironment"></a>Test ağı gereksinimleri
+## <a name="test-network-requirements"></a><a name="BKMK_testnetworkenvironment"></a> Test ağı gereksinimleri
 
 Adım adım talimatlar aşağıdaki gereksinimlere sahiptir:  
 
@@ -45,20 +45,20 @@ Adım adım talimatlar aşağıdaki gereksinimlere sahiptir:
 
 - Bir kök etki alanı yönetici hesabıyla veya kuruluş etki alanı yönetici hesabıyla oturum açabilir ve bu hesabı bu örnek dağıtımdaki tüm yordamlar için kullanabilirsiniz.  
 
-## <a name="overview-of-the-certificates"></a><a name="BKMK_overview2008"></a>Sertifikalara genel bakış
+## <a name="overview-of-the-certificates"></a><a name="BKMK_overview2008"></a> Sertifikalara genel bakış
 
 Aşağıdaki tablo, Configuration Manager için gerekebilecek PKI sertifikalarının türlerini listeler ve bunların nasıl kullanıldığını açıklar.  
 
 |Sertifika Gereksinimi|Sertifika Açıklaması|  
 |-----------------------------|-----------------------------|  
 |IIS çalıştıran site sistemleri için Web sunucusu sertifikası|Bu sertifika, verileri şifrelemek ve sunucuların istemcilere yetki doğrulamasını yapmak için kullanılır. Internet Information Services (IIS) çalıştıran ve HTTPS kullanacak şekilde Configuration Manager ayarlanan site sistemleri sunucularındaki Configuration Manager dışarıdan yüklenmelidir.<br /><br /> Bu sertifikayı ayarlama ve kurma adımları için, bkz. bu konuda [IIS çalıştıran site sistemleri için Web sunucusu sertifikasını dağıtma](#BKMK_webserver2008_cm2012) .|  
-|Bulut tabanlı dağıtım noktalarına bağlanmak için istemcilere yönelik hizmet sertifikası|Bu sertifikayı yapılandırma ve yüklemeye yönelik adımlar için, bkz. bu konuda [bulut tabanlı dağıtım noktaları için hizmet sertifikası dağıtma](#BKMK_clouddp2008_cm2012) .<br /><br /> **Önemli** : Bu sertifika Windows Azure yönetim sertifikası ile birlikte kullanılır. Yönetim sertifikası hakkında daha fazla bilgi için bkz. [Yönetim sertifikası oluşturma](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate) ve [Windows Azure aboneliğine yönetim sertifikası ekleme](https://docs.microsoft.com/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate).|  
+|Bulut tabanlı dağıtım noktalarına bağlanmak için istemcilere yönelik hizmet sertifikası|Bu sertifikayı yapılandırma ve yüklemeye yönelik adımlar için, bkz. bu konuda [bulut tabanlı dağıtım noktaları için hizmet sertifikası dağıtma](#BKMK_clouddp2008_cm2012) .<br /><br /> **Önemli** : Bu sertifika Windows Azure yönetim sertifikası ile birlikte kullanılır. Yönetim sertifikası hakkında daha fazla bilgi için bkz. [Yönetim sertifikası oluşturma](/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate) ve [Windows Azure aboneliğine yönetim sertifikası ekleme](/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate).|  
 |Windows bilgisayarlar için istemci sertifikası|Bu sertifika, HTTPS kullanacak şekilde ayarlanan site sistemlerine Configuration Manager istemci bilgisayarlarının kimliğini doğrulamak için kullanılır. Aynı zamanda, HTTPS kullanmak üzere ayarlandıklarında işletimsel durumlarını izlemek amacıyla yönetim noktaları ve durum geçiş noktaları için de kullanılabilir. Bilgisayarların Configuration Manager dışarıdan yüklenmesi gerekir.<br /><br /> Bu sertifikayı ayarlama ve yüklemeye yönelik adımlar için bu konudaki [Windows bilgisayarları için istemci sertifikasını dağıtma](#BKMK_client2008_cm2012) bölümüne bakın.|  
 |Dağıtım noktaları için istemci sertifikası|Bu sertifika iki amaca sahiptir:<br /><br /> Bu sertifika, dağıtım noktası durum iletileri göndermeden önce HTTPS etkin bir yönetim noktasına dağıtım noktasının kimliğini doğrulamak amacıyla kullanılır.<br /><br /> **İstemciler için PXE desteğini etkinleştir** dağıtım noktası seçeneği seçildiğinde, sertifika, işletim sisteminin dağıtımı sırasında bir HTTPS etkin yönetim noktasına bağlanabilmeleri için PXE önyüklemesi gerçekleştiren bilgisayarlara gönderilir.<br /><br /> Bu sertifikayı ayarlama ve kurma adımları için bu konudaki [dağıtım noktaları için istemci sertifikasını dağıtma](#BKMK_clientdistributionpoint2008_cm2012) bölümüne bakın.|  
 |Mobil aygıtlar için kayıt sertifikası|Bu sertifika, HTTPS kullanacak şekilde ayarlanan site sistemlerine Configuration Manager mobil cihaz istemcilerinin kimliğini doğrulamak için kullanılır. Configuration Manager mobil cihaz kaydının bir parçası olarak yüklenmelidir ve yapılandırılmış sertifika şablonunu bir mobil aygıt istemci ayarı olarak seçersiniz.<br /><br /> Bu sertifikayı ayarlama adımları için bu konudaki [mobil cihazlar için kayıt sertifikasını dağıtma](#BKMK_mobiledevices2008_cm2012) bölümüne bakın.|  
 |Mac bilgisayarlar için istemci sertifikası|Configuration Manager kaydını kullandığınızda ve yapılandırılmış sertifika şablonunu bir mobil aygıt istemci ayarı olarak seçtiğinizde, bu sertifikayı bir Mac bilgisayardan isteyebilir ve yükleyebilirsiniz.<br /><br /> Bu sertifikayı ayarlama adımları için bu konudaki [Mac bilgisayarlar için istemci sertifikasını dağıtma](#BKMK_MacClient_SP1) bölümüne bakın.|  
 
-## <a name="deploy-the-web-server-certificate-for-site-systems-that-run-iis"></a><a name="BKMK_webserver2008_cm2012"></a>IIS çalıştıran site sistemleri için Web sunucusu sertifikasını dağıtma
+## <a name="deploy-the-web-server-certificate-for-site-systems-that-run-iis"></a><a name="BKMK_webserver2008_cm2012"></a> IIS çalıştıran site sistemleri için Web sunucusu sertifikasını dağıtma
 
 Sertifika dağıtımı aşağıdaki yordamlara sahiptir:  
 
@@ -68,7 +68,7 @@ Sertifika dağıtımı aşağıdaki yordamlara sahiptir:
 
 - IIS 'yi Web sunucusu sertifikasını kullanacak şekilde yapılandırma  
 
-### <a name="create-and-issue-the-web-server-certificate-template-on-the-certification-authority"></a><a name="BKMK_webserver22008"></a>Sertifika yetkilisinde Web sunucusu sertifika şablonu oluşturma ve verme
+### <a name="create-and-issue-the-web-server-certificate-template-on-the-certification-authority"></a><a name="BKMK_webserver22008"></a> Sertifika yetkilisinde Web sunucusu sertifika şablonu oluşturma ve verme
 
 Bu yordam Configuration Manager site sistemleri için bir sertifika şablonu oluşturur ve sertifika yetkilisine ekler.  
 
@@ -103,14 +103,14 @@ Bu yordam Configuration Manager site sistemleri için bir sertifika şablonu olu
 
 13. Daha fazla sertifika oluşturmanız ve bu sertifikaların verilgerekmiyorsa **sertifika yetkilisi**' ni kapatın.  
 
-###  <a name="request-the-web-server-certificate"></a><a name="BKMK_webserver32008"></a>Web sunucusu sertifikası isteme  
+###  <a name="request-the-web-server-certificate"></a><a name="BKMK_webserver32008"></a> Web sunucusu sertifikası isteme  
  Bu yordam, site sistem sunucusu özelliklerinde ayarlanacak intranet ve İnternet FQDN değerlerini belirtmenizi sağlar ve ardından Web sunucusu sertifikasını IIS çalıştıran üye sunucuya kurar.  
 
 ##### <a name="to-request-the-web-server-certificate"></a>Web sunucusu sertifikası istemek için  
 
 1.  Bilgisayarın, yapılandırdığınız **okuma** ve **kaydetme** izinlerini kullanarak oluşturduğunuz sertifika şablonuna ERIŞEBILDIĞINDEN emin olmak için IIS çalıştıran üye sunucuyu yeniden başlatın.  
 
-2.  **Başlat**' ı seçin, **Çalıştır**' ı seçin ve ardından **MMC. exe yazın.** Boş konsolda **Dosya**' yı seçin ve **ek bileşen Ekle/Kaldır**' ı seçin.  
+2.  **Başlat**' ı seçin, **Çalıştır**' ı seçin ve ardından **mmc.exe yazın.** Boş konsolda **Dosya**' yı seçin ve **ek bileşen Ekle/Kaldır**' ı seçin.  
 
 3.  **Ek bileşenler Ekle/Kaldır** Iletişim kutusunda **kullanılabilir ek bileşenler**listesinden **Sertifikalar** ' ı seçin ve ardından **Ekle**' yi seçin.  
 
@@ -153,7 +153,7 @@ Bu yordam Configuration Manager site sistemleri için bir sertifika şablonu olu
 
 16. **Sertifikalar (Yerel Bilgisayar)**'ı kapatın.  
 
-###  <a name="configure-iis-to-use-the-web-server-certificate"></a><a name="BKMK_webserver42008"></a>IIS 'yi Web sunucusu sertifikasını kullanacak şekilde yapılandırma  
+###  <a name="configure-iis-to-use-the-web-server-certificate"></a><a name="BKMK_webserver42008"></a> IIS 'yi Web sunucusu sertifikasını kullanacak şekilde yapılandırma  
  Bu yordam, yüklü sertifikayı IIS **Varsayılan Web Sitesi**'ne bağlar.  
 
 ##### <a name="to-set-up-iis-to-use-the-web-server-certificate"></a>IIS 'yi Web sunucusu sertifikasını kullanacak şekilde ayarlamak için  
@@ -178,7 +178,7 @@ Bu yordam Configuration Manager site sistemleri için bir sertifika şablonu olu
 > [!IMPORTANT]  
 >  Bu bilgisayara Configuration Manager site sistem sunucusunu yüklediğinizde, site sistem özelliklerinde FQDN 'leri sertifikayı istediğinizde belirtdiklerinizle aynı şekilde belirttiğinizden emin olun.  
 
-##  <a name="deploy-the-service-certificate-for-cloud-based-distribution-points"></a><a name="BKMK_clouddp2008_cm2012"></a>Bulut tabanlı dağıtım noktaları için hizmet sertifikası dağıtma  
+##  <a name="deploy-the-service-certificate-for-cloud-based-distribution-points"></a><a name="BKMK_clouddp2008_cm2012"></a> Bulut tabanlı dağıtım noktaları için hizmet sertifikası dağıtma  
 
 Sertifika dağıtımı aşağıdaki yordamlara sahiptir:  
 
@@ -188,7 +188,7 @@ Sertifika dağıtımı aşağıdaki yordamlara sahiptir:
 
 - [Bulut tabanlı dağıtım noktaları için özel Web sunucusu sertifikasını dışarı aktarma](#BKMK_clouddpexporting2008)  
 
-###  <a name="create-and-issue-a-custom-web-server-certificate-template-on-the-certification-authority"></a><a name="BKMK_clouddpcreating2008"></a>Sertifika yetkilisinde özel Web sunucusu sertifika şablonu oluşturma ve verme  
+###  <a name="create-and-issue-a-custom-web-server-certificate-template-on-the-certification-authority"></a><a name="BKMK_clouddpcreating2008"></a> Sertifika yetkilisinde özel Web sunucusu sertifika şablonu oluşturma ve verme  
  Bu yordam, Web sunucusu sertifika şablonunu temel alan özel bir sertifika şablonu oluşturur. Sertifika, bulut tabanlı Configuration Manager dağıtım noktalarına yöneliktir ve özel anahtar dışarı aktarılabilir olmalıdır. Sertifika şablonu oluşturulduktan sonra sertifika yetkilisine eklenir.  
 
 > [!NOTE]
@@ -233,14 +233,14 @@ Sertifika dağıtımı aşağıdaki yordamlara sahiptir:
 
 14. Daha fazla sertifika oluşturmanız ve bu sertifikaya ihtiyacınız yoksa **sertifika yetkilisi**' ni kapatın.  
 
-###  <a name="request-the-custom-web-server-certificate"></a><a name="BKMK_clouddprequesting2008"></a>Özel Web sunucusu sertifikası isteme  
+###  <a name="request-the-custom-web-server-certificate"></a><a name="BKMK_clouddprequesting2008"></a> Özel Web sunucusu sertifikası isteme  
  Bu yordam, site sunucusunu çalıştıracak üye sunucuya özel Web sunucusu sertifikasını ister ve sonra kurar.  
 
 ##### <a name="to-request-the-custom-web-server-certificate"></a>Özel Web sunucusu sertifikası istemek için  
 
 1.  Bilgisayarın, yapılandırdığınız **okuma** ve **kaydetme** izinlerini kullanarak oluşturduğunuz sertifika şablonuna erişebildiğinden emin olmak için **ConfigMgr Site sunucuları** güvenlik grubunu oluşturduktan ve yapılandırdıktan sonra üye sunucuyu yeniden başlatın.  
 
-2.  **Başlat**' ı seçin, **Çalıştır**' ı seçin ve ardından **MMC. exe yazın.** Boş konsolda **Dosya**' yı seçin ve **ek bileşen Ekle/Kaldır**' ı seçin.  
+2.  **Başlat**' ı seçin, **Çalıştır**' ı seçin ve ardından **mmc.exe girin.** Boş konsolda **Dosya**' yı seçin ve **ek bileşen Ekle/Kaldır**' ı seçin.  
 
 3.  **Ek bileşenler Ekle/Kaldır** Iletişim kutusunda **kullanılabilir ek bileşenler**listesinden **Sertifikalar** ' ı seçin ve ardından **Ekle**' yi seçin.  
 
@@ -275,7 +275,7 @@ Sertifika dağıtımı aşağıdaki yordamlara sahiptir:
 
 17. **Sertifikalar (Yerel Bilgisayar)**'ı kapatın.  
 
-###  <a name="export-the-custom-web-server-certificate-for-cloud-based-distribution-points"></a><a name="BKMK_clouddpexporting2008"></a>Bulut tabanlı dağıtım noktaları için özel Web sunucusu sertifikasını dışarı aktarma  
+###  <a name="export-the-custom-web-server-certificate-for-cloud-based-distribution-points"></a><a name="BKMK_clouddpexporting2008"></a> Bulut tabanlı dağıtım noktaları için özel Web sunucusu sertifikasını dışarı aktarma  
  Bu yordam, bulut tabanlı dağıtım noktasını oluşturduğunuzda özel Web sunucusu sertifikasının içeri aktarılabilmesi için onu dosyaya aktarır.  
 
 ##### <a name="to-export-the-custom-web-server-certificate-for-cloud-based-distribution-points"></a>Bulut tabanlı dağıtım noktalarına yönelik özel Web sunucusu sertifikasını dışarı aktarmak için  
@@ -303,7 +303,7 @@ Sertifika dağıtımı aşağıdaki yordamlara sahiptir:
 
    Sertifika artık bulut tabanlı dağıtım noktasını oluşturduğunuzda içeri aktarılmaya hazırdır.  
 
-##  <a name="deploy-the-client-certificate-for-windows-computers"></a><a name="BKMK_client2008_cm2012"></a>Windows bilgisayarları için istemci sertifikasını dağıtma  
+##  <a name="deploy-the-client-certificate-for-windows-computers"></a><a name="BKMK_client2008_cm2012"></a> Windows bilgisayarları için istemci sertifikasını dağıtma  
  Sertifika dağıtımı aşağıdaki yordamlara sahiptir:  
 
 - Sertifika yetkilisinde Iş Istasyonu kimlik doğrulama sertifika şablonu oluşturma ve verme  
@@ -312,7 +312,7 @@ Sertifika dağıtımı aşağıdaki yordamlara sahiptir:
 
 - Iş Istasyonu kimlik doğrulama sertifikasını otomatik olarak kaydetme ve bilgisayarlara yüklenmesini doğrulama  
 
-###  <a name="create-and-issue-the-workstation-authentication-certificate-template-on-the-certification-authority"></a><a name="BKMK_client02008"></a>Sertifika yetkilisinde Iş Istasyonu kimlik doğrulama sertifika şablonu oluşturma ve verme  
+###  <a name="create-and-issue-the-workstation-authentication-certificate-template-on-the-certification-authority"></a><a name="BKMK_client02008"></a> Sertifika yetkilisinde Iş Istasyonu kimlik doğrulama sertifika şablonu oluşturma ve verme  
  Bu yordam Configuration Manager istemci bilgisayarları için bir sertifika şablonu oluşturur ve sertifika yetkilisine ekler.  
 
 ##### <a name="to-create-and-issue-the-workstation-authentication-certificate-template-on-the-certification-authority"></a>Sertifika yetkilisinde İş İstasyonu Kimlik Doğrulama sertifika şablonu oluşturmak ve vermek için  
@@ -338,7 +338,7 @@ Sertifika dağıtımı aşağıdaki yordamlara sahiptir:
 
 9. Daha fazla sertifika oluşturmanız ve bu sertifikaların verilgerekmiyorsa **sertifika yetkilisi**' ni kapatın.  
 
-###  <a name="configure-autoenrollment-of-the-workstation-authentication-template-by-using-group-policy"></a><a name="BKMK_client12008"></a>grup ilkesi kullanarak Iş Istasyonu kimlik doğrulama şablonunun otomatik kaydını yapılandırın  
+###  <a name="configure-autoenrollment-of-the-workstation-authentication-template-by-using-group-policy"></a><a name="BKMK_client12008"></a> grup ilkesi kullanarak Iş Istasyonu kimlik doğrulama şablonunun otomatik kaydını yapılandırın  
  Bu yordam, bilgisayarlardaki istemci sertifikasını otomatik olarak kaydetmek için grup ilkesi ayarlar.  
 
 ##### <a name="to-set-up-autoenrollment-of-the-workstation-authentication-template-by-using-group-policy"></a>grup ilkesi kullanarak Iş Istasyonu kimlik doğrulama şablonunun otomatik kaydını ayarlamak için  
@@ -362,7 +362,7 @@ Sertifika dağıtımı aşağıdaki yordamlara sahiptir:
 
 8.  **Grup İlkesi Yönetimi**'ni kapatın.  
 
-###  <a name="automatically-enroll-the-workstation-authentication-certificate-and-verify-its-installation-on-computers"></a><a name="BKMK_client22008"></a>Iş Istasyonu kimlik doğrulama sertifikasını otomatik olarak kaydetme ve bilgisayarlara yüklenmesini doğrulama  
+###  <a name="automatically-enroll-the-workstation-authentication-certificate-and-verify-its-installation-on-computers"></a><a name="BKMK_client22008"></a> Iş Istasyonu kimlik doğrulama sertifikasını otomatik olarak kaydetme ve bilgisayarlara yüklenmesini doğrulama  
  Bu yordam, istemci sertifikasını bilgisayarlara yükler ve yüklemeyi doğrular.  
 
 ##### <a name="to-automatically-enroll-the-workstation-authentication-certificate-and-verify-its-installation-on-the-client-computer"></a>Iş Istasyonu kimlik doğrulama sertifikasını otomatik olarak kaydetmek ve istemci bilgisayara yüklenmesini doğrulamak için  
@@ -374,7 +374,7 @@ Sertifika dağıtımı aşağıdaki yordamlara sahiptir:
 
 2. Yönetici ayrıcalıklarına sahip bir hesapla oturum açın.  
 
-3. Arama kutusunda, **MMC. exe.** yazın ve **ENTER**tuşuna basın.  
+3. Arama kutusuna **mmc.exe.** **yazın ve ENTER tuşuna basın**.  
 
 4. Boş yönetim konsolunda **Dosya**' yı seçin ve **ek bileşen Ekle/Kaldır**' ı seçin.  
 
@@ -396,7 +396,7 @@ Sertifika dağıtımı aşağıdaki yordamlara sahiptir:
 
     Bilgisayar artık Configuration Manager istemci sertifikası ile ayarlanır.  
 
-##  <a name="deploy-the-client-certificate-for-distribution-points"></a><a name="BKMK_clientdistributionpoint2008_cm2012"></a>Dağıtım noktaları için istemci sertifikasını dağıtma  
+##  <a name="deploy-the-client-certificate-for-distribution-points"></a><a name="BKMK_clientdistributionpoint2008_cm2012"></a> Dağıtım noktaları için istemci sertifikasını dağıtma  
 
 > [!NOTE]  
 >  Sertifika gereksinimleri aynı olduğundan bu sertifika, PXE önyüklemesi kullanmayan medya görüntüleri için de kullanılabilir.  
@@ -409,7 +409,7 @@ Sertifika dağıtımı aşağıdaki yordamlara sahiptir:
 
 - Dağıtım noktaları için istemci sertifikasını dışarı aktarma  
 
-###  <a name="create-and-issue-a-custom-workstation-authentication-certificate-template-on-the-certification-authority"></a><a name="BKMK_clientdistributionpoint02008"></a>Sertifika yetkilisinde özel Iş Istasyonu kimlik doğrulama sertifika şablonu oluşturma ve verme  
+###  <a name="create-and-issue-a-custom-workstation-authentication-certificate-template-on-the-certification-authority"></a><a name="BKMK_clientdistributionpoint02008"></a> Sertifika yetkilisinde özel Iş Istasyonu kimlik doğrulama sertifika şablonu oluşturma ve verme  
  Bu yordam, özel anahtarın verilebilmesi ve sertifika şablonunu sertifika yetkilisine eklemesi için Configuration Manager dağıtım noktaları için özel bir sertifika şablonu oluşturur.  
 
 > [!NOTE]
@@ -450,12 +450,12 @@ Sertifika dağıtımı aşağıdaki yordamlara sahiptir:
 
 12. Daha fazla sertifika oluşturmanız ve bu sertifikaya ihtiyacınız yoksa **sertifika yetkilisi**' ni kapatın.  
 
-###  <a name="request-the-custom-workstation-authentication-certificate"></a><a name="BKMK_clientdistributionpoint12008"></a>Özel Iş Istasyonu kimlik doğrulama sertifikası isteme  
+###  <a name="request-the-custom-workstation-authentication-certificate"></a><a name="BKMK_clientdistributionpoint12008"></a> Özel Iş Istasyonu kimlik doğrulama sertifikası isteme  
  Bu yordam, IIS çalıştıran ve bir dağıtım noktası olarak ayarlanacak üye sunucusuna özel istemci sertifikasını ister ve sonra kurar.  
 
 ##### <a name="to-request-the-custom-workstation-authentication-certificate"></a>Özel İş İstasyonu Kimlik Doğrulama sertifikası istemek için  
 
-1.  **Başlat**' ı seçin, **Çalıştır**' ı seçin ve ardından **MMC. exe yazın.** Boş konsolda **Dosya**' yı seçin ve **ek bileşen Ekle/Kaldır**' ı seçin.  
+1.  **Başlat**' ı seçin, **Çalıştır**' ı seçin ve ardından **mmc.exe girin.** Boş konsolda **Dosya**' yı seçin ve **ek bileşen Ekle/Kaldır**' ı seçin.  
 
 2.  **Ek bileşenler Ekle/Kaldır** Iletişim kutusunda **kullanılabilir ek bileşenler**listesinden **Sertifikalar** ' ı seçin ve ardından **Ekle**' yi seçin.  
 
@@ -481,7 +481,7 @@ Sertifika dağıtımı aşağıdaki yordamlara sahiptir:
 
 13. **Sertifikalar (Yerel Bilgisayar)**'ı kapatmayın.  
 
-###  <a name="export-the-client-certificate-for-distribution-points"></a><a name="BKMK_exportclientdistributionpoint22008"></a>Dağıtım noktaları için istemci sertifikasını dışarı aktarma  
+###  <a name="export-the-client-certificate-for-distribution-points"></a><a name="BKMK_exportclientdistributionpoint22008"></a> Dağıtım noktaları için istemci sertifikasını dışarı aktarma  
  Bu yordam, dağıtım noktası özelliklerine alınabilmesi için özel Iş Istasyonu kimlik doğrulama sertifikasını bir dosyaya aktarır.  
 
 ##### <a name="to-export-the-client-certificate-for-distribution-points"></a>Dağıtım noktaları için istemci sertifikasını vermek için  
@@ -512,7 +512,7 @@ Sertifika dağıtımı aşağıdaki yordamlara sahiptir:
 > [!TIP]  
 >  PXE önyüklemesi kullanmayan bir işletim sistemi dağıtımı için medya görüntülerini ayarlarken aynı sertifika dosyasını kullanabilirsiniz ve görüntüyü yükleme görev dizisi, HTTPS istemci bağlantıları gerektiren bir yönetim noktasıyla iletişim kurmanız gerekir.  
 
-##  <a name="deploy-the-enrollment-certificate-for-mobile-devices"></a><a name="BKMK_mobiledevices2008_cm2012"></a>Mobil cihazlar için kayıt sertifikasını dağıtma  
+##  <a name="deploy-the-enrollment-certificate-for-mobile-devices"></a><a name="BKMK_mobiledevices2008_cm2012"></a> Mobil cihazlar için kayıt sertifikasını dağıtma  
  Bu sertifika dağıtımı, sertifika yetkilisinde kayıt sertifikası şablonu oluşturmak ve vermek için tek bir yordama sahiptir.  
 
 ### <a name="create-and-issue-the-enrollment-certificate-template-on-the-certification-authority"></a>Sertifika yetkilisinde kayıt sertifikası şablonu oluşturma ve verme  
@@ -547,11 +547,11 @@ Sertifika dağıtımı aşağıdaki yordamlara sahiptir:
 
     Mobil cihaz kayıt sertifikası şablonu artık istemci ayarlarında bir mobil cihaz kayıt profili ayarlarken seçilmeye hazırdır.  
 
-##  <a name="deploy-the-client-certificate-for-mac-computers"></a><a name="BKMK_MacClient_SP1"></a>Mac bilgisayarlar için istemci sertifikasını dağıtma  
+##  <a name="deploy-the-client-certificate-for-mac-computers"></a><a name="BKMK_MacClient_SP1"></a> Mac bilgisayarlar için istemci sertifikasını dağıtma  
 
 Bu sertifika dağıtımı, sertifika yetkilisinde kayıt sertifikası şablonu oluşturmak ve vermek için tek bir yordama sahiptir.  
 
-###  <a name="create-and-issue-a-mac-client-certificate-template-on-the-certification-authority"></a><a name="BKMK_MacClient_CreatingIssuing"></a>Sertifika yetkilisinde bir Mac istemci sertifikası şablonu oluşturma ve verme  
+###  <a name="create-and-issue-a-mac-client-certificate-template-on-the-certification-authority"></a><a name="BKMK_MacClient_CreatingIssuing"></a> Sertifika yetkilisinde bir Mac istemci sertifikası şablonu oluşturma ve verme  
  Bu yordam Configuration Manager Mac bilgisayarları için özel bir sertifika şablonu oluşturur ve sertifika şablonunu sertifika yetkilisine ekler.  
 
 > [!NOTE]  

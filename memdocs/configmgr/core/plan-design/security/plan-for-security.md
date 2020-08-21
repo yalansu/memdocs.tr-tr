@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6fa5ebf25de0f695661b18c4379c080dad42cf08
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0cdb14d282cbfa93655d6678b12b5f0837a225aa
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128503"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699288"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Configuration Manager Güvenlik için plan yapın
 
@@ -45,7 +45,7 @@ Bu makalede, Configuration Manager uygulamanıza güvenlik planlaması yaparken 
 
 
 
-##  <a name="plan-for-certificates-self-signed-and-pki"></a><a name="BKMK_PlanningForCertificates"></a>Sertifikaları planlayın (otomatik imzalı ve PKI)  
+##  <a name="plan-for-certificates-self-signed-and-pki"></a><a name="BKMK_PlanningForCertificates"></a> Sertifikaları planlayın (otomatik imzalı ve PKI)  
 
 Configuration Manager, otomatik olarak imzalanan sertifikaların ve ortak anahtar altyapısı (PKI) sertifikalarının bir birleşimini kullanır.  
 
@@ -58,24 +58,24 @@ Bir PKI kullandığınızda, bir sitedeki site sistemleri arasındaki sunucudan 
 PKI sertifikaları kullanılabilir olmadığında, otomatik olarak imzalanan sertifikalar oluşturur Configuration Manager. Configuration Manager içindeki bazı sertifikalar her zaman otomatik olarak imzalanır. Çoğu durumda Configuration Manager otomatik olarak imzalanan sertifikaları otomatik olarak yönetir ve ek işlem yapmanız gerekmez. Bir örnek, site sunucusu imzalama sertifikasıdır. Bu sertifika her zaman otomatik olarak imzalanır. İstemcilerin yönetim noktasından indirdikleri ilkelerin site sunucusundan gönderildiğinden ve kurcalanmadığından emin olur.  
 
 
-### <a name="cryptography-next-generation-cng-certificates"></a><a name="bkmk_plan-cng"></a>Şifreleme: yeni nesil (CNG) sertifikaları  
+### <a name="cryptography-next-generation-cng-certificates"></a><a name="bkmk_plan-cng"></a> Şifreleme: yeni nesil (CNG) sertifikaları  
 
 Configuration Manager şifrelemeyi destekler: yeni nesil (CNG) sertifikaları. Configuration Manager istemcileri, CNG Anahtar depolama sağlayıcısında (KSP) özel anahtarla PKI istemci kimlik doğrulama sertifikasını kullanabilir. KSP desteğiyle Configuration Manager istemcileri, PKI istemci kimlik doğrulama sertifikaları için TPM KSP gibi donanım tabanlı özel anahtarı destekler. Daha fazla bilgi için bkz. [CNG sertifikalarına genel bakış](../network/cng-certificates-overview.md).
 
 
-### <a name="enhanced-http"></a><a name="bkmk_plan-ehttp"></a>Gelişmiş HTTP  
+### <a name="enhanced-http"></a><a name="bkmk_plan-ehttp"></a> Gelişmiş HTTP  
 
 HTTPS iletişimini kullanmak tüm Configuration Manager iletişim yollarında önerilir, ancak PKI sertifikalarını yönetme yükü nedeniyle bazı müşteriler için zordur. Azure Active Directory (Azure AD) Tümleştirmesi 'nin tanıtımı, sertifika gereksinimlerinin tümünü değil, bazılarını azaltır. Sürüm 1806 ' den başlayarak, sitenin **GELIŞMIŞ http**kullanmasını sağlayabilirsiniz. Bu yapılandırma, otomatik olarak imzalanan sertifikaların ve Azure AD 'nin bir birleşimini kullanarak site sistemlerinde HTTPS 'yi destekler. PKI gerektirmez. Daha fazla bilgi için bkz. [GELIŞMIŞ http](../hierarchy/enhanced-http.md).  
 
 
-### <a name="certificates-for-cmg-and-cdp"></a><a name="bkmk_plan-cmgcdp"></a>CMG ve CDP sertifikaları
+### <a name="certificates-for-cmg-and-cdp"></a><a name="bkmk_plan-cmgcdp"></a> CMG ve CDP sertifikaları
 
 Bulut yönetimi ağ geçidi (CMG) ve bulut dağıtım noktası (CDP) aracılığıyla Internet 'teki istemcileri yönetmek için sertifikaların kullanılması gerekir. Sertifika sayısı ve türü, belirli senaryolarınıza bağlı olarak farklılık gösterir. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 - [Bulut yönetimi ağ geçidi için sertifikalar](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md)  
 - [Bulut dağıtım noktası için sertifikalar](../hierarchy/use-a-cloud-based-distribution-point.md#bkmk_certs)  
 
 
-### <a name="plan-for-the-site-server-signing-certificate-self-signed"></a><a name="bkmk_plansitesign"></a>Site sunucusu imzalama sertifikası (otomatik imzalı) için plan yapın  
+### <a name="plan-for-the-site-server-signing-certificate-self-signed"></a><a name="bkmk_plansitesign"></a> Site sunucusu imzalama sertifikası (otomatik imzalı) için plan yapın  
 
 İstemciler site sunucusu imzalama sertifikasının bir kopyasını Active Directory Domain Services 'den ve Client Push yüklemesinden güvenli bir şekilde alabilir. İstemcileri bu mekanizmalardan biri ile bu sertifikanın bir kopyasını alamazsanız, istemciyi yüklerken yükleyebilirsiniz. İstemcinin siteyle ilk iletişimi Internet tabanlı bir yönetim noktası ise bu işlem özellikle önemlidir. Bu sunucu güvenilmeyen bir ağa bağlı olduğundan saldırıya karşı daha savunmasız olur. Bu ek adım yapmazsanız, istemciler site sunucusu imzalama sertifikasının bir kopyasını yönetim noktasından otomatik olarak indirir.  
 
@@ -97,10 +97,10 @@ Bulut yönetimi ağ geçidi (CMG) ve bulut dağıtım noktası (CDP) aracılığ
 
 2.  Özel anahtar olmadan sertifikayı dışarı aktarın, dosyayı güvenli bir şekilde depolayın ve yalnızca güvenli bir kanaldan erişin.  
 
-3.  Aşağıdaki client.msi özelliğini kullanarak istemciyi yükler:`SMSSIGNCERT=<full path and file name>`  
+3.  Aşağıdaki client.msi özelliğini kullanarak istemciyi yükler: `SMSSIGNCERT=<full path and file name>`  
 
 
-###  <a name="plan-for-pki-certificate-revocation"></a><a name="BKMK_PlanningForCRLs"></a>PKI sertifikası iptalini planlayın  
+###  <a name="plan-for-pki-certificate-revocation"></a><a name="BKMK_PlanningForCRLs"></a> PKI sertifikası iptalini planlayın  
 
 Configuration Manager ile PKI sertifikaları kullandığınızda, sertifika iptal listesinin (CRL) kullanımını planlayın. Cihazlar bağlanan bilgisayardaki sertifikayı doğrulamak için CRL 'YI kullanır. CRL, bir sertifika yetkilisi (CA) tarafından oluşturulan ve işaret eden bir dosyadır. CA 'nın verdiği ancak iptal edildiği sertifikaların listesini içerir. Bir sertifika yöneticisi sertifikaları iptal ettiğinizde, parmak izi CRL 'ye eklenir. Örneğin, verilen bir sertifikanın tehlikede olduğu bilinmektedir veya bu sertifikaya şüphe Duyulmuşsa.
 
@@ -123,7 +123,7 @@ Configuration Manager istemcilerinin CRL 'YI denetlemesini gerekip gerekmediğin
   - CRL bulunamıyorsa istemciler, sunuculara bağlanamayan risk  
 
 
-###  <a name="plan-for-the-pki-trusted-root-certificates-and-the-certificate-issuers-list"></a><a name="BKMK_PlanningForRootCAs"></a>PKI güvenilir kök sertifikaları ve sertifika verenler listesini planlayın  
+###  <a name="plan-for-the-pki-trusted-root-certificates-and-the-certificate-issuers-list"></a><a name="BKMK_PlanningForRootCAs"></a> PKI güvenilir kök sertifikaları ve sertifika verenler listesini planlayın  
 
 IIS site sistemleriniz HTTP üzerinden istemci kimlik doğrulaması için veya HTTPS üzerinden istemci kimlik doğrulaması ve şifreleme için PKI istemci sertifikaları kullanıyorsa, kök CA sertifikalarını site özelliği olarak içeri aktarmanız gerekebilir. İki senaryo şunlardır:  
 
@@ -145,7 +145,7 @@ Bu içeri aktarılan kök sertifika YETKILISI sertifikaları ve her bir yönetim
 - İstemciler bir PKI sertifikası seçtiklerinde ve sertifika verenler listesine sahip olduğunda, sertifika verenler listesinde güvenilen bir kök sertifikaya zincirden bir sertifika seçer. Eşleşme yoksa, istemci bir PKI sertifikası seçmez. Daha fazla bilgi için bkz. [plan for PKI istemci sertifikası seçimi](#BKMK_PlanningForClientCertificateSelection).  
 
 
-###  <a name="plan-for-pki-client-certificate-selection"></a><a name="BKMK_PlanningForClientCertificateSelection"></a>PKI istemci sertifikası seçimini planlayın  
+###  <a name="plan-for-pki-client-certificate-selection"></a><a name="BKMK_PlanningForClientCertificateSelection"></a> PKI istemci sertifikası seçimini planlayın  
 
 IIS site sistemleriniz HTTP üzerinden istemci kimlik doğrulaması için veya HTTPS üzerinden istemci kimlik doğrulaması ve şifreleme için PKI istemci sertifikaları kullanıyorsa, Windows istemcilerinin Configuration Manager için kullanılacak sertifikayı nasıl seçmesini planlayın.  
 
@@ -226,7 +226,7 @@ Benzersiz bir PKI istemci sertifikasını belirlemenize yardımcı olmak için, 
 Daha fazla bilgi için bkz. [ISTEMCI PKI sertifikaları için ayarları yapılandırma](configure-security.md#BKMK_ConfigureClientPKI).  
 
 
-###  <a name="plan-a-transition-strategy-for-pki-certificates-and-internet-based-client-management"></a><a name="BKMK_PlanningForPKITransition"></a>PKI sertifikaları ve Internet tabanlı istemci yönetimi için bir geçiş stratejisi planlayın  
+###  <a name="plan-a-transition-strategy-for-pki-certificates-and-internet-based-client-management"></a><a name="BKMK_PlanningForPKITransition"></a> PKI sertifikaları ve Internet tabanlı istemci yönetimi için bir geçiş stratejisi planlayın  
 
 Configuration Manager ' deki esnek yapılandırma seçenekleri, istemci uç noktalarını güvenli hale getirmek için istemcileri ve siteyi PKI sertifikalarını kullanmak üzere giderek büyütmenizi sağlar. PKI sertifikaları daha iyi güvenlik sağlar ve internet istemcilerini yönetmenizi sağlar.  
 
@@ -278,7 +278,7 @@ Configuration Manager yapılandırma seçenekleri ve seçim sayısı nedeniyle, 
 
     Bu plan, ilk olarak yalnızca HTTP üzerinden kimlik doğrulaması için PKI sertifikaları ve HTTPS üzerinden kimlik doğrulaması ve şifreleme sağlar. Bu bir sertifikayı kademeli olarak tanıtmak için bu planı izlediğinizde, istemcilerin yönetilmeyen hale geldiği riski azaltabilirsiniz. Configuration Manager desteklediği en yüksek güvenlikten de yararlanabilirsiniz.  
 
-##  <a name="plan-for-the-trusted-root-key"></a><a name="BKMK_PlanningForRTK"></a>Güvenilen kök anahtarı planlayın  
+##  <a name="plan-for-the-trusted-root-key"></a><a name="BKMK_PlanningForRTK"></a> Güvenilen kök anahtarı planlayın  
 
 Configuration Manager güvenilir kök anahtarı, Configuration Manager istemcilerinin, site sistemlerinin kendi hiyerarşilerine ait olduğunu doğrulaması için bir mekanizma sağlar. Her site sunucusu, diğer sitelerle iletişim kurmak için bir site değişim anahtarı oluşturur. Hiyerarşideki üst düzey siteden site değişim anahtarına, güvenilir kök anahtar adı verilir.  
 
@@ -310,9 +310,9 @@ Bir Configuration Manager istemcisi için güvenilir kök anahtarı önceden sa�
   > İstemciler yönetim noktalarına HTTPS iletişimi kullandıklarında, güvenilen kök anahtarı önceden sağlamanız gerekmez. Bunlar, PKI sertifikaları tarafından güven kurarlar.  
 
 
-### <a name="pre-provision-a-client-with-the-trusted-root-key-by-using-a-file"></a><a name="bkmk_trk-provision-file"></a>Bir dosya kullanarak güvenilir kök anahtarla bir istemciyi önceden sağlama  
+### <a name="pre-provision-a-client-with-the-trusted-root-key-by-using-a-file"></a><a name="bkmk_trk-provision-file"></a> Bir dosya kullanarak güvenilir kök anahtarla bir istemciyi önceden sağlama  
 
-1.  Site sunucusunda aşağıdaki dosyayı bir metin düzenleyicisinde açın:`<Configuration Manager install directory>\bin\mobileclient.tcf`  
+1.  Site sunucusunda aşağıdaki dosyayı bir metin düzenleyicisinde açın: `<Configuration Manager install directory>\bin\mobileclient.tcf`  
 
 2.  **SMSPublicRootKey =** girişini bulun. Anahtarı bu satırdan kopyalayın ve herhangi bir değişiklik yapmadan dosyayı kapatın.  
 
@@ -320,25 +320,25 @@ Bir Configuration Manager istemcisi için güvenilir kök anahtarı önceden sa�
 
 4.  Dosyayı tüm bilgisayarların erişebileceği bir konuma kaydedin, ancak dosyanın üzerinde değişiklik yapılmasını güvenli hale getirebilirsiniz.  
 
-5.  client.msi özellikleri kabul eden herhangi bir yükleme yöntemini kullanarak istemcisini yükler. Aşağıdaki özelliği belirtin:`SMSROOTKEYPATH=<full path and file name>`  
+5.  client.msi özellikleri kabul eden herhangi bir yükleme yöntemini kullanarak istemcisini yükler. Aşağıdaki özelliği belirtin: `SMSROOTKEYPATH=<full path and file name>`  
 
     > [!IMPORTANT]  
-    > İstemci yüklemesi sırasında güvenilir kök anahtarı belirttiğinizde, site kodunu da belirtin. Aşağıdaki client.msi özelliğini kullanın:`SMSSITECODE=<site code>`   
+    > İstemci yüklemesi sırasında güvenilir kök anahtarı belirttiğinizde, site kodunu da belirtin. Aşağıdaki client.msi özelliğini kullanın: `SMSSITECODE=<site code>`   
 
 
-### <a name="pre-provision-a-client-with-the-trusted-root-key-without-using-a-file"></a><a name="bkmk_trk-provision-nofile"></a>Bir dosya kullanmadan güvenilir kök anahtarla bir istemciyi önceden sağlama  
+### <a name="pre-provision-a-client-with-the-trusted-root-key-without-using-a-file"></a><a name="bkmk_trk-provision-nofile"></a> Bir dosya kullanmadan güvenilir kök anahtarla bir istemciyi önceden sağlama  
 
-1.  Site sunucusunda aşağıdaki dosyayı bir metin düzenleyicisinde açın:`<Configuration Manager install directory>\bin\mobileclient.tcf`  
+1.  Site sunucusunda aşağıdaki dosyayı bir metin düzenleyicisinde açın: `<Configuration Manager install directory>\bin\mobileclient.tcf`  
 
 2.  **SMSPublicRootKey =** girişini bulun. Anahtarı bu satırdan kopyalayın ve herhangi bir değişiklik yapmadan dosyayı kapatın.  
 
 3.  client.msi özellikleri kabul eden herhangi bir yükleme yöntemini kullanarak istemcisini yükler. Aşağıdaki client.msi özelliğini belirtin: `SMSPublicRootKey=<key>` burada `<key>` , MobileClient. tcf dosyasından kopyaladığınız dizedir.  
 
     > [!IMPORTANT]  
-    >  İstemci yüklemesi sırasında güvenilir kök anahtarı belirttiğinizde, site kodunu da belirtin. Aşağıdaki client.msi özelliğini kullanın:`SMSSITECODE=<site code>`   
+    >  İstemci yüklemesi sırasında güvenilir kök anahtarı belirttiğinizde, site kodunu da belirtin. Aşağıdaki client.msi özelliğini kullanın: `SMSSITECODE=<site code>`   
 
 
-### <a name="verify-the-trusted-root-key-on-a-client"></a><a name="bkmk_trk-verify"></a>Bir istemcide güvenilen kök anahtarı doğrulama  
+### <a name="verify-the-trusted-root-key-on-a-client"></a><a name="bkmk_trk-verify"></a> Bir istemcide güvenilen kök anahtarı doğrulama  
 
 1. Yönetici olarak bir Windows PowerShell konsolu açın.  
 
@@ -351,7 +351,7 @@ Bir Configuration Manager istemcisi için güvenilir kök anahtarı önceden sa�
 Döndürülen dize, güvenilen kök anahtarıdır. Site sunucusundaki MobileClient. tcf dosyasındaki **SMSPublicRootKey** değeriyle eşleştiğinden emin olun.  
 
 
-### <a name="remove-or-replace-the-trusted-root-key"></a><a name="bkmk_trk-reset"></a>Güvenilen kök anahtarı kaldır veya Değiştir  
+### <a name="remove-or-replace-the-trusted-root-key"></a><a name="bkmk_trk-reset"></a> Güvenilen kök anahtarı kaldır veya Değiştir  
 
 client.msi özelliğini kullanarak, güvenilen kök anahtarı bir istemciden kaldırın, **Resetkeyınformation = true**. 
 
@@ -361,7 +361,7 @@ Bu yükleme özellikleri hakkında daha fazla bilgi için bkz. [istemci yükleme
 
 
 
-##  <a name="plan-for-signing-and-encryption"></a><a name="BKMK_PlanningForSigningEncryption"></a>İmzalama ve şifrelemeyi planlayın  
+##  <a name="plan-for-signing-and-encryption"></a><a name="BKMK_PlanningForSigningEncryption"></a> İmzalama ve şifrelemeyi planlayın  
  
 Tüm istemci iletişimleri için PKI sertifikaları kullandığınızda, istemci veri iletişiminin güvenliğini sağlamaya yardımcı olmak için imzalama ve şifreleme planlaması yapmanız gerekmez. IIS çalıştıran site sistemlerini HTTP istemci bağlantılarına izin verecek şekilde ayarlarsanız, site için istemci iletişiminin güvenliğini sağlamaya nasıl yardımcı olacağına karar verin.  
 
@@ -373,13 +373,13 @@ Tüm istemci iletişimleri için PKI sertifikaları kullandığınızda, istemci
 
 
 
-##  <a name="plan-for-role-based-administration"></a><a name="BKMK_PlanningForRBA"></a>Rol tabanlı yönetimi planlayın  
+##  <a name="plan-for-role-based-administration"></a><a name="BKMK_PlanningForRBA"></a> Rol tabanlı yönetimi planlayın  
 
 Daha fazla bilgi için bkz. [rol tabanlı yönetimin temelleri](../../understand/fundamentals-of-role-based-administration.md).  
 
 
 
-## <a name="plan-for-azure-active-directory"></a><a name="bkmk_planazuread"></a>Azure Active Directory için plan yapın
+## <a name="plan-for-azure-active-directory"></a><a name="bkmk_planazuread"></a> Azure Active Directory için plan yapın
 
 Configuration Manager, site ve istemcilerin modern kimlik doğrulamasını kullanmasını sağlamak için Azure Active Directory (Azure AD) ile tümleşir. Sitenizi Azure AD ile ekleme aşağıdaki Configuration Manager senaryolarını destekler:
 
@@ -404,7 +404,7 @@ Configuration Manager, site ve istemcilerin modern kimlik doğrulamasını kulla
 
 - [Desktop Analytics](../../../desktop-analytics/overview.md)  
 
-- [Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- [Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 
 - [Topluluk Merkezi](../../get-started/capabilities-in-technical-preview-1807.md#bkmk_hub)  
 
@@ -416,11 +416,11 @@ Configuration Manager, site ve istemcilerin modern kimlik doğrulamasını kulla
 Sitenizi Azure AD 'ye bağlama hakkında daha fazla bilgi için bkz. [Azure hizmetlerini yapılandırma](../../servers/deploy/configure/azure-services-wizard.md).
 
 
-Azure AD hakkında daha fazla bilgi için bkz. [Azure Active Directory belgeleri](https://docs.microsoft.com/azure/active-directory/).
+Azure AD hakkında daha fazla bilgi için bkz. [Azure Active Directory belgeleri](/azure/active-directory/).
 
 
 
-## <a name="plan-for-sms-provider-authentication"></a><a name="bkmk_auth"></a>SMS sağlayıcısı kimlik doğrulamasını planlayın
+## <a name="plan-for-sms-provider-authentication"></a><a name="bkmk_auth"></a> SMS sağlayıcısı kimlik doğrulamasını planlayın
 <!--1357013--> 
 
 Sürüm 1810 ' den başlayarak, yöneticilerin Configuration Manager sitelere erişmesi için en düşük kimlik doğrulama düzeyini belirtebilirsiniz. Bu özellik, yöneticilerin Windows 'da gerekli düzeyiyle oturum açmasını zorlar. SMS sağlayıcısına erişen tüm bileşenler için geçerlidir. Örneğin, Configuration Manager konsolu, SDK yöntemleri ve Windows PowerShell cmdlet 'leri. 
@@ -448,5 +448,4 @@ Daha fazla bilgi için bkz. [plan for SMS Provider](../hierarchy/plan-for-the-sm
 
 - [Şifreleme denetimleri teknik başvurusu](cryptographic-controls-technical-reference.md)  
 
-- [PKI sertifikası gereksinimleri](../network/pki-certificate-requirements.md)  
-
+- [PKI sertifikası gereksinimleri](../network/pki-certificate-requirements.md)
