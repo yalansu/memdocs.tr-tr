@@ -2,7 +2,7 @@
 title: Masaüstü Analizinizdeki yenilikler
 titleSuffix: Configuration Manager
 description: Masaüstü Analizi bulut hizmeti 'nin en son aylık sürümündeki yeni özelliklerin özeti.
-ms.date: 08/19/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c41c6333cfee1b6a24bb84c0f020c14c303fd904
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: ce5043f090dd9c08a7a1e9ada5cb2020aabda11f
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614751"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819737"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Masaüstü Analizinizdeki yenilikler
 
@@ -39,6 +39,12 @@ Bir uygulamanın **önem derecesi** , masaüstü analizinin, pilot dağıtımlar
 Artık Configuration Manager ile dağıttığınız tüm uygulamalar için, masaüstü Analizi varsayılan olarak otomatik olarak bunu önemli olarak yapılandırır. Bu davranış, ortamınızdaki uygulamaları daha hızlı bir şekilde bir üretim dağıtımında daha hızlı ilerlemesini sağlamak için yapılandırmanızı sağlar.
 
 Daha fazla bilgi için bkz. [varlıklar-uygulamalar](about-assets.md#apps).
+
+<!-- 6049643 -->
+
+### <a name="improved-processing-of-diagnostic-data-during-snapshot-generation"></a>Anlık görüntü oluşturma sırasında tanılama verilerinin işlenmesi geliştirildi
+
+Microsoft, masaüstü analizine kayıtlı cihazlardan Windows tanılama verilerini nasıl toplayıp işyacağını iyileştirmiştir. Bu geliştirmeler günlük anlık görüntü oluşturma güvenilirliğini artırır ve geliştirmede yeni özellikler hazırlar. Bu işin sonucunda, Microsoft bu uygulamayı başlatılan cihaz sayısını dağıtım planlarındaki **son 30 gün içinde** geçici olarak devre dışı bıraktı. Daha fazla bilgi için bkz. [varlıklar-uygulamalar](about-assets.md#usage).
 
 ## <a name="july-2020"></a>Temmuz 2020
 

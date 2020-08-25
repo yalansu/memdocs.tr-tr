@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 907c8d63d68ee4f34b9d22be24f32ffb1878b715
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: e0ef22ec7bc5eb3d6b9ac3800b3e97374421944c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696183"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819805"
 ---
 # <a name="manage-microsoft-365-apps-with-configuration-manager"></a>Configuration Manager ile Microsoft 365 uygulamalarını yönetme
 
@@ -248,8 +248,7 @@ ADRs 'nizi değiştirme hakkında daha fazla bilgi için bkz. [yazılım güncel
 
 ## <a name="change-the-update-channel-after-you-enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager"></a>Microsoft 365 Apps istemcilerinin Configuration Manager güncelleştirmelerini almasını etkinleştirdikten sonra güncelleştirme kanalını değiştirin
 
-Microsoft 365 uygulamaları dağıttıktan sonra, güncelleştirme kanalını grup ilkesi veya Office dağıtım aracı (ODT) ile değiştirebilirsiniz. Örneğin, bir cihazı yarı yıllık kanaldan yarı yıllık kanala (hedefli) taşıyabilirsiniz. Kanal değiştirilirken, Office, tam sürümü yeniden yüklemek veya indirmek zorunda kalmadan otomatik olarak güncelleştirilir. Daha fazla bilgi için bkz. [kuruluşunuzdaki cihazlar için Microsoft 365 Apps güncelleştirme kanalını değiştirme](//deployoffice/change-update-channels).
-
+Microsoft 365 uygulamaları dağıttıktan sonra, güncelleştirme kanalını grup ilkesi veya Office dağıtım aracı (ODT) ile değiştirebilirsiniz. Örneğin, bir cihazı yarı yıllık kanaldan yarı yıllık kanala (hedefli) taşıyabilirsiniz. Kanal değiştirilirken, Office, tam sürümü yeniden yüklemek veya indirmek zorunda kalmadan otomatik olarak güncelleştirilir. Daha fazla bilgi için bkz. [kuruluşunuzdaki cihazlar için Microsoft 365 Apps güncelleştirme kanalını değiştirme](https://docs.microsoft.com/deployoffice/change-update-channels).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

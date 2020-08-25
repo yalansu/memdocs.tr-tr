@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2718c73cb34e01c84ef07d5085c698028ca285c
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: b6d3f3ea7423cf87d2644611bcbd6e298ac60699
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462006"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820332"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune Veri Ambarı Koleksiyonları
 
@@ -116,7 +116,7 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 
 |  complianceStatus  |                       Açıklama                      |
 |--------------------|--------------------------------------------------------|
-|    Bilinmiyor         |    Bilinmeyen.                                                                        |
+|    Bilinmiyor         |    Bilinmiyor.                                                                        |
 |    Uyumlu       |    Uyumlu.                                                                      |
 |    Uyumsuz    |       Cihazın durumu uyumsuz ve şirket kaynaklarına erişimi engelli.             |
 |    Çakışma        |    Diğer kurallarla çakışıyor.                                                      |
@@ -253,8 +253,9 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 | SubscriberCarrier          | Cihazın abone taşıyıcısı                                                                                                                                                       |
 | PhoneNumber                | Cihazın telefon numarası                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
-| CellularTechnology         | Cihazın hücresel teknolojisi                                                                                                                                                    |
-| WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
+| CellularTechnology         | Cihazın hücresel teknolojisi.                                                                                                                                                    |
+| WiFiMacAddress             | Wi-Fi MAC.                                                                                                                                                                              |
+| windowsOsEdition             | Windows Işletim sistemi sürümü.                                                                                                                                                                              |
 
 
 ## <a name="devicetypes"></a>deviceTypes
@@ -364,7 +365,7 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 | Geçerli değil                  | Kayıt hatası kategorisi geçerli değil.                                                            |
 | Kullanılamaz                   | Kayıt hatası kategorisi kullanılamıyor.                                                             |
 | Bilinmiyor                         | Bilinmeyen hata.                                                                                                |
-| Kimlik Doğrulaması                  | Kimlik doğrulaması gerçekleştirilemedi.                                                                                        |
+| Kimlik Doğrulama                  | Kimlik doğrulaması gerçekleştirilemedi.                                                                                        |
 | Yetkilendirme                   | Çağrının kimliği doğrulandı, ancak kaydolma yetkisi yok.                                                         |
 | AccountValidation               | Kayıt için Hesap doğrulanamadı. (Hesap engellendi, kayıt etkin değil)                      |
 | Kullanıcı doğrulaması                  | Kullanıcı doğrulanamadı. (Kullanıcı yok, Lisans eksik)                                           |
@@ -462,7 +463,7 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 |     ApplicationVersion     |                                                                                     Bu MAM uygulamasının uygulama sürümü.                                                                                      |                  2                   |
 |        CreatedDate         |                                                                 Bu MAM uygulama örneği kaydının oluşturulduğu tarih. Değer null olabilir.                                                                 |        23/11/2016 00:00:00        |
 |          Platform          |                                                                          MAM uygulamasının yüklü olduğu cihazın platformu.                                                                           |                  2                   |
-|      PlatformVersion       |                                                                      Bu MAM uygulamasının yüklü olduğu cihazın platform sürümü.                                                                       |                 2,2                  |
+|      PlatformVersion       |                                                                      Bu MAM uygulamasının yüklü olduğu cihazın platform sürümü.                                                                       |                 2.2                  |
 |         SdkVersion         |                                                                            Bu MAM uygulamasını sarmalayan MAM SDK sürümü.                                                                            |                 3.2                  |
 | Mamdeviceıd | MAM uygulama örneğinin ilişkilendirildiği cihazın cihaz kimliği.   | 23/11/2016 00:00:00   |
 | mamDeviceType | MAM uygulama örneğinin ilişkilendirildiği cihazın cihaz türü.   | 23/11/2016 00:00:00   |
@@ -509,7 +510,7 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
 |        PlatformKey         |     Veri ambarındaki platformun benzersiz tanımlayıcısı - vekil anahtar.      |                           123                           |
 |          Platform          | Platformun benzersiz tanımlayıcısı; PlatformKey ile benzer ancak doğal bir anahtardır. |                           123                           |
-|        PlatformName        |                                   Platform adı                                   | Kullanılamaz <br>Hiçbiri <br>Windows <br>IOS <br>Android. |
+|        PlatformName        |                                   Platform adı                                   | Kullanılamaz <br>Yok <br>Windows <br>IOS <br>Android. |
 | RowLastModifiedDateTimeUtc | Bu platformun veri ambarında son değiştirildiği tarih ve UTC diliminde saat.  |                 23/11/2016 00:00:00                  |
 
 ## <a name="managementagenttypes"></a>managementAgentTypes

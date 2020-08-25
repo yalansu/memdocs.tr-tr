@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/07/2018
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1616fe4104707668463843dfb890c2f8e0b0c4a8
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 84bf5d6be2761d368e514be31c6fd426b6c508f0
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880954"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820621"
 ---
 # <a name="lock-your-device-from-the-company-portal-app-for-windows-10"></a>Windows 10 için Şirket Portalı uygulamasından cihazınızı kilitleme
 
@@ -35,9 +35,7 @@ Uzaktan kilitleme, şunları çalıştıran cihazlarda desteklenir:
 
 * Android
 * iOS
-* macOS
-* Windows 10 Mobile (cihazın zaten bir geçiş kodu kümesi varsa)
-* Windows Phone 8.1 (cihazın zaten bir geçiş kodu kümesi varsa) 
+* macOS  
   
 ## <a name="remote-lock-device"></a>Cihazı uzaktan kilitleme
 Cihazınızı Şirket Portalı uygulamasından kilitlemek için aşağıdaki adımları tamamlayın.  
@@ -55,5 +53,7 @@ Cihazınızı Şirket Portalı uygulamasından kilitlemek için aşağıdaki ad�
    ![Şirket Portalı uygulaması, Cihaz ayrıntıları sayfasının Uzaktan kilitleme onay istemi ekran görüntüsü.](./media/1804_remote_lock_Windows_CPapp_06.png)  
 
 4. Cihazınızı bulduğunuzda açmak için geçiş kodunuzu girin.  
+
+## <a name="next-steps"></a>Sonraki adımlar
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

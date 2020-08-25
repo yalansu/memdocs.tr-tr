@@ -1,6 +1,6 @@
 ---
-title: Intune için Microsoft Defender virüsten koruma için Windows 10 Antivirus ilke ayarları | Microsoft Docs
-description: Windows 10 için Microsoft Defender virüsten koruma profilindeki ayarların listesini görüntüleyin. Bu ayarları, Microsoft Intune Endpoint Security virüsten koruma ilkesinin bir parçası olarak yapılandırabilirsiniz.
+title: Kiracı ekli cihazlar için Microsoft Defender virüsten koruma ilke ayarları | Microsoft Docs
+description: Configuration Manager tarafından yönetilen Windows 10 cihazları için Microsoft Defender virüsten koruma profilindeki ayarların listesini görüntüleyin. Bu ayarları, Configuration Manager için kiracı eklemeyi yapılandırdıktan sonra Microsoft Intune Endpoint Security virüsten koruma ilkesinin bir parçası olarak yapılandırabilirsiniz.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -16,24 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 92fa75794022123fd9456c40a50780a50f604662
+ms.openlocfilehash: 966c3f21505cbbe1573abd47fb7081c5e97cc3c1
 ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819788"
+ms.locfileid: "88823460"
 ---
-# <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Microsoft Intune 'de Windows 10 Microsoft Defender virüsten koruma ilkesi ayarları
+# <a name="settings-for-microsoft-defender-antivirus-policy-for-tenant-attached-devices-in-microsoft-intune"></a>Microsoft Intune 'de kiracı ekli cihazlar için Microsoft Defender virüsten koruma ilkesi ayarları
 
-Bir [uç nokta güvenlik ilkesinin](../protect/endpoint-security-policy.md)parçası olarak Microsoft Intune Windows 10 Için Microsoft Defender virüsten koruma profili Için yapılandırabileceğiniz uç nokta güvenliği virüsten koruma ilkesi ayarlarını görüntüleyin.
+Intune 'dan **Microsoft Defender virüsten koruma ilkesi (ConfigMgr)** profiliyle yönetebileceğiniz Microsoft Defender virüsten koruma ayarlarını görüntüleyin. Intune [Endpoint Security virüsten koruma ilkesini](../protect/endpoint-security-antivirus-policy.md)yapılandırırken profil kullanılabilir ve [kiracı iliştirme](../protect/tenant-attach-intune.md) senaryosunu yapılandırdığınızda Configuration Manager ile yönettiğiniz cihazlara dağıtılır.
 
 ## <a name="cloud-protection"></a>Bulut koruması
-
-Bu ayarlar aşağıdaki profillerde mevcuttur:
-
-- Microsoft Defender virüsten koruma
-
-**Ayarlar**:
 
 - **Buluta teslim edilen korumayı aç**  
   CSP: [Allowcloudprotection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
@@ -41,8 +35,8 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
   Varsayılan olarak, Windows 10 masaüstü cihazlarındaki Defender, bulduğu sorunlar hakkında Microsoft 'a bilgi gönderir. Microsoft, sizi ve diğer müşterileri etkileyen sorunlar hakkında daha fazla bilgi edinmek için bu bilgileri çözümleyerek geliştirilmiş çözümler sunar.
 
   - **Yapılandırılmadı** (*varsayılan*)-ayar sistem varsayılan ayarlarına geri yüklenir.
-  - **Hayır** -ayar devre dışı bırakıldı. Cihaz kullanıcıları bu ayarı değiştiremezler.
-  - **Evet** -buluta teslim edilen koruma açıktır.  Cihaz kullanıcıları bu ayarı değiştiremezler.
+  - **İzin verilmiyor.** Microsoft Etkin Koruma Hizmeti kapatır.
+  - **İzin verilen.**  Microsoft Etkin Koruma Hizmeti açar.
 
 - **Buluta teslim edilen koruma düzeyi**  
   CSP: [Cloudblocklevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
@@ -56,16 +50,9 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
 - **Defender bulut uzatılmış zaman aşımı (saniye)**  
   CSP: [Cloudextendedtimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 
-  Defender virüsten koruma, güvenli olduklarından emin olmak için, şüpheli dosyaları bulutta taradığından otomatik olarak 10 saniye engeller. Bu zaman aşımı için en fazla 50 ek saniye ekleyebilirsiniz.
+  Defender virüsten koruma, güvenli olduklarından emin olmak için kuşkulu dosyaları 10 saniye içinde otomatik olarak engeller. Bu ayarla, bu zaman aşımı için en fazla 50 ek saniye ekleyebilirsiniz.
 
 ## <a name="microsoft-defender-antivirus-exclusions"></a>Microsoft Defender virüsten koruma dışlamaları
-
-Bu ayarlar aşağıdaki profillerde mevcuttur:
-
-- Microsoft Defender virüsten koruma
-- Microsoft Defender virüsten koruma dışlamaları
-
-**Ayarlar**:
 
 Bu gruptaki her bir ayar için ayarı genişletebilir, **Ekle**' yi seçebilir ve sonra dışlama için bir değer belirtebilirsiniz.
 
@@ -86,19 +73,13 @@ Bu gruptaki her bir ayar için ayarı genişletebilir, **Ekle**' yi seçebilir v
 
 ## <a name="real-time-protection"></a>Gerçek zamanlı koruma
 
-Bu ayarlar aşağıdaki profillerde mevcuttur:
-
-- Microsoft Defender virüsten koruma
-
-**Ayarlar**:
-
 - **Gerçek zamanlı korumayı aç**  
   CSP: [AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
   Windows 10 Masaüstü cihazlarında Defender 'ın gerçek zamanlı Izleme işlevini kullanmasını gerektir.
   - **Yapılandırılmadı** (*varsayılan*)-ayar sistem varsayılan ayarlarına geri yüklenir
-  - **Hayır** -ayar devre dışı bırakıldı. Cihaz kullanıcıları bu ayarı değiştiremezler.
-  - **Evet** -gerçek zamanlı izlemenin kullanımını zorla. Cihaz kullanıcıları bu ayarı değiştiremezler.
+  - **İzin verilmiyor.** Gerçek zamanlı izleme hizmetini kapatır.
+  - **İzin verilen.** Gerçek zamanlı izleme hizmetini açar ve çalıştırır.
 
 - **Erişim Koruması 'nı etkinleştir**  
   CSP: [Allowonaccessprotection](https://go.microsoft.com/fwlink/?linkid=2113935)
@@ -106,16 +87,16 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
   İsteğe bağlı olarak, sürekli etkin olan virüs korumasını yapılandırın.
 
   - **Yapılandırılmadı** (*varsayılan*)-Bu ilke, bir cihazdaki bu ayarın durumunu değiştirmez. Cihazdaki mevcut durum değişmeden kalır.
-  - Cihazlarda erişim koruması için **hiçbir blok yok** . Cihaz kullanıcıları bu ayarı değiştiremezler.
-  - **Evet** -açık erişim koruması cihazlarda etkin.
+  - **İzin verilmiyor.** Gerçek zamanlı izleme hizmetini kapatır.
+  - **İzin verilen.**
 
 - **Gelen ve giden dosyalar için izleme**  
   CSP: [Defender/RealTimeScanDirection](https://go.microsoft.com/fwlink/?linkid=2113943)
 
   Hangi NTFS dosyası ve program etkinliğinin izleneceğini öğrenmek için bu ayarı yapılandırın.
-  - **Tüm dosyaları izle** (*varsayılan*)
-  - **Yalnızca gelen dosyaları izle**
-  - **Yalnızca giden dosyaları izle**
+  - **Tüm dosyaları izle (çift yönlü).** (*varsayılan*)
+  - **Gelen dosyaları izleyin.**
+  - **Giden dosyaları izleyin.**
 
 - **Davranış izlemeyi aç**  
   CSP: [AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
@@ -123,17 +104,13 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
   Varsayılan olarak, Windows 10 Masaüstü cihazlarda Defender davranış Izleme işlevini kullanır.
 
   - **Yapılandırılmadı** (*varsayılan*)-ayar sistem varsayılan ayarlarına geri yüklenir.
-  - **Hayır** -ayar devre dışı bırakıldı. Cihaz kullanıcıları bu ayarı değiştiremezler.
-  - **Evet** -gerçek zamanlı davranış izlemenin kullanımını zorunlu tutun. Cihaz kullanıcıları bu ayarı değiştiremezler.
+  - **İzin verilmiyor.** Davranış izlemeyi kapatır.
+  - **İzin verilen.** Gerçek zamanlı davranış izlemeyi etkinleştirir.
 
-- **Ağ korumasını aç**  
-  CSP: [Enablenetworkprotection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
-
-  Herhangi bir uygulamanın kimlik avı dolandırıcılığı, yararlanma siteleri ve Internet 'teki kötü amaçlı içeriklere erişmesini kullanarak cihaz kullanıcılarını koruyun. Koruma, üçüncü taraf tarayıcıların tehlikeli sitelere bağlanmasını engellemeyi de kapsar.
-
+- **Yetkisiz erişim önleme sistemine izin ver**  
   - **Yapılandırılmadı** (*varsayılan*)-ayar sistem varsayılan ayarlarına geri yüklenir.
-  - **Hayır** -ayar devre dışı bırakıldı. Cihaz kullanıcıları bu ayarı değiştiremezler.
-  - **Evet** -ağ koruması açıktır. Cihaz kullanıcıları bu ayarı değiştiremezler.
+  - **İzin verilmiyor.**
+  - **İzin verilen.**
 
 - **İndirilen tüm dosyaları ve ekleri Tara**  
   CSP: [Enablenetworkprotection](https://go.microsoft.com/fwlink/?linkid=2113939)
@@ -141,8 +118,8 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
   Tüm indirilen dosya ve ekleri taramak için Defender 'ı yapılandırın.
 
   - **Yapılandırılmadı** (*varsayılan*)-ayar sistem varsayılan ayarlarına geri yüklenir.
-  - **Hayır** -ayar devre dışı bırakıldı. Cihaz kullanıcıları bu ayarı değiştiremezler.
-  - **Evet** -Defender indirilen tüm dosya ve ekleri tarar. Cihaz kullanıcıları bu ayarı değiştiremezler.
+  - **İzin verilmiyor.**
+  - **İzin verilen.**
 
 - **Microsoft tarayıcılarında kullanılan betikleri tarayın**  
   CSP: [Allowscriptscanning](https://go.microsoft.com/fwlink/?linkid=2114054)
@@ -150,8 +127,8 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
   Defender 'ı betikleri tarayacak şekilde yapılandırın.
 
   - **Yapılandırılmadı** (*varsayılan*)-ayar sistem varsayılan ayarlarına geri yüklenir.
-  - **Hayır** -ayar devre dışı bırakıldı. Cihaz kullanıcıları bu ayarı değiştiremezler.
-  - **Evet** -Defender betikleri tarar. Cihaz kullanıcıları bu ayarı değiştiremezler.
+  - **İzin verilmiyor.**
+  - **İzin verilen.**
 
 - **Ağ dosyalarını Tara**  
   CSP: [Allowscanningnetworkfiles](https://go.microsoft.com/fwlink/?linkid=2114049&)
@@ -159,8 +136,8 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
   Defender 'ı ağ dosyalarını tarayacak şekilde yapılandırın.
 
   - **Yapılandırılmadı** (*varsayılan*)-ayar sistem varsayılan ayarlarına geri yüklenir.
-  - **Hayır** -ayar devre dışı bırakıldı. Cihaz kullanıcıları bu ayarı değiştiremezler.
-  - **Evet** -ağ dosyalarının taranmasını aç. Cihaz kullanıcıları bu ayarı değiştiremezler.
+  - **İzin verilmiyor.** Ağ dosyalarının taranmasını devre dışı bırakır.
+  - **İzin verilen.** Ağ dosyalarını tarar.
 
 - **E-postaları Tara**  
   CSP: [Allowemailscanning](https://go.microsoft.com/fwlink/?linkid=2114052)
@@ -168,16 +145,10 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
   Defender 'ı gelen e-postayı tarayacak şekilde yapılandırın.
 
   - **Yapılandırılmadı** (*varsayılan*)-ayar sistem varsayılan ayarlarına geri yüklenir.
-  - **Hayır** -ayar devre dışı bırakıldı. Cihaz kullanıcıları bu ayarı değiştiremezler.
-  - **Evet** -e-posta taramasını açın. Cihaz kullanıcıları bu ayarı değiştiremezler.
+  - **İzin verilmiyor.** E-posta taramasını kapatır.
+  - **İzin verilen.** E-posta taramasını etkinleştirir.
 
 ## <a name="remediation"></a>Düzeltme
-
-Bu ayarlar aşağıdaki profillerde mevcuttur:
-
-- Microsoft Defender virüsten koruma
-
-**Ayarlar**:
 
 - **Karantinaya alınan kötü amaçlı yazılımı tutmak için gün sayısı (0-90)**  
   CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055)
@@ -187,10 +158,10 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
 - **Örnek onayı gönder**  
 
   - **Yapılandırılmadı** (*varsayılan*)
-  - **Güvenli örnekleri otomatik olarak gönder**
-  - **Her zaman sor**
-  - **Hiçbir şekilde gönderme**
-  - **Tüm örnekleri otomatik olarak gönder**
+  - **Her zaman sor.**
+  - **Güvenli örnekleri otomatik olarak gönderin.**
+  - **Hiçbir şekilde gönderme.**
+  - **Tüm örnekleri otomatik olarak gönder.**
 
 - **İstenmeyebilecek uygulamalarda gerçekleştirilecek eylem**  
   CSP: [Puaprotection](https://go.microsoft.com/fwlink/?linkid=2114051)
@@ -198,9 +169,14 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
   İstenmeyebilecek uygulamalar için algılama düzeyini belirtin (PUAs). Defender, istenmeyebilecek yazılımların indirileceği veya bir cihaza yüklenmeye çalıştığı durumlarda kullanıcıları uyarır.
 
   - **Yapılandırılmadı** (*varsayılan*)-ayar, Pua koruması kapalı olan sistem varsayılan ayarlarına geri yüklenir.
-  - **Devre Dışı Bırak**
-  - **Enable** -algılanan öğeler engellenir ve diğer tehditlerle birlikte geçmiş olarak gösterilir.
-  - **Denetim modu** -Defender istenmeyebilecek uygulamaları algılar, ancak hiçbir işlem gerçekleşmez. Olay Görüntüleyicisi Defender tarafından oluşturulan olayları arayarak, uygulama Defender ile ilgili bilgileri gözden geçirebilirsiniz.
+  - **PUA koruması kapalı.** Windows Defender, istenmeyebilecek uygulamalara karşı koruma sağlamaz.
+  - **PUA koruma.** Algılanan öğeler engellendi. Bunlar, diğer tehditlerle birlikte geçmiş olarak gösterilir.
+  - **Denetim modu.** Defender, istenmeyebilecek uygulamaları algılar, ancak hiçbir işlem gerçekleşmez. Olay Görüntüleyicisi Defender tarafından oluşturulan olayları arayarak, uygulama Defender ile ilgili bilgileri gözden geçirebilirsiniz.
+
+- **Bilgisayarlar temizlenmeden önce bir sistem geri yükleme noktası oluştur**  
+  - **Evet** (*varsayılan*)
+  - **Hayır**
+  - **Yapılandırılmadı**
 
 - **Algılanan tehditler için Eylemler**  
   CSP: [Threatseveritydefaultaction](https://go.microsoft.com/fwlink/?linkid=2113938)
@@ -208,14 +184,14 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
   Kötü amaçlı yazılımın tehdit düzeyine bağlı olarak algılanan kötü amaçlı yazılım için Defender 'ın aldığı eylemi belirtin.
   
   Defender, algıladığı kötü amaçlı yazılımları aşağıdaki önem düzeylerinden biri olarak sınıflandırır:
-  - **Düşük önem derecesi**
-  - **Orta önem derecesi**
-  - **Yüksek önem derecesi**
-  - **Ciddi önem derecesi**
+  - **Düşük tehdit**
+  - **Orta tehdit**
+  - **Yüksek tehdit**
+  - **Ciddi tehdit**
 
   Her düzey için gerçekleştirilecek eylemi belirtin. Her önem düzeyi için varsayılan değer *Yapılandırılmadı*.
 
-  - **Yapılandırılmadı**
+  - **Yapılandırılmadı** (*varsayılan*)
   - **Temizle** -hizmet, dosyaları kurtarmaya çalışır ve bulaşmaya çalışabilir.
   - **Karantina** -dosyaları karantinaya alma.
   - **Remove** -dosyaları cihazdan kaldırır.
@@ -225,67 +201,61 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
 
 ## <a name="scan"></a>Tarama
 
-Bu ayarlar aşağıdaki profillerde mevcuttur:
-
-- Microsoft Defender virüsten koruma
-
-**Ayarlar**:
-
 - **Arşiv dosyalarını tara**  
   CSP: [AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
 
   Defender 'ı ZIP veya CAB dosyaları gibi arşiv dosyalarını tarayacak şekilde yapılandırın.
 
-  - **Yapılandırılmadı** (*varsayılan*)-ayar, arşivlenen dosyaları taramak için istemci varsayılan değerini döndürür, ancak kullanıcı ayarı devre dışı bırakabilir.
+  - **Yapılandırılmadı** (*varsayılan*)-Bu ayar, arşivlenen dosyaları taramak için istemci varsayılan değerini döndürür, ancak Kullanıcı taramayı devre dışı bırakabilir.
 Daha fazla bilgi edinin
-  - Dosya Arşivi **taranmaz.** Cihaz kullanıcıları bu ayarı değiştiremezler.
-  - **Evet** -arşiv dosyalarının taranmasını etkinleştirin. Cihaz kullanıcıları bu ayarı değiştiremezler.
+  - **İzin verilmiyor** Arşivlenmiş dosyalardaki taramayı kapatır.
+  - **İzin verilen.** Arşiv dosyalarını tarar.
 
-- **Zamanlanan Taramalar için düşük CPU önceliği kullan**  
+- **Zamanlanan Taramalar için düşük CPU önceliğini etkinleştir**  
   CSP: [Enablelowcpupriınıd](https://go.microsoft.com/fwlink/?linkid=2113944)
 
   Zamanlanan Taramalar için CPU önceliğini yapılandırın.
   - **Yapılandırılmadı** (*varsayılan*)-ayar, CPU önceliğinde hiçbir değişiklik yapılmamakta sistem varsayılan değerini döndürür.
-  - **Hayır** -ayar devre dışı bırakıldı. Cihaz kullanıcıları bu ayarı değiştiremezler.
-  - **Evet** -düşük CPU önceliği, zamanlanmış taramalar sırasında kullanılacaktır. Cihaz kullanıcıları bu ayarı değiştiremezler.
+  - **Devre dışı**
+  - **Etkin**
 
 - **Yakalama tam taramasını devre dışı bırak**  
   CSP: [Disablecatch Upfullscan](https://go.microsoft.com/fwlink/?linkid=2114042)
 
-  Zamanlanan tam taramalar için yakalama taramaları yapılandırın. Bir yakalama taraması, düzenli olarak zamanlanmış bir tarama kaçırıldığı için başlatılan bir taramadır. Bilgisayar zamanlanan saatte kapatılmış olduğundan, genellikle bu zamanlanmış taramalar kaçırıldı.
+  Zamanlanan tam taramalar için yakalama taramaları yapılandırın. Bir yakalama taraması, düzenli olarak zamanlanmış bir tarama kaçırıldığı için başlayan bir taramadır. Bilgisayar zamanlanan saatte kapatılmış olduğundan, genellikle bu zamanlanmış taramalar kaçırıldı.
 
   - **Yapılandırılmadı** (*varsayılan*)-ayar, istemci Varsayılanı ' na döndürülür, bu, tam taramalar için yakala taramaların etkinleştirilmesi anlamına gelir, ancak kullanıcı bunları kapatabilir.
-  - **Hayır** -ayar devre dışı bırakıldı. Cihaz kullanıcıları bu ayarı değiştiremezler.
-  - **Evet** -zamanlanmış tam taramalar için yakalama taramaları zorlanır ve Kullanıcı bunları devre dışı bırakamaz. Arka arkaya iki zamanlanmış tarama için bir bilgisayar çevrimdışıysa, bir Kullanıcı bilgisayarda bir sonraki oturum açışında bir yakalama taraması başlatılır. Yapılandırılmış zamanlanmış tarama yoksa, hiçbir yakalama tarama çalıştırması olmaz. Cihaz kullanıcıları bu ayarı değiştiremezler.
+  - **Devre dışı**
+  - **Etkin**
 
 - **Yakalama hızlı taramayı devre dışı bırak**  
   CSP: [Disablecatchupquickscan](https://go.microsoft.com/fwlink/?linkid=2113941)
 
-  Zamanlanan hızlı taramalar için yakalama taramaları yapılandırın. Bir yakalama taraması, düzenli olarak zamanlanmış bir tarama kaçırıldığı için başlatılan bir taramadır. Bilgisayar zamanlanan saatte kapatılmış olduğundan, genellikle bu zamanlanmış taramalar kaçırıldı.
+  Zamanlanan hızlı taramalar için yakalama taramaları yapılandırın. Bir yakalama taraması, düzenli olarak zamanlanmış bir tarama kaçırıldığı için başlayan bir taramadır. Bilgisayar zamanlanan saatte kapatılmış olduğundan, genellikle bu zamanlanmış taramalar kaçırıldı.
 
   - **Yapılandırılmadı** (*varsayılan*)-Bu ayar, istemci Varsayılanı ' na döndürülür, bu da yakalama hızlı taramaların etkinleştirilmesi, ancak kullanıcı bunları kapatabilir.
-  - **Hayır** -ayar devre dışı bırakıldı. Cihaz kullanıcıları bu ayarı değiştiremezler.
-  - **Evet** -zamanlanmış hızlı taramalar için yakalama taramaları zorlanır ve Kullanıcı bunları devre dışı bırakamaz. Arka arkaya iki zamanlanmış tarama için bir bilgisayar çevrimdışıysa, bir Kullanıcı bilgisayarda bir sonraki oturum açışında bir yakalama taraması başlatılır. Yapılandırılmış zamanlanmış tarama yoksa, hiçbir yakalama tarama çalıştırması olmaz. Cihaz kullanıcıları bu ayarı değiştiremezler.
+  - **Devre dışı**
+  - **Etkin**
 
-- **Tarama başına CPU kullanım sınırı**  
+- **Tarama başına CPU kullanım sınırı (yüzde 0-100)**  
   CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046)
 
   Defender taraması için Ortalama CPU yükleme faktörü olan 0 ile 100 arasında bir yüzde olarak belirtin.
 
-- **Tam tarama sırasında eşlenmiş ağ sürücülerine Tara**  
+- **Tam tarama sırasında eşlenmiş ağ sürücülerinin taranmasını etkinleştir**  
   CSP: [Allowfullscanonmappednetworkdrives](https://go.microsoft.com/fwlink/?linkid=2113945)
 
   Defender 'ı eşlenmiş ağ sürücülerine tarayacak şekilde yapılandırın.
 
   - **Yapılandırılmadı** (*varsayılan*)-ayar, eşlenen ağ sürücülerinde taramayı devre dışı bırakan sistem varsayılan ayarlarına geri yüklenir.
-  - **Hayır** -ayar devre dışı bırakıldı. Cihaz kullanıcıları ayarı değiştiremezler.
-  - **Evet** -eşlenen ağ sürücülerinin taranmasını etkinleştirin. Cihaz kullanıcıları bu ayarı değiştiremezler.
+  - **İzin verilmiyor.** Eşlenen ağ sürücülerinde taramayı devre dışı bırakır.
+  - **İzin verilen.** Eşlenen ağ sürücülerinizi tarar.
 
 - **Günlük hızlı taramayı şurada Çalıştır:**  
   CSP: [Schedulequickscantime](https://go.microsoft.com/fwlink/?linkid=2114053)
 
   Defender hızlı taramanın çalışacağı günün saatini seçin.
-  Varsayılan olarak, bu ayar **yapılandırılmaz**
+  Varsayılan olarak, bu seçenek **yapılandırılmaz**
 
 - **Tarama türü**  
   CSP: [Scanparameter](https://go.microsoft.com/fwlink/?linkid=2114045)
@@ -304,46 +274,49 @@ Daha fazla bilgi edinin
 
 - **Taramayı çalıştırmadan önce imza güncelleştirmelerini denetle**  
   - **Yapılandırılmadı** (*varsayılan*)
+  - **Devre dışı**
+  - **Etkin**
+
+- **Zamanlanmış taramayı ve güvenlik zekası güncelleştirme başlangıç zamanlarını rastgele yap**  
+  -**Yapılandırılmadı** (*varsayılan*)-**Evet** 
   - **Hayır**
-  - **Evet**
+
+- **Tam tarama sırasında çıkarılabilir sürücüleri Tara**
+  - **Yapılandırılmadı** (*varsayılan*)
+  - **İzin verilmiyor.** Çıkarılabilir sürücülerde taramayı kapatır.
+  - **İzin verilen.** Çıkarılabilir sürücüleri tarar.
 
 ## <a name="updates"></a>Güncelleştirmeler
-
-Bu ayarlar aşağıdaki profillerde mevcuttur:
-
-- Microsoft Defender virüsten koruma
-
-**Ayarlar**:
 
 - **Güvenlik Zekası güncelleştirmelerini denetleme sıklığını (0-24 saat) girin**  
   CSP: [Signatureupdateınterval](https://go.microsoft.com/fwlink/?linkid=2113936)
 
   İmzaları denetlemek için kullanılan aralığı sıfır ile 24 arasında (saat cinsinden) belirtin. Sıfır değeri, yeni imzalar için denetim yok sonucunu vermez. 2 değeri her iki saatte bir denetlenir ve bu şekilde devam eder.
 
-- **Tanım güncelleştirmelerini indirmek için dosya paylaşımlarını tanımlayın**  
-  CSP: [Signatureupdatefallkarşılanamayan](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
+- **İmza güncelleştirme geri dönüş sırası (cihaz)**
 
-  Tanım güncelleştirmelerini almak için bir indirme kaynağı konumu olarak bir UNC dosya paylaşma gibi konumları yönetin. Tanım güncelleştirmeleri belirtilen bir kaynaktan başarıyla indirildikten sonra, listedeki kalan kaynaklara başvurulmaz.
+- **İmza güncelleştirme dosya paylaşımları kaynakları (cihaz)**
 
-  Ayrı konumlar **ekleyebilir** veya konumların bir listesini. csv dosyası olarak **içeri aktarabilirsiniz** .
-
-- **Tanım güncelleştirmelerini indirmek için kaynak sırasını tanımlayın**  
-  CSP: [Signatureupdatefilesharessources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
-
-  Tanım güncelleştirmelerini almak için belirttiğiniz kaynak konumlarına hangi sırada başvurdığınızı belirtin. Tanım güncelleştirmeleri belirtilen bir kaynaktan başarıyla indirildikten sonra, listedeki kalan kaynaklara başvurulmaz.
+- **Güvenlik Zekası konumu (cihaz)**  
 
 ## <a name="user-experience"></a>Kullanıcı deneyimi
 
-Bu ayarlar aşağıdaki profillerde mevcuttur:
+- **Microsoft Defender uygulamasına Kullanıcı erişimini engelleyin**  
+  - **Yapılandırılmadı** (*varsayılan*)
+  - **İzin verilmiyor.** Kullanıcıların Kullanıcı arabirimine erişimini engeller.
+  - **İzin verilen.** Kullanıcıların Kullanıcı arabirimine erişmesine izin verir.
 
-- Microsoft Defender virüsten koruma
-
-**Ayarlar**:
-
-- **Microsoft Defender uygulamasına kullanıcı erişimine izin ver**  
-  CSP: [AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043)  
-
-  - **Yapılandırılmadı** (*varsayılan*)-ayar, Kullanıcı arabirimi ve bildirimlerine izin verilen istemci varsayılan değerini döndürür.
-  - **Hayır** -Defender Kullanıcı ARABIRIMINE (UI) erişilemiyor ve bildirimler Ware gizlendi.
+- **Kullanıcının tam tarama çalıştırması, güvenlik zekasını güncelleştirmesi veya Windows Defender 'ı çevrimdışı çalıştırması gerektiğinde istemci bilgisayarda bildirim iletilerini göster**  
+  - **Yapılandırılmadı** (*varsayılan*)
   - **Evet**
+  - **Hayır**
 
+- **İstemci kullanıcı arabirimini devre dışı bırak**  
+  - **Yapılandırılmadı** (*varsayılan*)
+  - **Evet**
+  - **Hayır**
+
+- **Kullanıcıların tüm geçmiş sonuçlarını görüntülemesine izin ver**
+  - **Yapılandırılmadı** (*varsayılan*)
+  - **Evet**
+  - **Hayır**

@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: e26719bb9bf322e3e4bf11b39911e98788707629
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: e7896d2b5dff7132056ed004443e7fa3623f016e
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86460425"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820026"
 ---
 # <a name="endpoint-detection-and-response-policy-settings-for-endpoint-security-in-intune"></a>Intune 'da Endpoint Security için uç nokta algılama ve yanıt ilkesi ayarları
 
@@ -32,7 +32,7 @@ Desteklenen platformlar ve profiller:
 - **Windows 10 ve üzeri**: Intune ile yönetilen cihazlara dağıttığınız ilke için bu platformu kullanın.
   - Profil: **Endpoint Detection ve yanıt (MDM)**
 
-- **Windows 10 ve Windows Server**: Configuration Manager tarafından yönetilen cihazlara dağıttığınız ilke için bu platformu kullanın.
+- **Windows 10 ve Windows Server (ConfigMgr)**: Configuration Manager tarafından yönetilen cihazlara dağıttığınız ilke için bu platformu kullanın.
   - Profil: **Endpoint Detection ve yanıt (ConfigMgr)**
 
 ## <a name="endpoint-detection-and-response-mdm"></a>Uç nokta algılama ve yanıt (MDM)
@@ -60,12 +60,12 @@ Desteklenen platformlar ve profiller:
 - **Tüm dosyalar için örnek paylaşımı**  
 
   Microsoft Defender Gelişmiş tehdit koruması örnek paylaşımı yapılandırma parametresini döndürür veya ayarlar.  
-  - **Yapılandırılmadı** (*varsayılan*)
+  - **Yapılandırılmadı**   (*varsayılan*)
   - **Evet**
 
 - **Telemetri raporlama sıklığını hızlandırın**
 
-  - **Yapılandırılmadı** (*varsayılan*)
+  - **Yapılandırılmadı**   (*varsayılan*)
   - **Evet** -Microsoft Defender Gelişmiş tehdit koruması telemetri raporlama sıklığını artırın.
 
 ## <a name="endpoint-detection-and-response-configmgr"></a>Uç nokta algılama ve yanıt (ConfigMgr)
@@ -75,12 +75,12 @@ Desteklenen platformlar ve profiller:
 - **Tüm dosyalar için örnek paylaşımı**  
 
   Microsoft Defender Gelişmiş tehdit koruması örnek paylaşımı yapılandırma parametresini döndürür veya ayarlar.  
-  - **Yapılandırılmadı** (*varsayılan*)
+  - **Yapılandırılmadı**   (*varsayılan*)
   - **Evet**
 
 - **Telemetri raporlama sıklığını hızlandırın**
 
-  - **Yapılandırılmadı** (*varsayılan*)
+  - **Yapılandırılmadı**   (*varsayılan*)
   - **Evet** -Microsoft Defender Gelişmiş tehdit koruması telemetri raporlama sıklığını artırın.
 
 ## <a name="next-steps"></a>Sonraki adımlar

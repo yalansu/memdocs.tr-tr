@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune'daki cihaz özellikleri ve ayarları - Azure | Microsoft Docs
-description: Farklı Microsoft Intune cihaz profillerine genel bakış. Microsoft Endpoint Manager Yönetim merkezinde özellikler, kısıtlamalar, e-posta, WiFi, VPN, eğitim, sertifika, yükseltme Windows 10, BitLocker ve Microsoft Defender, Windows Information Protection, Yönetim Şablonları ve özel cihaz yapılandırma ayarlarını hakkında bilgi alın. Şirketinizdeki verileri ve cihazları yönetmek ve korumak için bu profilleri kullanın.
+description: Farklı Microsoft Intune cihaz profillerine genel bakış. Microsoft Endpoint Manager Yönetim merkezinde GPO, özellikler, kısıtlamalar, e-posta, WiFi, VPN, eğitim, sertifika, yükseltme Windows 10, BitLocker ve Microsoft Defender, Windows Information Protection, Yönetim Şablonları ve özel cihaz yapılandırma ayarlarını öğrenin. Şirketinizdeki verileri ve cihazları yönetmek ve korumak için bu profilleri kullanın.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43101602defab75c15c542ec922cba6f2bf96cf0
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 61053fff9d28193c8f4fc1731f72fe0052aba154
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146329"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820502"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune'daki cihaz profillerini kullanarak cihazlarınıza özellik ve ayar uygulama
 
@@ -41,9 +41,7 @@ Bu makalede oluşturabileceğiniz profil türlerine genel bir bakış sağlanmak
 
 ## <a name="administrative-templates"></a>Yönetim şablonları
 
-[Yönetim Şablonları](administrative-templates-windows.md) , Internet Explorer, Microsoft Edge, OneDrive, Uzak Masaüstü, Word, Excel ve diğer Office programları için yapılandırabileceğiniz yüzlerce ayarı içerir.
-
-Yöneticiler, bu şablonlar sayesinde grup ilkelerine benzeyen ancak tamamen bulut tabanlı olan basitleştirilmiş bir görünüme sahip olur.
+[Yönetim Şablonları](administrative-templates-windows.md) , Internet Explorer, Microsoft Edge, OneDrive, Uzak Masaüstü, Word, Excel ve diğer Office programları için yapılandırabileceğiniz yüzlerce ayarı içerir. Yöneticiler, bu şablonlar sayesinde grup ilkelerine benzeyen ancak tamamen bulut tabanlı olan basitleştirilmiş bir görünüme sahip olur.
 
 Bu özellik şunları destekler:
 
@@ -174,7 +172,7 @@ Bu özellik şunları destekler:
 
 - Windows 10 Fall Creators Update ve üzeri
 
-## <a name="extensions"></a>Uzantılar
+## <a name="extensions"></a>Uzantıları
 
 [MacOS sistem uzantıları ve çekirdek uzantıları](kernel-extensions-overview-macos.md) , yöneticilerin işletim sisteminin yerel yeteneklerini genişleten özellikler veya programlar eklemesine olanak tanır. Bu ayarları, belirli bir geliştirici veya iş ortağındaki tüm uzantılara güvenmek veya belirli uzantılara izin vermek üzere yapılandırın.
 

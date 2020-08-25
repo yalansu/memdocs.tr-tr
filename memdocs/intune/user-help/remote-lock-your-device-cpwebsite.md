@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 9d932fffa7381cca26699bb37e10783bcd7803dd
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 57d4cc3889c60f9b62d0bb0617731b9ab0058f4c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880929"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820655"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Şirket Portalı web sitesinden cihazınızı uzaktan kilitleme
 
@@ -35,9 +35,7 @@ Uzaktan kilitleme ayarı şu platformlarda çalışır:
 * Android
 * iOS
 * macOS
-* Windows 10
-* Windows 10 Mobile (cihazın zaten bir geçiş kodu kümesi varsa)
-* Windows Phone 8.1 (cihazın zaten bir geçiş kodu kümesi varsa)  
+* Windows 10  
 
 1. [Şirket Portalı web sitesinde](https://portal.manage.microsoft.com)__Menü__ düğmesi > __Cihazlar__’ı seçin.  
 
@@ -53,6 +51,8 @@ Uzaktan kilitleme ayarı şu platformlarda çalışır:
 
 4. Cihazınızı kilitlemek üzere olduğunuza dair sizi uyaran bir ileti görüntülenir. Onaylamak için **Uzaktan kilitle**’ye dokunun.
 
+## <a name="check-the-status-of-remote-lock"></a>Uzaktan kilitleme durumunu denetleme
+
 Onaydan sonra Şirket Portalı, cihazınızı kilitlemeye çalışır. Bu süre boyunca bir "Uzaktan kilitleme bekliyor" iletisi görünür. Cihazınız kilitliyken, durum "Uzaktan kilitleme başarılı." olarak görüntülenir.  
 
 Uzaktan Kilitleme durumu üç yerde görüntülenir:
@@ -66,4 +66,6 @@ Uzaktan Kilitleme durumu üç yerde görüntülenir:
 
 Cihazınızı bulursanız ve Uzaktan Kilitleme kullandıktan sonra onun kilidini açmak istiyorsanız, tek yapmanız gereken geçiş kodunu girmektir.  
 
-Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.
+## <a name="next-steps"></a>Sonraki adımlar
+
+Sorularınız mı yoksa yardıma mı ihtiyacınız var? BT destek sorumlunuza başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.  

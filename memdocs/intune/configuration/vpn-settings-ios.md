@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26b3af529fddb2c6d3515a365be9e8204fe02312
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: 29ce01f9544db19757f58695eae624b2ac25995b
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87815455"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819924"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune 'de iOS ve ıpados cihazlarına VPN ayarları ekleme
 
@@ -50,6 +50,7 @@ Aşağıdaki satıcı listesinden VPN bağlantı türünü seçin:
 - **Citrix VPN**
 - **Citrix SSO**
 - **Zscaler**: koşullu erişimi kullanmak veya kullanıcıların Zscaler oturum açma ekranını atlamasına izin vermek Için, Zscaler özel erişimini (ZPA) Azure AD hesabınızla tümleştirmeniz gerekir. Ayrıntılı adımlar için bkz. [Zscaler belgeleri](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad).
+- **NetMotion Mobility**
 - **Ikev2**: [Ikev2 ayarları](#ikev2-settings) (Bu makalede) özelliklerini açıklar.
 - **Özel VPN**
 
@@ -104,7 +105,7 @@ Aşağıdaki listede gösterilen ayarlar, seçtiğiniz VPN bağlantı türüne g
 
   - Bu ayarı kaldırmak için profili yeniden oluşturun ve **Kabul ediyorum**’u seçmeyin. Daha sonra profili yeniden atayın.
 
-## <a name="ikev2-settings"></a>Ikev2 ayarları
+### <a name="ikev2-settings"></a>Ikev2 ayarları
 
 Bu ayarlar, Ikev2 **bağlantı türünü**seçtiğinizde geçerlidir  >  **IKEv2**.
 

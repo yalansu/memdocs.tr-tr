@@ -2,7 +2,7 @@
 title: BitLocker ayarları başvurusu
 titleSuffix: Configuration Manager
 description: Configuration Manager bulunan tüm BitLocker yönetim ayarları
-ms.date: 04/01/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: be9db7d0ee68f22073a3537e53fc93bf8faff9e0
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: b52fe5a60899d7e871381d1a34a2360bbe68a36c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693531"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820485"
 ---
 # <a name="bitlocker-settings-reference"></a>BitLocker ayarları başvurusu
 
@@ -56,6 +56,8 @@ Windows 8.1 cihazlar için, **sürücü şifreleme yöntemi ve şifre gücüne**
 - AES 128-bit (varsayılan)
 - AES 256 bit
 
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için, bkz. [New-CMBLEncryptionMethodPolicy](/powershell/module/configurationmanager/new-cmblencryptionmethodpolicy?view=sccm-ps).
+
 #### <a name="windows-10-devices"></a>Windows 10 cihazları
 
 Windows 10 cihazlarında **sürücü şifreleme yöntemi ve şifreleme gücü (Windows 10)** için seçeneği etkinleştirin. Ardından, işletim sistemi sürücüleri, sabit veri sürücüleri ve çıkarılabilir veri sürücüleri için aşağıdaki şifreleme yöntemlerinden birini tek tek seçin:
@@ -69,6 +71,8 @@ Windows 10 cihazlarında **sürücü şifreleme yöntemi ve şifreleme gücü (W
 > BitLocker, şifreleme algoritması olarak Gelişmiş Şifreleme Standardını (AES) 128 veya 256 bit yapılandırılabilir anahtar uzunluklarıyla kullanır. Windows 10 cihazlarında, AES şifrelemesi Şifre blok zincirleme (CBC) veya şifreli çalmasını (XTS) destekler.
 >
 > Windows 10 çalıştırmayan cihazlarda çıkarılabilir sürücü kullanmanız gerekiyorsa, AES-CBC kullanın.
+
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için, bkz. [New-CMBLEncryptionMethodWithXts](/powershell/module/configurationmanager/new-cmblencryptionmethodwithxts?view=sccm-ps).
 
 #### <a name="general-usage-notes-for-drive-encryption-and-cipher-strength"></a>Sürücü şifreleme ve şifre gücüne yönelik genel kullanım notları
 
@@ -88,6 +92,8 @@ Yeniden başlatma sırasında bellekte BitLocker gizli dizileri üzerine yazmada
 
 Bu ilkeyi yapılandırmadığınızda, bilgisayar yeniden başlatıldığında BitLocker gizli dizilerini bellekten kaldırır.
 
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için, bkz. [New-CMNoOverwritePolicy](/powershell/module/configurationmanager/new-cmnooverwritepolicy?view=sccm-ps).
+
 ### <a name="validate-smart-card-certificate-usage-rule-compliance"></a>Akıllı kart sertifikası kullanım kuralı uyumluluğunu doğrula
 
 *Önerilen yapılandırma*: **Yapılandırılmadı**
@@ -95,6 +101,8 @@ Bu ilkeyi yapılandırmadığınızda, bilgisayar yeniden başlatıldığında B
 Bu ilkeyi, akıllı kart sertifika tabanlı BitLocker korumasını kullanacak şekilde yapılandırın. Ardından Sertifika **nesne tanımlayıcısını**belirtin.
 
 Bu ilkeyi yapılandırmadığınızda, BitLocker `1.3.6.1.4.1.311.67.1.1` bir sertifikayı belirtmek için varsayılan nesne tanımlayıcısını kullanır.
+
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için, bkz. [New-Cmsckarmaşıkancepolicy](/powershell/module/configurationmanager/new-cmsccompliancepolicy?view=sccm-ps).
 
 ### <a name="organization-unique-identifiers"></a>Kuruluş benzersiz tanımlayıcıları
 
@@ -105,6 +113,8 @@ Bu ilkeyi sertifika tabanlı veri kurtarma aracısı veya BitLocker To Go Okuyuc
 Bu ilkeyi yapılandırmadığınızda, BitLocker **kimlik** alanını kullanmaz.
 
 Kuruluşunuz daha yüksek güvenlik ölçümleri gerektiriyorsa, **kimlik** alanını yapılandırın. Bu alanı hedeflenen tüm USB cihazlarda ayarlayın ve bu ayarla hizalayın.
+
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için, bkz. [New-Cmuıdpolicy](/powershell/module/configurationmanager/new-cmuidpolicy?view=sccm-ps).
 
 ## <a name="os-drive"></a>İşletim sistemi sürücüsü
 
@@ -134,6 +144,8 @@ Uyumlu TPM içeren cihazlarda, şifrelenmiş veriler için ek koruma sağlamak �
 >
 > - Uyku modundayken bekleme durumlarına (S1-S3) izin ver (Pilde)
 
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için, bkz. [New-CMBMSOSDEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsosdencryptionpolicy?view=sccm-ps).
+
 ### <a name="allow-enhanced-pins-for-startup"></a>Başlangıç için iyileştirilmiş PIN 'Ler sağla
 
 *Önerilen yapılandırma*: **Yapılandırılmadı**
@@ -149,6 +161,8 @@ Bu ayarı etkinleştirirseniz, tüm yeni BitLocker başlangıç PIN 'leri kullan
 
 Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, BitLocker gelişmiş PIN kullanmaz.
 
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için, bkz. [New-CMEnhancedPIN](/powershell/module/configurationmanager/new-cmenhancedpin?view=sccm-ps).
+
 ### <a name="operating-system-drive-password-policy"></a>İşletim sistemi sürücüsü parola ilkesi
 
 *Önerilen yapılandırma*: **Yapılandırılmadı**
@@ -162,6 +176,8 @@ BitLocker korumalı işletim sistemi sürücülerinin kilidini açmak üzere par
 - **Çıkarılabilir işletim sistemi sürücüleri için yalnızca ASCII parolaları iste**
 
 Bu ilke ayarını etkinleştirirseniz, kullanıcılar tanımladığınız gereksinimleri karşılayan bir parola yapılandırabilir.
+
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için, bkz. [New-Cmosparola](/powershell/module/configurationmanager/new-cmospassphrase?view=sccm-ps).
 
 #### <a name="general-usage-notes-for-os-drive-password-policy"></a>İşletim sistemi sürücüsü parola ilkesi için genel kullanım notları
 
@@ -180,6 +196,8 @@ Windows 'un, BitLocker kurtarma işleminden sonra başlatıldığında platform 
 Bu ayarı etkinleştirir veya yapılandırmazsanız, Windows Platform doğrulama verilerini bu durumda yeniler.
 
 Bu ilke ayarını devre dışı bırakırsanız Windows, bu durumda platform doğrulama verilerini yenilemez.
+
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için, bkz. [New-CMTpmAutoResealPolicy](/powershell/module/configurationmanager/new-cmtpmautoresealpolicy?view=sccm-ps).
 
 ### <a name="pre-boot-recovery-message-and-url"></a>Önyükleme öncesi kurtarma iletisi ve URL 'SI
 
@@ -202,6 +220,8 @@ Bu ayarı etkinleştirdiğinizde önyükleme öncesi kurtarma iletisi için aşa
 > [!NOTE]
 > Ön önyüklemede tüm karakterler ve diller desteklenmez. Ön önyükleme BitLocker kurtarma ekranında doğru göründüğünden emin olmak için özel iletinizi veya URL 'nizi test edin.
 
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için, bkz. [New-Cmprebootrecoveryınfo](/powershell/module/configurationmanager/new-cmprebootrecoveryinfo?view=sccm-ps).
+
 ### <a name="encryption-policy-enforcement-settings-os-drive"></a>Şifreleme ilkesi zorlama ayarları (işletim sistemi sürücüsü)
 
 *Önerilen yapılandırma*: **etkin**
@@ -215,6 +235,8 @@ BitLocker, bir koruyucu eklemek için Kullanıcı etkileşimi gerektirmiyorsa, y
 Bu ayarı devre dışı bırakır veya yapılandırmazsanız, Configuration Manager kullanıcıların BitLocker ilkeleriyle uyumlu olmasını gerektirmez.
 
 İlkeyi hemen zorlamak için bir yetkisiz kullanım süresi ayarlayın `0` .
+
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için, bkz. [New-CMUseOsEnforcePolicy](/powershell/module/configurationmanager/new-cmuseosenforcepolicy?view=sccm-ps).
 
 ## <a name="fixed-drive"></a>Sabit sürücü
 
@@ -234,6 +256,8 @@ Bu ayarı yapılandırmazsanız, BitLocker kullanıcıların koruma altına sabi
 
 Bu ayarı devre dışı bırakırsanız, kullanıcılar sabit veri sürücülerine BitLocker koruması altına koyulamıyor. BitLocker sabit veri sürücüleri şifreledikten sonra bu ilkeyi devre dışı bırakırsanız, BitLocker sabit veri sürücülerinin şifresini çözer.
 
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için, bkz. [New-CMBMSFDVEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsfdvencryptionpolicy?view=sccm-ps).
+
 ### <a name="deny-write-access-to-fixed-drives-not-protected-by-bitlocker"></a>BitLocker tarafından korunmayan sabit sürücülere yazma erişimini reddet
 
 *Önerilen yapılandırma*: **Yapılandırılmadı**
@@ -248,7 +272,7 @@ Bu ayarı etkinleştirdiğinizde:
 
 Bu ayarı yapılandırmadığınızda, Windows tüm sabit veri sürücülerine okuma ve yazma erişimiyle takar.
 
-<!-- ### Allow access to BitLocker-protected fixed drives from earlier versions of Windows -->
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için bkz. [New-CMFDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmfdvdenywriteaccesspolicy?view=sccm-ps).
 
 ### <a name="fixed-data-drive-password-policy"></a>Sabit veri sürücüsü parola ilkesi
 
@@ -269,6 +293,8 @@ Daha yüksek güvenlik için bu ayarı etkinleştirin ve sonra aşağıdaki ayar
 Bu ayarı devre dışı bırakırsanız, kullanıcılar bir parolayı yapılandıramaz.
 
 İlke yapılandırılmadığında, BitLocker varsayılan ayarlarla parolaları destekler. Varsayılan ayarlar parola karmaşıklığı gereksinimlerini içermez ve yalnızca sekiz karakter gerektirir.
+
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için, bkz. [New-Cmfdvparolasının Sepolicy](/powershell/module/configurationmanager/new-cmfdvpassphrasepolicy?view=sccm-ps).
 
 #### <a name="general-usage-notes-for-fixed-data-drive-password-policy"></a>Sabit veri sürücüsü parola ilkesi için genel kullanım notları
 
@@ -291,6 +317,8 @@ BitLocker, bir koruyucu eklemek için Kullanıcı etkileşimi gerektirmiyorsa, y
 Bu ayarı devre dışı bırakır veya yapılandırmazsanız, Configuration Manager kullanıcıların BitLocker ilkeleriyle uyumlu olmasını gerektirmez.
 
 İlkeyi hemen zorlamak için bir yetkisiz kullanım süresi ayarlayın `0` .
+
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için, bkz. [New-CMUseFddEnforcePolicy](/powershell/module/configurationmanager/new-cmusefddenforcepolicy?view=sccm-ps).
 
 ## <a name="removable-drive"></a>Çıkarılabilir sürücü
 
@@ -320,6 +348,8 @@ Bu ayarı etkinleştirdiğinizde:
 
 Bu ayarı devre dışı bırakırsanız, kullanıcılar BitLocker 'ı çıkarılabilir sürücülerde kullanamaz.
 
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için bkz. [New-CMRDVConfigureBDEPolicy](/powershell/module/configurationmanager/new-cmrdvconfigurebdepolicy?view=sccm-ps).
+
 ### <a name="deny-write-access-to-removable-drives-not-protected-by-bitlocker"></a>BitLocker tarafından korunmayan çıkarılabilir sürücülere yazma erişimini engelle
 
 *Önerilen yapılandırma*: **Yapılandırılmadı**
@@ -339,7 +369,7 @@ Bu ayarı devre dışı bıraktığınızda veya yapılandırmadığınızda, Wi
 > [!NOTE]
 > Bu ayarı, **sistem**  >  **çıkarılabilir depolama erişimi**'ndeki Grup İlkesi ayarlarıyla geçersiz kılabilirsiniz. Çıkarılabilir diskler Grup İlkesi ayarını etkinleştirirseniz, **yazma erişimini reddet**, ardından BitLocker bu Configuration Manager ayarını yoksayar.
 
-<!-- ### Allow access to BitLocker-protected removable data drives from earlier versions of Windows -->
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için bkz. [New-CMRDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmrdvdenywriteaccesspolicy?view=sccm-ps).
 
 ### <a name="removable-data-drive-password-policy"></a>Çıkarılabilir veri sürücüsü parola ilkesi
 
@@ -360,6 +390,8 @@ Daha yüksek güvenlik için bu ayarı etkinleştirin ve sonra aşağıdaki ayar
 Bu ayarı devre dışı bırakırsanız, kullanıcılar bir parolayı yapılandıramaz.
 
 İlke yapılandırılmadığında, BitLocker varsayılan ayarlarla parolaları destekler. Varsayılan ayarlar parola karmaşıklığı gereksinimlerini içermez ve yalnızca sekiz karakter gerektirir.
+
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için bkz. [New-CMRDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmrdvpassphrasepolicy?view=sccm-ps).
 
 #### <a name="general-usage-notes-for-removable-data-drive-password-policy"></a>Çıkarılabilir veri sürücüsü parola ilkesi için genel kullanım notları
 
@@ -384,6 +416,11 @@ Bu ayarı etkinleştirdiğinizde, otomatik olarak Configuration Manager ve site 
 - **Kurtarma bilgilerinin düz metin olarak depolanmasına Izin ver**: SQL Server için BitLocker yönetim şifreleme sertifikası olmadan Configuration Manager, anahtar kurtarma bilgilerini düz metin olarak depolar. Daha fazla bilgi için bkz. [kurtarma verilerini şifreleme](../../deploy-use/bitlocker/encrypt-recovery-data.md).
 
 - **İstemci denetleme durum sıklığı (dakika)**: yapılandırılan sıklıkta istemci, bilgisayardaki BitLocker koruma ilkelerini ve durumunu denetler ve ayrıca istemci kurtarma anahtarını yedekler. Configuration Manager istemcisi varsayılan olarak, BitLocker kurtarma bilgilerini her 90 dakikada bir güncelleştirir.
+
+Windows PowerShell ile bu ilkelerin nasıl oluşturulacağı hakkında daha fazla bilgi için bkz.:
+
+- [Set-CMBlmPlaintextStorage](/powershell/module/configurationmanager/set-cmblmplaintextstorage?view=sccm-ps)
+- [New-Cmbmsclientconfigurecheckınterbir Policy](/powershell/module/configurationmanager/new-cmbmsclientconfigurecheckintervalpolicy?view=sccm-ps)
 
 ### <a name="user-exemption-policy"></a>Kullanıcı muafiyet ilkesi
 
@@ -410,6 +447,8 @@ Bu ayarı devre dışı bırakır veya yapılandırmazsanız, Windows, kullanıc
 > [!NOTE]
 > BitLocker, bilgisayar başına değil, Kullanıcı başına muafiyetleri yönetir. Aynı bilgisayarda birden çok kullanıcı oturum açtığında ve herhangi bir Kullanıcı muaf tutulmazsa, BitLocker bilgisayarı şifreler.
 
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için, bkz. [New-Cmbmsusermuaf tionpolicy](/powershell/module/configurationmanager/new-cmbmsuserexemptionpolicy?view=sccm-ps).
+
 ### <a name="url-for-the-security-policy-link"></a>Güvenlik ilkesi bağlantısı URL 'SI
 
 *Önerilen yapılandırma*: **etkin**
@@ -419,3 +458,9 @@ Windows 'da **Şirket güvenlik ilkesi** olarak kullanıcılara görüntülenece
 Bu ayarı etkinleştirirseniz **güvenlik ilkesi bağlantı URL 'sini**yapılandırın.
 
 Bu ayarı devre dışı bırakır veya yapılandırmazsanız, BitLocker güvenlik ilkesi bağlantısını göstermez.
+
+Windows PowerShell ile bu ilkeyi oluşturma hakkında daha fazla bilgi için, bkz. [New-Cmöğrenınfourlpolicy](/powershell/module/configurationmanager/new-cmmoreinfourlpolicy?view=sccm-ps).
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+Bu ilke nesnelerini oluşturmak için Windows PowerShell kullanırsanız, [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps) cmdlet 'ini kullanın. Bu cmdlet, belirtilen tüm ilkeleri içeren bir BitLocker yönetim ilkesi ayarları nesnesi oluşturur. İlke ayarlarını bir koleksiyona dağıtmak için, [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps) cmdlet 'ini kullanın.

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/15/2020
+ms.date: 08/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91bf09a122031b7186840bc17cd44cc5738b2ffe
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 79c389767ad3cb796e2cc7b4cd9a35015e17a837
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093548"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819669"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Intune 'da macOS cihaz özelliği ayarları
 
@@ -267,6 +267,15 @@ Bu özellik şu platformlarda geçerlidir:
 - **SSO uygulama uzantısı türü**: SSO uygulama uzantısının türünü seçin. Seçenekleriniz şunlardır:
 
   - **Yapılandırılmadı**: uygulama uzantıları kullanılmıyor. Bir uygulama uzantısını devre dışı bırakmak için, SSO uygulama uzantısı türünü **Yapılandırılmadı**olarak değiştirin.
+  - **Microsoft Azure AD**: bir yeniden YÖNLENDIRME türü SSO uygulama uzantısı olan MICROSOFT Enterprise SSO eklentisini kullanır. Bu eklenti, [Apple 'ın Kurumsal Çoklu oturum açma](https://developer.apple.com/documentation/authenticationservices) özelliğini destekleyen tüm MacOS uygulamalarında Active Directory hesapları için SSO sağlar. Azure AD kullanarak kimlik doğrulaması yapan Microsoft uygulamalarında, kuruluş uygulamalarında ve web sitelerinde SSO 'yu etkinleştirmek için bu SSO uygulama uzantısı türünü kullanın.
+
+    SSO eklentisi, güvenlik ve Kullanıcı deneyimi iyileştirmeleri sunan gelişmiş bir kimlik doğrulama Aracısı işlevi görür.
+
+    > [!IMPORTANT]
+    > Microsoft Azure AD SSO uygulama uzantısı türüyle SSO sağlamak için, macOS Şirket Portalı uygulamasını cihazlara yüklersiniz. Şirket Portalı uygulaması, cihazlara Microsoft Enterprise SSO eklentisini sunar. MDM SSO uygulama uzantısı ayarları eklentiyi etkinleştirir. Şirket Portalı uygulaması ve SSO uygulama uzantısı profili cihazlara yüklendikten sonra, kullanıcılar kimlik bilgileriyle oturum açıp cihazlarında bir oturum oluşturur. Bu oturum, kullanıcıların kimlik doğrulamasını yapmasına gerek kalmadan farklı uygulamalar arasında kullanılır.
+    >
+    > Şirket Portalı uygulaması hakkında daha fazla bilgi için, bkz. [Şirket Portalı uygulamasını yüklediğinizde ve macOS cihazınızı Intune 'a kaydederseniz ne olur?](../user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md) Şirket Portalı uygulamasını [indirin](https://go.microsoft.com/fwlink/?linkid=853070) .
+
   - **Yeniden yönlendir**: SSO 'yu modern kimlik doğrulama akışlarıyla kullanmak için genel, özelleştirilebilir bir yeniden yönlendirme uygulama uzantısı kullanın. Kuruluşunuzun uygulama uzantısının uzantısını ve takım KIMLIĞINI öğrendiğinizden emin olun.
   - **Kimlik bilgisi**: sınama ve yanıt kimlik doğrulama akışlarıyla SSO 'yu kullanmak için genel, özelleştirilebilir bir kimlik bilgisi uygulama uzantısı kullanın. Kuruluşunuzun SSO uygulaması uzantısının uzantı KIMLIĞINI ve takım KIMLIĞINI öğrendiğinizden emin olun.  
   - **Kerberos**: MacOS Catalina 10,15 ve daha yeni bir sürüme dahil edilen Apple 'ın yerleşik Kerberos uzantısını kullanın. Bu seçenek, **kimlik bilgisi** uygulama uzantısının Kerberos 'a özgü bir sürümüdür.
@@ -274,14 +283,14 @@ Bu özellik şu platformlarda geçerlidir:
   > [!TIP]
   > **Yeniden yönlendirme** ve **kimlik bilgisi** türleriyle, uzantıdan geçirilecek kendi yapılandırma değerlerinizi eklersiniz. **Kimlik bilgisi**kullanıyorsanız, **Kerberos** türünde Apple tarafından sunulan yerleşik yapılandırma ayarlarını kullanmayı göz önünde bulundurun.
 
-- **UZANTı kimliği** (yeniden yönlendirme ve kimlik bilgisi): SSO uygulama uzantınızı tanımlayan paket tanımlayıcısını (gibi) girin `com.apple.ssoexample` .
-- **Takım Kimliği** (yeniden yönlendirme ve kimlik bilgisi): SSO uygulama uzantınızın ekip tanımlayıcısını girin. Takım tanımlayıcısı, Apple tarafından oluşturulan ve gibi 10 karakterlik alfasayısal bir dizedir (sayılar ve harfler) `ABCDE12345` . 
+- **UZANTı kimliği** (yeniden yönlendirme, kimlik bilgisi): SSO uygulama uzantınızı tanımlayan paket tanımlayıcısını (gibi) girin `com.apple.ssoexample` .
+- **Takım Kimliği** (yeniden yönlendirme, kimlik bilgisi): SSO uygulama uzantınızın ekip tanımlayıcısını girin. Takım tanımlayıcısı, Apple tarafından oluşturulan ve gibi 10 karakterlik alfasayısal bir dizedir (sayılar ve harfler) `ABCDE12345` . 
 
   [Takım kimliğinizi bulun](https://help.apple.com/developer-account/#/dev55c3c710c) (Apple 'ın Web sitesini açar) daha fazla bilgi içerir.
 
-- **Bölge** (kimlik bilgileri ve Kerberos): kimlik doğrulama Realm adını girin. Bölge adı, gibi büyük harfli olmalıdır `CONTOSO.COM` . Genellikle, bölge adınız DNS etki alanı adınızla aynıdır, ancak tümü büyük harfle aynıdır.
+- **Bölge** (kimlik bilgileri, Kerberos): kimlik doğrulama Realm adını girin. Bölge adı, gibi büyük harfli olmalıdır `CONTOSO.COM` . Genellikle, bölge adınız DNS etki alanı adınızla aynıdır, ancak tümü büyük harfle aynıdır.
 
-- **Etki alanları** (kimlik bilgileri ve Kerberos): SSO aracılığıyla kimlik doğrulayabilecek sitelerin etki alanı veya ana bilgisayar adlarını girin. Örneğin, Web siteniz ise, `mysite.contoso.com` `mysite` ana bilgisayar adı ve `contoso.com` etki alanı adıdır. Kullanıcılar bu sitelerden birine bağlandıklarında, uygulama uzantısı kimlik doğrulama sınamasını işler. Bu kimlik doğrulaması, kullanıcıların oturum açmak için yüz KIMLIĞI, Touch ID veya Apple pincode/geçiş kodu kullanmasına izin verir.
+- **Etki alanları** (kimlik bilgileri, Kerberos): SSO aracılığıyla kimlik doğrulayabilecek sitelerin etki alanı veya ana bilgisayar adlarını girin. Örneğin, Web siteniz ise, `mysite.contoso.com` `mysite` ana bilgisayar adı ve `contoso.com` etki alanı adıdır. Kullanıcılar bu sitelerden birine bağlandıklarında, uygulama uzantısı kimlik doğrulama sınamasını işler. Bu kimlik doğrulaması, kullanıcıların oturum açmak için yüz KIMLIĞI, Touch ID veya Apple pincode/geçiş kodu kullanmasına izin verir.
 
   - Çoklu oturum açma uygulama uzantılarınızın Intune profillerindeki tüm etki alanları benzersiz olmalıdır. Farklı türlerde SSO uygulama uzantıları kullanıyor olsanız bile, bir etki alanını hiçbir oturum açma uygulama uzantısı profilinde tekrarlayamıyorum.
   - Bu etki alanları büyük/küçük harfe duyarlı değildir.
@@ -291,7 +300,7 @@ Bu özellik şu platformlarda geçerlidir:
   - Intune çoklu oturum açma uygulama uzantısı profillerindeki tüm URL 'Lerin benzersiz olması gerekir. Farklı türlerde SSO uygulama uzantıları kullanıyor olsanız bile, hiçbir SSO uygulama uzantısı profilinde bir etki alanını tekrarlayabilirsiniz.
   - URL 'Ler veya ile başlamalıdır `http://` `https://` .
 
-- **Ek yapılandırma** (yeniden yönlendirme ve kimlik bilgileri): SSO uygulama uzantısına geçirilecek uzantıya özgü ek veriler girin:
+- **Ek yapılandırma** (Microsoft Azure AD, yeniden yönlendirme, kimlik bilgileri): SSO uygulama uzantısına geçirilecek uzantıya özgü ek veriler girin:
   - **Anahtar**: eklemek istediğiniz öğenin adını girin, örneğin `user name` .
   - **Tür**: veri türünü girin. Seçenekleriniz şunlardır:
 
@@ -331,7 +340,13 @@ Bu özellik şu platformlarda geçerlidir:
 - **Active Directory site kodu** (yalnızca Kerberos): Kerberos uzantısının kullanması gereken Active Directory sitenin adını girin. Kerberos uzantısı Active Directory site kodunu otomatik olarak bulagerekebilmeniz için bu değeri değiştirmeniz gerekebilir.
 - **Önbellek adı** (yalnızca Kerberos): Kerberos önbelleğinin genel güvenlik HIZMETLERI (GSS) adını girin. Büyük olasılıkla bu değeri ayarlamanız gerekmez.  
 - **Parola gereksinimleri iletisi** (yalnızca Kerberos): kuruluşunuzun, kullanıcılara gösterilen parola gereksinimlerinin bir metin sürümünü girin. İleti, Active Directory parola karmaşıklığı gereksinimlerine ihtiyaç duymuyorsanız veya en az parola uzunluğu girmezseniz gösterir.  
-- **Uygulama paketi kimlikleri** (yalnızca Kerberos): cihazlarınızda çoklu oturum açma kullanması gereken uygulama paketi tanımlayıcılarını **ekleyin** . Bu uygulamalara Kerberos bilet verme bileti ve kimlik doğrulama bileti erişimi verilir. Uygulamalar, kullanıcıların erişim yetkisi oldukları hizmetler için de kimlik doğrular.
+- **Paylaşılan cihaz modunu etkinleştir** (yalnızca Microsoft Azure AD): Azure AD 'nin paylaşılan cihaz modu özelliği Için yapılandırılmış MacOS cihazlarına MICROSOFT Enterprise SSO eklentisini dağıtıyorsanız **Evet** ' i seçin. Paylaşılan moddaki cihazlar birçok kullanıcının paylaşılan cihaz modunu destekleyen uygulamaların genel olarak oturum açmasını ve çıkmasına izin verir. **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. 
+
+  **Evet**olarak ayarlandığında, mevcut tüm Kullanıcı hesapları cihazlardan silinir. Veri kaybını önlemek veya fabrika sıfırlamasını önlemek için bu ayarın cihazlarınızı nasıl değiştirdiğinize emin olun.
+
+  Paylaşılan cihaz modu hakkında daha fazla bilgi için bkz. [paylaşılan cihaz moduna genel bakış](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices).
+
+- **Uygulama paketi kimlikleri** (Microsoft Azure AD, Kerberos): cihazlarınızda çoklu oturum açmayı kullanması gereken uygulama paketi tanımlayıcılarını **ekleyin** . Bu uygulamalara Kerberos bilet verme bileti ve kimlik doğrulama bileti erişimi verilir. Uygulamalar, kullanıcıların erişim yetkisi oldukları hizmetler için de kimlik doğrular.
 - **Etki alanı bölge eşlemesi** (yalnızca Kerberos): bölge ile eşleşmesi gereken etkı alanı DNS soneklerini **ekleyin** . Ana bilgisayarların DNS adları bölge adıyla eşleşmezse bu ayarı kullanın. Büyük olasılıkla bu özel etki alanı/bölge eşlemesini oluşturmanız gerekmez.
 - **PKINIT sertifikası** (yalnızca Kerberos): Kerberos kimlik doğrulaması Için kullanılabilecek Ilk kimlik doğrulaması (PKI) sertifikası Için ortak anahtar şifrelemesini **seçin** . Intune 'A eklediğiniz [PKCS](../protect/certficates-pfx-configure.md) veya [SCEP](../protect/certificates-scep-configure.md) sertifikaları arasından seçim yapabilirsiniz. Sertifikalar hakkında daha fazla bilgi için bkz. [Microsoft Intune kimlik doğrulaması için sertifikaları kullanma](../protect/certificates-configure.md).
 

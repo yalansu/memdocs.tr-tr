@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2712613eb6d03253c05a011037ac8492992e1f03
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 77fee5931046bc706f965a9a5d738f5a7e2223f4
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695197"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819635"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Configuration Manager Windows uygulamaları oluşturma
 
@@ -128,6 +128,11 @@ Bir uygulamaya dağıtım türü olarak yalnızca işletim sistemi olmayan dağ�
 
 Bu dağıtım türünü bir uygulamaya eklediğinizde, **görev sırası** sayfasında özelliklerini yapılandırın. Daha fazla bilgi için bkz. [dağıtım türü **görev dizisi** seçenekleri](../deploy-use/create-applications.md#bkmk_dt-ts).
 
+Sürüm 2006 ' den başlayarak, bir görev dizisi dağıtım türü eklemek ve yapılandırmak için aşağıdaki Windows PowerShell cmdlet 'lerini kullanın:
+
+- [Add-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/add-cmtasksequencedeploymenttype?view=sccm-ps)
+- [Set-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/set-cmtasksequencedeploymenttype?view=sccm-ps)
+
 ### <a name="prerequisites-for-a-task-sequence-deployment-type"></a>Bir görev dizisi dağıtım türü için Önkoşullar
 
 Özel bir görev sırası oluşturun:
@@ -162,9 +167,9 @@ Mobil uygulama paketlerini imzalamak için, kullanılacak kod imzalama sertifika
 
 | Paket  | Symantec  | Symantec dışı  |
 |---------|---------|---------|
-| Windows 10 Mobile cihazlarında Universal **. appx** paketleri | Evet | Evet |
-| **. xap** paketleri | Evet | Hayır |
-| Windows 10 Mobile cihazlarına yüklemek için Windows Phone 8,1 için oluşturulan **appx** paketleri | Evet | Hayır |
+| Windows 10 Mobile cihazlarında Universal **. appx** paketleri | Yes | Yes |
+| **. xap** paketleri | Yes | Hayır |
+| Windows 10 Mobile cihazlarına yüklemek için Windows Phone 8,1 için oluşturulan **appx** paketleri | Yes | Hayır |
 
 ## <a name="deploy-windows-installer-apps-to-mdm-enrolled-windows-10-devices"></a><a name="bkmk_mdm-msi"></a> MDM 'ye kayıtlı Windows 10 cihazlarına Windows Installer uygulamalarını dağıtma  
 

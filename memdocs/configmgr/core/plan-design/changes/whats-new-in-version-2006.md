@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: bdfb122173c913274373f41c3932f1ac094ec953
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fc12c81a1ec58d17580b91e21a1ba7d2e0cb0cbc
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700291"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819686"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 2006 ' deki yenilikler
 
@@ -31,6 +31,13 @@ Yeni Configuration Manager özelliklerinden tam olarak yararlanmak için, siteyi
 > Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Microsoft Uç Nokta Yöneticisi kiracı iliştirme
+
+### <a name="tenant-attach-microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Kiracı iliştirme: Microsoft Endpoint Manager Yönetim merkezinde Microsoft Defender virüsten koruma ilkeleri
+<!--4812909-->
+Artık Microsoft Endpoint Manager konsolunda Microsoft Defender virüsten koruma ilkeleri oluşturabilir ve bunları Configuration Manager koleksiyonlara dağıtabilirsiniz. Ayrıntılı yönergeler ve kullanılabilir ayarlar dahil daha fazla bilgi için aşağıdaki makalelere bakın:
+- [Kiracı iliştirme: Yönetim Merkezi 'nden Microsoft Defender ATP 'ye Configuration Manager istemcileri ekleme (Önizleme)](../../../tenant-attach/atp-onboard.md)
+- [Kiracı iliştirme: yönetim merkezinden Endpoint Security virüsten koruma ilkesini dağıtma (Önizleme)](../../../tenant-attach/deploy-antivirus-policy.md)
+- [Microsoft Intune 'deki kiracı ekli cihazlar Için Microsoft Defender virüsten koruma Ilkesi ayarları](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json). 
 
 ### <a name="install-applications-from-the-admin-center"></a>Yönetim merkezinden uygulama yüklemesi
 <!--7518897, 6024389-->
@@ -126,7 +133,7 @@ Windows Tanılama verilerine yönelik masaüstü Analizi gereksinimleriyle daha 
 |---------|---------|
 | Gerekli | Temel |
 | İsteğe bağlı (sınırlı) | Gelişmiş (sınırlı) |
-| N/A | Gelişmiş |
+| YOK | Gelişmiş |
 | İsteğe Bağlı | Tam |
 
 Daha önce **Gelişmiş** düzeyde herhangi bir cihaz yapılandırdıysanız, sürüm 2006 ' e yükselttiğinizde bu kullanıcılar **isteğe bağlı (sınırlı)** olarak döndürülür. Böylece daha az veri Microsoft 'a gönderilir. Bu değişiklik, masaüstü analizinden gördüklerinizi etkilemez.

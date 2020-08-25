@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: af506f9eee80d167b42827f93958fc2a3a5741a4
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 7027eac119ef36adfdb9a0057a74d276696620b3
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051646"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820078"
 ---
 Bu bildirimler, gelecekteki Intune değişiklik ve özelliklerine hazırlanmanıza yardımcı olabilecek önemli bilgiler sağlar.
 
@@ -37,10 +37,10 @@ MC208118 son Mart sürümünde, Microsoft Endpoint Manager için yeni ve basit b
 Android Cihaz Yöneticisi yönetimi, Android 2,2 ' de Android cihazlarını yönetmenin bir yolu olarak yayımlanmıştır. Daha sonra Android 5 ' ten itibaren, [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) 'ın daha modern yönetim çerçevesi yayımlanmıştır (Google Mobile Services 'e güvenilir bir şekilde bağlanabilme cihazları için). Google, yeni Android sürümlerindeki yönetim desteğini azaltarak Cihaz Yöneticisi yönetiminden teşvik.
 
 #### <a name="how-does-this-affect-me"></a>Bu değişiklik beni nasıl etkileyecek?
-Google tarafından sunulan bu değişiklikler nedeniyle 2020 dördüncü çeyrekte, etkilenen cihaz yönetici tarafından yönetilen cihazlarda artık kapsamlı yönetim özelliklerine sahip olmayacaktır. 
+Google tarafından sunulan bu değişiklikler nedeniyle, 2020 Ekim 'de, etkilenen cihaz yönetici tarafından yönetilen cihazlarda artık kapsamlı yönetim özelliklerine sahip olmayacaktır. 
 
 > [!NOTE]
-> Bu tarih daha önce 2020 üçüncü çeyreği olarak iletildi, ancak [Google 'daki en son bilgilere](https://www.blog.google/products/android-enterprise/da-migration/)göre taşınmıştır.
+> Bu tarih daha önce 2020 dördüncü çeyrekte, ancak [Google 'daki en son bilgilere](https://www.blog.google/products/android-enterprise/da-migration/)göre taşınmıştır.
 
 ##### <a name="device-types-that-will-be-impacted"></a>Etkilenecek cihaz türleri
 Azalan Cihaz Yöneticisi desteğinden etkilenecek cihazlar aşağıdaki üç koşulun uygulandığı olanlardır:
@@ -96,14 +96,14 @@ Etkilenen uyumluluk ayarları:
 - Yeni kaydedilen cihazlar, yeni atanan ayarlar ve güncelleştirilmiş ayarlar için, etkilenen uyumluluk ayarları "cihaz ayarlarını güncelleştirme" sayfasında uyumsuzluğa neden olmaya devam eder ve cihaz uyumsuz olacaktır, ancak Ayarlar uygulamasında daha sıkı parola gereksinimleri zorlanmaz.
 
 #### <a name="cause-of-impact"></a>Etki nedeni 
-Cihazlar 2020 dördüncü çeyreğinde etkilenmeyecektir. Bu sırada, Şirket Portalı API hedefini, 28 düzeyinden düzey 29 düzeyine ([Google 'ın gerektirdiği gibi](https://www.blog.google/products/android-enterprise/da-migration/)) artıracak Şirket portalı bir uygulama güncelleştirmesi olacaktır. 
+Cihazlar 2020 Ekim ayının başında etkilenecektir. Bu sırada, Şirket Portalı API hedefini, 28 düzeyinden düzey 29 düzeyine ([Google 'ın gerektirdiği gibi](https://www.blog.google/products/android-enterprise/da-migration/)) artıracak Şirket portalı bir uygulama güncelleştirmesi olacaktır. 
 
 Bu noktada, Kullanıcı bu eylemleri tamamladıktan sonra, Samsung tarafından üretilmediği Cihaz Yöneticisi tarafından yönetilen cihazlar etkilenecektir:
 - Android 10 veya sonraki sürümleri için güncelleştirmeler.
 - Şirket Portalı uygulamasını, API düzeyi 29 ' i hedefleyen sürüme güncelleştirir.
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Bu değişikliğe hazırlanmak için ne yapmam gerek?
-2020 dördüncü çeyreğinde gerçekleştirilen işlevsellikten kaçınmak için şunları yapmanızı öneririz:
+2020 Ekim 'de gerçekleştirilen işlevsellikten kaçınmak için şunları yapmanızı öneririz:
 - **Yeni**kayıtlar: [Android kurumsal](../enrollment/connect-intune-android-enterprise.md) yönetimine yeni cihazlar ekleme (varsa) ve/veya [Uygulama koruma ilkeleri](../apps/app-protection-policies.md). Cihaz Yöneticisi yönetimine yeni cihaz ekleme kullanmaktan kaçının. 
 - **Daha önce kaydedilen cihazlar**: Cihaz yönetici tarafından yönetilen bir cihaz Android 10 veya üzerini çalıştırıyorsa ya da Android 10 veya sonraki bir sürüme (özellikle bir Samsung cihaz değilse) güncelleştirebilir, Cihaz Yöneticisi yönetiminin dışına [Android kurumsal](../enrollment/connect-intune-android-enterprise.md) yönetim ve/veya [Uygulama koruma ilkelerine](../apps/app-protection-policies.md)taşıyın. [Android cihazlarını cihaz yöneticisinden iş profili yönetimine taşımak](../enrollment/android-move-device-admin-work-profile.md)için kolaylaştırılmış akıştan yararlanabilirsiniz.
 

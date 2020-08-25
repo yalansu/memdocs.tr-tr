@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 08/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32d46374186596e8c8721b77510738caadcf78b8
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: 09ccfe079511c90f2ce7ecf6c27d4dfcf1c85327
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814956"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820196"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune 'da ortak iOS/ıpados özelliklerini kullanmak için iOS ve ıpados cihaz ayarları
 
@@ -304,7 +304,7 @@ Bu özellik şu platformlarda geçerlidir:
   - **Yapılandırılmadı**: Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi uygulama uzantılarını kullanmaz. Bir uygulama uzantısını devre dışı bırakmak için, SSO uygulama uzantısı türü ' ni **Yapılandırılmadı**' ya geçirebilirsiniz.
   - **Microsoft Azure AD**: bir yeniden YÖNLENDIRME türü SSO uygulama uzantısı olan MICROSOFT Enterprise SSO eklentisini kullanır. Bu eklenti, [Apple 'ın Kurumsal Çoklu oturum açma](https://developer.apple.com/documentation/authenticationservices) özelliğini destekleyen tüm uygulamalarda Active Directory hesapları için SSO sağlar. Azure AD kullanarak kimlik doğrulaması yapan Microsoft uygulamalarında, kuruluş uygulamalarında ve web sitelerinde SSO 'yu etkinleştirmek için bu SSO uygulama uzantısı türünü kullanın.
 
-    SSO eklentisi, güvenlik ve Kullanıcı deneyimi iyileştirmeleri sunan gelişmiş bir kimlik doğrulama Aracısı işlevi görür. Daha önce Microsoft Authenticator uygulamayla aracılı kimlik doğrulamasını kullanan tüm uygulamalar, [Apple cihazları Için Microsoft ENTERPRISE SSO EKLENTISIYLE](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)SSO almaya devam eder.
+    SSO eklentisi, güvenlik ve Kullanıcı deneyimi iyileştirmeleri sunan gelişmiş bir kimlik doğrulama Aracısı işlevi görür. Kimlik doğrulaması için Microsoft Authenticator uygulamasını kullanan tüm uygulamalar, [Apple cihazları Için Microsoft ENTERPRISE SSO EKLENTISIYLE](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)SSO almaya devam eder.
 
     > [!IMPORTANT]
     > Microsoft Azure AD SSO uygulama uzantısı türüyle SSO sağlamak için önce cihazlara iOS/ıpados Microsoft Authenticator uygulamasını yüklemeniz gerekir. Authenticator uygulaması Microsoft Enterprise SSO eklentisini cihazlara sunar ve MDM SSO uygulama uzantısı ayarları eklentiyi etkinleştirir. Bir Authenticator ve SSO uygulama uzantısı profili cihazlara yüklendikten sonra, kullanıcıların oturum açması için kimlik bilgilerini girmesi ve cihazlarında oturum kurması gerekir. Bu oturum daha sonra kullanıcıların kimlik doğrulamasını yapmasına gerek kalmadan farklı uygulamalar arasında kullanılır. Doğrulayıcı hakkında daha fazla bilgi için bkz. [Microsoft Authenticator uygulaması nedir?](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview).
@@ -366,12 +366,17 @@ Bu özellik şu platformlarda geçerlidir:
 - **Asıl ad** (yalnızca Kerberos): Kerberos sorumlusunun Kullanıcı adını girin. Bölge adını eklemeniz gerekmez. Örneğin, içinde `user@contoso.com` `user` asıl addır ve `contoso.com` bölge adıdır.
 
   > [!TIP]
-  > - Ayrıca, küme ayraçları girerek asıl ad içindeki değişkenleri de kullanabilirsiniz `{{ }}` . Örneğin, Kullanıcı adını göstermek için girin `Username: {{username}}` . 
+  > - Ayrıca, küme ayraçları girerek asıl ad içindeki değişkenleri de kullanabilirsiniz `{{ }}` . Örneğin, Kullanıcı adını göstermek için girin       `Username: {{username}}` . 
   > - Ancak, değişkenler kullanıcı arabiriminde doğrulanmamış ve büyük/küçük harfe duyarlı olduğundan değişken değiştirme konusunda dikkatli olun. Doğru bilgileri girdiğinizden emin olun.
 
 - **Active Directory site kodu** (yalnızca Kerberos): Kerberos uzantısının kullanması gereken Active Directory sitenin adını girin. Kerberos uzantısı Active Directory site kodunu otomatik olarak bulagerekebilmeniz için bu değeri değiştirmeniz gerekebilir.
 - **Önbellek adı** (yalnızca Kerberos): Kerberos önbelleğinin genel güvenlik HIZMETLERI (GSS) adını girin. Büyük olasılıkla bu değeri ayarlamanız gerekmez.
-- **Uygulama paketi kimlikleri** (yalnızca Kerberos): cihazlarınızda çoklu oturum açma kullanması gereken uygulama paketi tanımlayıcılarını **ekleyin** . Bu uygulamalara, Kerberos Anahtar verme bileti, kimlik doğrulama bileti ve kullanıcılara erişim yetkisi oldukları hizmetler için kimlik doğrulaması erişimi verilir.
+- **Uygulama paketi kimlikleri** (Microsoft Azure AD, Kerberos): cihazlarınızdaki bir uzantıda çoklu oturum açmayı alması gereken ek uygulamaların paket kimliklerini girin.
+
+  Microsoft Azure AD SSO uygulama uzantısı türünü kullanıyorsanız, bu uygulamalar kullanıcının kimliğini bir oturum açmaya gerek kalmadan doğrulamak için Microsoft Enterprise SSO eklentisini kullanır. Girdiğiniz uygulama paketi kimliklerinin, Microsoft kimlik doğrulama kitaplığı (MSAL) gibi herhangi bir Microsoft kitaplığı kullanmazlar Microsoft Azure AD SSO uygulama uzantısını kullanma izni vardır. Bu uygulamalar için deneyim, Microsoft kitaplıklarıyla karşılaştırıldığında sorunsuz şekilde çalışmayabilir. MSAL kimlik doğrulaması kullanan eski uygulamalar veya en yeni Microsoft kitaplıklarını kullanmayan uygulamalar, Microsoft Azure SSO uygulama uzantısıyla düzgün şekilde çalışmak için bu listeye eklenmelidir.  
+
+  Kerberos SSO uygulama uzantısı türünü kullanıyorsanız, bu uygulamaların Kerberos Anahtar verme bileti, kimlik doğrulama bileti erişimi vardır ve kullanıcılara erişim yetkisi oldukları hizmetlere kimliklerini doğrular.
+
 - **Etki alanı bölge eşlemesi** (yalnızca Kerberos): bölge ile eşleşmesi gereken etkı alanı DNS soneklerini **ekleyin** . Ana bilgisayarların DNS adları bölge adıyla eşleşmezse bu ayarı kullanın. Büyük olasılıkla bu özel etki alanı/bölge eşlemesini oluşturmanız gerekmez.
 - **PKINIT sertifikası** (yalnızca Kerberos): Kerberos kimlik doğrulaması Için kullanılabilecek Ilk kimlik doğrulaması (PKI) sertifikası Için ortak anahtar şifrelemesini **seçin** . Intune 'A eklediğiniz [PKCS](../protect/certficates-pfx-configure.md) veya [SCEP](../protect/certificates-scep-configure.md) sertifikaları arasından seçim yapabilirsiniz. Sertifikalar hakkında daha fazla bilgi için bkz. [Microsoft Intune kimlik doğrulaması için sertifikaları kullanma](../protect/certificates-configure.md).
 

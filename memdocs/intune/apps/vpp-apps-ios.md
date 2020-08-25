@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3dd7730e8ac25c41140f3e375383bf185eae91e6
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 21bc1b47f64318579da439e37f8dcf66d5a0a6ce
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217222"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820519"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Microsoft Intune ile Apple Volume Purchase Program aracılığıyla satın alınan iOS ve macOS uygulamalarını yönetme
 
@@ -64,7 +64,7 @@ Apple Business Manager kullanarak ortak ve özel uygulamalar satın alabilir ve 
 - **Mağaza uygulamaları:** Apple Business Manager 'ı kullanarak, Içerik yöneticileri App Store 'da bulunan ücretsiz ve ücretli uygulamaları satın alabilir.
 - **Özel uygulamalar:** Apple Business Manager 'ı kullanarak, Içerik yöneticileri kuruluşunuza özel olarak sunulan özel uygulamalar da satın alabilir. Bu uygulamalar, doğrudan çalıştığınız geliştiriciler tarafından kuruluşunuzun özel ihtiyaçlarına göre tasarlanmıştır. [Özel uygulamaları dağıtma](https://developer.apple.com/business/custom-apps/)hakkında daha fazla bilgi edinin.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 - Kuruluşunuz için bir [Apple Business Manager](https://business.apple.com/) veya [Apple Okul Yöneticisi](https://school.apple.com/) hesabı. 
 - Bir veya daha fazla konum belirtece atanan uygulama lisansları satın alındı. 
 - Konum belirteçleri indirildi. 
@@ -175,7 +175,7 @@ Belirli bir cihaz, Kullanıcı veya uygulamayı temel alan tüm ilişkili iOS/ı
 
 ## <a name="deleting-vpp-tokens"></a>VPP belirteçlerini silme
 <!-- 820879 -->  
-Konsolunu kullanarak bir Apple Volume satın alma programı (VPP) belirtecini silebilirsiniz. VPP belirteci kopya örnekleriniz olduğunda bu gerekli olabilir. Bir belirteci silmek, ilişkili uygulamaları ve atamayı da siler. Ancak bir belirteci silmek uygulama lisanslarını iptal etmez veya uygulamaları kaldırmaz. 
+Konsolunu kullanarak bir Apple Volume satın alma programı (VPP) belirtecini silebilirsiniz. VPP belirteci kopya örnekleriniz olduğunda bu gerekli olabilir. Bir belirteci silmek, ilişkili uygulamaları ve atamayı da siler. Bir belirteci silmek ilişkili uygulama lisanslarını iptal eder ancak uygulamaları kaldırmaz.  
 
 >[!NOTE]
 >Intune, bir belirteç silindikten sonra uygulama lisanslarını iptal edemez. 

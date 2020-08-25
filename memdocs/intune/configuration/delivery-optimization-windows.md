@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 4d491a3210229d5dd6c74ccaed7f44c4ae4eb83c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e42d7f303d3d79e2683845b50c7d3dceb11f1686
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990064"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820451"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Microsoft Intune teslim Iyileştirme ayarları
 
@@ -54,11 +54,11 @@ Windows 10 ' da teslim Iyileştirmesi hakkında bilgi edinmek için Windows belg
 
 7. **Yapılandırma ayarları** sayfasında, güncelleştirmelerin ve uygulamaların nasıl indirilmesini istediğinizi tanımlayın. Kullanılabilir ayarlar hakkında daha fazla bilgi için bkz. [Intune Için teslim iyileştirme ayarları](delivery-optimization-settings.md).
 
-   Ayarları yapılandırmayı tamamladıktan **sonra ileri**' yi seçin.
+   Ayarları yapılandırmayı bitirdiğinizde **İleri**' yi seçin.
 
 8. Scope **(Etiketler)** sayfasında kapsam **etiketleri Seç ' i seçerek profile** kapsam etiketleri atayın *Select tags* .
   
-   Devam etmek için **İleri**’yi seçin.
+   Devam etmek için **İleri** seçeneğini belirleyin.
 
 9. **Atamalar** sayfasında, bu profili alacak grupları seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](../configuration/device-profile-assign.md).
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/13/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d47f1e121a5010a17d213d21d3208977e8f75514
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 6bfa28a6b4df30c6303f75d4a5cf91c20ce4e827
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217627"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820638"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Intune’da Windows 10 ve üzeri cihazlar için Wi-Fi ayarları ekleme
 
-Belirli Wi-Fi ayarları ile bir profil oluşturabilir ve ardından bu profili Windows 10 ve üzeri cihazlarınıza dağıtabilirsiniz. Microsoft Intune; ağınızda kimlik doğrulama, bir önceden paylaşılan anahtar kullanma ve daha fazlası gibi pek çok özellik sunar.
+Belirli WiFi ayarlarına sahip bir profil oluşturabilirsiniz. Ardından, bu profili Windows 10 ve üzeri cihazlarınıza dağıtın. Microsoft Intune; ağınızda kimlik doğrulama, bir önceden paylaşılan anahtar kullanma ve daha fazlası gibi pek çok özellik sunar.
 
 Bu makalede bu ayarlar açıklanır.
 
@@ -86,7 +86,7 @@ Kurumsal profiller, Wi-Fi bağlantılarının kimliğini doğrulamak için Geni�
 
     Örneğin, **ContosoCorp** Wi-Fi ağını oluşturduğunuzu ve bu yapılandırma profili içinde **ContosoCorp**'u kullandığınızı varsayalım. Ayrıca, aralık içinde bir de **ContosoGuest** Wi-Fi ağınız olsun. Şirket cihazlarınız aralık içinde olduğunda, bunların otomatik olarak **ContosoCorp**'a bağlanmasını istiyorsunuz. Bu senaryoda, **Mevcutsa daha fazla tercih edilen ağa bağlan** özelliğini **Hayır** olarak ayarlayın.
 
-  - **SSID'sini yayınlamıyor olsa bile bu ağa bağlanın**: Ağınız gizli (SSID'si herkese açık şekilde yayınlanmıyor) olduğunda bile, ağınıza otomatik olarak bağlanmak üzere yapılandırma profili için **Evet**'i seçin. Bu yapılandırma profilinin gizli ağınıza bağlanmasını istemiyorsanız **Hayır**'ı seçin.
+- **SSID'sini yayınlamıyor olsa bile bu ağa bağlanın**: Ağınız gizli (SSID'si herkese açık şekilde yayınlanmıyor) olduğunda bile, ağınıza otomatik olarak bağlanmak üzere yapılandırma profili için **Evet**'i seçin. Bu yapılandırma profilinin gizli ağınıza bağlanmasını istemiyorsanız **Hayır**'ı seçin.
 
 - **Tarifeli Bağlantı Sınırı**: Bir yönetici, ağ trafiğinin nasıl tarifelendirileceğini belirleyebilir. Daha sonra uygulamalar ağ trafiği davranışlarını bu ayara göre ayarlayabilir. Seçenekleriniz şunlardır:
 
@@ -124,19 +124,27 @@ Kurumsal profiller, Wi-Fi bağlantılarının kimliğini doğrulamak için Geni�
     > [!NOTE]
     > Bir EAP türü kullanılırken SCEP ve PKCS sertifika profilleri desteklenir.
 
-    - **Sunucu Güveni**  
+    **SUNUCU GÜVENI**  
 
-      **Sertifika sunucu adları**: **EAP-TLS**, **EAP-TTLS** veya **PEAP** EAP türleri ile kullanın. Güvenilen sertifika yetkiliniz (CA) tarafından verilen sertifikalarda yaygın olarak kullanılan bir veya birden çok ad girin. Bu bilgiyi girerseniz, bu Wi-Fi ağına bağlanırken kullanıcının cihazında görüntülenen dinamik güven iletişim kutusunu atlayabilirsiniz.  
+    - **Sertifika sunucu adları**: **EAP-TLS**, **EAP-TTLS** veya **PEAP** EAP türleri ile kullanın. Güvenilen sertifika yetkiliniz (CA) tarafından verilen sertifikalarda yaygın olarak kullanılan bir veya birden çok ad girin. Bu bilgiyi girerseniz, bu Wi-Fi ağına bağlanırken kullanıcının cihazında görüntülenen dinamik güven iletişim kutusunu atlayabilirsiniz.  
 
-      **Sertifika doğrulaması için kök sertifika**: **EAP-TLS**, **EAP-TTLS** veya **PEAP** EAP türleri ile kullanın. Bağlantı kimliğini doğrulamak için kullanılan, güvenilen kök sertifika profilini seçin.  
+    - **Sertifika doğrulaması için kök sertifika**: **EAP-TLS**, **EAP-TTLS** veya **PEAP** EAP türleri ile kullanın. Bağlantı kimliğini doğrulamak için kullanılan, güvenilen kök sertifika profilini seçin.  
 
-      **Kimlik gizliliği (dış kimlik)**: **PEAP** EAP türü ile kullanın. Bir EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.  
+    - **Kimlik gizliliği (dış kimlik)**: **PEAP** EAP türü ile kullanın. Bir EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.  
 
-    - **İstemci kimlik doğrulaması**
+    - **PEAP 1. aşamada sunucu doğrulaması gerçekleştirme**: **Evet**olarak ayarlandığında, PEAP anlaşma aşaması 1 ' de, cihazlar sertifikayı doğrular ve sunucuyu doğrular. Bu doğrulamayı engellemek veya engellemek için **Hayır** ' ı seçin. **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
-      **İstemci kimlik doğrulaması için istemci sertifikası (Kimlik sertifikası)**: **EAP-TLS** EAP türü ile kullanın. Bağlantı kimliğini doğrulamak için kullanılan sertifika profilini seçin.
+      **Evet**' i seçerseniz, aşağıdakileri de yapılandırın:
 
-      **Kimlik doğrulama yöntemi**: **EAP-TTLS** EAP türü ile kullanın. Bağlantı için kimlik doğrulama yöntemini seçin:  
+      **PEAP aşaması 1 ' de sunucu doğrulaması için Kullanıcı Istemlerini devre dışı bırak**: **Evet**olarak ayarlandığında, PEAP anlaşma aşaması 1 ' de Kullanıcı, güvenilen SERTIFIKA yetkilileri için yeni PEAP sunucularının yetkilendirilmesini isteyen istemler gösterilmez. İstemleri göstermek için **Hayır** ' ı seçin. **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
+    - **Şifreleme bağlaması gerektir**: **Evet** , PEAP anlaşması sırasında şifre tabanlı bağlama kullanmayan PEAP sunucularının bağlantılarını engeller. **No** , cryptobinding gerektirmez. **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
+    **ISTEMCI KIMLIK DOĞRULAMASı**
+
+    - **İstemci kimlik doğrulaması için istemci sertifikası (Kimlik sertifikası)**: **EAP-TLS** EAP türü ile kullanın. Bağlantı kimliğini doğrulamak için kullanılan sertifika profilini seçin.
+
+    - **Kimlik doğrulama yöntemi**: **EAP-TTLS** EAP türü ile kullanın. Bağlantı için kimlik doğrulama yöntemini seçin:  
 
       - **Sertifikalar**: Sunucuya gösterilen kimlik sertifikası olan istemci sertifikasını seçin.
       - **Kullanıcı Adı ve Parola**: Kimlik doğrulama için bir **EAP dışı yöntem (iç kimlik)** girin. Seçenekleriniz şunlardır:
@@ -146,12 +154,12 @@ Kurumsal profiller, Wi-Fi bağlantılarının kimliğini doğrulamak için Geni�
         - **Microsoft CHAP (MS-CHAP)**
         - **Microsoft CHAP Sürüm 2 (MS-CHAP v2)**
 
-      **Kimlik gizliliği (dış kimlik)**: **EAP-TTLS** EAP türü ile kullanın. Bir EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.
+    - **Kimlik gizliliği (dış kimlik)**: **EAP-TTLS** EAP türü ile kullanın. Bir EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.
 
 - **Şirket ara sunucu ayarları**: Kuruluşunuz içinde ara sunucu ayarlarını kullanmak için seçin. Seçenekleriniz şunlardır:
   - **Hiçbiri**: Hiçbir ara sunucu ayarı yapılandırılmaz.
   - **El ile yapılandır**: **Ara sunucu IP adresini** ve onun **Bağlantı noktası numarasını** girin.
-  - **Otomatik olarak yapılandır**: Ara sunucu otomatik yapılandırma (PAC) betiğine işaret eden URL'yi girin. Örneğin, `http://proxy.contoso.com/proxy.pac` girin.
+  - **Otomatik olarak Yapılandır**: proxy otomatik yapılandırma (PAC) betiğine işaret eden URL 'yi girin. Örneğin, `http://proxy.contoso.com/proxy.pac` girin.
 
 - **Wi-Fi profilinin Federal Bilgi İşleme Standardı (FIPS) ile uyumlu olmasını zorla** FIPS 140-2 standardıyla doğrulama yaparken bunu **Evet** olarak ayarlayın. Bu standart, şifreleme tabanlı güvenlik sistemleri kullanan tüm ABD federal resmi kurumlarında dijital olarak saklanan, hassas fakat gizli olmayan bilgileri korumak için gereklidir. **Hayır**’ı seçerseniz FIPS ile uyumlu olamazsınız.
 
@@ -161,9 +169,9 @@ Intune'da sağlanmayan tüm ayarlar için, başka bir Windows cihazından Wi-Fi 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Profil oluşturuldu ancak hiçbir şey yapmıyor. Daha sonra [bu profili atayın](device-profile-assign.md).
+Profil oluşturuldu, ancak hiçbir şey gerçekleştirmeyebilir. [Profili atadığınızdan](device-profile-assign.md)emin olun ve [durumunu izleyin](device-profile-monitor.md).
 
 ## <a name="more-resources"></a>Diğer kaynaklar
 
-- [Windows 8.1](wi-fi-settings-import-windows-8-1.md) için kullanılabilir ayarlara göz atın.
-- Diğer platformlar dahil olmak üzere [Wi-Fi ayarlarına genel bakış](wi-fi-settings-configure.md).
+- [Windows 8.1 Wi-Fi ayarları](wi-fi-settings-import-windows-8-1.md)
+- Diğer platformlar dahil olmak üzere [Wi-Fi ayarlarına genel bakış](wi-fi-settings-configure.md)

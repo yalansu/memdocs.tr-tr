@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/24/2018
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5346a288a8411a66ab79b0816385a530eeabb8c2
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: ba2f9d2e3f9e89d37b1dc8361cd80451155a6869
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881853"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820689"
 ---
 # <a name="sync-your-windows-device-manually"></a>Windows cihazınızı el ile eşitleme
 
@@ -36,8 +36,6 @@ Aşağıdakiler dahil olmak üzere tüm Windows cihazlar, cihazın Ayarlar uygul
 
 * [Windows 10 Masaüstü](#windows-10-desktop)  
 * [Microsoft HoloLens](#microsoft-hololens)   
-* [Windows 10 Mobile](#windows-10-mobile)  
-* [Windows Phone 8.1](#windows-phone-81)    
 
 ## <a name="sync-directly-from-company-portal-app-for-windows"></a>Windows için Şirket Portalı uygulamasından doğrudan eşitleme
 Oluşturan güncelleştirme (sürüm 1709) veya sonraki sürümü çalıştıran Windows 10 cihazlarını el ile eşitlemek için bu adımları uygulayın.
@@ -57,12 +55,12 @@ Eşitleme denetimine uygulama dışında, cihazınızın masaüstünden de eriş
 1. Görev çubuğunuzda veya Başlat menünüzde Şirket Portalı uygulaması simgesini bulun.  
 2. Uygulama simgesine sağ tıklayın, böylece uygulamanın menüsü (atlama listesi olarak da bilinir) açılır.  
 
-    ![Bir cihazın masaüstünde Windows görev çubuğunun ekran görüntüsü. Şirket Portalı uygulaması simgesi tıklanmış ve “Görev çubuğuna sabitle”, “Pencereyi kapat” ve “Bu cihazı eşitle” eylemi seçeneklerini içeren bir menü görüntülenmiştir.](./media/sync-device-from-start-menu-1807.png)  
+    ![Bir cihazın masaüstünde Windows görev çubuğunun ekran görüntüsü. Şirket Portalı App Icon seçildi ve "görev çubuğuna sabitle," "pencereyi kapat" ve "Bu cihazı Eşitle" eylemini içeren bir menü gösteriliyor.](./media/sync-device-from-start-menu-1807.png)  
 
 3. **Bu cihazı eşitle**’yi seçin. Şirket Portalı uygulaması, **Ayarlar** sayfasında açılır ve eşitlemenizi başlatır.  
 
 ## <a name="sync-from-settings-app"></a>Ayarlar Uygulamasından eşitleme 
-Microsoft HoloLens, Windows 10 Desktop, Windows 10 Mobile ve Windows Phone 8.1 cihazlarınızı Ayarlar uygulamasından el ile eşitlemek için bu adımları tamamlayın.  
+Microsoft HoloLens ve Windows 10 Masaüstü cihazlarınızı ayarlar uygulamasıyla el ile eşitlemek için bu adımları uygulayın.  
 
 ### <a name="windows-10-desktop"></a>Windows 10 masaüstü
 1. Cihazınızda ayarları **Başlat**' ı seçin  >  **Settings**.
@@ -81,23 +79,36 @@ Microsoft HoloLens, Windows 10 Desktop, Windows 10 Mobile ve Windows Phone 8.1 c
 
     ![Hesap türü olarak iş yeri erişimini seçme](./media/win10pc-sync-3-work-access.png)
 
-#### <a name="access-work-or-school-steps"></a>İş veya okula erişme adımları
+### <a name="microsoft-hololens"></a>Microsoft HoloLens  
+Bu yönergeler, Windows 10 Yıldönümü Güncelleştirmesi (RS1 olarak da bilinir) çalıştıran HoloLens cihazlarda geçerlidir.  
 
-1. **İş veya okula erişme**’ye tıklayın.
+1. Cihazınızda Ayarlar uygulamasını açın.  
+
+2. **Hesapların**  >  **iş erişimini**seçin.  
+
+    ![Hesaplar bağlantısının vurgulandığı HoloLens ayarlar uygulamasının ekran görüntüsü](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
+
+3. Bağlı hesabınızı ve ardından **Eşitle**’yi seçin.  
+
+    ![Eşitle düğmesinin vurgulandığı HoloLens ayarlar uygulamasının ekran görüntüsü](./media/RS1_holoLens_SyncRS1_Sync_08.png)   
+
+#### <a name="access-work-or-school-steps"></a>İş veya okula erişme adımları  
+
+1. **İşe veya okula erişim**' i seçin.
 
     ![İş veya okula erişme seçeneğini gösteren ekran görüntüsü](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
-2. Yanında evrak çantası simgesi bulunan hesabı seçin. Bu hesabı görmüyorsanız şirketiniz ayarlarınızı farklı yapılandırmış olabilir. Bu durumda yanında Microsoft logosu olan hesaba tıklayın.
+2. Yanında evrak çantası simgesi bulunan hesabı seçin. Bu hesabı görmüyorsanız şirketiniz ayarlarınızı farklı yapılandırmış olabilir. Bunun yanında bir Microsoft logosu olan hesabı seçin.
 
      ![Evrak çantası veya Microsoft logosu yanındaki hesabınızın adını seçin](./media/win10pc-rs1-sync-info-button.png)
 
-3. **Bilgi**’ye tıklayın. 
+3. **Bilgi**' yi seçin. 
 
-4. **Eşitle**'ye tıklayın. 
+4. **Eşitle**’yi seçin. 
 
 #### <a name="work-access-steps"></a>İş erişimi adımları
 
-1. **İş erişimi**’ne tıklayın.
+1. **İş erişimi**’ni seçin.
 
     ![Hesap türü olarak iş yeri erişimini seçme](./media/win10pc-sync-3-work-access.png)
 
@@ -105,49 +116,10 @@ Microsoft HoloLens, Windows 10 Desktop, Windows 10 Mobile ve Windows Phone 8.1 c
 
     ![Cihaz yönetimi için şirket adı seçme](./media/win10pc-sync-4-tap-com-name.png)
 
-3. **Eşitle**' ye tıklayın. Eşitleme tamamlanana kadar düğme devre dışı kalır.
+3. **Eşitle**' yi seçin. Eşitleme tamamlanana kadar düğme devre dışı kalır.
 
     ![Eşitleme düğmesini seçme](./media/win10pc-sync-5-tap-sync.png)  
-
-
-### <a name="windows-10-mobile"></a>Windows 10 Mobile
-
-   1. Cihazınızda **tüm uygulamalar**  >  **Ayarlar**  >  **hesaplar**' a gidin.
-
-       ![Ayarları ekranında Hesapları Seçme](./media/win10m-sync-1-settings-accounts.png)
-
-   2. **İş erişimi**’ni seçin.
-
-       ![Hesap türü olarak iş yeri erişimini seçme](./media/win10m-sync-2-work-access.png)
-
-   3. **Cihaz yönetimine kaydol**’un altında şirketinizin adını seçin.
-
-       ![Cihaz yönetimi için şirket adı seçme](./media/win10m-sync-3-tap-comp-name.png)
-
-   4. **Eşitle** simgesini seçin. Eşitleme tamamlanana kadar düğme devre dışı kalır.
-
-       ![Eşitleme simgesini seçme](./media/win10m-sync-4-tap-sync.png)  
-### <a name="microsoft-hololens"></a>Microsoft HoloLens  
-Bu yönergeler, Windows 10 Yıldönümü Güncelleştirmesi (RS1 olarak da bilinir) çalıştıran HoloLens cihazlarda geçerlidir. 
-1. Cihazınızda Ayarlar uygulamasını açın.  
-
-2. **Hesapların**  >  **iş erişimini**seçin.  
-    ![Hesaplar bağlantısının vurgulandığı HoloLens ayarlar uygulamasının ekran görüntüsü](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
-
-3. **Eşitleme**> bağlı hesabınızı seçin.  ![Ekran görüntüsü HoloLens ayarları uygulaması, Eşitle düğmesi vurgulanmış](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
-
-### <a name="windows-phone-81"></a>Windows Phone 8.1
-
-1. **Tüm uygulamalar**  >  **Ayarlar**  >  **çalışma alanı**' na gidin.
-
-    ![Ayarlar listesi](./media/wp81-1-sync-settings-workplace.png)
-
-2. Şirketinizin adını seçin.
-
-    ![Çalışma alanı hesabı için şirket adını seçme](./media/wp81-2-sync-tap-compname.png)
-
-3. **Eşitle** simgesini seçin.
-
-    ![Eşitleme simgesini seçme](./media/wp81-3-sync-tap-sync-button.png)
+    
+## <a name="next-steps"></a>Sonraki adımlar  
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9de296ec27c20ab25a60b0d825a360c272ca48d
-ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
+ms.openlocfilehash: aa6839cef79623b456cd31eec6b894eae7687de3
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725426"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820281"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -53,6 +53,101 @@ ms.locfileid: "88725426"
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## <a name="week-of-august-24-2020-2008-service-release"></a>24 Ağustos 2020 (2008 hizmet sürümü) haftası
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Uygulama yönetimi
+
+#### <a name="associated-licenses-revoked-before-deletion-of-apple-vpp-token--6195322----"></a>Apple VPP belirtecinin silinmesinden önce ilişkili lisanslar iptal edildi<!--6195322  -->
+Microsoft Endpoint Manager 'da bir Apple VPP belirtecini sildiğinizde, bu belirteçle ilişkilendirilen tüm Intune tarafından atanan lisanslar silinmeden önce otomatik olarak iptal edilir.
+
+#### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-shows-descriptions----7414768-wnstaged---"></a>Android için Şirket Portalı App 'teki cihaz ayarlarını güncelleştirme iyileştirmesi açıklamaları gösterir <!-- 7414768 wnstaged -->
+Android cihazlarda Şirket Portalı uygulamasında, **cihaz ayarlarını Güncelleştir** sayfası, güncelleştirilmesi gereken ayarları listeler. Kullanıcılar daha fazla bilgi görmek için sorunu genişletir ve **Çözümle** düğmesine bakın.
+
+Bu Kullanıcı deneyimi geliştirilmiştir. Listelenen ayarlar, açıklamayı göstermek için varsayılan olarak genişletilir ve uygunsa **Çözümle** düğmesini gösterir. Daha önce, sorunlar varsayılan olarak daraltılıydı. Bu varsayılan davranış, kullanıcıların sorunları daha hızlı çözümleyebilmeleri için tıklama sayısını azaltır.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>Cihaz yapılandırması
+
+#### <a name="use-netmotion-as-a-vpn-connection-type-for-iosipados-and-macos-devices---1333631-----"></a>İOS/ıpados ve macOS cihazları için VPN bağlantı türü olarak NetMotion kullanma<!-- 1333631   -->
+Bir VPN profili oluşturduğunuzda netmotion, bir VPN bağlantı türü olarak kullanılabilir (**cihazlar**  >  **cihaz yapılandırması**  >  **Create profile**  >  **iOS/ıpados** veya **MacOS** for platform > **VPN** for platform > bağlantı türü için **netmotion** ).
+
+Intune 'da VPN profilleri hakkında daha fazla bilgi için bkz. VPN [sunucularına bağlanmak IÇIN VPN profilleri oluşturma](../configuration/vpn-settings-configure.md).
+
+Aşağıdakiler cihazlar için geçerlidir:
+- iOS/iPadOS
+- macOS
+
+#### <a name="more-protected-extensible-authentication-protocol-peap-options-for-windows-10-wi-fi-profiles---3805024----"></a>Windows 10 Wi-Fi profilleri için daha fazla korunan Genişletilebilir Kimlik Doğrulama Protokolü (PEAP) seçenekleri<!-- 3805024  -->
+Windows 10 cihazlarında, Wi-Fi bağlantılarının kimliğini doğrulamak için Genişletilebilir Kimlik Doğrulama Protokolü (EAP) kullanarak Wi-Fi profilleri oluşturabilirsiniz (**cihaz**  >  **yapılandırma profilleri**,  >  **Create profile**  >  **Windows 10 and later** profil > **Enterprise**için **Wi-Fi** >.
+
+Korumalı EAP (PEAP) seçeneğini belirlediğinizde kullanılabilir yeni ayarlar vardır:
+- **PEAP aşamasında sunucu doğrulaması gerçekleştirme 1**: PEAP anlaşma aşaması 1 ' de, sunucu sertifika doğrulaması tarafından doğrulanır.
+  - **PEAP aşaması 1 ' de sunucu doğrulaması için Kullanıcı Istemlerini devre dışı bırak**: PEAP anlaşma aşaması 1 ' de, Kullanıcı tarafından güvenilen sertifika yetkilileri IÇIN yeni PEAP sunucularının yetkilendirilmesini isteyen istemler gösterilmez.
+- **Şifreleme bağlaması gerektir**: PEAP anlaşması sırasında şifre tabanlı bağlama kullanmayan PEAP sunucularıyla bağlantıları engeller.
+
+Yapılandırabileceğiniz ayarları görmek için [Windows 10 ve üzeri cihazlar Için Wi-Fi ayarları ekle](../configuration/wi-fi-settings-windows.md)' ye gidin.
+
+Aşağıdakiler cihazlar için geçerlidir: 
+- Windows 10 ve üzeri
+
+#### <a name="configure-the-macos-microsoft-enterprise-sso-plug-in---5627576--idstaged---"></a>MacOS Microsoft Enterprise SSO eklentisini yapılandırma<!-- 5627576  idstaged -->
+Microsoft Azure AD ekibi, macOS 10.15 + kullanıcılarına Microsoft uygulamalarına, kuruluş uygulamalarına ve Apple 'ın SSO özelliğini destekleyen ve Azure AD 'yi kullanarak kimlik doğrulaması yapan, tek bir oturum açma işlemiyle erişim elde etmesine izin vermek için bir yeniden yönlendirme çoklu oturum açma (SSO) uygulama uzantısı oluşturdu. Microsoft Enterprise SSO eklentisi sürümü sayesinde, SSO uzantısını yeni Microsoft Azure AD uygulama uzantısı türüyle**yapılandırabilirsiniz (cihaz**  >  **yapılandırma profilleri**,  >  **Create profile**  >  profil için**MacOS** for platform > **cihaz özellikleri** > **Çoklu oturum açma uygulama** uzantısı > SSO uygulama uzantısı türü > **Microsoft Azure AD**).
+
+Microsoft Azure AD SSO uygulama uzantısı türüyle SSO sağlamak için, kullanıcıların macOS cihazlarındaki Şirket Portalı uygulamasını yüklemesi ve üzerinde oturum açması gerekir. 
+
+MacOS SSO uygulama uzantıları hakkında daha fazla bilgi için bkz. [Çoklu oturum açma uygulama uzantısı](../configuration/device-features-configure.md#single-sign-on-app-extension).
+
+Aşağıdakiler cihazlar için geçerlidir:
+- macOS 10,15 ve üzeri
+
+#### <a name="prevent-users-from-unlocking-android-enterprise-work-profile-devices-using-face-and-iris-scanning--6069759-idmiss---"></a>Kullanıcıların yüz ve Iris taramasını kullanarak Android kurumsal iş profili cihazlarını kilidini kullanmalarını engelleyin<!--6069759 idmiss -->
+Artık kullanıcıların yüz veya Iris taramasını kullanmasını engelleyebilirsiniz. Bu, cihaz düzeyinde veya iş profili düzeyinde iş profili Yönetilen cihazlarının kilidini açabilir. Bu **, cihaz**  >  **yapılandırma profilleri**  >  için**profil oluşturma**  >  **Android Enterprise** for platform > **iş > profili** , profil > **iş profili ayarları** ve **parola** bölümleri için cihaz kısıtlamaları oluşturabilir ' de ayarlanabilir.
+
+Daha fazla bilgi için bkz. [Intune kullanarak özelliklere izin vermek veya bunları kısıtlamak için Android Kurumsal cihaz ayarları](../configuration/device-restrictions-android-for-work.md#work-profile-only).
+
+Aşağıdakiler cihazlar için geçerlidir: 
+- Android kurumsal iş profili
+
+#### <a name="use-sso-app-extensions-on-more-iosipados-apps-with-the-microsoft-enterprise-sso-plug-in---7369991----"></a>Microsoft Enterprise SSO eklentisiyle diğer iOS/ıpados uygulamalarında SSO uygulama uzantılarını kullanın<!-- 7369991  -->
+[Apple cihazları Için Microsoft ENTERPRISE SSO eklentisi](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin) , SSO uygulama uzantılarını destekleyen tüm uygulamalarla birlikte kullanılabilir. Intune 'da bu özellik, eklentinin Apple cihazları için Microsoft kimlik doğrulama kitaplığı 'nı (MSAL) kullanmayan Mobile iOS/ıpados uygulamalarıyla birlikte çalışacağı anlamına gelir. Uygulamaların MSAL kullanması gerekmez, ancak Azure AD uç noktalarında kimlik doğrulaması yapması gerekir.
+
+İOS/ıpados uygulamalarınızı eklentiyle birlikte SSO 'yu kullanacak şekilde yapılandırmak için bir iOS/ıpados yapılandırma profiline uygulama paketi tanımlayıcıları**ekleyin (cihaz**  >  **yapılandırma**  >  **Create profile**  >  **iOS/iPadOS** > > profilleri, **Device features** SSO uygulama uzantısı türü > uygulama paketi kimlikleri) için **Çoklu oturum açma uygulama uzantısı**  >  **Microsoft Azure AD** **App bundle IDs**
+
+Yapılandırabileceğiniz geçerli SSO uygulama uzantısı ayarlarını görmek için [Çoklu oturum açma uygulaması uzantısına](../configuration/ios-device-features-settings.md#single-sign-on-app-extension)gidin.
+
+Aşağıdakiler cihazlar için geçerlidir:
+- iOS/iPadOS
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>Cihaz güvenliği
+
+#### <a name="deploy-endpoint-security-antivirus-policy-to-tenant-attached-devices-preview---5475441----"></a>Kiracı ekli cihazlarına Endpoint Security virüsten koruma ilkesini dağıtma (Önizleme)<!-- 5475441  -->
+Önizleme olarak, Configuration Manager ile yönettiğiniz cihazlara [Virüsten koruma için](../protect/endpoint-security-antivirus-policy.md) uç nokta güvenlik ilkesi dağıtabilirsiniz. Bu senaryo, desteklenen bir Configuration Manager sürümü ve Intune aboneliğiniz arasında bir kiracı iliştirme yapılandırması yapılandırmanızı gerektirir. Aşağıdaki Configuration Manager sürümleri desteklenir:
+
+- Geçerli dalı Configuration Manager 2006
+
+Daha fazla bilgi için, kiracı eklemeyi desteklemek üzere [Intune uç nokta güvenlik ilkelerine yönelik gereksinimlere](../protect/tenant-attach-intune.md#specific-requirements-for-intune-endpoint-security-policies) bakın.
+
+#### <a name="changes-for-endpoint-security-antivirus-policy-exclusions--5583940-6018119------"></a>Endpoint Security virüsten koruma ilkesi dışlamaları için değişiklikler<!--5583940, 6018119    -->
+[Endpoint Security virüsten koruma ilkesinin](../protect/endpoint-security-antivirus-policy.md)bir parçası olarak yapılandırdığınız Microsoft Defender virüsten koruma dışlama listelerini yönetmek için iki değişiklik yaptık. Değişiklikler, farklı ilkeler arasındaki çakışmaları önlemenize ve önceden dağıtılan ilkeleriniz üzerinde mevcut olabilecek dışlama listesi çakışmalarını çözmenize yardımcı olur.
+
+Her iki değişiklik de aşağıdaki [Microsoft Defender virüsten koruma yapılandırma hizmeti sağlayıcılarının](../protect/antivirus-microsoft-defender-settings-windows.md#microsoft-defender-antivirus-exclusions) (CSP 'ler) ilke ayarları için geçerlidir:
+
+- Defender/ExcludedPaths
+- Defender/ExcludedExtensions
+- Defender/ExcludedProcesses
+
+Değişiklikler şunlardır:
+
+- Yeni profil türü: **Microsoft Defender virüsten koruma dışlamaları** -yalnızca virüsten koruma dışlamalarıyla odaklanan bir ilke tanımlamak için Windows 10 ve üzeri için bu yeni profil türünü kullanın. Bu profil, diğer ilke yapılandırmalarından ayırarak dışlama listelerinizin yönetimini basitleştirmeye yardımcı olur.
+
+  Yapılandırabileceğiniz Dışlamalar, Defender *süreçlerini*, *dosya uzantılarını*ve Microsoft Defender 'ın tarayabilmesi istemediğiniz *Dosya* ve *klasörleri* içerir.
+
+- **İlke birleştirme** – Intune artık ayrı profillerde tanımladığınız dışlamaları listesini her bir cihaza veya kullanıcıya uygulanacak tek bir dışlamaları listesine birleştirir. Örneğin, üç ayrı ilke ile bir kullanıcıyı hedefliyorsanız, bu üç ilkenin dışlama listeleri *Microsoft Defender virüsten koruma dışlamalarının*tek bir üst kümesi ile birleştirilir ve bu da bu kullanıcı için geçerlidir.
+
 
 <!-- ########################## -->
 ## <a name="week-of-august-17-2020"></a>17 Ağustos 2020 haftası
@@ -257,7 +352,7 @@ Intune Devicekarmaşık kuruluş günlükleri daha önce yalnızca Karmaşıksta
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="role-based-access-control"></a>Rol tabanlı erişim denetimi
 
-#### <a name="assign-profile-and-update-profile-permission-changes--7177586-idready-wnready-wnstaged--"></a>Profil ata ve profili Güncelleştir izin değişiklikleri<!--7177586 idready wnready wnstaged-->
+#### <a name="assign-profile-and-update-profile-permission-changes--7177586-----"></a>Profil ata ve profili Güncelleştir izin değişiklikleri<!--7177586   -->
 Otomatik cihaz kayıt akışı için profil atama ve güncelleştirme profili için rol tabanlı erişim denetimi izinleri değişti:
 
 Profil ata: Yöneticiler bu izinle profiller ve otomatik cihaz kaydı için bir belirtece varsayılan bir profil atar.
@@ -269,7 +364,7 @@ Bu rolleri görmek için [Microsoft Endpoint Manager Yönetim Merkezi](https://g
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="scripting"></a>Betik Oluşturma
 
-#### <a name="additional-data-warehouse-v10-properties---6125732-wnready---"></a>Ek veri ambarı v 1.0 özellikleri<!-- 6125732 wnready -->
+#### <a name="additional-data-warehouse-v10-properties---6125732----"></a>Ek veri ambarı v 1.0 özellikleri<!-- 6125732  -->
 Intune veri ambarı v 1.0 kullanılarak ek özellikler mevcuttur. Aşağıdaki özellikler artık [cihazlar](../developer/reports-ref-devices.md#devices) varlığı aracılığıyla kullanıma sunulmuştur:
 - `ethernetMacAddress` -Bu cihazın benzersiz ağ tanımlayıcısı.
 - `office365Version` -Cihaza yüklü Office 365 sürümü.
@@ -574,7 +669,7 @@ Windows Şirket Portalı uygulamasının simgesi güncelleştirildi. Şirket Por
 
 Microsoft Defender Gelişmiş tehdit koruması (Defender ATP) dağıtımınız için cihaz eklemek ve yapılandırmak üzere [uç nokta algılama ve yanıt](../protect/endpoint-security-edr-policy.md) (EDR) için uç nokta güvenlik ilkesi kullanın. EDR, Intune (MDM) tarafından yönetilen Windows cihazları için ilkeyi ve Configuration Manager tarafından yönetilen Windows cihazları için ayrı bir ilkeyi destekler. 
 
-Configuration Manager cihazlar için ilkeyi kullanmak üzere, [EDR ilkesini desteklemek için Configuration Manager ayarlamanız](../protect/endpoint-security-edr-policy.md#set-up-configuration-manager-to-support-edr-policy)gerekir. Kurulum şunları içerir:
+Configuration Manager cihazlar için ilkeyi kullanmak üzere, [EDR ilkesini desteklemek için Configuration Manager ayarlamanız](../protect/tenant-attach-intune.md)gerekir. Kurulum şunları içerir:
 
 - *Kiracı iliştirme*için Configuration Manager 'ı yapılandırın.
 - EDR ilkeleri desteğini etkinleştirmek için Configuration Manager için konsol içi bir güncelleştirme yükler. Bu güncelleştirme yalnızca *kiracı iliştirme*'yi etkinleştirilen Hiyerarşiler için geçerlidir.

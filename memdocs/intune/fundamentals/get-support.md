@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 08/25/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fef418394a37f0074ddb17cc170a61603b1d7f8
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: f71a74c69235e8e079f2cd325582dbbe9bb4a3f1
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093102"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820672"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Microsoft Intune için destek alma
 
@@ -54,7 +54,7 @@ Bu sorun, yeni kiracı hesabınızı üzerinde **M365 Yönetim Merkezi** https:/
 
 **Yardım ve desteğe erişin**:
 
-- **Azure portal**
+- **Azure portalında**
 
   - Herhangi bir Intune dikey penceresinde veya sayfasından **Yardım ve destek '** i seçin.
 
@@ -83,8 +83,6 @@ Bu sorun, yeni kiracı hesabınızı üzerinde **M365 Yönetim Merkezi** https:/
 
     > [!div class="mx-imgBorder"]
     > ![Yönetim türünü onaylayın](./media/get-support/confirm-management-selection.png)
-
-  - **Sorun giderme + Destek**  >  **Yardım ve destek**aracılığıyla yardım ve destek ' i açarsanız, yardım ve *destek*altında listelenen yönetim türünü görmezsiniz.
 
   - *Cihazlar*, *uygulamalar*veya *Kullanıcılar*gibi başka bir düğüme göz katıyorsanız, *Yardım ve destek*' i seçerseniz, bir yönetim türü seçme veya tür *Yardım ve destek*altında görüntüleme şansınız olmayacaktır. Bu durumda, *Intune* kabul edilir. İçeriğin Intune olmasını istemiyorsanız, şunu kullanın **?** seçeneğini belirlerseniz, farklı bir yönetim türü seçebilirsiniz.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9104716c469168a5ab2c5c1b49caf14071150db1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 48560af1ff31d5660f00e775a2f510b88c08fd9c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988900"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820604"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Windows cihazları için kaydı ayarlama
 
@@ -91,7 +91,7 @@ Contoso DNS yöneticisinin aşağıdaki CNAME'leri oluşturması gerekir:
 |CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 saat|
 |CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 saat|
 
-`EnterpriseEnrollment-s.manage.microsoft.com`– E-postanın etki alanı adından etki alanı tanıma ile Intune hizmetine yeniden yönlendirmeyi destekler
+`EnterpriseEnrollment-s.manage.microsoft.com` – E-postanın etki alanı adından etki alanı tanıma ile Intune hizmetine yeniden yönlendirmeyi destekler
 
 DNS kaydındaki değişikliklerin yaygınlaştırılması 72 saat kadar sürebilir. DNS kaydı yayılıncaya kadar DNS değişikliğini Intune'da doğrulayamazsınız.
 
@@ -123,7 +123,7 @@ Azure Active Directory, iOS/ıpados, Android ve Windows cihazları için cihaz k
 
 | Tür | Konak adı | Şunu gösterir: | TTL |
 | --- | --- | --- | --- |
-| NAME | EnterpriseRegistration. company_domain. com | EnterpriseRegistration.windows.net | 1 saat|
+| CNAME | EnterpriseRegistration. company_domain. com | EnterpriseRegistration.windows.net | 1 saat|
 
 Cihaz kaydı hakkında daha fazla bilgi için bkz [. Azure Portal kullanarak cihaz kimliklerini yönetme](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
 

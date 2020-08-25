@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c9268514b43f4f728d3fff4715d4d71308a712f3
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dbe827371f84bb90e2a7f2468aa139cba073fe49
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699084"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819754"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Masaüstü Analizi 'nde uyumluluk değerlendirmesi
 
@@ -239,10 +239,10 @@ Değerlendirme, masaüstü Analizi 'nde sürücü üzerinde bulunabilir. Bir da�
 | Sürücü kullanılabilirliği | Eylem gerekli mi? | Anlamı | Rehber |
 |---------------------|------------------|---------------|----------|
 | Yerleşik olarak kullanılabilir | Hayır, yalnızca tanıma için | Uygulamanın veya sürücünün yüklü olan sürümü yeni işletim sistemi sürümüne geçirilmez. Yeni işletim sistemi sürümü ile uyumlu bir sürüm yüklü. | Yükseltmenin devam etmesi için herhangi bir eylem gerekmez. |
-| Windows Update içeri aktar | Evet | Bir sürücünün Şu anda yüklü olan sürümü yeni işletim sistemi sürümüne geçirilmez. Windows Update ile uyumlu bir sürüm kullanılabilir. | Bilgisayar Windows Update güncelleştirmeleri otomatik olarak alırsa, herhangi bir eylem gerekmez. Aksi takdirde, Windows 'u yükselttikten sonra Windows Update yeni bir sürücü alın. |
-| Kullanıma hazır ve Windows Update | Evet | Bir sürücünün Şu anda yüklü olan sürümü yeni işletim sistemi sürümüne geçirilmez. Yükseltme sırasında yeni bir sürücü yüklense de Windows Update yeni bir sürüm kullanılabilir. | Bilgisayar Windows Update güncelleştirmeleri otomatik olarak alırsa, herhangi bir eylem gerekmez. Aksi takdirde, Windows 'u yükselttikten sonra Windows Update yeni bir sürücü alın. |
-| Satıcıyla denetle | Evet | Sürücü yeni işletim sistemi sürümüne geçirilmez ve Masaüstü Analizi uyumlu bir sürümü bulamıyor. | Bir çözüm için sürücüyü üreten bağımsız donanım satıcısı (IHV) veya cihazı sağlayan özgün ekipman üreticisi (OEM) ile görüşün. |
+| Windows Update içeri aktar | Yes | Bir sürücünün Şu anda yüklü olan sürümü yeni işletim sistemi sürümüne geçirilmez. Windows Update ile uyumlu bir sürüm kullanılabilir. | Bilgisayar Windows Update güncelleştirmeleri otomatik olarak alırsa, herhangi bir eylem gerekmez. Aksi takdirde, Windows 'u yükselttikten sonra Windows Update yeni bir sürücü alın. |
+| Kullanıma hazır ve Windows Update | Yes | Bir sürücünün Şu anda yüklü olan sürümü yeni işletim sistemi sürümüne geçirilmez. Yükseltme sırasında yeni bir sürücü yüklense de Windows Update yeni bir sürüm kullanılabilir. | Bilgisayar Windows Update güncelleştirmeleri otomatik olarak alırsa, herhangi bir eylem gerekmez. Aksi takdirde, Windows 'u yükselttikten sonra Windows Update yeni bir sürücü alın. |
+| Satıcıyla denetle | Yes | Sürücü yeni işletim sistemi sürümüne geçirilmez ve Masaüstü Analizi uyumlu bir sürümü bulamıyor. | Bir çözüm için sürücüyü üreten bağımsız donanım satıcısı (IHV) veya cihazı sağlayan özgün ekipman üreticisi (OEM) ile görüşün. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-Windows 10 için FastTrack Center avantajı, **Masaüstü uygulaması güvence altına**erişim sağlar. Bu avantaj, Windows 10 ve kurumsal uyumluluk için Microsoft 365 uygulamalarla ilgili sorunları gidermek üzere tasarlanan yeni bir hizmettir. Daha fazla bilgi için bkz. [Masaüstü uygulamaları güvence](/fasttrack/win-10-desktop-app-assure).
+Windows 10 için FastTrack Center avantajı, **Masaüstü uygulaması güvence altına**erişim sağlar. Bu avantaj, Windows 10 ve kurumsal uyumluluk için Microsoft 365 uygulamalarla ilgili sorunları gidermek üzere tasarlanan yeni bir hizmettir. Daha fazla bilgi için bkz. [Masaüstü uygulamaları güvence](/fasttrack/win-10-app-assure).

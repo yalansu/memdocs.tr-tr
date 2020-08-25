@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: b0d0bbeb174d8f90d47ea6242ce6bd4be2dcfac6
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 63400c81ee678a98a83ed17cf192335acf9c047b
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491176"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820314"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Intune 'da uç nokta güvenliği için virüsten koruma ilkesi
 
@@ -35,32 +35,91 @@ Virüsten koruma ilkeleri, *uç nokta koruma* veya cihaz [yapılandırma](../con
 
 ## <a name="prerequisites-for-antivirus-policy"></a>Virüsten koruma ilkesi önkoşulları
 
+**Genel**:
+
 - **macOS**
   - Tüm desteklenen macOS sürümleri
   - Intune 'un bir cihazdaki virüsten koruma ayarlarını yönetmesi için, bu cihaza Microsoft Defender ATP 'nin yüklü olması gerekir. Bakýn. [MacOS Için Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (MICROSOFT Defender ATP belgeleri)
 
 - **Windows 10 ve üzeri**
-  - Ek önkoşul gerekmez. 
+  - Ek önkoşul gerekmez.
+
+**Configuration Manager istemcileri Için destek** (*Önizleme*)
+
+*Bu senaryo önizleme aşamasındadır ve geçerli Configuration Manager dalı sürümü 2006 veya sonraki bir sürümünü kullanmanızı gerektirir*.
+<!--*This scenario is in preview and requires use of Configuration Manager Technical Preview version 2007 or later*.-->
+
+- **Configuration Manager cihazlar için kiracı eklemeyi ayarlama** -virüsten koruma ilkesinin Configuration Manager tarafından yönetilen cihazlara dağıtılmasını desteklemek için *kiracı eklemeyi*yapılandırın. Kiracı ekleme 'nin kurulumunu, Intune 'dan Endpoint Security ilkelerini desteklemek için Configuration Manager cihaz koleksiyonlarının yapılandırılmasını içerir.
+
+  Kiracı iliştirme 'yi ayarlamak için bkz. [Endpoint Protection ilkelerini desteklemek için kiracı eklemeyi yapılandırma](../protect/tenant-attach-intune.md).
 
 ## <a name="antivirus-profiles"></a>Virüsten koruma profilleri
 
-**MacOS profilleri**:
+### <a name="devices-managed-by-intune"></a>Intune tarafından yönetilen cihazlar
 
-- **Virüsten koruma** -MacOS Için [Virüsten koruma ilkesi ayarlarını](../protect/antivirus-microsoft-defender-settings-macos.md) yönetin.
+Intune ile yönettiğiniz cihazlar için aşağıdaki profiller desteklenir:
 
-  [Mac Için Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)'yi kullandığınızda, dosyaları kullanarak bu ayarları yapılandırmak yerine, yönetilen MacOS cihazlarınıza Intune aracılığıyla bir virüsten koruma ayarları yapılandırabilir ve dağıtabilirsiniz `.plist` .
+**macOS**:
 
-**Windows 10 profilleri**:
+- Platform: **MacOS**
 
-- **Microsoft Defender virüsten koruma** -Windows 10 Için [Virüsten koruma ilkesi ayarlarını](../protect/antivirus-microsoft-defender-settings-windows.md) yönetin.
+  - Profil: **Virüsten koruma** -MacOS Için [Virüsten koruma ilkesi ayarlarını](../protect/antivirus-microsoft-defender-settings-macos.md) yönetin.
 
-  Defender virüsten koruma, Microsoft Defender Gelişmiş tehdit koruması 'nın (Microsoft Defender ATP) yeni nesil koruma bileşenidir. Yeni nesil koruma, kurumsal kuruluşunuzdaki cihazları korumak için makine öğrenimi, büyük veri analizi, derinlemesine tehdit dirençlerini ve bulut altyapısını birlikte getirir.
+    [Mac Için Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)'yi kullandığınızda, dosyaları kullanarak bu ayarları yapılandırmak yerine, yönetilen MacOS cihazlarınıza Intune aracılığıyla bir virüsten koruma ayarları yapılandırabilir ve dağıtabilirsiniz `.plist` .
 
-  *Microsoft Defender virüsten koruma* profili, cihaz yapılandırma Ilkesinin *cihaz kısıtlama profilinde* bulunan virüsten koruma ayarlarının ayrı bir örneğidir.
+**Windows 10**:
+
+- Platform: **Windows 10 profilleri**
+
+  - Profil: **Microsoft Defender virüsten koruma** -Windows 10 Için [Virüsten koruma ilkesi ayarlarını](../protect/antivirus-microsoft-defender-settings-windows.md) yönetin.
+
+    Defender virüsten koruma, Microsoft Defender Gelişmiş tehdit koruması 'nın (Microsoft Defender ATP) yeni nesil koruma bileşenidir. Yeni nesil koruma, kurumsal kuruluşunuzdaki cihazları korumak için makine öğrenimi ve bulut altyapısı gibi teknolojiler sunar.
+
+    *Microsoft Defender virüsten koruma* profili, cihaz yapılandırma Ilkesinin *cihaz kısıtlama profilinde* bulunan virüsten koruma ayarlarının ayrı bir örneğidir.
   
-  Bir *cihaz kısıtlama profilindeki*virüsten koruma ayarlarından farklı olarak, bu ayarları ortak yönetilen cihazlarla kullanabilirsiniz. Bu ayarları kullanmak için, Endpoint Protection için [ortak yönetim iş yükü kaydırıcısının](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) Intune olarak ayarlanması gerekir.
+    Bir *cihaz kısıtlama profilindeki*virüsten koruma ayarlarından farklı olarak, bu ayarları ortak yönetilen cihazlarla kullanabilirsiniz. Bu ayarları kullanmak için, Endpoint Protection için [ortak yönetim iş yükü kaydırıcısının](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) Intune olarak ayarlanması gerekir.
 
-- **Windows Güvenlik deneyimi** – son kullanıcıların Microsoft Defender Güvenlik Merkezi 'nde görüntüleyebilecekleri [Windows güvenlik uygulaması ayarlarını](../protect/antivirus-security-experience-windows-settings.md) ve aldıkları bildirimleri yönetin. Windows güvenlik uygulaması, makinenin sistem durumu ve güvenliği hakkında bildirimler sağlamak için bir dizi Windows güvenlik özelliği tarafından kullanılır. Güvenlik uygulamaları bildirimleri arasında güvenlik duvarları, virüsten koruma ürünleri, Windows Defender SmartScreen ve diğerleri bulunur.
+  - Profil: **Microsoft Defender virüsten koruma dışlamaları** -yalnızca [Virüsten koruma dışlamaları](../protect/antivirus-microsoft-defender-settings-windows.md#microsoft-defender-antivirus-exclusions)için ilke ayarlarını yönetin.
+  
+    Bu ilkeyle, virüsten koruma dışlamalarını tanımlayan aşağıdaki Microsoft Defender virüsten koruma yapılandırma hizmeti sağlayıcılarının (CSP 'Ler) ayarlarını yönetebilirsiniz:
+
+    - Defender/ExcludedPaths
+    - Defender/ExcludedExtensions
+    - Defender/ExcludedProcesses
+
+    Virüsten koruma için bu CSP 'Ler Ayrıca, özel durumlar için aynı ayarları içeren *Microsoft Defender virüsten koruma* ilkesi tarafından da yönetilir. Her iki ilke türünden (*Virüsten koruma* ve *Virüsten koruma hariç*) ayarlar [ilke birleştirmeye](#policy-merge-for-settings)tabidir ve ilgili cihazlar ve kullanıcılar için bir süper Dışlamalar kümesi oluşturur.
+
+  - Profil: **Windows Güvenlik deneyimi**-son kullanıcıların Microsoft Defender Güvenlik Merkezi 'nde görüntüleyebilecekleri [Windows güvenlik uygulaması ayarlarını](../protect/antivirus-security-experience-windows-settings.md) ve aldıkları bildirimleri yönetin.
+
+    Windows güvenlik uygulaması, makinenin sistem durumu ve güvenliği hakkında bildirimler sağlamak için bir dizi Windows güvenlik özelliği tarafından kullanılır. Güvenlik uygulamaları bildirimleri arasında güvenlik duvarları, virüsten koruma ürünleri, Windows Defender SmartScreen ve diğerleri bulunur.
+
+### <a name="devices-managed-by-configuration-manager-in-preview"></a>Configuration Manager tarafından yönetilen cihazlar *(önizlemede)*
+
+[!INCLUDE [Profiles for Configuration Manager tenant attached devices](includes/configmgr-antivirus-profiles.md)]
+
+## <a name="policy-merge-for-settings"></a>Ayarlar için ilke birleştirme
+
+Bazı virüsten koruma ilkesi ayarları *ilke birleştirmeyi*destekler. İlke birleştirme, aynı cihazlara birden çok ilke uygulanacaksa ve aynı ayarı yapılandırırken çakışmaların önlenmesine yardımcı olur. Intune, ilke birleştirmenin desteklediği ayarları, her kullanıcı veya cihaz için geçerli tüm ilkelerden alındığı şekilde değerlendirir. Bu ayarlar daha sonra tek bir ilke üst kümesi ile birleştirilir.
+
+Örneğin, farklı virüsten koruma dosya yolu dışlamalarını tanımlayan üç ayrı virüsten koruma ilkesi oluşturursunuz. Sonuç olarak, üç ilke de aynı kullanıcıya atanır. Microsoft Defender dosya yolu dışlama CSP, ilke birleştirmeyi desteklediğinden, Intune, Kullanıcı için geçerli tüm ilkelerden dosya dışlamalarını değerlendirir ve birleştirir. Dışlamalar bir üst küme 'e eklenir ve tek dışlamaları listesi kullanıcıların cihazına gönderilir.
+
+Bir ayar için ilke birleştirme desteklenmediğinde, bir çakışma meydana gelebilir. Çakışmalar, Kullanıcı veya cihazın ayar için herhangi bir ilke almamasını sağlayabilir. Örneğin, ilke birleştirme, eşleşen cihaz kimliklerinin (*Preventınstaldmatchingdevicıdıd*) yüklenmesini önlemek için CSP 'yi desteklemez. Bu CSP için yapılandırma birleştirmez ve ayrı olarak işlenir.
+
+Ayrı olarak işlendiğinde, ilke çakışmaları aşağıdaki şekilde çözümlenir:
+
+1. En güvenli ilke geçerlidir.
+2. İki ilke eşit derecede güvenliyse, son değiştirilen ilke uygulanır.
+3. Son değiştirilen ilke çakışmayı çözümleyemezse cihaza hiçbir ilke teslim edilemiyor.
+
+### <a name="settings-and-csps-that-support-policy-merge"></a>İlke birleştirmeyi destekleyen ayarlar ve CSP 'Ler
+
+Aşağıdaki ayarlar ilke birleştirmeyi destekler:
+
+[Microsoft Defender virüsten koruma ilkeleri](../protect/antivirus-microsoft-defender-settings-windows.md)
+
+- **Defender dışlama Için işlem** -CSP: [Defender/excludedprocesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+- **Taramaların ve gerçek zamanlı korumanın dışında tutulacak dosya uzantıları** -CSP: [Defender/ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+- **Defender dosyaları ve hariç tutulacak klasörler** -CSP: [Defender/excludedpaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
 ## <a name="antivirus-policy-reports"></a>Virüsten koruma ilkesi raporları
 
@@ -72,9 +131,9 @@ Raporları görüntülemek için, [Microsoft Endpoint Manager Yönetim Merkezi](
 
 **Özet** sayfasında, [yeni ilkeler oluşturabilir](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy) ve daha önce oluşturulmuş ilkelerin bir listesini görüntüleyebilirsiniz. Liste, ilkenin içerdiği profille ilgili üst düzey ayrıntıları (Ilke türü) ve ilke atanmışsa içerir.
 
-![Virüsten koruma ilkesinin genel bakış sayfası](./media/endpoint-security-antivirus-policy/antivirus-summary.png)
+![Virüsten koruma ilkesinin Özet sayfası](./media/endpoint-security-antivirus-policy/antivirus-summary.png)
 
-Listeden bir ilke seçtiğinizde, bu ilke örneğinin *genel bakış* sayfası açılır ve daha fazla bilgi görüntülenir. Bu görünümden bir kutucuk seçtiğinizde, Intune varsa, bu profilin ek ayrıntılarını görüntüler.
+Listeden bir ilke seçtiğinizde, bu ilke örneğinin *genel bakış* sayfası açılır ve daha fazla bilgi görüntülenir. Bu görünümden bir kutucuk seçildikten sonra, Intune varsa, bu profilin ek ayrıntılarını görüntüler.
 
 ![Virüsten koruma ilkesinin genel bakış sayfası](./media/endpoint-security-antivirus-policy/policy-overview.png)
 
@@ -84,7 +143,7 @@ Listeden bir ilke seçtiğinizde, bu ilke örneğinin *genel bakış* sayfası a
 
 Bu görünümde yalnızca algılanan sorunları olan cihazlar görüntülenir. Bu görünüm, temiz olarak tanımlanan cihazların ayrıntılarını görüntülemez.
 
-![Virüsten koruma ilkesinin genel bakış sayfası](./media/endpoint-security-antivirus-policy/antivirus-unhealthy-endpoints.png)
+![Virüsten koruma ilkesinin sağlıksız uç noktaları sayfası](./media/endpoint-security-antivirus-policy/antivirus-unhealthy-endpoints.png)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

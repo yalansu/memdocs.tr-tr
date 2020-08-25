@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6cb913d0f3d3f806a8a9a2592624b2bcf376f40
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: ba826620d1589d081f683e3b4c807115c4a137ae
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551919"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819720"
 ---
 # <a name="windows-update-settings-for-intune"></a>Intune için Windows Update ayarları  
 
@@ -179,12 +179,12 @@ Kullanıcı deneyimi ayarları, cihaz yeniden başlatma ve anımsatıcıları i�
   - **Izin ver** -cihaz kullanıcılarının güncelleştirmeleri bulmak ve indirmek için Windows Update taraması kullanmasına izin verin ve özellikleri yükleyin.
   - **Engelle** -cihaz kullanıcılarının Windows Update taramaya erişmesini, güncelleştirmeleri karşıdan yüklemesini ve özellikleri yüklemeyi engeller.  
 
-- **İş saatleri dışında yeniden başlatma için kullanıcının onayını iste**  
+- **Yeniden başlatma bildirimini kapatmak için Kullanıcı onayı gerektir**  
   **Varsayılan**: yapılandırılmadı  
   Windows Update CSP: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
-  - **Yapılandırılmadı**  
-  - **Gerekli** -bir kullanıcının, çalışma saatleri dışında bir cihaz yeniden başlatmasını onayladığından emin olmanız gerekir.  
+  - 25 saniye sonra otomatik olarak **Boşyok** .
+  - **Evet** -Kullanıcı yanıltıcı iste.
    
 - **Kullanıcıyı, kabul edilebilir anımsatıcı (saatler) ile gerekli otomatik yeniden başlatmadan önce hatırlat**  
   **Varsayılan**: 4  
@@ -220,7 +220,7 @@ Kullanıcı deneyimi ayarları, cihaz yeniden başlatma ve anımsatıcıları i�
   Kullanıcının son tarih ayarlarını kullanmasına izin verir.  
 
   - **Yapılandırılmadı**
-  - **Açılmasına**
+  - **İzin Ver**
 
   *Izin ver*olarak ayarlandığında, son tarihleri için aşağıdaki ayarları yapılandırabilirsiniz:
 
@@ -239,7 +239,7 @@ Kullanıcı deneyimi ayarları, cihaz yeniden başlatma ve anımsatıcıları i�
   - **Yetkisiz kullanım süresi**  
     **Varsayılan**: *Yapılandırılmadı* Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
-    Yeniden başlatmalar otomatik olarak gerçekleşene kadar geçen en az gün sayısını belirtir (2-7).
+    Yeniden başlatmalar otomatik olarak gerçekleşene kadar geçen en az gün sayısını belirtir (0-7).
 
   - **Son tarihten önce otomatik yeniden başlatma**  
     **Varsayılan**: Evet Windows Update CSP: [Update/Configuredeadlinenooto reboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)

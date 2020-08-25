@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31acd37e84e4d421c8bcbd96fee4536dbef22cee
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 2e4f98f0f1e60ff08e86dedb2dd34ac9f55157ac
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663370"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820400"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Altyapıyı Intune ile SCEP destekleyecek şekilde yapılandırma
 
@@ -215,7 +215,7 @@ Sertifika şablonunun geçerlilik süresini değiştirmek isteğe bağlıdır.
 
 [SCEP sertifika şablonunu](#create-the-scep-certificate-template)oluşturduktan sonra, **genel** sekmesindeki **geçerlilik süresini** gözden geçirmek için şablonu düzenleyebilirsiniz.
 
-Varsayılan olarak, Intune şablonda yapılandırılan değeri kullanır. Ancak, CA 'yı istekte bulunan kişinin farklı bir değer girmesine izin verecek şekilde yapılandırabilir ve bu değer Intune konsolu içinden ayarlanabilir.
+Varsayılan olarak, Intune şablonda yapılandırılan değeri kullanır, ancak bu değerin Intune konsolu içinden ayarlanabilmesi için CA 'yı istekte bulunan farklı bir değer girmesine izin verecek şekilde yapılandırabilirsiniz.
 
 > [!IMPORTANT]
 > İOS/ıpados ve macOS için, her zaman şablonda bir değer kümesi kullanın.
@@ -327,32 +327,51 @@ Aşağıdaki yordamlar, Intune ile kullanmak üzere ağ cihazı kayıt hizmeti '
   
 ### <a name="install-and-bind-certificates-on-the-server-that-hosts-ndes"></a>NDES 'yi barındıran sunucuya sertifika yükleyip bağlama
 
+NDES sunucusunda, yapılandırma için gereken iki sertifika vardır.
+Bu sertifikalar, [Sertifikalar ve şablonlar](#certificates-and-templates) bölümünde belirtildiği gibi **istemci kimlik doğrulama sertifikası** ve **sunucu kimlik doğrulama sertifikalarıdır** .
+
 > [!TIP]
-> Aşağıdaki yordamda, hem *sunucu kimlik doğrulaması* hem de *istemci kimlik doğrulaması* için, bu sertifika her iki kullanımlar için ölçütlere uyacak şekilde yapılandırıldığında tek bir sertifika kullanabilirsiniz. Her kullanım ölçütü aşağıdaki yordamın 1. ve 3. adımlarında açıklanmıştır.
+> Aşağıdaki yordamda, hem *sunucu kimlik doğrulaması* hem de *istemci kimlik doğrulaması* için, bu sertifika her iki kullanımlar için ölçütlere uyacak şekilde yapılandırıldığında tek bir sertifika kullanabilirsiniz.
+> Konu adı ile ilgili olarak, *istemci kimlik doğrulaması* sertifika gereksinimlerini karşılaması gerekir.
 
-1. İç Sertifika yetkilinizden veya genel CA 'dan bir **sunucu kimlik doğrulama** sertifikası isteyin ve sertifikayı sunucuya yükler.
+- **İstemci kimlik doğrulama sertifikası** 
 
-   Sunucu, tek bir ağ adresi için bir dış ve iç ad kullanıyorsa, sunucu kimlik doğrulama sertifikasının olması gerekir:
+   Bu sertifika, Intune sertifika Bağlayıcısı yüklemesi sırasında kullanılır.
 
-   - Dış genel sunucu adına sahip bir **Konu adı** .
-   - İç sunucu adını içeren bir **Konu diğer adı** .
-
-2. Sunucu kimlik doğrulama sertifikasını IIS 'de bağlayın:
-
-   1. Sunucu kimlik doğrulama sertifikasını yükledikten sonra **IIS Yöneticisi**' ni açın ve **varsayılan Web sitesi**' ni seçin. **Eylemler** bölmesinde **Bağlamalar**’a tıklayın.
-
-   1. **Ekle**’ye tıklayın, **Tür**’ü **https** olarak ayarlayın ve sonra bağlantı noktasının **443** olduğunu doğrulayın.
+   İç Sertifika yetkilinizden veya bir genel sertifika yetkilisinden **istemci kimlik doğrulama** sertifikası isteyin ve bu sertifikayı yükler.
    
-   1. **SSL sertifikası**için sunucu kimlik doğrulama sertifikasını belirtin.
-
-3. NDES Sunucunuzda, iç CA'nızdan ya da genel bir sertifika yetkilisinden bir **istemci kimlik doğrulaması** sertifikası isteyin ve yükleyin.
-
-   İstemci kimlik doğrulama sertifikasının aşağıdaki özelliklere sahip olması gerekir:
+   Sertifikanın aşağıdaki gereksinimleri karşılaması gerekir:
 
    - **Gelişmiş anahtar kullanımı**: Bu değer **istemci kimlik doğrulaması**içermelidir.
-   - **Konu adı**: değer, sertifikayı yüklemekte olduğunuz sunucunun DNS ADıNA (NDES sunucusu) eşit olmalıdır.
+   - **Konu adı**: sertifikayı yüklemekte olduğunuz sunucunun FQDN 'sine eşit olması gereken bir değere sahıp bir CN (ortak ad) AYARLAYıN (NDES sunucusu).
 
-4. NDES hizmetini barındıran sunucu artık Intune sertifika bağlayıcısını desteklemeye hazırdır.
+- **Sunucu kimlik doğrulama sertifikası**
+
+   Bu sertifika IIS 'de kullanılır. Bu, istemcinin NDES URL 'sine güvenmesini sağlayan basit bir Web sunucu sertifikasıdır.
+   
+   1. İç Sertifika yetkilinizden veya genel CA 'dan bir **sunucu kimlik doğrulama** sertifikası isteyin ve sertifikayı sunucuya yükler.
+      
+      NDES 'nizi Internet 'e sergilediğinize bağlı olarak farklı gereksinimler vardır. 
+      
+      İyi bir yapılandırma:
+   
+      - **Konu adı**: sertifikayı yüklemekte olduğunuz sunucunun FQDN 'sine eşit olması gereken bir değere sahıp bir CN (ortak ad) AYARLAYıN (NDES sunucusu).
+      - **Konu diğer adı**: NDES 'nin yanıt VERDIĞI her URL için DNS GIRDILERINI iç FQDN ve dış URL 'ler gibi ayarlayın.
+   
+      > [!NOTE]
+      > Azure AD Uygulaması Proxy kullanıyorsanız, AAD uygulama proxy Bağlayıcısı istekleri dış URL 'den iç URL 'ye çevirir.
+      > Bu nedenle NDES, genellikle NDES sunucusunun FQDN 'si olan iç URL 'ye yönlendirilmiş isteklere yanıt verir.
+      >
+      > Bu durumda, dış URL gerekli değildir.
+   
+   2. Sunucu kimlik doğrulama sertifikasını IIS 'de bağlayın:
+
+      1. Sunucu kimlik doğrulama sertifikasını yükledikten sonra **IIS Yöneticisi**' ni açın ve **varsayılan Web sitesi**' ni seçin. **Eylemler** bölmesinde **Bağlamalar**’a tıklayın.
+
+      1. **Ekle**’ye tıklayın, **Tür**’ü **https** olarak ayarlayın ve sonra bağlantı noktasının **443** olduğunu doğrulayın.
+   
+      1. **SSL sertifikası**için sunucu kimlik doğrulama sertifikasını belirtin.
+
 
 ## <a name="install-the-intune-certificate-connector"></a>Intune sertifika bağlayıcısını yükler
 

@@ -6,7 +6,7 @@ keywords: Intune Veri Ambarı
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6f460039aaff282476c3e8e3d074a332cde716f
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: c77d69e076956ab66deeb5fb8256afc6038225b3
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461224"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820043"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Intune Veri Ambarı API’si için değişiklik günlüğü
 
@@ -52,6 +52,14 @@ Aşağıdaki tabloda, Intune veri ambarındaki [Devicepropertygeçmişvarlığı
 
 ## <a name="2004"></a>2004 
 _Yayımlanma tarihi 2020_
+
+### <a name="v10-changes"></a>v 1.0 değişiklikleri
+
+Aşağıdaki tabloda, Intune veri ambarındaki [cihazlar](../developer/intune-data-warehouse-collections.md#devices) varlığına eklenen özellik listelenmektedir.
+
+|    Koleksiyon                          |    Değiştir     |    Açıklama bilgileri                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    windowsOsEdition     |    Eklendi    |    Windows Işletim sistemi sürümü.                                                                                                                                                                                                                                                                     |
 
 ### <a name="beta-changes"></a>Beta değişiklikleri
 
@@ -90,13 +98,13 @@ Aşağıdaki tabloda, Intune veri ambarındaki son kaldırılan koleksiyonlar ve
 
 |    Koleksiyon                          |    Değiştir     |    Ek bilgiler                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    Mobileappdeviceuserınstallstatus    |    Kaldırıldı    |    Bunun yerine [Mobileappınstallstatuscounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts) kullanın.                                                                                                                                                                                                                                                                     |
-|    enrollmentTypes                     |    Kaldırıldı    |    Bunun yerine [Devicekayıtlarını Menttypes](intune-data-warehouse-collections.md#deviceenrollmenttypes) kullanın.                                                                                                                                                                                                                                                                                      |
-|    Mdmdurumlar                         |    Kaldırıldı    |    Bunun yerine [Karmaşıkstes](intune-data-warehouse-collections.md#compliancestates) kullanın.                                                                                                                                                                                                                                                                                               |
+|    Mobileappdeviceuserınstallstatus    |    Kaldırıldı    |    Bunun yerine   [Mobileappınstallstatuscounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts)   kullanın.                                                                                                                                                                                                                                                                     |
+|    enrollmentTypes                     |    Kaldırıldı    |    Bunun yerine   [Devicekayıtlarını Menttypes](intune-data-warehouse-collections.md#deviceenrollmenttypes)   kullanın.                                                                                                                                                                                                                                                                                      |
+|    Mdmdurumlar                         |    Kaldırıldı    |    Bunun yerine [Karmaşıkstes](intune-data-warehouse-collections.md#compliancestates)   kullanın.                                                                                                                                                                                                                                                                                               |
 |    workPlaceJoinStateTypes             |    Kaldırıldı    |    `azureAdRegistered`Bunun yerine [Devices](intune-data-warehouse-collections.md#devices) ve [devicepropertygeçmişteki](intune-data-warehouse-collections.md#devicepropertyhistories) özelliğini kullanın.                                                                                                                                                                                                             |
-|    clientRegistrationStateTypes        |    Kaldırıldı    |    Bunun yerine [Deviceregistrationstates](intune-data-warehouse-collections.md#deviceregistrationstates) kullanın.                                                                                                                                                                                                                                                                             |
-|    currentUser                         |    Kaldırıldı    |    Bunun yerine [Kullanıcılar](intune-data-warehouse-collections.md#users) koleksiyonunu kullanın.                                                                                                                                                                                                                                                                                                      |
-|    Mdmdeviceınventoryhistories         |    Kaldırıldı    |    Özelliklerin birçoğu gereksizdir veya artık [Devicepropertygeçmişleri](intune-data-warehouse-collections.md#devicepropertyhistories) veya [cihazlar](intune-data-warehouse-collections.md#devices) koleksiyonlarında bulunabilir. Bu iki koleksiyon ile önceden listelenmeyen tüm **Mdmdeviceınventorygeçmişözellikleri** artık kullanılamaz. Ayrıntıları aşağıda bulabilirsiniz.    |
+|    clientRegistrationStateTypes        |    Kaldırıldı    |    Bunun yerine   [Deviceregistrationstates](intune-data-warehouse-collections.md#deviceregistrationstates)   kullanın.                                                                                                                                                                                                                                                                             |
+|    currentUser                         |    Kaldırıldı    |    Bunun yerine   [Kullanıcılar](intune-data-warehouse-collections.md#users) koleksiyonunu kullanın.                                                                                                                                                                                                                                                                                                      |
+|    Mdmdeviceınventoryhistories         |    Kaldırıldı    |    Özelliklerin birçoğu gereksizdir veya artık   [Devicepropertygeçmişleri](intune-data-warehouse-collections.md#devicepropertyhistories)   veya [cihazlar](intune-data-warehouse-collections.md#devices) koleksiyonlarında bulunabilir. Bu iki koleksiyon ile önceden listelenmeyen tüm **Mdmdeviceınventorygeçmişözellikleri** artık kullanılamaz. Ayrıntıları aşağıda bulabilirsiniz.    |
 
 Aşağıdaki tabloda, daha önce **Mdmdeviceınventorygeçmişin** koleksiyonunda bulunan eski Özellikler ve değişiklik/değiştirme listelenmiştir. **Mdmdeviceınventorygeçmişde** bulunan ancak aşağıda listelenmeyen tüm özellikler kaldırılmıştır.
 
@@ -121,7 +129,7 @@ Aşağıdaki tabloda, daha önce **Mdmdeviceınventorygeçmişin** koleksiyonund
 |    osName                      |    cihazlar koleksiyonunda deviceTypeKey, DeviceType koleksiyonuna başvuruyor    |
 |    phoneNumber                 |    cihazlar koleksiyonundaki phoneNumber                                            |
 |    platformType                |    cihazlar koleksiyonundaki model                                                  |
-|    product                     |    cihazlar koleksiyonunda deviceTypeKey                                          |
+|    ürün                     |    cihazlar koleksiyonunda deviceTypeKey                                          |
 |    productVersion              |    Devicepropertygeçmişde koleksiyonda osVersion                              |
 |    serialNumber                |    cihazlar koleksiyonunda serialNumber                                           |
 |    storageFree                 |    cihazlar koleksiyonundaki freeStorageSpaceInBytes özelliği                   |

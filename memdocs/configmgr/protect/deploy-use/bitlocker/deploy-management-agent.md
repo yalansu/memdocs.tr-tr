@@ -2,7 +2,7 @@
 title: BitLocker yönetimini dağıtma
 titleSuffix: Configuration Manager
 description: İstemcileri ve kurtarma hizmetini yönetim noktalarına Configuration Manager için BitLocker yönetim aracısını dağıtma
-ms.date: 07/27/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a7eca5c2f5c00ae559a8567d5fce1e4e36df19c0
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 67130932ee20849530c6e865971c7776c3e6b6b1
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129282"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819941"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker yönetimini dağıtma
 
@@ -118,6 +118,8 @@ Mevcut bir ilkenin ayarlarını değiştirmek için listeden seçin ve **Özelli
 
 Birden fazla ilke oluşturduğunuzda, onun göreli önceliğini yapılandırabilirsiniz. Bir istemciye birden çok ilke dağıtırsanız, ayarlarını belirlemede öncelik değeri kullanır.
 
+Sürüm 2006 ' den başlayarak, bu görev için Windows PowerShell cmdlet 'lerini kullanabilirsiniz. Daha fazla bilgi için bkz. [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps).
+
 ## <a name="deploy-a-policy"></a>İlke dağıtma
 
 1. **BitLocker yönetim** düğümünde mevcut bir ilkeyi seçin. Şeritte **Dağıt**' ı seçin.
@@ -135,8 +137,9 @@ Aynı ilkenin birden çok dağıtımını oluşturabilirsiniz. Her dağıtımla 
 > [!IMPORTANT]
 > Bir Uzak Masaüstü Protokolü bağlantısı etkinse, MBAMCLIENT BitLocker Sürücü Şifrelemesi eylem başlatamaz. Tüm uzak konsol bağlantıları kapatılmalıdır ve BitLocker Sürücü Şifrelemesi başlamadan önce bir kullanıcının fiziksel konsol oturumunda oturum açması gerekir.
 
+Sürüm 2006 ' den başlayarak, bu görev için Windows PowerShell cmdlet 'lerini kullanabilirsiniz. Daha fazla bilgi için bkz. [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps).
 
-## <a name="monitor"></a>İzleme
+## <a name="monitor"></a>İzleyici
 
 **BitLocker yönetim** düğümünün Ayrıntılar bölmesinde ilke dağıtımıyla ilgili temel uyumluluk istatistiklerini görüntüleyin:
 
@@ -162,7 +165,7 @@ Daha fazla sorun giderme bilgisi için bkz. [BitLocker sorunlarını giderme](..
 
 - Kurtarma hizmeti olay günlüğü: Windows Olay Görüntüleyicisi, Microsoft > Windows > MBAZ-Web > uygulamalar ve hizmetler ' e gidin. Daha fazla bilgi için bkz. [BitLocker olay günlükleri](../../tech-ref/bitlocker/about-event-logs.md) ve [sunucu olay günlükleri](../../tech-ref/bitlocker/server-event-logs.md)hakkında.
 
-- Kurtarma hizmeti izleme günlükleri:`<Default IIS Web Root>\Microsoft BitLocker Management Solution\Logs\Recovery And Hardware Service\trace*.etl`
+- Kurtarma hizmeti izleme günlükleri: `<Default IIS Web Root>\Microsoft BitLocker Management Solution\Logs\Recovery And Hardware Service\trace*.etl`
 
 ## <a name="recovery-service"></a>Kurtarma hizmeti
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10bea151002673b36600d4d9deaa36bb8fc3ff79
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b7bcb685a33bc8d06226b51aaa051656360b436d
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086524"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819958"
 ---
 # <a name="add-vpn-settings-on-macos-devices-in-microsoft-intune"></a>Microsoft Intune 'de macOS cihazlarına VPN ayarları ekleme
 
@@ -38,8 +38,9 @@ Seçtiğiniz ayarlara bağlı olarak, aşağıdaki listede yer alan değerlerden
 ## <a name="base-vpn-settings"></a>Temel VPN ayarları
 
 **Bağlantı adı**: Bu bağlantı için bir ad girin. Cihazlarındaki kullanılabilir VPN bağlantılarına göz atan son kullanıcılar bu adı görür.
-- **IP adresi veya FQDN**: CIHAZLARıN bağlanacağı VPN sunucusunun IP adresini veya tam etki alanı adını belirtin. Örnekler: **192.168.1.1**, **vpn.contoso.com**.
-- **Kimlik doğrulama yöntemi**: Cihazların VPN sunucusunda kimliklerini nasıl doğrulayacaklarını seçin:
+
+- **IP adresi veya FQDN**: CIHAZLARıN bağlanacağı VPN sunucusunun IP adresini veya tam etki alanı adını girin. Örneğin `192.168.1.1` veya `vpn.contoso.com` girin.
+- **Kimlik doğrulama yöntemi**: Cihazların VPN sunucusunda kimliklerini nasıl doğrulayacaklarını seçin. Seçenekleriniz şunlardır:
   - **Sertifikalar**: **kimlik doğrulama sertifikası**altında, bağlantının kimliğini doğrulamak için daha önce oluşturduğunuz bir SCEP veya PKCS sertifika profilini seçin. Sertifika profilleri hakkındaki daha fazla bilgi için bkz. [Sertifikaları yapılandırma](../protect/certificates-configure.md).
   - **Kullanıcı adı ve parola**: son kullanıcılar VPN sunucusunda oturum açmak için bir Kullanıcı adı ve parola sağlamalıdır.
 - **Bağlantı türü**: Aşağıdaki satıcı listesinden VPN bağlantı türünü seçin:
@@ -47,18 +48,16 @@ Seçtiğiniz ayarlara bağlı olarak, aşağıdaki listede yer alan değerlerden
   - **Cisco AnyConnect**
   - **SonicWall Mobile Connect**
   - **F5 Edge Client**
+  - **NetMotion Mobility**
   - **Pulse Secure**
-  - **Özel VPN**
+  - **Özel VPN**: VPN satıcınız listede yoksa bu seçeneği belirleyin. Ayrıca şunları yapılandırın:
+
+    - **VPN tanımlayıcısı**: kullanmakta olduğunuz VPN uygulaması için bir tanımlayıcı girin. Bu tanımlayıcı, VPN sağlayıcınız tarafından sağlanır.
+    - **Özel VPN öznitelikleri için anahtar ve değer çiftlerini girin**: VPN bağlantınızı özelleştiren **Anahtarlar** ve **Değerler**’i ekleyin veya içeri aktarın. Bu değerler genellikle VPN sağlayıcınız tarafından sağlanır.
+
 - **Bölünmüş tünel**: cihazların trafiğe bağlı olarak hangi bağlantının kullanılacağına karar vermesine olanak sağlayan bu seçeneği **etkinleştirin** veya **devre dışı bırakın** . Örneğin, oteldeki bir kullanıcı çalışma dosyalarına erişmek için VPN bağlantısını, web’e göz atmak için ise otelin standart ağını kullanır.
 
 <!--- **Per-app VPN** - Select this option if you want to associate this VPN connection with an iOS/iPadOS or macOS app so that the connection will be opened when the app is run. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md). --->
-
-## <a name="custom-vpn-settings"></a>Özel VPN ayarları
-
-**Özel VPN**’yi seçtiyseniz şu ek ayarları yapılandırın:
-
-- **VPN tanımlayıcısı**: kullanmakta olduğunuz VPN uygulaması için bir tanımlayıcı girin. Bu tanımlayıcı, VPN sağlayıcınız tarafından sağlanır.
-- **Özel VPN öznitelikleri için anahtar ve değer çiftlerini girin**: VPN bağlantınızı özelleştiren **Anahtarlar** ve **Değerler**’i ekleyin veya içeri aktarın. Bu değerler genellikle VPN sağlayıcınız tarafından sağlanır.
 
 ## <a name="proxy-settings"></a>Proxy ayarları
 
@@ -68,6 +67,6 @@ Seçtiğiniz ayarlara bağlı olarak, aşağıdaki listede yer alan değerlerden
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Profil oluşturulur ancak henüz herhangi bir işlem gerçekleştirmez. Ardından [profili atayın](device-profile-assign.md) ve [durumunu izleyin](device-profile-monitor.md).
+Profil oluşturuldu, ancak henüz bir şey yapmamış olabilir. [Profili atadığınızdan](device-profile-assign.md)emin olun ve [durumunu izleyin](device-profile-monitor.md).
 
 [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [IOS/ıpados](vpn-settings-ios.md)ve [Windows 10](vpn-settings-windows-10.md) cihazlarında VPN ayarlarını yapılandırın.
