@@ -103,6 +103,8 @@
               href: advanced-threat-protection-monitor.md
         - name: Güvenlik duvarı kuralı geçişi
           href: endpoint-security-firewall-rule-tool.md
+        - name: Kiracı ekleme
+          href: tenant-attach-intune.md
         - name: Disk şifreleme
           items:
             - name: BitLocker ilkesini yönetme
@@ -308,8 +310,10 @@
           items:
             - name: macOS Defender Virüsten Koruma ayarları
               href: antivirus-microsoft-defender-settings-macos.md
-            - name: Windows 10 Microsoft Defender Virüsten Koruma ayarları
+            - name: Windows 10 Defender Virüsten Koruma ayarları
               href: antivirus-microsoft-defender-settings-windows.md
+            - name: Kiracıya ekleme Defender Virüsten Koruma ayarları
+              href: antivirus-microsoft-defender-settings-windows-tenant-attach.md
             - name: Windows Güvenlik deneyimi ayarları
               href: antivirus-security-experience-windows-settings.md
         - name: Disk şifreleme profili ayarları

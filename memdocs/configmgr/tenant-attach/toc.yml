@@ -14,6 +14,14 @@
       href: cmpivot-overview-attached.md
     - name: CMPivot örnek betikleri
       href: cmpivot-samples-attached.md
+- name: Kiracıya ekli cihazlar için uç nokta güvenliği (önizleme)
+  items:
+    - name: Uç nokta güvenliğini etkinleştirme
+      href: atp-onboard.md
+    - name: Uç nokta güvenliği Virüsten Koruma ilkesi oluşturma ve dağıtma
+      href: deploy-antivirus-policy.md
+    - name: Microsoft Defender Virüsten Koruma ilkesi için ayarlar
+      href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
 - name: Sorun giderme
   items:
     - name: Kiracıya ekleme ve cihaz eylemleri
