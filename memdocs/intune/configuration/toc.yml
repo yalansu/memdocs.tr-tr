@@ -1,6 +1,6 @@
 - name: Cihaz ayarlarını yapılandırma
   href: index.yml
-- name: Genel bakış
+- name: Genel Bakış
   expanded: true
   items:
     - name: Cihaz yapılandırmasına genel bakış
@@ -51,7 +51,7 @@
           displayName: 'psk, oma-uri, eap'
         - name: Wi-Fi sorunlarını giderme
           href: troubleshoot-wi-fi-profiles.md
-    - name: Windows’ta yönetim şablonları
+    - name: Yönetim şablonları
       displayName: 'admx, gpo, group policy'
       items:
         - name: Yönetimsel şablonlar oluşturma
