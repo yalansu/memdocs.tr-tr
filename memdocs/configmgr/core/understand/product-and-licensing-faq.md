@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bf69dfd73472cb252d2d821dd8e5fb5eb5a6302f
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 0f249c4ad981c289be33d364dcb4f5b8635faecb
+ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695775"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88895901"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager dalları ve lisanslama hakkında sık sorulan sorular
 
@@ -102,9 +102,10 @@ Ortak Yönetim Lisansı, Yazılım Güvencesine sahip müşterilerin kullanıcı
 |Yazılım güncelleştirme yönetimi|Evet|Evet|
 |Envanter|Evet|Evet|
 |Uygulama yönetimi|Evet|Evet|
+|Uzaktan tam/seçmeli silme|Evet|Evet|
 |Uzaktan yardım<br>(TeamViewer lisansı gereklidir)|Evet|Evet|
-|Masaüstü Analizi<br>(Windows Abonelik lisansları gereklidir|Evet|N/A|
-|Kiracı ekleme|Evet|N/A|
+|Masaüstü Analizi<br>(Windows Abonelik lisansları gereklidir|Evet|Yok|
+|Kiracı ekleme|Evet|Yok|
 |Uç nokta analizi|Evet|Evet|
 
 Daha fazla bilgi için aşağıdaki makaleleri inceleyin:

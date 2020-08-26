@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb35fdc400c89c64b689f4695a48d201e50fc617
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9203c3654671680eaeaa8e73597912783c0cdf1f
+ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79328886"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88896067"
 ---
 # <a name="resolve-common-errors-for-the-intune-exchange-connector"></a>Intune Exchange Connector için sık karşılaşılan hataları çözme
 
@@ -45,7 +45,7 @@ Bu sorun, Internet proxy ayarları yanlış yapılandırıldıysanız oluşabili
 **Çözüm**:  
 Proxy ayarlarını yapılandır:
 1. Ara sunucu ayarlarının doğru yapılandırıldığından emin olmak için yerel ağ yöneticisine başvurun. 
-2. Proxy sunucusunu yapılandırmak ve gerekli dışlama listesini eklemek için **netsh WinHTTP** komutunu kullanın. Örneğin:  
+2. Proxy sunucusunu yapılandırmak ve gerekli dışlama listesini eklemek için **netsh WinHTTP** komutunu kullanın. Örnek:  
 
    ```
    Netsh winhttp set proxy proxy-server="http=proxy.corp.domain.com" bypass-list"34*.*;134.132.*.*;10.*.*;localhost;*.corp.domain.com;*.staging.domain.com"
@@ -77,7 +77,7 @@ Microsoft Intune Exchange Connector yapılandırmayı denediğinizde aşağıdak
    Verify that you are connected to the Internet, check the Microsoft Intune Service Status, and try to connect again.  
    Error code: 0x00000006  
 ```  
-Bu hata, Internet 'e bağlanmak için bir proxy sunucusu kullanılıyorsa ve Intune hizmetine gelen trafiği engelliyorsa meydana gelebilir. Bir proxy 'nin kullanımda olup olmadığını belirlemek için, **Denetim Masası** > **Internet seçenekleri**' ne gidin, **bağlantı** sekmesini seçin ve ardından **LAN ayarları**' na tıklayın.
+Bu hata, Internet 'e bağlanmak için bir proxy sunucusu kullanılıyorsa ve Intune hizmetine gelen trafiği engelliyorsa meydana gelebilir. Bir proxy 'nin kullanımda olup olmadığını belirlemek için, **Denetim Masası**  >  **Internet seçenekleri**' ne gidin, **bağlantı** sekmesini seçin ve ardından **LAN ayarları**' na tıklayın.
 
 **Çözüm**:  
 
@@ -132,7 +132,7 @@ Intune Exchange bağlayıcısını çalıştıran bilgisayarda, **hizmet olarak 
 
 1. Bilgisayarda yönetici olarak veya Yöneticiler grubunun bir üyesi olarak oturum açın.
 2. Yerel güvenlik Ilkesini açmak için **secpol. msc** dosyasını çalıştırın.
-3. **Güvenlik ayarları** > **Yerel ilkeler**' e gidin ve **Kullanıcı hakları ataması**' nı seçin.
+3. **Güvenlik ayarları**  >  **Yerel ilkeler**' e gidin ve **Kullanıcı hakları ataması**' nı seçin.
 4. Sağ bölmede, **hizmet olarak oturum**aç ' a çift tıklayın.
 5. **Kullanıcı veya Grup Ekle**' yi seçin, ilkeye **WIEC_USER** ekleyin ve ardından iki kez **Tamam** ' ı seçin.
 
@@ -145,4 +145,4 @@ Aşağıdaki makale, belirli hataların çözümlenmesine yardımcı olabilir:
 
 Destek veya Intune topluluğundan yardım isteyin.
 - Sorunu gidermeye yardımcı olması veya Microsoft ile bir destek talebi açmak için bkz. Intune konsolunu kullanma [desteği alın](../fundamentals/get-support.md) . 
-- Sorununuzu [Microsoft Intune forumlarına](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod)gönderin.  
+- Sorununuzu [Microsoft Intune forumlarına](https://docs.microsoft.com/answers/products/mem)gönderin.  

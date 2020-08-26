@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e7f9c984b81bbe98269b0123371d8097d960ffb
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 35c19c777a96842f405fa1d68477fa4c7e937dee
+ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462142"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88896043"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Intune Exchange Connector sorunlarını giderme
 
@@ -52,9 +52,9 @@ Intune 'da bir Exchange Connector sorununu gidermeye başlamadan önce, bir Soli
 
 ### <a name="use-powershell-to-get-more-data-on-exchange-connector-issues"></a>Exchange Connector sorunları hakkında daha fazla veri almak için PowerShell 'i kullanma
 
-- Bir posta kutusunun tüm mobil cihazlarının listesini almak için, şunu kullanın`Get-ActiveSyncDeviceStatistics -mailbox mbx`
-- Posta kutusu için SMTP adreslerinin bir listesini almak için kullanın`Get-Mailbox -Identity user | select emailaddresses | fl`
-- Bir cihazın erişim durumu hakkında ayrıntılı bilgi almak için şunu kullanın`Get-CASMailbox <upn> | fl`
+- Bir posta kutusunun tüm mobil cihazlarının listesini almak için, şunu kullanın `Get-ActiveSyncDeviceStatistics -mailbox mbx`
+- Posta kutusu için SMTP adreslerinin bir listesini almak için kullanın `Get-Mailbox -Identity user | select emailaddresses | fl`
+- Bir cihazın erişim durumu hakkında ayrıntılı bilgi almak için şunu kullanın `Get-CASMailbox <upn> | fl`
 
 ## <a name="review-the-connector-configuration"></a>Bağlayıcı yapılandırmasını gözden geçirme
 
@@ -86,4 +86,4 @@ Aşağıdaki makaleler, yaygın sorunların ve belirli hataların çözümlenmes
 Destek veya Intune Community 'den yardım arama:
 
 - Sorunu gidermeye yardımcı olması veya Microsoft ile bir destek talebi açmak için bkz. Intune konsolunu kullanma [desteği alın](../fundamentals/get-support.md) . 
-- Sorununuzu [Microsoft Intune forumlarına](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod)gönderin.  
+- Sorununuzu [Microsoft Intune forumlarına](https://docs.microsoft.com/answers/products/mem)gönderin.  

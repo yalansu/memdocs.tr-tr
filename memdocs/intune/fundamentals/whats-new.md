@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa6839cef79623b456cd31eec6b894eae7687de3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: fe94b838ea1da859ee651cf45717118c865a7cad
+ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820281"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88896081"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -78,7 +78,7 @@ Intune 'da VPN profilleri hakkında daha fazla bilgi için bkz. VPN [sunucuları
 
 Aşağıdakiler cihazlar için geçerlidir:
 - iOS/iPadOS
-- macOS
+- Mac OS
 
 #### <a name="more-protected-extensible-authentication-protocol-peap-options-for-windows-10-wi-fi-profiles---3805024----"></a>Windows 10 Wi-Fi profilleri için daha fazla korunan Genişletilebilir Kimlik Doğrulama Protokolü (PEAP) seçenekleri<!-- 3805024  -->
 Windows 10 cihazlarında, Wi-Fi bağlantılarının kimliğini doğrulamak için Genişletilebilir Kimlik Doğrulama Protokolü (EAP) kullanarak Wi-Fi profilleri oluşturabilirsiniz (**cihaz**  >  **yapılandırma profilleri**,  >  **Create profile**  >  **Windows 10 and later** profil > **Enterprise**için **Wi-Fi** >.
@@ -171,7 +171,7 @@ Intune artık [cihaz uyumluluk ayrıntıları kaynağı olarak üçüncü taraf 
 
 Aşağıdaki üçüncü taraf MDM sağlayıcıları, genel önizleme olarak bu yayında desteklenir:
 
-- VMWare çalışma alanı BIR UEM (daha önce AirWatch olarak biliniyordu)
+- VMware çalışma alanı BIR UEM (daha önce AirWatch olarak biliniyordu)
 
 *Bu güncelleştirme, müşterilere küresel olarak gönderilir. Bu özelliği bir sonraki hafta içinde görmeniz gerekir.*
 
@@ -478,7 +478,7 @@ EAP **türünü** **EAP-TLS**, **EAP-TTLS**veya **PEAP** kimlik doğrulaması ol
 Yapılandırabileceğiniz ayarlar hakkında daha fazla bilgi için, bkz. [Microsoft Intune macOS cihazları Için Wi-Fi ayarları ekleme](../configuration/wi-fi-settings-macos.md).
 
 Aşağıdakiler cihazlar için geçerlidir:
-- macOS
+- Mac OS
 
 #### <a name="use-pkcs-certificates-with-wi-fi-profiles-on-windows-10-and-newer-devices---3246388-----"></a>Windows 10 ve daha yeni cihazlarda Wi-Fi profilleriyle PKCS sertifikaları kullanma<!-- 3246388   -->
 Windows Wi-Fi profillerinin kimlik doğrulaması için SCEP sertifikaları (**cihaz yapılandırma**  >  **profilleri**  >  **Create profile**  >  **Windows 10 ve üzeri** için profil oluşturma > **Wi-Fi** for platform > **Enterprise**  >  **EAP Type**). Şimdi, Windows Wi-Fi profilleriniz ile PKCS sertifikaları kullanabilirsiniz. Bu özellik, kiracınızdaki yeni veya mevcut PKCS sertifika profillerini kullanarak Wi-Fi profillerinin kimlik doğrulamasından geçmesini sağlar. 
@@ -494,7 +494,7 @@ Kablolu ağları yapılandıran yeni bir MacOS cihaz yapılandırma profili vard
 Bu özellik hakkında daha fazla bilgi için bkz. [macOS cihazlarda kablolu ağlar](../configuration/wired-networks-configure.md).
 
 Aşağıdakiler cihazlar için geçerlidir:
-- macOS
+- Mac OS
 
 #### <a name="use-microsoft-launcher-as-the-default-launcher-for-fully-managed-android-enterprise-devices---4927976-----"></a>Tam olarak yönetilen Android Kurumsal cihazları için varsayılan başlatıcı olarak Microsoft başlatıcısı 'nı kullanın<!-- 4927976   -->
 Android kurumsal cihaz sahibi cihazlarda, Microsoft başlatıcısı 'nı tam olarak yönetilen cihazlar için varsayılan başlatıcı olarak**ayarlayabilirsiniz (cihaz**  >  **yapılandırma profilleri**,  >  **Create profile**  >  **Android Enterprise** profil > **Device owner**  >  **cihaz deneyimi**için cihaz sahibi**cihaz kısıtlamalarına** >). Diğer tüm Microsoft Başlatıcı ayarlarını yapılandırmak için [uygulama yapılandırma ilkelerini](../apps/configure-microsoft-launcher.md)kullanın. 
@@ -524,7 +524,7 @@ MacOS cihazlarında, içerik önbelleğe almayı yapılandıran bir yapılandır
 Yapılandırabileceğiniz ayarları görmek için [Intune 'Da MacOS cihaz özelliği ayarları](../configuration/macos-device-features-settings.md)' na gidin.
 
 Aşağıdakiler cihazlar için geçerlidir:
-- macOS
+- Mac OS
 
 #### <a name="add-new-schema-settings-and-search-for-existing-schema-settings-using-oemconfig-on-android-enterprise---6394386-----"></a>Android Enterprise üzerinde OEMConfig kullanarak yeni şema ayarları ekleme ve mevcut şema ayarlarını arama<!-- 6394386   -->
 Intune 'da, Android kurumsal cihazlarındaki ayarları yönetmek için oemconfig kullanabilirsiniz (**cihaz**  >  **yapılandırma profilleri**Intune için bir  >  **profil**  >  **Android Enterprise** for platform > **için bkz** .). **Yapılandırma tasarımcısını**kullandığınızda, uygulama şemasındaki özellikler gösterilir. Şimdi, **yapılandırma tasarımcısında**şunları yapabilirsiniz:
@@ -914,7 +914,7 @@ Yalnızca listedeki ilk kurala göre kabul edilir. Bu davranış sabittir ve Int
 
 Aşağıdakiler cihazlar için geçerlidir:
 - iOS/iPadOS
-- macOS
+- Mac OS
 
 VPN profilleri hakkında daha fazla bilgi için bkz. [VPN profilleri oluşturma](../configuration/vpn-settings-configure.md).
 
@@ -1052,7 +1052,7 @@ Yapılandırabileceğiniz ayar hakkında daha fazla bilgi için bkz. [MacOS ciha
 
 Bu özellik şu platformlarda geçerlidir:
 
-- macOS
+- Mac OS
 
 <!-- ########################## -->
 ## <a name="week-of-march-16-2020-2003-service-release"></a>16 Mart 2020 haftası (2003 hizmet sürümü)

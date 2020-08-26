@@ -10,12 +10,12 @@ ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2c125212a13790e196d001f53411633d1e42d4f8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c87ae35fa3e5a76c57342a0d1cad4167b0f14685
+ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710114"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88895958"
 ---
 # <a name="packages-and-programs-in-configuration-manager"></a>Configuration Manager paket ve programlar
 
@@ -67,7 +67,9 @@ Paketler, Configuration Manager dağıtım noktası grupları ve izleme gibi baz
     - **Kaynak klasörü**: paket kaynak dosyaları Içeriyorsa, **kaynak klasörünü ayarla** iletişim kutusunu açmak için, **Araştır** ' ı seçin ve ardından paketin kaynak dosyalarının konumunu belirtin.  
 
         > [!NOTE]  
-        > Site sunucusunun bilgisayar hesabı, belirttiğiniz kaynak klasör için okuma erişimi haklarına sahip olmalıdır.  
+        > Site sunucusunun bilgisayar hesabı, belirttiğiniz kaynak klasör için okuma erişimi haklarına sahip olmalıdır.
+        >
+        > Windows, kaynak yolunu 256 karakter veya daha az olacak şekilde sınırlandırır. Bu sınır, paket kaynağı ve uygulamalar için geçerlidir. Daha fazla bilgi için bkz. [Dosya, yol ve ad alanlarını adlandırma](/windows/win32/fileio/naming-a-file).
 
     - Sürüm 1906 ' den başlayarak, bir istemcideki içeriği önceden önbelleğe almak istiyorsanız paketin **mimarisini** ve **dilini** belirtin. Daha fazla bilgi için bkz. [ön önbellek Içeriğini yapılandırma](../../osd/deploy-use/configure-precache-content.md).<!--4224642-->  
 
